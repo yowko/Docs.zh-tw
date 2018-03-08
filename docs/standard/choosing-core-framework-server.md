@@ -6,11 +6,14 @@ ms.author: mairaw
 ms.date: 08/15/2016
 ms.topic: article
 ms.prod: .net
-ms.openlocfilehash: fa001492aa76c4690faca23cb2a1e0467a857a6d
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.workload:
+- dotnet
+- dotnetcore
+ms.openlocfilehash: 2108125b9c01a2686d66b0ebd4e43e7ac863e223
+ms.sourcegitcommit: e7f04439d78909229506b56935a1105a4149ff3d
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 12/23/2017
 ---
 # <a name="choosing-between-net-core-and-net-framework-for-server-apps"></a>針對伺服器應用程式在 .NET Core 和 .NET Framework 之間進行選擇
 
@@ -21,8 +24,8 @@ ms.lasthandoff: 11/21/2017
 * 您有跨平台需求。
 * 您的目標為微服務。
 * 您正在使用 Docker 容器。
-* 您需要高效能且可延展的系統。
-* 您需要依據不同應用程式執行不同的 .NET 版本。
+* 您需要高效能且可調整的系統。
+* 您需要依應用程式讓 .NET 版本並存。
 
 在下列情況中，請針對伺服器應用程式使用 .NET Framework：
 
@@ -39,7 +42,7 @@ ms.lasthandoff: 11/21/2017
 
 如果您的應用程式 (Web/服務) 必須在多個平台 (Windows、Linux 和 macOS) 上執行，請使用 .NET Core。
 
-.NET Core 支援先前所述的作業系統作為您的開發工作站。 Visual Studio 提供 Windows 及 macOS 的整合式開發環境 (IDE)。 您也可以使用 Visual Studio Code，其在 macOS、Linux 和 Windows 上執行。 Visual Studio Code 支援 .NET Core，包括 IntelliSense 和偵錯。 大多數的協力廠商編輯器 (例如 Sublime、Emacs 和 VI) 都可搭配 .NET Core 使用。 這些協力廠商編輯器會透過 [Omnisharp](http://www.omnisharp.net/) 取得編輯器 IntelliSense。 您也可以避免使用任何程式碼編輯器，並直接使用 [.NET Core CLI 工具](../core/tools/index.md) (適用於所有支援的平台)。
+.NET Core 支援先前所述的作業系統作為您的開發工作站。 Visual Studio 提供適用於 Windows 和 macOS 的整合式開發環境 (IDE)。 您也可以使用 Visual Studio Code，其在 macOS、Linux 和 Windows 上執行。 Visual Studio Code 支援 .NET Core，包括 IntelliSense 和偵錯。 大多數的協力廠商編輯器 (例如 Sublime、Emacs 和 VI) 都可搭配 .NET Core 使用。 這些協力廠商編輯器會透過 [Omnisharp](http://www.omnisharp.net/) 取得編輯器 IntelliSense。 您也可以避免使用任何程式碼編輯器，並直接使用 [.NET Core CLI 工具](../core/tools/index.md) (適用於所有支援的平台)。
 
 ### <a name="microservices-architecture"></a>微服務架構
 
@@ -105,8 +108,8 @@ ms.lasthandoff: 11/21/2017
 
 某些 Microsoft 或協力廠商平台不支援 .NET Core。 例如，某些 Azure 服務 (例如 Service Fabric Stateful Reliable Services 和 Service Fabric Reliable Actors) 需要 .NET Framework。 部分其他服務提供尚無法在 .NET Core 上使用的 SDK。 這是過渡期，因為所有的 Azure 服務都會使用 .NET Core。 在此同時，您永遠都能使用對等的 REST API，而非用戶端 SDK。
 
-## <a name="see-also"></a>請參閱
- [ASP.NET 與 ASP.NET Core 之間選擇](/aspnet/core/choose-aspnet-framework)  
+## <a name="see-also"></a>另請參閱
+ [在 ASP.NET 和 ASP.NET Core 之間進行選擇](/aspnet/core/choose-aspnet-framework)  
  [.NET Core 指南](../core/index.md)  
  [從 .NET Framework 移植到 .NET Core](../core/porting/index.md)  
  [Docker 上的 .NET Framework 指南](../framework/docker/index.md)  

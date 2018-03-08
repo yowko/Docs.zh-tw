@@ -16,15 +16,18 @@ helpviewer_keywords:
 - SemaphoreSlim class, about SemaphoreSlim class
 - threading [.NET Framework], Semaphore class
 ms.assetid: 7722a333-b974-47a2-a7c0-f09097fb644e
-caps.latest.revision: "17"
+caps.latest.revision: 
 author: rpetrusha
 ms.author: ronpet
 manager: wpickett
-ms.openlocfilehash: 039dee4df1a6d06fa1833eae077817ff5eca3ea3
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.workload:
+- dotnet
+- dotnetcore
+ms.openlocfilehash: 3c7d196b54a831c807b7181c1c810c3e78a463a2
+ms.sourcegitcommit: e7f04439d78909229506b56935a1105a4149ff3d
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 12/23/2017
 ---
 # <a name="semaphore-and-semaphoreslim"></a>Semaphore 和 SemaphoreSlim
 <xref:System.Threading.Semaphore?displayProperty=nameWithType> 類別代表具名 (系統) 或區域號誌。 它是 Win32 號誌物件周圍的精簡型包裝函式。 Win32 號誌是計算的號誌，可以用來控制資源集區的存取。  
@@ -39,7 +42,7 @@ ms.lasthandoff: 11/21/2017
 ### <a name="semaphores-and-thread-identity"></a>號誌和執行緒識別  
  兩種號誌類型不會在 <xref:System.Threading.WaitHandle.WaitOne%2A>、<xref:System.Threading.SemaphoreSlim.Wait%2A>、<xref:System.Threading.Semaphore.Release%2A> 和 <xref:System.Threading.SemaphoreSlim.Release%2A?displayProperty=nameWithType> 方法的呼叫上強制執行執行緒識別。 例如，一個號誌的常見使用案例，其涉及一個產生者執行緒和一個消費者執行緒，之中一個執行緒始終都會遞增號誌計數，另一個則始終遞減它。  
   
- 程式設計人員要負責確保執行緒不會釋放號誌太多次。 例如，假設某個號誌的最大計數為 2，且執行緒 A 和執行緒 B 都進入號誌。 如果執行緒 B 中的程式設計錯誤導致呼叫 `Release` 兩次，兩次呼叫都會成功。 號誌計數已滿，而且當執行緒 A 終於呼叫`Release`、<xref:System.Threading.SemaphoreFullException>就會擲回。  
+ 程式設計人員要負責確保執行緒不會釋放號誌太多次。 例如，假設某個號誌的最大計數為 2，且執行緒 A 和執行緒 B 都進入號誌。 如果執行緒 B 中的程式設計錯誤導致呼叫 `Release` 兩次，兩次呼叫都會成功。 此時號誌計數已滿，當執行緒 A 終於呼叫 `Release` 時，就會擲回 <xref:System.Threading.SemaphoreFullException>。  
   
 ## <a name="named-semaphores"></a>具名號誌  
  Windows 作業系統允許有名稱的號誌。 具名號誌是全系統性的。 也就是說，一旦建立具名號誌，所有處理序中的所有執行緒都可看到它。 因此，具名號誌可以用來同步處理序及執行緒的活動。  
@@ -53,7 +56,7 @@ ms.lasthandoff: 11/21/2017
   
  使用存取控制安全性來保護代表具名號誌的 <xref:System.Threading.Semaphore> 物件，最好是使用指定 <xref:System.Security.AccessControl.SemaphoreSecurity?displayProperty=nameWithType> 物件的建構函式。 您也可以使用 <xref:System.Threading.Semaphore.SetAccessControl%2A?displayProperty=nameWithType> 方法套用存取控制安全性，但這會在建立號誌的時間與它受保護的時間之間留下弱點時段。 使用存取控制安全性來保護號誌，有助於防止惡意攻擊，但不能解決意外名稱衝突的問題。  
   
-## <a name="see-also"></a>另請參閱  
+## <a name="see-also"></a>請參閱  
  <xref:System.Threading.Semaphore>  
  <xref:System.Threading.SemaphoreSlim>  
  [執行緒物件和功能](../../../docs/standard/threading/threading-objects-and-features.md)

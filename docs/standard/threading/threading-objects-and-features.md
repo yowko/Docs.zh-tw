@@ -12,22 +12,25 @@ helpviewer_keywords:
 - threading [.NET Framework], features
 - managed threading
 ms.assetid: 239b2e8d-581b-4ca3-992b-0e8525b9321c
-caps.latest.revision: "15"
+caps.latest.revision: 
 author: rpetrusha
 ms.author: ronpet
 manager: wpickett
-ms.openlocfilehash: 2a73e5c60a661c171e9e46e6307484cf5e0e6b80
-ms.sourcegitcommit: bd1ef61f4bb794b25383d3d72e71041a5ced172e
+ms.workload:
+- dotnet
+- dotnetcore
+ms.openlocfilehash: 0cb36c004c46e22256928b3b2432da59fb3e6fa2
+ms.sourcegitcommit: e7f04439d78909229506b56935a1105a4149ff3d
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/18/2017
+ms.lasthandoff: 12/23/2017
 ---
 # <a name="threading-objects-and-features"></a>執行緒物件和功能
 .NET Framework 提供一些物件，可協助您建立及管理多執行緒應用程式。 Managed 執行緒是以 <xref:System.Threading.Thread> 類別來表示。 <xref:System.Threading.ThreadPool> 類別可讓您輕鬆建立及管理多執行緒的背景工作。 <xref:System.ComponentModel.BackgroundWorker> 類別會針對與使用者介面互動的工作執行相同的作業。 <xref:System.Threading.Timer> 類別會定期執行背景工作。  
   
  此外，還有一些類別會同步處理執行緒的活動，其中包括在 .NET Framework 2.0 版中引入的 <xref:System.Threading.Semaphore> 和 <xref:System.Threading.EventWaitHandle> 類別。 [同步處理原始物件概觀](../../../docs/standard/threading/overview-of-synchronization-primitives.md)中將比較這些類別的功能。  
   
-## <a name="in-this-section"></a>本章節內容  
+## <a name="in-this-section"></a>本節內容  
  [Managed 執行緒集區](../../../docs/standard/threading/the-managed-thread-pool.md)  
  說明 **ThreadPool** 類別，這個類別可讓您要求執行緒執行工作，而不需要自行進行任何執行緒管理。  
   
@@ -44,7 +47,7 @@ ms.lasthandoff: 10/18/2017
  描述 Managed 事件等候控制代碼，可藉由發出信號和等候信號來同步處理執行緒活動。  
   
  [Mutex](../../../docs/standard/threading/mutexes.md)  
- 說明如何使用<xref:System.Threading.Mutex>同步處理物件的存取權，或建置自己的同步處理機制。  
+ 說明如何使用 <xref:System.Threading.Mutex> 來同步處理對物件的存取，或建置自己的同步處理機制。  
   
  [Interlocked 作業](../../../docs/standard/threading/interlocked-operations.md)  
  說明如何使用 <xref:System.Threading.Interlocked> 類別來遞增或遞減值，並在單一不可部分完成的作業中儲存這個值。  

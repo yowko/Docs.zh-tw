@@ -9,25 +9,28 @@ ms.technology: dotnet-standard
 ms.tgt_pltfrm: 
 ms.topic: article
 ms.assetid: 202f8820-224c-494f-b61e-cd127eac6e03
-caps.latest.revision: "4"
+caps.latest.revision: 
 author: mairaw
 ms.author: mairaw
 manager: wpickett
-ms.openlocfilehash: 0d7fa8492487daff68fd8ebaf4159dd537d13e51
-ms.sourcegitcommit: bd1ef61f4bb794b25383d3d72e71041a5ced172e
+ms.workload:
+- dotnet
+- dotnetcore
+ms.openlocfilehash: 92d0688b86e6a95af46e09c21c1a8b3cdf66efc3
+ms.sourcegitcommit: e7f04439d78909229506b56935a1105a4149ff3d
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/18/2017
+ms.lasthandoff: 12/23/2017
 ---
 # <a name="xslt-transformations"></a>XSLT 轉換
-可延伸樣式表語言轉換 (XSLT) 可讓您將來源 XML 文件的內容轉換成另一種不同格式或結構的文件。 例如，您可以使用 XSLT 將 XML 轉換成網站上使用的 HTML，或將它轉換成只包含應用程式所需欄位的文件。 這個轉換程序由指定[W3C XSL 轉換 (XSLT) 1.0 版建議事項](http://go.microsoft.com/fwlink/?LinkID=49919)。  
+可延伸樣式表語言轉換 (XSLT) 可讓您將來源 XML 文件的內容轉換成另一種不同格式或結構的文件。 例如，您可以使用 XSLT 將 XML 轉換成網站上使用的 HTML，或將它轉換成只包含應用程式所需欄位的文件。 這項轉換程序是由 [W3C XSL 轉換 (XSLT) 1.0 版建議事項](http://go.microsoft.com/fwlink/?LinkID=49919) (英文) 所指定。  
   
  <xref:System.Xml.Xsl.XslCompiledTransform> 類別是 .NET Framework 中的 XSLT 處理器。 <xref:System.Xml.Xsl.XslCompiledTransform> 類別支援 W3C XSLT 1.0 建議事項。  
   
 > [!NOTE]
 >  在 .NET Framework 2.0 版中，<xref:System.Xml.Xsl.XslTransform> 類別已過時。 <xref:System.Xml.Xsl.XslCompiledTransform> 類別是 XSLT 引擎的新實作。 其中包含效能增進與新的安全性功能。 建議的作法是使用 <xref:System.Xml.Xsl.XslCompiledTransform> 類別建立 XSLT 應用程式。  
   
-## <a name="in-this-section"></a>本章節內容  
+## <a name="in-this-section"></a>本節內容  
  [使用 XslCompiledTransform 類別](../../../../docs/standard/data/xml/using-the-xslcompiledtransform-class.md)  
  提供有關使用 <xref:System.Xml.Xsl.XslCompiledTransform> 類別的資訊。  
   
@@ -40,7 +43,7 @@ ms.lasthandoff: 10/18/2017
  [使用 XslTransform 類別進行 XSLT 轉換](../../../../docs/standard/data/xml/xslt-transformations-with-the-xsltransform-class.md)  
  提供有關使用 <xref:System.Xml.Xsl.XslTransform> 類別的資訊。  
   
- **請注意**<xref:System.Xml.Xsl.XslTransform>類別是.NET Framework 2.0 版本中已過時。  
+ **注意** 在 .NET Framework 2.0 版中，<xref:System.Xml.Xsl.XslTransform> 類別已過時。  
   
 ## <a name="reference"></a>參考資料  
  <xref:System.Xml.Xsl.XslCompiledTransform>  

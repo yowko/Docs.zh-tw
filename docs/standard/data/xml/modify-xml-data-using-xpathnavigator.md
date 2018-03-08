@@ -13,22 +13,25 @@ dev_langs:
 - vb
 - cpp
 ms.assetid: 03a7c5a1-b296-4af4-b209-043c958dc0a5
-caps.latest.revision: "2"
+caps.latest.revision: 
 author: mairaw
 ms.author: mairaw
 manager: wpickett
-ms.openlocfilehash: ec2846dcac6bfe14746e038d592b7dfe49374993
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.workload:
+- dotnet
+- dotnetcore
+ms.openlocfilehash: cc46aeda6efe9f21bc094a4bc9d211fc282e9b65
+ms.sourcegitcommit: e7f04439d78909229506b56935a1105a4149ff3d
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 12/23/2017
 ---
 # <a name="modify-xml-data-using-xpathnavigator"></a>使用 XPathNavigator 修改 XML 資料
 <xref:System.Xml.XPath.XPathNavigator> 類別提供一組可用於修改 XML 文件中節點及值的方法。 為了使用這些方法，<xref:System.Xml.XPath.XPathNavigator> 物件必須是可編輯的，也就是說，它的 <xref:System.Xml.XPath.XPathNavigator.CanEdit%2A> 屬性必須為 `true`。  
   
  可編輯 XML 文件的 <xref:System.Xml.XPath.XPathNavigator> 物件是由 <xref:System.Xml.XmlDocument.CreateNavigator%2A> 類別的 <xref:System.Xml.XmlDocument> 方法所建立。 由 <xref:System.Xml.XPath.XPathNavigator> 類別建立的 <xref:System.Xml.XPath.XPathDocument> 物件是唯讀的，而且如果嘗試使用由 <xref:System.Xml.XPath.XPathNavigator> 物件建立之 <xref:System.Xml.XPath.XPathDocument> 物件的編輯方法，則會導致 <xref:System.NotSupportedException>。  
   
- 如需有關建立可編輯<xref:System.Xml.XPath.XPathNavigator>物件，請參閱[使用 XPathDocument 及 XmlDocument 讀取 XML 資料](../../../../docs/standard/data/xml/reading-xml-data-using-xpathdocument-and-xmldocument.md)。  
+ 如需有關建立可編輯 <xref:System.Xml.XPath.XPathNavigator> 物件的詳細資訊，請參閱[使用 XPathDocument 和 XmlDocument 讀取 XML 資料](../../../../docs/standard/data/xml/reading-xml-data-using-xpathdocument-and-xmldocument.md)。  
   
 ## <a name="modifying-nodes"></a>修改節點  
  一種變更節點值的簡單技術是使用 <xref:System.Xml.XPath.XPathNavigator.SetValue%2A> 類別的 <xref:System.Xml.XPath.XPathNavigator.SetTypedValue%2A> 及 <xref:System.Xml.XPath.XPathNavigator> 方法。  
@@ -48,7 +51,7 @@ ms.lasthandoff: 11/21/2017
 > [!NOTE]
 >  不支援編輯 <xref:System.Xml.XPath.XPathNodeType.Namespace> 節點或 <xref:System.Xml.XPath.XPathNodeType.Root> 節點。  
   
- <xref:System.Xml.XPath.XPathNavigator> 類別還提供一組可用於插入及移除節點的方法。 如需有關插入和移除節點從 XML 文件的詳細資訊，請參閱[使用 XPathNavigator 插入 XML 資料](../../../../docs/standard/data/xml/insert-xml-data-using-xpathnavigator.md)和[使用 XPathNavigator 移除 XML 資料](../../../../docs/standard/data/xml/remove-xml-data-using-xpathnavigator.md)主題。  
+ <xref:System.Xml.XPath.XPathNavigator> 類別還提供一組可用於插入及移除節點的方法。 如需有關從n XML 文件插入和移除節點的詳細資訊，請參閱[使用 XPathNavigator 插入 XML 資料](../../../../docs/standard/data/xml/insert-xml-data-using-xpathnavigator.md)和[使用 XPathNavigator 移除 XML 資料](../../../../docs/standard/data/xml/remove-xml-data-using-xpathnavigator.md)主題。  
   
 ### <a name="modifying-untyped-values"></a>修改不具型別值  
  <xref:System.Xml.XPath.XPathNavigator.SetValue%2A> 方法只會插入做為參數傳遞的不具型別 `string` 值，並將其做為 <xref:System.Xml.XPath.XPathNavigator> 物件目前所在之節點的值。 插入的值不具有任何型別，或未根據節點型別 (若提供結構描述資訊) 驗證新值的有效性。  
@@ -113,7 +116,7 @@ navigator.SetTypedValue(DateTime.Now);
  [!code-xml[XPathXMLExamples#3](../../../../samples/snippets/xml/VS_Snippets_Data/XPathXMLExamples/XML/contosoBooks.xsd#3)]  
   
 #### <a name="the-effects-of-editing-strongly-typed-xml-data"></a>編輯強型別 XML 資料的影響  
- <xref:System.Xml.XPath.XPathNavigator> 類別使用 W3C XML 結構描述，做為說明強型別 XML 的基礎。 根據對 W3C XML 結構描述文件的驗證，可為項目及屬性加上型別資訊附註。 可包含其他項目或屬性的項目稱為複雜型別，而那些僅包含文字內容的則稱為簡單型別。  
+ <xref:System.Xml.XPath.XPathNavigator> 類別使用 W3C XML 結構描述，做為說明強型別 XML 的基礎。 根據對 W3C XML 結構描述文件的驗證，可為項目及屬性加上型別資訊標註。 可包含其他項目或屬性的項目稱為複雜型別，而那些僅包含文字內容的則稱為簡單型別。  
   
 > [!NOTE]
 >  屬性僅可具有簡單型別。  
@@ -122,7 +125,7 @@ navigator.SetTypedValue(DateTime.Now);
   
  如果項目的有效性取決於其項目子系及屬性的有效性，則修改任何一項都會導致變更項目的有效性 (如果先前已為有效)。 特別是當插入、更新或刪除項目的項目子系或屬性時，項目的有效性會變為不明。 此由項目 <xref:System.Xml.Schema.IXmlSchemaInfo.Validity%2A> 屬性的 <xref:System.Xml.XPath.XPathNavigator.SchemaInfo%2A> 屬性設為 <xref:System.Xml.Schema.XmlSchemaValidity.NotKnown> 來表示。 而且，此影響還會按階層向上遞迴處理整個 XML 文件，因為項目的父項目 (及其父項目等) 有效性也會變為不明。  
   
- 如需有關結構描述驗證和<xref:System.Xml.XPath.XPathNavigator>類別，請參閱[使用 xpathnavigator 進行結構描述驗證](../../../../docs/standard/data/xml/schema-validation-using-xpathnavigator.md)。  
+ 如需結構描述驗證及 <xref:System.Xml.XPath.XPathNavigator> 類別的詳細資訊，請參閱[使用 XPathNavigator 進行結構描述驗證](../../../../docs/standard/data/xml/schema-validation-using-xpathnavigator.md)。  
   
 ### <a name="modifying-attributes"></a>修改屬性  
  <xref:System.Xml.XPath.XPathNavigator.SetValue%2A> 及 <xref:System.Xml.XPath.XPathNavigator.SetTypedValue%2A> 方法可用於修改不具型別與具型別屬性節點，以及＜修改節點＞一節中列出的其他節點型別。  
@@ -253,9 +256,9 @@ Console.WriteLine(navigator.OuterXml);
 >  對於 `xsi:nil` 屬性設為 `false` 的項目，即使刪除其內容，該屬性的值也不會變更為 `true`。  
   
 ## <a name="saving-an-xml-document"></a>儲存 XML 文件  
- 儲存對 <xref:System.Xml.XmlDocument> 物件所進行的變更 (由本主題中說明的編輯方法所導致) 是使用 <xref:System.Xml.XmlDocument> 類別的方法來執行。 如需有關儲存所做的變更<xref:System.Xml.XmlDocument>物件，請參閱[儲存與寫入文件](../../../../docs/standard/data/xml/saving-and-writing-a-document.md)。  
+ 儲存對 <xref:System.Xml.XmlDocument> 物件所進行的變更 (由本主題中說明的編輯方法所導致) 是使用 <xref:System.Xml.XmlDocument> 類別的方法來執行。 如需儲存 <xref:System.Xml.XmlDocument> 物件之變更的詳細資訊，請參閱[儲存與寫入文件](../../../../docs/standard/data/xml/saving-and-writing-a-document.md)。  
   
-## <a name="see-also"></a>另請參閱  
+## <a name="see-also"></a>請參閱  
  <xref:System.Xml.XmlDocument>  
  <xref:System.Xml.XPath.XPathDocument>  
  <xref:System.Xml.XPath.XPathNavigator>  

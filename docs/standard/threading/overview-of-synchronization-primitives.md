@@ -13,15 +13,18 @@ helpviewer_keywords:
 - threading [.NET Framework],synchronizing threads
 - managed threading
 ms.assetid: b782bcb8-da6a-4c6a-805f-2eb46d504309
-caps.latest.revision: "17"
+caps.latest.revision: 
 author: rpetrusha
 ms.author: ronpet
 manager: wpickett
-ms.openlocfilehash: 58fb520365d0a80a8f8bc46e3fdbd23483fdf07f
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.workload:
+- dotnet
+- dotnetcore
+ms.openlocfilehash: 79d6e384458e289c4da8587eae66486a054aad08
+ms.sourcegitcommit: e7f04439d78909229506b56935a1105a4149ff3d
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 12/23/2017
 ---
 # <a name="overview-of-synchronization-primitives"></a>同步處理原始物件概觀
 <a name="top"></a>.NET Framework 提供同步處理原始物件的範圍，以便控制執行緒的互動，及避免競爭情形。 這些可以大致分為三個類別：鎖定、信號及連鎖作業。  
@@ -47,9 +50,9 @@ ms.lasthandoff: 11/21/2017
  鎖定能提供資源的控制，一次給一個執行緒，或給指定數目的執行緒。 正在使用鎖定時要求獨佔鎖定的執行緒會封鎖，直到鎖定可用為止。  
   
 ### <a name="exclusive-locks"></a>獨佔鎖定  
- 鎖定的最簡單形式是 C# 中的 `lock` 陳述式和 Visual Basic 中的 `SyncLock` 陳述式，它能控制程式碼區塊的存取權。 這類區塊經常稱為重要區段。 `lock`陳述式藉由使用<xref:System.Threading.Monitor.Enter%2A?displayProperty=nameWithType>和<xref:System.Threading.Monitor.Exit%2A?displayProperty=nameWithType>方法，並使用`try…catch…finally`區塊，以確保釋放鎖定。  
+ 鎖定的最簡單形式是 C# 中的 `lock` 陳述式和 Visual Basic 中的 `SyncLock` 陳述式，它能控制程式碼區塊的存取權。 這類區塊經常稱為重要區段。 `lock` 陳述式是透過使用 <xref:System.Threading.Monitor.Enter%2A?displayProperty=nameWithType> 和 <xref:System.Threading.Monitor.Exit%2A?displayProperty=nameWithType> 方法實作，且它會使用 `try…catch…finally` 區塊以確保釋放鎖定。  
   
- 一般情況下，使用`lock`或`SyncLock`陳述式保護小型區塊的程式碼，永遠不會跨越超出單一方法，是要使用的最佳方式<xref:System.Threading.Monitor>類別。 雖然功能強大，但 <xref:System.Threading.Monitor> 類別容易發生遺棄的鎖定和死結。  
+ 一般而言，使用 `lock` 或 `SyncLock` 陳述式保護小型區塊的程式碼，永遠不會跨越超出單一方法，是使用 <xref:System.Threading.Monitor> 類別最佳的方式。 雖然功能強大，但 <xref:System.Threading.Monitor> 類別容易發生遺棄的鎖定和死結。  
   
 #### <a name="monitor-class"></a>Monitor 類別  
  <xref:System.Threading.Monitor> 類別會提供額外的功能，可以用於搭配 `lock` 陳述式：  
@@ -80,7 +83,7 @@ ms.lasthandoff: 11/21/2017
  如需概念的概觀，請參閱 [Mutex](../../../docs/standard/threading/mutexes.md)。  
   
 #### <a name="spinlock-class"></a>SpinLock 類別  
- 從開始[!INCLUDE[net_v40_long](../../../includes/net-v40-long-md.md)]，您可以使用<xref:System.Threading.SpinLock>類別時所需的額外負荷<xref:System.Threading.Monitor>會降低效能。 當 <xref:System.Threading.SpinLock> 遇到已鎖定的重要區段，它只會迴圈旋轉，直到鎖定可用為止。 如果鎖定維持的時間極短，旋轉可以提供比封鎖較佳的效能。 不過，如果將鎖定保留超過數十循環，<xref:System.Threading.SpinLock>也會執行為<xref:System.Threading.Monitor>，但會使用更多的 CPU 循環，因此可能會降低其他執行緒或處理程序的效能。  
+ 從 [!INCLUDE[net_v40_long](../../../includes/net-v40-long-md.md)] 開始，當 <xref:System.Threading.Monitor> 所需的額外負荷降低效能時，您可以使用 <xref:System.Threading.SpinLock> 類別。 當 <xref:System.Threading.SpinLock> 遇到已鎖定的重要區段，它只會迴圈旋轉，直到鎖定可用為止。 如果鎖定維持的時間極短，旋轉可以提供比封鎖較佳的效能。 不過，如果鎖定維持時間超過數十個循環，<xref:System.Threading.SpinLock> 的效能和 <xref:System.Threading.Monitor> 相同，但會使用更多的 CPU 循環，因此可能會降低其他執行緒或處理序的效能。  
   
 ### <a name="other-locks"></a>其他鎖定  
  鎖定不需要獨佔。 允許有限數量的執行緒並行存取資源通常很有用。 號誌和 Reader-Writer 鎖定是設計來控制這種共用的資源存取。  
@@ -155,7 +158,7 @@ ms.lasthandoff: 11/21/2017
   
 <a name="spinwait"></a>   
 ## <a name="spinwait"></a>SpinWait  
- 從開始[!INCLUDE[net_v40_short](../../../includes/net-v40-short-md.md)]，您可以使用<xref:System.Threading.SpinWait?displayProperty=nameWithType>結構當執行緒必須等待事件收到訊號或條件符合，但是當實際的等待時間預期會少於使用等候控制代碼或 otherwi 所需的等待時間se 封鎖目前的執行緒。 使用 <xref:System.Threading.SpinWait>，您可以指定在等待時旋轉一小段時間，並且只有在指定的時間內未符合條件時放棄 (例如，藉由等待或睡眠)。  
+ 從 [!INCLUDE[net_v40_short](../../../includes/net-v40-short-md.md)] 開始，當執行緒必須等待事件收到訊號或符合條件，但實際的等待時間預期會少於使用等候控制代碼或以其他方式封鎖目前執行緒的等候時間時，您可以使用 <xref:System.Threading.SpinWait?displayProperty=nameWithType> 結構。 使用 <xref:System.Threading.SpinWait>，您可以指定在等待時旋轉一小段時間，並且只有在指定的時間內未符合條件時放棄 (例如，藉由等待或睡眠)。  
   
  [回到頁首](#top)  
   
@@ -172,7 +175,7 @@ ms.lasthandoff: 11/21/2017
   
  如需概念的概觀，請參閱[連鎖作業](../../../docs/standard/threading/interlocked-operations.md)。  
   
-## <a name="see-also"></a>另請參閱  
+## <a name="see-also"></a>請參閱  
  [同步處理多執行緒處理的資料](../../../docs/standard/threading/synchronizing-data-for-multithreading.md)  
  [監視](http://msdn.microsoft.com/library/33fe4aef-b44b-42fd-9e72-c908e39e75db)  
  [Mutex](../../../docs/standard/threading/mutexes.md)  

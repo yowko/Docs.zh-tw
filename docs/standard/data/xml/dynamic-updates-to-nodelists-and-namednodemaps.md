@@ -9,18 +9,21 @@ ms.technology: dotnet-standard
 ms.tgt_pltfrm: 
 ms.topic: article
 ms.assetid: 76c511fd-6704-4ca4-8078-860a68d898ad
-caps.latest.revision: "3"
+caps.latest.revision: 
 author: mairaw
 ms.author: mairaw
 manager: wpickett
-ms.openlocfilehash: 459d746ff278ac4affa0318c1fad0aeb6a73e560
-ms.sourcegitcommit: bd1ef61f4bb794b25383d3d72e71041a5ced172e
+ms.workload:
+- dotnet
+- dotnetcore
+ms.openlocfilehash: 8a7abbb7344530ca993b8d07b774da17e6d0349b
+ms.sourcegitcommit: e7f04439d78909229506b56935a1105a4149ff3d
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/18/2017
+ms.lasthandoff: 12/23/2017
 ---
 # <a name="dynamic-updates-to-nodelists-and-namednodemaps"></a>動態更新 NodeList 和 NamedNodeMap
-因為**XmlNodeList**和**XmlNamedNodeMap**包含一組節點，但 XML 文件載入記憶體並且被修改，World Wide Web Consortium (W3C) 指出這些物件包含節點必須是動態的集合。 也就是，如果基礎文件變更，那麼這兩個物件中的資料也應該變更。 因此，如果您有**XmlNodeList** ，其中包含所有子項目的特定項目 （例如，項目 X），接著您將新增其他項目，項目 Q 項目 X 下的文件。**XmlNodeList**也應該有該新的項目加入至其集合 Q。 反之亦然。 如果節點加入至**XmlNodeList**，也會更新基礎的文件。  
+由於 **XmlNodeList** 和 **XmlNamedNodeMap** 都包含一組節點，但 XML 文件會載入記憶體並且被修改，因此全球資訊網協會 (W3C) 指出這些包含節點集的物件都必須為動態。 也就是，如果基礎文件變更，那麼這兩個物件中的資料也應該變更。 因此，若您所擁有的 **XmlNodeList** 含有特定項目 (例如項目 X) 的所有項目子系，就必須在項目 X 下的文件中加入其他項目 (項目 Q)。**XmlNodeList** 也應在其集合中加入這個新項目 Q。 反之亦然。 如果節點加入 **XmlNodeList**，基礎文件也會更新。  
   
-## <a name="see-also"></a>另請參閱  
+## <a name="see-also"></a>請參閱  
  [XML 文件物件模型 (DOM)](../../../../docs/standard/data/xml/xml-document-object-model-dom.md)

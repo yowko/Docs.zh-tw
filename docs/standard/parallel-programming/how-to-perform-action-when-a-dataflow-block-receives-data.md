@@ -1,12 +1,8 @@
 ---
 title: "如何：在資料流程區塊收到資料時執行動作"
-ms.custom: 
 ms.date: 03/30/2017
 ms.prod: .net
-ms.reviewer: 
-ms.suite: 
 ms.technology: dotnet-standard
-ms.tgt_pltfrm: 
 ms.topic: article
 dev_langs:
 - csharp
@@ -15,22 +11,23 @@ helpviewer_keywords:
 - Task Parallel Library, dataflows
 - TPL dataflow library, receiving data
 ms.assetid: fc2585dc-965e-4632-ace7-73dd02684ed3
-caps.latest.revision: "11"
 author: rpetrusha
 ms.author: ronpet
 manager: wpickett
-ms.openlocfilehash: d049d20f5e685096a72857cd18a89688633883c3
-ms.sourcegitcommit: bd1ef61f4bb794b25383d3d72e71041a5ced172e
+ms.workload:
+- dotnet
+- dotnetcore
+ms.openlocfilehash: 4aee0462e641e755830b63d3d708bf51b22cd797
+ms.sourcegitcommit: 6a9030eb5bd0f00e1d144f81958adb195cfb1f6f
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/18/2017
+ms.lasthandoff: 01/10/2018
 ---
 # <a name="how-to-perform-action-when-a-dataflow-block-receives-data"></a>如何：在資料流程區塊收到資料時執行動作
 「執行資料流程區塊」(Execution Dataflow Block) 類型會在收到資料時呼叫使用者提供的委派。 <xref:System.Threading.Tasks.Dataflow.ActionBlock%601?displayProperty=nameWithType>、<xref:System.Threading.Tasks.Dataflow.TransformBlock%602?displayProperty=nameWithType> 和 <xref:System.Threading.Tasks.Dataflow.TransformManyBlock%602?displayProperty=nameWithType> 類別都是執行資料流程區塊類型。 當您將工作函式提供給執行資料流程區塊時，可以使用 `delegate` 關鍵字 (在 `Sub` 中為 [!INCLUDE[vbprvb](../../../includes/vbprvb-md.md)])、<xref:System.Action%601>、<xref:System.Func%602> 或 Lambda 運算式。 本文件將說明如何使用 <xref:System.Func%602> 和 Lambda 運算式在執行區塊中執行動作。  
-  
-> [!TIP]
->  TPL 資料流程程式庫 (<xref:System.Threading.Tasks.Dataflow?displayProperty=nameWithType> 命名空間) 並未隨附於 [!INCLUDE[net_v45](../../../includes/net-v45-md.md)]。 若要安裝<xref:System.Threading.Tasks.Dataflow>命名空間中，開啟您的專案中[!INCLUDE[vs_dev11_long](../../../includes/vs-dev11-long-md.md)]，選擇**管理 NuGet 封裝**從 [專案] 功能表中，並在搜尋線上`Microsoft.Tpl.Dataflow`封裝。  
-  
+
+[!INCLUDE [tpl-install-instructions](../../../includes/tpl-install-instructions.md)]
+
 ## <a name="example"></a>範例  
  下列範例會使用資料流程從磁碟讀取檔案，並計算該檔案中等於零的位元組數。 它會使用 <xref:System.Threading.Tasks.Dataflow.TransformBlock%602> 讀取檔案並計算零位元組的數目，並且使用 <xref:System.Threading.Tasks.Dataflow.ActionBlock%601> 將零位元組的數目列印至主控台。 <xref:System.Threading.Tasks.Dataflow.TransformBlock%602> 物件會指定 <xref:System.Func%602> 物件在區塊收到資料時執行工作。 <xref:System.Threading.Tasks.Dataflow.ActionBlock%601> 物件會使用 Lambda 運算式將讀取的零位元組數目列印至主控台。  
   
@@ -39,7 +36,7 @@ ms.lasthandoff: 10/18/2017
   
  雖然您可以提供 Lambda 運算式給 <xref:System.Threading.Tasks.Dataflow.TransformBlock%602> 物件，但是這個範例會使用 <xref:System.Func%602> 讓其他程式碼能夠使用 `CountBytes` 方法。 由於要執行的工作是這個工作所專屬，而且對於其他程式碼可能不太實用，因此 <xref:System.Threading.Tasks.Dataflow.ActionBlock%601> 物件會使用 Lambda 運算式。 如需 Lambda 運算式如何在工作平行程式庫中運作的詳細資訊，請參閱 [PLINQ 和 TPL 中的 Lambda 運算式](../../../docs/standard/parallel-programming/lambda-expressions-in-plinq-and-tpl.md)。  
   
- 委派類型的摘要一節中[資料流程](../../../docs/standard/parallel-programming/dataflow-task-parallel-library.md)文件摘要說明您可以提供給委派型別<xref:System.Threading.Tasks.Dataflow.ActionBlock%601>， <xref:System.Threading.Tasks.Dataflow.TransformBlock%602>，和<xref:System.Threading.Tasks.Dataflow.TransformManyBlock%602>物件。 表中也會指出委派類型是以同步或非同步方式運作。  
+ [資料流程](../../../docs/standard/parallel-programming/dataflow-task-parallel-library.md)文件的＜委派類型摘要＞一節將摘要說明您可提供給 <xref:System.Threading.Tasks.Dataflow.ActionBlock%601>、<xref:System.Threading.Tasks.Dataflow.TransformBlock%602> 和 <xref:System.Threading.Tasks.Dataflow.TransformManyBlock%602> 物件的委派類型。 表中也會指出委派類型是以同步或非同步方式運作。  
   
 ## <a name="compiling-the-code"></a>編譯程式碼  
  請複製範例程式碼，並將它貼入 Visual Studio 專案中，或是貼入名為 `DataflowExecutionBlocks.cs` 的檔案中 (在 [!INCLUDE[vbprvb](../../../includes/vbprvb-md.md)]中為 `DataflowExecutionBlocks.vb`)，然後在 Visual Studio 的 [命令提示字元] 視窗中執行下列命令。  
@@ -63,5 +60,5 @@ ms.lasthandoff: 10/18/2017
  [!code-csharp[TPLDataflow_ExecutionBlocks#3](../../../samples/snippets/csharp/VS_Snippets_Misc/tpldataflow_executionblocks/cs/dataflowexecutionblocks.cs#3)]
  [!code-vb[TPLDataflow_ExecutionBlocks#3](../../../samples/snippets/visualbasic/VS_Snippets_Misc/tpldataflow_executionblocks/vb/dataflowexecutionblocks.vb#3)]  
   
-## <a name="see-also"></a>另請參閱  
+## <a name="see-also"></a>請參閱  
  [資料流程](../../../docs/standard/parallel-programming/dataflow-task-parallel-library.md)

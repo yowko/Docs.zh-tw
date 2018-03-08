@@ -11,35 +11,39 @@ ms.topic: article
 dev_langs:
 - csharp
 - vb
-helpviewer_keywords: PLINQ queries, sample data
+helpviewer_keywords:
+- PLINQ queries, sample data
 ms.assetid: 4fccbb35-eaa5-44e9-a252-a5c3d4bc7604
-caps.latest.revision: "9"
+caps.latest.revision: 
 author: rpetrusha
 ms.author: ronpet
 manager: wpickett
-ms.openlocfilehash: f0e94fec1d1390c68808c06a8ff23f52556c6f74
-ms.sourcegitcommit: bd1ef61f4bb794b25383d3d72e71041a5ced172e
+ms.workload:
+- dotnet
+- dotnetcore
+ms.openlocfilehash: 4b1aaa6f3027283ff20088d6122f9b4ec4bb1111
+ms.sourcegitcommit: e7f04439d78909229506b56935a1105a4149ff3d
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/18/2017
+ms.lasthandoff: 12/23/2017
 ---
 # <a name="plinq-data-sample"></a>PLINQ 資料範例
-此範例包含.csv 格式，將它轉換成記憶體中集合的客戶、 產品、 訂單及訂單詳細資料的方法中的範例資料。 若要使用 PLINQ 進一步實驗，您可以貼入本主題中的程式碼中的某些其他主題從程式碼範例，並叫用它從`Main`方法。 您也可以使用這項資料與您自己的 PLINQ 查詢。  
+此範例包含 .csv 格式的範例資料，以及將它轉換成記憶體中客戶、產品、訂單及訂單詳細資料集合的方法。 若要使用 PLINQ 進一步實驗，您可以將其他主題中的程式碼範例貼到本主題的程式碼中，並從 `Main` 方法叫用它。 您也可以搭配您自己的 PLINQ 查詢使用這項資料。  
   
- 其資料代表 Northwind 資料庫的子集。 五十個 （50） 的客戶記錄會包含在內，但並非所有的欄位。 隨附的訂單和對應的 Order_Detail 資料的每位客戶的資料列的子集。 隨附的所有產品。  
+ 此資料代表 Northwind 資料庫的子集。 其中包含五十 (50) 筆客戶記錄，但不包含所有欄位。 其中包含每位客戶的訂單和對應之 Order_Detail 資料的資料列子集。 其中包含所有產品。  
   
 > [!NOTE]
->  資料集不是夠大，無法證明 PLINQ 速度 LINQ to Objects 查詢包含基本`where`和`select`子句。 若要觀察這類的小型資料集的速度會增加，請使用包含在資料集中的每個元素的高度耗費計算能力作業的查詢。  
+>  資料集不夠大，無法證明 PLINQ 對只包含基本 `where` 和 `select` 子句之查詢的執行速度較 LINQ to Objects 快。 如果要觀察這類小型資料集的加速情況，請在資料集的每個元素中使用含高度耗費資源之作業的查詢。  
   
 ### <a name="to-set-up-this-sample"></a>若要安裝這個範例  
   
 1.  建立 Visual Basic 或 Visual C# 主控台應用程式專案。  
   
-2.  使用下面的步驟執行程式碼取代 Module1.vb 或 Program.cs 的內容。  
+2.  使用這些步驟之後的程式碼取代 Module1.vb 或 Program.cs 的內容。  
   
-3.  在 [專案]  功能表中，按一下 [加入新項目] 。 選取**文字檔**，然後按一下 **確定**。 本主題中複製資料，然後將它貼入新的文字檔中。 在**檔案**功能表上，按一下 **儲存**Plinqdata.csv，檔案名稱，然後將它儲存在包含您的原始程式碼檔的資料夾。  
+3.  在 [專案]  功能表中，按一下 [加入新項目] 。 選取 [文字檔]，然後按一下 [確定]。 複製本主題中的資料，然後將它貼到新的文字檔中。 在 [檔案] 功能表上，按一下 [儲存]，將檔案命名為 Plinqdata.csv，然後將它儲存在包含原始程式碼檔案的資料夾。  
   
-4.  按 f5 鍵，確認專案建置，並正確執行。 下列的輸出應該顯示在主控台視窗中。  
+4.  按 F5 鍵，確認專案正確地建置和執行。 主控台視窗中應該會顯示以下輸出。  
   
     ```  
     Customer count: 50  
@@ -868,5 +872,5 @@ PRODUCTS
 END PRODUCTS  
 ```  
   
-## <a name="see-also"></a>另請參閱  
+## <a name="see-also"></a>請參閱  
  [平行 LINQ (PLINQ)](../../../docs/standard/parallel-programming/parallel-linq-plinq.md)

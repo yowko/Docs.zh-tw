@@ -13,15 +13,18 @@ dev_langs:
 - vb
 - cpp
 ms.assetid: fa09c8e5-c2b9-49d2-bb0d-40330cd13e4d
-caps.latest.revision: "2"
+caps.latest.revision: 
 author: mairaw
 ms.author: mairaw
 manager: wpickett
-ms.openlocfilehash: b9505f60b2000ef227463404dab051ecb7fa3cc5
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.workload:
+- dotnet
+- dotnetcore
+ms.openlocfilehash: dd2c5a0e4625a348daad9eccb7bae0e4788cab71
+ms.sourcegitcommit: e7f04439d78909229506b56935a1105a4149ff3d
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 12/23/2017
 ---
 # <a name="editing-xml-schemas"></a>編輯 XML 結構描述
 編輯 XML 結構描述是結構描述物件模型 (SOM) 的其中一項最重要功能。 SOM 的所有前結構描述編譯屬性都可用於變更 XML 結構描述中的現有值。 然後可重新編譯該 XML 結構描述以反映這些變更。  
@@ -29,7 +32,7 @@ ms.lasthandoff: 11/21/2017
  編輯載入 SOM 中之結構描述的第一步是往返結構描述。 在嘗試編輯結構描述之前，您應該熟悉如何使用 SOM API 往返結構描述。 您也應該熟悉後結構描述編譯資訊集 (PSCI) 的前結構描述編譯屬性及後結構描述編譯屬性。  
   
 ## <a name="editing-an-xml-schema"></a>編輯 XML 結構描述  
- 在本節中，提供兩個程式碼範例，這兩種編輯客戶結構描述中建立[建置 XML 結構描述](../../../../docs/standard/data/xml/building-xml-schemas.md)主題。 第一個程式碼範例會將新 `PhoneNumber` 項目加入至 `Customer` 項目，第二個程式碼範例會將新 `Title` 屬性加入至 `FirstName` 項目。 第一個範例還會使用後結構描述編譯 <xref:System.Xml.Schema.XmlSchema.Elements%2A?displayProperty=nameWithType> 集合，做為當第二個程式碼範例使用前結構描述編譯 <xref:System.Xml.Schema.XmlSchema.Items%2A?displayProperty=nameWithType> 集合時周遊客戶結構描述的方式。  
+ 在此區段中會提供兩個程式碼範例，它們都會編輯在[建置 XML 結構描述](../../../../docs/standard/data/xml/building-xml-schemas.md)主題中建立的客戶結構描述。 第一個程式碼範例會將新 `PhoneNumber` 項目加入至 `Customer` 項目，第二個程式碼範例會將新 `Title` 屬性加入至 `FirstName` 項目。 第一個範例還會使用後結構描述編譯 <xref:System.Xml.Schema.XmlSchema.Elements%2A?displayProperty=nameWithType> 集合，做為當第二個程式碼範例使用前結構描述編譯 <xref:System.Xml.Schema.XmlSchema.Items%2A?displayProperty=nameWithType> 集合時周遊客戶結構描述的方式。  
   
 ### <a name="phonenumber-element-example"></a>PhoneNumber 項目範例  
  此第一個程式碼範例將新 `PhoneNumber` 項目加入至客戶結構描述的 `Customer` 項目。 該程式碼範例會使用下列步驟編輯客戶結構描述。  
@@ -54,7 +57,7 @@ ms.lasthandoff: 11/21/2017
  [!code-csharp[XmlSchemaEditExample1#1](../../../../samples/snippets/csharp/VS_Snippets_Data/XmlSchemaEditExample1/CS/XmlSchemaEditExample1.cs#1)]
  [!code-vb[XmlSchemaEditExample1#1](../../../../samples/snippets/visualbasic/VS_Snippets_Data/XmlSchemaEditExample1/VB/XmlSchemaEditExample1.vb#1)]  
   
- 以下是已修改的客戶結構描述中建立[建置 XML 結構描述](../../../../docs/standard/data/xml/building-xml-schemas.md)主題。  
+ 下列是在[建置 XML 結構描述](../../../../docs/standard/data/xml/building-xml-schemas.md)主題中建立之已修改的客戶結構描述。  
   
 ```xml  
 <?xml version="1.0" encoding="utf-8"?>  
@@ -118,7 +121,7 @@ ms.lasthandoff: 11/21/2017
  [!code-csharp[XmlSchemaEditExample2#1](../../../../samples/snippets/csharp/VS_Snippets_Data/XmlSchemaEditExample2/CS/XmlSchemaEditExample2.cs#1)]
  [!code-vb[XmlSchemaEditExample2#1](../../../../samples/snippets/visualbasic/VS_Snippets_Data/XmlSchemaEditExample2/VB/XmlSchemaEditExample2.vb#1)]  
   
- 以下是已修改的客戶結構描述中建立[建置 XML 結構描述](../../../../docs/standard/data/xml/building-xml-schemas.md)主題。  
+ 下列是在[建置 XML 結構描述](../../../../docs/standard/data/xml/building-xml-schemas.md)主題中建立之已修改的客戶結構描述。  
   
 ```xml  
 <?xml version="1.0" encoding=" utf-8"?>  
@@ -142,11 +145,11 @@ ms.lasthandoff: 11/21/2017
 </xs:schema>  
 ```  
   
-## <a name="see-also"></a>另請參閱  
+## <a name="see-also"></a>請參閱  
  [XML 結構描述物件模型概觀](../../../../docs/standard/data/xml/xml-schema-object-model-overview.md)  
  [讀取和寫入 XML 結構描述](../../../../docs/standard/data/xml/reading-and-writing-xml-schemas.md)  
  [建置 XML 結構描述](../../../../docs/standard/data/xml/building-xml-schemas.md)  
  [周遊 XML 結構描述](../../../../docs/standard/data/xml/traversing-xml-schemas.md)  
  [併入或匯入 XML 結構描述](../../../../docs/standard/data/xml/including-or-importing-xml-schemas.md)  
- [結構描述編譯的 XmlSchemaSet](../../../../docs/standard/data/xml/xmlschemaset-for-schema-compilation.md)  
+ [用於結構描述編譯的 XmlSchemaSet](../../../../docs/standard/data/xml/xmlschemaset-for-schema-compilation.md)  
  [後結構描述編譯資訊集](../../../../docs/standard/data/xml/post-schema-compilation-infoset.md)

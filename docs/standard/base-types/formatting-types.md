@@ -1,5 +1,5 @@
 ---
-title: "在.NET 中的格式類型"
+title: "在 .NET 中將類型格式化"
 ms.custom: 
 ms.date: 03/30/2017
 ms.prod: .net
@@ -31,17 +31,20 @@ helpviewer_keywords:
 - custom formatting [.NET Framework]
 - strings [.NET Framework], formatting
 ms.assetid: 0d1364da-5b30-4d42-8e6b-03378343343f
-caps.latest.revision: "43"
+caps.latest.revision: 
 author: rpetrusha
 ms.author: ronpet
 manager: wpickett
-ms.openlocfilehash: 816337ead810be405339a0616798a06689b97315
-ms.sourcegitcommit: bd1ef61f4bb794b25383d3d72e71041a5ced172e
+ms.workload:
+- dotnet
+- dotnetcore
+ms.openlocfilehash: 201212251bf99e5a5bab7685544079968bbebdb1
+ms.sourcegitcommit: 6a9030eb5bd0f00e1d144f81958adb195cfb1f6f
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/18/2017
+ms.lasthandoff: 01/10/2018
 ---
-# <a name="formatting-types-in-net"></a>在.NET 中的格式類型
+# <a name="formatting-types-in-net"></a>在 .NET 中將類型格式化
 <a name="Introduction"></a> 格式化是將類別、結構或列舉值的執行個體轉換成字串表示的過程，通常是為了將結果字串展示予使用者，或是為了將字串藉還原序列化方式還原成原始的資料類型。 這種轉換可能面臨幾項挑戰：  
   
 -   值的內部儲存方式不見得反映出使用者想要的檢視方式。 例如，電話號碼可能以 8009999999 的格式儲存，但這並不太符合使用者的閱讀習慣。 應該改以顯示成 800-999-9999。 如需以此方式格式化數字的範例，請參閱 [自訂格式字串](#customStrings) 一節。  
@@ -71,7 +74,7 @@ ms.lasthandoff: 10/18/2017
   
     -   [自訂格式字串](#customStrings)  
   
-    -   [格式字串和.NET 類別庫類型](#stringRef)  
+    -   [格式字串和 .NET 類別庫類型](#stringRef)  
   
 -   [以格式提供者和 IFormatProvider 介面進行符合文化特性的格式化](#FormatProviders)  
   
@@ -87,11 +90,11 @@ ms.lasthandoff: 10/18/2017
   
 -   [相關主題](#RelatedTopics)  
   
--   [參考](#Reference)  
+-   [參考資料](#Reference)  
   
 <a name="NetFormatting"></a>   
 ## <a name="formatting-in-net"></a>.NET 中的格式化​​  
- 格式設定的基本機制是的預設實作<xref:System.Object.ToString%2A?displayProperty=nameWithType>方法，後者的討論在[預設格式使用 ToString 方法](#DefaultToString)本主題稍後的章節。 不過，.NET 提供幾種方式來修改和擴充其預設格式化支援。 這些需求包括下列各項：  
+ 格式化機制的基礎在於 <xref:System.Object.ToString%2A?displayProperty=nameWithType> 方法的預設實作，這將於本主題稍後的[使用 ToString 方法的預設格式](#DefaultToString)一節中討論。 不過，.NET 提供幾種方式來修改和擴充其預設格式化支援。 這些需求包括下列各項：  
   
 -   覆寫 <xref:System.Object.ToString%2A?displayProperty=nameWithType> 方法來自訂物件值的字串表示。 如需詳細資訊，請參閱本主題稍後的 [覆寫 ToString 方法](#OverrideToString) 一節。  
   
@@ -143,7 +146,7 @@ ms.lasthandoff: 10/18/2017
  [!code-csharp[Conceptual.Formatting.Overview#2](../../../samples/snippets/csharp/VS_Snippets_CLR/conceptual.formatting.overview/cs/overrides1.cs#2)]
  [!code-vb[Conceptual.Formatting.Overview#2](../../../samples/snippets/visualbasic/VS_Snippets_CLR/conceptual.formatting.overview/vb/overrides1.vb#2)]  
   
- 在.NET 中，`ToString`已覆寫每個基本值類型的方法來顯示物件的值，而不是它的名稱。 下表顯示各基本類型如何覆寫 ToString 方法。 請注意，大部分經過覆寫的方法都會呼叫 `ToString` 方法的另一個多載，並且將 "G" 格式規範 (此規範定義此類型的一般格式) 和 <xref:System.IFormatProvider> 物件 (此物件表示目前文化特性) 傳遞至這個多載。  
+ 在 .NET 中，已覆寫每個基本實值類型的 `ToString` 方法來顯示物件的值，而非物件的名稱。 下表顯示各基本類型如何覆寫 ToString 方法。 請注意，大部分經過覆寫的方法都會呼叫 `ToString` 方法的另一個多載，並且將 "G" 格式規範 (此規範定義此類型的一般格式) 和 <xref:System.IFormatProvider> 物件 (此物件表示目前文化特性) 傳遞至這個多載。  
   
 |類型|ToString 覆寫|  
 |----------|-----------------------|  
@@ -214,7 +217,7 @@ ms.lasthandoff: 10/18/2017
   
  如需標準數值格式字串的詳細資訊，請參閱 [Standard Numeric Format Strings](../../../docs/standard/base-types/standard-numeric-format-strings.md)。  
   
- 日期和時間值的標準格式字串是特定 <xref:System.Globalization.DateTimeFormatInfo> 屬性所儲存之自訂格式字串的別名。 例如，以 "D" 格式規範來呼叫日期和時間值的 `ToString` 方法，將會使用目前文化特性之 <xref:System.Globalization.DateTimeFormatInfo.LongDatePattern%2A?displayProperty=nameWithType> 屬性中所儲存的自訂格式字串來顯示日期和時間 (如需有關自訂格式字串的詳細資訊，請參閱[下一節](#customStrings)。)下列範例示範這種關聯性。  
+ 日期和時間值的標準格式字串是特定 <xref:System.Globalization.DateTimeFormatInfo> 屬性所儲存之自訂格式字串的別名。 例如，以 "D" 格式規範來呼叫日期和時間值的 `ToString` 方法，將會使用目前文化特性之 <xref:System.Globalization.DateTimeFormatInfo.LongDatePattern%2A?displayProperty=nameWithType> 屬性中所儲存的自訂格式字串來顯示日期和時間 (如需自訂格式字串的詳細資訊，請參閱[下一節](#customStrings))。下列範例示範這種關聯性。  
   
  [!code-csharp[Conceptual.Formatting.Overview#5](../../../samples/snippets/csharp/VS_Snippets_CLR/conceptual.formatting.overview/cs/alias1.cs#5)]
  [!code-vb[Conceptual.Formatting.Overview#5](../../../samples/snippets/visualbasic/VS_Snippets_CLR/conceptual.formatting.overview/vb/alias1.vb#5)]  
@@ -258,17 +261,15 @@ ms.lasthandoff: 10/18/2017
  [回到頁首](#Introduction)  
   
 <a name="stringRef"></a>   
-### <a name="format-strings-and-net-class-library-types"></a>格式字串和.NET 類別庫類型  
- 所有數字類型 (也就是 <xref:System.Byte>、 <xref:System.Decimal>、 <xref:System.Double>、 <xref:System.Int16>、 <xref:System.Int32>、 <xref:System.Int64>、 <xref:System.SByte>、 <xref:System.Single>、 <xref:System.UInt16>、 <xref:System.UInt32>、 <xref:System.UInt64>和 <xref:System.Numerics.BigInteger> 類型)  
-  
- 以及 <xref:System.DateTime>、 <xref:System.DateTimeOffset>、 <xref:System.TimeSpan>、 <xref:System.Guid>，和所有列舉類型，都支援以格式字串進行格式化。 如需每個類型所支援特定格式字串的詳細資訊，請參閱下列主題  
+### <a name="format-strings-and-net-types"></a>格式字串和 .NET 類型  
+ 所有數字類型 (也就是 <xref:System.Byte>、<xref:System.Decimal>、<xref:System.Double>、<xref:System.Int16>、<xref:System.Int32>、<xref:System.Int64>、<xref:System.SByte>、<xref:System.Single>、<xref:System.UInt16>、<xref:System.UInt32>、<xref:System.UInt64> 和 <xref:System.Numerics.BigInteger> 類型)，以及 <xref:System.DateTime>、<xref:System.DateTimeOffset>、<xref:System.TimeSpan>、<xref:System.Guid> 和所有列舉類型，都支援以格式字串進行格式化。 如需每個類型所支援特定格式字串的資訊，請參閱下列主題：  
   
 |標題|定義|  
 |-----------|----------------|  
 |[Standard Numeric Format Strings](../../../docs/standard/base-types/standard-numeric-format-strings.md)|說明建立數值常用之字串表示的標準格式字串。|  
 |[Custom Numeric Format Strings](../../../docs/standard/base-types/custom-numeric-format-strings.md)|說明建立應用程式專屬數值格式的自訂格式字串。|  
-|[Standard Date and Time Format Strings](../../../docs/standard/base-types/standard-date-and-time-format-strings.md)|說明建立 <xref:System.DateTime> 值之常用字串表示的標準格式字串。|  
-|[Custom Date and Time Format Strings](../../../docs/standard/base-types/custom-date-and-time-format-strings.md)|說明建立應用程式專屬 <xref:System.DateTime> 值格式的自訂格式字串。|  
+|[標準日期和時間格式字串](../../../docs/standard/base-types/standard-date-and-time-format-strings.md)|說明建立 <xref:System.DateTime> 和 <xref:System.DateTimeOffset> 值之常用字串表示的標準格式字串。|  
+|[自訂日期和時間格式字串](../../../docs/standard/base-types/custom-date-and-time-format-strings.md)|說明建立應用程式專屬 <xref:System.DateTime> 和 <xref:System.DateTimeOffset> 值格式的自訂格式字串。|  
 |[標準 TimeSpan 格式字串](../../../docs/standard/base-types/standard-timespan-format-strings.md)|說明建立時間間隔之常用字串表示的標準格式字串。|  
 |[自訂 TimeSpan 格式字串](../../../docs/standard/base-types/custom-timespan-format-strings.md)|說明建立應用程式專屬數值格式的自訂格式字串。|  
 |[Enumeration Format Strings](../../../docs/standard/base-types/enumeration-format-strings.md)|說明用來建立列舉值之字串表示的標準格式字串。|  
@@ -276,7 +277,7 @@ ms.lasthandoff: 10/18/2017
   
 <a name="FormatProviders"></a>   
 ## <a name="culture-sensitive-formatting-with-format-providers-and-the-iformatprovider-interface"></a>以格式提供者和 IFormatProvider 介面進行符合文化特性的格式化  
- 雖然格式規範可讓您自訂物件的格式，但如果要為物件產生有意義的字串表示，您通常還需要其他格式設定資訊。 例如，如果要使用 "C" 標準格式字串或自訂格式字串 (例如 "$ #,#.00") 將數字格式化為貨幣值，您至少還需要有正確的貨幣符號、群組分隔符號和小數分隔符號的相關資訊。 在.NET 中，這些額外的資訊可透過<xref:System.IFormatProvider>介面，提供做為參數的一個或多個多載`ToString`的數字類型及日期和時間類型的方法。 <xref:System.IFormatProvider>實作會在.NET 中用來支援文化特性的格式。 下列範例將示範以代表不同文化特性的三個 <xref:System.IFormatProvider> 物件進行格式化時，物件的字串表示會有什麼樣的變化。  
+ 雖然格式規範可讓您自訂物件的格式，但如果要為物件產生有意義的字串表示，您通常還需要其他格式設定資訊。 例如，如果要使用 "C" 標準格式字串或自訂格式字串 (例如 "$ #,#.00") 將數字格式化為貨幣值，您至少還需要有正確的貨幣符號、群組分隔符號和小數分隔符號的相關資訊。 在 .NET 中，這項額外的格式資訊是透過 <xref:System.IFormatProvider> 介面取得，而這個介面會當做傳遞至數字類型以及日期和時間類型的 `ToString` 方法之一個或多個多載的參數來提供。 <xref:System.IFormatProvider> 實作會在 .NET 中用來支援文化特性特定的格式。 下列範例將示範以代表不同文化特性的三個 <xref:System.IFormatProvider> 物件進行格式化時，物件的字串表示會有什麼樣的變化。  
   
  [!code-csharp[Conceptual.Formatting.Overview#11](../../../samples/snippets/csharp/VS_Snippets_CLR/conceptual.formatting.overview/cs/iformatprovider1.cs#11)]
  [!code-vb[Conceptual.Formatting.Overview#11](../../../samples/snippets/visualbasic/VS_Snippets_CLR/conceptual.formatting.overview/vb/iformatprovider1.vb#11)]  
@@ -297,7 +298,7 @@ ms.lasthandoff: 10/18/2017
 > [!NOTE]
 >  數字類型及日期和時間類型的 `ToString` 方法都含有多載，而其中只有某些多載會包含 <xref:System.IFormatProvider> 參數。 如果方法沒有 <xref:System.IFormatProvider> 類型的參數，則會改以傳遞 <xref:System.Globalization.CultureInfo.CurrentCulture%2A?displayProperty=nameWithType> 屬性所傳回的物件。 例如，呼叫預設的 <xref:System.Int32.ToString?displayProperty=nameWithType> 方法最終會產生如下的方法呼叫：`Int32.ToString("G", System.Globalization.CultureInfo.CurrentCulture)`。  
   
- .NET 提供三個類別可實作<xref:System.IFormatProvider>:  
+ .NET 提供三個實作 <xref:System.IFormatProvider> 的類別：  
   
 -   <xref:System.Globalization.DateTimeFormatInfo>，這個類別提供特定文化特性之日期和時間值的格式設定資訊。 它的 <xref:System.IFormatProvider.GetFormat%2A?displayProperty=nameWithType> 實作會傳回它自己的執行個體。  
   
@@ -400,7 +401,7 @@ ms.lasthandoff: 10/18/2017
  [!code-csharp[Conceptual.Formatting.Overview#15](../../../samples/snippets/csharp/VS_Snippets_CLR/conceptual.formatting.overview/cs/icustomformatter1.cs#15)]
  [!code-vb[Conceptual.Formatting.Overview#15](../../../samples/snippets/visualbasic/VS_Snippets_CLR/conceptual.formatting.overview/vb/icustomformatter1.vb#15)]  
   
- 下列範例會使用 `ByteByByteFormatter` 類別來格式化整數值。 請注意，<xref:System.ICustomFormatter.Format%2A?displayProperty=nameWithType>方法呼叫一次以上，在第二個<xref:System.String.Format%28System.IFormatProvider%2CSystem.String%2CSystem.Object%5B%5D%29?displayProperty=nameWithType>方法呼叫，而且預設<xref:System.Globalization.NumberFormatInfo>因為第三個方法呼叫中使用提供者。`ByteByByteFormatter.Format` 方法無法辨認 "N0" 格式字串而傳回 null 參考 (在 Visual Basic 中為`Nothing` ) 的格式規範。  
+ 下列範例會使用 `ByteByByteFormatter` 類別來格式化整數值。 請注意，<xref:System.ICustomFormatter.Format%2A?displayProperty=nameWithType> 方法在第二個 <xref:System.String.Format%28System.IFormatProvider%2CSystem.String%2CSystem.Object%5B%5D%29?displayProperty=nameWithType> 方法呼叫中不只呼叫一次，且會在第三個方法呼叫中使用預設的 <xref:System.Globalization.NumberFormatInfo> 提供者，因為 .`ByteByByteFormatter.Format` 方法無法辨認 "N0" 格式字串而傳回 null 參考 (在 Visual Basic 中為`Nothing` ) 的格式規範。  
   
  [!code-csharp[Conceptual.Formatting.Overview#16](../../../samples/snippets/csharp/VS_Snippets_CLR/conceptual.formatting.overview/cs/icustomformatter1.cs#16)]
  [!code-vb[Conceptual.Formatting.Overview#16](../../../samples/snippets/visualbasic/VS_Snippets_CLR/conceptual.formatting.overview/vb/icustomformatter1.vb#16)]  
@@ -414,8 +415,8 @@ ms.lasthandoff: 10/18/2017
 |-----------|----------------|  
 |[Standard Numeric Format Strings](../../../docs/standard/base-types/standard-numeric-format-strings.md)|說明建立數值常用之字串表示的標準格式字串。|  
 |[Custom Numeric Format Strings](../../../docs/standard/base-types/custom-numeric-format-strings.md)|說明建立應用程式專屬數值格式的自訂格式字串。|  
-|[Standard Date and Time Format Strings](../../../docs/standard/base-types/standard-date-and-time-format-strings.md)|說明建立 <xref:System.DateTime> 值之常用字串表示的標準格式字串。|  
-|[Custom Date and Time Format Strings](../../../docs/standard/base-types/custom-date-and-time-format-strings.md)|說明建立應用程式專屬 <xref:System.DateTime> 值格式的自訂格式字串。|  
+|[標準日期和時間格式字串](../../../docs/standard/base-types/standard-date-and-time-format-strings.md)|說明建立 <xref:System.DateTime> 值之常用字串表示的標準格式字串。|  
+|[自訂日期和時間格式字串](../../../docs/standard/base-types/custom-date-and-time-format-strings.md)|說明建立應用程式專屬 <xref:System.DateTime> 值格式的自訂格式字串。|  
 |[標準 TimeSpan 格式字串](../../../docs/standard/base-types/standard-timespan-format-strings.md)|說明建立時間間隔之常用字串表示的標準格式字串。|  
 |[自訂 TimeSpan 格式字串](../../../docs/standard/base-types/custom-timespan-format-strings.md)|說明建立應用程式專屬數值格式的自訂格式字串。|  
 |[Enumeration Format Strings](../../../docs/standard/base-types/enumeration-format-strings.md)|說明用來建立列舉值之字串表示的標準格式字串。|  

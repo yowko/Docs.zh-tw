@@ -1,5 +1,5 @@
 ---
-title: "XSLT 樣式表指令碼使用&lt;msxsl: script&gt;"
+title: "使用 &lt;msxsl:script&gt; 的 XSLT 樣式表指令碼"
 ms.custom: 
 ms.date: 03/30/2017
 ms.prod: .net
@@ -12,21 +12,24 @@ dev_langs:
 - csharp
 - vb
 ms.assetid: 60e2541b-0cea-4b2e-a4fa-85f4c50f1bef
-caps.latest.revision: "4"
+caps.latest.revision: 
 author: mairaw
 ms.author: mairaw
 manager: wpickett
-ms.openlocfilehash: 35f24c0a033748917b465510d4f70b75946a0a74
-ms.sourcegitcommit: bd1ef61f4bb794b25383d3d72e71041a5ced172e
+ms.workload:
+- dotnet
+- dotnetcore
+ms.openlocfilehash: f9e7ceb40167d970b1886aec17b93f4bcf08f631
+ms.sourcegitcommit: c0dd436f6f8f44dc80dc43b07f6841a00b74b23f
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/18/2017
+ms.lasthandoff: 01/19/2018
 ---
-# <a name="xslt-stylesheet-scripting-using-ltmsxslscriptgt"></a>XSLT 樣式表指令碼使用&lt;msxsl: script&gt;
+# <a name="xslt-stylesheet-scripting-using-ltmsxslscriptgt"></a>使用 &lt;msxsl:script&gt; 的 XSLT 樣式表指令碼
 <xref:System.Xml.Xsl.XslTransform> 類別支援使用 `script` 項目的內嵌指令碼。  
   
 > [!NOTE]
->  <xref:System.Xml.Xsl.XslTransform> 類別在 [!INCLUDE[dnprdnext](../../../../includes/dnprdnext-md.md)] 中已過時。 您可以使用 <xref:System.Xml.Xsl.XslCompiledTransform> 類別來執行可延伸樣式表語言轉換 (XSLT)。 請參閱[使用 XslCompiledTransform 類別](../../../../docs/standard/data/xml/using-the-xslcompiledtransform-class.md)和[移轉從 XslTransform 類別](../../../../docs/standard/data/xml/migrating-from-the-xsltransform-class.md)如需詳細資訊。  
+>  <xref:System.Xml.Xsl.XslTransform> 類別在 [!INCLUDE[dnprdnext](../../../../includes/dnprdnext-md.md)] 中已過時。 您可以使用 <xref:System.Xml.Xsl.XslCompiledTransform> 類別來執行可延伸樣式表語言轉換 (XSLT)。 如需詳細資訊，請參閱[使用 XslCompiledTransform 類別](../../../../docs/standard/data/xml/using-the-xslcompiledtransform-class.md)和[從 XslTransform 類別移轉](../../../../docs/standard/data/xml/migrating-from-the-xsltransform-class.md)。  
   
  <xref:System.Xml.Xsl.XslTransform> 類別支援使用 `script` 項目的內嵌指令碼。 載入樣式表時，任何已定義的函式都會被包裝在類別定義內，而編譯成 Microsoft Intermediate Language (MSIL)，因此不會降低效能。  
   
@@ -44,15 +47,15 @@ ms.lasthandoff: 10/18/2017
   
  因為 `msxsl:script` 項目屬於命名空間 `urn:schemas-microsoft-com:xslt`，所以樣式表必須包含命名空間宣告 `xmlns:msxsl=urn:schemas-microsoft-com:xslt`。  
   
- 如果指令碼的呼叫端沒有<xref:System.Security.Permissions.SecurityPermissionFlag>存取權限，則會永遠不會編譯樣式表中的指令碼和呼叫<xref:System.Xml.Xsl.XslTransform.Load%2A>將會失敗。  
+ 如果指令碼的呼叫端沒有 <xref:System.Security.Permissions.SecurityPermissionFlag> 存取使用權限，則永遠不會編譯樣式表中的指令碼，且無法呼叫 <xref:System.Xml.Xsl.XslTransform.Load%2A>。  
   
  如果呼叫者端擁有 `UnmanagedCode` 使用權限，則會編譯指令碼，但是所允許的作業則取決於載入時所提供的辨識項。  
   
- 如果使用其中一個採用 <xref:System.Xml.Xsl.XslTransform.Load%2A> 或 <xref:System.Xml.XmlReader> 的 <xref:System.Xml.XPath.XPathNavigator> 方法來載入樣式表，則必須使用將 <xref:System.Xml.Xsl.XslTransform.Load%2A> 參數做為它的其中一個引數的 <xref:System.Security.Policy.Evidence> 多載。 若要提供辨識項，呼叫端必須擁有<xref:System.Security.Permissions.SecurityPermissionFlag>提供的權限`Evidence`指令碼組件。 如果呼叫端沒有這項使用權限，則可以將 `Evidence` 參數設為 `null`。 這樣 <xref:System.Xml.Xsl.XslTransform.Load%2A> 函式會在尋找指令碼時失敗。 `ControlEvidence` 使用權限被認為是功能非常強的使用權限，只能授與高度信任的程式碼。  
+ 如果使用其中一個採用 <xref:System.Xml.Xsl.XslTransform.Load%2A> 或 <xref:System.Xml.XmlReader> 的 <xref:System.Xml.XPath.XPathNavigator> 方法來載入樣式表，則必須使用將 <xref:System.Xml.Xsl.XslTransform.Load%2A> 參數做為它的其中一個引數的 <xref:System.Security.Policy.Evidence> 多載。 若要提供辨識項，呼叫端必須具有 <xref:System.Security.Permissions.SecurityPermissionFlag> 使用權限，才可提供指令碼組件的 `Evidence`。 如果呼叫端沒有這項使用權限，則可以將 `Evidence` 參數設為 `null`。 這樣 <xref:System.Xml.Xsl.XslTransform.Load%2A> 函式會在尋找指令碼時失敗。 `ControlEvidence` 使用權限被認為是功能非常強的使用權限，只能授與高度信任的程式碼。  
   
  若要從組件中取得辨識項，請使用 `this.GetType().Assembly.Evidence`。 若要從統一資源識別元 (URI) 取得辨識項，請使用 `Evidence e = XmlSecureResolver.CreateEvidenceForUrl(stylesheetURI)`。  
   
- 如果使用的是採用 <xref:System.Xml.Xsl.XslTransform.Load%2A> 但不含 <xref:System.Xml.XmlResolver> 的 `Evidence` 方法，則組件的安全性區域會預設為「完全信任」。 如需詳細資訊，請參閱<xref:System.Security.SecurityZone>和[具名使用權限集合](http://msdn.microsoft.com/en-us/08250d67-c99d-4ab0-8d2b-b0e12019f6e3)。  
+ 如果使用的是採用 <xref:System.Xml.Xsl.XslTransform.Load%2A> 但不含 <xref:System.Xml.XmlResolver> 的 `Evidence` 方法，則組件的安全性區域會預設為「完全信任」。 如需詳細資訊，請參閱 <xref:System.Security.SecurityZone> 和[具名使用權限集合](http://msdn.microsoft.com/library/08250d67-c99d-4ab0-8d2b-b0e12019f6e3)。  
   
  函式可在 `msxsl:script` 項目內進行宣告。 下表顯示根據預設所支援的命名空間。 您可以使用所列之命名空間以外的類別。 不過這些類別必須是完整限定。  
   
@@ -69,13 +72,13 @@ ms.lasthandoff: 10/18/2017
   
  宣告函式時，函式是包含在指令碼區塊內。 樣式表可以包含多個指令碼區塊，而每一個都會各自獨立運作。 這表示如果您在指令碼區塊內執行，您無法呼叫在另一個指令碼區塊內所定義的函式，除非它被宣告成有相同的命名空間和相同的指令碼語言。 因為每一個指令碼區塊都可以使用本身的語言，且這些區塊是根據該語言剖析器的文法規則進行剖析，因此您必須針對使用中的語言使用正確的語法。 例如，如果是在 C# 指令碼區塊中，則在區塊中使用 XML 註解節點 `<!-- an XML comment -->` 就會產生錯誤。  
   
- 指令碼函式所定義之提供的引數和傳回值，必須屬於全球資訊網協會 (W3C) XPath 或 XSLT 的其中一種型別。 下表顯示對應的 W3C 型別、 對等的.NET Framework 類別 （型別），以及 W3C 類型是否為 XPath 型別或 XSLT 型別。  
+ 指令碼函式所定義之提供的引數和傳回值，必須屬於全球資訊網協會 (W3C) XPath 或 XSLT 的其中一種型別。 下表列出對應的 W3C 型別、對等的 .NET Framework 類別 (型別)，以及 W3C 型別是 XPath 還是 XSLT 型別。  
   
-|類型|對等的.NET Framework 類別 （型別）|XPath 型別或 XSLT 型別|  
+|類型|對等的 .NET Framework 類別 (型別)|XPath 型別或 XSLT 型別|  
 |----------|----------------------------------------------|-----------------------------|  
 |String|System.String|XPath|  
 |Boolean|System.Boolean|XPath|  
-|數字|System.Double|XPath|  
+|number|System.Double|XPath|  
 |Result Tree Fragment|System.Xml.XPath.XPathNavigator|XSLT|  
 |Node Set|System.Xml.XPath.XPathNodeIterator|XPath|  
   
@@ -83,7 +86,7 @@ ms.lasthandoff: 10/18/2017
   
  如果指令碼函式使用前述以外的型別，或將樣式表載入 <xref:System.Xml.Xsl.XslTransform> 物件時未編譯函式，則會擲回例外狀況。  
   
- 當使用`msxsl:script`項目，強烈建議指令碼，不論語言為何，放在 CDATA 區段內。 例如，下例 XML 顯示您的程式碼所在的 CDATA 區段的範本。  
+ 使用 `msxsl:script` 項目時，無論所使用的語言為何，都強烈建議將指令碼置於 CDATA 區段內。 例如，下例 XML 顯示您的程式碼所在的 CDATA 區段的範本。  
   
 ```xml  
 <msxsl:script implements-prefix='yourprefix' language='CSharp'>  
@@ -104,7 +107,7 @@ ms.lasthandoff: 10/18/2017
 </msxsl:script>  
 ```  
   
- 這將擲回例外狀況，因為未逸出連字號。 文件載入為 XML，且之間文字並未採取特別的處置`msxsl:script`項目標記。  
+ 這將擲回例外狀況，因為未逸出連字號。 會將這份文件載入為 XML，且對 `msxsl:script` 項目標記之間的文字並未採取特別的處置。  
   
 ## <a name="example"></a>範例  
  下列範例會使用內嵌指令碼來計算圓周 (假設已經知道其半徑)。  
@@ -236,5 +239,5 @@ public class Sample
 </circles>    
 ```  
   
-## <a name="see-also"></a>另請參閱  
+## <a name="see-also"></a>請參閱  
  [XslTransform 類別實作 XSLT 處理器](../../../../docs/standard/data/xml/xsltransform-class-implements-the-xslt-processor.md)

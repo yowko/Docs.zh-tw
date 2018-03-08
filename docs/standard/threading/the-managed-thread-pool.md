@@ -18,15 +18,18 @@ helpviewer_keywords:
 - threading [.NET Framework], thread pool
 - threading [.NET Framework], pooling
 ms.assetid: 2be05b06-a42e-4c9d-a739-96c21d673927
-caps.latest.revision: "24"
+caps.latest.revision: 
 author: rpetrusha
 ms.author: ronpet
 manager: wpickett
-ms.openlocfilehash: 38032fccce1a8f6f7cbcb3bbd3d3f9d008a74141
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.workload:
+- dotnet
+- dotnetcore
+ms.openlocfilehash: e50fd66096d6bd58fb7db692449e7f8654b5ca76
+ms.sourcegitcommit: e7f04439d78909229506b56935a1105a4149ff3d
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 12/23/2017
 ---
 # <a name="the-managed-thread-pool"></a>Managed 執行緒集區
 <xref:System.Threading.ThreadPool> 類別為您的應用程式提供了受到系統管理的背景工作執行緒集區，讓您專注於應用程式工作上，而不是執行緒的管理。 如果您有需要在背景處理的簡短工作，Managed 執行緒集區是利用多重執行緒的一個簡單方式。 例如，從 [!INCLUDE[net_v40_long](../../../includes/net-v40-long-md.md)] 開始，您可以建立 <xref:System.Threading.Tasks.Task> 和 <xref:System.Threading.Tasks.Task%601> 物件，這兩個物件會在執行緒集區執行緒上執行非同步工作。  
@@ -65,7 +68,7 @@ ms.lasthandoff: 11/21/2017
   
 -   Common Language Runtime 或主應用程式處理序會結束這個執行緒。  
   
- 如需詳細資訊，請參閱[Managed 執行緒中的例外狀況](../../../docs/standard/threading/exceptions-in-managed-threads.md)。  
+ 如需詳細資訊，請參閱[受控執行緒中的例外狀況](../../../docs/standard/threading/exceptions-in-managed-threads.md)。  
   
 > [!NOTE]
 >  在 .NET Framework 1.0 和 1.1 版中，Common Language Runtime 會以無訊息模式在執行緒集區執行緒中截獲未處理的例外狀況。 這可能會破壞應用程式狀態，最終導致應用程式沒有回應，而可能讓偵錯工作變得相當困難。  
@@ -90,10 +93,10 @@ ms.lasthandoff: 11/21/2017
 >  您可以使用 <xref:System.Threading.ThreadPool.SetMinThreads%2A> 方法來提高閒置執行緒的數目下限。 不過，不必要地增加這些值，可能會造成效能問題。 如果太多工作同時啟動，則所有工作可能都會變慢。 在大部分情況下，執行緒集區使用自己的演算法來配置執行緒的效能較佳。  
   
 ## <a name="skipping-security-checks"></a>略過安全性檢查  
- 執行緒集區也提供 <xref:System.Threading.ThreadPool.UnsafeQueueUserWorkItem%2A?displayProperty=nameWithType> 和 <xref:System.Threading.ThreadPool.UnsafeRegisterWaitForSingleObject%2A?displayProperty=nameWithType> 方法。 只有在您確定呼叫端的堆疊與排入佇列之工作的執行期間所做的任何安全性檢查無關時，才能使用這些方法。 <xref:System.Threading.ThreadPool.QueueUserWorkItem%2A>和<xref:System.Threading.ThreadPool.RegisterWaitForSingleObject%2A>都可擷取呼叫端的堆疊，在執行緒開始執行工作時，會合併到執行緒集區執行緒的堆疊。 如果需要安全性檢查，則必須檢查整個堆疊。 雖然檢查能夠提供安全性，但是也帶來效能成本。  
+ 執行緒集區也提供 <xref:System.Threading.ThreadPool.UnsafeQueueUserWorkItem%2A?displayProperty=nameWithType> 和 <xref:System.Threading.ThreadPool.UnsafeRegisterWaitForSingleObject%2A?displayProperty=nameWithType> 方法。 只有在您確定呼叫端的堆疊與排入佇列之工作的執行期間所做的任何安全性檢查無關時，才能使用這些方法。 <xref:System.Threading.ThreadPool.QueueUserWorkItem%2A> 和 <xref:System.Threading.ThreadPool.RegisterWaitForSingleObject%2A> 都可擷取呼叫端的堆疊，這個堆疊會在執行緒開始執行工作時，合併到執行緒集區執行緒的堆疊中。 如果需要安全性檢查，則必須檢查整個堆疊。 雖然檢查能夠提供安全性，但是也帶來效能成本。  
   
 ## <a name="using-the-thread-pool"></a>使用執行緒集區  
- 開頭為[!INCLUDE[net_v40_short](../../../includes/net-v40-short-md.md)]，使用執行緒集區的最簡單方式是使用[工作平行程式庫 (TPL)](../../../docs/standard/parallel-programming/task-parallel-library-tpl.md)。 根據預設，平行程式庫類型 (例如 <xref:System.Threading.Tasks.Task> 和 <xref:System.Threading.Tasks.Task%601>) 會使用執行緒集區執行緒來執行工作。 您也可以透過下列方式使用執行緒集區：從 Managed 程式碼呼叫 <xref:System.Threading.ThreadPool.QueueUserWorkItem%2A?displayProperty=nameWithType> (或從 Unmanaged 程式碼呼叫 `CorQueueUserWorkItem`)，並傳遞代表執行工作之方法的 <xref:System.Threading.WaitCallback> 委派。 使用執行緒集區的另一種方式，是使用 <xref:System.Threading.ThreadPool.RegisterWaitForSingleObject%2A?displayProperty=nameWithType> 方法並傳遞 <xref:System.Threading.WaitHandle> (它在收到信號或逾時的時候會呼叫由 <xref:System.Threading.WaitOrTimerCallback> 委派表示的方法)，藉以將與等候作業有關的工作項目排入佇列。 執行緒集區執行緒可用來叫用回呼方法。  
+ 從 [!INCLUDE[net_v40_short](../../../includes/net-v40-short-md.md)] 開始，使用執行緒集區的最簡單方式是使用[工作平行程式庫 (TPL)](../../../docs/standard/parallel-programming/task-parallel-library-tpl.md)。 根據預設，平行程式庫類型 (例如 <xref:System.Threading.Tasks.Task> 和 <xref:System.Threading.Tasks.Task%601>) 會使用執行緒集區執行緒來執行工作。 您也可以透過下列方式使用執行緒集區：從 Managed 程式碼呼叫 <xref:System.Threading.ThreadPool.QueueUserWorkItem%2A?displayProperty=nameWithType> (或從 Unmanaged 程式碼呼叫 `CorQueueUserWorkItem`)，並傳遞代表執行工作之方法的 <xref:System.Threading.WaitCallback> 委派。 使用執行緒集區的另一種方式，是使用 <xref:System.Threading.ThreadPool.RegisterWaitForSingleObject%2A?displayProperty=nameWithType> 方法並傳遞 <xref:System.Threading.WaitHandle> (它在收到信號或逾時的時候會呼叫由 <xref:System.Threading.WaitOrTimerCallback> 委派表示的方法)，藉以將與等候作業有關的工作項目排入佇列。 執行緒集區執行緒可用來叫用回呼方法。  
   
 ## <a name="threadpool-examples"></a>ThreadPool 範例  
  本節中的程式碼範例使用 <xref:System.Threading.Tasks.Task> 類別、<xref:System.Threading.ThreadPool.QueueUserWorkItem%2A?displayProperty=nameWithType> 方法和 <xref:System.Threading.ThreadPool.RegisterWaitForSingleObject%2A?displayProperty=nameWithType> 方法，來示範執行緒集區。  
@@ -108,7 +111,7 @@ ms.lasthandoff: 11/21/2017
   
 <a name="TaskParallelLibrary"></a>   
 ### <a name="executing-asynchronous-tasks-with-the-task-parallel-library"></a>使用工作平行程式庫執行非同步工作  
- 下列範例示範如何透過呼叫 <xref:System.Threading.Tasks.TaskFactory.StartNew%2A?displayProperty=nameWithType> 方法，建立及使用 <xref:System.Threading.Tasks.Task> 物件。 如需範例，會使用<xref:System.Threading.Tasks.Task%601>類別從非同步工作傳回值，請參閱[How to： 從工作傳回值](../../../docs/standard/parallel-programming/how-to-return-a-value-from-a-task.md)。  
+ 下列範例示範如何透過呼叫 <xref:System.Threading.Tasks.TaskFactory.StartNew%2A?displayProperty=nameWithType> 方法，建立及使用 <xref:System.Threading.Tasks.Task> 物件。 如需使用 <xref:System.Threading.Tasks.Task%601> 類別從非同步工作傳回值的範例，請參閱[如何：傳回工作的值](../../../docs/standard/parallel-programming/how-to-return-a-value-from-a-task.md)。  
   
  [!code-csharp[System.Threading.Tasks.Task#01](../../../samples/snippets/csharp/VS_Snippets_CLR_System/system.threading.tasks.task/cs/startnew.cs#01)]
  [!code-vb[System.Threading.Tasks.Task#01](../../../samples/snippets/visualbasic/VS_Snippets_CLR_System/system.threading.tasks.task/vb/startnew.vb#01)]  
@@ -135,7 +138,7 @@ ms.lasthandoff: 11/21/2017
   
 -   使用 <xref:System.Threading.ThreadPool.RegisterWaitForSingleObject%2A> 方法將工作排入佇列，以供 <xref:System.Threading.ThreadPool> 執行緒執行。  
   
--   使用 <xref:System.Threading.AutoResetEvent> 向要執行的工作發出信號。 請參閱[EventWaitHandle、 AutoResetEvent、 CountdownEvent、 ManualResetEvent](../../../docs/standard/threading/eventwaithandle-autoresetevent-countdownevent-manualresetevent.md)。  
+-   使用 <xref:System.Threading.AutoResetEvent> 向要執行的工作發出信號。 [EventWaitHandle、AutoResetEvent、CountdownEvent、ManualResetEvent](../../../docs/standard/threading/eventwaithandle-autoresetevent-countdownevent-manualresetevent.md)。  
   
 -   使用 <xref:System.Threading.WaitOrTimerCallback> 委派處理逾時和信號。  
   
@@ -145,7 +148,7 @@ ms.lasthandoff: 11/21/2017
  [!code-csharp[Conceptual.ThreadPool#3](../../../samples/snippets/csharp/VS_Snippets_CLR/conceptual.threadpool/cs/source3.cs#3)]
  [!code-vb[Conceptual.ThreadPool#3](../../../samples/snippets/visualbasic/VS_Snippets_CLR/conceptual.threadpool/vb/source3.vb#3)]  
   
-## <a name="see-also"></a>另請參閱  
+## <a name="see-also"></a>請參閱  
  <xref:System.Threading.ThreadPool>  
  <xref:System.Threading.Tasks.Task>  
  <xref:System.Threading.Tasks.Task%601>  

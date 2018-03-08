@@ -9,15 +9,18 @@ ms.technology: dotnet-standard
 ms.tgt_pltfrm: 
 ms.topic: article
 ms.assetid: 484929b0-fefb-4629-87ee-ebdde70ff1f8
-caps.latest.revision: "2"
+caps.latest.revision: 
 author: mairaw
 ms.author: mairaw
 manager: wpickett
-ms.openlocfilehash: 78149e0e1c84a457f68b67ea8fe4c82098e794ad
-ms.sourcegitcommit: bd1ef61f4bb794b25383d3d72e71041a5ced172e
+ms.workload:
+- dotnet
+- dotnetcore
+ms.openlocfilehash: 4564530cd173793519471c78105d0394595f6d5c
+ms.sourcegitcommit: 91691981897cf8451033cb01071d8f5d94017f97
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/18/2017
+ms.lasthandoff: 01/09/2018
 ---
 # <a name="recoverable-xslt-errors"></a>可復原的 XSLT 錯誤
 ＜W3C XSL 轉換 (XSLT) 1.0 版建議事項＞中所包含的領域，可告訴實作提供者該採取哪些決策來處理哪種狀況。 這些領域視為 Discretionary 行為。 例如，在 7.3 節＜建立處理指示＞中，XSLT 1.0 版建議事項指出如果具現化 `xsl:processing-instruction` 的內容會建立非文字節點的節點，就會產生錯誤。 針對某些問題，XSLT 1.0 版建議事項中會指出在處理器決定從錯誤復原時要採取的決策。 針對 7.3 節中的問題，W3C 指出只要忽略節點及其內容，實作即可從這項錯誤中復原。  
@@ -29,7 +32,7 @@ ms.lasthandoff: 10/18/2017
   
 -   「錯誤」表示引發此情況的例外狀況。  
   
--   區段參考位於[W3C XSL 轉換 (XSLT) 1.0 版建議事項](http://go.microsoft.com/fwlink/?LinkId=49919)和[W3C XSL 轉換 (XSLT) 1.0 版規格的 Errata 中](http://go.microsoft.com/fwlink/?LinkId=49917)。  
+-   您可以在 [W3C XSL 轉換 (XSLT) 1.0 版建議事項](http://www.w3.org/TR/xslt) (英文) 和 [W3C XSL 轉換 (XSLT) 1.0 版規格錯誤](http://www.w3.org/1999/11/REC-xslt-19991116-errata/) (英文) 中找到章節參考資料。  
   
 |XSLT 條件|區段|XslCompiledTransform 行為|  
 |--------------------|-------------|-----------------------------------|  
@@ -59,7 +62,7 @@ ms.lasthandoff: 10/18/2017
 |`value` 的 `xsl:number` 屬性為 NAN、無限或小於 0.5|勘誤表 24|復原|  
 |文件函式的第二個引數節點集是空的，且 URI 參考是相對的。|勘誤表 14|復原|  
   
- <sup>*</sup>此行為是不同的<xref:System.Xml.Xsl.XslTransform>類別。 如需詳細資訊，請參閱[實作的 Discretionary 行為 XslTransform 類別](../../../../docs/standard/data/xml/implementation-of-discretionary-behaviors-in-the-xsltransform-class.md)。  
+ <sup>*</sup> 此行為與 <xref:System.Xml.Xsl.XslTransform> 類別的行為不同。 如需詳細資訊，請參閱 [XslTransform 類別中的 Discretionary 行為實作](../../../../docs/standard/data/xml/implementation-of-discretionary-behaviors-in-the-xsltransform-class.md)。  
   
-## <a name="see-also"></a>另請參閱  
+## <a name="see-also"></a>請參閱  
  [XSLT 轉換](../../../../docs/standard/data/xml/xslt-transformations.md)

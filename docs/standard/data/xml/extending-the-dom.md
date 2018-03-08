@@ -12,18 +12,21 @@ dev_langs:
 - csharp
 - vb
 ms.assetid: b5489c96-4afd-439a-a25d-fc82eb4a148d
-caps.latest.revision: "5"
+caps.latest.revision: 
 author: mairaw
 ms.author: mairaw
 manager: wpickett
-ms.openlocfilehash: b91c49be9268d8dc967daeac116cf67b2ed7d742
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.workload:
+- dotnet
+- dotnetcore
+ms.openlocfilehash: 06cac8d76b17f3ef32931ea21d0556085f05d7b1
+ms.sourcegitcommit: e7f04439d78909229506b56935a1105a4149ff3d
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 12/23/2017
 ---
 # <a name="extending-the-dom"></a>擴充 DOM
-Microsoft.NET Framework 包含一組基本的類別提供的 XML 文件物件模型 (DOM) 實作。 <xref:System.Xml.XmlNode> 及其衍生類別會提供方法和屬性，讓您巡覽、查詢和修改 XML 文件的內容和結構。  
+Microsoft .NET Framework 含有可提供 XML 文件物件模型 (DOM) 之實作的基底類別組。 <xref:System.Xml.XmlNode> 及其衍生類別會提供方法和屬性，讓您巡覽、查詢和修改 XML 文件的內容和結構。  
   
  當 XML 內容載入使用 DOM 的記憶體時，建立的節點包含資訊，例如節點名稱、節點型別等等。 有時您可能會需要基底類別所沒有提供的特定節點資訊。 例如，您可能想要查看節點的行號和位置。 在這個案例中，您可以從現有 DOM 類別衍生新類別並且加入其他功能。  
   
@@ -250,10 +253,10 @@ Number of elements in book.xml: 3
   
  事件處理程序在衍生類別中的執行方式，與在原始 DOM 類別中的執行方式相同。  
   
- 如需有關節點事件處理的詳細資訊，請參閱[事件](../../../../docs/standard/events/index.md)和<xref:System.Xml.XmlNodeChangedEventHandler>。  
+ 如需有關節點事件處理的詳細資訊，請參閱[事件](../../../../docs/standard/events/index.md)和 <xref:System.Xml.XmlNodeChangedEventHandler>。  
   
 ## <a name="default-attributes-and-the-createelement-method"></a>預設屬性和 CreateElement 方法  
- 如果要在衍生類別中覆寫 <xref:System.Xml.XmlDocument.CreateElement%2A> 方法，則編輯文件而建立新項目時，將不會加入預設屬性。 這只是在編輯時才會發生的問題。 因為 <xref:System.Xml.XmlDocument.CreateElement%2A> 方法負責將預設屬性加入 <xref:System.Xml.XmlDocument>，所以您必須將此功能以程式碼編寫在 <xref:System.Xml.XmlDocument.CreateElement%2A> 方法中。 如果載入含有預設屬性的 <xref:System.Xml.XmlDocument>，則會正確處理它們。 如需有關預設屬性的詳細資訊，請參閱[的 DOM 中的項目建立新屬性](../../../../docs/standard/data/xml/creating-new-attributes-for-elements-in-the-dom.md)。  
+ 如果要在衍生類別中覆寫 <xref:System.Xml.XmlDocument.CreateElement%2A> 方法，則編輯文件而建立新項目時，將不會加入預設屬性。 這只是在編輯時才會發生的問題。 因為 <xref:System.Xml.XmlDocument.CreateElement%2A> 方法負責將預設屬性加入 <xref:System.Xml.XmlDocument>，所以您必須將此功能以程式碼編寫在 <xref:System.Xml.XmlDocument.CreateElement%2A> 方法中。 如果載入含有預設屬性的 <xref:System.Xml.XmlDocument>，則會正確處理它們。 如需有關預設屬性的詳細資訊，請參閱[為 DOM 中的項目建立新屬性](../../../../docs/standard/data/xml/creating-new-attributes-for-elements-in-the-dom.md)。  
   
-## <a name="see-also"></a>另請參閱  
+## <a name="see-also"></a>請參閱  
  [XML 文件物件模型 (DOM)](../../../../docs/standard/data/xml/xml-document-object-model-dom.md)

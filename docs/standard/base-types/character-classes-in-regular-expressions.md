@@ -17,15 +17,18 @@ helpviewer_keywords:
 - characters, matching syntax
 - .NET Framework regular expressions, character classes
 ms.assetid: 0f8bffab-ee0d-4e0e-9a96-2b4a252bb7e4
-caps.latest.revision: "58"
+caps.latest.revision: 
 author: rpetrusha
 ms.author: ronpet
 manager: wpickett
-ms.openlocfilehash: 603633e1a0f385c061fe0928ea7361490d61fa3e
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.workload:
+- dotnet
+- dotnetcore
+ms.openlocfilehash: dfcb0d0ace4bd42d89fe7b4c2dc04098858c2945
+ms.sourcegitcommit: 91691981897cf8451033cb01071d8f5d94017f97
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 01/09/2018
 ---
 # <a name="character-classes-in-regular-expressions"></a>規則運算式中的字元類別
 <a name="Top"></a> 字元類別會定義一組字元，其中任何字元都可在輸入字串中出現，以便讓比對成功。 .NET 中的規則運算式語言支援下列字元類別：  
@@ -55,7 +58,7 @@ ms.lasthandoff: 11/21/2017
  .NET 支援字元類別減法運算式，可讓您將一組字元定義為從某個字元類別中排除另一個字元類別的結果。 如需詳細資訊，請參閱[字元類別減法](#CharacterClassSubtraction)。  
   
 > [!NOTE]
->  字元類別，例如，依類別目錄，比對字元[\w](#WordCharacter)來比對文字字元或[\p {}](#CategoryOrBlock)要比對 Unicode 分類，依賴<xref:System.Globalization.CharUnicodeInfo>類別，以提供字元的相關資訊類別目錄。  從 [!INCLUDE[net_v462](../../../includes/net-v462-md.md)] 開始，字元類別根據 [Unicode 標準 8.0.0 版](http://www.unicode.org/versions/Unicode8.0.0/)。 在 [!INCLUDE[net_v40_long](../../../includes/net-v40-long-md.md)] 至 [!INCLUDE[net_v461](../../../includes/net-v461-md.md)] 中，它們根據 [Unicode 標準 6.3.0 版](http://www.unicode.org/versions/Unicode6.3.0/)。  
+>  依分類比對字元的字元類別 (例如，[\w](#WordCharacter) 會比對字組字元，或[\p{}](#CategoryOrBlock) 會比對 Unicode 分類) 會依賴 <xref:System.Globalization.CharUnicodeInfo> 類別來提供字元分類的相關資訊。  從 [!INCLUDE[net_v462](../../../includes/net-v462-md.md)] 開始，字元類別根據 [Unicode 標準 8.0.0 版](http://www.unicode.org/versions/Unicode8.0.0/)。 在 [!INCLUDE[net_v40_long](../../../includes/net-v40-long-md.md)] 至 [!INCLUDE[net_v461](../../../includes/net-v461-md.md)] 中，它們根據 [Unicode 標準 6.3.0 版](http://www.unicode.org/versions/Unicode6.3.0/)。  
   
 <a name="PositiveGroup"></a>   
 ## <a name="positive-character-group--"></a>正字元群組：[ ]  
@@ -257,7 +260,7 @@ ms.lasthandoff: 11/21/2017
   
  下列範例會使用 `\w` 語言項目比對文字中重複的字元。 這個範例會定義規則運算式模式 `(\w)\1`，該模式解譯如下。  
   
-|項目|描述|  
+|元素|描述|  
 |-------------|-----------------|  
 |(\w)|比對文字字元。 這是第一個擷取群組。|  
 |\1|比對第一個擷取的值。|  
@@ -295,7 +298,7 @@ ms.lasthandoff: 11/21/2017
   
  以下範例將說明 `\W` 字元類別。  它會定義規則運算式模式 `\b(\w+)(\W){1,2}`，該模式會比對後面接一個或多個非文字字元的文字，例如空白字元或標點符號。 規則運算式的解譯方式如下表所示。  
   
-|項目|描述|  
+|元素|描述|  
 |-------------|-----------------|  
 |\b|開始字緣比對。|  
 |(\w+)|比對一個或多個文字字元。 這是第一個擷取群組。|  
@@ -326,7 +329,7 @@ ms.lasthandoff: 11/21/2017
   
  以下範例將說明 `\s` 字元類別。 它會定義規則運算式模式 `\b\w+(e)?s(\s|$)`，該模式會比對結尾為 "s" 或 "es" 且後面加上空白字元或是輸入字串結尾的文字。 規則運算式的解譯方式如下表所示。  
   
-|項目|描述|  
+|元素|描述|  
 |-------------|-----------------|  
 |\b|開始字緣比對。|  
 |\w+|比對一個或多個文字字元。|  
@@ -347,7 +350,7 @@ ms.lasthandoff: 11/21/2017
   
  下列範例將說明 `\S` 語言項目。 規則運算式模式 `\b(\S+)\s?` 會比對以空白字元分隔的字串。 在比對之 <xref:System.Text.RegularExpressions.GroupCollection> 物件中的第二個項目包含相符的字串。 規則運算式的解譯方式如下表所示。  
   
-|項目|描述|  
+|元素|描述|  
 |-------------|-----------------|  
 |`\b`|開始字緣比對。|  
 |`(\S+)`|比對一個或多個非空白字元。 這是第一個擷取群組。|  
@@ -405,7 +408,7 @@ ms.lasthandoff: 11/21/2017
   
 <a name="SupportedUnicodeGeneralCategories"></a>   
 ## <a name="supported-unicode-general-categories"></a>支援的 Unicode 一般分類  
- Unicode 定義了下表中所列的一般類別。 如需詳細資訊，請參閱 [Unicode Character Database](http://go.microsoft.com/fwlink/?LinkId=57650) 中的 "UCD File Format" 和 "General Category Values" 副標題。  
+ Unicode 定義了下表中所列的一般類別。 如需詳細資訊，請參閱 [Unicode Character Database](http://www.unicode.org/reports/tr44/) 中的 "UCD File Format" 和 "General Category Values" 副標題。  
   
 |分類|描述|  
 |--------------|-----------------|  
@@ -588,7 +591,7 @@ ms.lasthandoff: 11/21/2017
   
  下列範例會定義規則運算式 (`^[0-9-[2468]]+$`)，該運算式會比對輸入字串中的零和奇數數字。  規則運算式的解譯方式如下表所示。  
   
-|項目|描述|  
+|元素|描述|  
 |-------------|-----------------|  
 |^|從輸入字串開頭開始比對。|  
 |`[0-9-[2468]]+`|比對 0 到 9 中不包括 2、4、6 和 8 的任何出現一次或多次的字元。 換句話說，就是比對出現一次或多次的零或奇數。|  
@@ -597,7 +600,7 @@ ms.lasthandoff: 11/21/2017
  [!code-csharp[Conceptual.RegEx.Language.CharacterClasses#15](../../../samples/snippets/csharp/VS_Snippets_CLR/conceptual.regex.language.characterclasses/cs/classsubtraction1.cs#15)]
  [!code-vb[Conceptual.RegEx.Language.CharacterClasses#15](../../../samples/snippets/visualbasic/VS_Snippets_CLR/conceptual.regex.language.characterclasses/vb/classsubtraction1.vb#15)]  
   
-## <a name="see-also"></a>另請參閱  
+## <a name="see-also"></a>請參閱  
  <xref:System.Char.GetUnicodeCategory%2A>  
  [規則運算式語言 - 快速參考](../../../docs/standard/base-types/regular-expression-language-quick-reference.md)  
  [規則運算式選項](../../../docs/standard/base-types/regular-expression-options.md)

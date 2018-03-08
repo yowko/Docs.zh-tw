@@ -12,17 +12,21 @@ dev_langs:
 - csharp
 - vb
 - cpp
-helpviewer_keywords: exceptions, best practices
+helpviewer_keywords:
+- exceptions, best practices
 ms.assetid: f06da765-235b-427a-bfb6-47cd219af539
-caps.latest.revision: "28"
+caps.latest.revision: 
 author: mairaw
 ms.author: mairaw
 manager: wpickett
-ms.openlocfilehash: 87f9287c3714416ee5d6b63f3c9db311bb97b131
-ms.sourcegitcommit: 5d0e069655439984862a835f400058b7e8bbadc6
+ms.workload:
+- dotnet
+- dotnetcore
+ms.openlocfilehash: 4c5ea19077ff9ce8e36a33601b7e5e87c64afe60
+ms.sourcegitcommit: e7f04439d78909229506b56935a1105a4149ff3d
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/28/2017
+ms.lasthandoff: 12/23/2017
 ---
 # <a name="best-practices-for-exceptions"></a>例外狀況的最佳做法
 
@@ -72,7 +76,7 @@ ms.lasthandoff: 10/28/2017
 
 ## <a name="use-the-predefined-net-exception-types"></a>使用預先定義的 .NET 例外狀況類型
 
-只有在預先定義的類型不適用時，才引進新的例外狀況類別。 例如：
+只有在預先定義的類型不適用時，才引進新的例外狀況類別。 例如: 
 
 - 如果屬性集或方法呼叫對於物件的目前狀態而言並不適當，就會擲回 <xref:System.InvalidOperationException> 例外狀況。
 
@@ -90,7 +94,7 @@ ms.lasthandoff: 10/28/2017
 
 當您建立自己的例外狀況類別時，請使用至少三個種常見的建構函式：預設建構函式、採用字串訊息的建構函式，以及採用字串訊息和內部例外狀況的建構函式。
 
-* <xref:System.Exception.%23ctor>其中會使用預設值。
+* <xref:System.Exception.%23ctor>，會使用預設值。
   
 * <xref:System.Exception.%23ctor%28System.String%29>，它會接受字串訊息。  
   
@@ -102,7 +106,7 @@ ms.lasthandoff: 10/28/2017
 
 當您建立使用者定義的例外狀況時，請確保例外狀況的中繼資料可供遠端執行的程式碼使用。 
 
-比方說，對.NET 支援的應用程式定義域的實作，可能會發生例外狀況跨應用程式定義域。 假定應用程式定義域 A 建立應用程式定義域 B，它會執行擲回例外狀況的程式碼。 為使應用程式定義域 A 能夠正確地攔截及處理例外狀況，其必須能夠尋找含有應用程式定義域 B 所擲回之例外狀況的組件。若應用程式定義域 B 擲回例外狀況，但此例外狀況包含在位於其應用程式基底之下的組件，而不是位於在應用程式定義域 A 的應用程式基底之下的組件，應用程式定義域 A 將無法尋找例外狀況，而且 Common Language Runtime 將會擲回 <xref:System.IO.FileNotFoundException> 例外狀況。 若要避免這個情形，您可以透過兩種方式部署含有例外狀況資訊的組件：
+例如，在支援應用程式定義域的 .NET 實作上，例外狀況可能會跨應用程式定義域發生。 假定應用程式定義域 A 建立應用程式定義域 B，它會執行擲回例外狀況的程式碼。 為使應用程式定義域 A 能夠正確地攔截及處理例外狀況，其必須能夠尋找含有應用程式定義域 B 所擲回之例外狀況的組件。若應用程式定義域 B 擲回例外狀況，但此例外狀況包含在位於其應用程式基底之下的組件，而不是位於在應用程式定義域 A 的應用程式基底之下的組件，應用程式定義域 A 將無法尋找例外狀況，而且 Common Language Runtime 將會擲回 <xref:System.IO.FileNotFoundException> 例外狀況。 若要避免這個情形，您可以透過兩種方式部署含有例外狀況資訊的組件：
 
 - 將組件放入這兩個應用程式定義域共用的通用應用程式基底。
 
@@ -116,7 +120,7 @@ ms.lasthandoff: 10/28/2017
 
 ## <a name="use-grammatically-correct-error-messages"></a>使用文法正確的錯誤訊息
 
-撰寫清楚的句子並包含結尾標點符號。 例外狀況說明字串中的每一句應該以句號結束。 比方說，「 記錄表溢位。" 就是適當的描述字串。
+撰寫清楚的句子並包含結尾標點符號。 例外狀況說明字串中的每一句應該以句號結束。 例如，「記錄資料表已溢位」。 就是適當的描述字串。
 
 ## <a name="in-custom-exceptions-provide-additional-properties-as-needed"></a>在自訂例外狀況中，視需要提供額外的屬性
 
@@ -134,7 +138,7 @@ ms.lasthandoff: 10/28/2017
 [!code-csharp[Conceptual.Exception.Handling#6](../../../samples/snippets/csharp/VS_Snippets_CLR/conceptual.exception.handling/cs/source.cs#6)]
 [!code-vb[Conceptual.Exception.Handling#6](../../../samples/snippets/visualbasic/VS_Snippets_CLR/conceptual.exception.handling/vb/source.vb#6)]  
   
-在某些情況下，使用例外狀況的建構函式來建置例外狀況會更適當。 範例是 「 全域例外狀況類別例如<xref:System.ArgumentException>。
+在某些情況下，使用例外狀況的建構函式來建置例外狀況會更適當。 範例為全域例外狀況類別 <xref:System.ArgumentException>。
 
 ## <a name="clean-up-intermediate-results-when-throwing-an-exception"></a>在擲回例外狀況時清除中繼結果
 
@@ -177,5 +181,5 @@ catch (Exception ex)
 }
 ```
 
-## <a name="see-also"></a>另請參閱  
+## <a name="see-also"></a>請參閱  
 [例外狀況](index.md)

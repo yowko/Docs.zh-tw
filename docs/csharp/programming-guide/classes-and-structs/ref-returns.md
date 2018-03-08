@@ -3,45 +3,36 @@ title: "ref 傳回值和 ref 區域變數 (C# 手冊)"
 description: "了解如何定義和使用 ref 傳回值和 ref 區域變數值"
 author: rpetrusha
 ms.author: ronpet
-ms.date: 05/30/2017
+ms.date: 01/23/2017
 ms.topic: article
 ms.prod: .net
 ms.technology: devlang-csharp
 ms.devlang: csharp
-ms.assetid: 18cf7a4b-29f0-4b14-85b8-80af754aabd8
-ms.openlocfilehash: 1d8fb092b578602b5d4f791a3fd14f47dfae1ba6
-ms.sourcegitcommit: 7e99f66ef09d2903e22c789c67ff5a10aa953b2f
+ms.openlocfilehash: a74563c0d24b6cd2a2fa8534787f078f3cc92674
+ms.sourcegitcommit: cf22b29db780e532e1090c6e755aa52d28273fa6
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 11/18/2017
+ms.lasthandoff: 02/01/2018
 ---
 # <a name="ref-returns-and-ref-locals"></a>ref 傳回值和 ref 區域變數
 
-從 C# 7 開始，C# 支援參考傳回值 (ref 傳回值)。 參考傳回值允許方法將物件參考而非值傳回給呼叫者。 呼叫者接著可以選擇將傳回的物件視為已傳回，就像已以傳值方式或以傳址方式傳回它一樣。 呼叫者處理為參考而非值，並以傳址方式傳回的值，即 ref 區域變數。
+從 C# 7 開始，C# 支援參考傳回值 (ref 傳回值)。 參考傳回值允許方法將變數參考 (而非值) 傳回給呼叫者。 呼叫者接著可以選擇將傳回的變數視為以傳值方式或以傳址方式傳回。 呼叫者可建立本身為參考傳回值的新變數，稱為 ref 區域變數。
 
 ## <a name="what-is-a-reference-return-value"></a>何謂參考傳回值？
 
-大部分的開發人員都熟悉「以傳址方式」將引數傳遞給已呼叫方法。 已呼叫方法的引數清單包含以傳址方式傳遞的值，而且已呼叫方法對其值進行的任何變更都會傳回給呼叫者。 「參考傳回值」則相反：
+大部分的開發人員都熟悉「以傳址方式」將引數傳遞給已呼叫方法。 已呼叫方法的引數清單包含以傳址方式傳遞的變數，而且呼叫者會觀察到已呼叫方法對其值進行的任何變更。 「參考傳回值」表示方法傳回「參考」(或別名) 至某些變數，這些變數的範圍包括方法，且其存留期必須超過方法的傳回時間。 呼叫者對方法的傳回值所進行的修改，是針對方法傳回的變數進行。
 
-- 已呼叫方法的傳回值 (而非傳遞給它的引數) 是參考。
+宣告方法傳回「參考傳回值」，表示方法會將別名傳回給變數。 此設計通常用於呼叫的程式碼應可透過別名來存取該變數 (包括進行修改) 時。 這樣一來，以傳址方式傳回的方法就不能有傳回型別 `void`。
 
-- 呼叫者 (而非已呼叫方法) 可以修改方法所傳回的值。
+方法可傳回為參考傳回值的運算式有一些限制。 它們包括：
 
-- 方法的呼叫者傳回值修改會反映在呼叫其方法之物件的狀態中，而不是反映在呼叫者之物件狀態中的引數修改。
+- 傳回值必須有超過方法執行期間的存留期。 換句話說，它不能是將它傳回之方法中的區域變數。 它可以是類別的執行個體或靜態欄位，也可以是傳遞給方法的引數。 嘗試傳回區域變數會產生編譯器錯誤 CS8168「無法以傳址方式傳回本機 'obj'，因為其非參考本機」。
 
-參考傳回值可以產生更精簡的程式碼，以及允許物件只公開個別資料項目，例如呼叫者感興趣的陣列元素。 這可降低呼叫者不小心修改物件狀態的可能性。
+- 傳回值不能是常值 `null`。 嘗試傳回 `null` 會產生編譯器錯誤 CS8156「無法在此內容中使用運算式，因為其可能不會以傳址方式傳回」。
 
-方法可傳回為參考傳回值的值有一些限制。 這些活動包括：
-
-- 傳回值不能是 `void`。 嘗試定義具有 `void` 參考傳回值的方法會產生編譯器錯誤 CS1547「在此內容中不可使用關鍵字 'void'」。
+   使用 ref 傳回值的方法，可以將別名傳回給目前值為 Null (未具現化) 的變數，或是[可為 Null 的型別](../nullable-types/index.md)的實值型別。
  
-- 傳回值不能是傳回它之方法中的區域變數；它的範圍必須位在傳回它的方法外部。 它可以是類別的執行個體或靜態欄位，也可以是傳遞給方法的引數。 嘗試傳回區域變數會產生編譯器錯誤 CS8168「無法以傳址方式傳回本機 'obj'，因為其非參考本機」。
-
-- 傳回值不能是 `null`。 嘗試傳回 `null` 會產生編譯器錯誤 CS8156「無法在此內容中使用運算式，因為其可能不會以傳址方式傳回」。
-
-   如果具有 ref 傳回值的方法需要傳回 Null 值，您可以傳回參考型別的 Null (未具現化) 值或實值型別的[可為 Null 的類型](../nullable-types/index.md)。
- 
-- 傳回值不能是常數、列舉成員，或是 `class` 或 `struct` 的屬性。 嘗試傳回這些會產生編譯器錯誤 CS8156「無法在此內容中使用運算式，因為其可能不會以傳址方式傳回」。
+- 傳回值不能是常數、列舉成員、屬性的以傳值方式傳回值，或是 `class` 或 `struct` 的方法。 嘗試傳回這些會產生編譯器錯誤 CS8156「無法在此內容中使用運算式，因為其可能不會以傳址方式傳回」。
 
 此外，因為非同步方法可能會在完成執行之前傳回，但仍未知其傳回值，所以非同步方法並不允許參考傳回值。
  
@@ -53,7 +44,7 @@ ms.lasthandoff: 11/18/2017
 public ref Person GetContactInformation(string fname, string lname);
 ```
 
-此外，方法主體中每個 [return](../../language-reference/keywords/return.md) 陳述式所傳回的物件名稱前面必須加上 [ref](../../language-reference/keywords/ref.md) 關鍵字。 例如，下列 `return` 陳述式會以傳址方式傳回名為 `p` 的 `Person` 物件：
+此外，方法主體中每個 [return](../../language-reference/keywords/return.md) 陳述式所傳回的物件名稱前面必須加上 [ref](../../language-reference/keywords/ref.md) 關鍵字。 例如，下列 `return` 陳述式會傳回對名為 `p` 之 `Person` 物件的參考：
 
 ```csharp
 return ref p;
@@ -61,25 +52,40 @@ return ref p;
 
 ## <a name="consuming-a-ref-return-value"></a>使用 ref 傳回值
 
-呼叫者可以使用兩種方式之一來處理 ref 傳回值：
+ref 傳回值是在已呼叫方法的範圍中，另一個變數的別名。 您可以將任何使用 ref 傳回值的用法，解譯為使用別名所代表的變數：
 
-- 作為從方法以傳值方式傳回的一般值。 呼叫者可以選擇忽略傳回值是參考傳回值。 在此情況下，對方法呼叫所傳回的值進行的任何變更都不會反映在已呼叫類型的狀態中。 如果傳回值是實值型別，則對方法呼叫所傳回的值進行的任何變更都不會反映在已呼叫類型的狀態中。
+- 當您指派其值時，是將值指派給別名的變數。
+- 當您讀取其值時，是讀取別名的變數值。
+- 如果您以「傳址」方式傳回它，就是將別名傳回至同一個變數。
+- 如果您以「傳址」方式將它傳遞到另一個方法，就是將參考傳遞至別名的變數。
+- 當您建立 [ref 區域變數](#ref-local)別名時，就是對相同變數建立新的別名。
 
-- 作為參考傳回值。 呼叫者必須定義將參考傳回值指派為 [ref 區域變數](#ref-local)的變數，而且針對方法呼叫所傳回之值的任何變更都會反映在已呼叫類型的狀態中。 
 
 ## <a name="ref-locals"></a>ref 區域變數
 
-若要將參考傳回值處理為參考，呼叫者必須使用 `ref` 關鍵字將值宣告為 *ref 區域變數*。 例如，如果 `Person.GetContactInfomation` 方法所傳回的值是要用作參考，而非值，則方法呼叫會顯示為：
+假設 `GetContactInformation` 方法是宣告為 ref 傳回值：
+
+```csharp
+public ref Person GetContactInformation(string fname, string lname)
+```
+
+傳值方式指派會讀取變數值，並將它指派給新的變數：
+
+```csharp
+Person p = contacts.GetContactInformation("Brandie", "Best");
+```
+
+上述的指派將 `p` 宣告為區域變數。 其初始值的複製來源，是讀取 `GetContactInformation` 所傳回的值。 對 `p` 的任何後續指派將不會變更 `GetContactInformation` 傳回的變數值。 變數 `p` 不再是所傳回之變數的別名。
+
+您宣告「ref 區域變數」以將別名複製到原始的值。 在下列指派中，`p` 是 `GetContactInformation` 所傳回之變數的別名。
 
 ```csharp
 ref Person p = ref contacts.GetContactInformation("Brandie", "Best");
 ```
 
-請注意，`ref` 關鍵字是用於區域變數宣告的前面「和」方法呼叫的前面。 無法在變數宣告和指派中同時包含 `ref` 關鍵字，會導致編譯器錯誤 CS8172「無法使用值將傳址變數初始化」。 
- 
-對方法所傳回 `Person` 物件的後續變更會反映在 `contacts` 物件中。
+後續 `p` 的使用方式與使用 `GetContactInformation` 傳回的變數相同，因為 `p` 是該變數的別名。 變更 `p` 也會變更 `GetContactInformation` 傳回的變數。
 
-如果未使用 `ref` 關鍵字將 `p` 定義為 ref 區域變數，則呼叫者對 `p` 進行的任何變更都不會反映在 `contacts` 物件中。
+請注意，`ref` 關鍵字是用於區域變數宣告的前面「和」方法呼叫的前面。 無法在變數宣告和指派中同時包含 `ref` 關鍵字，會導致編譯器錯誤 CS8172「無法使用值將傳址變數初始化」。 
  
 ## <a name="ref-returns-and-ref-locals-an-example"></a>ref 傳回值和 ref 區域變數：範例
 
@@ -93,6 +99,6 @@ ref Person p = ref contacts.GetContactInformation("Brandie", "Best");
 
 如果不支援參考傳回值，則通常是透過傳回陣列元素和其值的索引來執行這類作業。 呼叫者接著可以使用這個索引，來修改不同方法呼叫中的值。 不過，呼叫者也可以修改要存取的索引，也可能修改其他陣列值。  
  
-## <a name="see-also"></a>請參閱
+## <a name="see-also"></a>另請參閱
 
 [ref 關鍵字](../../language-reference/keywords/ref.md)

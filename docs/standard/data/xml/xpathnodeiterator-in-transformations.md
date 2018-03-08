@@ -12,18 +12,21 @@ dev_langs:
 - csharp
 - vb
 ms.assetid: 2bc6ddc6-674a-4f75-b264-abc35e4e5857
-caps.latest.revision: "4"
+caps.latest.revision: 
 author: mairaw
 ms.author: mairaw
 manager: wpickett
-ms.openlocfilehash: 28877f10e11f2eebdcbcc8ff75854551302e3f66
-ms.sourcegitcommit: bd1ef61f4bb794b25383d3d72e71041a5ced172e
+ms.workload:
+- dotnet
+- dotnetcore
+ms.openlocfilehash: 523a4774de9975812838b22bbb5193e59cd58130
+ms.sourcegitcommit: e7f04439d78909229506b56935a1105a4149ff3d
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/18/2017
+ms.lasthandoff: 12/23/2017
 ---
 # <a name="xpathnodeiterator-in-transformations"></a>轉換中的 XPathNodeIterator
-<xref:System.Xml.XPath.XPathNodeIterator> 所提供的方法可讓您重複處理建立為 XML 路徑語言 (XPath) 查詢結果的節點集，或是利用節點集方法轉換成節點集的 Result Tree Fragment。 <xref:System.Xml.XPath.XPathNodeIterator> 可讓您重複處理該節點集內的節點。 擷取節點集之後，<xref:System.Xml.XPath.XPathNodeIterator> 類別即會提供唯讀且順向的資料指標給選取的節點集。 節點集以文件順序建立，因此呼叫這個方法將移至文件順序中的下一個節點。 <xref:System.Xml.XPath.XPathNodeIterator> 不會在節點集內建置所有節點的節點樹狀結構。 而是將單一節點視窗提供到資料內，讓您在樹狀結構中移動時，公開它所指到的基礎節點。 因使用 <xref:System.Xml.XPath.XPathNodeIterator> 類別而成為可用的方法與屬性，可讓您取得目前節點的相關資訊。 如需可用方法和屬性的清單，請參閱<xref:System.Windows.Forms.ToolBar>。  
+<xref:System.Xml.XPath.XPathNodeIterator> 所提供的方法可讓您重複處理建立為 XML 路徑語言 (XPath) 查詢結果的節點集，或是利用節點集方法轉換成節點集的 Result Tree Fragment。 <xref:System.Xml.XPath.XPathNodeIterator> 可讓您重複處理該節點集內的節點。 擷取節點集之後，<xref:System.Xml.XPath.XPathNodeIterator> 類別即會提供唯讀且順向的資料指標給選取的節點集。 節點集以文件順序建立，因此呼叫這個方法將移至文件順序中的下一個節點。 <xref:System.Xml.XPath.XPathNodeIterator> 不會在節點集內建置所有節點的節點樹狀結構。 而是將單一節點視窗提供到資料內，讓您在樹狀結構中移動時，公開它所指到的基礎節點。 因使用 <xref:System.Xml.XPath.XPathNodeIterator> 類別而成為可用的方法與屬性，可讓您取得目前節點的相關資訊。 如需可用方法和屬性的清單，請參閱 <xref:System.Windows.Forms.ToolBar>。  
   
  <xref:System.Xml.XPath.XPathNodeIterator> 會在 XPath 查詢所建立的節點集上移動，且只能順向移動，因此必須使用 <xref:System.Xml.XPath.XPathNodeIterator.MoveNext%2A> 方法來移動。 這種方法傳回的型別是 `Boolean`，若它移到下一個選取的節點則傳回 `true`，若沒有其他選取的節點則傳回 `false`。 如果它傳回 `true`，下列清單顯示可用的屬性：  
   
@@ -35,7 +38,7 @@ ms.lasthandoff: 10/18/2017
   
  當您首次檢視節點集時，必須呼叫 <xref:System.Xml.XPath.XPathNodeIterator.MoveNext%2A>，對所選節點集之第一個節點的 <xref:System.Xml.XPath.XPathNodeIterator> 進行定位。 這允許寫入 while 迴圈。  
   
- 下列程式碼範例顯示如何在 <xref:System.Xml.XPath.XPathNodeIterator> 中，將 <xref:System.Xml.Xsl.XslTransform> 作為參數，傳遞到 <xref:System.Xml.Xsl.XsltArgumentList>。 程式碼的輸入是**books.xml**，樣式表為**text.xsl**。 檔案**test.xml**是<xref:System.Xml.XPath.XPathDocument>。  
+ 下列程式碼範例顯示如何在 <xref:System.Xml.XPath.XPathNodeIterator> 中，將 <xref:System.Xml.Xsl.XslTransform> 作為參數，傳遞到 <xref:System.Xml.Xsl.XsltArgumentList>。 程式碼的輸入為 **books.xml**，樣式表為 **text.xsl**。 **test.xml** 檔案為 <xref:System.Xml.XPath.XPathDocument>。  
   
 ```vb  
 Imports System  
@@ -165,5 +168,5 @@ xmlns:msxsl="urn:schemas-microsoft-com:xslt" exclude-result-prefixes="msxsl">
 </out>  
 ```  
   
-## <a name="see-also"></a>另請參閱  
+## <a name="see-also"></a>請參閱  
  [XslTransform 類別實作 XSLT 處理器](../../../../docs/standard/data/xml/xsltransform-class-implements-the-xslt-processor.md)

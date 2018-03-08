@@ -9,20 +9,22 @@ ms.technology: dotnet-standard
 ms.tgt_pltfrm: 
 ms.topic: article
 ms.assetid: df363480-ba02-4233-9ddf-8434e421c4f1
-caps.latest.revision: "3"
+caps.latest.revision: 
 author: mairaw
 ms.author: mairaw
 manager: wpickett
-ms.openlocfilehash: 1a4b585fe34a841061f8e5bab7cb18a58f53cfe8
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.workload:
+- dotnet
+- dotnetcore
+ms.openlocfilehash: 04e23f39f522fca7f69aa86be7036320a5698a60
+ms.sourcegitcommit: e7f04439d78909229506b56935a1105a4149ff3d
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 12/23/2017
 ---
 # <a name="result-tree-fragment-in-transformations"></a>轉換中的結果樹狀片段
 > [!NOTE]
->  
-          <xref:System.Xml.Xsl.XslTransform> 類別在 [!INCLUDE[dnprdnext](../../../../includes/dnprdnext-md.md)] 中已過時。 您可以使用 <xref:System.Xml.Xsl.XslCompiledTransform> 類別來執行可延伸樣式表語言轉換 (XSLT)。 請參閱[使用 XslCompiledTransform 類別](../../../../docs/standard/data/xml/using-the-xslcompiledtransform-class.md)和[移轉從 XslTransform 類別](../../../../docs/standard/data/xml/migrating-from-the-xsltransform-class.md)如需詳細資訊。  
+>  <xref:System.Xml.Xsl.XslTransform> 類別在 [!INCLUDE[dnprdnext](../../../../includes/dnprdnext-md.md)] 中已過時。 您可以使用 <xref:System.Xml.Xsl.XslCompiledTransform> 類別來執行可延伸樣式表語言轉換 (XSLT)。 如需詳細資訊，請參閱[使用 XslCompiledTransform 類別](../../../../docs/standard/data/xml/using-the-xslcompiledtransform-class.md)和[從 XslTransform 類別移轉](../../../../docs/standard/data/xml/migrating-from-the-xsltransform-class.md)。  
   
  結果樹狀片段又稱為結果樹狀片段，其實就是指一種特殊型別的節點集。 您可以於其上進行任何可以在節點上進行的函式。 或者，您也可以使用 `node-set()` 函式將 result tree fragment 轉換成節點集，然後在任何可使用節點集的地方使用。  
   
@@ -44,7 +46,7 @@ ms.lasthandoff: 11/21/2017
   
  對於 `parameter` 與 `variable` 這兩個項目，若由 XPath 運算式指派其值，則會傳回四種基本 XPath 型別其中之一：布林值、數字、字串或節點集。 當值是由非空白的範本主體提供時，將傳回非 XPath 的資料型別，而它即是結果樹狀結構片段。  
   
- 只有在變數繫結於結果樹狀結構片段而非四種基本 XPath 資料型別的其中一種時，XPath 查詢才會傳回非四種 XPath 物件型別的任何一種。 結果樹狀結構片段及其行為在全球資訊網協會 (W3C) 規格 (www.w3.org/XSLT) 中的 11.1 節＜結果樹狀結構片段＞至 11.6 節＜將參數傳遞至範本＞(英文) 中有所討論。 同時，第 1 節＜簡介＞(英文) 也討論了範本如何包含來自傳回或建立結果樹狀結構片段之 XSLT 命名空間的項目。  
+ 只有在變數繫結於結果樹狀結構片段而非四種基本 XPath 資料型別的其中一種時，XPath 查詢才會傳回非四種 XPath 物件型別的任何一種。 結果樹狀片段及其行為在全球資訊網協會 (W3C) 規格 (www.w3.org/XSLT) 中的 11.1 節＜結果樹狀片段＞至 11.6 節＜將參數傳遞至範本＞(英文) 中有所討論。 同時，第 1 節＜簡介＞(英文) 也討論了範本如何包含來自傳回或建立結果樹狀結構片段之 XSLT 命名空間的項目。  
   
  在概念上，結果樹狀結構片段的行為類似僅有單一根節點的節點集。 但是，所傳回的其他節點都是子節點。 若要以程式方式檢視子節點，請使用 `<xsl:copy-of>` 項目，將 result tree fragment 複製到結果樹狀結構上。 完成複製後，所有的子節點也會依序複製到結果樹狀結構上。 必須使用 `copy` 或 `copy-of`，result tree fragment 才會成為結果樹狀結構或轉換輸出的一部分。  
   
@@ -199,7 +201,7 @@ ms.lasthandoff: 11/21/2017
 <books xmlns:user="urn:books">Book1Book2Book3Book4</books>  
 ```  
   
-## <a name="see-also"></a>另請參閱  
+## <a name="see-also"></a>請參閱  
  <xref:System.Xml.XPath.XPathNodeIterator>  
  <xref:System.Xml.XPath.XPathNodeIterator>  
  [使用 XslTransform 類別進行 XSLT 轉換](../../../../docs/standard/data/xml/xslt-transformations-with-the-xsltransform-class.md)  

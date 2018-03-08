@@ -22,21 +22,24 @@ helpviewer_keywords:
 - strings [.NET Framework], regular expressions
 - parsing text with regular expressions, backtracking
 ms.assetid: 34df1152-0b22-4a1c-a76c-3c28c47b70d8
-caps.latest.revision: "20"
+caps.latest.revision: 
 author: rpetrusha
 ms.author: ronpet
 manager: wpickett
-ms.openlocfilehash: 80661b24c35742b57a98b51fe055b0df05b34cad
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.workload:
+- dotnet
+- dotnetcore
+ms.openlocfilehash: b3d7b5c42f43795f811af66d42ed364d482c8ced
+ms.sourcegitcommit: cf22b29db780e532e1090c6e755aa52d28273fa6
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 02/01/2018
 ---
 # <a name="backtracking-in-regular-expressions"></a>規則運算式中的回溯
 <a name="top"></a> 回溯 (Backtracking) 會在規則運算式模式包含選擇性的 [數量詞](../../../docs/standard/base-types/quantifiers-in-regular-expressions.md) 或 [交替建構](../../../docs/standard/base-types/alternation-constructs-in-regular-expressions.md)，且規則運算式引擎返回之前儲存的狀態繼續搜尋相符項目時發生。 回溯是規則運算式的核心能力，可讓運算式功能強大且靈活，並且比對非常複雜的模式。 但同時，這項強大功能需付出相當的代價。 回溯經常是影響規則運算式引擎之效能最重要的一項因素。 幸好開發人員能夠掌控規則運算式引擎的行為，以及其使用回溯的方式。 本主題將說明回溯運作的方式，以及如何進行控制。  
   
 > [!NOTE]
->  一般情況下，像是.NET 規則運算式引擎不具決定性有限自動化 (NFA) 引擎將設計有效率且快速之規則運算式開發人員的責任。  
+>  大致而言，像是 .NET 規則運算式引擎這類非決定性有限自動化 (NFA) 引擎將設計有效率且快速之規則運算式的責任交給了開發人員。  
   
  此主題包括下列章節：  
   
@@ -125,13 +128,13 @@ ms.lasthandoff: 11/21/2017
   
 -   它會返回之前儲存的符合結果 3。 然後判斷出有兩個額外的 "a" 字元要指派至額外的擷取群組。 然而，字串結尾測試失敗。 接著它會返回符合結果 3，並嘗試比對兩個額外的擷取群組中的這兩個額外的 "a" 字元。 字串結尾測試仍然失敗。 這些失敗的比對需要經過 12 次比較。 到目前為止，總共執行了 25 次比較。  
   
- 輸入字串與規則運算式的比較會依照這種方式繼續進行，直到規則運算式引擎嘗試過所有可能的比對組合，然後得到沒有符合的結果這個結論。 巢狀數量詞，因為這項比較不 O (2<sup>n</sup>) 或指數運算，其中 *n* 會在輸入字串中的字元數。 這表示，在最糟的情況下，包含 30 個字元的輸入字串約需要進行 1,073,741,824 次比較，而包含 40 個字元的輸入字串約需要進行 1,099,511,627,776 次比較。 如果您使用這類長度甚至更長的字串，則規則運算式方法處理不符合規則運算式模式的輸入時，可能需要相當長的時間才能完成。  
+ 輸入字串與規則運算式的比較會依照這種方式繼續進行，直到規則運算式引擎嘗試過所有可能的比對組合，然後得到沒有符合的結果這個結論。 由於巢狀數量詞的關係，這個比較是 O(2<sup>n</sup>) 或指數運算，其中 *n* 是輸入字串中的字元數。 這表示，在最糟的情況下，包含 30 個字元的輸入字串約需要進行 1,073,741,824 次比較，而包含 40 個字元的輸入字串約需要進行 1,099,511,627,776 次比較。 如果您使用這類長度甚至更長的字串，則規則運算式方法處理不符合規則運算式模式的輸入時，可能需要相當長的時間才能完成。  
   
  [回到頁首](#top)  
   
 <a name="controlling_backtracking"></a>   
 ## <a name="controlling-backtracking"></a>控制回溯  
- 回溯可讓您建立強大、靈活的規則運算式。 不過，如上一節所示，這些好處可能伴隨著令人敬謝不敏的低落效能。 為了避免大量回溯，當您具現化 <xref:System.Text.RegularExpressions.Regex> 物件或呼叫靜態規則運算式比對方法時，應該定義逾時間隔。 下一節將討論這個部分。 此外，.NET 支援三個規則運算式語言項目可限制或隱藏回溯並支援複雜的規則運算式與少量或沒有效能產生負面影響：[非回溯子運算式](#Nonbacktracking)，[左合樣判斷提示](#Lookbehind)，和[右合樣判斷提示](#Lookahead)。 如需各語言項目的詳細資訊，請參閱 [Grouping Constructs](../../../docs/standard/base-types/grouping-constructs-in-regular-expressions.md)。  
+ 回溯可讓您建立強大、靈活的規則運算式。 不過，如上一節所示，這些好處可能伴隨著令人敬謝不敏的低落效能。 為了避免大量回溯，當您具現化 <xref:System.Text.RegularExpressions.Regex> 物件或呼叫靜態規則運算式比對方法時，應該定義逾時間隔。 下一節將討論這個部分。 此外，.NET 支援三個規則運算式語言元素，可限制或隱藏回溯並支援複雜的規則運算式，而且對效能的影響微不足道：[非回溯子運算式](#Nonbacktracking)、[左合樣判斷提示](#Lookbehind)和[右合樣判斷提示](#Lookahead)。 如需各語言項目的詳細資訊，請參閱 [Grouping Constructs](../../../docs/standard/base-types/grouping-constructs-in-regular-expressions.md)。  
   
 <a name="Timeout"></a>   
 ### <a name="defining-a-time-out-interval"></a>定義逾時間隔  
@@ -158,11 +161,11 @@ ms.lasthandoff: 11/21/2017
   
 <a name="Lookbehind"></a>   
 ### <a name="lookbehind-assertions"></a>左合樣判斷提示  
- .NET 包含兩個語言項目， `(?<=` *subexpression* `)`和`(?<!` *subexpression*`)`，會比對前一個字元在輸入字串中。 這兩個語言項目都是零寬度判斷提示，也就是說，它們會判斷緊接著目前字元前面的字元是否可由 *子運算式*比對，而不需前進或回溯。  
+ .NET 包含兩個語言元素：`(?<=`*subexpression*`)` 和 `(?<!`*subexpression*`)`，這兩者會比對輸入字串中的前一個或多個字元。 這兩個語言項目都是零寬度判斷提示，也就是說，它們會判斷緊接著目前字元前面的字元是否可由 *子運算式*比對，而不需前進或回溯。  
   
  `(?<=` *子運算式* `)` 是左合樣判斷提示，也就是說，目前位置前面的字元必須符合 *子運算式*。 `(?<!`*子運算式*`)` 是左不合樣判斷提示，也就是說，目前位置前面的字元必須不符合 *子運算式*。 當 *子運算式* 為前一個子運算式的子集時，左合樣和左不合樣判斷提示最為實用。  
   
- 下列範例使用兩個同等的規則運算式模式，這兩個模式會驗證電子郵件地址中的使用者名稱。 第一個模式因為進行大量回溯，而受限於低落的效能。 第二個模式修改了第一個規則運算式，將巢狀數量詞取代為左合樣判斷提示。 範例的輸入顯示 <xref:System.Text.RegularExpressions.Regex.IsMatch%2A?displayProperty=nameWithType> 方法的執行時間。  
+ 下列範例使用兩個同等的規則運算式模式，來驗證電子郵件地址中的使用者名稱。 第一個模式因為進行大量回溯，而受限於低落的效能。 第二個模式修改了第一個規則運算式，將巢狀數量詞取代為左合樣判斷提示。 範例的輸入顯示 <xref:System.Text.RegularExpressions.Regex.IsMatch%2A?displayProperty=nameWithType> 方法的執行時間。  
   
  [!code-csharp[Conceptual.RegularExpressions.Backtracking#5](../../../samples/snippets/csharp/VS_Snippets_CLR/conceptual.regularexpressions.backtracking/cs/backtracking5.cs#5)]
  [!code-vb[Conceptual.RegularExpressions.Backtracking#5](../../../samples/snippets/visualbasic/VS_Snippets_CLR/conceptual.regularexpressions.backtracking/vb/backtracking5.vb#5)]  
@@ -190,7 +193,7 @@ ms.lasthandoff: 11/21/2017
   
 <a name="Lookahead"></a>   
 ### <a name="lookahead-assertions"></a>右合樣判斷提示  
- .NET 包含兩個語言項目， `(?=` *subexpression* `)`和`(?!` *subexpression*`)`，會比對下一個字元或字元輸入的字串。 這兩個語言項目都是零寬度判斷提示，也就是說，它們會判斷緊接著目前字元後面的字元是否可由 *子運算式*比對，而不需前進或回溯。  
+ .NET 包含兩個語言元素：`(?=`*subexpression*`)` 和 `(?!`*subexpression*`)`，這兩者會比對輸入字串中的下一個或多個字元。 這兩個語言項目都是零寬度判斷提示，也就是說，它們會判斷緊接著目前字元後面的字元是否可由 *子運算式*比對，而不需前進或回溯。  
   
  `(?=` *子運算式* `)` 是右合樣判斷提示，也就是說，目前位置後面的字元必須符合 *子運算式*。 `(?!`*子運算式*`)` 是右不合樣判斷提示，也就是說，目前位置後面的字元必須不符合 *子運算式*。 當 *子運算式* 為下一個子運算式的子集時，右合樣和右不合樣判斷提示最為實用。  
   
@@ -222,7 +225,7 @@ ms.lasthandoff: 11/21/2017
   
  [回到頁首](#top)  
   
-## <a name="see-also"></a>另請參閱  
+## <a name="see-also"></a>請參閱  
  [.NET 規則運算式](../../../docs/standard/base-types/regular-expressions.md)  
  [規則運算式語言 - 快速參考](../../../docs/standard/base-types/regular-expression-language-quick-reference.md)  
  [數量詞](../../../docs/standard/base-types/quantifiers-in-regular-expressions.md)  

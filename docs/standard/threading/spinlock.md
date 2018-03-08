@@ -8,28 +8,32 @@ ms.suite:
 ms.technology: dotnet-standard
 ms.tgt_pltfrm: 
 ms.topic: article
-helpviewer_keywords: synchronization primitives, SpinLock
+helpviewer_keywords:
+- synchronization primitives, SpinLock
 ms.assetid: f9af93bb-7a0d-4ba5-afe8-74f48b6b6958
-caps.latest.revision: "8"
+caps.latest.revision: 
 author: rpetrusha
 ms.author: ronpet
 manager: wpickett
-ms.openlocfilehash: efe9b3126b3c952ab156f9ca40752ad8d3fddcd1
-ms.sourcegitcommit: bd1ef61f4bb794b25383d3d72e71041a5ced172e
+ms.workload:
+- dotnet
+- dotnetcore
+ms.openlocfilehash: e83505a36252457d286bc7fbc6bbe442732229a4
+ms.sourcegitcommit: e7f04439d78909229506b56935a1105a4149ff3d
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/18/2017
+ms.lasthandoff: 12/23/2017
 ---
 # <a name="spinlock"></a>SpinLock
-<xref:System.Threading.SpinLock>結構是低階、 互斥同步處理基本類型，在等候取得鎖定期間的旋轉。 在多核心電腦時應該等候時間很短且競爭時最少，<xref:System.Threading.SpinLock>可以優於其他類型的鎖定。 不過，我們建議您改用<xref:System.Threading.SpinLock>只有當您判斷程式碼剖析，<xref:System.Threading.Monitor?displayProperty=nameWithType>方法或<xref:System.Threading.Interlocked>方法會大幅減慢程式的效能。  
+<xref:System.Threading.SpinLock> 結構是一個低階、互斥的同步處理基本類型，會在等候取得鎖定期間進行微調。 在多核心電腦上，預期等候時間很短且競爭最少時，<xref:System.Threading.SpinLock> 可以優於其他類型鎖定的方式執行。 不過，我們建議您只有在藉由分析 <xref:System.Threading.Monitor?displayProperty=nameWithType> 方法進行判斷時，或 <xref:System.Threading.Interlocked> 方法大幅減慢程式的效能，才使用 <xref:System.Threading.SpinLock>。  
   
- <xref:System.Threading.SpinLock>可能會產生即使它不尚未取得鎖定之執行緒的時間配量。 它會以避免執行緒優先權反轉，並啟用進行記憶體回收行程。 當您使用<xref:System.Threading.SpinLock>，確保任何執行緒可以保留鎖定，非常短暫的時間範圍內，已超過和任何執行緒可以封鎖時，它會持有鎖定。  
+ 即使 <xref:System.Threading.SpinLock> 尚未取得鎖定，還是可能會讓出執行緒的時間配量。 它會執行此作業來避免執行緒優先順序反轉，並使記憶體回收行程繼續有進展。 當您使用 <xref:System.Threading.SpinLock> 時，確保沒有任何執行緒可以保留鎖定超過一個非常短暫的時間範圍，而且沒有執行緒可以在保留鎖定時加以封鎖。  
   
- 由於單一執行緒存取鎖是實值類型，您必須明確地將傳遞它參考如果您想要參考相同的鎖定，兩個複本。  
+ 由於 SpinLock 是一個實值類型，因此，如果您想要讓兩個複本參考同一個鎖定，就必須明確地以傳址方式傳遞它。  
   
- 如需如何使用這種類型的詳細資訊，請參閱<xref:System.Threading.SpinLock?displayProperty=nameWithType>。 如需範例，請參閱[How to： 使用 SpinLock 進行低階同步處理](../../../docs/standard/threading/how-to-use-spinlock-for-low-level-synchronization.md)。  
+ 如需如何使用此類型的詳細資訊，請參閱 <xref:System.Threading.SpinLock?displayProperty=nameWithType>。 如需範例，請參閱[如何：使用 SpinLock 進行低階同步處理](../../../docs/standard/threading/how-to-use-spinlock-for-low-level-synchronization.md)。  
   
- <xref:System.Threading.SpinLock>支援*執行緒*-*追蹤*模式可讓您在開發階段，協助追蹤在特定時間持有鎖定的執行緒。 執行緒追蹤模式是非常適用於偵錯，但我們建議您關閉該程式的發行版本中因為它可能會降低效能。 如需詳細資訊，請參閱[How to： 啟用執行緒追蹤模式，在單一執行緒存取鎖](../../../docs/standard/threading/how-to-enable-thread-tracking-mode-in-spinlock.md)。  
+ <xref:System.Threading.SpinLock> 支援「執行緒-」模式，讓您可以在開發階段使用，以協助追蹤在特定時間保留鎖定的執行緒。 執行緒追蹤模式非常適用於偵錯，但我們建議您在程式的發行版本中關閉此模式，因為它可能會降低效能。 如需詳細資訊，請參閱[如何：啟用 SpinLock 中的執行緒追蹤模式](../../../docs/standard/threading/how-to-enable-thread-tracking-mode-in-spinlock.md)。  
   
-## <a name="see-also"></a>另請參閱  
+## <a name="see-also"></a>請參閱  
  [執行緒物件和功能](../../../docs/standard/threading/threading-objects-and-features.md)

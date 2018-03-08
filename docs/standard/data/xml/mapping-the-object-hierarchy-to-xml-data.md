@@ -12,15 +12,18 @@ dev_langs:
 - csharp
 - vb
 ms.assetid: 450e350b-6a68-4634-a2a5-33f4dc33baf0
-caps.latest.revision: "5"
+caps.latest.revision: 
 author: rpetrusha
 ms.author: ronpet
 manager: wpickett
-ms.openlocfilehash: 1bf43922fb702988e9057f541833cd58d33c820a
-ms.sourcegitcommit: bd1ef61f4bb794b25383d3d72e71041a5ced172e
+ms.workload:
+- dotnet
+- dotnetcore
+ms.openlocfilehash: 2191cb15a85e9b16ff0a21084668e80d3c197bfa
+ms.sourcegitcommit: e7f04439d78909229506b56935a1105a4149ff3d
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/18/2017
+ms.lasthandoff: 12/23/2017
 ---
 # <a name="mapping-the-object-hierarchy-to-xml-data"></a>將物件階層架構對應至 XML 資料
 當 XML 文件在記憶體時，概念式的表示就是樹狀。 對於程式設計，您有物件階層架構來存取樹狀結構的節點。 下列範例顯示 XML 內容如何成為節點。  
@@ -42,9 +45,9 @@ ms.lasthandoff: 10/18/2017
  ![範例節點樹狀結構](../../../../docs/standard/data/xml/media/simple-xml.gif "Simple_XML")  
 Book 和 title 節點的樹狀表示  
   
- `book`項目會成為**XmlElement**物件下, 一個項目， `title`，也會成為**XmlElement**，而項目內容會變成**XmlText**物件。 查看**XmlElement**方法和屬性、 方法和屬性是不同的方法和屬性可用在**XmlText**物件。 因此了解 XML 標記會變成何種節點型別變得很重要，因為它的節點型別會決定可以執行的動作。  
+ `book` 項目會成為 **XmlElement** 物件，下一個項目 `title` 也會成為 **XmlElement**，而項目內容會成為 **XmlText** 物件。 查看 **XmlElement** 方法和屬性時，方法和屬性與 **XmlText** 物件中可以使用的方法和屬性不同。 因此了解 XML 標記會變成何種節點型別變得很重要，因為它的節點型別會決定可以執行的動作。  
   
- 下列範例讀入 XML 資料，並且根據節點型別寫出不同的文字。 使用下列的 XML 資料檔案做為輸入， **items.xml**:  
+ 下列範例讀入 XML 資料，並且根據節點型別寫出不同的文字。 使用下列 XML 資料檔 **items.xml** 來做為輸入：  
   
  **輸入**  
   
@@ -62,7 +65,7 @@ Book 和 title 節點的樹狀表示
 </Items>  
 ```  
   
- 下列程式碼範例讀取**items.xml**檔並且顯示每個節點類型的資訊。  
+ 下列程式碼範例讀取 **items.xml** 檔並且顯示每個節點型別的資訊。  
   
 ```vb  
 Imports System  
@@ -195,37 +198,37 @@ public class Sample
   
 |輸入|輸出|節點型別測試|  
 |-----------|------------|--------------------|  
-|\<？ xml 版本 ="1.0"？ >|\<？ xml 版本 ='1.0 '？ >|XmlNodeType.XmlDeclaration|  
-|\<！-這是範例 XML 文件-->|\<！-這是範例 XML 文件-->|XmlNodeType.Comment|  
-|\<!DOCTYPE 項目 [\<！實體數目"123">] >|\<!DOCTYPE 項目 [\<！實體數目"123">]|XmlNodeType.DocumentType|  
-|\<項目 >|\<項目 >|XmlNodeType.Element|  
+|\<?xml version="1.0"?>|\<?xml version='1.0'?>|XmlNodeType.XmlDeclaration|  
+|\<!-- This is a sample XML document -->|\<!--This is a sample XML document -->|XmlNodeType.Comment|  
+|\<!DOCTYPE Items [\<!ENTITY number "123">]>|\<!DOCTYPE Items [\<!ENTITY number "123">]|XmlNodeType.DocumentType|  
+|\<Items>|\<Items>|XmlNodeType.Element|  
 |\<Item>|\<Item>|XmlNodeType.Element|  
-|測試與實體：&number;|Test with an entity: 123|XmlNodeType.Text|  
-|\</ 項目 >|\</ 項目 >|XmlNodeType.EndElement|  
+|Test with an entity: &number;|Test with an entity: 123|XmlNodeType.Text|  
+|\</Item>|\</Item>|XmlNodeType.EndElement|  
 |\<Item>|\<Item>|XmNodeType.Element|  
 |test with a child element|test with a child element|XmlNodeType.Text|  
-|\<多個 >|\<多個 >|XmlNodeType.Element|  
+|\<more>|\<more>|XmlNodeType.Element|  
 |stuff|stuff|XmlNodeType.Text|  
-|\</ 項目 >|\</ 項目 >|XmlNodeType.EndElement|  
+|\</Item>|\</Item>|XmlNodeType.EndElement|  
 |\<Item>|\<Item>|XmlNodeType.Element|  
 |test with a CDATA section|test with a CDATA section|XmlTest.Text|  
-|< ！[CDATA [\<456 >]]\>|< ！[CDATA [\<456 >]]\>|XmlTest.CDATA|  
+|<![CDATA[\<456>]]\>|<![CDATA[\<456>]]\>|XmlTest.CDATA|  
 |def|def|XmlNodeType.Text|  
-|\</ 項目 >|\</ 項目 >|XmlNodeType.EndElement|  
+|\</Item>|\</Item>|XmlNodeType.EndElement|  
 |\<Item>|\<Item>|XmlNodeType.Element|  
-|測試與 char 實體： &\#65;|Test with a char entity: A|XmlNodeType.Text|  
-|\</ 項目 >|\</ 項目 >|XmlNodeType.EndElement|  
-|\<！---> 14 個字元，在此項目。|\<---> 14 個字元，在此項目。|XmlNodeType.Comment|  
+|Test with a char entity: &\#65;|Test with a char entity: A|XmlNodeType.Text|  
+|\</Item>|\</Item>|XmlNodeType.EndElement|  
+|\<!-- Fourteen chars in this element.-->|\<--Fourteen chars in this element.-->|XmlNodeType.Comment|  
 |\<Item>|\<Item>|XmlNodeType.Element|  
 |1234567890ABCD|1234567890ABCD|XmlNodeType.Text|  
-|\</ 項目 >|\</ 項目 >|XmlNodeType.EndElement|  
-|\</ 項目 >|\</ 項目 >|XmlNodeType.EndElement|  
+|\</Item>|\</Item>|XmlNodeType.EndElement|  
+|\</Items>|\</Items>|XmlNodeType.EndElement|  
   
  您必須知道指派的是何種節點型別，因為節點型別可控制何種動作是有效的，以及何種屬性是您可以設定和擷取的。  
   
- 時，能夠將資料載入 DOM 所控制的泛空白字元節點建立**PreserveWhitespace**旗標。 如需詳細資訊，請參閱[泛空白字元和顯著泛空白字元處理載入 DOM 時](../../../../docs/standard/data/xml/white-space-and-significant-white-space-handling-when-loading-the-dom.md)。  
+ 若資料是由 **PreserveWhitespace** 旗標載入 DOM，泛空白字元節點的建立就會受到控制。 如需詳細資訊，請參閱[載入 DOM 時處理泛空白字元和顯著泛空白字元](../../../../docs/standard/data/xml/white-space-and-significant-white-space-handling-when-loading-the-dom.md)。  
   
- 若要將新節點加入至 DOM，請參閱[將節點插入 XML 文件](../../../../docs/standard/data/xml/inserting-nodes-into-an-xml-document.md)。 若要從 DOM 移除節點，請參閱[移除節點、 內容和值從 XML 文件](../../../../docs/standard/data/xml/removing-nodes-content-and-values-from-an-xml-document.md)。 若要修改 DOM 中節點的內容，請參閱[修改節點、 內容和 XML 文件中的值](../../../../docs/standard/data/xml/modifying-nodes-content-and-values-in-an-xml-document.md)。  
+ 若要將新節點加入至 DOM，請參閱[將節點插入 XML 文件](../../../../docs/standard/data/xml/inserting-nodes-into-an-xml-document.md)。 若要從 DOM 移除節點，請參閱[從 XML 文件移除節點、內容和值](../../../../docs/standard/data/xml/removing-nodes-content-and-values-from-an-xml-document.md)。 若要修改 DOM 中節點的內容，請參閱[修改 XML 文件中的節點、內容和值](../../../../docs/standard/data/xml/modifying-nodes-content-and-values-in-an-xml-document.md)。  
   
-## <a name="see-also"></a>另請參閱  
+## <a name="see-also"></a>請參閱  
  [XML 文件物件模型 (DOM)](../../../../docs/standard/data/xml/xml-document-object-model-dom.md)

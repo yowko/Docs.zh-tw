@@ -11,28 +11,32 @@ ms.topic: article
 dev_langs:
 - csharp
 - vb
-helpviewer_keywords: tasks, child tasks
+helpviewer_keywords:
+- tasks, child tasks
 ms.assetid: c95788bf-90a6-4e96-b7bc-58e36a228cc5
-caps.latest.revision: "21"
+caps.latest.revision: 
 author: rpetrusha
 ms.author: ronpet
 manager: wpickett
-ms.openlocfilehash: c1a0c664dffc2986d4d6985fd2b71cd8055bf2c9
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.workload:
+- dotnet
+- dotnetcore
+ms.openlocfilehash: 298ccdc4628c840874d10832da29c10d6d496655
+ms.sourcegitcommit: e7f04439d78909229506b56935a1105a4149ff3d
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 12/23/2017
 ---
 # <a name="attached-and-detached-child-tasks"></a>附加與中斷連結的子工作
-A*子工作*(或*巢狀的工作*) 是<xref:System.Threading.Tasks.Task?displayProperty=nameWithType>另一項工作，也就是使用者委派中建立的執行個體*父工作*。 子工作可以中斷連結或附加。 A*中斷連結的子工作*是其父代之外單獨執行的工作。 *附加子工作*是用來建立巢狀的工作<xref:System.Threading.Tasks.TaskCreationOptions.AttachedToParent?displayProperty=nameWithType>其父代並不明確或預設禁止它附加的選項。 工作可能會建立任意數目的附加和中斷連結的子工作，只受限於系統資源。  
+「子工作」(或「巢狀工作」) 是 <xref:System.Threading.Tasks.Task?displayProperty=nameWithType> 執行個體，它是在另一項工作 (稱為「父工作」) 的使用者委派中建立。 子工作可以中斷連結或附加。 「中斷連結的子工作」(detached child task) 是獨立於其父代而執行的工作。 「附加的子工作」(attached child task) 是巢狀工作，而且是使用 <xref:System.Threading.Tasks.TaskCreationOptions.AttachedToParent?displayProperty=nameWithType> 選項所建立，其父代並不明確或預設禁止它附加。 工作可能會建立任意數目的附加和中斷連結的子工作，只受限於系統資源。  
   
  下表列出這兩種子工作之間的基本差異。  
   
 |分類|中斷連結的子工作|附加的子工作|  
 |--------------|--------------------------|--------------------------|  
-|等候子工作完成的父系。|否|是|  
-|父系會傳播子工作擲回的例外狀況。|否|是|  
-|父系的狀態取決於子系的狀態。|否|是|  
+|等候子工作完成的父系。|否|[是]|  
+|父系會傳播子工作擲回的例外狀況。|否|[是]|  
+|父系的狀態取決於子系的狀態。|否|[是]|  
   
  在大部分情況下，我們建議您使用中斷連結的子工作，因為它們與其他工作的關聯性較不複雜。 這也就是為什麼在父工作中建立的工作會依預設中斷連結，且您必須明確指定 <xref:System.Threading.Tasks.TaskCreationOptions.AttachedToParent?displayProperty=nameWithType> 選項才能建立附加的子工作。  
   
@@ -67,7 +71,7 @@ A*子工作*(或*巢狀的工作*) 是<xref:System.Threading.Tasks.Task?displayP
  工作取消需要合作。 也就是說，若要能取消，每個附加或中斷連結的子工作必須監視取消語彙基元的狀態。 如果您想要使用一個取消要求來取消父系及其所有子系，您會將相同的語彙基元當做引數傳遞至所有工作，並在每個工作中提供邏輯以回應每個工作中的要求。 如需詳細資訊，請參閱[工作取消](../../../docs/standard/parallel-programming/task-cancellation.md)和[如何：取消工作及其子系](../../../docs/standard/parallel-programming/how-to-cancel-a-task-and-its-children.md)。  
   
 ### <a name="when-the-parent-cancels"></a>當父系取消時  
- 如果父系在其子工作啟動之前自行取消，則永遠不會啟動子系。 如果父系在子工作已經開始之後自行取消，則子系會執行到完成為止，除非它有自己的取消邏輯。 如需詳細資訊，請參閱 [Task Cancellation](../../../docs/standard/parallel-programming/task-cancellation.md)。  
+ 如果父系在其子工作啟動之前自行取消，則永遠不會啟動子系。 如果父系在子工作已經開始之後自行取消，則子系會執行到完成為止，除非它有自己的取消邏輯。 如需詳細資訊，請參閱[工作取消](../../../docs/standard/parallel-programming/task-cancellation.md)。  
   
 ### <a name="when-a-detached-child-task-cancels"></a>當取消中斷連結的子工作時  
  如果中斷連結的子工作使用傳遞給父系的相同語彙基元來自行取消，且父系不等候子工作，則不會傳播任何例外狀況，因為例外狀況被視為良性合作取消。 此行為與任何最上層工作相同。  
@@ -78,12 +82,12 @@ A*子工作*(或*巢狀的工作*) 是<xref:System.Threading.Tasks.Task?displayP
  如需詳細資訊，請參閱[例外狀況處理](../../../docs/standard/parallel-programming/exception-handling-task-parallel-library.md)。  
   
 ## <a name="preventing-a-child-task-from-attaching-to-its-parent"></a>防止子工作附加到其父系  
- 子工作所擲回的未處理例外狀況會傳播到父工作。 您可以使用此行為來從一個根工作觀察所有子工作例外狀況，而不必周遊工作樹狀結構。 不過，當父工作不預期會有來自其他程式碼的附加時，例外狀況傳播可能會造成問題。 例如，假設應用程式從 <xref:System.Threading.Tasks.Task> 物件呼叫協力廠商程式庫元件。 如果協力廠商程式庫元件也會建立 <xref:System.Threading.Tasks.Task> 物件，並指定 <xref:System.Threading.Tasks.TaskCreationOptions.AttachedToParent?displayProperty=nameWithType> 將它附加至父工作，則在子工作中發生任何未處理例外狀況都會傳播到父系。 這可能會導致在主應用程式中非預期的行為。  
+ 子工作所擲回的未處理例外狀況會傳播到父工作。 您可以使用此行為來從一個根工作觀察所有子工作例外狀況，而不必周遊工作樹狀。 不過，當父工作不預期會有來自其他程式碼的附加時，例外狀況傳播可能會造成問題。 例如，假設應用程式從 <xref:System.Threading.Tasks.Task> 物件呼叫協力廠商程式庫元件。 如果協力廠商程式庫元件也會建立 <xref:System.Threading.Tasks.Task> 物件，並指定 <xref:System.Threading.Tasks.TaskCreationOptions.AttachedToParent?displayProperty=nameWithType> 將它附加至父工作，則在子工作中發生任何未處理例外狀況都會傳播到父系。 這可能會導致在主應用程式中非預期的行為。  
   
  若要防止子工作附加至其父工作，，當您建立父 <xref:System.Threading.Tasks.Task> 或 <xref:System.Threading.Tasks.Task%601> 物件時，請指定 <xref:System.Threading.Tasks.TaskCreationOptions.DenyChildAttach?displayProperty=nameWithType> 選項。 當工作嘗試附加至其父系，而父系指定 <xref:System.Threading.Tasks.TaskCreationOptions.DenyChildAttach?displayProperty=nameWithType> 選項，則子工作將無法附加至父系，並且執行時就如同未指定 <xref:System.Threading.Tasks.TaskCreationOptions.AttachedToParent?displayProperty=nameWithType> 選項。  
   
- 當子工作未及時完成時，您也可能想要防止子工作附加到其父系。 由於父工作會在所有子工作完成後才完成，因此長時間執行的子工作可能造成整個應用程式效能不佳。 如需示範如何藉由防止工作附加至其父工作，改善應用程式效能的範例，請參閱[如何： 防止子工作附加至其父代](../../../docs/standard/parallel-programming/how-to-prevent-a-child-task-from-attaching-to-its-parent.md)。  
+ 當子工作未及時完成時，您也可能想要防止子工作附加到其父系。 由於父工作會在所有子工作完成後才完成，因此長時間執行的子工作可能造成整個應用程式效能不佳。 如需示範如何藉由防止工作附加至其父工作以改善應用程式效能的範例，請參閱[如何：防止子工作附加到其父系](../../../docs/standard/parallel-programming/how-to-prevent-a-child-task-from-attaching-to-its-parent.md)。  
   
-## <a name="see-also"></a>另請參閱  
+## <a name="see-also"></a>請參閱  
  [平行程式設計](../../../docs/standard/parallel-programming/index.md)  
  [資料平行處理原則](../../../docs/standard/parallel-programming/data-parallelism-task-parallel-library.md)

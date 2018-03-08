@@ -1,6 +1,6 @@
 ---
-title: "快速入門 - 分支和迴圈 - C# 指南"
-description: "在這個關於分支和迴圈的快速入門中，您將會撰寫 C# 程式碼以探索支援條件式分支及迴圈的語言語法，以重複執行陳述式。"
+title: "分支和迴圈教學課程 - C# 本機快速入門"
+description: "在這個關於分支和迴圈的快速入門中，您將會撰寫 C# 程式碼以探索支援條件式分支和迴圈的語言語法，以重複執行陳述式。"
 author: billwagner
 ms.author: wiwagn
 ms.date: 10/31/2017
@@ -9,11 +9,11 @@ ms.prod: .net
 ms.technology: devlang-csharp
 ms.devlang: csharp
 ms.custom: mvc
-ms.openlocfilehash: 609c8625b19025a20c1da1e767870eafbab4c4a0
-ms.sourcegitcommit: 8bde7a3432f30fc771079744955c75c58c4eb393
+ms.openlocfilehash: 7d69b2b9bb02e2999bcd785da653bd4a13ed947c
+ms.sourcegitcommit: d2da0142247ef42a219a5d2907f153e62dc6ea0d
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 01/20/2018
+ms.lasthandoff: 02/01/2018
 ---
 # <a name="branches-and-loops"></a>分支和迴圈
 
@@ -23,7 +23,7 @@ ms.lasthandoff: 01/20/2018
 
 ## <a name="make-decisions-using-the-if-statement"></a>使用 `if` 陳述式來做決策
 
-建立名為 **branches-quickstart** 的目錄。 將該目錄設為目前的目錄，並執行 `dotnet new console -n BranchesAndLoops -o .`。 此命令會在目前的目錄中建立新的 .NET Core 主控台應用程式。 
+建立名為 **branches-quickstart** 的目錄。 將該目錄設為目前的目錄，並執行 `dotnet new console -n BranchesAndLoops -o .`。 此命令會在目前的目錄中建立新的 .NET Core 主控台應用程式。
 
 在您最愛的編輯器中開啟 **Program.cs**，並以下列程式碼取代 `Console.Writeline("Hello World!");` 程式碼行：
 
@@ -45,12 +45,11 @@ int b = 3;
 再次輸入 `dotnet run`。 因為答案小於 10，所以不會印出任何東西。 您正在測試的**條件**為 False。 您尚未有可執行的程式碼，因為您在 `if` 陳述式中僅撰寫了一個可能的分支：True 分支。
 
 > [!TIP]
-> 在您探索 C# (或任何程式設計語言) 時，可能會在撰寫程式碼時犯錯。 編譯器會找出並回報錯誤。 仔細查看錯誤輸出，以及產生該錯誤的程式碼。 編譯器錯誤通常可以協助找出問題。 
+> 在您探索 C# (或任何程式設計語言) 時，可能會在撰寫程式碼時犯錯。 編譯器會找出並回報錯誤。 仔細查看錯誤輸出，以及產生該錯誤的程式碼。 編譯器錯誤通常可以協助找出問題。
 
-此第一個範例示範 `if` 和布林值類型的功能。 *布林值*是一個變數，可能具有下列兩種值的其中之一：`true` 或 `false`。 C# 會針對布林值變數定義特殊類型：`bool`。 `if` 陳述式會檢查 `bool` 的值。 當值為 `true` 時，就會執行 `if` 之後的陳述式。 否則，就會略過。 
+此第一個範例示範 `if` 和布林值類型的功能。 *布林值*是一個變數，可能具有下列兩種值的其中之一：`true` 或 `false`。 C# 會針對布林值變數定義特殊類型：`bool`。 `if` 陳述式會檢查 `bool` 的值。 當值為 `true` 時，就會執行 `if` 之後的陳述式。 否則，就會略過。
 
 這個流程可以檢查條件，並根據條件來執行陳述式，因此非常實用。
-
 
 ## <a name="make-if-and-else-work-together"></a>搭配使用 if 和 else
 
@@ -69,7 +68,7 @@ else
 
 > [!IMPORTANT]
 > `if` 和 `else` 陳述式之下的縮排是為了方便人類閱讀。
-> C# 語言不會將縮排或空格視為有意義的內容。 `if` 或 `else` 關鍵字之後的陳述式將會根據條件來執行。 在本快速入門中的所有範例，都會遵循常見的做法，根據陳述式的控制流程將程式碼行加以縮排。
+> C# 語言不會將縮排或空格視為有意義的內容。 `if` 或 `else` 關鍵字之後的陳述式將會根據條件來執行。 本快速入門中的所有範例都遵循常見的做法，根據陳述式的控制流程將程式碼行加以縮排。
 
 因為縮排沒有意義，當您要依條件執行的區塊中有超過一個陳述式時，就需要使用 `{` 和 `}` 來表示。 C# 程式設計人員通常會在所有的 `if` 和 `else` 子句上使用這些大括號。 下列範例與您剛剛所建立的內容相同。 修改程式碼，使它符合下列程式碼：
 
@@ -87,7 +86,7 @@ else
 ```
 
 > [!TIP]
-> 本快速入門的其餘部分，程式碼範例都會遵循常見的做法，在程式碼中包含大括號。
+> 在本快速入門的其餘部分，程式碼範例都會遵循常見的做法，在程式碼中包含大括號。
 
 您可以測試更複雜的條件。 將下列程式碼新增至您目前已在 `Main` 方法中撰寫的內容後方：
 
@@ -227,7 +226,7 @@ for(int index = 0; index < 10; index++)
 } 
 ```
 
-這與先前使用的 `while` 迴圈和 `do` 迴圈有相同的功能。 `for` 陳述式有三個部分來控制其運作方式。 
+這與先前使用的 `while` 迴圈和 `do` 迴圈有相同的功能。 `for` 陳述式有三個部分來控制其運作方式。
 
 第一個部分是 **for 初始設定式**：`for index = 0;` 宣告 `index` 是迴圈變數，然後將它的初始值設為 `0`。
 
@@ -258,7 +257,7 @@ for(int index = 0; index < 10; index++)
 
 您可以在下列主題中深入了解這些概念：
 
-[If 和 else 陳述式](../language-reference/keywords/if-else.md)   
-[While 陳述式](../language-reference/keywords/while.md)   
-[Do 陳述式](../language-reference/keywords/do.md)   
-[For 陳述式](../language-reference/keywords/for.md)   
+[If 和 else 陳述式](../language-reference/keywords/if-else.md)  
+[While 陳述式](../language-reference/keywords/while.md)  
+[Do 陳述式](../language-reference/keywords/do.md)  
+[For 陳述式](../language-reference/keywords/for.md)  

@@ -9,18 +9,21 @@ ms.technology: dotnet-standard
 ms.tgt_pltfrm: 
 ms.topic: article
 ms.assetid: cf424bbe-81b7-40d2-9978-9b727da94d80
-caps.latest.revision: "3"
+caps.latest.revision: 
 author: mairaw
 ms.author: mairaw
 manager: wpickett
-ms.openlocfilehash: 22d6f70b3317b67255d51690a6c4e262e29d23f9
-ms.sourcegitcommit: bd1ef61f4bb794b25383d3d72e71041a5ced172e
+ms.workload:
+- dotnet
+- dotnetcore
+ms.openlocfilehash: e90af026db0fc190b2c93e4c751de6600e8fd27a
+ms.sourcegitcommit: e7f04439d78909229506b56935a1105a4149ff3d
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/18/2017
+ms.lasthandoff: 12/23/2017
 ---
 # <a name="copying-document-fragments"></a>複製文件片段
-您可以建立**XmlDocumentFragment**節點並將其下的節點。 當**XmlDocumentFragment**插入與**InsertNode**方法， **XmlDocumentFragment**不會複製節點，但它的子節點插入 XML 中文件物件模型 (DOM)。  
+您可以建立 **XmlDocumentFragment** 節點，然後將節點加入其下。 當 **XmlDocumentFragment** 以 **InsertNode** 方法插入時，不會複製 **XmlDocumentFragment** 節點，但是它的子節點會插入 XML 文件物件模型 (DOM) 中。  
   
-## <a name="see-also"></a>另請參閱  
+## <a name="see-also"></a>請參閱  
  [XML 文件物件模型 (DOM)](../../../../docs/standard/data/xml/xml-document-object-model-dom.md)

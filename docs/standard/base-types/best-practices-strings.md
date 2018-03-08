@@ -1,5 +1,5 @@
 ---
-title: "在.NET 中使用字串的最佳作法"
+title: "在 .NET 中使用字串的最佳做法"
 ms.custom: 
 ms.date: 03/30/2017
 ms.prod: .net
@@ -23,20 +23,23 @@ helpviewer_keywords:
 - comparing strings
 - strings [.NET Framework],comparing
 ms.assetid: b9f0bf53-e2de-4116-8ce9-d4f91a1df4f7
-caps.latest.revision: "35"
+caps.latest.revision: 
 author: rpetrusha
 ms.author: ronpet
 manager: wpickett
-ms.openlocfilehash: d187096fee5119a22d886029cd63173e4ca1c8ec
-ms.sourcegitcommit: bd1ef61f4bb794b25383d3d72e71041a5ced172e
+ms.workload:
+- dotnet
+- dotnetcore
+ms.openlocfilehash: a4b92cd9d6b880f23d6acaf9e38e685184ec3bfe
+ms.sourcegitcommit: e7f04439d78909229506b56935a1105a4149ff3d
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/18/2017
+ms.lasthandoff: 12/23/2017
 ---
-# <a name="best-practices-for-using-strings-in-net"></a>在.NET 中使用字串的最佳作法
-<a name="top"></a>.NET 開發當地語系化和全球化應用程式，提供更詳盡的支援，可讓您輕鬆地執行一般作業，例如排序和顯示字串時，套用目前的文化特性或特定文化特性的慣例。 但是，排序或比較字串並不一定是區分文化特性的作業。 例如，應用程式內部使用的字串，通常應該跨所有文化特性皆進行相同處理。 若將與文化特性無關的字串資料 (例如 XML 標記、HTML 標記、使用者名稱、檔案路徑和系統物件的名稱) 進行區分文化特性的解譯時，應用程式程式碼可能會出現細微的 Bug、效能不佳，甚至在某些情況下，會產生安全性問題。  
+# <a name="best-practices-for-using-strings-in-net"></a>在 .NET 中使用字串的最佳做法
+<a name="top"></a> .NET 可廣泛支援當地語系化和全球化應用程式的開發作業，使您在執行一般作業 (例如排序和顯示字串) 時，可輕鬆套用目前的文化特性或文化特性特定的慣例。 但是，排序或比較字串並不一定是區分文化特性的作業。 例如，應用程式內部使用的字串，通常應該跨所有文化特性皆進行相同處理。 若將與文化特性無關的字串資料 (例如 XML 標記、HTML 標記、使用者名稱、檔案路徑和系統物件的名稱) 進行區分文化特性的解譯時，應用程式程式碼可能會出現細微的 Bug、效能不佳，甚至在某些情況下，會產生安全性問題。  
   
- 本主題會檢查字串排序、 比較和大小寫的方法在.NET 中，呈現選取適當的字串處理方法的建議並提供其他資訊的字串處理方法。 它也會說明如何處理數值資料和日期與時間資料之類的格式化資料，以供顯示及儲存。  
+ 本主題詳述 .NET 中的字串排序、比較和大小寫方法，並提供選取適當字串處理方法的建議，以及有關字串處理方法的其他資訊。 它也會說明如何處理數值資料和日期與時間資料之類的格式化資料，以供顯示及儲存。  
   
  此主題包括下列章節：  
   
@@ -48,7 +51,7 @@ ms.lasthandoff: 10/18/2017
   
 -   [針對方法呼叫選擇 StringComparison 成員](#choosing_a_stringcomparison_member_for_your_method_call)  
   
--   [在.NET 中常見的字串比較方法](#common_string_comparison_methods_in_the_net_framework)  
+-   [.NET 中常用的字串比較方法](#common_string_comparison_methods_in_the_net_framework)  
   
 -   [間接執行字串比較的方法](#methods_that_perform_string_comparison_indirectly)  
   
@@ -148,9 +151,9 @@ ms.lasthandoff: 10/18/2017
   
 -   <xref:System.String.CompareTo%2A?displayProperty=nameWithType> 多載。  
   
--   預設值<xref:System.String.StartsWith%28System.String%29?displayProperty=nameWithType>方法，而<xref:System.String.StartsWith%28System.String%2CSystem.Boolean%2CSystem.Globalization.CultureInfo%29?displayProperty=nameWithType>方法`null`<xref:System.Globalization.CultureInfo>參數。  
+-   預設的 <xref:System.String.StartsWith%28System.String%29?displayProperty=nameWithType> 方法和含有 `null`<xref:System.Globalization.CultureInfo> 參數的 <xref:System.String.StartsWith%28System.String%2CSystem.Boolean%2CSystem.Globalization.CultureInfo%29?displayProperty=nameWithType> 方法。  
   
--   預設值<xref:System.String.EndsWith%28System.String%29?displayProperty=nameWithType>方法，而<xref:System.String.EndsWith%28System.String%2CSystem.Boolean%2CSystem.Globalization.CultureInfo%29?displayProperty=nameWithType>方法`null`<xref:System.Globalization.CultureInfo>參數。  
+-   預設的 <xref:System.String.EndsWith%28System.String%29?displayProperty=nameWithType> 方法和含有 `null`<xref:System.Globalization.CultureInfo> 參數的 <xref:System.String.EndsWith%28System.String%2CSystem.Boolean%2CSystem.Globalization.CultureInfo%29?displayProperty=nameWithType> 方法。  
   
 -   可接受 <xref:System.String> 做為搜尋參數且不含 <xref:System.StringComparison> 參數的 <xref:System.String.IndexOf%2A?displayProperty=nameWithType> 多載。  
   
@@ -225,7 +228,7 @@ ms.lasthandoff: 10/18/2017
   
  InvariantCulture: a + ̊ = å  
   
- 「拉丁小寫字母 A」字元 "a" (\u0061) 在緊鄰著「結合上圓圈」字元 "+ " ̊" (\u030a) 時，解譯成「拉丁小寫字母 A 帶上圓圈」字元 "å" (\u00e5)。 如下列範例如示，這種行為不同於序數比較。  
+ 拉丁小寫字母 A 字元 "a" (\u0061) 在緊鄰著結合上圓圈字元 "+ " ̊" (\u030a) 時，解譯成拉丁小寫字母 A 帶上圓圈字元 "å" (\u00e5)。 如下列範例如示，這種行為不同於序數比較。  
   
  [!code-csharp[Conceptual.Strings.BestPractices#15](../../../samples/snippets/csharp/VS_Snippets_CLR/conceptual.strings.bestpractices/cs/comparison3.cs#15)]
  [!code-vb[Conceptual.Strings.BestPractices#15](../../../samples/snippets/visualbasic/VS_Snippets_CLR/conceptual.strings.bestpractices/vb/comparison3.vb#15)]  
@@ -250,7 +253,7 @@ ms.lasthandoff: 10/18/2017
  [回到頁首](#top)  
   
 <a name="common_string_comparison_methods_in_the_net_framework"></a>   
-## <a name="common-string-comparison-methods-in-net"></a>在.NET 中常見的字串比較方法  
+## <a name="common-string-comparison-methods-in-net"></a>.NET 中常用的字串比較方法  
  下列各節描述字串比較最常用的方法。  
   
 ### <a name="stringcompare"></a>String.Compare  
@@ -374,5 +377,5 @@ ms.lasthandoff: 10/18/2017
 18.02.1905 15:12  
 ```  
   
-## <a name="see-also"></a>另請參閱  
+## <a name="see-also"></a>請參閱  
  [操作字串](../../../docs/standard/base-types/manipulating-strings.md)

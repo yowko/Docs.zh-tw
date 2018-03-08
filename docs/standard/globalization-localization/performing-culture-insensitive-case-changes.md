@@ -21,25 +21,28 @@ helpviewer_keywords:
 - String.ToUpper method
 - culture parameter
 ms.assetid: 822d551c-c69a-4191-82f4-183d82c9179c
-caps.latest.revision: "18"
+caps.latest.revision: 
 author: rpetrusha
 ms.author: ronpet
 manager: wpickett
-ms.openlocfilehash: c500b882c335572b8b458ba515b282e9f5362b85
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.workload:
+- dotnet
+- dotnetcore
+ms.openlocfilehash: e65eb85e1355d3aa98e04e7bd73f0194243dcdb1
+ms.sourcegitcommit: e7f04439d78909229506b56935a1105a4149ff3d
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 12/23/2017
 ---
 # <a name="performing-culture-insensitive-case-changes"></a>執行不區分文化特性的大小寫變更
-<xref:System.String.ToUpper%2A?displayProperty=nameWithType>， <xref:System.String.ToLower%2A?displayProperty=nameWithType>， <xref:System.Char.ToUpper%2A?displayProperty=nameWithType>，和<xref:System.Char.ToLower%2A?displayProperty=nameWithType>方法提供不接受任何參數的多載。 根據預設，不含參數的這些多載會執行大小寫變更的值為基礎<xref:System.Globalization.CultureInfo.CurrentCulture%2A?displayProperty=nameWithType>。 這會產生區分大小寫可能會因文化特性的結果。 若要清除您是否想要區分文化特性或不區分文化特性的大小寫變更，您應該使用這些方法需要您明確指定的多載`culture`參數。 對於區分文化特性大小寫變更，指定`CultureInfo.CurrentCulture`如`culture`參數。 不區分文化特性的大小寫變更為指定`CultureInfo.InvariantCulture`如`culture`參數。  
+<xref:System.String.ToUpper%2A?displayProperty=nameWithType>、<xref:System.String.ToLower%2A?displayProperty=nameWithType>、<xref:System.Char.ToUpper%2A?displayProperty=nameWithType> 和 <xref:System.Char.ToLower%2A?displayProperty=nameWithType> 方法提供不接受任何參數的多載。 根據預設，不含參數的這些多載會根據 <xref:System.Globalization.CultureInfo.CurrentCulture%2A?displayProperty=nameWithType> 的值，執行大小寫變更。 這會產生可能會因為文化特性而有所不同的區分大小寫結果。 若要釐清您希望大小寫變更是區分文化特性還是不區分文化特性，就應該使用要求您明確地指定 `culture` 參數的這些方法的多載。 針對區分文化特性的大小寫變更，請為 `culture` 參數指定 `CultureInfo.CurrentCulture`。 至於不區分文化特性的大小寫變更，則為 `culture` 參數指定 `CultureInfo.InvariantCulture`。  
   
- 通常，字串會轉換至標準案例，以更新版本可讓您更輕鬆查閱。 當以這種方式使用字串時，您應該指定`CultureInfo.InvariantCulture`如`culture`參數，因為值<xref:System.Threading.Thread.CurrentCulture%2A?displayProperty=nameWithType>有可能變更大小寫變更的時間之間的查閱，就會發生的時間。  
+ 字串通常會轉換為標準大小寫，讓之後能夠更輕鬆地查閱。 以這種方式使用字串時，您應該為 `culture` 參數指定 `CultureInfo.InvariantCulture`，因為 <xref:System.Threading.Thread.CurrentCulture%2A?displayProperty=nameWithType> 的值在變更大小寫的時間與發生查閱的時間之間可能會有所變更。  
   
- 如果安全性決策根據大小寫變更作業，應該不區分文化特性以確保結果的值不會影響作業`CultureInfo.CurrentCulture`。 請參閱 「 字串比較，使用目前文化特性 」 一節[使用字串的最佳作法](../../../docs/standard/base-types/best-practices-strings.md)文件的範例示範如何區分文化特性字串作業可能會產生不一致的結果。  
+ 如果安全性決策必須以大小寫變更作業為基礎，則作業應該不區分文化特性，以確保結果不受 `CultureInfo.CurrentCulture` 的值影響。 如需示範區分文化特性的字串作業如何產生不一致結果的範例，請參閱[使用字串的最佳做法](../../../docs/standard/base-types/best-practices-strings.md)一文中的＜使用目前文化特性的字串比較＞一節。  
   
 ## <a name="using-the-stringtoupper-and-stringtolower-methods"></a>使用 String.ToUpper 和 String.ToLower 方法  
- 程式碼更清楚，所以，建議您一定要使用的多載`String.ToUpper`和`String.ToLower`方法可讓您指定`culture`參數明確。 例如，下列程式碼會執行識別項查詢。 `key.ToLower`作業是區分文化特性的預設值，但這種行為並不清楚，無法讀取程式碼。  
+ 為使程式碼更清楚，建議您務必使用 `String.ToUpper` 和 `String.ToLower` 方法的多載，讓您明確地指定 `culture` 參數。 例如，下列程式碼會執行識別碼查閱。 `key.ToLower` 作業預設為區分文化特性，但讀取程式碼時，這種行為並不明確。  
   
 ### <a name="example"></a>範例  
   
@@ -56,7 +59,7 @@ static object LookupKey(string key)
 }  
 ```  
   
- 如果您想`key.ToLower`作業是不區分文化特性，您應該變更上述範例，如下所示，以明確地使用`CultureInfo.InvariantCulture`時變更大小寫。  
+ 如果您希望 `key.ToLower` 作業是不區分文化特性，則應該如下所示變更上述範例，才能在變更大小寫時，明確地使用 `CultureInfo.InvariantCulture`。  
   
 ```vb  
 Shared Function LookupKey(key As String) As Object  
@@ -72,9 +75,9 @@ static object LookupKey(string key)
 ```  
   
 ## <a name="using-the-chartoupper-and-chartolower-methods"></a>使用 Char.ToUpper 和 Char.ToLower 方法  
- 雖然`Char.ToUpper`和`Char.ToLower`方法有相同的特性`String.ToUpper`和`String.ToLower`方法，只會受到影響的文化特性為土耳其文 （土耳其） 和亞塞拜然 （拉丁文，亞塞拜然）。 這些是只有兩個文化特性而有所不同，但單一字元大小寫的差異。 如需這個特殊案例對應的詳細資訊，請參閱 <xref:System.String> 類別主題中的＜大小寫＞一節。 程式碼更清楚，所以，並確保一致的結果，建議您一律使用這些方法可讓您明確指定的多載`culture`參數。  
+ 雖然 `Char.ToUpper` 和 `Char.ToLower` 方法具有與 `String.ToUpper` 和 `String.ToLower` 方法相同的特性，但是受到影響的文化特性只有土耳其文 (土耳其) 和亞塞拜然文 (拉丁，亞塞拜然)。 這些是具有單一字元大小寫差異的唯二文化特性。 如需這個特殊案例對應的詳細資訊，請參閱 <xref:System.String> 類別主題中的＜大小寫＞一節。 為使程式碼更清楚並確保一致性的結果，建議您務必使用這些方法的多載，讓您明確地指定 `culture` 參數。  
   
-## <a name="see-also"></a>另請參閱  
+## <a name="see-also"></a>請參閱  
  <xref:System.String.ToUpper%2A?displayProperty=nameWithType>  
  <xref:System.String.ToLower%2A?displayProperty=nameWithType>  
  <xref:System.Char.ToUpper%2A?displayProperty=nameWithType>  

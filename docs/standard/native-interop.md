@@ -10,11 +10,14 @@ ms.prod: .net
 ms.technology: dotnet-standard
 ms.devlang: dotnet
 ms.assetid: 3c357112-35fb-44ba-a07b-6a1c140370ac
-ms.openlocfilehash: 9652986491f087b8fa175e2b4041063c71211178
-ms.sourcegitcommit: bd1ef61f4bb794b25383d3d72e71041a5ced172e
+ms.workload:
+- dotnet
+- dotnetcore
+ms.openlocfilehash: 11a93f4014734130f7c4e33cf215c6d49d2554c5
+ms.sourcegitcommit: e7f04439d78909229506b56935a1105a4149ff3d
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/18/2017
+ms.lasthandoff: 12/23/2017
 ---
 # <a name="native-interoperability"></a>原生互通性
 
@@ -71,7 +74,7 @@ using System.Runtime.InteropServices;
 namespace PInvokeSamples {
     public static class Program {
 
-        // Import the libc and define the method corresponding to the native function.
+        // Import the libSystem shared library and define the method corresponding to the native function.
         [DllImport("libSystem.dylib")]
         private static extern int getpid();
 
@@ -84,7 +87,7 @@ namespace PInvokeSamples {
 }
 ```
 
-當然，這和在 Linux 上的處理方式類似。 函式名稱相同，是因為 `getpid(2)` 為 [POSIX](https://en.wikipedia.org/wiki/POSIX) 系統呼叫。
+它在 Linux 上也是類似如此。 函式名稱相同，是因為 `getpid(2)` 為標準 [POSIX](https://en.wikipedia.org/wiki/POSIX) 系統呼叫。
 
 ```csharp
 using System;
@@ -93,7 +96,7 @@ using System.Runtime.InteropServices;
 namespace PInvokeSamples {
     public static class Program {
 
-        // Import the libc and define the method corresponding to the native function.
+        // Import the libc shared library and define the method corresponding to the native function.
         [DllImport("libc.so.6")]
         private static extern int getpid();
 
@@ -263,7 +266,7 @@ namespace PInvokeSamples {
 
 當類型要跨 Managed 界限進入原生類型時，**封送處理**為轉換類型的程序，反之亦然。
 
-因為 Managed 和 Unmanaged 程式碼中的類型不同，所以需要封送處理。 例如，在 Managed 程式碼中會有 `String`，而在 Unmanaged 程式碼中，字串可以是 Unicode (「寬」)、非 Unicode、以 null 終止的及 ASCII 等等。依預設，P/Invoke 子系統會嘗試執行以預設行為為基礎的正確動作，您可以在 [MSDN](https://msdn.microsoft.com/library/zah6xy75.aspx) 查看這些動作。 不過，在您需要進行額外控制的情況下，您可以運用 `MarshalAs` 屬性來指定 Unmanaged 這一端的預期類型。 比方說，如果我們想要用以 null 終止的 ANSI 字串形式來傳送字串，我們可以下列方式執行它︰
+因為 Managed 和 Unmanaged 程式碼中的類型不同，所以需要封送處理。 例如，在 Managed 程式碼中會有 `String`，而在 Unmanaged 程式碼中，字串可以是 Unicode (「寬」)、非 Unicode、以 null 終止的及 ASCII 等等。依預設，P/Invoke 子系統會嘗試執行以預設行為為基礎的正確動作，您可以在 [MSDN](../../docs/framework/interop/default-marshaling-behavior.md) 查看這些動作。 不過，在您需要進行額外控制的情況下，您可以運用 `MarshalAs` 屬性來指定 Unmanaged 這一端的預期類型。 比方說，如果我們想要用以 null 終止的 ANSI 字串形式來傳送字串，我們可以下列方式執行它︰
 
 ```csharp
 [DllImport("somenativelibrary.dll")]

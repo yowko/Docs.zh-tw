@@ -10,15 +10,15 @@ ms.prod: .net
 ms.technology: devlang-csharp
 ms.devlang: csharp
 ms.assetid: f8806f6b-3ac7-4ee6-9b3e-c524d5301ae9
-ms.openlocfilehash: b6b3ce53a08cfacfacb19266b0be216a40633352
-ms.sourcegitcommit: c0dd436f6f8f44dc80dc43b07f6841a00b74b23f
+ms.openlocfilehash: db062ed2f832ae933941da1c49e84303090f4390
+ms.sourcegitcommit: 3a96c706e4dbb4667bf3bf37edac9e1666646f93
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 01/19/2018
+ms.lasthandoff: 02/27/2018
 ---
 # <a name="string-interpolation-in-c"></a>C# 中的字串插值 #
 
-「字串插補」是以字串變數的值取代字串中預留位置的方式。 在 C# 6 之前，是透過 `System.String.Format` 來執行這項操作。 這個運作方式還行，但由於它使用已編號的預留位置，因此更難以閱讀也更冗長。
+「字串插補」是以字串變數的值取代字串中預留位置的方式。 在 C# 6 之前，是透過 <xref:System.String.Format%2A?displayProperty=nameWithType> 來執行這項操作。 這個運作方式還行，但由於它使用已編號的預留位置，因此更難以閱讀也更冗長。
 
 其他程式設計語言已經在語言中內建字串插補有一段時間。 例如，在 PHP 中：
 
@@ -42,7 +42,7 @@ echo "My name is $name.";
 dotnet new console
 ```
 
-此命令會建立一個含有 *interpolated.csproj* 專案檔和 *Program.cs* 原始程式碼檔案的陽春型 .NET Core 專案。 您將必須執行 `dotnet restore` 以還原編譯此專案所需的相依性。
+此命令會建立一個含有 *interpolated.csproj* 專案檔和 *Program.cs* 原始程式碼檔的準 .NET Core 專案。 您將必須執行 `dotnet restore` 以還原編譯此專案所需的相依性。
 
 [!INCLUDE[DotNet Restore Note](~/includes/dotnet-restore-note.md)]
 
@@ -52,7 +52,7 @@ dotnet new console
 
 ## <a name="intro-to-string-interpolation"></a>字串插補簡介
 
-使用 `System.String.Format` 時，您需指定要由字串後的參數取代的字串中「預留位置」。 若是執行個體：
+使用 <xref:System.String.Format%2A?displayProperty=nameWithType> 時，您需要指定要由字串後的引數所取代字串中的「預留位置」。 若是執行個體：
 
 [!code-csharp[String.Format example](../../../samples/snippets/csharp/new-in-6/string-interpolation.cs#StringFormatExample)]  
 
@@ -78,7 +78,7 @@ This is line number 5
 
 ## <a name="how-string-interpolation-works"></a>字串插補如何運作
 
-在幕後，會由編譯器將這個字串插補轉譯成 String.Format。 因此，您可以執行[之前對 String.Format 所進行的相同型別操作](https://msdn.microsoft.com/library/dwhawy9k(v=vs.110).aspx)。
+在幕後，編譯器會將這個字串插補語法轉譯為 `String.Format`。 因此，您可以執行[之前對 `String.Format` 所進行的相同類型操作](../../standard/base-types/formatting-types.md)。
 
 例如，您可以新增填補和設定數字格式：
 
@@ -107,21 +107,19 @@ var adj = "quick";
 Console.WriteLine(localizeMe);
 ```
 
-如果編譯它，您將會收到錯誤：
+如果您編譯它，則會收到錯誤：
  
 * `Cannot use local variable 'adj' before it is declared` - 在插補字串「之後」才宣告 `adj` 變數。
 * `The name 'otheranimal' does not exist in the current context` - 從未宣告名為 `otheranimal` 的變數
 
 ## <a name="localization-and-internationalization"></a>當地語系化和國際化
 
-插補字串支援 `IFormattable` 和 `FormattableString`，這對國際化相當有用。
+插補字串支援 <xref:System.IFormattable?displayProperty=nameWithType> 和 <xref:System.FormattableString?displayProperty=nameWithType>，這對國際化相當有用。
 
-插補字串預設會使用目前的文化特性 (Culture)。 若要使用不同的文化特性，您可以將它轉換為 `IFormattable`
-
-若是執行個體：
+插補字串預設會使用目前的文化特性 (Culture)。 若要使用不同的文化特性，請將字串插值轉換為 `IFormattable`。 若是執行個體：
 
 [!code-csharp[Interpolation internationalization example](../../../samples/snippets/csharp/new-in-6/string-interpolation.cs#InterpolationInternationalizationExample)]  
 
 ## <a name="conclusion"></a>結論 
 
-在本教學課程中，您已了解如何使用 C# 6 的字串插補功能。 它基本上是一個撰寫簡單 `String.Format` 陳述式的更簡潔方式，但針對較進階的用法有一些注意事項。
+在本教學課程中，您已了解如何使用 C# 6 的字串插補功能。 它基本上是一個撰寫簡單 `String.Format` 陳述式的更簡潔方式，但針對較進階的用法有一些注意事項。 如需詳細資訊，請參閱[字串插值](../../csharp//language-reference/keywords/interpolated-strings.md)主題。

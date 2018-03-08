@@ -19,21 +19,24 @@ helpviewer_keywords:
 - regular expressions [.NET Framework], examples
 - pattern-matching with regular expressions, examples
 ms.assetid: fae2c15b-7adf-4b15-b118-58eb3906994f
-caps.latest.revision: "24"
+caps.latest.revision: 
 author: rpetrusha
 ms.author: ronpet
 manager: wpickett
-ms.openlocfilehash: 2bc9db7317c7a73f70a2cb83322b8b3a4c3771b9
-ms.sourcegitcommit: bd1ef61f4bb794b25383d3d72e71041a5ced172e
+ms.workload:
+- dotnet
+- dotnetcore
+ms.openlocfilehash: c6da140ea82fc3c6d3f5f3001f37711ffe861370
+ms.sourcegitcommit: e7f04439d78909229506b56935a1105a4149ff3d
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/18/2017
+ms.lasthandoff: 12/23/2017
 ---
 # <a name="regular-expression-example-scanning-for-hrefs"></a>規則運算式範例：掃描 HREF
 下列範例將搜尋輸入字串，並顯示所有 href="..." 值和它們在字串中的位置。  
   
 ## <a name="the-regex-object"></a>Regex 物件  
- 因為`DumpHRefs`方法可以從使用者程式碼呼叫多次，它會使用`static`(`Shared`在 Visual Basic 中)<xref:System.Text.RegularExpressions.Regex.Match%28System.String%2CSystem.String%2CSystem.Text.RegularExpressions.RegexOptions%29?displayProperty=nameWithType>方法。 這可讓規則運算式引擎快取的規則運算式，並避免具現化新的額外負荷<xref:System.Text.RegularExpressions.Regex>物件每次呼叫該方法。 A<xref:System.Text.RegularExpressions.Match>物件會被用來逐一查看字串中的所有相符項目。  
+ 由於可從使用者程式碼多次呼叫 `DumpHRefs` 方法，因此它會使用 `static` (在 Visual Basic 中為 `Shared`) <xref:System.Text.RegularExpressions.Regex.Match%28System.String%2CSystem.String%2CSystem.Text.RegularExpressions.RegexOptions%29?displayProperty=nameWithType> 方法。 這可讓規則運算式引擎快取規則運算式，並避免在每次呼叫方法時因將新 <xref:System.Text.RegularExpressions.Regex> 物件具現化而導致的額外負荷。 接著會使用 <xref:System.Text.RegularExpressions.Match> 物件逐一查看字串中的所有相符項目。  
   
  [!code-csharp[RegularExpressions.Examples.HREF#1](../../../samples/snippets/csharp/VS_Snippets_CLR/RegularExpressions.Examples.HREF/cs/example.cs#1)]
  [!code-vb[RegularExpressions.Examples.HREF#1](../../../samples/snippets/visualbasic/VS_Snippets_CLR/RegularExpressions.Examples.HREF/vb/example.vb#1)]  
@@ -51,17 +54,17 @@ ms.lasthandoff: 10/18/2017
 |`\s*`|比對零個以上的空白字元。|  
 |`=`|比對等號。|  
 |`\s*`|比對零個以上的空白字元。|  
-|`(?:["'](?<1>[^"']*)"&#124;(?<1>\S+))`|而不將結果指派給擷取群組符合下列其中一項：<br /><br /> -A 引號 （或單引號），後面接著零或多個引號 （或單引號），後面的引號 （或單引號） 以外的任何字元。 此模式中包含名為 `1` 的群組。<br />-一或多個非空格字元。 此模式中包含名為 `1` 的群組。|  
+|`(?:["'](?<1>[^"']*)"&#124;(?<1>\S+))`|比對下列其中一項，而不將結果指派給擷取的群組：<br /><br /> -   引號 (或單引號)，後面加上零個或多個引號 (或單引號) 以外的任何字元，再加上引號 (或單引號)。 此模式中包含名為 `1` 的群組。<br />-   一個或多個非空白字元。 此模式中包含名為 `1` 的群組。|  
 |`(?<1>[^"']*)`|將零個或多個引號 (或單引號) 以外的任何字元指派給名為 `1` 的擷取端群組。|  
 |`"(?<1>\S+)`|將一或多個非空白字元指派給名為 `1` 的擷取群組。|  
   
 ## <a name="match-result-class"></a>比對結果類別  
- 搜尋的結果會儲存在<xref:System.Text.RegularExpressions.Match>類別，可提供存取搜尋所擷取的子字串。 它也會記住要搜尋的字串和規則運算式使用，使其能呼叫<xref:System.Text.RegularExpressions.Match.NextMatch%2A?displayProperty=nameWithType>方法，以執行另一個搜尋開始的最後一個結束的位置。  
+ 搜尋的結果會儲存在 <xref:System.Text.RegularExpressions.Match> 類別中，可讓您存取搜尋擷取的所有子字串。 它也會記住要搜尋的字串與所用的規則運算式，使其能呼叫 <xref:System.Text.RegularExpressions.Match.NextMatch%2A?displayProperty=nameWithType> 方法，從最後一個搜尋結束的位置開始執行其他搜尋。  
   
 ## <a name="explicitly-named-captures"></a>明確命名的擷取  
  在傳統的規則運算式中，會自動將擷取括號依序編號。 這會導致兩個問題。 第一，如果修改規則運算式時，是以插入或移除一組括號來進行，就必須重新撰寫所有參考已編號擷取的程式碼，以反映新的編號。 第二，不同的括號通常用來提供兩個替代運算式以進行可接受的比對，因此可能難以判斷這兩個運算式是哪一個實際傳回結果。  
   
- 若要解決這些問題，<xref:System.Text.RegularExpressions.Regex>類別支援的語法`(?<name>…)`至指定位置擷取相符項目 （可以使用字串或整數命名位置; 可以更快速地恢復整數）。 因此，相同字串的所有替代比對皆可導向相同的位置。 萬一發生衝突時，最後一個進入位置的比對就是成功的比對 (不過，您可以使用單一位置之多個比對的完整清單。 請參閱<xref:System.Text.RegularExpressions.Group.Captures%2A?displayProperty=nameWithType>集合，如需詳細資訊。)  
+ 為了解決這些問題，<xref:System.Text.RegularExpressions.Regex> 類別支援 `(?<name>…)` 的語法，可將相符項目擷取至指定的位置 (該位置可以使用字串或整數命名；重新叫用整數的速度更快)。 因此，相同字串的所有替代比對皆可導向相同的位置。 萬一發生衝突時，最後一個進入位置的比對就是成功的比對 (不過，您可以使用單一位置之多個比對的完整清單。 如需詳細資訊，請參閱 <xref:System.Text.RegularExpressions.Group.Captures%2A?displayProperty=nameWithType> 集合。)  
   
-## <a name="see-also"></a>另請參閱  
+## <a name="see-also"></a>請參閱  
  [.NET 規則運算式](../../../docs/standard/base-types/regular-expressions.md)

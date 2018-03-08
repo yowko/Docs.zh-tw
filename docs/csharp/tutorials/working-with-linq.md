@@ -10,11 +10,11 @@ ms.prod: .net
 ms.technology: devlang-csharp
 ms.devlang: csharp
 ms.assetid: 0db12548-82cb-4903-ac88-13103d70aa77
-ms.openlocfilehash: e9707d3b67a80fface2c26c589780c60c2e293f7
-ms.sourcegitcommit: 2142a4732bb4ff519b9817db4c24a237b9810d4b
+ms.openlocfilehash: 3f0fcfebf37d9e6dad52c69111cc5e374ae27183
+ms.sourcegitcommit: cf22b29db780e532e1090c6e755aa52d28273fa6
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 01/05/2018
+ms.lasthandoff: 02/01/2018
 ---
 # <a name="working-with-linq"></a>處理 LINQ
 
@@ -26,17 +26,17 @@ ms.lasthandoff: 01/05/2018
 *   如何撰寫可輕鬆用於 LINQ 查詢的方法。
 *   如何區分立即和延遲評估。
 
-您將建置一個應用程式來學習這些技術，其中將示範任何魔術師都會的基礎技巧：[完美洗牌 (英文)](https://en.wikipedia.org/wiki/Faro_shuffle)。 簡單地說，完美洗牌是將牌組確實分成兩半，然後互相交錯每一張紙牌來重建原始牌堆的技術。
+您將建置一個應用程式來學習這些技術，其中將示範任何魔術師都會的基礎技巧：[完美洗牌](https://en.wikipedia.org/wiki/Faro_shuffle) \(英文\)。 簡單地說，完美洗牌是將牌組確實分成兩半，然後互相交錯每一張紙牌來重建原始牌堆的技術。
 
 魔術師使用這項技術的原因，是因為在每次洗牌後，每張紙牌都會在已知的位置，其順序會遵循重複性的模式。 
 
 對我們而言，這是以較輕鬆的方式來了解對資料序列的操作。 您將建置的應用程式會建構牌堆，然後執行一連串的洗牌，每次洗牌都會寫出序列。 您也會比較原始的順序與更新過的順序。
 
-本教學課程有多個步驟。 在每個步驟之後，您可以執行應用程式並查看進度。 您也可以在 dotnet/docs GitHub 存放機制中查看[完整範例](https://github.com/dotnet/docs/blob/master/samples/csharp/getting-started/console-linq)。 如需下載指示，請參閱[範例和教學課程](../../samples-and-tutorials/index.md#viewing-and-downloading-samples)。
+本教學課程有多個步驟。 在每個步驟之後，您可以執行應用程式並查看進度。 您也可以在 dotnet/docs GitHub 存放庫中查看[完整範例](https://github.com/dotnet/docs/blob/master/samples/csharp/getting-started/console-linq)。 如需下載指示，請參閱[範例和教學課程](../../samples-and-tutorials/index.md#viewing-and-downloading-samples)。
 
 ## <a name="prerequisites"></a>必要條件
 
-您必須設定電腦以執行 .NET Core。 您可以在 [.NET Core (英文)](https://www.microsoft.com/net/core) 頁面找到安裝指示。 您可以在 Windows、Ubuntu Linux、OS X 或是 Docker 容器中執行此應用程式。 您將必須安裝慣用的程式碼編輯器。 以下說明使用 [Visual Studio Code (英文)](https://code.visualstudio.com/)，這是開放原始碼的跨平台編輯器。 不過，您可以使用您熟悉的任何工具。
+您必須設定電腦以執行 .NET Core。 您可以在 [.NET Core](https://www.microsoft.com/net/core) \(英文\) 頁面上找到安裝指示。 您可以在 Windows、Ubuntu Linux、OS X 或是 Docker 容器中執行此應用程式。 您將必須安裝慣用的程式碼編輯器。 以下說明使用 [Visual Studio Code](https://code.visualstudio.com/) \(英文\)，這是開放原始碼的跨平台編輯器。 不過，您可以使用您熟悉的任何工具。
 
 ## <a name="create-the-application"></a>建立應用程式
 
@@ -329,6 +329,6 @@ var startingDeck = (from s in Suits().LogQuery("Suit Generation")
 
 ## <a name="conclusion"></a>結論
 
-這個範例為您示範了一些用於 LINQ 的方法，以及如何建立可輕鬆搭配啟用 LINQ 之程式碼來使用的方法。 範例同時示範延遲評估和立即評估的差異，以及兩者對效能可能會產生的影響。
+這個範例為您示範了一些用於 LINQ 的方法，以及如何建立可輕鬆搭配啟用 LINQ 之程式碼來使用的方法。 它也示範延遲評估和立即評估的差異，以及兩者對效能可能會產生的效果。
 
 您學到了一點魔術師的技巧。 魔術師之所以使用完美洗牌，是因為他們可以控制每張牌在牌堆中的動向。 在某些戲法中，魔術師讓觀眾把紙牌放在牌堆最上方，並在洗牌數次之後，仍然能知道該紙牌的位置。 其他的魔術則需要以特定方式設置牌堆。 魔術師會在表演戲法之前會先將牌堆設置好。 然後她會使用內部洗牌將牌堆洗 5 次。 在舞台上，她可以展示看起來像是隨機順序的牌堆，然後將紙牌洗 3 次，這個手法正好會將牌堆洗為她所想要的設置。

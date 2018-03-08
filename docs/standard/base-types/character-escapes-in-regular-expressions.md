@@ -20,15 +20,18 @@ helpviewer_keywords:
 - .NET Framework regular expressions, character escapes
 - constructs, character escapes
 ms.assetid: f49cc9cc-db7d-4058-8b8a-422bc08b29b0
-caps.latest.revision: "31"
+caps.latest.revision: 
 author: rpetrusha
 ms.author: ronpet
 manager: wpickett
-ms.openlocfilehash: 0149bd97b997da8b29e225a7a1aeda17a6ffa226
-ms.sourcegitcommit: bd1ef61f4bb794b25383d3d72e71041a5ced172e
+ms.workload:
+- dotnet
+- dotnetcore
+ms.openlocfilehash: 8a4ec10bfa332c8caafce57385791d8069a7231a
+ms.sourcegitcommit: e7f04439d78909229506b56935a1105a4149ff3d
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/18/2017
+ms.lasthandoff: 12/23/2017
 ---
 # <a name="character-escapes-in-regular-expressions"></a>在規則運算式中執行字元逸出
 規則運算式中的反斜線 (\\) 表示下列其中之一：  
@@ -54,10 +57,10 @@ ms.lasthandoff: 10/18/2017
 |`\f`|符合換頁字元， `\u000C`。|  
 |`\n`|符合新行字元， `\u000A`。|  
 |`\e`|符合逸出字元， `\u001B`。|  
-|`\` *nnn*|符合 ASCII 字元，其中 *nnn* 由代表八進位字元碼的兩個或三位數所組成。 例如，`\040` 代表空格字元。 其若只有一個數字 (例如 `\2`)，或其對應至擷取群組的編號，會將此建構解譯為反向參考  (請參閱[反向參考建構](../../../docs/standard/base-types/backreference-constructs-in-regular-expressions.md)。)|  
-|`\x` *nn*|符合 ASCII 字元，其中 *nn* 是兩位數的十六進位字元碼。|  
+|`\` *nnn*|符合 ASCII 字元，其中 *nnn* 會由表示八進位字元碼的二到三個數字組成。 例如，`\040` 代表空格字元。 其若只有一個數字 (例如 `\2`)，或其對應至擷取群組的編號，會將此建構解譯為反向參考  (請參閱[反向參考建構](../../../docs/standard/base-types/backreference-constructs-in-regular-expressions.md)。)|  
+|`\x` *nn*|符合 ASCII 字元，其中 *nn* 是二位數的十六進位字元碼。|  
 |`\c` *X*|符合 ASCII 控制字元，其中 X 是控制字元的字母。 例如，`\cC` 是 CTRL + C。|  
-|`\u` *nnnn*|符合 utf-16 程式碼單位，其值為 *nnnn* 十六進位。 **注意：** .NET 不支援用來指定 Unicode Perl 5 字元逸出。 Perl 5 字元逸出的形式是 `\x{`*####*`…}`，其中 *####*`…` 是一系列的十六進位數字。 請改用`\u`  *nnnn* 。|  
+|`\u` *nnnn*|符合 UTF-16 程式碼單位，其值為十六進位的 *nnnn*。 **注意：**.NET 不支援用來指定 Unicode 的 Perl 5 逸出字元。 Perl 5 字元逸出的形式是 `\x{`*####*`…}`，其中 *####*`…` 是一系列的十六進位數字。 請改用 `\u`*nnnn*。|  
 |`\`|當後面加上一個不被認為是逸出的字元時，符合該字元。 例如，`\*` 符合使用星號 (*)，而且與 `\x2A` 相同。|  
   
 ## <a name="an-example"></a>範例  
@@ -76,5 +79,5 @@ ms.lasthandoff: 10/18/2017
 |`(.+)`|一或多次比對任何字元。 這是第二個擷取群組。|  
 |`\r?\n`|比對後面接著新行的歸位字元其中的零或指定項目。|  
   
-## <a name="see-also"></a>另請參閱  
+## <a name="see-also"></a>請參閱  
  [規則運算式語言 - 快速參考](../../../docs/standard/base-types/regular-expression-language-quick-reference.md)

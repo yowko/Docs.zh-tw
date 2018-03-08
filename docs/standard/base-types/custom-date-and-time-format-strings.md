@@ -20,15 +20,18 @@ helpviewer_keywords:
 - formatting [.NET Framework], time
 - date and time strings
 ms.assetid: 98b374e3-0cc2-4c78-ab44-efb671d71984
-caps.latest.revision: "79"
+caps.latest.revision: 
 author: rpetrusha
 ms.author: ronpet
 manager: wpickett
-ms.openlocfilehash: f0346de00988a6863c212a95be3ffa9d356fe5ce
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.workload:
+- dotnet
+- dotnetcore
+ms.openlocfilehash: 503f9d593235cc81c6e2ecf43b93abb2105e0adf
+ms.sourcegitcommit: e7f04439d78909229506b56935a1105a4149ff3d
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 12/23/2017
 ---
 # <a name="custom-date-and-time-format-strings"></a>自訂日期和時間格式字串
 日期和時間格式字串會定義對 <xref:System.DateTime> 或 <xref:System.DateTimeOffset> 值執行格式化作業後所產生的文字表示。 另外還會定義剖析作業所需日期和時間值的表示，以便成功地將字串轉換成日期和時間。 自訂格式字串是由一個或多個自訂日期和時間格式規範所組成。 任何不是[標準日期和時間格式字串](../../../docs/standard/base-types/standard-date-and-time-format-strings.md)的字串都會被解譯為自訂日期和時間格式字串。  
@@ -358,7 +361,7 @@ ms.lasthandoff: 11/21/2017
   
 -   若為未指定時區的時間 (<xref:System.DateTime.Kind%2A?displayProperty=nameWithType> 屬性等於 <xref:System.DateTimeKind.Unspecified?displayProperty=nameWithType> 的時間)，結果就相當於 <xref:System.String.Empty?displayProperty=nameWithType>。  
   
- 如<xref:System.DateTimeOffset>值，"K"格式規範相當於"zzz"格式規範，並產生結果字串會包含<xref:System.DateTimeOffset>值與 UTC 的時差。  
+ 若為 <xref:System.DateTimeOffset> 值，"K" 格式規範相當於 "zzz" 格式規範，所產生的結果字串會包含 <xref:System.DateTimeOffset> 值與 UTC 之間的時差。  
   
  如果單獨使用 "K" 格式規範，而沒有其他自訂格式規範，則會將它解譯為標準日期和時間格式規範，並擲回 <xref:System.FormatException>。 如需使用單一格式規範的詳細資訊，請參閱本主題稍後的[使用單一自訂格式規範](#UsingSingleSpecifiers)。  
   
@@ -636,7 +639,7 @@ ms.lasthandoff: 11/21/2017
 |-|-|-|-|-|  
 |F|H|K|M|d|  
 |f|G|h|m|秒|  
-|t|Y|z|%|:|  
+|t|y|z|%|:|  
 |/|"|'|\||  
   
  所有其他字元一律會解譯為字元常值，並在格式化作業中，原封不動地包含在結果字串中。  在剖析作業中，它們必須完全符合輸入字串中的字元；這項比較會區分大小寫。  
@@ -661,7 +664,7 @@ ms.lasthandoff: 11/21/2017
      [!code-vb[Formatting.DateAndTime.Custom#22](../../../samples/snippets/visualbasic/VS_Snippets_CLR/Formatting.DateAndTime.Custom/vb/LiteralsEx3.vb#22)]  
   
 <a name="Notes"></a>   
-## <a name="notes"></a>備註  
+## <a name="notes"></a>注意  
   
 <a name="UsingSingleSpecifiers"></a>   
 ### <a name="using-single-custom-format-specifiers"></a>使用單一自訂格式規範  
@@ -691,16 +694,16 @@ ms.lasthandoff: 11/21/2017
 ### <a name="control-panel-settings"></a>控制台設定  
  [控制台] 中的 [地區及語言選項] 設定會影響格式化作業 (其中包含許多自訂日期和時間格式規範) 所產生的結果字串。 這些設定是用來初始化與目前執行緒文化特性相關的 <xref:System.Globalization.DateTimeFormatInfo> 物件，該物件會提供用來管理格式的值。 使用不同設定的電腦會產生不同的結果字串。  
   
- 此外，如果您使用<xref:System.Globalization.CultureInfo.%23ctor%28System.String%29?displayProperty=nameWithType>建構函式來具現化新<xref:System.Globalization.CultureInfo>物件，代表相同的文化特性與目前的系統文化特性，所建立的任何自訂**地區及語言選項**在控制台中的項目會套用至新<xref:System.Globalization.CultureInfo>物件。 您可以使用 <xref:System.Globalization.CultureInfo.%23ctor%28System.String%2CSystem.Boolean%29?displayProperty=nameWithType> 建構函式來建立不反映系統自訂的 <xref:System.Globalization.CultureInfo> 物件。  
+ 此外，如果您使用 <xref:System.Globalization.CultureInfo.%23ctor%28System.String%29?displayProperty=nameWithType> 建構函式來將新的 <xref:System.Globalization.CultureInfo> 物件具現化，而此物件代表的文化特性與目前系統文化特性相同，則 [控制台] 中的 [地區及語言選項] 項目所建立的任何自訂都會套用至新的 <xref:System.Globalization.CultureInfo> 物件。 您可以使用 <xref:System.Globalization.CultureInfo.%23ctor%28System.String%2CSystem.Boolean%29?displayProperty=nameWithType> 建構函式來建立不反映系統自訂的 <xref:System.Globalization.CultureInfo> 物件。  
   
 ### <a name="datetimeformatinfo-properties"></a>DateTimeFormatInfo 屬性  
  格式會受到目前 <xref:System.Globalization.DateTimeFormatInfo> 物件的影響，而此物件是由目前執行緒文化特性隱含提供或由叫用格式之方法的 <xref:System.IFormatProvider> 參數明確提供。 在 <xref:System.IFormatProvider> 參數中，您應該指定表示文化特性的 <xref:System.Globalization.CultureInfo> 物件，指定或 <xref:System.Globalization.DateTimeFormatInfo> 物件。  
   
  許多自訂日期和時間格式規範所產生的結果字串，也取決於目前 <xref:System.Globalization.DateTimeFormatInfo> 物件的屬性。 您的應用程式可以變更對應的 <xref:System.Globalization.DateTimeFormatInfo> 屬性，藉此改變某些自訂日期和時間格式規範所產生的結果。 例如，"ddd" 格式規範會將 <xref:System.Globalization.DateTimeFormatInfo.AbbreviatedDayNames%2A> 字串陣列中找到的縮寫星期幾名稱加入至結果字串。 同樣地，"MMMM" 格式規範會將 <xref:System.Globalization.DateTimeFormatInfo.MonthNames%2A> 字串陣列中找到的完整月份名稱加到結果字串。  
   
-## <a name="see-also"></a>另請參閱  
+## <a name="see-also"></a>請參閱  
  <xref:System.DateTime?displayProperty=nameWithType>  
  <xref:System.IFormatProvider?displayProperty=nameWithType>  
  [格式化類型](../../../docs/standard/base-types/formatting-types.md)  
- [Standard Date and Time Format Strings](../../../docs/standard/base-types/standard-date-and-time-format-strings.md)  
+ [標準日期和時間格式字串](../../../docs/standard/base-types/standard-date-and-time-format-strings.md)  
  [範例：.NET Framework 4 格式化公用程式](http://code.msdn.microsoft.com/NET-Framework-4-Formatting-9c4dae8d)

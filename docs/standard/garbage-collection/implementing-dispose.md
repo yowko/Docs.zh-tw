@@ -15,28 +15,31 @@ helpviewer_keywords:
 - Dispose method
 - garbage collection, Dispose method
 ms.assetid: eb4e1af0-3b48-4fbc-ad4e-fc2f64138bf9
-caps.latest.revision: "44"
+caps.latest.revision: 
 author: rpetrusha
 ms.author: ronpet
 manager: wpickett
-ms.openlocfilehash: b5a304c48a953b172cbcc3aa1c717a660298d36a
-ms.sourcegitcommit: bd1ef61f4bb794b25383d3d72e71041a5ced172e
+ms.workload:
+- dotnet
+- dotnetcore
+ms.openlocfilehash: 404fdece284accf305ef3cf2324be2e37a8da4b6
+ms.sourcegitcommit: bf8a3ba647252010bdce86dd914ac6c61b5ba89d
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/18/2017
+ms.lasthandoff: 01/06/2018
 ---
 # <a name="implementing-a-dispose-method"></a>實作 Dispose 方法
 
-您實作<xref:System.IDisposable.Dispose%2A>方法，以釋放您的應用程式所使用的 unmanaged 的資源。 .NET 記憶體回收行程不會配置或釋放 Unmanaged 記憶體。  
+您實作 <xref:System.IDisposable.Dispose%2A> 方法，以釋放您的應用程式所使用的非受控資源。 .NET 記憶體回收行程不會配置或釋放 Unmanaged 記憶體。  
   
-處置物件的模式稱為[處置模式](../../../docs/standard/design-guidelines/dispose-pattern.md)，會在物件存留期上安排順序。 處置模式僅適用於存取 Unmanaged 資源的物件，例如檔案和管道控制碼、註冊控制代碼、等候控制代碼，或是 Unmanaged 記憶體區塊的指標。 這是因為記憶體回收行程在回收未使用的 Managed 物件方面相當有效率，但是它無法回收 Unmanaged 物件。  
+處置物件的模式稱為[處置模式](../../../docs/standard/design-guidelines/dispose-pattern.md)，會在物件的存留期上安排順序。 處置模式僅適用於存取 Unmanaged 資源的物件，例如檔案和管道控制碼、註冊控制代碼、等候控制代碼，或是 Unmanaged 記憶體區塊的指標。 這是因為記憶體回收行程在回收未使用的 Managed 物件方面相當有效率，但是它無法回收 Unmanaged 物件。  
   
 處置模式有兩種：  
   
 * 將類型使用的每一種 Unmanaged 資源包裝在安全控制代碼中 (也就是在衍生自 <xref:System.Runtime.InteropServices.SafeHandle?displayProperty=nameWithType> 的類別中)。 在這種情況下，請實作 <xref:System.IDisposable> 介面和額外的 `Dispose(Boolean)` 方法。 這是建議的做法，這種做法不需要覆寫 <xref:System.Object.Finalize%2A?displayProperty=nameWithType> 方法。  
   
   > [!NOTE]
-  > <xref:Microsoft.Win32.SafeHandles?displayProperty=nameWithType>命名空間提供一組類別衍生自<xref:System.Runtime.InteropServices.SafeHandle>，列出這些[使用安全控制代碼](#SafeHandles)> 一節。 如果您找不到適合釋放 Unmanaged 資源的類別，可以實作自有的 <xref:System.Runtime.InteropServices.SafeHandle> 子類別。  
+  > <xref:Microsoft.Win32.SafeHandles?displayProperty=nameWithType> 命名空間會提供一組衍生自 <xref:System.Runtime.InteropServices.SafeHandle> 的類別，[使用安全控制代碼](#SafeHandles)一節將列出這些類別。 如果您找不到適合釋放 Unmanaged 資源的類別，可以實作自有的 <xref:System.Runtime.InteropServices.SafeHandle> 子類別。  
   
 * 除了實作 <xref:System.IDisposable> 介面和額外的 `Dispose(Boolean)` 方法之外，還要覆寫 <xref:System.Object.Finalize%2A?displayProperty=nameWithType> 方法。 您必須覆寫 <xref:System.Object.Finalize%2A>，才能確保類型消費者未呼叫您的 <xref:System.IDisposable.Dispose%2A?displayProperty=nameWithType> 實作時，Unmanaged 資源仍會獲得處置。 如果您採用前一項所討論的建議技術，<xref:System.Runtime.InteropServices.SafeHandle?displayProperty=nameWithType> 類別會自動為您完成這項作業。  
   
@@ -67,7 +70,7 @@ ms.lasthandoff: 10/18/2017
   
 ### <a name="the-disposeboolean-overload"></a>Dispose(Boolean) 多載
 
-在第二個多載，*處置*參數是<xref:System.Boolean>，指出方法呼叫來自<xref:System.IDisposable.Dispose%2A>方法 (其值是`true`) 或是來自完成項 (其值是`false`)。  
+在第二個多載中，*disposing* 參數為 <xref:System.Boolean>，它會指出方法呼叫是來自 <xref:System.IDisposable.Dispose%2A> 方法 (其值為 `true`) 或是來自完成項 (其值為 `false`)。  
   
 方法的主體是由兩個程式碼區塊所構成：  
   
@@ -75,7 +78,7 @@ ms.lasthandoff: 10/18/2017
   
 * 釋放 Managed 資源的條件性區塊。 如果 `disposing` 的值為 `true`，這個區塊就會執行。 它所釋放的 Managed 資源可能包括：  
   
-  **受管理物件，可實作<xref:System.IDisposable>。** 條件式區塊可以用來呼叫其 <xref:System.IDisposable.Dispose%2A> 實作。 如果您已使用安全控制代碼包裝 Unmanaged 資源，則應該在這裡呼叫 <xref:System.Runtime.InteropServices.SafeHandle.Dispose%28System.Boolean%29?displayProperty=nameWithType> 實作。  
+  **實作 <xref:System.IDisposable> 的受控物件。** 條件式區塊可以用來呼叫其 <xref:System.IDisposable.Dispose%2A> 實作。 如果您已使用安全控制代碼包裝 Unmanaged 資源，則應該在這裡呼叫 <xref:System.Runtime.InteropServices.SafeHandle.Dispose%28System.Boolean%29?displayProperty=nameWithType> 實作。  
   
   **耗用大量記憶體或耗用少量資源的 Managed 物件。** 如果它們是之非由記憶體回收行程，在 `Dispose` 方法中明確釋放這些物件的速度，會比由記憶體回收行程以非決定性的方式回收來得快。  
   
@@ -108,13 +111,13 @@ ms.lasthandoff: 10/18/2017
 [!code-vb[System.IDisposable#5](../../../samples/snippets/visualbasic/VS_Snippets_CLR_System/system.idisposable/vb/base2.vb#5)]  
   
 > [!NOTE]
-> 在 C# 中，您會覆寫<xref:System.Object.Finalize%2A?displayProperty=nameWithType>藉由定義[解構函式](~/docs/csharp/programming-guide/classes-and-structs/destructors.md)。  
+> 在 C# 中，您會透過定義[解構函式](~/docs/csharp/programming-guide/classes-and-structs/destructors.md)來覆寫 <xref:System.Object.Finalize%2A?displayProperty=nameWithType>。  
   
 ## <a name="implementing-the-dispose-pattern-for-a-derived-class"></a>實作衍生類別的處置模式
 
 從實作 <xref:System.IDisposable> 介面的類別衍生的類別不應該實作 <xref:System.IDisposable>，因為 <xref:System.IDisposable.Dispose%2A?displayProperty=nameWithType> 的基底類別實作會由其衍生類別繼承。 因此，若要實作衍生類別的處置模式，請改為提供下列項目：  
   
-* 覆寫基底類別方法及實際釋放衍生類別之資源的 `protected``Dispose(Boolean)` 方法。 這個方法也應該呼叫基底類別的 `Dispose(Boolean)` 方法，並且將 *disposing* 引數的 `true` 值傳遞給它。  
+* 覆寫基底類別方法及實際釋放衍生類別之資源的 `protected Dispose(Boolean)` 方法。 這個方法也應該呼叫基底類別的 `Dispose(Boolean)` 方法，並且將 *disposing* 引數的 `true` 值傳遞給它。  
   
 * 衍生自包裝您的 Unmanaged 資源之 <xref:System.Runtime.InteropServices.SafeHandle> 的類別 (建議使用)，或式 <xref:System.Object.Finalize%2A?displayProperty=nameWithType> 方法的覆寫。 <xref:System.Runtime.InteropServices.SafeHandle> 類別會提供完成項，讓您不必自行撰寫程式碼。 如果您提供完成項，則它應該呼叫 `Dispose(Boolean)` 多載且 *disposing* 引數為 `false`。  
   
@@ -132,7 +135,7 @@ ms.lasthandoff: 10/18/2017
 [!code-vb[System.IDisposable#6](../../../samples/snippets/visualbasic/VS_Snippets_CLR_System/system.idisposable/vb/derived2.vb#6)]  
   
 > [!NOTE]
-> 在 C# 中，您會覆寫<xref:System.Object.Finalize%2A?displayProperty=nameWithType>藉由定義[解構函式](~/docs/csharp/programming-guide/classes-and-structs/destructors.md)。  
+> 在 C# 中，您會透過定義[解構函式](~/docs/csharp/programming-guide/classes-and-structs/destructors.md)來覆寫 <xref:System.Object.Finalize%2A?displayProperty=nameWithType>。  
   
 <a name="SafeHandles"></a>   
 ## <a name="using-safe-handles"></a>使用安全控制代碼
@@ -167,7 +170,7 @@ ms.lasthandoff: 10/18/2017
 [!code-csharp[Conceptual.Disposable#10](../../../samples/snippets/csharp/VS_Snippets_CLR/conceptual.disposable/cs/derived1.cs#10)]
 [!code-vb[Conceptual.Disposable#10](../../../samples/snippets/visualbasic/VS_Snippets_CLR/conceptual.disposable/vb/derived1.vb#10)]  
   
-## <a name="see-also"></a>請參閱
+## <a name="see-also"></a>另請參閱
 
 <xref:System.GC.SuppressFinalize%2A>   
 <xref:System.IDisposable>   
@@ -175,5 +178,5 @@ ms.lasthandoff: 10/18/2017
 <xref:Microsoft.Win32.SafeHandles>   
 <xref:System.Runtime.InteropServices.SafeHandle?displayProperty=nameWithType>   
 <xref:System.Object.Finalize%2A?displayProperty=nameWithType>   
-[如何： 定義和使用類別和結構 (C + + /CLI)](/cpp/dotnet/how-to-define-and-consume-classes-and-structs-cpp-cli)   
-[處置模式](../../../docs/standard/design-guidelines/dispose-pattern.md)
+[如何：定義與使用類別和結構 (C++/CLI)](/cpp/dotnet/how-to-define-and-consume-classes-and-structs-cpp-cli)   
+[Dispose 模式](../../../docs/standard/design-guidelines/dispose-pattern.md)

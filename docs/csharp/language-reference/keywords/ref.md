@@ -2,7 +2,8 @@
 title: "ref (C# 參考)"
 ms.date: 05/30/2017
 ms.prod: .net
-ms.technology: devlang-csharp
+ms.technology:
+- devlang-csharp
 ms.topic: article
 f1_keywords:
 - ref_CSharpKeyword
@@ -11,14 +12,14 @@ helpviewer_keywords:
 - parameters [C#], ref
 - ref keyword [C#]
 ms.assetid: b8a5e59c-907d-4065-b41d-95bf4273c0bd
-caps.latest.revision: "32"
+caps.latest.revision: 
 author: BillWagner
 ms.author: wiwagn
-ms.openlocfilehash: 0be0eee67b507e2a209c9caaa3eb14cc60e8a763
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.openlocfilehash: 9b1e926bd1d9c3a8e0525ed02d102f26e6ec9abd
+ms.sourcegitcommit: 655fd4f78741967f80c409cef98347fdcf77857d
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 02/28/2018
 ---
 # <a name="ref-c-reference"></a>ref (C# 參考)
 
@@ -82,19 +83,19 @@ ms.lasthandoff: 11/21/2017
    ```csharp
    public ref decimal GetCurrentValue()
    ``` 
-- 方法中每個 `return` 陳述式的前面。 例如: 
+- `return` 權杖與方法之 `return` 陳述式中所傳回變數之間。 例如: 
  
    ```csharp
-   ref return Decimal.Zero;
+   return ref DecimalArray[0];
    ``` 
 
-為了讓呼叫端若要修改物件的狀態，將參考傳回值必須存放至變數，明確定義為[參考本機](#ref-locals)。 
+為了讓呼叫者修改物件的狀態，參考傳回值必須儲存至明確定義為 [ref 區域變數](#ref-locals)的變數。 
 
 如需範例，請參閱 [ref 傳回值和 ref 區域變數範例](#a-ref-returns-and-ref-locals-example)。
 
 ## <a name="ref-locals"></a>ref 區域變數
 
-ref 區域變數用來參考使用 `ref return` 所傳回的值。  ref 區域變數必須初始化並指派給 ref 傳回值。 任何對 ref 區域變數值進行的修改，都會反映在其方法以傳址方式傳回值之物件的狀態。
+ref 區域變數用來參考使用 `return ref` 所傳回的值。  ref 區域變數必須初始化並指派給 ref 傳回值。 任何對 ref 區域變數值進行的修改，都會反映在其方法以傳址方式傳回值之物件的狀態。
 
 定義 ref 區域變數的方式是在變數宣告前面使用 `ref` 關鍵字，並且緊接在以傳址方式傳回值的方法呼叫前面。 
 
@@ -119,7 +120,7 @@ ref decimal estValue = ref Building.GetEstimatedValue();
 ## <a name="c-language-specification"></a>C# 語言規格  
  [!INCLUDE[CSharplangspec](~/includes/csharplangspec-md.md)]  
   
-## <a name="see-also"></a>另請參閱  
+## <a name="see-also"></a>請參閱  
  [C# 參考](../../../csharp/language-reference/index.md)  
  [C# 程式設計指南](../../../csharp/programming-guide/index.md)  
  [傳遞參數](../../../csharp/programming-guide/classes-and-structs/passing-parameters.md)  

@@ -21,15 +21,18 @@ helpviewer_keywords:
 - namespaces [.NET Framework], types
 - types, about types
 ms.assetid: 53c57c96-83e1-4ee3-9543-9ac832671a89
-caps.latest.revision: "25"
+caps.latest.revision: 
 author: rpetrusha
 ms.author: ronpet
 manager: wpickett
-ms.openlocfilehash: 9f9952cfd6ed2d5bac66d1cd5e3c8eed7506cd5c
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.workload:
+- dotnet
+- dotnetcore
+ms.openlocfilehash: 26ee5cffd5e04a8c78cf5913b286fadfaab03c7c
+ms.sourcegitcommit: e7f04439d78909229506b56935a1105a4149ff3d
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 12/23/2017
 ---
 # <a name="common-type-system"></a>一般類型系統
 一般型別系統定義如何在 Common Language Runtime 中宣告、使用和管理型別，同時也是執行階段支援跨語言整合中很重要的一部分。 一般型別系統可執行下列功能：  
@@ -95,7 +98,7 @@ ms.lasthandoff: 11/21/2017
   
 <a name="Structures"></a>   
 ### <a name="structures"></a>結構  
- 結構是自 <xref:System.ValueType?displayProperty=nameWithType> (衍生自 <xref:System.Object?displayProperty=nameWithType>) 隱含繼承的實質型別。 在表示記憶體需求相當小的實質型別時，以及將值當做傳值參考傳遞給具有強型別參數的方法時，結構將相當實用。 在.NET 中，所有的基本資料型別 (<xref:System.Boolean>， <xref:System.Byte>， <xref:System.Char>， <xref:System.DateTime>， <xref:System.Decimal>， <xref:System.Double>， <xref:System.Int16>， <xref:System.Int32>， <xref:System.Int64>， <xref:System.SByte>， <xref:System.Single>， <xref:System.UInt16>， <xref:System.UInt32>，和<xref:System.UInt64>) 會定義為結構。  
+ 結構是自 <xref:System.ValueType?displayProperty=nameWithType> (衍生自 <xref:System.Object?displayProperty=nameWithType>) 隱含繼承的實質型別。 在表示記憶體需求相當小的實質型別時，以及將值當做傳值參考傳遞給具有強型別參數的方法時，結構將相當實用。 在 .NET 中，會將所有基本資料類型 (<xref:System.Boolean>、<xref:System.Byte>、<xref:System.Char>、<xref:System.DateTime>、<xref:System.Decimal>、<xref:System.Double>、<xref:System.Int16>、<xref:System.Int32>、<xref:System.Int64>、<xref:System.SByte>、<xref:System.Single>、<xref:System.UInt16>、<xref:System.UInt32> 及 <xref:System.UInt64>) 定義為結構。  
   
  與類別一樣，結構會定義資料 (結構的欄位) 以及可以在該資料上定義的作業 (結構的方法)。 這表示您可以在結構上呼叫方法，包括在 <xref:System.Object?displayProperty=nameWithType> 和 <xref:System.ValueType?displayProperty=nameWithType> 類別上定義的虛擬方法，以及在實值型別本身定義的任何方法。 換言之，除了靜態與非靜態方法之外，結構還可以具有欄位、屬性和事件。 您可以建立結構的執行個體，將它們當做參數傳遞，並將它們當做區域變數儲存或將它們儲存到其他實值型別或參考型別的欄位中。 結構也可以實作介面。  
   
@@ -166,7 +169,7 @@ ms.lasthandoff: 11/21/2017
   
  在許多情況下，例如回呼方法中，委派只代表一個方法，而且您所需要採取的動作，就是建立委派然後再叫用委派。  
   
- 對於代表多個方法的委派，.NET 提供的方法<xref:System.Delegate>和<xref:System.MulticastDelegate>委派類別，以支援委派的引動過程清單加入方法等作業 (<xref:System.Delegate.Combine%2A?displayProperty=nameWithType>方法)，移除 (方法<xref:System.Delegate.Remove%2A?displayProperty=nameWithType>方法)，以及取得引動過程清單 (<xref:System.Delegate.GetInvocationList%2A?displayProperty=nameWithType>方法)。  
+ 對於代表多個方法的委派，.NET 會提供 <xref:System.Delegate> 和 <xref:System.MulticastDelegate> 委派類別的方法，來支援將方法加入至委派引動清單 (<xref:System.Delegate.Combine%2A?displayProperty=nameWithType> 方法)、移除方法 (<xref:System.Delegate.Remove%2A?displayProperty=nameWithType> 方法)，以及取得引動清單 (<xref:System.Delegate.GetInvocationList%2A?displayProperty=nameWithType> 方法) 等諸如此類的作業。  
   
 > [!NOTE]
 >  在 C#、C++ 和 Visual Basic 中，並不需要對事件處理常式委派使用這些方法，因為這些語言都提供加入和移除事件處理常式的語法。  
@@ -327,7 +330,7 @@ ms.lasthandoff: 11/21/2017
   
 -   衍生型別可覆寫繼承的虛擬方法。 覆寫方法會提供新的方法定義，叫用方法時將根據執行時期的實值型別，而非根據編譯時間得知的變數型別。 只有當虛擬方法未標記為 `final`，而且新的方法至少可像虛擬方法一樣存取時，方法才可覆寫虛擬方法。  
   
-## <a name="see-also"></a>另請參閱  
+## <a name="see-also"></a>請參閱  
  [.NET 類別庫](http://go.microsoft.com/fwlink/?LinkID=217856)  
- [Common Language Runtime](../../../docs/standard/clr.md)  
+ [通用語言執行平台](../../../docs/standard/clr.md)  
  [.NET 中的類型轉換](../../../docs/standard/base-types/type-conversion.md)

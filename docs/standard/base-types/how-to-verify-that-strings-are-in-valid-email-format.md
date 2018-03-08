@@ -18,21 +18,24 @@ helpviewer_keywords:
 - regular expressions [.NET Framework], examples
 - examples [Visual Basic], strings
 - IsValidEmail
-- validation, e-mail strings
+- validation, email strings
 - input, checking
 - strings [.NET Framework], examples [Visual Basic]
-- e-mail [.NET Framework], validating
+- email [.NET Framework], validating
 - IsMatch method
 ms.assetid: 7536af08-4e86-4953-98a1-a8298623df92
-caps.latest.revision: "30"
+caps.latest.revision: 
 author: rpetrusha
 ms.author: ronpet
 manager: wpickett
-ms.openlocfilehash: 03623cc4086981dc321aafe3020dcd571b74d9bc
-ms.sourcegitcommit: 9c4b8d457ffb8d134c9d55c6d7682a0f22e2b9a8
+ms.workload:
+- dotnet
+- dotnetcore
+ms.openlocfilehash: fdbb64cac1f1d4043b8b935fcad32aec88b7bb7a
+ms.sourcegitcommit: cf22b29db780e532e1090c6e755aa52d28273fa6
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/20/2017
+ms.lasthandoff: 02/01/2018
 ---
 # <a name="how-to-verify-that-strings-are-in-valid-email-format"></a>如何：確認字串是否為有效的電子郵件格式
 下列範例會使用規則運算式來確認字串是否為有效的電子郵件格式。  
@@ -63,7 +66,7 @@ ms.lasthandoff: 10/20/2017
 |-------------|-----------------|  
 |`^`|在字串開頭開始比對。|  
 |`(?(")`|判斷第一個字元是否為引號。 `(?(")` 是交替建構的開頭。|  
-|`(?("")("".+?(?<!\\)""@)`|如果第一個字元是引號，則比對是否為開頭引號後面至少接著一個任何字元，然後再接著結尾引號。 結尾引號必須不加上反斜線字元 (\\)。 `(?<!` 是零寬度左不合樣 (Negative Lookbehind) 判斷提示的開頭。 此字串應該以 @ 記號做為結束。|  
+|`(?("")("".+?(?<!\\)""@)`|如果第一個字元是引號，則比對是否為開頭引號後面至少接著一個任何字元，然後再接著結尾引號。 結尾引號前面絕不能是反斜線字元 (\\) 。 `(?<!` 是零寬度左不合樣 (Negative Lookbehind) 判斷提示的開頭。 此字串應該以 @ 記號做為結束。|  
 |`&#124;(([0-9a-z]`|如果第一個字元不是引號，則比對 a 到 z 或 A 到 Z 的任何字母字元 (此比較不區分大小寫) 或 0 到 9 的任何數字字元。|  
 |`(\.(?!\.))`|如果下一個字元是句號，則相符。 如果不是句號，則向右合樣下一個字元並繼續比對。 `(?!\.)` 是零寬度的右不合樣 (Negative Lookahead) 判斷提示，可防止電子郵件地址的本機部分出現兩個連續的句號。|  
 |``&#124;[-!#\$%&'\*\+/=\?\^`{}\&#124;~\w]``|如果下一個字元不是句號，則比對任何文字字元或下列其中一個字元：-!#$%'*+=?^`{}&#124;~。|  
@@ -72,7 +75,7 @@ ms.lasthandoff: 10/20/2017
 |`(?<=[0-9a-z])`|如果位於 @ 字元前面的字元是 A 到 Z、a 到 z 或 0 到 9，則繼續比對。 `(?<=[0-9a-z])` 建構可定義零寬度的左合樣 (Positive Lookbehind) 判斷提示。|  
 |`(?(\[)`|檢查 @ 後面的字元是否為左括號。|  
 |`(\[(\d{1,3}\.){3}\d{1,3}\])`|如果是左括號，則比對左括號後面是否接著 IP 位址 (四組 1 至 3 位數的數字，而每組數字均以句號隔開) 與右括號。|  
-|`&#124;(([0-9a-z][-0-9a-z]*[0-9a-z]*\.)+`|如果 @ 後面的字元不是左括號，比對一個英數字元值為 A-Z、 a-z 或 0-9、 後接零或多個連字號，後面接著零個或一個英數字元值為 A-Z、 a-z 或 0-9後面接著句號。 此模式可以重複一或多次，且後面必須接最上層網域名稱。|  
+|`&#124;(([0-9a-z][-0-9a-z]*[0-9a-z]*\.)+`|如果 @ 後面的字元不是左括號，則比對一個值為 A-Z、a-z 或 0-9 的英數字元，該英數字元後面接著零或多個連字號，再接著值為 A-Z、a-z 或 0-9 的零或一個英數字元，最後接著句點。 此模式可以重複一或多次，且後面必須接最上層網域名稱。|  
 |`[a-z0-9][\-a-z0-9]{0,22}[a-z0-9]))`|最上層網域名稱必須以英數字元 (a-z、A-Z 和 0-9) 開頭和結尾。 其中也可以包含零到 22 個 ASCII 字元，英數字元或連字號皆可。|  
 |`$`|在字串的結尾結束比對。|  
   
@@ -113,5 +116,5 @@ vbc /t:library RegexUtilities.vb
     vbc Example.vb /r:RegexUtilities.dll  
     ```  
   
-## <a name="see-also"></a>另請參閱  
+## <a name="see-also"></a>請參閱  
  [.NET Framework 規則運算式](../../../docs/standard/base-types/regular-expressions.md)

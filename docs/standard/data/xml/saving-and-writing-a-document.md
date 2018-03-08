@@ -12,15 +12,18 @@ dev_langs:
 - csharp
 - vb
 ms.assetid: 097b0cb1-5743-4c3a-86ef-caf5cbe6750d
-caps.latest.revision: "3"
+caps.latest.revision: 
 author: mairaw
 ms.author: mairaw
 manager: wpickett
-ms.openlocfilehash: ad656e2db17e44733b5718fe2e3a2a48afcb1381
-ms.sourcegitcommit: bd1ef61f4bb794b25383d3d72e71041a5ced172e
+ms.workload:
+- dotnet
+- dotnetcore
+ms.openlocfilehash: 2138b9c47c6e41cd94e775eaed005d8a6fd976c9
+ms.sourcegitcommit: e7f04439d78909229506b56935a1105a4149ff3d
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/18/2017
+ms.lasthandoff: 12/23/2017
 ---
 # <a name="saving-and-writing-a-document"></a>儲存與寫入文件
 載入及儲存 <xref:System.Xml.XmlDocument> 時，儲存的文件與原始文件在下列方面可能不同：  
@@ -29,7 +32,7 @@ ms.lasthandoff: 10/18/2017
   
 -   屬性之間的所有泛空白字元會縮減為單一空格字元。  
   
--   變更項目之間的泛空白字元。 保留顯著的泛空白字元，但不保留不顯著的泛空白字元。 但在儲存文件時，它會使用<xref:System.Xml.XmlTextWriter>**縮排**整齊列印，讓它更容易閱讀輸出的預設模式。  
+-   變更項目之間的泛空白字元。 保留顯著的泛空白字元，但不保留不顯著的泛空白字元。 不過，在儲存文件時，依預設會使用 <xref:System.Xml.XmlTextWriter> **Indenting** 模式將輸出整齊列印出來，使其易於讀取。  
   
 -   依預設，會將屬性值周圍的引號字元變更為雙引號。 您可以使用 <xref:System.Xml.XmlTextReader.QuoteChar%2A> 上的 <xref:System.Xml.XmlTextWriter> 屬性，將引號字元設為雙引號或單引號。  
   
@@ -97,5 +100,5 @@ string xml = mydoc.DocumentElement.OuterXml;
   
  相反地，如果您需要子節點的內容，則可使用 <xref:System.Xml.XmlNode.InnerText%2A> 屬性。  
   
-## <a name="see-also"></a>另請參閱  
+## <a name="see-also"></a>請參閱  
  [XML 文件物件模型 (DOM)](../../../../docs/standard/data/xml/xml-document-object-model-dom.md)

@@ -18,15 +18,18 @@ helpviewer_keywords:
 - inline option constructs
 - options parameter
 ms.assetid: c82dc689-7e82-4767-a18d-cd24ce5f05e9
-caps.latest.revision: "27"
+caps.latest.revision: 
 author: rpetrusha
 ms.author: ronpet
 manager: wpickett
-ms.openlocfilehash: 7bc068cc248e1ca8e1d3c64eaa4132682721e035
-ms.sourcegitcommit: bd1ef61f4bb794b25383d3d72e71041a5ced172e
+ms.workload:
+- dotnet
+- dotnetcore
+ms.openlocfilehash: a4a1513840d17f2e7b02acf821b5032eaac6e6fc
+ms.sourcegitcommit: e7f04439d78909229506b56935a1105a4149ff3d
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/18/2017
+ms.lasthandoff: 12/23/2017
 ---
 # <a name="regular-expression-options"></a>規則運算式選項
 <a name="Top"></a>依預設，輸入字串與規則運算式模式中任何常值字元的比較會區分大小寫，規則運算式模式中的空白字元會解譯成常值空白字元，而規則運算式中的擷取群組會隱含也會明確命名。 您可以藉由指定規則運算式選項來修改這些預設規則運算式行為和幾個其他方面。 這些選項 (列示於下表) 可以內嵌為規則運算式模式的部分，或是提供給 <xref:System.Text.RegularExpressions.Regex?displayProperty=nameWithType> 類別建構函式或靜態模式比對方法，以做為 <xref:System.Text.RegularExpressions.RegexOptions?displayProperty=nameWithType> 列舉值。  
@@ -112,7 +115,7 @@ ms.lasthandoff: 10/18/2017
  [!code-csharp[Conceptual.Regex.Language.Options#20](../../../samples/snippets/csharp/VS_Snippets_CLR/conceptual.regex.language.options/cs/determine1.cs#20)]
  [!code-vb[Conceptual.Regex.Language.Options#20](../../../samples/snippets/visualbasic/VS_Snippets_CLR/conceptual.regex.language.options/vb/determine1.vb#20)]  
   
- 下列章節會列出在.NET 中的規則運算式所支援的選項。  
+ 以下各節會列出 .NET 中規則運算式所支援的選項。  
   
 <a name="Default"></a>   
 ## <a name="default-options"></a>預設選項  
@@ -214,7 +217,7 @@ ms.lasthandoff: 10/18/2017
   
  目的只是要從文件中擷取以句點、驚嘆號或問號結尾的句子，則我們只對所產生的句子 (由 <xref:System.Text.RegularExpressions.Match> 物件代表) 感興趣。 我們對集合中的個別文字並不感興趣。  
   
- 非後續使用的擷取群組可能會耗用很多資源，因為規則運算式引擎必須同時填入 <xref:System.Text.RegularExpressions.GroupCollection> 和 <xref:System.Text.RegularExpressions.CaptureCollection> 集合物件。 或者，您可以使用<xref:System.Text.RegularExpressions.RegexOptions.ExplicitCapture?displayProperty=nameWithType>選項或`n`內嵌選項，指定唯一有效的擷取是明確的具名或編號所指定的群組`(?<`*名稱*`>`*subexpression* `)`建構。  
+ 非後續使用的擷取群組可能會耗用很多資源，因為規則運算式引擎必須同時填入 <xref:System.Text.RegularExpressions.GroupCollection> 和 <xref:System.Text.RegularExpressions.CaptureCollection> 集合物件。 或者，您也可以使用 <xref:System.Text.RegularExpressions.RegexOptions.ExplicitCapture?displayProperty=nameWithType> 選項或 `n` 內嵌選項，指定唯一有效的擷取是 `(?<`*name*`>` *subexpression*`)` 建構所指定的明確命名或編號群組。  
   
  下列範例顯示，當呼叫 `\b\(?((\w+),?\s?)+[\.!?]\)?` 方法時，如果沒有使用 <xref:System.Text.RegularExpressions.Regex.Match%2A> 選項，<xref:System.Text.RegularExpressions.RegexOptions.ExplicitCapture?displayProperty=nameWithType> 規則運算式模式所傳回的比對相關資訊。 當第一個方法呼叫的輸出顯示時，規則運算式引擎會以擷取子字串的相關資訊完整填入 <xref:System.Text.RegularExpressions.GroupCollection> 和 <xref:System.Text.RegularExpressions.CaptureCollection> 集合物件。 因為呼叫第二個方法時，`options` 設為 <xref:System.Text.RegularExpressions.RegexOptions.ExplicitCapture?displayProperty=nameWithType>，所以沒有擷取群組的資訊。  
   
@@ -248,7 +251,7 @@ ms.lasthandoff: 10/18/2017
 ## <a name="compiled-regular-expressions"></a>編譯的規則運算式  
  預設會解譯 .NET 中的規則運算式。 將 <xref:System.Text.RegularExpressions.Regex> 物件具現化，或是呼叫靜態 <xref:System.Text.RegularExpressions.Regex> 方法時，會將規則運算式模式剖析成一組自訂 opcode，而解譯器會使用這些 opcode 來執行規則運算式。 這需要有所取捨：要將初始化規則運算式引擎的成本降到最低，就會犧牲執行時期效能。  
   
- 您可以使用 <xref:System.Text.RegularExpressions.RegexOptions.Compiled?displayProperty=nameWithType> 選項，以編譯的規則運算式來取代解譯的規則運算式。 在這個情況下，將模式傳遞至規則運算式時，會將該模式剖析成一組自訂 opcode，然後再轉換成 Microsoft 中繼語言 (MSIL)，可直接傳遞至通用語言執行平台。 編譯的規則運算式可充分提升執行時期效能，但會犧牲初始化時間。  
+ 您可以使用 <xref:System.Text.RegularExpressions.RegexOptions.Compiled?displayProperty=nameWithType> 選項，以編譯的規則運算式來取代解譯的規則運算式。 在這個情況下，將模式傳遞至規則運算式時，會將該模式剖析成一組自訂作業碼，然後再轉換成 Microsoft 中繼語言 (MSIL)，可直接傳遞至通用語言執行平台。 編譯的規則運算式可充分提升執行時期效能，但會犧牲初始化時間。  
   
 > [!NOTE]
 >  若要編譯規則運算式，唯一的方法就是提供 <xref:System.Text.RegularExpressions.RegexOptions.Compiled?displayProperty=nameWithType> 值給 `options` 類別建構函式或靜態模式比對方法的 <xref:System.Text.RegularExpressions.Regex> 參數。 無法以內嵌選項來提供此值。  
@@ -282,11 +285,11 @@ ms.lasthandoff: 10/18/2017
   
 -   字元類別中的空白字元一律解譯為常值。 例如，規則運算式模式 `[ .,;:]` 會比對任何單一空白字元、句點、逗號、分號或冒號。  
   
--   不允許空白字元內以方括弧括住的數量詞，例如`{`  *n*  `}`， `{`  *n*  `,}`，和`{` *n*  `,` *m*`}`。 例如，規則運算式模式 `\d{1. 3}` 無法比對從一到三位數的任何數字序列，因為其中包含空白字元。  
+-   方括號數量詞中不允許空白字元，例如 `{`*n*`}`, `{`*n*`,}` 和 `{`*n*`,`*m*`}`。 例如，規則運算式模式 `\d{1. 3}` 無法比對從一到三位數的任何數字序列，因為其中包含空白字元。  
   
 -   引進語言項目的字元序列中，不允許空白字元。 例如:   
   
-    -   語言元素 `(?:`subexpression`)` 代表非擷取群組，而該項目的 `(?:` 部分不能有內嵌空格。 模式`(? :` *subexpression* `)`會擲回<xref:System.ArgumentException>在執行階段因為規則運算式引擎無法剖析該模式，而模式`( ?:`*子運算式* `)`無法比對*subexpression*。  
+    -   語言元素 `(?:`subexpression`)` 代表非擷取群組，而該項目的 `(?:` 部分不能有內嵌空格。 模式 `(? :`*subexpression*`)` 會在執行時期擲回 <xref:System.ArgumentException>，因為規則運算式引擎無法剖析該模式，而且模式 `( ?:`*subexpression*`)` 無法比對 *subexpression*。  
   
     -   語言元素 `\p{`name`}` 代表 Unicode 類別或具名資料區塊，不能在此元素的 `\p{` 部分中包含內嵌空格。 如果包含空白字元，則此項目會在執行時期擲回 <xref:System.ArgumentException>。  
   
@@ -296,7 +299,7 @@ ms.lasthandoff: 10/18/2017
   
  `\b \(? ( (?>\w+) ,?\s? )+  [\.!?] \)? # Matches an entire sentence.`  
   
- 此模式相當類似於中定義的模式[僅明確擷取](#Explicit)區段中，不同之處在於它會使用<xref:System.Text.RegularExpressions.RegexOptions.IgnorePatternWhitespace?displayProperty=nameWithType>選項來忽略模式空白字元。  
+ 此模式類似[僅明確擷取](#Explicit)一節中定義的模式，只是其會使用 <xref:System.Text.RegularExpressions.RegexOptions.IgnorePatternWhitespace?displayProperty=nameWithType> 選項來忽略模式空白字元。  
   
  [!code-csharp[Conceptual.Regex.Language.Options#12](../../../samples/snippets/csharp/VS_Snippets_CLR/conceptual.regex.language.options/cs/whitespace1.cs#12)]
  [!code-vb[Conceptual.Regex.Language.Options#12](../../../samples/snippets/visualbasic/VS_Snippets_CLR/conceptual.regex.language.options/vb/whitespace1.vb#12)]  
@@ -348,7 +351,7 @@ ms.lasthandoff: 10/18/2017
   
  ECMAScript 的行為與標準規則運算式有三個不同層面：字元類別語法、自我參考擷取群組，以及八進位與反向參考解譯。  
   
--   字元類別語法。 因為標準規則運算式支援 Unicode，而 ECMAScript 不支援，所以 ECMAScript 中的字元類別有較多的語法限制，而且有些字元類別語言項目有不同的意義。 例如，ECMAScript 不支援語言項目 (例如 Unicode 類別) 或資料區塊項目 `\p` 和 `\P`。 同樣地，使用 ECMAScript 時，`\w` 項目 (用來比對文字字元) 同等於 `[a-zA-Z_0-9]` 字元類別，使用標準行為時，同等於 `[\p{Ll}\p{Lu}\p{Lt}\p{Lo}\p{Nd}\p{Pc}\p{Lm}]`。 如需詳細資訊，請參閱[字元類別](../../../docs/standard/base-types/character-classes-in-regular-expressions.md)。  
+-   字元類別語法。 因為標準規則運算式支援 Unicode，而 ECMAScript 不支援，所以 ECMAScript 中的字元類別有較多的語法限制，而且有些字元類別語言項目有不同的意義。 例如，ECMAScript 不支援語言項目 (例如 Unicode 類別) 或資料區塊項目 `\p` 和 `\P`。 同樣地，使用 ECMAScript 時，`\w` 項目 (用來比對文字字元) 同等於 `[a-zA-Z_0-9]` 字元類別，使用標準行為時，同等於 `[\p{Ll}\p{Lu}\p{Lt}\p{Lo}\p{Nd}\p{Pc}\p{Lm}]`。 如需詳細資訊，請參閱 [Character Classes](../../../docs/standard/base-types/character-classes-in-regular-expressions.md)。  
   
      下列範例說明標準與 ECMAScript 模式比對之間的差異。 其定義規則運算式 `\b(\w+\s*)+`，可比對後接空白字元的文字。 該輸入包含兩個字串，一個使用 Latin 字元集，另一個使用 Cyrillic 字元集。 如輸出所示，呼叫使用 ECMAScript 比對的 <xref:System.Text.RegularExpressions.Regex.IsMatch%28System.String%2CSystem.String%2CSystem.Text.RegularExpressions.RegexOptions%29?displayProperty=nameWithType> 方法時，無法比對 Cyrillic 文字，而使用標準比對的方法呼叫則可比對這些文字。  
   
@@ -401,5 +404,5 @@ ms.lasthandoff: 10/18/2017
  [!code-csharp[Conceptual.Regex.Language.Options#15](../../../samples/snippets/csharp/VS_Snippets_CLR/conceptual.regex.language.options/cs/culture1.cs#15)]
  [!code-vb[Conceptual.Regex.Language.Options#15](../../../samples/snippets/visualbasic/VS_Snippets_CLR/conceptual.regex.language.options/vb/culture1.vb#15)]  
   
-## <a name="see-also"></a>另請參閱  
+## <a name="see-also"></a>請參閱  
  [規則運算式語言 - 快速參考](../../../docs/standard/base-types/regular-expression-language-quick-reference.md)

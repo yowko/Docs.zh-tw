@@ -13,21 +13,24 @@ dev_langs:
 - vb
 - cpp
 ms.assetid: fe1b4a11-37f4-4e1a-93c9-239f4fe736c0
-caps.latest.revision: "2"
+caps.latest.revision: 
 author: mairaw
 ms.author: mairaw
 manager: wpickett
-ms.openlocfilehash: d3b336b0ac4ca4fd02950a572404a117d4c193f2
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.workload:
+- dotnet
+- dotnetcore
+ms.openlocfilehash: a8c9b513f47fcb07f987b1e17f0b7f485cef3143
+ms.sourcegitcommit: 91691981897cf8451033cb01071d8f5d94017f97
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 01/09/2018
 ---
 # <a name="including-or-importing-xml-schemas"></a>併入或匯入 XML 結構描述
 XML 結構描述可包含 `<xs:import />`, `<xs:include />` 及 `<xs:redefine />` 項目。 這些結構描述項目會參考其他 XML 結構描述，其可用於補充併入或匯入它們之結構描述的結構。 <xref:System.Xml.Schema.XmlSchemaImport>、<xref:System.Xml.Schema.XmlSchemaInclude> 及 <xref:System.Xml.Schema.XmlSchemaRedefine> 類別會對應至結構描述物件模型 (SOM) API 中的這些項目。  
   
 ## <a name="including-or-importing-an-xml-schema"></a>併入或匯入 XML 結構描述  
- 下列程式碼範例補充客戶結構描述中建立[建置 XML 結構描述](../../../../docs/standard/data/xml/building-xml-schemas.md)位址結構描述的主題。 為客戶結構描述補充位址結構描述，可讓位址型別在客戶結構描述中使用。  
+ 下列程式碼範例會為[建置 XML 結構描述](../../../../docs/standard/data/xml/building-xml-schemas.md)主題中建立的客戶結構描述補充位址結構描述。 為客戶結構描述補充位址結構描述，可讓位址型別在客戶結構描述中使用。  
   
  您可使用 `<xs:include />` 或 `<xs:import />` 項目加入位址結構描述，以按原樣使用位址結構描述的元件，或使用 `<xs:redefine />` 項目，修改其中任何元件以滿足客戶結構描述需要。 因為位址結構描述與客戶結構描述的 `targetNamespace` 不同，所以會使用 `<xs:import />` 項目及匯入語意。  
   
@@ -105,12 +108,12 @@ XML 結構描述可包含 `<xs:import />`, `<xs:include />` 及 `<xs:redefine />
 </schema>  
 ```  
   
- 如需有關`<xs:import />`， `<xs:include />`，和`<xs:redefine />`項目和<xref:System.Xml.Schema.XmlSchemaImport>，<xref:System.Xml.Schema.XmlSchemaInclude>和<xref:System.Xml.Schema.XmlSchemaRedefine>類別，請參閱[W3C XML 結構描述](http://go.microsoft.com/fwlink/?LinkId=45242)和<xref:System.Xml.Schema?displayProperty=nameWithType>命名空間類別參考文件。  
+ 如需 `<xs:import />`、`<xs:include />` 及 `<xs:redefine />` 項目與 <xref:System.Xml.Schema.XmlSchemaImport>、<xref:System.Xml.Schema.XmlSchemaInclude> 和 <xref:System.Xml.Schema.XmlSchemaRedefine> 類別的詳細資訊，請參閱 [W3C XML 結構描述](http://www.w3.org/XML/Schema) (英文) 及 <xref:System.Xml.Schema?displayProperty=nameWithType> 命名空間類別參考文件。  
   
-## <a name="see-also"></a>另請參閱  
+## <a name="see-also"></a>請參閱  
  [XML 結構描述物件模型概觀](../../../../docs/standard/data/xml/xml-schema-object-model-overview.md)  
  [讀取和寫入 XML 結構描述](../../../../docs/standard/data/xml/reading-and-writing-xml-schemas.md)  
  [建置 XML 結構描述](../../../../docs/standard/data/xml/building-xml-schemas.md)  
  [周遊 XML 結構描述](../../../../docs/standard/data/xml/traversing-xml-schemas.md)  
  [編輯 XML 結構描述](../../../../docs/standard/data/xml/editing-xml-schemas.md)  
- [結構描述編譯的 XmlSchemaSet](../../../../docs/standard/data/xml/xmlschemaset-for-schema-compilation.md)
+ [用於結構描述編譯的 XmlSchemaSet](../../../../docs/standard/data/xml/xmlschemaset-for-schema-compilation.md)

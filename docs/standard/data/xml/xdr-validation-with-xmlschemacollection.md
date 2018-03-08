@@ -12,29 +12,32 @@ dev_langs:
 - csharp
 - vb
 ms.assetid: 00833027-1428-4586-83c1-42f5de3323d1
-caps.latest.revision: "3"
+caps.latest.revision: 
 author: mairaw
 ms.author: mairaw
 manager: wpickett
-ms.openlocfilehash: fab67e10aa0562b59f8c7704a5ca1feeb66d6208
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.workload:
+- dotnet
+- dotnetcore
+ms.openlocfilehash: f875169d43a2f733050b46c76cea0891b4cfabf7
+ms.sourcegitcommit: e7f04439d78909229506b56935a1105a4149ff3d
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 12/23/2017
 ---
 # <a name="xdr-validation-with-xmlschemacollection"></a>使用 XmlSchemaCollection 的 XDR 驗證
-如果您要針對驗證 XML 資料精簡 (XDR) 結構描述儲存在**XmlSchemaCollection**，相關聯的 URI 會指定結構描述加入集合的命名空間。 **XmlValidatingReader**將 XML 文件中的命名空間 URI 對應至集合中與這個 URI 對應的結構描述。  
+如果您驗證的 XML 資料精簡 (XDR) 結構描述儲存在 **XmlSchemaCollection** 中，它會與結構描述加入集合時指定的命名空間 URI 建立關聯。 **XmlValidatingReader** 會將 XML 文件中的命名空間 URI 對應至集合中與這個 URI 對應的結構描述。  
   
 > [!IMPORTANT]
->  <xref:System.Xml.Schema.XmlSchemaCollection> 類別目前已過時，並已由 <xref:System.Xml.Schema.XmlSchemaSet> 類別取代。 如需有關<xref:System.Xml.Schema.XmlSchemaSet>類別，請參閱[結構描述編譯的 XmlSchemaSet](../../../../docs/standard/data/xml/xmlschemaset-for-schema-compilation.md)。  
+>  <xref:System.Xml.Schema.XmlSchemaCollection> 類別目前已過時，並已由 <xref:System.Xml.Schema.XmlSchemaSet> 類別取代。 如需有關 <xref:System.Xml.Schema.XmlSchemaSet> 類別的詳細資訊，請參閱[用於結構描述編譯的 XmlSchemaSet](../../../../docs/standard/data/xml/xmlschemaset-for-schema-compilation.md)。  
   
- 例如，如果 XML 文件的根項目是`<bookstore xmlns="urn:newbooks-schema">`，當結構描述加入至**XmlSchemaCollection**它參考相同的命名空間，如下所示：  
+ 例如，若 XML 文件的根項目是 `<bookstore xmlns="urn:newbooks-schema">`，則將結構描述加入 **XmlSchemaCollection** 時，它會參照相同的命名空間，如下所示：  
   
 ```  
 xsc.Add("urn:newbooks-schema", "newbooks.xdr")  
 ```  
   
- 下列程式碼範例會建立**XmlValidatingReader**採用**XmlTextReader**並且將 XDR 結構描述，HeadCount.xdr 加入**XmlSchemaCollection**。  
+ 下列程式碼範例會建立使用 **XmlTextReader** 的 **XmlValidatingReader**，並且將 XDR 結構描述 HeadCount.xdr 加入 **XmlSchemaCollection** 中。  
   
 ```vb  
 Imports System  
@@ -164,7 +167,7 @@ namespace ValidationSample
 </Schema>  
 ```  
   
-## <a name="see-also"></a>另請參閱  
+## <a name="see-also"></a>請參閱  
  <xref:System.Xml.XmlValidatingReader.ValidationType%2A>  
  <!--zz <xref:System.Xml.XmlValidatingReader.Settings%2A>-->  `System.Xml.XmlValidatingReader.Settings`  
  [XmlSchemaCollection 結構描述編譯](../../../../docs/standard/data/xml/xmlschemacollection-schema-compilation.md)

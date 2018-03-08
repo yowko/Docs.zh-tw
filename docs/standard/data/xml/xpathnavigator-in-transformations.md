@@ -12,22 +12,25 @@ dev_langs:
 - csharp
 - vb
 ms.assetid: 118f97d1-7110-4d1b-b0bd-4143252c0bb0
-caps.latest.revision: "3"
+caps.latest.revision: 
 author: mairaw
 ms.author: mairaw
 manager: wpickett
-ms.openlocfilehash: 09f89708607ada18181bc6605994c7908e1dd14b
-ms.sourcegitcommit: bd1ef61f4bb794b25383d3d72e71041a5ced172e
+ms.workload:
+- dotnet
+- dotnetcore
+ms.openlocfilehash: c492d470fe29041f32039d98ecb854e18f40423c
+ms.sourcegitcommit: e7f04439d78909229506b56935a1105a4149ff3d
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/18/2017
+ms.lasthandoff: 12/23/2017
 ---
 # <a name="xpathnavigator-in-transformations"></a>轉換中的 XPathNavigator
 <xref:System.Xml.XPath.XPathNavigator> 類別可提供資料的唯讀隨機存取，並可當作可延伸樣式表語言轉換 (XSLT) 的輸入。 它可實作於 <xref:System.Xml.XPath.XPathDocument>、<xref:System.Xml.XmlDataDocument> 及 <xref:System.Xml.XmlDocument>。 <xref:System.Xml.XPath.XPathNavigator> 以 XML 路徑語言 (XPath) 之建議事項第 5 節中所說明的全球資訊網協會 (W3C) 資料模型為基礎。  
   
  <xref:System.Xml.XPath.XPathNavigator> 可定義任何存放區上的資料指標模型，並可針對任何資料存放區提供快速、唯讀的 XPath 查詢。 <xref:System.Xml.XPath.XPathNavigator> 也是可用來重複 Result Tree Fragment 的類別。  
   
- 此 API 讓您能夠從存放區目前的節點中取得資訊，並移至連接的節點上。 <xref:System.Xml.XPath.XPathNavigator>是一種資料指標樣式模型，透過使用一組存放區執行周遊**移動**方法。 <xref:System.Xml.XPath.XPathNavigator> 一律定位於節點上。 任何**移動**方法失敗<xref:System.Xml.XPath.XPathNavigator>不變。  
+ 此 API 讓您能夠從存放區目前的節點中取得資訊，並移至連接的節點上。 <xref:System.Xml.XPath.XPathNavigator> 是一種資料指標樣式模型，可使用一組 **Move** 方法執行存放區間的往返作業。 <xref:System.Xml.XPath.XPathNavigator> 一律定位於節點上。 若 **Move** 方法失敗，<xref:System.Xml.XPath.XPathNavigator> 將不會有任何變更。  
   
  <xref:System.Xml.XPath.XPathNavigator> 是可用來重複 Result Tree Fragment 的類別。 下列程式碼範例將藉由呼叫附有 `fragment` 參數的函式，在樣式表中建立 Result Tree Fragment。  
   
@@ -70,7 +73,7 @@ ms.lasthandoff: 10/18/2017
 <root>Some text</root>  
 ```  
   
- 下列程式碼會使用**test.xsl**樣式表和**test.xml**輸入資料。  
+ 下列程式碼使用 **test.xsl** 樣式表和 **test.xml** 輸入資料。  
   
 ```vb  
 Imports System  
@@ -117,11 +120,11 @@ public class sample
 ```  
   
 ## <a name="output"></a>輸出  
- 轉換的結果檔案中找到**out.xml**:  
+ 轉換結果儲存在檔案 **out.xml** 內：  
   
 ```xml  
 <?xml version="1.0" encoding="utf-8"?>Joe  
 ```  
   
-## <a name="see-also"></a>另請參閱  
+## <a name="see-also"></a>請參閱  
  [XslTransform 類別實作 XSLT 處理器](../../../../docs/standard/data/xml/xsltransform-class-implements-the-xslt-processor.md)

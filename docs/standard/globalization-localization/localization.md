@@ -20,26 +20,29 @@ helpviewer_keywords:
 - localization [.NET Framework], about localization
 - localizing resources
 ms.assetid: 49d520d7-92d7-44ee-bb24-8b615db1d41b
-caps.latest.revision: "8"
+caps.latest.revision: 
 author: rpetrusha
 ms.author: ronpet
 manager: wpickett
-ms.openlocfilehash: 4aaf2da77a1fab55cbebd6bfa05a2b1c74e5cbbd
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.workload:
+- dotnet
+- dotnetcore
+ms.openlocfilehash: 952696cf813a4bd0915f85a02946489d389d23e7
+ms.sourcegitcommit: e7f04439d78909229506b56935a1105a4149ff3d
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 12/23/2017
 ---
 # <a name="localization"></a>當地語系化
-當地語系化是轉譯為每個應用程式將支援的文化特性的當地語系化版本的應用程式資源的程序。 您應該完成後才繼續進行當地語系化步驟[當地語系化能力審查](../../../docs/standard/globalization-localization/localizability-review.md)步驟，以確認全球化應用程式已準備好進行當地語系化。  
+當地語系化是一種程序，可將應用程式資源翻譯為應用程式所支援之每個文化特性的當地語系化版本。 只有在完成[可當地語系化檢閱](../../../docs/standard/globalization-localization/localizability-review.md)步驟，以確認全球化的應用程式已準備好進行當地語系化之後，才能繼續進行當地語系化步驟。  
   
- 準備好進行當地語系化的應用程式分成兩個區塊的區塊，其中包含所有的使用者介面項目，包含可執行程式碼的區塊。 使用者介面區塊包含只可當地語系化的使用者介面元素，例如字串、 錯誤訊息、 對話方塊、 功能表、 內嵌的物件，依此類推中性文化特性的資源。 程式碼區塊包含只可供所有支援的文化特性的應用程式程式碼。 通用語言執行平台支援將應用程式的可執行程式碼和其資源的附屬組件資源模型。 如需實作此模型的詳細資訊，請參閱[桌面應用程式中的資源](../../../docs/framework/resources/index.md)。  
+ 準備好進行當地語系化的應用程式分成兩個概念性區塊，其中一個區塊包含所有使用者介面元素，另一個區塊則包含可執行檔程式碼。 使用者介面區塊包含只可當地語系化的使用者介面元素，例如字串、錯誤訊息、對話方塊、功能表、內嵌物件資源，以及適用於中性文化特性的其他元素。 程式碼區塊僅包含可供所有支援的文化特性使用的應用程式程式碼。 Common Language Runtime 支援附屬組件資源模型，可將應用程式的可執行檔程式碼與其資源分開。 如需有關實作此模組的詳細資訊，請參閱[桌面應用程式中的資源](../../../docs/framework/resources/index.md)。  
   
- 每個當地語系化版本的應用程式，加入新的附屬組件，其中包含轉譯成適當的語言為目標的文化特性的當地語系化的使用者介面區塊。 所有文化特性的程式碼區塊應該維持不變。 使用者介面區塊的程式碼區塊的當地語系化版本的組合會產生您的應用程式的當地語系化的版本。  
+ 針對每個當地語系化版本的應用程式，加入新的附屬組件，其中包含轉譯成適用於目標文化特性之語言的當地語系化使用者介面區塊。 所有文化特性的程式碼區塊應該維持不變。 當地語系化版本的使用者介面區塊結合程式碼區塊之後，會產生您應用程式的當地語系化版本。  
   
- [!INCLUDE[winsdklong](../../../includes/winsdklong-md.md)]提供 Windows Form 資源編輯器 (Winres.exe)，可讓您快速將 Windows Form 當地語系化目標文化特性。 使用此工具的相關資訊，請參閱[Winres.exe （Windows Form 資源編輯器）](../../../docs/framework/tools/winres-exe-windows-forms-resource-editor.md)。  
+ [!INCLUDE[winsdklong](../../../includes/winsdklong-md.md)] 提供的 Windows Forms 資源編輯器 (Winres.exe) 可讓您針對目標文化特性，快速當地語系化 Windows Forms。 如需有關使用此工具的相關資訊，請參閱 [Winres.exe (Windows Forms 資源編輯器)](../../../docs/framework/tools/winres-exe-windows-forms-resource-editor.md)。  
   
-## <a name="see-also"></a>另請參閱  
+## <a name="see-also"></a>請參閱  
  [全球化和當地語系化](../../../docs/standard/globalization-localization/index.md)  
  [可當地語系化檢閱](../../../docs/standard/globalization-localization/localizability-review.md)  
  [全球化](../../../docs/standard/globalization-localization/globalization.md)  

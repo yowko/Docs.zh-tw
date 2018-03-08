@@ -19,15 +19,18 @@ helpviewer_keywords:
 - constructs, substitutions
 - substitutions
 ms.assetid: d1f52431-1c7d-4dc6-8792-6b988256892e
-caps.latest.revision: "20"
+caps.latest.revision: 
 author: rpetrusha
 ms.author: ronpet
 manager: wpickett
-ms.openlocfilehash: 7a92c454548c69d1a64c954ab2d510b77553a895
-ms.sourcegitcommit: bd1ef61f4bb794b25383d3d72e71041a5ced172e
+ms.workload:
+- dotnet
+- dotnetcore
+ms.openlocfilehash: f93584b9dff721c8521d8cb58aaf5eab2c1fc931
+ms.sourcegitcommit: e7f04439d78909229506b56935a1105a4149ff3d
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/18/2017
+ms.lasthandoff: 12/23/2017
 ---
 # <a name="substitutions-in-regular-expressions"></a>在規則運算式中執行替代
 <a name="Top"></a> 替代是指只有在取代模式內才能辨識的語言項目。 這些項目使用規則運算式模式定義要取代輸入字串中相符文字的全部或部分文字。 取代模式可以包含一個或多個替代，以及常值字元。 取代模式會提供給具有 <xref:System.Text.RegularExpressions.Regex.Replace%2A?displayProperty=nameWithType> 參數的 `replacement` 方法多載，以及提供給 <xref:System.Text.RegularExpressions.Match.Result%2A?displayProperty=nameWithType> 方法。 這些方法會將符合的模式取代為 `replacement` 參數所定義的模式。  
@@ -149,7 +152,7 @@ ms.lasthandoff: 10/18/2017
   
 <a name="BeforeMatch"></a>   
 ## <a name="substituting-the-text-before-the-match"></a>替代相符項目前的文字  
- <code>$\`</code> 替代會將相符的字串取代為相符項目前的整個輸入字串。 也就是說，它在移除相符文字的同時，也會複製輸入字串直到相符項目前。 在結果字串中，相符文字後面接著的任何文字都會保持不變。 如果在輸入字串中有多個相符項目，取代文字就會衍生自原始輸入字串，而非其中文字已經由先前的相符項目取代的字串  \(此範例提供一個實例。\)如果沒有相符項目，<code>$\`</code> 替代就不會有任何作用。  
+ <code>$\`</code> 替代會將相符的字串取代為相符項目前的整個輸入字串。 也就是說，它在移除相符文字的同時，也會複製輸入字串直到相符項目前。 在結果字串中，相符文字後面接著的任何文字都會保持不變。 如果在輸入字串中有多個相符項目，取代文字就會衍生自原始輸入字串，而非其中文字已經由先前的相符項目取代的字串  \(這個範例將提供說明。\)如果沒有相符項目，<code>$\`</code> 替代就不會有任何作用。  
   
  下列範例會使用規則運算式模式 `\d+` ，比對輸入字串中的一或多個十進位數字序列。 取代字串 <code>$`</code> 會以相符文字前的文字取代這些數字。  
   
@@ -226,5 +229,5 @@ ms.lasthandoff: 10/18/2017
 |1|3|123|ABC**ABC123DEF456**DEF456|  
 |2|5|456|ABCABC123DEF456DEF**ABC123DEF456**|  
   
-## <a name="see-also"></a>另請參閱  
+## <a name="see-also"></a>請參閱  
  [規則運算式語言 - 快速參考](../../../docs/standard/base-types/regular-expression-language-quick-reference.md)

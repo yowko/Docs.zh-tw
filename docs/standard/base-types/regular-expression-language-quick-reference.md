@@ -8,7 +8,8 @@ ms.suite:
 ms.technology: dotnet-standard
 ms.tgt_pltfrm: 
 ms.topic: article
-f1_keywords: VS.RegularExpressionBuilder
+f1_keywords:
+- VS.RegularExpressionBuilder
 helpviewer_keywords:
 - regex cheat sheet
 - parsing text with regular expressions, language elements
@@ -19,18 +20,21 @@ helpviewer_keywords:
 - cheat sheet
 - .NET Framework regular expressions, language elements
 ms.assetid: 930653a6-95d2-4697-9d5a-52d11bb6fd4c
-caps.latest.revision: "56"
+caps.latest.revision: 
 author: rpetrusha
 ms.author: ronpet
 manager: wpickett
-ms.openlocfilehash: ab77293796eb20b1056f57f64903beb9357a80c5
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.workload:
+- dotnet
+- dotnetcore
+ms.openlocfilehash: a0fed14784327c6fe16f083a22471b56032b6b5d
+ms.sourcegitcommit: e7f04439d78909229506b56935a1105a4149ff3d
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 12/23/2017
 ---
 # <a name="regular-expression-language---quick-reference"></a>規則運算式語言 - 快速參考
-<a name="top"></a>規則運算式是規則運算式引擎嘗試在輸入文字中比對的模式。 模式是由一個或多個字元常值、運算子或建構所組成。  如需簡介，請參閱[.NET 規則運算式](../../../docs/standard/base-types/regular-expressions.md)。  
+<a name="top"></a>規則運算式是規則運算式引擎嘗試在輸入文字中比對的模式。 模式是由一個或多個字元常值、運算子或建構所組成。  如需簡介，請參閱 [.NET 規則運算式](../../../docs/standard/base-types/regular-expressions.md)。  
   
  本快速參考的每一節列出您可以用於定義規則運算式的特定某類字元、運算子和建構：  
   
@@ -68,7 +72,7 @@ ms.lasthandoff: 11/21/2017
 |`\x` *nn*|使用十六進位表示指定字元 (*nn* 由剛好兩位數組成)。|`\w\x20\w`|"a b", "c d" in<br /><br /> "a bc d"|  
 |`\c` *X*<br /><br /> `\c` *x*|比對 *X* 或 *x*所指定的 ASCII 控制字元，其中 *X* 或 *x* 是控制字元的字母。|`\cC`|"\x0003" (Ctrl-C) 中的 "\x0003"|  
 |`\u` *nnnn*|使用十六進位表示比對 Unicode 字元 (剛好四位數，如 *nnnn*所表示)。|`\w\u0020\w`|"a b", "c d" in<br /><br /> "a bc d"|  
-|`\`|當後面加上的字元不是這張表和本主題其他表格中指出的逸出字元時，則比對該字元。 例如， `\*` 與 `\x2A`相同，而 `\.` 與 `\x2E`相同。 這可讓規則運算式引擎釐清語言項目 (例如\*或？) 和字元常值 (由`\*`或`\?`)。|`\d+[\+-x\*]\d+`|"2 + 2"和"3\*9" 中"(2+2) \* 3\*9"|  
+|`\`|當後面加上的字元不是這張表和本主題其他表格中指出的逸出字元時，則比對該字元。 例如， `\*` 與 `\x2A`相同，而 `\.` 與 `\x2E`相同。 這可讓規則運算式引擎釐清語言元素 (例如 \* 或 ?) 和字元常值 (以 `\*` 或 `\?` 表示)。|`\d+[\+-x\*]\d+`|"(2+2) \* 3\*9" 中的 "2+2" 和 "3\*9"|  
   
  [回到頁首](#top)  
   
@@ -152,7 +156,7 @@ ms.lasthandoff: 11/21/2017
   
 <a name="backreference_constructs"></a>   
 ## <a name="backreference-constructs"></a>反向參考建構  
- 反向參考可於後來在相同規則運算式中再識別先前符合的子運算式。 下表列出在.NET 中的規則運算式所支援的反向參考建構。 如需詳細資訊，請參閱 [Backreference Constructs](backreference-constructs-in-regular-expressions.md)。  
+ 反向參考可於後來在相同規則運算式中再識別先前符合的子運算式。 下表列出 .NET 中規則運算式所支援的反向參考建構。 如需詳細資訊，請參閱 [Backreference Constructs](backreference-constructs-in-regular-expressions.md)。  
   
 |反向參考建構|描述|模式|符合|  
 |-----------------------------|-----------------|-------------|-------------|  
@@ -165,7 +169,7 @@ ms.lasthandoff: 11/21/2017
 ## <a name="alternation-constructs"></a>交替建構  
  交替建構會修改規則運算式來啟用二選一比對。 這些建構包含下表列出的語言項目。 如需詳細資訊，請參閱 [Alternation Constructs](alternation-constructs-in-regular-expressions.md)。  
   
-|交替建構|描述|模式|相符項|  
+|交替建構|描述|模式|符合|  
 |---------------------------|-----------------|-------------|-------------|  
 |<code>&#124;</code>|比對由分隔號 (&#124;) 字元所隔開的任何一個元素。|<code>th(e&#124;is&#124;at)</code>|後面這個字串中的 "the"、"this"："this is the day. "|  
 |`(?(` *expression* `)` *yes* <code>&#124;</code> *no* `)`|如果 *expression* 所指定的規則運算式模式相符，則比對 *yes* ，否則比對選擇性的 *no* 部分。 *expression* 會解譯為零寬度判斷提示。|<code>(?(A)A\d{2}\b&#124;\b\d{3}\b)</code>|"A10 C103 910" 中的 "A10"、"910"|  
@@ -179,7 +183,7 @@ ms.lasthandoff: 11/21/2017
   
 |字元|描述|模式|取代模式|輸入字串|結果字串|  
 |---------------|-----------------|-------------|-------------------------|------------------|-------------------|  
-|`$` *數字*|替代群組 *number*所比對的子字串。|`\b(\w+)(\s)(\w+)\b`|`$3$2$1`|"one two"|"two one"|  
+|`$` number|替代群組 *number*所比對的子字串。|`\b(\w+)(\s)(\w+)\b`|`$3$2$1`|"one two"|"two one"|  
 |`${` *name* `}`|替代具名群組 *name*所比對的子字串。|`\b(?<word1>\w+)(\s)(?<word2>\w+)\b`|`${word2} ${word1}`|"one two"|"two one"|  
 |`$$`|替代常值 "$"。|`\b(\d+)\s?USD`|`$$$1`|"103 USD"|"$103"|  
 |`$&`|替代整個符合項目的複本。|`\$?\d*\.?\d+`|`**$&**`|"$1.30"|"\*\*$1.30\*\*"|  
@@ -214,7 +218,7 @@ ms.lasthandoff: 11/21/2017
   
 <a name="miscellaneous_constructs"></a>   
 ## <a name="miscellaneous-constructs"></a>其他建構  
- 其他建構會修改規則運算式模式或提供其相關資訊。 下表列出.NET 所支援的其他建構。 如需詳細資訊，請參閱 [Miscellaneous Constructs](miscellaneous-constructs-in-regular-expressions.md)。  
+ 其他建構會修改規則運算式模式或提供其相關資訊。 下表列出 .NET 所支援的其他建構。 如需詳細資訊，請參閱 [Miscellaneous Constructs](miscellaneous-constructs-in-regular-expressions.md)。  
   
 |建構|定義|範例|  
 |---------------|----------------|-------------|  
@@ -222,11 +226,11 @@ ms.lasthandoff: 11/21/2017
 |`(?#` *註解* `)`|內嵌註解。 註解會在第一個右括號結束。|`\bA(?#Matches words starting with A)\w+\b`|  
 |`#` [至行尾]|X 模式註解。 註解從未逸出的 `#` 開始，並延續到行尾。|`(?x)\bA\w+\b#Matches words starting with A`|  
   
-## <a name="see-also"></a>另請參閱  
+## <a name="see-also"></a>請參閱  
  <xref:System.Text.RegularExpressions?displayProperty=nameWithType>  
  <xref:System.Text.RegularExpressions.Regex>  
  [規則運算式](regular-expressions.md)  
  [規則運算式類別](the-regular-expression-object-model.md)  
  [規則運算式範例](regular-expression-examples.md)  
- [規則運算式-快速參考 （以 Word 格式下載）](http://download.microsoft.com/download/D/2/4/D240EBF6-A9BA-4E4F-A63F-AEB6DA0B921C/Regular%20expressions%20quick%20reference.docx)  
+ [規則運算式 - 快速參考 (以 Word 格式下載)](http://download.microsoft.com/download/D/2/4/D240EBF6-A9BA-4E4F-A63F-AEB6DA0B921C/Regular%20expressions%20quick%20reference.docx)  
  [規則運算式 - 快速參考 (以 PDF 格式下載)](http://download.microsoft.com/download/D/2/4/D240EBF6-A9BA-4E4F-A63F-AEB6DA0B921C/Regular%20expressions%20quick%20reference.pdf)

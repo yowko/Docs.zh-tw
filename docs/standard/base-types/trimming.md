@@ -1,5 +1,5 @@
 ---
-title: "修剪和移除從.NET 中的字串的字元"
+title: "在 .NET 中修剪和移除字串中的字元"
 ms.custom: 
 ms.date: 03/30/2017
 ms.prod: .net
@@ -21,20 +21,23 @@ helpviewer_keywords:
 - TrimStart method
 - removing characters
 ms.assetid: ab248dab-70d4-4413-81c6-542d153fd195
-caps.latest.revision: "13"
+caps.latest.revision: 
 author: rpetrusha
 ms.author: ronpet
 manager: wpickett
-ms.openlocfilehash: fde24a97234d275d3d599f13bfc4063af939507b
-ms.sourcegitcommit: bd1ef61f4bb794b25383d3d72e71041a5ced172e
+ms.workload:
+- dotnet
+- dotnetcore
+ms.openlocfilehash: dac047c7efefcacb959401aedcb96080810f2278
+ms.sourcegitcommit: e7f04439d78909229506b56935a1105a4149ff3d
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/18/2017
+ms.lasthandoff: 12/23/2017
 ---
-# <a name="trimming-and-removing-characters-from-strings-in-net"></a>修剪和移除從.NET 中的字串的字元
+# <a name="trimming-and-removing-characters-from-strings-in-net"></a>在 .NET 中修剪和移除字串中的字元
 如果您將句子剖析成個別文字，最後可能會得到許多文字，但文字任一端有空格 (也稱為空白字元)。 在這種情況下，您可以使用 **System.String** 類別中的其中一個 Trim 方法，從字串中的指定位置移除任意數目的空格或其他字元。 下表描述可用的 Trim 方法。  
   
-|方法名稱|用法|  
+|方法名稱|使用|  
 |-----------------|---------|  
 |<xref:System.String.Trim%2A?displayProperty=nameWithType>|將字元陣列中字串開頭和結尾指定的空格或空白字元移除。|  
 |<xref:System.String.TrimEnd%2A?displayProperty=nameWithType>|從字串尾端移除字元陣列中指定的字元。|  
@@ -56,7 +59,7 @@ ms.lasthandoff: 10/18/2017
 ## <a name="trimend"></a>TrimEnd  
  **String.TrimEnd** 方法會從字串結尾移除字元，並建立新的字串物件。 系統會將字元陣列傳遞給這個方法，以指定要移除的字元。 字元陣列中的項目順序不會影響修剪作業。 一旦找到陣列中未指定的字元時，修剪作業就會停止。  
   
- 下列範例會移除字串使用的最後一個字母**TrimEnd**方法。 在此範例中，`'r'` 字元和 `'W'` 字元的位置顛倒，用以說明字元陣列中的順序並不重要。 請注意，此程式碼會移除 `MyString` 的最後一個字以及第一個字的一部分。  
+ 下列範例會使用 **TrimEnd** 方法，移除字串的最後一個字母。 在此範例中，`'r'` 字元和 `'W'` 字元的位置顛倒，用以說明字元陣列中的順序並不重要。 請注意，此程式碼會移除 `MyString` 的最後一個字以及第一個字的一部分。  
   
  [!code-cpp[Conceptual.String.BasicOps#18](../../../samples/snippets/cpp/VS_Snippets_CLR/conceptual.string.basicops/cpp/trimming.cpp#18)]
  [!code-csharp[Conceptual.String.BasicOps#18](../../../samples/snippets/csharp/VS_Snippets_CLR/conceptual.string.basicops/cs/trimming.cs#18)]
@@ -97,5 +100,5 @@ ms.lasthandoff: 10/18/2017
  [!code-csharp[Conceptual.String.BasicOps#23](../../../samples/snippets/csharp/VS_Snippets_CLR/conceptual.string.basicops/cs/replace1.cs#23)]
  [!code-vb[Conceptual.String.BasicOps#23](../../../samples/snippets/visualbasic/VS_Snippets_CLR/conceptual.string.basicops/vb/replace1.vb#23)]  
   
-## <a name="see-also"></a>另請參閱  
+## <a name="see-also"></a>請參閱  
  [基本字串作業](../../../docs/standard/base-types/basic-string-operations.md)

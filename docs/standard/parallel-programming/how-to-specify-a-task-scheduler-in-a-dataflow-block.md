@@ -1,12 +1,8 @@
 ---
 title: "如何：在資料流程區塊中指定工作排程器"
-ms.custom: 
 ms.date: 03/30/2017
 ms.prod: .net
-ms.reviewer: 
-ms.suite: 
 ms.technology: dotnet-standard
-ms.tgt_pltfrm: 
 ms.topic: article
 dev_langs:
 - csharp
@@ -16,34 +12,35 @@ helpviewer_keywords:
 - Task Parallel Library, dataflows
 - task scheduler, linking from TPL
 ms.assetid: 27ece374-ed5b-49ef-9cec-b20db34a65e8
-caps.latest.revision: "7"
 author: rpetrusha
 ms.author: ronpet
 manager: wpickett
-ms.openlocfilehash: 20faebc8bda3b50c4f762615d84b7a449ae61c6f
-ms.sourcegitcommit: bd1ef61f4bb794b25383d3d72e71041a5ced172e
+ms.workload:
+- dotnet
+- dotnetcore
+ms.openlocfilehash: 592b6c5c92a2c752fa0d2694cdb477423b15eb0d
+ms.sourcegitcommit: 6a9030eb5bd0f00e1d144f81958adb195cfb1f6f
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/18/2017
+ms.lasthandoff: 01/10/2018
 ---
 # <a name="how-to-specify-a-task-scheduler-in-a-dataflow-block"></a>如何：在資料流程區塊中指定工作排程器
-此文件將示範當您在應用程式中使用資料流程時，如何與特定工作排程器產生關聯。 這個範例會使用 Windows Form 應用程式中的 <xref:System.Threading.Tasks.ConcurrentExclusiveSchedulerPair?displayProperty=nameWithType> 類別顯示讀取器工作何時為使用中，以及寫入器工作何時為使用中。 另外還會使用 <xref:System.Threading.Tasks.TaskScheduler.FromCurrentSynchronizationContext%2A?displayProperty=nameWithType> 方法讓資料流程區塊在使用者介面執行緒上執行。  
+此文件將示範當您在應用程式中使用資料流程時，如何與特定工作排程器產生關聯。 這個範例會使用 Windows Form 應用程式中的 <xref:System.Threading.Tasks.ConcurrentExclusiveSchedulerPair?displayProperty=nameWithType> 類別顯示讀取器工作何時為使用中，以及寫入器工作何時為使用中。 另外還會使用 <xref:System.Threading.Tasks.TaskScheduler.FromCurrentSynchronizationContext%2A?displayProperty=nameWithType> 方法讓資料流程區塊在使用者介面執行緒上執行。
+
+[!INCLUDE [tpl-install-instructions](../../../includes/tpl-install-instructions.md)]
+
+## <a name="to-create-the-windows-forms-application"></a>若要建立 Windows Forms 應用程式  
   
-> [!TIP]
->  TPL 資料流程程式庫 (<xref:System.Threading.Tasks.Dataflow?displayProperty=nameWithType> 命名空間) 並未隨附於 [!INCLUDE[net_v45](../../../includes/net-v45-md.md)]。 若要安裝<xref:System.Threading.Tasks.Dataflow>命名空間中，開啟您的專案中[!INCLUDE[vs_dev11_long](../../../includes/vs-dev11-long-md.md)]，選擇**管理 NuGet 封裝**從 [專案] 功能表中，並在搜尋線上`Microsoft.Tpl.Dataflow`封裝。  
+1.  建立 [!INCLUDE[csprcs](../../../includes/csprcs-md.md)] 或 Visual Basic **Windows Forms 應用程式**專案。 在下列步驟中，專案會命名為 `WriterReadersWinForms`。  
   
-### <a name="to-create-the-windows-forms-application"></a>若要建立 Windows Forms 應用程式  
-  
-1.  建立[!INCLUDE[csprcs](../../../includes/csprcs-md.md)]或 Visual Basic **Windows Forms 應用程式**專案。 在下列步驟中，專案會命名為 `WriterReadersWinForms`。  
-  
-2.  在主要表單 Form1.cs (在 [!INCLUDE[vbprvb](../../../includes/vbprvb-md.md)] 中為 Form1.vb) 的表單設計工具上，加入四個 <xref:System.Windows.Forms.CheckBox> 控制項。 設定<xref:System.Windows.Forms.Control.Text%2A>屬性**讀取器 1**如`checkBox1`，**讀取器 2**如`checkBox2`，**讀取器 3**的`checkBox3`，和**寫入器**如`checkBox4`。 將每個控制項的 <xref:System.Windows.Forms.Control.Enabled%2A> 屬性設為 `False`。  
+2.  在主要表單 Form1.cs (在 [!INCLUDE[vbprvb](../../../includes/vbprvb-md.md)] 中為 Form1.vb) 的表單設計工具上，加入四個 <xref:System.Windows.Forms.CheckBox> 控制項。 將 `checkBox1` 的 <xref:System.Windows.Forms.Control.Text%2A> 屬性設定為**讀取器 1**、`checkBox2` 的該屬性設為**讀取器 2**、`checkBox3` 的該屬性設為**讀取器 3**，以及 `checkBox4` 的該屬性設為**寫入器**。 將每個控制項的 <xref:System.Windows.Forms.Control.Enabled%2A> 屬性設為 `False`。  
   
 3.  將 <xref:System.Windows.Forms.Timer> 控制項加入表單。 將 <xref:System.Windows.Forms.Timer.Interval%2A> 屬性設定為 `2500`。  
   
 ## <a name="adding-dataflow-functionality"></a>加入資料流程功能  
  本節將說明如何建立參與應用程式的資料流程區塊，以及如何將每個區塊與工作排程器產生關聯。  
   
-#### <a name="to-add-dataflow-functionality-to-the-application"></a>若要將資料流程功能加入至應用程式  
+### <a name="to-add-dataflow-functionality-to-the-application"></a>若要將資料流程功能加入至應用程式  
   
 1.  在您的專案中，加入 System.Threading.Tasks.Dataflow.dll 的參考。  
   
@@ -89,5 +86,5 @@ ms.lasthandoff: 10/18/2017
  [!code-csharp[TPLDataflow_WriterReadersWinForms#100](../../../samples/snippets/csharp/VS_Snippets_Misc/tpldataflow_writerreaderswinforms/cs/writerreaderswinforms/form1.cs#100)]
  [!code-vb[TPLDataflow_WriterReadersWinForms#100](../../../samples/snippets/visualbasic/VS_Snippets_Misc/tpldataflow_writerreaderswinforms/vb/writerreaderswinforms/form1.vb#100)]  
   
-## <a name="see-also"></a>另請參閱  
+## <a name="see-also"></a>請參閱  
  [資料流程](../../../docs/standard/parallel-programming/dataflow-task-parallel-library.md)

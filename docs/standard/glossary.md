@@ -9,11 +9,14 @@ ms.topic: article
 ms.prod: .net
 ms.technology: dotnet-standard
 ms.devlang: dotnet
-ms.openlocfilehash: a6546818eaeac3c32a6a9ddd7e64b1b0e0ea170f
-ms.sourcegitcommit: bd1ef61f4bb794b25383d3d72e71041a5ced172e
+ms.workload:
+- dotnet
+- dotnetcore
+ms.openlocfilehash: 33123732514a53574036f6f8e948b2cf9acb9229
+ms.sourcegitcommit: d2da0142247ef42a219a5d2907f153e62dc6ea0d
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/18/2017
+ms.lasthandoff: 02/01/2018
 ---
 # <a name="net-glossary"></a>.NET 字彙表
 
@@ -29,21 +32,21 @@ ms.lasthandoff: 10/18/2017
 
 隨附於 .NET Framework 的原始 ASP.NET 實作。
 
-有時 ASP.NET 是指包括 ASP.NET Core 在內之兩個 ASP.NET 實作的籠統名詞。 該詞彙在任何指定的執行個體中所代表的意義取決於內容。 請參閱 asp.net 4.x，當您想要讓它清除您不使用 ASP.NET 來表示這兩種實作。 
+有時 ASP.NET 是指包括 ASP.NET Core 在內之兩個 ASP.NET 實作的籠統名詞。 該詞彙在任何指定的執行個體中所代表的意義取決於內容。 當想要澄清您不是使用 ASP.NET 來表示這兩種實作時，請參閱 ASP.NET 4.x。 
 
-請參閱[ASP.NET 文件集](/aspnet/#pivot=aspnet)。
+請參閱 [ASP.NET 文件](/aspnet/#pivot=aspnet)。
 
 ## <a name="aspnet-core"></a>ASP.NET Core
 
 建置於 .NET Core 之 ASP.NET 的跨平台、高效能、開放原始碼實作。
 
-請參閱[ASP.NET Core 文件](/aspnet/#pivot=core)。
+請參閱 [ASP.NET Core 文件](/aspnet/#pivot=core)。
 
 ## <a name="assembly"></a>組件
 
-包含可由應用程式或其他組件呼叫之 API 集合的 *.dll* 檔案。
+可以包含可由應用程式或其他組件呼叫之 API 集合的 *.dll*/*.exe* 檔案。
 
-.NET 組件是類型集合。 一個組件可以包含多個介面、類別、結構、列舉和委派。  專案的 *bin* 資料夾中的組件有時稱為「二進位檔」。 另請參閱[程式庫](#library)。
+一個組件可以包含介面、類別、結構、列舉和委派等類型。 專案的 *bin* 資料夾中的組件有時稱為「二進位檔」。 另請參閱[程式庫](#library)。
 
 ## <a name="clr"></a>CLR
 
@@ -155,7 +158,7 @@ Mono 通常可搭配 Just-In-Time 編譯器使用，但也提供適用於 iOS �
 
 請參閱 [.NET 指南](index.md)
 
-## <a name="net-core"></a>.NET Core 
+## <a name="net-core"></a>.NET 核心 
 
 .NET 的跨平台、高效能、開放原始碼實作。 包括 Core Common Language Runtime (CoreCLR)、Core AOT 執行階段 (CoreRT 開發中)、Core 基底類別庫，以及 Core SDK。
 
@@ -269,7 +272,7 @@ OS 是執行階段環境的一部分，但不是 .NET 執行階段的一部分�
 
 用於建置適用於物聯網 (IoT) 之現代化觸控式 Windows 應用程式和軟體的 .NET 實作。 其設計目的是為了整合您可能想要設為目標的不同裝置類型，包括電腦、平板電腦、平板手機、手機，甚至是 Xbox。 UWP 提供許多服務 (例如集中式應用程式存放區)、一個執行環境 (AppContainer)，以及用來取代 Win32 (WinRT) 的一組 Windows API。 您可以使用 C++、C#、VB.NET 和 JavaScript 來撰寫應用程式。 使用 C# 和 VB.NET 時，.NET API 是由 .NET Core 所提供。
 
-## <a name="see-also"></a>請參閱
+## <a name="see-also"></a>另請參閱
 
 [.NET 指南](index.md)  
 [.NET Framework 指南](../framework/index.md)  

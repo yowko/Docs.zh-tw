@@ -23,30 +23,33 @@ helpviewer_keywords:
 - locating directories in isolated storage file
 - storing data using isolated storage, finding files and directories
 ms.assetid: eb28458a-6161-4e7a-9ada-30ef93761b5c
-caps.latest.revision: "12"
+caps.latest.revision: 
 author: mairaw
 ms.author: mairaw
 manager: wpickett
-ms.openlocfilehash: 656c390358b6f6a671cf3ef11ea7be75f897d21c
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.workload:
+- dotnet
+- dotnetcore
+ms.openlocfilehash: 8d460f07e7558fdf9190561b1cac4307767ff245
+ms.sourcegitcommit: e7f04439d78909229506b56935a1105a4149ff3d
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 12/23/2017
 ---
 # <a name="how-to-find-existing-files-and-directories-in-isolated-storage"></a>如何：尋找隔離儲存區中的現有檔案和目錄
-若要搜尋的目錄，隔離儲存區中，使用<xref:System.IO.IsolatedStorage.IsolatedStorageFile.GetDirectoryNames%2A?displayProperty=nameWithType>方法。 這個方法會採用表示搜尋模式的字串。 您可以使用單一字元 （？） 和多重字元 （*） 萬用字元搜尋模式中，但的萬用字元必須出現在名稱的最後一個部分。 例如，`directory1/*ect*`是有效的搜尋字串，但`*ect*/directory2`不是。  
+若要搜尋隔離儲存區中的目錄，請使用 <xref:System.IO.IsolatedStorage.IsolatedStorageFile.GetDirectoryNames%2A?displayProperty=nameWithType> 方法。 此方法會採用表示搜尋模式的字串。 您可以在搜尋模式中使用單一字元 (?) 和多重字元 (*) 萬用字元，但萬用字元必須出現在名稱的最後一個部分。 例如，`directory1/*ect*` 是有效的搜尋字串，但 `*ect*/directory2` 不是。  
   
- 若要搜尋的檔案，請使用<xref:System.IO.IsolatedStorage.IsolatedStorageFile.GetFileNames%2A?displayProperty=nameWithType>方法。 在適用於的搜尋字串中使用萬用字元限制<xref:System.IO.IsolatedStorage.IsolatedStorageFile.GetDirectoryNames%2A>也適用於<xref:System.IO.IsolatedStorage.IsolatedStorageFile.GetFileNames%2A>。  
+ 若要搜尋檔案，請使用 <xref:System.IO.IsolatedStorage.IsolatedStorageFile.GetFileNames%2A?displayProperty=nameWithType> 方法。 在搜尋字串中，適用於 <xref:System.IO.IsolatedStorage.IsolatedStorageFile.GetDirectoryNames%2A> 的萬用字元限制也適用於 <xref:System.IO.IsolatedStorage.IsolatedStorageFile.GetFileNames%2A>。  
   
- 這些方法都不是遞迴。<xref:System.IO.IsolatedStorage.IsolatedStorageFile>類別並不提供任何方法，以列出所有的目錄或存放區中的檔案。 不過，會顯示遞迴方法，在下列程式碼範例。  
+ 這些都不是遞迴方法。<xref:System.IO.IsolatedStorage.IsolatedStorageFile> 類別不會提供任何方法來列出存放區中的所有目錄或檔案。 不過，遞迴方法會顯示在下列程式碼範例中。  
   
 ## <a name="example"></a>範例  
- 下列程式碼範例說明如何在隔離存放區中建立檔案和目錄。 首先，為使用者、 定義域和組件所隔離的存放區會擷取並放置於`isoStore`變數。 <xref:System.IO.IsolatedStorage.IsolatedStorageFile.CreateDirectory%2A>方法用來設定幾個不同的目錄，而<xref:System.IO.IsolatedStorage.IsolatedStorageFileStream.%23ctor%28System.String%2CSystem.IO.FileMode%2CSystem.IO.IsolatedStorage.IsolatedStorageFile%29>建構函式會建立這些目錄中的某些檔案。 此程式碼再迴圈的結果`GetAllDirectories`方法。 這個方法會使用<xref:System.IO.IsolatedStorage.IsolatedStorageFile.GetDirectoryNames%2A>來尋找目前的目錄中的所有目錄名稱。 這些名稱會儲存在陣列中，然後`GetAllDirectories`呼叫其本身，傳遞它發現每個目錄中。 如此一來，所有目錄名稱會都傳回陣列中。 接下來，程式碼會呼叫`GetAllFiles`方法。 這個方法會呼叫`GetAllDirectories`找出所有名稱的目錄，然後檢查每個檔案的目錄使用<xref:System.IO.IsolatedStorage.IsolatedStorageFile.GetFileNames%2A>方法。 結果會顯示陣列中傳回。  
+ 下列程式碼範例說明如何在隔離存放區中建立檔案和目錄。 首先，系統會擷取針對使用者、網域和組件所隔離的存放區，並放置在 `isoStore` 變數中。 <xref:System.IO.IsolatedStorage.IsolatedStorageFile.CreateDirectory%2A> 方法用來設定幾個不同的目錄，而 <xref:System.IO.IsolatedStorage.IsolatedStorageFileStream.%23ctor%28System.String%2CSystem.IO.FileMode%2CSystem.IO.IsolatedStorage.IsolatedStorageFile%29> 建構函式會在這些目錄中建立一些檔案。 接著，此程式碼會在 `GetAllDirectories` 方法的結果中執行迴圈。 此方法會使用 <xref:System.IO.IsolatedStorage.IsolatedStorageFile.GetDirectoryNames%2A> 尋找目前目錄中的所有目錄名稱。 這些名稱會儲存在陣列中，然後 `GetAllDirectories` 會呼叫其本身，進而傳入所找到的每個目錄。 因此，陣列中會傳回所有目錄名稱。 接下來，此程式碼會呼叫 `GetAllFiles` 方法。 此方法會呼叫 `GetAllDirectories` 來找出所有目錄的名稱，然後使用 <xref:System.IO.IsolatedStorage.IsolatedStorageFile.GetFileNames%2A> 方法檢查每個目錄中的檔案。 陣列中會傳回結果以供顯示。  
   
  [!code-cpp[Conceptual.IsolatedStorage#9](../../../samples/snippets/cpp/VS_Snippets_CLR/conceptual.isolatedstorage/cpp/source8.cpp#9)]
  [!code-csharp[Conceptual.IsolatedStorage#9](../../../samples/snippets/csharp/VS_Snippets_CLR/conceptual.isolatedstorage/cs/source8.cs#9)]
  [!code-vb[Conceptual.IsolatedStorage#9](../../../samples/snippets/visualbasic/VS_Snippets_CLR/conceptual.isolatedstorage/vb/source8.vb#9)]  
   
-## <a name="see-also"></a>另請參閱  
+## <a name="see-also"></a>請參閱  
  <xref:System.IO.IsolatedStorage.IsolatedStorageFile>  
  [隔離儲存區](../../../docs/standard/io/isolated-storage.md)

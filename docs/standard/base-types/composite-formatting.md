@@ -19,15 +19,18 @@ helpviewer_keywords:
 - composite formatting
 - objects [.NET Framework], formatting multiple objects
 ms.assetid: 87b7d528-73f6-43c6-b71a-f23043039a49
-caps.latest.revision: "36"
+caps.latest.revision: 
 author: rpetrusha
 ms.author: ronpet
 manager: wpickett
-ms.openlocfilehash: 1f4b311d6e933f6c653fd7ab189c2e644021970d
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.workload:
+- dotnet
+- dotnetcore
+ms.openlocfilehash: dae73a7ace3aac4e7d89ccba186fceacfe9898ae
+ms.sourcegitcommit: e7f04439d78909229506b56935a1105a4149ff3d
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 12/23/2017
 ---
 # <a name="composite-formatting"></a>複合格式
 .NET Framework 複合格式功能會採用物件清單和複合格式字串做為輸入。 複合格式字串是由混合索引替代符號 (Placeholder) 的固定文字所組成 (這些符號稱為對應至清單內物件的格式項目)。 格式作業產生的結果字串是由原始固定文字所組成，這些固定文字混合了清單中代表物件的字串。  
@@ -87,13 +90,13 @@ ms.lasthandoff: 11/21/2017
  [!code-vb[Formatting.Composite#8](../../../samples/snippets/visualbasic/VS_Snippets_CLR/Formatting.Composite/vb/alignment1.vb#8)]  
   
 ### <a name="format-string-component"></a>格式字串元件  
- 選擇性 *formatString* 元件是一個格式字串，適用於將格式化的物件類型。 指定標準或自訂數值格式字串的對應的物件是否為數值、 標準或自訂日期和時間格式字串的對應物件是否<xref:System.DateTime>物件，或[列舉格式字串](../../../docs/standard/base-types/enumeration-format-strings.md)如果對應的物件為列舉值。 如果未指定 *formatString*，則會使用數值、日期和時間或列舉類型的一般 ("G") 格式規範。 如果指定 *formatString*，則需要冒號。  
+ 選擇性 *formatString* 元件是一個格式字串，適用於將格式化的物件類型。 如果對應的物件為數值，指定標準或自訂的數值格式字串；如果對應的物件為 <xref:System.DateTime> 物件，指定標準或自訂的日期和時間格式字串；或者，如果對應的物件為列舉值，指定[列舉格式字串](../../../docs/standard/base-types/enumeration-format-strings.md)。 如果未指定 *formatString*，則會使用數值、日期和時間或列舉類型的一般 ("G") 格式規範。 如果指定 *formatString*，則需要冒號。  
   
  下表列出 .NET Framework 類別庫中支援預先定義之格式字串的類型或類型分類，並提供列出支援之格式字串的主題連結。 請注意，字串格式是一種可延伸機制，可讓為所有現有類型定義新的格式字串，以及定義一組應用程式定義類型所支援的格式字串。 如需詳細資訊，請參閱 <xref:System.IFormattable> 和 <xref:System.ICustomFormatter> 介面主題。  
   
 |類型或類型分類|請參閱|  
 |---------------------------|---------|  
-|日期和時間類型 (<xref:System.DateTime>、<xref:System.DateTimeOffset>)|[Standard Date and Time Format Strings](../../../docs/standard/base-types/standard-date-and-time-format-strings.md)<br /><br /> [Custom Date and Time Format Strings](../../../docs/standard/base-types/custom-date-and-time-format-strings.md)|  
+|日期和時間類型 (<xref:System.DateTime>、<xref:System.DateTimeOffset>)|[標準日期和時間格式字串](../../../docs/standard/base-types/standard-date-and-time-format-strings.md)<br /><br /> [自訂日期和時間格式字串](../../../docs/standard/base-types/custom-date-and-time-format-strings.md)|  
 |列舉類型 (衍生自 <xref:System.Enum?displayProperty=nameWithType> 的所有類型)|[Enumeration Format Strings](../../../docs/standard/base-types/enumeration-format-strings.md)|  
 |數字類型 (<xref:System.Numerics.BigInteger>、<xref:System.Byte>、<xref:System.Decimal>、<xref:System.Double>、<xref:System.Int16>、<xref:System.Int32>、<xref:System.Int64>、<xref:System.SByte>、<xref:System.Single>、<xref:System.UInt16>、<xref:System.UInt32>、<xref:System.UInt64>)|[Standard Numeric Format Strings](../../../docs/standard/base-types/standard-numeric-format-strings.md)<br /><br /> [Custom Numeric Format Strings](../../../docs/standard/base-types/custom-numeric-format-strings.md)|  
 |<xref:System.Guid>|<xref:System.Guid.ToString%28System.String%29?displayProperty=nameWithType>|  
@@ -126,7 +129,7 @@ ms.lasthandoff: 11/21/2017
   
 1.  如果要格式化的值是 `null`，則會傳回空字串 ("")。  
   
-2.  如果可以使用 <xref:System.ICustomFormatter> 實作，則執行階段會呼叫其 <xref:System.ICustomFormatter.Format%2A> 方法。 它會傳遞方法的格式項目*formatString*值，如果有的話，或`null`如果不是，連同<xref:System.IFormatProvider>實作。  
+2.  如果可以使用 <xref:System.ICustomFormatter> 實作，則執行階段會呼叫其 <xref:System.ICustomFormatter.Format%2A> 方法。 它會將格式項目的 *formatString<xref:System.IFormatProvider> 值 (如果有的話) 傳遞給方法；如果沒有，則會將*  連同 `null` 實作一起傳遞。  
   
 3.  如果值實作 <xref:System.IFormattable> 介面，則會呼叫介面的 <xref:System.IFormattable.ToString%28System.String%2CSystem.IFormatProvider%29> 方法。 如果格式項目中有 *formatString* 值的話，就會將該值傳遞給方法；如果沒有的話，則會傳遞 `null`。 <xref:System.IFormatProvider> 引數的判斷如下：  
   
@@ -163,7 +166,7 @@ ms.lasthandoff: 11/21/2017
  [!code-csharp[Formatting.Composite#6](../../../samples/snippets/csharp/VS_Snippets_CLR/Formatting.Composite/cs/Composite1.cs#6)]
  [!code-vb[Formatting.Composite#6](../../../samples/snippets/visualbasic/VS_Snippets_CLR/Formatting.Composite/vb/Composite1.vb#6)]  
   
-## <a name="see-also"></a>另請參閱  
+## <a name="see-also"></a>請參閱  
  <xref:System.Console.WriteLine%2A>  
  <xref:System.String.Format%2A?displayProperty=nameWithType>  
  [格式化類型](../../../docs/standard/base-types/formatting-types.md)  

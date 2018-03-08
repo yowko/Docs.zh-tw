@@ -16,15 +16,18 @@ helpviewer_keywords:
 - assemblies [.NET Framework], attributes
 - attributes [.NET Framework], applying
 ms.assetid: dd7604eb-9fa3-4b60-b2dd-b47739fa3148
-caps.latest.revision: "19"
+caps.latest.revision: 
 author: rpetrusha
 ms.author: ronpet
 manager: wpickett
-ms.openlocfilehash: e23649c5d833bef8b74ec5d3b9c22235756580e0
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.workload:
+- dotnet
+- dotnetcore
+ms.openlocfilehash: b55684ec30a69bd9773e19420fbe89ca58fd66dd
+ms.sourcegitcommit: e7f04439d78909229506b56935a1105a4149ff3d
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 12/23/2017
 ---
 # <a name="applying-attributes"></a>套用屬性
 使用下列流程將屬性套用至程式碼的元素。  
@@ -37,11 +40,11 @@ ms.lasthandoff: 11/21/2017
   
 3.  指定屬性的位置參數和具名參數。  
   
-     位置參數是必要的，而且必須位於任何具名參數前面。它們對應至屬性的其中一個建構函式的參數。 具名參數是選擇性，對應至屬性的讀寫屬性。 在 c + + 和 C# 中，指定`name` = `value`每一個選擇性參數，其中`name`是屬性的名稱。 在 Visual Basi 中，指定 `name`:=`value`。  
+     位置參數是必要的，而且必須位於任何具名參數前面。它們對應至屬性的其中一個建構函式的參數。 具名參數是選擇性，對應至屬性的讀寫屬性。 在 C++ 和 C# 中，指定每一個選擇性參數的 `name`=`value`，其中 `name` 是屬性的名稱。 在 Visual Basi 中，指定 `name`:=`value`。  
   
  當您編譯程式碼時，屬性會發出至中繼資料，並透過執行階段反映服務，提供給通用語言執行平台及任何自訂工具或應用程式使用。  
   
- 依照慣例，所有屬性名稱的結尾都是 Attribute。 不過，有幾種以 Visual Basic 和 C# 等執行階段為目標的語言，並不需要您指定屬性的全名。 例如，如果您想要初始化<xref:System.ObsoleteAttribute?displayProperty=nameWithType>，您只需要參考它做為**過時**。  
+ 依照慣例，所有屬性名稱的結尾都是 Attribute。 不過，有幾種以 Visual Basic 和 C# 等執行階段為目標的語言，並不需要您指定屬性的全名。 例如，如果您想要初始化 <xref:System.ObsoleteAttribute?displayProperty=nameWithType>，則只需要將其參考為**已淘汰**。  
   
 ## <a name="applying-an-attribute-to-a-method"></a>將屬性套用至方法  
  下列程式碼範例示範如何宣告 **System.ObsoleteAttribute**，將程式碼標記為已淘汰。 `"Will be removed in next version"` 字串會傳遞至屬性。 當呼叫這個屬性所描述的程式碼時，屬性會產生編譯器警告來顯示傳遞的字串。  
@@ -59,7 +62,7 @@ ms.lasthandoff: 11/21/2017
   
  套用此屬性時，字串 `"My Assembly"` 會放在檔案的中繼資料部分中的組件資訊清單。 您可以使用 [MSIL 反組譯工具 (Ildasm.exe)](../../../docs/framework/tools/ildasm-exe-il-disassembler.md) 或建立自訂程式擷取屬性，以檢視屬性。  
   
-## <a name="see-also"></a>另請參閱  
+## <a name="see-also"></a>請參閱  
  [屬性](../../../docs/standard/attributes/index.md)  
  [擷取儲存於屬性中的資訊](../../../docs/standard/attributes/retrieving-information-stored-in-attributes.md)  
  [概念](/cpp/windows/attributed-programming-concepts)  

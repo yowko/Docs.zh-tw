@@ -18,18 +18,21 @@ helpviewer_keywords:
 - IObservable(Of T) interface
 - observer design pattern [.NET Framework]
 ms.assetid: 3680171f-f522-453c-aa4a-54f755a78f88
-caps.latest.revision: "14"
+caps.latest.revision: 
 author: rpetrusha
 ms.author: ronpet
 manager: wpickett
-ms.openlocfilehash: 83663a28ac7ae19848552583f2ec39a5e96c7fdc
-ms.sourcegitcommit: bd1ef61f4bb794b25383d3d72e71041a5ced172e
+ms.workload:
+- dotnet
+- dotnetcore
+ms.openlocfilehash: c13424ad817ae73b5019f0ce5a7cda54c84adc71
+ms.sourcegitcommit: 91691981897cf8451033cb01071d8f5d94017f97
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/18/2017
+ms.lasthandoff: 01/09/2018
 ---
 # <a name="observer-design-pattern"></a>觀察器設計模式
-觀察者設計模式可讓訂閱者向提供者註冊，並且接收通知。 它適合任何需要推入型通知的情節。 這個模式會定義*提供者*(也稱為*主旨*或*observable*) 和零個、 一個或多個*觀察者*。 觀察者會向提供者註冊，而且只要預先定義的條件、事件或狀態有所變更，提供者就會自動呼叫觀察者的其中一種方法，來通知所有觀察者。 在這個方法呼叫中，提供者也可以提供目前的狀態資訊給觀察者。 在 .NET Framework 中，觀察者設計模式是透過實作泛型 <xref:System.IObservable%601?displayProperty=nameWithType> 和 <xref:System.IObserver%601?displayProperty=nameWithType> 介面來套用。 泛型類型參數代表提供通知資訊的類型。  
+觀察者設計模式可讓訂閱者向提供者註冊，並且接收通知。 它適合任何需要推入型通知的情節。 這個模式會定義「提供者」(也稱為「主題」或「可預見值」)，以及零個、一個或多個「觀察者」。 觀察者會向提供者註冊，而且只要預先定義的條件、事件或狀態有所變更，提供者就會自動呼叫觀察者的其中一種方法，來通知所有觀察者。 在這個方法呼叫中，提供者也可以提供目前的狀態資訊給觀察者。 在 .NET Framework 中，觀察者設計模式是透過實作泛型 <xref:System.IObservable%601?displayProperty=nameWithType> 和 <xref:System.IObserver%601?displayProperty=nameWithType> 介面來套用。 泛型類型參數代表提供通知資訊的類型。  
   
 ## <a name="applying-the-pattern"></a>套用模式  
  觀察者設計模式適合分散式推入型通知，因為它支援清楚分隔兩種不同的元件或應用程式層，例如資料來源 (商務邏輯) 層和使用者介面 (顯示) 層。 當提供者使用回呼將目前的資訊提供給其用戶端時，便會實作這個模式。  
@@ -53,7 +56,7 @@ ms.lasthandoff: 10/18/2017
 -   包含提供者傳送給觀察者之資料的物件。 這個物件的類型對應至 <xref:System.IObservable%601> 和 <xref:System.IObserver%601> 介面的泛型類型參數。 雖然這個物件可以與 <xref:System.IObservable%601> 實作相同，但它常是不同的類型。  
   
 > [!NOTE]
->  除了實作觀察者設計模式之外，您可能對探索使用 <xref:System.IObservable%601> 和 <xref:System.IObserver%601> 介面建置的程式庫有興趣。 例如， [Reactive Extensions for.NET (Rx)](http://go.microsoft.com/fwlink/?LinkId=186345)包含一組延伸方法和 LINQ 標準序列運算子來支援非同步程式設計。  
+>  除了實作觀察者設計模式之外，您可能對探索使用 <xref:System.IObservable%601> 和 <xref:System.IObserver%601> 介面建置的程式庫有興趣。 例如，[Reactive Extensions for .NET (Rx)](https://msdn.microsoft.com/library/hh242985.aspx) 是由一組擴充方法和 LINQ 標準序列運算子所組成，可支援非同步程式設計。  
   
 ## <a name="implementing-the-pattern"></a>實作模式  
  下列範例會使用觀察者設計模式實作機場行李提領資訊系統。 `BaggageInfo` 類別提供有關抵達班機及可提領各班機行李之轉盤的資訊。 下列範例會提供示範。  
@@ -97,7 +100,7 @@ ms.lasthandoff: 10/18/2017
   
 ## <a name="related-topics"></a>相關主題  
   
-|標題|說明|  
+|標題|描述|  
 |-----------|-----------------|  
 |[觀察者設計模式最佳做法](../../../docs/standard/events/observer-design-pattern-best-practices.md)|描述開發實作觀察者設計模式的應用程式時，所採用的最佳做法。|  
 |[操作說明：實作提供者](../../../docs/standard/events/how-to-implement-a-provider.md)|提供溫度監控應用程式的提供者逐步實作。|  

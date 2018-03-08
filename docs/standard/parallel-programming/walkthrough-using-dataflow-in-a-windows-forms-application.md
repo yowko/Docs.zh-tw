@@ -1,27 +1,25 @@
 ---
 title: "逐步解說：在 Windows Forms 應用程式中使用資料流程"
-ms.custom: 
 ms.date: 03/30/2017
 ms.prod: .net
-ms.reviewer: 
-ms.suite: 
 ms.technology: dotnet-standard
-ms.tgt_pltfrm: 
 ms.topic: article
 helpviewer_keywords:
 - TPL dataflow library, in Windows Forms
 - Task Parallel Library, dataflows
 - Windows Forms, and TPL
 ms.assetid: 9c65cdf7-660c-409f-89ea-59d7ec8e127c
-caps.latest.revision: "8"
 author: rpetrusha
 ms.author: ronpet
 manager: wpickett
-ms.openlocfilehash: d2775cc99020fd99d6e7d79cdf3e1ffcc3219146
-ms.sourcegitcommit: bd1ef61f4bb794b25383d3d72e71041a5ced172e
+ms.workload:
+- dotnet
+- dotnetcore
+ms.openlocfilehash: 8c0d44ca7933626c95603ccc81102889ba4c23cb
+ms.sourcegitcommit: c0dd436f6f8f44dc80dc43b07f6841a00b74b23f
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/18/2017
+ms.lasthandoff: 01/19/2018
 ---
 # <a name="walkthrough-using-dataflow-in-a-windows-forms-application"></a>逐步解說：在 Windows Forms 應用程式中使用資料流程
 本文鍵示範如何建立資料流程區塊網路，其可以在 Windows Forms 應用程式中執行映像處理。  
@@ -30,11 +28,9 @@ ms.lasthandoff: 10/18/2017
   
 ## <a name="prerequisites"></a>必要條件  
  在開始進行這個逐步解說之前，請先閱讀[資料流程](../../../docs/standard/parallel-programming/dataflow-task-parallel-library.md)。  
-  
-> [!TIP]
->  TPL 資料流程程式庫 (<xref:System.Threading.Tasks.Dataflow?displayProperty=nameWithType> 命名空間) 並未隨附於 [!INCLUDE[net_v45](../../../includes/net-v45-md.md)]。 若要安裝<xref:System.Threading.Tasks.Dataflow>命名空間中，開啟您的專案中[!INCLUDE[vs_dev11_long](../../../includes/vs-dev11-long-md.md)]，選擇**管理 NuGet 封裝**從 [專案] 功能表中，並在搜尋線上`Microsoft.Tpl.Dataflow`封裝。  
- 
-  
+
+[!INCLUDE [tpl-install-instructions](../../../includes/tpl-install-instructions.md)]
+
 ## <a name="sections"></a>章節  
  本逐步解說包含下列各節：  
   
@@ -54,13 +50,13 @@ ms.lasthandoff: 10/18/2017
   
 1.  在 [!INCLUDE[vsprvs](../../../includes/vsprvs-md.md)]中，建立 [!INCLUDE[csprcs](../../../includes/csprcs-md.md)] 或 Visual Basic 的 [Windows Forms 應用程式] 專案。 在本文件中，專案命名為 `CompositeImages`。  
   
-2.  在主要表單 Form1.cs 的表單設計工具 (為 Form1.vb [!INCLUDE[vbprvb](../../../includes/vbprvb-md.md)])，新增<xref:System.Windows.Forms.ToolStrip>控制項。  
+2.  在主要表單 Form1.cs (在 [!INCLUDE[vbprvb](../../../includes/vbprvb-md.md)] 中為 Form1.vb) 的表單設計工具上，加入 <xref:System.Windows.Forms.ToolStrip> 控制項。  
   
-3.  新增<xref:System.Windows.Forms.ToolStripButton>控制權傳輸至<xref:System.Windows.Forms.ToolStrip>控制項。 設定<xref:System.Windows.Forms.ToolStripItem.DisplayStyle%2A>屬性<xref:System.Windows.Forms.ToolStripItemDisplayStyle.Text>和<xref:System.Windows.Forms.ToolStripItem.Text%2A>屬性**選擇資料夾**。  
+3.  將 <xref:System.Windows.Forms.ToolStripButton> 控制項加入 <xref:System.Windows.Forms.ToolStrip> 控制項。 將 <xref:System.Windows.Forms.ToolStripItem.DisplayStyle%2A> 屬性設為 <xref:System.Windows.Forms.ToolStripItemDisplayStyle.Text>，並將 <xref:System.Windows.Forms.ToolStripItem.Text%2A> 屬性設為 **Choose Folder**。  
   
-4.  新增第二個<xref:System.Windows.Forms.ToolStripButton>控制權傳輸至<xref:System.Windows.Forms.ToolStrip>控制項。 設定<xref:System.Windows.Forms.ToolStripItem.DisplayStyle%2A>屬性<xref:System.Windows.Forms.ToolStripItemDisplayStyle.Text>、<xref:System.Windows.Forms.ToolStripItem.Text%2A>屬性**取消**，而<xref:System.Windows.Forms.ToolStripItem.Enabled%2A>屬性`False`。  
+4.  將第二個 <xref:System.Windows.Forms.ToolStripButton> 控制項加入 <xref:System.Windows.Forms.ToolStrip> 控制項。 將 <xref:System.Windows.Forms.ToolStripItem.DisplayStyle%2A> 屬性設為 <xref:System.Windows.Forms.ToolStripItemDisplayStyle.Text>，將 <xref:System.Windows.Forms.ToolStripItem.Text%2A> 屬性設為 **Cancel**，然後將 <xref:System.Windows.Forms.ToolStripItem.Enabled%2A> 屬性設為 `False`。  
   
-5.  新增<xref:System.Windows.Forms.PictureBox>加入主要表單的物件。 將 <xref:System.Windows.Forms.Control.Dock%2A> 屬性設定為 <xref:System.Windows.Forms.DockStyle.Fill>。  
+5.  將 <xref:System.Windows.Forms.PictureBox> 物件加入主要表單。 將 <xref:System.Windows.Forms.Control.Dock%2A> 屬性設定為 <xref:System.Windows.Forms.DockStyle.Fill>。  
   
 <a name="network"></a>   
 ## <a name="creating-the-dataflow-network"></a>建立資料流程網路  
@@ -91,26 +87,26 @@ ms.lasthandoff: 10/18/2017
      [!code-csharp[TPLDataflow_CompositeImages#5](../../../samples/snippets/csharp/VS_Snippets_Misc/tpldataflow_compositeimages/cs/compositeimages/form1.cs#5)]  
   
     > [!NOTE]
-    >  C# 版本的`CreateCompositeBitmap`方法會使用指標，啟用有效處理<xref:System.Drawing.Bitmap?displayProperty=nameWithType>物件。 因此，您必須在專案中啟用 [容許 Unsafe 程式碼] 選項，以便使用 [unsafe](~/docs/csharp/language-reference/keywords/unsafe.md) 關鍵字。 如需有關如何啟用 unsafe 程式碼中的[!INCLUDE[csprcs](../../../includes/csprcs-md.md)]專案，請參閱 [建置 頁面，專案設計工具 (C#)] https://msdn.microsoft.com/library/kb4wyys2)。  
+    >  C# 版本的 `CreateCompositeBitmap` 方法會使用指標，以便有效處理 <xref:System.Drawing.Bitmap?displayProperty=nameWithType> 物件。 因此，您必須在專案中啟用 [容許 Unsafe 程式碼] 選項，以便使用 [unsafe](~/docs/csharp/language-reference/keywords/unsafe.md) 關鍵字。 如需如何在 [!INCLUDE[csprcs](../../../includes/csprcs-md.md)] 專案中啟用 unsafe 程式碼的詳細資訊，請參閱[專案設計工具、建置頁 (C#)](/visualstudio/ide/reference/build-page-project-designer-csharp)。  
   
  下表描述網路的成員。  
   
-|成員|類型|說明|  
+|成員|類型|描述|  
 |------------|----------|-----------------|  
-|`loadBitmaps`|<xref:System.Threading.Tasks.Dataflow.TransformBlock%602>|接受資料夾路徑，做為輸入，然後產生的集合<xref:System.Drawing.Bitmap>做為輸出的物件。|  
-|`createCompositeBitmap`|<xref:System.Threading.Tasks.Dataflow.TransformBlock%602>|使用集合<xref:System.Drawing.Bitmap>物件做為輸入，並會產生複合點陣圖做為輸出。|  
+|`loadBitmaps`|<xref:System.Threading.Tasks.Dataflow.TransformBlock%602>|採用資料夾路徑做為輸入，並且產生 <xref:System.Drawing.Bitmap> 物件的集合作為輸出。|  
+|`createCompositeBitmap`|<xref:System.Threading.Tasks.Dataflow.TransformBlock%602>|採用 <xref:System.Drawing.Bitmap> 物件的集合做為輸入，並且產生複合點陣圖做為輸出。|  
 |`displayCompositeBitmap`|<xref:System.Threading.Tasks.Dataflow.ActionBlock%601>|在表單上顯示複合點陣圖。|  
 |`operationCancelled`|<xref:System.Threading.Tasks.Dataflow.ActionBlock%601>|顯示映像以表示作業已取消，讓使用者選取另一個資料夾。|  
   
- 若要連接的資料流程區塊以形成網路，這個範例會使用<xref:System.Threading.Tasks.Dataflow.ISourceBlock%601.LinkTo%2A>方法。 <xref:System.Threading.Tasks.Dataflow.ISourceBlock%601.LinkTo%2A>方法包含的多載的版本採用<xref:System.Predicate%601>判斷目標區塊接受或拒絕訊息的物件。 這個篩選機制可讓訊息區塊僅接收特定的值。 在此範例中，網路可以使用兩種方式之一進行分支。 主要分支會從磁碟載入映像、建立複合映像，以及在表單上顯示該映像。 替代分支會取消目前的作業。 <xref:System.Predicate%601>物件可讓資料流程區塊，沿著主要分支中切換至替代的分支，拒絕特定訊息。 例如，如果使用者取消作業，資料流程區塊 `createCompositeBitmap` 會產生 `null` (在 [!INCLUDE[vbprvb](../../../includes/vbprvb-md.md)] 中為 `Nothing`) 做為其輸出。 資料流程區塊 `displayCompositeBitmap` 會拒絕 `null` 輸入值，因此，訊息會提供給 `operationCancelled`。 資料流程區塊 `operationCancelled` 接受所有訊息，因此，會顯示映像表示作業取消。  
+ 為了連線資料流程區塊以形成網路，此範例會使用 <xref:System.Threading.Tasks.Dataflow.ISourceBlock%601.LinkTo%2A> 方法。 <xref:System.Threading.Tasks.Dataflow.ISourceBlock%601.LinkTo%2A> 方法包含採用 <xref:System.Predicate%601> 物件的多載版本，該物件會判斷目標區塊是否接受或拒絕訊息。 這個篩選機制可讓訊息區塊僅接收特定的值。 在此範例中，網路可以使用兩種方式之一進行分支。 主要分支會從磁碟載入映像、建立複合映像，以及在表單上顯示該映像。 替代分支會取消目前的作業。 <xref:System.Predicate%601> 物件會啟用主要分支上的資料流程區塊，以藉由拒絕特定訊息來切換至替代分支。 例如，如果使用者取消作業，資料流程區塊 `createCompositeBitmap` 會產生 `null` (在 [!INCLUDE[vbprvb](../../../includes/vbprvb-md.md)] 中為 `Nothing`) 做為其輸出。 資料流程區塊 `displayCompositeBitmap` 會拒絕 `null` 輸入值，因此，訊息會提供給 `operationCancelled`。 資料流程區塊 `operationCancelled` 接受所有訊息，因此，會顯示映像表示作業取消。  
   
  下圖顯示映像處理網路。  
   
  ![影像處理網路](../../../docs/standard/parallel-programming/media/dataflowwinforms.png "DataflowWinForms")  
   
- 由於 `displayCompositeBitmap` 和 `operationCancelled`資料流程區塊會在使用者介面上進行處理，因此這個動作一定要在使用者介面執行緒上發生。 若要達成此目的，在建構期間，這些物件每一個都提供<xref:System.Threading.Tasks.Dataflow.ExecutionDataflowBlockOptions>具有物件<xref:System.Threading.Tasks.Dataflow.DataflowBlockOptions.TaskScheduler%2A>屬性設定為<xref:System.Threading.Tasks.TaskScheduler.FromCurrentSynchronizationContext%2A?displayProperty=nameWithType>。 <xref:System.Threading.Tasks.TaskScheduler.FromCurrentSynchronizationContext%2A?displayProperty=nameWithType> 方法會建立 <xref:System.Threading.Tasks.TaskScheduler> 物件，該物件會在目前的同步處理內容上執行工作。 因為 `CreateImageProcessingNetwork` 方法是從 [選擇資料夾] 按鈕的處理常式呼叫，它會在使用者介面執行緒上執行，`displayCompositeBitmap` 和 `operationCancelled` 資料流程區塊的動作也會在使用者介面執行緒上執行。  
+ 由於 `displayCompositeBitmap` 和 `operationCancelled`資料流程區塊會在使用者介面上進行處理，因此這個動作一定要在使用者介面執行緒上發生。 為了要完成這項作業，這些物件在建構時會提供 <xref:System.Threading.Tasks.Dataflow.ExecutionDataflowBlockOptions> 物件，而且其 <xref:System.Threading.Tasks.Dataflow.DataflowBlockOptions.TaskScheduler%2A> 屬性會設定為 <xref:System.Threading.Tasks.TaskScheduler.FromCurrentSynchronizationContext%2A?displayProperty=nameWithType>。 <xref:System.Threading.Tasks.TaskScheduler.FromCurrentSynchronizationContext%2A?displayProperty=nameWithType> 方法會建立 <xref:System.Threading.Tasks.TaskScheduler> 物件，該物件會在目前的同步處理內容上執行工作。 因為 `CreateImageProcessingNetwork` 方法是從 [選擇資料夾] 按鈕的處理常式呼叫，它會在使用者介面執行緒上執行，`displayCompositeBitmap` 和 `operationCancelled` 資料流程區塊的動作也會在使用者介面執行緒上執行。  
   
- 這個範例會使用共用的取消語彙基元而非設定<xref:System.Threading.Tasks.Dataflow.DataflowBlockOptions.CancellationToken%2A>屬性因為<xref:System.Threading.Tasks.Dataflow.DataflowBlockOptions.CancellationToken%2A>屬性永遠會取消資料流程區塊執行。 取消語彙基元可讓此範例重複使用相同的資料流程網路多次，即使使用者取消一或多個作業。 如需範例，會使用<xref:System.Threading.Tasks.Dataflow.DataflowBlockOptions.CancellationToken%2A>永久取消資料流程區塊的執行，請參閱[如何： 取消資料流程區塊](../../../docs/standard/parallel-programming/how-to-cancel-a-dataflow-block.md)。  
+ 此範例使用共用取消權杖，而非設定 <xref:System.Threading.Tasks.Dataflow.DataflowBlockOptions.CancellationToken%2A> 屬性，因為 <xref:System.Threading.Tasks.Dataflow.DataflowBlockOptions.CancellationToken%2A> 屬性會永久取消資料流程區塊的執行。 取消語彙基元可讓此範例重複使用相同的資料流程網路多次，即使使用者取消一或多個作業。 如需使用 <xref:System.Threading.Tasks.Dataflow.DataflowBlockOptions.CancellationToken%2A> 以永久取消資料流程區塊執行的範例，請參閱[如何：取消資料流程區塊](../../../docs/standard/parallel-programming/how-to-cancel-a-dataflow-block.md)。  
   
 <a name="ui"></a>   
 ## <a name="connecting-the-dataflow-network-to-the-user-interface"></a>連接資料流程網路與使用者介面  
@@ -118,15 +114,15 @@ ms.lasthandoff: 10/18/2017
   
 #### <a name="to-connect-the-dataflow-network-to-the-user-interface"></a>若要連接資料流程網路與使用者介面  
   
-1.  在主要表單的表單設計工具，建立事件處理常式<xref:System.Windows.Forms.ToolStripItem.Click>事件**選擇資料夾** 按鈕。  
+1.  在主要表單的表單設計工具上，為 **Choose Folder** 按鈕的 <xref:System.Windows.Forms.ToolStripItem.Click> 事件建立事件處理常式。  
   
-2.  實作<xref:System.Windows.Forms.ToolStripItem.Click>事件**選擇資料夾** 按鈕。  
+2.  實作 **Choose Folder** 按鈕的 <xref:System.Windows.Forms.ToolStripItem.Click> 事件。  
   
      [!code-csharp[TPLDataflow_CompositeImages#6](../../../samples/snippets/csharp/VS_Snippets_Misc/tpldataflow_compositeimages/cs/compositeimages/form1.cs#6)]  
   
-3.  在主要表單的表單設計工具，建立事件處理常式<xref:System.Windows.Forms.ToolStripItem.Click>事件**取消** 按鈕。  
+3.  在主要表單的表單設計工具上，為 **Cancel** 按鈕的 <xref:System.Windows.Forms.ToolStripItem.Click> 事件建立事件處理常式。  
   
-4.  實作<xref:System.Windows.Forms.ToolStripItem.Click>事件**取消** 按鈕。  
+4.  實作 **Cancel** 按鈕的 <xref:System.Windows.Forms.ToolStripItem.Click> 事件。  
   
      [!code-csharp[TPLDataflow_CompositeImages#7](../../../samples/snippets/csharp/VS_Snippets_Misc/tpldataflow_compositeimages/cs/compositeimages/form1.cs#7)]  
   
@@ -139,8 +135,6 @@ ms.lasthandoff: 10/18/2017
  下圖顯示通用 \Sample Pictures\ 資料夾的一般輸出。  
   
  ![Windows Forms 應用程式](../../../docs/standard/parallel-programming/media/tpldataflow-compositeimages.gif "TPLDataflow_CompositeImages")  
-  
-## <a name="next-steps"></a>後續步驟  
-  
-## <a name="see-also"></a>另請參閱  
+
+## <a name="see-also"></a>請參閱  
  [資料流程](../../../docs/standard/parallel-programming/dataflow-task-parallel-library.md)

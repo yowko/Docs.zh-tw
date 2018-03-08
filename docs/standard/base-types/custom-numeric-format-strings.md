@@ -22,20 +22,23 @@ helpviewer_keywords:
 - formatting numbers [.NET Framework]
 - format specifiers, custom numeric format strings
 ms.assetid: 6f74fd32-6c6b-48ed-8241-3c2b86dea5f4
-caps.latest.revision: "54"
+caps.latest.revision: 
 author: rpetrusha
 ms.author: ronpet
 manager: wpickett
-ms.openlocfilehash: a391ee54aaeaf007afcb6aacdb9376820950e89e
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.workload:
+- dotnet
+- dotnetcore
+ms.openlocfilehash: ec33a093e4f7f8ccda1992f26563bcd63853e634
+ms.sourcegitcommit: e7f04439d78909229506b56935a1105a4149ff3d
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 12/23/2017
 ---
 # <a name="custom-numeric-format-strings"></a>自訂數值格式字串
 您可以建立由一個或多個自訂數值規範所組成的自訂數值格式字串，以定義如何格式化數值資料。 自訂數值格式字串為任何非 [標準數值格式字串](../../../docs/standard/base-types/standard-numeric-format-strings.md)的格式字串。  
   
- 所有數字類型的 `ToString` 方法的一些多載可支援自訂數值格式字串。 例如，您可以提供數值格式字串給 <xref:System.Int32.ToString%28System.String%29> 類型的 <xref:System.Int32.ToString%28System.String%2CSystem.IFormatProvider%29> 和 <xref:System.Int32> 方法。 自訂數值格式字串也受到.NET[複合格式功能](../../../docs/standard/base-types/composite-formatting.md)，這由某些`Write`和`WriteLine`方法<xref:System.Console>和<xref:System.IO.StreamWriter>類別， <xref:System.String.Format%2A?displayProperty=nameWithType>方法，而<xref:System.Text.StringBuilder.AppendFormat%2A?displayProperty=nameWithType>方法。  
+ 所有數字類型的 `ToString` 方法的一些多載可支援自訂數值格式字串。 例如，您可以提供數值格式字串給 <xref:System.Int32.ToString%28System.String%29> 類型的 <xref:System.Int32.ToString%28System.String%2CSystem.IFormatProvider%29> 和 <xref:System.Int32> 方法。 .NET 的[複合格式功能](../../../docs/standard/base-types/composite-formatting.md)也支援自訂數值格式字串，此功能會由 <xref:System.Console> 與 <xref:System.IO.StreamWriter> 類別的一些 `Write` 和 `WriteLine` 方法，以及 <xref:System.String.Format%2A?displayProperty=nameWithType> 方法和 <xref:System.Text.StringBuilder.AppendFormat%2A?displayProperty=nameWithType> 方法所使用。  
   
 > [!TIP]
 >  您可以下載 [格式化公用程式](http://code.msdn.microsoft.com/NET-Framework-4-Formatting-9c4dae8d)，這個應用程式可讓您將格式字串套用至數值或日期和時間值，並且顯示結果字串。  
@@ -51,7 +54,7 @@ ms.lasthandoff: 11/21/2017
 |"%"|百分比預留位置|將數字乘以 100，並在結果字串中插入當地語系化的百分比符號。<br /><br /> 詳細資訊： ["%" 自訂規範](#SpecifierPct)。|0.3697 ("%#0.00", en-US) -> %36.97<br /><br /> 0.3697 ("%#0.00", el-GR) -> %36,97<br /><br /> 0.3697 ("##.0 %", en-US) -> 37.0 %<br /><br /> 0.3697 ("##.0 %", el-GR) -> 37,0 %|  
 |"‰"|千分之一符號預留位置|將數字乘以 1000，並在結果字串中插入當地語系化的千分比符號。<br /><br /> 詳細資訊： ["‰" 自訂規範](#SpecifierPerMille)。|0.03697 ("#0.00‰", en-US) -> 36.97‰<br /><br /> 0.03697 ("#0.00‰", ru-RU) -> 36,97‰|  
 |"E0"<br /><br /> "E+0"<br /><br /> "E-0"<br /><br /> "E0"<br /><br /> "E+0"<br /><br /> "E-0"|指數標記法|如果後面至少接著一個 0 (零)，則使用指數標記法來格式化結果。 大小寫 "E" 或 "e" 表示結果字串中指數符號的大小寫。 接在 "E" 或 "e" 字元後面的零個數決定指數中的最少位數。 加號 (+) 表示指數前面一律加上正負號字元。 減號 (-) 表示只在負指數前面才加上正負號字元。<br /><br /> 詳細資訊： ["E" 和 "e" 自訂規範](#SpecifierExponent)。|987654 ("#0.0e0") -> 98.8e4<br /><br /> 1503.92311 ("0.0##e+00") -> 1.504e+03<br /><br /> 1.8901385E-16 ("0.0e+00") -> 1.9e-16|  
-|"\\"|逸出字元|將下一個字元解譯為常值，而不是自訂格式規範。<br /><br /> 更多資訊： ["\\"逸出字元](#SpecifierEscape)。|987654 ("\\###00\\#") -> #987654#|  
+|"\\"|逸出字元|將下一個字元解譯為常值，而不是自訂格式規範。<br /><br /> 詳細資訊：["\\" 逸出字元](#SpecifierEscape)。|987654 ("\\###00\\#") -> #987654#|  
 |'*字串*'<br /><br /> "*字串*"|常值字串分隔符號|表示應該將所括住的字元原封不動地複製到結果字串。|68 ("# ' degrees'") -> 68  degrees<br /><br /> 68 ("# ' degrees'") -> 68  degrees|  
 |;|區段分隔符號|以個別格式字串來定義正數、負數和零值的區段。<br /><br /> 詳細資訊： [";" 區段分隔符號](#SectionSeparator)。|12.345 ("#0.0#;(#0.0#);-\0-") -> 12.35<br /><br /> 0 ("#0.0#;(#0.0#);-\0-") -> -0-<br /><br /> -12.345 ("#0.0#;(#0.0#);-\0-") -> (12.35)<br /><br /> 12.345 ("#0.0#;(#0.0#)") -> 12.35<br /><br /> 0 ("#0.0#;(#0.0#)") -> 0.0<br /><br /> -12.345 ("#0.0#;(#0.0#)") -> (12.35)|  
 |其他|所有其他字元|字元會原封不動地複製到結果字串。|68 ("# °") -> 68 °|  
@@ -171,7 +174,7 @@ ms.lasthandoff: 11/21/2017
  [回到表格](#table)  
   
 <a name="SpecifierEscape"></a>   
-## <a name="the--escape-character"></a>「\\"逸出字元  
+## <a name="the--escape-character"></a>"\\" 逸出字元  
  格式字串中的 "#"、"0"、"."、","、"%" 和 "‰" 符號會解譯為格式規範，而不是常值字元。 大寫和小寫 "E" 以及 + 和 - 符號視其在自訂格式字串中的位置而定，也有可能會解譯為格式規範。  
   
  若要避免將字元解譯為格式規範，您可以在前面加上反斜線，這是逸出字元。 逸出字元表示接下來的字元是字元常值，應該原封不動地放入結果字串中。  
@@ -181,7 +184,7 @@ ms.lasthandoff: 11/21/2017
 > [!NOTE]
 >  某些編譯器 (例如 C++ 和 C# 編譯器) 也可能會將單一反斜線字元解譯為逸出字元。 為了確保字串在格式化時能夠正確獲得解譯，您可以在 C# 中的字串前面加上逐字字串常值字元 (@ 字元)，或在 C# 和 C++ 中的每個反斜線前面再加上一個反斜線字元。 下列 C# 範例示範這兩種做法。  
   
- 下列範例會使用逸出字元，以避免格式化作業解譯"#"、"0"和"\\"字元視為逸出字元或格式規範。 C# 範例會多使用一個反斜線，以確保反斜線會解譯為常值字元。  
+ 下列範例會使用逸出字元，以避免格式化作業將 "#"、"0" 和 "\\" 字元解譯為逸出字元或格式規範。 C# 範例會多使用一個反斜線，以確保反斜線會解譯為常值字元。  
   
  [!code-cpp[Formatting.Numeric.Custom#11](../../../samples/snippets/cpp/VS_Snippets_CLR/formatting.numeric.custom/cpp/escape1.cpp#11)]
  [!code-csharp[Formatting.Numeric.Custom#11](../../../samples/snippets/csharp/VS_Snippets_CLR/formatting.numeric.custom/cs/escape1.cs#11)]
@@ -218,7 +221,7 @@ ms.lasthandoff: 11/21/2017
 ### <a name="control-panel-settings"></a>控制台設定值  
  [控制台] 中 [ **地區及語言選項]** 項目的設定會影響格式化作業所產生的結果字串。 這些設定是用來初始化與目前執行緒文化特性相關聯的 <xref:System.Globalization.NumberFormatInfo> 物件，而且目前的執行緒文化特性會提供用來管理格式的值。 使用不同設定的電腦會產生不同的結果字串。  
   
- 此外，如果您使用<xref:System.Globalization.CultureInfo.%23ctor%28System.String%29?displayProperty=nameWithType>建構函式來具現化新<xref:System.Globalization.CultureInfo>物件，代表相同的文化特性與目前的系統文化特性，所建立的任何自訂**地區及語言選項**在控制台中的項目會套用至新<xref:System.Globalization.CultureInfo>物件。 您可以使用 <xref:System.Globalization.CultureInfo.%23ctor%28System.String%2CSystem.Boolean%29?displayProperty=nameWithType> 建構函式來建立不反映系統自訂的 <xref:System.Globalization.CultureInfo> 物件。  
+ 此外，如果您使用 <xref:System.Globalization.CultureInfo.%23ctor%28System.String%29?displayProperty=nameWithType> 建構函式來將新的 <xref:System.Globalization.CultureInfo> 物件具現化，而此物件代表的文化特性與目前系統文化特性相同，則 [控制台] 中的 [地區及語言選項] 項目所建立的任何自訂都會套用至新的 <xref:System.Globalization.CultureInfo> 物件。 您可以使用 <xref:System.Globalization.CultureInfo.%23ctor%28System.String%2CSystem.Boolean%29?displayProperty=nameWithType> 建構函式來建立不反映系統自訂的 <xref:System.Globalization.CultureInfo> 物件。  
   
 ### <a name="rounding-and-fixed-point-format-strings"></a>四捨五入和定點格式字串  
  如果是定點格式字串 (即不含科學標記法格式字元的格式字串)，則數字會四捨五入成與小數點右邊之數字預留位置一樣多的小數位數。 如果格式字串不包含小數點，數值四捨五入至最接近的整數。 如果數值有比小數點左邊的數字預留位置還要多的位數，額外位數會緊接第一個數字預留位置之前複製到輸出字串。  
@@ -235,7 +238,7 @@ ms.lasthandoff: 11/21/2017
   
  [回到表格](#table)  
   
-## <a name="see-also"></a>另請參閱  
+## <a name="see-also"></a>請參閱  
  <xref:System.Globalization.NumberFormatInfo>  
  [格式化類型](../../../docs/standard/base-types/formatting-types.md)  
  [Standard Numeric Format Strings](../../../docs/standard/base-types/standard-numeric-format-strings.md)  

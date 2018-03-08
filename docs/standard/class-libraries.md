@@ -10,11 +10,14 @@ ms.prod: .net
 ms.technology: dotnet-standard
 ms.devlang: dotnet
 ms.assetid: a67484c3-fe92-44d8-8fa3-36fa2071d880
-ms.openlocfilehash: c72cdcbbe20c3c7a6890cdacb446e3db8de1b37a
-ms.sourcegitcommit: bd1ef61f4bb794b25383d3d72e71041a5ced172e
+ms.workload:
+- dotnet
+- dotnetcore
+ms.openlocfilehash: 5445c6971e243e9fc2eea34937683a5c3c432c01
+ms.sourcegitcommit: e7f04439d78909229506b56935a1105a4149ff3d
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/18/2017
+ms.lasthandoff: 12/23/2017
 ---
 # <a name="net-class-libraries"></a>.NET 類別庫
 
@@ -24,7 +27,7 @@ ms.lasthandoff: 10/18/2017
 
 *   **平台特定**類別庫可以存取指定平台中的所有 API (例如，.NET Framework、Xamarin iOS)，但是只能供將目標設為該平台的應用程式和程式庫使用。
 *   **可攜式**類別庫可以存取 API 子集，並且可以供將目標設為多個平台的應用程式和程式庫使用。
-*   **.NET Core** 類別庫會將平台特定和可攜式程式庫概念合併到提供兼具兩者的單一模型。
+*   **.NET Standard** 類別庫會將平台特定和可攜式程式庫概念合併到提供兼具兩者的單一模型。
 
 ## <a name="platform-specific-class-libraries"></a>平台特定類別庫
 
@@ -52,7 +55,7 @@ ms.lasthandoff: 10/18/2017
 
 下列平台支援 .NET Standard 類別庫：
 
-*   .NET Core
+*   .NET 核心
 *   ASP.NET Core
 *   .NET Framework 4.5+
 *   Windows 市集 App

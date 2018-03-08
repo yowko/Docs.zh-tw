@@ -11,29 +11,33 @@ ms.topic: article
 dev_langs:
 - csharp
 - vb
-helpviewer_keywords: PLINQ queries, performance tuning
+helpviewer_keywords:
+- PLINQ queries, performance tuning
 ms.assetid: 53706c7e-397d-467a-98cd-c0d1fd63ba5e
-caps.latest.revision: "14"
+caps.latest.revision: 
 author: rpetrusha
 ms.author: ronpet
 manager: wpickett
-ms.openlocfilehash: c3373cb6a2c535bd7d42eb062e1f9727952f7cfb
-ms.sourcegitcommit: bd1ef61f4bb794b25383d3d72e71041a5ced172e
+ms.workload:
+- dotnet
+- dotnetcore
+ms.openlocfilehash: 7d94a1fa4c559552a32140fd172c0c62e033f7a8
+ms.sourcegitcommit: e7f04439d78909229506b56935a1105a4149ff3d
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/18/2017
+ms.lasthandoff: 12/23/2017
 ---
 # <a name="understanding-speedup-in-plinq"></a>認識 PLINQ 中的加速
-PLINQ 的主要目的是加速執行 LINQ 查詢物件藉由在多核心電腦上平行執行查詢委派。 每個項目的來源集合中的處理序無關，各自有涉及在個別的委派之間共用的狀態時，PLINQ 的執行效果最好。 這類作業在 LINQ to Objects 和 PLINQ 中很常見，和通常稱為 「*delightfully 平行*"因為它們出借本身輕鬆地與多個執行緒上排程。 不過，並非所有的查詢包含完全個 delightfully 平行作業。在大部分情況下，查詢牽涉到某些運算子是無法平行處理，或降低平行執行的速度。 即使是完全 delightfully 平行查詢，使用 PLINQ 必須並仍資料分割的資料來源和上排程工作的執行緒，通常是在查詢完成時的結果合併。 所有這些作業新增計算成本的平行化作業;這些將加入的平行處理的成本會呼叫*負擔*。 若要達到最佳效能 PLINQ 查詢中的，目標是最大化 delightfully 平行的組件的組件，需要額外負荷降到最低。 本文章提供可協助您撰寫時仍會產生正確的結果會盡可能有效率的 PLINQ 查詢的資訊。  
+PLINQ 的主要目的是要藉由在多核心電腦上平行執行查詢委派，來加快 LINQ to Objects 查詢的執行速度。 當來源集合中每個元素的處理各自獨立，個別委派之間沒有涉及任何共用狀態時，PLINQ 能夠發揮最佳執行效能。 這類作業在 LINQ to Objects 和 PLINQ 中相當常見，通常稱為「令人愉快的平行」，因為它們很容易出借本身供多個執行緒上的排程使用。 不過，並非所有查詢都全部由令人愉快的平行作業所組成；在大多數情況下，查詢會涉及一些無法平行處理或是會拖慢平行執行速度的運算子。 而且，即使查詢是完全令人愉快的平行查詢，PLINQ 仍然必須分割資料來源並在執行緒上排定工作，通常還會在查詢完成時合併結果。 所有這些作業都會計入平行處理的計算成本中；這些添加平行處理的成本稱為「額外負荷」。 若要在 PLINQ 查詢中達到最佳效能，目標就是要將令人愉快的平行部分提升到最高，並將需要額外負荷的部分降到最低。 本文提供資訊來協助您撰寫儘可能發揮最高效率又仍然能產生正確結果的 PLINQ 查詢。  
   
 ## <a name="factors-that-impact-plinq-query-performance"></a>影響 PLINQ 查詢效能的因素  
- 下列各節列出一些最重要的因素影響平行查詢效能。 這些是一般陳述式本身並不足夠預測查詢效能，在所有情況下。 如往常，請務必測量利用某個範圍的代表性的組態和負載在電腦上的特定查詢的效能。  
+ 下列各節列出一些影響平行查詢效能的最重要因素。 這些是一般陳述，本身並不足以預測所有情況下的查詢效能。 如往常一般，請務必在電腦上使用一系列代表性設定和負載來測量特定查詢的實際效能。  
   
-1.  計算整體工作的成本。  
+1.  整體工作的計算成本。  
   
-     若要達到加速，PLINQ 查詢必須足夠 delightfully 平行的工作，來彌補額外負荷。 工作可以表示為乘以來源集合中的項目數的每個委派的運算成本。 假設作業可平行處理，更多計算它的昂貴，大於加速的機會。 例如，如果函式執行的一毫秒，循序查詢超過 1000年項目將會接受一個第二個執行這項操作，而平行查詢具有四個核心的電腦上可能只 250 毫秒。 這會產生 750 毫秒的加速效果。 如果函式需要每個項目執行一秒，通常會是 750 秒。 如果委派是很昂貴，PLINQ 可能會提供顯著的加速效果，與來源集合中只有幾個項目。 相反地，小型的來源集合具有 trivial 委派通常不是 PLINQ 的理想候選項。  
+     若要達到加速的效果，PLINQ 查詢必須有足夠的令人愉快平行工作來抵銷額外負荷。 此工作可以用每個委派的計算成本乘以來源集合中的元素數目來表示。 假設某個作業可以平行處理，則其計算成本越高，加速的機會也越大。 例如，如果某個函式所需的執行時間為 1 毫秒，則循序查詢 1000 個元素將需要 1 秒的時間來執行該作業，但如果在四核心電腦上執行平行查詢，則可能只需要 250 毫秒。 這樣就會產生 750 毫秒的加速效果。 如果該函式針對每個元素需要 1 秒的執行時間，則加速效果會是 750 秒。 如果委派的成本相當高，則 PLINQ 可能只要利用來源集合中的一些項目，就可以提供明顯的加速效果。 相反地，含有瑣碎委派的小型來源集合通常不是 PLINQ 的理想適用對象。  
   
-     在下列範例中，queryA 可能是工作的適合做為 PLINQ，假設其選取的函式牽涉到大量。 queryB 可能就不適合的候選項，因此沒有足夠的工作，在 Select 陳述式中，平行化作業帶來的額外負荷將位移大部分或所有的加速效果。  
+     在下列範例中，假設 queryA 的 Select 函式涉及很多工作，則 queryA 就可能是 PLINQ 的理想適用對象。 queryB 可能不是理想的適用對象，因為 Select 陳述式中並沒有足夠的工作，而平行處理的額外負荷將會抵銷大部分或全部的加速效果。  
   
     ```vb  
     Dim queryA = From num In numberList.AsParallel()  
@@ -53,42 +57,42 @@ PLINQ 的主要目的是加速執行 LINQ 查詢物件藉由在多核心電腦�
                  select num; //not as good for PLINQ  
     ```  
   
-2.  系統 （平行處理原則的程度） 上的邏輯核心數目。  
+2.  系統上的邏輯核心數目 (平行處理程度)。  
   
-     這點明顯推論上一節，delightfully 平行查詢執行速度在電腦上具有多個核心因為工作可以分配給更多並行執行緒。 整體的加速效果量取決於整體的查詢工作的百分比是可並行。 不過，不會假設所有查詢都會都執行兩次以快速在八個核心的電腦上做為四個核心的電腦。 微調查詢，以獲得最佳效能時, 務必測量在具有不同的數字的核心電腦上的實際結果。 這點與點 #1： 較大的資料集，才能利用大於運算資源。  
+     此點是上一節的明顯必然結果，令人愉快的平行查詢在有較多核心的電腦上執行速度較快，因為可以在更多並行執行緒之間分配工作。 整體加速效果的大小取決於整體查詢工作的可平行處理百分比。 不過，請不要認為所有查詢在八核心電腦上的執行速度會是四核心電腦的兩倍。 調整查詢以獲得最佳效能時，請務必在各種不同核心數的電腦上測量實際的結果。 此點與第 1 點相關：必須要有較大型的資料集，才能利用較多的計算資源。  
   
-3.  數目和類型的作業。  
+3.  作業的數量和種類。  
   
-     PLINQ 提供 AsOrdered 運算子的情況下，它是為了維持來源序列中項目的順序。 與順序相關聯的成本，但此成本是通常太大。 同樣地，GroupBy 和聯結作業會產生負擔。 當處理以任何順序，來源集合中的項目，並將其傳遞至下一個運算子，他們就可以為允許時，PLINQ 的執行效果最好。 如需詳細資訊，請參閱 [PLINQ 中的順序保留](../../../docs/standard/parallel-programming/order-preservation-in-plinq.md)。  
+     PLINQ 針對必須維持來源序列中元素順序的情況，提供 AsOrdered 運算子。 排序有相關的成本，但此成本通常不是太大。 GroupBy 和 Join 作業同樣也會造成額外負荷。 在允許以任何順序處理來源集合中的元素，並在一備妥這些元素就立即傳遞給下一個運算子的情況下，PLINQ 能夠發揮最佳執行效能。 如需詳細資訊，請參閱 [PLINQ 中的順序保留](../../../docs/standard/parallel-programming/order-preservation-in-plinq.md)。  
   
-4.  查詢執行的表單。  
+4.  查詢執行的形式。  
   
-     如果您透過呼叫 ToArray 或 ToList 儲存查詢的結果，所有平行執行緒的結果必須合併成單一的資料結構。 這牽涉到無可避免的運算成本。 同樣地，如果您來使用 （針對每個 Visual Basic 中） 的 「 foreach 迴圈，逐一查看結果，背景工作執行緒的結果必須序列化到列舉程式執行緒。 但是，如果您只想執行某些動作，根據每個執行緒的結果，您可以在多個執行緒上執行這項工作使用 ForAll 方法。  
+     如果您藉由呼叫 ToArray 或 ToList 來儲存查詢的結果，就必須將來自所有平行執行緒的結果合併成單一資料結構。 這會涉及無法避免的計算成本。 同樣地，如果您藉由使用 foreach (在 Visual Basic 中為 For Each) 迴圈來逐一查看結果，就必須將來自背景工作執行緒的結果序列化至列舉值執行緒。 但如果您只是想要根據來自每個執行緒的結果執行某個動作，則可以使用 ForAll 方法在多個執行緒上執行此工作。  
   
-5.  合併選項類型。  
+5.  合併作業的類型。  
   
-     PLINQ 可以緩衝的輸出，並產生區塊 （chunk） 或一次之後整個結果集產生，或資料流的個別結果時，會產生這些設定。 先前的結果是減少整體的執行時間並降低延遲，產生的項目之間的第二個結果。  雖然的合併選項執行不一定都有重大影響整體查詢效能，它們就會影響認知的效能，因為它們可以控制使用者必須等候以查看結果。 如需詳細資訊，請參閱 [PLINQ 中的合併選項](../../../docs/standard/parallel-programming/merge-options-in-plinq.md)。  
+     您可以將 PLINQ 設定成緩衝處理其輸出，然後在產生整個結果集後再以區塊方式產生它或全部一次產生，或是在產生結果時串流處理個別的結果。 前者的結果是縮短整體執行時間，後者的結果則是縮短產生元素之間的延遲時間。  雖然合併選項並不一定對整體查詢效能造成重大影響，但可影響察覺到的效能，因為它們可以控制使用者必須等待多久才能看到結果。 如需詳細資訊，請參閱 [PLINQ 中的合併選項](../../../docs/standard/parallel-programming/merge-options-in-plinq.md)。  
   
-6.  類型的資料分割。  
+6.  資料分割的種類。  
   
-     在某些情況下，透過索引的來源集合 PLINQ 查詢可能會導致不平衡的工作負載。 當發生這種情況時，您可以藉由建立自訂 partitioner 增加查詢效能。 如需詳細資訊，請參閱 [PLINQ 和 TPL 的自訂 Partitioner](../../../docs/standard/parallel-programming/custom-partitioners-for-plinq-and-tpl.md)。  
+     在某些情況下，在可編製索引之來源集合上執行的 PLINQ 查詢可能會導致工作負載不平衡。 當發生這種情況時，您或許能夠藉由建立自訂 Partitioner 來提升查詢效能。 如需詳細資訊，請參閱 [PLINQ 和 TPL 的自訂 Partitioner](../../../docs/standard/parallel-programming/custom-partitioners-for-plinq-and-tpl.md)。  
   
-## <a name="when-plinq-chooses-sequential-mode"></a>當 PLINQ 選擇循序模式  
- PLINQ 將一律嘗試執行至少以最快速度會以循序方式執行查詢的查詢。 雖然 PLINQ 看起來如何計算高度耗費資源的使用者委派，或有多大的輸入的來源是，它看起來特定的查詢 「 圖形 」。 具體來說，它會尋找查詢運算子或通常會導致查詢執行速度變慢，在平行模式中的運算子的組合。 發現這類圖形，根據預設 PLINQ 會回復為循序模式。  
+## <a name="when-plinq-chooses-sequential-mode"></a>當 PLINQ 選擇循序模式時  
+ PLINQ 會一律嘗試至少以和查詢循序執行時一樣快的速度來執行查詢。 雖然 PLINQ 並不會考慮使用者委派的計算成本有多高，或是輸入來源有多大，但確實會尋找特定的查詢「型態」。 具體而言，它會尋找通常造成查詢在平行執行模式下執行速度變慢的查詢運算子或運算子組合。 當 PLINQ 找到該型態時，預設會回復成循序模式。  
   
- 不過之後測量特定的查詢效能，您可能決定實際執行速度在平行模式。 在此情況下，您可以使用<xref:System.Linq.ParallelExecutionMode.ForceParallelism?displayProperty=nameWithType>加上旗標透過<xref:System.Linq.ParallelEnumerable.WithExecutionMode%2A>指示 PLINQ 來平行處理查詢的方法。 如需詳細資訊，請參閱[如何：在 PLINQ 中指定執行模式](../../../docs/standard/parallel-programming/how-to-specify-the-execution-mode-in-plinq.md)。  
+ 不過，在測量特定查詢的效能之後，您可能會判斷出實際上以平行模式執行的速度較快。 在這類情況下，您可以透過 <xref:System.Linq.ParallelEnumerable.WithExecutionMode%2A> 方法使用 <xref:System.Linq.ParallelExecutionMode.ForceParallelism?displayProperty=nameWithType>旗標，來指示 PLINQ 平行處理查詢。 如需詳細資訊，請參閱[如何：在 PLINQ 中指定執行模式](../../../docs/standard/parallel-programming/how-to-specify-the-execution-mode-in-plinq.md)。  
   
- 下列清單描述 PLINQ 依預設會在循序模式中執行的查詢圖形：  
+ 以下清單描述 PLINQ 預設將以循序模式執行的查詢型態：  
   
--   查詢包含 Select、 編製索引，索引的 SelectMany 或 ElementAt 子句之後已經移除或重新排列原始索引的排序或篩選運算子。  
+-   在已移除或已重新排列原始索引的排序或篩選運算子之後包含 Select、已編製索引的 Where、已編製索引的 SelectMany 或 ElementAt 子句的查詢。  
   
--   查詢中包含 Take、 TakeWhile，略過 SkipWhile 運算子，且來源序列中的索引不在原始的訂單。  
+-   包含 Take、TakeWhile、Skip、SkipWhile 運算子且來源序列中的索引不是按原始順序排列的查詢。  
   
 -   包含 Zip 或 SequenceEquals 的查詢，除非其中一個資料來源具有原始排序的索引，而且另一個資料來源也可以索引 (也就是陣列或 IList(T))。  
   
--   包含 Concat，除非它套用到索引的資料來源的查詢。  
+-   包含 Concat 的查詢 (但套用至可編製索引的資料來源時除外)  
   
--   包含相反地，除非套用至索引的資料來源的查詢。  
+-   包含 Reverse 的查詢 (但套用至可編製索引的資料來源時除外)  
   
-## <a name="see-also"></a>另請參閱  
+## <a name="see-also"></a>請參閱  
  [平行 LINQ (PLINQ)](../../../docs/standard/parallel-programming/parallel-linq-plinq.md)

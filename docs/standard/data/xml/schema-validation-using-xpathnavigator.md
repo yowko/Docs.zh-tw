@@ -12,15 +12,18 @@ dev_langs:
 - csharp
 - vb
 ms.assetid: 81fa0e41-d9c9-46f0-b22b-50da839c77f5
-caps.latest.revision: "3"
+caps.latest.revision: 
 author: mairaw
 ms.author: mairaw
 manager: wpickett
-ms.openlocfilehash: 91ad5c2e6f8af7f2c3709b9dff65bd728de08e5b
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.workload:
+- dotnet
+- dotnetcore
+ms.openlocfilehash: d06b82998deba05abe0fca1d4e93cd5c5ea319eb
+ms.sourcegitcommit: e7f04439d78909229506b56935a1105a4149ff3d
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 12/23/2017
 ---
 # <a name="schema-validation-using-xpathnavigator"></a>使用 XPathNavigator 進行結構描述驗證
 您可以使用 <xref:System.Xml.XmlDocument> 類別，透過兩種方式驗證 <xref:System.Xml.XmlDocument> 物件中包含的 XML 內容。 第一種方式是使用驗證 <xref:System.Xml.XmlReader> 物件來驗證 XML 內容，第二種方式是使用 <xref:System.Xml.XmlDocument.Validate%2A> 類別的 <xref:System.Xml.XmlDocument> 方法。 此外，您也可以使用 <xref:System.Xml.XPath.XPathDocument> 類別，執行 XML 內容的唯讀驗證。  
@@ -357,21 +360,21 @@ class ValidatingReaderExample
   
  使用 <xref:System.Xml.XPath.XPathNavigator.SetTypedValue%2A> 類別的 <xref:System.Xml.XPath.XPathNavigator> 方法進行的修改導致 <xref:System.InvalidCastException>，因為根據節點的結構描述型別，新值是無效的。  
   
- 如需有關修改值使用<xref:System.Xml.XPath.XPathNavigator.SetTypedValue%2A>方法，請參閱[使用 XPathNavigator 修改 XML 資料](../../../../docs/standard/data/xml/modify-xml-data-using-xpathnavigator.md)主題。  
+ 如需使用 <xref:System.Xml.XPath.XPathNavigator.SetTypedValue%2A> 方法修改值的詳細資訊，請參閱[使用 XPathNavigator 修改 XML 資料](../../../../docs/standard/data/xml/modify-xml-data-using-xpathnavigator.md)主題。  
   
 ### <a name="read-only-validation"></a>唯讀驗證  
  <xref:System.Xml.XPath.XPathDocument> 類別是 XML 文件之唯讀的記憶體中表示。 <xref:System.Xml.XPath.XPathDocument> 類別及 <xref:System.Xml.XmlDocument> 類別都可建立 <xref:System.Xml.XPath.XPathNavigator> 物件，以巡覽及編輯 XML 文件。 因為 <xref:System.Xml.XPath.XPathDocument> 類別是唯讀類別，所以從 <xref:System.Xml.XPath.XPathNavigator> 物件傳回的 <xref:System.Xml.XPath.XPathDocument> 物件無法編輯 <xref:System.Xml.XPath.XPathDocument> 物件中包含的 XML 文件。  
   
  在驗證時，您可以如本主題中先前所述，使用與驗證 <xref:System.Xml.XPath.XPathDocument> 物件建立 <xref:System.Xml.XmlDocument> 物件相同的方式，建立 <xref:System.Xml.XmlReader> 物件。 <xref:System.Xml.XPath.XPathDocument> 物件會在載入 XML 文件時對其進行驗證，但是因為無法編輯 <xref:System.Xml.XPath.XPathDocument> 物件中的 XML 資料，所以您無法重新驗證 XML 文件。  
   
- 如需有關唯讀和可編輯<xref:System.Xml.XPath.XPathNavigator>物件，請參閱[使用 XPathDocument 及 XmlDocument 讀取 XML 資料](../../../../docs/standard/data/xml/reading-xml-data-using-xpathdocument-and-xmldocument.md)主題。  
+ 如需有關唯讀與可編輯 <xref:System.Xml.XPath.XPathNavigator> 物件的詳細資訊，請參閱[使用 XPathDocument 和 XmlDocument 讀取 XML 資料](../../../../docs/standard/data/xml/reading-xml-data-using-xpathdocument-and-xmldocument.md)主題。  
   
-## <a name="see-also"></a>另請參閱  
+## <a name="see-also"></a>請參閱  
  <xref:System.Xml.XmlDocument>  
  <xref:System.Xml.XPath.XPathDocument>  
  <xref:System.Xml.XPath.XPathNavigator>  
  [使用 XPath 資料模型處理 XML 資料](../../../../docs/standard/data/xml/process-xml-data-using-the-xpath-data-model.md)  
  [使用 XPathDocument 及 XmlDocument 讀取 XML 資料](../../../../docs/standard/data/xml/reading-xml-data-using-xpathdocument-and-xmldocument.md)  
- [選取、 評估及使用 XPathNavigator 比對 XML 資料](../../../../docs/standard/data/xml/selecting-evaluating-and-matching-xml-data-using-xpathnavigator.md)  
+ [使用 XPathNavigator 選取、評估及比對 XML 資料](../../../../docs/standard/data/xml/selecting-evaluating-and-matching-xml-data-using-xpathnavigator.md)  
  [使用 XPathNavigator 存取 XML 資料](../../../../docs/standard/data/xml/accessing-xml-data-using-xpathnavigator.md)  
  [使用 XPathNavigator 編輯 XML 資料](../../../../docs/standard/data/xml/editing-xml-data-using-xpathnavigator.md)

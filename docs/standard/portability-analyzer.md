@@ -1,5 +1,5 @@
 ---
-title: .NET Portability Analyzer - .NET
+title: .NET Portability Analyzer | .NET
 description: "了解如何使用.NET Portability Analyzer 工具來評估程式碼移植到不同 .NET 實作之間的可行性，包括 .NET Core、.NET Standard、UWP 和 Xamarin。"
 keywords: .NET, .NET Core
 author: blackdwarf
@@ -14,10 +14,10 @@ ms.workload:
 - dotnet
 - dotnetcore
 ms.openlocfilehash: b4e19734bc1b7f394864a44ca0489c669cd63a61
-ms.sourcegitcommit: cf22b29db780e532e1090c6e755aa52d28273fa6
+ms.sourcegitcommit: f28752eab00d2bd97e971542c0f49ce63cfbc239
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 02/01/2018
+ms.lasthandoff: 01/31/2018
 ---
 # <a name="the-net-portability-analyzer"></a>.NET Portability Analyzer
 

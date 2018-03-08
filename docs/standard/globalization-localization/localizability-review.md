@@ -22,30 +22,33 @@ helpviewer_keywords:
 - global applications, localizability
 - localizing resources
 ms.assetid: 3aee2fbb-de47-4e37-8fe4-ddebb9719247
-caps.latest.revision: "11"
+caps.latest.revision: 
 author: rpetrusha
 ms.author: ronpet
 manager: wpickett
-ms.openlocfilehash: 7633c7fe9e99bde96ee108460e983eff48f1c7f0
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.workload:
+- dotnet
+- dotnetcore
+ms.openlocfilehash: 2aaf7c466c6662611e2b37d5c967a99d050158df
+ms.sourcegitcommit: e7f04439d78909229506b56935a1105a4149ff3d
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 12/23/2017
 ---
 # <a name="localizability-review"></a>可當地語系化檢閱
-當地語系化能力審查是準備發行到全球之應用程式開發工作的中繼步驟。 這個步驟會確認全球化應用程式是否準備好進行當地語系化，以及識別使用者介面中需要特殊處理的任何程式碼或任何方面。 另外還可協助確保當地語系化過程中，不會在應用程式中造成任何功能上的問題。 當地語系化能力審查提出的所有問題都獲得解決之後，您的應用程式就可以開始進行當地語系化。 如果當地語系化能力審查相當徹底，您應該不需要在當地語系化過程期間修改任何原始程式碼。  
+當地語系化能力審查是準備發行到全球之應用程式開發工作的中繼步驟。 這個步驟會確認全球化應用程式是否準備好進行當地語系化，以及識別使用者介面中需要特殊處理的任何程式碼或任何方面。 另外還可協助確保當地語系化過程中，不會在應用程式中造成任何功能上的問題。 當地語系化能力審查提出的所有問題都獲得解決之後，您的應用程式就可以開始進行當地語系化。 如果當地語系化能力檢閱相當徹底，您應該不需要在當地語系化過程期間修改任何原始程式碼。  
   
  當地語系化能力審查包括下列三項檢查：  
   
--   [會實作全球化建議？](#global)  
+-   [是否已實作全球化建議？](#global)  
   
--   [區分文化特性的功能是否正確處理？](#culture)  
+-   [是否正確處理區分文化特性的功能？](#culture)  
   
--   [您已經測試操作國際資料的應用程式嗎？](#test)  
+-   [是否使用國際資料測試過您的應用程式？](#test)  
   
 <a name="global"></a>   
 ## <a name="implementing-globalization-recommendations"></a>實作全球化建議  
- 如果您設計和開發您的應用程式當地語系化，請注意，如果您遵循建議的討論中，而且[全球化](../../../docs/standard/globalization-localization/globalization.md)發行項，則當地語系化能力檢閱將會大量地品質保證傳遞. 否則，在這個階段您應該檢閱並實作的建議[全球化](../../../docs/standard/globalization-localization/globalization.md)，並且修正原始程式碼中造成當地語系化無法順利的錯誤。  
+ 如果您設計和開發應用程式時已將當地語系化納入考量，而且已遵循[全球化](../../../docs/standard/globalization-localization/globalization.md)一文中所討論的建議，可當地語系化檢閱主要會是一項品質保證的作業。 否則，在這個階段您應該檢閱並實作[全球化](../../../docs/standard/globalization-localization/globalization.md)的建議，並且修正原始程式碼中造成當地語系化無法順利進行的錯誤。  
   
 <a name="culture"></a>   
 ## <a name="handling-culture-sensitive-features"></a>處理區分文化特性的功能  
@@ -78,9 +81,9 @@ ms.lasthandoff: 11/21/2017
   
 -   傳回未預期結果的字串比較或相等比較。  
   
- 如果您已開發應用程式時，所遵照全球化建議、 正確處理區分文化特性的功能識別並解決當地語系化問題所引發在測試期間，您可以繼續到下一個步驟中， [當地語系化](../../../docs/standard/globalization-localization/localization.md)。  
+ 如果您已遵循全球化建議開發應用程式、正確地處理區分文化特性的功能，而且找到並解決了測試期間發生的當地語系化問題，就可以繼續進行下一個步驟：[當地語系化](../../../docs/standard/globalization-localization/localization.md)。  
   
-## <a name="see-also"></a>另請參閱  
+## <a name="see-also"></a>請參閱  
  [全球化和當地語系化](../../../docs/standard/globalization-localization/index.md)  
  [當地語系化](../../../docs/standard/globalization-localization/localization.md)  
  [全球化](../../../docs/standard/globalization-localization/globalization.md)  

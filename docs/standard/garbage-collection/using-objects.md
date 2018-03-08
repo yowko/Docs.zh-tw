@@ -16,19 +16,22 @@ helpviewer_keywords:
 - try/finally block
 - garbage collection, encapsulating resources
 ms.assetid: 81b2cdb5-c91a-4a31-9c83-eadc52da5cf0
-caps.latest.revision: "15"
+caps.latest.revision: 
 author: rpetrusha
 ms.author: ronpet
 manager: wpickett
-ms.openlocfilehash: fd78c2f99ca5c8ffe3c753e158ceba3e0c458c5b
-ms.sourcegitcommit: bd1ef61f4bb794b25383d3d72e71041a5ced172e
+ms.workload:
+- dotnet
+- dotnetcore
+ms.openlocfilehash: 47ff64cab098425c5369773f792d586b65658d0f
+ms.sourcegitcommit: e7f04439d78909229506b56935a1105a4149ff3d
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/18/2017
+ms.lasthandoff: 12/23/2017
 ---
 # <a name="using-objects-that-implement-idisposable"></a>使用實作 IDisposable 的物件
 
-Common language runtime 的記憶體回收行程會回收受管理的物件所使用的記憶體，但是使用 unmanaged 的資源的類型會實作<xref:System.IDisposable>介面，讓這些未受管理的資源，以回收配置的記憶體。 實作 <xref:System.IDisposable> 的物件使用完畢時，您應呼叫物件的 <xref:System.IDisposable.Dispose%2A?displayProperty=nameWithType> 實作。 您可以使用下列其中一種做法：  
+通用語言執行平台的記憶體回收行程會回收受控物件所使用的記憶體，但是使用非受控資源的類型會實作 <xref:System.IDisposable> 介面，以允許回收配置給這些非受控資源的記憶體。 實作 <xref:System.IDisposable> 的物件使用完畢時，您應呼叫物件的 <xref:System.IDisposable.Dispose%2A?displayProperty=nameWithType> 實作。 您可以使用下列其中一種做法：  
   
 * 使用 C# `using` 陳述式或 Visual Basic `Using` 陳述式。  
   
@@ -48,7 +51,7 @@ C# 中的 `using` 陳述式和 Visual Basic 中的 `Using` 陳述式可簡化建
 [!code-csharp[Conceptual.Disposable#3](../../../samples/snippets/csharp/VS_Snippets_CLR/conceptual.disposable/cs/using3.cs#3)]
 [!code-vb[Conceptual.Disposable#3](../../../samples/snippets/visualbasic/VS_Snippets_CLR/conceptual.disposable/vb/using3.vb#3)]  
   
-C#`using`陳述式也可讓您取得內部相當於巢狀在單一陳述式的多個資源`using`陳述式。 下列範例會將兩個 <xref:System.IO.StreamReader> 物件具現化，以便讀取兩個不同檔案的內容。  
+C# `using` 陳述式還可讓您以單一陳述式取得多項資源，其內部相當於巢狀的 `using` 陳述式。 下列範例會將兩個 <xref:System.IO.StreamReader> 物件具現化，以便讀取兩個不同檔案的內容。  
   
 [!code-csharp[Conceptual.Disposable#4](../../../samples/snippets/csharp/VS_Snippets_CLR/conceptual.disposable/cs/using4.cs#4)]
 
@@ -60,15 +63,15 @@ C#`using`陳述式也可讓您取得內部相當於巢狀在單一陳述式的�
   
 * 若要將實作 <xref:System.IDisposable> 且範圍對於物件宣告所在區塊並非區域的物件具現化。  
   
-下列範例是類似於上述範例中，不同之處在於它會使用`try/catch/finally`區塊來具現化、 使用和處置<xref:System.IO.StreamReader>物件，並處理，所擲回任何例外狀況<xref:System.IO.StreamReader>建構函式和其<xref:System.IO.StreamReader.ReadToEnd%2A>方法。 請注意，在 `finally` 中的程式碼會先確認實作 <xref:System.IDisposable> 的物件不是 `null`，再呼叫 <xref:System.IDisposable.Dispose%2A> 方法。 若未這樣做，可能導致執行階段產生 <xref:System.NullReferenceException> 例外狀況。  
+下列範例類似上述範例，不過它會使用 `try/catch/finally` 區塊具現化、使用和處置 <xref:System.IO.StreamReader> 物件，以及處理 <xref:System.IO.StreamReader> 建構函式和其 <xref:System.IO.StreamReader.ReadToEnd%2A> 方法擲回的所有例外狀況。 請注意，在 `finally` 中的程式碼會先確認實作 <xref:System.IDisposable> 的物件不是 `null`，再呼叫 <xref:System.IDisposable.Dispose%2A> 方法。 若未這樣做，可能導致執行階段產生 <xref:System.NullReferenceException> 例外狀況。  
   
 [!code-csharp[Conceptual.Disposable#6](../../../samples/snippets/csharp/VS_Snippets_CLR/conceptual.disposable/cs/using5.cs#6)]
 [!code-vb[Conceptual.Disposable#6](../../../samples/snippets/visualbasic/VS_Snippets_CLR/conceptual.disposable/vb/using5.vb#6)]  
   
-您可以遵循這個基本模式，如果您選擇實作或必須實作`try/finally`封鎖，因為您的程式語言不支援`using`陳述式但不允許直接呼叫<xref:System.IDisposable.Dispose%2A>方法。 
+如果您的程式語言不支援 `using` 陳述式，但是允許直接呼叫 <xref:System.IDisposable.Dispose%2A> 方法，而使得您選擇實作或必須實作 `try/finally` 區塊，則可以遵循這個基本模式。 
   
-## <a name="see-also"></a>請參閱
+## <a name="see-also"></a>另請參閱
 
-[清除 Unmanaged 資源](../../../docs/standard/garbage-collection/unmanaged.md)   
-[using 陳述式 （C# 參考）](~/docs/csharp/language-reference/keywords/using-statement.md)   
-[使用陳述式 (Visual Basic)](~/docs/visual-basic/language-reference/statements/using-statement.md)
+[清除非受控資源](../../../docs/standard/garbage-collection/unmanaged.md)   
+[using 陳述式 (C# 參考)](~/docs/csharp/language-reference/keywords/using-statement.md)   
+[Using 陳述式 (Visual Basic)](~/docs/visual-basic/language-reference/statements/using-statement.md)

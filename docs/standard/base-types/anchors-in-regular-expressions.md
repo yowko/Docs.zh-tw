@@ -21,15 +21,18 @@ helpviewer_keywords:
 - .NET Framework regular expressions, anchors
 - .NET Framework regular expressions, atomic zero-width assertions
 ms.assetid: 336391f6-2614-499b-8b1b-07a6837108a7
-caps.latest.revision: "20"
+caps.latest.revision: 
 author: rpetrusha
 ms.author: ronpet
 manager: wpickett
-ms.openlocfilehash: 453776c97ec0531cea94ecf44c31216cf5b17a3b
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.workload:
+- dotnet
+- dotnetcore
+ms.openlocfilehash: e328c294a9b4ca3047c4ad1750ddedf64bac2218
+ms.sourcegitcommit: 3a96c706e4dbb4667bf3bf37edac9e1666646f93
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 02/27/2018
 ---
 # <a name="anchors-in-regular-expressions"></a>規則運算式中的錨點
 <a name="top"></a> 錨點或不可部分完成的無寬度判斷提示會指定字串中必須比對的位置。 當您在搜尋運算式中使用錨點時，規則運算式引擎不會在字串中前進或使用字元；它只會尋找指定位置中的相符項目。 例如， `^` 指定必須從行首或字串的開頭開始比對。 因此，僅當行首出現 "http:" 時，規則運算式 `^http:` 才會與其相符。 下表列出 .NET 中此規則運算式所支援的錨點。  
@@ -47,7 +50,7 @@ ms.lasthandoff: 11/21/2017
   
 <a name="Start"></a>   
 ## <a name="start-of-string-or-line-"></a>字串開頭或行首：^  
- `^` 錨點可讓您指定下列模式必須從字串的第一個字元位置開始。 如果您使用`^`與<xref:System.Text.RegularExpressions.RegexOptions.Multiline?displayProperty=nameWithType>選項 (請參閱[規則運算式選項](../../../docs/standard/base-types/regular-expression-options.md))，比對必須發生在每一行的開頭。  
+ `^` 錨點可讓您指定下列模式必須從字串的第一個字元位置開始。 如果您將 `^` 與 <xref:System.Text.RegularExpressions.RegexOptions.Multiline?displayProperty=nameWithType> 選項搭配使用 (請參閱[規則運算式選項](../../../docs/standard/base-types/regular-expression-options.md))，則比對必須發生在每一行的行首。  
   
  下列範例會在規則運算式中使用 `^` 錨點，該規則運算式會擷取與某些職業棒球隊存在期間年份相關的資訊。 此範例會呼叫 <xref:System.Text.RegularExpressions.Regex.Matches%2A?displayProperty=nameWithType> 方法的兩個多載：  
   
@@ -68,9 +71,9 @@ ms.lasthandoff: 11/21/2017
 |`(\w+\s\w+)`|比對一或多個文字字元，後面接空格，再接一或多個文字字元。 這是第四個擷取群組。|  
 |`,`|比對逗號。|  
 |`\s\d{4}`|比對後面接著四個十進位數字的空格。|  
-|(-`(\d{4}&#124;present))?`|比對出現零次或一次的連字號，後面接著四個十進位數字或字串 "present"。 這是第六個擷取群組。 它也包括第七個擷取群組。|  
+|<code>(-(\d{4}&#124;present))?</code>|比對出現零次或一次的連字號，後面接著四個十進位數字或字串 "present"。 這是第六個擷取群組。 它也包括第七個擷取群組。|  
 |`,?`|比對出現零次或一次的逗號。|  
-|`(\s\d{4}(-(\d{4}&#124;present))?,?)+`|比對出現一或多次的下列項目：空格、四個十進位數字、出現零或一次的連字號 (該連字號後面接著四個十進位數字或字串 "present")，以及零或一個逗號。 這是第五個擷取群組。|  
+|<code>(\s\d{4}(-(\d{4}&#124;present))?,?)+</code>|比對出現一或多次的下列項目：空格、四個十進位數字、出現零或一次的連字號 (該連字號後面接著四個十進位數字或字串 "present")，以及零或一個逗號。 這是第五個擷取群組。|  
   
  [回到頁首](#top)  
   
@@ -100,7 +103,7 @@ ms.lasthandoff: 11/21/2017
   
 <a name="EndOrNOnly"></a>   
 ## <a name="end-of-string-or-before-ending-newline-z"></a>字串結尾或結束新行之前：\Z  
- `\Z` 錨點指定比對必須發生在輸入字串的結尾，或在輸入字串結尾的 `\n` 之前。 它與 `$` 錨點相同，不同處在於 `\Z` 會忽略 <xref:System.Text.RegularExpressions.RegexOptions.Multiline?displayProperty=nameWithType> 選項。 因此在多行字串中，它只會比對最後一行的結尾，或 `\n`前的上一行。  
+ `\Z` 錨點指定比對必須發生在輸入字串的結尾，或在輸入字串結尾的 `\n` 之前。 它與 `$` 錨點相同，不同處在於 `\Z` 會忽略 <xref:System.Text.RegularExpressions.RegexOptions.Multiline?displayProperty=nameWithType> 選項。 因此在多行字串中，它只會比對最後一行的結尾，或 `\n` 前的上一行。  
   
  請注意， `\Z` 會比對 `\n` ，但不會比對 `\r\n` (CR/LF 字元組合)。 若要比對 CR/LF，請將 `\r?\Z` 包含在規則運算式模式中。  
   
@@ -113,7 +116,7 @@ ms.lasthandoff: 11/21/2017
   
 <a name="EndOnly"></a>   
 ## <a name="end-of-string-only-z"></a>僅字串結尾：\z  
- `\z` 錨點指定比對必須發生在輸入字串的結尾。 與 `$` 語言項目相同，`\z` 會忽略 <xref:System.Text.RegularExpressions.RegexOptions.Multiline?displayProperty=nameWithType> 選項。 不像 `\Z` 語言項目， `\z` 不會比對字串結尾處的 `\n` 字元。 因此，它可以只比對輸入字串的最後一行。  
+ `\z` 錨點指定比對必須發生在輸入字串的結尾。 與 `$` 語言項目相同，`\z` 會忽略 <xref:System.Text.RegularExpressions.RegexOptions.Multiline?displayProperty=nameWithType> 選項。 不像 `\Z` 語言項目，`\z` 不會比對字串結尾處的 `\n` 字元。 因此，它可以只比對輸入字串的最後一行。  
   
  下列範例會在規則運算式中使用 `\z` 錨點，該規則運算式與上一節中的範例不同，它會擷取與某些職業棒球隊存在期間年份相關的資訊。 這個範例會將字串陣列中的五個項目與規則運算模式 `^((\w+(\s?)){2,}),\s(\w+\s\w+),(\s\d{4}(-(\d{4}|present))?,?)+\r?\z`進行比對。 有兩個字串以歸位字元與換行字元結尾，一個字串以換行字元結尾，以及兩個字串不以歸位字元也不以換行字元結尾。 如輸出所示，只有不含歸位字元或換行字元的字串會符合模式。  
   
@@ -181,6 +184,6 @@ ms.lasthandoff: 11/21/2017
 |`qu`|比對子字串 "qu"。|  
 |`\w+`|比對一個或多個文字字元。|  
   
-## <a name="see-also"></a>另請參閱  
+## <a name="see-also"></a>請參閱  
  [規則運算式語言 - 快速參考](../../../docs/standard/base-types/regular-expression-language-quick-reference.md)  
  [規則運算式選項](../../../docs/standard/base-types/regular-expression-options.md)

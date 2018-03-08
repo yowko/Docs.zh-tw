@@ -23,18 +23,21 @@ helpviewer_keywords:
 - standard TimeSpan format strings
 - formatting [.NET Framework], time intervals
 ms.assetid: 9f6c95eb-63ae-4dcc-9c32-f81985c75794
-caps.latest.revision: "16"
+caps.latest.revision: 
 author: rpetrusha
 ms.author: ronpet
 manager: wpickett
-ms.openlocfilehash: c4c486728ee4f98a6718c4d019976fccd6f380d7
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.workload:
+- dotnet
+- dotnetcore
+ms.openlocfilehash: 02dd73cd7f8f6be07b298e6fb1aac2b4759d21bb
+ms.sourcegitcommit: e7f04439d78909229506b56935a1105a4149ff3d
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 12/23/2017
 ---
 # <a name="standard-timespan-format-strings"></a>標準 TimeSpan 格式字串
-<a name="Top"></a>標準<xref:System.TimeSpan>格式字串使用單一格式規範，定義的文字表示<xref:System.TimeSpan>格式化作業所產生的值。 任何包含一個以上字元 (包含空格) 的格式字串，都會解譯為自訂 <xref:System.TimeSpan> 格式字串。 如需詳細資訊，請參閱[自訂 TimeSpan 格式字串](../../../docs/standard/base-types/custom-timespan-format-strings.md)。  
+<a name="Top"></a> 標準 <xref:System.TimeSpan> 格式字串會使用單一格式規範，來定義從格式化作業所產生之 <xref:System.TimeSpan> 值的文字表示。 任何包含一個以上字元 (包含空格) 的格式字串，都會解譯為自訂 <xref:System.TimeSpan> 格式字串。 如需詳細資訊，請參閱[自訂 TimeSpan 格式字串](../../../docs/standard/base-types/custom-timespan-format-strings.md)。  
   
  <xref:System.TimeSpan> 值的字串表示，藉由呼叫 <xref:System.TimeSpan.ToString%2A?displayProperty=nameWithType> 方法的多載而產生，同時也可藉由支援複合格式化的方法所產生，例如 <xref:System.String.Format%2A?displayProperty=nameWithType>。 如需詳細資訊，請參閱[格式化類型](../../../docs/standard/base-types/formatting-types.md)和[複合格式設定](../../../docs/standard/base-types/composite-formatting.md)。 下列範例說明格式化作業中的標準格式字串用法。  
   
@@ -62,7 +65,7 @@ ms.lasthandoff: 11/21/2017
   
  在方括號 ([ 和 ]) 中的項目是選擇性的項目。 句號 (.) 和冒號 (:) 是常值的符號。 下表說明其餘項目。  
   
-|項目|描述|  
+|元素|描述|  
 |-------------|-----------------|  
 |*-*|選擇性的負號，表示負的時間間隔。|  
 |*d*|選擇性的天數，沒有前置的零。|  
@@ -71,7 +74,7 @@ ms.lasthandoff: 11/21/2017
 |*ss*|秒數，範圍從 "0" 到 "59"。|  
 |*fffffff*|秒的選擇性小數部分。  其值的範圍可從 "0000001" (一個刻度或一秒的千萬分之一) 到 "9999999" (一秒的千萬分之 9,999,999，也就是一秒減一個刻度)。|  
   
- 與 "g" 和 "G" 格式規範不同，"c" 的格式規範不區分文化特性。 它會產生 <xref:System.TimeSpan> 值的字串表示，而該值是非變異值，且對於 [!INCLUDE[net_v40_long](../../../includes/net-v40-long-md.md)] 之前的所有舊版 .NET Framework 皆通用。 "c"是預設值<xref:System.TimeSpan>格式字串;<xref:System.TimeSpan.ToString?displayProperty=nameWithType>方法使用"c"格式字串來格式化時間間隔值。  
+ 與 "g" 和 "G" 格式規範不同，"c" 的格式規範不區分文化特性。 它會產生 <xref:System.TimeSpan> 值的字串表示，而該值是非變異值，且對於 [!INCLUDE[net_v40_long](../../../includes/net-v40-long-md.md)] 之前的所有舊版 .NET Framework 皆通用。 "c" 是預設的 <xref:System.TimeSpan> 格式字串；<xref:System.TimeSpan.ToString?displayProperty=nameWithType> 方法使用 "c" 格式字串來將時間間隔值格式化。  
   
 > [!NOTE]
 >  <xref:System.TimeSpan> 也支援 "t" 和 "T" 標準格式字串，它們的行為與 "c" 標準格式字串相同。  
@@ -91,7 +94,7 @@ ms.lasthandoff: 11/21/2017
   
  在方括號 ([ 和 ]) 中的項目是選擇性的項目。 冒號 (:) 是常值符號。 下表說明其餘項目。  
   
-|項目|描述|  
+|元素|描述|  
 |-------------|-----------------|  
 |*-*|選擇性的負號，表示負的時間間隔。|  
 |*d*|選擇性的天數，沒有前置的零。|  
@@ -118,7 +121,7 @@ ms.lasthandoff: 11/21/2017
   
  在方括號 ([ 和 ]) 中的項目是選擇性的項目。 冒號 (:) 是常值符號。 下表說明其餘項目。  
   
-|項目|描述|  
+|元素|描述|  
 |-------------|-----------------|  
 |*-*|選擇性的負號，表示負的時間間隔。|  
 |*d*|天數，沒有前置的零。|  
@@ -137,7 +140,7 @@ ms.lasthandoff: 11/21/2017
   
  [回到表格](#Top)  
   
-## <a name="see-also"></a>另請參閱  
+## <a name="see-also"></a>請參閱  
  [格式化類型](../../../docs/standard/base-types/formatting-types.md)  
  [自訂 TimeSpan 格式字串](../../../docs/standard/base-types/custom-timespan-format-strings.md)  
- [剖析字串](../../../docs/standard/base-types/parsing-strings.md)
+ [Parsing Strings](../../../docs/standard/base-types/parsing-strings.md)

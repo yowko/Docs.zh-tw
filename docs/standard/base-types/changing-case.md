@@ -19,27 +19,30 @@ helpviewer_keywords:
 - uppercase
 - lowercase
 ms.assetid: 6805f81b-e9ad-4387-9f4c-b9bdb21b87c0
-caps.latest.revision: "15"
+caps.latest.revision: 
 author: rpetrusha
 ms.author: ronpet
 manager: wpickett
-ms.openlocfilehash: 8b03dec350d38d15faaa6a0afc6a1f2c31d5c58f
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.workload:
+- dotnet
+- dotnetcore
+ms.openlocfilehash: a3d845f53238f3b5b1744c13de9800e0d8f65dbc
+ms.sourcegitcommit: e7f04439d78909229506b56935a1105a4149ff3d
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 12/23/2017
 ---
-# <a name="changing-case-in-net"></a>在.NET 中的變更情況
+# <a name="changing-case-in-net"></a>在 .NET 中變更大小寫
 如果您要撰寫接受使用者輸入的應用程式，則無法確定使用者輸入資料時會使用大寫或小寫。 通常，您會希望字串的大小寫一致，特別是要在使用者介面中顯示這些字串時。 下表描述三種變更大小寫的方法。 前兩種方法提供接受文化特性的多載。  
   
-|方法名稱|用法|  
+|方法名稱|使用|  
 |-----------------|---------|  
 |<xref:System.String.ToUpper%2A?displayProperty=nameWithType>|將字串中的所有字元轉換成大寫。|  
 |<xref:System.String.ToLower%2A?displayProperty=nameWithType>|將字串中的所有字元轉換成小寫。|  
 |<xref:System.Globalization.TextInfo.ToTitleCase%2A?displayProperty=nameWithType>|將字串轉換成字首大寫。|  
   
 > [!WARNING]
->  請注意，您不應該使用 <xref:System.String.ToUpper%2A?displayProperty=nameWithType> 和 <xref:System.String.ToLower%2A?displayProperty=nameWithType> 方法來轉換字串，以便對字串進行比較或測試字串是否相等。 如需詳細資訊，請參閱[比較混合大小寫的字串](#Comparing)> 一節。  
+>  請注意，您不應該使用 <xref:System.String.ToUpper%2A?displayProperty=nameWithType> 和 <xref:System.String.ToLower%2A?displayProperty=nameWithType> 方法來轉換字串，以便對字串進行比較或測試字串是否相等。 如需詳細資訊，請參閱[比較混合大小寫的字串](#Comparing)一節。  
   
 <a name="Comparing"></a>   
 ## <a name="comparing-strings-of-mixed-case"></a>比較混合大小寫的字串  
@@ -55,7 +58,7 @@ ms.lasthandoff: 11/21/2017
  [!code-csharp[Strings.ChangingCase#1](../../../samples/snippets/csharp/VS_Snippets_CLR/Strings.ChangingCase/cs/Example.cs#1)]
  [!code-vb[Strings.ChangingCase#1](../../../samples/snippets/visualbasic/VS_Snippets_CLR/Strings.ChangingCase/vb/Example.vb#1)]  
   
- 上述範例預設會區分文化特性，它會套用目前文化特性的大小寫慣例。 若要執行不區分文化特性的大小寫變更或套用特定文化特性的大小寫慣例，請使用<xref:System.String.ToUpper%28System.Globalization.CultureInfo%29?displayProperty=nameWithType>方法多載，並提供值的<xref:System.Globalization.CultureInfo.InvariantCulture%2A?displayProperty=nameWithType>或<xref:System.Globalization.CultureInfo?displayProperty=nameWithType>物件，代表指定之文化特性*文化特性*參數。 如需範例，示範如何使用<xref:System.String.ToUpper%2A>方法以執行不區分文化特性的大小寫變更，請參閱[執行不區分文化特性的大小寫變更](../../../docs/standard/globalization-localization/performing-culture-insensitive-case-changes.md)。  
+ 上述範例預設會區分文化特性，它會套用目前文化特性的大小寫慣例。 若要執行不區分文化特性的大小寫變更，或套用特定文化特性的大小寫慣例，請使用 <xref:System.String.ToUpper%28System.Globalization.CultureInfo%29?displayProperty=nameWithType> 方法多載，並將 <xref:System.Globalization.CultureInfo.InvariantCulture%2A?displayProperty=nameWithType> 的值或代表指定文化特性的 <xref:System.Globalization.CultureInfo?displayProperty=nameWithType> 物件提供給 *culture* 參數。 如需示範如何使用 <xref:System.String.ToUpper%2A> 方法，以執行不區分文化特性之大小寫變更的範例，請參閱[執行不區分文化特性的大小寫變更](../../../docs/standard/globalization-localization/performing-culture-insensitive-case-changes.md)。  
   
 ## <a name="tolower"></a>ToLower  
  <xref:System.String.ToLower%2A?displayProperty=nameWithType> 方法類似於前一個方法，但會改將字串中的所有字元轉換成小寫。 下列範例會將字串 "Hello World!" 轉換成小寫。  
@@ -63,7 +66,7 @@ ms.lasthandoff: 11/21/2017
  [!code-csharp[Strings.ChangingCase#2](../../../samples/snippets/csharp/VS_Snippets_CLR/Strings.ChangingCase/cs/Example.cs#2)]
  [!code-vb[Strings.ChangingCase#2](../../../samples/snippets/visualbasic/VS_Snippets_CLR/Strings.ChangingCase/vb/Example.vb#2)]  
   
- 上述範例預設會區分文化特性，它會套用目前文化特性的大小寫慣例。 若要執行不區分文化特性的大小寫變更或套用特定文化特性的大小寫慣例，請使用<xref:System.String.ToLower%28System.Globalization.CultureInfo%29?displayProperty=nameWithType>方法多載，並提供值的<xref:System.Globalization.CultureInfo.InvariantCulture%2A?displayProperty=nameWithType>或<xref:System.Globalization.CultureInfo?displayProperty=nameWithType>物件，代表指定之文化特性*文化特性*參數。 如需範例，示範如何使用<xref:System.String.ToLower%28System.Globalization.CultureInfo%29>方法以執行不區分文化特性的大小寫變更，請參閱[執行不區分文化特性的大小寫變更](../../../docs/standard/globalization-localization/performing-culture-insensitive-case-changes.md)。  
+ 上述範例預設會區分文化特性，它會套用目前文化特性的大小寫慣例。 若要執行不區分文化特性的大小寫變更，或套用特定文化特性的大小寫慣例，請使用 <xref:System.String.ToLower%28System.Globalization.CultureInfo%29?displayProperty=nameWithType> 方法多載，並將 <xref:System.Globalization.CultureInfo.InvariantCulture%2A?displayProperty=nameWithType> 的值或代表指定文化特性的 <xref:System.Globalization.CultureInfo?displayProperty=nameWithType> 物件提供給 *culture* 參數。 如需示範如何使用 <xref:System.String.ToLower%28System.Globalization.CultureInfo%29> 方法，以執行不區分文化特性之大小寫變更的範例，請參閱[執行不區分文化特性的大小寫變更](../../../docs/standard/globalization-localization/performing-culture-insensitive-case-changes.md)。  
   
 ## <a name="totitlecase"></a>ToTitleCase  
  <xref:System.Globalization.TextInfo.ToTitleCase%2A?displayProperty=nameWithType> 會將每個字的第一個字元轉換成大寫，並將其餘字元轉換成小寫。 不過，全部大寫的字會假設為縮略字，而且不會轉換。  
@@ -77,6 +80,6 @@ ms.lasthandoff: 11/21/2017
   
  請注意，雖然它區分文化特性，但 <xref:System.Globalization.TextInfo.ToTitleCase%2A?displayProperty=nameWithType> 方法不會提供語言正確的大小寫規則。 例如，在上述範例中，這個方法會將 "a tale of two cities"  轉換成 "A Tale Of Two Cities"。 不過，對於 en-US 文化特性而言語言正確的字首大寫為 "A Tale of Two Cities"。  
   
-## <a name="see-also"></a>另請參閱  
+## <a name="see-also"></a>請參閱  
  [基本字串作業](../../../docs/standard/base-types/basic-string-operations.md)  
  [執行不區分文化特性的字串作業](../../../docs/standard/globalization-localization/performing-culture-insensitive-string-operations.md)

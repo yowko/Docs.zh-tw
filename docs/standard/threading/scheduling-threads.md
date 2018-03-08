@@ -12,21 +12,24 @@ helpviewer_keywords:
 - threading [.NET Framework], scheduling
 - scheduling threads
 ms.assetid: 67e4a0eb-3095-4ea7-b20f-908faa476277
-caps.latest.revision: "6"
+caps.latest.revision: 
 author: rpetrusha
 ms.author: ronpet
 manager: wpickett
-ms.openlocfilehash: 2e1fb7d61b8e250884b2c57cad8c5106bc77787a
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.workload:
+- dotnet
+- dotnetcore
+ms.openlocfilehash: 6bb715c11cc0d9b07e4ea8805ace7680ca92097c
+ms.sourcegitcommit: e7f04439d78909229506b56935a1105a4149ff3d
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 12/23/2017
 ---
 # <a name="scheduling-threads"></a>排程執行緒
-每個執行緒有指派給它的執行緒優先順序。 Common language runtime 中建立的執行緒一開始會被指派優先權**ThreadPriority.Normal**。 執行階段外部建立的執行緒會保留它們進入 managed 的環境之前，原本的優先權。 您可以取得或設定與任何執行緒的優先權**Thread.Priority**屬性。  
+每個執行緒都擁有一個指派的執行緒優先權。 Common Language Runtime 中建立的執行緒，一開始會被指派優先權 **ThreadPriority.Normal**。 建立在執行階段之外的執行緒，在它們進入受控環境之前，會保留它們所擁有的優先權。 您可以使用 **Thread.Priority** 屬性取得或設定任何執行緒的優先權。  
   
- 執行緒都會排定執行會依據其優先順序。 即使在執行階段內執行的執行緒，所有執行緒會由作業系統都指派處理器時間配量。 用來決定執行緒執行的順序的排程演算法的詳細資料會隨著每個作業系統。 在某些作業系統上，具有最高優先權執行緒可以執行） （屬於執行緒一定會排定執行第一次。 如果優先權相同的多個執行緒都可供，排程器不斷循環的執行緒的優先權，讓每個執行緒執行所在的固定的時間配量。 為具有較高優先順序的執行緒可執行，則不會執行較低優先權的執行緒。 當有沒有其他可執行的執行緒在指定的優先順序時，排程器將移到下一個較低的優先順序，並排程上執行的該優先順序的執行緒。 如果高優先順序的執行緒成為可執行，會佔用較低優先順序的執行緒，高優先順序的執行緒，允許一次重新執行。 在頂端，作業系統也可以調整執行緒的優先順序動態前景與背景之間移動應用程式的使用者介面。 其他作業系統可能會選擇使用不同的排程演算法。  
+ 執行緒會根據它們的優先權排定執行。 即使執行緒在執行階段內執行，所有的執行緒都會由作業系統指派處理器時間配量。 用來決定執行緒執行順序之排程演算法的詳細資料會隨著每個作業系統而不同。 在某些作業系統上，(在可以執行的執行緒中) 具有最高優先權的執行緒一律會排定為第一個執行。 如果具有相同優先權的多個執行緒都可使用，排程器會針對該優先權不斷循環執行緒，讓每個執行緒在固定的時間配量中執行。 只要具有高優先權的執行緒可以執行，低優先權的執行緒就不會執行。 當指定的優先權沒有可執行的執行緒時，排程器將移至下一個較低的優先順序，並排程該優先順序的執行緒執行。 如果高優先順序的執行緒變成可以執行，會佔用低優先權的執行緒並允許重新執行高優先權的執行緒。 除此之外，因為應用程式的使用者介面會在前景與背景之間移動，所以作業系統可以動態調整執行緒的優先權。 其他作業系統可能會選擇使用不同的排程演算法。  
   
-## <a name="see-also"></a>另請參閱  
+## <a name="see-also"></a>請參閱  
  [使用執行緒和執行緒處理](../../../docs/standard/threading/using-threads-and-threading.md)  
  [Windows 中的 Managed 和 Unmanaged 執行緒處理](../../../docs/standard/threading/managed-and-unmanaged-threading-in-windows.md)

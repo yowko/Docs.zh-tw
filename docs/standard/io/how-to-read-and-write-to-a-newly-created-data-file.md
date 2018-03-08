@@ -19,18 +19,21 @@ helpviewer_keywords:
 - I/O [.NET Framework], writing data
 - BinaryWriter class, examples
 ms.assetid: e209d949-31e8-44ea-8e38-87f9093f3093
-caps.latest.revision: "16"
+caps.latest.revision: 
 author: mairaw
 ms.author: mairaw
 manager: wpickett
-ms.openlocfilehash: b547f2c85495a497e5fc384f9a2ea44de7bf861c
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.workload:
+- dotnet
+- dotnetcore
+ms.openlocfilehash: 04ded71a23ba4cabab0a22e0d66c1084a726d8c8
+ms.sourcegitcommit: e7f04439d78909229506b56935a1105a4149ff3d
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 12/23/2017
 ---
 # <a name="how-to-read-and-write-to-a-newly-created-data-file"></a>如何：讀取和寫入新建立的資料檔案
-<xref:System.IO.BinaryWriter>和<xref:System.IO.BinaryReader?displayProperty=nameWithType>類別用於寫入和讀取資料而不是字元字串。 下列範例示範如何寫入資料，並從呼叫新的空白檔案資料流讀取資料`Test.data`。 建立在目前目錄中，相關聯的資料檔案後<xref:System.IO.BinaryWriter>和<xref:System.IO.BinaryReader>建立物件，而<xref:System.IO.BinaryWriter>物件用來寫入整數 0 到 10，以`Test.data`，，讓檔案指標的結尾檔案。 之後回到原始設定檔案指標<xref:System.IO.BinaryReader>物件讀取出指定的內容。  
+<xref:System.IO.BinaryWriter> 和 <xref:System.IO.BinaryReader?displayProperty=nameWithType> 類別用於寫入和讀取資料，而不是字元字串。 下列範例示範如何在稱為 `Test.data` 的新空白檔案資料流中寫入資料和讀取資料。 在目前的目錄中建立資料檔案之後，系統會建立相關聯的 <xref:System.IO.BinaryWriter> 和 <xref:System.IO.BinaryReader> 物件，而且會使用 <xref:System.IO.BinaryWriter> 物件，將 0 到 10 的整數寫入 `Test.data`，讓檔案指標留在檔案的結尾。 將檔案指標設定為原點之後，<xref:System.IO.BinaryReader> 物件會讀出指定的內容。  
   
 ## <a name="example"></a>範例  
  [!code-cpp[System.IO.BinaryReaderWriter#7](../../../samples/snippets/cpp/VS_Snippets_CLR_System/system.IO.BinaryReaderWriter/CPP/source6.cpp#7)]
@@ -38,9 +41,9 @@ ms.lasthandoff: 11/21/2017
  [!code-vb[System.IO.BinaryReaderWriter#7](../../../samples/snippets/visualbasic/VS_Snippets_CLR_System/system.IO.BinaryReaderWriter/VB/source6.vb#7)]  
   
 ## <a name="robust-programming"></a>穩固程式設計  
- 如果`Test.data`已存在於目前的目錄，<xref:System.IO.IOException>擲回例外狀況。 當您初始化檔案資料流時使用檔案模式選項 <xref:System.IO.FileMode.Create?displayProperty=nameWithType>，就會一律建立新檔案，而不會擲回例外狀況。  
+ 如果 `Test.data` 已存在於目前的目錄中，則會擲回 <xref:System.IO.IOException> 例外狀況。 當您初始化檔案資料流時使用檔案模式選項 <xref:System.IO.FileMode.Create?displayProperty=nameWithType>，就會一律建立新檔案，而不會擲回例外狀況。  
   
-## <a name="see-also"></a>另請參閱  
+## <a name="see-also"></a>請參閱  
  <xref:System.IO.BinaryReader>  
  <xref:System.IO.BinaryWriter>  
  <xref:System.IO.FileStream>  

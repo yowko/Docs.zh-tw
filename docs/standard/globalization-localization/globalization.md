@@ -19,15 +19,18 @@ helpviewer_keywords:
 - application development [.NET Framework], globalization
 - culture, globalization
 ms.assetid: 4e919934-6b19-42f2-b770-275a4fae87c9
-caps.latest.revision: "15"
+caps.latest.revision: 
 author: rpetrusha
 ms.author: ronpet
 manager: wpickett
-ms.openlocfilehash: a60284bf2db8f47dd17c04fad5cbd6db4970a8a7
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.workload:
+- dotnet
+- dotnetcore
+ms.openlocfilehash: 357d18843af0af2869d0ec98def6c733e51f9a4c
+ms.sourcegitcommit: e7f04439d78909229506b56935a1105a4149ff3d
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 12/23/2017
 ---
 # <a name="globalization"></a>全球化
 全球化涉及設計和開發世界性的應用程式，該類應用程式支援當地語系化的介面和地區資料，可供多種文化特性的使用者使用。 在開始設計階段之前，您應該先決定您的應用程式要支援哪些文化特性。 雖然應用程式將單一文化特性或區域作為預設，您仍可加以設計及撰寫，使其可輕易延伸至其他文化特性或地區的使用者。  
@@ -46,7 +49,7 @@ ms.lasthandoff: 11/21/2017
   
     -   [測試字串相等](../../../docs/standard/globalization-localization/globalization.md#Strings_Equality)  
   
-    -   [排序及分類](../../../docs/standard/globalization-localization/globalization.md#Strings_Ordering)  
+    -   [字串排序及分類](../../../docs/standard/globalization-localization/globalization.md#Strings_Ordering)  
   
     -   [避免字串串連](../../../docs/standard/globalization-localization/globalization.md#Strings_Concat)  
   
@@ -62,11 +65,11 @@ ms.lasthandoff: 11/21/2017
   
 -   [處理數值](../../../docs/standard/globalization-localization/globalization.md#Numbers)  
   
-    -   [顯示數字值](../../../docs/standard/globalization-localization/globalization.md#Numbers_Display)  
+    -   [顯示數值](../../../docs/standard/globalization-localization/globalization.md#Numbers_Display)  
   
     -   [保存數值](../../../docs/standard/globalization-localization/globalization.md#Numbers_Persist)  
   
--   [使用特定文化特性設定](../../../docs/standard/globalization-localization/globalization.md#Cultures)  
+-   [使用因文化特性而異的設定](../../../docs/standard/globalization-localization/globalization.md#Cultures)  
   
 <a name="HandlingStrings"></a>   
 ## <a name="handling-strings"></a>處理字串  
@@ -97,7 +100,7 @@ ms.lasthandoff: 11/21/2017
   
  如果您要建立當地語系化的應用程式，則使用資源檔具有特定的優點。 當您部署附屬組件中的資源時，通用語言執行平台會根據 <xref:System.Globalization.CultureInfo.CurrentUICulture%2A?displayProperty=nameWithType> 屬性所定義的使用者目前 UI 文化特性，自動選取適當的文化特性資源。 只要提供適當的特定文化特性資源，並正確地將 <xref:System.Resources.ResourceManager> 物件具現化或使用強型別的資源類別，執行階段即會處理擷取適當資源的細項。  
   
- 如需有關如何建立資源檔的詳細資訊，請參閱[建立資源檔](../../../docs/framework/resources/creating-resource-files-for-desktop-apps.md)。 如需建立及部署附屬組件資訊，請參閱[建立附屬組件](../../../docs/framework/resources/creating-satellite-assemblies-for-desktop-apps.md)和[封裝和部署資源](../../../docs/framework/resources/packaging-and-deploying-resources-in-desktop-apps.md)。  
+ 如需有關建立資源檔的詳細資訊，請參閱[建立資源檔](../../../docs/framework/resources/creating-resource-files-for-desktop-apps.md)。 如需有關建立及部署附屬組件的資訊，請參閱[建立附屬組件](../../../docs/framework/resources/creating-satellite-assemblies-for-desktop-apps.md)和[封裝和部署資源](../../../docs/framework/resources/packaging-and-deploying-resources-in-desktop-apps.md)。  
   
 <a name="Strings_Searching"></a>   
 ### <a name="searching-and-comparing-strings"></a>搜尋和比較字串  
@@ -182,7 +185,7 @@ ms.lasthandoff: 11/21/2017
   
 -   <xref:System.DateTimeOffset.ToString%28System.String%29?displayProperty=nameWithType>，其中包含格式字串  
   
--   [複合格式化](../../../docs/standard/base-types/composite-formatting.md)功能後，當它搭配日期  
+-   [複合格式化](../../../docs/standard/base-types/composite-formatting.md)功能，搭配日期使用時  
   
  下列範例顯示兩次 2012 年 10 月 11 日的日出和日落資料。 首先將目前文化特性設為克羅埃西亞文 (克羅埃西亞)，然後再設為英文 (英國)。 在每個案例中，日期和時間會以適用於該文化特性的格式顯示。  
   
@@ -213,7 +216,7 @@ ms.lasthandoff: 11/21/2017
 ### <a name="serialization-and-time-zone-awareness"></a>序列化和時區感知  
  日期和時間值可以有多個解譯，範圍從一般的時間 (「商店營業時間起始於 2013 年 1 月 2 日上午 9:00」) 到特定時間點 (「出生日期︰2013 年 1 月 2 日上午 6:32:00」)。 當時間值代表特定時間點，且您將其從序列化的值還原時，您應確定它代表相同的時間點，無論使用者的地理位置或時區皆然。  
   
- 下列範例說明此問題。 它會將儲存單一的本地日期和時間值三個以字串形式[標準格式](../../../docs/standard/base-types/standard-date-and-time-format-strings.md)("G"段長時間，一般日期"s"的可排序日期/時間，以及"o"的來回日期/時間) 以及在以二進位格式。  
+ 下列範例說明此問題。 它會以三個[標準格式](../../../docs/standard/base-types/standard-date-and-time-format-strings.md) (一般日期完整時間為 "G"、可排序日期/時間為 "s"，而來回日期/時間為 "o") 以及二進位格式，將單一本地日期和時間值當作字串儲存。  
   
  [!code-csharp[Conceptual.Globalization#10](../../../samples/snippets/csharp/VS_Snippets_CLR/conceptual.globalization/cs/dates4.cs#10)]
  [!code-vb[Conceptual.Globalization#10](../../../samples/snippets/visualbasic/VS_Snippets_CLR/conceptual.globalization/vb/dates4.vb#10)]  
@@ -263,13 +266,13 @@ ms.lasthandoff: 11/21/2017
 3/31/2013 3:00:00 AM Local  
 ```  
   
- 如需詳細資訊，請參閱[之間時區間轉換時間](../../../docs/standard/datetime/converting-between-time-zones.md)。  
+ 如需詳細資訊，請參閱[在各時區間轉換時間](../../../docs/standard/datetime/converting-between-time-zones.md)。  
   
 <a name="DatesAndTimes_Arithmetic"></a>   
 ### <a name="performing-date-and-time-arithmetic"></a>執行日期和時間運算  
  <xref:System.DateTime> 和 <xref:System.DateTimeOffset> 類型皆支援算術運算。 您可以計算兩個日期值之間的差異，或是可以加入或減去日期值的特定時間間隔。 不過，日期和時間值的算術運算並不會將時區和時區調整規則列入考量。 基於此原因，以分鐘表示時間的值日期和時間運算，可能會傳回不正確的結果。  
   
- 比方說，從太平洋標準時間轉換為太平洋日光節約時間發生在 3 月的第二個星期日，也就是 2013 年 3 月 10 日。 如下列範例所示，如果您在計算的日期和時間便是 48 小時後 2013 年 3 月 9 日上午 10:30 在標準太平洋時區系統上，結果中，2013 年 3 月 11 日上午 10:30，不會列入考量的中介時間調整。  
+ 比方說，從太平洋標準時間轉換為太平洋日光節約時間發生在 3 月的第二個星期日，也就是 2013 年 3 月 10 日。 如下列範例所示，如果您計算的日期和時間是系統上太平洋標準時區 2013 年 3 月 9 日上午 10:30 後的 48 小時， 則結果 2013 年 3 月 11 日上午 10:30 不會將中介時間調整列入考量。  
   
  [!code-csharp[Conceptual.Globalization#8](../../../samples/snippets/csharp/VS_Snippets_CLR/conceptual.globalization/cs/dates5.cs#8)]
  [!code-vb[Conceptual.Globalization#8](../../../samples/snippets/visualbasic/VS_Snippets_CLR/conceptual.globalization/vb/dates5.vb#8)]  
@@ -297,7 +300,7 @@ ms.lasthandoff: 11/21/2017
   
  不過，此程式碼一律會以英文傳回一周天數的名稱。 擷取月份名稱的程式碼通常更沒有彈性。 它通常會以特定語言的月份名稱假設 12 個月的行事曆。  
   
- 使用[自訂日期和時間格式字串](../../../docs/standard/base-types/custom-date-and-time-format-strings.md)或屬性的<xref:System.Globalization.DateTimeFormatInfo>物件，所以可以輕鬆地擷取反映天的每週或使用者的文化特性中的月份名稱的字串，如下列範例所示。 它將目前文化特性變更至法文 (法國)，並顯示 2013 年 7 月 1 日的一周天數名稱和月份名稱。  
+ 透過使用[自訂日期和時間格式字串](../../../docs/standard/base-types/custom-date-and-time-format-strings.md)或 <xref:System.Globalization.DateTimeFormatInfo> 物件的屬性，便可輕易擷取以使用者的文化特性反映一週天數或月份名稱的字串，如下列範例所示。 它將目前文化特性變更至法文 (法國)，並顯示 2013 年 7 月 1 日的一周天數名稱和月份名稱。  
   
  [!code-csharp[Conceptual.Globalization#20](../../../samples/snippets/csharp/VS_Snippets_CLR/conceptual.globalization/cs/monthname2.cs#20)]
  [!code-vb[Conceptual.Globalization#20](../../../samples/snippets/visualbasic/VS_Snippets_CLR/conceptual.globalization/vb/monthname2.vb#20)]  
@@ -317,7 +320,7 @@ ms.lasthandoff: 11/21/2017
   
 -   任何數值類型的 `ToString(String)` 方法，包括作為引數的格式字串  
   
--   [複合格式化](../../../docs/standard/base-types/composite-formatting.md)功能後，當它搭配數值使用  
+-   [複合格式化](../../../docs/standard/base-types/composite-formatting.md)功能，搭配數值使用時  
   
  下列範例顯示法國巴黎的每月平均溫度。 它在顯示資料前將目前文化特性設為法文 (法國)，然後將其設為英文 (美國)。 在每個案例中，月份名稱和溫度會以適用於該文化特性的格式顯示。 請注意兩個文化特性在溫度值中使用不同的小數分隔符號。 也請注意，此範例使用 "MMMM" 自訂日期和時間格式字串來顯示完整月份名稱，並藉由判斷 <xref:System.Globalization.DateTimeFormatInfo.MonthNames%2A?displayProperty=nameWithType> 陣列中最長月份名稱的長度，為結果字串中的月份名稱配置適當的空間量。  
   
@@ -374,8 +377,8 @@ ms.lasthandoff: 11/21/2017
   
 -   .NET Framework 支援取代的文化特性。 這可讓您定義新的自訂文化特性，進而補充現有標準文化特性，或完全加以取代。  
   
--   使用者可以使用自訂文化特性設定**地區和語言**控制台 中的應用程式。 將 <xref:System.Globalization.CultureInfo> 物件具現化時，您可透過呼叫 <xref:System.Globalization.CultureInfo.%23ctor%28System.String%2CSystem.Boolean%29?displayProperty=nameWithType> 建構函式來判斷其是否反映這些使用者自訂。 一般對終端使用者應用程式而言，您應該遵守使用者喜好設定，並以使用者所預期的格式呈現資料。  
+-   使用者可透過使用 [控制台] 中的 [地區和語言] 應用程式，自訂文化特性專屬設定。 將 <xref:System.Globalization.CultureInfo> 物件具現化時，您可透過呼叫 <xref:System.Globalization.CultureInfo.%23ctor%28System.String%2CSystem.Boolean%29?displayProperty=nameWithType> 建構函式來判斷其是否反映這些使用者自訂。 一般對終端使用者應用程式而言，您應該遵守使用者喜好設定，並以使用者所預期的格式呈現資料。  
   
-## <a name="see-also"></a>另請參閱  
+## <a name="see-also"></a>請參閱  
  [全球化和當地語系化](../../../docs/standard/globalization-localization/index.md)  
  [使用字串的最佳做法](../../../docs/standard/base-types/best-practices-strings.md)

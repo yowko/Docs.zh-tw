@@ -1,6 +1,6 @@
 ---
-title: "快速入門 - 本機環境 - C# 指南"
-description: "本快速入門提供於本機執行快速入門的基本知識"
+title: "本機環境教學課程 - C# 本機快速入門"
+description: "本快速入門提供於本機執行快速入門的基本概念"
 author: billwagner
 ms.topic: article
 ms.date: 12/07/2017
@@ -8,11 +8,11 @@ ms.prod: .net
 ms.technology: devlang-csharp
 ms.devlang: csharp
 ms.custom: mvc
-ms.openlocfilehash: e7747941a7fb1ff43b1a259a78d82665b024a6dd
-ms.sourcegitcommit: 8bde7a3432f30fc771079744955c75c58c4eb393
+ms.openlocfilehash: 9957f524e04f8ff64d4f640cf085b16cf9a2c0c6
+ms.sourcegitcommit: d2da0142247ef42a219a5d2907f153e62dc6ea0d
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 01/20/2018
+ms.lasthandoff: 02/01/2018
 ---
 # <a name="local-environment"></a>本機環境
 
@@ -33,13 +33,13 @@ ms.lasthandoff: 01/20/2018
 
 ## <a name="numbers-in-cnumbers-in-csharp-localmd"></a>[C# 中的數字](numbers-in-csharp-local.md)
 
-在 [C# 中的數字](numbers-in-csharp-local.md)快速入門中，您將會學習電腦儲存數字的方式，以及如何使用不同的數值類型執行計算。 您將會學習進位的基本概念，以及如何使用 C# 執行數學計算。 
+在 [C# 中的數字](numbers-in-csharp-local.md)快速入門中，您將會學習電腦儲存數字的方式，以及如何使用不同的數值型別來執行計算。 您將會學習進位的基本概念，以及如何使用 C# 執行數學計算。 
 
 此快速入門假設您已完成 [Hello World](hello-world.yml) 教學課程。
 
 ## <a name="branches-and-loopsbranches-and-loops-localmd"></a>[分支和迴圈](branches-and-loops-local.md)
 
-[分支和迴圈](branches-and-loops-local.md)快速入門會指導您如何根據儲存在變數中的值，來選取不同程式碼執行路徑的基本概念。 您將會學習控制流程的基本概念，也就是程式做出決定並選擇不同動作的基礎機制。 
+[分支和迴圈](branches-and-loops-local.md)快速入門會指導您如何根據儲存在變數中的值，以選取不同程式碼執行路徑的基本概念。 您將會學習控制流程的基本概念，也就是程式做出決定並選擇不同動作的基礎機制。 
 
 此入門課程假設您已經完成 [Hello World](hello-world.yml) 和 [C# 中的數字](numbers-in-csharp-local.md)課程。
 

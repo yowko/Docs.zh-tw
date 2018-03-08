@@ -9,60 +9,121 @@ ms.topic: article
 ms.prod: .net-core
 ms.devlang: dotnet
 ms.assetid: 71b9d722-c5a8-4271-9ce1-d87e7ae2494d
-ms.workload: dotnetcore
-ms.openlocfilehash: 9f5cd2f7c4fec553dfdfaf1765663b6896b3061d
-ms.sourcegitcommit: e7f04439d78909229506b56935a1105a4149ff3d
+ms.workload:
+- dotnetcore
+ms.openlocfilehash: e511ea13c578ab44c65a5ba78f666cce1ab6a0c4
+ms.sourcegitcommit: c3957fdb990060559d73cca44ab3e2c7b4d049c0
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 12/23/2017
+ms.lasthandoff: 03/05/2018
 ---
 # <a name="net-core-distribution-packaging"></a>.NET Core 發佈封裝
 
 隨著 .NET Core 可在越來越多的平台上使用，了解如何封裝、命名和建立 .NET Core 版本是有用的。 如此一來，套件維護人員可以協助確保一致的體驗，無論使用者選擇在何處執行 .NET。
 
-## <a name="net-core-components"></a>.NET Core 元件
+## <a name="disk-layout"></a>磁碟配置
 
-.NET Core 是由三個必須封裝的主要部分組成：
+安裝時，.NET Core 包含在檔案系統中進行如下配置的數個元件：
 
-1. **主機** (也稱為"muxer") 有兩個不同的角色：啟用執行階段以啟動應用程式，以及啟用 SDK 來分派命令給它。 主機是原生可執行檔 (`dotnet.exe`) 和其支援的原則文件庫 (安裝在 `host/fxr` 中)。 它是以 [`dotnet/core-setup`](https://github.com/dotnet/core-setup/) 存放庫中的程式碼建置。 在指定的電腦上通常只有一個主機，雖然這不是嚴格要求。
-2. **架構**是由執行階段和支援的 Managed 程式庫組成。 該架構可以作為應用程式的一部分安裝，也可以作為可由多個應用程式重複使用之中央位置的共用架構來安裝。 在指定的電腦上可能會安裝任意數目的共用架構。 共用架構位在 `shared/Microsoft.NETCore.App/<version>` 下。 主機會在所有更新程式版本上向前復原。 如果應用程式以 `Microsoft.NETCore.App` 1.0.0 為目標，而只存在 1.0.4，則應用程式將針對 1.0.4 啟動。
-3. **SDK** (也稱為「工具」) 是一組受管理的工具，可用來撰寫及建置 .NET Core 程式庫和應用程式。 SDK 包含 CLI、MSBuild，以及相關聯的建置工作與目標、NuGet，新的專案範本等。電腦上可以有多個 SDK (例如，建置明確要求較舊版本的專案)，但建議使用最新發行的工具。
+```
+.
+├── dotnet                       (1)
+├── LICENSE.txt                  (8)
+├── ThirdPartyNotices.txt        (8)
+├── host
+│   └── fxr
+│       └── <fxr version>        (2)
+├── sdk
+│   ├── <sdk version>            (3)
+│   └── NuGetFallbackFolder      (4)
+└── shared
+    ├── Microsoft.NETCore.App
+    │   └── <runtime version>    (5)
+    └── Microsoft.AspNetCore.App
+        └── <aspnetcore version> (6)
+    └── Microsoft.AspNetCore.All
+        └── <aspnetcore version> (7)
+/
+├─usr/share/man/man1
+│       └── dotnet.1.gz          (9)
+└─usr/bin
+        └── dotnet               (10)
+```
 
-## <a name="recommended-package-names"></a>建議的套件名稱
+- (1) **dotnet** 主機 (也稱為"muxer") 有兩個不同的角色：啟用執行階段以啟動應用程式，以及啟用 SDK 將命令分派給它。 主機是原生可執行檔 (`dotnet.exe`)。
 
-下列指導方針是套件名稱的建議。 套件維護人員可能會根據各種原因而選擇不遵循建議，例如他們設為目標之特定發佈的不同傳統。
+有單一主機時，大部分的其他元件都會位在已建立版本的目錄 (2,3,5,6) 中。 這些表示系統上可以有多個版本，因為它們是並排安裝。
 
-### <a name="minimum-package-set"></a>最小封裝集合
+- (2) **host/fxr/\<fxr 版本>** 包含主機所使用的架構解析邏輯。 主機會使用已安裝的最新 hostfxr。 hostfxr 負責在執行 .NET Core 應用程式時選取適當的執行階段。 例如，針對 .NET Core 2.0.0 所建置的應用程式將會使用可用的 2.0.5 執行階段。 同樣地，hostfxr 會在開發期間選取適當的 SDK。
 
-* `dotnet-runtime-[major].[minor]`：指定版本的共用架構 (針對指定的主要 + 次要組合，封裝管理員中僅可使用最新的更新程式版本)。 **相依性**：`dotnet-host`
-* `dotnet-sdk`：最新的 SDK。 **相依性**：最新的 `dotnet-sdk-[major].[minor]`。
-* `dotnet-sdk-[major].[minor]`：指定版本的 SDK。 指定的版本是內含共用架構的最高內含版本，因此使用者可以輕鬆地將 SDK 與共用架構相關聯。 **相依性**：`dotnet-host`，一或多個 `dotnet-runtime-[major].[minor]` (其中一個執行階段是由 SDK 程式碼本身使用，其他執行階段則是供使用者作為目標建置和執行)。
-* `dotnet-host`：最新的主機。
+- (3) **sdk/\<SDK 版本>** SDK (也稱為「工具」) 是一組受控工具，可用來撰寫與建置 .NET Core 程式庫和應用程式。 SDK 包含 CLI、Roslyn 編譯器、MSBuild，以及相關聯的建置工作與目標、NuGet 及新的專案範本等。
+
+- (4) **sdk/NuGetFallbackFolder** 包含 SDK 在 `dotnet restore` 步驟期間所使用的 NuGet 套件快取。
+
+**共用**資料夾包含架構。 共用架構在集中位置提供一組程式庫，以供不同的應用程式使用。
+
+- (5) **shared/Microsoft.NETCore.App/\<執行階段版本>** 此架構包含 .NET Core 執行階段和支援受控程式庫。
+
+- (6,7) **shared/Microsoft.AspNetCore.{App,All}/\<aspnetcore 版本>** 包含 ASP.NET Core 程式庫。 在 .NET Core 專案期間，開發並支援 `Microsoft.AspNetCore.App` 下的程式庫。 `Microsoft.AspNetCore.All` 下的程式庫是也包含協力廠商程式庫的超集。
+
+- (8) **LICENSE.txt,ThirdPartyNotices.txt** 是 .NET Core 授權以及 .NET Core 中所使用協力廠商程式庫的授權。
+
+- (9,10) **dotnet.1.gz, dotnet** `dotnet.1.gz` 是 dotnet 手冊頁。 `dotnet` 是 dotnet host(1) 的符號連結。 這些檔案會安裝在已知位置，以進行系統整合。
+
+## <a name="recommended-packages"></a>建議的套件
+
+.NET Core 版本設定是以執行階段元件 `[major].[minor]` 版本號碼為基礎。
+SDK 版本會使用相同的 `[major].[minor]`，並且具有合併 SDK 功能及修補程式語意的獨立 `[patch]`。
+例如：SDK 2.2.302 版是支援 2.2 執行階段的 SDK 之第 3 個功能版本的第 2 個修補程式版本。
+
+部分套件的名稱包含版本號碼部分。 這可讓使用者安裝特定版本。
+版本的其餘部分不會納入版本名稱中。 這可讓 OS 套件管理員更新套件 (例如自動安裝安全性修正)。
+
+下列各表顯示建議的套件。
+
+| 名稱                                    | 範例                | 使用案例：安裝...           | 包含           | 相依性                                   | 版本            |
+|-----------------------------------------|------------------------|---------------------------------|--------------------|------------------------------------------------|--------------------|
+| dotnet-sdk-[major]                      | dotnet-sdk-2           | 執行階段主要的最新 SDK    |                    | dotnet-sdk-[major].[latestminor]               | \<SDK 版本>     |
+| dotnet-sdk-[major].[minor]              | dotnet-sdk-2.1         | 特定執行階段的最新 SDK |                    | dotnet-sdk-[major].[minor].[latest sdk feat]xx | \<SDK 版本>     |
+| dotnet-sdk-[major].[minor].[sdk feat]xx | dotnet-sdk-2.1.3xx     | 特定 SDK 功能版本    | (3),(4)            | aspnetcore-runtime-[major].[minor]             | \<SDK 版本>     |
+| aspnetcore-runtime-[major].[minor]      | aspnetcore-runtime-2.1 | 特定 ASP.NET Core 執行階段   | (6),[(7)]          | dotnet-runtime-[major].[minor]                 | \<執行階段版本> |
+| dotnet-runtime-[major].[minor]          | dotnet-runtime-2.1     | 特定執行階段                | (5)                | host-fxr:\<執行階段版本>+                   | \<執行階段版本> |
+| dotnet-host-fxr                         | dotnet-host-fxr        | _dependency_                    | (2)                | host:\<執行階段版本>+                       | \<執行階段版本> |
+| dotnet-host                             | dotnet-host            | _dependency_                    | (1),(8),(9),(10)   |                                                | \<執行階段版本> |
+
+大部分的發佈都需要從來源建置的所有成品。 這會對套件造成某個影響：
+
+- 無法從來源輕鬆地建置 `shared/Microsoft.AspNetCore.All` 下的協力廠商程式庫。 因此會從 `aspnetcore-runtime` 套件省略該資料夾。
+
+- 使用 `nuget.org` 中的二進位成品填入 `NuGetFallbackFolder`。 它應該維持空白。
+
+多個 `dotnet-sdk` 套件可能會提供相同的 `NuGetFallbackFolder` 檔案。 若要避免套件管理員問題，這些檔案應該相同 (總和檢查碼、修改日期...)。
 
 #### <a name="preview-versions"></a>預覽版本
 
-套件維護人員可能會決定要包含共用架構和 SDK 的預覽版本。 這些永遠不應該包含在未建立版本的 `dotnet-sdk` 套件中，但可以作為已建立版本的套件發佈，且將其他預覽標記附加到名稱的主要版本和次要版本區段。 例如，可能會有 `dotnet-sdk-2.0-preview-final` 套件。
+套件維護人員可能會決定要提供共用架構和 SDK 的預覽版本。 可能會使用 `dotnet-sdk-[major].[minor].[sdk feat]xx`、`aspnetcore-runtime-[major].[minor]`、`dotnet-runtime-[major].[minor]` 套件提供 Preview 版本。 針對 Preview 版本，套件版本主要必須設為零。 因此，最終版本將會安裝為套件的升級。
 
-### <a name="optional-additional-packages"></a>選用的其他套件
+#### <a name="patch-packages"></a>修補程式套件
 
-某些維護人員可能會選擇提供其他套件，例如：
+因為套件的修補程式版本可能會導致重大變更，所以套件維護人員可能想要提供「修補程式套件」。 這些套件允許安裝不會自動升級的特定修補程式版本。 只有在極少數的情況下才應該使用修補程式套件，因為它們不會與 (安全性) 修正程式一起自動升級。
 
-* `dotnet-lts`：共用架構的最新長期支援 (LTS) 版本。 [LTS 和目前的版本序列](~/docs/core/versions/lts-current.md)會對應 .NET Core 發行的不同步調。 根據使用者希望更新的頻率，他們可以選擇採用一個序列或其他序列。 這也是一個與支援層級相關的概念，因此根據考量的發行套件，不一定會有意義。
+下表顯示建議的套件和**修補程式套件**。
 
-## <a name="disk-layout"></a>磁碟配置
+| 名稱                                           | 範例                  | 包含         | 相依性                                              |
+|------------------------------------------------|--------------------------|------------------|-----------------------------------------------------------|
+| dotnet-sdk-[major]                             | dotnet-sdk-2             |                  | dotnet-sdk-[major].[latest sdk minor]                     |
+| dotnet-sdk-[major].[minor]                     | dotnet-sdk-2.1           |                  | dotnet-sdk-[major].[minor].[latest sdk feat]xx            |
+| dotnet-sdk-[major].[minor].[sdk feat]xx        | dotnet-sdk-2.1.3xx       |                  | dotnet-sdk-[major].[minor].[latest sdk patch]             |
+| **dotnet-sdk-[major].[minor].[patch]**         | dotnet-sdk-2.1.300       | (3),(4)          | aspnetcore-runtime-[major].[minor].[sdk runtime patch]    |
+| aspnetcore-runtime-[major].[minor]             | aspnetcore-runtime-2.1   |                  | aspnetcore-runtime-[major].[minor].[latest runtime patch] |
+| **aspnetcore-runtime-[major].[minor].[patch]** | aspnetcore-runtime-2.1.0 | (6),[(7)]        | dotnet-runtime-[major].[minor].[patch]                    |
+| dotnet-runtime-[major].[minor]                 | dotnet-runtime-2.1       |                  | dotnet-runtime-[major].[minor].[latest runtime patch]     |
+| **dotnet-runtime-[major].[minor].[patch]**     | dotnet-runtime-2.1.0     | (5)              | host-fxr:\<執行階段版本>+                              |
+| dotnet-host-fxr                                | dotnet-host-fxr          | (2)              | host:\<執行階段版本>+                                  |
+| dotnet-host                                    | dotnet-host              | (1),(8),(9),(10) |                                                           |
 
-安裝 .NET Core 套件時，其目標目的地在磁碟上的相對位置是很重要的。
-`dotnet.exe` 主機應該放在 `sdk` 和 `shared` 資料夾旁，其中包含 `dotnet-sdk` SDK 套件已建立版本的內容，以及 `dotnet-runtime` 共用架構套件。
+使用修補程式套件的替代方法，是使用套件管理員將套件「釘選」到特定版本。 若要避免影響其他應用程式/使用者，可以在容器中建置和部署這類應用程式。
 
-套件內檔案和目錄的磁碟配置已建立版本。 這表示更新至最新的 `dotnet-runtime` 會將新版本與先前的版本並存安裝，降低因更新套件而中斷現有應用程式的可能性。 套件更新不應該移除先前的版本。
+## <a name="building-packages"></a>建置套件
 
-## <a name="update-policies"></a>更新原則
-
-當執行 `update` 時，每個套件的行為會如下所示：
-
-* `dotnet-runtime-[major].[minor]`：新的更新程式版本會更新套件，但新的次要版本或主要版本是個別的套件。
-* `dotnet-sdk`：`update` 會向前復原主要、次要和更新程式版本。
-* `dotnet-sdk-[major].[minor]`：新的更新程式版本會更新套件，但新的次要版本或主要版本是個別的套件。
-* `dotnet-lts`：`update` 會向前復原主要、次要和更新程式版本。
-
-本主題說明我們針對封裝 .NET Core 的建議，不過每個發行套件都能自由選擇要提供哪些版本與提供的時間。 例如，重視穩定性勝過最新版本的發行套件，可能會選擇僅發布與 LTS 版本序列符合的版本。
+https://github.com/dotnet/source-build 存放庫提供如何建置 .NET Core SDK 和其所有元件之來源 tarball 的指示。 source-build 存放庫的輸出會比對本文第一節中所述的配置。

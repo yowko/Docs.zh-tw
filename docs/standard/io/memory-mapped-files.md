@@ -15,60 +15,63 @@ helpviewer_keywords:
 - memory-mapped files
 - inter-process communiation
 ms.assetid: a483d1b5-64aa-45b6-86ef-11b859f7f02e
-caps.latest.revision: "24"
+caps.latest.revision: 
 author: mairaw
 ms.author: mairaw
 manager: wpickett
-ms.openlocfilehash: 2602d431aada7b3e0ee226eed319903492022ae9
-ms.sourcegitcommit: bd1ef61f4bb794b25383d3d72e71041a5ced172e
+ms.workload:
+- dotnet
+- dotnetcore
+ms.openlocfilehash: 23755f7b76e8cc050df8529852af9bf151472f72
+ms.sourcegitcommit: e7f04439d78909229506b56935a1105a4149ff3d
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/18/2017
+ms.lasthandoff: 12/23/2017
 ---
 # <a name="memory-mapped-files"></a>記憶體對應檔案
-記憶體對應檔案包含檔案在虛擬記憶體中的內容。 這個檔案和記憶體空間之間的對應可讓應用程式，包括多個處理程序，以進行讀取和寫入至記憶體中直接修改檔案。 從開始[!INCLUDE[net_v40_long](../../../includes/net-v40-long-md.md)]，您可以使用 managed 程式碼至原生 Windows 函式，存取記憶體對應檔案，以相同方式存取記憶體對應檔中所述[Managing Memory-Mapped 檔案中 Win32](http://go.microsoft.com/fwlink/?linkid=180801)。  
+記憶體對應檔案包含檔案在虛擬記憶體中的內容。 檔案和記憶體空間之間的這個對應可讓應用程式 (包括多個處理序) 透過直接讀取和寫入記憶體來修改檔案。 從 [!INCLUDE[net_v40_long](../../../includes/net-v40-long-md.md)] 開始，您可以利用與原生 Windows 功能存取記憶體對應檔案相同的方法，使用 受控程式碼存取記憶體對應檔案，如[在 Win32 中管理記憶體對應檔案](http://go.microsoft.com/fwlink/?linkid=180801) \(英文\) 所述。  
   
- 有兩種類型的記憶體對應檔：  
+ 記憶體對應檔案的類型有兩種：  
   
--   保存記憶體對應檔  
+-   持續性記憶體對應檔案  
   
-     保存的檔案是磁碟上的原始程式檔相關聯的記憶體對應檔案。 最後一個程序完成時使用的檔案，資料會儲存到磁碟上的來源檔案。 這些記憶體對應檔案是適用於處理極大的來源檔案。  
+     持續性檔案是與磁碟上之原始程式檔相關聯的記憶體對應檔案。 當最後一個處理序完成檔案處理時，資料就會儲存到磁碟上的原始程式檔。 這些記憶體對應檔案適合處理極大的原始程式檔。  
   
--   非保存記憶體對應檔  
+-   非持續性記憶體對應檔案  
   
-     非保存的檔案是未在磁碟上的檔案與相關聯的記憶體對應檔案。 最後一個程序完成時使用的檔案，資料會遺失，而且檔案回收進行回收。 這些檔案是適合用來建立共用的記憶體的處理序間通訊 (IPC)。  
+     非持續性檔案是與磁碟上的檔案沒有關聯的記憶體對應檔案。 當最後一個處理序完成檔案處理時，資料就會遺失，而且該檔案會由記憶體回收進行回收。 這些檔案適合為處理序間通訊 (IPC) 建立共用記憶體。  
   
-## <a name="processes-views-and-managing-memory"></a>處理程序、 檢視和管理記憶體  
- 記憶體對應檔可以跨多個處理序共用。 處理程序可以使用 建立檔案的處理序所指派的一般名稱對應至相同的記憶體對應檔案。  
+## <a name="processes-views-and-managing-memory"></a>處理序、檢視和管理記憶體  
+ 記憶體對應檔案可以跨多個處理序共用。 處理序可以使用建立檔案之處理序所指派的一般名稱，對應至相同的記憶體對應檔案。  
   
- 若要使用的記憶體對應檔，您必須建立部分或整個記憶體對應檔案的檢視。 您也可以建立多個檢視，以相同的組件的記憶體對應檔，藉此建立並行的記憶體。 兩個檢視，來維持並行，他們必須建立從相同的記憶體對應檔。  
+ 若要處理記憶體對應檔案，您必須建立整個或部分記憶體對應檔案的檢視。 您也可以對記憶體對應檔案的相同部分建立多個檢視，藉此建立並行記憶體。 若要讓兩個檢視維持並行，必須從相同的記憶體對應檔案建立這兩個檢視。  
   
- 多個檢視也可能需要的檔案是否大於可用的記憶體對應 (32 位元電腦上的 2 GB) 的應用程式的邏輯記憶體空間的大小。  
+ 如果檔案大於可用於記憶體對應 (在 32 位元電腦上為 2 GB) 的應用程式邏輯記憶體空間大小，也可能需要多個檢視。  
   
- 有兩種檢視： 資料流存取檢視和隨機存取檢視。 將資料流存取檢視表用於循序方式存取檔案。這被建議的非保存的檔案和 IPC。 隨機存取檢視是慣用使用保存的檔案。  
+ 檢視有兩種：資料流存取檢視和隨機存取檢視。 將資料流存取檢視用於循序存取檔案；建議將此種方式用於非持續性檔案和 IPC。 若要處理持續性檔案，建議使用隨機存取檢視。  
   
- 記憶體對應檔案是透過作業系統的記憶體管理員中，存取，以便自動分割成頁數並視需要存取檔案。 您不必自行處理記憶體管理。  
+ 記憶體對應檔案是透過作業系統的記憶體管理員存取的，因此檔案會被自動分割成多頁並視需要進行存取。 您不必自行處理記憶體管理。  
   
- 下圖顯示如何在多個處理序可以有多個與重疊檢視相同的記憶體對應檔案，在相同的時間。  
+ 下圖顯示多個處理序如何同時對相同的記憶體對應檔案擁有多個重疊的檢視。  
   
- ![顯示檢視，以記憶體 &#45; 對應的檔。] (../../../docs/standard/io/media/memmappersisted.png "MemMapPersisted")  
-多個和重疊的實的記憶體對應檔的檢視  
+ ![將檢視顯示為記憶體對應檔案。](../../../docs/standard/io/media/memmappersisted.png "MemMapPersisted")  
+對記憶體對應檔案的多個重疊檢視  
   
-## <a name="programming-with-memory-mapped-files"></a>使用記憶體對應檔進行程式設計  
- 下表提供使用記憶體對應檔的物件和其成員的指南。  
+## <a name="programming-with-memory-mapped-files"></a>使用記憶體對應檔案進行程式設計  
+ 下表提供使用記憶體對應檔案物件及其成員的指南。  
   
-|工作|若要使用的屬性或方法|  
+|工作|要使用的方法或屬性|  
 |----------|----------------------------------|  
-|若要取得<xref:System.IO.MemoryMappedFiles.MemoryMappedFile>物件，表示持續性的記憶體對應檔，從磁碟上的檔案。|<xref:System.IO.MemoryMappedFiles.MemoryMappedFile.CreateFromFile%2A?displayProperty=nameWithType> 方法。|  
-|若要取得<xref:System.IO.MemoryMappedFiles.MemoryMappedFile>物件，表示非持續性記憶體對應檔 （與磁碟上的檔案沒有關聯）。|<xref:System.IO.MemoryMappedFiles.MemoryMappedFile.CreateNew%2A?displayProperty=nameWithType> 方法。<br /><br /> -或-<br /><br /> <xref:System.IO.MemoryMappedFiles.MemoryMappedFile.CreateOrOpen%2A?displayProperty=nameWithType> 方法。|  
-|若要取得<xref:System.IO.MemoryMappedFiles.MemoryMappedFile>物件現有的記憶體對應檔 （保存或非保存）。|<xref:System.IO.MemoryMappedFiles.MemoryMappedFile.OpenExisting%2A?displayProperty=nameWithType> 方法。|  
-|若要取得<xref:System.IO.UnmanagedMemoryStream>給記憶體對應檔的循序存取檢視的物件。|<xref:System.IO.MemoryMappedFiles.MemoryMappedFile.CreateViewStream%2A?displayProperty=nameWithType> 方法。|  
-|若要取得<xref:System.IO.UnmanagedMemoryAccessor>物件隨機存取記憶體對應檢視 fie。|<xref:System.IO.MemoryMappedFiles.MemoryMappedFile.CreateViewAccessor%2A?displayProperty=nameWithType> 方法。|  
-|若要取得<xref:Microsoft.Win32.SafeHandles.SafeMemoryMappedViewHandle>用於與 unmanaged 程式碼的物件。|<xref:System.IO.MemoryMappedFiles.MemoryMappedFile.SafeMemoryMappedFileHandle%2A?displayProperty=nameWithType> 屬性。<br /><br /> -或-<br /><br /> <xref:System.IO.MemoryMappedFiles.MemoryMappedViewAccessor.SafeMemoryMappedViewHandle%2A?displayProperty=nameWithType> 屬性。<br /><br /> -或-<br /><br /> <xref:System.IO.MemoryMappedFiles.MemoryMappedViewStream.SafeMemoryMappedViewHandle%2A?displayProperty=nameWithType> 屬性。|  
-|若要延遲配置記憶體之前檢視建立 （僅限非保存檔）。<br /><br /> (若要判斷目前的系統分頁大小，請使用<xref:System.Environment.SystemPageSize%2A?displayProperty=nameWithType>屬性。)|<xref:System.IO.MemoryMappedFiles.MemoryMappedFile.CreateNew%2A>方法具有<xref:System.IO.MemoryMappedFiles.MemoryMappedFileOptions.DelayAllocatePages?displayProperty=nameWithType>值。<br /><br /> -或-<br /><br /> <xref:System.IO.MemoryMappedFiles.MemoryMappedFile.CreateOrOpen%2A>具有方法<xref:System.IO.MemoryMappedFiles.MemoryMappedFileOptions>列舉型別做為參數。|  
+|從磁碟上的檔案取得表示持續性記憶體對應檔案的 <xref:System.IO.MemoryMappedFiles.MemoryMappedFile> 物件。|<xref:System.IO.MemoryMappedFiles.MemoryMappedFile.CreateFromFile%2A?displayProperty=nameWithType> 方法。|  
+|取得表示非持續性記憶體對應檔案 (與磁碟上的檔案沒有關聯) 的 <xref:System.IO.MemoryMappedFiles.MemoryMappedFile> 物件。|<xref:System.IO.MemoryMappedFiles.MemoryMappedFile.CreateNew%2A?displayProperty=nameWithType> 方法。<br /><br /> -或-<br /><br /> <xref:System.IO.MemoryMappedFiles.MemoryMappedFile.CreateOrOpen%2A?displayProperty=nameWithType> 方法。|  
+|取得現有記憶體對應檔案 (持續性或非持續性) 的 <xref:System.IO.MemoryMappedFiles.MemoryMappedFile> 物件。|<xref:System.IO.MemoryMappedFiles.MemoryMappedFile.OpenExisting%2A?displayProperty=nameWithType> 方法。|  
+|針對記憶體對應檔案，取得循序存取檢視的 <xref:System.IO.UnmanagedMemoryStream> 物件。|<xref:System.IO.MemoryMappedFiles.MemoryMappedFile.CreateViewStream%2A?displayProperty=nameWithType> 方法。|  
+|針對記憶體對應檔案，取得隨機存取檢視的 <xref:System.IO.UnmanagedMemoryAccessor> 物件。|<xref:System.IO.MemoryMappedFiles.MemoryMappedFile.CreateViewAccessor%2A?displayProperty=nameWithType> 方法。|  
+|取得搭配非受控程式碼 使用的 <xref:Microsoft.Win32.SafeHandles.SafeMemoryMappedViewHandle> 物件。|<xref:System.IO.MemoryMappedFiles.MemoryMappedFile.SafeMemoryMappedFileHandle%2A?displayProperty=nameWithType> 屬性。<br /><br /> -或-<br /><br /> <xref:System.IO.MemoryMappedFiles.MemoryMappedViewAccessor.SafeMemoryMappedViewHandle%2A?displayProperty=nameWithType> 屬性。<br /><br /> -或-<br /><br /> <xref:System.IO.MemoryMappedFiles.MemoryMappedViewStream.SafeMemoryMappedViewHandle%2A?displayProperty=nameWithType> 屬性。|  
+|延遲配置記憶體，直到建立檢視 (僅限非持續性檔案) 為止 <br /><br /> (若要判斷目前的系統頁面大小，請使用 <xref:System.Environment.SystemPageSize%2A?displayProperty=nameWithType> 屬性)。|具有 <xref:System.IO.MemoryMappedFiles.MemoryMappedFileOptions.DelayAllocatePages?displayProperty=nameWithType> 值的 <xref:System.IO.MemoryMappedFiles.MemoryMappedFile.CreateNew%2A> 方法。<br /><br /> -或-<br /><br /> 將 <xref:System.IO.MemoryMappedFiles.MemoryMappedFileOptions> 列舉當作參數的 <xref:System.IO.MemoryMappedFiles.MemoryMappedFile.CreateOrOpen%2A> 方法。|  
   
 ### <a name="security"></a>安全性  
- 您可以套用的存取權限，當您建立記憶體對應檔案，使用下列方法會採用<xref:System.IO.MemoryMappedFiles.MemoryMappedFileAccess>列舉型別做為參數：  
+ 使用下列採用 <xref:System.IO.MemoryMappedFiles.MemoryMappedFileAccess> 列舉作為參數的方法建立記憶體對應檔案時，您可以套用存取權限：  
   
 -   <xref:System.IO.MemoryMappedFiles.MemoryMappedFile.CreateFromFile%2A?displayProperty=nameWithType>  
   
@@ -76,57 +79,57 @@ ms.lasthandoff: 10/18/2017
   
 -   <xref:System.IO.MemoryMappedFiles.MemoryMappedFile.CreateOrOpen%2A?displayProperty=nameWithType>  
   
- 您可以指定使用開啟現有的記憶體對應檔案的存取權限<xref:System.IO.MemoryMappedFiles.MemoryMappedFile.OpenExisting%2A>方法會採用<xref:System.IO.MemoryMappedFiles.MemoryMappedFileRights>做為參數。  
+ 您可以使用採用 <xref:System.IO.MemoryMappedFiles.MemoryMappedFileRights> 作為參數的 <xref:System.IO.MemoryMappedFiles.MemoryMappedFile.OpenExisting%2A> 方法指定存取權限，來開啟現有的記憶體對應檔案。  
   
- 此外，您可以包含<xref:System.IO.MemoryMappedFiles.MemoryMappedFileSecurity>物件，其中包含預先定義的存取規則。  
+ 此外，您還可以加入內含預先定義之存取規則的 <xref:System.IO.MemoryMappedFiles.MemoryMappedFileSecurity> 物件。  
   
- 若要將新的或變更的存取規則套用至記憶體對應檔案，使用<xref:System.IO.MemoryMappedFiles.MemoryMappedFile.SetAccessControl%2A>方法。 擷取存取或稽核規則從現有的檔案，請使用<xref:System.IO.MemoryMappedFiles.MemoryMappedFile.GetAccessControl%2A>方法。  
+ 若要將新的或變更的存取規則套用至記憶體對應檔案，請使用 <xref:System.IO.MemoryMappedFiles.MemoryMappedFile.SetAccessControl%2A> 方法。 若要從現有的檔案擷取存取或稽核規則，請使用 <xref:System.IO.MemoryMappedFiles.MemoryMappedFile.GetAccessControl%2A> 方法。  
   
 ## <a name="examples"></a>範例  
   
-### <a name="persisted-memory-mapped-files"></a>保存記憶體對應檔  
- <xref:System.IO.MemoryMappedFiles.MemoryMappedFile.CreateFromFile%2A>方法從磁碟上現有的檔案建立記憶體對應檔案。  
+### <a name="persisted-memory-mapped-files"></a>持續性記憶體對應檔案  
+ <xref:System.IO.MemoryMappedFiles.MemoryMappedFile.CreateFromFile%2A> 方法會從磁碟上現有的檔案建立記憶體對應檔案。  
   
- 下例會建立記憶體對應檢視的極大的檔案部分，及操作的一部分。  
+ 下列範例會針對極大檔案的一部分建立記憶體對應檢視，及操作其中的一部分。  
   
  [!code-csharp[MemoryMappedFiles.MemoryMappedFile.CreateFromFile#1](../../../samples/snippets/csharp/VS_Snippets_CLR/memorymappedfiles.memorymappedfile.createfromfile/cs/program.cs#1)]
  [!code-vb[MemoryMappedFiles.MemoryMappedFile.CreateFromFile#1](../../../samples/snippets/visualbasic/VS_Snippets_CLR/memorymappedfiles.memorymappedfile.createfromfile/vb/program.vb#1)]  
   
- 下列範例會開啟另一個處理序的相同記憶體對應檔。  
+ 下列範例會為另一個處理序開啟相同的記憶體對應檔案。  
   
  [!code-csharp[MemoryMappedFiles.MemoryMappedFile.OpenExisting#1](../../../samples/snippets/csharp/VS_Snippets_CLR/memorymappedfiles.memorymappedfile.openexisting/cs/program.cs#1)]
  [!code-vb[MemoryMappedFiles.MemoryMappedFile.OpenExisting#1](../../../samples/snippets/visualbasic/VS_Snippets_CLR/memorymappedfiles.memorymappedfile.openexisting/vb/program.vb#1)]  
   
-### <a name="non-persisted-memory-mapped-files"></a>非持續性記憶體對應檔  
- <xref:System.IO.MemoryMappedFiles.MemoryMappedFile.CreateNew%2A>和<xref:System.IO.MemoryMappedFiles.MemoryMappedFile.CreateOrOpen%2A>方法建立記憶體對應檔案，則未對應到磁碟上現有的檔案。  
+### <a name="non-persisted-memory-mapped-files"></a>非持續性記憶體對應檔案  
+ <xref:System.IO.MemoryMappedFiles.MemoryMappedFile.CreateNew%2A> 和 <xref:System.IO.MemoryMappedFiles.MemoryMappedFile.CreateOrOpen%2A> 方法會建立非對應至磁碟上現有檔案的記憶體對應檔案。  
   
- 下列範例包含三個不同的處理序 （主控台應用程式） 的布林值寫入的記憶體對應檔。 發生下列動作順序：  
+ 下列範例包含三個不同的處理序 (主控台應用程式)，這些處理序會將布林值寫入記憶體對應檔案。 發生下列順序的動作：  
   
-1.  `Process A`建立記憶體對應檔案，並將值寫入它。  
+1.  `Process A` 會建立記憶體對應檔案，並在其中寫入值。  
   
-2.  `Process B`開啟記憶體對應檔，並將值寫入它。  
+2.  `Process B` 會開啟記憶體對應檔案，並在其中寫入值。  
   
-3.  `Process C`開啟記憶體對應檔，並將值寫入它。  
+3.  `Process C` 會開啟記憶體對應檔案，並在其中寫入值。  
   
-4.  `Process A`讀取並顯示於記憶體對應檔中的值。  
+4.  `Process A` 會讀取並顯示記憶體對應檔案中的值。  
   
-5.  之後`Process A`資料庫已使用記憶體對應檔案中，檔案會立即回收記憶體回收。  
+5.  使用記憶體對應檔案完成 `Process A` 之後，檔案會立即由記憶體回收進行回收。  
   
- 若要執行此範例中，執行下列作業：  
+ 若要執行此範例，請執行下列動作：  
   
-1.  編譯應用程式，並開啟三個命令提示字元視窗。  
+1.  編譯應用程式，並開啟三個 [命令提示字元] 視窗。  
   
-2.  在第一個命令提示字元視窗中，執行`Process A`。  
+2.  在第一個 [命令提示字元] 視窗中，執行 `Process A`。  
   
-3.  在第二個命令提示字元視窗中，執行`Process B`。  
+3.  在第二個 [命令提示字元] 視窗中，執行 `Process B`。  
   
-4.  返回`Process A`按下 ENTER。  
+4.  返回 `Process A`，然後按 ENTER。  
   
-5.  在第三個命令提示字元視窗中，執行`Process C`。  
+5.  在第三個 [命令提示字元] 視窗中，執行 `Process C`。  
   
-6.  返回`Process A`按下 ENTER。  
+6.  返回 `Process A`，然後按 ENTER。  
   
- 輸出`Process A`如下所示：  
+ `Process A` 的輸出如下：  
   
 ```  
 Start Process B and press ENTER to continue.  
@@ -136,17 +139,17 @@ Process B says: False
 Process C says: True  
 ```  
   
- **處理序的**  
+ **Process A**  
   
  [!code-csharp[System.IO.MemoryMappedFiles_IPC_X#1](../../../samples/snippets/csharp/VS_Snippets_CLR_System/system.io.memorymappedfiles_ipc_x/cs/program.cs#1)]
  [!code-vb[System.IO.MemoryMappedFiles_IPC_X#1](../../../samples/snippets/visualbasic/VS_Snippets_CLR_System/system.io.memorymappedfiles_ipc_x/vb/program.vb#1)]  
   
- **處理序 B**  
+ **Process B**  
   
  [!code-csharp[System.IO.MemoryMappedFiles_IPC_A#1](../../../samples/snippets/csharp/VS_Snippets_CLR_System/system.io.memorymappedfiles_ipc_a/cs/program.cs#1)]
  [!code-vb[System.IO.MemoryMappedFiles_IPC_A#1](../../../samples/snippets/visualbasic/VS_Snippets_CLR_System/system.io.memorymappedfiles_ipc_a/vb/program.vb#1)]  
   
- **處理序 C**  
+ **Process C**  
   
  [!code-csharp[System.IO.MemoryMappedFiles_IPC_B#1](../../../samples/snippets/csharp/VS_Snippets_CLR_System/system.io.memorymappedfiles_ipc_b/cs/program.cs#1)]
  [!code-vb[System.IO.MemoryMappedFiles_IPC_B#1](../../../samples/snippets/visualbasic/VS_Snippets_CLR_System/system.io.memorymappedfiles_ipc_b/vb/program.vb#1)]  

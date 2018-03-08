@@ -26,15 +26,18 @@ helpviewer_keywords:
 - waiting for asynchronous calls
 - status information [.NET Framework], asynchronous operations
 ms.assetid: 41972034-92ed-450a-9664-ab93fcc6f1fb
-caps.latest.revision: "24"
+caps.latest.revision: 
 author: rpetrusha
 ms.author: ronpet
 manager: wpickett
-ms.openlocfilehash: 965e5928c03ae573eacba98a7596f55b56aaba26
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.workload:
+- dotnet
+- dotnetcore
+ms.openlocfilehash: e7e6f402d9423a8ae1ee464499f1b794785c2b06
+ms.sourcegitcommit: e7f04439d78909229506b56935a1105a4149ff3d
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 12/23/2017
 ---
 # <a name="calling-synchronous-methods-asynchronously"></a>以非同步的方式呼叫同步方法
 .NET Framework 可讓您以非同步方式呼叫任何方法。 若要這樣做，您使用相同簽章定義委派，做為您要呼叫的方法；Common Language Runtime 則會自動以適當簽章定義此委派的 `BeginInvoke` 和 `EndInvoke` 方法。  
@@ -44,7 +47,7 @@ ms.lasthandoff: 11/21/2017
   
  `BeginInvoke` 方法會起始非同步呼叫。 它有相同參數做為您要非同步執行的方法，再加上兩個額外的選擇性參數。 第一個參數是 <xref:System.AsyncCallback> 委派，參考非同步呼叫完成時所呼叫的方法。 第二個參數使用者定義的物件，可將資訊傳遞至回呼方法。 `BeginInvoke` 會立即傳回且不等候非同步呼叫完成。 `BeginInvoke` 傳回 <xref:System.IAsyncResult>，可用來監視非同步呼叫的進度。  
   
- `EndInvoke` 方法會擷取非同步呼叫的結果。 在 `BeginInvoke`之後隨時可以呼叫它。 如果非同步呼叫尚未完成，在完成前 `EndInvoke` 會封鎖呼叫執行緒。 參數的`EndInvoke`包含`out`和`ref`參數 (`<Out>` `ByRef`和`ByRef`在 Visual Basic 中) 您想要以非同步方式執行的方法加上<xref:System.IAsyncResult>傳回`BeginInvoke`.  
+ `EndInvoke` 方法會擷取非同步呼叫的結果。 在 `BeginInvoke`之後隨時可以呼叫它。 如果非同步呼叫尚未完成，在完成前 `EndInvoke` 會封鎖呼叫執行緒。 `EndInvoke` 的參數包括您要非同步執行之方法的 `out` 和 `ref` 參數 (Visual Basic 為 `<Out>` `ByRef` 和 `ByRef`)，再加上 `BeginInvoke` 所傳回的 <xref:System.IAsyncResult>。  
   
 > [!NOTE]
 >  [!INCLUDE[vsprvslong](../../../includes/vsprvslong-md.md)] 中的 IntelliSense 功能會顯示 `BeginInvoke` 和 `EndInvoke`的參數。 假如您並非使用 Visual Studio 或類似工具，或您使用 C# 搭配 [!INCLUDE[vsprvslong](../../../includes/vsprvslong-md.md)]，請參閱 [非同步程式設計模型 (APM)](../../../docs/standard/asynchronous-programming-patterns/asynchronous-programming-model-apm.md)，以取得針對這些方法所定義的參數說明。  
@@ -87,7 +90,7 @@ ms.lasthandoff: 11/21/2017
  如果您使用 <xref:System.Threading.WaitHandle>，您可以在非同步呼叫完成之前或之後，且在呼叫 `EndInvoke` 擷取結果之前，執行其他的處理。  
   
 > [!NOTE]
->  當您呼叫 `EndInvoke`時，等候控制代碼不會自動關閉。 如果您釋放所有等候控制代碼的參考，當記憶體回收收回等候控制代碼時，系統資源就會釋放。 若要在您使用完等候控制代碼後立即釋放系統資源，請呼叫 <xref:System.Threading.WaitHandle.Close%2A?displayProperty=nameWithType> 方法來加以配置。 明確配置可處置的物件之後，記憶體回收會更有效率。  
+>  當您呼叫 `EndInvoke` 時，等候控制代碼不會自動關閉。 如果您釋放所有等候控制代碼的參考，當記憶體回收收回等候控制代碼時，系統資源就會釋放。 若要在您使用完等候控制代碼後立即釋放系統資源，請呼叫 <xref:System.Threading.WaitHandle.Close%2A?displayProperty=nameWithType> 方法來加以配置。 明確配置可處置的物件之後，記憶體回收會更有效率。  
   
  [!code-cpp[AsyncDelegateExamples#3](../../../samples/snippets/cpp/VS_Snippets_CLR/AsyncDelegateExamples/cpp/waithandle.cpp#3)]
  [!code-csharp[AsyncDelegateExamples#3](../../../samples/snippets/csharp/VS_Snippets_CLR/AsyncDelegateExamples/CS/waithandle.cs#3)]
@@ -107,7 +110,7 @@ ms.lasthandoff: 11/21/2017
   
  此範例的注意事項如下：  
   
--   `threadId`參數`TestMethod`是`out`參數 ([`<Out>` `ByRef`在 Visual Basic 中)，所以其輸入的值永遠不會由`TestMethod`。 虛設變數會傳遞給 `BeginInvoke` 呼叫。 如果 `threadId` 參數是 `ref` 參數 (Visual Basic 中的`ByRef` )，則變數必須是類別層級的欄位，才能同時傳遞至 `BeginInvoke` 和 `EndInvoke`。  
+-   `TestMethod` 的 `threadId` 參數是 `out` 參數 (在 Visual Basic 中為 [`<Out>` `ByRef`)，因此 `TestMethod` 絕對不會使用它的輸入值。 虛設變數會傳遞給 `BeginInvoke` 呼叫。 如果 `threadId` 參數是 `ref` 參數 (Visual Basic 中的`ByRef` )，則變數必須是類別層級的欄位，才能同時傳遞至 `BeginInvoke` 和 `EndInvoke`。  
   
 -   傳遞至 `BeginInvoke` 的狀態資訊是格式字串，回呼方法會用它來格式化輸出訊息。 由於狀態資訊傳遞時的型別是 <xref:System.Object>，因此必須先轉換成適當型別才能使用。  
   
@@ -117,6 +120,6 @@ ms.lasthandoff: 11/21/2017
  [!code-csharp[AsyncDelegateExamples#5](../../../samples/snippets/csharp/VS_Snippets_CLR/AsyncDelegateExamples/CS/callback.cs#5)]
  [!code-vb[AsyncDelegateExamples#5](../../../samples/snippets/visualbasic/VS_Snippets_CLR/AsyncDelegateExamples/VB/callback.vb#5)]  
   
-## <a name="see-also"></a>另請參閱  
+## <a name="see-also"></a>請參閱  
  <xref:System.Delegate>  
  [事件架構非同步模式 (EAP)](../../../docs/standard/asynchronous-programming-patterns/event-based-asynchronous-pattern-eap.md)

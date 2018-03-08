@@ -12,22 +12,25 @@ dev_langs:
 - csharp
 - vb
 ms.assetid: 65455ef3-9120-412c-819b-d0f59f88ac09
-caps.latest.revision: "4"
+caps.latest.revision: 
 author: mairaw
 ms.author: mairaw
 manager: wpickett
-ms.openlocfilehash: ce594234e601cd8feb4723bbc383db9e3ed40522
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.workload:
+- dotnet
+- dotnetcore
+ms.openlocfilehash: d21667ada5592c62824a97b4a8a9b8127abab75a
+ms.sourcegitcommit: e7f04439d78909229506b56935a1105a4149ff3d
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 12/23/2017
 ---
 # <a name="converting-strings-to-net-framework-data-types"></a>將字串轉換成 .NET Framework 資料型別
-如果您想要將字串轉換為.NET Framework 資料型別，使用**XmlConvert**符合應用程式需求的方法。 如需所有使用中的轉換方法的清單**XmlConvert**類別，請參閱<xref:System.Xml.XmlConvert>。  
+若要將一個字串轉換成 .NET Framework 資料型別，請使用符合應用程式需求的 **XmlConvert** 方法。 如需所有可用於 **XmlConvert** 類別的轉換方法清單，請參閱 <xref:System.Xml.XmlConvert>。  
   
- 傳回的字串**ToString**方法是傳入資料的字串版本。 此外，有幾種轉換使用的.NET Framework 類型**XmlConvert**類別，但它們不會使用中的方法**System.Convert**類別。 **XmlConvert**類別遵循的 XML 結構描述 (XSD) 資料型別規格，並具有的資料類型， **XmlConvert**可以對應至。  
+ **ToString** 方法所傳回的字串是所傳入之資料的字串版本。 此外，還有幾個 .NET Framework 型別是用 **XmlConvert** 類別來轉換，而不是使用 **System.Convert** 類別中的方法進行轉換。 **XmlConvert** 類別符合 XML 結構描述 (XSD) 資料型別規格，且擁有一個 **XmlConvert** 可對應的資料型別。  
   
- 下列表格列出使用 XML 結構描述 (XSD) 資料型別對應所傳回的 .NET Framework 資料型別和字串型別。 這些.NET Framework 型別無法使用處理**System.Convert**。  
+ 下列表格列出使用 XML 結構描述 (XSD) 資料型別對應所傳回的 .NET Framework 資料型別和字串型別。 這些 .NET Framework 型別無法以 **System.Convert** 來處理。  
   
 |.NET Framework 類型|傳回的字串|  
 |-------------------------|---------------------|  
@@ -40,9 +43,9 @@ ms.lasthandoff: 11/21/2017
 |Timespan|格式為 PnYnMnTnHnMnS，即 `P2Y10M15DT10H30M20S` 代表期間為 2 年 10 個月 15 天 10 小時 30 分鐘 20 秒。|  
   
 > [!NOTE]
->  如果任何.NET Framework 類型轉換表所列的字串，使用**ToString**方法，傳回的字串不是基底型別，而 XML 結構描述 (XSD) 字串型別。  
+>  若使用 **ToString** 方法將上表所列的任何 .NET Framework 型別轉換成字串，則傳回的字串將會是 XML 結構描述 (XSD) 字串型別，而不是基底型別。  
   
- **DateTime**和**Timespan**數值型別的差別在於**DateTime**表示時間的瞬間而**TimeSpan**表示時間間隔。 **DateTime**和**Timespan** XML 結構描述 (XSD) 資料型別規格中指定的格式。 例如:   
+ **DateTime** 和 **Timespan** 數值型別的差別在於，**DateTime** 代表某一個時間，而 **TimeSpan** 代表時間間隔。 **DateTime** 和 **Timespan** 格式已指定於 XML 結構描述 (XSD) 資料型別規格中。 例如:   
   
 ```vb  
 Dim writer As New XmlTextWriter("myfile.xml", Nothing)  
@@ -78,10 +81,10 @@ writer.WriteElementString("Number", XmlConvert.ToString(value));
   
  `<Number>200</Number>`  
   
- 不過，如果您想要轉換的字串**布林**，**單一**，或**Double**，就會傳回.NET Framework 型別不是使用時，傳回的類型相同**System.Convert**類別。  
+ 不過，如果您將字串轉換成 **Boolean**、**Single** 或 **Double**，則傳回的 .NET Framework 型別就會不同於使用 **System.Convert** 類別時所傳回的型別。  
   
 ## <a name="string-to-boolean"></a>字串轉成 Boolean  
- 下表顯示當字串轉換成指定的輸入字串，請產生哪些型別**布林**使用**ToBoolean**方法。  
+ 下列表格說明使用 **ToBoolean** 方法將字串轉換成 **Boolean** 時，給定的輸入字串會產生哪種型別。  
   
 |有效的字串輸入參數|.NET Framework 輸出型別|  
 |----------------------------------|--------------------------------|  
@@ -99,7 +102,7 @@ writer.WriteElementString("Number", XmlConvert.ToString(value));
 <Boolean>1</Boolean>   
 ```  
   
- 下列程式碼，同時可以理解和**bvalue**是**System.Boolean.True**:  
+ 這兩者都可由下列程式碼辨識，其中 **bvalue** 為 **System.Boolean.True**：  
   
 ```vb  
 Dim bvalue As Boolean = _  
@@ -113,7 +116,7 @@ Console.WriteLine(bvalue);
 ```  
   
 ## <a name="string-to-single"></a>字串轉成 Single  
- 下表顯示當字串轉換成指定的輸入字串，請產生哪些型別**單一**使用**ToSingle**方法。  
+ 下列表格說明使用 **ToSingle** 方法將字串轉換成 **Single**，給定的輸入字串會產生哪些型別。  
   
 |有效的字串輸入參數|.NET Framework 輸出型別|  
 |----------------------------------|--------------------------------|  
@@ -121,7 +124,7 @@ Console.WriteLine(bvalue);
 |"-INF"|Single.NegativeInfinity|  
   
 ## <a name="string-to-double"></a>字串轉成 Double  
- 下表顯示當字串轉換成指定的輸入字串，請產生哪些型別**單一**使用**ToDouble**方法。  
+ 下列表格說明使用 **ToDouble** 方法將字串轉換成 **Single**，給定的輸入字串會產生哪些型別。  
   
 |有效的字串輸入參數|.NET Framework 輸出型別|  
 |----------------------------------|--------------------------------|  
@@ -140,6 +143,6 @@ Double value = Double.PositiveInfinity;
 writer.WriteElementString("Infinity", XmlConvert.ToString(value));  
 ```  
   
-## <a name="see-also"></a>另請參閱  
- [XML 資料型別轉換](../../../../docs/standard/data/xml/conversion-of-xml-data-types.md)  
- [將.NET Framework 型別轉換為字串](../../../../docs/standard/data/xml/converting-dotnet-types-to-strings.md)
+## <a name="see-also"></a>請參閱  
+ [XML 資料類型轉換](../../../../docs/standard/data/xml/conversion-of-xml-data-types.md)  
+ [將 .NET Framework 類型轉換成字串](../../../../docs/standard/data/xml/converting-dotnet-types-to-strings.md)

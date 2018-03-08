@@ -11,24 +11,28 @@ ms.topic: article
 dev_langs:
 - csharp
 - vb
-helpviewer_keywords: tasks, with other asynchronous models
+helpviewer_keywords:
+- tasks, with other asynchronous models
 ms.assetid: e7b31170-a156-433f-9f26-b1fc7cd1776f
-caps.latest.revision: "16"
+caps.latest.revision: 
 author: rpetrusha
 ms.author: ronpet
 manager: wpickett
-ms.openlocfilehash: 0f29ca819fa7a59edeb105720d74a25512e95bdc
-ms.sourcegitcommit: bd1ef61f4bb794b25383d3d72e71041a5ced172e
+ms.workload:
+- dotnet
+- dotnetcore
+ms.openlocfilehash: 50c4f9cfeb135f1046fbb427585897ca99248afd
+ms.sourcegitcommit: e7f04439d78909229506b56935a1105a4149ff3d
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/18/2017
+ms.lasthandoff: 12/23/2017
 ---
 # <a name="tpl-and-traditional-net-framework-asynchronous-programming"></a>TPL 和傳統 .NET Framework 非同步程式設計
 .NET Framework 提供下列兩個標準模式執行 I/O 繫結程序和計算繫結程序的非同步作業：  
   
 -   非同步程式設計模型 (APM)，在這個模式中非同步作業會以一對 Begin/End 方法表示，例如 <xref:System.IO.FileStream.BeginRead%2A?displayProperty=nameWithType> 和 <xref:System.IO.Stream.EndRead%2A?displayProperty=nameWithType>。  
   
--   事件架構非同步模式 (EAP)，非同步作業由名為方法/事件組*OperationName*非同步和*OperationName*完成，例如<xref:System.Net.WebClient.DownloadStringAsync%2A?displayProperty=nameWithType>和<xref:System.Net.WebClient.DownloadStringCompleted?displayProperty=nameWithType>。 (EAP 是在 .NET Framework 2.0 版中引入的。)  
+-   事件式非同步模式 (EAP)，在這個模式中非同步作業會以一對名為 *OperationName*Async 和 *OperationName*Completed 的方法/事件組表示，例如 <xref:System.Net.WebClient.DownloadStringAsync%2A?displayProperty=nameWithType> 和 <xref:System.Net.WebClient.DownloadStringCompleted?displayProperty=nameWithType>。 (EAP 是在 .NET Framework 2.0 版中引入的。)  
   
  工作平行程式庫 (TPL) 可以用各種方式搭配非同步模式的其中一種。 您可以將 APM 和 EAP 作業做為工作公開給程式庫的取用者，或公開 APM 模式，但使用工作物件在內部實作它們。 在這兩種案例，您可以使用工作物件簡化程式碼，並利用下列好用的功能：  
   
@@ -110,7 +114,7 @@ ms.lasthandoff: 10/18/2017
  [!code-csharp[FromAsync#10](../../../samples/snippets/csharp/VS_Snippets_Misc/fromasync/cs/snippet10.cs#10)]
  [!code-vb[FromAsync#10](../../../samples/snippets/visualbasic/VS_Snippets_Misc/fromasync/vb/snippet10.vb#10)]  
   
- 如需更完整的範例，其中包含其他例外狀況處理，並示範如何從用戶端程式碼呼叫方法，請參閱[How to： 將 EAP 模式包裝在工作中](../../../docs/standard/parallel-programming/how-to-wrap-eap-patterns-in-a-task.md)。  
+ 如需更完整的範例，其中包含其他例外狀況處理，並示範如何從用戶端程式碼呼叫方法，請參閱[如何：將 EAP 模式包裝在工作中](../../../docs/standard/parallel-programming/how-to-wrap-eap-patterns-in-a-task.md)。  
   
  請記住任何由 <xref:System.Threading.Tasks.TaskCompletionSource%601> 所建立的工作，都將由 TaskCompletionSource 啟動，因此使用者程式碼不應該在該工作上呼叫 Start 方法。  
   
@@ -123,7 +127,7 @@ ms.lasthandoff: 10/18/2017
  [!code-vb[FromAsync#09](../../../samples/snippets/visualbasic/VS_Snippets_Misc/fromasync/vb/module1.vb#09)]  
   
 ## <a name="using-the-streamextensions-sample-code"></a>使用 StreamExtensions 範例程式碼  
- 中的 Streamextensions.cs 檔案[使用.NET Framework 4 進行平行程式設計的範例](http://go.microsoft.com/fwlink/?LinkID=165717)在 MSDN 網站上，包含數個參考實作，使用工作物件為非同步檔案和網路 I/O。  
+ MSDN 網站上[使用 .NET Framework 4 進行平行程式設計的範例](http://go.microsoft.com/fwlink/?LinkID=165717)中的 Streamextensions.cs 檔案包含數個參考實作，這些參考實作會使用 Task 物件來執行非同步檔案和網路 I/O。  
   
-## <a name="see-also"></a>另請參閱  
+## <a name="see-also"></a>請參閱  
  [工作平行程式庫 (TPL)](../../../docs/standard/parallel-programming/task-parallel-library-tpl.md)

@@ -14,49 +14,52 @@ helpviewer_keywords:
 - Mutex class, about Mutex class
 - threading [.NET Framework], cross-process synchronization
 ms.assetid: 9dd06e25-12c0-4a9e-855a-452dc83803e2
-caps.latest.revision: "15"
+caps.latest.revision: 
 author: rpetrusha
 ms.author: ronpet
 manager: wpickett
-ms.openlocfilehash: a1d69c1b943d15b9ad8c80b4d7dbafebc54990ab
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.workload:
+- dotnet
+- dotnetcore
+ms.openlocfilehash: 2804d0c60657623b558d86386c5e1043422b648c
+ms.sourcegitcommit: e7f04439d78909229506b56935a1105a4149ff3d
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 12/23/2017
 ---
 # <a name="mutexes"></a>Mutex
-您可以使用<xref:System.Threading.Mutex>來提供資源的獨佔存取的物件。 <xref:System.Threading.Mutex>類別會使用更多系統資源比<xref:System.Threading.Monitor>類別，但它可以封送處理跨應用程式定義域界限、 搭配多個等待，和它可以用於同步處理不同的處理序中執行緒。 如需受管理之同步處理機制的比較，請參閱[同步處理原始物件概觀](../../../docs/standard/threading/overview-of-synchronization-primitives.md)。  
+您可以使用 <xref:System.Threading.Mutex> 物件來提供獨佔的資源存取權。 <xref:System.Threading.Mutex> 類別所使用的系統資源比 <xref:System.Threading.Monitor> 類別還多，但前者可跨越應用程式定義域的界限進行封送處理、可搭配多個等候使用，並可用來同步處理不同處理序內的執行緒。 如需受管理之同步處理機制的比較，請參閱[同步處理原始物件概觀](../../../docs/standard/threading/overview-of-synchronization-primitives.md)。  
   
- 如需程式碼範例，請參閱參考文件<xref:System.Threading.Mutex.%23ctor%2A>建構函式。  
+ 如需程式碼範例，請參閱 <xref:System.Threading.Mutex.%23ctor%2A> 建構函式的參考文件。  
   
 ## <a name="using-mutexes"></a>使用 Mutex  
- 執行緒呼叫<xref:System.Threading.WaitHandle.WaitOne%2A>要求擁有權的 mutex 的方法。 該呼叫會封鎖起來，直到 Mutex 可供使用或直到選擇性的逾時間隔時間過去。 如果沒有任何執行緒擁有 Mutex，則 Mutex 的狀態為已發出訊號。  
+ 執行緒會呼叫 Mutex 的 <xref:System.Threading.WaitHandle.WaitOne%2A> 方法來要求擁有權。 該呼叫會封鎖起來，直到 Mutex 可供使用或直到選擇性的逾時間隔時間過去。 如果沒有任何執行緒擁有 Mutex，則 Mutex 的狀態為已發出訊號。  
   
- 執行緒釋放 mutex 藉由呼叫其<xref:System.Threading.Mutex.ReleaseMutex%2A>方法。 Mutex 具有執行緒相似性；也就是說，Mutex 的釋放只能由擁有該 Mutex 的執行緒來執行。 如果執行緒釋放的 mutex 並未擁有，<xref:System.ApplicationException>執行緒擲回。  
+ 執行緒會藉由呼叫 Mutex 的 <xref:System.Threading.Mutex.ReleaseMutex%2A> 方法來釋放它。 Mutex 具有執行緒相似性；也就是說，Mutex 的釋放只能由擁有該 Mutex 的執行緒來執行。 如果執行緒釋放非它擁有的 Mutex，執行緒中就會擲回 <xref:System.ApplicationException>。  
   
- 因為<xref:System.Threading.Mutex>類別衍生自<xref:System.Threading.WaitHandle>，您也可以呼叫靜態<xref:System.Threading.WaitHandle.WaitAll%2A>或<xref:System.Threading.WaitHandle.WaitAny%2A>方法<xref:System.Threading.WaitHandle>要求擁有權<xref:System.Threading.Mutex>搭配其他等候控制代碼。  
+ 因為 <xref:System.Threading.Mutex> 類別衍生自 <xref:System.Threading.WaitHandle>，您也可以呼叫 <xref:System.Threading.WaitHandle> 的靜態 <xref:System.Threading.WaitHandle.WaitAll%2A> 或 <xref:System.Threading.WaitHandle.WaitAny%2A> 方法，搭配其他等候控制代碼來要求 <xref:System.Threading.Mutex> 的擁有權。  
   
- 如果執行緒擁有<xref:System.Threading.Mutex>，執行緒可以指定相同<xref:System.Threading.Mutex>中重複的等候要求呼叫，而不會封鎖其執行中; 不過，它必須釋放<xref:System.Threading.Mutex>次數釋出擁有權。  
+ 如果執行緒擁有 <xref:System.Threading.Mutex>，該執行緒就能在重複的等候要求呼叫中指定相同的 <xref:System.Threading.Mutex>，而不需封鎖其執行；但是，它也必須進行相同次數的 <xref:System.Threading.Mutex> 釋放作業，以釋放擁有權。  
   
 ## <a name="abandoned-mutexes"></a>遭到放棄的 Mutex  
- 如果執行緒終止而未釋放<xref:System.Threading.Mutex>，就會放棄 mutex。 這通常代表程式在設計上有嚴重錯誤，因為 Mutex 所保護的資源可能仍處於不一致的狀態。 在.NET Framework 2.0 版中，<xref:System.Threading.AbandonedMutexException>取得 mutex 的下一個執行緒中擲回。  
+ 如果執行緒終止時未釋放 <xref:System.Threading.Mutex>，就表示已放棄 Mutex。 這通常代表程式在設計上有嚴重錯誤，因為 Mutex 所保護的資源可能仍處於不一致的狀態。 在 .NET Framework 2.0 版中，下一個取得 Mutex 的執行緒中會擲回 <xref:System.Threading.AbandonedMutexException>。  
   
 > [!NOTE]
->  在.NET framework 1.0 和 1.1 中，已放棄的<xref:System.Threading.Mutex>正在等候執行緒取得擁有權設為收到信號的狀態和下一步。 如果有任何執行緒正在不等待，<xref:System.Threading.Mutex>會保留在收到信號的狀態。 不會有例外狀況擲回。  
+>  在 .NET Framework 1.0 和 1.1 版中，會將遭到放棄的 <xref:System.Threading.Mutex> 設為已發出信號的狀態，下一個等候中的執行緒則會取得擁有權。 如果沒有執行緒在等候，<xref:System.Threading.Mutex> 就會保持已發出信號的狀態。 不會有例外狀況擲回。  
   
  如果是全系統 Mutex，遭到放棄的 Mutex 可能表示應用程式已意外終止 (例如，透過使用「Windows 工作管理員」)。  
   
 ## <a name="local-and-system-mutexes"></a>本機和系統 Mutex  
- Mutex 有兩種類型︰本機 Mutex 和具名的系統 Mutex。 如果您建立<xref:System.Threading.Mutex>物件使用的建構函式接受名稱，它是與作業系統物件，該名稱的關聯。 具名的系統 Mutex 能在整個作業系統中看到，而且可用來同步處理處理序的活動。 您可以建立多個<xref:System.Threading.Mutex>物件，代表相同的具名系統 mutex，而且您可以使用<xref:System.Threading.Mutex.OpenExisting%2A>方法來開啟現有的具名系統 mutex。  
+ Mutex 有兩種類型︰本機 Mutex 和具名的系統 Mutex。 如果您使用可接受名稱的建構函式來建立 <xref:System.Threading.Mutex> 物件，該物件便會與該名稱的作業系統物件相關聯。 具名的系統 Mutex 能在整個作業系統中看到，而且可用來同步處理處理序的活動。 您可以建立多個 <xref:System.Threading.Mutex> 物件來代表同一個具名系統 Mutex，而且可以使用 <xref:System.Threading.Mutex.OpenExisting%2A> 方法來開啟現有的具名系統 Mutex。  
   
- 本機 Mutex只存在於您的處理序內。 可供您參考到本機的程序中的任何執行緒<xref:System.Threading.Mutex>物件。 每個<xref:System.Threading.Mutex>物件是另一個本機 mutex。  
+ 本機 Mutex只存在於您的處理序內。 在處理序內，只要是參考了本機 <xref:System.Threading.Mutex> 物件的執行緒，就可使用本機 Mutex。 每個 <xref:System.Threading.Mutex> 物件都是獨立的本機 Mutex。  
   
 ### <a name="access-control-security-for-system-mutexes"></a>系統 Mutex 的存取控制安全性  
  .NET Framework 2.0 版可讓您查詢及設定具名系統物件的 Windows 存取控制安全性。 我們會建議您在建立系統 Mutex 後就為其提供保護，因為系統物件為全域所有，因此非您所擁有的程式碼也可將其鎖定。  
   
- Mutex 的存取控制安全性的相關資訊，請參閱<xref:System.Security.AccessControl.MutexSecurity>和<xref:System.Security.AccessControl.MutexAccessRule>類別，<xref:System.Security.AccessControl.MutexRights>列舉型別， <xref:System.Threading.Mutex.GetAccessControl%2A>， <xref:System.Threading.Mutex.SetAccessControl%2A>，和<xref:System.Threading.Mutex.OpenExisting%2A>方法<xref:System.Threading.Mutex>類別和<xref:System.Threading.Mutex.%23ctor%28System.Boolean%2CSystem.String%2CSystem.Boolean%40%2CSystem.Security.AccessControl.MutexSecurity%29>建構函式。  
+ 如需適用於 Mutex 的存取控制安全性相關資訊，請參閱 <xref:System.Security.AccessControl.MutexSecurity> 和 <xref:System.Security.AccessControl.MutexAccessRule> 類別、<xref:System.Security.AccessControl.MutexRights> 列舉、<xref:System.Threading.Mutex.GetAccessControl%2A>、<xref:System.Threading.Mutex.SetAccessControl%2A>、<xref:System.Threading.Mutex> 類別的 <xref:System.Threading.Mutex.OpenExisting%2A> 方法，以及 <xref:System.Threading.Mutex.%23ctor%28System.Boolean%2CSystem.String%2CSystem.Boolean%40%2CSystem.Security.AccessControl.MutexSecurity%29> 建構函式。  
   
-## <a name="see-also"></a>另請參閱  
+## <a name="see-also"></a>請參閱  
  <xref:System.Threading.Mutex>  
  <xref:System.Threading.Mutex.%23ctor%2A>  
  <xref:System.Security.AccessControl.MutexSecurity>  

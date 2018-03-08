@@ -1,5 +1,5 @@
 ---
-title: "在.NET 中的規則運算式的最佳作法"
+title: ".NET 中規則運算式的最佳做法"
 ms.custom: 
 ms.date: 03/30/2017
 ms.prod: .net
@@ -15,22 +15,25 @@ helpviewer_keywords:
 - .NET Framework regular expressions, best practices
 - regular expressions, best practices
 ms.assetid: 618e5afb-3a97-440d-831a-70e4c526a51c
-caps.latest.revision: "15"
+caps.latest.revision: 
 author: rpetrusha
 ms.author: ronpet
 manager: wpickett
-ms.openlocfilehash: 4d140c8bf88b296d4ad7d6de368117dfb310b4fa
-ms.sourcegitcommit: bd1ef61f4bb794b25383d3d72e71041a5ced172e
+ms.workload:
+- dotnet
+- dotnetcore
+ms.openlocfilehash: 4064e3f9bd9be425108baf934817645fc7fa51c2
+ms.sourcegitcommit: 91691981897cf8451033cb01071d8f5d94017f97
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/18/2017
+ms.lasthandoff: 01/09/2018
 ---
-# <a name="best-practices-for-regular-expressions-in-net"></a>在.NET 中的規則運算式的最佳作法
-<a name="top"></a>在.NET 中的規則運算式引擎是一項強大而功能完整的工具，處理依據模式比對，而非比較與比對常值文字。 在大部分情況下，它會快速且有效率地執行模式比對。 不過，在某些情況下，規則運算式引擎速度可能變得相當慢。 而只有鮮少情況下，它甚至可能在處理相對小的輸入卻耗費數小時甚至數天時停止回應。  
+# <a name="best-practices-for-regular-expressions-in-net"></a>.NET 中規則運算式的最佳做法
+<a name="top"></a> .NET 中的規則運算式引擎是一項強大且功能完整的工具，會依據模式比對而非比較與比對常值文字的方式處理文字。 在大部分情況下，它會快速且有效率地執行模式比對。 不過，在某些情況下，規則運算式引擎速度可能變得相當慢。 而只有鮮少情況下，它甚至可能在處理相對小的輸入卻耗費數小時甚至數天時停止回應。  
   
  本主題說明一些開發人員可以採用的最佳做法，確保其規則運算式達到最佳效能。 它包含以下各節：  
   
--   [考慮輸入的來源](#InputSource)  
+-   [考慮輸入來源](#InputSource)  
   
 -   [適當處理物件具現化](#ObjectInstantiation)  
   
@@ -38,7 +41,7 @@ ms.lasthandoff: 10/18/2017
   
 -   [使用逾時值](#Timeouts)  
   
--   [必要時才擷取](#Capture)  
+-   [必要時擷取](#Capture)  
   
 -   [相關主題](#RelatedTopics)  
   
@@ -74,16 +77,16 @@ ms.lasthandoff: 10/18/2017
   
 -   開發模式時，您應考慮回溯可能對規則運算式引擎的效能造成的影響，尤其是規則運算式的設計為處理未受限制的輸入。 如需詳細資訊，請參閱[控制回溯](#Backtracking)一節。  
   
--   使用無效或幾乎有效的輸入以及有效輸入徹底測試您的規則運算式。 若要針對特殊規則運算式隨機產生輸入，您可以使用 [Rex](http://go.microsoft.com/fwlink/?LinkId=210756)，這是 Microsoft Research 提供的規則運算式探索工具。  
+-   使用無效或幾乎有效的輸入以及有效輸入徹底測試您的規則運算式。 若要針對特殊規則運算式隨機產生輸入，您可以使用 [Rex](https://www.microsoft.com/en-us/research/project/rex-regular-expression-exploration/)，這是 Microsoft Research 提供的規則運算式探索工具。  
   
  [回到頁首](#top)  
   
 <a name="ObjectInstantiation"></a>   
 ## <a name="handle-object-instantiation-appropriately"></a>適當處理物件具現化  
- 核心。網路的規則運算式物件模型是<xref:System.Text.RegularExpressions.Regex?displayProperty=nameWithType>類別，其代表規則運算式引擎。 使用 <xref:System.Text.RegularExpressions.Regex> 引擎的方式經常是影響規則運算式效能最重要的一項因素。 定義規則運算式的工作與結合規則運算式引擎和規則運算式模式息息相關。 無論是傳遞規則運算式模式給 <xref:System.Text.RegularExpressions.Regex> 物件的建構函式，藉此將該物件具現化，或是將規則運算式模式連同要分析的字串一併傳遞給靜態方法，藉此呼叫該方法，這個結合的過程都必然相當昂貴。  
+ <xref:System.Text.RegularExpressions.Regex?displayProperty=nameWithType> 類別是 .NET 規則運算式物件模型的核心，它代表規則運算式引擎。 使用 <xref:System.Text.RegularExpressions.Regex> 引擎的方式經常是影響規則運算式效能最重要的一項因素。 定義規則運算式的工作與結合規則運算式引擎和規則運算式模式息息相關。 無論是傳遞規則運算式模式給 <xref:System.Text.RegularExpressions.Regex> 物件的建構函式，藉此將該物件具現化，或是將規則運算式模式連同要分析的字串一併傳遞給靜態方法，藉此呼叫該方法，這個結合的過程都必然相當昂貴。  
   
 > [!NOTE]
->  如需使用解譯和編譯規則運算式的效能含意的詳細討論，請參閱[最佳化規則運算式的效能，第 II： 採取回溯](http://go.microsoft.com/fwlink/?LinkId=211566)BCL Team 部落格中。  
+>  如需使用已解譯和已編譯規則運算式所造成不良效能影響的詳細討論，請參閱 BCL Team 部落格中的[將規則運算式的效能最佳化，第 II 部分：控制回溯](https://blogs.msdn.microsoft.com/bclteam/2010/08/03/optimizing-regular-expression-performance-part-ii-taking-charge-of-backtracking-ron-petrusha/) \(英文\)。  
   
  您可以結合規則運算式引擎與特定規則運算式模式，然後使用引擎透過數種方式比對文字：  
   
@@ -136,7 +139,7 @@ ms.lasthandoff: 10/18/2017
   
  簡言之，我們建議您在呼叫含有相對較不常用之特定規則運算式的規則運算式方法時，使用解譯的規則運算式。 而當您呼叫含有相對較常用之特定規則運算式的規則運算式方法時，則應該使用編譯的規則運算式。 無論是放慢解譯的規則運算式執行速度所提升的效能超過縮短的啟動時間，或是放慢編譯的規則運算式啟動時間所提升的效能超過加快執行速度，都不容易判斷出其確實的臨界值。 因為臨界值取決於各種不同的因素，包括規則運算式及其處理之特定資料的複雜度。 若要判斷究竟是解譯或編譯的規則運算式能為您的特殊應用程式案例提供最佳效能，您可以使用 <xref:System.Diagnostics.Stopwatch> 類別比較兩者的執行時間。  
   
- 下列範例會比較效能的編譯和解譯規則運算式讀取前十個句子及讀取 Dreiser 所文字中的所有句子時*The financier*。 如範例的輸出所示，僅對規則運算式比對方法進行十次呼叫時，解譯的規則運算式能提供比編譯的規則運算式更佳的效能。 但是進行大量呼叫 (此案例中為超過 13,000 次) 時，編譯的規則運算式會提供較佳的效能。  
+ 下列範例會比較已編譯和已解譯的規則運算式讀取 Theodore Dreiser 所著 *The Financier* 一文的前十個句子及讀取所有句子時的效能。 如範例的輸出所示，僅對規則運算式比對方法進行十次呼叫時，解譯的規則運算式能提供比編譯的規則運算式更佳的效能。 但是進行大量呼叫 (此案例中為超過 13,000 次) 時，編譯的規則運算式會提供較佳的效能。  
   
  [!code-csharp[Conceptual.RegularExpressions.BestPractices#5](../../../samples/snippets/csharp/VS_Snippets_CLR/conceptual.regularexpressions.bestpractices/cs/compare1.cs#5)]
  [!code-vb[Conceptual.RegularExpressions.BestPractices#5](../../../samples/snippets/visualbasic/VS_Snippets_CLR/conceptual.regularexpressions.bestpractices/vb/compare1.vb#5)]  
@@ -153,7 +156,7 @@ ms.lasthandoff: 10/18/2017
 |`[.?:;!]`|比對句號、問號、冒號、分號或驚嘆號。|  
   
 ### <a name="regular-expressions-compiled-to-an-assembly"></a>規則運算式：編譯為組件  
- .NET 也可讓您建立包含編譯規則運算式的組件。 這樣會將規則運算式編譯的效能影響從執行階段移至設計階段。 不過，它還包含了一些額外的工作：您必須事先定義規則運算式，並且將其編譯為組件。 接著編譯器就可在編譯使用組件之規則運算式的原始程式碼時參考這個組件。 組件中的每個編譯的規則運算式都會以衍生自 <xref:System.Text.RegularExpressions.Regex> 的類別表示。  
+ .NET 也可讓您建立包含已編譯規則運算式的組件。 這樣會將規則運算式編譯的效能影響從執行階段移至設計階段。 不過，它還包含了一些額外的工作：您必須事先定義規則運算式，並且將其編譯為組件。 接著編譯器就可在編譯使用組件之規則運算式的原始程式碼時參考這個組件。 組件中的每個編譯的規則運算式都會以衍生自 <xref:System.Text.RegularExpressions.Regex> 的類別表示。  
   
  若要將規則運算式編譯為組件，請呼叫 <xref:System.Text.RegularExpressions.Regex.CompileToAssembly%28System.Text.RegularExpressions.RegexCompilationInfo%5B%5D%2CSystem.Reflection.AssemblyName%29?displayProperty=nameWithType> 方法，並且將代表要編譯之規則運算式的 <xref:System.Text.RegularExpressions.RegexCompilationInfo> 物件陣列，以及包含所要建立組件之相關資訊的 <xref:System.Reflection.AssemblyName> 物件傳遞給該方法。  
   
@@ -170,7 +173,7 @@ ms.lasthandoff: 10/18/2017
  [!code-csharp[Conceptual.RegularExpressions.BestPractices#6](../../../samples/snippets/csharp/VS_Snippets_CLR/conceptual.regularexpressions.bestpractices/cs/compile1.cs#6)]
  [!code-vb[Conceptual.RegularExpressions.BestPractices#6](../../../samples/snippets/visualbasic/VS_Snippets_CLR/conceptual.regularexpressions.bestpractices/vb/compile1.vb#6)]  
   
- 當範例編譯為可執行檔並且執行時，會建立名為 `RegexLib.dll` 的組件。 規則運算式會以衍生自 `Utilities.RegularExpressions.SentencePattern` 且名為 <xref:System.Text.RegularExpressions.Regex> 的類別表示。 下列範例然後使用編譯的規則運算式擷取的 Dreiser 所文字的句子*The financier*。  
+ 當範例編譯為可執行檔並且執行時，會建立名為 `RegexLib.dll` 的組件。 規則運算式會以衍生自 `Utilities.RegularExpressions.SentencePattern` 且名為 <xref:System.Text.RegularExpressions.Regex> 的類別表示。 下列範例接著會使用已編譯的規則運算式來擷取 Theodore Dreiser 所著 *The Financier* 一文中的句子。  
   
  [!code-csharp[Conceptual.RegularExpressions.BestPractices#7](../../../samples/snippets/csharp/VS_Snippets_CLR/conceptual.regularexpressions.bestpractices/cs/compile2.cs#7)]
  [!code-vb[Conceptual.RegularExpressions.BestPractices#7](../../../samples/snippets/visualbasic/VS_Snippets_CLR/conceptual.regularexpressions.bestpractices/vb/compile2.vb#7)]  
@@ -182,7 +185,7 @@ ms.lasthandoff: 10/18/2017
  通常規則運算式引擎會使用線性迴歸逐一處理輸入字串，並且與規則運算式模式比較。 不過，當規則運算式模式中使用不定數的數量詞 (例如 `*`、`+` 和 `?`) 時，規則運算式引擎可能會放棄一部分成功的部分符合結果，並且返回之前儲存的狀態，以便搜尋與整個模式完全相符的結果。 這個程序稱為「回溯」(Backtracking)。  
   
 > [!NOTE]
->  如需有關回溯的詳細資訊，請參閱[規則運算式行為的詳細資料](../../../docs/standard/base-types/details-of-regular-expression-behavior.md)和[回溯](../../../docs/standard/base-types/backtracking-in-regular-expressions.md)。 控制回溯的詳細討論，請參閱[最佳化規則運算式的效能，第 II： 採取回溯](http://go.microsoft.com/fwlink/?LinkId=211567)BCL Team 部落格中。  
+>  如需有關回溯的詳細資訊，請參閱[規則運算式行為的詳細資料](../../../docs/standard/base-types/details-of-regular-expression-behavior.md)和[回溯](../../../docs/standard/base-types/backtracking-in-regular-expressions.md)。 如需有關回溯的詳細討論，請參閱 BCL Team 部落格中的[將規則運算式的效能最佳化，第 II 部分：控制回溯](https://blogs.msdn.microsoft.com/bclteam/2010/08/03/optimizing-regular-expression-performance-part-ii-taking-charge-of-backtracking-ron-petrusha/) \(英文\)。  
   
  支援回溯能讓規則運算式更強大且更靈活， 同時還能讓規則運算式開發人員負責掌控規則運算式引擎的作業。 由於開發人員經常忽略這個責任而誤用回溯或大量使用回溯，因而時常是造成規則運算式效能低落的最重要原因。 在最糟的情況下，輸入字串中每個超出字元的執行時間可能會倍增。 事實上，如果輸入幾乎符合規則運算式模式的話，大量使用回溯很容易製造相當於程式設計上的無窮迴圈，而規則運算式引擎可能需要數小時，甚至數天來處理相對來說很短的輸入字串。  
   
@@ -197,7 +200,7 @@ ms.lasthandoff: 10/18/2017
   
  由於字緣與文字字元不同，也不是文字字元的子集，因此規則運算式引擎不可能在比對文字字元時跨越字緣。 這表示對於這個規則運算式來說，回溯不會使任何比對完全成功，只會造成效能降低，因為規則運算式引擎會被迫儲存每一個成功的初始文字字元比對的狀態。  
   
- 如果您判斷，不需要回溯，您可以使用停用它`(?>``subexpression``)`語言項目。 下列範例會使用兩個規則運算式剖析輸入字串。 首先，`\b\p{Lu}\w*\b` 會仰賴回溯。 第二，`\b\p{Lu}(?>\w*)\b` 會停用回溯。 如範例的輸出所示，兩者會產生相同的結果。  
+ 如果您判定不需回溯，則可使用 `(?>``subexpression``)` 語言元素來停用它。 下列範例會使用兩個規則運算式剖析輸入字串。 首先，`\b\p{Lu}\w*\b` 會仰賴回溯。 第二，`\b\p{Lu}(?>\w*)\b` 會停用回溯。 如範例的輸出所示，兩者會產生相同的結果。  
   
  [!code-csharp[Conceptual.RegularExpressions.BestPractices#10](../../../samples/snippets/csharp/VS_Snippets_CLR/conceptual.regularexpressions.bestpractices/cs/backtrack2.cs#10)]
  [!code-vb[Conceptual.RegularExpressions.BestPractices#10](../../../samples/snippets/visualbasic/VS_Snippets_CLR/conceptual.regularexpressions.bestpractices/vb/backtrack2.vb#10)]  
@@ -227,7 +230,7 @@ ms.lasthandoff: 10/18/2017
   
  .NET 中的規則運算式語言包括下列語言項目，可讓您用來消除巢狀數量詞。 如需詳細資訊，請參閱[群組建構](../../../docs/standard/base-types/grouping-constructs-in-regular-expressions.md)。  
   
-|語言項目|說明|  
+|語言項目|描述|  
 |----------------------|-----------------|  
 |`(?=` `subexpression` `)`|零寬度右合樣。 從目前的位置向右合樣，判斷 `subexpression` 是否符合輸入字串。|  
 |`(?!` `subexpression` `)`|零寬度右不合樣。 從目前的位置向右合樣，判斷 `subexpression` 是否不符合輸入字串。|  
@@ -259,7 +262,7 @@ ms.lasthandoff: 10/18/2017
   
 <a name="Capture"></a>   
 ## <a name="capture-only-when-necessary"></a>必要時才擷取  
- .NET 中的規則運算式支援許多群組建構，可讓您將規則運算式模式與一或多個子運算式設為群組。 在.NET 規則運算式語言中最常使用的群組建構是`(` *subexpression*`)`，其定義的編號擷取群組，和`(?<`*名稱*`>` *subexpression*`)`，其中定義具名的擷取群組。 群組建構是建立反向參考和定義套用數量詞之子運算式的要件。  
+ .NET 中的規則運算式支援許多群組建構，可讓您將規則運算式模式與一或多個子運算式設為群組。 .NET 規則運算式語言中最常用的群組建構為 `(`*subexpression*`)` (用於定義已編號的擷取群組) 和 `(?<`*name*`>`*subexpression*`)` (用於定義具名擷取群組)。 群組建構是建立反向參考和定義套用數量詞之子運算式的要件。  
   
  不過，使用這些語言項目也有其代價。 這些語言項目會造成在 <xref:System.Text.RegularExpressions.GroupCollection> 屬性傳回的 <xref:System.Text.RegularExpressions.Match.Groups%2A?displayProperty=nameWithType> 物件中填入最近使用的未命名或具名擷取，而如果單一群組建構擷取了輸入字串中的多個子字串，則這些語言項目也會在特定擷取群組的 <xref:System.Text.RegularExpressions.CaptureCollection> 屬性傳回的 <xref:System.Text.RegularExpressions.Group.Captures%2A?displayProperty=nameWithType> 物件中填入多個 <xref:System.Text.RegularExpressions.Capture> 物件。  
   
@@ -279,16 +282,16 @@ ms.lasthandoff: 10/18/2017
  [!code-csharp[Conceptual.RegularExpressions.BestPractices#8](../../../samples/snippets/csharp/VS_Snippets_CLR/conceptual.regularexpressions.bestpractices/cs/group1.cs#8)]
  [!code-vb[Conceptual.RegularExpressions.BestPractices#8](../../../samples/snippets/visualbasic/VS_Snippets_CLR/conceptual.regularexpressions.bestpractices/vb/group1.vb#8)]  
   
- 如果您使用子運算式的目的只是要在其中套用數量詞，對於擷取的文字並不感興趣，則應該停用群組擷取。 例如，`(?:``subexpression``)`語言項目可防止它所套用的群組擷取相符子字串。 在下列範例中，前一個範例的規則運算式模式會變成 `\b(?:\w+[;,]?\s?)+[.?!]`。 如輸出所示，它會阻止規則運算式引擎填入 <xref:System.Text.RegularExpressions.GroupCollection> 和 <xref:System.Text.RegularExpressions.CaptureCollection> 集合。  
+ 如果您使用子運算式的目的只是要在其中套用數量詞，對於擷取的文字並不感興趣，則應該停用群組擷取。 例如，`(?:``subexpression``)` 語言元素會阻止套用該語言元素的群組擷取相符的子字串。 在下列範例中，前一個範例的規則運算式模式會變成 `\b(?:\w+[;,]?\s?)+[.?!]`。 如輸出所示，它會阻止規則運算式引擎填入 <xref:System.Text.RegularExpressions.GroupCollection> 和 <xref:System.Text.RegularExpressions.CaptureCollection> 集合。  
   
  [!code-csharp[Conceptual.RegularExpressions.BestPractices#9](../../../samples/snippets/csharp/VS_Snippets_CLR/conceptual.regularexpressions.bestpractices/cs/group2.cs#9)]
  [!code-vb[Conceptual.RegularExpressions.BestPractices#9](../../../samples/snippets/visualbasic/VS_Snippets_CLR/conceptual.regularexpressions.bestpractices/vb/group2.vb#9)]  
   
  您可以透過下列其中一種方式停用擷取：  
   
--   使用`(?:``subexpression``)`語言項目。 這個項目會阻止在套用該項目的群組中擷取相符的子字串。 不過，它不會停用任何巢狀群組中的子字串擷取。  
+-   使用 `(?:``subexpression``)` 語言元素。 這個項目會阻止在套用該項目的群組中擷取相符的子字串。 不過，它不會停用任何巢狀群組中的子字串擷取。  
   
--   使用 <xref:System.Text.RegularExpressions.RegexOptions.ExplicitCapture> 選項。 這個選項會停用規則運算式模式中的所有未命名或隱含擷取。 當您使用此選項時，只有子字串定義之具名群組相符的`(?<``name``>``subexpression``)`可以擷取語言項目。 <xref:System.Text.RegularExpressions.RegexOptions.ExplicitCapture> 旗標可以傳遞至 `options` 類別建構函式的 <xref:System.Text.RegularExpressions.Regex> 參數，或是 `options` 靜態比對方法的 <xref:System.Text.RegularExpressions.Regex> 參數。  
+-   使用 <xref:System.Text.RegularExpressions.RegexOptions.ExplicitCapture> 選項。 這個選項會停用規則運算式模式中的所有未命名或隱含擷取。 當您使用這個選項時，只會擷取符合 `(?<``name``>``subexpression``)` 語言元素所定義之具名群組的子字串。 <xref:System.Text.RegularExpressions.RegexOptions.ExplicitCapture> 旗標可以傳遞至 `options` 類別建構函式的 <xref:System.Text.RegularExpressions.Regex> 參數，或是 `options` 靜態比對方法的 <xref:System.Text.RegularExpressions.Regex> 參數。  
   
 -   在 `n` 語言項目中使用 `(?imnsx)` 選項。 這個選項會從規則運算式模式中出現該項目的位置開始，停用所有未命名或隱含擷取。 在到達模式結尾或 `(-n)` 選項啟用未命名或隱含擷取之前，擷取都會是停用狀態。 如需詳細資訊，請參閱[其他建構](../../../docs/standard/base-types/miscellaneous-constructs-in-regular-expressions.md)。  
   
@@ -299,7 +302,7 @@ ms.lasthandoff: 10/18/2017
 <a name="RelatedTopics"></a>   
 ## <a name="related-topics"></a>相關主題  
   
-|標題|說明|  
+|標題|描述|  
 |-----------|-----------------|  
 |[規則運算式行為的詳細資訊](../../../docs/standard/base-types/details-of-regular-expression-behavior.md)|檢查 .NET 中規則運算式引擎的實作。 本主題將強調規則運算式的靈活度，並且說明開發人員應負責確保規則運算式引擎有效率且穩定地運作。|  
 |[回溯](../../../docs/standard/base-types/backtracking-in-regular-expressions.md)|說明何謂回溯以及回溯如何影響規則運算式的效能，並且檢查提供回溯之替代方式的語言項目。|  

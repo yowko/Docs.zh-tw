@@ -12,15 +12,18 @@ dev_langs:
 - csharp
 - vb
 ms.assetid: 55c4b175-3170-4071-9d60-dd5a42f79b54
-caps.latest.revision: "2"
+caps.latest.revision: 
 author: mairaw
 ms.author: mairaw
 manager: wpickett
-ms.openlocfilehash: 193a9980bba423292921beff6c4c3172ce02fd92
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.workload:
+- dotnet
+- dotnetcore
+ms.openlocfilehash: a834fe8764744f5b2dd41de1f4fe1479059b87bb
+ms.sourcegitcommit: e7f04439d78909229506b56935a1105a4149ff3d
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 12/23/2017
 ---
 # <a name="xmlschemaset-for-schema-compilation"></a>用於結構描述編譯的 XmlSchemaSet
 說明 <xref:System.Xml.Schema.XmlSchemaSet>，它是一種可儲存及驗證 XML 結構描述定義語言 (XSD) 結構描述的快取。  
@@ -254,11 +257,11 @@ foreach (XmlSchema schema in schemaSet.Schemas())
  <xref:System.Xml.Schema.XmlSchemaSet> 會嘗試匯入 `http://www.contoso.com` 命名空間的結構描述，方法是從 `http://www.contoso.com/schema.xsd` URL 將其載入。 即使在 `http://www.contoso.com` 中存在 <xref:System.Xml.Schema.XmlSchemaSet> 命名空間的其他結構描述文件，也只有在結構描述文件中宣告的結構描述宣告及型別才可在匯入結構描述中使用。 如果在 `schema.xsd` URL 處找不到 `http://www.contoso.com/schema.xsd` 檔案，則不會將 `http://www.contoso.com` 命名空間的任何結構描述匯入到匯入結構描述中。  
   
 ## <a name="validating-xml-documents"></a>驗證 XML 文件  
- 您可根據 <xref:System.Xml.Schema.XmlSchemaSet> 中的結構描述來驗證 XML 文件。 驗證 XML 文件的方法是將結構描述加入至 <xref:System.Xml.Schema.XmlSchemaSet> 物件的 <xref:System.Xml.XmlReaderSettings.Schemas%2A><xref:System.Xml.XmlReaderSettings> 屬性，或將 <xref:System.Xml.Schema.XmlSchemaSet> 加入至 <xref:System.Xml.XmlReaderSettings.Schemas%2A> 物件的 <xref:System.Xml.XmlReaderSettings> 屬性。 然後，<xref:System.Xml.XmlReaderSettings> 類別的 <xref:System.Xml.XmlReader.Create%2A> 方法會使用 <xref:System.Xml.XmlReader> 物件來建立 <xref:System.Xml.XmlReader> 物件並驗證 XML 文件。  
+ 您可根據 <xref:System.Xml.Schema.XmlSchemaSet> 中的結構描述來驗證 XML 文件。 驗證 XML 文件的方法是將結構描述加入至 <xref:System.Xml.XmlReaderSettings> 物件的 <xref:System.Xml.Schema.XmlSchemaSet><xref:System.Xml.XmlReaderSettings.Schemas%2A> 屬性，或將 <xref:System.Xml.Schema.XmlSchemaSet> 加入至 <xref:System.Xml.XmlReaderSettings> 物件的 <xref:System.Xml.XmlReaderSettings.Schemas%2A> 屬性。 然後，<xref:System.Xml.XmlReaderSettings> 類別的 <xref:System.Xml.XmlReader.Create%2A> 方法會使用 <xref:System.Xml.XmlReader> 物件來建立 <xref:System.Xml.XmlReader> 物件並驗證 XML 文件。  
   
- 如需有關驗證 XML 文件使用<xref:System.Xml.Schema.XmlSchemaSet>，請參閱[使用 XmlSchemaSet XML 結構描述 (XSD) 驗證](../../../../docs/standard/data/xml/xml-schema-xsd-validation-with-xmlschemaset.md)。  
+ 如需有關使用 <xref:System.Xml.Schema.XmlSchemaSet> 驗證 XML 文件的詳細資訊，請參閱 [使用 XmlSchemaSet 驗證 XML 結構描述 (XSD)](../../../../docs/standard/data/xml/xml-schema-xsd-validation-with-xmlschemaset.md)。  
   
-## <a name="see-also"></a>另請參閱  
+## <a name="see-also"></a>請參閱  
  <xref:System.Xml.Schema.XmlSchemaSet.Add%2A>  
  <xref:System.Xml.Schema.XmlSchemaSet.Schemas%2A>  
  <xref:System.Xml.Schema.XmlSchemaSet.Contains%2A>  
@@ -266,5 +269,5 @@ foreach (XmlSchema schema in schemaSet.Schemas())
  <xref:System.Xml.Schema.XmlSchemaSet.Reprocess%2A>  
  <xref:System.Xml.Schema.XmlSchemaSet.Remove%2A>  
  <xref:System.Xml.Schema.XmlSchemaSet.RemoveRecursive%2A>  
- [為結構描述快取的 XmlSchemaSet](../../../../docs/standard/data/xml/xmlschemaset-for-schema-compilation.md)  
+ [XmlSchemaSet 作為結構描述快取](../../../../docs/standard/data/xml/xmlschemaset-for-schema-compilation.md)  
  [使用 XmlSchemaSet 驗證 XML 結構描述 (XSD)](../../../../docs/standard/data/xml/xml-schema-xsd-validation-with-xmlschemaset.md)

@@ -14,15 +14,18 @@ helpviewer_keywords:
 - globalization [.NET Framework], best practices
 - international applications [.NET Framework], best practices
 ms.assetid: f08169c7-aad8-4ec3-9a21-9ebd3b89986c
-caps.latest.revision: "20"
+caps.latest.revision: 
 author: rpetrusha
 ms.author: ronpet
 manager: wpickett
-ms.openlocfilehash: 8a50080fa4b84abe84fbb1a44f18e1fb680a07c7
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.workload:
+- dotnet
+- dotnetcore
+ms.openlocfilehash: 1fbdbe2596f44a6efda35b8c3e3aace303d79364
+ms.sourcegitcommit: c0dd436f6f8f44dc80dc43b07f6841a00b74b23f
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 01/19/2018
 ---
 # <a name="best-practices-for-developing-world-ready-applications"></a>開發世界性的應用程式的最佳作法
 本章節將說明開發世界性的應用程式的最佳作法。  
@@ -57,7 +60,7 @@ ms.lasthandoff: 11/21/2017
   
 9. 使用國際資料，在國際作業系統版本上測試您的應用程式功能。  
   
-10. 如果安全性決策是根據字串比較或大小寫變更作業的結果，請讓應用程式執行不區分文化特性的作業。 這種作法可以確保結果不會受 `CultureInfo.CurrentCulture` 的值所影響。 請參閱 「 字串比較，使用目前文化特性 」 一節[使用字串的最佳作法](../../../docs/standard/base-types/best-practices-strings.md)的範例，示範如何區分文化特性字串比較可能會產生不一致的結果。  
+10. 如果安全性決策是根據字串比較或大小寫變更作業的結果，請讓應用程式執行不區分文化特性的作業。 這種作法可以確保結果不會受 `CultureInfo.CurrentCulture` 的值所影響。 如需示範區分文化特性的字串比較如何產生不一致結果的範例，請參閱[使用字串的最佳做法](../../../docs/standard/base-types/best-practices-strings.md)中的＜使用目前文化特性的字串比較＞一節。  
   
 ## <a name="localization-best-practices"></a>當地語系化最佳作法  
   
@@ -77,11 +80,11 @@ ms.lasthandoff: 11/21/2017
   
 8.  使用 <xref:System.Resources.ResourceManager?displayProperty=nameWithType> 類別來根據文化特性擷取資源。  
   
-9. 使用 Visual Studio 建立 Windows Form 對話方塊，以便他們可以使用來當地語系化[Windows Form 資源編輯器 (Winres.exe)](../../../docs/framework/tools/winres-exe-windows-forms-resource-editor.md)。 請不要以手動方式編碼 Windows Form 對話方塊。  
+9. 使用 Visual Studio 建立 Windows Forms 對話方塊，如此就能使用 [Windows Forms 資源編輯器 (Winres.exe)](../../../docs/framework/tools/winres-exe-windows-forms-resource-editor.md) 將對話方塊當地語系化。 請不要以手動方式編碼 Windows Form 對話方塊。  
   
 10. 進行專業當地語系化 (轉譯)。  
   
-11. 建立和當地語系化資源的完整說明，請參閱[應用程式中的資源](../../../docs/framework/resources/index.md)。  
+11. 如需建立和當地語系化資源的完整描述，請參閱[應用程式中的資源](../../../docs/framework/resources/index.md)。  
   
 ## <a name="globalization-best-practices-for-aspnet-applications"></a>ASP.NET 應用程式的當地語系化最佳作法  
   
@@ -99,7 +102,7 @@ ms.lasthandoff: 11/21/2017
   
 4.  指定 ASP.NET 應用程式中，下列三個位置的 requestEncoding、responseEncoding、fileEncoding、culture 和 uiCulture 屬性值：  
   
-    -   在 Web.config 檔案的全球化區段中。 這個程式位於 ASP.NET 應用程式外部。 如需詳細資訊，請參閱[\<全球化 > 項目](http://msdn.microsoft.com/en-us/e2dffc8e-ebd2-439b-a2fd-e3ac5e620da7)。  
+    -   在 Web.config 檔案的全球化區段中。 這個程式位於 ASP.NET 應用程式外部。 如需詳細資訊，請參閱 [\<globalization> 元素](http://msdn.microsoft.com/library/e2dffc8e-ebd2-439b-a2fd-e3ac5e620da7)。  
   
     -   在網頁指示詞中。 請注意，當應用程式位於網頁中，表示這個檔案已被讀取。 因此，此時要指定 fileEncoding 和 requestEncoding 已經太遲了。 您只能在網頁指示詞中指定 uiCulture、Culture 和 responseEncoding。  
   
@@ -107,6 +110,6 @@ ms.lasthandoff: 11/21/2017
   
 5.  請注意，uiCulture 值可設為瀏覽器所接受的語言。  
   
-## <a name="see-also"></a>另請參閱  
+## <a name="see-also"></a>請參閱  
  [全球化和當地語系化](../../../docs/standard/globalization-localization/index.md)  
  [桌面應用程式中的資源](../../../docs/framework/resources/index.md)

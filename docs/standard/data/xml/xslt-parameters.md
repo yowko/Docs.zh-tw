@@ -12,15 +12,18 @@ dev_langs:
 - csharp
 - vb
 ms.assetid: fe60aaa0-ae43-4b1c-9be1-426af66ba757
-caps.latest.revision: "2"
+caps.latest.revision: 
 author: mairaw
 ms.author: mairaw
 manager: wpickett
-ms.openlocfilehash: e66d98501bb0bd3a5d5cd5eacc0b09405c158522
-ms.sourcegitcommit: bd1ef61f4bb794b25383d3d72e71041a5ced172e
+ms.workload:
+- dotnet
+- dotnetcore
+ms.openlocfilehash: b16ad921e5b16ab7564b2ceedab91c6b6073537d
+ms.sourcegitcommit: e7f04439d78909229506b56935a1105a4149ff3d
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/18/2017
+ms.lasthandoff: 12/23/2017
 ---
 # <a name="xslt-parameters"></a>XSLT 參數
 XSLT 參數可使用 <xref:System.Xml.Xsl.XsltArgumentList> 方法加入至 <xref:System.Xml.Xsl.XsltArgumentList.AddParam%2A>。 限定名稱與命名空間 URI 會在此時與參數物件產生關聯。  
@@ -43,11 +46,11 @@ XSLT 參數可使用 <xref:System.Xml.Xsl.XsltArgumentList> 方法加入至 <xre
 |`Number`|<xref:System.Double?displayProperty=nameWithType>|XPath|  
 |`Result Tree Fragment`|<xref:System.Xml.XPath.XPathNavigator?displayProperty=nameWithType>|XSLT|  
 |`Node*`|<xref:System.Xml.XPath.XPathNavigator?displayProperty=nameWithType>|XPath|  
-|`Node Set`|<xref:System.Xml.XPath.XPathNodeIterator><br /><br /> **XPathNavigator]**|XPath|  
+|`Node Set`|<xref:System.Xml.XPath.XPathNodeIterator><br /><br /> **XPathNavigator[]**|XPath|  
   
  *這相當於含有單一節點的節點集。  
   
- 如果參數物件不是上述其中一個類別，則會根據下列規則進行轉換。 Common Language Runtime (CLR) 數字型別會轉換為 <xref:System.Double>。 <xref:System.DateTime> 類型會轉換為 <xref:System.String>。 <xref:System.Xml.XPath.IXPathNavigable> 類型會轉換為 <xref:System.Xml.XPath.XPathNavigator>。 **XPathNavigator []**轉換成<xref:System.Xml.XPath.XPathNodeIterator>。  
+ 如果參數物件不是上述其中一個類別，則會根據下列規則進行轉換。 Common Language Runtime (CLR) 數字型別會轉換為 <xref:System.Double>。 <xref:System.DateTime> 類型會轉換為 <xref:System.String>。 <xref:System.Xml.XPath.IXPathNavigable> 類型會轉換為 <xref:System.Xml.XPath.XPathNavigator>。 **XPathNavigator[]** 會轉換為 <xref:System.Xml.XPath.XPathNodeIterator>。  
   
  所有其他類型都會擲回錯誤。  
   
@@ -75,5 +78,5 @@ XSLT 參數可使用 <xref:System.Xml.Xsl.XsltArgumentList> 方法加入至 <xre
 </order>  
 ```  
   
-## <a name="see-also"></a>另請參閱  
+## <a name="see-also"></a>請參閱  
  [XSLT 轉換](../../../../docs/standard/data/xml/xslt-transformations.md)

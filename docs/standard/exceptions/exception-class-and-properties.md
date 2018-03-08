@@ -12,15 +12,18 @@ helpviewer_keywords:
 - exceptions, Exception class
 - Exception class
 ms.assetid: e2e1f8c4-e7b4-467d-9a66-13c90861221d
-caps.latest.revision: "9"
+caps.latest.revision: 
 author: mairaw
 ms.author: mairaw
 manager: wpickett
-ms.openlocfilehash: 253a9846e484aa4e54c3433b0bbc8623519bbb7e
-ms.sourcegitcommit: bbde43da655ae7bea1977f7af7345eb87bd7fd5f
+ms.workload:
+- dotnet
+- dotnetcore
+ms.openlocfilehash: 120d56832aad5024ee607d6e3114f164c967a12f
+ms.sourcegitcommit: e7f04439d78909229506b56935a1105a4149ff3d
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/21/2017
+ms.lasthandoff: 12/23/2017
 ---
 # <a name="exception-class-and-properties"></a>Exception 類別和屬性
 
@@ -35,7 +38,7 @@ Object
 
 <xref:System.Exception> 類別具有下列屬性，讓您更容易了解例外狀況。
 
-| 屬性名稱 | 說明 |
+| 屬性名稱 | 描述 |
 | ------------- | ----------- |
 | <xref:System.Exception.Data> | <xref:System.Collections.IDictionary> 會將任意資料保存在索引鍵/值組。 |
 | <xref:System.Exception.HelpLink> | 可保留說明檔的 URL (或 URN)，以提供有關例外狀況原因的廣泛資訊。 |
@@ -46,7 +49,7 @@ Object
 
 大部分繼承自 <xref:System.Exception> 的類別不會實作其他成員或提供其他功能；它們只會繼承自 <xref:System.Exception>。 因此，您可以在例外狀況類別階層架構、例外狀況名稱和例外狀況所包含的資訊中，找到例外狀況的最重要資訊。
 
-我們建議您擲回並攔截物件必須衍生自<xref:System.Exception>，但您可以擲回的任何物件衍生自<xref:System.Object>當做例外狀況類別。 請注意，並非所有語言都能擲回及攔截不是衍生自 <xref:System.Exception> 的物件。
+建議只擲回及攔截衍生自 <xref:System.Exception> 的物件，但您可以擲回任何衍生自 <xref:System.Object> 類別的物件作為例外狀況。 請注意，並非所有語言都能擲回及攔截不是衍生自 <xref:System.Exception> 的物件。
   
-## <a name="see-also"></a>另請參閱  
+## <a name="see-also"></a>請參閱  
 [例外狀況](index.md)

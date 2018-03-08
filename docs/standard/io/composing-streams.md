@@ -19,34 +19,37 @@ helpviewer_keywords:
 - base streams
 - streams, backing stores
 ms.assetid: da761658-a535-4f26-a452-b30df47f73d5
-caps.latest.revision: "10"
+caps.latest.revision: 
 author: mairaw
 ms.author: mairaw
 manager: wpickett
-ms.openlocfilehash: 75800210a52620c5b08a01c5f8fa888bf40843fe
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.workload:
+- dotnet
+- dotnetcore
+ms.openlocfilehash: d49661e93675b80bcd579a6cd341b3dc88a688c2
+ms.sourcegitcommit: e7f04439d78909229506b56935a1105a4149ff3d
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 12/23/2017
 ---
 # <a name="composing-streams"></a>撰寫資料流
-備份存放區是儲存媒體，例如磁碟或記憶體。 每個不同的備份存放區實作自己的資料流，做為實作的<xref:System.IO.Stream>類別。 每個資料流類型讀取和寫入位元組至其指定的支援儲存區。 連接到備份存放區的資料流，會呼叫基底資料流。 基底資料流則具有建構函式具有備份存放區連接的資料流所需的參數。 例如，<xref:System.IO.FileStream>建構函式所指定的路徑參數，指定檔案共用的處理程序等等的方式。  
+備份存放區是一種儲存媒體，例如磁碟或記憶體。 每個不同的備份存放區都會實作自己的資料流，作為 <xref:System.IO.Stream> 類別的實作。 每個資料流類型都會在其指定的備份存放區中讀取和寫入位元組。 連線到備份存放區的資料流稱為基底資料流。 基底資料流的建構函式具有將資料流連線至備份存放區所需的參數。 例如，<xref:System.IO.FileStream> 的建構函式會指定路徑參數，此參數可指定處理程序共用檔案的方式等等。  
   
- 設計<xref:System.IO>類別提供簡化的資料流組成。 基底資料流可附加至一或多個傳遞資料流，提供您想要的功能。 讀取器或寫入器可以附加至鏈結的結尾，讓慣用的類型可以被輕易讀取或寫入。  
+ <xref:System.IO> 類別的設計可提供簡化的資料流撰寫。 基底資料流可以附加至一個或多個可提供您想要之功能的傳遞資料流。 讀取器或寫入器可以附加至鏈結的結尾，如此可以輕易地讀取或寫入慣用的類型。  
   
- 下列程式碼範例會建立**FileStream**周圍現有`MyFile.txt`緩衝區順序`MyFile.txt`。 (請注意， **Filestream**預設緩衝處理。)下一步<xref:System.IO.StreamReader>是用來讀取的字元**FileStream**，傳遞給**StreamReader**做為建構函式引數。 <xref:System.IO.StreamReader.ReadLine%2A>讀取直到<xref:System.IO.StreamReader.Peek%2A>尋找沒有更多字元。  
+ 下列程式碼範例會在現有 `MyFile.txt` 的周圍建立 **FileStream** 以緩衝處理 `MyFile.txt`  (請注意，預設會緩衝處理 **Filestream**)。接著，系統會建立一個 <xref:System.IO.StreamReader> 來讀取 **FileStream** 中的字元，之後再傳遞至 **StreamReader** 作為其建構函式引數。 <xref:System.IO.StreamReader.ReadLine%2A> 會讀取到 <xref:System.IO.StreamReader.Peek%2A> 找不到其他字元為止。  
   
  [!code-cpp[System.IO.StreamReader#20](../../../samples/snippets/cpp/VS_Snippets_CLR_System/system.IO.StreamReader/CPP/source2.cpp#20)]
  [!code-csharp[System.IO.StreamReader#20](../../../samples/snippets/csharp/VS_Snippets_CLR_System/system.IO.StreamReader/CS/source2.cs#20)]
  [!code-vb[System.IO.StreamReader#20](../../../samples/snippets/visualbasic/VS_Snippets_CLR_System/system.IO.StreamReader/VB/source2.vb#20)]  
   
- 下列程式碼範例會建立**FileStream**周圍現有`MyFile.txt`緩衝區順序`MyFile.txt`。 (請注意， **Filestream**預設緩衝處理。)下一步 **BinaryReader**是用來讀取位元組從**FileStream**，傳遞給**BinaryReader**做為建構函式引數。 <xref:System.IO.BinaryReader.ReadByte%2A>讀取直到<xref:System.IO.BinaryReader.PeekChar%2A>尋找沒有更多的位元組。  
+ 下列程式碼範例會在現有 `MyFile.txt` 的周圍建立 **FileStream** 以緩衝處理 `MyFile.txt`  (請注意，預設會緩衝處理 **Filestream**)。接著，系統會建立一個 **BinaryReader** 來讀取 **FileStream** 中的位元組，之後再傳遞至 **BinaryReader** 作為其建構函式引數。 <xref:System.IO.BinaryReader.ReadByte%2A> 會讀取到 <xref:System.IO.BinaryReader.PeekChar%2A> 找不到其他位元組為止。  
   
  [!code-cpp[System.IO.StreamReader#21](../../../samples/snippets/cpp/VS_Snippets_CLR_System/system.IO.StreamReader/CPP/source3.cpp#21)]
  [!code-csharp[System.IO.StreamReader#21](../../../samples/snippets/csharp/VS_Snippets_CLR_System/system.IO.StreamReader/CS/source3.cs#21)]
  [!code-vb[System.IO.StreamReader#21](../../../samples/snippets/visualbasic/VS_Snippets_CLR_System/system.IO.StreamReader/VB/source3.vb#21)]  
   
-## <a name="see-also"></a>另請參閱  
+## <a name="see-also"></a>請參閱  
  <xref:System.IO.StreamReader>  
  <xref:System.IO.StreamReader.ReadLine%2A?displayProperty=nameWithType>  
  <xref:System.IO.StreamReader.Peek%2A?displayProperty=nameWithType>  

@@ -12,15 +12,18 @@ helpviewer_keywords:
 - garbage collection, intrusiveness
 - garbage collection, latency modes
 ms.assetid: 96278bb7-6eab-4612-8594-ceebfc887d81
-caps.latest.revision: "41"
+caps.latest.revision: 
 author: rpetrusha
 ms.author: ronpet
 manager: wpickett
-ms.openlocfilehash: 439fdd8fe78a0c0f0fda4ac7e759a4a780bb9b58
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.workload:
+- dotnet
+- dotnetcore
+ms.openlocfilehash: d0ac0db376ad7cd4aa139ed0eb065a5ba33836c8
+ms.sourcegitcommit: e7f04439d78909229506b56935a1105a4149ff3d
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 12/23/2017
 ---
 # <a name="latency-modes"></a>延遲模式
 為了回收物件，記憶體回收行程必須停止應用程式中所有正在執行的執行緒。 在某些情況下，例如當應用程式擷取資料或顯示內容時，完整記憶體回收會在關鍵時刻進行，而妨礙效能。 您可以藉由設定 <xref:System.Runtime.GCSettings.LatencyMode%2A?displayProperty=nameWithType> 屬性為 <xref:System.Runtime.GCLatencyMode?displayProperty=nameWithType> 值的其中一個，來調整記憶體回收行程的干擾程度。  
@@ -57,11 +60,11 @@ ms.lasthandoff: 11/21/2017
   
 -   請注意無法配置的執行緒。 因為 <xref:System.Runtime.GCSettings.LatencyMode%2A> 屬性設定為整個處理序，或許會在可能配置的任何執行緒中產生 <xref:System.OutOfMemoryException>。  
   
--   低度延遲的程式碼包裝在限制的執行區域 (如需詳細資訊，請參閱[限制執行區域](../../../docs/framework/performance/constrained-execution-regions.md))。  
+-   將低度延遲的程式碼包裝在限制執行區域 (如需詳細資訊，請參閱[限制執行區域](../../../docs/framework/performance/constrained-execution-regions.md))。  
   
 -   您也可以呼叫 <xref:System.GC.Collect%28System.Int32%2CSystem.GCCollectionMode%29?displayProperty=nameWithType> 方法，在低延遲期間強制層代 2 回收。  
   
-## <a name="see-also"></a>另請參閱  
+## <a name="see-also"></a>請參閱  
  <xref:System.GC?displayProperty=nameWithType>  
  [引發的收集](../../../docs/standard/garbage-collection/induced.md)  
  [記憶體回收](../../../docs/standard/garbage-collection/index.md)

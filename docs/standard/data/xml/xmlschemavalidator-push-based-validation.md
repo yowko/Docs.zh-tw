@@ -12,15 +12,18 @@ dev_langs:
 - csharp
 - vb
 ms.assetid: 911d4460-dd91-4958-85b2-2ca3299f9ec6
-caps.latest.revision: "4"
+caps.latest.revision: 
 author: mairaw
 ms.author: mairaw
 manager: wpickett
-ms.openlocfilehash: 5a78321b289dd19c5086223856fd3142f1aef75c
-ms.sourcegitcommit: bd1ef61f4bb794b25383d3d72e71041a5ced172e
+ms.workload:
+- dotnet
+- dotnetcore
+ms.openlocfilehash: 60c2effea612a579b4c66b7c30243b785b86a263
+ms.sourcegitcommit: e7f04439d78909229506b56935a1105a4149ff3d
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/18/2017
+ms.lasthandoff: 12/23/2017
 ---
 # <a name="xmlschemavalidator-push-based-validation"></a>XmlSchemaValidator 推入型驗證
 <xref:System.Xml.Schema.XmlSchemaValidator> 類別提供有效率的高效能機制，可根據 XML 結構描述以推入方式驗證 XML 資料。 例如，<xref:System.Xml.Schema.XmlSchemaValidator> 類別可讓您就地驗證 XML 資訊集，而無需將其序列化為 XML 文件，然後使用驗證 XML 讀取器重新剖析該文件。  
@@ -172,7 +175,7 @@ validator.ValidateEndElement(null);
  如需用來驗證 XML 資訊集中項目、屬性及內容之方法的範例，請參閱前一節中的範例。 如需這些方法的詳細資訊，請參閱 <xref:System.Xml.Schema.XmlSchemaValidator> 類別參考文件。  
   
 #### <a name="validating-content-using-an-xmlvaluegetter"></a>使用 XmlValueGetter 驗證內容  
- <xref:System.Xml.Schema.XmlValueGetter>`delegate` 可用於傳遞屬性、文字或泛空白字元節點的值，成為 Common Language Runtime (CLR) 型別，該型別與它們的 XML 結構描述定義語言 (XSD) 型別相容。 如果屬性、文字或泛空白字元節點的 CLR 值已經可用，則 <xref:System.Xml.Schema.XmlValueGetter>`delegate` 很有用，可節省將其轉換成 `string`，然後重新剖析它以進行驗證所需的成本。  
+ <xref:System.Xml.Schema.XmlValueGetter>`delegate` 可用於傳遞屬性、文字或泛空白字元節點的值，成為 Common Language Runtime (CLR) 型別，該型別與它們的 XML 結構描述定義語言 (XSD) 型別相容。 如果屬性、文字或泛空白字元節點的 CLR 值已經可用，則 <xref:System.Xml.Schema.XmlValueGetter>`delegate` 就很有用，且避免將它轉換為 `string`，然後重新剖析以進行驗證的成本。  
   
  <xref:System.Xml.Schema.XmlSchemaValidator.ValidateAttribute%2A>、<xref:System.Xml.Schema.XmlSchemaValidator.ValidateText%2A> 及 <xref:System.Xml.Schema.XmlSchemaValidator.ValidateWhitespace%2A> 方法是多載方法，並可接受屬性、文字及泛空白字元節點的值做為 `string` 或 <xref:System.Xml.Schema.XmlValueGetter>`delegate`。  
   
@@ -441,12 +444,12 @@ static void SchemaValidationEventHandler(object sender, ValidationEventArgs e)
   
  下表說明 <xref:System.Xml.Schema.XmlSchemaValidator> 類別的狀態轉換，以及在每個狀態下可進行之方法呼叫的順序及次數。  
   
-|狀態|轉換|  
+|狀況|轉換|  
 |-----------|----------------|  
-|Validate|<xref:System.Xml.Schema.XmlSchemaValidator.Initialize%2A>(<xref:System.Xml.Schema.XmlSchemaValidator.ValidateAttribute%2A> &#124;TopLevel*)<xref:System.Xml.Schema.XmlSchemaValidator.EndValidation%2A>|  
-|TopLevel|<xref:System.Xml.Schema.XmlSchemaValidator.ValidateWhitespace%2A>&#124;<xref:System.Xml.Schema.XmlSchemaValidator.ValidateText%2A> &#124;項目|  
-|項目|<xref:System.Xml.Schema.XmlSchemaValidator.ValidateElement%2A><xref:System.Xml.Schema.XmlSchemaValidator.ValidateAttribute%2A>* (<xref:System.Xml.Schema.XmlSchemaValidator.ValidateEndOfAttributes%2A>內容\*)？ <xref:System.Xml.Schema.XmlSchemaValidator.ValidateEndElement%2A> &#124;<br /><br /> <xref:System.Xml.Schema.XmlSchemaValidator.ValidateElement%2A> <xref:System.Xml.Schema.XmlSchemaValidator.ValidateAttribute%2A>\* <xref:System.Xml.Schema.XmlSchemaValidator.SkipToEndElement%2A> &#124;<br /><br /> <xref:System.Xml.Schema.XmlSchemaValidator.ValidateElement%2A><xref:System.Xml.Schema.XmlSchemaValidator.ValidateAttribute%2A> \* <xref:System.Xml.Schema.XmlSchemaValidator.ValidateEndOfAttributes%2A>內容\* <xref:System.Xml.Schema.XmlSchemaValidator.SkipToEndElement%2A> &#124;|  
-|內容|<xref:System.Xml.Schema.XmlSchemaValidator.ValidateWhitespace%2A>&#124;<xref:System.Xml.Schema.XmlSchemaValidator.ValidateText%2A> &#124;項目|  
+|Validate|<xref:System.Xml.Schema.XmlSchemaValidator.Initialize%2A> (<xref:System.Xml.Schema.XmlSchemaValidator.ValidateAttribute%2A> &#124; TopLevel*) <xref:System.Xml.Schema.XmlSchemaValidator.EndValidation%2A>|  
+|TopLevel|<xref:System.Xml.Schema.XmlSchemaValidator.ValidateWhitespace%2A> &#124; <xref:System.Xml.Schema.XmlSchemaValidator.ValidateText%2A> &#124; 項目|  
+|元素|<xref:System.Xml.Schema.XmlSchemaValidator.ValidateElement%2A> <xref:System.Xml.Schema.XmlSchemaValidator.ValidateAttribute%2A>* (<xref:System.Xml.Schema.XmlSchemaValidator.ValidateEndOfAttributes%2A> Content\*)? <xref:System.Xml.Schema.XmlSchemaValidator.ValidateEndElement%2A> &#124;<br /><br /> <xref:System.Xml.Schema.XmlSchemaValidator.ValidateElement%2A> <xref:System.Xml.Schema.XmlSchemaValidator.ValidateAttribute%2A>\* <xref:System.Xml.Schema.XmlSchemaValidator.SkipToEndElement%2A> &#124;<br /><br /> <xref:System.Xml.Schema.XmlSchemaValidator.ValidateElement%2A> <xref:System.Xml.Schema.XmlSchemaValidator.ValidateAttribute%2A>\* <xref:System.Xml.Schema.XmlSchemaValidator.ValidateEndOfAttributes%2A> Content\* <xref:System.Xml.Schema.XmlSchemaValidator.SkipToEndElement%2A> &#124;|  
+|內容|<xref:System.Xml.Schema.XmlSchemaValidator.ValidateWhitespace%2A> &#124; <xref:System.Xml.Schema.XmlSchemaValidator.ValidateText%2A> &#124; 項目|  
   
 > [!NOTE]
 >  根據 <xref:System.InvalidOperationException> 物件的目前狀態，如果呼叫上表中的每個方法的順序不正確，則它們會擲回 <xref:System.Xml.Schema.XmlSchemaValidator>。  
@@ -455,7 +458,7 @@ static void SchemaValidationEventHandler(object sender, ValidationEventArgs e)
   
  下表說明在以上狀態轉換表中找到的標點符號，如何影響針對 <xref:System.Xml.Schema.XmlSchemaValidator> 類別之狀態轉換中每個狀態呼叫的方法及其他狀態。  
   
-|符號|說明|  
+|符號|描述|  
 |------------|-----------------|  
 |&#124;|可呼叫方法或狀態 (垂直線前後的項目)。|  
 |?|問號之前的方法或狀態是選擇性的，但如果呼叫它，則只能呼叫一次。|  
@@ -484,5 +487,5 @@ static void SchemaValidationEventHandler(object sender, ValidationEventArgs e)
 > [!NOTE]
 >  呼叫上表中的任何方法，均不會改變 <xref:System.Xml.Schema.XmlSchemaValidator> 類別之各種屬性所傳回的值。  
   
-## <a name="see-also"></a>另請參閱  
+## <a name="see-also"></a>請參閱  
  <xref:System.Xml.Schema.XmlSchemaValidator>

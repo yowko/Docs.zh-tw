@@ -1,5 +1,5 @@
 ---
-title: "快速入門 - 類別簡介 - C# 指南"
+title: "類別簡介教學課程 - C# 本機快速入門"
 description: "建立您的第一個 C# 程式並探索物件導向概念"
 author: billwagner
 ms.author: wiwagn
@@ -9,11 +9,11 @@ ms.prod: .net
 ms.technology: devlang-csharp
 ms.devlang: csharp
 ms.custom: mvc
-ms.openlocfilehash: 4e15b1b12b9420ca1781eca3f2578fa24c9ec82a
-ms.sourcegitcommit: 8bde7a3432f30fc771079744955c75c58c4eb393
+ms.openlocfilehash: 97c1de562c86ea04153ec09bb0e813565523a3ba
+ms.sourcegitcommit: d2da0142247ef42a219a5d2907f153e62dc6ea0d
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 01/20/2018
+ms.lasthandoff: 02/01/2018
 ---
 # <a name="introduction-to-classes"></a>類別簡介
 
@@ -38,7 +38,7 @@ namespace classes
 }
 ```
 
-在此快速入門中，您將建立代表銀行帳戶的新類型。 開發人員通常會在不同的文字檔中定義每個類別。 隨著程式大小增加，這麼做會使它更易於管理。  在 **classes** 目錄中，建立名為 **BankAccount.cs** 的新檔案。 
+在此快速入門中，您將建立代表銀行帳戶的新型別。 開發人員通常會在不同的文字檔中定義每個類別。 隨著程式大小增加，這麼做會使它更易於管理。  在 **classes** 目錄中，建立名為 **BankAccount.cs** 的新檔案。 
 
 這個檔案會包含***銀行帳戶***的定義。 物件導向程式設計會以***類別***的形式建立類型來組織程式碼。 這些類別包含代表特定實體的程式碼。 `BankAccount` 類別代表銀行帳戶。 程式碼會透過方法和屬性來實作特定的作業。 在此快速入門中，銀行帳戶支援此行為：
 
@@ -199,7 +199,7 @@ catch (InvalidOperationException e)
 
 ## <a name="challenge---log-all-transactions"></a>挑戰 - 記錄所有交易
 
-若要完成此快速入門，您必須能撰寫會針對交易記錄建立 `string` 的 `GetAccountHistory` 方法。 將此方法新增到 `BankAccount` 類型：
+若要完成此快速入門，您可以撰寫會針對交易記錄建立 `string` 的 `GetAccountHistory` 方法。 將此方法新增到 `BankAccount` 類型：
 
 [!code-csharp[History](../../../samples/csharp/classes-quickstart/BankAccount.cs#History "Display transaction history")]
 

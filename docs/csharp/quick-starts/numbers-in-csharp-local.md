@@ -1,5 +1,5 @@
 ---
-title: "快速入門 - C# 中的數字 - C# 指南"
+title: "C# 中的數字教學課程 - C# 本機快速入門"
 description: "透過探索數值類型及其屬性和方法來了解 C#。"
 author: billwagner
 ms.author: wiwagn
@@ -9,15 +9,15 @@ ms.prod: .net
 ms.technology: devlang-csharp
 ms.devlang: csharp
 ms.custom: mvc
-ms.openlocfilehash: 9a7f061de23c632560f40ac5eb46defd4537da16
-ms.sourcegitcommit: 8bde7a3432f30fc771079744955c75c58c4eb393
+ms.openlocfilehash: 9a8b28d840d3c8ef63611e9f584e5984e1dcb1a3
+ms.sourcegitcommit: d2da0142247ef42a219a5d2907f153e62dc6ea0d
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 01/20/2018
+ms.lasthandoff: 02/01/2018
 ---
-# <a name="numbers-in-c-quick-start"></a>C# 中的數字快速入門 #
+# <a name="numbers-in-c-quickstart"></a>C# 中的數字快速入門
 
-本快速入門會以互動方式指導您有關 C# 中的數字類型。 您將會撰寫少量程式碼，然後編譯並執行該程式碼。 本快速入門包含一系列探索 C# 中數字和數學運算的課程。 這些課程會教導您 C# 語言的基本概念。
+本快速入門會以互動方式指導您有關 C# 中的數字型別。 您將會撰寫少量程式碼，然後編譯並執行該程式碼。 本快速入門包含一系列探索 C# 中數字和數學運算的課程。 這些課程會教導您 C# 語言的基本概念。
 
 本快速入門需要您具備可用於開發的電腦。 .NET 主題[只要 10 分鐘立即上手](https://www.microsoft.com/net/core) \(英文\) 中有關於在 Mac、PC 或 Linux 上設定本機開發環境的指示。 您可以在[本機快速入門簡介](local-environment.md)中快速檢視將會用到的命令，並取得可提供詳細資料的連結。
 
@@ -319,7 +319,7 @@ Console.WriteLine(c / d);
 
 如果您想要的話，可以嘗試其他公式。 
 
-您已經完成＜C# 中的數字＞快速入門。 您可以在自己的開發環境中，繼續完成[分支和迴圈](branches-and-loops-local.md)快速入門中的內容。
+您已完成＜C# 中的數字＞快速入門。 您可以在自己的開發環境中，繼續完成[分支和迴圈](branches-and-loops-local.md)快速入門中的內容。
 
 您可以在下列主題中深入了解 C# 中的數字：
 

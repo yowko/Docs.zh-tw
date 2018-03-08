@@ -16,15 +16,18 @@ helpviewer_keywords:
 - formatting strings [.NET Framework], how-to topics
 - strings [.NET Framework], formatting
 ms.assetid: 36e7e096-4e6c-4cf2-9ab6-68073026ea0e
-caps.latest.revision: "7"
+caps.latest.revision: 
 author: rpetrusha
 ms.author: ronpet
 manager: wpickett
-ms.openlocfilehash: 8f09232080bb5c9aae4902dfc33b638bde82474c
-ms.sourcegitcommit: bd1ef61f4bb794b25383d3d72e71041a5ced172e
+ms.workload:
+- dotnet
+- dotnetcore
+ms.openlocfilehash: a78c1caac318a19028472a2e4f6e8964f99abfba
+ms.sourcegitcommit: e7f04439d78909229506b56935a1105a4149ff3d
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/18/2017
+ms.lasthandoff: 12/23/2017
 ---
 # <a name="performing-formatting-operations"></a>執行格式化作業
 下列主題提供執行特定格式設定作業的逐步指示。  
@@ -35,7 +38,7 @@ ms.lasthandoff: 10/18/2017
   
 -   [操作說明：將使用者輸入 Web 控制項的數值轉換成數字](../../../docs/standard/base-types/how-to-convert-numeric-user-input-in-web-controls-to-numbers.md)  
   
--   [如何： 從特定日期擷取星期幾](../../../docs/standard/base-types/how-to-extract-the-day-of-the-week-from-a-specific-date.md)。  
+-   [操作說明：從特定日期擷取一星期的哪一日](../../../docs/standard/base-types/how-to-extract-the-day-of-the-week-from-a-specific-date.md)。  
   
 -   [操作說明：反覆存取日期和時間值](../../../docs/standard/base-types/how-to-round-trip-date-and-time-values.md)  
   
@@ -45,5 +48,5 @@ ms.lasthandoff: 10/18/2017
   
 -   [操作說明：在非西曆中顯示日期](../../../docs/standard/base-types/how-to-display-dates-in-non-gregorian-calendars.md)  
   
-## <a name="see-also"></a>另請參閱  
+## <a name="see-also"></a>請參閱  
  [格式化類型](../../../docs/standard/base-types/formatting-types.md)

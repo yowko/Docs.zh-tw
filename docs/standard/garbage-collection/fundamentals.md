@@ -16,15 +16,18 @@ helpviewer_keywords:
 - garbage collection, workstation garbage collection
 - garbage collection, managed heap
 ms.assetid: 67c5a20d-1be1-4ea7-8a9a-92b0b08658d2
-caps.latest.revision: "51"
+caps.latest.revision: 
 author: rpetrusha
 ms.author: ronpet
 manager: wpickett
-ms.openlocfilehash: b15ae041cdadb259c59d447b8775844fc96048be
-ms.sourcegitcommit: bd1ef61f4bb794b25383d3d72e71041a5ced172e
+ms.workload:
+- dotnet
+- dotnetcore
+ms.openlocfilehash: 9a42c9aeb3295cd90fb6796e36b840daff843aac
+ms.sourcegitcommit: 91691981897cf8451033cb01071d8f5d94017f97
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/18/2017
+ms.lasthandoff: 01/09/2018
 ---
 # <a name="fundamentals-of-garbage-collection"></a>記憶體回收的基本概念
 <a name="top"></a> 在 Common Language Runtime (CLR) 中，記憶體回收行程會當做自動記憶體管理員。 它提供了下列優點：  
@@ -79,7 +82,7 @@ ms.lasthandoff: 10/18/2017
   
     -   已認可。 記憶體區塊會指派給實體儲存區。  
   
--   虛擬位址空間可能會分成片段。 這表示，位址空間中有可用的區塊，也稱為可用的洞 (Hole)。 要求虛擬記憶體配置時，虛擬記憶體管理程式必須找到大小可滿足配置要求的單一可用區塊。 即使您有 2 GB 的可用空間時，需要 2 GB 的配置將會失敗，除非是在單一位址區塊中所有的可用空間。  
+-   虛擬位址空間可能會分成片段。 這表示，位址空間中有可用的區塊，也稱為可用的洞 (Hole)。 要求虛擬記憶體配置時，虛擬記憶體管理程式必須找到大小可滿足配置要求的單一可用區塊。 即使您擁有 2GB 可用空間，要求 2GB 的配置仍然不會成功，除非該可用空間全都在單一位址區塊中。  
   
 -   如果您用盡保留用的虛擬位址空間或認可用的實體空間，則可能會用盡記憶體。  
   
@@ -91,7 +94,7 @@ ms.lasthandoff: 10/18/2017
 ## <a name="conditions-for-a-garbage-collection"></a>記憶體回收的條件  
  當下列其中一個條件成立時，就會進行記憶體回收：  
   
--   系統的實體記憶體不足。 這是偵測到來自 OS 可能是記憶體不足通知或由主應用程式的記憶體不足。
+-   系統的實體記憶體不足。 這是透過來自 OS 的低記憶體通知或由主機指出的低記憶體來偵測。
   
 -   由 Managed 堆積上之已配置物件所使用的記憶體超過可接受的臨界值。 這個臨界值會在處理序執行時持續調整。  
   
@@ -105,7 +108,7 @@ ms.lasthandoff: 10/18/2017
   
  每個 Managed 處理序都有一個 Managed 堆積。 處理序中的所有執行緒都會對相同堆積上的物件配置記憶體。  
   
- 為節省記憶體，記憶體回收行程會呼叫 Win32 [VirtualAlloc](http://go.microsoft.com/fwlink/?LinkId=179047) 函式，並且針對 Managed 應用程式一次保留一個記憶體區段。 記憶體回收行程也會視需要保留區段，並且透過呼叫 Win32 [VirtualFree](http://go.microsoft.com/fwlink/?LinkId=179050) 函式，將區段釋放回作業系統 (在清除任何物件的區段之後)。  
+ 為節省記憶體，記憶體回收行程會呼叫 Win32 [VirtualAlloc](https://msdn.microsoft.com/library/aa366887.aspx) 函式，並且針對受控應用程式一次保留一個記憶體區段。 記憶體回收行程也會視需要保留區段，並且透過呼叫 Win32 [VirtualFree](https://msdn.microsoft.com/library/aa366892.aspx) 函式，將區段釋放回作業系統 (在清除任何物件的區段之後)。  
   
 > [!IMPORTANT]
 >  記憶體回收行程所配置的區段大小是依實作而定，有可能在任何時間，包括在定期更新時做變更。 您的應用程式永遠都不應該對相關或根據特定區段的大小做出假設，也不應嘗試設定區段配置的可用記憶體數量。  
@@ -189,7 +192,7 @@ ms.lasthandoff: 10/18/2017
   
  下圖顯示觸發記憶體回收且造成其他執行緒暫停的執行緒。  
   
- ![當執行緒觸發記憶體回收](../../../docs/standard/garbage-collection/media/gc-triggered.png "GC_Triggered")  
+ ![當執行緒觸發記憶體回收時](../../../docs/standard/garbage-collection/media/gc-triggered.png "GC_Triggered")  
 觸發記憶體回收的執行緒  
   
  [回到頁首](#top)  
@@ -208,7 +211,7 @@ ms.lasthandoff: 10/18/2017
 ## <a name="workstation-and-server-garbage-collection"></a>工作站和伺服器記憶體回收  
  記憶體回收行程會自行調整而且可在各種案例中運作。 您可以使用組態檔設定，根據工作負載的特性來設定記憶體回收的類型。 CLR 會提供下列記憶體回收類型：  
   
--   工作站記憶體回收，適用於所有用戶端工作站和獨立電腦。 這是預設設定[ \<gcServer > 項目](../../../docs/framework/configure-apps/file-schema/runtime/gcserver-element.md)執行階段組態結構描述中。  
+-   工作站記憶體回收，適用於所有用戶端工作站和獨立電腦。 在執行階段組態結構描述中，這是 [\<gcServer> 項目](../../../docs/framework/configure-apps/file-schema/runtime/gcserver-element.md)的預設設定。  
   
      工作站記憶體回收可能是並行或非並行的。 並行記憶體回收可讓 Managed 執行緒在記憶體回收期間繼續運作。  
   
@@ -218,13 +221,13 @@ ms.lasthandoff: 10/18/2017
   
  下圖顯示在伺服器上執行記憶體回收的專屬執行緒。  
   
- ![伺服器記憶體回收執行緒](../../../docs/standard/garbage-collection/media/gc-server.png "GC_Server")  
+ ![伺服器記憶體回收](../../../docs/standard/garbage-collection/media/gc-server.png "GC_Server")  
 伺服器記憶體回收  
   
 ### <a name="configuring-garbage-collection"></a>設定記憶體回收  
- 您可以使用[ \<gcServer > 項目](../../../docs/framework/configure-apps/file-schema/runtime/gcserver-element.md)要 CLR 執行的執行階段組態結構描述，以指定的記憶體回收類型。 當此項目的 `enabled` 屬性設定為 `false` (預設值) 時，CLR 就會執行工作站記憶體回收。 當您將 `enabled` 屬性設定為 `true`時，CLR 就會執行伺服器記憶體回收。  
+ 您可以使用執行階段組態結構描述的 [\<gcServer> 項目](../../../docs/framework/configure-apps/file-schema/runtime/gcserver-element.md)來指定您想讓 CLR 執行的記憶體回收類型。 當此項目的 `enabled` 屬性設定為 `false` (預設值) 時，CLR 就會執行工作站記憶體回收。 當您將 `enabled` 屬性設定為 `true`時，CLR 就會執行伺服器記憶體回收。  
   
- 並行記憶體回收使用指定[ \<gcConcurrent > 項目](../../../docs/framework/configure-apps/file-schema/runtime/gcconcurrent-element.md)執行階段組態結構描述。 預設的設定值是 `enabled`。 這項設定可控制並行和背景記憶體回收。  
+ 並行記憶體回收是使用執行階段組態結構描述的 [\<gcConcurrent> 項目](../../../docs/framework/configure-apps/file-schema/runtime/gcconcurrent-element.md)來指定。 預設的設定值是 `enabled`。 這項設定可控制並行和背景記憶體回收。  
   
  您也可以使用 Unmanaged 裝載介面來指定伺服器記憶體回收。 請注意，ASP.NET 和 SQL Server 會自動啟用伺服器記憶體回收 (如果您的應用程式裝載在其中一個環境內部的話)。  
   
@@ -235,7 +238,7 @@ ms.lasthandoff: 10/18/2017
   
      執行機器碼的執行緒不會暫停。  
   
--   工作站記憶體回收一律使用電腦上只有一個處理器，不論[ \<gcServer >](../../../docs/framework/configure-apps/file-schema/runtime/gcserver-element.md)設定。 如果您指定了伺服器記憶體回收，CLR 就會使用工作站記憶體回收並停用並行。  
+-   工作站記憶體回收一律使用於只有單一處理器的電腦上，不論 [\<gcServer>](../../../docs/framework/configure-apps/file-schema/runtime/gcserver-element.md) 設定為何。 如果您指定了伺服器記憶體回收，CLR 就會使用工作站記憶體回收並停用並行。  
   
  以下是伺服器記憶體回收的執行緒和效能考量：  
   
@@ -259,7 +262,7 @@ ms.lasthandoff: 10/18/2017
   
  並行記憶體回收會將回收期間的暫停降到最低，藉以加快互動式應用程式的回應速度。 當並行記憶體回收執行緒正在執行時，Managed 執行緒幾乎可以繼續執行。 這會在記憶體回收進行時縮短暫停時間。  
   
- 若要在許多處理序正在執行時改善效能，請停用並行記憶體回收。 您可以藉由新增[ \<gcConcurrent > 項目](../../../docs/framework/configure-apps/file-schema/runtime/gcconcurrent-element.md)應用程式的組態檔和設定的值及其`enabled`屬性`"false"`。  
+ 若要在許多處理序正在執行時改善效能，請停用並行記憶體回收。 您可以藉由將 [\<gcConcurrent> 項目](../../../docs/framework/configure-apps/file-schema/runtime/gcconcurrent-element.md)加入應用程式的組態檔，並將其 `enabled` 屬性的值設為 `"false"`，來完成此作業。  
   
  並行記憶體回收會針對專屬執行緒執行。 根據預設，CLR 會執行工作站記憶體回收並啟用並行記憶體回收。 這種回收適用於單一處理器和多處理器電腦。  
   
@@ -296,12 +299,12 @@ ms.lasthandoff: 10/18/2017
   
 <a name="background_server_garbage_collection"></a>   
 ## <a name="background-server-garbage-collection"></a>背景伺服器記憶體回收  
- 從 .NET Framework 4.5 開始，背景伺服器記憶體回收是伺服器記憶體回收的預設模式。 若要選擇這個模式，將`enabled`屬性[ \<gcServer > 項目](../../../docs/framework/configure-apps/file-schema/runtime/gcserver-element.md)至`true`執行階段組態結構描述中。 這個模式的功能類似於背景工作站記憶體回收 (如上一節所述)，不過仍有一些差異。 背景工作站記憶體回收會使用一個專用的背景記憶體回收執行緒，而背景伺服器記憶體回收則使用多個執行緒，通常是針對每個邏輯處理器使用一個專用的執行緒。 與工作站背景記憶體回收執行緒不同的是，這些執行緒不會逾時。  
+ 從 .NET Framework 4.5 開始，背景伺服器記憶體回收是伺服器記憶體回收的預設模式。 若要選擇這個模式，在執行階段組態結構描述中，將 [\<gcServer> 項目](../../../docs/framework/configure-apps/file-schema/runtime/gcserver-element.md)的 `enabled` 屬性設定為 `true`。 這個模式的功能類似於背景工作站記憶體回收 (如上一節所述)，不過仍有一些差異。 背景工作站記憶體回收會使用一個專用的背景記憶體回收執行緒，而背景伺服器記憶體回收則使用多個執行緒，通常是針對每個邏輯處理器使用一個專用的執行緒。 與工作站背景記憶體回收執行緒不同的是，這些執行緒不會逾時。  
   
  下圖顯示在伺服器上另一個專用執行緒上執行的背景記憶體回收。  
   
  ![背景伺服器記憶體回收](../../../docs/standard/garbage-collection/media/backgroundserver.png "BackgroundServer")  
 背景伺服器記憶體回收  
   
-## <a name="see-also"></a>另請參閱  
+## <a name="see-also"></a>請參閱  
  [記憶體回收](../../../docs/standard/garbage-collection/index.md)

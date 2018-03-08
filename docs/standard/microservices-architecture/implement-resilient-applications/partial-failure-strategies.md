@@ -11,11 +11,11 @@ ms.topic: article
 ms.workload:
 - dotnet
 - dotnetcore
-ms.openlocfilehash: baeeb47dde77ceaa461214f55482d2312d67ccec
-ms.sourcegitcommit: c0dd436f6f8f44dc80dc43b07f6841a00b74b23f
+ms.openlocfilehash: 0b5fdb03e4b0d0c2d4e8aa8a897fd46d56707f11
+ms.sourcegitcommit: c3957fdb990060559d73cca44ab3e2c7b4d049c0
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 01/19/2018
+ms.lasthandoff: 03/05/2018
 ---
 # <a name="strategies-for-handling-partial-failure"></a>處理部分失敗的策略
 
@@ -31,7 +31,7 @@ ms.lasthandoff: 01/19/2018
 
 **提供後援**。 在這種方法中，用戶端處理序會在要求失敗時執行後援邏輯，例如傳回快取資料或預設值。 這是一種適合查詢的方法，而針對更新或命令會更為複雜。
 
-**限制佇列要求的數目**。 用戶端也應設定用戶端微服務可傳送至特定服務之未處理要求的數目上限。 若達到該限制，則繼續傳送額外的要求可能會沒有意義，因此應讓那些嘗試立即失敗。 在實作方面，Polly [Bulkhead Isolation](https://github.com/App-vNext/Polly/wiki/Bulkhead) 原則可用於完成這項要求。 此方法本質上即是使用 [SemaphoreSlim](https://docs.microsoft.com/dotnet/api/system.threading.semaphoreslim?view=netcore-1.1) 作為實作的並行節流。 它也允許了艙壁之外的「佇列」。 您甚至可以在執行之前主動流出過量的負載 (例如因為容量被視為已滿)。 這可讓其回應特定失敗案例的速度比斷路器要來得更快，因為斷路器會等待失敗。 Polly 中的 BulkheadPolicy 物件會公開艙壁及佇列充滿的程度，並在溢位時提供事件，使其也可用於驅動自動化水平縮放。
+**限制佇列要求的數目**。 用戶端也應設定用戶端微服務可傳送至特定服務之未處理要求的數目上限。 若達到該限制，則繼續傳送額外的要求可能會沒有意義，因此應讓那些嘗試立即失敗。 在實作方面，Polly [Bulkhead Isolation](https://github.com/App-vNext/Polly/wiki/Bulkhead) 原則可用於完成這項要求。 此方法本質上即是使用 <xref:System.Threading.SemaphoreSlim> 作為實作的並行節流。 它也允許了艙壁之外的「佇列」。 您甚至可以在執行之前主動流出過量的負載 (例如因為容量被視為已滿)。 這可讓其回應特定失敗案例的速度比斷路器要來得更快，因為斷路器會等待失敗。 Polly 中的 BulkheadPolicy 物件會公開艙壁及佇列充滿的程度，並在溢位時提供事件，使其也可用於驅動自動化水平縮放。
 
 ## <a name="additional-resources"></a>其他資源
 
@@ -47,7 +47,7 @@ ms.lasthandoff: 01/19/2018
 -   **Designing resilient applications for Azure (為 Azure 設計復原應用程式)**
     [*https://docs.microsoft.com/azure/architecture/resiliency/*](https://docs.microsoft.com/azure/architecture/resiliency/)
 
--   **Transient fault handling (暫時性錯誤處理)**
+-   **暫時性錯誤處理**
     <https://docs.microsoft.com/azure/architecture/best-practices/transient-faults>
 
 

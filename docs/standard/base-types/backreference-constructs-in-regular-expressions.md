@@ -17,15 +17,18 @@ helpviewer_keywords:
 - .NET Framework regular expressions, backreference constructs
 - regular expressions, backreference constructs
 ms.assetid: 567a4b8d-0e79-49dc-8df9-f4b1aa376a2a
-caps.latest.revision: "11"
+caps.latest.revision: 
 author: rpetrusha
 ms.author: ronpet
 manager: wpickett
-ms.openlocfilehash: a884e70f542c2ed7ff63e39cb7eadedf0ef7b4d0
-ms.sourcegitcommit: bd1ef61f4bb794b25383d3d72e71041a5ced172e
+ms.workload:
+- dotnet
+- dotnetcore
+ms.openlocfilehash: 2ec92933bdf123412a3d489fc493d76c4a0dc0d0
+ms.sourcegitcommit: e7f04439d78909229506b56935a1105a4149ff3d
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/18/2017
+ms.lasthandoff: 12/23/2017
 ---
 # <a name="backreference-constructs-in-regular-expressions"></a>規則運算式中的反向參考建構
 反向參考提供便利的方式來識別字串內的重複字元或子字串。 例如，如果輸入字串包含多次出現的任意子字串，您可以比對第一個出現的子字串與擷取的群組，接著使用反向參考來比對隨後出現的子字串。  
@@ -33,16 +36,16 @@ ms.lasthandoff: 10/18/2017
 > [!NOTE]
 >  對於取代字串中的具名和編號擷取群組，會使用不同的語法來參考。 如需詳細資訊，請參閱 [Substitutions](substitutions-in-regular-expressions.md)。  
   
- .NET 會定義個別的語言項目，以參考編號和具名擷取群組。 如需有關擷取群組的詳細資訊，請參閱[群組建構](../../../docs/standard/base-types/grouping-constructs-in-regular-expressions.md)。  
+ .NET 會定義個別的語言項目，以參考編號和具名擷取群組。 如需擷取群組的詳細資訊，請參閱[群組建構](../../../docs/standard/base-types/grouping-constructs-in-regular-expressions.md)。  
   
 ## <a name="numbered-backreferences"></a>編號反向參考  
  編號反向參考會使用下列語法：  
   
  `\` *數字*  
   
- 其中 *number* 是規則運算式中的擷取群組序數位置。 例如，`\4` 會比對第四個擷取群組的內容。 如果*數目*未定義規則運算式模式中時，就會發生剖析錯誤，且規則運算式引擎會擲回<xref:System.ArgumentException>。 例如，規則運算式 `\b(\w+)\s\1` 有效，因為 `(\w+)` 是運算式中第一個和唯一的擷取群組。 另一方面，`\b(\w+)\s\2` 無效並擲回引數例外狀況，因為沒有編號為 `\2` 的擷取群組。  
+ 其中 *number* 是規則運算式中的擷取群組序數位置。 例如，`\4` 會比對第四個擷取群組的內容。 如果規則運算式模式中未定義 *number*，便會發生剖析錯誤，而規則運算式引擎會擲回 <xref:System.ArgumentException>。 例如，規則運算式 `\b(\w+)\s\1` 有效，因為 `(\w+)` 是運算式中第一個和唯一的擷取群組。 另一方面，`\b(\w+)\s\2` 無效並擲回引數例外狀況，因為沒有編號為 `\2` 的擷取群組。  
   
- 請注意八進位逸出程式碼之間模稜兩可 (例如`\16`) 和`\`*數目*使用相同的標記法的反向參考。 這個模棱兩可的情況已解決，如下所示：  
+ 請注意八進位逸出字碼 (例如 `\16`) 與使用相同標記法之 `\`*number* 反向參考間的模稜兩可。 這個模棱兩可的情況已解決，如下所示：  
   
 -   運算式 `\1` 到 `\9` 一律會解譯為反向參考，而不是八進位字碼。  
   
@@ -50,13 +53,13 @@ ms.lasthandoff: 10/18/2017
   
 -   從 `\10` 到更大值的運算式會視為反向參考 (如果有對應至該數字的反向參考)，否則會解譯為八進位字碼。  
   
--   如果規則運算式包含未定義的群組編號的反向參考，發生剖析錯誤，和規則運算式引擎會擲回<xref:System.ArgumentException>。  
+-   如果規則運算式包含未定義之群組號碼的反向參考，便會發生剖析錯誤，而規則運算式引擎會擲回 <xref:System.ArgumentException>。  
   
- 如果模稜兩可的問題，您可以使用`\k<`*名稱*`>`標記法，但不會模糊不清，且不能與八進位字元碼混淆。 同樣地，十六進位字碼 (例如 `\xdd`) 不會不明確，而且不會與反向參考混淆。  
+ 如果模擬兩可會造成問題，您可以使用 `\k<`*name*`>` 標記法，這樣就不會造成模擬兩可，而且不會與八進位字元碼混淆。 同樣地，十六進位字碼 (例如 `\xdd`) 不會不明確，而且不會與反向參考混淆。  
   
  下列範例會在字串中尋找雙字組字元。 它會定義由下列項目組成的規則運算式 `(\w)\1`。  
   
-|項目|描述|  
+|元素|描述|  
 |-------------|-----------------|  
 |`(\w)`|比對文字字元，並將其指派給第一個擷取群組。|  
 |`\1`|比對與第一個擷取群組之值相同的下一個字元。|  
@@ -73,14 +76,14 @@ ms.lasthandoff: 10/18/2017
   
  `\k'` *name* `'`  
   
- 其中 *name* 是規則運算式模式中所定義之擷取群組的名稱。 如果*名稱*未定義規則運算式模式中時，就會發生剖析錯誤，且規則運算式引擎會擲回<xref:System.ArgumentException>。  
+ 其中 *name* 是規則運算式模式中所定義之擷取群組的名稱。 如果規則運算式模式中未定義 *name*，便會發生剖析錯誤，而規則運算式引擎會擲回 <xref:System.ArgumentException>。  
   
  下列範例會在字串中尋找雙字組字元。 它會定義由下列項目組成的規則運算式 `(?<char>\w)\k<char>`。  
   
-|項目|說明|  
+|元素|描述|  
 |-------------|-----------------|  
-|`(?<char>\w)`|比對文字字元，並將它指派給擷取群組，名為`char`。|  
-|`\k<char>`|比對的值相同的下一個字元`char`擷取群組。|  
+|`(?<char>\w)`|比對字組字元，並將其指派給名為 `char` 的擷取群組。|  
+|`\k<char>`|比對下一個與 `char` 擷取群組值相同的字元。|  
   
  [!code-csharp[RegularExpressions.Language.Backreferences#2](../../../samples/snippets/csharp/VS_Snippets_CLR/regularexpressions.language.backreferences/cs/backreference2.cs#2)]
  [!code-vb[RegularExpressions.Language.Backreferences#2](../../../samples/snippets/visualbasic/VS_Snippets_CLR/regularexpressions.language.backreferences/vb/backreference2.vb#2)]  
@@ -95,17 +98,17 @@ ms.lasthandoff: 10/18/2017
   
  下列範例包含規則運算式模式 `(?<1>a)(?<1>\1b)*`，此模式可重新定義 \1 具名群組。 下表說明規則運算式中的每個模式。  
   
-|模式|說明|  
+|模式|描述|  
 |-------------|-----------------|  
-|`(?<1>a)`|比對字元"a"並指派結果給擷取群組命名為`1`。|  
-|`(?<1>\1b)*`|名為群組的比對 0 或 1 出現`1`"b"，以及指派結果給擷取群組命名為`1`。|  
+|`(?<1>a)`|比對字元 "a"，並將結果指派給名為 `1` 的擷取群組。|  
+|`(?<1>\1b)*`|比對出現 0 或 1 次且名稱由 `1` 和 "b" 組成的群組，並將結果指派給名為 `1` 的擷取群組。|  
   
  [!code-csharp[RegularExpressions.Language.Backreferences#4](../../../samples/snippets/csharp/VS_Snippets_CLR/regularexpressions.language.backreferences/cs/backreference4.cs#4)]
  [!code-vb[RegularExpressions.Language.Backreferences#4](../../../samples/snippets/visualbasic/VS_Snippets_CLR/regularexpressions.language.backreferences/vb/backreference4.vb#4)]  
   
  在比較規則運算式與輸入字串 ("aababb") 時，規則運算式引擎會執行下列作業：  
   
-1.  它會從該字串的開頭開始，並且成功地比對 "a" 與運算式 `(?<1>a)`。 值`1`群組現在是"a"。  
+1.  它會從該字串的開頭開始，並且成功地比對 "a" 與運算式 `(?<1>a)`。 `1` 群組的值現在是 "a"。  
   
 2.  它會前進到第二個字元，並且成功地比對字串 "ab" 與運算式 `\1b`，或是 "ab"。 然後它會將結果 "ab" 指派給 `\1`。  
   
@@ -113,7 +116,7 @@ ms.lasthandoff: 10/18/2017
   
  在此範例中，`*` 是迴圈數量詞，它會重複評估直到規則運算式引擎無法符合其所定義的模式為止。 迴圈數量詞並不會清除群組定義。  
   
- 如果群組沒有擷取任何子字串，該群組的反向參考會是未定義的，而且永遠不會進行比對。 以下是規則運算式模式所`\b(\p{Lu}{2})(\d{2})?(\p{Lu}{2})\b`，定義，如下所示：  
+ 如果群組沒有擷取任何子字串，該群組的反向參考會是未定義的，而且永遠不會進行比對。 這可由定義如下的規則運算式模式 `\b(\p{Lu}{2})(\d{2})?(\p{Lu}{2})\b` 來說明：  
   
 |模式|描述|  
 |-------------|-----------------|  
@@ -128,5 +131,5 @@ ms.lasthandoff: 10/18/2017
  [!code-csharp[RegularExpressions.Language.Backreferences#5](../../../samples/snippets/csharp/VS_Snippets_CLR/regularexpressions.language.backreferences/cs/backreference5.cs#5)]
  [!code-vb[RegularExpressions.Language.Backreferences#5](../../../samples/snippets/visualbasic/VS_Snippets_CLR/regularexpressions.language.backreferences/vb/backreference5.vb#5)]  
   
-## <a name="see-also"></a>另請參閱  
+## <a name="see-also"></a>請參閱  
  [規則運算式語言 - 快速參考](../../../docs/standard/base-types/regular-expression-language-quick-reference.md)
