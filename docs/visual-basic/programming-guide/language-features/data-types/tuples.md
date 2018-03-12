@@ -13,11 +13,11 @@ helpviewer_keywords:
 ms.assetid: 3e66cd1b-3432-4e1d-8c37-5ebacae8f53f
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 2653b9dc8a6ecbcb718c20be8bd6275edf4cfb6e
-ms.sourcegitcommit: be1fb5d9447ad459bef22b91a91c72e3e0b2d916
+ms.openlocfilehash: bf26b7ce58c1e20fbbe5043cbd2acfd5712837fa
+ms.sourcegitcommit: d95a91d685565f4d95c8773b558752864a6a3d7e
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 02/09/2018
+ms.lasthandoff: 03/12/2018
 ---
 # <a name="tuples-visual-basic"></a>Tuple (Visual Basic)
 
@@ -64,69 +64,70 @@ Visual Basic tuple 的欄位會讀取寫入;tuple 已具現化之後，您可以
 <PropertyGroup> 
   <LangVersion>15.3</LangVersion> 
 </PropertyGroup> 
+```
 
-The version number can be any version of the Visual Basic compiler starting with 15.3. Rather than hard-coding a specific compiler version, you can also specify "Latest" as the value of `LangVersion` to compile with the most recent version of the Visual Basic compiler installed on your system.
+版本號碼可以是任何版本的 Visual Basic 編譯器 15.3 開始。 而不是硬式編碼特定編譯器版本，您也可以指定 「 最新 」 做為值`LangVersion`使用 Visual Basic 編譯器在系統上安裝最新版本進行編譯。
 
-In some cases, the Visual Basic compiler cannot infer the tuple element name from the candidate name, and the tuple field can only be referenced using its default name, such as `Item1`, `Item2`, etc. These include:
+在某些情況下，Visual Basic 編譯器無法推斷從候選項目名稱的 tuple 項目名稱和 tuple 欄位只可參考使用其預設名稱，例如`Item1`，`Item2`等等。它們包括：
 
-- The candidate name is the same as the name of a tuple member, such as `Item3`, `Rest`, or `ToString`.
+- 候選項目名稱等同於 tuple 成員名稱，例如`Item3`， `Rest`，或`ToString`。
 
-- The candidate name is duplicated in the tuple.
+- Tuple 中重複的候選項目名稱。
  
-When field name inference fails, Visual Basic does not generate a compiler error, nor is an exception thrown at runtime. Instead, tuple fields must be referenced by their predefined names, such as `Item1` and `Item2`. 
+欄位名稱推斷失敗時，Visual Basic 不會產生編譯器錯誤，也不是在執行階段擲回的例外狀況。 相反地，tuple 欄位必須參考預先定義的名稱，例如`Item1`和`Item2`。 
   
-## Tuples versus structures
+## <a name="tuples-versus-structures"></a>Tuple 與結構
 
-A Visual Basic tuple is a value type that is an instance of one of the a **System.ValueTuple** generic types. For example, the `holiday` tuple defined in the previous example is an instance of the <xref:System.ValueTuple%603> structure. It is designed to be a lightweight container for data. Since the tuple aims to make it easy to create an object with multiple data items, it lacks some of the features that a custom structure might have. These include:
+Visual Basic tuple 都是實值類型的其中一個執行個體**System.ValueTuple**泛型型別。 例如，`holiday`前一個範例中所定義的 tuple 都是執行個體<xref:System.ValueTuple%603>結構。 它被設計為資料的輕量型容器。 Tuple 旨在讓您輕鬆建立具有多個資料項目的物件，因為其欠缺的一些功能可能會有自訂的結構。 它們包括：
 
-- Customer members. You cannot define your own properties, methods, or events for a tuple.
+- 客戶成員。 您無法定義自己的屬性、 方法或事件的 tuple。
 
-- Validation. You cannot validate the data assigned to fields.
+- 驗證。 您無法驗證指派給欄位的資料。
 
-- Immutability. Visual Basic tuples are mutable. In contrast, a custom structure allows you to control whether an instance is mutable or immutable.
+- 不變性。 Visual Basic tuple 是可變動的。 相反地，自訂結構可讓您控制執行個體是否處於可變動或不變。
 
-If custom members, property and field validation, or immutability are important, you should use the Visual Basic [Structure](../../../language-reference/statements/structure-statement.md) statement to define a custom value type.
+自訂成員、 屬性和欄位驗證或不變性來說很重要，您應該使用 Visual Basic[結構](../../../language-reference/statements/structure-statement.md)陳述式來定義自訂值型別。
 
-A Visual Basic tuple does inherit the members of its **ValueTuple** type. In addition to its fields, these include the following methods:
+Visual Basic tuple 沒有繼承的成員及其**ValueTuple**型別。 除了其欄位，這些需求包括下列方法：
 
-| Member | Description |
+| 成員 | 描述 |
 | ---|---|
-| CompareTo | Compares the current tuple to another tuple with the same number of elements. |
-| Equals | Determines whether the current tuple is equal to another tuple or object. |
-| GetHashCode | Calculates the hash code for the current instance. |
-| ToString | Returns the string representation of this tuple, which takes the form `(Item1, Item2...)`, where `Item1` and `Item2` represent the values of the tuple's fields. |
+| CompareTo | 比較目前的 tuple，至另一個 tuple 有相同數目的項目。 |
+| 等於 | 判斷目前的 tuple 是否等於另一個 tuple 或物件。 |
+| GetHashCode | 計算目前的執行個體的雜湊碼。 |
+| ToString | 傳回 tuple，其格式的字串表示`(Item1, Item2...)`，其中`Item1`和`Item2`代表 tuple 的欄位的值。 |
 
-In addition, the **ValueTuple** types implement <xref:System.Collections.IStructuralComparable> and <xref:System.Collections.IStructuralEquatable> interfaces, which allow you to define customer comparers.
+此外， **ValueTuple**型別會實作<xref:System.Collections.IStructuralComparable>和<xref:System.Collections.IStructuralEquatable>介面，讓您定義客戶比較子。
 
-## Assignment and tuples
+## <a name="assignment-and-tuples"></a>指派和 Tuple
 
-Visual Basic supports assignment between tuple types that have the same number of fields. The field types can be converted if one of the following is true:
+Visual Basic 支援 tuple 類型有相同數目的欄位之間的指派。 如果下列其中一項為 true，則可以轉換的欄位型別：
 
-- The source and target field are of the same type.
+- 來源和目標欄位屬於相同類型。
 
-- A widening (or implicit) conversion of the source type to the target type is defined. 
+- 擴展 （或隱含） 的來源類型轉換成目標類型被定義。 
 
-- `Option Strict` is `On`, and a narrowing (or explicit) conversion of the source type to the target type is defined. This conversion can throw an exception if the source value is outside the range of the target type.
+- `Option Strict` 是`On`，和縮小 （或明確） 的來源類型轉換成目標類型定義。 如果來源值是目標類型的範圍之外，這項轉換可以擲回例外狀況。
 
-Other conversions are not considered for assignments. Let's look at the kinds of assignments that are allowed between tuple types.
+不會考慮對指派進行其他轉換。 讓我們看看 Tuple 類型之間允許的指派類型。
 
-Consider these variables used in the following examples:
+請考慮在下列範例中使用的這些參數：
 
 [!code-vb[Assign](../../../../../samples/snippets/visualbasic/programming-guide/language-features/data-types/tuple3.vb#1)]
 
-The first two variables, `unnamed` and `anonymous`, do not have semantic names provided for the fields. Their field names are the default `Item1` and `Item2`. The last two variables, `named` and `differentName` have semantic field names. Note that these two tuples have different names for the fields.
+前兩個變數，`unnamed`和`anonymous`，不會有語意提供欄位的名稱。 欄位名稱都是預設值`Item1`和`Item2`。 最後兩個變數，`named`和`differentName`語意的欄位名稱。 請注意，這兩個 Tuple 有不同的欄位名稱。
 
-All four of these tuples have the same number of fields (referred to as 'arity'), and the types of those fields are identical. Therefore, all of these assignments work:
+所有的這些 tuple 的四個有相同數目的欄位 （稱為 'arity'），與這些欄位類型完全相同。 因此，所有這些指派都會運作︰
 
 [!code-vb[Assign](../../../../../samples/snippets/visualbasic/programming-guide/language-features/data-types/tuple3.vb#2)]
 
-Notice that the names of the tuples are not assigned. The values of the fields are assigned following the order of the fields in the tuple.
+請注意，不會指派 Tuple 的名稱。 依欄位在 Tuple 中的順序，指派欄位的值。
 
-Finally, notice that we can assign the `named` tuple to the `conversion` tuple, even though the first field of `named` is an `Integer`, and the first field of `conversion` is a `Long`. This assignment succeeds because converting an `Integer` to a `Long` is a widening conversion.
+最後，請注意，我們可以將指派`named`tuple `conversion` tuple，即使的第一個欄位`named`是`Integer`，並將第一個欄位的`conversion`是`Long`。 此指派會成功，因為轉換`Integer`至`Long`擴展轉換。
 
 [!code-vb[Assign](../../../../../samples/snippets/visualbasic/programming-guide/language-features/data-types/tuple3.vb#3)]
 
-Tuples with different numbers of fields are not assignable:
+Tuple 不同數目的欄位不可以指派：
 
 ```vb
 ' Does not compile.

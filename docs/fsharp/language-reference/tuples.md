@@ -10,11 +10,11 @@ ms.prod: .net
 ms.technology: devlang-fsharp
 ms.devlang: fsharp
 ms.assetid: 35069073-9a82-410f-8dea-912e2a152e6d
-ms.openlocfilehash: c6a0565ac7022928f5c2bdad5387d896c6c3d387
-ms.sourcegitcommit: bd1ef61f4bb794b25383d3d72e71041a5ced172e
+ms.openlocfilehash: 996566f2baaea8ab01e5c80e53caea82e9684714
+ms.sourcegitcommit: d95a91d685565f4d95c8773b558752864a6a3d7e
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/18/2017
+ms.lasthandoff: 03/12/2018
 ---
 # <a name="tuples"></a>Tuple
 
@@ -89,7 +89,7 @@ int * float * string
 
 ## <a name="interoperation-with-c-tuples"></a>與 C# Tuple 的互通
 
-C# 7 引進 tuple 的語言。  C# 及為結構，而且相當於在 F # 中的結構 tuple 中的 Tuple。  如果您需要與交互操作 C# 使用 tuple，您必須使用結構 tuple。
+C# 7 引進 tuple 的語言。  在 C# 中的 Tuple 結構，而且相當於在 F # 中的結構 tuple。  如果您需要使用 C# 交互操作，您必須使用結構 tuple。
 
 這是容易的。  例如，假設您必須將 tuple 傳遞至 C# 類別，並使用它的結果，也是 tuple:
 
@@ -132,7 +132,7 @@ Tuple 會編譯為物件的其中一種數個泛型類型，所有具名`System.
 
 Tuple 結構 (例如， `struct (x, y)`)，基本上不同於參考 tuple。  編譯成<xref:System.ValueTuple>型別引數數目或型別參數數目所多載。  它們是相當於[C# 7 Tuple](../../csharp/tuples.md)和[Visual Basic 2017 Tuple](../../visual-basic/programming-guide/language-features/data-types/tuples.md)，以及雙向交互操作。
 
-## <a name="see-also"></a>另請參閱
+## <a name="see-also"></a>請參閱
 [F# 語言參考](index.md)
 
 [F# 類型](fsharp-types.md)
