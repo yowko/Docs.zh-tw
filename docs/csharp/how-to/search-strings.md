@@ -11,11 +11,11 @@ helpviewer_keywords:
 - strings [C#], searching with regular expressions
 ms.assetid: fb1d9a6d-598d-4a35-bd5f-b86012edcb2b
 ms.author: wiwagn
-ms.openlocfilehash: cb672ef74d9eb83df7d1c8985e518136dad54c34
-ms.sourcegitcommit: 655fd4f78741967f80c409cef98347fdcf77857d
+ms.openlocfilehash: 60d31a3d6d694c04d0c93b96816928e2ccbd3fba
+ms.sourcegitcommit: d95a91d685565f4d95c8773b558752864a6a3d7e
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 02/28/2018
+ms.lasthandoff: 03/12/2018
 ---
 # <a name="how-to-search-strings"></a>如何：搜尋字串
 
@@ -60,7 +60,7 @@ ms.lasthandoff: 02/28/2018
 
 ## <a name="does-a-string-follow-a-pattern"></a>字串遵循模式嗎？
 
-下列程式碼使用規則運算式來驗證陣列中每個字串的格式。 驗證需要每個字串具有電話號碼的形式，其中數字的三個群組以連字號分隔、前兩個群組包含三位數，而第三個群組包含四位數。 搜尋模式使用規則運算式 `^\\d{3}-\\d{3}-\\d{4}$`。 如需詳細資訊，請參閱[規則運算式語言 - 快速參考](http://msdn.microsoft.com/library/930653a6-95d2-4697-9d5a-52d11bb6fd4c)。
+下列程式碼使用規則運算式來驗證陣列中每個字串的格式。 驗證需要每個字串具有電話號碼的形式，其中數字的三個群組以連字號分隔、前兩個群組包含三位數，而第三個群組包含四位數。 搜尋模式使用規則運算式 `^\\d{3}-\\d{3}-\\d{4}$`。 如需詳細資訊，請參閱[規則運算式語言 - 快速參考](../../standard/base-types/regular-expression-language-quick-reference.md)。
 
 | pattern  | 意義                             |
 | -------- |-------------------------------------|
