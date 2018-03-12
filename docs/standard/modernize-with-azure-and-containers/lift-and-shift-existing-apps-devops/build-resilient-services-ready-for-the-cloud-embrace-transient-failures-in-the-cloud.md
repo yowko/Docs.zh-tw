@@ -4,16 +4,17 @@ description: "容器化的.NET 應用程式的.NET Microservices 架構 |建立�
 author: CESARDELATORRE
 ms.author: wiwagn
 ms.date: 10/26/2017
+ms.prod: .net
 ms.workload:
 - dotnet
 - dotnetcore
-ms.openlocfilehash: eef0197edb3aba555da63f1ea0b75726a826bd32
-ms.sourcegitcommit: c3957fdb990060559d73cca44ab3e2c7b4d049c0
+ms.openlocfilehash: df452c9fbf1c16603efcec40844b55810bd5d2d4
+ms.sourcegitcommit: d3cfda0943364aaf6ccd574f55f584576c8a4fee
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 03/05/2018
+ms.lasthandoff: 03/08/2018
 ---
-# <a name="build-resilient-services-ready-for-the-cloud-embrace-transient-failures-in-the-cloud"></a>建立具有恢復功能服務就緒定域機組： 面向的雲端中的暫時性失敗 
+# <a name="build-resilient-services-ready-for-the-cloud-embrace-transient-failures-in-the-cloud"></a>建立具有恢復功能服務就緒定域機組： 面向的雲端中的暫時性失敗
 
 「復原」是指能夠從失敗中復原並繼續運作的能力。 恢復功能不是關於避免失敗，但接受的事實，將會失敗，並再回應給它們的方式可避免停機時間或資料遺失。 復原的目標是在失敗後將應用程式返回完全運作的狀態。
 

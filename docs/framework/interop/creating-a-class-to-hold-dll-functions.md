@@ -5,7 +5,8 @@ ms.date: 03/30/2017
 ms.prod: .net-framework
 ms.reviewer: 
 ms.suite: 
-ms.technology: dotnet-clr
+ms.technology:
+- dotnet-clr
 ms.tgt_pltfrm: 
 ms.topic: article
 helpviewer_keywords:
@@ -17,23 +18,24 @@ helpviewer_keywords:
 - platform invoke, creating class for functions
 - DLL functions
 ms.assetid: e08e4c34-0223-45f7-aa55-a3d8dd979b0f
-caps.latest.revision: "6"
+caps.latest.revision: 
 author: rpetrusha
 ms.author: ronpet
 manager: wpickett
-ms.workload: dotnet
-ms.openlocfilehash: 6d64034f8059dc094b3fc8a71c6a2b7e96fe8d89
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.workload:
+- dotnet
+ms.openlocfilehash: ed5ef9b7aaad3405ff31ff45ee8d0b22f56f51d7
+ms.sourcegitcommit: d3cfda0943364aaf6ccd574f55f584576c8a4fee
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 03/08/2018
 ---
 # <a name="creating-a-class-to-hold-dll-functions"></a>建立類別以包裝 DLL 函式
 將常用 DLL 函式包裝在 Managed 類別中，是封裝平台功能的有效方法。 雖然不會強制您在每個案例這麼做，但提供類別包裝函式十分方便，因為定義 DLL 函式十分麻煩又容易發生錯誤。 如果您是使用 Visual Basic 或 C# 進行程式設計，則必須在類別或 Visual Basic 模組內宣告 DLL 函式。  
   
  在類別內，您可以為每個您想要呼叫的 DLL 函式定義靜態方法。 定義可以包含其他資訊，例如傳遞方法引數時所使用的字元集或呼叫慣例；略過這項資訊，即可選取預設設定。 如需宣告選項和其預設設定的完整清單，請參閱[在 Managed 程式碼中建立原型](../../../docs/framework/interop/creating-prototypes-in-managed-code.md)。  
   
- 包裝之後，即可在對任何其他靜態函式呼叫方法時，對函式呼叫方法。 平台叫用會自動處理基礎匯出的函式。  
+ 在包裝之後，您可以呼叫方法，在類別上時，就可以呼叫靜態方法上的任何其他類別即可。 平台叫用會自動處理基礎匯出的函式。  
   
  設計平台叫用的 Managed 類別時，請考慮類別與 DLL 函式之間的關聯性。 例如，您可以：  
   

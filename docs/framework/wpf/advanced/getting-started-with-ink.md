@@ -5,7 +5,8 @@ ms.date: 03/30/2017
 ms.prod: .net-framework
 ms.reviewer: 
 ms.suite: 
-ms.technology: dotnet-wpf
+ms.technology:
+- dotnet-wpf
 ms.tgt_pltfrm: 
 ms.topic: article
 dev_langs:
@@ -18,16 +19,17 @@ helpviewer_keywords:
 - animation [WPF], gradient brush colors
 - brushes [WPF], animating colors of
 ms.assetid: 760332dd-594a-475d-865b-01659db8cab7
-caps.latest.revision: "10"
+caps.latest.revision: 
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.workload: dotnet
-ms.openlocfilehash: c977e8a4a23f9739541cf28d9e34ad9e8db1daf0
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.workload:
+- dotnet
+ms.openlocfilehash: 74227ebe815e971087569ff39ac0a3479c1b0d14
+ms.sourcegitcommit: d3cfda0943364aaf6ccd574f55f584576c8a4fee
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 03/08/2018
 ---
 # <a name="getting-started-with-ink"></a>筆墨入門
 數位筆跡併入您的應用程式是比以往更為容易。 從 COM 和 Windows Form 的方法達到完整地整合到程式設計必然發展筆墨[!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)]。 您不需要安裝個別的 Sdk 或執行階段程式庫。  
@@ -38,14 +40,14 @@ ms.lasthandoff: 12/22/2017
 ## <a name="quick-start"></a>快速入門  
  本節可協助您撰寫簡單[!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)]收集筆墨的應用程式。  
   
- 如果您尚未這樣做，請安裝 Microsoft Visual Studio 2005 和[!INCLUDE[TLA#tla_winfxsdk](../../../../includes/tlasharptla-winfxsdk-md.md)]。 [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)]應用程式通常必須經過編譯，您可以檢視它們，即使它們是完全組成[!INCLUDE[TLA#tla_xaml](../../../../includes/tlasharptla-xaml-md.md)]。 不過，[!INCLUDE[TLA#tla_winfxsdk](../../../../includes/tlasharptla-winfxsdk-md.md)]包含應用程式，XamlPad，設計來加速實作的處理序[!INCLUDE[TLA2#tla_xaml](../../../../includes/tla2sharptla-xaml-md.md)]-基礎 UI。 若要檢視和修補這份文件中的前幾個範例，您可以使用該應用程式。 建立的程序編譯的應用程式從[!INCLUDE[TLA2#tla_xaml](../../../../includes/tla2sharptla-xaml-md.md)]涵蓋在本文件稍後。  
+ 如果您尚未這樣做，請安裝 Microsoft Visual Studio 2005 和[!INCLUDE[TLA#tla_winfxsdk](../../../../includes/tlasharptla-winfxsdk-md.md)]。 [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] 應用程式通常必須經過編譯，您可以檢視它們，即使它們是完全組成[!INCLUDE[TLA#tla_xaml](../../../../includes/tlasharptla-xaml-md.md)]。 不過，[!INCLUDE[TLA#tla_winfxsdk](../../../../includes/tlasharptla-winfxsdk-md.md)]包含應用程式，XamlPad，設計來加速實作的處理序[!INCLUDE[TLA2#tla_xaml](../../../../includes/tla2sharptla-xaml-md.md)]-基礎 UI。 若要檢視和修補這份文件中的前幾個範例，您可以使用該應用程式。 建立的程序編譯的應用程式從[!INCLUDE[TLA2#tla_xaml](../../../../includes/tla2sharptla-xaml-md.md)]涵蓋在本文件稍後。  
   
- 若要啟動 XAMLPad，按一下 **啟動**功能表上，指向**所有程式**，指向**Microsoft Winndows SDK**，指向**工具**，然後按一下**XAMLPad**。 在 [轉譯] 窗格中，XAMLPad 會呈現撰寫程式碼窗格中的 XAML 程式碼。 您可以編輯 XAML 程式碼，所做的變更會立即顯示在 [轉譯] 窗格中。  
+ 若要啟動 XAMLPad，按一下 **啟動**功能表上，指向**所有程式**，指向**Microsoft Windows SDK**，指向**工具**，然後按一下**XAMLPad**。 在 [轉譯] 窗格中，XAMLPad 會呈現撰寫程式碼窗格中的 XAML 程式碼。 您可以編輯 XAML 程式碼，所做的變更會立即顯示在 [轉譯] 窗格中。  
   
 #### <a name="got-ink"></a>有筆墨嗎？  
  若要啟動您的第一個[!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)]支援筆墨的應用程式：  
   
-1.  開啟 Microsoft Visual Studio 2005  
+1.  Open Microsoft Visual Studio 2005  
   
 2.  建立新**Windows 應用程式 (WPF)**  
   

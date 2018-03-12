@@ -16,16 +16,16 @@ manager: wpickett
 ms.workload:
 - dotnet
 - dotnetcore
-ms.openlocfilehash: 1148af537ef9b502c6f3a9a3cc0588eaed39ac2f
-ms.sourcegitcommit: e7f04439d78909229506b56935a1105a4149ff3d
+ms.openlocfilehash: 36696617d1e28a370f6b15f15fb39bc816973f15
+ms.sourcegitcommit: ba765893e3efcece67d99fd6d5ce0074b050d1d9
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 12/23/2017
+ms.lasthandoff: 03/02/2018
 ---
 # <a name="xslt-compiler-xsltcexe"></a>XSLT 編譯器 (xsltc.exe)
 XSLT 編譯器 (xsltc.exe) 會編譯 XSLT 樣式表並產生組件。 然後編譯的樣式表可以直接傳遞到新的 <xref:System.Xml.Xsl.XslCompiledTransform.Load%28System.Type%29?displayProperty=nameWithType> 方法中。 您無法使用 xsltc.exe 產生簽署的組件。  
   
- xsltc.exe 工具隨附於 Visual Studio 2008 中。 如需詳細資訊，請參閱 [Microsoft 下載中心](http://go.microsoft.com/fwlink/?LinkId=89463)。  
+ xsltc.exe 工具隨附於 Visual Studio 中。 如需詳細資訊，請參閱 [Visual Studio 下載](https://aka.ms/vsdownload?utm_source=mscom&utm_campaign=msdocs)。  
   
 ## <a name="syntax"></a>語法  
   
@@ -47,7 +47,7 @@ xsltc [options] [/class:<name>] <sourceFile> [[/class:<name>] <sourceFile>...]
 |`/debug[`+&#124;-`]`|指定是否要產生偵錯資訊。<br /><br /> 指定 `+` 或 `/debug` 會讓編譯器產生偵錯資訊，並將其放在程式資料庫 (PDB) 檔案中。 產生的 PDB 檔案名稱是 `assemblyName`.pdb。<br /><br /> 指定 `-` (當您未指定 `/debug` 時，它就會生效) 不會建立任何偵錯資訊。 產生正式版本組件。 **注意：**在偵錯模式下編譯對於 XSLT 效能會有顯著的影響。|  
 |`/help`|顯示工具的命令語法和選項。|  
 |`/nologo`|隱藏編譯器著作權訊息，使其無法顯示。|  
-|`/platform:` `string`|指定可執行組件的平台。 以下將描述有效的平台值：<br /><br /> `x86` 會編譯將由 32 位元、x86 相容的 Common Language Runtime 所執行的組件。<br /><br /> `x64` 會在支援 AMD64 或 EM64T 指令集的電腦上編譯將由 64 位元 Common Language Runtime 所執行的組件。<br /><br /> [!INCLUDE[vcpritanium](../../../../includes/vcpritanium-md.md)] 會在具有 [!INCLUDE[vcpritanium](../../../../includes/vcpritanium-md.md)] 處理器的電腦上編譯將由 64 位元 Common Language Runtime 所執行的組件。<br /><br /> `anycpu` 會編譯要在任何平台上執行的組件。 這是預設值。|  
+|`/platform:` `string`|指定可執行組件的平台。 以下將描述有效的平台值：<br /><br /> `x86` 會編譯將由 32 位元、x86 相容的 Common Language Runtime 所執行的組件。<br /><br /> `x64` 會在支援 AMD64 或 EM64T 指令集的電腦上編譯將由 64 位元 Common Language Runtime 所執行的組件。<br /><br /> [!INCLUDE[vcpritanium](../../../../includes/vcpritanium-md.md)] 將您的組件編譯為由 [!INCLUDE[vcpritanium](../../../../includes/vcpritanium-md.md)] 處理器電腦上的 64 位元通用語言執行平台來執行。<br /><br /> `anycpu` 會編譯要在任何平台上執行的組件。 這是預設值。|  
 |`/out:` `assemblyName`|指定當做輸出的組件名稱。 組件名稱預設為主要樣式表的名稱，如果有多個樣式表存在，則預設為第一個樣式表名稱。<br /><br /> 如果此樣式表包含指令碼，指令碼會儲存到個別組件中。 指令碼組件名稱是從主要組件名稱產生而來。 例如，如果您指定 CustOrders.dll 當做組件名稱，第一個指令碼組件會命名為 CustOrders_Script1.dll。|  
 |`/settings:` `document+-, script+-, DTD+-,`|指定樣式表中是否允許 `document()` 函式、XSLT 指令碼或文件類型定義 (DTD)。<br /><br /> 預設行為會停用 DTD、`document()` 函式和指令碼的支援。|  
 |`@` `file`|讓您指定包含編譯器選項的檔案。|  

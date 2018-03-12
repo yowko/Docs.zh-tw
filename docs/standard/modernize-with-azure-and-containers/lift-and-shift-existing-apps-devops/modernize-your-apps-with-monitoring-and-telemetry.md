@@ -4,14 +4,15 @@ description: "容器化的.NET 應用程式的.NET Microservices 架構 |現代�
 author: CESARDELATORRE
 ms.author: wiwagn
 ms.date: 10/26/2017
+ms.prod: .net
 ms.workload:
 - dotnet
 - dotnetcore
-ms.openlocfilehash: 1535951eb648deab17cf8c2fe64db6ddf7df4cb5
-ms.sourcegitcommit: e7f04439d78909229506b56935a1105a4149ff3d
+ms.openlocfilehash: 3caeb60cf0107aaf5413d935f3bde11863561c7d
+ms.sourcegitcommit: d3cfda0943364aaf6ccd574f55f584576c8a4fee
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 12/23/2017
+ms.lasthandoff: 03/08/2018
 ---
 # <a name="modernize-your-apps-with-monitoring-and-telemetry"></a>現代化應用程式與監控與遙測
 
@@ -37,7 +38,7 @@ Application Insights 是可延伸應用程式效能管理 (APM) 服務的 web �
 
 [容器監視解決方案](https://docs.microsoft.com/azure/log-analytics/log-analytics-containers)中記錄分析可讓您檢視和管理您的 Docker 和 Windows 容器主機，在單一位置。 解決方案會顯示哪些容器執行時，哪些容器映像它們正在執行，並執行容器。 您可以檢視詳細的稽核資訊，包括與容器正在使用的命令。 您也可以透過檢視和搜尋集中式記錄檔，而不需要從遠端檢視 Docker 或 Windows 主機疑難排解容器。 您可以找到可能會有很多雜訊並消耗多餘的資源，在主機上的容器。 此外，您可以檢視集中式的 CPU、 記憶體、 儲存和網路使用量和效能資訊的容器。 您可以在執行 Windows 的電腦，集中管理，並比較記錄檔，從 Windows Server HYPER-V 和 Docker 容器。 解決方案支援下列容器 orchestrators:
 
--   Docker 群集
+-   Docker Swarm
 
 -   DC/OS
 

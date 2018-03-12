@@ -4,14 +4,15 @@ description: "容器化的.NET 應用程式的.NET Microservices 架構 |不要�
 author: CESARDELATORRE
 ms.author: wiwagn
 ms.date: 10/26/2017
+ms.prod: .net
 ms.workload:
 - dotnet
 - dotnetcore
-ms.openlocfilehash: c74b71f9c80ab51cabe0e3c4abf32f292da30763
-ms.sourcegitcommit: e7f04439d78909229506b56935a1105a4149ff3d
+ms.openlocfilehash: cb671ec88da7ff1aa5c960c210e0da5e9d753280
+ms.sourcegitcommit: d3cfda0943364aaf6ccd574f55f584576c8a4fee
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 12/23/2017
+ms.lasthandoff: 03/08/2018
 ---
 # <a name="when-not-to-deploy-to-windows-containers"></a>不要將部署到 Windows 容器的時機
 

@@ -4,14 +4,15 @@ description: "現代化現有的.NET 應用程式與 Azure 雲端與 Windows 容
 author: CESARDELATORRE
 ms.author: wiwagn
 ms.date: 10/26/2017
+ms.prod: .net
 ms.workload:
 - dotnet
 - dotnetcore
-ms.openlocfilehash: eed17ad06c138c3a4eb85f5e023427b681488784
-ms.sourcegitcommit: e7f04439d78909229506b56935a1105a4149ff3d
+ms.openlocfilehash: 6811da4b59531e27f2d832c102d37ba1383b15ab
+ms.sourcegitcommit: d3cfda0943364aaf6ccd574f55f584576c8a4fee
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 12/23/2017
+ms.lasthandoff: 03/08/2018
 ---
 # <a name="lift-and-shift-existing-apps-azure-iaas"></a>提起並移動現有應用程式的 Azure IaaS
 
@@ -27,7 +28,7 @@ ms.lasthandoff: 12/23/2017
 
 > **圖 2-1。** 定位雲端基礎結構就緒應用程式
 
-## <a name="why-migrate-existing-net-web-applications-to-azure-iaas"></a>為什麼要移轉現有的.NET web 應用程式至 Azure IaaS 
+## <a name="why-migrate-existing-net-web-applications-to-azure-iaas"></a>為什麼要移轉現有的.NET web 應用程式至 Azure IaaS
 
 若要移轉至雲端，甚至在初始的 IaaS 層級的主要原因是達成成本大幅降低。 藉由使用更多的受管理的基礎結構服務，您的組織可以降低其硬體維護、 伺服器或 VM 佈建和部署和管理基礎結構的投資。
 
@@ -39,7 +40,7 @@ ms.lasthandoff: 12/23/2017
 
 ## <a name="when-to-migrate-to-iaas-instead-of-to-paas"></a>當移轉到 PaaS 而不是 IaaS 至
 
-在下一步 區段中，我們將討論主要是基礎 PaaS 平台和服務的 DevOps 雲端應用程式。 這些應用程式可讓您的大部分優點從移轉至雲端。
+下一節中討論大部分基礎 PaaS 平台和服務的 DevOps 雲端應用程式。 這些應用程式可讓您的大部分優點從移轉至雲端。
 
 如果您的目標是單純將現有的應用程式到雲端，首先，識別現有應用程式將會需要大幅修改 Azure App Service 中執行。 這些應用程式應該是第一個候選項目。
 
@@ -53,15 +54,15 @@ ms.lasthandoff: 12/23/2017
 
 [Azure 移轉](https://aka.ms/azuremigrate)是一種新的服務，提供指引、 深入資訊，以及協助您移轉至 Azure 時所需的機制。 提供 azure 移轉：
 
--   探索及評估在內部部署虛擬機器
+- 探索及評估在內部部署虛擬機器
 
--   內建的相依性對應的多層應用程式的高信心探索
+- 內建的相依性對應的多層應用程式的高信心探索
 
--   智慧型優化到 Azure 虛擬機器
+- 智慧型優化到 Azure 虛擬機器
 
--   相容性報告與修復的潛在問題的指導方針
+- 相容性報告與修復的潛在問題的指導方針
 
--   資料庫探索和移轉 Azure 資料庫管理服務整合
+- 資料庫探索和移轉 Azure 資料庫管理服務整合
 
 Azure 的移轉可讓您對於的信心，您的工作負載可以移轉與業務的影響降到最低，並如預期般在 Azure 中執行。 使用適當的工具和指引，您可以達到時以確保重大效能的投資報酬率最大，並且符合可靠性的需求。
 
@@ -85,23 +86,23 @@ Azure 的移轉可讓您對於的信心，您的工作負載可以移轉與業�
 
 ### <a name="additional-resources"></a>其他資源
 
--   **Azure 移轉的資料工作表**
+- **Azure 移轉的資料工作表**
 
     [https://aka.ms/azuremigration\_datasheet](https://aka.ms/azuremigration\_datasheet)
 
--   **Azure Migrate**
+- **Azure Migrate**
 
     [http://azuremigrationcenter.com/](http://azuremigrationcenter.com/)
 
--   **移轉至 Azure Site recovery**
+- **移轉至 Azure Site recovery**
 
     [https://docs.microsoft.com/azure/site-recovery/site-recovery-migrate-to-azure](https://docs.microsoft.com/azure/site-recovery/site-recovery-migrate-to-azure)
 
--   **Azure Site Recovery 服務概觀**
+- **Azure Site Recovery 服務概觀**
 
     [https://docs.microsoft.com/azure/site-recovery/site-recovery-overview](https://docs.microsoft.com/azure/site-recovery/site-recovery-overview)
 
--   **在 Azure Vm 的 AWS 移轉 Vm**
+- **在 Azure Vm 的 AWS 移轉 Vm**
 
     [https://docs.microsoft.com/azure/site-recovery/site-recovery-migrate-aws-to-azure](https://docs.microsoft.com/azure/site-recovery/site-recovery-migrate-aws-to-azure)
 

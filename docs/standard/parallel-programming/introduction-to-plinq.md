@@ -21,11 +21,11 @@ manager: wpickett
 ms.workload:
 - dotnet
 - dotnetcore
-ms.openlocfilehash: d14f82fa73400695faad49f010e6ef52a14dd9e3
-ms.sourcegitcommit: e7f04439d78909229506b56935a1105a4149ff3d
+ms.openlocfilehash: 6ee718737885618322c3623a80b0b091bbfc729d
+ms.sourcegitcommit: 3a96c706e4dbb4667bf3bf37edac9e1666646f93
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 12/23/2017
+ms.lasthandoff: 02/27/2018
 ---
 # <a name="introduction-to-plinq"></a>PLINQ 簡介
 ## <a name="what-is-a-parallel-query"></a>何謂平行查詢？  

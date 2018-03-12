@@ -4,20 +4,21 @@ description: "容器化的.NET 應用程式的.NET Microservices 架構 |將現�
 author: CESARDELATORRE
 ms.author: wiwagn
 ms.date: 10/26/2017
+ms.prod: .net
 ms.workload:
 - dotnet
 - dotnetcore
-ms.openlocfilehash: f9a30605313c06542fabf9689f700ed726445f57
-ms.sourcegitcommit: e7f04439d78909229506b56935a1105a4149ff3d
+ms.openlocfilehash: bab6e275c93d2cedddf010ab20f98cb8392fa9fa
+ms.sourcegitcommit: d3cfda0943364aaf6ccd574f55f584576c8a4fee
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 12/23/2017
+ms.lasthandoff: 03/08/2018
 ---
 # <a name="deploy-existing-net-apps-as-windows-containers"></a>將現有的.NET 應用程式部署為 Windows 容器
 
 Windows 容器為基礎的部署都適用於雲端最佳化應用程式、 雲端原生應用程式和 DevOps 雲端應用程式。
 
-在本指南中，以及下列各節中，我們將重點放在使用 Windows 容器的*DevOps 雲端*應用程式，當您提起並移動現有的.NET 應用程式。
+本指南中，下列各節的重點是在使用 Windows 容器的*DevOps 雲端*應用程式，當您提起並移動現有的.NET 應用程式。
 
 ## <a name="what-are-containers-linux-or-windows"></a>什麼是容器？ （Linux 或 Windows）
 
@@ -41,7 +42,7 @@ Windows 容器為基礎的部署都適用於雲端最佳化應用程式、 雲�
 
 大量的組織 containerizing 整合的現有應用程式，原因如下：
 
--   **釋放透過提升部署的靈活度**。 容器可提供一致的部署之間的合約開發和作業。 當您使用容器時，您將聽到說出的開發人員、"﹐ 我的電腦，為何不在生產環境中？ 」 他們可以只需說，「 它以執行容器，因此它會在生產環境中執行。 」 已封裝應用程式，其相依性，可以在任何支援的容器型環境中執行。 它會執行它要設定所有的部署目標 （開發、 品管暫存、 生產環境） 中執行的方式。 容器會消除大部分 frictions 當他們從一個階段移到下一步，可大幅提升部署，您可以更快速及提供。
+-   **釋放透過提升部署的靈活度**。 容器可提供一致的部署之間的合約開發和作業。 當您使用容器時，您將聽到說出的開發人員、"﹐ 我的電腦，為何不在生產環境中？ 」 他們可以只需說，「 執行當做容器時，其會在生產環境中執行。 」 已封裝應用程式，其相依性，可以在任何支援的容器型環境中執行。 它會執行它要設定所有的部署目標 （開發、 品管暫存、 生產環境） 中執行的方式。 容器會消除大部分 frictions 當他們從一個階段移到下一步，可大幅提升部署，您可以更快速及提供。
 
 -   **成本大幅降低**。 容器會導致較低的成本，藉由移除現有的硬體，或是從執行的應用程式在更高的密度，每個單位的硬體與彙總。
 
@@ -51,13 +52,13 @@ Windows 容器為基礎的部署都適用於雲端最佳化應用程式、 雲�
 
 靈活度、 可攜性和控制項中的重大改良最終會導致顯著的成本大幅降低當您使用容器來開發和維護應用程式。
 
-## <a name="what-is-docker"></a>Docker 是什麼？
+## <a name="what-is-docker"></a>什麼是 Docker？
 
 [Docker](https://www.docker.com/)是[開放原始碼專案](https://github.com/docker/docker)，自動化應用程式的部署，做為可攜式且足可雲端或內部部署中執行的容器。 Docker 也有[公司](https://www.docker.com/)會升級，而且這項技術的發展。 公司中共同作業與雲端，Linux 和 Windows 廠商，包括 Microsoft 的運作方式。
 
 ![](./media/image6.png)
 
-> **圖 4-6。** Docker 部署混合式雲端的所有層級的容器
+> **圖 4-6。** Docker 將容器部署在混合式雲端的所有圖層
 
 給其他人熟悉的虛擬機器，容器可能會出現非常類似。 容器執行作業系統、 具有檔案系統，而且可以存取網路，就像實體或虛擬電腦系統上。 不過，在容器的基本概念與技術是從虛擬機器非常不同。 從開發人員觀點來看，容器必須被視為一個單一處理程序。 事實上，容器會有一個處理序的單一進入點。
 
@@ -81,9 +82,9 @@ Docker 容器 (為了簡單起見，*容器*) 可以原生 Linux 及 Windows 上
 
 提供多樣化的 Docker，以及.NET Framework 和.NET Core 之間的差異所支援的作業系統，您應將目標設特定作業系統和您使用的架構為基礎的特定版本。
 
-對於 Windows，您可以使用 Windows Server Core 或 Windows Nano Server。 這些 Windows 版本提供不同的特性 （例如與自我裝載的 web 伺服器 Kestrel 例如 IIS) 可能需要.NET Framework 或.NET Core 應用程式。
+針對 Windows，您可以使用 Windows Server Core 或 Windows Nano Server。 這些 Windows 版本提供不同的特性 （例如與自我裝載的 web 伺服器 Kestrel 例如 IIS) 可能需要.NET Framework 或.NET Core 應用程式。
 
-適用於 Linux，多個散發版本會提供及支援 （例如，Debian) 的正式.NET Docker 映像。
+針對 Linux，有多個發佈可供使用，且受到正式 .NET Docker 映像的支援 (例如 Debian)。
 
 圖 4-7 顯示您可以為目標，根據應用程式的.NET Framework 版本的作業系統版本。
 
@@ -95,14 +96,14 @@ Docker 容器 (為了簡單起見，*容器*) 可以原生 Linux 及 Windows 上
 
 當您將映像名稱加入您 Dockerfile 的檔案時，您可以選取使用的標記，如下列範例針對以.NET Framework 為基礎的 Windows 容器映像的作業系統和版本：
 
-> | 標記 | **系統與版本** |
+> | **標記** | **系統與版本** |
 > |---|---|
 > | **microsoft/dotnet-framework:4.x-windowsservercore** | .NET framework 4.x 在 Windows Server Core |
 > | **microsoft/aspnet:4.x-windowsservercore** | .NET framework 4.x 與其他 ASP.NET 自訂程序，在 Windows Server Core |
 
 適用於.NET Core （跨平台適用於 Linux 和 Windows），標記看起來會像這樣：
 
-> | 標記 | **系統與版本**
+> | **標記** | **系統與版本**
 > |---|---|
 > | **microsoft/dotnet:2.0.0-runtime** | .NET core 2.0 執行階段僅 on Linux |
 > | **microsoft/dotnet:2.0.0-runtime-nanoserver** | .NET core 2.0 執行階段僅限 Windows Nano Server 上 |

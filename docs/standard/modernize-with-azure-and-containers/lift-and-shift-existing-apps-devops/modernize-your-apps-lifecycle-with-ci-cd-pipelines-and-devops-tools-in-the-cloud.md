@@ -4,14 +4,15 @@ description: "容器化的.NET 應用程式的.NET Microservices 架構 |現代�
 author: CESARDELATORRE
 ms.author: wiwagn
 ms.date: 10/26/2017
+ms.prod: .net
 ms.workload:
 - dotnet
 - dotnetcore
-ms.openlocfilehash: c0b87d01c1305695dacaf3ba112b387de2ee0cc1
-ms.sourcegitcommit: e7f04439d78909229506b56935a1105a4149ff3d
+ms.openlocfilehash: 668c48b64cab964da65625ef5326fb75e133b3b9
+ms.sourcegitcommit: d3cfda0943364aaf6ccd574f55f584576c8a4fee
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 12/23/2017
+ms.lasthandoff: 03/08/2018
 ---
 # <a name="modernize-your-apps-lifecycle-with-cicd-pipelines-and-devops-tools-in-the-cloud"></a>現代化雲端中的 DevOps 工具 CI/CD 管線與您的應用程式生命週期
 

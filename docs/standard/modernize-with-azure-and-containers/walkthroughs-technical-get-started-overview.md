@@ -4,36 +4,37 @@ description: "現代化現有的.NET 應用程式與 Azure 雲端和 Windows Con
 author: CESARDELATORRE
 ms.author: wiwagn
 ms.date: 10/26/2017
+ms.prod: .net
 ms.workload:
 - dotnet
 - dotnetcore
-ms.openlocfilehash: bced3bed84d138dbda4f322322213b47c0159016
-ms.sourcegitcommit: c3957fdb990060559d73cca44ab3e2c7b4d049c0
+ms.openlocfilehash: 6a2abda3949c1fffc4d731b01e35e58e7c56dac0
+ms.sourcegitcommit: d3cfda0943364aaf6ccd574f55f584576c8a4fee
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 03/05/2018
+ms.lasthandoff: 03/08/2018
 ---
-# <a name="walkthroughs-and-technical-get-started-overview"></a>逐步解說和技術取得已啟動的概觀 
+# <a name="walkthroughs-and-technical-get-started-overview"></a>逐步解說和技術取得已啟動的概觀
 
-若要限制此的電子書的大小，我們已進行其他技術文件和完整的逐步解說 GitHub 儲存機制。 此章節所述的逐步解說線上系列涵蓋 Windows 容器和部署至 Azure 為基礎的多個環境的逐步安裝。
+若要限制此的電子書的大小，其他技術文件和完整的逐步解說所提供的 GitHub 儲存機制中。 此章節所述的逐步解說線上系列涵蓋 Windows 容器和部署至 Azure 為基礎的多個環境的逐步安裝。
 
-下列各節將說明每個逐步解說何謂有關其目標，及其高階的願景-，並提供所涉及的工作的圖表。 您可以取得自己的逐步解說中*eShopModernizing*在應用程式 GitHub 儲存機制 wiki [https://github.com/dotnet-architecture/eShopModernizing/wiki](https://github.com/dotnet-architecture/eShopModernizing/wiki)。
+下列各節說明每個逐步解說是有關它的目的和高層級的願景，並提供所涉及的工作的圖表。 您可以取得自己的逐步解說中*eShopModernizing*在應用程式 GitHub 儲存機制 wiki [https://github.com/dotnet-architecture/eShopModernizing/wiki](https://github.com/dotnet-architecture/eShopModernizing/wiki)。
 
-# <a name="technical-walkthrough-list"></a>技術的逐步解說清單
+## <a name="technical-walkthrough-list"></a>技術的逐步解說清單
 
 下列 get 開始逐步解說提供一致且完整的範例應用程式，您可以拿起和移位藉由使用容器，並接著在 Azure 中使用多個部署選項之間移動技術的指引。
 
 下列逐步解說使用的新範例 eShopLegacy 和 eShopModernizing 應用程式，可在 GitHub 上[https://github.com/dotnet-architecture/eShopModernizing](https://github.com/dotnet-architecture/eShopModernizing)。
 
--   **教學課程的資格舊版應用程式**
+- **教學課程的資格舊版應用程式**
 
--   **化您現有的.NET 應用程式與 Windows 容器**
+- **化您現有的.NET 應用程式與 Windows 容器**
 
--   **將 Windows 容器基礎應用程式部署至 Azure Vm**
+- **將 Windows 容器基礎應用程式部署至 Azure Vm**
 
--   **將 Windows 容器基礎應用程式部署到 Kubernetes Azure 容器服務中**
+- **將 Windows 容器基礎應用程式部署到 Kubernetes Azure 容器服務中**
 
--   **將 Windows 容器基礎應用程式部署至 Azure Service Fabric**
+- **將 Windows 容器基礎應用程式部署至 Azure Service Fabric**
 
 ## <a name="walkthrough-1-tour-of-eshop-legacy-apps"></a>逐步解說 1： 教學課程的資格舊版應用程式
 
@@ -97,13 +98,13 @@ EShopModernizing GitHub 儲存機制 wiki 有完整的技術的逐步解說：
 
 本逐步解說的目標是示範幾個選項用於 containerizing 現有的.NET Framework 應用程式。 您可以：
 
--   化您的應用程式使用[Visual Studio 2017 Tools for Docker](/aspnet/core/host-and-deploy/docker/visual-studio-tools-for-docker) （Visual Studio 2017 或更新版本）。
+- 化您的應用程式使用[Visual Studio 2017 Tools for Docker](/aspnet/core/host-and-deploy/docker/visual-studio-tools-for-docker) （Visual Studio 2017 或更新版本）。
 
--   化您的應用程式透過手動方式新增[Dockerfile](https://docs.docker.com/engine/reference/builder/)，然後使用[Docker CLI](https://docs.docker.com/engine/reference/commandline/cli/)。
+- 化您的應用程式透過手動方式新增[Dockerfile](https://docs.docker.com/engine/reference/builder/)，然後使用[Docker CLI](https://docs.docker.com/engine/reference/commandline/cli/)。
 
--   化您的應用程式使用[Img2Docker](https://github.com/docker/communitytools-image2docker-win)工具 （從 Docker 開放原始碼工具）。
+- 化您的應用程式使用[Img2Docker](https://github.com/docker/communitytools-image2docker-win)工具 （從 Docker 開放原始碼工具）。
 
-本逐步解說著重於 Visual Studio 2017 Tools for Docker 方法，但其他兩種方法是在使用 Dockerfile 的方面相當類似。
+本逐步解說著重於 Visual Studio 2017 Tools for Docker 方法，但其他兩種方法是使用 Dockerfiles 方面相當類似。
 
 ### <a name="scenario"></a>情節
 
@@ -137,7 +138,7 @@ EShopModernizing GitHub 儲存機制 wiki 有完整的技術的逐步解說：
 
 ### <a name="overview"></a>總覽
 
-部署至 Azure 中的 Windows Server 2016 VM 上的 Docker 主機，可讓您快速地設定開發/測試/預備環境。 它也可讓您為一般測試人員或商務使用者驗證應用程式。 Vm 也可以是有效的 IaaS 實際執行環境。
+部署至 Docker 主機上 Windows Server 2016 的虛擬機器 (VM) 在 Azure 中，可讓您快速地設定開發/測試/預備環境。 它也可讓您為一般測試人員或商務使用者驗證應用程式。 Vm 也很有效 Infrastucture 即服務 (IaaS) 」 生產環境。
 
 ### <a name="goals"></a>目標
 
@@ -167,13 +168,13 @@ EShopModernizing GitHub 儲存機制 wiki 有完整的技術的逐步解說：
 
 ### <a name="azure-vms-for-windows-containers"></a>Windows 容器的 azure Vm
 
-為 Windows 容器 azure Vm 只根據 Windows Server 2016 中，Windows 10 的 Vm 或更新版本中，同時具有 Docker 引擎設定。 在大部分情況下，您將在 Azure Vm 中使用 Windows Server 2016。
+為 Windows 容器 azure Vm 是根據 Windows Server 2016、 Windows 10 或更新版本的 Vm，同時具有 Docker 引擎設定。 在大部分情況下，Windows Server 2016 會在 Azure Vm 中。
 
 Azure 目前提供名為的 VM**與容器的 Windows Server 2016**。 您可以使用此 VM 試用新的 Windows Server 容器功能，與 Windows Server Core 或 Windows Nano Server。 安裝容器 OS 映像，然後就可以開始使用 docker VM。
 
 ### <a name="benefits"></a>優點
 
-雖然 Windows 容器可以部署到內部部署 Windows Server 2016 Vm 部署至 Azure 時，您會收到更簡單的方法，若要開始使用已備妥要使用 Windows Server 容器 Vm。 您也可以存取測試人員，並透過 Azure VM 規模集的自動延展性的一般線上位置。
+雖然 Windows 容器可以部署到內部部署 Windows Server 2016 Vm 部署至 Azure 時，您會收到更簡單的方法，若要開始使用已備妥要使用 Windows Server 容器 Vm。 您也可以存取測試人員，並透過 Azure 虛擬機器擴展集自動延展性的一般線上位置。
 
 ### <a name="next-steps"></a>後續步驟
 
@@ -217,25 +218,25 @@ EShopModernizing GitHub 儲存機制 wiki 有完整的技術的逐步解說：
 
 ### <a name="benefits"></a>優點
 
-有許多優點，部署至 Kubernetes 中的叢集。 最大的好處是您取得的可實際執行環境，您可以向外延展應用程式根據您想要使用 （內部延展性中現有的節點），並根據叢集 （中的節點或 Vm 數目的容器執行個體數目全域延展性的叢集）。
+有許多優點，部署至 Kubernetes 中的叢集。 最大的好處是，您會取得在其中您可以向外延展應用程式根據您想要使用 （內部延展性中現有的節點），並根據叢集 （中的節點或 Vm 數目的容器執行個體數目在可實際執行環境全域延展性的叢集）。
 
 Azure 容器服務，特別針對 Azure 最佳化熱門的開放原始碼工具和技術。 您會取得開啟的方案，提供可攜性，您的容器和應用程式組態。 您選取的大小，主機的數目和 orchestrator 工具-容器服務會處理所有其他項目。
 
 與 Kubernetes，開發人員就可以開始從思考實體和虛擬機器進行規劃容器為中心的基礎結構，可促進下列功能，和其他項目：
 
--   根據多個容器的應用程式
+- 根據多個容器的應用程式
 
--   複寫容器執行個體和水平的自動調整
+- 複寫容器執行個體和水平的自動調整
 
--   命名及探索 (例如，內部 DNS)
+- 命名及探索 (例如，內部 DNS)
 
--   平衡負載
+- 平衡負載
 
--   輪流更新
+- 輪流更新
 
--   散發密碼
+- 散發密碼
 
--   應用程式健全狀況檢查
+- 應用程式健全狀況檢查
 
 ## <a name="next-steps"></a>後續步驟
 
@@ -251,7 +252,7 @@ EShopModernizing GitHub 儲存機制 wiki 有完整的技術的逐步解說：
 
 ### <a name="overview"></a>總覽
 
-應用程式為基礎的 Windows 容器快速必須使用平台，移動離開更進一步的 IaaS Vm。 這需要輕易地達成高延展性和更自動化延展性，並大幅改善的自動化部署和版本控制。 使用 orchestrator Azure Service Fabric 是用於 Azure 的雲端，但也可以使用內部部署，或甚至在不同的公用雲端中，您就可以達成這些目標。
+根據 Windows 容器快速的應用程式必須使用平台，移動離開更進一步的 IaaS Vm。 這需要輕易地達成高延展性和更自動化延展性，並大幅改善的自動化部署和版本控制。 使用 orchestrator Azure Service Fabric 是用於 Azure 的雲端，但也可以使用內部部署，或甚至在不同的公用雲端中，您就可以達成這些目標。
 
 ### <a name="goals"></a>目標
 
@@ -277,37 +278,37 @@ EShopModernizing GitHub 儲存機制 wiki 有完整的技術的逐步解說：
 
 ## <a name="benefits"></a>優點
 
-部署至 Service Fabric 叢集的優點是類似於使用 Kubernetes 的優點。 一項差異，不過，是 2017年的服務網狀架構是 2017年的針對 Windows 應用程式相較於 Kubernetes，是 2017年的 Windows 容器之前早期預覽中切換非常成熟的實際執行環境。 （Kubernetes 是適用於 Linux 的成熟環境）。 
+部署至 Service Fabric 叢集的優點是類似於使用 Kubernetes 的優點。 一項的差異是，Service Fabric 是 Windows 應用程式相較於 Kubernetes，是在測試階段中 Kubernetes 1.9 版版本的 Windows 容器的成熟實際執行環境 (年 12 月 2017)。 Kubernetes 是適用於 Linux 的成熟環境。
 
-使用 Azure Service Fabric 的主要優點就是您取得的可實際執行環境，您可以向外延展應用程式根據您想要使用 （內部延展性中現有的節點），並根據數目的容器執行個體數目節點或叢集中 （全域延展性的叢集） Vm。
+使用 Azure Service Fabric 的主要優點是，您會取得在其中您可以向外延展應用程式根據您想要使用 （內部延展性中現有的節點），並根據數目的容器執行個體數目在可實際執行環境節點或叢集中 （全域延展性的叢集） Vm。
 
 Azure Service Fabric 提供了適用於您的容器和應用程式組態的可攜性。 您可以讓 Service Fabric 叢集在 Azure 中，或將它安裝在內部部署在自己的資料中心。 可以甚至在您安裝 Service Fabric 叢集不同的雲端，例如[Amazon AWS](https://blogs.msdn.microsoft.com/azureservicefabric/2017/05/18/tutorial-how-to-create-a-service-fabric-standalone-cluster-with-aws-ec2-instances/)。
 
 使用 Service Fabric，開發人員就可以開始從思考實體和虛擬機器進行規劃容器為中心的基礎結構，可促進下列功能，和其他項目：
 
--   根據多個容器應用程式。
+- 根據多個容器應用程式。
 
--   複寫容器執行個體和水平的自動調整。
+- 複寫容器執行個體和水平的自動調整。
 
--   命名和探索 (例如，內部 DNS)。
+- 命名和探索 (例如，內部 DNS)。
 
--   平衡負載。
+- 平衡負載。
 
--   輪流更新。
+- 輪流更新。
 
--   散發密碼。
+- 散發密碼。
 
--   應用程式健全狀況檢查。
+- 應用程式健全狀況檢查。
 
 獨佔 （相較於其他 orchestrators） 的 Service Fabric 中有下列功能：
 
--   可設定狀態的服務功能，透過可靠的服務應用程式模型。
+- 可設定狀態的服務功能，透過可靠的服務應用程式模型。
 
--   動作項目模式，透過 Reliable Actors 應用程式模型。
+- 動作項目模式，透過 Reliable Actors 應用程式模型。
 
--   部署 / 骨處理程序，除了 Windows 或 Linux 容器。
+- 部署 / 骨處理程序，除了 Windows 或 Linux 容器。
 
--   進階輪流更新和健康情況檢查。
+- 進階輪流更新和健康情況檢查。
 
 ### <a name="next-steps"></a>後續步驟
 

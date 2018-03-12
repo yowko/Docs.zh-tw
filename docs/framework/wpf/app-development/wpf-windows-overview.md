@@ -42,11 +42,11 @@ ms.author: dotnetcontent
 manager: wpickett
 ms.workload:
 - dotnet
-ms.openlocfilehash: 594bb21983f51f3c0698c43d0f6ea39594b72705
-ms.sourcegitcommit: cf22b29db780e532e1090c6e755aa52d28273fa6
+ms.openlocfilehash: c176f08904bac8e9c3877977c1e52afb57d5daca
+ms.sourcegitcommit: d3cfda0943364aaf6ccd574f55f584576c8a4fee
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 02/01/2018
+ms.lasthandoff: 03/08/2018
 ---
 # <a name="wpf-windows-overview"></a>WPF 視窗概觀
 使用者是透過視窗與 [!INCLUDE[TLA#tla_wpf](../../../../includes/tlasharptla-wpf-md.md)] 獨立應用程式互動。 視窗的主要用途是裝載內容，以視覺化方式檢視資料，並讓使用者可以與資料互動。 獨立[!INCLUDE[TLA2#tla_wpf](../../../../includes/tla2sharptla-wpf-md.md)]應用程式使用，提供它們自己的視窗<xref:System.Windows.Window>類別。 本主題將介紹<xref:System.Windows.Window>之前涵蓋建立和管理 windows 獨立應用程式中的基本概念。  
@@ -106,7 +106,7 @@ ms.lasthandoff: 02/01/2018
   
 -   在程式碼後置類別必須是`partial`類別具有相同名稱的指定`x:Class`屬性標記，並必須衍生自<xref:System.Windows.Window>。 這可讓相關聯的程式碼後置檔案`partial`建置應用程式時，所產生的標記檔案類別 (請參閱[建置 WPF 應用程式](../../../../docs/framework/wpf/app-development/building-a-wpf-application-wpf.md))。  
   
--   在程式碼後置<xref:System.Windows.Window>類別必須實作的建構函式呼叫`InitializeComponent`方法。 `InitializeComponent`實作標記所產生檔案的`partial`類別，以註冊事件，並設定標記中定義的屬性。  
+-   在程式碼後置<xref:System.Windows.Window>類別必須實作的建構函式呼叫`InitializeComponent`方法。 `InitializeComponent` 實作標記所產生檔案的`partial`類別，以註冊事件，並設定標記中定義的屬性。  
   
 > [!NOTE]
 >  當您新增新<xref:System.Windows.Window>至您的專案使用[!INCLUDE[TLA#tla_visualstu](../../../../includes/tlasharptla-visualstu-md.md)]、<xref:System.Windows.Window>使用標記和程式碼後置實作，並包含必要的設定，以建立做為標記和程式碼後置檔案之間的關聯此處所述。  
@@ -161,10 +161,10 @@ ms.lasthandoff: 02/01/2018
   
  ![呼叫 Window.Show 而開啟的視窗](../../../../docs/framework/wpf/app-development/media/windowoverviewfigure8.png "WindowOverviewFigure8")  
   
- 開啟的視窗，藉由呼叫<xref:System.Windows.Window.Show%2A>是強制回應視窗，這表示該應用程式會在允許使用者啟用 其他視窗相同的應用程式中的模式。  
+ 開啟的視窗，藉由呼叫<xref:System.Windows.Window.Show%2A>是強制回應視窗，這表示該應用程式會在允許使用者啟用 [其他視窗相同的應用程式中的模式。  
   
 > [!NOTE]
->  <xref:System.Windows.Window.ShowDialog%2A>呼叫以強制回應方式開啟例如對話方塊視窗。 請參閱[對話方塊概觀](../../../../docs/framework/wpf/app-development/dialog-boxes-overview.md)如需詳細資訊。  
+>  <xref:System.Windows.Window.ShowDialog%2A> 呼叫以強制回應方式開啟例如對話方塊視窗。 請參閱[對話方塊概觀](../../../../docs/framework/wpf/app-development/dialog-boxes-overview.md)如需詳細資訊。  
   
  當<xref:System.Windows.Window.Show%2A>是呼叫，視窗執行初始化工作後，它會顯示建立基礎結構，讓它能夠接收使用者輸入。 當初始化視窗時，<xref:System.Windows.Window.SourceInitialized>就會引發事件，並顯示視窗。  
   
@@ -246,7 +246,7 @@ ms.lasthandoff: 02/01/2018
   
 -   按下 ALT+F4。  
   
--   按下**關閉** 按鈕。  
+-   按下**關閉**] 按鈕。  
   
  您可以提供其他機制讓工作區關閉視窗，較常見的包括下列各項︰  
   
@@ -267,7 +267,7 @@ ms.lasthandoff: 02/01/2018
   
  當視窗關閉時，會引發兩個事件：<xref:System.Windows.Window.Closing>和<xref:System.Windows.Window.Closed>。  
   
- <xref:System.Windows.Window.Closing>關閉視窗，並提供的機制，可以避免關閉由哪一個視窗之前引發。 防止視窗關閉的一個常見原因，是視窗內容包含已修改的資料。 在此情況下，<xref:System.Windows.Window.Closing>可以處理事件，以判斷是否資料已變更，而且如果是，要詢問使用者是否要繼續關閉視窗而不儲存資料，或取消關閉視窗。 下列範例示範處理的關鍵層面<xref:System.Windows.Window.Closing>。  
+ <xref:System.Windows.Window.Closing> 關閉視窗，並提供的機制，可以避免關閉由哪一個視窗之前引發。 防止視窗關閉的一個常見原因，是視窗內容包含已修改的資料。 在此情況下，<xref:System.Windows.Window.Closing>可以處理事件，以判斷是否資料已變更，而且如果是，要詢問使用者是否要繼續關閉視窗而不儲存資料，或取消關閉視窗。 下列範例示範處理的關鍵層面<xref:System.Windows.Window.Closing>。  
   
  [!code-csharp[WindowClosingSnippets](../../../../samples/snippets/csharp/VS_Snippets_Wpf/WindowClosingSnippets/CSharp/DataWindow.xaml.cs)]
  [!code-vb[WindowClosingSnippets](../../../../samples/snippets/visualbasic/VS_Snippets_Wpf/WindowClosingSnippets/visualbasic/datawindow.xaml.vb)]  
@@ -319,10 +319,9 @@ ms.lasthandoff: 02/01/2018
   
 <a name="Topmost_Windows_and_Z_Order"></a>   
 ### <a name="topmost-windows-and-z-order"></a>最上層視窗和疊置順序  
- 除了有 x 和 y 位置，視窗也有 z 維度的位置，這決定了它相對於其他視窗的垂直位置。 這稱為視窗的疊置順序，並且有兩種類型︰一般疊置順序和最上層疊置順序。 在視窗的位置*一般疊置順序*取決於它是否目前作用中。 根據預設，視窗位於一般疊置順序。 在 視窗位置*最上層的疊置順序*也取決於它是否目前作用中。 此外，最上層疊置順序的視窗一定會位於一般疊置順序的視窗之上。 視窗位於最上層的疊置順序藉由設定其<xref:System.Windows.Window.Topmost%2A>屬性`true`。  
+ 除了有 x 和 y 位置，視窗也有 z 維度的位置，這決定了它相對於其他視窗的垂直位置。 這稱為視窗的疊置順序，並且有兩種類型︰一般疊置順序和最上層疊置順序。 在視窗的位置*一般疊置順序*取決於它是否目前作用中。 根據預設，視窗位於一般疊置順序。 在 [視窗位置*最上層的疊置順序*也取決於它是否目前作用中。 此外，最上層疊置順序的視窗一定會位於一般疊置順序的視窗之上。 視窗位於最上層的疊置順序藉由設定其<xref:System.Windows.Window.Topmost%2A>屬性`true`。  
   
  [!code-xaml[WindowsOverviewSnippets#TopmostWindowMARKUP1](../../../../samples/snippets/csharp/VS_Snippets_Wpf/WindowsOverviewSnippets/CSharp/TopmostWindow.xaml#topmostwindowmarkup1)]  
-[!code-xaml[WindowsOverviewSnippets#TopmostWindowMARKUP2](../../../../samples/snippets/csharp/VS_Snippets_Wpf/WindowsOverviewSnippets/CSharp/TopmostWindow.xaml#topmostwindowmarkup2)]  
   
  在每個疊置順序內，目前使用中視窗會顯示在相同疊置順序中的所有其他視窗之上。  
   
@@ -333,12 +332,10 @@ ms.lasthandoff: 02/01/2018
  <xref:System.Windows.FrameworkElement.MinWidth%2A><xref:System.Windows.FrameworkElement.Width%2A>，和<xref:System.Windows.FrameworkElement.MaxWidth%2A>用來管理視窗可能會在其生命週期，而且都已設定為下列範例所示的寬度的範圍。  
   
  [!code-xaml[WindowsOverviewSnippets#WidthWindowMARKUP1](../../../../samples/snippets/csharp/VS_Snippets_Wpf/WindowsOverviewSnippets/CSharp/WidthWindow.xaml#widthwindowmarkup1)]  
-[!code-xaml[WindowsOverviewSnippets#WidthWindowMARKUP2](../../../../samples/snippets/csharp/VS_Snippets_Wpf/WindowsOverviewSnippets/CSharp/WidthWindow.xaml#widthwindowmarkup2)]  
   
  視窗高度受<xref:System.Windows.FrameworkElement.MinHeight%2A>， <xref:System.Windows.FrameworkElement.Height%2A>，和<xref:System.Windows.FrameworkElement.MaxHeight%2A>，且已設定，如下列範例所示。  
   
  [!code-xaml[WindowsOverviewSnippets#HeightWindowMARKUP1](../../../../samples/snippets/csharp/VS_Snippets_Wpf/WindowsOverviewSnippets/CSharp/HeightWindow.xaml#heightwindowmarkup1)]  
-[!code-xaml[WindowsOverviewSnippets#HeightWindowMARKUP2](../../../../samples/snippets/csharp/VS_Snippets_Wpf/WindowsOverviewSnippets/CSharp/HeightWindow.xaml#heightwindowmarkup2)]  
   
  因為各種寬度值和高度值都各指定一個範圍，所以可調整大小視窗的高度與寬度可能會是個別維度的指定範圍內的任何位置。 若要偵測其目前的寬度和高度，檢查<xref:System.Windows.FrameworkElement.ActualWidth%2A>和<xref:System.Windows.FrameworkElement.ActualHeight%2A>分別。  
   
@@ -355,7 +352,6 @@ ms.lasthandoff: 02/01/2018
  下列範例顯示自動調整垂直和水平大小以符合其內容的視窗，第一次顯示時的樣子。  
   
  [!code-xaml[WindowsOverviewSnippets#SizeToContentWindowMARKUP1](../../../../samples/snippets/csharp/VS_Snippets_Wpf/WindowsOverviewSnippets/CSharp/SizeToContentWindow.xaml#sizetocontentwindowmarkup1)]  
-[!code-xaml[WindowsOverviewSnippets#SizeToContentWindowMARKUP2](../../../../samples/snippets/csharp/VS_Snippets_Wpf/WindowsOverviewSnippets/CSharp/SizeToContentWindow.xaml#sizetocontentwindowmarkup2)]  
   
  下列範例示範如何設定<xref:System.Windows.Window.SizeToContent%2A>指定視窗會調整大小以符合其內容的程式碼中的屬性。
   
@@ -410,7 +406,6 @@ ms.lasthandoff: 02/01/2018
  下列範例示範如何建立在開啟時會顯示為最大化的視窗。  
   
  [!code-xaml[WindowsOverviewSnippets#WindowStateWindowMARKUP1](../../../../samples/snippets/csharp/VS_Snippets_Wpf/WindowsOverviewSnippets/CSharp/WindowStateWindow.xaml#windowstatewindowmarkup1)]  
-[!code-xaml[WindowsOverviewSnippets#WindowStateWindowMARKUP2](../../../../samples/snippets/csharp/VS_Snippets_Wpf/WindowsOverviewSnippets/CSharp/WindowStateWindow.xaml#windowstatewindowmarkup2)]  
   
  一般情況下，您應該設定<xref:System.Windows.Window.WindowState%2A>設定視窗的初始狀態。 可調整大小的視窗顯示後，使用者可以按下視窗標題列上的最小化、最大化和還原按鈕，以變更視窗狀態。  
   
@@ -438,7 +433,6 @@ ms.lasthandoff: 02/01/2018
  如同<xref:System.Windows.Window.WindowStyle%2A>，視窗的調整大小模式不太可能變更在其生命週期，這表示，您很可能是設定它從[!INCLUDE[TLA2#tla_xaml](../../../../includes/tla2sharptla-xaml-md.md)]標記。  
   
  [!code-xaml[WindowsOverviewSnippets#ResizeModeWindowMARKUP1](../../../../samples/snippets/csharp/VS_Snippets_Wpf/WindowsOverviewSnippets/CSharp/ResizeModeWindow.xaml#resizemodewindowmarkup1)]  
-[!code-xaml[WindowsOverviewSnippets#ResizeModeWindowMARKUP2](../../../../samples/snippets/csharp/VS_Snippets_Wpf/WindowsOverviewSnippets/CSharp/ResizeModeWindow.xaml#resizemodewindowmarkup2)]  
   
  請注意，您可以偵測是否視窗最大化，最小化，或藉由檢查還原<xref:System.Windows.Window.WindowState%2A>屬性。  
   
@@ -463,7 +457,6 @@ ms.lasthandoff: 02/01/2018
  您可以設定<xref:System.Windows.Window.WindowStyle%2A>使用[!INCLUDE[TLA2#tla_xaml](../../../../includes/tla2sharptla-xaml-md.md)]標記或程式碼，因為它是不太可能變更視窗的存留期間，您將很可能是設定它使用[!INCLUDE[TLA2#tla_xaml](../../../../includes/tla2sharptla-xaml-md.md)]標記。  
   
  [!code-xaml[WindowsOverviewSnippets#WindowStyleWindowMARKUP1](../../../../samples/snippets/csharp/VS_Snippets_Wpf/WindowsOverviewSnippets/CSharp/WindowStyleWindow.xaml#windowstylewindowmarkup1)]  
-[!code-xaml[WindowsOverviewSnippets#WindowStyleWindowMARKUP2](../../../../samples/snippets/csharp/VS_Snippets_Wpf/WindowsOverviewSnippets/CSharp/WindowStyleWindow.xaml#windowstylewindowmarkup2)]  
   
 #### <a name="non-rectangular-window-style"></a>非矩形視窗樣式  
  也有一些情況下，其中的框線樣式，<xref:System.Windows.Window.WindowStyle%2A>可讓您有不足夠。 比方說，您可以建立非矩形的框線，應用程式，像是[!INCLUDE[TLA#tla_wmp](../../../../includes/tlasharptla-wmp-md.md)]使用。  
@@ -475,7 +468,6 @@ ms.lasthandoff: 02/01/2018
  可以建立這類視窗設定<xref:System.Windows.Window.WindowStyle%2A>屬性<xref:System.Windows.WindowStyle.None>，並使用特殊支援<xref:System.Windows.Window>具有的透明度。  
   
  [!code-xaml[WindowsOverviewSnippets#TransparentWindowMARKUP1](../../../../samples/snippets/csharp/VS_Snippets_Wpf/WindowsOverviewSnippets/CSharp/TransparentWindow.xaml#transparentwindowmarkup1)]  
-[!code-xaml[WindowsOverviewSnippets#TransparentWindowMARKUP2](../../../../samples/snippets/csharp/VS_Snippets_Wpf/WindowsOverviewSnippets/CSharp/TransparentWindow.xaml#transparentwindowmarkup2)]  
   
  這些值的組合會指示視窗要轉譯為完全透明。 在此狀態下，無法使用視窗的非工作區裝飾 ([關閉] 功能表、[最小化]、[最大化] 和 [還原] 按鈕等等)。 因此，您需要自行提供。  
   
@@ -488,11 +480,10 @@ ms.lasthandoff: 02/01/2018
  某些類型的視窗沒有工作列按鈕，例如訊息方塊和對話方塊 (請參閱[對話方塊概觀](../../../../docs/framework/wpf/app-development/dialog-boxes-overview.md))。 您可以控制在視窗的工作列按鈕是否顯示藉由設定<xref:System.Windows.Window.ShowInTaskbar%2A>屬性 (`true`依預設)。  
   
  [!code-xaml[WindowsOverviewSnippets#ShowInTaskbarWindowMARKUP1](../../../../samples/snippets/csharp/VS_Snippets_Wpf/WindowsOverviewSnippets/CSharp/ShowInTaskbarWindow.xaml#showintaskbarwindowmarkup1)]  
-[!code-xaml[WindowsOverviewSnippets#ShowInTaskbarWindowMARKUP2](../../../../samples/snippets/csharp/VS_Snippets_Wpf/WindowsOverviewSnippets/CSharp/ShowInTaskbarWindow.xaml#showintaskbarwindowmarkup2)]  
   
 <a name="SecurityConsiderations"></a>   
 ## <a name="security-considerations"></a>安全性考量  
- <xref:System.Windows.Window>需要`UnmanagedCode`具現化的安全性權限。 對於本機電腦上安裝和啟動的應用程式，這落在授與給該應用程式的權限集範圍內。  
+ <xref:System.Windows.Window> 需要`UnmanagedCode`具現化的安全性權限。 對於本機電腦上安裝和啟動的應用程式，這落在授與給該應用程式的權限集範圍內。  
   
  不過，這超出的權限授與給從網際網路或本機內部網路區域使用啟動的應用程式集[!INCLUDE[TLA#tla_clickonce](../../../../includes/tlasharptla-clickonce-md.md)]。 因此，使用者會收到[!INCLUDE[TLA2#tla_clickonce](../../../../includes/tla2sharptla-clickonce-md.md)]安全性警告，而且必須提升為完全信任應用程式設定的權限。  
   
@@ -500,7 +491,7 @@ ms.lasthandoff: 02/01/2018
   
 <a name="Other_Types_of_Windows"></a>   
 ## <a name="other-types-of-windows"></a>其他類型的視窗  
- <xref:System.Windows.Navigation.NavigationWindow>是設計來裝載可瀏覽內容的視窗。 如需詳細資訊，請參閱[巡覽概觀](../../../../docs/framework/wpf/app-development/navigation-overview.md))。  
+ <xref:System.Windows.Navigation.NavigationWindow> 是設計來裝載可瀏覽內容的視窗。 如需詳細資訊，請參閱[巡覽概觀](../../../../docs/framework/wpf/app-development/navigation-overview.md))。  
   
  對話方塊是經常用來從使用者收集資訊以完成一項功能的視窗。 例如，當使用者想要開啟檔案，**開啟檔案**從使用者取得檔案名稱的應用程式通常會顯示對話方塊。 如需詳細資訊，請參閱[對話方塊概觀](../../../../docs/framework/wpf/app-development/dialog-boxes-overview.md)。  
   

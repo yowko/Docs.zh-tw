@@ -4,14 +4,15 @@ description: "現代化現有的.NET 應用程式與 Azure 雲端和 Windows Con
 author: CESARDELATORRE
 ms.author: wiwagn
 ms.date: 10/26/2017
+ms.prod: .net
 ms.workload:
 - dotnet
 - dotnetcore
-ms.openlocfilehash: 221d8c2b837fb738425e26f3af4da895e4987212
-ms.sourcegitcommit: e7f04439d78909229506b56935a1105a4149ff3d
+ms.openlocfilehash: 9189de8d083c8f9dea8c53b428e6cd34ae6dad15
+ms.sourcegitcommit: d3cfda0943364aaf6ccd574f55f584576c8a4fee
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 12/23/2017
+ms.lasthandoff: 03/08/2018
 ---
 # <a name="migrate-your-relational-databases-to-azure"></a>將關聯式資料庫移轉至 azure
 
@@ -21,7 +22,7 @@ ms.lasthandoff: 12/23/2017
 
 ![在 Azure 中資料庫的移轉路徑](./media/image3-1.png)
 
-> **圖 3-1。** 在 Azure 中資料庫的移轉路徑
+> **圖 3-1** 在 Azure 中資料庫的移轉路徑
 
 ## <a name="when-to-migrate-to-azure-sql-database-managed-instance"></a>當移轉到 Azure SQL Database 管理執行個體
 
@@ -35,27 +36,27 @@ ms.lasthandoff: 12/23/2017
 
 Azure SQL Database 中的 managed 執行個體具有下列特性：
 
--   透過 Azure 虛擬網路的安全性隔離
+- 透過 Azure 虛擬網路的安全性隔離
 
--   應用程式介面與相容性，這些功能：
+- 應用程式介面與相容性，這些功能：
 
-    -   SQL Server Agent 和 SQL Server Profiler
+  - SQL Server Agent 和 SQL Server Profiler
 
-    -   跨資料庫參考和查詢，SQL CLR 複寫、 異動資料擷取 (CDC) 和 Service Broker
+  - 跨資料庫參考和查詢，SQL CLR 複寫、 異動資料擷取 (CDC) 和 Service Broker
 
--   資料庫大小最多 35 TB
+- 資料庫大小最多 35 TB
 
--   最少停機時間移轉，與這些功能：
+- 最少停機時間移轉，與這些功能：
 
-    -   Azure 資料庫移轉的服務
+  - Azure 資料庫移轉的服務
 
-    -   原生備份及還原，記錄傳送
+  - 原生備份及還原，記錄傳送
 
 使用這些功能，當您將現有的應用程式資料庫移轉至 Azure SQL Database 中，Managed 執行個體模型提供近 100%的 Paas 優點適用於 SQL Server。 受管理的執行個體是 SQL Server 環境，讓您繼續使用執行個體層級功能，而不需要變更應用程式的設計。
 
 受管理的執行個體可能是最適合用於企業目前使用的 SQL Server，而且需要它們在雲端中的網路安全性的彈性。 它可用的 SQL 資料庫的私人虛擬網路。
 
-## <a name="when-to-migrate-to-azure-sql-database"></a>當移轉到 Azure SQL Database 
+## <a name="when-to-migrate-to-azure-sql-database"></a>當移轉到 Azure SQL Database
 
 如前所述，標準的 Azure SQL Database 是完全受管理、 關聯式 DBaaS。 SQL Database 目前管理包含數百萬個生產資料庫，在世界各地的 38 資料中心。 它支援廣泛的應用程式和工作負載，而不需要管理要開車最需要大量資料的關鍵任務應用程式，需要全域的縮放比例的進階的資料處理簡單的交易式資料。
 
@@ -65,19 +66,19 @@ Azure SQL Database 是建置應用程式開發人員只智慧型雲端資料庫�
 
 Azure SQL Database 提供下列優點：
 
--   內建智慧 （機器學習），會學習，而您的應用程式適應
+- 內建智慧 （機器學習），會學習，而您的應用程式適應
 
--   視資料庫的佈建
+- 視資料庫的佈建
 
--   某個範圍的所有工作負載的方案，
+- 某個範圍的所有工作負載的方案，
 
--   99.99%可用性 SLA、 零維護
+- 99.99%可用性 SLA、 零維護
 
--   地理複寫和還原的資料保護服務
+- 地理複寫和還原的資料保護服務
 
--   Azure SQL Database 點還原時間的功能
+- Azure SQL Database 點還原時間的功能
 
--   與 SQL Server 2016，包括混合式和移轉的相容性
+- 與 SQL Server 2016，包括混合式和移轉的相容性
 
 標準的 Azure SQL Database 是 PaaS 接近於 Azure SQL Database 管理執行個體。 您應該嘗試使用它，可能的話，請從受管理的雲端，將會有更多的優點。 不過，Azure SQL Database 已從規則的一些主要差異而且在內部部署 SQL Server 執行個體。 根據您現有的應用程式的資料庫需求，和企業需求和原則，它可能無法最佳的選擇時您計劃移轉至雲端。
 
@@ -108,23 +109,23 @@ Microsoft Azure 目前最多支援[331 不同資料庫伺服器](https://azurema
 
 ## <a name="additional-resources"></a>其他資源
 
--   **選擇雲端 SQL Server 選項： Azure SQL Database (PaaS) 或 Azure VM (IaaS) 上的 SQL Server**
+- **選擇雲端 SQL Server 選項： Azure SQL Database (PaaS) 或 Azure VM (IaaS) 上的 SQL Server**
 
     [https://docs.microsoft.com/azure/sql-database/sql-database-paas-vs-sql-server-iaas](https://docs.microsoft.com/azure/sql-database/sql-database-paas-vs-sql-server-iaas)
 
--   **取得 Azure SQL DB Managed 執行個體和資料庫移轉服務更快的雲端**
+- **取得 Azure SQL DB Managed 執行個體和資料庫移轉服務更快的雲端**
 
     [https://channel9.msdn.com/Events/Build/2017/P4008](https://channel9.msdn.com/Events/Build/2017/P4008)
 
--   **SQL Server 資料庫移轉至雲端中的 SQL Database**
+- **SQL Server 資料庫移轉至雲端中的 SQL Database**
 
     [https://docs.microsoft.com/azure/sql-database/sql-database-cloud-migrate](https://docs.microsoft.com/azure/sql-database/sql-database-cloud-migrate)
 
--   **Azure SQL Database**
+- **Azure SQL Database**
 
     [https://azure.microsoft.com/services/sql-database/?v=16.50](https://azure.microsoft.com/services/sql-database/?v=16.50)
 
--   **在虛擬機器上的 SQL Server**
+- **在虛擬機器上的 SQL Server**
 
     [https://azure.microsoft.com/services/virtual-machines/sql-server/](https://azure.microsoft.com/services/virtual-machines/sql-server/)
 

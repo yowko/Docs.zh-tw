@@ -24,11 +24,11 @@ manager: wpickett
 ms.workload:
 - dotnet
 - dotnetcore
-ms.openlocfilehash: 2ec92933bdf123412a3d489fc493d76c4a0dc0d0
-ms.sourcegitcommit: e7f04439d78909229506b56935a1105a4149ff3d
+ms.openlocfilehash: b4cecc44ff740dd99d10131341c6a6056ce3aab3
+ms.sourcegitcommit: 3a96c706e4dbb4667bf3bf37edac9e1666646f93
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 12/23/2017
+ms.lasthandoff: 02/27/2018
 ---
 # <a name="backreference-constructs-in-regular-expressions"></a>規則運算式中的反向參考建構
 反向參考提供便利的方式來識別字串內的重複字元或子字串。 例如，如果輸入字串包含多次出現的任意子字串，您可以比對第一個出現的子字串與擷取的群組，接著使用反向參考來比對隨後出現的子字串。  
@@ -43,7 +43,7 @@ ms.lasthandoff: 12/23/2017
   
  `\` *數字*  
   
- 其中 *number* 是規則運算式中的擷取群組序數位置。 例如，`\4` 會比對第四個擷取群組的內容。 如果規則運算式模式中未定義 *number*，便會發生剖析錯誤，而規則運算式引擎會擲回 <xref:System.ArgumentException>。 例如，規則運算式 `\b(\w+)\s\1` 有效，因為 `(\w+)` 是運算式中第一個和唯一的擷取群組。 另一方面，`\b(\w+)\s\2` 無效並擲回引數例外狀況，因為沒有編號為 `\2` 的擷取群組。  
+ 其中 *number* 是規則運算式中的擷取群組序數位置。 例如，`\4` 會比對第四個擷取群組的內容。 如果規則運算式模式中未定義 *number*，便會發生剖析錯誤，而規則運算式引擎會擲回 <xref:System.ArgumentException>。 例如，規則運算式 `\b(\w+)\s\1` 有效，因為 `(\w+)` 是運算式中第一個和唯一的擷取群組。 另一方面，`\b(\w+)\s\2` 無效並擲回引數例外狀況，因為沒有編號為 `\2` 的擷取群組。 此外，如果 *number* 識別在特定序數位置的擷取群組，但擷取群組已經被指派和其序數順序不同的數值名稱，則規則運算式剖析器也會擲回 <xref:System.ArgumentException>。 
   
  請注意八進位逸出字碼 (例如 `\16`) 與使用相同標記法之 `\`*number* 反向參考間的模稜兩可。 這個模棱兩可的情況已解決，如下所示：  
   
@@ -87,12 +87,24 @@ ms.lasthandoff: 12/23/2017
   
  [!code-csharp[RegularExpressions.Language.Backreferences#2](../../../samples/snippets/csharp/VS_Snippets_CLR/regularexpressions.language.backreferences/cs/backreference2.cs#2)]
  [!code-vb[RegularExpressions.Language.Backreferences#2](../../../samples/snippets/visualbasic/VS_Snippets_CLR/regularexpressions.language.backreferences/vb/backreference2.vb#2)]  
-  
- 請注意，*name* 也可以是數字的字串表示。 例如，下列範例會使用規則運算式 `(?<2>\w)\k<2>` 來尋找字串中的雙字組字元。  
+
+## <a name="named-numeric-backreferences"></a>具名的數值反向參考
+
+在含有 `\k` 的具名反向參考中，*name* 也可以是數字的字串表示。 例如，下列範例會使用規則運算式 `(?<2>\w)\k<2>` 來尋找字串中的雙字組字元。 在此案例中，範例定義了明確地命名為 "2" 的擷取群組，而反向參考也相對應地命名為 "2"。 
   
  [!code-csharp[RegularExpressions.Language.Backreferences#3](../../../samples/snippets/csharp/VS_Snippets_CLR/regularexpressions.language.backreferences/cs/backreference3.cs#3)]
  [!code-vb[RegularExpressions.Language.Backreferences#3](../../../samples/snippets/visualbasic/VS_Snippets_CLR/regularexpressions.language.backreferences/vb/backreference3.vb#3)]  
-  
+
+如果 *name* 是數值的字串表示，且沒有擷取群組具有該名稱，則 `\k<`*name*`>` 和反向參考 `\`*number* 是相同的，其中 *number* 是擷取的序數位置。 在下列範例中，有名為 `char` 的單一擷取群組。 反向參考建構將它參考為 `\k<1>`。 如範例的輸出所示，因為 `char` 是第一個擷取群組，因此對 <xref:System.Text.RegularExpressions.Regex.IsMatch%2A?displayProperty=nameWithType> 的呼叫會成功。
+
+[!code-csharp[Ordinal.Backreference](../../../samples/snippets/csharp/VS_Snippets_CLR/regularexpressions.language.backreferences/cs/backreference6.cs)]
+[!code-vb[Ordinal.BackReference](../../../samples/snippets/visualbasic/VS_Snippets_CLR/regularexpressions.language.backreferences/vb/backreference6.vb)]  
+
+不過，如果 *name* 是數值的字串表示，且在該位置的擷取群組已經明確地被指派數值名稱，則規則運算式剖析器無法根據擷取群組的序數位置識別它。 相反地，它會擲回 <xref:System.ArgumentException>。下列範例中的唯一擷取群組名為 "2"。 因為 `\k` 建構是用來定義名為 "1" 的反向參考，所以規則運算式剖析器無法識別第一個擷取群組並擲回例外狀況。
+
+[!code-csharp[Ordinal.Backreference](../../../samples/snippets/csharp/VS_Snippets_CLR/regularexpressions.language.backreferences/cs/backreference7.cs)]
+[!code-vb[Ordinal.BackReference](../../../samples/snippets/visualbasic/VS_Snippets_CLR/regularexpressions.language.backreferences/vb/backreference7.vb)]  
+
 ## <a name="what-backreferences-match"></a>反向參考比對的項目  
  反向參考會參考群組最近使用的定義 (由左至右比對時，最接近左邊的定義)。 當群組進行多個擷取時，反向參考會參考最近發生的擷取。  
   

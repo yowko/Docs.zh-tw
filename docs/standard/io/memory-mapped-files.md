@@ -22,14 +22,14 @@ manager: wpickett
 ms.workload:
 - dotnet
 - dotnetcore
-ms.openlocfilehash: 23755f7b76e8cc050df8529852af9bf151472f72
-ms.sourcegitcommit: e7f04439d78909229506b56935a1105a4149ff3d
+ms.openlocfilehash: 99aefdaf3d38dc5506bf785c8ba4a9b457cc7bf7
+ms.sourcegitcommit: ba765893e3efcece67d99fd6d5ce0074b050d1d9
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 12/23/2017
+ms.lasthandoff: 03/02/2018
 ---
 # <a name="memory-mapped-files"></a>記憶體對應檔案
-記憶體對應檔案包含檔案在虛擬記憶體中的內容。 檔案和記憶體空間之間的這個對應可讓應用程式 (包括多個處理序) 透過直接讀取和寫入記憶體來修改檔案。 從 [!INCLUDE[net_v40_long](../../../includes/net-v40-long-md.md)] 開始，您可以利用與原生 Windows 功能存取記憶體對應檔案相同的方法，使用 受控程式碼存取記憶體對應檔案，如[在 Win32 中管理記憶體對應檔案](http://go.microsoft.com/fwlink/?linkid=180801) \(英文\) 所述。  
+記憶體對應檔案包含檔案在虛擬記憶體中的內容。 檔案和記憶體空間之間的這個對應可讓應用程式 (包括多個處理序) 透過直接讀取和寫入記憶體來修改檔案。 從 [!INCLUDE[net_v40_long](../../../includes/net-v40-long-md.md)] 開始，您可以利用與原生 Windows 功能存取記憶體對應檔案相同的方法，使用 受控碼來存取記憶體對應檔案，如[管理記憶體對應檔案](https://msdn.microsoft.com/library/ms810613.aspx) \(英文\) 所述。  
   
  記憶體對應檔案的類型有兩種：  
   
@@ -154,5 +154,5 @@ Process C says: True
  [!code-csharp[System.IO.MemoryMappedFiles_IPC_B#1](../../../samples/snippets/csharp/VS_Snippets_CLR_System/system.io.memorymappedfiles_ipc_b/cs/program.cs#1)]
  [!code-vb[System.IO.MemoryMappedFiles_IPC_B#1](../../../samples/snippets/visualbasic/VS_Snippets_CLR_System/system.io.memorymappedfiles_ipc_b/vb/program.vb#1)]  
   
-## <a name="see-also"></a>另請參閱  
+## <a name="see-also"></a>請參閱  
  [檔案和資料流 I-O](../../../docs/standard/io/index.md)

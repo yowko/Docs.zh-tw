@@ -10,13 +10,13 @@ ms.prod: .net
 ms.technology: devlang-fsharp
 ms.devlang: fsharp
 ms.assetid: 16e1871c-4d4d-4691-9ab2-bd2c6f65589a
-ms.openlocfilehash: 3531a112eb53657d5e9102d5e5f3be988360b76e
-ms.sourcegitcommit: bd1ef61f4bb794b25383d3d72e71041a5ced172e
+ms.openlocfilehash: 5823e46cd13053fcd31f94f2d79d1f7470ca5118
+ms.sourcegitcommit: d3cfda0943364aaf6ccd574f55f584576c8a4fee
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/18/2017
+ms.lasthandoff: 03/08/2018
 ---
-# <a name="conditional-expressions-ifthenelse"></a>條件運算式：`if...then...else`
+# <a name="conditional-expressions-ifthenelse"></a>條件運算式： `if...then...else`
 
 `if...then...else`運算式執行不同的分支程式碼，也會評估為不同的值，根據給定的布林運算式。
 
@@ -38,11 +38,12 @@ if boolean-expression then expression1 [ else expression2 ]
 [!code-fsharp[Main](../../../samples/snippets/fsharp/lang-ref-2/snippet4501.fs)]
 
 ```
-John
-910 is less than 20
+10 is less than 20
+What is your name? John
+How old are you? 9
 You are only 9 years old and already learning F#? Wow!
 ```
 
-## <a name="see-also"></a>另請參閱
+## <a name="see-also"></a>請參閱
 [F# 語言參考](index.md)
 

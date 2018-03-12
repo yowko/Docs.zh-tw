@@ -4,16 +4,18 @@ description: "使用 Azure 雲端和 Windows 容器將現有 .NET 應用程式�
 author: CESARDELATORRE
 ms.author: wiwagn
 ms.date: 10/26/2017
+ms.prod: .net
 ms.workload:
 - dotnet
 - dotnetcore
-ms.openlocfilehash: 08bf7da36714b2c18d96659814bb11df6d9b26fc
-ms.sourcegitcommit: e7f04439d78909229506b56935a1105a4149ff3d
+ms.openlocfilehash: af9457552a71e4cb5cffe95ce1f33ccfa227268a
+ms.sourcegitcommit: d3cfda0943364aaf6ccd574f55f584576c8a4fee
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 12/23/2017
+ms.lasthandoff: 03/08/2018
 ---
 # <a name="lift-and-shift-existing-apps-devops"></a>隨即轉移現有應用程式 DevOps
+
 > 願景：將現有 .NET Framework 應用程式隨即轉移至已有 Cloud DevOps 的應用程式，以大幅改善部署靈活度，讓您可以更快速發行應用程式，並降低應用程式傳遞成本。
 
 若要充分利用雲端和新技術 (例如容器)，您應該至少將現有 .NET 應用程式局部現代化。 最後，將企業應用程式現代化可降低整體擁有成本。
