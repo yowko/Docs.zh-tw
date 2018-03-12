@@ -4,32 +4,33 @@ description: "現代化現有的.NET 應用程式與 Azure 雲端和 Windows Con
 author: CESARDELATORRE
 ms.author: wiwagn
 ms.date: 10/26/2017
+ms.prod: .net
 ms.workload:
 - dotnet
 - dotnetcore
-ms.openlocfilehash: 6e2f776b71fda9074605f072335a6e95366d2a97
-ms.sourcegitcommit: e7f04439d78909229506b56935a1105a4149ff3d
+ms.openlocfilehash: 9ab627793ac45510aba6ce76fdb87834b02e55f8
+ms.sourcegitcommit: d3cfda0943364aaf6ccd574f55f584576c8a4fee
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 12/23/2017
+ms.lasthandoff: 03/08/2018
 ---
-# <a name="conclusions"></a><span data-ttu-id="9473c-103">結論</span><span class="sxs-lookup"><span data-stu-id="9473c-103">Conclusions</span></span>
+# <a name="conclusions"></a><span data-ttu-id="c5cda-103">結論</span><span class="sxs-lookup"><span data-stu-id="c5cda-103">Conclusions</span></span>
 
--   <span data-ttu-id="9473c-104">容器基礎的解決方案最終優點成本節約。</span><span class="sxs-lookup"><span data-stu-id="9473c-104">Container-based solutions ultimately provide cost savings benefits.</span></span> <span data-ttu-id="9473c-105">容器是部署問題的解決方案，因為他們移除摩擦實際執行環境中的相依性不存在所造成。</span><span class="sxs-lookup"><span data-stu-id="9473c-105">Containers are a solution to deployment problems because they remove the friction caused by an absence of dependencies in production environments.</span></span> <span data-ttu-id="9473c-106">藉由移除這些問題，它開發/測試、 DevOps 及實際執行的作業可以大幅增加。</span><span class="sxs-lookup"><span data-stu-id="9473c-106">By removing those issues, it improves Dev/Test, DevOps and production operations significantly.</span></span>
+- <span data-ttu-id="c5cda-104">容器基礎的解決方案最終優點成本節約。</span><span class="sxs-lookup"><span data-stu-id="c5cda-104">Container-based solutions ultimately provide cost savings benefits.</span></span> <span data-ttu-id="c5cda-105">容器是部署問題的解決方案，因為他們移除摩擦實際執行環境中的相依性不存在所造成。</span><span class="sxs-lookup"><span data-stu-id="c5cda-105">Containers are a solution to deployment problems because they remove the friction caused by an absence of dependencies in production environments.</span></span> <span data-ttu-id="c5cda-106">藉由移除這些問題，它開發/測試、 DevOps 及實際執行的作業可以大幅增加。</span><span class="sxs-lookup"><span data-stu-id="c5cda-106">By removing those issues, it improves Dev/Test, DevOps, and production operations significantly.</span></span>
 
--   <span data-ttu-id="9473c-107">Docker 容器會變成任何以伺服器為基礎之應用程式或服務的標準部署單位。</span><span class="sxs-lookup"><span data-stu-id="9473c-107">A Docker container is becoming the standard unit of deployment for any server-based application or service.</span></span>
+- <span data-ttu-id="c5cda-107">Docker 容器會變成任何以伺服器為基礎之應用程式或服務的標準部署單位。</span><span class="sxs-lookup"><span data-stu-id="c5cda-107">A Docker container is becoming the standard unit of deployment for any server-based application or service.</span></span>
 
--   <span data-ttu-id="9473c-108">實際執行環境，您應該使用的協調者 （例如 Service Fabric 或 Kubernetes） 來裝載可擴充 Windows 容器型應用程式。</span><span class="sxs-lookup"><span data-stu-id="9473c-108">For production environments, you should use an orchestrator (like Service Fabric or Kubernetes) to host scalable Windows Containers­­–based applications.</span></span>
+- <span data-ttu-id="c5cda-108">實際執行環境，您應該使用的協調者 （例如 Service Fabric 或 Kubernetes） 來裝載可擴充 Windows 容器型應用程式。</span><span class="sxs-lookup"><span data-stu-id="c5cda-108">For production environments, you should use an orchestrator (like Service Fabric or Kubernetes) to host scalable Windows Containers­­–based applications.</span></span>
 
--   <span data-ttu-id="9473c-109">主控容器的 azure Vm 是既快速又簡單的方式，在雲端中建立小型的開發/測試環境。</span><span class="sxs-lookup"><span data-stu-id="9473c-109">Azure VMs hosting containers are a fast and simple way to create small Dev/Test environments in the cloud.</span></span>
+- <span data-ttu-id="c5cda-109">主控容器的 azure Vm 是既快速又簡單的方式，在雲端中建立小型的開發/測試環境。</span><span class="sxs-lookup"><span data-stu-id="c5cda-109">Azure VMs hosting containers are a fast and simple way to create small Dev/Test environments in the cloud.</span></span>
 
--   <span data-ttu-id="9473c-110">Azure SQL Database 管理執行個體建議的預設關聯式資料庫移轉至 Azure 的現有應用程式。</span><span class="sxs-lookup"><span data-stu-id="9473c-110">Azure SQL Database Managed Instance is recommended by default when migrating your relational databases from existing applications to Azure.</span></span>
+- <span data-ttu-id="c5cda-110">Azure SQL Database 管理執行個體建議的預設關聯式資料庫移轉至 Azure 的現有應用程式。</span><span class="sxs-lookup"><span data-stu-id="c5cda-110">Azure SQL Database Managed Instance is recommended by default when migrating your relational databases from existing applications to Azure.</span></span>
 
--   <span data-ttu-id="9473c-111">Visual Studio 2017 和 Image2Docker 一些基本工具讓您開始種您現有的.NET 應用程式與 Windows 容器的加速取得已啟動的學習曲線。</span><span class="sxs-lookup"><span data-stu-id="9473c-111">Visual Studio 2017 and Image2Docker are basic tools for you to start modernizing your existing .NET applications with Windows Containers by accelerating the getting started learning curve.</span></span>
+- <span data-ttu-id="c5cda-111">Visual Studio 2017 和 Image2Docker 一些基本工具讓您開始種您現有的.NET 應用程式與 Windows 容器的加速取得已啟動的學習曲線。</span><span class="sxs-lookup"><span data-stu-id="c5cda-111">Visual Studio 2017 and Image2Docker are basic tools for you to start modernizing your existing .NET applications with Windows Containers by accelerating the getting started learning curve.</span></span>
 
--   <span data-ttu-id="9473c-112">放置在生產環境中的容器化應用程式時將會永遠建立，或採用 DevOps 文化特性和 DevOps tools for Visual Studio Team Services 等 Jenkins CI/CD 管線。</span><span class="sxs-lookup"><span data-stu-id="9473c-112">When placing containerized applications in production you will always create or adopt a DevOps culture and DevOps tools for CI/CD pipelines, like Visual Studio Team Services or Jenkins.</span></span>
+- <span data-ttu-id="c5cda-112">放置在生產環境中的容器化應用程式時將會永遠建立，或採用 DevOps 文化特性和 DevOps tools for Visual Studio Team Services 等 Jenkins CI/CD 管線。</span><span class="sxs-lookup"><span data-stu-id="c5cda-112">When placing containerized applications in production you will always create or adopt a DevOps culture and DevOps tools for CI/CD pipelines, like Visual Studio Team Services or Jenkins.</span></span>
 
--   <span data-ttu-id="9473c-113">Microsoft Azure 提供的最完整且完整的環境來現代化現有的.NET Framework 應用程式與 Windows 容器，雲端基礎結構和 PaaS 服務。</span><span class="sxs-lookup"><span data-stu-id="9473c-113">Microsoft Azure provides the most comprehensive and complete environment to modernize your existing .NET Framework applications with Windows Containers, cloud infrastructure and PaaS services.</span></span>
+- <span data-ttu-id="c5cda-113">Microsoft Azure 提供的最完整且完整的環境來現代化現有的.NET Framework 應用程式與 Windows 容器，雲端基礎結構和 PaaS 服務。</span><span class="sxs-lookup"><span data-stu-id="c5cda-113">Microsoft Azure provides the most comprehensive and complete environment to modernize your existing .NET Framework applications with Windows Containers, cloud infrastructure and PaaS services.</span></span>
 
 >[!div class="step-by-step"]
-[<span data-ttu-id="9473c-114">上一步</span><span class="sxs-lookup"><span data-stu-id="9473c-114">Previous</span></span>](walkthroughs-technical-get-started-overview.md)
+[<span data-ttu-id="c5cda-114">上一步</span><span class="sxs-lookup"><span data-stu-id="c5cda-114">Previous</span></span>](walkthroughs-technical-get-started-overview.md)
