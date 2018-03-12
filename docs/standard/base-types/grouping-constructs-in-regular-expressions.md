@@ -26,11 +26,11 @@ manager: wpickett
 ms.workload:
 - dotnet
 - dotnetcore
-ms.openlocfilehash: b6e0b9d3482bbfc3dabeee1f6b7fce7a93364dfb
-ms.sourcegitcommit: e7f04439d78909229506b56935a1105a4149ff3d
+ms.openlocfilehash: 107e935f3fd4fd38b4393d09e46c03c0c51c4d79
+ms.sourcegitcommit: d3cfda0943364aaf6ccd574f55f584576c8a4fee
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 12/23/2017
+ms.lasthandoff: 03/08/2018
 ---
 # <a name="grouping-constructs-in-regular-expressions"></a>規則運算式中的群組建構
 群組建構會描寫規則運算式的子運算式，以及擷取輸入字串的子字串。 您可以使用群組建構來執行下列作業：  
@@ -393,7 +393,7 @@ ms.lasthandoff: 12/23/2017
 |模式|描述|  
 |-------------|-----------------|  
 |`\d{2}`|比對兩個十進位數字。|  
-|`{?<=\b20)`|如果字邊界上的兩個十進位數字前置十進位數字 "20"，則繼續比對。|  
+|`(?<=\b20)`|如果字邊界上的兩個十進位數字前置十進位數字 "20"，則繼續比對。|  
 |`\b`|結束字緣比對。|  
   
  當擷取群組中的最後一或多個字元，必須是符合該群組規則運算式模式的字元子集時，零寬度左合樣 (Positive Lookbehind) 判斷提示也可以用來限制回溯。 例如，如果群組擷取所有連續的文字字元，您就可以使用零寬度左合樣 (Positive Lookbehind) 判斷提示，要求最後一個字元為英文字母。  
@@ -421,7 +421,7 @@ ms.lasthandoff: 12/23/2017
 |`\w+`|比對後接空格字元的一或多個文字字元。|  
 |`\d{1,2},`|比對後接空格字元和逗號的一或兩個十進位數。|  
 |`\d{4}\b`|比對四個十進位數，並且在字邊界上結束比對。|  
-|`(?<!(Saturday&#124;Sunday) )`|如果比對項目前置文字不是後接空格的字串 "Saturday" 或 "Sunday"，則比對成功。|  
+|<code>(?<!(Saturday&#124;Sunday) )</code>|如果比對項目前置文字不是後接空格的字串 "Saturday" 或 "Sunday"，則比對成功。|  
   
 <a name="nonbacktracking_subexpression"></a>   
 ## <a name="nonbacktracking-subexpressions"></a>非回溯子運算式  

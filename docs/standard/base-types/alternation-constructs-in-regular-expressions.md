@@ -27,11 +27,11 @@ manager: wpickett
 ms.workload:
 - dotnet
 - dotnetcore
-ms.openlocfilehash: 8e565d029096b88d304b9cfc241807084873e735
-ms.sourcegitcommit: e7f04439d78909229506b56935a1105a4149ff3d
+ms.openlocfilehash: cea67e0309bccac7d21d7e8db659a55d34d4959a
+ms.sourcegitcommit: d3cfda0943364aaf6ccd574f55f584576c8a4fee
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 12/23/2017
+ms.lasthandoff: 03/08/2018
 ---
 # <a name="alternation-constructs-in-regular-expressions"></a>規則運算式中的替代建構
 <a name="top"></a> 交替建構會修改規則運算式來啟用二選一或條件式比對。 .NET 支援下列三種替代建構：  
@@ -126,18 +126,18 @@ ms.lasthandoff: 12/23/2017
  [!code-csharp[RegularExpressions.Language.Alternation#4](../../../samples/snippets/csharp/VS_Snippets_CLR/regularexpressions.language.alternation/cs/alternation4.cs#4)]
  [!code-vb[RegularExpressions.Language.Alternation#4](../../../samples/snippets/visualbasic/VS_Snippets_CLR/regularexpressions.language.alternation/vb/alternation4.vb#4)]  
   
- 規則運算式模式 `\b(?<n2>\d{2}-)*(?(n2)\d{7}|\d{3}-\d{2}-\d{4})\b` 的解譯方式如下表所示。  
+ 規則運算式模式 `\b(?<n2>\d{2}-)?(?(n2)\d{7}|\d{3}-\d{2}-\d{4})\b` 的解譯方式如下表所示。  
   
 |模式|描述|  
 |-------------|-----------------|  
 |`\b`|從字緣開始。|  
-|`(?<n2>\d{2}-)*`|比對出現零次或一次且後接連字號的兩個數字。 將此擷取群組命名為 `n2`。|  
+|`(?<n2>\d{2}-)?`|比對出現零次或一次且後接連字號的兩個數字。 將此擷取群組命名為 `n2`。|  
 |`(?(n2)`|測試 `n2` 在輸入字串中是否相符。|  
 |`)\d{7}`|如果 `n2` 相符，則會比對七個十進位數字。|  
 |<code>&#124;\d{3}-\d{2}-\d{4}</code>|如果 `n2` 不相符，則會比對三個十進位數字、一個連字號、兩個十進位數字、另一個連字號，以及四個十進位數字。|  
 |`\b`|比對字邊界。|  
   
- 此範例是使用編號的群組而不是具名群組的一種變化，如下所示。 它的規則運算式模式是 `\b(\d{2}-)*(?(1)\d{7}|\d{3}-\d{2}-\d{4})\b`。  
+ 此範例是使用編號的群組而不是具名群組的一種變化，如下所示。 它的規則運算式模式是 `\b(\d{2}-)?(?(1)\d{7}|\d{3}-\d{2}-\d{4})\b`。  
   
  [!code-csharp[RegularExpressions.Language.Alternation#5](../../../samples/snippets/csharp/VS_Snippets_CLR/regularexpressions.language.alternation/cs/alternation5.cs#5)]
  [!code-vb[RegularExpressions.Language.Alternation#5](../../../samples/snippets/visualbasic/VS_Snippets_CLR/regularexpressions.language.alternation/vb/alternation5.vb#5)]  
