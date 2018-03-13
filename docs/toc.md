@@ -267,6 +267,7 @@
 ### [如何串連字串](csharp/how-to/concatenate-multiple-strings.md)
 ### [如何將字串轉換為 DateTime](standard/base-types/parsing-datetime.md)
 ### [如何搜尋字串](csharp/how-to/search-strings.md)
+### [如何修改字串內容](csharp/how-to/modify-string-contents.md)
 <!-- End of C# Concepts section -->
 ## [.NET 編譯器平台 SDK (Roslyn API)](csharp/roslyn-sdk/)
 ## [C# 程式設計指南](csharp/programming-guide/)
