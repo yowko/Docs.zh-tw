@@ -9,12 +9,13 @@ ms.topic: article
 ms.prod: .net-core
 ms.devlang: dotnet
 ms.assetid: 519b910a-6efe-4394-9b81-0546aa3e7462
-ms.workload: dotnetcore
-ms.openlocfilehash: 44b4ff6b870a6515f623c690ad722917c9ea5bd3
-ms.sourcegitcommit: e7f04439d78909229506b56935a1105a4149ff3d
+ms.workload:
+- dotnetcore
+ms.openlocfilehash: bf523ead40d0e3cc9148b48d5c7a4a84d3d5cb81
+ms.sourcegitcommit: d95a91d685565f4d95c8773b558752864a6a3d7e
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 12/23/2017
+ms.lasthandoff: 03/12/2018
 ---
 # <a name="create-a-custom-template-for-dotnet-new"></a>建立 dotnet new 的自訂範本
 
@@ -40,7 +41,7 @@ ms.lasthandoff: 12/23/2017
 
 ## <a name="create-a-template-from-a-project"></a>從專案建立範本
 
-使用您已確認編譯和執行的現有專案，或在硬碟的資料夾中建立新的主控台應用程式專案。 本教學課程假設專案資料夾的名稱為 *GarciaSoftware.ConsoleTemplate.CSharp*，儲存在使用者設定檔的 *Documents/Templates*。 教學課程專案範本名稱的格式為 \<公司名稱>.\<範本類型>.\<程式設計語言>，但是您可以依喜好隨意命名您的專案與範本。
+使用您已確認編譯和執行的現有專案，或在硬碟的資料夾中建立新的主控台應用程式專案。 本教學課程假設專案資料夾的名稱為 *GarciaSoftware.ConsoleTemplate.CSharp*，儲存在使用者設定檔的 *Documents\Templates*。 教學課程專案範本名稱的格式為 \<公司名稱>.\<範本類型>.\<程式設計語言>，但是您可以依喜好隨意命名您的專案與範本。
 
 1. 將資料夾新增至 *.template.config* 專案的根目錄。
 1. 在 *.template.config* 資料夾中建立 *template.json* 檔案，以設定您的範本。 如需 *template.json* 檔案的詳細資訊和成員定義，請參閱 [dotnet new 的自訂範本](../tools/custom-templates.md#templatejson)主題和 [JSON 結構描述存放區的 *template.json* 結構描述](http://json.schemastore.org/template)。
@@ -65,7 +66,7 @@ ms.lasthandoff: 12/23/2017
 
 ### <a name="pack-the-template-into-a-nuget-package"></a>將範本封裝至 NuGet 套件中
 
-1. 建立 NuGet 套件的資料夾。 教學課程中使用 *GarciaSoftware.ConsoleTemplate.CSharp* 資料夾名稱，並在使用者設定檔的 *Documents/NuGetTemplates* 資料夾中建立此資料夾。 在新的範本資料夾內建立名為「內容」的資料夾，保留專案檔。
+1. 建立 NuGet 套件的資料夾。 教學課程中使用 *GarciaSoftware.ConsoleTemplate.CSharp* 資料夾名稱，並在使用者設定檔的 *Documents\NuGetTemplates* 資料夾中建立此資料夾。 在新的範本資料夾內建立名為「內容」的資料夾，保留專案檔。
 1. 將專案資料夾的內容以及其 *.template.config/template.json* 檔案複製到您建立的 *content* 資料夾。
 1. 在 *content* 資料夾的旁邊，新增 [*nuspec* 檔案](/nuget/create-packages/creating-a-package)。 nuspec 檔案是 XML 資訊清單檔案，描述套件的內容及驅動建立 NuGet 套件的程序。
    
@@ -102,10 +103,10 @@ ms.lasthandoff: 12/23/2017
    </package>
    ```
 
-1. 使用 `nuget pack <PATH_TO_NUSPEC_FILE>` 命令[建立套件](/nuget/create-packages/creating-a-package#creating-the-package)。 下列命令假設，保存 NuGet 資產的資料夾位於 *C:/Users/\<使用者>/Documents/Templates/GarciaSoftware.ConsoleTemplate.CSharp/*。 但無論資料夾放在系統上的任何位置，`nuget pack` 命令都接受 *nuspec* 檔案的路徑：
+1. 使用 `nuget pack <PATH_TO_NUSPEC_FILE>` 命令[建立套件](/nuget/create-packages/creating-a-package#creating-the-package)。 下列命令假設，保存 NuGet 資產的資料夾位於 *C:\Users\\\<USER>\Documents\Templates\GarciaSoftware.ConsoleTemplate.CSharp\*。 但無論資料夾放在系統上的任何位置，`nuget pack` 命令都接受 *nuspec* 檔案的路徑：
 
    ```console
-   nuget pack C:/Users/<USER>/Documents/NuGetTemplates/GarciaSoftware.ConsoleTemplate.CSharp/GarciaSoftware.ConsoleTemplate.CSharp.nuspec
+   nuget pack C:\Users\<USER>\Documents\NuGetTemplates\GarciaSoftware.ConsoleTemplate.CSharp\GarciaSoftware.ConsoleTemplate.CSharp.nuspec
    ```
 
 ### <a name="publishing-the-package-to-nugetorg"></a>將套件發佈至 nuget.org
@@ -119,7 +120,7 @@ ms.lasthandoff: 12/23/2017
 若要從您製作的 *nupkg* 檔案安裝範本，請使用 `dotnet new` 命令搭配 `-i|--install` 選項，然後提供 *nupkg* 檔案的路徑：
 
 ```console
-dotnet new -i C:/Users/<USER>/GarciaSoftware.ConsoleTemplate.CSharp.1.0.0.nupkg
+dotnet new -i C:\Users\<USER>\GarciaSoftware.ConsoleTemplate.CSharp.1.0.0.nupkg
 ```
 
 #### <a name="install-the-template-from-a-nuget-package-stored-at-nugetorg"></a>從儲存在 nuget.org 的 NuGet 套件安裝範本
@@ -187,14 +188,14 @@ dotnet new -u GarciaSoftware.ConsoleTemplate.CSharp.1.0.0
 教學課程假設專案範本是儲存在使用者設定檔的 *Documents/Templates* 資料夾中。 從該位置安裝範本，以下列命令取代 \<使用者> 和使用者的設定檔名稱：
 
 ```console
-dotnet new -i C:/Users/<USER>/Documents/Templates/GarciaSoftware.ConsoleTemplate.CSharp
+dotnet new -i C:\Users\<USER>\Documents\Templates\GarciaSoftware.ConsoleTemplate.CSharp
 ```
 
 ### <a name="create-a-project-from-the-template"></a>從範本建立專案
 
 從檔案系統安裝範本之後，從放置範本引擎輸出的目錄執行 `dotnet new <TEMPLATE>` 命令來使用範本 (除非您要使用 `-o|--output` 選項來指定特定的目錄)。 如需詳細資訊，請參閱[`dotnet new`選項](~/docs/core/tools/dotnet-new.md#options)。 直接將範本的簡短名稱提供給 `dotnet new` 命令。
 
-從在 C:/Users/\<使用者>/Documents/Projects/MyConsoleApp 建立的新專案資料夾，建立來自 `garciaconsole` 範本的專案：
+從在 *C:\Users\\\<USER>\Documents\Projects\MyConsoleApp* 建立的新專案資料夾，建立來自 `garciaconsole` 範本的專案：
 
 ```console
 dotnet new garciaconsole
@@ -202,14 +203,14 @@ dotnet new garciaconsole
 
 ### <a name="uninstall-the-template"></a>解除安裝範本
 
-如果在 C:/Users/\<使用者>/Documents/Templates/GarciaSoftware.ConsoleTemplate.CSharp 的本機檔案系統上建立範本，請使用 `-u|--uninstall` 參數和範本資料夾路徑解除安裝它：
+如果在 *C:\Users\\\<USER>\Document\Templates\GarciaSoftware.ConsoleTemplate.CSharp* 的本機檔案系統上建立範本，請使用 `-u|--uninstall` 參數和範本資料夾路徑將其解除安裝：
 
 ```console
-dotnet new -u C:/Users/<USER>/Documents/Templates/GarciaSoftware.ConsoleTemplate.CSharp
+dotnet new -u C:\Users\<USER>\Documents\Templates\GarciaSoftware.ConsoleTemplate.CSharp
 ```
 
 > [!NOTE]
-> 若要將範本從您的本機檔案系統解除安裝，您需要使路徑成為完整路徑。 例如，*C:/Users/\<USER>/Documents/Templates/GarciaSoftware.ConsoleTemplate.CSharp* 將有效，但來自包含資料夾的 *./GarciaSoftware.ConsoleTemplate.CSharp* 將無效。
+> 若要將範本從您的本機檔案系統解除安裝，您需要使路徑成為完整路徑。 例如，*C:\Users\\\<USER>\Documents\Templates\GarciaSoftware.ConsoleTemplate.CSharp* 將有效，但來自包含資料夾的 *./GarciaSoftware.ConsoleTemplate.CSharp* 將無效。
 > 此外，請勿在範本路徑中包含最終結尾目錄斜線。
 
 ## <a name="see-also"></a>另請參閱

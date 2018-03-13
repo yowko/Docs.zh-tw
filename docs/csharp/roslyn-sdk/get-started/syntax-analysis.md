@@ -8,11 +8,11 @@ ms.topic: conceptual
 ms.prod: .net
 ms.technology: devlang-csharp
 ms.custom: mvc
-ms.openlocfilehash: c89695379d545ac5b22fc0716f3e0060b6c08f31
-ms.sourcegitcommit: 3a96c706e4dbb4667bf3bf37edac9e1666646f93
+ms.openlocfilehash: 52f66782086af651517d54105fea6f5533ea05a2
+ms.sourcegitcommit: d3cfda0943364aaf6ccd574f55f584576c8a4fee
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 02/27/2018
+ms.lasthandoff: 03/08/2018
 ---
 # <a name="get-started-with-syntax-analysis"></a>開始使用語法分析
 
@@ -73,7 +73,7 @@ Syntax API 會建立根代表編譯單位的樹狀結構。 樹狀結構中的�
 
 ### <a name="manual-traversal"></a>手動周遊
 
-您可以在 [GitHub 範例存放庫](https://github.com/dotnet/samples/csharp/roslyn-sdk/SyntaxQuickStart)中查看此範例中完成的程式碼。
+您可以在 [GitHub 存放庫](https://github.com/dotnet/docs/tree/master/samples/csharp/roslyn-sdk/SyntaxQuickStart)中查看此範例中完成的程式碼。
 
 > [!NOTE]
 > 語法樹狀結構類型使用繼承，來描述適用於程式中不同位置的不同語法項目。 使用這些 API 通常表示將屬性或集合成員轉換成特定衍生類型。 在下列範例中，指派和轉換是使用明確類型變數的個別陳述式。 您可以閱讀程式碼，以查看 API 的傳回型別以及所傳回物件的執行階段類型。 在實務上，較常見使用隱含型別變數，並依賴 API 名稱來描述要檢查的物件類型。
@@ -103,7 +103,7 @@ Syntax API 會建立根代表編譯單位的樹狀結構。 樹狀結構中的�
 
 [!code-csharp[Find the first member](../../../../samples/csharp/roslyn-sdk/SyntaxQuickStart/HelloSyntaxTree/Program.cs#4 "Find the first member")]
 
-該成員是 <xref:Microsoft.CodeAnalysis.CSharp.Syntax.NamespaceDeclarationSyntax?displayProperty=nameWithType>。 它代表 `namespace Hello World` 宣告範圍內的所有項目。 新增下列程式碼，以檢查 `HelloWorld` 命名空間內所宣告的節點：
+該成員是 <xref:Microsoft.CodeAnalysis.CSharp.Syntax.NamespaceDeclarationSyntax?displayProperty=nameWithType>。 它代表 `namespace HelloWorld` 宣告範圍內的所有項目。 新增下列程式碼，以檢查 `HelloWorld` 命名空間內所宣告的節點：
 
 [!code-csharp[Find the class declaration](../../../../samples/csharp/roslyn-sdk/SyntaxQuickStart/HelloSyntaxTree/Program.cs#5 "Find the class declaration")]
 
@@ -127,14 +127,14 @@ The tree has 4 using statements. They are:
         System.Collections
         System.Linq
         System.Text
-The first member is a NamespaceDeclaration
+The first member is a NamespaceDeclaration.
 There are 1 members declared in this namespace.
-The first member is a ClassDeclaration
-There are 1 members declared in the Program class
-The first member is a MethodDeclaration
-The return type of the Main method is void
-The method has 1 parameters
-The type of the args parameter is string[]
+The first member is a ClassDeclaration.
+There are 1 members declared in the Program class.
+The first member is a MethodDeclaration.
+The return type of the Main method is void.
+The method has 1 parameters.
+The type of the args parameter is string[].
 The body text of the Main method follows:
         {
             Console.WriteLine("Hello, World!");
@@ -143,7 +143,7 @@ The body text of the Main method follows:
 
 ### <a name="query-methods"></a>查詢方法
 
-除了周遊樹狀結構之外，您也可以探索使用 <xref:Microsoft.CodeAnalysis.SyntaxNode?displayProperty=nameWithType> 上所定義查詢方法的語法樹狀結構。 熟悉 XPath 的所有人都應該可以立即熟悉這些方法。 您可以搭配使用這些方法與 LINQ，以快速找出樹狀結構中的項目。 <xref:Microsoft.CodeAnalysis.SyntaxNode> 具有查詢方法，例如 <xref:Microsoft.CodeAnalysis.SyntaxNode.DescendantNodes%2A>、<xref:Microsoft.CodeAnalysis.SyntaxNode.AncestorsAndSelf%2A> 和 <xref:Microsoft.CodeAnalysis.SyntaxNode.ChildNodes>。
+除了周遊樹狀結構之外，您也可以探索使用 <xref:Microsoft.CodeAnalysis.SyntaxNode?displayProperty=nameWithType> 上所定義查詢方法的語法樹狀結構。 熟悉 XPath 的所有人都應該可以立即熟悉這些方法。 您可以搭配使用這些方法與 LINQ，以快速找出樹狀結構中的項目。 <xref:Microsoft.CodeAnalysis.SyntaxNode> 具有查詢方法，例如 <xref:Microsoft.CodeAnalysis.SyntaxNode.DescendantNodes%2A>、<xref:Microsoft.CodeAnalysis.SyntaxNode.AncestorsAndSelf%2A> 和 <xref:Microsoft.CodeAnalysis.SyntaxNode.ChildNodes%2A>。
 
 您可以使用這些查詢方法來尋找 `Main` 方法的引數，作為巡覽樹狀結構的替代方法。 將下列程式碼新增至 `Main` 方法的底部：
 
@@ -163,7 +163,7 @@ The body text of the Main method follows:
 
 建立新的 C# **獨立程式碼分析工具**專案；將它命名為 "**SyntaxWalker**"。
 
-您可以在 [GitHub 存放庫](https://github.com/dotnet/docs/samples/csharp/roslyn-sdk/SyntaxQuickStart)中查看此範例中完成的程式碼。 GitHub 上的範例包含本教學課程中所述的兩個專案。
+您可以在 [GitHub 存放庫](https://github.com/dotnet/docs/tree/master/samples/csharp/roslyn-sdk/SyntaxQuickStart)中查看此範例中完成的程式碼。 GitHub 上的範例包含本教學課程中所述的兩個專案。
 
 如同先前的範例，您可以定義字串常數，以保留您要分析的程式文字：
 
@@ -171,7 +171,7 @@ The body text of the Main method follows:
 
 此來源文字包含散佈到四個不同位置的 `using` 指示詞：檔案層級、在最上層命名空間中以及在兩個巢狀命名空間中。 此範例強調使用 <xref:Microsoft.CodeAnalysis.CSharp.CSharpSyntaxWalker> 類別查詢程式碼的核心案例。 很難瀏覽根語法樹狀結構中的每個節點來尋找 using 宣告。 相反地，您建立衍生類別，並且覆寫只有在樹狀結構中的目前節點是 using 指示詞時才呼叫的方法。 您的訪客不會對任何其他節點類型進行任何處理。 這個方法會檢查每個 `using` 陳述式，並建置不在 `System` 命名空間中的命名空間集合。 您建置 <xref:Microsoft.CodeAnalysis.CSharp.CSharpSyntaxWalker> 以檢查所有 `using` 陳述式，但僅限 `using` 陳述式。
 
-既然您已定義程式文字，就需要建立 `SyntaxTree` 並取得該樹狀結構的根目錄：
+定義程式文字完成後，您必須建立 `SyntaxTree` 並取得該樹狀結構的根目錄：
 
 [!code-csharp[Create the Syntax tree and access the root](../../../../samples/csharp/roslyn-sdk/SyntaxQuickStart/SyntaxWalker/Program.cs#2 "Create the Syntax tree and access the root node.")]
 
@@ -198,23 +198,23 @@ The body text of the Main method follows:
 編譯並執行程式。 您應該會看到下列輸出：
 
 ```console
-        VisitUsingDirective called with System
-        VisitUsingDirective called with System.Collections.Generic
-        VisitUsingDirective called with System.Linq
-        VisitUsingDirective called with System.Text
-        VisitUsingDirective called with Microsoft.CodeAnalysis
-                Success. Adding Microsoft.CodeAnalysis
-        VisitUsingDirective called with Microsoft.CodeAnalysis.CSharp
-                Success. Adding Microsoft.CodeAnalysis.CSharp
-        VisitUsingDirective called with Microsoft
-                Success. Adding Microsoft
-        VisitUsingDirective called with System.ComponentModel
-        VisitUsingDirective called with Microsoft.Win32
-                Success. Adding Microsoft.Win32
-        VisitUsingDirective called with System.Runtime.InteropServices
-        VisitUsingDirective called with System.CodeDom
-        VisitUsingDirective called with Microsoft.CSharp
-                Success. Adding Microsoft.CSharp
+        VisitUsingDirective called with System.
+        VisitUsingDirective called with System.Collections.Generic.
+        VisitUsingDirective called with System.Linq.
+        VisitUsingDirective called with System.Text.
+        VisitUsingDirective called with Microsoft.CodeAnalysis.
+                Success. Adding Microsoft.CodeAnalysis.
+        VisitUsingDirective called with Microsoft.CodeAnalysis.CSharp.
+                Success. Adding Microsoft.CodeAnalysis.CSharp.
+        VisitUsingDirective called with Microsoft.
+                Success. Adding Microsoft.
+        VisitUsingDirective called with System.ComponentModel.
+        VisitUsingDirective called with Microsoft.Win32.
+                Success. Adding Microsoft.Win32.
+        VisitUsingDirective called with System.Runtime.InteropServices.
+        VisitUsingDirective called with System.CodeDom.
+        VisitUsingDirective called with Microsoft.CSharp.
+                Success. Adding Microsoft.CSharp.
 Microsoft.CodeAnalysis
 Microsoft.CodeAnalysis.CSharp
 Microsoft
