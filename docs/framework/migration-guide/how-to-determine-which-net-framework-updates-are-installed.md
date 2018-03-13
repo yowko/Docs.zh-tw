@@ -3,7 +3,8 @@ title: "如何：判斷安裝的 .NET Framework 安全性更新與 Hotfix"
 description: "了解如何判斷電腦上所安裝的 .NET Framework 安全性更新與 Hotfix。"
 ms.date: 11/27/2017
 ms.prod: .net-framework
-ms.technology: dotnet-clr
+ms.technology:
+- dotnet-clr
 ms.topic: article
 dev_langs:
 - csharp
@@ -15,7 +16,8 @@ ms.assetid: 53c7b5f7-d47a-402a-b194-7244a696a88b
 author: mairaw
 ms.author: mairaw
 manager: wpickett
-ms.workload: dotnet
+ms.workload:
+- dotnet
 ms.openlocfilehash: 1ad61ce44c24f48b51c32eb554e8d37932d119af
 ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: HT
@@ -33,7 +35,7 @@ ms.lasthandoff: 12/22/2017
 
 已為電腦上安裝之各版 .NET Framework 所安裝之安全性更新與 Hotfix，都列於 Windows 登錄中。 您可使用登錄編輯程式 (*regedit.exe*) 程式，檢視此資訊。
 
-1. 開啟 **regedit.exe** 程式。 在 Windows 8 和更新版本中，在 [開始] ![Windows 標誌] 上按一下滑鼠右鍵，按一下(../get-started/media/windowskeyboardlogo.png "Windowskeyboardlogo")，然後選取 [執行]。 在 [開啟]方塊中，輸入 **regedit**，然後選取 [確定]。
+1. 開啟 **regedit.exe** 程式。 在 Windows 8 和更新版本中，在 [開始] ![Windows 標誌](../get-started/media/windowskeyboardlogo.png "Windowskeyboardlogo") 上按一下滑鼠右鍵，按一下，然後選取 [執行]。 在 [開啟]方塊中，輸入 **regedit**，然後選取 [確定]。
 
 2. 在 [登錄編輯程式] 中，開啟下列子機碼：
 
