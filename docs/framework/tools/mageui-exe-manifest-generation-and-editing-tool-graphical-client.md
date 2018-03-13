@@ -5,18 +5,20 @@ ms.date: 03/30/2017
 ms.prod: .net-framework
 ms.reviewer: 
 ms.suite: 
-ms.technology: dotnet-clr
+ms.technology:
+- dotnet-clr
 ms.tgt_pltfrm: 
 ms.topic: article
 helpviewer_keywords:
 - Manifest Generation and Editing tool
 - MageUI.exe
 ms.assetid: f9e130a6-8117-49c4-839c-c988f641dc14
-caps.latest.revision: "38"
+caps.latest.revision: 
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.workload: dotnet
+ms.workload:
+- dotnet
 ms.openlocfilehash: ec4ac8d89d2d3a7d0dce11e5057db80190e7b963
 ms.sourcegitcommit: c0dd436f6f8f44dc80dc43b07f6841a00b74b23f
 ms.translationtype: HT
@@ -26,7 +28,7 @@ ms.lasthandoff: 01/19/2018
 # <a name="mageuiexe-manifest-generation-and-editing-tool-graphical-client"></a>MageUI.exe (圖形用戶端、資訊清單產生和編輯工具)
 MageUI.exe 與命令列工具 Mage.exe 支援相同的功能，不過前者會採用 Windows 使用者介面 (UI)。 您可以利用此工具建立、編輯和簽章部署與應用程式資訊清單。 使用 MageUI.exe 建立的新資訊清單是以 [!INCLUDE[net_client_v40_long](../../../includes/net-client-v40-long-md.md)] 為目標。 若要以舊版 .NET Framework 為目標，則應該使用舊版 MageUI.exe。 在資訊清單中加入或移除組件或重新簽署現有資訊清單時，MageUI.exe 並不會更新資訊清單，使其以 [!INCLUDE[net_client_v40_long](../../../includes/net-client-v40-long-md.md)] 為目標。 如需詳細資訊，請參閱 [Mage.exe (資訊清單產生和編輯工具)](../../../docs/framework/tools/mage-exe-manifest-generation-and-editing-tool.md)。  
   
- 此工具會自動與 Visual Studio 一起安裝。 若要執行此工具，請使用 [開發人員命令提示字元] (或 Windows 7 中的 [Visual Studio 命令提示字元])。 如需詳細資訊，請參閱[命令提示字元](../../../docs/framework/tools/developer-command-prompt-for-vs.md)。  
+ 此工具會自動與 Visual Studio 一起安裝。 若要執行此工具，請使用 [開發人員命令提示字元] \(或 Windows 7 中的 [Visual Studio 命令提示字元])。 如需詳細資訊，請參閱[命令提示字元](../../../docs/framework/tools/developer-command-prompt-for-vs.md)。  
   
  [!INCLUDE[vs_dev10_long](../../../includes/vs-dev10-long-md.md)] 安裝程式有兩個版本的 Mage.exe 和 MageUI.exe 做為隨附元件。 若要查看版本資訊，請執行 MageUI.exe，並依序選取 [ **說明**] 和 [ **關於**]。 本文件說明 4.0.x.x 版本的 Mage.exe 和 MageUI.exe。  
   
