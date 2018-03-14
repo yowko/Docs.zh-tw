@@ -2,13 +2,14 @@
 title: "使用 csc.exe 建置命令列"
 ms.date: 04/19/2017
 ms.prod: .net
-ms.technology: devlang-csharp
+ms.technology:
+- devlang-csharp
 ms.topic: article
 helpviewer_keywords:
 - builds [C#]
 - command line [C#]
 ms.assetid: 66e70056-dd20-453c-a9b3-507e0478b015
-caps.latest.revision: "28"
+caps.latest.revision: 
 author: BillWagner
 ms.author: wiwagn
 ms.openlocfilehash: 5fe7b735977b0cde0bed266815987b773be6bdbe
@@ -24,7 +25,7 @@ ms.lasthandoff: 01/19/2018
 
 如果您使用標準 [命令提示字元] 視窗，則必須先調整路徑，才能在電腦上的任何子目錄中叫用 *csc.exe*。 您也必須執行 *vsvars32.bat* 來設定適當的環境變數，以便支援命令列組建。 如需 *vsvars32.bat* 的詳細資訊，包括如何尋找和執行的指示，請參閱[如何：為 Visual Studio 命令列設定環境變數](../../../csharp/language-reference/compiler-options/how-to-set-environment-variables-for-the-visual-studio-command-line.md)。
 
-如果您是在只有 [!INCLUDE[winsdklong](~/includes/winsdklong-md.md)] 的電腦上工作，則可以在 [SDK 命令提示字元] (可從 [Microsoft .NET Framework SDK] 功能表選項開啟) 中使用 C# 編譯器。
+如果您是在只有 [!INCLUDE[winsdklong](~/includes/winsdklong-md.md)] 的電腦上工作，則可以在 [SDK 命令提示字元]\ (可從 [Microsoft .NET Framework SDK] 功能表選項開啟) 中使用 C# 編譯器。
 
 您也可以使用 MSBuild 以程式設計的方式建置 C# 程式。 如需詳細資訊，請參閱 [MSBuild](/visualstudio/msbuild/msbuild)。
 
