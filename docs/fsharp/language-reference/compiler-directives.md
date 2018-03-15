@@ -10,11 +10,11 @@ ms.prod: .net
 ms.technology: devlang-fsharp
 ms.devlang: fsharp
 ms.assetid: 93aef07a-6747-4ce4-a10f-a05168978af6
-ms.openlocfilehash: b4305d24163f9b23631d5efb6e838f55127cd9f5
-ms.sourcegitcommit: bd1ef61f4bb794b25383d3d72e71041a5ced172e
+ms.openlocfilehash: c7ec056f407f3af34528205a5abb1cdef7d43fef
+ms.sourcegitcommit: 83dd5ec003e788ccb3e33f3412a7af39ae347646
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/18/2017
+ms.lasthandoff: 03/15/2018
 ---
 # <a name="compiler-directives"></a>編譯器指示詞
 
@@ -27,13 +27,13 @@ ms.lasthandoff: 10/18/2017
 下表列出 F# 中可用的前置處理器指示詞。
 
 
-|指示詞|說明|
+|指示詞|描述|
 |---------|-----------|
-|`#if`*符號*|支援條件式編譯。 後面的區段中的程式碼`#if`會包括*符號*定義。|
+|`#if` *符號*|支援條件式編譯。 後面的區段中的程式碼`#if`會包括*符號*定義。|
 |`#else`|支援條件式編譯。 若未定義與先前的 `#if` 搭配使用的符號，則標記要包含的程式碼區段。|
 |`#endif`|支援條件式編譯。 標示程式碼的條件式區段結尾。|
-|`#`[線條]*int*，<br/>`#`[線條]*int* *字串*，<br/>`#`[線條]*int* *逐字字串*|表示原始的原始程式碼行和檔案名稱 (適用於偵錯)。 這項功能提供用於產生 F# 原始程式碼的工具。|
-|`#nowarn`*warningcode*|停用編譯器警告。 若要停用警告，請從編譯器輸出中找出其號碼並包含在引號中。 略過 "FS" 前置詞。 若要停用同一行的多個警告號碼，請以引號括住每個號碼，並以一個空格分隔每個字串。 例如: 
+|`#`[線條]*int*，<br/>`#`[線條]*int* *字串*，<br/>`#`[line] *int* *verbatim-string*|表示原始的原始程式碼行和檔案名稱 (適用於偵錯)。 這項功能提供用於產生 F# 原始程式碼的工具。|
+|`#nowarn` *warningcode*|停用編譯器警告。 若要停用警告，請從編譯器輸出中找出其號碼並包含在引號中。 略過 "FS" 前置詞。 若要停用同一行的多個警告號碼，請以引號括住每個號碼，並以一個空格分隔每個字串。 例如: 
 
 `#nowarn "9" "40"`
 
@@ -73,13 +73,13 @@ F# 中沒有 `#define` 前置處理器指示詞。 您必須使用編譯器選�
 下表列出可在 F# 中使用的編譯器指示詞。
 
 
-|指示詞|說明|
+|指示詞|描述|
 |---------|-----------|
-|`#light`[「 開啟 」|「 關閉 」]|啟用或停用輕量型語法，與其他 ML 版本相容。 根據預設，會啟用輕量型語法。 一律會啟用詳細語法。 因此，您可以使用輕量型語法和詳細語法。 指示詞 `#light` 本身就相當於 `#light "on"`。 如果您指定 `#light "off"`，您必須針對所有語言建構使用詳細語法。 會假設您使用輕量型語法，在文件中顯示 F# 語法。 如需詳細資訊，請參閱[詳細語法](verbose-syntax.md)。|
+|`#light` ["on"&#124;"off"]|啟用或停用輕量型語法，與其他 ML 版本相容。 根據預設，會啟用輕量型語法。 一律會啟用詳細語法。 因此，您可以使用輕量型語法和詳細語法。 指示詞 `#light` 本身就相當於 `#light "on"`。 如果您指定 `#light "off"`，您必須針對所有語言建構使用詳細語法。 會假設您使用輕量型語法，在文件中顯示 F# 語法。 如需詳細資訊，請參閱[詳細語法](verbose-syntax.md)。|
 解譯器 (fsi.exe) 指示詞，請參閱[使用 F # 互動式程式設計](../tutorials/fsharp-interactive/index.md)。
 
 
-## <a name="see-also"></a>另請參閱
+## <a name="see-also"></a>請參閱
 [F# 語言參考](index.md)
 
 [編譯器選項](compiler-options.md)

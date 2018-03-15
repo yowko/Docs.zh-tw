@@ -1,90 +1,61 @@
 ---
-title: "開始使用 F # Ionide Visual Studio 程式碼中"
+title: "開始使用 F # 在 Visual Studio 程式碼"
 description: "了解如何使用 F # 與 Visual Studio 程式碼和 Ionide 外掛程式套件。"
 keywords: "visual f #、 f #，功能性程式設計，.NET、 Visual Studio 程式碼，vscode Ionide"
 author: cartermp
 ms.author: phcart
-ms.date: 09/28/2016
+ms.date: 02/28/2018
 ms.topic: article
 ms.prod: .net
 ms.technology: devlang-fsharp
 ms.devlang: fsharp
 ms.assetid: 49775139-082e-442f-b5a2-dd402399b5d2
-ms.openlocfilehash: 83099005074ea273eae5319edacd2e2ee0f7145f
-ms.sourcegitcommit: 655fd4f78741967f80c409cef98347fdcf77857d
+ms.openlocfilehash: c452e791b27bc3f32e137a515011d953005344c6
+ms.sourcegitcommit: 83dd5ec003e788ccb3e33f3412a7af39ae347646
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 02/28/2018
+ms.lasthandoff: 03/15/2018
 ---
-# <a name="getting-started-with-f-in-visual-studio-code-with-ionide"></a>開始使用 F # Ionide Visual Studio 程式碼中
+# <a name="get-started-with-f-in-visual-studio-code"></a>開始使用 F # 在 Visual Studio 程式碼
 
-您可以撰寫 F # [Visual Studio Code](https://code.visualstudio.com)與[Ionide 外掛程式](https://marketplace.visualstudio.com/items?itemName=Ionide.Ionide-fsharp)，以取得使用 IntelliSense 和基本程式碼重構絕佳跨平台的輕量型 IDE 體驗。  請瀏覽[Ionide.io](https://ionide.io)若要深入了解外掛程式套件。
+您可以撰寫 F # [Visual Studio Code](https://code.visualstudio.com)與[Ionide 外掛程式](https://marketplace.visualstudio.com/items?itemName=Ionide.Ionide-fsharp)，若要取得跨平台的輕量型 (Integrade 開發 Enivronment) IDE 體驗 IntelliSense 和基本的程式碼重構。  請瀏覽[Ionide.io](http://ionide.io)若要深入了解外掛程式套件。
 
 ## <a name="prerequisites"></a>必要條件
 
-F # 4.0 或更新版本必須安裝在您的電腦使用 Ionide。
+您必須擁有[安裝 git](https://git-scm.com/download)並可使用您的路徑，請使用專案中的範本 Ionide。  您可以確認它已正確安裝輸入`git --version`在命令提示字元並按**Enter**。
 
-您也必須擁有[安裝 git](https://git-scm.com/download)並可使用您的路徑，請使用專案中的範本 Ionide。  您可以確認它已正確安裝輸入`git`命令 prompt.and 按在**Enter**。
+### <a name="macostabmacos"></a>[macOS](#tab/macos)
 
-### <a name="windows"></a>Windows
-
-如果您是在 Windows 上，您必須安裝 F # 的兩個選項。
-
-如果您已經安裝 Visual Studio，且沒有使用 F #，您可以[安裝 Visual F # Tools](get-started-visual-studio.md#installing-f)。  這將會安裝所有必要的元件，來撰寫、 編譯及執行 F # 程式碼。
-
-如果您不想安裝 Visual Studio，請使用下列指示：
-
-1. 安裝[.NET Framework 4.5 或更高版本](https://www.microsoft.com/en-US/download/details.aspx?id=30653)如果您執行 Windows 7。  如果您使用 Windows 8 或更新版本中，您不需要執行這項操作。
-
-2. 安裝 Windows SDK 適用於您的作業系統。
-
-    * [Windows 10 SDK](https://dev.windows.com/en-US/downloads/windows-10-sdk)
-    * [Windows 8.1 SDK](https://developer.microsoft.com/windows/downloads/sdk-archive)
-    * [Windows 8 SDK](https://developer.microsoft.com/windows/downloads/sdk-archive)
-    * [Windows 7 SDK](https://www.microsoft.com/download/details.aspx?id=8279)
-
-3. 安裝[Microsoft Build Tools 2015](https://www.microsoft.com/en-us/download/details.aspx?id=48159)。  您可能也需要安裝[Microsoft Build Tools 2013](https://www.microsoft.com/en-us/download/details.aspx?id=40760)。
-
-4. 安裝[Visual F # 工具](https://www.microsoft.com/en-us/download/details.aspx?id=48179)。
-
-在 64 位元 Windows 中，編譯器和工具可以在這裡找到：
-
-```
-C:\Program Files (x86)\Microsoft SDKs\F#\4.0\Framework\v4.0\fsc.exe
-C:\Program Files (x86)\Microsoft SDKs\F#\4.0\Framework\v4.0\fsi.exe
-C:\Program Files (x86)\Microsoft SDKs\F#\4.0\Framework\v4.0\fsiAnyCpu.exe
-```
-
-在 32 位元 Windows 中，編譯器工具可以在這裡找到：
-
-```
-C:\Program Files\Microsoft SDKs\F#\4.0\Framework\v4.0\fsc.exe
-C:\Program Files\Microsoft SDKs\F#\4.0\Framework\v4.0\fsi.exe
-C:\Program Files\Microsoft SDKs\F#\4.0\Framework\v4.0\fsiAnyCpu.exe
-```
-
-Ionide 會自動偵測編譯器和工具，但如果不是基於某些原因 （例如，Visual F # 工具已安裝到不同的目錄），您可以手動新增包含的資料夾 (`...\Microsoft SDKs\F#\4.0`) 至您的路徑。
-
-### <a name="macos"></a>macOS
-
-MacOS Ionide 使用[Mono](https://www.mono-project.com)。  安裝 Mono macOS 上最簡單的方式是透過 Homebrew。  只要您的終端機中輸入下列命令：
+使用 Ionide [Mono](http://www.mono-project.com)。  安裝 Mono macOS 上最簡單的方式是透過 Homebrew。  只要您的終端機中輸入下列命令：
 
 ```
 brew install mono
 ```
 
-### <a name="linux"></a>Linux
+您也必須安裝[.NET Core SDK](https://www.microsoft.com/net/download)。
 
-在 Linux 上 Ionide 也會使用[Mono](https://www.mono-project.com)。  如果您是在 Debian 或 Ubuntu 上，您可以使用下列項目：
+### <a name="linuxtablinux"></a>[Linux](#tab/linux)
+
+在 Linux 上 Ionide 也會使用[Mono](https://www.mono-project.com)。 如果您是在 Debian 或 Ubuntu 上，您可以使用下列項目：
 
 ```
 sudo apt-get update
 sudo apt-get install mono-complete fsharp
 ```
 
+您也必須安裝[.NET Core SDK](https://www.microsoft.com/net/download)。
+
+### <a name="windowstabwindows"></a>[Windows](#tab/windows)
+
+如果您在 Windows 上，您必須[使用 F # 支援安裝 Visual Studio](get-started-visual-studio.md#installing-f)。 這會安裝所有必要的元件，來撰寫、 編譯及執行 F # 程式碼。
+
+您也必須安裝[.NET Core SDK](https://www.microsoft.com/net/download/)。
+
+---
+
 ## <a name="installing-visual-studio-code-and-the-ionide-plugin"></a>安裝 Visual Studio 程式碼和 Ionide 外掛程式
 
-您可以安裝 Visual Studio 程式碼從[code.visualstudio.com](https://code.visualstudio.com)網站。  在這之後，有兩種方式可尋找 Ionide 外掛程式：
+您可以安裝 Visual Studio 程式碼從[code.visualstudio.com](https://code.visualstudio.com)網站。 在這之後，有兩種方式可尋找 Ionide 外掛程式：
 
 1. 使用命令選擇區 (Ctrl + Shift + P ⌘ + Shift + P macOS，Ctrl + Shift + P on Linux 上的 Windows 上)，並輸入下列命令：
 
@@ -96,7 +67,7 @@ sudo apt-get install mono-complete fsharp
 
     ![](media/getting-started-vscode/vscode-ext.png)
 
-只有 Visual Studio 程式碼中的 F # 支援所需的外掛程式[Ionide fsharp](https://marketplace.visualstudio.com/items?itemName=Ionide.Ionide-fsharp)。  不過，您也可以安裝[Ionide FAKE](https://marketplace.visualstudio.com/items?itemName=Ionide.Ionide-FAKE)並取得[偽造](https://fake.build/)支援和[Ionide Paket](https://marketplace.visualstudio.com/items?itemName=Ionide.Ionide-Paket)取得[Paket](https://fsprojects.github.io/Paket/)支援。  假造而且 Paket 其他 F # 社群工具，以建置專案，並且分別管理的相依性。
+只有 Visual Studio 程式碼中的 F # 支援所需的外掛程式[Ionide fsharp](https://marketplace.visualstudio.com/items?itemName=Ionide.Ionide-fsharp)。 不過，您也可以安裝[Ionide FAKE](https://marketplace.visualstudio.com/items?itemName=Ionide.Ionide-FAKE)並取得[偽造](https://fsharp.github.io/FAKE/)支援和[Ionide Paket](https://marketplace.visualstudio.com/items?itemName=Ionide.Ionide-Paket)取得[Paket](https://fsprojects.github.io/Paket/)支援。 假造而且 Paket 其他 F # 社群工具，以建置專案，並且分別管理的相依性。
 
 ## <a name="creating-your-first-project-with-ionide"></a>使用 Ionide 建立第一個專案
 
@@ -139,7 +110,7 @@ sudo apt-get install mono-complete fsharp
 
 1. F # 專案本身，在底下`ClassLibraryDemo`資料夾。
 2. 新增套件透過正確的目錄結構[ `Paket` ](https://fsprojects.github.io/Paket/)。
-3. 跨平台建置指令碼[ `FAKE` ](https://fake.build/)。
+3. 跨平台建置指令碼[ `FAKE` ](https://fsharp.github.io/FAKE/)。
 4. `paket.exe`可執行檔可以擷取封裝，並讓您解析的相依性。
 5. A`.gitignore`檔案，如果您想要將這個專案加入 Git 架構的原始檔控制。
 
