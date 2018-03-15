@@ -1,62 +1,85 @@
 ---
 title: "F# 指南"
-description: "深入了解 F # 執行.net 功能性程式設計語言。"
-keywords: .NET, .NET Core
+description: "本指南提供各種學習材料 F #，功能性執行.net 程式語言的概觀。"
 author: jackfoxy
 ms.author: phcart
-ms.date: 12/01/2016
+ms.date: 02/28/2018
 ms.topic: article
 ms.prod: .net
 ms.technology: devlang-fsharp
 ms.devlang: fsharp
 ms.assetid: ea27fb37-dad1-4bd4-a3cc-4f5c70767ae9
-ms.openlocfilehash: 45f5d2ca794ccea7a35cf6c0bf9d58a3e6500453
-ms.sourcegitcommit: ce279f2d7fe2220e6ea0a25a8a7a5370ddf8d9f0
+ms.openlocfilehash: b7cf3feb5699f85bf09a47f008fdaf70ac7c8d77
+ms.sourcegitcommit: 83dd5ec003e788ccb3e33f3412a7af39ae347646
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 12/02/2017
+ms.lasthandoff: 03/15/2018
 ---
-# <a name="f-guide"></a><span data-ttu-id="380a3-104">F# 指南</span><span class="sxs-lookup"><span data-stu-id="380a3-104">F# Guide</span></span>
+# <a name="f-guide"></a><span data-ttu-id="cc5a0-103">F# 指南</span><span class="sxs-lookup"><span data-stu-id="cc5a0-103">F# Guide</span></span>
 
-<span data-ttu-id="380a3-105">F # 是一種功能的程式設計語言.NET 上執行。</span><span class="sxs-lookup"><span data-stu-id="380a3-105">F# is a functional programming language which runs on .NET.</span></span>  <span data-ttu-id="380a3-106">除了支援的函式程式設計建構，它也會有物件的程式設計功能。</span><span class="sxs-lookup"><span data-stu-id="380a3-106">In addition to supporting functional programming constructs, it also has object programming capabilities.</span></span>  <span data-ttu-id="380a3-107">此混合式功能性程式設計與物件導向的功能，讓 F # 實用的語言，完成任何工作。</span><span class="sxs-lookup"><span data-stu-id="380a3-107">This hybrid of functional programming with object-oriented capabilities makes F# a pragmatic language for accomplishing any task.</span></span>
+<span data-ttu-id="cc5a0-104">F # 是功能性執行.net 程式語言。</span><span class="sxs-lookup"><span data-stu-id="cc5a0-104">F# is a functional programming language that runs on .NET.</span></span> <span data-ttu-id="cc5a0-105">它也會有完整的物件，可讓您 blend 功能和物件的任何問題的實用方案的程式設計支援。</span><span class="sxs-lookup"><span data-stu-id="cc5a0-105">It also has full support for objects, letting you blend functional and object programming for pragmatic solutions to any problem.</span></span>
 
-## <a name="if-youre-new-to-f"></a><span data-ttu-id="380a3-108">如果您剛接觸到 F #</span><span class="sxs-lookup"><span data-stu-id="380a3-108">If You're New to F#</span></span> #
+```fsharp
+open System // Get access to functionality in System namespace.
 
-<span data-ttu-id="380a3-109">如果您剛接觸到 F #，以開始[教學課程的 F #](tour.md)取得語言的概觀，以及其程式設計概念。</span><span class="sxs-lookup"><span data-stu-id="380a3-109">If you're new to F#, begin with the [Tour of F#](tour.md) to get an overview of the language and some of its programming concepts.</span></span>  <span data-ttu-id="380a3-110">如果您使用 Visual Studio，教學課程專案範本也包含相同的內容。</span><span class="sxs-lookup"><span data-stu-id="380a3-110">If you're using Visual Studio, the Tutorial project template contains the same content.</span></span>
+// Function: takes a name and produces a greeting.
+let getGreeting name =
+    sprintf "Hello, %s! Isn't F# great?" name
 
-## <a name="if-youre-experienced-with-f"></a><span data-ttu-id="380a3-111">如果您是熟悉 F #</span><span class="sxs-lookup"><span data-stu-id="380a3-111">If You're Experienced with F#</span></span> #
+// Use the EntryPoint attribute to run the program.
+[<EntryPoint>]
+let main args =
+    args                     // Use F# pipe operators to send the args into some functions.
+    |> Array.map getGreeting // Turn each name into a friendly greeting.
+    |> Array.iter printfn    // Print them!
 
-<span data-ttu-id="380a3-112">如果您知道您的工作環境 F # 中，或想要深入了解特定語言建構時，請參閱[語言參考](language-reference/index.md)。</span><span class="sxs-lookup"><span data-stu-id="380a3-112">If you know your way around F#, or want to learn more about a specific language construct, see the [Language Reference](language-reference/index.md).</span></span>  <span data-ttu-id="380a3-113">它是所有的 F # 語言功能的完整指南。</span><span class="sxs-lookup"><span data-stu-id="380a3-113">It's a thorough guide of all F# language capabilities.</span></span>
+    0
+```
 
-<span data-ttu-id="380a3-114">此外， [F # 核心程式庫參考](https://msdn.microsoft.com/visualfsharpdocs/conceptual/fsharp-core-library-reference)是了解相關的 FSharp.Core，屬於的 F # 核心程式庫的絕佳資源。</span><span class="sxs-lookup"><span data-stu-id="380a3-114">Additionally, the [F# Core Library Reference](https://msdn.microsoft.com/visualfsharpdocs/conceptual/fsharp-core-library-reference) is a great resource for learning about FSharp.Core, the core library which is a part of F#.</span></span>
+<span data-ttu-id="cc5a0-106">F # 是關於在其核心的產能。</span><span class="sxs-lookup"><span data-stu-id="cc5a0-106">F# is about productivity at its heart.</span></span> <span data-ttu-id="cc5a0-107">無所不在和進階功能的完整 F # 工具支援。</span><span class="sxs-lookup"><span data-stu-id="cc5a0-107">The tooling support for F# is ubiquitous and full of advanced features.</span></span>
 
-## <a name="the-f-software-foundation"></a><span data-ttu-id="380a3-115">F# Software Foundation (F# 軟體基金會)</span><span class="sxs-lookup"><span data-stu-id="380a3-115">The F# Software Foundation</span></span>
+## <a name="learning-f"></a><span data-ttu-id="cc5a0-108">了解 F #</span><span class="sxs-lookup"><span data-stu-id="cc5a0-108">Learning F#</span></span> #
 
-<span data-ttu-id="380a3-116">雖然 Microsoft 是主要的 F # 語言和其工具開發人員，但 F # 也支援獨立的 foundation、 F # 軟體基礎 (FSSF)。</span><span class="sxs-lookup"><span data-stu-id="380a3-116">Although Microsoft is the primary developer of the F# language and its tooling, F# is also backed by an independent foundation, the F# Software Foundation (FSSF).</span></span>
+<span data-ttu-id="cc5a0-109">[F # 教學課程](tour.md)且大量的程式碼範例的主要語言功能的概觀。</span><span class="sxs-lookup"><span data-stu-id="cc5a0-109">[Tour of F#](tour.md) gives an overview of major language features with lots of code samples.</span></span> <span data-ttu-id="cc5a0-110">如果您是新手 F #，而且想要的操作有初步的語言的運作方式，這項建議。</span><span class="sxs-lookup"><span data-stu-id="cc5a0-110">This is recommended if you are new to F# and want to get a feel for how the language works.</span></span>
 
-<span data-ttu-id="380a3-117">F# Software Foundation 的使命是促進、保護和推展 F# 程式設計語言，並支援和促進 F# 程式設計人員國際社群的多元發展。</span><span class="sxs-lookup"><span data-stu-id="380a3-117">The mission of the F# Software Foundation is to promote, protect, and advance the F# programming language, and to support and facilitate the growth of a diverse and international community of F# programmers.</span></span>
+<span data-ttu-id="cc5a0-111">[開始使用 F # Visual Studio 中](get-started/get-started-visual-studio.md)如果您是在 Windows 上，且要完整的 Visual Studio IDE （Integraded 開發環境） 體驗。</span><span class="sxs-lookup"><span data-stu-id="cc5a0-111">[Get started with F# in Visual Studio](get-started/get-started-visual-studio.md) if you're on Windows and want the full Visual Studio IDE (Integraded Development Environment) experience.</span></span>
 
-<span data-ttu-id="380a3-118">若要進一步了解並參與，請參閱 [fsharp.org](http://fsharp.org)。</span><span class="sxs-lookup"><span data-stu-id="380a3-118">To learn more and get involved, check out [fsharp.org](http://fsharp.org).</span></span>
+<span data-ttu-id="cc5a0-112">[開始使用 F # 在 Visual Studio for Mac](get-started/get-started-with-visual-studio-for-mac.md)如果您 macOS 而且想要使用 Visual Studio IDE。</span><span class="sxs-lookup"><span data-stu-id="cc5a0-112">[Get started with F# in Visual Studio for Mac](get-started/get-started-with-visual-studio-for-mac.md) if you're on macOS and want to use a Visual Studio IDE.</span></span>
 
-## <a name="documentation"></a><span data-ttu-id="380a3-119">文件</span><span class="sxs-lookup"><span data-stu-id="380a3-119">Documentation</span></span>
+<span data-ttu-id="cc5a0-113">[開始使用 F # Visual Studio 程式碼中](get-started/get-started-vscode.md)如果您想要跨平台的輕量型和功能的 IDE 體驗。</span><span class="sxs-lookup"><span data-stu-id="cc5a0-113">[Get Started with F# in Visual Studio Code](get-started/get-started-vscode.md) if you want a lightweight, cross-platform, and feature-packed IDE experience.</span></span>
 
-* [<span data-ttu-id="380a3-120">教學課程</span><span class="sxs-lookup"><span data-stu-id="380a3-120">Tutorials</span></span>](tutorials/getting-started/index.md)
-* <span data-ttu-id="380a3-121">[當做第一級值的函式](introduction-to-functional-programming/functions-as-first-class-values.md)<!--[Introduction to Functional Programming](introduction-to-functional-programming/index.md)--></span><span class="sxs-lookup"><span data-stu-id="380a3-121">[Functions as First-Class Values](introduction-to-functional-programming/functions-as-first-class-values.md)<!--[Introduction to Functional Programming](introduction-to-functional-programming/index.md)--></span></span>
-* [<span data-ttu-id="380a3-122">語言參考</span><span class="sxs-lookup"><span data-stu-id="380a3-122">Language Reference</span></span>](language-reference/index.md)
-* [<span data-ttu-id="380a3-123">F# 核心程式庫參考</span><span class="sxs-lookup"><span data-stu-id="380a3-123">F# Core Library Reference</span></span>](https://msdn.microsoft.com/visualfsharpdocs/conceptual/fsharp-core-library-reference)
+<span data-ttu-id="cc5a0-114">[開始使用 F # 和.NET 核心 CLI](get-started/get-started-command-line.md)如果您想要使用命令列工具。</span><span class="sxs-lookup"><span data-stu-id="cc5a0-114">[Get started with F# with the .NET Core CLI](get-started/get-started-command-line.md) if you want to use command-line tools.</span></span>
 
-## <a name="online-reading-resources"></a><span data-ttu-id="380a3-124">線上閱讀資源</span><span class="sxs-lookup"><span data-stu-id="380a3-124">Online Reading Resources</span></span>
+## <a name="references"></a><span data-ttu-id="cc5a0-115">參考</span><span class="sxs-lookup"><span data-stu-id="cc5a0-115">References</span></span>
 
-* <span data-ttu-id="380a3-125">[F# for Fun and Profit Gitbook](https://swlaschin.gitbooks.io/fsharpforfunandprofit/content/) (有趣且可獲益的 F# Gitbook)</span><span class="sxs-lookup"><span data-stu-id="380a3-125">[F# for Fun and Profit Gitbook](https://swlaschin.gitbooks.io/fsharpforfunandprofit/content/)</span></span> 
-* <span data-ttu-id="380a3-126">[F# Programming Wikibook](https://en.wikibooks.org/wiki/F_Sharp_Programming) (F# 程式設計 Wikibook)</span><span class="sxs-lookup"><span data-stu-id="380a3-126">[F# Programming Wikibook](https://en.wikibooks.org/wiki/F_Sharp_Programming)</span></span>
+<span data-ttu-id="cc5a0-116">[F # 語言參考](language-reference/index.md)是所有的 F # 語言功能的正式、 完整參考。</span><span class="sxs-lookup"><span data-stu-id="cc5a0-116">[F# Language Reference](language-reference/index.md) is the official, comprehensive reference for all F# language features.</span></span> <span data-ttu-id="cc5a0-117">每個發行項說明語法，並顯示程式碼範例。</span><span class="sxs-lookup"><span data-stu-id="cc5a0-117">Each article explains the syntax and shows code samples.</span></span> <span data-ttu-id="cc5a0-118">您可以使用篩選器列在目錄中，若要尋找特定的發行項。</span><span class="sxs-lookup"><span data-stu-id="cc5a0-118">You can use the filter bar in the table of contents to find specific articles.</span></span>
 
-## <a name="video-learning-resources"></a><span data-ttu-id="380a3-127">視訊學習資源</span><span class="sxs-lookup"><span data-stu-id="380a3-127">Video Learning Resources</span></span>
+<span data-ttu-id="cc5a0-119">[F # 核心程式庫參考](https://msdn.microsoft.com/visualfsharpdocs/conceptual/fsharp-core-library-reference)為 F # 核心程式庫中的應用程式開發介面參考。</span><span class="sxs-lookup"><span data-stu-id="cc5a0-119">[F# Core Library Reference](https://msdn.microsoft.com/visualfsharpdocs/conceptual/fsharp-core-library-reference) is the API reference for the F# Core Library.</span></span>
 
-* <span data-ttu-id="380a3-128">[Introduction to Programming with F# series on YouTube](https://www.youtube.com/watch?v=Teak30_pXHk&list=PLEoMzSkcN8oNiJ67Hd7oRGgD1d4YBxYGC) (YouTube 上的 F# 系列程式設計簡介)</span><span class="sxs-lookup"><span data-stu-id="380a3-128">[Introduction to Programming with F# series on YouTube](https://www.youtube.com/watch?v=Teak30_pXHk&list=PLEoMzSkcN8oNiJ67Hd7oRGgD1d4YBxYGC)</span></span>
-* <span data-ttu-id="380a3-129">[Introduction to F# series on FSharpTV](https://fsharp.tv/courses/fsharp-programming-intro/) (FSharpTV 上的 F# 系列簡介)</span><span class="sxs-lookup"><span data-stu-id="380a3-129">[Introduction to F# series on FSharpTV](https://fsharp.tv/courses/fsharp-programming-intro/)</span></span>
+## <a name="additional-guides"></a><span data-ttu-id="cc5a0-120">其他的輔助線</span><span class="sxs-lookup"><span data-stu-id="cc5a0-120">Additional guides</span></span>
 
-## <a name="further-resources"></a><span data-ttu-id="380a3-130">其他資源</span><span class="sxs-lookup"><span data-stu-id="380a3-130">Further Resources</span></span>
+<span data-ttu-id="cc5a0-121">[F # 樂趣和收益](https://swlaschin.gitbooks.io/fsharpforfunandprofit/content/)是學習 F # 完整且非常詳細的書籍。</span><span class="sxs-lookup"><span data-stu-id="cc5a0-121">[F# for Fun and Profit](https://swlaschin.gitbooks.io/fsharpforfunandprofit/content/) is a comprehensive and very detailed book on learning F#.</span></span> <span data-ttu-id="cc5a0-122">它的內容和作者是心愛 F # 社群。</span><span class="sxs-lookup"><span data-stu-id="cc5a0-122">Its contents and author are beloved by the F# community.</span></span> <span data-ttu-id="cc5a0-123">目標對象是主要物件導向程式設計背景的開發人員。</span><span class="sxs-lookup"><span data-stu-id="cc5a0-123">The target audience is primarily developers with an object oriented programming background.</span></span>
 
-* <span data-ttu-id="380a3-131">[F# Learning Resources on fsharp.org](http://fsharp.org/learn.html) (fsharp.org 上的 F# 學習資源)</span><span class="sxs-lookup"><span data-stu-id="380a3-131">[F# Learning Resources on fsharp.org](http://fsharp.org/learn.html)</span></span>
-* <span data-ttu-id="380a3-132">[F# Snippets Website](http://www.fssnip.net) (F# 程式碼片段網站)</span><span class="sxs-lookup"><span data-stu-id="380a3-132">[F# Snippets Website](http://www.fssnip.net)</span></span>
-* <span data-ttu-id="380a3-133">[F# Software Foundation](http://fsharp.org) (F# 軟體基金會)</span><span class="sxs-lookup"><span data-stu-id="380a3-133">[F# Software Foundation](http://fsharp.org)</span></span>
+<span data-ttu-id="cc5a0-124">[F # 程式設計 Wikibook](https://en.wikibooks.org/wiki/F_Sharp_Programming)是有關了解 F # wikibook。</span><span class="sxs-lookup"><span data-stu-id="cc5a0-124">[F# Programming Wikibook](https://en.wikibooks.org/wiki/F_Sharp_Programming) is a wikibook about learning F#.</span></span> <span data-ttu-id="cc5a0-125">它也是 F # 社群的產品。</span><span class="sxs-lookup"><span data-stu-id="cc5a0-125">It is also a product of the F# community.</span></span> <span data-ttu-id="cc5a0-126">目標對象是剛接觸到 F # 中，利用最少的物件導向程式設計背景的人員。</span><span class="sxs-lookup"><span data-stu-id="cc5a0-126">The target audience is people who are new to F#, with a little bit of object oriented programming background.</span></span>
+
+## <a name="learn-f-through-videos"></a><span data-ttu-id="cc5a0-127">深入了解 F # 透過影片</span><span class="sxs-lookup"><span data-stu-id="cc5a0-127">Learn F# through videos</span></span>
+
+<span data-ttu-id="cc5a0-128">[YouTube 上的 F # 教學課程](https://www.youtube.com/watch?v=c7eNDJN758U)是不錯的介紹，F # 使用 Visual Studio 中，顯示 1.5 小時期間的許多絕佳範例。</span><span class="sxs-lookup"><span data-stu-id="cc5a0-128">[F# tutorial on YouTube](https://www.youtube.com/watch?v=c7eNDJN758U) is a great introduction to F# using Visual Studio, showing lots of great examples over the course of 1.5 hours.</span></span> <span data-ttu-id="cc5a0-129">目標對象是剛接觸到 F # Visual Studio 開發人員。</span><span class="sxs-lookup"><span data-stu-id="cc5a0-129">The target audience is Visual Studio developers who are new to F#.</span></span>
+
+<span data-ttu-id="cc5a0-130">[使用 F # 的程式設計簡介](https://www.youtube.com/watch?v=Teak30_pXHk&list=PLEoMzSkcN8oNiJ67Hd7oRGgD1d4YBxYGC)是絕佳的影片系列使用 Visual Studio 程式碼做為主要的編輯器。</span><span class="sxs-lookup"><span data-stu-id="cc5a0-130">[Introduction to Programming with F#](https://www.youtube.com/watch?v=Teak30_pXHk&list=PLEoMzSkcN8oNiJ67Hd7oRGgD1d4YBxYGC) is a great video series that uses Visual Studio Code as the main editor.</span></span> <span data-ttu-id="cc5a0-131">影片系列是從執行任何動作，而結束建置以文字為基礎的 RPG 視訊遊戲。</span><span class="sxs-lookup"><span data-stu-id="cc5a0-131">The video series starts from nothing and ends with building a text-based RPG video game.</span></span> <span data-ttu-id="cc5a0-132">目標對象是開發人員偏好使用 Visual Studio 程式碼 （或是輕量型 IDE） 和 F # 不熟悉。</span><span class="sxs-lookup"><span data-stu-id="cc5a0-132">The target audience is developers who prefer Visual Studio Code (or a lightweight IDE) and are new to F#.</span></span>
+
+<span data-ttu-id="cc5a0-133">[What's New in F # 的開發人員的 Visual Studio 2017](https://www.linkedin.com/learning/what-s-new-in-visual-studio-2017-for-f-sharp-for-developers)是 F # 在 Visual Studio 2017 顯示一些較新功能的視訊課程。</span><span class="sxs-lookup"><span data-stu-id="cc5a0-133">[What's New in Visual Studio 2017 for F# For Developers](https://www.linkedin.com/learning/what-s-new-in-visual-studio-2017-for-f-sharp-for-developers) is a video course that shows some of the newer features for F# in Visual Studio 2017.</span></span> <span data-ttu-id="cc5a0-134">目標對象是剛接觸到 F # Visual Studio 開發人員。</span><span class="sxs-lookup"><span data-stu-id="cc5a0-134">The target audience is Visual Studio developers who are new to F#.</span></span>
+
+## <a name="other-useful-resources"></a><span data-ttu-id="cc5a0-135">其他實用資源</span><span class="sxs-lookup"><span data-stu-id="cc5a0-135">Other useful resources</span></span>
+
+<span data-ttu-id="cc5a0-136">[F # 程式碼片段網站](http://www.fssnip.net)包含一組大量程式碼片段示範如何執行幾乎任何在 F # 中，範圍介於徹底初學者至進階的程式碼片段。</span><span class="sxs-lookup"><span data-stu-id="cc5a0-136">The [F# Snippets Website](http://www.fssnip.net) contains a massive set of code snippets showing how to do just about anything in F#, ranging from absolute beginner to highly advanced snippets.</span></span>
+
+<span data-ttu-id="cc5a0-137">[F # 軟體 Foundation Slack](http://fsharp.org/guides/slack/)是一個很好的初學者所設計和專家，相同的這是高作用中，並有某些世界最佳 F # 程式設計人員可用的交談。</span><span class="sxs-lookup"><span data-stu-id="cc5a0-137">The [F# Software Foundation Slack](http://fsharp.org/guides/slack/) is a great place for beginners and experts alike, is highly active, and has some of world's best F# programmers available for a chat.</span></span> <span data-ttu-id="cc5a0-138">我們強烈建議您加入。</span><span class="sxs-lookup"><span data-stu-id="cc5a0-138">We highly recommend joining.</span></span>
+
+## <a name="the-f-software-foundation"></a><span data-ttu-id="cc5a0-139">F# Software Foundation (F# 軟體基金會)</span><span class="sxs-lookup"><span data-stu-id="cc5a0-139">The F# Software Foundation</span></span>
+
+<span data-ttu-id="cc5a0-140">雖然 Microsoft 是主要的 F # 語言和 Visual Studio 中的工具開發人員，但 F # 也支援獨立的 foundation、 F # 軟體基礎 (FSSF)。</span><span class="sxs-lookup"><span data-stu-id="cc5a0-140">Although Microsoft is the primary developer of the F# language and its tools in Visual Studio, F# is also backed by an independent foundation, the F# Software Foundation (FSSF).</span></span>
+
+<span data-ttu-id="cc5a0-141">F# Software Foundation 的使命是促進、保護和推展 F# 程式設計語言，並支援和促進 F# 程式設計人員國際社群的多元發展。</span><span class="sxs-lookup"><span data-stu-id="cc5a0-141">The mission of the F# Software Foundation is to promote, protect, and advance the F# programming language, and to support and facilitate the growth of a diverse and international community of F# programmers.</span></span>
+
+<span data-ttu-id="cc5a0-142">若要進一步了解並參與，請參閱 [fsharp.org](http://fsharp.org)。若要加入，免費且 foundation 中的 F # 開發人員的網路是您不希望錯過 ！</span><span class="sxs-lookup"><span data-stu-id="cc5a0-142">To learn more and get involved, check out [fsharp.org](http://fsharp.org). It's free to join, and the network of F# developers in the foundation is something you don't want to miss out on!</span></span>
