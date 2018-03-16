@@ -476,6 +476,9 @@
                 - name: 運算子
                   tocHref: /dotnet/csharp/language-reference/operators/
                   topicHref: /dotnet/csharp/language-reference/operators/index
+                - name: 特殊字元
+                  tocHref: /dotnet/csharp/language-reference/tokens/
+                  topicHref: /dotnet/csharp/language-reference/tokens/index
                 - name: 前置處理器指示詞
                   tocHref: /dotnet/csharp/language-reference/preprocessor-directives/
                   topicHref: /dotnet/csharp/language-reference/preprocessor-directives/index
