@@ -10,11 +10,11 @@ ms.prod: .net
 ms.technology: devlang-fsharp
 ms.devlang: fsharp
 ms.assetid: 82bec076-19d4-470c-979f-6c3a14b7c70a
-ms.openlocfilehash: a2db07c4f5688aece212681af40d69c377f6fa4a
-ms.sourcegitcommit: ba765893e3efcece67d99fd6d5ce0074b050d1d9
+ms.openlocfilehash: 30d1c20d66fd0a193c05c97ee726a886f98356ad
+ms.sourcegitcommit: 1c0b0f082b3f300e54b4d069b317ac724c88ddc3
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 03/02/2018
+ms.lasthandoff: 03/16/2018
 ---
 # <a name="tutorial-creating-a-type-provider"></a>教學課程： 建立型別提供者
 
@@ -22,11 +22,11 @@ F # 中的型別提供者機制是其支援資訊豐富程式設計的重要部�
 
 F # 生態系統包含常用的網際網路和企業資料服務的型別提供者的範圍。 例如: 
 
-- [FSharp.Data](https://fsharp.github.io/FSharp.Data/)包含型別提供者的 JSON、 XML、 CSV 及 HTML 文件格式
+- [FSharp.Data](https://fsharp.github.io/FSharp.Data/)包含型別提供者的 JSON、 XML、 CSV 及 HTML 文件格式。
 
 - [根據 SQLProvider](https://fsprojects.github.io/SQLProvider/)提供強型別存取 SQL 資料庫，透過物件對應和 F # LINQ 查詢對這些資料來源。
 
-- [FSharp.Data.SqlClient](https://fsprojects.github.io/FSharp.Data.SqlClient/)都有一組 com 型別提供者，檢查 T-SQL F # 中的內嵌堆時間
+- [FSharp.Data.SqlClient](https://fsprojects.github.io/FSharp.Data.SqlClient/)一組型別提供者的編譯時間檢查 T-SQL F # 中的內嵌。
 
 - [FSharp.Data.TypeProviders](https://fsprojects.github.io/FSharp.Data.TypeProviders/)較舊型別提供者存取 SQL、 Entity Framework、 OData 和 WSDL 資料服務的.NET Framework 程式設計只能搭配使用的設定。
 
@@ -62,7 +62,7 @@ F # 生態系統包含常用的網際網路和企業資料服務的型別提供�
 
 ## <a name="a-simple-type-provider"></a>簡單的型別提供者
 
-這個範例是類似的範例 Samples.HelloWorldTypeProvider`examples`目錄[F # 類型提供者 SDK](https://github.com/fsprojects/FSharp.TypeProviders.SDK/)。 提供者可提供 「 型別空間 」 含有 100 刪除的類型為下列程式碼顯示使用 F # 簽章語法並省略以外的所有詳細資料的`Type1`。 如需清除類型的詳細資訊，請參閱[詳細資料的相關清除提供型別](#details-about-erased-provided-types)本主題稍後。
+這個範例是中的範例類似 Samples.HelloWorldTypeProvider`examples`目錄[F # 類型提供者 SDK](https://github.com/fsprojects/FSharp.TypeProviders.SDK/)。 提供者可提供 「 型別空間 」 含有 100 刪除的類型為下列程式碼顯示使用 F # 簽章語法並省略以外的所有詳細資料的`Type1`。 如需清除類型的詳細資訊，請參閱[詳細資料的相關清除提供型別](#details-about-erased-provided-types)本主題稍後。
 
 ```fsharp
 namespace Samples.HelloWorldTypeProvider
@@ -135,11 +135,11 @@ type SampleTypeProvider(config: TypeProviderConfig) as this =
   // And add them to the namespace
   do this.AddNamespace(namespaceName, types)
 
-  [<assembly:TypeProviderAssembly>] 
-  do()
+[<assembly:TypeProviderAssembly>] 
+do()
 ```
 
-若要使用此提供者，開啟 Visual Studio 2012 的獨立執行個體、 建立 F # 指令碼，然後再將從指令碼提供者的參考 #r 使用下列程式碼所示：
+若要使用此提供者，開啟 Visual Studio 的個別執行個體、 建立 F # 指令碼，然後再將從指令碼提供者的參考 #r 使用下列程式碼所示：
 
 ```fsharp
 #r @".\bin\Debug\Samples.HelloWorldTypeProvider.dll"
@@ -451,13 +451,13 @@ ProvidedConstructor(…, InvokeCode = (fun args -> <@@ new DataObject() @@>), �
 
 ### <a name="type-checked-regex-provider"></a>檢查 Regex 提供者類型。
 
-假設您想要實作規則運算式的型別提供者所包裝之.NET`System.Text.RegularExpressions.Regex`文件庫中的介面會提供下列編譯時間保證：
+假設您想要實作規則運算式的型別提供者所包裝之.NET<xref:System.Text.RegularExpressions.Regex>文件庫中的介面會提供下列編譯時間保證：
 
 - 正在驗證是否為有效的規則運算式。
 
 - 提供具名的屬性比對規則運算式中的任何群組名稱為基礎。
 
-本節示範如何使用型別提供者來建立`RegExProviderType`輸入規則運算式模式化為提供這些優點。 如果提供的模式不是有效的而且型別提供者可以擷取的群組模式中，讓您可以使用名為相符項目上的屬性來存取它們，則編譯器會回報錯誤。 當您設計的類型提供者時，您應該考慮其公開的 API 的外觀以一般使用者與此設計會轉譯成.NET 程式碼的方式。 下列範例會示範如何使用這類 API 來取得區域程式碼的元件：
+本節示範如何使用型別提供者來建立`RegexTyped`輸入規則運算式模式化為提供這些優點。 如果提供的模式不是有效的而且型別提供者可以擷取的群組模式中，讓您可以使用名為相符項目上的屬性來存取它們，則編譯器會回報錯誤。 當您設計的類型提供者時，您應該考慮其公開的 API 的外觀以一般使用者與此設計會轉譯成.NET 程式碼的方式。 下列範例會示範如何使用這類 API 來取得區域程式碼的元件：
 
 ```fsharp
 type T = RegexTyped< @"(?<AreaCode>^\d{3})-(?<PhoneNumber>\d{3}-\d{4}$)">
@@ -480,7 +480,7 @@ let r = reg.Match("425-123-2345").Groups.["AreaCode"].Value //r equals "425"
 
 - `RegexTyped`建構函式會導致 Regex 建構函式呼叫，在模式比對的靜態型別引數中傳遞。
 
-- 結果`Match`方法都由標準`System.Text.RegularExpressions.Match`型別。
+- 結果`Match`方法都由標準<xref:System.Text.RegularExpressions.Match>型別。
 
 - 每個具名的群組導致所提供的屬性，並存取屬性導致系統使用的相符項目上的索引子的`Groups`集合。
 
@@ -552,7 +552,7 @@ do ()
 
 - 您使用`obj`為基底類型的方法，但您將使用`Regex`物件做為此類型的執行階段表示下一個範例所示。
 
-- 若要呼叫`Regex`建構函式會擲回`System.ArgumentException`當規則運算式不是有效的。 編譯器會攔截此例外狀況，並在編譯時期或 Visual Studio 編輯器中，向使用者回報的錯誤訊息。 這個例外狀況可讓規則運算式，而不需執行應用程式進行驗證。
+- 若要呼叫`Regex`建構函式會擲回<xref:System.ArgumentException>當規則運算式不是有效的。 編譯器會攔截此例外狀況，並在編譯時期或 Visual Studio 編輯器中，向使用者回報的錯誤訊息。 這個例外狀況可讓規則運算式，而不需執行應用程式進行驗證。
 
 因為它並未包含任何有意義的方法或屬性，沒有尚未作用上述定義的類型。 首先，新增靜態`IsMatch`方法：
 
@@ -583,7 +583,7 @@ let matchTy =
 ty.AddMember matchTy
 ```
 
-然後，您會加入一個屬性為每個群組的相符項目型別。 在執行階段，以表示相符項目`System.Text.RegularExpressions.Match`值，因此必須使用定義的屬性引號`System.Text.RegularExpressions.Match.Groups`編製索引的屬性，以取得相關的群組。
+然後，您會加入一個屬性為每個群組的相符項目型別。 在執行階段，以表示相符項目<xref:System.Text.RegularExpressions.Match>值，因此必須使用定義的屬性引號<xref:System.Text.RegularExpressions.Match.Groups>編製索引的屬性，以取得相關的群組。
 
 ```fsharp
 for group in r.GetGroupNames() do
@@ -756,13 +756,11 @@ do ()
 為簡單的範例，請考慮存取以逗號分隔值 (CSV) 格式的科學資料型別提供者。 本節假設，CSV 檔案包含標頭資料列，再浮動點資料，如下列表格所示：
 
 
-```
-|Distance (meter)|Time (second)|
+|距離 （公尺）|時間 （秒）|
 |----------------|-------------|
 |50.0|3.7|
 |100.0|5.2|
 |150.0|6.4|
-```
 
 本節說明如何提供可用來取得資料列的型別`Distance`型別的屬性`float<meter>`和`Time`型別的屬性`float<second>`。 為了簡單起見，請進行下列假設：
 
@@ -788,7 +786,7 @@ printfn "%f" (float time)
 在此情況下，編譯器應該將這些呼叫轉換成結果類似下列的範例：
 
 ```fsharp
-let info = new MiniCsvFile("info.csv")
+let info = new CsvFile("info.csv")
 for row in info.Data do
 let (time:float) = row.[1]
 printfn "%f" (float time)
@@ -1045,9 +1043,10 @@ ProvidedType API 具有延遲 AddMember 的版本。
 
 ### <a name="providing-array-types-and-generic-type-instantiations"></a>提供陣列型別和泛型類型具現化
 
-使用一般進行 （其簽章包含陣列類型、 byref 類型和具現化的泛型型別） 的成員提供`MakeArrayType`， `MakePointerType`，和`MakeGenericType`System.Type，任何執行個體上包括`ProvidedTypeDefinitions`。
+使用一般進行 （其簽章包含陣列類型、 byref 類型和具現化的泛型型別） 的成員提供`MakeArrayType`， `MakePointerType`，和`MakeGenericType`的任何執行個體上<xref:System.Type>，包括`ProvidedTypeDefinitions`。
 
-注意： 在某些情況下您可能要使用這個 helper `ProvidedTypeBuilder.MakeGenericType`。  請參閱更多詳細資料的型別提供者 SDK 文件。
+> [!NOTE]
+> 在某些情況下，您可能必須使用這個 helper `ProvidedTypeBuilder.MakeGenericType`。  請參閱[型別提供者 SDK 文件](https://github.com/fsprojects/FSharp.TypeProviders.SDK/blob/master/README.md#explicit-construction-of-code-makegenerictype-makegenericmethod-and-uncheckedquotations)如需詳細資訊。
 
 ### <a name="providing-unit-of-measure-annotations"></a>提供的量值的附註的單位
 
@@ -1101,7 +1100,7 @@ ProvidedTypes API 會提供協助提供量值的註解。 例如，若要提供�
 ```fsharp
 open Microsoft.FSharp.TypeProviders 
 
-type Service = ODataService<" https://services.odata.org/Northwind/Northwind.svc/">
+type Service = ODataService<"http://services.odata.org/Northwind/Northwind.svc/">
 ```
 
 是 F # 3.0 版中的一部分 ProvidedTypes 0.2 協助程式程式碼只具有有限的支援，提供產生的型別。 下列陳述式必須是產生的型別定義，則為 true:
@@ -1159,7 +1158,7 @@ F # 中的型別提供者機制有下列限制：
   您可以使用列印至 stdout 記錄。
 
 
-## <a name="see-also"></a>請參閱
+## <a name="see-also"></a>另請參閱
 
 * [類型提供者](index.md)
 

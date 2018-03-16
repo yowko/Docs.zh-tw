@@ -5,7 +5,8 @@ ms.date: 03/30/2017
 ms.prod: .net-framework
 ms.reviewer: 
 ms.suite: 
-ms.technology: dotnet-clr
+ms.technology:
+- dotnet-clr
 ms.tgt_pltfrm: 
 ms.topic: article
 dev_langs:
@@ -16,16 +17,17 @@ helpviewer_keywords:
 - interoperation with unmanaged code, marshaling
 - marshaling behavior
 ms.assetid: c0a9bcdf-3df8-4db3-b1b6-abbdb2af809a
-caps.latest.revision: "15"
+caps.latest.revision: 
 author: rpetrusha
 ms.author: ronpet
 manager: wpickett
-ms.workload: dotnet
-ms.openlocfilehash: 0e66caf800fd49b4822ee22326b8a5cf712d99bb
-ms.sourcegitcommit: c0dd436f6f8f44dc80dc43b07f6841a00b74b23f
+ms.workload:
+- dotnet
+ms.openlocfilehash: f0a8fcba31ddfa09ca60f8ba6cf08d20b270c3da
+ms.sourcegitcommit: 1c0b0f082b3f300e54b4d069b317ac724c88ddc3
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 01/19/2018
+ms.lasthandoff: 03/16/2018
 ---
 # <a name="default-marshaling-behavior"></a>預設的封送處理行為
 Interop 封送處理會依據規則作業，這些規則指定與方法參數關聯的資料在 Managed 和 Unmanaged 記憶體之間傳遞時的運作方式。 這些內建規則會將這類封送處理活動當做資料類型轉換來控制；控制被呼叫端是否可以變更收到的資料，並將這些變更傳回給呼叫端；以及控制在哪些情況下，封送處理器會提供效能最佳化。  
@@ -33,7 +35,7 @@ Interop 封送處理會依據規則作業，這些規則指定與方法參數關
  本節指出 Interop 封送處理服務的預設行為特性， 提供有關封送處理陣列、Boolean 類型、char 類型、委派、類別、物件、字串和結構的詳細資訊。  
   
 > [!NOTE]
->  不支援封送處理泛型類型。 如需詳細資訊，請參閱[使用泛型型別互通](http://msdn.microsoft.com/library/26b88e03-085b-4b53-94ba-a5a9c709ce58)。  
+>  不支援封送處理泛型類型。 如需詳細資訊，請參閱[使用泛型型別互通](https://msdn.microsoft.com/library/26b88e03-085b-4b53-94ba-a5a9c709ce58(v=vs.100))。  
   
 ## <a name="memory-management-with-the-interop-marshaler"></a>使用 Interop 封送處理器進行記憶體管理  
  Interop 封送處理器一律會嘗試釋放 Unmanaged 程式碼所配置的記憶體。 這個行為使用 COM 記憶體管理規則進行編譯，但與管理原生 C++ 的規則不同。  
@@ -447,7 +449,7 @@ interface IValueTypes : IDispatch {
 };  
 ```  
   
-## <a name="see-also"></a>請參閱  
+## <a name="see-also"></a>另請參閱  
  [Blittable 和非 Blittable 類型](../../../docs/framework/interop/blittable-and-non-blittable-types.md)  
  [複製和 Pin](../../../docs/framework/interop/copying-and-pinning.md)  
  [陣列的預設封送處理](../../../docs/framework/interop/default-marshaling-for-arrays.md)  

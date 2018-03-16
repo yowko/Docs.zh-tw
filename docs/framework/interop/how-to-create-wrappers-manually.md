@@ -3,7 +3,6 @@ title: "如何：手動建立包裝函式"
 ms.custom: 
 ms.date: 03/30/2017
 ms.prod: .net-framework
-ms.reviewer: 
 ms.suite: 
 ms.technology:
 - dotnet-clr
@@ -12,17 +11,16 @@ ms.topic: article
 helpviewer_keywords:
 - wrappers, creating manually
 ms.assetid: cc2a70d8-6a58-4071-a8cf-ce28c018c09b
-caps.latest.revision: 
 author: rpetrusha
 ms.author: ronpet
 manager: wpickett
 ms.workload:
 - dotnet
-ms.openlocfilehash: 5451599a5421149a7dc99ced6a42bb8220af247a
-ms.sourcegitcommit: c0dd436f6f8f44dc80dc43b07f6841a00b74b23f
+ms.openlocfilehash: 7ac7afdd85037d50bdda9fae0a33896dc441bce5
+ms.sourcegitcommit: 1c0b0f082b3f300e54b4d069b317ac724c88ddc3
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 01/19/2018
+ms.lasthandoff: 03/16/2018
 ---
 # <a name="how-to-create-wrappers-manually"></a>如何：手動建立包裝函式
 若您決定在 Managed 原始程式碼中手動宣告 COM 類型，現有的介面定義語言 (IDL) 檔或類型程式庫，將會是最佳的啟動位置。 沒有 IDL 檔案或無法產生類型程式庫檔案時，可建立 Managed 宣告並將所產生的組件匯出至類型程式庫，進而模擬 COM類型。  
@@ -43,7 +41,7 @@ ms.lasthandoff: 01/19/2018
   
 3.  宣告完成時，即可使用編譯任何其他 Managed 原始程式碼的方式來編譯檔案。  
   
-4.  如同使用 Tlbimp.exe 匯入類型一樣，部分檔案會要求額外的資訊，其可由您直接加入程式碼。 如需詳細資料，請參閱[如何：編輯 Interop 組件](http://msdn.microsoft.com/library/16aacb20-2269-42bf-a812-b6a7df17e277)。  
+4.  如同使用 Tlbimp.exe 匯入類型一樣，部分檔案會要求額外的資訊，其可由您直接加入程式碼。 如需詳細資料，請參閱[如何：編輯 Interop 組件](https://msdn.microsoft.com/library/16aacb20-2269-42bf-a812-b6a7df17e277(v=vs.100))。  
   
 ## <a name="example"></a>範例  
  下列程式碼為 `ISATest` 介面，和 IDL 中 `SATest` 類別以及C# 原始程式碼中對應類型的範例。  
@@ -110,7 +108,7 @@ namespace SAServer
 }  
 ```  
   
-## <a name="see-also"></a>請參閱  
+## <a name="see-also"></a>另請參閱  
  [自訂執行階段可呼叫包裝函式](http://msdn.microsoft.com/library/4652beaf-77d0-4f37-9687-ca193288c0be)  
  [COM 資料類型](http://msdn.microsoft.com/library/f93ae35d-a416-4218-8700-c8218cc90061)  
  [如何： 編輯 Interop 組件](http://msdn.microsoft.com/library/16aacb20-2269-42bf-a812-b6a7df17e277)  
