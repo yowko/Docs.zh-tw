@@ -17,10 +17,10 @@ manager: wpickett
 ms.workload:
 - dotnet
 ms.openlocfilehash: 75a39fa1d0301a48cec7ad61c968ee3fc82d189c
-ms.sourcegitcommit: cf22b29db780e532e1090c6e755aa52d28273fa6
+ms.sourcegitcommit: 15316053918995cc1380163a7d7e7edd5c44e6d7
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 02/01/2018
+ms.lasthandoff: 03/19/2018
 ---
 # <a name="messaging-protocols"></a>訊息通訊協定
 [!INCLUDE[indigo1](../../../../includes/indigo1-md.md)] 通道堆疊利用編碼和傳輸通道將內部訊息表示法轉換為其 Wire 格式，並使用特定的傳輸予以傳送。 最常用於 Web 服務互通性的傳輸為 HTTP，而 Web 服務最常用的編碼為 XML 架構的 SOAP 1.1、SOAP 1.2 和訊息傳輸最佳化機制 (MTOM)。  
@@ -30,8 +30,8 @@ ms.lasthandoff: 02/01/2018
 |規格/文件|連結|  
 |-----------------------------|----------|  
 |HTTP 1.1|http://www.ietf.org/rfc/rfc2616.txt|  
-|SOAP 1.1 HTTP 繫結|http://www.w3.org/TR/2000/NOTE-SOAP-20000508/，第 7 節|  
-|SOAP 1.2 HTTP 繫結|http://www.w3.org/TR/soap12-part2/，第 7 節|  
+|SOAP 1.1 HTTP 繫結|http://www.w3.org/TR/2000/NOTE-SOAP-20000508/第 7 節|  
+|SOAP 1.2 HTTP 繫結|http://www.w3.org/TR/soap12-part2/第 7 節|  
   
  本主題涵蓋 [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] 為下列 <xref:System.ServiceModel.Channels.TextMessageEncodingBindingElement> 和 <xref:System.ServiceModel.Channels.MtomMessageEncodingBindingElement> 所採用之通訊協定進行實作的詳細資訊。  
   
@@ -55,7 +55,7 @@ W3C Web 服務定址 1.0 - 中繼資料|http://www.w3.org/TR/ws-addr-metadata/|
 |XOP|http://www.w3.org/TR/xop10/|  
 |MTOM + SOAP 1.2 繫結|http://www.w3.org/TR/soap12-mtom/|  
 |MTOM SOAP 1.1 繫結|http://www.w3.org/Submission/soap11mtom10/|  
-|MTOM WS-Policy 判斷提示|http://www.w3.org/Submission/2006/SUBM-WS-MTOMPolicy-20061101/。|  
+|MTOM WS-Policy 判斷提示|http://www.w3.org/Submission/2006/SUBM-WS-MTOMPolicy-20061101/.|  
   
  下列 XML 命名空間與關聯的前置詞會在本主題中使用。  
   
@@ -75,12 +75,12 @@ dp|http://schemas.microsoft.com/net/2006/06/duplex|
 ## <a name="soap-11-and-soap-12"></a>SOAP 1.1 和 SOAP 1.2  
   
 ### <a name="envelope-and-processing-model"></a>封套和處理模型  
- [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] 實作 SOAP 1.1 封套，以處理下列 Basic Profile 1.1 (BP11) 和 Basic Profile 1.0 (SSBP10)。 SOAP 1.2 封套處理實作了下列 SOAP12-Part1。  
+ [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] 實作了 SOAP 1.1 封套，以處理下列 Basic Profile 1.1 (BP11) 和 Basic Profile 1.0 (SSBP10)。 SOAP 1.2 封套處理實作了下列 SOAP12-Part1。  
   
  本章節將說明 [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] 對於 BP11 和 SOAP12-Part1 所採取的某些實作選項。  
   
 #### <a name="mandatory-header-processing"></a>強制處理標頭  
- [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] 針對處理標頭標記會遵循規則`mustUnderstand`SOAP 1.1 和 SOAP 1.2 規格中，具有下列變化中所述。  
+ [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] 依照標記 `mustUnderstand` 的規則處理標頭，如 SOAP 1.1 和 SOAP 1.2 規格中所述，並具有下列變化。  
   
  進入 [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] 通道堆疊的訊息，會根據關聯之繫結項目所設定的個別通道予以處理，例如，文字訊息編碼、安全性、可信賴傳訊，以及交易。 每個通道都會從關聯的命名空間辨識標頭，並將其標記為已辨識。 一旦訊息進入發送器，作業格式器便會讀取對應之訊息/作業合約所需的標頭，並將其標記為已辨識。 接著發送器便會檢查是否有任何剩餘之未辨識，但標記為 `mustUnderstand` 的標頭，並擲回例外狀況。 包含 `mustUnderstand` 標頭的訊息會以尚未由收件者應用程式碼處理的收件者為目標。  
   
@@ -102,14 +102,14 @@ dp|http://schemas.microsoft.com/net/2006/06/duplex|
 ### <a name="http-binding"></a>HTTP 繫結  
   
 #### <a name="soap-11-http-binding"></a>SOAP 1.1 HTTP 繫結  
- [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] 實作 SOAP1.1 HTTP 繫結 Basic Profile 1.1 規格 3.4 節，以下列說明：  
+ [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] 根據 Basic Profile 1.1 規格 3.4 節，以下列說明實作 SOAP1.1 HTTP 繫結：  
   
 -   B2211：[!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] 服務未實作 HTTP POST 要求的重新導向。  
   
 -   B2212：[!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] 用戶端支援的 HTTP Cookie 必須符合 3.4.8。  
   
 #### <a name="soap-12-http-binding"></a>SOAP 1.2 HTTP 繫結  
- [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] SOAP 1.2-2 (SOAP12Part2) 規格以下列說明所述，請實作 SOAP 1.2 HTTP 繫結。  
+ [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] 根據 SOAP 1.2-part 2 (SOAP12Part2) 規格所述，以下列說明實作 SOAP 1.2 HTTP 繫結。  
   
  SOAP 1.2 為 `application/soap+xml` 媒體類型引入了選擇性的動作參數。 這個參數對於最佳化訊息分派非常有用，不需要在未使用 WS-Addressing 的情況下剖析 SOAP 訊息的主體。  
   
@@ -120,7 +120,7 @@ dp|http://schemas.microsoft.com/net/2006/06/duplex|
  當 WS-Addressing 已停用，且傳入的要求未包含動作參數時，訊息 `Action` 會視為未指定。  
   
 ## <a name="ws-addressing"></a>WS-Addressing  
- [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] 實作 Ws-addressing 3 的版本：  
+ [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] 實作了 3 個 WS-Addressing 版本：  
   
 -   WS-Addressing 2004/08  
   
@@ -132,7 +132,7 @@ dp|http://schemas.microsoft.com/net/2006/06/duplex|
  [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] 所實作的所有 WS-Addressing 版本都使用了端點參考來描述端點。  
   
 #### <a name="endpoint-references-and-ws-addressing-versions"></a>端點參考和 WS-Addressing 版本  
- [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] 會實作一些使用 Ws-addressing 的基礎結構通訊協定，以及在特定`EndpointReference`項目和`W3C.WsAddressing.EndpointReferenceType`類別 （例如，Ws-reliablemessaging、 Ws-secureconversation 和 Ws-trust）。 [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] 支援使用任一其他基礎結構通訊協定的 WS-Addressing 版本。 [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] 端點會針對每個端點各支援一個 WS-Addressing 版本。  
+ [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] 會實作一些使用 WS-Addressing 的基礎結構通訊協定，特別是 `EndpointReference` 元素和 `W3C.WsAddressing.EndpointReferenceType` 類別 (例如，WS-ReliableMessaging、WS-SecureConversation 和 WS-Trust)。 [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] 支援使用任一其他基礎結構通訊協定的 WS-Addressing 版本。 [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] 端點會針對每個端點各支援一個 WS-Addressing 版本。  
   
  若是 R3111，與 `EndpointReference` 端點進行訊息交換所使用之 [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] 項目的命名空間或型別，必須符合由此端點所實作的 WS-Addressing 版本。  
   
@@ -143,7 +143,7 @@ dp|http://schemas.microsoft.com/net/2006/06/duplex|
   
  B3121：[!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] 利用 WS-MetadataExchange (MEX) 規格第 6 節所述的機制，透過值或參考為端點參考加入中繼資料。  
   
- 試想以下的狀況：[!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] 服務要求以 http://sts.fabrikam123.com 的權杖簽發者所發出的安全性判斷提示標記語言 (SAML) 權杖進行驗證。[!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] 端點會以具有指向權杖簽發者之巢狀 `sp:IssuedToken` 判斷提示的 `sp:Issuer` 判斷提示，描述這項驗證需求。 存取 `sp:Issuer` 判斷提示的用戶端應用程式必須知道如何與權杖簽發者端點進行通訊。 用戶端需要知道與權杖簽發者有關的中繼資料。 使用 MEX 中定義的端點參考中繼資料延伸，[!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] 會提供對權杖簽發者中繼資料的參考。  
+ 假設其中[!INCLUDE[indigo2](../../../../includes/indigo2-md.md)]服務要求以在權杖簽發者所發出的安全性判斷提示標記語言 (SAML) 權杖驗證http://sts.fabrikam123.com。[!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] 端點會以具有指向權杖簽發者之巢狀 `sp:IssuedToken` 判斷提示的 `sp:Issuer` 判斷提示，描述這項驗證需求。 存取 `sp:Issuer` 判斷提示的用戶端應用程式必須知道如何與權杖簽發者端點進行通訊。 用戶端需要知道與權杖簽發者有關的中繼資料。 使用 MEX 中定義的端點參考中繼資料延伸，[!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] 會提供對權杖簽發者中繼資料的參考。  
   
 ```xml  
 <sp:IssuedToken>  
@@ -176,7 +176,7 @@ dp|http://schemas.microsoft.com/net/2006/06/duplex|
  與 [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] 應用程式互動的應用程式可以加入這些訊息標頭，而且 [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] 將會處理它們。  
   
 #### <a name="reference-parameters-and-properties"></a>參考參數和屬性  
- [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] 實作處理的端點參考參數和參考 p  
+ [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] 實作了符合個別規格之端點參考參數和參考  
   
  屬性的處理。  
   
@@ -207,7 +207,7 @@ dp|http://schemas.microsoft.com/net/2006/06/duplex|
   
 -   R3322：使用 WS-Addressing 2004/08 時，`ReplyTo` 也必須包含在要求中。  
   
--   R3323：使用 WS-Addressing 1.0，而且要求內不存在 `ReplyTo` 時，則會使用 [address] 屬性等於 "http://www.w3.org/2005/08/addressing/anonymous" 的預設端點參考。  
+-   R3323： 使用 Ws-addressing 1.0 時和`ReplyTo`不存在於要求時，[address] 屬性等於預設端點參考 」http://www.w3.org/2005/08/addressing/anonymous"使用。  
   
 -   R3324： 要求者必須加入`wsa:To`， `wsa:Action`，和`wsa:RelatesTo`在回覆訊息中的標頭，以及所有的參考參數或參考屬性 （或兩者） 所指定的標頭`ReplyTo`端點參考要求。  
   
@@ -234,7 +234,7 @@ dp|http://schemas.microsoft.com/net/2006/06/duplex|
 ### <a name="wsdl-11-binding-and-ws-policy-assertions"></a>WSDL 1.1 繫結和 WS-Policy 判斷提示  
   
 #### <a name="indicating-use-of-ws-addressing"></a>指出使用了 WS-Addressing  
- [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] 您可以使用原則判斷提示來指出端點的 Ws-addressing 的特定版本的支援。  
+ [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] 使用原則判斷提示來指出支援特定之 WS-Addressing 版本的端點。  
   
  下列原則判斷提示具有端點原則主體 [WS-PA]，並指出必須使用 WS-Addressing 2004/08，從端點傳送及接收訊息。  
   
@@ -278,7 +278,7 @@ dp|http://schemas.microsoft.com/net/2006/06/duplex|
   
  不過，有一些訊息交換模式可從要求者和回應程式之間所建立的兩個獨立反向 HTTP 連線中獲益，例如，由回應程式所傳送之未經要求的單向訊息。  
   
- [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] 提供了功能，這兩個基礎傳輸通道可用以構成複合雙工通道，其中一個通道用於輸入訊息，而其他則用於輸出訊息。 在使用 HTTP 傳輸的情況下，複合雙工提供了兩種反向的 HTTP 連線。 要求者會使用其中一個連線傳送訊息給回應程式，而回應程式則使用另一個連線將訊息傳回給要求者。  
+ [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] 提供了一項功能，讓兩個基礎傳輸通道可用以構成複合雙工通道，其中一個通道用於輸入訊息，另一個則用於輸出訊息。 在使用 HTTP 傳輸的情況下，複合雙工提供了兩種反向的 HTTP 連線。 要求者會使用其中一個連線傳送訊息給回應程式，而回應程式則使用另一個連線將訊息傳回給要求者。  
   
  若為透過個別 HTTP 要求傳送的回覆，WS-AM 判斷提示為：  
   
@@ -304,11 +304,11 @@ dp|http://schemas.microsoft.com/net/2006/06/duplex|
   
  上一個陳述式會導致在要求訊息的 `wsa:ReplyTo` 標頭上，必須有以下需求：  
   
--   R3514：如果端點使用 WSDL 1.1 SOAP 1.x HTTP 繫結，並且具有以 `ReplyTo` 或 `[address]` 判斷提示 (與附加的 `wsap10:UsingAddressing` 緊密結合) 替代的原則，則傳送至端點的要求訊息必須要有其 `wsap:UsingAddressing` 屬性不等於 "http://www.w3.org/2005/08/addressing/anonymous" 的 `cdp:CompositeDuplex` 標頭。  
+-   R3514： 要求傳送至端點的訊息必須要有`ReplyTo`具有標頭`[address]`屬性不等於"http://www.w3.org/2005/08/addressing/anonymous"如果端點使用 WSDL 1.1 SOAP 1.x HTTP 繫結，並有替代的原則`wsap10:UsingAddressing`或`wsap:UsingAddressing`判斷提示搭配`cdp:CompositeDuplex`附加。  
   
--   R3515：如果端點使用 WSDL 1.1 SOAP 1.x HTTP 繫結，並具有以 `ReplyTo` 判斷提示 (未附加 `[address]` 判斷提示) 替代的原則，則傳送至端點的要求訊息必須要有其 `ReplyTo` 屬性等於 "http://www.w3.org/2005/08/addressing/anonymous" 的 `wsap10:UsingAddressing` 標頭，或是根本沒有 `cdp:CompositeDuplex` 標頭。  
+-   R3515： 要求傳送至端點的訊息必須要有`ReplyTo`具有標頭`[address]`屬性等於"http://www.w3.org/2005/08/addressing/anonymous"，或沒有`ReplyTo`all、 如果端點使用 WSDL 1.1 SOAP 1.x HTTP 繫結，並有原則替代的標頭與`wsap10:UsingAddressing`判斷提示，且沒有`cdp:CompositeDuplex`附加的判斷提示。  
   
--   R3516：如果端點使用 WSDL 1.1 SOAP 1.x HTTP 繫結，並具有以 `ReplyTo` 判斷提示 (未附加 `[address]` 判斷提示) 替代的原則，則傳送至端點的要求訊息必須要有其 `wsap:UsingAddressing` 屬性等於 "http://www.w3.org/2005/08/addressing/anonymous" 的 `cdp:CompositeDuplex` 標頭。  
+-   R3516： 要求傳送至端點的訊息必須要有`ReplyTo`具有標頭`[address]`屬性等於"http://www.w3.org/2005/08/addressing/anonymous"如果端點使用 WSDL 1.1 SOAP 1.x HTTP 繫結，並有替代的原則`wsap:UsingAddressing`判斷提示，以及任何`cdp:CompositeDuplex`附加的判斷提示。  
   
  WS-Addressing WSDL 規格會試圖描述類似的通訊協定繫結，藉由引入具有三種文字值 (必要項、選擇性和禁止) 的 `<wsaw:Anonymous/>` 項目，指出`wsa:ReplyTo` 標頭 (第 3.2 節) 上的需求。 不巧的是，此類項目定義並無法特別當做 WS-Policy 內容的判斷提示使用，因為它需要網域專屬的延伸，以支援其他使用此類項目做為判斷提示的交集。 此類項目定義也指出了 `ReplyTo` 標頭的值，而非網路上的端點行為，如此將使其成為 HTTP 傳輸專屬的定義。  
   
@@ -410,7 +410,7 @@ Content-Length: 0
   
  下列步驟的順序即描述了 MTOM 專屬的編碼程序：  
   
-1.  確定 SOAP 封套已編碼，並且未包含具有 "http://www.w3.org/2004/08/xop/include" 之 `[namespace name]` 和 `[local name]` 之 `Include` 的項目資訊項目。  
+1.  確定 SOAP 封套已編碼包含沒有項目資訊項目`[namespace name]`的"http://www.w3.org/2004/08/xop/include"和`[local name]`的`Include`。  
   
 2.  建立空白的 MIME 封裝。  
   
@@ -576,7 +576,7 @@ mail-address   =     id-left "@" id-right
  設定為使用 MTOM 的 [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] 端點一定會傳送 MTOM 編碼的訊息。 即使沒有任何部分滿足所要求的準則，訊息仍舊會以 MTOM 編碼 (序列化為 MIME 封裝，其中具有含 SOAP 封套的單一 MIME 部分)。  
   
 ### <a name="ws-policy-assertion-for-mtom"></a>MTOM 的 WS-Policy 判斷提示  
- [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] 使用下列原則判斷提示來表示 MTOM 使用量端點：  
+ [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] 使用下列原則判斷提示來指出端點使用的 MTOM：  
   
 ```xml  
 <wsoma:OptimizedMimeSerialization ... />  

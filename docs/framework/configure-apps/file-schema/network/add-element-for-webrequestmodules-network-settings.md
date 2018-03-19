@@ -5,7 +5,8 @@ ms.date: 03/30/2017
 ms.prod: .net-framework
 ms.reviewer: 
 ms.suite: 
-ms.technology: dotnet-clr
+ms.technology:
+- dotnet-clr
 ms.tgt_pltfrm: 
 ms.topic: article
 f1_keywords:
@@ -17,23 +18,24 @@ helpviewer_keywords:
 - add element, webRequestModules
 - <add> element, webRequestModules
 ms.assetid: 47ec4adc-f39f-4bcd-8680-1ec21fd26890
-caps.latest.revision: "16"
+caps.latest.revision: 
 author: mcleblanc
 ms.author: markl
 manager: markl
-ms.workload: dotnet
+ms.workload:
+- dotnet
 ms.openlocfilehash: 9b7d2c0f52ea42fcb98be149ab005cd67c2db46a
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.sourcegitcommit: 15316053918995cc1380163a7d7e7edd5c44e6d7
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 03/19/2018
 ---
 # <a name="ltaddgt-element-for-webrequestmodules-network-settings"></a>&lt;新增&gt;webRequestModules （網路設定） 的項目
 將自訂的 Web 要求模組加入至應用程式。  
   
  \<configuration>  
-\<system.net >  
-\<webRequestModules >  
+\<system.net>  
+\<webRequestModules>  
 \<add>  
   
 ## <a name="syntax"></a>語法  
@@ -46,7 +48,7 @@ ms.lasthandoff: 12/22/2017
 ```  
   
 ## <a name="attributes-and-elements"></a>屬性和項目  
- 下列章節說明屬性、子項目和父項目。  
+ 下列各節描述屬性、子項目和父項目。  
   
 ### <a name="attributes"></a>屬性  
   
@@ -55,7 +57,7 @@ ms.lasthandoff: 12/22/2017
 |`prefix`|此 Web 要求模組所處理的要求 URI 前置詞。|  
 |`type`|完整限定的類型名稱 (由<xref:System.Type.FullName%2A>屬性) 和組件名稱 (由<xref:System.Reflection.Assembly.FullName%2A>屬性)、 分隔逗號，可實作此 Web 要求的模組。|  
   
-### <a name="child-elements"></a>子元素  
+### <a name="child-elements"></a>子項目  
  無。  
   
 ### <a name="parent-elements"></a>父項目  
@@ -69,7 +71,7 @@ ms.lasthandoff: 12/22/2017
   
  當符合 URI 的前置詞傳遞給建立 Web 要求模組<xref:System.Net.WebRequest.Create%2A?displayProperty=nameWithType>方法。  
   
- 值`prefix`屬性應該是有效的 URI-例如，「 http 」 或 「 http://www.contoso.com"的前置字元。  
+ 值`prefix`屬性應該是有效的 URI-例如，「 http 」 的前置字元或"http://www.contoso.com"。  
   
  值`type`屬性應為有效型別名稱和對應的組件名稱，以逗號分隔。  
   
@@ -92,6 +94,6 @@ ms.lasthandoff: 12/22/2017
 </configuration>  
 ```  
   
-## <a name="see-also"></a>請參閱  
+## <a name="see-also"></a>另請參閱  
  <xref:System.Net.WebRequest>  
  [網路設定結構描述](../../../../../docs/framework/configure-apps/file-schema/network/index.md)

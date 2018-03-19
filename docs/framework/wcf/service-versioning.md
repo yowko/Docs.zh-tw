@@ -5,20 +5,22 @@ ms.date: 03/30/2017
 ms.prod: .net-framework
 ms.reviewer: 
 ms.suite: 
-ms.technology: dotnet-clr
+ms.technology:
+- dotnet-clr
 ms.tgt_pltfrm: 
 ms.topic: article
 ms.assetid: 37575ead-d820-4a67-8059-da11a2ab48e2
-caps.latest.revision: "19"
+caps.latest.revision: 
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.workload: dotnet
+ms.workload:
+- dotnet
 ms.openlocfilehash: 791e201907f72f9d590f6d835fd6ec1bfc25633f
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.sourcegitcommit: 15316053918995cc1380163a7d7e7edd5c44e6d7
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 03/19/2018
 ---
 # <a name="service-versioning"></a>服務版本控制
 在初始部署以及存留期間可能的數次部署之後，服務 (以及公開的端點) 可能因各種不同的原因而需要變更，例如變更業務需要、資訊技術需求，或解決其他問題等。 每個變更都會產生新的服務版本。 本主題將說明，如何考量 [!INCLUDE[indigo1](../../../includes/indigo1-md.md)] 中的版本控制。  
@@ -110,7 +112,7 @@ ms.lasthandoff: 12/22/2017
  服務合約版本控制與資料合約版本控制相似，同樣包含加入、變更和移除作業。  
   
 ### <a name="specifying-name-namespace-and-action"></a>指定名稱、命名空間和動作  
- 根據預設，服務合約的名稱即是介面的名稱。 其預設的命名空間為 "http://tempuri.org"，而各項作業的動作為 "http://tempuri.org/contractname/methodname"。 建議您明確指定服務合約的名稱和命名空間及各項作業的動作，以避免使用 "http://tempuri.org"，同時避免在服務合約中公開介面和方法名稱。  
+ 根據預設，服務合約的名稱即是介面的名稱。 預設命名空間是"http://tempuri.org"，而且每個作業的動作"http://tempuri.org/contractname/methodname"。 建議您明確指定名稱和服務合約的命名空間和動作的每個作業以避免使用"http://tempuri.org」，並防止服務合約中公開的介面和方法名稱。  
   
 ### <a name="adding-parameters-and-operations"></a>加入參數和作業  
  加入服務所公開的服務作業為非中斷變更，因為現有用戶端不需考量這些新作業。  
@@ -136,7 +138,7 @@ ms.lasthandoff: 12/22/2017
  端點位址和繫結的變更屬於中斷變更，除非用戶端能夠動態地發現新端點位址或繫結。 實作此功能的一項機制是藉由使用通用探索、描述和整合 (UDDI) 登錄以及 UDDI 引動模式，其中用戶端會嘗試與端點進行通訊，並且在發生錯誤時，查詢已知 UDDI 登錄中目前端點的中繼資料。 然後用戶端會使用來自這項中繼資料的位址和繫結與端點進行通訊。 如果此通訊成功，用戶端就會快取位址和繫結資訊以供未來使用。  
   
 ## <a name="routing-service-and-versioning"></a>路由服務與版本控制  
- 如果對服務所做的變更是中斷變更，而且您必須同時執行兩個以上不同的服務版本，就可以使用 WCF 路由服務，將訊息路由傳送至適當的服務執行個體。 WCF 路由服務會使用以內容為基礎的路由，換言之，它會使用訊息內部的資訊來判斷要路由傳送訊息的目標位置。 [!INCLUDE[crabout](../../../includes/crabout-md.md)]此 WCF 路由服務，請參閱[路由服務](../../../docs/framework/wcf/feature-details/routing-service.md)。 如需如何使用 WCF 路由服務的服務版本設定的範例，請參閱[How To： 服務版本控制](../../../docs/framework/wcf/feature-details/how-to-service-versioning.md)。  
+ 如果對服務所做的變更是中斷變更，而且您必須同時執行兩個以上不同的服務版本，就可以使用 WCF 路由服務，將訊息路由傳送至適當的服務執行個體。 WCF 路由服務會使用以內容為基礎的路由，換言之，它會使用訊息內部的資訊來判斷要路由傳送訊息的目標位置。 [!INCLUDE[crabout](../../../includes/crabout-md.md)] 此 WCF 路由服務，請參閱[路由服務](../../../docs/framework/wcf/feature-details/routing-service.md)。 如需如何使用 WCF 路由服務的服務版本設定的範例，請參閱[How To： 服務版本控制](../../../docs/framework/wcf/feature-details/how-to-service-versioning.md)。  
   
 ## <a name="appendix"></a>附錄  
  需要嚴格版本控制時的一般資料合約版本控制方針，是將資料合約視為固定不變，並且在需要變更時建立新的合約。 您必須針對每個新的資料合約建立新類別，因此需要有機制避免採用根據舊資料合約類別撰寫的現有程式碼之後，還須再根據新資料合約類別重新撰寫。  
@@ -186,7 +188,7 @@ public class PurchaseOrderV2 : IPurchaseOrderV1, IPurchaseOrderV2
   
  服務合約會更新，以加入根據 `PurchaseOrderV2` 所撰寫的新作業。 根據 `IPurchaseOrderV1` 撰寫的現有商務邏輯會在 `PurchaseOrderV2` 中繼續運作，而需要 `OrderDate` 屬性的新商務邏輯則會根據 `IPurchaseOrderV2` 撰寫。  
   
-## <a name="see-also"></a>請參閱  
+## <a name="see-also"></a>另請參閱  
  <xref:System.Runtime.Serialization.DataContractSerializer>  
  <xref:System.Runtime.Serialization.DataContractAttribute>  
  <xref:System.Runtime.Serialization.DataContractAttribute.Name%2A>  

@@ -5,7 +5,8 @@ ms.date: 03/30/2017
 ms.prod: .net-framework
 ms.reviewer: 
 ms.suite: 
-ms.technology: dotnet-bcl
+ms.technology:
+- dotnet-bcl
 ms.tgt_pltfrm: 
 ms.topic: article
 helpviewer_keywords:
@@ -14,16 +15,17 @@ helpviewer_keywords:
 - accessing embedded objects
 - embedded objects, UI Automation
 ms.assetid: 93fdfbb9-0025-4b72-8ca0-0714adbb70d5
-caps.latest.revision: "17"
+caps.latest.revision: 
 author: Xansky
 ms.author: mhopkins
 manager: markl
-ms.workload: dotnet
+ms.workload:
+- dotnet
 ms.openlocfilehash: 97f2f03cd55512c29c686759e756a1941f472157
-ms.sourcegitcommit: c0dd436f6f8f44dc80dc43b07f6841a00b74b23f
+ms.sourcegitcommit: 15316053918995cc1380163a7d7e7edd5c44e6d7
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 01/19/2018
+ms.lasthandoff: 03/19/2018
 ---
 # <a name="textpattern-and-embedded-objects-overview"></a>TextPattern 和 Embedded 物件概觀
 > [!NOTE]
@@ -54,7 +56,7 @@ ms.lasthandoff: 01/19/2018
   
  如需周遊文字範圍的內容，則應在幕後執行一連串的步驟，才能成功執行 <xref:System.Windows.Automation.Text.TextPatternRange.Move%2A> 方法。  
   
-1.  文字範圍已正規化；也就是，文字範圍已在 <xref:System.Windows.Automation.Text.TextPatternRangeEndpoint.Start> 端點摺疊為變質範圍，以致 <xref:System.Windows.Automation.Text.TextPatternRangeEndpoint.End> 端點變成多餘的。 在文字範圍跨越 <xref:System.Windows.Automation.Text.TextUnit> 界限的情況下，這是消除語意模糊的必要步驟：例如，"{The U}RL [http://www.microsoft.com](http://www.microsoft.com) is embedded in text"，其中 "{" 和 "}" 是文字範圍端點。  
+1.  文字範圍已正規化；也就是，文字範圍已在 <xref:System.Windows.Automation.Text.TextPatternRangeEndpoint.Start> 端點摺疊為變質範圍，以致 <xref:System.Windows.Automation.Text.TextPatternRangeEndpoint.End> 端點變成多餘的。 這個步驟是必要情況下，文字範圍跨越<xref:System.Windows.Automation.Text.TextUnit>界限:，例如"{The U} RL [ http://www.microsoft.com ](http://www.microsoft.com)內嵌在文字"其中"{"和"}"是文字範圍端點。  
   
 2.  結果產生的範圍會在 <xref:System.Windows.Automation.TextPattern.DocumentRange%2A> 中向後移至所要求 <xref:System.Windows.Automation.Text.TextUnit> 界限的開頭。  
   
@@ -79,14 +81,14 @@ ms.lasthandoff: 01/19/2018
 ### <a name="hyperlink"></a>超連結  
  **範例 1 - 包含內嵌文字超連結的文字範圍**  
   
- {The URL [http://www.microsoft.com](http://www.microsoft.com) is embedded in text}.  
+ {URL [ http://www.microsoft.com ](http://www.microsoft.com)內嵌於文字}。  
   
 |呼叫的方法|結果|  
 |-------------------|------------|  
-|<xref:System.Windows.Automation.Text.TextPatternRange.GetText%2A>|傳回字串 "The URL http://www.microsoft.com is embedded in text"。|  
+|<xref:System.Windows.Automation.Text.TextPatternRange.GetText%2A>|傳回字串"URLhttp://www.microsoft.com內嵌於文字中 」。|  
 |<xref:System.Windows.Automation.Text.TextPatternRange.GetEnclosingElement%2A>|傳回圍住文字範圍的最內層 <xref:System.Windows.Automation.AutomationElement> ；在此情況下是代表文字提供者本身的 <xref:System.Windows.Automation.AutomationElement> 。|  
 |<xref:System.Windows.Automation.Text.TextPatternRange.GetChildren%2A>|傳回表示超連結控制項的 <xref:System.Windows.Automation.AutomationElement> 。|  
-|<xref:System.Windows.Automation.TextPattern.RangeFromChild%2A> ，其中 <xref:System.Windows.Automation.AutomationElement> 是先前 `GetChildren` 方法傳回的物件。|傳回表示 "http://www.microsoft.com" 的範圍。|  
+|<xref:System.Windows.Automation.TextPattern.RangeFromChild%2A> ，其中 <xref:System.Windows.Automation.AutomationElement> 是先前 `GetChildren` 方法傳回的物件。|傳回表示範圍 」http://www.microsoft.com"。|  
   
  **範例 2 - 部分跨越內嵌文字超連結的文字範圍**  
   
@@ -100,7 +102,7 @@ ms.lasthandoff: 01/19/2018
   
  **範例 3-部分跨越文字容器內容的文字範圍。此文字容器有不屬於此文字範圍的內嵌的文字超連結。**  
   
- {The URL} [http://www.microsoft.com](http://www.microsoft.com) is embedded in text.  
+ {URL}[ http://www.microsoft.com ](http://www.microsoft.com)內嵌於文字。  
   
 |呼叫的方法|結果|  
 |-------------------|------------|  
@@ -159,7 +161,7 @@ ms.lasthandoff: 01/19/2018
 |<xref:System.Windows.Automation.GridPattern.GetItem%2A> ，參數為 (1,1)。|傳回 <xref:System.Windows.Automation.AutomationElement>，表示表格儲存格的內容；在此情況下，此元素是文字控制項。|  
 |<xref:System.Windows.Automation.TextPattern.RangeFromChild%2A> ，其中 <xref:System.Windows.Automation.AutomationElement> 是先前 `GetItem` 方法傳回的物件。|傳回 "Y"。|  
   
-## <a name="see-also"></a>請參閱  
+## <a name="see-also"></a>另請參閱  
  <xref:System.Windows.Automation.TextPattern>  
  <xref:System.Windows.Automation.Text.TextPatternRange>  
  <xref:System.Windows.Automation.Provider.ITextProvider>  

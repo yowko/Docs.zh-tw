@@ -5,7 +5,8 @@ ms.date: 03/30/2017
 ms.prod: .net-framework
 ms.reviewer: 
 ms.suite: 
-ms.technology: dotnet-clr
+ms.technology:
+- dotnet-clr
 ms.tgt_pltfrm: 
 ms.topic: article
 helpviewer_keywords:
@@ -13,22 +14,23 @@ helpviewer_keywords:
 - Windows Communication Foundation [WCF], addresses
 - WCF [WCF], addresses
 ms.assetid: 13f269e3-ebb1-433c-86cf-54fbd866a627
-caps.latest.revision: "18"
+caps.latest.revision: 
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.workload: dotnet
+ms.workload:
+- dotnet
 ms.openlocfilehash: 58e6d383856d57e95a1ea5bd2658af2ec0b22ed5
-ms.sourcegitcommit: c0dd436f6f8f44dc80dc43b07f6841a00b74b23f
+ms.sourcegitcommit: 15316053918995cc1380163a7d7e7edd5c44e6d7
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 01/19/2018
+ms.lasthandoff: 03/19/2018
 ---
 # <a name="endpoint-addresses"></a>端點位址
 每個端點都有與其相關聯的位址，以便用來找出並識別端點。 這個位址主要包含一個可指定端點位置的統一資源識別元 (URI)。 端點位址是由 [!INCLUDE[indigo1](../../../../includes/indigo1-md.md)] 類別在 <xref:System.ServiceModel.EndpointAddress> 程式設計模型中表示，這個類別包含選擇性的 <xref:System.ServiceModel.EndpointAddress.Identity%2A> 屬性，而這個屬性可讓與某個端點交換訊息的其他端點驗證該端點；此外，這個類別也包含一組選擇性的 <xref:System.ServiceModel.EndpointAddress.Headers%2A> 屬性，這些屬性則會定義取用服務時所需的其他任何 SOAP 標頭。 選擇性標頭會提供額外與更詳細的定址資訊，以便識別端點或與服務端點互動。 端點位址會在網路上表示為 WS-Addressing 端點參考 (EPR)。  
   
 ## <a name="uri-structure-of-an-address"></a>位址的 URI 結構  
- 大部分傳輸的位址 URI 具有四個部分。 例如，URI http://www.fabrikam.com:322/mathservice.svc/secureEndpoint 的四個部分可按照下列方式列項：  
+ 大部分傳輸的位址 URI 具有四個部分。 例如，URI 的四個部分http://www.fabrikam.com:322/mathservice.svc/secureEndpoint可以分項，如下所示：  
   
 -   配置：http:  
   
@@ -86,7 +88,7 @@ ms.lasthandoff: 01/19/2018
 </system.serviceModel>  
 ```  
   
- 在先前的範例中，net.tcp://payroll.myorg.com:8000 和 http://shipping.myorg.com:8000 都是其個別配置的唯一基底位址，而且這些位址都已經通過。  
+ 在上述範例中，//payroll.myorg.com: 8000 和http://shipping.myorg.com:8000會的唯一基底位址，對於其各自的結構描述，都會通過。  
   
  `baseAddressPrefixFilter` 不支援萬用字元。  
   
@@ -148,6 +150,6 @@ ms.lasthandoff: 01/19/2018
   
  在某些情況中，端點會接收抵達基礎傳輸的所有訊息，而不只有包含適當 `To` 標頭的訊息。 若要啟用這項功能，使用者可以使用 <xref:System.ServiceModel.Dispatcher.MatchAllMessageFilter> 類別。  
   
-## <a name="see-also"></a>請參閱  
+## <a name="see-also"></a>另請參閱  
  [指定端點位址](../../../../docs/framework/wcf/specifying-an-endpoint-address.md)  
  [服務身分識別和驗證](../../../../docs/framework/wcf/feature-details/service-identity-and-authentication.md)

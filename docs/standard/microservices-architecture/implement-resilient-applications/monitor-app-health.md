@@ -12,10 +12,10 @@ ms.workload:
 - dotnet
 - dotnetcore
 ms.openlocfilehash: 76821e27613335609527b867a6b94dac551f6235
-ms.sourcegitcommit: e7f04439d78909229506b56935a1105a4149ff3d
-ms.translationtype: HT
+ms.sourcegitcommit: 15316053918995cc1380163a7d7e7edd5c44e6d7
+ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 12/23/2017
+ms.lasthandoff: 03/19/2018
 ---
 # <a name="health-monitoring"></a>健康狀態監視
 
@@ -37,7 +37,7 @@ ms.lasthandoff: 12/23/2017
 
 您可以看看 eShopOnContainers 範例應用程式如何使用 HealthChecks 程式庫。 首先，您需要為每個微服務定義健康狀態良好的構成項目。 在範例應用程式中，如果可以透過 HTTP 存取微服務 API 且其相關 SQL Server 資料庫亦可供存取，即表示微服務健康狀態良好。
 
-未來，您將能夠以 NuGet 套件形式安裝 HealthChecks 程式庫。 但在本文撰寫當下，您仍必須下載並編譯程式碼以作為方案的一部分。 複製 https://github.com/Dotnet-architecture/HealthChecks 的程式碼，並將下列資料夾複製到您的方案中：
+未來，您將能夠以 NuGet 套件形式安裝 HealthChecks 程式庫。 但在本文撰寫當下，您仍必須下載並編譯程式碼以作為方案的一部分。 複製程式碼位於https://github.com/dotnet-architecture/HealthChecks並將下列資料夾複製到您的方案：
 
   - src/common
   - src/Microsoft.AspNetCore.HealthChecks
@@ -190,12 +190,12 @@ HealthChecks 程式庫可透過未來外部資源的新健康狀態檢查而進�
 
 ## <a name="additional-resources"></a>其他資源
 
--   **ASP.NET Core HealthChecks** (早期版本) [ *https://github.com/aspnet/HealthChecks/*](https://github.com/aspnet/HealthChecks/)
+-   **ASP.NET Core HealthChecks** （最早版本） [*https://github.com/aspnet/HealthChecks/*](https://github.com/aspnet/HealthChecks/)
 
--   **Service Fabric 健康狀態監視簡介**
+-   **服務網狀架構健全狀況監視簡介**
     [*https://docs.microsoft.com/azure/service-fabric/service-fabric-health-introduction*](https://docs.microsoft.com/azure/service-fabric/service-fabric-health-introduction)
 
--   **Azure Application Insights**
+-   **Azure 的 Application Insights**
     [*https://azure.microsoft.com/services/application-insights/*](https://azure.microsoft.com/services/application-insights/)
 
 -   **Microsoft Operations Management Suite**
