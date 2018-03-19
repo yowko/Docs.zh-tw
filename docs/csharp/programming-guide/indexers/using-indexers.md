@@ -2,18 +2,20 @@
 title: "使用索引子 (C# 程式設計手冊)"
 ms.date: 07/20/2015
 ms.prod: .net
-ms.technology: devlang-csharp
+ms.technology:
+- devlang-csharp
 ms.topic: article
-helpviewer_keywords: indexers [C#], about indexers
+helpviewer_keywords:
+- indexers [C#], about indexers
 ms.assetid: df70e1a2-3ce3-4aba-ad80-4b2f3538699f
-caps.latest.revision: "30"
+caps.latest.revision: 
 author: BillWagner
 ms.author: wiwagn
-ms.openlocfilehash: d5c727edbbea116d858c6acf6b600f8fd9f43ee2
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.openlocfilehash: 17bbfabe8a53fc51e81434d0a2bd9fb2b29c4695
+ms.sourcegitcommit: 83dd5ec003e788ccb3e33f3412a7af39ae347646
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 03/15/2018
 ---
 # <a name="using-indexers-c-programming-guide"></a>使用索引子 (C# 程式設計手冊)
 索引子是語法便利性，可讓您建立用戶端應用程式可以就像陣列一樣地存取的 [class](../../../csharp/language-reference/keywords/class.md)、[struct](../../../csharp/language-reference/keywords/struct.md) 或 [interface](../../../csharp/language-reference/keywords/interface.md)。 索引子最常實作於類型中，而類型的主要用途是封裝內部集合或陣列。 例如，假設您的 TempRecord 類別將華氏溫度代表為 24 小時期間記錄於 10 個不同的時間。 這個類別包含浮點類型的 "temps" 陣列以代表溫度，以及代表溫度記錄日期的 <xref:System.DateTime>。 在此類別中實作索引子，用戶端即可將 TempRecord 執行個體中的溫度存取為 `float temp = tr[4]`，而不是 `float temp = tr.temps[4]`。 索引子標記法不僅可簡化用戶端應用程式的語法，還可以讓其他開發人員更直覺地了解類別其用途。  
@@ -34,9 +36,9 @@ public int this[int index]    // Indexer declaration
   
  索引子的簽章包含其型式參數的數目和類型。 它不包含索引子類型或型式參數的名稱。 如果您在相同的類別中宣告多個索引子，則它們必須具有不同的簽章。  
   
- 索引子值不會分類為變數；因此，您無法將索引子值傳遞為 [ref](../../../csharp/language-reference/keywords/ref.md) 或 [out](../../../csharp/language-reference/keywords/out.md) 參數。  
+ 索引子值不會分類為變數；因此，您無法將索引子值傳遞為 [ref](../../../csharp/language-reference/keywords/ref.md) 或 [out](../../../csharp/language-reference/keywords/out-parameter-modifier.md) 參數。  
   
- 若要提供具有其他語言可使用之名稱的索引子，請在宣告中使用 `name` 屬性。 例如：  
+ 若要提供具有其他語言可使用之名稱的索引子，請在宣告中使用 `name` 屬性。 例如:   
   
 ```  
 [System.Runtime.CompilerServices.IndexerName("TheItem")]  
@@ -75,7 +77,7 @@ public int this [int index]   // Indexer declaration
   
 -   將 `get` 和 [set](../../../csharp/language-reference/keywords/set.md) 存取子的存取範圍設定為合理限制。 這對 `set` 存取子特別重要。 如需詳細資訊，請參閱[限制存取子的存取範圍](../../../csharp/programming-guide/classes-and-structs/restricting-accessor-accessibility.md)。  
   
-## <a name="see-also"></a>另請參閱  
+## <a name="see-also"></a>請參閱  
  [C# 程式設計指南](../../../csharp/programming-guide/index.md)  
  [索引子](../../../csharp/programming-guide/indexers/index.md)  
  [屬性](../../../csharp/programming-guide/classes-and-structs/properties.md)

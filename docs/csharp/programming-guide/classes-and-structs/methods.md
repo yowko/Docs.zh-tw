@@ -2,20 +2,21 @@
 title: "方法 (C# 程式設計手冊)"
 ms.date: 07/20/2015
 ms.prod: .net
-ms.technology: devlang-csharp
+ms.technology:
+- devlang-csharp
 ms.topic: article
 helpviewer_keywords:
 - methods [C#]
 - C# language, methods
 ms.assetid: cc738f07-e8cd-4683-9585-9f40c0667c37
-caps.latest.revision: "41"
+caps.latest.revision: 
 author: BillWagner
 ms.author: wiwagn
-ms.openlocfilehash: ff6e59f70a5718f6616fa9a585dd84144e1774a0
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.openlocfilehash: 5390ee08ddd0f4725bb42bbdf7240bb99bd25301
+ms.sourcegitcommit: 83dd5ec003e788ccb3e33f3412a7af39ae347646
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 03/15/2018
 ---
 # <a name="methods-c-programming-guide"></a>方法 (C# 程式設計手冊)
 方法是包含一系列陳述式的程式碼區塊。 程式會造成呼叫方法並指定任何所需的方法引數來執行陳述式。 在 C# 中，每個執行的指示是在方法的內容中執行。 Main 方法是每個 C# 應用程式的進入點，而且它是由 Common Language Runtime (CLR) 啟動程式時呼叫。  
@@ -130,7 +131,7 @@ static void Main(string[] args)
   
  [!code-csharp[csAsyncMethod#2](../../../csharp/programming-guide/classes-and-structs/codesnippet/CSharp/methods_9.cs)]  
   
- 非同步方法不可以宣告任何 [ref](../../../csharp/language-reference/keywords/ref.md) 或 [out](../../../csharp/language-reference/keywords/out.md) 參數，但是可以呼叫具有這類參數的方法。  
+ 非同步方法不可以宣告任何 [ref](../../../csharp/language-reference/keywords/ref.md) 或 [out](../../../csharp/language-reference/keywords/out-parameter-modifier.md) 參數，但是可以呼叫具有這類參數的方法。  
   
  如需非同步方法的詳細資訊，請參閱[使用 async 和 await 進行非同步程式設計](../../../csharp/programming-guide/concepts/async/index.md)、[非同步程式中的控制流程](../../../csharp/programming-guide/concepts/async/control-flow-in-async-programs.md)和[非同步傳回型別](../../../csharp/programming-guide/concepts/async/async-return-types.md)。  
   
@@ -148,10 +149,10 @@ public Customer this[long id] => store.LookupCustomer(id);
   
  如果方法會傳回 `void` 或非同步方法，則方法的主體必須是陳述式運算式 (如同 lambda)。  若為屬性和索引子，它們必須是唯讀，因此您不應使用 `get` 存取子關鍵字。  
   
-## <a name="iterators"></a>Iterator  
+## <a name="iterators"></a>迭代器  
  迭代器會對集合執行自訂的反覆項目，例如清單或陣列。 迭代器會使用 [yield return](../../../csharp/language-reference/keywords/yield.md) 陳述式來一次傳回一個項目。 當 [yield return](../../../csharp/language-reference/keywords/yield.md) 到達陳述式時，會記住在程式碼中的目前位置。 下一次呼叫迭代器時，便會從這個位置重新開始執行。  
   
- 您會使用 [foreach](../../../csharp/language-reference/keywords/foreach-in.md) 陳述式透過用戶端程式碼呼叫迭代器。  
+ 您會使用 [foreach](../../../csharp/language-reference/keywords/foreach-in.md) 陳述式，透過用戶端程式碼呼叫迭代器。  
   
  迭代器的傳回類型可以是 <xref:System.Collections.IEnumerable>、 <xref:System.Collections.Generic.IEnumerable%601>、 <xref:System.Collections.IEnumerator>或 <xref:System.Collections.Generic.IEnumerator%601>。  
   
@@ -160,7 +161,7 @@ public Customer this[long id] => store.LookupCustomer(id);
 ## <a name="c-language-specification"></a>C# 語言規格  
  [!INCLUDE[CSharplangspec](~/includes/csharplangspec-md.md)]  
   
-## <a name="see-also"></a>另請參閱  
+## <a name="see-also"></a>請參閱  
  [C# 程式設計指南](../../../csharp/programming-guide/index.md)  
  [類別和結構](index.md)  
  [存取修飾詞](access-modifiers.md)  

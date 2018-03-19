@@ -3,7 +3,6 @@ title: "Tlbimp.exe (類型程式庫匯入工具)"
 ms.custom: 
 ms.date: 03/30/2017
 ms.prod: .net-framework
-ms.reviewer: 
 ms.suite: 
 ms.technology:
 - dotnet-clr
@@ -18,17 +17,16 @@ helpviewer_keywords:
 - type libraries
 - converting type definitions
 ms.assetid: ec0a8d63-11b3-4acd-b398-da1e37e97382
-caps.latest.revision: 
 author: rpetrusha
 ms.author: ronpet
 manager: wpickett
 ms.workload:
 - dotnet
-ms.openlocfilehash: 2e6b98d03988c5eb747fb3a4c766c98f477a3b5a
-ms.sourcegitcommit: c0dd436f6f8f44dc80dc43b07f6841a00b74b23f
+ms.openlocfilehash: 2eb29c82b21088f4bfe4752d70b927ca048c875b
+ms.sourcegitcommit: 1c0b0f082b3f300e54b4d069b317ac724c88ddc3
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 01/19/2018
+ms.lasthandoff: 03/16/2018
 ---
 # <a name="tlbimpexe-type-library-importer"></a>Tlbimp.exe (類型程式庫匯入工具)
 類型程式庫匯入工具會將 COM 類型程式庫中找到的類型定義轉換為通用語言執行平台組件中的對等定義。 Tlbimp.exe 的輸出是二進位檔案 (組件)，它包含原始類型程式庫中所定義類型的執行階段中繼資料。 您可以使用像是 [Ildasm.exe](../../../docs/framework/tools/ildasm-exe-il-disassembler.md) 這類工具來檢查這個檔案。  
@@ -63,7 +61,7 @@ tlbimp tlbFile [options]
 |**/noclassmembers**|防止 Tlbimp.exe 將成員加入至類別。 這樣做可避免可能發生的 <xref:System.TypeLoadException>。|  
 |**/nologo**|隱藏 Microsoft 程式啟始資訊顯示。|  
 |**/out:** *filename*|指定要在其中寫入中繼資料定義的輸出檔、組件及命名空間名稱。 如果類型程式庫指定可明確控制組件命名空間的介面定義語言 (IDL) 自訂屬性，則 **/out** 選項不會影響組件的命名空間。 如果未指定這個選項，Tlbimp.exe 會將中繼資料寫入與輸入檔所定義之實際類型程式庫同名的檔案中，並指派 .dll 做為其副檔名。 如果輸出檔與輸入檔同名，則工具將會產生錯誤以防止覆寫類型程式庫。|  
-|**/primary**|為指定的類型程式庫產生主要 Interop 組件。 組件中會加入資訊，指出類型程式庫的發行者產生該組件。 藉由指定主要 Interop 組件，就可以區別發行者的組件與使用 Tlbimp.exe 從類型程式庫建立的任何其他組件。 如果您是類型程式庫的發行者，而且您要使用 Tlbimp.exe 匯入該類型程式庫，則應該只使用 **/primary** 選項。 請注意，您必須以[強式名稱](../../../docs/framework/app-domains/strong-named-assemblies.md)簽署主要 Interop 組件。 如需詳細資訊，請參閱[主要 Interop 組件](http://msdn.microsoft.com/library/b977a8be-59a0-40a0-a806-b11ffba5c080)。|  
+|**/primary**|為指定的類型程式庫產生主要 Interop 組件。 組件中會加入資訊，指出類型程式庫的發行者產生該組件。 藉由指定主要 Interop 組件，就可以區別發行者的組件與使用 Tlbimp.exe 從類型程式庫建立的任何其他組件。 如果您是類型程式庫的發行者，而且您要使用 Tlbimp.exe 匯入該類型程式庫，則應該只使用 **/primary** 選項。 請注意，您必須以[強式名稱](../../../docs/framework/app-domains/strong-named-assemblies.md)簽署主要 Interop 組件。 如需詳細資訊，請參閱[主要 Interop 組件](https://msdn.microsoft.com/library/b977a8be-59a0-40a0-a806-b11ffba5c080(v=vs.100))。|  
 |**/product:** `productinformation`|將產品資訊加入至輸出組件。 這項資訊可以在組件的 [檔案屬性] 對話方塊中進行檢視。|  
 |**/productversion:** `productversioninformation`|將產品版本資訊加入至輸出組件。 沒有格式限制。 這項資訊可以在組件的 [檔案屬性] 對話方塊中進行檢視。|  
 |**/publickey:** *filename*|指定包含公開金鑰的檔案，用來簽署產生的組件。 如果您指定 **/keyfile:** 或 **/keycontainer:** 選項而不是 **/publickey:**，Tlbimp.exe 將會從 **/keyfile:** 或 **/keycontainer:** 提供的公開/私密金鑰組產生公開金鑰。 **/publickey:** 選項支援測試金鑰和延遲簽署情節。 檔案會採用 Sn.exe 產生的格式。 如需詳細資訊，請參閱[強式名稱工具 (Sn.exe)](../../../docs/framework/tools/sn-exe-strong-name-tool.md) 中 Sn.exe 的 **-p** 選項。|  
@@ -82,7 +80,7 @@ tlbimp tlbFile [options]
 |**/?**|顯示工具的命令語法和選項。|  
   
 > [!NOTE]
->  Tlbimp.exe 的命令列選項不區分大小寫，而且可以依任何順序提供。 您只需要指定足夠的選項來唯一識別它。 因此，**/n** 相當於 **/nologo**，而 **/ou:** *outfile.dll* 相當於 **/out:** *outfile.dll*。  
+>  Tlbimp.exe 的命令列選項不區分大小寫，而且可以依任何順序提供。 您只需要指定足夠的選項來唯一識別它。 因此，**/n** 相當於 **/nologo**，且 **/ou:** *outfile.dll* 相當於 **/out:** *outfile.dll*。  
   
 ## <a name="remarks"></a>備註  
  Tlbimp.exe 會一次執行整個類型程式庫的轉換。 您無法使用這個工具針對單一類型程式庫中定義的類型子集產生類型資訊。  

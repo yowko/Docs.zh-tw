@@ -25,11 +25,11 @@ ms.assetid: 0301e31f-22ad-49af-ac3c-d5eae7f0ac43
 caps.latest.revision: 
 author: BillWagner
 ms.author: wiwagn
-ms.openlocfilehash: 0ac5c6bfb129f0367c2d62ebf139e44b8eb60379
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.openlocfilehash: 68da402bde670077e0700ce1ac60e7980c6568ad
+ms.sourcegitcommit: 1c0b0f082b3f300e54b4d069b317ac724c88ddc3
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 03/16/2018
 ---
 # <a name="c-operators"></a>C# 運算子
 C# 提供許多運算子，也就是指定要在運算式中執行哪些作業 (數學、索引化、函式呼叫等) 的符號。  您可以[多載](../../../csharp/programming-guide/statements-expressions-operators/overloadable-operators.md)許多運算子，以便在套用至使用者定義型別時變更它們的意義。  
@@ -78,7 +78,7 @@ C# 提供許多運算子，也就是指定要在運算式中執行哪些作業 (
   
  [-x](../../../csharp/language-reference/operators/subtraction-operator.md) – 數值否定。  
   
- [!x](../../../csharp/language-reference/operators/logical-negation-operator.md) – 邏輯否定。  
+ [\!x](../../../csharp/language-reference/operators/logical-negation-operator.md) – 邏輯否定。  
   
  [~x](../../../csharp/language-reference/operators/bitwise-complement-operator.md) – 位元補數。  
   
@@ -215,7 +215,7 @@ C# 提供許多運算子，也就是指定要在運算式中執行哪些作業 (
 -   [十進位](../../../csharp/language-reference/keywords/decimal.md)算術溢位一律會擲回 <xref:System.OverflowException>。 十進位除以零一定會擲回 <xref:System.DivideByZeroException>。  
   
   
-## <a name="see-also"></a>另請參閱  
+## <a name="see-also"></a>請參閱  
  [C# 參考](../../../csharp/language-reference/index.md)  
  [C# 程式設計指南](../../../csharp/programming-guide/index.md)  
  [C#](../../../csharp/index.md) [多載運算子](../../../csharp/programming-guide/statements-expressions-operators/overloadable-operators.md)  

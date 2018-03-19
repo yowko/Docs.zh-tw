@@ -2,21 +2,22 @@
 title: "運算子 (C# 程式設計手冊)"
 ms.date: 07/20/2015
 ms.prod: .net
-ms.technology: devlang-csharp
+ms.technology:
+- devlang-csharp
 ms.topic: article
 helpviewer_keywords:
 - operators [C#]
 - C# language, operators
 - operators [C#], about operators
 ms.assetid: 214e7b83-1a41-4f7c-9867-64e9c0bab39f
-caps.latest.revision: "42"
+caps.latest.revision: 
 author: BillWagner
 ms.author: wiwagn
-ms.openlocfilehash: 8e270b683862502c218ff248de76819ecea83dc8
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.openlocfilehash: 267022b8c6b7f8faf301cae1a62f4dfaa8249f96
+ms.sourcegitcommit: 1c0b0f082b3f300e54b4d069b317ac724c88ddc3
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 03/16/2018
 ---
 # <a name="operators-c-programming-guide"></a>運算子 (C# 程式設計手冊)
 在 C# 中，「 *運算子* 」(Operator) 是程式的元素，這類元素會套用至運算式或陳述式中的一個或多個「 *運算元* 」(Operand)。 只使用一個運算元的運算子稱為`++`「一元」 `new`(Unary) 運算子，例如遞增運算子 ( *) 或* 。 使用兩個運算元的運算子稱為`+`「二元」`-`(Binary) 運算子，例如算術運算子 (`*`、`/`、 *及* )。 還有一種運算子稱為條件運算子 (`?:`)，它會使用三個運算元而且是 C# 中唯一的三元運算子。  
@@ -63,9 +64,9 @@ ms.lasthandoff: 11/21/2017
   
 |運算式|描述|  
 |----------------|-----------------|  
-|[+](../../../csharp/language-reference/operators/addition-operator.md)x|識別|  
+|[+](../../../csharp/language-reference/operators/addition-operator.md)x|身分識別|  
 |[-](../../../csharp/language-reference/operators/subtraction-operator.md)x|否定|  
-|[!](../../../csharp/language-reference/operators/logical-negation-operator.md)x|邏輯否定|  
+|[\!](../../../csharp/language-reference/operators/logical-negation-operator.md)x|邏輯否定|  
 |[~](../../../csharp/language-reference/operators/bitwise-complement-operator.md)x|位元否定|  
 |[++](../../../csharp/language-reference/operators/increment-operator.md)x|前置遞增|  
 |[--](../../../csharp/language-reference/operators/decrement-operator.md)x|前置遞減|  
@@ -88,7 +89,7 @@ ms.lasthandoff: 11/21/2017
   
  **移位運算子**  
   
-|運算式|說明|  
+|運算式|描述|  
 |----------------|-----------------|  
 |x [<\<](../../../csharp/language-reference/operators/left-shift-operator.md) y|左移|  
 |x [>>](../../../csharp/language-reference/operators/right-shift-operator.md) y|右移|  
@@ -173,6 +174,6 @@ a = (b = c);
 ## <a name="related-sections"></a>相關章節  
  如需詳細資訊，請參閱[運算子關鍵字](../../../csharp/language-reference/keywords/operator-keywords.md)[C# 運算子](../../../csharp/language-reference/operators/index.md)。  
   
-## <a name="see-also"></a>另請參閱  
+## <a name="see-also"></a>請參閱  
  [C# 程式設計指南](../../../csharp/programming-guide/index.md)  
  [陳述式、運算式和運算子](../../../csharp/programming-guide/statements-expressions-operators/index.md)

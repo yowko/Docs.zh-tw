@@ -9,11 +9,11 @@ ms.assetid: 9bcf896a-5826-4189-8c1a-3e35fa08243a
 caps.latest.revision: 
 author: BillWagner
 ms.author: wiwagn
-ms.openlocfilehash: 501a11f1bc6118e647cc414f4b83a14f6b41a37d
-ms.sourcegitcommit: ba765893e3efcece67d99fd6d5ce0074b050d1d9
+ms.openlocfilehash: c9f2699646db17c9358f84f4c5407e7aab8b60cf
+ms.sourcegitcommit: 83dd5ec003e788ccb3e33f3412a7af39ae347646
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 03/02/2018
+ms.lasthandoff: 03/15/2018
 ---
 # <a name="asynchronous-programming-with-async-and-await-c"></a>使用 async 和 await 進行非同步程式設計 (C#)
 您可以使用非同步程式設計，避免發生效能瓶頸並增強應用程式的整體回應性。 不過，撰寫非同步應用程式的傳統技術可能很複雜，因而難以撰寫、偵錯和維護。  
@@ -219,7 +219,7 @@ await Task_MethodAsync();
   
 無法等候傳回型別為 `void` 的非同步方法，而且傳回 void 的方法呼叫端無法攔截該方法擲回的任何例外狀況。  
   
-非同步方法無法宣告 [ref](../../../../csharp/language-reference/keywords/ref.md) 或 [out](../../../../csharp/language-reference/keywords/out.md) 參數，但是此方法可以呼叫具有這類參數的方法。 同樣地，async 方法無法以傳址方式傳回值，但可以使用 ref 傳回值呼叫方法。 
+非同步方法無法宣告 [in](../../../../csharp/language-reference/keywords/in-parameter-modifier.md)、[ref](../../../../csharp/language-reference/keywords/ref.md) 或 [out](../../../../csharp/language-reference/keywords/out-parameter-modifier.md) 參數，但是此方法可以呼叫具有這類參數的方法。 同樣地，async 方法無法以傳址方式傳回值，但可以使用 ref 傳回值呼叫方法。 
   
 如需詳細資訊和範例，請參閱[非同步傳回型別 (C#)](../../../../csharp/programming-guide/concepts/async/async-return-types.md)。 如需如何在非同步方法中攔截例外狀況的詳細資訊，請參閱 [try-catch](../../../../csharp/language-reference/keywords/try-catch.md)。 
   

@@ -16,11 +16,11 @@ ms.author: ronpet
 manager: wpickett
 ms.workload:
 - dotnet
-ms.openlocfilehash: e6a6759ae285f2dd101bddf71ea8e5ca792e87df
-ms.sourcegitcommit: 957c696f25e39f923a827fc3ad5e8ab72768838c
+ms.openlocfilehash: 5f17550bc0cc4919f00dc93c8e92d258b38c4f76
+ms.sourcegitcommit: 1c0b0f082b3f300e54b4d069b317ac724c88ddc3
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 01/13/2018
+ms.lasthandoff: 03/16/2018
 ---
 # <a name="whats-new-in-accessibility-in-the-net-framework"></a>.NET Framework 協助工具的新功能
 
@@ -201,7 +201,7 @@ peer.RaiseAutomationEvent(AutomationEvents.LiveRegionChanged)
 從 .NET Framework 4.7.1 開始，各種 WinForms 控制項都提供作業系統中所提供高對比模式的呈現改善。 Windows 10 已變更某些高對比系統色彩的值，而且 Windows Forms 是以 Windows 10 Win32 架構為基礎。 為獲得最佳體驗，在最新版的 Windows 上執行，並新增最新作業系統變更，方法是在測試應用程式中新增 app.manifest 檔案，並將 Windows 10 支援的作業系統列取消註解，使它看起來如下：
 
 ```xml
-<!– Windows 10 –>
+<!-- Windows 10 -->
 <supportedOS Id=”{8e0f7a12-bfb3-4fe8-b9a5-48fd50a15a9a}” />
 ```
 一些高對比變更範例包含：

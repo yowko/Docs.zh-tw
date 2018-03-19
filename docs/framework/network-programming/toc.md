@@ -66,6 +66,7 @@
 #### [如何：自訂以時間為基礎的快取原則](how-to-customize-a-time-based-cache-policy.md)
 #### [如何：設定要求的快取原則](how-to-set-cache-policy-for-a-request.md)
 ## [網路程式設計的安全性](security-in-network-programming.md)
+### [傳輸層安全性 (TLS) 最佳做法](tls.md)
 ### [使用安全通訊端層](using-secure-sockets-layer.md)
 #### [憑證的選取和驗證](certificate-selection-and-validation.md)
 ### [網際網路驗證](internet-authentication.md)
