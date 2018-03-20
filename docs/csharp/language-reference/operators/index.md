@@ -25,11 +25,11 @@ ms.assetid: 0301e31f-22ad-49af-ac3c-d5eae7f0ac43
 caps.latest.revision: 
 author: BillWagner
 ms.author: wiwagn
-ms.openlocfilehash: 68da402bde670077e0700ce1ac60e7980c6568ad
-ms.sourcegitcommit: 1c0b0f082b3f300e54b4d069b317ac724c88ddc3
+ms.openlocfilehash: f18c2332f3576847800423c5c0bf7471bf37aafc
+ms.sourcegitcommit: 15316053918995cc1380163a7d7e7edd5c44e6d7
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 03/16/2018
+ms.lasthandoff: 03/19/2018
 ---
 # <a name="c-operators"></a>C# 運算子
 C# 提供許多運算子，也就是指定要在運算式中執行哪些作業 (數學、索引化、函式呼叫等) 的符號。  您可以[多載](../../../csharp/programming-guide/statements-expressions-operators/overloadable-operators.md)許多運算子，以便在套用至使用者定義型別時變更它們的意義。  
@@ -84,7 +84,7 @@ C# 提供許多運算子，也就是指定要在運算式中執行哪些作業 (
   
  [++x](../../../csharp/language-reference/operators/increment-operator.md) – 前置遞增。  傳回 x 的值之前，利用大於 x 值的值 (通常會加上整數 1) 更新儲存位置。  
   
- [--x](../../../csharp/language-reference/operators/decrement-operator.md) – 前置遞減。  傳回 x 的值之前，利用小於 x 值的值 (通常會加上整數 1) 更新儲存位置。  
+ [--x](../../../csharp/language-reference/operators/decrement-operator.md) – 前置遞減。  更新儲存體位置之後，傳回 x 減一的 x 值 (通常減去整數 1)。  
   
  [(T)x](../../../csharp/language-reference/operators/invocation-operator.md) – 型別轉換。  
   
