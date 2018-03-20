@@ -5,7 +5,8 @@ ms.date: 03/30/2017
 ms.prod: .net-framework
 ms.reviewer: 
 ms.suite: 
-ms.technology: dotnet-clr
+ms.technology:
+- dotnet-clr
 ms.tgt_pltfrm: 
 ms.topic: article
 helpviewer_keywords:
@@ -14,11 +15,12 @@ helpviewer_keywords:
 - Configuration file
 - configuration file schema
 ms.assetid: 2db21a57-5f64-426f-89df-fb0dc2d2def5
-caps.latest.revision: "45"
+caps.latest.revision: 
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.workload: dotnet
+ms.workload:
+- dotnet
 ms.openlocfilehash: e21dacd5f01ba956ba78456b8e325d0b7e767df7
 ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
@@ -376,11 +378,11 @@ ms.lasthandoff: 12/22/2017
  服務組態編輯器可讓您針對現有的 COM+ 應用程式建立新的組態檔，或是編輯現有的 COM+ 組態。 **COM 合約**節點只會顯示當 <`comContract`> 區段存在組態檔中。  
   
 ### <a name="creating-a-new-com-configuration"></a>建立新 COM+ 組態  
- 在建立新的 COM+ 組態之前，請先確定您的 COM+ 應用程式已安裝在 [元件服務] 中，並在 [全域組件快取] (GAC) 中註冊。  
+ 在建立新的 COM+ 組態之前，請先確定您的 COM+ 應用程式已安裝在 [元件服務] 中，並在 [全域組件快取] \(GAC) 中註冊。  
   
 1.  選取**檔案**功能表-> **整合** -> **COM + 應用程式。** 這個作業會關閉目前開啟的檔案。 如果目前檔案中包含未儲存的資料，就會出現 [儲存] 對話方塊。 **COM + 整合精靈**隨即啟動。  
   
-2.  從第一頁的樹狀目錄中選取 COM+ 應用程式。 如果您在樹狀目錄中找不到您的 COM+ 應用程式，請確認該應用程式是否已經安裝在 [元件服務] 中，並且在 [全域組件快取] (GAC) 中註冊。  
+2.  從第一頁的樹狀目錄中選取 COM+ 應用程式。 如果您在樹狀目錄中找不到您的 COM+ 應用程式，請確認該應用程式是否已經安裝在 [元件服務] 中，並且在 [全域組件快取] \(GAC) 中註冊。  
   
 3.  在下一頁，選取您要公開為 [!INCLUDE[indigo2](../../../includes/indigo2-md.md)] 服務的方法。 預設會顯示並選取 COM+ 應用程式支援的所有方法。  
   

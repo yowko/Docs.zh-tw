@@ -2,7 +2,8 @@
 title: "逐步解說：在元件設計工具中建立 Windows 服務應用程式"
 ms.date: 03/30/2017
 ms.prod: .net-framework
-ms.technology: dotnet-clr
+ms.technology:
+- dotnet-clr
 ms.topic: article
 dev_langs:
 - csharp
@@ -11,11 +12,12 @@ helpviewer_keywords:
 - Windows Service applications, walkthroughs
 - Windows Service applications, creating
 ms.assetid: e24d8a3d-edc6-485c-b6e0-5672d91fb607
-caps.latest.revision: "57"
+caps.latest.revision: 
 author: ghogen
 ms.author: ghogen
 manager: douge
-ms.workload: dotnet
+ms.workload:
+- dotnet
 ms.openlocfilehash: 42fc5f27f1c78e243ff1d3a705c61a20ff459937
 ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
@@ -62,7 +64,7 @@ ms.lasthandoff: 12/22/2017
   
      專案範本會自動加入繼承自 `Service1` 且名稱為 <xref:System.ServiceProcess.ServiceBase?displayProperty=nameWithType> 的元件類別。  
   
-3.  在 [編輯]  功能表上，依序選擇 [尋找和取代] 、[檔案中尋找]  (鍵盤：CTRL+SHIFT+F)。 將所有 `Service1` 的出現變更為 `MyNewService`。 Service1.cs、Program.cs 和 Service1.Designer.cs (或它們的 .vb 對應項) 中可找到這些情況。  
+3.  在 [編輯]  功能表上，依序選擇 [尋找和取代] 、[檔案中尋找]  \(鍵盤：CTRL+SHIFT+F)。 將所有 `Service1` 的出現變更為 `MyNewService`。 Service1.cs、Program.cs 和 Service1.Designer.cs (或它們的 .vb 對應項) 中可找到這些情況。  
   
 4.  在 **Service1.cs [Design]** 或 **Service1.vb [Design]** 的 [屬性] 視窗中，設定 <xref:System.ServiceProcess.ServiceBase.ServiceName%2A> 並將 **的** (Name) `Service1` 屬性變更為 **MyNewService**(若尚未進行此設定)。  
   
