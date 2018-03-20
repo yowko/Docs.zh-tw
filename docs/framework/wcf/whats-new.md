@@ -5,18 +5,20 @@ ms.date: 03/30/2017
 ms.prod: .net-framework
 ms.reviewer: 
 ms.suite: 
-ms.technology: dotnet-clr
+ms.technology:
+- dotnet-clr
 ms.tgt_pltfrm: 
 ms.topic: article
 helpviewer_keywords:
 - WCF [WCF], what's new
 - Windows Communication Foundation [WCF], what's new
 ms.assetid: 7e93fe73-af93-46b5-9f63-32f761ee40cf
-caps.latest.revision: "35"
+caps.latest.revision: 
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.workload: dotnet
+ms.workload:
+- dotnet
 ms.openlocfilehash: 091925dd1f505693df0d1eb770bca604cf038667
 ms.sourcegitcommit: c0dd436f6f8f44dc80dc43b07f6841a00b74b23f
 ms.translationtype: MT
