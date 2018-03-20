@@ -8,12 +8,13 @@ ms.date: 11/30/2017
 ms.topic: article
 ms.prod: .net-core
 ms.technology: dotnet-cli
-ms.workload: dotnetcore
-ms.openlocfilehash: dc93e0554d422ddf42ac54dd94223f0285451e85
-ms.sourcegitcommit: e7f04439d78909229506b56935a1105a4149ff3d
+ms.workload:
+- dotnetcore
+ms.openlocfilehash: 50e8d5c335386c41e36a490263a4f4ebd2bd39ba
+ms.sourcegitcommit: 83dd5ec003e788ccb3e33f3412a7af39ae347646
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 12/23/2017
+ms.lasthandoff: 03/15/2018
 ---
 # <a name="dotnet-restore"></a>dotnet restore
 
@@ -118,7 +119,7 @@ dotnet restore [-h|--help]
 
 `-s|--source <SOURCE>`
 
-指定要在還原作業期間使用的 NuGet 套件來源。 這會覆寫 *NuGet.config* 檔案中指定的所有來源。 多次指定這個選項，即可提供多個來源。
+指定要在還原作業期間使用的 NuGet 套件來源。 如此會覆寫 *NuGet.config* 檔案中所指定的所有來源。 多次指定這個選項，即可提供多個來源。
 
 `--verbosity <LEVEL>`
 
@@ -160,7 +161,7 @@ dotnet restore [-h|--help]
 
 `-s|--source <SOURCE>`
 
-指定要在還原作業期間使用的 NuGet 套件來源。 這會覆寫 *NuGet.config* 檔案中指定的所有來源。 多次指定這個選項，即可提供多個來源。
+指定要在還原作業期間使用的 NuGet 套件來源。 如此會覆寫 *NuGet.config* 檔案中所指定的所有來源。 多次指定這個選項，即可提供多個來源。
 
 `--verbosity <LEVEL>`
 

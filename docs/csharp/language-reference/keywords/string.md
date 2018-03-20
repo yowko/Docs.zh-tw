@@ -2,7 +2,8 @@
 title: "string (C# 參考)"
 ms.date: 07/20/2015
 ms.prod: .net
-ms.technology: devlang-csharp
+ms.technology:
+- devlang-csharp
 ms.topic: article
 f1_keywords:
 - string
@@ -13,19 +14,19 @@ helpviewer_keywords:
 - string literals [C#]
 - string keyword [C#]
 ms.assetid: 3037e558-fb22-494d-bca1-a15ade11b11a
-caps.latest.revision: "31"
+caps.latest.revision: 
 author: BillWagner
 ms.author: wiwagn
-ms.openlocfilehash: 87df2b158b173072aad5257594e1b1482ae61067
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.openlocfilehash: 8899eb75b1b7c556a1e92f173a4d0ca4135014c8
+ms.sourcegitcommit: 1c0b0f082b3f300e54b4d069b317ac724c88ddc3
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 03/16/2018
 ---
 # <a name="string-c-reference"></a>string (C# 參考)
-`string` 類型代表零或多個 Unicode 字元序列。 `string` 是 <xref:System.String> 在 .NET Framework 中的別名。  
+`string` 類型代表零或多個 Unicode 字元序列。 `string` 是 <xref:System.String> 在 .NET 中的別名。  
   
- 雖然 `string` 是參考型別，但是定義等號比較運算子 (`==` 和 `!=`) 來比較 `string` 物件的值，而不是參考。 這樣會以更直覺的方式來測試字串是否相等。 例如：  
+ 雖然 `string` 是參考型別，但是定義等號比較運算子 (`==` 和 `!=`) 來比較 `string` 物件的值，而不是參考。 這樣會以更直覺的方式來測試字串是否相等。 例如:   
   
 ```csharp  
 string a = "hello";  
@@ -76,7 +77,7 @@ Console.WriteLine(a);
 > [!NOTE]
 >  逸出代碼 `\udddd` (其中 `dddd` 是四位數字) 代表 Unicode 字元 U+`dddd`。 也會辨識八位數 Unicode 逸出代碼︰`\Udddddddd`。  
   
- 逐字字串常值的開頭是 @，也會使用雙引號括住。 例如:   
+ 逐字字串常值的開頭為 `@`，也會用雙引號括住。 例如:   
   
 ```csharp  
 @"good morning"  // a string literal  
@@ -94,7 +95,7 @@ Console.WriteLine(a);
 @"""Ahoy!"" cried the captain." // "Ahoy!" cried the captain.  
 ```  
   
- @ 符號的另一個用法是使用本身為 C# 關鍵字的已參考 ([/reference](../../../csharp/language-reference/compiler-options/reference-compiler-option.md)) 識別項。  
+ 若要了解 `@` 特殊字元的其他使用方法，請參閱 [@ -- 逐字識別項](../tokens/verbatim.md)。  
   
  如需 C# 中字串的詳細資訊，請參閱[字串](../../../csharp/programming-guide/strings/index.md)。  
   
@@ -104,7 +105,7 @@ Console.WriteLine(a);
 ## <a name="c-language-specification"></a>C# 語言規格  
  [!INCLUDE[CSharplangspec](~/includes/csharplangspec-md.md)]  
   
-## <a name="see-also"></a>另請參閱  
+## <a name="see-also"></a>請參閱  
  [C# 參考](../../../csharp/language-reference/index.md)  
  [C# 程式設計指南](../../../csharp/programming-guide/index.md)  
  [使用字串的最佳做法](../../../standard/base-types/best-practices-strings.md)  

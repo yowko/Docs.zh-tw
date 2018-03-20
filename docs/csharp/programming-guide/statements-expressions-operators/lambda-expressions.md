@@ -15,11 +15,11 @@ ms.assetid: 57e3ba27-9a82-4067-aca7-5ca446b7bf93
 caps.latest.revision: 
 author: BillWagner
 ms.author: wiwagn
-ms.openlocfilehash: df59647b803bff448a801374a325f07e4903a160
-ms.sourcegitcommit: 22a48b64a0150a60b00b4fc4d8c62cde7f1670c4
+ms.openlocfilehash: 14bb60a5009f9a1ae59ed9846ebc868cfdcc05c6
+ms.sourcegitcommit: 83dd5ec003e788ccb3e33f3412a7af39ae347646
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 02/03/2018
+ms.lasthandoff: 03/15/2018
 ---
 # <a name="lambda-expressions-c-programming-guide"></a>Lambda 運算式 (C# 程式設計手冊)
 Lambda 運算式是 [匿名函式](../../../csharp/programming-guide/statements-expressions-operators/anonymous-methods.md) ，可用來建立 [委派](../../../csharp/programming-guide/delegates/using-delegates.md) 或 [運算式樹狀架構](http://msdn.microsoft.com/library/fb1d3ed8-d5b0-4211-a71f-dd271529294b) 類型。 使用 Lambda 運算式可以撰寫區域函式，這些函式可以當做引數傳遞，或是當做函式呼叫的值傳回。 Lambda 運算式對於撰寫 LINQ 查詢運算式而言特別有用。  
@@ -265,7 +265,7 @@ class Test
   
 -   導入 Lambda 運算式內的變數無法在外部方法中看見。  
   
--   Lambda 運算式無法直接從封入方法擷取 `ref` 或 `out` 參數。  
+-   Lambda 運算式無法直接從封入方法擷取 `in`、`ref` 或 `out` 參數。  
   
 -   Lambda 運算式中的 return 陳述式不會造成封入方法傳回。  
   
@@ -277,7 +277,7 @@ class Test
 ## <a name="featured-book-chapter"></a>精選書籍章節  
  [C# 3.0 Cookbook, Third Edition: More than 250 solutions for C# 3.0 programmers](https://msdn.microsoft.com/library/orm-9780596516109-03.aspx) (C# 3.0 Cookbook 第三版：250 個以上 C# 3.0 程式設計人員適用的方案) 中的 [Delegates, Events, and Lambda Expressions](https://msdn.microsoft.com/library/orm-9780596516109-03-09.aspx) (委派、事件和 Lambda 運算式)  
   
-## <a name="see-also"></a>另請參閱  
+## <a name="see-also"></a>請參閱  
  [C# 程式設計指南](../../../csharp/programming-guide/index.md)  
  [LINQ (Language-Integrated Query)](../../../csharp/programming-guide/concepts/linq/index.md)  
  [匿名方法](../../../csharp/programming-guide/statements-expressions-operators/anonymous-methods.md)  

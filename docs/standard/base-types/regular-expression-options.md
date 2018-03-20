@@ -25,11 +25,11 @@ manager: wpickett
 ms.workload:
 - dotnet
 - dotnetcore
-ms.openlocfilehash: a4a1513840d17f2e7b02acf821b5032eaac6e6fc
-ms.sourcegitcommit: e7f04439d78909229506b56935a1105a4149ff3d
+ms.openlocfilehash: cc32a98930c4c1243f53fc9c5d2a10f339b4de11
+ms.sourcegitcommit: 83dd5ec003e788ccb3e33f3412a7af39ae347646
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 12/23/2017
+ms.lasthandoff: 03/15/2018
 ---
 # <a name="regular-expression-options"></a>規則運算式選項
 <a name="Top"></a>依預設，輸入字串與規則運算式模式中任何常值字元的比較會區分大小寫，規則運算式模式中的空白字元會解譯成常值空白字元，而規則運算式中的擷取群組會隱含也會明確命名。 您可以藉由指定規則運算式選項來修改這些預設規則運算式行為和幾個其他方面。 這些選項 (列示於下表) 可以內嵌為規則運算式模式的部分，或是提供給 <xref:System.Text.RegularExpressions.Regex?displayProperty=nameWithType> 類別建構函式或靜態模式比對方法，以做為 <xref:System.Text.RegularExpressions.RegexOptions?displayProperty=nameWithType> 列舉值。  
@@ -281,11 +281,11 @@ ms.lasthandoff: 12/23/2017
   
 -   數字符號 (#) 會解譯成註解的開頭，而不是常值字元。 規則運算式模式中，從 # 字元到字串結尾的所有文字會被解譯成註解。  
   
- 不過，在下列案例中，即使您使用 <xref:System.Text.RegularExpressions.RegexOptions.IgnorePatternWhitespace?displayProperty=nameWithType> 選項，也不會忽略規則運算式中的空白字元：  
+ 但在下列案例中，即使您使用 <xref:System.Text.RegularExpressions.RegexOptions.IgnorePatternWhitespace?displayProperty=nameWithType> 選項，也不會忽略規則運算式中的空白字元：  
   
 -   字元類別中的空白字元一律解譯為常值。 例如，規則運算式模式 `[ .,;:]` 會比對任何單一空白字元、句點、逗號、分號或冒號。  
   
--   方括號數量詞中不允許空白字元，例如 `{`*n*`}`, `{`*n*`,}` 和 `{`*n*`,`*m*`}`。 例如，規則運算式模式 `\d{1. 3}` 無法比對從一到三位數的任何數字序列，因為其中包含空白字元。  
+-   方括號數量詞中不允許空白字元，例如 `{`n`}`、`{`n`,}` 和 `{`n`,`m`}`。 例如，規則運算式模式 `\d{1. 3}` 無法比對從一到三位數的任何數字序列，因為其中包含空白字元。  
   
 -   引進語言項目的字元序列中，不允許空白字元。 例如:   
   

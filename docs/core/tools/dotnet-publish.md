@@ -3,16 +3,17 @@ title: "dotnet publish 命令 - .NET Core CLI"
 description: "dotnet publish 命令會將 .NET Core 專案發行到目錄中。"
 author: mairaw
 ms.author: mairaw
-ms.date: 09/01/2017
+ms.date: 03/10/2018
 ms.topic: article
 ms.prod: .net-core
 ms.technology: dotnet-cli
-ms.workload: dotnetcore
-ms.openlocfilehash: e29d5269ab5e9e2c9fd08811552c09ec1c95363d
-ms.sourcegitcommit: 3fd4e718d1bac9769fe0c1dd08ca1b2323ae272b
+ms.workload:
+- dotnetcore
+ms.openlocfilehash: 2aa69217e949b970b632c4fad72838b63c2a8988
+ms.sourcegitcommit: 83dd5ec003e788ccb3e33f3412a7af39ae347646
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 01/11/2018
+ms.lasthandoff: 03/15/2018
 ---
 # <a name="dotnet-publish"></a>dotnet publish
 
@@ -50,6 +51,8 @@ dotnet publish [-h|--help]
 * 應用程式的相依性。 這些相依性會從 NuGet 快取複製到輸出資料夾。
 
 `dotnet publish` 命令的輸出已準備好部署至主機系統 (例如，伺服器、電腦、Mac、膝上型電腦) 以執行，且是準備要進行部署之應用程式的唯一正式支援方式。 根據專案指定的部署類型，主機系統上可能會安裝 (或不安裝) .NET Core 共用執行階段。 如需詳細資訊，請參閱 [.NET Core 應用程式部署](../deploying/index.md)。 針對已發行應用程式的目錄結構，請參閱[目錄結構 (英文)](/aspnet/core/hosting/directory-structure)。
+
+[!INCLUDE[dotnet restore note + options](~/includes/dotnet-restore-note-options.md)]
 
 ## <a name="arguments"></a>引數
 
@@ -156,14 +159,18 @@ dotnet publish [-h|--help]
 使用指定的專案檔發行應用程式：
 
 `dotnet publish ~/projects/app1/app1.csproj`
-    
+
 使用 `netcoreapp1.1` 架構發行目前目錄中的專案：
 
 `dotnet publish --framework netcoreapp1.1`
-    
+
 使用 `netcoreapp1.1` 架構和 `OS X 10.10` 的執行階段來發行目前應用程式 (您必須在專案檔中列出這個 RID)。
 
 `dotnet publish --framework netcoreapp1.1 --runtime osx.10.11-x64`
+
+發行目前的應用程式，但不還原專案對專案 (P2P) 的參考，還原作業期間只有根專案 (.NET Core SDK 2.0 及更新版本)：
+
+`dotnet publish --no-dependencies`
 
 ## <a name="see-also"></a>另請參閱
 

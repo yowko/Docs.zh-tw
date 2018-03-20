@@ -18,14 +18,14 @@ manager: wpickett
 ms.workload:
 - dotnet
 - dotnetcore
-ms.openlocfilehash: 4ed0b3991b08eceb950aa1a3aa1704529700feb3
-ms.sourcegitcommit: e7f04439d78909229506b56935a1105a4149ff3d
+ms.openlocfilehash: 127737877ac64ac9278bc039650caf72936571bf
+ms.sourcegitcommit: 83dd5ec003e788ccb3e33f3412a7af39ae347646
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 12/23/2017
+ms.lasthandoff: 03/15/2018
 ---
 # <a name="parallel-diagnostic-tools"></a>平行診斷工具
-[!INCLUDE[vs_dev10_ext](../../../includes/vs-dev10-ext-md.md)] 可廣泛支援多執行緒應用程式的偵錯和分析。  
+Visual Studio 可廣泛支援多執行緒應用程式的偵錯與分析。  
   
 ## <a name="debugging"></a>偵錯  
  Visual Studio 偵錯工具新增了視窗來對平行應用程式進行偵錯。 如需詳細資訊，請參閱下列主題：  

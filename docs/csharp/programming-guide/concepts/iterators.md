@@ -2,17 +2,18 @@
 title: "迭代器 (C#)"
 ms.date: 07/20/2015
 ms.prod: .net
-ms.technology: devlang-csharp
+ms.technology:
+- devlang-csharp
 ms.topic: article
 ms.assetid: c93f6dd4-e72a-4a06-be1c-a98b3255b734
-caps.latest.revision: "3"
+caps.latest.revision: 
 author: BillWagner
 ms.author: wiwagn
-ms.openlocfilehash: 6d4994ea57d9fd0df8dfca7ffa40c280499caee6
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.openlocfilehash: 48b09368ed0a84dc84793091b819ba7b4b6183f1
+ms.sourcegitcommit: 83dd5ec003e788ccb3e33f3412a7af39ae347646
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 03/15/2018
 ---
 # <a name="iterators-c"></a>迭代器 (C#)
 「迭代器」可用來逐步執行集合，例如清單和陣列。  
@@ -344,7 +345,7 @@ public class Stack<T> : IEnumerable<T>
   
  `yield return` 陳述式中的運算式類型必須隱含轉換成迭代器的傳回型別。  
   
- 在 C# 中，迭代器方法不能有任何 `ref` 或 `out` 參數。  
+ 在 C# 中，迭代器方法不可有任何 `in`、`ref` 或 `out` 參數。  
   
  在 C# 中，"yield" 不是保留字，只有在 `return` 或 `break` 關鍵字前面使用時才具有特殊意義。  
   
@@ -370,7 +371,7 @@ public class Stack<T> : IEnumerable<T>
   
 -   在迭代器中封裝建立清單。 在迭代器方法中，您可以建立清單，然後在迴圈中產生每個結果。  
   
-## <a name="see-also"></a>另請參閱  
+## <a name="see-also"></a>請參閱  
  <xref:System.Collections.Generic>  
  <xref:System.Collections.Generic.IEnumerable%601>  
  [foreach、in](../../../csharp/language-reference/keywords/foreach-in.md)  

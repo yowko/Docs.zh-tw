@@ -2,23 +2,24 @@
 title: "傳遞參考類型的參數 (C# 程式設計手冊)"
 ms.date: 07/20/2015
 ms.prod: .net
-ms.technology: devlang-csharp
+ms.technology:
+- devlang-csharp
 ms.topic: article
 helpviewer_keywords:
 - method parameters [C#], reference types
 - parameters [C#], reference
 ms.assetid: 9e6eb65c-942e-48ab-920a-b7ba9df4ea20
-caps.latest.revision: "14"
+caps.latest.revision: 
 author: BillWagner
 ms.author: wiwagn
-ms.openlocfilehash: 2cd862a9179e027ab82631631784203993d0465a
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.openlocfilehash: 282929d82822f81f12dae91d2f422da51a0f43e5
+ms.sourcegitcommit: 83dd5ec003e788ccb3e33f3412a7af39ae347646
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 03/15/2018
 ---
 # <a name="passing-reference-type-parameters-c-programming-guide"></a>傳遞參考類型的參數 (C# 程式設計手冊)
-[參考型別](../../../csharp/language-reference/keywords/reference-types.md)的變數不會直接包含其資料；它會包含其資料的參考。 以傳值方式傳遞參考型別參數時，可以變更參考所指向的資料，例如類別成員的值。 不過，您無法變更參考本身的值；也就是說，您無法使用相同的參考配置記憶體給新的類別，並讓它保存在區塊外。 若要這樣做，請使用 [ref](../../../csharp/language-reference/keywords/ref.md) 或 [out](../../../csharp/language-reference/keywords/out.md) 關鍵字來傳遞參數。 為求簡化，下列範例使用 `ref`。  
+[參考型別](../../../csharp/language-reference/keywords/reference-types.md)的變數不會直接包含其資料；它會包含其資料的參考。 以值的方式傳遞參考型別參數時，可以變更屬於參考資料的資料，例如類別成員的值。 但您無法變更參考本身的值；例如，您無法使用相同的參考，為新的類別配置記憶體，並讓其保存在方法之外。 若要這樣做，請使用 [ref](../../../csharp/language-reference/keywords/ref.md) 或 [out](../../../csharp/language-reference/keywords/out-parameter-modifier.md) 關鍵字來傳遞參數。 為求簡化，下列範例使用 `ref`。  
   
 ## <a name="passing-reference-types-by-value"></a>以傳值方式傳遞參考型別  
  下列範例示範以傳值方式將 `arr` 參考型別參數傳遞至 `Change` 方法。 因為參數是對 `arr` 的參考，所以可以變更陣列元素的值。 不過，嘗試將參數重新指派至不同的記憶體位置只能在方法內運作，而且不會影響原始的 `arr` 變數。  
@@ -43,9 +44,11 @@ ms.lasthandoff: 11/21/2017
   
  如需字串的詳細資訊，請參閱 [string](../../../csharp/language-reference/keywords/string.md)。  
   
-## <a name="see-also"></a>另請參閱  
+## <a name="see-also"></a>請參閱  
  [C# 程式設計指南](../../../csharp/programming-guide/index.md)  
  [傳遞參數](../../../csharp/programming-guide/classes-and-structs/passing-parameters.md)  
  [使用 ref 和 out 傳遞陣列](../../../csharp/programming-guide/arrays/passing-arrays-using-ref-and-out.md)  
  [ref](../../../csharp/language-reference/keywords/ref.md)  
+ [in](../../../csharp/language-reference/keywords/in-parameter-modifier.md)  
+ [out](../../../csharp/language-reference/keywords/out.md)  
  [參考型別](../../../csharp/language-reference/keywords/reference-types.md)

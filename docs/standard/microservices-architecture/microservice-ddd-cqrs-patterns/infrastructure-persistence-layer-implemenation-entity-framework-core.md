@@ -11,11 +11,11 @@ ms.topic: article
 ms.workload:
 - dotnet
 - dotnetcore
-ms.openlocfilehash: 67f89b4ee42d896497f462b80d41afff6b347e05
-ms.sourcegitcommit: e7f04439d78909229506b56935a1105a4149ff3d
+ms.openlocfilehash: 4acdbde6405af7eb78a8c605562fdb1795fedf4d
+ms.sourcegitcommit: 83dd5ec003e788ccb3e33f3412a7af39ae347646
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 12/23/2017
+ms.lasthandoff: 03/15/2018
 ---
 # <a name="implementing-the-infrastructure-persistence-layer-with-entity-framework-core"></a>使用 Entity Framework Core 實作基礎結構持續層
 
@@ -37,10 +37,10 @@ Entity Framework (EF) Core 是常見 Entity Framework 資料存取技術的輕�
 -   **使用 Visual Studio 的 ASP.NET Core 與 Entity Framework Core 使用者入門**
     [*https://docs.microsoft.com/aspnet/core/data/ef-mvc/*](https://docs.microsoft.com/aspnet/core/data/ef-mvc/)
 
--   **DbContext Class**
+-   **DbContext 類別**
     [*https://docs.microsoft.com/ef/core/api/microsoft.entityframeworkcore.dbcontext*](https://docs.microsoft.com/ef/core/api/microsoft.entityframeworkcore.dbcontext)
 
--   **Compare EF Core & EF6.x**
+-   **比較 EF Core 與 EF6.x**
     [*https://docs.microsoft.com/ef/efcore-and-ef6/index*](https://docs.microsoft.com/ef/efcore-and-ef6/index)
 
 ## <a name="infrastructure-in-entity-framework-core-from-a-ddd-perspective"></a>DDD 觀點的 Entity Framework Core 基礎結構
@@ -240,13 +240,13 @@ builder.RegisterType<OrderRepository>()
 
 #### <a name="additional-resources"></a>其他資源
 
--   **在 ASP.NET MVC 應用程式中實作儲存機制和工作單位模式**
+-   **在 ASP.NET MVC 應用程式中實作存放庫與工作單位模式**
     [*https://www.asp.net/mvc/overview/older-versions/getting-started-with-ef-5-using-mvc-4/implementing-the-repository-and-unit-of-work-patterns-in-an-asp-net-mvc-application*](https://www.asp.net/mvc/overview/older-versions/getting-started-with-ef-5-using-mvc-4/implementing-the-repository-and-unit-of-work-patterns-in-an-asp-net-mvc-application)
 
--   **Jonathan Allen.Implementation Strategies for the Repository Pattern with Entity Framework, Dapper, and Chain (Entity Framework、Dapper 和 Chain 的存放庫模式實作策略)**
+-   **Jonathan Allen.利用 Entity Framework、Dapper 及 Chain，實作存放庫模式的策略**
     [*https://www.infoq.com/articles/repository-implementation-strategies*](https://www.infoq.com/articles/repository-implementation-strategies)
 
--   **Cesar de la Torre：Comparing ASP.NET Core IoC container service lifetimes with Autofac IoC container instance scopes (比較 ASP.NET Core IoC 容器服務存留期與 Autofac IoC 容器執行個體範圍)**
+-   **Cesar de la Torre：比較 ASP.NET Core IoC 容器服務生命週期與 Autofac IoC 容器執行個體範圍**
     [*https://blogs.msdn.microsoft.com/cesardelatorre/2017/01/26/comparing-asp-net-core-ioc-service-life-times-and-autofac-ioc-instance-scopes/*](https://blogs.msdn.microsoft.com/cesardelatorre/2017/01/26/comparing-asp-net-core-ioc-service-life-times-and-autofac-ioc-instance-scopes/)
 
 ## <a name="table-mapping"></a>資料表對應
@@ -330,7 +330,7 @@ class OrderEntityTypeConfiguration : IEntityTypeConfiguration<Order>
 
 ### <a name="the-hilo-algorithm-in-ef-core"></a>EF Core 中的 Hi/Lo 演算法
 
-上述範例中的程式碼有一個有趣的層面是，它會使用[Hi/Lo 演算法](https://vladmihalcea.com/2014/06/23/the-hilo-algorithm/)作為金鑰產生策略。
+上述範例中的程式碼有一個有趣的層面是，它會使用[Hi/Lo 演算法](https://vladmihalcea.com/the-hilo-algorithm/)作為金鑰產生策略。
 
 Hi/Lo 演算法適用於您需要唯一索引鍵時。 總而言之，Hi-Lo 演算法會將唯一識別碼指派給資料表資料列，而不依賴將資料列立即儲存在資料庫中。 這可讓您立即開始使用識別碼，如同一般循序資料庫識別碼那樣。
 
@@ -457,22 +457,22 @@ public IEnumerable<T> List(ISpecification<T> spec)
 
 #### <a name="additional-resources"></a>其他資源
 
--   **Table Mapping (資料表對應)**
+-   **資料表對應**
     [*https://docs.microsoft.com/ef/core/modeling/relational/tables*](https://docs.microsoft.com/ef/core/modeling/relational/tables)
 
--   **Use HiLo to generate keys with Entity Framework Core (使用 HiLo 搭配 Entity Framework Core 產生金鑰)**
+-   **使用 HiLo 配合 Entity Framework Core 產生金鑰**
     [*http://www.talkingdotnet.com/use-hilo-to-generate-keys-with-entity-framework-core/*](http://www.talkingdotnet.com/use-hilo-to-generate-keys-with-entity-framework-core/)
 
--   **Backing Fields (支援欄位)**
+-   **支援欄位**
     [*https://docs.microsoft.com/ef/core/modeling/backing-field*](https://docs.microsoft.com/ef/core/modeling/backing-field)
 
--   **Steve Smith.Encapsulated Collections in Entity Framework Core (在 Entity Framework Core 中封裝集合)**
+-   **Steve Smith.Entity Framework Core 中的封裝式集合**
     [*http://ardalis.com/encapsulated-collections-in-entity-framework-core*](http://ardalis.com/encapsulated-collections-in-entity-framework-core)
 
--   **Shadow Properties (陰影屬性)**
+-   **陰影屬性**
     [*https://docs.microsoft.com/ef/core/modeling/shadow-properties*](https://docs.microsoft.com/ef/core/modeling/shadow-properties)
 
--   **Specification Pattern (規格模式)**
+-   **規格模式**
     [*http://deviq.com/specification-pattern/*](http://deviq.com/specification-pattern/)
     
 

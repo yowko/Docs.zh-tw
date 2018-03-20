@@ -2,20 +2,21 @@
 title: "指標類型 (C# 程式設計手冊)"
 ms.date: 07/20/2015
 ms.prod: .net
-ms.technology: devlang-csharp
+ms.technology:
+- devlang-csharp
 ms.topic: article
 helpviewer_keywords:
 - unsafe code [C#], pointers
 - pointers [C#]
 ms.assetid: 3319faf9-336d-4148-9af2-1da2579cdd1e
-caps.latest.revision: "19"
+caps.latest.revision: 
 author: BillWagner
 ms.author: wiwagn
-ms.openlocfilehash: 0699793e91199cc623c0d13e42937c8b919e992a
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.openlocfilehash: fe7b926bdf9f662d25f2fe960b51fc8254b7aa3a
+ms.sourcegitcommit: 83dd5ec003e788ccb3e33f3412a7af39ae347646
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 03/15/2018
 ---
 # <a name="pointer-types-c-programming-guide"></a>指標類型 (C# 程式設計手冊)
 在 unsafe 內容中，類型有可能是指標類型、實值類型或參考類型。 指標類型宣告會使用下列其中一種格式：  
@@ -37,7 +38,7 @@ void* identifier; //allowed but not recommended
   
  指標型別不會從 [object](../../../csharp/language-reference/keywords/object.md) 繼承，而且指標型別與 `object` 之間無法進行轉換。 此外，boxing 和 unboxing 不支援指標。 不過，不同的指標類型之間以及指標類型與整數類資料類型之間可以進行轉換。  
   
- 當您在相同的宣告中宣告多個指標時，星號 (\*) 只會與基礎類型一起出現，而不會做為每個指標名稱的前置詞使用。 例如:   
+ 當您在相同的宣告中宣告多個指標時，星號 (*) 只會與基礎類型一起出現，而不會做為每個指標名稱的前置詞使用。 例如:   
   
 ```  
 int* p1, p2, p3;   // Ok  
@@ -48,7 +49,7 @@ int *p1, *p2, *p3;   // Invalid in C#
   
  `myType*` 類型的指標變數值是 `myType` 類型變數的位址。 以下是指標類型宣告的範例：  
   
-|範例|說明|  
+|範例|描述|  
 |-------------|-----------------|  
 |`int* p`|`p` 為整數的指標。|  
 |`int** p`|`p` 為整數指標的指標。|  
@@ -113,11 +114,11 @@ Console.ReadLine();
   
  指標可以是 `null`。 將間接運算子套用至 null 指標會產生實作定義的行為。  
   
- 請注意，在方法之間傳遞指標時，可能會導致未定義的行為。 例如，透過 Out 或 Ref 參數或做為函式結果傳回指向區域變數的指標。 如果已在固定區塊中設定指標，則該指標指向的變數就可能不再是固定的。  
+ 請注意，在方法之間傳遞指標時，可能會導致未定義的行為。 請考慮使用透過 `in`、`out` 或 `ref` 參數或是以為函式結果的方式，將指標傳至區域變數的方法。 如果已在固定區塊中設定指標，則該指標指向的變數就可能不再是固定的。  
   
  下表所列出的運算子和陳述式可以用於 unsafe 內容中的指標：  
   
-|運算子/陳述式|用法|  
+|運算子/陳述式|使用|  
 |-------------------------|---------|  
 |*|執行指標間接取值。|  
 |->|透過指標存取結構的成員。|  
@@ -132,7 +133,7 @@ Console.ReadLine();
 ## <a name="c-language-specification"></a>C# 語言規格  
  [!INCLUDE[CSharplangspec](~/includes/csharplangspec-md.md)]  
   
-## <a name="see-also"></a>另請參閱  
+## <a name="see-also"></a>請參閱  
  [C# 程式設計指南](../../../csharp/programming-guide/index.md)  
  [Unsafe 程式碼和指標](../../../csharp/programming-guide/unsafe-code-pointers/index.md)  
  [指標轉換](../../../csharp/programming-guide/unsafe-code-pointers/pointer-conversions.md)  

@@ -8,11 +8,11 @@ ms.topic: conceptual
 ms.prod: .net
 ms.devlang: devlang-csharp
 ms.custom: mvc
-ms.openlocfilehash: fd599118165dcb087f046a307a3f7aeef0cf7078
-ms.sourcegitcommit: 08684dd61444c2f072b89b926370f750e456fca1
+ms.openlocfilehash: d230d334eba4e438635a4c70e8c1b5fc5075b065
+ms.sourcegitcommit: 83dd5ec003e788ccb3e33f3412a7af39ae347646
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 02/14/2018
+ms.lasthandoff: 03/15/2018
 ---
 # <a name="understand-the-net-compiler-platform-sdk-model"></a>了解 .NET Compiler Platform SDK 模型
 
@@ -24,7 +24,7 @@ ms.lasthandoff: 02/14/2018
 
 ![編譯器管線將原始程式碼處理為物件程式碼的步驟](media/compiler-pipeline.png)
 
-此管線的每個階段都是個別元件。 首先，剖析階段會權杖化，並將原始程式文字剖析為遵循語言文法的語法。 其次，宣告階段會分析來源和已匯入的中繼資料來形成具名符號。 接下來，繫結階段會比對程式碼中的識別碼與符號。 最後，發出階段會發出具有編譯器所建置之所有資訊的組件。
+此管線的每個階段都是個別元件。 首先，剖析階段會權杖化，並將原始程式文字剖析為遵循語言文法的語法。 其次，宣告階段會分析來源及匯入的中繼資料，以形成具名符號。 接下來，繫結階段會比對程式碼中的識別碼與符號。 最後，發出階段會發出具有編譯器所建置之所有資訊的組件。
 
 ![編譯器管線 API 可存取屬於編譯器管線一部分的每個步驟](media/compiler-pipeline-api.png)
 
@@ -48,7 +48,7 @@ ms.lasthandoff: 02/14/2018
 
 ### <a name="diagnostic-apis"></a>診斷 API
 
-進行分析時，編譯器可能會產生一組診斷，其涵蓋語法、語意和明確指派錯誤的所有項目，以及各種警告和參考性診斷。 編譯器 API 層會透過將使用者定義分析器插入編譯程序的可延伸 API 來公開診斷。 它可以產生使用者定義診斷 (例如 StyleCop 或 FxCop 這類工具所產生的診斷) 和編譯器定義診斷。 使用這種方式產生診斷的優點是自然與 MSBuild 和 Visual Studio 這類工具整合，而這些工具取決於下列這類體驗的診斷：根據原則來終止組建，以及在編輯器中顯示即時波浪線並建議程式碼修正。
+進行分析時，編譯器可能會產生一組診斷，其涵蓋語法、語意和明確指派錯誤的所有項目，以及各種警告和參考性診斷。 編譯器 API 層會透過允許將使用者定義分析器插入編譯程序的可延伸 API，公開診斷。 它可以產生使用者定義診斷 (例如 StyleCop 或 FxCop 這類工具所產生的診斷) 和編譯器定義診斷。 使用這種方式產生診斷的優點是自然與 MSBuild 和 Visual Studio 這類工具整合，而這些工具取決於下列這類體驗的診斷：根據原則來終止組建，以及在編輯器中顯示即時波浪線並建議程式碼修正。
 
 ### <a name="scripting-apis"></a>指令碼 API
 

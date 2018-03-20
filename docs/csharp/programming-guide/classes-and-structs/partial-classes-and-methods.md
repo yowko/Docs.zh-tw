@@ -2,21 +2,22 @@
 title: "部分類別和方法 (C# 程式設計手冊)"
 ms.date: 07/20/2015
 ms.prod: .net
-ms.technology: devlang-csharp
+ms.technology:
+- devlang-csharp
 ms.topic: article
 helpviewer_keywords:
 - partial methods [C#]
 - partial classes [C#]
 - C# language, partial classes and methods
 ms.assetid: 804cecb7-62db-4f97-a99f-60975bd59fa1
-caps.latest.revision: "35"
+caps.latest.revision: 
 author: BillWagner
 ms.author: wiwagn
-ms.openlocfilehash: 662b3308c3baa429ed29adca750cbb9b143b79dc
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.openlocfilehash: 396914e487bee0924c36bb1d7a0f28976f4ad354
+ms.sourcegitcommit: 83dd5ec003e788ccb3e33f3412a7af39ae347646
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 03/15/2018
 ---
 # <a name="partial-classes-and-methods-c-programming-guide"></a>部分類別和方法 (C# 程式設計手冊)
 有可能分割 [class](../../../csharp/language-reference/keywords/class.md) 或 [struct](../../../csharp/language-reference/keywords/struct.md) 的定義，兩個或多個來源檔案上的[介面](../../../csharp/language-reference/keywords/interface.md)或方法。 每一個來源檔案都包含型別或方法定義的一個區段，而當編譯應用程式時，就會將所有區段結合起來。  
@@ -150,7 +151,7 @@ partial void onNameChanged()
   
 -   部分方法宣告必須以內容關鍵字 [partial](../../../csharp/language-reference/keywords/partial-type.md) 開頭，且此方法必須傳回 [void](../../../csharp/language-reference/keywords/void.md)。  
   
--   部分方法可以有 [ref](../../../csharp/language-reference/keywords/ref.md) 但不能有 [out](../../../csharp/language-reference/keywords/out.md) 參數。  
+-   部分方法可以有 [in](../../../csharp/language-reference/keywords/in-parameter-modifier.md) 或 [ref](../../../csharp/language-reference/keywords/ref.md)，但不能有 [out](../../../csharp/language-reference/keywords/out-parameter-modifier.md) 參數。  
   
 -   部分方法為隱含的[私用](../../../csharp/language-reference/keywords/private.md)，因此它們不能為[虛擬](../../../csharp/language-reference/keywords/virtual.md)。  
   
@@ -165,7 +166,7 @@ partial void onNameChanged()
 ## <a name="c-language-specification"></a>C# 語言規格  
  [!INCLUDE[CSharplangspec](~/includes/csharplangspec-md.md)]  
   
-## <a name="see-also"></a>另請參閱  
+## <a name="see-also"></a>請參閱  
  [C# 程式設計指南](../../../csharp/programming-guide/index.md)  
  [類別](../../../csharp/programming-guide/classes-and-structs/classes.md)  
  [結構](../../../csharp/programming-guide/classes-and-structs/structs.md)  

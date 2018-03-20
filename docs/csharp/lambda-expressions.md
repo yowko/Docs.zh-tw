@@ -10,23 +10,23 @@ ms.prod: .net
 ms.technology: devlang-csharp
 ms.devlang: csharp
 ms.assetid: b6a0539a-8ce5-4da7-adcf-44be345a2714
-ms.openlocfilehash: 1a97d830c675c8e3980eddae78f3face279ec6dc
-ms.sourcegitcommit: bbde43da655ae7bea1977f7af7345eb87bd7fd5f
+ms.openlocfilehash: 6395d873c4a04501d25a2edbb1acc0a163dd3e5c
+ms.sourcegitcommit: 83dd5ec003e788ccb3e33f3412a7af39ae347646
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/21/2017
+ms.lasthandoff: 03/15/2018
 ---
 # <a name="lambda-expressions"></a>Lambda 運算式 #
 
 「Lambda 運算式」是當做物件處理的程式碼區塊 (運算式或陳述式區塊)。 它可當做方法的引數傳遞，也可由方法呼叫傳回。 Lambda 運算式可大量用於：
 
-- 傳遞程式碼所要執行非同步的方法，例如<xref:System.Threading.Tasks.Task.Run(System.Action)>。
+- 將要執行的程式碼傳遞至非同步方法，例如 <xref:System.Threading.Tasks.Task.Run(System.Action)>。
 
 - 撰寫 [LINQ 查詢運算式](linq/index.md)。
 
 - 建立[運算式樹狀架構](expression-trees-building.md)。
 
-Lambda 運算式是可表示為委派或編譯成委派之運算式樹狀架構的程式碼。 Lambda 運算式的特定委派類型取決於其參數和傳回值。 未傳回值的 Lambda 運算式會根據其參數數目對應至特定 `Action` 委派。 傳回值的 Lambda 運算式會根據其參數數目對應至特定 `Func` 委派。 例如，lambda 運算式有兩個參數，但不傳回任何值對應至<xref:System.Action%602>委派。 Lambda 運算式具有一個參數並傳回值，對應至<xref:System.Func%602>委派。
+Lambda 運算式是可表示為委派或編譯成委派之運算式樹狀架構的程式碼。 Lambda 運算式的特定委派類型取決於其參數和傳回值。 未傳回值的 Lambda 運算式會根據其參數數目對應至特定 `Action` 委派。 傳回值的 Lambda 運算式會根據其參數數目對應至特定 `Func` 委派。 例如，具有兩個參數但未傳回值的 Lambda 運算式，會對應至 <xref:System.Action%602> 委派。 具有一個參數且傳回值的 Lambda 運算式，會對應至 <xref:System.Func%602> 委派。
 
 Lambda 運算式使用 [Lambda 宣告運算子](language-reference/operators/lambda-operator.md) `=>`，來分隔 Lambda 的參數清單及其可執行程式碼。 若要建立 Lambda 運算式，請在 Lambda 運算子的左邊指定輸入參數 (如果有的話)，並將運算式或陳述式區塊放在另一邊。 例如，單行 Lambda 運算式 `x => x * x` 會指定名為 `x` 的參數，並傳回 `x` 的平方值。 您可以將這個運算式指派給委派類型，如下列範例所示：
 
@@ -96,7 +96,7 @@ Lambda 運算式使用 [Lambda 宣告運算子](language-reference/operators/lam
 
 ## <a name="lambdas-with-the-standard-query-operators"></a>具有標準查詢運算子的 Lambda ##
 
-物件，在其他實作中，LINQ 有輸入的參數的型別其中一個的<xref:System.Func%601>系列泛型委派。 這些委派使用型別參數定義輸入參數的數目和類型，以及委派的傳回型別。 對於封裝套用至一組來源資料中每個項目的使用者定義運算式而言，`Func` 委派非常實用。 例如，請考慮<xref:System.Func%601>委派，其語法如下：
+其他實作中的 LINQ to Objects 具有輸入參數，其類型是其中一種 <xref:System.Func%601> 系列的泛型委派。 這些委派使用型別參數定義輸入參數的數目和類型，以及委派的傳回型別。 對於封裝套用至一組來源資料中每個項目的使用者定義運算式而言，`Func` 委派非常實用。 例如，若是 <xref:System.Func%601>，其語法如下：
 
 [!code-csharp[csSnippets.Lambdas](../../samples/snippets/csharp/concepts/lambda-expressions/query1.cs#1)]
 
@@ -108,7 +108,7 @@ Lambda 運算式使用 [Lambda 宣告運算子](language-reference/operators/lam
 
 [!code-csharp[csSnippets.Lambdas](../../samples/snippets/csharp/concepts/lambda-expressions/query1.cs#3)]
 
-您也可以提供 lambda 運算式，當引數類型為<xref:System.Linq.Expressions.Expression%601>，例如在中所定義的標準查詢運算子<xref:System.Linq.Queryable>型別。 當您指定<xref:System.Linq.Expressions.Expression%601>引數，lambda 會編譯為運算式樹狀架構。 下列範例使用 [System.Linq.Enumerable.Count](xref:System.Linq.Enumerable.Count%60%601(System.Collections.Generic.IEnumerable{%60%600})) 標準查詢運算子。
+您也可以在引數類型為 <xref:System.Linq.Expressions.Expression%601> 時提供 Lambda 運算式，例如在定義於 <xref:System.Linq.Queryable> 類型的標準查詢運算子中。 當您指定 <xref:System.Linq.Expressions.Expression%601> 引數時，Lambda 會編譯成運算式樹狀結構。 下列範例使用 [System.Linq.Enumerable.Count](xref:System.Linq.Enumerable.Count%60%601(System.Collections.Generic.IEnumerable{%60%600})) 標準查詢運算子。
 
 [!code-csharp[csSnippets.Lambdas](../../samples/snippets/csharp/concepts/lambda-expressions/query1.cs#4)]
 
@@ -150,13 +150,13 @@ Lambda 可以參考「外部變數」(請參閱[匿名方法](programming-guide/
 
 - 導入 Lambda 運算式內的變數無法在外部方法中看見。
 
-- Lambda 運算式無法直接從封入方法擷取 `ref` 或 `out` 參數。
+- Lambda 運算式無法直接從封入方法擷取 `in`、`ref` 或 `out` 參數。
 
 - Lambda 運算式中的 return 陳述式不會造成封入方法傳回。
 
 - 如果跳躍陳述式的目標不在區塊內，則 Lambda 運算式不可包含 Lambda 函式內的 `goto` 陳述式、 `break` 陳述式或 `continue` 陳述式。 即使目標位於區塊內，跳躍陳述式出現在 Lambda 函式區塊外部也一樣是錯誤。
 
-## <a name="see-also"></a>請參閱 ##
+## <a name="see-also"></a>另請參閱 ##
 
 [LINQ (Language-Integrated Query)](../standard/using-linq.md)   
 [匿名方法](programming-guide/statements-expressions-operators/anonymous-methods.md)   

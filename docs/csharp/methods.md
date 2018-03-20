@@ -1,7 +1,7 @@
 ---
 title: "方法 - C# 手冊"
 description: "方法、方法參數和方法傳回值的概觀"
-keywords: .NET, .NET Core, C#
+keywords: ".NET、.NET Core、C#"
 author: rpetrusha
 ms.author: ronpet
 ms.date: 10/26/2016
@@ -10,11 +10,11 @@ ms.prod: .net
 ms.technology: devlang-csharp
 ms.devlang: csharp
 ms.assetid: 577a8527-1081-4b36-9b9e-0685b6553c6e
-ms.openlocfilehash: 38e9d8955c99c7fb3ee6347af70037d3da08ff39
-ms.sourcegitcommit: a19548e5167cbe7e9e58df4ffd8c3b23f17d5c7a
+ms.openlocfilehash: 48127d5168ace7733f29f78dc3f72d9c0d051e4e
+ms.sourcegitcommit: 83dd5ec003e788ccb3e33f3412a7af39ae347646
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 11/02/2017
+ms.lasthandoff: 03/15/2018
 ---
 # <a name="methods"></a>方法 #
 
@@ -87,11 +87,11 @@ ms.lasthandoff: 11/02/2017
  <a name="inherited"></a>
  ##<a name="inherited-and-overridden-methods"></a>繼承和覆寫方法 ##
 
-除了在型別中明確定義的成員外，型別會繼承在其基底類別中定義的成員。 因為 managed 的類型系統中的所有類型直接或間接都繼承自<xref:System.Object>類別，所有類型會都都繼承其成員，例如<xref:System.Object.Equals(System.Object)>， <xref:System.Object.GetType>，和<xref:System.Object.ToString>。 下例定義 `Person` 類別、具現化兩個 `Person` 物件，並呼叫 `Person.Equals` 方法以判斷兩個物件是否相等。 但是 `Equals` 方法不是在 `Person` 類別中定義，它繼承自 <xref:System.Object>。
+除了在型別中明確定義的成員外，型別會繼承在其基底類別中定義的成員。 因為受管理的類型系統中之所有類型，都是直接或間接繼承自 <xref:System.Object> 類別，所以所有的類型都會繼承其成員，例如 <xref:System.Object.Equals(System.Object)>、<xref:System.Object.GetType> 及 <xref:System.Object.ToString>。 下例定義 `Person` 類別、具現化兩個 `Person` 物件，並呼叫 `Person.Equals` 方法以判斷兩個物件是否相等。 但是 `Equals` 方法不是在 `Person` 類別中定義，它繼承自 <xref:System.Object>。
 
 [!code-csharp[csSnippets.Methods#104](../../samples/snippets/csharp/concepts/methods/inherited1.cs#104)]
 
-型別可以使用 `override` 關鍵字並提供覆寫方法的實作，來覆寫繼承的成員。 方法簽章必須覆寫的方法相同。 下列範例很相似，不同之處在於它會覆寫<xref:System.Object.Equals(System.Object)>方法。 (它也會覆寫 <xref:System.Object.GetHashCode> 方法，因為兩種方法都是為了提供一致的結果。)
+型別可以使用 `override` 關鍵字並提供覆寫方法的實作，來覆寫繼承的成員。 方法簽章必須與覆寫方法的簽章相同。 下例與前一範例相似，不同之處在於它會覆寫 <xref:System.Object.Equals(System.Object)> 方法。 (它也會覆寫 <xref:System.Object.GetHashCode> 方法，因為兩種方法都是為了提供一致的結果。)
 
 [!code-csharp[csSnippets.Methods#105](../../samples/snippets/csharp/concepts/methods/overridden1.cs#105)]
 
@@ -118,7 +118,7 @@ C# 中的類型為「實值型別」「參考型別」。 如需內建實值型�
 <a name="byref"></a>
 ### <a name="passing-parameters-by-reference"></a>以傳址方式傳遞參數 ###
 
-當您想要變更方法中的引數值，且想要在控制回到呼叫方法時反映這項變更，您要以傳址方式傳遞參數。 若要以傳址方式傳遞參數，請使用 `ref` 或 `out` 關鍵字。
+當您想要變更方法中的引數值，且想要在控制回到呼叫方法時反映這項變更，您要以傳址方式傳遞參數。 若要以傳址方式傳遞參數，請使用 [`ref`](language-reference/keywords/ref.md) 或 [`out`](language-reference/keywords/out-parameter-modifier.md) 關鍵字。 您也可以傳址方式傳遞值，以避免發生複製的情況，但仍會無法使用 [`in`](language-reference/keywords/in-parameter-modifier.md) 關鍵字進行修改。
 
 下例與前例相同，唯一差異是值以傳址方式傳遞至 `ModifyValue` 方法。 在 `ModifyValue` 方法中修改參數值時，當控制回到呼叫端時會反映值的變更。
 
@@ -195,7 +195,7 @@ C# 中的類型為「實值型別」「參考型別」。 如需內建實值型�
 
 使用區域變數，在此情況下的 `result`來儲存值是選擇性的。 它有助於程式碼的可讀性，或如果您需要儲存方法的整個範圍引數的原始值，則可能為必要。
 
-有時候，您希望自己的方法傳回的不止單一值。 從 C# 7.0 開始，您可以使用「Tuple 型別」和「Tuple 常值」輕鬆達到這個目標。 Tuple 型別會定義 Tuple 項目的資料類型。 Tuple 常值會提供傳回 Tuple 的實際值。 在下列範例中，`(string, string, string, int)`定義由 tuple 類型`GetPersonalInfo`方法。 運算式 `(per.FirstName, per.MiddleName, per.LastName, per.Age)` 是 Tuple 常值，方法會傳回 `PersonInfo` 物件的名字、中間名和姓氏以及年齡。
+有時候，您希望自己的方法傳回的不止單一值。 從 C# 7.0 開始，您可以使用「Tuple 型別」和「Tuple 常值」輕鬆達到這個目標。 Tuple 型別會定義 Tuple 項目的資料類型。 Tuple 常值會提供傳回 Tuple 的實際值。 在下列範例中，`(string, string, string, int)` 會定義由 `GetPersonalInfo` 方法所傳回的 Tuple 類型。 運算式 `(per.FirstName, per.MiddleName, per.LastName, per.Age)` 是 Tuple 常值，方法會傳回 `PersonInfo` 物件的名字、中間名和姓氏以及年齡。
 
 ```csharp
 public (string, string, string, int) GetPersonalInfo(string id)
@@ -263,13 +263,13 @@ if (person != null)
 > [!NOTE]
 > 非同步方法會在遇到第一個未完成的等候物件或是到達非同步方法的結尾時 (以先發生者為準)，傳回呼叫者
 
-非同步方法的傳回類型可以是<xref:System.Threading.Tasks.Task%601>， <xref:System.Threading.Tasks.Task>，或`void`。 `void` 傳回型別主要用於定義需要 `void` 傳回型別的事件處理常式。 傳回 `void` 的非同步方法無法等候，而且 void 傳回方法的呼叫端無法攔截方法擲回的例外狀況。 釋放 C# 7 時會放開此限制，允許非同步方法[傳回任何類似工作的型別](https://github.com/ljw1004/roslyn/blob/features/async-return/docs/specs/feature%20-%20arbitrary%20async%20returns.md)。
+非同步方法可以有 <xref:System.Threading.Tasks.Task%601>、<xref:System.Threading.Tasks.Task> 或 `void` 的傳回類型。 `void` 傳回型別主要用於定義需要 `void` 傳回型別的事件處理常式。 傳回 `void` 的非同步方法無法等候，而且 void 傳回方法的呼叫端無法攔截方法擲回的例外狀況。 釋放 C# 7 時會放開此限制，允許非同步方法[傳回任何類似工作的型別](https://github.com/ljw1004/roslyn/blob/features/async-return/docs/specs/feature%20-%20arbitrary%20async%20returns.md)。
 
 在下例中，`DelayAsync` 是包含會傳回整數之 return 陳述式的非同步方法。 因為它是非同步方法，所以其方法宣告必須有傳回型別 `Task<int>`。 因為傳回型別是 `Task<int>`，所以 `DoSomethingAsync` 中 `await` 運算式的評估會產生整數，如下列 `int result = await delayTask` 陳述式所示。
 
 [!code-csharp[csSnippets.Methods#102](../../samples/snippets/csharp/concepts/methods/async1.cs#102)]
 
-非同步方法不可以宣告任何 [ref](language-reference/keywords/ref.md) 或 [out](language-reference/keywords/out.md) 參數，但是可以呼叫具有這類參數的方法。
+非同步方法不可以宣告任何 [in](language-reference/keywords/in-parameter-modifier.md)、[ref](language-reference/keywords/ref.md) 或 [out](language-reference/keywords/out-parameter-modifier.md) 參數，但是可以呼叫具有這類參數的方法。
 
  如需非同步方法的詳細資訊，請參閱 [Asynchronous Programming with async and await (C#)](async.md) (使用 Async 和 Await 進行非同步程式設計 (C#))、[Control Flow in Async Programs (C#)](programming-guide/concepts/async/control-flow-in-async-programs.md) (非同步程式中的控制流程 (C#)) 和 [Async Return Types (C#)](programming-guide/concepts/async/async-return-types.md) (非同步傳回型別 (C#))。
 
@@ -290,7 +290,7 @@ public Customer this[long id] => store.LookupCustomer(id);
 如果方法傳回 `void` 或為非同步方法，則方法的主體必須是陳述式運算式 (如同 Lambda)。  針對屬性和索引子，它們必須是唯讀，而且您不會使用 `get` 存取子關鍵字。
 
 <a name="iterators"></a>
-## <a name="iterators"></a>Iterator ##
+## <a name="iterators"></a>迭代器 ##
 
 迭代器會對集合執行自訂的反覆項目，例如清單或陣列。 迭代器會使用 [yield return](language-reference/keywords/yield.md) 陳述式一次傳回一個項目。 達到 `yield return` 陳述式時，即會記住目前的位置，讓呼叫端可以要求序列中的下一個項目。
 
@@ -298,13 +298,14 @@ public Customer this[long id] => store.LookupCustomer(id);
 
 如需詳細資訊，請參閱[迭代器](programming-guide/concepts/iterators.md)。
 
-## <a name="see-also"></a>請參閱 ##
+## <a name="see-also"></a>另請參閱 ##
 
 [存取修飾詞](language-reference/keywords/access-modifiers.md)   
 [靜態類別和靜態類別成員](programming-guide/classes-and-structs/static-classes-and-static-class-members.md)   
 [繼承](programming-guide/classes-and-structs/inheritance.md)   
 [抽象和密封類別以及類別成員](programming-guide/classes-and-structs/abstract-and-sealed-classes-and-class-members.md)   
 [params](language-reference/keywords/params.md)   
-[out](language-reference/keywords/out.md)   
+[out](language-reference/keywords/out-parameter-modifier.md)   
 [ref](language-reference/keywords/ref.md)   
+[in](language-reference/keywords/in-parameter-modifier.md)   
 [傳遞參數](programming-guide/classes-and-structs/passing-parameters.md)

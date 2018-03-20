@@ -9,11 +9,11 @@ ms.prod: .net
 ms.technology: devlang-csharp
 ms.devlang: csharp
 ms.custom: mvc
-ms.openlocfilehash: 0c6e44a3e1a1458f4211b66b6d1ef5b4b30cd7c1
-ms.sourcegitcommit: 5177d6ae2e9baf026f07ee0631556700a5a193f7
+ms.openlocfilehash: 6e40907cab2aabcf8c8321819c99298314bcfbc5
+ms.sourcegitcommit: 83dd5ec003e788ccb3e33f3412a7af39ae347646
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 11/28/2017
+ms.lasthandoff: 03/15/2018
 ---
 # <a name="reference-semantics-with-value-types"></a>具備實值型別的參考語意
 
@@ -46,7 +46,7 @@ ms.lasthandoff: 11/28/2017
 
 引數為雙結構，每個結構皆包含三個雙精度浮點數。 一個雙精度浮點數是 8 個位元組，因此每個引數是 24 個位元組。 透過指定 `in` 修飾詞，將 4 或 8 個位元組參考傳遞到這些引數，位元組大小取決於電腦的架構。 位元組大小的差異很小，但是當您的應用程式使用許多不同的值在緊密迴圈中呼叫此方法時，差異會快速加大。
  
-`in` 修飾詞也可於其他方面補足 `out` 和 `ref`。 您無法建立只有在 `in`、`out` 或 `ref` 時才會出現差異的方法多載。 這些新規則沿用一直以來為 `out` 和 `ref` 參數所定義的相同行為。
+`in` 修飾詞也可於其他方面補足 `out` 和 `ref`。 您無法為差異處只有是否出現 `in`、`out` 或 `ref` 的方法，建立多載。 這些新規則沿用一直以來為 `out` 和 `ref` 參數所定義的相同行為。
 
 `in` 修飾詞可套用至任何使用下列參數的成員：方法、委派、Lambda、區域函式、索引子、運算子。
 
