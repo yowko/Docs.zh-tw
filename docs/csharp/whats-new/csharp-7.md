@@ -11,10 +11,10 @@ ms.technology: devlang-csharp
 ms.devlang: csharp
 ms.assetid: fd41596d-d0c2-4816-b94d-c4d00a5d0243
 ms.openlocfilehash: 374ac9917464a7e83566440abab10eda8a9c8683
-ms.sourcegitcommit: 83dd5ec003e788ccb3e33f3412a7af39ae347646
+ms.sourcegitcommit: 32172ca05d5dcce7ef3d327b9c8639c736e0fe2b
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 03/15/2018
+ms.lasthandoff: 03/20/2018
 ---
 # <a name="whats-new-in-c-7"></a>C# 7 的新功能
 
@@ -122,7 +122,7 @@ C# 為類別和結構提供豐富的語法，可用來解釋您的設計目的�
 
 * 您節省了撰寫定義傳回型別之 `class` 或 `struct` 的工作。 
 * 您不需要建立新的類型。
-* 語言增強功能讓您不再需要呼叫 <xref:System.Tuple.Create``1(``0)> 方法。
+* 語言的增強功能可讓您免於呼叫 <xref:System.Tuple.Create``1(``0)> 方法。
 
 方法的宣告提供所傳回 Tuple 欄位的名稱。 當您呼叫的方法時，傳回值是一個 Tuple，其欄位為 `Max` 和 `Min`：
 
