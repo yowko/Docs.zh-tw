@@ -1,19 +1,21 @@
 ---
-title: "部分信任功能相容性"
-ms.custom: 
+title: 部分信任功能相容性
+ms.custom: ''
 ms.date: 03/30/2017
 ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.technology: dotnet-clr
-ms.tgt_pltfrm: 
+ms.reviewer: ''
+ms.suite: ''
+ms.technology:
+- dotnet-clr
+ms.tgt_pltfrm: ''
 ms.topic: article
 ms.assetid: a36a540b-1606-4e63-88e0-b7c59e0e6ab7
-caps.latest.revision: "75"
+caps.latest.revision: ''
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.workload: dotnet
+ms.workload:
+- dotnet
 ms.openlocfilehash: 1950a0c4015658affb0b9fa0d7c87a062865144b
 ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
@@ -103,7 +105,7 @@ ms.lasthandoff: 12/22/2017
   
 -   確定應用程式是否會部署為完全信任的應用程式，而使用者無法修改程式碼存取安全性設定以在部分信任環境中執行應用程式。 如果可以執行這項操作，行為就不會執行，也不會擲回例外狀況。 若要確保這種情況，請參閱**levelfinal**選項使用[Caspol.exe （程式碼存取安全性原則工具）](../../../../docs/framework/tools/caspol-exe-code-access-security-policy-tool.md)。  
   
- [!INCLUDE[crexample](../../../../includes/crexample-md.md)] 通用行為的範例，請參閱 [How to: Lock Down Endpoints in the Enterprise](../../../../docs/framework/wcf/extending/how-to-lock-down-endpoints-in-the-enterprise.md)。  
+ [!INCLUDE[crexample](../../../../includes/crexample-md.md)] 通用行為的範例，請參閱 [如何：鎖定企業的端點](../../../../docs/framework/wcf/extending/how-to-lock-down-endpoints-in-the-enterprise.md)。  
   
 ## <a name="configuration"></a>組態  
  部分信任程式碼只能載入本機 [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] 檔案中的 `app.config` 組態區段，但有一個例外。 若要載入參考 machine.config 或根 web.config 檔案中 [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] 區段的 [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] 區段，將需要 ConfigurationPermission(Unrestricted)。 少了這個權限，本機組態檔以外的 [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] 組態區段 (行為、繫結) 參考會在載入組態時導致例外狀況。  

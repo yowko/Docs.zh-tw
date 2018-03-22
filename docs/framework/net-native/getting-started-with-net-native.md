@@ -1,19 +1,21 @@
 ---
-title: ".NET Native 使用者入門"
-ms.custom: 
+title: .NET Native 使用者入門
+ms.custom: ''
 ms.date: 03/30/2017
 ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.technology: dotnet-clr
-ms.tgt_pltfrm: 
+ms.reviewer: ''
+ms.suite: ''
+ms.technology:
+- dotnet-clr
+ms.tgt_pltfrm: ''
 ms.topic: article
 ms.assetid: fc9e04e8-2d05-4870-8cd6-5bd276814afc
-caps.latest.revision: "29"
+caps.latest.revision: ''
 author: rpetrusha
 ms.author: ronpet
 manager: wpickett
-ms.workload: dotnet
+ms.workload:
+- dotnet
 ms.openlocfilehash: 56ff06c17eda8483c7d067af9fb39a402d2f6ea5
 ms.sourcegitcommit: c0dd436f6f8f44dc80dc43b07f6841a00b74b23f
 ms.translationtype: MT
@@ -32,7 +34,7 @@ ms.lasthandoff: 01/19/2018
 4.  [手動解決遺漏中繼資料的問題](#Step4)，然後重複 [步驟 3](#Step3) 直到所有問題解決為止。  
   
 > [!NOTE]
->  如果您要將現有的 Windows 市集應用程式移轉至 [!INCLUDE[net_native](../../../includes/net-native-md.md)]，請務必檢閱 [Migrating Your Windows Store App to .NET Native](../../../docs/framework/net-native/migrating-your-windows-store-app-to-net-native.md)。  
+>  如果您要將現有的 Windows 市集應用程式移轉至 [!INCLUDE[net_native](../../../includes/net-native-md.md)]，請務必檢閱 [將您的 Windows 市集應用程式移轉至 .NET Native](../../../docs/framework/net-native/migrating-your-windows-store-app-to-net-native.md)。  
   
 <a name="Step1"></a>   
 ## <a name="step-1-develop-and-test-debug-builds-of-your-uwp-app"></a>步驟 1：開發並測試 UWP 應用程式的偵錯組建  

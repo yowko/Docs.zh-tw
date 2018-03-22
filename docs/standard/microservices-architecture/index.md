@@ -1,7 +1,7 @@
 ---
-title: ".NET 微服務。 容器化 .NET 應用程式的架構"
-description: "容器化 .NET 應用程式的 .NET 微服務架構 | 前言"
-keywords: "Docker, 微服務, ASP.NET, 容器"
+title: .NET 微服務。 容器化 .NET 應用程式的架構
+description: 容器化 .NET 應用程式的 .NET 微服務架構 | 前言
+keywords: Docker, 微服務, ASP.NET, 容器
 author: CESARDELATORRE
 ms.author: wiwagn
 ms.date: 05/26/2017
@@ -127,7 +127,7 @@ Docker 成為容器產業的既定標準，並受到 Windows 和 Linux 生態系
 
 ## <a name="what-this-guide-does-not-cover"></a>本指南未涵蓋的內容
 
-本指南的重點不在應用程式生命週期、DevOps、CI/CD 管線或小組合作。 補充性指南 [Containerized Docker Application Lifecycle with Microsoft Platform and Tools](https://aka.ms/dockerlifecycleebook) (Microsoft 平台和工具的容器化 Docker 應用程式生命週期) 會以該主題為重點。 目前的指南也不提供 Azure 基礎結構的實作詳細資料，例如特定 Orchestrator 的相關資訊。
+本指南的重點不在應用程式生命週期、DevOps、CI/CD 管線或小組合作。 補充性指南 [Microsoft 平台和工具的容器化 Docker 應用程式生命週期](https://aka.ms/dockerlifecycleebook) (Microsoft 平台和工具的容器化 Docker 應用程式生命週期) 會以該主題為重點。 目前的指南也不提供 Azure 基礎結構的實作詳細資料，例如特定 Orchestrator 的相關資訊。
 
 ### <a name="additional-resources"></a>其他資源
 
