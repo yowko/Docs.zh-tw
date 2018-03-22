@@ -1,23 +1,25 @@
 ---
-title: "保護服務的安全"
-ms.custom: 
+title: 保護服務的安全
+ms.custom: ''
 ms.date: 03/30/2017
 ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.technology: dotnet-clr
-ms.tgt_pltfrm: 
+ms.reviewer: ''
+ms.suite: ''
+ms.technology:
+- dotnet-clr
+ms.tgt_pltfrm: ''
 ms.topic: article
 helpviewer_keywords:
 - configuration [WCF], securing services
 - WCF security
 - WCF, security
 ms.assetid: f0ecc6f7-f4b5-42a4-9cb1-b02e28e26620
-caps.latest.revision: "28"
+caps.latest.revision: ''
 author: BrucePerlerMS
 ms.author: bruceper
 manager: mbaldwin
-ms.workload: dotnet
+ms.workload:
+- dotnet
 ms.openlocfilehash: 2b8e84fe75f812cdcb97dcc24a0edad2d238515b
 ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
@@ -49,7 +51,7 @@ ms.lasthandoff: 12/22/2017
  [!INCLUDE[indigo2](../../../includes/indigo2-md.md)] 基礎結構是設計為使用這些 Windows 安全性機制。 因此，如果要建立將會部署在內部網路上的服務，而且服務用戶端限制在 Windows 網域的成員，即可輕鬆實作安全性。 只有有效的使用者才能登入網域。 當使用者登入之後，Kerberos 控制器會讓每個使用者與其他電腦或應用程式建立安全內容。 在本機電腦上，可以輕鬆建立群組。若要保護特定資料夾，這些群組就可以用於電腦上指派存取權限。  
   
 ## <a name="implementing-windows-security-on-intranet-services"></a>在內部網路服務上實作 Windows 安全性  
- 若要保護只在 Windows 網域上執行的應用程式，您可以使用 <xref:System.ServiceModel.WSHttpBinding> 或 <xref:System.ServiceModel.NetTcpBinding> 繫結的預設安全性設定。 根據預設，相同 Windows 網域上的任何人都可以存取 [!INCLUDE[indigo2](../../../includes/indigo2-md.md)] 服務。 因為這些使用者已經登入網路，所以他們都是受信任的。 服務和用戶端之間的訊息會為了機密性而加密，且為了完整性而簽署。 [!INCLUDE[crabout](../../../includes/crabout-md.md)] 如何建立可使用 Windows 安全性之服務的詳細資訊，請參閱 [How to: Secure a Service with Windows Credentials](../../../docs/framework/wcf/how-to-secure-a-service-with-windows-credentials.md)」(Credential)。  
+ 若要保護只在 Windows 網域上執行的應用程式，您可以使用 <xref:System.ServiceModel.WSHttpBinding> 或 <xref:System.ServiceModel.NetTcpBinding> 繫結的預設安全性設定。 根據預設，相同 Windows 網域上的任何人都可以存取 [!INCLUDE[indigo2](../../../includes/indigo2-md.md)] 服務。 因為這些使用者已經登入網路，所以他們都是受信任的。 服務和用戶端之間的訊息會為了機密性而加密，且為了完整性而簽署。 [!INCLUDE[crabout](../../../includes/crabout-md.md)] 如何建立可使用 Windows 安全性之服務的詳細資訊，請參閱 [如何：使用 Windows 認證來確保服務安全](../../../docs/framework/wcf/how-to-secure-a-service-with-windows-credentials.md)」(Credential)。  
   
 ### <a name="authorization-using-the-principalpermissionattribute-class"></a>使用 PrincipalPermissionAttribute 類別的授權  
  如果您必須限制存取電腦上的資源，最簡單的方式是使用 <xref:System.Security.Permissions.PrincipalPermissionAttribute> 類別。 這個屬性可藉由要求使用者應為指定的 Windows 群組或角色或特定使用者，來限制服務作業的引動過程。 [!INCLUDE[crdefault](../../../includes/crdefault-md.md)][How to: PrincipalPermissionAttribute 類別以限制存取](../../../docs/framework/wcf/how-to-restrict-access-with-the-principalpermissionattribute-class.md)。  

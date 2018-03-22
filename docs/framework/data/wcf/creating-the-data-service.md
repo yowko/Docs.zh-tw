@@ -1,22 +1,24 @@
 ---
-title: "建立資料服務"
-ms.custom: 
+title: 建立資料服務
+ms.custom: ''
 ms.date: 03/30/2017
 ms.prod: .net-framework-oob
-ms.reviewer: 
-ms.suite: 
-ms.technology: dotnet-clr
-ms.tgt_pltfrm: 
+ms.reviewer: ''
+ms.suite: ''
+ms.technology:
+- dotnet-clr
+ms.tgt_pltfrm: ''
 ms.topic: article
 dev_langs:
 - csharp
 - vb
 ms.assetid: 34d1d971-5e18-4c22-9bf6-d3612e27ea59
-caps.latest.revision: "7"
+caps.latest.revision: ''
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.workload: dotnet
+ms.workload:
+- dotnet
 ms.openlocfilehash: 7d890e4c2041ae4c70a79adfc0ab4141402fcd3f
 ms.sourcegitcommit: c0dd436f6f8f44dc80dc43b07f6841a00b74b23f
 ms.translationtype: MT
@@ -35,7 +37,7 @@ ms.lasthandoff: 01/19/2018
 4.  啟用資料服務的存取。  
   
 > [!NOTE]
->  當您完成這項工作時所建立的 [!INCLUDE[vstecasp](../../../../includes/vstecasp-md.md)] Web 應用程式會在 [!INCLUDE[vstecasp](../../../../includes/vstecasp-md.md)] 提供的 [!INCLUDE[vs_current_short](../../../../includes/vs-current-short-md.md)] 程式開發伺服器上執行。 [!INCLUDE[vstecasp](../../../../includes/vstecasp-md.md)] 程式開發伺服器只支援從本機電腦存取。 若要一併在開發期間更輕鬆地測試資料服務並進行疑難排解，請考慮使用 Internet Information Services (IIS) 執行可裝載資料服務的應用程式。 如需詳細資訊，請參閱 [How to: Develop a WCF Data Service Running on IIS](../../../../docs/framework/data/wcf/how-to-develop-a-wcf-data-service-running-on-iis.md)。  
+>  當您完成這項工作時所建立的 [!INCLUDE[vstecasp](../../../../includes/vstecasp-md.md)] Web 應用程式會在 [!INCLUDE[vstecasp](../../../../includes/vstecasp-md.md)] 提供的 [!INCLUDE[vs_current_short](../../../../includes/vs-current-short-md.md)] 程式開發伺服器上執行。 [!INCLUDE[vstecasp](../../../../includes/vstecasp-md.md)] 程式開發伺服器只支援從本機電腦存取。 若要一併在開發期間更輕鬆地測試資料服務並進行疑難排解，請考慮使用 Internet Information Services (IIS) 執行可裝載資料服務的應用程式。 如需詳細資訊，請參閱 [如何：開發在 IIS 上執行的 WCF 資料服務](../../../../docs/framework/data/wcf/how-to-develop-a-wcf-data-service-running-on-iis.md)。  
   
 ### <a name="to-create-the-aspnet-web-application"></a>若要建立 ASP.NET Web 應用程式  
   

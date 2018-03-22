@@ -1,12 +1,13 @@
 ---
-title: "保護 WCF Data Services 的安全"
-ms.custom: 
+title: 保護 WCF Data Services 的安全
+ms.custom: ''
 ms.date: 03/30/2017
 ms.prod: .net-framework-oob
-ms.reviewer: 
-ms.suite: 
-ms.technology: dotnet-clr
-ms.tgt_pltfrm: 
+ms.reviewer: ''
+ms.suite: ''
+ms.technology:
+- dotnet-clr
+ms.tgt_pltfrm: ''
 ms.topic: article
 dev_langs:
 - csharp
@@ -15,11 +16,12 @@ helpviewer_keywords:
 - securing application [WCF Data Services]
 - WCF Data Services, security
 ms.assetid: 99fc2baa-a040-4549-bc4d-f683d60298af
-caps.latest.revision: "9"
+caps.latest.revision: ''
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.workload: dotnet
+ms.workload:
+- dotnet
 ms.openlocfilehash: c45da4ec1fa5d111be19437dde54035a89f9162e
 ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
@@ -78,7 +80,7 @@ context.Credentials = _
  攔截器可讓您在資料服務實際運作之前，攔截對資料服務資源的要求。 如需詳細資訊，請參閱[攔截器](../../../../docs/framework/data/wcf/interceptors-wcf-data-services.md)。 攔截器可讓您根據提出要求的已驗證使用者進行授權決策。 [!INCLUDE[crexample](../../../../includes/crexample-md.md)]如何限制存取資料服務資源為基礎的已驗證的使用者身分識別，請參閱[如何： 攔截資料服務訊息](../../../../docs/framework/data/wcf/how-to-intercept-data-service-messages-wcf-data-services.md)。  
   
 ### <a name="restrict-access-to-the-persisted-data-store-and-local-resources"></a>限制已保存之資料存放區和本機資源的存取  
- 用來存取已保存之存放區的帳戶應該僅被授與資料庫或檔案系統中的足夠權限來支援資料服務的需求。 使用匿名驗證時，這是用來執行裝載應用程式的帳戶。 如需詳細資訊，請參閱 [How to: Develop a WCF Data Service Running on IIS](../../../../docs/framework/data/wcf/how-to-develop-a-wcf-data-service-running-on-iis.md)。 使用模擬時，必須將這些資源的存取權授與已驗證的使用者，通常是做為 Windows 群組的一部分。  
+ 用來存取已保存之存放區的帳戶應該僅被授與資料庫或檔案系統中的足夠權限來支援資料服務的需求。 使用匿名驗證時，這是用來執行裝載應用程式的帳戶。 如需詳細資訊，請參閱 [如何：開發在 IIS 上執行的 WCF 資料服務](../../../../docs/framework/data/wcf/how-to-develop-a-wcf-data-service-running-on-iis.md)。 使用模擬時，必須將這些資源的存取權授與已驗證的使用者，通常是做為 Windows 群組的一部分。  
   
 ## <a name="other-security-considerations"></a>其他安全性考量  
   

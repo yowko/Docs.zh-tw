@@ -1,12 +1,13 @@
 ---
-title: "開發和部署 WCF Data Services"
-ms.custom: 
+title: 開發和部署 WCF Data Services
+ms.custom: ''
 ms.date: 03/30/2017
 ms.prod: .net-framework-oob
-ms.reviewer: 
-ms.suite: 
-ms.technology: dotnet-clr
-ms.tgt_pltfrm: 
+ms.reviewer: ''
+ms.suite: ''
+ms.technology:
+- dotnet-clr
+ms.tgt_pltfrm: ''
 ms.topic: article
 helpviewer_keywords:
 - WCF Data Services, developing
@@ -14,11 +15,12 @@ helpviewer_keywords:
 - deploying [WCF Data Services
 - developing applications [WCF Data Services]
 ms.assetid: 6557c0e3-5aea-4f6e-bc14-77ad317a168b
-caps.latest.revision: "6"
+caps.latest.revision: ''
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.workload: dotnet
+ms.workload:
+- dotnet
 ms.openlocfilehash: 8abe23aebefadc68268aa1dada8474336b1f87e7
 ms.sourcegitcommit: c0dd436f6f8f44dc80dc43b07f6841a00b74b23f
 ms.translationtype: MT
@@ -50,7 +52,7 @@ ms.lasthandoff: 01/19/2018
   
 1.  **本機 IIS 伺服器**  
   
-     當您建立屬於 [!INCLUDE[vstecasp](../../../../includes/vstecasp-md.md)] 應用程式或在 Internet Information Services (IIS) 上執行之 [!INCLUDE[vstecasp](../../../../includes/vstecasp-md.md)] 網站的資料服務時，建議您使用本機電腦上的 IIS 對您的資料服務進行開發和測試。 在 IIS 上執行資料服務時，更容易在偵錯期間追蹤 HTTP 要求。 這也讓您預先決定 IIS 用來存取資料服務所需之檔案、資料庫和其他資源時所需的必要權限。 若要在 IIS 上執行資料服務，您必須確認 IIS 和 [!INCLUDE[indigo1](../../../../includes/indigo1-md.md)] 都已正確安裝並設定，並授予 IIS 帳戶在檔案系統和資料庫中的存取權。 如需詳細資訊，請參閱 [How to: Develop a WCF Data Service Running on IIS](../../../../docs/framework/data/wcf/how-to-develop-a-wcf-data-service-running-on-iis.md)。  
+     當您建立屬於 [!INCLUDE[vstecasp](../../../../includes/vstecasp-md.md)] 應用程式或在 Internet Information Services (IIS) 上執行之 [!INCLUDE[vstecasp](../../../../includes/vstecasp-md.md)] 網站的資料服務時，建議您使用本機電腦上的 IIS 對您的資料服務進行開發和測試。 在 IIS 上執行資料服務時，更容易在偵錯期間追蹤 HTTP 要求。 這也讓您預先決定 IIS 用來存取資料服務所需之檔案、資料庫和其他資源時所需的必要權限。 若要在 IIS 上執行資料服務，您必須確認 IIS 和 [!INCLUDE[indigo1](../../../../includes/indigo1-md.md)] 都已正確安裝並設定，並授予 IIS 帳戶在檔案系統和資料庫中的存取權。 如需詳細資訊，請參閱 [如何：開發在 IIS 上執行的 WCF 資料服務](../../../../docs/framework/data/wcf/how-to-develop-a-wcf-data-service-running-on-iis.md)。  
   
     > [!NOTE]
     >  您必須使用系統管理員權限執行 [!INCLUDE[vs_current_short](../../../../includes/vs-current-short-md.md)] ，才能讓開發環境設定本機 IIS 伺服器。  
@@ -117,7 +119,7 @@ ms.lasthandoff: 01/19/2018
      [!INCLUDE[crabout](../../../../includes/crabout-md.md)]部署選項[!INCLUDE[vstecasp](../../../../includes/vstecasp-md.md)]應用程式，請參閱[Visual Studio 和 ASP.NET 的 Web 部署概觀](http://msdn.microsoft.com/library/99bd1927-b59f-4e02-87b4-55c6ba2adbc3)。  
   
     > [!TIP]
-    >  在您嘗試將資料服務部署到 IIS 之前，請確認您已經測試執行 IIS 之 Web 伺服器的部署。 如需詳細資訊，請參閱 [How to: Develop a WCF Data Service Running on IIS](../../../../docs/framework/data/wcf/how-to-develop-a-wcf-data-service-running-on-iis.md)。  
+    >  在您嘗試將資料服務部署到 IIS 之前，請確認您已經測試執行 IIS 之 Web 伺服器的部署。 如需詳細資訊，請參閱 [如何：開發在 IIS 上執行的 WCF 資料服務](../../../../docs/framework/data/wcf/how-to-develop-a-wcf-data-service-running-on-iis.md)。  
   
 -   **Microsoft Azure**  
   
@@ -126,7 +128,7 @@ ms.lasthandoff: 01/19/2018
 ### <a name="deployment-considerations"></a>部署考量  
  部署資料服務時，應該考慮下列事項：  
   
--   當您部署使用 [!INCLUDE[adonet_ef](../../../../includes/adonet-ef-md.md)] 提供者存取 SQL Server 資料庫的資料服務時，可能也需要使用資料服務部署傳播資料結構、資料或兩者。 [!INCLUDE[vs_current_short](../../../../includes/vs-current-short-md.md)] 可以自動建立指令碼 (.sql 檔)，在目的資料庫中進行這項處理，而且這些指令碼可併入 [!INCLUDE[vstecasp](../../../../includes/vstecasp-md.md)] 應用程式的 Web 部署套件中。 如需詳細資訊，請參閱[NIB： 如何： 部署資料庫與 Web 應用程式專案](http://msdn.microsoft.com/library/683b33f1-8a3d-45cf-af6e-61ab50fc518b)。 如果是 [!INCLUDE[vstecasp](../../../../includes/vstecasp-md.md)] 網站，則您可以使用 **中的 [資料庫發行精靈]**[!INCLUDE[vs_current_short](../../../../includes/vs-current-short-md.md)]來進行這項操作。 如需詳細資訊，請參閱 [Deploying a Database by Using the Database Publishing Wizard](http://msdn.microsoft.com/library/1e3682e7-8b57-4da6-a393-af9640ccf8b7)。  
+-   當您部署使用 [!INCLUDE[adonet_ef](../../../../includes/adonet-ef-md.md)] 提供者存取 SQL Server 資料庫的資料服務時，可能也需要使用資料服務部署傳播資料結構、資料或兩者。 [!INCLUDE[vs_current_short](../../../../includes/vs-current-short-md.md)] 可以自動建立指令碼 (.sql 檔)，在目的資料庫中進行這項處理，而且這些指令碼可併入 [!INCLUDE[vstecasp](../../../../includes/vstecasp-md.md)] 應用程式的 Web 部署套件中。 如需詳細資訊，請參閱[NIB： 如何： 部署資料庫與 Web 應用程式專案](http://msdn.microsoft.com/library/683b33f1-8a3d-45cf-af6e-61ab50fc518b)。 如果是 [!INCLUDE[vstecasp](../../../../includes/vstecasp-md.md)] 網站，則您可以使用 **中的 [資料庫發行精靈]**[!INCLUDE[vs_current_short](../../../../includes/vs-current-short-md.md)]來進行這項操作。 如需詳細資訊，請參閱 [部署資料庫使用資料庫發行精靈](http://msdn.microsoft.com/library/1e3682e7-8b57-4da6-a393-af9640ccf8b7)。  
   
 -   [!INCLUDE[ssAstoria](../../../../includes/ssastoria-md.md)] 包含基本的 [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] 實作，因此您可以使用 Windows Server AppFabric 監視部署至在 Windows Server 上執行之 IIS 的資料服務。 [!INCLUDE[crabout](../../../../includes/crabout-md.md)] 使用 Windows Server AppFabric 監視資料服務的詳細資訊，請參閱文章 [使用 Windows Server AppFabric 追蹤 WCF Data Services](http://go.microsoft.com/fwlink/?LinkID=202005)。  
   
