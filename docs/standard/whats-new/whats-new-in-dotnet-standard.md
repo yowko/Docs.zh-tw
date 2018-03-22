@@ -41,7 +41,7 @@ ms.lasthandoff: 12/23/2017
 
 **一組大幅擴充的 API**
 
-透過 1.6 版，.NET Standard 包含相較小的 API 子集。 其中排除那些經常用於 .NET Framework 或 Xamarin 的許多 API。 這讓開發變得複雜，因為當開發人員開發以多個 .NET 實作為目標的應用程式和程式庫時，他們必須尋找熟悉的 API 之合適替代方案。 .NET Standard 2.0 藉由新增比在 .NET Standard 1.6 (標準的先前版本) 中還多 20,000 多個 API 來解決此限制。 如需新增到 .NET Standard 2.0 的 API 清單，請參閱 [.NET Standard 2.0 與 1.6](https://raw.githubusercontent.com/dotnet/standard/master/docs/versions/netstandard2.0_diff.md) \(英文\)。 
+透過 1.6 版，.NET Standard 包含相較小的 API 子集。 其中排除那些經常用於 .NET Framework 或 Xamarin 的許多 API。 這讓開發變得複雜，因為當開發人員開發以多個 .NET 實作為目標的應用程式和程式庫時，他們必須尋找熟悉的 API 之合適替代方案。 .NET Standard 2.0 藉由新增比在 .NET Standard 1.6 (前一版本) 中還多 20,000 多個 API 來解決此限制。 如需新增到 .NET Standard 2.0 的 API 清單，請參閱 [.NET Standard 2.0 與 1.6 的差異](https://raw.githubusercontent.com/dotnet/standard/master/docs/versions/netstandard2.0_diff.md) \(英文\)。 
 
 一些新增到 .NET Standard 2.0 中 <xref:System> 命名空間的項目包括：
 
@@ -61,7 +61,7 @@ ms.lasthandoff: 12/23/2017
 
 絕大多數的程式庫都是以 .NET Framework 為目標而不是 .NET Standard。 不過，那些程式庫中的大部分呼叫都是呼叫 .NET Standard 2.0 中包含的 API。 從 .NET Standard 2.0 開始，您可以使用[相容性填充碼](https://github.com/dotnet/standard/blob/master/docs/netstandard-20/README.md#assembly-unification) \(英文\) 從 .NET Standard 程式庫存取 .NET Framework。 此相容性層級對開發人員是透明的，您不需要執行任何動作就能利用.NET Framework 程式庫。
 
-單一要求是由 .NET Framework Class Library 呼叫的 API 必須包含在 .NET Standard 2.0 中。
+唯一的要求是由 .NET Framework Class Library 呼叫的 API 必須包含在 .NET Standard 2.0 中。
 
 **Visual Basic 的支援**
 
