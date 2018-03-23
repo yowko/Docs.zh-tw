@@ -1,10 +1,10 @@
 ---
-title: /rootnamespace
-ms.date: 07/20/2015
+title: -rootnamespace
+ms.date: 03/13/2018
 ms.prod: .net
-ms.reviewer: 
-ms.suite: 
-ms.technology: devlang-visual-basic
+ms.suite: ''
+ms.technology:
+- devlang-visual-basic
 ms.topic: article
 f1_keywords:
 - /rootnamespace
@@ -14,47 +14,46 @@ helpviewer_keywords:
 - -rootnamespace compiler option [Visual Basic]
 - rootnamespace compiler option [Visual Basic]
 ms.assetid: e9245edf-6bef-420d-a7c7-324117752783
-caps.latest.revision: "13"
-author: dotnet-bot
-ms.author: dotnetcontent
-ms.openlocfilehash: b02171b28034d676b7027e96c2c66e36be9ae604
-ms.sourcegitcommit: 34ec7753acf76f90a0fa845235ef06663dc9e36e
+author: rpetrusha
+ms.author: ronpet
+ms.openlocfilehash: 45dce293549674e7e6aac2714e1a7a569719c597
+ms.sourcegitcommit: 498799639937c89de777361aab74261efe7b79ea
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 03/22/2018
 ---
-# <a name="rootnamespace"></a><span data-ttu-id="72e7c-102">/rootnamespace</span><span class="sxs-lookup"><span data-stu-id="72e7c-102">/rootnamespace</span></span>
-<span data-ttu-id="72e7c-103">指定所有類型宣告的命名空間。</span><span class="sxs-lookup"><span data-stu-id="72e7c-103">Specifies a namespace for all type declarations.</span></span>  
+# <a name="-rootnamespace"></a><span data-ttu-id="3a2da-102">-rootnamespace</span><span class="sxs-lookup"><span data-stu-id="3a2da-102">-rootnamespace</span></span>
+<span data-ttu-id="3a2da-103">指定所有類型宣告的命名空間。</span><span class="sxs-lookup"><span data-stu-id="3a2da-103">Specifies a namespace for all type declarations.</span></span>  
   
-## <a name="syntax"></a><span data-ttu-id="72e7c-104">語法</span><span class="sxs-lookup"><span data-stu-id="72e7c-104">Syntax</span></span>  
+## <a name="syntax"></a><span data-ttu-id="3a2da-104">語法</span><span class="sxs-lookup"><span data-stu-id="3a2da-104">Syntax</span></span>  
   
 ```  
-/rootnamespace:namespace  
+-rootnamespace:namespace  
 ```  
   
-## <a name="arguments"></a><span data-ttu-id="72e7c-105">引數</span><span class="sxs-lookup"><span data-stu-id="72e7c-105">Arguments</span></span>  
+## <a name="arguments"></a><span data-ttu-id="3a2da-105">引數</span><span class="sxs-lookup"><span data-stu-id="3a2da-105">Arguments</span></span>  
   
-|<span data-ttu-id="72e7c-106">詞彙</span><span class="sxs-lookup"><span data-stu-id="72e7c-106">Term</span></span>|<span data-ttu-id="72e7c-107">定義</span><span class="sxs-lookup"><span data-stu-id="72e7c-107">Definition</span></span>|  
+|<span data-ttu-id="3a2da-106">詞彙</span><span class="sxs-lookup"><span data-stu-id="3a2da-106">Term</span></span>|<span data-ttu-id="3a2da-107">定義</span><span class="sxs-lookup"><span data-stu-id="3a2da-107">Definition</span></span>|  
 |---|---|  
-|`namespace`|<span data-ttu-id="72e7c-108">在用來括住目前專案的所有類型宣告的命名空間名稱。</span><span class="sxs-lookup"><span data-stu-id="72e7c-108">The name of the namespace in which to enclose all type declarations for the current project.</span></span>|  
+|`namespace`|<span data-ttu-id="3a2da-108">在用來括住目前專案的所有類型宣告的命名空間名稱。</span><span class="sxs-lookup"><span data-stu-id="3a2da-108">The name of the namespace in which to enclose all type declarations for the current project.</span></span>|  
   
-## <a name="remarks"></a><span data-ttu-id="72e7c-109">備註</span><span class="sxs-lookup"><span data-stu-id="72e7c-109">Remarks</span></span>  
- <span data-ttu-id="72e7c-110">如果您使用 Visual Studio 可執行檔 (Devenv.exe) 來編譯所建立的專案在 Visual Studio 整合式的開發環境中，使用`/rootnamespace`指定的值<xref:VSLangProj80.VBProjectProperties3.RootNamespace%2A>屬性。</span><span class="sxs-lookup"><span data-stu-id="72e7c-110">If you use the Visual Studio executable file (Devenv.exe) to compile a project created in the Visual Studio integrated development environment, use `/rootnamespace` to specify the value of the <xref:VSLangProj80.VBProjectProperties3.RootNamespace%2A> property.</span></span> <span data-ttu-id="72e7c-111">請參閱[Devenv 命令列參數](/visualstudio/ide/reference/devenv-command-line-switches)如需詳細資訊。</span><span class="sxs-lookup"><span data-stu-id="72e7c-111">See [Devenv Command Line Switches](/visualstudio/ide/reference/devenv-command-line-switches) for more information.</span></span>  
+## <a name="remarks"></a><span data-ttu-id="3a2da-109">備註</span><span class="sxs-lookup"><span data-stu-id="3a2da-109">Remarks</span></span>  
+ <span data-ttu-id="3a2da-110">如果您使用 Visual Studio 可執行檔 (Devenv.exe) 來編譯所建立的專案在 Visual Studio 整合式的開發環境中，使用`-rootnamespace`指定的值<xref:VSLangProj80.VBProjectProperties3.RootNamespace%2A>屬性。</span><span class="sxs-lookup"><span data-stu-id="3a2da-110">If you use the Visual Studio executable file (Devenv.exe) to compile a project created in the Visual Studio integrated development environment, use `-rootnamespace` to specify the value of the <xref:VSLangProj80.VBProjectProperties3.RootNamespace%2A> property.</span></span> <span data-ttu-id="3a2da-111">請參閱[Devenv 命令列參數](/visualstudio/ide/reference/devenv-command-line-switches)如需詳細資訊。</span><span class="sxs-lookup"><span data-stu-id="3a2da-111">See [Devenv Command Line Switches](/visualstudio/ide/reference/devenv-command-line-switches) for more information.</span></span>  
   
- <span data-ttu-id="72e7c-112">使用 common language runtime MSIL 反組譯工具 (`Ildasm.exe`) 若要檢視輸出檔中的命名空間名稱。</span><span class="sxs-lookup"><span data-stu-id="72e7c-112">Use the common language runtime MSIL Disassembler (`Ildasm.exe`) to view the namespace names in your output file.</span></span>  
+ <span data-ttu-id="3a2da-112">使用 common language runtime MSIL 反組譯工具 (`Ildasm.exe`) 若要檢視輸出檔中的命名空間名稱。</span><span class="sxs-lookup"><span data-stu-id="3a2da-112">Use the common language runtime MSIL Disassembler (`Ildasm.exe`) to view the namespace names in your output file.</span></span>  
   
-|<span data-ttu-id="72e7c-113">在 Visual Studio 中設定 /rootnamespace 整合式開發環境</span><span class="sxs-lookup"><span data-stu-id="72e7c-113">To set /rootnamespace in the Visual Studio integrated development environment</span></span>|  
+|<span data-ttu-id="3a2da-113">在 Visual Studio 整合式的開發環境中設定-rootnamespace</span><span class="sxs-lookup"><span data-stu-id="3a2da-113">To set -rootnamespace in the Visual Studio integrated development environment</span></span>|  
 |---|  
-|<span data-ttu-id="72e7c-114">1.在 **方案總管**中選取專案。</span><span class="sxs-lookup"><span data-stu-id="72e7c-114">1.  Have a project selected in **Solution Explorer**.</span></span> <span data-ttu-id="72e7c-115">在 [專案] 功能表上，按一下 [屬性]。</span><span class="sxs-lookup"><span data-stu-id="72e7c-115">On the **Project** menu, click **Properties**.</span></span> <br /><span data-ttu-id="72e7c-116">2.按一下 [應用程式]  索引標籤。</span><span class="sxs-lookup"><span data-stu-id="72e7c-116">2.  Click the **Application** tab.</span></span><br /><span data-ttu-id="72e7c-117">3.修改中的值**根命名空間**方塊。</span><span class="sxs-lookup"><span data-stu-id="72e7c-117">3.  Modify the value in the **Root Namespace** box.</span></span>|  
+|<span data-ttu-id="3a2da-114">1.在 **方案總管**中選取專案。</span><span class="sxs-lookup"><span data-stu-id="3a2da-114">1.  Have a project selected in **Solution Explorer**.</span></span> <span data-ttu-id="3a2da-115">在 [專案] 功能表上，按一下 [屬性]。</span><span class="sxs-lookup"><span data-stu-id="3a2da-115">On the **Project** menu, click **Properties**.</span></span> <br /><span data-ttu-id="3a2da-116">2.按一下 [應用程式]  索引標籤。</span><span class="sxs-lookup"><span data-stu-id="3a2da-116">2.  Click the **Application** tab.</span></span><br /><span data-ttu-id="3a2da-117">3.修改中的值**根命名空間**方塊。</span><span class="sxs-lookup"><span data-stu-id="3a2da-117">3.  Modify the value in the **Root Namespace** box.</span></span>|  
   
-## <a name="example"></a><span data-ttu-id="72e7c-118">範例</span><span class="sxs-lookup"><span data-stu-id="72e7c-118">Example</span></span>  
- <span data-ttu-id="72e7c-119">下列程式碼編譯`In.vb`封入命名空間中的所有型別宣告和`mynamespace`。</span><span class="sxs-lookup"><span data-stu-id="72e7c-119">The following code compiles `In.vb` and encloses all type declarations in the namespace `mynamespace`.</span></span>  
+## <a name="example"></a><span data-ttu-id="3a2da-118">範例</span><span class="sxs-lookup"><span data-stu-id="3a2da-118">Example</span></span>  
+ <span data-ttu-id="3a2da-119">下列程式碼編譯`In.vb`封入命名空間中的所有型別宣告和`mynamespace`。</span><span class="sxs-lookup"><span data-stu-id="3a2da-119">The following code compiles `In.vb` and encloses all type declarations in the namespace `mynamespace`.</span></span>  
   
+```console
+vbc -rootnamespace:mynamespace in.vb  
 ```  
-vbc /rootnamespace:mynamespace in.vb  
-```  
   
-## <a name="see-also"></a><span data-ttu-id="72e7c-120">請參閱</span><span class="sxs-lookup"><span data-stu-id="72e7c-120">See Also</span></span>  
- [<span data-ttu-id="72e7c-121">Visual Basic 命令列編譯器</span><span class="sxs-lookup"><span data-stu-id="72e7c-121">Visual Basic Command-Line Compiler</span></span>](../../../visual-basic/reference/command-line-compiler/index.md)  
- [<span data-ttu-id="72e7c-122">Ildasm.exe (IL 反組譯工具)</span><span class="sxs-lookup"><span data-stu-id="72e7c-122">Ildasm.exe (IL Disassembler)</span></span>](https://msdn.microsoft.com/library/f7dy01k1)  
- [<span data-ttu-id="72e7c-123">編譯命令列範例</span><span class="sxs-lookup"><span data-stu-id="72e7c-123">Sample Compilation Command Lines</span></span>](../../../visual-basic/reference/command-line-compiler/sample-compilation-command-lines.md)
+## <a name="see-also"></a><span data-ttu-id="3a2da-120">另請參閱</span><span class="sxs-lookup"><span data-stu-id="3a2da-120">See Also</span></span>  
+ [<span data-ttu-id="3a2da-121">Visual Basic 命令列編譯器</span><span class="sxs-lookup"><span data-stu-id="3a2da-121">Visual Basic Command-Line Compiler</span></span>](../../../visual-basic/reference/command-line-compiler/index.md)  
+ [<span data-ttu-id="3a2da-122">Ildasm.exe (IL 反組譯工具)</span><span class="sxs-lookup"><span data-stu-id="3a2da-122">Ildasm.exe (IL Disassembler)</span></span>](https://msdn.microsoft.com/library/f7dy01k1)  
+ [<span data-ttu-id="3a2da-123">編譯命令列範例</span><span class="sxs-lookup"><span data-stu-id="3a2da-123">Sample Compilation Command Lines</span></span>](../../../visual-basic/reference/command-line-compiler/sample-compilation-command-lines.md)

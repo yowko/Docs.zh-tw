@@ -1,108 +1,107 @@
 ---
-title: /vbruntime
-ms.date: 07/20/2015
+title: -vbruntime
+ms.date: 03/13/2018
 ms.prod: .net
-ms.reviewer: 
-ms.suite: 
-ms.technology: devlang-visual-basic
+ms.suite: ''
+ms.technology:
+- devlang-visual-basic
 ms.topic: article
 f1_keywords:
 - vbruntime
-- /vbruntime
+- -vbruntime
 helpviewer_keywords:
 - vbruntime compiler option [Visual Basic]
 - -vbruntime compiler option [Visual Basic]
 - /vbruntime compiler option [Visual Basic]
 ms.assetid: 1aa0239e-511a-4c29-957d-fd72877b350a
-caps.latest.revision: "17"
-author: dotnet-bot
-ms.author: dotnetcontent
-ms.openlocfilehash: dda8ea7285a748bac53e30af8bd7a60099fe7411
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+author: rpetrusha
+ms.author: ronpet
+ms.openlocfilehash: e6c6529fabddc75fb6ac751e0314011f05db7869
+ms.sourcegitcommit: 498799639937c89de777361aab74261efe7b79ea
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 03/22/2018
 ---
-# <a name="vbruntime"></a><span data-ttu-id="fbe2c-102">/vbruntime</span><span class="sxs-lookup"><span data-stu-id="fbe2c-102">/vbruntime</span></span>
-<span data-ttu-id="fbe2c-103">指定編譯器在編譯時不應使用 Visual Basic 執行階段程式庫的參考，或應使用特定執行階段程式庫的參考。</span><span class="sxs-lookup"><span data-stu-id="fbe2c-103">Specifies that the compiler should compile without a reference to the Visual Basic Runtime Library, or with a reference to a specific runtime library.</span></span>  
+# <a name="-vbruntime"></a><span data-ttu-id="39671-102">-vbruntime</span><span class="sxs-lookup"><span data-stu-id="39671-102">-vbruntime</span></span>
+<span data-ttu-id="39671-103">指定編譯器在編譯時不應使用 Visual Basic 執行階段程式庫的參考，或應使用特定執行階段程式庫的參考。</span><span class="sxs-lookup"><span data-stu-id="39671-103">Specifies that the compiler should compile without a reference to the Visual Basic Runtime Library, or with a reference to a specific runtime library.</span></span>  
   
-## <a name="syntax"></a><span data-ttu-id="fbe2c-104">語法</span><span class="sxs-lookup"><span data-stu-id="fbe2c-104">Syntax</span></span>  
+## <a name="syntax"></a><span data-ttu-id="39671-104">語法</span><span class="sxs-lookup"><span data-stu-id="39671-104">Syntax</span></span>  
   
 ```  
-/vbruntime:{ - | + | * | path }  
+-vbruntime:{ - | + | * | path }  
 ```  
   
-## <a name="arguments"></a><span data-ttu-id="fbe2c-105">引數</span><span class="sxs-lookup"><span data-stu-id="fbe2c-105">Arguments</span></span>  
+## <a name="arguments"></a><span data-ttu-id="39671-105">引數</span><span class="sxs-lookup"><span data-stu-id="39671-105">Arguments</span></span>  
  \-  
- <span data-ttu-id="fbe2c-106">編譯 Visual Basic 執行階段程式庫參考。</span><span class="sxs-lookup"><span data-stu-id="fbe2c-106">Compile without a reference to the Visual Basic Runtime Library.</span></span>  
+ <span data-ttu-id="39671-106">編譯 Visual Basic 執行階段程式庫參考。</span><span class="sxs-lookup"><span data-stu-id="39671-106">Compile without a reference to the Visual Basic Runtime Library.</span></span>  
   
  \+  
- <span data-ttu-id="fbe2c-107">編譯預設 Visual Basic 執行階段程式庫的參考。</span><span class="sxs-lookup"><span data-stu-id="fbe2c-107">Compile with a reference to the default Visual Basic Runtime Library.</span></span>  
+ <span data-ttu-id="39671-107">編譯預設 Visual Basic 執行階段程式庫的參考。</span><span class="sxs-lookup"><span data-stu-id="39671-107">Compile with a reference to the default Visual Basic Runtime Library.</span></span>  
   
  \*  
- <span data-ttu-id="fbe2c-108">編譯 Visual Basic 執行階段程式庫，必須參考和內嵌組件從 Visual Basic 執行階段程式庫的核心功能。</span><span class="sxs-lookup"><span data-stu-id="fbe2c-108">Compile without a reference to the Visual Basic Runtime Library, and embed core functionality from the Visual Basic Runtime Library into the assembly.</span></span>  
+ <span data-ttu-id="39671-108">編譯 Visual Basic 執行階段程式庫，必須參考和內嵌組件從 Visual Basic 執行階段程式庫的核心功能。</span><span class="sxs-lookup"><span data-stu-id="39671-108">Compile without a reference to the Visual Basic Runtime Library, and embed core functionality from the Visual Basic Runtime Library into the assembly.</span></span>  
   
  `path`  
- <span data-ttu-id="fbe2c-109">編譯指定的程式庫 (DLL) 的參考。</span><span class="sxs-lookup"><span data-stu-id="fbe2c-109">Compile with a reference to the specified library (DLL).</span></span>  
+ <span data-ttu-id="39671-109">編譯指定的程式庫 (DLL) 的參考。</span><span class="sxs-lookup"><span data-stu-id="39671-109">Compile with a reference to the specified library (DLL).</span></span>  
   
-## <a name="remarks"></a><span data-ttu-id="fbe2c-110">備註</span><span class="sxs-lookup"><span data-stu-id="fbe2c-110">Remarks</span></span>  
- <span data-ttu-id="fbe2c-111">`/vbruntime`編譯器選項可讓您指定編譯器應編譯 Visual Basic 執行階段程式庫參考。</span><span class="sxs-lookup"><span data-stu-id="fbe2c-111">The `/vbruntime` compiler option enables you to specify that the compiler should compile without a reference to the Visual Basic Runtime Library.</span></span> <span data-ttu-id="fbe2c-112">如果您沒有 Visual Basic 執行階段程式庫的參考編譯時，會在產生 Visual Basic 執行階段協助程式呼叫的程式碼或語言建構記錄錯誤或警告。</span><span class="sxs-lookup"><span data-stu-id="fbe2c-112">If you compile without a reference to the Visual Basic Runtime Library, errors or warnings are logged on code or language constructs that generate a call to a Visual Basic runtime helper.</span></span> <span data-ttu-id="fbe2c-113">(A *Visual Basic 執行階段 helper*是定義在 Microsoft.VisualBasic.dll 中，在執行特定語言語意的執行階段呼叫的函式。)</span><span class="sxs-lookup"><span data-stu-id="fbe2c-113">(A *Visual Basic runtime helper* is a function defined in Microsoft.VisualBasic.dll that is called at runtime to execute a specific language semantic.)</span></span>  
+## <a name="remarks"></a><span data-ttu-id="39671-110">備註</span><span class="sxs-lookup"><span data-stu-id="39671-110">Remarks</span></span>  
+ <span data-ttu-id="39671-111">`-vbruntime`編譯器選項可讓您指定編譯器應編譯 Visual Basic 執行階段程式庫參考。</span><span class="sxs-lookup"><span data-stu-id="39671-111">The `-vbruntime` compiler option enables you to specify that the compiler should compile without a reference to the Visual Basic Runtime Library.</span></span> <span data-ttu-id="39671-112">如果您沒有 Visual Basic 執行階段程式庫的參考編譯時，會在產生 Visual Basic 執行階段協助程式呼叫的程式碼或語言建構記錄錯誤或警告。</span><span class="sxs-lookup"><span data-stu-id="39671-112">If you compile without a reference to the Visual Basic Runtime Library, errors or warnings are logged on code or language constructs that generate a call to a Visual Basic runtime helper.</span></span> <span data-ttu-id="39671-113">(A *Visual Basic 執行階段 helper*是定義在 Microsoft.VisualBasic.dll 中，在執行特定語言語意的執行階段呼叫的函式。)</span><span class="sxs-lookup"><span data-stu-id="39671-113">(A *Visual Basic runtime helper* is a function defined in Microsoft.VisualBasic.dll that is called at runtime to execute a specific language semantic.)</span></span>  
   
- <span data-ttu-id="fbe2c-114">`/vbruntime+`選項會產生相同的行為，如果沒有，就會發生`/vbruntime`指定參數。</span><span class="sxs-lookup"><span data-stu-id="fbe2c-114">The `/vbruntime+` option produces the same behavior that occurs if no `/vbruntime` switch is specified.</span></span> <span data-ttu-id="fbe2c-115">您可以使用`/vbruntime+`選項來覆寫先前`/vbruntime`參數。</span><span class="sxs-lookup"><span data-stu-id="fbe2c-115">You can use the `/vbruntime+` option to override previous `/vbruntime` switches.</span></span>  
+ <span data-ttu-id="39671-114">`-vbruntime+`選項會產生相同的行為，如果沒有，就會發生`-vbruntime`指定參數。</span><span class="sxs-lookup"><span data-stu-id="39671-114">The `-vbruntime+` option produces the same behavior that occurs if no `-vbruntime` switch is specified.</span></span> <span data-ttu-id="39671-115">您可以使用`-vbruntime+`選項來覆寫先前`-vbruntime`參數。</span><span class="sxs-lookup"><span data-stu-id="39671-115">You can use the `-vbruntime+` option to override previous `-vbruntime` switches.</span></span>  
   
- <span data-ttu-id="fbe2c-116">大部分物件`My`類型為無法使用，當您使用`/vbruntime-`或`vbruntime:``path`選項。</span><span class="sxs-lookup"><span data-stu-id="fbe2c-116">Most objects of the `My` type are unavailable when you use the `/vbruntime-` or `vbruntime:``path` options.</span></span>  
+ <span data-ttu-id="39671-116">大部分物件`My`類型為無法使用，當您使用`-vbruntime-`或`-vbruntime:path`選項。</span><span class="sxs-lookup"><span data-stu-id="39671-116">Most objects of the `My` type are unavailable when you use the `-vbruntime-` or `-vbruntime:path` options.</span></span>  
   
-## <a name="embedding-visual-basic-runtime-core-functionality"></a><span data-ttu-id="fbe2c-117">內嵌 Visual Basic 執行階段的核心功能</span><span class="sxs-lookup"><span data-stu-id="fbe2c-117">Embedding Visual Basic Runtime core functionality</span></span>  
- <span data-ttu-id="fbe2c-118">`/vbruntime*`選項可讓您編譯而不需要執行階段程式庫的參考。</span><span class="sxs-lookup"><span data-stu-id="fbe2c-118">The `/vbruntime*` option enables you to compile without a reference to a runtime library.</span></span> <span data-ttu-id="fbe2c-119">相反地，從 Visual Basic 執行階段程式庫的核心功能會內嵌在使用者組件。</span><span class="sxs-lookup"><span data-stu-id="fbe2c-119">Instead, core functionality from the Visual Basic Runtime Library is embedded in the user assembly.</span></span> <span data-ttu-id="fbe2c-120">如果您的應用程式執行，並包含 Visual Basic 執行階段平台上，您可以使用此選項。</span><span class="sxs-lookup"><span data-stu-id="fbe2c-120">You can use this option if your application runs on platforms that do not contain the Visual Basic runtime.</span></span>  
+## <a name="embedding-visual-basic-runtime-core-functionality"></a><span data-ttu-id="39671-117">內嵌 Visual Basic 執行階段的核心功能</span><span class="sxs-lookup"><span data-stu-id="39671-117">Embedding Visual Basic Runtime core functionality</span></span>  
+ <span data-ttu-id="39671-118">`-vbruntime*`選項可讓您編譯而不需要執行階段程式庫的參考。</span><span class="sxs-lookup"><span data-stu-id="39671-118">The `-vbruntime*` option enables you to compile without a reference to a runtime library.</span></span> <span data-ttu-id="39671-119">相反地，從 Visual Basic 執行階段程式庫的核心功能會內嵌在使用者組件。</span><span class="sxs-lookup"><span data-stu-id="39671-119">Instead, core functionality from the Visual Basic Runtime Library is embedded in the user assembly.</span></span> <span data-ttu-id="39671-120">如果您的應用程式執行，並包含 Visual Basic 執行階段平台上，您可以使用此選項。</span><span class="sxs-lookup"><span data-stu-id="39671-120">You can use this option if your application runs on platforms that do not contain the Visual Basic runtime.</span></span>  
   
- <span data-ttu-id="fbe2c-121">下列執行階段成員會內嵌：</span><span class="sxs-lookup"><span data-stu-id="fbe2c-121">The following runtime members are embedded:</span></span>  
+ <span data-ttu-id="39671-121">下列執行階段成員會內嵌：</span><span class="sxs-lookup"><span data-stu-id="39671-121">The following runtime members are embedded:</span></span>  
   
--   <span data-ttu-id="fbe2c-122"><xref:Microsoft.VisualBasic.CompilerServices.Conversions> 類別</span><span class="sxs-lookup"><span data-stu-id="fbe2c-122"><xref:Microsoft.VisualBasic.CompilerServices.Conversions> class</span></span>  
+-   <span data-ttu-id="39671-122"><xref:Microsoft.VisualBasic.CompilerServices.Conversions> 類別</span><span class="sxs-lookup"><span data-stu-id="39671-122"><xref:Microsoft.VisualBasic.CompilerServices.Conversions> class</span></span>  
   
--   <span data-ttu-id="fbe2c-123"><xref:Microsoft.VisualBasic.Strings.AscW%28System.Char%29> 方法</span><span class="sxs-lookup"><span data-stu-id="fbe2c-123"><xref:Microsoft.VisualBasic.Strings.AscW%28System.Char%29> method</span></span>  
+-   <span data-ttu-id="39671-123"><xref:Microsoft.VisualBasic.Strings.AscW%28System.Char%29> 方法</span><span class="sxs-lookup"><span data-stu-id="39671-123"><xref:Microsoft.VisualBasic.Strings.AscW%28System.Char%29> method</span></span>  
   
--   <span data-ttu-id="fbe2c-124"><xref:Microsoft.VisualBasic.Strings.AscW%28System.String%29> 方法</span><span class="sxs-lookup"><span data-stu-id="fbe2c-124"><xref:Microsoft.VisualBasic.Strings.AscW%28System.String%29> method</span></span>  
+-   <span data-ttu-id="39671-124"><xref:Microsoft.VisualBasic.Strings.AscW%28System.String%29> 方法</span><span class="sxs-lookup"><span data-stu-id="39671-124"><xref:Microsoft.VisualBasic.Strings.AscW%28System.String%29> method</span></span>  
   
--   <span data-ttu-id="fbe2c-125"><xref:Microsoft.VisualBasic.Strings.ChrW%28System.Int32%29> 方法</span><span class="sxs-lookup"><span data-stu-id="fbe2c-125"><xref:Microsoft.VisualBasic.Strings.ChrW%28System.Int32%29> method</span></span>  
+-   <span data-ttu-id="39671-125"><xref:Microsoft.VisualBasic.Strings.ChrW%28System.Int32%29> 方法</span><span class="sxs-lookup"><span data-stu-id="39671-125"><xref:Microsoft.VisualBasic.Strings.ChrW%28System.Int32%29> method</span></span>  
   
--   <span data-ttu-id="fbe2c-126"><xref:Microsoft.VisualBasic.Constants.vbBack>常數</span><span class="sxs-lookup"><span data-stu-id="fbe2c-126"><xref:Microsoft.VisualBasic.Constants.vbBack> constant</span></span>  
+-   <span data-ttu-id="39671-126"><xref:Microsoft.VisualBasic.Constants.vbBack> 常數</span><span class="sxs-lookup"><span data-stu-id="39671-126"><xref:Microsoft.VisualBasic.Constants.vbBack> constant</span></span>  
   
--   <span data-ttu-id="fbe2c-127"><xref:Microsoft.VisualBasic.Constants.vbCr>常數</span><span class="sxs-lookup"><span data-stu-id="fbe2c-127"><xref:Microsoft.VisualBasic.Constants.vbCr> constant</span></span>  
+-   <span data-ttu-id="39671-127"><xref:Microsoft.VisualBasic.Constants.vbCr> 常數</span><span class="sxs-lookup"><span data-stu-id="39671-127"><xref:Microsoft.VisualBasic.Constants.vbCr> constant</span></span>  
   
--   <span data-ttu-id="fbe2c-128"><xref:Microsoft.VisualBasic.Constants.vbCrLf>常數</span><span class="sxs-lookup"><span data-stu-id="fbe2c-128"><xref:Microsoft.VisualBasic.Constants.vbCrLf> constant</span></span>  
+-   <span data-ttu-id="39671-128"><xref:Microsoft.VisualBasic.Constants.vbCrLf> 常數</span><span class="sxs-lookup"><span data-stu-id="39671-128"><xref:Microsoft.VisualBasic.Constants.vbCrLf> constant</span></span>  
   
--   <span data-ttu-id="fbe2c-129"><xref:Microsoft.VisualBasic.Constants.vbFormFeed>常數</span><span class="sxs-lookup"><span data-stu-id="fbe2c-129"><xref:Microsoft.VisualBasic.Constants.vbFormFeed> constant</span></span>  
+-   <span data-ttu-id="39671-129"><xref:Microsoft.VisualBasic.Constants.vbFormFeed> 常數</span><span class="sxs-lookup"><span data-stu-id="39671-129"><xref:Microsoft.VisualBasic.Constants.vbFormFeed> constant</span></span>  
   
--   <span data-ttu-id="fbe2c-130"><xref:Microsoft.VisualBasic.Constants.vbLf>常數</span><span class="sxs-lookup"><span data-stu-id="fbe2c-130"><xref:Microsoft.VisualBasic.Constants.vbLf> constant</span></span>  
+-   <span data-ttu-id="39671-130"><xref:Microsoft.VisualBasic.Constants.vbLf> 常數</span><span class="sxs-lookup"><span data-stu-id="39671-130"><xref:Microsoft.VisualBasic.Constants.vbLf> constant</span></span>  
   
--   <span data-ttu-id="fbe2c-131"><xref:Microsoft.VisualBasic.Constants.vbNewLine>常數</span><span class="sxs-lookup"><span data-stu-id="fbe2c-131"><xref:Microsoft.VisualBasic.Constants.vbNewLine> constant</span></span>  
+-   <span data-ttu-id="39671-131"><xref:Microsoft.VisualBasic.Constants.vbNewLine> 常數</span><span class="sxs-lookup"><span data-stu-id="39671-131"><xref:Microsoft.VisualBasic.Constants.vbNewLine> constant</span></span>  
   
--   <span data-ttu-id="fbe2c-132"><xref:Microsoft.VisualBasic.Constants.vbNullChar>常數</span><span class="sxs-lookup"><span data-stu-id="fbe2c-132"><xref:Microsoft.VisualBasic.Constants.vbNullChar> constant</span></span>  
+-   <span data-ttu-id="39671-132"><xref:Microsoft.VisualBasic.Constants.vbNullChar> 常數</span><span class="sxs-lookup"><span data-stu-id="39671-132"><xref:Microsoft.VisualBasic.Constants.vbNullChar> constant</span></span>  
   
--   <span data-ttu-id="fbe2c-133"><xref:Microsoft.VisualBasic.Constants.vbNullString>常數</span><span class="sxs-lookup"><span data-stu-id="fbe2c-133"><xref:Microsoft.VisualBasic.Constants.vbNullString> constant</span></span>  
+-   <span data-ttu-id="39671-133"><xref:Microsoft.VisualBasic.Constants.vbNullString> 常數</span><span class="sxs-lookup"><span data-stu-id="39671-133"><xref:Microsoft.VisualBasic.Constants.vbNullString> constant</span></span>  
   
--   <span data-ttu-id="fbe2c-134"><xref:Microsoft.VisualBasic.Constants.vbTab>常數</span><span class="sxs-lookup"><span data-stu-id="fbe2c-134"><xref:Microsoft.VisualBasic.Constants.vbTab> constant</span></span>  
+-   <span data-ttu-id="39671-134"><xref:Microsoft.VisualBasic.Constants.vbTab> 常數</span><span class="sxs-lookup"><span data-stu-id="39671-134"><xref:Microsoft.VisualBasic.Constants.vbTab> constant</span></span>  
   
--   <span data-ttu-id="fbe2c-135"><xref:Microsoft.VisualBasic.Constants.vbVerticalTab>常數</span><span class="sxs-lookup"><span data-stu-id="fbe2c-135"><xref:Microsoft.VisualBasic.Constants.vbVerticalTab> constant</span></span>  
+-   <span data-ttu-id="39671-135"><xref:Microsoft.VisualBasic.Constants.vbVerticalTab> 常數</span><span class="sxs-lookup"><span data-stu-id="39671-135"><xref:Microsoft.VisualBasic.Constants.vbVerticalTab> constant</span></span>  
   
--   <span data-ttu-id="fbe2c-136">某些物件`My`類型</span><span class="sxs-lookup"><span data-stu-id="fbe2c-136">Some objects of the `My` type</span></span>  
+-   <span data-ttu-id="39671-136">某些物件`My`類型</span><span class="sxs-lookup"><span data-stu-id="39671-136">Some objects of the `My` type</span></span>  
   
- <span data-ttu-id="fbe2c-137">如果您將編譯使用`/vbruntime*`選項和您的程式碼參考的成員，從非內嵌的核心功能與 Visual Basic 執行階段程式庫、 編譯器傳回錯誤，指出成員不是可用。</span><span class="sxs-lookup"><span data-stu-id="fbe2c-137">If you compile using the `/vbruntime*` option and your code references a member from the Visual Basic Runtime Library that is not embedded with the core functionality, the compiler returns an error that indicates that the member is not available.</span></span>  
+ <span data-ttu-id="39671-137">如果您將編譯使用`-vbruntime*`選項和您的程式碼參考的成員，從非內嵌的核心功能與 Visual Basic 執行階段程式庫、 編譯器傳回錯誤，指出成員不是可用。</span><span class="sxs-lookup"><span data-stu-id="39671-137">If you compile using the `-vbruntime*` option and your code references a member from the Visual Basic Runtime Library that is not embedded with the core functionality, the compiler returns an error that indicates that the member is not available.</span></span>  
   
-## <a name="referencing-a-specified-library"></a><span data-ttu-id="fbe2c-138">參考指定的程式庫</span><span class="sxs-lookup"><span data-stu-id="fbe2c-138">Referencing a specified library</span></span>  
- <span data-ttu-id="fbe2c-139">您可以使用`path`引數，若要編譯的自訂執行階段程式庫，而不使用預設 Visual Basic 執行階段程式庫的參考。</span><span class="sxs-lookup"><span data-stu-id="fbe2c-139">You can use the `path` argument to compile with a reference to a custom runtime library instead of the default Visual Basic Runtime Library.</span></span>  
+## <a name="referencing-a-specified-library"></a><span data-ttu-id="39671-138">參考指定的程式庫</span><span class="sxs-lookup"><span data-stu-id="39671-138">Referencing a specified library</span></span>  
+ <span data-ttu-id="39671-139">您可以使用`path`引數，若要編譯的自訂執行階段程式庫，而不使用預設 Visual Basic 執行階段程式庫的參考。</span><span class="sxs-lookup"><span data-stu-id="39671-139">You can use the `path` argument to compile with a reference to a custom runtime library instead of the default Visual Basic Runtime Library.</span></span>  
   
- <span data-ttu-id="fbe2c-140">如果值`path`引數為 DLL 的完整的路徑，編譯器會使用該檔案做為執行階段程式庫。</span><span class="sxs-lookup"><span data-stu-id="fbe2c-140">If the value for the `path` argument is a fully qualified path to a DLL, the compiler will use that file as the runtime library.</span></span> <span data-ttu-id="fbe2c-141">如果值`path`引數不是 DLL 的完整的路徑，Visual Basic 編譯器會先搜尋目前資料夾中識別的 DLL。</span><span class="sxs-lookup"><span data-stu-id="fbe2c-141">If the value for the `path` argument is not a fully qualified path to a DLL, the Visual Basic compiler will search for the identified DLL in the current folder first.</span></span> <span data-ttu-id="fbe2c-142">它會在您使用指定的路徑中搜尋[/sdkpath](../../../visual-basic/reference/command-line-compiler/sdkpath.md)編譯器選項。</span><span class="sxs-lookup"><span data-stu-id="fbe2c-142">It will then search in the path that you have specified by using the [/sdkpath](../../../visual-basic/reference/command-line-compiler/sdkpath.md) compiler option.</span></span> <span data-ttu-id="fbe2c-143">如果`/sdkpath`未使用編譯器選項，編譯器會搜尋在.NET Framework 資料夾中識別的 DLL (`%systemroot%\Microsoft.NET\Framework\versionNumber`)。</span><span class="sxs-lookup"><span data-stu-id="fbe2c-143">If the `/sdkpath` compiler option is not used, the compiler will search for the identified DLL in the .NET Framework folder (`%systemroot%\Microsoft.NET\Framework\versionNumber`).</span></span>  
+ <span data-ttu-id="39671-140">如果值`path`引數為 DLL 的完整的路徑，編譯器會使用該檔案做為執行階段程式庫。</span><span class="sxs-lookup"><span data-stu-id="39671-140">If the value for the `path` argument is a fully qualified path to a DLL, the compiler will use that file as the runtime library.</span></span> <span data-ttu-id="39671-141">如果值`path`引數不是 DLL 的完整的路徑，Visual Basic 編譯器會先搜尋目前資料夾中識別的 DLL。</span><span class="sxs-lookup"><span data-stu-id="39671-141">If the value for the `path` argument is not a fully qualified path to a DLL, the Visual Basic compiler will search for the identified DLL in the current folder first.</span></span> <span data-ttu-id="39671-142">它會在您使用指定的路徑中搜尋[-sdkpath](../../../visual-basic/reference/command-line-compiler/sdkpath.md)編譯器選項。</span><span class="sxs-lookup"><span data-stu-id="39671-142">It will then search in the path that you have specified by using the [-sdkpath](../../../visual-basic/reference/command-line-compiler/sdkpath.md) compiler option.</span></span> <span data-ttu-id="39671-143">如果`-sdkpath`未使用編譯器選項，編譯器會搜尋在.NET Framework 資料夾中識別的 DLL (`%systemroot%\Microsoft.NET\Framework\versionNumber`)。</span><span class="sxs-lookup"><span data-stu-id="39671-143">If the `-sdkpath` compiler option is not used, the compiler will search for the identified DLL in the .NET Framework folder (`%systemroot%\Microsoft.NET\Framework\versionNumber`).</span></span>  
   
-## <a name="example"></a><span data-ttu-id="fbe2c-144">範例</span><span class="sxs-lookup"><span data-stu-id="fbe2c-144">Example</span></span>  
- <span data-ttu-id="fbe2c-145">下列範例示範如何使用`/vbruntime`選項，以自訂的程式庫的參考所編譯。</span><span class="sxs-lookup"><span data-stu-id="fbe2c-145">The following example shows how to use the `/vbruntime` option to compile with a reference to a custom library.</span></span>  
+## <a name="example"></a><span data-ttu-id="39671-144">範例</span><span class="sxs-lookup"><span data-stu-id="39671-144">Example</span></span>  
+ <span data-ttu-id="39671-145">下列範例示範如何使用`-vbruntime`選項，以自訂的程式庫的參考所編譯。</span><span class="sxs-lookup"><span data-stu-id="39671-145">The following example shows how to use the `-vbruntime` option to compile with a reference to a custom library.</span></span>  
   
+```console
+vbc -vbruntime:C:\VBLibraries\CustomVBLibrary.dll  
 ```  
-vbc /vbruntime:C:\VBLibraries\CustomVBLibrary.dll  
-```  
   
-## <a name="see-also"></a><span data-ttu-id="fbe2c-146">另請參閱</span><span class="sxs-lookup"><span data-stu-id="fbe2c-146">See Also</span></span>  
- [<span data-ttu-id="fbe2c-147">Visual Basic 核心 – Visual Studio 2010 SP1 中新的編譯模式</span><span class="sxs-lookup"><span data-stu-id="fbe2c-147">Visual Basic Core – New compilation mode in Visual Studio 2010 SP1</span></span>](http://blogs.msdn.com/b/vbteam/archive/2011/01/10/vb-core-new-compilation-mode-in-visual-studio-2010-sp1.aspx)  
- [<span data-ttu-id="fbe2c-148">Visual Basic 命令列編譯器</span><span class="sxs-lookup"><span data-stu-id="fbe2c-148">Visual Basic Command-Line Compiler</span></span>](../../../visual-basic/reference/command-line-compiler/index.md)  
- [<span data-ttu-id="fbe2c-149">編譯命令列範例</span><span class="sxs-lookup"><span data-stu-id="fbe2c-149">Sample Compilation Command Lines</span></span>](../../../visual-basic/reference/command-line-compiler/sample-compilation-command-lines.md)  
- [<span data-ttu-id="fbe2c-150">/sdkpath</span><span class="sxs-lookup"><span data-stu-id="fbe2c-150">/sdkpath</span></span>](../../../visual-basic/reference/command-line-compiler/sdkpath.md)
+## <a name="see-also"></a><span data-ttu-id="39671-146">另請參閱</span><span class="sxs-lookup"><span data-stu-id="39671-146">See Also</span></span>  
+ [<span data-ttu-id="39671-147">Visual Basic 核心 – Visual Studio 2010 SP1 中新的編譯模式</span><span class="sxs-lookup"><span data-stu-id="39671-147">Visual Basic Core – New compilation mode in Visual Studio 2010 SP1</span></span>](http://blogs.msdn.com/b/vbteam/archive/2011/01/10/vb-core-new-compilation-mode-in-visual-studio-2010-sp1.aspx)  
+ [<span data-ttu-id="39671-148">Visual Basic 命令列編譯器</span><span class="sxs-lookup"><span data-stu-id="39671-148">Visual Basic Command-Line Compiler</span></span>](../../../visual-basic/reference/command-line-compiler/index.md)  
+ [<span data-ttu-id="39671-149">編譯命令列範例</span><span class="sxs-lookup"><span data-stu-id="39671-149">Sample Compilation Command Lines</span></span>](../../../visual-basic/reference/command-line-compiler/sample-compilation-command-lines.md)  
+ [<span data-ttu-id="39671-150">-sdkpath</span><span class="sxs-lookup"><span data-stu-id="39671-150">-sdkpath</span></span>](../../../visual-basic/reference/command-line-compiler/sdkpath.md)
