@@ -1,12 +1,13 @@
 ---
-title: "如何：使用追蹤和偵錯進行條件式編譯"
-ms.custom: 
+title: 如何：使用追蹤和偵錯進行條件式編譯
+ms.custom: ''
 ms.date: 03/30/2017
 ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.technology: dotnet-clr
-ms.tgt_pltfrm: 
+ms.reviewer: ''
+ms.suite: ''
+ms.technology:
+- dotnet-clr
+ms.tgt_pltfrm: ''
 ms.topic: article
 helpviewer_keywords:
 - trace compiler options
@@ -17,16 +18,17 @@ helpviewer_keywords:
 - TRACE directive
 - conditional compilation, tracing code
 ms.assetid: 56d051c3-012c-42c1-9a58-7270edc624aa
-caps.latest.revision: "11"
+caps.latest.revision: ''
 author: mairaw
 ms.author: mairaw
 manager: wpickett
-ms.workload: dotnet
-ms.openlocfilehash: ccdadc22728c28c8dea80f168a98cb985b2572a7
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.workload:
+- dotnet
+ms.openlocfilehash: 5e590888a56ed4c325e89eb828349f4f289815cd
+ms.sourcegitcommit: 498799639937c89de777361aab74261efe7b79ea
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 03/22/2018
 ---
 # <a name="how-to-compile-conditionally-with-trace-and-debug"></a>如何：使用追蹤和偵錯進行條件式編譯
 當您於開發期間偵錯應用程式時，追蹤及偵錯輸出都會移至 Visual Studio 中的 [輸出] 視窗。 然而，若要在已部署的應用程式中包含追蹤功能，您必須在啟用 **TRACE** 編譯器指示詞的情況下編譯已經過檢測的應用程式。 這可將追蹤程式碼編譯成應用程式的發行版本。 如果您沒有啟用 **TRACE** 指示詞，則在編譯期間會忽略所有的追蹤程式碼，並且不會在您將部署的可執行程式碼中包含追蹤程式碼。  
@@ -59,9 +61,9 @@ ms.lasthandoff: 12/22/2017
   
      例如，在命令列上輸入下列編譯器指令會在已編譯可執行檔中包含追蹤程式碼：  
   
-     若為 Visual Basic：**vbc /r:System.dll /d:TRACE=TRUE /d:DEBUG=FALSE MyApplication.vb**  
+     適用於 Visual Basic: **vbc-r:System.dll-d： 追蹤 = TRUE-d： 偵錯 = FALSE MyApplication.vb**  
   
-     若為 C#：**csc /r:System.dll /d:TRACE /d:DEBUG=FALSE MyApplication.cs**  
+     若為 C# 中： **csc-r:System.dll-d： 追蹤-d： 偵錯 = FALSE MyApplication.cs**  
   
     > [!TIP]
     >  若要編譯一個以上的應用程式檔案，請在檔案名稱之間保留一個空格，例如，**MyApplication1.vb MyApplication2.vb MyApplication3.vb** 或 **MyApplication1.cs MyApplication2.cs MyApplication3.cs**。  
@@ -72,8 +74,8 @@ ms.lasthandoff: 12/22/2017
     |---------------|-------------|  
     |`vbc`|Visual Basic 編譯器|  
     |`csc`|C# 編譯器|  
-    |`/r:`|參考外部組件 (EXE 或 DLL)|  
-    |`/d:`|定義條件式編譯的符號|  
+    |`-r:`|參考外部組件 (EXE 或 DLL)|  
+    |`-d:`|定義條件式編譯的符號|  
   
     > [!NOTE]
     >  您必須使用大寫字母來拼寫 TRACE 或 DEBUG。 如需條件式編譯命令的詳細資訊，請在命令提示字元中輸入 `vbc /?` (若為 Visual Basic) 或 `csc /?` (若為 C#)。 如需詳細資訊，請參閱[從命令列建置](~/docs/csharp/language-reference/compiler-options/how-to-set-environment-variables-for-the-visual-studio-command-line.md) (C#) 或[叫用命令列編譯器](~/docs/visual-basic/reference/command-line-compiler/how-to-invoke-the-command-line-compiler.md) (Visual Basic)。  
@@ -95,16 +97,16 @@ ms.lasthandoff: 12/22/2017
   
 ### <a name="to-disable-tracing-or-debugging"></a>若要停用追蹤或偵錯  
   
-1.  請刪除原始程式碼中的編譯器指示詞。  
+請刪除原始程式碼中的編譯器指示詞。  
   
-     \-或-  
+\-或-  
   
-2.  將編譯器指示詞標為註解。  
+將編譯器指示詞標為註解。  
   
-    > [!NOTE]
-    >  當您準備編譯時，可從 [建置] 功能表中選取 [建置]，或使用命令列方法 (但不輸入 **d:**) 來定義條件式編譯的符號。  
+> [!NOTE]
+>  當您準備編譯時，可從 [建置] 功能表中選取 [建置]，或使用命令列方法 (但不輸入 **d:**) 來定義條件式編譯的符號。  
   
-## <a name="see-also"></a>請參閱  
+## <a name="see-also"></a>另請參閱  
  [追蹤和檢測應用程式](../../../docs/framework/debug-trace-profile/tracing-and-instrumenting-applications.md)  
  [如何：建立、初始化和設定追蹤參數](../../../docs/framework/debug-trace-profile/how-to-create-initialize-and-configure-trace-switches.md)  
  [追蹤參數](../../../docs/framework/debug-trace-profile/trace-switches.md)  
