@@ -1,22 +1,21 @@
 ---
-title: "如何： 建立和使用組件使用命令列 (Visual Basic)"
-ms.custom: 
-ms.date: 07/20/2015
+title: 如何： 建立和使用組件使用命令列 (Visual Basic)
+ms.custom: ''
+ms.date: 03/14/2018
 ms.prod: .net
-ms.reviewer: 
-ms.suite: 
-ms.technology: devlang-visual-basic
-ms.tgt_pltfrm: 
+ms.suite: ''
+ms.technology:
+- devlang-visual-basic
+ms.tgt_pltfrm: ''
 ms.topic: article
 ms.assetid: 229ff9fb-1bd1-403b-946b-526104864c60
-caps.latest.revision: "6"
-author: dotnet-bot
-ms.author: dotnetcontent
-ms.openlocfilehash: 72f3e91f9fb88019f937dcd281aa14ab4e887daf
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+author: rpetrusha
+ms.author: ronpet
+ms.openlocfilehash: b39648107697cdbaa8856705f44df605efda11fa
+ms.sourcegitcommit: 498799639937c89de777361aab74261efe7b79ea
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 03/22/2018
 ---
 # <a name="how-to-create-and-use-assemblies-using-the-command-line-visual-basic"></a>如何： 建立和使用組件使用命令列 (Visual Basic)
 組件又稱為動態連結程式庫 (DLL)，會在執行階段連結到您的程式。 為了示範如何建立和使用 DLL，請考慮下列案例：  
@@ -110,19 +109,19 @@ UtilityMethods.MultiplyClass.Multiply(num1, num2)
 ## <a name="compiling-the-code"></a>編譯程式碼  
  若要建立 `MathLibrary.DLL` 檔案，請使用下列命令列編譯 `Add` 和 `Mult` 這兩個檔案。  
   
-```vb  
-vbc /target:library /out:MathLibrary.DLL Add.vb Mult.vb  
+```console  
+vbc -target:library -out:MathLibrary.DLL Add.vb Mult.vb  
 ```  
   
- [/Target (Visual Basic)](../../../../visual-basic/reference/command-line-compiler/target.md)編譯器選項會告訴編譯器輸出的 DLL，而不是 EXE 檔案。 [/Out (Visual Basic)](../../../../visual-basic/reference/command-line-compiler/out.md)編譯器選項後面加上檔案名稱用來指定 DLL 的檔案名稱。 否則，編譯器會使用第一個檔案 (`Add.vb`) 作為 DLL 的名稱。  
+ [-目標 (Visual Basic)](../../../../visual-basic/reference/command-line-compiler/target.md)編譯器選項會告訴編譯器輸出的 DLL，而不是 EXE 檔案。 [-Out (Visual Basic)](../../../../visual-basic/reference/command-line-compiler/out.md)編譯器選項後面加上檔案名稱用來指定 DLL 的檔案名稱。 否則，編譯器會使用第一個檔案 (`Add.vb`) 作為 DLL 的名稱。  
   
  若要建立可執行檔 `TestCode.exe`，請使用下列命令列：  
   
-```vb  
-vbc /out:TestCode.exe /reference:MathLibrary.DLL TestCode.vb  
+```console  
+vbc -out:TestCode.exe -reference:MathLibrary.DLL TestCode.vb  
 ```  
   
- **/out** 編譯器選項會指示編譯器輸出 EXE 檔案，並指定輸出檔案的名稱 (`TestCode.exe`)。 這個編譯器選項是選擇性的。 [/Reference (Visual Basic)](../../../../visual-basic/reference/command-line-compiler/reference.md)編譯器選項會指定此程式所使用的 DLL 檔案。  
+ **-Out**編譯器選項會指示編譯器輸出的 EXE 檔案，並指定輸出檔的名稱 (`TestCode.exe`)。 這個編譯器選項是選擇性的。 [-參考 (Visual Basic)](../../../../visual-basic/reference/command-line-compiler/reference.md)編譯器選項會指定此程式所使用的 DLL 檔案。  
   
  如需從命令列建置的詳細資訊，請參閱和[從命令列建置](../../../../visual-basic/reference/command-line-compiler/building-from-the-command-line.md)。  
   

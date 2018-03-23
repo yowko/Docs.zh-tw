@@ -1,36 +1,35 @@
 ---
-title: /highentropyva (Visual Basic)
-ms.date: 07/20/2015
+title: -highentropyva (Visual Basic)
+ms.date: 03/10/2018
 ms.prod: .net
-ms.reviewer: 
-ms.suite: 
-ms.technology: devlang-visual-basic
+ms.suite: ''
+ms.technology:
+- devlang-visual-basic
 ms.topic: article
 helpviewer_keywords:
 - highentropyva compiler option (Visual Basic)
 - /highentropyva compiler option (Visual Basic)
 ms.assetid: ff25f20a-6ca2-467b-9e52-5cf439f5028e
-caps.latest.revision: "12"
-author: dotnet-bot
-ms.author: dotnetcontent
-ms.openlocfilehash: 55568808bb94f98ce7a20016fc5a2a0a2ef23a38
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+author: rpetrusha
+ms.author: ronpet
+ms.openlocfilehash: 12d40e5acda73786ee88d16bacd9bc5f69400be8
+ms.sourcegitcommit: 498799639937c89de777361aab74261efe7b79ea
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 03/22/2018
 ---
-# <a name="highentropyva-visual-basic"></a>/highentropyva (Visual Basic)
+# <a name="-highentropyva-visual-basic"></a>-highentropyva (Visual Basic)
 指出是否在 64 位元可執行檔或可執行檔標記的[/platform:anycpu](../../../visual-basic/reference/command-line-compiler/platform.md)編譯器選項支援高熵位址空間配置隨機載入 (ASLR)。  
   
 ## <a name="syntax"></a>語法  
   
 ```  
-/highentropyva[+ | -]  
+-highentropyva[+ | -]  
 ```  
   
 ## <a name="arguments"></a>引數  
  `+` &#124; `-`  
- 選擇項。 此選項預設為 off，或如果您指定`/highentropyva-`。 選項為開啟如果您指定`/highentropyva`或`/highentropyva+`。  
+ 選擇性。 此選項預設為 off，或如果您指定`-highentropyva-`。 選項為開啟如果您指定`-highentropyva`或`-highentropyva+`。  
   
 ## <a name="remarks"></a>備註  
  如果您指定這個選項，因為相容版本的 Windows 核心核心隨機放置程序的位址空間配置個做為 ASLR 一部分時可以使用較高程度的高熵。 如果核心使用的 entropy 較高程度，更大量的位址可以配置到記憶體區域，例如堆疊和堆積。 因此更難猜測特定記憶體區域的位置。  

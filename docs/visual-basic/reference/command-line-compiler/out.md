@@ -1,32 +1,31 @@
 ---
-title: /out (Visual Basic)
+title: -out (Visual Basic)
 ms.date: 07/20/2015
 ms.prod: .net
-ms.reviewer: 
-ms.suite: 
-ms.technology: devlang-visual-basic
+ms.suite: ''
+ms.technology:
+- devlang-visual-basic
 ms.topic: article
 helpviewer_keywords:
 - /out compiler option [Visual Basic]
 - -out compiler option [Visual Basic]
 - out compiler option [Visual Basic]
 ms.assetid: 9f148c15-0909-4cb8-a2db-777f8a8b45ae
-caps.latest.revision: "17"
-author: dotnet-bot
-ms.author: dotnetcontent
-ms.openlocfilehash: 53b77dec53be1d97c5f2526cb117933a2b8fe046
-ms.sourcegitcommit: 34ec7753acf76f90a0fa845235ef06663dc9e36e
+author: rpetrusha
+ms.author: ronpet
+ms.openlocfilehash: 4cc3779f9efda8cf48107a7c16e31f8ff05a456d
+ms.sourcegitcommit: 498799639937c89de777361aab74261efe7b79ea
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 03/22/2018
 ---
-# <a name="out-visual-basic"></a>/out (Visual Basic)
+# <a name="-out-visual-basic"></a>-out (Visual Basic)
 指定輸出檔案的名稱。  
   
 ## <a name="syntax"></a>語法  
   
 ```  
-/out:filename  
+-out:filename  
 ```  
   
 ## <a name="arguments"></a>引數  
@@ -38,20 +37,20 @@ ms.lasthandoff: 12/21/2017
 ## <a name="remarks"></a>備註  
  指定的完整名稱和要建立檔案的副檔名。 如果不這麼做，.exe 檔會從原始程式檔包含其名稱`Sub Main`程序和.dll 檔案會從第一個原始程式檔取得其名稱。  
   
- 如果您指定檔案名稱沒有.exe 或.dll 副檔名，編譯器會自動延伸模組會為您加入，根據指定的值`/target`編譯器選項。  
+ 如果您指定檔案名稱沒有.exe 或.dll 副檔名，編譯器會自動延伸模組會為您加入，根據指定的值`-target`編譯器選項。  
   
-|若要在 Visual Studio 整合式的開發環境中的 out/設定|  
+|若要設定的逾時 Visual Studio 整合式的開發環境中|  
 |---|  
 |1.在 **方案總管**中選取專案。 在 [專案] 功能表上，按一下 [屬性]。 <br />2.按一下 [應用程式]  索引標籤。<br />3.修改中的值**組件名稱**方塊。|  
   
 ## <a name="example"></a>範例  
  下列程式碼編譯`T2.vb`並建立輸出檔`T2.exe`。  
   
-```  
-vbc t2.vb /out:t3.exe  
+```console
+vbc t2.vb -out:t3.exe  
 ```  
   
-## <a name="see-also"></a>請參閱  
+## <a name="see-also"></a>另請參閱  
  [Visual Basic 命令列編譯器](../../../visual-basic/reference/command-line-compiler/index.md)  
- [/target (Visual Basic)](../../../visual-basic/reference/command-line-compiler/target.md)  
+ [-目標 (Visual Basic)](../../../visual-basic/reference/command-line-compiler/target.md)  
  [編譯命令列範例](../../../visual-basic/reference/command-line-compiler/sample-compilation-command-lines.md)

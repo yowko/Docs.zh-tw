@@ -1,8 +1,9 @@
 ---
-title: "如何： 從命令列建立 Windows Forms 應用程式"
-ms.date: 03/30/2017
+title: 如何： 從命令列建立 Windows Forms 應用程式
+ms.date: 03/14/2018
 ms.prod: .net-framework
-ms.technology: dotnet-winforms
+ms.technology:
+- dotnet-winforms
 ms.topic: article
 dev_langs:
 - csharp
@@ -12,16 +13,15 @@ helpviewer_keywords:
 - Windows Forms, getting started
 - Windows Forms, creating basic form
 ms.assetid: 45ad3f8b-1c26-4c9f-91a9-3bb0759a47a4
-caps.latest.revision: "10"
-author: dotnet-bot
-ms.author: dotnetcontent
-manager: wpickett
-ms.workload: dotnet
-ms.openlocfilehash: 22acab6ea3912488ae1382ffb42ca5383a7311af
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+author: rpetrusha
+ms.author: ronpet
+ms.workload:
+- dotnet
+ms.openlocfilehash: 79fda0f5f455cbac50c0c1b51f0cd3bef4c5bfbc
+ms.sourcegitcommit: 498799639937c89de777361aab74261efe7b79ea
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 03/22/2018
 ---
 # <a name="how-to-create-a-windows-forms-application-from-the-command-line"></a>如何： 從命令列建立 Windows Forms 應用程式
 下列程序說明若要從命令列建立及執行 Windows Forms 應用程式，所必須完成的基本步驟。 在 Visual Studio 中，對這些程序有廣泛的支援。  另請參閱[逐步解說： 建立簡單的 Windows Form](http://msdn.microsoft.com/library/z9w2f38k\(v=vs.100\))。  
@@ -49,9 +49,9 @@ ms.lasthandoff: 12/22/2017
   
 4.  將 `Main` 方法加入類別中。  
   
-    1.  將 <xref:System.STAThreadAttribute> 套用至 `Main` 方法，以指定您的 Windows Form 應用程式是單一執行緒的 Apartment。  
+    1.  套用<xref:System.STAThreadAttribute>C#`Main`方法，以指定您的 Windows Form 應用程式是單一執行緒 apartment。 （屬性不需要在 Visual Basic 中，因為 Windows form 應用程式開發與 Visual Basic 使用單一執行緒 apartment 模型依預設）。  
   
-    2.  呼叫 <xref:System.Windows.Forms.Application.EnableVisualStyles%2A>，為您的應用程式提供 Windows XP 外觀。  
+    2.  呼叫<xref:System.Windows.Forms.Application.EnableVisualStyles%2A>來將作業系統樣式套用至您的應用程式。  
   
     3.  建立表單的執行個體，並加以執行。  
   
@@ -64,13 +64,13 @@ ms.lasthandoff: 12/22/2017
   
 2.  編譯表單。  
   
-    -   如果您使用的 C#，輸入：`csc form1.cs`  
+    -   如果您使用的 C#，輸入： `csc form1.cs`  
   
          `-or-`  
   
-    -   如果您使用 Visual Basic 中，類型：`vbc form1.vb /r:system.dll,system.drawing.dll,system.windows.forms.dll`  
+    -   如果您使用 Visual Basic 中，類型： `vbc form1.vb`  
   
-3.  在命令提示字元中，輸入：`Form1.exe`  
+3.  在命令提示字元中，輸入： `Form1.exe`  
   
 ## <a name="adding-a-control-and-handling-an-event"></a>加入控制項和處理事件  
  先前的程序步驟示範只是如何建立可編譯和執行的基本 Windows Form。 下一個程序將會說明如何建立控制項並將其加入表單，以及處理控制項的事件。 如需您可以加入 Windows Form 控制項的相關資訊，請參閱[Windows Form 控制項](../../../docs/framework/winforms/controls/index.md)。  
@@ -118,7 +118,7 @@ ms.lasthandoff: 12/22/2017
   
 -   若要編譯程式碼，請遵循前面說明如何編譯及執行應用程式之程序中的指示。  
   
-## <a name="see-also"></a>請參閱  
+## <a name="see-also"></a>另請參閱  
  <xref:System.Windows.Forms.Form>  
  <xref:System.Windows.Forms.Control>  
  [變更 Windows Forms 的外觀](../../../docs/framework/winforms/changing-the-appearance-of-windows-forms.md)  

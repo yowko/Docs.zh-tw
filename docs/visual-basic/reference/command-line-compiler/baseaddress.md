@@ -1,10 +1,10 @@
 ---
-title: /baseaddress
-ms.date: 07/20/2015
+title: -baseaddress
+ms.date: 08/09/2018
 ms.prod: .net
-ms.reviewer: 
-ms.suite: 
-ms.technology: devlang-visual-basic
+ms.suite: ''
+ms.technology:
+- devlang-visual-basic
 ms.topic: article
 f1_keywords:
 - /baseaddress
@@ -14,22 +14,21 @@ helpviewer_keywords:
 - /baseaddress compiler option [Visual Basic]
 - baseaddress compiler option [Visual Basic]
 ms.assetid: c982bcf2-46e5-47a2-bc8f-a5cc32b7dc47
-caps.latest.revision: "16"
 author: dotnet-bot
 ms.author: dotnetcontent
-ms.openlocfilehash: 1ad39acdec92667fbb0848a1c64c567b504dcb67
-ms.sourcegitcommit: 34ec7753acf76f90a0fa845235ef06663dc9e36e
+ms.openlocfilehash: 3abe566e7a32a0b350a4f483df5c77fa4d003367
+ms.sourcegitcommit: 498799639937c89de777361aab74261efe7b79ea
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 03/22/2018
 ---
-# <a name="baseaddress"></a>/baseaddress
+# <a name="-baseaddress"></a>-baseaddress
 建立 DLL 時，請指定預設基底地址。  
   
 ## <a name="syntax"></a>語法  
   
 ```  
-/baseaddress:address  
+-baseaddress:address  
 ```  
   
 ## <a name="arguments"></a>引數  
@@ -47,12 +46,12 @@ ms.lasthandoff: 12/21/2017
   
  如果目標不是 DLL，就會忽略此選項。  
   
-|在 Visual Studio IDE 中設定 /baseaddress|  
+|在 Visual Studio IDE 中設定-baseaddress|  
 |---|  
 |1.在 **方案總管**中選取專案。 在 [專案] 功能表上，按一下 [屬性]。 <br />2.按一下 [編譯] 索引標籤。<br />3.按一下 [ **進階**]。<br />4.修改中的值**DLL 基底位址：**方塊。 **注意：** **DLL 基底位址：**方塊是唯讀的除非目標是 DLL。|  
   
-## <a name="see-also"></a>請參閱  
+## <a name="see-also"></a>另請參閱  
  [Visual Basic 命令列編譯器](../../../visual-basic/reference/command-line-compiler/index.md)  
- [/target (Visual Basic)](../../../visual-basic/reference/command-line-compiler/target.md)  
+ [-目標 (Visual Basic)](../../../visual-basic/reference/command-line-compiler/target.md)  
  [編譯命令列範例](../../../visual-basic/reference/command-line-compiler/sample-compilation-command-lines.md)  
  [Sn.exe （強式名稱工具）][Sn.exe （強式名稱工具）](../../../framework/tools/sn-exe-strong-name-tool.md))

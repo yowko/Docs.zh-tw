@@ -1,22 +1,21 @@
 ---
-title: "如何： 建立已簽署的 Friend 組件 (Visual Basic)"
-ms.custom: 
-ms.date: 07/20/2015
+title: 如何： 建立已簽署的 Friend 組件 (Visual Basic)
+ms.custom: ''
+ms.date: 03/14/2018
 ms.prod: .net
-ms.reviewer: 
-ms.suite: 
-ms.technology: devlang-visual-basic
-ms.tgt_pltfrm: 
+ms.suite: ''
+ms.technology:
+- devlang-visual-basic
+ms.tgt_pltfrm: ''
 ms.topic: article
 ms.assetid: f2afd83d-b044-484b-a56d-56d0a8a40647
-caps.latest.revision: "4"
-author: dotnet-bot
-ms.author: dotnetcontent
-ms.openlocfilehash: d3ffaf30cdcbc075b772a7350984d060e47fddb7
-ms.sourcegitcommit: 34ec7753acf76f90a0fa845235ef06663dc9e36e
+author: rpetrusha
+ms.author: ronpet
+ms.openlocfilehash: 4fd9521a87a985cbdeff1616c3070c822892b6e5
+ms.sourcegitcommit: 498799639937c89de777361aab74261efe7b79ea
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 03/22/2018
 ---
 # <a name="how-to-create-signed-friend-assemblies-visual-basic"></a>如何： 建立已簽署的 Friend 組件 (Visual Basic)
 此範例示範如何搭配具有強式名稱的組件使用 friend 組件。 這兩個組件都必須具有強式名稱。 雖然此範例中的兩個組件使用相同的金鑰，但您可以針對這兩個組件使用不同的金鑰。  
@@ -46,7 +45,7 @@ ms.lasthandoff: 12/21/2017
     ```vb  
     ' friend_signed_A.vb  
     ' Compile with:   
-    ' Vbc /target:library /keyfile:FriendAssemblies.snk friend_signed_A.vb  
+    ' Vbc -target:library -keyfile:FriendAssemblies.snk friend_signed_A.vb  
     Imports System.Runtime.CompilerServices  
   
     <Assembly: InternalsVisibleTo("friend_signed_B, PublicKey=0024000004800000940000000602000000240000525341310004000001000100e3aedce99b7e10823920206f8e46cd5558b4ec7345bd1a5b201ffe71660625dcb8f9a08687d881c8f65a0dcf042f81475d2e88f3e3e273c8311ee40f952db306c02fbfc5d8bc6ee1e924e6ec8fe8c01932e0648a0d3e5695134af3bb7fab370d3012d083fa6b83179dd3d031053f72fc1f7da8459140b0af5afc4d2804deccb6")>   
@@ -60,8 +59,8 @@ ms.lasthandoff: 12/21/2017
   
 4.  使用下列命令來編譯及簽署 friend_signed_A。  
   
-    ```vb  
-    Vbc /target:library /keyfile:FriendAssemblies.snk friend_signed_A.vb  
+    ```console  
+    Vbc -target:library -keyfile:FriendAssemblies.snk friend_signed_A.vb  
     ```  
   
 5.  建立名為 Visual Basic 檔案`friend_signed_B`並包含下列程式碼。 因為 friend_signed_A 會將 friend_signed_B 指定為 friend 組件，所以 friend_signed_B 中的程式碼可以存取 friend_signed_A 中的 `Friend` 類型和成員。 該檔案包含下列程式碼。  
@@ -69,7 +68,7 @@ ms.lasthandoff: 12/21/2017
     ```vb  
     ' friend_signed_B.vb  
     ' Compile with:   
-    ' Vbc /keyfile:FriendAssemblies.snk /r:friend_signed_A.dll friend_signed_B.vb  
+    ' Vbc -keyfile:FriendAssemblies.snk -r:friend_signed_A.dll friend_signed_B.vb  
     Module Sample  
         Public Sub Main()  
             Dim inst As New Class1  
@@ -80,25 +79,25 @@ ms.lasthandoff: 12/21/2017
   
 6.  使用下列命令來編譯及簽署 friend_signed_B。  
   
-    ```vb  
-    Vbc /keyfile:FriendAssemblies.snk /r:friend_signed_A.dll friend_signed_B.vb  
+    ```console  
+    vbc -keyfile:FriendAssemblies.snk -r:friend_signed_A.dll friend_signed_B.vb  
     ```  
   
-     編譯器所產生之組件的名稱必須符合傳遞至 <xref:System.Runtime.CompilerServices.InternalsVisibleToAttribute> 屬性的 Friend 組件名稱。 您可以使用，以明確地設定組件`/out`編譯器選項。 如需詳細資訊，請參閱[/out (Visual Basic)](../../../../visual-basic/reference/command-line-compiler/out.md)。  
+     編譯器所產生之組件的名稱必須符合傳遞至 <xref:System.Runtime.CompilerServices.InternalsVisibleToAttribute> 屬性的 Friend 組件名稱。 您可以使用，以明確地設定組件`-out`編譯器選項。 如需詳細資訊，請參閱[-out (Visual Basic)](../../../../visual-basic/reference/command-line-compiler/out.md)。  
   
 7.  執行 friend_signed_B.exe 檔案。  
   
-     此程式會列印字串 "Class1.Test"。  
+     程式會顯示 「 Class1.Test"的字串。  
   
 ## <a name="net-framework-security"></a>.NET Framework 安全性  
  <xref:System.Runtime.CompilerServices.InternalsVisibleToAttribute> 屬性和 <xref:System.Security.Permissions.StrongNameIdentityPermission> 類別之間有相似性。 主要差異是 <xref:System.Security.Permissions.StrongNameIdentityPermission> 可以要求安全性權限執行特定的程式碼區段，而 <xref:System.Runtime.CompilerServices.InternalsVisibleToAttribute> 屬性則是控制 `Friend` 類型和成員的可見性。  
   
-## <a name="see-also"></a>請參閱  
+## <a name="see-also"></a>另請參閱  
  <xref:System.Runtime.CompilerServices.InternalsVisibleToAttribute>  
  [組件和全域組件快取 (Visual Basic)](../../../../visual-basic/programming-guide/concepts/assemblies-gac/index.md)  
  [Friend 組件 (Visual Basic)](../../../../visual-basic/programming-guide/concepts/assemblies-gac/friend-assemblies.md)  
  [如何： 建立未簽署的 Friend 組件 (Visual Basic)](../../../../visual-basic/programming-guide/concepts/assemblies-gac/how-to-create-unsigned-friend-assemblies.md)  
- [/keyfile](../../../../visual-basic/reference/command-line-compiler/keyfile.md)  
+ [-keyfile](../../../../visual-basic/reference/command-line-compiler/keyfile.md)  
  [Sn.exe （強式名稱工具）][Sn.exe （強式名稱工具）](../../../../framework/tools/sn-exe-strong-name-tool.md))  
  [建立和使用強式名稱的組件](../../../../framework/app-domains/create-and-use-strong-named-assemblies.md)  
  [程式設計概念](../../../../visual-basic/programming-guide/concepts/index.md)

@@ -1,22 +1,21 @@
 ---
-title: "如何： 建立未簽署的 Friend 組件 (Visual Basic)"
-ms.custom: 
-ms.date: 07/20/2015
+title: 如何： 建立未簽署的 Friend 組件 (Visual Basic)
+ms.custom: ''
+ms.date: 03/14/2018
 ms.prod: .net
-ms.reviewer: 
-ms.suite: 
-ms.technology: devlang-visual-basic
-ms.tgt_pltfrm: 
+ms.suite: ''
+ms.technology:
+- devlang-visual-basic
+ms.tgt_pltfrm: ''
 ms.topic: article
 ms.assetid: 5735eb79-9729-4c46-ac1f-537ada3acaa7
-caps.latest.revision: "4"
-author: dotnet-bot
-ms.author: dotnetcontent
-ms.openlocfilehash: a2b2667c60a07a2897a0934d210901042e2e43c1
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+author: rpetrusha
+ms.author: ronpet
+ms.openlocfilehash: 8cc71a27f24c634ebadb060325df4c602b1387b0
+ms.sourcegitcommit: 498799639937c89de777361aab74261efe7b79ea
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 03/22/2018
 ---
 # <a name="how-to-create-unsigned-friend-assemblies-visual-basic"></a>如何： 建立未簽署的 Friend 組件 (Visual Basic)
 此範例示範如何搭配未簽署的組件使用 friend 組件。  
@@ -30,7 +29,7 @@ ms.lasthandoff: 11/21/2017
     ```vb  
     ' friend_unsigned_A.vb  
     ' Compile with:   
-    ' Vbc /target:library friend_unsigned_A.vb  
+    ' vbc -target:library friend_unsigned_A.vb  
     Imports System.Runtime.CompilerServices  
     Imports System  
   
@@ -53,8 +52,8 @@ ms.lasthandoff: 11/21/2017
   
 3.  使用下列命令來編譯及簽署 friend_signed_A。  
   
-    ```vb  
-    Vbc /target:library friend_unsigned_A.vb  
+    ```console  
+    vbc -target:library friend_unsigned_A.vb  
     ```  
   
 4.  建立名為 Visual Basic 檔案`friend_unsigned_B`，其中包含下列程式碼。 因為 friend_unsigned_A 會將 friend_unsigned_B 指定為 friend 組件，所以 friend_unsigned_B 中的程式碼可以存取 friend_unsigned_A 中的 `Friend` 類型和成員。  
@@ -62,7 +61,7 @@ ms.lasthandoff: 11/21/2017
     ```vb  
     ' friend_unsigned_B.vb  
     ' Compile with:   
-    ' Vbc /r:friend_unsigned_A.dll friend_unsigned_B.vb  
+    ' vbc -r:friend_unsigned_A.dll friend_unsigned_B.vb  
     Module Module1  
         Sub Main()  
             ' Access a Friend type.  
@@ -80,15 +79,15 @@ ms.lasthandoff: 11/21/2017
   
 5.  使用下列命令來編譯 friend_signed_B。  
   
-    ```vb  
-    Vbc /r:friend_unsigned_A.dll friend_unsigned_B.vb  
+    ```console
+    vbc -r:friend_unsigned_A.dll friend_unsigned_B.vb  
     ```  
   
      編譯器所產生之組件的名稱必須符合傳遞至 <xref:System.Runtime.CompilerServices.InternalsVisibleToAttribute> 屬性的 Friend 組件名稱。 您可以使用，以明確地設定組件`/out`編譯器選項。  
   
 6.  執行 friend_signed_B.exe 檔案。  
   
-     此程式會列印兩個字串："Class1.Test" 和 "Class2.Test"。  
+     程式會顯示兩個字串:"Class1.Test"和"Class2.Test"。  
   
 ## <a name="net-framework-security"></a>.NET Framework 安全性  
  <xref:System.Runtime.CompilerServices.InternalsVisibleToAttribute> 屬性和 <xref:System.Security.Permissions.StrongNameIdentityPermission> 類別之間有相似性。 主要差異是 <xref:System.Security.Permissions.StrongNameIdentityPermission> 可以要求安全性權限執行特定的程式碼區段，而 <xref:System.Runtime.CompilerServices.InternalsVisibleToAttribute> 屬性則是控制 `Friend` 類型和成員的可見性。  

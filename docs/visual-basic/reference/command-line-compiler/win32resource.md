@@ -1,35 +1,34 @@
 ---
-title: /win32resource
-ms.date: 07/20/2015
+title: -win32resource
+ms.date: 03/13/2018
 ms.prod: .net
-ms.reviewer: 
-ms.suite: 
-ms.technology: devlang-visual-basic
+ms.suite: ''
+ms.technology:
+- devlang-visual-basic
 ms.topic: article
 f1_keywords:
-- /win32resource
+- -win32resource
 - win32resource
 helpviewer_keywords:
 - /win32resource compiler option [Visual Basic]
 - -win32resource compiler option [Visual Basic]
 - win32resource compiler option [Visual Basic]
 ms.assetid: e226946d-19ce-4cc9-91f5-aed24f77aa2b
-caps.latest.revision: "13"
-author: dotnet-bot
-ms.author: dotnetcontent
-ms.openlocfilehash: d839b1100b1ae76fbd4653ebc60c79db11b77685
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+author: rpetrusha
+ms.author: ronpet
+ms.openlocfilehash: 4e210d88d32ac7341ab881ca6ff0e44961469a31
+ms.sourcegitcommit: 498799639937c89de777361aab74261efe7b79ea
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 03/22/2018
 ---
-# <a name="win32resource"></a>/win32resource
+# <a name="-win32resource"></a>-win32resource
 將 Win32 資源檔插入輸出檔中。  
   
 ## <a name="syntax"></a>語法  
   
 ```  
-/win32resource:filename  
+-win32resource:filename  
 ```  
   
 ## <a name="arguments"></a>引數  
@@ -39,18 +38,18 @@ ms.lasthandoff: 11/21/2017
 ## <a name="remarks"></a>備註  
  您可以建立 Win32 資源檔與 Microsoft Windows 資源編譯器 (RC)。  
   
- Win32 資源可以包含版本或點陣圖 （圖示） 資訊可協助您識別應用程式中的**檔案總管**。 如果您未指定`/win32resource`，編譯器會產生組件版本為基礎的版本資訊。 `/win32resource`和`/win32icon`選項互斥。  
+ Win32 資源可以包含版本或點陣圖 （圖示） 資訊可協助您識別應用程式中的**檔案總管**。 如果您未指定`-win32resource`，編譯器會產生組件版本為基礎的版本資訊。 `-win32resource`和`-win32icon`選項互斥。  
   
- 請參閱[/linkresource (Visual Basic)](../../../visual-basic/reference/command-line-compiler/linkresource.md)參考[!INCLUDE[dnprdnshort](~/includes/dnprdnshort-md.md)]資源檔或[/resource (Visual Basic)](../../../visual-basic/reference/command-line-compiler/resource.md)附加[!INCLUDE[dnprdnshort](~/includes/dnprdnshort-md.md)]資源檔。  
+ 請參閱[-linkresource (Visual Basic)](../../../visual-basic/reference/command-line-compiler/linkresource.md)參考[!INCLUDE[dnprdnshort](~/includes/dnprdnshort-md.md)]資源檔或[-資源 (Visual Basic)](../../../visual-basic/reference/command-line-compiler/resource.md)附加[!INCLUDE[dnprdnshort](~/includes/dnprdnshort-md.md)]資源檔。  
   
 > [!NOTE]
->  `/win32resource`選項不是從 Visual Studio 開發環境中使用; 其只有在從命令列編譯時。  
+>  `-win32resource`選項不是從 Visual Studio 開發環境中使用; 其只有在從命令列編譯時。  
   
 ## <a name="example"></a>範例  
  下列程式碼編譯`In.vb`，並將 Win32 資源檔，附加`Rf.res`:  
   
-```  
-vbc /win32resource:rf.res in.vb  
+```console  
+vbc -win32resource:rf.res in.vb  
 ```  
   
 ## <a name="see-also"></a>另請參閱  

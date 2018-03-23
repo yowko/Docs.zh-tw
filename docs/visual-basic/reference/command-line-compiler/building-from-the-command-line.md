@@ -1,10 +1,11 @@
 ---
-title: "從命令列建置 (Visual Basic)"
+title: 從命令列建置 (Visual Basic)
 ms.date: 07/20/2015
 ms.prod: .net
-ms.reviewer: 
-ms.suite: 
-ms.technology: devlang-visual-basic
+ms.reviewer: ''
+ms.suite: ''
+ms.technology:
+- devlang-visual-basic
 ms.topic: article
 helpviewer_keywords:
 - builds [Visual Basic], command-line
@@ -18,30 +19,28 @@ helpviewer_keywords:
 - command-line compilers [Visual Basic], Visual Basic
 - command line [Visual Basic], Visual Basic
 ms.assetid: e61947e9-a42e-4717-a699-5f70a98cdd03
-caps.latest.revision: "13"
+caps.latest.revision: ''
 author: dotnet-bot
 ms.author: dotnetcontent
-ms.openlocfilehash: d982506af2c4f01e80ae5b3862fcbcfff2aa9d99
-ms.sourcegitcommit: c2e216692ef7576a213ae16af2377cd98d1a67fa
+ms.openlocfilehash: c3f71a84feffce46bafd92ff701a0250c059a82e
+ms.sourcegitcommit: 498799639937c89de777361aab74261efe7b79ea
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/22/2017
+ms.lasthandoff: 03/22/2018
 ---
 # <a name="building-from-the-command-line-visual-basic"></a>從命令列建置 (Visual Basic)
 A[!INCLUDE[vbprvb](~/includes/vbprvb-md.md)]專案由一或多個不同的來源檔案所組成。 在稱為編譯過程中，這些檔案會回到一起成單一套件，可以為應用程式執行單一可執行檔。  
   
- [!INCLUDE[vbprvb](~/includes/vbprvb-md.md)]提供命令列編譯器編譯程式從替代[!INCLUDE[vsprvs](~/includes/vsprvs-md.md)]整合式的開發環境 (IDE)。 命令列編譯器可供您在不需要完整的 IDE 功能的情況 — 例如，當您使用或撰寫具有有限的系統記憶體或儲存空間的電腦。  
+ [!INCLUDE[vbprvb](~/includes/vbprvb-md.md)] 提供命令列編譯器編譯程式從替代[!INCLUDE[vsprvs](~/includes/vsprvs-md.md)]整合式的開發環境 (IDE)。 命令列編譯器可供您在不需要完整的 IDE 功能的情況 — 例如，當您使用或撰寫具有有限的系統記憶體或儲存空間的電腦。  
   
- 當從命令列編譯時，您必須明確參考 Microsoft[!INCLUDE[vbprvb](~/includes/vbprvb-md.md)]透過執行階段程式庫`/reference`編譯器選項。  
-  
- 若要編譯原始程式檔從[!INCLUDE[vsprvs](~/includes/vsprvs-md.md)]IDE 中，選擇**建置**命令**建置**功能表。  
+  若要編譯原始程式檔從[!INCLUDE[vsprvs](~/includes/vsprvs-md.md)]IDE 中，選擇**建置**命令**建置**功能表。  
   
 > [!TIP]
 >  當您使用 Visual Studio IDE 建置專案檔時，您可以顯示相關聯的相關資訊**vbc**命令，並在 [輸出] 視窗中的其參數。 若要顯示這項資訊，請開啟[選項對話方塊、 專案和方案、 建置和執行](/visualstudio/ide/reference/options-dialog-box-projects-and-solutions-build-and-run)，然後設定**MSBuild 專案組建輸出詳細等級**至**一般**或更高的層級的詳細資訊。 如需詳細資訊，請參閱[如何：檢閱、儲存和設定建置記錄檔](http://msdn.microsoft.com/library/75d38b76-26d6-4f43-bbe7-cbacd7cc81e7)。  
   
  您可以使用 MSBuild 編譯專案 (.vbproj) 檔案，在命令提示字元。 如需詳細資訊，請參閱[命令列參照](/visualstudio/msbuild/msbuild-command-line-reference)和[逐步解說： 使用 MSBuild](/visualstudio/msbuild/walkthrough-using-msbuild)。  
   
-## <a name="in-this-section"></a>本章節內容  
+## <a name="in-this-section"></a>本節內容  
  [操作說明：叫用命令列編譯器](../../../visual-basic/reference/command-line-compiler/how-to-invoke-the-command-line-compiler.md)  
  描述如何叫用命令列編譯器在 MS-DOS 提示，或從特定的子目錄。  
   

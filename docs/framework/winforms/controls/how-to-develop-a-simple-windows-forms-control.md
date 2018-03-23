@@ -1,12 +1,13 @@
 ---
-title: "如何：開發簡單的 Windows Forms 控制項"
-ms.custom: 
+title: 如何：開發簡單的 Windows Forms 控制項
+ms.custom: ''
 ms.date: 03/30/2017
 ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.technology: dotnet-winforms
-ms.tgt_pltfrm: 
+ms.reviewer: ''
+ms.suite: ''
+ms.technology:
+- dotnet-winforms
+ms.tgt_pltfrm: ''
 ms.topic: article
 dev_langs:
 - csharp
@@ -16,16 +17,17 @@ helpviewer_keywords:
 - custom controls [Windows Forms], creating simple controls using code
 - Control class [Windows Forms], Windows Forms
 ms.assetid: 86cbe435-45b7-4cb4-9b5a-47418369758d
-caps.latest.revision: "17"
+caps.latest.revision: ''
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.workload: dotnet
-ms.openlocfilehash: da876ec74bf80d4329451a9bf125421731c7f9de
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.workload:
+- dotnet
+ms.openlocfilehash: ab7fced9237cad3de30d417770f6f1d7f7e7ed6a
+ms.sourcegitcommit: 498799639937c89de777361aab74261efe7b79ea
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 03/22/2018
 ---
 # <a name="how-to-develop-a-simple-windows-forms-control"></a>如何：開發簡單的 Windows Forms 控制項
 本節將逐步引導您完成撰寫自訂 Windows Forms 控制項的重要步驟。 在本逐步解說中開發的簡單控制項允許的對齊方式與其<xref:System.Windows.Forms.Control.Text%2A>来變更屬性。 它不會引發或處理事件。  
@@ -50,7 +52,7 @@ ms.lasthandoff: 12/22/2017
      [!code-csharp[System.Windows.Forms.FirstControl#3](../../../../samples/snippets/csharp/VS_Snippets_Winforms/System.Windows.Forms.FirstControl/CS/FirstControl.cs#3)]
      [!code-vb[System.Windows.Forms.FirstControl#3](../../../../samples/snippets/visualbasic/VS_Snippets_Winforms/System.Windows.Forms.FirstControl/VB/FirstControl.vb#3)]  
   
-     當您設定屬性，可變更控制項的視覺顯示時，您必須叫用<xref:System.Windows.Forms.Control.Invalidate%2A>重繪控制項的方法。 <xref:System.Windows.Forms.Control.Invalidate%2A>定義於基底類別<xref:System.Windows.Forms.Control>。  
+     當您設定屬性，可變更控制項的視覺顯示時，您必須叫用<xref:System.Windows.Forms.Control.Invalidate%2A>重繪控制項的方法。 <xref:System.Windows.Forms.Control.Invalidate%2A> 定義於基底類別<xref:System.Windows.Forms.Control>。  
   
 3.  覆寫的受保護<xref:System.Windows.Forms.Control.OnPaint%2A>方法繼承自<xref:System.Windows.Forms.Control>提供控制項的呈現邏輯。 如果您不覆寫<xref:System.Windows.Forms.Control.OnPaint%2A>，您的控制項不能繪製本身。 在下列程式碼片段中，<xref:System.Windows.Forms.Control.OnPaint%2A>方法顯示<xref:System.Windows.Forms.Control.Text%2A>屬性繼承自<xref:System.Windows.Forms.Control>所指定的對齊`alignmentValue`欄位。  
   
@@ -70,12 +72,12 @@ ms.lasthandoff: 12/22/2017
   
     2.  將原始程式碼編譯成組件，並將它儲存在您應用程式的目錄中。 若要達成此目的，請從包含原始程式檔的目錄執行下列命令。  
   
-        ```vb  
-        vbc /t:library /out:[path to your application's directory]/CustomWinControls.dll /r:System.dll /r:System.Windows.Forms.dll /r:System.Drawing.dll FirstControl.vb  
+        ```console  
+        vbc -t:library -out:[path to your application's directory]/CustomWinControls.dll -r:System.dll -r:System.Windows.Forms.dll -r:System.Drawing.dll FirstControl.vb  
         ```  
   
-        ```csharp  
-        csc /t:library /out:[path to your application's directory]/CustomWinControls.dll /r:System.dll /r:System.Windows.Forms.dll /r:System.Drawing.dll FirstControl.cs  
+        ```console 
+        csc -t:library -out:[path to your application's directory]/CustomWinControls.dll -r:System.dll -r:System.Windows.Forms.dll -r:System.Drawing.dll FirstControl.cs  
         ```  
   
          `/t:library` 編譯器選項會告知編譯器您所建立的組件是程式庫 (而不是可執行檔)。 `/out` 選項指定組件的路徑和名稱。 `/r` 選項會提供您的程式碼所參考的組件名稱。 在此範例中，您會建立只有您的應用程式可以使用的私人組件。 因此，您必須將它儲存在您應用程式的目錄中。 如需有關封裝和部署控制項以供散發的詳細資訊，請參閱[部署](../../../../docs/framework/deployment/index.md)。  
@@ -94,25 +96,25 @@ ms.lasthandoff: 12/22/2017
   
 2.  從包含原始程式檔的目錄執行下列命令，將原始程式檔編譯成可執行檔的組件。  
   
-    ```vb  
-    vbc /r:CustomWinControls.dll /r:System.dll /r:System.Windows.Forms.dll /r:System.Drawing.dll SimpleForm.vb  
+    ```console  
+    vbc -r:CustomWinControls.dll -r:System.dll -r:System.Windows.Forms.dll -r:System.Drawing.dll SimpleForm.vb  
     ```  
   
-    ```csharp  
-    csc /r:CustomWinControls.dll /r:System.dll /r:System.Windows.Forms.dll /r:System.Drawing.dll SimpleForm.cs  
+    ```console 
+    csc -r:CustomWinControls.dll -r:System.dll -r:System.Windows.Forms.dll -r:System.Drawing.dll SimpleForm.cs  
     ```  
   
      CustomWinControls.dll 是包含類別的組件`FirstControl`。 此組件所在的目錄必須與存取該組件之表單的原始程式檔 (SimpleForm.cs 或 SimpleForms.vb) 相同。  
   
 3.  使用下列命令執行 SimpleForm.exe。  
   
-    ```  
+    ```console
     SimpleForm  
     ```  
   
  [!code-csharp[System.Windows.Forms.FirstControl#10](../../../../samples/snippets/csharp/VS_Snippets_Winforms/System.Windows.Forms.FirstControl/CS/SimpleForm.cs#10)]
  [!code-vb[System.Windows.Forms.FirstControl#10](../../../../samples/snippets/visualbasic/VS_Snippets_Winforms/System.Windows.Forms.FirstControl/VB/SimpleForm.vb#10)]  
   
-## <a name="see-also"></a>請參閱  
+## <a name="see-also"></a>另請參閱  
  [Windows Forms 控制項中的屬性](../../../../docs/framework/winforms/controls/properties-in-windows-forms-controls.md)  
  [Windows Forms 控制項中的事件](../../../../docs/framework/winforms/controls/events-in-windows-forms-controls.md)
