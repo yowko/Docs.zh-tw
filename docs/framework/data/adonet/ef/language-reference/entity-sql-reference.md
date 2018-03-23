@@ -1,24 +1,26 @@
 ---
-title: "Entity SQL 參考"
-ms.custom: 
+title: Entity SQL 參考
+ms.custom: ''
 ms.date: 03/30/2017
 ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.technology: dotnet-ado
-ms.tgt_pltfrm: 
+ms.reviewer: ''
+ms.suite: ''
+ms.technology:
+- dotnet-ado
+ms.tgt_pltfrm: ''
 ms.topic: article
 ms.assetid: 61ce7ee1-ffe2-477d-8a9f-835b0a11d900
-caps.latest.revision: "4"
+caps.latest.revision: ''
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.workload: dotnet
+ms.workload:
+- dotnet
 ms.openlocfilehash: ac05ec8a8732da383a4e33e84c669aa29660a0da
-ms.sourcegitcommit: c0dd436f6f8f44dc80dc43b07f6841a00b74b23f
+ms.sourcegitcommit: c883637b41ee028786edceece4fa872939d2e64c
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 01/19/2018
+ms.lasthandoff: 03/23/2018
 ---
 # <a name="entity-sql-reference"></a>Entity SQL 參考
 本節內容包括 [!INCLUDE[esql](../../../../../../includes/esql-md.md)] 參考主題。 本主題將摘要說明 [!INCLUDE[esql](../../../../../../includes/esql-md.md)] 運算子並將它們依分類群組。  
@@ -57,7 +59,7 @@ ms.lasthandoff: 01/19/2018
 |[= (等於)](../../../../../../docs/framework/data/adonet/ef/language-reference/equals-entity-sql.md)|比較兩個運算式是否相等。|  
 |[> (大於)](../../../../../../docs/framework/data/adonet/ef/language-reference/greater-than-entity-sql.md)|比較兩個運算式來判斷左運算式的值是否大於右運算式。|  
 |[>= (大於或等於)](../../../../../../docs/framework/data/adonet/ef/language-reference/greater-than-or-equal-to-entity-sql.md)|比較兩個運算式來判斷左運算式的值是否大於或等於右運算式。|  
-|[是 &#91;不 &#93;NULL](../../../../../../docs/framework/data/adonet/ef/language-reference/isnull-entity-sql.md)|判斷查詢運算式是否為 null。|  
+|[是&AMP;#91;不&AMP;#93;NULL](../../../../../../docs/framework/data/adonet/ef/language-reference/isnull-entity-sql.md)|判斷查詢運算式是否為 null。|  
 |[< (小於)](../../../../../../docs/framework/data/adonet/ef/language-reference/less-than-entity-sql.md)|比較兩個運算式來判斷左運算式的值是否小於右運算式。|  
 |[<= (小於或等於)](../../../../../../docs/framework/data/adonet/ef/language-reference/less-than-or-equal-to-entity-sql.md)|比較兩個運算式來判斷左運算式的值是否小於或等於右運算式。|  
 |[&#91;NOT&#93; BETWEEN](../../../../../../docs/framework/data/adonet/ef/language-reference/between-entity-sql.md)|判斷運算式是否會產生所指定範圍內的值。|  
@@ -92,7 +94,7 @@ ms.lasthandoff: 01/19/2018
 |[WHERE](../../../../../../docs/framework/data/adonet/ef/language-reference/where-entity-sql.md)|條件式篩選查詢傳回的資料。|  
   
 ## <a name="reference-operators"></a>參考運算子參考  
- 參考是指向特定實體集中特定實體的邏輯指標 (外部索引鍵)。 [!INCLUDE[esql](../../../../../../includes/esql-md.md)]支援下列運算子來建構、 解構及巡覽參考。  
+ 參考是指向特定實體集中特定實體的邏輯指標 (外部索引鍵)。 [!INCLUDE[esql](../../../../../../includes/esql-md.md)] 支援下列運算子來建構、 解構及巡覽參考。  
   
 |運算子|使用|  
 |--------------|---------|  
@@ -118,7 +120,7 @@ ms.lasthandoff: 01/19/2018
 |[UNION](../../../../../../docs/framework/data/adonet/ef/language-reference/union-entity-sql.md)|將二個或多個查詢的結果結合成單一集合。|  
   
 ## <a name="type-operators"></a>運算子型別  
- [!INCLUDE[esql](../../../../../../includes/esql-md.md)]提供建構、 查詢和操作運算式 （值） 的型別中的作業。 以下資料表列出可與型別一起使用的運算子。  
+ [!INCLUDE[esql](../../../../../../includes/esql-md.md)] 提供建構、 查詢和操作運算式 （值） 的型別中的作業。 以下資料表列出可與型別一起使用的運算子。  
   
 |運算子|使用|  
 |--------------|---------|  
@@ -141,5 +143,5 @@ ms.lasthandoff: 01/19/2018
 |[-- (註解)](../../../../../../docs/framework/data/adonet/ef/language-reference/comment-entity-sql.md)|包括 [!INCLUDE[esql](../../../../../../includes/esql-md.md)] 註解。|  
 |[FUNCTION](../../../../../../docs/framework/data/adonet/ef/language-reference/function-entity-sql.md)|定義可在 Entity SQL 查詢中執行的內嵌函式。|  
   
-## <a name="see-also"></a>請參閱  
+## <a name="see-also"></a>另請參閱  
  [Entity SQL 語言](../../../../../../docs/framework/data/adonet/ef/language-reference/entity-sql-language.md)

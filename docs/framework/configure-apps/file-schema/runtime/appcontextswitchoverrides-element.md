@@ -1,14 +1,14 @@
 ---
-title: "&lt;AppContextSwitchOverrides&gt;項目"
-ms.custom: 
+title: '&lt;AppContextSwitchOverrides&gt;項目'
+ms.custom: ''
 ms.date: 01/08/2018
 ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
+ms.reviewer: ''
+ms.suite: ''
 ms.technology:
 - dotnet-bcl
 - dotnet-clr
-ms.tgt_pltfrm: 
+ms.tgt_pltfrm: ''
 ms.topic: article
 helpviewer_keywords:
 - AppContextSwitchOverrides
@@ -16,23 +16,24 @@ helpviewer_keywords:
 - configuration switches
 - configuration
 ms.assetid: 4ce07f47-7ddb-4d91-b067-501bd8b88752
-caps.latest.revision: "16"
+caps.latest.revision: ''
 author: rpetrusha
 ms.author: ronpet
 manager: wpickett
-ms.workload: dotnet
+ms.workload:
+- dotnet
 ms.openlocfilehash: 71888febdc42f0ee65bdcd55a761700eda065bc1
-ms.sourcegitcommit: 91691981897cf8451033cb01071d8f5d94017f97
+ms.sourcegitcommit: c883637b41ee028786edceece4fa872939d2e64c
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 01/09/2018
+ms.lasthandoff: 03/23/2018
 ---
 # <a name="ltappcontextswitchoverridesgt-element"></a>&lt;AppContextSwitchOverrides&gt;項目
 定義一或多個由 <xref:System.AppContext> 類別所使用的參數，以提供新功能的退出機制。  
   
  \<configuration>  
- \<執行階段 >  
-\<AppContextSwitchOverrides >  
+ \<runtime>  
+\<AppContextSwitchOverrides>  
   
 ## <a name="syntax"></a>語法  
   
@@ -53,9 +54,9 @@ ms.lasthandoff: 01/09/2018
   
 |值|描述|  
 |-----------|-----------------|  
-|「 名稱 = 值 」|預先定義的參數名稱，以及其值 (`true`或`false`)。 多個參數名稱/值組以分號分隔 （";"）。 如需.NET Framework 所支援的預先定義的參數名稱的清單，請參閱 < 備註 > 一節。|  
+|"name=value"|預先定義的參數名稱，以及其值 (`true`或`false`)。 多個參數名稱/值組以分號分隔 （";"）。 如需.NET Framework 所支援的預先定義的參數名稱的清單，請參閱 < 備註 > 一節。|  
   
-### <a name="child-elements"></a>子元素  
+### <a name="child-elements"></a>子項目  
  無。  
   
 ### <a name="parent-elements"></a>父項目  
@@ -141,7 +142,7 @@ ms.lasthandoff: 01/09/2018
 </configuration>  
 ```  
   
-## <a name="see-also"></a>請參閱  
+## <a name="see-also"></a>另請參閱  
  <xref:System.AppContext?displayProperty=nameWithType>  
  [\<runtime > 項目](runtime-element.md)  
  [\<configuration> 項目](../configuration-element.md)

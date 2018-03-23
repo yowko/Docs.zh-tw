@@ -1,5 +1,5 @@
 ---
-title: "Visual Basic 的新功能"
+title: Visual Basic 的新功能
 ms.date: 02/15/2018
 ms.prod: .net
 ms.technology:
@@ -12,14 +12,14 @@ helpviewer_keywords:
 - what's new [Visual Basic]
 - Visual Basic, what's new
 ms.assetid: d7e97396-7f42-4873-a81c-4ebcc4b6ca02
-caps.latest.revision: 
+caps.latest.revision: ''
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 4df9a34e078de9daeff85c894afbbf4d60501f6b
-ms.sourcegitcommit: 96cc82cac4650adfb65ba351506d8a8fbcd17b5c
-ms.translationtype: HT
+ms.openlocfilehash: c0452a5dde3a266f5d50f69016eac8144bab9ba6
+ms.sourcegitcommit: c883637b41ee028786edceece4fa872939d2e64c
+ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 02/19/2018
+ms.lasthandoff: 03/23/2018
 ---
 # <a name="whats-new-for-visual-basic"></a>Visual Basic 的新功能
 
@@ -34,6 +34,9 @@ Visual Basic 15.5
 
 Visual Basic 15.3   
 如需了解新功能，請參閱 [Visual Basic 15.3](#visual-basic-153)
+
+Visual Basic 2017   
+如需了解新功能，請參閱 [Visual Basic 2017](#visual-basic-2017)。
 
 Visual Basic / Visual Studio .NET 2015   
 如需了解新功能，請參閱 [Visual Basic 14](#visual-basic-14)。
@@ -78,7 +81,7 @@ Visual Basic 2017 新增了將底線字元 (`_`) 當作數字分隔符號的支�
 ```vb
 Dim number As Integer = &H_C305_F860
 ``` 
-若要使用底線字元作為前置分隔符號，您必須將下列項目新增至 Visual Basic 專案 (*.vbproj) 檔：
+若要使用底線字元做為前置分隔符號，您必須將下列項目加入至 Visual Basic 專案 (\*.vbproj) 檔案：
 
 ```xml
 <PropertyGroup>
@@ -88,15 +91,19 @@ Dim number As Integer = &H_C305_F860
 
 ## <a name="visual-basic-153"></a>Visual Basic 15.3
 
-[具名元組推斷](../programming-guide/language-features/data-types/tuples.md#inferred-tuple-element-names)
+[**具名的 tuple 推斷**](../programming-guide/language-features/data-types/tuples.md#inferred-tuple-element-names)
 
 當您從變數指派元組項目值時，Visual Basic 會從對應的變數名稱推斷元組項目的名稱；您不需要明確命名元組項目。 下列範例使用推斷來建立包含三個具名項目的元組：`state`、`stateName` 和 `capital`。
 
 [!code-vb[Inferred tuple names](../../../samples/snippets/visualbasic/programming-guide/language-features/data-types/named-tuples/program.vb#2)]
 
+**其他編譯器參數**  
+
+Visual Basic 命令列編譯器現在支援[ **-refout** ](../reference/command-line-compiler/refout-compiler-option.md)和[ **-refonly** ](../reference/command-line-compiler/refonly-compiler-option.md)編譯器選項來控制的輸出參考組件。 **-refout**定義參考組件的輸出目錄和**-refonly**指定只參考的組件來編譯所輸出。
+
 ## <a name="visual-basic-2017"></a>Visual Basic 2017
 
-[元組](../programming-guide/language-features/data-types/tuples.md)
+[**Tuple**](../programming-guide/language-features/data-types/tuples.md)
 
 Tuple 是輕量的資料結構，最常用於從單一方法呼叫傳回多個值。 通常要從方法傳回多個值，您必須執行下列其中一項︰
 

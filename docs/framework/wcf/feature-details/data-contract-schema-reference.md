@@ -1,34 +1,34 @@
 ---
-title: "資料合約結構描述參考"
-ms.custom: 
+title: 資料合約結構描述參考
+ms.custom: ''
 ms.date: 03/30/2017
 ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
+ms.reviewer: ''
+ms.suite: ''
 ms.technology:
 - dotnet-clr
-ms.tgt_pltfrm: 
+ms.tgt_pltfrm: ''
 ms.topic: article
 helpviewer_keywords:
 - data contracts [WCF], schema reference
 ms.assetid: 9ebb0ebe-8166-4c93-980a-7c8f1f38f7c0
-caps.latest.revision: 
+caps.latest.revision: ''
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
 ms.workload:
 - dotnet
 ms.openlocfilehash: 57ccc812aab5df0a9acd99bdcde327d56e4bad8d
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.sourcegitcommit: c883637b41ee028786edceece4fa872939d2e64c
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 03/23/2018
 ---
 # <a name="data-contract-schema-reference"></a>資料合約結構描述參考
 本主題說明 <xref:System.Runtime.Serialization.DataContractSerializer> 用來描述 XML 序列化之 Common Language Runtime (CLR) 型別的 XML 結構描述 (XSD) 子集。  
   
 ## <a name="datacontractserializer-mappings"></a>DataContractSerializer 對應  
- 當您使用中繼資料端點或 `DataContractSerializer` ，從 [!INCLUDE[indigo1](../../../../includes/indigo1-md.md)] 服務匯出中繼資料時， [DataContractSerializer](../../../../docs/framework/wcf/servicemodel-metadata-utility-tool-svcutil-exe.md)就會將 CLR 型別對應至 XSD。 [!INCLUDE[crdefault](../../../../includes/crdefault-md.md)][資料合約序列化程式](../../../../docs/framework/wcf/feature-details/data-contract-serializer.md)。  
+ 當您使用中繼資料端點或 `DataContractSerializer` ，從 [!INCLUDE[indigo1](../../../../includes/indigo1-md.md)] 服務匯出中繼資料時， [DataContractSerializer](../../../../docs/framework/wcf/servicemodel-metadata-utility-tool-svcutil-exe.md)就會將 CLR 型別對應至 XSD。 [!INCLUDE[crdefault](../../../../includes/crdefault-md.md)] [資料合約序列化程式](../../../../docs/framework/wcf/feature-details/data-contract-serializer.md)。  
   
  當您使用 Svcutil.exe 來存取 Web 服務描述語言 (WSDL) 或 XSD 文件並產生服務或用戶端的資料合約時， `DataContractSerializer` 也會將 XSD 對應至 CLR 型別。  
   
@@ -60,7 +60,7 @@ ms.lasthandoff: 12/22/2017
 |`elementFormDefault`|必須限定。 所有項目必須限定，以便由 `DataContractSerializer`支援結構描述。 這可以透過設定xs:schema/@elementFormDefault為"qualified"或藉由設定xs:element/@form為"qualified"在每個個別項目宣告。|  
 |`finalDefault`|忽略。|  
 |`Id`|忽略。|  
-|`targetNamespace`|支援且對應至資料合約命名空間。 如果沒有指定此屬性，便會使用空白的命名空間。 不可以是保留的命名空間 http://schemas.microsoft.com/2003/10/Serialization/。|  
+|`targetNamespace`|支援且對應至資料合約命名空間。 如果沒有指定此屬性，便會使用空白的命名空間。 不能保留的命名空間http://schemas.microsoft.com/2003/10/Serialization/。|  
 |`version`|忽略。|  
   
 ### <a name="xsschema-contents"></a>\<schema> >： 內容  
@@ -213,7 +213,7 @@ ms.lasthandoff: 12/22/2017
 |`keyref`|忽略。|  
 |(空白)|支援。|  
   
- \*當使用`simpleType`和`complexType,`匿名型別對應是與非匿名型別相同，不同之處在於沒有任何匿名資料合約，會建立具名的資料合約，以產生的名稱衍生自項目名稱。 下表為匿名型別的規則：  
+ \* 當使用`simpleType`和`complexType,`匿名型別對應是與非匿名型別相同，不同之處在於沒有任何匿名資料合約，會建立具名的資料合約，以產生的名稱衍生自項目名稱。 下表為匿名型別的規則：  
   
 -   [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] 實作詳細資料：如果 `xs:element` 名稱不包含句點，則匿名型別會對應至外部資料合約型別的內部型別。 如果名稱包含句點，則結果的資料合約型別是獨立的 (不是內部型別)。  
   
@@ -239,7 +239,7 @@ ms.lasthandoff: 12/22/2017
 |`list`|支援。 對應至旗標列舉資料合約。 請參閱「 `xs:simpleType` 清單」一節。|  
 |`union`|禁止。|  
   
-### <a name="xsrestriction"></a>\<xs: restriction >  
+### <a name="xsrestriction"></a>\<xs:restriction>  
   
 -   base="`xs:anyType`" 僅支援複雜型別限制。  
   
@@ -342,7 +342,7 @@ public enum MyEnum
 </xs:simpleType>  
 ```  
   
-### <a name="xslist"></a>\<: list >  
+### <a name="xslist"></a>\<xs:list>  
  `DataContractSerializer` 會將標示為 `System.FlagsAttribute` 的列舉型別對應至衍生自 `xs:list` 的 `xs:string`。 不支援其他任何 `xs:list` 變化。  
   
 ### <a name="xslist-attributes"></a>\<: list >： 屬性  
@@ -537,7 +537,7 @@ public class Employee : Person
 |`positiveInteger`|<xref:System.Int64>.|  
   
 ## <a name="iserializable-types-mapping"></a>ISerializable 型別對應  
- 在 [!INCLUDE[dnprdnshort](../../../../includes/dnprdnshort-md.md)] 1.0 版中，已將 `ISerializable` 引入為用來序列化物件以便保存或做為資料傳輸用途的一般機制。 有許多 [!INCLUDE[dnprdnshort](../../../../includes/dnprdnshort-md.md)] 型別都會實作 `ISerializable` ，而且可以在應用程式之間傳遞。 `DataContractSerializer` 自然會為 `ISerializable` 類別提供支援。 `DataContractSerializer` 會對應至 `ISerializable` 實作結構描述型別 (其中只有型別的 QName 限定名稱不同)，而且是有效的屬性集合。 例如， `DataContractSerializer` 會將 <xref:System.Exception> 對應至下列 http://schemas.datacontract.org/2004/07/System 命名空間中的 XSD 型別。  
+ 在 [!INCLUDE[dnprdnshort](../../../../includes/dnprdnshort-md.md)] 1.0 版中，已將 `ISerializable` 引入為用來序列化物件以便保存或做為資料傳輸用途的一般機制。 有許多 [!INCLUDE[dnprdnshort](../../../../includes/dnprdnshort-md.md)] 型別都會實作 `ISerializable` ，而且可以在應用程式之間傳遞。 `DataContractSerializer` 自然會為 `ISerializable` 類別提供支援。 `DataContractSerializer` 會對應至 `ISerializable` 實作結構描述型別 (其中只有型別的 QName 限定名稱不同)，而且是有效的屬性集合。 例如，`DataContractSerializer`對應<xref:System.Exception>至下列 XSD 型別中http://schemas.datacontract.org/2004/07/System命名空間。  
   
 ```xml  
 <xs:complexType name="Exception">  
@@ -695,7 +695,7 @@ new XmlQualifiedName("Person","http://Microsoft.ServiceModel.Samples");
 </xs:schema>  
 ```  
   
-## <a name="see-also"></a>請參閱  
+## <a name="see-also"></a>另請參閱  
  <xref:System.Runtime.Serialization.DataContractSerializer>  
  <xref:System.Runtime.Serialization.DataContractAttribute>  
  <xref:System.Runtime.Serialization.DataMemberAttribute>  

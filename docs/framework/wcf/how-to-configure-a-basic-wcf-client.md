@@ -1,28 +1,28 @@
 ---
-title: "HOW TO：設定基本 Windows Communication Foundation 用戶端"
-ms.custom: 
+title: HOW TO：設定基本 Windows Communication Foundation 用戶端
+ms.custom: ''
 ms.date: 03/30/2017
 ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
+ms.reviewer: ''
+ms.suite: ''
 ms.technology:
 - dotnet-clr
-ms.tgt_pltfrm: 
+ms.tgt_pltfrm: ''
 ms.topic: article
 helpviewer_keywords:
 - WCF clients [WCF], configuring
 ms.assetid: d067b86d-afb0-47bf-94f6-45180a3d8d78
-caps.latest.revision: 
+caps.latest.revision: ''
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
 ms.workload:
 - dotnet
 ms.openlocfilehash: f23918031c6cc8cd6509d7b7c079b8df050bbb08
-ms.sourcegitcommit: c0dd436f6f8f44dc80dc43b07f6841a00b74b23f
+ms.sourcegitcommit: c883637b41ee028786edceece4fa872939d2e64c
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 01/19/2018
+ms.lasthandoff: 03/23/2018
 ---
 # <a name="how-to-configure-a-basic-windows-communication-foundation-client"></a>HOW TO：設定基本 Windows Communication Foundation 用戶端
 這是在建立基本 [!INCLUDE[indigo1](../../../includes/indigo1-md.md)] 應用程式時必須進行的六項工作中的第五項。 六個工作的概觀，請參閱[入門教學課程](../../../docs/framework/wcf/getting-started-tutorial.md)主題。  
@@ -65,9 +65,9 @@ ms.lasthandoff: 01/19/2018
   
      端點元素會指定將 `ServiceReference1.ICalculator` 服務合約用於 WCF 用戶端和服務之間的通訊。 系統提供設定 WCF 通道 <<!--zz xref:System.ServiceModel.WsHttpBinding --> `xref:System.ServiceModel.WsHttpBinding`>。 這個合約是使用 Visual Studio 中的 [加入服務參考] 所產生。 它基本上是 GettingStartedLib 專案中所定義之合約的複本。 <<!--zz xref:System.ServiceModel.WsHttpBinding --> `xref:System.ServiceModel.WsHttpBinding`> 繫結會指定 HTTP 傳輸、 互通安全性，以及其他組態詳細資料。  
   
-2.  [!INCLUDE[crabout](../../../includes/crabout-md.md)]這項設定使用產生的用戶端，請參閱[How to： 使用用戶端](../../../docs/framework/wcf/how-to-use-a-wcf-client.md)。  
+2.  [!INCLUDE[crabout](../../../includes/crabout-md.md)] 這項設定使用產生的用戶端，請參閱[How to： 使用用戶端](../../../docs/framework/wcf/how-to-use-a-wcf-client.md)。  
   
-## <a name="see-also"></a>請參閱  
+## <a name="see-also"></a>另請參閱  
  [使用繫結設定服務與用戶端](../../../docs/framework/wcf/using-bindings-to-configure-services-and-clients.md)  
  [ServiceModel 中繼資料公用程式工具 (Svcutil.exe)](../../../docs/framework/wcf/servicemodel-metadata-utility-tool-svcutil-exe.md)  
  [如何：建立用戶端](../../../docs/framework/wcf/how-to-create-a-wcf-client.md)  

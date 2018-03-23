@@ -1,24 +1,26 @@
 ---
-title: "HOW TO：指定通道安全性認證"
-ms.custom: 
+title: HOW TO：指定通道安全性認證
+ms.custom: ''
 ms.date: 03/30/2017
 ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.technology: dotnet-clr
-ms.tgt_pltfrm: 
+ms.reviewer: ''
+ms.suite: ''
+ms.technology:
+- dotnet-clr
+ms.tgt_pltfrm: ''
 ms.topic: article
 ms.assetid: f8e03f47-9c4f-4dd5-8f85-429e6d876119
-caps.latest.revision: "18"
+caps.latest.revision: ''
 author: BrucePerlerMS
 ms.author: bruceper
 manager: mbaldwin
-ms.workload: dotnet
+ms.workload:
+- dotnet
 ms.openlocfilehash: e2aedb06ec694f6c7dfb12b70ab919ae23eed17e
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.sourcegitcommit: c883637b41ee028786edceece4fa872939d2e64c
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 03/23/2018
 ---
 # <a name="how-to-specify-channel-security-credentials"></a>HOW TO：指定通道安全性認證
 [!INCLUDE[indigo1](../../../../includes/indigo1-md.md)] 服務 Moniker 允許 COM 應用程式呼叫 [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] 服務。 大部分 [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] 服務都會要求用戶端必須指定驗證和授權的認證。 從 [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] 用戶端呼叫 [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] 服務時，您可以在 Managed 程式碼或應用程式組態檔中指定這些認證。 如果是從 COM 應用程式呼叫 [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] 服務，則可以使用 <xref:System.ServiceModel.ComIntegration.IChannelCredentials> 介面來指定認證。 本主題將說明各種使用 <xref:System.ServiceModel.ComIntegration.IChannelCredentials> 介面指定認證的方式。  
@@ -148,7 +150,7 @@ ms.lasthandoff: 12/22/2017
   
      如需此方法之參數的詳細資訊，請參閱 <xref:System.ServiceModel.ComIntegration.IChannelCredentials.SetIssuedToken%28System.String%2CSystem.String%2CSystem.String%29>。  
   
-## <a name="see-also"></a>請參閱  
+## <a name="see-also"></a>另請參閱  
  [同盟](../../../../docs/framework/wcf/feature-details/federation.md)  
  [如何：設定同盟服務的認證](../../../../docs/framework/wcf/feature-details/how-to-configure-credentials-on-a-federation-service.md)  
  [如何：建立同盟用戶端](../../../../docs/framework/wcf/feature-details/how-to-create-a-federated-client.md)  

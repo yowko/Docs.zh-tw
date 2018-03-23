@@ -1,24 +1,26 @@
 ---
-title: "一般結構描述集合"
-ms.custom: 
+title: 一般結構描述集合
+ms.custom: ''
 ms.date: 03/30/2017
 ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.technology: dotnet-ado
-ms.tgt_pltfrm: 
+ms.reviewer: ''
+ms.suite: ''
+ms.technology:
+- dotnet-ado
+ms.tgt_pltfrm: ''
 ms.topic: article
 ms.assetid: 50127ced-2ac8-4d7a-9cd1-5c98c655ff03
-caps.latest.revision: "3"
+caps.latest.revision: ''
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.workload: dotnet
+ms.workload:
+- dotnet
 ms.openlocfilehash: 893093900b3fc4276f9bd7143b1f235a5ba98f90
-ms.sourcegitcommit: ed26cfef4e18f6d93ab822d8c29f902cff3519d1
+ms.sourcegitcommit: c883637b41ee028786edceece4fa872939d2e64c
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 01/17/2018
+ms.lasthandoff: 03/23/2018
 ---
 # <a name="common-schema-collections"></a>一般結構描述集合
 通用結構描述集合是由每個 .NET Framework Managed 提供者所實作的結構描述集合。 您可以查詢.NET Framework managed 提供者以決定支援的結構描述集合的清單，藉由呼叫**GetSchema**方法沒有引數，或使用結構描述集合名稱"MetaDataCollections"。 這會傳回 <xref:System.Data.DataTable>，包括支援的結構描述集合清單、每個集合所支援的限制數目，以及集合所使用之識別項部分的數目。 這些集合會描述所有必要資料行。 如果願意，提供者可以隨意加入其他資料行。 例如，`SqlClient` 及 `OracleClient` 會將 ParameterName 加入限制集合。  
@@ -41,7 +43,7 @@ ms.lasthandoff: 01/17/2018
   
 |ColumnName|DataType|描述|  
 |----------------|--------------|-----------------|  
-|CompositeIdentifierSeparatorPattern|string|符合複合識別項中複合分隔符號的規則運算式。 例如，"\\。 」 （適用於 SQL Server) 或"@&#124;\\." (適用於 Oracle)。<br /><br /> 複合識別項通常是會用於資料庫物件名稱，例如： pubs.dbo.authors 或pubs@dbo.authors。<br /><br /> SQL 伺服器，請使用規則運算式 「\\。 」。 為 OracleClient，請使用"@&#124;\\.".<br /><br /> 若為 ODBC，請使用 Catalog_name_seperator。<br /><br /> 若為 OLE DB，請使用 DBLITERAL_CATALOG_SEPARATOR 或 DBLITERAL_SCHEMA_SEPARATOR。|  
+|CompositeIdentifierSeparatorPattern|string|符合複合識別項中複合分隔符號的規則運算式。 例如，"\\。 」 （適用於 SQL Server) 或"@&#124;\\。 」 (適用於 Oracle)。<br /><br /> 複合識別項通常是會用於資料庫物件名稱，例如： pubs.dbo.authors 或pubs@dbo.authors。<br /><br /> SQL 伺服器，請使用規則運算式 「\\。 」。 為 OracleClient，請使用"@&#124;\\。 」。<br /><br /> 若為 ODBC，請使用 Catalog_name_seperator。<br /><br /> 若為 OLE DB，請使用 DBLITERAL_CATALOG_SEPARATOR 或 DBLITERAL_SCHEMA_SEPARATOR。|  
 |DataSourceProductName|string|提供者存取的產品名稱，如 "Oracle" 或 "SQLServer"。|  
 |DataSourceProductVersion|string|表示提供者存取的產品版本，使用資料來源原生格式，而非 Microsoft 格式。<br /><br /> 在某些情況下，DataSourceProductVersion 及 DataSourceProductVersionNormalized 將為同一值。 若為 OLE DB 及 ODBC，這些值將永遠相同，因為它們對應於基礎原生 API 中的同一函式呼叫。|  
 |DataSourceProductVersionNormalized|string|資料來源的正規化版本，可使用 `String.Compare()` 進行比較。 它的格式對提供者的所有版本來說都一致，這可以防止版本 10 在版本 1 與版本 2 之間排序。<br /><br /> 例如，Oracle 提供者使用的格式為"nn.nn.nn.nn.nn"其正規化版本，會使 Oracle 8i 資料來源傳回"08.01.07.04.01"。 SQL Server 會使用一般的 Microsoft 「 nn.nn.nnnn 」 格式。<br /><br /> 在某些情況下，DataSourceProductVersion 及 DataSourceProductVersionNormalized 將為同一值。 若為 OLE DB 及 ODBC，這些值將永遠相同，因為它們對應於基礎原生 API 中的同一函式呼叫。|  
@@ -53,10 +55,10 @@ ms.lasthandoff: 01/17/2018
 |ParameterMarkerPattern|string|符合參數標記的規則運算式。 它會具有參數名稱的相符值 (如果有的話)。<br /><br /> 例如，如果支援具名參數將 '@' 導引字元包括在參數名稱中，則此項將為："(@[A-Za-z0-9_$#]*)"。<br /><br /> 不過，如果支援具名的參數 ':' 做為導引字元，且不屬於參數名稱，這會是:": ([A Za a-za-z0-9_$ #]\*) 」。<br /><br /> 當然，如果資料來源不支援具名參數，則此項僅為 "?"。|  
 |ParameterNameMaxLength|int|參數名稱的最大長度 (以字元為單位)。 Visual Studio 要求如果支援參數名稱，則最大長度的最小值為 30 個字元。<br /><br /> 如果資料來源不支援具名參數，此屬性將傳回零。|  
 |ParameterNamePattern|string|符合有效參數名稱的規則運算式。 不同資料來源對可用於參數名稱的字元具有不同規則。<br /><br /> Visual Studio 要求如果支援參數名稱，則字元 "\p{Lu}\p{Ll}\p{Lt}\p{Lm}\p{Lo}\p{Nl}\p{Nd}" 為針對參數名稱有效的支援字元集最小值。|  
-|QuotedIdentifierPattern|string|符合引號識別項並具有識別項本身 (不帶有引號) 之相符值的規則運算式。 比方說，如果資料來源使用雙引號識別引號識別項，這會是: 「 (([^\\"] &#124;\\"\\")*)".|  
+|QuotedIdentifierPattern|string|符合引號識別項並具有識別項本身 (不帶有引號) 之相符值的規則運算式。 例如，如果資料來源使用雙引號識別引號識別項，這會是: 「 (([^\\"]&#124;\\"\\") *)"。|  
 |QuotedIdentifierCase|<xref:System.Data.Common.IdentifierCase>|表示是否將引號識別項視為區分大小寫。|  
 |StatementSeparatorPattern|string|符合陳述式分隔符號的規則運算式。|  
-|StringLiteralPattern|string|符合字串常值並具有常值本身之相符值的規則運算式。 例如，如果資料來源使用單引號識別字串，這會是:"('([^'] &#124; ')*')"'|  
+|StringLiteralPattern|string|符合字串常值並具有常值本身之相符值的規則運算式。 例如，如果資料來源使用單引號識別字串，這會是:"('([^']&#124;'') *')"'|  
 |SupportedJoinOperators|<xref:System.Data.Common.SupportedJoinOperators>|指定資料來源支援何種型別的 SQL Join 陳述式。|  
   
 ## <a name="datatypes"></a>DataTypes  
@@ -105,7 +107,7 @@ ms.lasthandoff: 01/17/2018
 |----------------|--------------|-----------------|  
 |ReservedWord|字串|提供者特定的保留的字。|  
   
-## <a name="see-also"></a>請參閱  
+## <a name="see-also"></a>另請參閱  
  [擷取資料庫結構描述資訊](../../../../docs/framework/data/adonet/retrieving-database-schema-information.md)  
  [GetSchema 和結構描述集合](../../../../docs/framework/data/adonet/getschema-and-schema-collections.md)  
  [ADO.NET Managed 提供者和 DataSet 開發人員中心](http://go.microsoft.com/fwlink/?LinkId=217917)

@@ -1,12 +1,13 @@
 ---
-title: "ServiceModel 中繼資料公用程式工具 (Svcutil.exe)"
-ms.custom: 
+title: ServiceModel 中繼資料公用程式工具 (Svcutil.exe)
+ms.custom: ''
 ms.date: 03/30/2017
 ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.technology: dotnet-clr
-ms.tgt_pltfrm: 
+ms.reviewer: ''
+ms.suite: ''
+ms.technology:
+- dotnet-clr
+ms.tgt_pltfrm: ''
 ms.topic: article
 helpviewer_keywords:
 - clients [WCF], building
@@ -14,16 +15,17 @@ helpviewer_keywords:
 - Svcutil.exe
 - clients [WCF], consuming services
 ms.assetid: 1abf3d9f-b420-46f1-b628-df238751f308
-caps.latest.revision: "40"
+caps.latest.revision: ''
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.workload: dotnet
+ms.workload:
+- dotnet
 ms.openlocfilehash: ce66f98f064ec5c9460dd1909f8eb7bc44c26f76
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.sourcegitcommit: c883637b41ee028786edceece4fa872939d2e64c
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 03/23/2018
 ---
 # <a name="servicemodel-metadata-utility-tool-svcutilexe"></a>ServiceModel 中繼資料公用程式工具 (Svcutil.exe)
 ServiceModel 中繼資料公用程式工具用於從中繼資料文件產生服務模型程式碼，以及從服務模型程式碼產生中繼資料文件。  
@@ -63,16 +65,16 @@ ServiceModel 中繼資料公用程式工具用於從中繼資料文件產生服�
   
 |選項|描述|  
 |------------|-----------------|  
-|/ 目錄：\<目錄 >|要建立檔案的目錄。<br /><br /> 預設：目前的目錄。<br /><br /> 簡短形式：`/d`|  
+|/directory:\<directory>|要建立檔案的目錄。<br /><br /> 預設：目前的目錄。<br /><br /> 簡短形式：`/d`|  
 |/help|顯示工具的命令語法和選項。<br /><br /> 簡短形式：`/?`|  
 |/noLogo|隱藏版權和橫幅訊息。|  
-|/svcutilConfig:\<configFile >|指定要取代 App.config 檔所使用的自訂組態檔。 指定的組態檔可用來註冊 system.serviceModel 副檔名，而不會變更工具的組態檔。|  
+|/svcutilConfig:\<configFile>|指定要取代 App.config 檔所使用的自訂組態檔。 指定的組態檔可用來註冊 system.serviceModel 副檔名，而不會變更工具的組態檔。|  
 |/target:\<輸出類型 >|指定要由工具產生的輸出。<br /><br /> 有效值為 code、metadata 或 xmlSerializer。<br /><br /> 簡短形式：`/t`|  
   
 ### <a name="code-generation"></a>程式碼產生  
  Svcutil.exe 可從中繼資料文件產生服務合約、用戶端和資料型別的程式碼。 這些中繼資料文件可在永久性儲存裝置或線上擷取。 線上擷取會遵循 WS-Metadata Exchange 通訊協定或 DISCO 通訊協定 (如需詳細資訊，請參閱「中繼資料下載」一節)。  
   
- 您可以使用 SvcUtil.exe 工具產生以預先定義之 WSDL 文件為基礎的服務與資料合約。 使用 /serviceContract 參數，並指定可以下載或找到 WSDL 文件的 URL 或檔案位置。 這將會產生 WSDL 文件中定義的服務與資料合約，而這些合約接著就可以用來實作投訴服務。 [!INCLUDE[crdefault](../../../includes/crdefault-md.md)][How to： 擷取中繼資料，並實作相容服務](../../../docs/framework/wcf/feature-details/how-to-retrieve-metadata-and-implement-a-compliant-service.md)。  
+ 您可以使用 SvcUtil.exe 工具產生以預先定義之 WSDL 文件為基礎的服務與資料合約。 使用 /serviceContract 參數，並指定可以下載或找到 WSDL 文件的 URL 或檔案位置。 這將會產生 WSDL 文件中定義的服務與資料合約，而這些合約接著就可以用來實作投訴服務。 [!INCLUDE[crdefault](../../../includes/crdefault-md.md)] [如何： 擷取中繼資料，並實作相容服務](../../../docs/framework/wcf/feature-details/how-to-retrieve-metadata-and-implement-a-compliant-service.md)。  
   
  對於含 BasicHttpContextbinding 端點的服務，Svcutil.exe 會產生 BasicHttpBinding，其 `allowCookies` 屬性設為 `true`。 Cookie 用於伺服器上的內容。 如果您要在服務使用 Cookie 時管理用戶端上的內容，您可以手動修改組態以使用內容繫結。  
   
@@ -90,20 +92,20 @@ ServiceModel 中繼資料公用程式工具用於從中繼資料文件產生服�
 |選項|描述|  
 |------------|-----------------|  
 |/async|同時產生同步與非同步方法簽章。<br /><br /> 預設：只產生同步方法簽章。<br /><br /> 簡短形式：`/a`|  
-|/collectionType:\<類型 >|指定 WCF 用戶端的清單集合類型。<br/><br /> 預設值： 集合型別為 System.Array。 <br /><br /> 簡短形式：`/ct`|  
-|/config:\<configFile >|指定產生之組態檔的檔案名稱。<br /><br /> 預設：output.config|  
+|/collectionType:\<type>|指定 WCF 用戶端的清單集合類型。<br/><br /> 預設值： 集合型別為 System.Array。 <br /><br /> 簡短形式：`/ct`|  
+|/config:\<configFile>|指定產生之組態檔的檔案名稱。<br /><br /> 預設：output.config|  
 |/dataContractOnly|只產生資料合約類型的程式碼。 不會產生「服務合約」類型。<br /><br /> 這個選項應該只能指定本機中繼資料檔案。<br /><br /> 簡短形式：`/dconly`|  
 |/enableDataBinding|在所有「資料合約」類型上實作 <xref:System.ComponentModel.INotifyPropertyChanged> 介面，以啟用資料繫結。<br /><br /> 簡短形式：`/edb`|  
-|/excludeType:\<類型 >|指定要從參考的合約類型排除的完整型別名稱或組件限定型別名稱。<br /><br /> 將這個參數與個別 DLL 的 `/r` 一起使用時，會參考 XSD 類別的完整名稱。<br /><br /> 簡短形式：`/et`|  
+|/excludeType:\<type>|指定要從參考的合約類型排除的完整型別名稱或組件限定型別名稱。<br /><br /> 將這個參數與個別 DLL 的 `/r` 一起使用時，會參考 XSD 類別的完整名稱。<br /><br /> 簡短形式：`/et`|  
 |/importXmlTypes|設定資料合約序列化程式，將非資料合約類型匯入為 IXmlSerializable 類型。|  
 |/internal|產生標示為內部的類別。 預設：只產生公用類別。<br /><br /> 簡短形式：`/i`|  
 |/language:\<語言 >|指定要用於產生程式碼的程式語言。 您應提供在 Machine.config 檔案中註冊的語言名稱，或繼承自 <xref:System.CodeDom.Compiler.CodeDomProvider> 之類別的完整名稱。<br /><br /> 值：c#、cs、csharp、vb、visualbasic、c++、cpp<br /><br /> 預設：csharp<br /><br /> 簡短形式： `/l` **附註：**此參數只支援 c + + 程式碼提供者隨附於 Visual Studio 2005 SP1。|  
 |/mergeConfig|將產生的組態合併至現有檔案，而非覆寫現有檔案。|  
 |/messageContract|產生「訊息合約」類型。<br /><br /> 簡短形式：`/mc`|  
-|/namespace:\<字串、 字串 >|指定從 WSDL 或 XML 結構描述 targetNamespace 到 CLR 命名空間的對應。 使用 '\*' 的目標命名空間對應所有的 Targetnamespace，而不會明確對應至該 CLR 命名空間。<br /><br /> 為了確保訊息合約名稱不會與作業名稱衝突，您應該以 `::` 限定型別參考，或確定是唯一的名稱。<br /><br /> 預設：自資料合約的結構描述文件之目標命名空間衍生而來。 預設命名空間用於所有其他產生的型別。<br /><br /> 簡短形式： `/n` **附註：**當產生的型別使用 XmlSerializer，就會支援單一命名空間對應。 所有產生的型別會在預設的命名空間或所指定的命名空間是 ' *'。|  
+|/namespace:\<string,string>|指定從 WSDL 或 XML 結構描述 targetNamespace 到 CLR 命名空間的對應。 使用 '\*' 的目標命名空間對應所有的 Targetnamespace，而不會明確對應至該 CLR 命名空間。<br /><br /> 為了確保訊息合約名稱不會與作業名稱衝突，您應該以 `::` 限定型別參考，或確定是唯一的名稱。<br /><br /> 預設：自資料合約的結構描述文件之目標命名空間衍生而來。 預設命名空間用於所有其他產生的型別。<br /><br /> 簡短形式： `/n` **附註：**當產生的型別使用 XmlSerializer，就會支援單一命名空間對應。 所有產生的型別會在預設的命名空間或所指定的命名空間是 ' *'。|  
 |/noConfig|不要產生組態檔。|  
 |/noStdLib|不引用標準程式庫。<br /><br /> 預設：引用 Mscorlib.dll 和 System.servicemodel.dll。|  
-|/out:\<檔案 >|指定產生之程式碼的檔案名稱。<br /><br /> 預設：衍生自 WSDL 定義名稱、WSDL 服務名稱，或其中一個結構描述的目標命名空間。<br /><br /> 簡短形式：`/o`|  
+|/out:\<file>|指定產生之程式碼的檔案名稱。<br /><br /> 預設：衍生自 WSDL 定義名稱、WSDL 服務名稱，或其中一個結構描述的目標命名空間。<br /><br /> 簡短形式：`/o`|  
 |/reference:\<檔案路徑 >|參考指定組件中的型別。 產生用戶端時，使用這個選項即可指定組件，這些組件可能包含代表匯入之中繼資料的類型。<br /><br /> 您無法使用這個參數指定訊息合約和 <xref:System.Xml.Serialization.XmlSerializer> 型別。<br /><br /> 如果已參考 <xref:System.DateTimeOffset>，則會使用這個型別，而不會產生新型別。 如果應用程式是使用 [!INCLUDE[netfx35_short](../../../includes/netfx35-short-md.md)] 撰寫的，則 SvcUtil.exe 會自動參考 <xref:System.DateTimeOffset>。<br /><br /> 簡短形式：`/r`|  
 |/serializable|產生已使用 Serializable 屬性標示的類別。<br /><br /> 簡短形式：`/s`|  
 |/serviceContract|只產生服務合約的程式碼。 不會產生用戶端類別和組態<br /><br /> 簡短形式：`/sc`|  
@@ -127,10 +129,10 @@ ServiceModel 中繼資料公用程式工具用於從中繼資料文件產生服�
   
 |選項|描述|  
 |------------|-----------------|  
-|/serviceName:\<serviceConfigName >|指定要匯出的服務其組態名稱。 如果使用這個選項，必須將可執行的組件和相關聯的組態檔當做輸入傳遞。 Svcutil.exe 會搜尋所有相關聯組態檔中的服務組態。 如果組態檔包含任何延伸型別，則包含這些型別的組件必須在 GAC 中或使用 `/reference` 選項明確地提供。|  
+|/serviceName:\<serviceConfigName>|指定要匯出的服務其組態名稱。 如果使用這個選項，必須將可執行的組件和相關聯的組態檔當做輸入傳遞。 Svcutil.exe 會搜尋所有相關聯組態檔中的服務組態。 如果組態檔包含任何延伸型別，則包含這些型別的組件必須在 GAC 中或使用 `/reference` 選項明確地提供。|  
 |/reference:\<檔案路徑 >|將指定的組件新增至用於解析型別參考的組件集合中。 如果您正在匯出或驗證的服務使用的是註冊於組態中的協力廠商擴充功能 (Behavior、Binding 和 BindingElement)，請使用這個選項找出不在 GAC 中的擴充功能組件。<br /><br /> 簡短形式：`/r`|  
 |/dataContractOnly|只在資料合約類型上操作。 不處理服務合約。<br /><br /> 這個選項應該只能指定本機中繼資料檔案。<br /><br /> 簡短形式：`/dconly`|  
-|/excludeType:\<類型 >|指定要從匯出作業排除的型別其完整名稱或組件限定名稱。 在匯出服務中繼資料或是一組服務合約時，如果要從匯出作業排出某些型別，則可以使用這個選項。 這個選項無法與 `/dconly` 選項一起使用。<br /><br /> 當您有單一組件包含多個服務，且每個服務使用具有相同 XSD 名稱的不同類別時，在指定這個參數時應使用服務名稱而不是 XSD 類別名稱。<br /><br /> 不支援 XSD 或資料合約類型。<br /><br /> 簡短形式：`/et`|  
+|/excludeType:\<type>|指定要從匯出作業排除的型別其完整名稱或組件限定名稱。 在匯出服務中繼資料或是一組服務合約時，如果要從匯出作業排出某些型別，則可以使用這個選項。 這個選項無法與 `/dconly` 選項一起使用。<br /><br /> 當您有單一組件包含多個服務，且每個服務使用具有相同 XSD 名稱的不同類別時，在指定這個參數時應使用服務名稱而不是 XSD 類別名稱。<br /><br /> 不支援 XSD 或資料合約類型。<br /><br /> 簡短形式：`/et`|  
   
 ### <a name="service-validation"></a>服務驗證  
  您可以使用驗證來偵測服務實作中的錯誤，而不需要裝載服務。 您必須使用 `/serviceName` 選項來指出您要驗證的服務。  
@@ -144,10 +146,10 @@ ServiceModel 中繼資料公用程式工具用於從中繼資料文件產生服�
 |選項|描述|  
 |------------|-----------------|  
 |/validate|驗證由 `/serviceName` 選項指定的服務實作。 如果使用這個選項，必須將可執行的組件和相關聯的組態檔當做輸入傳遞。<br /><br /> 簡短形式：`/v`|  
-|/serviceName:\<serviceConfigName >|指定要驗證的服務其組態名稱。 Svcutil.exe 會搜尋所有輸入組件其所有相關聯組態檔中的服務組態。 如果組態檔包含任何延伸型別，則包含這些型別的組件必須在 GAC 中或使用 `/reference` 選項明確地提供。|  
+|/serviceName:\<serviceConfigName>|指定要驗證的服務其組態名稱。 Svcutil.exe 會搜尋所有輸入組件其所有相關聯組態檔中的服務組態。 如果組態檔包含任何延伸型別，則包含這些型別的組件必須在 GAC 中或使用 `/reference` 選項明確地提供。|  
 |/reference:\<檔案路徑 >|將指定的組件新增至用於解析型別參考的組件集合中。 如果您正在匯出或驗證的服務使用的是註冊於組態中的協力廠商擴充功能 (Behavior、Binding 和 BindingElement)，請使用這個選項找出不在 GAC 中的擴充功能組件。<br /><br /> 簡短形式：`/r`|  
 |/dataContractOnly|只在資料合約類型上操作。 不處理服務合約。<br /><br /> 這個選項應該只能指定本機中繼資料檔案。<br /><br /> 簡短形式：`/dconly`|  
-|/excludeType:\<類型 >|指定要從驗證作業排除的型別其完整名稱或組件限定名稱。<br /><br /> 簡短形式：`/et`|  
+|/excludeType:\<type>|指定要從驗證作業排除的型別其完整名稱或組件限定名稱。<br /><br /> 簡短形式：`/et`|  
   
 ### <a name="metadata-download"></a>中繼資料下載  
  Svcutil.exe 可用於從執行中服務下載中繼資料，並將中繼資料儲存至本機檔案中。 若要下載中繼資料，您必須指定 `/t:metadata` 選項。 否則，會產生用戶端程式碼。 對於 HTTP 和 HTTPS URL 結構描述，Svcutil.exe 會嘗試使用 WS-Metadata Exchange 和 DISCO 擷取中繼資料。 對於所有其他的 URL 結構描述，Svcutil.exe 只使用 WS-Metadata Exchange。  
@@ -189,8 +191,8 @@ ServiceModel 中繼資料公用程式工具用於從中繼資料文件產生服�
 |選項|描述|  
 |------------|-----------------|  
 |/reference:\<檔案路徑 >|將指定的組件新增至用於解析型別參考的組件集合中。<br /><br /> 簡短形式：`/r`|  
-|/excludeType:\<類型 >|指定要從匯出作業或驗證作業排除的型別其完整名稱或組件限定名稱。<br /><br /> 簡短形式：`/et`|  
-|/out:\<檔案 >|指定產生之程式碼的檔案名稱。 將多個組件做為工具的輸入傳遞時，會忽略這個選項。<br /><br /> 預設：衍生自組件名稱。<br /><br /> 簡短形式：`/o`|  
+|/excludeType:\<type>|指定要從匯出作業或驗證作業排除的型別其完整名稱或組件限定名稱。<br /><br /> 簡短形式：`/et`|  
+|/out:\<file>|指定產生之程式碼的檔案名稱。 將多個組件做為工具的輸入傳遞時，會忽略這個選項。<br /><br /> 預設：衍生自組件名稱。<br /><br /> 簡短形式：`/o`|  
 |/UseSerializerForFaults|指定<!--zz <xref:System.Xml.XmlSerializer> -->`xref:System.Xml.XmlSerializer `應該用於讀取和寫入錯誤，而不使用預設<xref:System.Runtime.Serialization.DataContractSerializer>。|  
   
 ## <a name="examples"></a>範例  
@@ -272,7 +274,7 @@ ServiceModel 中繼資料公用程式工具用於從中繼資料文件產生服�
   
  最後，您不應該在應用程式的中介層 (Middle Tier) 使用這個工具，因為它可能會對目前處理序造成阻絕服務攻擊。  
   
-## <a name="see-also"></a>請參閱  
+## <a name="see-also"></a>另請參閱  
  <xref:System.Runtime.Serialization.DataContractAttribute>  
  <xref:System.Runtime.Serialization.DataMemberAttribute>  
  [如何：建立用戶端](../../../docs/framework/wcf/how-to-create-a-wcf-client.md)
