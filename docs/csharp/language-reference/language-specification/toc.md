@@ -1,4 +1,5 @@
 # [C# 6.0 草稿規格](index.md)
+## [簡介](../../../../_csharplang/spec/introduction.md)
 ## [語彙結構](../../../../_csharplang/spec/lexical-structure.md)
 ## [基本概念](../../../../_csharplang/spec/basic-concepts.md)
 ## [型別](../../../../_csharplang/spec/types.md)
