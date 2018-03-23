@@ -1,13 +1,13 @@
 ---
-title: ".NET 效能秘訣"
-ms.custom: 
+title: .NET 效能秘訣
+ms.custom: ''
 ms.date: 03/30/2017
 ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
+ms.reviewer: ''
+ms.suite: ''
 ms.technology:
 - dotnet-clr
-ms.tgt_pltfrm: 
+ms.tgt_pltfrm: ''
 ms.topic: article
 helpviewer_keywords:
 - C# language, performance
@@ -15,17 +15,17 @@ helpviewer_keywords:
 - Visual Basic, performance
 - performance [Visual Basic]
 ms.assetid: ae275793-857d-4102-9095-b4c2a02d57f4
-caps.latest.revision: 
+caps.latest.revision: ''
 author: BillWagner
 ms.author: wiwagn
 manager: wpickett
 ms.workload:
 - wiwagn
-ms.openlocfilehash: cad50862d5ed05dd13c3f73f50af0c466ad930cd
-ms.sourcegitcommit: 96cc82cac4650adfb65ba351506d8a8fbcd17b5c
+ms.openlocfilehash: ac1f5b9e0897650751320a7f5a9290c378d428b6
+ms.sourcegitcommit: c883637b41ee028786edceece4fa872939d2e64c
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 02/19/2018
+ms.lasthandoff: 03/23/2018
 ---
 # <a name="net-performance-tips"></a>.NET 效能秘訣
 「效能」這個詞一般指的是程式的執行速度。 您有時可以遵循原始程式碼中的特定基本規則來增加執行速度。 在某些程式中，請務必仔細檢查程式碼，並使用程式碼剖析工具，確定以最快速度執行。 在其他程式中，您不需要執行這類最佳化，因為程式碼會以撰寫時的可接受速度快速執行。 本文列出效能可能會降低的一些常見區域和其改善祕訣，以及其他效能主題的連結。 如需效能規劃和測量的詳細資訊，請參閱[效能](../../../docs/framework/performance/index.md)。  
@@ -48,12 +48,12 @@ ms.lasthandoff: 02/19/2018
 -   [Garbage Collector Basics and Performance Hints](http://go.microsoft.com/fwlink/?LinkId=99296) (記憶體回收行程基本概念和效能提示)  
   
 -   [Performance Tips and Tricks in .NET Applications](http://go.microsoft.com/fwlink/?LinkId=99297) (.NET 應用程式中的效能祕訣和訣竅)  
-  
--   [.NET 診斷工具內部](http://go.microsoft.com/fwlink/?LinkId=112407)  
-  
+
 -   [Rico Mariani's Performance Tidbits](http://go.microsoft.com/fwlink/?LinkId=115679) (Rico Mariani 的效能花絮)  
+
+-   [Vance Morrison 的部落格](https://blogs.msdn.microsoft.com/vancem/)
   
-## <a name="see-also"></a>請參閱  
+## <a name="see-also"></a>另請參閱  
  [效能](../../../docs/framework/performance/index.md)  
  [程式設計概念](http://msdn.microsoft.com/library/65c12cca-af4f-4017-886e-2dbc00a189d6)  
  [Visual Basic 程式設計手冊](../../visual-basic/programming-guide/index.md)  

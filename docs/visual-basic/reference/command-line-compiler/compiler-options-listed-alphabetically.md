@@ -12,14 +12,16 @@ helpviewer_keywords:
 ms.assetid: e67febba-bacf-4e1f-a143-c141e063f90e
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 008a1619343874396e22c3606f8a0aeadd81cd7a
-ms.sourcegitcommit: 498799639937c89de777361aab74261efe7b79ea
+ms.openlocfilehash: 4c78246a1e9fe14b0ba64ac447293d02e8416079
+ms.sourcegitcommit: c883637b41ee028786edceece4fa872939d2e64c
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 03/22/2018
+ms.lasthandoff: 03/23/2018
 ---
 # <a name="visual-basic-compiler-options-listed-alphabetically"></a>依字母順序列出的 Visual Basic 編譯器選項
-[!INCLUDE[vbprvb](~/includes/vbprvb-md.md)] 命令列編譯器可作為從 [!INCLUDE[vsprvs](~/includes/vsprvs-md.md)] 整合式開發環境 (IDE) 內編譯程式的替代方法。 以下是依字母順序排序的 [!INCLUDE[vbprvb](~/includes/vbprvb-md.md)] 命令列編譯器選項清單。  
+Visual Basic 命令列編譯器可作為從編譯程式的替代方案[!INCLUDE[vsprvs](~/includes/vsprvs-md.md)]整合式的開發環境 (IDE)。 以下是 Visual Basic 命令列編譯器選項，依字母順序排序的清單。  
+
+[!INCLUDE[compiler-options](~/includes/compiler-options.md)]
   
 |選項|用途|  
 |------------|-------------|  
@@ -36,9 +38,9 @@ ms.lasthandoff: 03/22/2018
 |[-define](../../../visual-basic/reference/command-line-compiler/define.md)|定義條件式編譯的符號。|  
 |[-delaysign](../../../visual-basic/reference/command-line-compiler/delaysign.md)|指定將要完整簽署還是部分簽署組件。|  
 |[-doc](../../../visual-basic/reference/command-line-compiler/doc.md)|將文件註解處理成 XML 檔案。|  
-|[-errorreport](../../../visual-basic/reference/command-line-compiler/errorreport.md)|指定 [!INCLUDE[vbprvb](~/includes/vbprvb-md.md)] 編譯器報告編譯器內部錯誤的方式。|  
+|[-errorreport](../../../visual-basic/reference/command-line-compiler/errorreport.md)|指定 Visual Basic 編譯器報告編譯器內部錯誤的方式。|  
 |[-filealign](../../../visual-basic/reference/command-line-compiler/filealign.md)|指定要對齊輸出檔案區段的位置。|  
-|[-help](../../../visual-basic-reference/command-line-compiler/help.md)|顯示編譯器選項。 此命令的效用等同於指定 `-?` 選項。 未執行編譯。|  
+|[-help](../../../visual-basic/reference/command-line-compiler/help.md)|顯示編譯器選項。 此命令的效用等同於指定 `-?` 選項。 未執行編譯。|  
 |[-highentropyva](../../../visual-basic/reference/command-line-compiler/highentropyva.md)|指出特定可執行檔是否支援高熵位址空間配置隨機載入 (ASLR)。|  
 |[-imports](../../../visual-basic/reference/command-line-compiler/imports.md)|從指定的組件匯入命名空間。|  
 |[-keycontainer](../../../visual-basic/reference/command-line-compiler/keycontainer.md)|指定金鑰組的金鑰容器名稱，為組件提供強式名稱。|  
@@ -67,6 +69,8 @@ ms.lasthandoff: 03/22/2018
 |[-quiet](../../../visual-basic/reference/command-line-compiler/quiet.md)|防止編譯器顯示語法相關錯誤和警告的程式碼。|  
 |[-recurse](../../../visual-basic/reference/command-line-compiler/recurse.md)|搜尋要編譯之原始程式檔的子目錄。|  
 |[-reference](../../../visual-basic/reference/command-line-compiler/reference.md)|從組匯入中繼資料。|  
+|[-refonly](refonly-compiler-option.md)|輸出只參考的組件。|
+|[-refout](refout-compiler-option.md)|指定的參考組件的輸出路徑。|
 |[-removeintchecks](../../../visual-basic/reference/command-line-compiler/removeintchecks.md)|停用整數的溢位檢查。|  
 |[-resource](../../../visual-basic/reference/command-line-compiler/resource.md)|將 Managed 資源內嵌至組件中。|  
 |[-rootnamespace](../../../visual-basic/reference/command-line-compiler/rootnamespace.md)|指定所有類型宣告的命名空間。|  

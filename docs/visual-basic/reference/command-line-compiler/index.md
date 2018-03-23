@@ -1,5 +1,5 @@
 ---
-title: "Visual Basic 命令列編譯器"
+title: Visual Basic 命令列編譯器
 ms.date: 02/20/2018
 ms.prod: .net
 ms.technology:
@@ -14,17 +14,17 @@ helpviewer_keywords:
 ms.assetid: 6b57c444-50c7-4b88-8f59-ed65cff5e05c
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: 3b1219a5965352057ab6fe564282394e14f6d063
-ms.sourcegitcommit: cec0525b2121c36198379525e69aa5388266db5b
+ms.openlocfilehash: 1a2f03a62488b746b623b7ead94c122b40178a97
+ms.sourcegitcommit: c883637b41ee028786edceece4fa872939d2e64c
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 02/23/2018
+ms.lasthandoff: 03/23/2018
 ---
 # <a name="visual-basic-command-line-compiler"></a>Visual Basic 命令列編譯器
 
 Visual Basic 命令列編譯器提供從 Visual Studio 整合式的開發環境 (IDE) 內編譯程式的替代方法。 本章節包含 Visual Basic 編譯器選項的描述。
 
-每個編譯器選項會有兩種形式:-選項和 /option 而。 Visual Basic 文件只會顯示 /option 而表單。
+[!INCLUDE[compiler-options](~/includes/compiler-options.md)]
   
 ## <a name="in-this-section"></a>本節內容
 
