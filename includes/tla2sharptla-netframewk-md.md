@@ -1,1 +1,1 @@
-<span data-ttu-id="3a0a2-101">架構</span><span class="sxs-lookup"><span data-stu-id="3a0a2-101">Framework</span></span>
+<span data-ttu-id="2cb90-101">架構</span><span class="sxs-lookup"><span data-stu-id="2cb90-101">Framework</span></span>

@@ -1,12 +1,12 @@
 ---
-title: "使用 AsyncWaitHandle 封鎖應用程式執行"
-ms.custom: 
+title: 使用 AsyncWaitHandle 封鎖應用程式執行
+ms.custom: ''
 ms.date: 03/30/2017
 ms.prod: .net
-ms.reviewer: 
-ms.suite: 
+ms.reviewer: ''
+ms.suite: ''
 ms.technology: dotnet-standard
-ms.tgt_pltfrm: 
+ms.tgt_pltfrm: ''
 ms.topic: article
 dev_langs:
 - csharp
@@ -19,7 +19,7 @@ helpviewer_keywords:
 - stopping asynchronous operations
 - blocking application execution
 ms.assetid: 3e32daf2-8161-4e8f-addd-9fd9ff101b03
-caps.latest.revision: 
+caps.latest.revision: ''
 author: rpetrusha
 ms.author: ronpet
 manager: wpickett
@@ -27,26 +27,26 @@ ms.workload:
 - dotnet
 - dotnetcore
 ms.openlocfilehash: 380080c0aa05bc5b94c9ec5fe471f2f255562cd2
-ms.sourcegitcommit: 957c696f25e39f923a827fc3ad5e8ab72768838c
-ms.translationtype: HT
+ms.sourcegitcommit: c883637b41ee028786edceece4fa872939d2e64c
+ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 01/13/2018
+ms.lasthandoff: 03/26/2018
 ---
-# <a name="blocking-application-execution-using-an-asyncwaithandle"></a><span data-ttu-id="1b5c8-102">使用 AsyncWaitHandle 封鎖應用程式執行</span><span class="sxs-lookup"><span data-stu-id="1b5c8-102">Blocking Application Execution Using an AsyncWaitHandle</span></span>
-<span data-ttu-id="1b5c8-103">等待非同步作業的結果而無法繼續執行其他工作的應用程式必須封鎖，直到作業完成為止。</span><span class="sxs-lookup"><span data-stu-id="1b5c8-103">Applications that cannot continue to do other work while waiting for the results of an asynchronous operation must block until the operation completes.</span></span> <span data-ttu-id="1b5c8-104">使用下列其中一個選項，在等候非同步作業完成時封鎖應用程式的主執行緒：</span><span class="sxs-lookup"><span data-stu-id="1b5c8-104">Use one of the following options to block your application's main thread while waiting for an asynchronous operation to complete:</span></span>  
+# <a name="blocking-application-execution-using-an-asyncwaithandle"></a><span data-ttu-id="31c10-102">使用 AsyncWaitHandle 封鎖應用程式執行</span><span class="sxs-lookup"><span data-stu-id="31c10-102">Blocking Application Execution Using an AsyncWaitHandle</span></span>
+<span data-ttu-id="31c10-103">等待非同步作業的結果而無法繼續執行其他工作的應用程式必須封鎖，直到作業完成為止。</span><span class="sxs-lookup"><span data-stu-id="31c10-103">Applications that cannot continue to do other work while waiting for the results of an asynchronous operation must block until the operation completes.</span></span> <span data-ttu-id="31c10-104">使用下列其中一個選項，在等候非同步作業完成時封鎖應用程式的主執行緒：</span><span class="sxs-lookup"><span data-stu-id="31c10-104">Use one of the following options to block your application's main thread while waiting for an asynchronous operation to complete:</span></span>  
   
--   <span data-ttu-id="1b5c8-105">使用非同步作業的 *Begin***OperationName 方法所傳回 <xref:System.IAsyncResult> 的 <xref:System.IAsyncResult.AsyncWaitHandle%2A> 屬性。</span><span class="sxs-lookup"><span data-stu-id="1b5c8-105">Use the <xref:System.IAsyncResult.AsyncWaitHandle%2A> property of the <xref:System.IAsyncResult> returned by the asynchronous operation's **Begin***OperationName* method.</span></span> <span data-ttu-id="1b5c8-106">本主題將示範這個方法。</span><span class="sxs-lookup"><span data-stu-id="1b5c8-106">This approach is demonstrated in this topic.</span></span>  
+-   <span data-ttu-id="31c10-105">使用非同步作業的 *Begin***OperationName 方法所傳回 <xref:System.IAsyncResult> 的 <xref:System.IAsyncResult.AsyncWaitHandle%2A> 屬性。</span><span class="sxs-lookup"><span data-stu-id="31c10-105">Use the <xref:System.IAsyncResult.AsyncWaitHandle%2A> property of the <xref:System.IAsyncResult> returned by the asynchronous operation's **Begin***OperationName* method.</span></span> <span data-ttu-id="31c10-106">本主題將示範這個方法。</span><span class="sxs-lookup"><span data-stu-id="31c10-106">This approach is demonstrated in this topic.</span></span>  
   
--   <span data-ttu-id="1b5c8-107">呼叫非同步作業的 *End***OperationName 方法。</span><span class="sxs-lookup"><span data-stu-id="1b5c8-107">Call the asynchronous operation's **End***OperationName* method.</span></span> <span data-ttu-id="1b5c8-108">如需示範此方法的範例，請參閱[以結束非同步作業的方式封鎖應用程式執行](../../../docs/standard/asynchronous-programming-patterns/blocking-application-execution-by-ending-an-async-operation.md)。</span><span class="sxs-lookup"><span data-stu-id="1b5c8-108">For an example that demonstrates this approach, see [Blocking Application Execution by Ending an Async Operation](../../../docs/standard/asynchronous-programming-patterns/blocking-application-execution-by-ending-an-async-operation.md).</span></span>  
+-   <span data-ttu-id="31c10-107">呼叫非同步作業的 *End***OperationName 方法。</span><span class="sxs-lookup"><span data-stu-id="31c10-107">Call the asynchronous operation's **End***OperationName* method.</span></span> <span data-ttu-id="31c10-108">如需示範此方法的範例，請參閱[以結束非同步作業的方式封鎖應用程式執行](../../../docs/standard/asynchronous-programming-patterns/blocking-application-execution-by-ending-an-async-operation.md)。</span><span class="sxs-lookup"><span data-stu-id="31c10-108">For an example that demonstrates this approach, see [Blocking Application Execution by Ending an Async Operation](../../../docs/standard/asynchronous-programming-patterns/blocking-application-execution-by-ending-an-async-operation.md).</span></span>  
   
- <span data-ttu-id="1b5c8-109">在非同步作業完成之前，使用一個或多個 <xref:System.Threading.WaitHandle> 物件封鎖的應用程式通常都會呼叫 *Begin***OperationName 方法來執行不需要作業結果即可完成的工作，然後在非同步作業完成之前維持封鎖。</span><span class="sxs-lookup"><span data-stu-id="1b5c8-109">Applications that use one or more <xref:System.Threading.WaitHandle> objects to block until an asynchronous operation is complete will typically call the **Begin***OperationName* method, perform any work that can be done without the results of the operation, and then block until the asynchronous operation(s) completes.</span></span> <span data-ttu-id="1b5c8-110">使用 <xref:System.IAsyncResult.AsyncWaitHandle%2A> 來呼叫其中一個 <xref:System.Threading.WaitHandle.WaitOne%2A> 方法，可在單一作業上封鎖應用程式。</span><span class="sxs-lookup"><span data-stu-id="1b5c8-110">An application can block on a single operation by calling one of the <xref:System.Threading.WaitHandle.WaitOne%2A> methods using the <xref:System.IAsyncResult.AsyncWaitHandle%2A>.</span></span> <span data-ttu-id="1b5c8-111">若要在等待一組非同步作業完成時封鎖，請將相關的 <xref:System.IAsyncResult.AsyncWaitHandle%2A> 物件儲存在陣列，並呼叫其中一個 <xref:System.Threading.WaitHandle.WaitAll%2A> 方法。</span><span class="sxs-lookup"><span data-stu-id="1b5c8-111">To block while waiting for a set of asynchronous operations to complete, store the associated <xref:System.IAsyncResult.AsyncWaitHandle%2A> objects in an array and call one of the <xref:System.Threading.WaitHandle.WaitAll%2A> methods.</span></span> <span data-ttu-id="1b5c8-112">若要在等待一組非同步作業的任何一個作業完成時封鎖，請將相關的 <xref:System.IAsyncResult.AsyncWaitHandle%2A> 物件儲存在陣列，並呼叫其中一個 <xref:System.Threading.WaitHandle.WaitAny%2A> 方法。</span><span class="sxs-lookup"><span data-stu-id="1b5c8-112">To block while waiting for any one of a set of asynchronous operations to complete, store the associated <xref:System.IAsyncResult.AsyncWaitHandle%2A> objects in an array and call one of the <xref:System.Threading.WaitHandle.WaitAny%2A> methods.</span></span>  
+ <span data-ttu-id="31c10-109">在非同步作業完成之前，使用一個或多個 <xref:System.Threading.WaitHandle> 物件封鎖的應用程式通常都會呼叫 *Begin***OperationName 方法來執行不需要作業結果即可完成的工作，然後在非同步作業完成之前維持封鎖。</span><span class="sxs-lookup"><span data-stu-id="31c10-109">Applications that use one or more <xref:System.Threading.WaitHandle> objects to block until an asynchronous operation is complete will typically call the **Begin***OperationName* method, perform any work that can be done without the results of the operation, and then block until the asynchronous operation(s) completes.</span></span> <span data-ttu-id="31c10-110">使用 <xref:System.IAsyncResult.AsyncWaitHandle%2A> 來呼叫其中一個 <xref:System.Threading.WaitHandle.WaitOne%2A> 方法，可在單一作業上封鎖應用程式。</span><span class="sxs-lookup"><span data-stu-id="31c10-110">An application can block on a single operation by calling one of the <xref:System.Threading.WaitHandle.WaitOne%2A> methods using the <xref:System.IAsyncResult.AsyncWaitHandle%2A>.</span></span> <span data-ttu-id="31c10-111">若要在等待一組非同步作業完成時封鎖，請將相關的 <xref:System.IAsyncResult.AsyncWaitHandle%2A> 物件儲存在陣列，並呼叫其中一個 <xref:System.Threading.WaitHandle.WaitAll%2A> 方法。</span><span class="sxs-lookup"><span data-stu-id="31c10-111">To block while waiting for a set of asynchronous operations to complete, store the associated <xref:System.IAsyncResult.AsyncWaitHandle%2A> objects in an array and call one of the <xref:System.Threading.WaitHandle.WaitAll%2A> methods.</span></span> <span data-ttu-id="31c10-112">若要在等待一組非同步作業的任何一個作業完成時封鎖，請將相關的 <xref:System.IAsyncResult.AsyncWaitHandle%2A> 物件儲存在陣列，並呼叫其中一個 <xref:System.Threading.WaitHandle.WaitAny%2A> 方法。</span><span class="sxs-lookup"><span data-stu-id="31c10-112">To block while waiting for any one of a set of asynchronous operations to complete, store the associated <xref:System.IAsyncResult.AsyncWaitHandle%2A> objects in an array and call one of the <xref:System.Threading.WaitHandle.WaitAny%2A> methods.</span></span>  
   
-## <a name="example"></a><span data-ttu-id="1b5c8-113">範例</span><span class="sxs-lookup"><span data-stu-id="1b5c8-113">Example</span></span>  
- <span data-ttu-id="1b5c8-114">下列範例示範在 DNS 類別中使用非同步方法，以擷取使用者指定電腦的網域名稱系統資訊。</span><span class="sxs-lookup"><span data-stu-id="1b5c8-114">The following code example demonstrates using asynchronous methods in the DNS class to retrieve Domain Name System information for a user-specified computer.</span></span> <span data-ttu-id="1b5c8-115">此範例示範使用與非同步作業相關聯的 <xref:System.Threading.WaitHandle> 進行封鎖。</span><span class="sxs-lookup"><span data-stu-id="1b5c8-115">The example demonstrates blocking using the <xref:System.Threading.WaitHandle> associated with the asynchronous operation.</span></span> <span data-ttu-id="1b5c8-116">請注意，因為使用此方式時並不需要 <xref:System.Net.Dns.BeginGetHostByName%2A>`requestCallback` 與`stateObject` 參數，所以已為其傳遞 `null` (在 Visual Basic 中為 `Nothing`)。</span><span class="sxs-lookup"><span data-stu-id="1b5c8-116">Note that `null` (`Nothing` in Visual Basic) is passed for the <xref:System.Net.Dns.BeginGetHostByName%2A>`requestCallback` and `stateObject` parameters because these are not required when using this approach.</span></span>  
+## <a name="example"></a><span data-ttu-id="31c10-113">範例</span><span class="sxs-lookup"><span data-stu-id="31c10-113">Example</span></span>  
+ <span data-ttu-id="31c10-114">下列範例示範在 DNS 類別中使用非同步方法，以擷取使用者指定電腦的網域名稱系統資訊。</span><span class="sxs-lookup"><span data-stu-id="31c10-114">The following code example demonstrates using asynchronous methods in the DNS class to retrieve Domain Name System information for a user-specified computer.</span></span> <span data-ttu-id="31c10-115">此範例示範使用與非同步作業相關聯的 <xref:System.Threading.WaitHandle> 進行封鎖。</span><span class="sxs-lookup"><span data-stu-id="31c10-115">The example demonstrates blocking using the <xref:System.Threading.WaitHandle> associated with the asynchronous operation.</span></span> <span data-ttu-id="31c10-116">請注意，因為使用此方式時並不需要 <xref:System.Net.Dns.BeginGetHostByName%2A>`requestCallback` 與`stateObject` 參數，所以已為其傳遞 `null` (在 Visual Basic 中為 `Nothing`)。</span><span class="sxs-lookup"><span data-stu-id="31c10-116">Note that `null` (`Nothing` in Visual Basic) is passed for the <xref:System.Net.Dns.BeginGetHostByName%2A>`requestCallback` and `stateObject` parameters because these are not required when using this approach.</span></span>  
   
  [!code-csharp[AsyncDesignPattern#2](../../../samples/snippets/csharp/VS_Snippets_CLR/AsyncDesignPattern/CS/Async_EndBlockWait.cs#2)]
  [!code-vb[AsyncDesignPattern#2](../../../samples/snippets/visualbasic/VS_Snippets_CLR/AsyncDesignPattern/VB/Async_EndBlockWait.vb#2)]  
   
-## <a name="see-also"></a><span data-ttu-id="1b5c8-117">請參閱</span><span class="sxs-lookup"><span data-stu-id="1b5c8-117">See Also</span></span>  
- [<span data-ttu-id="1b5c8-118">事件架構非同步模式 (EAP)</span><span class="sxs-lookup"><span data-stu-id="1b5c8-118">Event-based Asynchronous Pattern (EAP)</span></span>](../../../docs/standard/asynchronous-programming-patterns/event-based-asynchronous-pattern-eap.md)  
- [<span data-ttu-id="1b5c8-119">事件架構非同步模式概觀</span><span class="sxs-lookup"><span data-stu-id="1b5c8-119">Event-based Asynchronous Pattern Overview</span></span>](../../../docs/standard/asynchronous-programming-patterns/event-based-asynchronous-pattern-overview.md)
+## <a name="see-also"></a><span data-ttu-id="31c10-117">另請參閱</span><span class="sxs-lookup"><span data-stu-id="31c10-117">See Also</span></span>  
+ [<span data-ttu-id="31c10-118">事件架構非同步模式 (EAP)</span><span class="sxs-lookup"><span data-stu-id="31c10-118">Event-based Asynchronous Pattern (EAP)</span></span>](../../../docs/standard/asynchronous-programming-patterns/event-based-asynchronous-pattern-eap.md)  
+ [<span data-ttu-id="31c10-119">事件架構非同步模式概觀</span><span class="sxs-lookup"><span data-stu-id="31c10-119">Event-based Asynchronous Pattern Overview</span></span>](../../../docs/standard/asynchronous-programming-patterns/event-based-asynchronous-pattern-overview.md)
