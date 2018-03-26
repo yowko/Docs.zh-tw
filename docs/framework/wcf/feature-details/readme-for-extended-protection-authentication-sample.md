@@ -1,19 +1,21 @@
 ---
-title: "延伸保護驗證之範例的讀我檔案"
-ms.custom: 
+title: 延伸保護驗證之範例的讀我檔案
+ms.custom: ''
 ms.date: 03/30/2017
 ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.technology: dotnet-clr
-ms.tgt_pltfrm: 
+ms.reviewer: ''
+ms.suite: ''
+ms.technology:
+- dotnet-clr
+ms.tgt_pltfrm: ''
 ms.topic: article
 ms.assetid: 80bf2e97-398d-4db5-9040-d96478a2ccab
-caps.latest.revision: "3"
+caps.latest.revision: ''
 author: BrucePerlerMS
 ms.author: bruceper
 manager: mbaldwin
-ms.workload: dotnet
+ms.workload:
+- dotnet
 ms.openlocfilehash: 78e787c129c0161e8730472124ee4162e2d1ba9d
 ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
@@ -38,7 +40,7 @@ ms.lasthandoff: 12/22/2017
   
 4.  這個範例需由用戶端與伺服器建立安全通道，所以必須有可從 Internet Information Services (IIS) 管理員進行安裝的伺服器憑證。  
   
-    1.  開啟 [IIS 管理員] -> [伺服器憑證] (位於功能檢視索引標籤)。  
+    1.  開啟 [IIS 管理員] -> [伺服器憑證] \(位於功能檢視索引標籤)。  
   
     2.  為了測試這個範例，您可以建立自我簽署憑證  (若不希望 Internet Explorer 出現憑證可能不安全的提示，可將此憑證安裝到 [受信任的根憑證授權單位] 存放區)。  
   

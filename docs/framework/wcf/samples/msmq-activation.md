@@ -1,16 +1,16 @@
 ---
-title: "MSMQ 啟用"
-ms.custom: 
+title: MSMQ 啟用
+ms.custom: ''
 ms.date: 03/30/2017
 ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
+ms.reviewer: ''
+ms.suite: ''
 ms.technology:
 - dotnet-clr
-ms.tgt_pltfrm: 
+ms.tgt_pltfrm: ''
 ms.topic: article
 ms.assetid: e3834149-7b8c-4a54-806b-b4296720f31d
-caps.latest.revision: 
+caps.latest.revision: ''
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
@@ -33,7 +33,7 @@ ms.lasthandoff: 03/19/2018
 >   
 >  \<InstallDrive>:\WF_WCF_Samples  
 >   
->  如果此目錄不存在，請移至[!INCLUDE[indigo1](../../../../includes/indigo1-md.md)]超連結"http://go.microsoft.com/fwlink/?LinkId=150780"\t"_blank"和[!INCLUDE[wf](../../../../includes/wf-md.md)]範例[!INCLUDE[netfx40_long](../../../../includes/netfx40-long-md.md)]以下載所有[!INCLUDE[indigo2](../../../../includes/indigo2-md.md)]和[!INCLUDE[wf1](../../../../includes/wf1-md.md)]範例。 此範例位於下列目錄。  
+>  如果此目錄不存在，請移至[!INCLUDE[indigo1](../../../../includes/indigo1-md.md)]超連結 "http://go.microsoft.com/fwlink/?LinkId=150780" \t"_blank"和[!INCLUDE[wf](../../../../includes/wf-md.md)]範例[!INCLUDE[netfx40_long](../../../../includes/netfx40-long-md.md)]以下載所有[!INCLUDE[indigo2](../../../../includes/indigo2-md.md)]和[!INCLUDE[wf1](../../../../includes/wf1-md.md)]範例。 此範例位於下列目錄。  
 >   
 >  \<InstallDrive>:\Samples\WCFWFCardSpace\WCF\Basic\Services\Hosting\WASHost\MsmqActivation.  
   

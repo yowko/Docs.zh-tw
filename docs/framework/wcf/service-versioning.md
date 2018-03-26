@@ -1,16 +1,16 @@
 ---
-title: "服務版本控制"
-ms.custom: 
+title: 服務版本控制
+ms.custom: ''
 ms.date: 03/30/2017
 ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
+ms.reviewer: ''
+ms.suite: ''
 ms.technology:
 - dotnet-clr
-ms.tgt_pltfrm: 
+ms.tgt_pltfrm: ''
 ms.topic: article
 ms.assetid: 37575ead-d820-4a67-8059-da11a2ab48e2
-caps.latest.revision: 
+caps.latest.revision: ''
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
@@ -112,7 +112,7 @@ ms.lasthandoff: 03/19/2018
  服務合約版本控制與資料合約版本控制相似，同樣包含加入、變更和移除作業。  
   
 ### <a name="specifying-name-namespace-and-action"></a>指定名稱、命名空間和動作  
- 根據預設，服務合約的名稱即是介面的名稱。 預設命名空間是"http://tempuri.org"，而且每個作業的動作"http://tempuri.org/contractname/methodname"。 建議您明確指定名稱和服務合約的命名空間和動作的每個作業以避免使用"http://tempuri.org」，並防止服務合約中公開的介面和方法名稱。  
+ 根據預設，服務合約的名稱即是介面的名稱。 預設命名空間是 "http://tempuri.org"，而且每個作業的動作"http://tempuri.org/contractname/methodname"。 建議您明確指定名稱和服務合約的命名空間和動作的每個作業以避免使用 "http://tempuri.org”，並防止服務合約中公開的介面和方法名稱。  
   
 ### <a name="adding-parameters-and-operations"></a>加入參數和作業  
  加入服務所公開的服務作業為非中斷變更，因為現有用戶端不需考量這些新作業。  

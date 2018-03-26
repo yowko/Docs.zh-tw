@@ -1,21 +1,22 @@
 ---
-title: "HOW TO：建立活動"
-ms.custom: 
+title: HOW TO：建立活動
+ms.custom: ''
 ms.date: 03/30/2017
 ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.tgt_pltfrm: 
+ms.reviewer: ''
+ms.suite: ''
+ms.tgt_pltfrm: ''
 ms.topic: article
 dev_langs:
 - csharp
 - vb
 ms.assetid: c09b1e99-21b5-4d96-9c04-ec31db3f4436
-caps.latest.revision: "39"
+caps.latest.revision: ''
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.workload: dotnet
+ms.workload:
+- dotnet
 ms.openlocfilehash: 4a3b9698d6a060120addff52e6600916a2de19fc
 ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
@@ -41,7 +42,7 @@ ms.lasthandoff: 12/22/2017
     > [!TIP]
     >  如果沒有顯示 [ **方案總管** ] 視窗，請選取 [ **檢視** ] 功能表上的 [ **方案總管** ]。  
   
-5.  在 [ **已安裝** ] 節點中，選取 [ **Visual C#**]、[ **工作流程** ] (或 [ **Visual Basic**]、[ **工作流程**])。 請確認**.NET Framework 4.5**中選取[!INCLUDE[dnprdnshort](../../../includes/dnprdnshort-md.md)]版本 下拉式清單中。 選取**活動程式庫**從**工作流程**清單。 型別`NumberGuessWorkflowActivities`中**名稱**方塊，然後按一下**確定**。  
+5.  在 [ **已安裝** ] 節點中，選取 [ **Visual C#**]、[ **工作流程** ] \(或 [ **Visual Basic**]、[ **工作流程**])。 請確認**.NET Framework 4.5**中選取[!INCLUDE[dnprdnshort](../../../includes/dnprdnshort-md.md)]版本 下拉式清單中。 選取**活動程式庫**從**工作流程**清單。 型別`NumberGuessWorkflowActivities`中**名稱**方塊，然後按一下**確定**。  
   
     > [!NOTE]
     >  依據哪個程式語言設定為主要語言[!INCLUDE[vsprvs](../../../includes/vsprvs-md.md)]、 **Visual C#**或**Visual Basic**節點可能會顯示在**其他語言**節點**已安裝**節點。  
