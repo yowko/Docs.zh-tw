@@ -1,7 +1,7 @@
 ---
-title: "用戶端驗證 (展示層中的驗證)"
-description: "容器化 .NET 應用程式的 .NET 微服務架構 | 用戶端驗證 (展示層中的驗證)"
-keywords: "Docker, 微服務, ASP.NET, 容器"
+title: 用戶端驗證 (展示層中的驗證)
+description: 容器化 .NET 應用程式的 .NET 微服務架構 | 用戶端驗證 (展示層中的驗證)
+keywords: Docker, 微服務, ASP.NET, 容器
 author: CESARDELATORRE
 ms.author: wiwagn
 ms.date: 05/26/2017
@@ -12,10 +12,10 @@ ms.workload:
 - dotnet
 - dotnetcore
 ms.openlocfilehash: 273aa0a8ceb7f683999f1074faae0a6aa303f9be
-ms.sourcegitcommit: e7f04439d78909229506b56935a1105a4149ff3d
-ms.translationtype: HT
+ms.sourcegitcommit: c883637b41ee028786edceece4fa872939d2e64c
+ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 12/23/2017
+ms.lasthandoff: 03/26/2018
 ---
 # <a name="client-side-validation-validation-in-the-presentation-layers"></a>用戶端驗證 (展示層中的驗證)
 
@@ -35,23 +35,23 @@ ms.lasthandoff: 12/23/2017
 
 ### <a name="validation-in-xamarin-mobile-apps"></a>Xamarin 行動應用程式中的驗證
 
--   **Validate Text Input and Show Errors (驗證文字輸入並顯示錯誤)**
-    [*https://developer.xamarin.com/recipes/ios/standard\_controls/text\_field/validate\_input/*](https://developer.xamarin.com/recipes/ios/standard_controls/text_field/validate_input/)
+-   **驗證文字輸入和顯示錯誤**
+    [*https://developer.xamarin.com/recipes/ios/standard\_控制項] / [文字\_欄位/驗證\_輸入 /*](https://developer.xamarin.com/recipes/ios/standard_controls/text_field/validate_input/)
 
--   **Validation Callback (驗證回呼)**
+-   **驗證回呼**
     [*https://developer.xamarin.com/samples/xamarin-forms/XAML/ValidationCallback/*](https://developer.xamarin.com/samples/xamarin-forms/XAML/ValidationCallback/)
 
 ### <a name="validation-in-aspnet-core-apps"></a>ASP.NET Core 應用程式中的驗證
 
--   **Rick Anderson，新增驗證**
+-   **Rick Anderson，加入驗證**
     [*https://docs.microsoft.com/aspnet/core/tutorials/first-mvc-app/validation*](https://docs.microsoft.com/aspnet/core/tutorials/first-mvc-app/validation)
 
 ### <a name="validation-in-spa-web-apps-angular-2-typescript-javascript"></a>SPA Web 應用程式中的驗證 (Angular 2、TypeScript、JavaScript)
 
--   **Ado Kukic：Angular 2 Form Validation (Angular 2 表單驗證)** **
+-   **Ado Kukic：角度 2 表單驗證** **
     **[*https://scotch.io/tutorials/angular-2-form-validation*](https://scotch.io/tutorials/angular-2-form-validation)
 
--   **Form Validation (表單驗證)**
+-   **表單驗證**
     [*https://angular.io/docs/ts/latest/cookbook/form-validation.html*](https://angular.io/docs/ts/latest/cookbook/form-validation.html)
 
 -   **Validation (驗證)，** Breeze 文件，

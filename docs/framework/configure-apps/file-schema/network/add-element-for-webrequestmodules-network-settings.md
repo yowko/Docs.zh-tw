@@ -1,13 +1,13 @@
 ---
-title: "&lt;新增&gt;webRequestModules （網路設定） 的項目"
-ms.custom: 
+title: '&lt;新增&gt;webRequestModules （網路設定） 的項目'
+ms.custom: ''
 ms.date: 03/30/2017
 ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
+ms.reviewer: ''
+ms.suite: ''
 ms.technology:
 - dotnet-clr
-ms.tgt_pltfrm: 
+ms.tgt_pltfrm: ''
 ms.topic: article
 f1_keywords:
 - http://schemas.microsoft.com/.NetConfiguration/v2.0#configuration/system.net/webRequestModules/add
@@ -18,7 +18,7 @@ helpviewer_keywords:
 - add element, webRequestModules
 - <add> element, webRequestModules
 ms.assetid: 47ec4adc-f39f-4bcd-8680-1ec21fd26890
-caps.latest.revision: 
+caps.latest.revision: ''
 author: mcleblanc
 ms.author: markl
 manager: markl
@@ -71,7 +71,7 @@ ms.lasthandoff: 03/19/2018
   
  當符合 URI 的前置詞傳遞給建立 Web 要求模組<xref:System.Net.WebRequest.Create%2A?displayProperty=nameWithType>方法。  
   
- 值`prefix`屬性應該是有效的 URI-例如，「 http 」 的前置字元或"http://www.contoso.com"。  
+ 值`prefix`屬性應該是有效的 URI-例如，「 http 」 的前置字元或 "http://www.contoso.com"。  
   
  值`type`屬性應為有效型別名稱和對應的組件名稱，以逗號分隔。  
   

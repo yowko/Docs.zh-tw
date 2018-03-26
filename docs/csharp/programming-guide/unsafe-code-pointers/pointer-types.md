@@ -1,5 +1,5 @@
 ---
-title: "指標類型 (C# 程式設計手冊)"
+title: 指標類型 (C# 程式設計手冊)
 ms.date: 07/20/2015
 ms.prod: .net
 ms.technology:
@@ -9,14 +9,14 @@ helpviewer_keywords:
 - unsafe code [C#], pointers
 - pointers [C#]
 ms.assetid: 3319faf9-336d-4148-9af2-1da2579cdd1e
-caps.latest.revision: 
+caps.latest.revision: ''
 author: BillWagner
 ms.author: wiwagn
 ms.openlocfilehash: fe7b926bdf9f662d25f2fe960b51fc8254b7aa3a
-ms.sourcegitcommit: 83dd5ec003e788ccb3e33f3412a7af39ae347646
-ms.translationtype: HT
+ms.sourcegitcommit: c883637b41ee028786edceece4fa872939d2e64c
+ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 03/15/2018
+ms.lasthandoff: 03/26/2018
 ---
 # <a name="pointer-types-c-programming-guide"></a>指標類型 (C# 程式設計手冊)
 在 unsafe 內容中，類型有可能是指標類型、實值類型或參考類型。 指標類型宣告會使用下列其中一種格式：  
@@ -133,7 +133,7 @@ Console.ReadLine();
 ## <a name="c-language-specification"></a>C# 語言規格  
  [!INCLUDE[CSharplangspec](~/includes/csharplangspec-md.md)]  
   
-## <a name="see-also"></a>請參閱  
+## <a name="see-also"></a>另請參閱  
  [C# 程式設計指南](../../../csharp/programming-guide/index.md)  
  [Unsafe 程式碼和指標](../../../csharp/programming-guide/unsafe-code-pointers/index.md)  
  [指標轉換](../../../csharp/programming-guide/unsafe-code-pointers/pointer-conversions.md)  

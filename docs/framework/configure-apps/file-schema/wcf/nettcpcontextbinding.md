@@ -1,24 +1,26 @@
 ---
 title: '&lt;netTcpContextBinding&gt;'
-ms.custom: 
+ms.custom: ''
 ms.date: 03/30/2017
 ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.technology: dotnet-clr
-ms.tgt_pltfrm: 
+ms.reviewer: ''
+ms.suite: ''
+ms.technology:
+- dotnet-clr
+ms.tgt_pltfrm: ''
 ms.topic: article
 ms.assetid: 1d4715e1-5fff-4c3d-a226-18f21d0b30c4
-caps.latest.revision: "13"
+caps.latest.revision: ''
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.workload: dotnet
+ms.workload:
+- dotnet
 ms.openlocfilehash: 13c8474cacc0ca2f2cb03328517281e8a9f440a8
-ms.sourcegitcommit: c0dd436f6f8f44dc80dc43b07f6841a00b74b23f
+ms.sourcegitcommit: c883637b41ee028786edceece4fa872939d2e64c
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 01/19/2018
+ms.lasthandoff: 03/26/2018
 ---
 # <a name="ltnettcpcontextbindinggt"></a>&lt;netTcpContextBinding&gt;
 指定 <xref:System.ServiceModel.NetTcpBinding> 的內容，它會要求保護層級為簽署。 NetTcpContextBinding 的 contextExchangeMechanism 為 SOAPHeader。  
@@ -92,7 +94,7 @@ ms.lasthandoff: 01/19/2018
 |transactionProtocol|指定要搭配此繫結使用的交易通訊協定。 有效值為<br /><br /> -   OleTransactions<br />-   WSAtomicTransactionOctober2004<br /><br /> 預設值為 OleTransactions。 此屬性的型別為 <xref:System.ServiceModel.TransactionProtocol>。|  
 |transferMode|<xref:System.ServiceModel.TransferMode> 值，指定訊息要經過緩衝處理或資料流處理，或為要求或回應。|  
   
-### <a name="child-elements"></a>子元素  
+### <a name="child-elements"></a>子項目  
   
 |項目|描述|  
 |-------------|-----------------|  
@@ -106,7 +108,7 @@ ms.lasthandoff: 01/19/2018
 |-------------|-----------------|  
 |[\<bindings>](../../../../../docs/framework/configure-apps/file-schema/wcf/bindings.md)|這個項目會保存標準和自訂繫結的集合。|  
   
-## <a name="see-also"></a>請參閱  
+## <a name="see-also"></a>另請參閱  
  <xref:System.ServiceModel.NetTcpBinding>  
  <xref:System.ServiceModel.NetTcpContextBinding>  
  <xref:System.ServiceModel.Configuration.NetTcpContextBindingElement>  

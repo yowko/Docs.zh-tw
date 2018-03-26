@@ -1,24 +1,26 @@
 ---
-title: "訊息編碼"
-ms.custom: 
+title: 訊息編碼
+ms.custom: ''
 ms.date: 03/30/2017
 ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.technology: dotnet-clr
-ms.tgt_pltfrm: 
+ms.reviewer: ''
+ms.suite: ''
+ms.technology:
+- dotnet-clr
+ms.tgt_pltfrm: ''
 ms.topic: article
 ms.assetid: f30ee941-aca9-4c67-82a5-421568496f07
-caps.latest.revision: "7"
+caps.latest.revision: ''
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.workload: dotnet
+ms.workload:
+- dotnet
 ms.openlocfilehash: b3040a16b6d167c4f066b2ddbd0a542741f88d62
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.sourcegitcommit: c883637b41ee028786edceece4fa872939d2e64c
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 03/26/2018
 ---
 # <a name="message-encoding"></a>訊息編碼
 編碼是將一組 Unicode 字元轉換成位元組序列的處理程序。 解碼則是相反的處理序。 Windows Communication Foundation (WCF) 包含 SOAP 訊息的三種編碼類型：文字、二進位和訊息傳輸最佳化機制 (MTOM)。  
@@ -29,11 +31,11 @@ ms.lasthandoff: 12/22/2017
   
  `textMessageEncoding` 組態區段會指定文字編碼器，以用於建立網路上的文字訊息。 此編碼器產生的訊息適合 WS-* 型的互通性。 Web 服務或 Web 服務用戶端通常可以了解文字 XML。 不過，若要針對 XML 訊息進行編碼，將大型二進位資料區塊當做文字傳輸是效率最差的方法。  
   
-## <a name="see-also"></a>請參閱  
+## <a name="see-also"></a>另請參閱  
  <xref:System.ServiceModel.Channels.CustomBinding>  
  <xref:System.ServiceModel.Channels.MessageEncodingBindingElement>  
  [繫結](../../../../../docs/framework/wcf/bindings.md)  
  [擴充繫結](../../../../../docs/framework/wcf/extending/extending-bindings.md)  
  [自訂繫結](../../../../../docs/framework/wcf/extending/custom-bindings.md)  
- [\<customBinding >](../../../../../docs/framework/configure-apps/file-schema/wcf/custombinding.md)  
+ [\<customBinding>](../../../../../docs/framework/configure-apps/file-schema/wcf/custombinding.md)  
  [選擇訊息編碼器](../../../../../docs/framework/wcf/feature-details/choosing-a-message-encoder.md)

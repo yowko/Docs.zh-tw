@@ -1,19 +1,21 @@
 ---
-title: "評估使用 .NET Native 的啟動改善"
-ms.custom: 
+title: 評估使用 .NET Native 的啟動改善
+ms.custom: ''
 ms.date: 03/30/2017
 ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.technology: dotnet-clr
-ms.tgt_pltfrm: 
+ms.reviewer: ''
+ms.suite: ''
+ms.technology:
+- dotnet-clr
+ms.tgt_pltfrm: ''
 ms.topic: article
 ms.assetid: c4d25b24-9c1a-4b3e-9705-97ba0d6c0289
-caps.latest.revision: "7"
+caps.latest.revision: ''
 author: rpetrusha
 ms.author: ronpet
 manager: wpickett
-ms.workload: dotnet
+ms.workload:
+- dotnet
 ms.openlocfilehash: 03324850fbcb0264816b71cf8a8c6ad6a9688058
 ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
@@ -98,9 +100,9 @@ perfview -KernelEvents:Process -OnlyProviders:*MyCompany-MyApp collect outputFil
 ## <a name="displaying-the-events"></a>顯示事件  
  若要檢視已收集的事件，請使用 PerfView 來開啟您建立的 .etl 或 .etl.zip 檔案，然後選擇 [事件]。 ETW 將已經收集大量事件的相關資訊，包括來自其他處理序的事件。 若要專注您的調查，請在 [事件] 檢視中填寫下列文字方塊：  
   
--   在 [Process Filter] (處理序篩選) 方塊中，指定您的應用程式名稱 (不含 ".exe")。  
+-   在 [Process Filter] \(處理序篩選) 方塊中，指定您的應用程式名稱 (不含 ".exe")。  
   
--   在 [Event Types Filter] (事件類型篩選) 方塊中，指定 `Process/Start | MyCompany-MyApp`。 這會從 MyCompany-MyApp 和 Windows 核心/處理/開始事件設定事件的篩選。  
+-   在 [Event Types Filter] \(事件類型篩選) 方塊中，指定 `Process/Start | MyCompany-MyApp`。 這會從 MyCompany-MyApp 和 Windows 核心/處理/開始事件設定事件的篩選。  
   
  選取左窗格中列出的所有事件 (Ctrl-A)，然後選擇 **Enter** 鍵。 現在，您應該可以看到每個事件的時間戳記。 這些時間戳記相對於追蹤的開始，所以您必須處理序的開始時間減去每個事件的時間，以識別自啟動後所耗用的時間。 如果您使用 Ctrl+按一下的方式來選取兩個時間戳記，您會看到其之間的差異顯示在頁面底部的狀態列中。 這樣可以讓您很容易在顯示器中查看任何兩個事件之間的經歷時間 (包括處理開始)。 您可以開啟檢視的快顯功能表，並從一些有用的選項中選取，像是匯出至 CSV 檔案，或是開啟 Microsoft Excel 來儲存或處理資料。  
   

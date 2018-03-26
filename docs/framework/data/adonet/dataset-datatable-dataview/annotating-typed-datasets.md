@@ -1,27 +1,29 @@
 ---
-title: "註釋具類型資料集"
-ms.custom: 
+title: 註釋具類型資料集
+ms.custom: ''
 ms.date: 03/30/2017
 ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.technology: dotnet-ado
-ms.tgt_pltfrm: 
+ms.reviewer: ''
+ms.suite: ''
+ms.technology:
+- dotnet-ado
+ms.tgt_pltfrm: ''
 ms.topic: article
 dev_langs:
 - csharp
 - vb
 ms.assetid: f82aaa62-321e-4c8a-b51b-9d1114700170
-caps.latest.revision: "6"
+caps.latest.revision: ''
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.workload: dotnet
+ms.workload:
+- dotnet
 ms.openlocfilehash: cc09f3f9b43b70b7f9b302d7a9d75428b5a0e6c7
-ms.sourcegitcommit: ed26cfef4e18f6d93ab822d8c29f902cff3519d1
+ms.sourcegitcommit: c883637b41ee028786edceece4fa872939d2e64c
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 01/17/2018
+ms.lasthandoff: 03/26/2018
 ---
 # <a name="annotating-typed-datasets"></a>註釋具類型資料集
 註釋可讓您在無需修改基礎結構描述的情況下，修改具型別之 <xref:System.Data.DataSet> 中的項目名稱。 修改您的基礎結構描述中的項目名稱可能會造成具型別的**資料集**來執行不存在於資料來源，也會遺失的資料來源中存在的物件參考的物件參考。  
@@ -233,7 +235,7 @@ protected static void OnCustomerChanged(object sender, CustomerDataSet.CustomerC
     }  
 ```  
   
-## <a name="see-also"></a>請參閱  
+## <a name="see-also"></a>另請參閱  
  <xref:System.Data.DataColumnCollection>  
  <xref:System.Data.DataSet>  
  [具類型的 DataSet](../../../../../docs/framework/data/adonet/dataset-datatable-dataview/typed-datasets.md)  

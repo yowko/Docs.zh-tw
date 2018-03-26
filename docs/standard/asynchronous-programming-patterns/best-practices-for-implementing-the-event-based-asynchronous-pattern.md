@@ -1,12 +1,12 @@
 ---
-title: "實作事件架構非同步模式的最佳作法"
-ms.custom: 
+title: 實作事件架構非同步模式的最佳作法
+ms.custom: ''
 ms.date: 03/30/2017
 ms.prod: .net
-ms.reviewer: 
-ms.suite: 
+ms.reviewer: ''
+ms.suite: ''
 ms.technology: dotnet-standard
-ms.tgt_pltfrm: 
+ms.tgt_pltfrm: ''
 ms.topic: article
 helpviewer_keywords:
 - Event-based Asynchronous Pattern
@@ -18,7 +18,7 @@ helpviewer_keywords:
 - AsyncOperation class
 - AsyncCompletedEventArgs class
 ms.assetid: 4acd2094-4f46-4eff-9190-92d0d9ff47db
-caps.latest.revision: 
+caps.latest.revision: ''
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
@@ -26,10 +26,10 @@ ms.workload:
 - dotnet
 - dotnetcore
 ms.openlocfilehash: 910edb8c79518f63e8b881b8eaecd69060fb6711
-ms.sourcegitcommit: 957c696f25e39f923a827fc3ad5e8ab72768838c
-ms.translationtype: HT
+ms.sourcegitcommit: c883637b41ee028786edceece4fa872939d2e64c
+ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 01/13/2018
+ms.lasthandoff: 03/26/2018
 ---
 # <a name="best-practices-for-implementing-the-event-based-asynchronous-pattern"></a>實作事件架構非同步模式的最佳作法
 事件架構非同步模式提供有效率的方式，讓您運用熟悉的事件和委派語意，公開類別中的非同步行為。 若要實作事件架構非同步模式，您需要遵循一些特定的行為需求。 下列各節說明在實作遵循事件架構非同步模式的類別時，所應考量的需求和方針。  
@@ -155,7 +155,7 @@ private void Form1_MethodNameCompleted(object sender, MethodNameCompletedEventAr
   
 -   當您使用任何類型的多執行緒時，您很有可能會暴露在非常嚴重且複雜的錯誤下。 在實作任何使用多執行緒的解決方案之前，請參閱 [Managed 執行緒最佳做法](../../../docs/standard/threading/managed-threading-best-practices.md)。  
   
-## <a name="see-also"></a>請參閱  
+## <a name="see-also"></a>另請參閱  
  <xref:System.ComponentModel.AsyncOperation>  
  <xref:System.ComponentModel.AsyncOperationManager>  
  <xref:System.ComponentModel.AsyncCompletedEventArgs>  

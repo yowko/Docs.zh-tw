@@ -1,28 +1,28 @@
 ---
 title: '&lt;wsFederationHttpBinding&gt;'
-ms.custom: 
+ms.custom: ''
 ms.date: 03/30/2017
 ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
+ms.reviewer: ''
+ms.suite: ''
 ms.technology:
 - dotnet-clr
-ms.tgt_pltfrm: 
+ms.tgt_pltfrm: ''
 ms.topic: article
 helpviewer_keywords:
 - wsFederationBinding element
 ms.assetid: 9c3312b4-2137-4e71-bf3f-de1cf8e9be79
-caps.latest.revision: 
+caps.latest.revision: ''
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
 ms.workload:
 - dotnet
 ms.openlocfilehash: f5d4e55f7ad2d4a347d51c3cd79647c070c11e2d
-ms.sourcegitcommit: c0dd436f6f8f44dc80dc43b07f6841a00b74b23f
+ms.sourcegitcommit: c883637b41ee028786edceece4fa872939d2e64c
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 01/19/2018
+ms.lasthandoff: 03/26/2018
 ---
 # <a name="ltwsfederationhttpbindinggt"></a>&lt;wsFederationHttpBinding&gt;
 定義支援 WS-Federation 的繫結。  
@@ -135,7 +135,7 @@ wsFederationBinding 項目
 |transactionFlow|指定繫結是否支援流動 WS-Transactions 的布林值。 預設為 `false`。|  
 |useDefaultWebProxy|布林值，指定是否使用系統自動設定的 HTTP Proxy。 如果這個屬性為 `null`，則 Proxy 位址必須為 `true` (也就是不設定)。 預設值為 `true`。|  
   
-### <a name="child-elements"></a>子元素  
+### <a name="child-elements"></a>子項目  
   
 |項目|描述|  
 |-------------|-----------------|  
@@ -201,7 +201,7 @@ wsFederationBinding 項目
 </configuration>  
 ```  
   
-## <a name="see-also"></a>請參閱  
+## <a name="see-also"></a>另請參閱  
  <xref:System.ServiceModel.WSFederationHttpBinding>  
  <xref:System.ServiceModel.Configuration.WSFederationHttpBindingElement>  
  [如何：建立 WSFederationHttpBinding](../../../../../docs/framework/wcf/feature-details/how-to-create-a-wsfederationhttpbinding.md)  

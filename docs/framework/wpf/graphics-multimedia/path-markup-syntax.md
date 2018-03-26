@@ -1,12 +1,13 @@
 ---
-title: "路徑標記語法"
-ms.custom: 
+title: 路徑標記語法
+ms.custom: ''
 ms.date: 03/30/2017
 ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.technology: dotnet-wpf
-ms.tgt_pltfrm: 
+ms.reviewer: ''
+ms.suite: ''
+ms.technology:
+- dotnet-wpf
+ms.tgt_pltfrm: ''
 ms.topic: article
 helpviewer_keywords:
 - attribute usage in XAML [WPF]
@@ -14,16 +15,17 @@ helpviewer_keywords:
 - graphics [WPF], PathGeometry class
 - XAML [WPF], object element usage
 ms.assetid: b8586241-a02d-486e-9223-e1e98e047f41
-caps.latest.revision: "22"
+caps.latest.revision: ''
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.workload: dotnet
+ms.workload:
+- dotnet
 ms.openlocfilehash: 9cd8f9b14f114060ebec8e336c1212d61fa19c83
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.sourcegitcommit: c883637b41ee028786edceece4fa872939d2e64c
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 03/26/2018
 ---
 # <a name="path-markup-syntax"></a>路徑標記語法
 路徑中會討論[圖案和基本繪圖概觀 WPF 中](../../../../docs/framework/wpf/graphics-multimedia/shapes-and-basic-drawing-in-wpf-overview.md)和[幾何概觀](../../../../docs/framework/wpf/graphics-multimedia/geometry-overview.md)，不過，本主題說明的詳細資料指定路徑，您可以使用功能強大且複雜的迷你語言使用更簡潔的幾何[!INCLUDE[TLA#tla_xaml](../../../../includes/tlasharptla-xaml-md.md)]。  
@@ -34,7 +36,7 @@ ms.lasthandoff: 12/22/2017
   
 <a name="abouthisdocument"></a>   
 ## <a name="streamgeometry-and-pathfigurecollection-mini-languages"></a>StreamGeometry 和 PathFigureCollection 迷你語言  
- [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)]提供兩種類別可描述幾何路徑提供迷你語言：<xref:System.Windows.Media.StreamGeometry>和<xref:System.Windows.Media.PathFigureCollection>。  
+ [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] 提供兩種類別可描述幾何路徑提供迷你語言：<xref:System.Windows.Media.StreamGeometry>和<xref:System.Windows.Media.PathFigureCollection>。  
   
 -   您使用<xref:System.Windows.Media.StreamGeometry>迷你設定類型的屬性時的語言<xref:System.Windows.Media.Geometry>，例如<xref:System.Windows.UIElement.Clip%2A>屬性<xref:System.Windows.UIElement>或<xref:System.Windows.Shapes.Path.Data%2A>屬性<xref:System.Windows.Shapes.Path>項目。 下列範例會使用屬性語法建立<xref:System.Windows.Media.StreamGeometry>。  
   
@@ -58,17 +60,17 @@ ms.lasthandoff: 12/22/2017
   
 |StreamGeometry XAML 屬性使用方式|  
 |-----------------------------------------|  
-|`<`*物件**屬性* `="`[ `fillRule`] `figureDescription`[ `figureDescription`] *`" ... />`|  
+|`<` *物件**屬性* `="`[ `fillRule`] `figureDescription`[ `figureDescription`] * `" ... />`|  
   
  [!INCLUDE[TLA#tla_xaml](../../../../includes/tlasharptla-xaml-md.md)]屬性使用方式語法<xref:System.Windows.Media.PathFigureCollection>是一或多個圖說明所組成。  
   
 |PathFigureCollection XAML 屬性使用方式|  
 |-----------------------------------------------|  
-|`<`*物件**屬性* `="` `figureDescription`[ `figureDescription`] *`" ... />`|  
+|`<` *物件**屬性* `="` `figureDescription`[ `figureDescription`] * `" ... />`|  
   
 |詞彙|描述|  
 |----------|-----------------|  
-|*fillRule*|<xref:System.Windows.Media.FillRule?displayProperty=nameWithType><br /><br /> 指定是否<xref:System.Windows.Media.StreamGeometry>使用<xref:System.Windows.Media.FillRule.EvenOdd>或<xref:System.Windows.Media.FillRule.Nonzero> <xref:System.Windows.Media.PathGeometry.FillRule%2A>。<br /><br /> -   `F0`指定<xref:System.Windows.Media.FillRule.EvenOdd>填滿規則。<br />-   `F1`指定<xref:System.Windows.Media.FillRule.Nonzero>填滿規則。<br /><br /> 如果您省略此命令時，子路徑會使用預設行為，也就是<xref:System.Windows.Media.FillRule.EvenOdd>。 如果您指定此命令，您必須先放置它。|  
+|*fillRule*|<xref:System.Windows.Media.FillRule?displayProperty=nameWithType><br /><br /> 指定是否<xref:System.Windows.Media.StreamGeometry>使用<xref:System.Windows.Media.FillRule.EvenOdd>或<xref:System.Windows.Media.FillRule.Nonzero> <xref:System.Windows.Media.PathGeometry.FillRule%2A>。<br /><br /> -   `F0` 指定<xref:System.Windows.Media.FillRule.EvenOdd>填滿規則。<br />-   `F1` 指定<xref:System.Windows.Media.FillRule.Nonzero>填滿規則。<br /><br /> 如果您省略此命令時，子路徑會使用預設行為，也就是<xref:System.Windows.Media.FillRule.EvenOdd>。 如果您指定此命令，您必須先放置它。|  
 |*figureDescription*|由移動命令、繪製命令以及選擇性的關閉命令所組成的圖表。<br /><br /> `moveCommand` `drawCommands`  `[` `closeCommand` `]`|  
 |*moveCommand*|指定圖表起點的移動命令。 請參閱[移動命令](#themovecommand)> 一節。|  
 |*drawCommands*|說明圖表內容的一或多個繪製命令。 請參閱[繪製命令](#drawcommands)> 一節。|  
@@ -95,7 +97,7 @@ ms.lasthandoff: 12/22/2017
  透過使用大寫或小寫字母來輸入每個命令：大寫字母表示絕對值，而小寫字母表示相對值：該區段的控制點相對於先前範例的結束點。 依序輸入時的相同類型的多個命令，您可以省略的重複項目;例如，`L 100,200 300,400`相當於`L 100,200 L 300,400`。 下表描述**移動**和**繪製**命令。  
   
 ### <a name="line-command"></a>線條命令  
- 在目前的點和指定的點之間建立直線。 `l 20 30`和`L 20,30`是有效的範例**列**命令。  
+ 在目前的點和指定的點之間建立直線。 `l 20 30` 和`L 20,30`是有效的範例**列**命令。  
   
 |語法|  
 |------------|  
@@ -235,7 +237,7 @@ ms.lasthandoff: 12/22/2017
   
  您也可以使用科學記號標記法。 例如，`+1.e17`是有效的值。  
   
-## <a name="see-also"></a>請參閱  
+## <a name="see-also"></a>另請參閱  
  <xref:System.Windows.Shapes.Path>  
  <xref:System.Windows.Media.StreamGeometry>  
  <xref:System.Windows.Media.PathGeometry>  

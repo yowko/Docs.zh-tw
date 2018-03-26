@@ -1,24 +1,26 @@
 ---
 title: '&lt;netNamedPipeBinding&gt;'
-ms.custom: 
+ms.custom: ''
 ms.date: 03/30/2017
 ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.technology: dotnet-clr
-ms.tgt_pltfrm: 
+ms.reviewer: ''
+ms.suite: ''
+ms.technology:
+- dotnet-clr
+ms.tgt_pltfrm: ''
 ms.topic: article
 ms.assetid: 00a8580b-face-47a4-838d-b9fed48e72df
-caps.latest.revision: "29"
+caps.latest.revision: ''
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.workload: dotnet
+ms.workload:
+- dotnet
 ms.openlocfilehash: dd11c1381de3d2c965e884ee2d43b8a0c08063bb
-ms.sourcegitcommit: c0dd436f6f8f44dc80dc43b07f6841a00b74b23f
+ms.sourcegitcommit: c883637b41ee028786edceece4fa872939d2e64c
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 01/19/2018
+ms.lasthandoff: 03/26/2018
 ---
 # <a name="ltnetnamedpipebindinggt"></a>&lt;netNamedPipeBinding&gt;
 為電腦上跨處理序通訊定義安全、可靠且經過最佳化的繫結。 根據預設，這個繫結會產生一個執行階段通訊堆疊，並且具備 WS-ReliableMessaging (提供可靠性)、傳輸安全性、具名管道 (用於訊息傳遞) 和二進位訊息編碼。  
@@ -73,7 +75,7 @@ ms.lasthandoff: 01/19/2018
 |transactionProtocol|指定要搭配此繫結使用的交易通訊協定。 有效值為<br /><br /> -   OleTransactions<br />-   WS-AtomicTransactionOctober2004<br /><br /> 預設值為 OleTransactions。 此屬性的型別為 <xref:System.ServiceModel.TransactionProtocol>。|  
 |transferMode|<xref:System.ServiceModel.TransferMode> 值，指定訊息要經過緩衝處理或資料流處理，或為要求或回應。|  
   
-### <a name="child-elements"></a>子元素  
+### <a name="child-elements"></a>子項目  
   
 |項目|描述|  
 |-------------|-----------------|  
@@ -153,7 +155,7 @@ ms.lasthandoff: 01/19/2018
 </configuration>  
 ```  
   
-## <a name="see-also"></a>請參閱  
+## <a name="see-also"></a>另請參閱  
  <xref:System.ServiceModel.Configuration.NetNamedPipeBindingElement>  
  <xref:System.ServiceModel.NetNamedPipeBinding>  
  [\<binding>](../../../../../docs/framework/misc/binding.md)  

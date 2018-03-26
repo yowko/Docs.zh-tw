@@ -1,12 +1,12 @@
 ---
-title: "使用接續工作鏈結工作"
-ms.custom: 
+title: 使用接續工作鏈結工作
+ms.custom: ''
 ms.date: 03/30/2017
 ms.prod: .net
-ms.reviewer: 
-ms.suite: 
+ms.reviewer: ''
+ms.suite: ''
 ms.technology: dotnet-standard
-ms.tgt_pltfrm: 
+ms.tgt_pltfrm: ''
 ms.topic: article
 dev_langs:
 - csharp
@@ -14,7 +14,7 @@ dev_langs:
 helpviewer_keywords:
 - tasks, continuations
 ms.assetid: 0b45e9a2-de28-46ce-8212-1817280ed42d
-caps.latest.revision: 
+caps.latest.revision: ''
 author: rpetrusha
 ms.author: ronpet
 manager: wpickett
@@ -22,10 +22,10 @@ ms.workload:
 - dotnet
 - dotnetcore
 ms.openlocfilehash: b8e21c338648d5925c8576f76dae3aae43a9ca0d
-ms.sourcegitcommit: c0dd436f6f8f44dc80dc43b07f6841a00b74b23f
-ms.translationtype: HT
+ms.sourcegitcommit: c883637b41ee028786edceece4fa872939d2e64c
+ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 01/19/2018
+ms.lasthandoff: 03/26/2018
 ---
 # <a name="chaining-tasks-by-using-continuation-tasks"></a>使用接續工作鏈結工作
 在非同步程式設計中，非同步作業完成時叫用第二個作業，並將資料傳遞給它，是非常普遍的。 傳統上，這項作業使用回呼方法完成。 在工作平行程式庫中，由 *「接續工作」*(continuation task) 提供相同的功能。 接續工作 (也只稱為接續) 是另一項稱為 *「前項」*(antecedent) 的工作所叫用的非同步工作，此時會完成前項。  
@@ -159,5 +159,5 @@ ms.lasthandoff: 01/19/2018
   
 -   如果接續是使用 <xref:System.Threading.Tasks.TaskContinuationOptions.AttachedToParent?displayProperty=nameWithType> 選項建立的附加子工作，則其父代會將例外狀況傳播回到呼叫的執行緒，如同任何附加之子系的情況。 如需詳細資訊，請參閱[附加與中斷連結的子工作](../../../docs/standard/parallel-programming/attached-and-detached-child-tasks.md)。  
   
-## <a name="see-also"></a>請參閱  
+## <a name="see-also"></a>另請參閱  
  [工作平行程式庫 (TPL)](../../../docs/standard/parallel-programming/task-parallel-library-tpl.md)

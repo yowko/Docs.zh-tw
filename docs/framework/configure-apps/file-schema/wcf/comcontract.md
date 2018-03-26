@@ -1,16 +1,16 @@
 ---
 title: '&lt;comContract&gt;'
-ms.custom: 
+ms.custom: ''
 ms.date: 03/30/2017
 ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
+ms.reviewer: ''
+ms.suite: ''
 ms.technology:
 - dotnet-clr
-ms.tgt_pltfrm: 
+ms.tgt_pltfrm: ''
 ms.topic: article
 ms.assetid: 3f8e1c0c-cfdf-4c79-ac65-c64e9323a51c
-caps.latest.revision: 
+caps.latest.revision: ''
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
@@ -83,7 +83,7 @@ ms.lasthandoff: 03/19/2018
 |comContracts|包含 `comContract` 項目的集合。|  
   
 ## <a name="remarks"></a>備註  
- COM + 整合服務合約會目前限制為 「http://tempuri.org"命名空間，而合約名稱衍生自支援的 COM 介面。 然而，您可以使用 `comContracts` 區段，以及組態檔中的 `comContract` 項目，來指定替代項目。 例如，您可以使用下列組態來指定要包含的命名空間、合約名稱、使用者定義型別，以及服務合約的其他設定。  
+ COM + 整合服務合約會目前限制為 "http://tempuri.org" 命名空間，而合約名稱衍生自支援的 COM 介面。 然而，您可以使用 `comContracts` 區段，以及組態檔中的 `comContract` 項目，來指定替代項目。 例如，您可以使用下列組態來指定要包含的命名空間、合約名稱、使用者定義型別，以及服務合約的其他設定。  
   
 ```xml  
 <comContracts>  

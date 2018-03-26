@@ -1,19 +1,21 @@
 ---
-title: "如何：使用表單型驗證建置宣告感知的 ASP.NET 應用程式"
-ms.custom: 
+title: 如何：使用表單型驗證建置宣告感知的 ASP.NET 應用程式
+ms.custom: ''
 ms.date: 03/30/2017
 ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.technology: dotnet-clr
-ms.tgt_pltfrm: 
+ms.reviewer: ''
+ms.suite: ''
+ms.technology:
+- dotnet-clr
+ms.tgt_pltfrm: ''
 ms.topic: article
 ms.assetid: 98a3e029-1a9b-4e0c-b5d0-29d3f23f5b15
-caps.latest.revision: "6"
+caps.latest.revision: ''
 author: BrucePerlerMS
 ms.author: bruceper
 manager: mbaldwin
-ms.workload: dotnet
+ms.workload:
+- dotnet
 ms.openlocfilehash: f4977a40d440ca45a3130fb1b06e0b286a2ab2f6
 ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
@@ -136,4 +138,4 @@ ms.lasthandoff: 12/22/2017
   
 2.  在 [註冊] 頁面上，建立使用者帳戶，然後按一下 [註冊]。 將使用表單驗證建立您的帳戶，並自動將您登入。  
   
-3.  將您重新導向至首頁之後，應該會看到 [Your Claims] (您的宣告) 標題下方有一個資料表，其中包含有關您帳戶的 **Issuer**、**OriginalIssuer**、**Type**、**Value** 和 **ValueType** 宣告資訊。
+3.  將您重新導向至首頁之後，應該會看到 [Your Claims] \(您的宣告) 標題下方有一個資料表，其中包含有關您帳戶的 **Issuer**、**OriginalIssuer**、**Type**、**Value** 和 **ValueType** 宣告資訊。

@@ -1,28 +1,30 @@
 ---
-title: "使用 Windows Form DataGridView 控制項中用於新增資料錄的資料列"
-ms.custom: 
+title: 使用 Windows Form DataGridView 控制項中用於新增資料錄的資料列
+ms.custom: ''
 ms.date: 03/30/2017
 ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.technology: dotnet-winforms
-ms.tgt_pltfrm: 
+ms.reviewer: ''
+ms.suite: ''
+ms.technology:
+- dotnet-winforms
+ms.tgt_pltfrm: ''
 ms.topic: article
 helpviewer_keywords:
 - DataGridView control [Windows Forms], adding rows for new records
 - rows [Windows Forms], new records
 - DataGridView control [Windows Forms], data entry
 ms.assetid: 6110f1ea-9794-442c-a98a-f104a1feeaf4
-caps.latest.revision: "14"
+caps.latest.revision: ''
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.workload: dotnet
+ms.workload:
+- dotnet
 ms.openlocfilehash: e349a33c90d08606da09ebdf32de6dedb8d6a52c
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.sourcegitcommit: c883637b41ee028786edceece4fa872939d2e64c
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 03/26/2018
 ---
 # <a name="using-the-row-for-new-records-in-the-windows-forms-datagridview-control"></a>使用 Windows Form DataGridView 控制項中用於新增資料錄的資料列
 當您使用<xref:System.Windows.Forms.DataGridView>進行編輯您的應用程式中的資料，您通常想要讓使用者能夠將新的資料列加入至資料存放區。 <xref:System.Windows.Forms.DataGridView>控制項支援藉由提供一個資料列給新的記錄，這一律會顯示為最後一個資料列的這項功能。 它會標示有星號 （*） 符號，其資料列行首。 下列各節會討論一些程式與資料列的新記錄啟用時，您應該考慮的事項。  
@@ -68,7 +70,7 @@ ms.lasthandoff: 12/22/2017
 ## <a name="virtual-mode"></a>虛擬模式  
  如果您實作虛擬模式時，您必須為新記錄的資料列中的資料模型和何時要復原的資料列加入需要時加以追蹤。 確切實作這項功能的實作而定的資料模型和交易語意，例如，認可範圍是否在資料列層級。 如需詳細資訊，請參閱[Windows Form DataGridView 控制項中的虛擬模式](../../../../docs/framework/winforms/controls/virtual-mode-in-the-windows-forms-datagridview-control.md)。  
   
-## <a name="see-also"></a>請參閱  
+## <a name="see-also"></a>另請參閱  
  <xref:System.Windows.Forms.DataGridView>  
  <xref:System.Windows.Forms.DataGridView.DefaultValuesNeeded?displayProperty=nameWithType>  
  [Windows Forms DataGridView 控制項中的資料輸入](../../../../docs/framework/winforms/controls/data-entry-in-the-windows-forms-datagridview-control.md)  

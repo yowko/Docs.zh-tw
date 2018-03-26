@@ -1,12 +1,13 @@
 ---
-title: "資料合約中的集合型別"
-ms.custom: 
+title: 資料合約中的集合型別
+ms.custom: ''
 ms.date: 03/30/2017
 ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.technology: dotnet-clr
-ms.tgt_pltfrm: 
+ms.reviewer: ''
+ms.suite: ''
+ms.technology:
+- dotnet-clr
+ms.tgt_pltfrm: ''
 ms.topic: article
 dev_langs:
 - csharp
@@ -16,16 +17,17 @@ helpviewer_keywords:
 - data contracts [WCF], collection types
 - collection types [WCF]
 ms.assetid: 9b45b28e-0a82-4ea3-8c33-ec0094aff9d5
-caps.latest.revision: "19"
+caps.latest.revision: ''
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.workload: dotnet
+ms.workload:
+- dotnet
 ms.openlocfilehash: e74bd7d90d5653890fd5cf48e76c81d0227c6172
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.sourcegitcommit: c883637b41ee028786edceece4fa872939d2e64c
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 03/26/2018
 ---
 # <a name="collection-types-in-data-contracts"></a>資料合約中的集合型別
 「 *集合* 」(Collection) 是特定型別之項目的清單。 在 [!INCLUDE[dnprdnshort](../../../../includes/dnprdnshort-md.md)]中，可以使用陣列或其他多種型別 (泛型清單、泛型 <xref:System.ComponentModel.BindingList%601>, <xref:System.Collections.Specialized.StringCollection>或 <xref:System.Collections.ArrayList>) 來表示這類清單。 例如，集合可能含有特定「客戶」的地址清單。 不論實際型別為何，這些集合統稱為「 *清單集合*」(List Collection)。  
@@ -38,7 +40,7 @@ ms.lasthandoff: 12/22/2017
   
  關於集合型別的其他需求，例如包含稱為 `Add` 的方法和預設建構函式 (Constructor)，都會在下列各節中詳細討論。 這樣便可確保集合型別能夠序列化與還原序列化。 這表示不直接支援某些集合，例如泛型 <xref:System.Collections.ObjectModel.ReadOnlyCollection%601> (因為沒有預設建構函式)。 不過，如需規避這些限制的詳細資訊，請參閱本主題稍後的「使用集合介面型別和唯讀集合」一節。  
   
- 包含在集合中的型別必須是資料合約類型，否則必須是可序列化的型別。 [!INCLUDE[crdefault](../../../../includes/crdefault-md.md)][資料合約序列化程式所支援的型別](../../../../docs/framework/wcf/feature-details/types-supported-by-the-data-contract-serializer.md)。  
+ 包含在集合中的型別必須是資料合約類型，否則必須是可序列化的型別。 [!INCLUDE[crdefault](../../../../includes/crdefault-md.md)] [資料合約序列化程式所支援的型別](../../../../docs/framework/wcf/feature-details/types-supported-by-the-data-contract-serializer.md)。  
   
  [!INCLUDE[crabout](../../../../includes/crabout-md.md)] 被視為有效集合的條件以及如何序列化集合的詳細資訊，請參閱本主題「進階集合規則」一節中有關序列化集合的資訊。  
   
@@ -298,8 +300,8 @@ svcutil.exe MyService.wsdl MyServiceSchema.xsd /r:C:\full_path_to_system_dll\Sys
 |參考型別|由參考型別實作的介面|範例|型別的處理方式|  
 |---------------------|----------------------------------------------|-------------|---------------------|  
 |非泛型或封閉式泛型 (任何參數數目)|<xref:System.Collections.IDictionary>|`MyType : IDictionary`<br /><br /> 或<br /><br /> `MyType<T> : IDictionary` 其中 T=`int`|封閉式泛型 `IDictionary<object,object>`|  
-|封閉式泛型 (任何參數數目)|<xref:System.Collections.Generic.IDictionary%602>，封閉式|`MyType<T> : IDictionary<string, bool>`其中 T =`int`|封閉式泛型 (例如，`IDIctionary<string,bool>`)|  
-|封閉式泛型 (任何參數數目)|泛型 <xref:System.Collections.Generic.IDictionary%602>，其中一個索引鍵或值屬封閉式，另一個則為開放式並使用型別的一個參數|`MyType<T,U,V> : IDictionary<string,V>`其中 T =`int`，U =`float`，V =`bool`<br /><br /> 或<br /><br /> `MyType<Z> : IDictionary<Z,bool>`其中 Z =`string`|封閉式泛型 (例如，`IDictionary<string,bool>`)|  
+|封閉式泛型 (任何參數數目)|<xref:System.Collections.Generic.IDictionary%602>，封閉式|`MyType<T> : IDictionary<string, bool>` 其中 T =`int`|封閉式泛型 (例如，`IDIctionary<string,bool>`)|  
+|封閉式泛型 (任何參數數目)|泛型 <xref:System.Collections.Generic.IDictionary%602>，其中一個索引鍵或值屬封閉式，另一個則為開放式並使用型別的一個參數|`MyType<T,U,V> : IDictionary<string,V>` 其中 T =`int`，U =`float`，V =`bool`<br /><br /> 或<br /><br /> `MyType<Z> : IDictionary<Z,bool>` 其中 Z =`string`|封閉式泛型 (例如，`IDictionary<string,bool>`)|  
 |封閉式泛型 (任何參數數目)|泛型 <xref:System.Collections.Generic.IDictionary%602>，索引鍵與值都屬開放式，而且每一個都會使用型別的一個參數|`MyType<T,U,V> : IDictionary<V,U>`，其中 T=`int`，U=`bool`，V=`string`|封閉式泛型 (例如，`IDictionary<string,bool>`)|  
 |開放式泛型 (兩個參數)|泛型 <xref:System.Collections.Generic.IDictionary%602>，開放式，依照型別之泛型參數的出現順序來同時使用這兩個參數|`MyType<K,V> : IDictionary<K,V>`，K 與 V 都屬開放式|開放式泛型 (例如，`IDictionary<K,V>`)|  
   
@@ -353,7 +355,7 @@ svcutil.exe MyService.wsdl MyServiceSchema.xsd /r:C:\full_path_to_system_dll\Sys
 ### <a name="collection-naming"></a>集合命名  
  下面是集合命名規則的清單：  
   
--   除非已使用 Namespace 覆寫，否則所有字典集合資料合約以及包含基本型別之清單集合資料合約的預設命名空間，都會是 http://schemas.microsoft.com/2003/10/Serialization/Arrays。 對應至內建 XSD 型別，以及 `char`、 `Timespan`與 `Guid` 型別的型別，都會因此目的而被視為基本型別。  
+-   所有字典集合資料合約，以及包含基本型別，清單集合資料合約的預設命名空間是http://schemas.microsoft.com/2003/10/Serialization/Arrays除非使用 Namespace 覆寫。 對應至內建 XSD 型別，以及 `char`、 `Timespan`與 `Guid` 型別的型別，都會因此目的而被視為基本型別。  
   
 -   除非已使用 Namespace 覆寫，否則包含非基本型別之集合型別的預設命名空間，就是集合中所包含之型別的資料合約命名空間。  
   
@@ -406,5 +408,5 @@ svcutil.exe MyService.wsdl MyServiceSchema.xsd /r:C:\full_path_to_system_dll\Sys
 ## <a name="collections-and-object-reference-preservation"></a>集合與物件參考保留  
  當序列化程式在保留物件參考的模式下運作時，物件參考保留也會套用到集合。 具體來說，就是整個集合與集合中所包含的個別項目都會保留其物件身分識別。 若是字典，則會針對索引鍵/值組物件以及個別的索引鍵和值物件保留物件身分識別。  
   
-## <a name="see-also"></a>請參閱  
+## <a name="see-also"></a>另請參閱  
  <xref:System.Runtime.Serialization.CollectionDataContractAttribute>

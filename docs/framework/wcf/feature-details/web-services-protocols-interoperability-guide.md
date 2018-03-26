@@ -1,24 +1,26 @@
 ---
-title: "Web 服務通訊協定互通性手冊"
-ms.custom: 
+title: Web 服務通訊協定互通性手冊
+ms.custom: ''
 ms.date: 03/30/2017
 ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.technology: dotnet-clr
-ms.tgt_pltfrm: 
+ms.reviewer: ''
+ms.suite: ''
+ms.technology:
+- dotnet-clr
+ms.tgt_pltfrm: ''
 ms.topic: article
 ms.assetid: f2981678-ebdb-433d-899b-467f7df95fb2
-caps.latest.revision: "20"
+caps.latest.revision: ''
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.workload: dotnet
+ms.workload:
+- dotnet
 ms.openlocfilehash: 6b962452b6127d259733418969f1fb7b5036b1e5
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.sourcegitcommit: c883637b41ee028786edceece4fa872939d2e64c
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 03/26/2018
 ---
 # <a name="web-services-protocols-interoperability-guide"></a>Web 服務通訊協定互通性手冊
 [!INCLUDE[indigo1](../../../../includes/indigo1-md.md)] 會實作一些 Web 服務通訊協定。 許多這些通訊協定包含實作者應自行決定的一些選項和擴充點。 本主題提供 [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] 所實作的 Web 服務通訊協定清單。 本節中的其他主題則會提供每個受支援通訊協定的實作詳細資訊。  
@@ -26,7 +28,7 @@ ms.lasthandoff: 12/22/2017
 ## <a name="web-services-protocols-implemented-by-wcf"></a>WCF 實作的 Web 服務通訊協定  
  [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] 透過通道支援 Web 服務 (WS) 基礎結構通訊協定，並透過合約功能支援 Web 服務應用程式通訊協定。 應用程式通訊協定的互通性是透過 XML 結構描述語言 1.0 (XSD) 和 Web 服務描述語言 (WSDL) 1.1 來達成。  
   
- 基礎結構通訊協定互通性是由 WS-* 規格所提供。 [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)]通道會支援一些 WS-\*基礎結構通訊協定。 [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] 通道是使用繫結元素來設定。 下表包含 WS-的完整清單\*實作不同的基礎結構通訊協定[!INCLUDE[indigo2](../../../../includes/indigo2-md.md)]繫結項目。  
+ 基礎結構通訊協定互通性是由 WS-* 規格所提供。 [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] 通道會支援一些 WS-\*基礎結構通訊協定。 [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] 通道是使用繫結元素來設定。 下表包含 WS-的完整清單\*實作不同的基礎結構通訊協定[!INCLUDE[indigo2](../../../../includes/indigo2-md.md)]繫結項目。  
   
  <xref:System.ServiceModel.Channels.HttpTransportBindingElement> 支援下表中的規格。  
   
@@ -93,13 +95,13 @@ ms.lasthandoff: 12/22/2017
   
 -   [WSDL 1.1](http://go.microsoft.com/fwlink/?LinkId=96160)  
   
--   [Ws-policy 1.2](http://go.microsoft.com/fwlink/?LinkId=96705)  
+-   [WS-Policy 1.2](http://go.microsoft.com/fwlink/?LinkId=96705)  
   
 -   [Ws-policy 1.5](http://go.microsoft.com/fwlink/?LinkId=96706)  
   
--   [WS-POLICY 1.2 附件](http://go.microsoft.com/fwlink/?LinkId=96707)  
+-   [WS-PolicyAttachment 1.2](http://go.microsoft.com/fwlink/?LinkId=96707)  
   
--   [Ws-metadataexchange 1.1](http://go.microsoft.com/fwlink/?LinkId=94868)  
+-   [WS-MetadataExchange 1.1](http://go.microsoft.com/fwlink/?LinkId=94868)  
   
 -   [Ws-transfer Get 擷取中繼資料](http://go.microsoft.com/fwlink/?LinkId=96708)  
   
@@ -111,7 +113,7 @@ ms.lasthandoff: 12/22/2017
   
 -   [基本的安全性設定檔 1.0 工作草稿](http://go.microsoft.com/fwlink/?LinkId=96711)  
   
-## <a name="see-also"></a>請參閱  
+## <a name="see-also"></a>另請參閱  
  [系統提供的互通性繫結所支援的 Web 服務通訊協定](../../../../docs/framework/wcf/feature-details/web-services-protocols-supported-by-system-provided-interoperability-bindings.md)  
  [訊息通訊協定](../../../../docs/framework/wcf/feature-details/messaging-protocols.md)  
  [資料合約結構描述參考](../../../../docs/framework/wcf/feature-details/data-contract-schema-reference.md)  

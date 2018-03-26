@@ -1,12 +1,12 @@
 ---
-title: "實作事件架構非同步模式"
-ms.custom: 
+title: 實作事件架構非同步模式
+ms.custom: ''
 ms.date: 03/30/2017
 ms.prod: .net
-ms.reviewer: 
-ms.suite: 
+ms.reviewer: ''
+ms.suite: ''
 ms.technology: dotnet-standard
-ms.tgt_pltfrm: 
+ms.tgt_pltfrm: ''
 ms.topic: article
 dev_langs:
 - csharp
@@ -23,7 +23,7 @@ helpviewer_keywords:
 - AsyncOperation class
 - AsyncCompletedEventArgs class
 ms.assetid: 43402d19-8d30-426d-8785-1a4478233bfa
-caps.latest.revision: 
+caps.latest.revision: ''
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
@@ -31,10 +31,10 @@ ms.workload:
 - dotnet
 - dotnetcore
 ms.openlocfilehash: 4c503b89c63d976fe6304291aa1157765fa5c6f7
-ms.sourcegitcommit: 957c696f25e39f923a827fc3ad5e8ab72768838c
-ms.translationtype: HT
+ms.sourcegitcommit: c883637b41ee028786edceece4fa872939d2e64c
+ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 01/13/2018
+ms.lasthandoff: 03/26/2018
 ---
 # <a name="implementing-the-event-based-asynchronous-pattern"></a>實作事件架構非同步模式
 如果您正在撰寫某項類別，其擁有的一些作業可能會造成明顯延遲，請考慮實作[事件架構非同步模式概觀](../../../docs/standard/asynchronous-programming-patterns/event-based-asynchronous-pattern-overview.md)以賦予它非同步功能。  

@@ -1,35 +1,37 @@
 ---
-title: "Entity SQL 與 Transact-SQL 的相異之處"
-ms.custom: 
+title: Entity SQL 與 Transact-SQL 的相異之處
+ms.custom: ''
 ms.date: 03/30/2017
 ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.technology: dotnet-ado
-ms.tgt_pltfrm: 
+ms.reviewer: ''
+ms.suite: ''
+ms.technology:
+- dotnet-ado
+ms.tgt_pltfrm: ''
 ms.topic: article
 ms.assetid: 9c9ee36d-f294-4c8b-a196-f0114c94f559
-caps.latest.revision: "3"
+caps.latest.revision: ''
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.workload: dotnet
+ms.workload:
+- dotnet
 ms.openlocfilehash: 3f80ec1ac51dded1f91d1a18c4d4e24836cf92cd
-ms.sourcegitcommit: ed26cfef4e18f6d93ab822d8c29f902cff3519d1
+ms.sourcegitcommit: c883637b41ee028786edceece4fa872939d2e64c
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 01/17/2018
+ms.lasthandoff: 03/26/2018
 ---
 # <a name="how-entity-sql-differs-from-transact-sql"></a>Entity SQL 與 Transact-SQL 的相異之處
 本主題描述之間的差異[!INCLUDE[esql](../../../../../../includes/esql-md.md)]和[!INCLUDE[tsql](../../../../../../includes/tsql-md.md)]。  
   
 ## <a name="inheritance-and-relationships-support"></a>繼承和關聯性支援  
- [!INCLUDE[esql](../../../../../../includes/esql-md.md)]直接搭配概念實體結構描述運作，且支援概念模型功能，例如繼承和關聯性。  
+ [!INCLUDE[esql](../../../../../../includes/esql-md.md)] 直接搭配概念實體結構描述運作，且支援概念模型功能，例如繼承和關聯性。  
   
  當使用繼承時，從超型別執行個體的集合中選取子型別執行個體的作法通常會很實用。 [Oftype](../../../../../../docs/framework/data/adonet/ef/language-reference/oftype-entity-sql.md)中的運算子[!INCLUDE[esql](../../../../../../includes/esql-md.md)](類似於`oftype`序列 C# 中) 提供這項功能。  
   
 ## <a name="support-for-collections"></a>集合的支援  
- [!INCLUDE[esql](../../../../../../includes/esql-md.md)]將集合視為第一級實體。 例如:   
+ [!INCLUDE[esql](../../../../../../includes/esql-md.md)] 將集合視為第一級實體。 例如:   
   
 -   集合運算式在 `from` 子句中是有效的。  
   
@@ -42,7 +44,7 @@ ms.lasthandoff: 01/17/2018
 -   聯結可針對集合操作。  
   
 ## <a name="support-for-expressions"></a>運算式的支援  
- [!INCLUDE[tsql](../../../../../../includes/tsql-md.md)]具有子查詢 （資料表） 和運算式 （資料列和資料行）。  
+ [!INCLUDE[tsql](../../../../../../includes/tsql-md.md)] 具有子查詢 （資料表） 和運算式 （資料列和資料行）。  
   
  為了支援集合和巢狀的集合，[!INCLUDE[esql](../../../../../../includes/esql-md.md)]將所有東西變成運算式。 與 [!INCLUDE[esql](../../../../../../includes/esql-md.md)] 相比，[!INCLUDE[tsql](../../../../../../includes/tsql-md.md)] 更容易撰寫 - 每一個運算式都可在任何地方使用。 查詢運算式一定會產生投影的型別集合，而且可在允許集合運算式的任何地方使用。 如需有關資訊[!INCLUDE[tsql](../../../../../../includes/tsql-md.md)]中不支援的運算式[!INCLUDE[esql](../../../../../../includes/esql-md.md)]，請參閱[不支援的運算式](../../../../../../docs/framework/data/adonet/ef/language-reference/unsupported-expressions-entity-sql.md)。  
   
@@ -60,7 +62,7 @@ set(e1)
 ## <a name="uniform-treatment-of-subqueries"></a>子查詢的統一處理  
  在資料表上、 強調[!INCLUDE[tsql](../../../../../../includes/tsql-md.md)]執行子查詢的內容解譯。 例如，在子查詢`from`子句會被視為多重集 （資料表）。 但是 `select` 子句中使用的相同子查詢會視為純量子查詢。 同樣地，子查詢的左邊使用`in`運算子會視為純量子查詢，而右邊必須是多重集子的查詢。  
   
- [!INCLUDE[esql](../../../../../../includes/esql-md.md)] 會消除這些差異。 運算式的統一解譯不依賴使用此運算式的內容。 [!INCLUDE[esql](../../../../../../includes/esql-md.md)]將所有子查詢視為多重集子的查詢。 如果子查詢，從想要的純量值[!INCLUDE[esql](../../../../../../includes/esql-md.md)]提供`anyelement`運算子，可針對集合 （在此情況下，子查詢），運作，從集合中擷取單一值。  
+ [!INCLUDE[esql](../../../../../../includes/esql-md.md)] 會消除這些差異。 運算式的統一解譯不依賴使用此運算式的內容。 [!INCLUDE[esql](../../../../../../includes/esql-md.md)] 將所有子查詢視為多重集子的查詢。 如果子查詢，從想要的純量值[!INCLUDE[esql](../../../../../../includes/esql-md.md)]提供`anyelement`運算子，可針對集合 （在此情況下，子查詢），運作，從集合中擷取單一值。  
   
 ### <a name="avoiding-implicit-coercions-for-subqueries"></a>避免子查詢的隱含強制型轉  
  統一的子查詢處理有一個相關的副作用，就是會隱含地將子查詢轉換成純量值。 明確地說，[!INCLUDE[tsql](../../../../../../includes/tsql-md.md)] 中的資料列多重集 (具有單一欄位) 會隱含地轉換成一個純量值，這個值的資料型別是此欄位的資料型別。  
@@ -68,7 +70,7 @@ set(e1)
  [!INCLUDE[esql](../../../../../../includes/esql-md.md)] 不支援這種隱含強制型轉。 [!INCLUDE[esql](../../../../../../includes/esql-md.md)] 提供了可從集合中擷取單一值的 ANYELEMENT 運算子，以及一個可在查詢運算式期間避免建立資料列包裝函式的 `select value` 子句。  
   
 ## <a name="select-value-avoiding-the-implicit-row-wrapper"></a>Select Value：避免隱含資料列包裝函式  
- Select 子句中的[!INCLUDE[tsql](../../../../../../includes/tsql-md.md)]子查詢子句中隱含建立的資料列包裝函式項目周圍。 這意味我們無法建立純量或物件的集合。 [!INCLUDE[tsql](../../../../../../includes/tsql-md.md)]可讓具有一個欄位的資料列型別與相同的資料類型的單一值之間的隱含強制型轉。  
+ Select 子句中的[!INCLUDE[tsql](../../../../../../includes/tsql-md.md)]子查詢子句中隱含建立的資料列包裝函式項目周圍。 這意味我們無法建立純量或物件的集合。 [!INCLUDE[tsql](../../../../../../includes/tsql-md.md)] 可讓具有一個欄位的資料列型別與相同的資料類型的單一值之間的隱含強制型轉。  
   
  [!INCLUDE[esql](../../../../../../includes/esql-md.md)] 提供 `select value` 子句來略過隱含資料列建構。 `select value` 子句中只能指定一個項目。 使用這類子句時，將不會建構包含 `select` 子句中這個項目的資料列包裝函式，並且可以產生所需形狀的集合，例如：`select value a`。  
   
@@ -79,7 +81,7 @@ set(e1)
 ## <a name="left-correlation-and-aliasing"></a>左邊相互關聯與別名  
  在 [!INCLUDE[tsql](../../../../../../includes/tsql-md.md)] 中，給定範圍中的運算式 (類似 `select` 或 `from` 的單一子句) 無法參考之前在相同範圍中所定義的運算式。 SQL 的某些 Dialect (包括 [!INCLUDE[tsql](../../../../../../includes/tsql-md.md)]) 確實支援 `from` 子句中受限形式的這些運算式。  
   
- [!INCLUDE[esql](../../../../../../includes/esql-md.md)]在左邊相互關聯通用化`from`子句，並將它們視為一致的方式。 `from` 子句中的運算式可參考相同子句中的先前定義 (左邊的定義)，而不需要其他語法。  
+ [!INCLUDE[esql](../../../../../../includes/esql-md.md)] 在左邊相互關聯通用化`from`子句，並將它們視為一致的方式。 `from` 子句中的運算式可參考相同子句中的先前定義 (左邊的定義)，而不需要其他語法。  
   
  [!INCLUDE[esql](../../../../../../includes/esql-md.md)] 也會針對與 `group by` 子句有關的查詢做出其他限制。 中的運算式`select`子句和`having`子句的這類查詢可能只會參考`group by`透過其別名的索引鍵。 下列建構中是有效[!INCLUDE[tsql](../../../../../../includes/tsql-md.md)]但不是處於[!INCLUDE[esql](../../../../../../includes/esql-md.md)]:  
   
@@ -122,7 +124,7 @@ p.Address.City
 ```  
   
 ## <a name="no-support-for-"></a>* 表示不支援  
- [!INCLUDE[tsql](../../../../../../includes/tsql-md.md)]支援使用資格不符 * 語法當做整個資料列中，和限定別名\*語法 (t\*) 以該資料表中的欄位。 此外，[!INCLUDE[tsql](../../../../../../includes/tsql-md.md)]允許特殊 count (\*) 彙總，其中包含 null。  
+ [!INCLUDE[tsql](../../../../../../includes/tsql-md.md)] 支援使用資格不符 * 語法當做整個資料列中，和限定別名\*語法 (t\*) 以該資料表中的欄位。 此外，[!INCLUDE[tsql](../../../../../../includes/tsql-md.md)]允許特殊 count (\*) 彙總，其中包含 null。  
   
  [!INCLUDE[esql](../../../../../../includes/esql-md.md)] 不支援 * 建構。 [!INCLUDE[tsql](../../../../../../includes/tsql-md.md)] 和 `select * from T` 格式的 `select T1.* from T1, T2...` 查詢可以分別在 [!INCLUDE[esql](../../../../../../includes/esql-md.md)] 中表示為 `select value t from T as t` 和 `select value t1 from T1 as t1, T2 as t2...`。 此外，這些建構會處理繼承 (值的可替代性)，而 `select *` Variant 則限制為宣告之型別的最上層屬性。  
   
@@ -185,7 +187,7 @@ SELECT C2.FirstName, C2.LastName
  下列 [!INCLUDE[tsql](../../../../../../includes/tsql-md.md)] 功能無法在 [!INCLUDE[esql](../../../../../../includes/esql-md.md)] 中使用。  
   
  DML  
- [!INCLUDE[esql](../../../../../../includes/esql-md.md)]目前不提供支援的 DML 陳述式 （插入、 更新、 刪除）。  
+ [!INCLUDE[esql](../../../../../../includes/esql-md.md)] 目前不提供支援的 DML 陳述式 （插入、 更新、 刪除）。  
   
  DDL  
  [!INCLUDE[esql](../../../../../../includes/esql-md.md)] 不提供目前版本中的任何 DDL 支援。  
@@ -200,7 +202,7 @@ SELECT C2.FirstName, C2.LastName
  [!INCLUDE[esql](../../../../../../includes/esql-md.md)] 尚未提供分析函式的支援。  
   
  內建函式，運算子  
- [!INCLUDE[esql](../../../../../../includes/esql-md.md)]支援的子集[!INCLUDE[tsql](../../../../../../includes/tsql-md.md)]之內建函數和運算子。 主要存放區提供者可能會支援這些運算子和函式。 [!INCLUDE[esql](../../../../../../includes/esql-md.md)]會使用宣告提供者資訊清單中的存放區特有函式。 此外，[!INCLUDE[adonet_ef](../../../../../../includes/adonet-ef-md.md)]可讓您宣告內建和使用者定義的現有存放區函式，如[!INCLUDE[esql](../../../../../../includes/esql-md.md)]使用。  
+ [!INCLUDE[esql](../../../../../../includes/esql-md.md)] 支援的子集[!INCLUDE[tsql](../../../../../../includes/tsql-md.md)]之內建函數和運算子。 主要存放區提供者可能會支援這些運算子和函式。 [!INCLUDE[esql](../../../../../../includes/esql-md.md)] 會使用宣告提供者資訊清單中的存放區特有函式。 此外，[!INCLUDE[adonet_ef](../../../../../../includes/adonet-ef-md.md)]可讓您宣告內建和使用者定義的現有存放區函式，如[!INCLUDE[esql](../../../../../../includes/esql-md.md)]使用。  
   
  提示  
  [!INCLUDE[esql](../../../../../../includes/esql-md.md)] 不提供查詢提示的機制。  
@@ -222,6 +224,6 @@ Select value c from Categories as c;
   
  [!INCLUDE[esql](../../../../../../includes/esql-md.md)] 在每個命令中只支援一個產生結果的查詢陳述式。  
   
-## <a name="see-also"></a>請參閱  
+## <a name="see-also"></a>另請參閱  
  [Entity SQL 概觀](../../../../../../docs/framework/data/adonet/ef/language-reference/entity-sql-overview.md)  
  [不支援的運算式](../../../../../../docs/framework/data/adonet/ef/language-reference/unsupported-expressions-entity-sql.md)

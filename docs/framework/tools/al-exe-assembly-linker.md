@@ -1,13 +1,13 @@
 ---
-title: "Al.exe (組件連結器)"
-ms.custom: 
+title: Al.exe (組件連結器)
+ms.custom: ''
 ms.date: 03/30/2017
 ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
+ms.reviewer: ''
+ms.suite: ''
 ms.technology:
 - dotnet-clr
-ms.tgt_pltfrm: 
+ms.tgt_pltfrm: ''
 ms.topic: article
 helpviewer_keywords:
 - Al.exe
@@ -15,17 +15,17 @@ helpviewer_keywords:
 - modules, Assembly Linker
 - assembly manifest, Assembly Linker
 ms.assetid: b5382965-0053-47cf-b92f-862860275a01
-caps.latest.revision: 
+caps.latest.revision: ''
 author: mairaw
 ms.author: mairaw
 manager: wpickett
 ms.workload:
 - dotnet
 ms.openlocfilehash: 830c141a13f2a7676e120600e05d786093a5ff44
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
-ms.translationtype: HT
+ms.sourcegitcommit: c883637b41ee028786edceece4fa872939d2e64c
+ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 03/26/2018
 ---
 # <a name="alexe-assembly-linker"></a>Al.exe (組件連結器)
 
@@ -48,7 +48,7 @@ al sources options
 
 您可以指定一個或多個下列 `sources`。
 
-| 原始程式檔 | 描述 |
+| 來源 | 描述 |
 | ------ | ----------- |
 |`file`[,`target`]|將 `file` (模組) 的內容複製到 `target` 所指定的檔案名稱中。 複製完成後，*Al.exe* 會將 `target` 編譯成組件。|
 |**/embed[resource]:** `file`[,`name`[,`private`]]|將 `file` 所指定的資源嵌入包含組件資訊清單的映像中，*Al.exe* 會將 `file` 的內容複製到可攜式執行檔 (PE) 映像中。<br /><br /> `name` 參數是資源的內部識別項。 根據預設，組件中的資源為公用 (其他組件也可看見)。 指定 `private` 會使其他組件無法看見資源。<br /><br /> 例如，如果 `file` 是由[資源檔產生器 (*Resgen.exe*)](../../../docs/framework/tools/resgen-exe-resource-file-generator.md) 或是在開發環境中所建立的 .NET Framework 資源檔，就可以使用 <xref:System.Resources> 中的成員進行存取。 如需詳細資訊，請參閱<xref:System.Resources.ResourceManager>。 至於其他所有資源，請使用 `GetManifestResource` 中的 <xref:System.Reflection.Assembly>* 方法在執行階段存取資源。<br /><br /> 如果只將資源檔傳遞至 *Al.exe*，則輸出檔案會是附屬資源組件。|
@@ -80,7 +80,7 @@ al sources options
 |**/platform:** `text`|限制可以執行這個程式碼的平台，這個平台必須下列其中之一：x86、Itanium、x64、anycpu (預設值) 或 anycpu32bitpreferred。|
 |**/prod[uct]:** `text`|為組件中的 [產品] 欄位指定字串。 如果 `text` 包含空格，請將字串置於雙引號內 (" ")。 這個字串是組件的自訂屬性，可使用反映進行檢視。<br /><br /> 如不指定 **/win32res**，檔案總管就會將 **/product** 顯示為 Win32 **Product Name** 資源。<br /><br /> 如果文字為空字串，Win32 **Product Name** 資源會顯示為單一空格。<br /><br /> 如果指定 **/win32res**，**/product** 就不會影響 Win32 資源資訊。<br /><br /> 您也可以在任何 MSIL 模組的原始程式碼中，指定這個選項做為自訂屬性 (<xref:System.Reflection.AssemblyProductAttribute>)。|
 |**/productv[ersion]:** `text`|為組件中的 [產品版本] 欄位指定字串。 如果 `text` 包含空格，請將字串置於雙引號內 (" ")。 這個字串是組件的自訂屬性，可使用反映進行檢視。<br /><br /> 如不指定 **/win32res**，系統就會將 **/productversion** 作為 Win32 **Product Version** 資源。 如不指定 **/productversion**，系統會在 Win32 **Product Version** 資源中填入 Win32 **File Version** 資源。<br /><br /> 如果指定 **/win32res**，**/productversion** 就不會影響 Win32 資源資訊。<br /><br /> 您也可以在任何 MSIL 模組的原始程式碼中，指定這個選項做為自訂屬性 (<xref:System.Reflection.AssemblyInformationalVersionAttribute>)。|
-|**/t[arget]:** `lib[rary]` &#124; `exe` &#124; `win[exe]`|指定輸出檔的檔案格式：`lib[rary]` (程式碼程式庫)、`exe` (主控台應用程式) 或 `win[exe]` (Windows 應用程式)。 預設為 `lib[rary]`。|
+|**/t[arget]:** `lib[rary]` &#124; `exe` &#124; `win[exe]`|指定輸出檔的檔案格式：`lib[rary]` (程式碼程式庫)、`exe` (主控台應用程式) 或 `win[exe]` (Windows 應用程式)。 預設值為 `lib[rary]`。|
 |**/template:** `filename`|指定要從其中繼承所有組件中繼資料的組件 `filename`，但不包括 [文化特性] 欄位。<br /><br /> 使用 **/template** 建立的組件會是附屬組件。|
 |**/title:** `text`|為組件中的 [標題] 欄位指定字串。 如果 `text` 包含空格，請將字串置於雙引號內 (" ")。 這個字串是組件的自訂屬性，可使用反映進行檢視。<br /><br /> 如不指定 **/win32res**，檔案總管會將 **/title** 顯示為 Win32 **Description** 資源，而殼層將使用此資源作為應用程式的易記名稱。 如果檔案類型具有多個支援應用程式，則該檔案類型之捷徑功能表的 [開啟方式] 子功能表中也會顯示此項目。<br /><br /> 如果文字為空字串，Win32 **Description** 資源會顯示為單一空格。<br /><br /> 如果指定 **/win32res**，**/title** 就不會影響 Win32 資源資訊。<br /><br /> 您也可以在任何 MSIL 模組的原始程式碼中，指定這個選項做為自訂屬性 (<xref:System.Reflection.AssemblyTitleAttribute>)。|
 |**/trade[mark]:** `text`|為組件中的 [商標] 欄位指定字串。 如果 `text` 包含空格，請將字串置於雙引號內 (" ")。 這個字串是組件的自訂屬性，可使用反映進行檢視。<br /><br /> 如不指定 **/win32res**，檔案總管會將 **/trademark** 顯示為 Win32 **Trademark** 資源。<br /><br /> 如果文字為空字串，Win32 **Trademark** 資源會顯示為單一空格。<br /><br /> 如果指定 **/win32res**，**/trademark** 就不會影響 Win32 資源資訊。<br /><br /> 您也可以在任何 MSIL 模組的原始程式碼中，指定這個選項做為自訂屬性 (<xref:System.Reflection.AssemblyTrademarkAttribute>)。|

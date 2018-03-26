@@ -1,24 +1,26 @@
 ---
-title: "工具"
-ms.custom: 
+title: 工具
+ms.custom: ''
 ms.date: 03/30/2017
 ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.technology: dotnet-clr
-ms.tgt_pltfrm: 
+ms.reviewer: ''
+ms.suite: ''
+ms.technology:
+- dotnet-clr
+ms.tgt_pltfrm: ''
 ms.topic: article
 ms.assetid: 89c907f9-313f-408c-992a-631f1eadf1da
-caps.latest.revision: "5"
+caps.latest.revision: ''
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.workload: dotnet
+ms.workload:
+- dotnet
 ms.openlocfilehash: 5badbb9142261fc1dc6c2b2d5af3c89c7af776b6
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.sourcegitcommit: c883637b41ee028786edceece4fa872939d2e64c
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 03/26/2018
 ---
 # <a name="tools"></a>工具
 本主題將列出由 [!INCLUDE[indigo1](../../../../../includes/indigo1-md.md)] 工具所產生的所有例外狀況。  
@@ -27,8 +29,8 @@ ms.lasthandoff: 12/22/2017
   
 |資源程式碼|資源字串|  
 |-------------------|---------------------|  
-|ParametersTarget|\<列舉 >|  
-|ParametersToolConfig|\<configFile >|  
+|ParametersTarget|\<enum>|  
+|ParametersToolConfig|\<configFile>|  
 |ErrInvalidPath|指定的路徑無效。 請檢查指定的引數。|  
 |ParametersReference|\<檔案路徑 >|  
 |WrnCannotLoadConfigFileForValidation|在處理從指定位置載入的組態檔時發生錯誤。 無法驗證此組態檔中定義的服務。|  
@@ -79,7 +81,7 @@ ms.lasthandoff: 12/22/2017
 |HelpCodeGenerationCategory|-= 程式碼產生 =-|  
 |RetreivingMetadataWithMexAndDisco|使用 WS-Metadata Exchange 或 DISCO 嘗試從指定項目中下載中繼資料。|  
 |ErrGeneralSchemaValidation|驗證在匯出期間產生的 XML 結構描述時發生錯誤。|  
-|ParametersDirectory|\<目錄 >|  
+|ParametersDirectory|\<directory>|  
 |ErrCannotLoadSpecifiedType|無法針對已經傳送至指定選項的指定值載入任何型別。 請確定此型別所屬的組件係透過指定選項來指定。|  
 |ErrOptionModeConflict|指定選項無法搭配指定選項一起使用，因為它們意指不同的輸出類型。|  
 |ErrIsNotAnAssembly|無法將指定項目當成組件載入。 請驗證此檔案為 .NET 組件。|  
@@ -98,7 +100,7 @@ ms.lasthandoff: 12/22/2017
 |ErrDirectoryNotFound|找不到指定目錄。 請驗證目錄確實存在，而且您具有適當的讀取權限。|  
 |ErrUnableToLoadFile|無法讀取指定檔案。|  
 |ErrNoFilesFound|指定的輸入路徑並未參照到任何現有檔案。|  
-|ParametersConfig|\<configFile >|  
+|ParametersConfig|\<configFile>|  
 |ErrDirectoryInsteadOfFile|指定的輸入路徑可能是目錄。 輸入必須是 URL 或檔案路徑。|  
 |HelpConfig|指示工具使用提供的名稱來產生組態檔。 預設：output.config。|  
 |ErrSingleUseSwitch|您無法多次指定選項。|  
@@ -123,9 +125,9 @@ ms.lasthandoff: 12/22/2017
 |ErrInvalidTarget|使用指定項目來指定時，指定目標將失效。 已指定支援目標。|  
 |ErrPathTooLong|結果路徑太長。 請檢閱指定引數。|  
 |HelpCommonOptionsCategory|-= 常見問題 =-|  
-|ParametersServiceName|\<serviceConfigName >|  
+|ParametersServiceName|\<serviceConfigName>|  
 |ErrNoValidInputFilesSpecified|未指定有效的輸入檔。 請指定中繼資料文件或組件檔。|  
-|ParametersLanguage|\<語言 >|  
+|ParametersLanguage|\<language>|  
 |ErrUnableToLoadMetadataDocument|從其中一個載入的文件讀取中繼資料時發生錯誤。 已指定文件識別項。|  
 |ErrConflictingInputs|指定的輸入引數與指定項目衝突，因為它們意指不同的工具作業模式。|  
 |WrnUnableToLoadContractForValidation|載入合約類型時發生錯誤。 指定了型別和詳細資料。|  
@@ -136,7 +138,7 @@ ms.lasthandoff: 12/22/2017
 |GeneratingFiles|正在產生檔案...|  
 |ErrCannotSpecifyMultipleMappingsForNamespace|已將無效值傳遞給指定選項。 指定的目標命名空間無法對應至多個指定的 CLR 命名空間。|  
 |ErrCouldNotLoadReferenceAssemblyAt|無法載入指定的參照組件。|  
-|ParametersOut|\<檔案 >|  
+|ParametersOut|\<file>|  
 |NoCodeWasGeneratedSuggestDCOnly|若要從結構描述中產生合約，請使用指定選項。|  
 |ErrUnableToLoadInputConfig|無法載入指定的組態檔。|  
 |ErrUnexpectedDelimiter|無效的引數分隔符號 (':' or '=') 無法啟動選項。|  
@@ -153,7 +155,7 @@ ms.lasthandoff: 12/22/2017
 |ErrCodegenError|以指定語言產生程式碼時發生錯誤。<br /><br /> 該語言不支援所有正在產生的程式碼項目。 您應該使用其他語言。|  
 |ErrInputWsdlParseError|讀取指定項目時發生 WSDL 剖析錯誤。 請驗證 XML 格式正確而且有效。|  
 |ErrCouldNotCreateInstance|無法針對已傳送至指定引數的指定型別建立其執行個體。|  
-|ParametersNamespace|\<字串、 字串 >|  
+|ParametersNamespace|\<string,string>|  
 |HelpNostdlib|請勿參照標準程式庫 (根據預設會參照 mscorlib.dll 與 system.servicemodel.dll)。|  
 |WrnCannotLoadConfigFileForExport|在處理從指定位置載入的組態檔時發生錯誤。 無法載入在此組態檔中定義的服務。|  
 |WrnUnableToLoadContractForExport|載入合約類型時發生錯誤。 無法匯出這個指定型別。|

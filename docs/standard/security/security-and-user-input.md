@@ -1,12 +1,12 @@
 ---
-title: "安全性和使用者輸入"
-ms.custom: 
+title: 安全性和使用者輸入
+ms.custom: ''
 ms.date: 03/30/2017
 ms.prod: .net
-ms.reviewer: 
-ms.suite: 
+ms.reviewer: ''
+ms.suite: ''
 ms.technology: dotnet-standard
-ms.tgt_pltfrm: 
+ms.tgt_pltfrm: ''
 ms.topic: article
 helpviewer_keywords:
 - security [.NET Framework], user input
@@ -14,7 +14,7 @@ helpviewer_keywords:
 - secure coding, user input
 - code security, user input
 ms.assetid: 9141076a-96c9-4b01-93de-366bb1d858bc
-caps.latest.revision: "7"
+caps.latest.revision: ''
 author: mairaw
 ms.author: mairaw
 manager: wpickett
@@ -22,10 +22,10 @@ ms.workload:
 - dotnet
 - dotnetcore
 ms.openlocfilehash: 157e20a80f0a76e157fad091bec6bfe635a9ccb8
-ms.sourcegitcommit: e7f04439d78909229506b56935a1105a4149ff3d
+ms.sourcegitcommit: c883637b41ee028786edceece4fa872939d2e64c
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 12/23/2017
+ms.lasthandoff: 03/26/2018
 ---
 # <a name="security-and-user-input"></a>安全性和使用者輸入
 使用者資料，也就是任何種類的輸入 (來自 Web 要求或 URL 的資料、對 Microsoft Windows Forms 應用程式之控制項的輸入等等)，可以會對程式碼有不良影響，因為通常該資料會直接做為參數來呼叫其他程式碼。 這種情況類似惡意程式碼使用奇怪的參數呼叫您的程式碼，應該採取相同的預防措施。 使用者輸入實際上較難以保護其安全，因為沒有任何堆疊框架，可以追蹤可能不受信任的資料存在。  
@@ -68,5 +68,5 @@ ms.lasthandoff: 12/23/2017
   
 -   請小心可能有一個以上標準格式的使用者名稱。 例如，您通常可以使用 MYDOMAIN\\username 形式或 username@mydomain.example.com 形式。  
   
-## <a name="see-also"></a>請參閱  
+## <a name="see-also"></a>另請參閱  
  [安全程式碼撰寫方針](../../../docs/standard/security/secure-coding-guidelines.md)

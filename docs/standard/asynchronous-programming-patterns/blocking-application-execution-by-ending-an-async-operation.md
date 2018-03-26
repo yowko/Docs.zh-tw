@@ -1,12 +1,12 @@
 ---
-title: "以結束非同步作業的方式封鎖應用程式執行"
-ms.custom: 
+title: 以結束非同步作業的方式封鎖應用程式執行
+ms.custom: ''
 ms.date: 03/30/2017
 ms.prod: .net
-ms.reviewer: 
-ms.suite: 
+ms.reviewer: ''
+ms.suite: ''
 ms.technology: dotnet-standard
-ms.tgt_pltfrm: 
+ms.tgt_pltfrm: ''
 ms.topic: article
 helpviewer_keywords:
 - blocks, asynchronous operations
@@ -14,7 +14,7 @@ helpviewer_keywords:
 - asynchronous programming, blocking applications
 - blocking application execution
 ms.assetid: cc5e2834-a65b-4df8-b750-7bdb79997fee
-caps.latest.revision: 
+caps.latest.revision: ''
 author: rpetrusha
 ms.author: ronpet
 manager: wpickett
@@ -25,10 +25,10 @@ ms.workload:
 - dotnet
 - dotnetcore
 ms.openlocfilehash: 3ec7bfe6fe2cef20a6d74030802113a47e8679e1
-ms.sourcegitcommit: 957c696f25e39f923a827fc3ad5e8ab72768838c
-ms.translationtype: HT
+ms.sourcegitcommit: c883637b41ee028786edceece4fa872939d2e64c
+ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 01/13/2018
+ms.lasthandoff: 03/26/2018
 ---
 # <a name="blocking-application-execution-by-ending-an-async-operation"></a>以結束非同步作業的方式封鎖應用程式執行
 等待非同步作業的結果而無法繼續執行其他工作的應用程式必須封鎖，直到作業完成為止。 使用下列其中一個選項，在等候非同步作業完成時封鎖應用程式的主執行緒：  
@@ -45,6 +45,6 @@ ms.lasthandoff: 01/13/2018
  [!code-csharp[AsyncDesignPattern#1](../../../samples/snippets/csharp/VS_Snippets_CLR/AsyncDesignPattern/CS/Async_EndBlock.cs#1)]
  [!code-vb[AsyncDesignPattern#1](../../../samples/snippets/visualbasic/VS_Snippets_CLR/AsyncDesignPattern/VB/Async_EndBlock.vb#1)]  
   
-## <a name="see-also"></a>請參閱  
+## <a name="see-also"></a>另請參閱  
  [事件架構非同步模式 (EAP)](../../../docs/standard/asynchronous-programming-patterns/event-based-asynchronous-pattern-eap.md)  
  [事件架構非同步模式概觀](../../../docs/standard/asynchronous-programming-patterns/event-based-asynchronous-pattern-overview.md)

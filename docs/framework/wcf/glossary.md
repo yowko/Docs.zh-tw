@@ -23,7 +23,7 @@ ms.openlocfilehash: 76cc8f456701d65b675ce7b89436da5213ea9430
 ms.sourcegitcommit: c883637b41ee028786edceece4fa872939d2e64c
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 03/23/2018
+ms.lasthandoff: 03/26/2018
 ---
 # <a name="windows-communication-foundation-glossary-for-net-framework-45"></a>.NET Framework 4.5 的 Windows Communication Foundation 字彙
 以下是專為 Windows Communication Foundation 文件所定義的詞彙。  

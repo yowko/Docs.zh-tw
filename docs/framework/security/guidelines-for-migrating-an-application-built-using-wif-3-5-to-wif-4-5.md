@@ -1,31 +1,33 @@
 ---
-title: "將使用 WIF 3.5 建置的應用程式移轉至 WIF 4.5 的方針"
-ms.custom: 
+title: 將使用 WIF 3.5 建置的應用程式移轉至 WIF 4.5 的方針
+ms.custom: ''
 ms.date: 03/30/2017
 ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.technology: dotnet-clr
-ms.tgt_pltfrm: 
+ms.reviewer: ''
+ms.suite: ''
+ms.technology:
+- dotnet-clr
+ms.tgt_pltfrm: ''
 ms.topic: article
 ms.assetid: 7a32fe6e-5f68-4693-9371-19411fa8063c
-caps.latest.revision: "12"
+caps.latest.revision: ''
 author: BrucePerlerMS
 ms.author: bruceper
 manager: mbaldwin
-ms.workload: dotnet
+ms.workload:
+- dotnet
 ms.openlocfilehash: 87443a83b80440a30e942b30bd98cce09816f25f
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.sourcegitcommit: c883637b41ee028786edceece4fa872939d2e64c
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 03/26/2018
 ---
 # <a name="guidelines-for-migrating-an-application-built-using-wif-35-to-wif-45"></a>將使用 WIF 3.5 建置的應用程式移轉至 WIF 4.5 的方針
 ## <a name="applies-to"></a>適用於  
   
 -   Microsoft® Windows® Identity Foundation (WIF) 3.5 和 4.5。  
   
-## <a name="overview"></a>概觀  
+## <a name="overview"></a>總覽  
  Windows Identity Foundation (WIF) 一開始發行於 .NET 3.5 SP1 時間範圍內。 該版 WIF 稱為 WIF 3.5。 它已發行為個別執行階段和 SDK，表示已在其上執行具 WIF 功能之應用程式的每部電腦都必須已安裝 WIF 執行階段，而且開發人員必須下載並安裝 WIF SDK，以取得已啟用具 WIF 功能之應用程式開發的 Visual Studio 範本和工具。 從 .NET 4.5 開始，WIF 已與 .NET Framework 完全整合。 不再需要個別執行階段，而且可以使用 Visual Studio 延伸模組管理員將 WIF 工具安裝在 Visual Studio 2012 中。 這版 WIF 稱為 WIF 4.5。  
   
  將 WIF 整合至 .NET 需要 WIF API 介面中的數項變更。 WIF 4.5 包含 Visual Studio 的新命名空間、一些組態項目變更和新工具。 本主題所提供的指引可用來協助您將使用 WIF 3.5 所建置的應用程式移轉至 WIF 4.5。 在某些情況下，您需要在執行 Windows 8 或 Windows Server 2012 的電腦上執行使用 WIF 3.5 所建置的舊版應用程式。 本主題也提供如何啟用這些作業系統之 WIF 3.5 的指引。  
@@ -102,11 +104,11 @@ ms.lasthandoff: 12/22/2017
  如需 WIF 4.5 組態項目的完整清單，請參閱 [WIF 組態結構描述](../../../docs/framework/configure-apps/file-schema/windows-identity-foundation/index.md)。  
   
 ### <a name="visual-studio-tooling-changes"></a>Visual Studio 工具變更  
- WIF 3.5 SDK 已提供獨立同盟公用程式 FedUtil.exe (FedUtil)，可用來將具 WIF 功能之應用程式中的身分識別管理外包到安全性權杖服務 (STS)。 此工具已在應用程式組態檔中新增 WIF 設定，以讓應用程式從一或多個 STS 取得安全性權杖，並透過 [Add STS Service Reference] (新增 STS 服務參考)  按鈕呈現在 Visual Studio 中。 FedUtil 未隨附於 WIF 4.5。 相反地，WIF 4.5 支援名為「Visual Studio 2012 的身分識別和存取工具」的新 Visual Studio 延伸模組，用來使用將身分識別管理外包到 STS 所需的 WIF 設定來修改應用程式組態檔。 身分識別和存取工具也會實作稱為「本機 STS」的 STS，以用來測試具 WIF 功能的應用程式。 在許多情況下，這項功能都不需要建置自訂 STS，而這些自訂 STS 通常是 WIF 3.5 中測試開發中解決方案的必要項目。 基於這個原因，Visual Studio 2012 中不再支援 STS 範本；不過，WIF 4.5 仍然支援開發 STS 的類別。  
+ WIF 3.5 SDK 已提供獨立同盟公用程式 FedUtil.exe (FedUtil)，可用來將具 WIF 功能之應用程式中的身分識別管理外包到安全性權杖服務 (STS)。 此工具已在應用程式組態檔中新增 WIF 設定，以讓應用程式從一或多個 STS 取得安全性權杖，並透過 [Add STS Service Reference] \(新增 STS 服務參考)  按鈕呈現在 Visual Studio 中。 FedUtil 未隨附於 WIF 4.5。 相反地，WIF 4.5 支援名為「Visual Studio 2012 的身分識別和存取工具」的新 Visual Studio 延伸模組，用來使用將身分識別管理外包到 STS 所需的 WIF 設定來修改應用程式組態檔。 身分識別和存取工具也會實作稱為「本機 STS」的 STS，以用來測試具 WIF 功能的應用程式。 在許多情況下，這項功能都不需要建置自訂 STS，而這些自訂 STS 通常是 WIF 3.5 中測試開發中解決方案的必要項目。 基於這個原因，Visual Studio 2012 中不再支援 STS 範本；不過，WIF 4.5 仍然支援開發 STS 的類別。  
   
  您可以從 Visual Studio 的延伸模組和更新管理員中安裝身分識別和存取工具，也可以從 Code Gallery 的下列頁面下載它：[Code Gallery 上的 Visual Studio 2012 的身分識別和存取工具](http://go.microsoft.com/fwlink/?LinkID=245849)。 下列清單摘要說明 Visual Studio 工具變更：  
   
--   已移除 [Add STS Service Reference] (新增 STS 服務參考) 功能。 取代項目是身分識別和存取工具。  
+-   已移除 [Add STS Service Reference] \(新增 STS 服務參考) 功能。 取代項目是身分識別和存取工具。  
   
 -   已移除 Visual Studio STS 範本。 您可以使用透過身分識別和存取工具取得的「本機 STS」來設定您使用 WIF 所開發的身分識別解決方案。 「本機 STS」組態可以修改成自訂它所提供的宣告。  
   
@@ -180,7 +182,7 @@ add-windowsfeature windows-identity-foundation
 > [!NOTE]
 >  因為 WIF 3.5 和 WIF 4.5 中的許多類別都共用相同的名稱，所以同時使用 WIF 3.5 和 WIF 4.5 時，請一定要使用完整類別名稱，或使用命名空間別名來區分 WIF 3.5 和 WIF 4.5 中的類別。  
   
-## <a name="see-also"></a>請參閱  
+## <a name="see-also"></a>另請參閱  
  [WIF 組態結構描述](../../../docs/framework/configure-apps/file-schema/windows-identity-foundation/index.md)  
  [WIF 3.5 和 WIF 4.5 之間的命名空間對應](../../../docs/framework/security/namespace-mapping-between-wif-3-5-and-wif-4-5.md)  
  [Windows Identity Foundation 4.5 的新功能](../../../docs/framework/security/whats-new-in-wif.md)  

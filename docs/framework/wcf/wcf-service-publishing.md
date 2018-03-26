@@ -20,7 +20,7 @@ ms.openlocfilehash: 823edadf7d387d1a509edbdf839ac6eeece5d41f
 ms.sourcegitcommit: c883637b41ee028786edceece4fa872939d2e64c
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 03/23/2018
+ms.lasthandoff: 03/26/2018
 ---
 # <a name="wcf-service-publishing"></a>WCF 服務發行
 [!INCLUDE[indigo1](../../../includes/indigo1-md.md)] 服務發行可協助您從 [!INCLUDE[indigo2](../../../includes/indigo2-md.md)] 服務主機和 [!INCLUDE[indigo2](../../../includes/indigo2-md.md)] 測試用戶端提供的早期開發環境，進入實際部署應用程式至實際執行環境進行測試。 在認可最後開發計畫之前，您可以使用 [!INCLUDE[indigo1](../../../includes/indigo1-md.md)] 服務發行確認 [!INCLUDE[indigo2](../../../includes/indigo2-md.md)] 服務正確執行，而且可開始發行。 您也可以選擇將 [!INCLUDE[indigo2](../../../includes/indigo2-md.md)] 服務程式庫部署到各種不同的目標位置進行測試。  

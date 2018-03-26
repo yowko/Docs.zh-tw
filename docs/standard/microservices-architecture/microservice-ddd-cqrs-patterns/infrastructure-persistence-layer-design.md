@@ -1,7 +1,7 @@
 ---
-title: "設計基礎結構持續性層"
-description: "容器化 .NET 應用程式的 .NET 微服務架構 | 設計基礎結構持續性層"
-keywords: "Docker, 微服務, ASP.NET, 容器"
+title: 設計基礎結構持續性層
+description: 容器化 .NET 應用程式的 .NET 微服務架構 | 設計基礎結構持續性層
+keywords: Docker, 微服務, ASP.NET, 容器
 author: CESARDELATORRE
 ms.author: wiwagn
 ms.date: 11/08/2017
@@ -12,10 +12,10 @@ ms.workload:
 - dotnet
 - dotnetcore
 ms.openlocfilehash: 76db5388c75d4eb3b5cc23c1e57cc391a15f2934
-ms.sourcegitcommit: c0dd436f6f8f44dc80dc43b07f6841a00b74b23f
-ms.translationtype: HT
+ms.sourcegitcommit: c883637b41ee028786edceece4fa872939d2e64c
+ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 01/19/2018
+ms.lasthandoff: 03/26/2018
 ---
 # <a name="designing-the-infrastructure-persistence-layer"></a>設計基礎結構持續性層
 
@@ -138,30 +138,30 @@ public interface ISpecification<T>
 
 ### <a name="the-repository-pattern"></a>儲存機制模式
 
--   **Edward Hieatt 和 Rob Mee：Repository (儲存機制) 模式**
+-   **Edward Hieatt 和 Rob Mee：儲存機制模式。**
     [*http://martinfowler.com/eaaCatalog/repository.html*](http://martinfowler.com/eaaCatalog/repository.html)
 
--   **The Repository Pattern (儲存機制模式)**
+-   **儲存機制模式**
     [*https://msdn.microsoft.com/library/ff649690.aspx*](https://msdn.microsoft.com/library/ff649690.aspx)
 
--   **Repository Pattern: A data persistence abstraction (儲存機制模式：資料持續性抽象概念)**
+-   **儲存機制模式： 資料持續抽象方法**
     [*http://deviq.com/repository-pattern/*](http://deviq.com/repository-pattern/)
 
--   **Eric Evans：Domain-Driven Design: Tackling Complexity in the Heart of Software** (叢書，內含儲存機制模式的討論) [ *https://www.amazon.com/Domain-Driven-Design-Tackling-Complexity-Software/dp/0321125215/*](https://www.amazon.com/Domain-Driven-Design-Tackling-Complexity-Software/dp/0321125215/)
+-   **Eric Evans：Domain-Driven Design: Tackling Complexity in the Heart of Software.** （書籍; 儲存機制模式的討論包括） [*https://www.amazon.com/Domain-Driven-Design-Tackling-Complexity-Software/dp/0321125215/*](https://www.amazon.com/Domain-Driven-Design-Tackling-Complexity-Software/dp/0321125215/)
 
 ### <a name="unit-of-work-pattern"></a>工作單位模式
 
--   **Martin Fowler：Unit of Work (工作單位) 模式**
+-   **Martin Fowler：工作模式的單位。**
     [*http://martinfowler.com/eaaCatalog/unitOfWork.html*](http://martinfowler.com/eaaCatalog/unitOfWork.html)
 
 <!-- -->
 
--   **Implementing the Repository and Unit of Work Patterns in an ASP.NET MVC Application (在 ASP.NET MVC 應用程式中實作儲存機制和工作單位模式)**
+-   **在 ASP.NET MVC 應用程式中實作存放庫與工作單位模式**
     [*https://www.asp.net/mvc/overview/older-versions/getting-started-with-ef-5-using-mvc-4/implementing-the-repository-and-unit-of-work-patterns-in-an-asp-net-mvc-application*](https://www.asp.net/mvc/overview/older-versions/getting-started-with-ef-5-using-mvc-4/implementing-the-repository-and-unit-of-work-patterns-in-an-asp-net-mvc-application)
 
 ### <a name="the-specification-pattern"></a>規格模式
 
--   **Specification Pattern (規格模式)**
+-   **規格模式。**
     [*http://deviq.com/specification-pattern/*](http://deviq.com/specification-pattern/)
 
 -   **Eric Evans (2004)：Domain Driven Design，Addison-Wesley，第 224 頁。**

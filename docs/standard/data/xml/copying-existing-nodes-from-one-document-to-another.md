@@ -1,15 +1,15 @@
 ---
-title: "將現有節點從一個文件複製到另一個文件"
-ms.custom: 
+title: 將現有節點從一個文件複製到另一個文件
+ms.custom: ''
 ms.date: 03/30/2017
 ms.prod: .net
-ms.reviewer: 
-ms.suite: 
+ms.reviewer: ''
+ms.suite: ''
 ms.technology: dotnet-standard
-ms.tgt_pltfrm: 
+ms.tgt_pltfrm: ''
 ms.topic: article
 ms.assetid: 3caa78c1-3448-4b7b-b83c-228ee857635e
-caps.latest.revision: 
+caps.latest.revision: ''
 author: mairaw
 ms.author: mairaw
 manager: wpickett
@@ -17,10 +17,10 @@ ms.workload:
 - dotnet
 - dotnetcore
 ms.openlocfilehash: 958dccfc184857b0edd12cd1d9afe7b3b468b1e6
-ms.sourcegitcommit: e7f04439d78909229506b56935a1105a4149ff3d
-ms.translationtype: HT
+ms.sourcegitcommit: c883637b41ee028786edceece4fa872939d2e64c
+ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 12/23/2017
+ms.lasthandoff: 03/26/2018
 ---
 # <a name="copying-existing-nodes-from-one-document-to-another"></a>將現有節點從一個文件複製到另一個文件
 **ImportNode** 方法是一種機制，藉由這個機制，節點或整個節點樹狀子目錄會從一個 **XmlDocument** 複製到另一個。 從呼叫傳回的節點是來自來源文件的節點複本，包括屬性值、節點名稱、節點型別和所有與命名空間相關的屬性，例如前置詞、區域名稱和命名空間統一資源識別元 (URI)。 來源文件不會變更。 在匯入節點之後，您仍然必須使用用於插入節點的其中一種方法將它加入至樹狀結構。  
@@ -50,5 +50,5 @@ ms.lasthandoff: 12/23/2017
 > [!NOTE]
 >  雖然 DocumentType 節點可以匯入，但是一份文件只能有一個 DocumentType。 因此，當您匯入文件型別之後，在將它插入樹狀之前，您必須確定文件中有文件型別。 如需移除節點的資訊，請參閱[從 XML 文件移除節點、內容和值](../../../../docs/standard/data/xml/removing-nodes-content-and-values-from-an-xml-document.md)。  
   
-## <a name="see-also"></a>請參閱  
+## <a name="see-also"></a>另請參閱  
  [XML 文件物件模型 (DOM)](../../../../docs/standard/data/xml/xml-document-object-model-dom.md)

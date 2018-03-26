@@ -1,24 +1,26 @@
 ---
-title: "根據開發情況比較 ASP.NET Web 服務與 WCF"
-ms.custom: 
+title: 根據開發情況比較 ASP.NET Web 服務與 WCF
+ms.custom: ''
 ms.date: 03/30/2017
 ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.technology: dotnet-clr
-ms.tgt_pltfrm: 
+ms.reviewer: ''
+ms.suite: ''
+ms.technology:
+- dotnet-clr
+ms.tgt_pltfrm: ''
 ms.topic: article
 ms.assetid: f362d00e-ce82-484f-9d4f-27e579d5c320
-caps.latest.revision: "10"
+caps.latest.revision: ''
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.workload: dotnet
+ms.workload:
+- dotnet
 ms.openlocfilehash: c12bd11cee62cd769f7dffc142806fa5ab1b0137
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.sourcegitcommit: c883637b41ee028786edceece4fa872939d2e64c
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 03/26/2018
 ---
 # <a name="comparing-aspnet-web-services-to-wcf-based-on-development"></a>根據開發情況比較 ASP.NET Web 服務與 WCF
 [!INCLUDE[indigo1](../../../../includes/indigo1-md.md)] 具有 ASP.NET 相容性模式選項，可讓 [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] 應用程式以類似 ASP.NET Web 服務的方式來進行程式設計和組態，並且可模擬其行為。 下列章節將根據使用這兩種技術來開發應用程式時的需求，比較 ASP.NET Web 服務和 [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)]。  
@@ -380,7 +382,7 @@ typeof(Service), //"Service" is the name of the service type baseAdresses))
   
  下列範例會示範如何在 <xref:System.ServiceModel.ServiceHost> 的建構中指定一個或多個傳輸通訊協定的位址。 這些位址指的是基底位址 (Base Address)。  
   
- 針對 [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] 服務任何端點所提供的位址會相對於端點主機的基底位址。 主機的每個通訊傳輸通訊協定都可以擁有一個基底位址。 在上述組態檔的範例組態中，針對端點選取的 <xref:System.ServiceModel.BasicHttpBinding> 會以 HTTP 做為傳輸通訊協定，因此端點 `EchoService` 的位址會相對於主機的 HTTP 基底位址。 在上述範例中，主機的 HTTP 基底位址為 http://www.contoso.com:8000/。 對於裝載於 IIS 或 WAS 的服務，其基底位址是服務之服務檔的 URL。  
+ 針對 [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] 服務任何端點所提供的位址會相對於端點主機的基底位址。 主機的每個通訊傳輸通訊協定都可以擁有一個基底位址。 在上述組態檔的範例組態中，針對端點選取的 <xref:System.ServiceModel.BasicHttpBinding> 會以 HTTP 做為傳輸通訊協定，因此端點 `EchoService` 的位址會相對於主機的 HTTP 基底位址。 在上述範例中的主機，須的 HTTP 基底位址http://www.contoso.com:8000/。 對於裝載於 IIS 或 WAS 的服務，其基底位址是服務之服務檔的 URL。  
   
  只有裝載於 IIS 或 WAS 的服務，以及設定使用 HTTP 做為唯一傳輸通訊協定的服務，可以設定為使用 [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] ASP.NET 相容性模式選項。 若要開啟該選項，請遵循下列步驟。  
   
@@ -761,5 +763,5 @@ public void Receive(Message input)
 ## <a name="globalization"></a>全球化  
  ASP.NET 設定語言可讓您指定個別服務的文化特性。 除非是在 ASP.NET 相容性模式下，否則 [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] 並不支援此組態設定。 若要當地語系化未使用 ASP.NET 相容性模式的 [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] 服務，請將服務類型編譯為文化特性特定的組件，並為各個文化特性特定的組件設定個別的文化特性特定端點。  
   
-## <a name="see-also"></a>請參閱  
+## <a name="see-also"></a>另請參閱  
  [根據用途與使用的標準來比較 ASP.NET Web 服務與 WCF](../../../../docs/framework/wcf/feature-details/comparing-aspnet-web-services-to-wcf-based-on-purpose-and-standards-used.md)

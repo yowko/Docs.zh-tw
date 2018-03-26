@@ -1,24 +1,26 @@
 ---
-title: "UriTemplate 與 UriTemplateTable"
-ms.custom: 
+title: UriTemplate 與 UriTemplateTable
+ms.custom: ''
 ms.date: 03/30/2017
 ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.technology: dotnet-clr
-ms.tgt_pltfrm: 
+ms.reviewer: ''
+ms.suite: ''
+ms.technology:
+- dotnet-clr
+ms.tgt_pltfrm: ''
 ms.topic: article
 ms.assetid: 5cbbe03f-4a9e-4d44-9e02-c5773239cf52
-caps.latest.revision: "24"
+caps.latest.revision: ''
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.workload: dotnet
+ms.workload:
+- dotnet
 ms.openlocfilehash: ac77fe2c83828d2cc9473417d2b29b2d2e540923
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.sourcegitcommit: c883637b41ee028786edceece4fa872939d2e64c
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 03/26/2018
 ---
 # <a name="uritemplate-and-uritemplatetable"></a>UriTemplate 與 UriTemplateTable
 Web 開發人員需要能夠描述其服務所回應的 URI 形式與配置。 [!INCLUDE[indigo1](../../../../includes/indigo1-md.md)] 新增了兩個類別，讓開發人員可以更充分的掌控其 URI。 <xref:System.UriTemplate> 和 <xref:System.UriTemplateTable> 在 [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] 中構成 URI 分派引擎的基礎。 這些類別可以自行利用，讓開發人員充分運用範本與 URI 對應機制，而無須實作 [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] 服務。  
@@ -98,13 +100,13 @@ Web 開發人員需要能夠描述其服務所回應的 URI 形式與配置。 [
   
 -   "shoe / {船} / *"  
   
--   "shoe/船？ x = 2"  
+-   "shoe/boat?x=2"  
   
 -   "shoe / {船}？ x = {床}"  
   
 -   "shoe/{boat}?x={bed}&y=band"  
   
--   "？ x = {shoe}"  
+-   "?x={shoe}"  
   
 -   "shoe?x=3&y={var}  
   
@@ -140,7 +142,7 @@ Web 開發人員需要能夠描述其服務所回應的 URI 形式與配置。 [
 -   /{shoe}{boat}：變數之間必須以常值分隔。  
   
 ### <a name="matching-and-compound-path-segments"></a>比對和複合路徑區段  
- 複合路徑區段可讓您定義一個 UriTemplate，該 UriTemplate 在單一路徑區段中有多個變數。 例如，在以下的範本字串: 「 位址 / {state}。{city}"兩個變數 （state 和 city） 都在相同的區段中定義。 此範本將會比對的 URL，例如"http://example.com/Washington.Redmond"，但它也會比對像是"http://example.com/Washington.Redmond.Microsoft"的 URL。 在後者的情況下，state 變數將包含"Washington"，city 變數將包含"Redmond.Microsoft"。 在此情況下，任何文字 (除了 ‘/’ 之外) 都會比對 {city} 變數。 如果您想要的範本不比對 「 額外的 」 文字，請將變數放在另一個範本區段中，例如: 「 位址 / {state} / {city}。  
+ 複合路徑區段可讓您定義一個 UriTemplate，該 UriTemplate 在單一路徑區段中有多個變數。 例如，在以下的範本字串: 「 位址 / {state}。{city}"兩個變數 （state 和 city） 都在相同的區段中定義。 此範本會比對 URL 這類 「http://example.com/Washington.Redmond「 但它也會比對類似的 URL 」http://example.com/Washington.Redmond.Microsoft"。 在後者的情況下，state 變數將包含"Washington"，city 變數將包含"Redmond.Microsoft"。 在此情況下，任何文字 (除了 ‘/’ 之外) 都會比對 {city} 變數。 如果您想要的範本不比對 「 額外的 」 文字，請將變數放在另一個範本區段中，例如: 「 位址 / {state} / {city}。  
   
 ### <a name="named-wildcard-segments"></a>命名的萬用字元片段  
  命名的萬用字元片段可以是任一路徑變數片段，其變數名稱會以萬用字元 ‘*’ 開頭。 下列範本字串包含了命名的萬用字元片段，名為 "shoe"。  
@@ -343,7 +345,7 @@ Console.WriteLine("Bound URI: {0}", boundUri);
 > [!NOTE]
 >  當字元 á 與 Á 出現在 URI 路徑或 <xref:System.UriTemplate> 路徑片段常值中時，兩者將被視為不同的字元 (但是字元 a 與 A 則被視為相同)。 當字元 á 與 Á 出現在 <xref:System.UriTemplate> {variableName} 或查詢字串中時，兩者將被視為相同的字元 (而且字元 a 與 A 亦將被視為相同)。  
   
-## <a name="see-also"></a>請參閱  
+## <a name="see-also"></a>另請參閱  
  [WCF Web HTTP 程式設計模型概觀](../../../../docs/framework/wcf/feature-details/wcf-web-http-programming-model-overview.md)  
  [WCF Web HTTP 程式設計物件模型](../../../../docs/framework/wcf/feature-details/wcf-web-http-programming-object-model.md)  
  [UriTemplate](../../../../docs/framework/wcf/samples/uritemplate-sample.md)  

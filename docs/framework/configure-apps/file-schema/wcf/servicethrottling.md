@@ -1,33 +1,35 @@
 ---
 title: '&lt;serviceThrottling&gt;'
-ms.custom: 
+ms.custom: ''
 ms.date: 03/30/2017
 ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.technology: dotnet-clr
-ms.tgt_pltfrm: 
+ms.reviewer: ''
+ms.suite: ''
+ms.technology:
+- dotnet-clr
+ms.tgt_pltfrm: ''
 ms.topic: article
 ms.assetid: a337d064-1e64-4209-b4a9-db7fdb7e3eaf
-caps.latest.revision: "22"
+caps.latest.revision: ''
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.workload: dotnet
+ms.workload:
+- dotnet
 ms.openlocfilehash: a059684967af26c72aca48a3fa6bb10c2f26b0c5
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.sourcegitcommit: c883637b41ee028786edceece4fa872939d2e64c
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 03/26/2018
 ---
 # <a name="ltservicethrottlinggt"></a>&lt;serviceThrottling&gt;
 指定 Windows Communication Foundation (WCF) 服務的節流機制。  
   
- \<系統。ServiceModel >  
-\<行為 >  
-\<serviceBehaviors >  
-\<行為 >  
-\<serviceThrottling >  
+ \<system.ServiceModel>  
+\<behaviors>  
+\<serviceBehaviors>  
+\<behavior>  
+\<serviceThrottling>  
   
 ## <a name="syntax"></a>語法  
   
@@ -38,7 +40,7 @@ ms.lasthandoff: 12/22/2017
 ```  
   
 ## <a name="attributes-and-elements"></a>屬性和項目  
- 下列章節說明屬性、子項目和父項目。  
+ 下列各節描述屬性、子項目和父項目。  
   
 ### <a name="attributes"></a>屬性  
   
@@ -48,14 +50,14 @@ ms.lasthandoff: 12/22/2017
 |maxConcurrentInstances|正整數，限制同時在 <xref:System.ServiceModel.InstanceContext> 上執行的 <xref:System.ServiceModel.ServiceHost> 物件數目。 當限制之內的位置可供使用時，建立其他執行個體的要求便會進入佇列並完成。 預設值是 maxConcurrentSessions 和 MaxConcurrentCalls 的總和|  
 |maxConcurrentSessions|正整數，限制 <xref:System.ServiceModel.ServiceHost> 物件可以接受的工作階段數目。<br /><br /> 服務將接受超過限制的連線，但只有低於限制個數的通道為作用中 (可從該通道讀取訊息)。 將這個值設定為 0 相當於設定為 Int32.MaxValue。 預設值是 100 * 處理器計數。|  
   
-### <a name="child-elements"></a>子元素  
+### <a name="child-elements"></a>子項目  
  無。  
   
 ### <a name="parent-elements"></a>父項目  
   
 |項目|描述|  
 |-------------|-----------------|  
-|[\<行為 >](../../../../../docs/framework/configure-apps/file-schema/wcf/behavior-of-endpointbehaviors.md)|指定行為項目。|  
+|[\<behavior>](../../../../../docs/framework/configure-apps/file-schema/wcf/behavior-of-endpointbehaviors.md)|指定行為項目。|  
   
 ## <a name="remarks"></a>備註  
  節流控制會限制同時呼叫、並行執行個體或工作階段的數目，以防止過度消耗資源。  
@@ -79,7 +81,7 @@ ms.lasthandoff: 12/22/2017
 </behaviors>  
 ```  
   
-## <a name="see-also"></a>請參閱  
+## <a name="see-also"></a>另請參閱  
  <xref:System.ServiceModel.Description.ServiceThrottlingBehavior>  
  <xref:System.ServiceModel.Configuration.ServiceThrottlingElement>  
  [使用 ServiceThrottlingBehavior 來控制 WCF 服務效能](../../../../../docs/framework/wcf/feature-details/using-servicethrottlingbehavior-to-control-wcf-service-performance.md)

@@ -1,27 +1,29 @@
 ---
-title: "標準查詢運算子轉譯"
-ms.custom: 
+title: 標準查詢運算子轉譯
+ms.custom: ''
 ms.date: 03/30/2017
 ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.technology: dotnet-ado
-ms.tgt_pltfrm: 
+ms.reviewer: ''
+ms.suite: ''
+ms.technology:
+- dotnet-ado
+ms.tgt_pltfrm: ''
 ms.topic: article
 dev_langs:
 - csharp
 - vb
 ms.assetid: a60c30fa-1e68-45fe-b984-f6abb9ede40e
-caps.latest.revision: "2"
+caps.latest.revision: ''
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.workload: dotnet
+ms.workload:
+- dotnet
 ms.openlocfilehash: fc99fea9b722f6c3395f6bade625a09c6e97eb08
-ms.sourcegitcommit: ed26cfef4e18f6d93ab822d8c29f902cff3519d1
+ms.sourcegitcommit: c883637b41ee028786edceece4fa872939d2e64c
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 01/17/2018
+ms.lasthandoff: 03/26/2018
 ---
 # <a name="standard-query-operator-translation"></a>標準查詢運算子轉譯
 [!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)] 會將標準查詢運算子轉譯為 SQL 命令。 資料庫的查詢處理器會判斷 SQL 轉譯的執行語意。  
@@ -45,7 +47,7 @@ ms.lasthandoff: 01/17/2018
  <xref:System.Linq.Enumerable.Union%2A> 方法在定義上適用於多重集，可對多重集做未排序的串連 (其實就是 SQL 中 UNION ALL 子句的結果)。  
   
 ### <a name="take-skip"></a>Take、Skip  
- <xref:System.Linq.Enumerable.Take%2A>和<xref:System.Linq.Enumerable.Skip%2A>方法定義適用於只針對*ordered set*。 未定義適用於未排序集合或多重集的語意 (Semantics)。  
+ <xref:System.Linq.Enumerable.Take%2A> 和<xref:System.Linq.Enumerable.Skip%2A>方法定義適用於只針對*ordered set*。 未定義適用於未排序集合或多重集的語意 (Semantics)。  
   
 > [!NOTE]
 >  <xref:System.Linq.Enumerable.Take%2A> 和 <xref:System.Linq.Enumerable.Skip%2A> 在用於對 SQL Server 2000 進行的查詢中時會有一些限制。 如需詳細資訊，請參閱中的"Skip 和 Take 例外狀況在 SQL Server 2000"項目[疑難排解](../../../../../../docs/framework/data/adonet/sql/linq/troubleshooting.md)。  
@@ -105,7 +107,7 @@ ORDER BY [t0].[CustomerID]
  同樣地，轉譯整數值的 [!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)] 的 <xref:System.Linq.Enumerable.Average%2A> 時，會以 `integer` 而非 `double` 計算。  
   
 ### <a name="entity-arguments"></a>實體引數  
- [!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)]可將實體類型中使用<xref:System.Linq.Enumerable.GroupBy%2A>和<xref:System.Linq.Enumerable.OrderBy%2A>方法。 在轉譯這些運算子時，使用型別引數會視為指定該型別的所有成員。 例如，下列程式碼為對等用法：  
+ [!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)] 可將實體類型中使用<xref:System.Linq.Enumerable.GroupBy%2A>和<xref:System.Linq.Enumerable.OrderBy%2A>方法。 在轉譯這些運算子時，使用型別引數會視為指定該型別的所有成員。 例如，下列程式碼為對等用法：  
   
  [!code-csharp[DLinqSQOTranslation#2](../../../../../../samples/snippets/csharp/VS_Snippets_Data/DLinqSQOTranslation/cs/Program.cs#2)]
  [!code-vb[DLinqSQOTranslation#2](../../../../../../samples/snippets/visualbasic/VS_Snippets_Data/DLinqSQOTranslation/vb/Module1.vb#2)]  
@@ -123,7 +125,7 @@ ORDER BY [t0].[CustomerID]
   
  <xref:System.Linq.Enumerable.Except%2A>  
   
- [!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)]支援和不等比較*一般*引數，但不適用於形式或包含序列的引數。 扁平引數是一種可以對應至 SQL 資料列的型別。 如果一個或多個實體型別的投影可以透過靜態方式判斷為不含序列，則這個投影即為扁平引數。  
+ [!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)] 支援和不等比較*一般*引數，但不適用於形式或包含序列的引數。 扁平引數是一種可以對應至 SQL 資料列的型別。 如果一個或多個實體型別的投影可以透過靜態方式判斷為不含序列，則這個投影即為扁平引數。  
   
  下列是扁平引數的範例：  
   
@@ -206,7 +208,7 @@ ORDER BY [t0].[CustomerID]
  這項限制沒有解決方案。 具體來說，如果結果中含有對應至 `Distinct()` 或 `text` 資料行的成員，就不能對該結果使用 `ntext`。  
   
 ### <a name="behavior-triggered-by-nested-queries"></a>巢狀查詢觸發的行為  
- [!INCLUDE[ss2k](../../../../../../includes/ss2k-md.md)]（透過 SP4) 繫結器都有由巢狀查詢觸發的某些特性。 觸發這些特性的 SQL 查詢集就無法妥善定義。 基於這個理由，您不能定義一組[!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)]查詢可能會造成 SQL Server 例外狀況。  
+ [!INCLUDE[ss2k](../../../../../../includes/ss2k-md.md)] （透過 SP4) 繫結器都有由巢狀查詢觸發的某些特性。 觸發這些特性的 SQL 查詢集就無法妥善定義。 基於這個理由，您不能定義一組[!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)]查詢可能會造成 SQL Server 例外狀況。  
   
 ### <a name="skip-and-take-operators"></a>Skip 和 Take 運算子  
  <xref:System.Linq.Enumerable.Take%2A> 和 <xref:System.Linq.Enumerable.Skip%2A> 在用於對 [!INCLUDE[ss2k](../../../../../../includes/ss2k-md.md)] 進行的查詢中時會有一些限制。 如需詳細資訊，請參閱中的"Skip 和 Take 例外狀況在 SQL Server 2000"項目[疑難排解](../../../../../../docs/framework/data/adonet/sql/linq/troubleshooting.md)。  
@@ -236,7 +238,7 @@ ORDER BY [t0].[CustomerID]
   
     -   <xref:System.Linq.Enumerable.ToArray%2A>  
   
-## <a name="see-also"></a>請參閱  
+## <a name="see-also"></a>另請參閱  
  [參考資料](../../../../../../docs/framework/data/adonet/sql/linq/reference.md)  
  [傳回或略過序列中的項目](../../../../../../docs/framework/data/adonet/sql/linq/return-or-skip-elements-in-a-sequence.md)  
  [串連兩個序列](../../../../../../docs/framework/data/adonet/sql/linq/concatenate-two-sequences.md)  

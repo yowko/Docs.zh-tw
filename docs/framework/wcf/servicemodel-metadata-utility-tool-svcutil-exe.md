@@ -25,7 +25,7 @@ ms.openlocfilehash: ce66f98f064ec5c9460dd1909f8eb7bc44c26f76
 ms.sourcegitcommit: c883637b41ee028786edceece4fa872939d2e64c
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 03/23/2018
+ms.lasthandoff: 03/26/2018
 ---
 # <a name="servicemodel-metadata-utility-tool-svcutilexe"></a>ServiceModel 中繼資料公用程式工具 (Svcutil.exe)
 ServiceModel 中繼資料公用程式工具用於從中繼資料文件產生服務模型程式碼，以及從服務模型程式碼產生中繼資料文件。  

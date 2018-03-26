@@ -1,7 +1,7 @@
 ---
-title: "訂閱事件"
-description: "容器化 .NET 應用程式的 .NET 微服務架構 | 訂閱事件"
-keywords: "Docker, 微服務, ASP.NET, 容器"
+title: 訂閱事件
+description: 容器化 .NET 應用程式的 .NET 微服務架構 | 訂閱事件
+keywords: Docker, 微服務, ASP.NET, 容器
 author: CESARDELATORRE
 ms.author: wiwagn
 ms.date: 12/11/2017
@@ -12,10 +12,10 @@ ms.workload:
 - dotnet
 - dotnetcore
 ms.openlocfilehash: 7538c760d396349fe9b1e93a21839e3e59d7f046
-ms.sourcegitcommit: c0dd436f6f8f44dc80dc43b07f6841a00b74b23f
-ms.translationtype: HT
+ms.sourcegitcommit: c883637b41ee028786edceece4fa872939d2e64c
+ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 01/19/2018
+ms.lasthandoff: 03/26/2018
 ---
 # <a name="subscribing-to-events"></a>訂閱事件
 
@@ -302,7 +302,7 @@ namespace Microsoft.eShopOnContainers.Services.Basket.API.IntegrationEvents.Even
 
 ### <a name="additional-resources"></a>其他資源
 
--   **Honoring message idempotency (允許訊息等冪性)** (此頁面上的次標題) [*https://msdn.microsoft.com/library/jj591565.aspx*](https://msdn.microsoft.com/library/jj591565.aspx)
+-   **接受訊息等冪**（在此頁面上的子標題） [*https://msdn.microsoft.com/library/jj591565.aspx*](https://msdn.microsoft.com/library/jj591565.aspx)
 
 ## <a name="deduplicating-integration-event-messages"></a>刪除重複的整合事件訊息
 
@@ -322,63 +322,63 @@ namespace Microsoft.eShopOnContainers.Services.Basket.API.IntegrationEvents.Even
 
 ### <a name="additional-resources"></a>其他資源
 
--   **使用 NServiceBus 的分支 eShopOnContainers (Particular Software)**
+-   **分岔的 eShopOnContainers 使用 NServiceBus （特定軟體）**
     [*http://go.particular.net/eShopOnContainers*](http://go.particular.net/eShopOnContainers)
 
--   **Event-Driven Messaging (事件驅動傳訊)**
-    [*http://soapatterns.org/design\_patterns/event\_driven\_messaging*](http://soapatterns.org/design_patterns/event_driven_messaging)
+-   **事件驅動訊息**
+    [*http://soapatterns.org/design\_模式/事件\_驅動\_傳訊*](http://soapatterns.org/design_patterns/event_driven_messaging)
 
--   **Jimmy Bogard：Refactoring Towards Resilience: Evaluating Coupling (傾向復原的重構：評估結合)**
+-   **Jimmy Bogard：重構朝向彈性： 評估結合**
     [*https://jimmybogard.com/refactoring-towards-resilience-evaluating-coupling/*](https://jimmybogard.com/refactoring-towards-resilience-evaluating-coupling/)
 
--   **Publish-Subscribe channel (發行訂閱通道)**
+-   **發行-訂閱通道**
     [*http://www.enterpriseintegrationpatterns.com/patterns/messaging/PublishSubscribeChannel.html*](http://www.enterpriseintegrationpatterns.com/patterns/messaging/PublishSubscribeChannel.html)
 
--   **Communicating Between Bounded Contexts (在限定內容之間通訊)**
+-   **已繫結的內容之間的通訊**
     [*https://msdn.microsoft.com/library/jj591572.aspx*](https://msdn.microsoft.com/library/jj591572.aspx)
 
--   **Eventual consistency (最終一致性)**
-    [*https://en.wikipedia.org/wiki/Eventual\_consistency*](https://en.wikipedia.org/wiki/Eventual_consistency)
+-   **最終一致性**
+    [*https://en.wikipedia.org/wiki/Eventual\_一致性*](https://en.wikipedia.org/wiki/Eventual_consistency)
 
--   **Philip Brown：Strategies for Integrating Bounded Contexts (整合限定內容的策略)**
+-   **Philip Brown：整合策略繫結的內容**
     [*http://culttt.com/2014/11/26/strategies-integrating-bounded-contexts/*](http://culttt.com/2014/11/26/strategies-integrating-bounded-contexts/)
 
--   **Chris Richardson：Developing Transactional Microservices Using Aggregates, Event Sourcing and CQRS - Part 2 (使用彙總、事件溯源和 CQRS 開發交易式微服務 - 第二部分)**
+-   **Chris Richardson：開發使用彙總 」、 「 事件來源和 「 CQRS-第 2 部分的交易式 Microservices**
     [*https://www.infoq.com/articles/microservices-aggregates-events-cqrs-part-2-richardson*](https://www.infoq.com/articles/microservices-aggregates-events-cqrs-part-2-richardson)
 
--   **Chris Richardson：Pattern: Event sourcing (模式：事件溯源)**
+-   **Chris Richardson：事件 Sourcing 模式**
     [*http://microservices.io/patterns/data/event-sourcing.html*](http://microservices.io/patterns/data/event-sourcing.html)
 
--   **Introducing Event Sourcing (事件溯源簡介)**
+-   **簡介 事件來源**
     [*https://msdn.microsoft.com/library/jj591559.aspx*](https://msdn.microsoft.com/library/jj591559.aspx)
 
 -   **Event Store 資料庫**. 官方網站。
     [*https://geteventstore.com/*](https://geteventstore.com/)
 
--   **Patrick Nommensen：Event-Driven Data Management for Microservices (微服務的事件導向資料管理)**
+-   **Patrick Nommensen：Microservices 的事件驅動的資料管理**
     *<https://dzone.com/articles/event-driven-data-management-for-microservices-1> *
 
--   **CAP 定理**
-    [*https://en.wikipedia.org/wiki/CAP\_theorem*](https://en.wikipedia.org/wiki/CAP_theorem)
+-   **CAP 理論**
+    [*https://en.wikipedia.org/wiki/CAP\_理論*](https://en.wikipedia.org/wiki/CAP_theorem)
 
--   **What Is CAP Theorem? (什麼是 CAP 定理？)**
+-   **什麼是 CAP 理論？**
     [*https://www.quora.com/What-Is-CAP-Theorem-1*](https://www.quora.com/What-Is-CAP-Theorem-1)
 
--   **Data Consistency Primer (資料一致性入門)**
+-   **資料一致性入門**
     [*https://msdn.microsoft.com/library/dn589800.aspx*](https://msdn.microsoft.com/library/dn589800.aspx)
 
--   **Rick Saling：The CAP Theorem: Why “Everything is Different” with the Cloud and Internet (CAP 定理：為什麼雲端和網際網路的「所有一切都不同」)**
+-   **Rick Saling：CAP 理論： 原因 」 的所有項目不同"與雲端和網際網路**
     [*https://blogs.msdn.microsoft.com/rickatmicrosoft/2013/01/03/the-cap-theorem-why-everything-is-different-with-the-cloud-and-internet/*](https://blogs.msdn.microsoft.com/rickatmicrosoft/2013/01/03/the-cap-theorem-why-everything-is-different-with-the-cloud-and-internet/)
 
--   **Eric Brewer：CAP Twelve Years Later: How the "Rules" Have Changed (12 年後的 CAP：「規則」有何改變)**
+-   **Eric Brewer：CAP 十二年稍後： 如何變更 「 規則 」**
     [*https://www.infoq.com/articles/cap-twelve-years-later-how-the-rules-have-changed*](https://www.infoq.com/articles/cap-twelve-years-later-how-the-rules-have-changed)
 
--   **Participating in External (DTC) Transactions (參與外部 (DTC) 交易)** (MSMQ) [*https://msdn.microsoft.com/library/ms978430.aspx\#bdadotnetasync2\_topic3c*](https://msdn.microsoft.com/library/ms978430.aspx%23bdadotnetasync2_topic3c)
+-   **參與外部 (DTC) 交易**(MSMQ) [  *https://msdn.microsoft.com/library/ms978430.aspx \#bdadotnetasync2\_topic3c*](https://msdn.microsoft.com/library/ms978430.aspx%23bdadotnetasync2_topic3c)
 
--   **Azure 服務匯流排：Brokered Messaging: Duplicate Detection (代理傳訊：重複資料偵測)**
+-   **Azure 服務匯流排：代理訊息： 重複的偵測**
     [*https://code.msdn.microsoft.com/Brokered-Messaging-c0acea25*](https://code.msdn.microsoft.com/Brokered-Messaging-c0acea25)
 
--   **Reliability Guide (可靠性指南)** (RabbitMQ 文件) [*https://www.rabbitmq.com/reliability.html\#consumer*](https://www.rabbitmq.com/reliability.html%23consumer)
+-   **可靠性指南**（RabbitMQ 文件） [  *https://www.rabbitmq.com/reliability.html\#取用者*](https://www.rabbitmq.com/reliability.html%23consumer)
 
 
 

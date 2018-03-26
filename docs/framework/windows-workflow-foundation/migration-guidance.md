@@ -1,23 +1,24 @@
 ---
-title: "移轉指引"
-ms.custom: 
+title: 移轉指引
+ms.custom: ''
 ms.date: 03/30/2017
 ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.tgt_pltfrm: 
+ms.reviewer: ''
+ms.suite: ''
+ms.tgt_pltfrm: ''
 ms.topic: article
 ms.assetid: cb65c132-58c9-4028-b3d4-1efc71d5e60e
-caps.latest.revision: "7"
+caps.latest.revision: ''
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.workload: dotnet
+ms.workload:
+- dotnet
 ms.openlocfilehash: e04c63754960dca44558d888b8ce357220562ea7
-ms.sourcegitcommit: c0dd436f6f8f44dc80dc43b07f6841a00b74b23f
+ms.sourcegitcommit: c883637b41ee028786edceece4fa872939d2e64c
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 01/19/2018
+ms.lasthandoff: 03/26/2018
 ---
 # <a name="migration-guidance"></a>移轉指引
 在 [!INCLUDE[netfx40_short](../../../includes/netfx40-short-md.md)] 中，Microsoft 發佈了 [!INCLUDE[wf](../../../includes/wf-md.md)] 的第二個主要版本。 [!INCLUDE[wf1](../../../includes/wf1-md.md)] 是在 [!INCLUDE[vstecwinfx](../../../includes/vstecwinfx-md.md)] 中發佈 (其中包含 System.Workflow.* 命名空間中的型別；現在則是指 WF3)，並在 [!INCLUDE[netfx35_short](../../../includes/netfx35-short-md.md)] 中增強。 WF3 也是屬於[!INCLUDE[netfx40_short](../../../includes/netfx40-short-md.md)]，但有與新的工作流程技術 (System.Activities。 類型\*命名空間; 指 WF4)。 在考量何時採用 WF4 時，重要的是要先了解到：您必須控制時機。  
@@ -45,7 +46,7 @@ ms.lasthandoff: 01/19/2018
  [WF 指引： 狀態機器](http://go.microsoft.com/fwlink/?LinkId=153855)  
  討論在缺乏狀態機器活動的情況下如何建立 WF4 控制流程的模型。  
   
- 請注意，此指引只適用於以 .NET Framework 4 為目標的工作流程專案。 狀態機器工作流程已加入在含有 Platform Update 1 版本的 .NET 4.0.1 中，並且包含在 .NET Framework 4.5 中。 [!INCLUDE[crabout](../../../includes/crabout-md.md)]狀態機器工作流程中.NET 4.0.1-4.0.3 和.NET Framework 4.5，請參閱[Update 4.0.1 for Microsoft.NET Framework 4 功能](http://msdn.microsoft.com/library/de3297bd-c3e1-4126-95be-2ed7fe2a98fc)和[狀態機器工作流程](../../../docs/framework/windows-workflow-foundation/state-machine-workflows.md)。  
+ 請注意，此指引只適用於以 .NET Framework 4 為目標的工作流程專案。 狀態機器工作流程已加入在含有 Platform Update 1 版本的 .NET 4.0.1 中，並且包含在 .NET Framework 4.5 中。 [!INCLUDE[crabout](../../../includes/crabout-md.md)] 狀態機器工作流程中.NET 4.0.1-4.0.3 和.NET Framework 4.5，請參閱[Update 4.0.1 for Microsoft.NET Framework 4 功能](http://msdn.microsoft.com/library/de3297bd-c3e1-4126-95be-2ed7fe2a98fc)和[狀態機器工作流程](../../../docs/framework/windows-workflow-foundation/state-machine-workflows.md)。  
   
  [WF 移轉： 自訂活動](http://go.microsoft.com/fwlink/?LinkId=153856)  
  提供在 WF4 上重新設計 WF3 自訂活動的範例與指引。  
@@ -65,5 +66,5 @@ ms.lasthandoff: 01/19/2018
  [WF 指引： 工作流程服務](http://go.microsoft.com/fwlink/?LinkId=275564)  
  提供範例導向的逐步指示，示範如何針對全新活動的一般狀況，將實作 WF3 中建立之 Windows Communication Foundation (WCF) Web 服務 (通常稱為工作流程服務) 的工作流程，重新設計成使用 WF4。  
   
-## <a name="see-also"></a>請參閱  
+## <a name="see-also"></a>另請參閱  
  <xref:System.Activities.Statements.Interop>

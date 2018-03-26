@@ -1,7 +1,7 @@
 ---
-title: "使用 docker-compose.yml 定義多容器應用程式"
-description: "容器化 .NET 應用程式的 .NET 微服務架構 | 使用 docker-compose.yml 定義多容器應用程式"
-keywords: "Docker, 微服務, ASP.NET, 容器"
+title: 使用 docker-compose.yml 定義多容器應用程式
+description: 容器化 .NET 應用程式的 .NET 微服務架構 | 使用 docker-compose.yml 定義多容器應用程式
+keywords: Docker, 微服務, ASP.NET, 容器
 author: CESARDELATORRE
 ms.author: wiwagn
 ms.date: 10/30/2017
@@ -12,10 +12,10 @@ ms.workload:
 - dotnet
 - dotnetcore
 ms.openlocfilehash: c4fed5c7ba5c2048d103f22bd2b463c143013280
-ms.sourcegitcommit: e7f04439d78909229506b56935a1105a4149ff3d
-ms.translationtype: HT
+ms.sourcegitcommit: c883637b41ee028786edceece4fa872939d2e64c
+ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 12/23/2017
+ms.lasthandoff: 03/26/2018
 ---
 # <a name="defining-your-multi-container-application-with-docker-composeyml"></a>使用 docker-compose.yml 定義多容器應用程式 
 
@@ -434,11 +434,11 @@ Docker-compose 預期 .env 檔案中每行的格式都是 &lt;變數&gt;=&lt;值
 
 #### <a name="additional-resources"></a>其他資源
 
--   **Overview of Docker Compose**
-    [*https://docs.docker.com/compose/overview/*](https://docs.docker.com/compose/overview/) (Docker Compose 概觀)
+-   **撰寫 Docker 的概觀**
+    [*https://docs.docker.com/compose/overview/*](https://docs.docker.com/compose/overview/)
 
--   **Multiple Compose files**
-    [*https://docs.docker.com/compose/extends/\#multiple-compose-files*](https://docs.docker.com/compose/extends/#multiple-compose-files) (多個 Compose 檔案)
+-   **多個撰寫檔案**
+    [*https://docs.docker.com/compose/extends/\#多撰寫檔案*](https://docs.docker.com/compose/extends/#multiple-compose-files)
 
 ### <a name="building-optimized-aspnet-core-docker-images"></a>建置最佳化 ASP.NET Core Docker 映像
 
@@ -468,8 +468,8 @@ ENTRYPOINT ["dotnet", "run"]
 
 #### <a name="additional-resources"></a>其他資源
 
--   **Building Optimized Docker Images with ASP.NET Core**
-    [*https://blogs.msdn.microsoft.com/stevelasker/2016/09/29/building-optimized-docker-images-with-asp-net-core/*](https://blogs.msdn.microsoft.com/stevelasker/2016/09/29/building-optimized-docker-images-with-asp-net-core/) (使用 ASP.NET Core 建置最佳化 Docker 映像)
+-   **建置最佳化 ASP.NET Core 的 Docker 映像**
+    [*https://blogs.msdn.microsoft.com/stevelasker/2016/09/29/building-optimized-docker-images-with-asp-net-core/*](https://blogs.msdn.microsoft.com/stevelasker/2016/09/29/building-optimized-docker-images-with-asp-net-core/)
 
 ### <a name="building-the-application-from-a-build-ci-container"></a>從 build (CI) 容器建置應用程式
 
@@ -549,8 +549,8 @@ docker-compose build 與 docker-compose up 命令之間的差異在於 docker-co
 
 #### <a name="additional-resources"></a>其他資源
 
--   **Building bits from a container: Setting the eShopOnContainers solution up in a Windows CLI environment (dotnet CLI, Docker CLI and VS Code)**
-    [*https://github.com/dotnet/eShopOnContainers/wiki/03.-Setting-the-eShopOnContainers-solution-up-in-a-Windows-CLI-environment-(dotnet-CLI,-Docker-CLI-and-VS-Code)*](https://github.com/dotnet/eShopOnContainers/wiki/03.-Setting-the-eShopOnContainers-solution-up-in-a-Windows-CLI-environment-(dotnet-CLI,-Docker-CLI-and-VS-Code)) (從容器建置位元：在 Windows CLI 環境 (dotnet CLI、Docker CLI 和 VS Code) 中設定 eShopOnContainers 解決方案)
+-   **建立從容器的位元： Windows CLI 環境 (dotnet CLI，Docker CLI 和 VS Code) 中設定 eShopOnContainers 方案**
+    [*https://github.com/dotnet/eShopOnContainers/wiki/03.-Setting-the-eShopOnContainers-solution-up-in-a-Windows-CLI-environment-(dotnet-CLI，-Docker-CLI-和-VS-程式碼)*](https://github.com/dotnet/eShopOnContainers/wiki/03.-Setting-the-eShopOnContainers-solution-up-in-a-Windows-CLI-environment-(dotnet-CLI,-Docker-CLI-and-VS-Code))
 
 
 >[!div class="step-by-step"]

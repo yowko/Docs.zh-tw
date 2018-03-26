@@ -1,13 +1,13 @@
 ---
-title: "Ngen.exe (原生映像產生器)"
-ms.custom: 
+title: Ngen.exe (原生映像產生器)
+ms.custom: ''
 ms.date: 03/30/2017
 ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
+ms.reviewer: ''
+ms.suite: ''
 ms.technology:
 - dotnet-clr
-ms.tgt_pltfrm: 
+ms.tgt_pltfrm: ''
 ms.topic: article
 dev_langs:
 - csharp
@@ -26,17 +26,17 @@ helpviewer_keywords:
 - BypassNGenAttribute
 - System.Runtime.BypassNGenAttribute
 ms.assetid: 44bf97aa-a9a4-4eba-9a0d-cfaa6fc53a66
-caps.latest.revision: 
+caps.latest.revision: ''
 author: rpetrusha
 ms.author: ronpet
 manager: wpickett
 ms.workload:
 - dotnet
 ms.openlocfilehash: 20c120323356171d78da35a490488f4654baece6
-ms.sourcegitcommit: c0dd436f6f8f44dc80dc43b07f6841a00b74b23f
-ms.translationtype: HT
+ms.sourcegitcommit: c883637b41ee028786edceece4fa872939d2e64c
+ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 01/19/2018
+ms.lasthandoff: 03/26/2018
 ---
 # <a name="ngenexe-native-image-generator"></a>Ngen.exe (原生映像產生器)
 原生映像產生器 (Ngen.exe) 是一種可以增進 Managed 應用程式效能的工具。 Ngen.exe 會建立原生映像，也就是包含已編譯之處理器特定機器碼的檔案，然後將原生映像安裝到本機電腦上的原生映像快取中。 執行階段就可以從快取中使用原生映像，而不是使用 Just-In-Time (JIT) 編譯器來編譯原始組件。  
@@ -430,7 +430,7 @@ ngen install c:\myfiles\MyLib.dll /ExeConfig:c:\myapps\MyApp.exe
 ngen uninstall c:\myfiles\MyLib.dll /ExeConfig:c:\myapps\MyApp.exe  
 ```  
   
- 若要在全域組件快取中建立組件的原生映像，請使用組件的顯示名稱。 例如:   
+ 若要在全域組件快取中建立組件的原生映像，請使用組件的顯示名稱。 例如：  
   
 ```  
 ngen install "ClientApp, Version=1.0.0.0, Culture=neutral,   
@@ -531,8 +531,8 @@ ngen uninstall "ClientApp, Version=1.0.0.0, Culture=neutral,
   
 |工作名稱|32 位元電腦|64 位元電腦|  
 |---------------|----------------------|----------------------|  
-|NET Framework NGEN v4.0.30319|[是]|[是]|  
-|NET Framework NGEN v4.0.30319 64|否|[是]|  
+|NET Framework NGEN v4.0.30319|是|是|  
+|NET Framework NGEN v4.0.30319 64|否|是|  
   
  在 Windows 8 或更新版本上執行時，可在 .NET Framework 4.5 和更新版本中使用原生映像工作。 在舊版 Windows 中，.NET Framework 會使用 [原生映像服務][Native Image Service]。  
   
@@ -595,7 +595,7 @@ ngen executeQueuedItems
 ### <a name="service-interaction-with-clients"></a>服務與用戶端互動  
  在 .NET Framework 2.0 版中，與原生映像服務的唯一互動，是透過命令列工具 Ngen.exe。 在安裝指令碼中使用命令列工具，將原生映像服務的動作加入佇列中，並與服務互動。  
   
-## <a name="see-also"></a>請參閱  
+## <a name="see-also"></a>另請參閱  
  [工具](../../../docs/framework/tools/index.md)  
  [Managed 執行程序](../../../docs/standard/managed-execution-process.md)  
  [執行階段如何找出組件](../../../docs/framework/deployment/how-the-runtime-locates-assemblies.md)  

@@ -1,13 +1,13 @@
 ---
-title: "&lt;移除&gt;webRequestModules （網路設定） 的項目"
-ms.custom: 
+title: '&lt;移除&gt;webRequestModules （網路設定） 的項目'
+ms.custom: ''
 ms.date: 03/30/2017
 ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
+ms.reviewer: ''
+ms.suite: ''
 ms.technology:
 - dotnet-clr
-ms.tgt_pltfrm: 
+ms.tgt_pltfrm: ''
 ms.topic: article
 f1_keywords:
 - http://schemas.microsoft.com/.NetConfiguration/v2.0#configuration/system.net/webRequestModules/remove
@@ -18,7 +18,7 @@ helpviewer_keywords:
 - <remove> element, webRequestModules
 - <webRequestModules>, remove element
 ms.assetid: dd84d2fe-2f4f-457a-9d3c-441d0d21cc10
-caps.latest.revision: 
+caps.latest.revision: ''
 author: mcleblanc
 ms.author: markl
 manager: markl
@@ -67,7 +67,7 @@ ms.lasthandoff: 03/19/2018
 ## <a name="remarks"></a>備註  
  `remove`項目會移除已註冊的 Web 要求模組指定的 URI 前置詞。  
   
- 值`prefix`屬性應該是有效的 URI-例如，「 http 」 的前置字元或"http://www.contoso.com"。  
+ 值`prefix`屬性應該是有效的 URI-例如，「 http 」 的前置字元或 "http://www.contoso.com"。  
   
 ## <a name="configuration-files"></a>組態檔  
  此項目可以用於應用程式組態檔或電腦組態檔 (Machine.config)。  

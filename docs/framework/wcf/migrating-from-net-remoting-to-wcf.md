@@ -1,24 +1,26 @@
 ---
-title: "從 .NET 遠端處理移轉到 WCF"
-ms.custom: 
+title: 從 .NET 遠端處理移轉到 WCF
+ms.custom: ''
 ms.date: 03/30/2017
 ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.technology: dotnet-clr
-ms.tgt_pltfrm: 
+ms.reviewer: ''
+ms.suite: ''
+ms.technology:
+- dotnet-clr
+ms.tgt_pltfrm: ''
 ms.topic: article
 ms.assetid: 16902a42-ef80-40e9-8c4c-90e61ddfdfe5
-caps.latest.revision: "4"
+caps.latest.revision: ''
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.workload: dotnet
+ms.workload:
+- dotnet
 ms.openlocfilehash: 6b387e100ff881c5394b6a77716a733b3928eae9
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.sourcegitcommit: c883637b41ee028786edceece4fa872939d2e64c
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 03/26/2018
 ---
 # <a name="migrating-from-net-remoting-to-wcf"></a>從 .NET 遠端處理移轉到 WCF
 此文章說明如何將使用 .NET 遠端處理的應用程式移轉為使用 Windows Communication Foundation (WCF)。 此文章會先比較這這些產品的類似概念，再說明如何在 WCF 中完成幾個常見的遠端處理案例。  
@@ -34,7 +36,7 @@ ms.lasthandoff: 12/22/2017
 |服務作業|伺服器類型的公用方法|以 [OperationContract] 屬性標記|  
 |序列化|ISerializable 或 [Serializable]|DataContractSerializer 或 XmlSerializer|  
 |已傳遞的物件|傳值或傳址|僅限傳值|  
-|錯誤/例外狀況|任何可序列化的例外狀況|FaultContract\<TDetail >|  
+|錯誤/例外狀況|任何可序列化的例外狀況|FaultContract\<TDetail>|  
 |用戶端 Proxy 物件|強型別 Transparent Proxy 是從 MarshalByRefObjects 自動建立|產生強型別的 proxy 是隨使用 ChannelFactory\<TChannel >|  
 |所需的平台|用戶端和伺服器都必須使用 Microsoft 作業系統與 .NET|跨平台|  
 |訊息格式|Private|業界標準 (SOAP、WS-* 等)|  

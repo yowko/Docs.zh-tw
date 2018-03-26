@@ -1,24 +1,26 @@
 ---
 title: '&lt;webHttpBinding&gt;'
-ms.custom: 
+ms.custom: ''
 ms.date: 03/30/2017
 ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.technology: dotnet-clr
-ms.tgt_pltfrm: 
+ms.reviewer: ''
+ms.suite: ''
+ms.technology:
+- dotnet-clr
+ms.tgt_pltfrm: ''
 ms.topic: article
 ms.assetid: 84179d77-825d-44b9-895a-ab08e7aa044d
-caps.latest.revision: "13"
+caps.latest.revision: ''
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.workload: dotnet
+ms.workload:
+- dotnet
 ms.openlocfilehash: 0eb39fe234664b5ef5ffb604090191db14e8d751
-ms.sourcegitcommit: c0dd436f6f8f44dc80dc43b07f6841a00b74b23f
+ms.sourcegitcommit: c883637b41ee028786edceece4fa872939d2e64c
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 01/19/2018
+ms.lasthandoff: 03/26/2018
 ---
 # <a name="ltwebhttpbindinggt"></a>&lt;webHttpBinding&gt;
 定義繫結項目，用於設定 [!INCLUDE[indigo1](../../../../../includes/indigo1-md.md)] Web 服務回應 HTTP 要求 (而非 SOAP 訊息) 時的端點。  
@@ -84,7 +86,7 @@ ms.lasthandoff: 01/19/2018
 |useDefaultWebProxy|布林值，指定是否使用系統自動設定的 HTTP Proxy。 預設為 `true`。|  
 |writeEncoding|指定用於訊息文字的字元編碼。 有效值包括以下的值：<br /><br /> UnicodeFffeTextEncoding：Unicode BigEndian 編碼方式。<br /><br /> Utf16TextEncoding：16 位元編碼方式。<br /><br /> Utf8TextEncoding：8 位元編碼方式。<br /><br /> 預設為 Utf8TextEncoding。|  
   
-### <a name="child-elements"></a>子元素  
+### <a name="child-elements"></a>子項目  
   
 |項目|描述|  
 |-------------|-----------------|  
@@ -102,7 +104,7 @@ ms.lasthandoff: 01/19/2018
   
  [!INCLUDE[indigo2](../../../../../includes/indigo2-md.md)] 中對於新聞訂閱和 ASP.AJAX 整合的支援都是建置於 Web 程式設計模型的頂端。 如需有關模型的詳細資訊，請參閱[WCF Web HTTP 程式設計模型](../../../../../docs/framework/wcf/feature-details/wcf-web-http-programming-model.md)。  
   
-## <a name="see-also"></a>請參閱  
+## <a name="see-also"></a>另請參閱  
  <xref:System.ServiceModel.WebHttpBinding>  
  <xref:System.ServiceModel.Configuration.WebHttpBindingElement>  
  [WCF Web HTTP 程式設計模型](../../../../../docs/framework/wcf/feature-details/wcf-web-http-programming-model.md)  

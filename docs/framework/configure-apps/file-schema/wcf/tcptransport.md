@@ -1,33 +1,35 @@
 ---
 title: '&lt;tcpTransport&gt;'
-ms.custom: 
+ms.custom: ''
 ms.date: 03/30/2017
 ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.technology: dotnet-clr
-ms.tgt_pltfrm: 
+ms.reviewer: ''
+ms.suite: ''
+ms.technology:
+- dotnet-clr
+ms.tgt_pltfrm: ''
 ms.topic: article
 ms.assetid: 8fcd18c1-9958-42e7-b442-7903f7bdb563
-caps.latest.revision: "18"
+caps.latest.revision: ''
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.workload: dotnet
+ms.workload:
+- dotnet
 ms.openlocfilehash: 9f534bab962e83f76dab7e411cc3c2ca14779df9
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.sourcegitcommit: c883637b41ee028786edceece4fa872939d2e64c
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 03/26/2018
 ---
 # <a name="lttcptransportgt"></a>&lt;tcpTransport&gt;
 定義 TCP 傳輸，通道可使用此傳輸來傳輸自訂繫結的訊息。  
   
- \<system.serviceModel >  
-\<繫結 >  
-\<customBinding >  
-\<繫結 >  
-\<tcpTransport >  
+ \<system.serviceModel>  
+\<bindings>  
+\<customBinding>  
+\<binding>  
+\<tcpTransport>  
   
 ## <a name="syntax"></a>語法  
   
@@ -56,7 +58,7 @@ ms.lasthandoff: 12/22/2017
 ```  
   
 ## <a name="attributes-and-elements"></a>屬性和項目  
- 下列章節說明屬性、子項目和父項目。  
+ 下列各節描述屬性、子項目和父項目。  
   
 ### <a name="attributes"></a>屬性  
   
@@ -78,21 +80,21 @@ ms.lasthandoff: 12/22/2017
 |transferMode|取得或設定值，這個值表示訊息是否使用連線導向傳輸進行緩衝或資料流處理。|  
 |connectionPoolSettings|為具名管道繫結指定其他連線集區設定。|  
   
-### <a name="child-elements"></a>子元素  
+### <a name="child-elements"></a>子項目  
  無  
   
 ### <a name="parent-elements"></a>父項目  
   
 |項目|描述|  
 |-------------|-----------------|  
-|[\<繫結 >](../../../../../docs/framework/misc/binding.md)|定義自訂繫結的所有繫結功能。|  
+|[\<binding>](../../../../../docs/framework/misc/binding.md)|定義自訂繫結的所有繫結功能。|  
   
 ## <a name="remarks"></a>備註  
  這個傳輸會使用以下格式的 URI "net.tcp://hostname:port/path"。 其他 URI 元件是選擇性的。  
   
  `tcpTransport` 項目是在建立自訂繫結時的起點，該繫結會實作 TCP 傳輸通訊協定。 這個傳輸已針對 WCF 至 WCF 的通訊最佳化。  
   
-## <a name="see-also"></a>請參閱  
+## <a name="see-also"></a>另請參閱  
  <xref:System.ServiceModel.Configuration.TcpTransportElement>  
  <xref:System.ServiceModel.Channels.TcpTransportBindingElement>  
  <xref:System.ServiceModel.Channels.TransportBindingElement>  
@@ -102,4 +104,4 @@ ms.lasthandoff: 12/22/2017
  [繫結](../../../../../docs/framework/wcf/bindings.md)  
  [擴充繫結](../../../../../docs/framework/wcf/extending/extending-bindings.md)  
  [自訂繫結](../../../../../docs/framework/wcf/extending/custom-bindings.md)  
- [\<customBinding >](../../../../../docs/framework/configure-apps/file-schema/wcf/custombinding.md)
+ [\<customBinding>](../../../../../docs/framework/configure-apps/file-schema/wcf/custombinding.md)

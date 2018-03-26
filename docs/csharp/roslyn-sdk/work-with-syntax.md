@@ -1,6 +1,6 @@
 ---
-title: "使用 .NET Compiler Platform SDK 語法模型"
-description: "此概觀說明您使用的類型，以了解與管理語法節點。"
+title: 使用 .NET Compiler Platform SDK 語法模型
+description: 此概觀說明您使用的類型，以了解與管理語法節點。
 author: billwagner
 ms.author: wiwagn
 ms.date: 10/15/2017
@@ -9,10 +9,10 @@ ms.prod: .net
 ms.devlang: devlang-csharp
 ms.custom: mvc
 ms.openlocfilehash: 09d07e6257ad7d32d75328a8c1850888b4d0b937
-ms.sourcegitcommit: 099aa20d9b6450d1b7452d782a55771a6ad8ff35
-ms.translationtype: HT
+ms.sourcegitcommit: c883637b41ee028786edceece4fa872939d2e64c
+ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 02/05/2018
+ms.lasthandoff: 03/26/2018
 ---
 # <a name="work-with-syntax"></a>使用語法
 
@@ -69,7 +69,7 @@ ms.lasthandoff: 02/05/2018
 
 每個節點、權杖或邏輯都知道其在原始程式文字內的位置及其組成字元數。 文字位置是以 32 位元的整數表示，也就是以零起始的 `char` 索引。 <xref:Microsoft.CodeAnalysis.Text.TextSpan> 物件是起始位置和字元計數，兩個都以整數表示。 如果 <xref:Microsoft.CodeAnalysis.Text.TextSpan> 長度為零，即指兩個字元之間的位置。
 
-每個節點都有兩個 <xref:Microsoft.CodeAnalysis.Text.TextSpan> 屬性：<xref:Microsoft.CodeAnalysis.SyntaxNode.Span*> 和 <xref:Microsoft.CodeAnalysis.SyntaxNode.FullSpan*>。 
+每個節點有兩個<xref:Microsoft.CodeAnalysis.Text.TextSpan>屬性：<xref:Microsoft.CodeAnalysis.SyntaxNode.Span*>和<xref:Microsoft.CodeAnalysis.SyntaxNode.FullSpan*>。 
 
 <xref:Microsoft.CodeAnalysis.SyntaxNode.Span*> 屬性是從節點子樹狀結構的第一個權杖開頭到最後一個權杖結尾的文字。 此範圍不包含任何開頭或尾端邏輯。
 
@@ -89,7 +89,7 @@ ms.lasthandoff: 02/05/2018
 
 ## <a name="kinds"></a>種類
 
-每個節點、權杖或邏輯都有 <xref:System.Int32?displayProperty=nameWithType> 類型的 <xref:Microsoft.CodeAnalysis.SyntaxNode.RawKind?displayProperty=nameWithType> 屬性，可識別所代表的確切語法項目。 這個值可以轉換成特定語言的列舉。每種語言，C# 或 VB，都有單一 `SyntaxKind` 列舉 (分別是 <xref:Microsoft.CodeAnalysis.CSharp.SyntaxKind?displayProperty=nameWithType> 和 <xref:Microsoft.CodeAnalysis.VisualBasic.SyntaxKind?displayProperty=nameWithType>)，會列出文法中所有可能的節點、權杖和邏輯項目。 存取 <xref:Microsoft.CodeAnalysis.CSharp.CSharpExtensions.Kind*?displayProperty=nameWithType> 或 <xref:Microsoft.CodeAnalysis.VisualBasic.VisualBasicExtensions.Kind*?displayProperty=nameWithType> 擴充方法可自動完成此轉換。
+每個節點、權杖或邏輯都有 <xref:System.Int32?displayProperty=nameWithType> 類型的 <xref:Microsoft.CodeAnalysis.SyntaxNode.RawKind?displayProperty=nameWithType> 屬性，可識別所代表的確切語法項目。 這個值可以轉換成特定語言的列舉。每種語言，C# 或 VB，都有單一 `SyntaxKind` 列舉 (分別是 <xref:Microsoft.CodeAnalysis.CSharp.SyntaxKind?displayProperty=nameWithType> 和 <xref:Microsoft.CodeAnalysis.VisualBasic.SyntaxKind?displayProperty=nameWithType>)，會列出文法中所有可能的節點、權杖和邏輯項目。 可以自動完成這項轉換，藉由存取<xref:Microsoft.CodeAnalysis.CSharp.CSharpExtensions.Kind*?displayProperty=nameWithType>或<xref:Microsoft.CodeAnalysis.VisualBasic.VisualBasicExtensions.Kind*?displayProperty=nameWithType>擴充方法。
 
 <xref:Microsoft.CodeAnalysis.SyntaxToken.RawKind> 屬性允許共用相同節點類別的語法節點類型簡單去除混淆。 對權杖和邏輯而言，這個屬性是區別某項目類型的唯一方式。 
 

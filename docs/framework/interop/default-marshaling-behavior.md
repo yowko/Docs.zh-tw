@@ -1,13 +1,13 @@
 ---
-title: "預設的封送處理行為"
-ms.custom: 
+title: 預設的封送處理行為
+ms.custom: ''
 ms.date: 03/30/2017
 ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
+ms.reviewer: ''
+ms.suite: ''
 ms.technology:
 - dotnet-clr
-ms.tgt_pltfrm: 
+ms.tgt_pltfrm: ''
 ms.topic: article
 dev_langs:
 - csharp
@@ -17,17 +17,17 @@ helpviewer_keywords:
 - interoperation with unmanaged code, marshaling
 - marshaling behavior
 ms.assetid: c0a9bcdf-3df8-4db3-b1b6-abbdb2af809a
-caps.latest.revision: 
+caps.latest.revision: ''
 author: rpetrusha
 ms.author: ronpet
 manager: wpickett
 ms.workload:
 - dotnet
 ms.openlocfilehash: f0a8fcba31ddfa09ca60f8ba6cf08d20b270c3da
-ms.sourcegitcommit: 1c0b0f082b3f300e54b4d069b317ac724c88ddc3
+ms.sourcegitcommit: c883637b41ee028786edceece4fa872939d2e64c
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 03/16/2018
+ms.lasthandoff: 03/26/2018
 ---
 # <a name="default-marshaling-behavior"></a>預設的封送處理行為
 Interop 封送處理會依據規則作業，這些規則指定與方法參數關聯的資料在 Managed 和 Unmanaged 記憶體之間傳遞時的運作方式。 這些內建規則會將這類封送處理活動當做資料類型轉換來控制；控制被呼叫端是否可以變更收到的資料，並將這些變更傳回給呼叫端；以及控制在哪些情況下，封送處理器會提供效能最佳化。  

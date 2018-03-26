@@ -1,33 +1,35 @@
 ---
 title: '&lt;httpsTransport&gt;'
-ms.custom: 
+ms.custom: ''
 ms.date: 03/30/2017
 ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.technology: dotnet-clr
-ms.tgt_pltfrm: 
+ms.reviewer: ''
+ms.suite: ''
+ms.technology:
+- dotnet-clr
+ms.tgt_pltfrm: ''
 ms.topic: article
 ms.assetid: f6ed4bc0-7e38-4348-9259-30bf61eb9435
-caps.latest.revision: "12"
+caps.latest.revision: ''
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.workload: dotnet
+ms.workload:
+- dotnet
 ms.openlocfilehash: 78b0cc2dd260b773c29b8684ab94bfaa0afffff2
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.sourcegitcommit: c883637b41ee028786edceece4fa872939d2e64c
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 03/26/2018
 ---
 # <a name="lthttpstransportgt"></a>&lt;httpsTransport&gt;
 指定 HTTP 傳輸，以傳輸自訂繫結的 SOAP 訊息。  
   
- \<system.serviceModel >  
-\<繫結 >  
-\<customBinding >  
-\<繫結 >  
-\<httpsTransport >  
+ \<system.serviceModel>  
+\<bindings>  
+\<customBinding>  
+\<binding>  
+\<httpsTransport>  
   
 ## <a name="syntax"></a>語法  
   
@@ -51,7 +53,7 @@ ms.lasthandoff: 12/22/2017
 ```  
   
 ## <a name="attributes-and-elements"></a>屬性和項目  
- 下列章節說明屬性、子項目和父項目。  
+ 下列各節描述屬性、子項目和父項目。  
   
 ### <a name="attributes"></a>屬性  
   
@@ -67,25 +69,25 @@ ms.lasthandoff: 12/22/2017
 |maxReceivedMessageSize|正整數，指定可接收的可允許訊息大小上限。 預設值為 65536。|  
 |proxyAddress|指定 HTTP Proxy 位址的 URI。 如果 `useSystemWebProxy` 為 `true`，則這項設定必須為 `null`。 預設為 `null`。|  
 |proxyAuthenticationScheme|指定通訊協定，用於驗證由 HTTP Proxy 處理的用戶端要求。 有效值包括以下的值：<br /><br /> -無： 未執行驗證。<br />-Digest： 指定摘要式驗證。<br />-Negotiate： 與用戶端決定驗證配置進行交涉。 如果用戶端和伺服器都支援 Kerberos，就使用它，否則使用 NTLM。<br />-Ntlm： 指定 NTLM 驗證。<br />-基本： 指定基本驗證。<br />匿名： 指定匿名驗證。<br />-IntegratedWindowsAuthentication： 指定 Windows 驗證。<br /><br /> 預設值為 Anonymous。 此屬性的型別為 <xref:System.Net.AuthenticationSchemes>。|  
-|realm|字串，指定在 Proxy/伺服器上使用的領域。 預設為空字串。<br /><br /> 伺服器使用領域來分割受保護的資源。 每個分割都可以有自己的驗證配置和 (或) 授權資料庫。 領域只限於基本和摘要式驗證使用。 當用戶端成功驗證之後，驗證對指定領域中的所有資源都有效。 如需領域的詳細說明，請參閱 RFC 2617，網址為 http://www.ietf.org。|  
+|realm|字串，指定在 Proxy/伺服器上使用的領域。 預設為空字串。<br /><br /> 伺服器使用領域來分割受保護的資源。 每個分割都可以有自己的驗證配置和 (或) 授權資料庫。 領域只限於基本和摘要式驗證使用。 當用戶端成功驗證之後，驗證對指定領域中的所有資源都有效。 領域的詳細說明，請參閱 RFC 2617 在http://www.ietf.org。|  
 |requireClientCertificate|布林值，指定伺服器是否需要用戶端提供用戶端憑證做為 HTTPS 信號交換的一部分。 預設為 `false`。|  
 |transferMode|指定訊息是否要經過緩衝處理或資料流處理，或為要求或回應。 有效值包括以下的值：<br /><br /> 緩衝： 緩衝要求和回應訊息。<br />資料流： 進行串流的要求和回應訊息。<br />-StreamedRequest： 要求訊息資料流處理，並緩衝處理回應訊息。<br />-StreamedResponse： 緩衝處理要求訊息和回應訊息資料流處理。<br /><br /> 預設為 Buffered。 此屬性的型別為 <xref:System.ServiceModel.TransferMode>。|  
 |unsafeConnectionNtlmAuthentication|布林值，指定是否已在伺服器啟用「不安全的連線共用」。 預設為 `false`。 如果已啟用，NTLM 驗證會在各 TCP 連線上執行一次。|  
-|useDefaultWebProxy|布林值，指定是否使用整部機器 Proxy 設定而非使用者特定設定。 預設為 `true`。|  
+|useDefaultWebProxy|布林值，指定是否使用整部機器 Proxy 設定而非使用者特定設定。 預設值為 `true`。|  
   
-### <a name="child-elements"></a>子元素  
+### <a name="child-elements"></a>子項目  
  無。  
   
 ### <a name="parent-elements"></a>父項目  
   
 |項目|描述|  
 |-------------|-----------------|  
-|[\<繫結 >](../../../../../docs/framework/misc/binding.md)|定義自訂繫結的所有繫結功能。|  
+|[\<binding>](../../../../../docs/framework/misc/binding.md)|定義自訂繫結的所有繫結功能。|  
   
 ## <a name="remarks"></a>備註  
  `httpsTransport` 項目是建立自訂繫結時的起點，此繫結會實作 HTTPS 傳輸通訊協定。 HTTPS 是用於安全互通性目的的主要傳輸。 HTTPS 是由 [!INCLUDE[indigo1](../../../../../includes/indigo1-md.md)] 支援，可確保與其他 Web 服務堆疊之間的互通性。  
   
-## <a name="see-also"></a>請參閱  
+## <a name="see-also"></a>另請參閱  
  <xref:System.ServiceModel.Configuration.HttpsTransportElement>  
  <xref:System.ServiceModel.Channels.HttpsTransportBindingElement>  
  <xref:System.ServiceModel.Channels.TransportBindingElement>  
@@ -95,4 +97,4 @@ ms.lasthandoff: 12/22/2017
  [繫結](../../../../../docs/framework/wcf/bindings.md)  
  [擴充繫結](../../../../../docs/framework/wcf/extending/extending-bindings.md)  
  [自訂繫結](../../../../../docs/framework/wcf/extending/custom-bindings.md)  
- [\<customBinding >](../../../../../docs/framework/configure-apps/file-schema/wcf/custombinding.md)
+ [\<customBinding>](../../../../../docs/framework/configure-apps/file-schema/wcf/custombinding.md)

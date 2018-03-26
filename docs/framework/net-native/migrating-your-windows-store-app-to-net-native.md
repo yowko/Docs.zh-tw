@@ -1,24 +1,26 @@
 ---
-title: "將您的 Windows 市集應用程式移轉至 .NET Native"
-ms.custom: 
+title: 將您的 Windows 市集應用程式移轉至 .NET Native
+ms.custom: ''
 ms.date: 03/30/2017
 ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.technology: dotnet-clr
-ms.tgt_pltfrm: 
+ms.reviewer: ''
+ms.suite: ''
+ms.technology:
+- dotnet-clr
+ms.tgt_pltfrm: ''
 ms.topic: article
 ms.assetid: 4153aa18-6f56-4a0a-865b-d3da743a1d05
-caps.latest.revision: "29"
+caps.latest.revision: ''
 author: rpetrusha
 ms.author: ronpet
 manager: wpickett
-ms.workload: dotnet
+ms.workload:
+- dotnet
 ms.openlocfilehash: ce23d66f79f94af74250cff137499f6c8b1582ac
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.sourcegitcommit: c883637b41ee028786edceece4fa872939d2e64c
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 03/26/2018
 ---
 # <a name="migrating-your-windows-store-app-to-net-native"></a>將您的 Windows 市集應用程式移轉至 .NET Native
 [!INCLUDE[net_native](../../../includes/net-native-md.md)] 在 Windows 市集或開發人員的電腦上提供應用程式的靜態編譯。 這不同於 just-in-time (JIT) 編譯器或裝置上的 [原生映像產生器 (Ngen.exe)](../../../docs/framework/tools/ngen-exe-native-image-generator.md) 為 Windows 市集應用程式執行的動態編譯。 儘管有所差異， [!INCLUDE[net_native](../../../includes/net-native-md.md)] 還是會嘗試維持與 [適用於 Windows 市集應用程式的 .NET](http://msdn.microsoft.com/library/windows/apps/br230302.aspx)的相容性。 大多數的情況下，在適用於 Windows 市集應用程式的 .NET 上運作的項目也會使用 [!INCLUDE[net_native](../../../includes/net-native-md.md)]。  不過，在某些情況下，您可能會遇到行為上的變更。 本文件將在下列區域討論適用於 Windows 市集應用程式的標準 .NET 與 [!INCLUDE[net_native](../../../includes/net-native-md.md)] 之間的這些差異：  
@@ -166,7 +168,7 @@ ms.lasthandoff: 12/22/2017
   
 -   <xref:System.DateTime.Parse%2A?displayProperty=nameWithType> 方法會正確剖析在 [!INCLUDE[net_native](../../../includes/net-native-md.md)] 中包含簡短日期的字串。 不過，它不會維護 Microsoft 知識庫文章 [KB2803771](http://support.microsoft.com/kb/2803771) 和 [KB2803755](http://support.microsoft.com/kb/2803755)中描述之日期和時間剖析變更的相容性。  
   
--   <xref:System.Numerics.BigInteger.ToString%2A?displayProperty=nameWithType>`("E")`中正確地四捨五入[!INCLUDE[net_native](../../../includes/net-native-md.md)]。 在某些版本的 CLR 中，會將結果字串無條件捨去，而不是四捨五入。  
+-   <xref:System.Numerics.BigInteger.ToString%2A?displayProperty=nameWithType> `("E")` 將會正確地四捨五入至[!INCLUDE[net_native](../../../includes/net-native-md.md)]。 在某些版本的 CLR 中，會將結果字串無條件捨去，而不是四捨五入。  
   
 <a name="HttpClient"></a>   
 ### <a name="httpclient-differences"></a>HttpClient 差異  
@@ -230,7 +232,7 @@ ms.lasthandoff: 12/22/2017
 |<xref:System.Runtime.InteropServices.UnmanagedType.SafeArray?displayProperty=nameWithType>|  
 |<xref:System.Runtime.InteropServices.VarEnum?displayProperty=nameWithType>|  
   
- <xref:System.Runtime.InteropServices.UnmanagedType.Struct?displayProperty=nameWithType>支援時，它就會擲回例外狀況，請在某些情況下，例如當搭配使用，但[IDispatch](http://msdn.microsoft.com/library/windows/apps/ms221608.aspx)或 byref 變異數。  
+ <xref:System.Runtime.InteropServices.UnmanagedType.Struct?displayProperty=nameWithType> 支援時，它就會擲回例外狀況，請在某些情況下，例如當搭配使用，但[IDispatch](http://msdn.microsoft.com/library/windows/apps/ms221608.aspx)或 byref 變異數。  
   
  [IDispatch](http://msdn.microsoft.com/library/windows/apps/ms221608.aspx) 被取代API 的支援：  
   
@@ -683,7 +685,7 @@ ms.lasthandoff: 12/22/2017
   
  不支援為 Windows 市集應用程式在單元測試程式庫上啟用 [!INCLUDE[net_native](../../../includes/net-native-md.md)] ，而且這麼做會導致專案無法建置。  
   
-## <a name="see-also"></a>請參閱  
+## <a name="see-also"></a>另請參閱  
  [快速入門](../../../docs/framework/net-native/getting-started-with-net-native.md)  
  [執行階段指示詞 (rd.xml) 組態檔參考](../../../docs/framework/net-native/runtime-directives-rd-xml-configuration-file-reference.md)  
  [適用於 Windows 市集應用程式的概觀](http://msdn.microsoft.com/library/windows/apps/br230302.aspx)  

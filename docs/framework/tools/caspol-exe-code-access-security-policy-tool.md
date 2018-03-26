@@ -1,12 +1,13 @@
 ---
-title: "Caspol.exe (程式碼存取安全性原則工具)"
-ms.custom: 
+title: Caspol.exe (程式碼存取安全性原則工具)
+ms.custom: ''
 ms.date: 03/30/2017
 ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.technology: dotnet-clr
-ms.tgt_pltfrm: 
+ms.reviewer: ''
+ms.suite: ''
+ms.technology:
+- dotnet-clr
+ms.tgt_pltfrm: ''
 ms.topic: article
 helpviewer_keywords:
 - permission sets, modifying security policy
@@ -22,16 +23,17 @@ helpviewer_keywords:
 - security policy [.NET Framework], modifying
 - manually editing security configuration files
 ms.assetid: d2bf6123-7b0c-4e60-87ad-a39a1c3eb2e0
-caps.latest.revision: "44"
+caps.latest.revision: ''
 author: rpetrusha
 ms.author: ronpet
 manager: wpickett
-ms.workload: dotnet
+ms.workload:
+- dotnet
 ms.openlocfilehash: 6ab363e833ecde86a17d9adea3fcd26351725868
-ms.sourcegitcommit: c0dd436f6f8f44dc80dc43b07f6841a00b74b23f
-ms.translationtype: HT
+ms.sourcegitcommit: c883637b41ee028786edceece4fa872939d2e64c
+ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 01/19/2018
+ms.lasthandoff: 03/26/2018
 ---
 # <a name="caspolexe-code-access-security-policy-tool"></a>Caspol.exe (程式碼存取安全性原則工具)
 程式碼存取安全性 (CAS) 原則工具 (Caspol.exe) 可以讓使用者和系統管理員修改電腦原則層級、使用者原則層級和企業原則層級的安全性原則。  
@@ -255,6 +257,6 @@ caspol -customall "c:\config_test\security.config" -resolvegroup myassembly
 caspol -all -resolveperm testassembly  
 ```  
   
-## <a name="see-also"></a>請參閱  
+## <a name="see-also"></a>另請參閱  
  [工具](../../../docs/framework/tools/index.md)  
  [命令提示字元](../../../docs/framework/tools/developer-command-prompt-for-vs.md)

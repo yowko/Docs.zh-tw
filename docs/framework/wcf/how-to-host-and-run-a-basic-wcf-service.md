@@ -1,8 +1,9 @@
 ---
-title: "HOW TO：裝載和執行基本 Windows Communication Foundation 服務"
+title: HOW TO：裝載和執行基本 Windows Communication Foundation 服務
 ms.date: 03/30/2017
 ms.prod: .net-framework
-ms.technology: dotnet-clr
+ms.technology:
+- dotnet-clr
 ms.topic: article
 dev_langs:
 - csharp
@@ -14,12 +15,13 @@ ms.assetid: 31774d36-923b-4e2d-812e-aa190127266f
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.workload: dotnet
+ms.workload:
+- dotnet
 ms.openlocfilehash: 1e1c00abfec36622f5da493165259fb1786ab8d6
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.sourcegitcommit: c883637b41ee028786edceece4fa872939d2e64c
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 03/26/2018
 ---
 # <a name="how-to-host-and-run-a-basic-windows-communication-foundation-service"></a>HOW TO：裝載和執行基本 Windows Communication Foundation 服務
 這是在建立 [!INCLUDE[indigo1](../../../includes/indigo1-md.md)] 應用程式時必須進行的六個工作中的第三個。 六個工作的概觀，請參閱[入門教學課程](../../../docs/framework/wcf/getting-started-tutorial.md)主題。  
@@ -422,10 +424,10 @@ End Module
 ```  
   
 > [!NOTE]
->  此類服務需要權限才能將 HTTP 位址註冊到電腦上，以便接聽。 系統管理員帳戶具有此權限，但是非系統管理員帳戶則必須被授與 HTTP 命名空間的權限。 [!INCLUDE[crabout](../../../includes/crabout-md.md)]如何設定命名空間保留區，請參閱[設定 HTTP 和 HTTPS](../../../docs/framework/wcf/feature-details/configuring-http-and-https.md)。 在 [!INCLUDE[vs_current_short](../../../includes/vs-current-short-md.md)] 下執行時，必須以系統管理員權限的身分執行 service.exe。  
+>  此類服務需要權限才能將 HTTP 位址註冊到電腦上，以便接聽。 系統管理員帳戶具有此權限，但是非系統管理員帳戶則必須被授與 HTTP 命名空間的權限。 [!INCLUDE[crabout](../../../includes/crabout-md.md)] 如何設定命名空間保留區，請參閱[設定 HTTP 和 HTTPS](../../../docs/framework/wcf/feature-details/configuring-http-and-https.md)。 在 [!INCLUDE[vs_current_short](../../../includes/vs-current-short-md.md)] 下執行時，必須以系統管理員權限的身分執行 service.exe。  
   
  服務目前正在執行中。 若要繼續[How to： 建立用戶端](../../../docs/framework/wcf/how-to-create-a-wcf-client.md)。 如需疑難排解資訊，請參閱[疑難排解入門教學課程](../../../docs/framework/wcf/troubleshooting-the-getting-started-tutorial.md)。  
   
-## <a name="see-also"></a>請參閱  
+## <a name="see-also"></a>另請參閱  
  [快速入門](../../../docs/framework/wcf/samples/getting-started-sample.md)  
  [自我裝載](../../../docs/framework/wcf/samples/self-host.md)

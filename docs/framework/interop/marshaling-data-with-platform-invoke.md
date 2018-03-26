@@ -1,13 +1,13 @@
 ---
-title: "使用平台叫用封送處理資料"
-ms.custom: 
+title: 使用平台叫用封送處理資料
+ms.custom: ''
 ms.date: 03/30/2017
 ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
+ms.reviewer: ''
+ms.suite: ''
 ms.technology:
 - dotnet-clr
-ms.tgt_pltfrm: 
+ms.tgt_pltfrm: ''
 ms.topic: article
 dev_langs:
 - cpp
@@ -16,17 +16,17 @@ helpviewer_keywords:
 - data marshaling, platform invoke
 - marshaling, platform invoke
 ms.assetid: dc5c76cf-7b12-406f-b79c-d1a023ec245d
-caps.latest.revision: 
+caps.latest.revision: ''
 author: rpetrusha
 ms.author: ronpet
 manager: wpickett
 ms.workload:
 - dotnet
 ms.openlocfilehash: 24ae6da0b32cf15ee9104bd10ba5fe6bb03a9763
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.sourcegitcommit: c883637b41ee028786edceece4fa872939d2e64c
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 03/26/2018
 ---
 # <a name="marshaling-data-with-platform-invoke"></a>使用平台叫用封送處理資料
 若要呼叫從 Unmanaged 程式庫匯出的函式，.NET Framework 應用程式需要代表此 Unmanaged 函式之 Managed 程式碼中的函式原型。 若要建立使平台叫用正確地封送處理資料的原型，您必須執行下列動作：  

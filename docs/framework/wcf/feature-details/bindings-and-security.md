@@ -1,12 +1,13 @@
 ---
-title: "繫結和安全性"
-ms.custom: 
+title: 繫結和安全性
+ms.custom: ''
 ms.date: 03/30/2017
 ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.technology: dotnet-clr
-ms.tgt_pltfrm: 
+ms.reviewer: ''
+ms.suite: ''
+ms.technology:
+- dotnet-clr
+ms.tgt_pltfrm: ''
 ms.topic: article
 helpviewer_keywords:
 - bindings [WCF], security
@@ -14,28 +15,29 @@ helpviewer_keywords:
 - Windows Communication Foundation, security
 - bindings [WCF]
 ms.assetid: 4de03dd3-968a-4e65-af43-516e903d7f95
-caps.latest.revision: "42"
+caps.latest.revision: ''
 author: BrucePerlerMS
 ms.author: bruceper
 manager: mbaldwin
-ms.workload: dotnet
+ms.workload:
+- dotnet
 ms.openlocfilehash: 9e44db963a696f22f91569eb3d7c2956289a9c76
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.sourcegitcommit: c883637b41ee028786edceece4fa872939d2e64c
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 03/26/2018
 ---
 # <a name="bindings-and-security"></a>繫結和安全性
 包含在 [!INCLUDE[indigo1](../../../../includes/indigo1-md.md)] 內之系統提供的繫結，提供了一種快速設計 [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] 應用程式的方法。 除了一個例外狀況以外，所有繫結預設都會啟用安全性配置。 本主題將根據您的安全性需求，協助您選取正確的繫結。  
   
- 如需[!INCLUDE[indigo2](../../../../includes/indigo2-md.md)]安全性，請參閱[安全性概觀](../../../../docs/framework/wcf/feature-details/security-overview.md)。 [!INCLUDE[crabout](../../../../includes/crabout-md.md)]程式設計[!INCLUDE[indigo2](../../../../includes/indigo2-md.md)]使用繫結，請參閱[程式設計 WCF 安全性](../../../../docs/framework/wcf/feature-details/programming-wcf-security.md)。  
+ 如需[!INCLUDE[indigo2](../../../../includes/indigo2-md.md)]安全性，請參閱[安全性概觀](../../../../docs/framework/wcf/feature-details/security-overview.md)。 [!INCLUDE[crabout](../../../../includes/crabout-md.md)] 程式設計[!INCLUDE[indigo2](../../../../includes/indigo2-md.md)]使用繫結，請參閱[程式設計 WCF 安全性](../../../../docs/framework/wcf/feature-details/programming-wcf-security.md)。  
   
  如果您已經選取繫結，您可以進一步了解與中安全性相關聯的執行階段行為[安全性行為](../../../../docs/framework/wcf/feature-details/security-behaviors-in-wcf.md)。  
   
  某些安全性功能無法使用系統提供的繫結進行程式設計。 如需使用自訂繫結的控制項，請參閱[自訂繫結的安全性功能](../../../../docs/framework/wcf/feature-details/security-capabilities-with-custom-bindings.md)。  
   
 ## <a name="security-functions-of-bindings"></a>繫結的安全性功能  
- [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] 包含一些系統提供的繫結，可滿足大部分的需求。 如果特定繫結不敷使用，您也可以建立自訂繫結。 如需系統提供繫結的清單，請參閱[之繫結](../../../../docs/framework/wcf/system-provided-bindings.md)。 [!INCLUDE[crabout](../../../../includes/crabout-md.md)]自訂繫結，請參閱[自訂繫結](../../../../docs/framework/wcf/extending/custom-bindings.md)。  
+ [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] 包含一些系統提供的繫結，可滿足大部分的需求。 如果特定繫結不敷使用，您也可以建立自訂繫結。 如需系統提供繫結的清單，請參閱[之繫結](../../../../docs/framework/wcf/system-provided-bindings.md)。 [!INCLUDE[crabout](../../../../includes/crabout-md.md)] 自訂繫結，請參閱[自訂繫結](../../../../docs/framework/wcf/extending/custom-bindings.md)。  
   
  [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] 內的每一個繫結都有兩種型式：在組態檔內當做 API 使用，以及當做 XML 項目使用。 例如， `WSHttpBinding` (API) 中有對應的[ \<wsHttpBinding >](../../../../docs/framework/configure-apps/file-schema/wcf/wshttpbinding.md)。  
   
@@ -54,7 +56,7 @@ ms.lasthandoff: 12/22/2017
   
 -   如 WS-I 中定義的 Basic Security Profile。  
   
- 根據預設，這個繫結是不安全的。 它是針對與 ASMX 服務相互操作所設計的。 啟用安全性時，繫結是設計成可用來與 Internet Information Services (IIS) 安全性機制進行順暢互通的，例如：基本的驗證、摘要和整合式 Windows 安全性。 [!INCLUDE[crdefault](../../../../includes/crdefault-md.md)][傳輸安全性概觀](../../../../docs/framework/wcf/feature-details/transport-security-overview.md)。 這個繫結支援下列各項：  
+ 根據預設，這個繫結是不安全的。 它是針對與 ASMX 服務相互操作所設計的。 啟用安全性時，繫結是設計成可用來與 Internet Information Services (IIS) 安全性機制進行順暢互通的，例如：基本的驗證、摘要和整合式 Windows 安全性。 [!INCLUDE[crdefault](../../../../includes/crdefault-md.md)] [傳輸安全性概觀](../../../../docs/framework/wcf/feature-details/transport-security-overview.md)。 這個繫結支援下列各項：  
   
 -   HTTPS 傳輸安全性。  
   
@@ -100,7 +102,7 @@ ms.lasthandoff: 12/22/2017
   
     -   提供通道設定期間之服務交涉的服務認證。  
   
- [!INCLUDE[crdefault](../../../../includes/crdefault-md.md)]<xref:System.ServiceModel.WSDualHttpSecurity>和<xref:System.ServiceModel.WSDualHttpSecurityMode>。  
+ [!INCLUDE[crdefault](../../../../includes/crdefault-md.md)] <xref:System.ServiceModel.WSDualHttpSecurity> 和<xref:System.ServiceModel.WSDualHttpSecurityMode>。  
   
 ### <a name="nettcpbinding"></a>NetTcpBinding  
  在程式碼，使用<xref:System.ServiceModel.NetTcpBinding>類別; 在組態中，使用[ \<netTcpBinding >](../../../../docs/framework/configure-apps/file-schema/wcf/nettcpbinding.md)。  
@@ -155,7 +157,7 @@ ms.lasthandoff: 12/22/2017
   
 -   MSMQ 傳輸安全性 (傳輸)。  
   
- [!INCLUDE[crdefault](../../../../includes/crdefault-md.md)]<xref:System.ServiceModel.NetMsmqSecurity>和<xref:System.ServiceModel.NetMsmqSecurityMode>。  
+ [!INCLUDE[crdefault](../../../../includes/crdefault-md.md)] <xref:System.ServiceModel.NetMsmqSecurity> 和<xref:System.ServiceModel.NetMsmqSecurityMode>。  
   
 ### <a name="netmsmqbinding"></a>NetMsmqBinding  
  在程式碼，使用<xref:System.ServiceModel.NetMsmqBinding>類別; 在組態中，使用[ \<netMsmqBinding >](../../../../docs/framework/configure-apps/file-schema/wcf/netmsmqbinding.md)。  
@@ -176,17 +178,17 @@ ms.lasthandoff: 12/22/2017
   
  只有在將安全性模式設定為 <xref:System.ServiceModel.MessageCredentialType.Certificate> 或 <xref:System.ServiceModel.NetMsmqSecurityMode.Both> 時，才會支援 <xref:System.ServiceModel.NetMsmqSecurityMode.Message> 認證。  
   
- [!INCLUDE[crdefault](../../../../includes/crdefault-md.md)]<xref:System.ServiceModel.MessageSecurityOverMsmq>和<xref:System.ServiceModel.MsmqTransportSecurity>。  
+ [!INCLUDE[crdefault](../../../../includes/crdefault-md.md)] <xref:System.ServiceModel.MessageSecurityOverMsmq> 和<xref:System.ServiceModel.MsmqTransportSecurity>。  
   
 ### <a name="wsfederationhttpbinding"></a>WSFederationHttpBinding  
  在程式碼，使用<xref:System.ServiceModel.WSFederationHttpBinding>類別; 在組態中，使用[ \<wsFederationHttpBinding >](../../../../docs/framework/configure-apps/file-schema/wcf/wsfederationhttpbinding.md)。  
   
  根據預設，這個繫結會使用 WS-Security (訊息層安全性)。  
   
- [!INCLUDE[crdefault](../../../../includes/crdefault-md.md)][同盟](../../../../docs/framework/wcf/feature-details/federation.md)， <xref:System.ServiceModel.WSFederationHttpSecurity>，和<xref:System.ServiceModel.WSFederationHttpSecurityMode>。  
+ [!INCLUDE[crdefault](../../../../includes/crdefault-md.md)] [同盟](../../../../docs/framework/wcf/feature-details/federation.md)， <xref:System.ServiceModel.WSFederationHttpSecurity>，和<xref:System.ServiceModel.WSFederationHttpSecurityMode>。  
   
 ## <a name="custom-bindings"></a>自訂繫結  
- 如果系統提供的繫結程序都不符合您的需求，您可以以自訂的安全性繫結程序項目建立自訂繫結程序。 [!INCLUDE[crdefault](../../../../includes/crdefault-md.md)][自訂繫結的安全性功能](../../../../docs/framework/wcf/feature-details/security-capabilities-with-custom-bindings.md)。  
+ 如果系統提供的繫結程序都不符合您的需求，您可以以自訂的安全性繫結程序項目建立自訂繫結程序。 [!INCLUDE[crdefault](../../../../includes/crdefault-md.md)] [自訂繫結的安全性功能](../../../../docs/framework/wcf/feature-details/security-capabilities-with-custom-bindings.md)。  
   
 ## <a name="binding-choices"></a>繫結選擇  
  下表摘要說明了安全性模式設定中提供的功能，也就是說，列出了當安全性模式設定為 `Transport`、`Message` 或 `TransportWithMessageCredential` 時可以使用的功能。 此表可協助您找出應用程式所需的安全性功能。  
@@ -216,12 +218,12 @@ ms.lasthandoff: 12/22/2017
 |類型|描述|  
 |----------|-----------------|  
 |無|指定用戶端不需要提出任何認證。 這會轉譯成匿名用戶端。|  
-|基本|基本驗證。 [!INCLUDE[crdefault](../../../../includes/crdefault-md.md)]RFC 2617 – HTTP Authentication: Basic and Digest Authentication，可以在[http://go.microsoft.com/fwlink/?LinkId=84023](http://go.microsoft.com/fwlink/?LinkId=84023)。|  
-|摘要|摘要式驗證。 [!INCLUDE[crdefault](../../../../includes/crdefault-md.md)]RFC 2617 – HTTP Authentication: Basic and Digest Authentication，可以在[http://go.microsoft.com/fwlink/?LinkId=84023](http://go.microsoft.com/fwlink/?LinkId=84023)。|  
+|基本|基本驗證。 [!INCLUDE[crdefault](../../../../includes/crdefault-md.md)] RFC 2617 – HTTP Authentication: Basic and Digest Authentication，可以在[ http://go.microsoft.com/fwlink/?LinkId=84023 ](http://go.microsoft.com/fwlink/?LinkId=84023)。|  
+|摘要|摘要式驗證。 [!INCLUDE[crdefault](../../../../includes/crdefault-md.md)] RFC 2617 – HTTP Authentication: Basic and Digest Authentication，可以在[ http://go.microsoft.com/fwlink/?LinkId=84023 ](http://go.microsoft.com/fwlink/?LinkId=84023)。|  
 |NTLM|NT LAN Manager (NTLM) 驗證。|  
 |Windows|Windows 驗證。|  
 |憑證|使用憑證執行的驗證。|  
-|IssuedToken|允許服務要求用戶端必須以安全性權杖服務或 [!INCLUDE[infocard](../../../../includes/infocard-md.md)] 所發出的權杖進行驗證。 [!INCLUDE[crdefault](../../../../includes/crdefault-md.md)][同盟與發行的權杖](../../../../docs/framework/wcf/feature-details/federation-and-issued-tokens.md)。|  
+|IssuedToken|允許服務要求用戶端必須以安全性權杖服務或 [!INCLUDE[infocard](../../../../includes/infocard-md.md)] 所發出的權杖進行驗證。 [!INCLUDE[crdefault](../../../../includes/crdefault-md.md)] [同盟與發行的權杖](../../../../docs/framework/wcf/feature-details/federation-and-issued-tokens.md)。|  
   
 ### <a name="message-client-credentials-in-bindings"></a>繫結中的訊息用戶端認證  
  下表列出在訊息安全性模式中使用繫結時，可以使用的用戶端認證類型。  
@@ -234,7 +236,7 @@ ms.lasthandoff: 12/22/2017
 |憑證|允許服務要求用戶端使用憑證進行驗證。|  
 |IssuedToken|允許服務使用安全性權杖服務提供自訂權杖。|  
   
-## <a name="see-also"></a>請參閱  
+## <a name="see-also"></a>另請參閱  
  [安全性概觀](../../../../docs/framework/wcf/feature-details/security-overview.md)  
  [保護服務和用戶端的安全](../../../../docs/framework/wcf/feature-details/securing-services-and-clients.md)  
  [選取認證類型](../../../../docs/framework/wcf/feature-details/selecting-a-credential-type.md)  

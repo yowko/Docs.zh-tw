@@ -1,24 +1,26 @@
 ---
 title: '&lt;ws2007FederationHttpBinding&gt;'
-ms.custom: 
+ms.custom: ''
 ms.date: 03/30/2017
 ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.technology: dotnet-clr
-ms.tgt_pltfrm: 
+ms.reviewer: ''
+ms.suite: ''
+ms.technology:
+- dotnet-clr
+ms.tgt_pltfrm: ''
 ms.topic: article
 ms.assetid: 9af4ec79-cdef-457e-9dca-09d5eb821594
-caps.latest.revision: "14"
+caps.latest.revision: ''
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.workload: dotnet
+ms.workload:
+- dotnet
 ms.openlocfilehash: b1f85d4cc45075f82035fa5b8c0c95341ba142d6
-ms.sourcegitcommit: c0dd436f6f8f44dc80dc43b07f6841a00b74b23f
+ms.sourcegitcommit: c883637b41ee028786edceece4fa872939d2e64c
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 01/19/2018
+ms.lasthandoff: 03/26/2018
 ---
 # <a name="ltws2007federationhttpbindinggt"></a>&lt;ws2007FederationHttpBinding&gt;
 安全且互通的繫結衍生自[ \<wsFederationHttpBinding >](../../../../../docs/framework/configure-apps/file-schema/wcf/wsfederationhttpbinding.md)且支援聯合的安全性。  
@@ -86,7 +88,7 @@ ms.lasthandoff: 01/19/2018
 |`transactionFlow`|指定繫結是否支援流動 WS-Transactions 的值。 預設為 `false`。|  
 |`useDefaultWebProxy`|一個值，指定是否使用系統自動設定的 HTTP Proxy。 如果這個屬性為 `null`，則 Proxy 位址必須為 `true` (也就是不設定)。 預設值為 `true`。|  
   
-### <a name="child-elements"></a>子元素  
+### <a name="child-elements"></a>子項目  
   
 |項目|描述|  
 |-------------|-----------------|  
@@ -101,7 +103,7 @@ ms.lasthandoff: 01/19/2018
 |[\<bindings>](../../../../../docs/framework/configure-apps/file-schema/wcf/bindings.md)|這個項目會保存標準和自訂繫結的集合。|  
   
 ## <a name="remarks"></a>備註  
- 聯合是在多個企業或信任網域上共用識別以便進行驗證和授權的能力。 它使用 WS-Trust 通訊協定從一信任網域對應身分識別表示至其他信任網域。 聯合 HTTP 繫結支援 SOAP 安全性以及混合模式安全性，但不支援獨立使用傳輸安全性。 使用這個繫結設定的服務必須使用 HTTP 傳輸。 [!INCLUDE[crdefault](../../../../../includes/crdefault-md.md)][ \<wsFederationHttpBinding >](../../../../../docs/framework/configure-apps/file-schema/wcf/wsfederationhttpbinding.md)。  
+ 聯合是在多個企業或信任網域上共用識別以便進行驗證和授權的能力。 它使用 WS-Trust 通訊協定從一信任網域對應身分識別表示至其他信任網域。 聯合 HTTP 繫結支援 SOAP 安全性以及混合模式安全性，但不支援獨立使用傳輸安全性。 使用這個繫結設定的服務必須使用 HTTP 傳輸。 [!INCLUDE[crdefault](../../../../../includes/crdefault-md.md)] [\<wsFederationHttpBinding >](../../../../../docs/framework/configure-apps/file-schema/wcf/wsfederationhttpbinding.md)。  
   
 ## <a name="example"></a>範例  
   
@@ -136,7 +138,7 @@ ms.lasthandoff: 01/19/2018
 </configuration>  
 ```  
   
-## <a name="see-also"></a>請參閱  
+## <a name="see-also"></a>另請參閱  
  <xref:System.ServiceModel.WS2007FederationHttpBinding>  
  <xref:System.ServiceModel.Configuration.WS2007FederationHttpBindingElement>  
  [\<wsFederationHttpBinding>](../../../../../docs/framework/configure-apps/file-schema/wcf/wsfederationhttpbinding.md)  

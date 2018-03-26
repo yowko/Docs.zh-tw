@@ -1,16 +1,16 @@
 ---
 title: '&lt;comContracts&gt;'
-ms.custom: 
+ms.custom: ''
 ms.date: 03/30/2017
 ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
+ms.reviewer: ''
+ms.suite: ''
 ms.technology:
 - dotnet-clr
-ms.tgt_pltfrm: 
+ms.tgt_pltfrm: ''
 ms.topic: article
 ms.assetid: 42e74148-223d-4888-a8ed-1d928527eb09
-caps.latest.revision: 
+caps.latest.revision: ''
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
@@ -26,7 +26,7 @@ ms.lasthandoff: 03/19/2018
 `comContracts` 組態區段包含的項目可讓您指定 COM+ 整合服務合約的各種屬性。  
   
 ## <a name="specifying-namespace-and-contract"></a>指定命名空間和合約  
- COM + 整合服務合約會目前限制為 「http://tempuri.org"命名空間，而合約名稱衍生自支援的 COM 介面。 然而，您可以使用組態檔中的 `comContracts` 區段來指定替代項目。  
+ COM + 整合服務合約會目前限制為 “http://tempuri.org" 命名空間，而合約名稱衍生自支援的 COM 介面。 然而，您可以使用組態檔中的 `comContracts` 區段來指定替代項目。  
   
  例如，您可以使用下列組態來指定服務合約的命名空間和合約名稱，以及指定選項來強制工作階段繫結上的使用。  
   

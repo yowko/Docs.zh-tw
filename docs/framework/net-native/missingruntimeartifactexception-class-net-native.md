@@ -1,24 +1,26 @@
 ---
-title: "MissingRuntimeArtifactException 類別 (.NET Native)"
-ms.custom: 
+title: MissingRuntimeArtifactException 類別 (.NET Native)
+ms.custom: ''
 ms.date: 03/30/2017
 ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.technology: dotnet-clr
-ms.tgt_pltfrm: 
+ms.reviewer: ''
+ms.suite: ''
+ms.technology:
+- dotnet-clr
+ms.tgt_pltfrm: ''
 ms.topic: article
 ms.assetid: d5b3d13e-689f-4584-8ba6-44f5167a8590
-caps.latest.revision: "8"
+caps.latest.revision: ''
 author: rpetrusha
 ms.author: ronpet
 manager: wpickett
-ms.workload: dotnet
+ms.workload:
+- dotnet
 ms.openlocfilehash: e41e6c6d47d7057e2482a48e6f48c33a1325294c
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.sourcegitcommit: c883637b41ee028786edceece4fa872939d2e64c
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 03/26/2018
 ---
 # <a name="missingruntimeartifactexception-class-net-native"></a>MissingRuntimeArtifactException 類別 (.NET Native)
 **僅限 Windows 10 之 Windows 應用程式的 .NET[!INCLUDE[net_native](../../../includes/net-native-md.md)]**  
@@ -89,6 +91,6 @@ ms.lasthandoff: 12/22/2017
   
  `MissingRuntimeArtifactException` 類別沒有包含唯一成員；其所有成員都是繼承自其基底類別 <xref:System.MemberAccessException>。  
   
-## <a name="see-also"></a>請參閱  
+## <a name="see-also"></a>另請參閱  
  [執行階段指示詞 (rd.xml) 組態檔參考](../../../docs/framework/net-native/runtime-directives-rd-xml-configuration-file-reference.md)  
  [執行階段指示詞原則設定](../../../docs/framework/net-native/runtime-directive-policy-settings.md)

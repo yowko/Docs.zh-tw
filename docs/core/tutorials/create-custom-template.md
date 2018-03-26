@@ -1,7 +1,7 @@
 ---
-title: "建立 dotnet new 的自訂範本"
-description: "了解如何在此好玩的教學課程中建立 dotnet new 命令的自訂範本。"
-keywords: ".NET, .NET Core, 範本, 建立範本, 教學課程, dotnet new"
+title: 建立 dotnet new 的自訂範本
+description: 了解如何在此好玩的教學課程中建立 dotnet new 命令的自訂範本。
+keywords: .NET, .NET Core, 範本, 建立範本, 教學課程, dotnet new
 author: guardrex
 ms.author: mairaw
 ms.date: 08/12/2017
@@ -12,10 +12,10 @@ ms.assetid: 519b910a-6efe-4394-9b81-0546aa3e7462
 ms.workload:
 - dotnetcore
 ms.openlocfilehash: 7830a437b46d2080efc65f43f9112503add4c305
-ms.sourcegitcommit: 3eea47bff3201ae5d3395b0c7947806c2faca255
-ms.translationtype: HT
+ms.sourcegitcommit: c883637b41ee028786edceece4fa872939d2e64c
+ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 03/16/2018
+ms.lasthandoff: 03/26/2018
 ---
 # <a name="create-a-custom-template-for-dotnet-new"></a>建立 dotnet new 的自訂範本
 
@@ -74,7 +74,7 @@ ms.lasthandoff: 03/16/2018
 
 1. 在 *nuspec* 檔案的 **\<packageTypes>** 項目內，包含 `name` 屬性值為 `Template` 的 **\<packageType>** 項目。 *content* 資料夾和 *nuspec* 檔案都應該位於相同的目錄中。 下表顯示將範本製作為 NuGet 套件所需之最小的 *nuspec* 檔案項目。
 
-   | 元素            | 類型   | 描述 |
+   | 項目            | 類型   | 描述 |
    | ------------------ | ------ | ----------- |
    | **\<作者>**     | 字串 | 以逗號分隔的套件作者清單，與 nuget.org 上的設定檔名稱相符。這些作者會顯示在 nuget.org 的 NuGet 組件庫中，並用來交互參照相同作者的其他套件。 |
    | **\<描述>** | 字串 | UI 顯示中的套件詳細描述。 |

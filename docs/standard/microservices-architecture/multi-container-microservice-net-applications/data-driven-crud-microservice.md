@@ -1,7 +1,7 @@
 ---
-title: "建立簡單資料驅動 CRUD 微服務"
-description: "容器化 .NET 應用程式的 .NET 微服務架構 | 建立簡單資料驅動 CRUD 微服務"
-keywords: "Docker, 微服務, ASP.NET, 容器"
+title: 建立簡單資料驅動 CRUD 微服務
+description: 容器化 .NET 應用程式的 .NET 微服務架構 | 建立簡單資料驅動 CRUD 微服務
+keywords: Docker, 微服務, ASP.NET, 容器
 author: CESARDELATORRE
 ms.author: wiwagn
 ms.date: 12/11/2017
@@ -12,10 +12,10 @@ ms.workload:
 - dotnet
 - dotnetcore
 ms.openlocfilehash: be8644e45be8db88c99332476e74c5c968764c74
-ms.sourcegitcommit: 2142a4732bb4ff519b9817db4c24a237b9810d4b
-ms.translationtype: HT
+ms.sourcegitcommit: c883637b41ee028786edceece4fa872939d2e64c
+ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 01/05/2018
+ms.lasthandoff: 03/26/2018
 ---
 # <a name="creating-a-simple-data-driven-crud-microservice"></a>建立簡單資料驅動 CRUD 微服務
 
@@ -217,10 +217,10 @@ public void ConfigureServices(IServiceCollection services)
 
 ### <a name="additional-resources"></a>其他資源
 
--   **Querying Data (查詢資料)**
+-   **查詢資料**
     [*https://docs.microsoft.com/ef/core/querying/index*](https://docs.microsoft.com/ef/core/querying/index)
 
--   **Saving Data (儲存資料)**
+-   **儲存資料**
     [*https://docs.microsoft.com/ef/core/saving/index*](https://docs.microsoft.com/ef/core/saving/index)
 
 ## <a name="the-db-connection-string-and-environment-variables-used-by-docker-containers"></a>Docker 容器所使用的 DB 連接字串及環境變數
@@ -293,13 +293,13 @@ public class CatalogController : ControllerBase
 
 ### <a name="additional-resources"></a>其他資源
 
--   **Scott Hanselman。ASP.NET Core RESTful Web API versioning made easy (ASP.NET Core RESTful Web API 輕鬆進行版本控制)**
+-   **Scott Hanselman。進行簡單的 ASP.NET Core RESTful Web 應用程式開發介面版本控制**
     [*http://www.hanselman.com/blog/ASPNETCoreRESTfulWebAPIVersioningMadeEasy.aspx*](http://www.hanselman.com/blog/ASPNETCoreRESTfulWebAPIVersioningMadeEasy.aspx)
 
--   **Versioning a RESTful web API (符合 REST 限制的 Web API 版本控制)**
+-   **版本控制 RESTful web API**
     [*https://docs.microsoft.com/azure/architecture/best-practices/api-design#versioning-a-restful-web-api*](https://docs.microsoft.com/azure/architecture/best-practices/api-design#versioning-a-restful-web-api)
 
--   **Roy Fielding。Versioning, Hypermedia, and REST (版本控制、超媒體、以及 REST)**
+-   **Roy Fielding。版本控制、 超和其他**
     [*https://www.infoq.com/articles/roy-fielding-on-versioning*](https://www.infoq.com/articles/roy-fielding-on-versioning)
 
 ## <a name="generating-swagger-description-metadata-from-your-aspnet-core-web-api"></a>從您的 ASP.NET Core Web API 產生 Swagger 描述中繼資料 
@@ -310,7 +310,7 @@ Swagger 的核心是 Swagger 規格，即儲存於 JSON 或 YAML 檔案中的 AP
 
 規格是 OpenAPI 規格 (OAS) 的基礎，並且是在開放、透明且共同作業的社群開發的，以標準化定義 RESTful 介面的方式。
 
-規格定義了可探索到服務的結構，以及理解其功能的方式。 如需詳細資訊，包含 Web 編輯器及來自像是 Spotify、Uber、Slack 及 Microsoft 等公司 Swagger 規格的範例，請參閱 Swagger 網站 (<http://swagger.io>)。
+規格定義了可探索到服務的結構，以及理解其功能的方式。 如需詳細資訊，包括 web 編輯器和公司、 Spotify、 超級、 寬限時間和 Microsoft Swagger 規格的範例請參閱 Swagger 站台 (<http://swagger.io>)。
 
 ### <a name="why-use-swagger"></a>為何要使用 Swagger？
 
@@ -415,7 +415,7 @@ public class Startup
 
 ### <a name="additional-resources"></a>其他資源
 
--   **ASP.NET Web API Help Pages using Swagger (使用 Swagger 的 ASP.NET Core Web API 說明頁面)**
+-   **ASP.NET Web API 說明頁面使用 Swagger**
     [*https://docs.microsoft.com/aspnet/core/tutorials/web-api-help-pages-using-swagger*](https://docs.microsoft.com/aspnet/core/tutorials/web-api-help-pages-using-swagger)
 
 

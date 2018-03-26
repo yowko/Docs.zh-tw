@@ -1,7 +1,7 @@
 ---
-title: "領域事件： 設計和實作"
-description: "容器化 .NET 應用程式的 .NET 微服務架構 | 領域事件、設計和實作"
-keywords: "Docker, 微服務, ASP.NET, 容器"
+title: 領域事件： 設計和實作
+description: 容器化 .NET 應用程式的 .NET 微服務架構 | 領域事件、設計和實作
+keywords: Docker, 微服務, ASP.NET, 容器
 author: CESARDELATORRE
 ms.author: wiwagn
 ms.date: 12/11/2017
@@ -12,10 +12,10 @@ ms.workload:
 - dotnet
 - dotnetcore
 ms.openlocfilehash: 5840c2f7692d81f193c7d659aea6eb42a431369e
-ms.sourcegitcommit: f28752eab00d2bd97e971542c0f49ce63cfbc239
-ms.translationtype: HT
+ms.sourcegitcommit: c883637b41ee028786edceece4fa872939d2e64c
+ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 01/29/2018
+ms.lasthandoff: 03/26/2018
 ---
 # <a name="domain-events-design-and-implementation"></a>領域事件：設計和實作
 
@@ -76,7 +76,7 @@ ms.lasthandoff: 01/29/2018
 
 **圖 9-15**： 處理每個領域的多個動作
 
-事件處理常式通常是在應用程式層中，因為您會針對微服務的行為使用儲存機制或應用程式 API 等基礎結構物件。 就這點而言，事件處理常式類似命令處理常式，因此兩者都屬於應用程式層。 重要的差異在於命令只能處理一次。 而領域事件則可能處理零到 *n* 次，因為可能有多個接收者或事件處理常式 (每個處理常式的目的不同) 接收領域事件。
+事件處理常式通常是在應用程式層中，因為您會針對微服務的行為使用儲存機制或應用程式 API 等基礎結構物件。 就這點而言，事件處理常式類似命令處理常式，因此兩者都屬於應用程式層。 重要的差異在於命令只能處理一次。 網域事件可能是處理零或*n*逾時，因為如果可以由多個接收者或有不同的用途，每個處理常式的事件處理常式接收。
 
 每個領域事件之處理常式數目不限的可能性，讓您可以新增更多領域規則，而不影響您目前的程式碼。 例如，實作以下必須在事件之後立即發生的商務規則，可能與新增幾個事件處理常式 (或甚至只有一個) 一樣容易：
 
@@ -337,37 +337,37 @@ public class ValidateOrAddBuyerAggregateWhenOrderStartedDomainEventHandler
 
 ## <a name="additional-resources"></a>其他資源
 
--   **Greg Young：What is a Domain Event? (什麼是領域事件？)**
+-   **Greg Young。什麼是網域事件？**
     [*http://codebetter.com/gregyoung/2010/04/11/what-is-a-domain-event/*](http://codebetter.com/gregyoung/2010/04/11/what-is-a-domain-event/)
 
--   **Jan Stenberg：Domain Events and Eventual Consistency (領域事件和最終一致性)**
+-   **Jan Stenberg：網域事件和最終一致性**
     [*https://www.infoq.com/news/2015/09/domain-events-consistency*](https://www.infoq.com/news/2015/09/domain-events-consistency)
 
--   **Jimmy Bogard：A better domain events pattern (更佳的領域事件模式)**
+-   **Jimmy Bogard：更好的網域事件模式**
     [*https://lostechies.com/jimmybogard/2014/05/13/a-better-domain-events-pattern/*](https://lostechies.com/jimmybogard/2014/05/13/a-better-domain-events-pattern/)
 
--   **Vaughn Vernon：Effective Aggregate Design Part II: Making Aggregates Work Together (有效彙總設計第二部分：讓彙總搭配運作)**
-    [*http://dddcommunity.org/wp-content/uploads/files/pdf\_articles/Vernon\_2011\_2.pdf*](http://dddcommunity.org/wp-content/uploads/files/pdf_articles/Vernon_2011_2.pdf)
+-   **Vaughn Vernon：有效彙總設計第 2 部分： 一起彙總工作進行**
+    [*http://dddcommunity.org/wp-content/uploads/files/pdf\_文章/Vernon\_2011年\_2.pdf*](http://dddcommunity.org/wp-content/uploads/files/pdf_articles/Vernon_2011_2.pdf)
 
--   **Jimmy Bogard：Strengthening your domain: Domain Events (增強您的領域：領域事件)**
+-   **Jimmy Bogard：加強您的網域： 定義域事件**
     *<https://lostechies.com/jimmybogard/2010/04/08/strengthening-your-domain-domain-events/> *
 
--   **Tony Truong：Domain Events Pattern Example (領域事件模式範例)**
+-   **Tony Truong：網域事件模式範例**
     [*http://www.tonytruong.net/domain-events-pattern-example/*](http://www.tonytruong.net/domain-events-pattern-example/)
 
--   **Udi Dahan：How to create fully encapsulated Domain Models (如何建立完全封裝的領域模型)**
+-   **Udi Dahan.如何建立完整封裝網域模型**
     [*http://udidahan.com/2008/02/29/how-to-create-fully-encapsulated-domain-models/*](http://udidahan.com/2008/02/29/how-to-create-fully-encapsulated-domain-models/)
 
--   **Udi Dahan：Domain Events - Take 2 (領域事件 - 續篇)**
+-   **Udi Dahan.網域事件 – 採用 2**
     [*http://udidahan.com/2008/08/25/domain-events-take-2/*](http://udidahan.com/2008/08/25/domain-events-take-2/%20)
 
--   **Udi Dahan：Domain Events - Salvation (領域事件 - 終篇)**
+-   **Udi Dahan.網域事件 – 拯救**
     [*http://udidahan.com/2009/06/14/domain-events-salvation/*](http://udidahan.com/2009/06/14/domain-events-salvation/)
 
--   **Jan Kronquist：Don't publish Domain Events, return them! (不要發行領域事件，而是將它傳回！)**
+-   **Jan Kronquist：不發行網域事件，將其傳回 ！**
     [*https://blog.jayway.com/2013/06/20/dont-publish-domain-events-return-them/*](https://blog.jayway.com/2013/06/20/dont-publish-domain-events-return-them/)
 
--   **Cesar de la Torre：Domain Events vs.Integration Events in Domain-Driven Design and microservices architectures (領域導向設計和微服務架構中之領域事件與整合事件的比較)**
+-   **Cesar de la Torre：Domain Events vs.DDD 和 microservices 架構中的整合事件**
     [*https://blogs.msdn.microsoft.com/cesardelatorre/2017/02/07/domain-events-vs-integration-events-in-domain-driven-design-and-microservices-architectures/*](https://blogs.msdn.microsoft.com/cesardelatorre/2017/02/07/domain-events-vs-integration-events-in-domain-driven-design-and-microservices-architectures/)
 
 

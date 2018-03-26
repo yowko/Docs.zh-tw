@@ -1,28 +1,28 @@
 ---
 title: '&lt;wsDualHttpBinding&gt;'
-ms.custom: 
+ms.custom: ''
 ms.date: 03/30/2017
 ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
+ms.reviewer: ''
+ms.suite: ''
 ms.technology:
 - dotnet-clr
-ms.tgt_pltfrm: 
+ms.tgt_pltfrm: ''
 ms.topic: article
 helpviewer_keywords:
 - wsDualHttpBinding Element
 ms.assetid: fd8ac4e2-5641-473b-9115-73f14ab1c065
-caps.latest.revision: 
+caps.latest.revision: ''
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
 ms.workload:
 - dotnet
 ms.openlocfilehash: a49b534ba22f4ac422eb26885388e24594b49afd
-ms.sourcegitcommit: c0dd436f6f8f44dc80dc43b07f6841a00b74b23f
+ms.sourcegitcommit: c883637b41ee028786edceece4fa872939d2e64c
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 01/19/2018
+ms.lasthandoff: 03/26/2018
 ---
 # <a name="ltwsdualhttpbindinggt"></a>&lt;wsDualHttpBinding&gt;
 定義安全、可靠且互通的繫結，且這個繫結適用於雙工服務合約或透過 SOAP 媒介的通訊。  
@@ -85,7 +85,7 @@ textEncoding="Unicode/BigEndianUnicode/UTF8"
 |transactionFlow|指定繫結是否支援流動 WS-Transactions 的布林值。 預設為 `false`。|  
 |useDefaultWebProxy|布林值，指定是否使用系統自動設定的 HTTP Proxy。 如果這個屬性為 `null`，則 Proxy 位址必須為 `true` (也就是不設定)。 預設值為 `true`。|  
   
-### <a name="child-elements"></a>子元素  
+### <a name="child-elements"></a>子項目  
   
 |項目|描述|  
 |-------------|-----------------|  
@@ -141,7 +141,7 @@ textEncoding="Unicode/BigEndianUnicode/UTF8"
 </configuration>  
 ```  
   
-## <a name="see-also"></a>請參閱  
+## <a name="see-also"></a>另請參閱  
  <xref:System.ServiceModel.WSDualHttpBinding>  
  <xref:System.ServiceModel.Configuration.WSDualHttpBindingElement>  
  [繫結](../../../../../docs/framework/wcf/bindings.md)  

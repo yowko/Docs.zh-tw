@@ -1,8 +1,9 @@
 ---
-title: "WPF 的全球化"
+title: WPF 的全球化
 ms.date: 03/30/2017
 ms.prod: .net-framework
-ms.technology: dotnet-wpf
+ms.technology:
+- dotnet-wpf
 ms.topic: article
 helpviewer_keywords:
 - XAML [WPF], international user interface
@@ -10,16 +11,17 @@ helpviewer_keywords:
 - international user interface [WPF], XAML
 - globalization [WPF]
 ms.assetid: 4571ccfe-8a60-4f06-9b37-7ac0b1c2d10f
-caps.latest.revision: "35"
+caps.latest.revision: ''
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.workload: dotnet
+ms.workload:
+- dotnet
 ms.openlocfilehash: e6f39d40284e6212715d85fece545e653ff2e60a
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.sourcegitcommit: c883637b41ee028786edceece4fa872939d2e64c
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 03/26/2018
 ---
 # <a name="globalization-for-wpf"></a>WPF 的全球化
 本主題將介紹問題，您應該瞭解的撰寫時[!INCLUDE[TLA#tla_winclient](../../../../includes/tlasharptla-winclient-md.md)]的全球市場的應用程式。 全球化的程式設計項目中所定義[!INCLUDE[TLA#tla_net](../../../../includes/tlasharptla-net-md.md)]中`System.Globalization`。  
@@ -28,7 +30,7 @@ ms.lasthandoff: 12/22/2017
   
 <a name="xaml_globalization"></a>   
 ## <a name="xaml-globalization"></a>XAML 全球化  
- [!INCLUDE[TLA#tla_xaml#initcap](../../../../includes/tlasharptla-xamlsharpinitcap-md.md)]根據[!INCLUDE[TLA#tla_xml](../../../../includes/tlasharptla-xml-md.md)]，並利用中定義的全球化支援[!INCLUDE[TLA2#tla_xml](../../../../includes/tla2sharptla-xml-md.md)]規格。 下列章節描述一些[!INCLUDE[TLA2#tla_xaml](../../../../includes/tla2sharptla-xaml-md.md)]您應該注意的功能。  
+ [!INCLUDE[TLA#tla_xaml#initcap](../../../../includes/tlasharptla-xamlsharpinitcap-md.md)] 根據[!INCLUDE[TLA#tla_xml](../../../../includes/tlasharptla-xml-md.md)]，並利用中定義的全球化支援[!INCLUDE[TLA2#tla_xml](../../../../includes/tla2sharptla-xml-md.md)]規格。 下列章節描述一些[!INCLUDE[TLA2#tla_xaml](../../../../includes/tla2sharptla-xaml-md.md)]您應該注意的功能。  
   
 <a name="char_reference"></a>   
 ### <a name="character-references"></a>字元參考  
@@ -54,7 +56,7 @@ ms.lasthandoff: 12/22/2017
   
 <a name="lang_attrib"></a>   
 ### <a name="language-attribute"></a>語言屬性  
- [!INCLUDE[TLA2#tla_xaml](../../../../includes/tla2sharptla-xaml-md.md)]使用[xml: lang](../../../../docs/framework/xaml-services/xml-lang-handling-in-xaml.md)來代表項目的 language 屬性。  若要善用<xref:System.Globalization.CultureInfo>類別，語言屬性值必須為其中一個預先定義的文化特性名稱<xref:System.Globalization.CultureInfo>。 [xml:lang](../../../../docs/framework/xaml-services/xml-lang-handling-in-xaml.md) 在項目樹狀結構中為可繼承 (依 XML 規則，不一定是因為相依性屬性繼承)，如未明確指派，其預設值為空字串。  
+ [!INCLUDE[TLA2#tla_xaml](../../../../includes/tla2sharptla-xaml-md.md)] 使用[xml: lang](../../../../docs/framework/xaml-services/xml-lang-handling-in-xaml.md)來代表項目的 language 屬性。  若要善用<xref:System.Globalization.CultureInfo>類別，語言屬性值必須為其中一個預先定義的文化特性名稱<xref:System.Globalization.CultureInfo>。 [xml:lang](../../../../docs/framework/xaml-services/xml-lang-handling-in-xaml.md) 在項目樹狀結構中為可繼承 (依 XML 規則，不一定是因為相依性屬性繼承)，如未明確指派，其預設值為空字串。  
   
  語言屬性在指定方言方面非常有用。 例如，法國、魁北克、比利時和瑞士的法文拼字、字彙和發音不同。 中文、 日文和韓文也共用程式碼中的點[!INCLUDE[TLA2#tla_unicode](../../../../includes/tla2sharptla-unicode-md.md)]，但在表意字元的形狀是不同，並使用完全不同的字型。  
   
@@ -66,7 +68,7 @@ ms.lasthandoff: 12/22/2017
   
 <a name="unicode"></a>   
 ### <a name="unicode"></a>Unicode  
- [!INCLUDE[TLA2#tla_xaml](../../../../includes/tla2sharptla-xaml-md.md)]支援所有[!INCLUDE[TLA2#tla_unicode](../../../../includes/tla2sharptla-unicode-md.md)]功能，包括 surrogate。 只要字元集可以對應至[!INCLUDE[TLA2#tla_unicode](../../../../includes/tla2sharptla-unicode-md.md)]，支援它。 例如，GB18030 推出可對應至中文、日文和韓文 (CFK) 延伸模組 A 和 B 及 surrogate 字組的某些字元，因此受到完整支援。 A[!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)]應用程式可以使用<xref:System.Globalization.StringInfo>來操作不需要了解它們是否有 surrogate 字組或組合字元的字串。  
+ [!INCLUDE[TLA2#tla_xaml](../../../../includes/tla2sharptla-xaml-md.md)] 支援所有[!INCLUDE[TLA2#tla_unicode](../../../../includes/tla2sharptla-unicode-md.md)]功能，包括 surrogate。 只要字元集可以對應至[!INCLUDE[TLA2#tla_unicode](../../../../includes/tla2sharptla-unicode-md.md)]，支援它。 例如，GB18030 推出可對應至中文、日文和韓文 (CFK) 延伸模組 A 和 B 及 surrogate 字組的某些字元，因此受到完整支援。 A[!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)]應用程式可以使用<xref:System.Globalization.StringInfo>來操作不需要了解它們是否有 surrogate 字組或組合字元的字串。  
   
 <a name="design_intl_ui_with_xaml"></a>   
 ## <a name="designing-an-international-user-interface-with-xaml"></a>使用 XAML 設計國際化的使用者介面  
@@ -74,7 +76,7 @@ ms.lasthandoff: 12/22/2017
   
 <a name="intl_text"></a>   
 ### <a name="international-text"></a>國際文字  
- [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)]包含所有內建處理[!INCLUDE[TLA#tla_winfx](../../../../includes/tlasharptla-winfx-md.md)]支援書寫系統。  
+ [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] 包含所有內建處理[!INCLUDE[TLA#tla_winfx](../../../../includes/tlasharptla-winfx-md.md)]支援書寫系統。  
   
  目前支援下列指令碼︰  
   
@@ -132,11 +134,11 @@ ms.lasthandoff: 12/22/2017
   
 -   僧伽羅文  
   
- 所有的書寫系統引擎支援[!INCLUDE[TLA#tla_opentype](../../../../includes/tlasharptla-opentype-md.md)]字型。 [!INCLUDE[TLA2#tla_opentype](../../../../includes/tla2sharptla-opentype-md.md)]字型可以包括[!INCLUDE[TLA2#tla_opentype](../../../../includes/tla2sharptla-opentype-md.md)]版面配置表格可讓設計更好國際和高階的印刷樣式字型的字型建立者。 [!INCLUDE[TLA2#tla_opentype](../../../../includes/tla2sharptla-opentype-md.md)]字型版面配置表格包含圖像 （glyph） 的替代項目、 圖像定位、 理由，與基準定位，資訊啟用文字處理應用程式，以改善文字版面配置。  
+ 所有的書寫系統引擎支援[!INCLUDE[TLA#tla_opentype](../../../../includes/tlasharptla-opentype-md.md)]字型。 [!INCLUDE[TLA2#tla_opentype](../../../../includes/tla2sharptla-opentype-md.md)] 字型可以包括[!INCLUDE[TLA2#tla_opentype](../../../../includes/tla2sharptla-opentype-md.md)]版面配置表格可讓設計更好國際和高階的印刷樣式字型的字型建立者。 [!INCLUDE[TLA2#tla_opentype](../../../../includes/tla2sharptla-opentype-md.md)]字型版面配置表格包含圖像 （glyph） 的替代項目、 圖像定位、 理由，與基準定位，資訊啟用文字處理應用程式，以改善文字版面配置。  
   
- [!INCLUDE[TLA2#tla_opentype](../../../../includes/tla2sharptla-opentype-md.md)]字型則可以讓大型圖像 （glyph） 的處理設定使用[!INCLUDE[TLA2#tla_unicode](../../../../includes/tla2sharptla-unicode-md.md)]編碼方式。 這類編碼促進廣泛的國際支援以及各種印刷樣式字符。  
+ [!INCLUDE[TLA2#tla_opentype](../../../../includes/tla2sharptla-opentype-md.md)] 字型則可以讓大型圖像 （glyph） 的處理設定使用[!INCLUDE[TLA2#tla_unicode](../../../../includes/tla2sharptla-unicode-md.md)]編碼方式。 這類編碼促進廣泛的國際支援以及各種印刷樣式字符。  
   
- [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)]文字轉譯功能由[!INCLUDE[TLA#tla_ct](../../../../includes/tlasharptla-ct-md.md)]子像素的技術，支援解析獨立性。 這會大幅改善可讀性，並可讓您支援所有指令碼的高品質雜誌樣式文件。  
+ [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] 文字轉譯功能由[!INCLUDE[TLA#tla_ct](../../../../includes/tlasharptla-ct-md.md)]子像素的技術，支援解析獨立性。 這會大幅改善可讀性，並可讓您支援所有指令碼的高品質雜誌樣式文件。  
   
 <a name="intl_layout"></a>   
 ### <a name="international-layout"></a>國際版面配置  
@@ -152,16 +154,16 @@ ms.lasthandoff: 12/22/2017
   
 <a name="mui"></a>   
 ### <a name="multilingual-user-interface"></a>多語系使用者介面  
- 多語系使用者介面 (MUI) 是[!INCLUDE[TLA#tla_ms](../../../../includes/tlasharptla-ms-md.md)]支援切換[!INCLUDE[TLA2#tla_ui#plural](../../../../includes/tla2sharptla-uisharpplural-md.md)]從到另一種語言。 A[!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)]應用程式會使用組件模型支援 MUI。 一個應用程式包含語言中性的組件以及語言相關的附屬資源組件。 進入點是主要組件中的 Managed .EXE。  [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)]資源載入器會利用[!INCLUDE[TLA2#tla_netframewk](../../../../includes/tla2sharptla-netframewk-md.md)]的資源管理員，以支援資源查閱和後援。 多語言附屬組件使用相同的主要組件。 載入資源組件相依於<xref:System.Globalization.CultureInfo.CurrentUICulture%2A>目前執行緒。  
+ 多語系使用者介面 (MUI) 是[!INCLUDE[TLA#tla_ms](../../../../includes/tlasharptla-ms-md.md)]支援切換[!INCLUDE[TLA2#tla_ui#plural](../../../../includes/tla2sharptla-uisharpplural-md.md)]從到另一種語言。 A[!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)]應用程式會使用組件模型支援 MUI。 一個應用程式包含語言中性的組件以及語言相關的附屬資源組件。 進入點是主要組件中的 Managed .EXE。  [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] 資源載入器會利用[!INCLUDE[TLA2#tla_netframewk](../../../../includes/tla2sharptla-netframewk-md.md)]的資源管理員，以支援資源查閱和後援。 多語言附屬組件使用相同的主要組件。 載入資源組件相依於<xref:System.Globalization.CultureInfo.CurrentUICulture%2A>目前執行緒。  
   
 <a name="localizable_ui"></a>   
 ### <a name="localizable-user-interface"></a>可當地語系化的使用者介面  
- [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)]應用程式使用[!INCLUDE[TLA2#tla_xaml](../../../../includes/tla2sharptla-xaml-md.md)]來定義其[!INCLUDE[TLA2#tla_ui](../../../../includes/tla2sharptla-ui-md.md)]。 [!INCLUDE[TLA2#tla_xaml](../../../../includes/tla2sharptla-xaml-md.md)] 可讓開發人員使用一組屬性和邏輯指定物件的階層。 主要用途[!INCLUDE[TLA2#tla_xaml](../../../../includes/tla2sharptla-xaml-md.md)]擬定[!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)]應用程式，但它可以用來指定的任何階層[!INCLUDE[TLA#tla_clr](../../../../includes/tlasharptla-clr-md.md)]物件。 大部分的開發人員使用[!INCLUDE[TLA2#tla_xaml](../../../../includes/tla2sharptla-xaml-md.md)]來指定其應用程式[!INCLUDE[TLA2#tla_ui](../../../../includes/tla2sharptla-ui-md.md)]和使用的程式語言，例如[!INCLUDE[TLA#tla_cshrp](../../../../includes/tlasharptla-cshrp-md.md)]以回應使用者互動。  
+ [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] 應用程式使用[!INCLUDE[TLA2#tla_xaml](../../../../includes/tla2sharptla-xaml-md.md)]來定義其[!INCLUDE[TLA2#tla_ui](../../../../includes/tla2sharptla-ui-md.md)]。 [!INCLUDE[TLA2#tla_xaml](../../../../includes/tla2sharptla-xaml-md.md)] 可讓開發人員使用一組屬性和邏輯指定物件的階層。 主要用途[!INCLUDE[TLA2#tla_xaml](../../../../includes/tla2sharptla-xaml-md.md)]擬定[!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)]應用程式，但它可以用來指定的任何階層[!INCLUDE[TLA#tla_clr](../../../../includes/tlasharptla-clr-md.md)]物件。 大部分的開發人員使用[!INCLUDE[TLA2#tla_xaml](../../../../includes/tla2sharptla-xaml-md.md)]來指定其應用程式[!INCLUDE[TLA2#tla_ui](../../../../includes/tla2sharptla-ui-md.md)]和使用的程式語言，例如[!INCLUDE[TLA#tla_cshrp](../../../../includes/tlasharptla-cshrp-md.md)]以回應使用者互動。  
   
  從資源觀點來看，[!INCLUDE[TLA2#tla_xaml](../../../../includes/tla2sharptla-xaml-md.md)]檔案以描述語言相依[!INCLUDE[TLA2#tla_ui](../../../../includes/tla2sharptla-ui-md.md)]資源項目，並因此其最終發佈格式必須是可當地語系化支援國際語言。 因為[!INCLUDE[TLA2#tla_xaml](../../../../includes/tla2sharptla-xaml-md.md)]無法處理事件許多[!INCLUDE[TLA2#tla_xaml](../../../../includes/tla2sharptla-xaml-md.md)]應用程式包含執行此動作的程式碼區塊。 如需詳細資訊，請參閱[XAML 概觀 (WPF)](../../../../docs/framework/wpf/advanced/xaml-overview-wpf.md)。 程式碼會去除並編譯成不同的二進位檔時[!INCLUDE[TLA2#tla_xaml](../../../../includes/tla2sharptla-xaml-md.md)]檔案語彙基元化成 BAML 形式的 XAML。 BAML 格式的 XAML 檔案、映像和其他類型的 Managed 資源物件會內嵌到附屬資源組件中，以當地語系化為其他語言，或在不需要當地語系化時內嵌到主要組件中。  
   
 > [!NOTE]
->  [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)]應用程式支援所有[!INCLUDE[TLA2#tla_netframewk](../../../../includes/tla2sharptla-netframewk-md.md)][!INCLUDE[TLA2#tla_clr](../../../../includes/tla2sharptla-clr-md.md)]資源包括字串資料表、 影像和其他等等。  
+>  [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] 應用程式支援所有[!INCLUDE[TLA2#tla_netframewk](../../../../includes/tla2sharptla-netframewk-md.md)][!INCLUDE[TLA2#tla_clr](../../../../includes/tla2sharptla-clr-md.md)]資源包括字串資料表、 影像和其他等等。  
   
 <a name="building_localizable_apps"></a>   
 ### <a name="building-localizable-applications"></a>組建可當地語系化的應用程式  
@@ -187,5 +189,5 @@ ms.lasthandoff: 12/22/2017
     "de" , UltimateResourceFallbackLocation.Satellite)]  
 ```  
   
-## <a name="see-also"></a>請參閱  
+## <a name="see-also"></a>另請參閱  
  [WPF 全球化和當地語系化概觀](../../../../docs/framework/wpf/advanced/wpf-globalization-and-localization-overview.md)

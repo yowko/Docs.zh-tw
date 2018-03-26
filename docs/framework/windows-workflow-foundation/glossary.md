@@ -21,7 +21,7 @@ ms.openlocfilehash: 54a0cc6d9a0c922e57bf00b649894f26b42a64f4
 ms.sourcegitcommit: c883637b41ee028786edceece4fa872939d2e64c
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 03/23/2018
+ms.lasthandoff: 03/26/2018
 ---
 # <a name="windows-workflow-foundation-glossary-for-net-framework-45"></a>.NET Framework 4.5 的 Windows Workflow Foundation 字彙
 以下是 Windows Workflow Foundation 文件中使用的詞彙。  

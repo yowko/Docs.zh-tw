@@ -1,18 +1,18 @@
 ---
-title: "XmlSchemaValidator 推入型驗證"
-ms.custom: 
+title: XmlSchemaValidator 推入型驗證
+ms.custom: ''
 ms.date: 03/30/2017
 ms.prod: .net
-ms.reviewer: 
-ms.suite: 
+ms.reviewer: ''
+ms.suite: ''
 ms.technology: dotnet-standard
-ms.tgt_pltfrm: 
+ms.tgt_pltfrm: ''
 ms.topic: article
 dev_langs:
 - csharp
 - vb
 ms.assetid: 911d4460-dd91-4958-85b2-2ca3299f9ec6
-caps.latest.revision: 
+caps.latest.revision: ''
 author: mairaw
 ms.author: mairaw
 manager: wpickett
@@ -20,10 +20,10 @@ ms.workload:
 - dotnet
 - dotnetcore
 ms.openlocfilehash: 60c2effea612a579b4c66b7c30243b785b86a263
-ms.sourcegitcommit: e7f04439d78909229506b56935a1105a4149ff3d
-ms.translationtype: HT
+ms.sourcegitcommit: c883637b41ee028786edceece4fa872939d2e64c
+ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 12/23/2017
+ms.lasthandoff: 03/26/2018
 ---
 # <a name="xmlschemavalidator-push-based-validation"></a>XmlSchemaValidator 推入型驗證
 <xref:System.Xml.Schema.XmlSchemaValidator> 類別提供有效率的高效能機制，可根據 XML 結構描述以推入方式驗證 XML 資料。 例如，<xref:System.Xml.Schema.XmlSchemaValidator> 類別可讓您就地驗證 XML 資訊集，而無需將其序列化為 XML 文件，然後使用驗證 XML 讀取器重新剖析該文件。  
@@ -444,11 +444,11 @@ static void SchemaValidationEventHandler(object sender, ValidationEventArgs e)
   
  下表說明 <xref:System.Xml.Schema.XmlSchemaValidator> 類別的狀態轉換，以及在每個狀態下可進行之方法呼叫的順序及次數。  
   
-|狀況|轉換|  
+|狀態|轉換|  
 |-----------|----------------|  
 |Validate|<xref:System.Xml.Schema.XmlSchemaValidator.Initialize%2A> (<xref:System.Xml.Schema.XmlSchemaValidator.ValidateAttribute%2A> &#124; TopLevel*) <xref:System.Xml.Schema.XmlSchemaValidator.EndValidation%2A>|  
 |TopLevel|<xref:System.Xml.Schema.XmlSchemaValidator.ValidateWhitespace%2A> &#124; <xref:System.Xml.Schema.XmlSchemaValidator.ValidateText%2A> &#124; 項目|  
-|元素|<xref:System.Xml.Schema.XmlSchemaValidator.ValidateElement%2A> <xref:System.Xml.Schema.XmlSchemaValidator.ValidateAttribute%2A>* (<xref:System.Xml.Schema.XmlSchemaValidator.ValidateEndOfAttributes%2A> Content\*)? <xref:System.Xml.Schema.XmlSchemaValidator.ValidateEndElement%2A> &#124;<br /><br /> <xref:System.Xml.Schema.XmlSchemaValidator.ValidateElement%2A> <xref:System.Xml.Schema.XmlSchemaValidator.ValidateAttribute%2A>\* <xref:System.Xml.Schema.XmlSchemaValidator.SkipToEndElement%2A> &#124;<br /><br /> <xref:System.Xml.Schema.XmlSchemaValidator.ValidateElement%2A> <xref:System.Xml.Schema.XmlSchemaValidator.ValidateAttribute%2A>\* <xref:System.Xml.Schema.XmlSchemaValidator.ValidateEndOfAttributes%2A> Content\* <xref:System.Xml.Schema.XmlSchemaValidator.SkipToEndElement%2A> &#124;|  
+|項目|<xref:System.Xml.Schema.XmlSchemaValidator.ValidateElement%2A> <xref:System.Xml.Schema.XmlSchemaValidator.ValidateAttribute%2A>* (<xref:System.Xml.Schema.XmlSchemaValidator.ValidateEndOfAttributes%2A> Content\*)? <xref:System.Xml.Schema.XmlSchemaValidator.ValidateEndElement%2A> &#124;<br /><br /> <xref:System.Xml.Schema.XmlSchemaValidator.ValidateElement%2A> <xref:System.Xml.Schema.XmlSchemaValidator.ValidateAttribute%2A>\* <xref:System.Xml.Schema.XmlSchemaValidator.SkipToEndElement%2A> &#124;<br /><br /> <xref:System.Xml.Schema.XmlSchemaValidator.ValidateElement%2A> <xref:System.Xml.Schema.XmlSchemaValidator.ValidateAttribute%2A>\* <xref:System.Xml.Schema.XmlSchemaValidator.ValidateEndOfAttributes%2A> Content\* <xref:System.Xml.Schema.XmlSchemaValidator.SkipToEndElement%2A> &#124;|  
 |內容|<xref:System.Xml.Schema.XmlSchemaValidator.ValidateWhitespace%2A> &#124; <xref:System.Xml.Schema.XmlSchemaValidator.ValidateText%2A> &#124; 項目|  
   
 > [!NOTE]
@@ -487,5 +487,5 @@ static void SchemaValidationEventHandler(object sender, ValidationEventArgs e)
 > [!NOTE]
 >  呼叫上表中的任何方法，均不會改變 <xref:System.Xml.Schema.XmlSchemaValidator> 類別之各種屬性所傳回的值。  
   
-## <a name="see-also"></a>請參閱  
+## <a name="see-also"></a>另請參閱  
  <xref:System.Xml.Schema.XmlSchemaValidator>

@@ -1,23 +1,24 @@
 ---
-title: "工作 2：裝載工作流程設計工具"
-ms.custom: 
+title: 工作 2：裝載工作流程設計工具
+ms.custom: ''
 ms.date: 03/30/2017
 ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.tgt_pltfrm: 
+ms.reviewer: ''
+ms.suite: ''
+ms.tgt_pltfrm: ''
 ms.topic: article
 ms.assetid: 0a29b138-270d-4846-b78e-2b875e34e501
-caps.latest.revision: "19"
+caps.latest.revision: ''
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.workload: dotnet
+ms.workload:
+- dotnet
 ms.openlocfilehash: 991f3d25a81e90ab779936c993ec7dd09a71b794
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.sourcegitcommit: c883637b41ee028786edceece4fa872939d2e64c
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 03/26/2018
 ---
 # <a name="task-2-host-the-workflow-designer"></a>工作 2：裝載工作流程設計工具
 本主題說明在 [!INCLUDE[wfd1](../../../includes/wfd1-md.md)] 應用程式中裝載 [!INCLUDE[avalon1](../../../includes/avalon1-md.md)] 執行個體的程序。  
@@ -107,7 +108,7 @@ ms.lasthandoff: 12/22/2017
         }  
         ```  
   
-         [!INCLUDE[crabout](../../../includes/crabout-md.md)]註冊活動設計工具，請參閱[How to： 建立自訂活動設計工具](../../../docs/framework/windows-workflow-foundation/how-to-create-a-custom-activity-designer.md)。  
+         [!INCLUDE[crabout](../../../includes/crabout-md.md)] 註冊活動設計工具，請參閱[How to： 建立自訂活動設計工具](../../../docs/framework/windows-workflow-foundation/how-to-create-a-custom-activity-designer.md)。  
   
     5.  在 `MainWindow` 類別建構函式中，將呼叫加入至先前宣告的方法，為中繼資料註冊設計工具支援，以建立 <xref:System.Activities.Presentation.WorkflowDesigner>。  
   
@@ -131,7 +132,7 @@ ms.lasthandoff: 12/22/2017
   
 10. 請參閱[工作 3： 建立工具箱與 PropertyGrid 窗格](../../../docs/framework/windows-workflow-foundation/task-3-create-the-toolbox-and-propertygrid-panes.md)以了解如何加入**工具箱**和**PropertyGrid**到重新裝載工作流程設計工具支援。  
   
-## <a name="see-also"></a>請參閱  
+## <a name="see-also"></a>另請參閱  
  [重新裝載工作流程設計工具](../../../docs/framework/windows-workflow-foundation/rehosting-the-workflow-designer.md)  
  [工作 1：建立新的 Windows Presentation Foundation 應用程式](../../../docs/framework/windows-workflow-foundation/task-1-create-a-new-wpf-app.md)  
  [工作 3：建立工具箱與 PropertyGrid 窗格](../../../docs/framework/windows-workflow-foundation/task-3-create-the-toolbox-and-propertygrid-panes.md)

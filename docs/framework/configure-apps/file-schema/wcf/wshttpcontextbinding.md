@@ -1,24 +1,26 @@
 ---
 title: '&lt;wsHttpContextBinding&gt;'
-ms.custom: 
+ms.custom: ''
 ms.date: 03/30/2017
 ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.technology: dotnet-clr
-ms.tgt_pltfrm: 
+ms.reviewer: ''
+ms.suite: ''
+ms.technology:
+- dotnet-clr
+ms.tgt_pltfrm: ''
 ms.topic: article
 ms.assetid: 1e40b5c9-0df2-4d66-afc5-a99d0e4ae7a4
-caps.latest.revision: "12"
+caps.latest.revision: ''
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.workload: dotnet
+ms.workload:
+- dotnet
 ms.openlocfilehash: dbc1ab595931d363d0cb3c65839d26a8ad5a7519
-ms.sourcegitcommit: c0dd436f6f8f44dc80dc43b07f6841a00b74b23f
+ms.sourcegitcommit: c883637b41ee028786edceece4fa872939d2e64c
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 01/19/2018
+ms.lasthandoff: 03/26/2018
 ---
 # <a name="ltwshttpcontextbindinggt"></a>&lt;wsHttpContextBinding&gt;
 提供 <xref:System.ServiceModel.WSHttpBinding> 的內容，它會要求保護層級為簽署。  
@@ -95,7 +97,7 @@ ms.lasthandoff: 01/19/2018
 |transactionFlow|指定繫結是否支援流動 WS-Transactions 的布林值。 預設為 `false`。|  
 |useDefaultWebProxy|布林值，指定是否使用系統自動設定的 HTTP Proxy。 預設值為 `true`。|  
   
-### <a name="child-elements"></a>子元素  
+### <a name="child-elements"></a>子項目  
   
 |項目|描述|  
 |-------------|-----------------|  
@@ -109,7 +111,7 @@ ms.lasthandoff: 01/19/2018
 |-------------|-----------------|  
 |[\<bindings>](../../../../../docs/framework/configure-apps/file-schema/wcf/bindings.md)|這個項目會保存標準和自訂繫結的集合。|  
   
-## <a name="see-also"></a>請參閱  
+## <a name="see-also"></a>另請參閱  
  <xref:System.ServiceModel.WSHttpBinding>  
  <xref:System.ServiceModel.WSHttpContextBinding>  
  <xref:System.ServiceModel.Configuration.WSHttpContextBindingElement>  

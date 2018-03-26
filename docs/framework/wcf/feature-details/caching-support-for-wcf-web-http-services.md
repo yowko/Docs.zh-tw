@@ -1,27 +1,29 @@
 ---
-title: "WCF Web HTTP 服務的快取支援"
-ms.custom: 
+title: WCF Web HTTP 服務的快取支援
+ms.custom: ''
 ms.date: 03/30/2017
 ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.technology: dotnet-clr
-ms.tgt_pltfrm: 
+ms.reviewer: ''
+ms.suite: ''
+ms.technology:
+- dotnet-clr
+ms.tgt_pltfrm: ''
 ms.topic: article
 ms.assetid: 7f8078e0-00d9-415c-b8ba-c1b6d5c31799
-caps.latest.revision: "11"
+caps.latest.revision: ''
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.workload: dotnet
+ms.workload:
+- dotnet
 ms.openlocfilehash: 723f485ab45cbe127bfd337c2d428d38d5f27232
-ms.sourcegitcommit: 2142a4732bb4ff519b9817db4c24a237b9810d4b
+ms.sourcegitcommit: c883637b41ee028786edceece4fa872939d2e64c
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 01/05/2018
+ms.lasthandoff: 03/26/2018
 ---
 # <a name="caching-support-for-wcf-web-http-services"></a>WCF Web HTTP 服務的快取支援
-[!INCLUDE[netfx_current_long](../../../../includes/netfx-current-long-md.md)]可讓您使用的 ASP.NET 中 WCF Web HTTP 服務中已提供的宣告式快取機制。 這可讓您快取來自 WCF Web HTTP 服務作業的回應。 當使用者傳送 HTTP GET 至您設為快取的服務時，ASP.NET 會傳回快取的回應，且不會呼叫服務方法。 當快取逾期後，下次使用者傳送 HTTP GET 時，會呼叫您的服務方法且再次快取回應。 [!INCLUDE[crabout](../../../../includes/crabout-md.md)]ASP.NET 快取，請參閱[ASP.NET 快取概觀](http://go.microsoft.com/fwlink/?LinkId=152534)  
+[!INCLUDE[netfx_current_long](../../../../includes/netfx-current-long-md.md)] 可讓您使用的 ASP.NET 中 WCF Web HTTP 服務中已提供的宣告式快取機制。 這可讓您快取來自 WCF Web HTTP 服務作業的回應。 當使用者傳送 HTTP GET 至您設為快取的服務時，ASP.NET 會傳回快取的回應，且不會呼叫服務方法。 當快取逾期後，下次使用者傳送 HTTP GET 時，會呼叫您的服務方法且再次快取回應。 [!INCLUDE[crabout](../../../../includes/crabout-md.md)] ASP.NET 快取，請參閱[ASP.NET 快取概觀](http://go.microsoft.com/fwlink/?LinkId=152534)  
   
 ## <a name="basic-web-http-service-caching"></a>基本 Web HTTP 服務快取  
  若要啟用 WEB HTTP 服務快取，您必須先將 <xref:System.ServiceModel.Activation.AspNetCompatibilityRequirementsAttribute> 套用至服務來啟用 ASP.NET 相容性，該服務將 <xref:System.ServiceModel.Activation.AspNetCompatibilityRequirementsAttribute.RequirementsMode%2A> 設定為 <xref:System.ServiceModel.Activation.AspNetCompatibilityRequirementsMode.Allowed> 或 <xref:System.ServiceModel.Activation.AspNetCompatibilityRequirementsMode.Required>。  
@@ -133,7 +135,7 @@ public class Service
  在此處快取持續時間設為 60 秒，`varyByParam` 設為 none，而 `sqlDependency` 設為資料庫名稱/資料表組的分號分隔清單，該組由冒號分隔。 當 `MyTable` 中的資料變更就會移除服務作業的已快取回應，而當叫用作業時，就會產生 (以呼叫服務作業的方式) 及快取新的回應並傳回至用戶端。  
   
 > [!IMPORTANT]
->  您必須使用來存取 SQL database 的 asp.net、 [ASP.NET SQL Server 註冊工具](http://go.microsoft.com/fwlink/?LinkId=152536)。 除此之外，您必須允許適當的使用者帳戶存取資料庫和資料表。 [!INCLUDE[crdefault](../../../../includes/crdefault-md.md)][從 Web 應用程式存取 SQL Server](http://go.microsoft.com/fwlink/?LinkId=178988)。  
+>  您必須使用來存取 SQL database 的 asp.net、 [ASP.NET SQL Server 註冊工具](http://go.microsoft.com/fwlink/?LinkId=152536)。 除此之外，您必須允許適當的使用者帳戶存取資料庫和資料表。 [!INCLUDE[crdefault](../../../../includes/crdefault-md.md)] [從 Web 應用程式存取 SQL Server](http://go.microsoft.com/fwlink/?LinkId=178988)。  
   
 ## <a name="conditional-http-get-based-caching"></a>條件式 HTTP GET 型快取  
  Web HTTP 案例中條件式 HTTP GET 通常用於服務實作智慧型 HTTP 快取中所述[HTTP 規格](http://go.microsoft.com/fwlink/?LinkId=165800)。 若要這樣做，服務必須設定 HTTP 回應中之 ETag 標頭的值。 服務也必須檢查 HTTP 請求中的 If-None-Match 標頭，確認是否有任何指定的 ETag 符合目前的 ETag。  

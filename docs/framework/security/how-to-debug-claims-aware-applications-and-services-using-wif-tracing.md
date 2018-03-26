@@ -1,19 +1,21 @@
 ---
-title: "操作說明：使用 WIF 追蹤對宣告感知應用程式和服務進行偵錯"
-ms.custom: 
+title: 操作說明：使用 WIF 追蹤對宣告感知應用程式和服務進行偵錯
+ms.custom: ''
 ms.date: 03/30/2017
 ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.technology: dotnet-clr
-ms.tgt_pltfrm: 
+ms.reviewer: ''
+ms.suite: ''
+ms.technology:
+- dotnet-clr
+ms.tgt_pltfrm: ''
 ms.topic: article
 ms.assetid: 3d51ba59-3adb-4ca4-bd33-5027531af687
-caps.latest.revision: "7"
+caps.latest.revision: ''
 author: BrucePerlerMS
 ms.author: bruceper
 manager: mbaldwin
-ms.workload: dotnet
+ms.workload:
+- dotnet
 ms.openlocfilehash: 4243313d88b22aa9f755a3586ea0c5fbe08cd891
 ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
@@ -69,7 +71,7 @@ ms.lasthandoff: 12/22/2017
   
 #### <a name="to-configure-wif-tracing-using-webconfig-configuration-file"></a>使用 Web.config 組態檔來設定 WIF 追蹤  
   
-1.  在方案總管中按兩下根 **Web.config** 或 **App.config** 組態檔，以在 Visual Studio 編輯器中將其開啟。 如果您的方案沒有 **Web.config** 或 **App.config** 組態檔，請在方案總管 中，以滑鼠右鍵按一下該方案，並按一下 [新增]，然後按一下 [新增項目...]，以新增檔案。 在 [新增項目] 對話方塊中，從清單選取 [應用程式組態檔] (若要使用 **App.config**) 或 [Web 組態檔] (若要使用 **Web.config**)，然後按一下 [確定]。  
+1.  在方案總管中按兩下根 **Web.config** 或 **App.config** 組態檔，以在 Visual Studio 編輯器中將其開啟。 如果您的方案沒有 **Web.config** 或 **App.config** 組態檔，請在方案總管 中，以滑鼠右鍵按一下該方案，並按一下 [新增]，然後按一下 [新增項目...]，以新增檔案。 在 [新增項目] 對話方塊中，從清單選取 [應用程式組態檔] \(若要使用 **App.config**) 或 [Web 組態檔] \(若要使用 **Web.config**)，然後按一下 [確定]。  
   
 2.  將類似下列的組態項目新增至組態檔，位於組態檔結尾的 **\<configuration>** 節點中：  
   
