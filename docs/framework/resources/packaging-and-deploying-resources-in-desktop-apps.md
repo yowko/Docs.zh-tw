@@ -1,13 +1,13 @@
 ---
-title: "在桌面應用程式中封裝和部署資源"
-ms.custom: 
+title: 在桌面應用程式中封裝和部署資源
+ms.custom: ''
 ms.date: 03/30/2017
 ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
+ms.reviewer: ''
+ms.suite: ''
 ms.technology:
 - dotnet-bcl
-ms.tgt_pltfrm: 
+ms.tgt_pltfrm: ''
 ms.topic: article
 dev_langs:
 - csharp
@@ -34,17 +34,17 @@ helpviewer_keywords:
 - localizing resources
 - neutral cultures
 ms.assetid: b224d7c0-35f8-4e82-a705-dd76795e8d16
-caps.latest.revision: 
+caps.latest.revision: ''
 author: rpetrusha
 ms.author: ronpet
 manager: wpickett
 ms.workload:
 - dotnet
-ms.openlocfilehash: 3ab23b263d572a5573de5fc21f15b56e784a9a94
-ms.sourcegitcommit: 96cc82cac4650adfb65ba351506d8a8fbcd17b5c
+ms.openlocfilehash: 479ab530ddf02fa3701a7f6f3699258d0eab727e
+ms.sourcegitcommit: 498799639937c89de777361aab74261efe7b79ea
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 02/19/2018
+ms.lasthandoff: 03/22/2018
 ---
 # <a name="packaging-and-deploying-resources-in-desktop-apps"></a>在桌面應用程式中封裝和部署資源
 應用程式會依賴 <xref:System.Resources.ResourceManager> 類別所代表的 .NET Framework Resource Manager，來擷取當地語系化的資源。 Resource Manager 假設使用中樞和支點模型來封裝和部署資源。 中樞是主要組件，其中包含未當地語系化的可執行程式碼以及稱為中性或預設文化特性之單一文化特性的資源。 預設文化特性是應用程式的後援文化特性；如果找不到當地語系化的資源，則它是使用其資源的文化特性。 每個支點都會連線至附屬組件，其中包含單一文化特性但未包含任何程式碼的資源。  
@@ -177,11 +177,15 @@ Greeting=Добрый день
   
  您接著可以從命令列編譯 C# 原始程式碼，如下所示：  
   
- **csc Example1.cs**  
+```console 
+csc Example1.cs
+```
   
  Visual Basic 編譯器的命令十分類似：  
   
- **vbc Example1.vb**  
+```console
+vbc Example1.vb
+```  
   
  因為主要組件中未內嵌任何資源，所以您不需要使用 `/resource` 切換參數進行編譯。  
   

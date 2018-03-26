@@ -1,6 +1,6 @@
 ---
-title: ".NET Core 教學課程"
-description: "遵循這些教學課程來了解 .NET Core，以便在 Mac、Linux 和 Windows 上建置應用程式和程式庫。"
+title: .NET Core 教學課程
+description: 遵循這些教學課程來了解 .NET Core，以便在 Mac、Linux 和 Windows 上建置應用程式和程式庫。
 keywords: .NET, .NET Core
 author: richlander
 ms.author: mairaw
@@ -9,12 +9,13 @@ ms.topic: article
 ms.prod: .net-core
 ms.devlang: dotnet
 ms.assetid: f6f654b1-1d2c-4105-8376-7c1959e23803
-ms.workload: dotnetcore
-ms.openlocfilehash: 8b1e80023139a4ebc3c961c47c06b9afd0370014
-ms.sourcegitcommit: e7f04439d78909229506b56935a1105a4149ff3d
+ms.workload:
+- dotnetcore
+ms.openlocfilehash: 267cac338263f964006b424bb855d1022990498c
+ms.sourcegitcommit: c883637b41ee028786edceece4fa872939d2e64c
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 12/23/2017
+ms.lasthandoff: 03/23/2018
 ---
 # <a name="net-core-tutorials"></a>.NET Core 教學課程
 
@@ -30,7 +31,7 @@ ms.lasthandoff: 12/23/2017
 - [測試類別庫](testing-library-with-visual-studio.md)
 - [使用類別庫](consuming-library-with-visual-studio.md)
 - [在 Windows 上建置完整的 C# .NET Core 方案](using-on-windows-full-solution.md)
-- [NoSQL 教學課程：在 .NET Core 上建置 DocumentDB C# 主控台應用程式](/azure/documentdb/documentdb-dotnetcore-get-started)
+- [Azure Cosmos DB：開始使用 SQL API 和 .NET Core](/azure/cosmos-db/sql-api-dotnetcore-get-started)
 
 ## <a name="building-applications-with-visual-studio-code"></a>使用 Visual Studio Code 建置應用程式
 
