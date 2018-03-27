@@ -1,12 +1,12 @@
 ---
-title: "大小寫慣例"
-ms.custom: 
+title: 大小寫慣例
+ms.custom: ''
 ms.date: 03/30/2017
 ms.prod: .net
-ms.reviewer: 
-ms.suite: 
+ms.reviewer: ''
+ms.suite: ''
 ms.technology: dotnet-standard
-ms.tgt_pltfrm: 
+ms.tgt_pltfrm: ''
 ms.topic: article
 helpviewer_keywords:
 - camel-case names [.NET Framework]
@@ -15,7 +15,7 @@ helpviewer_keywords:
 - case sensitivity, capitalization conventions
 - names [.NET Framework], capitalization
 ms.assetid: 4c4ea526-9203-486f-b72d-29d61c5b3c6d
-caps.latest.revision: "16"
+caps.latest.revision: ''
 author: rpetrusha
 ms.author: ronpet
 manager: wpickett
@@ -53,9 +53,9 @@ ms.lasthandoff: 12/23/2017
  `ioStream`  
  `htmlTag`  
   
- **✓ 不要**PascalCasing 所有公用成員、 類型和命名空間名稱使用多個單字所組成。  
+ **✓ 請** 為所有由多個單字所組成的公用成員、 類型和命名空間名稱使用 PascalCasing。  
   
- **✓ 不要**camelCasing 用於參數名稱。  
+ **✓ 請** 為參數名稱使用 camelCasing。    
   
  下表說明不同類型的識別項的大小寫規則。  
   
