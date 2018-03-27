@@ -67,7 +67,7 @@ ms.lasthandoff: 03/19/2018
 ## <a name="remarks"></a>備註  
  `remove`項目會移除已註冊的 Web 要求模組指定的 URI 前置詞。  
   
- 值`prefix`屬性應該是有效的 URI-例如，「 http 」 的前置字元或 "http://www.contoso.com"。  
+ 值`prefix`屬性應該是有效的 URI-例如，「 http 」 的前置字元或 "http://www.contoso.com" 。  
   
 ## <a name="configuration-files"></a>組態檔  
  此項目可以用於應用程式組態檔或電腦組態檔 (Machine.config)。  

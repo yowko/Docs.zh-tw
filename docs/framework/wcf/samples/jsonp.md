@@ -79,6 +79,6 @@ Sys._json0({"__type":"Customer:#Microsoft.Samples.Jsonp","Address":"1 Example Wa
   
 1.  開啟 JSONP 範例的方案。  
   
-2.  按 F5 以啟動超連結"http://localhost:26648/JSONPClientPage.aspx"http://localhost:26648/JSONPClientPage.aspx 瀏覽器中。  
+2.  按 F5 以啟動超連結 "http://localhost:26648/JSONPClientPage.aspx" http://localhost:26648/JSONPClientPage.aspx 瀏覽器中。  
   
 3.  請注意，在頁面載入之後，「 名稱 」 和 「 位址 」 的文字輸入會以值填入。  在瀏覽器完成頁面的呈現之後，會從 [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] 服務的呼叫提供這些值。

@@ -29,7 +29,7 @@ ms.lasthandoff: 03/23/2018
  若要使用永久性雙工相互關聯，兩項服務必須使用支援雙向作業的啟用內容繫結，例如 <xref:System.ServiceModel.NetTcpContextBinding> 或 <xref:System.ServiceModel.WSHttpContextBinding>。 呼叫服務會將 <xref:System.ServiceModel.WSHttpContextBinding.ClientCallbackAddress%2A> 註冊至其用戶端 <xref:System.ServiceModel.Endpoint> 上所需的繫結。 接收服務會在初始呼叫中接收這項資料，然後在對呼叫服務進行回呼的 <xref:System.ServiceModel.Endpoint> 活動中，於自己的 <xref:System.ServiceModel.Activities.Send> 上使用該資料。 在這個範例中，兩項服務會彼此通訊。 第一項服務會在第二項服務上叫用方法，然後等候回覆。 第二項服務知道回呼方法的名稱，但是在設計階段並不知道實作這個方法的服務端點。  
   
 > [!NOTE]
->  只有當端點的 <xref:System.ServiceModel.Channels.AddressingVersion> 是使用 <xref:System.ServiceModel.Channels.AddressingVersion.WSAddressing10%2A> 來設定時，才能使用永久性雙工。 如果不是，則<xref:System.InvalidOperationException>擲回例外狀況並出現下列訊息: 「 訊息包含端點參考的回呼內容標頭的 AddressingVersion ' Addressing200408 (超連結"http://schemas.xmlsoap.org/ws/2004/08/addressing" http://schemas.xmlsoap.org/ws/2004/08/addressing)'。 只有當 AddressingVersion 設定為 'WSAddressing10' 時，才能傳輸回呼內容」。  
+>  只有當端點的 <xref:System.ServiceModel.Channels.AddressingVersion> 是使用 <xref:System.ServiceModel.Channels.AddressingVersion.WSAddressing10%2A> 來設定時，才能使用永久性雙工。 如果不是，則 <xref:System.InvalidOperationException> 擲回例外狀況並出現下列訊息: 「 訊息包含端點參考的回呼內容標頭的 AddressingVersion ' Addressing200408 ( 超連結 "http://schemas.xmlsoap.org/ws/2004/08/addressing" http://schemas.xmlsoap.org/ws/2004/08/addressing)'。 只有當 AddressingVersion 設定為 'WSAddressing10' 時，才能傳輸回呼內容」。  
   
  下列範例會裝載工作流程服務，以便使用 <xref:System.ServiceModel.Endpoint> 來建立回呼 <xref:System.ServiceModel.WSHttpContextBinding>。  
   
