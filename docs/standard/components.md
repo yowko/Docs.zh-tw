@@ -1,6 +1,6 @@
 ---
-title: ".NET 架構元件"
-description: "描述 .NET 架構元件，例如 .NET Standard、.NET 實作、.NET 執行階段和工具。"
+title: .NET 架構元件
+description: 描述 .NET 架構元件，例如 .NET Standard、.NET 實作、.NET 執行階段和工具。
 author: cartermp
 ms.author: mairaw
 ms.date: 08/23/2017
@@ -22,7 +22,7 @@ ms.lasthandoff: 02/19/2018
 
 ## <a name="net-standard"></a>.NET Standard
 
-.NET Standard 是一組 API，由 .NET 實作的基底類別庫所實作。 正式地說，它是構成制式協定的 .NET API 規格，讓您據以編譯程式碼。 各個 .NET 實作中都會實作這些協定。 這會啟用不同 .NET 實作間的可攜性，讓您的程式碼在任何地方都能有效執行。 
+.NET Standard 是一組 API，由 .NET 實作的基底類別庫所實作。 正式地說，它是構成制式協定的 .NET API 規格，讓您據以編譯程式碼。 各個 .NET 實作中都會實作這些協定。 這會啟用不同 .NET 實作間的可攜性，讓您的程式碼在任何地方都能有效執行。
 
 .NET Standard 也是[目標 Framework](glossary.md#target-framework)。 如果您的程式碼以某個 .NET Standard 版本為目標，就可以在支援該版 .NET Standard 的任何 .NET 實作上執行。
 

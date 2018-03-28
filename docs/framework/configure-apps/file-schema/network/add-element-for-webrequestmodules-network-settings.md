@@ -71,7 +71,7 @@ ms.lasthandoff: 03/19/2018
   
  當符合 URI 的前置詞傳遞給建立 Web 要求模組<xref:System.Net.WebRequest.Create%2A?displayProperty=nameWithType>方法。  
   
- 值`prefix`屬性應該是有效的 URI-例如，「 http 」 的前置字元或 "http://www.contoso.com"。  
+ 值`prefix`屬性應該是有效的 URI-例如，「 http 」 的前置字元或 "http://www.contoso.com" 。  
   
  值`type`屬性應為有效型別名稱和對應的組件名稱，以逗號分隔。  
   

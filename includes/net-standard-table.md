@@ -12,7 +12,7 @@
 | Windows Phone                             | 8.1   | 8.1    | 8.1   |       |       |            |            |            |
 | Windows Phone Silverlight                 | 8.0   |        |       |       |       |            |            |            |
 
-- 資料行代表 .NET Standard 版本。每個標題儲存格都是一個文件連結，該文件說明在該 .NET Standard 版本中新增了哪些 API。
+- 資料行代表 .NET Standard 版本。 每個標題儲存格都是一個文件連結，該文件說明在該 .NET Standard 版本中新增了哪些 API。
 - 資料列代表不同的 .NET 實作。
 - 每個資料格中的版本號碼分別表示以該 .NET Standard 版本為目標所需的「最低」實作版本。
 

@@ -1,5 +1,5 @@
 ---
-title: "in 參數修飾詞 (C# 參考)"
+title: in 參數修飾詞 (C# 參考)
 ms.date: 03/06/2018
 ms.prod: .net
 ms.technology:
@@ -10,11 +10,11 @@ helpviewer_keywords:
 - in parameters [C#]
 author: BillWagner
 ms.author: wiwagn
-ms.openlocfilehash: 035aac3e6b902f607e533b709713eb1d07c9774a
-ms.sourcegitcommit: 83dd5ec003e788ccb3e33f3412a7af39ae347646
+ms.openlocfilehash: 9b8b21e2bdc95829c831ee71f24b47986321b7d0
+ms.sourcegitcommit: c883637b41ee028786edceece4fa872939d2e64c
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 03/15/2018
+ms.lasthandoff: 03/23/2018
 ---
 # <a name="in-parameter-modifier-c-reference"></a>in 參數修飾詞 (C# 參考)
 
@@ -60,7 +60,10 @@ class InOverloads
   
 - 迭代器方法，其包括 [yield return](../../../csharp/language-reference/keywords/yield.md) 或 `yield break` 陳述式。  
 
-一般來說，您宣告 `in` 引數，以避免出現依值傳遞引數時所需進行的複製作業。 當引數為結構或結構的陣列時，此方法相當實用。
+一般來說，您宣告 `in` 引數，以避免出現依值傳遞引數時所需進行的複製作業。 當引數為實質型別 (例如複製作業所耗用資源較傳遞參考高的結構) 時，這相當實用。
+
+> [!WARNING]
+>  若誤用，`in` 參數所耗費的資源可能更高。 編譯器無法得知成員方法是否會修改結構狀態。 每當編譯器不確定物件是否未經過修改時，會為了防禦而建立複本，並使用該複本呼叫成員參考。 任何可能的修改皆僅會修改防禦複本。 有兩種方式可避免這些複本，其一是將 `in` 參數作為 `in` 引數傳遞，其二是將結構定義為 `readonly struct`。
 
 ## <a name="c-language-specification"></a>C# 語言規格  
  [!INCLUDE[CSharplangspec](~/includes/csharplangspec-md.md)]  
@@ -69,4 +72,5 @@ class InOverloads
  [C# 參考](../../../csharp/language-reference/index.md)  
  [C# 程式設計指南](../../../csharp/programming-guide/index.md)  
  [C# 關鍵字](../../../csharp/language-reference/keywords/index.md)  
- [方法參數](../../../csharp/language-reference/keywords/method-parameters.md)
+ [方法參數](../../../csharp/language-reference/keywords/method-parameters.md)  
+ [具備實值型別的參考語意](../../../csharp/reference-semantics-with-value-types.md)

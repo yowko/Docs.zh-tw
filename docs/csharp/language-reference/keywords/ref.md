@@ -1,5 +1,5 @@
 ---
-title: "ref (C# 參考)"
+title: ref (C# 參考)
 ms.date: 03/06/2018
 ms.prod: .net
 ms.technology:
@@ -13,11 +13,11 @@ helpviewer_keywords:
 - ref keyword [C#]
 author: BillWagner
 ms.author: wiwagn
-ms.openlocfilehash: 427045317e9d7d0fe3435a486b9f761908ab5e78
-ms.sourcegitcommit: 83dd5ec003e788ccb3e33f3412a7af39ae347646
+ms.openlocfilehash: 63f984f4004cfce9694e7e7405ec2477bc370731
+ms.sourcegitcommit: c883637b41ee028786edceece4fa872939d2e64c
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 03/15/2018
+ms.lasthandoff: 03/23/2018
 ---
 # <a name="ref-c-reference"></a>ref (C# 參考)
 
@@ -27,7 +27,7 @@ ms.lasthandoff: 03/15/2018
 
 - 在方法簽章中，以傳址方式將值傳回給呼叫者。 如需詳細資訊，請參閱[參考傳回值](#reference-return-values)。
 
-- 在成員主體中，指出參考傳回值儲存在本機作為呼叫者想要修改的參考。 如需詳細資訊，請參閱 [ref 區域變數](#ref-locals)。
+- 在成員主體中，指出參考傳回值儲存在本機作為呼叫者想要修改的參考，或是一般而言，以參考存取另一個值的區域變數。 如需詳細資訊，請參閱 [ref 區域變數](#ref-locals)。
 
 ## <a name="passing-an-argument-by-reference"></a>以傳址方式傳遞引數
 
@@ -109,7 +109,13 @@ ref 區域變數用來參考使用 `return ref` 所傳回的值。  ref 區域�
 ref decimal estValue = ref Building.GetEstimatedValue();
 ```
 
-請注意，`ref` 關鍵字必須用在兩個位置，或者編譯器會產生錯誤 CS8172「無法使用值將傳址變數初始化」。 
+您可透過相同方式以參考存取值。 在某些情況下，以參考存取值會避免潛在過度浪費資源的複製作業，進而增加效能。 例如，下列陳述式示範了如何定義用於參考值的區域變數值。
+
+```csharp
+ref VeryLargeStruct reflocal = ref veryLargeStruct;
+```
+
+請注意，在這兩個範例中，`ref` 關鍵字必須用在兩個位置，否則編譯器會產生錯誤 CS8172「無法使用值將傳址變數初始化」。 
  
 ## <a name="a-ref-returns-and-ref-locals-example"></a>ref 傳回值和 ref 區域變數範例
 

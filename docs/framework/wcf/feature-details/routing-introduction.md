@@ -111,7 +111,7 @@ serviceHost.Description.Behaviors.Add(
      new RoutingBehavior(rc));  
 ```  
   
- 這個範例會設定讓路由服務公開 （expose） 單一的端點位址為 "http://localhost:8000/routingservice/router“，用來接收要路由傳送訊息。 由於訊息會路由傳送至要求-回覆端點，因此服務端點會使用 <xref:System.ServiceModel.Routing.IRequestReplyRouter> 合約。 這項設定也會定義 “http://localhost: 8000/servicemodelsample/service" 訊息會路由傳送至單一用戶端端點。 名為"routingTable1"篩選資料表 （未顯示） 包含用來路由傳送訊息的路由邏輯且與相關聯的服務端點使用**RoutingBehavior** （適用於組態檔） 或**RoutingConfiguration** （適用於以程式設計方式設定）。  
+ 這個範例會設定讓路由服務公開 （expose） 單一的端點位址為 "http://localhost:8000/routingservice/router“，用來接收要路由傳送訊息。 由於訊息會路由傳送至要求-回覆端點，因此服務端點會使用 <xref:System.ServiceModel.Routing.IRequestReplyRouter> 合約。 這項設定也會定義 “http://localhost:8000/servicemodelsample/service" 訊息會路由傳送至單一用戶端端點。 名為"routingTable1"篩選資料表 （未顯示） 包含用來路由傳送訊息的路由邏輯且與相關聯的服務端點使用**RoutingBehavior** （適用於組態檔） 或**RoutingConfiguration** （適用於以程式設計方式設定）。  
   
 ### <a name="routing-logic"></a>路由邏輯  
  若要定義用來路由傳送訊息的路由邏輯，您必須判斷傳入訊息內包含的哪些資訊可以單獨處理。 例如，如果要路由傳送的所有目的端點共用相同的 SOAP 動作，則訊息內所包含動作的值就不適合做為指標，且訊息不應該路由傳送至該值所指的特定端點。 如果您必須以唯一的方式將訊息路由傳送至某一個特定端點，則應該對唯一識別路由傳送訊息至其中之目的端點的資料進行篩選。  

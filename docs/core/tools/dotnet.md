@@ -1,19 +1,19 @@
 ---
-title: "dotnet 命令 - .NET Core CLI"
-description: "了解 dotnet 命令 (.NET Core CLI 工具的通用驅動器) 和其用法。"
+title: dotnet 命令 - .NET Core CLI
+description: 了解 dotnet 命令 (.NET Core CLI 工具的通用驅動器) 和其用法。
 author: mairaw
 ms.author: mairaw
-ms.date: 11/28/2017
+ms.date: 03/20/2018
 ms.topic: article
 ms.prod: .net-core
 ms.technology: dotnet-cli
 ms.workload:
 - dotnetcore
-ms.openlocfilehash: bed0876645428cdff11fa83a091fc63e64cedc8f
-ms.sourcegitcommit: 973a12d1e6962cd9a9c263fbfaad040ec8267fe9
+ms.openlocfilehash: 2d22124cb613152df402046541650f3262e7e202
+ms.sourcegitcommit: 6f967c86dde55472440f0c8669b0e910ee3c53ba
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 02/22/2018
+ms.lasthandoff: 03/22/2018
 ---
 # <a name="dotnet-command"></a>dotnet 命令
 
@@ -27,11 +27,13 @@ ms.lasthandoff: 02/22/2018
 
 # <a name="net-core-2xtabnetcore2x"></a>[.NET Core 2.x](#tab/netcore2x)
 ```
-dotnet [command] [arguments] [--additional-deps] [--additionalprobingpath] [-d|--diagnostics] [--fx-version] [-h|--help] [--info] [--roll-forward-on-no-candidate-fx] [-v|--verbose] [--version]
+dotnet [command] [arguments] [--additional-deps] [--additionalprobingpath] [-d|--diagnostics]
+    [--fx-version] [-h|--help] [--info] [--roll-forward-on-no-candidate-fx] [-v|--verbosity] [--version]
 ```
 # <a name="net-core-1xtabnetcore1x"></a>[.NET Core 1.x](#tab/netcore1x)
 ```
-dotnet [command] [arguments] [--additionalprobingpath] [-d|--diagnostics] [--fx-version] [-h|--help] [--info] [-v|--verbose] [--version]
+dotnet [command] [arguments] [--additionalprobingpath] [-d|--diagnostics] [--fx-version]
+    [-h|--help] [--info] [-v|--verbosity] [--version]
 ```
 ---
 
@@ -75,9 +77,9 @@ dotnet [command] [arguments] [--additionalprobingpath] [-d|--diagnostics] [--fx-
 
  無任何候選共用架構上的向前復原。
 
-`-v|--verbose`
+`-v|--verbosity <LEVEL>`
 
-啟用詳細資訊輸出。
+設定命令的詳細資訊層級。 允許的值為 `q[uiet]`、`m[inimal]`、`n[ormal]`、`d[etailed]` 和 `diag[nostic]`。 不在每項命令中支援，請參考特定命令的頁面來判斷此選項是否可用。
 
 `--version`
 
@@ -105,9 +107,9 @@ dotnet [command] [arguments] [--additionalprobingpath] [-d|--diagnostics] [--fx-
 
 印出有關 CLI 工具和環境的詳細資訊，例如目前的作業系統、版本的認可 SHA，以及其他資訊。
 
-`-v|--verbose`
+`-v|--verbosity <LEVEL>`
 
-啟用詳細資訊輸出。
+設定命令的詳細資訊層級。 允許的值為 `q[uiet]`、`m[inimal]`、`n[ormal]`、`d[etailed]` 和 `diag[nostic]`。 不在每項命令中支援，請參考特定命令的頁面來判斷此選項是否可用。
 
 `--version`
 

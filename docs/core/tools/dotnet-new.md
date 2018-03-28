@@ -1,22 +1,19 @@
 ---
-title: "dotnet new 命令 - .NET Core CLI"
-description: "dotnet new 命令會根據指定的範本建立新的 .NET Core 專案。"
-keywords: "dotnet-new, CLI, CLI 命令, .NET Core"
+title: dotnet new 命令 - .NET Core CLI
+description: dotnet new 命令會根據指定的範本建立新的 .NET Core 專案。
 author: mairaw
 ms.author: mairaw
-ms.date: 08/13/2017
+ms.date: 03/21/2018
 ms.topic: article
 ms.prod: .net-core
 ms.technology: dotnet-cli
-ms.devlang: dotnet
-ms.assetid: fcc3ed2e-9265-4d50-b59e-dc2e5c190b34
 ms.workload:
 - dotnetcore
-ms.openlocfilehash: ea94c875ae6fe82d0e5d35ba8ca3fd47971fbbe6
-ms.sourcegitcommit: e2bf8e6bc365bd9a0e86fe81eeae7d14f85f48c1
+ms.openlocfilehash: 2cbd42195d0ec713d2ccb4af823075ece950ceff
+ms.sourcegitcommit: c883637b41ee028786edceece4fa872939d2e64c
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 02/13/2018
+ms.lasthandoff: 03/23/2018
 ---
 # <a name="dotnet-new"></a>dotnet new
 
@@ -28,7 +25,7 @@ ms.lasthandoff: 02/13/2018
 
 ## <a name="synopsis"></a>概要
 
-# <a name="net-core-2xtabnetcore2x"></a>[.NET Core 2.x](#tab/netcore2x)
+# <a name="net-core-20tabnetcore2x"></a>[.NET Core 2.0](#tab/netcore2x)
 ```
 dotnet new <TEMPLATE> [--force] [-i|--install] [-lang|--language] [-n|--name] [-o|--output] [-u|--uninstall] [Template options]
 dotnet new <TEMPLATE> [-l|--list] [--type]
@@ -55,7 +52,7 @@ dotnet new [-h|--help]
 
 要在叫用命令時具現化的範本。 每個範本可能會有您可以傳遞的特定選項。 如需詳細資訊，請參閱[範本選項](#template-options)。
 
-# <a name="net-core-2xtabnetcore2x"></a>[.NET Core 2.x](#tab/netcore2x)
+# <a name="net-core-20tabnetcore2x"></a>[.NET Core 2.0](#tab/netcore2x)
 
 此命令包含預設的範本清單。 使用 `dotnet new -l` 以取得可用範本的清單。 下表顯示隨 .NET Core 2.0 SDK 預先安裝的範本。 範本的預設語言會顯示在方括號內。
 
@@ -101,7 +98,7 @@ dotnet new [-h|--help]
 
 ## <a name="options"></a>選項
 
-# <a name="net-core-2xtabnetcore2x"></a>[.NET Core 2.x](#tab/netcore2x)
+# <a name="net-core-20tabnetcore2x"></a>[.NET Core 2.0](#tab/netcore2x)
 
 `--force`
 
@@ -113,7 +110,9 @@ dotnet new [-h|--help]
 
 `-i|--install <PATH|NUGET_ID>`
 
-安裝 `PATH` 或 `NUGET_ID` 提供的來源或範本套件。 如需建立自訂範本的資訊，請參閱 [dotnet new的自訂範本](custom-templates.md)。
+安裝 `PATH` 或 `NUGET_ID` 提供的來源或範本套件。 若您想要安裝預先發行版本的範本套件，就必須以 `<package-name>::<package-version>` 的格式指定版本。 根據預設，`dotnet new` 會傳遞版本的 \*，其代表最新的穩定套件版本。 您可於[範例](#examples)一節查看範例。
+
+如需建立自訂範本的資訊，請參閱 [dotnet new的自訂範本](custom-templates.md)。
 
 `-l|--list`
 
@@ -175,11 +174,11 @@ dotnet new [-h|--help]
 
 每個專案範本都可能會有其他可用的選項。 核心範本有下列額外選項：
 
-# <a name="net-core-2xtabnetcore2x"></a>[.NET Core 2.x](#tab/netcore2x)
+# <a name="net-core-20tabnetcore2x"></a>[.NET Core 2.0](#tab/netcore2x)
 
 **主控台, angular, react, reactredux**
 
-`--no-restore` - 專案建立期間不執行隱含還原。
+  `--no-restore` - 專案建立期間不執行隱含還原。
 
 **classlib**
 
@@ -322,6 +321,10 @@ dotnet new [-h|--help]
 列出 MVC 可用的所有範本：
 
 `dotnet new mvc -l`
+
+安裝適用於 ASP.NET Core 的單頁應用程式範本 2.0 版 (僅適用於 .NET Core SDK 1.1 及更新版本的命令選項)：
+
+`dotnet new -i Microsoft.DotNet.Web.Spa.ProjectTemplates::2.0.0`
 
 ## <a name="see-also"></a>另請參閱
 

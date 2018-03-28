@@ -79,7 +79,7 @@ ServiceModel 中繼資料公用程式工具用於從中繼資料文件產生服�
  對於含 BasicHttpContextbinding 端點的服務，Svcutil.exe 會產生 BasicHttpBinding，其 `allowCookies` 屬性設為 `true`。 Cookie 用於伺服器上的內容。 如果您要在服務使用 Cookie 時管理用戶端上的內容，您可以手動修改組態以使用內容繫結。  
   
 > [!CAUTION]
->  Svcutil.exe 會根據 WSDL 或從服務收到的原則檔產生用戶端。 使用者主要名稱 (UPN) 是串連使用者名稱、"@" 和完整網域名稱 (FQDN) 所產生的。 但是，對於在 Active Directory 上登錄的使用者而言，這個格式無效，且此工具產生的 UPN 會造成 Kerberos 驗證失敗，並顯示「登入嘗試失敗」錯誤訊息。 若要解決這個問題，您應手動修復由這個工具產生的用戶端檔案。  
+>  Svcutil.exe 會根據 WSDL 或從服務收到的原則檔產生用戶端。 使用者主要名稱 (UPN) 是串連使用者名稱、"\@" 和完整網域名稱 (FQDN) 所產生的。 但是，對於在 Active Directory 上登錄的使用者而言，這個格式無效，且此工具產生的 UPN 會造成 Kerberos 驗證失敗，並顯示「登入嘗試失敗」錯誤訊息。 若要解決這個問題，您應手動修復由這個工具產生的用戶端檔案。  
   
  `svcutil.exe [/t:code]  <metadataDocumentPath>* | <url>* | <epr>`  
   

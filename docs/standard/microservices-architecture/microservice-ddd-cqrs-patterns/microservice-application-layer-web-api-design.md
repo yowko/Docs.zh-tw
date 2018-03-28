@@ -1,7 +1,7 @@
 ---
-title: "設計微服務應用程式層及 Web API"
-description: "容器化 .NET 應用程式的 .NET 微服務架構 | 設計微服務應用程式層及 Web API"
-keywords: "Docker, 微服務, ASP.NET, 容器"
+title: 設計微服務應用程式層及 Web API
+description: 容器化 .NET 應用程式的 .NET 微服務架構 | 設計微服務應用程式層及 Web API
+keywords: Docker, 微服務, ASP.NET, 容器
 author: CESARDELATORRE
 ms.author: wiwagn
 ms.date: 12/12/2017
@@ -11,11 +11,11 @@ ms.topic: article
 ms.workload:
 - dotnet
 - dotnetcore
-ms.openlocfilehash: c166e0286d0769e24a6361037eb6c4694fb821ae
-ms.sourcegitcommit: e7f04439d78909229506b56935a1105a4149ff3d
+ms.openlocfilehash: 87b48624fde8c7cdab097289f1cf56ab56e1173f
+ms.sourcegitcommit: 498799639937c89de777361aab74261efe7b79ea
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 12/23/2017
+ms.lasthandoff: 03/22/2018
 ---
 # <a name="designing-the-microservice-application-layer-and-web-api"></a>設計微服務應用程式層及 Web API
 
@@ -29,7 +29,7 @@ SOLID 準則是用於任何現代及任務關鍵性應用程式的重要技術�
 
 -   里斯可夫替代準則 (Liskov substitution principle)
 
--   反轉隔離準則 (Inversion segregation principle)
+-   介面隔離準則 (Interface Segregation principle)
 
 -   相依性反轉準則 (Dependency Inversion principle)
 
@@ -43,13 +43,13 @@ DI 是一種實作相依性反轉準則的方式。 它是一種為了達到物�
 
 #### <a name="additional-resources"></a>其他資源
 
--   **SOLID: Fundamental OOP Principles (SOLID：基礎 OOP 準則)**
+-   **SOLID：基本 OOP 準則**
     [*http://deviq.com/solid/*](http://deviq.com/solid/%20)
 
--   **Inversion of Control Containers and the Dependency Injection pattern (控制反轉容器及相依性插入模式)**
+-   **Inversion of Control Containers and the Dependency Injection Pattern** (逆轉控制容器和相依性插入模式)
     [*https://martinfowler.com/articles/injection.html*](https://martinfowler.com/articles/injection.html)
 
--   **Steve Smith。New is Glue (新的便是黏的)**
+-   **Steve Smith.接著劑：New**
     [*http://ardalis.com/new-is-glue*](http://ardalis.com/new-is-glue)
 
 

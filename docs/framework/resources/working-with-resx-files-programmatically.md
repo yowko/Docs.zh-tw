@@ -1,12 +1,13 @@
 ---
-title: "以程式設計方式使用 .resx 檔案"
-ms.custom: 
+title: 以程式設計方式使用 .resx 檔案
+ms.custom: ''
 ms.date: 03/30/2017
 ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.technology: dotnet-bcl
-ms.tgt_pltfrm: 
+ms.reviewer: ''
+ms.suite: ''
+ms.technology:
+- dotnet-bcl
+ms.tgt_pltfrm: ''
 ms.topic: article
 dev_langs:
 - csharp
@@ -15,16 +16,17 @@ helpviewer_keywords:
 - resource files, .resx files
 - .resx files
 ms.assetid: 168f941a-2b84-43f8-933f-cf4a8548d824
-caps.latest.revision: "12"
+caps.latest.revision: ''
 author: rpetrusha
 ms.author: ronpet
 manager: wpickett
-ms.workload: dotnet
-ms.openlocfilehash: 17c2cee97c3347a98a015e8526e436815378eed0
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.workload:
+- dotnet
+ms.openlocfilehash: 951bd2160baddf100a685af2d78ec49e2146077b
+ms.sourcegitcommit: 498799639937c89de777361aab74261efe7b79ea
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 03/22/2018
 ---
 # <a name="working-with-resx-files-programmatically"></a>以程式設計方式使用 .resx 檔案
 因為 XML 資源 (.resx) 檔必須由妥善定義的 XML 組成，而其中所包含的標頭，需遵循特定結構描述且後面接著名稱/值組的資料，可能您會認為以手動方式建立這些檔案容易出錯。 另一種方法是，您可以使用 .NET Framework Class Library 中的型別和成員，透過程式設計的方式建立 .resx 檔。 您也可以使用 .NET Framework Class Library 擷取儲存在 .resx 檔中的資源。 本主題說明如何使用 <xref:System.Resources> 命名空間中的型別和成員，來處理 .resx 檔。  
@@ -83,15 +85,15 @@ ms.lasthandoff: 12/22/2017
   
  結果是一個二進位資源檔，具有與 .resx 檔相同的根檔名和 .resources 檔的副檔名。 這個檔案可以在編譯時間編譯到執行檔或程式庫中。 如果您使用的是 Visual Basic 編譯器，請使用下列語法在應用程式的執行檔中內嵌 .resources 檔：  
   
- **vbc** *filename* **.vb /resource:** *.resourcesFilename*  
+ **vbc** *filename* **.vb -resource:** *.resourcesFilename*  
   
  如果您使用的是 C#，其語法如下：  
   
- **csc** *filename* **.cs /resource:** *.resourcesFilename*  
+ **csc** *filename* **.cs -resource:** *.resourcesFilename*  
   
  您也可以利用 [組件連結器 (AL.exe)](../../../docs/framework/tools/al-exe-assembly-linker.md)將 .resources 檔內嵌於附屬組件中，其基本語法如下：  
   
- **al** *resourcesFilename* **/out:** *assemblyFilename*  
+ **al** *resourcesFilename* **-out:** *assemblyFilename*  
   
 ## <a name="see-also"></a>請參閱  
  [建立資源檔](../../../docs/framework/resources/creating-resource-files-for-desktop-apps.md)  

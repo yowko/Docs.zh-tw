@@ -1,5 +1,5 @@
 ---
-title: ".NET Standard 的新功能"
+title: .NET Standard 的新功能
 ms.custom: updateeachrelease
 ms.date: 11/08/2017
 ms.prod: .net
