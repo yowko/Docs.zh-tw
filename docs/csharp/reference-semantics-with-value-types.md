@@ -1,6 +1,6 @@
 ---
-title: "具備實值型別的參考語意"
-description: "了解最小化安全地複製結構的語言功能"
+title: 具備實值型別的參考語意
+description: 了解最小化安全地複製結構的語言功能
 author: billwagner
 ms.author: wiwagn
 ms.date: 11/10/2017
@@ -9,11 +9,11 @@ ms.prod: .net
 ms.technology: devlang-csharp
 ms.devlang: csharp
 ms.custom: mvc
-ms.openlocfilehash: 6e40907cab2aabcf8c8321819c99298314bcfbc5
-ms.sourcegitcommit: 83dd5ec003e788ccb3e33f3412a7af39ae347646
+ms.openlocfilehash: 8a0cfe83200d50eefa9b01ab51591a5fe0703ec0
+ms.sourcegitcommit: c883637b41ee028786edceece4fa872939d2e64c
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 03/15/2018
+ms.lasthandoff: 03/23/2018
 ---
 # <a name="reference-semantics-with-value-types"></a>具備實值型別的參考語意
 
@@ -110,6 +110,22 @@ ms.lasthandoff: 03/15/2018
 - 您不可在 Lambda 運算式或區域函式中擷取 `ref struct` 變數。
 
 這些限制可確保您不會不小心地用到 `ref struct`，而可能將其升階至受控堆積。
+
+## <a name="readonly-ref-struct-type"></a>`readonly ref struct` 類型
+
+宣告結構為 `readonly ref` 會結合 `ref struct` 與 `readonly struct` 宣告的優點與限制。 
+
+下列範例示範了 `readonly ref struct` 的宣告。
+
+```csharp
+readonly ref struct ReadOnlyRefPoint2D
+{
+    public int X { get; }
+    public int Y { get; }
+    
+    ReadOnlyRefPoint2D(int x, int y) => (X, Y) = (x, y);
+}
+```
 
 ## <a name="conclusions"></a>結論
 

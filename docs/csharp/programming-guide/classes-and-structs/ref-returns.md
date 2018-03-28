@@ -1,6 +1,6 @@
 ---
-title: "ref 傳回值和 ref 區域變數 (C# 手冊)"
-description: "了解如何定義和使用 ref 傳回值和 ref 區域變數值"
+title: ref 傳回值和 ref 區域變數 (C# 手冊)
+description: 了解如何定義和使用 ref 傳回值和 ref 區域變數值
 author: rpetrusha
 ms.author: ronpet
 ms.date: 01/23/2017
@@ -8,11 +8,11 @@ ms.topic: article
 ms.prod: .net
 ms.technology: devlang-csharp
 ms.devlang: csharp
-ms.openlocfilehash: a74563c0d24b6cd2a2fa8534787f078f3cc92674
-ms.sourcegitcommit: cf22b29db780e532e1090c6e755aa52d28273fa6
+ms.openlocfilehash: c37c6dd61ae02813bcc467982f3b175da9136e4a
+ms.sourcegitcommit: c883637b41ee028786edceece4fa872939d2e64c
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 02/01/2018
+ms.lasthandoff: 03/23/2018
 ---
 # <a name="ref-returns-and-ref-locals"></a>ref 傳回值和 ref 區域變數
 
@@ -85,7 +85,15 @@ ref Person p = ref contacts.GetContactInformation("Brandie", "Best");
 
 後續 `p` 的使用方式與使用 `GetContactInformation` 傳回的變數相同，因為 `p` 是該變數的別名。 變更 `p` 也會變更 `GetContactInformation` 傳回的變數。
 
-請注意，`ref` 關鍵字是用於區域變數宣告的前面「和」方法呼叫的前面。 無法在變數宣告和指派中同時包含 `ref` 關鍵字，會導致編譯器錯誤 CS8172「無法使用值將傳址變數初始化」。 
+請注意，`ref` 關鍵字是用於區域變數宣告的前面「和」方法呼叫的前面。 
+
+您可透過相同方式以參考存取值。 在某些情況下，以參考存取值會避免潛在過度浪費資源的複製作業，進而增加效能。 例如，下列陳述式示範了如何定義用於參考值的區域變數值。
+
+```csharp
+ref VeryLargeStruct reflocal = ref veryLargeStruct;
+```
+
+請注意，區域變數宣告與第二個範例前的值都會使用 `ref` 關鍵字。 無法在這兩個範例內的變數宣告和指派中同時包含 `ref` 關鍵字，會導致編譯器錯誤 CS8172「無法使用值將傳址變數初始化」。 
  
 ## <a name="ref-returns-and-ref-locals-an-example"></a>ref 傳回值和 ref 區域變數：範例
 
@@ -101,4 +109,5 @@ ref Person p = ref contacts.GetContactInformation("Brandie", "Best");
  
 ## <a name="see-also"></a>另請參閱
 
-[ref 關鍵字](../../language-reference/keywords/ref.md)
+[ref 關鍵字](../../language-reference/keywords/ref.md)  
+[具備實值型別的參考語意](../../../csharp/reference-semantics-with-value-types.md)

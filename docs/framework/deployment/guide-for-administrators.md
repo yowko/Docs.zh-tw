@@ -1,27 +1,29 @@
 ---
-title: ".NET Framework 系統管理員部署手冊"
-ms.custom: 
+title: .NET Framework 系統管理員部署手冊
+ms.custom: ''
 ms.date: 03/30/2017
 ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.technology: dotnet-clr
-ms.tgt_pltfrm: 
+ms.reviewer: ''
+ms.suite: ''
+ms.technology:
+- dotnet-clr
+ms.tgt_pltfrm: ''
 ms.topic: article
 helpviewer_keywords:
 - administrator's guide, deploying .NET Framework
 - deployment [.NET Framework], administrator's guide
 ms.assetid: bee14036-0436-44e8-89f5-4bc61317977a
-caps.latest.revision: "40"
+caps.latest.revision: ''
 author: mairaw
 ms.author: mairaw
 manager: wpickett
-ms.workload: dotnet
-ms.openlocfilehash: 3af5e301e57350b72ac0ea50448c7a46ca6c5387
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.workload:
+- dotnet
+ms.openlocfilehash: f57b5db5c03030d8cb930355586d0253cae13319
+ms.sourcegitcommit: 6f967c86dde55472440f0c8669b0e910ee3c53ba
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 03/22/2018
 ---
 # <a name="net-framework-deployment-guide-for-administrators"></a>.NET Framework 系統管理員部署手冊
 這篇逐步解說文章將描述系統管理員如何使用 Microsoft System Center Configuration Manager，在整個網路上部署 [!INCLUDE[net_v45](../../../includes/net-v45-md.md)] 及其系統相依性。 本文章假設所有目標用戶端電腦都符合 .NET Framework 的最低需求。 如需安裝 [!INCLUDE[net_v45](../../../includes/net-v45-md.md)] 的軟體和硬體需求清單，請參閱[系統需求](../../../docs/framework/get-started/system-requirements.md)。  
@@ -230,8 +232,7 @@ ms.lasthandoff: 12/22/2017
 ### <a name="log-file-locations"></a>記錄檔位置  
  在 [!INCLUDE[net_v45](../../../includes/net-v45-md.md)] 安裝過程中會產生下列記錄檔：  
   
- %temp%\Microsoft .NET Framework 4.5*.txt  
- %temp%\Microsoft .NET Framework 4.5\*.html  
+ %temp%\Microsoft .NET Framework 4.5*.txt %temp%\Microsoft .NET Framework 4.5*.html  
   
  您可以使用[記錄收集工具](http://www.microsoft.com/download/details.aspx?id=12493)來收集 [!INCLUDE[net_v45](../../../includes/net-v45-md.md)] 記錄檔並建立縮減檔案大小的壓縮封包檔 (.cab)。  
   

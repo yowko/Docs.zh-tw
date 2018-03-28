@@ -1,18 +1,19 @@
 ---
-title: "物件導向程式設計 (C#)"
+title: 物件導向程式設計 (C#)
 ms.date: 07/20/2015
 ms.prod: .net
-ms.technology: devlang-csharp
+ms.technology:
+- devlang-csharp
 ms.topic: article
 ms.assetid: 89574786-65ef-4335-88bc-fbacd094f183
-caps.latest.revision: "4"
+caps.latest.revision: ''
 author: BillWagner
 ms.author: wiwagn
-ms.openlocfilehash: 4a7f30293bb2d50981353badfb7e373b60dcfeec
-ms.sourcegitcommit: 5fb6646b5ee3769ffb214e672041833ea4ceeb26
+ms.openlocfilehash: 6da28e97a33e962d4926a3b65d0fdf388c252d9a
+ms.sourcegitcommit: c883637b41ee028786edceece4fa872939d2e64c
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 11/08/2017
+ms.lasthandoff: 03/23/2018
 ---
 # <a name="object-oriented-programming-c"></a>物件導向程式設計 (C#)
 C# 為包括封裝、繼承和多型在內的物件導向程式設計提供完整支援。  
@@ -95,7 +96,7 @@ struct SampleStruct
  若要定義欄位：  
   
 ```csharp  
-Class SampleClass  
+class SampleClass  
 {  
     public string sampleField;  
 }  
@@ -233,8 +234,8 @@ Container.Nested nestedInstance = new Container.Nested()
 |[private](../../../csharp/language-reference/keywords/private.md)|類型或成員只能由相同類別中的程式碼存取。|  
 |[protected](../../../csharp/language-reference/keywords/protected.md)|類型或成員只能由相同類別中，或是衍生類別中的程式碼存取。|  
 |[internal](../../../csharp/language-reference/keywords/internal.md)|類型或成員可由相同組件中的任何程式碼存取，但是不包括其他組件中的程式碼。|  
-|[保護內部](../../../csharp/language-reference/keywords/protected-internal.md)|類型或成員可由相同組件中的任何程式碼，或是其他組件中的任何衍生類別存取。|  
-|[受保護的私用](../../../csharp/language-reference/keywords/private-protected.md)|型別或成員可以存取由相同類別中，或在基底類別的組件內的衍生類別中的程式碼。|  
+|[protected internal](../../../csharp/language-reference/keywords/protected-internal.md)|類型或成員可由相同組件中的任何程式碼，或是其他組件中的任何衍生類別存取。|  
+|[private protected](../../../csharp/language-reference/keywords/private-protected.md)|只有在基底類別組件中，於相同類別或衍生類別內的程式碼才能存取類型或成員。|  
   
  如需詳細資訊，請參閱[存取修飾詞](../../../csharp/programming-guide/classes-and-structs/access-modifiers.md)。  
   
@@ -383,7 +384,7 @@ class SampleClass : ISampleInterface
  若要定義泛型類別：  
   
 ```csharp  
-Public class SampleGeneric<T>   
+public class SampleGeneric<T>   
 {  
     public T Field;  
 }  
@@ -439,5 +440,5 @@ class SampleClass
   
 -   [delegate](../../../csharp/language-reference/keywords/delegate.md)  
   
-## <a name="see-also"></a>另請參閱  
+## <a name="see-also"></a>請參閱  
  [C# 程式設計指南](../../../csharp/programming-guide/index.md)

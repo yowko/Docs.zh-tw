@@ -1,12 +1,8 @@
 ---
-title: "自訂日期和時間格式字串"
-ms.custom: 
+title: 自訂日期和時間格式字串
 ms.date: 03/30/2017
 ms.prod: .net
-ms.reviewer: 
-ms.suite: 
 ms.technology: dotnet-standard
-ms.tgt_pltfrm: 
 ms.topic: article
 dev_langs:
 - csharp
@@ -20,18 +16,18 @@ helpviewer_keywords:
 - formatting [.NET Framework], time
 - date and time strings
 ms.assetid: 98b374e3-0cc2-4c78-ab44-efb671d71984
-caps.latest.revision: 
+caps.latest.revision: ''
 author: rpetrusha
 ms.author: ronpet
 manager: wpickett
 ms.workload:
 - dotnet
 - dotnetcore
-ms.openlocfilehash: 503f9d593235cc81c6e2ecf43b93abb2105e0adf
-ms.sourcegitcommit: e7f04439d78909229506b56935a1105a4149ff3d
+ms.openlocfilehash: c54a5ec9cdbfd73bccd8f70befcfcff7cf8aac2d
+ms.sourcegitcommit: 6f967c86dde55472440f0c8669b0e910ee3c53ba
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 12/23/2017
+ms.lasthandoff: 03/22/2018
 ---
 # <a name="custom-date-and-time-format-strings"></a>自訂日期和時間格式字串
 日期和時間格式字串會定義對 <xref:System.DateTime> 或 <xref:System.DateTimeOffset> 值執行格式化作業後所產生的文字表示。 另外還會定義剖析作業所需日期和時間值的表示，以便成功地將字串轉換成日期和時間。 自訂格式字串是由一個或多個自訂日期和時間格式規範所組成。 任何不是[標準日期和時間格式字串](../../../docs/standard/base-types/standard-date-and-time-format-strings.md)的字串都會被解譯為自訂日期和時間格式字串。  
@@ -614,7 +610,7 @@ ms.lasthandoff: 12/23/2017
  ":" 自訂格式規範表示時間分隔符號，用於區別時、分、秒。 適當的當地語系化時間分隔符號是擷取自目前或指定之文化特性的 <xref:System.Globalization.DateTimeFormatInfo.TimeSeparator%2A?displayProperty=nameWithType> 屬性。  
   
 > [!NOTE]
->  若要變更特定日期和時間字串的時間分隔符號，請在常值字串分隔符號內指定分隔字元。 例如，自訂格式字串 `hh'_'dd'_'ss` 產生的結果字串中，一律使用 "_" (底線) 作為時間分隔符號。 若要變更文化特性所有日期的時間分隔符號，請變更目前文化特性的 <xref:System.Globalization.DateTimeFormatInfo.TimeSeparator%2A?displayProperty=nameWithType> 屬性值，或是具現化 <xref:System.Globalization.DateTimeFormatInfo> 物件、將字元指派給它的 <xref:System.Globalization.DateTimeFormatInfo.TimeSeparator%2A> 屬性，並呼叫包含 <xref:System.IFormatProvider> 參數的格式化方法之多載。  
+>  若要變更特定日期和時間字串的時間分隔符號，請在常值字串分隔符號內指定分隔字元。 例如，自訂格式字串 `hh'_'dd'_'ss` 產生的結果字串中，一律使用 "\_" (底線) 作為時間分隔符號。 若要變更文化特性所有日期的時間分隔符號，請變更目前文化特性的 <xref:System.Globalization.DateTimeFormatInfo.TimeSeparator%2A?displayProperty=nameWithType> 屬性值，或是具現化 <xref:System.Globalization.DateTimeFormatInfo> 物件、將字元指派給它的 <xref:System.Globalization.DateTimeFormatInfo.TimeSeparator%2A> 屬性，並呼叫包含 <xref:System.IFormatProvider> 參數的格式化方法之多載。  
   
  如果單獨使用 ":" 格式規範，而沒有其他自訂格式規範，則會將它解譯為標準日期和時間格式規範，並擲回 <xref:System.FormatException>。 如需使用單一格式規範的詳細資訊，請參閱本主題稍後的[使用單一自訂格式規範](#UsingSingleSpecifiers)。  
   

@@ -1,12 +1,13 @@
 ---
-title: "建立桌面應用程式的附屬組件"
-ms.custom: 
+title: 建立桌面應用程式的附屬組件
+ms.custom: ''
 ms.date: 03/30/2017
 ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.technology: dotnet-bcl
-ms.tgt_pltfrm: 
+ms.reviewer: ''
+ms.suite: ''
+ms.technology:
+- dotnet-bcl
+ms.tgt_pltfrm: ''
 ms.topic: article
 dev_langs:
 - csharp
@@ -30,16 +31,17 @@ helpviewer_keywords:
 - compiling satellite assemblies
 - re-signing assemblies
 ms.assetid: 8d5c6044-2919-41d2-8321-274706b295ac
-caps.latest.revision: "11"
+caps.latest.revision: ''
 author: rpetrusha
 ms.author: ronpet
 manager: wpickett
-ms.workload: dotnet
-ms.openlocfilehash: 0d360dc5b95c1cdb8de54bcbd723d0056c81c9c2
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.workload:
+- dotnet
+ms.openlocfilehash: 2f75da3332c8172a6a888e6f40c66383866799ea
+ms.sourcegitcommit: 498799639937c89de777361aab74261efe7b79ea
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 03/22/2018
 ---
 # <a name="creating-satellite-assemblies-for-desktop-apps"></a>建立桌面應用程式的附屬組件
 資源檔在當地語系化的應用程式中扮演重要角色。 它們可讓應用程式以使用者自己的語言和文化特性顯示字串、影像和其他資料，以及在使用者自己的語言或文化特性的資源無法使用時提供替代資料。 .NET Framework 會使用中樞和支點模型來尋找並擷取當地語系化的資源。 中樞是主要組件，其中包含未當地語系化的可執行程式碼以及稱為中性或預設文化特性之單一文化特性的資源。 預設文化特性是應用程式的後援文化特性；當地語系化的資源無法使用時會使用它。 您使用 <xref:System.Resources.NeutralResourcesLanguageAttribute> 屬性來指定應用程式之預設文化特性的文化特性。 每個支點都會連線至附屬組件，其中包含單一當地語系化文化特性但未包含任何程式碼的資源。 因為附屬組件不是主要組件的一部分，所以您可以輕鬆地更新或取代對應至特定文化特性的資源，而不需要取代應用程式的主要組件。  
@@ -71,25 +73,25 @@ ms.lasthandoff: 12/22/2017
   
  下列 Al.exe 命令會從德文資源檔 strings.de.resources 建立應用程式 `Example` 的附屬組件。  
   
-```  
-al /target:lib /embed:strings.de.resources /culture:de /out:Example.resources.dll  
+```console
+al -target:lib -embed:strings.de.resources -culture:de -out:Example.resources.dll  
 ```  
   
  下列 Al.exe 命令也會從 strings.de.resources 檔案建立應用程式 `Example` 的附屬組件。 **/template** 選項會讓附屬組件從父組件 (Example.dll) 繼承所有組件中繼資料，但其文化特性資訊除外。  
   
-```  
-al /target:lib /embed:strings.de.resources /culture:de /out:Example.resources.dll /template:Example.dll  
+```console
+al -target:lib -embed:strings.de.resources -culture:de -out:Example.resources.dll -template:Example.dll  
 ```  
   
  下表更詳細描述在這些命令中使用的 Al.exe 選項。  
   
 |選項|描述|  
 |------------|-----------------|  
-|**/target:**lib|指定將附屬組件編譯成程式庫 (.dll) 檔案。 因為附屬組件未包含可執行程式碼，而且不是應用程式的主要組件，所以您必須將附屬組件儲存為 DLL。|  
-|**/embed:**strings.de.resources|指定要在 Al.exe 編譯組件時內嵌的資源檔名稱。 您可以在附屬組件中內嵌多個 .resources 檔案；但是，如果您遵循中樞和支點模型，則必須為每個文化特性編譯一個附屬組件。 不過，您可以為字串和物件建立個別的 .resources 檔案。|  
-|**/culture:**de|指定要編譯之資源的文化特性。 Common Language Runtime 在搜尋所指定文化特性的資源時會使用這項資訊。 如果您省略這個選項，Al.exe 還是會編譯資源，但執行階段在使用者要求資源時會找不到。|  
-|**/out:**Example.resources.dll|指定輸出檔案的名稱。 名稱必須遵循命名標準 <基底名稱>.resources.<副檔名>，其中 <基底名稱> 為主要組件的名稱，<副檔名> 則為有效的副檔名 (例如 .dll)。 請注意，執行階段無法根據輸出檔名稱來判斷附屬組件的文化特性；您必須使用 **/culture** 選項來指定它。|  
-|**/template:**Example.dll|指定附屬組件要從中繼承所有組件中繼資料的組件，但不包括文化特性欄位。 只有在您指定的組件具有[強式名稱](../../../docs/framework/app-domains/strong-named-assemblies.md)時，此選項才會影響附屬組件。|  
+|**-target:**lib|指定將附屬組件編譯成程式庫 (.dll) 檔案。 因為附屬組件未包含可執行程式碼，而且不是應用程式的主要組件，所以您必須將附屬組件儲存為 DLL。|  
+|**-embed:**strings.de.resources|指定要在 Al.exe 編譯組件時內嵌的資源檔名稱。 您可以在附屬組件中內嵌多個 .resources 檔案；但是，如果您遵循中樞和支點模型，則必須為每個文化特性編譯一個附屬組件。 不過，您可以為字串和物件建立個別的 .resources 檔案。|  
+|**-culture:**de|指定要編譯之資源的文化特性。 Common Language Runtime 在搜尋所指定文化特性的資源時會使用這項資訊。 如果您省略這個選項，Al.exe 還是會編譯資源，但執行階段在使用者要求資源時會找不到。|  
+|**-out:**Example.resources.dll|指定輸出檔案的名稱。 名稱必須遵循命名標準 <基底名稱>.resources.<副檔名>，其中 <基底名稱> 為主要組件的名稱，<副檔名> 則為有效的副檔名 (例如 .dll)。 請注意，執行階段無法根據輸出檔名稱來判斷附屬組件的文化特性；您必須使用 **/culture** 選項來指定它。|  
+|**-template:**Example.dll|指定附屬組件要從中繼承所有組件中繼資料的組件，但不包括文化特性欄位。 只有在您指定的組件具有[強式名稱](../../../docs/framework/app-domains/strong-named-assemblies.md)時，此選項才會影響附屬組件。|  
   
  如需 Al.exe 的完整可用選項清單，請參閱[組件連結器 (Al.exe)](../../../docs/framework/tools/al-exe-assembly-linker.md)。  
   
@@ -113,7 +115,7 @@ al /target:lib /embed:strings.de.resources /culture:de /out:Example.resources.dl
   
 4.  使用 [Resgen.exe](../../../docs/framework/tools/resgen-exe-resource-file-generator.md)，將每一個文字或 XML 資源檔編譯成二進位 .resources 檔案。 輸出是根檔案名稱與 .resx 或 .txt 檔案相同的一組檔案，但副檔名為 .resources。 如果您使用 Visual Studio 建立範例，則會自動處理編譯程序。 如果您不要使用 Visual Studio，請執行下列命令將 .resx 檔案編譯為 .resources 檔案：  
   
-    ```  
+    ```console
     resgen Greeting.resx  
     resgen Greeting.en-us.resx  
     resgen Greeting.fr-FR.resx  
@@ -132,22 +134,22 @@ al /target:lib /embed:strings.de.resources /culture:de /out:Example.resources.dl
   
      如果應用程式命名為 Example，而且您從命令列進行編譯，則 C# 編譯器的命令是：  
   
-    ```  
-    csc Example.cs /res:Greeting.resources  
+    ```console  
+    csc Example.cs -res:Greeting.resources  
     ```  
   
      對應的 Visual Basic 編譯器命令為：  
   
-    ```  
-    vbc Example.vb /res:Greeting.resources  
+    ```console  
+    vbc Example.vb -res:Greeting.resources  
     ```  
   
 6.  在應用程式所支援之每個當地語系化文化特性的主要應用程式目錄中，建立子目錄。 您應該建立 en-US、fr-FR 和 ru-RU 子目錄。 Visual Studio 會在編譯程序時自動建立這些子目錄。  
   
 7.  將個別文化特性特定 .resources 檔案內嵌到附屬組件，並將它們儲存到適當的目錄。 針對每個 .resources 檔案執行這項作業的命令為：  
   
-    ```  
-    al /target:lib /embed:Greeting.culture.resources /culture:culture /out:culture\Example.resources.dll  
+    ```console
+    al -target:lib -embed:Greeting.culture.resources -culture:culture -out:culture\Example.resources.dll  
     ```  
   
      其中 *culture* 是附屬組件會包含其資源的文化特性名稱。 Visual Studio 會自動處理這個程序。  
@@ -167,13 +169,13 @@ al /target:lib /embed:strings.de.resources /culture:de /out:Example.resources.dl
   
  下列 Sn.exe 命令會建立測試公開/私密金鑰組。 **–k** 選項會指定 Sn.exe 應該建立新的金鑰組，並將它儲存在名為 TestKeyPair.snk 的檔案中。  
   
-```  
+```console
 sn –k TestKeyPair.snk   
 ```  
   
  您可以從包含測試金鑰組的檔案中擷取公開金鑰。 下列命令會從 TestKeyPair.snk 擷取公開金鑰，並將它儲存在 PublicKey.snk 中：  
   
-```  
+```console
 sn –p TestKeyPair.snk PublicKey.snk  
 ```  
   
@@ -182,18 +184,18 @@ sn –p TestKeyPair.snk PublicKey.snk
   
  下列 Al.exe 命令會從 strings.ja.resources 檔案建立應用程式 StringLibrary 的強式名稱附屬組件：  
   
-```  
-al /target:lib /embed:strings.ja.resources /culture:ja /out:StringLibrary.resources.dll /delay+ /keyfile:PublicKey.snk  
+```console 
+al -target:lib -embed:strings.ja.resources -culture:ja -out:StringLibrary.resources.dll -delay+ -keyfile:PublicKey.snk  
 ```  
   
- **/delay+** 選項指定組件連結器應該延遲簽署組件。 **/keyfile** 選項指定金鑰檔名稱，其中包含要用來延遲簽署組件的公開金鑰。  
+  選項指定組件連結器應該延遲簽署組件。 **-keyfile** 選項指定金鑰檔名稱，其中包含要用來延遲簽署組件的公開金鑰。  
   
 ### <a name="re-signing-an-assembly"></a>重新簽署組件  
  部署您的應用程式之前，必須使用實際金鑰組來重新簽署延遲簽署的附屬組件。 您可以使用 Sn.exe 完成這項動作。  
   
  下列 Sn.exe 命令會使用 RealKeyPair.snk 檔案中所儲存的金鑰組來簽署 StringLibrary.resources.dll。 **–R** 選項指定要重新簽署先前簽署的組件還是延遲簽署的組件。  
   
-```  
+```console
 sn –R StringLibrary.resources.dll RealKeyPair.snk   
 ```  
   
@@ -202,8 +204,8 @@ sn –R StringLibrary.resources.dll RealKeyPair.snk
   
  下列 Gacutil.exe 命令會在全域組件快取中安裝 StringLibrary.resources.dll：  
   
-```  
-gacutil /i:StringLibrary.resources.dll  
+```console
+gacutil -i:StringLibrary.resources.dll  
 ```  
   
  **/i** 選項指定 Gacutil.exe 應該將指定的組件安裝到全域組件快取。 在快取中安裝附屬組件之後，其所含的資源可供設計成使用附屬組件的所有應用程式使用。  
@@ -213,7 +215,7 @@ gacutil /i:StringLibrary.resources.dll
   
 1.  如果您未使用 Visual Studio，請使用下列[強式名稱工具 (Sn.exe)](../../../docs/framework/tools/sn-exe-strong-name-tool.md) 命令來建立名為 ResKey.snk 的公開/私密金鑰組：  
   
-    ```  
+    ```console
     sn –k ResKey.snk  
     ```  
   
@@ -221,7 +223,7 @@ gacutil /i:StringLibrary.resources.dll
   
 2.  使用下列[強式名稱工具 (Sn.exe)](../../../docs/framework/tools/sn-exe-strong-name-tool.md) 命令來建立名為 PublicKey.snk 的公用金鑰檔案：  
   
-    ```  
+    ```console
     sn –p ResKey.snk PublicKey.snk  
     ```  
   
@@ -242,7 +244,7 @@ gacutil /i:StringLibrary.resources.dll
   
 6.  使用 [Resgen.exe](../../../docs/framework/tools/resgen-exe-resource-file-generator.md)，將每一個文字或 XML 資源檔編譯成二進位 .resources 檔案。 輸出是根檔案名稱與 .resx 或 .txt 檔案相同的一組檔案，但副檔名為 .resources。 如果您使用 Visual Studio 建立範例，則會自動處理編譯程序。 如果您不要使用 Visual Studio，請執行下列命令將 .resx 檔案編譯為 .resources 檔案：  
   
-    ```  
+    ```console
     resgen filename  
     ```  
   
@@ -258,42 +260,42 @@ gacutil /i:StringLibrary.resources.dll
   
      C# 編譯器的命令是：  
   
-    ```  
-    csc /t:library /resource:Strings.resources /delaysign+ /keyfile:publickey.snk StringLibrary.cs  
+    ```console
+    csc -t:library -resource:Strings.resources -delaysign+ -keyfile:publickey.snk StringLibrary.cs  
     ```  
   
      對應的 Visual Basic 編譯器命令為：  
   
-    ```  
-    vbc /t:library /resource:Strings.resources /delaysign+ /keyfile:publickey.snk StringLibrary.vb  
+    ```console  
+    vbc -t:library -resource:Strings.resources -delaysign+ -keyfile:publickey.snk StringLibrary.vb  
     ```  
   
 8.  在應用程式所支援之每個當地語系化文化特性的主要應用程式目錄中，建立子目錄。 您應該建立 en-US、fr-FR 和 ru-RU 子目錄。 Visual Studio 會在編譯程序時自動建立這些子目錄。 因為所有附屬組件都有相同的檔案名稱，所以使用子目錄來儲存個別文化特性特定附屬組件，直到使用公開/私密金鑰組簽署它們為止。  
   
 9. 將個別文化特性特定 .resources 檔案內嵌到延遲簽署的附屬組件，並將它們儲存到適當的目錄。 針對每個 .resources 檔案執行這項作業的命令為：  
   
-    ```  
-    al /target:lib /embed:Strings.culture.resources /culture:culture /out:culture\StringLibrary.resources.dll /delay+ /keyfile:publickey.snk  
+    ```console
+    al -target:lib -embed:Strings.culture.resources -culture:culture -out:culture\StringLibrary.resources.dll -delay+ -keyfile:publickey.snk  
     ```  
   
      其中 *culture* 是文化特性的名稱。 在此範例中，文化特性名稱是 en-US、fr-FR 和 ru-RU。  
   
 10. 使用[強式名稱工具 (Sn.exe)](../../../docs/framework/tools/sn-exe-strong-name-tool.md) 來重新簽署 StringLibrary.dll，如下所示：  
   
-    ```  
+    ```console
     sn –R StringLibrary.dll RealKeyPair.snk  
     ```  
   
 11. 重新簽署個別附屬組件。 若要這樣做，請使用每個附屬組件的[強式名稱工具 (Sn.exe)](../../../docs/framework/tools/sn-exe-strong-name-tool.md)，如下所示：  
   
-    ```  
+    ```console
     sn –R StringLibrary.resources.dll RealKeyPair.snk  
     ```  
   
 12. 使用下列命令，在全域組件快取中註冊 StringLibrary.dll 和其每個附屬組件：  
   
-    ```  
-    gacutil /i filename  
+    ```console
+    gacutil -i filename  
     ```  
   
      其中 <檔案名稱> 是要註冊之檔案的名稱。  
@@ -305,14 +307,14 @@ gacutil /i:StringLibrary.resources.dll
   
      若要從命令列進行編譯，請針對 C# 編譯器使用下列命令：  
   
-    ```  
-    csc Example.cs /r:StringLibrary.dll   
+    ```console
+    csc Example.cs -r:StringLibrary.dll   
     ```  
   
      Visual Basic 編譯器的命令列為：  
   
-    ```  
-    vbc Example.vb /r:StringLibrary.dll   
+    ```console
+    vbc Example.vb -r:StringLibrary.dll   
     ```  
   
 14. 執行 Example.exe。  

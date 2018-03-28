@@ -22,7 +22,7 @@ ms.lasthandoff: 12/23/2017
 
 ## <a name="summary"></a>總結
 
-軟體複雜與否，都可能以意想不到的方式回應變更而失敗。 因此，除了最不重要的 (或最不關鍵的) 應用程式之外，對所有應用程式進行變更後都需要進行測試。 手動測試是最慢、最不可靠且最昂貴的測試軟體方式。 不幸的是，如果應用程式設計為不可測試，則手動可能是唯一可用的手段。 遵循第 10 章規定之架構原則所撰寫的應用程式，應可進行單元測試，ASP.NET Core 應用程式也支援自動化整合和功能測試。
+軟體複雜與否，都可能以意想不到的方式回應變更而失敗。 因此，除了最不重要的 (或最不關鍵的) 應用程式之外，對所有應用程式進行變更後都需要進行測試。 手動測試是最慢、最不可靠且最昂貴的測試軟體方式。 不幸的是，如果應用程式設計為不可測試，則手動可能是唯一可用的手段。 遵循第 X 章規定之架構原則所撰寫的應用程式，應可進行單元測試，ASP.NET Core 應用程式也支援自動化整合和功能測試。
 
 ## <a name="kinds-of-automated-tests"></a>自動化測試的種類
 
@@ -280,4 +280,4 @@ public class CatalogControllerGetImage : BaseWebTest
 此功能測試將執行完整的 ASP.NET Core MVC 應用程式堆疊，包括可能存在的所有中介軟體、篩選器、繫結器等等。 會驗證指定路由 ("/catalog/pic/1") 傳回已知位置檔案預期的位元組陣列。 因並未設定真實的網頁伺服器，所以避免了使用真實的網頁伺服器進行測試之脆弱度 (例如防火牆設定的問題)。 針對 TestServer 執行的功能測試通常比整合與單元測試要慢，但比在網路上執行測試之網頁伺服器的測試要快得多。
 
 >[!div class="step-by-step"]
-[上一頁](work-with-data-in-asp-net-core-apps.md) [下一頁] (development-process-for-azure.md)
+[上一頁] (work-with-data-in-asp-net-core-apps.md) [下一頁] (development-process-for-azure.md)
