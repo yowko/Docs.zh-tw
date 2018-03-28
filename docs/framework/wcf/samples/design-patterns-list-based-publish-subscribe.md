@@ -1,24 +1,26 @@
 ---
-title: "設計模式：以清單為基礎的發行訂閱"
-ms.custom: 
+title: 設計模式：以清單為基礎的發行訂閱
+ms.custom: ''
 ms.date: 03/30/2017
 ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.technology: dotnet-clr
-ms.tgt_pltfrm: 
+ms.reviewer: ''
+ms.suite: ''
+ms.technology:
+- dotnet-clr
+ms.tgt_pltfrm: ''
 ms.topic: article
 ms.assetid: f4257abc-12df-4736-a03b-0731becf0fd4
-caps.latest.revision: "16"
+caps.latest.revision: ''
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.workload: dotnet
-ms.openlocfilehash: 9f5d9b334aae1607f4fb46e0b41155b50eb95a46
-ms.sourcegitcommit: c0dd436f6f8f44dc80dc43b07f6841a00b74b23f
+ms.workload:
+- dotnet
+ms.openlocfilehash: 2a4f36c7231146811e4eb033cfb6a3433a58dbb2
+ms.sourcegitcommit: 935d5267c44f9bce801468ef95f44572f1417e8c
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 01/19/2018
+ms.lasthandoff: 03/28/2018
 ---
 # <a name="design-patterns-list-based-publish-subscribe"></a>設計模式：以清單為基礎的發行訂閱
 這個範例說明實作成為 [!INCLUDE[indigo1](../../../../includes/indigo1-md.md)] 程式的清單架構發行訂閱模式。  
@@ -89,7 +91,7 @@ public class PriceChangeEventArgs : EventArgs
         }  
   
         //Clients call this service operation to unsubscribe.  
-        //The previous price change event handler is deregistered.  
+        //The previous price change event handler is unregistered.  
   
         public void Unsubscribe()  
         {  
@@ -129,7 +131,7 @@ public class PriceChangeEventArgs : EventArgs
   
 ### <a name="to-run-the-sample-on-the-same-machine"></a>若要在同一部機器上執行範例  
   
-1.  輸入下列位址，測試您是否可以使用瀏覽器存取服務：http://localhost/servicemodelsamples/service.svc。 確認頁面應該會顯示在回應中。  
+1.  測試您是否能夠存取使用瀏覽器輸入下列位址的服務： http://localhost/servicemodelsamples/service.svc。 確認頁面應該會顯示在回應中。  
   
 2.  從 \client\bin 執行 Client.exe\\，將語言特定資料夾下。 用戶端活動會顯示在用戶端主控台視窗上。 啟動數個用戶端。  
   
@@ -172,4 +174,4 @@ public class PriceChangeEventArgs : EventArgs
 >   
 >  `<InstallDrive>:\WF_WCF_Samples\WCF\Scenario\DesignPatterns/ListBasedPublishSubscribe`  
   
-## <a name="see-also"></a>請參閱
+## <a name="see-also"></a>另請參閱

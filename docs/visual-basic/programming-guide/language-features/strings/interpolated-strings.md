@@ -1,16 +1,17 @@
 ---
-title: "字串插值 (Visual Basic)"
+title: 字串插值 (Visual Basic)
 ms.date: 10/31/2017
 ms.prod: .net
-ms.technology: devlang-visual-basic
+ms.technology:
+- devlang-visual-basic
 ms.topic: article
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: f865d5a7167847bf869d70a39570413dac271a2c
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.openlocfilehash: 9501c052f387a522226e957193a8866083aa4233
+ms.sourcegitcommit: 935d5267c44f9bce801468ef95f44572f1417e8c
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 03/28/2018
 ---
 # <a name="interpolated-strings-visual-basic-reference"></a>字串插值 （Visual Basic 參考）
 
@@ -40,7 +41,7 @@ $"<text> {<interpolated-expression> [,<field-width>] [:<format-string>] } <text>
 - *format-string* 是一個格式字串，適用於將格式化的物件類型。 例如，對於<xref:System.DateTime>值，它可能是[標準日期和時間格式字串](~/docs/standard/base-types/standard-date-and-time-format-strings.md)例如"D"或"d"。
 
 > [!IMPORTANT]
-> 您不能有任何空白字元之間`$`和`"`開頭的字串。 這樣做會讓編譯器錯誤。
+> 字串開頭的 `$` 與 `"` 之間不能有空白字元。 這樣做會讓編譯器錯誤。
 
  您可以在使用字串常值的任何位置使用字串插值。  每次執行含有字串插值的程式碼時，都會評估字串插值。 這可讓您分開定義和評估字串插值。  
   
@@ -62,11 +63,11 @@ $"<text> {<interpolated-expression> [,<field-width>] [:<format-string>] } <text>
 
 2. 將字串插值轉換成 <xref:System.IFormattable> 變數，可讓您從單一 <xref:System.IFormattable> 執行個體建立多個具有特定文化特性內容的結果字串。 若要加入個別文化特性的正確數值和日期格式等項目時，這樣做會很有用。  在您明確或隱含呼叫 <xref:System.Object.ToString> 方法以格式化字串之前，所有出現的雙大括弧 ("{{" 和 "}}") 會保持為雙大括弧。  所有包含插值運算式會轉換成 {0}、\{1\} 等。  
 
-   下列範例使用反映來顯示成員，以及從字串插值建立之 <xref:System.IFormattable> 變數的欄位和屬性值。 它也會傳遞<xref:System.IFormattable>變數設為<xref:System.Console.WriteLine(System.String)?displayProperty=nameWithType>方法。
+   下列範例使用反映來顯示成員，以及從字串插值建立之 <xref:System.IFormattable> 變數的欄位和屬性值。 它也會將 <xref:System.IFormattable> 變數傳遞給 <xref:System.Console.WriteLine(System.String)?displayProperty=nameWithType> 方法。
 
    [!code-vb[interpolated-strings2](../../../../../samples/snippets/visualbasic/programming-guide/language-features/strings/interpolated-strings2.vb)]  
 
-   請注意，只能使用反映來檢查字串插值。 如果將它傳遞為字串，例如格式化方法<xref:System.Console.WriteLine(System.String)>、 它的格式項目都已解決，而且傳回的結果字串。 
+   請注意，只能使用反映來檢查字串插值。 如果將它傳遞至字串格式化方法 (例如 <xref:System.Console.WriteLine(System.String)>)，則會解析其格式項目並傳回結果字串。 
 
 3. 轉換至字串插值的<xref:System.FormattableString>代表複合格式字串的變數。 檢查複合格式字串及其如何轉譯為結果字串有助於在建立查詢時，防止插入式攻擊。 A<xref:System.FormattableString>還包括：
 
@@ -81,7 +82,7 @@ $"<text> {<interpolated-expression> [,<field-width>] [:<format-string>] } <text>
    [!code-vb[interpolated-strings3](../../../../../samples/snippets/visualbasic/programming-guide/language-features/strings/interpolated-strings3.vb)]  
 
 ## <a name="see-also"></a>另請參閱  
-f<xref:System.IFormattable?displayProperty=nameWithType>   
+ <xref:System.IFormattable?displayProperty=nameWithType>  
  <xref:System.FormattableString?displayProperty=nameWithType>  
  [Visual Basic 語言參考](index.md)  
  

@@ -1,7 +1,7 @@
 ---
-title: "在 Azure 上使用 F#"
-description: "若要使用 Azure services 和 F # 指南"
-keywords: "Azure, 雲端, Visual F#, F#, 函式程式設計, .NET, .NET Core"
+title: 在 Azure 上使用 F#
+description: '若要使用 Azure services 和 F # 指南'
+keywords: Azure, 雲端, Visual F#, F#, 函式程式設計, .NET, .NET Core
 author: sylvanc
 ms.author: phcart
 ms.date: 09/22/2016
@@ -10,11 +10,11 @@ ms.prod: .net
 ms.technology: devlang-fsharp
 ms.devlang: fsharp
 ms.assetid: FAD4D11E-703A-42D4-9F72-893D9E0F569B
-ms.openlocfilehash: 8f1d5abe0412ecf72e38c7d76ef44fdc5fd4a0f7
-ms.sourcegitcommit: 655fd4f78741967f80c409cef98347fdcf77857d
+ms.openlocfilehash: 0849bc77139b4f4383e2c772f5bae62741ee2b8b
+ms.sourcegitcommit: 935d5267c44f9bce801468ef95f44572f1417e8c
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 02/28/2018
+ms.lasthandoff: 03/28/2018
 ---
 # <a name="using-f-on-azure"></a>在 Azure 上使用 F#
 
@@ -69,14 +69,14 @@ Azure 儲存體也可以透過宣告式組態 (而不是明確的 API 呼叫) �
 * [Implementing Spark Apps in F# using Mobius](https://github.com/Microsoft/Mobius/blob/master/notes/spark-fsharp-mobius.md) (使用 Mobius 實作 F# Spark 應用程式)
 * [Example F# Spark Apps using Mobius](https://github.com/Microsoft/Mobius/tree/master/examples/fsharp) (使用 Mobius 的 F# Spark 應用程式範例)
 
-## <a name="using-azure-documentdb-with-f"></a>使用 Azure DocumentDB with F # #
+## <a name="using-azure-cosmos-db-with-f"></a>使用 Azure Cosmos DB F # #
 
-[Azure DocumentDB](https://azure.microsoft.com/services/documentdb/) 是一種 NoSQL 服務，適用於具高可用性且全域散發的應用程式。
+[Azure Cosmos DB](https://azure.microsoft.com/services/cosmos-db)是高可用性、 全域散發的應用程式的 NoSQL 服務。
 
-Azure DocumentDB 可以透過下列兩種方式與 F# 搭配使用：
+Azure Cosmos DB 可以用於 F # 中的兩種方式：
 
-1. 透過建立可回應或導致變更 DocumentDB 集合的 F# Azure Functions。 請參閱 [Azure Function DocumentDB 的觸發程序](/azure/azure-functions/functions-bindings-documentdb)，或
-2. 透過使用 [.NET SDK for Azure](/azure/documentdb/documentdb-get-started-quickstart)。 請注意，這些範例是根據 C#。
+1. 透過 F # Azure 函式建立的回應，或導致 Azure Cosmos DB 集合的變更。 請參閱[Azure Cosmos DB Azure 函式繫結](/azure/azure-functions/functions-bindings-cosmosdb)，或
+2. 使用[Azure Cosmos DB SQL api 的.NET SDK](/azure/cosmos-db/sql-api-sdk-dotnet)。 相關的範例是採用 C#。
 
 ## <a name="using-azure-event-hubs-with-f"></a>使用 F # 中使用 Azure 事件中樞 #
 
@@ -119,7 +119,7 @@ Azure 通知中樞可以透過下列兩種方式與 F# 搭配使用︰
 
 Azure VM 可能會使用 Microsoft.Azure.Management 套件和 API，透過 F# 指令碼以程式設計方式部署和管理。 例如，請參閱[開始使用 .NET 的管理程式庫](https://msdn.microsoft.com/library/dn722415.aspx)和[使用 Azure 資源管理員](/azure/azure-resource-manager/resource-manager-deployment-model)。
 
-同樣地，其他 Azure 資源也可以使用相同的元件，透過 F# 指令碼進行部署和管理。 例如，您可以建立儲存體帳戶、部署 Azure 雲端服務、建立 Azure DocumentDB 執行個體，並透過 F# 指令碼以程式設計方式管理 Azure 通知中樞。
+同樣地，其他 Azure 資源也可以使用相同的元件，透過 F# 指令碼進行部署和管理。 例如，您可以建立儲存體帳戶、 部署 Azure 雲端服務、 建立 Azure Cosmos 資料庫執行個體和從 F # 指令碼，以程式設計方式管理 Azure 通知中樞。
 
 通常不需要使用 F# 指令碼來部署和管理資源。 例如，Azure 資源也能夠透過可進行參數化的 JSON 範本描述加以部署。 請參閱包含 [Azure 快速入門範本](https://azure.microsoft.com/documentation/templates/)等範例的 [Azure 資源管理員範本](/azure/azure-resource-manager/resource-manager-template-best-practices)。
 

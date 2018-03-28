@@ -1,6 +1,6 @@
 ---
-title: "F# 指南"
-description: "本指南提供各種學習材料 F #，功能性執行.net 程式語言的概觀。"
+title: F# 指南
+description: '本指南提供各種學習材料 F #，功能性執行.net 程式語言的概觀。'
 author: jackfoxy
 ms.author: phcart
 ms.date: 03/19/2018
@@ -9,11 +9,11 @@ ms.prod: .net
 ms.technology: devlang-fsharp
 ms.devlang: fsharp
 ms.assetid: ea27fb37-dad1-4bd4-a3cc-4f5c70767ae9
-ms.openlocfilehash: 8be5ac5090e10ae9270e7eec529bd9b7c3c663fb
-ms.sourcegitcommit: 32172ca05d5dcce7ef3d327b9c8639c736e0fe2b
+ms.openlocfilehash: a101233f396368c0bc25937c49f77699cb9f8cf2
+ms.sourcegitcommit: 935d5267c44f9bce801468ef95f44572f1417e8c
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 03/20/2018
+ms.lasthandoff: 03/28/2018
 ---
 # <a name="f-guide"></a>F# 指南
 
@@ -54,11 +54,14 @@ F # 是關於在其核心的產能。 無所不在和進階功能的完整 F # �
 
 [開始使用 F # 和.NET 核心 CLI](get-started/get-started-command-line.md)如果您想要使用命令列工具。
 
+[開始使用 F # 和 Xamarin](https://docs.microsoft.com/xamarin/cross-platform/platform/fsharp/)行動 F # 的程式設計。
+
 ## <a name="references"></a>參考
 
 [F # 語言參考](language-reference/index.md)是所有的 F # 語言功能的正式、 完整參考。 每個發行項說明語法，並顯示程式碼範例。 您可以使用篩選器列在目錄中，若要尋找特定的發行項。
 
 [F # 核心程式庫參考](https://msdn.microsoft.com/visualfsharpdocs/conceptual/fsharp-core-library-reference)為 F # 核心程式庫中的應用程式開發介面參考。
+
 
 ## <a name="additional-guides"></a>其他的輔助線
 
