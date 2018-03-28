@@ -1,19 +1,19 @@
 ---
-title: "針對伺服器應用程式在 .NET Core 和 .NET Framework 之間進行選擇"
-description: "本指南說明您在 .NET 中建置伺服器應用程式時應考量要使用哪種 .NET 實作。"
+title: 針對伺服器應用程式在 .NET Core 和 .NET Framework 之間進行選擇
+description: 本指南說明您在 .NET 中建置伺服器應用程式時應考量要使用哪種 .NET 實作。
 author: cartermp
 ms.author: mairaw
-ms.date: 08/15/2016
+ms.date: 03/15/2018
 ms.topic: article
 ms.prod: .net
 ms.workload:
 - dotnet
 - dotnetcore
-ms.openlocfilehash: 2108125b9c01a2686d66b0ebd4e43e7ac863e223
-ms.sourcegitcommit: e7f04439d78909229506b56935a1105a4149ff3d
+ms.openlocfilehash: c07b0b760e2a46faea574eef3575409bac773942
+ms.sourcegitcommit: 15316053918995cc1380163a7d7e7edd5c44e6d7
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 12/23/2017
+ms.lasthandoff: 03/19/2018
 ---
 # <a name="choosing-between-net-core-and-net-framework-for-server-apps"></a>針對伺服器應用程式在 .NET Core 和 .NET Framework 之間進行選擇
 
@@ -25,7 +25,7 @@ ms.lasthandoff: 12/23/2017
 * 您的目標為微服務。
 * 您正在使用 Docker 容器。
 * 您需要高效能且可調整的系統。
-* 您需要依據不同應用程式執行不同的 .NET 版本。
+* 您需要依應用程式讓 .NET 版本並存。
 
 在下列情況中，請針對伺服器應用程式使用 .NET Framework：
 
@@ -79,6 +79,7 @@ ms.lasthandoff: 12/23/2017
 ### <a name="a-need-to-use-third-party-net-libraries-or-nuget-packages-not-available-for-net-core"></a>需要使用的協力廠商的 .NET 程式庫或 NuGet 套件不適用 .NET Core
 
 程式庫會快速採用 .NET Standard。 .NET Standard 可跨所有 .NET 實作 (包括 .NET Core) 共用程式碼。 透過 .NET Standard 2.0，甚至會更容易達成：
+
 - API 介面變得更大。 
 - 引入了 .NET Framework 相容性模式。 此相容性模式可讓 .NET Standard/.NET Core 專案參考 .NET Framework 程式庫。 若要深入了解相容性模式，請參閱 [Announcing .NET Standard 2.0](https://blogs.msdn.microsoft.com/dotnet/2017/08/14/announcing-net-standard-2-0/) (宣告 .NET Standard 2.0)。
 
@@ -92,7 +93,7 @@ ms.lasthandoff: 12/23/2017
 
 * ASP.NET Web Pages 應用程式：ASP.NET Web Pages 未隨附於 ASP.NET Core 中。 ASP.NET Core [Razor 頁面](/aspnet/core/mvc/razor-pages/)與 Web Pages 有許多相似處。
 
-* ASP.NET SignalR 伺服器/用戶端實作。 目前，ASP.NET SignalR 不適用於 ASP.NET Core (不是用戶端或伺服器)。 ASP.NET Core 2.1 預定將使用 ASP.NET Core SignalR。 請參閱 [ASP.NET Core Schedule and Roadmap](https://github.com/aspnet/Home/wiki/Roadmap) (ASP.NET Core 排程和藍圖)。 預覽狀態適用於[伺服器端](https://github.com/aspnet/SignalR-Server)和[用戶端程式庫](https://github.com/aspnet/SignalR-Client-Net) GitHub 儲存機制。
+* ASP.NET SignalR 伺服器/用戶端實作。 目前，[ASP.NET SignalR](https://github.com/aspnet/SignalR) 以預覽模式提供於 ASP.NET Core 2.1。
 
 * WCF 服務實作。 即使已有 [WCF 用戶端程式庫](https://github.com/dotnet/wcf) 可從 .NET Core 取用 WCF 服務，但 WCF 伺服器實作目前只能在 .NET Framework 中使用。 此案例不是 .NET Core 目前計劃的一部分，但未來會納入考慮。
 
