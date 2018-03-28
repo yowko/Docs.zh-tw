@@ -1,193 +1,208 @@
 ---
-title: "開始使用 Azure 資料表儲存體使用 F #"
-description: "將結構化的資料儲存在雲端中使用 Azure 資料表儲存體，NoSQL 資料存放區。"
-keywords: "visual f #、 f #，功能性程式設計，.NET 中，.NET Core，Azure"
+title: '開始使用 Azure 資料表儲存體使用 F #'
+description: 將結構化的資料儲存在雲端中使用 Azure 資料表儲存體或 Azure Cosmos DB。
+keywords: 'visual f #、 f #，功能性程式設計，.NET 中，.NET Core，Azure'
 author: sylvanc
 ms.author: phcart
-ms.date: 09/20/2016
+ms.date: 03/26/2018
 ms.topic: article
 ms.prod: .net
 ms.technology: devlang-fsharp
 ms.devlang: fsharp
 ms.assetid: 9e5d6cea-a98c-461e-a5cc-75f1d154eafd
-ms.openlocfilehash: 905374a60261b0c2a863edb956943d41ae80f04d
-ms.sourcegitcommit: 655fd4f78741967f80c409cef98347fdcf77857d
+ms.openlocfilehash: 6d40211e13e8d213aa5a40d585dd384abf49ddfa
+ms.sourcegitcommit: 935d5267c44f9bce801468ef95f44572f1417e8c
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 02/28/2018
+ms.lasthandoff: 03/28/2018
 ---
-# <a name="get-started-with-azure-table-storage-using-f"></a><span data-ttu-id="2fd30-104">開始使用 Azure 資料表儲存體使用 F #</span><span class="sxs-lookup"><span data-stu-id="2fd30-104">Get started with Azure Table storage using F#</span></span> #
+# <a name="get-started-with-azure-table-storage-and-the-azure-cosmos-db-table-api-using-f"></a><span data-ttu-id="33a03-104">開始使用 Azure 資料表儲存體和 Azure Cosmos DB 資料表 API 使用 F #</span><span class="sxs-lookup"><span data-stu-id="33a03-104">Get started with Azure Table storage and the Azure Cosmos DB Table API using F#</span></span> # 
 
-<span data-ttu-id="2fd30-105">Azure 資料表儲存體是結構化的 NoSQL 資料存放在雲端服務。</span><span class="sxs-lookup"><span data-stu-id="2fd30-105">Azure Table storage is a service that stores structured NoSQL data in the cloud.</span></span> <span data-ttu-id="2fd30-106">資料表儲存體是 schemaless 設計的索引鍵/屬性存放區。</span><span class="sxs-lookup"><span data-stu-id="2fd30-106">Table storage is a key/attribute store with a schemaless design.</span></span> <span data-ttu-id="2fd30-107">因為資料表儲存體是 schemaless，很容易就能為您的應用程式 evolve 的需求調整您的資料。</span><span class="sxs-lookup"><span data-stu-id="2fd30-107">Because Table storage is schemaless, it's easy to adapt your data as the needs of your application evolve.</span></span> <span data-ttu-id="2fd30-108">資料的存取權非常快速且符合成本效益的所有種類的應用程式。</span><span class="sxs-lookup"><span data-stu-id="2fd30-108">Access to data is fast and cost-effective for all kinds of applications.</span></span> <span data-ttu-id="2fd30-109">資料表儲存體通常是遠低於成本中類似資料磁碟區的傳統 SQL。</span><span class="sxs-lookup"><span data-stu-id="2fd30-109">Table storage is typically significantly lower in cost than traditional SQL for similar volumes of data.</span></span>
+<span data-ttu-id="33a03-105">Azure 資料表儲存體是結構化的 NoSQL 資料存放在雲端服務。</span><span class="sxs-lookup"><span data-stu-id="33a03-105">Azure Table storage is a service that stores structured NoSQL data in the cloud.</span></span> <span data-ttu-id="33a03-106">資料表儲存體是 schemaless 設計的索引鍵/屬性存放區。</span><span class="sxs-lookup"><span data-stu-id="33a03-106">Table storage is a key/attribute store with a schemaless design.</span></span> <span data-ttu-id="33a03-107">因為資料表儲存體是 schemaless，很容易就能為您的應用程式 evolve 的需求調整您的資料。</span><span class="sxs-lookup"><span data-stu-id="33a03-107">Because Table storage is schemaless, it's easy to adapt your data as the needs of your application evolve.</span></span> <span data-ttu-id="33a03-108">資料的存取權非常快速且符合成本效益的所有種類的應用程式。</span><span class="sxs-lookup"><span data-stu-id="33a03-108">Access to data is fast and cost-effective for all kinds of applications.</span></span> <span data-ttu-id="33a03-109">資料表儲存體通常是遠低於成本中類似資料磁碟區的傳統 SQL。</span><span class="sxs-lookup"><span data-stu-id="33a03-109">Table storage is typically significantly lower in cost than traditional SQL for similar volumes of data.</span></span>
 
-<span data-ttu-id="2fd30-110">您可以使用資料表儲存體來儲存彈性的資料集，例如 web 應用程式、 通訊錄，裝置資訊和任何其他類型的服務所需的中繼資料的使用者資料。</span><span class="sxs-lookup"><span data-stu-id="2fd30-110">You can use Table storage to store flexible datasets, such as user data for web applications, address books, device information, and any other type of metadata that your service requires.</span></span> <span data-ttu-id="2fd30-111">您可以將任意數目的實體儲存在資料表中，而且儲存體帳戶包含任何數量的資料表，儲存體帳戶的容量上限為止。</span><span class="sxs-lookup"><span data-stu-id="2fd30-111">You can store any number of entities in a table, and a storage account may contain any number of tables, up to the capacity limit of the storage account.</span></span>
+<span data-ttu-id="33a03-110">您可以使用資料表儲存體來儲存彈性的資料集，例如 web 應用程式、 通訊錄，裝置資訊和任何其他類型的服務所需的中繼資料的使用者資料。</span><span class="sxs-lookup"><span data-stu-id="33a03-110">You can use Table storage to store flexible datasets, such as user data for web applications, address books, device information, and any other type of metadata that your service requires.</span></span> <span data-ttu-id="33a03-111">您可以將任意數目的實體儲存在資料表中，而且儲存體帳戶包含任何數量的資料表，儲存體帳戶的容量上限為止。</span><span class="sxs-lookup"><span data-stu-id="33a03-111">You can store any number of entities in a table, and a storage account may contain any number of tables, up to the capacity limit of the storage account.</span></span>
 
-### <a name="about-this-tutorial"></a><span data-ttu-id="2fd30-112">關於本教學課程</span><span class="sxs-lookup"><span data-stu-id="2fd30-112">About this tutorial</span></span>
+<span data-ttu-id="33a03-112">Azure Cosmos DB 會提供資料表 API 所撰寫，Azure 資料表儲存體，以及這類要求高階功能的應用程式：</span><span class="sxs-lookup"><span data-stu-id="33a03-112">Azure Cosmos DB provides the Table API for applications that are written for Azure Table storage and that require premium capabilities such as:</span></span>
 
-<span data-ttu-id="2fd30-113">本教學課程會示範如何撰寫 F # 程式碼來執行一些常見的工作，使用 Azure 資料表儲存體，包括建立和刪除資料表並插入、 更新、 刪除和查詢資料表的資料。</span><span class="sxs-lookup"><span data-stu-id="2fd30-113">This tutorial shows how to write F# code to do some common tasks using Azure Table storage, including creating and deleting a table and inserting, updating, deleting, and querying table data.</span></span>
+- <span data-ttu-id="33a03-113">周全的全域通訊。</span><span class="sxs-lookup"><span data-stu-id="33a03-113">Turnkey global distribution.</span></span>
+- <span data-ttu-id="33a03-114">專用的輸送量全球。</span><span class="sxs-lookup"><span data-stu-id="33a03-114">Dedicated throughput worldwide.</span></span>
+- <span data-ttu-id="33a03-115">個 99th 百分位數毫秒延遲。</span><span class="sxs-lookup"><span data-stu-id="33a03-115">Single-digit millisecond latencies at the 99th percentile.</span></span>
+- <span data-ttu-id="33a03-116">保證高可用性。</span><span class="sxs-lookup"><span data-stu-id="33a03-116">Guaranteed high availability.</span></span>
+- <span data-ttu-id="33a03-117">自動的次要索引。</span><span class="sxs-lookup"><span data-stu-id="33a03-117">Automatic secondary indexing.</span></span>
 
-<span data-ttu-id="2fd30-114">資料表儲存體概念的概觀，請參閱[資料表儲存體的.NET 指南](/azure/storage/storage-dotnet-how-to-use-tables)</span><span class="sxs-lookup"><span data-stu-id="2fd30-114">For a conceptual overview of table storage, please see [the .NET guide for table storage](/azure/storage/storage-dotnet-how-to-use-tables)</span></span>
+<span data-ttu-id="33a03-118">Azure 資料表儲存體所撰寫的應用程式可以利用資料表 API 沒有變更程式碼移轉至 Azure Cosmos 資料庫，並利用高階功能。</span><span class="sxs-lookup"><span data-stu-id="33a03-118">Applications written for Azure Table storage can migrate to Azure Cosmos DB by using the Table API with no code changes and take advantage of premium capabilities.</span></span> <span data-ttu-id="33a03-119">資料表 API 有可用的用戶端 Sdk for.NET、 Java、 Python 和 Node.js。</span><span class="sxs-lookup"><span data-stu-id="33a03-119">The Table API has client SDKs available for .NET, Java, Python, and Node.js.</span></span>
 
-## <a name="prerequisites"></a><span data-ttu-id="2fd30-115">必要條件</span><span class="sxs-lookup"><span data-stu-id="2fd30-115">Prerequisites</span></span>
+<span data-ttu-id="33a03-120">如需詳細資訊，請參閱[Azure Cosmos DB 資料表 API 簡介](https://docs.microsoft.com/azure/cosmos-db/table-introduction)。</span><span class="sxs-lookup"><span data-stu-id="33a03-120">For more information, see [Introduction to Azure Cosmos DB Table API](https://docs.microsoft.com/azure/cosmos-db/table-introduction).</span></span>
 
-<span data-ttu-id="2fd30-116">若要使用本指南，您必須先[建立 Azure 儲存體帳戶](/azure/storage/storage-create-storage-account)。</span><span class="sxs-lookup"><span data-stu-id="2fd30-116">To use this guide, you must first [create an Azure storage account](/azure/storage/storage-create-storage-account).</span></span>
-<span data-ttu-id="2fd30-117">您還需要此帳戶的儲存體存取金鑰。</span><span class="sxs-lookup"><span data-stu-id="2fd30-117">You'll also need your storage access key for this account.</span></span>
+## <a name="about-this-tutorial"></a><span data-ttu-id="33a03-121">關於本教學課程</span><span class="sxs-lookup"><span data-stu-id="33a03-121">About this tutorial</span></span>
 
-## <a name="create-an-f-script-and-start-f-interactive"></a><span data-ttu-id="2fd30-118">建立 F # 指令碼，並開始 F # Interactive</span><span class="sxs-lookup"><span data-stu-id="2fd30-118">Create an F# Script and Start F# Interactive</span></span>
+<span data-ttu-id="33a03-122">本教學課程會示範如何撰寫 F # 程式碼來執行一些常見的工作，使用 Azure 資料表儲存體或 Azure Cosmos DB 資料表 API，包括建立和刪除資料表並插入、 更新、 刪除和查詢資料表的資料。</span><span class="sxs-lookup"><span data-stu-id="33a03-122">This tutorial shows how to write F# code to do some common tasks using Azure Table storage or the Azure Cosmos DB Table API, including creating and deleting a table and inserting, updating, deleting, and querying table data.</span></span>
 
-<span data-ttu-id="2fd30-119">這篇文章中的範例可以用於 F # 應用程式或 F # 指令碼。</span><span class="sxs-lookup"><span data-stu-id="2fd30-119">The samples in this article can be used in either an F# application or an F# script.</span></span> <span data-ttu-id="2fd30-120">若要建立 F # 指令碼，建立檔案之`.fsx`擴充功能，例如`tables.fsx`，F # 開發環境中。</span><span class="sxs-lookup"><span data-stu-id="2fd30-120">To create an F# script, create a file with the `.fsx` extension, for example `tables.fsx`, in your F# development environment.</span></span>
+## <a name="prerequisites"></a><span data-ttu-id="33a03-123">必要條件</span><span class="sxs-lookup"><span data-stu-id="33a03-123">Prerequisites</span></span>
 
-<span data-ttu-id="2fd30-121">接下來，使用[封裝管理員](package-management.md)例如[Paket](https://fsprojects.github.io/Paket/)或[NuGet](https://www.nuget.org/)安裝`WindowsAzure.Storage`封裝和參考`WindowsAzure.Storage.dll`指令碼使用`#r`指示詞。</span><span class="sxs-lookup"><span data-stu-id="2fd30-121">Next, use a [package manager](package-management.md) such as [Paket](https://fsprojects.github.io/Paket/) or [NuGet](https://www.nuget.org/) to install the `WindowsAzure.Storage` package and reference `WindowsAzure.Storage.dll` in your script using a `#r` directive.</span></span> <span data-ttu-id="2fd30-122">執行一次的 'Microsoft.WindowsAzure.ConfigurationManager' 以取得 Microsoft.Azure 命名空間。</span><span class="sxs-lookup"><span data-stu-id="2fd30-122">Do it again for \`Microsoft.WindowsAzure.ConfigurationManager' in order to get the Microsoft.Azure namespace.</span></span>
+<span data-ttu-id="33a03-124">若要使用本指南，您必須先[建立 Azure 儲存體帳戶](/azure/storage/storage-create-storage-account)或[Azure Cosmos DB 帳戶](https://azure.microsoft.com/try/cosmosdb/)。</span><span class="sxs-lookup"><span data-stu-id="33a03-124">To use this guide, you must first [create an Azure storage account](/azure/storage/storage-create-storage-account) or [Azure Cosmos DB account](https://azure.microsoft.com/try/cosmosdb/).</span></span>
 
-### <a name="add-namespace-declarations"></a><span data-ttu-id="2fd30-123">加入命名空間宣告</span><span class="sxs-lookup"><span data-stu-id="2fd30-123">Add namespace declarations</span></span>
 
-<span data-ttu-id="2fd30-124">加入下列`open`上方的陳述式`tables.fsx`檔案：</span><span class="sxs-lookup"><span data-stu-id="2fd30-124">Add the following `open` statements to the top of the `tables.fsx` file:</span></span>
+## <a name="create-an-f-script-and-start-f-interactive"></a><span data-ttu-id="33a03-125">建立 F # 指令碼，並開始 F # Interactive</span><span class="sxs-lookup"><span data-stu-id="33a03-125">Create an F# Script and Start F# Interactive</span></span>
+
+<span data-ttu-id="33a03-126">這篇文章中的範例可以用於 F # 應用程式或 F # 指令碼。</span><span class="sxs-lookup"><span data-stu-id="33a03-126">The samples in this article can be used in either an F# application or an F# script.</span></span> <span data-ttu-id="33a03-127">若要建立 F # 指令碼，建立檔案之`.fsx`擴充功能，例如`tables.fsx`，F # 開發環境中。</span><span class="sxs-lookup"><span data-stu-id="33a03-127">To create an F# script, create a file with the `.fsx` extension, for example `tables.fsx`, in your F# development environment.</span></span>
+
+<span data-ttu-id="33a03-128">接下來，使用[封裝管理員](package-management.md)例如[Paket](https://fsprojects.github.io/Paket/)或[NuGet](https://www.nuget.org/)安裝`WindowsAzure.Storage`封裝和參考`WindowsAzure.Storage.dll`指令碼使用`#r`指示詞。</span><span class="sxs-lookup"><span data-stu-id="33a03-128">Next, use a [package manager](package-management.md) such as [Paket](https://fsprojects.github.io/Paket/) or [NuGet](https://www.nuget.org/) to install the `WindowsAzure.Storage` package and reference `WindowsAzure.Storage.dll` in your script using a `#r` directive.</span></span> <span data-ttu-id="33a03-129">請勿重新`Microsoft.WindowsAzure.ConfigurationManager`才能取得 Microsoft.Azure 命名空間。</span><span class="sxs-lookup"><span data-stu-id="33a03-129">Do it again for `Microsoft.WindowsAzure.ConfigurationManager` in order to get the Microsoft.Azure namespace.</span></span>
+
+### <a name="add-namespace-declarations"></a><span data-ttu-id="33a03-130">加入命名空間宣告</span><span class="sxs-lookup"><span data-stu-id="33a03-130">Add namespace declarations</span></span>
+
+<span data-ttu-id="33a03-131">加入下列`open`上方的陳述式`tables.fsx`檔案：</span><span class="sxs-lookup"><span data-stu-id="33a03-131">Add the following `open` statements to the top of the `tables.fsx` file:</span></span>
 
 [!code-fsharp[TableStorage](../../../samples/snippets/fsharp/azure/table-storage.fsx#L1-L5)]
 
-### <a name="get-your-connection-string"></a><span data-ttu-id="2fd30-125">取得連接字串</span><span class="sxs-lookup"><span data-stu-id="2fd30-125">Get your connection string</span></span>
+### <a name="get-your-azure-storage-connection-string"></a><span data-ttu-id="33a03-132">取得您的 Azure 儲存體連接字串</span><span class="sxs-lookup"><span data-stu-id="33a03-132">Get your Azure Storage connection string</span></span>
 
-<span data-ttu-id="2fd30-126">此教學課程中，您將需要 Azure 儲存體連接字串。</span><span class="sxs-lookup"><span data-stu-id="2fd30-126">You'll need an Azure Storage connection string for this tutorial.</span></span> <span data-ttu-id="2fd30-127">如需連接字串的詳細資訊，請參閱[設定儲存體連接字串](/azure/storage/storage-configure-connection-string)。</span><span class="sxs-lookup"><span data-stu-id="2fd30-127">For more information about connection strings, see [Configure Storage Connection Strings](/azure/storage/storage-configure-connection-string).</span></span>
+<span data-ttu-id="33a03-133">如果您正在連接到 Azure 儲存體資料表服務，您必須連接字串在此教學課程。</span><span class="sxs-lookup"><span data-stu-id="33a03-133">If you're connecting to Azure Storage Table service, you'll need your connection string for this tutorial.</span></span> <span data-ttu-id="33a03-134">您可以從 Azure 入口網站複製您的連接字串。</span><span class="sxs-lookup"><span data-stu-id="33a03-134">You can copy your connection string from the Azure portal.</span></span> <span data-ttu-id="33a03-135">如需連接字串的詳細資訊，請參閱[設定儲存體連接字串](/azure/storage/storage-configure-connection-string)。</span><span class="sxs-lookup"><span data-stu-id="33a03-135">For more information about connection strings, see [Configure Storage Connection Strings](/azure/storage/storage-configure-connection-string).</span></span>
 
-<span data-ttu-id="2fd30-128">教學課程中，您會輸入您的連接字串中指令碼中，像這樣：</span><span class="sxs-lookup"><span data-stu-id="2fd30-128">For the tutorial, you'll enter your connection string in your script, like this:</span></span>
+### <a name="get-your-azure-cosmos-db-connection-string"></a><span data-ttu-id="33a03-136">取得您的 Azure Cosmos DB 連接字串</span><span class="sxs-lookup"><span data-stu-id="33a03-136">Get your Azure Cosmos DB connection string</span></span>
+
+<span data-ttu-id="33a03-137">如果您正在連接到 Azure Cosmos DB，您必須連接字串在此教學課程。</span><span class="sxs-lookup"><span data-stu-id="33a03-137">If you're connecting to Azure Cosmos DB, you'll need your connection string for this tutorial.</span></span> <span data-ttu-id="33a03-138">您可以從 Azure 入口網站複製您的連接字串。</span><span class="sxs-lookup"><span data-stu-id="33a03-138">You can copy your connection string from the Azure portal.</span></span> <span data-ttu-id="33a03-139">在 Azure 入口網站，Cosmos DB 帳戶中，移至**設定** > **連接字串**，然後按一下**複製** 按鈕複製主要的連線字串。</span><span class="sxs-lookup"><span data-stu-id="33a03-139">In the Azure portal, in your Cosmos DB account, go to **Settings** > **Connection String**, and click the **Copy** button to copy your Primary Connection String.</span></span> 
+
+<span data-ttu-id="33a03-140">教學課程中，輸入您的指令碼，如下列範例中的連接字串：</span><span class="sxs-lookup"><span data-stu-id="33a03-140">For the tutorial, enter your connection string in your script, like the following example:</span></span>
 
 [!code-fsharp[TableStorage](../../../samples/snippets/fsharp/azure/table-storage.fsx#L11-L11)]
 
-<span data-ttu-id="2fd30-129">不過，這是**不建議**用於真實的專案。</span><span class="sxs-lookup"><span data-stu-id="2fd30-129">However, this is **not recommended** for real projects.</span></span> <span data-ttu-id="2fd30-130">儲存體帳戶金鑰是類似於儲存體帳戶的根密碼。</span><span class="sxs-lookup"><span data-stu-id="2fd30-130">Your storage account key is similar to the root password for your storage account.</span></span> <span data-ttu-id="2fd30-131">一律為保護您的儲存體帳戶金鑰，請小心。</span><span class="sxs-lookup"><span data-stu-id="2fd30-131">Always be careful to protect your storage account key.</span></span> <span data-ttu-id="2fd30-132">避免將其散發給其他使用者，硬式編碼，或將它儲存在其他人可以存取純文字檔案。</span><span class="sxs-lookup"><span data-stu-id="2fd30-132">Avoid distributing it to other users, hard-coding it, or saving it in a plain-text file that is accessible to others.</span></span> <span data-ttu-id="2fd30-133">您可以重新產生您使用 Azure 入口網站，如果您認為可能已受到危害的金鑰。</span><span class="sxs-lookup"><span data-stu-id="2fd30-133">You can regenerate your key using the Azure Portal if you believe it may have been compromised.</span></span>
+<span data-ttu-id="33a03-141">不過，這是**不建議**用於真實的專案。</span><span class="sxs-lookup"><span data-stu-id="33a03-141">However, this is **not recommended** for real projects.</span></span> <span data-ttu-id="33a03-142">儲存體帳戶金鑰是類似於儲存體帳戶的根密碼。</span><span class="sxs-lookup"><span data-stu-id="33a03-142">Your storage account key is similar to the root password for your storage account.</span></span> <span data-ttu-id="33a03-143">一律為保護您的儲存體帳戶金鑰，請小心。</span><span class="sxs-lookup"><span data-stu-id="33a03-143">Always be careful to protect your storage account key.</span></span> <span data-ttu-id="33a03-144">避免將其散發給其他使用者，硬式編碼，或將它儲存在其他人可以存取純文字檔案。</span><span class="sxs-lookup"><span data-stu-id="33a03-144">Avoid distributing it to other users, hard-coding it, or saving it in a plain-text file that is accessible to others.</span></span> <span data-ttu-id="33a03-145">您可以重新產生您使用 Azure 入口網站，如果您認為可能已受到危害的金鑰。</span><span class="sxs-lookup"><span data-stu-id="33a03-145">You can regenerate your key using the Azure Portal if you believe it may have been compromised.</span></span>
 
-<span data-ttu-id="2fd30-134">用於真實的應用程式，以維護您的儲存體連接字串的最佳方式是在組態檔中。</span><span class="sxs-lookup"><span data-stu-id="2fd30-134">For real applications, the best way to maintain your storage connection string is in a configuration file.</span></span> <span data-ttu-id="2fd30-135">若要從組態檔擷取連接字串，您可以：</span><span class="sxs-lookup"><span data-stu-id="2fd30-135">To fetch the connection string from a configuration file, you can do this:</span></span>
+<span data-ttu-id="33a03-146">用於真實的應用程式，以維護您的儲存體連接字串的最佳方式是在組態檔中。</span><span class="sxs-lookup"><span data-stu-id="33a03-146">For real applications, the best way to maintain your storage connection string is in a configuration file.</span></span> <span data-ttu-id="33a03-147">若要從組態檔擷取連接字串，您可以：</span><span class="sxs-lookup"><span data-stu-id="33a03-147">To fetch the connection string from a configuration file, you can do this:</span></span>
 
 [!code-fsharp[TableStorage](../../../samples/snippets/fsharp/azure/table-storage.fsx#L13-L15)]
 
-<span data-ttu-id="2fd30-136">使用 Azure 組態管理員是選擇性的。</span><span class="sxs-lookup"><span data-stu-id="2fd30-136">Using Azure Configuration Manager is optional.</span></span> <span data-ttu-id="2fd30-137">您也可以使用例如.NET Framework API`ConfigurationManager`型別。</span><span class="sxs-lookup"><span data-stu-id="2fd30-137">You can also use an API such as the .NET Framework's `ConfigurationManager` type.</span></span>
+<span data-ttu-id="33a03-148">使用 Azure 組態管理員是選擇性的。</span><span class="sxs-lookup"><span data-stu-id="33a03-148">Using Azure Configuration Manager is optional.</span></span> <span data-ttu-id="33a03-149">您也可以使用例如.NET Framework API`ConfigurationManager`型別。</span><span class="sxs-lookup"><span data-stu-id="33a03-149">You can also use an API such as the .NET Framework's `ConfigurationManager` type.</span></span>
 
-### <a name="parse-the-connection-string"></a><span data-ttu-id="2fd30-138">剖析連接字串</span><span class="sxs-lookup"><span data-stu-id="2fd30-138">Parse the connection string</span></span>
+### <a name="parse-the-connection-string"></a><span data-ttu-id="33a03-150">剖析連接字串</span><span class="sxs-lookup"><span data-stu-id="33a03-150">Parse the connection string</span></span>
 
-<span data-ttu-id="2fd30-139">若要剖析的連接字串，使用：</span><span class="sxs-lookup"><span data-stu-id="2fd30-139">To parse the connection string, use:</span></span>
+<span data-ttu-id="33a03-151">若要剖析的連接字串，使用：</span><span class="sxs-lookup"><span data-stu-id="33a03-151">To parse the connection string, use:</span></span>
 
 [!code-fsharp[TableStorage](../../../samples/snippets/fsharp/azure/table-storage.fsx#L21-L22)]
 
-<span data-ttu-id="2fd30-140">這會傳回`CloudStorageAccount`。</span><span class="sxs-lookup"><span data-stu-id="2fd30-140">This will return a `CloudStorageAccount`.</span></span>
+<span data-ttu-id="33a03-152">這會傳回`CloudStorageAccount`。</span><span class="sxs-lookup"><span data-stu-id="33a03-152">This returns a `CloudStorageAccount`.</span></span>
 
-### <a name="create-the-table-service-client"></a><span data-ttu-id="2fd30-141">建立表格服務用戶端</span><span class="sxs-lookup"><span data-stu-id="2fd30-141">Create the Table service client</span></span>
+### <a name="create-the-table-service-client"></a><span data-ttu-id="33a03-153">建立表格服務用戶端</span><span class="sxs-lookup"><span data-stu-id="33a03-153">Create the Table service client</span></span>
 
-<span data-ttu-id="2fd30-142">`CloudTableClient`類別可讓您擷取的資料表和資料表儲存體中儲存的實體。</span><span class="sxs-lookup"><span data-stu-id="2fd30-142">The `CloudTableClient` class enables you to retrieve tables and entities stored in Table storage.</span></span> <span data-ttu-id="2fd30-143">以下是如何建立服務用戶端：</span><span class="sxs-lookup"><span data-stu-id="2fd30-143">Here's one way to create the service client:</span></span>
+<span data-ttu-id="33a03-154">`CloudTableClient`類別可讓您擷取資料表和資料表儲存體中的實體。</span><span class="sxs-lookup"><span data-stu-id="33a03-154">The `CloudTableClient` class enables you to retrieve tables and entities in Table storage.</span></span> <span data-ttu-id="33a03-155">以下是如何建立服務用戶端：</span><span class="sxs-lookup"><span data-stu-id="33a03-155">Here's one way to create the service client:</span></span>
 
 [!code-fsharp[TableStorage](../../../samples/snippets/fsharp/azure/table-storage.fsx#L28-L29)]
 
-<span data-ttu-id="2fd30-144">現在您已準備好開始撰寫程式碼讀取資料，並將資料寫入資料表儲存體。</span><span class="sxs-lookup"><span data-stu-id="2fd30-144">Now you are ready to write code that reads data from and writes data to Table storage.</span></span>
+<span data-ttu-id="33a03-156">現在您已準備好開始撰寫程式碼讀取資料，並將資料寫入資料表儲存體。</span><span class="sxs-lookup"><span data-stu-id="33a03-156">Now you are ready to write code that reads data from and writes data to Table storage.</span></span>
 
-## <a name="create-a-table"></a><span data-ttu-id="2fd30-145">建立資料表</span><span class="sxs-lookup"><span data-stu-id="2fd30-145">Create a table</span></span>
+### <a name="create-a-table"></a><span data-ttu-id="33a03-157">建立資料表</span><span class="sxs-lookup"><span data-stu-id="33a03-157">Create a table</span></span>
 
-<span data-ttu-id="2fd30-146">這個範例示範如何建立資料表，如果不存在：</span><span class="sxs-lookup"><span data-stu-id="2fd30-146">This example shows how to create a table if it does not already exist:</span></span>
+<span data-ttu-id="33a03-158">這個範例示範如何建立資料表，如果不存在：</span><span class="sxs-lookup"><span data-stu-id="33a03-158">This example shows how to create a table if it does not already exist:</span></span>
 
 [!code-fsharp[TableStorage](../../../samples/snippets/fsharp/azure/table-storage.fsx#L35-L39)]
 
-## <a name="add-an-entity-to-a-table"></a><span data-ttu-id="2fd30-147">將實體加入至資料表</span><span class="sxs-lookup"><span data-stu-id="2fd30-147">Add an entity to a table</span></span>
+### <a name="add-an-entity-to-a-table"></a><span data-ttu-id="33a03-159">將實體加入至資料表</span><span class="sxs-lookup"><span data-stu-id="33a03-159">Add an entity to a table</span></span>
 
-<span data-ttu-id="2fd30-148">實體必須要有型別繼承自`TableEntity`。</span><span class="sxs-lookup"><span data-stu-id="2fd30-148">An entity has to have a type that inherits from `TableEntity`.</span></span> <span data-ttu-id="2fd30-149">您可以擴充`TableEntity`任何方式，但您的型別*必須*具有無參數建構函式。</span><span class="sxs-lookup"><span data-stu-id="2fd30-149">You can extend `TableEntity` in any way you like, but your type *must* have a parameter-less constructor.</span></span> <span data-ttu-id="2fd30-150">只有屬性同時具有`get`和`set`會儲存在 Azure 資料表。</span><span class="sxs-lookup"><span data-stu-id="2fd30-150">Only properties that have both `get` and `set` will be stored in your Azure Table.</span></span>
+<span data-ttu-id="33a03-160">實體必須要有型別繼承自`TableEntity`。</span><span class="sxs-lookup"><span data-stu-id="33a03-160">An entity has to have a type that inherits from `TableEntity`.</span></span> <span data-ttu-id="33a03-161">您可以擴充`TableEntity`任何方式，但您的型別*必須*具有無參數建構函式。</span><span class="sxs-lookup"><span data-stu-id="33a03-161">You can extend `TableEntity` in any way you like, but your type *must* have a parameter-less constructor.</span></span> <span data-ttu-id="33a03-162">只有屬性同時具有`get`和`set`會儲存在 Azure 資料表。</span><span class="sxs-lookup"><span data-stu-id="33a03-162">Only properties that have both `get` and `set` are stored in your Azure Table.</span></span>
 
-<span data-ttu-id="2fd30-151">實體的資料分割和資料列索引鍵唯一識別資料表中的實體。</span><span class="sxs-lookup"><span data-stu-id="2fd30-151">An entity's partition and row key uniquely identify the entity in the table.</span></span> <span data-ttu-id="2fd30-152">具有相同的資料分割索引鍵的實體可以進行查詢速度比的不同資料分割索引鍵，但使用不同的資料分割索引鍵可讓平行作業的更佳的延展性。</span><span class="sxs-lookup"><span data-stu-id="2fd30-152">Entities with the same partition key can be queried faster than those with different partition keys, but using diverse partition keys allows for greater scalability of parallel operations.</span></span>
+<span data-ttu-id="33a03-163">實體的資料分割和資料列索引鍵唯一識別資料表中的實體。</span><span class="sxs-lookup"><span data-stu-id="33a03-163">An entity's partition and row key uniquely identify the entity in the table.</span></span> <span data-ttu-id="33a03-164">具有相同的資料分割索引鍵的實體可以進行查詢速度比的不同資料分割索引鍵，但使用不同的資料分割索引鍵可讓平行作業的更佳的延展性。</span><span class="sxs-lookup"><span data-stu-id="33a03-164">Entities with the same partition key can be queried faster than those with different partition keys, but using diverse partition keys allows for greater scalability of parallel operations.</span></span>
 
-<span data-ttu-id="2fd30-153">以下是範例`Customer`使用`lastName`做為資料分割索引鍵和`firstName`做為資料列索引鍵。</span><span class="sxs-lookup"><span data-stu-id="2fd30-153">Here's an example of a `Customer` that uses the `lastName` as the partition key and the `firstName` as the row key.</span></span>
+<span data-ttu-id="33a03-165">以下是範例`Customer`使用`lastName`做為資料分割索引鍵和`firstName`做為資料列索引鍵。</span><span class="sxs-lookup"><span data-stu-id="33a03-165">Here's an example of a `Customer` that uses the `lastName` as the partition key and the `firstName` as the row key.</span></span>
 
 [!code-fsharp[TableStorage](../../../samples/snippets/fsharp/azure/table-storage.fsx#L45-L52)]
 
-<span data-ttu-id="2fd30-154">現在我們將新增我們`Customer`至資料表。</span><span class="sxs-lookup"><span data-stu-id="2fd30-154">Now we'll add our `Customer` to the table.</span></span> <span data-ttu-id="2fd30-155">若要這樣做，您建立`TableOperation`用以在資料表上執行。</span><span class="sxs-lookup"><span data-stu-id="2fd30-155">To do so, you create a `TableOperation` that will execute on the table.</span></span> <span data-ttu-id="2fd30-156">在此情況下，您建立`Insert`作業。</span><span class="sxs-lookup"><span data-stu-id="2fd30-156">In this case, you create an `Insert` operation.</span></span>
+<span data-ttu-id="33a03-166">現在，加入`Customer`至資料表。</span><span class="sxs-lookup"><span data-stu-id="33a03-166">Now add `Customer` to the table.</span></span> <span data-ttu-id="33a03-167">若要這樣做，請建立`TableOperation`資料表上執行。</span><span class="sxs-lookup"><span data-stu-id="33a03-167">To do so, create a `TableOperation` that executes on the table.</span></span> <span data-ttu-id="33a03-168">在此情況下，您建立`Insert`作業。</span><span class="sxs-lookup"><span data-stu-id="33a03-168">In this case, you create an `Insert` operation.</span></span>
 
 [!code-fsharp[TableStorage](../../../samples/snippets/fsharp/azure/table-storage.fsx#L54-L55)]
 
-## <a name="insert-a-batch-of-entities"></a><span data-ttu-id="2fd30-157">插入實體批次</span><span class="sxs-lookup"><span data-stu-id="2fd30-157">Insert a batch of entities</span></span>
+### <a name="insert-a-batch-of-entities"></a><span data-ttu-id="33a03-169">插入實體批次</span><span class="sxs-lookup"><span data-stu-id="33a03-169">Insert a batch of entities</span></span>
 
-<span data-ttu-id="2fd30-158">您可以將實體批次插入資料表中使用單一寫入作業。</span><span class="sxs-lookup"><span data-stu-id="2fd30-158">You can insert a batch of entities into a table using a single write operation.</span></span> <span data-ttu-id="2fd30-159">批次作業可讓您將作業結合成單一的執行，但具有一些限制：</span><span class="sxs-lookup"><span data-stu-id="2fd30-159">Batch operations allow you to combine operations into a single execution, but they have some restrictions:</span></span>
+<span data-ttu-id="33a03-170">您可以將實體批次插入資料表中使用單一寫入作業。</span><span class="sxs-lookup"><span data-stu-id="33a03-170">You can insert a batch of entities into a table using a single write operation.</span></span> <span data-ttu-id="33a03-171">批次作業可讓您將作業結合成單一的執行，但具有一些限制：</span><span class="sxs-lookup"><span data-stu-id="33a03-171">Batch operations allow you to combine operations into a single execution, but they have some restrictions:</span></span>
 
-- <span data-ttu-id="2fd30-160">您可以執行更新、 刪除和插入相同的批次作業中。</span><span class="sxs-lookup"><span data-stu-id="2fd30-160">You can perform updates, deletes, and inserts in the same batch operation.</span></span>
-- <span data-ttu-id="2fd30-161">批次作業可以包含多達 100 個項目。</span><span class="sxs-lookup"><span data-stu-id="2fd30-161">A batch operation can include up to 100 entities.</span></span>
-- <span data-ttu-id="2fd30-162">批次作業中的所有實體必須都有相同的資料分割索引鍵。</span><span class="sxs-lookup"><span data-stu-id="2fd30-162">All entities in a batch operation must have the same partition key.</span></span>
-- <span data-ttu-id="2fd30-163">雖然也可以在批次作業中執行查詢，但是它必須是批次中唯一的作業。</span><span class="sxs-lookup"><span data-stu-id="2fd30-163">While it is possible to perform a query in a batch operation, it must be the only operation in the batch.</span></span>
+- <span data-ttu-id="33a03-172">您可以執行更新、 刪除和插入相同的批次作業中。</span><span class="sxs-lookup"><span data-stu-id="33a03-172">You can perform updates, deletes, and inserts in the same batch operation.</span></span>
+- <span data-ttu-id="33a03-173">批次作業可以包含多達 100 個項目。</span><span class="sxs-lookup"><span data-stu-id="33a03-173">A batch operation can include up to 100 entities.</span></span>
+- <span data-ttu-id="33a03-174">批次作業中的所有實體必須都有相同的資料分割索引鍵。</span><span class="sxs-lookup"><span data-stu-id="33a03-174">All entities in a batch operation must have the same partition key.</span></span>
+- <span data-ttu-id="33a03-175">雖然也可以在批次作業中執行查詢，但是它必須是批次中唯一的作業。</span><span class="sxs-lookup"><span data-stu-id="33a03-175">While it is possible to perform a query in a batch operation, it must be the only operation in the batch.</span></span>
 
-<span data-ttu-id="2fd30-164">以下是一些結合成一個批次作業的兩個插入的程式碼：</span><span class="sxs-lookup"><span data-stu-id="2fd30-164">Here's some code that combines two inserts into a batch operation:</span></span>
+<span data-ttu-id="33a03-176">以下是一些結合成一個批次作業的兩個插入的程式碼：</span><span class="sxs-lookup"><span data-stu-id="33a03-176">Here's some code that combines two inserts into a batch operation:</span></span>
 
 [!code-fsharp[TableStorage](../../../samples/snippets/fsharp/azure/table-storage.fsx#L62-L71)]
 
-## <a name="retrieve-all-entities-in-a-partition"></a><span data-ttu-id="2fd30-165">擷取資料分割中的所有實體</span><span class="sxs-lookup"><span data-stu-id="2fd30-165">Retrieve all entities in a partition</span></span>
+### <a name="retrieve-all-entities-in-a-partition"></a><span data-ttu-id="33a03-177">擷取資料分割中的所有實體</span><span class="sxs-lookup"><span data-stu-id="33a03-177">Retrieve all entities in a partition</span></span>
 
-<span data-ttu-id="2fd30-166">若要查詢的資料表資料分割中的所有實體，請使用`TableQuery`物件。</span><span class="sxs-lookup"><span data-stu-id="2fd30-166">To query a table for all entities in a partition, use a `TableQuery` object.</span></span> <span data-ttu-id="2fd30-167">在這裡，您篩選實體"Buster"所在的資料分割索引鍵。</span><span class="sxs-lookup"><span data-stu-id="2fd30-167">Here, you filter for entities where "Buster" is the partition key.</span></span>
+<span data-ttu-id="33a03-178">若要查詢的資料表資料分割中的所有實體，請使用`TableQuery`物件。</span><span class="sxs-lookup"><span data-stu-id="33a03-178">To query a table for all entities in a partition, use a `TableQuery` object.</span></span> <span data-ttu-id="33a03-179">在這裡，您篩選實體"Smith"所在的資料分割索引鍵。</span><span class="sxs-lookup"><span data-stu-id="33a03-179">Here, you filter for entities where "Smith" is the partition key.</span></span>
 
-[!code-fsharp[TableStorage](../../../samples/snippets/fsharp/azure/table-storage.fsx#L77-L80)]
+[!code-fsharp[TableStorage](../../../samples/snippets/fsharp/azure/table-storage.fsx#L77-L82)]
 
-<span data-ttu-id="2fd30-168">您現在會列印結果：</span><span class="sxs-lookup"><span data-stu-id="2fd30-168">You now print the results:</span></span>
+<span data-ttu-id="33a03-180">您現在會列印結果：</span><span class="sxs-lookup"><span data-stu-id="33a03-180">You now print the results:</span></span>
 
 [!code-fsharp[TableStorage](../../../samples/snippets/fsharp/azure/table-storage.fsx#L84-L85)]
 
 
-## <a name="retrieve-a-range-of-entities-in-a-partition"></a><span data-ttu-id="2fd30-169">擷取某個範圍的資料分割中的實體</span><span class="sxs-lookup"><span data-stu-id="2fd30-169">Retrieve a range of entities in a partition</span></span>
+### <a name="retrieve-a-range-of-entities-in-a-partition"></a><span data-ttu-id="33a03-181">擷取某個範圍的資料分割中的實體</span><span class="sxs-lookup"><span data-stu-id="33a03-181">Retrieve a range of entities in a partition</span></span>
 
-<span data-ttu-id="2fd30-170">如果您不想要查詢資料分割中的所有實體，您可以指定範圍，藉由結合資料分割索引鍵篩選，資料列索引鍵的篩選。</span><span class="sxs-lookup"><span data-stu-id="2fd30-170">If you don't want to query all the entities in a partition, you can specify a range by combining the partition key filter with a row key filter.</span></span> <span data-ttu-id="2fd30-171">在這裡，您使用兩個篩選條件 」 Buster 」 資料分割中取得所有實體資料列索引鍵 （第一個名稱） 開始的位置以字母"M"中字母之前。</span><span class="sxs-lookup"><span data-stu-id="2fd30-171">Here, you use two filters to get all entities in the "Buster" partition where the row key (first name) starts with a letter earlier than "M" in the alphabet.</span></span>
+<span data-ttu-id="33a03-182">如果您不想要查詢資料分割中的所有實體，您可以指定範圍，藉由結合資料分割索引鍵篩選，資料列索引鍵的篩選。</span><span class="sxs-lookup"><span data-stu-id="33a03-182">If you don't want to query all the entities in a partition, you can specify a range by combining the partition key filter with a row key filter.</span></span> <span data-ttu-id="33a03-183">在這裡，您使用兩個篩選器"Smith"的分割區中取得所有實體資料列索引鍵 （第一個名稱） 開始的位置以字母"M"中字母之前。</span><span class="sxs-lookup"><span data-stu-id="33a03-183">Here, you use two filters to get all entities in the "Smith" partition where the row key (first name) starts with a letter earlier than "M" in the alphabet.</span></span>
 
 [!code-fsharp[TableStorage](../../../samples/snippets/fsharp/azure/table-storage.fsx#L91-L100)]
 
-<span data-ttu-id="2fd30-172">您現在會列印結果：</span><span class="sxs-lookup"><span data-stu-id="2fd30-172">You now print the results:</span></span>
+<span data-ttu-id="33a03-184">您現在會列印結果：</span><span class="sxs-lookup"><span data-stu-id="33a03-184">You now print the results:</span></span>
 
 [!code-fsharp[TableStorage](../../../samples/snippets/fsharp/azure/table-storage.fsx#L102-L103)]
 
-## <a name="retrieve-a-single-entity"></a><span data-ttu-id="2fd30-173">擷取單一實體</span><span class="sxs-lookup"><span data-stu-id="2fd30-173">Retrieve a single entity</span></span>
+### <a name="retrieve-a-single-entity"></a><span data-ttu-id="33a03-185">擷取單一實體</span><span class="sxs-lookup"><span data-stu-id="33a03-185">Retrieve a single entity</span></span>
 
-<span data-ttu-id="2fd30-174">您可以撰寫查詢以擷取單一的特定實體。</span><span class="sxs-lookup"><span data-stu-id="2fd30-174">You can write a query to retrieve a single, specific entity.</span></span> <span data-ttu-id="2fd30-175">在此，您可以使用`TableOperation`來指定客戶"Larry Buster"。</span><span class="sxs-lookup"><span data-stu-id="2fd30-175">Here, you use a `TableOperation` to specify the customer "Larry Buster".</span></span> <span data-ttu-id="2fd30-176">而不是集合，您會回到`Customer`。</span><span class="sxs-lookup"><span data-stu-id="2fd30-176">Instead of a collection, you get back a `Customer`.</span></span> <span data-ttu-id="2fd30-177">在查詢中指定資料分割索引鍵和資料列索引鍵是最快的方法來擷取與表格服務的單一實體。</span><span class="sxs-lookup"><span data-stu-id="2fd30-177">Specifying both the partition key and the row key in a query is the fastest way to retrieve a single entity from the Table service.</span></span>
+<span data-ttu-id="33a03-186">您可以撰寫查詢以擷取單一的特定實體。</span><span class="sxs-lookup"><span data-stu-id="33a03-186">You can write a query to retrieve a single, specific entity.</span></span> <span data-ttu-id="33a03-187">在此，您可以使用`TableOperation`來指定客戶"Ben Smith"。</span><span class="sxs-lookup"><span data-stu-id="33a03-187">Here, you use a `TableOperation` to specify the customer "Ben Smith".</span></span> <span data-ttu-id="33a03-188">而不是集合，您會回到`Customer`。</span><span class="sxs-lookup"><span data-stu-id="33a03-188">Instead of a collection, you get back a `Customer`.</span></span> <span data-ttu-id="33a03-189">在查詢中指定資料分割索引鍵和資料列索引鍵是最快的方法來擷取與表格服務的單一實體。</span><span class="sxs-lookup"><span data-stu-id="33a03-189">Specifying both the partition key and the row key in a query is the fastest way to retrieve a single entity from the Table service.</span></span>
 
 [!code-fsharp[TableStorage](../../../samples/snippets/fsharp/azure/table-storage.fsx#L109-L111)]
 
-<span data-ttu-id="2fd30-178">您現在會列印結果：</span><span class="sxs-lookup"><span data-stu-id="2fd30-178">You now print the results:</span></span>
+<span data-ttu-id="33a03-190">您現在會列印結果：</span><span class="sxs-lookup"><span data-stu-id="33a03-190">You now print the results:</span></span>
 
 [!code-fsharp[TableStorage](../../../samples/snippets/fsharp/azure/table-storage.fsx#L113-L115)]
 
 
-## <a name="replace-an-entity"></a><span data-ttu-id="2fd30-179">取代實體</span><span class="sxs-lookup"><span data-stu-id="2fd30-179">Replace an entity</span></span>
+### <a name="replace-an-entity"></a><span data-ttu-id="33a03-191">取代實體</span><span class="sxs-lookup"><span data-stu-id="33a03-191">Replace an entity</span></span>
 
-<span data-ttu-id="2fd30-180">若要更新實體，擷取與表格服務、 修改實體物件，以及將變更儲存至表格服務會使用`Replace`作業。</span><span class="sxs-lookup"><span data-stu-id="2fd30-180">To update an entity, retrieve it from the Table service, modify the entity object, and then save the changes back to the Table service using a `Replace` operation.</span></span> <span data-ttu-id="2fd30-181">除非變更伺服器上的實體自擷取後，作業會失敗，在此情況下，這會導致在伺服器上，完全取代實體。</span><span class="sxs-lookup"><span data-stu-id="2fd30-181">This causes the entity to be fully replaced on the server, unless the entity on the server has changed since it was retrieved, in which case the operation will fail.</span></span> <span data-ttu-id="2fd30-182">此失敗是為了防止您的應用程式不小心覆寫從其他來源的變更。</span><span class="sxs-lookup"><span data-stu-id="2fd30-182">This failure is to prevent your application from inadvertently overwriting changes from other sources.</span></span>
+<span data-ttu-id="33a03-192">若要更新實體，擷取與表格服務、 修改實體物件，以及將變更儲存至表格服務會使用`Replace`作業。</span><span class="sxs-lookup"><span data-stu-id="33a03-192">To update an entity, retrieve it from the Table service, modify the entity object, and then save the changes back to the Table service using a `Replace` operation.</span></span> <span data-ttu-id="33a03-193">除非變更伺服器上的實體自擷取後，在此情況下作業失敗，這會導致在伺服器上，完全取代實體。</span><span class="sxs-lookup"><span data-stu-id="33a03-193">This causes the entity to be fully replaced on the server, unless the entity on the server has changed since it was retrieved, in which case the operation fails.</span></span> <span data-ttu-id="33a03-194">此失敗是為了防止您的應用程式不小心覆寫從其他來源的變更。</span><span class="sxs-lookup"><span data-stu-id="33a03-194">This failure is to prevent your application from inadvertently overwriting changes from other sources.</span></span>
 
 [!code-fsharp[TableStorage](../../../samples/snippets/fsharp/azure/table-storage.fsx#L121-L128)]
 
-## <a name="insert-or-replace-an-entity"></a><span data-ttu-id="2fd30-183">插入或取代實體</span><span class="sxs-lookup"><span data-stu-id="2fd30-183">Insert-or-replace an entity</span></span>
+### <a name="insert-or-replace-an-entity"></a><span data-ttu-id="33a03-195">插入或取代實體</span><span class="sxs-lookup"><span data-stu-id="33a03-195">Insert-or-replace an entity</span></span>
 
-<span data-ttu-id="2fd30-184">有時候，您不知道實體是否已存在資料表中或不。</span><span class="sxs-lookup"><span data-stu-id="2fd30-184">Sometimes, you don't know if the entity exists in the table or not.</span></span> <span data-ttu-id="2fd30-185">而且，若是如此，不再需要儲存在它的目前值。</span><span class="sxs-lookup"><span data-stu-id="2fd30-185">And if it does, the current values stored in it are no longer needed.</span></span> <span data-ttu-id="2fd30-186">您可以使用`InsertOrReplace`建立實體，或取代它，如果存在的話，不論其狀態。</span><span class="sxs-lookup"><span data-stu-id="2fd30-186">You can use `InsertOrReplace` to create the entity, or replace it if it exists, regardless of its state.</span></span>
+<span data-ttu-id="33a03-196">有時候，您不知道實體是否存在於資料表中。</span><span class="sxs-lookup"><span data-stu-id="33a03-196">Sometimes, you don't know whether an entity exists in the table.</span></span> <span data-ttu-id="33a03-197">而且，若是如此，不再需要儲存在它的目前值。</span><span class="sxs-lookup"><span data-stu-id="33a03-197">And if it does, the current values stored in it are no longer needed.</span></span> <span data-ttu-id="33a03-198">您可以使用`InsertOrReplace`建立實體，或取代它，如果存在的話，不論其狀態。</span><span class="sxs-lookup"><span data-stu-id="33a03-198">You can use `InsertOrReplace` to create the entity, or replace it if it exists, regardless of its state.</span></span>
 
-[!code-fsharp[TableStorage](../../../samples/snippets/fsharp/azure/table-storage.fsx#L134-L140)]
+[!code-fsharp[TableStorage](../../../samples/snippets/fsharp/azure/table-storage.fsx#L134-L141)]
 
-## <a name="query-a-subset-of-entity-properties"></a><span data-ttu-id="2fd30-187">查詢實體屬性的子集</span><span class="sxs-lookup"><span data-stu-id="2fd30-187">Query a subset of entity properties</span></span>
+### <a name="query-a-subset-of-entity-properties"></a><span data-ttu-id="33a03-199">查詢實體屬性的子集</span><span class="sxs-lookup"><span data-stu-id="33a03-199">Query a subset of entity properties</span></span>
 
-<span data-ttu-id="2fd30-188">資料表查詢可以擷取只需要幾個屬性，而不是所有的這些實體。</span><span class="sxs-lookup"><span data-stu-id="2fd30-188">A table query can retrieve just a few properties from an entity instead of all of them.</span></span> <span data-ttu-id="2fd30-189">這項技巧，呼叫投影，可以改善查詢效能，特別是大型的實體。</span><span class="sxs-lookup"><span data-stu-id="2fd30-189">This technique, called projection, can improve query performance, especially for large entities.</span></span> <span data-ttu-id="2fd30-190">您在這裡，傳回僅電子郵件地址使用`DynamicTableEntity`和`EntityResolver`。</span><span class="sxs-lookup"><span data-stu-id="2fd30-190">Here, you return only email addresses using `DynamicTableEntity` and `EntityResolver`.</span></span> <span data-ttu-id="2fd30-191">請注意，投影不支援在本機儲存體模擬器，以便在表格服務上使用的帳戶時，才執行此程式碼。</span><span class="sxs-lookup"><span data-stu-id="2fd30-191">Note that projection is not supported on the local storage emulator, so this code runs only when you're using an account on the Table service.</span></span>
+<span data-ttu-id="33a03-200">資料表查詢可以擷取只需要幾個屬性，而不是所有的這些實體。</span><span class="sxs-lookup"><span data-stu-id="33a03-200">A table query can retrieve just a few properties from an entity instead of all of them.</span></span> <span data-ttu-id="33a03-201">這項技巧，呼叫投影，可以改善查詢效能，特別是大型的實體。</span><span class="sxs-lookup"><span data-stu-id="33a03-201">This technique, called projection, can improve query performance, especially for large entities.</span></span> <span data-ttu-id="33a03-202">您在這裡，傳回僅電子郵件地址使用`DynamicTableEntity`和`EntityResolver`。</span><span class="sxs-lookup"><span data-stu-id="33a03-202">Here, you return only email addresses using `DynamicTableEntity` and `EntityResolver`.</span></span> <span data-ttu-id="33a03-203">請注意，投影不支援在本機儲存體模擬器，以便在表格服務上使用的帳戶時，才執行此程式碼。</span><span class="sxs-lookup"><span data-stu-id="33a03-203">Note that projection is not supported on the local storage emulator, so this code runs only when you're using an account on the Table service.</span></span>
 
-[!code-fsharp[TableStorage](../../../samples/snippets/fsharp/azure/table-storage.fsx#L146-L157)]
+[!code-fsharp[TableStorage](../../../samples/snippets/fsharp/azure/table-storage.fsx#L147-L158)]
 
-## <a name="retrieve-entities-in-pages-asynchronously"></a><span data-ttu-id="2fd30-192">以非同步方式擷取頁面中的實體</span><span class="sxs-lookup"><span data-stu-id="2fd30-192">Retrieve entities in pages asynchronously</span></span>
+### <a name="retrieve-entities-in-pages-asynchronously"></a><span data-ttu-id="33a03-204">以非同步方式擷取頁面中的實體</span><span class="sxs-lookup"><span data-stu-id="33a03-204">Retrieve entities in pages asynchronously</span></span>
 
-<span data-ttu-id="2fd30-193">如果您正在閱讀大量實體，而且您想要擷取，而非等待它們全部傳回，您可以使用分割的查詢時進行處理。</span><span class="sxs-lookup"><span data-stu-id="2fd30-193">If you are reading a large number of entities, and you want to process them as they are retrieved rather than waiting for them all to return, you can use a segmented query.</span></span> <span data-ttu-id="2fd30-194">在這裡，您傳回的結果頁面中使用的非同步工作流程，因此正在等待將大量要傳回的結果時，不會封鎖執行。</span><span class="sxs-lookup"><span data-stu-id="2fd30-194">Here, you return results in pages by using an async workflow so that execution is not blocked while you're waiting for a large set of results to return.</span></span>
+<span data-ttu-id="33a03-205">如果您正在閱讀大量實體，而且您想要擷取，而非等待它們全部傳回，您可以使用分割的查詢時進行處理。</span><span class="sxs-lookup"><span data-stu-id="33a03-205">If you are reading a large number of entities, and you want to process them as they are retrieved rather than waiting for them all to return, you can use a segmented query.</span></span> <span data-ttu-id="33a03-206">在這裡，您傳回的結果頁面中使用的非同步工作流程，因此正在等待將大量要傳回的結果時，不會封鎖執行。</span><span class="sxs-lookup"><span data-stu-id="33a03-206">Here, you return results in pages by using an async workflow so that execution is not blocked while you're waiting for a large set of results to return.</span></span>
 
-[!code-fsharp[TableStorage](../../../samples/snippets/fsharp/azure/table-storage.fsx#L163-L177)]
+[!code-fsharp[TableStorage](../../../samples/snippets/fsharp/azure/table-storage.fsx#L163-L178)]
 
-<span data-ttu-id="2fd30-195">您現在執行這項計算以同步方式：</span><span class="sxs-lookup"><span data-stu-id="2fd30-195">You now execute this computation synchronously:</span></span>
+<span data-ttu-id="33a03-207">您現在執行這項計算以同步方式：</span><span class="sxs-lookup"><span data-stu-id="33a03-207">You now execute this computation synchronously:</span></span>
 
-[!code-fsharp[TableStorage](../../../samples/snippets/fsharp/azure/table-storage.fsx#L179-L179)]
+[!code-fsharp[TableStorage](../../../samples/snippets/fsharp/azure/table-storage.fsx#L180-L180)]
 
-## <a name="delete-an-entity"></a><span data-ttu-id="2fd30-196">刪除實體</span><span class="sxs-lookup"><span data-stu-id="2fd30-196">Delete an entity</span></span>
+### <a name="delete-an-entity"></a><span data-ttu-id="33a03-208">刪除實體</span><span class="sxs-lookup"><span data-stu-id="33a03-208">Delete an entity</span></span>
 
-<span data-ttu-id="2fd30-197">您可以在擷取之後，刪除實體。</span><span class="sxs-lookup"><span data-stu-id="2fd30-197">You can delete an entity after you have retrieved it.</span></span> <span data-ttu-id="2fd30-198">與更新實體，這將會失敗之後，如果實體已變更您擷取它。</span><span class="sxs-lookup"><span data-stu-id="2fd30-198">As with updating an entity, this will fail if the entity has changed since you retrieved it.</span></span>
+<span data-ttu-id="33a03-209">您可以在擷取之後，刪除實體。</span><span class="sxs-lookup"><span data-stu-id="33a03-209">You can delete an entity after you have retrieved it.</span></span> <span data-ttu-id="33a03-210">與更新實體，此作業失敗之後，如果實體已變更您擷取它。</span><span class="sxs-lookup"><span data-stu-id="33a03-210">As with updating an entity, this fails if the entity has changed since you retrieved it.</span></span>
 
-[!code-fsharp[TableStorage](../../../samples/snippets/fsharp/azure/table-storage.fsx#L185-L186)]
+[!code-fsharp[TableStorage](../../../samples/snippets/fsharp/azure/table-storage.fsx#L186-L187)]
 
-## <a name="delete-a-table"></a><span data-ttu-id="2fd30-199">刪除資料表</span><span class="sxs-lookup"><span data-stu-id="2fd30-199">Delete a table</span></span>
+### <a name="delete-a-table"></a><span data-ttu-id="33a03-211">刪除資料表</span><span class="sxs-lookup"><span data-stu-id="33a03-211">Delete a table</span></span>
 
-<span data-ttu-id="2fd30-200">您可以從儲存體帳戶刪除資料表。</span><span class="sxs-lookup"><span data-stu-id="2fd30-200">You can delete a table from a storage account.</span></span> <span data-ttu-id="2fd30-201">已刪除的資料表將無法在重新建立此一段時間後刪除。</span><span class="sxs-lookup"><span data-stu-id="2fd30-201">A table that has been deleted will be unavailable to be re-created for a period of time following the deletion.</span></span>
+<span data-ttu-id="33a03-212">您可以從儲存體帳戶刪除資料表。</span><span class="sxs-lookup"><span data-stu-id="33a03-212">You can delete a table from a storage account.</span></span> <span data-ttu-id="33a03-213">已刪除的資料表將無法在重新建立此一段時間後刪除。</span><span class="sxs-lookup"><span data-stu-id="33a03-213">A table that has been deleted will be unavailable to be re-created for a period of time following the deletion.</span></span>
 
-[!code-fsharp[TableStorage](../../../samples/snippets/fsharp/azure/table-storage.fsx#L192-L192)]
+[!code-fsharp[TableStorage](../../../samples/snippets/fsharp/azure/table-storage.fsx#L193-L193)]
 
-## <a name="next-steps"></a><span data-ttu-id="2fd30-202">後續步驟</span><span class="sxs-lookup"><span data-stu-id="2fd30-202">Next steps</span></span>
+## <a name="next-steps"></a><span data-ttu-id="33a03-214">後續步驟</span><span class="sxs-lookup"><span data-stu-id="33a03-214">Next steps</span></span>
 
-<span data-ttu-id="2fd30-203">既然您已學到的資料表儲存體的基本概念，請遵循下列連結，以了解更複雜的儲存體工作：</span><span class="sxs-lookup"><span data-stu-id="2fd30-203">Now that you've learned the basics of Table storage, follow these links to learn about more complex storage tasks:</span></span>
+<span data-ttu-id="33a03-215">既然您已學到的資料表儲存體的基本概念，請遵循下列連結，以深入了解更複雜的儲存體工作以及 Azure Cosmos DB 資料表 API。</span><span class="sxs-lookup"><span data-stu-id="33a03-215">Now that you've learned the basics of Table storage, follow these links to learn about more complex storage tasks and the Azure Cosmos DB Table API.</span></span>
 
-- [<span data-ttu-id="2fd30-204">適用於.NET 的 azure 儲存體 Api</span><span class="sxs-lookup"><span data-stu-id="2fd30-204">Azure Storage APIs for .NET</span></span>](/dotnet/api/overview/azure/storage)
-- [<span data-ttu-id="2fd30-205">Azure 儲存體型別提供者</span><span class="sxs-lookup"><span data-stu-id="2fd30-205">Azure Storage Type Provider</span></span>](https://fsprojects.github.io/AzureStorageTypeProvider/)
-- [<span data-ttu-id="2fd30-206">Azure 儲存體團隊部落格</span><span class="sxs-lookup"><span data-stu-id="2fd30-206">Azure Storage Team Blog</span></span>](https://blogs.msdn.microsoft.com/b/windowsazurestorage/)
-- [<span data-ttu-id="2fd30-207">設定 Azure 儲存體連接字串</span><span class="sxs-lookup"><span data-stu-id="2fd30-207">Configure Azure Storage connection strings</span></span>](/azure/storage/common/storage-configure-connection-string)
-- [<span data-ttu-id="2fd30-208">在.NET 的 Azure 資料表儲存體使用者入門</span><span class="sxs-lookup"><span data-stu-id="2fd30-208">Getting Started with Azure Table Storage in .NET</span></span>](https://azure.microsoft.com/documentation/samples/storage-table-dotnet-getting-started/)
+- [<span data-ttu-id="33a03-216">Azure Cosmos DB 資料表 API 簡介</span><span class="sxs-lookup"><span data-stu-id="33a03-216">Introduction to Azure Cosmos DB Table API</span></span>](https://docs.microsoft.com/azure/cosmos-db/table-introduction)
+- [<span data-ttu-id="33a03-217">儲存體用戶端程式庫.NET 參考</span><span class="sxs-lookup"><span data-stu-id="33a03-217">Storage Client Library for .NET reference</span></span>](https://docs.microsoft.com/dotnet/api/overview/azure/storage?view=azure-dotnet)
+- [<span data-ttu-id="33a03-218">Azure 儲存體型別提供者</span><span class="sxs-lookup"><span data-stu-id="33a03-218">Azure Storage Type Provider</span></span>](http://fsprojects.github.io/AzureStorageTypeProvider/)
+- [<span data-ttu-id="33a03-219">Azure 儲存體團隊部落格</span><span class="sxs-lookup"><span data-stu-id="33a03-219">Azure Storage Team Blog</span></span>](http://blogs.msdn.com/b/windowsazurestorage/)
+- [<span data-ttu-id="33a03-220">設定連接字串</span><span class="sxs-lookup"><span data-stu-id="33a03-220">Configuring Connection Strings</span></span>](https://docs.microsoft.com/azure/storage/common/storage-configure-connection-string)
+- [<span data-ttu-id="33a03-221">在.NET 的 Azure 資料表儲存體使用者入門</span><span class="sxs-lookup"><span data-stu-id="33a03-221">Getting Started with Azure Table Storage in .NET</span></span>](https://azure.microsoft.com/resources/samples/storage-table-dotnet-getting-started/)
