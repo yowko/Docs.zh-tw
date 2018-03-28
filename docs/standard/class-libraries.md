@@ -1,6 +1,6 @@
 ---
-title: ".NET 類別庫"
-description: "了解 .NET 類別庫如何讓您將有用的功能分組成可供多個應用程式使用的模組。"
+title: .NET 類別庫
+description: 了解 .NET 類別庫如何讓您將有用的功能分組成可供多個應用程式使用的模組。
 keywords: .NET, .NET Core
 author: richlander
 ms.author: mairaw
@@ -13,11 +13,11 @@ ms.assetid: a67484c3-fe92-44d8-8fa3-36fa2071d880
 ms.workload:
 - dotnet
 - dotnetcore
-ms.openlocfilehash: 5445c6971e243e9fc2eea34937683a5c3c432c01
-ms.sourcegitcommit: e7f04439d78909229506b56935a1105a4149ff3d
+ms.openlocfilehash: 8f7c421d2490678f7122e78bc0b83ebf3a1aa9ea
+ms.sourcegitcommit: 15316053918995cc1380163a7d7e7edd5c44e6d7
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 12/23/2017
+ms.lasthandoff: 03/19/2018
 ---
 # <a name="net-class-libraries"></a>.NET 類別庫
 
@@ -55,11 +55,16 @@ ms.lasthandoff: 12/23/2017
 
 下列平台支援 .NET Standard 類別庫：
 
-*   .NET 核心
-*   ASP.NET Core
-*   .NET Framework 4.5+
-*   Windows 市集 App
-*   Windows Phone 8+
+* .NET 核心
+* .NET Framework
+* Mono
+* Xamarin.iOS, Xamarin.Mac, Xamarin.Android
+* 通用 Windows 平台 (UWP)
+* Windows
+* Windows Phone
+* Windows Phone Silverlight
+
+如需詳細資訊，請參閱 [.NET Standard](net-standard.md) 主題。
 
 ### <a name="mono-class-libraries"></a>Mono 類別庫
 
