@@ -1,17 +1,17 @@
 ---
-title: "操作說明文章 (C# 指南)"
-description: "集結了快速提示與簡要的程式碼範例"
+title: 操作說明文章 (C# 指南)
+description: 集結了快速提示與簡要的程式碼範例
 author: billwagner
 ms.author: wiwagn
 ms.date: 12/20/2017
 ms.topic: article
 ms.prod: .net
 ms.devlang: devlang-csharp
-ms.openlocfilehash: 591996c02c55c1f54af94280940e41720684251a
-ms.sourcegitcommit: d95a91d685565f4d95c8773b558752864a6a3d7e
+ms.openlocfilehash: dfb90870233acbe3898e8863f060cd15dd22c3c7
+ms.sourcegitcommit: 935d5267c44f9bce801468ef95f44572f1417e8c
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 03/12/2018
+ms.lasthandoff: 03/28/2018
 ---
 # <a name="how-to-c"></a>操作說明 (C#)
 
@@ -54,7 +54,7 @@ ms.lasthandoff: 03/12/2018
 
 字串是用來顯示或操作文字的基本資料類型。 這些文章會示範字串的常見做法。
 
-- [比較字串](../programming-guide/strings/how-to-compare-strings.md)。
+- [比較字串](compare-strings.md)。
 - [修改字串內容](modify-string-contents.md)。
 - [判斷字串是否代表一個數字](../programming-guide/strings/how-to-determine-whether-a-string-represents-a-numeric-value.md)。
 - [使用 `String.Split` 來分隔字串](parse-strings-using-split.md)。

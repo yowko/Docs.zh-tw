@@ -1,5 +1,5 @@
 ---
-title: "特殊字元 (C# 參考)"
+title: 特殊字元 (C# 參考)
 ms.date: 02/14/2017
 ms.prod: .net
 ms.technology:
@@ -12,16 +12,16 @@ helpviewer_keywords:
 - C# language, special characters
 - Visual C#, special characters
 - '@ character (C#)'
-- '@ character (C#)'
+- $ character (C#)
 ms.assetid: 4c5c0539-2e37-40b7-91ce-75af5aabd3f9
-caps.latest.revision: 
+caps.latest.revision: ''
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: cfbd9c903cdc0d355dd234ac10f21485a2d447a6
-ms.sourcegitcommit: 2142a4732bb4ff519b9817db4c24a237b9810d4b
+ms.openlocfilehash: dda26377dd9671b60c72417175c85b3465daad47
+ms.sourcegitcommit: 935d5267c44f9bce801468ef95f44572f1417e8c
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 01/05/2018
+ms.lasthandoff: 03/28/2018
 ---
 # <a name="c-special-characters"></a>C# 特殊字元
 
@@ -31,7 +31,7 @@ ms.lasthandoff: 01/05/2018
 
 - [$](../../../csharp/language-reference/tokens/interpolated.md)，內插字串字元。
 
-## <a name="see-also"></a>另請參閱  
+## <a name="see-also"></a>請參閱  
  [C# 參考](../../../csharp/language-reference/index.md)  
  [C# 程式設計指南](../../../csharp/programming-guide/index.md)
 
