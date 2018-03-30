@@ -1,9 +1,9 @@
 ---
 layout: HubPage
 ms.topic: hub-page
-hide_bc: 
-title: ".NET 文件"
-description: "了解如何使用 C#、Visual Basic 及 F#，在任何平台上使用 .NET 建立各種應用程式。 瀏覽 API 參考、範例程式碼、教學課程及更多資源。"
+hide_bc: true
+title: .NET 文件
+description: 了解如何使用 C#、Visual Basic 及 F#，在任何平台上使用 .NET 建立各種應用程式。 瀏覽 API 參考、範例程式碼、教學課程及更多資源。
 ms.custom: updateeachrelease
 ms.openlocfilehash: f3a044df40a5508f62b5b441965c4ce16e998428
 ms.sourcegitcommit: 498799639937c89de777361aab74261efe7b79ea
