@@ -1,7 +1,7 @@
 ---
 title: .NET Compiler Platform SDK (Roslyn API)
-description: "了解如何使用.NET 編譯器平台 SDK (亦稱為 Roslyn API) 來了解 .NET 程式碼、找出錯誤，並修正那些錯誤。"
-keywords: "roslyn, 分析器, 程式碼修正"
+description: 了解如何使用.NET 編譯器平台 SDK (亦稱為 Roslyn API) 來了解 .NET 程式碼、找出錯誤，並修正那些錯誤。
+keywords: roslyn, 分析器, 程式碼修正
 author: billwagner
 ms.author: wiwagn
 ms.date: 10/10/2017
@@ -9,11 +9,11 @@ ms.topic: conceptual
 ms.prod: .net
 ms.devlang: devlang-csharp
 ms.custom: mvc
-ms.openlocfilehash: 260efa9810e6587224bddb196b4a746d15f785e2
-ms.sourcegitcommit: 3fd4e718d1bac9769fe0c1dd08ca1b2323ae272b
+ms.openlocfilehash: c627903743f8867e05bac9ce835659fc7270b94e
+ms.sourcegitcommit: 935d5267c44f9bce801468ef95f44572f1417e8c
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 01/11/2018
+ms.lasthandoff: 03/28/2018
 ---
 # <a name="the-net-compiler-platform-sdk"></a>.NET 編譯器平台 SDK
 
@@ -67,10 +67,15 @@ ms.lasthandoff: 01/11/2018
 
 您可以在下列四個主題中深入了解 .NET 編譯器平台 SDK 中的概念：
 
+ - [利用語法視覺化檢視探索程式碼](syntax-visualizer.md)
  - [了解編譯器 API 模型](compiler-api-model.md)
  - [使用語法](work-with-syntax.md)
  - [使用語意](work-with-semantics.md)
  - [使用工作區](work-with-workspace.md)
+ 
+若要開始使用，您必須安裝 **.NET Compiler Platform SDK**：
+
+[!INCLUDE[interactive-note](~/includes/roslyn-installation.md)]
 
 <!--
 

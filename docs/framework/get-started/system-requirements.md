@@ -1,6 +1,6 @@
 ---
-title: ".NET Framework 系統需求"
-description: "了解安裝 .NET Framework 4.5 及更新版本的硬體、作業系統和軟體需求。"
+title: .NET Framework 系統需求
+description: 了解安裝 .NET Framework 4.5 及更新版本的硬體、作業系統和軟體需求。
 ms.custom: updateeachrelease
 ms.date: 02/02/2018
 ms.prod: .net-framework
@@ -19,11 +19,11 @@ ms.author: ronpet
 manager: wpickett
 ms.workload:
 - dotnet
-ms.openlocfilehash: a0cfbcbc4c2c0857c1fe4163484a43f4521444a3
-ms.sourcegitcommit: be1fb5d9447ad459bef22b91a91c72e3e0b2d916
+ms.openlocfilehash: e0b6faf42f0fa47f6104454440033a6272efb224
+ms.sourcegitcommit: 935d5267c44f9bce801468ef95f44572f1417e8c
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 02/09/2018
+ms.lasthandoff: 03/28/2018
 ---
 # <a name="net-framework-system-requirements"></a>.NET Framework 系統需求
 
@@ -35,13 +35,7 @@ ms.lasthandoff: 02/09/2018
 
 您用以開發 .NET Framework 應用程式的開發環境，則會有另一組不同的需求。
 
-> [!IMPORTANT]
-> 從 .NET Framework 4 開始，所有 .NET Framework 版本均為就地更新，因此系統上只能存在單一的 4.x 版本。
-> 此外，Windows 作業系統的某些版本已預先安裝特定的 .NET Framework 版本。 這表示：
->
-> * 如果電腦上已安裝較新的版本，您就無法安裝舊的 4.x 版本。
-> * 如果 OS 已預先安裝特定的 .NET 版本，您就無法在相同電腦上安裝舊的 4.x 版本。
-> * 如果您安裝較新的版本，則不需要先將舊版解除安裝。
+[!INCLUDE[net-framework-4-versions](../../../includes/net-framework-4x-versions.md)]
 
 如需下載資訊和連結，請參閱[安裝適用於開發人員的 .NET Framework](../../../docs/framework/install/guide-for-developers.md)。
 
@@ -101,7 +95,7 @@ ms.lasthandoff: 02/09/2018
 
  **注意：**
 
-- [!INCLUDE[winserver8](../../../includes/winserver8-md.md)] 包含 [!INCLUDE[net_v45](../../../includes/net-v45-md.md)]，因此您不需要另外安裝。 同樣地，[!INCLUDE[winblue_server_2](../../../includes/winblue-server-2-md.md)] 包含 [!INCLUDE[net_v451](../../../includes/net-v451-md.md)]。
+- [!INCLUDE[winserver8](../../../includes/winserver8-md.md)] 包含 [!INCLUDE[net_v45](../../../includes/net-v45-md.md)]，因此，您不需要另外安裝。 同樣地，[!INCLUDE[winblue_server_2](../../../includes/winblue-server-2-md.md)] 包含 [!INCLUDE[net_v451](../../../includes/net-v451-md.md)]。
 
 - Windows Server 2008 R2 SP1 (含) 更新版本的伺服器核心角色，對於 .NET Framework 的支援有限。 請參閱[伺服器核心 .NET 功能](https://msdn.microsoft.com/library/ee391632.aspx)，以取得不受支援的 API 清單。
 

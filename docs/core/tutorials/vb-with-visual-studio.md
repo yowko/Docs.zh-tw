@@ -1,7 +1,7 @@
 ---
-title: "在 Visual Studio 2017 中使用 .NET Core 和 Visual Basic 建置 Hello World 應用程式"
-description: "了解如何使用 Visual Studio 2017 以 Visual Basic 建置簡單的 .NET Core 主控台應用程式。"
-keywords: ".NET Core, .NET Core 主控台應用程式, Visual Studio 2017"
+title: 在 Visual Studio 2017 中使用 .NET Core 和 Visual Basic 建置 Hello World 應用程式
+description: 了解如何使用 Visual Studio 2017 以 Visual Basic 建置簡單的 .NET Core 主控台應用程式。
+keywords: .NET Core, .NET Core 主控台應用程式, Visual Studio 2017
 author: rpetrusha
 ms.author: ronpet
 ms.date: 08/07/2017
@@ -12,11 +12,11 @@ dev_langs:
 - vb
 ms.workload:
 - dotnetcore
-ms.openlocfilehash: 0e3dbdb5df72963980f459643fcb5f4588e0029f
-ms.sourcegitcommit: 655fd4f78741967f80c409cef98347fdcf77857d
+ms.openlocfilehash: c3775fccf8d6e7c544cbd0b05df7043752e8bef9
+ms.sourcegitcommit: 935d5267c44f9bce801468ef95f44572f1417e8c
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 02/28/2018
+ms.lasthandoff: 03/28/2018
 ---
 # <a name="build-a-visual-basic-hello-world-application-with-net-core-in-visual-studio-2017"></a>在 Visual Studio 2017 中使用 .NET Core 建置 Visual Basic Hello World 應用程式
 
@@ -70,7 +70,7 @@ ms.lasthandoff: 02/28/2018
 
    ![含有已更新之 Main 方法的 Visual Studio 程式檔案](./media/vb-with-visual-studio/codewindow.png)
 
-   此程式碼會在主控台中顯示「What is your name?」， 然後等待使用者輸入字串並按 Enter 鍵。 它會將此字串儲存至名為 `name` 的變數。 此程式碼也會擷取 <xref:System.DateTime.Now?displayProperty=nameWithType> 屬性的值，其中包含目前的當地時間，並將它指派至名稱為 `currentDate` 的變數。 最後，使用[字串插值](../../csharp/language-reference/keywords/interpolated-strings.md)在主控台視窗中顯示這些值。
+   此程式碼會在主控台中顯示「What is your name?」， 然後等待使用者輸入字串並按 Enter 鍵。 它會將此字串儲存至名為 `name` 的變數。 此程式碼也會擷取 <xref:System.DateTime.Now?displayProperty=nameWithType> 屬性的值，其中包含目前的當地時間，並將它指派至名稱為 `currentDate` 的變數。 最後，使用[字串插值](../../visual-basic/programming-guide/language-features/strings/interpolated-strings.md)在主控台視窗中顯示這些值。
 
 1. 選擇 [建置]  >  [建置方案] 來編譯程式。
 

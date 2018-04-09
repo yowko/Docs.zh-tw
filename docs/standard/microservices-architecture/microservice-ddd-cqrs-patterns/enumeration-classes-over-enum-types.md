@@ -1,7 +1,7 @@
 ---
-title: "使用列舉類別，而非列舉類型"
-description: "容器化 .NET 應用程式的 .NET 微服務架構 | 使用列舉類別，而非列舉類型"
-keywords: "Docker, 微服務, ASP.NET, 容器"
+title: 使用列舉類別，而非列舉類型
+description: 容器化 .NET 應用程式的 .NET 微服務架構 | 使用列舉類別，而非列舉類型
+keywords: Docker, 微服務, ASP.NET, 容器
 author: CESARDELATORRE
 ms.author: wiwagn
 ms.date: 12/11/2017
@@ -11,11 +11,11 @@ ms.topic: article
 ms.workload:
 - dotnet
 - dotnetcore
-ms.openlocfilehash: 4b190ee9dde5628bf16fe9c483d3636539c29361
-ms.sourcegitcommit: e7f04439d78909229506b56935a1105a4149ff3d
+ms.openlocfilehash: 57ff60ea01421f1a2a0466b7de9716b72b02d2c1
+ms.sourcegitcommit: 935d5267c44f9bce801468ef95f44572f1417e8c
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 12/23/2017
+ms.lasthandoff: 03/28/2018
 ---
 # <a name="using-enumeration-classes-instead-of-enum-types"></a>使用列舉類別，而非列舉類型
 
@@ -32,8 +32,8 @@ eShopOnContainers 中的訂購微服務提供範例列舉基底類別實作，�
 ```csharp
 public abstract class Enumeration : IComparable
 {
-    public string Name { get; private set; }
-    public int Id { get; private set; }
+    public string Name { get; }
+    public int Id { get; }
 
     protected Enumeration()
     {
@@ -114,19 +114,19 @@ public class CardType : Enumeration
 
 ## <a name="additional-resources"></a>其他資源
 
--   **Enum’s are evil—update (列舉是有害的 - 更新版)**
-    [*http://www.planetgeek.ch/2009/07/01/enums-are-evil/*](http://www.planetgeek.ch/2009/07/01/enums-are-evil/)
+-   **Enum’s are evil—update**
+    [*http://www.planetgeek.ch/2009/07/01/enums-are-evil/*](http://www.planetgeek.ch/2009/07/01/enums-are-evil/) (列舉很邪惡—更新)
 
--   **Daniel Hardman：How Enums Spread Disease — And How To Cure It (列舉如何散播疾病 - 又該如何對症下藥)**
-    [*https://codecraft.co/2012/10/29/how-enums-spread-disease-and-how-to-cure-it/*](https://codecraft.co/2012/10/29/how-enums-spread-disease-and-how-to-cure-it/)
+-   **Daniel Hardman：How Enums Spread Disease — And How To Cure It**
+    [*https://codecraft.co/2012/10/29/how-enums-spread-disease-and-how-to-cure-it/*](https://codecraft.co/2012/10/29/how-enums-spread-disease-and-how-to-cure-it/) (列舉傳播疾病的方式 — 以及如何治癒它)
 
--   **Jimmy Bogard：Enumeration classes (列舉類別)**
-    [*https://lostechies.com/jimmybogard/2008/08/12/enumeration-classes/*](https://lostechies.com/jimmybogard/2008/08/12/enumeration-classes/)
+-   **Jimmy Bogard：Enumeration classes**
+    [*https://lostechies.com/jimmybogard/2008/08/12/enumeration-classes/*](https://lostechies.com/jimmybogard/2008/08/12/enumeration-classes/) (列舉類別)
 
--   **Steve Smith：Enum Alternatives in C# (C# 中列舉的替代方案)**
-    [*http://ardalis.com/enum-alternatives-in-c*](http://ardalis.com/enum-alternatives-in-c)
+-   **Steve Smith.Enum Alternatives in C#**
+    [*http://ardalis.com/enum-alternatives-in-c*](http://ardalis.com/enum-alternatives-in-c) (C# 中的列舉替代項目)
 
--   **Enumeration.cs：** Base Enumeration class in eShopOnContainers (eShopOnContainers 中的基底列舉類別)[*https://github.com/dotnet/eShopOnContainers/blob/master/src/Services/Ordering/Ordering.Domain/SeedWork/Enumeration.cs*](https://github.com/dotnet/eShopOnContainers/blob/master/src/Services/Ordering/Ordering.Domain/SeedWork/Enumeration.cs)
+-   **Enumeration.cs：** Base Enumeration class in eShopOnContainers [*https://github.com/dotnet/eShopOnContainers/blob/master/src/Services/Ordering/Ordering.Domain/SeedWork/Enumeration.cs*](https://github.com/dotnet/eShopOnContainers/blob/master/src/Services/Ordering/Ordering.Domain/SeedWork/Enumeration.cs) (eShopOnContainers 中的基底列舉類別)
 
 -   **CardType.cs**： eShopOnContainers 中的範例列舉類別
     [*https://github.com/dotnet/eShopOnContainers/blob/master/src/Services/Ordering/Ordering.Domain/AggregatesModel/BuyerAggregate/CardType.cs*](https://github.com/dotnet/eShopOnContainers/blob/master/src/Services/Ordering/Ordering.Domain/AggregatesModel/BuyerAggregate/CardType.cs)

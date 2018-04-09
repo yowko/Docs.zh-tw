@@ -1,12 +1,13 @@
 ---
-title: "執行階段如何找出組件"
-ms.custom: 
+title: 執行階段如何找出組件
+ms.custom: ''
 ms.date: 03/30/2017
 ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.technology: dotnet-clr
-ms.tgt_pltfrm: 
+ms.reviewer: ''
+ms.suite: ''
+ms.technology:
+- dotnet-clr
+ms.tgt_pltfrm: ''
 ms.topic: article
 helpviewer_keywords:
 - app.config files, assembly locations
@@ -16,16 +17,17 @@ helpviewer_keywords:
 - locating assemblies
 - assemblies [.NET Framework], location
 ms.assetid: 772ac6f4-64d2-4cfb-92fd-58096dcd6c34
-caps.latest.revision: "20"
+caps.latest.revision: 20
 author: mairaw
 ms.author: mairaw
 manager: wpickett
-ms.workload: dotnet
-ms.openlocfilehash: 97a56a095c1b0c080cd3df329fce0085dd01af23
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.workload:
+- dotnet
+ms.openlocfilehash: 6e154e0658534018ccd1086631cad6d350528b5d
+ms.sourcegitcommit: 935d5267c44f9bce801468ef95f44572f1417e8c
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 03/28/2018
 ---
 # <a name="how-the-runtime-locates-assemblies"></a>執行階段如何找出組件
 若要成功部署 .NET Framework 應用程式，您必須了解 Common Language Runtime 如何找出並繫結至構成應用程式的組件。 根據預設，執行階段會嘗試與用來建置應用程式的組件正確版本繫結。 組態檔設定可覆寫這個預設行為。  
@@ -187,7 +189,7 @@ Al.exe /link:asm6.exe.config /out:policy.3.0.asm6.dll /keyfile: compatkey.dat /v
   
 -   名稱，這是所參考之組件的名稱。  
   
--   [\<probing>](../../../docs/framework/configure-apps/file-schema/runtime/probing-element.md) 項目的 `privatePath` 屬性，這是根位置下使用者定義的子目錄清單。 您可以使用應用程式定義域的 <xref:System.AppDomain.AppendPrivatePath%2A> 屬性，將這個位置指定在應用程式組態檔和 Managed 程式碼中。 如果指定在 Managed 程式碼中，會先探查 Managed 程式碼 `privatePath` ，後面接著應用程式組態檔中指定的路徑。  
+-   [\<probing>](../../../docs/framework/configure-apps/file-schema/runtime/probing-element.md) 項目的 `privatePath` 屬性，這是根位置下使用者定義的子目錄清單。 您可以使用應用程式定義域的 <xref:System.AppDomainSetup.PrivateBinPath?displayProperty=nameWithType> 屬性，將這個位置指定在應用程式組態檔和 Managed 程式碼中。 如果指定在 Managed 程式碼中，會先探查 Managed 程式碼 `privatePath` ，後面接著應用程式組態檔中指定的路徑。  
   
 #### <a name="probing-the-application-base-and-culture-directories"></a>探查應用程式基底和文化特性目錄  
  執行階段一定會從應用程式的基底開始探查，該基底可以是 URL，或是應用程式在電腦上的根目錄。 如果在應用程式基底中找不到參考的組件，而且沒有提供任何文化特性資訊，執行階段會搜尋具有該組件名稱的任何子目錄。 所探查的目錄包括：  
@@ -254,7 +256,7 @@ Al.exe /link:asm6.exe.config /out:policy.3.0.asm6.dll /keyfile: compatkey.dat /v
 #### <a name="other-locations-probed"></a>探查的其他位置  
  組件位置也可以使用目前的繫結內容來決定。 當使用 <xref:System.Reflection.Assembly.LoadFrom%2A?displayProperty=nameWithType> 方法時，以及在 COM Interop 案例中，最常發生這個情況。 如果組件使用 <xref:System.Reflection.Assembly.LoadFrom%2A> 方法來參考另一個組件，呼叫組件的位置會被視為有關在哪裡可以找到參考組件的提示。 如果找到相符項目，就會載入該組件。 如果沒有找到相符項目，執行階段會繼續進行其搜尋語意，然後查詢 Windows Installer，以提供組件。 如果沒有提供符合繫結要求的組件，則會擲回例外狀況。 如果有參考類型，此例外狀況是 Managed 程式碼中的 <xref:System.TypeLoadException> ，如果找不到要載入的組件，則為 <xref:System.IO.FileNotFoundException> 。  
   
- 比方說，如果 Assembly1 參考 Assembly2，而且 Assembly1 是從 http://www.code.microsoft.com/utils 下載，則該位置會被視為有關在哪裡可以找到 Assembly2.dll 的提示。 然後，執行階段會在 http://www.code.microsoft.com/utils/Assembly2.dll 和 http://www.code.microsoft.com/utils/Assembly2/Assembly2.dll 中探查該組件。 如果在這兩個位置都找不到 Assembly2，執行階段就會查詢 Windows Installer。  
+ 比方說，如果 Assembly1 參考 Assembly2，而且 Assembly1 是從 http://www.code.microsoft.com/utils 下載，則該位置會被視為有關在哪裡可以找到 Assembly2.dll 的提示。 執行階段接著會探查 http://www.code.microsoft.com/utils/Assembly2.dll 和 http://www.code.microsoft.com/utils/Assembly2/Assembly2.dll 中的組件。 如果在這兩個位置都找不到 Assembly2，執行階段就會查詢 Windows Installer。  
   
 ## <a name="see-also"></a>請參閱  
  [組件載入的最佳做法](../../../docs/framework/deployment/best-practices-for-assembly-loading.md)  

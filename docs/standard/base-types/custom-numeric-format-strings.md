@@ -1,12 +1,12 @@
 ---
-title: "自訂數值格式字串"
-ms.custom: 
+title: 自訂數值格式字串
+ms.custom: ''
 ms.date: 03/30/2017
 ms.prod: .net
-ms.reviewer: 
-ms.suite: 
+ms.reviewer: ''
+ms.suite: ''
 ms.technology: dotnet-standard
-ms.tgt_pltfrm: 
+ms.tgt_pltfrm: ''
 ms.topic: article
 dev_langs:
 - csharp
@@ -22,23 +22,23 @@ helpviewer_keywords:
 - formatting numbers [.NET Framework]
 - format specifiers, custom numeric format strings
 ms.assetid: 6f74fd32-6c6b-48ed-8241-3c2b86dea5f4
-caps.latest.revision: 
+caps.latest.revision: 54
 author: rpetrusha
 ms.author: ronpet
 manager: wpickett
 ms.workload:
 - dotnet
 - dotnetcore
-ms.openlocfilehash: ec33a093e4f7f8ccda1992f26563bcd63853e634
-ms.sourcegitcommit: e7f04439d78909229506b56935a1105a4149ff3d
+ms.openlocfilehash: b33acfef1cabd3aa53fbe8947bd7adbe52d3b7a4
+ms.sourcegitcommit: 935d5267c44f9bce801468ef95f44572f1417e8c
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 12/23/2017
+ms.lasthandoff: 03/28/2018
 ---
 # <a name="custom-numeric-format-strings"></a>自訂數值格式字串
 您可以建立由一個或多個自訂數值規範所組成的自訂數值格式字串，以定義如何格式化數值資料。 自訂數值格式字串為任何非 [標準數值格式字串](../../../docs/standard/base-types/standard-numeric-format-strings.md)的格式字串。  
   
- 所有數字類型的 `ToString` 方法的一些多載可支援自訂數值格式字串。 例如，您可以提供數值格式字串給 <xref:System.Int32.ToString%28System.String%29> 類型的 <xref:System.Int32.ToString%28System.String%2CSystem.IFormatProvider%29> 和 <xref:System.Int32> 方法。 .NET 的[複合格式功能](../../../docs/standard/base-types/composite-formatting.md)也支援自訂數值格式字串，此功能會由 <xref:System.Console> 與 <xref:System.IO.StreamWriter> 類別的一些 `Write` 和 `WriteLine` 方法，以及 <xref:System.String.Format%2A?displayProperty=nameWithType> 方法和 <xref:System.Text.StringBuilder.AppendFormat%2A?displayProperty=nameWithType> 方法所使用。  
+ 所有數字類型的 `ToString` 方法的一些多載可支援自訂數值格式字串。 例如，您可以提供數值格式字串給 <xref:System.Int32.ToString%28System.String%29> 類型的 <xref:System.Int32.ToString%28System.String%2CSystem.IFormatProvider%29> 和 <xref:System.Int32> 方法。 .NET 的[複合格式功能](../../../docs/standard/base-types/composite-formatting.md)也支援自訂數值格式字串，此功能會由 <xref:System.Console> 與 <xref:System.IO.StreamWriter> 類別的一些 `Write` 和 `WriteLine` 方法，以及 <xref:System.String.Format%2A?displayProperty=nameWithType> 方法和 <xref:System.Text.StringBuilder.AppendFormat%2A?displayProperty=nameWithType> 方法所使用。 [字串內插補點](../../csharp/language-reference/tokens/interpolated.md)功能也支援自訂數值格式字串。  
   
 > [!TIP]
 >  您可以下載 [格式化公用程式](http://code.msdn.microsoft.com/NET-Framework-4-Formatting-9c4dae8d)，這個應用程式可讓您將格式字串套用至數值或日期和時間值，並且顯示結果字串。  

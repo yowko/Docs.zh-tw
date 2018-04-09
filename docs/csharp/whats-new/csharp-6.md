@@ -1,6 +1,6 @@
 ---
-title: "在 C# 6-C# 手冊中最新消息"
-description: "了解 C# 第 6 版的新功能"
+title: C# 6 的新功能 - C# 指南
+description: 了解 C# 第 6 版的新功能
 keywords: .NET, .NET Core
 author: BillWagner
 ms.date: 09/22/2016
@@ -9,11 +9,11 @@ ms.prod: .net
 ms.technology: devlang-csharp
 ms.devlang: csharp
 ms.assetid: 4d879f69-f889-4d3f-a781-75194e143400
-ms.openlocfilehash: f3e7a515b1dde52461ab6abf8a9adbe84d27b7c1
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.openlocfilehash: ea54e9a05120134eea8e1bc9d82302a7513b43e7
+ms.sourcegitcommit: 935d5267c44f9bce801468ef95f44572f1417e8c
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 03/28/2018
 ---
 # <a name="whats-new-in-c-6"></a>C# 6 的新功能
 
@@ -56,7 +56,7 @@ C# 6.0 版包含許多功能，能提升開發人員的產能。 本版的功能
 
 不過，這個簡單的語法限制了您可以使用 Auto 屬性支援的設計類型。 C# 6 改善 Auto 屬性功能，讓您可以在更多案例中使用它們。 您不需要最後求助於更詳細的宣告語法，並且經常以手動方式操作支援欄位。
 
-新的語法描述唯讀屬性，以及初始化變數的儲存體自動屬性後面的案例。
+新的語法可解決唯讀屬性的案例，以及初始化 Auto 屬性背後的變數儲存體。
 
 ### <a name="read-only-auto-properties"></a>唯讀 Auto 屬性
 
@@ -105,17 +105,17 @@ C# 6 可讓您在 Auto 屬性宣告中指派 Auto 屬性所使用的儲存體初
 
 `Grades` 成員會在宣告的位置初始化。 這可讓您更輕鬆地只執行初始化一次。 初始化是屬性宣告的一部分，如此能更容易讓儲存區配置與 `Student` 物件的公用介面相等。
 
-屬性初始設定式此處只能使用與讀取/寫入屬性，以及唯讀屬性，如所示。
+屬性初始設定式可以與讀取/寫入屬性一起使用，也可以與唯讀屬性一起使用，如下所示。
 
 [!code-csharp[ReadWriteInitialization](../../../samples/snippets/csharp/new-in-6/newcode.cs#ReadWriteInitialization)]
 
 ## <a name="expression-bodied-function-members"></a>具有運算式主體的函式成員
 
-我們撰寫的很多成員主體只包含一個陳述式，它可以表示為運算式。 您可以藉由改為撰寫運算式主體的成員，而減少該語法。 它適用於方法和唯讀屬性。 例如，`ToString()` 覆寫通常是絕佳的候選︰
+我們撰寫的很多成員主體只包含一個陳述式，它可以表示為運算式。 您可以藉由改為撰寫運算式主體的成員，而減少該語法。 其適用於方法和唯讀屬性。 例如，`ToString()` 覆寫通常是絕佳的候選︰
 
 [!code-csharp[ToStringExpressionMember](../../../samples/snippets/csharp/new-in-6/newcode.cs#ToStringExpressionMember)]
 
-您也可以在唯讀屬性時也使用運算式主體的成員：
+您也可以在唯讀屬性中使用運算式主體的成員︰
 
 [!code-csharp[FullNameExpressionMember](../../../samples/snippets/csharp/new-in-6/newcode.cs#FullNameExpressionMember)]
 
@@ -128,7 +128,7 @@ C# 6 可讓您在 Auto 屬性宣告中指派 Auto 屬性所使用的儲存體初
 
 [!code-csharp[UsingStaticMath](../../../samples/snippets/csharp/new-in-6/newcode.cs#UsingStaticMath)]
 
-現在，您可以使用 <xref:System.Math> 類別中的任何靜態方法，而不需限定 <xref:System.Math> 類別。 <xref:System.Math> 類別是這項功能很棒的使用案例，因為它不包含任何執行個體方法。 您也可以使用 `using static` 為同時具有靜態和執行個體方法的類別匯入類別的靜態方法。 其中一個最有用的範例是<xref:System.String>:
+現在，您可以使用 <xref:System.Math> 類別中的任何靜態方法，而不需限定 <xref:System.Math> 類別。 <xref:System.Math> 類別是這項功能很棒的使用案例，因為它不包含任何執行個體方法。 您也可以使用 `using static` 為同時具有靜態和執行個體方法的類別匯入類別的靜態方法。 其中一個最有用的範例是 <xref:System.String>
 
 [!code-csharp[UsingStatic](../../../samples/snippets/csharp/new-in-6/newcode.cs#UsingStatic)]
 
@@ -209,17 +209,17 @@ this.SomethingHappened?.Invoke(this, eventArgs);
 
 ## <a name="string-interpolation"></a>字串插值
 
-C# 6 包含新的語法，它能從格式字串和可評估的運算式撰寫字串，以產生其他字串值。
+C# 6 包含新的語法，其可從格式字串和可評估的運算式撰寫字串，以產生其他字串值。
 
 傳統上，您需要在像是 `string.Format` 的方法中使用位置參數：
 
 [!code-csharp[stringFormat](../../../samples/snippets/csharp/new-in-6/oldcode.cs#stringFormat)]
 
-使用 C# 6，新的字串內插補點功能可讓您將運算式內嵌在格式字串中。 只要在字串開頭加上 `$`：
+使用 C# 6，新的[字串內插補點](../language-reference/tokens/interpolated.md)功能可讓您將運算式內嵌在格式字串中。 只要在字串開頭加上 `$`：
 
 [!code-csharp[stringInterpolation](../../../samples/snippets/csharp/new-in-6/newcode.cs#FullNameExpressionMember)]
 
-這個最初範例將變數運算式用於替代的運算式。 您可以展開此語法，即能使用任何運算式。 比方說，您可能在內插補點的過程中計算某學生的平均成積點︰
+這個最初範例將屬性運算式用於替代的運算式。 您可以展開此語法，即能使用任何運算式。 比方說，您可能在內插補點的過程中計算某學生的平均成積點︰
 
 [!code-csharp[stringInterpolationExpression](../../../samples/snippets/csharp/new-in-6/newcode.cs#stringInterpolationExpression)]
 
@@ -250,21 +250,16 @@ public string GetGradePointPercentages() =>
 ### <a name="string-interpolation-and-specific-cultures"></a>字串內插補點和特定文化特性
 
 所有在上一節中顯示的範例將會使用程式碼執行所在電腦上的目前文化特性和語言來格式化字串。 通常，您可能需要格式化使用特定文化特性產生的字串。
-從字串內插補點所產生的物件，是隱含轉換為 <xref:System.String> 或 <xref:System.FormattableString> 的類型。
+若要那麼做，請使用物件依可隱含轉換至 <xref:System.FormattableString> 之字串內插補點所產生的事實。
 
-<xref:System.FormattableString> 類型包含格式字串，以及在轉換成字串之前評估引數的結果。 您可以使用 <xref:System.FormattableString> 的公用方法指定格式化字串時的文化特性。 例如，以下會產生使用德文作為語言和文化特性的字串。 (它會使用 ',' 字元作為十進位分隔符號，並使用 '. ' 字元作為千位分隔符號。)
+<xref:System.FormattableString> 執行個體包含格式字串，以及在將其轉換為字串之前，評估運算式的結果。 您可以使用 <xref:System.FormattableString> 的公用方法指定格式化字串時的文化特性。 例如，下列範例會使用德國文化特性產生字串。 (其會使用 ',' 字元作為十進位分隔符號，並使用 '. ' 字元作為千位分隔符號。)
 
 ```csharp
 FormattableString str = $"Average grade is {s.Grades.Average()}";
-var gradeStr = string.Format(null, 
-    System.Globalization.CultureInfo.CreateSpecificCulture("de-de"),
-    str.GetFormat(), str.GetArguments());
+var gradeStr = str.ToString(new System.Globalization.CultureInfo("de-DE"));
 ```
 
-> [!NOTE]
-> 上述範例中在 .NET Core 1.0.1 版中不受支援。 僅在 .NET Framework 中支援。
-
-一般情況下，字串插值運算式會產生字串作為其輸出。 不過，當您想進一步控制用來格式化字串的文化特性時，可以指定特定的輸出。  如果這是您經常需要的功能，可以建立便利的方法作為擴充方法，以便能夠輕鬆使用特定文化特性進行格式化。
+如需詳細資訊，請參閱[字串內插補點](../language-reference/tokens/interpolated.md)主題。
 
 ## <a name="exception-filters"></a>例外狀況篩選條件
 

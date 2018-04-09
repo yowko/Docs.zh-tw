@@ -1,6 +1,6 @@
 ---
-title: "如何：串連多個字串 (C# 指南)"
-description: "以下提供用 C# 串連字串的多種方式。 了解選項及做出不同選擇的原因。"
+title: 如何：串連多個字串 (C# 指南)
+description: 以下提供用 C# 串連字串的多種方式。 了解選項及做出不同選擇的原因。
 ms.date: 02/20/2018
 ms.prod: .net
 ms.technology:
@@ -11,14 +11,14 @@ helpviewer_keywords:
 - concatenating strings [C#]
 - strings [C#], concatenation
 ms.assetid: 8e16736f-4096-4f3f-be0f-9d4c3ff63520
-caps.latest.revision: 
+caps.latest.revision: 21
 author: BillWagner
 ms.author: wiwagn
-ms.openlocfilehash: 43b60455762ecd91a790ea5c7dae49d3348794aa
-ms.sourcegitcommit: 655fd4f78741967f80c409cef98347fdcf77857d
+ms.openlocfilehash: 05f4932710870c26256659252fcef3814462d488
+ms.sourcegitcommit: 935d5267c44f9bce801468ef95f44572f1417e8c
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 02/28/2018
+ms.lasthandoff: 03/28/2018
 ---
 # <a name="how-to-concatenate-multiple-strings-c-guide"></a>如何：串連多個字串 (C# 指南)
 
@@ -31,7 +31,7 @@ ms.lasthandoff: 02/28/2018
  [!code-csharp-interactive[Combining strings at compile time](../../../samples/snippets/csharp/how-to/strings/Concatenate.cs#1)]  
   
 
-若要串連字串變數，您可以使用 `+` 或 `+=` 運算子、[字串內插補點](../tutorials/string-interpolation.md)，或是 <xref:System.String.Format%2A?displayProperty=nameWithType>、<xref:System.String.Concat%2A?displayProperty=nameWithType>、<xref:System.String.Join%2A?displayProperty=nameWithType> 或 <xref:System.Text.StringBuilder.Append%2A?displayProperty=nameWithType> 方法。 `+` 運算子簡單易用，且容易建立直覺化程式碼。 即使一個陳述式使用數個 `+` 運算子，字串內容也只會複製一次。 下列程式碼示範使用 `+` 和 `+=` 運算子來串連字串的範例：
+若要串連字串變數，您可以使用 `+` 或 `+=` 運算子、[字串內插補點](../language-reference/tokens/interpolated.md)，或是 <xref:System.String.Format%2A?displayProperty=nameWithType>、<xref:System.String.Concat%2A?displayProperty=nameWithType>、<xref:System.String.Join%2A?displayProperty=nameWithType> 或 <xref:System.Text.StringBuilder.Append%2A?displayProperty=nameWithType> 方法。 `+` 運算子簡單易用，且容易建立直覺化程式碼。 即使一個陳述式使用數個 `+` 運算子，字串內容也只會複製一次。 下列程式碼示範使用 `+` 和 `+=` 運算子來串連字串的範例：
 
 [!code-csharp-interactive[combining strings using +](../../../samples/snippets/csharp/how-to/strings/Concatenate.cs#2)]  
 

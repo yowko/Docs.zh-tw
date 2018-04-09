@@ -1,6 +1,6 @@
 ---
-title: "插入字串教學課程 - C# 本機快速入門"
-description: "在這個有關插入字串的快速入門中，您可以撰寫 C# 程式碼，以將運算式結果包含在較大的字串中。"
+title: 插入字串教學課程 - C# 本機快速入門
+description: 在這個有關插入字串的快速入門中，您可以撰寫 C# 程式碼，以將運算式結果包含在較大的字串中。
 author: rpetrusha
 ms.author: ronpet
 ms.date: 01/11/2018
@@ -9,11 +9,11 @@ ms.prod: .net
 ms.technology: devlang-csharp
 ms.devlang: csharp
 ms.custom: mvc
-ms.openlocfilehash: b6089b69eb350fce29f86f19f5abeb44acb4b6b4
-ms.sourcegitcommit: 96cc82cac4650adfb65ba351506d8a8fbcd17b5c
+ms.openlocfilehash: 1edd2b9f59d1933547c4152343f226a86ad90216
+ms.sourcegitcommit: 935d5267c44f9bce801468ef95f44572f1417e8c
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 02/19/2018
+ms.lasthandoff: 03/28/2018
 ---
 # <a name="interpolated-strings"></a>插入字串
 
@@ -166,5 +166,4 @@ Console.WriteLine($"{DateTime.Now,-20:d} Hour {DateTime.Now,-10:HH} {1063.342,15
     
 您可以在自己的開發環境中，繼續完成[陣列和集合](arrays-and-collections.md)快速入門中的內容。
 
-您可以在＜C# 參考＞的[插入字串](../language-reference/keywords/interpolated-strings.md)主題中，深入了解如何使用插入字串。
-
+您可以在＜C# 參考＞的[字串內插補點](../language-reference/tokens/interpolated.md)主題中，深入了解字串內插補點。

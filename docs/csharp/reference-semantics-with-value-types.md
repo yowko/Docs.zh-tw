@@ -9,18 +9,18 @@ ms.prod: .net
 ms.technology: devlang-csharp
 ms.devlang: csharp
 ms.custom: mvc
-ms.openlocfilehash: 8a0cfe83200d50eefa9b01ab51591a5fe0703ec0
-ms.sourcegitcommit: c883637b41ee028786edceece4fa872939d2e64c
+ms.openlocfilehash: 778897dc92f8a94178ebbbed7704c0dfe2397729
+ms.sourcegitcommit: 935d5267c44f9bce801468ef95f44572f1417e8c
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 03/23/2018
+ms.lasthandoff: 03/28/2018
 ---
 # <a name="reference-semantics-with-value-types"></a>具備實值型別的參考語意
 
 使用實值型別的優點是他們通常可避免堆積配置。
 相對地，缺點則是他們根據實值複製。 這種兩難的情況使得最佳化針對大量資料進行運作的演算法，變得更加困難。 C# 7.2 中新的語言功能提供一項新的機制，可對實值型別使用利用參考傳遞的語意。 若能善用這些功能，即可同時最小化配置及複製作業。 本文會探討這些新功能。
 
-文中有許多程式碼範例示範有 C# 7.2 的新增功能。 若要使用這些功能，必須在您的專案中將專案設為使用 C# 7.2 或更新版本。 您可使用 Visual Studio 進行選取。 請為每個專案，從功能表選取 [專案]，然後選取 [屬性]。 選取 [建置] 索引標籤，然後按一下 [進階]。 您可於該位置設定語言版本。 請選擇 [7.2] 或 [最新版]。  或者，您也可以編輯 *csproj* 檔案，並新增下列節點：
+文中有許多程式碼範例示範有 C# 7.2 的新增功能。 若要使用這些功能，必須在您的專專案設為使用 C# 7.2 或更新版本。 您可使用 Visual Studio 進行選取。 請為每個專案，從功能表選取 [專案]，然後選取 [屬性]。 選取 [建置] 索引標籤，然後按一下 [進階]。 您可於該位置設定語言版本。 請選擇 [7.2] 或 [最新版]。  或者，您也可以編輯 *csproj* 檔案，並新增下列節點：
 
 ```XML
   <PropertyGroup>
@@ -30,11 +30,11 @@ ms.lasthandoff: 03/23/2018
 
 您可以為值使用 [7.2] 或 [最新版]。
 
-## <a name="specifying-in-parameters"></a>指定 `in` 參數
+## <a name="passing-arguments-by-readonly-reference"></a>以唯讀參考傳遞引數
 
-當您撰寫利用參考傳遞引數的方法時，C# 7.2 會新增 `in` 關鍵字來補充現有的 `ref` 和 `out` 關鍵字。 `in` 關鍵字會指定您利用參考傳遞參數，且呼叫的方法不會修改傳遞給他的值。 
+C# 7.2 新增了 `in` 關鍵字來補充現有的 `ref` 與 `out` 關鍵字，以傳遞依照參考的引數。 `in` 關鍵字會根據參考指定傳遞引數，但呼叫的方法不會修改值。 
 
-該新增功能提供完整的詞彙能表達您的設計目的。 當您未指定下列任一修飾詞時，會在傳遞至呼叫的方法時，複製實值型別。 每個修飾詞皆會指定要利用參考傳遞實值型別，避免複製。 每個修飾詞皆表示不同之目的：
+該新增功能提供完整的詞彙能表達您的設計目的。 當您未在下列方法簽章中指定下列任一修飾詞時，會在傳遞至呼叫的方法時，複製實值型別。 每個修飾詞皆會指定要利用參考傳遞實值型別，避免複製。 每個修飾詞皆表示不同之目的：
 
 - `out`：此方法會設定用作為此參數的引數值。
 - `ref`：此方法會設定用作為此參數的引數值。
@@ -54,18 +54,32 @@ ms.lasthandoff: 03/23/2018
 
 [!code-csharp[UseInArgument](../../samples/csharp/reference-semantics/Program.cs#UseInArgument "Specifying an In argument")]
 
-編譯器確保強制讓 `in` 引數為唯讀性質的方式有數種。  首先，呼叫的方法不可直接指派到 `in` 參數。 該方法不可直接指派到 `in` 參數的任何欄位。 此外，您也無法將 `in` 參數傳遞到需要 `ref` 或 `out` 修飾詞的任何方法。
-編譯器會強制讓 `in` 引數為唯讀變數。 您可以呼叫使用利用實值傳遞之語意的任何執行個體方法。 在那些執行個體中，會建立 `in` 參數的複本。 因為編譯器可為任何 `in` 參數建立暫存變數，所以您也可以為任何 `in` 參數指定預設值。 下列程式碼使用了該方式將原點 (點 0, 0) 指定為第二個點的預設值：
+編譯器確保強制讓 `in` 引數為唯讀性質的方式有數種。  首先，呼叫的方法不可直接指派到 `in` 參數。 當該值為 `struct` 類型時，該方法不可直接指派到 `in` 參數的任何欄位。 此外，您也無法使用 `ref` 或 `out` 修飾詞將 `in` 參數傳遞至任何方法。
+這些規則適用於所有 `in` 參數的欄位，提供的欄位為 `struct` 類型，且參數也為 `struct` 類型。 實際上，這些規則適用於成員存取的多個層級，提供所有成員存取層級的類型為 `structs`。 編譯器會強制 `struct` 類型作為 `in` 引數傳遞，且其 `struct` 成員在作為引數對其他方法使用時為唯讀變數。
+
+使用 `in` 參數可避免製作複本可能產生的效能成本。 這不會變更任何方法呼叫的語意。 因此，您不需要指定呼叫位置的 `in` 修飾詞。 但是，忽略呼叫位置的 `in` 修飾詞會告知編譯器可以下列理由製作引數的複本：
+
+- 引數類型對參數類型有隱含轉換但沒有身分識別轉換。
+- 引數為運算式但不具有已知的儲存體變數。
+- 存在受 `in` 存在與否影響的多載。 在此情況下，傳值多載是最佳相符項目。
+
+當您更新現有的程式碼以使用唯讀參考引數時，這些規則相當實用。 在呼叫的方法中，您可呼叫所有使用傳值參數的執行個體方法。 在那些執行個體中，會建立 `in` 參數的複本。 因為編譯器可為任何 `in` 參數建立暫存變數，所以您也可以為任何 `in` 參數指定預設值。 下列程式碼會將原點 (點 0,0) 指定為第二個點的預設值：
 
 [!code-csharp[InArgumentDefault](../../samples/csharp/reference-semantics/Program.cs#InArgumentDefault "Specifying defaults for an in parameter")]
 
-參考型別或內建數值也可使用 `in` 參數指定。 但這兩種用法的優點皆不彰顯 (若有的話)。
+若要強制編譯器依參考傳遞唯讀引數，請在呼叫位置指定引數上的 `in` 修飾詞，如下列程式碼所示：
+
+[!code-csharp[UseInArgument](../../samples/csharp/reference-semantics/Program.cs#ExplicitInArgument "Specifying an In argument")]
+
+此行為能在可提升效能時，使在大型程式碼基底中採用 `in` 參數一段時間更加輕鬆。 您必須先將 `in` 修飾詞新增至方法簽章。 隨後便可在呼叫位置新增 `in` 修飾詞並建立 `readonly struct` 類型，以避免編譯器在更多位置建立 `in` 參數的防禦性複本。
+
+參考型別或數值也可使用 `in` 參數指定。 但這兩種用法的優點皆不彰顯 (若有的話)。
 
 ## <a name="ref-readonly-returns"></a>`ref readonly` 傳回
 
 同時也建議您利用參考傳回實值型別，但不允許呼叫端修改該值。 請使用 `ref readonly` 修飾詞來表示該設計目的。 該修飾詞會通知讀取器，目前正在將參考傳回現有資料，但不允許修改。 
 
-編譯器會強制呼叫端無法修改該參考。 若嘗試直接指派到值，會產生編譯時期錯誤。 但編譯器無法知道是否有任何成員方法修改了該結構的狀態。
+編譯器會強制呼叫端無法修改該參考。 若嘗試直接指派到值，則會產生編譯時間錯誤。 但編譯器無法知道是否有任何成員方法修改了該結構的狀態。
 為確保物件未經修改，編譯器會建立複本，並使用該複本呼叫成員參考。 任何修改皆僅會修改防禦複本。 
 
 使用 `Point3D` 的程式庫似乎通常會在整篇程式碼中使用原點。 每個執行個體都會在堆疊上建立新的物件。 如此有助建立常數並利用參考傳回常數。 但是，如果您將參考傳回內部儲存體，可能會希望強制限制呼叫端不可修改參考的儲存體。 下列程式碼定義了將 `readonly ref` 傳回至指定原點之 `Point3D` 的唯讀屬性。
@@ -74,7 +88,7 @@ ms.lasthandoff: 03/23/2018
 
 建立 ref readonly 傳回的複本十分簡單：只要將其指派到並非利用 `ref readonly` 修飾詞宣告的變數即可。 編譯器會產生程式碼，將物件複製為指派的一部分。 
 
-當您指派變數到 `ref readonly return` 時，可指定 `ref readonly` 變數或 readonly 所參考的實值複本：
+當您指派變數到 `ref readonly return` 時，可指定 `ref readonly` 變數或唯讀參考的傳值複本：
 
 [!code-csharp[AssignRefReadonly](../../samples/csharp/reference-semantics/Program.cs#AssignRefReadonly "Assigning a ref readonly")]
 
@@ -83,7 +97,7 @@ ms.lasthandoff: 03/23/2018
 ## <a name="readonly-struct-type"></a>`readonly struct` 類型
 
 將 `ref readonly` 套用到高流量的結構應該已足夠。
-其他請況下，則建議您建立不可變的結構。 如此一來，您即就可一律利用 readonly 參考進行傳遞。 該做法會移除在您存取用作為 `in` 參數之結構方法時，所產生的保護複本。
+其他請況下，則建議您建立不可變的結構。 您隨後便可隨時利用傳值參考進行傳遞。 該做法會移除在您存取用作為 `in` 參數之結構方法時，所產生的保護複本。
 
 建立 `readonly struct` 類型即可執行此作業。 您可以將 `readonly` 修飾詞新增至結構宣告。 編譯器會將該結構的所有執行個體成員，強制為 `readonly`，且 `struct` 不得可變動。
 
@@ -109,7 +123,7 @@ ms.lasthandoff: 03/23/2018
 - 您不可在迭代器中宣告 `ref struct` 區域變數。
 - 您不可在 Lambda 運算式或區域函式中擷取 `ref struct` 變數。
 
-這些限制可確保您不會不小心地用到 `ref struct`，而可能將其升階至受控堆積。
+這些限制可確保您不會意外使用 `ref struct` 而將其升階至受控堆積。
 
 ## <a name="readonly-ref-struct-type"></a>`readonly ref struct` 類型
 
@@ -123,7 +137,7 @@ readonly ref struct ReadOnlyRefPoint2D
     public int X { get; }
     public int Y { get; }
     
-    ReadOnlyRefPoint2D(int x, int y) => (X, Y) = (x, y);
+    public ReadOnlyRefPoint2D(int x, int y) => (X, Y) = (x, y);
 }
 ```
 

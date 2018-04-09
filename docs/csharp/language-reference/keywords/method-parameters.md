@@ -1,5 +1,5 @@
 ---
-title: "方法參數 (C# 參考)"
+title: 方法參數 (C# 參考)
 ms.date: 07/20/2015
 ms.prod: .net
 ms.technology:
@@ -10,14 +10,14 @@ helpviewer_keywords:
 - method parameters [C#]
 - parameters [C#]
 ms.assetid: 680e39ff-775b-48b0-9f47-4186a5bfc4a1
-caps.latest.revision: 
+caps.latest.revision: 8
 author: BillWagner
 ms.author: wiwagn
-ms.openlocfilehash: b20d2d233350cfb9de55cbd07e722082ec311597
-ms.sourcegitcommit: 83dd5ec003e788ccb3e33f3412a7af39ae347646
+ms.openlocfilehash: 35d96066deb866e02f6bf624121376fe3ae94373
+ms.sourcegitcommit: 935d5267c44f9bce801468ef95f44572f1417e8c
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 03/15/2018
+ms.lasthandoff: 03/28/2018
 ---
 # <a name="method-parameters-c-reference"></a>方法參數 (C# 參考)
 
@@ -25,13 +25,13 @@ ms.lasthandoff: 03/15/2018
   
  本節描述在您宣告方法參數時可以使用的關鍵字：  
   
--   [params](../../../csharp/language-reference/keywords/params.md)  
+-   [params](../../../csharp/language-reference/keywords/params.md) 指定這個參數可以接受可變數目的引數。
   
--   [in](../../../csharp/language-reference/keywords/in-parameter-modifier.md)  
+-   [in](../../../csharp/language-reference/keywords/in-parameter-modifier.md) 指定這個參數是傳址方式傳遞，但只會由所呼叫的方法讀取。
   
--   [ref](../../../csharp/language-reference/keywords/ref.md)  
+-   [ref](../../../csharp/language-reference/keywords/ref.md) 指定這個參數是傳址方式傳遞，且可以由所呼叫的方法讀取或寫入。
   
--   [out](../../../csharp/language-reference/keywords/out-parameter-modifier.md)  
+-   [out](../../../csharp/language-reference/keywords/out-parameter-modifier.md) 指定這個參數是傳址方式傳遞，且由所呼叫的方法寫入。
   
 ## <a name="see-also"></a>請參閱  
  [C# 參考](../../../csharp/language-reference/index.md)  

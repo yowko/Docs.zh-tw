@@ -1,6 +1,6 @@
 ---
-title: "開始使用語法分析 (Roslyn API)"
-description: "周遊、查詢和查核語法樹狀結構的簡介。"
+title: 開始使用語法分析 (Roslyn API)
+description: 周遊、查詢和查核語法樹狀結構的簡介。
 author: billwagner
 ms.author: wiwagn
 ms.date: 02/05/2018
@@ -8,11 +8,11 @@ ms.topic: conceptual
 ms.prod: .net
 ms.technology: devlang-csharp
 ms.custom: mvc
-ms.openlocfilehash: 52f66782086af651517d54105fea6f5533ea05a2
-ms.sourcegitcommit: d3cfda0943364aaf6ccd574f55f584576c8a4fee
+ms.openlocfilehash: 90d6542122dd8c579c63f5f003441ce63a7ca5e9
+ms.sourcegitcommit: 935d5267c44f9bce801468ef95f44572f1417e8c
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 03/08/2018
+ms.lasthandoff: 03/28/2018
 ---
 # <a name="get-started-with-syntax-analysis"></a>開始使用語法分析
 
@@ -43,6 +43,10 @@ Syntax API 會建立根代表編譯單位的樹狀結構。 樹狀結構中的�
 
 這個簡短描述概述可使用 Syntax API 存取的資訊種類。 Syntax API 就是正式 API，可從 C# 描述您知道的熟悉程式碼建構。 完整功能包含程式碼格式化方式的相關資訊 (包含分行符號、空白字元和縮排)。 使用這項資訊，您可以完整呈現程式設計人員或編譯器所撰寫和讀取的程式碼。 使用此結構可讓您在深度有意義的層級與原始程式碼互動。 它不再是文字字串，而是代表 C# 程式結構的資料。
 
+若要開始使用，您必須安裝 **.NET Compiler Platform SDK**：
+
+[!INCLUDE[interactive-note](~/includes/roslyn-installation.md)]
+
 ## <a name="understanding-syntax-trees"></a>了解語法樹狀結構
 
 您可以使用 Syntax API 對 C# 程式碼結構進行任何分析。 **Syntax API** 會公開剖析器、語法樹狀結構和公用程式，以分析與建構語法樹狀結構。 這是您如何搜尋程式碼中的特定語法項目，或讀取程式的程式碼。
@@ -67,9 +71,6 @@ Syntax API 會建立根代表編譯單位的樹狀結構。 樹狀結構中的�
 ## <a name="traversing-trees"></a>周遊樹狀結構
 
 您可以使用兩種方式來檢查語法樹狀結構中的節點。 您可以周遊樹狀結構來檢查每個節點，也可以查詢特定項目或節點。
-
-> [!IMPORTANT]
-> 下列範例需要安裝為 Visual Studio 2017 一部分的 **.NET Compiler Platform SDK**。 您可以發現 .NET Compiler SDK 是 **Visual Studio 延伸模組開發**工作負載下所列的最後一個選用元件。 沒有此元件，就無法安裝範本。
 
 ### <a name="manual-traversal"></a>手動周遊
 

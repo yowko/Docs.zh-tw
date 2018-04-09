@@ -1,6 +1,6 @@
 ---
-title: "集合教學課程 - C# 本機快速入門"
-description: "在此教學課程中探索 List 集合來了解 C#。"
+title: 集合教學課程 - C# 本機快速入門
+description: 在此教學課程中探索 List 集合來了解 C#。
 author: billwagner
 ms.author: wiwagn
 ms.date: 10/13/2017
@@ -9,11 +9,11 @@ ms.prod: .net
 ms.technology: devlang-csharp
 ms.devlang: csharp
 ms.custom: mvc
-ms.openlocfilehash: 76b3baf0525c81e5b3058aa2ab6fd4ccd97d1916
-ms.sourcegitcommit: d2da0142247ef42a219a5d2907f153e62dc6ea0d
+ms.openlocfilehash: 88471c5fc60178c058f121ba5e5703999ad61030
+ms.sourcegitcommit: 935d5267c44f9bce801468ef95f44572f1417e8c
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 02/01/2018
+ms.lasthandoff: 03/28/2018
 ---
 # <a name="c-quickstart-collections"></a>C# 快速入門：集合
 
@@ -54,7 +54,7 @@ namespace list_quickstart
 
 您剛才已建立字串清單，在該清單中新增三個名稱，並以全部大寫的形式列印出那些名稱。 您會使用從先前的快速入門中學習到的概念，在清單中執行迴圈。
 
-顯示名稱的程式碼會運用**字串插值**。  當您在 `string` 的前方放置 `$` 時，您可以在字串宣告中內嵌 C# 程式碼。 實際的字串會以它所產生的值取代 C# 程式碼。 在此範例中，它會以每個 (轉換成大寫字母的) 名稱取代 `{name.ToUpper()}`，因為您呼叫了 <xref:System.String.ToUpper%2A> 方法。
+顯示名稱的程式碼會運用[字串內插補點](../language-reference/tokens/interpolated.md)功能。  當您在 `string` 的前方放置 `$` 時，您可以在字串宣告中內嵌 C# 程式碼。 實際的字串會以它所產生的值取代 C# 程式碼。 在此範例中，它會以每個 (轉換成大寫字母的) 名稱取代 `{name.ToUpper()}`，因為您呼叫了 <xref:System.String.ToUpper%2A> 方法。
 
 讓我們繼續探索。
 

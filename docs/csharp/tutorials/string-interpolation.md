@@ -1,7 +1,7 @@
 ---
-title: "字串插補 - C#"
-description: "了解字串插補在 C# 6 中如何運作"
-keywords: ".NET, .NET Core, C#, 字串"
+title: 字串插補 - C#
+description: 了解字串插補在 C# 6 中如何運作
+keywords: .NET, .NET Core, C#, 字串
 author: mgroves
 ms.author: wiwagn
 ms.date: 03/06/2017
@@ -10,11 +10,11 @@ ms.prod: .net
 ms.technology: devlang-csharp
 ms.devlang: csharp
 ms.assetid: f8806f6b-3ac7-4ee6-9b3e-c524d5301ae9
-ms.openlocfilehash: db062ed2f832ae933941da1c49e84303090f4390
-ms.sourcegitcommit: 3a96c706e4dbb4667bf3bf37edac9e1666646f93
+ms.openlocfilehash: a9578d006861b987871071961437345c378a5b58
+ms.sourcegitcommit: 935d5267c44f9bce801468ef95f44572f1417e8c
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 02/27/2018
+ms.lasthandoff: 03/28/2018
 ---
 # <a name="string-interpolation-in-c"></a>C# 中的字串插值 #
 
@@ -122,4 +122,4 @@ Console.WriteLine(localizeMe);
 
 ## <a name="conclusion"></a>結論 
 
-在本教學課程中，您已了解如何使用 C# 6 的字串插補功能。 它基本上是一個撰寫簡單 `String.Format` 陳述式的更簡潔方式，但針對較進階的用法有一些注意事項。 如需詳細資訊，請參閱[字串插值](../../csharp//language-reference/keywords/interpolated-strings.md)主題。
+在本教學課程中，您已了解如何使用 C# 6 的字串插補功能。 它基本上是一個撰寫簡單 `String.Format` 陳述式的更簡潔方式，但針對較進階的用法有一些注意事項。 如需詳細資訊，請參閱[字串內插補點](../../csharp//language-reference/tokens/interpolated.md)主題。

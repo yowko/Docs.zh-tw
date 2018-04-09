@@ -1,6 +1,6 @@
 ---
-title: "屬性"
-description: "了解 C# 屬性，其中包含驗證、計算值、延遲評估和屬性變更通知的功能。"
+title: 屬性
+description: 了解 C# 屬性，其中包含驗證、計算值、延遲評估和屬性變更通知的功能。
 keywords: .NET, .NET Core
 author: BillWagner
 ms.author: wiwagn
@@ -10,11 +10,11 @@ ms.prod: .net
 ms.technology: devlang-csharp
 ms.devlang: csharp
 ms.assetid: 6950d25a-bba1-4744-b7c7-a3cc90438c55
-ms.openlocfilehash: 1ffacd52df89a955ebfa72dc58836211c7a58640
-ms.sourcegitcommit: 5fb6646b5ee3769ffb214e672041833ea4ceeb26
+ms.openlocfilehash: 2a25919048f94211b1696ac8c8471a14ce6e15c5
+ms.sourcegitcommit: 935d5267c44f9bce801468ef95f44572f1417e8c
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 11/08/2017
+ms.lasthandoff: 03/28/2018
 ---
 # <a name="properties"></a>屬性
 
@@ -149,7 +149,7 @@ public class Person
 
 現在，`FirstName` 屬性可從任何程式碼存取，但只能從 `Person` 類別中的其他程式碼指派。
 
-您可以將任何嚴格的存取修飾詞新增至 set 或 get 存取子。 您放在個別存取子上的任何存取修飾詞，必須比屬性定義上的存取修飾詞具有更多限制。 由於 `FirstName` 屬性為 `public`，但 set 存取子為 `private`，因此上述範例合法。 您無法使用 `public` 存取子宣告 `private` 屬性。 也可以宣告屬性宣告`protected`， `internal`， `protected internal`，`private protected`或甚至`private`。   
+您可以將任何嚴格的存取修飾詞新增至 set 或 get 存取子。 您放在個別存取子上的任何存取修飾詞，必須比屬性定義上的存取修飾詞具有更多限制。 由於 `FirstName` 屬性為 `public`，但 set 存取子為 `private`，因此上述範例合法。 您無法使用 `public` 存取子宣告 `private` 屬性。 屬性宣告也可以宣告為 `protected`、`internal`、`protected internal`、`private protected`，甚至是 `private`。   
 
 您也可以將更嚴格的修飾詞放在 `get` 存取子上。 例如，您可能會有 `public` 屬性，但將 `get` 存取子限制為 `private`。 這種情況在實務上很罕見。
 
@@ -193,7 +193,7 @@ public class Person
 }
 ```
 
-上述範例使用「字串插值」語法，來建立完整名稱的格式化字串。
+上述範例使用[字串內插補點](../csharp/language-reference/tokens/interpolated.md)功能，來建立完整名稱的格式化字串。
 
 您也可以使用「運算式主體成員」，以提供更簡潔的方法來建立計算的 `FullName` 屬性：
 

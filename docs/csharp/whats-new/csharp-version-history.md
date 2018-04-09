@@ -1,7 +1,7 @@
 ---
-title: "C# 的歷史"
-description: "這個語言最初是什麼樣子？而這些年來又有哪些演進？"
-keywords: "C#, .NET、.NET Core、最新動向、C# 歷史"
+title: C# 的歷史 - C# 指南
+description: 最早的語言版本有哪些內容，而在之後有什麼演變？
+keywords: C#, .NET, .NET Core, 新增功能, C# 歷史
 author: erikdietrich
 ms.author: wiwagn
 ms.date: 09/20/2017
@@ -9,27 +9,27 @@ ms.topic: article
 ms.prod: .net
 ms.technology: devlang-csharp
 ms.devlang: csharp
-ms.openlocfilehash: 207c97c5dd7e04f815da61bff7f44393aea86222
-ms.sourcegitcommit: bd1ef61f4bb794b25383d3d72e71041a5ced172e
+ms.openlocfilehash: d24d190eab5896121231543e6696b6a4861b5bb8
+ms.sourcegitcommit: 935d5267c44f9bce801468ef95f44572f1417e8c
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/18/2017
+ms.lasthandoff: 03/28/2018
 ---
-# <a name="the-history-of-c"></a>C# 的歷程記錄 #
+# <a name="the-history-of-c"></a>C# 的歷史 #
 
-這個語言最初是什麼樣子？ 而這些年來又有哪些演進？
+最早的語言版本有哪些內容？ 而在那之後的幾年有什麼演變？
 
 ## <a name="c-version-10"></a>C# 1.0 版
 
-當您返回，並尋找時，C# 版本 1.0 許多看起來像是 Java。 做為[屬於 ECMA 其規定的設計目標](http://feeldotneteasy.blogspot.com/2011/01/c-design-goals.html)，它要在其中搜尋要為 「 簡單、 現代化、 一般用途物件導向語言。 」  同時，看似 Java 用它來達成這些早期的設計目標。
+當您回過頭看，C# 1.0 版很多看起來很像 Java。 在[其聲明的 ECMA 設計目標當中](http://feeldotneteasy.blogspot.com/2011/01/c-design-goals.html)，它試圖成為「簡單、現代化、一般用途的物件導向語言」。  同時，看似 Java 表示它達成了那些早期的設計目標。
 
-但如果您回顧 C# 1.0 現在，您會發現自己有點 dizzy。 由於缺乏的內建的非同步功能和部分靈活周圍我們需要，授與的泛型功能。 為事實上，它會將泛型缺乏完全。  和[LINQ](../linq/index.md)嗎？ 無法使用尚未。 如此會進入某些年。
+但如果您現在回顧 C# 1.0，會覺得有點暈眩。 它缺乏了內建的非同步功能和部分圍繞著我們視為理所當然的泛型的熟練功能。 事實上，它完全缺乏了泛型。  那麼 [LINQ](../linq/index.md) 呢？ 尚無法使用。 那需要好幾年才會出現。
 
-C# 1.0 版查詢等量相較於現今的功能。 您會發現自己撰寫一些詳細資訊的程式碼。 但是，您必須啟動的地方。 C# 版本 1.0 是可行的替代方案 java Windows 平台上。
+C# 1.0 版看起來與現今相比去除了一些功能。 您會發現自己撰寫一些詳細的程式碼。 但您仍然必須從某處開始。 C# 1.0 版是 Windows 平台上可行的 Java 替代方案。
 
 ## <a name="c-version-20"></a>C# 2.0 版
 
-現在項目開始有趣。 讓我們看看的 C# 2.0 中，於 2005，以及 Visual Studio 2005 發行一些主要功能：
+現在事情開始變得有趣。 讓我們看看 2005 年與 Visual Studio 2005 一起發行的 C# 2.0 中，一些主要功能：
 
 - [泛型](../programming-guide/generics/index.md)
 - [部分型別](../programming-guide/classes-and-structs/partial-classes-and-methods.md#partial-classes)
@@ -38,17 +38,17 @@ C# 1.0 版查詢等量相較於現今的功能。 您會發現自己撰寫一些
 - [迭代器](../programming-guide/concepts/iterators.md)
 - [共變數和反變數](../programming-guide/concepts/covariance-contravariance/index.md)
 
-雖然 C# 可能啟動做為泛型相當 Object-Oriented (OO) 語言，C# 2.0 版中變更該急。 一旦它們在其下的其英呎，它們發生之後有些嚴重的開發人員痛苦點。 而且它們發生之後它們以大的方式。
+雖然 C# 可能一開始是相當泛型的 物件導向 (OO) 語言，但 C# 2.0 版很急促地改變了。 穩定之後，它們追蹤一些嚴重的開發人員痛苦點。 而且是徹底地追蹤。
 
-使用泛型時，您可以有型別和可操作的任意型別，同時仍然保留型別安全的方法。 因此，比方說，有<xref:System.Collections.Generic.List%601>可讓您有`List<string>`或`List<int>`並且時您逐一執行這些字串或整數的類型安全作業。 這是比建立更好`ListInt`繼承者注意事項或從轉型`Object`針對每個作業。
+使用泛型時，您有型別和方法，可以操作任意型別，同時仍然保留型別安全。 比方說，有 <xref:System.Collections.Generic.List%601> 可讓您具有 `List<string>` 或 `List<int>`，並且對那些字串或整數逐一執行型別安全的作業。 這勝過針對每個作業建立 `ListInt` 繼承者或是從 `Object` 轉型。
 
-C# 2.0 版回到迭代器。 若要讓它簡潔，這可讓您逐一查看中的項目`List`（或其他可列舉的類型） 與`foreach`迴圈。 需要這樣做為第一級語言的一部分大幅增強可讀性語言和原因相關的程式碼的人的能力。
+C# 2.0 版帶來了迭代器。 簡潔地說，這可讓您使用 `foreach` 迴圈逐一查看 `List` (或其他可列舉型別) 中的項目。 將這當成語言的頭等部分能大幅增強語言的可讀性，並讓人們能理解程式碼。
 
-然後，C# 繼續播放追補 java 的位元。 Java 具有已發行版本包含泛型和迭代器。 但是，很快就會變更為持續發展相距的語言。
+但 C# 仍繼續追趕 Java。 Java 已經發行了包含泛型和迭代器的版本。 但是，很快就會變更，因為語言會持續朝不同方向發展。
 
 ## <a name="c-version-30"></a>C# 3.0 版
 
-C# 3.0 版隨附在晚期 2007 中，以及 Visual Studio 2008 中，雖然語言功能的完整的船實際上會使用 C# 3.5 版。 這個版本會標示成長的 C# 的重大變更。 建立 C# 做為真正極為困難的程式設計語言。 在此版本中，讓我們看看一些主要功能：
+C# 3.0 版在 2007 年晚期和 Visual Studio 2008 一起出現，不過語言功能的完整陣容實際上是在 C# 3.5 版時齊備。 這個版本標記了 C# 發展的一項重大變更。 它將 C# 樹立為真正令人敬佩的程式設計語言。 讓我們看看此版本的一些主要功能：
 
 - [自動實作屬性](../programming-guide/classes-and-structs/auto-implemented-properties.md)
 - [匿名型別](../programming-guide/classes-and-structs/anonymous-types.md)
@@ -57,72 +57,72 @@ C# 3.0 版隨附在晚期 2007 中，以及 Visual Studio 2008 中，雖然語�
 - [運算式樹狀架構](https://blogs.msdn.microsoft.com/charlie/2008/01/31/expression-tree-basics/)
 - [擴充方法](https://www.codeproject.com/Tips/709310/Extension-Method-In-Csharp)
 
-回顧以往，許多功能似乎無法避免和擺。 可以全部放在一起策略。 它通常會想的 C# 版本的令人激賞的功能則是查詢運算式中，也稱為 Language-Integrated Query (LINQ)。
+回顧以往，許多功能似乎無法避免和分離。 它們全都因為策略的緣故而放在一起。 一般認為 C# 版本的殺手級功能是查詢運算式，也稱為 Language-Integrated Query (LINQ)。
 
-更 nuanced 的檢視會檢查做為建構的 LINQ 運算式 tress、 lambda 運算式和匿名型別。 但是，在任一情況下，C# 3.0 呈現革命性的概念。 C# 3.0 已經開始配置基礎，將 C# 變成物件導向的混合式 / 功能性語言。
+更細看的話，則會探討出運算式樹狀架構、Lambda 運算式及匿名型別才是建構 LINQ 的基礎。 但無論如何，C# 3.0 呈現了革命性的概念。 C# 3.0 已經開始打下基礎，將 C# 變成混合式的物件導向 / 功能性語言。
 
-具體來說，您現在可以撰寫 SQL 樣式的宣告式查詢的集合，以及其他項目上執行作業。 反而比撰寫`for`迴圈來計算平均值的整數清單，也可以立即執行，只需為`list.Average()`。 查詢運算式和擴充方法的組合，變成結果看起來好像整數的清單已收到一大堆更聰明。
+具體來說，您現在可以撰寫 SQL 樣式的宣告式查詢，尤其是對集合執行作業。 您不必撰寫 `for` 迴圈來計算整數清單的平均值，您現在只要用 `list.Average()` 就能做到。 查詢運算式和擴充方法的組合，結果看似整數清單變得聰明許多。
 
-花費時間的人真的抓住及整合概念，但是逐漸並未成功。 而且，年之後，程式碼更精簡、 簡單，以及功能。
+人們真正抓住並整合概念需要時間，但他們逐漸做到了。 而多年之後的現在，程式碼已經精簡、簡單且功能強大許多。
 
 ## <a name="c-version-40"></a>C# 4.0 版
 
-C# 4.0 版會有困難的時間住 groundbreaking 3.0 版的狀態。 3.0 版開始，C# 具有語言穩固地編寫從移陰影 Java，並進入優點。 語言快速成為優雅。
+C# 4.0 版要堅守 3.0 版的奠基狀態會很困難。 3.0 版開始，C# 讓語言穩固地擺脫 Java 的影子，並建立聲望。 語言很快地變優雅。
 
-下一版沒有導入了一些有趣的新功能：
+下一版確實導入了一些有趣的新功能：
 
 - [動態繫結](../language-reference/keywords/dynamic.md)
-- [名為/選擇性引數](../programming-guide/classes-and-structs/named-and-optional-arguments.md)
+- [具名/選擇性引數](../programming-guide/classes-and-structs/named-and-optional-arguments.md)
 - [泛型 covariant 和 contravariant](../../standard/generics/covariance-and-contravariance.md)
-- [內嵌 interop 類型](https://stackoverflow.com/questions/20514240/whats-the-difference-setting-embed-interop-types-true-and-false-in-visual-studi)
+- [內嵌 Interop 型別](https://stackoverflow.com/questions/20514240/whats-the-difference-setting-embed-interop-types-true-and-false-in-visual-studi)
 
-內嵌 interop 類型減輕部署痛苦。 泛型共變數和反變數可讓您更強大的功能使用泛型，但位元學術和可能最令人激賞的架構和程式庫作者。 具名和選擇性參數可讓您消除許多方法多載，並提供方便。 但無這項功能完全典範改變。
+內嵌 interop 型別能減輕部署痛苦。 泛型 covariance 和 contravariance 可讓您有更強大的功能來使用泛型，但它們有點學術，可能最受架構和程式庫作者欣賞。 具名和選擇性參數可讓您消除許多方法多載，並提供方便性。 但這些功能沒有一項能完全改變典範。
 
-主要功能已引入`dynamic`關鍵字。 `dynamic`關鍵字引入 C# 4.0 版覆寫於編譯時期輸入編譯器的功能。 藉由使用動態關鍵字，您可以建立建構類似於動態具型別語言，例如 JavaScript。 您可以建立`dynamic x = "a string"`並將六個，留給執行階段找出接下來要採取的動作。
+主要功能是導入 `dynamic` 關鍵字。 `dynamic` 關鍵字為 C# 4.0 版導入在編譯時期型別設定時覆寫編譯器的功能。 藉由使用動態關鍵字，您可以建立類似於動態型別語言 (例如 JavaScript) 的建構。 您可以建立 `dynamic x = "a string"` 然後將它加六，留給執行階段找出接下來要採取的動作。
 
-這可讓您可能的錯誤，但在語言中很棒的電源。
+這樣可能會有錯誤，但也給您在語言內強大的功能。
 
 ## <a name="c-version-50"></a>C# 5.0 版
 
-C# 5.0 版是語言的非常具有焦點版本。 幾乎所有該版本的投入時間會引進另一個 groundbreaking 語言概念。  以下是主要的功能清單：
+C# 5.0 版是該語言非常聚焦的一個版本。 幾乎該版本的所有心血都投入了另一項奠基的語言概念。  以下是主要的功能清單：
 
 - [非同步成員](../async.md)
 - [呼叫端資訊屬性](https://www.codeproject.com/Tips/606379/Caller-Info-Attributes-in-Csharp)
 
-呼叫端資訊屬性可讓您輕鬆地擷取您正在執行需要大量的未定案反映程式碼就可以做到的內容的相關資訊。 它有許多用途，在 診斷和記錄工作。
+呼叫端資訊屬性可讓您輕鬆地擷取您正在執行的內容，而不必依賴大量的未定案反映程式碼。 它在診斷和記錄工作方面有許多用途。
 
-但是`async`和`await`是此版本的。 當這些功能 2012年中，C# 變更遊戲再次非同步將為第一級的參與者為語言。 如果您曾經處理過長時間執行作業和 web 的回撥的實作，可能會愛這項語言功能。
+但是 `async` 和 `await` 是此版本真正的明星。 當這些功能在 2012 年中推出時，C# 再次改變了遊戲，因為它將非同步深植在語言中，成為頭等參與者。 如果您曾經處理過長時間執行的作業，以及回撥網的實作，您可能會愛上這項語言功能。
 
 ## <a name="c-version-60"></a>C# 6.0 版
 
-3.0 和 5.0 的版本中，C# 必須加入一些令人驚嘆的功能在物件導向語言中。 版本 6.0，會移開進行主控項的令人激賞功能且改用釋放許多功能，很高興語言的使用者。 以下是一些它們：
+3.0 和 5.0 版本中，C# 在物件導向語言中新增了一些令人驚嘆的功能。 在 6.0 版中，它不再作為主控的殺手級功能，而是改為發表取悅語言使用者的許多功能。 這裡列出其中一些：
 
-- [靜態匯入](../language-reference/keywords/using-static.md)
+- [動態匯入](../language-reference/keywords/using-static.md)
 - [例外狀況篩選條件](https://www.thomaslevesque.com/2015/06/21/exception-filters-in-c-6/)
 - [屬性初始設定式](http://geekswithblogs.net/WinAZ/archive/2015/06/30/whatrsquos-new-in-c-6.0-auto-property-initializers.aspx)
 - [運算式主體的成員](https://lostechies.com/jimmybogard/2015/12/17/c-6-feature-review-expression-bodied-function-members/)
-- [Null （propagator block)](https://davefancher.com/2014/08/14/c-6-0-null-propagation-operator/)
-- [字串插值](../language-reference/keywords/interpolated-strings.md)
+- [Null 傳播程式](https://davefancher.com/2014/08/14/c-6-0-null-propagation-operator/)
+- [字串內插補點](../language-reference/tokens/interpolated.md)
 - [nameof 運算子](https://stackoverflow.com/questions/31695900/what-is-the-purpose-of-nameof)
-- [字典的初始設定式](../programming-guide/classes-and-structs/how-to-initialize-a-dictionary-with-a-collection-initializer.md)
+- [字典初始設定式](../programming-guide/classes-and-structs/how-to-initialize-a-dictionary-with-a-collection-initializer.md)
 
-這些功能很有趣好似它本身。 但是，如果完全看看它們，您會發現有趣的模式。 在此版本中，C# 排除使程式碼，更簡易、 可讀性更高的語言重複使用。 讓這個語言版本風扇的乾淨、 簡單的程式碼，為龐大 win。
+這些功能每個本身都很有趣。 但是，如果您一起看它們，您會發現有趣的模式。 在此版本中，C# 排除語言樣本，以使程式碼更簡易、可讀性更高。 因此，對於喜好乾淨、簡單程式碼的人而言，這個語言版本大幅勝出。
 
-雖然它不是在本身的傳統的語言功能，它們就會支援這個版本中，以及其他一件事。 釋放它們[Roslyn 編譯器以服務](https://github.com/dotnet/roslyn)。 C# 編譯器現在會寫入 C# 中，您可以使用編譯器，做為您的程式設計工作的一部分。
+雖然本身不是傳統的語言功能，他們在這個版本中做了另外一件事。 他們將 [Roslyn 編譯器發表為服務](https://github.com/dotnet/roslyn)。 C# 編譯器現在會以 C# 撰寫，您可以使用編譯器，作為程式設計工作的一部分。
 
 ## <a name="c-version-70"></a>C# 7.0 版
 
-最新的主要版本為 C# 7.0 版。 此版本中部 C# 6.0 中，但是沒有編譯器有某些進化，也很酷個人資料，做為服務。 以下是一些新功能：
+最新的主要版本是 C# 7.0 版。 此版本擁有 C# 6.0 中的某些進化和酷炫的東西，但是沒有編譯器作為服務。 下列為部分新功能：
 
 - [Out 變數](http://www.c-sharpcorner.com/article/out-variables-in-c-sharp-7-0/)
 - [Tuple 和解構](https://www.thomaslevesque.com/2016/08/23/tuple-deconstruction-in-c-7/)
 - [模式比對](./csharp-7.md#pattern-matching)
 - [區域函式](http://www.infoworld.com/article/3182416/application-development/c-7-in-depth-exploring-local-functions.html)
-- [展開的運算式主體的成員](./csharp-7.md#more-expression-bodied-members)
-- [Ref 本機與傳回](./csharp-7.md#ref-locals-and-returns)
+- [展開的運算式主體成員](./csharp-7.md#more-expression-bodied-members)
+- [Ref 區域變數和傳回](./csharp-7.md#ref-locals-and-returns)
 
-所有這些功能提供開發人員與寫入比以往更簡潔的程式碼有機會項很棒的新功能。 反白顯示會緊縮至搭配使用的變數宣告`out`關鍵字，以及讓透過 tuple 的多個傳回值。
+所有這些功能會提供開發人員很棒的新功能，以及撰寫出比以往更簡潔的程式碼的機會。 重點強調是將變數宣告緊縮為使用 `out` 關鍵字，以及允許透過 tuple 傳回多個值。
 
-但 C# 會被放曾經更廣泛的使用。 .NET core 現在為目標的任何作業系統，且其眼睛穩固地可攜性和雲端上。  這當然會佔據語言設計人員的想法和時間，除了在接下來的新功能。
+但 C# 的運用範圍更廣了。 .NET Core 現在以任何作業系統為目標，並堅定地關注雲端和可攜性。  除了提出新功能之外，這當然也會佔據語言設計人員的想法和時間。
 
-_發行項_ [_最初發行 NDepend 部落格上_](https://blog.ndepend.com/c-versions-look-language-history/)_、 Erik Dietrich 和 Patrick Smacchia 項。_
+_文章_ [_最初發佈於 NDepend 部落格_](https://blog.ndepend.com/c-versions-look-language-history/)_，感謝 Erik Dietrich 和 Patrick Smacchia。_

@@ -1,5 +1,5 @@
 ---
-title: "標準數值格式字串"
+title: 標準數值格式字串
 ms.date: 09/10/2017
 ms.prod: .net
 ms.technology: dotnet-standard
@@ -24,11 +24,11 @@ manager: wpickett
 ms.workload:
 - dotnet
 - dotnetcore
-ms.openlocfilehash: 9416bff21607d8e37f9e7dbc270477539043fe8b
-ms.sourcegitcommit: e7f04439d78909229506b56935a1105a4149ff3d
+ms.openlocfilehash: f042d72c76ddbf3b5eaf8923fc747325b701c9a6
+ms.sourcegitcommit: 935d5267c44f9bce801468ef95f44572f1417e8c
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 12/23/2017
+ms.lasthandoff: 03/28/2018
 ---
 # <a name="standard-numeric-format-strings"></a>標準數值格式字串
 標準數值格式字串會用來格式化一般數字類型。 標準數值格式字串會採用 `Axx` 格式，其中：  
@@ -48,7 +48,7 @@ ms.lasthandoff: 12/23/2017
  
 - .NET 的[複合格式功能](../../../docs/standard/base-types/composite-formatting.md)，此功能會由 <xref:System.Console> 與 <xref:System.IO.StreamWriter> 類別的一些 `Write` 和 `WriteLine` 方法，以及 <xref:System.String.Format%2A?displayProperty=nameWithType> 方法和 <xref:System.Text.StringBuilder.AppendFormat%2A?displayProperty=nameWithType> 方法所使用。 複合格式功能可讓您將多個資料項目的字串表示法包含在單一字串中，以指定欄位寬度，以及對齊欄位中的數字。 如需詳細資訊，請參閱[複合格式設定](../../../docs/standard/base-types/composite-formatting.md)。  
 
-- C# 和 Visual Basic 中的[字串插值](../../csharp/language-reference/keywords/interpolated-strings.md)，相較於複合格式字串，其可提供簡化的語法。
+- C# 和 Visual Basic 中的[字串插值](../../csharp/language-reference/tokens/interpolated.md)，相較於複合格式字串，其可提供簡化的語法。
  
 > [!TIP]
 >  您可以下載 [格式化公用程式](http://code.msdn.microsoft.com/NET-Framework-4-Formatting-9c4dae8d)，這個應用程式可讓您將格式字串套用至數值或日期和時間值，並且顯示結果字串。  
@@ -89,6 +89,8 @@ ms.lasthandoff: 12/23/2017
      [!code-cpp[Formatting.Numeric.Standard#12](../../../samples/snippets/cpp/VS_Snippets_CLR/Formatting.Numeric.Standard/cpp/standardusage1.cpp#12)]
      [!code-csharp[Formatting.Numeric.Standard#12](../../../samples/snippets/csharp/VS_Snippets_CLR/Formatting.Numeric.Standard/cs/standardusage1.cs#12)]
      [!code-vb[Formatting.Numeric.Standard#12](../../../samples/snippets/visualbasic/VS_Snippets_CLR/Formatting.Numeric.Standard/vb/standardusage1.vb#12)]  
+  
+-   它可以提供作為字串內插補點的插補運算式項目中的 `formatString` 引數。 如需詳細資訊，請參閱 C# 參考中的[字串內插補點](../../csharp/language-reference/tokens/interpolated.md)主題，或 Visual Basic 參考中的[字串內插補點](../../visual-basic/programming-guide/language-features/strings/interpolated-strings.md)主題。  
   
  下列各節提供每個標準數值格式字串的詳細資訊。  
   

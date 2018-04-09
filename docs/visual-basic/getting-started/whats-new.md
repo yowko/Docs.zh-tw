@@ -12,14 +12,14 @@ helpviewer_keywords:
 - what's new [Visual Basic]
 - Visual Basic, what's new
 ms.assetid: d7e97396-7f42-4873-a81c-4ebcc4b6ca02
-caps.latest.revision: ''
+caps.latest.revision: 145
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: c0452a5dde3a266f5d50f69016eac8144bab9ba6
-ms.sourcegitcommit: c883637b41ee028786edceece4fa872939d2e64c
-ms.translationtype: MT
+ms.openlocfilehash: 4641041657e99fa64bf1b7eb5317a43660ac7e2b
+ms.sourcegitcommit: 935d5267c44f9bce801468ef95f44572f1417e8c
+ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 03/23/2018
+ms.lasthandoff: 03/28/2018
 ---
 # <a name="whats-new-for-visual-basic"></a>Visual Basic 的新功能
 
@@ -81,7 +81,7 @@ Visual Basic 2017 新增了將底線字元 (`_`) 當作數字分隔符號的支�
 ```vb
 Dim number As Integer = &H_C305_F860
 ``` 
-若要使用底線字元做為前置分隔符號，您必須將下列項目加入至 Visual Basic 專案 (\*.vbproj) 檔案：
+若要使用底線字元作為前置分隔符號，您必須將下列項目新增至 Visual Basic 專案 (\*.vbproj) 檔：
 
 ```xml
 <PropertyGroup>
@@ -91,7 +91,7 @@ Dim number As Integer = &H_C305_F860
 
 ## <a name="visual-basic-153"></a>Visual Basic 15.3
 
-[**具名的 tuple 推斷**](../programming-guide/language-features/data-types/tuples.md#inferred-tuple-element-names)
+[**具名元組推斷**](../programming-guide/language-features/data-types/tuples.md#inferred-tuple-element-names)
 
 當您從變數指派元組項目值時，Visual Basic 會從對應的變數名稱推斷元組項目的名稱；您不需要明確命名元組項目。 下列範例使用推斷來建立包含三個具名項目的元組：`state`、`stateName` 和 `capital`。
 
@@ -99,7 +99,7 @@ Dim number As Integer = &H_C305_F860
 
 **其他編譯器參數**  
 
-Visual Basic 命令列編譯器現在支援[ **-refout** ](../reference/command-line-compiler/refout-compiler-option.md)和[ **-refonly** ](../reference/command-line-compiler/refonly-compiler-option.md)編譯器選項來控制的輸出參考組件。 **-refout**定義參考組件的輸出目錄和**-refonly**指定只參考的組件來編譯所輸出。
+Visual Basic 命令列編譯器現在支援 [**-refout**](../reference/command-line-compiler/refout-compiler-option.md) 和 [**-refonly**](../reference/command-line-compiler/refonly-compiler-option.md) 編譯器選項，來控制參考組件的輸出。 **-refout** 定義參考組件的輸出目錄，而 **-refonly** 指定編譯只會輸出參考組件。
 
 ## <a name="visual-basic-2017"></a>Visual Basic 2017
 
@@ -154,7 +154,7 @@ Tuple 的 Visual Basic 支援可讓您快速定義 Tuple、選擇性地將語意
 [Nameof](../../csharp/language-reference/keywords/nameof.md)  
  您可以取得用於錯誤訊息之類型或成員的未限定字串名稱，而不需要對字串進行硬式編碼。  這可讓您的程式碼在重構時保持正確。  這項功能也可用來連接模型檢視控制器 MVC 連結，以及引發屬性已變更事件。  
   
-[字串內插補點](../../csharp/language-reference/keywords/interpolated-strings.md)  
+[字串內插補點](../../visual-basic/programming-guide/language-features/strings/interpolated-strings.md)  
  您可以使用字串插值運算式來建構字串。  字串插值運算式類似包含運算式的範本字串。  對於引數而言，字串插值比[複合格式](../../standard/base-types/composite-format.md)更容易了解。  
   
 [Null 條件式成員存取和索引](../../csharp/language-reference/operators/null-conditional-operators.md)  

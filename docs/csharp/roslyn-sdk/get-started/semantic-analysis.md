@@ -1,6 +1,6 @@
 ---
-title: "開始使用語意分析"
-description: "本教學課程概述如何使用 .NET Compiler SDK 來處理語意分析。"
+title: 開始使用語意分析
+description: 本教學課程概述如何使用 .NET Compiler SDK 來處理語意分析。
 author: billwagner
 ms.author: wiwagn
 ms.date: 02/06/2018
@@ -8,17 +8,21 @@ ms.topic: conceptual
 ms.prod: .net
 ms.devlang: devlang-csharp
 ms.custom: mvc
-ms.openlocfilehash: 94a28d21cfec1894c3ee3b631335043e1d0ec817
-ms.sourcegitcommit: d95a91d685565f4d95c8773b558752864a6a3d7e
+ms.openlocfilehash: b9921bc3621d6abfc37b1bf1fc4f481620ccc407
+ms.sourcegitcommit: 935d5267c44f9bce801468ef95f44572f1417e8c
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 03/12/2018
+ms.lasthandoff: 03/28/2018
 ---
 # <a name="get-started-with-semantic-analysis"></a>開始使用語意分析
 
 本教學課程假設您熟悉 Syntax API。 [開始使用語意分析](syntax-analysis.md)一文提供充分的簡介。
 
 在本教學課程中，您會探索 **Symbol** 和 **Binding API**。 這些 API 提供程式的_語意_相關資訊。 它們可讓您詢問和回答程式中任何符號所表示之類型的問題。
+
+您必須安裝 **.NET Compiler Platform SDK**：
+
+[!INCLUDE[interactive-note](~/includes/roslyn-installation.md)]
 
 ## <a name="understanding-compilations-and-symbols"></a>了解編譯和符號
 
@@ -31,9 +35,6 @@ ms.lasthandoff: 03/12/2018
 ## <a name="querying-symbols"></a>查詢符號
 
 在本教學課程中，您會重新看到 "Hello World" 程式。 此時，您查詢程式中的符號來了解這些符號所代表的類型。 您查詢命名空間中的類型，並學習如何尋找類型上可用的方法。
-
-> [!IMPORTANT]
-> 下列範例需要安裝為 Visual Studio 2017 一部分的 **.NET Compiler SDK**。 您可以發現 .NET Compiler SDK 是 **Visual Studio 延伸模組開發**工作負載下所列的最後一個選用元件。 沒有此元件，就無法安裝範本。
 
 您可以在 [GitHub 存放庫](https://github.com/dotnet/docs/tree/master/samples/csharp/roslyn-sdk/SemanticQuickStart)中查看此範例中完成的程式碼。
 

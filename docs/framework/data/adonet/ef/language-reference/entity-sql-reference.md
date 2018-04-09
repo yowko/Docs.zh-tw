@@ -10,7 +10,7 @@ ms.technology:
 ms.tgt_pltfrm: ''
 ms.topic: article
 ms.assetid: 61ce7ee1-ffe2-477d-8a9f-835b0a11d900
-caps.latest.revision: ''
+caps.latest.revision: 4
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
@@ -63,7 +63,7 @@ ms.lasthandoff: 03/23/2018
 |[< (小於)](../../../../../../docs/framework/data/adonet/ef/language-reference/less-than-entity-sql.md)|比較兩個運算式來判斷左運算式的值是否小於右運算式。|  
 |[<= (小於或等於)](../../../../../../docs/framework/data/adonet/ef/language-reference/less-than-or-equal-to-entity-sql.md)|比較兩個運算式來判斷左運算式的值是否小於或等於右運算式。|  
 |[&#91;NOT&#93; BETWEEN](../../../../../../docs/framework/data/adonet/ef/language-reference/between-entity-sql.md)|判斷運算式是否會產生所指定範圍內的值。|  
-|[!= (不等於)](../../../../../../docs/framework/data/adonet/ef/language-reference/not-equal-to-entity-sql.md)|比較兩個運算式來判斷左運算式是否不等於右運算式。|  
+|[\!= (不等於)](../../../../../../docs/framework/data/adonet/ef/language-reference/not-equal-to-entity-sql.md)|比較兩個運算式來判斷左運算式是否不等於右運算式。|  
 |[&#91;NOT&#93; LIKE](../../../../../../docs/framework/data/adonet/ef/language-reference/like-entity-sql.md)|判斷特定字元字串是否符合指定的模式。|  
   
 ## <a name="logical-and-case-expression-operators"></a>邏輯和 Case 運算式運算子  
@@ -72,7 +72,7 @@ ms.lasthandoff: 03/23/2018
 |運算子|描述|  
 |--------------|-----------------|  
 |[& & (邏輯 AND)](../../../../../../docs/framework/data/adonet/ef/language-reference/and-entity-sql.md)|邏輯 AND。|  
-|[!(邏輯 NOT)](../../../../../../docs/framework/data/adonet/ef/language-reference/not-entity-sql.md)|邏輯 NOT。|  
+|[\!(邏輯 NOT)](../../../../../../docs/framework/data/adonet/ef/language-reference/not-entity-sql.md)|邏輯 NOT。|  
 |[&#124;&#124; (Logical OR)](../../../../../../docs/framework/data/adonet/ef/language-reference/or-entity-sql.md)|邏輯 OR。|  
 |[CASE](../../../../../../docs/framework/data/adonet/ef/language-reference/case-entity-sql.md)|評估一組布林運算式來得出結果。|  
 |[THEN](../../../../../../docs/framework/data/adonet/ef/language-reference/then-entity-sql.md)|結果[時](http://msdn.microsoft.com/library/6233fe9f-00b0-460e-8372-64e138a5f998)子句時評估為 true。|  
