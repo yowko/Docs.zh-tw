@@ -3,7 +3,7 @@
 ## [使用語法](work-with-syntax.md)
 ## [使用語意](work-with-semantics.md)
 ## [使用工作區](work-with-workspace.md)
-
+## [利用語法視覺化檢視探索程式碼](syntax-visualizer.md)
 ## 快速入門
 ### [語法分析](get-started/syntax-analysis.md)
 ### [語意分析](get-started/semantic-analysis.md)
