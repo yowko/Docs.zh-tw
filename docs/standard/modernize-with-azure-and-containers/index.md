@@ -1,6 +1,6 @@
 ---
-title: "利用 Azure 雲端及 Windows 容器將現有的 .NET 應用程式現代化"
-description: "瞭解如何提起並移動現有的應用程式的 Azure 雲端和容器，使用此電子書。"
+title: 利用 Azure 雲端及 Windows 容器將現有的 .NET 應用程式現代化
+description: 瞭解如何提起並移動現有的應用程式的 Azure 雲端和容器，使用此電子書。
 author: CESARDELATORRE
 ms.author: wiwagn
 ms.date: 10/26/2017

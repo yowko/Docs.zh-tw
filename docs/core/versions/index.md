@@ -1,6 +1,6 @@
 ---
-title: ".NET Core 版本控制"
-description: "了解 .NET Core 的版本控制運作方式。"
+title: .NET Core 版本控制
+description: 了解 .NET Core 的版本控制運作方式。
 author: bleroy
 ms.author: mairaw
 ms.date: 02/13/2018

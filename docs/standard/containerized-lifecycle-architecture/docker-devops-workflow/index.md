@@ -1,7 +1,7 @@
 ---
-title: "使用 Microsoft 工具的 Docker 應用程式 devops 工作流程"
-description: "Microsoft 平台和工具的容器化 Docker 應用程式生命週期，使用 Microsoft 工具的 devops 工作流程"
-keywords: "Docker, 微服務, ASP.NET, 容器"
+title: 使用 Microsoft 工具的 Docker 應用程式 devops 工作流程
+description: Microsoft 平台和工具的容器化 Docker 應用程式生命週期，使用 Microsoft 工具的 devops 工作流程
+keywords: Docker, 微服務, ASP.NET, 容器
 author: CESARDELATORRE
 ms.author: wiwagn
 ms.date: 09/22/2017

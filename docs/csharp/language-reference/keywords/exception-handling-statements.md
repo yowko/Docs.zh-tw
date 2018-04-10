@@ -1,12 +1,14 @@
 ---
-title: "例外狀況處理陳述式 (C# 參考)"
+title: 例外狀況處理陳述式 (C# 參考)
 ms.date: 07/20/2015
 ms.prod: .net
-ms.technology: devlang-csharp
+ms.technology:
+- devlang-csharp
 ms.topic: article
-helpviewer_keywords: keywords [C#], exception handling
+helpviewer_keywords:
+- keywords [C#], exception handling
 ms.assetid: 6d0323a3-3164-411c-9b84-a3606bd0e13c
-caps.latest.revision: "12"
+caps.latest.revision: 12
 author: BillWagner
 ms.author: wiwagn
 ms.openlocfilehash: c148165ae02aef5cd8851297834d104b692da721

@@ -1,6 +1,6 @@
 ---
-title: "C# 指南"
-description: "了解 C# 指南如何協助您擴充 C# 的相關知識，而不論您是新手開發人員或經驗豐富的專家。"
+title: C# 指南
+description: 了解 C# 指南如何協助您擴充 C# 的相關知識，而不論您是新手開發人員或經驗豐富的專家。
 author: BillWagner
 ms.date: 01/30/2018
 ms.topic: article

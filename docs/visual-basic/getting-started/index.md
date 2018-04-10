@@ -1,5 +1,5 @@
 ---
-title: "開始使用 Visual Basic"
+title: 開始使用 Visual Basic
 ms.date: 08/10/2017
 ms.prod: .net
 ms.technology:
@@ -9,7 +9,7 @@ helpviewer_keywords:
 - get started, Visual Basic
 - Visual Basic, get started
 ms.assetid: 6685467b-28fa-4cde-9516-f0e00ad08911
-caps.latest.revision: 
+caps.latest.revision: 36
 author: dotnet-bot
 ms.author: dotnetcontent
 ms.openlocfilehash: e53ba3e1134b09edcc87a0421b7699bcf3bb1d39

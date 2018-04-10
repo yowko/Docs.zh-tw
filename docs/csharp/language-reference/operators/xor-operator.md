@@ -1,15 +1,17 @@
 ---
-title: "^ 運算子 (C# 參考)"
+title: ^ 運算子 (C# 參考)
 ms.date: 07/20/2015
 ms.prod: .net
-ms.technology: devlang-csharp
+ms.technology:
+- devlang-csharp
 ms.topic: article
-f1_keywords: ^_CSharpKeyword
+f1_keywords:
+- ^_CSharpKeyword
 helpviewer_keywords:
 - ^ operator [C#]
 - bitwise exclusive OR operator [C#]
 ms.assetid: b09bc815-570f-4db6-a637-5b4ed99d014a
-caps.latest.revision: "19"
+caps.latest.revision: 19
 author: BillWagner
 ms.author: wiwagn
 ms.openlocfilehash: 4ccd32ea8abd8ca3252380083eafecad2b572ed7

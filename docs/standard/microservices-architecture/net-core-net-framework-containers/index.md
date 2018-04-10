@@ -1,7 +1,7 @@
 ---
-title: "針對 Docker 容器在 .NET Core 和 .NET Framework 之間進行選擇"
-description: "容器化 .NET 應用程式的 .NET 微服務架構 | 針對 Docker 容器在 .NET Core 和 .NET Framework 之間進行選擇"
-keywords: "Docker, 微服務, ASP.NET, 容器"
+title: 針對 Docker 容器在 .NET Core 和 .NET Framework 之間進行選擇
+description: 容器化 .NET 應用程式的 .NET 微服務架構 | 針對 Docker 容器在 .NET Core 和 .NET Framework 之間進行選擇
+keywords: Docker, 微服務, ASP.NET, 容器
 author: CESARDELATORRE
 ms.author: wiwagn
 ms.date: 05/26/2017

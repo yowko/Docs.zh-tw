@@ -1,6 +1,6 @@
 ---
-title: "隨即轉移現有應用程式 DevOps"
-description: "使用 Azure 雲端和 Windows 容器將現有 .NET 應用程式現代化。"
+title: 隨即轉移現有應用程式 DevOps
+description: 使用 Azure 雲端和 Windows 容器將現有 .NET 應用程式現代化。
 author: CESARDELATORRE
 ms.author: wiwagn
 ms.date: 10/26/2017

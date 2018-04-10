@@ -1,6 +1,6 @@
 ---
-title: "Get 函式 （Unmanaged API 參考）"
-description: "Get 函式，擷取指定的屬性值。"
+title: Get 函式 （Unmanaged API 參考）
+description: Get 函式，擷取指定的屬性值。
 ms.date: 11/06/2017
 ms.prod: .net-framework
 ms.technology:

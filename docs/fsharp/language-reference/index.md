@@ -1,7 +1,7 @@
 ---
-title: "F# 語言參考"
-description: "找到 F # 語言功能的資訊從這個語言的語彙基元、 概念、 類型、 運算式和編譯器支援建構主題參考。"
-keywords: "Visual F#, F#, 函式程式設計"
+title: F# 語言參考
+description: '找到 F # 語言功能的資訊從這個語言的語彙基元、 概念、 類型、 運算式和編譯器支援建構主題參考。'
+keywords: Visual F#, F#, 函式程式設計
 author: cartermp
 ms.author: phcart
 ms.date: 05/16/2016

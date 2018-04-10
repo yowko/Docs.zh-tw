@@ -1,15 +1,17 @@
 ---
-title: "lock 陳述式 (C# 參考)"
+title: lock 陳述式 (C# 參考)
 ms.date: 07/20/2015
 ms.prod: .net
-ms.technology: devlang-csharp
+ms.technology:
+- devlang-csharp
 ms.topic: article
 f1_keywords:
 - lock_CSharpKeyword
 - lock
-helpviewer_keywords: lock keyword [C#]
+helpviewer_keywords:
+- lock keyword [C#]
 ms.assetid: 656da1a4-707e-4ef6-9c6e-6d13b646af42
-caps.latest.revision: "43"
+caps.latest.revision: 43
 author: BillWagner
 ms.author: wiwagn
 ms.openlocfilehash: eb48c2b1554ad2817406eaef42b4cb336ea46862

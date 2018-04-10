@@ -1,8 +1,9 @@
 ---
-title: "特殊字元 （Visual Basic 參考）"
+title: 特殊字元 （Visual Basic 參考）
 ms.date: 10/31/2017
 ms.prod: .net
-ms.technology: devlang-visual-basic
+ms.technology:
+- devlang-visual-basic
 ms.topic: article
 author: rpetrusha
 ms.author: ronpet

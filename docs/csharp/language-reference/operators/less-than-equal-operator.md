@@ -1,15 +1,17 @@
 ---
-title: "&lt;= 運算子 (C# 參考)"
+title: '&lt;= 運算子 (C# 參考)'
 ms.date: 07/20/2015
 ms.prod: .net
-ms.technology: devlang-csharp
+ms.technology:
+- devlang-csharp
 ms.topic: article
-f1_keywords: <=_CSharpKeyword
+f1_keywords:
+- <=_CSharpKeyword
 helpviewer_keywords:
 - less than or equal to operator (<=) [C#]
 - <= operator [C#]
 ms.assetid: bb0caec9-d253-4105-b8bc-5252233251e4
-caps.latest.revision: "16"
+caps.latest.revision: 16
 author: BillWagner
 ms.author: wiwagn
 ms.openlocfilehash: a74af852451a193aaee70fea2a68ca8ff29cc215

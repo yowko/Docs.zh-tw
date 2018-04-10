@@ -1,12 +1,14 @@
 ---
-title: "命名空間關鍵字 (C# 參考)"
+title: 命名空間關鍵字 (C# 參考)
 ms.date: 07/20/2015
 ms.prod: .net
-ms.technology: devlang-csharp
+ms.technology:
+- devlang-csharp
 ms.topic: article
-helpviewer_keywords: namespaces [C#], keywords
+helpviewer_keywords:
+- namespaces [C#], keywords
 ms.assetid: 091a66eb-b10d-4f54-9102-5ac0d4bdb84b
-caps.latest.revision: "11"
+caps.latest.revision: 11
 author: BillWagner
 ms.author: wiwagn
 ms.openlocfilehash: c5b0d112aed01bcddbe34d73093b70be65212b88

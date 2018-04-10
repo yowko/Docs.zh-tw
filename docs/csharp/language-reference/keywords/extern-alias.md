@@ -1,16 +1,18 @@
 ---
-title: "外部別名 (C# 參考)"
+title: 外部別名 (C# 參考)
 ms.date: 07/20/2015
 ms.prod: .net
-ms.technology: devlang-csharp
+ms.technology:
+- devlang-csharp
 ms.topic: article
-f1_keywords: alias_CSharpKeyword
+f1_keywords:
+- alias_CSharpKeyword
 helpviewer_keywords:
 - extern alias keyword [C#]
 - aliases [C#], extern keyword
 - aliases, extern keyword
 ms.assetid: f487bf4f-c943-4fca-851b-e540c83d9027
-caps.latest.revision: "16"
+caps.latest.revision: 16
 author: BillWagner
 ms.author: wiwagn
 ms.openlocfilehash: 4e995586c08659853538726a12679770cd1ada37

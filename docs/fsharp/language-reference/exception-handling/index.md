@@ -1,7 +1,7 @@
 ---
-title: "例外狀況處理 (F#)"
-description: "了解 F # 中處理的例外狀況的基本概念，並尋找例外狀況處理運算式和函數的連結。"
-keywords: "Visual F#, F#, 函式程式設計"
+title: 例外狀況處理 (F#)
+description: '了解 F # 中處理的例外狀況的基本概念，並尋找例外狀況處理運算式和函數的連結。'
+keywords: Visual F#, F#, 函式程式設計
 author: cartermp
 ms.author: phcart
 ms.date: 05/16/2016

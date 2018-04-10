@@ -1,7 +1,7 @@
 ---
-title: "利用 DDD 和 CQRS 模式解決微服務中的商務複雜度"
-description: "容器化 .NET 應用程式的 .NET 微服務架構 | 利用 DDD 和 CQRS 模式解決微服務中的商務複雜度"
-keywords: "Docker, 微服務, ASP.NET, 容器"
+title: 利用 DDD 和 CQRS 模式解決微服務中的商務複雜度
+description: 容器化 .NET 應用程式的 .NET 微服務架構 | 利用 DDD 和 CQRS 模式解決微服務中的商務複雜度
+keywords: Docker, 微服務, ASP.NET, 容器
 author: CESARDELATORRE
 ms.author: wiwagn
 ms.date: 05/26/2017

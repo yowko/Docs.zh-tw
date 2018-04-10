@@ -1,15 +1,17 @@
 ---
-title: "static (C# 參考)"
+title: static (C# 參考)
 ms.date: 07/20/2015
 ms.prod: .net
-ms.technology: devlang-csharp
+ms.technology:
+- devlang-csharp
 ms.topic: article
 f1_keywords:
 - static
 - static_CSharpKeyword
-helpviewer_keywords: static keyword [C#]
+helpviewer_keywords:
+- static keyword [C#]
 ms.assetid: 5509e215-2183-4da3-bab4-6b7e607a4fdf
-caps.latest.revision: "26"
+caps.latest.revision: 26
 author: BillWagner
 ms.author: wiwagn
 ms.openlocfilehash: c47f4a19843039c27ef9f1602581d1004fb8fd76

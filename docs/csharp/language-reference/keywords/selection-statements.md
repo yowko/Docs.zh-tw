@@ -1,12 +1,14 @@
 ---
-title: "選擇陳述式 (C# 參考)"
+title: 選擇陳述式 (C# 參考)
 ms.date: 07/20/2015
 ms.prod: .net
-ms.technology: devlang-csharp
+ms.technology:
+- devlang-csharp
 ms.topic: article
-helpviewer_keywords: statements [C#], selection
+helpviewer_keywords:
+- statements [C#], selection
 ms.assetid: cf21cfa2-34fb-48b0-9cbc-8bb4537a9a05
-caps.latest.revision: "13"
+caps.latest.revision: 13
 author: BillWagner
 ms.author: wiwagn
 ms.openlocfilehash: 198c591dcda9a0d29fa34e9ac67b9355cbd8bb0d

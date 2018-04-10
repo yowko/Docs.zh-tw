@@ -1,6 +1,6 @@
 ---
-title: "Roslyn 分析器 - .NET"
-description: "了解可找出問題並針對問題提供建議的 Roslyn 分析器相關資訊。"
+title: Roslyn 分析器 - .NET
+description: 了解可找出問題並針對問題提供建議的 Roslyn 分析器相關資訊。
 keywords: .NET, .NET Core
 author: billwagner
 ms.author: billwagner

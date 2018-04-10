@@ -1,7 +1,7 @@
 ---
-title: "函式 (F#)"
-description: "深入了解在 F # 和 F # 支援的方式常見函式程式設計建構函式。"
-keywords: "Visual F#, F#, 函式程式設計"
+title: 函式 (F#)
+description: '深入了解在 F # 和 F # 支援的方式常見函式程式設計建構函式。'
+keywords: Visual F#, F#, 函式程式設計
 author: cartermp
 ms.author: phcart
 ms.date: 05/16/2016

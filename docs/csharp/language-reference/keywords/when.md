@@ -1,15 +1,17 @@
 ---
-title: "when (C# 參考)"
+title: when (C# 參考)
 ms.date: 03/07/2017
 ms.prod: .net
-ms.technology: devlang-csharp
+ms.technology:
+- devlang-csharp
 ms.topic: article
 f1_keywords:
 - when_CSharpKeyword
 - when
-helpviewer_keywords: when keyword [C#]
+helpviewer_keywords:
+- when keyword [C#]
 ms.assetid: dd543335-ae37-48ac-9560-bd5f047b9aea
-caps.latest.revision: "30"
+caps.latest.revision: 30
 author: BillWagner
 ms.author: wiwagn
 ms.openlocfilehash: f453d9f4b443d7adeeb0ab628b4ddad1a0116e49

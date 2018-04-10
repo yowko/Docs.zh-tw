@@ -1,7 +1,7 @@
 ---
-title: ".NET Framework 上的 Docker"
-description: "了解如何透過 Windows 容器，使用 Docker 部署 .NET Framework 應用程式。"
-keywords: ".NET, .NET 伺服器, Docker, Windows 容器"
+title: .NET Framework 上的 Docker
+description: 了解如何透過 Windows 容器，使用 Docker 部署 .NET Framework 應用程式。
+keywords: .NET, .NET 伺服器, Docker, Windows 容器
 author: BillWagner
 ms.author: wiwagn
 ms.date: 09/28/2016
@@ -10,7 +10,8 @@ ms.prod: .net-framework
 ms.technology: dotnet-docker
 ms.devlang: dotnet
 ms.assetid: a27b2ae4-154e-4b2b-b221-0c4c05185274
-ms.workload: wiwagn
+ms.workload:
+- wiwagn
 ms.openlocfilehash: a87b1b90b4ca896b7c1e43ff80ae2f9301101c88
 ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: HT

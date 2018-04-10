@@ -1,7 +1,7 @@
 ---
-title: "開始使用 F #"
-description: "了解如何開始使用 F # 程式語言，在.NET 中。"
-keywords: "Visual F#, F#, 函式程式設計, .NET, .NET Core"
+title: '開始使用 F #'
+description: '了解如何開始使用 F # 程式語言，在.NET 中。'
+keywords: Visual F#, F#, 函式程式設計, .NET, .NET Core
 author: cartermp
 ms.author: phcart
 ms.date: 09/06/2016

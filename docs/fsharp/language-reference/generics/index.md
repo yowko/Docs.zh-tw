@@ -1,7 +1,7 @@
 ---
-title: "泛型 (F#)"
-description: "了解如何使用 F # 泛型函式和類型，可讓您撰寫搭配各種類型，而不需要重複程式碼的程式碼。"
-keywords: "Visual F#, F#, 函式程式設計"
+title: 泛型 (F#)
+description: '了解如何使用 F # 泛型函式和類型，可讓您撰寫搭配各種類型，而不需要重複程式碼的程式碼。'
+keywords: Visual F#, F#, 函式程式設計
 author: cartermp
 ms.author: phcart
 ms.date: 05/16/2016

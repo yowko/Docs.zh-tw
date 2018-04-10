@@ -1,15 +1,17 @@
 ---
-title: "virtual (C# 參考)"
+title: virtual (C# 參考)
 ms.date: 07/20/2015
 ms.prod: .net
-ms.technology: devlang-csharp
+ms.technology:
+- devlang-csharp
 ms.topic: article
 f1_keywords:
 - virtual_CSharpKeyword
 - virtual
-helpviewer_keywords: virtual keyword [C#]
+helpviewer_keywords:
+- virtual keyword [C#]
 ms.assetid: 5da9abae-bc1e-434f-8bea-3601b8dcb3b2
-caps.latest.revision: "26"
+caps.latest.revision: 26
 author: BillWagner
 ms.author: wiwagn
 ms.openlocfilehash: dce3333646bca6f558e3760849b6cffdb34a6c0b

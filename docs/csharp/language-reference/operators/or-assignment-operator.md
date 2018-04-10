@@ -1,15 +1,17 @@
 ---
-title: "|= 運算子 (C# 參考)"
+title: '|= 運算子 (C# 參考)'
 ms.date: 07/20/2015
 ms.prod: .net
-ms.technology: devlang-csharp
+ms.technology:
+- devlang-csharp
 ms.topic: article
-f1_keywords: '|=_CSharpKeyword'
+f1_keywords:
+- '|=_CSharpKeyword'
 helpviewer_keywords:
 - OR assignment operator (|=) [C#]
 - '|= operator (OR assignment) [C#]'
 ms.assetid: 8315b8cf-dd15-402f-92f0-c7db931696ca
-caps.latest.revision: "16"
+caps.latest.revision: 16
 author: BillWagner
 ms.author: wiwagn
 ms.openlocfilehash: aac4fd6016b65daa15da4bd3a414f385edce7c22

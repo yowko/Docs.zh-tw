@@ -1,7 +1,7 @@
 ---
-title: "容器和 Docker 簡介"
-description: "Microsoft 平台和工具的容器化 Docker 應用程式生命週期"
-keywords: "Docker, 微服務, ASP.NET, 容器"
+title: 容器和 Docker 簡介
+description: Microsoft 平台和工具的容器化 Docker 應用程式生命週期
+keywords: Docker, 微服務, ASP.NET, 容器
 author: CESARDELATORRE
 ms.author: wiwagn
 ms.date: 09/22/2017

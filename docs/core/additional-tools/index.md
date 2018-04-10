@@ -1,6 +1,6 @@
 ---
-title: ".NET Core 其他工具"
-description: "支援和延伸 .NET Core 功能之其他工具的簡介。"
+title: .NET Core 其他工具
+description: 支援和延伸 .NET Core 功能之其他工具的簡介。
 author: mlacouture
 manager: wpickett
 ms.author: johalex

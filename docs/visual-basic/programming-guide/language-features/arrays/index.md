@@ -1,6 +1,6 @@
 ---
-title: "Visual Basic 中的陣列"
-ms.custom: 
+title: Visual Basic 中的陣列
+ms.custom: ''
 ms.date: 12/06/2017
 ms.prod: .net
 ms.technology:

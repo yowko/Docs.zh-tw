@@ -1,12 +1,14 @@
 ---
-title: "&amp;= 運算子 (Visual Basic)"
+title: '&amp;= 運算子 (Visual Basic)'
 ms.date: 07/20/2015
 ms.prod: .net
-ms.reviewer: 
-ms.suite: 
-ms.technology: devlang-visual-basic
+ms.reviewer: ''
+ms.suite: ''
+ms.technology:
+- devlang-visual-basic
 ms.topic: article
-f1_keywords: vb.&=
+f1_keywords:
+- vb.&=
 helpviewer_keywords:
 - operator &=
 - assignment statements [Visual Basic], compound
@@ -14,7 +16,7 @@ helpviewer_keywords:
 - '&= operator [Visual Basic]'
 - compound assignment statements [Visual Basic]
 ms.assetid: 0cf262fc-1a05-419a-a503-60013f111c8a
-caps.latest.revision: "15"
+caps.latest.revision: 15
 author: dotnet-bot
 ms.author: dotnetcontent
 ms.openlocfilehash: 929a9e8c3384451679fc52ad478eb03219d67192

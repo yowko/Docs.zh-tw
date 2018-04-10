@@ -1,6 +1,6 @@
 ---
-title: "C# 教學課程"
-description: "探索這些 C# 教學課程以了解如何建置 C# 程式，並了解 C# 語言功能。"
+title: C# 教學課程
+description: 探索這些 C# 教學課程以了解如何建置 C# 程式，並了解 C# 語言功能。
 keywords: .NET, .NET Core
 author: BillWagner
 ms.author: wiwagn

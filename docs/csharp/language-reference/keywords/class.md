@@ -1,15 +1,17 @@
 ---
-title: "類別 (C# 參考)"
+title: 類別 (C# 參考)
 ms.date: 07/18/2017
 ms.prod: .net
-ms.technology: devlang-csharp
+ms.technology:
+- devlang-csharp
 ms.topic: article
 f1_keywords:
 - class_CSharpKeyword
 - class
-helpviewer_keywords: class keyword [C#]
+helpviewer_keywords:
+- class keyword [C#]
 ms.assetid: b95d8815-de18-4c3f-a8cc-a0a53bdf8690
-caps.latest.revision: "30"
+caps.latest.revision: 30
 author: BillWagner
 ms.author: wiwagn
 ms.openlocfilehash: ae4b019ee88b6f331a76c750ab94fc76a3343adb

@@ -1,7 +1,7 @@
 ---
-title: "值 (F#)"
-description: "了解如何在 F # 中的值為具有特定類型的數量。"
-keywords: "Visual F#, F#, 函式程式設計"
+title: 值 (F#)
+description: '了解如何在 F # 中的值為具有特定類型的數量。'
+keywords: Visual F#, F#, 函式程式設計
 author: cartermp
 ms.author: phcart
 ms.date: 05/16/2016
