@@ -1,7 +1,7 @@
 ---
-title: "成員 (F#)"
-description: "深入了解 F # 程式語言中的物件成員。"
-keywords: "Visual F#, F#, 函式程式設計"
+title: 成員 (F#)
+description: '深入了解 F # 程式語言中的物件成員。'
+keywords: Visual F#, F#, 函式程式設計
 author: cartermp
 ms.author: phcart
 ms.date: 05/16/2016

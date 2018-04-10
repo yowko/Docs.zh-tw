@@ -1,15 +1,17 @@
 ---
-title: "*= 運算子 (C# 參考)"
+title: '*= 運算子 (C# 參考)'
 ms.date: 07/20/2015
 ms.prod: .net
-ms.technology: devlang-csharp
+ms.technology:
+- devlang-csharp
 ms.topic: article
-f1_keywords: '*=_CSharpKeyword'
+f1_keywords:
+- '*=_CSharpKeyword'
 helpviewer_keywords:
 - '*= operator [C#]'
 - binary multiplication assignment operator (*=) [C#]
 ms.assetid: 2e472155-59db-4dbf-bb94-bcccfa1a794d
-caps.latest.revision: "16"
+caps.latest.revision: 16
 author: BillWagner
 ms.author: wiwagn
 ms.openlocfilehash: dc2201f78e1e05bd0ccdea04522896c00294bdd6

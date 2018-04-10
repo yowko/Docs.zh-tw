@@ -1,6 +1,6 @@
 ---
 title: Language Integrated Query (LINQ)
-description: "介紹使用 C# 的 Language Integrated Query (LINQ)"
+description: 介紹使用 C# 的 Language Integrated Query (LINQ)
 keywords: .NET, .NET Core, LINQ, C#
 author: BillWagner
 ms.author: wiwagn

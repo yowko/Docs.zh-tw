@@ -1,7 +1,7 @@
 ---
-title: "設計和開發多容器和微服務 .NET 應用程式"
-description: "容器化 .NET 應用程式的 .NET 微服務架構 | 設計和開發多容器和微服務 .NET 應用程式"
-keywords: "Docker, 微服務, ASP.NET, 容器"
+title: 設計和開發多容器和微服務 .NET 應用程式
+description: 容器化 .NET 應用程式的 .NET 微服務架構 | 設計和開發多容器和微服務 .NET 應用程式
+keywords: Docker, 微服務, ASP.NET, 容器
 author: CESARDELATORRE
 ms.author: wiwagn
 ms.date: 05/26/2017

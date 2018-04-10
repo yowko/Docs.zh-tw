@@ -1,7 +1,7 @@
 ---
-title: "開始使用 - C# 指南"
-description: "搜尋片長短、內容簡單扼要的教學課程，介紹 C# 概念及如何撰寫.NET Core 應用程式，協助您快速進入狀況。"
-keywords: "C#, 開始使用 , 取得, 安裝"
+title: 開始使用 - C# 指南
+description: 搜尋片長短、內容簡單扼要的教學課程，介紹 C# 概念及如何撰寫.NET Core 應用程式，協助您快速進入狀況。
+keywords: C#, 開始使用 , 取得, 安裝
 helpviewer_keywords:
 - Visual C#, getting started
 - getting started, Visual C#
@@ -12,11 +12,11 @@ ms.topic: article
 ms.prod: .net
 ms.technology: devlang-csharp
 ms.devlang: csharp
-ms.openlocfilehash: 002c0e35bc8dfb54fc081fcb70000c9c61eb5fcc
-ms.sourcegitcommit: bd1ef61f4bb794b25383d3d72e71041a5ced172e
+ms.openlocfilehash: f335ee1412932043b175aa49b29ecd360d447eb9
+ms.sourcegitcommit: b750a8e3979749b214e7e10c82efb0a0524dfcb1
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/18/2017
+ms.lasthandoff: 04/09/2018
 ---
 # <a name="get-started-with-c"></a>開始使用 C# #
 
@@ -44,10 +44,6 @@ ms.lasthandoff: 10/18/2017
 
    此主題說明如何使用 Visual Studio Code 和 .NET Core，來建立並執行簡單的 Hello World 應用程式。
 
-* [Visual C# 程式設計人員的其他資源](additional-resources.md)
-
-   提供網站與新聞群組的連結，協助您找到常見問題的解答。
-
 ## <a name="related-sections"></a>相關章節
 
 * [使用 C# 的 Visual Studio 開發環境](/visualstudio/csharp-ide/using-the-visual-studio-development-environment-for-csharp)  
@@ -70,5 +66,5 @@ ms.lasthandoff: 10/18/2017
 
     提供使用 C# 之程式設計逐步解說及個別逐步解說之簡短描述的連結。
 
-## <a name="see-also"></a>請參閱
+## <a name="see-also"></a>另請參閱
  [使用 Visual Studio 的 Visual C# 和 Visual Basic 使用者入門](/visualstudio/ide/getting-started-with-visual-csharp-and-visual-basic)

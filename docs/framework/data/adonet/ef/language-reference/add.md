@@ -10,7 +10,7 @@ ms.technology:
 ms.tgt_pltfrm: ''
 ms.topic: article
 ms.assetid: 51769b02-a8f7-4177-9e99-bbd10e77092c
-caps.latest.revision: ''
+caps.latest.revision: 4
 author: douglaslMS
 ms.author: douglasl
 manager: craigg

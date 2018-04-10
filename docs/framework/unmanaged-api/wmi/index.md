@@ -1,6 +1,6 @@
 ---
-title: "WMI 和效能計數器 （Unmanaged API 參考）"
-description: "摘要說明.NET Framework unmanaged API 的 WMI 和效能計數器資訊。"
+title: WMI 和效能計數器 （Unmanaged API 參考）
+description: 摘要說明.NET Framework unmanaged API 的 WMI 和效能計數器資訊。
 author: rpetrusha
 ms.author: ronpet
 manager: wpickett

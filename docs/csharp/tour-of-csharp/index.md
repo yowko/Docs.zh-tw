@@ -1,6 +1,6 @@
 ---
-title: "C# 的教學課程 - C# 指南"
-description: "第一次接觸 C#？ 了解該語言的基本概念。"
+title: C# 的教學課程 - C# 指南
+description: 第一次接觸 C#？ 了解該語言的基本概念。
 keywords: .NET, .NET Core, C#, C# Primer, C# Guide
 author: BillWagner
 ms.author: wiwagn

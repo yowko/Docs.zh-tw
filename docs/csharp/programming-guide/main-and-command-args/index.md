@@ -1,8 +1,9 @@
 ---
-title: "Main() 和命令列引數 (C# 程式設計指南)"
+title: Main() 和命令列引數 (C# 程式設計指南)
 ms.date: 08/02/2017
 ms.prod: .net
-ms.technology: devlang-csharp
+ms.technology:
+- devlang-csharp
 ms.topic: article
 f1_keywords:
 - CS5001
@@ -15,14 +16,14 @@ helpviewer_keywords:
 - command line [C#], arguments
 - command-line arguments [C#], Main method
 ms.assetid: 73a17231-cf96-44ea-aa8a-54807c6fb1f4
-caps.latest.revision: "30"
+caps.latest.revision: 30
 author: BillWagner
 ms.author: wiwagn
-ms.openlocfilehash: ab0b93a867ecf252bffd529d284ef9ddcc9163ba
-ms.sourcegitcommit: 7e99f66ef09d2903e22c789c67ff5a10aa953b2f
+ms.openlocfilehash: 8a1e0e017a700041d13b131d32b72d7118621719
+ms.sourcegitcommit: b750a8e3979749b214e7e10c82efb0a0524dfcb1
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 11/18/2017
+ms.lasthandoff: 04/09/2018
 ---
 # <a name="main-and-command-line-arguments-c-programming-guide"></a>Main() 和命令列引數 (C# 程式設計指南)
 
@@ -32,7 +33,7 @@ ms.lasthandoff: 11/18/2017
 
  [!code-csharp[csProgGuideMain#17](../../../csharp/programming-guide/inside-a-program/codesnippet/CSharp/main-and-command-line-arguments_1.cs)]
 
-## <a name="overview"></a>概觀
+## <a name="overview"></a>總覽
 
 - `Main` 方法是可執行程式的進入點；它是程式控制開始和結束的位置。
 - `Main` 會宣告於類別或結構內部。 `Main` 必須是 [static](../../../csharp/language-reference/keywords/static.md)，但不必是 [public](../../../csharp/language-reference/keywords/public.md)。 (在先前範例中，它會接收 [private](../../../csharp/language-reference/keywords/private.md) 的預設存取)。封入類別或結構不需要是 static。
@@ -46,8 +47,8 @@ ms.lasthandoff: 11/18/2017
 
 [!INCLUDE[CSharplangspec](~/includes/csharplangspec-md.md)]
 
-## <a name="see-also"></a>請參閱
-[使用 csc.exe 建置命令列](../../../csharp/language-reference/compiler-options/command-line-building-with-csc-exe.md)
-[C# 程式設計指南](../../../csharp/programming-guide/index.md)
-[方法](../../../csharp/programming-guide/classes-and-structs/methods.md)
-[C# 程式深入解析](../../../csharp/programming-guide/inside-a-program/index.md)
+## <a name="see-also"></a>另請參閱
+[使用 csc.exe 建置命令列](../../../csharp/language-reference/compiler-options/command-line-building-with-csc-exe.md)  
+[C# 程式設計指南](../../../csharp/programming-guide/index.md)  
+[方法](../../../csharp/programming-guide/classes-and-structs/methods.md)  
+[C# 程式內部](../../../csharp/programming-guide/inside-a-program/index.md)  

@@ -1,7 +1,7 @@
 ---
-title: "開始使用 Azure Blob 儲存體使用 F #"
-description: "搭配 Azure Blob 儲存體在雲端中儲存非結構化的資料。"
-keywords: "visual f #、 f #，功能性程式設計，.NET 中，.NET Core，Azure"
+title: '開始使用 Azure Blob 儲存體使用 F #'
+description: 搭配 Azure Blob 儲存體在雲端中儲存非結構化的資料。
+keywords: 'visual f #、 f #，功能性程式設計，.NET 中，.NET Core，Azure'
 author: sylvanc
 ms.author: phcart
 ms.date: 09/20/2016
@@ -10,11 +10,11 @@ ms.prod: .net
 ms.technology: devlang-fsharp
 ms.devlang: fsharp
 ms.assetid: c5b74a4f-dcd1-4849-930c-904b6c8a04e1
-ms.openlocfilehash: 5be948e100c496bc6613f1fdfb826ece5de6df8e
-ms.sourcegitcommit: 655fd4f78741967f80c409cef98347fdcf77857d
+ms.openlocfilehash: 14ccba36638c724536793a6a589cf1c0a6186eeb
+ms.sourcegitcommit: b750a8e3979749b214e7e10c82efb0a0524dfcb1
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 02/28/2018
+ms.lasthandoff: 04/09/2018
 ---
 # <a name="get-started-with-azure-blob-storage-using-f"></a>開始使用 Azure Blob 儲存體使用 F # #
 
@@ -247,7 +247,7 @@ Azure 儲存體支援加密的用戶端和伺服器上的 blob 資料。
 
 ### <a name="related-guides"></a>相關的輔助線
 
-- [在 C# 中的 Azure Blob 儲存體使用者入門](https://azure.microsoft.com/documentation/samples/storage-blob-dotnet-getting-started/)
+- [在 C# 中的 Azure Blob 儲存體使用者入門](https://azure.microsoft.com/resources/samples/storage-blob-dotnet-getting-started/)
 - [使用 Windows 上的 AzCopy 命令列公用程式傳送資料](/azure/storage/common/storage-use-azcopy)
 - [傳輸資料與 Linux 上的 AzCopy 命令列公用程式](/azure/storage/common/storage-use-azcopy-linux)
 - [設定 Azure 儲存體連接字串](/azure/storage/common/storage-configure-connection-string)

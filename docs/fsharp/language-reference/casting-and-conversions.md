@@ -1,7 +1,7 @@
 ---
-title: "轉型和轉換 (F#)"
-description: "了解如何 F # 程式語言提供的轉換運算子的各種基本型別之間的算術轉換。"
-keywords: "Visual F#, F#, 函式程式設計"
+title: 轉型和轉換 (F#)
+description: '了解如何 F # 程式語言提供的轉換運算子的各種基本型別之間的算術轉換。'
+keywords: Visual F#, F#, 函式程式設計
 author: cartermp
 ms.author: phcart
 ms.date: 05/16/2016
@@ -10,11 +10,11 @@ ms.prod: .net
 ms.technology: devlang-fsharp
 ms.devlang: fsharp
 ms.assetid: db30db67-da21-4206-bf0c-9211bd3cb22f
-ms.openlocfilehash: f17d3919c59c5881213d28a59cea7ae184493949
-ms.sourcegitcommit: bd1ef61f4bb794b25383d3d72e71041a5ced172e
+ms.openlocfilehash: df8352b0dd8651f1480515311454a218ea79b971
+ms.sourcegitcommit: b750a8e3979749b214e7e10c82efb0a0524dfcb1
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/18/2017
+ms.lasthandoff: 04/09/2018
 ---
 # <a name="casting-and-conversions-f"></a>轉型和轉換 (F#)
 
@@ -29,7 +29,7 @@ F # 提供的轉換運算子算術轉換之間各種基本型別，例如整數�
 
 下表顯示 F # 中定義的轉換運算子。
 
-|運算子|說明|
+|運算子|描述|
 |--------|-----------|
 |`byte`|將轉換成 byte、 8 位元不帶正負號類型。|
 |`sbyte`|將轉換成帶正負號的位元組。|
@@ -110,7 +110,7 @@ let base1 = d1 :> Base1
 取代為
 
 ```fsharp
-base1 = upcast d1
+let base1 = upcast d1
 ```
 
 在先前的程式碼中，引數類型和傳回型別是`Derived1`和`Base1`分別。

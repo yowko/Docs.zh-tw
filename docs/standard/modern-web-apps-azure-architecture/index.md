@@ -1,6 +1,6 @@
 ---
-title: "使用 ASP.NET Core 和 Azure 架構現代化 Web 應用程式"
-description: "使用 ASP.NET Core 和 Azure 架構現代化 Web 應用程式 | 簡介"
+title: 使用 ASP.NET Core 和 Azure 架構現代化 Web 應用程式
+description: 使用 ASP.NET Core 和 Azure 架構現代化 Web 應用程式 | 簡介
 author: ardalis
 ms.author: wiwagn
 ms.date: 10/06/2017

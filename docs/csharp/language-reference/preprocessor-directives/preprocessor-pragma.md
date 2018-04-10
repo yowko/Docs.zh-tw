@@ -1,13 +1,16 @@
 ---
-title: "#<a name=\"pragma-c-reference\"></a>pragma (C# 參考)"
+title: '#pragma (C# 參考)'
 ms.date: 07/20/2015
 ms.prod: .net
-ms.technology: devlang-csharp
+ms.technology:
+- devlang-csharp
 ms.topic: article
-f1_keywords: '#pragma'
-helpviewer_keywords: '#pragma directive [C#]'
+f1_keywords:
+- '#pragma'
+helpviewer_keywords:
+- '#pragma directive [C#]'
 ms.assetid: 5b7944cd-d402-46a1-ad8f-feffb2d83673
-caps.latest.revision: "18"
+caps.latest.revision: 18
 author: BillWagner
 ms.author: wiwagn
 ms.openlocfilehash: 6f53bd0ed3f35f049b0a1cbb21c5b9a563f9fce9

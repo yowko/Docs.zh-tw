@@ -1,12 +1,14 @@
 ---
-title: "存取範圍定義域 (C# 參考)"
+title: 存取範圍定義域 (C# 參考)
 ms.date: 07/20/2015
 ms.prod: .net
-ms.technology: devlang-csharp
+ms.technology:
+- devlang-csharp
 ms.topic: article
-helpviewer_keywords: accessibility domain [C#]
+helpviewer_keywords:
+- accessibility domain [C#]
 ms.assetid: 8af779c1-275b-44be-a864-9edfbca71bcc
-caps.latest.revision: "17"
+caps.latest.revision: 17
 author: BillWagner
 ms.author: wiwagn
 ms.openlocfilehash: 127bacda4bf8363fccff3dd3ef6770ad50984cfb

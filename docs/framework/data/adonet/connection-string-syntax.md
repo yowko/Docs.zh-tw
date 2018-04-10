@@ -1,24 +1,26 @@
 ---
-title: "連接字串語法"
-ms.custom: 
+title: 連接字串語法
+ms.custom: ''
 ms.date: 03/30/2017
 ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.technology: dotnet-ado
-ms.tgt_pltfrm: 
+ms.reviewer: ''
+ms.suite: ''
+ms.technology:
+- dotnet-ado
+ms.tgt_pltfrm: ''
 ms.topic: article
 ms.assetid: 0977aeee-04d1-4cce-bbed-750c77fce06e
-caps.latest.revision: "11"
+caps.latest.revision: 11
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.workload: dotnet
-ms.openlocfilehash: 9c7edc59ecb71c4b201b77c993fc839f5700abe3
-ms.sourcegitcommit: ed26cfef4e18f6d93ab822d8c29f902cff3519d1
+ms.workload:
+- dotnet
+ms.openlocfilehash: 76d8765be1dc24f4b8c457644595796680c2f2c3
+ms.sourcegitcommit: b750a8e3979749b214e7e10c82efb0a0524dfcb1
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 01/17/2018
+ms.lasthandoff: 04/09/2018
 ---
 # <a name="connection-string-syntax"></a>連接字串語法
 每個 .NET Framework 資料提供者都擁有一個 `Connection` 物件，繼承自 <xref:System.Data.Common.DbConnection> 以及提供者特定的 <xref:System.Data.Common.DbConnection.ConnectionString%2A> 屬性。 每個提供者的特定連接字串語法會記錄在其 `ConnectionString` 屬性中。 下表列出 .NET Framework 中包含的四個資料提供者。  
@@ -42,7 +44,7 @@ ms.lasthandoff: 01/17/2018
 -   <xref:System.Data.OracleClient.OracleConnectionStringBuilder>  
   
  連接字串產生器可讓您在執行階段建構語法有效的連接字串，所以您不需要在程式碼中手動串連連接字串值。 如需詳細資訊，請參閱[連接字串產生器](../../../../docs/framework/data/adonet/connection-string-builders.md)。  
-  
+
 ## <a name="windows-authentication"></a>Windows 驗證  
  我們建議使用 Windows 驗證 (有時稱為*整合式安全性*) 連接到支援的資料來源。 連接字串所使用的語法隨提供者而異。 下列表格說明搭配 .NET Framework 資料提供者使用的「Windows 驗證」語法。  
   
@@ -57,9 +59,13 @@ ms.lasthandoff: 01/17/2018
 >  與 `Integrated Security=true` 提供者搭配使用時，`OleDb` 會擲回例外狀況。  
   
 ## <a name="sqlclient-connection-strings"></a>SqlClient 連接字串  
- <xref:System.Data.SqlClient.SqlConnection> 連接字串的語法列於 <xref:System.Data.SqlClient.SqlConnection.ConnectionString%2A?displayProperty=nameWithType> 屬性中。 您可以使用 <xref:System.Data.SqlClient.SqlConnection.ConnectionString%2A> 屬性來取得或設定 SQL Server 資料庫的連接字串。 如果您需要連接至舊版的 SQL Server，則必須使用 .NET Framework Data Provider for OleDb (<xref:System.Data.OleDb>)。 大多數的連接字串關鍵字也可對應至 <xref:System.Data.SqlClient.SqlConnectionStringBuilder> 中的屬性。  
-  
- 每個下列形式的語法會使用 Windows 驗證來連接到**AdventureWorks**本機伺服器上的資料庫。  
+<xref:System.Data.SqlClient.SqlConnection> 連接字串的語法列於 <xref:System.Data.SqlClient.SqlConnection.ConnectionString%2A?displayProperty=nameWithType> 屬性中。 您可以使用 <xref:System.Data.SqlClient.SqlConnection.ConnectionString%2A> 屬性來取得或設定 SQL Server 資料庫的連接字串。 如果您需要連接至舊版的 SQL Server，則必須使用 .NET Framework Data Provider for OleDb (<xref:System.Data.OleDb>)。 大多數的連接字串關鍵字也可對應至 <xref:System.Data.SqlClient.SqlConnectionStringBuilder> 中的屬性。  
+
+> [!IMPORTANT]
+>  預設設定`Persist Security Info`關鍵字是`false`。 如果將其設為 `true` 或 `yes`，則在開啟連接後，可透過連接獲得機密資訊，包含使用者 ID 和密碼。 保留`Persist Security Info`設`false`以確保不受信任的來源，並沒有存取機密的連接字串資訊。  
+
+### <a name="windows-authentication-with-sqlclient"></a>Windows 驗證搭配 SqlClient 
+ 每個下列形式的語法使用 Windows 驗證來連接到**AdventureWorks**本機伺服器上的資料庫。  
   
 ```  
 "Persist Security Info=False;Integrated Security=true;  
@@ -70,26 +76,26 @@ ms.lasthandoff: 01/17/2018
     database=AdventureWorks;server=(local)"  
 ```  
   
-### <a name="sql-server-logins"></a>SQL Server 登入  
+### <a name="sql-server-authentication-with-sqlclient"></a>SQL Server 驗證搭配 SqlClient   
  連接至 SQL Server 時慣用「Windows 驗證」。 不過，如果需要「SQL Server 驗證」，請使用下列語法來指定使用者名稱和密碼。 在這個範例中使用了星號來表示有效的使用者名稱和密碼。  
   
 ```  
 "Persist Security Info=False;User ID=*****;Password=*****;Initial Catalog=AdventureWorks;Server=MySqlServer"  
 ```  
-  
-> [!IMPORTANT]
->  預設設定`Persist Security Info`關鍵字是`false`。 如果將其設為 `true` 或 `yes`，則在開啟連接後，可透過連接獲得機密資訊，包含使用者 ID 和密碼。 保留`Persist Security Info`設`false`以確保不受信任的來源，並沒有存取機密的連接字串資訊。  
-  
- 若要連接到 SQL Server 的具名執行個體，使用*伺服器名稱 \ 執行個體名稱*語法。  
+
+當您連接到 Azure SQL Database 或 Azure SQL 資料倉儲，並提供登入，格式`user@servername`，請確定`servername`登入中的值符合提供的值`Server=`。
+
+> [!NOTE]
+>  Windows 驗證的優先順序高於 SQL Server 登入。 如果您同時指定 Integrated Security=true 以及使用者名稱和密碼，系統就會忽略使用者名稱和密碼，而使用 Windows 驗證。  
+
+### <a name="connect-to-a-named-instance-of-sql-server"></a>連接到 SQL Server 的具名執行個體
+若要連接到 SQL Server 的具名執行個體，使用*伺服器名稱 \ 執行個體名稱*語法。  
   
 ```  
 Data Source=MySqlServer\MSSQL1;"  
 ```  
-  
- 您也可以在建立連接字串時，將 <xref:System.Data.SqlClient.SqlConnectionStringBuilder.DataSource%2A> 的 `SqlConnectionStringBuilder` 屬性設定為執行個體名稱。 <xref:System.Data.SqlClient.SqlConnection.DataSource%2A> 物件的 <xref:System.Data.SqlClient.SqlConnection> 屬性是唯讀的。  
-  
-> [!NOTE]
->  Windows 驗證的優先順序高於 SQL Server 登入。 如果您同時指定 Integrated Security=true 以及使用者名稱和密碼，系統就會忽略使用者名稱和密碼，而使用 Windows 驗證。  
+ 
+您也可以在建立連接字串時，將 <xref:System.Data.SqlClient.SqlConnectionStringBuilder.DataSource%2A> 的 `SqlConnectionStringBuilder` 屬性設定為執行個體名稱。 <xref:System.Data.SqlClient.SqlConnection.DataSource%2A> 物件的 <xref:System.Data.SqlClient.SqlConnection> 屬性是唯讀的。  
   
 ### <a name="type-system-version-changes"></a>型別系統版本變更  
  `Type System Version` 中的 <xref:System.Data.SqlClient.SqlConnection.ConnectionString%2A?displayProperty=nameWithType> 關鍵字指定 [!INCLUDE[ssNoVersion](../../../../includes/ssnoversion-md.md)] 型別的用戶端表示。 如需 <xref:System.Data.SqlClient.SqlConnection.ConnectionString%2A?displayProperty=nameWithType> 關鍵字的詳細資訊，請參閱 `Type System Version`。  
@@ -201,7 +207,7 @@ Data Source=Oracle9i;User ID=*****;Password=*****;
   
  如需 ODBC 連接字串語法的詳細資訊，請參閱 <xref:System.Data.OracleClient.OracleConnection.ConnectionString%2A>。  
   
-## <a name="see-also"></a>請參閱  
+## <a name="see-also"></a>另請參閱  
  [連接字串](../../../../docs/framework/data/adonet/connection-strings.md)  
  [連接至資料來源](../../../../docs/framework/data/adonet/connecting-to-a-data-source.md)  
  [ADO.NET Managed 提供者和 DataSet 開發人員中心](http://go.microsoft.com/fwlink/?LinkId=217917)

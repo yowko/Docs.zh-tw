@@ -1,5 +1,5 @@
 ---
-title: ".NET Framework 4.7、4.6 和 4.5 移轉手冊 "
+title: '.NET Framework 4.7、4.6 和 4.5 移轉手冊 '
 ms.custom: updateeachrelease
 ms.date: 10/17/2017
 ms.prod: .net-framework

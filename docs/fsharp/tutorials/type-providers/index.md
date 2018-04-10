@@ -1,7 +1,7 @@
 ---
-title: "型別提供者"
-description: "了解 F # 類型提供者的提供類型、 屬性和方法讓您的程式中使用的元件的方式。"
-keywords: "Visual F#, F#, 函式程式設計"
+title: 型別提供者
+description: '了解 F # 類型提供者的提供類型、 屬性和方法讓您的程式中使用的元件的方式。'
+keywords: Visual F#, F#, 函式程式設計
 author: cartermp
 ms.author: phcart
 ms.date: 05/16/2016

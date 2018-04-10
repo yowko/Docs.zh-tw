@@ -1,7 +1,7 @@
 ---
-title: "Docker 應用程式的開發程序"
-description: "容器化 .NET 應用程式的 .NET 微服務架構 | Docker 應用程式的開發程序"
-keywords: "Docker, 微服務, ASP.NET, 容器"
+title: Docker 應用程式的開發程序
+description: 容器化 .NET 應用程式的 .NET 微服務架構 | Docker 應用程式的開發程序
+keywords: Docker, 微服務, ASP.NET, 容器
 author: CESARDELATORRE
 ms.author: wiwagn
 ms.date: 10/18/2017

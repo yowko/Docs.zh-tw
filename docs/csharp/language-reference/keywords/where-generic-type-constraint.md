@@ -1,15 +1,17 @@
 ---
-title: "where (泛型類型條件約束) (C# 參考)"
+title: where (泛型類型條件約束) (C# 參考)
 ms.date: 07/20/2015
 ms.prod: .net
-ms.technology: devlang-csharp
+ms.technology:
+- devlang-csharp
 ms.topic: article
 f1_keywords:
 - whereconstraint
 - whereconstraint_CSharpKeyword
-helpviewer_keywords: where (generic type constraint) [C#]
+helpviewer_keywords:
+- where (generic type constraint) [C#]
 ms.assetid: d7aa871b-0714-416a-bab2-96f87ada4310
-caps.latest.revision: "10"
+caps.latest.revision: 10
 author: BillWagner
 ms.author: wiwagn
 ms.openlocfilehash: f2b7b159689aa771d3f9d59e3b1dd340c85b1d79

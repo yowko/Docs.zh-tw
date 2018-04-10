@@ -1,15 +1,17 @@
 ---
-title: "false (C# 參考)"
+title: false (C# 參考)
 ms.date: 07/20/2015
 ms.prod: .net
-ms.technology: devlang-csharp
+ms.technology:
+- devlang-csharp
 ms.topic: article
 f1_keywords:
 - false_CSharpKeyword
 - "false"
-helpviewer_keywords: false keyword [C#]
+helpviewer_keywords:
+- false keyword [C#]
 ms.assetid: a11aa532-efe2-442b-9fcc-8fdb33b8c8b4
-caps.latest.revision: "9"
+caps.latest.revision: 9
 author: BillWagner
 ms.author: wiwagn
 ms.openlocfilehash: 1b2add7a6426026bee06b82f7e822cc65cb547ba

@@ -1,20 +1,20 @@
 ---
-title: "符號和運算子參考 (F#)"
-description: "深入了解符號和 F # 程式語言中所使用的運算子。"
-keywords: "Visual F#, F#, 函式程式設計"
+title: 符號和運算子參考 (F#)
+description: '深入了解符號和 F # 程式語言中所使用的運算子。'
+keywords: Visual F#, F#, 函式程式設計
 author: cartermp
 ms.author: phcart
-ms.date: 05/16/2016
+ms.date: 04/04/2018
 ms.topic: language-reference
 ms.prod: .net
 ms.technology: devlang-fsharp
 ms.devlang: fsharp
 ms.assetid: ab453800-d4d0-4a11-9d55-2b358d56af27
-ms.openlocfilehash: cb21ef7385cb679f9d445f8ee419db3d727fa057
-ms.sourcegitcommit: 2142a4732bb4ff519b9817db4c24a237b9810d4b
+ms.openlocfilehash: 2fa4504c7059b4559b364d4000fe4ec6131430e5
+ms.sourcegitcommit: b750a8e3979749b214e7e10c82efb0a0524dfcb1
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 01/05/2018
+ms.lasthandoff: 04/09/2018
 ---
 # <a name="symbol-and-operator-reference"></a>符號和運算子參考
 
@@ -34,9 +34,9 @@ ms.lasthandoff: 01/05/2018
 |`"""`|[字串](../strings.md)|分隔逐字文字字串。 有別於 `@"..."`，因為您可以在字串中使用單引號來表示引號字元。|
 |`#`|[編譯器指示詞](../compiler-directives.md)<br /><br />[彈性類型](../flexible-types.md)|<ul><li>開頭前置處理器或編譯器指示詞，例如，`#light`。<br /></li><li>與類型一起使用時，表示「彈性類型」，這指的是類型或任何一種其衍生的類型。<br /></li><ul/>|
 |`$`|沒有可用的詳細資訊。|<ul><li>使用於內部，用於特定編譯器產生的變數與函式名稱。<br /></li><ul/>|
-|`%`|[算術運算子](arithmetic-operators.md)<br /><br />[程式碼引號](../code-quotations.md)|<ul><li>計算整數模數。<br /></li><li>用於將運算式接合成具類型的程式碼引號。<br /></li><ul/>|
+|`%`|[算術運算子](arithmetic-operators.md)<br /><br />[程式碼引號](../code-quotations.md)|<ul><li>計算整數餘數。<br /></li><li>用於將運算式接合成具類型的程式碼引號。<br /></li><ul/>|
 |`%%`|[程式碼引號](../code-quotations.md)|<ul><li>用於將運算式接合成不具類型的程式碼引號。<br /></li><ul/>|
-|`%?`|[可為 Null 的運算子](nullable-operators.md)|<ul><li>當右側是可為 null 的類型時，計算整數模數。<br /></li><ul/>|
+|`%?`|[可為 Null 的運算子](nullable-operators.md)|<ul><li>當右側是可為 null 的型別時，計算整數餘數。<br /></li><ul/>|
 |`&`|[比對運算式](../match-expressions.md)|<ul><li>計算可變動值的位址，以在與其他語言相互操作時使用。<br /></li><li>用於 AND 模式中。<br /></li><ul/>|
 |`&&`|[布林運算子](boolean-operators.md)|<ul><li>計算布林值 AND 運算。<br /></li><ul/>|
 |`&&&`|[位元運算子](bitwise-operators.md)|<ul><li>計算位元 AND 運算。<br /></li><ul/>|
@@ -127,7 +127,7 @@ ms.lasthandoff: 01/05/2018
 |--------|-------------|
 |`as`|右|
 |`when`|右|
-|<code>&#124;</code>（管線）|左|
+|<code>&#124;</code> （管線）|左|
 |`;`|右|
 |`let`|Nonassociative|
 |`function`、`fun`、`match``try`|Nonassociative|
@@ -138,7 +138,7 @@ ms.lasthandoff: 01/05/2018
 |`or`, <code>&#124;&#124;</code>|左|
 |`&`, `&&`|左|
 |`:>`, `:?>`|右|
-|`!=`*op*， `<` *op*， `>` *op*， `=`， <code>&#124;</code> *op*， `&` *op*，`&`<br /><br />(包括 `<<<`、`>>>`、<code>&#124;&#124;&#124;</code>、`&&&`)|左|
+|`!=`*op*， `<` *op*， `>` *op*， `=`， <code>&#124;</code> *op*， `&` *op*, `&`<br /><br />(包括 `<<<`、`>>>`、<code>&#124;&#124;&#124;</code>、`&&&`)|左|
 |`^`*op*<br /><br />(包括 `^^^`)|右|
 |`::`|右|
 |`:?`|未關聯|
@@ -146,14 +146,14 @@ ms.lasthandoff: 01/05/2018
 |`*`*op*、`/`*op*、`%`*op*|左方|
 |`**`*op*|右方|
 |`f x` (函式應用程式)|左|
-|<code>&#124;</code>（模式比對）|右|
+|<code>&#124;</code> （模式比對）|右|
 |前置運算子 (`+`*op*、`-`*op*、`%`、`%%`、`&`、`&&`、`!`*op*、`~`*op*)|左|
 |`.`|左|
 |`f(x)`|左|
 |`f<`*類型*`>`|左|
 F# 支援自訂運算子多載。 這表示您可以定義自己的運算子。 在上表中，*op* 可以是任何有效的 (可能是空的) 運算子字元序列，即內建或使用者定義的序列。 因此，您可以使用此表格來判斷要對自訂運算子使用什麼字元序列，以達到您想要的優先順序等級。 前置 `.` 字元在編譯器判斷優先順序時，會予以忽略。
 
-## <a name="see-also"></a>請參閱
+## <a name="see-also"></a>另請參閱
 [F# 語言參考](../index.md)
 
 [運算子多載](../operator-overloading.md)

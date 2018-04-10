@@ -1,12 +1,11 @@
 ---
-title: "逐步解說：在 WPF 中排列 Windows Form 控制項"
-ms.custom: 
-ms.date: 03/30/2017
+title: 逐步解說：在 WPF 中排列 Windows Form 控制項
+ms.custom: ''
+ms.date: 04/03/2018
 ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.technology: dotnet-wpf
-ms.tgt_pltfrm: 
+ms.suite: ''
+ms.technology:
+- dotnet-wpf
 ms.topic: article
 dev_langs:
 - csharp
@@ -15,16 +14,16 @@ helpviewer_keywords:
 - hybrid applications [WPF interoperability]
 - arranging controls [WPF]
 ms.assetid: a1db8049-15c7-45d6-ae3d-36a6735cb848
-caps.latest.revision: "31"
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.workload: dotnet
-ms.openlocfilehash: 480d61f6ca2aa67e0de48030655a6368c70554f4
-ms.sourcegitcommit: c0dd436f6f8f44dc80dc43b07f6841a00b74b23f
+ms.workload:
+- dotnet
+ms.openlocfilehash: 4f3129b4128444530b1277299f3f95ce49232421
+ms.sourcegitcommit: b750a8e3979749b214e7e10c82efb0a0524dfcb1
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 01/19/2018
+ms.lasthandoff: 04/09/2018
 ---
 # <a name="walkthrough-arranging-windows-forms-controls-in-wpf"></a>逐步解說：在 WPF 中排列 Windows Form 控制項
 本逐步解說會示範如何使用[!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)]版面配置功能來排列[!INCLUDE[TLA#tla_winforms](../../../../includes/tlasharptla-winforms-md.md)]混合式應用程式中的控制項。  
@@ -161,26 +160,17 @@ ms.lasthandoff: 01/19/2018
 5.  按一下**Click me**  按鈕。 `button1_Click`事件處理常式設定<xref:System.Windows.Forms.Control.Top%2A>和<xref:System.Windows.Forms.Control.Left%2A>裝載控制項上的屬性。 這會造成裝載的控制項內重新定位<xref:System.Windows.Forms.Integration.WindowsFormsHost>項目。 主機會維持相同的螢幕區域，但會裁剪裝載的控制項。 相反地，在裝載的控制項應該永遠填滿<xref:System.Windows.Forms.Integration.WindowsFormsHost>項目。  
   
 ## <a name="understanding-z-order-limitations"></a>了解疊置順序的限制  
- 根據預設，顯示<xref:System.Windows.Forms.Integration.WindowsFormsHost>項目會永遠繪製之上其他[!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)]項目，而且它們會依 z 軸順序不會受到影響。 若要啟用疊置順序，將<xref:System.Windows.Interop.HwndHost.IsRedirected%2A>屬性<xref:System.Windows.Forms.Integration.WindowsFormsHost>為 true 而<xref:System.Windows.Interop.HwndHost.CompositionMode%2A>屬性<xref:System.Windows.Interop.CompositionMode.Full>或<xref:System.Windows.Interop.CompositionMode.OutputOnly>。  
-  
-#### <a name="to-see-the-default-z-order-behavior"></a>查看預設的疊置順序行為  
-  
-1.  複製成下列 XAML<xref:System.Windows.Controls.Grid>項目。  
-  
+ 可見<xref:System.Windows.Forms.Integration.WindowsFormsHost>項目會永遠繪製之上其他 WPF 項目，而且它們可依 z 軸順序不會受到影響。 若要查看此疊置順序的行為，執行下列作業：
+
+1.  複製成下列 XAML<xref:System.Windows.Controls.Grid>項目。
+
      [!code-xaml[WpfLayoutHostingWfWithXaml#8](../../../../samples/snippets/csharp/VS_Snippets_Wpf/WpfLayoutHostingWfWithXaml/CSharp/Window1.xaml#8)]  
-  
+ 
 2.  按 F5 鍵建置並執行應用程式。 <xref:System.Windows.Forms.Integration.WindowsFormsHost>元素已經繪製在標籤項目上方。  
-  
-#### <a name="to-see-the-z-order-behavior-when-isredirected-is-true"></a>查看 IsRedirected 為 true 時的疊置順序行為  
-  
-1.  下列 XAML 取代先前的疊置順序範例。  
-  
-     [!code-xaml[WpfLayoutHostingWfWithXaml#8b](../../../../samples/snippets/visualbasic/VS_Snippets_Wpf/WpfLayoutHostingWfWithXaml/VisualBasic/Window1.xaml#8b)]  
-  
-     按 F5 鍵建置並執行應用程式。 Label 元素已經繪製透過<xref:System.Windows.Forms.Integration.WindowsFormsHost>項目。  
-  
+
+
 ## <a name="docking"></a>停駐  
- <xref:System.Windows.Forms.Integration.WindowsFormsHost>項目支援[!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)]停駐。 設定<xref:System.Windows.Controls.DockPanel.Dock%2A>附加停駐在裝載的控制項的屬性<xref:System.Windows.Controls.DockPanel>項目。  
+ <xref:System.Windows.Forms.Integration.WindowsFormsHost> 項目支援[!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)]停駐。 設定<xref:System.Windows.Controls.DockPanel.Dock%2A>附加停駐在裝載的控制項的屬性<xref:System.Windows.Controls.DockPanel>項目。  
   
 #### <a name="to-dock-a-hosted-control"></a>停駐裝載的控制項  
   
@@ -222,7 +212,7 @@ ms.lasthandoff: 01/19/2018
 2.  按 F5 鍵建置並執行應用程式。 <xref:System.Windows.Forms.Integration.WindowsFormsHost>項目置於格線資料列，但它不會延伸以填滿可用空間。 如果視窗是夠大，您可能會看到兩個或多個月，顯示託管<xref:System.Windows.Forms.MonthCalendar>控制項，但這些置中對齊的資料列中。 [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)]版面配置引擎中心無法調整大小以填滿可用空間的項目。  
   
 ## <a name="scaling"></a>縮放  
- 不同於[!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)]項目、 大部分[!INCLUDE[TLA#tla_winforms](../../../../includes/tlasharptla-winforms-md.md)]都不會持續可擴充控制項。 根據預設，<xref:System.Windows.Forms.Integration.WindowsFormsHost>項目調整其裝載的控制項時，可能。  若要啟用單純的縮放比例，<xref:System.Windows.Interop.HwndHost.IsRedirected%2A>屬性<xref:System.Windows.Forms.Integration.WindowsFormsHost>為 true 而<xref:System.Windows.Interop.HwndHost.CompositionMode%2A>屬性<xref:System.Windows.Interop.CompositionMode.Full>或<xref:System.Windows.Interop.CompositionMode.OutputOnly>。  
+ 不同於 WPF 項目，大部分的 Windows Form 控制項不會持續擴充。 若要提供自訂縮放比例，您覆寫<xref:System.Windows.Forms.Integration.WindowsFormsHost.ScaleChild%2A?displayProperty=nameWithType>方法。 
   
 #### <a name="to-scale-a-hosted-control-by-using-the-default-behavior"></a>使用預設行為縮放裝載的控制項  
   
@@ -230,19 +220,13 @@ ms.lasthandoff: 01/19/2018
   
      [!code-xaml[WpfLayoutHostingWfWithXaml#12](../../../../samples/snippets/csharp/VS_Snippets_Wpf/WpfLayoutHostingWfWithXaml/CSharp/Window1.xaml#12)]  
   
-2.  按 F5 鍵建置並執行應用程式。 裝載的控制項及其周圍元素會縮放 0.5 倍。 不過，裝載控制項的字型不會進行縮放。  
-  
-#### <a name="to-scale-a-hosted-control-by-setting-isredirected-to-true"></a>將 IsRedirected 設為 true 以縮放裝載的控制項  
-  
-1.  使用下列 XAML 取代先前的縮放範例。  
-  
-     [!code-xaml[WpfLayoutHostingWfWithXaml#12b](../../../../samples/snippets/visualbasic/VS_Snippets_Wpf/WpfLayoutHostingWfWithXaml/VisualBasic/Window1.xaml#12b)]  
-  
-2.  按 F5 鍵建置並執行應用程式。 裝載的控制項、其周圍元素及裝載控制項的字元均會縮放 0.5 倍。  
-  
+2.  按 F5 鍵建置並執行應用程式。 裝載的控制項及其周圍元素會縮放 0.5 倍。 不過，裝載控制項的字型不會進行縮放。
+
+<!-- This could use an example of custom scaling. -->
+
 ## <a name="rotating"></a>旋轉  
- 不同於[!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)]項目，[!INCLUDE[TLA#tla_winforms](../../../../includes/tlasharptla-winforms-md.md)]控制項不支援循環。 根據預設，<xref:System.Windows.Forms.Integration.WindowsFormsHost>項目不會與其他旋轉[!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)]時套用旋轉轉換的項目。 任何旋轉以外值 180 度引發<xref:System.Windows.Forms.Integration.WindowsFormsHost.LayoutError>事件。  若要啟用任何角度來旋轉，<xref:System.Windows.Interop.HwndHost.IsRedirected%2A>屬性<xref:System.Windows.Forms.Integration.WindowsFormsHost>為 true 而<xref:System.Windows.Interop.HwndHost.CompositionMode%2A>屬性<xref:System.Windows.Interop.CompositionMode.Full>或<xref:System.Windows.Interop.CompositionMode.OutputOnly>。  
-  
+ 不同於 WPF 項目，Windows Form 控制項不支援循環。 <xref:System.Windows.Forms.Integration.WindowsFormsHost>項目將不會與其他 WPF 項目套用旋轉轉換時才會旋轉。 任何旋轉以外值 180 度引發<xref:System.Windows.Forms.Integration.WindowsFormsHost.LayoutError>事件。
+ 
 #### <a name="to-see-the-effect-of-rotation-in-a-hybrid-application"></a>查看混合式應用程式中的旋轉效果  
   
 1.  複製成下列 XAML<xref:System.Windows.Controls.Grid>項目。  
@@ -250,15 +234,8 @@ ms.lasthandoff: 01/19/2018
      [!code-xaml[WpfLayoutHostingWfWithXaml#13](../../../../samples/snippets/csharp/VS_Snippets_Wpf/WpfLayoutHostingWfWithXaml/CSharp/Window1.xaml#13)]  
   
 2.  按 F5 鍵建置並執行應用程式。 裝載的控制項不會旋轉，但其周圍元素會旋轉 180 度。 您可能必須調整視窗大小來查看元素。  
-  
-#### <a name="to-see-the-effect-of-rotation-in-a-hybrid-application-when-isredirected-is-true"></a>查看當 IsRedirected 為 true 時混合式應用程式中的旋轉效果  
-  
-1.  使用下列 XAML 取代先前的旋轉範例。  
-  
-     [!code-xaml[WpfLayoutHostingWfWithXaml#13b](../../../../samples/snippets/visualbasic/VS_Snippets_Wpf/WpfLayoutHostingWfWithXaml/VisualBasic/Window1.xaml#13b)]  
-  
-2.  按 F5 鍵建置並執行應用程式。 裝載的控制項即會旋轉。  請注意，<xref:System.Windows.Media.RotateTransform.Angle%2A>屬性可以設定為任何值。 您可能必須調整視窗大小來查看元素。  
-  
+ 
+
 ## <a name="setting-padding-and-margins"></a>設定邊框距離及邊界  
  填補和邊界[!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)]版面配置，類似填補和邊界[!INCLUDE[TLA#tla_winforms](../../../../includes/tlasharptla-winforms-md.md)]。 只要設定<xref:System.Windows.Controls.Control.Padding%2A>和<xref:System.Windows.FrameworkElement.Margin%2A>屬性<xref:System.Windows.Forms.Integration.WindowsFormsHost>項目。  
   
@@ -272,7 +249,7 @@ ms.lasthandoff: 01/19/2018
 2.  按 F5 鍵建置並執行應用程式。 填補和邊界設定會套用至主控[!INCLUDE[TLA#tla_winforms](../../../../includes/tlasharptla-winforms-md.md)]控制項相同的方式會將它們套用在[!INCLUDE[TLA#tla_winforms](../../../../includes/tlasharptla-winforms-md.md)]。  
   
 ## <a name="using-dynamic-layout-containers"></a>使用動態版面配置容器  
- [!INCLUDE[TLA#tla_winforms](../../../../includes/tlasharptla-winforms-md.md)]提供兩個動態的版面配置容器，<xref:System.Windows.Forms.FlowLayoutPanel>和<xref:System.Windows.Forms.TableLayoutPanel>。 您也可以使用這些容器中的[!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)]版面配置。  
+ [!INCLUDE[TLA#tla_winforms](../../../../includes/tlasharptla-winforms-md.md)] 提供兩個動態的版面配置容器，<xref:System.Windows.Forms.FlowLayoutPanel>和<xref:System.Windows.Forms.TableLayoutPanel>。 您也可以使用這些容器中的[!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)]版面配置。  
   
 #### <a name="to-use-a-dynamic-layout-container"></a>使用動態版面配置容器  
   
@@ -292,7 +269,7 @@ ms.lasthandoff: 01/19/2018
   
 4.  按 F5 鍵建置並執行應用程式。 <xref:System.Windows.Forms.Integration.WindowsFormsHost>項目都會填入<xref:System.Windows.Controls.DockPanel>，和<xref:System.Windows.Forms.FlowLayoutPanel>排列其子控制項中的預設<xref:System.Windows.Forms.FlowLayoutPanel.FlowDirection%2A>。  
   
-## <a name="see-also"></a>請參閱  
+## <a name="see-also"></a>另請參閱  
  <xref:System.Windows.Forms.Integration.ElementHost>  
  <xref:System.Windows.Forms.Integration.WindowsFormsHost>  
  [WPF 設計工具](http://msdn.microsoft.com/library/c6c65214-8411-4e16-b254-163ed4099c26)  

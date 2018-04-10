@@ -1,15 +1,17 @@
 ---
-title: "const (C# 參考)"
+title: const (C# 參考)
 ms.date: 07/20/2015
 ms.prod: .net
-ms.technology: devlang-csharp
+ms.technology:
+- devlang-csharp
 ms.topic: article
 f1_keywords:
 - const_CSharpKeyword
 - const
-helpviewer_keywords: const keyword [C#]
+helpviewer_keywords:
+- const keyword [C#]
 ms.assetid: 79eb447c-117b-4418-933f-97c50aa472db
-caps.latest.revision: "28"
+caps.latest.revision: 28
 author: BillWagner
 ms.author: wiwagn
 ms.openlocfilehash: 7f54b686b170622ca1ead736a9f614c9bbef52dc

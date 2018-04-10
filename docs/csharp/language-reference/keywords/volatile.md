@@ -1,15 +1,17 @@
 ---
-title: "volatile (C# 參考)"
+title: volatile (C# 參考)
 ms.date: 07/20/2015
 ms.prod: .net
-ms.technology: devlang-csharp
+ms.technology:
+- devlang-csharp
 ms.topic: article
 f1_keywords:
 - volatile_CSharpKeyword
 - volatile
-helpviewer_keywords: volatile keyword [C#]
+helpviewer_keywords:
+- volatile keyword [C#]
 ms.assetid: 78089bc7-7b38-4cfd-9e49-87ac036af009
-caps.latest.revision: "29"
+caps.latest.revision: 29
 author: BillWagner
 ms.author: wiwagn
 ms.openlocfilehash: 1cefa39313c3c551e8d05fbc31e528b86c6888d9

@@ -1,17 +1,19 @@
 ---
-title: "[] 運算子 (C# 參考)"
+title: '[] 運算子 (C# 參考)'
 ms.date: 07/20/2015
 ms.prod: .net
-ms.technology: devlang-csharp
+ms.technology:
+- devlang-csharp
 ms.topic: article
-f1_keywords: '[]_CSharpKeyword'
+f1_keywords:
+- '[]_CSharpKeyword'
 helpviewer_keywords:
 - subscript operator [C#]
 - square brackets [ ] operator [C#]
 - '[] operator [C#]'
 - indexing operator [C#]
 ms.assetid: 5c16bb45-88f7-45ff-b42c-1af1972b042c
-caps.latest.revision: "20"
+caps.latest.revision: 20
 author: BillWagner
 ms.author: wiwagn
 ms.openlocfilehash: 03664f5604bb7d7dce9e8ae2ff0ec045c6a203b1

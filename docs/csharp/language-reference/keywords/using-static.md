@@ -1,10 +1,12 @@
 ---
-title: "using static 指示詞 (C# 參考)"
+title: using static 指示詞 (C# 參考)
 ms.date: 03/10/2017
 ms.prod: .net
-ms.technology: devlang-csharp
+ms.technology:
+- devlang-csharp
 ms.topic: article
-helpviewer_keywords: using static directive [C#]
+helpviewer_keywords:
+- using static directive [C#]
 ms.assetid: 8b8f9e34-c75e-469b-ba85-6f2eb4090314
 author: rpetrusha
 ms.author: ronpet

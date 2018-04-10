@@ -10,17 +10,17 @@ ms.technology:
 ms.tgt_pltfrm: ''
 ms.topic: article
 ms.assetid: f362d00e-ce82-484f-9d4f-27e579d5c320
-caps.latest.revision: ''
+caps.latest.revision: 10
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
 ms.workload:
 - dotnet
-ms.openlocfilehash: c12bd11cee62cd769f7dffc142806fa5ab1b0137
-ms.sourcegitcommit: c883637b41ee028786edceece4fa872939d2e64c
+ms.openlocfilehash: 8e60d28314c47907cc825871b88a0dc771cd0511
+ms.sourcegitcommit: b750a8e3979749b214e7e10c82efb0a0524dfcb1
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 03/26/2018
+ms.lasthandoff: 04/09/2018
 ---
 # <a name="comparing-aspnet-web-services-to-wcf-based-on-development"></a>根據開發情況比較 ASP.NET Web 服務與 WCF
 [!INCLUDE[indigo1](../../../../includes/indigo1-md.md)] 具有 ASP.NET 相容性模式選項，可讓 [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] 應用程式以類似 ASP.NET Web 服務的方式來進行程式設計和組態，並且可模擬其行為。 下列章節將根據使用這兩種技術來開發應用程式時的需求，比較 ASP.NET Web 服務和 [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)]。  
@@ -187,7 +187,7 @@ public class LineItem
   
 -   這樣會導致其能夠將型別的非 Public 成員序列化為 XML，進而使得 <xref:System.Runtime.Serialization.DataContractSerializer> 在可以處理序列化為 XML 的各種 .NET 型別上具有較少限制。 特別值得一提的是，它可以將像是實作 <xref:System.Collections.Hashtable> 介面的 <xref:System.Collections.IDictionary> 的型別轉譯為 XML 型別。 <xref:System.Runtime.Serialization.DataContractSerializer> 很有可能可以在不用修改型別定義或為型別開發包裝函式的情況下，將任何預先存在的 .NET 型別執行個體轉譯為 XML。  
   
--   對於 <xref:System.Runtime.Serialization.DataContractSerializer> 來說，能夠存取型別的非 Public 成員能力會造成它需要完全信任，而 <xref:System.Xml.Serialization.XmlSerializer> 則不需要。 對於可透過用於執行此程式碼之認證來存取的電腦上所有資源，完全信任程式碼存取權限會提供這些資源的完整存取權。 由於完全信任的程式碼會存取電腦上的所有資源，所以請務必小心使用此選項。  
+-   對於 <xref:System.Runtime.Serialization.DataContractSerializer> 來說，能夠存取型別的非 Public 成員能力會造成它需要完全信任，而 <xref:System.Xml.Serialization.XmlSerializer> 則不需要。 完全信任的程式碼存取權限提供完整存取權限可以使用程式碼執行的認證來存取電腦上的所有資源。 應該謹慎使用這個選項，因為完全受信任的程式碼會存取您的電腦上的所有資源。  
   
 -   <xref:System.Runtime.Serialization.DataContractSerializer> 併入了一些版本控制功能的支援：  
   
@@ -195,7 +195,7 @@ public class LineItem
   
     -   藉由讓資料合約實作 <xref:System.Runtime.Serialization.IExtensibleDataObject> 介面，便可讓 <xref:System.Runtime.Serialization.DataContractSerializer> 將定義於新版資料合約中的成員透過擁有舊版合約的應用程式傳遞。  
   
- 儘管存在以上這些差異，但根據預設，只要 XML 的命名空間已明確定義，<xref:System.Xml.Serialization.XmlSerializer> 序列化型別的目標 XML 與 <xref:System.Runtime.Serialization.DataContractSerializer> 序列化型別的目標 XML 在語意上是完全相同的。 下列擁有可搭配這兩種序列化程式使用之屬性的類別，會由 <xref:System.Xml.Serialization.XmlSerializer> 和 <xref:System.Runtime.Serialization.DataContractAttribute> 轉譯為相同語意的 XML：  
+ 儘管存在以上這些差異，但根據預設，只要 XML 的命名空間已明確定義，<xref:System.Xml.Serialization.XmlSerializer> 序列化型別的目標 XML 與 <xref:System.Runtime.Serialization.DataContractSerializer> 序列化型別的目標 XML 在語意上是完全相同的。 下列類別，有了這兩個序列化程式使用的屬性，則會轉譯為相同語意的 XML 所<xref:System.Xml.Serialization.XmlSerializer>和<xref:System.Runtime.Serialization.DataContractAttribute>:  
   
 ```  
 [Serializable]  
@@ -212,7 +212,7 @@ public class LineItem
 }  
 ```  
   
- Windows 軟體開發套件 (SDK) 包含一個命令列工具，稱為[ServiceModel Metadata Utility Tool (Svcutil.exe)](../../../../docs/framework/wcf/servicemodel-metadata-utility-tool-svcutil-exe.md)。要與 ASP.NET Web 服務所使用的 xsd.exe 工具 Svcutil.exe 可從 XML 結構描述產生的.NET 資料型別定義。 如果 <xref:System.Runtime.Serialization.DataContractSerializer> 可以發出採用 XML 結構描述定義格式的 XML，型別就是資料合約，否則這些型別會使用 <xref:System.Xml.Serialization.XmlSerializer> 來進行序列化。 此工具 Svcutil.exe 工具也可以設定為使用其 `/dataContractOnly` 參數，從資料合約產生 XML 結構描述。  
+ Windows 軟體開發套件 (SDK) 包含一個命令列工具，稱為[ServiceModel Metadata Utility Tool (Svcutil.exe)](../../../../docs/framework/wcf/servicemodel-metadata-utility-tool-svcutil-exe.md)。 要與 ASP.NET Web 服務所使用的 xsd.exe 工具 Svcutil.exe 可從 XML 結構描述產生的.NET 資料型別定義。 如果 <xref:System.Runtime.Serialization.DataContractSerializer> 可以發出採用 XML 結構描述定義格式的 XML，型別就是資料合約，否則這些型別會使用 <xref:System.Xml.Serialization.XmlSerializer> 來進行序列化。 Svcutil.exe 也可以產生的 XML 結構描述從資料合約使用其`dataContractOnly`切換。  
   
 > [!NOTE]
 >  雖然 ASP.NET Web 服務使用 <xref:System.Xml.Serialization.XmlSerializer>，而且 [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] ASP.NET 相容性模式會讓 [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] 服務模擬 ASP.NET Web 服務的行為，但 ASP.NET 相容性模式選項並不會限制要求使用 <xref:System.Xml.Serialization.XmlSerializer>。 使用者還是可以搭配 ASP.NET 相容性模式中的執行服務使用 <xref:System.Runtime.Serialization.DataContractSerializer>。  

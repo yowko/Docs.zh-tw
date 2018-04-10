@@ -1,6 +1,6 @@
 ---
-title: ".NET Core 命令列介面 (Command-Line Interface, CLI) 工具"
-description: ".NET Core 命令列介面 (CLI) 工具與功能概觀。"
+title: .NET Core 命令列介面 (Command-Line Interface, CLI) 工具
+description: .NET Core 命令列介面 (CLI) 工具與功能概觀。
 author: mairaw
 ms.author: mairaw
 ms.date: 08/14/2017

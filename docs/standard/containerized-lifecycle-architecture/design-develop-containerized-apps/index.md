@@ -1,7 +1,7 @@
 ---
-title: "使用 Docker 和 Microsoft Azure 設計和開發容器化應用程式"
-description: "Microsoft 平台和工具的容器化 Docker 應用程式生命週期"
-keywords: "Docker, 微服務, ASP.NET, 容器"
+title: 使用 Docker 和 Microsoft Azure 設計和開發容器化應用程式
+description: Microsoft 平台和工具的容器化 Docker 應用程式生命週期
+keywords: Docker, 微服務, ASP.NET, 容器
 author: CESARDELATORRE
 ms.author: wiwagn
 ms.date: 09/21/2017

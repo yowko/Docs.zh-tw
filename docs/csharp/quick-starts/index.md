@@ -1,7 +1,7 @@
 ---
-title: "C# 互動式教學課程 - C# 快速入門"
-description: "在您的瀏覽器中學習 C#，並開始使用您自己的開發環境"
-keywords: "C#, Get Started, Lessons, Interactive, 快速入門, 課程, 互動式"
+title: C# 互動式教學課程 - C# 快速入門
+description: 在您的瀏覽器中學習 C#，並開始使用您自己的開發環境
+keywords: C#, Get Started, Lessons, Interactive, 快速入門, 課程, 互動式
 author: billwagner
 ms.author: wiwagn
 ms.date: 01/30/2018

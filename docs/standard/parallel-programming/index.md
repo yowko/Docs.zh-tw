@@ -1,28 +1,28 @@
 ---
-title: ".NET 的平行程式設計"
-ms.custom: 
+title: .NET 的平行程式設計
+ms.custom: ''
 ms.date: 03/30/2017
 ms.prod: .net
-ms.reviewer: 
-ms.suite: 
+ms.reviewer: ''
+ms.suite: ''
 ms.technology: dotnet-standard
-ms.tgt_pltfrm: 
+ms.tgt_pltfrm: ''
 ms.topic: article
 helpviewer_keywords:
 - parallel programming
 ms.assetid: 4d83c690-ad2d-489e-a2e0-b85b898a672d
-caps.latest.revision: 
+caps.latest.revision: 19
 author: rpetrusha
 ms.author: ronpet
 manager: wpickett
 ms.workload:
 - dotnet
 - dotnetcore
-ms.openlocfilehash: 554de5d65929afc03b57bdc604ceeb6ac35362d4
-ms.sourcegitcommit: e7f04439d78909229506b56935a1105a4149ff3d
+ms.openlocfilehash: c0ea65b0a61719c85ab1da53bcc99f5d43a3210b
+ms.sourcegitcommit: b750a8e3979749b214e7e10c82efb0a0524dfcb1
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 12/23/2017
+ms.lasthandoff: 04/09/2018
 ---
 # <a name="parallel-programming-in-net"></a>.NET 的平行程式設計
 許多個人電腦和工作站都具有兩個或四個核心 (即 CPU)，而能夠同時執行多個執行緒。 不久的將來，電腦應該會具有更多的核心。 若要利用現今和未來的硬體優勢，您可以將您的程式碼平行化，以便將工作分散到多個處理器。 在過去，平行化作業需要在低階操作執行緒和鎖定。 [!INCLUDE[vs_dev10_long](../../../includes/vs-dev10-long-md.md)] 和 [!INCLUDE[net_v40_short](../../../includes/net-v40-short-md.md)] 提供新的執行階段、新的類別庫類型和新的診斷工具，以加強支援平行程式設計。 這些功能簡化了平行開發作業，讓您能夠利用簡單常見的語法，撰寫效率高、精細且具彈性的平行程式碼，而不需要直接使用執行緒或執行緒集區。 下圖提供 [!INCLUDE[net_v40_short](../../../includes/net-v40-short-md.md)] 中平行程式設計架構的高階概觀。  
@@ -43,5 +43,5 @@ ms.lasthandoff: 12/23/2017
 |[進一步閱讀](../../../docs/standard/parallel-programming/for-further-reading-parallel-programming.md)|提供以 .NET Framework 進行平行程式設計的其他文件和範例資源連結。|  
   
 ## <a name="see-also"></a>請參閱  
- [平行程式設計模式：了解及套用平行模式與 .NET Framework 4](http://go.microsoft.com/fwlink/?LinkID=185142)  
+ [平行程式設計模式：了解及套用平行模式與 .NET Framework 4](https://www.microsoft.com/download/details.aspx?id=19222)  
  [使用 .NET Framework 進行平行程式設計的範例](http://code.msdn.microsoft.com/Samples-for-Parallel-b4b76364)

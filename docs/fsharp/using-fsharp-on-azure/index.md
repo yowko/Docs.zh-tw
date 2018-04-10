@@ -10,11 +10,11 @@ ms.prod: .net
 ms.technology: devlang-fsharp
 ms.devlang: fsharp
 ms.assetid: FAD4D11E-703A-42D4-9F72-893D9E0F569B
-ms.openlocfilehash: 0849bc77139b4f4383e2c772f5bae62741ee2b8b
-ms.sourcegitcommit: 935d5267c44f9bce801468ef95f44572f1417e8c
+ms.openlocfilehash: fdb2378a731a13894cf71356a2713c62a5c2064e
+ms.sourcegitcommit: b750a8e3979749b214e7e10c82efb0a0524dfcb1
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 03/28/2018
+ms.lasthandoff: 04/09/2018
 ---
 # <a name="using-f-on-azure"></a>在 Azure 上使用 F#
 
@@ -121,7 +121,7 @@ Azure VM 可能會使用 Microsoft.Azure.Management 套件和 API，透過 F# �
 
 同樣地，其他 Azure 資源也可以使用相同的元件，透過 F# 指令碼進行部署和管理。 例如，您可以建立儲存體帳戶、 部署 Azure 雲端服務、 建立 Azure Cosmos 資料庫執行個體和從 F # 指令碼，以程式設計方式管理 Azure 通知中樞。
 
-通常不需要使用 F# 指令碼來部署和管理資源。 例如，Azure 資源也能夠透過可進行參數化的 JSON 範本描述加以部署。 請參閱包含 [Azure 快速入門範本](https://azure.microsoft.com/documentation/templates/)等範例的 [Azure 資源管理員範本](/azure/azure-resource-manager/resource-manager-template-best-practices)。
+通常不需要使用 F# 指令碼來部署和管理資源。 例如，Azure 資源也能夠透過可進行參數化的 JSON 範本描述加以部署。 請參閱包含 [Azure 快速入門範本](https://azure.microsoft.com/resources/templates/)等範例的 [Azure 資源管理員範本](/azure/azure-resource-manager/resource-manager-template-best-practices)。
 
 ## <a name="other-resources"></a>其他資源
 

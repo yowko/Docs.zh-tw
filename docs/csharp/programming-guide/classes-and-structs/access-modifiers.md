@@ -1,14 +1,15 @@
 ---
-title: "存取修飾詞 (C# 程式設計手冊)"
+title: 存取修飾詞 (C# 程式設計手冊)
 ms.date: 07/20/2015
 ms.prod: .net
-ms.technology: devlang-csharp
+ms.technology:
+- devlang-csharp
 ms.topic: article
 helpviewer_keywords:
 - C# Language, access modifiers
 - access modifiers [C#], about
 ms.assetid: 6e81ee82-224f-4a12-9baf-a0dca2656c5b
-caps.latest.revision: "32"
+caps.latest.revision: 32
 author: BillWagner
 ms.author: wiwagn
 ms.openlocfilehash: a567dea6418ff9cfc94c8180a88c872bcf4c96a4
