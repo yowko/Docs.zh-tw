@@ -1,18 +1,19 @@
 ---
-title: "從流程中使用 OData 摘要"
-ms.custom: 
+title: 從流程中使用 OData 摘要
+ms.custom: ''
 ms.date: 03/30/2017
 ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.tgt_pltfrm: 
+ms.reviewer: ''
+ms.suite: ''
+ms.tgt_pltfrm: ''
 ms.topic: article
 ms.assetid: 1b26617c-53e9-476a-81af-675c36d95919
-caps.latest.revision: "9"
+caps.latest.revision: 9
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.workload: dotnet
+ms.workload:
+- dotnet
 ms.openlocfilehash: 9a01be08367fac1f7713f5db4953f67b0d32e073
 ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
@@ -129,11 +130,11 @@ WCF 資料服務是 [!INCLUDE[dnprdnshort](../../../includes/dnprdnshort-md.md)]
  **xmlns:m ="http://schemas.microsoft.com/ado/2007/08/dataservices/metadata"**  
  **xmlns ="http://www.w3.org/2005/Atom">**  
  **\<標題 類型 ="text"> 訂單 \< /標題 >**  
- **\<識別碼 > http://services.odata.org/Northwind/Northwind.svc/Customers('ALFKI')/訂單\</id >**  
+ **\<id>http://services.odata.org/Northwind/Northwind.svc/Customers('ALFKI')/Orders\</id>**  
  **\<更新 > 2010年-05-19T19:37:07Z\</ 更新 >**  
  **\<連結 rel ="本身"title ="Orders"href ="Orders"/ >**  
  **\<項目 >**  
- **\<識別碼 > http://services.odata.org/Northwind/Northwind.svc/Orders (10643)\</id >**  
+ **\<id>http://services.odata.org/Northwind/Northwind.svc/Orders(10643)\</id>**  
  **\<標題 類型 ="text"> \< /標題 >**  
  **\<更新 > 2010年-05-19T19:37:07Z\</ 更新 >**  
  **\<作者 >**  
