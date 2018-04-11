@@ -1,13 +1,13 @@
 ---
-title: "ICorDebug::CreateProcess 方法"
-ms.custom: 
+title: ICorDebug::CreateProcess 方法
+ms.custom: ''
 ms.date: 03/30/2017
 ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
+ms.reviewer: ''
+ms.suite: ''
 ms.technology:
 - dotnet-clr
-ms.tgt_pltfrm: 
+ms.tgt_pltfrm: ''
 ms.topic: reference
 api_name:
 - ICorDebug.CreateProcess
@@ -23,17 +23,17 @@ helpviewer_keywords:
 ms.assetid: b6128694-11ed-46e7-bd4e-49ea1914c46a
 topic_type:
 - apiref
-caps.latest.revision: 
+caps.latest.revision: 21
 author: rpetrusha
 ms.author: ronpet
 manager: wpickett
 ms.workload:
 - dotnet
 ms.openlocfilehash: 16e45f3bad92914ce8c7fb0044534789a7a28b2e
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.sourcegitcommit: b750a8e3979749b214e7e10c82efb0a0524dfcb1
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 04/10/2018
 ---
 # <a name="icordebugcreateprocess-method"></a>ICorDebug::CreateProcess 方法
 啟動處理序與它所控制的偵錯工具的主要執行緒。  
@@ -97,7 +97,7 @@ HRESULT CreateProcess (
 ## <a name="remarks"></a>備註  
  這個方法的參數都是一樣的 Win32`CreateProcess`方法。  
   
- 若要啟用未受管理的混合模式偵錯，設定`dwCreationFlags`DEBUG_PROCESS &#124;DEBUG_ONLY_THIS_PROCESS。 如果您想要使用只有 managed 偵錯時，未設定這些旗標。  
+ 若要啟用未受管理的混合模式偵錯，設定`dwCreationFlags`至 DEBUG_PROCESS &#124; DEBUG_ONLY_THIS_PROCESS。 如果您想要使用只有 managed 偵錯時，未設定這些旗標。  
   
  如果偵錯工具和程序要偵錯 （附加的處理序） 共用單一主控台中，並使用 interop 偵錯時，它是否可以保留主控台鎖定，而且在偵錯事件停止附加的處理序。 偵錯工具就會封鎖任何嘗試使用主控台。 若要避免這個問題，請設定 CREATE_NEW_CONSOLE 旗標`dwCreationFlags`參數。  
   
@@ -110,7 +110,7 @@ HRESULT CreateProcess (
   
  **程式庫：** CorGuids.lib  
   
- **.NET framework 版本：**[!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
+ **.NET framework 版本：** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
   
-## <a name="see-also"></a>請參閱  
+## <a name="see-also"></a>另請參閱  
  [ICorDebug 介面](../../../../docs/framework/unmanaged-api/debugging/icordebug-interface.md)

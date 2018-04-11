@@ -1,28 +1,28 @@
 ---
-title: "訊息篩選條件"
-ms.custom: 
+title: 訊息篩選條件
+ms.custom: ''
 ms.date: 03/30/2017
 ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
+ms.reviewer: ''
+ms.suite: ''
 ms.technology:
 - dotnet-clr
-ms.tgt_pltfrm: 
+ms.tgt_pltfrm: ''
 ms.topic: article
 helpviewer_keywords:
 - routing [WCF], message filters
 ms.assetid: cb33ba49-8b1f-4099-8acb-240404a46d9a
-caps.latest.revision: 
+caps.latest.revision: 8
 author: wadepickett
 ms.author: wpickett
 manager: wpickett
 ms.workload:
 - dotnet
 ms.openlocfilehash: bd5019668e865d2fea835b450d992d45b5273ed7
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.sourcegitcommit: b750a8e3979749b214e7e10c82efb0a0524dfcb1
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 04/10/2018
 ---
 # <a name="message-filters"></a>訊息篩選條件
 為了實作內容架構路由，路由服務會使用 <xref:System.ServiceModel.Dispatcher.MessageFilter> 實作，該實作會檢查訊息的特定區段，例如位址、端點名稱或特定 XPath 陳述式。 如果 [!INCLUDE[netfx_current_short](../../../../includes/netfx-current-short-md.md)] 提供的訊息篩選都不符合您的需要，您可以建立透過建立新的基底 <xref:System.ServiceModel.Dispatcher.MessageFilter> 類別實作來建立自訂篩選。  
@@ -38,14 +38,14 @@ ms.lasthandoff: 12/22/2017
   
 |篩選條件類型|描述|篩選資料意義|範例篩選|  
 |------------------|-----------------|-------------------------|--------------------|  
-|動作|使用 <xref:System.ServiceModel.Dispatcher.ActionMessageFilter> 類別比對包含特定動作的訊息。|要進行篩選的動作。|\<篩選器名稱 ="action1"filterType ="Action"filterData ="http://namespace/contract/operation"/ >|  
-|EndpointAddress|使用<xref:System.ServiceModel.Dispatcher.EndpointAddressMessageFilter>類別，與<xref:System.ServiceModel.Dispatcher.EndpointAddressMessageFilter.IncludeHostNameInComparison%2A>  ==  `true`比對包含特定位址訊息。|要篩選的位址 (在 [收件者] 標頭中)。|\<篩選器名稱 ="address1"filterType ="EndpointAddress"filterData ="http://host/vdir/s.svc/b"/ >|  
-|EndpointAddressPrefix|使用<xref:System.ServiceModel.Dispatcher.PrefixEndpointAddressMessageFilter>類別，與<xref:System.ServiceModel.Dispatcher.PrefixEndpointAddressMessageFilter.IncludeHostNameInComparison%2A>  ==  `true`比對包含特定位址前置詞的訊息。|要使用最長的前置詞比對篩選的位址。|\<篩選器名稱 ="prefix1"filterType ="EndpointAddressPrefix"filterData ="http://host/"/ >|  
-|及|使用固定在傳回之前評估兩項條件的 <xref:System.ServiceModel.Dispatcher.StrictAndMessageFilter> 類別。|不會使用 filterData;改為 filter1 和 filter2 具有的名稱，對應訊息篩選條件 （同樣在資料表中），它應該**AND**ed 放在一起。|\<篩選器名稱 ="and1"filterType ="和"filter1 ="address1"filter2 ="action1"/ >|  
-|自訂|使用者定義類型，該類型會延伸 <xref:System.ServiceModel.Dispatcher.MessageFilter> 類別並且擁有取用字串的建構函式。|customType 屬性是要建立之類別的完整類型名稱；filterData 則是建立篩選時，要傳遞至建構函式的字串。|\<篩選器名稱 ="custom1"filterType ="Custom"customType="CustomAssembly.CustomMsgFilter，CustomAssembly"filterData = 「 自訂資料 」 / >|  
-|EndpointName|使用 <xref:System.ServiceModel.Dispatcher.EndpointNameMessageFilter> 類別，根據訊息到達的服務端點名稱比對訊息。|服務端點的名稱，例如:"serviceEndpoint1"。  這應該是在路由服務上公開的其中一個端點。|\<篩選器名稱 ="stock1"filterType = 「 端點 」 filterData ="SvcEndpoint"/ >|  
-|MatchAll|使用 <xref:System.ServiceModel.Dispatcher.MatchAllMessageFilter> 類別。 此篩選會比對所有抵達的訊息。|不會使用 filterData。 此篩選將固定比對所有訊息。|\<篩選器名稱 ="matchAll1"filterType ="MatchAll"/ >|  
-|XPath|使用 <xref:System.ServiceModel.Dispatcher.XPathMessageFilter> 類別比對訊息內的特定 XPath 查詢。|比對訊息時使用的 XPath 查詢。|\<篩選器名稱 ="XPath1"filterType ="XPath 」 filterData ="//ns:element"/ >|  
+|動作|使用 <xref:System.ServiceModel.Dispatcher.ActionMessageFilter> 類別比對包含特定動作的訊息。|要進行篩選的動作。|\<filter name="action1" filterType="Action" filterData="http://namespace/contract/operation" />|  
+|EndpointAddress|使用<xref:System.ServiceModel.Dispatcher.EndpointAddressMessageFilter>類別，與<xref:System.ServiceModel.Dispatcher.EndpointAddressMessageFilter.IncludeHostNameInComparison%2A>  ==  `true`比對包含特定位址訊息。|要篩選的位址 (在 [收件者] 標頭中)。|\<filter name="address1" filterType="EndpointAddress" filterData="http://host/vdir/s.svc/b"  />|  
+|EndpointAddressPrefix|使用<xref:System.ServiceModel.Dispatcher.PrefixEndpointAddressMessageFilter>類別，與<xref:System.ServiceModel.Dispatcher.PrefixEndpointAddressMessageFilter.IncludeHostNameInComparison%2A>  ==  `true`比對包含特定位址前置詞的訊息。|要使用最長的前置詞比對篩選的位址。|\<filter name="prefix1" filterType="EndpointAddressPrefix" filterData="http://host/" />|  
+|及|使用固定在傳回之前評估兩項條件的 <xref:System.ServiceModel.Dispatcher.StrictAndMessageFilter> 類別。|不會使用 filterData;改為 filter1 和 filter2 具有的名稱，對應訊息篩選條件 （同樣在資料表中），它應該**AND**ed 放在一起。|\<filter name="and1" filterType="And" filter1="address1" filter2="action1" />|  
+|自訂|使用者定義類型，該類型會延伸 <xref:System.ServiceModel.Dispatcher.MessageFilter> 類別並且擁有取用字串的建構函式。|customType 屬性是要建立之類別的完整類型名稱；filterData 則是建立篩選時，要傳遞至建構函式的字串。|\<filter name="custom1" filterType="Custom" customType="CustomAssembly.CustomMsgFilter, CustomAssembly" filterData="Custom Data" />|  
+|EndpointName|使用 <xref:System.ServiceModel.Dispatcher.EndpointNameMessageFilter> 類別，根據訊息到達的服務端點名稱比對訊息。|服務端點的名稱，例如:"serviceEndpoint1"。  這應該是在路由服務上公開的其中一個端點。|\<filter name="stock1" filterType="Endpoint" filterData="SvcEndpoint" />|  
+|MatchAll|使用 <xref:System.ServiceModel.Dispatcher.MatchAllMessageFilter> 類別。 此篩選會比對所有抵達的訊息。|不會使用 filterData。 此篩選將固定比對所有訊息。|\<filter name="matchAll1" filterType="MatchAll" />|  
+|XPath|使用 <xref:System.ServiceModel.Dispatcher.XPathMessageFilter> 類別比對訊息內的特定 XPath 查詢。|比對訊息時使用的 XPath 查詢。|\<filter name="XPath1" filterType="XPath" filterData="//ns:element" />|  
   
  下列範例會定義使用 XPath、EndpointName 和 PrefixEndpointAddress 訊息篩選的篩選項目。 此範例也會示範針對 RoundRobinFilter1 和 RoundRobinFilter2 項目使用自訂篩選。  
   
@@ -84,7 +84,7 @@ ms.lasthandoff: 12/22/2017
 |tempuri|http://tempuri.org|  
 |ser|http://schemas.microsoft.com/2003/10/Serialization|  
   
- 如果您事先知道將會在 XPath 查詢中使用特定命名空間，可以將它與唯一的命名空間前置詞一起加入至命名空間資料表，並且在任何 XPath 查詢中使用該前置詞，而不要使用完整的命名空間。 下列範例會定義"custom""http://my.custom.namespace 」，接著在 filterData 包含的 XPath 查詢中使用的命名空間前置詞。  
+ 如果您事先知道將會在 XPath 查詢中使用特定命名空間，可以將它與唯一的命名空間前置詞一起加入至命名空間資料表，並且在任何 XPath 查詢中使用該前置詞，而不要使用完整的命名空間。 下列範例會定義命名空間前置詞"custom"的"http://my.custom.namespace」，然後用在 filterData 包含的 XPath 查詢中。  
   
 ```xml  
 <namespaceTable>  

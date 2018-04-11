@@ -1,22 +1,22 @@
 ---
-title: "如何： 使用兩個 DataRepeater 控制項 (Visual Studio) 建立主從式表單"
+title: 如何： 使用兩個 DataRepeater 控制項 (Visual Studio) 建立主從式表單
 ms.date: 07/20/2015
 ms.prod: .net
-ms.suite: 
+ms.suite: ''
 ms.technology:
 - devlang-visual-basic
 ms.topic: article
 helpviewer_keywords:
 - DataRepeater, master/detail tables
 ms.assetid: eec43ae3-05d8-45a1-8d41-3803c6359dbe
-caps.latest.revision: 
+caps.latest.revision: 7
 author: dotnet-bot
 ms.author: dotnetcontent
 ms.openlocfilehash: f17cb86c3ea0ea056291a51becd7ecf9f73d0a73
-ms.sourcegitcommit: 34ec7753acf76f90a0fa845235ef06663dc9e36e
+ms.sourcegitcommit: b750a8e3979749b214e7e10c82efb0a0524dfcb1
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 04/10/2018
 ---
 # <a name="how-to-create-a-masterdetail-form-by-using-two-datarepeater-controls-visual-studio"></a>如何：使用兩個 DataRepeater 控制項建立主從式表單 (Visual Studio)
 您可以使用兩個或多個顯示相關的資料<xref:Microsoft.VisualBasic.PowerPacks.DataRepeater>控制項建立主從式表單。 比方說，您可以在其中一個顯示客戶清單<xref:Microsoft.VisualBasic.PowerPacks.DataRepeater>，當使用者選取的客戶，顯示該客戶的訂單清單的第二個和<xref:Microsoft.VisualBasic.PowerPacks.DataRepeater>。  
@@ -48,7 +48,7 @@ ms.lasthandoff: 12/21/2017
   
 9. 選取這個資料表節點，然後將它拖曳至第二個項目範本區域<xref:Microsoft.VisualBasic.PowerPacks.DataRepeater>控制項。  
   
-## <a name="see-also"></a>請參閱  
+## <a name="see-also"></a>另請參閱  
  <xref:Microsoft.VisualBasic.PowerPacks.DataRepeater>  
  [DataRepeater 控制項簡介](../../../visual-basic/developing-apps/windows-forms/introduction-to-the-datarepeater-control-visual-studio.md)  
  [操作說明：在 DataRepeater 控制項中顯示繫結資料](../../../visual-basic/developing-apps/windows-forms/how-to-display-bound-data-in-a-datarepeater-control-visual-studio.md)  

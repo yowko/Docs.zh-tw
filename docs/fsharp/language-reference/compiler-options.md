@@ -11,10 +11,10 @@ ms.technology: devlang-fsharp
 ms.devlang: fsharp
 ms.assetid: c797cf0b-5953-4053-8626-0558e9eaf10f
 ms.openlocfilehash: 23731832141bc2f74a04c5f4027fc210b5589537
-ms.sourcegitcommit: c883637b41ee028786edceece4fa872939d2e64c
+ms.sourcegitcommit: b750a8e3979749b214e7e10c82efb0a0524dfcb1
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 03/26/2018
+ms.lasthandoff: 04/10/2018
 ---
 # <a name="compiler-options"></a>編譯器選項
 
@@ -56,7 +56,7 @@ ms.lasthandoff: 03/26/2018
 |**--optimize**[**+**&#124;**-**]**[&lt;string-list&gt;]**<br /><br />**-O[+&#124;-] [&lt;string-list&gt;]**|啟用或停用最佳化。 可以停用某些最佳化選項，或選擇性地啟用列出它們。 這些是： **nojitoptimize**， **nojittracking**， **nolocaloptimize**， **nocrossoptimize**， **notailcalls**.|
 |**--out:&lt;output-filename&gt;**<br /><br />**-o:&lt;output-filename&gt;**|指定編譯的組件或模組的名稱。<br /><br />這個編譯器選項相當於相同名稱的 C# 編譯器選項。 如需詳細資訊，請參閱[&#47;出&#40;C&#35;編譯器選項&#41;](https://msdn.microsoft.com/library/bw3t50f3.aspx)。|
 |**--pdb:&lt;pdb-filename&gt;**|輸出偵錯 （程式資料庫） PDB 檔的名稱。 此選項僅適用於當**-偵錯**也會啟用。<br /><br />這個編譯器選項相當於相同名稱的 C# 編譯器選項。 如需詳細資訊，請參閱[ &#47;pdb &#40;C&#35;編譯器選項&#41;](https://msdn.microsoft.com/library/ms228625.aspx)。|
-|**--platform:&lt;platform-name&gt;**|指定產生的程式碼只會在指定的平台上執行 (**x86**， **Itanium**，或**x64**)，或者，如果平台名稱**anycpu**選擇時，會指定產生的程式碼可以在任何平台上執行。<br /><br />這個編譯器選項相當於相同名稱的 C# 編譯器選項。 如需詳細資訊，請參閱[&#47;平台&#40;C&#35;編譯器選項&#41;](https://msdn.microsoft.com/library/zekwfyz4.aspx)。|
+|**-平台：&lt;平台名稱&gt;**|指定產生的程式碼只會在指定的平台上執行 (**x86**， **Itanium**，或**x64**)，或者，如果平台名稱**anycpu**選擇時，會指定產生的程式碼可以在任何平台上執行。<br /><br />這個編譯器選項相當於相同名稱的 C# 編譯器選項。 如需詳細資訊，請參閱[&#47;平台&#40;C&#35;編譯器選項&#41;](https://msdn.microsoft.com/library/zekwfyz4.aspx)。|
 |**--preferreduilang:&lt;lang&gt;**| 指定慣用的輸出語言文化特性名稱 （例如 ES-ES、 JA-JP）。 |
 |**--quotations-debug**|指定的額外偵錯資訊應該發出對衍生自 F # 引號常值，而且反映定義的運算式。 偵錯資訊已加入至 F # 運算式樹狀結構節點的自訂屬性。 請參閱[程式碼引號](code-quotations.md)和[Expr.CustomAttributes](https://msdn.microsoft.com/library/eb89943f-5f5b-474e-b125-030ca412edb3)。|
 |**--reference:&lt;assembly-filename&gt;**<br /><br />**-r** &lt;**assembly-filename&gt;**|讓程式碼從 F # 或.NET Framework 組件可供已編譯的程式碼。<br /><br />這個編譯器選項相當於相同名稱的 C# 編譯器選項。 如需詳細資訊，請參閱[&#47;參考&#40;C&#35;編譯器選項&#41;](https://msdn.microsoft.com/library/yabyz3h4.aspx)。|

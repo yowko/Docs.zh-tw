@@ -1,8 +1,8 @@
 ---
-title: "逐步解說：在 DataRepeater 控制項中顯示資料 (Visual Studio)"
+title: 逐步解說：在 DataRepeater 控制項中顯示資料 (Visual Studio)
 ms.date: 07/20/2015
 ms.prod: .net
-ms.suite: 
+ms.suite: ''
 ms.technology:
 - devlang-visual-basic
 ms.topic: article
@@ -12,14 +12,14 @@ dev_langs:
 helpviewer_keywords:
 - DataRepeater, walkthrough
 ms.assetid: 65dcdb95-6c3e-47cc-987d-190000f71653
-caps.latest.revision: 
+caps.latest.revision: 12
 author: dotnet-bot
 ms.author: dotnetcontent
 ms.openlocfilehash: 93072bf30c8ee2a4a44c4862de0882072c298f8b
-ms.sourcegitcommit: 34ec7753acf76f90a0fa845235ef06663dc9e36e
+ms.sourcegitcommit: b750a8e3979749b214e7e10c82efb0a0524dfcb1
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 04/10/2018
 ---
 # <a name="walkthrough-displaying-data-in-a-datarepeater-control-visual-studio"></a>逐步解說：在 DataRepeater 控制項中顯示資料 (Visual Studio)
 本逐步解說提供在 <xref:Microsoft.VisualBasic.PowerPacks.DataRepeater> 控制項中顯示繫結資料的基本完整情節。  
@@ -238,7 +238,7 @@ ms.lasthandoff: 12/21/2017
   
 7.  按 F5 執行應用程式。 當您在第一個 <xref:Microsoft.VisualBasic.PowerPacks.DataRepeater> 控制項中選取各個客戶時，該客戶的訂單便會顯示在第二個 <xref:Microsoft.VisualBasic.PowerPacks.DataRepeater> 控制項中。  
   
-## <a name="see-also"></a>請參閱  
+## <a name="see-also"></a>另請參閱  
  [DataRepeater 控制項簡介](../../../visual-basic/developing-apps/windows-forms/introduction-to-the-datarepeater-control-visual-studio.md)  
  [操作說明：在 DataRepeater 控制項中顯示繫結資料](../../../visual-basic/developing-apps/windows-forms/how-to-display-bound-data-in-a-datarepeater-control-visual-studio.md)  
  [操作說明：在 DataRepeater 控制項中顯示未繫結的控制項](../../../visual-basic/developing-apps/windows-forms/how-to-display-unbound-controls-in-a-datarepeater-control-visual-studio.md)  
