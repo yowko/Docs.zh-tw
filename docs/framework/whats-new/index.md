@@ -17,11 +17,11 @@ ms.author: ronpet
 manager: wpickett
 ms.workload:
 - dotnet
-ms.openlocfilehash: 04696ff346ffab438ce8bef2974fdd1a19d940af
-ms.sourcegitcommit: c883637b41ee028786edceece4fa872939d2e64c
+ms.openlocfilehash: e8107fb22fcc8afee8723c77868b0c1e5a404e3f
+ms.sourcegitcommit: b750a8e3979749b214e7e10c82efb0a0524dfcb1
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 03/23/2018
+ms.lasthandoff: 04/09/2018
 ---
 # <a name="whats-new-in-the-net-framework"></a>.NET Framework 中的新功能
 <a name="introduction"></a> 此文章摘要說明下列 .NET Framework 版本的重要新功能和改進：  
@@ -514,7 +514,8 @@ Const DisableCngCertificates As String = "Switch.System.ServiceModel.DisableCngC
 AppContext.SetSwitch(disableCngCertificates, False)
 ```
 
- **透過 DataContractJsonSerializer 類別更妥善支援多個日光節約時間調整規則**：客戶可以使用應用程式組態設定，來判斷 <xref:System.Runtime.Serialization.Json.DataContractJsonSerializer> 類別是否支援對單一時區使用多個調整規則。 這是一項選擇性功能。 若要啟用它，請將下列設定加入您的 app.config 檔︰
+ **更妥善支援 DataContractJsonSerializer 類別的多個日光節約時間調整規則**   
+ 客戶可以使用應用程式組態設定來判斷 <xref:System.Runtime.Serialization.Json.DataContractJsonSerializer> 類別是否支援對單一時區使用多個調整規則。 這是一項選擇性功能。 若要啟用它，請將下列設定加入您的 app.config 檔︰
 
 ```xml
 <runtime>
@@ -522,36 +523,12 @@ AppContext.SetSwitch(disableCngCertificates, False)
 </runtime>
 ```
 
-啟用這項功能時，<xref:System.Runtime.Serialization.Json.DataContractJsonSerializer> 物件會使用 <xref:System.TimeZoneInfo> 類型，而非使用 <xref:System.TimeZone> 類型來還原序列化日期和時間資料。 <xref:System.TimeZoneInfo> 支援多個調整規則，如此可讓您使用歷史時區資料；<xref:System.TimeZone> 則否。
+啟用這項功能時，<xref:System.Runtime.Serialization.Json.DataContractJsonSerializer> 物件會使用 <xref:System.TimeZoneInfo> 類型，而非使用 <xref:System.TimeZone> 類型來將日期和時間資料還原序列化。 <xref:System.TimeZoneInfo> 支援多個調整規則，如此可讓您使用歷史時區資料；<xref:System.TimeZone> 則否。
 
 如需有關 <xref:System.TimeZoneInfo> 結構和時區調整的詳細資訊，請參閱[時區概觀](../../../docs/standard/datetime/time-zone-overview.md)。
 
-**支援在使用 XMLSerializer 類別進行序列化和還原序列化時保留 UTC 時間** 通常，當使用 <xref:System.Xml.Serialization.XmlSerializer> 類別將 UTC <xref:System.DateTime> 值序列化時，它會建立一個序列化時間字串，該字串會保留日期和時間，但會假設時間為當地時間。  例如，如果您藉由呼叫下列程式碼將 UTC 日期和時間具現化︰
-
-```csharp
-DateTime utc = new DateTime(2016, 11, 07, 3, 0, 0, DateTimeKind.Utc);
-```
-
-```vb
-Dim utc As New Date(2016, 11, 07, 3, 0, 0, DateTimeKind.Utc)
-```
-
-針對時間晚於 UTC 八小時的系統而言，結果是序列化時間字串 "03:00:00.0000000-08:00"。  序列化值一律會還原序列化為本機日期和時間值。
-
- 您可以使用應用程式組態設定來判斷當序列化和還原序列化 <xref:System.DateTime> 值時，<xref:System.Xml.Serialization.XmlSerializer> 是否保留 UTC 時區資訊︰
-
-```xml 
-<runtime>
-     <AppContextSwitchOverrides 
-          value="Switch.System.Runtime.Serialization.DisableSerializeUTCDateTimeToTimeAndDeserializeUTCTimeToUTCDateTime=false" />
-</runtime>
-```
-
-啟用這項功能時，<xref:System.Runtime.Serialization.Json.DataContractJsonSerializer> 物件會使用 <xref:System.TimeZoneInfo> 類型，而非使用 <xref:System.TimeZone> 類型來還原序列化日期和時間資料。 <xref:System.TimeZoneInfo> 支援多個調整規則，如此可讓您使用歷史時區資料；<xref:System.TimeZone> 則否。
-
-如需有關 <xref:System.TimeZoneInfo> 結構和時區調整的詳細資訊，請參閱[時區概觀](../../../docs/standard/datetime/time-zone-overview.md)。
-
- **NetNamedPipeBinding 最符合項目**：WCF 有新的應用程式設定，可以在用戶端應用程式上設定，以確保它們一律連線到在最符合所要求之 URI 上接聽的服務。 當此應用程式設定設為 `false` (預設值) 時，用戶端可以使用 <xref:System.ServiceModel.NetNamedPipeBinding> 來嘗試連接到正在接聽所要求 URI 子字串之 URI 的服務。
+ **NetNamedPipeBinding 最符合項目**   
+ WCF 有新的應用程式設定，可以在用戶端應用程式上設定，以確保它們一律連線到在最符合所要求之 URI 上接聽的服務。 當此應用程式設定設為 `false` (預設值) 時，用戶端可以使用 <xref:System.ServiceModel.NetNamedPipeBinding> 來嘗試連接到正在接聽所要求 URI 子字串之 URI 的服務。
 
  例如，用戶端嘗試連接到接聽 `net.pipe://localhost/Service1` 的服務，但該電腦上以系統管理員權限執行的不同服務正在接聽 `net.pipe://localhost`。 當此應用程式設定是設為 `false` 時，用戶端會嘗試連線到錯誤的服務。 將應用程式設定設為 `true` 後，用戶端一律都會連接至最符合的服務。
 

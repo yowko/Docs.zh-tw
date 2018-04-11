@@ -1,7 +1,7 @@
 ---
-title: "範例和教學課程"
-description: "針對 .NET Core、ASP.NET Core 及 C# 語言的範例和教學課程資訊，可協助您了解 .NET。"
-keywords: ".NET, .NET Core, ASP.NET, C#, sample, tutorial, 範例, 教學課程"
+title: 範例和教學課程
+description: 針對 .NET Core、ASP.NET Core 及 C# 語言的範例和教學課程資訊，可協助您了解 .NET。
+keywords: .NET, .NET Core, ASP.NET, C#, sample, tutorial, 範例, 教學課程
 author: BillWagner
 ms.author: wiwagn
 ms.date: 04/11/2017
@@ -9,33 +9,33 @@ ms.topic: article
 ms.prod: .net
 ms.devlang: dotnet
 ms.assetid: 617310e7-336b-4864-8dab-7e2021512929
-ms.openlocfilehash: d800d861f65779a73f83cf44e8884566eb7adee4
-ms.sourcegitcommit: be1fb5d9447ad459bef22b91a91c72e3e0b2d916
+ms.openlocfilehash: f69aa704b05bffeaf932a093b991810f8678251c
+ms.sourcegitcommit: b750a8e3979749b214e7e10c82efb0a0524dfcb1
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 02/09/2018
+ms.lasthandoff: 04/09/2018
 ---
 # <a name="samples-and-tutorials"></a>範例和教學課程
 
 .NET 文件包含一系列可為您提供 .NET 指導的範例和教學課程。 本主題說明如何尋找、檢視並下載 .NET Core、ASP.NET Core 及 C# 範例和教學課程。 您可以在 [F# 基礎網站 (英文)](http://fsharp.org/learn.html) 上找到學習 F# 程式設計語言的資源。 如果您想要使用線上程式碼編輯器來探索 C#，可先從[這個互動式教學課程](https://www.microsoft.com/net/learn/in-browser-tutorial/1)開始，再繼續進行 [C# 互動式快速入門](../csharp/quick-starts/index.md)。 如需如何檢視和下載範例程式碼的指示，請參閱[檢視和下載範例](#viewing-and-downloading-samples)一節。
 
-## <a name="net-core"></a>.NET 核心
+## <a name="net-core"></a>.NET Core
 
 ### <a name="samples"></a>範例
 
 **[使用 DotNet 測試的 .NET Core 單元測試](../core/testing/unit-testing-with-dotnet-test.md)**
 
-此指南說明如何建立 ASP.NET Core Web 應用程式及相關聯的單元測試。 它會從建立簡單的 Web 服務應用程式開始，然後再新增測試。 它接著會建立更多測試，來引導新功能的實作。 [完整範例 (英文)](https://github.com/dotnet/docs/tree/master/samples/core/getting-started/unit-testing-using-dotnet-test) 可在 GitHub 上的 dotnet/docs 存放庫取得。
+此指南說明如何建立 ASP.NET Core Web 應用程式及相關聯的單元測試。 它會從建立簡單的 Web 服務應用程式開始，然後再新增測試。 它接著會建立更多測試，來引導新功能的實作。 [完整範例](https://github.com/dotnet/samples/tree/master/core/getting-started/unit-testing-using-dotnet-test) (英文) 可在 GitHub 上的 dotnet/samples 存放庫取得。
 
 ### <a name="tutorials"></a>教學課程
 
 **[使用 CLI 工具撰寫 .NET Core 主控台應用程式︰逐步指南](../core/tutorials/using-with-xplat-cli.md)**
 
-此指南說明如何使用 .NET Core CLI 工具，來建置跨平台的主控台應用程式。 它會從基本的主控台應用程式開始，最終會跨越多個專案 (包括測試)。 您會逐步新增各種功能，並同時增加您的知識。 [完整範例 (英文)](https://github.com/dotnet/docs/tree/master/samples/core/console-apps) 可在 GitHub 上的 dotnet/docs 存放庫取得。
+此指南說明如何使用 .NET Core CLI 工具，來建置跨平台的主控台應用程式。 它會從基本的主控台應用程式開始，最終會跨越多個專案 (包括測試)。 您會逐步新增各種功能，並同時增加您的知識。 [完整範例](https://github.com/dotnet/samples/tree/master/core/console-apps) (英文) 可在 GitHub 上的 dotnet/samples 存放庫取得。
 
 **[使用跨平台工具撰寫程式庫](../core/tutorials/libraries.md)**
 
-此範例涵蓋如何使用跨平台 CLI 工具撰寫 .NET 的程式庫。 這些工具提供可在所有支援的作業系統上運作的有效率且低階體驗。 [完整範例 (英文)](https://github.com/dotnet/docs/tree/master/samples/framework/libraries/frameworks-library) 可在 GitHub 上的 dotnet/docs 存放庫取得。
+此範例涵蓋如何使用跨平台 CLI 工具撰寫 .NET 的程式庫。 這些工具提供可在所有支援的作業系統上運作的有效率且低階體驗。 [完整範例](https://github.com/dotnet/samples/tree/master/framework/libraries/frameworks-library) (英文) 可在 GitHub 上的 dotnet/samples 存放庫取得。
 
 ## <a name="aspnet-core"></a>ASP.NET Core
 
@@ -47,41 +47,41 @@ ms.lasthandoff: 02/09/2018
 
 **[迭代器](../csharp/iterators.md)**
 
-此範例示範建立及使用 C# 迭代器的語法和功能。 [完整範例 (英文)](https://github.com/dotnet/docs/tree/master/samples/csharp/iterators) 可在 GitHub 上的 dotnet/docs 存放庫取得。
+此範例示範建立及使用 C# 迭代器的語法和功能。 [完整範例](https://github.com/dotnet/samples/tree/master/csharp/iterators) (英文) 可在 GitHub 上的 dotnet/samples 存放庫取得。
 
 **[索引子](../csharp/indexers.md)**
 
-此範例示範 C# 索引子的語法和功能。 [完整範例 (英文)](https://github.com/dotnet/docs/tree/master/samples/csharp/indexers) 可在 GitHub 上的 dotnet/docs 存放庫取得。
+此範例示範 C# 索引子的語法和功能。 [完整範例](https://github.com/dotnet/samples/tree/master/csharp/indexers) (英文) 可在 GitHub 上的 dotnet/samples 存放庫取得。
 
 **[委派和事件](../csharp/delegates-events.md)**
 
-此範例示範 C# 委派和事件的語法和功能。 [完整範例 (英文)](https://github.com/dotnet/docs/tree/master/samples/csharp/delegates-and-events) 可在 GitHub 上的 dotnet/docs 存放庫取得。 以事件為焦點的[第二個範例 (英文)](https://github.com/dotnet/docs/tree/master/samples/csharp/events) 也位於相同的存放庫中。
+此範例示範 C# 委派和事件的語法和功能。 [完整範例](https://github.com/dotnet/samples/tree/master/csharp/delegates-and-events) (英文) 可在 GitHub 上的 dotnet/samples 存放庫取得。 以事件為焦點的[第二個範例 (英文)](https://github.com/dotnet/samples/tree/master/csharp/events) 也位於相同的存放庫中。
 
 **[運算式樹狀架構](../csharp/expression-trees.md)**
 
-此範例示範可使用運算式樹狀架構解決的許多問題。 [完整範例 (英文)](https://github.com/dotnet/docs/tree/master/samples/csharp/expression-trees) 可在 GitHub 上的 dotnet/docs 存放庫取得。
+此範例示範可使用運算式樹狀架構解決的許多問題。 [完整範例](https://github.com/dotnet/samples/tree/master/csharp/expression-trees) (英文) 可在 GitHub 上的 dotnet/samples 存放庫取得。
 
 **LINQ 範例**
 
-這一系列範例示範 Language Integrated Query (LINQ) 的許多功能。 [完整範例 (英文)](https://github.com/dotnet/docs/tree/master/samples/core/linq/csharp) 可在 GitHub 上的 dotnet/docs 存放庫取得。
+這一系列範例示範 Language Integrated Query (LINQ) 的許多功能。 [完整範例](https://github.com/dotnet/samples/tree/master/core/linq/csharp) (英文) 可在 GitHub 上的 dotnet/samples 存放庫取得。
 
 ### <a name="tutorials"></a>教學課程
 
 **[主控台應用程式](../csharp/tutorials/console-teleprompter.md)**
 
-此教學課程示範主控台 I/O、主控台應用程式的結構，以及以工作為基礎之非同步程式設計模型的基本概念。 [完整範例 (英文)](https://github.com/dotnet/docs/tree/master/samples/csharp/getting-started/console-teleprompter) 可在 GitHub 上的 dotnet/docs 存放庫取得。
+此教學課程示範主控台 I/O、主控台應用程式的結構，以及以工作為基礎之非同步程式設計模型的基本概念。 [完整範例](https://github.com/dotnet/samples/tree/master/csharp/getting-started/console-teleprompter) (英文) 可在 GitHub 上的 dotnet/samples 存放庫取得。
 
 **[REST 用戶端](../csharp/tutorials/console-webapiclient.md)**
 
-此教學課程示範 Web 通訊、JSON 序列化，以及 C# 語言的物件導向功能。 [完整範例 (英文)](https://github.com/dotnet/docs/tree/master/samples/csharp/getting-started/console-webapiclient) 可在 GitHub 上的 dotnet/docs 存放庫取得。
+此教學課程示範 Web 通訊、JSON 序列化，以及 C# 語言的物件導向功能。 [完整範例](https://github.com/dotnet/samples/tree/master/csharp/getting-started/console-webapiclient) (英文) 可在 GitHub 上的 dotnet/samples 存放庫取得。
 
 **[使用 LINQ](../csharp/tutorials/working-with-linq.md)**
 
-此教學課程示範 LINQ 的許多功能及支援的語言項目。 [完整範例 (英文)](https://github.com/dotnet/docs/tree/master/samples/csharp/getting-started/console-linq) 可在 GitHub 上的 dotnet/docs 存放庫取得。
+此教學課程示範 LINQ 的許多功能及支援的語言項目。 [完整範例](https://github.com/dotnet/samples/tree/master/csharp/getting-started/console-linq) (英文) 可在 GitHub 上的 dotnet/samples 存放庫取得。
 
 **[裝載於 Docker 的微服務](../csharp/tutorials/microservices.md)**
 
-此教學課程示範如何建置 ASP.NET Core 微服務並將其裝載於 Docker 中。 [完整範例 (英文)](https://github.com/dotnet/docs/tree/master/samples/csharp/getting-started/WeatherMicroservice) 可在 GitHub 上的 dotnet/docs 存放庫取得。
+此教學課程示範如何建置 ASP.NET Core 微服務並將其裝載於 Docker 中。 [完整範例](https://github.com/dotnet/samples/tree/master/csharp/getting-started/WeatherMicroservice) (英文) 可在 GitHub 上的 dotnet/samples 存放庫取得。
 
 **[使用 Visual Studio for Mac 在 macOS 上開始使用 .NET Core](../core/tutorials/using-on-mac-vs.md)**
 
@@ -95,11 +95,11 @@ ms.lasthandoff: 02/09/2018
 
 **[在 Windows Docker 容器中執行 ASP.NET MVC 應用程式](../framework/docker/aspnetmvc.md)**
 
-此教學課程示範如何在 Windows Docker 容器中部署現有的 ASP.NET MVC 應用程式。 [完整範例 (英文)](https://github.com/dotnet/docs/tree/master/samples/framework/docker/MVCRandomAnswerGenerator) 可在 GitHub 上的 dotnet/docs 存放庫取得。
+此教學課程示範如何在 Windows Docker 容器中部署現有的 ASP.NET MVC 應用程式。 [完整範例](https://github.com/dotnet/samples/tree/master/framework/docker/MVCRandomAnswerGenerator) (英文) 可在 GitHub 上的 dotnet/samples 存放庫取得。
 
 **[在 Windows 容器中執行 .NET Framework 主控台應用程式](../framework/docker/console.md)**
 
-此教學課程示範如何在 Windows 容器中部署現有的主控台應用程式。 [完整範例 (英文)](https://github.com/dotnet/docs/tree/master/samples/framework/docker/ConsoleRandomAnswerGenerator) 可在 GitHub 上的 dotnet/docs 存放庫取得。
+此教學課程示範如何在 Windows 容器中部署現有的主控台應用程式。 [完整範例](https://github.com/dotnet/samples/tree/master/framework/docker/ConsoleRandomAnswerGenerator) (英文) 可在 GitHub 上的 dotnet/samples 存放庫取得。
 
 ## <a name="viewing-and-downloading-samples"></a>檢視和下載範例
 

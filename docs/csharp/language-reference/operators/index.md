@@ -1,6 +1,6 @@
 ---
 title: C# 運算子
-ms.date: 03/09/2017
+ms.date: 04/04/2018
 ms.prod: .net
 ms.technology:
 - devlang-csharp
@@ -25,11 +25,11 @@ ms.assetid: 0301e31f-22ad-49af-ac3c-d5eae7f0ac43
 caps.latest.revision: 40
 author: BillWagner
 ms.author: wiwagn
-ms.openlocfilehash: 14ebd489c48f53c8618cadf91f9744bb30f582d3
-ms.sourcegitcommit: 935d5267c44f9bce801468ef95f44572f1417e8c
+ms.openlocfilehash: c62a168c845575e4fd3df212db379548926d2fab
+ms.sourcegitcommit: b750a8e3979749b214e7e10c82efb0a0524dfcb1
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 03/28/2018
+ms.lasthandoff: 04/09/2018
 ---
 # <a name="c-operators"></a>C# 運算子
 C# 提供許多運算子，也就是指定要在運算式中執行哪些作業 (數學、索引化、函式呼叫等) 的符號。 您可以[多載](../../../csharp/programming-guide/statements-expressions-operators/overloadable-operators.md)許多運算子，以便在套用至使用者定義型別時變更它們的意義。  
@@ -101,7 +101,7 @@ C# 提供許多運算子，也就是指定要在運算式中執行哪些作業 (
   
  [x / y](../../../csharp/language-reference/operators/division-operator.md) – 除法。 如果運算元都是整數，則結果會截斷趨近於零的整數 (例如，`-7 / 2 is -3`)。  
   
- [x % y](../../../csharp/language-reference/operators/modulus-operator.md) – 模數。 如果運算元都是整數，這會傳回 x 除以 y 的餘數。  若為 `q = x / y` 和 `r = x % y`，則為 `x = q * y + r`。  
+ [x % y](../../../csharp/language-reference/operators/remainder-operator.md) – 餘數。 如果運算元都是整數，這會傳回 x 除以 y 的餘數。  若為 `q = x / y` 和 `r = x % y`，則為 `x = q * y + r`。  
   
 ## <a name="additive-operators"></a>加法類運算子  
  這些運算子具有的優先順序高於下一個區段且低於前一個區段。  
@@ -187,7 +187,7 @@ C# 提供許多運算子，也就是指定要在運算式中執行哪些作業 (
   
  [x /= y](../../../csharp/language-reference/operators/division-assignment-operator.md) – 除法指派。 將 `x` 的值除以 `y` 的值，將結果儲存在 `x`，並傳回新的值。  
   
- [x %= y](../../../csharp/language-reference/operators/modulus-assignment-operator.md) – 模數指派。 將 `x` 的值除以 `y` 的值，將餘數儲存在 `x`，並傳回新的值。  
+ [x %= y](../../../csharp/language-reference/operators/remainder-assignment-operator.md) – 餘數指派。 將 `x` 的值除以 `y` 的值，將餘數儲存在 `x`，並傳回新的值。  
   
  [x &= y](../../../csharp/language-reference/operators/and-assignment-operator.md) – AND 指派。 將 `y` 的值和 `x` 的值進行 AND 處理，將結果儲存在 `x`，並傳回新的值。  
   
