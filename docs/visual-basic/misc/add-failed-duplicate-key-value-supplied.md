@@ -1,12 +1,14 @@
 ---
-title: "加入失敗。 提供了重複的機碼值"
+title: 加入失敗。 提供了重複的機碼值
 ms.date: 07/20/2015
 ms.prod: .net
-ms.technology: devlang-visual-basic
+ms.technology:
+- devlang-visual-basic
 ms.topic: article
-f1_keywords: vbrCollection_DuplicateKey
+f1_keywords:
+- vbrCollection_DuplicateKey
 ms.assetid: 7b1d6e6c-a69d-4713-a19d-ae1534a60464
-caps.latest.revision: "7"
+caps.latest.revision: 7
 author: dotnet-bot
 ms.author: dotnetcontent
 ms.openlocfilehash: 7b573cb6a761a0e18d7dd767a8d5ed3173110fca

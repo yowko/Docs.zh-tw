@@ -1,6 +1,6 @@
 ---
-title: "F # 中的非同步程式設計"
-description: "了解如何完成 F # 非同步程式設計的語言層級的程式設計模型是易於使用和自然語言，透過。"
+title: 'F # 中的非同步程式設計'
+description: '了解如何完成 F # 非同步程式設計的語言層級的程式設計模型是易於使用和自然語言，透過。'
 keywords: .NET, .NET Core
 author: cartermp
 ms.author: phcart

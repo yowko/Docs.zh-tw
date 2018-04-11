@@ -1,16 +1,18 @@
 ---
-title: "陣列界限的宣告不可以出現在類型規範中"
+title: 陣列界限的宣告不可以出現在類型規範中
 ms.date: 07/20/2015
 ms.prod: .net
-ms.suite: 
-ms.technology: devlang-visual-basic
+ms.suite: ''
+ms.technology:
+- devlang-visual-basic
 ms.topic: article
 f1_keywords:
 - vbc30638
 - bc30638
-helpviewer_keywords: BC30638
+helpviewer_keywords:
+- BC30638
 ms.assetid: 93b654f4-70fa-4a48-baed-ffae42075550
-caps.latest.revision: "9"
+caps.latest.revision: 9
 author: dotnet-bot
 ms.author: dotnetcontent
 ms.openlocfilehash: 770f86ca960110965b6917a22d284678ff8b6f8c

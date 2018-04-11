@@ -1,7 +1,7 @@
 ---
-title: "屬性 (F#)"
-description: "了解 F # 屬性如何啟用要套用至程式設計建構的中繼資料。"
-keywords: "Visual F#, F#, 函式程式設計"
+title: 屬性 (F#)
+description: '了解 F # 屬性如何啟用要套用至程式設計建構的中繼資料。'
+keywords: Visual F#, F#, 函式程式設計
 author: cartermp
 ms.author: phcart
 ms.date: 05/16/2016

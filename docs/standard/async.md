@@ -1,6 +1,6 @@
 ---
-title: "非同步總覽"
-description: "了解非同步程式設計此一重要技術，如何讓您更容易處理對多個核心的封鎖 I/O 和並行作業。"
+title: 非同步總覽
+description: 了解非同步程式設計此一重要技術，如何讓您更容易處理對多個核心的封鎖 I/O 和並行作業。
 keywords: .NET, .NET Core
 author: cartermp
 ms.author: wiwagn

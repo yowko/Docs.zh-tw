@@ -1,14 +1,16 @@
 ---
-title: "不正確的檔名或數目"
+title: 不正確的檔名或數目
 ms.date: 07/20/2015
 ms.prod: .net
-ms.reviewer: 
-ms.suite: 
-ms.technology: devlang-visual-basic
+ms.reviewer: ''
+ms.suite: ''
+ms.technology:
+- devlang-visual-basic
 ms.topic: article
-f1_keywords: vbrID52
+f1_keywords:
+- vbrID52
 ms.assetid: d0e96aea-7621-48f6-a78b-5d37d18aaa4e
-caps.latest.revision: "10"
+caps.latest.revision: 10
 author: dotnet-bot
 ms.author: dotnetcontent
 ms.openlocfilehash: 3d7c8bae3df0e75a1c4f9afacdff681a553503d2
