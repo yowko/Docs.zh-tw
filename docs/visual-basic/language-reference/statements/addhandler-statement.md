@@ -1,18 +1,20 @@
 ---
-title: "AddHandler 陳述式"
+title: AddHandler 陳述式
 ms.date: 07/20/2015
 ms.prod: .net
-ms.reviewer: 
-ms.suite: 
-ms.technology: devlang-visual-basic
+ms.reviewer: ''
+ms.suite: ''
+ms.technology:
+- devlang-visual-basic
 ms.topic: article
 f1_keywords:
 - vb.AddHandlerMethod
 - addhandler
 - vb.addhandler
-helpviewer_keywords: AddHandler statement [Visual Basic]
+helpviewer_keywords:
+- AddHandler statement [Visual Basic]
 ms.assetid: cfe69799-2a0f-42c0-a99e-09fed954da01
-caps.latest.revision: "15"
+caps.latest.revision: 15
 author: dotnet-bot
 ms.author: dotnetcontent
 ms.openlocfilehash: 07fbfe04ccd01b7d0f99338ef2682238830099dc

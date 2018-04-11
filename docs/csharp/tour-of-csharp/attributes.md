@@ -1,6 +1,6 @@
 ---
-title: "C# 屬性 - C# 語言教學課程"
-description: "了解在 C# 中使用屬性的宣告式程式設計"
+title: C# 屬性 - C# 語言教學課程
+description: 了解在 C# 中使用屬性的宣告式程式設計
 keywords: .NET, csharp
 author: BillWagner
 ms.author: wiwagn

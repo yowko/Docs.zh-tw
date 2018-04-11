@@ -1,12 +1,14 @@
 ---
-title: "指標的算術運算 (C# 程式設計手冊)"
+title: 指標的算術運算 (C# 程式設計手冊)
 ms.date: 07/20/2015
 ms.prod: .net
-ms.technology: devlang-csharp
+ms.technology:
+- devlang-csharp
 ms.topic: article
-helpviewer_keywords: pointers [C#], arithmetic operations
+helpviewer_keywords:
+- pointers [C#], arithmetic operations
 ms.assetid: d4f0b623-827e-45ce-8649-cfcebc8692aa
-caps.latest.revision: "18"
+caps.latest.revision: 18
 author: BillWagner
 ms.author: wiwagn
 ms.openlocfilehash: 54c439aab8b6cd34a796db8d31f9eabeefddf9f8

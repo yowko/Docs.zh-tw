@@ -1,6 +1,6 @@
 ---
-title: "非同步程式設計"
-description: "深入了解 .NET Core 提供之 C# 語言層級的非同步程式設計模型。"
+title: 非同步程式設計
+description: 深入了解 .NET Core 提供之 C# 語言層級的非同步程式設計模型。
 keywords: .NET, .NET Core
 author: cartermp
 ms.author: wiwagn

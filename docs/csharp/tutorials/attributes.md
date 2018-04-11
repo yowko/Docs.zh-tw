@@ -1,7 +1,7 @@
 ---
-title: "屬性 - C#"
-description: "了解 C# 中屬性的運作方式。"
-keywords: ".NET, .NET Core, C#, 屬性"
+title: 屬性 - C#
+description: 了解 C# 中屬性的運作方式。
+keywords: .NET, .NET Core, C#, 屬性
 author: mgroves
 ms.author: wiwagn
 ms.date: 03/06/2017
