@@ -1,1 +1,1 @@
-<span data-ttu-id="641db-101">自 1.0 起可用</span><span class="sxs-lookup"><span data-stu-id="641db-101">Available since 1.0</span></span>
+<span data-ttu-id="d8771-101">自 1.0 起可用</span><span class="sxs-lookup"><span data-stu-id="d8771-101">Available since 1.0</span></span>
