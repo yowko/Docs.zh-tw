@@ -8,11 +8,11 @@ ms.topic: conceptual
 ms.prod: .net
 ms.technology: devlang-csharp
 ms.custom: mvc
-ms.openlocfilehash: 90d6542122dd8c579c63f5f003441ce63a7ca5e9
-ms.sourcegitcommit: 935d5267c44f9bce801468ef95f44572f1417e8c
+ms.openlocfilehash: 9e42253e520b89fd8a864dead8c17d53bdb8a439
+ms.sourcegitcommit: b750a8e3979749b214e7e10c82efb0a0524dfcb1
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 03/28/2018
+ms.lasthandoff: 04/10/2018
 ---
 # <a name="get-started-with-syntax-analysis"></a>開始使用語法分析
 
@@ -64,7 +64,7 @@ Syntax API 會建立根代表編譯單位的樹狀結構。 樹狀結構中的�
 
 **SyntaxNode**: Blue | **SyntaxToken**: Green | **SyntaxTrivia**: Red ![C# Code File](media/walkthrough-csharp-syntax-figure1.png)
 
-巡覽此樹狀結構，即可在程式碼檔中找到任何陳述式、運算式、權杖或空白字元位元。
+瀏覽此樹狀結構，即可在程式碼檔中找到所有陳述式、運算式、權杖或空白字元位元。
 
 雖然您可以使用 Syntax API 在程式碼檔中找到任何項目，但是大部分的情況都會涉及檢查小型程式碼片段，或搜尋特定陳述式或片段。 下面兩個範例示範瀏覽程式碼結構或搜尋單一陳述式的一般使用。
 
@@ -74,7 +74,7 @@ Syntax API 會建立根代表編譯單位的樹狀結構。 樹狀結構中的�
 
 ### <a name="manual-traversal"></a>手動周遊
 
-您可以在 [GitHub 存放庫](https://github.com/dotnet/docs/tree/master/samples/csharp/roslyn-sdk/SyntaxQuickStart)中查看此範例中完成的程式碼。
+您可以在 [GitHub 存放庫](https://github.com/dotnet/samples/tree/master/csharp/roslyn-sdk/SyntaxQuickStart)中查看此範例中完成的程式碼。
 
 > [!NOTE]
 > 語法樹狀結構類型使用繼承，來描述適用於程式中不同位置的不同語法項目。 使用這些 API 通常表示將屬性或集合成員轉換成特定衍生類型。 在下列範例中，指派和轉換是使用明確類型變數的個別陳述式。 您可以閱讀程式碼，以查看 API 的傳回型別以及所傳回物件的執行階段類型。 在實務上，較常見使用隱含型別變數，並依賴 API 名稱來描述要檢查的物件類型。
@@ -164,7 +164,7 @@ The body text of the Main method follows:
 
 建立新的 C# **獨立程式碼分析工具**專案；將它命名為 "**SyntaxWalker**"。
 
-您可以在 [GitHub 存放庫](https://github.com/dotnet/docs/tree/master/samples/csharp/roslyn-sdk/SyntaxQuickStart)中查看此範例中完成的程式碼。 GitHub 上的範例包含本教學課程中所述的兩個專案。
+您可以在 [GitHub 存放庫](https://github.com/dotnet/samples/tree/master/csharp/roslyn-sdk/SyntaxQuickStart)中查看此範例中完成的程式碼。 GitHub 上的範例包含本教學課程中所述的兩個專案。
 
 如同先前的範例，您可以定義字串常數，以保留您要分析的程式文字：
 
