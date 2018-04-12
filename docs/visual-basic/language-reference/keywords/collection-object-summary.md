@@ -1,13 +1,15 @@
 ---
-title: "集合物件摘要 (Visual Basic)"
+title: 集合物件摘要 (Visual Basic)
 ms.date: 07/20/2015
 ms.prod: .net
-ms.suite: 
-ms.technology: devlang-visual-basic
+ms.suite: ''
+ms.technology:
+- devlang-visual-basic
 ms.topic: article
-helpviewer_keywords: Collection object, summary
+helpviewer_keywords:
+- Collection object, summary
 ms.assetid: c4586369-d817-4453-9cb0-1a272fc66737
-caps.latest.revision: "13"
+caps.latest.revision: 13
 author: dotnet-bot
 ms.author: dotnetcontent
 ms.openlocfilehash: 96c2ebf7b0f92119cb8bea131310c675c8a7ef30

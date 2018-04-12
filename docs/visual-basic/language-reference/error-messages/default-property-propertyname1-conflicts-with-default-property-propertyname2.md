@@ -1,17 +1,19 @@
 ---
-title: "預設屬性 &#39;&lt;propertyname1&gt;&#39; 與預設屬性 &#39; 衝突&lt;propertyname2&gt;&#39; 在 &#39;&lt;classname&gt;&#39;，所以應該宣告為 &#39;Shadows &#39;"
+title: 預設屬性 &#39;&lt;propertyname1&gt;&#39; 與預設屬性 &#39; 衝突&lt;propertyname2&gt;&#39; 在 &#39;&lt;classname&gt;&#39;，所以應該宣告為 &#39;Shadows &#39;
 ms.date: 07/20/2015
 ms.prod: .net
-ms.reviewer: 
-ms.suite: 
-ms.technology: devlang-visual-basic
+ms.reviewer: ''
+ms.suite: ''
+ms.technology:
+- devlang-visual-basic
 ms.topic: article
 f1_keywords:
 - vbc40007
 - bc40007
-helpviewer_keywords: BC40007
+helpviewer_keywords:
+- BC40007
 ms.assetid: 692ccf76-5715-4f11-a972-84cf9de30bc1
-caps.latest.revision: "9"
+caps.latest.revision: 9
 author: dotnet-bot
 ms.author: dotnetcontent
 ms.openlocfilehash: af92c06f6d07b6ea64a05b9043547a46e3679111

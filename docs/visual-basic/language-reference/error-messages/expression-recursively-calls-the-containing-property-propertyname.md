@@ -1,17 +1,19 @@
 ---
-title: "運算式遞迴呼叫包含屬性 &#39;&lt;propertyname&gt;&#39;"
+title: 運算式遞迴呼叫包含屬性 &#39;&lt;propertyname&gt;&#39;
 ms.date: 07/20/2015
 ms.prod: .net
-ms.reviewer: 
-ms.suite: 
-ms.technology: devlang-visual-basic
+ms.reviewer: ''
+ms.suite: ''
+ms.technology:
+- devlang-visual-basic
 ms.topic: article
 f1_keywords:
 - vbc42026
 - BC42026
-helpviewer_keywords: BC42026
+helpviewer_keywords:
+- BC42026
 ms.assetid: 4fde9db6-3bf3-48dc-8e05-981bf08969da
-caps.latest.revision: "10"
+caps.latest.revision: 10
 author: dotnet-bot
 ms.author: dotnetcontent
 ms.openlocfilehash: 47de3c2d25336962168f01a4c8717274de7c9aad

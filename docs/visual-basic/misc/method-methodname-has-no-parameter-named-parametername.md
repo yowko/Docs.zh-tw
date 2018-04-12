@@ -1,12 +1,14 @@
 ---
-title: "方法 &#39;&lt;methodname&gt;&#39; 有沒有名稱為參數 &#39;&lt;參數名稱&gt;&#39;"
+title: 方法 &#39;&lt;methodname&gt;&#39; 有沒有名稱為參數 &#39;&lt;參數名稱&gt;&#39;
 ms.date: 07/20/2015
 ms.prod: .net
-ms.technology: devlang-visual-basic
+ms.technology:
+- devlang-visual-basic
 ms.topic: article
-f1_keywords: vbrArgument_InvalidNamedArg2
+f1_keywords:
+- vbrArgument_InvalidNamedArg2
 ms.assetid: b4346b6a-87da-4e65-a2de-ee5239c671f8
-caps.latest.revision: "7"
+caps.latest.revision: 7
 author: dotnet-bot
 ms.author: dotnetcontent
 ms.openlocfilehash: 1d1e5e8fb0f26b8e5ada4409fb0a5cf6ec3d80e9

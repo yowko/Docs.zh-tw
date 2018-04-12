@@ -1,17 +1,19 @@
 ---
-title: "Lambda 運算式不是有效的第一個運算式中 &#39;選取案例 &#39;陳述式"
+title: Lambda 運算式不是有效的第一個運算式中 &#39;選取案例 &#39;陳述式
 ms.date: 07/20/2015
 ms.prod: .net
-ms.reviewer: 
-ms.suite: 
-ms.technology: devlang-visual-basic
+ms.reviewer: ''
+ms.suite: ''
+ms.technology:
+- devlang-visual-basic
 ms.topic: article
 f1_keywords:
 - bc36635
 - vbc36635
-helpviewer_keywords: BC36635
+helpviewer_keywords:
+- BC36635
 ms.assetid: 74609979-9c03-4864-bbce-f588aa2e0917
-caps.latest.revision: "6"
+caps.latest.revision: 6
 author: dotnet-bot
 ms.author: dotnetcontent
 ms.openlocfilehash: e91401d6891d4e38014bb716a337560885cf73a2

@@ -1,17 +1,19 @@
 ---
-title: "方法 &#39;System.Nullable (Of T) &#39;不能做為運算元的 &#39;AddressOf &#39;運算子"
+title: 方法 &#39;System.Nullable (Of T) &#39;不能做為運算元的 &#39;AddressOf &#39;運算子
 ms.date: 07/20/2015
 ms.prod: .net
-ms.reviewer: 
-ms.suite: 
-ms.technology: devlang-visual-basic
+ms.reviewer: ''
+ms.suite: ''
+ms.technology:
+- devlang-visual-basic
 ms.topic: article
 f1_keywords:
 - vbc32126
 - bc32126
-helpviewer_keywords: BC32126
+helpviewer_keywords:
+- BC32126
 ms.assetid: 2325668b-e2ad-40ee-a1ec-30450236c20d
-caps.latest.revision: "5"
+caps.latest.revision: 5
 author: dotnet-bot
 ms.author: dotnetcontent
 ms.openlocfilehash: ce0e9bc6abd71f22e3f6c3486ef40493e74d820f

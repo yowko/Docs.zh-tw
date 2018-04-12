@@ -1,12 +1,14 @@
 ---
-title: "擴充 Visual Basic 應用程式模型"
+title: 擴充 Visual Basic 應用程式模型
 ms.date: 07/20/2015
 ms.prod: .net
-ms.technology: devlang-visual-basic
+ms.technology:
+- devlang-visual-basic
 ms.topic: article
-helpviewer_keywords: Visual Basic Application Model, extending
+helpviewer_keywords:
+- Visual Basic Application Model, extending
 ms.assetid: e91d3bed-4c27-40e3-871d-2be17467c72c
-caps.latest.revision: "21"
+caps.latest.revision: 21
 author: dotnet-bot
 ms.author: dotnetcontent
 ms.openlocfilehash: 15e6ea1a8b2df0b8ed1b84abceee9e6be2c556f9

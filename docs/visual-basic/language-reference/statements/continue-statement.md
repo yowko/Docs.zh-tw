@@ -1,17 +1,19 @@
 ---
-title: "Continue 陳述式 (Visual Basic)"
+title: Continue 陳述式 (Visual Basic)
 ms.date: 07/20/2015
 ms.prod: .net
-ms.reviewer: 
-ms.suite: 
-ms.technology: devlang-visual-basic
+ms.reviewer: ''
+ms.suite: ''
+ms.technology:
+- devlang-visual-basic
 ms.topic: article
-f1_keywords: vb.continue
+f1_keywords:
+- vb.continue
 helpviewer_keywords:
 - Continue statement [Visual Basic]
 - loops, transferring to next iteration
 ms.assetid: 3ad00103-358b-4af3-a3a8-1b9ea0e995d3
-caps.latest.revision: "21"
+caps.latest.revision: 21
 author: dotnet-bot
 ms.author: dotnetcontent
 ms.openlocfilehash: 4a47819600a6c1d58f09c2f8ed3443632e9dab68

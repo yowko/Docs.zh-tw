@@ -1,17 +1,19 @@
 ---
-title: "內容為數字的標籤之後必須跟隨冒號"
+title: 內容為數字的標籤之後必須跟隨冒號
 ms.date: 07/20/2015
 ms.prod: .net
-ms.reviewer: 
-ms.suite: 
-ms.technology: devlang-visual-basic
+ms.reviewer: ''
+ms.suite: ''
+ms.technology:
+- devlang-visual-basic
 ms.topic: article
 f1_keywords:
 - vbc30801
 - bc30801
-helpviewer_keywords: BC30801
+helpviewer_keywords:
+- BC30801
 ms.assetid: 67743319-2d1c-496e-bfd9-22b046b43b5a
-caps.latest.revision: "9"
+caps.latest.revision: 9
 author: dotnet-bot
 ms.author: dotnetcontent
 ms.openlocfilehash: f6c2615f37329ce70b4e6d51d3aa789947b6bec5

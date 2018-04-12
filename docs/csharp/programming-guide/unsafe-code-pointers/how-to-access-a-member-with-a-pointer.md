@@ -1,12 +1,14 @@
 ---
-title: "如何：使用指標存取成員 (C# 程式設計手冊)"
+title: 如何：使用指標存取成員 (C# 程式設計手冊)
 ms.date: 07/20/2015
 ms.prod: .net
-ms.technology: devlang-csharp
+ms.technology:
+- devlang-csharp
 ms.topic: article
-helpviewer_keywords: pointers [C#], member access
+helpviewer_keywords:
+- pointers [C#], member access
 ms.assetid: 1e998498-8c85-4a78-8ce2-4d8c20f08342
-caps.latest.revision: "16"
+caps.latest.revision: 16
 author: BillWagner
 ms.author: wiwagn
 ms.openlocfilehash: 622d9910b09c9197b7f4ccd5e54e2675fbbbbccb

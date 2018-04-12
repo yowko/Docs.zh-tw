@@ -1,13 +1,15 @@
 ---
-title: "My.Computer 物件"
+title: My.Computer 物件
 ms.date: 07/20/2015
 ms.prod: .net
-ms.suite: 
-ms.technology: devlang-visual-basic
+ms.suite: ''
+ms.technology:
+- devlang-visual-basic
 ms.topic: article
-helpviewer_keywords: My.Computer object
+helpviewer_keywords:
+- My.Computer object
 ms.assetid: cc814d79-6f7f-4e54-8b9d-5ecfdd77a0b8
-caps.latest.revision: "30"
+caps.latest.revision: 30
 author: dotnet-bot
 ms.author: dotnetcontent
 ms.openlocfilehash: bbc4741272ea974a06d3e7bdebbfac5e2d9726e9

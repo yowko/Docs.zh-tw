@@ -1,17 +1,19 @@
 ---
-title: "運算式是一個數值，不可以是指派的目標"
+title: 運算式是一個數值，不可以是指派的目標
 ms.date: 07/20/2015
 ms.prod: .net
-ms.reviewer: 
-ms.suite: 
-ms.technology: devlang-visual-basic
+ms.reviewer: ''
+ms.suite: ''
+ms.technology:
+- devlang-visual-basic
 ms.topic: article
 f1_keywords:
 - bc30068
 - vbc30068
-helpviewer_keywords: BC30068
+helpviewer_keywords:
+- BC30068
 ms.assetid: d65141e1-f31e-4ac5-a3b8-0b2e02a71ebf
-caps.latest.revision: "15"
+caps.latest.revision: 15
 author: dotnet-bot
 ms.author: dotnetcontent
 ms.openlocfilehash: bec3e2d298160bd0b459dc3b7ef93b94648e439a

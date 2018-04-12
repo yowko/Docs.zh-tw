@@ -1,12 +1,14 @@
 ---
-title: "如何：明確實作介面成員 (C# 程式設計手冊)"
+title: 如何：明確實作介面成員 (C# 程式設計手冊)
 ms.date: 07/20/2015
 ms.prod: .net
-ms.technology: devlang-csharp
+ms.technology:
+- devlang-csharp
 ms.topic: article
-helpviewer_keywords: interfaces [C#], explicitly implementing
+helpviewer_keywords:
+- interfaces [C#], explicitly implementing
 ms.assetid: 514cde76-f981-474e-8b40-9493619f899c
-caps.latest.revision: "16"
+caps.latest.revision: 16
 author: BillWagner
 ms.author: wiwagn
 ms.openlocfilehash: e02ae26000057e4e7323a777a6a0e1ca6fd8871b

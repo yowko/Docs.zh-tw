@@ -1,18 +1,20 @@
 ---
-title: "XML 項目常值 (Visual Basic)"
+title: XML 項目常值 (Visual Basic)
 ms.date: 07/20/2015
 ms.prod: .net
-ms.reviewer: 
-ms.suite: 
-ms.technology: devlang-visual-basic
+ms.reviewer: ''
+ms.suite: ''
+ms.technology:
+- devlang-visual-basic
 ms.topic: article
-f1_keywords: vb.XmlLiteralElement
+f1_keywords:
+- vb.XmlLiteralElement
 helpviewer_keywords:
 - XML element literal [Visual Basic]
 - element literal [Visual Basic]
 - XML literals [Visual Basic], element
 ms.assetid: 95039642-7893-48b7-b23f-45a6c55d8f67
-caps.latest.revision: "32"
+caps.latest.revision: 32
 author: dotnet-bot
 ms.author: dotnetcontent
 ms.openlocfilehash: de5825a6af1dd1b93c3c85651125cf817dc564f2

@@ -1,14 +1,16 @@
 ---
-title: "超出字串空間 (Visual Basic)"
+title: 超出字串空間 (Visual Basic)
 ms.date: 07/20/2015
 ms.prod: .net
-ms.reviewer: 
-ms.suite: 
-ms.technology: devlang-visual-basic
+ms.reviewer: ''
+ms.suite: ''
+ms.technology:
+- devlang-visual-basic
 ms.topic: article
-f1_keywords: vbrID14
+f1_keywords:
+- vbrID14
 ms.assetid: 16681c75-a400-422d-9351-c691d3c7614e
-caps.latest.revision: "10"
+caps.latest.revision: 10
 author: dotnet-bot
 ms.author: dotnetcontent
 ms.openlocfilehash: d820bdfd7c66ecbe81f8cb75ada2374045257598

@@ -1,17 +1,19 @@
 ---
-title: "名稱為 &#39;&lt;名稱&gt;&#39; 不宣告"
+title: 名稱為 &#39;&lt;名稱&gt;&#39; 不宣告
 ms.date: 07/20/2015
 ms.prod: .net
-ms.reviewer: 
-ms.suite: 
-ms.technology: devlang-visual-basic
+ms.reviewer: ''
+ms.suite: ''
+ms.technology:
+- devlang-visual-basic
 ms.topic: article
 f1_keywords:
 - bc30451
 - vbc30451
-helpviewer_keywords: BC30451
+helpviewer_keywords:
+- BC30451
 ms.assetid: 765f099b-e21e-47c6-a906-a065444e56b3
-caps.latest.revision: "11"
+caps.latest.revision: 11
 author: dotnet-bot
 ms.author: dotnetcontent
 ms.openlocfilehash: 7a63ae74c7179d71756e2b9b4bf6b41a71ce12a6

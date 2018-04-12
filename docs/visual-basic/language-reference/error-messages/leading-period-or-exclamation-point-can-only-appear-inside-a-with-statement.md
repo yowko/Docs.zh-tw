@@ -1,17 +1,19 @@
 ---
-title: "前置字元 &#39;。&#39;或 &#39; ！&#39;只可以出現 &#39;使用 &#39;陳述式"
+title: 前置字元 &#39;。&#39;或 &#39; ！&#39;只可以出現 &#39;使用 &#39;陳述式
 ms.date: 07/20/2015
 ms.prod: .net
-ms.reviewer: 
-ms.suite: 
-ms.technology: devlang-visual-basic
+ms.reviewer: ''
+ms.suite: ''
+ms.technology:
+- devlang-visual-basic
 ms.topic: article
 f1_keywords:
 - vbc30157
 - bc30157
-helpviewer_keywords: BC30157
+helpviewer_keywords:
+- BC30157
 ms.assetid: 70daaee1-14f9-45b7-9f30-53794310b95e
-caps.latest.revision: "10"
+caps.latest.revision: 10
 author: dotnet-bot
 ms.author: dotnetcontent
 ms.openlocfilehash: 961f2d737123ab68b200d5fc7658cb81291a5de6

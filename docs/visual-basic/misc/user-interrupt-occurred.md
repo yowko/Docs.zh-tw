@@ -1,12 +1,14 @@
 ---
-title: "發生使用者中斷"
+title: 發生使用者中斷
 ms.date: 07/20/2015
 ms.prod: .net
-ms.technology: devlang-visual-basic
+ms.technology:
+- devlang-visual-basic
 ms.topic: article
-f1_keywords: vbrID18
+f1_keywords:
+- vbrID18
 ms.assetid: 3a1f1297-f3d9-46db-a956-058a1d272047
-caps.latest.revision: "7"
+caps.latest.revision: 7
 author: dotnet-bot
 ms.author: dotnetcontent
 ms.openlocfilehash: 8b1df785433a31e005f40f35cd80e360b4843d84

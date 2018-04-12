@@ -1,12 +1,14 @@
 ---
-title: "找不到程式碼資源"
+title: 找不到程式碼資源
 ms.date: 07/20/2015
 ms.prod: .net
-ms.technology: devlang-visual-basic
+ms.technology:
+- devlang-visual-basic
 ms.topic: article
-f1_keywords: vbrID454
+f1_keywords:
+- vbrID454
 ms.assetid: f0e53e96-c3de-41e2-bf98-e72f93802dfa
-caps.latest.revision: "6"
+caps.latest.revision: 6
 author: dotnet-bot
 ms.author: dotnetcontent
 ms.openlocfilehash: 181921f2bebc56e98291e99c8f7fa868e02c7826

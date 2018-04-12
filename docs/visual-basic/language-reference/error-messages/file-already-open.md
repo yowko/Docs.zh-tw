@@ -1,14 +1,16 @@
 ---
-title: "檔案已經開啟"
+title: 檔案已經開啟
 ms.date: 07/20/2015
 ms.prod: .net
-ms.reviewer: 
-ms.suite: 
-ms.technology: devlang-visual-basic
+ms.reviewer: ''
+ms.suite: ''
+ms.technology:
+- devlang-visual-basic
 ms.topic: article
-f1_keywords: vbrID55
+f1_keywords:
+- vbrID55
 ms.assetid: d674a0fb-ef16-4cc2-9da7-709a8a07dbea
-caps.latest.revision: "7"
+caps.latest.revision: 7
 author: dotnet-bot
 ms.author: dotnetcontent
 ms.openlocfilehash: 3305831e840510e3f0b5bcb8bf847e39ea3ee4ba

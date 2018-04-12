@@ -1,14 +1,16 @@
 ---
-title: "Then 陳述式"
+title: Then 陳述式
 ms.date: 07/20/2015
 ms.prod: .net
-ms.reviewer: 
-ms.suite: 
-ms.technology: devlang-visual-basic
+ms.reviewer: ''
+ms.suite: ''
+ms.technology:
+- devlang-visual-basic
 ms.topic: article
-helpviewer_keywords: Then keyword [Visual Basic]
+helpviewer_keywords:
+- Then keyword [Visual Basic]
 ms.assetid: 41fdb422-d222-4c10-b5b0-c421c79e9070
-caps.latest.revision: "10"
+caps.latest.revision: 10
 author: dotnet-bot
 ms.author: dotnetcontent
 ms.openlocfilehash: daaa3f14e87334e3e37d6e77e483605f922d8230

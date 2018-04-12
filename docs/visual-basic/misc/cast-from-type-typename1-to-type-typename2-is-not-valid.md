@@ -1,12 +1,14 @@
 ---
-title: "從類型轉換 &#39;&lt;typename1&gt;&#39; 輸入 &#39;&lt;2>&gt;&#39; 不正確"
+title: 從類型轉換 &#39;&lt;typename1&gt;&#39; 輸入 &#39;&lt;2>&gt;&#39; 不正確
 ms.date: 07/20/2015
 ms.prod: .net
-ms.technology: devlang-visual-basic
+ms.technology:
+- devlang-visual-basic
 ms.topic: article
-f1_keywords: vbrInvalidCast_FromTo
+f1_keywords:
+- vbrInvalidCast_FromTo
 ms.assetid: 4e6a8957-63ca-461f-a833-f48a1ff2eba6
-caps.latest.revision: "8"
+caps.latest.revision: 8
 author: dotnet-bot
 ms.author: dotnetcontent
 ms.openlocfilehash: d97aeac3618cb2b9d37ee14ec080d135f1bc5901

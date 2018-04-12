@@ -1,19 +1,21 @@
 ---
-title: "XML 註解常值 (Visual Basic)"
+title: XML 註解常值 (Visual Basic)
 ms.date: 07/20/2015
 ms.prod: .net
-ms.reviewer: 
-ms.suite: 
-ms.technology: devlang-visual-basic
+ms.reviewer: ''
+ms.suite: ''
+ms.technology:
+- devlang-visual-basic
 ms.topic: article
-f1_keywords: vb.XmlLiteralComment
+f1_keywords:
+- vb.XmlLiteralComment
 helpviewer_keywords:
 - comment literal [Visual Basic]
 - XML comments, adding [Visual Basic]
 - XML comment literal [Visual Basic]
 - XML literals [Visual Basic], comment
 ms.assetid: 634c1cee-5e01-48d0-88d7-2dd55e4a9e52
-caps.latest.revision: "19"
+caps.latest.revision: 19
 author: dotnet-bot
 ms.author: dotnetcontent
 ms.openlocfilehash: 36be34ac22cfe926a2eea946f5e4c4eb534de696

@@ -1,12 +1,14 @@
 ---
-title: "如何：使用指標存取陣列元素 (C# 程式設計手冊)"
+title: 如何：使用指標存取陣列元素 (C# 程式設計手冊)
 ms.date: 07/20/2015
 ms.prod: .net
-ms.technology: devlang-csharp
+ms.technology:
+- devlang-csharp
 ms.topic: article
-helpviewer_keywords: pointers [C#], array access
+helpviewer_keywords:
+- pointers [C#], array access
 ms.assetid: 6c46f2af-a730-4855-8638-f136d9abaa12
-caps.latest.revision: "16"
+caps.latest.revision: 16
 author: BillWagner
 ms.author: wiwagn
 ms.openlocfilehash: 737c1d7fc0bc0a739de5c0a6cbc5dc09f813133e
@@ -26,7 +28,7 @@ for (int i = 65; i < 123; i++)
 }  
 ```  
   
- <span data-ttu-id="8db5e-104">方括弧中的運算式必須以隱含方式轉換成 `int`、`uint`、`long` 或 `ulong`。</span><span class="sxs-lookup"><span data-stu-id="8db5e-104">The expression in square brackets must be implicitly convertible to `int`, `uint`, `long`, or `ulong`.</span></span> <span data-ttu-id="8db5e-105">作業 p[e] 相當於 *(p+e)。</span><span class="sxs-lookup"><span data-stu-id="8db5e-105">The operation p[e] is equivalent to *(p+e).</span></span> <span data-ttu-id="8db5e-106">如同 C 和 C++，指標元素存取不會檢查超出範圍的錯誤。</span><span class="sxs-lookup"><span data-stu-id="8db5e-106">Like C and C++, the pointer element access does not check for out-of-bounds errors.</span></span>  
+ <span data-ttu-id="8db5e-104">方括弧中的運算式必須以隱含方式轉換成 `int`、`uint`、`long` 或 `ulong`。</span><span class="sxs-lookup"><span data-stu-id="8db5e-104">The expression in square brackets must be implicitly convertible to `int`, `uint`, `long`, or `ulong`.</span></span> <span data-ttu-id="8db5e-105">作業 p[e] 相當於 \*(p+e)。</span><span class="sxs-lookup"><span data-stu-id="8db5e-105">The operation p[e] is equivalent to \*(p+e).</span></span> <span data-ttu-id="8db5e-106">如同 C 和 C++，指標元素存取不會檢查超出範圍的錯誤。</span><span class="sxs-lookup"><span data-stu-id="8db5e-106">Like C and C++, the pointer element access does not check for out-of-bounds errors.</span></span>  
   
 ## <a name="example"></a><span data-ttu-id="8db5e-107">範例</span><span class="sxs-lookup"><span data-stu-id="8db5e-107">Example</span></span>  
  <span data-ttu-id="8db5e-108">在此範例中，123 記憶體位置是配置在字元陣列 `charPointer`。</span><span class="sxs-lookup"><span data-stu-id="8db5e-108">In this example, 123 memory locations are allocated to a character array, `charPointer`.</span></span> <span data-ttu-id="8db5e-109">陣列是用來顯示兩個 [for](../../../csharp/language-reference/keywords/for.md) 迴圈中的小寫字母和大寫字母。</span><span class="sxs-lookup"><span data-stu-id="8db5e-109">The array is used to display the lowercase letters and the uppercase letters in two [for](../../../csharp/language-reference/keywords/for.md) loops.</span></span>  

@@ -1,12 +1,14 @@
 ---
-title: "泛型方法 (C# 程式設計手冊)"
+title: 泛型方法 (C# 程式設計手冊)
 ms.date: 07/20/2015
 ms.prod: .net
-ms.technology: devlang-csharp
+ms.technology:
+- devlang-csharp
 ms.topic: article
-helpviewer_keywords: generics [C#], methods
+helpviewer_keywords:
+- generics [C#], methods
 ms.assetid: 673eeea2-4b48-4faa-9c4e-2e89449221b9
-caps.latest.revision: "27"
+caps.latest.revision: 27
 author: BillWagner
 ms.author: wiwagn
 ms.openlocfilehash: 63252dbe4307889f57d35e23eb0575f84358d737

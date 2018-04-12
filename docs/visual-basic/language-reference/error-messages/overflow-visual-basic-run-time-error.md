@@ -1,14 +1,16 @@
 ---
-title: "溢位 (Visual Basic 執行階段錯誤)"
+title: 溢位 (Visual Basic 執行階段錯誤)
 ms.date: 07/20/2015
 ms.prod: .net
-ms.reviewer: 
-ms.suite: 
-ms.technology: devlang-visual-basic
+ms.reviewer: ''
+ms.suite: ''
+ms.technology:
+- devlang-visual-basic
 ms.topic: article
-f1_keywords: vbrERRID_Overflow
+f1_keywords:
+- vbrERRID_Overflow
 ms.assetid: c6a23279-3086-412a-bcff-ff8ed2cb8c6f
-caps.latest.revision: "8"
+caps.latest.revision: 8
 author: dotnet-bot
 ms.author: dotnetcontent
 ms.openlocfilehash: d1908ad576a499e79102aff23e3e2f11d7d99d52

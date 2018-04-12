@@ -1,12 +1,14 @@
 ---
-title: "指標轉換 (C# 程式設計手冊)"
+title: 指標轉換 (C# 程式設計手冊)
 ms.date: 07/20/2015
 ms.prod: .net
-ms.technology: devlang-csharp
+ms.technology:
+- devlang-csharp
 ms.topic: article
-helpviewer_keywords: pointers [C#], conversions
+helpviewer_keywords:
+- pointers [C#], conversions
 ms.assetid: f0e87502-477a-4ede-a31f-7a3e262e46fb
-caps.latest.revision: "17"
+caps.latest.revision: 17
 author: BillWagner
 ms.author: wiwagn
 ms.openlocfilehash: 36589d139c91e04d9e3d8b31281a91c26b85a5d5
@@ -22,7 +24,7 @@ ms.lasthandoff: 11/21/2017
   
 |<span data-ttu-id="e553d-106">從</span><span class="sxs-lookup"><span data-stu-id="e553d-106">From</span></span>|<span data-ttu-id="e553d-107">以</span><span class="sxs-lookup"><span data-stu-id="e553d-107">To</span></span>|  
 |----------|--------|  
-|<span data-ttu-id="e553d-108">任何指標類型</span><span class="sxs-lookup"><span data-stu-id="e553d-108">Any pointer type</span></span>|<span data-ttu-id="e553d-109">void*</span><span class="sxs-lookup"><span data-stu-id="e553d-109">void*</span></span>|  
+|<span data-ttu-id="e553d-108">任何指標類型</span><span class="sxs-lookup"><span data-stu-id="e553d-108">Any pointer type</span></span>|<span data-ttu-id="e553d-109">void\*</span><span class="sxs-lookup"><span data-stu-id="e553d-109">void\*</span></span>|  
 |<span data-ttu-id="e553d-110">null</span><span class="sxs-lookup"><span data-stu-id="e553d-110">null</span></span>|<span data-ttu-id="e553d-111">任何指標類型</span><span class="sxs-lookup"><span data-stu-id="e553d-111">Any pointer type</span></span>|  
   
  <span data-ttu-id="e553d-112">明確指標轉換是用來使用 cast 運算式執行轉換，而這項轉換沒有任何隱含轉換。</span><span class="sxs-lookup"><span data-stu-id="e553d-112">Explicit pointer conversion is used to perform conversions, for which there is no implicit conversion, by using a cast expression.</span></span> <span data-ttu-id="e553d-113">下表顯示這些轉換。</span><span class="sxs-lookup"><span data-stu-id="e553d-113">The following table shows these conversions.</span></span>  

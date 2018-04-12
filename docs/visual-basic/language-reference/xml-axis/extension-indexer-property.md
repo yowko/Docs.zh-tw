@@ -1,19 +1,21 @@
 ---
-title: "擴充索引子屬性 (Visual Basic)"
+title: 擴充索引子屬性 (Visual Basic)
 ms.date: 07/20/2015
 ms.prod: .net
-ms.reviewer: 
-ms.suite: 
-ms.technology: devlang-visual-basic
+ms.reviewer: ''
+ms.suite: ''
+ms.technology:
+- devlang-visual-basic
 ms.topic: article
-f1_keywords: vb.XmlPropertyExtensionIndexer
+f1_keywords:
+- vb.XmlPropertyExtensionIndexer
 helpviewer_keywords:
 - Visual Basic code, accessing XML
 - XML extension indexer [Visual Basic]
 - extension indexer [Visual Basic]
 - XML [Visual Basic], accessing
 ms.assetid: a16a4b13-54be-432c-82b3-a87091464ada
-caps.latest.revision: "22"
+caps.latest.revision: 22
 author: dotnet-bot
 ms.author: dotnetcontent
 ms.openlocfilehash: 99d14b6e54a59ffc904a9e786c22498d23ee8ab6

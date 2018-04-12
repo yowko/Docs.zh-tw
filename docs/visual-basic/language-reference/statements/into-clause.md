@@ -1,14 +1,16 @@
 ---
-title: "Into 子句 (Visual Basic)"
+title: Into 子句 (Visual Basic)
 ms.date: 07/20/2015
 ms.prod: .net
-ms.reviewer: 
-ms.suite: 
-ms.technology: devlang-visual-basic
+ms.reviewer: ''
+ms.suite: ''
+ms.technology:
+- devlang-visual-basic
 ms.topic: article
-helpviewer_keywords: Into keyword [Visual Basic]
+helpviewer_keywords:
+- Into keyword [Visual Basic]
 ms.assetid: e1534550-8f4b-4978-b043-fad7b8fd79ac
-caps.latest.revision: "6"
+caps.latest.revision: 6
 author: dotnet-bot
 ms.author: dotnetcontent
 ms.openlocfilehash: 73e120acbbc29aa3c3086c478c9842848e5db33b

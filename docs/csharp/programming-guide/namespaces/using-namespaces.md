@@ -1,15 +1,17 @@
 ---
-title: "使用命名空間 (C# 程式設計手冊)"
+title: 使用命名空間 (C# 程式設計手冊)
 ms.date: 07/20/2015
 ms.prod: .net
-ms.technology: devlang-csharp
+ms.technology:
+- devlang-csharp
 ms.topic: article
-f1_keywords: cs.names
+f1_keywords:
+- cs.names
 helpviewer_keywords:
 - fully qualified names [C#]
 - namespaces [C#], how to use
 ms.assetid: 1fe8bf39-addc-438a-bd9e-86410e32381d
-caps.latest.revision: "26"
+caps.latest.revision: 26
 author: BillWagner
 ms.author: wiwagn
 ms.openlocfilehash: f485992f5d4b7bc16aaefeec8c7c76ce39f48ef0

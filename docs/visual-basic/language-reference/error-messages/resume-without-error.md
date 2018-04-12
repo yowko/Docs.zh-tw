@@ -1,14 +1,16 @@
 ---
-title: "無錯繼續"
+title: 無錯繼續
 ms.date: 07/20/2015
 ms.prod: .net
-ms.reviewer: 
-ms.suite: 
-ms.technology: devlang-visual-basic
+ms.reviewer: ''
+ms.suite: ''
+ms.technology:
+- devlang-visual-basic
 ms.topic: article
-f1_keywords: vbrID20
+f1_keywords:
+- vbrID20
 ms.assetid: f9631804-fd36-4443-b36c-30db827e6176
-caps.latest.revision: "8"
+caps.latest.revision: 8
 author: dotnet-bot
 ms.author: dotnetcontent
 ms.openlocfilehash: f86361b1e5310359288a97c5f41f017a344c30b4

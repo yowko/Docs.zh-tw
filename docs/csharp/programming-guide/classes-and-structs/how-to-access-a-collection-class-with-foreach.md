@@ -1,12 +1,14 @@
 ---
-title: "如何：使用 foreach 存取集合類別 (C# 程式設計手冊)"
+title: 如何：使用 foreach 存取集合類別 (C# 程式設計手冊)
 ms.date: 07/20/2015
 ms.prod: .net
-ms.technology: devlang-csharp
+ms.technology:
+- devlang-csharp
 ms.topic: article
-helpviewer_keywords: collection classes [C#], foreach statement
+helpviewer_keywords:
+- collection classes [C#], foreach statement
 ms.assetid: a6b9cf5c-6c8d-4223-b12c-288949434493
-caps.latest.revision: "21"
+caps.latest.revision: 21
 author: BillWagner
 ms.author: wiwagn
 ms.openlocfilehash: 0cf827e958d4dc3b951d17b53effd155356c0ca5

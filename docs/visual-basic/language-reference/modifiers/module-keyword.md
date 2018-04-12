@@ -1,17 +1,19 @@
 ---
-title: "模組&lt;關鍵字&gt;(Visual Basic)"
+title: 模組&lt;關鍵字&gt;(Visual Basic)
 ms.date: 07/20/2015
 ms.prod: .net
-ms.suite: 
-ms.technology: devlang-visual-basic
+ms.suite: ''
+ms.technology:
+- devlang-visual-basic
 ms.topic: article
-f1_keywords: vb.ModuleAttribute
+f1_keywords:
+- vb.ModuleAttribute
 helpviewer_keywords:
 - Module keyword [Visual Basic]
 - Module modifier
 - attribute blocks, Module keyword
 ms.assetid: d971b940-05ab-4d56-8485-e3b8a661906b
-caps.latest.revision: "13"
+caps.latest.revision: 13
 author: dotnet-bot
 ms.author: dotnetcontent
 ms.openlocfilehash: 1d35ad332229785f8cac76bd8099bccc85c3d3cb

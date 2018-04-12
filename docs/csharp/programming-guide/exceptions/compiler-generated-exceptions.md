@@ -1,12 +1,14 @@
 ---
-title: "編譯器所產生的例外狀況 (C# 程式設計手冊)"
+title: 編譯器所產生的例外狀況 (C# 程式設計手冊)
 ms.date: 07/20/2015
 ms.prod: .net
-ms.technology: devlang-csharp
+ms.technology:
+- devlang-csharp
 ms.topic: article
-helpviewer_keywords: exceptions [C#], compiler-generated
+helpviewer_keywords:
+- exceptions [C#], compiler-generated
 ms.assetid: 53b52f97-b366-4ed7-b05b-9eb78096b7f9
-caps.latest.revision: "13"
+caps.latest.revision: 13
 author: BillWagner
 ms.author: wiwagn
 ms.openlocfilehash: d1417e42f588978d5fc1beca4ad55463502ee219

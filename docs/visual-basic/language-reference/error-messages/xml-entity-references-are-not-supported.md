@@ -1,17 +1,19 @@
 ---
-title: "不支援 XML 實體參考"
+title: 不支援 XML 實體參考
 ms.date: 07/20/2015
 ms.prod: .net
-ms.reviewer: 
-ms.suite: 
-ms.technology: devlang-visual-basic
+ms.reviewer: ''
+ms.suite: ''
+ms.technology:
+- devlang-visual-basic
 ms.topic: article
 f1_keywords:
 - vbc31180
 - bc31180
-helpviewer_keywords: BC31180
+helpviewer_keywords:
+- BC31180
 ms.assetid: 2a393327-d8e2-4187-85b1-642b4f53b4ae
-caps.latest.revision: "6"
+caps.latest.revision: 6
 author: dotnet-bot
 ms.author: dotnetcontent
 ms.openlocfilehash: 3a264f8b5ded454efb86eec07cff378e89b87fec

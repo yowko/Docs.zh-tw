@@ -1,12 +1,14 @@
 ---
-title: "如何：使用 foreach 存取命令列引數 (C# 程式設計手冊)"
+title: 如何：使用 foreach 存取命令列引數 (C# 程式設計手冊)
 ms.date: 07/20/2015
 ms.prod: .net
-ms.technology: devlang-csharp
+ms.technology:
+- devlang-csharp
 ms.topic: article
-helpviewer_keywords: command-line arguments [C#]
+helpviewer_keywords:
+- command-line arguments [C#]
 ms.assetid: 89c3e335-3f5b-4e24-8c5a-b8036561fe8a
-caps.latest.revision: "15"
+caps.latest.revision: 15
 author: BillWagner
 ms.author: wiwagn
 ms.openlocfilehash: 557e72342901fab8bbe66e9cc3405cb4b2d9c1e2

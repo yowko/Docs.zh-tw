@@ -1,12 +1,14 @@
 ---
-title: "如何：提供檔案作業的進度對話方塊 (C# 程式設計手冊)"
+title: 如何：提供檔案作業的進度對話方塊 (C# 程式設計手冊)
 ms.date: 07/20/2015
 ms.prod: .net
-ms.technology: devlang-csharp
+ms.technology:
+- devlang-csharp
 ms.topic: article
-helpviewer_keywords: progress dialog [C#]
+helpviewer_keywords:
+- progress dialog [C#]
 ms.assetid: 01b71fe7-8178-4dc8-aeb1-12053be7b51c
-caps.latest.revision: "15"
+caps.latest.revision: 15
 author: BillWagner
 ms.author: wiwagn
 ms.openlocfilehash: 0ac68b5aa6014db87b4f7a269ef73d0608371bd8

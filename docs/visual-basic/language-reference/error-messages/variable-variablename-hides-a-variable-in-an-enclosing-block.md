@@ -1,17 +1,19 @@
 ---
-title: "變數 &#39;&lt;variablename&gt;&#39; 隱藏了封閉區塊中的變數"
+title: 變數 &#39;&lt;variablename&gt;&#39; 隱藏了封閉區塊中的變數
 ms.date: 07/20/2015
 ms.prod: .net
-ms.reviewer: 
-ms.suite: 
-ms.technology: devlang-visual-basic
+ms.reviewer: ''
+ms.suite: ''
+ms.technology:
+- devlang-visual-basic
 ms.topic: article
 f1_keywords:
 - vbc30616
 - bc30616
-helpviewer_keywords: BC30616
+helpviewer_keywords:
+- BC30616
 ms.assetid: e7658ebc-da45-451b-a409-a0f8915f0beb
-caps.latest.revision: "8"
+caps.latest.revision: 8
 author: dotnet-bot
 ms.author: dotnetcontent
 ms.openlocfilehash: 2af570cd002b4be4e15a7c03b0ffc2ff84ba3982

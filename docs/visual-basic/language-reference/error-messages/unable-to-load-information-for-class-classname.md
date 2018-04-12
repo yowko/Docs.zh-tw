@@ -1,17 +1,19 @@
 ---
-title: "無法載入資訊類別 &#39;&lt;classname&gt;&#39;"
+title: 無法載入資訊類別 &#39;&lt;classname&gt;&#39;
 ms.date: 07/20/2015
 ms.prod: .net
-ms.reviewer: 
-ms.suite: 
-ms.technology: devlang-visual-basic
+ms.reviewer: ''
+ms.suite: ''
+ms.technology:
+- devlang-visual-basic
 ms.topic: article
 f1_keywords:
 - vbc30712
 - bc30712
-helpviewer_keywords: BC30712
+helpviewer_keywords:
+- BC30712
 ms.assetid: c7ffbd6d-05c6-4261-b44b-1bcd521bb350
-caps.latest.revision: "10"
+caps.latest.revision: 10
 author: dotnet-bot
 ms.author: dotnetcontent
 ms.openlocfilehash: f6f8d53b802e70bbbe2d5a6c70d34884b49b4024

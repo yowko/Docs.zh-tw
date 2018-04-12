@@ -1,18 +1,20 @@
 ---
-title: "XML CDATA 常值 (Visual Basic)"
+title: XML CDATA 常值 (Visual Basic)
 ms.date: 07/20/2015
 ms.prod: .net
-ms.reviewer: 
-ms.suite: 
-ms.technology: devlang-visual-basic
+ms.reviewer: ''
+ms.suite: ''
+ms.technology:
+- devlang-visual-basic
 ms.topic: article
-f1_keywords: vb.XmlLiteralCdata
+f1_keywords:
+- vb.XmlLiteralCdata
 helpviewer_keywords:
 - CDATA literal [Visual Basic]
 - XML CDATA literal [Visual Basic]
 - XML literals [Visual Basic], CDATA
 ms.assetid: 9eafb6a4-dd9d-4866-85e8-0654c65abc44
-caps.latest.revision: "16"
+caps.latest.revision: 16
 author: dotnet-bot
 ms.author: dotnetcontent
 ms.openlocfilehash: 906fd2494dd952c08088b9b7e38dba4505780481

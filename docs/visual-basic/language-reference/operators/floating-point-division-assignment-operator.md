@@ -1,12 +1,14 @@
 ---
-title: "/= 運算子 (Visual Basic)"
+title: /= 運算子 (Visual Basic)
 ms.date: 07/20/2015
 ms.prod: .net
-ms.reviewer: 
-ms.suite: 
-ms.technology: devlang-visual-basic
+ms.reviewer: ''
+ms.suite: ''
+ms.technology:
+- devlang-visual-basic
 ms.topic: article
-f1_keywords: vb./=
+f1_keywords:
+- vb./=
 helpviewer_keywords:
 - assignment statements [Visual Basic], compound
 - statements [Visual Basic], compound assignment
@@ -14,7 +16,7 @@ helpviewer_keywords:
 - operator /=
 - compound assignment statements [Visual Basic]
 ms.assetid: a1e22d0e-8380-4761-9da1-84fb51c34821
-caps.latest.revision: "23"
+caps.latest.revision: 23
 author: dotnet-bot
 ms.author: dotnetcontent
 ms.openlocfilehash: 94448856072a949582e64577287134c4b975bfec
