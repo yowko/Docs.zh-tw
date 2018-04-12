@@ -1,17 +1,19 @@
 ---
-title: "預設屬性的存取權是繼承的介面成員 &#39; 中模稜兩可&lt;defaultpropertyname&gt;&#39; 介面 &#39;&lt;介面名稱 1>.<&gt;&#39; 和 &#39;&lt;defaultpropertyname&gt;&#39; 介面 &#39;&lt;介面名稱 2>&gt;&#39;"
+title: 預設屬性的存取權是繼承的介面成員 &#39; 中模稜兩可&lt;defaultpropertyname&gt;&#39; 介面 &#39;&lt;介面名稱 1>.<&gt;&#39; 和 &#39;&lt;defaultpropertyname&gt;&#39; 介面 &#39;&lt;介面名稱 2>&gt;&#39;
 ms.date: 07/20/2015
 ms.prod: .net
-ms.reviewer: 
-ms.suite: 
-ms.technology: devlang-visual-basic
+ms.reviewer: ''
+ms.suite: ''
+ms.technology:
+- devlang-visual-basic
 ms.topic: article
 f1_keywords:
 - vbc30686
 - bc30686
-helpviewer_keywords: BC30686
+helpviewer_keywords:
+- BC30686
 ms.assetid: 784fefec-ef57-48cf-b960-957df419b439
-caps.latest.revision: "13"
+caps.latest.revision: 13
 author: dotnet-bot
 ms.author: dotnetcontent
 ms.openlocfilehash: 23d613668ee2d92484117759dd614ed2cad4bcb2

@@ -1,17 +1,19 @@
 ---
-title: "必須有陳述式結尾"
+title: 必須有陳述式結尾
 ms.date: 07/20/2015
 ms.prod: .net
-ms.reviewer: 
-ms.suite: 
-ms.technology: devlang-visual-basic
+ms.reviewer: ''
+ms.suite: ''
+ms.technology:
+- devlang-visual-basic
 ms.topic: article
 f1_keywords:
 - bc30205
 - vbc30205
-helpviewer_keywords: BC30205
+helpviewer_keywords:
+- BC30205
 ms.assetid: 53c7f825-a737-4b76-a1fa-f67745b8bd40
-caps.latest.revision: "12"
+caps.latest.revision: 12
 author: dotnet-bot
 ms.author: dotnetcontent
 ms.openlocfilehash: 4934952015cb4871bcd90cef982eab5425b1617f

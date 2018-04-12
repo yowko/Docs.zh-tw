@@ -1,17 +1,19 @@
 ---
-title: "&#39;行 &#39;陳述式已不再支援 （Visual Basic 編譯器錯誤）"
+title: '&#39;行 &#39;陳述式已不再支援 （Visual Basic 編譯器錯誤）'
 ms.date: 07/20/2015
 ms.prod: .net
-ms.reviewer: 
-ms.suite: 
-ms.technology: devlang-visual-basic
+ms.reviewer: ''
+ms.suite: ''
+ms.technology:
+- devlang-visual-basic
 ms.topic: article
 f1_keywords:
 - bc30830
 - vbc30830
-helpviewer_keywords: BC30830
+helpviewer_keywords:
+- BC30830
 ms.assetid: 4734bc1d-882e-4555-b498-1f1ec0399d16
-caps.latest.revision: "11"
+caps.latest.revision: 11
 author: dotnet-bot
 ms.author: dotnetcontent
 ms.openlocfilehash: 9d2db5dc786749360dfcf6789f12b5659d5713fc

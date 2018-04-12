@@ -1,17 +1,19 @@
 ---
-title: "事件不可以宣告為具有傳回型別的委派類型"
+title: 事件不可以宣告為具有傳回型別的委派類型
 ms.date: 07/20/2015
 ms.prod: .net
-ms.reviewer: 
-ms.suite: 
-ms.technology: devlang-visual-basic
+ms.reviewer: ''
+ms.suite: ''
+ms.technology:
+- devlang-visual-basic
 ms.topic: article
 f1_keywords:
 - bc31084
 - vbc31084
-helpviewer_keywords: BC31084
+helpviewer_keywords:
+- BC31084
 ms.assetid: 6111c5ca-d30b-490a-812e-dd422e221c7d
-caps.latest.revision: "9"
+caps.latest.revision: 9
 author: dotnet-bot
 ms.author: dotnetcontent
 ms.openlocfilehash: 281864fd9054fbb53471f32bbebaa885ba85c4dc

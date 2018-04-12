@@ -1,17 +1,19 @@
 ---
-title: "用來做為選擇性參數類型的泛型參數必須受到類別條件約束"
+title: 用來做為選擇性參數類型的泛型參數必須受到類別條件約束
 ms.date: 07/20/2015
 ms.prod: .net
-ms.reviewer: 
-ms.suite: 
-ms.technology: devlang-visual-basic
+ms.reviewer: ''
+ms.suite: ''
+ms.technology:
+- devlang-visual-basic
 ms.topic: article
 f1_keywords:
 - vbc32124
 - bc32124
-helpviewer_keywords: BC32124
+helpviewer_keywords:
+- BC32124
 ms.assetid: 55aa8b2a-9ce3-4620-a710-2f9b0feb6143
-caps.latest.revision: "8"
+caps.latest.revision: 8
 author: dotnet-bot
 ms.author: dotnetcontent
 ms.openlocfilehash: a13ea66f12e54db4e585577e20e1f5396669f1a8

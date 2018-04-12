@@ -1,14 +1,16 @@
 ---
-title: "使用權限遭拒 (Visual Basic)"
+title: 使用權限遭拒 (Visual Basic)
 ms.date: 07/20/2015
 ms.prod: .net
-ms.reviewer: 
-ms.suite: 
-ms.technology: devlang-visual-basic
+ms.reviewer: ''
+ms.suite: ''
+ms.technology:
+- devlang-visual-basic
 ms.topic: article
-f1_keywords: vbrID70
+f1_keywords:
+- vbrID70
 ms.assetid: 71f46756-f522-4814-aab4-492bf9924245
-caps.latest.revision: "8"
+caps.latest.revision: 8
 author: dotnet-bot
 ms.author: dotnetcontent
 ms.openlocfilehash: c5d7965ebd42cb3e56d66966d035be9ba3d3957c

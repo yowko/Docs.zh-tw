@@ -1,12 +1,14 @@
 ---
-title: "如何：在查詢中傳回項目屬性的子集 (C# 程式設計手冊)"
+title: 如何：在查詢中傳回項目屬性的子集 (C# 程式設計手冊)
 ms.date: 07/20/2015
 ms.prod: .net
-ms.technology: devlang-csharp
+ms.technology:
+- devlang-csharp
 ms.topic: article
-helpviewer_keywords: anonymous types [C#], for subsets of element properties
+helpviewer_keywords:
+- anonymous types [C#], for subsets of element properties
 ms.assetid: fabdf349-f443-4e3f-8368-6c471be1dd7b
-caps.latest.revision: "11"
+caps.latest.revision: 11
 author: BillWagner
 ms.author: wiwagn
 ms.openlocfilehash: 6654b162fbdeb59ed2a135d7d8cf58c8b3406c13

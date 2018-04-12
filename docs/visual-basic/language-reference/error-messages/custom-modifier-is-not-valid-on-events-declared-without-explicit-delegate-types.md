@@ -1,17 +1,19 @@
 ---
-title: "&#39;自訂 &#39;修飾詞宣告沒有以明確委派類型的事件中無效"
+title: '&#39;自訂 &#39;修飾詞宣告沒有以明確委派類型的事件中無效'
 ms.date: 07/20/2015
 ms.prod: .net
-ms.reviewer: 
-ms.suite: 
-ms.technology: devlang-visual-basic
+ms.reviewer: ''
+ms.suite: ''
+ms.technology:
+- devlang-visual-basic
 ms.topic: article
 f1_keywords:
 - vbc31122
 - bc31122
-helpviewer_keywords: BC31122
+helpviewer_keywords:
+- BC31122
 ms.assetid: 6911f0d1-641a-473b-906d-8ee5681194be
-caps.latest.revision: "9"
+caps.latest.revision: 9
 author: dotnet-bot
 ms.author: dotnetcontent
 ms.openlocfilehash: 844bd033ea05e373b04a04f80777af77179c1263

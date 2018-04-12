@@ -1,16 +1,18 @@
 ---
-title: "My.Response 物件"
+title: My.Response 物件
 ms.date: 07/20/2015
 ms.prod: .net
-ms.suite: 
-ms.technology: devlang-visual-basic
+ms.suite: ''
+ms.technology:
+- devlang-visual-basic
 ms.topic: article
 f1_keywords:
 - My.MyWebExtension.Response
 - My.Response
-helpviewer_keywords: My.Response object
+helpviewer_keywords:
+- My.Response object
 ms.assetid: 626359bc-3165-40b4-bfaf-2c610e26eb5b
-caps.latest.revision: "9"
+caps.latest.revision: 9
 author: dotnet-bot
 ms.author: dotnetcontent
 ms.openlocfilehash: 76d0e701107add0d5bd468ba7a829759739e0cd9

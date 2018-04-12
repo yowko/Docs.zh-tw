@@ -1,13 +1,15 @@
 ---
-title: "字串函式 (Visual Basic)"
+title: 字串函式 (Visual Basic)
 ms.date: 07/20/2015
 ms.prod: .net
-ms.suite: 
-ms.technology: devlang-visual-basic
+ms.suite: ''
+ms.technology:
+- devlang-visual-basic
 ms.topic: article
-helpviewer_keywords: string functions
+helpviewer_keywords:
+- string functions
 ms.assetid: f1bf9ac2-cbcf-4298-ae51-53182076bdc8
-caps.latest.revision: "8"
+caps.latest.revision: 8
 author: dotnet-bot
 ms.author: dotnetcontent
 ms.openlocfilehash: 0e7672f03cda99aa0e1dcecd79b0358f9d5f16f0

@@ -1,12 +1,14 @@
 ---
-title: "執行階段中的泛型 (C# 程式設計手冊)"
+title: 執行階段中的泛型 (C# 程式設計手冊)
 ms.date: 07/20/2015
 ms.prod: .net
-ms.technology: devlang-csharp
+ms.technology:
+- devlang-csharp
 ms.topic: article
-helpviewer_keywords: generics [C#], at run time
+helpviewer_keywords:
+- generics [C#], at run time
 ms.assetid: 119df7e6-9ceb-49df-af36-24f8f8c0747f
-caps.latest.revision: "18"
+caps.latest.revision: 18
 author: BillWagner
 ms.author: wiwagn
 ms.openlocfilehash: 5ef0b63b293ec277ebf9331e8f282ce2c1692d31

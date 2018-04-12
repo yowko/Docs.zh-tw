@@ -1,17 +1,19 @@
 ---
-title: "無法寫入暫存檔，因為無法使用暫存路徑"
+title: 無法寫入暫存檔，因為無法使用暫存路徑
 ms.date: 07/20/2015
 ms.prod: .net
-ms.reviewer: 
-ms.suite: 
-ms.technology: devlang-visual-basic
+ms.reviewer: ''
+ms.suite: ''
+ms.technology:
+- devlang-visual-basic
 ms.topic: article
 f1_keywords:
 - vbc30698
 - bc30698
-helpviewer_keywords: BC30698
+helpviewer_keywords:
+- BC30698
 ms.assetid: 3b77b7e3-8b17-40de-b4e1-05e4b9b325ad
-caps.latest.revision: "8"
+caps.latest.revision: 8
 author: dotnet-bot
 ms.author: dotnetcontent
 ms.openlocfilehash: be5576c56c2c6b2b1021c98e1e48314beaac4cbd

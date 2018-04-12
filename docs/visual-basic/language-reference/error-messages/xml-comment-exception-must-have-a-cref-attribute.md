@@ -1,17 +1,19 @@
 ---
-title: "XML 註解例外狀況必須有 &#39; cref &#39;屬性"
+title: XML 註解例外狀況必須有 &#39; cref &#39;屬性
 ms.date: 07/20/2015
 ms.prod: .net
-ms.reviewer: 
-ms.suite: 
-ms.technology: devlang-visual-basic
+ms.reviewer: ''
+ms.suite: ''
+ms.technology:
+- devlang-visual-basic
 ms.topic: article
 f1_keywords:
 - bc42319
 - vbc42319
-helpviewer_keywords: BC42319
+helpviewer_keywords:
+- BC42319
 ms.assetid: 62eeeba3-6811-48be-b1ef-c2e4feda3177
-caps.latest.revision: "13"
+caps.latest.revision: 13
 author: dotnet-bot
 ms.author: dotnetcontent
 ms.openlocfilehash: c0c22c9cd9415faf17d027c3751d166662a92b50

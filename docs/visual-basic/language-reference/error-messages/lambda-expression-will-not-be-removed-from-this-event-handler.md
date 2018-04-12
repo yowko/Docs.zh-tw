@@ -1,17 +1,19 @@
 ---
-title: "Lambda 運算式將不會從這個事件處理常式中移除"
+title: Lambda 運算式將不會從這個事件處理常式中移除
 ms.date: 07/20/2015
 ms.prod: .net
-ms.reviewer: 
-ms.suite: 
-ms.technology: devlang-visual-basic
+ms.reviewer: ''
+ms.suite: ''
+ms.technology:
+- devlang-visual-basic
 ms.topic: article
 f1_keywords:
 - bc42326
 - vbc42326
-helpviewer_keywords: BC42326
+helpviewer_keywords:
+- BC42326
 ms.assetid: 63214dc6-0112-4245-8ebf-7c9e8f5a5782
-caps.latest.revision: "8"
+caps.latest.revision: 8
 author: dotnet-bot
 ms.author: dotnetcontent
 ms.openlocfilehash: 1a4c57d1f8f41d2d9ebb645d3f2628c32a2c4e4c

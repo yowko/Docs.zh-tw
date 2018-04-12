@@ -1,17 +1,19 @@
 ---
-title: "&#39;&lt;typename&gt;&#39; 型別，無法當成運算式使用"
+title: '&#39;&lt;typename&gt;&#39; 型別，無法當成運算式使用'
 ms.date: 07/20/2015
 ms.prod: .net
-ms.reviewer: 
-ms.suite: 
-ms.technology: devlang-visual-basic
+ms.reviewer: ''
+ms.suite: ''
+ms.technology:
+- devlang-visual-basic
 ms.topic: article
 f1_keywords:
 - bc30108
 - vbc30108
-helpviewer_keywords: BC30108
+helpviewer_keywords:
+- BC30108
 ms.assetid: 7931361d-78e2-40ca-ac69-e3374273b248
-caps.latest.revision: "8"
+caps.latest.revision: 8
 author: dotnet-bot
 ms.author: dotnetcontent
 ms.openlocfilehash: 2cffc528055b78fccb9953ee781dbec0af416002

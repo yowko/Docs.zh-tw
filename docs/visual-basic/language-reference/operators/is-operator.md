@@ -1,19 +1,21 @@
 ---
-title: "Is 運算子 (Visual Basic)"
+title: Is 運算子 (Visual Basic)
 ms.date: 07/20/2015
 ms.prod: .net
-ms.reviewer: 
-ms.suite: 
-ms.technology: devlang-visual-basic
+ms.reviewer: ''
+ms.suite: ''
+ms.technology:
+- devlang-visual-basic
 ms.topic: article
-f1_keywords: vb.is
+f1_keywords:
+- vb.is
 helpviewer_keywords:
 - comparison operators [Visual Basic]
 - equivalent objects
 - TypeOf...Is expression
 - Is operator [Visual Basic]
 ms.assetid: 8045a6c8-2a83-45b6-ad47-d09a704c656d
-caps.latest.revision: "12"
+caps.latest.revision: 12
 author: dotnet-bot
 ms.author: dotnetcontent
 ms.openlocfilehash: 4b1f3f0fa1fd782550c08c816f47b7541399198e

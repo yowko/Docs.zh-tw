@@ -1,17 +1,19 @@
 ---
-title: "&#39; IsNot &#39;運算元的類型 &#39; typename &#39;可以只相較於 &#39;執行任何動作 &#39;，因為 &#39; typename &#39;是可為 null 的型別"
+title: '&#39; IsNot &#39;運算元的類型 &#39; typename &#39;可以只相較於 &#39;執行任何動作 &#39;，因為 &#39; typename &#39;是可為 null 的型別'
 ms.date: 07/20/2015
 ms.prod: .net
-ms.reviewer: 
-ms.suite: 
-ms.technology: devlang-visual-basic
+ms.reviewer: ''
+ms.suite: ''
+ms.technology:
+- devlang-visual-basic
 ms.topic: article
 f1_keywords:
 - bc32128
 - vbc32128
-helpviewer_keywords: BC32128
+helpviewer_keywords:
+- BC32128
 ms.assetid: 1155b23a-ad75-4bab-b9da-73f35c767a36
-caps.latest.revision: "5"
+caps.latest.revision: 5
 author: dotnet-bot
 ms.author: dotnetcontent
 ms.openlocfilehash: ec0ae1561bfbee998e7c65f6023012c0f982a8a7

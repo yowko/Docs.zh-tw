@@ -1,14 +1,16 @@
 ---
-title: "運算子 (依功能排列) (Visual Basic)"
+title: 運算子 (依功能排列) (Visual Basic)
 ms.date: 07/20/2015
 ms.prod: .net
-ms.reviewer: 
-ms.suite: 
-ms.technology: devlang-visual-basic
+ms.reviewer: ''
+ms.suite: ''
+ms.technology:
+- devlang-visual-basic
 ms.topic: article
-helpviewer_keywords: operators [Visual Basic]
+helpviewer_keywords:
+- operators [Visual Basic]
 ms.assetid: d1fb027c-872b-4ccc-afc8-2380e3f65d4a
-caps.latest.revision: "8"
+caps.latest.revision: 8
 author: dotnet-bot
 ms.author: dotnetcontent
 ms.openlocfilehash: de65fdd3a71c87199127b9013a6e89e0528be18e

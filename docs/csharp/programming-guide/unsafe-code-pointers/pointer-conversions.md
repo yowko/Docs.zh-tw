@@ -1,12 +1,14 @@
 ---
-title: "指標轉換 (C# 程式設計手冊)"
+title: 指標轉換 (C# 程式設計手冊)
 ms.date: 07/20/2015
 ms.prod: .net
-ms.technology: devlang-csharp
+ms.technology:
+- devlang-csharp
 ms.topic: article
-helpviewer_keywords: pointers [C#], conversions
+helpviewer_keywords:
+- pointers [C#], conversions
 ms.assetid: f0e87502-477a-4ede-a31f-7a3e262e46fb
-caps.latest.revision: "17"
+caps.latest.revision: 17
 author: BillWagner
 ms.author: wiwagn
 ms.openlocfilehash: 36589d139c91e04d9e3d8b31281a91c26b85a5d5

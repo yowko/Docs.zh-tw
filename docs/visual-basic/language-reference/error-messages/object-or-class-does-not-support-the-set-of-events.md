@@ -1,14 +1,16 @@
 ---
-title: "物件或類別不支援事件的設定"
+title: 物件或類別不支援事件的設定
 ms.date: 07/20/2015
 ms.prod: .net
-ms.reviewer: 
-ms.suite: 
-ms.technology: devlang-visual-basic
+ms.reviewer: ''
+ms.suite: ''
+ms.technology:
+- devlang-visual-basic
 ms.topic: article
-f1_keywords: vbrID459
+f1_keywords:
+- vbrID459
 ms.assetid: 785df3f3-2aae-4a25-af36-1f9879d4e5fd
-caps.latest.revision: "8"
+caps.latest.revision: 8
 author: dotnet-bot
 ms.author: dotnetcontent
 ms.openlocfilehash: be4b9140222ef969bfb836fd74f45b8f662360b8

@@ -1,17 +1,19 @@
 ---
-title: "&#39; #ElseIf &#39;之前必須搭配相對應的 &#39; #If &#39;或 &#39; #ElseIf &#39;"
+title: '&#39; #ElseIf &#39;之前必須搭配相對應的 &#39; #If &#39;或 &#39; #ElseIf &#39;'
 ms.date: 07/20/2015
 ms.prod: .net
-ms.reviewer: 
-ms.suite: 
-ms.technology: devlang-visual-basic
+ms.reviewer: ''
+ms.suite: ''
+ms.technology:
+- devlang-visual-basic
 ms.topic: article
 f1_keywords:
 - vbc30014
 - bc30014
-helpviewer_keywords: BC30014
+helpviewer_keywords:
+- BC30014
 ms.assetid: 5215585e-2efa-485a-9efe-9833a1cc83a0
-caps.latest.revision: "9"
+caps.latest.revision: 9
 author: dotnet-bot
 ms.author: dotnetcontent
 ms.openlocfilehash: 4b3a4e809e1108fcd6e116538a1947057e9548ce

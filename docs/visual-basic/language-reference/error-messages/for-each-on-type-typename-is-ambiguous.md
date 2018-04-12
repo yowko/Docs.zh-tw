@@ -1,17 +1,19 @@
 ---
-title: "&#39;每個 &#39;類型 &#39;&lt;typename&gt;&#39; 模稜兩可，因為該類型實作多個執行個體 &#39;System.collections.generic.ienumerable< (Of T) &#39;"
+title: '&#39;每個 &#39;類型 &#39;&lt;typename&gt;&#39; 模稜兩可，因為該類型實作多個執行個體 &#39;System.collections.generic.ienumerable< (Of T) &#39;'
 ms.date: 07/20/2015
 ms.prod: .net
-ms.reviewer: 
-ms.suite: 
-ms.technology: devlang-visual-basic
+ms.reviewer: ''
+ms.suite: ''
+ms.technology:
+- devlang-visual-basic
 ms.topic: article
 f1_keywords:
 - vbc32096
 - bc32096
-helpviewer_keywords: BC32096
+helpviewer_keywords:
+- BC32096
 ms.assetid: ed20d09c-913f-482e-89f8-c0a596c3ec24
-caps.latest.revision: "7"
+caps.latest.revision: 7
 author: dotnet-bot
 ms.author: dotnetcontent
 ms.openlocfilehash: a74178f3f0b2e7589b87046973473582993f3ed9

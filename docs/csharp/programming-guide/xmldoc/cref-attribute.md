@@ -1,12 +1,14 @@
 ---
-title: "cref 屬性 (C# 程式設計手冊)"
+title: cref 屬性 (C# 程式設計手冊)
 ms.date: 07/20/2015
 ms.prod: .net
-ms.technology: devlang-csharp
+ms.technology:
+- devlang-csharp
 ms.topic: article
-helpviewer_keywords: cref [C#]
+helpviewer_keywords:
+- cref [C#]
 ms.assetid: 66a6b0e5-b961-4504-a461-3a4cf481fc8b
-caps.latest.revision: "10"
+caps.latest.revision: 10
 author: BillWagner
 ms.author: wiwagn
 ms.openlocfilehash: 0cffba9083b22813be3dd0379b244f4d078f8549

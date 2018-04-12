@@ -1,13 +1,15 @@
 ---
-title: "登錄摘要 (Visual Basic)"
+title: 登錄摘要 (Visual Basic)
 ms.date: 07/20/2015
 ms.prod: .net
-ms.suite: 
-ms.technology: devlang-visual-basic
+ms.suite: ''
+ms.technology:
+- devlang-visual-basic
 ms.topic: article
-helpviewer_keywords: registry [Visual Basic]
+helpviewer_keywords:
+- registry [Visual Basic]
 ms.assetid: 6e90eb8a-1a4e-4387-8a68-9287dc7875e8
-caps.latest.revision: "14"
+caps.latest.revision: 14
 author: dotnet-bot
 ms.author: dotnetcontent
 ms.openlocfilehash: e1e57ac4650eb625ce2eb18e092024ac40607d81

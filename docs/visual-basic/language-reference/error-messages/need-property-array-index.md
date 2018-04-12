@@ -1,14 +1,16 @@
 ---
-title: "須提供屬性陣列索引"
+title: 須提供屬性陣列索引
 ms.date: 07/20/2015
 ms.prod: .net
-ms.reviewer: 
-ms.suite: 
-ms.technology: devlang-visual-basic
+ms.reviewer: ''
+ms.suite: ''
+ms.technology:
+- devlang-visual-basic
 ms.topic: article
-f1_keywords: vbrID385
+f1_keywords:
+- vbrID385
 ms.assetid: 69ec6d59-ffc4-48ac-8a28-fe6853389843
-caps.latest.revision: "8"
+caps.latest.revision: 8
 author: dotnet-bot
 ms.author: dotnetcontent
 ms.openlocfilehash: bca508b33204ddb6385b0273f1006419e7c2d15f

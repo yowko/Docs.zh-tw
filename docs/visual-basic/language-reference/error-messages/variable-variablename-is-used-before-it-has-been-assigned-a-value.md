@@ -1,17 +1,19 @@
 ---
-title: "變數 &#39;&lt;variablename&gt;&#39; 已在指派值之前使用"
+title: 變數 &#39;&lt;variablename&gt;&#39; 已在指派值之前使用
 ms.date: 07/20/2015
 ms.prod: .net
-ms.reviewer: 
-ms.suite: 
-ms.technology: devlang-visual-basic
+ms.reviewer: ''
+ms.suite: ''
+ms.technology:
+- devlang-visual-basic
 ms.topic: article
 f1_keywords:
 - vbc42104
 - BC42104
-helpviewer_keywords: BC42104
+helpviewer_keywords:
+- BC42104
 ms.assetid: 6909aa0b-b4a1-46f5-a18c-ba3e565c1dd8
-caps.latest.revision: "10"
+caps.latest.revision: 10
 author: dotnet-bot
 ms.author: dotnetcontent
 ms.openlocfilehash: 201667c250e15bb9af73e64e2d8c924c1952d1be

@@ -1,12 +1,14 @@
 ---
-title: "運算子不是有效值 &#39;&lt;name1&gt;&#39; 和 &#39;&lt;name2&gt;&#39;"
+title: 運算子不是有效值 &#39;&lt;name1&gt;&#39; 和 &#39;&lt;name2&gt;&#39;
 ms.date: 07/20/2015
 ms.prod: .net
-ms.technology: devlang-visual-basic
+ms.technology:
+- devlang-visual-basic
 ms.topic: article
-f1_keywords: vbrNoValidOperator_TwoOperands
+f1_keywords:
+- vbrNoValidOperator_TwoOperands
 ms.assetid: b2b1e6ce-d262-4644-8085-e48a2e2f06a6
-caps.latest.revision: "7"
+caps.latest.revision: 7
 author: dotnet-bot
 ms.author: dotnetcontent
 ms.openlocfilehash: 1898cf4830a587fbfc086d518be3e8aea801c7ac

@@ -1,17 +1,19 @@
 ---
-title: "這 &#39; 第一個陳述式新的子 &#39;必須明確呼叫 &#39;MyBase.New &#39;或 &#39;MyClass.New &#39;因為 &#39;&lt;constructorname&gt;&#39; 中的基底類別 &#39;&lt;基&gt;&#39; &#39;&lt;衍生類別名稱&gt;&#39; 已標記為過時： &#39;&lt;errormessage&gt;&#39;"
+title: 這 &#39; 第一個陳述式新的子 &#39;必須明確呼叫 &#39;MyBase.New &#39;或 &#39;MyClass.New &#39;因為 &#39;&lt;constructorname&gt;&#39; 中的基底類別 &#39;&lt;基&gt;&#39; &#39;&lt;衍生類別名稱&gt;&#39; 已標記為過時： &#39;&lt;errormessage&gt;&#39;
 ms.date: 07/20/2015
 ms.prod: .net
-ms.reviewer: 
-ms.suite: 
-ms.technology: devlang-visual-basic
+ms.reviewer: ''
+ms.suite: ''
+ms.technology:
+- devlang-visual-basic
 ms.topic: article
 f1_keywords:
 - vbc30920
 - bc30920
-helpviewer_keywords: BC30920
+helpviewer_keywords:
+- BC30920
 ms.assetid: e47dc755-4294-4368-b813-2177b7677957
-caps.latest.revision: "10"
+caps.latest.revision: 10
 author: dotnet-bot
 ms.author: dotnetcontent
 ms.openlocfilehash: 8882acd947251d85804fbefd54267ce078e31b95

@@ -1,17 +1,19 @@
 ---
-title: "&lt;type1&gt;&#39;&lt;typename&gt;&#39; 必須實作 &#39;&lt;methodname&gt;&#39; 介面 &#39;&lt;介面名稱&gt;&#39;"
+title: '&lt;type1&gt;&#39;&lt;typename&gt;&#39; 必須實作 &#39;&lt;methodname&gt;&#39; 介面 &#39;&lt;介面名稱&gt;&#39;'
 ms.date: 07/20/2015
 ms.prod: .net
-ms.reviewer: 
-ms.suite: 
-ms.technology: devlang-visual-basic
+ms.reviewer: ''
+ms.suite: ''
+ms.technology:
+- devlang-visual-basic
 ms.topic: article
 f1_keywords:
 - vbc30149
 - bc30149
-helpviewer_keywords: BC30149
+helpviewer_keywords:
+- BC30149
 ms.assetid: 29d1b7f4-dca7-478c-bbe7-c657f342c183
-caps.latest.revision: "10"
+caps.latest.revision: 10
 author: dotnet-bot
 ms.author: dotnetcontent
 ms.openlocfilehash: e803ec7d0054f2fa1b9ed2a731fd30c9c3060468

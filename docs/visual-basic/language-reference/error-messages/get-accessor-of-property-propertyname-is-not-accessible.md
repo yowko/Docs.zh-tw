@@ -1,17 +1,19 @@
 ---
-title: "&#39;Get &#39;存取子屬性 &#39;&lt;propertyname&gt;&#39; 不能存取"
+title: '&#39;Get &#39;存取子屬性 &#39;&lt;propertyname&gt;&#39; 不能存取'
 ms.date: 07/20/2015
 ms.prod: .net
-ms.reviewer: 
-ms.suite: 
-ms.technology: devlang-visual-basic
+ms.reviewer: ''
+ms.suite: ''
+ms.technology:
+- devlang-visual-basic
 ms.topic: article
 f1_keywords:
 - vbc31103
 - bc31103
-helpviewer_keywords: BC31103
+helpviewer_keywords:
+- BC31103
 ms.assetid: 3c346c32-7669-4b04-841d-7a9df9cb703e
-caps.latest.revision: "9"
+caps.latest.revision: 9
 author: dotnet-bot
 ms.author: dotnetcontent
 ms.openlocfilehash: 167e040570af1fc78ce48f5e930e54981ba909ae

@@ -1,17 +1,19 @@
 ---
-title: "函式評估已停用，因為先前的函式評估逾時"
+title: 函式評估已停用，因為先前的函式評估逾時
 ms.date: 07/20/2015
 ms.prod: .net
-ms.reviewer: 
-ms.suite: 
-ms.technology: devlang-visual-basic
+ms.reviewer: ''
+ms.suite: ''
+ms.technology:
+- devlang-visual-basic
 ms.topic: article
 f1_keywords:
 - bc30957
 - vbc30957
-helpviewer_keywords: BC30957
+helpviewer_keywords:
+- BC30957
 ms.assetid: 561e593a-f50a-4b72-a708-4cab60ec7b28
-caps.latest.revision: "7"
+caps.latest.revision: 7
 author: dotnet-bot
 ms.author: dotnetcontent
 ms.openlocfilehash: 05067e730486b443b7a508adb499f34c060d5093

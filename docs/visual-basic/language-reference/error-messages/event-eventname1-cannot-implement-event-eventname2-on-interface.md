@@ -1,17 +1,19 @@
 ---
-title: "事件 &#39;&lt;eventname1&gt;&#39; 無法實作事件 &#39;&lt;事件名稱 2>&gt;&#39; 介面 &#39;&lt;介面&gt;&#39; 因為它們的委派類型 &#39;&lt;delegate1&gt;&#39; 和 &#39;&lt;delegate2&gt;&#39; 不相符"
+title: 事件 &#39;&lt;eventname1&gt;&#39; 無法實作事件 &#39;&lt;事件名稱 2>&gt;&#39; 介面 &#39;&lt;介面&gt;&#39; 因為它們的委派類型 &#39;&lt;delegate1&gt;&#39; 和 &#39;&lt;delegate2&gt;&#39; 不相符
 ms.date: 07/20/2015
 ms.prod: .net
-ms.reviewer: 
-ms.suite: 
-ms.technology: devlang-visual-basic
+ms.reviewer: ''
+ms.suite: ''
+ms.technology:
+- devlang-visual-basic
 ms.topic: article
 f1_keywords:
 - vbc31423
 - bc31423
-helpviewer_keywords: BC31423
+helpviewer_keywords:
+- BC31423
 ms.assetid: 2e754b66-5836-48ff-9697-b9c0d7085f18
-caps.latest.revision: "6"
+caps.latest.revision: 6
 author: dotnet-bot
 ms.author: dotnetcontent
 ms.openlocfilehash: b0fcbbf8a6e23270e4dcbf9d813c773e1522a92a
