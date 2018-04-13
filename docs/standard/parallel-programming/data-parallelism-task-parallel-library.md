@@ -1,12 +1,12 @@
 ---
-title: "資料平行處理原則 (工作平行程式庫)"
-ms.custom: 
+title: 資料平行處理原則 (工作平行程式庫)
+ms.custom: ''
 ms.date: 03/30/2017
 ms.prod: .net
-ms.reviewer: 
-ms.suite: 
+ms.reviewer: ''
+ms.suite: ''
 ms.technology: dotnet-standard
-ms.tgt_pltfrm: 
+ms.tgt_pltfrm: ''
 ms.topic: article
 dev_langs:
 - csharp
@@ -14,7 +14,7 @@ dev_langs:
 helpviewer_keywords:
 - parallelism, data
 ms.assetid: 3f05f33f-f1da-4b16-81c2-9ceff1bef449
-caps.latest.revision: 
+caps.latest.revision: 25
 author: rpetrusha
 ms.author: ronpet
 manager: wpickett

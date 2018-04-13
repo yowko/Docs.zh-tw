@@ -1,12 +1,12 @@
 ---
-title: "TPL 和傳統 .NET Framework 非同步程式設計"
-ms.custom: 
+title: TPL 和傳統 .NET Framework 非同步程式設計
+ms.custom: ''
 ms.date: 03/30/2017
 ms.prod: .net
-ms.reviewer: 
-ms.suite: 
+ms.reviewer: ''
+ms.suite: ''
 ms.technology: dotnet-standard
-ms.tgt_pltfrm: 
+ms.tgt_pltfrm: ''
 ms.topic: article
 dev_langs:
 - csharp
@@ -14,7 +14,7 @@ dev_langs:
 helpviewer_keywords:
 - tasks, with other asynchronous models
 ms.assetid: e7b31170-a156-433f-9f26-b1fc7cd1776f
-caps.latest.revision: 
+caps.latest.revision: 16
 author: rpetrusha
 ms.author: ronpet
 manager: wpickett

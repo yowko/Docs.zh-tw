@@ -1,15 +1,17 @@
 ---
-title: "* 運算子 (C# 參考)"
+title: '* 運算子 (C# 參考)'
 ms.date: 07/20/2015
 ms.prod: .net
-ms.technology: devlang-csharp
+ms.technology:
+- devlang-csharp
 ms.topic: article
-f1_keywords: '*_CSharpKeyword'
+f1_keywords:
+- '*_CSharpKeyword'
 helpviewer_keywords:
 - multiplication operator (*) [C#]
 - '* operator [C#]'
 ms.assetid: abd9a5f0-9b24-431e-971a-09ee1c45c50e
-caps.latest.revision: "14"
+caps.latest.revision: 14
 author: BillWagner
 ms.author: wiwagn
 ms.openlocfilehash: 64c32def0935f4347f9aaccc2865b9cd33dd8a70
