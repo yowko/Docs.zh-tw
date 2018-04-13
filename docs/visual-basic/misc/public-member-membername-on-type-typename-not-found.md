@@ -1,12 +1,14 @@
 ---
-title: "Public 成員 &#39;&lt;membername&gt;&#39; 類型 &#39;&lt;typename&gt;&#39; 找不到"
+title: Public 成員 &#39;&lt;membername&gt;&#39; 類型 &#39;&lt;typename&gt;&#39; 找不到
 ms.date: 07/20/2015
 ms.prod: .net
-ms.technology: devlang-visual-basic
+ms.technology:
+- devlang-visual-basic
 ms.topic: article
-f1_keywords: vbrMissingMember_MemberNotFoundOnType2
+f1_keywords:
+- vbrMissingMember_MemberNotFoundOnType2
 ms.assetid: 6300feb8-78ac-4dd0-9653-1d03e1f5bc20
-caps.latest.revision: "8"
+caps.latest.revision: 8
 author: dotnet-bot
 ms.author: dotnetcontent
 ms.openlocfilehash: ca0ac50c9834bcf051d4e0f15409dd26a99046ae
