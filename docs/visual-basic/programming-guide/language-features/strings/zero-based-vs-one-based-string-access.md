@@ -1,16 +1,18 @@
 ---
-title: "以零為起始的 vs。在 Visual Basic 中的其中一個基礎字串存取"
-ms.custom: 
+title: 以零為起始的 vs。在 Visual Basic 中的其中一個基礎字串存取
+ms.custom: ''
 ms.date: 07/20/2015
 ms.prod: .net
-ms.reviewer: 
-ms.suite: 
-ms.technology: devlang-visual-basic
-ms.tgt_pltfrm: 
+ms.reviewer: ''
+ms.suite: ''
+ms.technology:
+- devlang-visual-basic
+ms.tgt_pltfrm: ''
 ms.topic: article
-helpviewer_keywords: strings [Visual Basic], indexing
+helpviewer_keywords:
+- strings [Visual Basic], indexing
 ms.assetid: 0ed39f35-d68e-421d-ae14-460a5c0373b8
-caps.latest.revision: "11"
+caps.latest.revision: 11
 author: dotnet-bot
 ms.author: dotnetcontent
 ms.openlocfilehash: 911f063d6ca9a3f5d88a1f50d9df7f908a488f66

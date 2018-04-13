@@ -1,15 +1,17 @@
 ---
-title: "使用動態物件 (Visual Basic)"
-ms.custom: 
+title: 使用動態物件 (Visual Basic)
+ms.custom: ''
 ms.date: 07/20/2015
 ms.prod: .net
-ms.reviewer: 
-ms.suite: 
-ms.technology: devlang-visual-basic
+ms.reviewer: ''
+ms.suite: ''
+ms.technology:
+- devlang-visual-basic
 ms.topic: article
-helpviewer_keywords: dynamic objects [Visual Basic]
+helpviewer_keywords:
+- dynamic objects [Visual Basic]
 ms.assetid: bdee2a00-07ff-46f9-86dd-fdac9b99cc97
-caps.latest.revision: "12"
+caps.latest.revision: 12
 author: dotnet-bot
 ms.author: dotnetcontent
 ms.openlocfilehash: da70c1e4c7398ad46d48c85b62ab884675bd1a73

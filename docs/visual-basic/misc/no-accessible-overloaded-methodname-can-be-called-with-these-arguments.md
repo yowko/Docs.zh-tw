@@ -1,12 +1,14 @@
 ---
-title: "沒有可存取多載 &#39;&lt;methodname&gt;&#39; 可以呼叫且不用縮小轉換這些引數"
+title: 沒有可存取多載 &#39;&lt;methodname&gt;&#39; 可以呼叫且不用縮小轉換這些引數
 ms.date: 07/20/2015
 ms.prod: .net
-ms.technology: devlang-visual-basic
+ms.technology:
+- devlang-visual-basic
 ms.topic: article
-f1_keywords: vbrAmbiguousMatch_NarrowingConversion1
+f1_keywords:
+- vbrAmbiguousMatch_NarrowingConversion1
 ms.assetid: 2fdbadb9-8ef1-404a-a2ed-ce5f5e55cfcb
-caps.latest.revision: "9"
+caps.latest.revision: 9
 author: dotnet-bot
 ms.author: dotnetcontent
 ms.openlocfilehash: 636dbb082323718d8df0371751828e547d99c760
