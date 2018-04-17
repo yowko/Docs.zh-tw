@@ -1,18 +1,18 @@
 ---
-title: "Docker 應用程式的內部迴圈的開發工作流程"
-description: "Microsoft 平台和工具的容器化 Docker 應用程式生命週期"
-keywords: "Docker, 微服務, ASP.NET, 容器"
+title: Docker 應用程式的內部迴圈的開發工作流程
+description: Microsoft 平台和工具的容器化 Docker 應用程式生命週期
+ms.prod: .net
 author: CESARDELATORRE
 ms.author: wiwagn
 ms.date: 09/22/2017
 ms.workload:
 - dotnet
 - dotnetcore
-ms.openlocfilehash: 632c04507c1478238a5dc2573542f8c88bae2a51
-ms.sourcegitcommit: c3957fdb990060559d73cca44ab3e2c7b4d049c0
+ms.openlocfilehash: 7f49b19b0836636bf7656dc618ef2f181a0d7fff
+ms.sourcegitcommit: 9a4fe1a1c37b26532654b4bbe22d702237950009
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 03/05/2018
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="inner-loop-development-workflow-for-docker-apps"></a>Docker 應用程式的內部迴圈的開發工作流程
 
@@ -52,7 +52,7 @@ ms.lasthandoff: 03/05/2018
 
 Docker for Mac 和 Windows 的最新版本，比以往若要開發 Docker 應用程式，更輕鬆與安裝程式將更為簡單。
 
-**進一歩** 如需有關設定 Docker for Windows 的指示，請移至[https://docs.docker.com/docker-for-windows/](https://docs.docker.com/docker-for-windows/)。
+**進一歩** 如需有關設定 Docker for Windows 的指示，請移至[ https://docs.docker.com/docker-for-windows/ ](https://docs.docker.com/docker-for-windows/)。
 
 如需 Docker for Mac 設定指示，請移至<https://docs.docker.com/docker-for-mac/>。
 
@@ -60,7 +60,7 @@ Docker for Mac 和 Windows 的最新版本，比以往若要開發 Docker 應用
 
 Microsoft 提供 Visual Studio 程式碼，其中是輕量型的程式碼編輯器支援 Mac、 Windows 和 Linux 上並提供 IntelliSense[多語言支援](https://code.visualstudio.com/docs/languages/overview)(JavaScript、.NET、 Go、 Java、 Ruby、 Python 和大部分現代的語言），[偵錯](https://code.visualstudio.com/Docs/editor/debugging)，[與 Git 整合](https://code.visualstudio.com/Docs/editor/versioncontrol)和[延伸模組支援](https://code.visualstudio.com/docs/extensions/overview)。 此編輯器是適用於 Mac 和 Linux 的開發人員的絕佳符合。 在 Windows 中，您也可以使用完整的 Visual Studio 應用程式。
 
-**進一歩** 如需安裝 Visual Studio for Windows、 Mac 或 Linux 的指示，請移至[http://code.visualstudio.com/docs/setup/setup-overview/https://docs.docker.com/docker-for-mac/](http://code.visualstudio.com/docs/setup/setup-overview/https:/docs.docker.com/docker-for-mac/)。
+**進一歩** 如需安裝 Visual Studio for Windows、 Mac 或 Linux 的指示，請移至[ http://code.visualstudio.com/docs/setup/setup-overview/https://docs.docker.com/docker-for-mac/ ](http://code.visualstudio.com/docs/setup/setup-overview/https:/docs.docker.com/docker-for-mac/)。
 
 您可以使用 Docker CLI，並撰寫程式碼，使用任何程式碼編輯器 中，但如果您使用 Visual Studio 程式碼，它可以輕鬆地撰寫 Dockerfile 和 docker compose.yml 檔案工作區中。 此外，您可以從 IDE，以提示可以執行複雜的作業使用 Docker CLI 底下的指令碼執行 Visual Studio 程式碼工作。
 
@@ -125,7 +125,7 @@ ENTRYPOINT ["dotnet", "MyCustomMicroservice.dll"]
 
 **進一歩** 建置.NET Core 應用程式的 Docker 映像的相關資訊，請移至<https://docs.microsoft.com/dotnet/core/docker/building-net-docker-images>。
 
-若要了解如何建置自己的映像，請前往[https://docs.docker.com/engine/ \ 教學課程/dockerimages/](https://docs.docker.com/engine/tutorials/dockerimages/)。
+若要了解如何建置自己的映像，請前往[ https://docs.docker.com/engine/\ 教學課程/dockerimages/](https://docs.docker.com/engine/tutorials/dockerimages/)。
 
 **多平台映像儲存機制**
 
@@ -258,8 +258,8 @@ Docker 主機上，開啟瀏覽器並瀏覽至該網站。您應該會看到您�
 
 您也可以偵錯.NET Core 容器在 Docker 中的使用 Visual Studio 中下, 一節中所述。
 
-**更多資訊：** 若要了解有關偵錯 Node.js Docker 容器的詳細資訊，請移至<https://blog.docker.com/2016/07/live-debugging-docker/>和[https://blogs.msdn.microsoft.com/ \ 使用者\_ed/2016年/02/27 /visual-studio-code-new-features-13-big-debugging-updates-rich-object-hover-conditional-breakpoints-node-js-mono-more/](https://blogs.msdn.microsoft.com/user_ed/2016/02/27/visual-studio-code-new-features-13-big-debugging-updates-rich-object-hover-conditional-breakpoints-node-js-mono-more/)。
+**更多資訊：** 若要了解有關偵錯 Node.js Docker 容器的詳細資訊，請移至<https://blog.docker.com/2016/07/live-debugging-docker/>和[ https://blogs.msdn.microsoft.com/\ 使用者\_ed/2016年/02/27 /visual-studio-code-new-features-13-big-debugging-updates-rich-object-hover-conditional-breakpoints-node-js-mono-more/](https://blogs.msdn.microsoft.com/user_ed/2016/02/27/visual-studio-code-new-features-13-big-debugging-updates-rich-object-hover-conditional-breakpoints-node-js-mono-more/)。
 
 
 >[!div class="step-by-step"]
-[Previous] (docker-apps-development-environment.md) [Next] (visual-studio-tools-for-docker.md)
+[上一個] (docker-應用程式層開發-environment.md) [下一步] (visual-studio-工具-如-docker.md)

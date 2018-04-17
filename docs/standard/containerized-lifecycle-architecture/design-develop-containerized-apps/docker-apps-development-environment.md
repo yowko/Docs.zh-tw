@@ -1,22 +1,22 @@
 ---
-title: "Docker 應用程式的開發環境"
-description: "Microsoft 平台和工具的容器化 Docker 應用程式生命週期"
-keywords: "Docker, 微服務, ASP.NET, 容器"
+title: Docker 應用程式的開發環境
+description: Microsoft 平台和工具的容器化 Docker 應用程式生命週期
+ms.prod: .net
 author: CESARDELATORRE
 ms.author: wiwagn
 ms.date: 09/22/2017
 ms.workload:
 - dotnet
 - dotnetcore
-ms.openlocfilehash: ad1a6e4cb0974ebb067cf1a7be987d696e8bc82a
-ms.sourcegitcommit: e7f04439d78909229506b56935a1105a4149ff3d
+ms.openlocfilehash: c164b94572a8fde58124acaa14d47da574a19383
+ms.sourcegitcommit: 9a4fe1a1c37b26532654b4bbe22d702237950009
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 12/23/2017
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="development-environment-for-docker-apps"></a>Docker 應用程式的開發環境
 
-## <a name="development-tools-choices-ide-or-editor"></a>開發工具的選擇： IDE 或編輯器
+## <a name="development-tools-choices-ide-or-editor"></a>開發工具選擇：IDE 或編輯器
 
 不論您偏好使用完整且功能強大的 IDE 或是套輕量型且敏捷式軟體開發編輯器中，如果 Microsoft 有您涵蓋談到開發 Docker 應用程式。
 
@@ -56,4 +56,4 @@ ms.lasthandoff: 12/23/2017
 
 
 >[!div class="step-by-step"]
-[上一個](協調-高的延展性-availability.md) [下一步] (docker-應用程式-內部-迴圈-workflow.md)
+[上一個] (協調-高的延展性-availability.md) [下一步] (docker-應用程式-內部-迴圈-workflow.md)

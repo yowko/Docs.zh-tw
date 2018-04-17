@@ -1,18 +1,18 @@
 ---
-title: "管理 Docker 的生產環境"
-description: "Microsoft 平台和工具的容器化 Docker 應用程式生命週期"
-keywords: "Docker, 微服務, ASP.NET, 容器"
+title: 管理 Docker 的生產環境
+description: Microsoft 平台和工具的容器化 Docker 應用程式生命週期
+ms.prod: .net
 author: CESARDELATORRE
 ms.author: wiwagn
 ms.date: 09/22/2017
 ms.workload:
 - dotnet
 - dotnetcore
-ms.openlocfilehash: c962543004c88b0a6413cc22d8bdddf954af66f8
-ms.sourcegitcommit: e7f04439d78909229506b56935a1105a4149ff3d
+ms.openlocfilehash: 72ae92c89ed9b51815016205e20b09fc4dced1e1
+ms.sourcegitcommit: 9a4fe1a1c37b26532654b4bbe22d702237950009
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 12/23/2017
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="manage-production-docker-environments"></a>管理 Docker 的生產環境
 
@@ -31,7 +31,7 @@ ms.lasthandoff: 12/23/2017
 
 | 管理工具      | 描述           | 相關的 orchestrators |
 |-----------------------|-----------------------|-----------------------|
-| 容器服務\(UI 管理 Azure 入口網站中的) | [容器服務](https://azure.microsoft.com/en-us/services/container-service/)提供可以讓啟動方式[部署在 Azure 中的容器叢集](https://docs.microsoft.com/azure/container-service/dcos-swarm/container-service-deployment)根據常用 orchestrators Mesosphere DC/OS、 Kubernetes 和 Docker Swarm 等。 <br /><br /> 容器服務進行最佳化平台所的設定。 您只需要選取大小、 主機、 數目和選擇的 orchestrator 工具，且容器服務會處理所有其他項目。 | Mesosphere DC/OS <br /><br /> Kubernetes <br /><br /> Docker 群集 |
+| 容器服務\(UI 管理 Azure 入口網站中的) | [容器服務](https://azure.microsoft.com/en-us/services/container-service/)提供可以讓啟動方式[部署在 Azure 中的容器叢集](https://docs.microsoft.com/azure/container-service/dcos-swarm/container-service-deployment)根據常用 orchestrators Mesosphere DC/OS、 Kubernetes 和 Docker Swarm 等。 <br /><br /> 容器服務進行最佳化平台所的設定。 您只需要選取大小、 主機、 數目和選擇的 orchestrator 工具，且容器服務會處理所有其他項目。 | Mesosphere DC/OS <br /><br /> Kubernetes <br /><br /> Docker Swarm |
 | Docker 通用控制項的平面\(在內部部署或雲端) | [Docker 通用控制項的平面](https://docs.docker.com/v1.11/ucp/overview/)是企業級叢集管理解決方案，從 Docker。 它可協助您從單一位置管理整個叢集。 <br /><br /> Docker 通用控制項的平面是名為 Docker 資料中心提供 Docker Swarm、 通用控制項平面 Docker 和 Docker Trusted Registry 商業產品的一部分。 <br /><br /> Docker 資料中心可以安裝在內部部署，或如 Azure 公用雲端佈建。 | Docker Swarm\(容器服務支援) |
 | Docker 雲端\(也稱為 Tutum; 雲端 SaaS) | [Docker 雲端](https://docs.docker.com/docker-cloud/)是裝載的管理服務 (SaaS) 提供協調流程的功能和 Docker 登錄與建置和測試設備 Dockerized 應用程式映像，可協助您設定和管理您的主機基礎結構，工具和部署功能，可協助您自動化您的映像部署到您具體的基礎結構。 您可以將 SaaS Docker 雲端帳戶連接到您在執行 Docker Swarm 叢集的容器服務中的基礎結構。 | Docker Swarm\(容器服務支援) |
 | Mesosphere 馬拉松\(在內部部署或雲端) | [馬拉松](https://mesosphere.github.io/marathon/docs/marathon-ui.html)Mesosphere 的 DC/OS 和 Apache Mesos 是實際執行等級容器協調流程和排程器平台。 <br /><br /> 它使用 Mesos （DC/OS 根據 Apache Mesos） 來控制長時間執行服務，並提供[web UI 的程序和容器管理](https://mesosphere.github.io/marathon/docs/marathon-ui.html)。 它提供的 web UI 管理工具 | Mesosphere DC/OS\(根據 Apache Mesos; 支援的容器服務) |
@@ -49,4 +49,4 @@ ms.lasthandoff: 12/23/2017
 
 
 >[!div class="step-by-step"]
-[上一個](run-microservices-based-applications-in-production.md) [下一步] (監視-容器化的應用程式-services.md)
+[上一個] (run-microservices-based-applications-in-production.md) [下一步] (監視-容器化的應用程式-services.md)

@@ -1,18 +1,18 @@
 ---
-title: "使用 Visual Studio Tools for Docker (在 Windows 上的 Visual Studio)"
-description: "Microsoft 平台和工具的容器化 Docker 應用程式生命週期"
-keywords: "Docker, 微服務, ASP.NET, 容器"
+title: 使用 Visual Studio Tools for Docker (在 Windows 上的 Visual Studio)
+description: Microsoft 平台和工具的容器化 Docker 應用程式生命週期
+ms.prod: .net
 author: CESARDELATORRE
 ms.author: wiwagn
 ms.date: 09/22/2017
 ms.workload:
 - dotnet
 - dotnetcore
-ms.openlocfilehash: 0525633b23625d915fd447d438c6281fb14b3b46
-ms.sourcegitcommit: c3957fdb990060559d73cca44ab3e2c7b4d049c0
+ms.openlocfilehash: cbd4dea32b98e79e85302aa5d4a5c97b1b0fa556
+ms.sourcegitcommit: 9a4fe1a1c37b26532654b4bbe22d702237950009
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 03/05/2018
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="using-visual-studio-tools-for-docker-visual-studio-on-windows"></a>使用 Visual Studio Tools for Docker (在 Windows 上的 Visual Studio)
 
@@ -26,7 +26,7 @@ Docker for Windows 的最新版本，它就能夠更輕鬆比曾經來開發 Doc
 
 如果您使用 Visual Studio 2015，您必須更新 3 或更新版本以及 Visual Studio Tools for Docker。
 
-**更多資訊：** 如需安裝 Visual Studio 的指示，請移至[https://www.visualstudio.com/ \ 產品/vs-2015年-產品-版本](https://www.visualstudio.com/products/vs-2015-product-editions)。
+**更多資訊：** 如需安裝 Visual Studio 的指示，請移至[ https://www.visualstudio.com/\ 產品/vs-2015年-產品-版本](https://www.visualstudio.com/products/vs-2015-product-editions)。
 
 若要查看安裝 Visual Studio Tools for Docker 的詳細資訊，請移至<http://aka.ms/vstoolsfordocker>和<https://docs.microsoft.com/aspnet/core/host-and-deploy/docker/visual-studio-tools-for-docker>。
 
@@ -70,8 +70,8 @@ Visual Studio Tools for Docker 會提供一致的方式開發，並在本機驗�
 
 建置、 偵錯、 更新和重新整理本機的 Docker 容器中的應用程式： [https://docs.microsoft.com/azure/vs-azure-tools-docker-edit-and-refresh/](https://docs.microsoft.com/azure/vs-azure-tools-docker-edit-and-refresh)
 
-部署至遠端 Docker 主機 ASP.NET 容器： [https://docs.microsoft.com/azure/vs-azure-tools-docker-hosting-web-apps-in-docker/](https://docs.microsoft.com/azure/vs-azure-tools-docker-hosting-web-apps-in-docker)
+將 ASP.NET 容器部署至遠端 Docker 主機： [https://docs.microsoft.com/azure/vs-azure-tools-docker-hosting-web-apps-in-docker/](https://docs.microsoft.com/azure/vs-azure-tools-docker-hosting-web-apps-in-docker)
 
 
 >[!div class="step-by-step"]
-[Previous] (docker-apps-inner-loop-workflow.md) [Next] (set-up-windows-containers-with-powershell.md)
+[上一個] (docker-應用程式-內部-迴圈-workflow.md) [下一步] (set-up-windows-containers-with-powershell.md)

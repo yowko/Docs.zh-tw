@@ -1,18 +1,18 @@
 ---
-title: "Docker 應用程式的外部迴圈 DevOps 工作流程中的步驟"
-description: "Microsoft 平台和工具的容器化 Docker 應用程式生命週期"
-keywords: "Docker, 微服務, ASP.NET, 容器"
+title: Docker 應用程式的外部迴圈 DevOps 工作流程中的步驟
+description: Microsoft 平台和工具的容器化 Docker 應用程式生命週期
+ms.prod: .net
 author: CESARDELATORRE
 ms.author: wiwagn
 ms.date: 09/22/2017
 ms.workload:
 - dotnet
 - dotnetcore
-ms.openlocfilehash: fe51fc4b5026d17f0f9b93e7fd0dedde93ef4a3c
-ms.sourcegitcommit: e7f04439d78909229506b56935a1105a4149ff3d
+ms.openlocfilehash: a03a9d153793b30ca9276b64a0a33e3de26f8f6e
+ms.sourcegitcommit: 9a4fe1a1c37b26532654b4bbe22d702237950009
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 12/23/2017
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="steps-in-the-outer-loop-devops-workflow-for-a-docker-application"></a>Docker 應用程式的外部迴圈 DevOps 工作流程中的步驟
 
@@ -110,13 +110,13 @@ Visual Studio Team Services Docker 擴充功能會在您的 Visual Studio Team S
 
 **進一歩** 讀取組合 Visual Studio Team Services Docker CI 管線，以及若要檢視的逐步解說，請造訪下列網站：
 
-以 Docker 容器中執行 Visual Studio Team Services 代理程式： [https://hub.docker.com/r/ \ microsoft/vsts 代理 /](https://hub.docker.com/r/microsoft/vsts-agent/)
+以 Docker 容器中執行 Visual Studio Team Services 代理程式： [ https://hub.docker.com/r/\ microsoft/vsts 代理 /](https://hub.docker.com/r/microsoft/vsts-agent/)
 
-VSTS Docker 擴充功能： <https://aka.ms/vstsdockerextension>
+VSTS Docker 延伸模組： <https://aka.ms/vstsdockerextension>
 
-建立具有 Visual Studio Team Services 的.NET Core Linux Docker images: <https://blogs.msdn.microsoft.com/stevelasker/2016/06/13/building-net-core-linux-docker-images-with-visual-studio-team-services/>
+建立包含 Visual Studio Team Services 的.NET Core Linux Docker 映像： <https://blogs.msdn.microsoft.com/stevelasker/2016/06/13/building-net-core-linux-docker-images-with-visual-studio-team-services/>
 
-建立 Linux 型 Visual Studio Team 服務使用建立機器 Docker 的支援： <http://donovanbrown.com/post/2016/06/03/Building-a-Linux-Based-Visual-Studio-Team-Service-Build-Machine-with-Docker-Support>
+建立 Linux 型 Visual Studio Team Service 組建電腦與 Docker 的支援： <http://donovanbrown.com/post/2016/06/03/Building-a-Linux-Based-Visual-Studio-Team-Service-Build-Machine-with-Docker-Support>
 
 ### <a name="integrate-test-and-validate-multicontainer-docker-applications"></a>整合、 測試及驗證 multicontainer Docker 應用程式
 
@@ -220,7 +220,7 @@ Visual Studio Team Services 的 Docker 擴充功能可讓您產生包含特定�
 
 **進一歩** 来閱讀更多有關 Visual Studio Team Services 和 Docker CD 管線，請造訪下列網站：
 
-Docker 和 Azure 容器服務的 visual Studio Team Services 擴充功能： [https://aka.ms/ \ vstsdockerextension](https://aka.ms/vstsdockerextension)
+Docker 和 Azure 容器服務的 visual Studio Team Services 擴充功能： [ https://aka.ms/\ vstsdockerextension](https://aka.ms/vstsdockerextension)
 
 Azure 容器服務： <https://aka.ms/azurecontainerservice>
 
@@ -237,4 +237,4 @@ Mesosphere DC/OS: <https://mesosphere.com/product/>
 監視和診斷是 DevOps 領域內的 100%時，只會監視的處理程序和開發小組對測試或測試環境中執行的分析。 這是藉由執行負載測試，或只是藉由監視 beta 或 QA 環境中，嘗試測試版測試人員的新版本。
 
 >[!div class="step-by-step"]
-[上一個](index.md) [下一步] (.../run-manage-monitor-docker-environments/index.md)
+[上一個] (index.md) [下一步] (.../run-manage-monitor-docker-environments/index.md)

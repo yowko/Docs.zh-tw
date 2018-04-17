@@ -1,18 +1,18 @@
 ---
-title: "通用容器的設計原則"
-description: "Microsoft 平台和工具的容器化 Docker 應用程式生命週期"
-keywords: "Docker, 微服務, ASP.NET, 容器"
+title: 通用容器的設計原則
+description: Microsoft 平台和工具的容器化 Docker 應用程式生命週期
+ms.prod: .net
 author: CESARDELATORRE
 ms.author: wiwagn
 ms.date: 09/22/2017
 ms.workload:
 - dotnet
 - dotnetcore
-ms.openlocfilehash: a9cd569a931824c4fab060b99265ea9e3ca75129
-ms.sourcegitcommit: e7f04439d78909229506b56935a1105a4149ff3d
+ms.openlocfilehash: c398e2da979637c450e2c9754ff3c9e8d8233aeb
+ms.sourcegitcommit: 9a4fe1a1c37b26532654b4bbe22d702237950009
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 12/23/2017
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="common-container-design-principles"></a>通用容器的設計原則
 
@@ -26,4 +26,4 @@ ms.lasthandoff: 12/23/2017
 
 
 >[!div class="step-by-step"]
-[上一個](設計-docker-applications.md) [下一步] (龐大 applications.md)
+[上一個] (設計-docker-applications.md) [下一步] (龐大 applications.md)

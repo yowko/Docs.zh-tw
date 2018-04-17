@@ -1,18 +1,18 @@
 ---
 title: 在生產環境中執行組成和 microservices 為基礎的應用程式
 description: Microsoft 平台和工具的容器化 Docker 應用程式生命週期
-keywords: Docker, 微服務, ASP.NET, 容器
+ms.prod: .net
 author: CESARDELATORRE
 ms.author: wiwagn
 ms.date: 09/22/2017
 ms.workload:
 - dotnet
 - dotnetcore
-ms.openlocfilehash: 0d7611d07c9995984269e3f7b071154d9b861367
-ms.sourcegitcommit: c883637b41ee028786edceece4fa872939d2e64c
+ms.openlocfilehash: 596ca1557d67de1f91e9431fa9b31b31ae162266
+ms.sourcegitcommit: 9a4fe1a1c37b26532654b4bbe22d702237950009
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 03/26/2018
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="run-composed-and-microservices-based-applications-in-production-environments"></a>在生產環境中執行組成和 microservices 為基礎的應用程式
 
@@ -38,4 +38,4 @@ Orchestrators 和排程器所提供的功能是以開發並從從頭開始建立
 
 
 >[!div class="step-by-step"]
-[上一個](index.md) [下一步] (管理-生產-docker-environments.md)
+[上一個] (index.md) [下一步] (管理-生產-docker-environments.md)
