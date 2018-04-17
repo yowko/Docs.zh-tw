@@ -1,7 +1,7 @@
-﻿---
-title: "C# 7 的新功能 - C# 指南"
-description: "取得 C# 語言未來版本 7 的新功能概觀。"
-keywords: "C#, .NET, .NET Core, 最新功能, 新功能"
+---
+title: C# 7 的新功能 - C# 指南
+description: 取得 C# 語言未來版本 7 的新功能概觀。
+keywords: C#, .NET, .NET Core, 最新功能, 新功能
 author: BillWagner
 ms.author: wiwagn
 ms.date: 12/21/2016
@@ -21,10 +21,10 @@ ms.lasthandoff: 03/20/2018
 C# 7 新增許多新功能至 C# 語言︰
 * [`out` 變數](#out-variables)
     - 您可以宣告 `out` 內嵌值作為使用它們之方法的引數。
-* [元組](#tuples)
+* [Tuple](#tuples)
     - 您可以建立包含多個公用欄位的輕量、未具名的類型。 編譯器和 IDE 工具了解這些類型的語意。
-* [捨棄](#discards)
-    - 捨棄是當您不在意指派的值時，於指派內使用的僅限寫入且暫時之變數。 解構元組及使用者定義型別，以及使用 `out` 參數呼叫方法時，捨棄特別實用。
+* [Discard](#discards) 變數
+    - Discard 是種僅能用於寫入的暫時性變數，當您不在意指派的值時，便能在指派中使用。 在解構 Tuple 及使用者定義型別，以及使用 `out` 參數呼叫方法時，Discard 變數特別實用。
 * [模式比對](#pattern-matching)
     - 您可以建立以任意類型和這些類型成員的值為基礎的分支邏輯。
 * [`ref` 區域變數和傳回](#ref-locals-and-returns)
@@ -88,18 +88,18 @@ C# 為類別和結構提供豐富的語法，可用來解釋您的設計目的�
 不會驗證這些欄位，且您不能定義自己的方法
 
 > [!NOTE]
-> 元組在 C# 7 之前即可使用，但效率不彰且沒有語言支援。
-> 這表示元組元素只能參考為 `Item1`及 `Item2` 等等。 C# 7 加入了元組的語言支援，讓元組欄位的語意名稱能使用全新且更具效率的元組型別。
+> Tuple 在 C# 7 之前即可使用，但效率不彰且沒有語言支援。
+> 這表示 Tuple 元素只能參考為 `Item1` 及 `Item2` 等等。 C# 7 加入了 Tuple 的語言支援，讓 Tuple 欄位的語意名稱能使用全新且更具效率的 Tuple 型別。
 
 您可以指派每個成員到一個值，以建立 Tuple︰
 
 [!code-csharp[UnnamedTuple](../../../samples/snippets/csharp/new-in-7/program.cs#04_UnnamedTuple "Unnamed tuple")]
 
-指派會建立成員為 `Item1` 與 `Item2` 的元組，而您能使用與 <xref:System.Tuple> 相同的方式加以使用。您可以變更語法，以建立能夠為元組中每位成員提供語意名稱的元組：
+指派會建立成員為 `Item1` 與 `Item2` 的 Tuple，而您能使用與 <xref:System.Tuple> 相同的方式加以使用。您可以變更語法，以建立能夠為 Tuple 中每位成員提供語意名稱的 Tuple：
 
 [!code-csharp[NamedTuple](../../../samples/snippets/csharp/new-in-7/program.cs#05_NamedTuple "Named tuple")]
 
-`namedLetters` Tuple 包含稱為 `Alpha` 和 `Beta` 的欄位。 這些名稱只會在編譯時間出現而不會保留，例如在執行階段使用反映調查元組時。
+`namedLetters` Tuple 包含稱為 `Alpha` 和 `Beta` 的欄位。 這些名稱只會在編譯時間出現而不會保留，例如在執行階段使用反映調查 Tuple 時。
 
 在 Tuple 指派中，您也可以在指派的右邊，指定欄位的名稱︰
 
@@ -149,25 +149,25 @@ C# 為類別和結構提供豐富的語法，可用來解釋您的設計目的�
 
 您可以在 [Tuple 主題](../tuples.md)中深入了解 Tuple。
 
-## <a name="discards"></a>捨棄
+## <a name="discards"></a>Discard 變數
 
-通常在您解構元組或以 `out` 參數呼叫方法時，會強制您要定義變數，而您無須在意變數的值也沒有使用該值的打算。 C# 新增了對*捨棄*的支援，來應付這種狀況。 捨棄是僅限寫入的變數，其名稱為 `_` (底線字元)；您可將所有想要捨棄的值指派到單一變數。 捨棄類似於未經指派的變數；和指派陳述式一樣，都不能用於程式碼中。
+通常在您解構 Tuple 或以 `out` 參數呼叫方法時，會強制您要定義變數，而您無須在意變數的值也沒有使用該值的打算。 C# 新增了對*捨棄*的支援，來應付這種狀況。 Discard 是僅限寫入的變數，其名稱為 `_` (底線字元)；您可將所有想要捨棄的值指派到單一變數。 Discard 變數類似於未經指派的變數；和指派陳述式一樣，都不能用於程式碼中。
 
-下列情況中支援捨棄：
+下列情況中支援 Discard 變數：
 
-* 解構元組或使用者定義型別時。
+* 解構 Tuple 或使用者定義型別時。
 
 * 以 [out](../language-reference/keywords/out-parameter-modifier.md) 參數呼叫方法時。
 
 * 執行 [is](../language-reference/keywords/is.md) 及 [switch](../language-reference/keywords/switch.md) 陳述式的模式比對作業時。
 
-* 作為獨立識別項，當您想要將指派的值明確識別為捨棄時。
+* 當您想要將指派的值明確識別為 Discard 變數時，可作為獨立識別項使用。
 
-下列範例定義的 `QueryCityDataForYears` 方法，會傳回包含兩個不同年份的城市資料之 6 元組。 範例中的方法呼叫只有對方法傳回的兩個母體有效，所以會在解構元組時，將元組中剩餘的值視作捨棄處理。
+下列範例定義的 `QueryCityDataForYears` 方法，會傳回包含兩個不同年份的城市資料之 6-Tuple。 範例中的方法呼叫只有對方法傳回的兩個母體有效，所以會在解構 Tuple 時，將 Tuple 中剩餘的值視作 Discard 變數來處理。
 
 [!code-csharp[Tuple-discard](../../../samples/snippets/csharp/programming-guide/deconstructing-tuples/discard-tuple1.cs)]
 
-如需詳細資訊，請參閱[捨棄](../discards.md)。
+如需詳細資訊，請參閱 [Discard](../discards.md)。
  
 ## <a name="pattern-matching"></a>模式比對
 
@@ -397,363 +397,3 @@ C# 6 引進了成員函式的[運算式主體成員](csharp-6.md#expression-bodi
 [!code-csharp[OtherConstants](../../../samples/snippets/csharp/new-in-7/Program.cs#35_OtherConstants "non-integral constants")]
 
 結合起來，您在宣告數值常數時可以有更多的可讀性。
-You can see that the case for an `IEnumerable` item that has elements
-must appear before the general `IEnumerable` case.
-
-This version has also added a `default` case. The `default` case is always
-evaluated last, regardless of the order it appears in the source. For that
-reason, convention is to put the `default` case last.
-
-Finally, let's add one last `case` for a new style of die. Some games
-use percentile dice to represent larger ranges of numbers. 
-
-> [!NOTE]
-> Two 10-sided percentile dice can represent every number from 0
-> through 99. One die has sides labelled `00`, `10`, `20`, ... `90`. The other
-> die has sides labeled `0`, `1`, `2`, ... `9`. Add the two die values
-> together and you can get every number from 0 through 99.
-
-To add this kind of die to your collection, first define a type to represent
-the percentile die:
-
-```csharp
-public struct PercentileDice
-{
-    public int OnesDigit { get; }
-    public int TensDigit { get; }
-
-    public PercentileDice(int tensDigit, int onesDigit)
-    {
-        this.OnesDigit = onesDigit;
-        this.TensDigit = tensDigit;
-    }
-}
-```
-
-Then, add a `case` match expression for the new type:
-
-```csharp
-public static int DiceSum5(IEnumerable<object> values)
-{
-    var sum = 0;
-    foreach (var item in values)
-    {
-        switch (item)
-        {
-            case 0:
-                break;
-            case int val:
-                sum += val;
-                break;
-            case PercentileDice dice:
-                sum += dice.TensDigit + dice.OnesDigit;
-                break;
-            case IEnumerable<object> subList when subList.Any():
-                sum += DiceSum5(subList);
-                break;
-            case IEnumerable<object> subList:
-                break;
-            case null:
-                break;
-            default:
-                throw new InvalidOperationException("unknown item type");
-        }
-    }
-    return sum;
-}
-```
-
-The new syntax for pattern matching expressions makes it easier to create
-dispatch algorithms based on an object's type, or other properties, using
-a clear and concise syntax. Pattern matching expressions enable these
-constructs on data types that are unrelated by inheritance.
-
-You can learn more about pattern matching in the topic
-dedicated to [pattern matching in C#](../pattern-matching.md).
-
-## Ref locals and returns
-
-This feature enables algorithms that use and return references
-to variables defined elsewhere. One example is working with
-large matrices, and finding a single location with certain
-characteristics. One method would return the two indices for
-a single location in the matrix:
-
-[!code-csharp[FindReturningIndices](../../../samples/snippets/csharp/new-in-7/MatrixSearch.cs#20_FindReturningIndices "Find returning indices")]
-
-There are many issues with this code. First of all, it's a public
-method that's returning a tuple. The language supports this, but
-user defined types (either classes or structs) are preferred
-for public APIs.
-
-Second, this method is returning the indices to the item in the matrix.
-That leads callers to write code that uses those indices to dereference
-the matrix and modify a single element:
-
-[!code-csharp[UpdateItemFromIndices](../../../samples/snippets/csharp/new-in-7/program.cs#21_UpdateItemFromIndices "Update Item From Indices")]
-
-You'd rather write a method that returns a *reference*
-to the element of the matrix that you want to change. You could only accomplish
-this by using unsafe code and returning a pointer to an `int` in previous versions.
-
-Let's walk through a series of changes to demonstrate the ref local feature
-and show how to create a method that returns a reference to internal storage.
-Along the way, you'll learn the rules of the ref return and ref local feature that
-protects you from accidentally misusing it.
-
-Start by modifying the `Find` method declaration so that it returns a `ref int`
-instead of a tuple. Then, modify the return statement so it returns the value
-stored in the matrix instead of the two indices:
-
-```csharp
-// Note that this won't compile. 
-// Method declaration indicates ref return,
-// but return statement specifies a value return.
-public static ref int Find2(int[,] matrix, Func<int, bool> predicate)
-{
-    for (int i = 0; i < matrix.GetLength(0); i++)
-        for (int j = 0; j < matrix.GetLength(1); j++)
-            if (predicate(matrix[i, j]))
-                return matrix[i, j];
-    throw new InvalidOperationException("Not found");
-}
-```
-
-When you declare that a method returns a `ref` variable, you must also
-add the `ref` keyword to each return statement. That indicates return
-by reference, and helps developers reading the code later remember that
-the method returns by reference:
-
-[!code-csharp[FindReturningRef](../../../samples/snippets/csharp/new-in-7/MatrixSearch.cs#22_FindReturningRef "Find returning by reference")]
-
-Now that the method returns a reference to the integer value in the
-matrix, you need to modify where it's called.  The `var` declaration
-means that `valItem` is now an `int` rather than a tuple:
-
-[!code-csharp[AssignRefReturnToValue](../../../samples/snippets/csharp/new-in-7/program.cs#23_AssignRefReturnToValue "Assign ref return to value")]
-
-The second `WriteLine` statement in the example above prints out the value `42`,
-not `24`. The variable `valItem` is an `int`, not a `ref int`. The `var`
-keyword enables the compiler to specify the type, but will not implicitly
-add the `ref` modifier. Instead, the value referred to by the `ref return`
-is *copied* to the variable on the left-hand side of the assignment. The
-variable is not a `ref` local.
-
-In order to get the result you want, you need to add the `ref` modifier
-to the local variable declaration to make the variable a reference when
-the return value is a reference:
-
-[!code-csharp[AssignRefReturn](../../../samples/snippets/csharp/new-in-7/program.cs#24_AssignRefReturn "Assign ref return")]
-
-Now, the second `WriteLine` statement in the example above will print 
-out the value `24`, indicating that the storage in the matrix has been
-modified. The local variable has been declared with the `ref` modifier,
-and it will take a `ref` return. You must initialize a `ref` variable when
-it is declared, you cannot split the declaration and the initialization.
-
-The C# language has three other rules that protect you from misusing
-the `ref` locals and returns:
-
-* You cannot assign a standard method return value to a `ref` local variable.
-    - That disallows statements like `ref int i = sequence.Count();`
-* You cannot return a `ref` to a variable whose lifetime does not extend beyond the execution of the method.
-    - That means you cannot return a reference to a local variable or a variable with a similar scope.
-* `ref` locals and returns can't be used with async methods.
-    - The compiler can't know if the referenced variable has been set to its final value when the async method returns.
-
-The addition of ref locals and ref returns enable algorithms that are more
-efficient by avoiding copying values, or performing dereferencing operations
-multiple times. 
-
-## Local functions
-
-Many designs for classes include methods that are called from only
-one location. These additional private methods keep each method small
-and focused. However, they can make it harder to understand a class
-when reading it the first time. These methods must be understood
-outside of the context of the single calling location.
-
-For those designs, *local functions* enable you to declare methods
-inside the context of another method. This makes it easier for readers
-of the class to see that the local method is only called from the context
-in which is it declared.
-
-There are two very common use cases for local functions: public iterator
-methods and public async methods. Both types of methods generate
-code that reports errors later than programmers might expect. In
-the case of iterator methods, any exceptions are observed only
-when calling code that enumerates the returned sequence. In the case
-of async methods, any exceptions are only observed when the returned
-`Task` is awaited.
-
-Let's start with an iterator method:
-
-[!code-csharp[IteratorMethod](../../../samples/snippets/csharp/new-in-7/Iterator.cs#25_IteratorMethod "Iterator method")]
-
-Examine the code below that calls the iterator method incorrectly:
-
-[!code-csharp[CallIteratorMethod](../../../samples/snippets/csharp/new-in-7/program.cs#26_CallIteratorMethod "Call iterator method")]
-
-The exception is thrown when `resultSet` is iterated, not when `resultSet` is created.
-In this contained example, most developers could quickly diagnose the
-problem. However, in larger codebases, the code that creates an iterator
-often isn't as close to the code that enumerates the result. You can
-refactor the code so that the public method validates all arguments,
-and a private method generates the enumeration:
-
-[!code-csharp[IteratorMethodRefactored](../../../samples/snippets/csharp/new-in-7/Iterator.cs#27_IteratorMethodRefactored "Iterator method refactored")]
-
-This refactored version will throw exceptions immediately because the public
-method is not an iterator method; only the private method uses the
-`yield return` syntax. However, there are potential problems with this
-refactoring. The private method should only be called from the public
-interface method, because otherwise all argument validation is skipped.
-Readers of the class must discover this fact by reading the entire class
-and searching for any other references to the `alphabetSubsetImplementation` 
-method.
-
-You can make that design intent more clear by declaring the 
-`alphabetSubsetImplementation` as a local function inside the public
-API method:
-
-[!code-csharp[22_IteratorMethodLocal](../../../samples/snippets/csharp/new-in-7/Iterator.cs#28_IteratorMethodLocal "Iterator method with local function")]
-
-The version above makes it clear that the local method is referenced
-only in the context of the outer method. The rules for local functions
-also ensure that a developer can't accidentally call the local function
-from another location in the class and bypass the argument validation.
-
-The same technique can be employed with `async` methods to ensure that
-exceptions arising from argument validation are thrown before the asynchronous
-work begins:
-
-[!code-csharp[TaskExample](../../../samples/snippets/csharp/new-in-7/AsyncWork.cs#29_TaskExample "Task returning method with local function")]
-
-> [!NOTE]
-> Some of the designs that are supported by local functions
-> could also be accomplished using *lambda expressions*. Those
-> interested can [read more about the differences](../local-functions-vs-lambdas.md)
-
-## More expression-bodied members
-
-C# 6 introduced [expression-bodied members](csharp-6.md#expression-bodied-function-members)
-for member functions, and read-only properties. C# 7 expands the allowed
-members that can be implemented as expressions. In C# 7, you can implement
-*constructors*, *finalizers*, and `get` and `set` accessors on *properties*
-and *indexers*. The following code shows examples of each:
-
-[!code-csharp[ExpressionBodiedMembers](../../../samples/snippets/csharp/new-in-7/expressionmembers.cs#36_ExpressionBodiedEverything "new expression-bodied members")]
-
-> [!NOTE]
-> This example does not need a finalizer, but it is shown
-> to demonstrate the syntax. You should not implement a
-> finalizer in your class unless it is necessary to  release
-> unmanaged resources. You should also consider using the
-> <xref:System.Runtime.InteropServices.SafeHandle> class instead
-> of managing unmanaged resources directly.
-
-These new locations for expression-bodied members represent
-an important milestone for the C# language: These features
-were implemented by community members working on the open-source
-[Roslyn](https://github.com/dotnet/Roslyn) project.
-
-## Throw expressions
-
-In C#, `throw` has always been a statement. Because `throw` is a statement,
-not an expression, there were C# constructs where you could not use it. These
-included conditional expressions, null coalescing expressions, and some lambda
-expressions. The addition of expression-bodied members adds more locations
-where `throw` expressions would be useful. So that you can write any of these
-constructs, C# 7 introduces *throw expressions*.
-
-The syntax is the same as you've always used for `throw` statements. The only difference
-is that now you can place them in new locations, such as in a conditional expression:
-
-[!code-csharp[Throw_ExpressionExample](../../../samples/snippets/csharp/new-in-7/throwexpressions.cs#37_Throw_ExpressionExample "conditional throw expressions")]
-
-This features enables using throw expressions in initialization expressions:
-
-[!code-csharp[ThrowInInitialization](../../../samples/snippets/csharp/new-in-7/throwexpressions.cs#38_ThrowInInitialization "conditional throw expressions")]
-
-Previously, those initializations would need to be in a constructor, with the
-throw statements in the body of the constructor:
-
-
-[!code-csharp[ThrowInConstructor](../../../samples/snippets/csharp/new-in-7/throwexpressions.cs#39_ThrowInConstructor "throw statements")]
-
-> [!NOTE]
-> Both of the preceding constructs will cause exceptions to be thrown during
-> the construction of an object. Those are often difficult to recover from.
-> For that reason, designs that throw exceptions during construction are
-> discouraged.
-
-## Generalized async return types
-
-Returning a `Task` object from async methods can introduce
-performance bottlenecks in certain paths. `Task` is a reference
-type, so using it means allocating an object. In cases where a
-method declared with the `async` modifier returns a cached result, or
-completes synchronously, the extra allocations can become a significant
-time cost in performance critical sections of code. It can become
-very costly if those allocations occur in tight loops.
-
-The new language feature means that async methods may return other
-types in addition to `Task`, `Task<T>` and `void`. The returned type
-must still satisfy the async pattern, meaning a `GetAwaiter` method
-must be accessible. As one concrete example, the `ValueTask` type
-has been added to the .NET framework to make use of this new language
-feature: 
-
-[!code-csharp[UsingValueTask](../../../samples/snippets/csharp/new-in-7/AsyncWork.cs#30_UsingValueTask "Using ValueTask")]
-
-> [!NOTE]
-> You need to add the NuGet package [`System.Threading.Tasks.Extensions`](https://www.nuget.org/packages/System.Threading.Tasks.Extensions/)
-> in order to use the <xref:System.Threading.Tasks.ValueTask%601> type.
-
-A simple optimization would be to use `ValueTask` in places where
-`Task` would be used before. However, if you want to perform extra
-optimizations by hand, you can cache results from async work and
-reuse the result in subsequent calls. The `ValueTask` struct has a constructor
-with a `Task` parameter so that you can construct a `ValueTask` from the
-return value of any existing async method:
-
-[!code-csharp[AsyncOptimizedValueTask](../../../samples/snippets/csharp/new-in-7/AsyncWork.cs#31_AsyncOptimizedValueTask "Return async result or cached value")]
- 
-As with all performance recommendations, you should benchmark
-both versions before making large scale changes to your code.
-
-## Numeric literal syntax improvements
-
-Misreading numeric constants can make it harder to understand
-code when reading it for the first time. This often
-occurs when those numbers are used as bit masks or other symbolic
-rather than numeric values. C# 7 includes two new features to
-make it easier to write numbers in the most readable fashion
-for the intended use: *binary literals*, and *digit separators*.
-
-For those times when you are creating bit masks, or whenever a
-binary representation of a number makes the most readable code,
-write that number in binary:
-
-[!code-csharp[BinaryConstants](../../../samples/snippets/csharp/new-in-7/Program.cs#32_BinaryConstants "Binary constants")]
-
-The `0b` at the beginning of the constant indicates that the
-number is written as a binary number.
-
-Binary numbers can get very long, so it's often easier to see
-the bit patterns by introducing the `_` as a digit separator:
-
-[!code-csharp[ThousandSeparators](../../../samples/snippets/csharp/new-in-7/Program.cs#33_ThousandSeparators "Thousands separators")]
-
-The digit separator can appear anywhere in the constant. For base 10
-numbers, it would be common to use it as a thousands separator:
-
-[!code-csharp[LargeIntegers](../../../samples/snippets/csharp/new-in-7/Program.cs#34_LargeIntegers "Large integer")]
-
-The digit separator can be used with `decimal`, `float` and `double`
-types as well:
-
-[!code-csharp[OtherConstants](../../../samples/snippets/csharp/new-in-7/Program.cs#35_OtherConstants "non-integral constants")]
-
-Taken together, you can declare numeric constants with much more
-readability.

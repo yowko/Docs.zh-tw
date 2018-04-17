@@ -1,7 +1,7 @@
-﻿---
-title: "在 C# 7.1 最新消息"
-description: "7.1 C# 中的新功能的概觀。"
-keywords: "C# 語言設計，7.1，Visual Studio 2017，"
+---
+title: C# 7.1 中的新增功能
+description: 7.1 C# 中的新功能的概觀。
+keywords: C# 語言設計，7.1，Visual Studio 2017，
 author: billwagner
 ms.author: wiwagn
 ms.date: 08/16/2017
@@ -14,26 +14,30 @@ ms.translationtype: HT
 ms.contentlocale: zh-TW
 ms.lasthandoff: 10/18/2017
 ---
-# <a name="whats-new-in-c-71"></a>在 C# 7.1 最新消息
+# <a name="whats-new-in-c-71"></a>C# 7.1 中的新增功能
 
-C# 7.1 是第一個點版本的 C# 語言。 它會將標示為語言增加的發行日程。 您可以使用的新功能，最好是每個新功能就緒時。 C# 7.1 加入設定以符合指定的版本的語言編譯器的功能。 可讓您分隔在決定要從在決定来升級的語言版本升級工具。
+C# 7.1 是 C# 語言的第一個發行的小數點版本。 這表示這個語言的版本發行速度將會越來越快。 您很快能使用下列新功能。理想情況下，這些新功能只要一就緒，您就能開始使用。
+ C# 7.1 加入了新功能，可將編譯器加以設定，使其符合指定的語言版本。
+ 這使得工具的升級與語言版本的升級能夠分開來決定。
 
-將 C# 7.1[語言版本選擇](#language-version-selection)組態項目、 三個新的語言功能和新編譯器行為。
+
+C# 7.1 也新增了[語言版本選擇](#language-version-selection)組態項目、三種新的語言功能和新的編譯器行為。
 
 在此版本中的新語言功能包括：
 
 * [`async``Main`方法](#async-main)
-  - 應用程式的進入點可以有`async`修飾詞。
+  - 應用程式的進入點允許使用`async`修飾詞。
 * [`default`常值運算式](#default-literal-expressions)
-  - 目標類型可以推斷時，您可以使用預設值運算式中預設常值運算式。
+  - 目標類型可以推斷時，可以在預設值運算式中使用預設常值運算式。
 * [推斷的 tuple 項目名稱](#inferred-tuple-element-names)
-  - Tuple 元素的名稱來推斷與 tuple 初始化，在許多情況下。
+  - 在許多情況下，Tuple 項目的名稱均可從 Tuple 初始化推斷來加以推斷。
+
 
 最後，編譯器會有兩個選項`/refout`和`/refonly`該控制項[參考組件產生](#reference-assembly-generation)。
 
 ## <a name="language-version-selection"></a>語言版本選取項目
 
-C# 編譯器支援 C# 7.1 開始使用 Visual Studio 2017 版本 15.3 或.NET Core SDK 2.0。 不過，7.1 功能已關閉的預設值。 若要啟用 7.1 功能，您需要變更您的專案的語言版本設定。
+C# 編譯器自 Visual Studio 2017 15.3 與 .NET Core SDK 2.0 起開始支援 C# 7.1。 不過，7.1 的功能預設為關閉。 若要啟用 7.1 功能，您需要變更您的專案的語言版本設定。
 
 在 Visual Studio 中，以滑鼠右鍵按一下方案總管 中的專案節點，然後選取**屬性**。 選取**建置**索引標籤並選取**進階** 按鈕。 在下拉式清單中選取**C# 最新次要版本 （最新版）**，或特定版本**C# 7.1**映像下列所示。 `latest`值表示您想要使用目前電腦上的最新的次要版本。 `C# 7.1`表示您想要使用 C# 7.1，即使有較新的次要版本發行。
 
@@ -80,7 +84,7 @@ C# 編譯器支援 C# 7.1 開始使用 Visual Studio 2017 版本 15.3 或.NET Co
 ## <a name="async-main"></a>主要的非同步處理
 
 *非同步主要*方法可讓您使用`await`中您`Main`方法。
-先前，您需要撰寫：
+在過去您必須這樣寫：
 
 ```csharp
 static int Main()
@@ -89,7 +93,7 @@ static int Main()
 }
 ```
 
-您現在可以撰寫：
+現在您可以這樣寫：
 
 ```csharp
 static async Task<int> Main()
@@ -114,7 +118,7 @@ static async Task Main()
 ## <a name="default-literal-expressions"></a>預設常值運算式
 
 預設常值運算式是預設值運算式的增強功能。
-這些運算式初始化的變數預設值。 您先前會寫入：
+這些運算式初始化的變數預設值。 在過去您必須這樣寫：
 
 ```csharp
 Func<string, bool> whereClause = default(Func<string, bool>);
@@ -130,9 +134,9 @@ Func<string, bool> whereClause = default;
 
 這項增強功能也會變更部分的剖析規則[default 關鍵字](../language-reference/keywords/default.md)。
 
-## <a name="inferred-tuple-element-names"></a>推斷的 tuple 項目名稱
+## <a name="inferred-tuple-element-names"></a>Tuple 型別推導
 
-這項功能是在 C# 7.0 中所引進的 tuple 功能小增強功能。 許多次當您初始化 tuple，用於指派的右側的變數是您想要的 tuple 項目名稱相同：
+本方法為 C# 7.0 版本 Tuple 方法的改進， 許多次當您初始化 tuple，用於指派的右側的變數是您想要的 tuple 項目名稱相同：
 
 ```csharp
 int count = 5;
