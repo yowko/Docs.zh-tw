@@ -1,12 +1,9 @@
 ---
-title: "字串的預設封送處理"
-ms.custom: 
+title: 字串的預設封送處理
 ms.date: 03/30/2017
 ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.technology: dotnet-clr
-ms.tgt_pltfrm: 
+ms.technology:
+- dotnet-clr
 ms.topic: article
 dev_langs:
 - csharp
@@ -15,45 +12,46 @@ helpviewer_keywords:
 - strings, interop marshaling
 - interop marshaling, strings
 ms.assetid: 9baea3ce-27b3-4b4f-af98-9ad0f9467e6f
-caps.latest.revision: "18"
 author: rpetrusha
 ms.author: ronpet
 manager: wpickett
-ms.workload: dotnet
-ms.openlocfilehash: 3d219ad68d125e2b90197fc7703ccfc0a1c857d2
-ms.sourcegitcommit: c0dd436f6f8f44dc80dc43b07f6841a00b74b23f
+ms.workload:
+- dotnet
+ms.openlocfilehash: 10f2c0e0e61190f571ae5bd4998f54d128448296
+ms.sourcegitcommit: 9a4fe1a1c37b26532654b4bbe22d702237950009
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 01/19/2018
+ms.lasthandoff: 04/16/2018
 ---
-# <a name="default-marshaling-for-strings"></a><span data-ttu-id="e59f8-102">字串的預設封送處理</span><span class="sxs-lookup"><span data-stu-id="e59f8-102">Default Marshaling for Strings</span></span>
-<span data-ttu-id="e59f8-103"><xref:System.String?displayProperty=nameWithType> 和 <xref:System.Text.StringBuilder?displayProperty=nameWithType> 類別同時都有類似的封送處理行為。</span><span class="sxs-lookup"><span data-stu-id="e59f8-103">Both the <xref:System.String?displayProperty=nameWithType> and <xref:System.Text.StringBuilder?displayProperty=nameWithType> classes have similar marshaling behavior.</span></span>  
+# <a name="default-marshaling-for-strings"></a><span data-ttu-id="6ab6e-102">字串的預設封送處理</span><span class="sxs-lookup"><span data-stu-id="6ab6e-102">Default Marshaling for Strings</span></span>
+<span data-ttu-id="6ab6e-103"><xref:System.String?displayProperty=nameWithType> 和 <xref:System.Text.StringBuilder?displayProperty=nameWithType> 類別同時都有類似的封送處理行為。</span><span class="sxs-lookup"><span data-stu-id="6ab6e-103">Both the <xref:System.String?displayProperty=nameWithType> and <xref:System.Text.StringBuilder?displayProperty=nameWithType> classes have similar marshaling behavior.</span></span>  
   
- <span data-ttu-id="e59f8-104">會封送處理字串為 COM 樣式 `BSTR` 類型或 Null 終端字串 (以 null 字元結束的字元陣列)。</span><span class="sxs-lookup"><span data-stu-id="e59f8-104">Strings are marshaled as a COM-style `BSTR` type or as a null-terminated string (a character array that ends with a null character).</span></span> <span data-ttu-id="e59f8-105">字串內的字元可以做為 Unicode (Windows 系統上的預設值) 或 ANSI 封送處理。</span><span class="sxs-lookup"><span data-stu-id="e59f8-105">The characters within the string can be marshaled as Unicode (the default on Windows systems) or ANSI.</span></span>  
+ <span data-ttu-id="6ab6e-104">會封送處理字串為 COM 樣式 `BSTR` 類型或 Null 終端字串 (以 null 字元結束的字元陣列)。</span><span class="sxs-lookup"><span data-stu-id="6ab6e-104">Strings are marshaled as a COM-style `BSTR` type or as a null-terminated string (a character array that ends with a null character).</span></span> <span data-ttu-id="6ab6e-105">字串內的字元可以做為 Unicode (Windows 系統上的預設值) 或 ANSI 封送處理。</span><span class="sxs-lookup"><span data-stu-id="6ab6e-105">The characters within the string can be marshaled as Unicode (the default on Windows systems) or ANSI.</span></span>  
   
- <span data-ttu-id="e59f8-106">本主題提供封送處理字串類型的下列資訊：</span><span class="sxs-lookup"><span data-stu-id="e59f8-106">This topic provides the following information on marshaling string types:</span></span>  
+ <span data-ttu-id="6ab6e-106">本主題提供封送處理字串類型的下列資訊：</span><span class="sxs-lookup"><span data-stu-id="6ab6e-106">This topic provides the following information on marshaling string types:</span></span>  
   
--   [<span data-ttu-id="e59f8-107">在介面中使用的字串</span><span class="sxs-lookup"><span data-stu-id="e59f8-107">Strings Used in Interfaces</span></span>](#cpcondefaultmarshalingforstringsanchor1)  
+-   [<span data-ttu-id="6ab6e-107">在介面中使用的字串</span><span class="sxs-lookup"><span data-stu-id="6ab6e-107">Strings Used in Interfaces</span></span>](#cpcondefaultmarshalingforstringsanchor1)  
   
--   [<span data-ttu-id="e59f8-108">在平台叫用中使用的字串</span><span class="sxs-lookup"><span data-stu-id="e59f8-108">Strings Used in Platform Invoke</span></span>](#cpcondefaultmarshalingforstringsanchor5)  
+-   [<span data-ttu-id="6ab6e-108">在平台叫用中使用的字串</span><span class="sxs-lookup"><span data-stu-id="6ab6e-108">Strings Used in Platform Invoke</span></span>](#cpcondefaultmarshalingforstringsanchor5)  
   
--   [<span data-ttu-id="e59f8-109">在結構中使用的字串</span><span class="sxs-lookup"><span data-stu-id="e59f8-109">Strings Used in Structures</span></span>](#cpcondefaultmarshalingforstringsanchor2)  
+-   [<span data-ttu-id="6ab6e-109">在結構中使用的字串</span><span class="sxs-lookup"><span data-stu-id="6ab6e-109">Strings Used in Structures</span></span>](#cpcondefaultmarshalingforstringsanchor2)  
   
--   [<span data-ttu-id="e59f8-110">固定長度的字串緩衝區</span><span class="sxs-lookup"><span data-stu-id="e59f8-110">Fixed-Length String Buffers</span></span>](#cpcondefaultmarshalingforstringsanchor3)  
+-   [<span data-ttu-id="6ab6e-110">固定長度的字串緩衝區</span><span class="sxs-lookup"><span data-stu-id="6ab6e-110">Fixed-Length String Buffers</span></span>](#cpcondefaultmarshalingforstringsanchor3)  
   
-<a name="cpcondefaultmarshalingforstringsanchor1"></a>   
-## <a name="strings-used-in-interfaces"></a><span data-ttu-id="e59f8-111">在介面中使用的字串</span><span class="sxs-lookup"><span data-stu-id="e59f8-111">Strings Used in Interfaces</span></span>  
- <span data-ttu-id="e59f8-112">下表顯示當字串資料類型做為方法引數封送處理至 Unmanaged 程式碼時，字串資料類型的封送處理選項。</span><span class="sxs-lookup"><span data-stu-id="e59f8-112">The following table shows the marshaling options for the string data type when marshaled as a method argument to unmanaged code.</span></span> <span data-ttu-id="e59f8-113"><xref:System.Runtime.InteropServices.MarshalAsAttribute> 屬性提供幾種 <xref:System.Runtime.InteropServices.UnmanagedType> 列舉值來封送處理字串到 COM 介面。</span><span class="sxs-lookup"><span data-stu-id="e59f8-113">The <xref:System.Runtime.InteropServices.MarshalAsAttribute> attribute provides several <xref:System.Runtime.InteropServices.UnmanagedType> enumeration values to marshal strings to COM interfaces.</span></span>  
+<a name="cpcondefaultmarshalingforstringsanchor1"></a>
+
+## <a name="strings-used-in-interfaces"></a><span data-ttu-id="6ab6e-111">在介面中使用的字串</span><span class="sxs-lookup"><span data-stu-id="6ab6e-111">Strings Used in Interfaces</span></span>  
+ <span data-ttu-id="6ab6e-112">下表顯示當字串資料類型做為方法引數封送處理至 Unmanaged 程式碼時，字串資料類型的封送處理選項。</span><span class="sxs-lookup"><span data-stu-id="6ab6e-112">The following table shows the marshaling options for the string data type when marshaled as a method argument to unmanaged code.</span></span> <span data-ttu-id="6ab6e-113"><xref:System.Runtime.InteropServices.MarshalAsAttribute> 屬性提供幾種 <xref:System.Runtime.InteropServices.UnmanagedType> 列舉值來封送處理字串到 COM 介面。</span><span class="sxs-lookup"><span data-stu-id="6ab6e-113">The <xref:System.Runtime.InteropServices.MarshalAsAttribute> attribute provides several <xref:System.Runtime.InteropServices.UnmanagedType> enumeration values to marshal strings to COM interfaces.</span></span>  
   
-|<span data-ttu-id="e59f8-114">列舉類型</span><span class="sxs-lookup"><span data-stu-id="e59f8-114">Enumeration type</span></span>|<span data-ttu-id="e59f8-115">Unmanaged 格式的描述</span><span class="sxs-lookup"><span data-stu-id="e59f8-115">Description of unmanaged format</span></span>|  
+|<span data-ttu-id="6ab6e-114">列舉類型</span><span class="sxs-lookup"><span data-stu-id="6ab6e-114">Enumeration type</span></span>|<span data-ttu-id="6ab6e-115">Unmanaged 格式的描述</span><span class="sxs-lookup"><span data-stu-id="6ab6e-115">Description of unmanaged format</span></span>|  
 |----------------------|-------------------------------------|  
-|<span data-ttu-id="e59f8-116">`UnmanagedType.BStr` (預設值)</span><span class="sxs-lookup"><span data-stu-id="e59f8-116">`UnmanagedType.BStr` (default)</span></span>|<span data-ttu-id="e59f8-117">具有前置長度和 Unicode 字元的 COM 樣式 `BSTR`。</span><span class="sxs-lookup"><span data-stu-id="e59f8-117">A COM-style `BSTR` with a prefixed length and Unicode characters.</span></span>|  
-|`UnmanagedType.LPStr`|<span data-ttu-id="e59f8-118">ANSI 字元之 Null 終端陣列的指標。</span><span class="sxs-lookup"><span data-stu-id="e59f8-118">A pointer to a null-terminated array of ANSI characters.</span></span>|  
-|`UnmanagedType.LPWStr`|<span data-ttu-id="e59f8-119">Unicode 字元之 Null 終端陣列的指標。</span><span class="sxs-lookup"><span data-stu-id="e59f8-119">A pointer to a null-terminated array of Unicode characters.</span></span>|  
+|<span data-ttu-id="6ab6e-116">`UnmanagedType.BStr` (預設值)</span><span class="sxs-lookup"><span data-stu-id="6ab6e-116">`UnmanagedType.BStr` (default)</span></span>|<span data-ttu-id="6ab6e-117">具有前置長度和 Unicode 字元的 COM 樣式 `BSTR`。</span><span class="sxs-lookup"><span data-stu-id="6ab6e-117">A COM-style `BSTR` with a prefixed length and Unicode characters.</span></span>|  
+|`UnmanagedType.LPStr`|<span data-ttu-id="6ab6e-118">ANSI 字元之 Null 終端陣列的指標。</span><span class="sxs-lookup"><span data-stu-id="6ab6e-118">A pointer to a null-terminated array of ANSI characters.</span></span>|  
+|`UnmanagedType.LPWStr`|<span data-ttu-id="6ab6e-119">Unicode 字元之 Null 終端陣列的指標。</span><span class="sxs-lookup"><span data-stu-id="6ab6e-119">A pointer to a null-terminated array of Unicode characters.</span></span>|  
   
- <span data-ttu-id="e59f8-120">此表格適用於字串。</span><span class="sxs-lookup"><span data-stu-id="e59f8-120">This table applies to strings.</span></span> <span data-ttu-id="e59f8-121">不過，為了 <xref:System.Text.StringBuilder>，唯一允許的選項為 `UnmanagedType.LPStr` 和 `UnmanagedType.LPWStr`。</span><span class="sxs-lookup"><span data-stu-id="e59f8-121">However, for <xref:System.Text.StringBuilder>, the only options allowed are `UnmanagedType.LPStr` and `UnmanagedType.LPWStr`.</span></span>  
+ <span data-ttu-id="6ab6e-120">此表格適用於字串。</span><span class="sxs-lookup"><span data-stu-id="6ab6e-120">This table applies to strings.</span></span> <span data-ttu-id="6ab6e-121">不過，為了 <xref:System.Text.StringBuilder>，唯一允許的選項為 `UnmanagedType.LPStr` 和 `UnmanagedType.LPWStr`。</span><span class="sxs-lookup"><span data-stu-id="6ab6e-121">However, for <xref:System.Text.StringBuilder>, the only options allowed are `UnmanagedType.LPStr` and `UnmanagedType.LPWStr`.</span></span>  
   
- <span data-ttu-id="e59f8-122">下列範例會顯示在 `IStringWorker` 介面中所宣告的字串。</span><span class="sxs-lookup"><span data-stu-id="e59f8-122">The following example shows strings declared in the `IStringWorker` interface.</span></span>  
+ <span data-ttu-id="6ab6e-122">下列範例會顯示在 `IStringWorker` 介面中所宣告的字串。</span><span class="sxs-lookup"><span data-stu-id="6ab6e-122">The following example shows strings declared in the `IStringWorker` interface.</span></span>  
   
 ```cpp  
 public interface IStringWorker {  
@@ -65,12 +63,12 @@ void PassStringRef1(ref String s);
 void PassStringRef2([MarshalAs(UnmanagedType.BStr)]ref String s);  
 void PassStringRef3([MarshalAs(UnmanagedType.LPStr)]ref String s);  
 void PassStringRef4([MarshalAs(UnmanagedType.LPWStr)]ref String s);  
-);  
-```  
-  
- <span data-ttu-id="e59f8-123">下列範例會顯示在類型程式庫中所述的對應介面。</span><span class="sxs-lookup"><span data-stu-id="e59f8-123">The following example shows the corresponding interface described in a type library.</span></span>  
-  
-```  
+);
+```
+
+<span data-ttu-id="6ab6e-123">下列範例會顯示在類型程式庫中所述的對應介面。</span><span class="sxs-lookup"><span data-stu-id="6ab6e-123">The following example shows the corresponding interface described in a type library.</span></span>
+
+```
 […]  
 interface IStringWorker : IDispatch {  
 HRESULT PassString1([in] BSTR s);  
@@ -81,28 +79,29 @@ HRESULT PassStringRef1([in, out] BSTR *s);
 HRESULT PassStringRef2([in, out] BSTR *s);  
 HRESULT PassStringRef3([in, out] LPStr *s);  
 HRESULT PassStringRef4([in, out] LPWStr *s);  
-);  
-```  
+);
+```
+
+<a name="cpcondefaultmarshalingforstringsanchor5"></a>
+
+## <a name="strings-used-in-platform-invoke"></a><span data-ttu-id="6ab6e-124">在平台叫用中使用的字串</span><span class="sxs-lookup"><span data-stu-id="6ab6e-124">Strings Used in Platform Invoke</span></span>  
+ <span data-ttu-id="6ab6e-125">平台叫用會複製字串引數，從 .NET Framework 格式 (Unicode) 轉換為平台 Unmanaged 格式。</span><span class="sxs-lookup"><span data-stu-id="6ab6e-125">Platform invoke copies string arguments, converting from the .NET Framework format (Unicode) to the platform unmanaged format.</span></span> <span data-ttu-id="6ab6e-126">字串為不可變的，在呼叫傳回時並不會從 Unmanaged 記憶體複製回 Managed 記憶體。</span><span class="sxs-lookup"><span data-stu-id="6ab6e-126">Strings are immutable and are not copied back from unmanaged memory to managed memory when the call returns.</span></span>  
   
-<a name="cpcondefaultmarshalingforstringsanchor5"></a>   
-## <a name="strings-used-in-platform-invoke"></a><span data-ttu-id="e59f8-124">在平台叫用中使用的字串</span><span class="sxs-lookup"><span data-stu-id="e59f8-124">Strings Used in Platform Invoke</span></span>  
- <span data-ttu-id="e59f8-125">平台叫用會複製字串引數，從 .NET Framework 格式 (Unicode) 轉換為平台 Unmanaged 格式。</span><span class="sxs-lookup"><span data-stu-id="e59f8-125">Platform invoke copies string arguments, converting from the .NET Framework format (Unicode) to the platform unmanaged format.</span></span> <span data-ttu-id="e59f8-126">字串為不可變的，在呼叫傳回時並不會從 Unmanaged 記憶體複製回 Managed 記憶體。</span><span class="sxs-lookup"><span data-stu-id="e59f8-126">Strings are immutable and are not copied back from unmanaged memory to managed memory when the call returns.</span></span>  
+ <span data-ttu-id="6ab6e-127">下表列出當字串做為平台叫用呼叫的方法引數封送處理時的封送處理選項。</span><span class="sxs-lookup"><span data-stu-id="6ab6e-127">The following table lists the marshaling options for strings when marshaled as a method argument of a platform invoke call.</span></span> <span data-ttu-id="6ab6e-128"><xref:System.Runtime.InteropServices.MarshalAsAttribute> 屬性提供幾種 <xref:System.Runtime.InteropServices.UnmanagedType> 列舉值來封送處理字串。</span><span class="sxs-lookup"><span data-stu-id="6ab6e-128">The <xref:System.Runtime.InteropServices.MarshalAsAttribute> attribute provides several <xref:System.Runtime.InteropServices.UnmanagedType> enumeration values to marshal strings.</span></span>  
   
- <span data-ttu-id="e59f8-127">下表列出當字串做為平台叫用呼叫的方法引數封送處理時的封送處理選項。</span><span class="sxs-lookup"><span data-stu-id="e59f8-127">The following table lists the marshaling options for strings when marshaled as a method argument of a platform invoke call.</span></span> <span data-ttu-id="e59f8-128"><xref:System.Runtime.InteropServices.MarshalAsAttribute> 屬性提供幾種 <xref:System.Runtime.InteropServices.UnmanagedType> 列舉值來封送處理字串。</span><span class="sxs-lookup"><span data-stu-id="e59f8-128">The <xref:System.Runtime.InteropServices.MarshalAsAttribute> attribute provides several <xref:System.Runtime.InteropServices.UnmanagedType> enumeration values to marshal strings.</span></span>  
-  
-|<span data-ttu-id="e59f8-129">列舉類型</span><span class="sxs-lookup"><span data-stu-id="e59f8-129">Enumeration type</span></span>|<span data-ttu-id="e59f8-130">Unmanaged 格式的描述</span><span class="sxs-lookup"><span data-stu-id="e59f8-130">Description of unmanaged format</span></span>|  
+|<span data-ttu-id="6ab6e-129">列舉類型</span><span class="sxs-lookup"><span data-stu-id="6ab6e-129">Enumeration type</span></span>|<span data-ttu-id="6ab6e-130">Unmanaged 格式的描述</span><span class="sxs-lookup"><span data-stu-id="6ab6e-130">Description of unmanaged format</span></span>|  
 |----------------------|-------------------------------------|  
-|`UnmanagedType.AnsiBStr`|<span data-ttu-id="e59f8-131">具有前置長度和 ANSI 字元的 COM 樣式 `BSTR`。</span><span class="sxs-lookup"><span data-stu-id="e59f8-131">A COM-style `BSTR` with a prefixed length and ANSI characters.</span></span>|  
-|`UnmanagedType.BStr`|<span data-ttu-id="e59f8-132">具有前置長度和 Unicode 字元的 COM 樣式 `BSTR`。</span><span class="sxs-lookup"><span data-stu-id="e59f8-132">A COM-style `BSTR` with a prefixed length and Unicode characters.</span></span>|  
-|`UnmanagedType.LPStr`|<span data-ttu-id="e59f8-133">ANSI 字元之 Null 終端陣列的指標。</span><span class="sxs-lookup"><span data-stu-id="e59f8-133">A pointer to a null-terminated array of ANSI characters.</span></span>|  
-|`UnmanagedType.LPTStr`|<span data-ttu-id="e59f8-134">平台相依字元之 Null 終端陣列的指標。</span><span class="sxs-lookup"><span data-stu-id="e59f8-134">A pointer to a null-terminated array of platform-dependent characters.</span></span>|  
-|`UnmanagedType.LPWStr`|<span data-ttu-id="e59f8-135">Unicode 字元之 Null 終端陣列的指標。</span><span class="sxs-lookup"><span data-stu-id="e59f8-135">A pointer to a null-terminated array of Unicode characters.</span></span>|  
-|`UnmanagedType.TBStr`|<span data-ttu-id="e59f8-136">具有前置長度和平台相依字元的 COM 樣式 `BSTR`。</span><span class="sxs-lookup"><span data-stu-id="e59f8-136">A COM-style `BSTR` with a prefixed length and platform-dependent characters.</span></span>|  
-|`VBByRefStr`|<span data-ttu-id="e59f8-137">這個值可讓 Visual Basic .NET 變更 Unmanaged 程式碼中的字串，並且讓結果反映在 Managed 程式碼中。</span><span class="sxs-lookup"><span data-stu-id="e59f8-137">A value that enables Visual Basic .NET to change a string in unmanaged code, and have the results reflected in managed code.</span></span> <span data-ttu-id="e59f8-138">只有平台叫用支援這個值。</span><span class="sxs-lookup"><span data-stu-id="e59f8-138">This value is supported only for platform invoke.</span></span> <span data-ttu-id="e59f8-139">這是 `ByVal` 字串在 Visual Basic 中的預設值。</span><span class="sxs-lookup"><span data-stu-id="e59f8-139">This is default value in Visual Basic for `ByVal` strings.</span></span>|  
+|`UnmanagedType.AnsiBStr`|<span data-ttu-id="6ab6e-131">具有前置長度和 ANSI 字元的 COM 樣式 `BSTR`。</span><span class="sxs-lookup"><span data-stu-id="6ab6e-131">A COM-style `BSTR` with a prefixed length and ANSI characters.</span></span>|  
+|`UnmanagedType.BStr`|<span data-ttu-id="6ab6e-132">具有前置長度和 Unicode 字元的 COM 樣式 `BSTR`。</span><span class="sxs-lookup"><span data-stu-id="6ab6e-132">A COM-style `BSTR` with a prefixed length and Unicode characters.</span></span>|  
+|`UnmanagedType.LPStr`|<span data-ttu-id="6ab6e-133">ANSI 字元之 Null 終端陣列的指標。</span><span class="sxs-lookup"><span data-stu-id="6ab6e-133">A pointer to a null-terminated array of ANSI characters.</span></span>|  
+|`UnmanagedType.LPTStr`|<span data-ttu-id="6ab6e-134">平台相依字元之 Null 終端陣列的指標。</span><span class="sxs-lookup"><span data-stu-id="6ab6e-134">A pointer to a null-terminated array of platform-dependent characters.</span></span>|  
+|`UnmanagedType.LPWStr`|<span data-ttu-id="6ab6e-135">Unicode 字元之 Null 終端陣列的指標。</span><span class="sxs-lookup"><span data-stu-id="6ab6e-135">A pointer to a null-terminated array of Unicode characters.</span></span>|  
+|`UnmanagedType.TBStr`|<span data-ttu-id="6ab6e-136">具有前置長度和平台相依字元的 COM 樣式 `BSTR`。</span><span class="sxs-lookup"><span data-stu-id="6ab6e-136">A COM-style `BSTR` with a prefixed length and platform-dependent characters.</span></span>|  
+|`VBByRefStr`|<span data-ttu-id="6ab6e-137">這個值可讓 Visual Basic .NET 變更 Unmanaged 程式碼中的字串，並且讓結果反映在 Managed 程式碼中。</span><span class="sxs-lookup"><span data-stu-id="6ab6e-137">A value that enables Visual Basic .NET to change a string in unmanaged code, and have the results reflected in managed code.</span></span> <span data-ttu-id="6ab6e-138">只有平台叫用支援這個值。</span><span class="sxs-lookup"><span data-stu-id="6ab6e-138">This value is supported only for platform invoke.</span></span> <span data-ttu-id="6ab6e-139">這是 `ByVal` 字串在 Visual Basic 中的預設值。</span><span class="sxs-lookup"><span data-stu-id="6ab6e-139">This is default value in Visual Basic for `ByVal` strings.</span></span>|  
   
- <span data-ttu-id="e59f8-140">此表格適用於字串。</span><span class="sxs-lookup"><span data-stu-id="e59f8-140">This table applies to strings.</span></span> <span data-ttu-id="e59f8-141">不過，為了 <xref:System.Text.StringBuilder>，唯一允許的選項為 `LPStr`、`LPTStr` 和 `LPWStr`。</span><span class="sxs-lookup"><span data-stu-id="e59f8-141">However, for <xref:System.Text.StringBuilder>, the only options allowed are `LPStr`, `LPTStr`, and `LPWStr`.</span></span>  
+ <span data-ttu-id="6ab6e-140">此表格適用於字串。</span><span class="sxs-lookup"><span data-stu-id="6ab6e-140">This table applies to strings.</span></span> <span data-ttu-id="6ab6e-141">不過，為了 <xref:System.Text.StringBuilder>，唯一允許的選項為 `LPStr`、`LPTStr` 和 `LPWStr`。</span><span class="sxs-lookup"><span data-stu-id="6ab6e-141">However, for <xref:System.Text.StringBuilder>, the only options allowed are `LPStr`, `LPTStr`, and `LPWStr`.</span></span>  
   
- <span data-ttu-id="e59f8-142">下列類型定義會顯示對於平台叫用呼叫要如何正確使用 `MarshalAsAttribute`。</span><span class="sxs-lookup"><span data-stu-id="e59f8-142">The following type definition shows the correct use of `MarshalAsAttribute` for platform invoke calls.</span></span>  
+ <span data-ttu-id="6ab6e-142">下列類型定義會顯示對於平台叫用呼叫要如何正確使用 `MarshalAsAttribute`。</span><span class="sxs-lookup"><span data-stu-id="6ab6e-142">The following type definition shows the correct use of `MarshalAsAttribute` for platform invoke calls.</span></span>  
   
 ```vb  
 Class StringLibAPI      
@@ -119,9 +118,9 @@ Public Declare Auto Sub PassAnsiBStr Lib "StringLib.Dll" _
 Public Declare Auto Sub PassTBStr Lib "StringLib.Dll" _  
 (<MarshalAs(UnmanagedType.TBStr)> s As String)  
 End Class  
-```  
-  
-```csharp  
+```
+
+```csharp
 class StringLibAPI {  
 [DllImport("StringLib.Dll")]  
 public static extern void PassLPStr([MarshalAs(UnmanagedType.LPStr)]  
@@ -145,24 +144,24 @@ String s);
 ```  
   
 <a name="cpcondefaultmarshalingforstringsanchor2"></a>   
-## <a name="strings-used-in-structures"></a><span data-ttu-id="e59f8-143">在結構中使用的字串</span><span class="sxs-lookup"><span data-stu-id="e59f8-143">Strings Used in Structures</span></span>  
- <span data-ttu-id="e59f8-144">字串是結構的有效成員；不過，<xref:System.Text.StringBuilder> 緩衝區在結構中無效。</span><span class="sxs-lookup"><span data-stu-id="e59f8-144">Strings are valid members of structures; however, <xref:System.Text.StringBuilder> buffers are invalid in structures.</span></span> <span data-ttu-id="e59f8-145">下表顯示當類型做為欄位封送處理時字串資料類型的封送處理選項。</span><span class="sxs-lookup"><span data-stu-id="e59f8-145">The following table shows the marshaling options for the string data type when the type is marshaled as a field.</span></span> <span data-ttu-id="e59f8-146"><xref:System.Runtime.InteropServices.MarshalAsAttribute> 屬性提供幾種 <xref:System.Runtime.InteropServices.UnmanagedType> 列舉值來封送處理字串至欄位。</span><span class="sxs-lookup"><span data-stu-id="e59f8-146">The <xref:System.Runtime.InteropServices.MarshalAsAttribute> attribute provides several <xref:System.Runtime.InteropServices.UnmanagedType> enumeration values to marshal strings to a field.</span></span>  
+## <a name="strings-used-in-structures"></a><span data-ttu-id="6ab6e-143">在結構中使用的字串</span><span class="sxs-lookup"><span data-stu-id="6ab6e-143">Strings Used in Structures</span></span>  
+ <span data-ttu-id="6ab6e-144">字串是結構的有效成員；不過，<xref:System.Text.StringBuilder> 緩衝區在結構中無效。</span><span class="sxs-lookup"><span data-stu-id="6ab6e-144">Strings are valid members of structures; however, <xref:System.Text.StringBuilder> buffers are invalid in structures.</span></span> <span data-ttu-id="6ab6e-145">下表顯示當類型做為欄位封送處理時字串資料類型的封送處理選項。</span><span class="sxs-lookup"><span data-stu-id="6ab6e-145">The following table shows the marshaling options for the string data type when the type is marshaled as a field.</span></span> <span data-ttu-id="6ab6e-146"><xref:System.Runtime.InteropServices.MarshalAsAttribute> 屬性提供幾種 <xref:System.Runtime.InteropServices.UnmanagedType> 列舉值來封送處理字串至欄位。</span><span class="sxs-lookup"><span data-stu-id="6ab6e-146">The <xref:System.Runtime.InteropServices.MarshalAsAttribute> attribute provides several <xref:System.Runtime.InteropServices.UnmanagedType> enumeration values to marshal strings to a field.</span></span>  
   
-|<span data-ttu-id="e59f8-147">列舉類型</span><span class="sxs-lookup"><span data-stu-id="e59f8-147">Enumeration type</span></span>|<span data-ttu-id="e59f8-148">Unmanaged 格式的描述</span><span class="sxs-lookup"><span data-stu-id="e59f8-148">Description of unmanaged format</span></span>|  
+|<span data-ttu-id="6ab6e-147">列舉類型</span><span class="sxs-lookup"><span data-stu-id="6ab6e-147">Enumeration type</span></span>|<span data-ttu-id="6ab6e-148">Unmanaged 格式的描述</span><span class="sxs-lookup"><span data-stu-id="6ab6e-148">Description of unmanaged format</span></span>|  
 |----------------------|-------------------------------------|  
-|`UnmanagedType.BStr`|<span data-ttu-id="e59f8-149">具有前置長度和 Unicode 字元的 COM 樣式 `BSTR`。</span><span class="sxs-lookup"><span data-stu-id="e59f8-149">A COM-style `BSTR` with a prefixed length and Unicode characters.</span></span>|  
-|`UnmanagedType.LPStr`|<span data-ttu-id="e59f8-150">ANSI 字元之 Null 終端陣列的指標。</span><span class="sxs-lookup"><span data-stu-id="e59f8-150">A pointer to a null-terminated array of ANSI characters.</span></span>|  
-|`UnmanagedType.LPTStr`|<span data-ttu-id="e59f8-151">平台相依字元之 Null 終端陣列的指標。</span><span class="sxs-lookup"><span data-stu-id="e59f8-151">A pointer to a null-terminated array of platform-dependent characters.</span></span>|  
-|`UnmanagedType.LPWStr`|<span data-ttu-id="e59f8-152">Unicode 字元之 Null 終端陣列的指標。</span><span class="sxs-lookup"><span data-stu-id="e59f8-152">A pointer to a null-terminated array of Unicode characters.</span></span>|  
-|`UnmanagedType.ByValTStr`|<span data-ttu-id="e59f8-153">一個固定長度的字元陣列；該陣列的類型由包含結構的字元集決定。</span><span class="sxs-lookup"><span data-stu-id="e59f8-153">A fixed-length array of characters; the array's type is determined by the character set of the containing structure.</span></span>|  
+|`UnmanagedType.BStr`|<span data-ttu-id="6ab6e-149">具有前置長度和 Unicode 字元的 COM 樣式 `BSTR`。</span><span class="sxs-lookup"><span data-stu-id="6ab6e-149">A COM-style `BSTR` with a prefixed length and Unicode characters.</span></span>|  
+|`UnmanagedType.LPStr`|<span data-ttu-id="6ab6e-150">ANSI 字元之 Null 終端陣列的指標。</span><span class="sxs-lookup"><span data-stu-id="6ab6e-150">A pointer to a null-terminated array of ANSI characters.</span></span>|  
+|`UnmanagedType.LPTStr`|<span data-ttu-id="6ab6e-151">平台相依字元之 Null 終端陣列的指標。</span><span class="sxs-lookup"><span data-stu-id="6ab6e-151">A pointer to a null-terminated array of platform-dependent characters.</span></span>|  
+|`UnmanagedType.LPWStr`|<span data-ttu-id="6ab6e-152">Unicode 字元之 Null 終端陣列的指標。</span><span class="sxs-lookup"><span data-stu-id="6ab6e-152">A pointer to a null-terminated array of Unicode characters.</span></span>|  
+|`UnmanagedType.ByValTStr`|<span data-ttu-id="6ab6e-153">一個固定長度的字元陣列；該陣列的類型由包含結構的字元集決定。</span><span class="sxs-lookup"><span data-stu-id="6ab6e-153">A fixed-length array of characters; the array's type is determined by the character set of the containing structure.</span></span>|  
   
- <span data-ttu-id="e59f8-154">`ByValTStr` 類型使用於出現在結構中的內嵌固定長度字元陣列。</span><span class="sxs-lookup"><span data-stu-id="e59f8-154">The `ByValTStr` type is used for inline, fixed-length character arrays that appear within a structure.</span></span> <span data-ttu-id="e59f8-155">其他類型適用於包含在結構內的字串參考，其中包含字串的指標。</span><span class="sxs-lookup"><span data-stu-id="e59f8-155">Other types apply to string references contained within structures that contain pointers to strings.</span></span>  
+ <span data-ttu-id="6ab6e-154">`ByValTStr` 類型使用於出現在結構中的內嵌固定長度字元陣列。</span><span class="sxs-lookup"><span data-stu-id="6ab6e-154">The `ByValTStr` type is used for inline, fixed-length character arrays that appear within a structure.</span></span> <span data-ttu-id="6ab6e-155">其他類型適用於包含在結構內的字串參考，其中包含字串的指標。</span><span class="sxs-lookup"><span data-stu-id="6ab6e-155">Other types apply to string references contained within structures that contain pointers to strings.</span></span>  
   
- <span data-ttu-id="e59f8-156">套用至包含結構之 <xref:System.Runtime.InteropServices.StructLayoutAttribute> 屬性的 `CharSet` 引數會決定在結構中字串的字元格式。</span><span class="sxs-lookup"><span data-stu-id="e59f8-156">The `CharSet` argument of the <xref:System.Runtime.InteropServices.StructLayoutAttribute> attribute that is applied to the containing structure determines the character format of strings in structures.</span></span> <span data-ttu-id="e59f8-157">下列範例結構包含字串的參考和內嵌字串，以及 ANSI、Unicode 和平台相依字元。</span><span class="sxs-lookup"><span data-stu-id="e59f8-157">The following example structures contain string references and inline strings, as well as ANSI, Unicode, and platform-dependent characters.</span></span>  
+ <span data-ttu-id="6ab6e-156">套用至包含結構之 <xref:System.Runtime.InteropServices.StructLayoutAttribute> 屬性的 `CharSet` 引數會決定在結構中字串的字元格式。</span><span class="sxs-lookup"><span data-stu-id="6ab6e-156">The `CharSet` argument of the <xref:System.Runtime.InteropServices.StructLayoutAttribute> attribute that is applied to the containing structure determines the character format of strings in structures.</span></span> <span data-ttu-id="6ab6e-157">下列範例結構包含字串的參考和內嵌字串，以及 ANSI、Unicode 和平台相依字元。</span><span class="sxs-lookup"><span data-stu-id="6ab6e-157">The following example structures contain string references and inline strings, as well as ANSI, Unicode, and platform-dependent characters.</span></span>  
   
-### <a name="type-library-representation"></a><span data-ttu-id="e59f8-158">類型程式庫表示法</span><span class="sxs-lookup"><span data-stu-id="e59f8-158">Type Library Representation</span></span>  
+### <a name="type-library-representation"></a><span data-ttu-id="6ab6e-158">類型程式庫表示法</span><span class="sxs-lookup"><span data-stu-id="6ab6e-158">Type Library Representation</span></span>  
   
-```  
+```
 struct StringInfoA {  
    char *    f1;  
    char      f2[256];  
@@ -178,7 +177,7 @@ struct StringInfoT {
 };  
 ```  
   
- <span data-ttu-id="e59f8-159">下列程式碼範例示範如何使用 <xref:System.Runtime.InteropServices.MarshalAsAttribute> 屬性在不同格式中定義相同的結構。</span><span class="sxs-lookup"><span data-stu-id="e59f8-159">The following code example shows how to use the <xref:System.Runtime.InteropServices.MarshalAsAttribute> attribute to define the same structure in different formats.</span></span>  
+ <span data-ttu-id="6ab6e-159">下列程式碼範例示範如何使用 <xref:System.Runtime.InteropServices.MarshalAsAttribute> 屬性在不同格式中定義相同的結構。</span><span class="sxs-lookup"><span data-stu-id="6ab6e-159">The following code example shows how to use the <xref:System.Runtime.InteropServices.MarshalAsAttribute> attribute to define the same structure in different formats.</span></span>  
   
 ```vb  
 <StructLayout(LayoutKind.Sequential, CharSet := CharSet.Ansi)> _  
@@ -222,12 +221,12 @@ struct StringInfoT {
 ```  
   
 <a name="cpcondefaultmarshalingforstringsanchor3"></a>   
-## <a name="fixed-length-string-buffers"></a><span data-ttu-id="e59f8-160">固定長度字串緩衝區</span><span class="sxs-lookup"><span data-stu-id="e59f8-160">Fixed-Length String Buffers</span></span>  
- <span data-ttu-id="e59f8-161">在某些情況下，固定長度的字元緩衝區必須傳遞至 Unmanaged 程式碼以進行操作。</span><span class="sxs-lookup"><span data-stu-id="e59f8-161">In some circumstances, a fixed-length character buffer must be passed into unmanaged code to be manipulated.</span></span> <span data-ttu-id="e59f8-162">在此情況下只傳遞字串無法運作，因為被呼叫端不能修改傳遞緩衝區的內容。</span><span class="sxs-lookup"><span data-stu-id="e59f8-162">Simply passing a string does not work in this case because the callee cannot modify the contents of the passed buffer.</span></span> <span data-ttu-id="e59f8-163">即使該字串以傳址方式傳遞，也沒有任何方式來初始化指定大小的緩衝區。</span><span class="sxs-lookup"><span data-stu-id="e59f8-163">Even if the string is passed by reference, there is no way to initialize the buffer to a given size.</span></span>  
+## <a name="fixed-length-string-buffers"></a><span data-ttu-id="6ab6e-160">固定長度字串緩衝區</span><span class="sxs-lookup"><span data-stu-id="6ab6e-160">Fixed-Length String Buffers</span></span>  
+ <span data-ttu-id="6ab6e-161">在某些情況下，固定長度的字元緩衝區必須傳遞至 Unmanaged 程式碼以進行操作。</span><span class="sxs-lookup"><span data-stu-id="6ab6e-161">In some circumstances, a fixed-length character buffer must be passed into unmanaged code to be manipulated.</span></span> <span data-ttu-id="6ab6e-162">在此情況下只傳遞字串無法運作，因為被呼叫端不能修改傳遞緩衝區的內容。</span><span class="sxs-lookup"><span data-stu-id="6ab6e-162">Simply passing a string does not work in this case because the callee cannot modify the contents of the passed buffer.</span></span> <span data-ttu-id="6ab6e-163">即使該字串以傳址方式傳遞，也沒有任何方式來初始化指定大小的緩衝區。</span><span class="sxs-lookup"><span data-stu-id="6ab6e-163">Even if the string is passed by reference, there is no way to initialize the buffer to a given size.</span></span>  
   
- <span data-ttu-id="e59f8-164">解決方式為傳遞 <xref:System.Text.StringBuilder> 緩衝區做為引數，而非字串。</span><span class="sxs-lookup"><span data-stu-id="e59f8-164">The solution is to pass a <xref:System.Text.StringBuilder> buffer as the argument instead of a string.</span></span> <span data-ttu-id="e59f8-165">`StringBuilder` 可以為已取值，而且由被呼叫端修改，前提是它不會超過 `StringBuilder` 的容量。</span><span class="sxs-lookup"><span data-stu-id="e59f8-165">A `StringBuilder` can be dereferenced and modified by the callee, provided it does not exceed the capacity of the `StringBuilder`.</span></span> <span data-ttu-id="e59f8-166">它也可以初始化為固定長度。</span><span class="sxs-lookup"><span data-stu-id="e59f8-166">It can also be initialized to a fixed length.</span></span> <span data-ttu-id="e59f8-167">例如，如果您初始化 `StringBuilder` 緩衝區為 `N` 的容量，封送處理器會提供 (`N`+1) 個字元大小的緩衝區。</span><span class="sxs-lookup"><span data-stu-id="e59f8-167">For example, if you initialize a `StringBuilder` buffer to a capacity of `N`, the marshaler provides a buffer of size (`N`+1) characters.</span></span> <span data-ttu-id="e59f8-168">+1 代表 Unmanged 字串具有 null 結束字元，但 `StringBuilder` 沒有。</span><span class="sxs-lookup"><span data-stu-id="e59f8-168">The +1 accounts for the fact that the unmanaged string has a null terminator while `StringBuilder` does not.</span></span>  
+ <span data-ttu-id="6ab6e-164">解決方式為傳遞 <xref:System.Text.StringBuilder> 緩衝區做為引數，而非字串。</span><span class="sxs-lookup"><span data-stu-id="6ab6e-164">The solution is to pass a <xref:System.Text.StringBuilder> buffer as the argument instead of a string.</span></span> <span data-ttu-id="6ab6e-165">`StringBuilder` 可以為已取值，而且由被呼叫端修改，前提是它不會超過 `StringBuilder` 的容量。</span><span class="sxs-lookup"><span data-stu-id="6ab6e-165">A `StringBuilder` can be dereferenced and modified by the callee, provided it does not exceed the capacity of the `StringBuilder`.</span></span> <span data-ttu-id="6ab6e-166">它也可以初始化為固定長度。</span><span class="sxs-lookup"><span data-stu-id="6ab6e-166">It can also be initialized to a fixed length.</span></span> <span data-ttu-id="6ab6e-167">例如，如果您初始化 `StringBuilder` 緩衝區為 `N` 的容量，封送處理器會提供 (`N`+1) 個字元大小的緩衝區。</span><span class="sxs-lookup"><span data-stu-id="6ab6e-167">For example, if you initialize a `StringBuilder` buffer to a capacity of `N`, the marshaler provides a buffer of size (`N`+1) characters.</span></span> <span data-ttu-id="6ab6e-168">+1 代表 Unmanged 字串具有 null 結束字元，但 `StringBuilder` 沒有。</span><span class="sxs-lookup"><span data-stu-id="6ab6e-168">The +1 accounts for the fact that the unmanaged string has a null terminator while `StringBuilder` does not.</span></span>  
   
- <span data-ttu-id="e59f8-169">例如，Microsoft Win32 API `GetWindowText` 函式 (定義於 Windows.h) 是必須傳遞至 Unmanaged 程式碼操作的固定長度字元緩衝區。</span><span class="sxs-lookup"><span data-stu-id="e59f8-169">For example, the Microsoft Win32 API `GetWindowText` function (defined in Windows.h) is a fixed-length character buffer that must be passed into unmanaged code to be manipulated.</span></span> <span data-ttu-id="e59f8-170">`LpString` 指向大小為 `nMaxCount` 的呼叫端配置緩衝區。</span><span class="sxs-lookup"><span data-stu-id="e59f8-170">`LpString` points to a caller-allocated buffer of size `nMaxCount`.</span></span> <span data-ttu-id="e59f8-171">呼叫端必須配置緩衝區，並設定 `nMaxCount` 引數為配置緩衝區的大小。</span><span class="sxs-lookup"><span data-stu-id="e59f8-171">The caller is expected to allocate the buffer and set the `nMaxCount` argument to the size of the allocated buffer.</span></span> <span data-ttu-id="e59f8-172">下列程式碼顯示在 Windows.h 中所定義的 `GetWindowText` 函式宣告。</span><span class="sxs-lookup"><span data-stu-id="e59f8-172">The following code shows the `GetWindowText` function declaration as defined in Windows.h.</span></span>  
+ <span data-ttu-id="6ab6e-169">例如，Microsoft Win32 API `GetWindowText` 函式 (定義於 Windows.h) 是必須傳遞至 Unmanaged 程式碼操作的固定長度字元緩衝區。</span><span class="sxs-lookup"><span data-stu-id="6ab6e-169">For example, the Microsoft Win32 API `GetWindowText` function (defined in Windows.h) is a fixed-length character buffer that must be passed into unmanaged code to be manipulated.</span></span> <span data-ttu-id="6ab6e-170">`LpString` 指向大小為 `nMaxCount` 的呼叫端配置緩衝區。</span><span class="sxs-lookup"><span data-stu-id="6ab6e-170">`LpString` points to a caller-allocated buffer of size `nMaxCount`.</span></span> <span data-ttu-id="6ab6e-171">呼叫端必須配置緩衝區，並設定 `nMaxCount` 引數為配置緩衝區的大小。</span><span class="sxs-lookup"><span data-stu-id="6ab6e-171">The caller is expected to allocate the buffer and set the `nMaxCount` argument to the size of the allocated buffer.</span></span> <span data-ttu-id="6ab6e-172">下列程式碼顯示在 Windows.h 中所定義的 `GetWindowText` 函式宣告。</span><span class="sxs-lookup"><span data-stu-id="6ab6e-172">The following code shows the `GetWindowText` function declaration as defined in Windows.h.</span></span>  
   
 ```  
 int GetWindowText(  
@@ -237,7 +236,7 @@ int nMaxCount     // Maximum number of characters to copy.
 );  
 ```  
   
- <span data-ttu-id="e59f8-173">`StringBuilder` 可以為已取值，而且由被呼叫端修改，前提是它不會超過 `StringBuilder` 的容量。</span><span class="sxs-lookup"><span data-stu-id="e59f8-173">A `StringBuilder` can be dereferenced and modified by the callee, provided it does not exceed the capacity of the `StringBuilder`.</span></span> <span data-ttu-id="e59f8-174">下列程式碼範例示範可以 `StringBuilder` 如何初始化為固定長度。</span><span class="sxs-lookup"><span data-stu-id="e59f8-174">The following code example demonstrates how `StringBuilder` can be initialized to a fixed length.</span></span>  
+ <span data-ttu-id="6ab6e-173">`StringBuilder` 可以為已取值，而且由被呼叫端修改，前提是它不會超過 `StringBuilder` 的容量。</span><span class="sxs-lookup"><span data-stu-id="6ab6e-173">A `StringBuilder` can be dereferenced and modified by the callee, provided it does not exceed the capacity of the `StringBuilder`.</span></span> <span data-ttu-id="6ab6e-174">下列程式碼範例示範可以 `StringBuilder` 如何初始化為固定長度。</span><span class="sxs-lookup"><span data-stu-id="6ab6e-174">The following code example demonstrates how `StringBuilder` can be initialized to a fixed length.</span></span>  
   
 ```vb  
 Public Class Win32API  
@@ -270,8 +269,8 @@ public class Window {
 }  
 ```  
   
-## <a name="see-also"></a><span data-ttu-id="e59f8-175">請參閱</span><span class="sxs-lookup"><span data-stu-id="e59f8-175">See Also</span></span>  
- [<span data-ttu-id="e59f8-176">預設的封送處理行為</span><span class="sxs-lookup"><span data-stu-id="e59f8-176">Default Marshaling Behavior</span></span>](../../../docs/framework/interop/default-marshaling-behavior.md)  
- [<span data-ttu-id="e59f8-177">Blittable 和非 Blittable 類型</span><span class="sxs-lookup"><span data-stu-id="e59f8-177">Blittable and Non-Blittable Types</span></span>](../../../docs/framework/interop/blittable-and-non-blittable-types.md)  
- [<span data-ttu-id="e59f8-178">方向屬性</span><span class="sxs-lookup"><span data-stu-id="e59f8-178">Directional Attributes</span></span>](http://msdn.microsoft.com/library/241ac5b5-928e-4969-8f58-1dbc048f9ea2)  
- [<span data-ttu-id="e59f8-179">複製和 Pin</span><span class="sxs-lookup"><span data-stu-id="e59f8-179">Copying and Pinning</span></span>](../../../docs/framework/interop/copying-and-pinning.md)
+## <a name="see-also"></a><span data-ttu-id="6ab6e-175">另請參閱</span><span class="sxs-lookup"><span data-stu-id="6ab6e-175">See Also</span></span>  
+ [<span data-ttu-id="6ab6e-176">預設的封送處理行為</span><span class="sxs-lookup"><span data-stu-id="6ab6e-176">Default Marshaling Behavior</span></span>](default-marshaling-behavior.md)  
+ [<span data-ttu-id="6ab6e-177">Blittable 和非 Blittable 類型</span><span class="sxs-lookup"><span data-stu-id="6ab6e-177">Blittable and Non-Blittable Types</span></span>](blittable-and-non-blittable-types.md)  
+ <span data-ttu-id="6ab6e-178">[方向屬性](https://msdn.microsoft.com/library/241ac5b5-928e-4969-8f58-1dbc048f9ea2(v=vs.100))</span><span class="sxs-lookup"><span data-stu-id="6ab6e-178">[Directional Attributes](https://msdn.microsoft.com/library/241ac5b5-928e-4969-8f58-1dbc048f9ea2(v=vs.100))</span></span>  
+ [<span data-ttu-id="6ab6e-179">複製和 Pin</span><span class="sxs-lookup"><span data-stu-id="6ab6e-179">Copying and Pinning</span></span>](copying-and-pinning.md)
