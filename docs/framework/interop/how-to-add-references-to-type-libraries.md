@@ -1,12 +1,9 @@
 ---
-title: "如何：將參考加入至類型程式庫"
-ms.custom: 
+title: 如何：將參考加入至類型程式庫
 ms.date: 03/30/2017
 ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.technology: dotnet-clr
-ms.tgt_pltfrm: 
+ms.technology:
+- dotnet-clr
 ms.topic: article
 helpviewer_keywords:
 - importing type library
@@ -14,16 +11,16 @@ helpviewer_keywords:
 - type libraries
 - COM interop, importing type library
 ms.assetid: f5cfa6ba-cc25-4017-82cd-ba7391859113
-caps.latest.revision: "12"
 author: rpetrusha
 ms.author: ronpet
 manager: wpickett
-ms.workload: dotnet
-ms.openlocfilehash: 4e80c4bf5142a9bbbd2b7f75d67553db73f0ff22
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.workload:
+- dotnet
+ms.openlocfilehash: 561e05c82c1882ad5e495ddb3dc1a17356522514
+ms.sourcegitcommit: 9a4fe1a1c37b26532654b4bbe22d702237950009
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="how-to-add-references-to-type-libraries"></a>如何：將參考加入至類型程式庫
 Visual Studio 會產生內含新增類型程式庫參考時所產生之中繼資料的 interop 組件。 如有提供主要的 Interop 組件，Visual Studio 便會先使用現有的組件，然後再產生新的 Interop 組件。  
@@ -49,14 +46,14 @@ Visual Studio 會產生內含新增類型程式庫參考時所產生之中繼資
   
 ### <a name="to-add-a-reference-to-a-type-library-for-command-line-compilation"></a>新增類型程式庫參考供命令列編譯時使用  
   
-1.  產生[如何：從型別程式庫產生 Interop 組件](../../../docs/framework/interop/how-to-generate-interop-assemblies-from-type-libraries.md)中所述的 Interop 組件。  
+1.  產生[如何：從型別程式庫產生 Interop 組件](how-to-generate-interop-assemblies-from-type-libraries.md)中所述的 Interop 組件。  
   
-2.  使用 [/link (C# 編譯器選項)](~/docs/csharp/language-reference/compiler-options/link-compiler-option.md) 或 [/link (Visual Basic)](~/docs/visual-basic/reference/command-line-compiler/link.md) 編譯器選項加上 Interop 組件名稱，將 COM 類型的類型資訊嵌入您的可執行檔中。  
+2.  使用 [/link (C# 編譯器選項)](../../csharp/language-reference/compiler-options/link-compiler-option.md) 或 [/link (Visual Basic)](../../visual-basic/reference/command-line-compiler/link.md) 編譯器選項加上 Interop 組件名稱，將 COM 類型的類型資訊嵌入您的可執行檔中。  
   
-## <a name="see-also"></a>請參閱  
- [匯入類型程式庫做為組件](../../../docs/framework/interop/importing-a-type-library-as-an-assembly.md)  
- [將 COM 元件公開給 .NET Framework](../../../docs/framework/interop/exposing-com-components.md)  
- [逐步解說：從 Microsoft Office 組件內嵌類型資訊](http://msdn.microsoft.com/library/85b55e05-bc5e-4665-b6ae-e1ada9299fd3)  
- [逐步解說：從 Managed 組件內嵌類型](http://msdn.microsoft.com/library/b28ec92c-1867-4847-95c0-61adfe095e21)  
- [/link (C# 編譯器選項)](~/docs/csharp/language-reference/compiler-options/link-compiler-option.md)  
- [/link (Visual Basic)](~/docs/visual-basic/reference/command-line-compiler/link.md)
+## <a name="see-also"></a>另請參閱  
+ [匯入類型程式庫做為組件](importing-a-type-library-as-an-assembly.md)  
+ [將 COM 元件公開給 .NET Framework](exposing-com-components.md)  
+ [逐步解說：從 Microsoft Office 組件內嵌類型資訊](https://msdn.microsoft.com/library/85b55e05-bc5e-4665-b6ae-e1ada9299fd3(v=vs.100))  
+ [逐步解說：從 Managed 組件內嵌類型](https://msdn.microsoft.com/library/b28ec92c-1867-4847-95c0-61adfe095e21)  
+ [/link (C# 編譯器選項)](../../csharp/language-reference/compiler-options/link-compiler-option.md)  
+ [/link (Visual Basic)](../../visual-basic/reference/command-line-compiler/link.md)

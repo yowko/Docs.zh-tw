@@ -1,12 +1,9 @@
 ---
-title: "COM 可呼叫包裝函式"
-ms.custom: 
+title: COM 可呼叫包裝函式
 ms.date: 03/30/2017
 ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.technology: dotnet-clr
-ms.tgt_pltfrm: 
+ms.technology:
+- dotnet-clr
 ms.topic: article
 dev_langs:
 - csharp
@@ -19,23 +16,23 @@ helpviewer_keywords:
 - interoperation with unmanaged code, COM wrappers
 - COM callable wrappers
 ms.assetid: d04be3b5-27b9-4f5b-8469-a44149fabf78
-caps.latest.revision: "10"
 author: rpetrusha
 ms.author: ronpet
 manager: wpickett
-ms.workload: dotnet
-ms.openlocfilehash: 65d09b33982f62b965d6907902ded98f87d9a97e
-ms.sourcegitcommit: c0dd436f6f8f44dc80dc43b07f6841a00b74b23f
+ms.workload:
+- dotnet
+ms.openlocfilehash: 270d7e85491f0f4ada797910d4fc12c1a14be625
+ms.sourcegitcommit: 9a4fe1a1c37b26532654b4bbe22d702237950009
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 01/19/2018
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="com-callable-wrapper"></a>COM 可呼叫包裝函式
 當 COM 用戶端呼叫 .NET 物件時，Common Language Runtime 會建立 Managed 物件和物件的 COM 可呼叫包裝函式 (CCW)。 無法直接參考 .NET 物件，因此 COM 用戶端使用 CCW 做為 Managed 物件的 Proxy。  
   
  執行階段會為 Managed 物件建立剛好一個 CCW，不論要求其服務的 COM 用戶端數目有多少。 如下圖所示，多個 COM 用戶端可以保留對公開 INew 介面之 CCW 的參考。 CCW 接著會保留對實作介面且已記憶體回收之 Managed 物件的單一參考。 COM 和 .NET 用戶端都可以同時對相同的 Managed 物件提出要求。  
   
- ![COM 可呼叫包裝函式](../../../docs/framework/interop/media/ccw.gif "ccw")  
+ ![COM 可呼叫包裝函式](./media/ccw.gif "ccw")  
 透過 COM 可呼叫包裝函式存取 .NET 物件  
   
  在 .NET Framework 內執行的其他類別看不到 COM 可呼叫包裝函式。 其主要目的是要封送處理 Managed 和 Unmanaged 程式碼之間的呼叫。不過，CCW 也會管理物件識別和它們所包裝之 Managed 物件的物件存留期。  
@@ -46,12 +43,13 @@ ms.lasthandoff: 01/19/2018
 ## <a name="object-lifetime"></a>物件存留期  
  不同於它所包裝的 .NET 用戶端，CCW 是以傳統 COM 方式計算參考。 當 CCW 上的參考計數到達零時，包裝函式便會釋放對 Managed 物件的參考。 沒有剩餘參考的 Managed 物件會在下一個記憶體回收循環期間回收。  
   
-## <a name="simulating-com-interfaces"></a>模擬 COM 介面  
- [COM 可呼叫包裝函式](../../../docs/framework/interop/com-callable-wrapper.md) (CCW) 會以與 COM 的介面互動強制一致的方式，向 COM 用戶端公開所有的公用、COM 可見介面、資料類型和傳回值。 對於 COM 用戶端而言，在 .NET Framework 物件上叫用方法與在 COM 物件上叫用方法相同。  
+## <a name="simulating-com-interfaces"></a>模擬 COM 介面
+
+CCW 會公開所有公用、 COM 可見介面、 資料類型，以及對 COM 用戶端與 COM 的介面為基礎的互動強制一致的方式傳回的值。 對於 COM 用戶端而言，在 .NET Framework 物件上叫用方法與在 COM 物件上叫用方法相同。  
   
  為了建立這種無縫式的方法，CCW 會製造傳統 COM 介面，例如 **IUnknown** 和 **IDispatch**。 如下圖所示，CCW 會維護對其所包裝之 .NET 物件的單一參考。 COM 用戶端和 .NET 物件會透過 Proxy 和 CCW 虛設常式建構彼此互動。  
   
- ![COM 介面](../../../docs/framework/interop/media/ccwwithinterfaces.gif "ccwwithinterfaces")  
+ ![COM 介面](./media/ccwwithinterfaces.gif "ccwwithinterfaces")  
 COM 介面與 COM 可呼叫包裝函式  
   
  除了公開受管理環境中的類別明確實作的介面，.NET Framework 也會代表物件提供下表所列 COM 介面的實作。 .NET 類別可以藉由提供自己的這些介面實作來覆寫預設行為。 不過，執行階段一律會提供 **IUnknown** 和 **IDispatch** 介面的實作。  
@@ -69,15 +67,15 @@ COM 介面與 COM 可呼叫包裝函式
   
 |介面|描述|  
 |---------------|-----------------|  
-|(_*classname*) 類別介面|由執行階段公開且未明確定義的介面，它會公開所有公用介面、方法、屬性和 Managed 物件上明確公開的欄位。|  
+|(\_*Classname*) 類別介面|由執行階段公開且未明確定義的介面，它會公開所有公用介面、方法、屬性和 Managed 物件上明確公開的欄位。|  
 |**IConnectionPoint** 和 **IconnectionPointContainer**|來源為以委派為基礎之事件的物件介面 (註冊事件訂閱者用的介面)。|  
 |**IdispatchEx**|如果類別實作 **IExpando**，則為執行階段提供的介面。 **IDispatchEx** 介面是 **IDispatch** 介面的延伸模組，它不同於 **IDispatch**，可進行成員的列舉、新增、刪除和區分大小寫的呼叫。|  
 |**IEnumVARIANT**|集合類型類別的介面，如果類別實作 **IEnumerable**，它會列舉集合中的物件。|  
   
 ## <a name="introducing-the-class-interface"></a>類別介面簡介  
- 類別介面未在 Managed 程式碼中明確定義，它是公開所有公用方法、屬性、欄位和 .NET 物件上明確公開之事件的介面。 這個介面可以是雙重介面或僅分派介面。 類別介面會接收 .NET 類別的名稱本身，前面加上底線。 例如，對於類別 Mammal，類別介面是 _Mammal。  
+ 類別介面未在 Managed 程式碼中明確定義，它是公開所有公用方法、屬性、欄位和 .NET 物件上明確公開之事件的介面。 這個介面可以是雙重介面或僅分派介面。 類別介面會接收 .NET 類別的名稱本身，前面加上底線。 例如，對於類別 Mammal，類別介面是\_Mammal。  
   
- 對於衍生類別，類別介面也會公開和基底類別的所有公用方法、屬性欄位。 衍生類別也會為每個基底類別公開類別介面。 比方說，如果類別 Mammal 延伸了類別 MammalSuperclass，而 MammalSuperclass 本身延伸了 System.Object，則 .NET 物件會公開給 COM 用戶端三個類別介面，名稱為 _Mammal、_MammalSuperclass，以及 _Object。  
+ 對於衍生類別，類別介面也會公開和基底類別的所有公用方法、屬性欄位。 衍生類別也會為每個基底類別公開類別介面。 例如，如果類別 Mammal 延伸了類別 MammalSuperclass，而其本身延伸了 System.Object，對 COM 用戶端.NET 物件會公開三個類別介面，名稱為\_Mammal， \_MammalSuperclass，和\_物件。  
   
  例如，請參考下列 .NET 類別：  
   
@@ -104,7 +102,7 @@ public class Mammal
 }  
 ```  
   
- COM 用戶端可以取得名為 `_Mammal` 之類別介面的指標，它描述於[型別程式庫匯出工具 (Tlbexp.exe)](../../../docs/framework/tools/tlbexp-exe-type-library-exporter.md) 工具所產生的型別程式庫中。 如果 `Mammal` 類別實作一個或多個介面，介面會出現在 coclass 底下。  
+ COM 用戶端可以取得名為 `_Mammal` 之類別介面的指標，它描述於[型別程式庫匯出工具 (Tlbexp.exe)](../tools/tlbexp-exe-type-library-exporter.md) 工具所產生的型別程式庫中。 如果 `Mammal` 類別實作一個或多個介面，介面會出現在 coclass 底下。  
   
 ```  
 [odl, uuid(…), hidden, dual, nonextensible, oleautomation]  
@@ -156,7 +154,7 @@ public class LoanApp : IExplicit {
   
  **ClassInterfaceType.None** 值可防止在類別中繼資料匯出至型別程式庫時產生類別介面。 在上述範例中，COM 用戶端只能透過 `IExplicit` 介面存取 `LoanApp` 類別。  
   
-### <a name="avoid-caching-dispatch-identifiers-dispids"></a>避免快取分派識別項 (DispId)。  
+### <a name="avoid-caching-dispatch-identifiers-dispids"></a>避免快取分派識別項 (Dispid)
  使用類別介面對於指令碼式用戶端、Microsoft Visual Basic 6.0 用戶端，或不會快取介面成員 DispId 的任何晚期繫結用戶端而言，是可接受的選項。 DispId 可識別介面成員以啟用晚期繫結。  
   
  對於類別介面，DispId 的產生是根據成員在介面中的位置。 如果您變更成員的順序，並將類別匯出至類型程式庫，您會修改在類別介面中產生的 DispId。  
@@ -185,11 +183,9 @@ public class LoanApp : IAnother {
   
  自動產生的雙重介面可能適合於少數情況，不過，通常它會造成與版本相關的複雜性。 例如，使用衍生類別之類別介面的 COM 用戶端，可能會因為對基底類別的變更而輕易地中斷。 當協力廠商提供基底類別時，類別介面的配置會超出您的控制。 此外，不同於僅分派介面，雙重介面 (**ClassInterface.AutoDual**) 在匯出的型別程式庫中提供類別介面的描述。 這類描述鼓勵晚期繫結的用戶端在執行階段快取 DispId。  
   
-## <a name="see-also"></a>請參閱  
+## <a name="see-also"></a>另請參閱  
  <xref:System.Runtime.InteropServices.ClassInterfaceAttribute>  
- [COM 可呼叫包裝函式](../../../docs/framework/interop/com-callable-wrapper.md)  
- [COM 包裝函式](../../../docs/framework/interop/com-wrappers.md)  
- [將 .NET Framework 元件公開給 COM](../../../docs/framework/interop/exposing-dotnet-components-to-com.md)  
- [模擬 COM 介面](http://msdn.microsoft.com/library/ad2ab959-e2be-411b-aaff-275c3fba606c)  
- [限定互通的 .NET 類型](../../../docs/framework/interop/qualifying-net-types-for-interoperation.md)  
- [執行階段可呼叫包裝函式](../../../docs/framework/interop/runtime-callable-wrapper.md)
+ [COM 包裝函式](com-wrappers.md)  
+ [將 .NET Framework 元件公開給 COM](exposing-dotnet-components-to-com.md)  
+ [限定互通的 .NET 類型](qualifying-net-types-for-interoperation.md)  
+ [執行階段可呼叫包裝函式](runtime-callable-wrapper.md)

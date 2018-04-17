@@ -1,30 +1,25 @@
 ---
-title: "將 COM 元件公開給 .NET Framework"
-ms.custom: 
+title: 將 COM 元件公開給 .NET Framework
 ms.date: 03/30/2017
 ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
 ms.technology:
 - dotnet-clr
-ms.tgt_pltfrm: 
 ms.topic: article
 helpviewer_keywords:
 - exposing COM components to .NET Framework
 - interoperation with unmanaged code, exposing COM components
 - COM interop, exposing COM components
 ms.assetid: e78b14f1-e487-43cd-9c6d-1a07483f1730
-caps.latest.revision: 
 author: rpetrusha
 ms.author: ronpet
 manager: wpickett
 ms.workload:
 - dotnet
-ms.openlocfilehash: f2a73bbe23cc1e8fd267489d2607dd7275b09322
-ms.sourcegitcommit: d95a91d685565f4d95c8773b558752864a6a3d7e
+ms.openlocfilehash: e17c0b8c3676bb632c9b45af0577708c98446967
+ms.sourcegitcommit: 9a4fe1a1c37b26532654b4bbe22d702237950009
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 03/12/2018
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="exposing-com-components-to-the-net-framework"></a>將 COM 元件公開給 .NET Framework
 本節摘要說明向 Managed 程式碼公開現有 COM 元件所需要的程序。 如需撰寫與 .NET Framework 緊密整合的 COM 伺服器的詳細資訊，請參閱[交互操作的設計考量](https://msdn.microsoft.com/library/b59637f6-fe35-40d6-ae72-901e7a707689(v=vs.100))。
@@ -33,7 +28,7 @@ ms.lasthandoff: 03/12/2018
   
 #### <a name="to-expose-com-components-to-the-net-framework"></a>將 COM 元件公開給 .NET Framework  
   
-1.  [匯入型別程式庫作為組件](../../../docs/framework/interop/importing-a-type-library-as-an-assembly.md)。  
+1.  [匯入型別程式庫作為組件](importing-a-type-library-as-an-assembly.md)。  
   
      Common Language Runtime 需要所有類型的中繼資料，包括 COM 類型。 有數種方式可以取得包含 COM 類型的組件，這些類型會匯入為中繼資料。  
   
@@ -41,17 +36,17 @@ ms.lasthandoff: 03/12/2018
   
      您可以檢查 COM 類型、啟動執行個體，以及使用您處理任何 Managed 類型的相同方式在 COM 物件上叫用方法。  
   
-3.  [編譯 Interop 專案](../../../docs/framework/interop/compiling-an-interop-project.md)。  
+3.  [編譯 Interop 專案](compiling-an-interop-project.md)。  
   
      [!INCLUDE[winsdklong](../../../includes/winsdklong-md.md)] 提供與 Common Language Specification (CLS) 相容的數種語言編譯器，包括 [!INCLUDE[vbprvblong](../../../includes/vbprvblong-md.md)]、C# 和 C++。  
   
-4.  [部署 Interop 應用程式](../../../docs/framework/interop/deploying-an-interop-application.md)。  
+4.  [部署 Interop 應用程式](deploying-an-interop-application.md)。  
   
-     Interop 應用程式最適合部署為全域組件快取中具有[強式名稱](../../../docs/framework/app-domains/strong-named-assemblies.md)的已簽署組件。  
+     Interop 應用程式最適合部署為全域組件快取中具有[強式名稱](../app-domains/strong-named-assemblies.md)的已簽署組件。  
   
-## <a name="see-also"></a>請參閱  
- [與 Unmanaged 程式碼互通](../../../docs/framework/interop/index.md)  
- [交互操作的設計考量](http://msdn.microsoft.com/library/b59637f6-fe35-40d6-ae72-901e7a707689)  
- [COM Interop 範例：.NET 用戶端與 COM 伺服器](../../../docs/framework/interop/com-interop-sample-net-client-and-com-server.md)  
- [語言獨立性以及與語言無關的元件](../../../docs/standard/language-independence-and-language-independent-components.md)  
- [Gacutil.exe (全域組件快取工具)](../../../docs/framework/tools/gacutil-exe-gac-tool.md)
+## <a name="see-also"></a>另請參閱  
+ [與 Unmanaged 程式碼互通](index.md)  
+ [交互操作的設計考量](https://msdn.microsoft.com/library/b59637f6-fe35-40d6-ae72-901e7a707689(v=vs.100))  
+ [COM Interop 範例：.NET 用戶端與 COM 伺服器](com-interop-sample-net-client-and-com-server.md)  
+ [語言獨立性以及與語言無關的元件](../../standard/language-independence-and-language-independent-components.md)  
+ [Gacutil.exe (全域組件快取工具)](../tools/gacutil-exe-gac-tool.md)

@@ -1,13 +1,9 @@
 ---
-title: "ICLRSyncManager 介面"
-ms.custom: 
+title: ICLRSyncManager 介面
 ms.date: 03/30/2017
 ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
 ms.technology:
 - dotnet-clr
-ms.tgt_pltfrm: 
 ms.topic: reference
 api_name:
 - ICLRSyncManager
@@ -22,17 +18,16 @@ helpviewer_keywords:
 ms.assetid: a49f9d80-1c76-4ddd-8c49-34f913a5c596
 topic_type:
 - apiref
-caps.latest.revision: 
 author: rpetrusha
 ms.author: ronpet
 manager: wpickett
 ms.workload:
 - dotnet
-ms.openlocfilehash: f75a9b532e91966d6b0be9ac6602080eac896ed8
-ms.sourcegitcommit: c0dd436f6f8f44dc80dc43b07f6841a00b74b23f
+ms.openlocfilehash: 17a1e3073713b54cb7a68e6ba3ef2562d4fbcaeb
+ms.sourcegitcommit: 9a4fe1a1c37b26532654b4bbe22d702237950009
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 01/19/2018
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="iclrsyncmanager-interface"></a>ICLRSyncManager 介面
 定義方法，讓主應用程式取得要求的工作的相關資訊，並在同步處理實作偵測死結。  
@@ -41,22 +36,22 @@ ms.lasthandoff: 01/19/2018
   
 |方法|描述|  
 |------------|-----------------|  
-|[CreateRWLockOwnerIterator 方法](../../../../docs/framework/unmanaged-api/hosting/iclrsyncmanager-createrwlockowneriterator-method.md)|Common language runtime (CLR) 建立的主機可用來判斷一組工作正在等候讀取器-寫入器鎖定之迭代器的要求。|  
-|[DeleteRWLockOwnerIterator 方法](../../../../docs/framework/unmanaged-api/hosting/iclrsyncmanager-deleterwlockowneriterator-method.md)|要求 CLR 終結迭代器所建立的呼叫`CreateRWLockOwnerIterator`。|  
-|[GetMonitorOwner 方法](../../../../docs/framework/unmanaged-api/hosting/iclrsyncmanager-getmonitorowner-method.md)|取得擁有指定的監視的工作。|  
-|[GetRWLockOwnerNext 方法](../../../../docs/framework/unmanaged-api/hosting/iclrsyncmanager-getrwlockownernext-method.md)|取得正在等候目前的讀取器-寫入器鎖定下一個工作。|  
+|[CreateRWLockOwnerIterator 方法](iclrsyncmanager-createrwlockowneriterator-method.md)|Common language runtime (CLR) 建立的主機可用來判斷一組工作正在等候讀取器-寫入器鎖定之迭代器的要求。|  
+|[DeleteRWLockOwnerIterator 方法](iclrsyncmanager-deleterwlockowneriterator-method.md)|要求 CLR 終結迭代器所建立的呼叫`CreateRWLockOwnerIterator`。|  
+|[GetMonitorOwner 方法](iclrsyncmanager-getmonitorowner-method.md)|取得擁有指定的監視的工作。|  
+|[GetRWLockOwnerNext 方法](iclrsyncmanager-getrwlockownernext-method.md)|取得正在等候目前的讀取器-寫入器鎖定下一個工作。|  
   
 ## <a name="requirements"></a>需求  
- **平台：**看到[系統需求](../../../../docs/framework/get-started/system-requirements.md)。  
+ **平台：**看到[系統需求](../../get-started/system-requirements.md)。  
   
  **標頭：** MSCorEE.h  
   
  **程式庫：**包含做為 MSCorEE.dll 中的資源  
   
- **.NET framework 版本：**[!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]  
+ **.NET framework 版本：** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]  
   
-## <a name="see-also"></a>請參閱  
+## <a name="see-also"></a>另請參閱  
  <xref:System.Threading.Thread>  
- [IHostSyncManager 介面](../../../../docs/framework/unmanaged-api/hosting/ihostsyncmanager-interface.md)  
- [Managed 和 Unmanaged 執行緒處理](http://msdn.microsoft.com/library/db425c20-4b2f-4433-bf96-76071c7881e5)  
- [裝載介面](../../../../docs/framework/unmanaged-api/hosting/hosting-interfaces.md)
+ [IHostSyncManager 介面](ihostsyncmanager-interface.md)  
+ [Managed 和 Unmanaged 執行緒處理](https://msdn.microsoft.com/library/db425c20-4b2f-4433-bf96-76071c7881e5(v=vs.100))  
+ [裝載介面](hosting-interfaces.md)

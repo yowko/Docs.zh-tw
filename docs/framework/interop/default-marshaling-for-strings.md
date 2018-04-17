@@ -1,12 +1,9 @@
 ---
-title: "字串的預設封送處理"
-ms.custom: 
+title: 字串的預設封送處理
 ms.date: 03/30/2017
 ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.technology: dotnet-clr
-ms.tgt_pltfrm: 
+ms.technology:
+- dotnet-clr
 ms.topic: article
 dev_langs:
 - csharp
@@ -15,16 +12,16 @@ helpviewer_keywords:
 - strings, interop marshaling
 - interop marshaling, strings
 ms.assetid: 9baea3ce-27b3-4b4f-af98-9ad0f9467e6f
-caps.latest.revision: "18"
 author: rpetrusha
 ms.author: ronpet
 manager: wpickett
-ms.workload: dotnet
-ms.openlocfilehash: 3d219ad68d125e2b90197fc7703ccfc0a1c857d2
-ms.sourcegitcommit: c0dd436f6f8f44dc80dc43b07f6841a00b74b23f
+ms.workload:
+- dotnet
+ms.openlocfilehash: 10f2c0e0e61190f571ae5bd4998f54d128448296
+ms.sourcegitcommit: 9a4fe1a1c37b26532654b4bbe22d702237950009
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 01/19/2018
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="default-marshaling-for-strings"></a>字串的預設封送處理
 <xref:System.String?displayProperty=nameWithType> 和 <xref:System.Text.StringBuilder?displayProperty=nameWithType> 類別同時都有類似的封送處理行為。  
@@ -41,7 +38,8 @@ ms.lasthandoff: 01/19/2018
   
 -   [固定長度的字串緩衝區](#cpcondefaultmarshalingforstringsanchor3)  
   
-<a name="cpcondefaultmarshalingforstringsanchor1"></a>   
+<a name="cpcondefaultmarshalingforstringsanchor1"></a>
+
 ## <a name="strings-used-in-interfaces"></a>在介面中使用的字串  
  下表顯示當字串資料類型做為方法引數封送處理至 Unmanaged 程式碼時，字串資料類型的封送處理選項。 <xref:System.Runtime.InteropServices.MarshalAsAttribute> 屬性提供幾種 <xref:System.Runtime.InteropServices.UnmanagedType> 列舉值來封送處理字串到 COM 介面。  
   
@@ -65,12 +63,12 @@ void PassStringRef1(ref String s);
 void PassStringRef2([MarshalAs(UnmanagedType.BStr)]ref String s);  
 void PassStringRef3([MarshalAs(UnmanagedType.LPStr)]ref String s);  
 void PassStringRef4([MarshalAs(UnmanagedType.LPWStr)]ref String s);  
-);  
-```  
-  
- 下列範例會顯示在類型程式庫中所述的對應介面。  
-  
-```  
+);
+```
+
+下列範例會顯示在類型程式庫中所述的對應介面。
+
+```
 […]  
 interface IStringWorker : IDispatch {  
 HRESULT PassString1([in] BSTR s);  
@@ -81,10 +79,11 @@ HRESULT PassStringRef1([in, out] BSTR *s);
 HRESULT PassStringRef2([in, out] BSTR *s);  
 HRESULT PassStringRef3([in, out] LPStr *s);  
 HRESULT PassStringRef4([in, out] LPWStr *s);  
-);  
-```  
-  
-<a name="cpcondefaultmarshalingforstringsanchor5"></a>   
+);
+```
+
+<a name="cpcondefaultmarshalingforstringsanchor5"></a>
+
 ## <a name="strings-used-in-platform-invoke"></a>在平台叫用中使用的字串  
  平台叫用會複製字串引數，從 .NET Framework 格式 (Unicode) 轉換為平台 Unmanaged 格式。 字串為不可變的，在呼叫傳回時並不會從 Unmanaged 記憶體複製回 Managed 記憶體。  
   
@@ -119,9 +118,9 @@ Public Declare Auto Sub PassAnsiBStr Lib "StringLib.Dll" _
 Public Declare Auto Sub PassTBStr Lib "StringLib.Dll" _  
 (<MarshalAs(UnmanagedType.TBStr)> s As String)  
 End Class  
-```  
-  
-```csharp  
+```
+
+```csharp
 class StringLibAPI {  
 [DllImport("StringLib.Dll")]  
 public static extern void PassLPStr([MarshalAs(UnmanagedType.LPStr)]  
@@ -162,7 +161,7 @@ String s);
   
 ### <a name="type-library-representation"></a>類型程式庫表示法  
   
-```  
+```
 struct StringInfoA {  
    char *    f1;  
    char      f2[256];  
@@ -270,8 +269,8 @@ public class Window {
 }  
 ```  
   
-## <a name="see-also"></a>請參閱  
- [預設的封送處理行為](../../../docs/framework/interop/default-marshaling-behavior.md)  
- [Blittable 和非 Blittable 類型](../../../docs/framework/interop/blittable-and-non-blittable-types.md)  
- [方向屬性](http://msdn.microsoft.com/library/241ac5b5-928e-4969-8f58-1dbc048f9ea2)  
- [複製和 Pin](../../../docs/framework/interop/copying-and-pinning.md)
+## <a name="see-also"></a>另請參閱  
+ [預設的封送處理行為](default-marshaling-behavior.md)  
+ [Blittable 和非 Blittable 類型](blittable-and-non-blittable-types.md)  
+ [方向屬性](https://msdn.microsoft.com/library/241ac5b5-928e-4969-8f58-1dbc048f9ea2(v=vs.100))  
+ [複製和 Pin](copying-and-pinning.md)

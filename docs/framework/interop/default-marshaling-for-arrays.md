@@ -1,12 +1,9 @@
 ---
-title: "陣列的預設封送處理"
-ms.custom: 
+title: 陣列的預設封送處理
 ms.date: 03/30/2017
 ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.technology: dotnet-clr
-ms.tgt_pltfrm: 
+ms.technology:
+- dotnet-clr
 ms.topic: article
 dev_langs:
 - csharp
@@ -15,21 +12,22 @@ helpviewer_keywords:
 - interop marshaling, arrays
 - arrays, interop marshaling
 ms.assetid: 8a3cca8b-dd94-4e3d-ad9a-9ee7590654bc
-caps.latest.revision: "19"
+caps.latest.revision: 19
 author: rpetrusha
 ms.author: ronpet
 manager: wpickett
-ms.workload: dotnet
-ms.openlocfilehash: 91df17448a57f7495dc95fb2b4ab1fa63dd8a27f
-ms.sourcegitcommit: c0dd436f6f8f44dc80dc43b07f6841a00b74b23f
+ms.workload:
+- dotnet
+ms.openlocfilehash: 84f4015fd9bc5eb2de11b71530115d20c583d21d
+ms.sourcegitcommit: 9a4fe1a1c37b26532654b4bbe22d702237950009
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 01/19/2018
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="default-marshaling-for-arrays"></a>陣列的預設封送處理
 在包含整個 Managed 程式碼的應用程式中，Common Language Runtime 會將陣列類型傳遞為 In/Out 參數。 相較之下，Interop 封送處理器預設會將陣列傳遞為 In 參數。  
   
- 使用[關聯最佳化](../../../docs/framework/interop/copying-and-pinning.md)，與相同 Apartment 中的物件互動時，Blittable 陣列可以操作為 In/Out 參數。 不過，如果您稍後將程式碼匯出至用來產生跨電腦 Proxy 的型別程式庫，並且使用該程式庫跨 Apartment 封送處理呼叫，則呼叫可以回復為實際 In 參數行為。  
+ 使用[關聯最佳化](copying-and-pinning.md)，與相同 Apartment 中的物件互動時，Blittable 陣列可以操作為 In/Out 參數。 不過，如果您稍後將程式碼匯出至用來產生跨電腦 Proxy 的型別程式庫，並且使用該程式庫跨 Apartment 封送處理呼叫，則呼叫可以回復為實際 In 參數行為。  
   
  陣列本質上相當複雜，而且 Managed 與 Unmanaged 陣列之間的區別保證資訊比其他非 Blittable 類型還要多。 本主題提供下列封送處理陣列資訊：  
   
@@ -51,9 +49,9 @@ ms.lasthandoff: 01/19/2018
   
 |Managed 陣列類型|項目類型|順位|下限|簽章標記法|  
 |------------------------|------------------|----------|-----------------|------------------------|  
-|**ELEMENT_TYPE_ARRAY**|依類型指定。|依順位指定。|選擇性依界限指定。|*type* **[** *n*,*m* **]**|  
+|**ELEMENT_TYPE_ARRAY**|依類型指定。|依順位指定。|選擇性依界限指定。|*型別* **[** *n*，*m* **]**|  
 |**ELEMENT_TYPE_CLASS**|不明|不明|不明|**System.Array**|  
-|**ELEMENT_TYPE_SZARRAY**|依類型指定。|1|0|*type* **[** *n* **]**|  
+|**ELEMENT_TYPE_SZARRAY**|依類型指定。|1|0|*型別* **[** *n* **]**|  
   
 <a name="cpcondefaultmarshalingforarraysanchor2"></a>   
 ## <a name="unmanaged-arrays"></a>Unmanaged 陣列  
@@ -71,7 +69,7 @@ ms.lasthandoff: 01/19/2018
 ### <a name="safe-arrays"></a>安全陣列  
  將安全陣列從型別程式庫匯入至 .NET 組件時，會將陣列轉換成一維已知類型陣列 (例如 **int**)。 套用至參數的相同類型轉換規則也會套用至陣列項目。 例如，**BSTR** 類型的安全陣列變成 Managed 字串陣列，而變異值的安全陣列變成 Managed 物件陣列。 **SAFEARRAY** 項目類型擷取自型別程式庫，並儲存至 <xref:System.Runtime.InteropServices.UnmanagedType> 列舉的 **SAFEARRAY** 值中。  
   
- 因為無法從型別程式庫判斷安全陣列的順位和界限，所以順位會假設等於 1，而下限假設等於 0。 順位和界限必須定義於[型別程式庫匯入工具 (Tlbimp.exe)](../../../docs/framework/tools/tlbimp-exe-type-library-importer.md) 所產生的 Managed 簽章中。 如果在執行階段傳遞給方法的順位不同，則會擲回 <xref:System.Runtime.InteropServices.SafeArrayRankMismatchException>。 如果在執行階段傳遞的陣列類型不同，則會擲回 <xref:System.Runtime.InteropServices.SafeArrayTypeMismatchException>。 下列範例示範 Managed 和 Unmanaged 程式碼中的安全陣列。  
+ 因為無法從型別程式庫判斷安全陣列的順位和界限，所以順位會假設等於 1，而下限假設等於 0。 順位和界限必須定義於[型別程式庫匯入工具 (Tlbimp.exe)](../tools/tlbimp-exe-type-library-importer.md) 所產生的 Managed 簽章中。 如果在執行階段傳遞給方法的順位不同，則會擲回 <xref:System.Runtime.InteropServices.SafeArrayRankMismatchException>。 如果在執行階段傳遞的陣列類型不同，則會擲回 <xref:System.Runtime.InteropServices.SafeArrayTypeMismatchException>。 下列範例示範 Managed 和 Unmanaged 程式碼中的安全陣列。  
   
  **Unmanaged 簽章**  
   
@@ -100,7 +98,7 @@ void New3([MarshalAs(UnmanagedType.SafeArray, SafeArraySubType=VT_BSTR)]
    ref String[] ar);  
 ```  
   
- 如果修改 Tlbimp.exe 所產生的方法簽章以指出項目類型為 **ELEMENT_TYPE_ARRAY** 而非 **ELEMENT_TYPE_SZARRAY**，則可以將多維度或非零繫結的安全陣列封送處理至 Managed 程式碼。 或者，您可以搭配使用 **/sysarray** 參數與 Tlbimp.exe，以將所有陣列匯入為 <xref:System.Array?displayProperty=nameWithType> 物件。 如果所傳遞的陣列已知為多維度，您可以編輯 Tlbimp.exe 所產生的 Microsoft Intermediate Language (MSIL) 程式碼，然後重新進行編譯。 如需如何修改 MSIL 程式碼的詳細資訊，請參閱[自訂執行階段可呼叫包裝函式](http://msdn.microsoft.com/library/4652beaf-77d0-4f37-9687-ca193288c0be)。  
+ 如果修改 Tlbimp.exe 所產生的方法簽章以指出項目類型為 **ELEMENT_TYPE_ARRAY** 而非 **ELEMENT_TYPE_SZARRAY**，則可以將多維度或非零繫結的安全陣列封送處理至 Managed 程式碼。 或者，您可以搭配使用 **/sysarray** 參數與 Tlbimp.exe，以將所有陣列匯入為 <xref:System.Array?displayProperty=nameWithType> 物件。 如果所傳遞的陣列已知為多維度，您可以編輯 Tlbimp.exe 所產生的 Microsoft Intermediate Language (MSIL) 程式碼，然後重新進行編譯。 如需如何修改 MSIL 程式碼的詳細資訊，請參閱[自訂執行階段可呼叫包裝函式](https://msdn.microsoft.com/library/4652beaf-77d0-4f37-9687-ca193288c0be(v=vs.100))。  
   
 ### <a name="c-style-arrays"></a>C 樣式陣列  
  將 C 樣式陣列從型別程式庫匯入至 .NET 組件時，會將陣列轉換成 **ELEMENT_TYPE_SZARRAY**。  
@@ -164,7 +162,7 @@ void New2(ref double ar);
 void New3(ref String ar);   
 ```  
   
- 您可以編輯 Tlbimp.exe 所產生的 Microsoft Intermediate Language (MSIL) 程式碼，然後重新進行編譯，以提供具有陣列大小的封送處理器。 如需如何修改 MSIL 程式碼的詳細資料，請參閱[自訂執行階段可呼叫包裝函式](http://msdn.microsoft.com/library/4652beaf-77d0-4f37-9687-ca193288c0be)。 若要指出陣列中的項目數，請使用下列其中一種方式，將 <xref:System.Runtime.InteropServices.MarshalAsAttribute> 類型套用至 Managed 方法定義的陣列參數：  
+ 您可以編輯 Tlbimp.exe 所產生的 Microsoft Intermediate Language (MSIL) 程式碼，然後重新進行編譯，以提供具有陣列大小的封送處理器。 如需如何修改 MSIL 程式碼的詳細資料，請參閱[自訂執行階段可呼叫包裝函式](https://msdn.microsoft.com/library/4652beaf-77d0-4f37-9687-ca193288c0be(v=vs.100))。 若要指出陣列中的項目數，請使用下列其中一種方式，將 <xref:System.Runtime.InteropServices.MarshalAsAttribute> 類型套用至 Managed 方法定義的陣列參數：  
   
 -   識別包含陣列中項目數的另一個參數。 參數是以位置進行識別，而第一個參數開始於數字 0。     
   
@@ -320,7 +318,7 @@ HRESULT New(long ar[]);
 HRESULT New(LPStr ar[]);  
 ```  
   
- 無法封送處理巢狀陣列。 例如，下列簽章會在使用[型別程式庫匯出工具 (Tlbexp.exe)](../../../docs/framework/tools/tlbexp-exe-type-library-exporter.md) 匯出時產生錯誤。  
+ 無法封送處理巢狀陣列。 例如，下列簽章會在使用[型別程式庫匯出工具 (Tlbexp.exe)](../tools/tlbexp-exe-type-library-exporter.md) 匯出時產生錯誤。  
   
 #### <a name="managed-signature"></a>Managed 簽章  
   
@@ -381,8 +379,8 @@ public struct MyStruct {
 }  
 ```  
   
-## <a name="see-also"></a>請參閱  
- [預設的封送處理行為](../../../docs/framework/interop/default-marshaling-behavior.md)  
- [Blittable 和非 Blittable 類型](../../../docs/framework/interop/blittable-and-non-blittable-types.md)  
- [方向屬性](http://msdn.microsoft.com/library/241ac5b5-928e-4969-8f58-1dbc048f9ea2)  
- [複製和 Pin](../../../docs/framework/interop/copying-and-pinning.md)
+## <a name="see-also"></a>另請參閱  
+ [預設的封送處理行為](default-marshaling-behavior.md)  
+ [Blittable 和非 Blittable 類型](blittable-and-non-blittable-types.md)  
+ [方向屬性](https://msdn.microsoft.com/library/241ac5b5-928e-4969-8f58-1dbc048f9ea2(v=vs.100))  
+ [複製和 Pin](copying-and-pinning.md)

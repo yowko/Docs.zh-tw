@@ -1,20 +1,20 @@
 ---
-title: "Docker 是什麼？"
-description: "Microsoft 平台和工具的容器化 Docker 應用程式生命週期"
-keywords: "Docker, 微服務, ASP.NET, 容器"
+title: 什麼是 Docker？
+description: Microsoft 平台和工具的容器化 Docker 應用程式生命週期
+ms.prod: .net
 author: CESARDELATORRE
 ms.author: wiwagn
 ms.date: 09/21/2017
 ms.workload:
 - dotnet
 - dotnetcore
-ms.openlocfilehash: c75b2fa87e5aad93693c76c3bbd135044b36525f
-ms.sourcegitcommit: c0dd436f6f8f44dc80dc43b07f6841a00b74b23f
+ms.openlocfilehash: c471c4bc1588aaa6c0e145ede0b67ab5340f254a
+ms.sourcegitcommit: 9a4fe1a1c37b26532654b4bbe22d702237950009
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 01/19/2018
+ms.lasthandoff: 04/16/2018
 ---
-# <a name="what-is-docker"></a>Docker 是什麼？
+# <a name="what-is-docker"></a>什麼是 Docker？
 
 [Docker](https://www.docker.com/)是[開放原始碼專案](https://github.com/docker/docker)自動化應用程式的部署，做為可攜式且足可雲端或內部部署中執行的容器 (請參閱圖 1-2）。 Docker 也有[公司](https://www.docker.com/)的升級，並開發這項技術，在與雲端，Linux 和 Windows 廠商，包括 Microsoft 的共同作業工作。
 
@@ -30,11 +30,11 @@ Docker 映像容器可以原生 Linux 及 Windows 上執行。 不過，Windows 
 
 若要執行[Windows 容器](https://msdn.microsoft.com/virtualization/windowscontainers/about/about_overview)，有兩種類型的執行階段：
 
--   **Windows Server 容器** 此執行階段提供透過程序和命名空間隔離技術的應用程式隔離。 Windows Server 容器與容器主機和主機上執行的所有容器與容器共用核心。
+-   **Windows Server 容器** 此執行階段提供透過程序和命名空間隔離技術的應用程式隔離。 與 Windows Server 容器共用核心的對象為容器主機以及在此主機上執行的所有容器。
 
--   **HYPER-V 容器** 這會展開，Windows Server 容器提供高度最佳化的 VM 中執行每個容器的隔離。 在此組態中，容器主機的核心不會與 HYPER-V 容器，提供更好的隔離共用。
+-   **HYPER-V 容器** 這會展開，Windows Server 容器提供高度最佳化的 VM 中執行每個容器的隔離。 在此組態中，容器主機的核心不會與 Hyper-V 容器共用，以提供更好的隔離。
 
-這些容器的映像建立相同的方式和功能相同。 不同之處在於從映像建立容器時，執行 HYPER-V 容器需要額外的參數。 如需詳細資訊，請參閱[HYPER-V 容器](https://msdn.microsoft.com/virtualization/windowscontainers/about/about_overview)。
+這些容器的映像建立相同的方式和功能相同。 不同之處在於從映像建立容器時，執行 HYPER-V 容器需要額外的參數。 如需詳細資料，請參閱 [Hyper-V 容器](https://msdn.microsoft.com/virtualization/windowscontainers/about/about_overview)。
 
 ## <a name="comparing-docker-containers-with-vms"></a>比較與 Vm 的 Docker 容器
 
@@ -44,7 +44,7 @@ Docker 映像容器可以原生 Linux 及 Windows 上執行。 不過，Windows 
 
 在相同的核心上執行的副作用，您可以達到比 Vm 更少隔離。
 
-映像的主要目標是，它會使環境 （相依性） 相同跨不同的部署。 這表示您可以進行偵錯您的電腦上，然後將它部署到另一部電腦，以保證在相同的環境。
+映像的主要目標是跨不同的部署建立相同的環境 (相依性)。 這表示您可以在自己的電腦上對它進行偵錯，再將它部署到另一部電腦，保證有相同的環境。
 
 容器映像是封裝的應用程式或服務，並將它部署可靠且可重現的方式的方法。 在這一方面，Docker 不是一種技術，它也是基本概念和程序。
 
@@ -56,4 +56,4 @@ Docker 映像容器可以原生 Linux 及 Windows 上執行。 不過，Windows 
 
 
 >[!div class="step-by-step"]
-[上一個](index.md) [下一步] (docker terminology.md)
+[上一頁] (index.md) [上一頁] (docker-terminology.md)

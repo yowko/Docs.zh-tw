@@ -1,54 +1,62 @@
 ---
-title: "&lt;診斷&gt;"
-ms.custom: 
+title: '&lt;診斷&gt;'
+ms.custom: ''
 ms.date: 03/30/2017
 ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.technology: dotnet-clr
-ms.tgt_pltfrm: 
+ms.reviewer: ''
+ms.suite: ''
+ms.technology:
+- dotnet-clr
+ms.tgt_pltfrm: ''
 ms.topic: article
 ms.assetid: 0c2f95c4-cc12-4fb5-a70c-7fc6fa95db58
-caps.latest.revision: "20"
+caps.latest.revision: 20
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.workload: dotnet
-ms.openlocfilehash: 5c7997b3ffc1a1c3a16372398f43e8f0d06aadee
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.workload:
+- dotnet
+ms.openlocfilehash: bb5506fd72745f32194b2e3cc409ff848fd1c270
+ms.sourcegitcommit: 9a4fe1a1c37b26532654b4bbe22d702237950009
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="ltdiagnosticsgt"></a>&lt;診斷&gt;
 `diagnostics` 項目會定義可由系統管理員用於執行階段檢查和控制的設定。  
   
- \<系統。ServiceModel >  
+ \<system.ServiceModel>  
 \<診斷 >  
   
 ## <a name="syntax"></a>語法  
   
 ```xml  
 <system.serviceModel>  
-   <diagnostics etwProviderId="String"       performanceCounters="Off/ServiceOnly/All/Default"              wmiProviderEnabled="Boolean" >       <endToEndTracing activityTracing="Boolean"  
-          messageFlowTracing="Boolean"  
-          propagateActivity="Boolean" />  
-       <messageLogging logEntireMessage="Boolean"  
-          logMalformedMessages="Boolean"  
-          logMessagesAtServiceLevel="Boolean"  
-          logMessagesAtTransportLevel="Boolean"  
-          maxMessagesToLog="Integer"  
-          maxSizeOfMessageToLog="Integer" >  
-          <filters>  
-             <clear />  
-          </filters>  
-       </messageLogging>  
-   </diagnostics>  
+  <diagnostics 
+      etwProviderId="String"       
+      performanceCounters="Off/ServiceOnly/All/Default"              
+      wmiProviderEnabled="Boolean" >       
+    <endToEndTracing 
+        activityTracing="Boolean"  
+        messageFlowTracing="Boolean"  
+        propagateActivity="Boolean" />  
+    <messageLogging 
+        logEntireMessage="Boolean"  
+        logMalformedMessages="Boolean"  
+        logMessagesAtServiceLevel="Boolean"  
+        logMessagesAtTransportLevel="Boolean"  
+        maxMessagesToLog="Integer"  
+        maxSizeOfMessageToLog="Integer" >  
+      <filters>  
+        <clear />  
+      </filters>  
+    </messageLogging>  
+  </diagnostics>  
 </system.serviceModel>  
 ```  
   
 ## <a name="attributes-and-elements"></a>屬性和項目  
- 下列章節說明屬性、子項目和父項目。  
+ 下列各節描述屬性、子項目和父項目。  
   
 ### <a name="attributes"></a>屬性  
   
@@ -56,9 +64,9 @@ ms.lasthandoff: 12/22/2017
 |---------------|-----------------|  
 |etwProviderId|字串，這個字串會指定 Event-Tracing 提供者的識別項，此識別項會將事件寫入至 ETW 工作階段。|  
 |performanceCounters|指定是否啟用組件的效能計數器。 有效值為<br /><br /> -設為 off： 停用效能計數器。<br />-ServiceOnly： 只相關的效能計數器到此服務會啟用。<br />-所有： 可以在執行階段檢視計數器的效能。<br />預設： 建立單一效能計數器執行個體 _WCF_Admin。 這個執行個體用於啟用基礎結構所使用之 SQM 資料的集合。 這個執行個體所有的計數器值都未更新，因此將維持在零。 如果沒有 WCF 的組態，則這是預設值。|  
-|wmiProviderEnabled|布林值，指定是否為組件啟用 WMI 提供者。 使用者需要 WMI 提供者來取得 Windows Communication Foundation (WCF) 的檢查和控制功能的執行階段存取權。 預設為 `false`。|  
+|wmiProviderEnabled|布林值，指定是否為組件啟用 WMI 提供者。 使用者需要 WMI 提供者來取得 Windows Communication Foundation (WCF) 的檢查和控制功能的執行階段存取權。 預設值為 `false`。|  
   
-### <a name="child-elements"></a>子元素  
+### <a name="child-elements"></a>子項目  
   
 |項目|描述|  
 |-------------|-----------------|  
@@ -77,21 +85,23 @@ ms.lasthandoff: 12/22/2017
 ## <a name="example"></a>範例  
   
 ```xml  
-<diagnostics wmiProviderEnabled="false"  
-       performanceCounters="all">  
-       <messageLogging logEntireMessage="true"  
-          logMalformedMessages="true"  
-          logMessagesAtServiceLevel="true"  
-          logMessagesAtTransportLevel="true"  
-          maxMessagesToLog="42"  
-          maxSizeOfMessageToLog="42">  
-         <filters>  
-         <clear />  
+<diagnostics
+    wmiProviderEnabled="false"  
+    performanceCounters="all">  
+  <messageLogging 
+      logEntireMessage="true"  
+      logMalformedMessages="true"  
+      logMessagesAtServiceLevel="true"  
+      logMessagesAtTransportLevel="true"  
+      maxMessagesToLog="42"  
+      maxSizeOfMessageToLog="42">  
+    <filters>  
+      <clear />  
     </filters>  
-       </messageLogging>  
+  </messageLogging>  
 </diagnostics>  
 ```  
   
-## <a name="see-also"></a>請參閱  
+## <a name="see-also"></a>另請參閱  
  <xref:System.ServiceModel.Configuration.DiagnosticSection>  
  <xref:System.ServiceModel.Diagnostics>

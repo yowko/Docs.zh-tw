@@ -1,13 +1,9 @@
 ---
 title: 物件的預設封送處理
-ms.custom: ''
 ms.date: 03/30/2017
 ms.prod: .net-framework
-ms.reviewer: ''
-ms.suite: ''
 ms.technology:
 - dotnet-clr
-ms.tgt_pltfrm: ''
 ms.topic: article
 dev_langs:
 - csharp
@@ -16,17 +12,16 @@ helpviewer_keywords:
 - objects, interop marshaling
 - interop marshaling, objects
 ms.assetid: c2ef0284-b061-4e12-b6d3-6a502b9cc558
-caps.latest.revision: ''
 author: rpetrusha
 ms.author: ronpet
 manager: wpickett
 ms.workload:
 - dotnet
-ms.openlocfilehash: b49575bb7f16b942a56a48e9ad3f5a44edfb373a
-ms.sourcegitcommit: c883637b41ee028786edceece4fa872939d2e64c
+ms.openlocfilehash: 6980db381322d354cace38709586e50681ae0a7e
+ms.sourcegitcommit: 9a4fe1a1c37b26532654b4bbe22d702237950009
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 03/26/2018
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="default-marshaling-for-objects"></a>物件的預設封送處理
 類型為 <xref:System.Object?displayProperty=nameWithType> 的參數和欄位可以向 Unmanaged 程式碼公開為下列類型之一：  
@@ -304,7 +299,7 @@ mo.SetVariant(new CurrencyWrapper(new Decimal(5.25)));
 ## <a name="marshaling-byref-variants"></a>封送處理 ByRef Variant  
  雖然 Variant 本身可以傳值方式或傳址方式傳遞，**VT_BYREF** 旗標也可搭配任何 Variant 類型使用來表示 Variant 的內容正在以傳址方式傳遞，不是以傳值方式傳遞。 以傳址方式封送處理的 Variant 和封送處理設有 **VT_BYREF** 旗標的 Variant 之間的差異，會造成混淆。 下圖將釐清這些差異。  
   
- ![在堆疊上傳遞的 Variant](../../../docs/framework/interop/media/interopvariant.gif "InteropVariant")  
+ ![在堆疊上傳遞的 Variant](./media/interopvariant.gif "InteropVariant")  
 以傳值方式傳遞和以傳址方式傳遞的 Variant  
   
  **依值封送處理物件和 Variant 的預設行為**  
@@ -342,7 +337,7 @@ mo.SetVariant(new CurrencyWrapper(new Decimal(5.25)));
 |**Variant**  *v* **(VT_BYREF** *&#124;* **VT_)**|**Ref 物件**  *o*|只有當類型不變更時。|  
   
 ## <a name="see-also"></a>另請參閱  
- [預設的封送處理行為](../../../docs/framework/interop/default-marshaling-behavior.md)  
- [Blittable 和非 Blittable 類型](../../../docs/framework/interop/blittable-and-non-blittable-types.md)  
- [方向屬性](http://msdn.microsoft.com/library/241ac5b5-928e-4969-8f58-1dbc048f9ea2)  
- [複製和 Pin](../../../docs/framework/interop/copying-and-pinning.md)
+ [預設的封送處理行為](default-marshaling-behavior.md)  
+ [Blittable 和非 Blittable 類型](blittable-and-non-blittable-types.md)  
+ [方向屬性](https://msdn.microsoft.com/library/241ac5b5-928e-4969-8f58-1dbc048f9ea2(v=vs.100))  
+ [複製和 Pin](copying-and-pinning.md)

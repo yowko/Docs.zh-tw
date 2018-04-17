@@ -1,12 +1,9 @@
 ---
-title: "在 Managed 程式碼中建立原型"
-ms.custom: 
+title: 在 Managed 程式碼中建立原型
 ms.date: 03/30/2017
 ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.technology: dotnet-clr
-ms.tgt_pltfrm: 
+ms.technology:
+- dotnet-clr
 ms.topic: article
 dev_langs:
 - csharp
@@ -24,19 +21,20 @@ helpviewer_keywords:
 - DLL functions
 - object fields in platform invoke
 ms.assetid: ecdcf25d-cae3-4f07-a2b6-8397ac6dc42d
-caps.latest.revision: "22"
+caps.latest.revision: 22
 author: rpetrusha
 ms.author: ronpet
 manager: wpickett
-ms.workload: dotnet
-ms.openlocfilehash: d1006f59f9841a10066c83a8f0800d3a7c17500a
-ms.sourcegitcommit: c0dd436f6f8f44dc80dc43b07f6841a00b74b23f
+ms.workload:
+- dotnet
+ms.openlocfilehash: c59a05c5f6abfa30a71ccf7608f8a84738f99c3a
+ms.sourcegitcommit: 9a4fe1a1c37b26532654b4bbe22d702237950009
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 01/19/2018
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="creating-prototypes-in-managed-code"></a>在 Managed 程式碼中建立原型
-本主題描述如何存取 Unmanaged 函式，並介紹數個以 Managed 程式碼來標註方法定義的屬性欄位。 如需示範如何建構要與平台叫用搭配使用之 .NET 型宣告的範例，請參閱[使用平台叫用封送處理資料](../../../docs/framework/interop/marshaling-data-with-platform-invoke.md)。  
+本主題描述如何存取 Unmanaged 函式，並介紹數個以 Managed 程式碼來標註方法定義的屬性欄位。 如需示範如何建構要與平台叫用搭配使用之 .NET 型宣告的範例，請參閱[使用平台叫用封送處理資料](marshaling-data-with-platform-invoke.md)。  
   
  在您可以從 Managed 程式碼存取 Unmanaged DLL 函式之前，您需要知道函式的名稱，以及將它匯出的 DLL 名稱。 利用此資訊，您可以開始撰寫 Managed 定義給在 DLL 中實作的 Unmanaged 函式。 此外，您可以調整叫用平台建立函式和封送處理資料給予或來自函式的方式。  
   
@@ -44,7 +42,7 @@ ms.lasthandoff: 01/19/2018
 >  配置字串的 Win32 API 函式可讓您使用下列方法以釋放字串 `LocalFree`。 平台叫用以不同方式處理這類參數。 為了平台叫用呼叫，將參數設定為 `IntPtr` 類型而非 `String` 類型。 使用 <xref:System.Runtime.InteropServices.Marshal?displayProperty=nameWithType> 類別所提供的方法來手動將類型轉換為字串，並手動釋放。  
   
 ## <a name="declaration-basics"></a>宣告的基本概念  
- Unmanaged 函式的 Managed 定義會依語言而異，您可以在下列範例中觀察到。 如需更完整的程式碼範例，請參閱[平台叫用範例](../../../docs/framework/interop/platform-invoke-examples.md)。  
+ Unmanaged 函式的 Managed 定義會依語言而異，您可以在下列範例中觀察到。 如需更完整的程式碼範例，請參閱[平台叫用範例](platform-invoke-examples.md)。  
   
 ```vb  
 Imports System.Runtime.InteropServices  
@@ -230,12 +228,12 @@ interface IDemandStubsItf
 }  
 ```  
   
-## <a name="see-also"></a>請參閱  
- [使用 Unmanaged DLL 函式](../../../docs/framework/interop/consuming-unmanaged-dll-functions.md)  
- [指定進入點](../../../docs/framework/interop/specifying-an-entry-point.md)  
- [指定字元集](../../../docs/framework/interop/specifying-a-character-set.md)  
- [平台叫用範例](../../../docs/framework/interop/platform-invoke-examples.md)  
- [平台叫用的安全性考量](http://msdn.microsoft.com/library/bbcc67f7-50b5-4917-88ed-cb15470409fb)  
- [識別 DLL 中的函式](../../../docs/framework/interop/identifying-functions-in-dlls.md)  
- [建立類別以包裝 DLL 函式](../../../docs/framework/interop/creating-a-class-to-hold-dll-functions.md)  
- [呼叫 DLL 函式](../../../docs/framework/interop/calling-a-dll-function.md)
+## <a name="see-also"></a>另請參閱  
+ [使用 Unmanaged DLL 函式](consuming-unmanaged-dll-functions.md)  
+ [指定進入點](specifying-an-entry-point.md)  
+ [指定字元集](specifying-a-character-set.md)  
+ [平台叫用範例](platform-invoke-examples.md)  
+ [平台叫用的安全性考量](https://msdn.microsoft.com/library/bbcc67f7-50b5-4917-88ed-cb15470409fb(v=vs.100))  
+ [識別 DLL 中的函式](identifying-functions-in-dlls.md)  
+ [建立類別以包裝 DLL 函式](creating-a-class-to-hold-dll-functions.md)  
+ [呼叫 DLL 函式](calling-a-dll-function.md)

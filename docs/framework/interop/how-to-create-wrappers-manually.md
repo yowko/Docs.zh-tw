@@ -1,12 +1,9 @@
 ---
-title: "如何：手動建立包裝函式"
-ms.custom: 
+title: 如何：手動建立包裝函式
 ms.date: 03/30/2017
 ms.prod: .net-framework
-ms.suite: 
 ms.technology:
 - dotnet-clr
-ms.tgt_pltfrm: 
 ms.topic: article
 helpviewer_keywords:
 - wrappers, creating manually
@@ -16,11 +13,11 @@ ms.author: ronpet
 manager: wpickett
 ms.workload:
 - dotnet
-ms.openlocfilehash: 7ac7afdd85037d50bdda9fae0a33896dc441bce5
-ms.sourcegitcommit: 1c0b0f082b3f300e54b4d069b317ac724c88ddc3
+ms.openlocfilehash: 0f610a3e1ed6ba554818945d651c00508e0c87cc
+ms.sourcegitcommit: 9a4fe1a1c37b26532654b4bbe22d702237950009
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 03/16/2018
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="how-to-create-wrappers-manually"></a>如何：手動建立包裝函式
 若您決定在 Managed 原始程式碼中手動宣告 COM 類型，現有的介面定義語言 (IDL) 檔或類型程式庫，將會是最佳的啟動位置。 沒有 IDL 檔案或無法產生類型程式庫檔案時，可建立 Managed 宣告並將所產生的組件匯出至類型程式庫，進而模擬 COM類型。  
@@ -29,7 +26,7 @@ ms.lasthandoff: 03/16/2018
   
 1.  在與 Common Language Specification (CLS) 相容的語言中宣告類型，並編譯其檔案。  
   
-2.  匯出含有[型別程式庫匯出工具 (Tlbexp.exe)](../../../docs/framework/tools/tlbexp-exe-type-library-exporter.md) 類型的組件。  
+2.  匯出含有[型別程式庫匯出工具 (Tlbexp.exe)](../tools/tlbexp-exe-type-library-exporter.md) 類型的組件。  
   
 3.  使用匯出的 COM 類型程式庫做為基礎，來宣告以 COM 為中心的 Managed 類型。  
   
@@ -37,7 +34,7 @@ ms.lasthandoff: 03/16/2018
   
 1.  假設您有一個 IDL 檔案或類型程式庫檔案，請決定要將哪些類別及介面納入自訂 RCW 中。 您可以在應用程式中直接或間接地排除任何不會使用的類型。  
   
-2.  在符合 CLS 標準的語言中建立原始程式檔，並宣告其類型。 請參閱[型別程式庫至組件轉換的摘要](http://msdn.microsoft.com/library/bf3f90c5-4770-4ab8-895c-3ba1055cc958) ，以取得匯入轉換程序的完整描述。 建立自訂 RCW 時，您實際上是手動執行[型別程式庫匯入工具 (Tlbimp.exe)](../../../docs/framework/tools/tlbimp-exe-type-library-importer.md) 所提供的類型轉換活動。 下一節的範例將示範 IDL 或類型程式庫檔案中的類型，以及這些類型在 C# 程式碼中對應的類型。  
+2.  在符合 CLS 標準的語言中建立原始程式檔，並宣告其類型。 請參閱[型別程式庫至組件轉換的摘要](https://msdn.microsoft.com/library/bf3f90c5-4770-4ab8-895c-3ba1055cc958(v=vs.100)) ，以取得匯入轉換程序的完整描述。 建立自訂 RCW 時，您實際上是手動執行[型別程式庫匯入工具 (Tlbimp.exe)](../tools/tlbimp-exe-type-library-importer.md) 所提供的類型轉換活動。 下一節的範例將示範 IDL 或類型程式庫檔案中的類型，以及這些類型在 C# 程式碼中對應的類型。  
   
 3.  宣告完成時，即可使用編譯任何其他 Managed 原始程式碼的方式來編譯檔案。  
   
@@ -109,9 +106,9 @@ namespace SAServer
 ```  
   
 ## <a name="see-also"></a>另請參閱  
- [自訂執行階段可呼叫包裝函式](http://msdn.microsoft.com/library/4652beaf-77d0-4f37-9687-ca193288c0be)  
- [COM 資料類型](http://msdn.microsoft.com/library/f93ae35d-a416-4218-8700-c8218cc90061)  
- [如何： 編輯 Interop 組件](http://msdn.microsoft.com/library/16aacb20-2269-42bf-a812-b6a7df17e277)  
- [型別程式庫至組件轉換的摘要](http://msdn.microsoft.com/library/bf3f90c5-4770-4ab8-895c-3ba1055cc958)  
- [Tlbimp.exe (類型程式庫匯入工具)](../../../docs/framework/tools/tlbimp-exe-type-library-importer.md)  
- [Tlbexp.exe (類型程式庫匯出工具)](../../../docs/framework/tools/tlbexp-exe-type-library-exporter.md)
+ [自訂執行階段可呼叫包裝函式](https://msdn.microsoft.com/library/4652beaf-77d0-4f37-9687-ca193288c0be(v=vs.100))  
+ [COM 資料類型](https://msdn.microsoft.com/library/f93ae35d-a416-4218-8700-c8218cc90061(v=vs.100))  
+ [如何： 編輯 Interop 組件](https://msdn.microsoft.com/library/16aacb20-2269-42bf-a812-b6a7df17e277(v=vs.100))  
+ [型別程式庫至組件轉換的摘要](https://msdn.microsoft.com/library/bf3f90c5-4770-4ab8-895c-3ba1055cc958(v=vs.100))  
+ [Tlbimp.exe (類型程式庫匯入工具)](../tools/tlbimp-exe-type-library-importer.md)  
+ [Tlbexp.exe (類型程式庫匯出工具)](../tools/tlbexp-exe-type-library-exporter.md)

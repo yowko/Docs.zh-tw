@@ -1,7 +1,7 @@
 ---
-title: "教學課程：建立型別提供者 (F#)"
-description: "了解如何在 F # 3.0 中建立您自己 F # 類型提供者，藉由檢查幾個簡單的型別提供者，來說明基本的概念。"
-keywords: "Visual F#, F#, 函式程式設計"
+title: '教學課程： 建立型別提供者 （F #）'
+description: '了解如何在 F # 3.0 中建立您自己 F # 類型提供者，藉由檢查幾個簡單的型別提供者，來說明基本的概念。'
+keywords: Visual F#, F#, 函式程式設計
 author: cartermp
 ms.author: phcart
 ms.date: 05/16/2016
@@ -10,13 +10,13 @@ ms.prod: .net
 ms.technology: devlang-fsharp
 ms.devlang: fsharp
 ms.assetid: 82bec076-19d4-470c-979f-6c3a14b7c70a
-ms.openlocfilehash: 30d1c20d66fd0a193c05c97ee726a886f98356ad
-ms.sourcegitcommit: 1c0b0f082b3f300e54b4d069b317ac724c88ddc3
+ms.openlocfilehash: b2e83218184bd1aef8258378485b99697cc8cf8d
+ms.sourcegitcommit: 9a4fe1a1c37b26532654b4bbe22d702237950009
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 03/16/2018
+ms.lasthandoff: 04/16/2018
 ---
-# <a name="tutorial-creating-a-type-provider"></a>教學課程： 建立型別提供者
+# <a name="tutorial-create-a-type-provider"></a>教學課程： 建立型別提供者
 
 F # 中的型別提供者機制是其支援資訊豐富程式設計的重要部分。 本教學課程說明如何建立您自己的型別提供者帶您逐步說明的基本概念的幾個簡單的型別提供者的開發。 如需在 F # 類型提供者機制的詳細資訊，請參閱[型別提供者](index.md)。
 

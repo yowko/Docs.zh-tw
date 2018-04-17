@@ -1,13 +1,9 @@
 ---
 title: 預設的封送處理行為
-ms.custom: ''
 ms.date: 03/30/2017
 ms.prod: .net-framework
-ms.reviewer: ''
-ms.suite: ''
 ms.technology:
 - dotnet-clr
-ms.tgt_pltfrm: ''
 ms.topic: article
 dev_langs:
 - csharp
@@ -17,17 +13,16 @@ helpviewer_keywords:
 - interoperation with unmanaged code, marshaling
 - marshaling behavior
 ms.assetid: c0a9bcdf-3df8-4db3-b1b6-abbdb2af809a
-caps.latest.revision: 15
 author: rpetrusha
 ms.author: ronpet
 manager: wpickett
 ms.workload:
 - dotnet
-ms.openlocfilehash: f0a8fcba31ddfa09ca60f8ba6cf08d20b270c3da
-ms.sourcegitcommit: b750a8e3979749b214e7e10c82efb0a0524dfcb1
+ms.openlocfilehash: 7d653e6bd82a897d1fe8591f263a12f4c3a67abf
+ms.sourcegitcommit: 9a4fe1a1c37b26532654b4bbe22d702237950009
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/10/2018
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="default-marshaling-behavior"></a>預設的封送處理行為
 Interop 封送處理會依據規則作業，這些規則指定與方法參數關聯的資料在 Managed 和 Unmanaged 記憶體之間傳遞時的運作方式。 這些內建規則會將這類封送處理活動當做資料類型轉換來控制；控制被呼叫端是否可以變更收到的資料，並將這些變更傳回給呼叫端；以及控制在哪些情況下，封送處理器會提供效能最佳化。  
@@ -52,10 +47,10 @@ BSTR MethodOne (BSTR b) {
   
  不過，如果您將方法定義為平台叫用原型、將每個 **BSTR** 類型取代為 <xref:System.String> 類型，並呼叫 `MethodOne`，則 Common Language Runtime 會嘗試釋放 `b` 兩次。 您可以使用 <xref:System.IntPtr> 類型 (而不是 **String** 類型) 變更封送處理行為。  
   
- 執行階段一律會使用 **CoTaskMemFree** 方法來釋放記憶體。 如果您正在使用的記憶體不是使用 **CoTaskMemAlloc** 方法配置，則必須使用 **IntPtr**，並使用適當方法手動釋放記憶體。 同樣地，您可以在絕不應該釋放記憶體的情況下避免自動釋放記憶體；例如，從 Kernel32.dll 使用 **GetCommandLine** 函式，該函式會傳回核心記憶體的指標。 如需手動釋放記憶體的詳細資訊，請參閱[緩衝區範例](http://msdn.microsoft.com/library/e30d36e8-d7c4-4936-916a-8fdbe4d9ffd5)。  
+ 執行階段一律會使用 **CoTaskMemFree** 方法來釋放記憶體。 如果您正在使用的記憶體不是使用 **CoTaskMemAlloc** 方法配置，則必須使用 **IntPtr**，並使用適當方法手動釋放記憶體。 同樣地，您可以在絕不應該釋放記憶體的情況下避免自動釋放記憶體；例如，從 Kernel32.dll 使用 **GetCommandLine** 函式，該函式會傳回核心記憶體的指標。 如需手動釋放記憶體的詳細資訊，請參閱[緩衝區範例](http://msdn.microsoft.com/library/e30d36e8-d7c4-4936-916a-8fdbe4d9ffd5(v=vs.100))。  
   
 ## <a name="default-marshaling-for-classes"></a>類別的預設封送處理  
- 類別只能由 COM Interop 封送處理，並且一律會封送處理為介面。 在某些情況下，用來封送處理類別的介面就是所謂的類別介面。 如需以您選擇的介面來覆寫類別介面的資訊，請參閱[類別介面簡介](http://msdn.microsoft.com/library/733c0dd2-12e5-46e6-8de1-39d5b25df024)。  
+ 類別只能由 COM Interop 封送處理，並且一律會封送處理為介面。 在某些情況下，用來封送處理類別的介面就是所謂的類別介面。 如需覆寫類別介面的介面，您所選擇的相關資訊，請參閱[類別介面簡介](com-callable-wrapper.md#introducing-the-class-interface)。  
   
 ### <a name="passing-classes-to-com"></a>將類別傳遞給 COM  
  將 Managed 類別傳遞給 COM 時，Interop 封送處理器會自動使用 COM Proxy 來包裝類別，並將 Proxy 產生的類別介面傳遞給 COM 方法呼叫。 Proxy 接著會將類別介面上的所有呼叫重新委派給 Managed 物件。 Proxy 也會公開類別未明確實作的其他介面。 Proxy 會代表類別自動實作 **IUnknown** 和 **IDispatch** 這類介面。  
@@ -171,7 +166,7 @@ internal class DelegateTest {
 ```  
   
 ## <a name="default-marshaling-for-value-types"></a>實值類型的預設封送處理  
- 大部分的實值型別 (例如整數和浮點數) 都是 [Blittable](../../../docs/framework/interop/blittable-and-non-blittable-types.md)，而且不需要封送處理。 其他[非 Blittable](../../../docs/framework/interop/blittable-and-non-blittable-types.md) 類型在 Managed 和 Unmanaged 記憶體中有不同的表示，而且需要封送處理。 但其他類型需要跨互通界限進行明確格式化。  
+ 大部分的實值型別 (例如整數和浮點數) 都是 [Blittable](blittable-and-non-blittable-types.md)，而且不需要封送處理。 其他[非 Blittable](blittable-and-non-blittable-types.md) 類型在 Managed 和 Unmanaged 記憶體中有不同的表示，而且需要封送處理。 但其他類型需要跨互通界限進行明確格式化。  
   
  本主題提供以下有關格式化實值類型的資訊：  
   
@@ -450,8 +445,8 @@ interface IValueTypes : IDispatch {
 ```  
   
 ## <a name="see-also"></a>另請參閱  
- [Blittable 和非 Blittable 類型](../../../docs/framework/interop/blittable-and-non-blittable-types.md)  
- [複製和 Pin](../../../docs/framework/interop/copying-and-pinning.md)  
- [陣列的預設封送處理](../../../docs/framework/interop/default-marshaling-for-arrays.md)  
- [物件的預設封送處理](../../../docs/framework/interop/default-marshaling-for-objects.md)  
- [字串的預設封送處理](../../../docs/framework/interop/default-marshaling-for-strings.md)
+ [Blittable 和非 Blittable 類型](blittable-and-non-blittable-types.md)  
+ [複製和 Pin](copying-and-pinning.md)  
+ [陣列的預設封送處理](default-marshaling-for-arrays.md)  
+ [物件的預設封送處理](default-marshaling-for-objects.md)  
+ [字串的預設封送處理](default-marshaling-for-strings.md)

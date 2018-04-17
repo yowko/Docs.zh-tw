@@ -1,12 +1,9 @@
 ---
-title: "封送處理類別、結構和等位"
-ms.custom: 
+title: 封送處理類別、結構和等位
 ms.date: 03/30/2017
 ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.technology: dotnet-clr
-ms.tgt_pltfrm: 
+ms.technology:
+- dotnet-clr
 ms.topic: article
 dev_langs:
 - csharp
@@ -25,16 +22,16 @@ helpviewer_keywords:
 - data marshaling, platform invoke
 - marshaling, platform invoke
 ms.assetid: 027832a2-9b43-4fd9-9b45-7f4196261a4e
-caps.latest.revision: "10"
 author: rpetrusha
 ms.author: ronpet
 manager: wpickett
-ms.workload: dotnet
-ms.openlocfilehash: 6fb682d898de8cb6bc166426c3a1accbda452c83
-ms.sourcegitcommit: c0dd436f6f8f44dc80dc43b07f6841a00b74b23f
+ms.workload:
+- dotnet
+ms.openlocfilehash: cc7141bb8fce5d5e1c2420a48d6081fa89aa0d53
+ms.sourcegitcommit: 9a4fe1a1c37b26532654b4bbe22d702237950009
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 01/19/2018
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="marshaling-classes-structures-and-unions"></a>封送處理類別、結構和等位
 在 .NET Framework 中，類別和結構相類似。 兩者都可以有欄位、屬性和事件。 也可以有靜態和非靜態方法。 一個值得注意的差異在於結構是實值類型，而類別是參考類型。  
@@ -77,7 +74,7 @@ ms.lasthandoff: 01/19/2018
     void TestArrayInStruct( MYARRAYSTRUCT* pStruct );  
     ```  
   
- [PinvokeLib.dll](http://msdn.microsoft.com/library/5d1438d7-9946-489d-8ede-6c694a08f614) 是自訂的 Unmanaged 程式庫，其中包含先前所列出函式和四個結構的實作：**MYPERSON**、**MYPERSON2**、**MYPERSON3** 和 **MYARRAYSTRUCT**。 這些結構包含下列項目：  
+ [PinvokeLib.dll](https://msdn.microsoft.com/library/5d1438d7-9946-489d-8ede-6c694a08f614(v=vs.100)) 是自訂的 Unmanaged 程式庫，其中包含先前所列出函式和四個結構的實作：**MYPERSON**、**MYPERSON2**、**MYPERSON3** 和 **MYARRAYSTRUCT**。 這些結構包含下列項目：  
   
 ```  
 typedef struct _MYPERSON  
@@ -107,7 +104,7 @@ typedef struct _MYARRAYSTRUCT
   
  Managed `MyPerson`、`MyPerson2`、`MyPerson3` 和 `MyArrayStruct` 結構的特性如下：  
   
--   `MyPerson` 僅包含字串成員。 當傳遞給 Unmanaged 函式時，[CharSet](../../../docs/framework/interop/specifying-a-character-set.md) 欄位會將字串設定為 ANSI 格式。  
+-   `MyPerson` 僅包含字串成員。 當傳遞給 Unmanaged 函式時，[CharSet](specifying-a-character-set.md) 欄位會將字串設定為 ANSI 格式。  
   
 -   `MyPerson2` 包含 `MyPerson` 結構的 **IntPtr**。 **IntPtr** 類型會取代原始指標的 Unmanaged 結構，因為 .NET Framework 應用程式不會使用指標，除非將程式碼標示為 **Unsafe**。  
   
@@ -138,7 +135,7 @@ typedef struct _MYARRAYSTRUCT
  [!code-vb[Conceptual.Interop.Marshaling#24](../../../samples/snippets/visualbasic/VS_Snippets_CLR/conceptual.interop.marshaling/vb/structures.vb#24)]  
   
 ## <a name="findfile-sample"></a>FindFile 範例  
- 這個範例示範如何傳遞包含第二個內嵌結構的結構給 Unmanaged 函式。 它也會示範如何使用 <xref:System.Runtime.InteropServices.MarshalAsAttribute> 屬性在結構內宣告固定長度的陣列。 在此範例中，會加入內嵌結構項目至其父結構。 如需未扁平化內嵌結構的範例，請參閱[結構範例](http://msdn.microsoft.com/library/96a62265-dcf9-4608-bc0a-1f762ab9f48e)。  
+ 這個範例示範如何傳遞包含第二個內嵌結構的結構給 Unmanaged 函式。 它也會示範如何使用 <xref:System.Runtime.InteropServices.MarshalAsAttribute> 屬性在結構內宣告固定長度的陣列。 在此範例中，會加入內嵌結構項目至其父結構。 如需未扁平化內嵌結構的範例，請參閱[結構範例](https://msdn.microsoft.com/library/96a62265-dcf9-4608-bc0a-1f762ab9f48e(v=vs.100))。  
   
  FindFile 範例會使用下列 Unmanaged 函式，和其原始函式宣告，如下所示：  
   
@@ -191,7 +188,7 @@ typedef struct _WIN32_FIND_DATA
     void TestUnion(MYUNION u, int type);  
     ```  
   
- [PinvokeLib.dll](http://msdn.microsoft.com/library/5d1438d7-9946-489d-8ede-6c694a08f614) 是自訂的 Unmanaged 程式庫，其中包含先前所列出函式以及 **MYUNION** 和 **MYUNION2** 這兩個等位的實作。 此等位包含下列項目：  
+ [PinvokeLib.dll](https://msdn.microsoft.com/library/5d1438d7-9946-489d-8ede-6c694a08f614(v=vs.100)) 是自訂的 Unmanaged 程式庫，其中包含先前所列出函式以及 **MYUNION** 和 **MYUNION2** 這兩個等位的實作。 此等位包含下列項目：  
   
 ```  
 union MYUNION  
@@ -251,7 +248,7 @@ typedef struct _SYSTEMTIME {
   
  在此範例中，`SystemTime` 類別包含表示為類別成員原始結構的項目。 設定 <xref:System.Runtime.InteropServices.StructLayoutAttribute> 屬性來確定此成員以其顯示的順序循序排列在記憶體中。  
   
- `LibWrap` 類別包含 `GetSystemTime` 方法的 Managed 原型，根據預設會傳遞 `SystemTime` 類別做為 In/Out 參數。 參數必須以 <xref:System.Runtime.InteropServices.InAttribute> 和 <xref:System.Runtime.InteropServices.OutAttribute> 屬性宣告，因為根據預設，會傳遞參考類型的類別做為 In 參數。 若要讓呼叫端接收結果，則必須明確地套用這些[方向屬性](http://msdn.microsoft.com/library/241ac5b5-928e-4969-8f58-1dbc048f9ea2)。 `App` 類別建立 `SystemTime` 類別的新執行個體，並存取其資料欄位。  
+ `LibWrap` 類別包含 `GetSystemTime` 方法的 Managed 原型，根據預設會傳遞 `SystemTime` 類別做為 In/Out 參數。 參數必須以 <xref:System.Runtime.InteropServices.InAttribute> 和 <xref:System.Runtime.InteropServices.OutAttribute> 屬性宣告，因為根據預設，會傳遞參考類型的類別做為 In 參數。 若要讓呼叫端接收結果，則必須明確地套用這些[方向屬性](https://msdn.microsoft.com/library/241ac5b5-928e-4969-8f58-1dbc048f9ea2(v=vs.100))。 `App` 類別建立 `SystemTime` 類別的新執行個體，並存取其資料欄位。  
   
 ### <a name="code-samples"></a>程式碼範例  
  [!code-cpp[Conceptual.Interop.Marshaling#25](../../../samples/snippets/cpp/VS_Snippets_CLR/conceptual.interop.marshaling/cpp/systime.cpp#25)]
@@ -263,7 +260,7 @@ typedef struct _SYSTEMTIME {
   
  這個範例示範如何藉由使用 <xref:System.Runtime.InteropServices.Marshal> 類別和使用 Unsafe 程式碼來呼叫原生函式。  
   
- 這個範例使用定義在 [PinvokeLib.dll](http://msdn.microsoft.com/library/5d1438d7-9946-489d-8ede-6c694a08f614) 中的包裝函式和平台叫用，這些也在原始程式檔中提供。 它會使用 `TestOutArrayOfStructs` 函式和 `MYSTRSTRUCT2` 結構。 此結構包含下列項目：  
+ 這個範例使用定義在 [PinvokeLib.dll](https://msdn.microsoft.com/library/5d1438d7-9946-489d-8ede-6c694a08f614(v=vs.100)) 中的包裝函式和平台叫用，這些也在原始程式檔中提供。 它會使用 `TestOutArrayOfStructs` 函式和 `MYSTRSTRUCT2` 結構。 此結構包含下列項目：  
   
 ```  
 typedef struct _MYSTRSTRUCT2  
@@ -297,8 +294,8 @@ typedef struct _MYSTRSTRUCT2
  [!code-csharp[Conceptual.Interop.Marshaling#21](../../../samples/snippets/csharp/VS_Snippets_CLR/conceptual.interop.marshaling/cs/outarrayofstructs.cs#21)]
  [!code-vb[Conceptual.Interop.Marshaling#21](../../../samples/snippets/visualbasic/VS_Snippets_CLR/conceptual.interop.marshaling/vb/outarrayofstructs.vb#21)]  
   
-## <a name="see-also"></a>請參閱  
- [使用平台叫用封送處理資料](../../../docs/framework/interop/marshaling-data-with-platform-invoke.md)  
- [平台叫用資料類型](http://msdn.microsoft.com/library/16014d9f-d6bd-481e-83f0-df11377c550f)  
- [封送處理字串](../../../docs/framework/interop/marshaling-strings.md)  
- [封送處理類型的陣列](http://msdn.microsoft.com/library/049b1c1b-228f-4445-88ec-91bc7fd4b1e8)
+## <a name="see-also"></a>另請參閱  
+ [使用平台叫用封送處理資料](marshaling-data-with-platform-invoke.md)  
+ [平台叫用資料類型](https://msdn.microsoft.com/library/16014d9f-d6bd-481e-83f0-df11377c550f(v=vs.100))  
+ [封送處理字串](marshaling-strings.md)  
+ [封送處理類型的陣列](https://msdn.microsoft.com/library/049b1c1b-228f-4445-88ec-91bc7fd4b1e8(v=vs.100))

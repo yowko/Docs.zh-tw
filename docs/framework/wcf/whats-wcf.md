@@ -1,30 +1,30 @@
 ---
-title: "何謂 Windows Communication Foundation"
-ms.custom: 
+title: 何謂 Windows Communication Foundation
+ms.custom: ''
 ms.date: 03/30/2017
 ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
+ms.reviewer: ''
+ms.suite: ''
 ms.technology:
 - dotnet-clr
-ms.tgt_pltfrm: 
+ms.tgt_pltfrm: ''
 ms.topic: article
 helpviewer_keywords:
 - Windows Communication Foundation [WCF], technology overview
 - technology overview [WCF]
 - WCF [WCF], technology overview
 ms.assetid: 40e1009d-ef15-450b-9848-62eabe5e5738
-caps.latest.revision: 
+caps.latest.revision: 51
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
 ms.workload:
 - dotnet
-ms.openlocfilehash: 7aecddc617afcaf197aa212e8eea7e1342c029fa
-ms.sourcegitcommit: 08684dd61444c2f072b89b926370f750e456fca1
+ms.openlocfilehash: 1e194a0784eb27043bbd0c127cde6883b4fafb2e
+ms.sourcegitcommit: 9a4fe1a1c37b26532654b4bbe22d702237950009
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 02/14/2018
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="what-is-windows-communication-foundation"></a>何謂 Windows Communication Foundation
 [!INCLUDE[indigo1](../../../includes/indigo1-md.md)] 是用於建置服務導向應用程式的架構。 使用 [!INCLUDE[indigo2](../../../includes/indigo2-md.md)]，您可以在各個服務端點之間傳送非同步訊息形式的資料。 服務端點可能是由 IIS 裝載之持續上線服務的一部分，或為應用程式中裝載的服務。 端點則大致是某項服務的用戶端，會向該服務端點要求資料。 訊息可為簡單的單一字元或以 XML 傳送的字組，乃至如二進位資料的資料流這般複雜的形式都沒問題。 其中幾個範例案例包括：  
@@ -44,7 +44,7 @@ ms.lasthandoff: 02/14/2018
  儘管在 [!INCLUDE[indigo2](../../../includes/indigo2-md.md)]面市之前，原本就能建立這幾類應用程式，但 [!INCLUDE[indigo2](../../../includes/indigo2-md.md)] 使得端點開發比以往更為容易。 簡言之， [!INCLUDE[indigo2](../../../includes/indigo2-md.md)] 的設計提供了便於管理的方式以讓您建立 Web 服務與 Web 服務用戶端。  
   
 ## <a name="features-of-wcf"></a>WCF 的功能  
- [!INCLUDE[indigo2](../../../includes/indigo2-md.md)] 包含下列功能集。 [!INCLUDE[crdefault](../../../includes/crdefault-md.md)] [WCF Feature Details](../../../docs/framework/wcf/feature-details/index.md).  
+ [!INCLUDE[indigo2](../../../includes/indigo2-md.md)] 包括下列功能集。 [!INCLUDE[crdefault](../../../includes/crdefault-md.md)] [WCF Feature Details](../../../docs/framework/wcf/feature-details/index.md).  
   
 -   **服務導向**  
   
@@ -60,7 +60,7 @@ ms.lasthandoff: 02/14/2018
   
 -   **服務中繼資料**  
   
-     [!INCLUDE[indigo2](../../../includes/indigo2-md.md)] 支援發行服務中繼資料如 WSDL、 XML 結構描述及 Ws-policy 的業界標準中所指定的格式。 這份中繼資料可用於自動產生和設定將要存取 [!INCLUDE[indigo2](../../../includes/indigo2-md.md)] 服務的用戶端。 您可以透過 HTTP 及 HTTPS，或者使用 Web 服務中繼資料交換標準來發行中繼資料。 [!INCLUDE[crdefault](../../../includes/crdefault-md.md)] [Metadata](../../../docs/framework/wcf/feature-details/metadata.md).  
+     [!INCLUDE[indigo2](../../../includes/indigo2-md.md)] 支援採用業界標準 (如 WSDL、XML 結構描述及 WS-Policy) 指定的格式來發行服務中繼資料。 這份中繼資料可用於自動產生和設定將要存取 [!INCLUDE[indigo2](../../../includes/indigo2-md.md)] 服務的用戶端。 您可以透過 HTTP 及 HTTPS，或者使用 Web 服務中繼資料交換標準來發行中繼資料。 [!INCLUDE[crdefault](../../../includes/crdefault-md.md)] [Metadata](../../../docs/framework/wcf/feature-details/metadata.md).  
   
 -   **資料合約**  
   
@@ -72,11 +72,11 @@ ms.lasthandoff: 02/14/2018
   
 -   **多重傳輸與編碼**  
   
-     訊息可以透過數種內建傳輸通訊協定與編碼的任何方式進行傳送。 最常用的通訊協定與編碼方式為傳送文字編碼的 SOAP 訊息，其所使用的是全球資訊網泛用的超文字傳輸通訊協定 (HTTP)。 或者， [!INCLUDE[indigo2](../../../includes/indigo2-md.md)] 也能讓您透過 TCP、具名管道或 MSMQ 傳送訊息。 這些訊息可編碼為文字，或採用最佳化的二進位格式。  使用 MTOM 標準將能有效傳送二進位資料。 如果所提供的傳輸或編碼都無法滿足您的需求，您還可以建立自己的自訂傳輸或編碼。 [!INCLUDE[crabout](../../../includes/crabout-md.md)] 支援的傳輸與編碼[!INCLUDE[indigo2](../../../includes/indigo2-md.md)]看到[傳輸](../../../docs/framework/wcf/feature-details/transports.md)。  
+     訊息可以透過數種內建傳輸通訊協定與編碼的任何方式進行傳送。 最常見的通訊協定與編碼是將傳送文字編碼的 SOAP 訊息使用位於全球資訊網上使用超文字傳輸通訊協定 (HTTP)。 或者， [!INCLUDE[indigo2](../../../includes/indigo2-md.md)] 也能讓您透過 TCP、具名管道或 MSMQ 傳送訊息。 這些訊息可編碼為文字，或採用最佳化的二進位格式。  使用 MTOM 標準將能有效傳送二進位資料。 如果所提供的傳輸或編碼都無法滿足您的需求，您還可以建立自己的自訂傳輸或編碼。 [!INCLUDE[crabout](../../../includes/crabout-md.md)] 支援的傳輸與編碼[!INCLUDE[indigo2](../../../includes/indigo2-md.md)]看到[傳輸](../../../docs/framework/wcf/feature-details/transports.md)。  
   
 -   **可靠的佇列訊息**  
   
-     [!INCLUDE[indigo2](../../../includes/indigo2-md.md)] 支援使用透過 Ws-reliable 傳訊來實作和使用 MSMQ 的可靠工作階段的可靠訊息交換。 [!INCLUDE[crabout](../../../includes/crabout-md.md)] 中的可靠及佇列訊息支援[!INCLUDE[indigo2](../../../includes/indigo2-md.md)]看到[佇列和可靠工作階段](../../../docs/framework/wcf/feature-details/queues-and-reliable-sessions.md)。  
+     [!INCLUDE[indigo2](../../../includes/indigo2-md.md)] 使用透過 WS-Reliable 傳訊來實作的可靠工作階段以及 MSMQ，來支援可靠的訊息交換。 [!INCLUDE[crabout](../../../includes/crabout-md.md)] 中的可靠及佇列訊息支援[!INCLUDE[indigo2](../../../includes/indigo2-md.md)]看到[佇列和可靠工作階段](../../../docs/framework/wcf/feature-details/queues-and-reliable-sessions.md)。  
   
 -   **永久性的訊息**  
   
@@ -95,7 +95,7 @@ ms.lasthandoff: 02/14/2018
      [!INCLUDE[indigo2](../../../includes/indigo2-md.md)] 架構具有若干擴充點。 如果需要額外的功能，有數個進入點可讓您自訂服務的行為。 [!INCLUDE[crabout](../../../includes/crabout-md.md)] 請參閱可用的擴充點[延伸 WCF](../../../docs/framework/wcf/extending/index.md)。  
   
 ## <a name="wcf-integration-with-other-microsoft-technologies"></a>WCF 與其他 Microsoft 技術的整合  
- [!INCLUDE[indigo2](../../../includes/indigo2-md.md)] 是有彈性的平台。 由於提供了極大彈性，許多其他 Microsoft 產品也使用 [!INCLUDE[indigo2](../../../includes/indigo2-md.md)] 。 了解 [!INCLUDE[indigo2](../../../includes/indigo2-md.md)]的基本概念後，您在使用任何這些產品時就能立即掌握優勢。  
+ [!INCLUDE[indigo2](../../../includes/indigo2-md.md)] 是具有靈活彈性的平台。 由於提供了極大彈性，許多其他 Microsoft 產品也使用 [!INCLUDE[indigo2](../../../includes/indigo2-md.md)] 。 了解 [!INCLUDE[indigo2](../../../includes/indigo2-md.md)]的基本概念後，您在使用任何這些產品時就能立即掌握優勢。  
   
  第一項與 [!INCLUDE[indigo2](../../../includes/indigo2-md.md)] 搭檔的技術為 Windows Workflow Foundation (WF)。 工作流程，以簡化應用程式開發步驟封裝在工作流程中為 「 活動 」。 若是使用第一版的 [!INCLUDE[wf2](../../../includes/wf2-md.md)]，開發人員則必須為工作流程建立主應用程式。 下一版的 [!INCLUDE[wf2](../../../includes/wf2-md.md)] 已與 [!INCLUDE[indigo2](../../../includes/indigo2-md.md)]相整合。 如此可讓任何工作流程輕鬆地裝載在 [!INCLUDE[indigo2](../../../includes/indigo2-md.md)] 服務中，您只要自動選擇 WF/WCF ( [!INCLUDE[vs_current_long](../../../includes/vs-current-long-md.md)]中的專案類型) 即可。  
   
@@ -105,7 +105,7 @@ ms.lasthandoff: 02/14/2018
   
  [!INCLUDE[dublin](../../../includes/dublin-md.md)] 應用程式伺服器是用於部署與管理使用 [!INCLUDE[indigo2](../../../includes/indigo2-md.md)] 進行通訊的應用程式而特別建立的。 [!INCLUDE[dublin2](../../../includes/dublin2-md.md)] 包含了專為 [!INCLUDE[indigo2](../../../includes/indigo2-md.md)]已啟用的應用程式而設計之豐富的工具及組態選項。  
   
-## <a name="see-also"></a>請參閱  
+## <a name="see-also"></a>另請參閱  
  <xref:System.ServiceModel>  
  [Windows Communication Foundation 的基本概念](../../../docs/framework/wcf/fundamental-concepts.md)  
  [Windows Communication Foundation 架構](../../../docs/framework/wcf/architecture.md)  

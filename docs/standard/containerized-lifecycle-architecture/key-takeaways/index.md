@@ -1,18 +1,18 @@
 ---
 title: 金鑰附帶
 description: Microsoft 平台和工具的容器化 Docker 應用程式生命週期 (電子書)_v1.1
-keywords: Docker, 微服務, ASP.NET, 容器
+ms.prod: .net
 author: CESARDELATORRE
 ms.author: wiwagn
 ms.date: 09/22/2017
 ms.workload:
 - dotnet
 - dotnetcore
-ms.openlocfilehash: 2ad2e0171b8deaead6d0b28a9da67fec245a405a
-ms.sourcegitcommit: e7f04439d78909229506b56935a1105a4149ff3d
+ms.openlocfilehash: 5bda215f895fd0e3a66e10c2d85a431314d737fc
+ms.sourcegitcommit: 9a4fe1a1c37b26532654b4bbe22d702237950009
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 12/23/2017
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="key-takeaways"></a>金鑰附帶
 

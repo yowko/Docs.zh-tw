@@ -1,18 +1,18 @@
 ---
 title: 容器和 Docker 簡介
 description: Microsoft 平台和工具的容器化 Docker 應用程式生命週期
-keywords: Docker, 微服務, ASP.NET, 容器
+ms.prod: .net
 author: CESARDELATORRE
 ms.author: wiwagn
 ms.date: 09/22/2017
 ms.workload:
 - dotnet
 - dotnetcore
-ms.openlocfilehash: 31260dc372f87305ad9d4556673a1cc94e24bfcc
-ms.sourcegitcommit: e7f04439d78909229506b56935a1105a4149ff3d
+ms.openlocfilehash: 34ed053124bc3806b015d78fd8ffbbdf5725ffb0
+ms.sourcegitcommit: 9a4fe1a1c37b26532654b4bbe22d702237950009
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 12/23/2017
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="introduction-to-containers-and-docker"></a>容器和 Docker 簡介
 

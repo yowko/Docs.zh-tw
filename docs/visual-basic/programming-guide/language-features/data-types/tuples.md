@@ -1,10 +1,10 @@
 ---
-title: "在 Visual Basic 中的 Tuple"
-ms.custom: 
+title: 在 Visual Basic 中的 Tuple
+ms.custom: ''
 ms.date: 04/23/2017
 ms.prod: .net
-ms.reviewer: 
-ms.suite: 
+ms.reviewer: ''
+ms.suite: ''
 ms.technology:
 - devlang-visual-basic
 ms.topic: article
@@ -13,11 +13,11 @@ helpviewer_keywords:
 ms.assetid: 3e66cd1b-3432-4e1d-8c37-5ebacae8f53f
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: bf26b7ce58c1e20fbbe5043cbd2acfd5712837fa
-ms.sourcegitcommit: d95a91d685565f4d95c8773b558752864a6a3d7e
+ms.openlocfilehash: 68c82e75ce4a438381bc9c60ce8c992565eb31cb
+ms.sourcegitcommit: 9a4fe1a1c37b26532654b4bbe22d702237950009
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 03/12/2018
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="tuples-visual-basic"></a>Tuple (Visual Basic)
 
@@ -80,7 +80,7 @@ Visual Basic tuple 的欄位會讀取寫入;tuple 已具現化之後，您可以
 
 Visual Basic tuple 都是實值類型的其中一個執行個體**System.ValueTuple**泛型型別。 例如，`holiday`前一個範例中所定義的 tuple 都是執行個體<xref:System.ValueTuple%603>結構。 它被設計為資料的輕量型容器。 Tuple 旨在讓您輕鬆建立具有多個資料項目的物件，因為其欠缺的一些功能可能會有自訂的結構。 它們包括：
 
-- 客戶成員。 您無法定義自己的屬性、 方法或事件的 tuple。
+- 自訂成員。 您無法定義自己的屬性、 方法或事件的 tuple。
 
 - 驗證。 您無法驗證指派給欄位的資料。
 

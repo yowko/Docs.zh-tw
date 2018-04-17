@@ -1,28 +1,26 @@
 ---
-title: "Interop 封送處理"
-ms.custom: 
+title: Interop 封送處理
 ms.date: 03/30/2017
 ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.technology: dotnet-clr
-ms.tgt_pltfrm: 
+ms.technology:
+- dotnet-clr
 ms.topic: article
 helpviewer_keywords:
 - marshaling, COM interop
 - interop marshaling
 - interop marshaling, about interop marshaling
 ms.assetid: 115f7a2f-d422-4605-ab36-13a8dd28142a
-caps.latest.revision: "22"
+caps.latest.revision: 22
 author: rpetrusha
 ms.author: ronpet
 manager: wpickett
-ms.workload: dotnet
-ms.openlocfilehash: 17638390a07f752a7101209e5635752bc0511d1d
-ms.sourcegitcommit: c0dd436f6f8f44dc80dc43b07f6841a00b74b23f
+ms.workload:
+- dotnet
+ms.openlocfilehash: cb22c708221fcc80962fd7da6e26c3720173d824
+ms.sourcegitcommit: 9a4fe1a1c37b26532654b4bbe22d702237950009
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 01/19/2018
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="interop-marshaling"></a>Interop 封送處理
 <a name="top"></a> Interop 封送處理會控制如何以方法引數傳遞資料，以及控制呼叫期間於 Managed 和 Unmanaged 記憶體之間的傳回值。 Interop 封送處理是由 Common Language Runtime 的封送處理服務所執行的執行階段活動。  
@@ -51,12 +49,12 @@ ms.lasthandoff: 01/19/2018
   
 -   COM Interop，可讓 Managed 程式碼透過介面與元件物件模型 (COM) 物件互動。  
   
- 平台叫用和 COM Interop 都會使用 Interop 封送處理，正確地將方法引數在呼叫端和被呼叫端之間來回移動 (如有必要)。 如下圖所示，除非需要[回呼函式](../../../docs/framework/interop/callback-functions.md)，否則平台叫用方法呼叫會從 Managed 程式碼流向 Unmanaged 程式碼，但絕不會反向流回。 即使平台叫用呼叫只可以從 Managed 程式碼流向 Unmanaged 程式碼，資料還是可以當做輸入或輸出參數來進行雙向流動。 COM Interop 方法呼叫可以流向任一方向。  
+ 平台叫用和 COM Interop 都會使用 Interop 封送處理，正確地將方法引數在呼叫端和被呼叫端之間來回移動 (如有必要)。 如下圖所示，除非需要[回呼函式](callback-functions.md)，否則平台叫用方法呼叫會從 Managed 程式碼流向 Unmanaged 程式碼，但絕不會反向流回。 即使平台叫用呼叫只可以從 Managed 程式碼流向 Unmanaged 程式碼，資料還是可以當做輸入或輸出參數來進行雙向流動。 COM Interop 方法呼叫可以流向任一方向。  
   
- ![平台叫用](../../../docs/framework/interop/media/interopmarshaling.png "interopmarshaling")  
+ ![平台叫用](./media/interopmarshaling.png "interopmarshaling")  
 平台叫用和 COM Interop 呼叫流程  
   
- 這兩種機制在最低層級會使用相同的 Interop 封送處理服務，但特定資料類型只受 COM Interop 或平台叫用支援。 如需詳細資料，請參閱[預設的封送處理行為](../../../docs/framework/interop/default-marshaling-behavior.md)。  
+ 這兩種機制在最低層級會使用相同的 Interop 封送處理服務，但特定資料類型只受 COM Interop 或平台叫用支援。 如需詳細資料，請參閱[預設的封送處理行為](default-marshaling-behavior.md)。  
   
  [回到頁首](#top)  
   
@@ -67,7 +65,7 @@ ms.lasthandoff: 01/19/2018
  COM 也有一個封送處理器，可在不同的 COM Apartment 或不同的 COM 處理序之間封送處理資料。 在相同 COM Apartment 中的 Managed 和 Unmanaged 程式碼之間呼叫時，只需要 Interop 封送處理器。 在不同 COM Apartment 或不同處理序中的 Managed 程式碼和 Unmanaged 程式碼之間呼叫時，則同時需要 Interop 封送處理器和 COM 封送處理器。  
   
 ### <a name="com-clients-and-managed-servers"></a>COM 用戶端和 Managed 伺服器  
- 具有 [Regasm.exe (組件註冊工具)](../../../docs/framework/tools/regasm-exe-assembly-registration-tool.md) 所註冊之類型程式庫的已匯出 Managed 伺服器，會將 `ThreadingModel` 登錄項目設定為 `Both`。 這個值表示伺服器可在單一執行緒 Apartment (STA) 或多執行緒 Apartment (MTA) 中啟動。 伺服器物件是在與其呼叫端相同的 Apartment 中所建立，如下表所示。  
+ 具有 [Regasm.exe (組件註冊工具)](../tools/regasm-exe-assembly-registration-tool.md) 所註冊之類型程式庫的已匯出 Managed 伺服器，會將 `ThreadingModel` 登錄項目設定為 `Both`。 這個值表示伺服器可在單一執行緒 Apartment (STA) 或多執行緒 Apartment (MTA) 中啟動。 伺服器物件是在與其呼叫端相同的 Apartment 中所建立，如下表所示。  
   
 |COM 用戶端|.NET 伺服器|封送處理需求|  
 |----------------|-----------------|-----------------------------|  
@@ -76,7 +74,7 @@ ms.lasthandoff: 01/19/2018
   
  由於用戶端和伺服器位於相同的 Apartment 中，因此 Interop 封送處理服務會自動處理所有資料封送處理。 下圖顯示 Interop 封送處理服務在相同 COM 樣式 Apartment 內的 Managed 和 Unmanaged 堆積之間進行操作。  
   
- ![Interop 封送處理](../../../docs/framework/interop/media/interopheap.gif "interopheap")  
+ ![Interop 封送處理](./media/interopheap.gif "interopheap")  
 相同 Apartment 封送處理流程  
   
  如果您打算匯出 Managed 伺服器，請注意 COM 用戶端會決定伺服器的 Apartment。 由 MTA 中初始化的 COM 用戶端所呼叫的 Managed 伺服器必須確保執行緒安全。  
@@ -93,7 +91,7 @@ ms.lasthandoff: 01/19/2018
   
  當 Managed 用戶端和 Unmnaged 伺服器位於相同的 Apartment 中時，Interop 封送處理服務會處理所有資料封送處理。 不過，當用戶端和伺服器在不同的 Apartment 中初始化時，還需要 COM 封送處理。 下圖顯示跨 Apartment 呼叫的項目。  
   
- ![COM 封送處理](../../../docs/framework/interop/media/singleprocessmultapt.gif "singleprocessmultapt")  
+ ![COM 封送處理](./media/singleprocessmultapt.gif "singleprocessmultapt")  
 .NET 用戶端和 COM 物件之間的跨 Apartment 呼叫  
   
  針對跨 Apartment 封送處理，您可以執行下列動作：  
@@ -105,7 +103,7 @@ ms.lasthandoff: 01/19/2018
     > [!NOTE]
     >  將 C# 用戶端的執行緒設定為 STA 之後，對 MTA COM 元件的呼叫會需要跨 Apartment 封送處理。  
   
- 如需明確選取 Apartment 模型的指示，請參閱 [Managed 和 Unmanaged 執行緒處理](http://msdn.microsoft.com/library/db425c20-4b2f-4433-bf96-76071c7881e5)。  
+ 如需明確選取 Apartment 模型的指示，請參閱 [Managed 和 Unmanaged 執行緒處理](https://msdn.microsoft.com/library/db425c20-4b2f-4433-bf96-76071c7881e5(v=vs.100))。  
   
  [回到頁首](#top)  
   
@@ -119,13 +117,13 @@ ms.lasthandoff: 01/19/2018
   
  下圖顯示 Interop 封送處理和 COM 封送處理如何跨處理序和主機界限提供通訊通道。  
   
- ![COM 封送處理](../../../docs/framework/interop/media/interophost.gif "interophost")  
+ ![COM 封送處理](./media/interophost.gif "interophost")  
 跨處理序封送處理  
   
 ### <a name="preserving-identity"></a>保留識別  
  Common Language Runtime 會保留 Managed 和 Unmanaged 參考的識別。 下圖顯示跨處理序和主機界限的直接 Unmanaged 參考 (上方列) 和直接 Managed 參考 (下方列) 的流程。  
   
- ![COM 可呼叫包裝函式和執行階段可呼叫包裝函式](../../../docs/framework/interop/media/interopdirectref.gif "interopdirectref")  
+ ![COM 可呼叫包裝函式和執行階段可呼叫包裝函式](./media/interopdirectref.gif "interopdirectref")  
 跨處理序和主機界限傳遞的參考  
   
  在本圖中：  
@@ -142,10 +140,10 @@ ms.lasthandoff: 01/19/2018
 ### <a name="managed-remoting"></a>Managed 遠端處理  
  執行階段也會提供 Managed 遠端處理，可供您用來建立跨處理序和主機界限的 Managed 物件之間的通訊通道。 Managed 遠端處理可以提供通訊元件之間的防火牆，如下圖所示。  
   
- ![SOAP 或 TcpChannel](../../../docs/framework/interop/media/interopremotesoap.gif "interopremotesoap")  
+ ![SOAP 或 TcpChannel](./media/interopremotesoap.gif "interopremotesoap")  
 使用 SOAP 或 TcpChannel 類別跨防火牆進行遠端呼叫  
   
- 某些 Unmanaged 呼叫可以透過 SOAP 進行傳送，例如 [Serviced 元件](http://msdn.microsoft.com/library/f109ee24-81ad-4d99-9892-51ac6f34978c)和 COM 之間的呼叫。  
+ 某些 unmanaged 的呼叫可以透過 SOAP 進行傳送，例如之間 serviced 的元件及 COM 的呼叫  
   
  [回到頁首](#top)  
   
@@ -154,15 +152,15 @@ ms.lasthandoff: 01/19/2018
   
 |標題|描述|  
 |-----------|-----------------|  
-|[預設的封送處理行為](../../../docs/framework/interop/default-marshaling-behavior.md)|描述 Interop 封送處理服務用來封送處理資料的規則。|  
-|[使用平台叫用封送處理資料](../../../docs/framework/interop/marshaling-data-with-platform-invoke.md)|描述如何宣告方法參數，以及將引數傳遞給 Unmanaged 程式庫所匯出的函式。|  
-|[使用 COM Interop 封送處理資料](../../../docs/framework/interop/marshaling-data-with-com-interop.md)|描述如何自訂 COM 包裝函式來變更封送處理行為。|  
-|[如何：將 Managed 程式碼 DCOM 移轉至 WCF](../../../docs/framework/interop/how-to-migrate-managed-code-dcom-to-wcf.md)|描述如何從 DCOM 移轉至 WCF。|  
-|[操作說明：對應 HRESULT 和例外狀況](../../../docs/framework/interop/how-to-map-hresults-and-exceptions.md)|描述如何將自訂例外狀況對應到 HRESULT，並提供每一個 HRESULT 與其在 .NET Framework 中可比較的例外狀況類別之完整對應。|  
-|[使用泛型型別互通](http://msdn.microsoft.com/library/26b88e03-085b-4b53-94ba-a5a9c709ce58)|描述使用泛型類型來取得 COM 互通性時所支援的動作。|  
-|[與 Unmanaged 程式碼互通](../../../docs/framework/interop/index.md)|描述 Common Language Runtime 提供的互通性服務。|  
-|[進階 COM 互通性](http://msdn.microsoft.com/library/3ada36e5-2390-4d70-b490-6ad8de92f2fb)|提供有關將 COM 元件納入 .NET Framework 應用程式的詳細資訊連結。|  
-|[交互操作的設計考量](http://msdn.microsoft.com/library/b59637f6-fe35-40d6-ae72-901e7a707689)|提供撰寫整合式 COM 元件的秘訣。|  
+|[預設的封送處理行為](default-marshaling-behavior.md)|描述 Interop 封送處理服務用來封送處理資料的規則。|  
+|[使用平台叫用封送處理資料](marshaling-data-with-platform-invoke.md)|描述如何宣告方法參數，以及將引數傳遞給 Unmanaged 程式庫所匯出的函式。|  
+|[使用 COM Interop 封送處理資料](marshaling-data-with-com-interop.md)|描述如何自訂 COM 包裝函式來變更封送處理行為。|  
+|[如何：將 Managed 程式碼 DCOM 移轉至 WCF](how-to-migrate-managed-code-dcom-to-wcf.md)|描述如何從 DCOM 移轉至 WCF。|  
+|[操作說明：對應 HRESULT 和例外狀況](how-to-map-hresults-and-exceptions.md)|描述如何將自訂例外狀況對應到 HRESULT，並提供每一個 HRESULT 與其在 .NET Framework 中可比較的例外狀況類別之完整對應。|  
+|[使用泛型型別互通](https://msdn.microsoft.com/library/26b88e03-085b-4b53-94ba-a5a9c709ce58(v=vs.100))|描述使用泛型類型來取得 COM 互通性時所支援的動作。|  
+|[與 Unmanaged 程式碼互通](index.md)|描述 Common Language Runtime 提供的互通性服務。|  
+|[進階 COM 互通性](https://msdn.microsoft.com/library/3ada36e5-2390-4d70-b490-6ad8de92f2fb(v=vs.100))|提供有關將 COM 元件納入 .NET Framework 應用程式的詳細資訊連結。|  
+|[交互操作的設計考量](https://msdn.microsoft.com/library/b59637f6-fe35-40d6-ae72-901e7a707689(v=vs.100))|提供撰寫整合式 COM 元件的秘訣。|  
   
  [回到頁首](#top)  
   

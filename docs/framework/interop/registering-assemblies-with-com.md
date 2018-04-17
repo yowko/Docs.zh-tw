@@ -1,12 +1,9 @@
 ---
-title: "向 COM 註冊組件"
-ms.custom: 
+title: 向 COM 註冊組件
 ms.date: 03/30/2017
 ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.technology: dotnet-clr
-ms.tgt_pltfrm: 
+ms.technology:
+- dotnet-clr
 ms.topic: article
 helpviewer_keywords:
 - COM interop, registering assemblies
@@ -14,19 +11,20 @@ helpviewer_keywords:
 - interoperation with unmanaged code, registering assemblies
 - registering assemblies
 ms.assetid: 87925795-a3ae-4833-b138-125413478551
-caps.latest.revision: "11"
+caps.latest.revision: 11
 author: rpetrusha
 ms.author: ronpet
 manager: wpickett
-ms.workload: dotnet
-ms.openlocfilehash: 39466115e3835361c76361d3cfc04f76161e7dd5
-ms.sourcegitcommit: c0dd436f6f8f44dc80dc43b07f6841a00b74b23f
+ms.workload:
+- dotnet
+ms.openlocfilehash: 3beaffdc0660055dd047f449388216ccfdd312cc
+ms.sourcegitcommit: 9a4fe1a1c37b26532654b4bbe22d702237950009
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 01/19/2018
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="registering-assemblies-with-com"></a>向 COM 註冊組件
-您可以執行稱為[組件註冊工具 (Regasm.exe)](../../../docs/framework/tools/regasm-exe-assembly-registration-tool.md) 的命令列工具，註冊或取消登錄與 COM 搭配使用的組件。 Regasm.exe 會將此類別的相關資訊新增至容器登錄，讓 COM 用戶端可以明確地使用 .NET Framework 類別。 <xref:System.Runtime.InteropServices.RegistrationServices> 類別提供對等功能。  
+您可以執行稱為[組件註冊工具 (Regasm.exe)](../tools/regasm-exe-assembly-registration-tool.md) 的命令列工具，註冊或取消登錄與 COM 搭配使用的組件。 Regasm.exe 會將此類別的相關資訊新增至容器登錄，讓 COM 用戶端可以明確地使用 .NET Framework 類別。 <xref:System.Runtime.InteropServices.RegistrationServices> 類別提供對等功能。  
   
  必須先在 Windows 登錄中註冊 Managed 元件，才能從 COM 用戶端進行啟用。 下表顯示 Regasm.exe 通常會新增至 Windows 登錄的機碼 (000000 表示實際 GUID 值)。  
   
@@ -52,8 +50,8 @@ ms.lasthandoff: 01/19/2018
   
  針對 `InprocServer32` 索引鍵，Mscoree.dll 的參考會取代傳統 COM 型別程式庫，以指出 Common Language Runtime 建立 Managed 物件。  
   
-## <a name="see-also"></a>請參閱  
- [將 .NET Framework 元件公開給 COM](../../../docs/framework/interop/exposing-dotnet-components-to-com.md)  
- [如何：參考 COM 的 .NET 類型](../../../docs/framework/interop/how-to-reference-net-types-from-com.md)  
- [呼叫.NET 物件](http://msdn.microsoft.com/library/40c9626c-aea6-4bad-b8f0-c1de462efd33)  
- [部署供 COM 存取的應用程式](http://msdn.microsoft.com/library/fb63564c-c1b9-4655-a094-a235625882ce)
+## <a name="see-also"></a>另請參閱  
+ [將 .NET Framework 元件公開給 COM](exposing-dotnet-components-to-com.md)  
+ [如何：參考 COM 的 .NET 類型](how-to-reference-net-types-from-com.md)  
+ [呼叫.NET 物件](https://msdn.microsoft.com/library/40c9626c-aea6-4bad-b8f0-c1de462efd33(v=vs.100))  
+ [部署供 COM 存取的應用程式](https://msdn.microsoft.com/library/fb63564c-c1b9-4655-a094-a235625882ce(v=vs.100))
