@@ -5,11 +5,11 @@ hide_bc: true
 title: .NET 文件
 description: 了解如何使用 C#、Visual Basic 及 F#，在任何平台上使用 .NET 建立各種應用程式。 瀏覽 API 參考、範例程式碼、教學課程及更多資源。
 ms.custom: updateeachrelease
-ms.openlocfilehash: f3a044df40a5508f62b5b441965c4ce16e998428
-ms.sourcegitcommit: 498799639937c89de777361aab74261efe7b79ea
+ms.openlocfilehash: 35a85cfc9f829f287a239d1a1bb98fd5d15487ca
+ms.sourcegitcommit: 9a4fe1a1c37b26532654b4bbe22d702237950009
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 03/22/2018
+ms.lasthandoff: 04/16/2018
 ---
 <div id="main" class="v2">
     <div class="container">
@@ -149,11 +149,11 @@ ms.lasthandoff: 03/22/2018
                                                 </div>
                                             </div>
                                             <div class="cardText">
-                                                <h3><a href="https://developer.xamarin.com/guides/cross-platform/getting_started">Xamarin</a></h3>
-                                                <p><a href="https://developer.xamarin.com/guides/cross-platform/getting_started">開始使用</a></p>
-                                                <p><a href="https://developer.xamarin.com/guides/ios">Xamarin.iOS 指南</a></p>
-                                                <p><a href="https://developer.xamarin.com/guides/android/getting_started">Xamarin.Android 指南</a></p>
-                                                <p><a href="https://developer.xamarin.com/guides/xamarin-forms">Xamarin.Forms 指南</a></p>
+                                                <h3><a href="/xamarin">Xamarin</a></h3>
+                                                <p><a href="/xamarin/cross-platform">跨平台開發</a></p>
+                                                <p><a href="/xamarin/ios">Xamarin.iOS 指南</a></p>
+                                                <p><a href="/xamarin/android">Xamarin.Android 指南</a></p>
+                                                <p><a href="/xamarin/xamarin-forms">Xamarin.Forms 指南</a></p>
                                             </div>
                                         </div>
                                     </div>
@@ -438,7 +438,7 @@ ms.lasthandoff: 03/22/2018
                                                 </div>
                                             </div>
                                             <div class="cardText">
-                                                <a href="https://developer.xamarin.com/guides/ios/getting_started/">
+                                                <a href="/xamarin/ios">
                                                     <h3>Xamarin.iOS</h3>
                                                     <p>透過 Xamarin.iOS 使用 C# 及 F# 建立原生 iOS 應用程式。</p>
                                                 </a>
@@ -457,7 +457,7 @@ ms.lasthandoff: 03/22/2018
                                                 </div>
                                             </div>
                                             <div class="cardText">
-                                                <a href="https://developer.xamarin.com/guides/android/getting_started">
+                                                <a href="/xamarin/android">
                                                     <h3>Xamarin.Android</h3>
                                                     <p>透過 Xamarin.Android 使用 C# 及 F# 建立原生 Android 應用程式。</p>
                                                 </a>
@@ -476,7 +476,7 @@ ms.lasthandoff: 03/22/2018
                                                 </div>
                                             </div>
                                             <div class="cardText">
-                                                <a href="https://developer.xamarin.com/guides/xamarin-forms">
+                                                <a href="/xamarin/xamarin-forms">
                                                     <h3>Xamarin.Forms</h3>
                                                     <p>透過 Xamarin.Forms 使用 C# 及 F# 建立跨平台行動 UI。</p>
                                                 </a>
@@ -558,7 +558,7 @@ ms.lasthandoff: 03/22/2018
                                                 </div>
                                             </div>
                                             <div class="cardText">
-                                                <a href="https://developer.xamarin.com/guides/mac/getting_started">
+                                                <a href="/xamarin/mac">
                                                     <h3>適用於 macOS 的 Xamarin</h3>
                                                     <p>透過 Xamarin 使用 C# 及 F# 為 macOS 建立應用程式。</p>
                                                 </a>
