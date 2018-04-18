@@ -11,11 +11,11 @@ ms.devlang: dotnet
 ms.assetid: 8b49079c-6ede-429a-92d7-ecd2fda1ab0e
 ms.workload:
 - dotnetcore
-ms.openlocfilehash: 6aa5abd071355b1c1a367b35e9521e6b1af9c945
-ms.sourcegitcommit: e7f04439d78909229506b56935a1105a4149ff3d
+ms.openlocfilehash: a14e8dbf3f9be9910a2c50cfbcb3f52f4e7385e1
+ms.sourcegitcommit: 9a4fe1a1c37b26532654b4bbe22d702237950009
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 12/23/2017
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="build-net-core-from-source"></a>從原始檔建置 .NET Core
 
@@ -24,7 +24,7 @@ ms.lasthandoff: 12/23/2017
 
 ## <a name="build-the-clr-from-source"></a>從原始檔建置 CLR
 
-您可以在 [GitHub 上的 `dotnet/coreclr` 存放庫](https://github.com/dotnet/coreclr/)中找到 .NET Core CLR 的原始程式碼。
+您可以在 GitHub 上的 [dotnet/coreclr](https://github.com/dotnet/coreclr/) 存放庫中找到 .NET Core CLR 的原始程式碼。
 
 此組建目前相依於下列必要條件：
 * [Git](https://git-scm.com/)
@@ -32,7 +32,7 @@ ms.lasthandoff: 12/23/2017
 * [Python](https://www.python.org/)
 * C++ 編譯器。
 
-安裝這些必要條件之後，您可以叫用 [Core CLR 存放庫](https://github.com/dotnet/coreclr/)基底的組建指令碼 (在 Windows 上為 `build.cmd`，在 Linux 和 macOS 上為 `build.sh`) 來建置 CLR。
+安裝這些必要條件之後，您可以叫用 [dotnet/coreclr](https://github.com/dotnet/coreclr/) 存放庫基底的組建指令碼 (在 Windows 上為 `build.cmd`，或者在 Linux 和 macOS 上為 `build.sh`) 來建置 CLR。
 
 安裝的元件會隨著作業系統 (OS) 而有所不同。 請參閱特定 OS 的建置指示：
 
@@ -82,12 +82,12 @@ ms.lasthandoff: 12/23/2017
  2. **使用 corerun.exe 透過未封裝的 DLL 執行應用程式**。
     此存放庫也會定義一個與 NuGet 沒有任何相依性的簡單主機，稱為 corerun.exe。
     您必須告訴主機何處可取得您實際使用的必要 DLL，而且您必須手動將這些 DLL 收集在一起。
-    這項技術可供 [Core CLR 存放庫](https://github.com/dotnet/coreclr)中的所有測試使用，並且有助於在本機快速執行「編輯-編譯-偵錯」迴圈，例如初步單元測試。
+    這項技術可供 [dotnet/coreclr](https://github.com/dotnet/coreclr) 存放庫中的所有測試使用，並且有助於在本機快速重複「編輯-編譯-偵錯」循環，例如初步單元測試。
     如需使用這項技術的詳細資料，請參閱 [Executing .NET Core Apps with CoreRun.exe](https://github.com/dotnet/coreclr/blob/master/Documentation/workflow/UsingCoreRun.md) (使用 corerun.exe 執行 .NET Core 應用程式)。
 
 ## <a name="build-the-cli-from-source"></a>從原始檔建置 CLI
 
-您可以在 [`dotnet/cli`GitHub 上的存放庫](https://github.com/dotnet/cli/)中找到 .NET Core CLI 的原始程式碼。
+您可以在 GitHub 上的 [dotnet/cli](https://github.com/dotnet/cli/) 存放庫中找到 .NET Core CLI 的原始程式碼。
 
 若要建置 .NET Core CLI，您需要在電腦上安裝下列項目。
 
