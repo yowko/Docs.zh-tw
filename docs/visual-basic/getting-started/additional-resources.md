@@ -1,6 +1,6 @@
 ---
-title: "Visual Basic 程式設計人員的其他資源"
-description: "探索網路上的資源，以學習、詢問問題及了解有關 Visual Basic 的更多資訊。"
+title: Visual Basic 程式設計人員的其他資源
+description: 探索網路上的資源，以學習、詢問問題及了解有關 Visual Basic 的更多資訊。
 ms.date: 02/21/2018
 ms.prod: .net
 ms.technology:
@@ -14,11 +14,11 @@ helpviewer_keywords:
 ms.assetid: 9bfb42e9-327f-439b-935e-8884f6aca80c
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: 9b2e9718d6f342bdd0865a9593e85683a5bf9a45
-ms.sourcegitcommit: cec0525b2121c36198379525e69aa5388266db5b
+ms.openlocfilehash: 10fe7506f2112ef15566a35c1c330a25024744f8
+ms.sourcegitcommit: b750a8e3979749b214e7e10c82efb0a0524dfcb1
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 02/23/2018
+ms.lasthandoff: 04/09/2018
 ---
 # <a name="additional-resources"></a>其他資源
 
@@ -38,7 +38,7 @@ ms.lasthandoff: 02/23/2018
 |詞彙|定義|
 |----------|----------------|
 |[Code Gallery](https://code.msdn.microsoft.com/site/search?f%5B0%5D.Type=ProgrammingLanguage&f%5B0%5D.Value=VB&f%5B0%5D.Text=VB.NET) (程式碼庫)|下載及與開發人員社群分享範例應用程式和其他資源。|
-|[Visual Basic 文件範例](https://github.com/dotnet/docs/tree/master/samples/snippets/visualbasic)|包含 Visual Basic 和 .NET 文件的所有使用範例。|
+|[Visual Basic 文件範例](https://github.com/dotnet/samples/tree/master/snippets/visualbasic)|包含 Visual Basic 和 .NET 文件的所有使用範例。|
 
 ### <a name="forums"></a>論壇
 

@@ -1,6 +1,6 @@
 ---
-title: "使用 .NET Compiler Platform SDK 工作區模型"
-description: "此概觀可讓您了解用來查詢與管理程式碼之工作區和專案的類型。"
+title: 使用 .NET Compiler Platform SDK 工作區模型
+description: 此概觀可讓您了解用來查詢與管理程式碼之工作區和專案的類型。
 author: billwagner
 ms.author: wiwagn
 ms.date: 10/15/2017
@@ -8,11 +8,11 @@ ms.topic: conceptual
 ms.prod: .net
 ms.devlang: devlang-csharp
 ms.custom: mvc
-ms.openlocfilehash: d0d4e9c012b025b9393ac34f0833795fca9841d5
-ms.sourcegitcommit: d095094e942eedf09530ea5636fbaf9029853027
+ms.openlocfilehash: c42795346c505f925c0b4cb232325085fa065201
+ms.sourcegitcommit: b750a8e3979749b214e7e10c82efb0a0524dfcb1
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 12/19/2017
+ms.lasthandoff: 04/09/2018
 ---
 # <a name="work-with-a-workspace"></a>使用工作區
 
@@ -40,7 +40,7 @@ IDE 這類主機環境為您提供對應至開啟方案的工作區。 只要載
 
 下圖呈現工作區與主機環境的關係、工具，以及如何進行編輯。
 
-![包含專案和原始程式檔之工作區不同項目間的關聯性](media/workspace-obj-relations.png)
+![包含專案和原始程式檔之工作區不同項目間的關聯性](media/work-with-workspace/workspace-obj-relations.png)
 
 ## <a name="summary"></a>總結
 

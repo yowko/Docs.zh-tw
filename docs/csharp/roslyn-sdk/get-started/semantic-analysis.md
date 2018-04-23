@@ -8,11 +8,11 @@ ms.topic: conceptual
 ms.prod: .net
 ms.devlang: devlang-csharp
 ms.custom: mvc
-ms.openlocfilehash: b9921bc3621d6abfc37b1bf1fc4f481620ccc407
-ms.sourcegitcommit: 935d5267c44f9bce801468ef95f44572f1417e8c
+ms.openlocfilehash: 8703670f650a16d1b6642eaaf4f82f0a73ab4c69
+ms.sourcegitcommit: b750a8e3979749b214e7e10c82efb0a0524dfcb1
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 03/28/2018
+ms.lasthandoff: 04/09/2018
 ---
 # <a name="get-started-with-semantic-analysis"></a>開始使用語意分析
 
@@ -36,7 +36,7 @@ ms.lasthandoff: 03/28/2018
 
 在本教學課程中，您會重新看到 "Hello World" 程式。 此時，您查詢程式中的符號來了解這些符號所代表的類型。 您查詢命名空間中的類型，並學習如何尋找類型上可用的方法。
 
-您可以在 [GitHub 存放庫](https://github.com/dotnet/docs/tree/master/samples/csharp/roslyn-sdk/SemanticQuickStart)中查看此範例中完成的程式碼。
+您可以在 [GitHub 存放庫](https://github.com/dotnet/samples/tree/master/csharp/roslyn-sdk/SemanticQuickStart)中查看此範例中完成的程式碼。
 
 > [!NOTE]
 > 語法樹狀結構類型使用繼承，來描述適用於程式中不同位置的不同語法項目。 使用這些 API 通常表示將屬性或集合成員轉換成特定衍生類型。 在下列範例中，指派和轉換是使用明確類型變數的個別陳述式。 您可以閱讀程式碼，以查看 API 的傳回型別以及所傳回物件的執行階段類型。 在實務上，較常見使用隱含型別變數，並依賴 API 名稱來描述要檢查的物件類型。

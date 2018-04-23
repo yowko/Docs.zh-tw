@@ -1,6 +1,6 @@
 ---
-title: "如何：將字串轉換成 DateTime"
-description: "了解剖析表示日期與時間的字串，以從日期與時間字串建立 DateTime 的技術。"
+title: 如何：將字串轉換成 DateTime
+description: 了解剖析表示日期與時間的字串，以從日期與時間字串建立 DateTime 的技術。
 ms.date: 02/15/2018
 ms.prod: .net
 ms.technology: dotnet-standard
@@ -22,11 +22,11 @@ manager: wpickett
 ms.workload:
 - dotnet
 - dotnetcore
-ms.openlocfilehash: a94300a879ac18d21d35dfe58ac0d9805f240a92
-ms.sourcegitcommit: d3cfda0943364aaf6ccd574f55f584576c8a4fee
+ms.openlocfilehash: 6912109c11039c311067f330c3af71b15cbadc7a
+ms.sourcegitcommit: b750a8e3979749b214e7e10c82efb0a0524dfcb1
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 03/08/2018
+ms.lasthandoff: 04/09/2018
 ---
 # <a name="parsing-date-and-time-strings-in-net"></a>在 .NET 中剖析日期和時間字串
 
@@ -64,7 +64,7 @@ ms.lasthandoff: 03/08/2018
 > 本文中所有的 C# 範例皆可在您的瀏覽器中執行。 按 [執行] 按鈕以查看輸出。 您也可以編輯它們以進行實驗。
 
 > [!NOTE]
-> 這些範例可在 [C#](https://github.com/dotnet/docs/samples/tree/master/snippets/csharp/how-to/conversions) 和 [VB](https://github.com/dotnet/docs/samples/tree/master/snippets/visualbasic/how-to/conversions) 兩者的 GitHub 文件存放庫中取得。 或者，您可以為 [C#](https://github.com/dotnet/docs/samples/tree/master/snippets/csharp/how-to/conversions.zip) 或 [VB](https://github.com/dotnet/docs/samples/tree/master/snippets/visualbasic/how-to/conversions.zip)將專案下載為 ZIP 檔案。
+> 這些範例可在 [C#](https://github.com/dotnet/samples/tree/master/snippets/csharp/how-to/conversions) 和 [VB](https://github.com/dotnet/samples/tree/master/snippets/visualbasic/how-to/conversions) 兩者的 GitHub 文件存放庫中取得。 或者，您可以為 [C#](https://github.com/dotnet/samples/raw/master/snippets/csharp/how-to/conversions.zip) 或 [VB](https://github.com/dotnet/samples/raw/master/snippets/visualbasic/how-to/conversions.zip)將專案下載為 ZIP 檔案。
 
 [!code-csharp-interactive[Parsing.DateAndTime#1](../../../samples/snippets/csharp/how-to/conversions/StringToDateTime.cs#1)]
 [!code-vb[Parsing.DateAndTime#1](../../../samples/snippets/visualbasic/how-to/conversions/Program.vb#1)]

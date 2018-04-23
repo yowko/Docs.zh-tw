@@ -1,12 +1,13 @@
 ---
-title: "反映和泛用類型"
-ms.custom: 
+title: 反映和泛用類型
+ms.custom: ''
 ms.date: 03/30/2017
 ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.technology: dotnet-clr
-ms.tgt_pltfrm: 
+ms.reviewer: ''
+ms.suite: ''
+ms.technology:
+- dotnet-clr
+ms.tgt_pltfrm: ''
 ms.topic: article
 dev_langs:
 - csharp
@@ -22,16 +23,17 @@ helpviewer_keywords:
 - types, generic
 - type parameters
 ms.assetid: f7180fc5-dd41-42d4-8a8e-1b34288e06de
-caps.latest.revision: "16"
+caps.latest.revision: 16
 author: rpetrusha
 ms.author: ronpet
 manager: wpickett
-ms.workload: dotnet
-ms.openlocfilehash: 2c6ace8f34999a6d98fc6784dd21ce88baf2af42
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.workload:
+- dotnet
+ms.openlocfilehash: 54ce839c6a569bed784a03acd5e2b92f4f1f5aca
+ms.sourcegitcommit: b750a8e3979749b214e7e10c82efb0a0524dfcb1
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 04/09/2018
 ---
 # <a name="reflection-and-generic-types"></a>反映和泛用類型
 <a name="top"></a> 從反映的的觀點來看，泛型類型與一般類型間的差異在於泛型類型具有與其相關聯的一組類型參數 (若其定義為泛型類型) 或類型引數 (若其為建構類型)。 泛型方法與一般方法的差異也如同上述。  
@@ -65,15 +67,15 @@ ms.lasthandoff: 12/22/2017
   
 <a name="is_this_a_generic_type_or_method"></a>   
 ## <a name="is-this-a-generic-type-or-method"></a>這是泛型類型或泛型方法？  
- 當您使用反映來查看未知的類型 (以 <xref:System.Type>的執行個體表示) 時，請使用 <xref:System.Type.IsGenericType%2A> 屬性來決定未知類型是否為泛型。 如果類型為泛型，其將傳回 `true` 。 同樣地，查看未知的方法 (以 <xref:System.Reflection.MethodInfo> 類別的執行個體表示) 時，請使用 <xref:System.Reflection.MethodInfo.IsGenericMethod%2A> 屬性來決定方法是否為泛型。  
+ 當您使用反映來查看未知的類型 (以 <xref:System.Type>的執行個體表示) 時，請使用 <xref:System.Type.IsGenericType%2A> 屬性來決定未知類型是否為泛型。 如果類型為泛型，其將傳回 `true` 。 同樣地，查看未知的方法 (以 <xref:System.Reflection.MethodInfo> 類別的執行個體表示) 時，請使用 <xref:System.Reflection.MethodBase.IsGenericMethod%2A> 屬性來決定方法是否為泛型。  
   
 ### <a name="is-this-a-generic-type-or-method-definition"></a>這是泛型類型或方法定義？  
- 使用 <xref:System.Type.IsGenericTypeDefinition%2A> 屬性來決定 <xref:System.Type> 物件是否代表泛型類型定義，並使用 <xref:System.Reflection.MethodInfo.IsGenericMethodDefinition%2A> 方法來決定 <xref:System.Reflection.MethodInfo> 是否代表泛型方法定義。  
+ 使用 <xref:System.Type.IsGenericTypeDefinition%2A> 屬性來決定 <xref:System.Type> 物件是否代表泛型類型定義，並使用 <xref:System.Reflection.MethodBase.IsGenericMethodDefinition%2A> 方法來決定 <xref:System.Reflection.MethodInfo> 是否代表泛型方法定義。  
   
  泛型類型與方法定義為建立執行個體類型的範本。 .NET Framwork 類別庫中的泛型類型 (例如 <xref:System.Collections.Generic.Dictionary%602>) 是泛型類型定義。  
   
 ### <a name="is-the-type-or-method-open-or-closed"></a>類型 (或方法) 為開放式或是封閉式？  
- 如果可具現化類型已取代其所有類型參數 (包括所有封入類型的類型參數)，則泛型類型或方法為封閉式。 如果類型為封閉式，則您僅能建立泛型類型的執行個體。 如果類型為開放式，則 <xref:System.Type.ContainsGenericParameters%2A?displayProperty=nameWithType> 屬性會傳回 `true` 。 若是方法，則 <xref:System.Reflection.MethodInfo.ContainsGenericParameters%2A?displayProperty=nameWithType> 方法會執行相同的函式。  
+ 如果可具現化類型已取代其所有類型參數 (包括所有封入類型的類型參數)，則泛型類型或方法為封閉式。 如果類型為封閉式，則您僅能建立泛型類型的執行個體。 如果類型為開放式，則 <xref:System.Type.ContainsGenericParameters%2A?displayProperty=nameWithType> 屬性會傳回 `true` 。 若是方法，則 <xref:System.Reflection.MethodBase.ContainsGenericParameters%2A?displayProperty=nameWithType> 方法會執行相同的函式。  
   
  [回到頁首](#top)  
   
@@ -149,7 +151,7 @@ generic<typename V, typename W> ref class D : B<int, V> {};
   
 <a name="invariants"></a>   
 ## <a name="invariants"></a>非變異值  
- 若要了解反映中泛型類型非變異條件hapi 一般條款表，請參閱 <xref:System.Type.IsGenericType%2A?displayProperty=nameWithType>。 與泛型方法相關的其他條款，請參閱 <xref:System.Reflection.MethodInfo.IsGenericMethod%2A?displayProperty=nameWithType>。  
+ 若要了解反映中泛型類型非變異條件hapi 一般條款表，請參閱 <xref:System.Type.IsGenericType%2A?displayProperty=nameWithType>。 與泛型方法相關的其他條款，請參閱 <xref:System.Reflection.MethodBase.IsGenericMethod%2A?displayProperty=nameWithType>。  
   
  [回到頁首](#top)  
   

@@ -1,5 +1,5 @@
 ---
-title: "如何：修改字串內容 - C# 指南"
+title: 如何：修改字串內容 - C# 指南
 ms.date: 02/26/2018
 ms.prod: .net
 ms.technology:
@@ -9,11 +9,11 @@ helpviewer_keywords:
 - strings [C#], modifying
 author: BillWagner
 ms.author: wiwagn
-ms.openlocfilehash: 830ca207c4cd5bd24dbb667328465cafb2509409
-ms.sourcegitcommit: 83dd5ec003e788ccb3e33f3412a7af39ae347646
+ms.openlocfilehash: 2f193f09458829ec6f358b9330334b68f092ee80
+ms.sourcegitcommit: b750a8e3979749b214e7e10c82efb0a0524dfcb1
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 03/15/2018
+ms.lasthandoff: 04/09/2018
 ---
 # <a name="how-to-modify-string-contents-in-c"></a>如何：在 C# 中修改字串內容 #
 
@@ -74,7 +74,7 @@ ms.lasthandoff: 03/15/2018
 
 [!code-csharp-interactive[unsafe ways to create a new string](../../../samples/snippets/csharp/how-to/strings/ModifyStrings.cs#7)]
 
-您可以查看 [GitHub 存放庫](https://github.com/dotnet/docs/tree/master/samples/snippets/csharp/how-to/strings)中的程式碼，來嘗試這些範例。 或者，您可以將範例下載[為 ZIP 檔案](https://github.com/dotnet/docs/tree/master/samples/snippets/csharp/how-to/strings.zip)。
+您可以查看 [GitHub 存放庫](https://github.com/dotnet/samples/tree/master/snippets/csharp/how-to/strings)中的程式碼，來嘗試這些範例。 或者，您可以將範例下載[為 ZIP 檔案](https://github.com/dotnet/samples/raw/master/snippets/csharp/how-to/strings.zip)。
 
 ## <a name="see-also"></a>另請參閱
 
