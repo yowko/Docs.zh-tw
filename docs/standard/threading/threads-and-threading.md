@@ -1,30 +1,30 @@
 ---
-title: "執行緒和執行緒處理"
-ms.custom: 
+title: 執行緒和執行緒處理
+ms.custom: ''
 ms.date: 03/30/2017
 ms.prod: .net
-ms.reviewer: 
-ms.suite: 
+ms.reviewer: ''
+ms.suite: ''
 ms.technology: dotnet-standard
-ms.tgt_pltfrm: 
+ms.tgt_pltfrm: ''
 ms.topic: article
 helpviewer_keywords:
 - multiple threads
 - threading [.NET Framework]
 - threading [.NET Framework], multiple threads
 ms.assetid: 5baac3aa-e603-4fa6-9f89-0f2c1084e6b1
-caps.latest.revision: 
+caps.latest.revision: 14
 author: rpetrusha
 ms.author: ronpet
 manager: wpickett
 ms.workload:
 - dotnet
 - dotnetcore
-ms.openlocfilehash: 114fb704a622d92ab8e92fa866fa0fc9bebf4e58
-ms.sourcegitcommit: c0dd436f6f8f44dc80dc43b07f6841a00b74b23f
+ms.openlocfilehash: 02c676e3bb6c0dcc9e65858367d13f41adc797e8
+ms.sourcegitcommit: 2e8acae16ae802f2d6d04e3ce0a6dbf04e476513
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 01/19/2018
+ms.lasthandoff: 04/18/2018
 ---
 # <a name="threads-and-threading"></a>執行緒和執行緒處理
 作業系統會使用處理序來分隔它們所執行的各種不同應用程式。 執行緒是作業系統配置處理器時間的基本單位，而在該處理序內可以有多個執行緒執行程式碼。 每個執行緒都保有例外處理常式、排程優先順序，以及系統用來儲存執行緒內容直到執行緒被排定為止的一組結構。 執行緒內容包括執行緒在執行緒主機處理序的位址空間中順暢繼續執行所需的所有資訊，包括執行緒的一組 CPU 暫存器和堆疊。  
@@ -36,7 +36,7 @@ ms.lasthandoff: 01/19/2018
  時間配量的長短取決於作業系統和處理器。 由於每個時間配量都相當小，因此即使只有一個處理器，多個執行緒也會看似同時執行。 這實際上就是多處理器系統上的情況，其中會在可用的處理器之間分配可執行的執行緒。  
   
 ## <a name="when-to-use-multiple-threads"></a>使用多執行緒的時機  
- 軟體如果需要使用者互動，就必須能夠儘快回應使用者的活動，才能提供豐富的使用者體驗。 不過，同時它也必須執行儘快向使用者顯示資料所需的計算。 如果您的應用程式只使用一個執行緒，您可以將[非同步程式設計](../../../docs/standard/asynchronous-programming-patterns/calling-synchronous-methods-asynchronously.md)與 [.NET Framework 遠端處理](http://msdn.microsoft.com/library/eccb1d31-0a22-417a-97fd-f4f1f3aa4462)或使用 ASP.NET 建立的 [XML Web 服務](http://msdn.microsoft.com/library/1e64af78-d705-4384-b08d-591a45f4379c) 結合，以除了您自己電腦的處理時間之外，再利用其他電腦的處理時間，來加快對使用者的回應速度及縮短您應用程式的資料處理時間。 如果您要執行大量輸入/輸出的工作，您也可以使用 I/O 完成連接埠來加快應用程式的回應速度。  
+ 軟體如果需要使用者互動，就必須能夠儘快回應使用者的活動，才能提供豐富的使用者體驗。 不過，同時它也必須執行儘快向使用者顯示資料所需的計算。 如果您的應用程式只使用一個執行緒，您可以將[非同步程式設計](../../../docs/standard/asynchronous-programming-patterns/calling-synchronous-methods-asynchronously.md)與 [.NET Framework 遠端處理](https://msdn.microsoft.com/library/eccb1d31-0a22-417a-97fd-f4f1f3aa4462)或使用 ASP.NET 建立的 [XML Web 服務](https://msdn.microsoft.com/library/1e64af78-d705-4384-b08d-591a45f4379c) 結合，以除了您自己電腦的處理時間之外，再利用其他電腦的處理時間，來加快對使用者的回應速度及縮短您應用程式的資料處理時間。 如果您要執行大量輸入/輸出的工作，您也可以使用 I/O 完成連接埠來加快應用程式的回應速度。  
   
 ### <a name="advantages-of-multiple-threads"></a>多執行緒的優點  
  無論如何，使用多個執行緒都是最強大的可用技術，不僅可加快對使用者的回應速度，還可處理讓作業幾乎同時完成所需的資料。 在有一個處理器的電腦上，多執行緒即可產生此效果，利用使用者事件之間的短暫時間在背景中處理資料。 例如，使用者可以編輯試算表，而同時另一個執行緒則在相同的應用程式內重新計算該試算表的其他部分。  

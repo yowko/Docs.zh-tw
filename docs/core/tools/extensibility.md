@@ -1,7 +1,7 @@
 ---
-title: ".NET Core CLI 擴充性模型"
-description: "了解如何擴充命令列介面 (CLI) 工具。"
-keywords: "CLI, 擴充性, 自訂命令, .NET Core"
+title: .NET Core CLI 擴充性模型
+description: 了解如何擴充命令列介面 (CLI) 工具。
+keywords: CLI, 擴充性, 自訂命令, .NET Core
 author: blackdwarf
 ms.author: mairaw
 ms.date: 04/12/2017
@@ -10,12 +10,13 @@ ms.prod: .net-core
 ms.technology: dotnet-cli
 ms.devlang: dotnet
 ms.assetid: fffc3400-aeb9-4c07-9fea-83bc8dbdcbf3
-ms.workload: dotnetcore
-ms.openlocfilehash: 0d273510903c888f3212a57f4c28b118b73cab5c
-ms.sourcegitcommit: e7f04439d78909229506b56935a1105a4149ff3d
+ms.workload:
+- dotnetcore
+ms.openlocfilehash: 53329c302066891c240a234156c2572acc66e7ab
+ms.sourcegitcommit: 9a4fe1a1c37b26532654b4bbe22d702237950009
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 12/23/2017
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="net-core-cli-tools-extensibility-model"></a>.NET Core CLI 工具擴充性模型
 
@@ -82,8 +83,8 @@ CLI 工具可以透過三種主要方式進行擴充：
 
 這類工具的相依性圖形必須與使用這些工具之專案的相依性圖形完全分開。 還原程序會先還原專案的相依性，接著還原每個工具及其相依性。
 
-您可以在 [.NET Core CLI 存放庫](https://github.com/dotnet/cli/tree/rel/1.0.1/TestAssets/TestProjects)中找到更多範例和這類不同的組合。
-您也可以在相同的存放庫中查看[所使用工具的實作](https://github.com/dotnet/cli/tree/rel/1.0.1/TestAssets/TestPackages)。
+您可以在 [.NET Core CLI 存放庫](https://github.com/dotnet/cli/tree/release/2.1/TestAssets/TestProjects)中找到更多範例和這類不同的組合。
+您也可以在相同的存放庫中查看[所使用工具的實作](https://github.com/dotnet/cli/tree/release/2.1/TestAssets/TestPackages)。
 
 ### <a name="custom-targets"></a>自訂目標
 NuGet 可以[封裝自訂 MSBuild 目標及屬性檔案](/nuget/create-packages/creating-a-package#including-msbuild-props-and-targets-in-a-package)。 隨著 .NET Core CLI 改為使用 MSBuild，相同的擴充機制現在也適用於 .NET Core 專案。 如果您想要擴充建置程序，或想要在建置程序中存取任何成品 (例如產生的檔案或檢查叫用建置的組態等)，可以使用這種類型的擴充性。

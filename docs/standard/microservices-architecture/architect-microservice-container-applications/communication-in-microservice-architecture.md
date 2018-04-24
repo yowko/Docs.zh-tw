@@ -1,7 +1,7 @@
 ---
-title: "微服務架構中的通訊"
-description: "容器化 .NET 應用程式的 .NET 微服務架構 | 微服務架構中的通訊"
-keywords: "Docker, 微服務, ASP.NET, 容器"
+title: 微服務架構中的通訊
+description: 容器化 .NET 應用程式的 .NET 微服務架構 | 微服務架構中的通訊
+keywords: Docker, 微服務, ASP.NET, 容器
 author: CESARDELATORRE
 ms.author: wiwagn
 ms.date: 10/18/2017
@@ -11,11 +11,11 @@ ms.topic: article
 ms.workload:
 - dotnet
 - dotnetcore
-ms.openlocfilehash: 3c80ce8e3c4ccdc7e53634f54dd998581758ab07
-ms.sourcegitcommit: cec0525b2121c36198379525e69aa5388266db5b
+ms.openlocfilehash: 6bf4de57d3431577e6c770a5a83b911f41e5a4fe
+ms.sourcegitcommit: 2e8acae16ae802f2d6d04e3ce0a6dbf04e476513
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 02/23/2018
+ms.lasthandoff: 04/18/2018
 ---
 # <a name="communication-in-a-microservice-architecture"></a>微服務架構中的通訊
 
@@ -25,7 +25,7 @@ ms.lasthandoff: 02/23/2018
 
 微服務應用程式是一種分散式系統，其執行於多個處理序或服務上，通常甚至跨多部伺服器或主機。 每個服務執行個體通常就是一個處理序。 因此，服務必須使用處理序間的通訊協定來互動，例如 HTTP、AMQP 或 TCP 這類二進位通訊協定 (根據每個服務的本質而定)。
 
-微服務社群推廣一種 [Smart Endpoints and Dumb Pipes](http://simplicable.com/new/smart-endpoints-and-dumb-pipes) (智慧端點和傻瓜管道) 的哲學。 此標語主要是鼓勵「高內聚、低結合」的設計；亦即盡量分離微服務，並使其在單一的微服務內盡可能地縝密結合。 如前所述，每個微服務擁有它自己的資料和網域邏輯。 但一般來說，由端對端應用程式組成的微服務是單純使用 REST 通訊 (而不是 WS-\* 這類複雜通訊協定) 與彈性的事件驅動通訊 (而不是集中式的商務程序協調器) 來編寫。
+微服務社群推廣一種 [Smart Endpoints and Dumb Pipes](https://simplicable.com/new/smart-endpoints-and-dumb-pipes) (智慧端點和傻瓜管道) 的哲學。 此標語主要是鼓勵「高內聚、低結合」的設計；亦即盡量分離微服務，並使其在單一的微服務內盡可能地縝密結合。 如前所述，每個微服務擁有它自己的資料和網域邏輯。 但一般來說，由端對端應用程式組成的微服務是單純使用 REST 通訊 (而不是 WS-\* 這類複雜通訊協定) 與彈性的事件驅動通訊 (而不是集中式的商務程序協調器) 來編寫。
 
 兩個最常用的通訊協定是資源 API 的 HTTP 要求/回應 (當查詢是最重要的作業時)，以及跨多個微服務通訊更新時的輕量型非同步傳訊。 下列各節會進行詳細說明。
 
@@ -43,7 +43,7 @@ ms.lasthandoff: 02/23/2018
 
 -   單一接收者： 每個要求都必須由一個接收者或服務來處理。 這種通訊的其中一個範例是 [Command pattern](https://en.wikipedia.org/wiki/Command_pattern) (命令模式)。
 
--   多個接收者： 每個要求可以由零到多個接收者來處理。 這種類型的通訊必須是非同步的。 其中的範例是用於[事件驅動架構](http://microservices.io/patterns/data/event-driven-architecture.html)這類模式的[發佈/訂閱](https://en.wikipedia.org/wiki/Publish%E2%80%93subscribe_pattern)機制。 這是以透過事件在多個微服務之間散佈資料更新時的事件匯流排介面或訊息代理程式為基礎；通常您可以使用[主題和訂閱](https://docs.microsoft.com/azure/service-bus-messaging/service-bus-dotnet-how-to-use-topics-subscriptions)，並透過服務匯流排或類似 [Azure 服務匯流排](https://azure.microsoft.com/services/service-bus/)的構件來實作。
+-   多個接收者： 每個要求可以由零到多個接收者來處理。 這種類型的通訊必須是非同步的。 其中的範例是用於[事件驅動架構](https://microservices.io/patterns/data/event-driven-architecture.html)這類模式的[發佈/訂閱](https://en.wikipedia.org/wiki/Publish%E2%80%93subscribe_pattern)機制。 這是以透過事件在多個微服務之間散佈資料更新時的事件匯流排介面或訊息代理程式為基礎；通常您可以使用[主題和訂閱](https://docs.microsoft.com/azure/service-bus-messaging/service-bus-dotnet-how-to-use-topics-subscriptions)，並透過服務匯流排或類似 [Azure 服務匯流排](https://azure.microsoft.com/services/service-bus/)的構件來實作。
 
 微服務應用程式通常會使用這些通訊樣式的組合。 叫用一般 Web API HTTP 服務時，最常見的類型是使用 HTTP/HTTPS 等同步通訊協定的單一接收者通訊。 微服務通常也會使用傳訊通訊協定，來進行微服務之間的非同步通訊。
 
@@ -91,15 +91,15 @@ ms.lasthandoff: 02/23/2018
 
 要求/回應通訊的熱門架構樣式是 [REST](https://en.wikipedia.org/wiki/Representational_state_transfer)。 這種方法是以 [HTTP](https://en.wikipedia.org/wiki/Hypertext_Transfer_Protocol) 通訊協定為基礎並與其緊密結合，同時採用 HTTP 動詞命令，例如 GET、POST 和 PUT。 建立服務時，REST 是最常用的架構通訊方法。 開發 ASP.NET Core Web API 服務時，您可以實作 REST 服務。
 
-將 HTTP REST 服務作為您的介面定義語言時，還有其他附加價值。 比方說，如果您使用 [Swagger 中繼資料](http://swagger.io/)來描述服務 API，即可使用工具來產生用戶端 Stub，以直接探索及取用您的服務。
+將 HTTP REST 服務作為您的介面定義語言時，還有其他附加價值。 比方說，如果您使用 [Swagger 中繼資料](https://swagger.io/)來描述服務 API，即可使用工具來產生用戶端 Stub，以直接探索及取用您的服務。
 
 ### <a name="additional-resources"></a>其他資源
 
 -   **Martin Fowler：Richardson 成熟度模型：** REST 模型的描述。
-    [*http://martinfowler.com/articles/richardsonMaturityModel.html*](http://martinfowler.com/articles/richardsonMaturityModel.html)
+    [*https://martinfowler.com/articles/richardsonMaturityModel.html*](https://martinfowler.com/articles/richardsonMaturityModel.html)
 
 -   **Swagger：** 官方網站。
-    [*http://swagger.io/*](http://swagger.io/)
+    [*https://swagger.io/*](https://swagger.io/)
 
 ### <a name="push-and-real-time-communication-based-on-http"></a>以 HTTP 為基礎的推送和即時通訊
 

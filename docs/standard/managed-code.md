@@ -1,6 +1,6 @@
 ---
-title: "什麼是 Managed 程式碼？"
-description: "了解 Managed 程式碼的撰寫方式，其執行是由執行階段 Common Language Runtime (CLR) 所管理。"
+title: 什麼是 Managed 程式碼？
+description: 了解 Managed 程式碼的撰寫方式，其執行是由執行階段 Common Language Runtime (CLR) 所管理。
 keywords: .NET, .NET Core
 author: blackdwarf
 ms.author: mairaw
@@ -13,17 +13,17 @@ ms.assetid: 20bb7ea8-192e-4a96-8ef3-e10e1950fd3d
 ms.workload:
 - dotnet
 - dotnetcore
-ms.openlocfilehash: ca2ae076229a1726d3a25a84e358f9cfb623a297
-ms.sourcegitcommit: e7f04439d78909229506b56935a1105a4149ff3d
+ms.openlocfilehash: 46bbe30f216ba9b0a3bc7f88267c428ec56de614
+ms.sourcegitcommit: 2e8acae16ae802f2d6d04e3ce0a6dbf04e476513
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 12/23/2017
+ms.lasthandoff: 04/18/2018
 ---
 # <a name="what-is-managed-code"></a>什麼是 Managed 程式碼？
 
 使用 .NET Framework 時，您經常會遇到「Managed 程式碼」一詞。 本文件將說明此詞彙所代表的意義及其他相關資訊。
 
-簡單來說，Managed 程式碼就是其執行受到執行階段管理的程式碼。 在此情況下，不論實作為何 ([Mono](http://www.mono-project.com/)、.NET Framework 或 .NET Core)，所提到的執行階段都稱為 **Common Language Runtime** 或 CLR。 CLR 負責將 Managed 程式碼編譯成機器碼，再加以執行。 此外，執行階段提供幾項重要服務，例如自動記憶體管理、安全性界限、型別安全等。
+簡單來說，Managed 程式碼就是其執行受到執行階段管理的程式碼。 在此情況下，不論實作為何 ([Mono](https://www.mono-project.com/)、.NET Framework 或 .NET Core)，所提到的執行階段都稱為 **Common Language Runtime** 或 CLR。 CLR 負責將 Managed 程式碼編譯成機器碼，再加以執行。 此外，執行階段提供幾項重要服務，例如自動記憶體管理、安全性界限、型別安全等。
 
 與此相反的是您執行 C/C++ 程式的方式，又稱為「Unmanaged 程式碼」。 在 Unmanaged 世界中，程式設計人員會負責處理幾乎所有工作。 實際程式基本上是作業系統 (OS) 載入記憶體並啟動的二進位檔。 從記憶體管理到安全性考量等其他工作都是程式設計人員的責任。
 

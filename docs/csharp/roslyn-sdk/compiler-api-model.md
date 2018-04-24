@@ -1,6 +1,6 @@
 ---
-title: ".NET Compiler Platform SDK 概念和物件模型"
-description: "這個概觀提供有效率地使用 .NET 編譯器 SDK 所需的背景。 您將學習 API 層、所含的主要類型和整體物件模型。"
+title: .NET Compiler Platform SDK 概念和物件模型
+description: 這個概觀提供有效率地使用 .NET 編譯器 SDK 所需的背景。 您將學習 API 層、所含的主要類型和整體物件模型。
 author: billwagner
 ms.author: wiwagn
 ms.date: 10/10/2017
@@ -8,11 +8,11 @@ ms.topic: conceptual
 ms.prod: .net
 ms.devlang: devlang-csharp
 ms.custom: mvc
-ms.openlocfilehash: d230d334eba4e438635a4c70e8c1b5fc5075b065
-ms.sourcegitcommit: 83dd5ec003e788ccb3e33f3412a7af39ae347646
+ms.openlocfilehash: 17a7884518f71d7df1f4a9fe8c91da87d7335e0d
+ms.sourcegitcommit: b750a8e3979749b214e7e10c82efb0a0524dfcb1
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 03/15/2018
+ms.lasthandoff: 04/09/2018
 ---
 # <a name="understand-the-net-compiler-platform-sdk-model"></a>了解 .NET Compiler Platform SDK 模型
 
@@ -22,15 +22,15 @@ ms.lasthandoff: 03/15/2018
 
 .NET Compiler Platform SDK 透過提供可鏡像傳統編譯器管線的 API 層，以將 C# 和 Visual Basic 編譯器的程式碼分析公開為取用者。
 
-![編譯器管線將原始程式碼處理為物件程式碼的步驟](media/compiler-pipeline.png)
+![編譯器管線將原始程式碼處理為物件程式碼的步驟](media/compiler-api-model/compiler-pipeline.png)
 
 此管線的每個階段都是個別元件。 首先，剖析階段會權杖化，並將原始程式文字剖析為遵循語言文法的語法。 其次，宣告階段會分析來源及匯入的中繼資料，以形成具名符號。 接下來，繫結階段會比對程式碼中的識別碼與符號。 最後，發出階段會發出具有編譯器所建置之所有資訊的組件。
 
-![編譯器管線 API 可存取屬於編譯器管線一部分的每個步驟](media/compiler-pipeline-api.png)
+![編譯器管線 API 可存取屬於編譯器管線一部分的每個步驟](media/compiler-api-model/compiler-pipeline-api.png)
 
 對應至所有這些階段，.NET Compiler Platform SDK 會公開物件模型，以允許存取該階段的資訊。 剖析階段會公開語法樹狀結構、宣告階段會公開階層式符號表、繫結階段會公開編譯器語意分析的結果，而發出階段是產生 IL 位元組碼的 API。
 
-![編譯器管線各步驟可從編譯器 API 使用的語言服務](media/compiler-pipeline-lang-svc.png)
+![編譯器管線各步驟可從編譯器 API 使用的語言服務](media/compiler-api-model/compiler-pipeline-lang-svc.png)
 
 每個編譯器都會將這些元件一起合併為單一端對端整體。
 
@@ -40,7 +40,7 @@ ms.lasthandoff: 03/15/2018
 
 .NET 編譯器 SDK 包含兩個主要 API 層：編譯器 API 和工作區 API。
 
-![編譯器管線 API 所代表的 API 層](media/api-layers.png)
+![編譯器管線 API 所代表的 API 層](media/compiler-api-model/api-layers.png)
 
 ### <a name="compiler-apis"></a>編譯器 API
 

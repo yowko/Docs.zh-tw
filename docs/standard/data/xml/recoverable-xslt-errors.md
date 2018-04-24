@@ -1,26 +1,26 @@
 ---
-title: "可復原的 XSLT 錯誤"
-ms.custom: 
+title: 可復原的 XSLT 錯誤
+ms.custom: ''
 ms.date: 03/30/2017
 ms.prod: .net
-ms.reviewer: 
-ms.suite: 
+ms.reviewer: ''
+ms.suite: ''
 ms.technology: dotnet-standard
-ms.tgt_pltfrm: 
+ms.tgt_pltfrm: ''
 ms.topic: article
 ms.assetid: 484929b0-fefb-4629-87ee-ebdde70ff1f8
-caps.latest.revision: 
+caps.latest.revision: 2
 author: mairaw
 ms.author: mairaw
 manager: wpickett
 ms.workload:
 - dotnet
 - dotnetcore
-ms.openlocfilehash: 4564530cd173793519471c78105d0394595f6d5c
-ms.sourcegitcommit: 91691981897cf8451033cb01071d8f5d94017f97
+ms.openlocfilehash: 70491e86697356766b64a98201b2969883ab7ee4
+ms.sourcegitcommit: 2e8acae16ae802f2d6d04e3ce0a6dbf04e476513
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 01/09/2018
+ms.lasthandoff: 04/18/2018
 ---
 # <a name="recoverable-xslt-errors"></a>可復原的 XSLT 錯誤
 ＜W3C XSL 轉換 (XSLT) 1.0 版建議事項＞中所包含的領域，可告訴實作提供者該採取哪些決策來處理哪種狀況。 這些領域視為 Discretionary 行為。 例如，在 7.3 節＜建立處理指示＞中，XSLT 1.0 版建議事項指出如果具現化 `xsl:processing-instruction` 的內容會建立非文字節點的節點，就會產生錯誤。 針對某些問題，XSLT 1.0 版建議事項中會指出在處理器決定從錯誤復原時要採取的決策。 針對 7.3 節中的問題，W3C 指出只要忽略節點及其內容，實作即可從這項錯誤中復原。  
@@ -32,7 +32,7 @@ ms.lasthandoff: 01/09/2018
   
 -   「錯誤」表示引發此情況的例外狀況。  
   
--   您可以在 [W3C XSL 轉換 (XSLT) 1.0 版建議事項](http://www.w3.org/TR/xslt) (英文) 和 [W3C XSL 轉換 (XSLT) 1.0 版規格錯誤](http://www.w3.org/1999/11/REC-xslt-19991116-errata/) (英文) 中找到章節參考資料。  
+-   您可以在 [W3C XSL 轉換 (XSLT) 1.0 版建議事項](http://www.w3.org/TR/xslt) (英文) 和 [W3C XSL 轉換 (XSLT) 1.0 版規格錯誤](https://www.w3.org/1999/11/REC-xslt-19991116-errata/) (英文) 中找到章節參考資料。  
   
 |XSLT 條件|區段|XslCompiledTransform 行為|  
 |--------------------|-------------|-----------------------------------|  

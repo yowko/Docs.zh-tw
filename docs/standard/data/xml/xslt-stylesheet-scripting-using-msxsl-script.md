@@ -1,29 +1,29 @@
 ---
-title: "使用 &lt;msxsl:script&gt; 的 XSLT 樣式表指令碼"
-ms.custom: 
+title: 使用 &lt;msxsl:script&gt; 的 XSLT 樣式表指令碼
+ms.custom: ''
 ms.date: 03/30/2017
 ms.prod: .net
-ms.reviewer: 
-ms.suite: 
+ms.reviewer: ''
+ms.suite: ''
 ms.technology: dotnet-standard
-ms.tgt_pltfrm: 
+ms.tgt_pltfrm: ''
 ms.topic: article
 dev_langs:
 - csharp
 - vb
 ms.assetid: 60e2541b-0cea-4b2e-a4fa-85f4c50f1bef
-caps.latest.revision: 
+caps.latest.revision: 4
 author: mairaw
 ms.author: mairaw
 manager: wpickett
 ms.workload:
 - dotnet
 - dotnetcore
-ms.openlocfilehash: f9e7ceb40167d970b1886aec17b93f4bcf08f631
-ms.sourcegitcommit: c0dd436f6f8f44dc80dc43b07f6841a00b74b23f
+ms.openlocfilehash: 01d4271eb5795e3760d289842bdfbdfa11c883fd
+ms.sourcegitcommit: 2e8acae16ae802f2d6d04e3ce0a6dbf04e476513
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 01/19/2018
+ms.lasthandoff: 04/18/2018
 ---
 # <a name="xslt-stylesheet-scripting-using-ltmsxslscriptgt"></a>使用 &lt;msxsl:script&gt; 的 XSLT 樣式表指令碼
 <xref:System.Xml.Xsl.XslTransform> 類別支援使用 `script` 項目的內嵌指令碼。  
@@ -55,7 +55,7 @@ ms.lasthandoff: 01/19/2018
   
  若要從組件中取得辨識項，請使用 `this.GetType().Assembly.Evidence`。 若要從統一資源識別元 (URI) 取得辨識項，請使用 `Evidence e = XmlSecureResolver.CreateEvidenceForUrl(stylesheetURI)`。  
   
- 如果使用的是採用 <xref:System.Xml.Xsl.XslTransform.Load%2A> 但不含 <xref:System.Xml.XmlResolver> 的 `Evidence` 方法，則組件的安全性區域會預設為「完全信任」。 如需詳細資訊，請參閱 <xref:System.Security.SecurityZone> 和[具名使用權限集合](http://msdn.microsoft.com/library/08250d67-c99d-4ab0-8d2b-b0e12019f6e3)。  
+ 如果使用的是採用 <xref:System.Xml.Xsl.XslTransform.Load%2A> 但不含 <xref:System.Xml.XmlResolver> 的 `Evidence` 方法，則組件的安全性區域會預設為「完全信任」。 如需詳細資訊，請參閱 <xref:System.Security.SecurityZone> 和[具名使用權限集合](https://msdn.microsoft.com/library/08250d67-c99d-4ab0-8d2b-b0e12019f6e3)。  
   
  函式可在 `msxsl:script` 項目內進行宣告。 下表顯示根據預設所支援的命名空間。 您可以使用所列之命名空間以外的類別。 不過這些類別必須是完整限定。  
   

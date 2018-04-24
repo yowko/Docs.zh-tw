@@ -1,7 +1,7 @@
 ---
-title: "使用 Entity Framework Core 實作基礎結構持續層"
-description: "容器化 .NET 應用程式的 .NET 微服務架構 | 使用 Entity Framework Core 實作基礎結構持續層"
-keywords: "Docker, 微服務, ASP.NET, 容器"
+title: 使用 Entity Framework Core 實作基礎結構持續層
+description: 容器化 .NET 應用程式的 .NET 微服務架構 | 使用 Entity Framework Core 實作基礎結構持續層
+keywords: Docker, 微服務, ASP.NET, 容器
 author: CESARDELATORRE
 ms.author: wiwagn
 ms.date: 12/12/2017
@@ -11,11 +11,11 @@ ms.topic: article
 ms.workload:
 - dotnet
 - dotnetcore
-ms.openlocfilehash: 4acdbde6405af7eb78a8c605562fdb1795fedf4d
-ms.sourcegitcommit: 83dd5ec003e788ccb3e33f3412a7af39ae347646
+ms.openlocfilehash: 49bd528db50397ea896b7251ea60d18b90fea30c
+ms.sourcegitcommit: 2e8acae16ae802f2d6d04e3ce0a6dbf04e476513
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 03/15/2018
+ms.lasthandoff: 04/18/2018
 ---
 # <a name="implementing-the-infrastructure-persistence-layer-with-entity-framework-core"></a>使用 Entity Framework Core 實作基礎結構持續層
 
@@ -342,7 +342,7 @@ Hi/Lo 演算法描述用來在用戶端而非在資料庫中產生安全識別�
 
 -   它會產生人類可閱讀的識別碼，而不像使用 GUID 的技術。
 
-EF Core 以 ForSqlServerUseSequenceHiLo 方法支援 [HiLo](http://stackoverflow.com/questions/282099/whats-the-hi-lo-algorithm)，如上述範例所示。
+EF Core 以 ForSqlServerUseSequenceHiLo 方法支援 [HiLo](https://stackoverflow.com/questions/282099/whats-the-hi-lo-algorithm)，如上述範例所示。
 
 ### <a name="mapping-fields-instead-of-properties"></a>對應欄位，而不是對應屬性
 
@@ -467,7 +467,7 @@ public IEnumerable<T> List(ISpecification<T> spec)
     [*https://docs.microsoft.com/ef/core/modeling/backing-field*](https://docs.microsoft.com/ef/core/modeling/backing-field)
 
 -   **Steve Smith.Entity Framework Core 中的封裝式集合**
-    [*http://ardalis.com/encapsulated-collections-in-entity-framework-core*](http://ardalis.com/encapsulated-collections-in-entity-framework-core)
+    [*https://ardalis.com/encapsulated-collections-in-entity-framework-core*](https://ardalis.com/encapsulated-collections-in-entity-framework-core)
 
 -   **陰影屬性**
     [*https://docs.microsoft.com/ef/core/modeling/shadow-properties*](https://docs.microsoft.com/ef/core/modeling/shadow-properties)

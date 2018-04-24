@@ -1,7 +1,7 @@
 ---
-title: "識別每個微服務的領域模型界限"
-description: "容器化 .NET 應用程式的 .NET 微服務架構 | 識別每個微服務的領域模型界限"
-keywords: "Docker, 微服務, ASP.NET, 容器"
+title: 識別每個微服務的領域模型界限
+description: 容器化 .NET 應用程式的 .NET 微服務架構 | 識別每個微服務的領域模型界限
+keywords: Docker, 微服務, ASP.NET, 容器
 author: CESARDELATORRE
 ms.author: wiwagn
 ms.date: 05/26/2017
@@ -11,17 +11,17 @@ ms.topic: article
 ms.workload:
 - dotnet
 - dotnetcore
-ms.openlocfilehash: 830dd48a420a462842de57e436323a5a930c195d
-ms.sourcegitcommit: e7f04439d78909229506b56935a1105a4149ff3d
+ms.openlocfilehash: 23b5ebafc5ea037568f168426d76b3ec9839040e
+ms.sourcegitcommit: 2e8acae16ae802f2d6d04e3ce0a6dbf04e476513
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 12/23/2017
+ms.lasthandoff: 04/18/2018
 ---
 # <a name="identify-domain-model-boundaries-for-each-microservice"></a>識別每個微服務的領域模型界限
 
 識別每個微服務的模型界限和大小時，其目標不是為了取得可能最細微的分離，不過您應該盡可能傾向小型微服務。 相反地，您的目標應該是在您的領域知識引導下取得最有意義的分離。 重點不是大小，而是商務功能。 此外，如果以大量相依性為基礎的應用程式有某部分需要明確內聚，這也表示需要單一微服務。 內聚是指定如何將微服務分開或群組在一起的方式。 基本上，當您取得更多有關領域的知識時，您應該反覆地調整微服務的大小。 您不會一次就找到正確的大小。
 
-[Sam Newman](http://samnewman.io/) 是公認的微服務推動者，也是 [Building Microservices](http://samnewman.io/books/building_microservices/) 一書的作者，他強調您應該根據稍早所介紹的限定內容 (Bounded Context，BC) 模式 (領域導向設計的一部分)，來設計您的微服務。 有時候，BC 可能是由數個實體服務所組成，但反之則不亦然。
+[Sam Newman](https://samnewman.io/) 是公認的微服務推動者，也是 [Building Microservices](https://samnewman.io/books/building_microservices/) 一書的作者，他強調您應該根據稍早所介紹的限定內容 (Bounded Context，BC) 模式 (領域導向設計的一部分)，來設計您的微服務。 有時候，BC 可能是由數個實體服務所組成，但反之則不亦然。
 
 具有特定領域實體的領域模型會在實體 BC 或微服務內套用。 BC 會界定領域模型的適用性，讓開發人員小組成員對於哪些項目必須內聚、哪些項目可以獨立開發有清楚的共識。 所有微服務都有這些相同目標。
 

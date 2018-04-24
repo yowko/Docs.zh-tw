@@ -10,11 +10,11 @@ ms.technology: dotnet-standard
 ms.workload:
 - dotnet
 - dotnetcore
-ms.openlocfilehash: 8a17d4c36d9c1942166b9ad889103a7942f1813d
-ms.sourcegitcommit: 96cc82cac4650adfb65ba351506d8a8fbcd17b5c
+ms.openlocfilehash: 51e6779d63cdaccc5633c9e81f97471d71099653
+ms.sourcegitcommit: 2e8acae16ae802f2d6d04e3ce0a6dbf04e476513
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 02/19/2018
+ms.lasthandoff: 04/18/2018
 ---
 # <a name="net-architectural-components"></a>.NET 架構元件
 
@@ -22,7 +22,7 @@ ms.lasthandoff: 02/19/2018
 
 ## <a name="net-standard"></a>.NET Standard
 
-.NET Standard 是一組 API，由 .NET 實作的基底類別庫所實作。 正式地說，它是構成制式協定的 .NET API 規格，讓您據以編譯程式碼。 各個 .NET 實作中都會實作這些協定。 這會啟用不同 .NET 實作間的可攜性，讓您的程式碼在任何地方都能有效執行。
+.NET Standard 是一組 API，由 .NET 實作的基底類別庫所實作。 正式地說，它是構成制式協定的 .NET API 規格，讓您據以編譯程式碼。 各個 .NET 實作中都會實作這些協定。 這會跨不同的 .NET 實作啟用可攜性，以有效地讓您的程式碼在任何地方執行。
 
 .NET Standard 也是[目標 Framework](glossary.md#target-framework)。 如果您的程式碼以某個 .NET Standard 版本為目標，就可以在支援該版 .NET Standard 的任何 .NET 實作上執行。
 
@@ -61,7 +61,7 @@ Mono 是需要小型執行階段時主要使用的 .NET 實作。 它是支援 A
 
 Mono 通常可搭配 Just-In-Time 編譯器使用，但也提供適用於 iOS 等平台的完整靜態編譯器 (預先編譯)。
 
-若要深入了解 Mono，請參閱 [Mono 文件](http://www.mono-project.com/docs/)。
+若要深入了解 Mono，請參閱 [Mono 文件](https://www.mono-project.com/docs/)。
 
 ### <a name="universal-windows-platform-uwp"></a>通用 Windows 平台 (UWP)
 
@@ -86,7 +86,7 @@ UWP 是用於建置適用於物聯網 (IoT) 之現代化觸控式 Windows 應用
 - .NET 專案系統 (以 *.csproj*、*.vbproj* 和 *.fsproj* 檔案為基礎)
 - [MSBuild](/visualstudio/msbuild/msbuild)，用來建置專案的建置引擎
 - [NuGet](/nuget/)，適用於 .NET 的 Microsoft 套件管理員
-- 開放原始碼建置協調流程工具，例如 [CAKE](http://cakebuild.net/) 和 [FAKE](https://fake.build/)
+- 開放原始碼建置協調流程工具，例如 [CAKE](https://cakebuild.net/) 和 [FAKE](https://fake.build/)
 
 ## <a name="see-also"></a>另請參閱
 [為伺服器應用程式選擇 .NET Core 或 .NET Framework](choosing-core-framework-server.md)   

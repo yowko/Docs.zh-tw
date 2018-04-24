@@ -13,15 +13,15 @@ ms.assetid: a67484c3-fe92-44d8-8fa3-36fa2071d880
 ms.workload:
 - dotnet
 - dotnetcore
-ms.openlocfilehash: 8f7c421d2490678f7122e78bc0b83ebf3a1aa9ea
-ms.sourcegitcommit: 15316053918995cc1380163a7d7e7edd5c44e6d7
+ms.openlocfilehash: 44d5745daed8539c5dd48b08f9f73edce4da939f
+ms.sourcegitcommit: 2e8acae16ae802f2d6d04e3ce0a6dbf04e476513
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 03/19/2018
+ms.lasthandoff: 04/18/2018
 ---
 # <a name="net-class-libraries"></a>.NET 類別庫
 
-類別庫是 .NET 的[共用程式庫](http://en.wikipedia.org/wiki/Library_%28computing%29#Shared_libraries)概念。 它們可讓您將有用的功能設為可供多個應用程式使用的模組中的元件。 它們也可以作為一種方法，來載入應用程式啟動時不需要或未知的功能。 類別庫是使用 [.NET 組件檔案格式](assembly-format.md)進行描述。
+類別庫是 .NET 的[共用程式庫](https://en.wikipedia.org/wiki/Library_%28computing%29#Shared_libraries)概念。 它們可讓您將有用的功能設為可供多個應用程式使用的模組中的元件。 它們也可以作為一種方法，來載入應用程式啟動時不需要或未知的功能。 類別庫是使用 [.NET 組件檔案格式](assembly-format.md)進行描述。
 
 您可以使用三種類型的類別庫：
 
@@ -43,7 +43,7 @@ ms.lasthandoff: 03/19/2018
 
 當您建立可攜式程式庫時，可以選擇平台組態。 這些是您需要支援的一組平台 (例如，.NET Framework 4.5+、Windows Phone 8.0+)。 您選擇的平台越多，可以進行的 API 和平台假設就越少 (即最小公分母)。 這項特性一開始可能會混淆，因為人們通常認為「越多越好」，但會發現支援的平台越多會導致可用的 API 越少。
 
-許多程式庫開發人員已從透過一個來源產生多個平台特定程式庫 (使用條件式編譯指示詞) 切換到可攜式程式庫。 有[數種方式](http://blog.stephencleary.com/2012/11/portable-class-library-enlightenment.html)，可以使用目前最廣泛接受的 [bait-and-switch](http://log.paulbetts.org/the-bait-and-switch-pcl-trick/) 技術來存取可攜式程式庫內的平台特定功能。
+許多程式庫開發人員已從透過一個來源產生多個平台特定程式庫 (使用條件式編譯指示詞) 切換到可攜式程式庫。 有[數種方式](https://blog.stephencleary.com/2012/11/portable-class-library-enlightenment.html)，可以使用目前最廣泛接受的 [bait-and-switch](https://log.paulbetts.org/the-bait-and-switch-pcl-trick/) 技術來存取可攜式程式庫內的平台特定功能。
 
 ### <a name="net-standard-class-libraries"></a>.NET Standard 類別庫
 
@@ -55,7 +55,7 @@ ms.lasthandoff: 03/19/2018
 
 下列平台支援 .NET Standard 類別庫：
 
-* .NET 核心
+* .NET Core
 * .NET Framework
 * Mono
 * Xamarin.iOS, Xamarin.Mac, Xamarin.Android

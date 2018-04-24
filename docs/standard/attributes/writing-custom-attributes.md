@@ -1,12 +1,12 @@
 ---
-title: "撰寫自訂屬性"
-ms.custom: 
+title: 撰寫自訂屬性
+ms.custom: ''
 ms.date: 03/30/2017
 ms.prod: .net
-ms.reviewer: 
-ms.suite: 
+ms.reviewer: ''
+ms.suite: ''
 ms.technology: dotnet-standard
-ms.tgt_pltfrm: 
+ms.tgt_pltfrm: ''
 ms.topic: article
 dev_langs:
 - csharp
@@ -22,18 +22,18 @@ helpviewer_keywords:
 - Inherited property
 - attribute classes, declaring
 ms.assetid: 97216f69-bde8-49fd-ac40-f18c500ef5dc
-caps.latest.revision: 
+caps.latest.revision: 14
 author: rpetrusha
 ms.author: ronpet
 manager: wpickett
 ms.workload:
 - dotnet
 - dotnetcore
-ms.openlocfilehash: d3fb814d6b458de90d684a3ac92e22a62e290a9a
-ms.sourcegitcommit: e7f04439d78909229506b56935a1105a4149ff3d
+ms.openlocfilehash: b38aa643453d9ad853d0d17af0f1ddf2ba69d4a1
+ms.sourcegitcommit: 2e8acae16ae802f2d6d04e3ce0a6dbf04e476513
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 12/23/2017
+ms.lasthandoff: 04/18/2018
 ---
 # <a name="writing-custom-attributes"></a>撰寫自訂屬性
 若要設計您自己的自訂屬性，並不需要精通很多新概念。 假如您擅長物件導向的程式設計，且瞭解如何設計類別，那麼您就已經擁有大部分所需的知識。 自訂屬性基本上是一種直接或間接衍生自 <xref:System.Attribute?displayProperty=nameWithType> 的傳統類別。 自訂屬性就像傳統類別一樣，含有儲存和擷取資料的方法。  
@@ -134,7 +134,7 @@ ms.lasthandoff: 12/23/2017
  [!code-csharp[Conceptual.Attributes.Usage#15](../../../samples/snippets/csharp/VS_Snippets_CLR/conceptual.attributes.usage/cs/source2.cs#15)]
  [!code-vb[Conceptual.Attributes.Usage#15](../../../samples/snippets/visualbasic/VS_Snippets_CLR/conceptual.attributes.usage/vb/source2.vb#15)]  
   
- 您可以多載建構函式以容納不同的值組合。 如果您也為自訂的屬性類別定義 [屬性](http://msdn.microsoft.com/library/8f1a1ff1-0f05-40e0-bfdf-80de8fff7d52) ，您可以在初始化屬性時使用具名和位置參數的組合。 通常您會將所有必要的參數定義為位置，而所有選擇性參數則定義為名稱。 在此情況下，屬性沒有必要的參數就無法初始化。 所有其他參數皆為選擇性使用。 請注意在 Visual Basic 中，屬性類別的建構函式不應使用 ParamArray 引數。  
+ 您可以多載建構函式以容納不同的值組合。 如果您也為自訂的屬性類別定義 [屬性](https://msdn.microsoft.com/library/8f1a1ff1-0f05-40e0-bfdf-80de8fff7d52) ，您可以在初始化屬性時使用具名和位置參數的組合。 通常您會將所有必要的參數定義為位置，而所有選擇性參數則定義為名稱。 在此情況下，屬性沒有必要的參數就無法初始化。 所有其他參數皆為選擇性使用。 請注意在 Visual Basic 中，屬性類別的建構函式不應使用 ParamArray 引數。  
   
  下列程式碼範例示範如何使用選擇性和必要的參數，來套用使用先前建構函示的屬性。 這項作業會假設屬性有一個必要的布林值和一個選擇性的字串屬性。  
   
@@ -144,7 +144,7 @@ ms.lasthandoff: 12/23/2017
   
 <a name="cpcondeclaringproperties"></a>   
 ## <a name="declaring-properties"></a>宣告屬性  
- 如果您想要定義具名的參數或提供簡單的方式，來傳回屬性所儲存的值，請宣告 [屬性](http://msdn.microsoft.com/library/8f1a1ff1-0f05-40e0-bfdf-80de8fff7d52)。 屬性的屬性應該宣告為公用實體，並具有將傳回之資料類型的描述。 定義會保存您屬性值的變數，並將其與 **get** 和 **set** 方法建立關聯。 下列程式碼範例示範如何在您的屬性中實作簡單的屬性。  
+ 如果您想要定義具名的參數或提供簡單的方式，來傳回屬性所儲存的值，請宣告 [屬性](https://msdn.microsoft.com/library/8f1a1ff1-0f05-40e0-bfdf-80de8fff7d52)。 屬性的屬性應該宣告為公用實體，並具有將傳回之資料類型的描述。 定義會保存您屬性值的變數，並將其與 **get** 和 **set** 方法建立關聯。 下列程式碼範例示範如何在您的屬性中實作簡單的屬性。  
   
  [!code-cpp[Conceptual.Attributes.Usage#16](../../../samples/snippets/cpp/VS_Snippets_CLR/conceptual.attributes.usage/cpp/source2.cpp#16)]
  [!code-csharp[Conceptual.Attributes.Usage#16](../../../samples/snippets/csharp/VS_Snippets_CLR/conceptual.attributes.usage/cs/source2.cs#16)]

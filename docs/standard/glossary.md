@@ -12,11 +12,11 @@ ms.devlang: dotnet
 ms.workload:
 - dotnet
 - dotnetcore
-ms.openlocfilehash: 33123732514a53574036f6f8e948b2cf9acb9229
-ms.sourcegitcommit: c883637b41ee028786edceece4fa872939d2e64c
-ms.translationtype: MT
+ms.openlocfilehash: 7e9732fb6eaef240d08449635697ba6b8ad9c510
+ms.sourcegitcommit: 2e8acae16ae802f2d6d04e3ce0a6dbf04e476513
+ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 03/26/2018
+ms.lasthandoff: 04/18/2018
 ---
 # <a name="net-glossary"></a>.NET 字彙表
 
@@ -150,7 +150,7 @@ Mono 是需要小型執行階段時主要使用的 .NET 實作。 它是支援 A
 
 Mono 通常可搭配 Just-In-Time 編譯器使用，但也提供適用於 iOS 等平台的完整靜態編譯器 (預先編譯)。
 
-若要深入了解 Mono，請參閱 [Mono 文件](http://www.mono-project.com/docs/)。
+若要深入了解 Mono，請參閱 [Mono 文件](https://www.mono-project.com/docs/)。
 
 ## <a name="net"></a>.NET
 
@@ -158,7 +158,7 @@ Mono 通常可搭配 Just-In-Time 編譯器使用，但也提供適用於 iOS �
 
 請參閱 [.NET 指南](index.md)
 
-## <a name="net-core"></a>.NET 核心 
+## <a name="net-core"></a>.NET Core 
 
 .NET 的跨平台、高效能、開放原始碼實作。 包括 Core Common Language Runtime (CoreCLR)、Core AOT 執行階段 (CoreRT 開發中)、Core 基底類別庫，以及 Core SDK。
 

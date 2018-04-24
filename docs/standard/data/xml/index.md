@@ -16,11 +16,11 @@ manager: wpickett
 ms.workload:
 - dotnet
 - dotnetcore
-ms.openlocfilehash: 824e06a00c4242d8ee38bdfc5a57151a71e4f285
-ms.sourcegitcommit: ba765893e3efcece67d99fd6d5ce0074b050d1d9
+ms.openlocfilehash: 0da27afc5509af6db510b5e622ffde461ae2e0a1
+ms.sourcegitcommit: 2e8acae16ae802f2d6d04e3ce0a6dbf04e476513
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 03/02/2018
+ms.lasthandoff: 04/18/2018
 ---
 # <a name="xml-documents-and-data"></a>XML 文件和資料
 .NET Framework 提供一組完整且整合的類別，好讓您輕鬆地建置可感知 XML 的應用程式。 下列命名空間中的類別支援 XML 的剖析與撰寫、記憶體中 XML 資料的編輯、資料驗證和 XSLT 轉換。  
@@ -35,21 +35,21 @@ ms.lasthandoff: 03/02/2018
   
 -   <xref:System.Xml.Linq>  
   
- 如需完整清單，請參閱 [System.Xml 命名空間](http://msdn.microsoft.com/library/gg145036.aspx)網頁。  
+ 如需完整清單，請參閱 [System.Xml 命名空間](https://msdn.microsoft.com/library/gg145036.aspx)網頁。  
   
  這些命名空間中的類別支援全球資訊網協會 (W3C) 的建議。 例如:   
   
--   <xref:System.Xml.XmlDocument?displayProperty=nameWithType> 類別會實作 [W3C 文件物件模型 (DOM) 層級 1 核心](http://www.w3.org/TR/REC-DOM-Level-1/)和 [DOM 層級 2 核心](http://www.w3.org/TR/DOM-Level-2-Core/)的建議事項。  
+-   <xref:System.Xml.XmlDocument?displayProperty=nameWithType> 類別會實作 [W3C 文件物件模型 (DOM) 層級 1 核心](https://www.w3.org/TR/REC-DOM-Level-1/)和 [DOM 層級 2 核心](https://www.w3.org/TR/DOM-Level-2-Core/)的建議事項。  
   
--   <xref:System.Xml.XmlReader?displayProperty=nameWithType> 和 <xref:System.Xml.XmlWriter?displayProperty=nameWithType> 類別支援 [W3C XML 1.0](http://www.w3.org/TR/2006/REC-xml-20060816/) 和 [XML 中的命名空間](http://www.w3.org/TR/REC-xml-names/)的建議事項。  
+-   <xref:System.Xml.XmlReader?displayProperty=nameWithType> 和 <xref:System.Xml.XmlWriter?displayProperty=nameWithType> 類別支援 [W3C XML 1.0](https://www.w3.org/TR/2006/REC-xml-20060816/) 和 [XML 中的命名空間](https://www.w3.org/TR/REC-xml-names/)的建議事項。  
   
--   <xref:System.Xml.Schema.XmlSchemaSet?displayProperty=nameWithType> 類別中的結構描述支援 [W3C XML 結構描述第一部分：結構](http://www.w3.org/TR/xmlschema-1/)和 [XML 結構描述第二部分：資料類型](http://www.w3.org/TR/xmlschema-2/)的建議事項。  
+-   <xref:System.Xml.Schema.XmlSchemaSet?displayProperty=nameWithType> 類別中的結構描述支援 [W3C XML 結構描述第一部分：結構](https://www.w3.org/TR/xmlschema-1/)和 [XML 結構描述第二部分：資料類型](https://www.w3.org/TR/xmlschema-2/)的建議事項。  
   
 -   <xref:System.Xml.Xsl?displayProperty=nameWithType> 命名空間中的類別支援符合 [W3C XSLT 1.0](http://www.w3.org/TR/xslt) 建議事項的 XSLT 轉換。  
   
  .NET Framework 中的 XML 類別提供以下優點：  
   
--   **生產力。** [LINQ to XML](http://msdn.microsoft.com/library/f0fe21e9-ee43-4a55-b91a-0800e5782c13) 可輕鬆地透過 XML 編寫程式，並提供類似於 SQL 的查詢體驗。  
+-   **生產力。** [LINQ to XML](https://msdn.microsoft.com/library/f0fe21e9-ee43-4a55-b91a-0800e5782c13) 可輕鬆地透過 XML 編寫程式，並提供類似於 SQL 的查詢體驗。  
   
 -   **擴充性。** .NET Framework 中的 XML 類別可利用抽象基底類別和虛擬方法進行擴充。 例如，您可以建立將快取資料流儲存在本機磁碟之 <xref:System.Xml.XmlUrlResolver> 類別的衍生類別。  
   
@@ -72,7 +72,7 @@ ms.lasthandoff: 03/02/2018
  討論用來處理 XML 資料的選項。  
   
  [處理記憶體中的 XML 資料](../../../../docs/standard/data/xml/processing-xml-data-in-memory.md)  
- 討論用來處理記憶體中 XML 資料的三個模型。 [LINQ to XML](http://msdn.microsoft.com/library/f0fe21e9-ee43-4a55-b91a-0800e5782c13)、<xref:System.Xml.XmlDocument> 類別 (根據 W3C 文件物件模型) 和 <xref:System.Xml.XPath.XPathDocument> 類別 (根據 XPath 資料模型)。  
+ 討論用來處理記憶體中 XML 資料的三個模型。 [LINQ to XML](https://msdn.microsoft.com/library/f0fe21e9-ee43-4a55-b91a-0800e5782c13)、<xref:System.Xml.XmlDocument> 類別 (根據 W3C 文件物件模型) 和 <xref:System.Xml.XPath.XPathDocument> 類別 (根據 XPath 資料模型)。  
   
  [XSLT 轉換](../../../../docs/standard/data/xml/xslt-transformations.md)  
  說明如何使用 XSLT 處理器。  

@@ -1,30 +1,30 @@
 ---
-title: "Windows 中的 Managed 和 Unmanaged 執行緒處理"
-ms.custom: 
+title: Windows 中的 Managed 和 Unmanaged 執行緒處理
+ms.custom: ''
 ms.date: 03/30/2017
 ms.prod: .net
-ms.reviewer: 
-ms.suite: 
+ms.reviewer: ''
+ms.suite: ''
 ms.technology: dotnet-standard
-ms.tgt_pltfrm: 
+ms.tgt_pltfrm: ''
 ms.topic: article
 helpviewer_keywords:
 - threading [.NET Framework], unmanaged
 - threading [.NET Framework], managed
 - managed threading
 ms.assetid: 4fb6452f-c071-420d-9e71-da16dee7a1eb
-caps.latest.revision: 
+caps.latest.revision: 17
 author: rpetrusha
 ms.author: ronpet
 manager: wpickett
 ms.workload:
 - dotnet
 - dotnetcore
-ms.openlocfilehash: 2ce17ef15a5b582a9df0f16d7e0ac82df626579d
-ms.sourcegitcommit: c0dd436f6f8f44dc80dc43b07f6841a00b74b23f
+ms.openlocfilehash: 66bf8458a3f4f9dd622129e82acb659dddf8467a
+ms.sourcegitcommit: 2e8acae16ae802f2d6d04e3ce0a6dbf04e476513
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 01/19/2018
+ms.lasthandoff: 04/18/2018
 ---
 # <a name="managed-and-unmanaged-threading-in-windows"></a>Windows 中的 Managed 和 Unmanaged 執行緒處理
 所有執行緒的管理都會透過 <xref:System.Threading.Thread> 類別進行，包括 Common Language Runtime 建立的執行緒，以及在執行階段外部建立但進入 Managed 環境執行程式碼的執行緒。 執行階段會監視在其處理序中所有曾在 Managed 執行環境中執行程式碼的執行緒， 但不會追蹤其他任何執行緒。 執行緒可透過 COM Interop (因為執行階段會將 Managed 物件當做 COM 物件公開給 Unmanaged 世界)、COM [DllGetClassObject](https://msdn.microsoft.com/library/ms680760.aspx) 函式和平台叫用來進入 Managed 執行環境。  
@@ -55,7 +55,7 @@ ms.lasthandoff: 01/19/2018
 |近似 **CoInitializeEx** (OLE32.DLL)|<xref:System.Threading.Thread.ApartmentState%2A?displayProperty=nameWithType>|  
   
 ## <a name="managed-threads-and-com-apartments"></a>Managed 執行緒和 COM Apartment  
- 可標記 Managed 執行緒，以表示它將裝載[單一執行緒](http://msdn.microsoft.com/library/windows/desktop/ms680112.aspx)或[多執行緒](http://msdn.microsoft.com/library/windows/desktop/ms693421.aspx) Apartment。 (如需 COM 執行緒架構的詳細資訊，請參閱[處理序、執行緒和 Apartment](http://msdn.microsoft.com/library/windows/desktop/ms693344.aspx)。)<xref:System.Threading.Thread.GetApartmentState%2A> 類別的 <xref:System.Threading.Thread.SetApartmentState%2A>、<xref:System.Threading.Thread.TrySetApartmentState%2A> 和 <xref:System.Threading.Thread> 方法會傳回並指派執行緒的 Apartment 狀態。 如果尚未設定此狀態，則 <xref:System.Threading.Thread.GetApartmentState%2A> 會傳回 <xref:System.Threading.ApartmentState.Unknown?displayProperty=nameWithType>。  
+ 可標記 Managed 執行緒，以表示它將裝載[單一執行緒](https://msdn.microsoft.com/library/windows/desktop/ms680112.aspx)或[多執行緒](https://msdn.microsoft.com/library/windows/desktop/ms693421.aspx) Apartment。 (如需 COM 執行緒架構的詳細資訊，請參閱[處理序、執行緒和 Apartment](https://msdn.microsoft.com/library/windows/desktop/ms693344.aspx)。)<xref:System.Threading.Thread.GetApartmentState%2A> 類別的 <xref:System.Threading.Thread.SetApartmentState%2A>、<xref:System.Threading.Thread.TrySetApartmentState%2A> 和 <xref:System.Threading.Thread> 方法會傳回並指派執行緒的 Apartment 狀態。 如果尚未設定此狀態，則 <xref:System.Threading.Thread.GetApartmentState%2A> 會傳回 <xref:System.Threading.ApartmentState.Unknown?displayProperty=nameWithType>。  
   
  只有在執行緒處於 <xref:System.Threading.ThreadState.Unstarted?displayProperty=nameWithType> 狀態時，才能設定此屬性；每個執行緒只能設定此屬性一次。  
   

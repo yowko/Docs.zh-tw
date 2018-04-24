@@ -1,12 +1,12 @@
 ---
-title: ".NET 中的字元編碼"
-ms.custom: 
+title: .NET 中的字元編碼
+ms.custom: ''
 ms.date: 12/22/2017
 ms.prod: .net
-ms.reviewer: 
-ms.suite: 
+ms.reviewer: ''
+ms.suite: ''
 ms.technology: dotnet-standard
-ms.tgt_pltfrm: 
+ms.tgt_pltfrm: ''
 ms.topic: article
 dev_langs:
 - csharp
@@ -16,18 +16,18 @@ helpviewer_keywords:
 - encoding, choosing
 - encoding, fallback strategy
 ms.assetid: bf6d9823-4c2d-48af-b280-919c5af66ae9
-caps.latest.revision: 
+caps.latest.revision: 33
 author: rpetrusha
 ms.author: ronpet
 manager: wpickett
 ms.workload:
 - dotnet
 - dotnetcore
-ms.openlocfilehash: ac24e3a685c20445c473f0f5222ddba72b6b098c
-ms.sourcegitcommit: cf22b29db780e532e1090c6e755aa52d28273fa6
+ms.openlocfilehash: 1d296920d75af2194323791c4ea571c10f1e3c7d
+ms.sourcegitcommit: 2e8acae16ae802f2d6d04e3ce0a6dbf04e476513
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 02/01/2018
+ms.lasthandoff: 04/18/2018
 ---
 # <a name="character-encoding-in-net"></a>.NET 中的字元編碼
 字元是可以用許多不同的方式來表示的抽象實體。 字元編碼是一套系統，可將所支援之字元集中的每個字元與代表該字元的特定值配對。 例如，摩斯密碼就是一種字元編碼，可將羅馬字母中的每個字元與適合透過電報線路傳輸的點和虛線圖樣配對。 電腦的字元編碼可將所支援之字元集中的每個字元與代表該字元的數值配對。 字元編碼包含兩個不同的元件：  
@@ -70,7 +70,7 @@ ms.lasthandoff: 02/01/2018
 > [!NOTE]
 >  Unicode 標準會對每個受支援字集中的每個字元，指派一個字碼指標 (數字) 和一個名稱。 例如，字元 "A" 是由字碼指標 U+0041 和名稱 "LATIN CAPITAL LETTER A" 來表示。 Unicode 轉換格式 (UTF) 編碼定義將字碼指標編碼為一或多個位元組序列的方式。 Unicode 編碼配置簡化全球化應用程式的開發作業，因為它能夠以單一編碼表示任何字元集的字元。 應用程式開發人員不再需要追蹤用來產生特定語言或書寫系統字元的編碼配置，同時資料可在各國系統之間共用，而不會損毀。  
 >   
->  .NET 支援由 Unicode 標準定義的三種編碼：UTF-8、UTF-16 和 UTF-32。 如需詳細資訊，請參閱 [Unicode 首頁](http://www.unicode.org/) \(英文\) 的＜Unicode 標準＞。  
+>  .NET 支援由 Unicode 標準定義的三種編碼：UTF-8、UTF-16 和 UTF-32。 如需詳細資訊，請參閱 [Unicode 首頁](https://www.unicode.org/) \(英文\) 的＜Unicode 標準＞。  
   
  您可以藉由呼叫 <xref:System.Text.Encoding.GetEncodings%2A?displayProperty=nameWithType> 方法，來擷取 .NET 中所有可用編碼的相關資訊。 .NET 支援下表所列的字元編碼系統。  
   
@@ -157,7 +157,7 @@ ms.lasthandoff: 02/01/2018
  自動調整的策略會因不同的字碼頁而異。 例如，某些字碼頁的全形拉丁字元會對應至更常見的半形拉丁字元。 至於其他字碼頁，則不會進行這項對應。 即使有主動的自動調整策略，還是會有些字元在特定編碼中沒有適當的對應。 例如，中文表意字元在字碼頁 1252 中便沒有適當的對應。 在這種情況下，會使用取代字串。 根據預設，這個字串只是單一 QUESTION MARK (U+003F)。  
   
 > [!NOTE]
->  自動調整的策略不會詳細記錄。 不過，[Unicode Consortium](http://www.unicode.org/Public/MAPPINGS/VENDORS/MICSFT/WindowsBestFit/) \(英文\) 網站上記載了數個字碼頁。 請檢閱該資料夾的 **readme.txt** 檔案，以取得如何解譯對應檔案的說明。
+>  自動調整的策略不會詳細記錄。 不過，[Unicode Consortium](https://www.unicode.org/Public/MAPPINGS/VENDORS/MICSFT/WindowsBestFit/) \(英文\) 網站上記載了數個字碼頁。 請檢閱該資料夾的 **readme.txt** 檔案，以取得如何解譯對應檔案的說明。
   
  下列範例會使用字碼頁 1252 (西歐語言的 Windows 字碼頁) 說明自動調整對應及其缺點。 <xref:System.Text.Encoding.GetEncoding%28System.Int32%29?displayProperty=nameWithType> 方法可用來為字碼頁 1252 擷取編碼物件。 根據預設，它會針對不支援的 Unicode 字元使用自動調整對應。 這個範例會執行個體化包含三個非 ASCII 字元的字串：CIRCLED LATIN CAPITAL LETTER S (U+24C8)、SUPERSCRIPT FIVE (U+2075) 和 INFINITY (U+221E) (以空格分隔)。 如範例的輸出所示，編碼字串時，這三個原始非空格字元會被 QUESTION MARK (U+003F)、DIGIT FIVE (U+0035) 和 DIGIT EIGHT (U+0038) 取代。 DIGIT EIGHT 對於不支援的 INFINITY 字元來說，是相當差的取代，QUESTION MARK 則表示沒有可供原始字元使用的對應。  
   

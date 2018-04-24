@@ -1,12 +1,12 @@
 ---
-title: ".NET Framework 中的數值"
-ms.custom: 
+title: .NET Framework 中的數值
+ms.custom: ''
 ms.date: 03/30/2017
 ms.prod: .net
-ms.reviewer: 
-ms.suite: 
+ms.reviewer: ''
+ms.suite: ''
 ms.technology: dotnet-standard
-ms.tgt_pltfrm: 
+ms.tgt_pltfrm: ''
 ms.topic: article
 helpviewer_keywords:
 - SIMD
@@ -17,18 +17,18 @@ helpviewer_keywords:
 - numerics
 - BigInteger
 ms.assetid: dfebc18e-acde-4510-9fa7-9a0f4aa3bd11
-caps.latest.revision: 
+caps.latest.revision: 11
 author: rpetrusha
 ms.author: ronpet
 manager: wpickett
 ms.workload:
 - dotnet
 - dotnetcore
-ms.openlocfilehash: bd55b127f73fe1cefce9724f3a74400b5fe7488f
-ms.sourcegitcommit: e7f04439d78909229506b56935a1105a4149ff3d
+ms.openlocfilehash: 074ed60a3cbc1949eea4a8d866cdb3bba7c0f196
+ms.sourcegitcommit: 2e8acae16ae802f2d6d04e3ce0a6dbf04e476513
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 12/23/2017
+ms.lasthandoff: 04/18/2018
 ---
 # <a name="numerics-in-the-net-framework"></a>.NET Framework 中的數值
 .NET Framework 除了沒有理論上限或下限的整數型別 <xref:System.Numerics.BigInteger>、代表複數的型別 <xref:System.Numerics.Complex>，以及 <xref:System.Numerics> 命名空間中一組支援 SIMD 的向量型別之外，也支援標準數值整數和浮點數基本型別。  
@@ -85,7 +85,7 @@ ms.lasthandoff: 12/23/2017
   
  啟用 SimD 的向量類型會在 IL 中實作，使其能在未啟用 SimD 的硬體和 JIT 編譯器上使用。 若要利用 SIMD 指令，您必須使用 .NET Framework 4.6 隨附適用於 Managed 程式碼的新 64 位元 JIT 編譯器，來編譯 64 位元應用程式；當以 x64 處理器為目標時，它會加入 SIMD 支援。  
   
- SIMD 也可做為 [NuGet 套件](http://www.nuget.org/packages/System.Numerics.Vectors)下載。  NuGet 套件也包含泛型 <xref:System.Numerics.Vector%601> 結構，此結構可讓您建立任何基本數值型別的向量。 (基本數值類型包含 <xref:System> 命名空間中 <xref:System.Decimal> 以外的所有數值類型)。此外，<xref:System.Numerics.Vector%601> 結構還提供可供您在使用向量時呼叫的便利方法程式庫。  
+ SIMD 也可做為 [NuGet 套件](https://www.nuget.org/packages/System.Numerics.Vectors)下載。  NuGet 套件也包含泛型 <xref:System.Numerics.Vector%601> 結構，此結構可讓您建立任何基本數值型別的向量。 (基本數值類型包含 <xref:System> 命名空間中 <xref:System.Decimal> 以外的所有數值類型)。此外，<xref:System.Numerics.Vector%601> 結構還提供可供您在使用向量時呼叫的便利方法程式庫。  
   
 ## <a name="see-also"></a>請參閱  
  [應用程式基本概念](../../docs/standard/application-essentials.md)

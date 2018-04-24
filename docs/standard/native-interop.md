@@ -1,6 +1,6 @@
 ---
-title: "原生互通性"
-description: "了解如何連接到 .NET 中的原生元件。"
+title: 原生互通性
+description: 了解如何連接到 .NET 中的原生元件。
 keywords: .NET, .NET Core
 author: blackdwarf
 ms.author: ronpet
@@ -13,11 +13,11 @@ ms.assetid: 3c357112-35fb-44ba-a07b-6a1c140370ac
 ms.workload:
 - dotnet
 - dotnetcore
-ms.openlocfilehash: 11a93f4014734130f7c4e33cf215c6d49d2554c5
-ms.sourcegitcommit: e7f04439d78909229506b56935a1105a4149ff3d
+ms.openlocfilehash: d9b0fa5ebe37e51c45a8a5d8a42ce9b9688cc7c1
+ms.sourcegitcommit: 2e8acae16ae802f2d6d04e3ce0a6dbf04e476513
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 12/23/2017
+ms.lasthandoff: 04/18/2018
 ---
 # <a name="native-interoperability"></a>原生互通性
 
@@ -26,7 +26,7 @@ ms.lasthandoff: 12/23/2017
 下列為您要呼叫原生程式碼的幾個原因︰
 
 *   作業系統隨附大量 Managed 類別庫中所沒有的 API。 此項目的基本範例將會存取硬體或作業系統管理功能。
-*   與其他具有或是有可能會產生 C-style ABI (原生 ABI) 的元件進行通訊。 比方說，這涵蓋透過 [Java Native Interface (JNI)](http://docs.oracle.com/javase/8/docs/technotes/guides/jni/) 公開的 Java 程式碼，或任何其他可能會產生原生元件的 Managed 語言。
+*   與其他具有或是有可能會產生 C-style ABI (原生 ABI) 的元件進行通訊。 比方說，這涵蓋透過 [Java Native Interface (JNI)](https://docs.oracle.com/javase/8/docs/technotes/guides/jni/) 公開的 Java 程式碼，或任何其他可能會產生原生元件的 Managed 語言。
 *   在 Windows 上，大部分的已安裝軟體 (例如 Microsoft Office 套件) 會註冊 COM 元件，這些元件代表它們的程式，而且可讓開發人員將其自動化或使用它們。 而這也需要原生互通性。
 
 當然，上述清單並未涵蓋所有開發人員會想要或需要與原生元件互動的可能情況和情節。 舉例來說，.NET 類別庫會使用原生互通性支援來實作其一部分的 API，例如主控台支援和操作、檔案系統存取權及其他項目。 不過請務必注意，如果情況需要的話，您還有另外的選項。
@@ -340,6 +340,6 @@ public class StatClass {
 
 ## <a name="more-resources"></a>更多資源
 
-*   [PInvoke.net wiki](http://www.pinvoke.net) 是一個絕佳的 Wiki 網頁，具有通用的 Win32 API，以及如何呼叫它們的相關資訊。
+*   [PInvoke.net wiki](https://www.pinvoke.net/) 是一個絕佳的 Wiki 網頁，具有通用的 Win32 API，以及如何呼叫它們的相關資訊。
 *   [P/Invoke on MSDN](https://msdn.microsoft.com/library/zbz07712.aspx)
-*   [P/Invoke 上的 Mono 文件](http://www.mono-project.com/docs/advanced/pinvoke/)
+*   [P/Invoke 上的 Mono 文件](https://www.mono-project.com/docs/advanced/pinvoke/)

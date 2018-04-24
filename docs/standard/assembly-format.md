@@ -1,6 +1,6 @@
 ---
-title: ".NET 組件檔格式"
-description: "了解用來描述並包含 .NET 應用程式和程式庫的 .NET 組件檔格式。"
+title: .NET 組件檔格式
+description: 了解用來描述並包含 .NET 應用程式和程式庫的 .NET 組件檔格式。
 keywords: .NET, .NET Core
 author: richlander
 ms.author: mairaw
@@ -13,11 +13,11 @@ ms.assetid: 6520323e-ff28-4c8a-ba80-e64a413199e6
 ms.workload:
 - dotnet
 - dotnetcore
-ms.openlocfilehash: d219a584f2f5521fc3b0fd00ab037a8e486c9050
-ms.sourcegitcommit: 75a180acb5d8a2dbd4a52915ce8e980749fb1d05
+ms.openlocfilehash: f2e838746762922087162142e61ce3ce5b33b2fb
+ms.sourcegitcommit: 2e8acae16ae802f2d6d04e3ce0a6dbf04e476513
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 02/24/2018
+ms.lasthandoff: 04/18/2018
 ---
 # <a name="net-assembly-file-format"></a>.NET 組件檔格式
 
@@ -25,7 +25,7 @@ ms.lasthandoff: 02/24/2018
 
 > 每個 CLI 元件都會攜帶該元件特定宣告、實作和參考的中繼資料。 因此，元件特定中繼資料是指元件中繼資料，而且產生的元件即為來自 ECMA 335 I.9.1 的自我描述元件和組件。
 
-格式會依 [ECMA 335](http://www.ecma-international.org/publications/standards/Ecma-335.htm) 來完整指定並標準化。 所有 .NET 編譯器和執行階段都會使用這種格式。 所記載且不常更新之二進位格式的目前狀態已是互通性的主要優點 (即需求)。 這種格式上次在 2005 年進行重大更新 (.NET 2.0)，可容納泛型和處理器架構。
+格式會依 [ECMA 335](https://www.ecma-international.org/publications/standards/Ecma-335.htm) 來完整指定並標準化。 所有 .NET 編譯器和執行階段都會使用這種格式。 所記載且不常更新之二進位格式的目前狀態已是互通性的主要優點 (即需求)。 這種格式上次在 2005 年進行重大更新 (.NET 2.0)，可容納泛型和處理器架構。
 
 格式為 CPU 並且無作業系統無關。 它已用作將目標設為許多晶片和 CPU 之 .NET 實作的一部分。 雖然格式本身具有 Windows 傳承，但是可在任何作業系統上實作。 作業系統互通性的最重大選擇就是大部分值都是以位元組由小到大格式儲存。 它沒有電腦指標大小 (例如，32 位元、64 位元) 的特定同質性。
 
@@ -33,7 +33,7 @@ ms.lasthandoff: 02/24/2018
 
 ## <a name="format"></a>格式
 
-.NET 二進位格式是根據 Windows [PE 檔案](http://en.wikipedia.org/wiki/Portable_Executable)格式。 事實上，.NET 類別庫是一致的 Windows PE，並且顯示在第一次看到 Windows 動態連結程式庫 (DLL) 或應用程式執行檔 (EXE) 時。 這是 Windows 上極為實用的特性，在此，它們可以偽裝為原生可執行二進位檔，並進行一些相同的處理 (例如，OS 載入、PE 工具)。
+.NET 二進位格式是根據 Windows [PE 檔案](https://en.wikipedia.org/wiki/Portable_Executable)格式。 事實上，.NET 類別庫是一致的 Windows PE，並且顯示在第一次看到 Windows 動態連結程式庫 (DLL) 或應用程式執行檔 (EXE) 時。 這是 Windows 上極為實用的特性，在此，它們可以偽裝為原生可執行二進位檔，並進行一些相同的處理 (例如，OS 載入、PE 工具)。
 
 ![組件標頭](./media/assembly-format/assembly-headers.png)
 
@@ -41,4 +41,4 @@ ms.lasthandoff: 02/24/2018
 
 ## <a name="processing-the-assemblies"></a>處理組件
 
-可能會撰寫工具或 API 來處理組件。 組件資訊可在執行階段進行程式設計決策、重新撰寫組件、在編輯器中提供 API IntelliSense，以及產生文件。 <xref:System.Reflection?displayProperty=nameWithType> 和 [Mono.Cecil](http://www.mono-project.com/docs/tools+libraries/libraries/Mono.Cecil/) 是常用於此目的之工具的不錯範例。
+可能會撰寫工具或 API 來處理組件。 組件資訊可在執行階段進行程式設計決策、重新撰寫組件、在編輯器中提供 API IntelliSense，以及產生文件。 <xref:System.Reflection?displayProperty=nameWithType> 和 [Mono.Cecil](https://www.mono-project.com/docs/tools+libraries/libraries/Mono.Cecil/) 是常用於此目的之工具的不錯範例。

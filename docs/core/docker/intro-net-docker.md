@@ -1,7 +1,7 @@
 ---
-title: ".NET 和 Docker 簡介"
-description: "了解 Docker 和 .NET Core"
-keywords: ".NET、.NET Core、Docker"
+title: .NET 和 Docker 簡介
+description: 了解 Docker 和 .NET Core
+keywords: .NET、.NET Core、Docker
 author: jralexander
 ms.author: johalex
 ms.date: 11/06/2017
@@ -14,11 +14,11 @@ manager: wpickett
 ms.custom: mvc
 ms.workload:
 - dotnetcore
-ms.openlocfilehash: dabc7c0c4a0afab8edf7d2bab410bb9635821936
-ms.sourcegitcommit: 75a180acb5d8a2dbd4a52915ce8e980749fb1d05
+ms.openlocfilehash: 75c631cf0abac543889cb7387f6fc3fdb2624512
+ms.sourcegitcommit: 68b60d38043e50104ccc90c76f8599b1ffe18346
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 02/24/2018
+ms.lasthandoff: 04/20/2018
 ---
 # <a name="introduction-to-net-and-docker"></a>.NET 和 Docker 簡介
 
@@ -71,7 +71,7 @@ Microsoft 針對 .NET 存放庫的目的，是要提供細微且專注的存放�
 
 ### <a name="common-docker-development-scenarios"></a>常見的 Docker 開發案例
 
-#### <a name="net-core"></a>.NET 核心
+#### <a name="net-core"></a>.NET Core
 
 **.NET Core 資源**
 
@@ -105,15 +105,15 @@ Microsoft 針對 .NET 存放庫的目的，是要提供細微且專注的存放�
 
 **.NET Framework 4.7**
 
-[dotnet-framework:4.7 範例](https://github.com/Microsoft/dotnet-framework-docker-samples/tree/master/dotnetapp-4.7) 示範 [.NET Framework 4.7](../../framework/whats-new/index.md#v47) 的基本 "Hello World" 使用方式。 它示範如何仰賴 [.NET Framework 4.7 Docker 映像](https://github.com/Microsoft/dotnet-framework-docker/blob/master/4.7/Dockerfile) \(英文\) 建置及部署該應用程式。
+[dotnet-framework:4.7 範例](https://github.com/Microsoft/dotnet-framework-docker-samples/tree/master/dotnetapp-4.7) 示範 [.NET Framework 4.7](../../framework/whats-new/index.md#v47) 的基本 "Hello World" 使用方式。 它示範如何仰賴 [.NET Framework 4.7 Docker 映像](https://github.com/Microsoft/dotnet-framework-docker-samples/blob/master/dotnetapp-4.7/Dockerfile) \(英文\) 建置及部署該應用程式。
 
 **.NET Framework 4.6.2**
 
-[dotnet-framework:4.6.2 範例](https://github.com/Microsoft/dotnet-framework-docker-samples/tree/master/dotnetapp-4.6.2) \(英文\) 示範 [.NET Framework 4.6.2](../../framework/whats-new/index.md#v462) 的基本 "Hello World" 使用方式。 它示範如何仰賴 [.NET Framework 4.6.2 Docker 映像](https://github.com/Microsoft/dotnet-framework-docker/tree/master/4.6.2) \(英文\) 建置及部署該應用程式。
+[dotnet-framework:4.6.2 範例](https://github.com/Microsoft/dotnet-framework-docker-samples/tree/master/dotnetapp-4.6.2) \(英文\) 示範 [.NET Framework 4.6.2](../../framework/whats-new/index.md#v462) 的基本 "Hello World" 使用方式。 它示範如何仰賴 [.NET Framework 4.6.2 Docker 映像](https://github.com/Microsoft/dotnet-framework-docker-samples/blob/master/dotnetapp-4.6.2/Dockerfile) \(英文\) 建置及部署該應用程式。
 
 **.NET Framework 3.5**
 
- [dotnet-framework:3.5 範例](https://github.com/Microsoft/dotnet-framework-docker-samples/tree/master/dotnetapp-3.5) \(英文\) 示範 [.NET Framework 3.5](https://github.com/Microsoft/dotnet-framework-docker/tree/master/3.5) \(英文\) 的基本 "Hello World" 使用方式。 它示範如何仰賴 Docker 中的 .NET Framework 3.5 建置及部署專案。
+ [dotnet-framework:3.5 範例](https://github.com/Microsoft/dotnet-framework-docker-samples/tree/master/dotnetapp-3.5) \(英文\) 示範 [.NET Framework 3.5](https://github.com/Microsoft/dotnet-framework-docker-samples/blob/master/dotnetapp-3.5/dotnetapp-3.5/Dockerfile) \(英文\) 的基本 "Hello World" 使用方式。 它示範如何仰賴 Docker 中的 .NET Framework 3.5 建置及部署專案。
 
 #### <a name="aspnet-core"></a>ASP.NET Core
 
@@ -133,7 +133,7 @@ Microsoft 針對 .NET 存放庫的目的，是要提供細微且專注的存放�
 
 * [Docker Hub 上的 Windows Communication Framework (WCF) 映像](https://hub.docker.com/r/microsoft/wcf/) \(英文\)
 
-* [GitHub 上的 Windows Communication Framework (WCF) 映像](https://github.com/microsoft/iis-docker) \(英文\)
+* [GitHub 上的 Windows Communication Framework (WCF) 映像](https://github.com/microsoft/wcf-docker) \(英文\)
 
 * [使用 .NET Full Framework 4.6.2 的 Windows Communication Framework (WCF) Docker 範例](https://github.com/Microsoft/wcf-docker-samples) \(英文\)
 
@@ -141,7 +141,7 @@ Microsoft 針對 .NET 存放庫的目的，是要提供細微且專注的存放�
 
 * [Docker Hub 上的 Internet Information Server (IIS) 映像](https://hub.docker.com/r/microsoft/iis/) \(英文\)
 
-* [GitHub 上的 Internet Information Server (IIS) 映像](https://github.com/microsoft/wcf-docker) \(英文\)
+* [GitHub 上的 Internet Information Server (IIS) 映像](https://github.com/microsoft/iis-docker) \(英文\)
 
 ### <a name="interact-with-other-microsoft-stack-container-images"></a>與其他 Microsoft 堆疊容器映像互動
 
@@ -149,9 +149,7 @@ Microsoft 針對 .NET 存放庫的目的，是要提供細微且專注的存放�
 
 * [透過 Docker 快速入門執行適用於 Linux 的 Microsoft SQL Server 2017 容器映像](https://docs.microsoft.com/sql/linux/quickstart-install-connect-docker) \(機器翻譯\)
 
-* [Docker Hub 上適用於 Linux 的 Microsoft SQL Server 映像](https://hub.docker.com/r/microsoft/mssql-server-windows/) \(英文\)
-
-* [Docker Hub 上適用於 Windows 容器的 Microsoft SQL Server 映像](https://hub.docker.com/r/microsoft/mssql-server-windows/) \(英文\)
+* [Docker Hub 上適用於 Linux 的 Microsoft SQL Server 映像](https://hub.docker.com/r/microsoft/mssql-server-linux/) \(英文\)
 
 * [Docker Hub 上適用於 Windows 容器的 Microsoft SQL Server Express 版本映像](https://hub.docker.com/r/microsoft/mssql-server-windows-express/) \(英文\)
 
@@ -165,9 +163,9 @@ Microsoft 針對 .NET 存放庫的目的，是要提供細微且專注的存放�
 
 #### <a name="operations-management-suite-oms-linux-agent"></a>Operations Management Suite (OMS) Linux 代理程式
 
-* [Operations Management Suite (OMS) Linux 代理程式概觀](https://github.com/Microsoft/OMS-Agent-for-Linux/blob/master/docs/Docker-Instructions.md#overview) \(英文\)
+* [Operations Management Suite (OMS) Linux 代理程式概觀](https://github.com/Microsoft/OMS-Agent-for-Linux/blob/master/docs/Docker-Instructions.md) \(英文\)
 
-* [Docker Hub 上的 Operations Management Suite (OMS) 映像](https://hub.docker.com/r/microsoft/vsts-agent/) \(英文\)
+* [Docker Hub 上的 Operations Management Suite (OMS) 映像](https://hub.docker.com/r/microsoft/oms/) \(英文\)
 
 * [GitHub 上的 Operations Management Suite (OMS) 映像](https://github.com/Microsoft/OMS-docker) \(英文\)
 
@@ -175,7 +173,7 @@ Microsoft 針對 .NET 存放庫的目的，是要提供細微且專注的存放�
 
 * [Docker Hub 上的 Microsoft Azure 命令列介面 (CLI) 映像](https://hub.docker.com/r/microsoft/azure-cli/) \(英文\) 
 
-* [GitHub 上的 Microsoft Azure 命令列介面 (CLI) 映像](https://github.com/Microsoft/OMS-docker) \(英文\)
+* [GitHub 上的 Microsoft Azure 命令列介面 (CLI) 映像](https://github.com/Azure/azure-cli#Docker) \(英文\)
 
 > [!NOTE]
 > 如果您沒有 Azure 訂用帳戶，請[立即註冊](https://azure.microsoft.com/free/?b=16.48)可免費使用 30 天的帳戶，並獲得 $200 美元的 Azure 點數來試用其他的 Azure 服務組合。

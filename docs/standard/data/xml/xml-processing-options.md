@@ -1,26 +1,26 @@
 ---
-title: "XML 處理選項"
-ms.custom: 
+title: XML 處理選項
+ms.custom: ''
 ms.date: 03/30/2017
 ms.prod: .net
-ms.reviewer: 
-ms.suite: 
+ms.reviewer: ''
+ms.suite: ''
 ms.technology: dotnet-standard
-ms.tgt_pltfrm: 
+ms.tgt_pltfrm: ''
 ms.topic: article
 ms.assetid: 33ced8ee-1745-4e71-8dee-ebe70ec067c7
-caps.latest.revision: 
+caps.latest.revision: 5
 author: mairaw
 ms.author: mairaw
 manager: wpickett
 ms.workload:
 - dotnet
 - dotnetcore
-ms.openlocfilehash: 2f270b58d20b3fe9dbc514657def90776bdfe2b5
-ms.sourcegitcommit: 91691981897cf8451033cb01071d8f5d94017f97
+ms.openlocfilehash: cabe640aa555400228acb572315a43b6ca9265bb
+ms.sourcegitcommit: 2e8acae16ae802f2d6d04e3ce0a6dbf04e476513
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 01/09/2018
+ms.lasthandoff: 04/18/2018
 ---
 # <a name="xml-processing-options"></a>XML 處理選項
 請參閱下表，以取得您可以用來處理 XML 資料的 Microsoft 技術清單。  
@@ -29,10 +29,10 @@ ms.lasthandoff: 01/09/2018
   
 |**選項**|**處理型別**|**描述**|  
 |----------------|-------------------------|---------------------|  
-|[LINQ to XML](http://msdn.microsoft.com/library/f0fe21e9-ee43-4a55-b91a-0800e5782c13) <br />(<xref:System.Xml.Linq> 命名空間)|記憶體中|-   根據 .NET Framework Language-Integrated Query (LINQ) 技術。<br />-   提供類似於物件、關聯式資料和 XML 資料適用之 SQL 的查詢體驗。<br />-   提供直覺式文件建立和轉換功能。<br />-   如果您要撰寫新程式碼，請使用這個選項。|  
+|[LINQ to XML](https://msdn.microsoft.com/library/f0fe21e9-ee43-4a55-b91a-0800e5782c13) <br />(<xref:System.Xml.Linq> 命名空間)|記憶體中|-   根據 .NET Framework Language-Integrated Query (LINQ) 技術。<br />-   提供類似於物件、關聯式資料和 XML 資料適用之 SQL 的查詢體驗。<br />-   提供直覺式文件建立和轉換功能。<br />-   如果您要撰寫新程式碼，請使用這個選項。|  
 |<xref:System.Xml.XmlReader?displayProperty=nameWithType>|資料流形式|-   提供快速、非快取的順向方式來存取 XML 資料。<br />-   您可以使用 <xref:System.Xml.XmlReader.Create%2A?displayProperty=nameWithType> 方法建立物件，並且使用 <xref:System.Xml.XmlReaderSettings> 類別來指定此物件上所要啟用的功能集合。|  
 |<xref:System.Xml.XmlWriter?displayProperty=nameWithType>|資料流形式|-   提供快速、非快取的順向方式來產生 XML 資料。<br />-   您可以使用 <xref:System.Xml.XmlWriter.Create%2A?displayProperty=nameWithType> 方法建立物件，並且使用 <xref:System.Xml.XmlWriterSettings> 類別來指定此物件上所要啟用的功能集合。|  
-|<xref:System.Xml.XmlDocument?displayProperty=nameWithType>|記憶體中|-   實作 [W3C 文件物件模型 (DOM) 層級 1 核心](http://www.w3.org/TR/REC-DOM-Level-1/level-one-core.html)和 [DOM 層級 2 核心](http://www.w3.org/TR/DOM-Level-2-Core/)建議。<br />-   您可以使用以常用 DOM 模型為基礎的方法與屬性來建立、插入、移除及修改節點。<br />-   如果您要修改現有的程式碼來利用 W3C DOM，請使用這個選項。|  
+|<xref:System.Xml.XmlDocument?displayProperty=nameWithType>|記憶體中|-   實作 [W3C 文件物件模型 (DOM) 層級 1 核心](https://www.w3.org/TR/REC-DOM-Level-1/level-one-core.html)和 [DOM 層級 2 核心](https://www.w3.org/TR/DOM-Level-2-Core/)建議。<br />-   您可以使用以常用 DOM 模型為基礎的方法與屬性來建立、插入、移除及修改節點。<br />-   如果您要修改現有的程式碼來利用 W3C DOM，請使用這個選項。|  
 |<xref:System.Xml.XPath.XPathNavigator?displayProperty=nameWithType>|記憶體中|-   使用資料指標模型提供幾個編輯選項和導覽功能。<br />-   XML 文件可包含在 <xref:System.Xml.XPath.XPathDocument> 或 <xref:System.Xml.XmlDocument> 物件中。<br />-   針對 XML 的唯讀處理提供了絕佳的效能。<br />-   如果您要修改包含 XPath 查詢或 XSLT 轉換的現有程式碼，請使用這個選項。|  
 |<xref:System.Xml.Xsl.XslCompiledTransform>|記憶體中|-   提供使用 XSL 轉換來轉換 XML 資料的選項。<br />-    [XSLT 編譯器 (xsltc.exe)](../../../../docs/standard/data/xml/xslt-compiler-xsltc-exe.md) 可讓您在應用程式中參考先行編譯的轉換。|  
   

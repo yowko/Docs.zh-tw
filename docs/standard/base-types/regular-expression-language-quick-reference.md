@@ -1,12 +1,12 @@
 ---
-title: "規則運算式語言 - 快速參考"
-ms.custom: 
+title: 規則運算式語言 - 快速參考
+ms.custom: ''
 ms.date: 03/30/2017
 ms.prod: .net
-ms.reviewer: 
-ms.suite: 
+ms.reviewer: ''
+ms.suite: ''
 ms.technology: dotnet-standard
-ms.tgt_pltfrm: 
+ms.tgt_pltfrm: ''
 ms.topic: article
 f1_keywords:
 - VS.RegularExpressionBuilder
@@ -20,18 +20,18 @@ helpviewer_keywords:
 - cheat sheet
 - .NET Framework regular expressions, language elements
 ms.assetid: 930653a6-95d2-4697-9d5a-52d11bb6fd4c
-caps.latest.revision: 
+caps.latest.revision: 56
 author: rpetrusha
 ms.author: ronpet
 manager: wpickett
 ms.workload:
 - dotnet
 - dotnetcore
-ms.openlocfilehash: a0fed14784327c6fe16f083a22471b56032b6b5d
-ms.sourcegitcommit: e7f04439d78909229506b56935a1105a4149ff3d
+ms.openlocfilehash: b8e43264619158ed9325875d9843e322e08872a4
+ms.sourcegitcommit: 2e8acae16ae802f2d6d04e3ce0a6dbf04e476513
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 12/23/2017
+ms.lasthandoff: 04/18/2018
 ---
 # <a name="regular-expression-language---quick-reference"></a>規則運算式語言 - 快速參考
 <a name="top"></a>規則運算式是規則運算式引擎嘗試在輸入文字中比對的模式。 模式是由一個或多個字元常值、運算子或建構所組成。  如需簡介，請參閱 [.NET 規則運算式](../../../docs/standard/base-types/regular-expressions.md)。  
@@ -51,8 +51,8 @@ ms.lasthandoff: 12/23/2017
   
  我們也有用兩種格式提供此資訊，可讓您下載及列印，以方便參考。  
   
- [以 Word (.docx) 格式下載](http://download.microsoft.com/download/D/2/4/D240EBF6-A9BA-4E4F-A63F-AEB6DA0B921C/Regular%20expressions%20quick%20reference.docx)  
- [下載 PDF (.pdf) 格式](http://download.microsoft.com/download/D/2/4/D240EBF6-A9BA-4E4F-A63F-AEB6DA0B921C/Regular%20expressions%20quick%20reference.pdf)  
+ [下載 Word (.docx) 格式](https://download.microsoft.com/download/D/2/4/D240EBF6-A9BA-4E4F-A63F-AEB6DA0B921C/Regular%20expressions%20quick%20reference.docx)  
+ [下載 PDF (.pdf) 格式](https://download.microsoft.com/download/D/2/4/D240EBF6-A9BA-4E4F-A63F-AEB6DA0B921C/Regular%20expressions%20quick%20reference.pdf)  
   
 <a name="character_escapes"></a>   
 ## <a name="character-escapes"></a>逸出字元  
@@ -149,8 +149,8 @@ ms.lasthandoff: 12/23/2017
 |`+?`|比對上一個項目一次或多次，但越少次越好。|`"be+?"`|"been" 中的 "be"、"bent" 中的 "be"|  
 |`??`|比對上一個項目零次或一次，但越少次越好。|`"rai??n"`|"ran"、"rain"|  
 |`{` *n* `}?`|比對前一個項目剛好 *n* 次。|`",\d{3}?"`|"1,043.6" 中的 ",043"、"9,876,543,210" 中的 ",876"、",543" 和 ",210"|  
-|`{` *n* `,}?`|比對上一個項目至少 *n* 次，但愈少次愈好。|`"\d{2,}?"`|"166"、"29"、"1930"|  
-|`{` *n* `,` *m* `}?`|比對前一個項目 *n* 次到 *m* 次，但愈少次愈好。|`"\d{3,5}?"`|"166"、"17668"<br /><br /> "193024" 中的 "193"、"024"|  
+|`{` *n* `,}?`|比對前一個項目至少 *n* 次，但愈少次愈好。|`"\d{2,}?"`|"166"、"29"、"1930"|  
+|`{` *n* `,` *m* `}?`|比對前一個項目 *n* 次到 *m* 次，但越少次越好。|`"\d{3,5}?"`|"166"、"17668"<br /><br /> "193024" 中的 "193"、"024"|  
   
  [回到頁首](#top)  
   
@@ -232,5 +232,5 @@ ms.lasthandoff: 12/23/2017
  [規則運算式](regular-expressions.md)  
  [規則運算式類別](the-regular-expression-object-model.md)  
  [規則運算式範例](regular-expression-examples.md)  
- [規則運算式 - 快速參考 (以 Word 格式下載)](http://download.microsoft.com/download/D/2/4/D240EBF6-A9BA-4E4F-A63F-AEB6DA0B921C/Regular%20expressions%20quick%20reference.docx)  
- [規則運算式 - 快速參考 (以 PDF 格式下載)](http://download.microsoft.com/download/D/2/4/D240EBF6-A9BA-4E4F-A63F-AEB6DA0B921C/Regular%20expressions%20quick%20reference.pdf)
+ [規則運算式 - 快速參考 (以 Word 格式下載)](https://download.microsoft.com/download/D/2/4/D240EBF6-A9BA-4E4F-A63F-AEB6DA0B921C/Regular%20expressions%20quick%20reference.docx)  
+ [規則運算式 - 快速參考 (以 PDF 格式下載)](https://download.microsoft.com/download/D/2/4/D240EBF6-A9BA-4E4F-A63F-AEB6DA0B921C/Regular%20expressions%20quick%20reference.pdf)
