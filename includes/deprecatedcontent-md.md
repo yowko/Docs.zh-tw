@@ -1,0 +1,1 @@
+此資料討論已被汰換的類型及命名空間。 如需詳細資訊，請參閱 [Windows Workflow Foundation 4.5 中即將淘汰的類型](http://aka.ms/wfdeprecatedtypes)。
