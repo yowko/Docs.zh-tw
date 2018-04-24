@@ -1,2 +1,0 @@
-> [!NOTE]
->  N:Microsoft.VisualBasic.Compatibility.VB6?qualifyHint=False&autoUpgrade=True 命名空間中的函式和物件會供這些工具使用，以從 Visual Basic 6.0 升級至 Visual Basic 2008。 在大多數情況下，這些函式和物件會複製在 .NET Framework 其他命名空間中可以找到的功能。 只有當 Visual Basic 6.0 程式碼模型與 .NET Framework 實作有顯著差異時，才會需要這些函式和物件。

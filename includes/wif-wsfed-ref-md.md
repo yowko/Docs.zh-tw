@@ -1,1 +1,0 @@
-如需這個類別所代表訊息的詳細資訊，請參閱下列規格的第 13 節：[Web 服務同盟語言 (WS-同盟) 1.2 版](http://go.microsoft.com/fwlink/?LinkID=210152) (http://go.microsoft.com/fwlink/?LinkID=210152)。
