@@ -1,53 +1,53 @@
 ---
-title: "XSLT 擴充物件"
-ms.custom: 
+title: XSLT 擴充物件
+ms.custom: ''
 ms.date: 03/30/2017
 ms.prod: .net
-ms.reviewer: 
-ms.suite: 
+ms.reviewer: ''
+ms.suite: ''
 ms.technology: dotnet-standard
-ms.tgt_pltfrm: 
+ms.tgt_pltfrm: ''
 ms.topic: article
 ms.assetid: a4ebdbad-087c-4cfe-acc0-17c48142f81a
-caps.latest.revision: 
+caps.latest.revision: 3
 author: mairaw
 ms.author: mairaw
 manager: wpickett
 ms.workload:
 - dotnet
 - dotnetcore
-ms.openlocfilehash: 18106b74c19ffdfc33176a12bec07daf2b19b17e
-ms.sourcegitcommit: c0dd436f6f8f44dc80dc43b07f6841a00b74b23f
+ms.openlocfilehash: 72b1605c6bc5a0f3cbc4417d043ab21bf0bb787e
+ms.sourcegitcommit: 2e8acae16ae802f2d6d04e3ce0a6dbf04e476513
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 01/19/2018
+ms.lasthandoff: 04/18/2018
 ---
-# <a name="xslt-extension-objects"></a><span data-ttu-id="05663-102">XSLT 擴充物件</span><span class="sxs-lookup"><span data-stu-id="05663-102">XSLT Extension Objects</span></span>
-<span data-ttu-id="05663-103">擴充物件可用來擴充樣式表的功能。</span><span class="sxs-lookup"><span data-stu-id="05663-103">Extension objects are used to extend the functionality of style sheets.</span></span> <span data-ttu-id="05663-104"><xref:System.Xml.Xsl.XsltArgumentList> 類別會維護擴充物件。</span><span class="sxs-lookup"><span data-stu-id="05663-104">Extension objects are maintained by the <xref:System.Xml.Xsl.XsltArgumentList> class.</span></span>  
+# <a name="xslt-extension-objects"></a><span data-ttu-id="be52d-102">XSLT 擴充物件</span><span class="sxs-lookup"><span data-stu-id="be52d-102">XSLT Extension Objects</span></span>
+<span data-ttu-id="be52d-103">擴充物件可用來擴充樣式表的功能。</span><span class="sxs-lookup"><span data-stu-id="be52d-103">Extension objects are used to extend the functionality of style sheets.</span></span> <span data-ttu-id="be52d-104"><xref:System.Xml.Xsl.XsltArgumentList> 類別會維護擴充物件。</span><span class="sxs-lookup"><span data-stu-id="be52d-104">Extension objects are maintained by the <xref:System.Xml.Xsl.XsltArgumentList> class.</span></span>  
   
- <span data-ttu-id="05663-105">以下是使用擴充物件而不使用內嵌指令碼的優點：</span><span class="sxs-lookup"><span data-stu-id="05663-105">The following are advantages to using an extension object rather than embedded script:</span></span>  
+ <span data-ttu-id="be52d-105">以下是使用擴充物件而不使用內嵌指令碼的優點：</span><span class="sxs-lookup"><span data-stu-id="be52d-105">The following are advantages to using an extension object rather than embedded script:</span></span>  
   
--   <span data-ttu-id="05663-106">提供較佳的類別封裝和重複使用。</span><span class="sxs-lookup"><span data-stu-id="05663-106">Provides better encapsulation and reuse of classes.</span></span>  
+-   <span data-ttu-id="be52d-106">提供較佳的類別封裝和重複使用。</span><span class="sxs-lookup"><span data-stu-id="be52d-106">Provides better encapsulation and reuse of classes.</span></span>  
   
--   <span data-ttu-id="05663-107">允許樣式表更簡潔且更易於維護。</span><span class="sxs-lookup"><span data-stu-id="05663-107">Allows style sheets to be smaller and more maintainable.</span></span>  
+-   <span data-ttu-id="be52d-107">允許樣式表更簡潔且更易於維護。</span><span class="sxs-lookup"><span data-stu-id="be52d-107">Allows style sheets to be smaller and more maintainable.</span></span>  
   
- <span data-ttu-id="05663-108">使用 <xref:System.Xml.Xsl.XsltArgumentList> 方法，將 XSLT 擴充物件加入至 <xref:System.Xml.Xsl.XsltArgumentList.AddExtensionObject%2A> 物件。</span><span class="sxs-lookup"><span data-stu-id="05663-108">XSLT extension objects are added to the <xref:System.Xml.Xsl.XsltArgumentList> object using the <xref:System.Xml.Xsl.XsltArgumentList.AddExtensionObject%2A> method.</span></span> <span data-ttu-id="05663-109">限定名稱和命名空間 URI 於當時與擴充物件產生關聯。</span><span class="sxs-lookup"><span data-stu-id="05663-109">A qualified name and namespace URI are associated with the extension object at that time.</span></span>  
+ <span data-ttu-id="be52d-108">使用 <xref:System.Xml.Xsl.XsltArgumentList> 方法，將 XSLT 擴充物件加入至 <xref:System.Xml.Xsl.XsltArgumentList.AddExtensionObject%2A> 物件。</span><span class="sxs-lookup"><span data-stu-id="be52d-108">XSLT extension objects are added to the <xref:System.Xml.Xsl.XsltArgumentList> object using the <xref:System.Xml.Xsl.XsltArgumentList.AddExtensionObject%2A> method.</span></span> <span data-ttu-id="be52d-109">限定名稱和命名空間 URI 於當時與擴充物件產生關聯。</span><span class="sxs-lookup"><span data-stu-id="be52d-109">A qualified name and namespace URI are associated with the extension object at that time.</span></span>  
   
 > [!NOTE]
->  <span data-ttu-id="05663-110">呼叫 <xref:System.Xml.Xsl.XsltArgumentList.AddExtensionObject%2A> 方法，需要 FullTrust 使用權限集合。</span><span class="sxs-lookup"><span data-stu-id="05663-110">The FullTrust permission set is required to call the <xref:System.Xml.Xsl.XsltArgumentList.AddExtensionObject%2A> method.</span></span> <span data-ttu-id="05663-111">如需詳細資訊，請參閱[程式碼存取安全性](http://msdn.microsoft.com/library/23a20143-241d-4fe5-9d9f-3933fd594c03)和 [NIB：具名使用權限集合](http://msdn.microsoft.com/library/08250d67-c99d-4ab0-8d2b-b0e12019f6e3)。</span><span class="sxs-lookup"><span data-stu-id="05663-111">For more information, see [Code Access Security](http://msdn.microsoft.com/library/23a20143-241d-4fe5-9d9f-3933fd594c03) and [NIB: Named Permission Sets](http://msdn.microsoft.com/library/08250d67-c99d-4ab0-8d2b-b0e12019f6e3).</span></span>  
+>  <span data-ttu-id="be52d-110">呼叫 <xref:System.Xml.Xsl.XsltArgumentList.AddExtensionObject%2A> 方法，需要 FullTrust 使用權限集合。</span><span class="sxs-lookup"><span data-stu-id="be52d-110">The FullTrust permission set is required to call the <xref:System.Xml.Xsl.XsltArgumentList.AddExtensionObject%2A> method.</span></span> <span data-ttu-id="be52d-111">如需詳細資訊，請參閱[程式碼存取安全性](http://msdn.microsoft.com/library/23a20143-241d-4fe5-9d9f-3933fd594c03)和 [NIB：具名使用權限集合](https://msdn.microsoft.com/library/08250d67-c99d-4ab0-8d2b-b0e12019f6e3)。</span><span class="sxs-lookup"><span data-stu-id="be52d-111">For more information, see [Code Access Security](http://msdn.microsoft.com/library/23a20143-241d-4fe5-9d9f-3933fd594c03) and [NIB: Named Permission Sets](https://msdn.microsoft.com/library/08250d67-c99d-4ab0-8d2b-b0e12019f6e3).</span></span>  
   
- <span data-ttu-id="05663-112">從擴充物件傳回的資料型別，是 `number`、`string`、`Boolean` 及 `node set` 這四種基本 XPath 資料型別之一。</span><span class="sxs-lookup"><span data-stu-id="05663-112">The data types returned from extension objects are one of the four basic XPath data types of `number`, `string`, `Boolean`, and `node set`.</span></span>  
+ <span data-ttu-id="be52d-112">從擴充物件傳回的資料型別，是 `number`、`string`、`Boolean` 及 `node set` 這四種基本 XPath 資料型別之一。</span><span class="sxs-lookup"><span data-stu-id="be52d-112">The data types returned from extension objects are one of the four basic XPath data types of `number`, `string`, `Boolean`, and `node set`.</span></span>  
   
- <span data-ttu-id="05663-113">`params` 類別目前不支援任何允許傳遞未指定的參數數目，並以 <xref:System.Xml.Xsl.XslCompiledTransform> 關鍵字定義的方法。</span><span class="sxs-lookup"><span data-stu-id="05663-113">Any method that is defined with the `params` keyword, which allows an unspecified number of parameters to be passed, is not currently supported by the <xref:System.Xml.Xsl.XslCompiledTransform> class.</span></span> <span data-ttu-id="05663-114">使用以 `params` 關鍵字定義之任何方法的 XSLT 樣式表將無法正常運作。</span><span class="sxs-lookup"><span data-stu-id="05663-114">XSLT style sheets that utilize any method defined with the `params` keyword will not work correctly.</span></span> <span data-ttu-id="05663-115">如需詳細資訊，請查看 [params](~/docs/csharp/language-reference/keywords/params.md)。</span><span class="sxs-lookup"><span data-stu-id="05663-115">For details, see [params](~/docs/csharp/language-reference/keywords/params.md).</span></span>  
+ <span data-ttu-id="be52d-113">`params` 類別目前不支援任何允許傳遞未指定的參數數目，並以 <xref:System.Xml.Xsl.XslCompiledTransform> 關鍵字定義的方法。</span><span class="sxs-lookup"><span data-stu-id="be52d-113">Any method that is defined with the `params` keyword, which allows an unspecified number of parameters to be passed, is not currently supported by the <xref:System.Xml.Xsl.XslCompiledTransform> class.</span></span> <span data-ttu-id="be52d-114">使用以 `params` 關鍵字定義之任何方法的 XSLT 樣式表將無法正常運作。</span><span class="sxs-lookup"><span data-stu-id="be52d-114">XSLT style sheets that utilize any method defined with the `params` keyword will not work correctly.</span></span> <span data-ttu-id="be52d-115">如需詳細資訊，請查看 [params](~/docs/csharp/language-reference/keywords/params.md)。</span><span class="sxs-lookup"><span data-stu-id="be52d-115">For details, see [params](~/docs/csharp/language-reference/keywords/params.md).</span></span>  
   
-### <a name="to-use-an-xslt-extension-object"></a><span data-ttu-id="05663-116">使用 XSLT 擴充物件</span><span class="sxs-lookup"><span data-stu-id="05663-116">To use an XSLT extension object</span></span>  
+### <a name="to-use-an-xslt-extension-object"></a><span data-ttu-id="be52d-116">使用 XSLT 擴充物件</span><span class="sxs-lookup"><span data-stu-id="be52d-116">To use an XSLT extension object</span></span>  
   
-1.  <span data-ttu-id="05663-117">使用 <xref:System.Xml.Xsl.XsltArgumentList> 方法，建立 <xref:System.Xml.Xsl.XsltArgumentList.AddExtensionObject%2A> 物件並加入擴充物件。</span><span class="sxs-lookup"><span data-stu-id="05663-117">Create an <xref:System.Xml.Xsl.XsltArgumentList> object and add the extension object using <xref:System.Xml.Xsl.XsltArgumentList.AddExtensionObject%2A> method.</span></span>  
+1.  <span data-ttu-id="be52d-117">使用 <xref:System.Xml.Xsl.XsltArgumentList> 方法，建立 <xref:System.Xml.Xsl.XsltArgumentList.AddExtensionObject%2A> 物件並加入擴充物件。</span><span class="sxs-lookup"><span data-stu-id="be52d-117">Create an <xref:System.Xml.Xsl.XsltArgumentList> object and add the extension object using <xref:System.Xml.Xsl.XsltArgumentList.AddExtensionObject%2A> method.</span></span>  
   
-2.  <span data-ttu-id="05663-118">從樣式表呼叫擴充物件。</span><span class="sxs-lookup"><span data-stu-id="05663-118">Call the extension object from the style sheet.</span></span>  
+2.  <span data-ttu-id="be52d-118">從樣式表呼叫擴充物件。</span><span class="sxs-lookup"><span data-stu-id="be52d-118">Call the extension object from the style sheet.</span></span>  
   
-3.  <span data-ttu-id="05663-119">將 <xref:System.Xml.Xsl.XsltArgumentList> 物件傳遞至 <xref:System.Xml.Xsl.XslCompiledTransform.Transform%2A> 方法。</span><span class="sxs-lookup"><span data-stu-id="05663-119">Pass the <xref:System.Xml.Xsl.XsltArgumentList> object to the <xref:System.Xml.Xsl.XslCompiledTransform.Transform%2A> method.</span></span>  
+3.  <span data-ttu-id="be52d-119">將 <xref:System.Xml.Xsl.XsltArgumentList> 物件傳遞至 <xref:System.Xml.Xsl.XslCompiledTransform.Transform%2A> 方法。</span><span class="sxs-lookup"><span data-stu-id="be52d-119">Pass the <xref:System.Xml.Xsl.XsltArgumentList> object to the <xref:System.Xml.Xsl.XslCompiledTransform.Transform%2A> method.</span></span>  
   
-## <a name="see-also"></a><span data-ttu-id="05663-120">請參閱</span><span class="sxs-lookup"><span data-stu-id="05663-120">See Also</span></span>  
- [<span data-ttu-id="05663-121">XSLT 轉換</span><span class="sxs-lookup"><span data-stu-id="05663-121">XSLT Transformations</span></span>](../../../../docs/standard/data/xml/xslt-transformations.md)  
- [<span data-ttu-id="05663-122">XSLT 安全性考量</span><span class="sxs-lookup"><span data-stu-id="05663-122">XSLT Security Considerations</span></span>](../../../../docs/standard/data/xml/xslt-security-considerations.md)
+## <a name="see-also"></a><span data-ttu-id="be52d-120">請參閱</span><span class="sxs-lookup"><span data-stu-id="be52d-120">See Also</span></span>  
+ [<span data-ttu-id="be52d-121">XSLT 轉換</span><span class="sxs-lookup"><span data-stu-id="be52d-121">XSLT Transformations</span></span>](../../../../docs/standard/data/xml/xslt-transformations.md)  
+ [<span data-ttu-id="be52d-122">XSLT 安全性考量</span><span class="sxs-lookup"><span data-stu-id="be52d-122">XSLT Security Considerations</span></span>](../../../../docs/standard/data/xml/xslt-security-considerations.md)
