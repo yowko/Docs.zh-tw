@@ -1,7 +1,8 @@
 ---
 title: .NET Standard 的新功能
+description: 本文摘要說明 .NET Standard 的每個新版本中的新功能和增強功能。
 ms.custom: updateeachrelease
-ms.date: 11/08/2017
+ms.date: 04/12/2018
 ms.prod: .net
 ms.topic: article
 ms.technology: dotnet-standard
@@ -11,15 +12,15 @@ manager: wpickett
 ms.workload:
 - dotnet
 - dotnetcore
-ms.openlocfilehash: 3a5833bdfcf1e3433ea82403908e9a06a88cde27
-ms.sourcegitcommit: e7f04439d78909229506b56935a1105a4149ff3d
+ms.openlocfilehash: 13efc4a927d744662ba8d2e1210d5f8fc166a472
+ms.sourcegitcommit: 9a4fe1a1c37b26532654b4bbe22d702237950009
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 12/23/2017
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="whats-new-in-the-net-standard"></a>.NET Standard 的新功能
 
-.NET Standard 是定義 API 的版本集之正式規格，必須能在遵守該版本標準的 .NET 實作中取得。 .NET Standard 是以程式庫開發人員為目標。 以 .NET Standard 版本為目標的程式庫可以用於任何支援該標準的版本之 .NET Framework、.NET Core 或 Xamarin 實作。
+.NET Standard 是定義 API 的版本集正式規格，必須能在遵守該版本標準的 .NET 實作中取得。 .NET Standard 是以程式庫開發人員為目標。 以 .NET Standard 版本為目標的程式庫可以用於任何支援該標準的版本之 .NET Framework、.NET Core 或 Xamarin 實作。
 
 .NET Standard 的最新版本為 2.0。 它包含在 .NET Core 2.0 SDK 中，也包含在已安裝 .NET Core 工作負載的 Visual Studio 2017 15.3 版中。
 
@@ -27,21 +28,21 @@ ms.lasthandoff: 12/23/2017
 
 .NET Standard 2.0 支援下列.NET 實作：
 
-- .NET Core 2.0
-- .NET Framework 4.6.1
-- Mono 5.4
-- Xamarin.iOS 10.14
-- Xamarin.Mac 3.8
-- Xamarin.Android 8.0
-- 通用 Windows 平台 10.0.16299
+- .NET Core 2.0 或更新版本
+- .NET Framework 4.6.1 或更新版本
+- Mono 5.4 或更新版本
+- Xamarin.iOS 10.14 或更新版本
+- Xamarin.Mac 3.8 或更新版本
+- Xamarin.Android 8.0 或更新版本
+- 通用 Windows 平台 10.0.16299 或更新版本
 
 ## <a name="whats-new-in-the-net-standard-20"></a>.NET Standard 2.0 的新功能
- 
+
 .NET Standard 2.0 包含下列新功能：
 
-**一組大幅擴充的 API**
+### <a name="a-vastly-expanded-set-of-apis"></a>一組大幅擴充的 API
 
-透過 1.6 版，.NET Standard 包含相較小的 API 子集。 其中排除那些經常用於 .NET Framework 或 Xamarin 的許多 API。 這讓開發變得複雜，因為當開發人員開發以多個 .NET 實作為目標的應用程式和程式庫時，他們必須尋找熟悉的 API 之合適替代方案。 .NET Standard 2.0 藉由新增比在 .NET Standard 1.6 (前一版本) 中還多 20,000 多個 API 來解決此限制。 如需新增到 .NET Standard 2.0 的 API 清單，請參閱 [.NET Standard 2.0 與 1.6 的差異](https://raw.githubusercontent.com/dotnet/standard/master/docs/versions/netstandard2.0_diff.md) \(英文\)。 
+透過 1.6 版，.NET Standard 包含相較小的 API 子集。 其中排除那些經常用於 .NET Framework 或 Xamarin 的許多 API。 這讓開發變得複雜，因為當開發人員開發以多個 .NET 實作為目標的應用程式和程式庫時，他們必須尋找熟悉的 API 之合適替代方案。 .NET Standard 2.0 藉由新增比在 .NET Standard 1.6 (前一版本) 中還多 20,000 多個 API 來解決此限制。 如需新增到 .NET Standard 2.0 的 API 清單，請參閱 [.NET Standard 2.0 與 1.6 的差異](https://raw.githubusercontent.com/dotnet/standard/master/docs/versions/netstandard2.0_diff.md) \(英文\)。
 
 一些新增到 .NET Standard 2.0 中 <xref:System> 命名空間的項目包括：
 
@@ -57,37 +58,45 @@ ms.lasthandoff: 12/23/2017
 - 大幅增強 <xref:System.Type> 類別中的功能。
 - 藉由新增包含 <xref:System.Runtime.Serialization.SerializationInfo> 和 <xref:System.Runtime.Serialization.StreamingContext> 參數的例外狀況建構函式，提供例外狀況物件還原序列化更好的支援。
 
-**.NET Framework 程式庫的支援**
+### <a name="support-for-net-framework-libraries"></a>針對 .NET Framework 程式庫的支援
 
 絕大多數的程式庫都是以 .NET Framework 為目標而不是 .NET Standard。 不過，那些程式庫中的大部分呼叫都是呼叫 .NET Standard 2.0 中包含的 API。 從 .NET Standard 2.0 開始，您可以使用[相容性填充碼](https://github.com/dotnet/standard/blob/master/docs/netstandard-20/README.md#assembly-unification) \(英文\) 從 .NET Standard 程式庫存取 .NET Framework。 此相容性層級對開發人員是透明的，您不需要執行任何動作就能利用.NET Framework 程式庫。
 
 唯一的要求是由 .NET Framework Class Library 呼叫的 API 必須包含在 .NET Standard 2.0 中。
 
-**Visual Basic 的支援**
+### <a name="support-for-visual-basic"></a>Visual Basic 的支援
 
-您現在可以在 Visual Basic 中開發 .NET Standard 程式庫。 對於使用已安裝 .NET Core 工作負載的 Visual Studio 2017 15.3 版或更新版本的 Visual Basic 開發人員，Visual Studio 現在包含 .NET Standard Class Library 範本。 對於使用其他開發工具和環境的 Visual Basic 開發人員，您可以使用 [dotnet new](../../core/tools/dotnet-new.md) 命令來建立 .NET Standard 程式庫專案。 如需詳細資訊，請參閱 [.NET Standard 程式庫的工具支援](#tooling)。
+您現在可以在 Visual Basic 中開發 .NET Standard 程式庫。 對於使用已安裝 .NET Core 工作負載的 Visual Studio 2017 15.3 版或更新版本的 Visual Basic 開發人員，Visual Studio 現在包含 .NET Standard Class Library 範本。 對於使用其他開發工具和環境的 Visual Basic 開發人員，您可以使用 [dotnet new](../../core/tools/dotnet-new.md) 命令來建立 .NET Standard 程式庫專案。 如需詳細資訊，請參閱 [.NET Standard 程式庫的工具支援](#tooling-support-for-net-standard-libraries)。
 
-<a name="tooling" />**.NET Standard 程式庫的工具支援**
+### <a name="tooling-support-for-net-standard-libraries"></a>.NET Standard 程式庫的工具支援
 
-隨 .NET Core 2.0 和 .NET Standard 2.0 的發行，Visual Studio 2017 和 [.NET Core 命令列介面 (CLI)](../../core/tools/index.md) 也都包含建立 .NET Standard 程式庫的工具支援。 
+隨 .NET Core 2.0 和 .NET Standard 2.0 的發行，Visual Studio 2017 和 [.NET Core 命令列介面 (CLI)](../../core/tools/index.md) 也都包含建立 .NET Standard 程式庫的工具支援。
 
-如果您安裝包含 **.NET Core 跨平台**工作負載的 Visual Studio，您可以使用專案範本來建立 .NET Standard 2.0 程式庫專案，如下圖所示。 
+如果您安裝包含 **.NET Core 跨平台開發**工作負載的 Visual Studio，就可以使用專案範本來建立 .NET Standard 2.0 程式庫專案，如下圖所示：
 
 # <a name="ctabcsharp"></a>[C#](#tab/csharp)
+
 ![新增 .NET Standard 程式庫專案](./media/std-project-cs.png)
-# <a name="visual-basictabvisual-basic"></a>[Visual Basic](#tab/visual-basic)
-<a name="add-new-net-standard-library-projectmediastd-project-vbpng"></a>![新增 .NET Standard 程式庫專案](./media/std-project-vb.png)
----
 
-如果您是使用 .NET Core CLI，下列 [dotnet new](../../core/tools/dotnet-new.md) 命令會建立以 .NET Standard 2.0 為目標的類別庫專案。
+如果您是使用 .NET Core CLI，下列 [dotnet new](../../core/tools/dotnet-new.md) 命令會建立以 .NET Standard 2.0 為目標的類別庫專案：
 
-```csharp
+```
 dotnet new classlib
 ```
-```vb
+
+# <a name="visual-basictabvb"></a>[Visual Basic](#tab/vb)
+
+![新增 .NET Standard 程式庫專案](./media/std-project-vb.png)
+
+如果您是使用 .NET Core CLI，下列 [dotnet new](../../core/tools/dotnet-new.md) 命令會建立以 .NET Standard 2.0 為目標的類別庫專案：
+
+```
 dotnet new classlib -lang vb
 ```
-  
-## <a name="see-also"></a>請參閱
-[.NET Standard](../net-standard.md)
-[介紹 .NET Standard](https://blogs.msdn.microsoft.com/dotnet/2016/09/26/introducing-net-standard/) \(英文\)
+
+---
+
+## <a name="see-also"></a>另請參閱
+
+[.NET Standard](../net-standard.md)  
+[.NET Standard 簡介](https://blogs.msdn.microsoft.com/dotnet/2016/09/26/introducing-net-standard/)

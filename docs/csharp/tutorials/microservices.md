@@ -1,7 +1,7 @@
 ---
-title: "在 Docker 中裝載的微服務 - C#"
-description: "了解如何建立在 Docker 容器中執行的 ASP.NET Core 服務"
-keywords: ".NET, .NET Core, Docker, C#, ASP.NET, 微服務"
+title: 在 Docker 中裝載的微服務 - C#
+description: 了解如何建立在 Docker 容器中執行的 ASP.NET Core 服務
+keywords: .NET, .NET Core, Docker, C#, ASP.NET, 微服務
 author: BillWagner
 ms.author: wiwagn
 ms.date: 02/03/2017
@@ -10,11 +10,11 @@ ms.prod: .net-core
 ms.technology: dotnet-docker
 ms.devlang: csharp
 ms.assetid: 87e93838-a363-4813-b859-7356023d98ed
-ms.openlocfilehash: d399cdce81350356b71e21d879a4f5b5079f98d8
-ms.sourcegitcommit: 2142a4732bb4ff519b9817db4c24a237b9810d4b
+ms.openlocfilehash: 253b622618ef62c28ac13a287c34b9d9049dd066
+ms.sourcegitcommit: b750a8e3979749b214e7e10c82efb0a0524dfcb1
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 01/05/2018
+ms.lasthandoff: 04/09/2018
 ---
 # <a name="microservices-hosted-in-docker"></a>在 Docker 中裝載的微服務
 
@@ -32,7 +32,7 @@ ms.lasthandoff: 01/05/2018
 * 如何處理傳入 HTTP 要求和產生 HTTP 回應
 * 如何使用可為 Null 的實值型別
 
-您可以[檢視或下載本主題的範例應用程式 (英文)](https://github.com/dotnet/docs/tree/master/samples/csharp/getting-started/WeatherMicroservice)。 如需下載指示，請參閱[範例和教學課程](../../samples-and-tutorials/index.md#viewing-and-downloading-samples)。
+您可以[檢視或下載本主題的範例應用程式 (英文)](https://github.com/dotnet/samples/tree/master/csharp/getting-started/WeatherMicroservice)。 如需下載指示，請參閱[範例和教學課程](../../samples-and-tutorials/index.md#viewing-and-downloading-samples)。
 
 ### <a name="why-docker"></a>為何要使用 Docker？
 
@@ -98,7 +98,7 @@ dotnet build
 dotnet run
 ```
 
-預設組態會接聽 http://localhost:5000 。 您可以開啟瀏覽器，然後瀏覽至該頁面，就會看到「Hello World!」 訊息。
+預設組態會接聽 `http://localhost:5000`。 您可以開啟瀏覽器，然後瀏覽至該頁面，就會看到「Hello World!」 訊息。
 
 ### <a name="anatomy-of-an-aspnet-core-application"></a>ASP.NET Core 應用程式的結構
 

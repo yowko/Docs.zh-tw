@@ -11,11 +11,11 @@ ms.devlang: dotnet
 ms.assetid: 8ad82148-dac8-4b31-9128-b0e9610f4d9b
 ms.workload:
 - dotnetcore
-ms.openlocfilehash: 8c045e5625cee53acc4daa3c9fca524bc953b5a1
-ms.sourcegitcommit: 935d5267c44f9bce801468ef95f44572f1417e8c
+ms.openlocfilehash: d130ef34961d19c450dd7142c8a5996c83465646
+ms.sourcegitcommit: b750a8e3979749b214e7e10c82efb0a0524dfcb1
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 03/28/2018
+ms.lasthandoff: 04/09/2018
 ---
 # <a name="getting-started-with-net-core-on-macos"></a>在 macOS 上開始使用 .NET Core
 
@@ -34,7 +34,7 @@ ms.lasthandoff: 03/28/2018
 
 ## <a name="getting-started"></a>使用者入門
 
-在本教學課程中，您會建立三個專案︰程式庫專案、該程式庫專案的測試，以及利用程式庫的主控台應用程式。 您可以在 GitHub 的 dotnet/docs 存放庫[檢視或下載來源](https://github.com/dotnet/docs/tree/master/samples/core/getting-started/golden)。 如需下載指示，請參閱[範例和教學課程](../../samples-and-tutorials/index.md#viewing-and-downloading-samples)。
+在本教學課程中，您會建立三個專案︰程式庫專案、該程式庫專案的測試，以及利用程式庫的主控台應用程式。 您可以在 GitHub 的 dotnet/samples 存放庫[檢視或下載來源](https://github.com/dotnet/samples/tree/master/core/getting-started/golden)。 如需下載指示，請參閱[範例和教學課程](../../samples-and-tutorials/index.md#viewing-and-downloading-samples)。
 
 啟動 Visual Studio Code。 按下 <kbd>Ctrl</kbd>+<kbd>\`</kbd> (倒引號字元)，或從功能表中選取 [檢視] > [整合式終端機]，以使用 Visual Studio Code 開啟內嵌終端機。 如果您想要在 Visual Studio Code 外部工作，則仍然可以使用總管 [在命令提示字元中開啟] 命令 (Mac 或 Linux 上的 [在終端機中開啟]) 來開啟外部殼層。
 

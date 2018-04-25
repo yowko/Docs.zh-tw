@@ -1,8 +1,9 @@
 ---
-title: "如何：將字串轉換為數值 (C# 程式設計手冊)"
+title: 如何：將字串轉換為數值 (C# 程式設計手冊)
 ms.date: 07/20/2015
 ms.prod: .net
-ms.technology: devlang-csharp
+ms.technology:
+- devlang-csharp
 ms.topic: article
 helpviewer_keywords:
 - conversions [C#]
@@ -10,14 +11,14 @@ helpviewer_keywords:
 - converting strings to int [C#]
 - strings [C#], converting to int
 ms.assetid: 467b9979-86ee-4afd-b734-30299cda91e3
-caps.latest.revision: "34"
+caps.latest.revision: 34
 author: BillWagner
 ms.author: wiwagn
-ms.openlocfilehash: 3dc67bc2f25bba14df0e3ce6859bb8bc9094871c
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.openlocfilehash: c5cecfdf822352d22713985d84cdd7025d0665c8
+ms.sourcegitcommit: b750a8e3979749b214e7e10c82efb0a0524dfcb1
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 04/09/2018
 ---
 # <a name="how-to-convert-a-string-to-a-number-c-programming-guide"></a>如何：將字串轉換為數值 (C# 程式設計手冊)
 您可以使用 <xref:System.Convert> 類別中的方法，或是使用各種數值類型 (int、long、float 等等) 上找到的 `TryParse` 方法，將[字串](../../../csharp/language-reference/keywords/string.md)轉換為數字。  
@@ -58,7 +59,7 @@ ms.lasthandoff: 11/21/2017
  [!code-csharp[csProgGuideTypes#5555](../../../csharp/programming-guide/nullable-types/codesnippet/CSharp/how-to-convert-a-string-to-a-number_1.cs)]  
 [!code-csharp[csProgGuideTypes#24](../../../csharp/programming-guide/nullable-types/codesnippet/CSharp/how-to-convert-a-string-to-a-number_7.cs)]  
   
-## <a name="see-also"></a>另請參閱  
+## <a name="see-also"></a>請參閱  
  [型別](../../../csharp/programming-guide/types/index.md)  
  [如何：判斷字串是否表示數值](../../../csharp/programming-guide/strings/how-to-determine-whether-a-string-represents-a-numeric-value.md)  
  [.NET Framework 4 格式化公用程式](http://code.msdn.microsoft.com/NET-Framework-4-Formatting-9c4dae8d)

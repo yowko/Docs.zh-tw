@@ -1,21 +1,22 @@
 ---
-title: "處理 XML 檔案 (C# 程式設計手冊)"
+title: 處理 XML 檔案 (C# 程式設計手冊)
 ms.date: 07/20/2015
 ms.prod: .net
-ms.technology: devlang-csharp
+ms.technology:
+- devlang-csharp
 ms.topic: article
 helpviewer_keywords:
 - XML processing [C#]
 - XML [C#], processing
 ms.assetid: 60c71193-9dac-4cd3-98c5-100bd0edcc42
-caps.latest.revision: "16"
+caps.latest.revision: 16
 author: BillWagner
 ms.author: wiwagn
-ms.openlocfilehash: e8b4c078ffcf7ba7690b7f3dd61bfab4162dd2cb
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.openlocfilehash: 1e6e983d4fc07aaadc294bc67e146ac600f4c5bc
+ms.sourcegitcommit: b750a8e3979749b214e7e10c82efb0a0524dfcb1
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 04/09/2018
 ---
 # <a name="processing-the-xml-file-c-programming-guide"></a>處理 XML 檔案 (C# 程式設計手冊)
 編譯器會針對程式碼中，標記為要產生文件的每個建構產生識別碼字串。 (如需如何標記程式碼的相關資訊，請參閱[建議使用的文件註解標籤](../../../csharp/programming-guide/xmldoc/recommended-tags-for-documentation-comments.md))。識別碼字串可唯一識別此建構。 處理 XML 檔案的程式可以使用識別碼字串，來識別對應該識別碼且適用於該文件的 .NET Framework 中繼資料/反映項目。  
@@ -24,7 +25,7 @@ ms.lasthandoff: 11/21/2017
   
  編譯器在產生識別碼字串時會遵守下列規則：  
   
--   字串中不能有空格。  
+-   字串中沒有空白字元。  
   
 -   識別碼字串的第一個部分會識別所識別的成員類型，格式為單一字元後面接著一個冒號。 使用的成員類型如下：  
   
@@ -74,7 +75,7 @@ ms.lasthandoff: 11/21/2017
   
 -   僅針對轉換運算子 (op_Implicit 和 op_Explicit)，此方法的傳回值會編碼為 ' ~'，後面接著傳回類型，如上述編碼所示。  
   
--   針對泛型類型，類型的名稱後面將接著反引號，然後是表示泛型類型參數數目的數字。  例如：  
+-   針對泛型類型，類型的名稱後面將接著反引號，然後是表示泛型類型參數數目的數字。  例如，套用至物件的  
   
      `<member name="T:SampleClass`2">` is the tag for a type that is defined as `public class SampleClass\<T, U>`。  
   
@@ -85,7 +86,7 @@ ms.lasthandoff: 11/21/2017
   
  [!code-csharp[csProgGuidePointers#21](../../../csharp/programming-guide/unsafe-code-pointers/codesnippet/CSharp/processing-the-xml-file_1.cs)]  
   
-## <a name="see-also"></a>另請參閱  
+## <a name="see-also"></a>請參閱  
  [C# 程式設計指南](../../../csharp/programming-guide/index.md)  
- [/doc （C# 編譯器選項）](../../../csharp/language-reference/compiler-options/doc-compiler-option.md)  
+ [/doc (C# 編譯器選項)](../../../csharp/language-reference/compiler-options/doc-compiler-option.md)  
  [XML 文件註解](../../../csharp/programming-guide/xmldoc/xml-documentation-comments.md)

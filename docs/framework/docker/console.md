@@ -1,19 +1,19 @@
 ---
-title: "在 Docker 中執行主控台應用程式"
-description: "了解如何擷取現有的 .NET Framework 主控台應用程式並在 Windows Docker 容器中執行。"
+title: 在 Docker 中執行主控台應用程式
+description: 了解如何擷取現有的 .NET Framework 主控台應用程式並在 Windows Docker 容器中執行。
 author: spboyer
-keywords: ".NET, 容器, 主控台, 應用程式"
+keywords: .NET, 容器, 主控台, 應用程式
 ms.date: 09/28/2016
 ms.topic: article
 ms.prod: .net-framework
 ms.technology: vs-ide-deployment
 ms.devlang: dotnet
 ms.assetid: 85cca1d5-c9a4-4eb2-93e6-4f878de07fd7
-ms.openlocfilehash: 037d94452dd62c06fe6d8ac7aea1143f52b96d32
-ms.sourcegitcommit: 685143b62385500f59bc36274b8adb191f573a16
+ms.openlocfilehash: 7990ed03028ea9361a8b1760b237b8ed2f9d204d
+ms.sourcegitcommit: b750a8e3979749b214e7e10c82efb0a0524dfcb1
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 12/09/2017
+ms.lasthandoff: 04/09/2018
 ---
 # <a name="running-console-applications-in-windows-containers"></a>在 Windows 容器中執行主控台應用程式
 
@@ -25,7 +25,7 @@ ms.lasthandoff: 12/09/2017
 
 除了答案之外，也已將 `Environment.MachineName` 加入回應，以顯示在本機執行應用程式與在 Windows 容器中執行應用程式之間的差異。 在本機執行應用程式時，應該傳回您的本機電腦名稱；在 Windows 容器中執行時，則會傳回容器的工作階段識別碼。
 
-[完整範例 (英文)](https://github.com/dotnet/docs/tree/master/samples/framework/docker/ConsoleRandomAnswerGenerator) 可在 GitHub 上的 dotnet/docs 儲存機制取得。 如需下載指示，請參閱[範例和教學課程](../../samples-and-tutorials/index.md#viewing-and-downloading-samples)。
+[完整範例](https://github.com/dotnet/samples/tree/master/framework/docker/ConsoleRandomAnswerGenerator) (英文) 可在 GitHub 上的 dotnet/samples 存放庫取得。 如需下載指示，請參閱[範例和教學課程](../../samples-and-tutorials/index.md#viewing-and-downloading-samples)。
 
 您必須先熟悉一些 Docker 術語，才能開始將應用程式移至容器的工作。
 

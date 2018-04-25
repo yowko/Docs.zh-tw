@@ -1,21 +1,22 @@
 ---
-title: "載入或剖析 XML 時保留空白字元1"
-ms.custom: 
+title: 載入或剖析 XML 時保留空白字元1
+ms.custom: ''
 ms.date: 07/20/2015
 ms.prod: .net
-ms.reviewer: 
-ms.suite: 
-ms.technology: devlang-csharp
+ms.reviewer: ''
+ms.suite: ''
+ms.technology:
+- devlang-csharp
 ms.topic: article
 ms.assetid: f3ff58c4-55aa-4fcd-b933-e3a2ee6e706c
-caps.latest.revision: "3"
+caps.latest.revision: 3
 author: BillWagner
 ms.author: wiwagn
-ms.openlocfilehash: bc4923ef5ea526de3c988636cd766c3b012c902e
-ms.sourcegitcommit: bd1ef61f4bb794b25383d3d72e71041a5ced172e
+ms.openlocfilehash: 74576fbc6707607ff9b2557b0825110e32c0b897
+ms.sourcegitcommit: b750a8e3979749b214e7e10c82efb0a0524dfcb1
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/18/2017
+ms.lasthandoff: 04/09/2018
 ---
 # <a name="preserving-white-space-while-loading-or-parsing-xml"></a>載入或剖析 XML 時保留空白字元
 這個主題描述如何控制 [!INCLUDE[sqltecxlinq](~/includes/sqltecxlinq-md.md)] 的空白字元行為。  
@@ -24,7 +25,7 @@ ms.lasthandoff: 10/18/2017
   
  其他常見案例為讀取與修改已經過刻意縮排的 XML。 您可能不想用任何方式變更這個縮排。 在 [!INCLUDE[sqltecxlinq](~/includes/sqltecxlinq-md.md)] 中，如果您在載入或剖析 XML 時保留空白字元，並在序列化 XML 時停用格式化，就可以達到這個效果。  
   
- 這個主題描述填入 XML 樹狀之方法的空白字元行為。 如需序列化 XML 樹狀結構時控制空白字元的資訊，請參閱[序列化時保留空白字元](../../../../csharp/programming-guide/concepts/linq/preserving-white-space-while-serializing.md)。  
+ 這個主題描述填入 XML 樹狀結構之方法的空白字元行為。 如需序列化 XML 樹狀結構時控制空白字元的資訊，請參閱[序列化時保留空白字元](../../../../csharp/programming-guide/concepts/linq/preserving-white-space-while-serializing.md)。  
   
 ## <a name="behavior-of-methods-that-populate-xml-trees"></a>填入 XML 樹狀之方法的行為  
  下列 <xref:System.Xml.Linq.XElement> 和 <xref:System.Xml.Linq.XDocument> 類別中的方法會填入 XML 樹狀結構。 您可以從檔案、<xref:System.IO.TextReader>、<xref:System.Xml.XmlReader> 或字串填入 XML 樹狀結構：  
@@ -45,5 +46,5 @@ ms.lasthandoff: 10/18/2017
   
  您可以使用 <xref:System.Xml.XmlWriter> 來建立 XML 樹狀結構。 寫入到 <xref:System.Xml.XmlWriter> 中的節點會填入樹狀結構中。 不過，當您使用這個方法建置 XML 樹狀時，不管節點是否為空白字元，也不管空白字元是否有效，都會保留所有節點。  
   
-## <a name="see-also"></a>另請參閱  
+## <a name="see-also"></a>請參閱  
  [剖析 XML (C#)](../../../../csharp/programming-guide/concepts/linq/parsing-xml.md)

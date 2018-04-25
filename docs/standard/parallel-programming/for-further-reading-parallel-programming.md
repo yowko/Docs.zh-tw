@@ -18,25 +18,23 @@ manager: wpickett
 ms.workload:
 - dotnet
 - dotnetcore
-ms.openlocfilehash: 304522aa791e78dda6a67ed4f4e9b6cc33505dff
-ms.sourcegitcommit: e7f04439d78909229506b56935a1105a4149ff3d
+ms.openlocfilehash: f09cbe788efb3baddf7b144c178e42a22c17bf95
+ms.sourcegitcommit: b750a8e3979749b214e7e10c82efb0a0524dfcb1
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 12/23/2017
+ms.lasthandoff: 04/09/2018
 ---
 # <a name="for-further-reading-parallel-programming"></a>進一步閱讀 (平行程式設計)
 下列資源包含 .NET Framework 中平行程式設計的其他相關資訊：  
   
--   MSDN 網站上的 [Parallel Computing 開發人員中心](http://go.microsoft.com/fwlink/?LinkID=160570)提供了有關 .NET Framework 與原生 C++ 中平行程式設計的最新內容與論壇文章的連結。  
+-   MSDN 網站上的 [Parallel Computing 開發人員中心](https://msdn.microsoft.com/vstudio/bb964701)提供了有關 .NET Framework 與原生 C++ 中平行程式設計的內容與論壇文章的連結。  
   
--   MSDN 部落格網站上的[使用 .NET 的平行程式設計部落格](http://go.microsoft.com/fwlink/?LinkID=169627)包含許多有關 .NET Framework 中平行程式設計的深度文章。  
+-   MSDN 部落格網站上的[使用 .NET 的平行程式設計部落格](https://blogs.msdn.microsoft.com/pfxteam/)包含許多有關 .NET Framework 中平行程式設計的深度文章。  
   
--   MSDN 部落格網站上的[並行視覺化檢視部落格](http://go.microsoft.com/fwlink/?LinkID=169630)討論了某些 [!INCLUDE[vs_dev10_long](../../../includes/vs-dev10-long-md.md)] 版本所包含的新型效能分析工具。  
+-   MSDN 論壇網站上的[平行擴充功能論壇](https://social.msdn.microsoft.com/Forums/en-US/home?forum=parallelextensions)是平行程式設計相關問題的問答園地。  
   
--   MSDN 論壇網站上的[平行擴充功能論壇](http://go.microsoft.com/fwlink/?LinkID=169628)是平行程式設計相關問題的問答園地。  
-  
--   MSDN Code Gallery 網站上的[平行擴充功能範例](http://go.microsoft.com/fwlink/?LinkID=165717)網頁包含了許多示範中級和進階平行程式設計技術的範例。  
+-   MSDN Code Gallery 網站上的[平行擴充功能範例](https://code.msdn.microsoft.com/ParExtSamples)網頁包含了許多示範中級和進階平行程式設計技術的範例。  
   
 ## <a name="see-also"></a>請參閱  
  [平行程式設計](../../../docs/standard/parallel-programming/index.md)  
- [平行程式設計模式：了解及套用平行模式與 .NET Framework 4](http://go.microsoft.com/fwlink/?LinkID=185142)
+ [平行程式設計模式：了解及套用平行模式與 .NET Framework 4](https://www.microsoft.com/download/details.aspx?id=19222)

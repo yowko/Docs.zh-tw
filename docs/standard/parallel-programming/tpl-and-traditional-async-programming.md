@@ -21,11 +21,11 @@ manager: wpickett
 ms.workload:
 - dotnet
 - dotnetcore
-ms.openlocfilehash: 50c4f9cfeb135f1046fbb427585897ca99248afd
-ms.sourcegitcommit: e7f04439d78909229506b56935a1105a4149ff3d
+ms.openlocfilehash: 2acfb9a564f3a7bc96ed303f49349afe56ca7fe4
+ms.sourcegitcommit: b750a8e3979749b214e7e10c82efb0a0524dfcb1
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 12/23/2017
+ms.lasthandoff: 04/09/2018
 ---
 # <a name="tpl-and-traditional-net-framework-asynchronous-programming"></a>TPL 和傳統 .NET Framework 非同步程式設計
 .NET Framework 提供下列兩個標準模式執行 I/O 繫結程序和計算繫結程序的非同步作業：  
@@ -127,7 +127,7 @@ ms.lasthandoff: 12/23/2017
  [!code-vb[FromAsync#09](../../../samples/snippets/visualbasic/VS_Snippets_Misc/fromasync/vb/module1.vb#09)]  
   
 ## <a name="using-the-streamextensions-sample-code"></a>使用 StreamExtensions 範例程式碼  
- MSDN 網站上[使用 .NET Framework 4 進行平行程式設計的範例](http://go.microsoft.com/fwlink/?LinkID=165717)中的 Streamextensions.cs 檔案包含數個參考實作，這些參考實作會使用 Task 物件來執行非同步檔案和網路 I/O。  
+ [使用 .NET Framework 4 進行平行程式設計的範例](https://code.msdn.microsoft.com/ParExtSamples)中的 Streamextensions.cs 檔案包含數個參考實作，這些參考實作會使用 Task 物件來執行非同步檔案和網路 I/O。  
   
 ## <a name="see-also"></a>請參閱  
  [工作平行程式庫 (TPL)](../../../docs/standard/parallel-programming/task-parallel-library-tpl.md)

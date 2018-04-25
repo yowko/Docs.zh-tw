@@ -10,11 +10,11 @@ ms.prod: .net
 ms.technology: devlang-csharp
 ms.devlang: csharp
 ms.assetid: 0db12548-82cb-4903-ac88-13103d70aa77
-ms.openlocfilehash: c5720d5391eec327aa2f885fd65579aeb6260488
-ms.sourcegitcommit: 935d5267c44f9bce801468ef95f44572f1417e8c
+ms.openlocfilehash: ce6ed278c4e5a9583a827e8c3ff941c2f25bf182
+ms.sourcegitcommit: b750a8e3979749b214e7e10c82efb0a0524dfcb1
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 03/28/2018
+ms.lasthandoff: 04/09/2018
 ---
 # <a name="working-with-linq"></a>處理 LINQ
 
@@ -32,7 +32,7 @@ ms.lasthandoff: 03/28/2018
 
 對我們而言，這是以較輕鬆的方式來了解對資料序列的操作。 您將建置的應用程式會建構牌堆，然後執行一連串的洗牌，每次洗牌都會寫出序列。 您也會比較原始的順序與更新過的順序。
 
-本教學課程有多個步驟。 在每個步驟之後，您可以執行應用程式並查看進度。 您也可以在 dotnet/docs GitHub 存放機制中查看[完整範例](https://github.com/dotnet/docs/blob/master/samples/csharp/getting-started/console-linq)。 如需下載指示，請參閱[範例和教學課程](../../samples-and-tutorials/index.md#viewing-and-downloading-samples)。
+本教學課程有多個步驟。 在每個步驟之後，您可以執行應用程式並查看進度。 您也可以在 dotnet/samples GitHub 存放機制中查看[完整範例](https://github.com/dotnet/samples/blob/master/csharp/getting-started/console-linq)。 如需下載指示，請參閱[範例和教學課程](../../samples-and-tutorials/index.md#viewing-and-downloading-samples)。
 
 ## <a name="prerequisites"></a>必要條件
 

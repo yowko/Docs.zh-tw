@@ -1,5 +1,5 @@
 ---
-title: "如何：搜尋字串(C# 指南)"
+title: 如何：搜尋字串(C# 指南)
 ms.date: 02/21/2018
 ms.prod: .net
 ms.technology:
@@ -11,11 +11,11 @@ helpviewer_keywords:
 - strings [C#], searching with regular expressions
 ms.assetid: fb1d9a6d-598d-4a35-bd5f-b86012edcb2b
 ms.author: wiwagn
-ms.openlocfilehash: 60d31a3d6d694c04d0c93b96816928e2ccbd3fba
-ms.sourcegitcommit: d95a91d685565f4d95c8773b558752864a6a3d7e
+ms.openlocfilehash: cb381ee811846ae8ff0589d918be4f43b3e9ddc3
+ms.sourcegitcommit: b750a8e3979749b214e7e10c82efb0a0524dfcb1
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 03/12/2018
+ms.lasthandoff: 04/09/2018
 ---
 # <a name="how-to-search-strings"></a>如何：搜尋字串
 
@@ -77,7 +77,7 @@ ms.lasthandoff: 03/12/2018
 
 此單一搜尋模式會比對許多有效字串。 規則運算式較適合用來搜尋或驗證模式，而不是單一文字字串。
 
-您可以查看 [GitHub 存放庫](https://github.com/dotnet/docs/tree/master/samples/snippets/csharp/how-to/strings)中的程式碼，來嘗試這些範例。 或者，您可以將範例下載[為 ZIP 檔案](https://github.com/dotnet/docs/tree/master/samples/snippets/csharp/how-to/strings.zip)。
+您可以查看 [GitHub 存放庫](https://github.com/dotnet/samples/tree/master/snippets/csharp/how-to/strings)中的程式碼，來嘗試這些範例。 或者，您可以將範例下載[為 ZIP 檔案](https://github.com/dotnet/samples/raw/master/snippets/csharp/how-to/strings.zip)。
 
 ## <a name="see-also"></a>請參閱  
 

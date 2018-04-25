@@ -1,17 +1,18 @@
 ---
-title: ".NET Core 執行階段識別項 (RID) 目錄"
-description: "了解執行階段識別碼 (RID) 以及 RID 在 .NET Core 中的使用方式。"
+title: .NET Core 執行階段識別項 (RID) 目錄
+description: 了解執行階段識別碼 (RID) 以及 RID 在 .NET Core 中的使用方式。
 author: mairaw
 ms.author: mairaw
 ms.date: 09/07/2017
 ms.topic: article
 ms.prod: .net-core
-ms.workload: dotnetcore
-ms.openlocfilehash: 180aac7635746f9ede146c3e561deb9bba9a61ab
-ms.sourcegitcommit: e7f04439d78909229506b56935a1105a4149ff3d
+ms.workload:
+- dotnetcore
+ms.openlocfilehash: 9343d475319084ddfe3450b4c1d2bbcbd394ad1f
+ms.sourcegitcommit: b750a8e3979749b214e7e10c82efb0a0524dfcb1
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 12/23/2017
+ms.lasthandoff: 04/09/2018
 ---
 # <a name="net-core-rid-catalog"></a>.NET Core RID 類別目錄
 
@@ -19,7 +20,7 @@ RID 是*執行階段識別項*的縮寫。 RID 值是用來識別應用程式執
 .NET 套件會使用它們來代表 NuGet 套件中的平台特定資產。 下列值是 RID 的範例：`linux-x64`、`ubuntu.14.04-x64`、`win7-x64` 或 `osx.10.12-x64`。
 針對具有原生相依性的套件，RID 也可指定能在哪些平台上還原套件。
 
-RID 可在您專案檔的 `<RuntimeIdentifier>` 元素中設定。 它們也可以透過以`--runtime`選項搭配下列 [.NET Core CLI 命令](./tools/index.md)來使用：
+單一 RID 可在您專案檔的 `<RuntimeIdentifier>` 元素中設定。 可以在專案檔的 `<RuntimeIdentifiers>` 元素中，將多個 RID 定義為以分號分隔的清單。 它們也可以透過以`--runtime`選項搭配下列 [.NET Core CLI 命令](./tools/index.md)來使用：
 
 - [dotnet build](./tools/dotnet-build.md)
 - [dotnet clean](./tools/dotnet-clean.md)

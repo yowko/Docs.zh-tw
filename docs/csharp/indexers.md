@@ -1,6 +1,6 @@
 ---
-title: "索引子"
-description: "了解 C# 索引子，以及其如何實作索引的屬性，而索引的屬性就是使用一或多個引數所參考的屬性。"
+title: 索引子
+description: 了解 C# 索引子，以及其如何實作索引的屬性，而索引的屬性就是使用一或多個引數所參考的屬性。
 keywords: .NET, .NET Core
 author: BillWagner
 ms.author: wiwagn
@@ -10,11 +10,11 @@ ms.prod: .net
 ms.technology: devlang-csharp
 ms.devlang: csharp
 ms.assetid: 0e9496da-e766-45a9-b92b-91820d4a350e
-ms.openlocfilehash: 32e090524f414ef93b8481a8ad356b313191d8b9
-ms.sourcegitcommit: 5fb6646b5ee3769ffb214e672041833ea4ceeb26
+ms.openlocfilehash: f0731061c518a61ce5b81e8282915b1245239864
+ms.sourcegitcommit: b750a8e3979749b214e7e10c82efb0a0524dfcb1
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 11/08/2017
+ms.lasthandoff: 04/09/2018
 ---
 # <a name="indexers"></a>索引子
 
@@ -39,7 +39,7 @@ public int this[string key]
 }
 ```
 
-在第一個範例中，您可以看到屬性語法和索引子語法之間的關聯性。 這點相似性會出現在索引子的大部分語法規則中。 索引子可具有任何有效的存取修飾詞 （公用、 受保護內部、 受保護、 內部、 私用或私用受保護）。 它們可能是密封、虛擬或抽象的。 如同屬性，您可以為索引子中 get 和 set 存取子，指定不同的存取修飾詞。
+在第一個範例中，您可以看到屬性語法和索引子語法之間的關聯性。 這點相似性會出現在索引子的大部分語法規則中。 索引子可以有任何有效的存取修飾詞 (public、protected internal、protected、internal、private 或 private protected)。 它們可能是密封、虛擬或抽象的。 如同屬性，您可以為索引子中 get 和 set 存取子，指定不同的存取修飾詞。
 您也可以指定唯讀索引子 (藉由省略 set 存取子) 或唯寫索引子 (藉由省略 get 存取子)。
 
 您可以將使用屬性時所學到的幾乎所有知識應用到索引子。 這項規則的唯一例外是「自動實作屬性」。 編譯器不一定可為索引子產生正確的儲存體。
@@ -51,7 +51,7 @@ public int this[string key]
 當您的類型 API 建立一些集合的模型，以供您在其中定義該集合的引數時，您會在此類型中定義「索引子」。 您的索引子不一定會直接對應至屬於 .NET Core Framework 的集合類型。 您的類型除了建立集合的模型之外，可能還有其他職責。
 索引子可讓您提供符合類型抽象概念的 API，而不會公開有關該抽象概念的值如何儲存或計算的內部詳細資料。
 
-讓我們逐步解說使用「索引子」的一些常見案例。 您可以存取[索引子的範例資料夾](https://github.com/dotnet/docs/tree/master/samples/csharp/indexers)。 如需下載指示，請參閱[範例和教學課程](../samples-and-tutorials/index.md#viewing-and-downloading-samples)。
+讓我們逐步解說使用「索引子」的一些常見案例。 您可以存取[索引子的範例資料夾](https://github.com/dotnet/samples/tree/master/csharp/indexers)。 如需下載指示，請參閱[範例和教學課程](../samples-and-tutorials/index.md#viewing-and-downloading-samples)。
 
 ### <a name="arrays-and-vectors"></a>陣列和向量
 

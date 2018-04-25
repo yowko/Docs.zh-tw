@@ -1,7 +1,7 @@
 ---
-title: "模式比對 - C# 手冊"
-description: "了解 C# 中的模式比對運算式"
-keywords: .NET, .NET Core, C#
+title: 模式比對 - C# 手冊
+description: 了解 C# 中的模式比對運算式
+keywords: .NET、.NET Core、C#
 ms.date: 01/24/2017
 ms.author: wiwagn
 ms.topic: article
@@ -9,11 +9,11 @@ ms.prod: .net
 ms.technology: devlang-csharp
 ms.devlang: csharp
 ms.assetid: 1e575c32-2e2b-4425-9dca-7d118f3ed15b
-ms.openlocfilehash: 0c77c3c3da9983d20cdd86db18f60f83b86b07ea
-ms.sourcegitcommit: 281070dee88db86ec3bb4634d5f558d1a4e159dd
+ms.openlocfilehash: c3fbc617f742e8dd5db4b2ac46b38958cdc30007
+ms.sourcegitcommit: b750a8e3979749b214e7e10c82efb0a0524dfcb1
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 11/11/2017
+ms.lasthandoff: 04/09/2018
 ---
 # <a name="pattern-matching"></a>模式比對 #
 
@@ -112,27 +112,27 @@ C# 7 之前，您需要以一系列的 `if` 和 `is` 陳述式測試每個型別
 
 `null` 模式的特殊行為很有趣，因為模式中的常數 `null` 沒有類型，但可以轉換成任何參考型別或可為 Null 的類型。 不論變數的編譯時間類型為何，語言都會定義 `null` 值將不符合任何類型模式，而不是將 `null` 轉換為任何類型。 此行為可讓以 `switch` 為基礎的新類型模式與 `is` 陳述式一致：要檢查的值是 `null` 時，`is` 陳述式一律會傳回 `false`。 它也較為簡單：在您檢查類型之後，就不需要額外的 Null 檢查。 您可以從上述範例的任何案例區塊中不會進行任何 Null 檢查的事實得知：因為比對類型模式保證非 Null 值，所以它們不是必要的。
 
-## <a name="var-declarations-in-case-expressions"></a>`var`中的宣告`case`運算式
+## <a name="var-declarations-in-case-expressions"></a>`case` 運算式中的 `var` 宣告
 
-導入`var`為比對運算式的其中一個導入了一些新規則的模式比對。
+導入 `var` 作為比對運算式之一，為模式比對導入了一些新規則。
 
-第一個規則是`var`宣告接在正常的型別推斷規則： switch 運算式的靜態類型推斷的類型。 從該規則，類型永遠符合。
+第一個規則是 `var` 宣告遵循正常的類型推斷規則：該類型被推斷為 switch 運算式的靜態類型。 根據該規則，類型永遠符合。
 
-第二項規則是`var`宣告並沒有其他類型的模式運算式包含 null 檢查。 這表示變數可能是 null，而且在此情況下不需要 null 檢查。
+第二個規則是 `var` 宣告不具有其他類型模式運算式所包含的 null 檢查。 這表示變數可能是 null，並且在這種情況下需要 null 檢查。
 
-這些兩個規則，在許多情況下，表示`var`中的宣告`case`運算式會比對相同的條件為`default`運算式。
-因為任何非預設的情況是優於`default`的情況下，`default`絕對不會執行大小寫。
+這兩個規則表示在許多情況下，`case` 運算式中的 `var` 宣告與 `default` 運算式的條件相同。
+因為任何非預設的案例優先於 `default` 案例，所以 `default` 案例將永遠不會執行。
 
 > [!NOTE]
-> 編譯器不會發出警告，以在這些情況下其中`default`案例已寫入，但是絕對不會執行。 這是一致目前`switch`其中已列出所有可能案例陳述式行為。
+> 在已寫入 `default` 案例但永遠不會執行的案例中，編譯器不會發出警告。 這與目前列出所有可能情況的 `switch` 陳述式行為一致。
 
-第三個規則導入了使用其中`var`案例可能會很有用。 假設您在進行模式比對其中輸入為字串，且您要搜尋已知的命令值。 您可以撰寫類似：
+第三個規則介紹了 `var` 案例可能會很有用的使用方式。 假設您在進行模式比對，而其輸入為字串，且您要搜尋已知的命令值。 您可能會撰寫類似：
 
 [!code-csharp[VarCaseExpression](../../samples/csharp/PatternMatching/Program.cs#VarCaseExpression "use a var case expression to filter white space")]
 
-`var`的大小寫相符項目`null`，空的字串或任何只包含空白的字串。 請注意，上述程式碼會使用`?.`運算子，來確保，它不會意外地擲回<xref:System.NullReferenceException>。 `default`案例會處理這個命令剖析器不了解的任何其他字串值。
+`var` 案例符合 `null`、空字串或任何僅包含空格的字串。 請注意，上述程式碼會使用 `?.` 運算子來確保它不會意外地擲回 <xref:System.NullReferenceException>。 `default` 案例會處理此命令剖析器無法理解的任何其他字串值。
 
-這是您可能要考慮的其中一個範例`var`case 運算式與不同`default`運算式。
+這是一個範例，其中您可能想要考慮與 `default` 運算式不同的 `var` Case 運算式。
 
 ## <a name="conclusions"></a>結論
 

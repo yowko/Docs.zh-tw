@@ -1,6 +1,6 @@
 ---
-title: "使用 .NET Core 來建立 REST 用戶端"
-description: "本教學課程會教導您一些 .NET Core 和 C# 語言中的功能。"
+title: 使用 .NET Core 來建立 REST 用戶端
+description: 本教學課程會教導您一些 .NET Core 和 C# 語言中的功能。
 keywords: .NET, .NET Core
 author: BillWagner
 ms.author: wiwagn
@@ -10,11 +10,11 @@ ms.prod: .net-core
 ms.technology: devlang-csharp
 ms.devlang: csharp
 ms.assetid: 51033ce2-7a53-4cdd-966d-9da15c8204d2
-ms.openlocfilehash: 22391c4db3027c0fad2115c767b5e2808fee28a0
-ms.sourcegitcommit: 3a96c706e4dbb4667bf3bf37edac9e1666646f93
+ms.openlocfilehash: 8cca71b9b8e09fd26f80d53618a3f1e278e28390
+ms.sourcegitcommit: b750a8e3979749b214e7e10c82efb0a0524dfcb1
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 02/27/2018
+ms.lasthandoff: 04/09/2018
 ---
 # <a name="rest-client"></a>REST 用戶端
 
@@ -31,7 +31,7 @@ ms.lasthandoff: 02/27/2018
 
 本教學課程中有許多功能。 讓我們來逐一建置它們。
 
-如果您偏好追蹤本主題的[最終範例](https://github.com/dotnet/docs/tree/master/samples/csharp/getting-started/console-webapiclient)，則可以下載它。 如需下載指示，請參閱[範例和教學課程](../../samples-and-tutorials/index.md#viewing-and-downloading-samples)。
+如果您偏好追蹤本主題的[最終範例](https://github.com/dotnet/samples/tree/master/csharp/getting-started/console-webapiclient)，則可以下載它。 如需下載指示，請參閱[範例和教學課程](../../samples-and-tutorials/index.md#viewing-and-downloading-samples)。
 
 ## <a name="prerequisites"></a>必要條件
 您將必須設定電腦以執行 .NET Core。 您可以在 [.NET Core (英文)](https://www.microsoft.com/net/core) 頁面找到安裝指示。 您可以在 Windows、Linux、macOS 或是 Docker 容器中執行此應用程式。 您將必須安裝慣用的程式碼編輯器。 以下說明使用 [Visual Studio Code (英文)](https://code.visualstudio.com/)，這是開放原始碼的跨平台編輯器。 不過，您可以使用您熟悉的任何工具。
@@ -63,7 +63,7 @@ ms.lasthandoff: 02/27/2018
 在您進行這些變更之後，應該重新執行 `dotnet restore` ([參閱附註](#dotnet-restore-note))，讓套件安裝在您的系統上。
 
 ## <a name="making-web-requests"></a>提出 Web 要求
-現在您已經準備好開始從 Web 接收資料。 在此應用程式中，您將從 [GitHub API](https://developer.github.com/v3/) 讀取資訊。 讓我們在 [.NET Foundation](http://www.dotnetfoundation.org/) 的庇護下讀取專案的相關資訊。 您將從對 GitHub API 提出要求以擷取專案相關資訊著手。 您將使用的端點為：[https://api.github.com/orgs/dotnet/repos](https://api.github.com/orgs/dotnet/repos)。 您想要擷取這些專案的所有相關資訊，因此您將使用 HTTP GET 要求。
+現在您已經準備好開始從 Web 接收資料。 在此應用程式中，您將從 [GitHub API](https://developer.github.com/v3/) 讀取資訊。 讓我們在 [.NET Foundation](http://www.dotnetfoundation.org/) 的庇護下讀取專案的相關資訊。 您將從對 GitHub API 提出要求以擷取專案相關資訊著手。 您將使用的端點：[https://api.github.com/orgs/dotnet/repos](https://api.github.com/orgs/dotnet/repos)。 您想要擷取這些專案的所有相關資訊，因此您將使用 HTTP GET 要求。
 您的瀏覽器也會使用 HTTP GET 要求，因此您可以將該 URL 貼到瀏覽器中，以查看您將接收和處理的資訊。
 
 您需使用 <xref:System.Net.Http.HttpClient> 類別來提出 Web 要求。 與所有新式 .NET API 相同，<xref:System.Net.Http.HttpClient> 針對它的長時間執行 API 只支援非同步方法。
@@ -380,7 +380,7 @@ using System.Globalization;
 Console.WriteLine(repo.LastPush);
 ```
 
-您的版本現在應該與[完成範例](https://github.com/dotnet/docs/tree/master/samples/csharp/getting-started/console-webapiclient)相符。
+您的版本現在應該與[完成範例](https://github.com/dotnet/samples/tree/master/csharp/getting-started/console-webapiclient)相符。
  
 ## <a name="conclusion"></a>結論
 

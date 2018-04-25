@@ -1,7 +1,7 @@
 ---
 title: .NET Framework 系統管理員部署手冊
 ms.custom: ''
-ms.date: 03/30/2017
+ms.date: 04/10/2018
 ms.prod: .net-framework
 ms.reviewer: ''
 ms.suite: ''
@@ -13,17 +13,17 @@ helpviewer_keywords:
 - administrator's guide, deploying .NET Framework
 - deployment [.NET Framework], administrator's guide
 ms.assetid: bee14036-0436-44e8-89f5-4bc61317977a
-caps.latest.revision: ''
+caps.latest.revision: 40
 author: mairaw
 ms.author: mairaw
 manager: wpickett
 ms.workload:
 - dotnet
-ms.openlocfilehash: f57b5db5c03030d8cb930355586d0253cae13319
-ms.sourcegitcommit: 6f967c86dde55472440f0c8669b0e910ee3c53ba
+ms.openlocfilehash: 67efb04fc0d86a20fdf10c0e84bb00ae57383bb1
+ms.sourcegitcommit: 9a4fe1a1c37b26532654b4bbe22d702237950009
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 03/22/2018
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="net-framework-deployment-guide-for-administrators"></a>.NET Framework 系統管理員部署手冊
 這篇逐步解說文章將描述系統管理員如何使用 Microsoft System Center Configuration Manager，在整個網路上部署 [!INCLUDE[net_v45](../../../includes/net-v45-md.md)] 及其系統相依性。 本文章假設所有目標用戶端電腦都符合 .NET Framework 的最低需求。 如需安裝 [!INCLUDE[net_v45](../../../includes/net-v45-md.md)] 的軟體和硬體需求清單，請參閱[系統需求](../../../docs/framework/get-started/system-requirements.md)。  
@@ -165,7 +165,7 @@ ms.lasthandoff: 03/22/2018
   
 8.  完成精靈。  
   
- 套件會包含 .NET Framework 4.5 無訊息部署所需的全部資訊。 在您部署套件和程式之前，請先確認它已安裝在發佈點上，請參閱 Configuration Manager 文件庫中[在 Configuration Manager 中進行內容管理的操作和維護](http://technet.microsoft.com/library/gg712694.aspx#BKMK_MonitorContent)的＜監視內容＞一節。  
+ 現在套件中將會包含進行 .NET Framework 4.5 無訊息部署所需的全部資訊。 在您部署套件和程式之前，請先確認它已安裝在發佈點上，請參閱 Configuration Manager 文件庫中[在 Configuration Manager 中進行內容管理的操作和維護](http://technet.microsoft.com/library/gg712694.aspx#BKMK_MonitorContent)的＜監視內容＞一節。  
   
 <a name="deploying_package"></a>   
 ### <a name="deploy-the-package"></a>部署套件  
@@ -230,11 +230,16 @@ ms.lasthandoff: 03/22/2018
 ## <a name="troubleshooting"></a>疑難排解  
   
 ### <a name="log-file-locations"></a>記錄檔位置  
- 在 [!INCLUDE[net_v45](../../../includes/net-v45-md.md)] 安裝過程中會產生下列記錄檔：  
+ 在 .NET Framework 安裝過程中會產生下列記錄檔：  
   
- %temp%\Microsoft .NET Framework 4.5*.txt %temp%\Microsoft .NET Framework 4.5*.html  
+ %temp%\Microsoft .NET Framework *版本*\*.txt  
+ %temp%\Microsoft .NET Framework *版本*\*.html  
   
- 您可以使用[記錄收集工具](http://www.microsoft.com/download/details.aspx?id=12493)來收集 [!INCLUDE[net_v45](../../../includes/net-v45-md.md)] 記錄檔並建立縮減檔案大小的壓縮封包檔 (.cab)。  
+ 其中*版本*是您要安裝的 .NET Framework 版本，例如 4.5 或 4.7.2。  
+ 
+ 您也可以使用 .NET Framework 安裝命令中的 `/log` 命令列選項，指定寫入記錄檔的目錄。 如需詳細資訊，請參閱[開發人員的 .NET Framework 部署指南](deployment-guide-for-developers.md#command-line-options)。 
+ 
+ 您可以使用[記錄收集工具](https://www.microsoft.com/download/details.aspx?id=12493)來收集 .NET Framework 記錄檔並建立縮減檔案大小的壓縮封包檔 (.cab)。  
   
 <a name="return_codes"></a>   
 ### <a name="return-codes"></a>傳回碼  

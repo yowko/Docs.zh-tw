@@ -1,18 +1,18 @@
 ---
-title: "在 Windows 10、Windows 8.1 及 Windows 8 上安裝 .NET Framework 3.5"
-description: "了解如何在 Windows 10、Windows 8.1 及 Windows 8 上安裝 .NET Framework 3.5。"
+title: 在 Windows 10、Windows 8.1 及 Windows 8 上安裝 .NET Framework 3.5
+description: 了解如何在 Windows 10、Windows 8.1 及 Windows 8 上安裝 .NET Framework 3.5。
 author: rlander
 ms.author: mairaw
-ms.date: 11/27/2017
+ms.date: 03/30/2018
 ms.topic: article
 ms.prod: .net-framework
 ms.workload:
 - dotnet
-ms.openlocfilehash: e81008eca3019860789db548d40998a7a7565d31
-ms.sourcegitcommit: cec0525b2121c36198379525e69aa5388266db5b
+ms.openlocfilehash: 09c4f81da76bb6608c3e579c442cf686ffab1688
+ms.sourcegitcommit: b750a8e3979749b214e7e10c82efb0a0524dfcb1
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 02/23/2018
+ms.lasthandoff: 04/09/2018
 ---
 # <a name="install-the-net-framework-35-on-windows-10-windows-81-and-windows-8"></a>在 Windows 10、Windows 8.1 及 Windows 8 上安裝 .NET Framework 3.5
 
@@ -23,6 +23,10 @@ ms.lasthandoff: 02/23/2018
 如果您嘗試執行需要 .NET Framework 3.5 的應用程式，可能會看到下列設定對話方塊。 請選擇 [安裝此功能] 來啟用 .NET Framework 3.5。 這個選項需要網際網路連線。
 
 ![.NET Framework 安裝對話方塊](./media/dotnet-framework-installation-dialog.jpg)
+
+### <a name="why-am-i-getting-this-pop-up"></a>為什麼我會收到這個快顯？
+
+.NET Framework 由 Microsoft 建立，並提供執行應用程式的環境。 有不同的版本可以使用。 許多公司開發使用 .NET Framework 執行的應用程式，而這些應用程式以特定版本為目標。 如果您看到這個這個快顯視窗，表示您正在執行一個需要 .NET Framework 3.5 版的應用程式，但您的系統上並未安裝該版本。
 
 ## <a name="enable-the-net-framework-35-in-control-panel"></a>在控制台中啟用 .NET Framework 3.5
 
@@ -40,4 +44,4 @@ ms.lasthandoff: 02/23/2018
 
 在安裝過程中，可能會出現錯誤 0x800f0906、0x800f0907、0x800f081f 或 0x800F0922，如果發生這種情況，請參考 [.NET Framework 3.5 安裝錯誤：0x800f0906、0x800f0907 或 0x800f081f](https://support.microsoft.com/help/2734782/net-framework-3-5-installation-error-0x800f0906--0x800f081f--0x800f09)，了解如何解決這些問題。
 
-若上一篇文章中探討的任一方法失敗，或是您沒有網際網路連線，則必須使用 Windows 安裝媒體。 如需詳細資訊，請參閱[使用部署映像服務與管理 (DISM) 部署 .NET Framework 3.5](/windows-hardware/manufacture/desktop/deploy-net-framework-35-by-using-deployment-image-servicing-and-management--dism)。 如果您沒有安裝媒體，請參閱[建立 Windows 的安裝媒體](https://support.microsoft.com/help/15088/windows-create-installation-media)。
+如果您仍無法解決您的安裝問題，或者您沒有網際網路連線，則可以嘗試使用 Windows 安裝媒體進行安裝。 如需詳細資訊，請參閱[使用部署映像服務與管理 (DISM) 部署 .NET Framework 3.5](/windows-hardware/manufacture/desktop/deploy-net-framework-35-by-using-deployment-image-servicing-and-management--dism)。 如果您沒有安裝媒體，請參閱[建立 Windows 的安裝媒體](https://support.microsoft.com/help/15088/windows-create-installation-media)。
