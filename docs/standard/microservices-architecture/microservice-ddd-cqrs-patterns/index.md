@@ -11,11 +11,11 @@ ms.topic: article
 ms.workload:
 - dotnet
 - dotnetcore
-ms.openlocfilehash: 45f29a8d19e49685f864b7ca83e466ceb1f73a62
-ms.sourcegitcommit: e7f04439d78909229506b56935a1105a4149ff3d
+ms.openlocfilehash: 8098c62ac18593d8044d52cb24c4cd8859972e68
+ms.sourcegitcommit: 2e8acae16ae802f2d6d04e3ce0a6dbf04e476513
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 12/23/2017
+ms.lasthandoff: 04/18/2018
 ---
 # <a name="tackling-business-complexity-in-a-microservice-with-ddd-and-cqrs-patterns"></a>利用 DDD 和 CQRS 模式解決微服務中的商務複雜度
 
@@ -37,13 +37,13 @@ DDD 是一個龐大的主題，內含一組豐富的學習資源。 您可以從
 
 ##### <a name="ddd-domain-driven-design"></a>DDD (領域驅動設計)
 
--   **Eric Evans：Domain Language (領域語言)**
-    [*http://domainlanguage.com/*](http://domainlanguage.com/)
+-   **Eric Evans：領域語言**
+    [*https://domainlanguage.com/*](https://domainlanguage.com/)
 
--   **Martin Fowler：Domain-Driven Design (領域驅動設計)**
-    [*http://martinfowler.com/tags/domain%20driven%20design.html*](http://martinfowler.com/tags/domain%20driven%20design.html)
+-   **Martin Fowler：領域導向設計**
+    [*https://martinfowler.com/tags/domain%20driven%20design.html*](https://martinfowler.com/tags/domain%20driven%20design.html)
 
--   **Jimmy Bogard：Strengthening your domain: a primer (增強您的領域：入門)**
+-   **Jimmy Bogard：加強您的領域：初階**
     [*https://lostechies.com/jimmybogard/2010/02/04/strengthening-your-domain-a-primer/*](https://lostechies.com/jimmybogard/2010/02/04/strengthening-your-domain-a-primer/)
 
 ##### <a name="ddd-books"></a>DDD 書籍
@@ -71,7 +71,7 @@ DDD 是一個龐大的主題，內含一組豐富的學習資源。 您可以從
 
 DDD 訓練課程
 
--   **Julie Lerman 和 Steve Smith：Domain-Driven Design Fundamentals (領域驅動設計基本概念)**
+-   **Julie Lerman 和 Steve Smith：網域導向設計的基本概念**
     [*http://bit.ly/PS-DDD*](http://bit.ly/PS-DDD)
 
 
