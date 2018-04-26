@@ -1,12 +1,12 @@
 ---
-title: ".NET 中規則運算式的最佳做法"
-ms.custom: 
+title: .NET 中規則運算式的最佳做法
+ms.custom: ''
 ms.date: 03/30/2017
 ms.prod: .net
-ms.reviewer: 
-ms.suite: 
+ms.reviewer: ''
+ms.suite: ''
 ms.technology: dotnet-standard
-ms.tgt_pltfrm: 
+ms.tgt_pltfrm: ''
 ms.topic: article
 dev_langs:
 - csharp
@@ -15,18 +15,18 @@ helpviewer_keywords:
 - .NET Framework regular expressions, best practices
 - regular expressions, best practices
 ms.assetid: 618e5afb-3a97-440d-831a-70e4c526a51c
-caps.latest.revision: 
+caps.latest.revision: 15
 author: rpetrusha
 ms.author: ronpet
 manager: wpickett
 ms.workload:
 - dotnet
 - dotnetcore
-ms.openlocfilehash: 4064e3f9bd9be425108baf934817645fc7fa51c2
-ms.sourcegitcommit: 91691981897cf8451033cb01071d8f5d94017f97
+ms.openlocfilehash: 59ec9ead0fd010baccaadb1eda0f469b7b4dcb46
+ms.sourcegitcommit: 9a4fe1a1c37b26532654b4bbe22d702237950009
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 01/09/2018
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="best-practices-for-regular-expressions-in-net"></a>.NET 中規則運算式的最佳做法
 <a name="top"></a> .NET 中的規則運算式引擎是一項強大且功能完整的工具，會依據模式比對而非比較與比對常值文字的方式處理文字。 在大部分情況下，它會快速且有效率地執行模式比對。 不過，在某些情況下，規則運算式引擎速度可能變得相當慢。 而只有鮮少情況下，它甚至可能在處理相對小的輸入卻耗費數小時甚至數天時停止回應。  
@@ -150,8 +150,8 @@ ms.lasthandoff: 01/09/2018
 |-------------|-----------------|  
 |`\b`|開始字緣比對。|  
 |`\w+`|比對一個或多個文字字元。|  
-|`(\r?\n)&#124;,?\s)`|比對後面接著新行字元的零個或一個歸位字元，或是後面接著空白字元的零個或一個逗號。|  
-|`(\w+((\r?\n)&#124;,?\s))*`|比對出現零次或多次的一個或多個文字字元，其後面會接著零個或一個歸位字元和新行字元，或是後面接著空白字元的零個或一個逗號。|  
+|<code>(\r?\n)&#124;,?\s)</code>|比對後面接著新行字元的零個或一個歸位字元，或是後面接著空白字元的零個或一個逗號。|  
+|<code>(\w+((\r?\n)&#124;,?\s))*</code>|比對出現零次或多次的一個或多個文字字元，其後面會接著零個或一個歸位字元和新行字元，或是後面接著空白字元的零個或一個逗號。|  
 |`\w+`|比對一個或多個文字字元。|  
 |`[.?:;!]`|比對句號、問號、冒號、分號或驚嘆號。|  
   
