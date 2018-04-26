@@ -1,7 +1,7 @@
 ---
-title: "C# 型別和變數 - C# 語言教學課程"
-description: "了解如何在 C# 中定義類型和宣告變數"
-keywords: ".NET, csharp, 型別, 參考型別, 實值型別"
+title: C# 型別和變數 - C# 語言教學課程
+description: 了解如何在 C# 中定義類型和宣告變數
+keywords: .NET, csharp, 型別, 參考型別, 實值型別
 author: BillWagner
 ms.author: wiwagn
 ms.date: 08/10/2016
@@ -56,7 +56,7 @@ C# 的實值型別可進一步細分為*簡單型別*、*列舉型別*、*結構
 
 `decimal` 型別是 128 位元的資料型別，適合財務和貨幣計算。
 
-C# 的 `bool` 型別用來代表布林值 — 不是 `true` 或 `false` 的值。
+C# 的 `bool` 型別用來代表布林值 — 此值不是 `true` 就是 `false`。
 
 C# 中的字元和字串處理使用 Unicode 編碼方式。 `char` 型別代表 UTF-16 程式碼單位，而 `string` 型別代表一系列的 UTF-16 程式碼單位。
 
