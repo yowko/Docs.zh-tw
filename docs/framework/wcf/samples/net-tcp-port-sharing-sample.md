@@ -1,53 +1,55 @@
 ---
-title: "Net.TCP Port Sharing 範例"
-ms.custom: 
+title: Net.TCP Port Sharing 範例
+ms.custom: ''
 ms.date: 03/30/2017
 ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.technology: dotnet-clr
-ms.tgt_pltfrm: 
+ms.reviewer: ''
+ms.suite: ''
+ms.technology:
+- dotnet-clr
+ms.tgt_pltfrm: ''
 ms.topic: article
 ms.assetid: 03da5959-0574-4e91-8a53-05854b6c55dc
-caps.latest.revision: "18"
+caps.latest.revision: 18
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.workload: dotnet
-ms.openlocfilehash: 7dea3a0f0d69662021c78b0f1d57ad0ba8c11fcb
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.workload:
+- dotnet
+ms.openlocfilehash: 0db4148f9be6db97dec2b8b680dad56171106b2c
+ms.sourcegitcommit: 2042de78fcdceebb6b8ac4b7a292b93e8782cbf5
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 04/27/2018
 ---
-# <a name="nettcp-port-sharing-sample"></a><span data-ttu-id="c1f55-102">Net.TCP Port Sharing 範例</span><span class="sxs-lookup"><span data-stu-id="c1f55-102">Net.TCP Port Sharing Sample</span></span>
-<span data-ttu-id="c1f55-103">TCP/IP 通訊協定使用一個 16 位元的數字 (稱為連接埠) 來區分在同一部電腦上執行的多個網路應用程式連線。</span><span class="sxs-lookup"><span data-stu-id="c1f55-103">The TCP/IP protocol uses a 16-bit number, called a port, to differentiate connections to multiple network applications running on the same machine.</span></span> <span data-ttu-id="c1f55-104">如果應用程式正在接聽某個連接埠，則該連接埠的所有 TCP 流量就會流向該應用程式。</span><span class="sxs-lookup"><span data-stu-id="c1f55-104">If an application is listening on a port, then all TCP traffic for that port goes to that application.</span></span> <span data-ttu-id="c1f55-105">其他應用程式將無法同時接聽該連接埠。</span><span class="sxs-lookup"><span data-stu-id="c1f55-105">Other applications cannot listen on that port at the same time.</span></span>  
+# <a name="nettcp-port-sharing-sample"></a><span data-ttu-id="2b0a2-102">Net.TCP Port Sharing 範例</span><span class="sxs-lookup"><span data-stu-id="2b0a2-102">Net.TCP Port Sharing Sample</span></span>
+<span data-ttu-id="2b0a2-103">TCP/IP 通訊協定使用一個 16 位元的數字 (稱為連接埠) 來區分在同一部電腦上執行的多個網路應用程式連線。</span><span class="sxs-lookup"><span data-stu-id="2b0a2-103">The TCP/IP protocol uses a 16-bit number, called a port, to differentiate connections to multiple network applications running on the same machine.</span></span> <span data-ttu-id="2b0a2-104">如果應用程式正在接聽某個連接埠，則該連接埠的所有 TCP 流量就會流向該應用程式。</span><span class="sxs-lookup"><span data-stu-id="2b0a2-104">If an application is listening on a port, then all TCP traffic for that port goes to that application.</span></span> <span data-ttu-id="2b0a2-105">其他應用程式將無法同時接聽該連接埠。</span><span class="sxs-lookup"><span data-stu-id="2b0a2-105">Other applications cannot listen on that port at the same time.</span></span>  
   
 > [!IMPORTANT]
->  <span data-ttu-id="c1f55-106">這些範例可能已安裝在您的電腦上。</span><span class="sxs-lookup"><span data-stu-id="c1f55-106">The samples may already be installed on your machine.</span></span> <span data-ttu-id="c1f55-107">請先檢查下列 (預設) 目錄，然後再繼續。</span><span class="sxs-lookup"><span data-stu-id="c1f55-107">Check for the following (default) directory before continuing.</span></span>  
+>  <span data-ttu-id="2b0a2-106">這些範例可能已安裝在您的電腦上。</span><span class="sxs-lookup"><span data-stu-id="2b0a2-106">The samples may already be installed on your machine.</span></span> <span data-ttu-id="2b0a2-107">請先檢查下列 (預設) 目錄，然後再繼續。</span><span class="sxs-lookup"><span data-stu-id="2b0a2-107">Check for the following (default) directory before continuing.</span></span>  
 >   
 >  `<InstallDrive>:\WF_WCF_Samples`  
 >   
->  <span data-ttu-id="c1f55-108">如果此目錄不存在，請移至 [Windows Communication Foundation (WCF) and Windows Workflow Foundation (WF) Samples for .NET Framework 4  (適用於 .NET Framework 4 的 Windows Communication Foundation (WCF) 與 Windows Workflow Foundation (WF) 範例)](http://go.microsoft.com/fwlink/?LinkId=150780) ，以下載所有 [!INCLUDE[indigo1](../../../../includes/indigo1-md.md)] 和 [!INCLUDE[wf1](../../../../includes/wf1-md.md)] 範例。</span><span class="sxs-lookup"><span data-stu-id="c1f55-108">If this directory does not exist, go to [Windows Communication Foundation (WCF) and Windows Workflow Foundation (WF) Samples for .NET Framework 4](http://go.microsoft.com/fwlink/?LinkId=150780) to download all [!INCLUDE[indigo1](../../../../includes/indigo1-md.md)] and [!INCLUDE[wf1](../../../../includes/wf1-md.md)] samples.</span></span> <span data-ttu-id="c1f55-109">此範例位於下列目錄。</span><span class="sxs-lookup"><span data-stu-id="c1f55-109">This sample is located in the following directory.</span></span>  
+>  <span data-ttu-id="2b0a2-108">如果此目錄不存在，請移至 [Windows Communication Foundation (WCF) and Windows Workflow Foundation (WF) Samples for .NET Framework 4  (適用於 .NET Framework 4 的 Windows Communication Foundation (WCF) 與 Windows Workflow Foundation (WF) 範例)](http://go.microsoft.com/fwlink/?LinkId=150780) ，以下載所有 [!INCLUDE[indigo1](../../../../includes/indigo1-md.md)] 和 [!INCLUDE[wf1](../../../../includes/wf1-md.md)] 範例。</span><span class="sxs-lookup"><span data-stu-id="2b0a2-108">If this directory does not exist, go to [Windows Communication Foundation (WCF) and Windows Workflow Foundation (WF) Samples for .NET Framework 4](http://go.microsoft.com/fwlink/?LinkId=150780) to download all [!INCLUDE[indigo1](../../../../includes/indigo1-md.md)] and [!INCLUDE[wf1](../../../../includes/wf1-md.md)] samples.</span></span> <span data-ttu-id="2b0a2-109">此範例位於下列目錄。</span><span class="sxs-lookup"><span data-stu-id="2b0a2-109">This sample is located in the following directory.</span></span>  
 >   
 >  `<InstallDrive>:\WF_WCF_Samples\WCF\Basic\Binding\Net\TCP\PortSharing`  
   
- <span data-ttu-id="c1f55-110">許多通訊協定都使用一個標準或預設的連接埠號碼。</span><span class="sxs-lookup"><span data-stu-id="c1f55-110">Many protocols have a standard or default port number that they use.</span></span> <span data-ttu-id="c1f55-111">例如，HTTP 通訊協定通常使用 TCP 通訊埠 80。</span><span class="sxs-lookup"><span data-stu-id="c1f55-111">For example, the HTTP protocol typically uses TCP port 80.</span></span> <span data-ttu-id="c1f55-112">Internet Information Services (IIS) 有一個可在多個 HTTP 應用程式之間共用通訊埠的接聽項。</span><span class="sxs-lookup"><span data-stu-id="c1f55-112">Internet Information Services (IIS) has a listener to share a port between multiple HTTP applications.</span></span> <span data-ttu-id="c1f55-113">IIS 會直接接聽連接埠，並依照訊息資料流內的資訊將訊息轉送至適當的應用程式。</span><span class="sxs-lookup"><span data-stu-id="c1f55-113">IIS listens on the port directly and forwards messages to the appropriate application based on information inside the message stream.</span></span> <span data-ttu-id="c1f55-114">這樣一來，多個 HTTP 應用程式就可以使用相同的連接埠號碼，而不用競相保留該連接埠以接收訊息。</span><span class="sxs-lookup"><span data-stu-id="c1f55-114">This allows multiple HTTP applications to use the same port number without having to compete to reserve the port for receiving messages.</span></span>  
+ <span data-ttu-id="2b0a2-110">許多通訊協定都使用一個標準或預設的連接埠號碼。</span><span class="sxs-lookup"><span data-stu-id="2b0a2-110">Many protocols have a standard or default port number that they use.</span></span> <span data-ttu-id="2b0a2-111">例如，HTTP 通訊協定通常使用 TCP 通訊埠 80。</span><span class="sxs-lookup"><span data-stu-id="2b0a2-111">For example, the HTTP protocol typically uses TCP port 80.</span></span> <span data-ttu-id="2b0a2-112">Internet Information Services (IIS) 有一個可在多個 HTTP 應用程式之間共用通訊埠的接聽項。</span><span class="sxs-lookup"><span data-stu-id="2b0a2-112">Internet Information Services (IIS) has a listener to share a port between multiple HTTP applications.</span></span> <span data-ttu-id="2b0a2-113">IIS 會直接接聽連接埠，並依照訊息資料流內的資訊將訊息轉送至適當的應用程式。</span><span class="sxs-lookup"><span data-stu-id="2b0a2-113">IIS listens on the port directly and forwards messages to the appropriate application based on information inside the message stream.</span></span> <span data-ttu-id="2b0a2-114">這樣一來，多個 HTTP 應用程式就可以使用相同的連接埠號碼，而不用競相保留該連接埠以接收訊息。</span><span class="sxs-lookup"><span data-stu-id="2b0a2-114">This allows multiple HTTP applications to use the same port number without having to compete to reserve the port for receiving messages.</span></span>  
   
- <span data-ttu-id="c1f55-115">NetTcp Port Sharing 是[!INCLUDE[indigo1](../../../../includes/indigo1-md.md)]功能，同樣可以讓多個網路應用程式共用單一通訊埠。</span><span class="sxs-lookup"><span data-stu-id="c1f55-115">NetTcp Port Sharing is a [!INCLUDE[indigo1](../../../../includes/indigo1-md.md)]feature that similarly allows multiple network applications to share a single port.</span></span> <span data-ttu-id="c1f55-116">NetTcp Port Sharing Service 會透過 net.tcp 通訊協定來接受連線，並依據該連線的目的地位址來轉送訊息。</span><span class="sxs-lookup"><span data-stu-id="c1f55-116">The NetTcp Port Sharing Service accepts connections using the net.tcp protocol and forwards messages based on their destination address.</span></span>  
+ <span data-ttu-id="2b0a2-115">NetTcp Port Sharing 是[!INCLUDE[indigo1](../../../../includes/indigo1-md.md)]功能，同樣可以讓多個網路應用程式共用單一通訊埠。</span><span class="sxs-lookup"><span data-stu-id="2b0a2-115">NetTcp Port Sharing is a [!INCLUDE[indigo1](../../../../includes/indigo1-md.md)]feature that similarly allows multiple network applications to share a single port.</span></span> <span data-ttu-id="2b0a2-116">NetTcp Port Sharing Service 會透過 net.tcp 通訊協定來接受連線，並依據該連線的目的地位址來轉送訊息。</span><span class="sxs-lookup"><span data-stu-id="2b0a2-116">The NetTcp Port Sharing Service accepts connections using the net.tcp protocol and forwards messages based on their destination address.</span></span>  
   
- <span data-ttu-id="c1f55-117">NetTcp Port Sharing Service 預設並未啟用。</span><span class="sxs-lookup"><span data-stu-id="c1f55-117">The NetTcp Port Sharing Service is not enabled by default.</span></span> <span data-ttu-id="c1f55-118">在執行此範例之前，您必須手動啟用服務。</span><span class="sxs-lookup"><span data-stu-id="c1f55-118">Before running this sample, you must manually enable the service.</span></span> <span data-ttu-id="c1f55-119">如需詳細資訊，請參閱[How to： 啟用 Net.TCP Port Sharing Service](../../../../docs/framework/wcf/feature-details/how-to-enable-the-net-tcp-port-sharing-service.md)。</span><span class="sxs-lookup"><span data-stu-id="c1f55-119">For more information, see [How to: Enable the Net.TCP Port Sharing Service](../../../../docs/framework/wcf/feature-details/how-to-enable-the-net-tcp-port-sharing-service.md).</span></span> <span data-ttu-id="c1f55-120">如果服務已停用，則當啟動伺服器應用程式時，會擲回例外狀況。</span><span class="sxs-lookup"><span data-stu-id="c1f55-120">If the service is disabled, an exception is thrown when the server application is started.</span></span>  
+ <span data-ttu-id="2b0a2-117">NetTcp Port Sharing Service 預設並未啟用。</span><span class="sxs-lookup"><span data-stu-id="2b0a2-117">The NetTcp Port Sharing Service is not enabled by default.</span></span> <span data-ttu-id="2b0a2-118">在執行此範例之前，您必須手動啟用服務。</span><span class="sxs-lookup"><span data-stu-id="2b0a2-118">Before running this sample, you must manually enable the service.</span></span> <span data-ttu-id="2b0a2-119">如需詳細資訊，請參閱[How to： 啟用 Net.TCP Port Sharing Service](../../../../docs/framework/wcf/feature-details/how-to-enable-the-net-tcp-port-sharing-service.md)。</span><span class="sxs-lookup"><span data-stu-id="2b0a2-119">For more information, see [How to: Enable the Net.TCP Port Sharing Service](../../../../docs/framework/wcf/feature-details/how-to-enable-the-net-tcp-port-sharing-service.md).</span></span> <span data-ttu-id="2b0a2-120">如果服務已停用，則當啟動伺服器應用程式時，會擲回例外狀況。</span><span class="sxs-lookup"><span data-stu-id="2b0a2-120">If the service is disabled, an exception is thrown when the server application is started.</span></span>  
   
 ```  
 Unhandled Exception: System.ServiceModel.CommunicationException: The TransportManager failed to listen on the supplied URI using the NetTcpPortSharing service: failed to start the service because it is disabled. An administrator can enable it by running 'sc.exe config NetTcpPortSharing start= demand'.. ---> System.InvalidOperationException: Cannot start service NetTcpPortSharing on computer '.'. ---> System.ComponentModel.Win32Exception: The service cannot be started, either because it is disabled or because it has no enabled devices associated with it  
 ```  
   
- <span data-ttu-id="c1f55-121">您可以設定 <xref:System.ServiceModel.NetTcpBinding.PortSharingEnabled%2A> 繫結上的 <xref:System.ServiceModel.NetTcpBinding> 屬性，或是設定 <xref:System.ServiceModel.Channels.TcpTransportBindingElement> 繫結項目，來啟用伺服器上的連接埠共用。</span><span class="sxs-lookup"><span data-stu-id="c1f55-121">Port sharing is enabled on the server by setting the <xref:System.ServiceModel.NetTcpBinding.PortSharingEnabled%2A> property of the <xref:System.ServiceModel.NetTcpBinding> binding or the <xref:System.ServiceModel.Channels.TcpTransportBindingElement> binding element.</span></span> <span data-ttu-id="c1f55-122">用戶端不需要知道連接埠共用該如何設定才可運用在伺服器上。</span><span class="sxs-lookup"><span data-stu-id="c1f55-122">The client does not have to know how port sharing has been configured to use it on the server.</span></span>  
+ <span data-ttu-id="2b0a2-121">您可以設定 <xref:System.ServiceModel.NetTcpBinding.PortSharingEnabled%2A> 繫結上的 <xref:System.ServiceModel.NetTcpBinding> 屬性，或是設定 <xref:System.ServiceModel.Channels.TcpTransportBindingElement> 繫結項目，來啟用伺服器上的連接埠共用。</span><span class="sxs-lookup"><span data-stu-id="2b0a2-121">Port sharing is enabled on the server by setting the <xref:System.ServiceModel.NetTcpBinding.PortSharingEnabled%2A> property of the <xref:System.ServiceModel.NetTcpBinding> binding or the <xref:System.ServiceModel.Channels.TcpTransportBindingElement> binding element.</span></span> <span data-ttu-id="2b0a2-122">用戶端不需要知道連接埠共用該如何設定才可運用在伺服器上。</span><span class="sxs-lookup"><span data-stu-id="2b0a2-122">The client does not have to know how port sharing has been configured to use it on the server.</span></span>  
   
-## <a name="enabling-port-sharing"></a><span data-ttu-id="c1f55-123">啟用連接埠共用</span><span class="sxs-lookup"><span data-stu-id="c1f55-123">Enabling Port Sharing</span></span>  
- <span data-ttu-id="c1f55-124">下列程式碼範例會示範在伺服器上啟用連接埠共用的方式。</span><span class="sxs-lookup"><span data-stu-id="c1f55-124">The following code demonstrates enabling port sharing on the server.</span></span> <span data-ttu-id="c1f55-125">一開始它會在包含隨機 URI 路徑的固定連接埠上啟動 `ICalculator` 服務的執行個體。</span><span class="sxs-lookup"><span data-stu-id="c1f55-125">It starts an instance of the `ICalculator` service on a fixed port with a random URI path.</span></span> <span data-ttu-id="c1f55-126">即使兩個服務可以共用相同的連接埠，它們的整體端點位址仍舊必須維持唯一，以便 NetTcp Port Sharing Service 可以將訊息路由至正確的應用程式中。</span><span class="sxs-lookup"><span data-stu-id="c1f55-126">Even though two services can share the same port, their overall endpoint addresses still must be unique so that the NetTcp Port Sharing Service can route messages to the correct application.</span></span>  
-  
-```  
+## <a name="enabling-port-sharing"></a><span data-ttu-id="2b0a2-123">啟用連接埠共用</span><span class="sxs-lookup"><span data-stu-id="2b0a2-123">Enabling Port Sharing</span></span>  
+ <span data-ttu-id="2b0a2-124">下列程式碼範例會示範在伺服器上啟用連接埠共用的方式。</span><span class="sxs-lookup"><span data-stu-id="2b0a2-124">The following code demonstrates enabling port sharing on the server.</span></span> <span data-ttu-id="2b0a2-125">一開始它會在包含隨機 URI 路徑的固定連接埠上啟動 `ICalculator` 服務的執行個體。</span><span class="sxs-lookup"><span data-stu-id="2b0a2-125">It starts an instance of the `ICalculator` service on a fixed port with a random URI path.</span></span> <span data-ttu-id="2b0a2-126">即使兩個服務可以共用相同的連接埠，它們的整體端點位址仍舊必須維持唯一，以便 NetTcp Port Sharing Service 可以將訊息路由至正確的應用程式中。</span><span class="sxs-lookup"><span data-stu-id="2b0a2-126">Even though two services can share the same port, their overall endpoint addresses still must be unique so that the NetTcp Port Sharing Service can route messages to the correct application.</span></span>  
+
+```csharp
 // Configure a binding with TCP port sharing enabled  
 NetTcpBinding binding = new NetTcpBinding();  
 binding.PortSharingEnabled = true;  
@@ -59,18 +61,18 @@ string address =
    String.Format("net.tcp://localhost:9000/calculator/{0}", salt);  
 host.AddServiceEndpoint(typeof(ICalculator), binding, address);  
 host.Open();  
-```  
-  
- <span data-ttu-id="c1f55-127">啟用了連接埠共用後，您可以多次執行服務，而不用擔心會碰到連接埠號碼衝突情況。</span><span class="sxs-lookup"><span data-stu-id="c1f55-127">With port sharing enabled, you can run the service multiple times without having a conflict over the port number.</span></span> <span data-ttu-id="c1f55-128">如果您變更程式碼來停用連接埠共用，啟動兩組相同的服務會導致第二個服務失敗並傳回 <xref:System.ServiceModel.AddressAlreadyInUseException>。</span><span class="sxs-lookup"><span data-stu-id="c1f55-128">If you change the code to disable port sharing, starting up two copies of the service results in the second failing with an <xref:System.ServiceModel.AddressAlreadyInUseException>.</span></span>  
+```
+
+ <span data-ttu-id="2b0a2-127">啟用了連接埠共用後，您可以多次執行服務，而不用擔心會碰到連接埠號碼衝突情況。</span><span class="sxs-lookup"><span data-stu-id="2b0a2-127">With port sharing enabled, you can run the service multiple times without having a conflict over the port number.</span></span> <span data-ttu-id="2b0a2-128">如果您變更程式碼來停用連接埠共用，啟動兩組相同的服務會導致第二個服務失敗並傳回 <xref:System.ServiceModel.AddressAlreadyInUseException>。</span><span class="sxs-lookup"><span data-stu-id="2b0a2-128">If you change the code to disable port sharing, starting up two copies of the service results in the second failing with an <xref:System.ServiceModel.AddressAlreadyInUseException>.</span></span>  
   
 ```  
 Unhandled Exception: System.ServiceModel.AddressAlreadyInUseException: There is already a listener on IP endpoint 0.0.0.0:9000.  Make sure that you are not trying to use this endpoint multiple times in your application and that there are no other applications listening on this endpoint. ---> System.Net.Sockets.SocketException: Only one usage of each socket address (protocol/network address/port) is normally permitted  
 ```  
   
-## <a name="running-the-sample"></a><span data-ttu-id="c1f55-129">執行範例</span><span class="sxs-lookup"><span data-stu-id="c1f55-129">Running the Sample</span></span>  
- <span data-ttu-id="c1f55-130">您可以使用測試用戶端，檢查訊息是否已正確路由至共用該連接埠的服務中。</span><span class="sxs-lookup"><span data-stu-id="c1f55-130">You can use the test client to check that messages are correctly routed to services sharing the port.</span></span>  
-  
-```  
+## <a name="running-the-sample"></a><span data-ttu-id="2b0a2-129">執行範例</span><span class="sxs-lookup"><span data-stu-id="2b0a2-129">Running the Sample</span></span>  
+ <span data-ttu-id="2b0a2-130">您可以使用測試用戶端，檢查訊息是否已正確路由至共用該連接埠的服務中。</span><span class="sxs-lookup"><span data-stu-id="2b0a2-130">You can use the test client to check that messages are correctly routed to services sharing the port.</span></span>  
+
+```csharp
 class client  
 {  
    static void Main(string[] args)  
@@ -112,16 +114,16 @@ class client
       factory.Close();  
    }  
 }  
-```  
-  
- <span data-ttu-id="c1f55-131">每個服務的執行個體都會列出自己的唯一號碼與位址。</span><span class="sxs-lookup"><span data-stu-id="c1f55-131">Each instance of the service prints out its unique number and address.</span></span> <span data-ttu-id="c1f55-132">例如，當您執行 service.exe 時，可能會看到下列文字。</span><span class="sxs-lookup"><span data-stu-id="c1f55-132">For instance, you may see the following text when you run service.exe.</span></span>  
+```
+
+ <span data-ttu-id="2b0a2-131">每個服務的執行個體都會列出自己的唯一號碼與位址。</span><span class="sxs-lookup"><span data-stu-id="2b0a2-131">Each instance of the service prints out its unique number and address.</span></span> <span data-ttu-id="2b0a2-132">例如，當您執行 service.exe 時，可能會看到下列文字。</span><span class="sxs-lookup"><span data-stu-id="2b0a2-132">For instance, you may see the following text when you run service.exe.</span></span>  
   
 ```  
 Service #4381 listening on net.tcp://localhost:9000/calculator/4381.  
 Press <ENTER> to terminate service.  
 ```  
   
- <span data-ttu-id="c1f55-133">輸入當您執行 client.exe 時，在此處看到的服務號碼。</span><span class="sxs-lookup"><span data-stu-id="c1f55-133">Enter the service number you see here when you run client.exe.</span></span>  
+ <span data-ttu-id="2b0a2-133">輸入當您執行 client.exe 時，在此處看到的服務號碼。</span><span class="sxs-lookup"><span data-stu-id="2b0a2-133">Enter the service number you see here when you run client.exe.</span></span>  
   
 ```  
 Enter the service number to test: 4381  
@@ -133,22 +135,22 @@ Divide(22,7) = 3.14285714285714
 Press <ENTER> to terminate client.  
 ```  
   
- <span data-ttu-id="c1f55-134">您可以變更用戶所端使用的已產生位址，在跨電腦組態中執行此範例。</span><span class="sxs-lookup"><span data-stu-id="c1f55-134">This sample can be run in a cross-machine configuration by changing the generated address that the client uses.</span></span> <span data-ttu-id="c1f55-135">在 Client.cs 中，變更端點位址格式字串來符合服務的新位址。</span><span class="sxs-lookup"><span data-stu-id="c1f55-135">In the Client.cs, change the endpoint address format string to match the new address of your service.</span></span> <span data-ttu-id="c1f55-136">使用伺服器電腦的 IP 位址來取代任何的 "localhost" 參考。</span><span class="sxs-lookup"><span data-stu-id="c1f55-136">Replace any references to "localhost" with the IP address of the server machine.</span></span> <span data-ttu-id="c1f55-137">在執行此變更之後，您必須重新編譯範例。</span><span class="sxs-lookup"><span data-stu-id="c1f55-137">You must recompile the sample after making this change.</span></span>  
+ <span data-ttu-id="2b0a2-134">您可以變更用戶所端使用的已產生位址，在跨電腦組態中執行此範例。</span><span class="sxs-lookup"><span data-stu-id="2b0a2-134">This sample can be run in a cross-machine configuration by changing the generated address that the client uses.</span></span> <span data-ttu-id="2b0a2-135">在 Client.cs 中，變更端點位址格式字串來符合服務的新位址。</span><span class="sxs-lookup"><span data-stu-id="2b0a2-135">In the Client.cs, change the endpoint address format string to match the new address of your service.</span></span> <span data-ttu-id="2b0a2-136">使用伺服器電腦的 IP 位址來取代任何的 "localhost" 參考。</span><span class="sxs-lookup"><span data-stu-id="2b0a2-136">Replace any references to "localhost" with the IP address of the server machine.</span></span> <span data-ttu-id="2b0a2-137">在執行此變更之後，您必須重新編譯範例。</span><span class="sxs-lookup"><span data-stu-id="2b0a2-137">You must recompile the sample after making this change.</span></span>  
   
-#### <a name="to-set-up-build-and-run-the-sample"></a><span data-ttu-id="c1f55-138">若要安裝、建置及執行範例</span><span class="sxs-lookup"><span data-stu-id="c1f55-138">To set up, build, and run the sample</span></span>  
+#### <a name="to-set-up-build-and-run-the-sample"></a><span data-ttu-id="2b0a2-138">若要安裝、建置及執行範例</span><span class="sxs-lookup"><span data-stu-id="2b0a2-138">To set up, build, and run the sample</span></span>  
   
-1.  <span data-ttu-id="c1f55-139">使用下列命令安裝 [!INCLUDE[vstecasp](../../../../includes/vstecasp-md.md)] 4.0。</span><span class="sxs-lookup"><span data-stu-id="c1f55-139">Install [!INCLUDE[vstecasp](../../../../includes/vstecasp-md.md)] 4.0 using the following command.</span></span>  
+1.  <span data-ttu-id="2b0a2-139">使用下列命令安裝 [!INCLUDE[vstecasp](../../../../includes/vstecasp-md.md)] 4.0。</span><span class="sxs-lookup"><span data-stu-id="2b0a2-139">Install [!INCLUDE[vstecasp](../../../../includes/vstecasp-md.md)] 4.0 using the following command.</span></span>  
   
     ```  
     %windir%\Microsoft.NET\Framework\v4.0.XXXXX\aspnet_regiis.exe /i /enable  
     ```  
   
-2.  <span data-ttu-id="c1f55-140">請確定您已執行[的 Windows Communication Foundation 範例的單次安裝程序](../../../../docs/framework/wcf/samples/one-time-setup-procedure-for-the-wcf-samples.md)。</span><span class="sxs-lookup"><span data-stu-id="c1f55-140">Ensure that you have performed the [One-Time Setup Procedure for the Windows Communication Foundation Samples](../../../../docs/framework/wcf/samples/one-time-setup-procedure-for-the-wcf-samples.md).</span></span>  
+2.  <span data-ttu-id="2b0a2-140">請確定您已執行[的 Windows Communication Foundation 範例的單次安裝程序](../../../../docs/framework/wcf/samples/one-time-setup-procedure-for-the-wcf-samples.md)。</span><span class="sxs-lookup"><span data-stu-id="2b0a2-140">Ensure that you have performed the [One-Time Setup Procedure for the Windows Communication Foundation Samples](../../../../docs/framework/wcf/samples/one-time-setup-procedure-for-the-wcf-samples.md).</span></span>  
   
-3.  <span data-ttu-id="c1f55-141">如先前在簡介一節所述，啟用 NetTcp Port Sharing Service。</span><span class="sxs-lookup"><span data-stu-id="c1f55-141">Enable the NetTcp Port Sharing Service as previously described in the introduction section.</span></span>  
+3.  <span data-ttu-id="2b0a2-141">如先前在簡介一節所述，啟用 NetTcp Port Sharing Service。</span><span class="sxs-lookup"><span data-stu-id="2b0a2-141">Enable the NetTcp Port Sharing Service as previously described in the introduction section.</span></span>  
   
-4.  <span data-ttu-id="c1f55-142">若要建置方案的 C# 或 Visual Basic .NET 版本，請遵循 [Building the Windows Communication Foundation Samples](../../../../docs/framework/wcf/samples/building-the-samples.md)中的指示。</span><span class="sxs-lookup"><span data-stu-id="c1f55-142">To build the C# or Visual Basic .NET edition of the solution, follow the instructions in [Building the Windows Communication Foundation Samples](../../../../docs/framework/wcf/samples/building-the-samples.md).</span></span>  
+4.  <span data-ttu-id="2b0a2-142">若要建置方案的 C# 或 Visual Basic .NET 版本，請遵循 [Building the Windows Communication Foundation Samples](../../../../docs/framework/wcf/samples/building-the-samples.md)中的指示。</span><span class="sxs-lookup"><span data-stu-id="2b0a2-142">To build the C# or Visual Basic .NET edition of the solution, follow the instructions in [Building the Windows Communication Foundation Samples](../../../../docs/framework/wcf/samples/building-the-samples.md).</span></span>  
   
-5.  <span data-ttu-id="c1f55-143">若要在單一或跨電腦組態中執行範例時，請依照中的指示[執行 Windows Communication Foundation 範例](../../../../docs/framework/wcf/samples/running-the-samples.md)。</span><span class="sxs-lookup"><span data-stu-id="c1f55-143">To run the sample in a single- or cross-machine configuration, follow the instructions in [Running the Windows Communication Foundation Samples](../../../../docs/framework/wcf/samples/running-the-samples.md).</span></span> <span data-ttu-id="c1f55-144">有關執行本範例的特定詳細資訊，已經包含在先前的「執行範例」一節中。</span><span class="sxs-lookup"><span data-stu-id="c1f55-144">Specific details for running this sample are included previously in the Running the Sample section.</span></span>  
+5.  <span data-ttu-id="2b0a2-143">若要在單一或跨電腦組態中執行範例時，請依照中的指示[執行 Windows Communication Foundation 範例](../../../../docs/framework/wcf/samples/running-the-samples.md)。</span><span class="sxs-lookup"><span data-stu-id="2b0a2-143">To run the sample in a single- or cross-machine configuration, follow the instructions in [Running the Windows Communication Foundation Samples](../../../../docs/framework/wcf/samples/running-the-samples.md).</span></span> <span data-ttu-id="2b0a2-144">有關執行本範例的特定詳細資訊，已經包含在先前的「執行範例」一節中。</span><span class="sxs-lookup"><span data-stu-id="2b0a2-144">Specific details for running this sample are included previously in the Running the Sample section.</span></span>  
   
-## <a name="see-also"></a><span data-ttu-id="c1f55-145">請參閱</span><span class="sxs-lookup"><span data-stu-id="c1f55-145">See Also</span></span>
+## <a name="see-also"></a><span data-ttu-id="2b0a2-145">另請參閱</span><span class="sxs-lookup"><span data-stu-id="2b0a2-145">See Also</span></span>

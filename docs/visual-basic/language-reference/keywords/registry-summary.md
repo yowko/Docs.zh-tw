@@ -12,24 +12,24 @@ ms.assetid: 6e90eb8a-1a4e-4387-8a68-9287dc7875e8
 caps.latest.revision: 14
 author: dotnet-bot
 ms.author: dotnetcontent
-ms.openlocfilehash: e1e57ac4650eb625ce2eb18e092024ac40607d81
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.openlocfilehash: 4163fbb1bd429442badfa429034d34133f825898
+ms.sourcegitcommit: 2042de78fcdceebb6b8ac4b7a292b93e8782cbf5
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 04/27/2018
 ---
-# <a name="registry-summary-visual-basic"></a><span data-ttu-id="11d98-102">登錄摘要 (Visual Basic)</span><span class="sxs-lookup"><span data-stu-id="11d98-102">Registry Summary (Visual Basic)</span></span>
-[!INCLUDE[vsprvs](~/includes/vsprvs-md.md)]<span data-ttu-id="11d98-103">語言關鍵字和執行階段程式庫成員會依用途組織和使用。</span><span class="sxs-lookup"><span data-stu-id="11d98-103"> language keywords and run-time library members are organized by purpose and use.</span></span>  
+# <a name="registry-summary-visual-basic"></a><span data-ttu-id="a1343-102">登錄摘要 (Visual Basic)</span><span class="sxs-lookup"><span data-stu-id="a1343-102">Registry Summary (Visual Basic)</span></span>
+<span data-ttu-id="a1343-103">Visual Studio 語言關鍵字和執行階段程式庫成員會依用途組織和使用。</span><span class="sxs-lookup"><span data-stu-id="a1343-103">Visual Studio language keywords and run-time library members are organized by purpose and use.</span></span>  
   
- <span data-ttu-id="11d98-104">使用`My`功能可以讓您與產能和這些項目比登錄作業的效能。</span><span class="sxs-lookup"><span data-stu-id="11d98-104">Using the `My` feature provides you with greater productivity and performance in registry operations than these elements.</span></span> <span data-ttu-id="11d98-105">如需詳細資訊，請參閱<xref:Microsoft.VisualBasic.MyServices.RegistryProxy>。</span><span class="sxs-lookup"><span data-stu-id="11d98-105">For more information, see <xref:Microsoft.VisualBasic.MyServices.RegistryProxy>.</span></span>  
+ <span data-ttu-id="a1343-104">使用`My`功能可以讓您與產能和這些項目比登錄作業的效能。</span><span class="sxs-lookup"><span data-stu-id="a1343-104">Using the `My` feature provides you with greater productivity and performance in registry operations than these elements.</span></span> <span data-ttu-id="a1343-105">如需詳細資訊，請參閱<xref:Microsoft.VisualBasic.MyServices.RegistryProxy>。</span><span class="sxs-lookup"><span data-stu-id="a1343-105">For more information, see <xref:Microsoft.VisualBasic.MyServices.RegistryProxy>.</span></span>  
   
-|<span data-ttu-id="11d98-106">**動作**</span><span class="sxs-lookup"><span data-stu-id="11d98-106">**Action**</span></span>|<span data-ttu-id="11d98-107">**語言項目**</span><span class="sxs-lookup"><span data-stu-id="11d98-107">**Language element**</span></span>|  
+|<span data-ttu-id="a1343-106">**動作**</span><span class="sxs-lookup"><span data-stu-id="a1343-106">**Action**</span></span>|<span data-ttu-id="a1343-107">**語言項目**</span><span class="sxs-lookup"><span data-stu-id="a1343-107">**Language element**</span></span>|  
 |----------------|--------------------------|  
-|<span data-ttu-id="11d98-108">刪除程式設定。</span><span class="sxs-lookup"><span data-stu-id="11d98-108">Delete program settings.</span></span>|<xref:Microsoft.VisualBasic.Interaction.DeleteSetting%2A>|  
-|<span data-ttu-id="11d98-109">讀取程式設定。</span><span class="sxs-lookup"><span data-stu-id="11d98-109">Read program settings.</span></span>|<span data-ttu-id="11d98-110"><xref:Microsoft.VisualBasic.Interaction.GetSetting%2A>, <xref:Microsoft.VisualBasic.Interaction.GetAllSettings%2A></span><span class="sxs-lookup"><span data-stu-id="11d98-110"><xref:Microsoft.VisualBasic.Interaction.GetSetting%2A>, <xref:Microsoft.VisualBasic.Interaction.GetAllSettings%2A></span></span>|  
-|<span data-ttu-id="11d98-111">儲存程式設定。</span><span class="sxs-lookup"><span data-stu-id="11d98-111">Save program settings.</span></span>|<xref:Microsoft.VisualBasic.Interaction.SaveSetting%2A>|  
+|<span data-ttu-id="a1343-108">刪除程式設定。</span><span class="sxs-lookup"><span data-stu-id="a1343-108">Delete program settings.</span></span>|<xref:Microsoft.VisualBasic.Interaction.DeleteSetting%2A>|  
+|<span data-ttu-id="a1343-109">讀取程式設定。</span><span class="sxs-lookup"><span data-stu-id="a1343-109">Read program settings.</span></span>|<span data-ttu-id="a1343-110"><xref:Microsoft.VisualBasic.Interaction.GetSetting%2A>, <xref:Microsoft.VisualBasic.Interaction.GetAllSettings%2A></span><span class="sxs-lookup"><span data-stu-id="a1343-110"><xref:Microsoft.VisualBasic.Interaction.GetSetting%2A>, <xref:Microsoft.VisualBasic.Interaction.GetAllSettings%2A></span></span>|  
+|<span data-ttu-id="a1343-111">儲存程式設定。</span><span class="sxs-lookup"><span data-stu-id="a1343-111">Save program settings.</span></span>|<xref:Microsoft.VisualBasic.Interaction.SaveSetting%2A>|  
   
-## <a name="see-also"></a><span data-ttu-id="11d98-112">另請參閱</span><span class="sxs-lookup"><span data-stu-id="11d98-112">See Also</span></span>  
- [<span data-ttu-id="11d98-113">關鍵字</span><span class="sxs-lookup"><span data-stu-id="11d98-113">Keywords</span></span>](../../../visual-basic/language-reference/keywords/index.md)  
- [<span data-ttu-id="11d98-114">Visual Basic 執行階段程式庫成員</span><span class="sxs-lookup"><span data-stu-id="11d98-114">Visual Basic Runtime Library Members</span></span>](../../../visual-basic/language-reference/runtime-library-members.md)  
- [<span data-ttu-id="11d98-115">讀取和寫入登錄</span><span class="sxs-lookup"><span data-stu-id="11d98-115">Reading from and Writing to the Registry</span></span>](../../../visual-basic/developing-apps/programming/computer-resources/reading-from-and-writing-to-the-registry.md)
+## <a name="see-also"></a><span data-ttu-id="a1343-112">另請參閱</span><span class="sxs-lookup"><span data-stu-id="a1343-112">See Also</span></span>  
+ [<span data-ttu-id="a1343-113">關鍵字</span><span class="sxs-lookup"><span data-stu-id="a1343-113">Keywords</span></span>](../../../visual-basic/language-reference/keywords/index.md)  
+ [<span data-ttu-id="a1343-114">Visual Basic 執行階段程式庫成員</span><span class="sxs-lookup"><span data-stu-id="a1343-114">Visual Basic Runtime Library Members</span></span>](../../../visual-basic/language-reference/runtime-library-members.md)  
+ [<span data-ttu-id="a1343-115">讀取和寫入登錄</span><span class="sxs-lookup"><span data-stu-id="a1343-115">Reading from and Writing to the Registry</span></span>](../../../visual-basic/developing-apps/programming/computer-resources/reading-from-and-writing-to-the-registry.md)
