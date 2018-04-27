@@ -1,24 +1,26 @@
 ---
-title: "在 SQL Server 中撰寫安全的動態 SQL"
-ms.custom: 
+title: 在 SQL Server 中撰寫安全的動態 SQL
+ms.custom: ''
 ms.date: 03/30/2017
 ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.technology: dotnet-ado
-ms.tgt_pltfrm: 
+ms.reviewer: ''
+ms.suite: ''
+ms.technology:
+- dotnet-ado
+ms.tgt_pltfrm: ''
 ms.topic: article
 ms.assetid: df5512b0-c249-40d2-82f9-f9a2ce6665bc
-caps.latest.revision: "9"
+caps.latest.revision: 9
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.workload: dotnet
-ms.openlocfilehash: 41c396bf2101e54adb1608f938c702ff7663cb1d
-ms.sourcegitcommit: ed26cfef4e18f6d93ab822d8c29f902cff3519d1
+ms.workload:
+- dotnet
+ms.openlocfilehash: 5fdf41353e1772eab46e2e6b8f16ad7bfdf7a72f
+ms.sourcegitcommit: 86adcc06e35390f13c1e372c36d2e044f1fc31ef
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 01/17/2018
+ms.lasthandoff: 04/26/2018
 ---
 # <a name="writing-secure-dynamic-sql-in-sql-server"></a>在 SQL Server 中撰寫安全的動態 SQL
 「SQL 插入」(SQL Injection) 是指惡意的使用者用來輸入 Transact-SQL 陳述式 (而非有效輸入) 的流程。 如果該輸入未經驗證而直接傳遞至伺服器，而且應用程式不慎執行了插入的程式碼，則攻擊就可能會危及或損毀資料。  
@@ -68,7 +70,7 @@ ms.lasthandoff: 01/17/2018
  當您執行已經使用某個憑證簽署的預存程序時，授與憑證使用者的權限就會與呼叫端的權限合併。 雖然執行內容維持不變，但是憑證使用者無法模擬呼叫端。 簽署預存程序需要實作許多步驟。 每次修改此程序時，您就必須重新簽署程序。  
   
 ### <a name="cross-database-access"></a>跨資料庫存取  
- 在執行動態建立之 SQL 陳述式的情況中，跨資料庫擁有權鏈結沒有作用。 您可以在 [!INCLUDE[ssNoVersion](../../../../../includes/ssnoversion-md.md)] 中建立存取其他資料庫資料的預存程序，並使用存在於兩個資料庫中的憑證來簽署程序，藉此解決上述問題。 如此可以讓使用者存取該程序所使用的資料庫資源，而不必為其授與資料庫存取權或權限。  
+ 在執行動態建立之 SQL 陳述式的情況中，跨資料庫擁有權鏈結沒有作用。 您可以解決此 SQL Server 中建立預存程序，以便存取另一個資料庫中的資料，並簽署的憑證，這兩個資料庫中有程序。 如此可以讓使用者存取該程序所使用的資料庫資源，而不必為其授與資料庫存取權或權限。  
   
 ## <a name="external-resources"></a>外部資源  
  如需詳細資訊，請參閱下列資源。  
@@ -78,7 +80,7 @@ ms.lasthandoff: 01/17/2018
 |[預存程序](http://go.microsoft.com/fwlink/?LinkId=98233)和[SQL 資料隱碼](http://go.microsoft.com/fwlink/?LinkId=98234)SQL Server 線上叢書中|說明如何建立預存程序以及「SQL 插入」運作方式的主題。|  
 |[新的 SQL 截斷攻擊和如何加以避免](http://msdn.microsoft.com/msdnmag/issues/06/11/SQLSecurity/)MSDN Magazine 中。|說明如何分隔字元和字串、SQL 插入和截斷攻擊的修改。|  
   
-## <a name="see-also"></a>請參閱  
+## <a name="see-also"></a>另請參閱  
  [設定 ADO.NET 應用程式的安全性](../../../../../docs/framework/data/adonet/securing-ado-net-applications.md)  
  [SQL Server 安全性概觀](../../../../../docs/framework/data/adonet/sql/overview-of-sql-server-security.md)  
  [SQL Server 中的應用程式安全性案例](../../../../../docs/framework/data/adonet/sql/application-security-scenarios-in-sql-server.md)  

@@ -1,24 +1,26 @@
 ---
-title: "依逐步解說學習"
-ms.custom: 
+title: 依逐步解說學習
+ms.custom: ''
 ms.date: 03/30/2017
 ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.technology: dotnet-ado
-ms.tgt_pltfrm: 
+ms.reviewer: ''
+ms.suite: ''
+ms.technology:
+- dotnet-ado
+ms.tgt_pltfrm: ''
 ms.topic: article
 ms.assetid: a8ae2965-6a49-4155-89b0-7fab2c488ab1
-caps.latest.revision: "4"
+caps.latest.revision: 4
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.workload: dotnet
-ms.openlocfilehash: c49ecfec032a20090e8eca1c94efe9e1f35cce7d
-ms.sourcegitcommit: c0dd436f6f8f44dc80dc43b07f6841a00b74b23f
+ms.workload:
+- dotnet
+ms.openlocfilehash: 98373ccee7f9fde178f26c62cd77acb17676c6cc
+ms.sourcegitcommit: 86adcc06e35390f13c1e372c36d2e044f1fc31ef
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 01/19/2018
+ms.lasthandoff: 04/26/2018
 ---
 # <a name="learning-by-walkthroughs"></a>依逐步解說學習
 [!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)]文件集會提供幾個逐步解說。 本主題會處理某些一般逐步解說問題 (包含疑難排解)，並提供數個入門級逐步解說的連結，供您學習 [!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)]。  
@@ -41,20 +43,20 @@ ms.lasthandoff: 01/19/2018
 ## <a name="general"></a>一般  
  下列是有關於這些逐步解說的一般資訊：  
   
--   環境：每個 [!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)] 逐步解說都會使用 [!INCLUDE[vs_current_short](../../../../../../includes/vs-current-short-md.md)] 做為其整合式開發環境 (IDE)。  
+-   環境： 每個[!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)]逐步解說會使用 Visual Studio，做為其整合式的開發環境 (IDE)。  
   
 -   SQL 引擎：這些逐步解說是針對 SQL Server Express 撰寫的。 如果您沒有 SQL Server Express，可以免費進行下載。 如需詳細資訊，請參閱[下載範例資料庫](../../../../../../docs/framework/data/adonet/sql/linq/downloading-sample-databases.md)。  
   
     > [!NOTE]
     >  [!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)] 逐步解說會使用檔名做為連接字串 (Connection String)。 [!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)] 為了方便起見，讓 SQL Server Express 使用者只需指定檔名即可。 請時時注意安全性問題。 如需詳細資訊，請參閱[LINQ to SQL 中的安全性](../../../../../../docs/framework/data/adonet/sql/linq/security-in-linq-to-sql.md)。  
   
--   [!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)]逐步解說通常需要 Northwind 範例資料庫。 如需詳細資訊，請參閱[下載範例資料庫](../../../../../../docs/framework/data/adonet/sql/linq/downloading-sample-databases.md)。  
+-   [!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)] 逐步解說通常需要 Northwind 範例資料庫。 如需詳細資訊，請參閱[下載範例資料庫](../../../../../../docs/framework/data/adonet/sql/linq/downloading-sample-databases.md)。  
   
--   您在逐步解說中看到的對話方塊與功能表命令，可能會因您所使用的設定或 [!INCLUDE[vs_current_short](../../../../../../includes/vs-current-short-md.md)] 版本，而與說明中所述不同。 若要變更設定，請在 [工具]  功能表上按一下 [匯入和匯出設定]  。 如需詳細資訊，請參閱 [在 Visual Studio 中自訂開發設定](http://msdn.microsoft.com/library/22c4debb-4e31-47a8-8f19-16f328d7dcd3)  
+-   從說明中所述，根據您目前使用的設定或 Visual Studio 版本可能會與不同的對話方塊與功能表命令逐步解說中看到。 若要變更設定，請在 [工具]  功能表上按一下 [匯入和匯出設定]  。 如需詳細資訊，請參閱 [在 Visual Studio 中自訂開發設定](http://msdn.microsoft.com/library/22c4debb-4e31-47a8-8f19-16f328d7dcd3)  
   
 -   在專門處理多層式案例的逐步解說中，伺服器必須位於與開發電腦不同的電腦上，而且您必須具有存取該伺服器的適當權限。  
   
--   用來表示 Northwind 範例資料庫中之 Orders 資料表的類別名稱通常為 `[Order]`。 因為 `Order` 為 [!INCLUDE[vbprvb](../../../../../../includes/vbprvb-md.md)] 中的關鍵字，所以需要進行逸出。  
+-   用來表示 Northwind 範例資料庫中之 Orders 資料表的類別名稱通常為 `[Order]`。 逸出字元是必要的因為`Order`是在 Visual Basic 中的關鍵字。  
   
 ## <a name="troubleshooting"></a>疑難排解  
  發生執行階段錯誤的原因之一是您沒有足夠的權限可存取這些逐步解說中所用的資料庫。 請參閱下列步驟，以解決這類最常見的問題。  
@@ -98,5 +100,5 @@ ms.lasthandoff: 01/19/2018
   
 3.  以滑鼠右鍵按一下**SQL Server (SQLEXPRESS)**，然後按一下 **重新啟動**。  
   
-## <a name="see-also"></a>請參閱  
+## <a name="see-also"></a>另請參閱  
  [快速入門](../../../../../../docs/framework/data/adonet/sql/linq/getting-started.md)

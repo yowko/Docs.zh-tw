@@ -1,11 +1,12 @@
 ---
-title: "Visual Basic 程式的結構"
-ms.custom: 
+title: Visual Basic 程式的結構
+ms.custom: ''
 ms.date: 07/20/2015
 ms.prod: .net
-ms.reviewer: 
-ms.suite: 
-ms.technology: devlang-visual-basic
+ms.reviewer: ''
+ms.suite: ''
+ms.technology:
+- devlang-visual-basic
 ms.topic: article
 helpviewer_keywords:
 - conditional compilation [Visual Basic], Visual Basic
@@ -13,35 +14,35 @@ helpviewer_keywords:
 - procedures [Visual Basic], structure
 - Visual Basic code, program structure
 ms.assetid: ad0c6531-d762-4c77-a700-de16b07b6119
-caps.latest.revision: "17"
+caps.latest.revision: 17
 author: dotnet-bot
 ms.author: dotnetcontent
-ms.openlocfilehash: 136be5e2eab3ed0226e0ca471ee1d84cdc7a52d1
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.openlocfilehash: 5def0de1e22af39eb16489a2d4d27bdbd1853f2b
+ms.sourcegitcommit: 86adcc06e35390f13c1e372c36d2e044f1fc31ef
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 04/26/2018
 ---
 # <a name="structure-of-a-visual-basic-program"></a>Visual Basic 程式的結構
-A[!INCLUDE[vbprvb](~/includes/vbprvb-md.md)]程式已建立的標準建置組塊。 A*方案*可以包含一或多個專案。 A*專案*又可以包含一或多個組件。 每個*組件*編譯從一或多個原始程式檔。 A*原始程式檔*提供定義和實作的類別、 結構、 模組和介面，最後會包含您的程式碼。  
+Visual Basic 程式建立的標準建置組塊。 A*方案*可以包含一或多個專案。 A*專案*又可以包含一或多個組件。 每個*組件*編譯從一或多個原始程式檔。 A*原始程式檔*提供定義和實作的類別、 結構、 模組和介面，最後會包含您的程式碼。  
   
- 如需有關這些建置組塊[!INCLUDE[vbprvb](~/includes/vbprvb-md.md)]程式，請參閱[方案和專案](/visualstudio/ide/solutions-and-projects-in-visual-studio)和[組件和全域組件快取](../../../visual-basic/programming-guide/concepts/assemblies-gac/index.md)。  
+ Visual Basic 程式的建置組塊的相關資訊，請參閱[方案和專案](/visualstudio/ide/solutions-and-projects-in-visual-studio)和[組件和全域組件快取](../../../visual-basic/programming-guide/concepts/assemblies-gac/index.md)。  
   
 ## <a name="file-level-programming-elements"></a>檔案層級的程式設計項目  
  當您啟動專案或檔案，並開啟程式碼編輯器中時，您會看到一些程式碼已經位於正確位置，以及正確的順序。 您撰寫任何程式碼應該依照下列順序：  
   
-1.  `Option`陳述式  
+1.  `Option` 陳述式  
   
-2.  `Imports`陳述式  
+2.  `Imports` 陳述式  
   
-3.  `Namespace`陳述式和命名空間層級項目  
+3.  `Namespace` 陳述式和命名空間層級項目  
   
  如果您以不同方式輸入陳述式，會導致編譯錯誤。  
   
  程式也可以包含條件式編譯陳述式。 您可以穿插這些原始程式檔之間以上順序的陳述式中。  
   
 ### <a name="option-statements"></a>選項的陳述式  
- `Option`陳述式會建立基本規則，針對後續的程式碼，協助避免語法以及邏輯錯誤。 [Option Explicit 陳述式](../../../visual-basic/language-reference/statements/option-explicit-statement.md)可確保，所有變數宣告，而且拼字正確，因此能減少偵錯的時間。 [Option Strict 陳述式](../../../visual-basic/language-reference/statements/option-strict-statement.md)可協助您減少您工作之間的不同資料類型的變數時，可能會發生邏輯錯誤和資料遺失。 [選項比較陳述式](../../../visual-basic/language-reference/statements/option-compare-statement.md)指定方法的字串比較彼此，根據其`Binary`或`Text`值。  
+ `Option` 陳述式會建立基本規則，針對後續的程式碼，協助避免語法以及邏輯錯誤。 [Option Explicit 陳述式](../../../visual-basic/language-reference/statements/option-explicit-statement.md)可確保，所有變數宣告，而且拼字正確，因此能減少偵錯的時間。 [Option Strict 陳述式](../../../visual-basic/language-reference/statements/option-strict-statement.md)可協助您減少您工作之間的不同資料類型的變數時，可能會發生邏輯錯誤和資料遺失。 [選項比較陳述式](../../../visual-basic/language-reference/statements/option-compare-statement.md)指定方法的字串比較彼此，根據其`Binary`或`Text`值。  
   
 ### <a name="imports-statements"></a>Imports 陳述式  
  您可以包含[Imports 陳述式 （.NET 命名空間和類型）](../../../visual-basic/language-reference/statements/imports-statement-net-namespace-and-type.md)匯入專案外部定義的名稱。 `Imports`陳述式可讓您的程式碼，來參考類別和其他類型定義中匯入的命名空間，而不必加以限定。 您可以使用最大數量`Imports`視陳述式。 如需詳細資訊，請參閱[參考和 Imports 陳述式](../../../visual-basic/programming-guide/program-structure/references-and-the-imports-statement.md)。  
@@ -88,7 +89,7 @@ A[!INCLUDE[vbprvb](~/includes/vbprvb-md.md)]程式已建立的標準建置組塊
  在程序層級的資料元素僅限於本機變數和常數。  
   
 ## <a name="the-main-procedure"></a>主要程序  
- `Main`程序是已載入您的應用程式時執行的第一個程式碼。 `Main`可做為起始點和應用程式的整體控制項。 有四種`Main`:  
+ `Main`程序是已載入您的應用程式時執行的第一個程式碼。 `Main` 可做為起始點和應用程式的整體控制項。 有四種`Main`:  
   
 -   `Sub Main()`  
   

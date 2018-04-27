@@ -1,32 +1,33 @@
 ---
-title: "工作 1：建立新的 Windows Presentation Foundation 應用程式"
-ms.custom: 
+title: 工作 1：建立新的 Windows Presentation Foundation 應用程式
+ms.custom: ''
 ms.date: 03/30/2017
 ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.tgt_pltfrm: 
+ms.reviewer: ''
+ms.suite: ''
+ms.tgt_pltfrm: ''
 ms.topic: article
 ms.assetid: 270eaeba-9492-4532-af9f-403ce5c9935b
-caps.latest.revision: "14"
+caps.latest.revision: 14
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.workload: dotnet
-ms.openlocfilehash: a207b09ff7124bb161678627f365a6fa4021a38d
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.workload:
+- dotnet
+ms.openlocfilehash: cd21013331e19fa9e18ad7cbee0a7bb07abaf3d2
+ms.sourcegitcommit: 86adcc06e35390f13c1e372c36d2e044f1fc31ef
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 04/26/2018
 ---
 # <a name="task-1-create-a-new-windows-presentation-foundation-application"></a>工作 1：建立新的 Windows Presentation Foundation 應用程式
-在這個工作中，您將會使用 WPF 應用程式 Visual Studio 範本建立一個空的 [!INCLUDE[avalon1](../../../includes/avalon1-md.md)] 應用程式，再將參考加入至適當的 [!INCLUDE[netfx_current_short](../../../includes/netfx-current-short-md.md)] 工作流程組件。  
+在這項工作，您會建立空的 Windows Presentation Foundation (WPF) 應用程式使用的 WPF 應用程式的 Visual Studio 範本，並將參考加入至適當[!INCLUDE[netfx_current_short](../../../includes/netfx-current-short-md.md)]工作流程組件。  
   
 ### <a name="to-create-the-wpf-application-project"></a>若要建立 WPF 應用程式專案  
   
-1.  開啟[!INCLUDE[vs_current_short](../../../includes/vs-current-short-md.md)]以及**檔案**功能表上，指向**新增**，然後按一下 **專案**。  
+1.  開啟 Visual Studio 以及**檔案**功能表上，指向**新增**，然後按一下 **專案**。  
   
-2.  在**新專案**對話方塊方塊中，選取  **Visual C#**或**Visual Basic**從**已安裝的範本**的左側窗格方塊。 如果您選擇的語言沒有出現，查看 **其他語言**。  
+2.  在**新專案**對話方塊方塊中，選取  **Visual C#** 或**Visual Basic**從**已安裝的範本**的左側窗格方塊。 如果您選擇的語言沒有出現，查看 **其他語言**。  
   
 3.  選取**Windows**中**已安裝的範本**窗格。  
   
@@ -36,7 +37,7 @@ ms.lasthandoff: 12/22/2017
   
 6.  方案名稱設定為**RehostingTheDesigner**。  
   
-7.  按一下**確定**建立應用程式專案。 [!INCLUDE[vs_current_short](../../../includes/vs-current-short-md.md)] 會為應用程式建立基本 WPF UI，並且包含適當的 XAML 和程式碼後置檔案。  
+7.  按一下**確定**建立應用程式專案。 Visual Studio 會建立基本 WPF UI 應用程式，並且包含適當的 XAML 和程式碼後置檔案。  
   
 8.  將參考加入至**WorkflowModel**組件。 若要這樣做，請在**方案總管 中**，以滑鼠右鍵按一下**HostingApplication**專案，然後選取**加入參考**。  
   
@@ -52,6 +53,6 @@ ms.lasthandoff: 12/22/2017
   
 11. 請參閱[工作 2： 裝載工作流程設計工具](../../../docs/framework/windows-workflow-foundation/task-2-host-the-workflow-designer.md)以了解如何裝載工作流程設計工具設計畫布。  
   
-## <a name="see-also"></a>請參閱  
+## <a name="see-also"></a>另請參閱  
  [重新裝載工作流程設計工具](../../../docs/framework/windows-workflow-foundation/rehosting-the-workflow-designer.md)  
  [工作 2：裝載工作流程設計工具](../../../docs/framework/windows-workflow-foundation/task-2-host-the-workflow-designer.md)

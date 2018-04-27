@@ -1,18 +1,19 @@
 ---
-title: "增益和 shift 現有 DevOps 雲端應用程式的.NET 應用程式的原因"
-description: "容器化的.NET 應用程式的.NET Microservices 架構 |增益和 shift 現有 DevOps 雲端應用程式的.NET 應用程式的原因"
+title: 增益和 shift 現有 DevOps 雲端應用程式的.NET 應用程式的原因
+description: 容器化的.NET 應用程式的.NET Microservices 架構 |增益和 shift 現有 DevOps 雲端應用程式的.NET 應用程式的原因
 author: CESARDELATORRE
 ms.author: wiwagn
 ms.date: 10/26/2017
 ms.prod: .net
+ms.topic: article
 ms.workload:
 - dotnet
 - dotnetcore
-ms.openlocfilehash: 1339264f49a065888a95e6ef6fe8575aa3c75564
-ms.sourcegitcommit: d3cfda0943364aaf6ccd574f55f584576c8a4fee
+ms.openlocfilehash: b6a65dfff45b240e89ab22fd7eba82d6cdbc27b8
+ms.sourcegitcommit: 2e8acae16ae802f2d6d04e3ce0a6dbf04e476513
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 03/08/2018
+ms.lasthandoff: 04/18/2018
 ---
 # <a name="reasons-to-lift-and-shift-existing-net-apps-to-cloud-devops-ready-applications"></a>增益和 shift 現有 DevOps 雲端應用程式的.NET 應用程式的原因
 
@@ -48,7 +49,7 @@ DevOps 雲端應用程式中，您可以快速且重複地傳遞給您的客戶�
 
 > ![主要的方針建置 DevOps 雲端應用程式](./media/image2.png)
 >
-> **圖 4-2。** 主要的方針建置 DevOps 雲端應用程式
+> **圖 4-2.** 主要的方針建置 DevOps 雲端應用程式
 
 若要總而言之，DevOps 雲端應用程式是建置和管理應用程式一種方法採用雲端運算時使用的容器、 受管理的雲端基礎結構、 恢復功能的應用程式技術，組合的模型，監視、 持續傳遞和 DevOps，完全不需要重新設計和重新設定現有的應用程式的需求。
 

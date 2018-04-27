@@ -16,11 +16,11 @@ helpviewer_keywords:
 ms.assetid: db7cfa59-c315-401c-a59b-0daf355343d6
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 82a0adc9e821df3a789cf19e798d4bad9e9a69e3
-ms.sourcegitcommit: 498799639937c89de777361aab74261efe7b79ea
+ms.openlocfilehash: f07fc7988c4329397e464f05d334648e98cb129d
+ms.sourcegitcommit: 86adcc06e35390f13c1e372c36d2e044f1fc31ef
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 03/22/2018
+ms.lasthandoff: 04/26/2018
 ---
 # <a name="-netcf"></a>-netcf
 設定要以 [!INCLUDE[Compact](~/includes/compact-md.md)] 為目標的編譯器。  
@@ -32,12 +32,12 @@ ms.lasthandoff: 03/22/2018
 ```  
   
 ## <a name="remarks"></a>備註  
- `-netcf`選項會使[!INCLUDE[vbprvb](~/includes/vbprvb-md.md)]目標的編譯器[!INCLUDE[Compact](~/includes/compact-md.md)]而不是完整[!INCLUDE[dnprdnshort](~/includes/dnprdnshort-md.md)]。 語言功能只有在完整存在於[!INCLUDE[dnprdnshort](~/includes/dnprdnshort-md.md)]已停用。  
+ `-netcf`選項會設為目標的 Visual Basic 編譯器[!INCLUDE[Compact](~/includes/compact-md.md)]而不是完整[!INCLUDE[dnprdnshort](~/includes/dnprdnshort-md.md)]。 語言功能只有在完整存在於[!INCLUDE[dnprdnshort](~/includes/dnprdnshort-md.md)]已停用。  
   
  `-netcf`選項設計來搭配[-sdkpath](../../../visual-basic/reference/command-line-compiler/sdkpath.md)。 停用的語言功能`-netcf`都是相同的目標檔案中沒有的語言功能`-sdkpath`。  
   
 > [!NOTE]
->  `-netcf`選項不是從 Visual Studio 開發環境中使用; 其只有在從命令列編譯時。 `-netcf`時設定選項[!INCLUDE[vbprvb](~/includes/vbprvb-md.md)]裝置專案載入。  
+>  `-netcf`選項不是從 Visual Studio 開發環境中使用; 其只有在從命令列編譯時。 `-netcf` Visual Basic 裝置專案載入時，設定選項。  
   
  `-netcf`選項會變更具有下列語言功能：  
   
@@ -53,7 +53,7 @@ ms.lasthandoff: 03/22/2018
   
      [!code-vb[VbVbalrCompiler#36](../../../visual-basic/reference/command-line-compiler/codesnippet/VisualBasic/netcf_3.vb)]  
   
--   使用 Visual Basic 6.0 關鍵字已移除[!INCLUDE[vbprvb](~/includes/vbprvb-md.md)]會產生不同的錯誤時`-netcf`用。 這會影響下列關鍵字的錯誤訊息：  
+-   使用 Visual Basic 中已移除的 Visual Basic 6.0 關鍵字會產生不同的錯誤時`-netcf`用。 這會影響下列關鍵字的錯誤訊息：  
   
     -   `Open`  
   

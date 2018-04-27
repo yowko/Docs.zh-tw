@@ -1,12 +1,13 @@
 ---
-title: "如何：將引號放入字串中 (Windows Forms)"
-ms.custom: 
+title: 如何：將引號放入字串中 (Windows Forms)
+ms.custom: ''
 ms.date: 03/30/2017
 ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.technology: dotnet-winforms
-ms.tgt_pltfrm: 
+ms.reviewer: ''
+ms.suite: ''
+ms.technology:
+- dotnet-winforms
+ms.tgt_pltfrm: ''
 ms.topic: article
 dev_langs:
 - csharp
@@ -17,16 +18,17 @@ helpviewer_keywords:
 - TextBox control [Windows Forms], displaying quotation marks
 - quotation marks [Windows Forms], adding to strings in text boxes
 ms.assetid: 68bdc3f3-4177-4eab-99cd-cac17a82b515
-caps.latest.revision: "14"
+caps.latest.revision: 14
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.workload: dotnet
-ms.openlocfilehash: 267a69b9470040dfc60f3c0b280b71e3f52dbc88
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.workload:
+- dotnet
+ms.openlocfilehash: dd7c6a460f24b1406ad914e20b9113920814737c
+ms.sourcegitcommit: 86adcc06e35390f13c1e372c36d2e044f1fc31ef
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 04/26/2018
 ---
 # <a name="how-to-put-quotation-marks-in-a-string-windows-forms"></a>如何：將引號放入字串中 (Windows Forms)
 您有時可能想要將引號 (" ") 放入文字字串中。 例如:   
@@ -37,7 +39,7 @@ ms.lasthandoff: 12/22/2017
   
 ### <a name="to-place-quotation-marks-in-a-string-in-your-code"></a>將引號放入您的程式碼中的字串  
   
-1.  在 [!INCLUDE[vbprvb](../../../../includes/vbprvb-md.md)] 中，將兩個引號插入資料列中當作內嵌引號。 在 [!INCLUDE[csprcs](../../../../includes/csprcs-md.md)] 和 [!INCLUDE[vcprvc](../../../../includes/vcprvc-md.md)] 中，插入逸出序列 \\" 當作內嵌引號。 例如，若要建立前置字串，請使用下列程式碼。  
+1.  在 Visual Basic 中，插入資料列中的兩個引號做為內嵌的雙引號。 在 Visual C# 和[!INCLUDE[vcprvc](../../../../includes/vcprvc-md.md)]，插入逸出序列\\"做為內嵌的雙引號。 例如，若要建立前置字串，請使用下列程式碼。  
   
     ```vb  
     Private Sub InsertQuote()  
@@ -61,7 +63,7 @@ ms.lasthandoff: 12/22/2017
   
      -或-  
   
-2.  針對引號插入 ASCII 或 Unicode 字元。 在 [!INCLUDE[vbprvb](../../../../includes/vbprvb-md.md)] 中，使用 ASCII 字元 (34)。 在 [!INCLUDE[csprcs](../../../../includes/csprcs-md.md)] 中，使用 Unicode 字元 (\u0022)。  
+2.  針對引號插入 ASCII 或 Unicode 字元。 在 Visual Basic 中使用 ASCII 字元 (34)。 在 Visual C# 中，使用 Unicode 字元 (\u0022)。  
   
     ```vb  
     Private Sub InsertAscii()  
@@ -99,7 +101,7 @@ ms.lasthandoff: 12/22/2017
        const_cast<String^>(quote));  
     ```  
   
-## <a name="see-also"></a>請參閱  
+## <a name="see-also"></a>另請參閱  
  <xref:System.Windows.Forms.TextBox>  
  <xref:Microsoft.VisualBasic.ControlChars.Quote>  
  [TextBox 控制項概觀](../../../../docs/framework/winforms/controls/textbox-control-overview-windows-forms.md)  

@@ -1,11 +1,12 @@
 ---
-title: "決定物件類型 (Visual Basic)"
-ms.custom: 
+title: 決定物件類型 (Visual Basic)
+ms.custom: ''
 ms.date: 07/20/2015
 ms.prod: .net
-ms.reviewer: 
-ms.suite: 
-ms.technology: devlang-visual-basic
+ms.reviewer: ''
+ms.suite: ''
+ms.technology:
+- devlang-visual-basic
 ms.topic: article
 helpviewer_keywords:
 - classes [Visual Basic], discovering which an object belongs to
@@ -15,17 +16,17 @@ helpviewer_keywords:
 - TypeName function
 - objects [Visual Basic], type determining
 ms.assetid: d95e7ad1-cd63-41d6-9a28-d7a1380d49c1
-caps.latest.revision: "13"
+caps.latest.revision: 13
 author: dotnet-bot
 ms.author: dotnetcontent
-ms.openlocfilehash: 9a63b5cf5941deb4dcc7518880b4dc7d0545803c
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.openlocfilehash: a6d24be68ea4a9872f8f4fe89c1aabb943fbcb91
+ms.sourcegitcommit: 86adcc06e35390f13c1e372c36d2e044f1fc31ef
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 04/26/2018
 ---
 # <a name="determining-object-type-visual-basic"></a>決定物件類型 (Visual Basic)
-泛型物件變數 (也就是變數宣告為`Object`) 可以保存任何類別的物件。 使用類型的變數時`Object`，您可能需要不同依據採取動作的物件類別; 例如，有些物件可能不支援的特定屬性或方法。 [!INCLUDE[vbprvb](~/includes/vbprvb-md.md)]提供兩種決定物件變數中儲存的物件類型：`TypeName`函式和`TypeOf...Is`運算子。  
+泛型物件變數 (也就是變數宣告為`Object`) 可以保存任何類別的物件。 使用類型的變數時`Object`，您可能需要不同依據採取動作的物件類別; 例如，有些物件可能不支援的特定屬性或方法。 Visual Basic 提供決定物件變數中儲存的物件類型的兩種：`TypeName`函式和`TypeOf...Is`運算子。  
   
 ## <a name="typename-and-typeofis"></a>TypeName 和 TypeOf...是  
  `TypeName`函式傳回的字串，是最佳選擇，當您需要儲存或顯示類別物件的名稱，如下列程式碼片段所示：  
@@ -36,7 +37,7 @@ ms.lasthandoff: 11/21/2017
   
  [!code-vb[VbVbalrOOP#93](../../../../visual-basic/misc/codesnippet/VisualBasic/determining-object-type_2.vb)]  
   
- 注意這裡會到期。 `TypeOf...Is`運算子會傳回`True`如果物件是特定型別，或衍生自特定型別。 幾乎所有項目中所做的[!INCLUDE[vbprvb](~/includes/vbprvb-md.md)]牽涉到物件，其中包含通常不會視為物件，例如字串和整數的某些項目。 這些物件衍生自和繼承方法從<xref:System.Object>。 當傳遞`Integer`和評估與`Object`、`TypeOf...Is`運算子會傳回`True`。 下列範例會報告參數`InParam`同時為`Object`和`Integer`:  
+ 注意這裡會到期。 `TypeOf...Is`運算子會傳回`True`如果物件是特定型別，或衍生自特定型別。 幾乎所有項目中所做的 Visual Basic 牽涉到物件，其中包含通常不會視為物件，例如字串和整數的某些項目。 這些物件衍生自和繼承方法從<xref:System.Object>。 當傳遞`Integer`和評估與`Object`、`TypeOf...Is`運算子會傳回`True`。 下列範例會報告參數`InParam`同時為`Object`和`Integer`:  
   
  [!code-vb[VbVbalrOOP#94](../../../../visual-basic/misc/codesnippet/VisualBasic/determining-object-type_3.vb)]  
   

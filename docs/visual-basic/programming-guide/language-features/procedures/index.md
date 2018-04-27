@@ -18,14 +18,14 @@ ms.assetid: 9effbcf0-80a0-4d1a-98f4-2c6920592766
 caps.latest.revision: 16
 author: dotnet-bot
 ms.author: dotnetcontent
-ms.openlocfilehash: 5487dc7dbe9be50e065610cfd61815242bb74ac0
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.openlocfilehash: 92cb2dd3f356acf89cbe62b5f3f5dc81fce271fc
+ms.sourcegitcommit: 86adcc06e35390f13c1e372c36d2e044f1fc31ef
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 04/26/2018
 ---
 # <a name="procedures-in-visual-basic"></a>Visual Basic 中的程序
-「程序」是由宣告陳述式 (`Function`、`Sub`、`Operator`、`Get`、`Set`) 和對應 `End` 宣告所括住的 [!INCLUDE[vbprvb](~/includes/vbprvb-md.md)] 陳述式區塊。 [!INCLUDE[vbprvb](~/includes/vbprvb-md.md)] 中所有的可執行陳述式都必須在某個程序內。  
+A*程序*是 Visual Basic 陳述式的宣告陳述式括住的區塊 (`Function`， `Sub`， `Operator`， `Get`， `Set`) 和符合`End`宣告。 在 Visual Basic 中的所有可執行陳述式必須是某些程序內。  
   
 ## <a name="calling-a-procedure"></a>呼叫程序  
  您可以從程式碼中的其他位置叫用程序。 這稱為「程序呼叫」。 當程序完成執行時，會將控制權交還給叫用程序的程式碼，稱為「呼叫程式碼」。 呼叫程式碼是陳述式或陳述式內的運算式，可依名稱指定程序，並將控制權轉移給它。  
@@ -43,7 +43,7 @@ ms.lasthandoff: 11/21/2017
  在大部分情況下，程序會在每次呼叫時針對不同的資料執行。 您可以將這項資訊當作程序呼叫的一部分傳遞給程序。 程序會定義零或多個「參數」，每個參數代表預期會收到的值。 程序定義中的每個參數會對應至程序呼叫中的「引數」。 引數代表您傳遞給指定程序呼叫中對應參數的值。  
   
 ## <a name="types-of-procedures"></a>程序類型  
- [!INCLUDE[vbprvb](~/includes/vbprvb-md.md)] 使用數種程序類型：  
+ Visual Basic 會使用幾種類型的程序：  
   
 -   [Sub 程序](./sub-procedures.md)會執行動作，但不會傳回值給呼叫程式碼。  
   

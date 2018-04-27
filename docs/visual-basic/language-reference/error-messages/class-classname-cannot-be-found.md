@@ -1,5 +1,5 @@
 ---
-title: 類別 &#39;&lt;classname&gt;&#39; 找不到
+title: 類別&#39; &lt;classname&gt; &#39;找不到
 ms.date: 07/20/2015
 ms.prod: .net
 ms.reviewer: ''
@@ -16,13 +16,13 @@ ms.assetid: 72528d02-77b7-4b4c-8b9e-d12f666f92ef
 caps.latest.revision: 8
 author: dotnet-bot
 ms.author: dotnetcontent
-ms.openlocfilehash: aed0bc5643d0714e5994abce09b04b1910f2becc
-ms.sourcegitcommit: bd1ef61f4bb794b25383d3d72e71041a5ced172e
+ms.openlocfilehash: 63dfdf0f2fe8869577d450f21c4f12b5eec125bb
+ms.sourcegitcommit: 86adcc06e35390f13c1e372c36d2e044f1fc31ef
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/18/2017
+ms.lasthandoff: 04/26/2018
 ---
-# <a name="class-39ltclassnamegt39-cannot-be-found"></a>類別 &#39;&lt;classname&gt;&#39; 找不到
+# <a name="class-39ltclassnamegt39-cannot-be-found"></a>類別&#39; &lt;classname&gt; &#39;找不到
 類別\<類別名稱 >' 找不到。 此狀況通常是因為 'Microsoft.VisualBasic.dll' 不符。  
   
  找不到定義的成員。  
@@ -35,7 +35,7 @@ ms.lasthandoff: 10/18/2017
   
 2.  如果錯誤重複發生，請儲存您的工作，然後重新啟動 [!INCLUDE[vsprvs](~/includes/vsprvs-md.md)]。  
   
-3.  如果問題持續發生，請重新安裝 [!INCLUDE[vbprvb](~/includes/vbprvb-md.md)]。  
+3.  如果錯誤持續發生，請重新安裝 Visual Basic。  
   
 4.  如果錯誤在重新安裝之後持續發生，請通知 Microsoft 產品支援服務。  
   

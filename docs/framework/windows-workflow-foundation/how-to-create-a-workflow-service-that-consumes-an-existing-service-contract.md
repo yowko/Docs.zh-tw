@@ -1,33 +1,34 @@
 ---
-title: "HOW TO：建立會取用現有服務合約的工作流程服務"
-ms.custom: 
+title: HOW TO：建立會取用現有服務合約的工作流程服務
+ms.custom: ''
 ms.date: 03/30/2017
 ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.tgt_pltfrm: 
+ms.reviewer: ''
+ms.suite: ''
+ms.tgt_pltfrm: ''
 ms.topic: article
 ms.assetid: 11d11b59-acc4-48bf-8e4b-e97b516aa0a9
-caps.latest.revision: "5"
+caps.latest.revision: 5
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.workload: dotnet
-ms.openlocfilehash: a754875dc3f7968086f4f92044205b8ebceb01e2
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.workload:
+- dotnet
+ms.openlocfilehash: 09c3f7656284dd73dd5f50c4ef9f77cd5adcbfe7
+ms.sourcegitcommit: 86adcc06e35390f13c1e372c36d2e044f1fc31ef
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 04/26/2018
 ---
 # <a name="how-to-create-a-workflow-service-that-consumes-an-existing-service-contract"></a>HOW TO：建立會取用現有服務合約的工作流程服務
 [!INCLUDE[net_v45](../../../includes/net-v45-md.md)] 採用合約優先工作流程開發形式，可在 Web 服務和工作流程中提供更好的整合。 合約優先工作流程開發工具可讓您在 Code First 中設計合約。 此工具會自動在合約中的作業工具箱內產生活動範本。  
   
 > [!NOTE]
->  本主題提供建立合約優先工作流程服務的逐步指示。 [!INCLUDE[crabout](../../../includes/crabout-md.md)]合約優先工作流程服務開發，請參閱[合約第一個工作流程服務開發](../../../docs/framework/windows-workflow-foundation/contract-first-workflow-service-development.md)。  
+>  本主題提供建立合約優先工作流程服務的逐步指示。 [!INCLUDE[crabout](../../../includes/crabout-md.md)] 合約優先工作流程服務開發，請參閱[合約第一個工作流程服務開發](../../../docs/framework/windows-workflow-foundation/contract-first-workflow-service-development.md)。  
   
 ### <a name="creating-the-workflow-project"></a>建立工作流程專案  
   
-1.  在[!INCLUDE[vs_current_short](../../../includes/vs-current-short-md.md)]，選取**檔案**，**新專案**。 選取**WCF**節點下的**C#**節點**範本**樹狀，並選取**WCF 工作流程服務應用程式**範本。  
+1.  在 Visual Studio 中，選取**檔案**，**新專案**。 選取**WCF**節點下的**C#** 節點**範本**樹狀，並選取**WCF 工作流程服務應用程式**範本。  
   
 2.  將新專案`ContractFirst`按一下**確定**。  
   
@@ -67,7 +68,7 @@ ms.lasthandoff: 12/22/2017
   
 4.  在**方案總管 中**，開啟.service1.xamlx。 工作流程服務會出現在設計工具中。  
   
-5.  選取**順序**活動。 在 [屬性] 視窗中，按一下**...** 按鈕**ImplementedContract**屬性。 在**型別集合編輯器**視窗中，按一下 **類型**下拉式清單中，然後選取**瀏覽型別...** 項目。 在**瀏覽並選取.Net 型別**對話方塊下方**\<目前專案 >**，開啟所有的子節點並選取**IBookService**。 按一下 [確定 **Deploying Office Solutions**]。 在**型別集合編輯器**] 對話方塊中，按一下 [**確定**。  
+5.  選取**順序**活動。 在 [屬性] 視窗中，按一下 **...** 按鈕**ImplementedContract**屬性。 在**型別集合編輯器**視窗中，按一下 **類型**下拉式清單中，然後選取**瀏覽型別...** 項目。 在**瀏覽並選取.Net 型別**對話方塊下方**\<目前專案 >**，開啟所有的子節點並選取**IBookService**。 按一下 [確定 **Deploying Office Solutions**]。 在**型別集合編輯器**] 對話方塊中，按一下 [**確定**。  
   
 6.  選取並刪除**ReceiveRequest**和**SendResponse**活動。  
   

@@ -11,14 +11,14 @@ ms.assetid: e986ab45-e3ce-430e-8704-5882e5da1104
 caps.latest.revision: 7
 author: dotnet-bot
 ms.author: dotnetcontent
-ms.openlocfilehash: ab126e3ac030e855659d5e4a02e523eefb7860e7
-ms.sourcegitcommit: bd1ef61f4bb794b25383d3d72e71041a5ced172e
+ms.openlocfilehash: b36b533e889135d03dd7f17d01000c7e00c57790
+ms.sourcegitcommit: 86adcc06e35390f13c1e372c36d2e044f1fc31ef
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/18/2017
+ms.lasthandoff: 04/26/2018
 ---
 # <a name="format-not-valid-in-resource-file"></a>資源檔中的格式無效
-您專案中的資源檔不符合 Windows 資源檔的標準格式，或是資源檔和 [!INCLUDE[vbprvb](~/includes/vbprvb-md.md)] 專案之間不相符。  
+您的專案中的資源檔不符合 Windows 資源檔的標準格式，或是有不相符的資源檔和 Visual Basic 專案。  
   
 ## <a name="to-correct-this-error"></a>更正這個錯誤  
   

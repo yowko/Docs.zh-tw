@@ -1,38 +1,40 @@
 ---
-title: "適用於 Entity Framework 的 SqlClient 已知問題"
-ms.custom: 
+title: 適用於 Entity Framework 的 SqlClient 已知問題
+ms.custom: ''
 ms.date: 03/30/2017
 ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.technology: dotnet-ado
-ms.tgt_pltfrm: 
+ms.reviewer: ''
+ms.suite: ''
+ms.technology:
+- dotnet-ado
+ms.tgt_pltfrm: ''
 ms.topic: article
 ms.assetid: 48fe4912-4d0f-46b6-be96-3a42c54780f6
-caps.latest.revision: "2"
+caps.latest.revision: 2
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.workload: dotnet
-ms.openlocfilehash: 3fb62e266ee6f0ca7957667d7c41fbd90dd34d32
-ms.sourcegitcommit: ed26cfef4e18f6d93ab822d8c29f902cff3519d1
+ms.workload:
+- dotnet
+ms.openlocfilehash: 8d5363ede9735ea805284638f795af67f2415ad0
+ms.sourcegitcommit: 86adcc06e35390f13c1e372c36d2e044f1fc31ef
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 01/17/2018
+ms.lasthandoff: 04/26/2018
 ---
 # <a name="known-issues-in-sqlclient-for-entity-framework"></a>適用於 Entity Framework 的 SqlClient 已知問題
 本節說明與 .NET Framework Data Provider for SQL Server (SqlClient) 相關的已知問題。  
   
 ## <a name="trailing-spaces-in-string-functions"></a>字串函式中的尾端空白  
- [!INCLUDE[ssNoVersion](../../../../../includes/ssnoversion-md.md)] 會忽略字串值中的尾端空白。 因此，在字串中傳遞尾端空白會導致無法預期的結果，甚至產生錯誤。  
+ SQL Server 會忽略字串值中的尾端空白。 因此，在字串中傳遞尾端空白會導致無法預期的結果，甚至產生錯誤。  
   
- 如果字串中必須有尾端空白，應該考慮在尾端附加空白字元，這樣 [!INCLUDE[ssNoVersion](../../../../../includes/ssnoversion-md.md)] 才不會修剪該字串。 如果尾端空白是不必要的，則應該在查詢管線中傳遞前先行修剪掉。  
+ 如果您必須擁有在字串中的尾端空格，您應該考慮附加空白字元在結束時，SQL Server 不會修剪字串。 如果尾端空白是不必要的，則應該在查詢管線中傳遞前先行修剪掉。  
   
 ## <a name="right-function"></a>RIGHT 函式  
  如果將非 `null` 值傳遞做為第一個引數並將 0 傳遞做為第二個引數，成為 `RIGHT(nvarchar(max)`, 0`)` 或 `RIGHT(varchar(max)`, 0`)`，則會傳回 `NULL` 值，而非 `empty` 字串。  
   
 ## <a name="cross-and-outer-apply-operators"></a>CROSS 和 OUTER APPLY 運算子  
- CROSS 和 OUTER APPLY 運算子是在 [!INCLUDE[ssVersion2005](../../../../../includes/ssversion2005-md.md)] 中引入的。 在某些案例中，查詢管線可能產生含有 CROSS APPLY 和 (或) OUTER APPLY 運算子的 Transact-SQL 陳述式。 因為有些後端提供者 (包括 [!INCLUDE[ssNoVersion](../../../../../includes/ssnoversion-md.md)] 之前的 [!INCLUDE[ssVersion2005](../../../../../includes/ssversion2005-md.md)] 版本) 不支援這些運算子，因此這類的查詢無法在這些後端提供者上執行。  
+ CROSS 和 OUTER APPLY 運算子是在 [!INCLUDE[ssVersion2005](../../../../../includes/ssversion2005-md.md)] 中引入的。 在某些案例中，查詢管線可能產生含有 CROSS APPLY 和 (或) OUTER APPLY 運算子的 Transact-SQL 陳述式。 因為有些後端提供者，包括 SQL Server 的版本早於[!INCLUDE[ssVersion2005](../../../../../includes/ssversion2005-md.md)]、 不支援這些運算子，這類查詢無法在執行這些後端提供者上。  
   
  下列是可能會導致輸出查詢中出現 CROSS APPLY 和 (或) OUTER APPLY 運算子的部分典型案例：  
   
@@ -68,8 +70,8 @@ SELECT c, (SELECT c, (SELECT c FROM AdventureWorksModel.Vendor AS c  ) As Inner2
 ```  
   
 ## <a name="server-generated-guid-identity-values"></a>伺服器產生的 GUID 識別值  
- [!INCLUDE[adonet_ef](../../../../../includes/adonet-ef-md.md)] 支援伺服器產生的 GUID 識別值，但是提供者必須支援在資插入資料列之後，傳回伺服器產生的識別值。 從開始[!INCLUDE[ssNoVersion](../../../../../includes/ssnoversion-md.md)]2005 中，您可以傳回伺服器產生的 GUID 類型中[!INCLUDE[ssNoVersion](../../../../../includes/ssnoversion-md.md)]透過資料庫[OUTPUT 子句](http://go.microsoft.com/fwlink/?LinkId=169400)。  
+ [!INCLUDE[adonet_ef](../../../../../includes/adonet-ef-md.md)] 支援伺服器產生的 GUID 識別值，但是提供者必須支援在資插入資料列之後，傳回伺服器產生的識別值。 從 SQL Server 2005 開始，您可以傳回伺服器產生的 GUID 型別中透過 SQL Server 資料庫[OUTPUT 子句](http://go.microsoft.com/fwlink/?LinkId=169400)。  
   
-## <a name="see-also"></a>請參閱  
+## <a name="see-also"></a>另請參閱  
  [適用於 Entity Framework 的 SqlClient](../../../../../docs/framework/data/adonet/ef/sqlclient-for-the-entity-framework.md)  
  [LINQ to Entities 中的已知問題和考量](../../../../../docs/framework/data/adonet/ef/language-reference/known-issues-and-considerations-in-linq-to-entities.md)

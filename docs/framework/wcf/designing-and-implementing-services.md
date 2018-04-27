@@ -1,28 +1,28 @@
 ---
-title: "設計與實作服務"
-ms.custom: 
+title: 設計與實作服務
+ms.custom: ''
 ms.date: 03/30/2017
 ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
+ms.reviewer: ''
+ms.suite: ''
 ms.technology:
 - dotnet-clr
-ms.tgt_pltfrm: 
+ms.tgt_pltfrm: ''
 ms.topic: article
 helpviewer_keywords:
 - defining service contracts [WCF]
 ms.assetid: 036fae20-7c55-4002-b71d-ac4466e167a3
-caps.latest.revision: 
+caps.latest.revision: 37
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
 ms.workload:
 - dotnet
-ms.openlocfilehash: b6d5a2dfb4db1d57f60e4c7f8cf3300b766402e1
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.openlocfilehash: 9b954a8ac4f8507b095eb97d0724095cecc7b75b
+ms.sourcegitcommit: 86adcc06e35390f13c1e372c36d2e044f1fc31ef
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 04/26/2018
 ---
 # <a name="designing-and-implementing-services"></a>設計與實作服務
 這個區段會顯示如何定義及實作[!INCLUDE[indigo2](../../../includes/indigo2-md.md)]合約。 服務合約會指定端點與外界溝通的內容。 更具體來說，這是關於一組會組織到基本訊息交換模式 (MEP) 之特定訊息的聲明，而這些交換模式包括要求/回覆、單向和雙工。 如果服務合約為一組邏輯相關的訊息交換，則服務作業就是單一的訊息交換。 例如，`Hello` 作業一定會明確地接收一個訊息 (這樣呼叫端才能宣告歡迎畫面)，但卻不一定會傳回訊息 (需視作業的禮節而定)。  
@@ -68,7 +68,7 @@ ms.lasthandoff: 12/22/2017
  如需有關如何設計合約的詳細資訊，請參閱[設計服務合約](../../../docs/framework/wcf/designing-service-contracts.md)。 如需實作合約的詳細資訊，請參閱[實作服務合約](../../../docs/framework/wcf/implementing-service-contracts.md)。  
   
 ### <a name="messages-up-front-and-center"></a>最新的訊息  
- 如果您已經習慣遠端程序呼叫 (RPC) 樣式的方法簽章，那麼使用 Managed 的介面、類別和方法來建立服務作業模型將更為簡單，此時傳遞參數至方法及接收傳回值是物件或其他類型程式碼之要求功能的一般形式。 例如，使用 Managed 語言 (例如 [!INCLUDE[vbprvb](../../../includes/vbprvb-md.md)] 和 C++ COM) 的程式設計人員可以在建立 [!INCLUDE[indigo2](../../../includes/indigo2-md.md)] 服務合約時應用他們對於 RPC 樣式方法 (不論使用物件或介面) 的知識，而不會遇到 RPC 樣式分散式物件系統的固有問題。 服務方向除了提供鬆散耦合、訊息導向之程式設計的優點，同時保留簡易且熟悉的 RPC 程式設計經驗。  
+ 如果您已經習慣遠端程序呼叫 (RPC) 樣式的方法簽章，那麼使用 Managed 的介面、類別和方法來建立服務作業模型將更為簡單，此時傳遞參數至方法及接收傳回值是物件或其他類型程式碼之要求功能的一般形式。 例如，程式設計人員使用 managed 的語言，例如 Visual Basic 和 c + + COM 可以套用其 RPC 樣式的知識的方式 （不論是使用物件或介面） 建立[!INCLUDE[indigo2](../../../includes/indigo2-md.md)]服務合約，而不會發生問題RPC 樣式分散式物件系統的固有。 服務方向除了提供鬆散耦合、訊息導向之程式設計的優點，同時保留簡易且熟悉的 RPC 程式設計經驗。  
   
  有許多程式設計人員更熟悉使用訊息導向的應用程式開發介面，例如 Microsoft MSMQ 之類的訊息佇列、.NET Framework 中的 <xref:System.Messaging> 命名空間 (Namespace)，或在 HTTP 要求中傳送非結構化的 XML，以上只是略舉部分例子。 如需在訊息層級的程式設計的詳細資訊，請參閱[使用訊息合約](../../../docs/framework/wcf/feature-details/using-message-contracts.md)，[服務通道層級程式設計](../../../docs/framework/wcf/extending/service-channel-level-programming.md)，和[與 POX 應用程式互通性](../../../docs/framework/wcf/feature-details/interoperability-with-pox-applications.md).  
   
@@ -79,6 +79,6 @@ ms.lasthandoff: 12/22/2017
   
  在設計、實作、設定和裝載 [!INCLUDE[indigo1](../../../includes/indigo1-md.md)] 服務應用程式時，必須特別注意這項新增的需求程序。 例如，合約可以指定必須支援某個工作階段。 若是如此，您就必須將繫結程序設定成可支援該合約需求，否則服務實作將無法運作。 或者，如果您的服務需要 Windows 整合式驗證而且已裝載於網際網路資訊服務 (IIS)，則服務所在的 Web 應用程式必須啟用 Windows 整合式驗證並關閉匿名支援。 如需不同的服務主機應用程式類型的影響，功能的詳細資訊，請參閱[裝載服務](../../../docs/framework/wcf/hosting-services.md)。  
   
-## <a name="see-also"></a>請參閱  
+## <a name="see-also"></a>另請參閱  
  [設計服務合約](../../../docs/framework/wcf/designing-service-contracts.md)  
  [履行服務合約](../../../docs/framework/wcf/implementing-service-contracts.md)

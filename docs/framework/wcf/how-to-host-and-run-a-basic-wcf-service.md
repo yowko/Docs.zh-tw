@@ -17,11 +17,11 @@ ms.author: dotnetcontent
 manager: wpickett
 ms.workload:
 - dotnet
-ms.openlocfilehash: 1e1c00abfec36622f5da493165259fb1786ab8d6
-ms.sourcegitcommit: c883637b41ee028786edceece4fa872939d2e64c
+ms.openlocfilehash: a13e5a0044c51700acce6b123688868443f635ae
+ms.sourcegitcommit: 86adcc06e35390f13c1e372c36d2e044f1fc31ef
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 03/26/2018
+ms.lasthandoff: 04/26/2018
 ---
 # <a name="how-to-host-and-run-a-basic-windows-communication-foundation-service"></a>HOW TO：裝載和執行基本 Windows Communication Foundation 服務
 這是在建立 [!INCLUDE[indigo1](../../../includes/indigo1-md.md)] 應用程式時必須進行的六個工作中的第三個。 六個工作的概觀，請參閱[入門教學課程](../../../docs/framework/wcf/getting-started-tutorial.md)主題。  
@@ -40,9 +40,9 @@ ms.lasthandoff: 03/26/2018
   
 ## <a name="to-create-a-new-console-application-to-host-the-service"></a>若要建立新的主控台應用程式以裝載服務  
   
-1.  以滑鼠右鍵按一下 開始使用的方案，選取 建立新的主控台應用程式專案**新增**，**新專案**。 在**加入新的專案**對話方塊左側的對話方塊中，選取**Windows**下**C#**或**VB**。 在對話方塊中間區段選取**主控台應用程式**。 將專案命名為 GettingStartedHost。  
+1.  以滑鼠右鍵按一下 開始使用的方案，選取 建立新的主控台應用程式專案**新增**，**新專案**。 在**加入新的專案**對話方塊左側的對話方塊中，選取**Windows**下**C#** 或**VB**。 在對話方塊中間區段選取**主控台應用程式**。 將專案命名為 GettingStartedHost。  
   
-2.  上按一下滑鼠右鍵，將 GettingStartedHost 專案的目標 framework 設定為.NET Framework 4.5 **GettingStartedHost**在 [方案總管] 中，然後選取**屬性**。 下拉式方塊中標示為**目標 Framework**選取**.NET Framework 4.5**。 設定目標 framework VB 專案的方式稍有不同，請在 GettingStartedHost 專案屬性對話方塊，按一下**編譯**畫面中，左側索引標籤，然後按一下 **進階編譯選項**位於對話方塊左下角的按鈕。 然後選取**.NET Framework 4.5**下拉式方塊中標示為**目標 Framework**。  
+2.  上按一下滑鼠右鍵，將 GettingStartedHost 專案的目標 framework 設定為.NET Framework 4.5 **GettingStartedHost**在 [方案總管] 中，然後選取**屬性**。 下拉式方塊中標示為**目標 Framework**選取 **.NET Framework 4.5**。 設定目標 framework VB 專案的方式稍有不同，請在 GettingStartedHost 專案屬性對話方塊，按一下**編譯**畫面中，左側索引標籤，然後按一下 **進階編譯選項**位於對話方塊左下角的按鈕。 然後選取 **.NET Framework 4.5**下拉式方塊中標示為**目標 Framework**。  
   
      設定目標 framework 會導致[!INCLUDE[vs_current_long](../../../includes/vs-current-long-md.md)]若要重新載入該方案，請按**確定**出現提示時。  
   
@@ -170,7 +170,7 @@ ms.lasthandoff: 03/26/2018
   
 ### <a name="to-verify-the-service-is-working"></a>若要驗證服務是否執行中  
   
-1.  從 [!INCLUDE[vs_current_long](../../../includes/vs-current-long-md.md)] 中執行 GettingStartedHost 主控台應用程式。 在 [!INCLUDE[wv](../../../includes/wv-md.md)] (含) 以後版本的作業系統中執行時，必須以系統管理員權限來執行服務。 因為 [!INCLUDE[vs_current_short](../../../includes/vs-current-short-md.md)] 是以系統管理員權限的身分執行，所以 GettingStartedHost 也要以系統管理員權限的身分執行。 您也可以利用系統管理員權限開啟命令提示字元執行，然後透過命令提示字元執行 service.exe。  
+1.  從 [!INCLUDE[vs_current_long](../../../includes/vs-current-long-md.md)] 中執行 GettingStartedHost 主控台應用程式。 在 [!INCLUDE[wv](../../../includes/wv-md.md)] (含) 以後版本的作業系統中執行時，必須以系統管理員權限來執行服務。 因為 Visual Studio 執行系統管理員權限，所以 GettingStartedHost 也會執行系統管理員權限。 您也可以利用系統管理員權限開啟命令提示字元執行，然後透過命令提示字元執行 service.exe。  
   
 2.  開啟 Internet Explorer，並瀏覽至服務位於 `http://localhost:8000/GettingStarted/CalculatorService` 的偵錯頁面。  
   
@@ -424,7 +424,7 @@ End Module
 ```  
   
 > [!NOTE]
->  此類服務需要權限才能將 HTTP 位址註冊到電腦上，以便接聽。 系統管理員帳戶具有此權限，但是非系統管理員帳戶則必須被授與 HTTP 命名空間的權限。 [!INCLUDE[crabout](../../../includes/crabout-md.md)] 如何設定命名空間保留區，請參閱[設定 HTTP 和 HTTPS](../../../docs/framework/wcf/feature-details/configuring-http-and-https.md)。 在 [!INCLUDE[vs_current_short](../../../includes/vs-current-short-md.md)] 下執行時，必須以系統管理員權限的身分執行 service.exe。  
+>  此類服務需要權限才能將 HTTP 位址註冊到電腦上，以便接聽。 系統管理員帳戶具有此權限，但是非系統管理員帳戶則必須被授與 HTTP 命名空間的權限。 [!INCLUDE[crabout](../../../includes/crabout-md.md)] 如何設定命名空間保留區，請參閱[設定 HTTP 和 HTTPS](../../../docs/framework/wcf/feature-details/configuring-http-and-https.md)。 以 Visual Studio 執行時，必須以系統管理權限執行 service.exe。  
   
  服務目前正在執行中。 若要繼續[How to： 建立用戶端](../../../docs/framework/wcf/how-to-create-a-wcf-client.md)。 如需疑難排解資訊，請參閱[疑難排解入門教學課程](../../../docs/framework/wcf/troubleshooting-the-getting-started-tutorial.md)。  
   

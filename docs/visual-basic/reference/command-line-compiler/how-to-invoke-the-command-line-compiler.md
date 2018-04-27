@@ -1,10 +1,11 @@
 ---
-title: "如何：叫用命令列編譯器 (Visual Basic)"
+title: 如何：叫用命令列編譯器 (Visual Basic)
 ms.date: 07/20/2015
 ms.prod: .net
-ms.reviewer: 
-ms.suite: 
-ms.technology: devlang-visual-basic
+ms.reviewer: ''
+ms.suite: ''
+ms.technology:
+- devlang-visual-basic
 ms.topic: article
 helpviewer_keywords:
 - command-line arguments
@@ -12,14 +13,14 @@ helpviewer_keywords:
 - Visual Basic compiler, starting
 - command line [Visual Basic], arguments
 ms.assetid: 0fd9a8f6-f34e-4c35-a49d-9b9bbd8da4a9
-caps.latest.revision: "28"
+caps.latest.revision: 28
 author: dotnet-bot
 ms.author: dotnetcontent
-ms.openlocfilehash: 5c69860ede5620272e67bde435e6e6fa08cc81bc
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.openlocfilehash: f1ccf08ba58fa6af60bd8ffd7cba79b205dc0f3d
+ms.sourcegitcommit: 86adcc06e35390f13c1e372c36d2e044f1fc31ef
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 04/26/2018
 ---
 # <a name="how-to-invoke-the-command-line-compiler-visual-basic"></a>如何：叫用命令列編譯器 (Visual Basic)
 您可以在命令列中，也稱為 MS-DOS 命令提示字元中輸入可執行檔的名稱來叫用命令列編譯器。 如果您從預設 Windows 命令提示字元進行編譯，您必須輸入的可執行檔的完整的路徑。 若要覆寫此預設行為，您可以使用[!INCLUDE[vsprvs](~/includes/vsprvs-md.md)]命令提示字元，或修改的 PATH 環境變數。 兩者都可讓您只要輸入編譯器名稱從任何目錄進行編譯。  
@@ -54,7 +55,7 @@ ms.lasthandoff: 11/21/2017
   
 6.  按一下**確定**確認您的編輯，並關閉對話方塊。  
   
-     變更 PATH 環境變數之後，您可以執行[!INCLUDE[vbprvb](~/includes/vbprvb-md.md)]編譯器在 Windows 命令提示字元，從任何電腦上的目錄。  
+     變更 PATH 環境變數之後，您可以執行 Visual Basic 編譯器在 Windows 命令提示字元從任何目錄電腦上。  
   
 ### <a name="to-invoke-the-compiler-using-the-windows-command-prompt"></a>要叫用編譯器使用 Windows 命令提示字元  
   

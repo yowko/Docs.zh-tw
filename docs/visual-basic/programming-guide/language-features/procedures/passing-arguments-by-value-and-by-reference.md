@@ -1,11 +1,12 @@
 ---
-title: "以傳值和傳址方式傳遞引數 (Visual Basic)"
-ms.custom: 
+title: 以傳值和傳址方式傳遞引數 (Visual Basic)
+ms.custom: ''
 ms.date: 07/20/2015
 ms.prod: .net
-ms.reviewer: 
-ms.suite: 
-ms.technology: devlang-visual-basic
+ms.reviewer: ''
+ms.suite: ''
+ms.technology:
+- devlang-visual-basic
 ms.topic: article
 helpviewer_keywords:
 - ByRef keyword [Visual Basic], passing arguments by reference
@@ -15,17 +16,17 @@ helpviewer_keywords:
 - arguments [Visual Basic], passing by value or by reference
 - argument passing [Visual Basic], by value or by reference
 ms.assetid: fd8a9de6-7178-44d5-a9bf-458d4ad907c2
-caps.latest.revision: "23"
+caps.latest.revision: 23
 author: dotnet-bot
 ms.author: dotnetcontent
-ms.openlocfilehash: 752c0c8e90cafe457cbd5d684bc984a1ea4632ac
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.openlocfilehash: f10e0e582e060c1305a9c0fe922620cb4da2c215
+ms.sourcegitcommit: 86adcc06e35390f13c1e372c36d2e044f1fc31ef
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 04/26/2018
 ---
 # <a name="passing-arguments-by-value-and-by-reference-visual-basic"></a>以傳值和傳址方式傳遞引數 (Visual Basic)
-在[!INCLUDE[vbprvb](~/includes/vbprvb-md.md)]，您可以將引數傳遞至程序*值*或*傳*。 這稱為*傳遞機制*，且它會判斷該程序是否可以修改呼叫程式碼中的引數的基礎的程式設計項目。 程序宣告指定決定每個參數的傳遞機制[ByVal](../../../../visual-basic/language-reference/modifiers/byval.md)或[ByRef](../../../../visual-basic/language-reference/modifiers/byref.md)關鍵字。  
+在 Visual Basic 中，您可以將引數傳遞至程序*值*或*傳*。 這稱為*傳遞機制*，且它會判斷該程序是否可以修改呼叫程式碼中的引數的基礎的程式設計項目。 程序宣告指定決定每個參數的傳遞機制[ByVal](../../../../visual-basic/language-reference/modifiers/byval.md)或[ByRef](../../../../visual-basic/language-reference/modifiers/byref.md)關鍵字。  
   
 ## <a name="distinctions"></a>區別  
  當傳遞至程序的引數，應注意彼此互動的數個不同區別：  
@@ -45,7 +46,7 @@ ms.lasthandoff: 11/21/2017
   
 -   **保護**。 在兩種傳遞機制之間做選擇，最重要的準則是呼叫變數來變更的風險。 傳遞引數的好處`ByRef`程序可以透過該引數呼叫的程式碼會傳回值。 傳遞引數的好處`ByVal`是它可以避免變數變更程序。  
   
--   **效能**。 雖然傳遞機制可能會影響程式碼的效能，差別在於通常並不顯著。 一個例外是傳遞實值類型`ByVal`。 在此情況下，[!INCLUDE[vbprvb](~/includes/vbprvb-md.md)]複製整個資料內容的引數。 因此，對於大數值類型，例如結構，它可以是更有效率，將它傳遞`ByRef`。  
+-   **效能**。 雖然傳遞機制可能會影響程式碼的效能，差別在於通常並不顯著。 一個例外是傳遞實值類型`ByVal`。 在此情況下，Visual Basic 會複製整個資料內容的引數。 因此，對於大數值類型，例如結構，它可以是更有效率，將它傳遞`ByRef`。  
   
      參考類型的資料指標會是複製 （四個位元組 32 位元平台上，在 64 位元平台上的 8 個位元組）。 因此，您可以將類型引數傳遞`String`或`Object`由不含損害效能值。  
   
@@ -54,7 +55,7 @@ ms.lasthandoff: 11/21/2017
   
  如果參數以宣告`ByRef`，呼叫程式碼可以強制執行機制`ByVal`包圍呼叫中的括號括住的引數名稱。 如需詳細資訊，請參閱[如何： 強制以傳值方式傳遞引數](./how-to-force-an-argument-to-be-passed-by-value.md)。  
   
- 中的預設值[!INCLUDE[vbprvb](~/includes/vbprvb-md.md)]是以傳值方式傳遞引數。  
+ 在 Visual Basic 中的預設值是以傳值方式傳遞引數。  
   
 ## <a name="when-to-pass-an-argument-by-value"></a>傳值方式傳遞引數的時機  
   

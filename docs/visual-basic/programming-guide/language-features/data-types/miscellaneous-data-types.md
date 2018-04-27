@@ -1,29 +1,30 @@
 ---
-title: "其他資料類型 (Visual Basic)"
-ms.custom: 
+title: 其他資料類型 (Visual Basic)
+ms.custom: ''
 ms.date: 07/20/2015
 ms.prod: .net
-ms.reviewer: 
-ms.suite: 
-ms.technology: devlang-visual-basic
+ms.reviewer: ''
+ms.suite: ''
+ms.technology:
+- devlang-visual-basic
 ms.topic: article
 helpviewer_keywords:
 - Object data type [Visual Basic], data types
 - data types [Visual Basic], choosing
 ms.assetid: 64c71a12-9057-4dbf-baca-7379c4aada69
-caps.latest.revision: "22"
+caps.latest.revision: 22
 author: dotnet-bot
 ms.author: dotnetcontent
-ms.openlocfilehash: b6bb86bb6d203aa4e6bdded27a4cb78a8155ddec
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.openlocfilehash: f80aacccab4c215b3e3917cc73097080aa6b9941
+ms.sourcegitcommit: 86adcc06e35390f13c1e372c36d2e044f1fc31ef
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 04/26/2018
 ---
 # <a name="miscellaneous-data-types-visual-basic"></a>其他資料類型 (Visual Basic)
-[!INCLUDE[vbprvb](~/includes/vbprvb-md.md)]提供數個不導向數字或字元資料型別。 相反地，它們可以處理特定資料這類是/否值、 日期/時間值和物件位址。  
+Visual Basic 提供數個不導向數字或字元的資料類型。 相反地，它們可以處理特定資料這類是/否值、 日期/時間值和物件位址。  
   
- 顯示並行所比較資料表[!INCLUDE[vbprvb](~/includes/vbprvb-md.md)]資料類型，請參閱[資料型別](../../../../visual-basic/language-reference/data-types/data-type-summary.md)。  
+ 顯示的 Visual Basic 資料類型來並行比較表，請參閱[資料型別](../../../../visual-basic/language-reference/data-types/data-type-summary.md)。  
   
 ## <a name="boolean-type"></a>布林型別  
  [布林資料型別](../../../../visual-basic/language-reference/data-types/boolean-data-type.md)是解譯為不帶正負號的值`True`或`False`。 它的資料寬度取決於實作的平台。 如果是/否，或開啟/關閉變數可以包含只有兩個狀態例如 true/false 的值，將它宣告為`Boolean`。  

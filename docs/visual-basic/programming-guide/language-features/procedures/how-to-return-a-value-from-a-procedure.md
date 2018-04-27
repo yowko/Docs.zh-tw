@@ -1,25 +1,26 @@
 ---
-title: "如何：傳回程序的值 (Visual Basic)"
-ms.custom: 
+title: 如何：傳回程序的值 (Visual Basic)
+ms.custom: ''
 ms.date: 07/20/2015
 ms.prod: .net
-ms.reviewer: 
-ms.suite: 
-ms.technology: devlang-visual-basic
+ms.reviewer: ''
+ms.suite: ''
+ms.technology:
+- devlang-visual-basic
 ms.topic: article
 helpviewer_keywords:
 - Visual Basic code, procedures
 - procedures [Visual Basic], returning from
 - procedures [Visual Basic], returning a value
 ms.assetid: 4bcc4724-2b4e-4df8-9b4b-16054607f87d
-caps.latest.revision: "12"
+caps.latest.revision: 12
 author: dotnet-bot
 ms.author: dotnetcontent
-ms.openlocfilehash: 6ce7aa0942be413986cb010963753447ea18cdf2
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.openlocfilehash: affcb25951a6647604286bc91dcaec8898fe2e30
+ms.sourcegitcommit: 86adcc06e35390f13c1e372c36d2e044f1fc31ef
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 04/26/2018
 ---
 # <a name="how-to-return-a-value-from-a-procedure-visual-basic"></a>如何：傳回程序的值 (Visual Basic)
 A`Function`值傳回給呼叫程式碼藉由執行`Return`陳述式或遇到`Exit Function`或`End Function`陳述式。  
@@ -44,7 +45,7 @@ A`Function`值傳回給呼叫程式碼藉由執行`Return`陳述式或遇到`Exi
   
 1.  在中至少一個就地`Function`程序中，指派值到程序的名稱。  
   
-2.  當您執行`Exit Function`或`End Function`陳述式，[!INCLUDE[vbprvb](~/includes/vbprvb-md.md)]傳回最近指派給程序的名稱的值。  
+2.  當您執行`Exit Function`或`End Function`陳述式，Visual Basic 會傳回最近指派給程序的名稱的值。  
   
 3.  同一個程序中可以有多個 `Exit Function` 陳述式，也可以混合 `Return` 和 `Exit Function` 陳述式。  
   

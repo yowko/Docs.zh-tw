@@ -1,13 +1,13 @@
 ---
-title: "HOW TO：使用 Windows 認證來確保服務安全"
-ms.custom: 
+title: HOW TO：使用 Windows 認證來確保服務安全
+ms.custom: ''
 ms.date: 03/30/2017
 ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
+ms.reviewer: ''
+ms.suite: ''
 ms.technology:
 - dotnet-clr
-ms.tgt_pltfrm: 
+ms.tgt_pltfrm: ''
 ms.topic: article
 dev_langs:
 - csharp
@@ -15,20 +15,20 @@ dev_langs:
 helpviewer_keywords:
 - WCF, security
 ms.assetid: d171b5ca-96ef-47ff-800c-c138023cf76e
-caps.latest.revision: 
+caps.latest.revision: 26
 author: BrucePerlerMS
 ms.author: bruceper
 manager: mbaldwin
 ms.workload:
 - dotnet
-ms.openlocfilehash: 6a5225f25ca921407d64f579bbc7c204917ff260
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.openlocfilehash: cbe29ed57a7eee3a74166dabd2b8931e73cd2860
+ms.sourcegitcommit: 86adcc06e35390f13c1e372c36d2e044f1fc31ef
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 04/26/2018
 ---
 # <a name="how-to-secure-a-service-with-windows-credentials"></a>HOW TO：使用 Windows 認證來確保服務安全
-本主題說明如何在上啟用傳輸安全性[!INCLUDE[indigo1](../../../includes/indigo1-md.md)]位於 Windows 網域，且由相同的網域中的用戶端呼叫服務。 [!INCLUDE[crabout](../../../includes/crabout-md.md)]此案例中，請參閱[Windows 驗證的傳輸安全性](../../../docs/framework/wcf/feature-details/transport-security-with-windows-authentication.md)。 範例應用程式，請參閱[WSHttpBinding](../../../docs/framework/wcf/samples/wshttpbinding.md)範例。  
+本主題說明如何在上啟用傳輸安全性[!INCLUDE[indigo1](../../../includes/indigo1-md.md)]位於 Windows 網域，且由相同的網域中的用戶端呼叫服務。 [!INCLUDE[crabout](../../../includes/crabout-md.md)] 此案例中，請參閱[Windows 驗證的傳輸安全性](../../../docs/framework/wcf/feature-details/transport-security-with-windows-authentication.md)。 範例應用程式，請參閱[WSHttpBinding](../../../docs/framework/wcf/samples/wshttpbinding.md)範例。  
   
  這個主題假設您擁有現有的合約介面、已定義了實作 (Implementation)，以及一些附加內容。 您也可以修改現有的服務和用戶端。  
   
@@ -57,17 +57,17 @@ ms.lasthandoff: 12/22/2017
      [!code-vb[c_SecureWindowsService#1](../../../samples/snippets/visualbasic/VS_Snippets_CFX/c_securewindowsservice/vb/secureservice.vb#1)]  
   
 ### <a name="using-the-binding-in-a-service"></a>在服務中使用繫結  
- 這是第二個程序，說明如何在自我裝載的服務中使用繫結。 [!INCLUDE[crabout](../../../includes/crabout-md.md)]裝載服務，請參閱[裝載服務](../../../docs/framework/wcf/hosting-services.md)。  
+ 這是第二個程序，說明如何在自我裝載的服務中使用繫結。 [!INCLUDE[crabout](../../../includes/crabout-md.md)] 裝載服務，請參閱[裝載服務](../../../docs/framework/wcf/hosting-services.md)。  
   
 ##### <a name="to-use-a-binding-in-a-service"></a>在服務中使用繫結  
   
 1.  將這個程序的程式碼插入到前一個程序的程式碼後面。  
   
-2.  建立名稱為 <xref:System.Type> 的 `contractType` 變數，並將其類型指派為介面 (`ICalculator`)。 使用 [!INCLUDE[vbprvb](../../../includes/vbprvb-md.md)] 時，請使用 `GetType` 運算子；使用 C# 時，請使用 `typeof` 關鍵字。  
+2.  建立名稱為 <xref:System.Type> 的 `contractType` 變數，並將其類型指派為介面 (`ICalculator`)。 當您使用 Visual Basic，使用`GetType`運算子; 使用 C# 中，使用時`typeof`關鍵字。  
   
 3.  建立第二個名稱為 `Type` 的 `serviceType` 變數，並將其類型指派為實作的合約 (`Calculator`)。  
   
-4.  使用服務的基底位址，建立名稱為 <xref:System.Uri> 之 `baseAddress` 類別的執行個體。 基底位址必須具有符合傳輸的配置。 在這個情況下，傳輸配置為 HTTP，而位址中則包含特殊統一資源識別項 (URI) "localhost"、連接埠號碼 (8036) 和基底端點位址 (serviceModelSamples/)：http://localhost:8036/serviceModelSamples/。  
+4.  使用服務的基底位址，建立名稱為 <xref:System.Uri> 之 `baseAddress` 類別的執行個體。 基底位址必須具有符合傳輸的配置。 在此情況下，傳輸配置為 HTTP，而位址中則包含特殊統一資源識別元 (URI)"localhost"和連接埠號碼 （8036） 以及基底的端點位址 ("serviceModelSamples /): http://localhost:8036/serviceModelSamples/。  
   
 5.  使用 <xref:System.ServiceModel.ServiceHost> 和 `serviceType` 變數，建立 `baseAddress` 類別的執行個體。  
   
@@ -87,7 +87,7 @@ ms.lasthandoff: 12/22/2017
   
 ##### <a name="to-use-a-binding-in-a-client-with-code"></a>搭配程式碼在用戶端中使用繫結  
   
-1.  使用 SvcUtil.exe 工具，從服務的中繼資料產生 Proxy 程式碼。 [!INCLUDE[crdefault](../../../includes/crdefault-md.md)][How to： 建立用戶端](../../../docs/framework/wcf/how-to-create-a-wcf-client.md)。 產生的 Proxy 程式碼繼承自 <xref:System.ServiceModel.ClientBase%601> 類別，這樣可確保每個用戶端都有與 [!INCLUDE[indigo2](../../../includes/indigo2-md.md)] 服務進行通訊時所需要的建構函式 (Constructor)、方法和屬性。 在這個範例中，產生的程式碼包含 `CalculatorClient` 類別，這個類別會實作 `ICalculator` 介面，因此就會與服務程式碼相容。  
+1.  使用 SvcUtil.exe 工具，從服務的中繼資料產生 Proxy 程式碼。 [!INCLUDE[crdefault](../../../includes/crdefault-md.md)] [如何： 建立用戶端](../../../docs/framework/wcf/how-to-create-a-wcf-client.md)。 產生的 Proxy 程式碼繼承自 <xref:System.ServiceModel.ClientBase%601> 類別，這樣可確保每個用戶端都有與 [!INCLUDE[indigo2](../../../includes/indigo2-md.md)] 服務進行通訊時所需要的建構函式 (Constructor)、方法和屬性。 在這個範例中，產生的程式碼包含 `CalculatorClient` 類別，這個類別會實作 `ICalculator` 介面，因此就會與服務程式碼相容。  
   
 2.  此程序的程式碼會插入至用戶端程式的 `Main` 方法開頭。  
   
@@ -140,7 +140,7 @@ ms.lasthandoff: 12/22/2017
   
 ##### <a name="to-use-a-binding-in-a-client-with-configuration"></a>搭配組態在用戶端中使用繫結  
   
-1.  使用 SvcUtil.exe 工具，從服務的中繼資料產生 Proxy 程式碼和組態檔。 [!INCLUDE[crdefault](../../../includes/crdefault-md.md)][How to： 建立用戶端](../../../docs/framework/wcf/how-to-create-a-wcf-client.md)。  
+1.  使用 SvcUtil.exe 工具，從服務的中繼資料產生 Proxy 程式碼和組態檔。 [!INCLUDE[crdefault](../../../includes/crdefault-md.md)] [如何： 建立用戶端](../../../docs/framework/wcf/how-to-create-a-wcf-client.md)。  
   
 2.  取代[\<繫結 >](../../../docs/framework/configure-apps/file-schema/wcf/bindings.md)上一節中的組態程式碼產生的組態檔的區段。  
   
@@ -160,7 +160,7 @@ ms.lasthandoff: 12/22/2017
  [!code-csharp[c_SecureWindowsClient#0](../../../samples/snippets/csharp/VS_Snippets_CFX/c_securewindowsclient/cs/secureclient.cs#0)] 
  [!code-vb[c_SecureWindowsClient#0](../../../samples/snippets/visualbasic/VS_Snippets_CFX/c_securewindowsclient/vb/secureclient.vb#0)]      
   
-## <a name="see-also"></a>請參閱  
+## <a name="see-also"></a>另請參閱  
  <xref:System.ServiceModel.WSHttpBinding>  
  [ServiceModel 中繼資料公用程式工具 (Svcutil.exe)](../../../docs/framework/wcf/servicemodel-metadata-utility-tool-svcutil-exe.md)  
  [如何：建立用戶端](../../../docs/framework/wcf/how-to-create-a-wcf-client.md)  

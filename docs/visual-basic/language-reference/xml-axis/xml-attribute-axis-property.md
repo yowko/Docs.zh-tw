@@ -19,11 +19,11 @@ ms.assetid: 7a4777e1-0618-4de9-9510-fb9ace2bf4db
 caps.latest.revision: 23
 author: dotnet-bot
 ms.author: dotnetcontent
-ms.openlocfilehash: a286c70f57128d0406b3a300610fea5e1c44b32d
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.openlocfilehash: 9968e5de0f8cb45fb896ba43c80d9c9a3ab8ef08
+ms.sourcegitcommit: 86adcc06e35390f13c1e372c36d2e044f1fc31ef
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 04/26/2018
 ---
 # <a name="xml-attribute-axis-property-visual-basic"></a>XML 屬性軸屬性 (Visual Basic)
 提供的屬性值的存取<xref:System.Xml.Linq.XElement>物件或集合中的第一個元素<xref:System.Xml.Linq.XElement>物件。  
@@ -38,24 +38,24 @@ object.@<attribute>
   
 ## <a name="parts"></a>組件  
  `object`  
- 必要項。 <xref:System.Xml.Linq.XElement>物件或集合的<xref:System.Xml.Linq.XElement>物件。  
+ 必要。 <xref:System.Xml.Linq.XElement>物件或集合的<xref:System.Xml.Linq.XElement>物件。  
   
  .@  
- 必要項。 代表屬性軸屬性開始。  
+ 必要。 代表屬性軸屬性開始。  
   
  <  
- 選擇項。 代表屬性名稱的開頭時`attribute`不是有效的識別項中[!INCLUDE[vbprvb](~/includes/vbprvb-md.md)]。  
+ 選擇性。 代表屬性名稱的開頭時`attribute`不在 Visual Basic 中是有效的識別項。  
   
  `attribute`  
- 必要項。 若要存取，表單的屬性名稱 [`prefix`:]`name`。  
+ 必要。 若要存取，表單的屬性名稱 [`prefix`:]`name`。  
   
-|組件|說明|  
+|組件|描述|  
 |----------|-----------------|  
-|`prefix`|選擇項。 屬性的 XML 命名空間前置詞。 必須是以 `Imports` 陳述式定義的全域 XML 命名空間。|  
-|`name`|必要項。 本機屬性名稱。 請參閱[宣告的 XML 項目和屬性的名稱](../../../visual-basic/programming-guide/language-features/xml/names-of-declared-xml-elements-and-attributes.md)。|  
+|`prefix`|選擇性。 屬性的 XML 命名空間前置詞。 必須是以 `Imports` 陳述式定義的全域 XML 命名空間。|  
+|`name`|必要。 本機屬性名稱。 請參閱[宣告的 XML 項目和屬性的名稱](../../../visual-basic/programming-guide/language-features/xml/names-of-declared-xml-elements-and-attributes.md)。|  
   
  \>  
- 選擇項。 代表屬性名稱的結尾時`attribute`不是有效的識別項中[!INCLUDE[vbprvb](~/includes/vbprvb-md.md)]。  
+ 選擇性。 代表屬性名稱的結尾時`attribute`不在 Visual Basic 中是有效的識別項。  
   
 ## <a name="return-value"></a>傳回值  
  字串，包含的值`attribute`。 如果屬性名稱不存在，`Nothing`傳回。  
@@ -65,7 +65,7 @@ object.@<attribute>
   
  當您參考 XML 屬性使用 @ 識別項，屬性值當做字串傳回，而且您不需要明確指定<xref:System.Xml.Linq.XAttribute.Value%2A>屬性。  
   
- XML 屬性的命名規則不同的命名規則[!INCLUDE[vbprvb](~/includes/vbprvb-md.md)]識別項。 若要存取 XML 屬性具有不是有效的 Visual Basic 識別項的名稱，請將名稱括在角括弧 (\<和 >)。  
+ XML 屬性的命名規則的 Visual Basic 識別項的命名規則不同。 若要存取 XML 屬性具有不是有效的 Visual Basic 識別項的名稱，請將名稱括在角括弧 (\<和 >)。  
   
 ## <a name="xml-namespaces"></a>XML 命名空間  
  屬性軸屬性中的名稱可以使用只有 XML 命名空間前置詞使用全域宣告`Imports`陳述式。 它不能使用在 XML 項目常值內本機宣告的 XML 命名空間前置詞。 如需詳細資訊，請參閱[Imports 陳述式 （XML 命名空間）](../../../visual-basic/language-reference/statements/imports-statement-xml-namespace.md)。  
@@ -97,7 +97,7 @@ object.@<attribute>
 ```  
   
 ## <a name="example"></a>範例  
- 下列範例使用角括號語法來取得名為 XML 屬性的值`number-type`，這不是有效的識別項中[!INCLUDE[vbprvb](~/includes/vbprvb-md.md)]。  
+ 下列範例使用角括號語法來取得名為 XML 屬性的值`number-type`，這不是在 Visual Basic 中是有效的識別碼。  
   
  [!code-vb[VbXMLSamples#13](../../../visual-basic/language-reference/operators/codesnippet/VisualBasic/xml-attribute-axis-property_3.vb)]  
   

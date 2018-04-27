@@ -5,14 +5,15 @@ ms.prod: .net
 author: CESARDELATORRE
 ms.author: wiwagn
 ms.date: 05/19/2017
+ms.topic: article
 ms.workload:
 - dotnet
 - dotnetcore
-ms.openlocfilehash: 92bfd4516866fe82408dd3dd341a13db0ee216c0
-ms.sourcegitcommit: 9a4fe1a1c37b26532654b4bbe22d702237950009
+ms.openlocfilehash: 59c03755bebce98e018f56fc7213b00a0d3eae38
+ms.sourcegitcommit: 2e8acae16ae802f2d6d04e3ce0a6dbf04e476513
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/16/2018
+ms.lasthandoff: 04/18/2018
 ---
 # <a name="orchestrating-microservices-and-multicontainer-applications-for-high-scalability-and-availability"></a>協調 microservices 及 multicontainer 應用程式的高延展性和可用性
 
@@ -104,7 +105,7 @@ Azure 容器服務時，您可以利用 Azure 的企業級功能仍然維持應�
     <https://docs.mesosphere.com/1.7/overview/>
 
 -   Kubernetes （官方站台）：  
-    <http://kubernetes.io/>
+    <https://kubernetes.io/>
 
 ## <a name="using-service-fabric"></a>使用 Service Fabric
 
@@ -178,7 +179,7 @@ Service Fabric 是與您可以定義的實體實作於不同邏輯架構 （商�
 
 具狀態服務確實有缺點。 強制複雜性，讓向外延展的層的級。本來通常由外部資料庫系統實作的工作功能，例如跨具狀態微服務和資料分割的資料複寫，必須予以處理。 不過，這是其中一個區域 orchestrator 想在哪裡[Service Fabric](https://docs.microsoft.com/azure/service-fabric/service-fabric-reliable-services-platform-architecture)與其[可設定狀態的可靠服務](https://docs.microsoft.com/azure/service-fabric/service-fabric-reliable-services-introduction#when-to-use-reliable-services-apis)最有助於 — 藉由簡化開發和生命週期的可設定狀態使用 microservices[可靠的服務應用程式開發介面](https://docs.microsoft.com/azure/service-fabric/service-fabric-work-with-reliable-collections)和[Reliable Actors](https://docs.microsoft.com/azure/service-fabric/service-fabric-reliable-actors-introduction)。
 
-其他允許具狀態服務、支援執行者模式，以及改善商務邏輯和資料間容錯和延遲的微服務架構是 Microsoft [Orleans](https://github.com/dotnet/orleans)，來自 Microsoft 研究，以及 [Akka.NET](http://getakka.net/)。 這兩種架構目前都在改善它們對 Docker 的支援。
+其他允許具狀態服務、支援執行者模式，以及改善商務邏輯和資料間容錯和延遲的微服務架構是 Microsoft [Orleans](https://github.com/dotnet/orleans)，來自 Microsoft 研究，以及 [Akka.NET](https://getakka.net/)。 這兩種架構目前都在改善它們對 Docker 的支援。
 
 請注意，Docker 容器本身無狀態。 如果您想要實作具狀態服務，您需要前述的規範及較高層級架構之一。 不過，撰寫本文時，可設定狀態的服務，Service Fabric 中不支援做為容器，只能當做一般 microservices。 在容器中的可靠的服務支援可在即將推出的 Service Fabric 版本中。
 

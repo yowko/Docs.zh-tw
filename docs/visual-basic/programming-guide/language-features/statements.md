@@ -1,11 +1,12 @@
 ---
-title: "Visual Basic 中的陳述式"
-ms.custom: 
+title: Visual Basic 中的陳述式
+ms.custom: ''
 ms.date: 07/20/2015
 ms.prod: .net
-ms.reviewer: 
-ms.suite: 
-ms.technology: devlang-visual-basic
+ms.reviewer: ''
+ms.suite: ''
+ms.technology:
+- devlang-visual-basic
 ms.topic: article
 helpviewer_keywords:
 - variables [Visual Basic], declaring
@@ -21,17 +22,17 @@ helpviewer_keywords:
 - variables [Visual Basic], defining
 - statements [Visual Basic], about statements
 ms.assetid: fcfdee1a-82b7-4846-98f7-9ca3f5160089
-caps.latest.revision: "30"
+caps.latest.revision: 30
 author: dotnet-bot
 ms.author: dotnetcontent
-ms.openlocfilehash: 210637105e54244ba829dabd73feab0b43ec7c6c
-ms.sourcegitcommit: c2e216692ef7576a213ae16af2377cd98d1a67fa
+ms.openlocfilehash: beb33b8f2c30723158e41244cbb5c9cfca108a53
+ms.sourcegitcommit: 86adcc06e35390f13c1e372c36d2e044f1fc31ef
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/22/2017
+ms.lasthandoff: 04/26/2018
 ---
 # <a name="statements-in-visual-basic"></a>Visual Basic 中的陳述式
-中的陳述式[!INCLUDE[vbprvb](~/includes/vbprvb-md.md)]是完整的指示。 它可以包含關鍵字、 運算子、 變數、 常數和運算式。 每個陳述式屬於下列類別之一：  
+在 Visual Basic 中的陳述式是完整的指示。 它可以包含關鍵字、 運算子、 變數、 常數和運算式。 每個陳述式屬於下列類別之一：  
   
 -   **宣告陳述式**，命名變數、 常數或程序，以及也可以指定資料類型。  
   
@@ -53,7 +54,7 @@ ms.lasthandoff: 10/22/2017
  第三個宣告都是`Dim`陳述式，宣告變數`thisWidget`。 資料類型的特定物件，也就是從建立物件`Widget`類別。 您可以宣告為任何基礎資料類型或公開應用程式會將任何物件類型的變數。  
   
 ### <a name="initial-values"></a>初始值  
- 包含宣告陳述式的程式碼執行時，[!INCLUDE[vbprvb](~/includes/vbprvb-md.md)]會保留宣告的項目所需的記憶體。 如果項目會保存一個值，[!INCLUDE[vbprvb](~/includes/vbprvb-md.md)]其初始化為其資料類型的預設值。 如需詳細資訊，請參閱 「 行為 」 [Dim 陳述式](../../../visual-basic/language-reference/statements/dim-statement.md)。  
+ 包含宣告陳述式的程式碼執行時，Visual Basic 會保留宣告的項目所需的記憶體。 如果項目會保存的值，Visual Basic 其初始化為其資料類型的預設值。 如需詳細資訊，請參閱 「 行為 」 [Dim 陳述式](../../../visual-basic/language-reference/statements/dim-statement.md)。  
   
  如下列範例所示，您可以指派一個初始值做為其宣告，一部分的變數。  
   
@@ -121,7 +122,7 @@ ms.lasthandoff: 10/22/2017
 ### <a name="type-conversions-in-assignment-statements"></a>在指派陳述式的型別轉換  
  您指派給變數、 屬性或陣列元素的值必須是適用於該目的項目資料類型。 一般情況下，您應該嘗試產生相同的資料類型的目的地元素的值。 不過，某些型別可以在指派期間轉換成其他類型。  
   
- 如需轉換資料類型資訊，請參閱[在 Visual Basic 中的型別轉換](../../../visual-basic/programming-guide/language-features/data-types/type-conversions.md)。 簡單地說，[!INCLUDE[vbprvb](~/includes/vbprvb-md.md)]會自動將特定類型的值轉換為它所擴展的其他任何類型。 A*擴展轉換*是中，一律會在執行階段會成功，而不會遺失任何資料。 例如，[!INCLUDE[vbprvb](~/includes/vbprvb-md.md)]轉換`Integer`值設定為`Double`適合的因為`Integer`可擴展為`Double`。 如需詳細資訊，請參閱 [Widening and Narrowing Conversions](../../../visual-basic/programming-guide/language-features/data-types/widening-and-narrowing-conversions.md)。  
+ 如需轉換資料類型資訊，請參閱[在 Visual Basic 中的型別轉換](../../../visual-basic/programming-guide/language-features/data-types/type-conversions.md)。 簡單地說，Visual Basic 會自動將指定類型的值轉換為它所擴展的其他任何類型。 A*擴展轉換*是中，一律會在執行階段會成功，而不會遺失任何資料。 例如，Visual Basic 會將轉換`Integer`值設定為`Double`適合的因為`Integer`可擴展為`Double`。 如需詳細資訊，請參閱 [Widening and Narrowing Conversions](../../../visual-basic/programming-guide/language-features/data-types/widening-and-narrowing-conversions.md)。  
   
  *縮小轉換*（即未擴展） 執行的執行階段失敗或資料遺失的風險。 您可以使用類型轉換函式，明確地執行縮小轉換，或您可以指示編譯器隱含地執行所有轉換，藉由設定`Option Strict Off`。 如需詳細資訊，請參閱[隱含和明確轉換](../../../visual-basic/programming-guide/language-features/data-types/implicit-and-explicit-conversions.md)。  
   
@@ -158,7 +159,7 @@ ms.lasthandoff: 10/22/2017
 |之後`From`集合初始設定式中的關鍵字。|[!code-vb[VbVbalrLineContinuation#13](../../../visual-basic/programming-guide/language-features/codesnippet/VisualBasic/statements_27.vb)]<br /><br /> 如需詳細資訊，請參閱[集合初始設定式](../../../visual-basic/programming-guide/language-features/collection-initializers/index.md)。|  
   
 ## <a name="adding-comments"></a>加入註解  
- 原始碼不一定一目了然，甚至將它撰寫的程式設計人員。 若要協助說明其程式碼，因此，大部分的程式設計人員請盡量使用內嵌的註解。 在程式碼中的註解可以說明的程序或特定的指令，以便讀取或更新版本使用它的任何人。 [!INCLUDE[vbprvb](~/includes/vbprvb-md.md)]在編譯期間，會忽略註解，並不會影響已編譯的程式碼。  
+ 原始碼不一定一目了然，甚至將它撰寫的程式設計人員。 若要協助說明其程式碼，因此，大部分的程式設計人員請盡量使用內嵌的註解。 在程式碼中的註解可以說明的程序或特定的指令，以便讀取或更新版本使用它的任何人。 Visual Basic 會忽略註解在編譯期間，並不會影響已編譯的程式碼。  
   
  以單引號開始註解行 (`'`) 或`REM`後接空格。 能夠新增任何位置中的程式碼，除了在字串內。 若要將註解附加至陳述式中，插入一個單引號或`REM`之後的陳述式，後面接著註解。 註解也可以自己的個別行上移。 下列範例會示範這些可能性。  
   

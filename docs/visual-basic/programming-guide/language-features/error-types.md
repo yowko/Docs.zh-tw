@@ -1,11 +1,12 @@
 ---
-title: "錯誤類型 (Visual Basic)"
-ms.custom: 
+title: 錯誤類型 (Visual Basic)
+ms.custom: ''
 ms.date: 07/20/2015
 ms.prod: .net
-ms.reviewer: 
-ms.suite: 
-ms.technology: devlang-visual-basic
+ms.reviewer: ''
+ms.suite: ''
+ms.technology:
+- devlang-visual-basic
 ms.topic: article
 helpviewer_keywords:
 - exceptions, types
@@ -16,20 +17,20 @@ helpviewer_keywords:
 - run-time errors [Visual Basic], types of errors
 - syntax errors [Visual Basic], Visual Basic
 ms.assetid: 3048aabf-8c97-4e13-9150-853769cb5f6f
-caps.latest.revision: "13"
+caps.latest.revision: 13
 author: dotnet-bot
 ms.author: dotnetcontent
-ms.openlocfilehash: e01ed588d284a475a537a5fcf5ca506d25ca69f1
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.openlocfilehash: 2b3cf1307f54a5c902bf8e6379c8760c735a45e4
+ms.sourcegitcommit: 86adcc06e35390f13c1e372c36d2e044f1fc31ef
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 04/26/2018
 ---
 # <a name="error-types-visual-basic"></a>錯誤類型 (Visual Basic)
-在[!INCLUDE[vbprvb](~/includes/vbprvb-md.md)]，錯誤 (也稱為*例外狀況*) 歸類到其中的三個類別： 語法錯誤、 執行階段錯誤，以及邏輯錯誤。  
+在 Visual Basic 中的錯誤 (也稱為*例外狀況*) 歸類到其中的三個類別： 語法錯誤、 執行階段錯誤，以及邏輯錯誤。  
   
 ## <a name="syntax-errors"></a>語法錯誤  
- *語法錯誤*是指您撰寫程式碼時出現。 [!INCLUDE[vbprvb](~/includes/vbprvb-md.md)]您在輸入時，會檢查您的程式碼**程式碼編輯器**視窗，提醒您，如果您犯了錯誤，例如拼錯字，或不當使用的語言項目。 語法錯誤是最常見的錯誤類型。 您可以修正它們輕鬆地在程式碼撰寫環境中發生時。  
+ *語法錯誤*是指您撰寫程式碼時出現。 Visual Basic 會檢查您的程式碼在您輸入時**程式碼編輯器**視窗，提醒您，如果您犯了錯誤，例如拼錯字，或不當使用的語言項目。 語法錯誤是最常見的錯誤類型。 您可以修正它們輕鬆地在程式碼撰寫環境中發生時。  
   
 > [!NOTE]
 >  `Option Explicit`陳述式是一種避免語法錯誤。 它會強制您事先，宣告應用程式中使用的所有變數。 因此，當程式碼中使用這些變數時，任何印刷錯誤並立即遭到攔截，而可以固定。  

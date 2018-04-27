@@ -1,11 +1,12 @@
 ---
-title: "如何：計算數值 (Visual Basic)"
-ms.custom: 
+title: 如何：計算數值 (Visual Basic)
+ms.custom: ''
 ms.date: 07/20/2015
 ms.prod: .net
-ms.reviewer: 
-ms.suite: 
-ms.technology: devlang-visual-basic
+ms.reviewer: ''
+ms.suite: ''
+ms.technology:
+- devlang-visual-basic
 ms.topic: article
 helpviewer_keywords:
 - operator precedence
@@ -17,14 +18,14 @@ helpviewer_keywords:
 - Visual Basic code, expressions
 - numeric expressions
 ms.assetid: ba6bf43d-bd96-49b8-b1de-4a7797551372
-caps.latest.revision: "13"
+caps.latest.revision: 13
 author: dotnet-bot
 ms.author: dotnetcontent
-ms.openlocfilehash: 65cd446b99018d029e8a18d69ed33d8b8ac28f8c
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.openlocfilehash: 322e2c9fe7f668e08a42cd707c5d81090aca627c
+ms.sourcegitcommit: 86adcc06e35390f13c1e372c36d2e044f1fc31ef
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 04/26/2018
 ---
 # <a name="how-to-calculate-numeric-values-visual-basic"></a>如何：計算數值 (Visual Basic)
 您可以計算數字的值，透過使用數值運算式。 A*數值運算式*是運算式包含常值、 常數和變數代表數字的值，並執行以這些值的運算子。  
@@ -45,7 +46,7 @@ ms.lasthandoff: 11/21/2017
   
      前三個行顯示常值、 常數和變數。 每個本身構成有效的數值運算式。 最後一行示範具有兩個常值的變數的組合。  
   
-     請注意，數值的運算式不會構成完整[!INCLUDE[vbprvb](~/includes/vbprvb-md.md)]陳述式本身。 您必須使用運算式做為完整的陳述式的一部分。  
+     請注意數值的運算式不會構成完整的 Visual Basic 陳述式本身。 您必須使用運算式做為完整的陳述式的一部分。  
   
 #### <a name="to-store-a-numeric-value"></a>若要儲存數字的值  
   

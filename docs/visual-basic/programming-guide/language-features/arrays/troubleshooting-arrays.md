@@ -1,11 +1,12 @@
 ---
-title: "疑難排解陣列 (Visual Basic)"
-ms.custom: 
+title: 疑難排解陣列 (Visual Basic)
+ms.custom: ''
 ms.date: 07/20/2015
 ms.prod: .net
-ms.reviewer: 
-ms.suite: 
-ms.technology: devlang-visual-basic
+ms.reviewer: ''
+ms.suite: ''
+ms.technology:
+- devlang-visual-basic
 ms.topic: article
 helpviewer_keywords:
 - troubleshooting arrays
@@ -15,14 +16,14 @@ helpviewer_keywords:
 - arrays [Visual Basic], declaration errors
 - arrays [Visual Basic], troubleshooting
 ms.assetid: f4e971c7-c0a4-4ed7-a77a-8d71039f266f
-caps.latest.revision: "17"
+caps.latest.revision: 17
 author: dotnet-bot
 ms.author: dotnetcontent
-ms.openlocfilehash: 0417ae8d37642a65b14cc81ae9dcf3a3c32d63ce
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.openlocfilehash: 9e5c00c2b531dd019a207b16ffcac95424bfe450
+ms.sourcegitcommit: 86adcc06e35390f13c1e372c36d2e044f1fc31ef
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 04/26/2018
 ---
 # <a name="troubleshooting-arrays-visual-basic"></a>疑難排解陣列 (Visual Basic)
 此頁面會列出可以使用陣列時會發生的一些常見問題。  
@@ -60,10 +61,10 @@ ms.lasthandoff: 11/21/2017
  初始化陣列的程序指派每個維度的上限和下限。 每次存取陣列項目必須指定有效的索引或註標，每個維度。 如果任何索引低於其下限，或超過其上限，<xref:System.IndexOutOfRangeException>例外狀況結果。 編譯器無法偵測這類錯誤，因此在執行階段發生錯誤。  
   
 ### <a name="determining-bounds"></a>決定界限  
- 如果另一個元件會將陣列傳遞至您的程式碼，例如做為程序引數，您不知道該陣列的大小或其維度的長度。 您嘗試存取任何項目之前，您應該一律判斷陣列的每個維度的上限。 如果已建立陣列的方法以外[!INCLUDE[vbprvb](~/includes/vbprvb-md.md)]`New`子句，下限看起來可能不是 0，而且是先決定以及該下限。  
+ 如果另一個元件會將陣列傳遞至您的程式碼，例如做為程序引數，您不知道該陣列的大小或其維度的長度。 您嘗試存取任何項目之前，您應該一律判斷陣列的每個維度的上限。 如果陣列已建立 Visual Basic 以外的其他方式`New`子句，下限看起來可能不是 0，而且是先決定以及該下限。  
   
 ### <a name="specifying-the-dimension"></a>指定維度  
- 在決定多維度陣列的界限時，小心指定維度的方式。 `dimension`參數<xref:System.Array.GetLowerBound%2A>和<xref:System.Array.GetUpperBound%2A>方法是以 0 為基礎，同時`Rank`參數[!INCLUDE[vbprvb](~/includes/vbprvb-md.md)]<xref:Microsoft.VisualBasic.Information.LBound%2A>和<xref:Microsoft.VisualBasic.Information.UBound%2A>函式是以 1 為基礎。  
+ 在決定多維度陣列的界限時，小心指定維度的方式。 `dimension`參數<xref:System.Array.GetLowerBound%2A>和<xref:System.Array.GetUpperBound%2A>方法是以 0 為基礎，同時`Rank`參數的 Visual Basic<xref:Microsoft.VisualBasic.Information.LBound%2A>和<xref:Microsoft.VisualBasic.Information.UBound%2A>函式是以 1 為基礎。  
   
 ## <a name="see-also"></a>另請參閱  
  [陣列](../../../../visual-basic/programming-guide/language-features/arrays/index.md)  

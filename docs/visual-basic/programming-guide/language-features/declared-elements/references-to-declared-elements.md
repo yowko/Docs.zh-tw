@@ -1,32 +1,33 @@
 ---
-title: "已宣告之項目的參考 (Visual Basic)"
-ms.custom: 
+title: 已宣告之項目的參考 (Visual Basic)
+ms.custom: ''
 ms.date: 07/20/2015
 ms.prod: .net
-ms.reviewer: 
-ms.suite: 
-ms.technology: devlang-visual-basic
+ms.reviewer: ''
+ms.suite: ''
+ms.technology:
+- devlang-visual-basic
 ms.topic: article
 helpviewer_keywords:
 - declared elements [Visual Basic]
 - references [Visual Basic], declared elements
 - qualified names [Visual Basic]
 ms.assetid: d6301709-f4cc-4b7a-b8ba-80898f14ab46
-caps.latest.revision: "19"
+caps.latest.revision: 19
 author: dotnet-bot
 ms.author: dotnetcontent
-ms.openlocfilehash: 9b3847164b4e577a9265a746b9329218b4af928b
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.openlocfilehash: 86d25d42688cffbf4076c4fb42eccc3b917d1dc1
+ms.sourcegitcommit: 86adcc06e35390f13c1e372c36d2e044f1fc31ef
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 04/26/2018
 ---
 # <a name="references-to-declared-elements-visual-basic"></a>已宣告之項目的參考 (Visual Basic)
-當您的程式碼參考宣告的項目，[!INCLUDE[vbprvb](~/includes/vbprvb-md.md)]編譯器符合您對適當的宣告，該名稱的參考中的名稱。 如果具有相同名稱宣告一個以上的項目，您可以控制的項目會以供參考*合格*其名稱。  
+當您的程式碼參考宣告的項目時，Visual Basic 編譯器符合您對適當的宣告，該名稱的參考中的名稱。 如果具有相同名稱宣告一個以上的項目，您可以控制的項目會以供參考*合格*其名稱。  
   
  編譯器會嘗試比對的名稱宣告的名稱參考*最小範圍*。 這表示它參考的程式碼的開頭，而且後續的層級包含項目的向外運作。  
   
- 下列範例會顯示兩個變數具有相同名稱的參考。 此範例會宣告兩個變數、 每個名為`totalCount`，不同的模組中的範圍層級`container`。 當程序`showCount`顯示`totalCount`無限制，[!INCLUDE[vbprvb](~/includes/vbprvb-md.md)]編譯器解析參考的最小的範圍，也就是在本機宣告內宣告`showCount`。 當符合`totalCount`與所包含的模組`container`，編譯器會參考解析為具有較廣範圍的宣告。  
+ 下列範例會顯示兩個變數具有相同名稱的參考。 此範例會宣告兩個變數、 每個名為`totalCount`，不同的模組中的範圍層級`container`。 當程序`showCount`顯示`totalCount`無限制，Visual Basic 編譯器會參考解析為具有最小的範圍，也就是在本機宣告的宣告`showCount`。 當符合`totalCount`與所包含的模組`container`，編譯器會參考解析為具有較廣範圍的宣告。  
   
 ```vb  
 ' Assume these two modules are both in the same assembly.  
@@ -199,7 +200,7 @@ Dim xDoc As xD.XmlDocument
  您可以為您的所有項目指定唯一的名稱，以避免名稱模稜兩可。 然後您可以讓任何項目的參考，而不需限定其名稱與命名空間、 模組或類別。 您也會減少意外的錯誤項目參考的機會。  
   
 ## <a name="shadowing"></a>遮蔽  
- 當兩個的程式設計項目共用相同的名稱時，可以隱藏其中一個，或*陰影*，另一個。 遮蔽的項目不是可供參考。相反地，當您的程式碼會使用遮蔽的項目名稱，[!INCLUDE[vbprvb](~/includes/vbprvb-md.md)]編譯器解析遮蔽的項目。 如範例的詳細說明，請參閱[Visual Basic 中的遮蔽功能](../../../../visual-basic/programming-guide/language-features/declared-elements/shadowing.md)。  
+ 當兩個的程式設計項目共用相同的名稱時，可以隱藏其中一個，或*陰影*，另一個。 遮蔽的項目不是可供參考。相反地，當您的程式碼使用遮蔽的項目名稱時，Visual Basic 編譯器解析遮蔽的項目。 如範例的詳細說明，請參閱[Visual Basic 中的遮蔽功能](../../../../visual-basic/programming-guide/language-features/declared-elements/shadowing.md)。  
   
 ## <a name="see-also"></a>另請參閱  
  [宣告項目名稱](../../../../visual-basic/programming-guide/language-features/declared-elements/declared-element-names.md)  

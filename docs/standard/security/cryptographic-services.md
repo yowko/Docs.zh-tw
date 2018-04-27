@@ -1,12 +1,12 @@
 ---
-title: "密碼編譯服務"
-ms.custom: 
+title: 密碼編譯服務
+ms.custom: ''
 ms.date: 03/30/2017
 ms.prod: .net
-ms.reviewer: 
-ms.suite: 
+ms.reviewer: ''
+ms.suite: ''
 ms.technology: dotnet-standard
-ms.tgt_pltfrm: 
+ms.tgt_pltfrm: ''
 ms.topic: article
 helpviewer_keywords:
 - cryptography [.NET Framework]
@@ -30,18 +30,18 @@ helpviewer_keywords:
 - cryptography [.NET Framework], about
 - random number generation
 ms.assetid: f96284bc-7b73-44b5-ac59-fac613ad09f8
-caps.latest.revision: 
+caps.latest.revision: 34
 author: mairaw
 ms.author: mairaw
 manager: wpickett
 ms.workload:
 - dotnet
 - dotnetcore
-ms.openlocfilehash: 941dd9d130a31c997b634bce8059afef04c178d3
-ms.sourcegitcommit: cf22b29db780e532e1090c6e755aa52d28273fa6
+ms.openlocfilehash: 02d399d85c53cd296fc5f49ca0ec4b51b14ad677
+ms.sourcegitcommit: 2e8acae16ae802f2d6d04e3ce0a6dbf04e476513
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 02/01/2018
+ms.lasthandoff: 04/18/2018
 ---
 # <a name="cryptographic-services"></a>密碼編譯服務
 <a name="top"></a> 公用網路（例如網際網路）無法在兩實體之間提供一種可安全通訊的方式。 這類網路上的通訊很容易被人讀取，或是被未經授權的協力廠商所修改。 密碼編譯有助於保護資料不受人檢視，可提供一種方式來偵測資料是否已遭修改，比起其他非安全的通道，它有助提供安全的通訊方式。 比方說，可以利用密碼編譯演算法來加密資料，並以加密的狀態傳送，而稍後由指定的一方解密資料。 假使第三方攔截到加密資料，也難以破解。  
@@ -206,7 +206,7 @@ ms.lasthandoff: 02/01/2018
   
 -   Alice 傳送純文字訊息和雜湊訊息 (數位簽章) 給 Bob。 Bob 收到後雜湊該訊息，並將他從 Alice 接收到的雜湊值與自己的雜湊值相比較。 如果雜湊值完全相同，訊息未遭竄改。 如果值不相同，則 Alice 撰寫訊息後已遭修改。  
   
-     可惜這個方法無法確認寄件者的真實性。 任何人都可以模擬 Alice 並傳送訊息給 Bob。 他們可以使用相同的雜湊演算法來簽署訊息，而且 Bob 只能用符合其簽章的訊息來判斷。 這是一種攔截攻擊的形式。 請參閱[NIB: Cryptography Next Generation (CNG) 安全通訊範例](http://msdn.microsoft.com/library/8048e94e-054a-417b-87c6-4f5e26710e6e)如需詳細資訊。  
+     可惜這個方法無法確認寄件者的真實性。 任何人都可以模擬 Alice 並傳送訊息給 Bob。 他們可以使用相同的雜湊演算法來簽署訊息，而且 Bob 只能用符合其簽章的訊息來判斷。 這是一種攔截攻擊的形式。 請參閱[NIB: Cryptography Next Generation (CNG) 安全通訊範例](https://msdn.microsoft.com/library/8048e94e-054a-417b-87c6-4f5e26710e6e)如需詳細資訊。  
   
 -   Alice 透過非安全的公用通道傳送純文字訊息給 Bob。 Alice 透過安全的私用通道傳雜湊送息給 Bob。 Bob 收到純文字訊息，然後進行雜湊，並將該雜湊與私下交換的雜湊相比。 如果雜湊相符，Bob 就知道兩件事：  
   

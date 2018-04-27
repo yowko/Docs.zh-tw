@@ -1,5 +1,5 @@
 ---
-title: 無法寫入輸出檔案 &#39;&lt;filename&gt;&#39;:&lt;錯誤&gt;
+title: 無法寫入輸出檔&#39; &lt;filename&gt;&#39;:&lt;錯誤&gt;
 ms.date: 07/20/2015
 ms.prod: .net
 ms.reviewer: ''
@@ -16,13 +16,13 @@ ms.assetid: 0845b245-11bb-46fd-95ca-f6cef3c318ef
 caps.latest.revision: 10
 author: dotnet-bot
 ms.author: dotnetcontent
-ms.openlocfilehash: d142a8c741a9f0e25b8ac3c0002d04f437bf0ca9
-ms.sourcegitcommit: bd1ef61f4bb794b25383d3d72e71041a5ced172e
+ms.openlocfilehash: a183f81a73c3c8034d9ba7366be8b36d425263da
+ms.sourcegitcommit: 86adcc06e35390f13c1e372c36d2e044f1fc31ef
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/18/2017
+ms.lasthandoff: 04/26/2018
 ---
-# <a name="unable-to-write-to-output-file-39ltfilenamegt39-lterrorgt"></a>無法寫入輸出檔案 &#39;&lt;filename&gt;&#39;:&lt;錯誤&gt;
+# <a name="unable-to-write-to-output-file-39ltfilenamegt39-lterrorgt"></a>無法寫入輸出檔&#39; &lt;filename&gt;&#39;:&lt;錯誤&gt;
 建立檔案時發生問題。  
   
  無法開啟輸出檔案以供寫入。 檔案 (或包含檔案的資料夾) 可能已由另一個處理序以獨佔方式開啟使用，或是其可能設定了唯讀屬性。  
@@ -45,7 +45,7 @@ ms.lasthandoff: 10/18/2017
   
 3.  如果錯誤繼續發生，請重新啟動電腦。  
   
-4.  如果問題重複發生，請重新安裝 [!INCLUDE[vbprvb](~/includes/vbprvb-md.md)]。  
+4.  如果錯誤重複發生，請重新安裝 Visual Basic。  
   
 5.  如果錯誤在重新安裝之後持續發生，請通知 Microsoft 產品支援服務。  
   

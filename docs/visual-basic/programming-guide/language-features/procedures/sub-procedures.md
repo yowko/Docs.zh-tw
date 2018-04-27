@@ -1,11 +1,12 @@
 ---
-title: "Sub 程序 (Visual Basic)"
-ms.custom: 
+title: Sub 程序 (Visual Basic)
+ms.custom: ''
 ms.date: 07/20/2015
 ms.prod: .net
-ms.reviewer: 
-ms.suite: 
-ms.technology: devlang-visual-basic
+ms.reviewer: ''
+ms.suite: ''
+ms.technology:
+- devlang-visual-basic
 ms.topic: article
 helpviewer_keywords:
 - Sub procedures [Visual Basic], about Sub procedures
@@ -17,17 +18,17 @@ helpviewer_keywords:
 - procedures [Visual Basic], Sub
 - syntax [Visual Basic], Sub procedures
 ms.assetid: 6a0a4958-ed0a-4d3d-8d31-0772c82bda58
-caps.latest.revision: "21"
+caps.latest.revision: 21
 author: dotnet-bot
 ms.author: dotnetcontent
-ms.openlocfilehash: 4e20e0dd5ff9e2b931e5792bebb3144930826f89
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.openlocfilehash: 7258d57d2677042a2020097893a4f7a0adb35508
+ms.sourcegitcommit: 86adcc06e35390f13c1e372c36d2e044f1fc31ef
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 04/26/2018
 ---
 # <a name="sub-procedures-visual-basic"></a>Sub 程序 (Visual Basic)
-A`Sub`程序是一系列的[!INCLUDE[vbprvb](~/includes/vbprvb-md.md)]陳述式括住`Sub`和`End Sub`陳述式。 `Sub`程序執行的工作，並再將控制權傳回給呼叫的程式碼，但不會傳回值，呼叫程式碼。  
+A`Sub`程序是一系列的 Visual Basic 陳述式加上`Sub`和`End Sub`陳述式。 `Sub`程序執行的工作，並再將控制權傳回給呼叫的程式碼，但不會傳回值，呼叫程式碼。  
   
  每次呼叫程序時，其執行陳述式，從開始之後的第一個可執行陳述式`Sub`陳述式，並與第一個結束`End Sub`， `Exit Sub`，或`Return`出現陳述式。  
   
@@ -38,7 +39,7 @@ A`Sub`程序是一系列的[!INCLUDE[vbprvb](~/includes/vbprvb-md.md)]陳述式�
 ## <a name="declaration-syntax"></a>宣告語法  
  宣告的語法`Sub`程序如下所示：  
   
- `[`*修飾詞* `] Sub` *subname* `[(` *parameterlist*  `)]`  
+ `[` *修飾詞* `] Sub` *subname* `[(` *parameterlist*  `)]`  
   
  `' Statements of the Sub procedure.`  
   
@@ -65,7 +66,7 @@ A`Sub`程序是一系列的[!INCLUDE[vbprvb](~/includes/vbprvb-md.md)]陳述式�
   
  若要呼叫的語法`Sub`程序如下所示：  
   
- `[Call]`  *subname* `[(` *argumentlist*`)]`  
+ `[Call]`  *subname* `[(` *argumentlist* `)]`  
   
  您可以呼叫`Sub`方法從其定義在類別外部。 首先，您必須使用`New`關鍵字來建立類別的執行個體，或呼叫的方法會傳回類別的執行個體。 如需詳細資訊，請參閱[New 運算子](../../../../visual-basic/language-reference/operators/new-operator.md)。 然後，您可以使用下列語法來呼叫`Sub`執行個體物件上的方法：  
   

@@ -16,17 +16,17 @@ ms.author: dotnetcontent
 manager: wpickett
 ms.workload:
 - dotnet
-ms.openlocfilehash: 0862f747cb969a6aa2e63d86e842097260e95b56
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.openlocfilehash: 3df15e80a550857adbfbf30ebf8b6ef902426a1a
+ms.sourcegitcommit: 86adcc06e35390f13c1e372c36d2e044f1fc31ef
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 04/26/2018
 ---
 # <a name="using-windows-management-instrumentation-for-diagnostics"></a>使用 Windows Management Instrumentation 進行診斷
 [!INCLUDE[indigo1](../../../../../includes/indigo1-md.md)] 會透過 [!INCLUDE[indigo2](../../../../../includes/indigo2-md.md)] Windows Management Instrumentation (WMI) 提供者，在執行階段公開服務的檢查資料。  
   
 ## <a name="enabling-wmi"></a>啟用 WMI  
- WMI 是 Microsoft 對「Web 架構企業管理」(Web-Based Enterprise Management，WBEM) 標準的實作。 [!INCLUDE[crabout](../../../../../includes/crabout-md.md)]WMI SDK，請參閱[Windows Management Instrumentation](https://msdn.microsoft.com/library/aa394582.aspx)。 WBEM 是一套業界標準，說明應用程式如何將管理測試設備公開至外部管理工具。  
+ WMI 是 Microsoft 對「Web 架構企業管理」(Web-Based Enterprise Management，WBEM) 標準的實作。 [!INCLUDE[crabout](../../../../../includes/crabout-md.md)] WMI SDK，請參閱[Windows Management Instrumentation](https://msdn.microsoft.com/library/aa394582.aspx)。 WBEM 是一套業界標準，說明應用程式如何將管理測試設備公開至外部管理工具。  
   
  WMI 提供者是一個元件，可透過 WBEM 相容介面，在執行階段公開測試設備。 它是由一組含有屬性/值配對的 WMI 物件所組成。 配對可以是數個簡單型別。 管理工具可以在執行階段，透過介面連接到服務。 [!INCLUDE[indigo2](../../../../../includes/indigo2-md.md)] 會公開服務的屬性，例如位址、繫結、行為和接聽項。  
   
@@ -43,7 +43,7 @@ ms.lasthandoff: 12/22/2017
  這個組態項目會公開 WMI 介面。 現在，管理應用程式可以透過這個介面進行連線，並存取應用程式的管理測試設備。  
   
 ## <a name="accessing-wmi-data"></a>存取 WMI 資料  
- 您可以使用各種不同的方式來存取 WMI 資料。 Microsoft 為指令碼、[!INCLUDE[vbprvb](../../../../../includes/vbprvb-md.md)] 應用程式、C++ 應用程式和 [!INCLUDE[dnprdnshort](../../../../../includes/dnprdnshort-md.md)] 都提供了 WMI API。 如需詳細資訊，請參閱[使用 WMI](http://go.microsoft.com/fwlink/?LinkId=95183)。  
+ 您可以使用各種不同的方式來存取 WMI 資料。 Microsoft 提供 WMI Api 的指令碼、 Visual Basic 應用程式、 c + + 應用程式，而[!INCLUDE[dnprdnshort](../../../../../includes/dnprdnshort-md.md)]。 如需詳細資訊，請參閱[使用 WMI](http://go.microsoft.com/fwlink/?LinkId=95183)。  
   
 > [!CAUTION]
 >  如果您使用 .NET Framework 提供的方法，以程式設計方式存取 WMI 資料，您要注意，當連線建立時，這類方法可能會擲回例外狀況。 連線不是在建構 <xref:System.Management.ManagementObject> 執行個體期間建立的，而是在第一次要求實際資料交換時建立。 因此，您應該使用 `try..catch` 區塊攔截可能的例外狀況。  
@@ -160,7 +160,7 @@ ms.lasthandoff: 12/22/2017
 Whoami /user  
 ```  
   
- 這個方法會提供目前使用者的 SID，但無法用來取得任意使用者的 SID。 另一個取得 SID 的方法是使用[getsid.exe](http://go.microsoft.com/fwlink/?LinkId=186467)工具[Windows 2000 Resource Kit 工具的系統管理工作](http://go.microsoft.com/fwlink/?LinkId=178660)。 此工具會比較兩個使用者 (本機或網域) 的 SID，並以副作用方式將兩個 SID 列印至命令列。 [!INCLUDE[crdefault](../../../../../includes/crdefault-md.md)][已知的 Sid](http://go.microsoft.com/fwlink/?LinkId=186468)。  
+ 這個方法會提供目前使用者的 SID，但無法用來取得任意使用者的 SID。 另一個取得 SID 的方法是使用[getsid.exe](http://go.microsoft.com/fwlink/?LinkId=186467)工具[Windows 2000 Resource Kit 工具的系統管理工作](http://go.microsoft.com/fwlink/?LinkId=178660)。 此工具會比較兩個使用者 (本機或網域) 的 SID，並以副作用方式將兩個 SID 列印至命令列。 [!INCLUDE[crdefault](../../../../../includes/crdefault-md.md)] [已知的 Sid](http://go.microsoft.com/fwlink/?LinkId=186468)。  
   
 ## <a name="accessing-remote-wmi-object-instances"></a>存取遠端 WMI 物件執行個體  
  如果您需要在遠端電腦上存取 [!INCLUDE[indigo2](../../../../../includes/indigo2-md.md)] WMI 執行個體，則您必須在用來存取的工具上啟用封包私密性。 下列小節說明如何使用 WMI CIM Studio、Windows Management Instrumentation 測試器以及 .NET SDK 2.0 來完成這項工作。  
@@ -170,9 +170,9 @@ Whoami /user
   
  **%windir%\Program Files\WMI 工具\\**  
   
-1.  在**連線到命名空間：**視窗中，輸入**root\ServiceModel**按一下**[確定]。**  
+1.  在**連線到命名空間：**視窗中，輸入**root\ServiceModel**按一下 **[確定]。**  
   
-2.  在**WMI CIM Studio 登入**視窗中，按一下 **選項 >>**按鈕展開視窗。 選取**封包私密性**如**驗證層級**，然後按一下**確定**。  
+2.  在**WMI CIM Studio 登入**視窗中，按一下 **選項 >>** 按鈕展開視窗。 選取**封包私密性**如**驗證層級**，然後按一下**確定**。  
   
 ### <a name="windows-management-instrumentation-tester"></a>Windows Management Instrumentation 測試器  
  這個工具是由 Windows 進行安裝。 若要執行它，以啟動命令主控台輸入**cmd.exe**中**開始/執行**對話方塊，按一下**確定**。 然後，輸入**wbemtest.exe**命令視窗中。 [Windows Management Instrumentation 測試器] 工具隨即啟動。  

@@ -1,11 +1,12 @@
 ---
-title: "程式結構和程式碼慣例 (Visual Basic)"
-ms.custom: 
+title: 程式結構和程式碼慣例 (Visual Basic)
+ms.custom: ''
 ms.date: 07/20/2015
 ms.prod: .net
-ms.reviewer: 
-ms.suite: 
-ms.technology: devlang-visual-basic
+ms.reviewer: ''
+ms.suite: ''
+ms.technology:
+- devlang-visual-basic
 ms.topic: article
 helpviewer_keywords:
 - coding conventions
@@ -19,17 +20,17 @@ helpviewer_keywords:
 - Visual Basic code
 - programming [Visual Basic], Visual Basic coding conventions
 ms.assetid: dd9be76f-6944-4e78-ad72-0b6084a3fc13
-caps.latest.revision: "21"
+caps.latest.revision: 21
 author: dotnet-bot
 ms.author: dotnetcontent
-ms.openlocfilehash: b38ba9623a20dcd1be4bc96f4aff1eb646b0a053
-ms.sourcegitcommit: c2e216692ef7576a213ae16af2377cd98d1a67fa
+ms.openlocfilehash: 9980a815d83b21214f1be441d641c3da38c1b541
+ms.sourcegitcommit: 86adcc06e35390f13c1e372c36d2e044f1fc31ef
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/22/2017
+ms.lasthandoff: 04/26/2018
 ---
 # <a name="program-structure-and-code-conventions-visual-basic"></a>程式結構和程式碼慣例 (Visual Basic)
-本節將介紹典型[!INCLUDE[vbprvb](~/includes/vbprvb-md.md)]程式結構，提供簡單[!INCLUDE[vbprvb](~/includes/vbprvb-md.md)]程式，"Hello World"，並討論[!INCLUDE[vbprvb](~/includes/vbprvb-md.md)]程式碼慣例。 程式碼慣例是將焦點放不上程式邏輯，但其實體結構和外觀上的建議。 後面，可讓您的程式碼容易閱讀、 了解和維護。 包括程式碼慣例，和其他項目：  
+本節介紹典型的 Visual Basic 程式結構，提供簡單的 Visual Basic 程式，"Hello，World"，並討論 Visual Basic 程式碼慣例。 程式碼慣例是將焦點放不上程式邏輯，但其實體結構和外觀上的建議。 後面，可讓您的程式碼容易閱讀、 了解和維護。 包括程式碼慣例，和其他項目：  
   
 -   標籤與註解程式碼的標準化的格式。  
   
@@ -37,11 +38,11 @@ ms.lasthandoff: 10/22/2017
   
 -   物件、 變數和程序的命名慣例。  
   
- 下列主題提供一組程式設計指導方針的[!INCLUDE[vbprvb](~/includes/vbprvb-md.md)]程式，以及正確使用方式的範例。  
+ 下列主題提供一組程式設計方針 Visual Basic 程式，以及正確使用方式的範例。  
   
-## <a name="in-this-section"></a>本章節內容  
+## <a name="in-this-section"></a>本節內容  
  [Visual Basic 程式的結構](../../../visual-basic/programming-guide/program-structure/structure-of-a-visual-basic-program.md)  
- 提供的構成項目概觀[!INCLUDE[vbprvb](~/includes/vbprvb-md.md)]程式。  
+ 提供 Visual Basic 程式所組成之項目的概觀。  
   
  [在 Visual Basic 中的 main 程序](../../../visual-basic/programming-guide/program-structure/main-procedure.md)  
  討論可做為起始點和整體控制您的應用程式的程序。  
@@ -65,7 +66,7 @@ ms.lasthandoff: 10/22/2017
  示範如何將分割成多行長的陳述式和合併在一行的簡短陳述式。  
   
  [操作說明：摺疊和隱藏程式碼區段](../../../visual-basic/programming-guide/program-structure/how-to-collapse-and-hide-sections-of-code.md)  
- 示範如何摺疊和隱藏程式碼中的區段[!INCLUDE[vbprvb](~/includes/vbprvb-md.md)]程式碼編輯器。  
+ 示範如何摺疊並隱藏 Visual Basic 中的程式碼區段的程式碼編輯器。  
   
  [操作說明：標記陳述式](../../../visual-basic/programming-guide/program-structure/how-to-label-statements.md)  
  示範如何將標示一行程式碼，以識別使用陳述式例如`On Error Goto`。  
@@ -77,17 +78,17 @@ ms.lasthandoff: 10/22/2017
  討論如何將描述性註解加入至您的程式碼。  
   
  [程式碼中以關鍵字做為項目名稱](../../../visual-basic/programming-guide/program-structure/keywords-as-element-names-in-code.md)  
- 描述如何使用方括號 (`[]`) 來分隔變數名稱，也是[!INCLUDE[vbprvb](~/includes/vbprvb-md.md)]關鍵字。  
+ 描述如何使用方括號 (`[]`) 來分隔也是 Visual Basic 關鍵字的變數名稱。  
   
  [Me、My、MyBase 和 MyClass](../../../visual-basic/programming-guide/program-structure/me-my-mybase-and-myclass.md)  
- 描述各種方式來參考的項目[!INCLUDE[vbprvb](~/includes/vbprvb-md.md)]程式。  
+ 描述各種方法來參考的 Visual Basic 程式元素。  
   
  [Visual Basic 的限制](../../../visual-basic/programming-guide/program-structure/limitations.md)  
- 討論移除已知的編碼限制內[!INCLUDE[vbprvb](~/includes/vbprvb-md.md)]。  
+ 討論在 Visual Basic 中的已知編碼限制移除。  
   
 ## <a name="related-sections"></a>相關章節  
  [印刷樣式與程式碼慣例](../../../visual-basic/language-reference/typographic-and-code-conventions.md)  
- 提供標準的程式碼撰寫慣例[!INCLUDE[vbprvb](~/includes/vbprvb-md.md)]。  
+ 適用於 Visual Basic 中提供標準的程式碼撰寫慣例。  
   
  [撰寫程式碼](/visualstudio/ide/writing-code-in-the-code-and-text-editor)  
  描述可讓您更輕鬆地撰寫並管理您的程式碼的功能。

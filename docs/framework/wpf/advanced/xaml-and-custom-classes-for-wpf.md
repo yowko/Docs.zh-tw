@@ -1,28 +1,30 @@
 ---
-title: "WPF 的 XAML 和自訂類別"
-ms.custom: 
+title: WPF 的 XAML 和自訂類別
+ms.custom: ''
 ms.date: 03/30/2017
 ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.technology: dotnet-wpf
-ms.tgt_pltfrm: 
+ms.reviewer: ''
+ms.suite: ''
+ms.technology:
+- dotnet-wpf
+ms.tgt_pltfrm: ''
 ms.topic: article
 helpviewer_keywords:
 - custom classes in XAML [WPF]
 - XAML [WPF], custom classes
 - classes [WPF], custom classes in XAML
 ms.assetid: e7313137-581e-4a64-8453-d44e15a6164a
-caps.latest.revision: "22"
+caps.latest.revision: 22
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.workload: dotnet
-ms.openlocfilehash: da599afc94fba617d4df17c57679d8ee4bb05c61
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.workload:
+- dotnet
+ms.openlocfilehash: a7aa7ffe38f1fbd7de71dbc95ae12b8faca6e356
+ms.sourcegitcommit: 86adcc06e35390f13c1e372c36d2e044f1fc31ef
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 04/26/2018
 ---
 # <a name="xaml-and-custom-classes-for-wpf"></a>WPF 的 XAML 和自訂類別
 [!INCLUDE[TLA#tla_clr](../../../../includes/tlasharptla-clr-md.md)] 架構中所實作的 XAML 支援使用任何 [!INCLUDE[TLA#tla_clr](../../../../includes/tlasharptla-clr-md.md)] 語言定義自訂類別或結構，然後使用 XAML 標記來存取該類別。 您可以在相同的標記檔案內混用 [!INCLUDE[TLA#tla_winclient](../../../../includes/tlasharptla-winclient-md.md)] 定義的類型與您的自訂類型，方法一般是透過將自訂類型對應至 XAML 命名空間前置詞。 本主題討論自訂類別必須滿足才能用作 XAML 項目的需求。  
@@ -70,7 +72,7 @@ ms.lasthandoff: 12/22/2017
  不允許屬性的語法，但透過 XAML 屬性項目語法，其中包含物件項目不允許的屬性的範例會採取的各種屬性<xref:System.Windows.Input.Cursor>型別。 <xref:System.Windows.Input.Cursor>類別具有專用的類型轉換器<xref:System.Windows.Input.CursorConverter>，但不會公開預設建構函式，所以<xref:System.Windows.FrameworkElement.Cursor%2A>屬性只能設定透過屬性語法即使實際<xref:System.Windows.Input.Cursor>類型是參考類型。  
   
 ### <a name="per-property-type-converters"></a>每個屬性的類型轉換子  
- 或者，屬性本身可以宣告屬性層級的類型轉換子。 這可讓處理傳入的字串值的屬性做為輸入，內嵌的屬性，類型的物件具現化"迷你 language"<xref:System.ComponentModel.TypeConverter.ConvertFrom%2A>作業會根據適當的型別。 這項作業一般是要提供方便使用的存取子，而不是在 XAML 中設定屬性的唯一方法。 不過，您也可使用屬性的類型轉換子，其中，您要使用不提供預設建構函式或屬性化類型轉換子的現有 [!INCLUDE[TLA2#tla_clr](../../../../includes/tla2sharptla-clr-md.md)] 類型。 從範例[!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)]API 所採取的特定屬性<xref:System.Globalization.CultureInfo>型別。 在此情況下，[!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)]使用現有[!INCLUDE[TLA#tla_winfx](../../../../includes/tlasharptla-winfx-md.md)]<xref:System.Globalization.CultureInfo>更完善地處理架構，較舊版本中所使用的相容性和移轉案例的型別但<xref:System.Globalization.CultureInfo>類型不支援必要的建構函式或型別層級中都無法使用 XAML 屬性值為直接的型別轉換。  
+ 或者，屬性本身可以宣告屬性層級的類型轉換子。 這可讓處理傳入的字串值的屬性做為輸入，內嵌的屬性，類型的物件具現化"迷你 language"<xref:System.ComponentModel.TypeConverter.ConvertFrom%2A>作業會根據適當的型別。 這項作業一般是要提供方便使用的存取子，而不是在 XAML 中設定屬性的唯一方法。 不過，您也可使用屬性的類型轉換子，其中，您要使用不提供預設建構函式或屬性化類型轉換子的現有 [!INCLUDE[TLA2#tla_clr](../../../../includes/tla2sharptla-clr-md.md)] 類型。 從範例[!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)]API 所採取的特定屬性<xref:System.Globalization.CultureInfo>型別。 在此情況下，[!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)]使用現有的 Microsoft.NET Framework<xref:System.Globalization.CultureInfo>更完善地處理架構，較舊版本中所使用的相容性和移轉案例的型別但<xref:System.Globalization.CultureInfo>類型不支援必要的建構函式或類型層級型別轉換，可做為 XAML 屬性值直接。  
   
  只要公開具有 XAML 用法的屬性，特別的是，如果您是控制項作者，則應該強烈考慮支援該屬性與相依性屬性。 特別是如果您使用現有[!INCLUDE[TLA#tla_winclient](../../../../includes/tlasharptla-winclient-md.md)]實作 XAML 處理器，您可以使用來改善效能，因為<xref:System.Windows.DependencyProperty>備份。 相依性屬性會公開使用者預期 XAML 可存取屬性之屬性的屬性系統功能。 這包括動畫、資料繫結和樣式支援這類功能。 如需詳細資訊，請參閱[自訂相依性屬性](../../../../docs/framework/wpf/advanced/custom-dependency-properties.md)和 [XAML 載入和相依性屬性](../../../../docs/framework/wpf/advanced/xaml-loading-and-dependency-properties.md)。  
   
@@ -123,7 +125,7 @@ ms.lasthandoff: 12/22/2017
 ## <a name="serializing-xaml"></a>序列化 XAML  
  在特定情況下，例如，如果您是控制項作者，則可能也要確保可在 XAML 中具現化的任何物件表示也都可以序列化回對等的 XAML 標記。 本主題未描述序列化需求。 請參閱[控制項撰寫概觀](../../../../docs/framework/wpf/controls/control-authoring-overview.md)和[項目樹狀結構和序列化](../../../../docs/framework/wpf/advanced/element-tree-and-serialization.md)。  
   
-## <a name="see-also"></a>請參閱  
+## <a name="see-also"></a>另請參閱  
  [XAML 概觀 (WPF)](../../../../docs/framework/wpf/advanced/xaml-overview-wpf.md)  
  [自訂相依性屬性](../../../../docs/framework/wpf/advanced/custom-dependency-properties.md)  
  [控制項撰寫概觀](../../../../docs/framework/wpf/controls/control-authoring-overview.md)  

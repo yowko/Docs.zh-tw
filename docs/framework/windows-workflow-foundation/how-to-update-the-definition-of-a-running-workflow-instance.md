@@ -1,26 +1,27 @@
 ---
-title: "HOW TO：更新執行中工作流程執行個體的定義"
-ms.custom: 
+title: HOW TO：更新執行中工作流程執行個體的定義
+ms.custom: ''
 ms.date: 03/30/2017
 ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.tgt_pltfrm: 
+ms.reviewer: ''
+ms.suite: ''
+ms.tgt_pltfrm: ''
 ms.topic: article
 dev_langs:
 - csharp
 - vb
 ms.assetid: 26dfac36-ae23-4909-9867-62495b55fb5e
-caps.latest.revision: "6"
+caps.latest.revision: 6
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.workload: dotnet
-ms.openlocfilehash: 86a6e8d22d1e46407082af5d71cd83c179825bb9
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.workload:
+- dotnet
+ms.openlocfilehash: 9c0590f7fc9cd8cc48b725b83af55b4ed81a0e59
+ms.sourcegitcommit: 86adcc06e35390f13c1e372c36d2e044f1fc31ef
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 04/26/2018
 ---
 # <a name="how-to-update-the-definition-of-a-running-workflow-instance"></a>HOW TO：更新執行中工作流程執行個體的定義
 動態更新提供的機制可讓工作流程應用程式開發人員更新持續性工作流程執行個體的工作流程定義。 必要的變更可以是實作錯誤修復、新要求，或是適應突如其來的變化。 此教學課程中的步驟示範如何使用動態更新來修改保存的執行個體`v1`數字猜測工作流程來比對中引進的新功能[How to： 主機的工作流程-並存的多個版本](../../../docs/framework/windows-workflow-foundation/how-to-host-multiple-versions-of-a-workflow-side-by-side.md).  
@@ -50,7 +51,7 @@ ms.lasthandoff: 12/22/2017
   
 -   [若要啟用 啟動工作流程的舊版本](../../../docs/framework/windows-workflow-foundation/how-to-update-the-definition-of-a-running-workflow-instance.md#BKMK_StartPreviousVersions)  
   
-###  <a name="BKMK_CreateProject"></a>若要建立 CreateUpdateMaps 專案  
+###  <a name="BKMK_CreateProject"></a> 若要建立 CreateUpdateMaps 專案  
   
 1.  以滑鼠右鍵按一下**WF45GettingStartedTutorial**中**方案總管 中**選擇**新增**，**新專案**。  
   
@@ -234,7 +235,7 @@ ms.lasthandoff: 12/22/2017
     }  
     ```  
   
-###  <a name="BKMK_StateMachine"></a>更新 StateMachineNumberGuessWorkflow  
+###  <a name="BKMK_StateMachine"></a> 更新 StateMachineNumberGuessWorkflow  
   
 1.  將 `CreateStateMachineUpdateMap` 加入至 `Program` 類別 (或 `Module1`)。  
   
@@ -427,7 +428,7 @@ ms.lasthandoff: 12/22/2017
     }  
     ```  
   
-###  <a name="BKMK_Flowchart"></a>更新 FlowchartNumberGuessWorkflow  
+###  <a name="BKMK_Flowchart"></a> 更新 FlowchartNumberGuessWorkflow  
   
 1.  將下列 `CreateFlowchartUpdateMethod` 加入至 `Program` 類別 (或 `Module1`)。 此方法類似 `CreateStateMachineUpdateMap`。 它會從呼叫 `StartUpdate` 開始、更新流程圖工作流程定義，接著在儲存更新對應和更新的工作流程定後結束。  
   
@@ -541,7 +542,7 @@ ms.lasthandoff: 12/22/2017
     }  
     ```  
   
-###  <a name="BKMK_Sequential"></a>更新 SequentialNumberGuessWorkflow  
+###  <a name="BKMK_Sequential"></a> 更新 SequentialNumberGuessWorkflow  
   
 1.  將下列 `CreateSequentialUpdateMethod` 加入至 `Program` 類別 (或 `Module1`)。 這個方法類似另外兩個方法。 它會從呼叫 `StartUpdate` 開始、更新循序工作流程定義，接著在儲存更新對應和更新的工作流程定後結束。  
   
@@ -621,7 +622,7 @@ ms.lasthandoff: 12/22/2017
     }  
     ```  
   
-###  <a name="BKMK_CreateUpdateMaps"></a>若要建置及執行 CreateUpdateMaps 應用程式  
+###  <a name="BKMK_CreateUpdateMaps"></a> 若要建置及執行 CreateUpdateMaps 應用程式  
   
 1.  更新 `Main` 方法，並加入下列三種方法呼叫。 這些方法會加入至下列區段。 每個方法會更新對應的數字猜測工作流程，並建立描述更新的 `DynamicUpdateMap`。  
   
@@ -655,7 +656,7 @@ ms.lasthandoff: 12/22/2017
   
      建立更新對應並更新工作流程定義後，下一步就是建置包含更新定義的更新工作流程組件。  
   
-###  <a name="BKMK_BuildAssembly"></a>建置更新的工作流程組件  
+###  <a name="BKMK_BuildAssembly"></a> 建置更新的工作流程組件  
   
 1.  開啟第二個 [!INCLUDE[vs_current_long](../../../includes/vs-current-long-md.md)] 執行個體。  
   
@@ -669,7 +670,7 @@ ms.lasthandoff: 12/22/2017
   
 6.  瀏覽至**NumberGuessWorkflowActivities_du**您在建立的資料夾[How to： 主機的工作流程-並存的多個版本](../../../docs/framework/windows-workflow-foundation/how-to-host-multiple-versions-of-a-workflow-side-by-side.md)。  
   
-7.  選擇**XAML 檔案 (\*.xaml;\*。xoml)**從**檔案類型**下拉式清單。  
+7.  選擇**XAML 檔案 (\*.xaml;\*。xoml)** 從**檔案類型**下拉式清單。  
   
 8.  選取**SequentialNumberGuessWorkflow_du.xaml**， **FlowchartNumberGuessWorkflow_du.xaml**，和**StateMachineNumberGuessWorkflow_du.xaml**按一下**新增**。  
   
@@ -680,13 +681,13 @@ ms.lasthandoff: 12/22/2017
   
 9. 按 CTRL+SHIFT+B 以建置專案。  
   
-10. 選擇**關閉方案**從**檔案**功能表。 方案檔的專案不是必要項目，因此按一下**否**關閉[!INCLUDE[vs_current_short](../../../includes/vs-current-short-md.md)]而不儲存方案檔。 選擇**結束**從**檔案**功能表關閉[!INCLUDE[vs_current_short](../../../includes/vs-current-short-md.md)]。  
+10. 選擇**關閉方案**從**檔案**功能表。 方案檔的專案不是必要項目，因此按一下**否**以關閉 Visual Studio，而不儲存方案檔。 選擇**結束**從**檔案**以關閉 Visual Studio 的功能表。  
   
 11. 開啟 Windows 檔案總管並瀏覽至**NumberGuessWorkflowActivities_du\bin\Debug**資料夾 (或**bin\Release**取決於您的專案設定)。  
   
 12. 重新命名**NumberGuessWorkflowActivities.dll**至**NumberGuessWorkflowActivities_v15.dll**，並將它複製到**PreviousVersions** 中建立的資料夾[How to： 裝載工作流程-並存的多個版本](../../../docs/framework/windows-workflow-foundation/how-to-host-multiple-versions-of-a-workflow-side-by-side.md)。  
   
-###  <a name="BKMK_UpdateWorkflowVersionMap"></a>若要使用新的版本更新 WorkflowVersionMap  
+###  <a name="BKMK_UpdateWorkflowVersionMap"></a> 若要使用新的版本更新 WorkflowVersionMap  
   
 1.  切換回 [!INCLUDE[vs_current_long](../../../includes/vs-current-long-md.md)] 的初始執行個體。  
   
@@ -1073,7 +1074,7 @@ ms.lasthandoff: 12/22/2017
   
 5.  按 CTRL+SHIFT+B 以建置專案。  
   
-###  <a name="BKMK_ApplyUpdate"></a>若要套用動態更新  
+###  <a name="BKMK_ApplyUpdate"></a> 若要套用動態更新  
   
 1.  以滑鼠右鍵按一下**WF45GettingStartedTutorial**中**方案總管 中**選擇**新增**，**新專案**。  
   
@@ -1448,7 +1449,7 @@ ms.lasthandoff: 12/22/2017
 **檢查： SequentialNumberGuessWorkflow;版本 = 2.0.0.0**   
 **請按任意鍵繼續...**  
   
-###  <a name="BKMK_BuildAndRun"></a>若要更新的工作流程執行應用程式  
+###  <a name="BKMK_BuildAndRun"></a> 若要更新的工作流程執行應用程式  
   
 1.  以滑鼠右鍵按一下**NumberGuessWorkflowHost**中**方案總管 中**選擇**設定為啟始專案**。  
   
@@ -1483,7 +1484,7 @@ ms.lasthandoff: 12/22/2017
 **請輸入介於 1 到 10 之間的數字**   
 **6 是正確的。您猜到它了 4。**  
   
-###  <a name="BKMK_StartPreviousVersions"></a>若要啟用 啟動工作流程的舊版本  
+###  <a name="BKMK_StartPreviousVersions"></a> 若要啟用 啟動工作流程的舊版本  
  如果您執行完工作流程來進行更新，可以修改 `NumberGuessWorkflowHost` 應用程式，使其能啟動工作流程的舊版本。  
   
 1.  按兩下**WorkflowHostForm**中**方案總管 中**，然後選取**WorkflowType**下拉式方塊。  

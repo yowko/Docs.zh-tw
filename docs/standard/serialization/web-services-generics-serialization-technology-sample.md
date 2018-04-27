@@ -8,21 +8,21 @@ ms.suite: ''
 ms.tgt_pltfrm: ''
 ms.topic: article
 ms.assetid: cdc15ea4-f678-4729-8ebe-188ae720bef7
-caps.latest.revision: ''
+caps.latest.revision: 7
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
 ms.workload:
 - dotnet
 - dotnetcore
-ms.openlocfilehash: 0c29e6778cc0749620a7e38d51303356c2e99436
-ms.sourcegitcommit: c883637b41ee028786edceece4fa872939d2e64c
+ms.openlocfilehash: aa4e54a1085e3e5713004c489051e54b0fc8ee9d
+ms.sourcegitcommit: 2e8acae16ae802f2d6d04e3ce0a6dbf04e476513
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 03/23/2018
+ms.lasthandoff: 04/18/2018
 ---
 # <a name="web-services-generics-serialization-technology-sample"></a>Web 服務泛型序列化技術範例
-[下載範例](http://download.microsoft.com/download/4/7/B/47B2164C-E780-4B10-8DE4-2CB5B886E0A6/Technologies/Serialization/Xml%20Serialization/GenericsSerialization.zip.exe)  
+[下載範例](https://download.microsoft.com/download/4/7/B/47B2164C-E780-4B10-8DE4-2CB5B886E0A6/Technologies/Serialization/Xml%20Serialization/GenericsSerialization.zip.exe)  
   
  此範例顯示如何在 ASP.NET Web 服務中使用及控制泛型的序列化。  
   
@@ -70,14 +70,14 @@ ms.lasthandoff: 03/23/2018
   
 1.  開啟瀏覽器視窗，並選取網址列。  
   
-2.  輸入 **http://localhost/[virtual directory]/Service.asmx**，其中 [virtual directory] 代表建置範例時建立的虛擬目錄。  
+2.  型別 **http://localhost/[虛擬 directory]/Service.asmx**，其中 [虛擬目錄] 代表您建置這個範例時所建立的虛擬目錄。  
   
 ## <a name="remarks"></a>備註  
- 範例會顯示預設的 ASP.NET 網頁，其中包含 Web 服務定義的連結。 除了修改 Web 服務的原始程式碼之外，您還可以自訂顯示內容。 如需詳細資訊，請參閱[建置 XML Web Service 用戶端](http://msdn.microsoft.com/library/c606f3cb-4111-45b4-ae42-9300420fa16c)。  
+ 範例會顯示預設的 ASP.NET 網頁，其中包含 Web 服務定義的連結。 除了修改 Web 服務的原始程式碼之外，您還可以自訂顯示內容。 如需詳細資訊，請參閱[建置 XML Web Service 用戶端](https://msdn.microsoft.com/library/c606f3cb-4111-45b4-ae42-9300420fa16c)。  
   
 ## <a name="see-also"></a>另請參閱  
  <xref:System.Collections.Generic>  
  <xref:System.Web.Services>  
  <xref:System.Xml.Serialization>  
  [序列化](../../../docs/standard/serialization/index.md)  
- [使用 ASP.NET 和 XML Web Service 用戶端建立的 XML Web Service](http://msdn.microsoft.com/library/1e64af78-d705-4384-b08d-591a45f4379c)
+ [使用 ASP.NET 和 XML Web Service 用戶端建立的 XML Web Service](https://msdn.microsoft.com/library/1e64af78-d705-4384-b08d-591a45f4379c)

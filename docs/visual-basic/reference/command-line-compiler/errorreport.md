@@ -13,14 +13,14 @@ helpviewer_keywords:
 ms.assetid: a7fe83a2-a6d8-460c-8dad-79a8f433f501
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 59dc833299161eac7b119e654c94534f202b1cb7
-ms.sourcegitcommit: 498799639937c89de777361aab74261efe7b79ea
+ms.openlocfilehash: 5dc321f7f927d68a9f270076640cbc6d31d2f6d5
+ms.sourcegitcommit: 86adcc06e35390f13c1e372c36d2e044f1fc31ef
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 03/22/2018
+ms.lasthandoff: 04/26/2018
 ---
 # <a name="-errorreport"></a>-errorreport
-指定 [!INCLUDE[vbprvb](~/includes/vbprvb-md.md)] 編譯器報告編譯器內部錯誤的方式。  
+指定 Visual Basic 編譯器報告編譯器內部錯誤的方式。  
   
 ## <a name="syntax"></a>語法  
   
@@ -29,7 +29,7 @@ ms.lasthandoff: 03/22/2018
 ```  
   
 ## <a name="remarks"></a>備註  
- 此選項提供便利的方式加入報表[!INCLUDE[vbprvb](~/includes/vbprvb-md.md)]編譯器內部錯誤 (ICE) [!INCLUDE[vbprvb](~/includes/vbprvb-md.md)] Microsoft 小組。 根據預設，編譯器會將任何資訊傳送給 Microsoft。 不過，如果發生編譯器內部錯誤，此選項可讓您向 Microsoft 回報錯誤。 該資訊可協助 Microsoft 工程師找出原因，而且可能有助於改善的下一個版本[!INCLUDE[vbprvb](~/includes/vbprvb-md.md)]。  
+ 此選項會提供便利的方式來報告 Visual Basic 編譯器內部錯誤 (ICE) 至 Microsoft 的 Visual Basic 小組。 根據預設，編譯器會將任何資訊傳送給 Microsoft。 不過，如果發生編譯器內部錯誤，此選項可讓您向 Microsoft 回報錯誤。 該資訊可協助 Microsoft 工程師找出原因，而且可能有助於改善 Visual Basic 中的下一個版本。  
   
  傳送報表的使用者的能力取決於電腦和使用者原則的權限。  
   

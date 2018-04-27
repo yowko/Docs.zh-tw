@@ -16,17 +16,17 @@ helpviewer_keywords:
 - impersonation [WCF]
 - delegation [WCF]
 ms.assetid: 110e60f7-5b03-4b69-b667-31721b8e3152
-caps.latest.revision: ''
+caps.latest.revision: 40
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
 ms.workload:
 - dotnet
-ms.openlocfilehash: 6319a9793698e12a984c875670d71b2cbb0b00ba
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.openlocfilehash: 5c1acfdfdbac2660fd4de7ec391c94b39890f669
+ms.sourcegitcommit: 86adcc06e35390f13c1e372c36d2e044f1fc31ef
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 04/26/2018
 ---
 # <a name="delegation-and-impersonation-with-wcf"></a>使用 WCF 的委派和模擬
 「*模擬* 」(Impersonation) 是服務用來限制用戶端存取服務網域資源的常用技術。 服務網域資源可以是像是本機檔案 (模擬) 的電腦資源，或是在另一部電腦上的資源，例如檔案共用 (委派)。 如需範例應用程式，請參閱 [Impersonating the Client](../../../../docs/framework/wcf/samples/impersonating-the-client.md)。 如需如何使用模擬的範例，請參閱 [如何：在服務上模擬用戶端](../../../../docs/framework/wcf/how-to-impersonate-a-client-on-a-service.md)。  
@@ -70,7 +70,7 @@ ms.lasthandoff: 12/22/2017
  服務可以模擬用戶端的程度，取決於服務在嘗試模擬時所擁有的權限、所使用的模擬類型，以及用戶端允許的可能模擬程度。  
   
 > [!NOTE]
->  當用戶端和服務在相同電腦上執行，而且用戶端正以系統帳戶執行時 (例如， `Local System` 或 `Network Service`)，用戶端就無法在安全工作階段是以可設定狀態之安全性內容權杖所建立的情況下進行模擬。 Windows Form 或主控台應用程式 (Console Application) 一般都會以目前登入的帳戶執行，因此依預設可以模擬該帳戶。 但當用戶端是 [!INCLUDE[vstecasp](../../../../includes/vstecasp-md.md)] 頁面，而且該頁面是裝載於 [!INCLUDE[iis601](../../../../includes/iis601-md.md)] 或 [!INCLUDE[iisver](../../../../includes/iisver-md.md)]中時，根據預設，用戶端不會以 `Network Service` 帳戶執行。 所有支援安全工作階段的系統提供繫結，根據預設，都會使用沒有狀態 (Stateless) 的安全性內容權杖 (SCT)。 不過，如果用戶端是 [!INCLUDE[vstecasp](../../../../includes/vstecasp-md.md)] 頁面，而且已使用含有可設定狀態之 SCT 的安全工作階段，就無法模擬該用戶端。 [!INCLUDE[crabout](../../../../includes/crabout-md.md)]使用具狀態的 Sct 的安全工作階段中，請參閱[How to： 建立安全工作階段的安全性內容權杖](../../../../docs/framework/wcf/feature-details/how-to-create-a-security-context-token-for-a-secure-session.md)。  
+>  當用戶端和服務在相同電腦上執行，而且用戶端正以系統帳戶執行時 (例如， `Local System` 或 `Network Service`)，用戶端就無法在安全工作階段是以可設定狀態之安全性內容權杖所建立的情況下進行模擬。 Windows Form 或主控台應用程式 (Console Application) 一般都會以目前登入的帳戶執行，因此依預設可以模擬該帳戶。 但當用戶端是 [!INCLUDE[vstecasp](../../../../includes/vstecasp-md.md)] 頁面，而且該頁面是裝載於 [!INCLUDE[iis601](../../../../includes/iis601-md.md)] 或 [!INCLUDE[iisver](../../../../includes/iisver-md.md)]中時，根據預設，用戶端不會以 `Network Service` 帳戶執行。 所有支援安全工作階段的系統提供繫結，根據預設，都會使用沒有狀態 (Stateless) 的安全性內容權杖 (SCT)。 不過，如果用戶端是 [!INCLUDE[vstecasp](../../../../includes/vstecasp-md.md)] 頁面，而且已使用含有可設定狀態之 SCT 的安全工作階段，就無法模擬該用戶端。 [!INCLUDE[crabout](../../../../includes/crabout-md.md)] 使用具狀態的 Sct 的安全工作階段中，請參閱[How to： 建立安全工作階段的安全性內容權杖](../../../../docs/framework/wcf/feature-details/how-to-create-a-security-context-token-for-a-secure-session.md)。  
   
 ## <a name="impersonation-in-a-service-method-declarative-model"></a>使用服務方法的模擬：宣告式模型  
  大多數模擬狀況都牽涉到在呼叫端內容中執行服務方法。 [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] 提供的模擬功能允許使用者在 <xref:System.ServiceModel.OperationBehaviorAttribute> 屬性中指定模擬需求，以簡化這項執行工作。 例如，在下列程式碼中， [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] 基礎結構會在執行 `Hello` 方法之前先模擬呼叫者。 資源的存取控制清單 (ACL) 必須允許呼叫者存取權限，任何存取 `Hello` 方法內部原生資源的嘗試才能繼續。 若要啟用模擬，請將 <xref:System.ServiceModel.OperationBehaviorAttribute.Impersonation%2A> 屬性設定為其中一個 <xref:System.ServiceModel.ImpersonationOption> 例舉值，也就是 <xref:System.ServiceModel.ImpersonationOption.Required?displayProperty=nameWithType> 或 <xref:System.ServiceModel.ImpersonationOption.Allowed?displayProperty=nameWithType>，如下列範例所示。  
@@ -84,13 +84,13 @@ ms.lasthandoff: 12/22/2017
  呼叫者必須透過可對應至 Windows 使用者帳戶的認證通過驗證， [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] 基礎結構才能模擬呼叫端。 如果服務是設定成使用無法對應至 Windows 帳戶的認證來進行驗證，該服務方法就不會執行。  
   
 > [!NOTE]
->  在 [!INCLUDE[wxp](../../../../includes/wxp-md.md)]上，如果有建立可設定狀態的 SCT，模擬便會失敗，並會造成 <xref:System.InvalidOperationException>。 [!INCLUDE[crdefault](../../../../includes/crdefault-md.md)][不支援的案例](../../../../docs/framework/wcf/feature-details/unsupported-scenarios.md)。  
+>  在 [!INCLUDE[wxp](../../../../includes/wxp-md.md)]上，如果有建立可設定狀態的 SCT，模擬便會失敗，並會造成 <xref:System.InvalidOperationException>。 [!INCLUDE[crdefault](../../../../includes/crdefault-md.md)] [不支援的案例](../../../../docs/framework/wcf/feature-details/unsupported-scenarios.md)。  
   
 ## <a name="impersonation-in-a-service-method-imperative-model"></a>使用服務方法的模擬：命令式模型  
  有時候呼叫者並不需要模擬整個服務，而只需要模擬服務的部份即可運作。 在此情況下，請從服務方法內取得呼叫者的 Windows 身分識別，而且以命令方式執行模擬。 使用 <xref:System.ServiceModel.ServiceSecurityContext.WindowsIdentity%2A> 的 <xref:System.ServiceModel.ServiceSecurityContext> 屬性傳回 <xref:System.Security.Principal.WindowsIdentity> 類別的執行個體，並先呼叫 <xref:System.Security.Principal.WindowsIdentity.Impersonate%2A> 方法，再使用該執行個體，即可完成這項執行。  
   
 > [!NOTE]
->  請確定使用 [!INCLUDE[vbprvb](../../../../includes/vbprvb-md.md)]`Using` 陳述式或 C# `using` 陳述式自動還原此模擬動作。 如果沒有使用這個陳述式，或是使用有別於 [!INCLUDE[vbprvb](../../../../includes/vbprvb-md.md)] 或 C# 的程式語言，請確定還原此模擬等級。 若是沒有做到這點，可能就會促使阻絕服務攻擊和提高權限攻擊的發生。  
+>  請務必使用 Visual Basic`Using`陳述式或 C#`using`陳述式自動還原此模擬動作。 如果您不要使用陳述式，或如果您使用 Visual Basic 或 C# 以外的程式設計語言，請確定還原此模擬等級。 若是沒有做到這點，可能就會促使阻絕服務攻擊和提高權限攻擊的發生。  
   
  [!code-csharp[c_ImpersonationAndDelegation#2](../../../../samples/snippets/csharp/VS_Snippets_CFX/c_impersonationanddelegation/cs/source.cs#2)]
  [!code-vb[c_ImpersonationAndDelegation#2](../../../../samples/snippets/visualbasic/VS_Snippets_CFX/c_impersonationanddelegation/vb/source.vb#2)]  
@@ -218,7 +218,7 @@ sh.Credentials.ClientCertificate.Authentication.MapClientCertificateToWindowsAcc
   
 -   [Kerberos 通訊協定轉換與限制委派 (英文)](http://go.microsoft.com/fwlink/?LinkId=36725)  
   
-## <a name="see-also"></a>請參閱  
+## <a name="see-also"></a>另請參閱  
  <xref:System.ServiceModel.OperationBehaviorAttribute>  
  <xref:System.ServiceModel.OperationBehaviorAttribute.Impersonation%2A>  
  <xref:System.ServiceModel.ImpersonationOption>  

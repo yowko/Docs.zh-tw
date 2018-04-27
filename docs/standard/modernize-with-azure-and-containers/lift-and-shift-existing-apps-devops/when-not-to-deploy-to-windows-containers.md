@@ -1,18 +1,19 @@
 ---
-title: "不要將部署到 Windows 容器的時機"
-description: "容器化的.NET 應用程式的.NET Microservices 架構 |不要將部署到 Windows 容器的時機"
+title: 不要將部署到 Windows 容器的時機
+description: 容器化的.NET 應用程式的.NET Microservices 架構 |不要將部署到 Windows 容器的時機
 author: CESARDELATORRE
 ms.author: wiwagn
 ms.date: 10/26/2017
 ms.prod: .net
+ms.topic: article
 ms.workload:
 - dotnet
 - dotnetcore
-ms.openlocfilehash: cb671ec88da7ff1aa5c960c210e0da5e9d753280
-ms.sourcegitcommit: d3cfda0943364aaf6ccd574f55f584576c8a4fee
+ms.openlocfilehash: b8fb31a17d1f9d91fe053596685b7560a7fa1ee1
+ms.sourcegitcommit: 2e8acae16ae802f2d6d04e3ce0a6dbf04e476513
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 03/08/2018
+ms.lasthandoff: 04/18/2018
 ---
 # <a name="when-not-to-deploy-to-windows-containers"></a>不要將部署到 Windows 容器的時機
 

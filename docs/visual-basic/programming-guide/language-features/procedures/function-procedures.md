@@ -1,11 +1,12 @@
 ---
-title: "函式程序 (Visual Basic)"
-ms.custom: 
+title: 函式程序 (Visual Basic)
+ms.custom: ''
 ms.date: 07/20/2015
 ms.prod: .net
-ms.reviewer: 
-ms.suite: 
-ms.technology: devlang-visual-basic
+ms.reviewer: ''
+ms.suite: ''
+ms.technology:
+- devlang-visual-basic
 ms.topic: article
 helpviewer_keywords:
 - Function procedures
@@ -15,17 +16,17 @@ helpviewer_keywords:
 - procedures [Visual Basic], Function procedures
 - syntax [Visual Basic], function procedures
 ms.assetid: 1b9f632c-553b-4cb6-920a-ded117ead8c0
-caps.latest.revision: "27"
+caps.latest.revision: 27
 author: dotnet-bot
 ms.author: dotnetcontent
-ms.openlocfilehash: 9520a6555e65fd801a5c40d40748028e04a10739
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.openlocfilehash: ad4f55a9dd9fbd68c36dd53a01f97ddb03c2bb9b
+ms.sourcegitcommit: 86adcc06e35390f13c1e372c36d2e044f1fc31ef
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 04/26/2018
 ---
 # <a name="function-procedures-visual-basic"></a>函式程序 (Visual Basic)
-A`Function`程序是一系列的[!INCLUDE[vbprvb](~/includes/vbprvb-md.md)]陳述式括住`Function`和`End Function`陳述式。 `Function`程序執行的工作，並再將控制權傳回給呼叫程式碼。 當它傳回控制項時，它也會傳回值，呼叫程式碼。  
+A`Function`程序是一系列的 Visual Basic 陳述式加上`Function`和`End Function`陳述式。 `Function`程序執行的工作，並再將控制權傳回給呼叫程式碼。 當它傳回控制項時，它也會傳回值，呼叫程式碼。  
   
  每次程序呼叫時，執行時，其陳述式開頭之後的第一個可執行陳述式`Function`陳述式，並與第一個結束`End Function`， `Exit Function`，或`Return`出現陳述式。  
   
@@ -91,11 +92,11 @@ End Function
   
  若要呼叫的語法`Function`程序如下所示：  
   
- *左值*`=`*functionname* `[(` *argumentlist*    `)]`  
+ *左值*`=`*functionname* `[(` *argumentlist*  `)]`  
   
- `If ((`*functionname* `[(` *argumentlist* `)] / 3) <=`*運算式*  `) Then`  
+ `If ((` *functionname* `[(` *argumentlist* `)] / 3) <=`*運算式*  `) Then`  
   
- 當您呼叫`Function`程序中，您不必使用它的傳回值。 如果未指定，會執行的函式的所有動作，但已忽略傳回值。 <xref:Microsoft.VisualBasic.Interaction.MsgBox%2A>通常稱為以這種方式。  
+ 當您呼叫`Function`程序中，您不必使用它的傳回值。 如果未指定，會執行的函式的所有動作，但已忽略傳回值。 <xref:Microsoft.VisualBasic.Interaction.MsgBox%2A> 通常稱為以這種方式。  
   
 ### <a name="illustration-of-declaration-and-call"></a>宣告和呼叫的圖例  
  下列`Function`已知值的其他兩個邊直角三角形斜邊的最長邊，程序會計算。  

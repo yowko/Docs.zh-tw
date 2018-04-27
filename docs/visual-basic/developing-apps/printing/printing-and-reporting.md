@@ -1,24 +1,25 @@
 ---
-title: "列印和報告 (Visual Basic)"
+title: 列印和報告 (Visual Basic)
 ms.date: 07/20/2015
 ms.prod: .net
-ms.suite: 
-ms.technology: devlang-visual-basic
+ms.suite: ''
+ms.technology:
+- devlang-visual-basic
 ms.topic: article
 ms.assetid: 92997b65-0279-4889-8db7-32cb6708be9c
-caps.latest.revision: "6"
+caps.latest.revision: 6
 author: dotnet-bot
 ms.author: dotnetcontent
-ms.openlocfilehash: e51ca5482a87dca1661f8b7d78272b70da676359
-ms.sourcegitcommit: bd1ef61f4bb794b25383d3d72e71041a5ced172e
+ms.openlocfilehash: 1bcb8d0101bb558d64208ff8b2df72238a968adb
+ms.sourcegitcommit: 86adcc06e35390f13c1e372c36d2e044f1fc31ef
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/18/2017
+ms.lasthandoff: 04/26/2018
 ---
 # <a name="printing-and-reporting-visual-basic"></a>列印和報告 (Visual Basic)
-[!INCLUDE[vbprvb](~/includes/vbprvb-md.md)]提供數個選項，列印和報告。 下列主題提供概觀和相關文件列印和報告相關的連結。  
+Visual Basic 提供了幾個選項用於列印和報告。 下列主題提供概觀和相關文件列印和報告相關的連結。  
   
-## <a name="in-this-section"></a>本章節內容  
+## <a name="in-this-section"></a>本節內容  
  [PrintForm 元件](../../../visual-basic/developing-apps/printing/printform-component.md)  
  提供概觀`PrintForm`元件，可讓您列印表單的內容。  
   

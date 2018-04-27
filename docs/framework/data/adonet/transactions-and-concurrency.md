@@ -1,24 +1,26 @@
 ---
-title: "異動和並行存取"
-ms.custom: 
+title: 異動和並行存取
+ms.custom: ''
 ms.date: 03/30/2017
 ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.technology: dotnet-ado
-ms.tgt_pltfrm: 
+ms.reviewer: ''
+ms.suite: ''
+ms.technology:
+- dotnet-ado
+ms.tgt_pltfrm: ''
 ms.topic: article
 ms.assetid: f46570de-9e50-4fe6-8710-a8c31fa8569b
-caps.latest.revision: "5"
+caps.latest.revision: 5
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.workload: dotnet
-ms.openlocfilehash: 6e6dfa946313bb9d43077bad68b761e8f03c175c
-ms.sourcegitcommit: ed26cfef4e18f6d93ab822d8c29f902cff3519d1
+ms.workload:
+- dotnet
+ms.openlocfilehash: 80db92f94f8cb523c3b8f9d0d08bbcb6b33c2fbe
+ms.sourcegitcommit: 86adcc06e35390f13c1e372c36d2e044f1fc31ef
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 01/17/2018
+ms.lasthandoff: 04/26/2018
 ---
 # <a name="transactions-and-concurrency"></a>異動和並行存取
 異動是由單一命令或當做封裝 (Package) 執行的命令群組所組成。 交易可讓您將多項作業結合成單一工作單位。 如果交易的某一處失敗，則所有更新都會復原到交易之前的狀態。  
@@ -30,7 +32,7 @@ ms.lasthandoff: 01/17/2018
   
  如果某筆交易包含相同資料庫或伺服器中的多個資料表，則預存程序 (Stored Procedure) 中的明確交易通常會有較佳的效能。 您可以使用 Transact-SQL `BEGIN TRANSACTION`、`COMMIT TRANSACTION` 和 `ROLLBACK TRANSACTION` 陳述式，在 SQL Server 預存程序中建立交易。 如需詳細資訊，請參閱《SQL Server 線上叢書》。  
   
- 包含不同資源管理員的交易 (例如 [!INCLUDE[ssNoVersion](../../../../includes/ssnoversion-md.md)] 與 Oracle 之間的交易) 需要分散式交易。  
+ 包含不同資源管理員，例如 SQL Server 與 Oracle 之間的交易的交易都需要分散式的交易。  
   
 ## <a name="in-this-section"></a>本節內容  
  [本機異動](../../../../docs/framework/data/adonet/local-transactions.md)  
@@ -40,12 +42,12 @@ ms.lasthandoff: 01/17/2018
  說明如何在 ADO.NET 中執行分散式異動。  
   
  [System.Transactions 與 SQL Server 整合](../../../../docs/framework/data/adonet/system-transactions-integration-with-sql-server.md)  
- 說明 <xref:System.Transactions> 如何與 [!INCLUDE[ssNoVersion](../../../../includes/ssnoversion-md.md)] 整合以使用分散式交易。  
+ 描述<xref:System.Transactions>整合到 SQL Server 使用分散式交易。  
   
  [開放式並行存取](../../../../docs/framework/data/adonet/optimistic-concurrency.md)  
  說明開放式與封閉式同步存取，以及如何測試並行違規。  
   
-## <a name="see-also"></a>請參閱  
+## <a name="see-also"></a>另請參閱  
  [交易基礎概念](../../../../docs/framework/data/transactions/transaction-fundamentals.md)  
  [連接至資料來源](../../../../docs/framework/data/adonet/connecting-to-a-data-source.md)  
  [命令和參數](../../../../docs/framework/data/adonet/commands-and-parameters.md)  

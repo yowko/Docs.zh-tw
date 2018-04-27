@@ -1,11 +1,12 @@
 ---
-title: "使用者定義常數 (Visual Basic)"
-ms.custom: 
+title: 使用者定義常數 (Visual Basic)
+ms.custom: ''
 ms.date: 07/20/2015
 ms.prod: .net
-ms.reviewer: 
-ms.suite: 
-ms.technology: devlang-visual-basic
+ms.reviewer: ''
+ms.suite: ''
+ms.technology:
+- devlang-visual-basic
 ms.topic: article
 helpviewer_keywords:
 - constants [Visual Basic], circular references
@@ -15,14 +16,14 @@ helpviewer_keywords:
 - constants [Visual Basic], user-defined
 - circular references between constants [Visual Basic]
 ms.assetid: a1206d5c-c45e-4ac2-970a-4a0be6a05fdd
-caps.latest.revision: "19"
+caps.latest.revision: 19
 author: dotnet-bot
 ms.author: dotnetcontent
-ms.openlocfilehash: ce839c3e843a52b31e40c13cb765f8eaf9959ea4
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.openlocfilehash: 9f4210193aeb386d3a4a76794cc9329cb24b2317
+ms.sourcegitcommit: 86adcc06e35390f13c1e372c36d2e044f1fc31ef
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 04/26/2018
 ---
 # <a name="user-defined-constants-visual-basic"></a>使用者定義常數 (Visual Basic)
 常數是有意義的名稱來取代數字或字串，不會變更。 如同它的名稱所示，常數用來儲存應用程式執行過程中維持不變的值。 您可以使用常數所定義的控制項或元件，或建立您自己。 常數您自行建立會描述成*使用者定義*。  
@@ -61,7 +62,7 @@ ms.lasthandoff: 11/21/2017
  [!code-vb[VbEnumsTask#16](../../../../visual-basic/language-reference/statements/codesnippet/VisualBasic/user-defined-constants_4.vb)]  
 [!code-vb[VbEnumsTask#17](../../../../visual-basic/language-reference/statements/codesnippet/VisualBasic/user-defined-constants_5.vb)]  
   
- 如果發生循環，[!INCLUDE[vbprvb](~/includes/vbprvb-md.md)]會產生編譯器錯誤。  
+ 如果發生循環，Visual Basic 會產生編譯器錯誤。  
   
 ## <a name="see-also"></a>另請參閱  
  [Const 陳述式](../../../../visual-basic/language-reference/statements/const-statement.md)  

@@ -19,11 +19,11 @@ ms.assetid: bf2eb779-b751-4b7c-854f-9f2161482352
 caps.latest.revision: 22
 author: dotnet-bot
 ms.author: dotnetcontent
-ms.openlocfilehash: b1cdba0a39a932f143ac98c2514240e1696a8fe0
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.openlocfilehash: 3c6dff88d123f33ad4c33e91685104b760ecca3b
+ms.sourcegitcommit: 86adcc06e35390f13c1e372c36d2e044f1fc31ef
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 04/26/2018
 ---
 # <a name="embedded-expressions-in-xml-visual-basic"></a>XML 中內嵌的運算式 (Visual Basic)
 內嵌的運算式可讓您建立 XML 常值包含在執行階段所評估的運算式。 內嵌運算式的語法是`<%=` `expression` `%>`，這會是相同的語法中所使用[!INCLUDE[vstecasp](~/includes/vstecasp-md.md)]。  
@@ -43,14 +43,14 @@ ms.lasthandoff: 11/21/2017
 ## <a name="embedded-expression-location-and-validation"></a>內嵌的運算式的位置和驗證  
  內嵌的運算式只可以出現在 XML 常值運算式內的特定位置。 可以傳回型別運算式的運算式位置控制項，以及如何`Nothing`處理。 下表描述允許的位置和內嵌運算式的型別。  
   
-|常值中的位置|運算式的型別|處理`Nothing`|  
+|常值中的位置|運算式的型別|處理 `Nothing`|  
 |---|---|---|  
 |XML 項目名稱|<xref:System.Xml.Linq.XName>|錯誤|  
-|XML 項目內容|`Object`或陣列`Object`|略過|  
-|XML 項目屬性名稱|<xref:System.Xml.Linq.XName>|錯誤，除非也是屬性值`Nothing`|  
+|XML 項目內容|`Object` 或陣列 `Object`|略過|  
+|XML 項目屬性名稱|<xref:System.Xml.Linq.XName>|錯誤，除非也是屬性值 `Nothing`|  
 |XML 項目屬性值|`Object`|略過屬性宣告|  
-|XML 項目屬性|<xref:System.Xml.Linq.XAttribute>或選取的集合<xref:System.Xml.Linq.XAttribute>|略過|  
-|XML 文件根項目|<xref:System.Xml.Linq.XElement>或其中一個集合<xref:System.Xml.Linq.XElement>物件和任意數目的<xref:System.Xml.Linq.XProcessingInstruction>和<xref:System.Xml.Linq.XComment>物件|略過|  
+|XML 項目屬性|<xref:System.Xml.Linq.XAttribute> 或選取的集合 <xref:System.Xml.Linq.XAttribute>|略過|  
+|XML 文件根項目|<xref:System.Xml.Linq.XElement> 或其中一個集合<xref:System.Xml.Linq.XElement>物件和任意數目的<xref:System.Xml.Linq.XProcessingInstruction>和<xref:System.Xml.Linq.XComment>物件|略過|  
   
 -   XML 項目名稱中內嵌運算式的範例：  
   
@@ -83,7 +83,7 @@ ms.lasthandoff: 11/21/2017
  如需在特定類型的常值中使用內嵌的運算式的詳細資訊，請參閱[XML 文件常值](../../../../visual-basic/language-reference/xml-literals/xml-document-literal.md)， [XML 元素常值](../../../../visual-basic/language-reference/xml-literals/xml-element-literal.md)。  
   
 ## <a name="scoping-rules"></a>範圍規則  
- 編譯器會將每個 XML 常值轉換成適當的常值類型的建構函式呼叫。 建構函式，會將常值內容和內嵌的運算式，在 XML 常值傳遞做為引數。 這表示所有[!INCLUDE[vbprvb](~/includes/vbprvb-md.md)]程式設計項目可使用 XML 常值也會提供給其內嵌的運算式。  
+ 編譯器會將每個 XML 常值轉換成適當的常值類型的建構函式呼叫。 建構函式，會將常值內容和內嵌的運算式，在 XML 常值傳遞做為引數。 這表示所有 Visual Basic 程式設計項目可使用 XML 常值也都會提供給其內嵌的運算式。  
   
  在 XML 常值，您可以存取以宣告的前置詞的 XML 命名空間`Imports`陳述式。 您可以宣告新的 XML 命名空間前置詞，或現有 XML 命名空間前置詞，在使用項目會遮蔽`xmlns`屬性。 新的命名空間可至該項目的子節點，而非內嵌的運算式中的 XML 常值。  
   

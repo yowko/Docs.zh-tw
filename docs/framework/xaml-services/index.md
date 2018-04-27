@@ -20,17 +20,17 @@ ms.author: wpickett
 manager: wpickett
 ms.workload:
 - dotnet
-ms.openlocfilehash: 458b4c94d26b7bc083c5d31fcbccf05b42bba52e
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.openlocfilehash: 1548f74cab4589690e49517cdf96144fb6515693
+ms.sourcegitcommit: 86adcc06e35390f13c1e372c36d2e044f1fc31ef
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 04/26/2018
 ---
 # <a name="xaml-services"></a>XAML 服務
 本主題描述技術集稱為.NET Framework XAML 服務的功能。 大部分的服務和應用程式開發介面所描述的位於 System.Xaml，也就是組件所導入的組件[!INCLUDE[net_v40_short](../../../includes/net-v40-short-md.md)].NET core 組件集合。 服務包括讀取器和寫入器，結構描述類別和結構描述支援的處理站，設定其屬性的類別、 XAML 語言的內建支援和其他 XAML 語言功能。  
   
 ## <a name="about-this-documentation"></a>關於這份文件  
- .NET Framework XAML 服務的概念文件假設您有先前的經驗與 XAML 語言如何它可能會套用到特定的架構，例如[!INCLUDE[TLA#tla_winclient](../../../includes/tlasharptla-winclient-md.md)]或[!INCLUDE[TLA#tla_workflow](../../../includes/tlasharptla-workflow-md.md)]，或特定技術的功能區域中，範例中的組建自訂功能<xref:Microsoft.Build.Framework.XamlTypes>。 這份文件不會嘗試說明的基本概念的 XAML 標記語言、 XAML 語法術語中，或其他簡介資料。 相反地，本文件著重於特別使用 System.Xaml 組件的文件庫中的 已啟用.NET Framework XAML 服務。 大部分的這些 Api 會針對 XAML 語言整合和擴充性案例。 這可能包括下列任何一項：  
+ .NET Framework XAML 服務的概念文件假設您有先前的經驗與 XAML 語言如何它可能會套用到特定的架構，例如[!INCLUDE[TLA#tla_winclient](../../../includes/tlasharptla-winclient-md.md)]Windows Workflow Foundation 或特定的技術功能區域中，例如組建自訂中的功能<xref:Microsoft.Build.Framework.XamlTypes>。 這份文件不會嘗試說明的基本概念的 XAML 標記語言、 XAML 語法術語中，或其他簡介資料。 相反地，本文件著重於特別使用 System.Xaml 組件的文件庫中的 已啟用.NET Framework XAML 服務。 大部分的這些 Api 會針對 XAML 語言整合和擴充性案例。 這可能包括下列任何一項：  
   
 -   擴充的基底的 XAML 讀取器或 XAML 寫入器 （直接處理 XAML 節點資料流; 衍生您自己的 XAML 讀取器或 XAML 寫入器） 的功能。  
   
@@ -49,7 +49,7 @@ ms.lasthandoff: 12/22/2017
  如果您要尋找的 XAML 語言的簡介資料，您可能會嘗試[XAML 概觀 (WPF)](../../../docs/framework/wpf/advanced/xaml-overview-wpf.md)。 該主題討論 XAML。 新的對象， [!INCLUDE[TLA#tla_winclient](../../../includes/tlasharptla-winclient-md.md)] ，也可以使用 XAML 標記和 XAML 語言功能。 另一個有用的文件是在簡介資料[XAML 語言規格](http://go.microsoft.com/fwlink/?LinkId=114525)。  
   
 ## <a name="net-framework-xaml-services-and-systemxaml-in-the-net-architecture"></a>.NET framework XAML 服務和 System.Xaml 中的.NET 架構  
- 在舊版的[!INCLUDE[TLA#tla_netframewk](../../../includes/tlasharptla-netframewk-md.md)]，支援 XAML 語言功能實作的架構上建置[!INCLUDE[TLA#tla_netframewk](../../../includes/tlasharptla-netframewk-md.md)] ([!INCLUDE[TLA#tla_winclient](../../../includes/tlasharptla-winclient-md.md)]，[!INCLUDE[TLA#tla_workflow](../../../includes/tlasharptla-workflow-md.md)]和[!INCLUDE[vsindigo](../../../includes/vsindigo-md.md)])，並因此改變其行為和依據所用的 API您已使用特定的架構。 這包含 XAML 剖析器和它的物件圖形建立機制、 XAML 語言內建函式、 序列化支援等等。  
+ 在舊版的[!INCLUDE[TLA#tla_netframewk](../../../includes/tlasharptla-netframewk-md.md)]，支援 XAML 語言功能實作的架構上建置[!INCLUDE[TLA#tla_netframewk](../../../includes/tlasharptla-netframewk-md.md)]([!INCLUDE[TLA#tla_winclient](../../../includes/tlasharptla-winclient-md.md)]，Windows Workflow Foundation 和[!INCLUDE[vsindigo](../../../includes/vsindigo-md.md)])，並因此改變其行為和使用的 API根據哪一個特定架構所使用。 這包含 XAML 剖析器和它的物件圖形建立機制、 XAML 語言內建函式、 序列化支援等等。  
   
  在[!INCLUDE[net_v40_long](../../../includes/net-v40-long-md.md)]，.NET Framework XAML 服務和 System.Xaml 組件定義大部分的所需的支援 XAML 語言功能。 這包括基底類別的 XAML 讀取器和 XAML 寫入器。 加入未出現在任何架構特定 XAML 實作的.NET Framework XAML 服務最重要功能是 xaml 類型系統表示法。 類型系統表示法呈現 XAML 著重的 XAML 功能但不採取特定功能的架構相依性物件導向的方式。  
   
@@ -68,11 +68,11 @@ ms.lasthandoff: 12/22/2017
   
 -   XAML 表示，格式為 UTF-16 編碼的 XML 開始，並儲存為文字檔案。  
   
--   到該 XAML 載入<xref:System.Xaml.XamlXmlReader>。 <xref:System.Xaml.XamlXmlReader>是<xref:System.Xaml.XamlReader>子類別。  
+-   到該 XAML 載入<xref:System.Xaml.XamlXmlReader>。 <xref:System.Xaml.XamlXmlReader> 是<xref:System.Xaml.XamlReader>子類別。  
   
 -   結果是在 XAML 節點資料流。 您可以存取個別節點的 XAML 節點資料流使用<xref:System.Xaml.XamlXmlReader>  /  <xref:System.Xaml.XamlReader>應用程式開發介面。 最常見的作業是在 XAML 節點資料流，處理每個節點使用 「 目前的記錄 」 中向前推進比喻。  
   
--   產生的節點傳遞至 XAML 節點資料流從<xref:System.Xaml.XamlObjectWriter>應用程式開發介面。 <xref:System.Xaml.XamlObjectWriter>是<xref:System.Xaml.XamlWriter>子類別。  
+-   產生的節點傳遞至 XAML 節點資料流從<xref:System.Xaml.XamlObjectWriter>應用程式開發介面。 <xref:System.Xaml.XamlObjectWriter> 是<xref:System.Xaml.XamlWriter>子類別。  
   
 -   <xref:System.Xaml.XamlObjectWriter>像素來進行來源 XAML 節點資料流寫入物件圖形中，一次一個物件。 這是與 XAML 結構描述內容和實作的組件和支援類型系統和 framework 型別可存取的協助。  
   
@@ -82,11 +82,11 @@ ms.lasthandoff: 12/22/2017
   
 -   物件圖形的整個執行的應用程式時間、 UI 內容和狀態的執行階段或在執行階段的整體應用程式的物件表示的較小區段的開頭。  
   
--   從邏輯開始物件，例如應用程式根目錄或文件根物件載入<xref:System.Xaml.XamlObjectReader>。 <xref:System.Xaml.XamlObjectReader>是<xref:System.Xaml.XamlReader>子類別。  
+-   從邏輯開始物件，例如應用程式根目錄或文件根物件載入<xref:System.Xaml.XamlObjectReader>。 <xref:System.Xaml.XamlObjectReader> 是<xref:System.Xaml.XamlReader>子類別。  
   
 -   結果是在 XAML 節點資料流。 您可以存取個別節點的 XAML 節點資料流使用<xref:System.Xaml.XamlObjectReader>和<xref:System.Xaml.XamlReader>應用程式開發介面。 最常見的作業是在 XAML 節點資料流，處理每個節點使用 「 目前的記錄 」 中向前推進比喻。  
   
--   產生的節點傳遞至 XAML 節點資料流從<xref:System.Xaml.XamlXmlWriter>應用程式開發介面。 <xref:System.Xaml.XamlXmlWriter>是<xref:System.Xaml.XamlWriter>子類別。  
+-   產生的節點傳遞至 XAML 節點資料流從<xref:System.Xaml.XamlXmlWriter>應用程式開發介面。 <xref:System.Xaml.XamlXmlWriter> 是<xref:System.Xaml.XamlWriter>子類別。  
   
 -   <xref:System.Xaml.XamlXmlWriter> XAML 寫入 XML utf 編碼方式。 您可以將它儲存為資料流、 或其他形式的文字檔案。  
   
@@ -101,16 +101,16 @@ ms.lasthandoff: 12/22/2017
   
 -   不同的簽章<xref:System.Xaml.XamlServices.Save%2A>儲存物件圖形，並產生輸出資料流、 檔案，或<xref:System.Xml.XmlWriter> / <xref:System.IO.TextWriter>執行個體。  
   
--   <xref:System.Xaml.XamlServices.Transform%2A>將 XAML 轉換藉由將載入路徑和儲存連結成單一作業的路徑。 不同的結構描述內容或支援類型系統無法用於<xref:System.Xaml.XamlReader>和<xref:System.Xaml.XamlWriter>，這是影響產生之 XAML 的轉換方式。  
+-   <xref:System.Xaml.XamlServices.Transform%2A> 將 XAML 轉換藉由將載入路徑和儲存連結成單一作業的路徑。 不同的結構描述內容或支援類型系統無法用於<xref:System.Xaml.XamlReader>和<xref:System.Xaml.XamlWriter>，這是影響產生之 XAML 的轉換方式。  
   
  如需有關如何使用<xref:System.Xaml.XamlServices>，請參閱[XAMLServices 類別和基本 XAML 讀取或寫入](../../../docs/framework/xaml-services/xamlservices-class-and-basic-xaml-reading-or-writing.md)。  
   
 ## <a name="xaml-type-system"></a>XAML 類型系統  
  XAML 類型系統會提供用於指定的個別節點的 XAML 節點資料流所需的 Api。  
   
- <xref:System.Xaml.XamlType>是一個物件的表示您正在處理的開始物件節點和結束物件節點之間。  
+ <xref:System.Xaml.XamlType> 是一個物件的表示您正在處理的開始物件節點和結束物件節點之間。  
   
- <xref:System.Xaml.XamlMember>為成員的物件-表示您正在處理的開始成員節點和結束成員節點之間。  
+ <xref:System.Xaml.XamlMember> 為成員的物件-表示您正在處理的開始成員節點和結束成員節點之間。  
   
  應用程式開發介面，例如<xref:System.Xaml.XamlType.GetAllMembers%2A>和<xref:System.Xaml.XamlType.GetMember%2A>和<xref:System.Xaml.XamlMember.DeclaringType%2A>報表之間的關聯性<xref:System.Xaml.XamlType>和<xref:System.Xaml.XamlMember>。  
   

@@ -1,12 +1,13 @@
 ---
-title: "如何：在執行階段時從控制項集合新增或移除"
-ms.custom: 
+title: 如何：在執行階段時從控制項集合新增或移除
+ms.custom: ''
 ms.date: 03/30/2017
 ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.technology: dotnet-winforms
-ms.tgt_pltfrm: 
+ms.reviewer: ''
+ms.suite: ''
+ms.technology:
+- dotnet-winforms
+ms.tgt_pltfrm: ''
 ms.topic: article
 dev_langs:
 - csharp
@@ -19,16 +20,17 @@ helpviewer_keywords:
 - run time [Windows Forms], adding controls
 - controls [Windows Forms], removing using collections
 ms.assetid: 771bf895-3d5f-469b-a324-3528f343657e
-caps.latest.revision: "10"
+caps.latest.revision: 10
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.workload: dotnet
-ms.openlocfilehash: 548ca8d682ffea6f2afa03124719a1bb5097a2fb
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.workload:
+- dotnet
+ms.openlocfilehash: b34863e7846f75c5dc9a8af24591522e37252f4c
+ms.sourcegitcommit: 86adcc06e35390f13c1e372c36d2e044f1fc31ef
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 04/26/2018
 ---
 # <a name="how-to-add-to-or-remove-from-a-collection-of-controls-at-run-time"></a>如何：在執行階段時從控制項集合新增或移除
 在開發應用程式的一般工作會將控制項加入和移除您表單上的任何容器控制項的控制項 (例如<xref:System.Windows.Forms.Panel>或<xref:System.Windows.Forms.GroupBox>控制項或甚至表單本身)。 在設計階段，可以將控制項直接拖曳至面板或群組方塊。 在執行階段，這些控制項會維護 `Controls` 集合，以便持續追蹤有哪些控制項置於其上。  
@@ -77,7 +79,7 @@ ms.lasthandoff: 12/22/2017
   
 ### <a name="to-remove-controls-from-a-collection-programmatically"></a>以程式設計方式移除集合中的控制項  
   
-1.  移除事件的事件處理常式。 在 [!INCLUDE[vbprvb](../../../../includes/vbprvb-md.md)] 中，使用 [RemoveHandler Statement](~/docs/visual-basic/language-reference/statements/removehandler-statement.md) 關鍵字；在 [!INCLUDE[csprcs](../../../../includes/csprcs-md.md)] 中，使用 [-= 運算子 (C# 參考)](~/docs/csharp/language-reference/operators/subtraction-assignment-operator.md)。  
+1.  移除事件的事件處理常式。 在 Visual Basic 使用[RemoveHandler 陳述式](~/docs/visual-basic/language-reference/statements/removehandler-statement.md)關鍵字; 在 Visual C# 中，使用[-= 運算子 （C# 參考）](~/docs/csharp/language-reference/operators/subtraction-assignment-operator.md)。  
   
 2.  使用 `Remove` 方法，從面板的 `Controls` 集合中刪除所需控制項。  
   
@@ -111,6 +113,6 @@ ms.lasthandoff: 12/22/2017
     }  
     ```  
   
-## <a name="see-also"></a>請參閱  
+## <a name="see-also"></a>另請參閱  
  <xref:System.Windows.Forms.Panel>  
  [Panel 控制項](../../../../docs/framework/winforms/controls/panel-control-windows-forms.md)

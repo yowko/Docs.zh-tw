@@ -1,27 +1,29 @@
 ---
-title: "本機異動"
-ms.custom: 
+title: 本機異動
+ms.custom: ''
 ms.date: 03/30/2017
 ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.technology: dotnet-ado
-ms.tgt_pltfrm: 
+ms.reviewer: ''
+ms.suite: ''
+ms.technology:
+- dotnet-ado
+ms.tgt_pltfrm: ''
 ms.topic: article
 dev_langs:
 - csharp
 - vb
 ms.assetid: 8ae3712f-ef5e-41a1-9ea9-b3d0399439f1
-caps.latest.revision: "5"
+caps.latest.revision: 5
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.workload: dotnet
-ms.openlocfilehash: 3d7865675871bafb527bb9ee85de1f96e9847402
-ms.sourcegitcommit: ed26cfef4e18f6d93ab822d8c29f902cff3519d1
+ms.workload:
+- dotnet
+ms.openlocfilehash: d56e2a978c3b9b58eadb946ee053721435c9f2d9
+ms.sourcegitcommit: 86adcc06e35390f13c1e372c36d2e044f1fc31ef
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 01/17/2018
+ms.lasthandoff: 04/26/2018
 ---
 # <a name="local-transactions"></a>本機異動
 當您要將多個工作繫結在一起，以讓它們當做單一的工作單位來執行時，便會使用 [!INCLUDE[vstecado](../../../../includes/vstecado-md.md)] 中的交易。 例如，想像應用程式正在執行兩項工作。 首先，它會更新包含訂單資訊的資料表。 然後會更新包含存貨資訊的資料表，將訂購項目記入借方。 如果其中任何一項失敗，然後這兩個更新會回復。  
@@ -40,7 +42,7 @@ ms.lasthandoff: 01/17/2018
 > [!NOTE]
 >  `EnlistDistributedTransaction` 方法不可用於本機交易。  
   
- 交易的範圍僅限於連接。 下列範例執行由 `try` 區塊中的兩個單獨命令所組成的明確交易。 這些命令會針對 AdventureWorks [!INCLUDE[ssNoVersion](../../../../includes/ssnoversion-md.md)] 範例資料庫中的 Production.ScrapReason 資料表執行 INSERT 陳述式，如果未擲回例外狀況，該陳述式便會得到認可。 如果擲回例外狀況，則 `catch` 區塊中的程式碼便會復原交易。 如果交易在完成之前遭到中止或連接關閉，則會自動復原該交易。  
+ 交易的範圍僅限於連接。 下列範例執行由 `try` 區塊中的兩個單獨命令所組成的明確交易。 命令執行時針對 Production.ScrapReason 資料表的 INSERT 陳述式在 AdventureWorks SQL Server 範例資料庫中，也就是已認可，會擲回任何例外狀況。 如果擲回例外狀況，則 `catch` 區塊中的程式碼便會復原交易。 如果交易在完成之前遭到中止或連接關閉，則會自動復原該交易。  
   
 ## <a name="example"></a>範例  
  請遵循下列步驟來執行交易。  
@@ -58,7 +60,7 @@ ms.lasthandoff: 01/17/2018
  [!code-csharp[DataWorks SqlTransaction.Local#1](../../../../samples/snippets/csharp/VS_Snippets_ADO.NET/DataWorks SqlTransaction.Local/CS/source.cs#1)]
  [!code-vb[DataWorks SqlTransaction.Local#1](../../../../samples/snippets/visualbasic/VS_Snippets_ADO.NET/DataWorks SqlTransaction.Local/VB/source.vb#1)]  
   
-## <a name="see-also"></a>請參閱  
+## <a name="see-also"></a>另請參閱  
  [異動和並行存取](../../../../docs/framework/data/adonet/transactions-and-concurrency.md)  
  [分散式異動](../../../../docs/framework/data/adonet/distributed-transactions.md)  
  [System.Transactions 與 SQL Server 整合](../../../../docs/framework/data/adonet/system-transactions-integration-with-sql-server.md)  

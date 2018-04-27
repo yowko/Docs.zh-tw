@@ -1,27 +1,29 @@
 ---
-title: "外部對應"
-ms.custom: 
+title: 外部對應
+ms.custom: ''
 ms.date: 03/30/2017
 ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.technology: dotnet-ado
-ms.tgt_pltfrm: 
+ms.reviewer: ''
+ms.suite: ''
+ms.technology:
+- dotnet-ado
+ms.tgt_pltfrm: ''
 ms.topic: article
 ms.assetid: 076606b8-d889-4ba0-b5da-ae577b146f23
-caps.latest.revision: "2"
+caps.latest.revision: 2
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.workload: dotnet
-ms.openlocfilehash: ae67c80e4637281a26b15d7faa2dbdbe7171ba1c
-ms.sourcegitcommit: ed26cfef4e18f6d93ab822d8c29f902cff3519d1
+ms.workload:
+- dotnet
+ms.openlocfilehash: 99b5a37778299f541a59707708edba244ab2f806
+ms.sourcegitcommit: 86adcc06e35390f13c1e372c36d2e044f1fc31ef
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 01/17/2018
+ms.lasthandoff: 04/26/2018
 ---
 # <a name="external-mapping"></a>外部對應
-[!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)]支援*外部對應*，處理程序，您必須使用個別的 XML 檔案來指定資料模型的資料庫和物件模型之間的對應。 使用外部對應檔案的好處如下：  
+[!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)] 支援*外部對應*，處理程序，您必須使用個別的 XML 檔案來指定資料模型的資料庫和物件模型之間的對應。 使用外部對應檔案的好處如下：  
   
 -   您可以將對應程式碼與應用程式的程式碼分開來。 如此一來，就可以避免應用程式的程式碼變得雜亂。  
   
@@ -46,7 +48,7 @@ ms.lasthandoff: 01/17/2018
  這個結構描述定義檔與用來驗證 DBML 檔案的結構描述定義檔不同。 如需詳細資訊，請參閱[LINQ to SQL 中的程式碼產生](../../../../../../docs/framework/data/adonet/sql/linq/code-generation-in-linq-to-sql.md))。  
   
 > [!NOTE]
->  [!INCLUDE[vs_current_short](../../../../../../includes/vs-current-short-md.md)] 使用者也可在 [XML 結構描述] 對話方塊找到這個 XSD 檔，檔名為 "LinqToSqlMapping.xsd"。 若要正確使用這個檔案來驗證外部對應檔案，請參閱[How to： 驗證 DBML 和外部對應檔案](../../../../../../docs/framework/data/adonet/sql/linq/how-to-validate-dbml-and-external-mapping-files.md)。  
+>  Visual Studio 使用者也可以找到這個 XSD 檔 XML 結構描述 對話方塊中為"LinqToSqlMapping.xsd"。 若要正確使用這個檔案來驗證外部對應檔案，請參閱[How to： 驗證 DBML 和外部對應檔案](../../../../../../docs/framework/data/adonet/sql/linq/how-to-validate-dbml-and-external-mapping-files.md)。  
   
 ```  
 ?<?xml version="1.0" encoding="utf-16"?>  
@@ -152,7 +154,7 @@ elementFormDefault="qualified" >
 </xs:schema>  
 ```  
   
-## <a name="see-also"></a>請參閱  
+## <a name="see-also"></a>另請參閱  
  [LINQ to SQL 中的程式碼產生](../../../../../../docs/framework/data/adonet/sql/linq/code-generation-in-linq-to-sql.md)  
  [參考資料](../../../../../../docs/framework/data/adonet/sql/linq/reference.md)  
  [如何：產生物件模型當作外部檔案](../../../../../../docs/framework/data/adonet/sql/linq/how-to-generate-the-object-model-as-an-external-file.md)

@@ -1,10 +1,11 @@
 ---
-title: "Visual Basic 中的運算子優先順序"
+title: Visual Basic 中的運算子優先順序
 ms.date: 07/20/2015
 ms.prod: .net
-ms.reviewer: 
-ms.suite: 
-ms.technology: devlang-visual-basic
+ms.reviewer: ''
+ms.suite: ''
+ms.technology:
+- devlang-visual-basic
 ms.topic: article
 helpviewer_keywords:
 - arithmetic operators [Visual Basic], precedence
@@ -19,14 +20,14 @@ helpviewer_keywords:
 - math operators [Visual Basic]
 - order of precedence
 ms.assetid: cbbdb282-f572-458e-a520-008a675f8063
-caps.latest.revision: "18"
+caps.latest.revision: 18
 author: dotnet-bot
 ms.author: dotnetcontent
-ms.openlocfilehash: 6c0fb466b404cafdd4b91d061971fd683375c715
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.openlocfilehash: 2d8de9deea84c7f0c11c91b55951cdfc200b017f
+ms.sourcegitcommit: 86adcc06e35390f13c1e372c36d2e044f1fc31ef
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 04/26/2018
 ---
 # <a name="operator-precedence-in-visual-basic"></a>Visual Basic 中的運算子優先順序
 每個組件時數個作業發生時在運算式中，評估，而且在呼叫預先定義的順序解決*運算子優先順序*。  
@@ -95,10 +96,10 @@ Dim n3 As Integer = 96 / (8 / 4)
   
  第一個運算式會評估除法 96 / 8 （這會產生 12），然後除法 12 / 4，這會產生三個。 因為編譯器會評估為作業`n1`從左到右，評估時，相同的明確指定該順序`n2`。 同時`n1`和`n2`有三個結果。 相反地，`n3`的結果是 48，因為括號會強制編譯器將評估 8 / 4 第一次。  
   
- 基於此行為，運算子可視為是*左向關聯*中[!INCLUDE[vbprvb](~/includes/vbprvb-md.md)]。  
+ 基於此行為，運算子可視為是*左向關聯*在 Visual Basic 中。  
   
 ## <a name="overriding-precedence-and-associativity"></a>覆寫優先順序和關聯性  
- 您可以使用括號強制其他項目之前，在評估運算式的某些部分。 優先順序和左順序關聯性，也可以覆寫。 [!INCLUDE[vbprvb](~/includes/vbprvb-md.md)]一律會執行之前以外的括號括住的作業。 不過，在括號，它仍保留一般優先順序和關聯性，除非您使用括號括號內。 下列範例將說明這點。  
+ 您可以使用括號強制其他項目之前，在評估運算式的某些部分。 優先順序和左順序關聯性，也可以覆寫。 Visual Basic 一定會執行之前以外的括號括住的作業。 不過，在括號，它仍保留一般優先順序和關聯性，除非您使用括號括號內。 下列範例將說明這點。  
   
 ```  
 Dim a, b, c, d, e, f, g As Double  

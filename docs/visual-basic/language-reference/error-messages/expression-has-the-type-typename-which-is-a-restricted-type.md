@@ -1,5 +1,5 @@
 ---
-title: 運算式具有類型 &#39;&lt;typename&gt;&#39; 這是受限制的類型，且無法用來存取成員繼承自 &#39; 物件 &#39; 或 &#39;ValueType &#39;
+title: 運算式具有類型&#39; &lt;typename&gt; &#39;是受限制的類型，無法用來存取成員繼承自&#39;物件&#39;或&#39;ValueType&#39;
 ms.date: 07/20/2015
 ms.prod: .net
 ms.reviewer: ''
@@ -16,18 +16,18 @@ ms.assetid: 2963cf3f-c527-4aa7-b67c-ee80b6d23186
 caps.latest.revision: 6
 author: dotnet-bot
 ms.author: dotnetcontent
-ms.openlocfilehash: a30742bd46ccd1a3e5a688ebd2621e2c8a3d50e7
-ms.sourcegitcommit: bd1ef61f4bb794b25383d3d72e71041a5ced172e
+ms.openlocfilehash: ab4e48c93a6a3c645bf9b5cc6c536d418022ae86
+ms.sourcegitcommit: 86adcc06e35390f13c1e372c36d2e044f1fc31ef
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/18/2017
+ms.lasthandoff: 04/26/2018
 ---
-# <a name="expression-has-the-type-39lttypenamegt39-which-is-a-restricted-type-and-cannot-be-used-to-access-members-inherited-from-39object39-or-39valuetype39"></a>運算式具有類型 &#39;&lt;typename&gt;&#39; 這是受限制的類型，且無法用來存取成員繼承自 &#39; 物件 &#39; 或 &#39;ValueType &#39;
+# <a name="expression-has-the-type-39lttypenamegt39-which-is-a-restricted-type-and-cannot-be-used-to-access-members-inherited-from-39object39-or-39valuetype39"></a>運算式具有類型&#39; &lt;typename&gt; &#39;是受限制的類型，無法用來存取成員繼承自&#39;物件&#39;或&#39;ValueType&#39;
 運算式評估為 common language runtime (CLR) 無法 box 處理的類型，但是會存取需要進行 boxing 的成員。  
   
  *Boxing* 是指將類型轉換為 `Object` 或者，在某些情況下，轉換為 <xref:System.ValueType>時所需的處理。 Common language runtime 無法 box 處理某些結構類型，例如<xref:System.ArgIterator>， <xref:System.RuntimeArgumentHandle>，和<xref:System.TypedReference>。  
   
- 這個運算式會嘗試使用受限的類型呼叫的方法繼承自<xref:System.Object>或<xref:System.ValueType>，例如<xref:System.Object.GetHashCode%2A>或<xref:System.Object.ToString%2A>。 若要存取此方法，[!INCLUDE[vbprvb](~/includes/vbprvb-md.md)]嘗試會造成這個錯誤的隱含 boxing 轉換。  
+ 這個運算式會嘗試使用受限的類型呼叫的方法繼承自<xref:System.Object>或<xref:System.ValueType>，例如<xref:System.Object.GetHashCode%2A>或<xref:System.Object.ToString%2A>。 若要存取此方法，Visual Basic 嘗試會造成這個錯誤的隱含 boxing 轉換。  
   
  **錯誤 ID:** BC31393  
   

@@ -1,34 +1,34 @@
 ---
-title: "逐步解說：使用 XAML 建立按鈕"
-ms.custom: 
+title: 逐步解說：使用 XAML 建立按鈕
+ms.custom: ''
 ms.date: 03/30/2017
 ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
+ms.reviewer: ''
+ms.suite: ''
 ms.technology:
 - dotnet-wpf
-ms.tgt_pltfrm: 
+ms.tgt_pltfrm: ''
 ms.topic: article
 helpviewer_keywords:
 - buttons [WPF]
 ms.assetid: 138c41c4-1759-4bbf-8d77-77031a06a8a0
-caps.latest.revision: 
+caps.latest.revision: 13
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
 ms.workload:
 - dotnet
-ms.openlocfilehash: 5c5efa9f8787e65d59e1b544632e806bf3fbbc81
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.openlocfilehash: 94ec5e56862190026b43331488cbc699fe7dfda4
+ms.sourcegitcommit: 86adcc06e35390f13c1e372c36d2e044f1fc31ef
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 04/26/2018
 ---
 # <a name="walkthrough-create-a-button-by-using-xaml"></a>逐步解說：使用 XAML 建立按鈕
 本逐步解說的目標是了解如何建立動畫的按鈕，以用於[!INCLUDE[TLA#tla_wpf](../../../../includes/tlasharptla-wpf-md.md)]應用程式。 本逐步解說會使用樣式和範本建立自訂的按鈕的資源，讓重複使用程式碼，以及從按鈕宣告按鈕邏輯分離。 這個逐步解說完全在撰寫[!INCLUDE[TLA#tla_xaml](../../../../includes/tlasharptla-xaml-md.md)]。  
   
 > [!IMPORTANT]
->  本逐步解說會引導您逐步完成建立應用程式，輸入或複製並貼上[!INCLUDE[TLA#tla_xaml](../../../../includes/tlasharptla-xaml-md.md)]至 Microsoft [!INCLUDE[vs_current_short](../../../../includes/vs-current-short-md.md)]。 如果您想要了解如何使用設計工具 (Microsoft Expression Blend) 來建立相同的應用程式，請參閱[建立按鈕所使用的 Microsoft Expression Blend](../../../../docs/framework/wpf/controls/walkthrough-create-a-button-by-using-microsoft-expression-blend.md)。  
+>  本逐步解說會引導您逐步完成建立應用程式，輸入或複製並貼上[!INCLUDE[TLA#tla_xaml](../../../../includes/tlasharptla-xaml-md.md)]到 Microsoft Visual Studio。 如果您想要了解如何使用設計工具 (Microsoft Expression Blend) 來建立相同的應用程式，請參閱[建立按鈕所使用的 Microsoft Expression Blend](../../../../docs/framework/wpf/controls/walkthrough-create-a-button-by-using-microsoft-expression-blend.md)。  
   
  下圖顯示已完成的按鈕。  
   
@@ -39,9 +39,9 @@ ms.lasthandoff: 12/22/2017
   
 #### <a name="to-create-a-new-wpf-project-and-add-buttons-to-the-window"></a>若要建立新的 WPF 專案，並加入視窗 按鈕  
   
-1.  啟動[!INCLUDE[vs_current_short](../../../../includes/vs-current-short-md.md)]。  
+1.  啟動 Visual Studio。  
   
-2.  **建立新的 WPF 專案：**上**檔案**功能表上，指向**新增**，然後按一下 **專案**。 尋找**Windows 應用程式 (WPF)**範本和名稱"AnimatedButton"的專案。 這會建立應用程式的基本架構。  
+2.  **建立新的 WPF 專案：**上**檔案**功能表上，指向**新增**，然後按一下 **專案**。 尋找**Windows 應用程式 (WPF)** 範本和名稱"AnimatedButton"的專案。 這會建立應用程式的基本架構。  
   
 3.  **新增基本的預設按鈕：**範本會提供本逐步解說所需的所有檔案。 按兩下 [方案總管] 中開啟 Window1.xaml 檔案。 根據預設，沒有<xref:System.Windows.Controls.Grid>Window1.xaml 中的項目。 移除<xref:System.Windows.Controls.Grid>元素並加入一些按鈕，[!INCLUDE[TLA#tla_xaml](../../../../includes/tlasharptla-xaml-md.md)]輸入或複製並貼上下列反白顯示的程式碼，以 Window1.xaml 頁面：  
   
@@ -175,7 +175,7 @@ ms.lasthandoff: 12/22/2017
   
      ![](../../../../docs/framework/wpf/controls/media/custom-button-animatedbutton-4.gif "custom_button_AnimatedButton_4")  
   
-3.  **新增至範本 glasseffect:**接下來您將加入玻璃。 首先，您會建立一些建立透明漸層效果的資源。 漸層停駐將這些資源加入任何位置內`Application.Resources`區塊：  
+3.  **新增至範本 glasseffect:** 接下來您將加入玻璃。 首先，您會建立一些建立透明漸層效果的資源。 漸層停駐將這些資源加入任何位置內`Application.Resources`區塊：  
   
     ```xaml  
     <Application.Resources>  
@@ -332,7 +332,7 @@ ms.lasthandoff: 12/22/2017
   
      按 F5 執行應用程式，然後按一下其中一個按鈕。 請注意，按鈕會維持反白顯示之後，按一下因為仍有焦點。 如果您按一下另一個按鈕時，[新增] 按鈕時的最後一個失去它，就會取得焦點。  
   
-4.  **加入表示**<xref:System.Windows.UIElement.MouseEnter> **和** <xref:System.Windows.UIElement.MouseLeave> **:**接下來我們將某些動畫加入至觸發程序。 加入下列任何位置內的標記`ControlTemplate.Triggers`區塊。  
+4.  **加入表示**<xref:System.Windows.UIElement.MouseEnter> **和** <xref:System.Windows.UIElement.MouseLeave> **:** 接下來我們將某些動畫加入至觸發程序。   加入下列任何位置內的標記`ControlTemplate.Triggers`區塊。  
   
     ```  
     <!-- Animations that start when mouse enters and leaves button. -->  
@@ -402,7 +402,7 @@ ms.lasthandoff: 12/22/2017
   
 -   自訂的按鈕，以回應使用者動作的行為 (例如<xref:System.Windows.UIElement.MouseEnter>， <xref:System.Windows.UIElement.MouseLeave>，和<xref:System.Windows.Controls.Primitives.ButtonBase.Click>) 包含的動畫效果。  
   
-## <a name="see-also"></a>請參閱  
+## <a name="see-also"></a>另請參閱  
  [使用 Microsoft Expression Blend 建立按鈕](../../../../docs/framework/wpf/controls/walkthrough-create-a-button-by-using-microsoft-expression-blend.md)  
  [樣式設定和範本化](../../../../docs/framework/wpf/controls/styling-and-templating.md)  
  [動畫概觀](../../../../docs/framework/wpf/graphics-multimedia/animation-overview.md)  

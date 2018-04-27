@@ -1,24 +1,26 @@
 ---
-title: "LINQ to SQL 查詢"
-ms.custom: 
+title: LINQ to SQL 查詢
+ms.custom: ''
 ms.date: 03/30/2017
 ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.technology: dotnet-ado
-ms.tgt_pltfrm: 
+ms.reviewer: ''
+ms.suite: ''
+ms.technology:
+- dotnet-ado
+ms.tgt_pltfrm: ''
 ms.topic: article
 ms.assetid: f4897aaa-7f44-4c20-a471-b948c2971aae
-caps.latest.revision: "4"
+caps.latest.revision: 4
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.workload: dotnet
-ms.openlocfilehash: 8c32ff4040213ce73b78f7ea0f6d56e222d55b25
-ms.sourcegitcommit: ed26cfef4e18f6d93ab822d8c29f902cff3519d1
+ms.workload:
+- dotnet
+ms.openlocfilehash: 62e6252da06201e33d6f81f3160bee063272132f
+ms.sourcegitcommit: 86adcc06e35390f13c1e372c36d2e044f1fc31ef
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 01/17/2018
+ms.lasthandoff: 04/26/2018
 ---
 # <a name="linq-to-sql-queries"></a>LINQ to SQL 查詢
 使用與 [!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)] 相同的語法，就可以定義 [!INCLUDE[vbteclinq](../../../../../../includes/vbteclinq-md.md)] 查詢。 唯一的差別在於查詢中參考的物件會對應至資料庫中的項目。 如需詳細資訊，請參閱 [LINQ 查詢簡介 (C#)](~/docs/csharp/programming-guide/concepts/linq/introduction-to-linq-queries.md)。  
@@ -33,7 +35,7 @@ ms.lasthandoff: 01/17/2018
 |項目|LINQ 查詢|[!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)] 查詢|  
 |----------|----------------|----------------------------------------------------------------------|  
 |保留查詢之區域變數的傳回型別 (適用於傳回序列的查詢)|泛型 `IEnumerable`|泛型 `IQueryable`|  
-|指定資料來源|使用`From`([!INCLUDE[vbprvb](../../../../../../includes/vbprvb-md.md)]) 或`from`子句 (C#)|相同|  
+|指定資料來源|使用`From`(Visual Basic) 或`from`子句 (C#)|相同|  
 |篩選|使用`Where` / `where`子句|相同|  
 |群組|使用`Group…By` / `groupby`子句|相同|  
 |選取 (投影)|使用`Select` / `select`子句|相同|  
@@ -42,7 +44,7 @@ ms.lasthandoff: 01/17/2018
 |遠端執行與本機執行||如需詳細資訊，請參閱[遠端與。本機執行](../../../../../../docs/framework/data/adonet/sql/linq/remote-vs-local-execution.md)。|  
 |資料流 (Streaming) 與快取查詢|不適用於本機記憶體案例||  
   
-## <a name="see-also"></a>請參閱  
+## <a name="see-also"></a>另請參閱  
  [LINQ 查詢簡介 (C#)](~/docs/csharp/programming-guide/concepts/linq/introduction-to-linq-queries.md)  
  [基本 LINQ 查詢作業](~/docs/csharp/programming-guide/concepts/linq/basic-linq-query-operations.md)  
  [LINQ 查詢作業中的型別關聯性](~/docs/csharp/programming-guide/concepts/linq/type-relationships-in-linq-query-operations.md)  

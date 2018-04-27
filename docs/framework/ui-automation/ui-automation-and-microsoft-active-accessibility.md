@@ -1,12 +1,13 @@
 ---
-title: "UI 自動化和 Microsoft Active Accessibility"
-ms.custom: 
+title: UI 自動化和 Microsoft Active Accessibility
+ms.custom: ''
 ms.date: 03/30/2017
 ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.technology: dotnet-bcl
-ms.tgt_pltfrm: 
+ms.reviewer: ''
+ms.suite: ''
+ms.technology:
+- dotnet-bcl
+ms.tgt_pltfrm: ''
 ms.topic: article
 helpviewer_keywords:
 - Active Accessibility
@@ -14,16 +15,17 @@ helpviewer_keywords:
 - UI Automation, Microsoft Active Accessibility
 - Active Accessibility, UI Automation compared to
 ms.assetid: 87bee662-0a3e-4232-a421-20e7a5968321
-caps.latest.revision: "24"
+caps.latest.revision: 24
 author: Xansky
 ms.author: mhopkins
 manager: markl
-ms.workload: dotnet
-ms.openlocfilehash: b826bff9f16dcd564e9b5bd91aab8b2170db6ce3
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.workload:
+- dotnet
+ms.openlocfilehash: 2028f312433e3a4cf8c90f2e6809ed29288d7819
+ms.sourcegitcommit: 86adcc06e35390f13c1e372c36d2e044f1fc31ef
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 04/26/2018
 ---
 # <a name="ui-automation-and-microsoft-active-accessibility"></a>UI 自動化和 Microsoft Active Accessibility
 > [!NOTE]
@@ -35,7 +37,7 @@ ms.lasthandoff: 12/22/2017
   
 <a name="Programming_Languages_compare"></a>   
 ## <a name="programming-languages"></a>程式語言：  
- [!INCLUDE[TLA2#tla_aa](../../../includes/tla2sharptla-aa-md.md)] 以支援雙重介面的 [!INCLUDE[TLA#tla_com](../../../includes/tlasharptla-com-md.md)] 為基礎，因此可使用 C/C++、 [!INCLUDE[TLA#tla_vb6](../../../includes/tlasharptla-vb6-md.md)]和指令碼語言加以程式化。 [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)] (包含適用於標準控制碼的用戶端提供者程式庫) 是以 Managed 程式碼所撰寫，而且使用 [!INCLUDE[TLA#tla_vcshrp](../../../includes/tlasharptla-vcshrp-md.md)] 或 [!INCLUDE[TLA#tla_visualbnet](../../../includes/tlasharptla-visualbnet-md.md)]設計使用者介面自動化用戶端應用程式最為輕鬆。 使用 Managed 程式碼或 C/C++ 皆可撰寫使用者介面自動化提供者，亦即介面實作。  
+<[!INCLUDE[TLA2#tla_aa](../../../includes/tla2sharptla-aa-md.md)] 根據[!INCLUDE[TLA#tla_com](../../../includes/tlasharptla-com-md.md)]雙重介面支援，所以 C/c + + 中的 可程式化[!INCLUDE[TLA#tla_vb6](../../../includes/tlasharptla-vb6-md.md)]，以及指令碼語言。 [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)] （包括標準控制項的用戶端提供者程式庫） 以 managed 程式碼，並使用 C# 或 Visual BASIC.NET 最容易設計使用者介面自動化用戶端應用程式。 使用 Managed 程式碼或 C/C++ 皆可撰寫使用者介面自動化提供者，亦即介面實作。  
   
 <a name="Support_in_Windows_Presentation_Foundation_"></a>   
 ## <a name="support-in-windows-presentation-foundation"></a>Windows Presentation Foundation 的支援  
@@ -218,7 +220,7 @@ ms.lasthandoff: 12/22/2017
 |EVENT_OBJECT_SELECTIONWITHIN|沒有對等項目|  
 |EVENT_OBJECT_SHOW|<xref:System.Windows.Automation.AutomationElement.StructureChangedEvent>|  
 |EVENT_OBJECT_STATECHANGE|多項屬性變更事件|  
-|EVENT_OBJECT_VALUECHANGE|<xref:System.Windows.Automation.RangeValuePattern.ValueProperty?displayProperty=nameWithType>和<xref:System.Windows.Automation.ValuePattern.ValueProperty?displayProperty=nameWithType>變更|  
+|EVENT_OBJECT_VALUECHANGE|<xref:System.Windows.Automation.RangeValuePattern.ValueProperty?displayProperty=nameWithType> 和<xref:System.Windows.Automation.ValuePattern.ValueProperty?displayProperty=nameWithType>變更|  
 |EVENT_SYSTEM_ALERT|沒有對等項目|  
 |EVENT_SYSTEM_CAPTUREEND|沒有對等項目|  
 |EVENT_SYSTEM_CAPTURESTART|沒有對等項目|  
@@ -260,5 +262,5 @@ ms.lasthandoff: 12/22/2017
   
  [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)] 模型可讓提供者無須呼叫其他提供者程式碼。 [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)] 核心服務會執行所有必要彙總。  
   
-## <a name="see-also"></a>請參閱  
+## <a name="see-also"></a>另請參閱  
  [使用者介面自動化基礎觀念](../../../docs/framework/ui-automation/index.md)

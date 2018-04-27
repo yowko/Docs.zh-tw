@@ -1,11 +1,12 @@
 ---
-title: "逐步解說：使用 Visual Basic 建立 COM 物件"
-ms.custom: 
+title: 逐步解說：使用 Visual Basic 建立 COM 物件
+ms.custom: ''
 ms.date: 07/20/2015
 ms.prod: .net
-ms.reviewer: 
-ms.suite: 
-ms.technology: devlang-visual-basic
+ms.reviewer: ''
+ms.suite: ''
+ms.technology:
+- devlang-visual-basic
 ms.topic: article
 helpviewer_keywords:
 - COM interop [Visual Basic], creating COM objects
@@ -14,22 +15,22 @@ helpviewer_keywords:
 - object creation [Visual Basic], COM objects
 - COM objects, walkthroughs
 ms.assetid: 7b07a463-bc72-4392-9ba0-9dfcb697a44f
-caps.latest.revision: "30"
+caps.latest.revision: 30
 author: dotnet-bot
 ms.author: dotnetcontent
-ms.openlocfilehash: ff7d3868a2e3ddaba06ebc6f98c8eacfc7299366
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.openlocfilehash: e660d672fc32455cee349dc44ad20c3244c087b4
+ms.sourcegitcommit: 86adcc06e35390f13c1e372c36d2e044f1fc31ef
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 04/26/2018
 ---
 # <a name="walkthrough-creating-com-objects-with-visual-basic"></a>逐步解說：使用 Visual Basic 建立 COM 物件
-建立新的應用程式或元件時，最好建立.NET Framework 組件。 不過，[!INCLUDE[vbprvb](~/includes/vbprvb-md.md)]也可輕鬆公開.NET Framework 元件至 com。 這可讓您針對需要 COM 元件的舊版應用程式套件提供新的元件。 本逐步解說示範如何使用[!INCLUDE[vbprvb](~/includes/vbprvb-md.md)]公開[!INCLUDE[dnprdnshort](~/includes/dnprdnshort-md.md)]物件當做 COM 物件，及未在 COM 類別樣板。  
+建立新的應用程式或元件時，最好建立.NET Framework 組件。 不過，Visual Basic 也可輕鬆公開.NET Framework 元件至 com。 這可讓您針對需要 COM 元件的舊版應用程式套件提供新的元件。 本逐步解說示範如何使用 Visual Basic 公開[!INCLUDE[dnprdnshort](~/includes/dnprdnshort-md.md)]物件當做 COM 物件，及未在 COM 類別樣板。  
   
  公開 COM 物件的最簡單方式是使用 COM 類別樣板。 COM 類別範本會建立新的類別，並設定您的專案產生的類別和互通性的圖層為 COM 物件，並向作業系統。  
   
 > [!NOTE]
->  雖然您也可以公開類別中建立[!INCLUDE[vbprvb](~/includes/vbprvb-md.md)]為要使用的 unmanaged 程式碼的 COM 物件，它不是真正的 COM 物件，並且無法由[!INCLUDE[vbprvb](~/includes/vbprvb-md.md)]。 如需詳細資訊，請參閱[.NET Framework 應用程式中的 COM 互通性](../../../visual-basic/programming-guide/com-interop/com-interoperability-in-net-framework-applications.md)。  
+>  雖然您也可以公開為 COM 物件使用的 unmanaged 程式碼的 Visual Basic 中建立的類別，它不是真正的 COM 物件，並不能使用 Visual Basic。 如需詳細資訊，請參閱[.NET Framework 應用程式中的 COM 互通性](../../../visual-basic/programming-guide/com-interop/com-interoperability-in-net-framework-applications.md)。  
   
 [!INCLUDE[note_settings_general](~/includes/note-settings-general-md.md)]  
   
@@ -41,18 +42,18 @@ ms.lasthandoff: 11/21/2017
   
 3.  選取**加入新項目**從**專案**功能表。 隨即顯示 [ 新增項目] 對話方塊。  
   
-4.  選取**COM 類別**從**範本**清單，然後再按**新增**。 [!INCLUDE[vbprvb](~/includes/vbprvb-md.md)]加入新的類別，並設定新的專案，COM interop。  
+4.  選取**COM 類別**從**範本**清單，然後再按**新增**。 Visual Basic 會將新類別加入和設定新的專案，COM interop。  
   
 5.  例如屬性、 方法和事件的程式碼加入的 COM 類別。  
   
-6.  選取**建置 ClassLibrary1**從**建置**功能表。 [!INCLUDE[vbprvb](~/includes/vbprvb-md.md)]建置組件，並向作業系統註冊的 COM 物件。  
+6.  選取**建置 ClassLibrary1**從**建置**功能表。 Visual Basic 建置組件，並向作業系統註冊的 COM 物件。  
   
 ## <a name="creating-com-objects-without-the-com-class-template"></a>建立 COM 物件不在 COM 類別範本  
  您也可以建立以手動方式而不是使用 COM 類別樣板的 COM 類別。 當您從命令列使用或是您想要更充分掌控 COM 物件的定義方式，此程序會很有幫助。  
   
 #### <a name="to-set-up-your-project-to-generate-a-com-object"></a>若要設定您的專案，以產生 COM 物件  
   
-1.  開啟新的 Windows 應用程式專案，從**檔案**功能表按一下**[新增專案]**。  
+1.  開啟新的 Windows 應用程式專案，從**檔案**功能表按一下 **[新增專案]**。  
   
 2.  在**新專案**對話方塊底下**專案類型**欄位中，Windows 會選取核取。 選取**類別庫**從**範本**清單，然後再按**確定**。 新的專案隨即顯示。  
   
@@ -93,10 +94,10 @@ ms.lasthandoff: 11/21/2017
   
      [!code-vb[VbVbalrInterop#6](../../../visual-basic/programming-guide/com-interop/codesnippet/VisualBasic/walkthrough-creating-com-objects_5.vb)]  
   
-9. 將屬性、 方法和事件加入至類別，其與結束`End Class`陳述式。 選取**建置方案**從**建置**功能表。 [!INCLUDE[vbprvb](~/includes/vbprvb-md.md)]建置組件，並向作業系統註冊的 COM 物件。  
+9. 將屬性、 方法和事件加入至類別，其與結束`End Class`陳述式。 選取**建置方案**從**建置**功能表。 Visual Basic 建置組件，並向作業系統註冊的 COM 物件。  
   
     > [!NOTE]
-    >  產生具有的 COM 物件[!INCLUDE[vbprvb](~/includes/vbprvb-md.md)]不可由其他[!INCLUDE[vbprvb](~/includes/vbprvb-md.md)]應用程式因為它們不是，則為 true 的 COM 物件。 嘗試將參考加入至這類 COM 物件將會引發錯誤。 如需詳細資訊，請參閱[.NET Framework 應用程式中的 COM 互通性](../../../visual-basic/programming-guide/com-interop/com-interoperability-in-net-framework-applications.md)。  
+    >  其他 Visual Basic 應用程式不使用您產生與 Visual Basic 的 COM 物件，因為它們不是，則為 true 的 COM 物件。 嘗試將參考加入至這類 COM 物件將會引發錯誤。 如需詳細資訊，請參閱[.NET Framework 應用程式中的 COM 互通性](../../../visual-basic/programming-guide/com-interop/com-interoperability-in-net-framework-applications.md)。  
   
 ## <a name="see-also"></a>另請參閱  
  <xref:Microsoft.VisualBasic.ComClassAttribute>  

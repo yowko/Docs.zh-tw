@@ -1,12 +1,13 @@
 ---
-title: "匯入結構描述以產生類別"
-ms.custom: 
+title: 匯入結構描述以產生類別
+ms.custom: ''
 ms.date: 03/30/2017
 ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.technology: dotnet-clr
-ms.tgt_pltfrm: 
+ms.reviewer: ''
+ms.suite: ''
+ms.technology:
+- dotnet-clr
+ms.tgt_pltfrm: ''
 ms.topic: article
 dev_langs:
 - csharp
@@ -15,16 +16,17 @@ helpviewer_keywords:
 - WCF, schema import and export
 - XsdDataContractImporter class
 ms.assetid: b9170583-8c34-43bd-97bb-6c0c8dddeee0
-caps.latest.revision: "15"
+caps.latest.revision: 15
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.workload: dotnet
-ms.openlocfilehash: a872fbd5be56fed3d01481d1740c70932fd60c06
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.workload:
+- dotnet
+ms.openlocfilehash: 7fc755ff7f1b6c583a1e9aa1bc209495563812f0
+ms.sourcegitcommit: 86adcc06e35390f13c1e372c36d2e044f1fc31ef
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 04/26/2018
 ---
 # <a name="importing-schema-to-generate-classes"></a>匯入結構描述以產生類別
 如果要從可在 [!INCLUDE[indigo1](../../../../includes/indigo1-md.md)] 中使用的結構描述產生類別，請使用 <xref:System.Runtime.Serialization.XsdDataContractImporter> 類別。 這個主題將說明處理程序和變化。  
@@ -59,7 +61,7 @@ ms.lasthandoff: 12/22/2017
  您可以將 <xref:System.Runtime.Serialization.XsdDataContractImporter.Options%2A> 的 <xref:System.Runtime.Serialization.XsdDataContractImporter> 屬性設定為 <xref:System.Runtime.Serialization.ImportOptions> 類別的執行個體，以控制匯入處理程序的各方面。 選項的數目會直接影響到所產生的型別。  
   
 #### <a name="controlling-the-access-level-generateinternal-or-the-internal-switch"></a>控制存取層級 (GenerateInternal 或 /internal 參數)  
- 這會對應至**/ 內部**上切換[ServiceModel Metadata Utility Tool (Svcutil.exe)](../../../../docs/framework/wcf/servicemodel-metadata-utility-tool-svcutil-exe.md)。  
+ 這會對應至 **/ 內部**上切換[ServiceModel Metadata Utility Tool (Svcutil.exe)](../../../../docs/framework/wcf/servicemodel-metadata-utility-tool-svcutil-exe.md)。  
   
  一般來說，公用型別是從結構描述產生的，其中包含私用欄位和相符的公用資料成員屬性。 如果要改為產生內部型別，請將 <xref:System.Runtime.Serialization.ImportOptions.GenerateInternal%2A> 屬性設定為 `true`。  
   
@@ -69,7 +71,7 @@ ms.lasthandoff: 12/22/2017
  [!code-vb[c_SchemaImportExport#2](../../../../samples/snippets/visualbasic/VS_Snippets_CFX/c_schemaimportexport/vb/source.vb#2)]  
   
 #### <a name="controlling-namespaces-namespaces-or-the-namespace-switch"></a>控制命名空間 (Namespaces 或 /namespace 參數)  
- 這會對應至**/namespace**上切換`Svcutil.exe`工具。  
+ 這會對應至 **/namespace**上切換`Svcutil.exe`工具。  
   
  一般來說，從結構描述產生的型別會產生至[!INCLUDE[dnprdnshort](../../../../includes/dnprdnshort-md.md)]具有對應至特定的各個 XSD 命名空間的命名空間，[!INCLUDE[dnprdnshort](../../../../includes/dnprdnshort-md.md)]命名空間中所述的對應根據[資料合約結構描述參考](../../../../docs/framework/wcf/feature-details/data-contract-schema-reference.md). 您可以將 <xref:System.Runtime.Serialization.ImportOptions.Namespaces%2A> 屬性設定為 <xref:System.Collections.Generic.Dictionary%602>，以自訂這個對應。 如果在目錄中找到指定的 XSD 命名空間，相符的 [!INCLUDE[dnprdnshort](../../../../includes/dnprdnshort-md.md)] 命名空間也是取自您的目錄。  
   
@@ -77,13 +79,13 @@ ms.lasthandoff: 12/22/2017
   
  [!code-xml[c_SchemaImportExport#10](../../../../samples/snippets/csharp/VS_Snippets_CFX/c_schemaimportexport/common/source.config#10)]  
   
- 下列範例是使用 `Namespaces` 屬性，將 "http://schemas.contoso.com/carSchema" 命名空間對應至 "Contoso.Cars"。  
+ 下列範例會使用`Namespaces`屬性，對應 」http://schemas.contoso.com/carSchema"至"Contoso.Cars"命名空間。  
   
  [!code-csharp[c_SchemaImportExport#8](../../../../samples/snippets/csharp/VS_Snippets_CFX/c_schemaimportexport/cs/source.cs#8)]
  [!code-vb[c_SchemaImportExport#8](../../../../samples/snippets/visualbasic/VS_Snippets_CFX/c_schemaimportexport/vb/source.vb#8)]  
   
 #### <a name="adding-the-serializableattribute-generateserializable-or-the-serializable-switch"></a>新增 SerializableAttribute (GenerateSerializable 或 /serializable 參數)  
- 這會對應至**/ 序列化**上切換`Svcutil.exe`工具。  
+ 這會對應至 **/ 序列化**上切換`Svcutil.exe`工具。  
   
  有時對於從結構描述產生的型別來說，可在 [!INCLUDE[dnprdnshort](../../../../includes/dnprdnshort-md.md)] 執行階段序列化引擎中使用是很重要的 (例如，<xref:System.Runtime.Serialization.Formatters.Binary.BinaryFormatter?displayProperty=nameWithType> 和 <xref:System.Runtime.Serialization.Formatters.Soap.SoapFormatter> 類別)。 當針對 [!INCLUDE[dnprdnshort](../../../../includes/dnprdnshort-md.md)] 遠端使用型別時，這很有用。 如果要啟用，除了一般的 <xref:System.SerializableAttribute> 屬性之外，您還必須將 <xref:System.Runtime.Serialization.DataContractAttribute> 屬性套用至所產生的型別。 如果 `GenerateSerializable` 匯入選項設定為 `true`，便會自動產生此屬性。  
   
@@ -93,9 +95,9 @@ ms.lasthandoff: 12/22/2017
  [!code-vb[c_SchemaImportExport#4](../../../../samples/snippets/visualbasic/VS_Snippets_CFX/c_schemaimportexport/vb/source.vb#4)]  
   
 #### <a name="adding-data-binding-support-enabledatabinding-or-the-enabledatabinding-switch"></a>新增資料繫結支援 (EnableDataBinding 或 /enableDataBinding 參數)  
- 這會對應至**/enableDataBinding** Svcutil.exe 工具上切換。  
+ 這會對應至 **/enableDataBinding** Svcutil.exe 工具上切換。  
   
- 有時，您可能會想要將從結構描述產生的型別，繫結至圖形使用者介面元件，讓這些型別之執行個體的更新可以自動更新 UI。 `XsdDataContractImporter` 可以產生以任何屬性變更都會觸發事件的方式實作 <xref:System.ComponentModel.INotifyPropertyChanged> 介面的型別。 如果產生的型別是用於支援這個介面 (例如 [!INCLUDE[avalon1](../../../../includes/avalon1-md.md)]) 的用戶端 UI 程式設計環境，請將 <xref:System.Runtime.Serialization.ImportOptions.EnableDataBinding%2A> 屬性設定為 `true` 以啟用這個功能。  
+ 有時，您可能會想要將從結構描述產生的型別，繫結至圖形使用者介面元件，讓這些型別之執行個體的更新可以自動更新 UI。 `XsdDataContractImporter` 可以產生以任何屬性變更都會觸發事件的方式實作 <xref:System.ComponentModel.INotifyPropertyChanged> 介面的型別。 如果您正在產生用戶端 UI 程式設計環境支援這個介面 (例如 Windows Presentation Foundation (WPF)) 的類型，設定<xref:System.Runtime.Serialization.ImportOptions.EnableDataBinding%2A>屬性`true`啟用此功能。  
   
  下列範例會顯示由 `Vehicle` 設定為 <xref:System.Runtime.Serialization.ImportOptions.EnableDataBinding%2A> 所產生的 `true` 類別。  
   
@@ -112,7 +114,7 @@ ms.lasthandoff: 12/22/2017
  [!code-xml[C_SchemaImportExport#12](../../../../samples/snippets/csharp/VS_Snippets_CFX/c_schemaimportexport/common/source.config#12)]  
   
 > [!NOTE]
->  任何關聯也都可以視為是清單。 例如，您可以將前述關聯視為是剛好有兩個欄位 (字串欄位和整數欄位) 之複雜 `city` 物件的清單。 這兩種模式在 XSD 結構描述中都有表示法。 由於並沒有方法可以區分清單和關聯，因此這類模式永遠會被視為是清單，除非結構描述中有 [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] 特定的特別附註。 附註會指出指定的模式表示關聯。 [!INCLUDE[crdefault](../../../../includes/crdefault-md.md)][資料合約結構描述參考](../../../../docs/framework/wcf/feature-details/data-contract-schema-reference.md)。  
+>  任何關聯也都可以視為是清單。 例如，您可以將前述關聯視為是剛好有兩個欄位 (字串欄位和整數欄位) 之複雜 `city` 物件的清單。 這兩種模式在 XSD 結構描述中都有表示法。 由於並沒有方法可以區分清單和關聯，因此這類模式永遠會被視為是清單，除非結構描述中有 [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] 特定的特別附註。 附註會指出指定的模式表示關聯。 [!INCLUDE[crdefault](../../../../includes/crdefault-md.md)] [資料合約結構描述參考](../../../../docs/framework/wcf/feature-details/data-contract-schema-reference.md)。  
   
  一般來說，會匯入清單做為衍生自泛型清單的集合資料合約或做為 [!INCLUDE[dnprdnshort](../../../../includes/dnprdnshort-md.md)] 陣列，視結構描述是否遵循集合的標準命名樣式而定。 這更詳細地描述[集合資料合約中的型別](../../../../docs/framework/wcf/feature-details/collection-types-in-data-contracts.md)。 關聯通常會被匯入做為 <xref:System.Collections.Generic.Dictionary%602> 或衍生自目錄物件的集合資料合約。 例如，請試想下列結構描述。  
   
@@ -138,7 +140,7 @@ ms.lasthandoff: 12/22/2017
   
  所參照集合型別機制對於複雜型別的集合 (包括其他集合的集合)，運作效果都一樣好，而不只是適合基本型別的集合。  
   
- `ReferencedCollectionTypes`屬性會對應至**/collectionType** SvcUtil.exe 工具上切換。 請注意，如果要參照多個集合型別， **/collectionType**參數必須指定多次。 如果類型不在 MsCorLib.dll 中，其參考組件必須也是使用**/參考**切換。  
+ `ReferencedCollectionTypes`屬性會對應至 **/collectionType** SvcUtil.exe 工具上切換。 請注意，如果要參照多個集合型別， **/collectionType**參數必須指定多次。 如果類型不在 MsCorLib.dll 中，其參考組件必須也是使用 **/參考**切換。  
   
 #### <a name="import-options-referencing-existing-types"></a>匯入選項：參照現有型別  
  結構描述中的型別偶而會對應至現有的 [!INCLUDE[dnprdnshort](../../../../includes/dnprdnshort-md.md)] 型別，而不需要從頭開始產生這些型別  (本節只適用於非集合型別。 對於集合型別，請參閱上一節)。  
@@ -149,7 +151,7 @@ ms.lasthandoff: 12/22/2017
   
  將多個有相同資料合約名稱和命名空間的型別新增至參照型別集合是合法的，只要沒有結構描述型別使用該名稱和命名空間匯入即可。 這可讓您輕鬆地將組件中的所有型別新增至集合，而不需擔心並未實際發生在結構描述中的型別有重複。  
   
- `ReferencedTypes`屬性會對應至**/參考**切換移入特定的 Svcutil.exe 工具作業模式。  
+ `ReferencedTypes`屬性會對應至 **/參考**切換移入特定的 Svcutil.exe 工具作業模式。  
   
 > [!NOTE]
 >  當使用 Svcutil.exe 或 (在[!INCLUDE[vsprvs](../../../../includes/vsprvs-md.md)])**加入服務參考**會自動參照 MsCorLib.dll 中的類型的所有工具。  
@@ -159,7 +161,7 @@ ms.lasthandoff: 12/22/2017
   
 ##### <a name="design-considerations"></a>設計考量  
   
--   直接使用較弱型別的 XML 表示法可能會很困難。 請考慮使用另一種序列化引擎 (例如 <xref:System.Xml.Serialization.XmlSerializer>) 以強型別方式來使用與資料合約不相容的結構描述。 [!INCLUDE[crdefault](../../../../includes/crdefault-md.md)][使用 XmlSerializer 類別](../../../../docs/framework/wcf/feature-details/using-the-xmlserializer-class.md)。  
+-   直接使用較弱型別的 XML 表示法可能會很困難。 請考慮使用另一種序列化引擎 (例如 <xref:System.Xml.Serialization.XmlSerializer>) 以強型別方式來使用與資料合約不相容的結構描述。 [!INCLUDE[crdefault](../../../../includes/crdefault-md.md)] [使用 XmlSerializer 類別](../../../../docs/framework/wcf/feature-details/using-the-xmlserializer-class.md)。  
   
 -   即使 <xref:System.Runtime.Serialization.XsdDataContractImporter> 屬性設定為 <xref:System.Runtime.Serialization.ImportOptions.ImportXmlType%2A>，有些結構描述建構仍然無法由 `true` 匯入。 請再次考慮針對此類案例使用 <xref:System.Xml.Serialization.XmlSerializer>。  
   
@@ -169,7 +171,7 @@ ms.lasthandoff: 12/22/2017
   
  您或許可以結合 <xref:System.Runtime.Serialization.ImportOptions.ImportXmlType%2A> 選項與之前所述的 <xref:System.ServiceModel.Description.ServiceContractGenerator.ReferencedTypes%2A> 選項。 對於必須產生做為 <xref:System.Xml.Serialization.IXmlSerializable> 實作的型別，會在使用 <xref:System.ServiceModel.Description.ServiceContractGenerator.ReferencedTypes%2A> 功能時跳過結構檢查。  
   
- <xref:System.Runtime.Serialization.ImportOptions.ImportXmlType%2A>選項對應到**/importXmlTypes** Svcutil.exe 工具上切換。  
+ <xref:System.Runtime.Serialization.ImportOptions.ImportXmlType%2A>選項對應到 **/importXmlTypes** Svcutil.exe 工具上切換。  
   
 ##### <a name="working-with-generated-ixmlserializable-types"></a>使用所產生的 IXmlSerializable 型別  
  所產生的 `IXmlSerializable` 型別包含名為 "nodesField" 的私用欄位，它會傳回 <xref:System.Xml.XmlNode> 物件的陣列。 當還原序列化此類型別的執行個體時，您可以使用 XML 文件物件模型，透過這個欄位直接存取 XML 資料。 當序列化這個型別的執行個體時，您可以將這個欄位設定為需要的 XML 資料，且它將會序列化。  
@@ -188,9 +190,9 @@ ms.lasthandoff: 12/22/2017
   
 -   <xref:System.Runtime.Serialization.ImportOptions.CodeProvider%2A> 屬性。 請指定 <xref:System.CodeDom.Compiler.CodeDomProvider>，用於為所產生的類別產生程式碼。 匯入機制會嘗試避免 <xref:System.CodeDom.Compiler.CodeDomProvider> 不支援的功能。 如果沒有設定 <xref:System.Runtime.Serialization.ImportOptions.CodeProvider%2A>，使用 [!INCLUDE[dnprdnshort](../../../../includes/dnprdnshort-md.md)] 的完整功能便沒有限制。  
   
--   <xref:System.Runtime.Serialization.ImportOptions.DataContractSurrogate%2A> 屬性。 <xref:System.Runtime.Serialization.IDataContractSurrogate> 實作可以使用這個屬性來指定。 <xref:System.Runtime.Serialization.IDataContractSurrogate> 會自訂匯入處理程序。 [!INCLUDE[crdefault](../../../../includes/crdefault-md.md)][資料合約 Surrogate](../../../../docs/framework/wcf/extending/data-contract-surrogates.md)。 根據預設，不會使用 Surrogate。  
+-   <xref:System.Runtime.Serialization.ImportOptions.DataContractSurrogate%2A> 屬性。 <xref:System.Runtime.Serialization.IDataContractSurrogate> 實作可以使用這個屬性來指定。 <xref:System.Runtime.Serialization.IDataContractSurrogate> 會自訂匯入處理程序。 [!INCLUDE[crdefault](../../../../includes/crdefault-md.md)] [資料合約 Surrogate](../../../../docs/framework/wcf/extending/data-contract-surrogates.md)。 根據預設，不會使用 Surrogate。  
   
-## <a name="see-also"></a>請參閱  
+## <a name="see-also"></a>另請參閱  
  <xref:System.Runtime.Serialization.DataContractSerializer>  
  <xref:System.Runtime.Serialization.XsdDataContractImporter>  
  <xref:System.Runtime.Serialization.XsdDataContractExporter>  

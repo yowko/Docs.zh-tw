@@ -15,11 +15,11 @@ ms.assetid: 8fb0353a-e41b-4e23-b78f-da65db832f70
 caps.latest.revision: 12
 author: dotnet-bot
 ms.author: dotnetcontent
-ms.openlocfilehash: 5a1edd7976f1e22117e1f4f31354388d5257ffc1
-ms.sourcegitcommit: 34ec7753acf76f90a0fa845235ef06663dc9e36e
+ms.openlocfilehash: c18c1ea645c9f144e2c2043af5460d6fb03f13a1
+ms.sourcegitcommit: 86adcc06e35390f13c1e372c36d2e044f1fc31ef
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 04/26/2018
 ---
 # <a name="events-visual-basic"></a>事件 (Visual Basic)
 雖然您可以視覺化方式將 [!INCLUDE[vsprvs](~/includes/vsprvs-md.md)] 專案顯示為一系列依序執行的程序，但實際上，大部分程式都是事件驅動的，亦即執行的流程是由稱為「事件」的外部發生項目所判斷。  
@@ -27,7 +27,7 @@ ms.lasthandoff: 12/21/2017
  事件是通知應用程式發生重要事件的信號。 例如，當使用者按一下表單上的控制項時，表單可以引發 `Click` 事件，並呼叫處理事件的程序。 事件也允許個別工作進行通訊。 例如，假設您的應用程式與主應用程式個別執行排序工作。 如果使用者取消排序，則您的應用程式可以傳送取消事件，以指示排序處理序停止。  
   
 ## <a name="event-terms-and-concepts"></a>事件詞彙和概念  
- 本節描述的詞彙和概念可與 [!INCLUDE[vbprvb](~/includes/vbprvb-md.md)] 中的事件搭配使用。  
+ 本章節描述的詞彙和概念與在 Visual Basic 中的事件一起使用。  
   
 ### <a name="declaring-events"></a>宣告事件  
  您可以在類別、結構、模組和介面內，使用 `Event` 關鍵字宣告事件，如下列範例所示：  
@@ -35,7 +35,7 @@ ms.lasthandoff: 12/21/2017
  [!code-vb[VbVbalrEvents#24](../../../../visual-basic/language-reference/statements/codesnippet/VisualBasic/events_1.vb)]  
   
 ### <a name="raising-events"></a>引發事件  
- 事件就像是訊息，會告知發生了重要事件。 廣播訊息的動作稱為「引發」事件。 在 [!INCLUDE[vbprvb](~/includes/vbprvb-md.md)] 中，您可以利用 `RaiseEvent` 陳述式引發事件，如下列範例所示：  
+ 事件就像是訊息，會告知發生了重要事件。 廣播訊息的動作稱為「引發」事件。 您可以在 Visual Basic 中引發事件的`RaiseEvent`陳述式，如下列範例所示：  
   
  [!code-vb[VbVbalrEvents#25](../../../../visual-basic/language-reference/statements/codesnippet/VisualBasic/events_2.vb)]  
   
@@ -47,7 +47,7 @@ ms.lasthandoff: 12/21/2017
 ### <a name="event-handlers"></a>事件處理常式  
  「事件處理常式」是在發生相對應事件時所呼叫的程序。 您可以使用具有相符簽章的任何有效副程式，做為事件處理常式。 不過，您無法使用函式做為事件處理常式，因為它無法將值傳回事件來源。  
   
- [!INCLUDE[vbprvb](~/includes/vbprvb-md.md)] 會針對結合了事件傳送者名稱、底線和事件名稱的事件處理常式使用標準命名慣例。 例如，將名為 `button1` 的按鈕 `Click` 事件命名為 `Sub button1_Click`。  
+ Visual Basic 使用標準命名慣例，事件處理常式，它結合了事件發送者、 底線和事件的名稱的名稱。 例如，將名為 `button1` 的按鈕 `Click` 事件命名為 `Sub button1_Click`。  
   
 > [!NOTE]
 >  我們建議您在為自己的事件定義事件處理常式時，使用此命名慣例，但這並非必要；您可以使用任何有效的副程式名稱。  
@@ -72,7 +72,7 @@ ms.lasthandoff: 12/21/2017
   
  雖然 `Handles` 子句是建立事件與事件處理常式之關聯的標準方式，但它只能在編譯時期建立事件與事件處理常式的關聯。  
   
- 在某些情況下 (例如，與表單或控制項相關聯的事件)，[!INCLUDE[vbprvb](~/includes/vbprvb-md.md)] 會自動 Stub 出空的事件處理常式，並將它關聯至事件。 例如，當您在設計模式中按兩下表單上的命令按鈕時，[!INCLUDE[vbprvb](~/includes/vbprvb-md.md)] 會為該命令按鈕建立空的事件處理常式和 `WithEvents` 變數，如下列程式碼所示：  
+ 在某些情況下，例如，事件相關聯的表單或控制項，Visual Basic 自動虛設空白的事件處理常式，並將它與事件產生關聯。 例如，當您按兩下設計模式中的表單上的命令按鈕時，Visual Basic 建立空白的事件處理常式和`WithEvents`變數適用於命令按鈕，如下列程式碼所示：  
   
  [!code-vb[VbVbalrEvents#26](../../../../visual-basic/language-reference/statements/codesnippet/VisualBasic/events_4.vb)]  
   

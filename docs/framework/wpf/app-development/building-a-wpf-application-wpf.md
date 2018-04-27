@@ -1,13 +1,13 @@
 ---
-title: "建置 WPF 應用程式 (WPF)"
-ms.custom: 
+title: 建置 WPF 應用程式 (WPF)
+ms.custom: ''
 ms.date: 03/30/2017
 ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
+ms.reviewer: ''
+ms.suite: ''
 ms.technology:
 - dotnet-wpf
-ms.tgt_pltfrm: 
+ms.tgt_pltfrm: ''
 ms.topic: article
 dev_langs:
 - csharp
@@ -15,17 +15,17 @@ dev_langs:
 helpviewer_keywords:
 - WPF application [WPF], building
 ms.assetid: a58696fd-bdad-4b55-9759-136dfdf8b91c
-caps.latest.revision: 
+caps.latest.revision: 45
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
 ms.workload:
 - dotnet
-ms.openlocfilehash: 87fc77aaa95e2d2de4b0c6eb75484ab9b4006c31
-ms.sourcegitcommit: c0dd436f6f8f44dc80dc43b07f6841a00b74b23f
+ms.openlocfilehash: 054f6cd6ae71428aca6b99eb510b2ac34fc6c4b6
+ms.sourcegitcommit: 86adcc06e35390f13c1e372c36d2e044f1fc31ef
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 01/19/2018
+ms.lasthandoff: 04/26/2018
 ---
 # <a name="building-a-wpf-application-wpf"></a>建置 WPF 應用程式 (WPF)
 [!INCLUDE[TLA#tla_wpf](../../../../includes/tlasharptla-wpf-md.md)] 應用程式可以建置為 [!INCLUDE[dnprdnshort](../../../../includes/dnprdnshort-md.md)] 可執行檔 (.exe)、程式庫 (.dll)，或這兩種組件類型的組合。 本主題介紹如何建置 [!INCLUDE[TLA2#tla_wpf](../../../../includes/tla2sharptla-wpf-md.md)] 應用程式，並說明建置流程中的主要步驟。  
@@ -77,7 +77,7 @@ ms.lasthandoff: 01/19/2018
   
 3.  建立新部分類別的 CodeDOM 表示，並複製到 obj\Release 資料夾。  
   
- 此外，每個 [!INCLUDE[TLA2#tla_xaml](../../../../includes/tla2sharptla-xaml-md.md)] 檔案會產生特定語言的程式碼檔。 例如，[!INCLUDE[TLA2#tla_visualb](../../../../includes/tla2sharptla-visualb-md.md)] 專案中的 Page1.xaml 頁面會產生 Page1.g.vb，而 [!INCLUDE[TLA2#tla_cshrp](../../../../includes/tla2sharptla-cshrp-md.md)] 專案中的 Page1.xaml 頁面會產生 Page1.g.cs。 檔案名稱中的 ".g" 表示檔案是產生的程式碼，其具有標記檔案最上層項目 (例如 `Page` 或 `Window`) 的部分類別宣告。 在 [!INCLUDE[TLA2#tla_cshrp](../../../../includes/tla2sharptla-cshrp-md.md)] 中，此類別是以 `partial` 修飾詞宣告 (在 [!INCLUDE[TLA2#tla_visualb](../../../../includes/tla2sharptla-visualb-md.md)] 中為 `Extends`)，以表示在其他地方有另一個類別宣告，通常是在程式碼後置檔案 Page1.xaml.cs 中。  
+ 此外，每個 [!INCLUDE[TLA2#tla_xaml](../../../../includes/tla2sharptla-xaml-md.md)] 檔案會產生特定語言的程式碼檔。 例如，對於 Visual Basic 專案中的 [Page1.xaml] 頁面上，就會產生 Page1.g.vb;針對 C# 專案中的 [Page1.xaml] 頁面上，都會產生 Page1.g.cs。 檔案名稱中的 ".g" 表示檔案是產生的程式碼，其具有標記檔案最上層項目 (例如 `Page` 或 `Window`) 的部分類別宣告。 這個類別的宣告與`partial`在 C# 修飾詞 (`Extends`在 Visual Basic 中) 若要表示另一個宣告的類別，其他地方，通常是程式碼後置檔案中 Page1.xaml.cs。  
   
  部分類別擴充，從適當的基底類別 (例如<xref:System.Windows.Controls.Page>頁面)，並實作<xref:System.Windows.Markup.IComponentConnector?displayProperty=nameWithType>介面。 <xref:System.Windows.Markup.IComponentConnector>介面有方法可以初始化元件和連線名稱和其內容中的項目上的事件。 因此，產生的程式碼檔具有如下的方法實作：  
   
@@ -137,7 +137,7 @@ End Sub
   
  若是 [!INCLUDE[TLA2#tla_xbap#plural](../../../../includes/tla2sharptla-xbapsharpplural-md.md)]，一律會建立這些資訊清單檔。 若是已安裝的應用程式，除非將專案檔中的 `GenerateManifests` 屬性指定為 `true` 值，否則不會建立這些檔案。  
   
- [!INCLUDE[TLA2#tla_xbap#plural](../../../../includes/tla2sharptla-xbapsharpplural-md.md)]取得兩個額外的權限，除了一般網際網路區域應用程式來指派這些權限：<xref:System.Security.Permissions.WebBrowserPermission>和<xref:System.Security.Permissions.MediaPermission>。 [!INCLUDE[TLA2#tla_wpf](../../../../includes/tla2sharptla-wpf-md.md)] 建置系統會在應用程式資訊清單中宣告這些權限。  
+ [!INCLUDE[TLA2#tla_xbap#plural](../../../../includes/tla2sharptla-xbapsharpplural-md.md)] 取得兩個額外的權限，除了一般網際網路區域應用程式來指派這些權限：<xref:System.Security.Permissions.WebBrowserPermission>和<xref:System.Security.Permissions.MediaPermission>。 [!INCLUDE[TLA2#tla_wpf](../../../../includes/tla2sharptla-wpf-md.md)] 建置系統會在應用程式資訊清單中宣告這些權限。  
   
 <a name="Incremental_Build_Support"></a>   
 ## <a name="incremental-build-support"></a>累加建置支援  
@@ -179,7 +179,7 @@ End Sub
   
 -   不重新編譯任何項目 (如果專案中沒有任何變更)。  
   
-## <a name="see-also"></a>請參閱  
+## <a name="see-also"></a>另請參閱  
  [部署 WPF 應用程式](../../../../docs/framework/wpf/app-development/deploying-a-wpf-application-wpf.md)  
  [WPF MSBuild 參考](/visualstudio/msbuild/wpf-msbuild-reference)  
  [WPF 中的 Pack URI](../../../../docs/framework/wpf/app-development/pack-uris-in-wpf.md)  

@@ -14,11 +14,11 @@ ms.assetid: 61b06674-12c9-430b-be68-cc67ecee1f5b
 caps.latest.revision: 11
 author: dotnet-bot
 ms.author: dotnetcontent
-ms.openlocfilehash: c26bb7322064d0b8cdf733e74f8b37e81b1e620c
-ms.sourcegitcommit: c2e216692ef7576a213ae16af2377cd98d1a67fa
+ms.openlocfilehash: 558eae39b38161d01d599bba6c3121839560884b
+ms.sourcegitcommit: 86adcc06e35390f13c1e372c36d2e044f1fc31ef
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/22/2017
+ms.lasthandoff: 04/26/2018
 ---
 # <a name="interfaces-visual-basic"></a>介面 (Visual Basic)
 「介面」可定義類別可實作的屬性、方法和事件。 介面可讓您將功能定義為一小組緊密相關的屬性、方法和事件；這會降低相容性問題，因為您可以為您的介面開發增強的實作，而不會危及現有程式碼。 只要開發額外的介面和實作，您就可以隨時加入新功能。  
@@ -46,13 +46,13 @@ ms.lasthandoff: 10/22/2017
  [!code-vb[VbVbalrOOP#17](../../../../visual-basic/misc/codesnippet/VisualBasic/index_1.vb)]  
   
 ## <a name="implementing-interfaces"></a>實作介面  
- [!INCLUDE[vbprvb](~/includes/vbprvb-md.md)] 保留字 `Implements` 用於兩種方式。 `Implements` 陳述式表示類別或結構實作介面。 `Implements` 關鍵字表示類別成員或結構成員實作特定介面成員。  
+ Visual Basic 保留字`Implements`使用兩種方式。 `Implements` 陳述式表示類別或結構實作介面。 `Implements` 關鍵字表示類別成員或結構成員實作特定介面成員。  
   
 ### <a name="implements-statement"></a>Implements 陳述式  
  如果類別或結構實作一或多個介面，它在 `Class` 或 `Structure` 陳述式後面必須緊接著 `Implements` 陳述式。 `Implements` 陳述式需要由類別實作的介面清單 (以逗號分隔)。 類別或結構必須使用 `Implements` 關鍵字實作所有介面成員。  
   
 ### <a name="implements-keyword"></a>Implements 關鍵字  
- `Implements` 關鍵字需要實作介面成員之逗號分隔清單。 一般而言，只會指定單一介面成員，但您可以指定多個成員。 介面成員的規格包含介面名稱 (必須在類別內的實作陳述式中指定)、句號，以及要實作的成員函式、屬性或事件的名稱。 實作介面成員的成員名稱可以使用任何合法的識別項，並不限於舊版 [!INCLUDE[vbprvb](~/includes/vbprvb-md.md)] 中使用的 `InterfaceName_MethodName` 慣例 。  
+ `Implements` 關鍵字需要實作介面成員之逗號分隔清單。 一般而言，只會指定單一介面成員，但您可以指定多個成員。 介面成員的規格包含介面名稱 (必須在類別內的實作陳述式中指定)、句號，以及要實作的成員函式、屬性或事件的名稱。 實作介面成員的成員名稱可以使用任何合法的識別項，並不限於`InterfaceName_MethodName`舊版的 Visual Basic 中使用的慣例。  
   
  例如，下列程式碼顯示如何宣告實作介面的方法、且名為 `Sub1` 的副程式：  
   
@@ -87,7 +87,7 @@ ms.lasthandoff: 10/22/2017
   
 ## <a name="related-topics"></a>相關主題  
   
-|標題|說明|  
+|標題|描述|  
 |-----------|-----------------|  
 |[逐步解說：建立和實作介面](../../../../visual-basic/programming-guide/language-features/interfaces/walkthrough-creating-and-implementing-interfaces.md)|提供詳細的程序，引導您定義和實作您自己的介面之程序。|  
 |[泛型介面中的變異數](../../concepts/covariance-contravariance/variance-in-generic-interfaces.md)|討論泛型介面中的共變性與逆變性，並提供.NET Framework 中的 Variant 泛型介面清單。|

@@ -1,24 +1,26 @@
 ---
-title: "SQL Server 中的伺服器和資料庫角色"
-ms.custom: 
+title: SQL Server 中的伺服器和資料庫角色
+ms.custom: ''
 ms.date: 03/30/2017
 ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.technology: dotnet-ado
-ms.tgt_pltfrm: 
+ms.reviewer: ''
+ms.suite: ''
+ms.technology:
+- dotnet-ado
+ms.tgt_pltfrm: ''
 ms.topic: article
 ms.assetid: 5482dfdb-e498-4614-8652-b174829eed13
-caps.latest.revision: "9"
+caps.latest.revision: 9
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.workload: dotnet
-ms.openlocfilehash: 1a9d8de6b3302684bd8769b7b1baaebedefb649c
-ms.sourcegitcommit: ed26cfef4e18f6d93ab822d8c29f902cff3519d1
+ms.workload:
+- dotnet
+ms.openlocfilehash: b650c61a8d3d0b457bc9d5232c613d47f36ccbfc
+ms.sourcegitcommit: 86adcc06e35390f13c1e372c36d2e044f1fc31ef
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 01/17/2018
+ms.lasthandoff: 04/26/2018
 ---
 # <a name="server-and-database-roles-in-sql-server"></a>SQL Server 中的伺服器和資料庫角色
 所有的 SQL Server 版本都會使用角色架構的安全性，讓您可以將權限指派給角色或使用者群組，而不是個別的使用者。 固定伺服器角色和固定資料庫角色都指派有固定的權限組。  
@@ -29,7 +31,7 @@ ms.lasthandoff: 01/17/2018
 > [!IMPORTANT]
 >  `sysadmin` 固定伺服器角色涵蓋所有其他的角色，而且範圍不受限制。 除非高度信任主體的安全性，否則請勿將主體新增到此角色中。 `sysadmin` 角色成員對於所有的伺服器資料庫和資源都具有不可撤銷的管理權限。  
   
- 當您要將使用者新增到固定伺服器角色時，請嚴加篩選。 例如，`bulkadmin` 角色可讓使用者加任何本機檔案的內容插入至資料表，因而可能危及資料完整性。 如需固定伺服器角色和權限的完整清單，請參閱《[!INCLUDE[ssNoVersion](../../../../../includes/ssnoversion-md.md)] 線上叢書》。  
+ 當您要將使用者新增到固定伺服器角色時，請嚴加篩選。 例如，`bulkadmin` 角色可讓使用者加任何本機檔案的內容插入至資料表，因而可能危及資料完整性。 如需固定的伺服器角色和權限的完整清單，請參閱 SQL Server 線上叢書 》。  
   
 ## <a name="fixed-database-roles"></a>固定資料庫角色  
  固定資料庫角色擁有預先定義的權限集合，其目的是讓您可以輕鬆地管理權限群組。 `db_owner` 角色的成員可以在資料庫上執行所有組態和維護活動。  
@@ -38,8 +40,8 @@ ms.lasthandoff: 01/17/2018
   
 |資源|描述|  
 |--------------|-----------------|  
-|[伺服器層級角色](http://msdn.microsoft.com/library/ms188659.aspx)和[固定的伺服器角色的權限](http://msdn.microsoft.com/library/ms175892.aspx)中[!INCLUDE[ssNoVersion](../../../../../includes/ssnoversion-md.md)]線上叢書 》|說明 [!INCLUDE[ssNoVersion](../../../../../includes/ssnoversion-md.md)] 中的固定伺服器角色和與其相關聯的權限。|  
-|[資料庫層級角色](http://msdn.microsoft.com/library/ms189121.aspx)和[固定的資料庫角色的權限](http://msdn.microsoft.com/library/ms189612.aspx)中[!INCLUDE[ssNoVersion](../../../../../includes/ssnoversion-md.md)]線上叢書 》|說明 SQL Server 2005 中的固定資料庫角色和與其相關的權限。|  
+|[伺服器層級角色](http://msdn.microsoft.com/library/ms188659.aspx)和[固定的伺服器角色的權限](http://msdn.microsoft.com/library/ms175892.aspx)SQL Server 線上叢書中|說明固定的伺服器角色和與其相關聯 SQL Server 中的權限。|  
+|[資料庫層級角色](http://msdn.microsoft.com/library/ms189121.aspx)和[固定的資料庫角色的權限](http://msdn.microsoft.com/library/ms189612.aspx)SQL Server 線上叢書中|說明 SQL Server 2005 中的固定資料庫角色和與其相關的權限。|  
   
 ## <a name="database-roles-and-users"></a>資料庫角色和使用者  
  登入必須對應至資料庫使用者帳戶，才能使用資料庫物件。 接著可以將資料庫使用者加入至資料庫角色、繼承任何與這些角色相關聯的權限集合。 所有權限都可授與。  
@@ -53,7 +55,7 @@ ms.lasthandoff: 01/17/2018
  `dbo` (也稱為資料庫擁有者) 是使用者帳戶，擁有可在資料庫中執行所有活動的隱含權限。 `sysadmin` 固定伺服器角色的成員會自動對應至 `dbo`。  
   
 > [!NOTE]
->  `dbo`也是名稱的結構描述中所述[擁有權和 SQL Server 中的使用者結構描述分隔](../../../../../docs/framework/data/adonet/sql/ownership-and-user-schema-separation-in-sql-server.md)。  
+>  `dbo` 也是名稱的結構描述中所述[擁有權和 SQL Server 中的使用者結構描述分隔](../../../../../docs/framework/data/adonet/sql/ownership-and-user-schema-separation-in-sql-server.md)。  
   
  `dbo` 使用者帳戶經常會與 `db_owner` 固定資料庫角色混淆。 `db_owner` 的範圍是一個資料庫，而 `sysadmin` 的範圍是整個伺服器。 `db_owner` 角色中的成員資格不會授與 `dbo` 使用權限。  
   
@@ -70,9 +72,9 @@ ms.lasthandoff: 01/17/2018
 |資源|描述|  
 |--------------|-----------------|  
 |[識別和存取控制](http://msdn.microsoft.com/library/bb510418.aspx)SQL Server 線上叢書中|包含說明主體、角色、認證、安全性實體和權限的主題連結。|  
-|[主體](http://msdn.microsoft.com/library/ms181127.aspx)中[!INCLUDE[ssNoVersion](../../../../../includes/ssnoversion-md.md)]線上叢書 》|說明主體並包含說明伺服器和資料庫角色的主題連結。|  
+|[主體](http://msdn.microsoft.com/library/ms181127.aspx)SQL Server 線上叢書中|說明主體並包含說明伺服器和資料庫角色的主題連結。|  
   
-## <a name="see-also"></a>請參閱  
+## <a name="see-also"></a>另請參閱  
  [設定 ADO.NET 應用程式的安全性](../../../../../docs/framework/data/adonet/securing-ado-net-applications.md)  
  [SQL Server 中的應用程式安全性案例](../../../../../docs/framework/data/adonet/sql/application-security-scenarios-in-sql-server.md)  
  [在 SQL Server 中進行驗證](../../../../../docs/framework/data/adonet/sql/authentication-in-sql-server.md)  

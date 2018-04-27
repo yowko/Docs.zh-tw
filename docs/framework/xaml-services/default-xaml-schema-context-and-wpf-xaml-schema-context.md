@@ -1,24 +1,26 @@
 ---
-title: "預設 XAML 結構描述內容和 WPF XAML 結構描述內容"
-ms.custom: 
+title: 預設 XAML 結構描述內容和 WPF XAML 結構描述內容
+ms.custom: ''
 ms.date: 03/30/2017
 ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.technology: dotnet-wpf
-ms.tgt_pltfrm: 
+ms.reviewer: ''
+ms.suite: ''
+ms.technology:
+- dotnet-wpf
+ms.tgt_pltfrm: ''
 ms.topic: article
 ms.assetid: 04e06a15-09b3-4210-9bdf-9a64c2eccb83
-caps.latest.revision: "7"
+caps.latest.revision: 7
 author: wadepickett
 ms.author: wpickett
 manager: wpickett
-ms.workload: dotnet
-ms.openlocfilehash: 9ee7c83868934f1a524bb0068ea5e749e6cbfab4
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.workload:
+- dotnet
+ms.openlocfilehash: ec5e29ae9022470f8b583dc1b673a0b93040c862
+ms.sourcegitcommit: 86adcc06e35390f13c1e372c36d2e044f1fc31ef
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 04/26/2018
 ---
 # <a name="default-xaml-schema-context-and-wpf-xaml-schema-context"></a>預設 XAML 結構描述內容和 WPF XAML 結構描述內容
 XAML 結構描述內容是概念性的實體，會限定使用特定的 XAML 詞彙的 XAML 生產環境與撰寫的行為，包含型別對應的解析，載入組件的方式、 如何特定讀取器和寫入器物件之間的互動方式設定會被解譯。 本主題描述.NET Framework XAML 服務和相關聯的預設 XAML 結構描述內容，以 CLR 型別系統為基礎的功能。 本主題也描述適用於 WPF XAML 結構描述內容。  
@@ -35,7 +37,7 @@ XAML 結構描述內容是概念性的實體，會限定使用特定的 XAML 詞
 ## <a name="wpf-xaml-schema-context"></a>WPF XAML 結構描述內容  
  本主題中說明的 WPF XAML 結構描述內容，因為的 WPF 實作提供有趣的功能，可以藉由實作非預設 XAML 結構描述內容中導入之類型的說明。 此外，XAML 結構描述內容概念並不討論關於太大，WPF XAML; WPF 文件中啟用 XAML 結構描述內容的行為可能只會完全可了解如果的預設 XAML 結構描述內容的運作方式的討論與整合。 WPF XAML 結構描述內容會實作下列的行為。  
   
- **查閱會覆寫：** WPF xaml 中有少數的內容模型中所沒有的函式的 XAML 內容屬性<xref:System.Windows.Markup.ContentPropertyAttribute>屬性化。 <xref:System.Xaml.XamlType.LookupContentProperty%2A>覆寫的 WPF 實作這種行為。  
+ **查閱會覆寫：** WPF xaml 中有少數的內容模型中所沒有的函式的 XAML 內容屬性<xref:System.Windows.Markup.ContentPropertyAttribute>屬性化。 <xref:System.Xaml.XamlType.LookupContentProperty%2A> 覆寫的 WPF 實作這種行為。  
   
  **WPF 運算式的延遲：** WPF 功能延後的值，直到執行階段內容可供使用的數個運算式類別。 此外，範本擴充是依賴延遲技術的執行階段行為。  
   
@@ -68,7 +70,7 @@ XAML 結構描述內容是概念性的實體，會限定使用特定的 XAML 詞
     -   如果名稱是在對應中不合格，呼叫<xref:System.Reflection.Assembly.LoadWithPartialName%2A?displayProperty=nameWithType>。  
   
 #### <a name="xamlbuildtask"></a>XamlBuildTask  
- `XamlBuildTask`用於[!INCLUDE[vsindigo](../../../includes/vsindigo-md.md)]和[!INCLUDE[TLA#tla_workflow](../../../includes/tlasharptla-workflow-md.md)]。  
+ `XamlBuildTask` 用於[!INCLUDE[vsindigo](../../../includes/vsindigo-md.md)]及 Windows Workflow Foundation。  
   
  請注意，組件參考透過`XamlBuildTask`一定是完整格式。  
   
@@ -99,5 +101,5 @@ XAML 結構描述內容是概念性的實體，會限定使用特定的 XAML 詞
   
     -   使用簡短名稱 + 公開金鑰語彙基元來呼叫<xref:System.Reflection.Assembly.Load%28System.String%29?displayProperty=nameWithType>。  
   
-## <a name="see-also"></a>請參閱  
+## <a name="see-also"></a>另請參閱  
  [認識 XAML 節點資料流結構和概念](../../../docs/framework/xaml-services/understanding-xaml-node-stream-structures-and-concepts.md)

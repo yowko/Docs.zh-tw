@@ -1,36 +1,38 @@
 ---
-title: "System.Transactions 與 SQL Server 整合"
-ms.custom: 
+title: System.Transactions 與 SQL Server 整合
+ms.custom: ''
 ms.date: 03/30/2017
 ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.technology: dotnet-ado
-ms.tgt_pltfrm: 
+ms.reviewer: ''
+ms.suite: ''
+ms.technology:
+- dotnet-ado
+ms.tgt_pltfrm: ''
 ms.topic: article
 dev_langs:
 - csharp
 - vb
 ms.assetid: b555544e-7abb-4814-859b-ab9cdd7d8716
-caps.latest.revision: "6"
+caps.latest.revision: 6
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.workload: dotnet
-ms.openlocfilehash: 21924441c091c53a79d4b7bf8a683f8a7c74bd07
-ms.sourcegitcommit: ed26cfef4e18f6d93ab822d8c29f902cff3519d1
+ms.workload:
+- dotnet
+ms.openlocfilehash: 06f1555c8dbbdf10e8a1d0de867ddb227cb148b6
+ms.sourcegitcommit: 86adcc06e35390f13c1e372c36d2e044f1fc31ef
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 01/17/2018
+ms.lasthandoff: 04/26/2018
 ---
 # <a name="systemtransactions-integration-with-sql-server"></a>System.Transactions 與 SQL Server 整合
 [!INCLUDE[dnprdnshort](../../../../includes/dnprdnshort-md.md)] 2.0 版導入了新的交易架構，可透過 <xref:System.Transactions> 命名空間 (Namespace) 進行存取。 此架構以完全整合到 [!INCLUDE[dnprdnshort](../../../../includes/dnprdnshort-md.md)] (包括 [!INCLUDE[vstecado](../../../../includes/vstecado-md.md)]) 中的方式來公開交易。  
   
  除了增強程式設計之外，在處理交易時， <xref:System.Transactions> 還會與 [!INCLUDE[vstecado](../../../../includes/vstecado-md.md)] 一起運作協調出最佳效能。 可提升的交易是可視需要自動提升為完全分散式交易的輕量型 (本機) 交易。  
   
- 從 [!INCLUDE[vstecado](../../../../includes/vstecado-md.md)] 2.0 開始， <xref:System.Data.SqlClient> 便支援在您使用 [!INCLUDE[ssNoVersion](../../../../includes/ssnoversion-md.md)]時進行可提升交易。 除非需要已加入的負荷，否則可提升交易不會叫用分散式交易的已加入負荷。 可提升異動是自動的而且需要無需開發人員從中操作。  
+ 從開始[!INCLUDE[vstecado](../../../../includes/vstecado-md.md)]2.0，<xref:System.Data.SqlClient>支援可提升交易，當您使用 SQL Server。 除非需要已加入的負荷，否則可提升交易不會叫用分散式交易的已加入負荷。 可提升異動是自動的而且需要無需開發人員從中操作。  
   
- 只有 [!INCLUDE[dnprdnshort](../../../../includes/dnprdnshort-md.md)] Data Provider for SQL Server (`SqlClient`) 與 [!INCLUDE[ssNoVersion](../../../../includes/ssnoversion-md.md)]搭配使用時，才能使用可提升交易。  
+ 當您使用時，才可以使用可提升異動[!INCLUDE[dnprdnshort](../../../../includes/dnprdnshort-md.md)]Data Provider for SQL Server (`SqlClient`) 與 SQL Server。  
   
 ## <a name="creating-promotable-transactions"></a>建立可提升交易  
  [!INCLUDE[dnprdnshort](../../../../includes/dnprdnshort-md.md)] Provider for SQL Server 支援可提升交易，可透過 [!INCLUDE[dnprdnshort](../../../../includes/dnprdnshort-md.md)] <xref:System.Transactions> 命名空間中的類別來處理這些交易。 可提升交易藉由直到需要時才建立分散式交易的方式，來最佳化分散式交易。 如果只需要一個資源管理員，則不會發生分散式交易。  
@@ -39,7 +41,7 @@ ms.lasthandoff: 01/17/2018
 >  在部分信任案例中，當某筆交易提升至分散式交易時， <xref:System.Transactions.DistributedTransactionPermission> 就是必要項目。  
   
 ## <a name="promotable-transaction-scenarios"></a>可提升交易案例  
- 分散式交易通常要耗用大量的系統資源，並由「Microsoft 分散式交易協調器 (MS DTC)」進行管理，其整合了交易中會存取的所有資源管理者。 可提升交易是 <xref:System.Transactions> 交易的特殊形式，可有效地委派工作給簡單的 [!INCLUDE[ssNoVersion](../../../../includes/ssnoversion-md.md)] 交易。 <xref:System.Transactions>、 <xref:System.Data.SqlClient>及 [!INCLUDE[ssNoVersion](../../../../includes/ssnoversion-md.md)] 會協調處理交易時所涉及的工作，並視需要將其提升為完全分散式交易。  
+ 分散式交易通常要耗用大量的系統資源，並由「Microsoft 分散式交易協調器 (MS DTC)」進行管理，其整合了交易中會存取的所有資源管理者。 可提升交易是一種特殊形式<xref:System.Transactions>有效地委派工作給簡單的 SQL Server 交易的交易。 <xref:System.Transactions><xref:System.Data.SqlClient>，和 SQL Server 在視需要將其提升為完全分散式交易協調處理交易時所涉及的工作。  
   
  使用可提升交易的好處是：當以作用中的 <xref:System.Transactions.TransactionScope> 交易開啟連接，且未開啟其他連接時，會將交易認可為輕量型交易，不會產生完全分散式交易的額外負擔。  
   
@@ -239,6 +241,6 @@ Public Function CreateTransactionScope( _
 End Function  
 ```  
   
-## <a name="see-also"></a>請參閱  
+## <a name="see-also"></a>另請參閱  
  [異動和並行存取](../../../../docs/framework/data/adonet/transactions-and-concurrency.md)  
  [ADO.NET Managed 提供者和 DataSet 開發人員中心](http://go.microsoft.com/fwlink/?LinkId=217917)

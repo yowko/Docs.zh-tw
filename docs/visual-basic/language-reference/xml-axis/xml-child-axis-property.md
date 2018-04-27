@@ -19,11 +19,11 @@ ms.assetid: 89a59d00-985e-4f5c-b59f-29b47bad11cb
 caps.latest.revision: 18
 author: dotnet-bot
 ms.author: dotnetcontent
-ms.openlocfilehash: ea4db763bbed651a01845b49395255586cb60113
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.openlocfilehash: dadb21f4985497a90cc62f98c5fb2abdd7cc2781
+ms.sourcegitcommit: 86adcc06e35390f13c1e372c36d2e044f1fc31ef
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 04/26/2018
 ---
 # <a name="xml-child-axis-property-visual-basic"></a>XML 子代軸屬性 (Visual Basic)
 提供下列任一項目之子系的存取：<xref:System.Xml.Linq.XElement> 物件、<xref:System.Xml.Linq.XDocument> 物件、<xref:System.Xml.Linq.XElement> 物件的集合，或是 <xref:System.Xml.Linq.XDocument> 物件的集合。  
@@ -38,10 +38,10 @@ object.<child>
   
 |詞彙|定義|  
 |---|---|  
-|`object`|必要項。 <xref:System.Xml.Linq.XElement> 物件、<xref:System.Xml.Linq.XDocument> 物件、<xref:System.Xml.Linq.XElement> 物件集合或 <xref:System.Xml.Linq.XDocument> 物件集合。|  
-|.<|必要項。 代表子軸屬性的開頭。|  
-|`child`|必要項。 若要存取，表單的子節點的名稱 [`prefix``:`]`name`。<br /><br /> -   `Prefix`選擇性的。 子節點的 XML 命名空間前置詞。 必須是以 `Imports` 陳述式定義的全域 XML 命名空間。<br />-   `Name`-必要。 本機子節點名稱。 請參閱[宣告的 XML 項目和屬性的名稱](../../../visual-basic/programming-guide/language-features/xml/names-of-declared-xml-elements-and-attributes.md)。|  
-|>|必要項。 代表子軸屬性的結尾。|  
+|`object`|必要。 <xref:System.Xml.Linq.XElement> 物件、<xref:System.Xml.Linq.XDocument> 物件、<xref:System.Xml.Linq.XElement> 物件集合或 <xref:System.Xml.Linq.XDocument> 物件集合。|  
+|.<|必要。 代表子軸屬性的開頭。|  
+|`child`|必要。 若要存取，表單的子節點的名稱 [`prefix``:`]`name`。<br /><br /> -   `Prefix` 選擇性的。 子節點的 XML 命名空間前置詞。 必須是以 `Imports` 陳述式定義的全域 XML 命名空間。<br />-   `Name` -必要。 本機子節點名稱。 請參閱[宣告的 XML 項目和屬性的名稱](../../../visual-basic/programming-guide/language-features/xml/names-of-declared-xml-elements-and-attributes.md)。|  
+|>|必要。 代表子軸屬性的結尾。|  
   
 ## <a name="return-value"></a>傳回值  
  <xref:System.Xml.Linq.XElement> 物件的集合。  
@@ -49,7 +49,7 @@ object.<child>
 ## <a name="remarks"></a>備註  
  您可以使用 XML 子軸屬性，從 <xref:System.Xml.Linq.XElement> 或 <xref:System.Xml.Linq.XDocument> 物件，或從 <xref:System.Xml.Linq.XElement> 或 <xref:System.Xml.Linq.XDocument> 物件集合依據名稱存取子節點。 使用 XML `Value` 屬性來存取傳回的集合中第一個子節點的值。 如需詳細資訊，請參閱[XML Value 屬性](../../../visual-basic/language-reference/xml-axis/xml-value-property.md)。  
   
- [!INCLUDE[vbprvb](~/includes/vbprvb-md.md)]編譯器會將子軸屬性轉換成呼叫<xref:System.Xml.Linq.XContainer.Elements%2A>方法。  
+ Visual Basic 編譯器會將子軸屬性轉換成呼叫<xref:System.Xml.Linq.XContainer.Elements%2A>方法。  
   
 ## <a name="xml-namespaces"></a>XML 命名空間  
  子軸屬性中的名稱只可以使用以 `Imports` 陳述式全域宣告的 XML 命名空間前置詞。 它不能使用在 XML 項目常值內本機宣告的 XML 命名空間前置詞。 如需詳細資訊，請參閱[Imports 陳述式 （XML 命名空間）](../../../visual-basic/language-reference/statements/imports-statement-xml-namespace.md)。  

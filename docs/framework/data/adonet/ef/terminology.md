@@ -1,24 +1,26 @@
 ---
-title: "Entity Framework 詞彙"
-ms.custom: 
+title: Entity Framework 詞彙
+ms.custom: ''
 ms.date: 03/30/2017
 ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.technology: dotnet-ado
-ms.tgt_pltfrm: 
+ms.reviewer: ''
+ms.suite: ''
+ms.technology:
+- dotnet-ado
+ms.tgt_pltfrm: ''
 ms.topic: article
 ms.assetid: fa2a1bd1-6118-487b-8673-eebc66b92945
-caps.latest.revision: "4"
+caps.latest.revision: 4
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.workload: dotnet
-ms.openlocfilehash: a2d55319b5463b2c9624fe22e7a16235c3d57614
-ms.sourcegitcommit: c0dd436f6f8f44dc80dc43b07f6841a00b74b23f
+ms.workload:
+- dotnet
+ms.openlocfilehash: cd85760e219e810c089ebe88c8295d79ebaf0944
+ms.sourcegitcommit: 86adcc06e35390f13c1e372c36d2e044f1fc31ef
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 01/19/2018
+ms.lasthandoff: 04/26/2018
 ---
 # <a name="entity-framework-terminology"></a>Entity Framework 詞彙
 本主題定義中最常參考的詞彙[!INCLUDE[adonet_ef](../../../../../includes/adonet-ef-md.md)]文件。 而為相關主題提供的連結表示有其他可用的資訊。  
@@ -55,7 +57,7 @@ ms.lasthandoff: 01/19/2018
 |Independent Association - 獨立關聯|實體間的關聯，透過獨立物件加以表示及追蹤。|  
 |key|實體類型的屬性，其中指定要用來識別實體類型之唯一執行個體的屬性或屬性集。 它是由 <xref:System.Data.EntityKey> 類別顯示在物件層。<br /><br /> 如需詳細資訊，請參閱[索引鍵元素 (CSDL)](http://msdn.microsoft.com/library/0cdb1402-dbc7-4a04-a11e-5729cdf7431b)和[實體索引鍵](../../../../../docs/framework/data/adonet/entity-key.md)。|  
 |消極式載入|當查詢傳回物件時，相關物件不會同時載入。 反而是存取導覽屬性時會自動載入相關的物件。|  
-|[!INCLUDE[linq_entities](../../../../../includes/linq-entities-md.md)]|查詢語法，定義一組允許周遊、篩選和投影運算在 [!INCLUDE[csprcs](../../../../../includes/csprcs-md.md)] 和 [!INCLUDE[vbprvb](../../../../../includes/vbprvb-md.md)] 中以直接、宣告式方式表示的查詢運算子。<br /><br /> 如需詳細資訊，請參閱[LINQ to Entities](../../../../../docs/framework/data/adonet/ef/language-reference/linq-to-entities.md)。|  
+|[!INCLUDE[linq_entities](../../../../../includes/linq-entities-md.md)]|定義一組允許周遊、 篩選和投射作業，才能在以直接、 宣告式的方式，在 Visual C# 和 Visual Basic 中表示的查詢運算子的查詢語法。<br /><br /> 如需詳細資訊，請參閱[LINQ to Entities](../../../../../docs/framework/data/adonet/ef/language-reference/linq-to-entities.md)。|  
 |對應|概念模型中的項目與儲存體模型中項目之間的對應規格。<br /><br /> 如需詳細資訊，請參閱[MSL 規格](../../../../../docs/framework/data/adonet/ef/language-reference/msl-specification.md)。|  
 |.msl file - .msl 檔案|XML 檔案，內含概念模型及儲存體模型之間的對應 (以 MSL 表示)。|  
 |對應規格語言 (MSL)|一種 XML 架構語言，用來將定義於概念性模型中的項目對應到儲存體模型中的項目。<br /><br /> 如需詳細資訊，請參閱[MSL 規格](../../../../../docs/framework/data/adonet/ef/language-reference/msl-specification.md)。|  
@@ -64,7 +66,7 @@ ms.lasthandoff: 01/19/2018
 |Multiple Entity Sets Per Type - 每個類型的多重實體|在多個實體集內定義實體類型的能力。<br /><br /> 如需詳細資訊，請參閱[EntitySet 元素 (CSDL)](http://msdn.microsoft.com/library/ec56db77-718d-4c0e-adc9-f1d33c896287)和[如何： 定義每個類型的多個實體集的模型](http://msdn.microsoft.com/library/61aa4fca-5ac0-4f47-9bc8-46e8c2965ef7)。|  
 |導覽屬性|表示與另一個實體類型之關聯性的實體類型屬性 (依關聯定義)。 導覽屬性是用來傳回相關物件做為 <xref:System.Data.Objects.DataClasses.EntityCollection%601> 或 <xref:System.Data.Objects.DataClasses.EntityReference%601> (視關聯另一端的多重性而定)。<br /><br /> 如需詳細資訊，請參閱[NavigationProperty 元素 (CSDL)](http://msdn.microsoft.com/library/5829a238-a50e-4c81-901d-7b54fc00f27e)和[導覽屬性](../../../../../docs/framework/data/adonet/navigation-property.md)。|  
 |Query Path - 查詢路徑|路徑的字串表示，其中指定在執行物件查詢時要傳回的相關物件。 查詢路徑是由在 <xref:System.Data.Objects.ObjectQuery%601.Include%2A> 上呼叫 <xref:System.Data.Objects.ObjectQuery%601> 方法來定義。<br /><br /> 如需詳細資訊，請參閱[載入相關物件](http://msdn.microsoft.com/library/452347d2-7b3b-44cd-9001-231299a28cb1)。|  
-|物件內容|表示概念模型中定義的實體容器。 它會包含基礎資料來源的連接並提供如變更追蹤和識別解析這類的服務。 物件內容是由 <xref:System.Data.Objects.ObjectContext> 或 `DbContext` 類別的執行個體來表示。<br /><br /> `DbContext`屬於[Entity Framework 5.0](http://go.microsoft.com/fwlink/?LinkId=234900)。 Entity Framework 5.0 不是 .NET Framework 的一部分，而是建置在 .NET Framework 4.5 之上。 Entity Framework 5.0 的提供形式[' Entity Framework'](http://go.microsoft.com/fwlink/?LinkID=215714)[NuGet](http://go.microsoft.com/fwlink/?LinkId=232488)封裝。 如需詳細資訊，請參閱[Entity Framework 版本與版本控制](http://go.microsoft.com/fwlink/?LinkId=234899)。|  
+|物件內容|表示概念模型中定義的實體容器。 它會包含基礎資料來源的連接並提供如變更追蹤和識別解析這類的服務。 物件內容是由 <xref:System.Data.Objects.ObjectContext> 或 `DbContext` 類別的執行個體來表示。<br /><br /> `DbContext` 屬於[Entity Framework 5.0](http://go.microsoft.com/fwlink/?LinkId=234900)。 Entity Framework 5.0 不是 .NET Framework 的一部分，而是建置在 .NET Framework 4.5 之上。 Entity Framework 5.0 的提供形式[' Entity Framework'](http://go.microsoft.com/fwlink/?LinkID=215714)[NuGet](http://go.microsoft.com/fwlink/?LinkId=232488)封裝。 如需詳細資訊，請參閱[Entity Framework 版本與版本控制](http://go.microsoft.com/fwlink/?LinkId=234899)。|  
 |Object Layer - 物件層|Entity Framework 所使用的實體類型和物件內容定義。|  
 |Object Query - 物件查詢|在物件內容中針對概念模型執行的查詢，該物件內容會傳回資料做為物件。<br /><br /> 如需詳細資訊，請參閱[物件查詢](http://msdn.microsoft.com/library/0768033c-876f-471d-85d5-264884349276)。|  
 |Object-Relational Mapping - 物件關聯式對應|將資料從關聯式資料庫轉換成資料型別的技巧，該資料型別可在物件導向軟體應用程式中使用。<br /><br /> [!INCLUDE[adonet_ef](../../../../../includes/adonet-ef-md.md)] 透過對應關聯式資料的方式，依儲存體模型中所定義提供物件關聯式對應服務給資料型別，如概念模型中所定義。<br /><br /> 如需詳細資訊，請參閱[模型和對應](../../../../../docs/framework/data/adonet/ef/modeling-and-mapping.md)。|  
@@ -86,7 +88,7 @@ ms.lasthandoff: 01/19/2018
 |單表|一種將資料庫內某個類型階層架構模型化的方法，此方法會將階層架構中所有類型的屬性都包含至一張資料表中。|  
 |一類一表|一種將資料庫內某個類型階層架構模型化的方法，此方法會使用多個具有一對一關聯性的資料表來設定各種類型的模型。|  
   
-## <a name="see-also"></a>請參閱  
+## <a name="see-also"></a>另請參閱  
  [ADO.NET Entity Framework](../../../../../docs/framework/data/adonet/ef/index.md)  
  [Entity Framework 概觀](../../../../../docs/framework/data/adonet/ef/overview.md)  
  [快速入門](../../../../../docs/framework/data/adonet/ef/getting-started.md)  

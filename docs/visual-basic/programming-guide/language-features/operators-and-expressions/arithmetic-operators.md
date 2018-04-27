@@ -1,11 +1,12 @@
 ---
-title: "Visual Basic 的算術運算子"
-ms.custom: 
+title: Visual Basic 的算術運算子
+ms.custom: ''
 ms.date: 07/20/2015
 ms.prod: .net
-ms.reviewer: 
-ms.suite: 
-ms.technology: devlang-visual-basic
+ms.reviewer: ''
+ms.suite: ''
+ms.technology:
+- devlang-visual-basic
 ms.topic: article
 helpviewer_keywords:
 - type safety
@@ -19,14 +20,14 @@ helpviewer_keywords:
 - Visual Basic code, operators
 - arithmetic operators [Visual Basic], about arithmetic operators
 ms.assetid: 325dac7a-ea4f-41d5-8b48-f6e904211569
-caps.latest.revision: "20"
+caps.latest.revision: 20
 author: dotnet-bot
 ms.author: dotnetcontent
-ms.openlocfilehash: 7fec98c38eebc34a0f84e051dc7c0914f537418f
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.openlocfilehash: cef1e3610d885a0f3a2bae718641f7b8ca1062dc
+ms.sourcegitcommit: 86adcc06e35390f13c1e372c36d2e044f1fc31ef
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 04/26/2018
 ---
 # <a name="arithmetic-operators-in-visual-basic"></a>Visual Basic 的算術運算子
 算術運算子可用來執行許多熟悉的算術運算涉及數值常值、 變數、 其他運算式、 函式和屬性呼叫和常數所代表的計算。 搭配算術運算子也分類為位元移位運算子會在一個運算元的個別位元層級執行動作，並向左或向右移位的位元模式。  
@@ -65,7 +66,7 @@ ms.lasthandoff: 11/21/2017
   
 |被除數資料類型|除數資料型別|被除數的值|結果|  
 |---|---|---|---|  
-|`Double`|`Double`|0|<xref:System.Double.NaN>（不是以數學方式定義數字）|  
+|`Double`|`Double`|0|<xref:System.Double.NaN> （不是以數學方式定義數字）|  
 |`Double`|`Double`|> 0|<xref:System.Double.PositiveInfinity>|  
 |`Double`|`Double`|\< 0|<xref:System.Double.NegativeInfinity>|  
   
@@ -98,9 +99,9 @@ ms.lasthandoff: 11/21/2017
 ## <a name="type-safety"></a>型別安全  
  運算元通常應該是相同的型別。 例如，如果您要加入`Integer`變數時，您應該將它加入另一個`Integer`變數，而且您應該將結果指派給類型的變數`Integer`以及。  
   
- 一種方式以確保好的型別安全程式碼撰寫的作法是使用[Option Strict 陳述式](../../../../visual-basic/language-reference/statements/option-strict-statement.md)。 如果您設定`Option Strict On`，[!INCLUDE[vbprvb](~/includes/vbprvb-md.md)]會自動執行*型別安全*轉換。 例如，如果您嘗試新增`Integer`變數設為`Double`變數和指派值`Double`變數時，作業正常執行，因為`Integer`值可以轉換成`Double`而不會遺失資料。 類型安全的轉換，相反地，會造成編譯器錯誤與`Option Strict On`。 比方說，如果您嘗試新增`Integer`變數設為`Double`變數和指派值`Integer`變數，則編譯器會產生錯誤，因為`Double`變數無法以隱含方式轉換為類型`Integer`。  
+ 一種方式以確保好的型別安全程式碼撰寫的作法是使用[Option Strict 陳述式](../../../../visual-basic/language-reference/statements/option-strict-statement.md)。 如果您設定`Option Strict On`，Visual Basic 會自動執行*型別安全*轉換。 例如，如果您嘗試新增`Integer`變數設為`Double`變數和指派值`Double`變數時，作業正常執行，因為`Integer`值可以轉換成`Double`而不會遺失資料。 類型安全的轉換，相反地，會造成編譯器錯誤與`Option Strict On`。 比方說，如果您嘗試新增`Integer`變數設為`Double`變數和指派值`Integer`變數，則編譯器會產生錯誤，因為`Double`變數無法以隱含方式轉換為類型`Integer`。  
   
- 如果您設定`Option Strict Off`，不過[!INCLUDE[vbprvb](~/includes/vbprvb-md.md)]允許隱含的縮小轉換，才能進行應用程式，雖然它們可能會導致非預期的資料或精確度遺失。 基於這個理由，我們建議您改用`Option Strict On`寫入實際執行程式碼時。 如需詳細資訊，請參閱 [Widening and Narrowing Conversions](../../../../visual-basic/programming-guide/language-features/data-types/widening-and-narrowing-conversions.md)。  
+ 如果您設定`Option Strict Off`，不過，Visual Basic 允許隱含的縮小轉換，才能進行應用程式，雖然它們可能會導致非預期的資料或精確度遺失。 基於這個理由，我們建議您改用`Option Strict On`寫入實際執行程式碼時。 如需詳細資訊，請參閱 [Widening and Narrowing Conversions](../../../../visual-basic/programming-guide/language-features/data-types/widening-and-narrowing-conversions.md)。  
   
 ## <a name="see-also"></a>另請參閱  
  [算術運算子](../../../../visual-basic/language-reference/operators/arithmetic-operators.md)  

@@ -1,12 +1,13 @@
 ---
-title: "資料流處理提供者 (WCF Data Services)"
-ms.custom: 
+title: 資料流處理提供者 (WCF Data Services)
+ms.custom: ''
 ms.date: 03/30/2017
 ms.prod: .net-framework-oob
-ms.reviewer: 
-ms.suite: 
-ms.technology: dotnet-clr
-ms.tgt_pltfrm: 
+ms.reviewer: ''
+ms.suite: ''
+ms.technology:
+- dotnet-clr
+ms.tgt_pltfrm: ''
 ms.topic: article
 dev_langs:
 - csharp
@@ -17,16 +18,17 @@ helpviewer_keywords:
 - streaming data provider [WCF Data Services]
 - WCF Data Services, streams
 ms.assetid: f0978fe4-5f9f-42aa-a5c2-df395d7c9495
-caps.latest.revision: "8"
+caps.latest.revision: 8
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.workload: dotnet
-ms.openlocfilehash: f965bc46c62742c0e2ffb0a7f8ae2e09eca5dc1c
-ms.sourcegitcommit: c0dd436f6f8f44dc80dc43b07f6841a00b74b23f
+ms.workload:
+- dotnet
+ms.openlocfilehash: bc66d4154f60e46e53de8ca72596e133dc84eb97
+ms.sourcegitcommit: 86adcc06e35390f13c1e372c36d2e044f1fc31ef
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 01/19/2018
+ms.lasthandoff: 04/26/2018
 ---
 # <a name="streaming-provider-wcf-data-services"></a>資料流處理提供者 (WCF Data Services)
 資料服務可以公開大型物件二進位資料。 這項二進位資料可能代表視訊和音訊資料流、影像、文件檔案，或其他類型的二進位媒體。 當資料模型中的實體包含一個或多個二進位屬性時，資料服務會在回應摘要的項目內，傳回這個 base-64 編碼形式的二進位資料。 載入及序列化大型二進位資料，以這種方式可能會影響效能，因為[!INCLUDE[ssODataFull](../../../../includes/ssodatafull-md.md)]定義一個機制來擷取二進位資料所屬的實體無關。 只要將實體中的二進位資料分成一個或多個資料流就可以完成這項處理。  
@@ -61,7 +63,7 @@ ms.lasthandoff: 01/19/2018
   
  您也必須將命名空間 `xmlns:m=http://schemas.microsoft.com/ado/2007/08/dataservices/metadata` 加入至實體或定義資料模型之 .edmx 或 .csdl 檔案的根。  
   
- [!INCLUDE[crexample](../../../../includes/crexample-md.md)]使用的資料服務[!INCLUDE[adonet_ef](../../../../includes/adonet-ef-md.md)]提供者和公開媒體資源，請參閱下列文章[資料服務資料流處理提供者系列： 實作資料流處理提供者 (第 1 部分)](http://go.microsoft.com/fwlink/?LinkID=198989)。  
+ 如需使用的資料服務的範例[!INCLUDE[adonet_ef](../../../../includes/adonet-ef-md.md)]提供者和公開媒體資源，請參閱下列文章[資料服務資料流處理提供者系列： 實作資料流處理提供者 (第 1 部分)](http://go.microsoft.com/fwlink/?LinkID=198989)。  
   
  **反映提供者**  
  若要指出某個實體為媒體連結項目，請將 <xref:System.Data.Services.Common.HasStreamAttribute> 加入至在反映提供者內定義實體類型的類別。  
@@ -122,7 +124,7 @@ ms.lasthandoff: 01/19/2018
   
     -   屬於媒體資源的二進位屬性不應該包含在資料模型中。 資料模型中公開的所有屬性都會在回應摘要的項目中傳回。  
   
-    -   為了改良大型二進位資料流的效能，我們建議您最好建立自訂資料流類別，將二進位資料儲存在資料庫中。 這個類別是由 <xref:System.Data.Services.Providers.IDataServiceStreamProvider.GetWriteStream%2A> 實作所傳回，而且會以區塊傳送二進位資料給資料庫。 如[!INCLUDE[ssNoVersion](../../../../includes/ssnoversion-md.md)]資料庫，建議您串流處理資料的 FILESTREAM 至資料庫時使用的二進位資料大於 1 MB。  
+    -   為了改良大型二進位資料流的效能，我們建議您最好建立自訂資料流類別，將二進位資料儲存在資料庫中。 這個類別是由 <xref:System.Data.Services.Providers.IDataServiceStreamProvider.GetWriteStream%2A> 實作所傳回，而且會以區塊傳送二進位資料給資料庫。 SQL Server 資料庫，我們建議您串流處理資料的 FILESTREAM 至資料庫時使用的二進位資料大於 1 MB。  
   
     -   請確定資料庫設計為可儲存二進位大型資料流，而且您的資料服務將會收到這些資料流。  
   
@@ -140,7 +142,7 @@ ms.lasthandoff: 01/19/2018
   
  如需詳細資訊，請參閱[資料服務版本控制](../../../../docs/framework/data/wcf/data-service-versioning-wcf-data-services.md)。  
   
-## <a name="see-also"></a>請參閱  
+## <a name="see-also"></a>另請參閱  
  [資料服務提供者](../../../../docs/framework/data/wcf/data-services-providers-wcf-data-services.md)  
  [自訂資料服務提供者](../../../../docs/framework/data/wcf/custom-data-service-providers-wcf-data-services.md)  
  [使用二進位資料](../../../../docs/framework/data/wcf/working-with-binary-data-wcf-data-services.md)

@@ -1,12 +1,13 @@
 ---
-title: "Ref 傳回值 (Visual Basic)"
-ms.custom: 
+title: Ref 傳回值 (Visual Basic)
+ms.custom: ''
 ms.date: 04/28/2017
 ms.prod: .net
-ms.reviewer: 
-ms.suite: 
-ms.technology: devlang-visual-basic
-ms.tgt_pltfrm: 
+ms.reviewer: ''
+ms.suite: ''
+ms.technology:
+- devlang-visual-basic
+ms.tgt_pltfrm: ''
 ms.topic: article
 helpviewer_keywords:
 - variables [Visual Basic]
@@ -15,15 +16,15 @@ helpviewer_keywords:
 ms.assetid: 5ef0cc69-eb3a-4a67-92a2-78585f223cb5
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 560607f7aa304b25314daabeef3952e6bbef7426
-ms.sourcegitcommit: 7e99f66ef09d2903e22c789c67ff5a10aa953b2f
+ms.openlocfilehash: 6055028ac92016cbc4b6f7bffa7f483e5ea76608
+ms.sourcegitcommit: 86adcc06e35390f13c1e372c36d2e044f1fc31ef
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 11/18/2017
+ms.lasthandoff: 04/26/2018
 ---
 # <a name="support-for-reference-return-values-visual-basic"></a>如需參考傳回值 (Visual Basic) 的支援
 
-從 C# 7 開始，C# 語言支援*參考傳回值*。 若要了解參考傳回值的方法之一是它們是相反的由參考傳遞至方法的引數。 修改參考所傳遞的引數時，所做的變更會反映在變數的值，呼叫端上。 當方法呼叫者提供參考傳回值時，呼叫端所做的參考傳回值的修改會反映在呼叫的方法的資料。
+從 C# 7.0 開始，C# 語言支援*參考傳回值*。 若要了解參考傳回值的方法之一是它們是相反的由參考傳遞至方法的引數。 修改參考所傳遞的引數時，所做的變更會反映在變數的值，呼叫端上。 當方法呼叫者提供參考傳回值時，呼叫端所做的參考傳回值的修改會反映在呼叫的方法的資料。
 
 Visual Basic 不允許您撰寫方法具有參考傳回值，但它確實可讓您使用參考傳回值。 換句話說，您可以呼叫具有參考傳回值的方法，並修改該傳回值，並參考傳回值的變更會反映在呼叫的方法的資料。
 
@@ -53,7 +54,7 @@ Visual Basic 不允許您撰寫方法具有參考傳回值，但它確實可讓�
 
 [!code-vb[Ref-Return](../../../../../samples/snippets/visualbasic/getting-started/ref-return-helper.vb#1)]
 
-## <a name="see-also"></a>請參閱
+## <a name="see-also"></a>另請參閱
 
 [值或傳參考方式傳遞引數](passing-arguments-by-value-and-by-reference.md)   
 [Visual Basic 中的程序](index.md)   

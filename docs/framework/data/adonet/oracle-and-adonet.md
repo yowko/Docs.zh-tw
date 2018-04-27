@@ -1,27 +1,29 @@
 ---
-title: "Oracle 和 ADO.NET"
-ms.custom: 
+title: Oracle 和 ADO.NET
+ms.custom: ''
 ms.date: 03/30/2017
 ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.technology: dotnet-ado
-ms.tgt_pltfrm: 
+ms.reviewer: ''
+ms.suite: ''
+ms.technology:
+- dotnet-ado
+ms.tgt_pltfrm: ''
 ms.topic: article
 dev_langs:
 - csharp
 - vb
 ms.assetid: 8ee8e389-53cf-45cf-80bd-1df63ef34f2e
-caps.latest.revision: "4"
+caps.latest.revision: 4
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.workload: dotnet
-ms.openlocfilehash: 529c98b0ea9b9d4ec3587ce138af8af981f1e008
-ms.sourcegitcommit: ed26cfef4e18f6d93ab822d8c29f902cff3519d1
+ms.workload:
+- dotnet
+ms.openlocfilehash: 40b81df158dbad0247df76124201decae41e3267
+ms.sourcegitcommit: 86adcc06e35390f13c1e372c36d2e044f1fc31ef
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 01/17/2018
+ms.lasthandoff: 04/26/2018
 ---
 # <a name="oracle-and-adonet"></a>Oracle 和 ADO.NET
 > [!NOTE]
@@ -29,7 +31,7 @@ ms.lasthandoff: 01/17/2018
   
  本節說明 [!INCLUDE[dnprdnshort](../../../../includes/dnprdnshort-md.md)] Data Provider for Oracle 特定的功能與行為。  
   
- [!INCLUDE[dnprdnshort](../../../../includes/dnprdnshort-md.md)] Data Provider for Oracle 利用 Oracle 用戶端軟體所提供的「Oracle 呼叫介面」(OCI) 來存取 Oracle 資料庫。 該資料提供者的功能設計類似於 [!INCLUDE[dnprdnshort](../../../../includes/dnprdnshort-md.md)]、OLE DB 和 ODBC 的 [!INCLUDE[ssNoVersion](../../../../includes/ssnoversion-md.md)] 資料提供者。  
+ [!INCLUDE[dnprdnshort](../../../../includes/dnprdnshort-md.md)] Data Provider for Oracle 利用 Oracle 用戶端軟體所提供的「Oracle 呼叫介面」(OCI) 來存取 Oracle 資料庫。 資料提供者的功能設計類似於的[!INCLUDE[dnprdnshort](../../../../includes/dnprdnshort-md.md)]SQL Server、 OLE DB 和 ODBC 資料提供者。  
   
  若要使用 [!INCLUDE[dnprdnshort](../../../../includes/dnprdnshort-md.md)] Data Provider for Oracle，應用程式必須參考 <xref:System.Data.OracleClient> 命名空間，如下所示：  
   
@@ -83,11 +85,11 @@ csc /r:System.Data.OracleClient.dll
  說明如何使用 ADO.NET 中的資料。  
   
  [SQL Server 和 ADO.NET](../../../../docs/framework/data/adonet/sql/index.md)  
- 說明如何使用 [!INCLUDE[ssNoVersion](../../../../includes/ssnoversion-md.md)] 特有的特性和功能。  
+ 說明如何使用 SQL Server 特有的特性和功能。  
   
  [DbProviderFactories](../../../../docs/framework/data/adonet/dbproviderfactories.md)  
  說明可讓您在 [!INCLUDE[vstecado](../../../../includes/vstecado-md.md)] 中撰寫提供者獨立程式碼的泛用類別。  
   
-## <a name="see-also"></a>請參閱  
+## <a name="see-also"></a>另請參閱  
  [ADO.NET](../../../../docs/framework/data/adonet/index.md)  
  [ADO.NET Managed 提供者和 DataSet 開發人員中心](http://go.microsoft.com/fwlink/?LinkId=217917)

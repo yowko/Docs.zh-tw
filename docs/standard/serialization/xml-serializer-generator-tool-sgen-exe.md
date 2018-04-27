@@ -1,25 +1,25 @@
 ---
-title: "XML 序列化程式產生器工具 (Sgen.exe)"
-ms.custom: 
+title: XML 序列化程式產生器工具 (Sgen.exe)
+ms.custom: ''
 ms.date: 03/30/2017
 ms.prod: .net
-ms.reviewer: 
-ms.suite: 
-ms.tgt_pltfrm: 
+ms.reviewer: ''
+ms.suite: ''
+ms.tgt_pltfrm: ''
 ms.topic: article
 ms.assetid: cc1d1f1c-fb26-4be9-885a-3fe84c81cec6
-caps.latest.revision: "4"
+caps.latest.revision: 4
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
 ms.workload:
 - dotnet
 - dotnetcore
-ms.openlocfilehash: 10914281632a6651b3872485b795d9a636dc6bd0
-ms.sourcegitcommit: c0dd436f6f8f44dc80dc43b07f6841a00b74b23f
+ms.openlocfilehash: 90b9a4fdbf5c341d128f768ed6825d1e2e465a82
+ms.sourcegitcommit: 2e8acae16ae802f2d6d04e3ce0a6dbf04e476513
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 01/19/2018
+ms.lasthandoff: 04/18/2018
 ---
 # <a name="xml-serializer-generator-tool-sgenexe"></a>XML 序列化程式產生器工具 (Sgen.exe)
 XML 序列化程式產生器會為指定組件中的型別建立 XML 序列化 (Serialization) 組件，以改善 <xref:System.Xml.Serialization.XmlSerializer> 在序列化或還原序列化指定型別物件時的啟動效能。  
@@ -41,7 +41,7 @@ sgen [options]
 |**/help 或 /?**|顯示工具的命令語法和選項。|  
 |**/k**[**eep**]|將產生的原始程式檔 (Source File) 和其他暫存檔案編譯成序列化組件之後，隱藏刪除這些檔案的動作。 這個選項可以用來判斷工具是否正在為特定的型別產生序列化程式碼。|  
 |**/n**[**ologo**]|隱藏顯示 Microsoft 程式啟始資訊。|  
-|**/o**[**ut**]**:***path*|指定要在其中儲存所產生之組件的目錄。 **注意：**產生的組件名稱是由輸入組件的名稱加上 "xmlSerializers.dll" 所組成。|  
+|**/o**[**ut**] **: * * * 路徑*|指定要在其中儲存所產生之組件的目錄。 **注意：**產生的組件名稱是由輸入組件的名稱加上 "xmlSerializers.dll" 所組成。|  
 |**/p**[**roxytypes**]|只為 XML Web 服務 Proxy 型別產生序列化程式碼。|  
 |**/r**[**eference**]**:***assemblyfiles*|指定要求 XML 序列化的型別所參考的組件。 這個選項接受以逗號分隔多個組件檔案。|  
 |**/s**[**ilent**]|隱藏顯示成功訊息。|  
@@ -67,7 +67,7 @@ sgen Data.dll
   
  Data.XmlSerializers.dll 組件可以從程式碼參考，而該程式碼必須序列化及還原序列化 Data.dll 中的型別。  
   
-## <a name="see-also"></a>請參閱  
+## <a name="see-also"></a>另請參閱  
  [工具](../../../docs/framework/tools/index.md)  
- [XML Web Service 概觀](http://msdn.microsoft.com/library/9db0c7b8-bca6-462b-9be5-f5f9a7f05a4d)  
+ [XML Web Service 概觀](https://msdn.microsoft.com/library/9db0c7b8-bca6-462b-9be5-f5f9a7f05a4d)  
  [命令提示字元](../../../docs/framework/tools/developer-command-prompt-for-vs.md)

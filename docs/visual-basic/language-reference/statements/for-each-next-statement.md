@@ -1,10 +1,11 @@
 ---
-title: "For Each...Next 陳述式 (Visual Basic)"
+title: For Each...Next 陳述式 (Visual Basic)
 ms.date: 07/20/2015
 ms.prod: .net
-ms.reviewer: 
-ms.suite: 
-ms.technology: devlang-visual-basic
+ms.reviewer: ''
+ms.suite: ''
+ms.technology:
+- devlang-visual-basic
 ms.topic: article
 f1_keywords:
 - vb.ForEach
@@ -27,14 +28,14 @@ helpviewer_keywords:
 - Exit statement [Visual Basic], For Each...Next statements
 - iteration
 ms.assetid: ebce3120-95c3-42b1-b70b-fa7da40c75e2
-caps.latest.revision: "56"
+caps.latest.revision: 56
 author: dotnet-bot
 ms.author: dotnetcontent
-ms.openlocfilehash: 11601eb1caad1c6cc6d9898f590436a977a78fa1
-ms.sourcegitcommit: 34ec7753acf76f90a0fa845235ef06663dc9e36e
+ms.openlocfilehash: b1593d279d4338ebadca803fe757a201cbcd654b
+ms.sourcegitcommit: 86adcc06e35390f13c1e372c36d2e044f1fc31ef
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 04/26/2018
 ---
 # <a name="for-eachnext-statement-visual-basic"></a>For Each...Next 陳述式 (Visual Basic)
 每個項目集合中重複陳述式的群組。  
@@ -97,7 +98,7 @@ Next [ element ]
   
  您可以將任意數目的`Exit For`中的陳述式`For Each`迴圈。 使用時內巢狀`For Each`迴圈`Exit For`導致執行動作的巢狀下一個較高的層級來結束最內層的迴圈和傳輸控制項。  
   
- `Exit For`通常是某項條件的評估期過後，例如在`If`...`Then`...`Else`結構。 您可能想要使用`Exit For`以下情況：  
+ `Exit For` 通常是某項條件的評估期過後，例如在`If`...`Then`...`Else`結構。 您可能想要使用`Exit For`以下情況：  
   
 -   繼續以逐一查看是不必要或不可能。 這可能被造成錯誤的數值或終止要求。  
   
@@ -133,7 +134,7 @@ Next [ element ]
   
  資料型別`element`使的資料類型的項目必須是`group`可以轉換成它。  
   
- 資料型別`group`必須是參考類型，這指的是集合或陣列可以列舉。 這通常表示`group`實作的物件是指<xref:System.Collections.IEnumerable>介面`System.Collections`命名空間或<xref:System.Collections.Generic.IEnumerable%601>介面`System.Collections.Generic`命名空間。 `System.Collections.IEnumerable`定義<xref:System.Collections.IEnumerable.GetEnumerator%2A>方法，這個方法會傳回集合的列舉值物件。 列舉值物件實作`System.Collections.IEnumerator`介面`System.Collections`命名空間，並公開<xref:System.Collections.IEnumerator.Current%2A>屬性和<xref:System.Collections.IEnumerator.Reset%2A>和<xref:System.Collections.IEnumerator.MoveNext%2A>方法。 Visual Basic 會使用這些來周遊集合。  
+ 資料型別`group`必須是參考類型，這指的是集合或陣列可以列舉。 這通常表示`group`實作的物件是指<xref:System.Collections.IEnumerable>介面`System.Collections`命名空間或<xref:System.Collections.Generic.IEnumerable%601>介面`System.Collections.Generic`命名空間。 `System.Collections.IEnumerable` 定義<xref:System.Collections.IEnumerable.GetEnumerator%2A>方法，這個方法會傳回集合的列舉值物件。 列舉值物件實作`System.Collections.IEnumerator`介面`System.Collections`命名空間，並公開<xref:System.Collections.IEnumerator.Current%2A>屬性和<xref:System.Collections.IEnumerator.Reset%2A>和<xref:System.Collections.IEnumerator.MoveNext%2A>方法。 Visual Basic 會使用這些來周遊集合。  
   
 ### <a name="narrowing-conversions"></a>縮小轉換  
  當`Option Strict`設`On`，縮小轉換通常會造成編譯器錯誤。 在`For Each`陳述式，不過，轉換中的項目`group`至`element`評估和執行階段，並歸併的縮小轉換造成編譯器錯誤。  
@@ -149,7 +150,7 @@ Next [ element ]
   
  **修改集合。** 所傳回的列舉值物件<xref:System.Collections.IEnumerable.GetEnumerator%2A>通常不會讓您新增、 刪除、 取代或重新排列任何項目來變更集合。 如果您將集合變更後已起始`For Each`...`Next`迴圈 」 列舉值物件就會變成無效，以及下一步 嘗試存取的項目; 因此導致<xref:System.InvalidOperationException>例外狀況。  
   
- 然而，修改這個封鎖不由決定[!INCLUDE[vbprvb](~/includes/vbprvb-md.md)]，而是由實作<xref:System.Collections.IEnumerable>介面。 它也可以實作`IEnumerable`反覆項目期間，修改允許的方式。 如果您考慮執行這類動態修改，請確定您了解的特性`IEnumerable`您使用的集合上實作。  
+ 不過，修改這個封鎖不由決定 Visual Basic 中，但的實作，而是由<xref:System.Collections.IEnumerable>介面。 它也可以實作`IEnumerable`反覆項目期間，修改允許的方式。 如果您考慮執行這類動態修改，請確定您了解的特性`IEnumerable`您使用的集合上實作。  
   
  **修改集合項目。** <xref:System.Collections.IEnumerator.Current%2A>列舉值物件的屬性是[ReadOnly](../../../visual-basic/language-reference/modifiers/readonly.md)，並傳回每個集合項目的本機複本。 這表示您無法修改項目本身中`For Each`...`Next`迴圈。 您進行任何修改會影響的本機複本從`Current`並不會反應回基礎集合。 不過，如果項目是參考類型，您可以修改它所指向的執行個體的成員。 下列範例會修改`BackColor`成員隸屬每個`thisControl`項目。 但是，您不能修改`thisControl`本身。  
   
@@ -179,7 +180,7 @@ End Sub
   
  [!code-vb[VbVbalrStatements#125](../../../visual-basic/language-reference/error-messages/codesnippet/VisualBasic/for-each-next-statement_7.vb)]  
   
-## <a name="see-also"></a>請參閱  
+## <a name="see-also"></a>另請參閱  
  [集合](../../../standard/collections/index.md)  
  [For...Next 陳述式](../../../visual-basic/language-reference/statements/for-next-statement.md)  
  [迴圈結構](../../../visual-basic/programming-guide/language-features/control-flow/loop-structures.md)  

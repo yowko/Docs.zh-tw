@@ -1,11 +1,12 @@
 ---
-title: "複合資料類型 (Visual Basic)"
-ms.custom: 
+title: 複合資料類型 (Visual Basic)
+ms.custom: ''
 ms.date: 04/25/2017
 ms.prod: .net
-ms.reviewer: 
-ms.suite: 
-ms.technology: devlang-visual-basic
+ms.reviewer: ''
+ms.suite: ''
+ms.technology:
+- devlang-visual-basic
 ms.topic: article
 helpviewer_keywords:
 - classes [Visual Basic], composite data types
@@ -17,17 +18,17 @@ helpviewer_keywords:
 - classes [Visual Basic], composite types
 - types [Visual Basic], composite
 ms.assetid: 62970f2e-52c0-4369-8963-613820f1f434
-caps.latest.revision: "19"
+caps.latest.revision: 19
 author: dotnet-bot
 ms.author: dotnetcontent
-ms.openlocfilehash: e9adb407757dbee2f7ac5a94118623a62212faec
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.openlocfilehash: caa832fc191ad925674e21b1237ac98328ce0bd7
+ms.sourcegitcommit: 86adcc06e35390f13c1e372c36d2e044f1fc31ef
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 04/26/2018
 ---
 # <a name="composite-data-types-visual-basic"></a>複合資料類型 (Visual Basic)
-除了基本資料型別[!INCLUDE[vbprvb](~/includes/vbprvb-md.md)]供應器，您可以組合建立不同類型的項目*複合資料類型*例如結構、 陣列和類別。 基本型別和其他複合類型，您可以建置複合資料類型。 例如，您可以定義結構元素的陣列或結構的陣列成員。  
+除了提供的基本資料型別 Visual Basic，您也可以組合建立不同類型的項目*複合資料類型*例如結構、 陣列和類別。 基本型別和其他複合類型，您可以建置複合資料類型。 例如，您可以定義結構元素的陣列或結構的陣列成員。  
   
 ## <a name="data-types"></a>資料類型  
  一種複合類型與不同元件的資料類型。 例如，陣列`Integer`項目不是`Integer`資料型別。  
@@ -35,7 +36,7 @@ ms.lasthandoff: 11/21/2017
  視使用的項目類型、 括號和逗號，通常表示陣列資料類型。 例如的一維陣列`String`項目以`String()`，和的二維陣列`Boolean`項目以`Boolean(,)`。  
   
 ## <a name="structure-types"></a>結構類型  
- 沒有可包含所有結構的單一資料型別。 相反地，結構的每個定義都代表唯一的資料類型，即使兩個結構會定義相同的項目相同的順序。 不過，如果您建立兩個或多個執行個體相同的結構，[!INCLUDE[vbprvb](~/includes/vbprvb-md.md)]會考慮它們是相同的資料類型。  
+ 沒有可包含所有結構的單一資料型別。 相反地，結構的每個定義都代表唯一的資料類型，即使兩個結構會定義相同的項目相同的順序。 不過，如果您建立的相同結構的兩個或多個執行個體時，Visual Basic 會將它們視為相同的資料類型。  
   
 ## <a name="tuples"></a>Tuple
 

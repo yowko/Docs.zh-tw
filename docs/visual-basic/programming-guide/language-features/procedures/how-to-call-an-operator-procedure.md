@@ -1,11 +1,12 @@
 ---
-title: "如何：呼叫運算子程序 (Visual Basic)"
-ms.custom: 
+title: 如何：呼叫運算子程序 (Visual Basic)
+ms.custom: ''
 ms.date: 07/20/2015
 ms.prod: .net
-ms.reviewer: 
-ms.suite: 
-ms.technology: devlang-visual-basic
+ms.reviewer: ''
+ms.suite: ''
+ms.technology:
+- devlang-visual-basic
 ms.topic: article
 helpviewer_keywords:
 - operator procedures [Visual Basic], calling
@@ -17,19 +18,19 @@ helpviewer_keywords:
 - overloaded operators [Visual Basic], calling
 - operator overloading
 ms.assetid: 0dce42cc-f0b0-4c14-9f62-018b21f33497
-caps.latest.revision: "16"
+caps.latest.revision: 16
 author: dotnet-bot
 ms.author: dotnetcontent
-ms.openlocfilehash: 0abff0a81ebcdacb59b69d0c307bb4aa219906c3
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.openlocfilehash: 21545f2488bfabd0abc9c6e316d21bbc4d5aeb91
+ms.sourcegitcommit: 86adcc06e35390f13c1e372c36d2e044f1fc31ef
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 04/26/2018
 ---
 # <a name="how-to-call-an-operator-procedure-visual-basic"></a>如何：呼叫運算子程序 (Visual Basic)
 您可以在運算式中使用運算子符號，以呼叫運算子程序。 如果是轉換運算子，您呼叫[CType 函式](../../../../visual-basic/language-reference/functions/ctype-function.md)將值從一種資料類型轉換到另一個。  
   
- 您無法明確呼叫運算子程序。 您只使用運算子，或`CType`函式，在指派陳述式或運算式，您通常使用運算子的相同方式。 [!INCLUDE[vbprvb](~/includes/vbprvb-md.md)]運算子程序呼叫。  
+ 您無法明確呼叫運算子程序。 您只使用運算子，或`CType`函式，在指派陳述式或運算式，您通常使用運算子的相同方式。 Visual Basic 呼叫運算子程序。  
   
  在類別或結構上定義運算子，也稱為*多載*運算子。  
   
@@ -47,7 +48,7 @@ ms.lasthandoff: 11/21/2017
   
 2.  請確定資料類型的運算元不適當的轉換，並且以正確的順序。  
   
-3.  `CType`呼叫轉換運算子程序，並傳回已轉換的值。  
+3.  `CType` 呼叫轉換運算子程序，並傳回已轉換的值。  
   
 ## <a name="example"></a>範例  
  下列範例會建立兩個<xref:System.TimeSpan>、 將它們相加，並將結果儲存在第三個<xref:System.TimeSpan>結構。 <xref:System.TimeSpan>結構會定義數個標準的運算子多載的運算子程序。  

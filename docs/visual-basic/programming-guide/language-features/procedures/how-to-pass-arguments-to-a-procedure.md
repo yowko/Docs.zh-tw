@@ -1,11 +1,12 @@
 ---
-title: "如何：將引數傳遞至程序 (Visual Basic)"
-ms.custom: 
+title: 如何：將引數傳遞至程序 (Visual Basic)
+ms.custom: ''
 ms.date: 07/20/2015
 ms.prod: .net
-ms.reviewer: 
-ms.suite: 
-ms.technology: devlang-visual-basic
+ms.reviewer: ''
+ms.suite: ''
+ms.technology:
+- devlang-visual-basic
 ms.topic: article
 helpviewer_keywords:
 - arguments [Visual Basic], passing to procedures
@@ -17,14 +18,14 @@ helpviewer_keywords:
 - procedures [Visual Basic], calling
 - argument passing [Visual Basic], procedures
 ms.assetid: 08723588-3890-4ddc-8249-79e049e0f241
-caps.latest.revision: "14"
+caps.latest.revision: 14
 author: dotnet-bot
 ms.author: dotnetcontent
-ms.openlocfilehash: 3debb4fa6e7b15f9c321ef207d0cc04181a98da2
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.openlocfilehash: 1e8f8e438dc749e7f5f0d33aeaa26dfbcf4c29f3
+ms.sourcegitcommit: 86adcc06e35390f13c1e372c36d2e044f1fc31ef
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 04/26/2018
 ---
 # <a name="how-to-pass-arguments-to-a-procedure-visual-basic"></a>如何：將引數傳遞至程序 (Visual Basic)
 當您呼叫程序時，您會遵循括號括住的引數清單的程序名稱。 您會提供引數對應至每個必要參數的程序所定義，而您可以選擇性地提供的引數`Optional`參數。 如果您未提供`Optional`呼叫中的參數，您必須包含逗號來標示它的引數清單中的位置，如果您提供的任何後續的引數。  
@@ -45,7 +46,7 @@ ms.lasthandoff: 11/21/2017
   
 5.  如果您省略的引數`Optional`參數且沒有其他參數之後參數清單中，您可以標記多餘的逗號引數清單中省略的引數的位置。  
   
-     下列範例會呼叫[!INCLUDE[vbprvb](~/includes/vbprvb-md.md)]<xref:Microsoft.VisualBasic.Interaction.MsgBox%2A>函式。  
+     下列範例會呼叫 Visual Basic<xref:Microsoft.VisualBasic.Interaction.MsgBox%2A>函式。  
   
      [!code-vb[VbVbcnProcedures#34](./codesnippet/VisualBasic/how-to-pass-arguments-to-a-procedure_1.vb)]  
   
@@ -53,7 +54,8 @@ ms.lasthandoff: 11/21/2017
   
      第二個引數清單中的逗號標示省略第二個引數的位置和最後一個的字串傳遞給選擇性第三個參數`MsgBox`，這是要顯示的標題列中的文字。  
   
-## <a name="see-also"></a>另請參閱  
+## <a name="see-also"></a>另請參閱
+
  [Sub 程序](./sub-procedures.md)  
  [函式程序](./function-procedures.md)  
  [屬性程序](./property-procedures.md)  
@@ -63,4 +65,4 @@ ms.lasthandoff: 11/21/2017
  [遞迴程序](./recursive-procedures.md)  
  [程序多載化](./procedure-overloading.md)  
  [物件和類別](../../../../visual-basic/programming-guide/language-features/objects-and-classes/index.md)  
- [物件導向程式設計](http://msdn.microsoft.com/library/1cf6e655-3f30-45f1-9a5d-4a88ca24a1c2)
+ [物件導向程式設計 (Visual Basic)](../../concepts/object-oriented-programming.md)  

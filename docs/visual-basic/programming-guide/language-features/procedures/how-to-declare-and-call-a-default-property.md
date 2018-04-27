@@ -1,11 +1,12 @@
 ---
-title: "如何：在 Visual Basic 中宣告及呼叫預設屬性"
-ms.custom: 
+title: 如何：在 Visual Basic 中宣告及呼叫預設屬性
+ms.custom: ''
 ms.date: 07/20/2015
 ms.prod: .net
-ms.reviewer: 
-ms.suite: 
-ms.technology: devlang-visual-basic
+ms.reviewer: ''
+ms.suite: ''
+ms.technology:
+- devlang-visual-basic
 ms.topic: article
 helpviewer_keywords:
 - defaults [Visual Basic], properties
@@ -16,17 +17,17 @@ helpviewer_keywords:
 - Visual Basic code, properties
 - default properties
 ms.assetid: 68b4026e-09ef-4613-808e-f6287494ff63
-caps.latest.revision: "23"
+caps.latest.revision: 23
 author: dotnet-bot
 ms.author: dotnetcontent
-ms.openlocfilehash: 8baa03e37325a6ad7065ec1a60052b3ea6a46c6f
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.openlocfilehash: 9c4f471eba42e47d6bef45a4d38abc0cbd2d32bc
+ms.sourcegitcommit: 86adcc06e35390f13c1e372c36d2e044f1fc31ef
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 04/26/2018
 ---
 # <a name="how-to-declare-and-call-a-default-property-in-visual-basic"></a>如何：在 Visual Basic 中宣告及呼叫預設屬性
-A*預設屬性*是類別或結構的屬性，可以存取您的程式碼，而不指定它。 當呼叫程式碼的類別或結構，但不是屬性名稱和內容可讓您存取屬性，[!INCLUDE[vbprvb](~/includes/vbprvb-md.md)]解析成該類別或結構的預設屬性的存取權，如果有的話。  
+A*預設屬性*是類別或結構的屬性，可以存取您的程式碼，而不指定它。 在呼叫程式碼命名類別或結構，但不是屬性，與內容允許存取屬性時，Visual Basic 會解析成該類別或結構的預設屬性存取如果有的話。  
   
  類別或結構最多可以有一個預設屬性。 不過，您可以多載預設屬性，並擁有多個版本。  
   

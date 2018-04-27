@@ -1,27 +1,29 @@
 ---
-title: ".NET Framework 資料提供者"
-ms.custom: 
+title: .NET Framework 資料提供者
+ms.custom: ''
 ms.date: 03/30/2017
 ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.technology: dotnet-ado
-ms.tgt_pltfrm: 
+ms.reviewer: ''
+ms.suite: ''
+ms.technology:
+- dotnet-ado
+ms.tgt_pltfrm: ''
 ms.topic: article
 dev_langs:
 - csharp
 - vb
 ms.assetid: 03a9fc62-2d24-491a-9fe6-d6bdb6dcb131
-caps.latest.revision: "13"
+caps.latest.revision: 13
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.workload: dotnet
-ms.openlocfilehash: a78654f5c8de480b1eb38fbf25fbc923a30a0d25
-ms.sourcegitcommit: c0dd436f6f8f44dc80dc43b07f6841a00b74b23f
+ms.workload:
+- dotnet
+ms.openlocfilehash: 69acb7b2fe4eafcce75a7b76305fab37dbb7d2f6
+ms.sourcegitcommit: 86adcc06e35390f13c1e372c36d2e044f1fc31ef
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 01/19/2018
+ms.lasthandoff: 04/26/2018
 ---
 # <a name="net-framework-data-providers"></a>.NET Framework 資料提供者
 [!INCLUDE[dnprdnshort](../../../../includes/dnprdnshort-md.md)] 資料提供者的用途是連接資料庫、執行命令和擷取結果。 這些結果會直接處理、放入 <xref:System.Data.DataSet> 中以便視需要而公開給使用者、與多個來源的資料結合，或在各層之間進行遠端控制。 [!INCLUDE[dnprdnshort](../../../../includes/dnprdnshort-md.md)] 資料提供者是輕量型的，可在資料來源與程式碼之間建立最小層，以提升效能而不會犧牲功能。  
@@ -30,12 +32,12 @@ ms.lasthandoff: 01/19/2018
   
 |[!INCLUDE[dnprdnshort](../../../../includes/dnprdnshort-md.md)] 資料提供者|描述|  
 |-------------------------------------------------------------------------------|-----------------|  
-|[!INCLUDE[dnprdnshort](../../../../includes/dnprdnshort-md.md)] Data Provider for [!INCLUDE[ssNoVersion](../../../../includes/ssnoversion-md.md)]|提供 Microsoft [!INCLUDE[ssNoVersion](../../../../includes/ssnoversion-md.md)]的資料存取。 使用 <xref:System.Data.SqlClient> 命名空間。|  
+|[!INCLUDE[dnprdnshort](../../../../includes/dnprdnshort-md.md)] Data Provider for SQL Server|提供 Microsoft SQL Server 的資料存取。 使用 <xref:System.Data.SqlClient> 命名空間。|  
 |[!INCLUDE[dnprdnshort](../../../../includes/dnprdnshort-md.md)] Data Provider for OLE DB|使用 OLE DB 公開的資料來源。 使用 <xref:System.Data.OleDb> 命名空間。|  
 |[!INCLUDE[dnprdnshort](../../../../includes/dnprdnshort-md.md)]Data Provider for ODBC|使用 ODBC 公開的資料來源。 使用 <xref:System.Data.Odbc> 命名空間。|  
 |[!INCLUDE[dnprdnshort](../../../../includes/dnprdnshort-md.md)] Data Provider for Oracle|針對 Oracle 資料來源。 [!INCLUDE[dnprdnshort](../../../../includes/dnprdnshort-md.md)] Data Provider for Oracle 支援 Oracle 用戶端軟體 8.1.7 (含) 以後版本，並使用 <xref:System.Data.OracleClient> 命名空間。|  
 |EntityClient 提供者|為實體資料模型 (EDM) 應用程式提供資料存取。 使用 <xref:System.Data.EntityClient> 命名空間。|  
-|[!INCLUDE[dnprdnshort](../../../../includes/dnprdnshort-md.md)] Data Provider for [!INCLUDE[ssNoVersion](../../../../includes/ssnoversion-md.md)] Compact 4.0。|提供 Microsoft [!INCLUDE[ssNoVersion](../../../../includes/ssnoversion-md.md)] Compact 4.0 的資料存取。 使用 [System.Data.SqlServerCe](http://msdn.microsoft.com/library/system.data.sqlserverce.aspx) 命名空間。|  
+|[!INCLUDE[dnprdnshort](../../../../includes/dnprdnshort-md.md)] Data Provider for SQL Server Compact 4.0。|提供的 Microsoft SQL Server Compact 4.0 資料存取。 使用 [System.Data.SqlServerCe](http://msdn.microsoft.com/library/system.data.sqlserverce.aspx) 命名空間。|  
   
 ## <a name="core-objects-of-net-framework-data-providers"></a>.NET Framework 資料提供者的核心物件  
  下表列出構成 [!INCLUDE[dnprdnshort](../../../../includes/dnprdnshort-md.md)] 資料提供者的四個核心物件。  
@@ -59,8 +61,8 @@ ms.lasthandoff: 01/19/2018
 |`Error`|公開資料來源傳回的警告或錯誤資訊。|  
 |`ClientPermission`|提供 [!INCLUDE[dnprdnshort](../../../../includes/dnprdnshort-md.md)] 資料提供者所需的程式碼存取安全性屬性。 `ClientPermission` 類別是所有 <xref:System.Data.Common.DBDataPermission> 物件的基底類別 (Base Class)。|  
   
-## <a name="net-framework-data-provider-for-includessnoversionincludesssnoversion-mdmd-sqlclient"></a>.NET Framework Data Provider for [!INCLUDE[ssNoVersion](../../../../includes/ssnoversion-md.md)] (SqlClient)  
- [!INCLUDE[dnprdnshort](../../../../includes/dnprdnshort-md.md)] Data Provider for [!INCLUDE[ssNoVersion](../../../../includes/ssnoversion-md.md)] (SqlClient) 會使用自己的通訊協定與 [!INCLUDE[ssNoVersion](../../../../includes/ssnoversion-md.md)]通訊。 此為輕量型的提供者且其效能很好，因為已經最佳化可以直接存取 [!INCLUDE[ssNoVersion](../../../../includes/ssnoversion-md.md)] ，而不需加上 OLE DB 或「開放式資料庫連接」(Open Database Connectivity，ODBC) 層。 下列圖例將 [!INCLUDE[dnprdnshort](../../../../includes/dnprdnshort-md.md)] Data Provider for [!INCLUDE[ssNoVersion](../../../../includes/ssnoversion-md.md)] 和 [!INCLUDE[dnprdnshort](../../../../includes/dnprdnshort-md.md)] Data Provider for OLE DB 進行比較。 [!INCLUDE[dnprdnshort](../../../../includes/dnprdnshort-md.md)] Data Provider for OLE DB 透過下列元件與 OLE DB 資料來源通訊：一為 OLE DB Service 元件 (提供連接共用和交易服務)，二為 OLE DB 提供者 (提供資料來源)。  
+## <a name="net-framework-data-provider-for-sql-server-sqlclient"></a>.NET Framework Data Provider for SQL Server (SqlClient)  
+ [!INCLUDE[dnprdnshort](../../../../includes/dnprdnshort-md.md)] Data Provider for SQL Server (SqlClient) 會使用自己的通訊協定與 SQL Server 通訊。 它是輕量級，而且效能良好，因為它已完成最佳化，而加入 OLE DB 或開放式資料庫連接 (ODBC) 的圖層不直接存取 SQL Server。 下列圖例對比[!INCLUDE[dnprdnshort](../../../../includes/dnprdnshort-md.md)]Data Provider for SQL Server 與[!INCLUDE[dnprdnshort](../../../../includes/dnprdnshort-md.md)]Data Provider for OLE DB。 [!INCLUDE[dnprdnshort](../../../../includes/dnprdnshort-md.md)] Data Provider for OLE DB 透過下列元件與 OLE DB 資料來源通訊：一為 OLE DB Service 元件 (提供連接共用和交易服務)，二為 OLE DB 提供者 (提供資料來源)。  
   
 > [!NOTE]
 >  [!INCLUDE[dnprdnshort](../../../../includes/dnprdnshort-md.md)] Data Provider for ODBC 的架構和 [!INCLUDE[dnprdnshort](../../../../includes/dnprdnshort-md.md)] Data Provider for OLE DB 的架構類似，例如，前者會呼叫 ODBC Service 元件。  
@@ -68,9 +70,9 @@ ms.lasthandoff: 01/19/2018
  ![資料提供者](../../../../docs/framework/data/adonet/media/netdataproviders-bpuedev11.gif "NETDataProviders_bpuedev11")  
 比較 .NET Framework Data Provider for SQL Server 和 .NET Framework Data Provider for OLE DB  
   
- 「 [!INCLUDE[dnprdnshort](../../../../includes/dnprdnshort-md.md)] Data Provider for [!INCLUDE[ssNoVersion](../../../../includes/ssnoversion-md.md)] 」類別位於 <xref:System.Data.SqlClient> 命名空間中。  
+ [!INCLUDE[dnprdnshort](../../../../includes/dnprdnshort-md.md)] Data Provider for SQL Server 類別位於<xref:System.Data.SqlClient>命名空間。  
   
- [!INCLUDE[dnprdnshort](../../../../includes/dnprdnshort-md.md)] Data Provider for [!INCLUDE[ssNoVersion](../../../../includes/ssnoversion-md.md)] 支援本機和分散式交易。 若使用的是分散式交易，則 [!INCLUDE[dnprdnshort](../../../../includes/dnprdnshort-md.md)] Data Provider for [!INCLUDE[ssNoVersion](../../../../includes/ssnoversion-md.md)]預設會自動在交易中登記，並從「Windows 元件服務」或 <xref:System.Transactions>取得交易詳細資料。 如需詳細資訊，請參閱[異動和並行存取](../../../../docs/framework/data/adonet/transactions-and-concurrency.md)。  
+ [!INCLUDE[dnprdnshort](../../../../includes/dnprdnshort-md.md)] Data Provider for SQL Server 支援本機和分散式交易。 若是分散式交易， [!INCLUDE[dnprdnshort](../../../../includes/dnprdnshort-md.md)] Data Provider for SQL Server，根據預設，自動在交易中登記，並從 Windows 元件服務取得異動詳細資料或<xref:System.Transactions>。 如需詳細資訊，請參閱[異動和並行存取](../../../../docs/framework/data/adonet/transactions-and-concurrency.md)。  
   
  下列程式碼範例顯示如何將 `System.Data.SqlClient` 命名空間納入您的應用程式。  
   
@@ -89,7 +91,7 @@ using System.Data.SqlClient;
   
 |驅動程式|提供者|  
 |------------|--------------|  
-|SQLOLEDB|Microsoft OLE DB Provider for [!INCLUDE[ssNoVersion](../../../../includes/ssnoversion-md.md)]|  
+|SQLOLEDB|SQL Server 的 Microsoft OLE DB 提供者|  
 |MSDAORA|Microsoft OLE DB Provider for Oracle|  
 |Microsoft.Jet.OLEDB.4.0|OLE DB provider for Microsoft Jet|  
   
@@ -115,9 +117,9 @@ using System.Data.OleDb;
   
  下表顯示 [!INCLUDE[vstecado](../../../../includes/vstecado-md.md)]測試過的 ODBC 驅動程式。  
   
-|驅動程式|  
+|驅動器|  
 |------------|  
-|[!INCLUDE[ssNoVersion](../../../../includes/ssnoversion-md.md)]|  
+|SQL Server|  
 |Oracle 的 Microsoft ODBC|  
 |Microsoft Access Driver (*.mdb)|  
   
@@ -158,17 +160,17 @@ using System.Data.OracleClient;
 ## <a name="choosing-a-net-framework-data-provider"></a>選擇 .NET Framework 資料提供者  
  請依照您應用程式的設計和資料來源選擇 [!INCLUDE[dnprdnshort](../../../../includes/dnprdnshort-md.md)] 資料提供者，以提升應用程式的效能、功能和完整性。 下表討論每個 [!INCLUDE[dnprdnshort](../../../../includes/dnprdnshort-md.md)] 資料提供者的優點和限制。  
   
-|提供者|備註|  
+|提供者|注意|  
 |--------------|-----------|  
-|[!INCLUDE[dnprdnshort](../../../../includes/dnprdnshort-md.md)] Data Provider for [!INCLUDE[ssNoVersion](../../../../includes/ssnoversion-md.md)]|建議使用 Microsoft [!INCLUDE[ssNoVersion](../../../../includes/ssnoversion-md.md)]的中介層應用程式採用。<br /><br /> 建議使用 Microsoft Database Engine (MSDE) 或 [!INCLUDE[ssNoVersion](../../../../includes/ssnoversion-md.md)]的單層應用程式採用。<br /><br /> 建議使用 OLE DB provider for [!INCLUDE[ssNoVersion](../../../../includes/ssnoversion-md.md)] (SQLOLEDB) 搭配 [!INCLUDE[dnprdnshort](../../../../includes/dnprdnshort-md.md)] Data Provider for OLE DB。|  
-|[!INCLUDE[dnprdnshort](../../../../includes/dnprdnshort-md.md)] Data Provider for OLE DB|若是 [!INCLUDE[ssNoVersion](../../../../includes/ssnoversion-md.md)]，則建議使用 [!INCLUDE[dnprdnshort](../../../../includes/dnprdnshort-md.md)] Data Provider for [!INCLUDE[ssNoVersion](../../../../includes/ssnoversion-md.md)] ，而不使用這個提供者。<br /><br /> 建議使用 Microsoft Access 資料庫的單層應用程式採用。 不建議中介層應用程式採用 Access 資料庫。|  
-|[!INCLUDE[dnprdnshort](../../../../includes/dnprdnshort-md.md)]' Data Provider for ODBC|建議使用 ODBC 資料來源的中介層及單層應用程式採用。|  
-|[!INCLUDE[dnprdnshort](../../../../includes/dnprdnshort-md.md)]' Data Provider for Oracle|建議使用 Oracle 資料來源的中介層及單層應用程式採用。|  
+|[!INCLUDE[dnprdnshort](../../../../includes/dnprdnshort-md.md)] Data Provider for SQL Server|建議使用 Microsoft SQL Server 的中介層應用程式。<br /><br /> 建議使用 Microsoft Database Engine (MSDE) 或 SQL Server 的單層應用程式。<br /><br /> 建議使用 OLE DB provider for SQL Server (SQLOLEDB) 與[!INCLUDE[dnprdnshort](../../../../includes/dnprdnshort-md.md)]Data Provider for OLE DB。|  
+|[!INCLUDE[dnprdnshort](../../../../includes/dnprdnshort-md.md)] Data Provider for OLE DB|SQL server [!INCLUDE[dnprdnshort](../../../../includes/dnprdnshort-md.md)] Data Provider for SQL Server 建議而不是此提供者。<br /><br /> 建議使用 Microsoft Access 資料庫的單層應用程式採用。 不建議中介層應用程式採用 Access 資料庫。|  
+|[!INCLUDE[dnprdnshort](../../../../includes/dnprdnshort-md.md)] ' Data Provider for ODBC|建議使用 ODBC 資料來源的中介層及單層應用程式採用。|  
+|[!INCLUDE[dnprdnshort](../../../../includes/dnprdnshort-md.md)] ' Data Provider for Oracle|建議使用 Oracle 資料來源的中介層及單層應用程式採用。|  
   
 ## <a name="entityclient-provider"></a>EntityClient 提供者  
  EntityClient 提供者是用於根據實體資料模型 (EDM) 存取資料。 與其他 .NET Framework 資料提供者不同的是，它不會直接與資料來源互動。 不過，它會使用 Entity SQL 與基礎資料提供者進行通訊。 如需詳細資訊，請參閱[EntityClient 和 Entity SQL](http://msdn.microsoft.com/library/49202ab9-ac98-4b4b-a05c-140e422bf527)。  
   
-## <a name="see-also"></a>請參閱  
+## <a name="see-also"></a>另請參閱  
  [ADO.NET 概觀](../../../../docs/framework/data/adonet/ado-net-overview.md)  
  [在 ADO.NET 中擷取和修改資料](../../../../docs/framework/data/adonet/retrieving-and-modifying-data.md)  
  [ADO.NET Managed 提供者和 DataSet 開發人員中心](http://go.microsoft.com/fwlink/?LinkId=217917)

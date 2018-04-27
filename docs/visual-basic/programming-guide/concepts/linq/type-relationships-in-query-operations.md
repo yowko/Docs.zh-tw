@@ -1,12 +1,13 @@
 ---
-title: "查詢作業中的類型關聯性 (Visual Basic)"
-ms.custom: 
+title: 查詢作業中的類型關聯性 (Visual Basic)
+ms.custom: ''
 ms.date: 07/20/2015
 ms.prod: .net
-ms.reviewer: 
-ms.suite: 
-ms.technology: devlang-visual-basic
-ms.tgt_pltfrm: 
+ms.reviewer: ''
+ms.suite: ''
+ms.technology:
+- devlang-visual-basic
+ms.tgt_pltfrm: ''
 ms.topic: article
 helpviewer_keywords:
 - variable relationships [LINQ in Visual Basic]
@@ -18,14 +19,14 @@ helpviewer_keywords:
 - inferring type information [LINQ in Visual Basic]
 - relationships [LINQ in Visual Basic]
 ms.assetid: b5ff4da5-f3fd-4a8e-aaac-1cbf52fa16f6
-caps.latest.revision: "34"
+caps.latest.revision: 34
 author: dotnet-bot
 ms.author: dotnetcontent
-ms.openlocfilehash: 1b93188475dd2bb00aea044ff178028eb87e00d4
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.openlocfilehash: e38f51d77869dcca8a81fdcbc70aed32c4146935
+ms.sourcegitcommit: 86adcc06e35390f13c1e372c36d2e044f1fc31ef
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 04/26/2018
 ---
 # <a name="type-relationships-in-query-operations-visual-basic"></a>查詢作業中的類型關聯性 (Visual Basic)
 在中使用變數[!INCLUDE[vbteclinqext](~/includes/vbteclinqext-md.md)]查詢作業強型別，而且必須為彼此相容。 強型別會使用資料來源、 查詢本身，以及執行查詢。 如下圖所識別的詞彙用於描述[!INCLUDE[vbteclinq](~/includes/vbteclinq-md.md)]查詢。 如需查詢的組件的詳細資訊，請參閱[基本查詢作業 (Visual Basic)](../../../../visual-basic/programming-guide/concepts/linq/basic-query-operations.md)。  
@@ -35,7 +36,7 @@ LINQ 查詢的組件
   
  在查詢中範圍變數的類型必須是相容的資料來源中的項目類型。 查詢變數的型別必須與所定義的序列項目相容`Select`子句。 最後，序列項目的型別也必須相容於迴圈控制變數中所使用的型別`For Each`執行查詢的陳述式。 這個強型別，可協助識別在編譯時期型別錯誤。  
   
- [!INCLUDE[vbprvb](~/includes/vbprvb-md.md)]可以輸入強式方便藉由實作區域類型推斷，也稱為*隱含型別*。 在上述範例中，使用功能，您會看到它用於整個[!INCLUDE[vbteclinq](~/includes/vbteclinq-md.md)]範例與文件。 在 Visual Basic 中，區域類型推斷只使用達成`Dim`陳述式不含`As`子句。 在下列範例中，`city`強型別為字串。  
+ Visual Basic 中，可以輸入強式方便藉由實作區域類型推斷，也稱為*隱含型別*。 在上述範例中，使用功能，您會看到它用於整個[!INCLUDE[vbteclinq](~/includes/vbteclinq-md.md)]範例與文件。 在 Visual Basic 中，區域類型推斷只使用達成`Dim`陳述式不含`As`子句。 在下列範例中，`city`強型別為字串。  
   
  [!code-vb[VbLINQTypeRels#1](../../../../visual-basic/programming-guide/concepts/linq/codesnippet/VisualBasic/type-relationships-in-query-operations_1.vb)]  
   

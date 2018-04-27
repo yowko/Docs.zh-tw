@@ -1,12 +1,13 @@
 ---
-title: "宣告的 XML 項目和屬性的名稱 (Visual Basic)"
-ms.custom: 
+title: 宣告的 XML 項目和屬性的名稱 (Visual Basic)
+ms.custom: ''
 ms.date: 07/20/2015
 ms.prod: .net
-ms.reviewer: 
-ms.suite: 
-ms.technology: devlang-visual-basic
-ms.tgt_pltfrm: 
+ms.reviewer: ''
+ms.suite: ''
+ms.technology:
+- devlang-visual-basic
+ms.tgt_pltfrm: ''
 ms.topic: article
 helpviewer_keywords:
 - declarations [XML in Visual Basic]
@@ -15,20 +16,20 @@ helpviewer_keywords:
 - attribute names [XML in Visual Basic]
 - XML literals [Visual Basic], element names
 ms.assetid: cc110118-b6cf-4ff9-a4e4-6233c90c9fbf
-caps.latest.revision: "13"
+caps.latest.revision: 13
 author: dotnet-bot
 ms.author: dotnetcontent
-ms.openlocfilehash: 846a028e076873d1978f751fdb70e93c7c6a81af
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.openlocfilehash: 07666ead0770c8055a62f75cb481648b0c72ef8b
+ms.sourcegitcommit: 86adcc06e35390f13c1e372c36d2e044f1fc31ef
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 04/26/2018
 ---
 # <a name="names-of-declared-xml-elements-and-attributes-visual-basic"></a>宣告的 XML 項目和屬性的名稱 (Visual Basic)
-本主題提供[!INCLUDE[vbprvb](~/includes/vbprvb-md.md)]XML 元素和屬性在 XML 常值命名指導方針。  您可以在 XML 常值，指定區域名稱或完整的名稱。 限定的名稱是由 XML 命名空間前置詞、 冒號和本機名稱所組成。 如需有關 XML 命名空間前置詞的詳細資訊，請參閱[XML 元素常值](../../../../visual-basic/language-reference/xml-literals/xml-element-literal.md)。  
+本主題會提供 Visual Basic 指導方針命名 XML 元素和屬性在 XML 常值。  您可以在 XML 常值，指定區域名稱或完整的名稱。 限定的名稱是由 XML 命名空間前置詞、 冒號和本機名稱所組成。 如需有關 XML 命名空間前置詞的詳細資訊，請參閱[XML 元素常值](../../../../visual-basic/language-reference/xml-literals/xml-element-literal.md)。  
   
 ## <a name="rules"></a>規則  
- 項目或屬性中的本機名稱[!INCLUDE[vbprvb](~/includes/vbprvb-md.md)]必須遵守下列規則。  
+ 項目或屬性在 Visual Basic 中的區域名稱必須遵守下列規則。  
   
 -   它可以開始與命名空間。 它必須以字母字元或底線開頭 (`_`)。  
   
@@ -48,7 +49,7 @@ ms.lasthandoff: 11/21/2017
  不過，您的名稱不應該短，無法適當地描述項目，或您的程式碼如何使用它。 這是很重要的程式碼的可讀性。 如果其他人嘗試了解它，或您自己想要在您撰寫之後很長的時間，適當的項目名稱可以節省時間。  
   
 ## <a name="case-sensitivity-in-names"></a>在名稱中的區分大小寫  
- XML 項目名稱會區分大小寫。 這表示當[!INCLUDE[vbprvb](~/includes/vbprvb-md.md)]編譯器比較兩個名稱只有字母大小寫不同，它會將它們解譯為不同的名稱。 例如，它可解譯`ABC`和`abc`視為參考到分隔項目。  
+ XML 項目名稱會區分大小寫。 這表示，當 Visual Basic 編譯器會比較兩個名稱只有字母大小寫不同，它會將它們解譯為不同的名稱。 例如，它可解譯`ABC`和`abc`視為參考到分隔項目。  
   
 ## <a name="xml-namespaces"></a>XML 命名空間  
  在建立 XML 項目常值時，您可以指定的項目名稱的 XML 命名空間前置詞。 如需詳細資訊，請參閱[XML 元素常值](../../../../visual-basic/language-reference/xml-literals/xml-element-literal.md)。  

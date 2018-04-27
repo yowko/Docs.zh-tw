@@ -1,11 +1,12 @@
 ---
-title: "迴圈結構 (Visual Basic)"
-ms.custom: 
+title: 迴圈結構 (Visual Basic)
+ms.custom: ''
 ms.date: 07/20/2015
 ms.prod: .net
-ms.reviewer: 
-ms.suite: 
-ms.technology: devlang-visual-basic
+ms.reviewer: ''
+ms.suite: ''
+ms.technology:
+- devlang-visual-basic
 ms.topic: article
 helpviewer_keywords:
 - control flow [Visual Basic], loops
@@ -16,17 +17,17 @@ helpviewer_keywords:
 - Do statement [Visual Basic], Do loops
 - conditional statements [Visual Basic], loop structures
 ms.assetid: ecacb09b-a4c9-42be-98b2-a15d368b5db8
-caps.latest.revision: "18"
+caps.latest.revision: 18
 author: dotnet-bot
 ms.author: dotnetcontent
-ms.openlocfilehash: 2f813a555677e3828297c9c360b7a47217c39524
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.openlocfilehash: 8c13f2cc6546a652f0967bd83369d8af5998f7e2
+ms.sourcegitcommit: 86adcc06e35390f13c1e372c36d2e044f1fc31ef
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 04/26/2018
 ---
 # <a name="loop-structures-visual-basic"></a>迴圈結構 (Visual Basic)
-[!INCLUDE[vbprvb](~/includes/vbprvb-md.md)]迴圈結構可讓您重複執行一或多行程式碼。 您可以重複迴圈結構中的陳述式，直到條件為`True`，直到條件為`False`、 在集合中指定的次數，或一次針對每個項目數目。  
+Visual Basic 迴圈結構可讓您重複執行一或多行程式碼。 您可以重複迴圈結構中的陳述式，直到條件為`True`，直到條件為`False`、 在集合中指定的次數，或一次針對每個項目數目。  
   
  下圖顯示迴圈結構，執行一組陳述式，直到條件變成 true 為止。  
   

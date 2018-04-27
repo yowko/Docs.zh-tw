@@ -10,37 +10,37 @@ ms.technology:
 ms.tgt_pltfrm: ''
 ms.topic: article
 ms.assetid: 3bb65d38-cce2-46f5-b979-e5c505e95e10
-caps.latest.revision: ''
+caps.latest.revision: 25
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
 ms.workload:
 - dotnet
-ms.openlocfilehash: fb23f329906e21f3d8558139075c5f575f2f13bd
-ms.sourcegitcommit: c883637b41ee028786edceece4fa872939d2e64c
+ms.openlocfilehash: a636734958cd73a2f158d3f25cbbe448ff703612
+ms.sourcegitcommit: 86adcc06e35390f13c1e372c36d2e044f1fc31ef
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 03/23/2018
+ms.lasthandoff: 04/26/2018
 ---
 # <a name="what39s-new-in-adonet"></a>什麼&#39;s ADO.NET 的新功能
 下列功能是 [!INCLUDE[vstecado](../../../../includes/vstecado-md.md)] 中 [!INCLUDE[net_v45](../../../../includes/net-v45-md.md)] 的新功能。  
   
 ## <a name="sqlclient-data-provider"></a>SqlClient Data Provider  
- 下列功能在 [!INCLUDE[dnprdnshort](../../../../includes/dnprdnshort-md.md)] 中是 [!INCLUDE[ssNoVersion](../../../../includes/ssnoversion-md.md)] Data Provider for [!INCLUDE[net_v45](../../../../includes/net-v45-md.md)] 的新功能。  
+ 下列功能是新功能[!INCLUDE[dnprdnshort](../../../../includes/dnprdnshort-md.md)]Data Provider for SQL Server 中[!INCLUDE[net_v45](../../../../includes/net-v45-md.md)]:  
   
 -   ConnectRetryCount 和 ConnectRetryInterval 連接字串關鍵字 (<xref:System.Data.SqlClient.SqlConnection.ConnectionString%2A>) 可讓您控制閒置連接恢復功能。  
   
--   [!INCLUDE[ssNoVersion](../../../../includes/ssnoversion-md.md)] 對應用程式的串流支援，當伺服器上的資料未結構化時才提供支援。  請參閱[SqlClient 串流支援](../../../../docs/framework/data/adonet/sqlclient-streaming-support.md)如需詳細資訊。  
+-   資料流支援從 SQL Server 的應用程式支援資料在伺服器上的非結構化的案例。  請參閱[SqlClient 串流支援](../../../../docs/framework/data/adonet/sqlclient-streaming-support.md)如需詳細資訊。  
   
 -   增加對非同步程式設計的支援。  請參閱[進行非同步程式設計](../../../../docs/framework/data/adonet/asynchronous-programming.md)如需詳細資訊。  
   
 -   現在會將連接失敗記錄在擴充事件記錄中。 如需詳細資訊，請參閱 [ADO.NET 中的資料追蹤](../../../../docs/framework/data/adonet/data-tracing.md)。  
   
--   SqlClient 現在支援 [!INCLUDE[ssNoVersion](../../../../includes/ssnoversion-md.md)] 的高可用性、嚴重損壞修復功能、AlwaysOn。 如需詳細資訊，請參閱[高可用性、 嚴重損壞修復的 SqlClient 支援](../../../../docs/framework/data/adonet/sql/sqlclient-support-for-high-availability-disaster-recovery.md)。  
+-   SqlClient 現在會提供對於 SQL Server 的高可用性、 嚴重損壞修復功能、 AlwaysOn 支援。 如需詳細資訊，請參閱[高可用性、 嚴重損壞修復的 SqlClient 支援](../../../../docs/framework/data/adonet/sql/sqlclient-support-for-high-availability-disaster-recovery.md)。  
   
--   使用 <xref:System.Security.SecureString> 驗證時，可將密碼當做 [!INCLUDE[ssNoVersion](../../../../includes/ssnoversion-md.md)] 來傳遞。 如需詳細資訊，請參閱 <xref:System.Data.SqlClient.SqlCredential>。  
+-   密碼可以傳遞做為<xref:System.Security.SecureString>使用 SQL Server 驗證時。 如需詳細資訊，請參閱 <xref:System.Data.SqlClient.SqlCredential>。  
   
--   當 `TrustServerCertificate` 為 False，且 `Encrypt` 為 True 時，[!INCLUDE[ssNoVersion](../../../../includes/ssnoversion-md.md)] SSL 憑證中的伺服器名稱 (或 IP 位址) 必須完全符合連接字串中所指定的伺服器名稱 (或 IP 位址)。 否則連接嘗試會失敗。 如需詳細資訊，請參閱 `Encrypt` 中有關 <xref:System.Data.SqlClient.SqlConnection.ConnectionString%2A> 連線選項的說明。  
+-   當`TrustServerCertificate`為 false，`Encrypt`為 true，SQL Server SSL 憑證中的伺服器名稱 （或 IP 位址） 必須完全符合的伺服器名稱 （或 IP 位址） 連接字串中指定。 否則連接嘗試會失敗。 如需詳細資訊，請參閱 `Encrypt` 中有關 <xref:System.Data.SqlClient.SqlConnection.ConnectionString%2A> 連線選項的說明。  
   
      如果此變更導致現有的應用程式不再連線，您可以使用下列其中一種方法修復應用程式：  
   

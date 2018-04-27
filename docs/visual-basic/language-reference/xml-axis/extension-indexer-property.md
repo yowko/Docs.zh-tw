@@ -18,11 +18,11 @@ ms.assetid: a16a4b13-54be-432c-82b3-a87091464ada
 caps.latest.revision: 22
 author: dotnet-bot
 ms.author: dotnetcontent
-ms.openlocfilehash: 99d14b6e54a59ffc904a9e786c22498d23ee8ab6
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.openlocfilehash: 6bcb19388a9449a76eed5689b12fb95c5a4fb8de
+ms.sourcegitcommit: 86adcc06e35390f13c1e372c36d2e044f1fc31ef
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 04/26/2018
 ---
 # <a name="extension-indexer-property-visual-basic"></a>擴充索引子屬性 (Visual Basic)
 提供集合中個別項目的存取。  
@@ -37,10 +37,10 @@ object(index)
   
 |詞彙|定義|  
 |---|---|  
-|`object`|必要項。 可查詢的集合。 也就是集合中實作<xref:System.Collections.Generic.IEnumerable%601>或<xref:System.Linq.IQueryable%601>。|  
-|(|必要項。 代表索引子屬性開始。|  
-|`index`|必要項。 整數運算式，指定集合中項目的以零為起始的位置。|  
-|)|必要項。 代表索引子屬性的結尾。|  
+|`object`|必要。 可查詢的集合。 也就是集合中實作<xref:System.Collections.Generic.IEnumerable%601>或<xref:System.Linq.IQueryable%601>。|  
+|(|必要。 代表索引子屬性開始。|  
+|`index`|必要。 整數運算式，指定集合中項目的以零為起始的位置。|  
+|)|必要。 代表索引子屬性的結尾。|  
   
 ## <a name="return-value"></a>傳回值  
  從集合中指定位置的物件或`Nothing`如果索引超出範圍。  
@@ -48,7 +48,7 @@ object(index)
 ## <a name="remarks"></a>備註  
  擴充索引子屬性可用來存取集合中的個別項目。 XML 軸屬性的輸出通常會用於這個索引子屬性。 XML 子代和 XML 子代軸屬性傳回的集合<xref:System.Xml.Linq.XElement>物件或屬性值。  
   
- [!INCLUDE[vbprvb](~/includes/vbprvb-md.md)]編譯器會將擴充功能索引子屬性轉換成呼叫`ElementAtOrDefault`方法。 不同於陣列索引子，`ElementAtOrDefault`方法會傳回`Nothing`如果索引超出範圍。 這種行為時，您無法輕鬆地判斷集合中的項目數。  
+ Visual Basic 編譯器會將擴充功能索引子屬性轉換成呼叫`ElementAtOrDefault`方法。 不同於陣列索引子，`ElementAtOrDefault`方法會傳回`Nothing`如果索引超出範圍。 這種行為時，您無法輕鬆地判斷集合中的項目數。  
   
  這個索引子屬性就延伸模組屬性的集合，實作像是<xref:System.Collections.Generic.IEnumerable%601>或<xref:System.Linq.IQueryable%601>： 集合沒有索引子或預設屬性時，才使用它。  
   

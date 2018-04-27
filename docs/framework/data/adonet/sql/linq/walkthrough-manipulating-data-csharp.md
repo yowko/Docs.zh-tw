@@ -1,24 +1,26 @@
 ---
-title: "逐步解說：操作資料 (C#)"
-ms.custom: 
+title: 逐步解說：操作資料 (C#)
+ms.custom: ''
 ms.date: 03/30/2017
 ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.technology: dotnet-ado
-ms.tgt_pltfrm: 
+ms.reviewer: ''
+ms.suite: ''
+ms.technology:
+- dotnet-ado
+ms.tgt_pltfrm: ''
 ms.topic: article
 ms.assetid: 24adfbe0-0ad6-449f-997d-8808e0770d2e
-caps.latest.revision: "2"
+caps.latest.revision: 2
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.workload: dotnet
-ms.openlocfilehash: 60724967cccd1209aeec1bf53b4e6d4fa5051996
-ms.sourcegitcommit: ed26cfef4e18f6d93ab822d8c29f902cff3519d1
+ms.workload:
+- dotnet
+ms.openlocfilehash: d1851bd4c358b96cc9b49f274b31f5f69d9b8d7b
+ms.sourcegitcommit: 86adcc06e35390f13c1e372c36d2e044f1fc31ef
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 01/17/2018
+ms.lasthandoff: 04/26/2018
 ---
 # <a name="walkthrough-manipulating-data-c"></a>逐步解說：操作資料 (C#)
 本逐步解說針對加入、修改和刪除資料庫中的資料，提供基本的端對端 [!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)] 案例。 您將使用範例 Northwind 資料庫的複本來加入客戶、變更客戶名稱，以及刪除訂單。  
@@ -47,7 +49,7 @@ ms.lasthandoff: 01/17/2018
 ## <a name="overview"></a>總覽  
  此逐步解說包含六個主要工作：  
   
--   在 [!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)] 中建立 [!INCLUDE[vs_current_short](../../../../../../includes/vs-current-short-md.md)] 方案。  
+-   建立[!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)]Visual Studio 中的方案。  
   
 -   將資料庫程式碼檔案加入至專案。  
   
@@ -60,11 +62,11 @@ ms.lasthandoff: 01/17/2018
 -   將這些變更送出至 Northwind 資料庫。  
   
 ## <a name="creating-a-linq-to-sql-solution"></a>建立 LINQ to SQL 方案  
- 在第一個工作中，您要建立一個 [!INCLUDE[vs_current_short](../../../../../../includes/vs-current-short-md.md)] 方案內含必要的參考，以建置並執行 [!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)] 專案。  
+ 在第一個工作中，您可以建立包含必要的參考，建置並執行 Visual Studio 方案[!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)]專案。  
   
 #### <a name="to-create-a-linq-to-sql-solution"></a>若要建立 LINQ to SQL 方案  
   
-1.  在[!INCLUDE[vs_current_short](../../../../../../includes/vs-current-short-md.md)]**檔案**功能表上，指向**新增**，然後按一下 **專案**。  
+1.  在 Visual Studio**檔案**功能表上，指向**新增**，然後按一下 **專案**。  
   
 2.  在**專案類型**窗格**新專案**對話方塊中，按一下  **Visual C#**。  
   
@@ -115,7 +117,7 @@ ms.lasthandoff: 01/17/2018
   
      A**主控台**視窗隨即開啟。  
   
-     您可以關閉應用程式中按 Enter 鍵**主控台**視窗中，或按一下**停止偵錯**上[!INCLUDE[vs_current_short](../../../../../../includes/vs-current-short-md.md)]**偵錯**功能表。  
+     您可以關閉應用程式中按 Enter 鍵**主控台**視窗中，或按一下**停止偵錯**在 Visual Studio**偵錯**功能表。  
   
 ## <a name="creating-a-new-entity"></a>建立新的實體  
  建立新的實體十分簡單。 您可以使用 `Customer` 關鍵字，建立物件 (如 `new`)。  
@@ -172,5 +174,5 @@ ms.lasthandoff: 01/17/2018
 > [!NOTE]
 >  送出變更以加入新的客戶之後，無法再照原狀執行這個方案。 若要重新執行方案，請變更要加入的客戶名稱和客戶識別碼。  
   
-## <a name="see-also"></a>請參閱  
+## <a name="see-also"></a>另請參閱  
  [依逐步解說學習](../../../../../../docs/framework/data/adonet/sql/linq/learning-by-walkthroughs.md)

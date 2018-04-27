@@ -1,11 +1,12 @@
 ---
-title: "如何：將值置入屬性 (Visual Basic)"
-ms.custom: 
+title: 如何：將值置入屬性 (Visual Basic)
+ms.custom: ''
 ms.date: 07/20/2015
 ms.prod: .net
-ms.reviewer: 
-ms.suite: 
-ms.technology: devlang-visual-basic
+ms.reviewer: ''
+ms.suite: ''
+ms.technology:
+- devlang-visual-basic
 ms.topic: article
 helpviewer_keywords:
 - property values [Visual Basic]
@@ -14,25 +15,25 @@ helpviewer_keywords:
 - Visual Basic code, properties
 - properties [Visual Basic], values
 ms.assetid: c39401e5-b5fc-4439-8f31-ed640f7ce6ed
-caps.latest.revision: "13"
+caps.latest.revision: 13
 author: dotnet-bot
 ms.author: dotnetcontent
-ms.openlocfilehash: 44e7c4a92ea3d087c12e74aa2ede33a52c8730cf
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.openlocfilehash: 0f00303b290e324612ad3ac7af673690b4cf4e15
+ms.sourcegitcommit: 86adcc06e35390f13c1e372c36d2e044f1fc31ef
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 04/26/2018
 ---
 # <a name="how-to-put-a-value-in-a-property-visual-basic"></a>如何：將值置入屬性 (Visual Basic)
 您儲存值，您可以在屬性中的屬性名稱放在指派陳述式的左半部。  
   
- 屬性的`Set`程序可儲存值，但您沒有明確呼叫它的名稱。 就像您會使用變數，您可以使用屬性。 [!INCLUDE[vbprvb](~/includes/vbprvb-md.md)]會呼叫屬性程序。  
+ 屬性的`Set`程序可儲存值，但您沒有明確呼叫它的名稱。 就像您會使用變數，您可以使用屬性。 Visual Basic 會將屬性的程序呼叫。  
   
 ### <a name="to-store-a-value-in-a-property"></a>若要在屬性中儲存的值  
   
 1.  指派陳述式的左邊使用屬性名稱。  
   
-     下列範例會設定的值[!INCLUDE[vbprvb](~/includes/vbprvb-md.md)]`TimeOfDay`屬性中午，隱含地呼叫其`Set`程序。  
+     下列範例會設定的值的 Visual Basic`TimeOfDay`屬性中午，隱含地呼叫其`Set`程序。  
   
      [!code-vb[VbVbcnProcedures#11](./codesnippet/VisualBasic/how-to-put-a-value-in-a-property_1.vb)]  
   

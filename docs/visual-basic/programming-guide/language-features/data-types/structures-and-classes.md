@@ -1,11 +1,12 @@
 ---
-title: "結構和類別 (Visual Basic)"
-ms.custom: 
+title: 結構和類別 (Visual Basic)
+ms.custom: ''
 ms.date: 07/20/2015
 ms.prod: .net
-ms.reviewer: 
-ms.suite: 
-ms.technology: devlang-visual-basic
+ms.reviewer: ''
+ms.suite: ''
+ms.technology:
+- devlang-visual-basic
 ms.topic: article
 helpviewer_keywords:
 - classes [Visual Basic], vs. structures
@@ -15,17 +16,17 @@ helpviewer_keywords:
 - structures [Visual Basic], structure variables
 - structure variables [Visual Basic]
 ms.assetid: a221e74a-ffcf-4bdc-a0f6-a088a9bf26cc
-caps.latest.revision: "21"
+caps.latest.revision: 21
 author: dotnet-bot
 ms.author: dotnetcontent
-ms.openlocfilehash: 08e31481feac7a6184c6b29269d193c749f440ff
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.openlocfilehash: cf72fb0a7a34d45774cb9a58c037ebcb1c05288f
+ms.sourcegitcommit: 86adcc06e35390f13c1e372c36d2e044f1fc31ef
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 04/26/2018
 ---
 # <a name="structures-and-classes-visual-basic"></a>結構和類別 (Visual Basic)
-[!INCLUDE[vbprvb](~/includes/vbprvb-md.md)]統一的語法結構和類別，因為這兩個實體支援的大部分相同的功能。 不過，另外還有結構和類別之間的重要差異。  
+Visual Basic 統一的語法結構和類別，因為這兩個實體支援的大部分相同的功能。 不過，另外還有結構和類別之間的重要差異。  
   
  類別具有參考類型的優點，傳遞參考會比將它的資料結構變數傳遞更有效率。 相反地，結構不需要全域堆積上的記憶體配置。  
   
@@ -92,7 +93,7 @@ ms.lasthandoff: 11/21/2017
   
      結構項目，不過，會隔離在自己的執行個體。 其值的變更不會反映在任何其他結構變數，即使是在相同的其他執行個體`Structure`宣告。  
   
--   **相等。** 與項目依項目測試必須執行的兩個結構相等測試。 可以使用比較兩個物件變數<xref:System.Object.Equals%2A>方法。 <xref:System.Object.Equals%2A>指出兩個變數是否指向相同的執行個體。  
+-   **相等。** 與項目依項目測試必須執行的兩個結構相等測試。 可以使用比較兩個物件變數<xref:System.Object.Equals%2A>方法。 <xref:System.Object.Equals%2A> 指出兩個變數是否指向相同的執行個體。  
   
 ## <a name="see-also"></a>另請參閱  
  [資料類型](../../../../visual-basic/programming-guide/language-features/data-types/index.md)  

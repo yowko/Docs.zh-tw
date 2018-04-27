@@ -1,28 +1,28 @@
 ---
-title: "設定追蹤"
-ms.custom: 
+title: 設定追蹤
+ms.custom: ''
 ms.date: 03/30/2017
 ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
+ms.reviewer: ''
+ms.suite: ''
 ms.technology:
 - dotnet-clr
-ms.tgt_pltfrm: 
+ms.tgt_pltfrm: ''
 ms.topic: article
 helpviewer_keywords:
 - tracing [WCF]
 ms.assetid: 82922010-e8b3-40eb-98c4-10fc05c6d65d
-caps.latest.revision: 
+caps.latest.revision: 53
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
 ms.workload:
 - dotnet
-ms.openlocfilehash: 3beeaec1ed9982fc49f6bf81e2717db862e7882f
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.openlocfilehash: b7b9590096789af609e83d1a5ed736cf18e27700
+ms.sourcegitcommit: 86adcc06e35390f13c1e372c36d2e044f1fc31ef
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 04/26/2018
 ---
 # <a name="configuring-tracing"></a>設定追蹤
 本主題將說明如何啟用追蹤、設定追蹤來源以發出追蹤並設定追蹤層級、設定活動追蹤與傳播以支援端對端追蹤相互關聯，以及設定追蹤接聽項來存取追蹤。  
@@ -66,7 +66,7 @@ ms.lasthandoff: 12/22/2017
 ```  
   
 > [!NOTE]
->  若要編輯的組態檔[!INCLUDE[indigo2](../../../../../includes/indigo2-md.md)]服務專案中的[!INCLUDE[vs_current_short](../../../../../includes/vs-current-short-md.md)]，以滑鼠右鍵按一下應用程式的組態檔，Web 裝載的應用程式，或在自我裝載應用程式的 Appname.exe.config Web.config **方案總管 中**。 然後選擇 **編輯 WCF 組態**操作功能表項目。 這會啟動[組態編輯器工具 (SvcConfigEditor.exe)](../../../../../docs/framework/wcf/configuration-editor-tool-svcconfigeditor-exe.md)，可讓您修改組態設定[!INCLUDE[indigo2](../../../../../includes/indigo2-md.md)]服務以使用圖形化使用者介面。  
+>  若要編輯的組態檔[!INCLUDE[indigo2](../../../../../includes/indigo2-md.md)]服務 [Visual Studio 專案中的，以滑鼠右鍵按一下應用程式的組態檔，Web 裝載的應用程式，或在自我裝載應用程式的 Appname.exe.config Web.config **方案總管] 中**。 然後選擇 **編輯 WCF 組態**操作功能表項目。 這會啟動[組態編輯器工具 (SvcConfigEditor.exe)](../../../../../docs/framework/wcf/configuration-editor-tool-svcconfigeditor-exe.md)，可讓您修改組態設定[!INCLUDE[indigo2](../../../../../includes/indigo2-md.md)]服務以使用圖形化使用者介面。  
   
 ## <a name="configuring-trace-sources-to-emit-traces"></a>設定追蹤來源來發出追蹤  
  [!INCLUDE[indigo2](../../../../../includes/indigo2-md.md)] 會為每個組件定義追蹤來源。 組件中產生的追蹤是由針對該來源而定義的接聽項所存取。 下列為定義的追蹤來源：  
@@ -146,7 +146,7 @@ ms.lasthandoff: 12/22/2017
 </system.diagnostics>  
 ```  
   
- [!INCLUDE[crabout](../../../../../includes/crabout-md.md)]建立使用者定義追蹤來源，請參閱[擴充追蹤](../../../../../docs/framework/wcf/samples/extending-tracing.md)。  
+ [!INCLUDE[crabout](../../../../../includes/crabout-md.md)] 建立使用者定義追蹤來源，請參閱[擴充追蹤](../../../../../docs/framework/wcf/samples/extending-tracing.md)。  
   
 ## <a name="configuring-trace-listeners-to-consume-traces"></a>設定追蹤接聽項來使用追蹤  
  在執行階段，[!INCLUDE[indigo2](../../../../../includes/indigo2-md.md)] 會將追蹤資料輸送到負責處理資料的接聽項。 [!INCLUDE[indigo2](../../../../../includes/indigo2-md.md)] 會為 <xref:System.Diagnostics> 提供幾項預先定義的接聽項，其格式與輸出時使用的格式不同。 您也可以新增自訂接聽項型別。  
@@ -155,7 +155,7 @@ ms.lasthandoff: 12/22/2017
   
  您可以設定自訂追蹤接聽項，以將追蹤傳送到 Wire，例如傳送至遠端資料庫。 身為應用程式的部署者，您應該在遠端電腦的追蹤記錄上強制執行適當的存取控制。  
   
- 您也可以使用程式設計方式來設定追蹤接聽項。 [!INCLUDE[crdefault](../../../../../includes/crdefault-md.md)][How to： 建立和初始化追蹤接聽項](http://go.microsoft.com/fwlink/?LinkId=94648)和[建立自訂 TraceListener](http://go.microsoft.com/fwlink/?LinkId=96239)。  
+ 您也可以使用程式設計方式來設定追蹤接聽項。 [!INCLUDE[crdefault](../../../../../includes/crdefault-md.md)] [如何： 建立和初始化追蹤接聽項](http://go.microsoft.com/fwlink/?LinkId=94648)和[建立自訂 TraceListener](http://go.microsoft.com/fwlink/?LinkId=96239)。  
   
 > [!CAUTION]
 >  因為 `System.Diagnostics.XmlWriterTraceListener` 不具備執行緒安全，追蹤來源可能會在輸出追蹤時特別鎖定資源。 當許多執行緒將追蹤輸出至設定為使用此接聽項的追蹤來源時，可能會發生資源爭用的情況，進而造成顯著的效能問題。 若要解決這個問題，您應該實作具備執行緒安全的自訂接聽項。  
@@ -187,13 +187,13 @@ ms.lasthandoff: 12/22/2017
   
  `propagateActivity` 屬性會指出是否應該將活動傳播至其他參與訊息交換的端點。 將這個值設定為 `true` 之後，您就可以使用任意兩個端點所產生的追蹤檔，來觀察一個端點上的一組追蹤如何流動至另一個端點的一組追蹤。  
   
- [!INCLUDE[crabout](../../../../../includes/crabout-md.md)]活動追蹤與傳播，請參閱[傳播](../../../../../docs/framework/wcf/diagnostics/tracing/propagation.md)。  
+ [!INCLUDE[crabout](../../../../../includes/crabout-md.md)] 活動追蹤與傳播，請參閱[傳播](../../../../../docs/framework/wcf/diagnostics/tracing/propagation.md)。  
   
  同時`propagateActivity`和`ActivityTracing`布林值會套用至 System.ServiceModel TraceSource。 `ActivityTracing`值也適用於任何追蹤來源，包括[!INCLUDE[indigo2](../../../../../includes/indigo2-md.md)]或使用者定義的。  
   
  您無法使用具有使用者定義追蹤來源的 `propagateActivity` 屬性。 若要進行使用者程式碼活動識別碼傳播，請確定您未設定 ServiceModel `ActivityTracing`，而且讓 ServiceModel `propagateActivity` 屬性仍舊設定為 `true`。  
   
-## <a name="see-also"></a>請參閱  
+## <a name="see-also"></a>另請參閱  
  [追蹤](../../../../../docs/framework/wcf/diagnostics/tracing/index.md)  
  [管理與診斷](../../../../../docs/framework/wcf/diagnostics/index.md)  
  [如何：建立和初始設定追蹤接聽項](http://go.microsoft.com/fwlink/?LinkId=94648)  

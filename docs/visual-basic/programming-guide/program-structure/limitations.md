@@ -1,11 +1,12 @@
 ---
-title: "Visual Basic 的限制"
-ms.custom: 
+title: Visual Basic 的限制
+ms.custom: ''
 ms.date: 07/20/2015
 ms.prod: .net
-ms.reviewer: 
-ms.suite: 
-ms.technology: devlang-visual-basic
+ms.reviewer: ''
+ms.suite: ''
+ms.technology:
+- devlang-visual-basic
 ms.topic: article
 helpviewer_keywords:
 - limits
@@ -14,19 +15,19 @@ helpviewer_keywords:
 - limits, Visual Basic code
 - Visual Basic code, limitations
 ms.assetid: cf1646b7-5d24-48c6-9616-bda8a4849d91
-caps.latest.revision: "14"
+caps.latest.revision: 14
 author: dotnet-bot
 ms.author: dotnetcontent
-ms.openlocfilehash: 97a2e162b9f1a673fbe805a5d2ef1421cd423a4f
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.openlocfilehash: d06b743996969dcd7fc022bbb8ab625f3a151137
+ms.sourcegitcommit: 86adcc06e35390f13c1e372c36d2e044f1fc31ef
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 04/26/2018
 ---
 # <a name="visual-basic-limitations"></a>Visual Basic 的限制
-舊版的[!INCLUDE[vbprvb](~/includes/vbprvb-md.md)]強制執行中程式碼，例如變數名稱的長度界限中模組和模組大小所允許的變數數目。 在 Visual Basic.NET 中，這些限制有已經放寬，讓您更自由撰寫及排列您的程式碼。  
+舊版的 Visual Basic 會強制界限的程式碼，例如變數名稱的模組和模組大小中允許的變數數目的長度。 在 Visual Basic.NET 中，這些限制有已經放寬，讓您更自由撰寫及排列您的程式碼。  
   
- 實體限制會更依賴於執行階段的記憶體比編譯時期的考量。 如果您使用審慎的程式設計作法，並將大型應用程式分割成多個類別和模組，則很少機會遇到內部[!INCLUDE[vbprvb](~/includes/vbprvb-md.md)]限制。  
+ 實體限制會更依賴於執行階段的記憶體比編譯時期的考量。 如果您使用審慎的程式設計作法，並將大型應用程式分割成多個類別和模組時，就很少機會遇到內部的 Visual Basic 限制。  
   
  在極端情況下可能會遇到一些限制如下：  
   

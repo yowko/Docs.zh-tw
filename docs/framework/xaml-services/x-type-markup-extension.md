@@ -1,12 +1,13 @@
 ---
-title: "x:Type 標記延伸"
-ms.custom: 
+title: x:Type 標記延伸
+ms.custom: ''
 ms.date: 03/30/2017
 ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.technology: dotnet-wpf
-ms.tgt_pltfrm: 
+ms.reviewer: ''
+ms.suite: ''
+ms.technology:
+- dotnet-wpf
+ms.tgt_pltfrm: ''
 ms.topic: article
 f1_keywords:
 - x:TypeExtension
@@ -21,16 +22,17 @@ helpviewer_keywords:
 - TargetType attribute [XAML Services]
 - Type markup extension in XAML [XAML Services]
 ms.assetid: e0e0ce6f-e873-49c7-8ad7-8b840eb353ec
-caps.latest.revision: "27"
+caps.latest.revision: 27
 author: wadepickett
 ms.author: wpickett
 manager: wpickett
-ms.workload: dotnet
-ms.openlocfilehash: a4d645d5c953c0ff33435a5648024ace099455e2
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.workload:
+- dotnet
+ms.openlocfilehash: db56c2bcdca14b87de320dfe19a6c364c76ecef7
+ms.sourcegitcommit: 86adcc06e35390f13c1e372c36d2e044f1fc31ef
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 04/26/2018
 ---
 # <a name="xtype-markup-extension"></a>x:Type 標記延伸
 提供 CLR<xref:System.Type>是指定的 XAML 類型的基礎類型的物件。  
@@ -55,7 +57,7 @@ ms.lasthandoff: 12/22/2017
 |`typeNameValue`|必要。 型別名稱解析成目前的預設 XAML 命名空間;或指定的對應前置詞，如果`prefix`提供。|  
   
 ## <a name="remarks"></a>備註  
- `x:Type`標記延伸可以類似的函式來`typeof()`中的運算子[!INCLUDE[TLA#tla_cshrp](../../../includes/tlasharptla-cshrp-md.md)]或`GetType`中的運算子[!INCLUDE[TLA#tla_visualb](../../../includes/tlasharptla-visualb-md.md)]。  
+ `x:Type`標記延伸可以類似的函式來`typeof()`C# 中的運算子或`GetType`運算子在 Microsoft Visual Basic。  
   
  `x:Type`標記延伸提供針對接受的類型屬性，從字串轉換行為<xref:System.Type>。 輸入是 XAML 類型。 輸入的 XAML 型別與 CLR 的輸出之間的關聯性<xref:System.Type>在於輸出<xref:System.Type>是<xref:System.Xaml.XamlType.UnderlyingType%2A>輸入的<xref:System.Xaml.XamlType>之後查閱所需之,<xref:System.Xaml.XamlType>根據 XAML 結構描述內容和<xref:System.Windows.Markup.IXamlTypeResolver>內容提供的服務。  
   
@@ -67,7 +69,7 @@ ms.lasthandoff: 12/22/2017
   
  `x:Type`標記延伸可用於物件項目語法。 在此情況下，指定的值<xref:System.Windows.Markup.TypeExtension.TypeName%2A>屬性才能正確地初始化擴充功能。  
   
- `x:Type`標記延伸也可用做為詳細資訊的屬性; 不過此，請使用不是標準： `<``object``property``="{x:Type TypeName=``typeNameValue``}" .../>`  
+ `x:Type`標記延伸也可用做為詳細資訊的屬性; 不過此，請使用不是標準： `<``object` `property``="{x:Type TypeName=``typeNameValue``}" .../>`  
   
 ## <a name="wpf-usage-notes"></a>WPF 使用注意事項  
   
@@ -82,7 +84,7 @@ ms.lasthandoff: 12/22/2017
 ## <a name="xaml-2009"></a>XAML 2009  
  XAML 2009 支援其他的泛型類型，並修改功能行為的`x:TypeArguments`和`x:Type`提供這項支援。  
   
--   `x:TypeArguments`它的泛型物件具現化的相關聯的物件項目可以是根目錄以外的項目上。 如需詳細資訊，請參閱的 < XAML 2009 > 一節[X:typearguments 指示詞](../../../docs/framework/xaml-services/x-typearguments-directive.md)。  
+-   `x:TypeArguments` 它的泛型物件具現化的相關聯的物件項目可以是根目錄以外的項目上。 如需詳細資訊，請參閱的 < XAML 2009 > 一節[X:typearguments 指示詞](../../../docs/framework/xaml-services/x-typearguments-directive.md)。  
   
 -   XAML 2009 支援語法標記中指定的泛型類型條件約束。 這可由`x:TypeArguments`、 藉由`x:Type`，或結合兩個功能。  
   
@@ -90,7 +92,7 @@ ms.lasthandoff: 12/22/2017
   
  在 WPF 中，您可以使用 XAML 2009 功能，但是僅針對鬆散的 XAML (未標記編譯 XAML)。 WPF 之編譯標記的 XAML 和 BAML 形式的 XAML 目前不支援 XAML 2009 關鍵字和功能。  
   
-## <a name="see-also"></a>請參閱  
+## <a name="see-also"></a>另請參閱  
  <xref:System.Windows.Style>  
  [樣式設定和範本化](../../../docs/framework/wpf/controls/styling-and-templating.md)  
  [XAML 概觀 (WPF)](../../../docs/framework/wpf/advanced/xaml-overview-wpf.md)  

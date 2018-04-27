@@ -1,28 +1,28 @@
 ---
-title: "版本相容序列化技術範例"
-ms.custom: 
+title: 版本相容序列化技術範例
+ms.custom: ''
 ms.date: 03/30/2017
 ms.prod: .net
-ms.reviewer: 
-ms.suite: 
-ms.tgt_pltfrm: 
+ms.reviewer: ''
+ms.suite: ''
+ms.tgt_pltfrm: ''
 ms.topic: article
 ms.assetid: 2a183664-bfbf-4ff0-96f6-c836284ea916
-caps.latest.revision: "6"
+caps.latest.revision: 6
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
 ms.workload:
 - dotnet
 - dotnetcore
-ms.openlocfilehash: 9517abe23dba1b1b4b198fb8375e1ae35d8a2ca4
-ms.sourcegitcommit: e7f04439d78909229506b56935a1105a4149ff3d
+ms.openlocfilehash: ddeea50bafe250addad33a024c563258ede357c4
+ms.sourcegitcommit: 2e8acae16ae802f2d6d04e3ce0a6dbf04e476513
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 12/23/2017
+ms.lasthandoff: 04/18/2018
 ---
 # <a name="version-tolerant-serialization-technology-sample"></a>版本相容序列化技術範例
-[下載範例](http://download.microsoft.com/download/4/7/B/47B2164C-E780-4B10-8DE4-2CB5B886E0A6/Technologies/Serialization/Runtime%20Serialization/VTS.zip.exe)  
+[下載範例](https://download.microsoft.com/download/4/7/B/47B2164C-E780-4B10-8DE4-2CB5B886E0A6/Technologies/Serialization/Runtime%20Serialization/VTS.zip.exe)  
   
  這個範例將示範.NET 序列化的版本相容功能。 此範例會建置使用不同版本之 <xref:System.Runtime.Serialization.Formatters.Binary.BinaryFormatter> 將資料序列化及還原序列化的應用程式。 雖然有不同型別的版本存在，這些應用程式還是能密切地互相通訊。 如需詳細資訊，請參閱[版本相容序列化](../../../docs/standard/serialization/version-tolerant-serialization.md)。  
   
@@ -57,6 +57,6 @@ ms.lasthandoff: 12/23/2017
 > [!NOTE]
 >  這個範例會建置一個主控台應用程式。 您必須在 [命令提示字元] 視窗中啟動及執行這些應用程式，才能檢視這些應用程式的輸出。  
   
-## <a name="see-also"></a>請參閱  
+## <a name="see-also"></a>另請參閱  
  <xref:System.Runtime.Serialization.Formatters.Binary.BinaryFormatter>  
  <xref:System.IO.FileStream>

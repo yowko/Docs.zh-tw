@@ -16,14 +16,14 @@ ms.assetid: 3b77b7e3-8b17-40de-b4e1-05e4b9b325ad
 caps.latest.revision: 8
 author: dotnet-bot
 ms.author: dotnetcontent
-ms.openlocfilehash: be5576c56c2c6b2b1021c98e1e48314beaac4cbd
-ms.sourcegitcommit: bd1ef61f4bb794b25383d3d72e71041a5ced172e
+ms.openlocfilehash: 298faf593dc15d6ede5fbb4238599373f3a49a82
+ms.sourcegitcommit: 86adcc06e35390f13c1e372c36d2e044f1fc31ef
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/18/2017
+ms.lasthandoff: 04/26/2018
 ---
 # <a name="unable-to-write-temporary-file-because-temporary-path-is-not-available"></a>無法寫入暫存檔，因為無法使用暫存路徑
-[!INCLUDE[vbprvb](~/includes/vbprvb-md.md)] 無法判斷儲存暫存檔的路徑。  
+Visual Basic 無法判斷儲存暫存檔的路徑。  
   
  **錯誤 ID:** BC30698  
   

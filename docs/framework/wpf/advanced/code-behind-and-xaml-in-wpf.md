@@ -1,30 +1,32 @@
 ---
-title: "WPF 中的程式碼後置和 XAML"
-ms.custom: 
+title: WPF 中的程式碼後置和 XAML
+ms.custom: ''
 ms.date: 03/30/2017
 ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.technology: dotnet-wpf
-ms.tgt_pltfrm: 
+ms.reviewer: ''
+ms.suite: ''
+ms.technology:
+- dotnet-wpf
+ms.tgt_pltfrm: ''
 ms.topic: article
 helpviewer_keywords:
 - XAML [WPF], code-behind
 - code-behind files [WPF], XAML
 ms.assetid: 9df6d3c9-aed3-471c-af36-6859b19d999f
-caps.latest.revision: "14"
+caps.latest.revision: 14
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.workload: dotnet
-ms.openlocfilehash: 19c7c2cdd49663a57a4184027fd7d6ad8fcd7656
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.workload:
+- dotnet
+ms.openlocfilehash: 9c28a501996e4f2cc25e9e280b2f63e1c0c67051
+ms.sourcegitcommit: 86adcc06e35390f13c1e372c36d2e044f1fc31ef
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 04/26/2018
 ---
 # <a name="code-behind-and-xaml-in-wpf"></a>WPF 中的程式碼後置和 XAML
-<a name="introduction"></a>程式碼後置是用來描述與標記定義的物件，聯結的程式碼的詞彙時[!INCLUDE[TLA2#tla_xaml](../../../../includes/tla2sharptla-xaml-md.md)]頁面是標記編譯。 本主題描述程式碼後置的需求，以及程式碼中的替代的內嵌程式碼機制[!INCLUDE[TLA2#tla_xaml](../../../../includes/tla2sharptla-xaml-md.md)]。  
+<a name="introduction"></a> 程式碼後置是用來描述與標記定義的物件，聯結的程式碼的詞彙時[!INCLUDE[TLA2#tla_xaml](../../../../includes/tla2sharptla-xaml-md.md)]頁面是標記編譯。 本主題描述程式碼後置的需求，以及程式碼中的替代的內嵌程式碼機制[!INCLUDE[TLA2#tla_xaml](../../../../includes/tla2sharptla-xaml-md.md)]。  
   
  此主題包括下列章節：  
   
@@ -57,11 +59,11 @@ ms.lasthandoff: 12/22/2017
   
 -   處理常式必須符合在支援類型系統中的適當事件的委派。  
   
--   如[!INCLUDE[TLA#tla_visualb](../../../../includes/tlasharptla-visualb-md.md)]語言具體來說，您可以使用特定語言`Handles`關鍵字來關聯執行個體，以及事件處理常式宣告，而不是附加與中屬性的處理常式中的處理常式[!INCLUDE[TLA2#tla_xaml](../../../../includes/tla2sharptla-xaml-md.md)]。 不過，這項技術還是有一些限制因為`Handles`關鍵字不能支援的特定功能的所有[!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)]事件系統，例如特定路由事件的案例，或附加事件。 如需詳細資訊，請參閱[Visual Basic 和 WPF 的事件處理](../../../../docs/framework/wpf/advanced/visual-basic-and-wpf-event-handling.md)。  
+-   Microsoft Visual Basic 語言的具體來說，您可以使用特定語言`Handles`關鍵字來關聯執行個體，以及事件處理常式宣告，而不是附加與中屬性的處理常式中的處理常式[!INCLUDE[TLA2#tla_xaml](../../../../includes/tla2sharptla-xaml-md.md)]。 不過，這項技術還是有一些限制因為`Handles`關鍵字不能支援的特定功能的所有[!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)]事件系統，例如特定路由事件的案例，或附加事件。 如需詳細資訊，請參閱[Visual Basic 和 WPF 的事件處理](../../../../docs/framework/wpf/advanced/visual-basic-and-wpf-event-handling.md)。  
   
 <a name="x_Code"></a>   
 ## <a name="xcode"></a>x： 程式碼  
- [X:code](../../../../docs/framework/xaml-services/x-code-intrinsic-xaml-type.md)指示詞的項目中定義[!INCLUDE[TLA2#tla_xaml](../../../../includes/tla2sharptla-xaml-md.md)]。 `x:Code`指示詞項目可以包含內嵌程式碼。 內嵌定義的程式碼可以與互動[!INCLUDE[TLA2#tla_xaml](../../../../includes/tla2sharptla-xaml-md.md)]相同頁面上。 下列範例說明內嵌[!INCLUDE[TLA2#tla_cshrp](../../../../includes/tla2sharptla-cshrp-md.md)]程式碼。 請注意，程式碼位於`x:Code`項目和程式碼，必須以括住`<CDATA[`...`]]>`來逸出的內容[!INCLUDE[TLA2#tla_xml](../../../../includes/tla2sharptla-xml-md.md)]，如此[!INCLUDE[TLA2#tla_xaml](../../../../includes/tla2sharptla-xaml-md.md)]處理器 (解譯 [[!INCLUDE[TLA2#tla_xaml](../../../../includes/tla2sharptla-xaml-md.md)]結構描述或[!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)]結構描述) 不會嘗試解譯內容常值做為[!INCLUDE[TLA2#tla_xml](../../../../includes/tla2sharptla-xml-md.md)]。  
+ [X:code](../../../../docs/framework/xaml-services/x-code-intrinsic-xaml-type.md)指示詞的項目中定義[!INCLUDE[TLA2#tla_xaml](../../../../includes/tla2sharptla-xaml-md.md)]。 `x:Code`指示詞項目可以包含內嵌程式碼。 內嵌定義的程式碼可以與互動[!INCLUDE[TLA2#tla_xaml](../../../../includes/tla2sharptla-xaml-md.md)]相同頁面上。 下列範例說明內嵌 C# 程式碼。 請注意，程式碼位於`x:Code`項目和程式碼，必須以括住`<CDATA[`...`]]>`來逸出的內容[!INCLUDE[TLA2#tla_xml](../../../../includes/tla2sharptla-xml-md.md)]，如此[!INCLUDE[TLA2#tla_xaml](../../../../includes/tla2sharptla-xaml-md.md)]處理器 (解譯 [[!INCLUDE[TLA2#tla_xaml](../../../../includes/tla2sharptla-xaml-md.md)]結構描述或[!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)]結構描述) 不會嘗試解譯內容常值做為[!INCLUDE[TLA2#tla_xml](../../../../includes/tla2sharptla-xml-md.md)]。  
   
  [!code-xaml[XAMLOvwSupport#ButtonWithInlineCode](../../../../samples/snippets/csharp/VS_Snippets_Wpf/XAMLOvwSupport/CSharp/page4.xaml#buttonwithinlinecode)]  
   
@@ -69,7 +71,7 @@ ms.lasthandoff: 12/22/2017
 ## <a name="inline-code-limitations"></a>內嵌程式碼的限制  
  您應該考慮避免或限制的內嵌程式碼使用。 架構和程式碼撰寫原理，維護的區隔標記和程式碼後置會保留的設計工具和開發人員角色更多相異。 在更多技術層級，您為內嵌程式碼撰寫的程式碼可以是很冗長，因此若要撰寫，因為永遠寫入至[!INCLUDE[TLA2#tla_xaml](../../../../includes/tla2sharptla-xaml-md.md)]產生部分類別，且只能使用預設 XML 命名空間對應。 因為您無法將`using`陳述式，您必須完整限定的許多[!INCLUDE[TLA2#tla_api](../../../../includes/tla2sharptla-api-md.md)]您進行的呼叫。 預設值[!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)]對應包含大部分但非全部[!INCLUDE[TLA2#tla_clr](../../../../includes/tla2sharptla-clr-md.md)]中出現的命名空間[!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)]組件; 您必須完整限定型別和成員包含在其他的 CLR 命名空間內的呼叫。 您也不能超過的部分類別的任何項目中定義內嵌程式碼，且您參考的所有使用者程式碼實體都必須是成員或產生的部分類別中的變數。 其他語言特定程式設計功能，例如巨集或`#ifdef`針對全域變數或建置變數，也會不提供。 如需詳細資訊，請參閱[X:code 內建 XAML 類型](../../../../docs/framework/xaml-services/x-code-intrinsic-xaml-type.md)。  
   
-## <a name="see-also"></a>請參閱  
+## <a name="see-also"></a>另請參閱  
  [XAML 概觀 (WPF)](../../../../docs/framework/wpf/advanced/xaml-overview-wpf.md)  
  [x:Code 內建 XAML 類型](../../../../docs/framework/xaml-services/x-code-intrinsic-xaml-type.md)  
  [建置 WPF 應用程式](../../../../docs/framework/wpf/app-development/building-a-wpf-application-wpf.md)  

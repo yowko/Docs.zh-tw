@@ -1,24 +1,26 @@
 ---
-title: "非同步程式設計"
+title: 非同步程式設計
 ms.date: 03/30/2017
 ms.prod: .net-framework
-ms.technology: dotnet-ado
+ms.technology:
+- dotnet-ado
 ms.topic: article
 ms.assetid: 85da7447-7125-426e-aa5f-438a290d1f77
-caps.latest.revision: "30"
+caps.latest.revision: 30
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.workload: dotnet
-ms.openlocfilehash: 20e40a6705ad77dc42a70739e75abdbb058465e6
-ms.sourcegitcommit: ed26cfef4e18f6d93ab822d8c29f902cff3519d1
+ms.workload:
+- dotnet
+ms.openlocfilehash: 7dbc106b96e4e695108b6178951e3d43078467bc
+ms.sourcegitcommit: 86adcc06e35390f13c1e372c36d2e044f1fc31ef
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 01/17/2018
+ms.lasthandoff: 04/26/2018
 ---
 # <a name="asynchronous-programming"></a>非同步程式設計
 
-本主題探討 [!INCLUDE[dnprdnshort](../../../../includes/dnprdnshort-md.md)] Data Provider for [!INCLUDE[ssNoVersion](../../../../includes/ssnoversion-md.md)] (SqlClient) 中之非同步程式設計支援，包括在 [!INCLUDE[net_v45](../../../../includes/net-v45-md.md)] 中為支援非同步程式設計功能而引進的增強功能。  
+本主題討論中非同步程式設計的支援[!INCLUDE[dnprdnshort](../../../../includes/dnprdnshort-md.md)]包括可支援非同步程式設計功能而引進的增強功能的 Data Provider for SQL Server (SqlClient) [!INCLUDE[net_v45](../../../../includes/net-v45-md.md)]。  
   
 ## <a name="legacy-asynchronous-programming"></a>傳統非同步程式設計  
  在 [!INCLUDE[net_v45](../../../../includes/net-v45-md.md)] 之前，是使用下列方法和 `Asynchronous Processing=true` 連接屬性完成 SqlClient 非同步程式設計：  
@@ -637,7 +639,7 @@ namespace SqlBulkCopyAsyncCodeSample {
  範例會開啟的單一連接**AdventureWorks**資料庫。 使用 <xref:System.Data.SqlClient.SqlCommand> 物件，會建立 <xref:System.Data.SqlClient.SqlDataReader>。 當使用該讀取器時，會開啟第二個 <xref:System.Data.SqlClient.SqlDataReader>，使用來自第一個 <xref:System.Data.SqlClient.SqlDataReader> 的資料做為第二個讀取器之 WHERE 子句的輸入。  
   
 > [!NOTE]
->  下列範例使用範例**AdventureWorks**資料庫隨附[!INCLUDE[ssNoVersion](../../../../includes/ssnoversion-md.md)]。 範例程式碼中提供的連接字串假設本機電腦已安裝並可使用資料庫。 視環境需要修改連接字串。  
+>  下列範例使用範例**AdventureWorks**隨附於 SQL Server 資料庫。 範例程式碼中提供的連接字串假設本機電腦已安裝並可使用資料庫。 視環境需要修改連接字串。  
   
 ```csharp
 using System;  
@@ -709,7 +711,7 @@ class Class1 {
  下列主控台應用程式示範如何使用具有三個 <xref:System.Data.SqlClient.SqlDataReader> 物件的兩個 <xref:System.Data.SqlClient.SqlCommand> 物件，及啟用 MARS 的單一 <xref:System.Data.SqlClient.SqlConnection> 物件。 第一個命令物件會擷取信用評等為 5 的廠商清單。 第二個命令物件會使用 <xref:System.Data.SqlClient.SqlDataReader> 提供的廠商 ID，以載入第二個 <xref:System.Data.SqlClient.SqlDataReader> 及該特定廠商的所有產品。 第二個 <xref:System.Data.SqlClient.SqlDataReader> 會造訪每個產品記錄。 會執行計算以決定新**OnOrderQty**應該是。 第三個命令物件然後用來更新**ProductVendor**以新值的資料表。 這整個處理序會在單一異動中發生，並在結束時復原。  
   
 > [!NOTE]
->  下列範例使用範例**AdventureWorks**資料庫隨附[!INCLUDE[ssNoVersion](../../../../includes/ssnoversion-md.md)]。 範例程式碼中提供的連接字串假設本機電腦已安裝並可使用資料庫。 視環境需要修改連接字串。  
+>  下列範例使用範例**AdventureWorks**隨附於 SQL Server 資料庫。 範例程式碼中提供的連接字串假設本機電腦已安裝並可使用資料庫。 視環境需要修改連接字串。  
   
 ```csharp
 using System;  
@@ -819,5 +821,5 @@ class Program {
 }  
 ```  
   
-## <a name="see-also"></a>請參閱  
+## <a name="see-also"></a>另請參閱  
  [在 ADO.NET 中擷取和修改資料](../../../../docs/framework/data/adonet/retrieving-and-modifying-data.md)

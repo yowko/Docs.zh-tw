@@ -1,24 +1,26 @@
 ---
-title: "下載範例資料庫"
-ms.custom: 
+title: 下載範例資料庫
+ms.custom: ''
 ms.date: 03/30/2017
 ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.technology: dotnet-ado
-ms.tgt_pltfrm: 
+ms.reviewer: ''
+ms.suite: ''
+ms.technology:
+- dotnet-ado
+ms.tgt_pltfrm: ''
 ms.topic: article
 ms.assetid: ef9d69a1-9461-43fe-94bb-7c836754bcb5
-caps.latest.revision: "2"
+caps.latest.revision: 2
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.workload: dotnet
-ms.openlocfilehash: 3b0dccd831591946684fb0087f33563b87ee6ba7
-ms.sourcegitcommit: ed26cfef4e18f6d93ab822d8c29f902cff3519d1
+ms.workload:
+- dotnet
+ms.openlocfilehash: dd0b29e97d36d67781c92ee24c56aed43c703261
+ms.sourcegitcommit: 86adcc06e35390f13c1e372c36d2e044f1fc31ef
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 01/17/2018
+ms.lasthandoff: 04/26/2018
 ---
 # <a name="downloading-sample-databases"></a>下載範例資料庫
 [!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)] 文件中的許多範例和逐步解說都使用 Northwind 範例資料庫和 SQL Server Express Edition。 您可以從 Microsoft 下載網站免費下載這些產品。  
@@ -57,11 +59,11 @@ ms.lasthandoff: 01/17/2018
 6.  請遵循網站上的安裝指示進行。  
   
 ## <a name="downloading-management-studio-express"></a>下載 Management Studio Express  
- 如果您想要修改已下載的資料庫，您可以存取資料庫。 請從**伺服器總管**中[!INCLUDE[vs_current_short](../../../../../../includes/vs-current-short-md.md)]整合式的開發環境 (IDE) 或使用 Microsoft SQL Server Management Studio Express （SSMSE)。  
+ 如果您想要修改已下載的資料庫，您可以存取資料庫。 請從**伺服器總管**在 Visual Studio 整合式開發環境 (IDE)，或使用 Microsoft SQL Server Management Studio Express (SSMSE).  
   
 #### <a name="to-download-management-studio-express"></a>若要下載 Management Studio Express  
   
 -   請遵循指示[SSMSE 網站](http://go.microsoft.com/fwlink/?LinkId=95933)。  
   
-## <a name="see-also"></a>請參閱  
+## <a name="see-also"></a>另請參閱  
  [快速入門](../../../../../../docs/framework/data/adonet/sql/linq/getting-started.md)

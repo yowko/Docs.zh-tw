@@ -1,11 +1,12 @@
 ---
-title: "如何：防止程序引數的值變更 (Visual Basic)"
-ms.custom: 
+title: 如何：防止程序引數的值變更 (Visual Basic)
+ms.custom: ''
 ms.date: 07/20/2015
 ms.prod: .net
-ms.reviewer: 
-ms.suite: 
-ms.technology: devlang-visual-basic
+ms.reviewer: ''
+ms.suite: ''
+ms.technology:
+- devlang-visual-basic
 ms.topic: article
 helpviewer_keywords:
 - procedures [Visual Basic], arguments
@@ -20,17 +21,17 @@ helpviewer_keywords:
 - arguments [Visual Basic], ByRef
 - arguments [Visual Basic], changing value
 ms.assetid: d2b7c766-ce16-4d2c-8d79-3fc0e7ba2227
-caps.latest.revision: "14"
+caps.latest.revision: 14
 author: dotnet-bot
 ms.author: dotnetcontent
-ms.openlocfilehash: 7975cbbc38c39223a4af5c87ac6bb090be548f2d
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.openlocfilehash: 59c0486bd9543167e4c17a3109c4b89b3502e80e
+ms.sourcegitcommit: 86adcc06e35390f13c1e372c36d2e044f1fc31ef
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 04/26/2018
 ---
 # <a name="how-to-protect-a-procedure-argument-against-value-changes-visual-basic"></a>如何：防止程序引數的值變更 (Visual Basic)
-如果程序宣告為參數[ByRef](../../../../visual-basic/language-reference/modifiers/byref.md)，[!INCLUDE[vbprvb](~/includes/vbprvb-md.md)]提供程序程式碼直接呼叫程式碼中的引數的基礎的程式設計項目參考。 這可讓程序來變更呼叫的程式碼中引數的基礎值。 在某些情況下呼叫的程式碼可能會想要防止這類變更。  
+如果程序宣告為參數[ByRef](../../../../visual-basic/language-reference/modifiers/byref.md)，Visual Basic 提供的程序程式碼直接呼叫程式碼中的引數的基礎的程式設計項目參考。 這可讓程序來變更呼叫的程式碼中引數的基礎值。 在某些情況下呼叫的程式碼可能會想要防止這類變更。  
   
  您一律可以保護在變更引數，藉由宣告的對應參數[ByVal](../../../../visual-basic/language-reference/modifiers/byval.md)程序中。 如果您想要能夠變更在某些情況下，而不是其他指定的引數，您可以將它宣告`ByRef`，並讓呼叫的程式碼，判斷每個呼叫中的傳遞機制。 它會由封閉式括號，以傳值，對應的引數，或不將其括在括號，以傳址方式傳遞。 如需詳細資訊，請參閱[如何： 強制以傳值方式傳遞引數](./how-to-force-an-argument-to-be-passed-by-value.md)。  
   
@@ -48,7 +49,7 @@ ms.lasthandoff: 11/21/2017
  第二個`MsgBox`呼叫顯示"之後 replace(n): 11、 21、 31、 41"。 因為`n`傳遞`ByVal`，`replace`無法修改變數`n`指定新的陣列，讓呼叫的程式碼中。 當`replace`建立新的陣列執行個體`k`並將它指派給本機變數`a`，就會失去參考`n`傳入呼叫程式碼。 它會變更的成員`a`，只有本機陣列`k`會受到影響。 因此，`replace`不會遞增的值陣列的`n`呼叫的程式碼中。  
   
 ## <a name="compiling-the-code"></a>編譯程式碼  
- 中的預設值[!INCLUDE[vbprvb](~/includes/vbprvb-md.md)]是以傳值方式傳遞引數。 不過，它是良好的程式設計作法中包含  [ByVal](../../../../visual-basic/language-reference/modifiers/byval.md)或[ByRef](../../../../visual-basic/language-reference/modifiers/byref.md)關鍵字與每個宣告的參數。 這可讓您的程式碼更容易讀取。  
+ 在 Visual Basic 中的預設值是以傳值方式傳遞引數。 不過，它是良好的程式設計作法中包含  [ByVal](../../../../visual-basic/language-reference/modifiers/byval.md)或[ByRef](../../../../visual-basic/language-reference/modifiers/byref.md)關鍵字與每個宣告的參數。 這可讓您的程式碼更容易讀取。  
   
 ## <a name="see-also"></a>另請參閱  
  [程序](./index.md)  

@@ -1,11 +1,12 @@
 ---
-title: "屬性程序 (Visual Basic)"
-ms.custom: 
+title: 屬性程序 (Visual Basic)
+ms.custom: ''
 ms.date: 07/20/2015
 ms.prod: .net
-ms.reviewer: 
-ms.suite: 
-ms.technology: devlang-visual-basic
+ms.reviewer: ''
+ms.suite: ''
+ms.technology:
+- devlang-visual-basic
 ms.topic: article
 helpviewer_keywords:
 - Set statement [Visual Basic], Property procedures
@@ -19,19 +20,19 @@ helpviewer_keywords:
 - property procedures
 - Get statement [Visual Basic], property procedures
 ms.assetid: 46a98379-e1a2-45dd-a48c-b51213f5ab07
-caps.latest.revision: "22"
+caps.latest.revision: 22
 author: dotnet-bot
 ms.author: dotnetcontent
-ms.openlocfilehash: cbdf49d5c3eb5ef71b25a060d62f55f19098f445
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.openlocfilehash: 0d9df6f381c89263aa16315fb06a2b3b0d645bbf
+ms.sourcegitcommit: 86adcc06e35390f13c1e372c36d2e044f1fc31ef
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 04/26/2018
 ---
 # <a name="property-procedures-visual-basic"></a>屬性程序 (Visual Basic)
-屬性程序是一系列的[!INCLUDE[vbprvb](~/includes/vbprvb-md.md)]操作上模組、 類別或結構的自訂屬性的陳述式。 屬性程序也稱為是*屬性存取子*。  
+屬性程序是一系列的 Visual Basic 陳述式，以操作上模組、 類別或結構的自訂屬性。 屬性程序也稱為是*屬性存取子*。  
   
- [!INCLUDE[vbprvb](~/includes/vbprvb-md.md)]提供下列屬性程序：  
+ Visual Basic 提供的下列屬性程序：  
   
 -   A`Get`程序會傳回屬性的值。 當您存取在運算式中的屬性時呼叫。  
   

@@ -1,12 +1,13 @@
 ---
-title: "路由事件概觀"
-ms.custom: 
+title: 路由事件概觀
+ms.custom: ''
 ms.date: 03/30/2017
 ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.technology: dotnet-wpf
-ms.tgt_pltfrm: 
+ms.reviewer: ''
+ms.suite: ''
+ms.technology:
+- dotnet-wpf
+ms.tgt_pltfrm: ''
 ms.topic: article
 dev_langs:
 - csharp
@@ -22,16 +23,17 @@ helpviewer_keywords:
 - button set [WPF], grouped
 - bubbling [WPF]
 ms.assetid: 1a2189ae-13b4-45b0-b12c-8de2e49c29d2
-caps.latest.revision: "29"
+caps.latest.revision: 29
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.workload: dotnet
-ms.openlocfilehash: 22ce2611afa2a3b2b06b7d378479e5ffd2f744f9
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.workload:
+- dotnet
+ms.openlocfilehash: 896f3b852c00b9c7cd031710dbdaa00974428344
+ms.sourcegitcommit: 86adcc06e35390f13c1e372c36d2e044f1fc31ef
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 04/26/2018
 ---
 # <a name="routed-events-overview"></a>路由事件概觀
 本主題說明 [!INCLUDE[TLA#tla_winclient](../../../../includes/tlasharptla-winclient-md.md)] 中路由事件的概念。 本主題會定義路由事件的術語、說明如何透過元素的樹狀結構路由傳送路由事件、摘要說明如何處理路由事件，以及介紹如何建立您自己的自訂路由事件。
@@ -127,12 +129,12 @@ ms.lasthandoff: 12/22/2017
   
  [!code-xaml[EventOvwSupport#SimplestSyntax](../../../../samples/snippets/csharp/VS_Snippets_Wpf/EventOvwSupport/CSharp/default.xaml#simplestsyntax)]  
   
- `b1SetColor`包含處理的程式碼實作處理常式名稱<xref:System.Windows.Controls.Primitives.ButtonBase.Click>事件。 `b1SetColor`必須有相同的簽章<xref:System.Windows.RoutedEventHandler>委派，它是事件處理常式委派的<xref:System.Windows.Controls.Primitives.ButtonBase.Click>事件。 所有路由事件處理常式委派的第一個參數會指定要加入事件處理常式的元素，而第二個參數會指定事件的資料。  
+ `b1SetColor` 包含處理的程式碼實作處理常式名稱<xref:System.Windows.Controls.Primitives.ButtonBase.Click>事件。 `b1SetColor` 必須有相同的簽章<xref:System.Windows.RoutedEventHandler>委派，它是事件處理常式委派的<xref:System.Windows.Controls.Primitives.ButtonBase.Click>事件。 所有路由事件處理常式委派的第一個參數會指定要加入事件處理常式的元素，而第二個參數會指定事件的資料。  
   
 [!code-csharp[EventOvwSupport#SimpleHandlerA](../../../../samples/snippets/csharp/VS_Snippets_Wpf/EventOvwSupport/CSharp/default.xaml.cs#simplehandlera)]
 [!code-vb[EventOvwSupport#SimpleHandlerA](../../../../samples/snippets/visualbasic/VS_Snippets_Wpf/EventOvwSupport/visualbasic/default.xaml.vb#simplehandlera)]  
   
- <xref:System.Windows.RoutedEventHandler>是基本的路由的事件處理常式委派。 如果是針對特定控制項或案例特製化的路由事件，用於路由事件處理常式的委派也可能會變得更特製化，讓它們能夠傳輸特製化的事件資料。 比方說，在一般的輸入案例中，您可能會處理<xref:System.Windows.UIElement.DragEnter>路由的事件。 您的處理常式應該實作<xref:System.Windows.DragEventHandler>委派。 藉由使用最適合的委派，您可以處理<xref:System.Windows.DragEventArgs>中的處理常式和讀取<xref:System.Windows.DragEventArgs.Data%2A>屬性，其中包含剪貼簿裝載在拖曳作業。  
+ <xref:System.Windows.RoutedEventHandler> 是基本的路由的事件處理常式委派。 如果是針對特定控制項或案例特製化的路由事件，用於路由事件處理常式的委派也可能會變得更特製化，讓它們能夠傳輸特製化的事件資料。 比方說，在一般的輸入案例中，您可能會處理<xref:System.Windows.UIElement.DragEnter>路由的事件。 您的處理常式應該實作<xref:System.Windows.DragEventHandler>委派。 藉由使用最適合的委派，您可以處理<xref:System.Windows.DragEventArgs>中的處理常式和讀取<xref:System.Windows.DragEventArgs.Data%2A>屬性，其中包含剪貼簿裝載在拖曳作業。  
   
  如需如何使用 [!INCLUDE[TLA2#tla_xaml](../../../../includes/tla2sharptla-xaml-md.md)] 來將事件處理常式加入至元素的完整範例，請參閱[處理路由事件](../../../../docs/framework/wpf/advanced/how-to-handle-a-routed-event.md)。  
   
@@ -141,18 +143,18 @@ ms.lasthandoff: 12/22/2017
  [!code-csharp[EventOvwSupport#AddHandlerCode](../../../../samples/snippets/csharp/VS_Snippets_Wpf/EventOvwSupport/CSharp/default.xaml.cs#addhandlercode)]
  [!code-vb[EventOvwSupport#AddHandlerCode](../../../../samples/snippets/visualbasic/VS_Snippets_Wpf/EventOvwSupport/visualbasic/default.xaml.vb#addhandlercode)]  
   
- 下列範例示範 [!INCLUDE[TLA#tla_cshrp](../../../../includes/tlasharptla-cshrp-md.md)] 運算子語法 ([!INCLUDE[TLA2#tla_visualb](../../../../includes/tla2sharptla-visualb-md.md)] 具備因其處理取值的方式而有些微差異的運算子語法)：  
+ 下一個範例顯示 C# 運算子語法 （Visual Basic 因為取值的它處理具有稍有不同的運算子語法）：  
   
  [!code-csharp[EventOvwSupport#AddHandlerPlusEquals](../../../../samples/snippets/csharp/VS_Snippets_Wpf/EventOvwSupport/CSharp/default.xaml.cs#addhandlerplusequals)]
  [!code-vb[EventOvwSupport#AddHandlerPlusEquals](../../../../samples/snippets/visualbasic/VS_Snippets_Wpf/EventOvwSupport/visualbasic/default.xaml.vb#addhandlerplusequals)]  
   
  如需如何在程式碼中加入事件處理常式的範例，請參閱[使用程式碼加入事件處理常式](../../../../docs/framework/wpf/advanced/how-to-add-an-event-handler-using-code.md)。  
   
- 如果您使用 [!INCLUDE[TLA2#tla_visualb](../../../../includes/tla2sharptla-visualb-md.md)]，也可以使用 `Handles` 關鍵字，將處理常式當成處理常式宣告的一部分來加入。 如需詳細資訊，請參閱 [Visual Basic 和 WPF 事件處理](../../../../docs/framework/wpf/advanced/visual-basic-and-wpf-event-handling.md)。  
+ 如果您使用 Visual Basic，您也可以使用`Handles`關鍵字做為處理常式宣告的一部分加入處理常式。 如需詳細資訊，請參閱 [Visual Basic 和 WPF 事件處理](../../../../docs/framework/wpf/advanced/visual-basic-and-wpf-event-handling.md)。  
   
 <a name="concept_handled"></a>   
 ### <a name="the-concept-of-handled"></a>已處理的概念  
- 所有的路由的事件共用一般事件資料基底類別， <xref:System.Windows.RoutedEventArgs>。 <xref:System.Windows.RoutedEventArgs>定義<xref:System.Windows.RoutedEventArgs.Handled%2A>屬性接受布林值。 目的<xref:System.Windows.RoutedEventArgs.Handled%2A>屬性是要讓將標示為路由的事件路由上的任何事件處理常式*處理*，藉由設定的值<xref:System.Windows.RoutedEventArgs.Handled%2A>至`true`。 透過處理常式在路由中的某一個元素上進行處理之後，就會再次向路由中的每一個接聽程式報告共用的事件資料。  
+ 所有的路由的事件共用一般事件資料基底類別， <xref:System.Windows.RoutedEventArgs>。 <xref:System.Windows.RoutedEventArgs> 定義<xref:System.Windows.RoutedEventArgs.Handled%2A>屬性接受布林值。 目的<xref:System.Windows.RoutedEventArgs.Handled%2A>屬性是要讓將標示為路由的事件路由上的任何事件處理常式*處理*，藉由設定的值<xref:System.Windows.RoutedEventArgs.Handled%2A>至`true`。 透過處理常式在路由中的某一個元素上進行處理之後，就會再次向路由中的每一個接聽程式報告共用的事件資料。  
   
  值<xref:System.Windows.RoutedEventArgs.Handled%2A>影響路由的事件會報告或處理的過程如何進一步路由。 如果<xref:System.Windows.RoutedEventArgs.Handled%2A>是`true`在事件的路由的事件，然後接聽其他項目上的路由事件的處理常式的資料通常不會再叫用該特定事件執行個體。 此情況適用於 [!INCLUDE[TLA2#tla_xaml](../../../../includes/tla2sharptla-xaml-md.md)] 中附加的處理常式，以及適用於利用語言特定之事件處理常式附加語法 (例如 `+=` 或 `Handles`) 所加入的處理常式。 最常見的處理常式案例中，標示為藉由設定已處理的事件<xref:System.Windows.RoutedEventArgs.Handled%2A>至`true`會 「 停止 」 路由的通道路由或反昇的路由，以及由類別處理常式所處理之路由的點的任何事件。  
   
@@ -200,7 +202,7 @@ ms.lasthandoff: 12/22/2017
   
  [!code-xaml[EventOvwSupport#GroupButton](../../../../samples/snippets/csharp/VS_Snippets_Wpf/EventOvwSupport/CSharp/default.xaml#groupbutton)]  
   
- 此處的處理常式加入其中的父項目接聽程式是<xref:System.Windows.Controls.StackPanel>。 不過，它會新增宣告，將會引發由路由事件的處理常式<xref:System.Windows.Controls.Button>類別 (<xref:System.Windows.Controls.Primitives.ButtonBase>實際上，但若要使用<xref:System.Windows.Controls.Button>透過繼承)。 <xref:System.Windows.Controls.Button>「 擁有 」 事件，但任何連接到任何的路由事件的路由的事件系統允許處理常式<xref:System.Windows.UIElement>或<xref:System.Windows.ContentElement>否則可以將附加接聽程式的執行個體接聽程式[!INCLUDE[TLA#tla_clr](../../../../includes/tlasharptla-clr-md.md)]事件。 這些完整事件屬性名稱的預設 xmlns 命名空間通常是預設的 [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] xmlns 命名空間，但您也可以針對自訂路由事件指定有前置詞的命名空間。 如需 xmlns 的詳細資訊，請參閱 [WPF XAML 的 XAML 命名空間和命名空間對應](../../../../docs/framework/wpf/advanced/xaml-namespaces-and-namespace-mapping-for-wpf-xaml.md)。  
+ 此處的處理常式加入其中的父項目接聽程式是<xref:System.Windows.Controls.StackPanel>。 不過，它會新增宣告，將會引發由路由事件的處理常式<xref:System.Windows.Controls.Button>類別 (<xref:System.Windows.Controls.Primitives.ButtonBase>實際上，但若要使用<xref:System.Windows.Controls.Button>透過繼承)。 <xref:System.Windows.Controls.Button> 「 擁有 」 事件，但任何連接到任何的路由事件的路由的事件系統允許處理常式<xref:System.Windows.UIElement>或<xref:System.Windows.ContentElement>否則可以將附加接聽程式的執行個體接聽程式[!INCLUDE[TLA#tla_clr](../../../../includes/tlasharptla-clr-md.md)]事件。 這些完整事件屬性名稱的預設 xmlns 命名空間通常是預設的 [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] xmlns 命名空間，但您也可以針對自訂路由事件指定有前置詞的命名空間。 如需 xmlns 的詳細資訊，請參閱 [WPF XAML 的 XAML 命名空間和命名空間對應](../../../../docs/framework/wpf/advanced/xaml-namespaces-and-namespace-mapping-for-wpf-xaml.md)。  
   
 <a name="how_event_processing_works"></a>   
 ## <a name="wpf-input-events"></a>WPF 輸入事件  
@@ -255,7 +257,7 @@ ms.lasthandoff: 12/22/2017
 ## <a name="more-about-routed-events"></a>深入了解路由事件  
  本主題主要是從描述基本概念並提供如何及何時回應路由事件的觀點來討論路由事件，而路由事件已經存在於各種基底元素和控制項中。 不過，您可以在自訂類別上建立自己的路由事件以及所有必要的支援，例如特製化的事件資料類別和委派。 路由的事件的擁有者可以是任何類別，但必須引發和處理路由的事件<xref:System.Windows.UIElement>或<xref:System.Windows.ContentElement>衍生類別才能發揮作用。 如需自訂事件的詳細資訊，請參閱[建立自訂路由事件](../../../../docs/framework/wpf/advanced/how-to-create-a-custom-routed-event.md)。  
   
-## <a name="see-also"></a>請參閱  
+## <a name="see-also"></a>另請參閱  
  <xref:System.Windows.EventManager>  
  <xref:System.Windows.RoutedEvent>  
  <xref:System.Windows.RoutedEventArgs>  

@@ -1,27 +1,29 @@
 ---
-title: "Windows Presentation Foundation 用戶端中的資料繫結"
-ms.custom: 
+title: Windows Presentation Foundation 用戶端中的資料繫結
+ms.custom: ''
 ms.date: 03/30/2017
 ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.technology: dotnet-clr
-ms.tgt_pltfrm: 
+ms.reviewer: ''
+ms.suite: ''
+ms.technology:
+- dotnet-clr
+ms.tgt_pltfrm: ''
 ms.topic: article
 ms.assetid: bb8c8293-5973-4aef-9b07-afeff5d3293c
-caps.latest.revision: "21"
+caps.latest.revision: 21
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.workload: dotnet
-ms.openlocfilehash: 55e60aaba0ebba57668f91d692ce774bd0ef0115
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.workload:
+- dotnet
+ms.openlocfilehash: d10591866e11bd9e5ae707a0c17c3e293d7f4f71
+ms.sourcegitcommit: 86adcc06e35390f13c1e372c36d2e044f1fc31ef
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 04/26/2018
 ---
 # <a name="data-binding-in-a-windows-presentation-foundation-client"></a>Windows Presentation Foundation 用戶端中的資料繫結
-這個範例示範使用 Windows Presentation Foundation (WPF) 用戶端中的資料繫結。 範例會使用 [!INCLUDE[indigo1](../../../../includes/indigo1-md.md)] 服務，隨機產生要傳回至用戶端的專輯陣列。 每張專輯各有名稱、價格和曲目表。 曲目有名稱和時間長度。 服務傳回的資訊會自動繫結至 [!INCLUDE[avalon1](../../../../includes/avalon1-md.md)] 用戶端提供的使用者介面 (UI)。  
+這個範例示範使用 Windows Presentation Foundation (WPF) 用戶端中的資料繫結。 範例會使用 [!INCLUDE[indigo1](../../../../includes/indigo1-md.md)] 服務，隨機產生要傳回至用戶端的專輯陣列。 每張專輯各有名稱、價格和曲目表。 曲目有名稱和時間長度。 Windows Presentation Foundation (WPF) 用戶端所提供的使用者介面 (UI) 時，會自動繫結的服務所傳回的資訊。  
   
 > [!NOTE]
 >  此範例的安裝程序與建置指示位於本主題的結尾。  
@@ -93,4 +95,4 @@ void client_GetAlbumListCompleted(object sender, GetAlbumListCompletedEventArgs 
 >   
 >  `<InstallDrive>:\WF_WCF_Samples\WCF\Scenario\DataBinding\WPFDataBinding`  
   
-## <a name="see-also"></a>請參閱
+## <a name="see-also"></a>另請參閱

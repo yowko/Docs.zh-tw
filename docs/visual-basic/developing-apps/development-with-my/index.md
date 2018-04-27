@@ -17,11 +17,11 @@ ms.assetid: f1d04509-5e46-4551-9f9f-94334a121fca
 caps.latest.revision: 26
 author: dotnet-bot
 ms.author: dotnetcontent
-ms.openlocfilehash: 2cf51e1f6292a61c071fe6d92f5fcbce4be84ff4
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.openlocfilehash: 5ea802572a59a3b94508558cee97290cac67e1ac
+ms.sourcegitcommit: 86adcc06e35390f13c1e372c36d2e044f1fc31ef
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 04/26/2018
 ---
 # <a name="development-with-my-visual-basic"></a>使用 My 進行開發 (Visual Basic)
 Visual Basic 提供可進行快速應用程式開發的新功能來提高產能且易於使用，同時還能提供電源。 這其中一個功能稱為 `My`，可提供對與應用程式及其執行階段環境相關資訊和預設物件執行個體的存取。 此資訊的組織方式是以可透過 IntelliSense 進行探索且邏輯上根據使用方式分隔的格式來進行。  
@@ -32,7 +32,7 @@ Visual Basic 提供可進行快速應用程式開發的新功能來提高產能�
   
  ![My 的物件模型](../../../visual-basic/developing-apps/development-with-my/media/myobjmodel.gif "MyObjModel")  
   
-## <a name="in-this-section"></a>本章節內容  
+## <a name="in-this-section"></a>本節內容  
  [使用 My.Application、My.Computer 和 My.User 執行工作](../../../visual-basic/developing-apps/development-with-my/performing-tasks-with-my-application-my-computer-and-my-user.md)  
  描述三種中央 `My` 物件 (`My.Application`、`My.Computer` 和 `My.User`)，它們提供對資訊和功能的存取。  
   
@@ -43,7 +43,7 @@ Visual Basic 提供可進行快速應用程式開發的新功能來提高產能�
  描述 `My.Resources` 和 `My.Settings` 物件，它們提供對應用程式資源和設定的存取。  
   
  [Visual Basic 應用程式模型概觀](../../../visual-basic/developing-apps/development-with-my/overview-of-the-visual-basic-application-model.md)  
- 描述 [!INCLUDE[vbprvb](~/includes/vbprvb-md.md)] 應用程式啟動/關機模型。  
+ 描述 Visual Basic 應用程式啟動/關機模型。  
   
  [My 如何相依於專案類型](../../../visual-basic/developing-apps/development-with-my/how-my-depends-on-project-type.md)  
  提供有關 `My` 功能可在不同專案型別中使用的詳細資料。  

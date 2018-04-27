@@ -1,11 +1,12 @@
 ---
-title: "如何：變更程序引數的值 (Visual Basic)"
-ms.custom: 
+title: 如何：變更程序引數的值 (Visual Basic)
+ms.custom: ''
 ms.date: 07/20/2015
 ms.prod: .net
-ms.reviewer: 
-ms.suite: 
-ms.technology: devlang-visual-basic
+ms.reviewer: ''
+ms.suite: ''
+ms.technology:
+- devlang-visual-basic
 ms.topic: article
 helpviewer_keywords:
 - procedures [Visual Basic], arguments
@@ -19,19 +20,19 @@ helpviewer_keywords:
 - arguments [Visual Basic], ByRef
 - arguments [Visual Basic], changing value
 ms.assetid: 6fad2368-5da7-4c07-8bf8-0f4e65a1be67
-caps.latest.revision: "16"
+caps.latest.revision: 16
 author: dotnet-bot
 ms.author: dotnetcontent
-ms.openlocfilehash: ba23c8f0b4b0b6e751546019af902a6305b9ef53
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.openlocfilehash: 93d9cc11e919e45fdd3b48dd2731b165f3466640
+ms.sourcegitcommit: 86adcc06e35390f13c1e372c36d2e044f1fc31ef
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 04/26/2018
 ---
 # <a name="how-to-change-the-value-of-a-procedure-argument-visual-basic"></a>如何：變更程序引數的值 (Visual Basic)
 當您呼叫程序時，您提供每個引數會對應至其中一個程序中定義的參數。 在某些情況下，程序程式碼可以變更對應的引數呼叫的程式碼中的值。 在其他情況下，此程序可以變更引數的本機複本。  
   
- 當您呼叫程序，[!INCLUDE[vbprvb](~/includes/vbprvb-md.md)]讓每個傳遞的引數的本機副本[ByVal](../../../../visual-basic/language-reference/modifiers/byval.md)。 每個引數傳遞[ByRef](../../../../visual-basic/language-reference/modifiers/byref.md)，[!INCLUDE[vbprvb](~/includes/vbprvb-md.md)]提供程序程式碼直接呼叫程式碼中的引數的基礎的程式設計項目參考。  
+ 當您呼叫程序時，Visual Basic 可讓每個傳遞的引數的本機副本[ByVal](../../../../visual-basic/language-reference/modifiers/byval.md)。 每個引數傳遞[ByRef](../../../../visual-basic/language-reference/modifiers/byref.md)，Visual Basic 提供的程序程式碼直接呼叫程式碼中的引數的基礎的程式設計項目參考。  
   
  如果呼叫的程式碼中對應的項目為可修改的項目，並傳遞引數`ByRef`，程序程式碼可以使用直接參考來變更呼叫的程式碼中的項目值。  
   
@@ -58,7 +59,7 @@ ms.lasthandoff: 11/21/2017
   
      -或-  
   
-     在呼叫程式碼中，括住引數清單中的括號中的引數。 這會強制[!INCLUDE[vbprvb](~/includes/vbprvb-md.md)]依據值傳遞引數，即使對應的參數會指定`ByRef`。  
+     在呼叫程式碼中，括住引數清單中的括號中的引數。 這會強制以傳值的引數的 Visual Basic，即使對應的參數會指定`ByRef`。  
   
 2.  在程序程式碼中，使用參數名稱來指派值給引數的本機副本。 不會變更呼叫的程式碼中的基礎值。  
   
@@ -80,7 +81,7 @@ ms.lasthandoff: 11/21/2017
 ## <a name="compiling-the-code"></a>編譯程式碼  
  當您依參考傳遞的變數時，您必須使用`ByRef`關鍵字來指定這項機制。  
   
- 中的預設值[!INCLUDE[vbprvb](~/includes/vbprvb-md.md)]是以傳值方式傳遞引數。 不過，它是良好的程式設計作法中包含  [ByVal](../../../../visual-basic/language-reference/modifiers/byval.md)或[ByRef](../../../../visual-basic/language-reference/modifiers/byref.md)關鍵字與每個宣告的參數。 這可讓您的程式碼更容易讀取。  
+ 在 Visual Basic 中的預設值是以傳值方式傳遞引數。 不過，它是良好的程式設計作法中包含  [ByVal](../../../../visual-basic/language-reference/modifiers/byval.md)或[ByRef](../../../../visual-basic/language-reference/modifiers/byref.md)關鍵字與每個宣告的參數。 這可讓您的程式碼更容易讀取。  
   
 ## <a name="net-framework-security"></a>.NET Framework 安全性  
  在允許的程序來變更對應的引數呼叫的程式碼中的值一律會有潛在的風險。 請確定您預期此變更，並準備好檢查它的有效性，然後再將它的值。  

@@ -16,14 +16,14 @@ ms.assetid: f5e82c6e-3500-452b-bdb8-78f0d5477604
 caps.latest.revision: 16
 author: dotnet-bot
 ms.author: dotnetcontent
-ms.openlocfilehash: f928a01424853dc7e3637f49cc3af4108c5afb5b
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.openlocfilehash: 47c7af031b2169d1a259a8f96f5485bcb354aa25
+ms.sourcegitcommit: 86adcc06e35390f13c1e372c36d2e044f1fc31ef
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 04/26/2018
 ---
 # <a name="visual-basic-runtime-library-members"></a>Visual Basic 執行階段程式庫成員
-`Microsoft.VisualBasic`命名空間包含類別、 模組、 常數和列舉型別構成[!INCLUDE[vbprvb](~/includes/vbprvb-md.md)]執行階段程式庫。 這些程式庫成員可讓程序、 屬性和常數值，您可以使用您的程式碼中。 每個模組和類別代表與特定類別的功能。  
+`Microsoft.VisualBasic`命名空間包含類別、 模組、 常數和列舉型別構成 Visual Basic 執行階段程式庫。 這些程式庫成員可讓程序、 屬性和常數值，您可以使用您的程式碼中。 每個模組和類別代表與特定類別的功能。  
   
 ## <a name="microsoftvisualbasiccollection-class"></a>Microsoft.VisualBasic.Collection 類別  
   
@@ -197,7 +197,7 @@ ms.lasthandoff: 11/21/2017
 |<xref:Microsoft.VisualBasic.VBMath.Randomize%2A>|<xref:Microsoft.VisualBasic.VBMath.Rnd%2A>|||  
   
 ## <a name="microsoftvisualbasic-constants-and-enumerations"></a>Microsoft.VisualBasic 常數和列舉  
- `Microsoft.VisualBasic`命名空間的一部分提供常數和列舉[!INCLUDE[vbprvb](~/includes/vbprvb-md.md)]執行階段程式庫。 您可以在程式碼中使用這些常數的值。 每個列舉，代表與特定類別的功能。 如需詳細資訊，請參閱[常數和列舉](../../visual-basic/language-reference/constants-and-enumerations.md)。  
+ `Microsoft.VisualBasic`命名空間提供常數和列舉類型做為 Visual Basic 執行階段程式庫的一部分。 您可以在程式碼中使用這些常數的值。 每個列舉，代表與特定類別的功能。 如需詳細資訊，請參閱[常數和列舉](../../visual-basic/language-reference/constants-and-enumerations.md)。  
   
 ## <a name="see-also"></a>另請參閱  
  [常數和列舉](../../visual-basic/language-reference/constants-and-enumerations.md)  

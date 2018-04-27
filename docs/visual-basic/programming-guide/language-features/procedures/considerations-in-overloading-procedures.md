@@ -1,11 +1,12 @@
 ---
-title: "多載化程序的考慮因素 (Visual Basic)"
-ms.custom: 
+title: 多載化程序的考慮因素 (Visual Basic)
+ms.custom: ''
 ms.date: 07/20/2015
 ms.prod: .net
-ms.reviewer: 
-ms.suite: 
-ms.technology: devlang-visual-basic
+ms.reviewer: ''
+ms.suite: ''
+ms.technology:
+- devlang-visual-basic
 ms.topic: article
 helpviewer_keywords:
 - signatures [Visual Basic], ParamArray arguments
@@ -31,14 +32,14 @@ helpviewer_keywords:
 - restrictions [Visual Basic], overloading procedures
 - procedures [Visual Basic], parameter lists
 ms.assetid: a2001248-10d0-42c5-b0ce-eeedc987319f
-caps.latest.revision: "26"
+caps.latest.revision: 26
 author: dotnet-bot
 ms.author: dotnetcontent
-ms.openlocfilehash: 3c9a9a4759d4ec2dd87778c49c4fd82a08c081a8
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.openlocfilehash: ac4bc47f9e781f83c7930efffedd40d9c25c2ec2
+ms.sourcegitcommit: 86adcc06e35390f13c1e372c36d2e044f1fc31ef
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 04/26/2018
 ---
 # <a name="considerations-in-overloading-procedures-visual-basic"></a>多載化程序的考慮因素 (Visual Basic)
 當您多載程序時，您必須使用不同*簽章*每個多載版本。 這通常表示每個版本都必須指定不同的參數清單。 如需詳細資訊，請參閱 「 不同簽章 」[程序多載](./procedure-overloading.md)。  
@@ -50,7 +51,7 @@ ms.lasthandoff: 11/21/2017
 ## <a name="alternatives-to-overloaded-versions"></a>多載版本的替代方案  
  尤其是選擇性的引數存在，或他們的數目是變數中，有時會有多載版本，替代方案。  
   
- 請記住，選擇性引數不一定支援所有的語言，並會限制使用參數陣列[!INCLUDE[vbprvb](~/includes/vbprvb-md.md)]。 如果您正在撰寫可能以任何有幾種不同語言所撰寫的程式碼呼叫的程序，多載版本就可以提供最大的彈性。  
+ 請注意選擇性引數不一定支援所有的語言，而且僅限於使用 Visual Basic 的參數陣列。 如果您正在撰寫可能以任何有幾種不同語言所撰寫的程式碼呼叫的程序，多載版本就可以提供最大的彈性。  
   
 ### <a name="overloads-and-optional-arguments"></a>多載和選擇性引數  
  當呼叫程式碼可以選擇性地提供，或略過一個或多個引數時，您可以定義多個多載的版本，或使用選擇性參數。  
@@ -104,7 +105,7 @@ ms.lasthandoff: 11/21/2017
 ## <a name="implicit-overloads-for-a-paramarray-parameter"></a>ParamArray 參數的隱含多載  
  編譯器會考慮的程序有[ParamArray](../../../../visual-basic/language-reference/modifiers/paramarray.md)參數具有無限個多載，與彼此不同，在所呼叫的程式碼將傳遞至參數陣列，如下所示：  
   
--   一個多載時，呼叫程式碼並不提供的引數`ParamArray`  
+-   一個多載時，呼叫程式碼並不提供的引數 `ParamArray`  
   
 -   一個多載的呼叫端程式碼時提供的一維陣列`ParamArray`項目類型  
   

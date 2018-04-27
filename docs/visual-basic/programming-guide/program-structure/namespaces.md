@@ -26,11 +26,11 @@ ms.assetid: cffac744-ab8c-4f1f-ba50-732c22ab4b88
 caps.latest.revision: 27
 author: dotnet-bot
 ms.author: dotnetcontent
-ms.openlocfilehash: c18d0a9abb1d8b9e3e22f3b81bf605fb8ed75cfa
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.openlocfilehash: 0ec038a17b4a6b10dbe339fe33969c4ade57e2a7
+ms.sourcegitcommit: 86adcc06e35390f13c1e372c36d2e044f1fc31ef
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 04/26/2018
 ---
 # <a name="namespaces-in-visual-basic"></a>Visual Basic 中的命名空間
 命名空間可組織組件中定義的物件。 組件可包含多個命名空間，而命名空間也可包含其他命名空間。 在使用類別庫等大型物件群組時，命名空間可避免語意模糊並簡化參考。  
@@ -42,7 +42,7 @@ ms.lasthandoff: 11/21/2017
 ## <a name="avoiding-name-collisions"></a>避免名稱衝突  
  [!INCLUDE[dnprdnshort](~/includes/dnprdnshort-md.md)] 命名空間會解決有時稱為 *「命名空間干擾」*(namespace pollution) 的問題，也就是類別庫的開發人員因為使用與另一個程式庫類似的名稱而受到阻礙的情況。 這些與現有元件的衝突有時稱為 *「名稱衝突」*(name collision)。  
   
- 例如，如果您建立了一個名為 `ListBox`的新類別，您不需提供完整名稱就可以在專案內使用它。 不過，如果您想在同一個專案中使用 [!INCLUDE[dnprdnshort](~/includes/dnprdnshort-md.md)] <xref:System.Windows.Forms.ListBox> 類別，則必須使用完整參考使其成為唯一的參考。 如果參考不是唯一的， [!INCLUDE[vbprvb](~/includes/vbprvb-md.md)] 會產生錯誤，表示該名稱模稜兩可。 下列程式碼範例示範如何宣告這些物件：  
+ 例如，如果您建立了一個名為 `ListBox`的新類別，您不需提供完整名稱就可以在專案內使用它。 不過，如果您想在同一個專案中使用 [!INCLUDE[dnprdnshort](~/includes/dnprdnshort-md.md)] <xref:System.Windows.Forms.ListBox> 類別，則必須使用完整參考使其成為唯一的參考。 如果參考不是唯一的 Visual Basic 會產生錯誤，指出名稱模稜兩可。 下列程式碼範例示範如何宣告這些物件：  
   
  [!code-vb[VbVbalrApplication#7](../../../visual-basic/programming-guide/program-structure/codesnippet/VisualBasic/namespaces_2.vb)]  
   
@@ -50,9 +50,9 @@ ms.lasthandoff: 11/21/2017
   
  ![命名空間階層](../../../visual-basic/programming-guide/program-structure/media/vanamespacehierarchy.gif "vaNamespaceHierarchy")  
   
- 根據預設，每個用 [!INCLUDE[vbprvb](~/includes/vbprvb-md.md)] 建立的可執行檔，都會包含一個與專案同名的命名空間。 例如，如果您在名為 `ListBoxProject`的專案中定義物件，則可執行檔 ListBoxProject.exe 會包含一個稱為 `ListBoxProject`的命名空間。  
+ 根據預設，您使用 Visual Basic 中建立每個可執行檔會包含與您的專案名稱相同的命名空間。 例如，如果您在名為 `ListBoxProject`的專案中定義物件，則可執行檔 ListBoxProject.exe 會包含一個稱為 `ListBoxProject`的命名空間。  
   
- 多個組件可以使用相同的命名空間。 [!INCLUDE[vbprvb](~/includes/vbprvb-md.md)] 會將它們視為一個名稱集。 例如，您可以在名為 `SomeNameSpace` 的組件中為稱為 `Assemb1`的命名空間定義類別，並自一個名為 `Assemb2`的組件中為相同的命名空間定義其他類別。  
+ 多個組件可以使用相同的命名空間。 Visual Basic 會將它們視為一組的名稱。 例如，您可以在名為 `SomeNameSpace` 的組件中為稱為 `Assemb1`的命名空間定義類別，並自一個名為 `Assemb2`的組件中為相同的命名空間定義其他類別。  
   
 ## <a name="fully-qualified-names"></a>完整名稱  
  完整名稱是物件參考，前面會加上定義物件之命名空間的名稱。 如果您建立類別的參考 (在 [專案]  功能表中選擇 [加入參考]  )，就可以使用其他專案中所定義的物件，並且在程式碼中使用該物件的完整名稱。 下列程式碼片段示範如何使用另一個專案命名空間之物件的完整名稱：  
@@ -69,7 +69,7 @@ ms.lasthandoff: 11/21/2017
   
  [!code-vb[VbVbalrApplication#11](../../../visual-basic/programming-guide/program-structure/codesnippet/VisualBasic/namespaces_6.vb)]  
   
- 如果您嘗試使用 `Class1` 但未提供完整名稱，則 [!INCLUDE[vbprvb](~/includes/vbprvb-md.md)] 會產生錯誤，表示名稱 `Class1` 模稜兩可。  
+ 如果您嘗試使用`Class1`未完整限定它，Visual Basic 會產生的錯誤訊息名稱`Class1`模稜兩可。  
   
 ## <a name="namespace-level-statements"></a>命名空間層級陳述式  
  在命名空間中，您可以定義模組、介面、類別、委派、列舉、結構和其他命名空間等項目。 您無法在命名空間層級定義屬性、程序、變數和事件等項目。 這些項目必須在模組、結構或類別等容器內宣告。  

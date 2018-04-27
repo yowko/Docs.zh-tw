@@ -11,17 +11,17 @@ helpviewer_keywords:
 - Windows Workflow Foundation [WF], what's new
 - WF [WF], what's new
 ms.assetid: 11f96014-001e-41a0-bcc2-d0684a52fa43
-caps.latest.revision: ''
+caps.latest.revision: 29
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
 ms.workload:
 - dotnet
-ms.openlocfilehash: 9c5026c7c3e90afa843b819fb51d7a4a7c8249a0
-ms.sourcegitcommit: c883637b41ee028786edceece4fa872939d2e64c
+ms.openlocfilehash: 93915e8eeb46d91140198c2d51f88535a93a28cc
+ms.sourcegitcommit: 86adcc06e35390f13c1e372c36d2e044f1fc31ef
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 03/23/2018
+ms.lasthandoff: 04/26/2018
 ---
 # <a name="what39s-new-in-windows-workflow-foundation"></a>什麼&#39;s Windows Workflow Foundation 的新功能
 [!INCLUDE[wf](../../../includes/wf-md.md)] 中的 [!INCLUDE[netfx40_long](../../../includes/netfx40-long-md.md)] 改變了舊版的數種開發架構。 現在，建立、執行與維護工作流程以及實作新功能的主機都變得更簡單了。 [!INCLUDE[crabout](../../../includes/crabout-md.md)] 移轉.NET 3.0 和.NET 3.5 工作流程應用程式使用最新的版本，請參閱[移轉指引](../../../docs/framework/windows-workflow-foundation/migration-guidance.md)。  
@@ -66,4 +66,4 @@ ms.lasthandoff: 03/23/2018
 -   現在，恢復暫止中的工作流程會利用 <xref:System.Activities.Bookmark> 物件來管理。  
   
 ## <a name="easier-ability-to-extend-wf-designer-experience"></a>更易於擴充 WF 設計工具經驗的能力  
- 新的 WF 設計工具建立於 [!INCLUDE[avalon1](../../../includes/avalon1-md.md)] 上，並且提供更簡單的模型，可在 Visual Studio 以外重新裝載 WF 設計工具時使用，另外，它也提供更簡單的機制，可用於建立自訂活動設計工具。 [!INCLUDE[crdefault](../../../includes/crdefault-md.md)] [自訂工作流程設計經驗](../../../docs/framework/windows-workflow-foundation/customizing-the-workflow-design-experience.md)。
+ 新的 WF 設計工具建立 Windows Presentation Foundation (WPF) 和提供重新裝載 WF 設計工具，Visual Studio 外部時所要使用更簡單的模型，並也會提供更簡單的機制，來建立自訂活動設計工具。 [!INCLUDE[crdefault](../../../includes/crdefault-md.md)] [自訂工作流程設計經驗](../../../docs/framework/windows-workflow-foundation/customizing-the-workflow-design-experience.md)。

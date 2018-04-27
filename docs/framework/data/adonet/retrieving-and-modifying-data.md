@@ -1,24 +1,26 @@
 ---
-title: "在 ADO.NET 中傳送和修改資料"
-ms.custom: 
+title: 在 ADO.NET 中傳送和修改資料
+ms.custom: ''
 ms.date: 03/30/2017
 ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.technology: dotnet-ado
-ms.tgt_pltfrm: 
+ms.reviewer: ''
+ms.suite: ''
+ms.technology:
+- dotnet-ado
+ms.tgt_pltfrm: ''
 ms.topic: article
 ms.assetid: 722e7f87-3691-46c6-87e8-7d159722d675
-caps.latest.revision: "5"
+caps.latest.revision: 5
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.workload: dotnet
-ms.openlocfilehash: ff937e619d449fbfbedb234749292b6acc4bdf50
-ms.sourcegitcommit: ed26cfef4e18f6d93ab822d8c29f902cff3519d1
+ms.workload:
+- dotnet
+ms.openlocfilehash: 05760e7295606f700f72e5a3af14e395bcc5d820
+ms.sourcegitcommit: 86adcc06e35390f13c1e372c36d2e044f1fc31ef
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 01/17/2018
+ms.lasthandoff: 04/26/2018
 ---
 # <a name="retrieving-and-modifying-data-in-adonet"></a>在 ADO.NET 中傳送和修改資料
 任何資料庫應用程式都有一個主要功能，那就是連接到資料來源並擷取其內含的資料。 ADO.NET 的.NET Framework 資料提供者做為應用程式和資料來源之間的橋樑可讓您執行命令以及有關使用擷取資料**DataReader**或**DataAdapter**. 任何資料庫應用程式都有一個主要功能，那就是更新資料庫中儲存的資料。 在 ADO.NET 中，更新資料牽涉到使用**DataAdapter**和<xref:System.Data.DataSet>，和**命令**物件; 並且也可能需要使用交易。  
@@ -43,7 +45,7 @@ ms.lasthandoff: 01/17/2018
  包含一些主題，其中說明如何執行本機異動、分散式異動，以及使用開放式並行存取 (Optimistic Concurrency)。  
   
  [擷取身分識別或自動編號值](../../../../docs/framework/data/adonet/retrieving-identity-or-autonumber-values.md)  
- 提供將產生的值對應的範例**識別**中的資料行[!INCLUDE[ssNoVersion](../../../../includes/ssnoversion-md.md)]資料表或**Autonumber**欄位在 Microsoft Access 資料表中，資料表中插入資料列資料行。 討論如何在 `DataTable` 中合併識別值。  
+ 提供將產生的值對應的範例**識別**或 SQL Server 資料表中的資料行**Autonumber**欄位在 Microsoft Access 資料表中，資料表中插入資料列資料行。 討論如何在 `DataTable` 中合併識別值。  
   
  [擷取二進位資料](../../../../docs/framework/data/adonet/retrieving-binary-data.md)  
  描述如何擷取二進位資料或使用大型資料結構`CommandBehavior`。`SequentialAccess` 若要修改的預設行為`DataReader`。  
@@ -67,9 +69,9 @@ ms.lasthandoff: 01/17/2018
  描述 [!INCLUDE[vstecado](../../../../includes/vstecado-md.md)] 支援非同步程式設計。  
   
  [SqlClient 資料流支援](../../../../docs/framework/data/adonet/sqlclient-streaming-support.md)  
- 討論如何撰寫從 [!INCLUDE[ssNoVersion](../../../../includes/ssnoversion-md.md)] 串流資料而不需將它完全載入到記憶體中的應用程式。  
+ 討論如何撰寫應用程式的資料流資料從 SQL Server 不會完全載入記憶體中。  
   
-## <a name="see-also"></a>請參閱  
+## <a name="see-also"></a>另請參閱  
  [ADO.NET 中的資料類型對應](../../../../docs/framework/data/adonet/data-type-mappings-in-ado-net.md)  
  [DataSet、DataTable 和 DataView](../../../../docs/framework/data/adonet/dataset-datatable-dataview/index.md)  
  [設定 ADO.NET 應用程式的安全性](../../../../docs/framework/data/adonet/securing-ado-net-applications.md)  

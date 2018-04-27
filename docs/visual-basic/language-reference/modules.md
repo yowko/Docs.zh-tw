@@ -11,14 +11,14 @@ ms.assetid: 370bfc90-e8f2-4942-bdec-9897ce605d31
 caps.latest.revision: 11
 author: dotnet-bot
 ms.author: dotnetcontent
-ms.openlocfilehash: 62fba60aa6a9f95057010997d5f427f2c66ec178
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.openlocfilehash: cd92be378894235f4753cfc52e8382a1960bd37b
+ms.sourcegitcommit: 86adcc06e35390f13c1e372c36d2e044f1fc31ef
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 04/26/2018
 ---
 # <a name="modules-visual-basic"></a>模組 (Visual Basic)
-[!INCLUDE[vbprvb](~/includes/vbprvb-md.md)]提供數個模組可讓您簡化一般工作包括管理字串，執行數學計算，取得系統資訊、 執行檔案和目錄的作業，在您的程式碼等等。 下表列出所提供的模組[!INCLUDE[vbprvb](~/includes/vbprvb-md.md)]。  
+Visual Basic 提供數個模組可讓您簡化一般工作包括管理字串，執行數學計算，取得系統資訊、 執行檔案和目錄的作業，在您的程式碼等等。 下表列出 Visual Basic 所提供的模組。  
   
 |||  
 |---|---|  

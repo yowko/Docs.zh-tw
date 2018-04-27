@@ -12,17 +12,17 @@ ms.assetid: c188b38e-bd9d-4121-9983-41ea6a94d28e
 caps.latest.revision: 18
 author: dotnet-bot
 ms.author: dotnetcontent
-ms.openlocfilehash: 4a37bf43096931597278974099becb9be6ae133d
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.openlocfilehash: d931a2034d681c4e14cc35ecfbd9ad7accf5afaa
+ms.sourcegitcommit: 86adcc06e35390f13c1e372c36d2e044f1fc31ef
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 04/26/2018
 ---
 # <a name="how-my-depends-on-project-type-visual-basic"></a>My 如何相依於專案類型 (Visual Basic)
-`My`會公開特定專案類型所需的物件。 例如，`My.Forms`物件是在 Windows Form 應用程式中可用的但無法使用主控台應用程式中。 本主題描述這`My`物件都在不同專案類型。  
+`My` 會公開特定專案類型所需的物件。 例如，`My.Forms`物件是在 Windows Form 應用程式中可用的但無法使用主控台應用程式中。 本主題描述這`My`物件都在不同專案類型。  
   
 ## <a name="my-in-windows-applications-and-web-sites"></a>我在 Windows 應用程式和網站  
- `My`公開可用於目前的專案類型; 的物件它會隱藏不適用的物件。 例如下, 圖顯示`My`Windows Form 專案中的物件模型。  
+ `My` 公開可用於目前的專案類型; 的物件它會隱藏不適用的物件。 例如下, 圖顯示`My`Windows Form 專案中的物件模型。  
   
  ![圖形的我的 Windows Form 應用程式中](../../../visual-basic/developing-apps/development-with-my/media/myinwinform.png "MyInWinForm")  
   
@@ -48,7 +48,7 @@ ms.lasthandoff: 11/21/2017
 |`My.User`|**[是]** <sup>6</sup>|**[是]** <sup>6</sup>|**[是]** <sup>6</sup>|**[是]** <sup>6</sup>|**[是]** <sup>7</sup>|**[是]** <sup>6</sup>|否|**[是]** <sup>7</sup>|  
 |`My.WebServices`|**是**|**是**|**是**|**是**|**是**|**是**|否|否|  
   
- <sup>1</sup> Windows Form 版本`My.Application`。 衍生自主控台版本 （請參閱附註 3）。新增應用程式的 windows 與互動的支援，並提供[!INCLUDE[vbprvb](~/includes/vbprvb-md.md)]應用程式模型。  
+ <sup>1</sup> Windows Form 版本`My.Application`。 衍生自主控台版本 （請參閱附註 3）。新增應用程式的 windows 與互動的支援，並提供 Visual Basic 應用程式模型。  
   
  <sup>2</sup>程式庫版本`My.Application`。 提供應用程式所需的基本功能： 提供寫入至應用程式記錄檔，並存取應用程式資訊的成員。  
   

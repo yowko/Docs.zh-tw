@@ -1,26 +1,27 @@
 ---
-title: "目錄和檔案摘要 (Visual Basic)"
+title: 目錄和檔案摘要 (Visual Basic)
 ms.date: 07/20/2015
 ms.prod: .net
-ms.suite: 
-ms.technology: devlang-visual-basic
+ms.suite: ''
+ms.technology:
+- devlang-visual-basic
 ms.topic: article
 helpviewer_keywords:
 - files [Visual Basic]
 - directories [Visual Basic], Visual Basic
 - files [Visual Basic], summary
 ms.assetid: 588b75fd-a09b-4381-822d-19868990c170
-caps.latest.revision: "15"
+caps.latest.revision: 15
 author: dotnet-bot
 ms.author: dotnetcontent
-ms.openlocfilehash: b07c2c400bd682d2340349435d03e192a1840c6e
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.openlocfilehash: 7df9d0de955e6d9a225373d3711948886cff4c97
+ms.sourcegitcommit: 86adcc06e35390f13c1e372c36d2e044f1fc31ef
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 04/26/2018
 ---
 # <a name="directories-and-files-summary-visual-basic"></a>目錄和檔案摘要 (Visual Basic)
-[!INCLUDE[vbprvb](~/includes/vbprvb-md.md)]語言關鍵字和執行階段程式庫成員會依用途組織和使用。  
+Visual Basic 語言關鍵字和執行階段程式庫成員會依用途組織和使用。  
   
  使用`My`功能可讓您更大的產能和效能比使用這些成員的檔案 I/O 作業中。 如需詳細資訊，請參閱<xref:Microsoft.VisualBasic.FileIO.FileSystem>。  
   

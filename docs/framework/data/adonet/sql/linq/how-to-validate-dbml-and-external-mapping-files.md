@@ -1,27 +1,29 @@
 ---
-title: "如何：驗證 DBML 和外部對應檔"
-ms.custom: 
+title: 如何：驗證 DBML 和外部對應檔
+ms.custom: ''
 ms.date: 03/30/2017
 ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.technology: dotnet-ado
-ms.tgt_pltfrm: 
+ms.reviewer: ''
+ms.suite: ''
+ms.technology:
+- dotnet-ado
+ms.tgt_pltfrm: ''
 ms.topic: article
 ms.assetid: d9ea37f5-0a9e-4401-8fc3-1e6fd44c49f9
-caps.latest.revision: "2"
+caps.latest.revision: 2
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.workload: dotnet
-ms.openlocfilehash: 7724586c33c19654c3657a5a4604a3c74f2c8756
-ms.sourcegitcommit: ed26cfef4e18f6d93ab822d8c29f902cff3519d1
+ms.workload:
+- dotnet
+ms.openlocfilehash: 4d3fc297078c9f6c1ac8b2d8a498050f294a5437
+ms.sourcegitcommit: 86adcc06e35390f13c1e372c36d2e044f1fc31ef
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 01/17/2018
+ms.lasthandoff: 04/26/2018
 ---
 # <a name="how-to-validate-dbml-and-external-mapping-files"></a>如何：驗證 DBML 和外部對應檔
-如果修改外部對應檔案和 .dbml 檔案，則必須根據它們各自的結構描述定義進行驗證。 這個主題提供實作驗證流程的步驟，供 [!INCLUDE[vs_current_short](../../../../../../includes/vs-current-short-md.md)] 使用者使用。  
+如果修改外部對應檔案和 .dbml 檔案，則必須根據它們各自的結構描述定義進行驗證。 本主題提供的步驟來實作驗證流程的 Visual Studio 使用者。  
   
  [!INCLUDE[note_settings_general](../../../../../../includes/note-settings-general-md.md)]  
   
@@ -56,7 +58,7 @@ ms.lasthandoff: 01/17/2018
      判斷是否已產生錯誤、警告或訊息。 如果未產生，則會根據結構描述定義驗證 XML 檔案為有效。  
   
 ## <a name="alternate-method-for-supplying-schema-definition"></a>提供結構描述定義的替代方法  
- 如果基於某些原因適用的.xsd 檔案未出現在**XML 結構描述**對話方塊中，您可以從 [說明] 主題中下載.xsd 檔案。 下列步驟可幫助您以 Unicode 格式儲存下載的檔案，而這種格式是 [!INCLUDE[vs_current_short](../../../../../../includes/vs-current-short-md.md)] XML 編輯器需要的格式。  
+ 如果基於某些原因適用的.xsd 檔案未出現在**XML 結構描述**對話方塊中，您可以從 [說明] 主題中下載.xsd 檔案。 下列步驟可協助您將下載的檔案儲存在所需的 Visual Studio XML 編輯器中的 Unicode 格式。  
   
 #### <a name="to-copy-a-schema-definition-file-from-a-help-topic"></a>若要從說明主題中複製結構描述定義檔案  
   
@@ -81,5 +83,5 @@ ms.lasthandoff: 01/17/2018
   
 7.  在**檔案名稱**方塊中，建立副檔名為.xsd 的檔案名稱。  
   
-## <a name="see-also"></a>請參閱  
+## <a name="see-also"></a>另請參閱  
  [參考資料](../../../../../../docs/framework/data/adonet/sql/linq/reference.md)

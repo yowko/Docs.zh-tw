@@ -1,31 +1,32 @@
 ---
-title: "在 Visual Basic 中將規則運算式與 MaskedTextBox 控制項一起搭配使用"
-ms.custom: 
+title: 在 Visual Basic 中將規則運算式與 MaskedTextBox 控制項一起搭配使用
+ms.custom: ''
 ms.date: 07/20/2015
 ms.prod: .net
-ms.reviewer: 
-ms.suite: 
-ms.technology: devlang-visual-basic
-ms.tgt_pltfrm: 
+ms.reviewer: ''
+ms.suite: ''
+ms.technology:
+- devlang-visual-basic
+ms.tgt_pltfrm: ''
 ms.topic: article
 helpviewer_keywords:
 - strings [Visual Basic], regular expressions
 - strings [Visual Basic], masked edit
 ms.assetid: 2a048fb0-7053-487d-b2c5-ffa5e22ed6f9
-caps.latest.revision: "10"
+caps.latest.revision: 10
 author: dotnet-bot
 ms.author: dotnetcontent
-ms.openlocfilehash: 2638ed804593dd52481bd3865e1c67c5fdb2dcf9
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.openlocfilehash: c72542c05123ef62a8f95afbe1bb19cb823d1f21
+ms.sourcegitcommit: 86adcc06e35390f13c1e372c36d2e044f1fc31ef
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 04/26/2018
 ---
 # <a name="using-regular-expressions-with-the-maskedtextbox-control-in-visual-basic"></a>在 Visual Basic 中將規則運算式與 MaskedTextBox 控制項一起搭配使用
 此範例示範如何將簡單的規則運算式，若要使用的轉換<xref:System.Windows.Forms.MaskedTextBox>控制項。  
   
 ## <a name="description-of-the-masking-language"></a>遮罩語言的說明  
- 標準<xref:System.Windows.Forms.MaskedTextBox>遮罩語言根據所使用的`Masked Edit`控制[!INCLUDE[vbprvb](~/includes/vbprvb-md.md)]6.0，而且應該從該平台移轉的使用者很熟悉。  
+ 標準<xref:System.Windows.Forms.MaskedTextBox>遮罩語言根據所使用的`Masked Edit`控制在 Visual Basic 6.0 中，而且應該從該平台移轉的使用者所熟悉。  
   
  <xref:System.Windows.Forms.MaskedTextBox.Mask%2A>屬性<xref:System.Windows.Forms.MaskedTextBox>控制項指定要使用何種輸入的遮罩。 遮罩必須是一或多個下表中的遮罩項目所組成的字串。  
   
@@ -39,7 +40,7 @@ ms.lasthandoff: 11/21/2017
 |&|字元。 必要項目。|[\p{Ll}\p{Lu}\p{Lt}\p{Lm}\p{Lo}]|  
 |C|字元。 選擇性的項目。|[\p{Ll}\p{Lu}\p{Lt}\p{Lm}\p{Lo}]？|  
 |A|英數字元。 選擇性的項目。|\W|  
-|.|適當文化特性的小數預留位置。|不適用。|  
+|。|適當文化特性的小數預留位置。|不適用。|  
 |,|文化特性適當千分位符號。|不適用。|  
 |:|適當文化特性的時間分隔符號。|不適用。|  
 |/|適當文化特性的日期分隔符號。|不適用。|  

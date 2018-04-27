@@ -18,14 +18,14 @@ ms.assetid: b5a65ef0-c408-4836-afb6-e6828c0771ca
 caps.latest.revision: 43
 author: dotnet-bot
 ms.author: dotnetcontent
-ms.openlocfilehash: 2ee98b317e9d94cad5087e708bd71ca88d2bae63
-ms.sourcegitcommit: 34ec7753acf76f90a0fa845235ef06663dc9e36e
+ms.openlocfilehash: 5a8e1f06e1f32baacd494339a561a363f5d81c9d
+ms.sourcegitcommit: 86adcc06e35390f13c1e372c36d2e044f1fc31ef
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 04/26/2018
 ---
 # <a name="keywords-visual-basic"></a>關鍵字 (Visual Basic)
-下列各表列出所有 [!INCLUDE[vbprvb](~/includes/vbprvb-md.md)] 語言關鍵字。  
+下表列出所有的 Visual Basic 語言關鍵字。  
   
 ## <a name="reserved-keywords"></a>保留關鍵字  
  下列是「保留」關鍵字，表示您無法使用它們作為名稱，對變數或程序這類項目進行程式設定。 您可以用方括弧 (`[]`) 括住名稱來略過這項限制。 如需詳細資訊，請參閱[宣告項目名稱](../../../visual-basic/programming-guide/language-features/declared-elements/declared-element-names.md)中的＜逸出名稱＞。  
@@ -84,7 +84,7 @@ ms.lasthandoff: 12/21/2017
 |[>> 運算子](../../../visual-basic/language-reference/operators/right-shift-operator.md)|[>>= 運算子](../../../visual-basic/language-reference/operators/right-shift-assignment-operator.md)|[<<](../../../visual-basic/language-reference/operators/left-shift-operator.md)|[<\<=](../../../visual-basic/language-reference/operators/left-shift-assignment-operator.md)|  
   
 > [!NOTE]
->  `EndIf`、`GoSub`、`Variant` 和 `Wend` 都是保留為保留關鍵字，雖然它們不再用於 [!INCLUDE[vbprvb](~/includes/vbprvb-md.md)] 中。 `Let` 關鍵字的意義已變更。 `Let` 現在用於 LINQ 查詢中。 如需詳細資訊，請參閱 [Let 子句](../../../visual-basic/language-reference/queries/let-clause.md)。  
+>  `EndIf``GoSub`， `Variant`，和`Wend`保留為保留的關鍵字，但是無法再使用 Visual Basic 中。 `Let` 關鍵字的意義已變更。 `Let` 現在用於 LINQ 查詢中。 如需詳細資訊，請參閱 [Let 子句](../../../visual-basic/language-reference/queries/let-clause.md)。  
   
 ## <a name="unreserved-keywords"></a>未保留關鍵字  
  下列不是保留關鍵字，表示您可以使用它們作為程式設計項目的名稱。 不過，不建議這麼做，因為它會讓程式碼很難讀取，而且可能會導致難以察覺的細微錯誤。  
@@ -124,5 +124,5 @@ ms.lasthandoff: 12/21/2017
 |[登錄摘要](../../../visual-basic/language-reference/keywords/registry-summary.md)|列出函式，可用來讀取、儲存和刪除程式設定。|  
 |[字串操作摘要](../../../visual-basic/language-reference/keywords/string-manipulation-summary.md)|列出用來操作字串的函式。|  
   
-## <a name="see-also"></a>請參閱  
+## <a name="see-also"></a>另請參閱  
  [Visual Basic 執行階段程式庫成員](../../../visual-basic/language-reference/runtime-library-members.md)

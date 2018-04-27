@@ -5,14 +5,15 @@ author: CESARDELATORRE
 ms.author: wiwagn
 ms.date: 10/26/2017
 ms.prod: .net
+ms.topic: article
 ms.workload:
 - dotnet
 - dotnetcore
-ms.openlocfilehash: ba48579735379bfc857993cd1546f5f7125101f4
-ms.sourcegitcommit: d3cfda0943364aaf6ccd574f55f584576c8a4fee
+ms.openlocfilehash: ac4cd9f14f046a970b6ec41c1b176e9980a960cf
+ms.sourcegitcommit: 2e8acae16ae802f2d6d04e3ce0a6dbf04e476513
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 03/08/2018
+ms.lasthandoff: 04/18/2018
 ---
 # <a name="modernize-existing-net-applications-with-azure-cloud-and-windows-containers-v10"></a>利用 Azure Cloud 及 Windows 容器將現有的 .NET 應用程式現代化 (v1.0)
 
@@ -28,7 +29,7 @@ Copyright © 2017 by Microsoft Corporation
 
 著作權所有，並保留一切權利。 本書內容的任何部分在未經過發行者書面許可下，不得以任何形式或透過任何方式進行重製。
 
-免費電子活頁簿 （電子書） 可透過 microsoft http://dot.net/architecture 等的多個通道的形式使用此活頁簿。
+本書是免費電子活頁簿 （電子書） 可透過 microsoft 的多個通道的形式提供例如http://dot.net/architecture。
 
 若您對本書有相關問題，請傳送電子郵件到 [dotnet-architecture-ebooks-feedback@service.microsoft.com](mailto:dotnet-architecture-ebooks-feedback@service.microsoft.com?subject=Feedback%20for%20.NET%20Container%20&%20Microservices%20Architecture%20book)
 
@@ -36,7 +37,7 @@ Copyright © 2017 by Microsoft Corporation
 
 此處所描述的一些範例僅供說明，純屬虛構。 任何實際關聯或連結純屬巧合。
 
-Microsoft 與列於 http://www.microsoft.com「商標」網頁的商標是 Microsoft 集團的商標。 所有其他商標皆屬於其各自擁有者的財產。
+Microsoft 與列於商標http://www.microsoft.com"商標 」 網頁上是 Microsoft 公司的商標。 所有其他商標皆屬於其各自擁有者的財產。
 
 作者: 
 > **Cesar de la Torre**, Sr.，Microsoft Corp. .NET 產品小組 PM
@@ -172,11 +173,11 @@ Microsoft 與列於 http://www.microsoft.com「商標」網頁的商標是 Micro
 
 ### <a name="additional-resources"></a>其他資源
 
-- **Containerized Docker Application Lifecycle with Microsoft Platform and Tools** (利用 Microsoft 平台和工具的容器化 Docker 應用程式生命週期) (可下載的電子書)：[*https://aka.ms/dockerlifecycleebook*](https://aka.ms/dockerlifecycleebook)
+- **容器化 Microsoft 平台和工具與 Docker 的應用程式生命週期**（可下載的電子書）： [*https://aka.ms/dockerlifecycleebook*](https://aka.ms/dockerlifecycleebook)
 
-- **.NET Microservices: Architecture for containerized .NET applications** (.NET 微服務：容器化 .NET 應用程式的架構) (可下載的電子書)：[*https://aka.ms/microservicesebook*](https://aka.ms/microservicesebook)
+- **.NET Microservices： 容器化的.NET 應用程式架構**（可下載的電子書）： [*https://aka.ms/microservicesebook*](https://aka.ms/microservicesebook)
 
-- **Architecting modern web applications with ASP.NET Core and Azure** (利用 ASP.NET Core 及 Azure 建構現代 Web 應用程式) (可下載的電子書)：[*https://aka.ms/webappebook*](https://aka.ms/webappebook)
+- **架構現代化 web 應用程式使用 ASP.NET Core 和 Azure** （可下載的電子書）： [*https://aka.ms/webappebook*](https://aka.ms/webappebook)
 
 ## <a name="who-should-use-this-guide"></a>誰應該使用本指南
 

@@ -24,11 +24,11 @@ manager: wpickett
 ms.workload:
 - dotnet
 - dotnetcore
-ms.openlocfilehash: 2f4a6debc25a51e3a0a83e70fc8c8f8fc55c62f5
-ms.sourcegitcommit: e7f04439d78909229506b56935a1105a4149ff3d
+ms.openlocfilehash: dfa32112a2eb85a93cdd1e7a72d4411a3b197a1a
+ms.sourcegitcommit: 2e8acae16ae802f2d6d04e3ce0a6dbf04e476513
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 12/23/2017
+ms.lasthandoff: 04/18/2018
 ---
 # <a name="struct-design"></a>結構設計
 一般用途的實值類型通常稱為結構，其 C# 關鍵字。 本節提供一般結構設計指導方針。  
@@ -47,7 +47,7 @@ ms.lasthandoff: 12/23/2017
   
  **✓ 不要**實作<xref:System.IEquatable%601>實值型別。  
   
- <xref:System.Object.Equals%2A?displayProperty=nameWithType>實值類型上的方法會導致 boxing，和其預設實作不是非常有效率，因為它會使用反映。 <xref:System.IEquatable%601.Equals%2A>可能會較佳的效能，而且可以實作，使它不會造成 boxing。  
+ <xref:System.Object.Equals%2A?displayProperty=nameWithType>實值類型上的方法會導致 boxing，和其預設實作不是非常有效率，因為它會使用反映。 <xref:System.IEquatable%601.Equals%2A> 可能會較佳的效能，而且可以實作，使它不會造成 boxing。  
   
  **X 不**明確地延長<xref:System.ValueType>。 事實上，大部分語言防止這。  
   
@@ -55,9 +55,9 @@ ms.lasthandoff: 12/23/2017
   
  *部分 © 2005年，2009 Microsoft Corporation。All rights reserved.*  
   
- *皮耳森教育，inc.從權限所印製[Framework 設計方針： 慣例、 慣用語和可重複使用.NET 程式庫，第 2 版的模式](http://www.informit.com/store/framework-design-guidelines-conventions-idioms-and-9780321545619)Krzysztof Cwalina 並 Brad Abrams，發行 2008 年 10 月 22 日由Addison Wesley Professional，做為 Microsoft Windows 程式開發系列的一部分。*  
+ *皮耳森教育，inc.從權限所印製[Framework 設計方針： 慣例、 慣用語和可重複使用.NET 程式庫，第 2 版的模式](https://www.informit.com/store/framework-design-guidelines-conventions-idioms-and-9780321545619)Krzysztof Cwalina 並 Brad Abrams，發行 2008 年 10 月 22 日由Addison Wesley Professional，做為 Microsoft Windows 程式開發系列的一部分。*  
   
-## <a name="see-also"></a>請參閱  
+## <a name="see-also"></a>另請參閱  
  [類型設計方針](../../../docs/standard/design-guidelines/type.md)  
  [Framework 設計方針](../../../docs/standard/design-guidelines/index.md)  
  [在類別和結構之間選擇](../../../docs/standard/design-guidelines/choosing-between-class-and-struct.md)

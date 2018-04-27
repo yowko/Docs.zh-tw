@@ -1,27 +1,29 @@
 ---
-title: "單一大量複製作業"
-ms.custom: 
+title: 單一大量複製作業
+ms.custom: ''
 ms.date: 03/30/2017
 ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.technology: dotnet-ado
-ms.tgt_pltfrm: 
+ms.reviewer: ''
+ms.suite: ''
+ms.technology:
+- dotnet-ado
+ms.tgt_pltfrm: ''
 ms.topic: article
 dev_langs:
 - csharp
 - vb
 ms.assetid: 5e7ff0be-3f23-4996-a92c-bd54d65c3836
-caps.latest.revision: "5"
+caps.latest.revision: 5
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.workload: dotnet
-ms.openlocfilehash: 961981fcdf9709a336d76df99c8f65448e76b98a
-ms.sourcegitcommit: ed26cfef4e18f6d93ab822d8c29f902cff3519d1
+ms.workload:
+- dotnet
+ms.openlocfilehash: 37402672a6df808cb5e1c2424817fd9ce749cc82
+ms.sourcegitcommit: 86adcc06e35390f13c1e372c36d2e044f1fc31ef
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 01/17/2018
+ms.lasthandoff: 04/26/2018
 ---
 # <a name="single-bulk-copy-operations"></a>單一大量複製作業
 執行 SQL Server 大量複製作業的最簡單方法是：針對資料庫執行單一作業。 根據預設，會以隔離作業執行大量複製作業：複製作業會以非交易性方式執行，且沒有復原的機會。  
@@ -51,7 +53,7 @@ ms.lasthandoff: 01/17/2018
 >  建議來源與目標資料行的資料型別相符。 如果資料類型不相符， **SqlBulkCopy**嘗試將每個來源值轉換成目標資料類型，使用所採用的規則<xref:System.Data.SqlClient.SqlParameter.Value%2A>。 轉換可能會影響效能，亦可能導致意外的錯誤。 例如，`Double` 資料型別通常可轉換為 `Decimal` 資料型別，但並非始終如此。  
   
 ## <a name="example"></a>範例  
- 下列主控台應用程式示範如何使用 <xref:System.Data.SqlClient.SqlBulkCopy> 類別來載入資料。 在此範例中，<xref:System.Data.SqlClient.SqlDataReader>用來將資料從複製**Production.Product**資料表中[!INCLUDE[ssNoVersion](../../../../../includes/ssnoversion-md.md)] **AdventureWorks**相同資料庫中的類似資料表的資料庫。  
+ 下列主控台應用程式示範如何使用 <xref:System.Data.SqlClient.SqlBulkCopy> 類別來載入資料。 在此範例中，<xref:System.Data.SqlClient.SqlDataReader>用來將資料從複製**Production.Product** SQL Server 中的資料表**AdventureWorks**相同資料庫中的類似資料表的資料庫。  
   
 > [!IMPORTANT]
 >  此範例不會執行，除非您已建立工作資料表中所述[大量複製範例設定](../../../../../docs/framework/data/adonet/sql/bulk-copy-example-setup.md)。 此程式碼可示範如何使用的語法**SqlBulkCopy**只。 如果來源及目的地資料表位於相同的 SQL Server 執行個體中，則使用 Transact-SQL `INSERT … SELECT` 陳述式來複製資料會更方便且快速。  
@@ -90,6 +92,6 @@ command.ExecuteNonQuery();
 }  
 ```  
   
-## <a name="see-also"></a>請參閱  
+## <a name="see-also"></a>另請參閱  
  [在 SQL Server 中執行大量複製作業](../../../../../docs/framework/data/adonet/sql/bulk-copy-operations-in-sql-server.md)  
  [ADO.NET Managed 提供者和 DataSet 開發人員中心](http://go.microsoft.com/fwlink/?LinkId=217917)

@@ -1,27 +1,28 @@
 ---
-title: "在 Visual Basic 中文化特性如何影響字串"
-ms.custom: 
+title: 在 Visual Basic 中文化特性如何影響字串
+ms.custom: ''
 ms.date: 07/20/2015
 ms.prod: .net
-ms.reviewer: 
-ms.suite: 
-ms.technology: devlang-visual-basic
+ms.reviewer: ''
+ms.suite: ''
+ms.technology:
+- devlang-visual-basic
 ms.topic: article
 helpviewer_keywords:
 - locale [Visual Basic], effect on strings
 - strings [Visual Basic], locale dependence
 ms.assetid: c4664444-ee0d-47bf-bef1-eaa3c54bdd7f
-caps.latest.revision: "20"
+caps.latest.revision: 20
 author: dotnet-bot
 ms.author: dotnetcontent
-ms.openlocfilehash: b61f008edc446445fd5873b6138b64f29e0b8b8c
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.openlocfilehash: c95dcc8d04725f7a072e8c8bc7fe058e53a95c05
+ms.sourcegitcommit: 86adcc06e35390f13c1e372c36d2e044f1fc31ef
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 04/26/2018
 ---
 # <a name="how-culture-affects-strings-in-visual-basic"></a>在 Visual Basic 中文化特性如何影響字串
-這個說明網頁討論如何[!INCLUDE[vbprvb](~/includes/vbprvb-md.md)]使用文化特性資訊來執行字串轉換和比較。  
+這個說明網頁討論 Visual Basic 使用文化特性資訊來執行字串轉換和比較的方式。  
   
 ## <a name="when-to-use-culture-specific-strings"></a>何時使用特定文化特性的字串  
  一般而言，您應該使用特定文化特性字串的所有資料呈現給與使用者讀取和應用程式的內部資料使用文化特性而異的字串。  
@@ -31,7 +32,7 @@ ms.lasthandoff: 11/21/2017
  不過，如果應用程式會將日期上載到中央伺服器，它應該格式化根據某一特定的文化特性，以避免混淆之間可能有不同的日期格式字串。  
   
 ## <a name="culture-sensitive-functions"></a>區分文化特性的函式  
- 所有的[!INCLUDE[vbprvb](~/includes/vbprvb-md.md)]字串轉換函式 (除了`Str`和`Val`函式) 使用應用程式的文化特性資訊，請確定轉換和比較是適當的文化特性應用程式的使用者。  
+ 所有的 Visual Basic 字串轉換函式 (除了`Str`和`Val`函式) 來確定轉換和比較是否適合使用的文化特性的應用程式使用應用程式的文化特性資訊使用者。  
   
  了解哪些函式會使用特定文化特性設定，並使用目前文化特性設定為要使用不同的文化特性設定的電腦執行的應用程式中使用字串轉換函式成功的索引鍵。 請注意，應用程式的文化特性設定，根據預設，繼承自作業系統的文化特性設定。 如需詳細資訊，請參閱<xref:Microsoft.VisualBasic.Strings.Asc%2A>， <xref:Microsoft.VisualBasic.Strings.AscW%2A>， <xref:Microsoft.VisualBasic.Strings.Chr%2A>， <xref:Microsoft.VisualBasic.Strings.ChrW%2A>， <xref:Microsoft.VisualBasic.Strings.Format%2A>， <xref:Microsoft.VisualBasic.Conversion.Hex%2A>， <xref:Microsoft.VisualBasic.Conversion.Oct%2A>，和[類型轉換函式](../../../../visual-basic/language-reference/functions/type-conversion-functions.md)。  
   
@@ -64,7 +65,7 @@ ms.lasthandoff: 11/21/2017
   
 -   **決定是否兩個應用程式內部的字串完全符合 （通常基於安全性目的）。** 使用忽略目前的文化特性的作業。  
   
- 您可以執行這兩種類型的比較與[!INCLUDE[vbprvb](~/includes/vbprvb-md.md)]<xref:Microsoft.VisualBasic.Strings.StrComp%2A>函式。 指定選擇性`Compare`控制的比較類型的引數：`Text`大部分的輸入和輸出`Binary`判斷完全相符項目。  
+ 您可以執行使用 Visual Basic 的比較這兩種<xref:Microsoft.VisualBasic.Strings.StrComp%2A>函式。 指定選擇性`Compare`控制的比較類型的引數：`Text`大部分的輸入和輸出`Binary`判斷完全相符項目。  
   
  `StrComp`函式會傳回一個整數，表示依排序順序的比較兩個字串之間的關聯性。 結果為正值表示第一個字串大於第二個字串。 負的結果指出雖然較小，第一個字串和零表示字串相等。  
   
@@ -79,7 +80,7 @@ ms.lasthandoff: 11/21/2017
 |值`comparisonType`引數|比較類型|使用時機|  
 |---|---|---|  
 |`Ordinal`|依據字串元件位元組的比較。|使用此值，比較時： 區分大小寫的識別項、 安全性相關的設定或位元組必須完全符合其他非語言識別項。|  
-|`OrdinalIgnoreCase`|依據字串元件位元組的比較。<br /><br /> `OrdinalIgnoreCase`您可以使用而異的文化特性資訊來決定兩個字元不同大小寫。|使用此值，比較時： 不區分大小寫的識別項、 安全性相關的設定，並儲存在 Windows 中的資料。|  
+|`OrdinalIgnoreCase`|依據字串元件位元組的比較。<br /><br /> `OrdinalIgnoreCase` 您可以使用而異的文化特性資訊來決定兩個字元不同大小寫。|使用此值，比較時： 不區分大小寫的識別項、 安全性相關的設定，並儲存在 Windows 中的資料。|  
 |`CurrentCulture` 或 `CurrentCultureIgnoreCase`|在目前的文化特性的字串解譯為基礎的比較。|比較時使用這些值： 資料顯示給使用者，大部分使用者輸入，以及其他需要語言解譯的資料。|  
 |`InvariantCulture` 或 `InvariantCultureIgnoreCase`|在文化特性而異的字串解譯為基礎的比較。<br /><br /> 這是與不同`Ordinal`和`OrdinalIgnoreCase`、 因為而異的文化特性會視為相等非變異字元的字元，其可接受的範圍之外。|只比較持續資料或顯示的語言相關資料時，需要固定的排序次序，請使用這些值。|  
   

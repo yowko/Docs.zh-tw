@@ -1,30 +1,30 @@
 ---
-title: "可攜式類別庫的跨平台開發"
-ms.custom: 
+title: 可攜式類別庫的跨平台開發
+ms.custom: ''
 ms.date: 03/30/2017
 ms.prod: .net
-ms.reviewer: 
-ms.suite: 
+ms.reviewer: ''
+ms.suite: ''
 ms.technology: dotnet-standard
-ms.tgt_pltfrm: 
+ms.tgt_pltfrm: ''
 ms.topic: article
 helpviewer_keywords:
 - Portable Class Library [.NET Framework]
 - targeting multiple platforms
 - multiple platforms, targeting
 ms.assetid: c31e1663-c164-4e65-b66d-d3aa8750a154
-caps.latest.revision: "95"
+caps.latest.revision: 95
 author: mairaw
 ms.author: mairaw
 manager: wpickett
 ms.workload:
 - dotnet
 - dotnetcore
-ms.openlocfilehash: ea0a111727093cb65a98e48255b06b3c4516d258
-ms.sourcegitcommit: 91691981897cf8451033cb01071d8f5d94017f97
+ms.openlocfilehash: 4e6b853c3548f27bbb4056f7d59d51a6964e0d91
+ms.sourcegitcommit: 68b60d38043e50104ccc90c76f8599b1ffe18346
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 01/09/2018
+ms.lasthandoff: 04/20/2018
 ---
 # <a name="cross-platform-development-with-the-portable-class-library"></a>可攜式類別庫的跨平台開發
 Visual Studio 中的 .NET Framework 可攜式類別庫專案類型可幫助您快速、輕鬆地建立適用於 Microsoft 平台的跨平台應用程式和程式庫。  
@@ -38,7 +38,7 @@ Visual Studio 中的 .NET Framework 可攜式類別庫專案類型可幫助您�
  Visual Studio 有提供範本，可協助您用可攜式類別庫進行開發。 依據您使用的 Visual Studio 版本，可用的範本和功能表可能會與本文說明的內容不同。  
   
 > [!WARNING]
->  [Visual Studio 2013 Update 2](http://go.microsoft.com/fwlink/p/?LinkId=393658)包含可攜式類別庫範本的更新。 如果您有舊版的 Visual Studio 和 Visual Studio 2013 安裝在同一部電腦，然後再安裝 Update 2 中，若要變更**目標 Framework**選項將會套用至這兩個版本的 Visual Studio。  
+>  Visual Studio 2013 Update 2 包含可攜式類別庫範本的更新。 如果您有舊版的 Visual Studio 和 Visual Studio 2013 安裝在同一部電腦，然後再安裝 Update 2 中，若要變更**目標 Framework**選項將會套用至這兩個版本的 Visual Studio。  
   
  本主題內容：  
   
@@ -59,10 +59,10 @@ Visual Studio 中的 .NET Framework 可攜式類別庫專案類型可幫助您�
 |-----------------------|---------------------------------------------------|  
 |Visual Studio 2010、Professional、Premium 或 Ultimate|是的當您安裝[可攜式文件庫工具](https://marketplace.visualstudio.com/items?itemName=BCLTeam.PortableLibraryTools2)。|  
 |Visual Studio Express 2010 版本|否。|  
-|Visual Studio 2012、Professional、Premium 或 Ultimate|可以。 如需電話支援安裝[Windows Phone SDK 8.0](http://go.microsoft.com/fwlink/?LinkId=265772)。|  
+|Visual Studio 2012、Professional、Premium 或 Ultimate|可以。 如需 Windows Phone 8.0 支援安裝[Windows Phone SDK 8.0](https://www.microsoft.com/download/details.aspx?id=35471)。|  
 |Visual Studio Express 2012 版本|否。|  
-|Visual Studio 2013、Professional、Premium 或 Ultimate|可以。 如需 Windows Phone 8.1 支援安裝[Visual Studio 2013 Update 2](http://go.microsoft.com/fwlink/p/?LinkId=393658)。|  
-|Visual Studio Express 2013 for Windows|是的當您安裝[最新版本的 Visual Studio Express](http://go.microsoft.com/fwlink/p/?LinkId=394629)，其中包含 Update 2 中，或新增[Visual Studio 2013 Update 2](http://go.microsoft.com/fwlink/p/?LinkId=393658)。|  
+|Visual Studio 2013、Professional、Premium 或 Ultimate|可以。 如需 Windows Phone 8.1 支援安裝[最新版本的 Visual Studio 2013](https://www.visualstudio.com/vs/older-downloads/)。|  
+|Visual Studio Community 2013 for Windows|是的當您安裝[最新版本的 Visual Studio Community 2013](https://www.visualstudio.com/vs/older-downloads/)，其中包括 Update 2。|  
   
 <a name="create_pcl"></a>   
 ## <a name="creating-a-portable-class-library-project"></a>建立可攜式類別庫專案  
@@ -152,10 +152,10 @@ Visual Studio 2012 中的變更目標對話方塊
   
  ➊ 需要[Microsoft Async](https://www.nuget.org/packages/Microsoft.Bcl.Async/)封裝  
  ➋ 需要[Microsoft Compression](https://www.nuget.org/packages/Microsoft.Bcl.Compression)封裝  
- ➌ 需要[Microsoft HTTP Client Libraries](http://www.nuget.org/packages/Microsoft.Net.Http)封裝  
+ ➌ 需要[Microsoft HTTP Client Libraries](https://www.nuget.org/packages/Microsoft.Net.Http)封裝  
   
 > [!WARNING]
->  當您參考時，您可能會遇到錯誤[Microsoft Compression](https://www.nuget.org/packages/Microsoft.Bcl.Compression)和[Microsoft HTTP Client Libraries](http://www.nuget.org/packages/Microsoft.Net.Http) Windows Phone Silverlight 8.1 應用程式所使用的可攜式程式庫中的封裝。 如需詳細資訊，請參閱[平台相容性與重大變更 Windows Phone Silverlight 8.1 應用程式](http://go.microsoft.com/fwlink/p/?LinkId=394744)。  
+>  當您參考時，您可能會遇到錯誤[Microsoft Compression](https://www.nuget.org/packages/Microsoft.Bcl.Compression)和[Microsoft HTTP Client Libraries](https://www.nuget.org/packages/Microsoft.Net.Http) Windows Phone Silverlight 8.1 應用程式所使用的可攜式程式庫中的封裝。 如需詳細資訊，請參閱[平台相容性與重大變更 Windows Phone Silverlight 8.1 應用程式](/previous-versions/windows/apps/dn642084(v=vs.105))。  
   
 <a name="members"></a>   
 ## <a name="supported-types-and-members"></a>支援的類型和成員  
@@ -197,7 +197,7 @@ Visual Studio 2012 中的變更目標對話方塊
  當您建立參考可攜式類別庫組件的 Windows 市集或 Windows Phone 應用程式時，部署應用程式所需的一切都已內含在應用程式套件中，不需要進一步的步驟。  
   
 ### <a name="deploying-a-net-framework-app"></a>部署 .NET Framework 應用程式  
- 當您部署參考可攜式類別庫組件的 .NET Framework 應用程式時，必須指定正確 .NET Framework 版本的相依性。 藉由指定此相依性，您就可以確保所需的版本會隨著您的應用程式一起安裝。 如果您的目標.NET Framework 4 或更新版本中，電腦必須有.NET Framework 4 與[更新](http://go.microsoft.com/fwlink/?LinkId=210824)，.NET Framework 4 或.NET Framework 4.5 安裝的更新 4.0.3。  
+ 當您部署參考可攜式類別庫組件的 .NET Framework 應用程式時，必須指定正確 .NET Framework 版本的相依性。 藉由指定此相依性，您就可以確保所需的版本會隨著您的應用程式一起安裝。 如果您的目標.NET Framework 4 或更新版本中，電腦必須有.NET Framework 4 與[更新](https://www.microsoft.com/download/details.aspx?id=3556)，.NET Framework 4 或.NET Framework 4.5 安裝的更新 4.0.3。  
   
 -   若要建立與 ClickOnce 部署的相依性： 在**方案總管 中**，選擇您想要發行專案的專案節點。 (這是參考可攜式類別庫專案的專案。)在功能表列上選擇 **專案**，**屬性**，然後選擇 **發行** 索引標籤。在**發行**頁面上，選擇**必要條件**。 選取所需的 .NET Framework 版本 (或 .NET Framework 4 更新) 做為必要條件。  
   
@@ -217,9 +217,9 @@ Visual Studio 2012 中的變更目標對話方塊
     <param name="background" value="white" />  
     <param name="minRuntimeVersion" value="4.0.60129.0" />  
     <param name="autoUpgrade" value="true" />  
-    <a href="http://go.microsoft.com/fwlink/?LinkID=149156&v=4.0.50826.0"   
+    <a href="https://www.microsoft.com/getsilverlight/get-started/install/"   
              style="text-decoration:none">  
-      <img src=http://go.microsoft.com/fwlink/?LinkId=161376  
+      <img src=http://download.microsoft.com/download/5/1/6/5165823D-1D79-4871-8AC2-42DDDB94A5C2/PNGs/SLMedallion_ENU.png  
              alt="Get Microsoft Silverlight" style="border-style:none"/>  
     </a>  
   </object>  
@@ -229,7 +229,7 @@ Visual Studio 2012 中的變更目標對話方塊
 </div>  
 ```  
   
-## <a name="see-also"></a>請參閱  
+## <a name="see-also"></a>另請參閱  
  [搭配 MVVM 使用可攜式類別庫](../../../docs/standard/cross-platform/using-portable-class-library-with-model-view-view-model.md)  
  [以多平台為目標之程式庫的應用程式資源](../../../docs/standard/cross-platform/app-resources-for-libraries-that-target-multiple-platforms.md)  
  [.NET portability Analyzer](http://visualstudiogallery.msdn.microsoft.com/1177943e-cfb7-4822-a8a6-e56c7905292b)  

@@ -1,11 +1,12 @@
 ---
-title: "如何：多載使用不定數目參數的程序 (Visual Basic)"
-ms.custom: 
+title: 如何：多載使用不定數目參數的程序 (Visual Basic)
+ms.custom: ''
 ms.date: 07/20/2015
 ms.prod: .net
-ms.reviewer: 
-ms.suite: 
-ms.technology: devlang-visual-basic
+ms.reviewer: ''
+ms.suite: ''
+ms.technology:
+- devlang-visual-basic
 ms.topic: article
 helpviewer_keywords:
 - procedures [Visual Basic], parameters
@@ -16,14 +17,14 @@ helpviewer_keywords:
 - procedures [Visual Basic], overloading
 - procedures [Visual Basic], multiple versions
 ms.assetid: c7042de2-2422-4039-94e8-ac298896af69
-caps.latest.revision: "18"
+caps.latest.revision: 18
 author: dotnet-bot
 ms.author: dotnetcontent
-ms.openlocfilehash: 37d5b47f06bad1c2a8871168c5642663aedcccf2
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.openlocfilehash: 8cb4faa2dfd01f854dcc3bf8c2a330adf5acdcac
+ms.sourcegitcommit: 86adcc06e35390f13c1e372c36d2e044f1fc31ef
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 04/26/2018
 ---
 # <a name="how-to-overload-a-procedure-that-takes-an-indefinite-number-of-parameters-visual-basic"></a>如何：多載使用不定數目參數的程序 (Visual Basic)
 如果程序[ParamArray](../../../../visual-basic/language-reference/modifiers/paramarray.md)參數，您不能定義接受參數陣列的一維陣列的多載的版本。 如需詳細資訊，請參閱 「 隱含多載的參數陣列參數 」[中多載化程序的考量](./considerations-in-overloading-procedures.md)。  
@@ -53,7 +54,7 @@ ms.lasthandoff: 11/21/2017
   
  [!code-vb[VbVbcnProcedures#71](./codesnippet/VisualBasic/how-to-overload-a-procedure-that-takes-an-indefinite-number-of-parameters_3.vb)]  
   
- 若要測試是否呼叫的程式碼提供一個或多個值沒有多載的版本中的程式碼`ParamArray`參數，或如果是這樣，多少。 [!INCLUDE[vbprvb](~/includes/vbprvb-md.md)]將控制項傳遞至比對呼叫的引數清單的版本。  
+ 若要測試是否呼叫的程式碼提供一個或多個值沒有多載的版本中的程式碼`ParamArray`參數，或如果是這樣，多少。 Visual Basic 會將控制項傳遞至比對呼叫的引數清單的版本。  
   
 ## <a name="compiling-the-code"></a>編譯程式碼  
  因為程序時使用`ParamArray`參數相當於一組多載版本，您無法多載，這種程序對應至任何這些隱含的多載參數清單。 如需詳細資訊，請參閱[中多載化程序的考量](./considerations-in-overloading-procedures.md)。  

@@ -1,11 +1,12 @@
 ---
-title: "多載解析 (Visual Basic)"
-ms.custom: 
+title: 多載解析 (Visual Basic)
+ms.custom: ''
 ms.date: 07/20/2015
 ms.prod: .net
-ms.reviewer: 
-ms.suite: 
-ms.technology: devlang-visual-basic
+ms.reviewer: ''
+ms.suite: ''
+ms.technology:
+- devlang-visual-basic
 ms.topic: article
 helpviewer_keywords:
 - Visual Basic code, procedures
@@ -16,19 +17,19 @@ helpviewer_keywords:
 - signatures [Visual Basic], procedure
 - overloads [Visual Basic], resolution
 ms.assetid: 766115d1-4352-45fb-859f-6063e0de0ec0
-caps.latest.revision: "21"
+caps.latest.revision: 21
 author: dotnet-bot
 ms.author: dotnetcontent
-ms.openlocfilehash: 7eb71b69496e27b664fe297e9e5f105b360ce01d
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.openlocfilehash: e62560d853c95bc4bba6ba829d8579ee4388858e
+ms.sourcegitcommit: 86adcc06e35390f13c1e372c36d2e044f1fc31ef
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 04/26/2018
 ---
 # <a name="overload-resolution-visual-basic"></a>多載解析 (Visual Basic)
-當[!INCLUDE[vbprvb](~/includes/vbprvb-md.md)]編譯器遇到定義在數個多載版本的程序呼叫，編譯器必須決定要呼叫的多載。 它會執行下列步驟：  
+當 Visual Basic 編譯器遇到定義在數個多載版本的程序的呼叫時，編譯器必須決定要呼叫的多載。 它會執行下列步驟：  
   
-1.  **存取範圍。** 這可避免多載可防止呼叫程式碼呼叫它的存取層級。  
+1.  **協助工具。** 這可避免多載可防止呼叫程式碼呼叫它的存取層級。  
   
 2.  **參數數目。** 這可避免在呼叫中定義不同的參數數目所提供的任何多載。  
   

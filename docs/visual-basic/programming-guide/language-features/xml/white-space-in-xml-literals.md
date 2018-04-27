@@ -1,28 +1,29 @@
 ---
-title: "XML 常值中的空白字元 (Visual Basic)"
-ms.custom: 
+title: XML 常值中的空白字元 (Visual Basic)
+ms.custom: ''
 ms.date: 07/20/2015
 ms.prod: .net
-ms.reviewer: 
-ms.suite: 
-ms.technology: devlang-visual-basic
-ms.tgt_pltfrm: 
+ms.reviewer: ''
+ms.suite: ''
+ms.technology:
+- devlang-visual-basic
+ms.tgt_pltfrm: ''
 ms.topic: article
 helpviewer_keywords:
 - white space [XML in Visual Basic]
 - XML literals [Visual Basic], white space
 ms.assetid: dfe3a9ff-d69a-418e-a6b5-476f4ed84219
-caps.latest.revision: "14"
+caps.latest.revision: 14
 author: dotnet-bot
 ms.author: dotnetcontent
-ms.openlocfilehash: d8587abb98fe33ab2c5a0cef6cea76049a00909e
-ms.sourcegitcommit: bd1ef61f4bb794b25383d3d72e71041a5ced172e
+ms.openlocfilehash: e6d23aa54b150748aac9aa955f4bd86ee88358ea
+ms.sourcegitcommit: 86adcc06e35390f13c1e372c36d2e044f1fc31ef
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/18/2017
+ms.lasthandoff: 04/26/2018
 ---
 # <a name="white-space-in-xml-literals-visual-basic"></a>XML 常值中的空白字元 (Visual Basic)
-[!INCLUDE[vbprvb](~/includes/vbprvb-md.md)]會在建立時，編譯器會併入只有顯著泛空白字元字元從 XML 常值[!INCLUDE[sqltecxlinq](~/includes/sqltecxlinq-md.md)]物件。 不會納入無意義的空格字元。  
+Visual Basic 編譯器會在建立時，結合只有顯著泛空白字元字元從 XML 常值[!INCLUDE[sqltecxlinq](~/includes/sqltecxlinq-md.md)]物件。 不會納入無意義的空格字元。  
   
 ## <a name="significant-and-insignificant-white-space"></a>顯著和不顯著泛空白字元  
  XML 常值中的空白字元就很重要的只有三個方面：  
@@ -38,7 +39,7 @@ ms.lasthandoff: 10/18/2017
  若要在 XML 常值包含有效的空白字元，使用內嵌的運算式，其中包含字串常值空白字元。  
   
 > [!NOTE]
->  如果`xml:space`屬性會出現在 XML 元素常值，[!INCLUDE[vbprvb](~/includes/vbprvb-md.md)]編譯器包含中的屬性<xref:System.Xml.Linq.XElement>物件，但加入此屬性不會變更編譯器如何處理空白字元。  
+>  如果`xml:space`屬性會出現在 XML 元素常值、 Visual Basic 編譯器包含中的屬性<xref:System.Xml.Linq.XElement>物件，但加入此屬性不會變更編譯器如何處理空白字元。  
   
 ## <a name="examples"></a>範例  
  下列範例包含兩個外部和內部的 XML 項目。 這兩個元素包含文字內容中的空白字元。 外部的項目中的泛空白字元是無意義的因為它只包含空白字元和 XML 項目。 內部項目中的空白字元很重要的因為它包含泛空白字元和文字。  

@@ -15,14 +15,14 @@ ms.assetid: 46f046e5-293c-41a3-b893-4e5f6e32e78a
 caps.latest.revision: 13
 author: dotnet-bot
 ms.author: dotnetcontent
-ms.openlocfilehash: c020d94e09eb255ac03df15b519b3dfa78e8e367
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.openlocfilehash: 1b939fdbc0c60d84cfc51a36043e9c59dc82b241
+ms.sourcegitcommit: 86adcc06e35390f13c1e372c36d2e044f1fc31ef
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 04/26/2018
 ---
 # <a name="xml-literals-and-the-xml-10-specification-visual-basic"></a>XML 常值和 XML 1.0 規格 (Visual Basic)
-中的 XML 常值語法[!INCLUDE[vbprvb](~/includes/vbprvb-md.md)]支援大部分的可延伸標記語言 (XML) 1.0 規格。 如需有關 XML 1.0 規格的詳細資訊，請參閱[可延伸標記語言 (XML) 1.0](http://go.microsoft.com/fwlink/?LinkId=73927) W3C 網站上。  
+在 Visual Basic XML 常值的語法支援大部分的可延伸標記語言 (XML) 1.0 規格。 如需有關 XML 1.0 規格的詳細資訊，請參閱[可延伸標記語言 (XML) 1.0](http://go.microsoft.com/fwlink/?LinkId=73927) W3C 網站上。  
   
 ## <a name="what-visual-basic-does-not-support"></a>Visual Basic 不支援是什麼  
   

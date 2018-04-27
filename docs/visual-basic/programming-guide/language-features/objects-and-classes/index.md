@@ -15,21 +15,21 @@ ms.assetid: c68c5752-1006-46e1-975a-6717b62a42fc
 caps.latest.revision: 26
 author: dotnet-bot
 ms.author: dotnetcontent
-ms.openlocfilehash: be5e0156b4cacc39e1613e06fe3c138838b02700
-ms.sourcegitcommit: bd1ef61f4bb794b25383d3d72e71041a5ced172e
+ms.openlocfilehash: 19aa20097e35a780f923a84e3e5809eb2b8bb3e8
+ms.sourcegitcommit: 86adcc06e35390f13c1e372c36d2e044f1fc31ef
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/18/2017
+ms.lasthandoff: 04/26/2018
 ---
 # <a name="objects-and-classes-in-visual-basic"></a>Visual Basic 中的物件和類別
 「物件」是可視為一個單位的程式碼和資料組合。 物件可以是應用程式的一部分，例如控制項或表單。 整個應用程式也可以是一個物件。
 
-當您在 [!INCLUDE[vbprvb](~/includes/vbprvb-md.md)] 中建立應用程式時，經常會使用物件。 您可以使用 [!INCLUDE[vbprvb](~/includes/vbprvb-md.md)] 所提供的物件，例如控制項、表單和資料存取物件。 您也可以在 [!INCLUDE[vbprvb](~/includes/vbprvb-md.md)] 應用程式內使用其他應用程式的物件。 您甚至可以建立自己的物件，並為其定義其他屬性和方法。 物件的作用類似針對程式預製的建置組塊 - 它們可讓您撰寫一段程式碼一次，然後不斷地重複使用。  
+當您在 Visual Basic 中建立應用程式時，您經常使用的物件。 您可以使用由 Visual Basic 中，例如控制項、 表單和資料存取物件的物件。 您也可以在 Visual Basic 應用程式中使用從其他應用程式的物件。 您甚至可以建立自己的物件，並為其定義其他屬性和方法。 物件的作用類似針對程式預製的建置組塊 - 它們可讓您撰寫一段程式碼一次，然後不斷地重複使用。  
   
 本主題會詳細討論物件。  
 
 ## <a name="objects-and-classes"></a>物件和類別
-[!INCLUDE[vbprvb](~/includes/vbprvb-md.md)] 中的每個物件都是由「類別」所定義。 類別會描述物件的變數、屬性、程序及事件。 物件是類別的執行個體；當您定義類別之後，就能視需要建立最多的物件。
+在 Visual Basic 中的每個物件由定義*類別*。 類別會描述物件的變數、屬性、程序及事件。 物件是類別的執行個體；當您定義類別之後，就能視需要建立最多的物件。
 
 若要了解物件和其類別之間的關聯性，請想像餅乾壓模與餅乾。 餅乾壓模是類別。 它會定義每塊餅乾的特性，例如大小和形狀。 類別可用來建立物件。 物件則是餅乾。
 
@@ -241,7 +241,7 @@ End Sub
 另一個可讓物件相關聯的方法是「內含項目關係」。 容器物件邏輯上會封裝其他物件。 例如，<xref:System.OperatingSystem> 物件在邏輯上會包含 <xref:System.Version> 物件，這會透過其 <xref:System.OperatingSystem.Version%2A> 屬性傳回。 請注意，容器物件實際上不會包含任何其他物件。
 
 #### <a name="collections"></a>集合
-物件內含項目的一個特定型別是由「集合」來代表。 集合是一組可列舉的相似物件。 [!INCLUDE[vbprvb](~/includes/vbprvb-md.md)] 支援 [For Each...Next 陳述式](../../../../visual-basic/language-reference/statements/for-each-next-statement.md)中的特定語法，可讓您逐一查看集合的項目。 此外，集合通常可讓您使用 <xref:Microsoft.VisualBasic.Collection.Item%2A>，依其索引來擷取項目，或者將它們關聯至唯一字串來擷取項目。 比起陣列，集合更容易使用，因為它們讓您不需使用索引，就能新增或移除項目。 由於集合易於使用，因此，通常會用來儲存表單和控制項。
+物件內含項目的一個特定型別是由「集合」來代表。 集合是一組可列舉的相似物件。 Visual Basic 支援中的特定語法[每個...下一個陳述式](../../../../visual-basic/language-reference/statements/for-each-next-statement.md)，可讓您逐一查看集合的項目。 此外，集合通常可讓您使用 <xref:Microsoft.VisualBasic.Collection.Item%2A>，依其索引來擷取項目，或者將它們關聯至唯一字串來擷取項目。 比起陣列，集合更容易使用，因為它們讓您不需使用索引，就能新增或移除項目。 由於集合易於使用，因此，通常會用來儲存表單和控制項。
 
 ## <a name="related-topics"></a>相關主題  
  [逐步解說：定義類別](../../../../visual-basic/programming-guide/language-features/objects-and-classes/walkthrough-defining-classes.md)  

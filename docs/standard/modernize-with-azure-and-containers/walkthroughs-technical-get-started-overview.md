@@ -1,30 +1,31 @@
 ---
-title: "逐步解說和技術取得已啟動的概觀"
-description: "現代化現有的.NET 應用程式與 Azure 雲端和 Windows Containers |逐步解說和技術取得已啟動的概觀"
+title: 逐步解說和技術取得已啟動的概觀
+description: 現代化現有的.NET 應用程式與 Azure 雲端和 Windows Containers |逐步解說和技術取得已啟動的概觀
 author: CESARDELATORRE
 ms.author: wiwagn
 ms.date: 10/26/2017
 ms.prod: .net
+ms.topic: article
 ms.workload:
 - dotnet
 - dotnetcore
-ms.openlocfilehash: 6a2abda3949c1fffc4d731b01e35e58e7c56dac0
-ms.sourcegitcommit: d3cfda0943364aaf6ccd574f55f584576c8a4fee
+ms.openlocfilehash: 0bad7e3afbdf3e55c447319b3756f2235b9e0a19
+ms.sourcegitcommit: 2e8acae16ae802f2d6d04e3ce0a6dbf04e476513
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 03/08/2018
+ms.lasthandoff: 04/18/2018
 ---
 # <a name="walkthroughs-and-technical-get-started-overview"></a>逐步解說和技術取得已啟動的概觀
 
 若要限制此的電子書的大小，其他技術文件和完整的逐步解說所提供的 GitHub 儲存機制中。 此章節所述的逐步解說線上系列涵蓋 Windows 容器和部署至 Azure 為基礎的多個環境的逐步安裝。
 
-下列各節說明每個逐步解說是有關它的目的和高層級的願景，並提供所涉及的工作的圖表。 您可以取得自己的逐步解說中*eShopModernizing*在應用程式 GitHub 儲存機制 wiki [https://github.com/dotnet-architecture/eShopModernizing/wiki](https://github.com/dotnet-architecture/eShopModernizing/wiki)。
+下列各節說明每個逐步解說是有關它的目的和高層級的願景，並提供所涉及的工作的圖表。 您可以取得自己的逐步解說中*eShopModernizing*在應用程式 GitHub 儲存機制 wiki [ https://github.com/dotnet-architecture/eShopModernizing/wiki ](https://github.com/dotnet-architecture/eShopModernizing/wiki)。
 
 ## <a name="technical-walkthrough-list"></a>技術的逐步解說清單
 
 下列 get 開始逐步解說提供一致且完整的範例應用程式，您可以拿起和移位藉由使用容器，並接著在 Azure 中使用多個部署選項之間移動技術的指引。
 
-下列逐步解說使用的新範例 eShopLegacy 和 eShopModernizing 應用程式，可在 GitHub 上[https://github.com/dotnet-architecture/eShopModernizing](https://github.com/dotnet-architecture/eShopModernizing)。
+下列逐步解說使用的新範例 eShopLegacy 和 eShopModernizing 應用程式，可在 GitHub 上[ https://github.com/dotnet-architecture/eShopModernizing ](https://github.com/dotnet-architecture/eShopModernizing)。
 
 - **教學課程的資格舊版應用程式**
 
@@ -66,7 +67,7 @@ EShopModernizing GitHub 儲存機制 wiki 有完整的技術的逐步解說：
 
 ![ASP.NET MVC 與 ASP.NET Web Form 應用程式 （舊版現有技術）](./media/image5-2.png)
 
-> **圖 5-2。** ASP.NET MVC 與 ASP.NET Web Form 應用程式 （舊版現有技術）
+> **圖 5-2.** ASP.NET MVC 與 ASP.NET Web Form 應用程式 （舊版現有技術）
 
 這些是 web 應用程式，可用來瀏覽並修改類別目錄項目。 兩個應用程式傳遞相同的功能/功能其實只是進行比較。 您可以看到類似的現代化程序所建立的 ASP.NET MVC 與 ASP.NET Web Form 架構的應用程式。
 
@@ -112,7 +113,7 @@ EShopModernizing GitHub 儲存機制 wiki 有完整的技術的逐步解說：
 
 > ![在開發環境中的容器化應用程式的簡化的架構圖](./media/image5-3.png)
 >
-> **圖 5-3。** 在開發環境中的容器化應用程式的簡化的架構圖
+> **圖 5-3.** 在開發環境中的容器化應用程式的簡化的架構圖
 
 ### <a name="benefits"></a>優點
 
@@ -126,7 +127,7 @@ EShopModernizing GitHub 儲存機制 wiki 有完整的技術的逐步解說：
 
 ### <a name="next-steps"></a>後續步驟
 
-瀏覽 GitHub wiki 上的更深入了解此內容： [https://github.com/dotnet-architecture/eShopModernizing/wiki/02.-How-to-containerize-the-.NET-Framework-web-apps-with-Windows-Containers-and-Docker](https://github.com/dotnet-architecture/eShopModernizing/wiki/02.-How-to-containerize-the-.NET-Framework-web-apps-with-Windows-Containers-and-Docker)
+瀏覽更深入了解此內容上的 GitHub wiki: [https://github.com/dotnet-architecture/eShopModernizing/wiki/02.-How-to-containerize-the-.NET-Framework-web-apps-with-Windows-Containers-and-Docker](https://github.com/dotnet-architecture/eShopModernizing/wiki/02.-How-to-containerize-the-.NET-Framework-web-apps-with-Windows-Containers-and-Docker)
 
 ## <a name="walkthrough-3-deploy-your-windows-containers-based-app-to-azure-vms"></a>逐步解說 3： 將 Windows 容器基礎應用程式部署至 Azure Vm
 
@@ -152,13 +153,13 @@ EShopModernizing GitHub 儲存機制 wiki 有完整的技術的逐步解說：
 
 ![從透過 Docker 引擎連線的開發電腦部署到 Azure VM](./media/image5-4.png)
 
-> **圖 5-4。** 從透過 Docker 引擎連線的開發電腦部署到 Azure VM
+> **圖 5-4.** 從透過 Docker 引擎連線的開發電腦部署到 Azure VM
 
 #### <a name="scenario-b-deploy-to-an-azure-vm-through-a-docker-registry"></a>案例 b： 部署至 Azure VM 透過 Docker 登錄
 
 ![部署至 Azure VM 透過 Docker 登錄](./media/image5-5.png)
 
-> **圖 5-5。** 部署至 Azure VM 透過 Docker 登錄
+> **圖 5-5.** 部署至 Azure VM 透過 Docker 登錄
 
 #### <a name="scenario-c-deploy-to-an-azure-vm-from-cicd-pipelines-in-visual-studio-team-services"></a>案例 c： 將部署至 Azure VM 從 Visual Studio Team Services 中的 CI/CD 管線
 
@@ -208,13 +209,13 @@ EShopModernizing GitHub 儲存機制 wiki 有完整的技術的逐步解說：
 
 ![直接將部署到 Kubernetes 叢集從開發環境](./media/image5-7.png)
 
-> **圖 5-7。** 直接將部署到 Kubernetes 叢集從開發環境
+> **圖 5-7.** 直接將部署到 Kubernetes 叢集從開發環境
 
 #### <a name="scenario-b-deploy-to-a-kubernetes-cluster-from-cicd-pipelines-in-team-services"></a>在 Team Services 中的案例 b： 從將部署至 Kubernetes 叢集 CI/CD 管線
 
 ![從 Team Services 中的 CI/CD 管線部署到 Kubernetes 叢集](./media/image5-8.png)
 
-> **圖 5-8。** 從 Team Services 中的 CI/CD 管線部署到 Kubernetes 叢集
+> **圖 5-8.** 從 Team Services 中的 CI/CD 管線部署到 Kubernetes 叢集
 
 ### <a name="benefits"></a>優點
 
@@ -240,7 +241,7 @@ Azure 容器服務，特別針對 Azure 最佳化熱門的開放原始碼工具�
 
 ## <a name="next-steps"></a>後續步驟
 
-瀏覽 GitHub wiki 上的更深入了解此內容： [https://github.com/dotnet-architecture/eShopModernizing/wiki/04.-How-to-deploy-your-Windows-Containers-based-apps-into-Kubernetes-in-Azure-Container-Service-(Including-C-CD)](https://github.com/dotnet-architecture/eShopModernizing/wiki/04.-How-to-deploy-your-Windows-Containers-based-apps-into-Kubernetes-in-Azure-Container-Service-(Including-C-CD))
+瀏覽更深入了解此內容上的 GitHub wiki: [https://github.com/dotnet-architecture/eShopModernizing/wiki/04.-How-to-deploy-your-Windows-Containers-based-apps-into-Kubernetes-in-Azure-Container-Service-(Including-C-CD)](https://github.com/dotnet-architecture/eShopModernizing/wiki/04.-How-to-deploy-your-Windows-Containers-based-apps-into-Kubernetes-in-Azure-Container-Service-(Including-C-CD))
 
 ## <a name="walkthrough-5-deploy-your-windows-containers-based-apps-to-azure-service-fabric"></a>逐步解說 5： 將 Windows 容器基礎應用程式部署至 Azure Service Fabric
 
@@ -268,13 +269,13 @@ EShopModernizing GitHub 儲存機制 wiki 有完整的技術的逐步解說：
 
 ![從開發環境部署直接到 Service Fabric 叢集](./media/image5-9.png)
 
-> **圖 5-9。** 從開發環境部署直接到 Service Fabric 叢集
+> **圖 5-9.** 從開發環境部署直接到 Service Fabric 叢集
 
 ### <a name="scenario-b-deploy-to-a-service-fabric-cluster-from-cicd-pipelines-in-team-services"></a>在 Team Services 中的案例 b： 從將部署到 Service Fabric 叢集 CI/CD 管線
 
 ![從 Visual Studio Team Services 中的 CI/CD 管線部署到 Service Fabric 叢集](./media/image5-10.png)
 
-> **圖 5-10。** 從 Visual Studio Team Services 中的 CI/CD 管線部署到 Service Fabric 叢集
+> **圖 5-10.** 從 Visual Studio Team Services 中的 CI/CD 管線部署到 Service Fabric 叢集
 
 ## <a name="benefits"></a>優點
 

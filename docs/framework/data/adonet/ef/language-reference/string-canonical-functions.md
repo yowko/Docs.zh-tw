@@ -1,24 +1,26 @@
 ---
-title: "字串標準函式"
-ms.custom: 
+title: 字串標準函式
+ms.custom: ''
 ms.date: 03/30/2017
 ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.technology: dotnet-ado
-ms.tgt_pltfrm: 
+ms.reviewer: ''
+ms.suite: ''
+ms.technology:
+- dotnet-ado
+ms.tgt_pltfrm: ''
 ms.topic: article
 ms.assetid: 5e2cbebd-5df3-47c7-b0e2-49a17ab22bfb
-caps.latest.revision: "2"
+caps.latest.revision: 2
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.workload: dotnet
-ms.openlocfilehash: 2eef6928098f762274ecd19272b34cce6ab41920
-ms.sourcegitcommit: ed26cfef4e18f6d93ab822d8c29f902cff3519d1
+ms.workload:
+- dotnet
+ms.openlocfilehash: 8bead8bc61c06a2daf4dd95dca8808caf823f245
+ms.sourcegitcommit: 86adcc06e35390f13c1e372c36d2e044f1fc31ef
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 01/17/2018
+ms.lasthandoff: 04/26/2018
 ---
 # <a name="string-canonical-functions"></a>字串標準函式
 [!INCLUDE[esql](../../../../../../includes/esql-md.md)] 包含字串標準函式。  
@@ -30,7 +32,7 @@ ms.lasthandoff: 01/17/2018
 |--------------|-----------------|  
 |`Concat (` `string1`, `string2``)`|傳回包含附加至 `string2` 之 `string1` 的字串。<br /><br /> **引數**<br /><br /> `string1`：`string2` 附加至的字串。<br /><br /> `string2`：附加至 `string1` 的字串。<br /><br /> **傳回值**<br /><br /> `String`。 如果傳回值字串的長度超過允許的最大長度，就會發生錯誤。<br /><br /> **範例**<br /><br /> `-- The following example returns abcxyz.`<br /><br /> `Concat('abc', 'xyz')`|  
 |`Contains (` `string`, `target``)`|如果 `true` 包含在 `target` 之中，傳回`string`。<br /><br /> **引數**<br /><br /> `string`：用來搜尋的字串。<br /><br /> `target`：搜尋的目標字串。<br /><br /> **傳回值**<br /><br /> 如果 `true` 包含在 `target` 中，則為 `string`，否則為 `false`。<br /><br /> **範例**<br /><br /> `-- The following example returns true.`<br /><br /> `Contains('abc', 'bc')`|  
-|`EndsWith (` `string`, `target``)`|如果 `true` 是以 `target` 為結尾，傳回 `string`。<br /><br /> **引數**<br /><br /> `string`：用來搜尋的字串。<br /><br /> `target`：搜尋位於 `string` 結尾處的目標字串。<br /><br /> **傳回值**<br /><br /> 如果 `True` 是以 `string` 為結尾，則為 `target`，否則為 `false`。<br /><br /> **範例**<br /><br /> `-- The following example returns true.`<br /><br /> `EndsWith('abc', 'bc')`**附註：**如果您使用[!INCLUDE[ssNoVersion](../../../../../../includes/ssnoversion-md.md)]資料提供者，此函數會傳回`false`字串如果固定的長度字串資料行中儲存和`target`是常數。 在這個情況下，會搜尋到整個字串，包括任何填補的後端空格。 可能的解決方法是修剪固定長度字串中的資料，如以下範例所示：`EndsWith(TRIM(string), target)`|  
+|`EndsWith (` `string`, `target``)`|如果 `true` 是以 `target` 為結尾，傳回 `string`。<br /><br /> **引數**<br /><br /> `string`：用來搜尋的字串。<br /><br /> `target`：搜尋位於 `string` 結尾處的目標字串。<br /><br /> **傳回值**<br /><br /> 如果 `True` 是以 `string` 為結尾，則為 `target`，否則為 `false`。<br /><br /> **範例**<br /><br /> `-- The following example returns true.`<br /><br /> `EndsWith('abc', 'bc')` **注意：**如果您使用 SQL Server 資料提供者，此函數會傳回`false`字串如果固定的長度字串資料行中儲存和`target`是常數。 在這個情況下，會搜尋到整個字串，包括任何填補的後端空格。 可能的解決方法是修剪固定長度字串中的資料，如以下範例所示：`EndsWith(TRIM(string), target)`|  
 |`IndexOf(` `target`, `string``)`|傳回 `target` 在 `string` 內部的位置，或 0 (如果找不到的話)。 傳回 1 表示 `string` 的開頭。 索引編號會從 1 開始。<br /><br /> **引數**<br /><br /> `target`：搜尋的目標字串。<br /><br /> `string`：用來搜尋的字串。<br /><br /> **傳回值**<br /><br /> `Int32`。<br /><br /> **範例**<br /><br /> `-- The following example returns 4.`<br /><br /> `IndexOf('xyz', 'abcxyz')`|  
 |`Left (` `string`, `length``)`|從 `length` 的左側傳回前 `string` 個字元。 如果 `string` 的長度小於 `length`，就會傳回整個字串。<br /><br /> **引數**<br /><br /> `string`：`String`。<br /><br /> `length`：`Int16`、`Int32`、`Int64` 或 `Byte`。 `length` 不得小於零。<br /><br /> **傳回值**<br /><br /> `String`。<br /><br /> **範例**<br /><br /> `-- The following example returns abc.`<br /><br /> `Left('abcxyz', 3)`|  
 |`Length (` `string` `)`|傳回字串的 (`Int32`) 長度 (以字元為單位)。<br /><br /> **引數**<br /><br /> `string`：`String`。<br /><br /> **傳回值**<br /><br /> `Int32`。<br /><br /> **範例**<br /><br /> `-- The following example returns 6.`<br /><br /> `Legth('abcxyz')`|  
@@ -49,5 +51,5 @@ ms.lasthandoff: 01/17/2018
   
  Microsoft SQL Client Managed Provider 中提供了對等的功能。 如需詳細資訊，請參閱[適用於 Entity Framework 函式的 SqlClient](../../../../../../docs/framework/data/adonet/ef/sqlclient-for-ef-functions.md)。  
   
-## <a name="see-also"></a>請參閱  
+## <a name="see-also"></a>另請參閱  
  [標準函式](../../../../../../docs/framework/data/adonet/ef/language-reference/canonical-functions.md)

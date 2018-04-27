@@ -13,11 +13,11 @@ helpviewer_keywords:
 ms.assetid: 84a0b670-33ae-44c4-a46a-b90388809317
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: bb1cc114c2882aa82787f94a271dd7684c716b01
-ms.sourcegitcommit: 498799639937c89de777361aab74261efe7b79ea
+ms.openlocfilehash: 195d4b8f8e88d22e63c29ab9152399eb5c4a19df
+ms.sourcegitcommit: 86adcc06e35390f13c1e372c36d2e044f1fc31ef
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 03/22/2018
+ms.lasthandoff: 04/26/2018
 ---
 # <a name="-recurse"></a>-recurse
 編譯指定的目錄或專案目錄的子目錄中的原始程式檔。  
@@ -42,13 +42,13 @@ ms.lasthandoff: 03/22/2018
 >  `-recurse`選項不是從 Visual Studio 開發環境中使用; 其只有在從命令列編譯時。  
   
 ## <a name="example"></a>範例  
- 下列命令會將所有[!INCLUDE[vbprvb](~/includes/vbprvb-md.md)]目前目錄中的檔案。  
+ 下列命令會編譯目前的目錄中的所有 Visual Basic 檔案。  
   
 ```console
 vbc *.vb  
 ```  
   
- 下列命令會將所有[!INCLUDE[vbprvb](~/includes/vbprvb-md.md)]檔案`Test\ABC`目錄和任何目錄下方，然後產生`Test.ABC.dll`。  
+ 下列命令會編譯中的所有 Visual Basic 檔案`Test\ABC`目錄和任何目錄下方，然後產生`Test.ABC.dll`。  
   
 ```console
 vbc -target:library -out:Test.ABC.dll -recurse:Test\ABC\*.vb  

@@ -24,11 +24,11 @@ ms.author: ghogen
 manager: douge
 ms.workload:
 - dotnet
-ms.openlocfilehash: 325e43f4b1734bc6ab8753285e5069f36b0fda51
-ms.sourcegitcommit: c0dd436f6f8f44dc80dc43b07f6841a00b74b23f
+ms.openlocfilehash: 4ed6a741a6f86b492929598613a0c10ae08981c5
+ms.sourcegitcommit: 86adcc06e35390f13c1e372c36d2e044f1fc31ef
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 01/19/2018
+ms.lasthandoff: 04/26/2018
 ---
 # <a name="developing-windows-service-applications"></a>開發 Windows 服務應用程式
 使用 Microsoft[!INCLUDE[vsprvs](../../../includes/vsprvs-md.md)]或 Microsoft [!INCLUDE[dnprdnshort](../../../includes/dnprdnshort-md.md)] SDK，您可以輕鬆地建立服務所建立的應用程式，安裝為服務。 這種類型的應用程式稱為 Windows 服務。 透過架構功能，您可以建立服務、 加以安裝，以及啟動、 停止及控制它們的行為。  
@@ -41,7 +41,7 @@ ms.lasthandoff: 01/19/2018
  概略說明 Windows 服務應用程式、 服務和服務應用程式有何不同於其他常見的專案類型的存留期。  
   
  [逐步解說：在元件設計工具中建立 Windows 服務應用程式](../../../docs/framework/windows-services/walkthrough-creating-a-windows-service-application-in-the-component-designer.md)  
- 提供建立服務中的範例[!INCLUDE[vbprvb](../../../includes/vbprvb-md.md)]和 Visual C#。  
+ 提供 Visual Basic 和 Visual C# 中建立服務的範例。  
   
  [服務應用程式的程式設計架構](../../../docs/framework/windows-services/service-application-programming-architecture.md)  
  說明在服務程式設計中使用的語言項目。  

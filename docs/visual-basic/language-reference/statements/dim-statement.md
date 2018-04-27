@@ -1,10 +1,11 @@
 ---
-title: "Dim 陳述式 (Visual Basic)"
+title: Dim 陳述式 (Visual Basic)
 ms.date: 07/20/2015
 ms.prod: .net
-ms.reviewer: 
-ms.suite: 
-ms.technology: devlang-visual-basic
+ms.reviewer: ''
+ms.suite: ''
+ms.technology:
+- devlang-visual-basic
 ms.topic: article
 f1_keywords:
 - vb.Dim
@@ -34,14 +35,14 @@ helpviewer_keywords:
 - Dim statement [Visual Basic], syntax
 - variables [Visual Basic], member and local
 ms.assetid: fae3eca1-f0b2-4400-994b-7aa58a848448
-caps.latest.revision: "72"
+caps.latest.revision: 72
 author: dotnet-bot
 ms.author: dotnetcontent
-ms.openlocfilehash: a428f8be7b62600ca8fffd3160039c1de911e34e
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.openlocfilehash: 36e2d416e4653bfa6fe212b75b92ae2d90775d53
+ms.sourcegitcommit: 86adcc06e35390f13c1e372c36d2e044f1fc31ef
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 04/26/2018
 ---
 # <a name="dim-statement-visual-basic"></a>Dim 陳述式 (Visual Basic)
 宣告，並針對一個或多個變數配置儲存空間。  
@@ -57,11 +58,11 @@ Dim [ WithEvents ] variablelist
   
 -   `attributelist`  
   
-     選擇項。 請參閱[屬性清單](../../../visual-basic/language-reference/statements/attribute-list.md)。  
+     選擇性。 請參閱[屬性清單](../../../visual-basic/language-reference/statements/attribute-list.md)。  
   
 -   `accessmodifier`  
   
-     選擇項。 可以是下列其中一項：  
+     選擇性。 可以是下列其中一項：  
   
     -   [Public](../../../visual-basic/language-reference/modifiers/public.md)  
   
@@ -77,27 +78,27 @@ Dim [ WithEvents ] variablelist
   
 -   `Shared`  
   
-     選擇項。 請參閱[共用](../../../visual-basic/language-reference/modifiers/shared.md)。  
+     選擇性。 請參閱[共用](../../../visual-basic/language-reference/modifiers/shared.md)。  
   
 -   `Shadows`  
   
-     選擇項。 請參閱[陰影](../../../visual-basic/language-reference/modifiers/shadows.md)。  
+     選擇性。 請參閱[陰影](../../../visual-basic/language-reference/modifiers/shadows.md)。  
   
 -   `Static`  
   
-     選擇項。 請參閱[靜態](../../../visual-basic/language-reference/modifiers/static.md)。  
+     選擇性。 請參閱[靜態](../../../visual-basic/language-reference/modifiers/static.md)。  
   
 -   `ReadOnly`  
   
-     選擇項。 請參閱[ReadOnly](../../../visual-basic/language-reference/modifiers/readonly.md)。  
+     選擇性。 請參閱[ReadOnly](../../../visual-basic/language-reference/modifiers/readonly.md)。  
   
 -   `WithEvents`  
   
-     選擇項。 指定這些物件變數參照可引發事件的類別執行個體。 請參閱[WithEvents](../../../visual-basic/language-reference/modifiers/withevents.md)。  
+     選擇性。 指定這些物件變數參照可引發事件的類別執行個體。 請參閱[WithEvents](../../../visual-basic/language-reference/modifiers/withevents.md)。  
   
 -   `variablelist`  
   
-     必要項。 此陳述式所宣告的變數清單。  
+     必要。 此陳述式所宣告的變數清單。  
   
      `variable [ , variable ... ]`  
   
@@ -105,14 +106,14 @@ Dim [ WithEvents ] variablelist
   
      `variablename [ ( [ boundslist ] ) ] [ As [ New ] datatype [ With`{`[ .propertyname = propinitializer [ , ... ] ] } ] ] [ = initializer ]`  
   
-    |組件|說明|  
+    |組件|描述|  
     |---|---|  
-    |`variablename`|必要項。 變數的名稱。 請參閱[宣告項目名稱](../../../visual-basic/programming-guide/language-features/declared-elements/declared-element-names.md)。|  
-    |`boundslist`|選擇項。 陣列變數的每個維度的界限清單。|  
-    |`New`|選擇項。 建立類別的新執行個體時`Dim`陳述式執行。|  
-    |`datatype`|選擇項。 變數的資料類型。|  
-    |`With`|選擇項。 導入了物件初始設定式清單。|  
-    |`propertyname`|選擇項。 在類別中屬性的名稱進行執行個體。|  
+    |`variablename`|必要。 變數的名稱。 請參閱[宣告項目名稱](../../../visual-basic/programming-guide/language-features/declared-elements/declared-element-names.md)。|  
+    |`boundslist`|選擇性。 陣列變數的每個維度的界限清單。|  
+    |`New`|選擇性。 建立類別的新執行個體時`Dim`陳述式執行。|  
+    |`datatype`|選擇性。 變數的資料類型。|  
+    |`With`|選擇性。 導入了物件初始設定式清單。|  
+    |`propertyname`|選擇性。 在類別中屬性的名稱進行執行個體。|  
     |`propinitializer`|之後所需`propertyname`=。 運算式評估，以及指派給屬性名稱。|  
     |`initializer`|選擇性若`New`未指定。 運算式評估，以及在建立時指派給變數。|  
   
@@ -251,17 +252,17 @@ Dim twoDimensions(,) As Integer = {{0, 1, 2}, {10, 11, 12}}
   
  如需陣列常值的詳細資訊，請參閱[陣列](../../../visual-basic/programming-guide/language-features/arrays/index.md)。  
   
-##  <a name="default"></a>預設資料類型和值  
+##  <a name="default"></a> 預設資料類型和值  
  下表說明在 `Dim` 陳述式中指定資料類型和初始設定式的各種組合結果。  
   
 |指定了資料類型？|指定了初始設定式？|範例|結果|  
 |---|---|---|---|  
 |否|否|`Dim qty`|如果[Option Strict](../../../visual-basic/language-reference/statements/option-strict-statement.md)是此變數設為 off （預設值）， `Nothing`。<br /><br /> 如果 `Option Strict` 已開啟，就會發生編譯時期錯誤。|  
-|否|是|`Dim qty = 5`|如果[Option Infer](../../../visual-basic/language-reference/statements/option-infer-statement.md)是 on （預設值），此變數會採用資料類型的初始設定式。 請參閱[區域類型推斷](../../../visual-basic/programming-guide/language-features/variables/local-type-inference.md)。<br /><br /> 如果 `Option Infer` 已關閉，且 `Option Strict` 也已關閉，此變數會採用 `Object` 的資料類型。<br /><br /> 如果 `Option Infer` 已關閉，但是 `Option Strict` 已開啟，就會發生編譯時期錯誤。|  
+|否|[是]|`Dim qty = 5`|如果[Option Infer](../../../visual-basic/language-reference/statements/option-infer-statement.md)是 on （預設值），此變數會採用資料類型的初始設定式。 請參閱[區域類型推斷](../../../visual-basic/programming-guide/language-features/variables/local-type-inference.md)。<br /><br /> 如果 `Option Infer` 已關閉，且 `Option Strict` 也已關閉，此變數會採用 `Object` 的資料類型。<br /><br /> 如果 `Option Infer` 已關閉，但是 `Option Strict` 已開啟，就會發生編譯時期錯誤。|  
 |是|否|`Dim qty As Integer`|變數會初始化為資料類型的預設值。 請參閱本節稍後的表格。|  
-|是|是|`Dim qty  As Integer = 5`|如果初始設定式的資料類型無法轉換成指定的資料類型，就會發生編譯時間錯誤。|  
+|[是]|是|`Dim qty  As Integer = 5`|如果初始設定式的資料類型無法轉換成指定的資料類型，就會發生編譯時間錯誤。|  
   
- 如果您指定的資料類型，但未指定初始設定式，[!INCLUDE[vbprvb](~/includes/vbprvb-md.md)]將變數初始化為其資料類型的預設值。 下表顯示的預設初始化值。  
+ 如果您指定的資料類型，但未指定初始設定式，Visual Basic 將變數初始化為其資料類型的預設值。 下表顯示的預設初始化值。  
   
 |資料類型|預設值|  
 |---|---|  
@@ -279,8 +280,8 @@ Dim twoDimensions(,) As Integer = {{0, 1, 2}, {10, 11, 12}}
 |程序宣告|初始化變數|變數會停止現有的|  
 |---|---|---|  
 |在模組中|第一次呼叫程序|當您的程式停止執行|  
-|程序是在類別或結構中，`Shared`|第一次呼叫程序的特定執行個體或類別或結構本身|當您的程式停止執行|  
-|在類別或結構中，程序不是`Shared`|第一次在特定的執行個體呼叫程序|釋放執行個體進行記憶體回收 (GC)|  
+|程序是在類別或結構中， `Shared`|第一次呼叫程序的特定執行個體或類別或結構本身|當您的程式停止執行|  
+|在類別或結構中，程序不是 `Shared`|第一次在特定的執行個體呼叫程序|釋放執行個體進行記憶體回收 (GC)|  
   
 ## <a name="attributes-and-modifiers"></a>屬性和修飾詞  
  您可以將屬性套用只以成員變數，而非區域變數。 屬性會提供資訊給組件的中繼資料，不是有意義的暫存儲存體，例如本機變數。  

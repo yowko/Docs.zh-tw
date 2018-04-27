@@ -1,12 +1,13 @@
 ---
-title: "如何：得知列印工作是否可在此時列印"
-ms.custom: 
+title: 如何：得知列印工作是否可在此時列印
+ms.custom: ''
 ms.date: 03/30/2017
 ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.technology: dotnet-wpf
-ms.tgt_pltfrm: 
+ms.reviewer: ''
+ms.suite: ''
+ms.technology:
+- dotnet-wpf
+ms.tgt_pltfrm: ''
 ms.topic: article
 dev_langs:
 - csharp
@@ -17,23 +18,24 @@ helpviewer_keywords:
 - printers [WPF], availability
 - print jobs [WPF], timing
 ms.assetid: 7e9c8ec1-abf6-4b3d-b1c6-33b35d3c4063
-caps.latest.revision: "9"
+caps.latest.revision: 9
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.workload: dotnet
-ms.openlocfilehash: ef9da205792823b7069024c5e4a3e9ac80d60a24
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.workload:
+- dotnet
+ms.openlocfilehash: eef74cfa290614e530fa22a34533c7924d4af1b4
+ms.sourcegitcommit: 86adcc06e35390f13c1e372c36d2e044f1fc31ef
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 04/26/2018
 ---
 # <a name="how-to-discover-whether-a-print-job-can-be-printed-at-this-time-of-day"></a>如何：得知列印工作是否可在此時列印
 列印佇列並非永遠可用的一天 24 小時。 它們有可以設定讓它們無法使用在每天特定時間的開始和結束時間屬性。 這項功能可用，例如，保留獨佔使用的特定部門下午 5 點後的印表機。 該部門會有不同的佇列服務的印表機，比其他部門使用。 其他部門的佇列會被設定為無法使用下午 5 點後，佇列的偏好部門可能被設定為時隨時可用。  
   
  此外，列印工作本身也可以設定為可列印只在指定的時間範圍內。  
   
- <xref:System.Printing.PrintQueue>和<xref:System.Printing.PrintSystemJobInfo>類別中公開[!INCLUDE[TLA#tla_api#plural](../../../../includes/tlasharptla-apisharpplural-md.md)]的[!INCLUDE[TLA#tla_winfx](../../../../includes/tlasharptla-winfx-md.md)]遠端檢查指定的列印工作是否可以在目前的時間列印指定的佇列上提供的方法。  
+ <xref:System.Printing.PrintQueue>和<xref:System.Printing.PrintSystemJobInfo>類別中公開[!INCLUDE[TLA#tla_api#plural](../../../../includes/tlasharptla-apisharpplural-md.md)]Microsoft.NET framework 提供一種機制從遠端檢查指定的列印工作是否可以在目前的時間列印上指定的佇列。  
   
 ## <a name="example"></a>範例  
  下列範例是可以診斷問題的列印工作的範例。  
@@ -79,13 +81,13 @@ ms.lasthandoff: 12/22/2017
  [!code-csharp[DiagnoseProblematicPrintJob#PrintQueueStartUntil](../../../../samples/snippets/csharp/VS_Snippets_Wpf/DiagnoseProblematicPrintJob/CSharp/Program.cs#printqueuestartuntil)]
  [!code-vb[DiagnoseProblematicPrintJob#PrintQueueStartUntil](../../../../samples/snippets/visualbasic/VS_Snippets_Wpf/DiagnoseProblematicPrintJob/visualbasic/program.vb#printqueuestartuntil)]  
   
- **TimeConverter.ConvertToLocalHumanReadableTime** （顯示在下列程式碼範例） 的方法不會使用所導入的任何方法[!INCLUDE[TLA#tla_winfx](../../../../includes/tlasharptla-winfx-md.md)]，因此討論是簡短。 方法具有雙重轉換工作： 它必須採用整數來表示分鐘之後午夜，並將它轉換成人們可讀取的時間，它必須轉換為本地時間。 其達成方式是先建立<xref:System.DateTime>物件，會設定為 UTC，然後它會使用的午夜<xref:System.DateTime.AddMinutes%2A>方法，將跟著傳遞至此方法的分鐘數。 這會傳回新<xref:System.DateTime>表示傳遞給方法的原始時間。 <xref:System.DateTime.ToLocalTime%2A>方法接著會將此轉換本地時間。  
+ **TimeConverter.ConvertToLocalHumanReadableTime** （顯示在下列程式碼範例） 的方法不會使用所導入的 Microsoft.NET Framework，因此討論是簡短的任何方法。 方法具有雙重轉換工作： 它必須採用整數來表示分鐘之後午夜，並將它轉換成人們可讀取的時間，它必須轉換為本地時間。 其達成方式是先建立<xref:System.DateTime>物件，會設定為 UTC，然後它會使用的午夜<xref:System.DateTime.AddMinutes%2A>方法，將跟著傳遞至此方法的分鐘數。 這會傳回新<xref:System.DateTime>表示傳遞給方法的原始時間。 <xref:System.DateTime.ToLocalTime%2A>方法接著會將此轉換本地時間。  
   
  [!code-cpp[DiagnoseProblematicPrintJob#TimeConverter](../../../../samples/snippets/cpp/VS_Snippets_Wpf/DiagnoseProblematicPrintJob/CPP/Program.cpp#timeconverter)]
  [!code-csharp[DiagnoseProblematicPrintJob#TimeConverter](../../../../samples/snippets/csharp/VS_Snippets_Wpf/DiagnoseProblematicPrintJob/CSharp/Program.cs#timeconverter)]
  [!code-vb[DiagnoseProblematicPrintJob#TimeConverter](../../../../samples/snippets/visualbasic/VS_Snippets_Wpf/DiagnoseProblematicPrintJob/visualbasic/program.vb#timeconverter)]  
   
-## <a name="see-also"></a>請參閱  
+## <a name="see-also"></a>另請參閱  
  <xref:System.DateTime>  
  <xref:System.Printing.PrintSystemJobInfo>  
  <xref:System.Printing.PrintQueue>  

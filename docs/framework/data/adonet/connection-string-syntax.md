@@ -16,11 +16,11 @@ ms.author: douglasl
 manager: craigg
 ms.workload:
 - dotnet
-ms.openlocfilehash: 76d8765be1dc24f4b8c457644595796680c2f2c3
-ms.sourcegitcommit: b750a8e3979749b214e7e10c82efb0a0524dfcb1
+ms.openlocfilehash: 3939abaf376100e09d244afdb32662729a990ff7
+ms.sourcegitcommit: 86adcc06e35390f13c1e372c36d2e044f1fc31ef
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/09/2018
+ms.lasthandoff: 04/26/2018
 ---
 # <a name="connection-string-syntax"></a>連接字串語法
 每個 .NET Framework 資料提供者都擁有一個 `Connection` 物件，繼承自 <xref:System.Data.Common.DbConnection> 以及提供者特定的 <xref:System.Data.Common.DbConnection.ConnectionString%2A> 屬性。 每個提供者的特定連接字串語法會記錄在其 `ConnectionString` 屬性中。 下表列出 .NET Framework 中包含的四個資料提供者。  
@@ -98,7 +98,7 @@ Data Source=MySqlServer\MSSQL1;"
 您也可以在建立連接字串時，將 <xref:System.Data.SqlClient.SqlConnectionStringBuilder.DataSource%2A> 的 `SqlConnectionStringBuilder` 屬性設定為執行個體名稱。 <xref:System.Data.SqlClient.SqlConnection.DataSource%2A> 物件的 <xref:System.Data.SqlClient.SqlConnection> 屬性是唯讀的。  
   
 ### <a name="type-system-version-changes"></a>型別系統版本變更  
- `Type System Version` 中的 <xref:System.Data.SqlClient.SqlConnection.ConnectionString%2A?displayProperty=nameWithType> 關鍵字指定 [!INCLUDE[ssNoVersion](../../../../includes/ssnoversion-md.md)] 型別的用戶端表示。 如需 <xref:System.Data.SqlClient.SqlConnection.ConnectionString%2A?displayProperty=nameWithType> 關鍵字的詳細資訊，請參閱 `Type System Version`。  
+ `Type System Version`關鍵字<xref:System.Data.SqlClient.SqlConnection.ConnectionString%2A?displayProperty=nameWithType>指定 SQL Server 類型的用戶端表示方式。 如需 <xref:System.Data.SqlClient.SqlConnection.ConnectionString%2A?displayProperty=nameWithType> 關鍵字的詳細資訊，請參閱 `Type System Version`。  
   
 ## <a name="connecting-and-attaching-to-sql-server-express-user-instances"></a>連接和附加至 SQL Server Express 使用者執行個體  
  使用者執行個體是 SQL Server Express 中的功能。 透過使用者執行個體，在最低權限的本機 Windows 帳戶上執行的使用者不需要系統管理員權限，即可附加及執行 SQL Server 資料庫。 使用者執行個體會使用使用者的 Windows 認證執行，而不是以服務方式執行。  
@@ -106,7 +106,7 @@ Data Source=MySqlServer\MSSQL1;"
  如需使用使用者執行個體的詳細資訊，請參閱[SQL Server Express 使用者執行個體](../../../../docs/framework/data/adonet/sql/sql-server-express-user-instances.md)。  
   
 ## <a name="using-trustservercertificate"></a>使用 TrustServerCertificate  
- `TrustServerCertificate` 關鍵字僅在使用有效憑證連接到 [!INCLUDE[ssNoVersion](../../../../includes/ssnoversion-md.md)] 執行個體時才為有效。 當 `TrustServerCertificate` 設定為 `true` 時，傳輸層 (Transport Layer) 會使用 SSL 來加密通道，而略過逐一檢查憑證鏈結以驗證信任的作業。  
+ `TrustServerCertificate`關鍵字無效，只有當連接到 SQL Server 執行個體的有效憑證。 當 `TrustServerCertificate` 設定為 `true` 時，傳輸層 (Transport Layer) 會使用 SSL 來加密通道，而略過逐一檢查憑證鏈結以驗證信任的作業。  
   
 ```  
 "TrustServerCertificate=true;"   

@@ -1,25 +1,26 @@
 ---
-title: "如何：建立新的變數 (Visual Basic)"
-ms.custom: 
+title: 如何：建立新的變數 (Visual Basic)
+ms.custom: ''
 ms.date: 07/20/2015
 ms.prod: .net
-ms.reviewer: 
-ms.suite: 
-ms.technology: devlang-visual-basic
-ms.tgt_pltfrm: 
+ms.reviewer: ''
+ms.suite: ''
+ms.technology:
+- devlang-visual-basic
+ms.tgt_pltfrm: ''
 ms.topic: article
 helpviewer_keywords:
 - Dim statement [Visual Basic]
 - variables [Visual Basic], creating
 ms.assetid: 35300be3-77b0-4bef-a156-034d3cdedde0
-caps.latest.revision: "29"
+caps.latest.revision: 29
 author: dotnet-bot
 ms.author: dotnetcontent
-ms.openlocfilehash: a6806dcbe9e00cbae77181b79d74ddb9a1e1493f
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.openlocfilehash: aff160584d3d1fe382020d5b8c25ac57dab66d92
+ms.sourcegitcommit: 86adcc06e35390f13c1e372c36d2e044f1fc31ef
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 04/26/2018
 ---
 # <a name="how-to-create-a-new-variable-visual-basic"></a>如何：建立新的變數 (Visual Basic)
 您建立的變數[Dim 陳述式](../../../../visual-basic/language-reference/statements/dim-statement.md)。  
@@ -40,7 +41,7 @@ ms.lasthandoff: 11/21/2017
   
      您不需要`Dim`關鍵字，如果您使用宣告中的其他關鍵字。  
   
-3.  變數的名稱，必須遵循與規格[!INCLUDE[vbprvb](~/includes/vbprvb-md.md)]規則和慣例。 如需詳細資訊，請參閱[宣告項目名稱](../../../../visual-basic/programming-guide/language-features/declared-elements/declared-element-names.md)。  
+3.  請依照與變數的名稱，必須遵循 Visual Basic 規則和慣例規格。 如需詳細資訊，請參閱[宣告項目名稱](../../../../visual-basic/programming-guide/language-features/declared-elements/declared-element-names.md)。  
   
     ```  
     Public Static newCustomer  
@@ -56,7 +57,7 @@ ms.lasthandoff: 11/21/2017
   
 5.  請遵循`As`子句以等號 (`=`) 和變數的初始值與等號後面。  
   
-     [!INCLUDE[vbprvb](~/includes/vbprvb-md.md)]將指定的值指派給變數，它一次`Dim`陳述式。 如果您未指定一個初始值，[!INCLUDE[vbprvb](~/includes/vbprvb-md.md)]會先進入包含的程式碼時，變數的資料類型的預設初始值`Dim`陳述式。  
+     Visual Basic 會指派給此變數指定的值每次執行`Dim`陳述式。 如果您不指定一個初始值，Visual Basic 會指派變數的資料類型的預設初始值第一次進入包含的程式碼時`Dim`陳述式。  
   
      如果變數是參考類型，您可以建立其類別的執行個體包括[New 運算子](../../../../visual-basic/language-reference/operators/new-operator.md)關鍵字`As`子句。 如果您未使用`New`，變數的初始值會是[Nothing](../../../../visual-basic/language-reference/nothing.md)。  
   

@@ -13,14 +13,14 @@ ms.assetid: 42c30017-19d0-442e-87a2-850b66ddc3df
 caps.latest.revision: 14
 author: dotnet-bot
 ms.author: dotnetcontent
-ms.openlocfilehash: 16079ad7854630f68ecb6fd9fb3b640a440fe69b
-ms.sourcegitcommit: bd1ef61f4bb794b25383d3d72e71041a5ced172e
+ms.openlocfilehash: a4bfab2f6f06cbe1ac971fc21d53a7336ad03c58
+ms.sourcegitcommit: 86adcc06e35390f13c1e372c36d2e044f1fc31ef
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/18/2017
+ms.lasthandoff: 04/26/2018
 ---
 # <a name="visual-basic-language-specification"></a>Visual Basic 語言規格
-[!INCLUDE[vbprvb](~/includes/vbprvb-md.md)] 語言規格是經授權的資訊來源，可回答所有關於 [!INCLUDE[vbprvb](~/includes/vbprvb-md.md)] 文法和語法的問題。 其中包含語言方面的詳細資訊，包括 [!INCLUDE[vbprvb](~/includes/vbprvb-md.md)] 參考文件中未涵蓋的許多部分。  
+Visual Basic 語言規格是 Visual Basic 文法和語法的相關的所有問題的答案的授權來源。 它包含的語言，包括 Visual Basic 參考文件中未涵蓋的許多相關的詳細的資訊。  
   
  此規格可在 [Microsoft 下載中心](http://go.microsoft.com/fwlink/?LinkId=188623)取得。  
   

@@ -1,11 +1,12 @@
 ---
-title: "如何：定義程序的多個版本 (Visual Basic)"
-ms.custom: 
+title: 如何：定義程序的多個版本 (Visual Basic)
+ms.custom: ''
 ms.date: 07/20/2015
 ms.prod: .net
-ms.reviewer: 
-ms.suite: 
-ms.technology: devlang-visual-basic
+ms.reviewer: ''
+ms.suite: ''
+ms.technology:
+- devlang-visual-basic
 ms.topic: article
 helpviewer_keywords:
 - procedures [Visual Basic], defining
@@ -14,14 +15,14 @@ helpviewer_keywords:
 - procedures [Visual Basic], multiple versions
 - procedure overloading [Visual Basic], multiple versions
 ms.assetid: 71ccdd66-1b00-4b66-bee4-6926c0d696f4
-caps.latest.revision: "14"
+caps.latest.revision: 14
 author: dotnet-bot
 ms.author: dotnetcontent
-ms.openlocfilehash: 1abeaa6806252005dd3abfab3ff60bafa0c0cef1
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.openlocfilehash: e6db075e9b31355d4a0a593040b1fe7c96a0c730
+ms.sourcegitcommit: 86adcc06e35390f13c1e372c36d2e044f1fc31ef
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 04/26/2018
 ---
 # <a name="how-to-define-multiple-versions-of-a-procedure-visual-basic"></a>如何：定義程序的多個版本 (Visual Basic)
 您可以定義程序中由多個版本*多載*它使用相同名稱但不同的參數清單，每個版本。 多載的用途是定義程序的數個密切相關的版本，而不需要加以區分名稱。  
@@ -34,7 +35,7 @@ ms.lasthandoff: 11/21/2017
   
 2.  在前面`Sub`或`Function`關鍵字與每個宣告中的[多載](../../../../visual-basic/language-reference/modifiers/overloads.md)關鍵字。 您可以選擇性地省略`Overloads`在宣告中，但包含在任何宣告，必須將它包含在每個宣告中。  
   
-3.  每個宣告陳述式後面，撰寫程序程式碼以處理呼叫的程式碼提供的比對該版本的參數清單的引數的特定情況。 您不必測試呼叫的程式碼已提供的參數。 [!INCLUDE[vbprvb](~/includes/vbprvb-md.md)]將控制項傳遞至程序的版本相符。  
+3.  每個宣告陳述式後面，撰寫程序程式碼以處理呼叫的程式碼提供的比對該版本的參數清單的引數的特定情況。 您不必測試呼叫的程式碼已提供的參數。 Visual Basic 會將控制項傳遞至程序的版本相符。  
   
 4.  終止與程序的每個版本`End Sub`或`End Function`視陳述式。  
   

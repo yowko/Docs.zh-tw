@@ -2,9 +2,10 @@
 title: Long
 ms.date: 07/20/2015
 ms.prod: .net
-ms.reviewer: 
-ms.suite: 
-ms.technology: devlang-visual-basic
+ms.reviewer: ''
+ms.suite: ''
+ms.technology:
+- devlang-visual-basic
 ms.topic: article
 f1_keywords:
 - vb.Strict
@@ -16,14 +17,14 @@ helpviewer_keywords:
 - late binding [Visual Basic]
 - implicit conversions [Visual Basic]
 ms.assetid: 5883e0c1-a920-4274-8e46-b0ff047eaee5
-caps.latest.revision: "49"
+caps.latest.revision: 49
 author: dotnet-bot
 ms.author: dotnetcontent
-ms.openlocfilehash: 1a01edd918ea49c08defddb45bf23c33307e814f
-ms.sourcegitcommit: 34ec7753acf76f90a0fa845235ef06663dc9e36e
+ms.openlocfilehash: 0e49c8f64d38b7f8d2dc1a34cf22925c15e3a505
+ms.sourcegitcommit: 86adcc06e35390f13c1e372c36d2e044f1fc31ef
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 04/26/2018
 ---
 # <a name="option-strict-statement"></a>Long
 不允許晚期繫結，且允許隱含型別，結果中，會限制為只有擴展轉換的隱含資料類型轉換`Object`型別。  
@@ -68,7 +69,7 @@ Option Strict { On | Off }
 ## <a name="implicit-narrowing-conversion-errors"></a>隱含的縮小轉換錯誤  
  隱含資料類型轉換是縮小轉換時，會發生隱含縮小轉換錯誤。  
   
- [!INCLUDE[vbprvb](~/includes/vbprvb-md.md)]可以將許多資料類型轉換成其他資料型別。 一種資料類型的值轉換為具有較少的有效位數或容量較小的資料類型時，就可能發生資料遺失。 如果這類縮小轉換會失敗，就會發生執行階段錯誤。 `Option Strict`可確保這些縮小轉換的編譯時期通知，以便加以避免。 如需詳細資訊，請參閱[隱含和明確轉換](../../../visual-basic/programming-guide/language-features/data-types/implicit-and-explicit-conversions.md)和[擴大和縮小轉換](../../../visual-basic/programming-guide/language-features/data-types/widening-and-narrowing-conversions.md)。  
+ Visual Basic 可以將許多資料類型轉換為其他資料類型。 一種資料類型的值轉換為具有較少的有效位數或容量較小的資料類型時，就可能發生資料遺失。 如果這類縮小轉換會失敗，就會發生執行階段錯誤。 `Option Strict` 可確保這些縮小轉換的編譯時期通知，以便加以避免。 如需詳細資訊，請參閱[隱含和明確轉換](../../../visual-basic/programming-guide/language-features/data-types/implicit-and-explicit-conversions.md)和[擴大和縮小轉換](../../../visual-basic/programming-guide/language-features/data-types/widening-and-narrowing-conversions.md)。  
   
  可能會導致錯誤的轉換會在運算式中包含所發生的隱含轉換。 如需詳細資訊，請參閱下列主題：  
   
@@ -120,7 +121,7 @@ Option Strict { On | Off }
   
 2.  在**編譯**索引標籤上，設定中的值**Option Strict**方塊。  
   
-###  <a name="conditions"></a>若要在 IDE 中設定警告組態  
+###  <a name="conditions"></a> 若要在 IDE 中設定警告組態  
  當您使用[編譯的頁面上，專案設計工具 (Visual Basic)](/visualstudio/ide/reference/compile-page-project-designer-visual-basic)而不是`Option Strict`陳述式中，您有其他控制產生錯誤的狀況。 **警告組態**區段**編譯網頁**的設定會對應至三個條件會造成編譯時間錯誤時`Option Strict`上。 以下是這些設定：  
   
 -   **隱含轉換**  
@@ -158,7 +159,7 @@ Option Strict { On | Off }
   
  [!code-vb[VbVbalrStatements#164](../../../visual-basic/language-reference/error-messages/codesnippet/VisualBasic/option-strict-statement_4.vb)]  
   
-## <a name="see-also"></a>請參閱  
+## <a name="see-also"></a>另請參閱  
  [擴展和縮小轉換](../../../visual-basic/programming-guide/language-features/data-types/widening-and-narrowing-conversions.md)  
  [隱含和明確轉換](../../../visual-basic/programming-guide/language-features/data-types/implicit-and-explicit-conversions.md)  
  [專案設計工具、編譯頁面 (Visual Basic)](/visualstudio/ide/reference/compile-page-project-designer-visual-basic)  

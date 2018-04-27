@@ -15,20 +15,20 @@ ms.assetid: b0b21730-298c-47e6-9a2f-cc81f628067b
 caps.latest.revision: 18
 author: dotnet-bot
 ms.author: dotnetcontent
-ms.openlocfilehash: f7074206baa51259592cca3fdc224d99438791f9
-ms.sourcegitcommit: bd1ef61f4bb794b25383d3d72e71041a5ced172e
+ms.openlocfilehash: 620453d140e3d4ba2ee468e5bf087df6deb9aad4
+ms.sourcegitcommit: 86adcc06e35390f13c1e372c36d2e044f1fc31ef
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/18/2017
+ms.lasthandoff: 04/26/2018
 ---
 # <a name="visual-basic-language-features"></a>Visual Basic 語言功能
-下列主題介紹及討論 [!INCLUDE[vbprvb](~/includes/vbprvb-md.md)] (一種物件導向的程式設計語言) 的基本元件。 使用表單和控制項建立應用程式的使用者介面之後，您必須撰寫程式碼來定義應用程式的行為。 和任何新式的程式設計語言一樣，[!INCLUDE[vbprvb](~/includes/vbprvb-md.md)] 支援許多通用的程式設計建構和語言元素。  
+下列主題將介紹並討論 Visual Basic 中，物件導向程式設計語言的基本元件。 使用表單和控制項建立應用程式的使用者介面之後，您必須撰寫程式碼來定義應用程式的行為。 如同任何現代程式設計語言，Visual Basic 支援許多通用程式設計建構和語言項目。  
   
- 如果您曾經使用其他語言進行程式設計，則可能會覺得本節涵蓋的大多數內容似曾相識。 雖然大部分的建構類似於其他語言中的建構，但 [!INCLUDE[vbprvb](~/includes/vbprvb-md.md)] 的事件導向本質還是引進了部分些微差異。  
+ 如果您曾經使用其他語言進行程式設計，則可能會覺得本節涵蓋的大多數內容似曾相識。 雖然大部分的結構類似於其他語言，Visual Basic 的事件導向性質導入了只有些微的差異。  
   
- 如果您是程式設計的新手，可將本節的內容當做用來撰寫程式碼的基本建置組塊簡介。 一旦您了解基本概念之後，就可以使用 [!INCLUDE[vbprvb](~/includes/vbprvb-md.md)] 來建立功能強大的應用程式。  
+ 如果您是程式設計的新手，可將本節的內容當做用來撰寫程式碼的基本建置組塊簡介。 一旦您了解基本概念，您可以建立功能強大的應用程式使用 Visual Basic。  
   
-## <a name="in-this-section"></a>本章節內容  
+## <a name="in-this-section"></a>本節內容  
  [陣列](../../../visual-basic/programming-guide/language-features/arrays/index.md)  
  討論如何宣告和使用陣列來保留多個相關聯的值，藉以讓您的程式碼更精簡且功能更強大。  
   
@@ -91,4 +91,4 @@ ms.lasthandoff: 10/18/2017
  說明部分由 .NET Framework 提供的集合型別。 示範如何使用簡單集合及金鑰/值組集合。  
   
  [Visual Basic 語言參考](../../../visual-basic/language-reference/index.md)  
- 提供 [!INCLUDE[vbprvb](~/includes/vbprvb-md.md)] 程式設計各種層面的參考資訊。
+ 提供 Visual Basic 程式設計的各種層面的參考資訊。

@@ -1,25 +1,26 @@
 ---
-title: "如何：呼叫不傳回值的程序 (Visual Basic)"
-ms.custom: 
+title: 如何：呼叫不傳回值的程序 (Visual Basic)
+ms.custom: ''
 ms.date: 07/20/2015
 ms.prod: .net
-ms.reviewer: 
-ms.suite: 
-ms.technology: devlang-visual-basic
+ms.reviewer: ''
+ms.suite: ''
+ms.technology:
+- devlang-visual-basic
 ms.topic: article
 helpviewer_keywords:
 - procedure calls [Visual Basic], returning values
 - Visual Basic code, procedures
 - procedures [Visual Basic], calling
 ms.assetid: 259b49a3-a3c1-4254-ba8c-73cdc4127703
-caps.latest.revision: "17"
+caps.latest.revision: 17
 author: dotnet-bot
 ms.author: dotnetcontent
-ms.openlocfilehash: bbea50132d1110b38bf9b01397795a2cd51f86d4
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.openlocfilehash: bb9f13d5387f4a440a7fdd39c5e8f50cb8d56270
+ms.sourcegitcommit: 86adcc06e35390f13c1e372c36d2e044f1fc31ef
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 04/26/2018
 ---
 # <a name="how-to-call-a-procedure-that-does-not-return-a-value-visual-basic"></a>如何：呼叫不傳回值的程序 (Visual Basic)
 A`Sub`程序不會傳回呼叫程式碼的值。 明確呼叫它，以獨立的呼叫陳述式。 您無法只使用其名稱，在運算式中的呼叫它。  
@@ -32,7 +33,7 @@ A`Sub`程序不會傳回呼叫程式碼的值。 明確呼叫它，以獨立的�
   
 3.  將引數放在括號，並以逗號分隔的引數清單。 確定您提供的相同順序的引數，`Sub`程序所定義的對應參數。  
   
-     下列範例會呼叫[!INCLUDE[vbprvb](~/includes/vbprvb-md.md)]<xref:Microsoft.VisualBasic.Interaction.AppActivate%2A>函式可啟動應用程式視窗。 <xref:Microsoft.VisualBasic.Interaction.AppActivate%2A>使用視窗標題做為其唯一的引數。 呼叫程式碼不會傳回值。 如果未執行 「 記事本 」 處理程序，此範例會擲回<xref:System.ArgumentException>。 `Shell`程序會假設應用程式是在指定的路徑。  
+     下列範例會呼叫 Visual Basic<xref:Microsoft.VisualBasic.Interaction.AppActivate%2A>函式可啟動應用程式視窗。 <xref:Microsoft.VisualBasic.Interaction.AppActivate%2A> 使用視窗標題做為其唯一的引數。 呼叫程式碼不會傳回值。 如果未執行 「 記事本 」 處理程序，此範例會擲回<xref:System.ArgumentException>。 `Shell`程序會假設應用程式是在指定的路徑。  
   
      [!code-vb[VbVbalrCatRef#11](./codesnippet/VisualBasic/how-to-call-a-procedure-that-does-not-return-a-value_1.vb)]  
   

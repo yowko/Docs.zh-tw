@@ -1,12 +1,13 @@
 ---
-title: "XAML 概觀 (WPF)"
-ms.custom: 
+title: XAML 概觀 (WPF)
+ms.custom: ''
 ms.date: 03/30/2017
 ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.technology: dotnet-wpf
-ms.tgt_pltfrm: 
+ms.reviewer: ''
+ms.suite: ''
+ms.technology:
+- dotnet-wpf
+ms.tgt_pltfrm: ''
 ms.topic: article
 dev_langs:
 - csharp
@@ -26,16 +27,17 @@ helpviewer_keywords:
 - Extensible Application Markup Language (see XAML)
 - attribute syntax [XAML]
 ms.assetid: a80db4cd-dd0f-479f-a45f-3740017c22e4
-caps.latest.revision: "57"
+caps.latest.revision: 57
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.workload: dotnet
-ms.openlocfilehash: ce83713d2483320569bde0d5c9a677f0b357ebf2
-ms.sourcegitcommit: c3ebb11a66e85a465c9ba2c42592222630b7ff9e
+ms.workload:
+- dotnet
+ms.openlocfilehash: 87785d6bba58442a1a5ad27f5304aa63e16c1aa9
+ms.sourcegitcommit: 86adcc06e35390f13c1e372c36d2e044f1fc31ef
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 01/25/2018
+ms.lasthandoff: 04/26/2018
 ---
 # <a name="xaml-overview-wpf"></a>XAML 概觀 (WPF)
 本主題說明 XAML 語言的功能，並示範如何使用 XAML 撰寫 [!INCLUDE[TLA#tla_winclient](../../../../includes/tlasharptla-winclient-md.md)] 應用程式。 本主題特別針對以 [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] 實作的 XAML 進行描述。 就語言概念而言，XAML 本身涵蓋的範圍比 [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] 還要廣。  
@@ -146,7 +148,7 @@ ms.lasthandoff: 01/25/2018
   
  在這裡，每個<xref:System.Windows.Controls.Button>是子元素的<xref:System.Windows.Controls.StackPanel>。 這段有效率而直覺化的標記 (Markup)，是基於兩個不同理由省略兩個標記 (Tag)。  
   
--   **省略的 StackPanel.Children 屬性項目：** <xref:System.Windows.Controls.StackPanel>衍生自<xref:System.Windows.Controls.Panel>。 <xref:System.Windows.Controls.Panel>定義<xref:System.Windows.Controls.Panel.Children%2A?displayProperty=nameWithType>以其 XAML 內容屬性。  
+-   **省略的 StackPanel.Children 屬性項目：** <xref:System.Windows.Controls.StackPanel>衍生自<xref:System.Windows.Controls.Panel>。 <xref:System.Windows.Controls.Panel> 定義<xref:System.Windows.Controls.Panel.Children%2A?displayProperty=nameWithType>以其 XAML 內容屬性。  
   
 -   **省略的 UIElementCollection 物件項目：** <xref:System.Windows.Controls.Panel.Children%2A?displayProperty=nameWithType>屬性會接受型別<xref:System.Windows.Controls.UIElementCollection>，它會實作<xref:System.Collections.IList>。 集合的項目標記可以省略，例如處理集合的 XAML 規則為基礎<xref:System.Collections.IList>。 (在此情況下，<xref:System.Windows.Controls.UIElementCollection>實際上無法具現化，因此不會公開預設建構函式，這就是為什麼<xref:System.Windows.Controls.UIElementCollection>物件項目會顯示註解化)。  
   
@@ -192,7 +194,7 @@ ms.lasthandoff: 01/25/2018
 ## <a name="type-converters"></a>類型轉換器  
  [XAML 語法簡介](../../../../docs/framework/wpf/advanced/xaml-overview-wpf.md#xaml_syntax_in_brief)一節中說明了屬性 (Attribute) 值必須要能夠由字串進行設定。 基本的原生的處理方式將字串轉換成其他物件類型或基本值根據<xref:System.String>型別本身此外到原生處理特定類型，例如<xref:System.DateTime>或<xref:System.Uri>。 但是，這些型別的許多 [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] 型別或成員會擴充基本字串屬性處理行為，使得更多複雜物件型別的執行個體能夠指定為字串與屬性。  
   
- <xref:System.Windows.Thickness>結構是具有型別轉換，以啟用 xaml 的類型的範例。 <xref:System.Windows.Thickness>指出測量的巢狀矩形內，做為值的屬性例如<xref:System.Windows.FrameworkElement.Margin%2A>。 將類型轉換器放置在<xref:System.Windows.Thickness>，使用的所有屬性<xref:System.Windows.Thickness>方式比較簡單，因為它們可以指定為屬性，在 XAML 中指定。 下列範例提供的值使用類型轉換和屬性語法<xref:System.Windows.FrameworkElement.Margin%2A>:  
+ <xref:System.Windows.Thickness>結構是具有型別轉換，以啟用 xaml 的類型的範例。 <xref:System.Windows.Thickness> 指出測量的巢狀矩形內，做為值的屬性例如<xref:System.Windows.FrameworkElement.Margin%2A>。 將類型轉換器放置在<xref:System.Windows.Thickness>，使用的所有屬性<xref:System.Windows.Thickness>方式比較簡單，因為它們可以指定為屬性，在 XAML 中指定。 下列範例提供的值使用類型轉換和屬性語法<xref:System.Windows.FrameworkElement.Margin%2A>:  
   
  [!code-xaml[XAMLOvwSupport#MarginTCE](../../../../samples/snippets/csharp/VS_Snippets_Wpf/XAMLOvwSupport/CSharp/page7.xaml#margintce)]  
   
@@ -260,7 +262,7 @@ ms.lasthandoff: 01/25/2018
   
 <a name="events_and_xaml_codebehind"></a>   
 ## <a name="events-and-xaml-code-behind"></a>事件和 XAML 程式碼後置  
- 大部分的 [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] 應用程式都同時由 XAML 標記和程式碼後置所組成。 在專案中，XAML 會撰寫為 `.xaml` 檔案，而 [!INCLUDE[TLA#tla_visualb](../../../../includes/tlasharptla-visualb-md.md)] 或 [!INCLUDE[TLA#tla_cshrp](../../../../includes/tlasharptla-cshrp-md.md)] 這類的 [!INCLUDE[TLA2#tla_clr](../../../../includes/tla2sharptla-clr-md.md)] 語言則用於撰寫程式碼後置的檔案。 將 XAML 檔案作為 WPF 程式設計和應用程式模型的一部分而進行標記編譯時，XAML 檔案的 XAML 程式碼後置檔案的位置，是藉由指定命名空間和類別作為 XAML 根元素的 `x:Class` 屬性 (Attribute) 來識別。  
+ 大部分的 [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] 應用程式都同時由 XAML 標記和程式碼後置所組成。 在專案中，XAML 會撰寫成`.xaml`檔案，和[!INCLUDE[TLA2#tla_clr](../../../../includes/tla2sharptla-clr-md.md)]Microsoft Visual Basic 或 C# 等語言用來撰寫程式碼後置檔案。 將 XAML 檔案作為 WPF 程式設計和應用程式模型的一部分而進行標記編譯時，XAML 檔案的 XAML 程式碼後置檔案的位置，是藉由指定命名空間和類別作為 XAML 根元素的 `x:Class` 屬性 (Attribute) 來識別。  
   
  在目前的範例中，您已經看過幾種按鈕，但沒有一個按鈕具有任何相關聯的邏輯行為。 用於新增物件元素行為的主要應用程式層級機制，是使用元素類別的現有事件，並為該事件撰寫在執行階段引發該事件時所叫用的特定處理常式。 要使用的事件名稱和處理常式名稱是在標記中指定的，而實作處理常式的程式碼則是在程式碼後置中定義。  
   
@@ -314,7 +316,7 @@ ms.lasthandoff: 01/25/2018
   
 <a name="base_classes_and_xaml"></a>   
 ## <a name="base-types-and-xaml"></a>基底型別和 XAML  
- 基礎 WPF XAML 與它的 XAML 命名空間是型別的集合，這些型別除了 XAML 的標記元素之外，還會對應於 [!INCLUDE[TLA2#tla_clr](../../../../includes/tla2sharptla-clr-md.md)] 物件。 然而，並不是所有的類別都可以對應到元素。 抽象類別，例如<xref:System.Windows.Controls.Primitives.ButtonBase>，並使用特定的非抽象基底類別來進行中的繼承[!INCLUDE[TLA2#tla_clr](../../../../includes/tla2sharptla-clr-md.md)]物件模型。 基底類別 (包含抽象類別) 對於 XAML 開發而言仍然很重要，因為每個具象的 XAML 元素會繼承階層架構中某些基底類別的成員。 通常這些成員會包含可以設定為元素屬性 (Attribute) 的屬性 (Property)，或是包含可以處理的事件。 <xref:System.Windows.FrameworkElement>是具象基底[!INCLUDE[TLA2#tla_ui](../../../../includes/tla2sharptla-ui-md.md)]類別[!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)]WPF 架構層級。 設計時[!INCLUDE[TLA2#tla_ui](../../../../includes/tla2sharptla-ui-md.md)]，您會使用各種圖形、 面板、 裝飾項目，或控制項的類別，所有衍生自<xref:System.Windows.FrameworkElement>。 相關的基底類別， <xref:System.Windows.FrameworkContentElement>，支援流程版面配置簡報，文件導向的元素，可使用[!INCLUDE[TLA2#tla_api#plural](../../../../includes/tla2sharptla-apisharpplural-md.md)]刻意鏡像[!INCLUDE[TLA2#tla_api#plural](../../../../includes/tla2sharptla-apisharpplural-md.md)]中<xref:System.Windows.FrameworkElement>。 結合元素層級的屬性 (Attribute) 和 [!INCLUDE[TLA2#tla_clr](../../../../includes/tla2sharptla-clr-md.md)] 物件模型，提供您可以在大部分具象 XAML 元素上設定的通用屬性 (Property)，而不用在意特定的 XAML 元素和其基礎型別。  
+ 基礎 WPF XAML 與它的 XAML 命名空間是型別的集合，這些型別除了 XAML 的標記元素之外，還會對應於 [!INCLUDE[TLA2#tla_clr](../../../../includes/tla2sharptla-clr-md.md)] 物件。 然而，並不是所有的類別都可以對應到元素。 抽象類別，例如<xref:System.Windows.Controls.Primitives.ButtonBase>，並使用特定的非抽象基底類別來進行中的繼承[!INCLUDE[TLA2#tla_clr](../../../../includes/tla2sharptla-clr-md.md)]物件模型。 基底類別 (包含抽象類別) 對於 XAML 開發而言仍然很重要，因為每個具象的 XAML 元素會繼承階層架構中某些基底類別的成員。 通常這些成員會包含可以設定為元素屬性 (Attribute) 的屬性 (Property)，或是包含可以處理的事件。 <xref:System.Windows.FrameworkElement> 是具象基底[!INCLUDE[TLA2#tla_ui](../../../../includes/tla2sharptla-ui-md.md)]類別[!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)]WPF 架構層級。 設計時[!INCLUDE[TLA2#tla_ui](../../../../includes/tla2sharptla-ui-md.md)]，您會使用各種圖形、 面板、 裝飾項目，或控制項的類別，所有衍生自<xref:System.Windows.FrameworkElement>。 相關的基底類別， <xref:System.Windows.FrameworkContentElement>，支援流程版面配置簡報，文件導向的元素，可使用[!INCLUDE[TLA2#tla_api#plural](../../../../includes/tla2sharptla-apisharpplural-md.md)]刻意鏡像[!INCLUDE[TLA2#tla_api#plural](../../../../includes/tla2sharptla-apisharpplural-md.md)]中<xref:System.Windows.FrameworkElement>。 結合元素層級的屬性 (Attribute) 和 [!INCLUDE[TLA2#tla_clr](../../../../includes/tla2sharptla-clr-md.md)] 物件模型，提供您可以在大部分具象 XAML 元素上設定的通用屬性 (Property)，而不用在意特定的 XAML 元素和其基礎型別。  
   
 <a name="xaml_security"></a>   
 ## <a name="xaml-security"></a>XAML 安全性  
@@ -332,13 +334,13 @@ ms.lasthandoff: 01/25/2018
   
  如果您尚未這樣做，請嘗試教學課程 > 主題中的練習[逐步解說： 第一個 WPF 桌面應用程式](../../../../docs/framework/wpf/getting-started/walkthrough-my-first-wpf-desktop-application.md)。 當您建立教學課程中所涵蓋以標記為重點的應用程式時，練習可以幫助您強化本主題說明的許多概念。  
   
- [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)]使用特定的應用程式模型為基礎的<xref:System.Windows.Application>類別。 如需詳細資訊，請參閱 [應用程式管理概觀](../../../../docs/framework/wpf/app-development/application-management-overview.md)。  
+ [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] 使用特定的應用程式模型為基礎的<xref:System.Windows.Application>類別。 如需詳細資訊，請參閱 [應用程式管理概觀](../../../../docs/framework/wpf/app-development/application-management-overview.md)。  
   
  關於如何從命令列和使用 [!INCLUDE[TLA#tla_visualstu](../../../../includes/tlasharptla-visualstu-md.md)] 建置 XAML 內含的應用程式，[建置 WPF 應用程式](../../../../docs/framework/wpf/app-development/building-a-wpf-application-wpf.md) 將提供您更為詳細的資訊。  
   
  [相依性屬性概觀](../../../../docs/framework/wpf/advanced/dependency-properties-overview.md) 提供您有關 [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] 中多樣化屬性的詳細資訊，並介紹相依性屬性的概念。  
   
-## <a name="see-also"></a>請參閱  
+## <a name="see-also"></a>另請參閱  
  [XAML 語法詳細資料](../../../../docs/framework/wpf/advanced/xaml-syntax-in-detail.md)  
  [WPF 的 XAML 和自訂類別](../../../../docs/framework/wpf/advanced/xaml-and-custom-classes-for-wpf.md)  
  [XAML 命名空間 (x:) 語言功能](../../../../docs/framework/xaml-services/xaml-namespace-x-language-features.md)  

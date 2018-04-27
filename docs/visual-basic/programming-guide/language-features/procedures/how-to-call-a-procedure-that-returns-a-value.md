@@ -1,11 +1,12 @@
 ---
-title: "如何：呼叫傳回值的程序 (Visual Basic)"
-ms.custom: 
+title: 如何：呼叫傳回值的程序 (Visual Basic)
+ms.custom: ''
 ms.date: 07/20/2015
 ms.prod: .net
-ms.reviewer: 
-ms.suite: 
-ms.technology: devlang-visual-basic
+ms.reviewer: ''
+ms.suite: ''
+ms.technology:
+- devlang-visual-basic
 ms.topic: article
 helpviewer_keywords:
 - procedure calls [Visual Basic], returning values
@@ -13,14 +14,14 @@ helpviewer_keywords:
 - procedures [Visual Basic], calling
 - procedures [Visual Basic], returning a value
 ms.assetid: a445127b-0f5f-465a-98fb-3e514b93d115
-caps.latest.revision: "15"
+caps.latest.revision: 15
 author: dotnet-bot
 ms.author: dotnetcontent
-ms.openlocfilehash: f6d408eed67fa417f42252bb49ecea28d4458382
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.openlocfilehash: cbaaa5ed17845a7ac8847786fb10111c724015ba
+ms.sourcegitcommit: 86adcc06e35390f13c1e372c36d2e044f1fc31ef
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 04/26/2018
 ---
 # <a name="how-to-call-a-procedure-that-returns-a-value-visual-basic"></a>如何：呼叫傳回值的程序 (Visual Basic)
 A`Function`程序傳回給呼叫程式碼的值。 您可以呼叫它藉由其名稱和引數右側在指派陳述式或運算式中。  
@@ -48,7 +49,7 @@ A`Function`程序傳回給呼叫程式碼的值。 您可以呼叫它藉由其�
 4.  程序所傳回的值會儲存在變數或指派陳述式左邊的屬性。  
   
 ## <a name="example"></a>範例  
- 下列範例會呼叫[!INCLUDE[vbprvb](~/includes/vbprvb-md.md)]<xref:Microsoft.VisualBasic.Interaction.Environ%2A>擷取作業系統的環境變數的值。 第一列呼叫`Environ`內使用運算式中，且第二個列中呼叫它的指派陳述式。 `Environ`使用變數名稱做為其唯一的引數。 它會傳回呼叫程式碼的變數的值。  
+ 下列範例會呼叫 Visual Basic<xref:Microsoft.VisualBasic.Interaction.Environ%2A>擷取作業系統的環境變數的值。 第一列呼叫`Environ`內使用運算式中，且第二個列中呼叫它的指派陳述式。 `Environ` 使用變數名稱做為其唯一的引數。 它會傳回呼叫程式碼的變數的值。  
   
  [!code-vb[VbVbcnProcedures#7](./codesnippet/VisualBasic/how-to-call-a-procedure-that-returns-a-value_1.vb)]  
   

@@ -1,7 +1,7 @@
 ---
 title: Tuple (F#)
-description: "深入了解 F # tuple 的未命名，但已排序的值，可能是不同類型的群組。"
-keywords: "Visual F#, F#, 函式程式設計"
+description: '深入了解 F # tuple 的未命名，但已排序的值，可能是不同類型的群組。'
+keywords: Visual F#, F#, 函式程式設計
 author: cartermp
 ms.author: phcart
 ms.date: 05/16/2016
@@ -10,11 +10,11 @@ ms.prod: .net
 ms.technology: devlang-fsharp
 ms.devlang: fsharp
 ms.assetid: 35069073-9a82-410f-8dea-912e2a152e6d
-ms.openlocfilehash: 996566f2baaea8ab01e5c80e53caea82e9684714
-ms.sourcegitcommit: d95a91d685565f4d95c8773b558752864a6a3d7e
+ms.openlocfilehash: e0a5e5eb08e13bd5cbe9f88a47d4cf4bba19ea22
+ms.sourcegitcommit: 86adcc06e35390f13c1e372c36d2e044f1fc31ef
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 03/12/2018
+ms.lasthandoff: 04/26/2018
 ---
 # <a name="tuples"></a>Tuple
 
@@ -89,7 +89,7 @@ int * float * string
 
 ## <a name="interoperation-with-c-tuples"></a>與 C# Tuple 的互通
 
-C# 7 引進 tuple 的語言。  在 C# 中的 Tuple 結構，而且相當於在 F # 中的結構 tuple。  如果您需要使用 C# 交互操作，您必須使用結構 tuple。
+C# 7.0 引進 tuple 的語言。  在 C# 中的 Tuple 結構，而且相當於在 F # 中的結構 tuple。  如果您需要使用 C# 交互操作，您必須使用結構 tuple。
 
 這是容易的。  例如，假設您必須將 tuple 傳遞至 C# 類別，並使用它的結果，也是 tuple:
 
@@ -130,9 +130,9 @@ Tuple 會編譯為物件的其中一種數個泛型類型，所有具名`System.
 
 ### <a name="compiled-form-of-struct-tuples"></a>編譯的結構 Tuple 形式
 
-Tuple 結構 (例如， `struct (x, y)`)，基本上不同於參考 tuple。  編譯成<xref:System.ValueTuple>型別引數數目或型別參數數目所多載。  它們是相當於[C# 7 Tuple](../../csharp/tuples.md)和[Visual Basic 2017 Tuple](../../visual-basic/programming-guide/language-features/data-types/tuples.md)，以及雙向交互操作。
+Tuple 結構 (例如， `struct (x, y)`)，基本上不同於參考 tuple。  編譯成<xref:System.ValueTuple>型別引數數目或型別參數數目所多載。  它們是相當於[C# 7.0 Tuple](../../csharp/tuples.md)和[Visual Basic 2017 Tuple](../../visual-basic/programming-guide/language-features/data-types/tuples.md)，以及雙向交互操作。
 
-## <a name="see-also"></a>請參閱
+## <a name="see-also"></a>另請參閱
 [F# 語言參考](index.md)
 
 [F# 類型](fsharp-types.md)

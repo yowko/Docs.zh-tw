@@ -1,30 +1,31 @@
 ---
-title: "Visual Basic 應用程式模型概觀"
+title: Visual Basic 應用程式模型概觀
 ms.date: 07/20/2015
 ms.prod: .net
-ms.suite: 
-ms.technology: devlang-visual-basic
+ms.suite: ''
+ms.technology:
+- devlang-visual-basic
 ms.topic: article
 helpviewer_keywords:
 - My.Application object [Visual Basic], Visual Basic application model
 - Visual Basic application model
 ms.assetid: 17538984-84fe-43c9-82c8-724c9529fe8b
-caps.latest.revision: "30"
+caps.latest.revision: 30
 author: dotnet-bot
 ms.author: dotnetcontent
-ms.openlocfilehash: 33b0e01317a6dab18ea03047c146def32b5675ad
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.openlocfilehash: 74a8fcfe3f49ab042b3bb4775f9f6e84374db0ae
+ms.sourcegitcommit: 86adcc06e35390f13c1e372c36d2e044f1fc31ef
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 04/26/2018
 ---
 # <a name="overview-of-the-visual-basic-application-model"></a>Visual Basic 應用程式模型概觀
-[!INCLUDE[vbprvb](~/includes/vbprvb-md.md)]提供完善的模型，可控制 Windows Form 應用程式的行為：[!INCLUDE[vbprvb](~/includes/vbprvb-md.md)]應用程式模型。 此模型包含處理應用程式的啟動和關機，以及攔截未處理的例外狀況事件的事件。 它也會提供開發的單一執行個體的應用程式的支援。 應用程式模型，所以需要更多控制的開發人員可以自訂的覆寫方法。  
+Visual Basic 提供妥善定義的模型來控制 Windows Form 應用程式的行為： Visual Basic 應用程式模型。 此模型包含處理應用程式的啟動和關機，以及攔截未處理的例外狀況事件的事件。 它也會提供開發的單一執行個體的應用程式的支援。 應用程式模型，所以需要更多控制的開發人員可以自訂的覆寫方法。  
   
 ## <a name="uses-for-the-application-model"></a>使用應用程式模型  
  一般的應用程式需要執行工作，當它啟動及關機。 例如，在啟動時應用程式可以顯示啟動顯示畫面、 建立資料庫的連接、 載入已儲存的狀態，等等。 當應用程式關閉時，它可以關閉資料庫連接，儲存目前的狀態，並以此類推。 此外，應用程式可以執行特定程式碼應用程式關閉時向下意外，例如在期間處理的例外狀況。  
   
- [!INCLUDE[vbprvb](~/includes/vbprvb-md.md)]應用程式模型讓您輕鬆地建立*單一執行個體*應用程式。 單一執行個體的應用程式與從一般應用程式中，只有一個執行個體的應用程式可以執行一次。 嘗試啟動另一個執行個體的單一執行個體的應用程式會產生通知的原始執行個體，藉由`StartupNextInstance`事件 —，另一個啟動嘗試。 通知內容包括後續執行個體的命令列引數。 後續的執行個體的應用程式之後就關閉，然後才能進行任何初始化。  
+ Visual Basic 應用程式模型可讓您輕鬆地建立*單一執行個體*應用程式。 單一執行個體的應用程式與從一般應用程式中，只有一個執行個體的應用程式可以執行一次。 嘗試啟動另一個執行個體的單一執行個體的應用程式會產生通知的原始執行個體，藉由`StartupNextInstance`事件 —，另一個啟動嘗試。 通知內容包括後續執行個體的命令列引數。 後續的執行個體的應用程式之後就關閉，然後才能進行任何初始化。  
   
  單一執行個體的應用程式啟動，並檢查是否為第一個執行個體或應用程式的後續執行個體：  
   
@@ -58,7 +59,7 @@ ms.lasthandoff: 11/21/2017
 -   **應用程式關閉**。 應用程式提供<xref:Microsoft.VisualBasic.ApplicationServices.WindowsFormsApplicationBase.Shutdown>即將關閉時發出信號的事件。 在該事件處理常式，您可以確保，操作您的應用程式需要執行 — 關閉和儲存，例如，會完成。 您可以設定應用程式關閉時，主要表單關閉，或關閉只關閉所有表單。  
   
 ## <a name="availability"></a>可用性  
- 根據預設，[!INCLUDE[vbprvb](~/includes/vbprvb-md.md)]應用程式模型僅適用於 Windows Form 專案。 如果您設定應用程式使用不同的啟動物件，或啟動應用程式程式碼與自訂`Sub Main`、 然後該物件或類別可能需要提供的實作<xref:Microsoft.VisualBasic.ApplicationServices.WindowsFormsApplicationBase>類別，才能使用應用程式模型。 如需變更啟始物件的詳細資訊，請參閱[應用程式] 頁面上，[專案設計工具 (Visual Basic)](/visualstudio/ide/reference/application-page-project-designer-visual-basic)。  
+ 根據預設，Visual Basic 應用程式模型是適用於 Windows Form 專案。 如果您設定應用程式使用不同的啟動物件，或啟動應用程式程式碼與自訂`Sub Main`、 然後該物件或類別可能需要提供的實作<xref:Microsoft.VisualBasic.ApplicationServices.WindowsFormsApplicationBase>類別，才能使用應用程式模型。 如需變更啟始物件的詳細資訊，請參閱[應用程式] 頁面上，[專案設計工具 (Visual Basic)](/visualstudio/ide/reference/application-page-project-designer-visual-basic)。  
   
 ## <a name="see-also"></a>另請參閱  
  <xref:Microsoft.VisualBasic.ApplicationServices.WindowsFormsApplicationBase>  

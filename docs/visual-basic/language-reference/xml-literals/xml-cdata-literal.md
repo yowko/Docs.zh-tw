@@ -17,11 +17,11 @@ ms.assetid: 9eafb6a4-dd9d-4866-85e8-0654c65abc44
 caps.latest.revision: 16
 author: dotnet-bot
 ms.author: dotnetcontent
-ms.openlocfilehash: 906fd2494dd952c08088b9b7e38dba4505780481
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.openlocfilehash: e8dfc091409e060e20970b0b6d6bc19b4fc2aeea
+ms.sourcegitcommit: 86adcc06e35390f13c1e372c36d2e044f1fc31ef
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 04/26/2018
 ---
 # <a name="xml-cdata-literal-visual-basic"></a>XML CDATA 常值 (Visual Basic)
 常值代表<xref:System.Xml.Linq.XCData>物件。  
@@ -34,13 +34,13 @@ ms.lasthandoff: 11/21/2017
   
 ## <a name="parts"></a>組件  
  `<![CDATA[`  
- 必要項。 代表 XML CDATA 區段的開頭。  
+ 必要。 代表 XML CDATA 區段的開頭。  
   
  `content`  
- 必要項。 在 XML CDATA 區段中顯示的文字內容。  
+ 必要。 在 XML CDATA 區段中顯示的文字內容。  
   
  `]]>`  
- 必要項。 表示區段的結尾。  
+ 必要。 表示區段的結尾。  
   
 ## <a name="return-value"></a>傳回值  
  <xref:System.Xml.Linq.XCData> 物件。  
@@ -55,9 +55,9 @@ ms.lasthandoff: 11/21/2017
  您可以將 XML CDATA 常值指派給變數，或將它包含在 XML 元素常值。  
   
 > [!NOTE]
->  XML 常值可以跨越多行，但不會使用行接續字元。 這可讓您從 XML 文件內容複製並貼上直接將[!INCLUDE[vbprvb](~/includes/vbprvb-md.md)]程式。  
+>  XML 常值可以跨越多行，但不會使用行接續字元。 這可讓您從 XML 文件內容複製並貼上直接在 Visual Basic 程式。  
   
- [!INCLUDE[vbprvb](~/includes/vbprvb-md.md)]編譯器會將 XML CDATA 常值轉換成呼叫<xref:System.Xml.Linq.XCData.%23ctor%2A>建構函式。  
+ Visual Basic 編譯器會將 XML CDATA 常值轉換成呼叫<xref:System.Xml.Linq.XCData.%23ctor%2A>建構函式。  
   
 ## <a name="example"></a>範例  
  下列範例會建立包含文字的 CDATA 區段 」 可以包含常值\<XML > 標記 」。  

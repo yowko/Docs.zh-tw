@@ -1,11 +1,12 @@
 ---
-title: "如何：使用定義運算子的類別 (Visual Basic)"
-ms.custom: 
+title: 如何：使用定義運算子的類別 (Visual Basic)
+ms.custom: ''
 ms.date: 07/20/2015
 ms.prod: .net
-ms.reviewer: 
-ms.suite: 
-ms.technology: devlang-visual-basic
+ms.reviewer: ''
+ms.suite: ''
+ms.technology:
+- devlang-visual-basic
 ms.topic: article
 helpviewer_keywords:
 - operator procedures [Visual Basic], calling
@@ -17,22 +18,22 @@ helpviewer_keywords:
 - return values [Visual Basic], Operator procedures
 - operator overloading
 ms.assetid: 7ccce94a-6ca0-47d1-9f3f-13385d34f5d5
-caps.latest.revision: "21"
+caps.latest.revision: 21
 author: dotnet-bot
 ms.author: dotnetcontent
-ms.openlocfilehash: 223b3fc84fe75d1d530cd182c9332e5c663aa519
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.openlocfilehash: 7e0bcfaeca638dfabb841a9e935b872f76fdf957
+ms.sourcegitcommit: 86adcc06e35390f13c1e372c36d2e044f1fc31ef
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 04/26/2018
 ---
 # <a name="how-to-use-a-class-that-defines-operators-visual-basic"></a>如何：使用定義運算子的類別 (Visual Basic)
-如果您使用類別或結構，定義自己的運算子，您可以存取這些運算子，從[!INCLUDE[vbprvb](~/includes/vbprvb-md.md)]。  
+如果您使用類別或結構，定義自己的運算子，您可以從 Visual Basic 中存取這些運算子。  
   
  在類別或結構上定義運算子，也稱為*多載*運算子。  
   
 ## <a name="example"></a>範例  
- 下列範例會存取 SQL 結構<xref:System.Data.SqlTypes.SqlString>，它負責定義轉換運算子 ([CType 函式](../../../../visual-basic/language-reference/functions/ctype-function.md)) 之間的 SQL 字串雙向和[!INCLUDE[vbprvb](~/includes/vbprvb-md.md)]字串。 使用`CType(` *SQL 字串運算式*，`String)`要轉換的 SQL 字串[!INCLUDE[vbprvb](~/includes/vbprvb-md.md)]字串和`CType(` *Visual Basic 字串運算式*， <xref:System.Data.SqlTypes.SqlString>`)`轉換中另一種方向。  
+ 下列範例會存取 SQL 結構<xref:System.Data.SqlTypes.SqlString>，它負責定義轉換運算子 ([CType 函式](../../../../visual-basic/language-reference/functions/ctype-function.md)) 中的 SQL 字串與 Visual Basic 字串之間雙向流動。 使用`CType(` *SQL 字串運算式*，`String)`要轉換成 Visual Basic 字串，SQL 字串和`CType(` *Visual Basic 字串運算式*， <xref:System.Data.SqlTypes.SqlString> `)`轉換中另一種方向。  
   
  [!code-vb[VbVbcnProcedures#30](./codesnippet/VisualBasic/how-to-use-a-class-that-defines-operators_1.vb)]  
   

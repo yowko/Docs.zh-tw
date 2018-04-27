@@ -1,27 +1,29 @@
 ---
-title: "常見問題集"
-ms.custom: 
+title: 常見問題集
+ms.custom: ''
 ms.date: 03/30/2017
 ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.technology: dotnet-ado
-ms.tgt_pltfrm: 
+ms.reviewer: ''
+ms.suite: ''
+ms.technology:
+- dotnet-ado
+ms.tgt_pltfrm: ''
 ms.topic: article
 dev_langs:
 - csharp
 - vb
 ms.assetid: 252ed666-0679-4eea-b71b-2f14117ef443
-caps.latest.revision: "3"
+caps.latest.revision: 3
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.workload: dotnet
-ms.openlocfilehash: e09dd7cb3fc979a9be0165705247cc5a63a6b328
-ms.sourcegitcommit: ed26cfef4e18f6d93ab822d8c29f902cff3519d1
+ms.workload:
+- dotnet
+ms.openlocfilehash: caccbb76f32c38f29fa4f49adc9b7b1c8fe4045d
+ms.sourcegitcommit: 86adcc06e35390f13c1e372c36d2e044f1fc31ef
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 01/17/2018
+ms.lasthandoff: 04/26/2018
 ---
 # <a name="frequently-asked-questions"></a>常見問題集
 下列各節將解答實作 [!INCLUDE[vbteclinq](../../../../../../includes/vbteclinq-md.md)] 時可能會遇到的一些常見問題。  
@@ -31,7 +33,7 @@ ms.lasthandoff: 01/17/2018
 ## <a name="cannot-connect"></a>無法連接  
  問： 我無法連接到資料庫。  
   
- 答： 請確定您的連接字串正確，而且 [!INCLUDE[ssNoVersion](../../../../../../includes/ssnoversion-md.md)] 執行個體正在執行。 另外也請注意，[!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)] 需要具名管道 (Named Pipe) 通訊協定才能啟用。 如需詳細資訊，請參閱[依逐步解說學習](../../../../../../docs/framework/data/adonet/sql/linq/learning-by-walkthroughs.md)。  
+ 答： 請確定您的連接字串正確無誤，而且您的 SQL Server 執行個體正在執行。 另外也請注意，[!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)] 需要具名管道 (Named Pipe) 通訊協定才能啟用。 如需詳細資訊，請參閱[依逐步解說學習](../../../../../../docs/framework/data/adonet/sql/linq/learning-by-walkthroughs.md)。  
   
 ## <a name="changes-to-database-lost"></a>遺失對資料庫所做的變更  
  問： 我變更了資料庫中的資料，但重新執行應用程式時，變更不見了。  
@@ -155,7 +157,7 @@ dlo.LoadWith<Order>(o => o.OrderDetails);
 ## <a name="provider-model"></a>提供者模型  
  問： 是否有公用提供者模型可供使用？  
   
- 答： 沒有公用提供者模型可以使用。 目前 [!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)] 只支援 [!INCLUDE[ssNoVersion](../../../../../../includes/ssnoversion-md.md)] 和 [!INCLUDE[ssEW](../../../../../../includes/ssew-md.md)]。  
+ 答： 沒有公用提供者模型可以使用。 此時，[!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)]支援 SQL Server 和[!INCLUDE[ssEW](../../../../../../includes/ssew-md.md)]只。  
   
 ## <a name="sql-injection-attacks"></a>SQL 插入攻擊  
  問： [!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)] 如何保護不受 SQL 插入攻擊？  
@@ -174,7 +176,7 @@ dlo.LoadWith<Order>(o => o.OrderDetails);
 3.  檢視預設 <xref:System.Data.Linq.Mapping.UpdateCheck> 值 (<xref:System.Data.Linq.Mapping.UpdateCheck.Never>)，判斷它是否為應用程式的正確值。  
   
     > [!CAUTION]
-    >  如果使用 [!INCLUDE[vs_ordesigner_long](../../../../../../includes/vs-ordesigner-long-md.md)]中的[!INCLUDE[vs_current_short](../../../../../../includes/vs-current-short-md.md)]，變更可能會被覆寫。  
+    >  如果您使用[!INCLUDE[vs_ordesigner_long](../../../../../../includes/vs-ordesigner-long-md.md)]在 Visual Studio 中，可能會覆寫您的變更。  
   
 ## <a name="aptca"></a>APTCA  
  問： System.Data.Linq 是否標示為供部分信任的程式碼使用？  
@@ -196,7 +198,7 @@ dlo.LoadWith<Order>(o => o.OrderDetails);
   
  答： 請不要嘗試重複使用 <xref:System.Data.Linq.DataContext> 的執行個體。 每個 <xref:System.Data.Linq.DataContext> 都會維持某一個特定編輯/查詢工作階段的狀態 (包括識別快取)。 若要取得以資料庫目前狀態為基礎的新執行個體，請使用新的 <xref:System.Data.Linq.DataContext>。  
   
- 您仍可以使用基礎 [!INCLUDE[vstecado](../../../../../../includes/vstecado-md.md)] 連接共用。 如需詳細資訊，請參閱[SQL Server 連接共用 (ADO.NET)](../../../../../../docs/framework/data/adonet/sql-server-connection-pooling.md)。  
+ 您仍可以使用基礎 [!INCLUDE[vstecado](../../../../../../includes/vstecado-md.md)] 連接共用。 如需詳細資訊，請參閱 [SQL Server 連共用ADO.NET)](../../../../../../docs/framework/data/adonet/sql-server-connection-pooling.md)。  
   
 ## <a name="second-datacontext-is-not-updated"></a>第二個 DataContext 未更新  
  問： 我使用一個 <xref:System.Data.Linq.DataContext> 執行個體來儲存資料庫中的值。 但是，相同資料庫上的第二個 <xref:System.Data.Linq.DataContext> 卻未反映更新的值。 第二個 <xref:System.Data.Linq.DataContext> 執行個體似乎傳回快取的值。  
@@ -210,7 +212,7 @@ dlo.LoadWith<Order>(o => o.OrderDetails);
   
  答： 內容在唯讀模式下無法追蹤變更。  
   
-## <a name="see-also"></a>請參閱  
+## <a name="see-also"></a>另請參閱  
  [參考資料](../../../../../../docs/framework/data/adonet/sql/linq/reference.md)  
  [疑難排解](../../../../../../docs/framework/data/adonet/sql/linq/troubleshooting.md)  
  [LINQ to SQL 中的安全性](../../../../../../docs/framework/data/adonet/sql/linq/security-in-linq-to-sql.md)

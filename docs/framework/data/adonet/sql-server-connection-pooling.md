@@ -1,27 +1,29 @@
 ---
-title: "SQL Server 連接共用 (ADO.NET)"
-ms.custom: 
+title: SQL Server 連接共用 (ADO.NET)
+ms.custom: ''
 ms.date: 03/30/2017
 ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.technology: dotnet-ado
-ms.tgt_pltfrm: 
+ms.reviewer: ''
+ms.suite: ''
+ms.technology:
+- dotnet-ado
+ms.tgt_pltfrm: ''
 ms.topic: article
 dev_langs:
 - csharp
 - vb
 ms.assetid: 7e51d44e-7c4e-4040-9332-f0190fe36f07
-caps.latest.revision: "11"
+caps.latest.revision: 11
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.workload: dotnet
-ms.openlocfilehash: 497ebbd573ea05568010485f04f08cdeddbf6041
-ms.sourcegitcommit: ed26cfef4e18f6d93ab822d8c29f902cff3519d1
+ms.workload:
+- dotnet
+ms.openlocfilehash: c0be63e767255508ac93555a503980f3798e70c0
+ms.sourcegitcommit: 86adcc06e35390f13c1e372c36d2e044f1fc31ef
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 01/17/2018
+ms.lasthandoff: 04/26/2018
 ---
 # <a name="sql-server-connection-pooling-adonet"></a>SQL Server 連接共用 (ADO.NET)
 連接到資料庫伺服器通常需要執行幾個很費時的步驟。 必須要建立實體頻道 (如通訊端或具名管道)，必須建立與伺服器的初始信號交換、必須剖析連接字串資訊、伺服器必須要驗證連接，以及必須檢查是否已在現行交易中登記等。  
@@ -78,13 +80,13 @@ using (SqlConnection connection = new SqlConnection(
  連接共用器會藉由重新配置釋放回集區的連接，來滿足連接的請求。 如果已達到最大集區大小，但仍沒有可用的連接，則會將要求排入佇列。 共用器接下來會嘗試回收所有連接，直到達到逾時 (預設值是 15 秒)。 如果連接逾時之前共用器無法滿足要求，則會擲回例外狀況。  
   
 > [!CAUTION]
->  強烈建議您在使用完連接後一律關閉該連接，以便將連接傳回集區。 您可使用 `Close` 物件的 `Dispose` 或 `Connection` 方法，或藉由開啟 C# 中之 `using` 陳述式或 `Using` 中之 [!INCLUDE[vbprvb](../../../../includes/vbprvb-md.md)] 陳述式內的全部連接來執行此動作。 可能不會將未明確關閉的連接加入或傳回集區。 如需詳細資訊，請參閱[使用陳述式](~/docs/csharp/language-reference/keywords/using-statement.md)或[如何： 處置系統資源](~/docs/visual-basic/programming-guide/language-features/control-flow/how-to-dispose-of-a-system-resource.md)如[!INCLUDE[vbprvb](../../../../includes/vbprvb-md.md)]。  
+>  強烈建議您在使用完連接後一律關閉該連接，以便將連接傳回集區。 您可以使用`Close`或`Dispose`方法`Connection`物件，或藉由開啟內的所有連線`using`C# 中的陳述式或`Using`在 Visual Basic 中的陳述式。 可能不會將未明確關閉的連接加入或傳回集區。 如需詳細資訊，請參閱[使用陳述式](~/docs/csharp/language-reference/keywords/using-statement.md)或[如何： 處置系統資源](~/docs/visual-basic/programming-guide/language-features/control-flow/how-to-dispose-of-a-system-resource.md)適用於 Visual Basic。  
   
 > [!NOTE]
 >  請不要在您類別之 `Close` 方法中的 `Dispose`、`Connection` 或任何其他 Managed 物件上呼叫 `DataReader` 或 `Finalize`。 在完成項中，只需釋放類別直接擁有的 Unmanaged 資源。 如果類別未擁有任何 Unmanaged 資源，請不要在類別定義中包含 `Finalize` 方法。 如需詳細資訊，請參閱[回收](../../../../docs/standard/garbage-collection/index.md)。  
   
 > [!NOTE]
->  從連接集區中擷取連接或將連接傳回連接集區時，系統不會在伺服器上引發登入和登出事件。 這是因為當連接傳回連接集區時，連接實際上並未關閉。 如需詳細資訊，請參閱[Audit Login Event Class](http://msdn2.microsoft.com/library/ms190260.aspx)和[Logout Event Class<](http://msdn2.microsoft.com/library/ms175827.aspx)中[!INCLUDE[ssNoVersion](../../../../includes/ssnoversion-md.md)]線上叢書 》。  
+>  從連接集區中擷取連接或將連接傳回連接集區時，系統不會在伺服器上引發登入和登出事件。 這是因為當連接傳回連接集區時，連接實際上並未關閉。 如需詳細資訊，請參閱[Audit Login Event Class](http://msdn2.microsoft.com/library/ms190260.aspx)和[Logout Event Class<](http://msdn2.microsoft.com/library/ms175827.aspx) SQL Server 線上叢書 》 中。  
   
 ## <a name="removing-connections"></a>移除連接  
  如果集區中的連接已閒置大約 4 到 8 分鐘，或如果共用器偵測到與伺服器的連接已嚴重損毀，則連接共用器會從集區中移除該連接。 請注意，只有嘗試與伺服器進行通訊後，才能偵測到嚴重損毀的連接。 如果發現連接已不再連接到伺服器，則會將其標記為無效。 只當關閉或回收無效的連接時，才會將它們從連接集區中移除。  
@@ -111,7 +113,7 @@ using (SqlConnection connection = new SqlConnection(
 ### <a name="pool-fragmentation-due-to-many-databases"></a>多個資料庫導致的集區片段  
  許多網際網路服務提供者在單一伺服器上裝載多個網站。 他們可以使用單一資料庫確認表單驗證登入，然後開啟該使用者或使用者群組之特定資料庫的連接。 驗證資料庫的連接可供所有人共用和使用。 不過，每個資料庫存在單獨的連接集區，而這會增加伺服器連接的數目。  
   
- 這也是應用程式設計的副作用。 有一個比較簡單的方法可避免此副作用，同時不會影響連接到 [!INCLUDE[ssNoVersion](../../../../includes/ssnoversion-md.md)] 時的安全性。 連接到伺服器上的同一個資料庫 (而不是連接到每個使用者或群組的個別資料庫)，然後執行 [!INCLUDE[tsql](../../../../includes/tsql-md.md)] USE 陳述式，以變更為想要的資料庫。 下列程式碼片段會示範如何建立與 `master` 資料庫的初始連接，然後切換至 `databaseName` 字串變數中指定之目標資料庫。  
+ 這也是應用程式設計的副作用。 有一個比較簡單的方法可避免此副作用，同時不會影響連接到 SQL Server 時的安全性。 連接到伺服器上的同一個資料庫 (而不是連接到每個使用者或群組的個別資料庫)，然後執行 [!INCLUDE[tsql](../../../../includes/tsql-md.md)] USE 陳述式，以變更為想要的資料庫。 下列程式碼片段會示範如何建立與 `master` 資料庫的初始連接，然後切換至 `databaseName` 字串變數中指定之目標資料庫。  
   
 ```vb  
 ' Assumes that command is a valid SqlCommand object and that  
@@ -136,12 +138,12 @@ using (SqlConnection connection = new SqlConnection(
 ```  
   
 ## <a name="application-roles-and-connection-pooling"></a>應用程式角色和連接共用  
- 呼叫 [!INCLUDE[ssNoVersion](../../../../includes/ssnoversion-md.md)] 系統預存程序來啟用 `sp_setapprole` 應用程式角色後，便無法重設該連接的安全性內容。 不過，啟用共用後，連接會傳回到集區，並且在重複使用共用連接時發生錯誤。 如需詳細資訊，請參閱知識庫文件中，「[SQL 應用程式角色錯誤 OLE DB 資源共用](http://support.microsoft.com/default.aspx?scid=KB;EN-US;Q229564)。 」  
+ 呼叫 `sp_setapprole` 系統預存程序來啟動 SQL Server 應用程式角色後，便無法重設該連接的安全性內容。 不過，啟用共用後，連接會傳回到集區，並且在重複使用共用連接時發生錯誤。 如需詳細資訊，請參閱知識庫文件中，「[SQL 應用程式角色錯誤 OLE DB 資源共用](http://support.microsoft.com/default.aspx?scid=KB;EN-US;Q229564)。 」  
   
 ### <a name="application-role-alternatives"></a>應用程式角色替代方案  
  建議您善加利用安全機制，以取代應用程式角色。 如需詳細資訊，請參閱[SQL Server 中建立應用程式角色](../../../../docs/framework/data/adonet/sql/creating-application-roles-in-sql-server.md)。  
   
-## <a name="see-also"></a>請參閱  
+## <a name="see-also"></a>另請參閱  
  [連接共用](../../../../docs/framework/data/adonet/connection-pooling.md)  
  [SQL Server 和 ADO.NET](../../../../docs/framework/data/adonet/sql/index.md)  
  [效能計數器](../../../../docs/framework/data/adonet/performance-counters.md)  

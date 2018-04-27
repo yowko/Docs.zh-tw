@@ -1,18 +1,19 @@
 ---
-title: "如何將現有的.NET 應用程式部署至 Azure App Service"
-description: "容器化的.NET 應用程式的.NET Microservices 架構 |如何將現有的.NET 應用程式部署至 Azure App Service"
+title: 如何將現有的.NET 應用程式部署至 Azure App Service
+description: 容器化的.NET 應用程式的.NET Microservices 架構 |如何將現有的.NET 應用程式部署至 Azure App Service
 author: CESARDELATORRE
 ms.author: wiwagn
 ms.date: 10/26/2017
 ms.prod: .net
+ms.topic: article
 ms.workload:
 - dotnet
 - dotnetcore
-ms.openlocfilehash: aefcd79574cbbf6b3759bfa6cc0f9e46a58244ce
-ms.sourcegitcommit: d3cfda0943364aaf6ccd574f55f584576c8a4fee
+ms.openlocfilehash: 74f4d4b1812976d2e2b1581e10134fa57938bffc
+ms.sourcegitcommit: 2e8acae16ae802f2d6d04e3ce0a6dbf04e476513
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 03/08/2018
+ms.lasthandoff: 04/18/2018
 ---
 # <a name="how-to-deploy-existing-net-apps-to-azure-app-service"></a>如何將現有的.NET 應用程式部署至 Azure App Service 
 

@@ -1,12 +1,13 @@
 ---
-title: "XML 常值概觀 (Visual Basic)"
-ms.custom: 
+title: XML 常值概觀 (Visual Basic)
+ms.custom: ''
 ms.date: 07/20/2015
 ms.prod: .net
-ms.reviewer: 
-ms.suite: 
-ms.technology: devlang-visual-basic
-ms.tgt_pltfrm: 
+ms.reviewer: ''
+ms.suite: ''
+ms.technology:
+- devlang-visual-basic
+ms.tgt_pltfrm: ''
 ms.topic: article
 helpviewer_keywords:
 - XML literals [Visual Basic], about XML literals
@@ -14,26 +15,26 @@ helpviewer_keywords:
 - LINQ to XML [Visual Basic], XML literals
 - literals [Visual Basic], XML
 ms.assetid: 37987c15-4ab8-471b-bd45-399816bfb57f
-caps.latest.revision: "27"
+caps.latest.revision: 27
 author: dotnet-bot
 ms.author: dotnetcontent
-ms.openlocfilehash: 59ce79995025692428263120f9c21c7baf5cf231
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.openlocfilehash: 1bc3bed1a7046e6f3c31828fbf17be877e66f146
+ms.sourcegitcommit: 86adcc06e35390f13c1e372c36d2e044f1fc31ef
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 04/26/2018
 ---
 # <a name="xml-literals-overview-visual-basic"></a>XML 常值概觀 (Visual Basic)
-*XML 常值*可讓您將 XML 直接您[!INCLUDE[vbprvb](~/includes/vbprvb-md.md)]程式碼。 XML 常值語法表示[!INCLUDE[sqltecxlinq](~/includes/sqltecxlinq-md.md)]物件，並且是類似的 XML 1.0 語法。 這可讓您更輕鬆地以程式設計方式建立 XML 項目和文件，因為您的程式碼有相同的最後一個 XML 結構。  
+*XML 常值*可讓您將 XML 直接併入您的 Visual Basic 程式碼。 XML 常值語法表示[!INCLUDE[sqltecxlinq](~/includes/sqltecxlinq-md.md)]物件，並且是類似的 XML 1.0 語法。 這可讓您更輕鬆地以程式設計方式建立 XML 項目和文件，因為您的程式碼有相同的最後一個 XML 結構。  
   
- [!INCLUDE[vbprvb](~/includes/vbprvb-md.md)]編譯 XML 常值[!INCLUDE[sqltecxlinq](~/includes/sqltecxlinq-md.md)]物件。 [!INCLUDE[sqltecxlinq](~/includes/sqltecxlinq-md.md)]提供一種簡單的物件模型來建立及操作 XML，與此模型也會與整合[!INCLUDE[vbteclinqext](~/includes/vbteclinqext-md.md)]。 如需詳細資訊，請參閱<xref:System.Xml.Linq.XElement>。  
+ Visual Basic 編譯 XML 常值[!INCLUDE[sqltecxlinq](~/includes/sqltecxlinq-md.md)]物件。 [!INCLUDE[sqltecxlinq](~/includes/sqltecxlinq-md.md)] 提供一種簡單的物件模型來建立及操作 XML，與此模型也會與整合[!INCLUDE[vbteclinqext](~/includes/vbteclinqext-md.md)]。 如需詳細資訊，請參閱<xref:System.Xml.Linq.XElement>。  
   
- 您可以將內嵌[!INCLUDE[vbprvb](~/includes/vbprvb-md.md)]XML 常值中的運算式。 在執行階段，您的應用程式會建立[!INCLUDE[sqltecxlinq](~/includes/sqltecxlinq-md.md)]加入內嵌運算式的值在每個的常值的物件。 這可讓您指定在 XML 常值的動態內容。 如需詳細資訊，請參閱[XML 中內嵌的運算式](../../../../visual-basic/programming-guide/language-features/xml/embedded-expressions-in-xml.md)。  
+ 您可以在 XML 常值中內嵌 Visual Basic 運算式。 在執行階段，您的應用程式會建立[!INCLUDE[sqltecxlinq](~/includes/sqltecxlinq-md.md)]加入內嵌運算式的值在每個的常值的物件。 這可讓您指定在 XML 常值的動態內容。 如需詳細資訊，請參閱[XML 中內嵌的運算式](../../../../visual-basic/programming-guide/language-features/xml/embedded-expressions-in-xml.md)。  
   
  如需 XML 常值的語法和 XML 1.0 語法差異的詳細資訊，請參閱[XML 常值和 XML 1.0 規格](../../../../visual-basic/programming-guide/language-features/xml/xml-literals-and-the-xml-1-0-specification.md)。  
   
 ## <a name="simple-literals"></a>簡單的常值  
- 您可以建立[!INCLUDE[sqltecxlinq](~/includes/sqltecxlinq-md.md)]物件存放至您[!INCLUDE[vbprvb](~/includes/vbprvb-md.md)]輸入或貼上有效的 XML 中的程式碼。 XML 元素常值傳回<xref:System.Xml.Linq.XElement>物件。 如需詳細資訊，請參閱[XML 元素常值](../../../../visual-basic/language-reference/xml-literals/xml-element-literal.md)和[XML 常值和 XML 1.0 規格](../../../../visual-basic/programming-guide/language-features/xml/xml-literals-and-the-xml-1-0-specification.md)。 下列範例會建立數個項目子系的 XML 項目。  
+ 您可以建立[!INCLUDE[sqltecxlinq](~/includes/sqltecxlinq-md.md)]中 Visual Basic 程式碼輸入或貼上有效的 XML 中的物件。 XML 元素常值傳回<xref:System.Xml.Linq.XElement>物件。 如需詳細資訊，請參閱[XML 元素常值](../../../../visual-basic/language-reference/xml-literals/xml-element-literal.md)和[XML 常值和 XML 1.0 規格](../../../../visual-basic/programming-guide/language-features/xml/xml-literals-and-the-xml-1-0-specification.md)。 下列範例會建立數個項目子系的 XML 項目。  
   
  [!code-vb[VbXMLSamples#5](../../../../visual-basic/language-reference/operators/codesnippet/VisualBasic/xml-literals-overview_1.vb)]  
   
@@ -42,7 +43,7 @@ ms.lasthandoff: 11/21/2017
  [!code-vb[VbXMLSamples#6](../../../../visual-basic/language-reference/operators/codesnippet/VisualBasic/xml-literals-overview_2.vb)]  
   
 > [!NOTE]
->  中的 XML 常值語法[!INCLUDE[vbprvb](~/includes/vbprvb-md.md)]不 XML 1.0 規格中的語法相同。 如需詳細資訊，請參閱[XML 常值和 XML 1.0 規格](../../../../visual-basic/programming-guide/language-features/xml/xml-literals-and-the-xml-1-0-specification.md)。  
+>  在 Visual Basic 中的 XML 常值語法不等同於 XML 1.0 規格中的語法。 如需詳細資訊，請參閱[XML 常值和 XML 1.0 規格](../../../../visual-basic/programming-guide/language-features/xml/xml-literals-and-the-xml-1-0-specification.md)。  
   
 ## <a name="line-continuation"></a>行接續符號  
  XML 常值可以跨越多行，而不使用行接續字元 （此空間底線輸入順序）。 這可讓您輕鬆地比較 XML 文件的程式碼中的 XML 常值。  
@@ -59,7 +60,7 @@ ms.lasthandoff: 11/21/2017
  [!code-vb[VbXMLSamples#7](../../../../visual-basic/language-reference/operators/codesnippet/VisualBasic/xml-literals-overview_3.vb)]  
   
 ## <a name="how-the-compiler-creates-objects-from-xml-literals"></a>編譯器將 XML 常值所建立的物件  
- [!INCLUDE[vbprvb](~/includes/vbprvb-md.md)]編譯器 XML 常值轉譯為對等呼叫[!INCLUDE[sqltecxlinq](~/includes/sqltecxlinq-md.md)]建構函式來建置[!INCLUDE[sqltecxlinq](~/includes/sqltecxlinq-md.md)]物件。 例如，[!INCLUDE[vbprvb](~/includes/vbprvb-md.md)]編譯器會將下列程式碼範例轉譯成呼叫<xref:System.Xml.Linq.XProcessingInstruction>XML 版本指令時，建構函式呼叫<xref:System.Xml.Linq.XElement>建構函式`<contact>`， `<name>`，和`<phone>`項目，以及呼叫<xref:System.Xml.Linq.XAttribute>建構函式`type`屬性。 具體而言，在下列範例中，指定屬性[!INCLUDE[vbprvb](~/includes/vbprvb-md.md)]編譯器將會呼叫<xref:System.Xml.Linq.XAttribute.%23ctor%28System.Xml.Linq.XName%2CSystem.Object%29>建構函式兩次。 第一個會將值傳遞`type`如`name`參數和值`home`如`value`參數。 第二個也會將值傳遞`type`如`name`參數，但值`work`如`value`參數。  
+ Visual Basic 編譯器 XML 常值轉譯為對等呼叫[!INCLUDE[sqltecxlinq](~/includes/sqltecxlinq-md.md)]建構函式來建置[!INCLUDE[sqltecxlinq](~/includes/sqltecxlinq-md.md)]物件。 例如，Visual Basic 編譯器將轉譯為下列程式碼範例呼叫<xref:System.Xml.Linq.XProcessingInstruction>XML 版本指令時，建構函式呼叫<xref:System.Xml.Linq.XElement>建構函式`<contact>`， `<name>`，和`<phone>`項目，以及呼叫<xref:System.Xml.Linq.XAttribute>建構函式`type`屬性。 具體而言，在下列範例中指定的屬性，Visual Basic 編譯器會呼叫<xref:System.Xml.Linq.XAttribute.%23ctor%28System.Xml.Linq.XName%2CSystem.Object%29>建構函式兩次。 第一個會將值傳遞`type`如`name`參數和值`home`如`value`參數。 第二個也會將值傳遞`type`如`name`參數，但值`work`如`value`參數。  
   
  [!code-vb[VbXMLSamples#6](../../../../visual-basic/language-reference/operators/codesnippet/VisualBasic/xml-literals-overview_2.vb)]  
   

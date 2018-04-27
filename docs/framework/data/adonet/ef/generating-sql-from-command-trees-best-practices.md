@@ -1,24 +1,26 @@
 ---
-title: "從命令樹產生 SQL - 最佳作法"
-ms.custom: 
+title: 從命令樹產生 SQL - 最佳作法
+ms.custom: ''
 ms.date: 03/30/2017
 ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.technology: dotnet-ado
-ms.tgt_pltfrm: 
+ms.reviewer: ''
+ms.suite: ''
+ms.technology:
+- dotnet-ado
+ms.tgt_pltfrm: ''
 ms.topic: article
 ms.assetid: 71ef6a24-4c4f-4254-af3a-ffc0d855b0a8
-caps.latest.revision: "3"
+caps.latest.revision: 3
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.workload: dotnet
-ms.openlocfilehash: d68194ab83a6606337a33668470411ed8b1c6957
-ms.sourcegitcommit: ed26cfef4e18f6d93ab822d8c29f902cff3519d1
+ms.workload:
+- dotnet
+ms.openlocfilehash: 037d1eaa8d781d012cde7a1bd3b08aa7003edd77
+ms.sourcegitcommit: 86adcc06e35390f13c1e372c36d2e044f1fc31ef
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 01/17/2018
+ms.lasthandoff: 04/26/2018
 ---
 # <a name="generating-sql-from-command-trees---best-practices"></a>從命令樹產生 SQL - 最佳作法
 輸出查詢命令樹會仔細地建立可用 SQL 表示之查詢的模型。 不過，從輸出命令樹產生 SQL 時，提供者寫入器會面臨某些常見的挑戰。 本主題將討論這些挑戰。 在下一個主題中，範例提供者將示範如何處理這些挑戰。  
@@ -147,7 +149,7 @@ ON b.y = d.z
  您可以在 [!INCLUDE[adonet_ef](../../../../../includes/adonet-ef-md.md)] 所傳遞的查詢命令樹中重複使用運算式。 請勿假設每個運算式都只會出現在查詢命令樹中一次。  
   
 ## <a name="mapping-primitive-types"></a>對應基本型別  
- 將概念 (EDM) 型別對應至提供者型別時，您應該對應至最廣泛的型別 (Int32)，以便容納所有可能的值。 此外，請避免對應至無法用於許多作業的型別，例如 BLOB 型別 (例如，`ntext` 中的 [!INCLUDE[ssNoVersion](../../../../../includes/ssnoversion-md.md)])。  
+ 將概念 (EDM) 型別對應至提供者型別時，您應該對應至最廣泛的型別 (Int32)，以便容納所有可能的值。 此外，請避免對應至型別無法用於許多作業，例如 BLOB 型別 (例如， `ntext` SQL Server 中)。  
   
-## <a name="see-also"></a>請參閱  
+## <a name="see-also"></a>另請參閱  
  [SQL 產生](../../../../../docs/framework/data/adonet/ef/sql-generation.md)

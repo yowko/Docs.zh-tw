@@ -15,19 +15,19 @@ ms.assetid: 410b60dc-5e60-4ec0-bfae-426755a2ee28
 caps.latest.revision: 10
 author: dotnet-bot
 ms.author: dotnetcontent
-ms.openlocfilehash: fe21d8c0dcefaea35d9f96cd2ecbff92a1c83d36
-ms.sourcegitcommit: bd1ef61f4bb794b25383d3d72e71041a5ced172e
+ms.openlocfilehash: 6c83667534dcf69ea0ec1106bb3a02d2c9accd87
+ms.sourcegitcommit: 86adcc06e35390f13c1e372c36d2e044f1fc31ef
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/18/2017
+ms.lasthandoff: 04/26/2018
 ---
 # <a name="delegates-visual-basic"></a>委派 (Visual Basic)
-委派是參考方法的物件。 它們有時稱為「型別安全的函式指標」，因為它們類似於其他程式設計語言中使用的函式指標。 但不同於函式指標，[!INCLUDE[vbprvb](~/includes/vbprvb-md.md)] 委派是以 <xref:System.Delegate?displayProperty=nameWithType> 類別為基礎的參考型別。 委派可以同時參考共用的方法 (不需類別的特定執行個體就能呼叫的方法) 和執行個體方法。  
+委派是參考方法的物件。 它們有時稱為「型別安全的函式指標」，因為它們類似於其他程式設計語言中使用的函式指標。 但不同之處在於，Visual Basic 委派是參考類型，根據類別<xref:System.Delegate?displayProperty=nameWithType>。 委派可以同時參考共用的方法 (不需類別的特定執行個體就能呼叫的方法) 和執行個體方法。  
   
 ## <a name="delegates-and-events"></a>委派和事件  
- 當您在呼叫程序與被呼叫程序之間需要一個媒介時，委派就很有用。 例如，您想要讓引發事件的物件能夠在不同環境下呼叫不同的事件處理常式。 不過，引發事件的物件無法事先知道哪一個事件處理常式正在處理特定事件。 [!INCLUDE[vbprvb](~/includes/vbprvb-md.md)] 可讓您藉由在使用 `AddHandler` 陳述式時建立自己的委派，以動態方式建立事件處理常式與事件的關聯。 在執行階段，委派會將呼叫轉送到適當的事件處理常式。  
+ 當您在呼叫程序與被呼叫程序之間需要一個媒介時，委派就很有用。 例如，您想要讓引發事件的物件能夠在不同環境下呼叫不同的事件處理常式。 不過，引發事件的物件無法事先知道哪一個事件處理常式正在處理特定事件。 Visual Basic 可讓您以動態方式產生關聯的事件處理常式取代事件藉由建立您的委派，當您使用`AddHandler`陳述式。 在執行階段，委派會將呼叫轉送到適當的事件處理常式。  
   
- 雖然您可以建立自己的委派，但在大部分情況下，[!INCLUDE[vbprvb](~/includes/vbprvb-md.md)] 會建立委派，並為您處理細節。 例如，`Event` 陳述式會隱含定義名為 `<EventName>EventHandler` 的委派類別做為包含 `Event` 陳述式之類別的巢狀類別，並包含與事件相同的簽章。 `AddressOf` 陳述式會隱含建立參考特定程序之委派的執行個體。 下兩行程式碼的用法相同。 在第一行中，您會看到明確建立了 `Eventhandler` 的執行個體，其中包含對傳送為引數之 `Button1_Click` 方法的參考。 第二行則是可執行相同動作的更便捷方法。  
+ 雖然您可以建立自己的委派，在大部分情況下，Visual Basic 建立委派，並會負責您詳細資料。 例如，`Event` 陳述式會隱含定義名為 `<EventName>EventHandler` 的委派類別做為包含 `Event` 陳述式之類別的巢狀類別，並包含與事件相同的簽章。 `AddressOf` 陳述式會隱含建立參考特定程序之委派的執行個體。 下兩行程式碼的用法相同。 在第一行中，您會看到明確建立了 `Eventhandler` 的執行個體，其中包含對傳送為引數之 `Button1_Click` 方法的參考。 第二行則是可執行相同動作的更便捷方法。  
   
  [!code-vb[VbVbalrDelegates#6](../../../../visual-basic/language-reference/operators/codesnippet/VisualBasic/delegates_1.vb)]  
   

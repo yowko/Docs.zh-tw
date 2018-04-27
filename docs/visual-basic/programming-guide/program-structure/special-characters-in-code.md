@@ -1,11 +1,12 @@
 ---
-title: "程式碼中的特殊字元 (Visual Basic)"
-ms.custom: 
+title: 程式碼中的特殊字元 (Visual Basic)
+ms.custom: ''
 ms.date: 07/20/2015
 ms.prod: .net
-ms.reviewer: 
-ms.suite: 
-ms.technology: devlang-visual-basic
+ms.reviewer: ''
+ms.suite: ''
+ms.technology:
+- devlang-visual-basic
 ms.topic: article
 f1_keywords:
 - vb.)
@@ -36,17 +37,17 @@ helpviewer_keywords:
 - exclamation point operator (!)
 - Visual Basic code, special characters
 ms.assetid: 310dce0c-45b5-4e0d-83e9-32df258d2a3e
-caps.latest.revision: "21"
+caps.latest.revision: 21
 author: dotnet-bot
 ms.author: dotnetcontent
-ms.openlocfilehash: 11c5ef9ad41fc2362d9ba4f2cb5eb5b63a9ca31c
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.openlocfilehash: b724c48320f74045d7192be6d6e269c00511ffc9
+ms.sourcegitcommit: 86adcc06e35390f13c1e372c36d2e044f1fc31ef
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 04/26/2018
 ---
 # <a name="special-characters-in-code-visual-basic"></a>程式碼中的特殊字元 (Visual Basic)
-有時候，您必須使用特殊字元，在程式碼中，也就是不是字母或數字的字元。 標點符號和特殊字元[!INCLUDE[vbprvb](~/includes/vbprvb-md.md)]字元集有許多用途，從組織程式文字到定義由編譯器或編譯的程式執行的工作。 這些字元不指定要執行的作業。  
+有時候，您必須使用特殊字元，在程式碼中，也就是不是字母或數字的字元。 標點符號和 Visual Basic 字元集中的特殊字元有許多用途，從組織程式文字到定義由編譯器或編譯的程式執行的工作。 這些字元不指定要執行的作業。  
   
 ## <a name="parentheses"></a>括號  
  當您定義程序，例如使用括號`Sub`或`Function`。 您必須將所有的程序引數清單括在括號中。 您也使用括號將變數或引數放入邏輯群組，尤其是要覆寫中的複雜運算式的運算子優先順序的預設順序。 下列範例將說明這點。  
@@ -56,7 +57,7 @@ ms.lasthandoff: 11/21/2017
  執行先前的程式碼的值之後`d`是 8.225 值`e`為 3。 計算`d`會使用預設的優先順序的`/`透過`+`相當於`d = b + (c / a)`。 在計算中的括號`e`覆寫預設的優先順序。  
   
 ## <a name="separators"></a>分隔符號  
- 分隔符號執行其名稱的建議： 它們區隔的程式碼區段。 在[!INCLUDE[vbprvb](~/includes/vbprvb-md.md)]，分隔符號為冒號 (`:`)。 當您想要包含在單一行，而不是個別行上的多個陳述式時，請使用分隔符號字元。 這可以節省空間，並改善程式碼的可讀性。 下列範例示範三個陳述式，以冒號分隔。  
+ 分隔符號執行其名稱的建議： 它們區隔的程式碼區段。 在 Visual Basic 中的分隔字元是冒號 (`:`)。 當您想要包含在單一行，而不是個別行上的多個陳述式時，請使用分隔符號字元。 這可以節省空間，並改善程式碼的可讀性。 下列範例示範三個陳述式，以冒號分隔。  
   
  [!code-vb[VbVbcnConventions#12](../../../visual-basic/programming-guide/language-features/codesnippet/VisualBasic/special-characters-in-code_2.vb)]  
   

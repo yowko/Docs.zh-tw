@@ -1,35 +1,35 @@
 ---
-title: "使用組態檔設定服務"
-ms.custom: 
+title: 使用組態檔設定服務
+ms.custom: ''
 ms.date: 03/30/2017
 ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
+ms.reviewer: ''
+ms.suite: ''
 ms.technology:
 - dotnet-clr
-ms.tgt_pltfrm: 
+ms.tgt_pltfrm: ''
 ms.topic: article
 helpviewer_keywords:
 - configuring services [WCF]
 ms.assetid: c9c8cd32-2c9d-4541-ad0d-16dff6bd2a00
-caps.latest.revision: 
+caps.latest.revision: 29
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
 ms.workload:
 - dotnet
-ms.openlocfilehash: 93dc8119e76f5c9cbff5c91a7e5d0cde3b0072f2
-ms.sourcegitcommit: c0dd436f6f8f44dc80dc43b07f6841a00b74b23f
+ms.openlocfilehash: e5ad91fa70a743b7135648cb10c7c519e3559bdb
+ms.sourcegitcommit: 86adcc06e35390f13c1e372c36d2e044f1fc31ef
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 01/19/2018
+ms.lasthandoff: 04/26/2018
 ---
 # <a name="configuring-services-using-configuration-files"></a>使用組態檔設定服務
 使用組態檔來設定 [!INCLUDE[indigo1](../../../includes/indigo1-md.md)] 服務可讓您在部署時 (而不是在設計階段) 彈性提供端點與服務行為資料。 本主題概要說明可用的主要技巧。  
   
  [!INCLUDE[indigo2](../../../includes/indigo2-md.md)] 服務可使用 [!INCLUDE[dnprdnshort](../../../includes/dnprdnshort-md.md)] 組態技術來設定。 最常見的是，會將 XML 項目新增至裝載 [!INCLUDE[indigo2](../../../includes/indigo2-md.md)] 服務的網際網路資訊服務 (IIS) 網站的 Web.config 檔案。 這些項目允許您變更詳細資料，例如各電腦的端點位址 (用於與服務通訊的實際位址)。 此外， [!INCLUDE[indigo2](../../../includes/indigo2-md.md)] 還包含了一些系統提供的項目，方便您快速選取最基本的服務功能。 從 [!INCLUDE[netfx40_long](../../../includes/netfx40-long-md.md)]開始， [!INCLUDE[indigo2](../../../includes/indigo2-md.md)] 隨附可簡化 [!INCLUDE[indigo2](../../../includes/indigo2-md.md)] 組態需求的新預設組態模型。 如果您沒有對特定服務提供任何 [!INCLUDE[indigo2](../../../includes/indigo2-md.md)] 組態，執行階段會以一些標準端點和預設繫結/行為來設定服務。 事實上，撰寫組態是程式設計 [!INCLUDE[indigo2](../../../includes/indigo2-md.md)] 應用程式的主要部分。  
   
- [!INCLUDE[crdefault](../../../includes/crdefault-md.md)][設定服務的繫結](../../../docs/framework/wcf/configuring-bindings-for-wcf-services.md)。 [!INCLUDE[crlist](../../../includes/crlist-md.md)] 如需最常用元素的清單，請參閱 [System-Provided Bindings](../../../docs/framework/wcf/system-provided-bindings.md). [!INCLUDE[crabout](../../../includes/crabout-md.md)] 預設端點、繫結和行為的詳細資訊，請參閱 [Simplified Configuration](../../../docs/framework/wcf/simplified-configuration.md) and [Simplified Configuration for WCF Services](../../../docs/framework/wcf/samples/simplified-configuration-for-wcf-services.md).  
+ [!INCLUDE[crdefault](../../../includes/crdefault-md.md)] [設定服務的繫結](../../../docs/framework/wcf/configuring-bindings-for-wcf-services.md)。 如需的最常用的項目，請參閱 <<c0> [ 之繫結](../../../docs/framework/wcf/system-provided-bindings.md)。 [!INCLUDE[crabout](../../../includes/crabout-md.md)] 預設端點、繫結和行為的詳細資訊，請參閱 [Simplified Configuration](../../../docs/framework/wcf/simplified-configuration.md) and [Simplified Configuration for WCF Services](../../../docs/framework/wcf/samples/simplified-configuration-for-wcf-services.md).  
   
 > [!IMPORTANT]
 >  部署並存案例時，如果部署了兩個不同的服務版本，您就必須指定組態檔所參考之組件的部分名稱。 這是因為組態檔會在所有服務版本之間共用，而且它們可能會在不同的 .NET Framework 版本底下執行。  
@@ -109,24 +109,24 @@ ms.lasthandoff: 01/19/2018
 ### <a name="the-bindings-element"></a>\<繫結 > 項目  
  `bindings` 項目包含所有繫結的規格，在任何服務中定義的任何端點都可以使用這些繫結。  
   
- [\<bindings>](../../../docs/framework/configure-apps/file-schema/wcf/bindings.md)  
+ [\<繫結 >](../../../docs/framework/configure-apps/file-schema/wcf/bindings.md)  
   
 ### <a name="the-binding-element"></a>\<繫結 > 項目  
  `binding`內的項目`bindings`項目可以是其中一個系統提供的繫結 (請參閱[之繫結](../../../docs/framework/wcf/system-provided-bindings.md)) 或自訂繫結 (請參閱[自訂繫結](../../../docs/framework/wcf/extending/custom-bindings.md))。 `binding` 項目具有的 `name` 屬性可將繫結與 `bindingConfiguration` 項目的 `endpoint` 屬性所指定的端點相互關聯。 如果未指定名稱，則該繫結會對應於該繫結型別的預設值。  
   
- [!INCLUDE[crabout](../../../includes/crabout-md.md)]設定服務和用戶端，請參閱[設定的 Windows Communication Foundation 應用程式](http://msdn.microsoft.com/library/13cb368e-88d4-4c61-8eed-2af0361c6d7a)。  
+ [!INCLUDE[crabout](../../../includes/crabout-md.md)] 設定服務和用戶端，請參閱[設定的 Windows Communication Foundation 應用程式](http://msdn.microsoft.com/library/13cb368e-88d4-4c61-8eed-2af0361c6d7a)。  
   
- [\<binding>](../../../docs/framework/misc/binding.md)  
+ [\<繫結 >](../../../docs/framework/misc/binding.md)  
   
 ### <a name="the-behaviors-element"></a>\<行為 > 項目  
  這是定義服務行為之 `behavior` 項目的容器項目。  
   
- [\<behaviors>](../../../docs/framework/configure-apps/file-schema/wcf/behaviors.md)  
+ [\<行為 >](../../../docs/framework/configure-apps/file-schema/wcf/behaviors.md)  
   
 ### <a name="the-behavior-element"></a>\<行為 > 項目  
  每個 `behavior` 項目都是由 `name` 屬性所識別，並可提供系統提供的行為，例如 <`throttling`>，或是自訂行為。 如果未指定名稱，則該行為項目會對應於預設服務或端點行為。  
   
- [\<behavior>](../../../docs/framework/configure-apps/file-schema/wcf/behavior-of-servicebehaviors.md)  
+ [\<行為 >](../../../docs/framework/configure-apps/file-schema/wcf/behavior-of-servicebehaviors.md)  
   
 ## <a name="how-to-use-binding-and-behavior-configurations"></a>如何使用繫結與行為組態  
  [!INCLUDE[indigo2](../../../includes/indigo2-md.md)] 可讓您輕易地透過組態的參考系統在端點之間共用組態。 與其直接指派組態值給端點，繫結相關的組態值會被分類到 `bindingConfiguration` 區段的 `<binding>` 項目群組中。 一個繫結組態是繫結上的一個具名的設定群組。 然後，端點可以依照名稱來參考 `bindingConfiguration` 。  
@@ -275,8 +275,8 @@ ms.lasthandoff: 01/19/2018
   
  如果子行為集合包含已經存在父行為集合中的行為，子行為就會覆寫父代。 因此，如果父行為集合具有`<serviceMetadata httpGetEnabled="False" />`而且子行為集合具有`<serviceMetadata httpGetEnabled="True" />`，子行為就會覆寫行為集合中的父行為，而且 httpGetEnabled 會是"true"。  
   
-## <a name="see-also"></a>請參閱  
+## <a name="see-also"></a>另請參閱  
  [簡化設定](../../../docs/framework/wcf/simplified-configuration.md)  
  [設定 Windows Communication Foundation 應用程式](http://msdn.microsoft.com/library/13cb368e-88d4-4c61-8eed-2af0361c6d7a)  
  [\<service>](../../../docs/framework/configure-apps/file-schema/wcf/service.md)  
- [\<binding>](../../../docs/framework/misc/binding.md)
+ [\<繫結 >](../../../docs/framework/misc/binding.md)

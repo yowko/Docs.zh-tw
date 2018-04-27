@@ -1,24 +1,26 @@
 ---
-title: "疑難排解"
-ms.custom: 
+title: 疑難排解
+ms.custom: ''
 ms.date: 03/30/2017
 ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.technology: dotnet-ado
-ms.tgt_pltfrm: 
+ms.reviewer: ''
+ms.suite: ''
+ms.technology:
+- dotnet-ado
+ms.tgt_pltfrm: ''
 ms.topic: article
 ms.assetid: 8cd4401c-b12c-4116-a421-f3dcffa65670
-caps.latest.revision: "3"
+caps.latest.revision: 3
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.workload: dotnet
-ms.openlocfilehash: 56d06fa7adf2690a2cb9194342071c7814a4ec4a
-ms.sourcegitcommit: ed26cfef4e18f6d93ab822d8c29f902cff3519d1
+ms.workload:
+- dotnet
+ms.openlocfilehash: 5544540c6a27975a885bf4cd8b2e0a26183e192b
+ms.sourcegitcommit: 86adcc06e35390f13c1e372c36d2e044f1fc31ef
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 01/17/2018
+ms.lasthandoff: 04/26/2018
 ---
 # <a name="troubleshooting"></a>疑難排解
 下列資訊將說明一些您在 [!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)] 應用程式中可能會遇到的問題，並提供建議來避免或降低這些問題的影響。  
@@ -57,7 +59,7 @@ ms.lasthandoff: 01/17/2018
   
 -   您有 `System.Core.dll` 和 `System.Data.Linq.dll` 的參考。  
   
--   `Imports` 和 [!INCLUDE[vbprvb](../../../../../../includes/vbprvb-md.md)] 有 `using` (<xref:System.Linq>) 或 <xref:System.Data.Linq> (C#) 指示詞。  
+-   您有`Imports`(Visual Basic) 或`using`(C#) 指示詞<xref:System.Linq>和<xref:System.Data.Linq>。  
   
 ## <a name="duplicatekeyexception"></a>DuplicateKeyException  
  在偵錯[!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)]專案中，您可能會周遊某個實體的關聯。 如此一來這些項目帶入快取，和[!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)]變成知道它們的存在。 如果您接著嘗試執行 <xref:System.Data.Linq.Table%601.Attach%2A> 或 <xref:System.Data.Linq.Table%601.InsertOnSubmit%2A>，或是類似方法來產生有相同索引鍵的多個資料列，就會擲回 <xref:System.Data.Linq.DuplicateKeyException>。  
@@ -80,6 +82,6 @@ ms.lasthandoff: 01/17/2018
 ## <a name="oncreated-partial-method"></a>OnCreated() 部分方法  
  每次呼叫物件建構函式時，都會呼叫產生的方法 `OnCreated()`，包括 [!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)] 呼叫建構函式來複製原始值的情況。 如果您要在自己的部分類別中實作 `OnCreated()` 方法，請將此行為列入考量。  
   
-## <a name="see-also"></a>請參閱  
+## <a name="see-also"></a>另請參閱  
  [偵錯支援](../../../../../../docs/framework/data/adonet/sql/linq/debugging-support.md)  
  [常見問題集](../../../../../../docs/framework/data/adonet/sql/linq/frequently-asked-questions.md)

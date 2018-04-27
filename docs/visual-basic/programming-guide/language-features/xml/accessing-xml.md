@@ -1,12 +1,13 @@
 ---
-title: "在 Visual Basic 中存取 XML"
-ms.custom: 
+title: 在 Visual Basic 中存取 XML
+ms.custom: ''
 ms.date: 07/20/2015
 ms.prod: .net
-ms.reviewer: 
-ms.suite: 
-ms.technology: devlang-visual-basic
-ms.tgt_pltfrm: 
+ms.reviewer: ''
+ms.suite: ''
+ms.technology:
+- devlang-visual-basic
+ms.tgt_pltfrm: ''
 ms.topic: article
 helpviewer_keywords:
 - LINQ to XML [Visual Basic], accessing XML
@@ -15,31 +16,31 @@ helpviewer_keywords:
 - XML [Visual Basic], axis properties
 - XML [Visual Basic], accessing
 ms.assetid: c47f88b2-3cbc-4bb1-b4b9-be60f71ffc6a
-caps.latest.revision: "18"
+caps.latest.revision: 18
 author: dotnet-bot
 ms.author: dotnetcontent
-ms.openlocfilehash: 79c7b8a94731e151a803a041d91dd1e240ddeb97
-ms.sourcegitcommit: bd1ef61f4bb794b25383d3d72e71041a5ced172e
+ms.openlocfilehash: 064e4b224d37172b8f79e57c73164b90186ef922
+ms.sourcegitcommit: 86adcc06e35390f13c1e372c36d2e044f1fc31ef
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/18/2017
+ms.lasthandoff: 04/26/2018
 ---
 # <a name="accessing-xml-in-visual-basic"></a>在 Visual Basic 中存取 XML
-[!INCLUDE[vbprvb](~/includes/vbprvb-md.md)]XML 軸屬性提供用於存取和導覽[!INCLUDE[sqltecxlinq](~/includes/sqltecxlinq-md.md)]結構。 這些屬性會使用特殊的語法，可讓您指定的 XML 名稱來存取項目和屬性。  
+Visual Basic 提供用於存取和巡覽 XML 軸屬性[!INCLUDE[sqltecxlinq](~/includes/sqltecxlinq-md.md)]結構。 這些屬性會使用特殊的語法，可讓您指定的 XML 名稱來存取項目和屬性。  
   
- 下表列出可讓您存取 XML 元素和屬性中的語言功能[!INCLUDE[vbprvb](~/includes/vbprvb-md.md)]。  
+ 下表列出可讓您存取 XML 元素和屬性在 Visual Basic 中的語言功能。  
   
 ### <a name="xml-axis-properties"></a>XML 軸屬性  
   
-|屬性描述|範例|說明|  
+|屬性描述|範例|描述|  
 |--------------------------|-------------|-----------------|  
 |*子軸*|`contact.<phone>`|取得所有`phone`子項目數的項目`contact`項目。|  
 |*屬性軸*|`phone.@type`|取得所有`type`屬性`phone`項目。|  
 |*descendant 軸*|`contacts...<name>`|取得所有`name`的項目`contacts`項目，不論它們出現在階層中深度。|  
 |*擴充索引子*|`contacts...<name>(0)`|取得第一個`name`序列中的項目。|  
-|*value*|`contacts...<name>.Value`|取得第一個物件的字串表示，依序或`Nothing`如果序列是空的。|  
+|*值*|`contacts...<name>.Value`|取得第一個物件的字串表示，依序或`Nothing`如果序列是空的。|  
   
-## <a name="in-this-section"></a>本章節內容  
+## <a name="in-this-section"></a>本節內容  
  [如何：存取 XML 子系項目](../../../../visual-basic/programming-guide/language-features/xml/how-to-access-xml-descendant-elements.md)  
  示範如何使用子代 axis 屬性來存取所有的 XML 項目具有指定的名稱的資料，而且包含在指定的 XML 項目。  
   

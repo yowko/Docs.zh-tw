@@ -1,27 +1,29 @@
 ---
-title: "設定參數和參數資料類型"
-ms.custom: 
+title: 設定參數和參數資料類型
+ms.custom: ''
 ms.date: 03/30/2017
 ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.technology: dotnet-ado
-ms.tgt_pltfrm: 
+ms.reviewer: ''
+ms.suite: ''
+ms.technology:
+- dotnet-ado
+ms.tgt_pltfrm: ''
 ms.topic: article
 dev_langs:
 - csharp
 - vb
 ms.assetid: 537d8a2c-d40b-4000-83eb-bc1fcc93f707
-caps.latest.revision: "6"
+caps.latest.revision: 6
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.workload: dotnet
-ms.openlocfilehash: a71ba7ed12196184b7e826ed70c92a9873efdb0c
-ms.sourcegitcommit: ed26cfef4e18f6d93ab822d8c29f902cff3519d1
+ms.workload:
+- dotnet
+ms.openlocfilehash: cdb6efb428f5c096178895f95fe1256846e9c1e5
+ms.sourcegitcommit: 86adcc06e35390f13c1e372c36d2e044f1fc31ef
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 01/17/2018
+ms.lasthandoff: 04/26/2018
 ---
 # <a name="configuring-parameters-and-parameter-data-types"></a>設定參數和參數資料類型
 命令物件會使用參數將值傳遞至 SQL 陳述式或預存程序 (Stored Procedure)，以提供型別檢查及驗證。 與命令文字不同的是，參數輸入會被視為常值 (Literal)，而非可執行程式碼。 這有助於防衛「SQL 插入式」攻擊，在此類攻擊中，攻擊者會將危害伺服器安全的命令插入 SQL 陳述式中。  
@@ -90,7 +92,7 @@ ms.lasthandoff: 01/17/2018
 >  將十進位值轉換為其他型別的過程稱為窄化轉換，此類轉換會將十進位值向零的方向取整數。 如果目的型別無法代表此項轉換的結果，則會擲回 <xref:System.OverflowException> 。  
   
 > [!NOTE]
->  當傳送 null 參數值到伺服器時，您必須指定 <xref:System.DBNull>，而不是 `null` (在`Nothing` 中則為 [!INCLUDE[vbprvb](../../../../includes/vbprvb-md.md)])。 系統中的 Null 值是沒有值的空物件。 <xref:System.DBNull> 用於表示 null 值。 如需資料庫 null 值的詳細資訊，請參閱 [Handling Null Values](../../../../docs/framework/data/adonet/sql/handling-null-values.md)。  
+>  當您傳送 null 參數值到伺服器時，您必須指定<xref:System.DBNull>，而非`null`(`Nothing`在 Visual Basic 中)。 系統中的 Null 值是沒有值的空物件。 <xref:System.DBNull> 用於表示 null 值。 如需資料庫 null 值的詳細資訊，請參閱 [Handling Null Values](../../../../docs/framework/data/adonet/sql/handling-null-values.md)。  
   
 ## <a name="deriving-parameter-information"></a>衍生參數資訊  
  您也可以使用 `DbCommandBuilder` 類別 (Class) 從預存程序衍生參數。 `SqlCommandBuilder` 和 `OleDbCommandBuilder` 類別都能提供靜態方法 ( `DeriveParameters`)，該方法會在使用預存程序之參數資訊的命令物件，自動填入參數集合。 請注意， `DeriveParameters` 將會覆寫命令所有的現有參數資訊。  
@@ -206,7 +208,7 @@ parameter = command.Parameters.Add( _
 parameter.Direction = ParameterDirection.Output;  
 ```  
   
-## <a name="see-also"></a>請參閱  
+## <a name="see-also"></a>另請參閱  
  [命令和參數](../../../../docs/framework/data/adonet/commands-and-parameters.md)  
  [DataAdapter 參數](../../../../docs/framework/data/adonet/dataadapter-parameters.md)  
  [ADO.NET 中的資料類型對應](../../../../docs/framework/data/adonet/data-type-mappings-in-ado-net.md)  

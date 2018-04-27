@@ -13,18 +13,18 @@ ms.assetid: bde4f4da-493b-452c-b6e4-1d370edba4cd
 caps.latest.revision: 12
 author: dotnet-bot
 ms.author: dotnetcontent
-ms.openlocfilehash: 8798b2cedb295a05133ef08c22110a68bc3158a8
-ms.sourcegitcommit: bd1ef61f4bb794b25383d3d72e71041a5ced172e
+ms.openlocfilehash: 1143cfa040c61f206a96842668a40d5cd73c792f
+ms.sourcegitcommit: 86adcc06e35390f13c1e372c36d2e044f1fc31ef
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/18/2017
+ms.lasthandoff: 04/26/2018
 ---
 # <a name="variable-uses-an-automation-type-not-supported-in-visual-basic"></a>變數使用在 Visual Basic 中不支援的 Automation 類型
-您嘗試使用類型程式庫或不支援的資料類型的物件程式庫中定義的變數[!INCLUDE[vbprvb](~/includes/vbprvb-md.md)]。  
+您嘗試使用類型程式庫或 Visual Basic 不支援的資料類型的物件程式庫中定義的變數。  
   
 ## <a name="to-correct-this-error"></a>更正這個錯誤  
   
--   使用可辨識之型別的變數[!INCLUDE[vbprvb](~/includes/vbprvb-md.md)]。  
+-   使用 Visual Basic 所辨識之型別的變數。  
   
      -或-  
   

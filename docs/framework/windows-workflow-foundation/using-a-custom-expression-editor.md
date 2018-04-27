@@ -1,30 +1,31 @@
 ---
-title: "使用自訂運算式編輯器"
-ms.custom: 
+title: 使用自訂運算式編輯器
+ms.custom: ''
 ms.date: 03/30/2017
 ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.tgt_pltfrm: 
+ms.reviewer: ''
+ms.suite: ''
+ms.tgt_pltfrm: ''
 ms.topic: article
 ms.assetid: 0901b58b-e037-44a8-8281-f6f54361cfca
-caps.latest.revision: "8"
+caps.latest.revision: 8
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.workload: dotnet
-ms.openlocfilehash: 5ae60b8267e60d880ccdc156566b489163d2e686
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.workload:
+- dotnet
+ms.openlocfilehash: 5388ed3f55d97f3282a710ac59fe36cfb32fa49c
+ms.sourcegitcommit: 86adcc06e35390f13c1e372c36d2e044f1fc31ef
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 04/26/2018
 ---
 # <a name="using-a-custom-expression-editor"></a>使用自訂運算式編輯器
 可以實作自訂運算式編輯器，以提供更豐富、更簡單的運算式編輯體驗。 在一些案例中，您可能會想要使用自訂運算式編輯器：  
   
 -   為 IntelliSense 和重新裝載的工作流程設計工具中其他豐富的編輯功能提供支援。 由於預設的 [!INCLUDE[vsprvs](../../../includes/vsprvs-md.md)] 運算式編輯器無法在重新裝載的應用程式中使用，因此必須提供這項功能。  
   
--   為了簡化商業分析師使用者的運算式編輯體驗，如此就不需要例如學習 [!INCLUDE[vbprvb](../../../includes/vbprvb-md.md)] 或處理 [!INCLUDE[vbprvb](../../../includes/vbprvb-md.md)] 運算式。  
+-   若要簡化的運算式編輯體驗，商務分析師的使用者，讓它們比方說，不需要了解 Visual Basic 或 Visual Basic 運算式處理。  
   
  實作自訂運算式編輯器所需的三個基本步驟：  
   
@@ -288,7 +289,7 @@ namespace WpfApplication1
 ### <a name="notes"></a>注意  
  如果您使用**ExpressionTextBox**控制項中的自訂活動設計工具中，則不需要建立和終結運算式編輯器使用<xref:System.Activities.Presentation.View.IExpressionEditorService.CreateExpressionEditor%2A>和<xref:System.Activities.Presentation.View.IExpressionEditorService.CloseExpressionEditors%2A>方法<xref:System.Activities.Presentation.View.IExpressionEditorService>介面。 <xref:System.Activities.Presentation.View.ExpressionTextBox> 類別會為您管理這項工作。  
   
-## <a name="see-also"></a>請參閱  
+## <a name="see-also"></a>另請參閱  
  <xref:System.Activities.Presentation.View.IExpressionEditorService>  
  <xref:System.Activities.Presentation.View.IExpressionEditorInstance>  
  [在自訂活動設計工具中使用 ExpressionTextBox](../../../docs/framework/windows-workflow-foundation/samples/using-the-expressiontextbox-in-a-custom-activity-designer.md)

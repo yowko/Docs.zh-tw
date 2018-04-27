@@ -1,12 +1,13 @@
 ---
-title: "逐步解說：示範視覺化繼承"
-ms.custom: 
+title: 逐步解說：示範視覺化繼承
+ms.custom: ''
 ms.date: 03/30/2017
 ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.technology: dotnet-winforms
-ms.tgt_pltfrm: 
+ms.reviewer: ''
+ms.suite: ''
+ms.technology:
+- dotnet-winforms
+ms.tgt_pltfrm: ''
 ms.topic: article
 dev_langs:
 - csharp
@@ -18,16 +19,17 @@ helpviewer_keywords:
 - walkthroughs [Windows Forms], visual inheritance
 - Windows Forms, inheritance
 ms.assetid: 01966086-3142-450e-8210-3fd4cb33f591
-caps.latest.revision: "24"
+caps.latest.revision: 24
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.workload: dotnet
-ms.openlocfilehash: 7c5ef33be9841b5c74b6ae2448daf56079489b61
-ms.sourcegitcommit: c0dd436f6f8f44dc80dc43b07f6841a00b74b23f
+ms.workload:
+- dotnet
+ms.openlocfilehash: e76ddcb33980db1a6d1b6e602c1b71da60b53381
+ms.sourcegitcommit: 86adcc06e35390f13c1e372c36d2e044f1fc31ef
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 01/19/2018
+ms.lasthandoff: 04/26/2018
 ---
 # <a name="walkthrough-demonstrating-visual-inheritance"></a>逐步解說：示範視覺化繼承
 視覺化繼承可讓您查看基底表單上的控制項，並加入新的控制項。 在本逐步解說中，您將建立基底表單，並編譯為類別庫。 您將匯入此類別庫至另一個專案，並建立繼承自基底表單的新表單。 在這個逐步解說期間，您將了解如何：  
@@ -157,7 +159,7 @@ ms.lasthandoff: 01/19/2018
   
 7.  選取 私用**Say Goodbye**按鈕，並注意它沒有調整大小控點。 此外，在**屬性**視窗中，這個按鈕的屬性會呈現灰色，表示它們不能修改。  
   
-8.  如果您使用的是 [!INCLUDE[csprcs](../../../../includes/csprcs-md.md)]：  
+8.  如果您使用的 Visual C#:  
   
     1.  在**方案總管 中**，以滑鼠右鍵按一下**Form1**中**InheritanceTest**專案，然後選擇**刪除**。 在隨即出現訊息方塊中，按一下 **確定**確認刪除。  
   
@@ -172,9 +174,9 @@ ms.lasthandoff: 01/19/2018
 12. 按 F5 執行應用程式，並觀察繼承的表單之行為。  
   
 ## <a name="next-steps"></a>後續步驟  
- 使用者控制項的繼承以非常類似的方式運作。 開啟一個新的類別庫專案，並加入使用者控制項。 將構成控制項放在上面，然後編譯專案。 開啟另一個新的類別庫專案，並加入已編譯類別程式庫的參考。 此外，請嘗試加入繼承的控制項 (透過**加入新項目**對話方塊) 至專案並使用**繼承選取器**。 加入一個使用者控制項，並變更 `Inherits` 陳述式 ([!INCLUDE[csprcs](../../../../includes/csprcs-md.md)] 中的 `:`)。 如需詳細資訊，請參閱[如何： 繼承 Windows Form](../../../../docs/framework/winforms/advanced/how-to-inherit-windows-forms.md)。  
+ 使用者控制項的繼承以非常類似的方式運作。 開啟一個新的類別庫專案，並加入使用者控制項。 將構成控制項放在上面，然後編譯專案。 開啟另一個新的類別庫專案，並加入已編譯類別程式庫的參考。 此外，請嘗試加入繼承的控制項 (透過**加入新項目**對話方塊) 至專案並使用**繼承選取器**。 加入使用者控制項，並變更`Inherits`(`:` Visual C#) 陳述式。 如需詳細資訊，請參閱[如何： 繼承 Windows Form](../../../../docs/framework/winforms/advanced/how-to-inherit-windows-forms.md)。  
   
-## <a name="see-also"></a>請參閱  
+## <a name="see-also"></a>另請參閱  
  [如何：繼承 Windows Forms](../../../../docs/framework/winforms/advanced/how-to-inherit-windows-forms.md)  
  [Windows Forms 視覺繼承](../../../../docs/framework/winforms/advanced/windows-forms-visual-inheritance.md)  
  [Windows Forms](../../../../docs/framework/winforms/index.md)

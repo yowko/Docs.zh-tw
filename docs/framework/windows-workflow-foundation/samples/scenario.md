@@ -1,23 +1,24 @@
 ---
 title: Scenario1
-ms.custom: 
+ms.custom: ''
 ms.date: 03/30/2017
 ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.tgt_pltfrm: 
+ms.reviewer: ''
+ms.suite: ''
+ms.tgt_pltfrm: ''
 ms.topic: article
 ms.assetid: cb678fda-79aa-4495-833b-ef570539d4c3
-caps.latest.revision: "5"
+caps.latest.revision: 5
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.workload: dotnet
-ms.openlocfilehash: 50efd36e1d54bd456e184c42d62aded14e510947
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.workload:
+- dotnet
+ms.openlocfilehash: 60f6571d7702236ee24c0cb9da2aa4121feddcf0
+ms.sourcegitcommit: 86adcc06e35390f13c1e372c36d2e044f1fc31ef
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 04/26/2018
 ---
 # <a name="scenario"></a>情節
 本節包含 [!INCLUDE[wf](../../../../includes/wf-md.md)] 案例的範例。  
@@ -39,7 +40,7 @@ ms.lasthandoff: 12/22/2017
  示範如何實作一個使用 <xref:System.Activities.Statements.Flowchart> 和 <xref:System.Activities.Statements.Pick> 活動組合的簡單馬錶案例。  
   
  [XAML 中的 WPF 及 WF 整合](../../../../docs/framework/windows-workflow-foundation/samples/wpf-and-wf-integration-in-xaml.md)  
- 示範如何建立在單一 XAML 文件中使用 [!INCLUDE[avalon1](../../../../includes/avalon1-md.md)] 和 [!INCLUDE[wf](../../../../includes/wf-md.md)] 功能的應用程式。 為了完成這項作業，此範例會使用 [!INCLUDE[wf](../../../../includes/wf-md.md)] 和 XAML 擴充性。  
+ 示範如何建立使用 Windows Presentation Foundation (WPF) 應用程式和[!INCLUDE[wf](../../../../includes/wf-md.md)]單一 XAML 文件中的功能。 為了完成這項作業，此範例會使用 [!INCLUDE[wf](../../../../includes/wf-md.md)] 和 XAML 擴充性。  
   
  [外部 Ruleset 工具組](../../../../docs/framework/windows-workflow-foundation/samples/external-ruleset-toolkit.md)  
  示範如何管理並編輯資料庫中的 RuleSet，並在執行階段從工作流程存取那些 RuleSet。

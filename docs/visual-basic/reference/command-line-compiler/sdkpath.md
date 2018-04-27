@@ -16,11 +16,11 @@ helpviewer_keywords:
 ms.assetid: fec8a3f1-b791-4a37-8af7-344859f8212d
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 53362c2eb5517d9230ea88975745315d6db7f1ba
-ms.sourcegitcommit: 498799639937c89de777361aab74261efe7b79ea
+ms.openlocfilehash: 5a25755bcbb8d42124cde531f641a611202ae5a1
+ms.sourcegitcommit: 86adcc06e35390f13c1e372c36d2e044f1fc31ef
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 03/22/2018
+ms.lasthandoff: 04/26/2018
 ---
 # <a name="-sdkpath"></a>-sdkpath
 指定 mscorlib.dll 和 Microsoft.VisualBasic.dll 的位置。  
@@ -36,10 +36,10 @@ ms.lasthandoff: 03/22/2018
  包含 mscorlib.dll 和 Microsoft.VisualBasic.dll 用於編譯的版本的目錄。 未驗證此路徑，直到它載入。 將目錄名稱括在引號 ("") 如果包含空格。  
   
 ## <a name="remarks"></a>備註  
- 此選項會告知[!INCLUDE[vbprvb](~/includes/vbprvb-md.md)]編譯器，從非預設位置載入 mscorlib.dll 和 Microsoft.VisualBasic.dll 的檔案。 `-sdkpath`選項設計用來搭配[-netcf](../../../visual-basic/reference/command-line-compiler/netcf.md)。 [!INCLUDE[Compact](~/includes/compact-md.md)]會使用不同版本的支援程式庫，以避免使用的類型和語言功能的裝置上找不到。  
+ 此選項會告知 Visual Basic 編譯器，從非預設位置載入 mscorlib.dll 和 Microsoft.VisualBasic.dll 的檔案。 `-sdkpath`選項設計用來搭配[-netcf](../../../visual-basic/reference/command-line-compiler/netcf.md)。 [!INCLUDE[Compact](~/includes/compact-md.md)]會使用不同版本的支援程式庫，以避免使用的類型和語言功能的裝置上找不到。  
   
 > [!NOTE]
->  `-sdkpath`選項不是從 Visual Studio 開發環境中使用; 其只有在從命令列編譯時。 `-sdkpath`時設定選項[!INCLUDE[vbprvb](~/includes/vbprvb-md.md)]裝置專案載入。  
+>  `-sdkpath`選項不是從 Visual Studio 開發環境中使用; 其只有在從命令列編譯時。 `-sdkpath` Visual Basic 裝置專案載入時，設定選項。  
   
  您可以指定編譯器應該使用編譯 Visual Basic 執行階段程式庫的參考不`-vbruntime`編譯器選項。 如需詳細資訊，請參閱[-vbruntime](../../../visual-basic/reference/command-line-compiler/vbruntime.md)。  
   

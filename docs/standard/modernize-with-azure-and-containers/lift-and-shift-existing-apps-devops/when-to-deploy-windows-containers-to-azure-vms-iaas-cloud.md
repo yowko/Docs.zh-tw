@@ -1,18 +1,19 @@
 ---
-title: "當部署到 Azure Vm （IaaS 雲端） 的 Windows 容器"
-description: "容器化的.NET 應用程式的.NET Microservices 架構 |當部署到 Azure Vm （IaaS 雲端） 的 Windows 容器"
+title: 當部署到 Azure Vm （IaaS 雲端） 的 Windows 容器
+description: 容器化的.NET 應用程式的.NET Microservices 架構 |當部署到 Azure Vm （IaaS 雲端） 的 Windows 容器
 author: CESARDELATORRE
 ms.author: wiwagn
 ms.date: 10/26/2017
 ms.prod: .net
+ms.topic: article
 ms.workload:
 - dotnet
 - dotnetcore
-ms.openlocfilehash: 37a37f91bb910004128c96511f585bea03a51d3a
-ms.sourcegitcommit: d3cfda0943364aaf6ccd574f55f584576c8a4fee
+ms.openlocfilehash: d1a9f0593b4b84cbe25da9e4164f4ecbe8513831
+ms.sourcegitcommit: 2e8acae16ae802f2d6d04e3ce0a6dbf04e476513
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 03/08/2018
+ms.lasthandoff: 04/18/2018
 ---
 # <a name="when-to-deploy-windows-containers-to-azure-vms-iaas-cloud"></a>當部署到 Azure Vm （IaaS 雲端） 的 Windows 容器
 

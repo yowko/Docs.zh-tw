@@ -1,27 +1,29 @@
 ---
-title: "ADO.NET 中的資料追蹤"
-ms.custom: 
+title: ADO.NET 中的資料追蹤
+ms.custom: ''
 ms.date: 03/30/2017
 ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.technology: dotnet-ado
-ms.tgt_pltfrm: 
+ms.reviewer: ''
+ms.suite: ''
+ms.technology:
+- dotnet-ado
+ms.tgt_pltfrm: ''
 ms.topic: article
 ms.assetid: a6a752a5-d2a9-4335-a382-b58690ccb79f
-caps.latest.revision: "9"
+caps.latest.revision: 9
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.workload: dotnet
-ms.openlocfilehash: df958982739c7ab2fd7aba42918b919c25d86829
-ms.sourcegitcommit: ed26cfef4e18f6d93ab822d8c29f902cff3519d1
+ms.workload:
+- dotnet
+ms.openlocfilehash: 377c69feda356aee9e11720cf12c9c97158d45a7
+ms.sourcegitcommit: 86adcc06e35390f13c1e372c36d2e044f1fc31ef
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 01/17/2018
+ms.lasthandoff: 04/26/2018
 ---
 # <a name="data-tracing-in-adonet"></a>ADO.NET 中的資料追蹤
-ADO.NET 具備內建資料追蹤功能，.NET data providers for [!INCLUDE[ssNoVersion](../../../../includes/ssnoversion-md.md)]、Oracle、OLE DB 和 ODBC，以及 ADO.NET <xref:System.Data.DataSet> 和 [!INCLUDE[ssNoVersion](../../../../includes/ssnoversion-md.md)] 網路通訊協定都支援這個功能。  
+ADO.NET 具備內建資料追蹤功能的.NET 資料提供者所支援的 SQL Server、 Oracle、 OLE DB 和 ODBC，以及 ADO.NET <xref:System.Data.DataSet>，和 SQL Server 網路通訊協定。  
   
  追蹤資料存取 API 呼叫可協助診斷下列問題：  
   
@@ -40,7 +42,7 @@ ADO.NET 具備內建資料追蹤功能，.NET data providers for [!INCLUDE[ssNoV
  如需設定和在 ADO.NET 中設定 managed 的追蹤的詳細資訊，請參閱[追蹤資料存取](http://msdn.microsoft.com/library/hh880086.aspx)。  
   
 ## <a name="accessing-diagnostic-information-in-the-extended-events-log"></a>存取擴充事件記錄中的診斷資訊  
- 在[!INCLUDE[dnprdnshort](../../../../includes/dnprdnshort-md.md)]Data Provider for [!INCLUDE[ssNoVersion](../../../../includes/ssnoversion-md.md)]，資料存取追蹤 ([資料存取追蹤](http://msdn.microsoft.com/library/hh880086.aspx)) 已經更新，以方便您更輕鬆地將用戶端事件相互關聯與診斷資訊，例如連線失敗從伺服器的連接性信號緩衝區與應用程式效能資訊擴充的事件記錄檔中。 如需有關讀取擴充的事件記錄檔的詳細資訊，請參閱[檢視事件工作階段資料](http://msdn.microsoft.com/library/hh710068\(SQL.110\).aspx)。  
+ 在[!INCLUDE[dnprdnshort](../../../../includes/dnprdnshort-md.md)]Data Provider for SQL Server，資料存取追蹤 ([資料存取追蹤](http://msdn.microsoft.com/library/hh880086.aspx)) 已經更新，以方便您更輕鬆地將診斷資訊，例如連線失敗的用戶端事件相互關聯從伺服器的連接性信號緩衝區與應用程式效能資訊擴充的事件記錄檔中。 如需有關讀取擴充的事件記錄檔的詳細資訊，請參閱[檢視事件工作階段資料](http://msdn.microsoft.com/library/hh710068\(SQL.110\).aspx)。  
   
  ADO.NET 會傳送用戶端連接 ID 以進行連接作業。 如果連接失敗，您可以存取連接信號緩衝區 ([連接 SQL Server 2008 中與連接信號緩衝區疑難排解](http://go.microsoft.com/fwlink/?LinkId=207752))，並尋找`ClientConnectionID`欄位，並取得相關的診斷資訊連接失敗。 只有在發生錯誤時，用戶端連接 ID 才會記錄在信號緩衝區中 (如果在傳送登入前封包之前連接失敗，就不會產生用戶端連接 ID)。用戶端連接 ID 是 16 個位元組的 GUID。 如果在擴充事件工作階段中將 `client_connection_id` 動作加入到事件中，您還可以在擴充事件目標輸出中尋找用戶端連接 ID。 如需進一步的用戶端驅動程式診斷協助，您可以啟用資料存取追蹤並傳回連接命令，同時觀察資料存取追蹤當中的 `ClientConnectionID` 欄位。  
   
@@ -62,7 +64,7 @@ add event rpc_completed (action (client_connection_id))
 add target ring_buffer with (track_causality=on)  
 ```  
   
-## <a name="see-also"></a>請參閱  
+## <a name="see-also"></a>另請參閱  
  [以 .NET Framework 進行網路追蹤](../../../../docs/framework/network-programming/network-tracing.md)  
  [追蹤和檢測應用程式](../../../../docs/framework/debug-trace-profile/tracing-and-instrumenting-applications.md)  
  [ADO.NET Managed 提供者和 DataSet 開發人員中心](http://go.microsoft.com/fwlink/?LinkId=217917)

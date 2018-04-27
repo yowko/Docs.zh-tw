@@ -1,24 +1,26 @@
 ---
-title: "LINQ to SQL 中的安全性"
-ms.custom: 
+title: LINQ to SQL 中的安全性
+ms.custom: ''
 ms.date: 03/30/2017
 ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.technology: dotnet-ado
-ms.tgt_pltfrm: 
+ms.reviewer: ''
+ms.suite: ''
+ms.technology:
+- dotnet-ado
+ms.tgt_pltfrm: ''
 ms.topic: article
 ms.assetid: d49787f7-414e-4c71-aa33-80a5895536b1
-caps.latest.revision: "2"
+caps.latest.revision: 2
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.workload: dotnet
-ms.openlocfilehash: 0ee361c27bd14f0266b2b86f315f9c091e049c12
-ms.sourcegitcommit: ed26cfef4e18f6d93ab822d8c29f902cff3519d1
+ms.workload:
+- dotnet
+ms.openlocfilehash: 96951b3b3c8a6ee93a83ba24f6c6a19c3e36381c
+ms.sourcegitcommit: 86adcc06e35390f13c1e372c36d2e044f1fc31ef
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 01/17/2018
+ms.lasthandoff: 04/26/2018
 ---
 # <a name="security-in-linq-to-sql"></a>LINQ to SQL 中的安全性
 當您連接至資料庫時，永遠都會存在安全性風險。 雖然 LINQ to SQL 可能會包含一些使用 SQL Server 資料的新方式，但是並不會提供任何額外的安全性機制。  
@@ -32,7 +34,7 @@ ms.lasthandoff: 01/17/2018
 ## <a name="connection-strings"></a>連接字串  
  請盡可能避免在連接字串中使用密碼。 不但連接字串本身會產生安全性風險，而且使用物件關聯式設計工具或 SQLMetal 命令列工具時，連接字串可能也會以純文字的方式加入至物件模型或外部對應檔案。 可經由檔案系統存取物件模型或外部對應檔案的任何人都可能會看見連接密碼 (如果包含在連接字串中的話)。  
   
- 若要將這類風險降到最低，請使用整合式安全性，與 [!INCLUDE[ssNoVersion](../../../../../../includes/ssnoversion-md.md)] 進行信任連接。 使用這種方法，就不需要將密碼儲存在連接字串中。 如需詳細資訊，請參閱[SQL Server 安全性](../../../../../../docs/framework/data/adonet/sql/sql-server-security.md)。  
+ 這類風險降到最低，請建立與 SQL Server 的受信任的連接使用整合式的安全性。 使用這種方法，就不需要將密碼儲存在連接字串中。 如需詳細資訊，請參閱[SQL Server 安全性](../../../../../../docs/framework/data/adonet/sql/sql-server-security.md)。  
   
  如果沒有整合式安全性，連接字串將會需要純文字密碼。 協助保護連接字串安全的最佳方法如下所示 (按照風險的遞增順序列出)：  
   
@@ -44,6 +46,6 @@ ms.lasthandoff: 01/17/2018
   
 -   盡可能減少所有連接字串的存留期 (Lifetime) 和接觸點。  
   
-## <a name="see-also"></a>請參閱  
+## <a name="see-also"></a>另請參閱  
  [背景資訊](../../../../../../docs/framework/data/adonet/sql/linq/background-information.md)  
  [常見問題集](../../../../../../docs/framework/data/adonet/sql/linq/frequently-asked-questions.md)

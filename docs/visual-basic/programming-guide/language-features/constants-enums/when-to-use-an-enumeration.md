@@ -14,11 +14,11 @@ ms.assetid: e6e47b5b-3ed9-452d-a481-9c3fed88519a
 caps.latest.revision: 12
 author: dotnet-bot
 ms.author: dotnetcontent
-ms.openlocfilehash: a3b2937cc71c0c31bd8dce3d77fb33f48e1b5750
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.openlocfilehash: 5ab152687f4f9e4ba6bd032ae7c1352f65af715f
+ms.sourcegitcommit: 86adcc06e35390f13c1e372c36d2e044f1fc31ef
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 04/26/2018
 ---
 # <a name="when-to-use-an-enumeration-visual-basic"></a>何時使用列舉 (Visual Basic)
 列舉型別能夠讓您輕鬆與集合相關的常數。 列舉，或`Enum`，是一組值的符號名稱。 列舉型別會被視為資料類型，您可以使用它們來建立多組使用的常數與變數和屬性。  
@@ -37,12 +37,12 @@ ms.lasthandoff: 11/21/2017
 -   可確保往後相容性。 列舉型別，您的程式碼是比較不可能失敗，如果有人在未來變更為成員名稱的對應值。  
   
 ## <a name="naming-enumerations"></a>命名列舉型別  
- 用於列舉型別成員的命名慣例。 當[!INCLUDE[vbprvb](~/includes/vbprvb-md.md)]遇到列舉成員名稱，可能會擲回例外狀況，如果其他參考的型別程式庫包含相同的名稱。 使用唯一的前置詞來識別您的應用程式或元件的值。  
+ 用於列舉型別成員的命名慣例。 當 Visual Basic 遇到列舉成員名稱時，如果其他參考的型別程式庫包含相同的名稱可能會擲回例外狀況。 使用唯一的前置詞來識別您的應用程式或元件的值。  
   
  當參考的列舉成員，您必須限定成員名稱與列舉型別名稱，或是使用`Imports`陳述式。 如需詳細資訊，請參閱[列舉型別和名稱限定](../../../../visual-basic/programming-guide/language-features/constants-enums/enumerations-and-name-qualification.md)。  
   
 ## <a name="predefined-enumerations"></a>預先定義的列舉型別  
- [!INCLUDE[vbprvb](~/includes/vbprvb-md.md)]提供數個預先定義的列舉型別，例如`FirstDayOfWeek`和`MsgBoxResult`，以簡化您的程式碼。 如需相關清單請參閱[常數和列舉](../../../../visual-basic/language-reference/constants-and-enumerations.md)。  
+ Visual Basic 提供了數個預先定義的列舉型別，例如`FirstDayOfWeek`和`MsgBoxResult`，以簡化您的程式碼。 如需相關清單請參閱[常數和列舉](../../../../visual-basic/language-reference/constants-and-enumerations.md)。  
   
 ## <a name="see-also"></a>另請參閱  
  [如何： 宣告列舉](../../../../visual-basic/programming-guide/language-features/constants-enums/how-to-declare-enumerations.md)  

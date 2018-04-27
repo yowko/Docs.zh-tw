@@ -1,12 +1,13 @@
 ---
-title: "物件變數值 (Visual Basic)"
-ms.custom: 
+title: 物件變數值 (Visual Basic)
+ms.custom: ''
 ms.date: 07/20/2015
 ms.prod: .net
-ms.reviewer: 
-ms.suite: 
-ms.technology: devlang-visual-basic
-ms.tgt_pltfrm: 
+ms.reviewer: ''
+ms.suite: ''
+ms.technology:
+- devlang-visual-basic
+ms.tgt_pltfrm: ''
 ms.topic: article
 helpviewer_keywords:
 - object variables [Visual Basic], values
@@ -14,27 +15,27 @@ helpviewer_keywords:
 - data types [Visual Basic], object variable
 - variables [Visual Basic], object
 ms.assetid: 31555704-58a3-49f1-9a0a-6421f605664f
-caps.latest.revision: "18"
+caps.latest.revision: 18
 author: dotnet-bot
 ms.author: dotnetcontent
-ms.openlocfilehash: ccab22920923500a2332db2372e52813c890e5e8
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.openlocfilehash: 28307cc477f661c3046e125f297c1519485ad797
+ms.sourcegitcommit: 86adcc06e35390f13c1e372c36d2e044f1fc31ef
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 04/26/2018
 ---
 # <a name="object-variable-values-visual-basic"></a>物件變數值 (Visual Basic)
 變數的[物件資料類型](../../../../visual-basic/language-reference/data-types/object-data-type.md)可以指向任何類型的資料。 您將儲存的值`Object`變數保留其他地方在記憶體中，而變數本身會保留資料指標。  
   
 ## <a name="object-classifier-functions"></a>物件的分類函數  
- [!INCLUDE[vbprvb](~/includes/vbprvb-md.md)]提供傳回什麼的相關資訊的函式`Object`變數參考至下, 表所示。  
+ Visual Basic 提供傳回什麼的相關資訊的函式`Object`變數參考至下, 表所示。  
   
-|函式|如果物件變數參考，則傳回 True|  
+|功能|如果物件變數參考，則傳回 True|  
 |--------------|---------------------------------------------------|  
 |<xref:Microsoft.VisualBasic.Information.IsArray%2A>|值，而非單一值的陣列|  
 |<xref:Microsoft.VisualBasic.Information.IsDate%2A>|A[日期資料型別](../../../../visual-basic/language-reference/data-types/date-data-type.md)值或可以解譯為日期和時間值的字串|  
 |<xref:Microsoft.VisualBasic.Information.IsDBNull%2A>|型別的物件<xref:System.DBNull>，用來表示資料遺漏或不存在|  
-|<xref:Microsoft.VisualBasic.Information.IsError%2A>|例外狀況物件，衍生自<xref:System.Exception>|  
+|<xref:Microsoft.VisualBasic.Information.IsError%2A>|例外狀況物件，衍生自 <xref:System.Exception>|  
 |<xref:Microsoft.VisualBasic.Information.IsNothing%2A>|[執行任何動作](../../../../visual-basic/language-reference/nothing.md)，也就是沒有物件目前指派給變數|  
 |<xref:Microsoft.VisualBasic.Information.IsNumeric%2A>|數字或可以解譯為數字的字串|  
 |<xref:Microsoft.VisualBasic.Information.IsReference%2A>|參考類型 （例如字串、 陣列、 委派或類別類型）|  

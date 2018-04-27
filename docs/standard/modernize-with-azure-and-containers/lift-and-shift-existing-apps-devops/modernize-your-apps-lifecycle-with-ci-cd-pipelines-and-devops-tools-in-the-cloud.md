@@ -1,18 +1,19 @@
 ---
-title: "現代化雲端中的 DevOps 工具 CI/CD 管線與您的應用程式生命週期"
-description: "容器化的.NET 應用程式的.NET Microservices 架構 |現代化雲端中的 DevOps 工具 CI/CD 管線與您的應用程式生命週期"
+title: 現代化雲端中的 DevOps 工具 CI/CD 管線與您的應用程式生命週期
+description: 容器化的.NET 應用程式的.NET Microservices 架構 |現代化雲端中的 DevOps 工具 CI/CD 管線與您的應用程式生命週期
 author: CESARDELATORRE
 ms.author: wiwagn
 ms.date: 10/26/2017
 ms.prod: .net
+ms.topic: article
 ms.workload:
 - dotnet
 - dotnetcore
-ms.openlocfilehash: 668c48b64cab964da65625ef5326fb75e133b3b9
-ms.sourcegitcommit: d3cfda0943364aaf6ccd574f55f584576c8a4fee
+ms.openlocfilehash: 56dbd4a867e0f47d0f7e681d924584629d763f87
+ms.sourcegitcommit: 2e8acae16ae802f2d6d04e3ce0a6dbf04e476513
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 03/08/2018
+ms.lasthandoff: 04/18/2018
 ---
 # <a name="modernize-your-apps-lifecycle-with-cicd-pipelines-and-devops-tools-in-the-cloud"></a>現代化雲端中的 DevOps 工具 CI/CD 管線與您的應用程式生命週期
 

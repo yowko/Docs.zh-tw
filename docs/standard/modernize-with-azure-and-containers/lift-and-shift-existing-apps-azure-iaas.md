@@ -1,18 +1,19 @@
 ---
-title: "提起並移動現有應用程式的 Azure IaaS"
-description: "現代化現有的.NET 應用程式與 Azure 雲端與 Windows 容器。"
+title: 提起並移動現有應用程式的 Azure IaaS
+description: 現代化現有的.NET 應用程式與 Azure 雲端與 Windows 容器。
 author: CESARDELATORRE
 ms.author: wiwagn
 ms.date: 10/26/2017
 ms.prod: .net
+ms.topic: article
 ms.workload:
 - dotnet
 - dotnetcore
-ms.openlocfilehash: 6811da4b59531e27f2d832c102d37ba1383b15ab
-ms.sourcegitcommit: d3cfda0943364aaf6ccd574f55f584576c8a4fee
+ms.openlocfilehash: d7922ad3a3cd5346f81008e1841a55b5e3663832
+ms.sourcegitcommit: 2e8acae16ae802f2d6d04e3ce0a6dbf04e476513
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 03/08/2018
+ms.lasthandoff: 04/18/2018
 ---
 # <a name="lift-and-shift-existing-apps-azure-iaas"></a>提起並移動現有應用程式的 Azure IaaS
 
@@ -88,9 +89,9 @@ Azure 的移轉可讓您對於的信心，您的工作負載可以移轉與業�
 
 - **Azure 移轉的資料工作表**
 
-    [https://aka.ms/azuremigration\_datasheet](https://aka.ms/azuremigration\_datasheet)
+    [https://aka.ms/azuremigration\_資料工作表](https://aka.ms/azuremigration\_datasheet)
 
-- **Azure Migrate**
+- **Azure 移轉**
 
     [http://azuremigrationcenter.com/](http://azuremigrationcenter.com/)
 

@@ -1,28 +1,30 @@
 ---
-title: "繫結來源概觀"
-ms.custom: 
+title: 繫結來源概觀
+ms.custom: ''
 ms.date: 03/30/2017
 ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.technology: dotnet-wpf
-ms.tgt_pltfrm: 
+ms.reviewer: ''
+ms.suite: ''
+ms.technology:
+- dotnet-wpf
+ms.tgt_pltfrm: ''
 ms.topic: article
 helpviewer_keywords:
 - binding data [WPF], binding sources
 - data binding [WPF], binding source
 - binding sources [WPF]
 ms.assetid: 2df2cd11-6aac-4bdf-ab7b-ea5f464cd5ca
-caps.latest.revision: "25"
+caps.latest.revision: 25
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.workload: dotnet
-ms.openlocfilehash: 6b603599232a5cb4d33e2b7c9ad00e7ab3a24649
-ms.sourcegitcommit: 91691981897cf8451033cb01071d8f5d94017f97
+ms.workload:
+- dotnet
+ms.openlocfilehash: 94238ba34976ad5971e7181aa3377e38ab0e4659
+ms.sourcegitcommit: 86adcc06e35390f13c1e372c36d2e044f1fc31ef
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 01/09/2018
+ms.lasthandoff: 04/26/2018
 ---
 # <a name="binding-sources-overview"></a>繫結來源概觀
 在資料繫結中，繫結來源物件是指您取得資料的來源物件。 本主題討論可以當做繫結來源的物件類型。  
@@ -55,7 +57,7 @@ ms.lasthandoff: 01/09/2018
 ### <a name="other-characteristics"></a>其他特性  
  下列清單提供必須注意的其他重點：  
   
--   如果要在 [!INCLUDE[TLA2#tla_xaml](../../../../includes/tla2sharptla-xaml-md.md)] 中建立物件，此類別必須擁有預設建構函式。 在某些 [!INCLUDE[TLA2#tla_net](../../../../includes/tla2sharptla-net-md.md)] 語言 (例如 [!INCLUDE[TLA#tla_cshrp](../../../../includes/tlasharptla-cshrp-md.md)]) 中，可能會為您建立預設的建構函式。  
+-   如果要在 [!INCLUDE[TLA2#tla_xaml](../../../../includes/tla2sharptla-xaml-md.md)] 中建立物件，此類別必須擁有預設建構函式。 在某些[!INCLUDE[TLA2#tla_net](../../../../includes/tla2sharptla-net-md.md)]語言，例如 C# 中，可能會為您建立的預設建構函式。  
   
 -   要當做繫結之繫結來源屬性的屬性必須是類別的公用屬性。 明確定義的介面屬性不能做為繫結之用，而沒有基底實作的受保護、私用、內部或虛擬屬性同樣也不能做為繫結之用。  
   
@@ -79,7 +81,7 @@ ms.lasthandoff: 01/09/2018
   
  WPF 絕不會直接繫結至集合。 如果您指定集合做為繫結來源，WPF 實際上會繫結至集合的預設檢視。 如需預設檢視的詳細資訊，請參閱[資料繫結概觀](../../../../docs/framework/wpf/data/data-binding-overview.md)。  
   
- 如果您有進階的案例和您想要實作您自己的集合，請考慮使用<xref:System.Collections.IList>介面。 <xref:System.Collections.IList>提供可透過可以改善效能的索引個別存取的物件的非泛型集合。  
+ 如果您有進階的案例和您想要實作您自己的集合，請考慮使用<xref:System.Collections.IList>介面。 <xref:System.Collections.IList> 提供可透過可以改善效能的索引個別存取的物件的非泛型集合。  
   
 <a name="permissions"></a>   
 ## <a name="permission-requirements-in-data-binding"></a>資料繫結的使用權限需求  
@@ -105,7 +107,7 @@ ms.lasthandoff: 01/09/2018
   
  如需部分信任安全性的詳細資訊，請參閱 [WPF 部分信任安全性](../../../../docs/framework/wpf/wpf-partial-trust-security.md)。  
   
-## <a name="see-also"></a>請參閱  
+## <a name="see-also"></a>另請參閱  
  <xref:System.Windows.Data.ObjectDataProvider>  
  <xref:System.Windows.Data.XmlDataProvider>  
  [指定繫結來源](../../../../docs/framework/wpf/data/how-to-specify-the-binding-source.md)  

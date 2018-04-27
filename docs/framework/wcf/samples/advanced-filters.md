@@ -1,24 +1,26 @@
 ---
-title: "進階篩選"
-ms.custom: 
+title: 進階篩選
+ms.custom: ''
 ms.date: 03/30/2017
 ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.technology: dotnet-clr
-ms.tgt_pltfrm: 
+ms.reviewer: ''
+ms.suite: ''
+ms.technology:
+- dotnet-clr
+ms.tgt_pltfrm: ''
 ms.topic: article
 ms.assetid: 8d81590f-e036-4f96-824a-4a187f462764
-caps.latest.revision: "23"
+caps.latest.revision: 23
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.workload: dotnet
-ms.openlocfilehash: 357b57bb39ca31b48d21cb83209a72d0b3d12a62
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.workload:
+- dotnet
+ms.openlocfilehash: a374765317751a5adc241941a0c0dc613a3ea2cc
+ms.sourcegitcommit: 86adcc06e35390f13c1e372c36d2e044f1fc31ef
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 04/26/2018
 ---
 # <a name="advanced-filters"></a>進階篩選
 此範例示範 [!INCLUDE[indigo1](../../../../includes/indigo1-md.md)] 路由服務。 路由服務是一個 [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] 元件，該元件可讓它在應用程式中輕鬆加入內容架構的路由器。 此範例會調整標準 [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] 計算機範例，以便使用路由服務進行通訊。 此範例示範如何透過訊息篩選與訊息篩選資料表的使用，定義以內容為基礎的路由邏輯。  
@@ -60,7 +62,7 @@ XPathMessageFilter xpathFilter = new XPathMessageFilter("/s12:Envelope/s12:Heade
 EndpointNameMessageFilter endpointNameFilter = new EndpointNameMessageFilter("calculatorEndpoint");  
 ```  
   
- 第三個篩選是 <xref:System.ServiceModel.Dispatcher.PrefixEndpointAddressMessageFilter>。 這會比對端點上顯示的任何訊息以及符合提供之位址前置詞 (或前方部分) 的位址。 在此範例中，位址前置詞定義為 "http://localhost/routingservice/router/rounding/"。 也就是說，此篩選會比對其位址為 "http://localhost/routingservice/router/rounding/*" 的任何傳入訊息。 在此情況下，它是顯示在 Rounding Calculator 端點上的訊息，其端點位址為 "http://localhost/routingservice/router/rounding/calculator"。  
+ 第三個篩選是 <xref:System.ServiceModel.Dispatcher.PrefixEndpointAddressMessageFilter>。 這會比對端點上顯示的任何訊息以及符合提供之位址前置詞 (或前方部分) 的位址。 在此範例中定義的位址前置詞為"http://localhost/routingservice/router/rounding/"。 這表示任何內送訊息傳送到 「http://localhost/routingservice/router/rounding/*"符合此篩選條件。 在此情況下，它會顯示在 Rounding Calculator 端點的訊息具有位址"http://localhost/routingservice/router/rounding/calculator"。  
   
 ```  
 PrefixEndpointAddressMessageFilter prefixAddressFilter = new PrefixEndpointAddressMessageFilter(new EndpointAddress("http://localhost/routingservice/router/rounding/"));  
@@ -91,7 +93,7 @@ RoundRobinMessageFilter roundRobinFilter2 = new RoundRobinMessageFilter("group1"
   
 2.  若要開啟**方案總管 中**，選取**方案總管 中**從**檢視**功能表。  
   
-3.  在 [!INCLUDE[vs_current_short](../../../../includes/vs-current-short-md.md)] 中，按下 F5 或 CTRL+SHIFT+B。  
+3.  在 Visual Studio 中，按下 F5 或 CTRL + SHIFT + B。  
   
     1.  如果您想要按下 F5 時自動啟動必要的專案，以滑鼠右鍵按一下方案，然後選取**屬性**。 選取**啟始專案**節點下的**通用屬性**的左窗格中。 選取**多個啟始專案**選項按鈕，並將所有的專案設定**啟動**動作。  
   
@@ -164,5 +166,5 @@ RoundRobinMessageFilter roundRobinFilter2 = new RoundRobinMessageFilter("group1"
 ### <a name="real-world-scenario"></a>真實情節  
  Contoso 想要虛擬化其所有服務，僅公開一個端點，透過這個端點可以存取多個不同類型的服務。 在此情況下，它們會利用路由服務以內容為基礎的路由功能，決定應該將傳入要求傳送至何處。  
   
-## <a name="see-also"></a>請參閱  
+## <a name="see-also"></a>另請參閱  
  [AppFabric 主控與持續性範例](http://go.microsoft.com/fwlink/?LinkId=193961)

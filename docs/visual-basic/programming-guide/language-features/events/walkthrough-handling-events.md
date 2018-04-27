@@ -1,11 +1,12 @@
 ---
-title: "處理事件 (Visual Basic)"
-ms.custom: 
+title: 處理事件 (Visual Basic)
+ms.custom: ''
 ms.date: 07/20/2015
 ms.prod: .net
-ms.reviewer: 
-ms.suite: 
-ms.technology: devlang-visual-basic
+ms.reviewer: ''
+ms.suite: ''
+ms.technology:
+- devlang-visual-basic
 ms.topic: article
 helpviewer_keywords:
 - event handling [Visual Basic], walkthroughs
@@ -15,19 +16,19 @@ helpviewer_keywords:
 - WithEvents keyword [Visual Basic], walkthroughs
 - event handlers [Visual Basic], walkthroughs
 ms.assetid: f145b3fc-5ae0-4509-a2aa-1ff6934706bd
-caps.latest.revision: "18"
+caps.latest.revision: 18
 author: dotnet-bot
 ms.author: dotnetcontent
-ms.openlocfilehash: e4e31937d67d2140865a9626f79fbddc16796709
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.openlocfilehash: c1743e5f5d9dcdf83ab646407cd1fcdc77ff71cd
+ms.sourcegitcommit: 86adcc06e35390f13c1e372c36d2e044f1fc31ef
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 04/26/2018
 ---
 # <a name="walkthrough-handling-events-visual-basic"></a>逐步解說：處理事件 (Visual Basic)
 這是兩個主題會示範如何使用事件的第二個。 第一個主題，[逐步解說： 宣告和引發事件](../../../../visual-basic/programming-guide/language-features/events/walkthrough-declaring-and-raising-events.md)，示範如何宣告和引發事件。 本節會使用表單和類別，從該逐步解說顯示如何處理時就會發生的事件。  
   
- `Widget`類別範例會使用傳統的事件處理陳述式。 [!INCLUDE[vbprvb](~/includes/vbprvb-md.md)]提供其他技術使用的事件。 做為練習，您可以修改此範例中使用`AddHandler`和`Handles`陳述式。  
+ `Widget`類別範例會使用傳統的事件處理陳述式。 Visual Basic 提供其他技術使用的事件。 做為練習，您可以修改此範例中使用`AddHandler`和`Handles`陳述式。  
   
 ### <a name="to-handle-the-percentdone-event-of-the-widget-class"></a>若要處理 PercentDone 類別之事件的小工具  
   
@@ -66,7 +67,7 @@ ms.lasthandoff: 11/21/2017
  如果使用者按一下**取消**按鈕時`LongTask`正在執行，`Button2_Click`事件執行儘速`DoEvents`陳述式可讓事件處理發生。 類別層級變數`mblnCancel`設`True`，而`mWidget_PercentDone`事件進行測試，然後設定`ByRef Cancel`引數`True`。  
   
 ## <a name="connecting-a-withevents-variable-to-an-object"></a>連接 WithEvents 變數的物件  
- `Form1`現在設定為處理`Widget`物件的事件。 若要尋找的剩下的只有`Widget`某處。  
+ `Form1` 現在設定為處理`Widget`物件的事件。 若要尋找的剩下的只有`Widget`某處。  
   
  當您宣告變數`WithEvents`在設計階段物件不是有與其相關聯。 A`WithEvents`變數，就如同任何其他物件的變數。 您必須建立的物件，並將參考指派給它與`WithEvents`變數。  
   
@@ -80,7 +81,7 @@ ms.lasthandoff: 11/21/2017
   
      [!code-vb[VbVbcnWalkthroughDeclaringAndRaisingEvents#7](../../../../visual-basic/programming-guide/language-features/events/codesnippet/VisualBasic/walkthrough-handling-events_4.vb)]  
   
- 此程式碼執行、 當[!INCLUDE[vbprvb](~/includes/vbprvb-md.md)]建立`Widget`物件，並連接其事件相關聯的事件程序`mWidget`。 從該點上，每當`Widget`引發其`PercentDone`事件，`mWidget_PercentDone`執行事件程序。  
+ 此程式碼執行時，Visual Basic 建立`Widget`物件，並連接其事件相關聯的事件程序`mWidget`。 從該點上，每當`Widget`引發其`PercentDone`事件，`mWidget_PercentDone`執行事件程序。  
   
 #### <a name="to-call-the-longtask-method"></a>若要呼叫 LongTask 方法  
   
@@ -90,7 +91,7 @@ ms.lasthandoff: 11/21/2017
   
  之前`LongTask`呼叫方法時，標籤，必須先初始化的顯示完成百分比，以及類別層級`Boolean`旗標的取消方法必須設為`False`。  
   
- `LongTask`會呼叫工作持續時間為 12.2 秒。 `PercentDone`引發一次每三分之一的第二個。 引發事件時，每次`mWidget_PercentDone`執行事件程序。  
+ `LongTask` 會呼叫工作持續時間為 12.2 秒。 `PercentDone`引發一次每三分之一的第二個。 引發事件時，每次`mWidget_PercentDone`執行事件程序。  
   
  當`LongTask`完畢後，`mblnCancel`測試是否`LongTask`正常，結束或它停止，因為如果`mblnCancel`已設為`True`。 前一個案例中只會更新以完成百分比表示。  
   

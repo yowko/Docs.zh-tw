@@ -1,11 +1,12 @@
 ---
-title: "運算子程序 (Visual Basic)"
-ms.custom: 
+title: 運算子程序 (Visual Basic)
+ms.custom: ''
 ms.date: 07/20/2015
 ms.prod: .net
-ms.reviewer: 
-ms.suite: 
-ms.technology: devlang-visual-basic
+ms.reviewer: ''
+ms.suite: ''
+ms.technology:
+- devlang-visual-basic
 ms.topic: article
 helpviewer_keywords:
 - Visual Basic code, procedures
@@ -17,22 +18,22 @@ helpviewer_keywords:
 - operator overloading
 - operator procedures
 ms.assetid: 8c513d38-246b-4fb7-8b75-29e1364e555b
-caps.latest.revision: "17"
+caps.latest.revision: 17
 author: dotnet-bot
 ms.author: dotnetcontent
-ms.openlocfilehash: 865695731dd591b0c48f4416814fa97edf4ea42e
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.openlocfilehash: 8fba5180da6498d280fa4192937c39d3e33168e8
+ms.sourcegitcommit: 86adcc06e35390f13c1e372c36d2e044f1fc31ef
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 04/26/2018
 ---
 # <a name="operator-procedures-visual-basic"></a>運算子程序 (Visual Basic)
-運算子程序是一系列的[!INCLUDE[vbprvb](~/includes/vbprvb-md.md)]定義行為的標準運算子的陳述式 (例如`*`， `<>`，或`And`) 上的類別或您已定義的結構。 這也稱為*運算子多載*。  
+運算子程序是一系列的 Visual Basic 陳述式，定義標準的運算子的行為 (例如`*`， `<>`，或`And`) 上的類別或您已定義的結構。 這也稱為*運算子多載*。  
   
 ## <a name="when-to-define-operator-procedures"></a>當定義運算子程序  
  當您已經定義類別或結構時，您可以宣告為該類別或結構類型的變數。 有時候這類變數都必須參與作業為運算式的一部分。 若要這樣做，它必須是運算子的運算元。  
   
- [!INCLUDE[vbprvb](~/includes/vbprvb-md.md)]只有在其基本資料型別上定義運算子。 您可以定義一個運算子的行為，或這兩個運算元屬於類別或結構的類型。  
+ Visual Basic 定義於其基本資料類型的運算子。 您可以定義一個運算子的行為，或這兩個運算元屬於類別或結構的類型。  
   
  如需詳細資訊，請參閱[Operator 陳述式](../../../../visual-basic/language-reference/statements/operator-statement.md)。  
   

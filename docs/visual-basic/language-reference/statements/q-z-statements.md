@@ -1,23 +1,24 @@
 ---
-title: "Q-Z 陳述式"
+title: Q-Z 陳述式
 ms.date: 07/20/2015
 ms.prod: .net
-ms.reviewer: 
-ms.suite: 
-ms.technology: devlang-visual-basic
+ms.reviewer: ''
+ms.suite: ''
+ms.technology:
+- devlang-visual-basic
 ms.topic: article
 ms.assetid: 32a9e547-c1b7-40f2-8118-7eef1d19649e
-caps.latest.revision: "13"
+caps.latest.revision: 13
 author: dotnet-bot
 ms.author: dotnetcontent
-ms.openlocfilehash: f520cb24f1ebc960407c7a978f6cb79212a3aedf
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.openlocfilehash: e61bf660feda2360b0eb43913bd65329e6944549
+ms.sourcegitcommit: 86adcc06e35390f13c1e372c36d2e044f1fc31ef
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 04/26/2018
 ---
 # <a name="q-z-statements"></a>Q-Z 陳述式
-下表包含清單[!INCLUDE[vbprvb](~/includes/vbprvb-md.md)]語言陳述式。  
+下表包含 Visual Basic 語言陳述式的清單。  
   
 |||||  
 |---|---|---|---|  

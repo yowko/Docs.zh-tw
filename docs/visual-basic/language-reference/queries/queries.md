@@ -1,28 +1,29 @@
 ---
-title: "查詢 (Visual Basic)"
+title: 查詢 (Visual Basic)
 ms.date: 07/20/2015
 ms.prod: .net
-ms.reviewer: 
-ms.suite: 
-ms.technology: devlang-visual-basic
+ms.reviewer: ''
+ms.suite: ''
+ms.technology:
+- devlang-visual-basic
 ms.topic: article
 helpviewer_keywords:
 - queries [Visual Basic]
 - LINQ, queries
 ms.assetid: 8edc717c-4a24-4cbc-9c16-11f479c935db
-caps.latest.revision: "11"
+caps.latest.revision: 11
 author: dotnet-bot
 ms.author: dotnetcontent
-ms.openlocfilehash: 80038bae51f16daca19da73905f6bbce42a63b97
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.openlocfilehash: 83a8b152e2125ba69623e3cefdda5752abc268ea
+ms.sourcegitcommit: 86adcc06e35390f13c1e372c36d2e044f1fc31ef
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 04/26/2018
 ---
 # <a name="queries-visual-basic"></a>查詢 (Visual Basic)
-[!INCLUDE[vbprvb](~/includes/vbprvb-md.md)]可讓您建立[!INCLUDE[vbteclinqext](~/includes/vbteclinqext-md.md)]您的程式碼中的運算式。  
+Visual Basic 可讓您建立[!INCLUDE[vbteclinqext](~/includes/vbteclinqext-md.md)]您的程式碼中的運算式。  
   
-## <a name="in-this-section"></a>本章節內容  
+## <a name="in-this-section"></a>本節內容  
  [Aggregate 子句](../../../visual-basic/language-reference/queries/aggregate-clause.md)  
  描述`Aggregate`子句，可套用至集合的一個或多個彙總函式。  
   

@@ -1,11 +1,12 @@
 ---
-title: "Visual Basic 中的存留期"
-ms.custom: 
+title: Visual Basic 中的存留期
+ms.custom: ''
 ms.date: 07/20/2015
 ms.prod: .net
-ms.reviewer: 
-ms.suite: 
-ms.technology: devlang-visual-basic
+ms.reviewer: ''
+ms.suite: ''
+ms.technology:
+- devlang-visual-basic
 ms.topic: article
 helpviewer_keywords:
 - static variables [Visual Basic], lifetime
@@ -16,14 +17,14 @@ helpviewer_keywords:
 - lifetime [Visual Basic], Visual Basic
 - lifetime [Visual Basic]
 ms.assetid: bd91e390-690a-469a-9946-8dca70bc14e7
-caps.latest.revision: "14"
+caps.latest.revision: 14
 author: dotnet-bot
 ms.author: dotnetcontent
-ms.openlocfilehash: 999490885571889b2de911cc14754f8db257d0af
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.openlocfilehash: 14a75a2c3af52f63051d02df9341faf19c3b76c7
+ms.sourcegitcommit: 86adcc06e35390f13c1e372c36d2e044f1fc31ef
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 04/26/2018
 ---
 # <a name="lifetime-in-visual-basic"></a>Visual Basic 中的存留期
 *存留期*的宣告的項目是一段時間期間它是可供使用。 變數是唯一的項目存留期的。 基於此目的，編譯器會將程序參數和函式會傳回做為變數的特殊案例。 變數的存留期代表一段時間期間中，它能容納的值。 其值可以變更其存留期，但它永遠會保留一些值。  
@@ -41,7 +42,7 @@ ms.lasthandoff: 11/21/2017
  在程序內的區塊內宣告的變數 (例如`For`迴圈) 的程序項目就會初始化。 不論您的程式碼執行區塊，都會執行初始化。  
   
 ## <a name="end-of-lifetime"></a>存留期即將結束  
- 當程序終止時，不會保留其區域變數的值，和[!INCLUDE[vbprvb](~/includes/vbprvb-md.md)]回收其記憶體。 下次呼叫程序中，所有的區域變數是從頭建立且重新初始化。  
+ 當程序終止時，不會保留其區域變數的值，和 Visual Basic 會回收記憶體。 下次呼叫程序中，所有的區域變數是從頭建立且重新初始化。  
   
  當類別或結構的執行個體終止時，非共用的變數會遺失其記憶體和其值。 每個類別或結構的新執行個體建立，並重新初始化非共用的變數。 不過，`Shared`變數會保留起來，直到您的應用程式停止執行。  
   
@@ -55,14 +56,14 @@ ms.lasthandoff: 11/21/2017
 |類別的執行個體中不`Shared`（程序是執行個體成員）|第一次在特定的執行個體呼叫程序|釋放執行個體進行記憶體回收 (GC)|  
   
 ## <a name="static-variables-of-the-same-name"></a>具有相同名稱的靜態變數  
- 您可以宣告具有相同名稱在一個以上的程序中的靜態變數。 如果這樣做，請[!INCLUDE[vbprvb](~/includes/vbprvb-md.md)]編譯器會考慮每個這類變數來個別項目。 其中一個變數的初始化不會影響其他的值。 如果您定義一組多載的程序，並宣告中每個多載相同名稱的靜態變數，套用相同。  
+ 您可以宣告具有相同名稱在一個以上的程序中的靜態變數。 如果您這麼做時，Visual Basic 編譯器會考慮每個這類變數來個別項目。 其中一個變數的初始化不會影響其他的值。 如果您定義一組多載的程序，並宣告中每個多載相同名稱的靜態變數，套用相同。  
   
 ## <a name="containing-elements-for-static-variables"></a>靜態變數的包含項目  
  您可以在該類別中的程序內，也就是宣告類別內，靜態區域變數。 不過，您無法宣告靜態區域變數結構內，是為結構成員或在該結構中的程序的本機變數。  
   
 ## <a name="example"></a>範例  
   
-### <a name="description"></a>說明  
+### <a name="description"></a>描述  
  下列範例宣告的變數[靜態](../../../../visual-basic/language-reference/modifiers/static.md)關鍵字。 (請注意，您不需要`Dim`關鍵字時[Dim 陳述式](../../../../visual-basic/language-reference/statements/dim-statement.md)使用修飾詞，例如`Static`。)  
   
 ### <a name="code"></a>程式碼  

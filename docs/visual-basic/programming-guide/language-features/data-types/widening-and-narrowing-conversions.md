@@ -1,11 +1,12 @@
 ---
-title: "擴展和縮小轉換 (Visual Basic)"
-ms.custom: 
+title: 擴展和縮小轉換 (Visual Basic)
+ms.custom: ''
 ms.date: 07/20/2015
 ms.prod: .net
-ms.reviewer: 
-ms.suite: 
-ms.technology: devlang-visual-basic
+ms.reviewer: ''
+ms.suite: ''
+ms.technology:
+- devlang-visual-basic
 ms.topic: article
 helpviewer_keywords:
 - widening conversions [Visual Basic]
@@ -25,14 +26,14 @@ helpviewer_keywords:
 - data type conversion [Visual Basic], exceptions during conversion
 - conversions [Visual Basic], widening
 ms.assetid: 058c3152-6c28-4268-af44-2209e774f0bd
-caps.latest.revision: "27"
+caps.latest.revision: 27
 author: dotnet-bot
 ms.author: dotnetcontent
-ms.openlocfilehash: 2cf1f8d956935a9a363211abf94b4f1c2f538074
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.openlocfilehash: 960b4e4c7184309b6a84247d86fb94ccb2faf877
+ms.sourcegitcommit: 86adcc06e35390f13c1e372c36d2e044f1fc31ef
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 04/26/2018
 ---
 # <a name="widening-and-narrowing-conversions-visual-basic"></a>擴展和縮小轉換 (Visual Basic)
 類型轉換的重要考量是轉換的結果是否目的地資料類型的範圍內。  
@@ -59,7 +60,7 @@ ms.lasthandoff: 11/21/2017
 |[Double](../../../../visual-basic/language-reference/data-types/double-data-type.md)|`Double`|  
 |任何列舉型別 ([列舉](../../../../visual-basic/language-reference/statements/enum-statement.md))|其基礎的整數類資料類型和任何類型的基礎類型將擴展。|  
 |[Char](../../../../visual-basic/language-reference/data-types/char-data-type.md)|`Char`, `String`|  
-|`Char` 陣列|`Char`陣列，`String`|  
+|`Char` 陣列|`Char` 陣列， `String`|  
 |任何型別|[物件](../../../../visual-basic/language-reference/data-types/object-data-type.md)|  
 |任何衍生型別|任何基底的類型衍生的來源<sup>3</sup>。|  
 |任何型別|它會實作任何介面。|  
@@ -97,11 +98,11 @@ ms.lasthandoff: 11/21/2017
 ## <a name="exceptions-during-conversion"></a>轉換期間的例外狀況  
  因為永遠擴展轉換成功，它們不會擲回例外狀況。 縮小轉換，失敗時，通常會擲回下列例外狀況：  
   
--   <xref:System.InvalidCastException>— 如果兩個類型之間不定義任何轉換  
+-   <xref:System.InvalidCastException> — 如果兩個類型之間不定義任何轉換  
   
--   <xref:System.OverflowException>-（只有整數類型） 如果已轉換的值是目標類型而言太大  
+-   <xref:System.OverflowException> -（只有整數類型） 如果已轉換的值是目標類型而言太大  
   
- 如果類別或結構定義[CType 函式](../../../../visual-basic/language-reference/functions/ctype-function.md)做為轉換運算子或從該類別或結構的`CType`可以擲回任何例外狀況，它認為適當的行動。 此外的`CType`可能呼叫[!INCLUDE[vbprvb](~/includes/vbprvb-md.md)]函式或[!INCLUDE[dnprdnshort](~/includes/dnprdnshort-md.md)]接著可能會擲回例外狀況的各種不同的方法。  
+ 如果類別或結構定義[CType 函式](../../../../visual-basic/language-reference/functions/ctype-function.md)做為轉換運算子或從該類別或結構的`CType`可以擲回任何例外狀況，它認為適當的行動。 此外的`CType`可能呼叫 Visual Basic 函式或[!INCLUDE[dnprdnshort](~/includes/dnprdnshort-md.md)]接著可能會擲回例外狀況的各種不同的方法。  
   
 ## <a name="changes-during-reference-type-conversions"></a>參考型別轉換期間的變更  
  從轉換*參考型別*複製只有指標值。 值本身尚未複製或以任何方式變更。 唯一可以變更會保留指標變數的資料型別。 在下列範例中，資料類型會從衍生類別轉換為其基底類別，但這兩個變數指向的物件不會變更。  

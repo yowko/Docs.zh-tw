@@ -13,17 +13,17 @@ dev_langs:
 - csharp
 - vb
 ms.assetid: d6b7f9cb-81be-44e1-bb94-56137954876d
-caps.latest.revision: ''
+caps.latest.revision: 7
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
 ms.workload:
 - dotnet
-ms.openlocfilehash: 15c435d46d3695f78db27801f54ec9de475b2989
-ms.sourcegitcommit: c883637b41ee028786edceece4fa872939d2e64c
+ms.openlocfilehash: ef070c737f6a108aa9c9285d2cc8e0a1144479bd
+ms.sourcegitcommit: 86adcc06e35390f13c1e372c36d2e044f1fc31ef
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 03/26/2018
+ms.lasthandoff: 04/26/2018
 ---
 # <a name="retrieving-identity-or-autonumber-values"></a>擷取識別或自動編號值
 關聯式資料庫中的主索引鍵是永遠包含唯一值的資料行或資料行組合。 瞭解主索引鍵值可讓您找出包含此值的資料列。 關聯式 Database Engine (例如 SQL Server、Oracle 和 Microsoft Access/Jet) 支援建立可指定為主索引鍵的自動遞增資料行。 上述的值會在資料列加入至資料表時由伺服器產生。 在 SQL Server 中，您可以設定資料行的識別屬性。在 Oracle 中，您可以建立序列 (Sequence)。在 Microsoft Access 中，您可以建立 AutoNumber 資料行。  
@@ -35,7 +35,7 @@ ms.lasthandoff: 03/26/2018
  某些 Database Engine (例如 Microsoft Access Jet Database Engine) 不支援輸出參數而且無法在單一批次中處理多個陳述式。 使用 Jet Database Engine 時，您可以透過在 `RowUpdated` 之 `DataAdapter` 事件的事件處理常式中執行個別的 SELECT 命令，擷取針對插入資料列所產生的新 AutoNumber 值。  
   
 > [!NOTE]
->  使用自動遞增值的替代方式是使用 <xref:System.Guid.NewGuid%2A> 的 <xref:System.Guid> 方法，在用戶端電腦上產生插入每個新資料列時可複製到伺服器的 GUID (全域唯一識別項)。 `NewGuid` 方法會產生 16 個位元組的二進位值，而此值是使用盡可能確保沒有任何值會重複的演算法所建立的。 在 SQL Server 資料庫中，GUID 會儲存在 SQL Server 可以使用 Transact-SQL `uniqueidentifier` 函式來自動產生的 `NEWID()` 資料行中。 使用 GUID 當做主索引鍵可能會對效能造成不良影響。 [!INCLUDE[ssNoVersion](../../../../includes/ssnoversion-md.md)] 提供 `NEWSEQUENTIALID()` 函式的支援，而此函式會產生循序 GUID (雖然不保證是全域唯一的，但是可更有效率地進行索引)。  
+>  使用自動遞增值的替代方式是使用 <xref:System.Guid.NewGuid%2A> 的 <xref:System.Guid> 方法，在用戶端電腦上產生插入每個新資料列時可複製到伺服器的 GUID (全域唯一識別項)。 `NewGuid` 方法會產生 16 個位元組的二進位值，而此值是使用盡可能確保沒有任何值會重複的演算法所建立的。 在 SQL Server 資料庫中，GUID 會儲存在 SQL Server 可以使用 Transact-SQL `uniqueidentifier` 函式來自動產生的 `NEWID()` 資料行中。 使用 GUID 當做主索引鍵可能會對效能造成不良影響。 SQL Server 提供的支援`NEWSEQUENTIALID()`函式，會產生循序 GUID，不保證是全域唯一的但是，可以更有效率地索引。  
   
 ## <a name="retrieving-sql-server-identity-column-values"></a>擷取 SQL Server Identity 資料行值  
  使用 Microsoft SQL Server 時，您可以建立含有輸出參數的預存程序，以便傳回插入資料列的識別值。 下表將描述 SQL Server 中三個可用來擷取識別資料行值的 Transact-SQL 函式。  

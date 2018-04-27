@@ -1,26 +1,27 @@
 ---
-title: "什麼 &#39; s.NET 4.5 中 Windows Workflow Foundation 的新功能"
-ms.custom: 
+title: 什麼&#39;s.NET 4.5 中 Windows Workflow Foundation 的新功能
+ms.custom: ''
 ms.date: 03/30/2017
 ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.tgt_pltfrm: 
+ms.reviewer: ''
+ms.suite: ''
+ms.tgt_pltfrm: ''
 ms.topic: article
 ms.assetid: 195c43a8-e0a8-43d9-aead-d65a9e6751ec
-caps.latest.revision: "32"
+caps.latest.revision: 32
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.workload: dotnet
-ms.openlocfilehash: f65d5d2f9bfee144f59d9ecf11cd26ab15113139
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.workload:
+- dotnet
+ms.openlocfilehash: b57cf990f9fdf987f4cc414cb42db6cf9fe0da21
+ms.sourcegitcommit: 86adcc06e35390f13c1e372c36d2e044f1fc31ef
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 04/26/2018
 ---
-# <a name="what39s-new-in-windows-workflow-foundation-in-net-45"></a>什麼 &#39; s.NET 4.5 中 Windows Workflow Foundation 的新功能
-[!INCLUDE[wf](../../../includes/wf-md.md)] 中的 [!INCLUDE[net_v45](../../../includes/net-v45-md.md)] 引進許多新功能，如新增活動、設計工具功能和工作流程開發模型。 然而，重新裝載之工作流程設計工具並不支援所有在 [!INCLUDE[net_v45](../../../includes/net-v45-md.md)] 中引進的新工作流程功能。 [!INCLUDE[crabout](../../../includes/crabout-md.md)]新功能所支援，請參閱[新 Workflow Foundation 4.5 功能，在重新裝載工作流程設計工具中支援](../../../docs/framework/windows-workflow-foundation/wf-features-in-the-rehosted-workflow-designer.md)。 [!INCLUDE[crabout](../../../includes/crabout-md.md)]移轉.NET 3.0 和.NET 3.5 工作流程應用程式使用最新的版本，請參閱[移轉指引](../../../docs/framework/windows-workflow-foundation/migration-guidance.md)。 本主題提供 [!INCLUDE[net_v45](../../../includes/net-v45-md.md)] 中引進之新工作流程功能的概觀。  
+# <a name="what39s-new-in-windows-workflow-foundation-in-net-45"></a>什麼&#39;s.NET 4.5 中 Windows Workflow Foundation 的新功能
+[!INCLUDE[wf](../../../includes/wf-md.md)] 中的 [!INCLUDE[net_v45](../../../includes/net-v45-md.md)] 引進許多新功能，如新增活動、設計工具功能和工作流程開發模型。 然而，重新裝載之工作流程設計工具並不支援所有在 [!INCLUDE[net_v45](../../../includes/net-v45-md.md)] 中引進的新工作流程功能。 [!INCLUDE[crabout](../../../includes/crabout-md.md)] 新功能所支援，請參閱[新 Workflow Foundation 4.5 功能，在重新裝載工作流程設計工具中支援](../../../docs/framework/windows-workflow-foundation/wf-features-in-the-rehosted-workflow-designer.md)。 [!INCLUDE[crabout](../../../includes/crabout-md.md)] 移轉.NET 3.0 和.NET 3.5 工作流程應用程式使用最新的版本，請參閱[移轉指引](../../../docs/framework/windows-workflow-foundation/migration-guidance.md)。 本主題提供 [!INCLUDE[net_v45](../../../includes/net-v45-md.md)] 中引進之新工作流程功能的概觀。  
   
 > [!WARNING]
 >  [!INCLUDE[wf2](../../../includes/wf2-md.md)] 引進的 [!INCLUDE[net_v45](../../../includes/net-v45-md.md)] 新功能並不適用於目標為舊版 Framework 的專案。 如果將目標為 [!INCLUDE[net_v45](../../../includes/net-v45-md.md)] 的專案重設為舊版 Framework，就可能發生若干問題。  
@@ -30,7 +31,7 @@ ms.lasthandoff: 12/22/2017
 >   
 >  **無法與目前的目標 framework 相容的檔案格式。若要轉換檔案格式，請明確儲存檔案。在您儲存檔案並重新開啟設計工具之後，此錯誤訊息就會消失運作。**  
   
-##  <a name="BKMK_Versioning"></a>工作流程版本控制  
+##  <a name="BKMK_Versioning"></a> 工作流程版本控制  
  [!INCLUDE[net_v45](../../../includes/net-v45-md.md)] 引進了若干新版本控制功能，其以新的 <xref:System.Activities.WorkflowIdentity> 類別為根據。 <xref:System.Activities.WorkflowIdentity> 提供工作流程應用程式作者一個機制，用於對持續性的工作流程執行個體與其定義。  
   
 -   使用 <xref:System.Activities.WorkflowApplication> 裝載的開發人員可以使用 <xref:System.Activities.WorkflowIdentity>，並存裝載多個版本的工作流程。 使用新的 <xref:System.Activities.WorkflowApplicationInstance> 類別即可載入持續性的工作流程執行個體，然後，主機可以在具現化 <xref:System.Activities.WorkflowApplicationInstance.DefinitionIdentity%2A> 時使用 <xref:System.Activities.WorkflowApplication> 以提供正確的工作流程定義版本。 如需詳細資訊，請參閱[使用 WorkflowIdentity 與版本控制](../../../docs/framework/windows-workflow-foundation/using-workflowidentity-and-versioning.md)和[How to： 主機的工作流程-並存的多個版本](../../../docs/framework/windows-workflow-foundation/how-to-host-multiple-versions-of-a-workflow-side-by-side.md)。  
@@ -39,15 +40,15 @@ ms.lasthandoff: 12/22/2017
   
 -   引進動態更新，可提供用於更新持續性工作流程執行個體定義的機制。 如需詳細資訊，請參閱[動態更新](../../../docs/framework/windows-workflow-foundation/dynamic-update.md)和[How to： 更新執行的工作流程執行個體定義](../../../docs/framework/windows-workflow-foundation/how-to-update-the-definition-of-a-running-workflow-instance.md)。  
   
--   提供 SqlWorkflowInstanceStoreSchemaUpgrade.sql 資料庫指令碼，以升級使用 [!INCLUDE[netfx40_short](../../../includes/netfx40-short-md.md)] 資料庫指令碼建立的持續性資料庫。 這個指令碼可更新 [!INCLUDE[netfx40_short](../../../includes/netfx40-short-md.md)] 持續性資料庫，以支援 [!INCLUDE[net_v45](../../../includes/net-v45-md.md)] 引進的新版本控制功能。 資料庫中持續性的工作流程執行個體會提供版本控制預設值，並可以參與並存執行和動態更新。 [!INCLUDE[crdefault](../../../includes/crdefault-md.md)][升級.NET Framework 4 持續性資料庫以支援工作流程版本控制](../../../docs/framework/windows-workflow-foundation/using-workflowidentity-and-versioning.md#UpdatingWF4PersistenceDatabases)。  
+-   提供 SqlWorkflowInstanceStoreSchemaUpgrade.sql 資料庫指令碼，以升級使用 [!INCLUDE[netfx40_short](../../../includes/netfx40-short-md.md)] 資料庫指令碼建立的持續性資料庫。 這個指令碼可更新 [!INCLUDE[netfx40_short](../../../includes/netfx40-short-md.md)] 持續性資料庫，以支援 [!INCLUDE[net_v45](../../../includes/net-v45-md.md)] 引進的新版本控制功能。 資料庫中持續性的工作流程執行個體會提供版本控制預設值，並可以參與並存執行和動態更新。 [!INCLUDE[crdefault](../../../includes/crdefault-md.md)] [升級.NET Framework 4 持續性資料庫以支援工作流程版本控制](../../../docs/framework/windows-workflow-foundation/using-workflowidentity-and-versioning.md#UpdatingWF4PersistenceDatabases)。  
   
-##  <a name="BKMK_NewActivities"></a>活動  
+##  <a name="BKMK_NewActivities"></a> 活動  
  內建活動程式庫包含新的活動及現有活動的新功能。  
   
-###  <a name="BKMK_NoPersistScope"></a>NoPersist 範圍  
+###  <a name="BKMK_NoPersistScope"></a> NoPersist 範圍  
  <xref:System.Activities.Statements.NoPersistScope> 是新的容器活動，當 NoPersistScope 的子活動還在執行時，可防止工作流程持續進行。 在不適合工作流程持續的情況下 (例如，當工作流程使用檔案控制代碼等特定電腦資源或在資料庫交易期間時)，此活動非常有用。 以往為防止在活動執行期間發生持續的狀況，就需要使用 <xref:System.Activities.NativeActivity> 的自訂 <xref:System.Activities.NoPersistHandle>。  
   
-###  <a name="BKMK_NewFlowchartCapabilities"></a>新的流程圖功能  
+###  <a name="BKMK_NewFlowchartCapabilities"></a> 新的流程圖功能  
  [!INCLUDE[net_v45](../../../includes/net-v45-md.md)] 的流程圖已更新，且具有下列新功能：  
   
 -   `DisplayName` 或 <xref:System.Activities.Statements.FlowSwitch%601> 活動的 <xref:System.Activities.Statements.FlowDecision> 屬性皆可編輯。 這會讓活動設計工具顯示更多關於活動用途的資訊。  
@@ -86,10 +87,10 @@ ms.lasthandoff: 12/22/2017
   
 8.  使用的單一組件[層級 2 透明度](http://aka.ms/Level2Transparency)不能用於在[!INCLUDE[netfx40_short](../../../includes/netfx40-short-md.md)]，[!INCLUDE[netfx_current_short](../../../includes/netfx-current-short-md.md)]完全信任和[!INCLUDE[netfx_current_short](../../../includes/netfx-current-short-md.md)]在部分信任中。  
   
-##  <a name="BKMK_NewDesignerCapabilites"></a>新的設計工具功能  
+##  <a name="BKMK_NewDesignerCapabilites"></a> 新的設計工具功能  
   
-###  <a name="BKMK_DesignerSearch"></a>設計工具搜尋  
- 為使大型工作流程更好管理，現在可透過關鍵字搜尋工作流程。 此功能僅適用於 [!INCLUDE[vs_current_short](../../../includes/vs-current-short-md.md)]，在重新裝載的設計工具中不適用。 您可使用兩種搜尋功能：  
+###  <a name="BKMK_DesignerSearch"></a> 設計工具搜尋  
+ 為使大型工作流程更好管理，現在可透過關鍵字搜尋工作流程。 這項功能僅供以 Visual Studio;無法在重新裝載設計工具中使用這項功能。 您可使用兩種搜尋功能：  
   
 -   快速尋找，請使用起始**Ctrl + F**或**編輯**，**尋找和取代**，**快速尋找**。  
   
@@ -97,7 +98,7 @@ ms.lasthandoff: 12/22/2017
   
  請注意，不支援 [取代] 功能。  
   
-####  <a name="BKMK_QuickFind"></a>快速尋找  
+####  <a name="BKMK_QuickFind"></a> 快速尋找  
  在工作流程中搜尋的關鍵字將比對下列設計工具項目：  
   
 -   <xref:System.Activities.Activity> 物件、<xref:System.Activities.Statements.FlowNode> 物件、<xref:System.Activities.Statements.State> 物件、<xref:System.Activities.Statements.Transition> 物件的屬性，及其他自訂流程控制項目。  
@@ -110,28 +111,28 @@ ms.lasthandoff: 12/22/2017
   
  快速尋找會在設計工具的 <xref:System.Activities.Presentation.Model.ModelItem> 樹狀結構中執行。 [快速尋找] 不會找出匯入工作流程定義中的命名空間。  
   
-####  <a name="BKMK_FindInFiles"></a>檔案中尋找  
+####  <a name="BKMK_FindInFiles"></a> 檔案中尋找  
  在工作流程中搜尋的關鍵字會比對工作流程檔案的實際內容。 搜尋結果會顯示在 Visual Studio 的 [尋找結果] 檢視窗格中。 按兩下結果項目會巡覽至工作流程設計工具中包含相符項目的活動。  
   
-###  <a name="BKMK_VariableDeleteContextMenu"></a>刪除變數和引數設計工具中的操作功能表項目  
+###  <a name="BKMK_VariableDeleteContextMenu"></a> 刪除變數和引數設計工具中的操作功能表項目  
  在 [!INCLUDE[netfx40_short](../../../includes/netfx40-short-md.md)] 中，只能使用鍵盤刪除設計工具中的變數和引數。 從 [!INCLUDE[net_v45](../../../includes/net-v45-md.md)] 開始，即可以使用內容功能表刪除變數和引數。  
   
  下列螢幕擷取畫面顯示變數和引數設計工具操作功能表。  
   
  ![變數和引數設計工具內容功能表](../../../docs/framework/windows-workflow-foundation/media/designercontextmenu.png "DesignerContextMenu")  
   
-###  <a name="BKMK_AutoSurround"></a>自動環繞與順序  
+###  <a name="BKMK_AutoSurround"></a> 自動環繞與順序  
  由於工作流程或特定容器活動 (如 <xref:System.Activities.Statements.NoPersistScope>) 只能包含單一主體活動，因此開發人員必須先刪除第一個活動、加入 <xref:System.Activities.Statements.Sequence> 活動，然後將這兩個活動同時加入序列活動中，才能加入第二個活動。 從 [!INCLUDE[net_v45](../../../includes/net-v45-md.md)] 開始，將第二個活動加入到設計工具介面時，會自動建立一個 `Sequence` 活動，以同時包含這兩個活動。  
   
  下列螢幕擷取畫面顯示 `WriteLine` 活動，此活動位在 `Body` 的 `NoPersistScope` 中。  
   
- ![自動 &#45; 環繞置放位置](../../../docs/framework/windows-workflow-foundation/media/autosurround1.png "AutoSurround1")  
+ ![自動&#45;環繞置放位置](../../../docs/framework/windows-workflow-foundation/media/autosurround1.png "AutoSurround1")  
   
  當第二個 `Sequence` 降到第一個之下時，下列螢幕擷取畫面會顯示在 `Body` 中自動建立的 `WriteLine` 活動。  
   
  ![自動建立序列活動](../../../docs/framework/windows-workflow-foundation/media/autosurround2.png "AutoSurround2")  
   
-###  <a name="BKMK_PanMode"></a>移動瀏覽模式  
+###  <a name="BKMK_PanMode"></a> 移動瀏覽模式  
  若要更輕鬆地在設計工具中巡覽大型工作流程，可以啟用移動瀏覽模式，讓開發人員能夠透過按一下與拖曳方式來移動工作流程的可見部分，而不需使用捲軸。 啟用移動瀏覽模式的按鈕位於設計工具的右下角。  
   
  下列螢幕擷取畫面顯示位於工作流程設計工具右下角的移動瀏覽按鈕。  
@@ -140,29 +141,29 @@ ms.lasthandoff: 12/22/2017
   
  您也可以使用滑鼠中鍵或空白鍵移動瀏覽工作流程設計工具。  
   
-###  <a name="BKMK_MultiSelect"></a>多重選取  
+###  <a name="BKMK_MultiSelect"></a> 多重選取  
  可以拖放矩形選取所要的活動 (未啟用移動瀏覽模式時)，或是按住 Ctrl 鍵並依序按一下所需的活動，同時選取多個活動。  
   
  您也可以在設計工具中拖放多個活動選取項目，或者使用操作功能表與選取項目互動。  
   
-###  <a name="BKMK_DocumentOutline"></a>工作流程項目的大綱檢視  
+###  <a name="BKMK_DocumentOutline"></a> 工作流程項目的大綱檢視  
  為簡化階層工作流程的巡覽功能，工作流程的元件會顯示在樹狀大綱檢閱中。 大綱檢視會顯示在**文件大綱**檢視。 若要開啟此檢視中，從頂端功能表中，選取**檢視**，**其他視窗**，**文件大綱**，或按 Ctrl + W、 u。 按一下大綱檢視中的節點，會巡覽至工作流程設計工具中對應的活動，且大綱檢視會更新以顯示在設計工具中選取的活動。  
   
  從完成的工作流程中的下列螢幕擷取畫面[入門教學課程](../../../docs/framework/windows-workflow-foundation/getting-started-tutorial.md)與循序工作流程大綱檢視會顯示。  
   
  ![大綱檢視中工作流程設計工具](../../../docs/framework/windows-workflow-foundation/media/outlineviewinworkflowdesigner.jpg "OutlineViewinWorkflowDesigner")  
   
-###  <a name="BKMK_CSharpExpressions"></a>C# 運算式  
+###  <a name="BKMK_CSharpExpressions"></a> C# 運算式  
  在 [!INCLUDE[net_v45](../../../includes/net-v45-md.md)] 之前，您只能使用 Visual Basic 來撰寫工作流程中的所有運算式。 在 [!INCLUDE[net_v45](../../../includes/net-v45-md.md)] 中，Visual Basic 運算式只用於使用 Visual Basic 建立的專案。 Visual C# 專案現在使用 C# 來撰寫運算式。 提供功能完整的 C# 運算式編輯器，可使用反白顯示文法及 Intellisense 等功能。 在舊版中使用 Visual Basic 運算式建立的 C# 工作流程專案仍可繼續運作。  
   
  C# 運算式會在設計階段進行驗證。 C# 運算式中的錯誤會用紅色的波浪底線標記。  
   
- [!INCLUDE[crabout](../../../includes/crabout-md.md)]C# 運算式，請參閱[C# 運算式](../../../docs/framework/windows-workflow-foundation/csharp-expressions.md)。  
+ [!INCLUDE[crabout](../../../includes/crabout-md.md)] C# 運算式，請參閱[C# 運算式](../../../docs/framework/windows-workflow-foundation/csharp-expressions.md)。  
   
-###  <a name="BKMK_Visibility"></a>進一步控制可見性的殼層列及標頭項目  
+###  <a name="BKMK_Visibility"></a> 進一步控制可見性的殼層列及標頭項目  
  在重新裝載的設計工具中，部分標準 UI 控制項可能對特定工作流程沒有意義，而且可能是關閉狀態。 在 [!INCLUDE[netfx40_short](../../../includes/netfx40-short-md.md)] 中，只有設計工具最下方的殼層列支援這項自訂功能。 在 [!INCLUDE[net_v45](../../../includes/net-v45-md.md)] 中，可以透過設定 <xref:System.Activities.Presentation.View.DesignerView.WorkflowShellHeaderItemsVisibility%2A> 與適當的 <xref:System.Activities.Presentation.View.ShellHeaderItemsVisibility> 值，來調整是否顯示設計工具最上方的殼層標頭項目。  
   
-###  <a name="BKMK_AutoConnect"></a>自動連接和自動插入流程圖和狀態機器工作流程  
+###  <a name="BKMK_AutoConnect"></a> 自動連接和自動插入流程圖和狀態機器工作流程  
  在 [!INCLUDE[netfx40_short](../../../includes/netfx40-short-md.md)] 中，流程圖工作流程的節點連接必須手動加入。 [!INCLUDE[net_v45](../../../includes/net-v45-md.md)] 的流程圖和狀態機器的節點具有自動連接點，在將活動從工具箱拖曳到設計工具介面上時，就會顯示自動連接點。 將活動拖曳到其中一點上，會自動加入該活動及必要的連接。  
   
  下列螢幕擷取畫面顯示從工具箱拖曳活動時顯示的附加點。  
@@ -171,9 +172,9 @@ ms.lasthandoff: 12/22/2017
   
  您也可以將活動拖曳到流程圖節點和狀態之間的連接，以在其他兩個節點之間自動插入該節點。 下列螢幕擷取畫面顯示反白顯示的連接線，在此可以從工具箱中拖曳及放置活動。  
   
- ![自動 &#45; 用於置放活動處理的插入](../../../docs/framework/windows-workflow-foundation/media/autoinsert.png "Autoinsert")  
+ ![自動&#45;用於置放活動的控制代碼插入](../../../docs/framework/windows-workflow-foundation/media/autoinsert.png "Autoinsert")  
   
-###  <a name="BKMK_Annotations"></a>設計工具標註  
+###  <a name="BKMK_Annotations"></a> 設計工具標註  
  為方便開發大型工作流程，設計工具現已支援加入標註，以追蹤設計流程。 您可以在活動、狀態、流程圖節點、變數和引數中加入標註。 下列螢幕擷取畫面顯示用來將標註加入設計工具的操作功能表。  
   
  ![註釋 內容功能表](../../../docs/framework/windows-workflow-foundation/media/annotationdialog.png "annotationdialog")  
@@ -181,28 +182,28 @@ ms.lasthandoff: 12/22/2017
 ### <a name="debugging-states"></a>偵錯狀態  
  在 [!INCLUDE[netfx40_short](../../../includes/netfx40-short-md.md)] 中，非活動項目不支援偵錯中斷點，因為它們不是執行單位。 此版本提供一種機制，可在 <xref:System.Activities.Statements.State> 物件中加入中斷點。 在 <xref:System.Activities.Statements.State> 中設定中斷點時，若在排定輸入活動或觸發程序前轉換狀態，就會中斷執行。  
   
-###  <a name="BKMK_ActivityDelegates"></a>定義與取用 ActivityDelegate 物件在設計工具  
+###  <a name="BKMK_ActivityDelegates"></a> 定義與取用 ActivityDelegate 物件在設計工具  
  [!INCLUDE[netfx40_short](../../../includes/netfx40-short-md.md)] 中的活動使用 <xref:System.Activities.ActivityDelegate> 物件來公開執行點，其中工作流程的其他部分可與工作流程的執行互動，但使用這些執行點通常需要許多程式碼。 在這個版本中，開發人員可以使用工作流程設計工具來定義及取用活動委派。 如需詳細資訊，請參閱[如何： 定義和使用工作流程設計工具中的活動委派](/visualstudio/workflow-designer/how-to-define-and-consume-activity-delegates-in-the-workflow-designer)。  
   
-###  <a name="BKMK_BuildTimeValidation"></a>建置階段驗證  
+###  <a name="BKMK_BuildTimeValidation"></a> 建置階段驗證  
  在 [!INCLUDE[netfx40_short](../../../includes/netfx40-short-md.md)] 中，不會將工作流程驗證錯誤計為工作流程專案建置期間的建置錯誤。 這表示，即使有工作流程驗證錯誤，仍可能成功建置工作流程專案。 在 [!INCLUDE[net_v45](../../../includes/net-v45-md.md)] 中，工作流程驗證錯誤會導致建置失敗。  
   
-###  <a name="BKMK_DesignTimeValidation"></a>設計階段背景驗證  
+###  <a name="BKMK_DesignTimeValidation"></a> 設計階段背景驗證  
  在 [!INCLUDE[netfx40_short](../../../includes/netfx40-short-md.md)] 中，會在前景處理序中驗證工作流程，因此若驗證處理序較複雜或耗時，可能會使 UI 停止回應。 現在，工作流程驗證會在背景執行緒中進行，因此不會封鎖 UI。  
   
-###  <a name="BKMK_ViewState"></a>位於不同的位置，在 XAML 檔案中的檢視狀態  
+###  <a name="BKMK_ViewState"></a> 位於不同的位置，在 XAML 檔案中的檢視狀態  
  在 [!INCLUDE[netfx40_short](../../../includes/netfx40-short-md.md)] 中，工作流程的檢視狀態資訊會跨 XAML 檔案儲存在許多不同的位置。 對於想要直接讀取 XAML 或撰寫程式碼來移除檢視狀態資訊的開發人員來說，這樣很不方便。 在[!INCLUDE[net_v45](../../../includes/net-v45-md.md)]，XAML 檔案中的檢視狀態資訊會序列化為 XAML 檔案中的個別項目。  開發人員可以輕鬆地找出和編輯檢視狀態資訊的活動，或完全移除檢視狀態。  
   
-###  <a name="BKMK_ExpressionExtensibility"></a>運算式擴充性  
+###  <a name="BKMK_ExpressionExtensibility"></a> 運算式擴充性  
  [!INCLUDE[net_v45](../../../includes/net-v45-md.md)] 有提供一種方法，讓開發人員能夠建立自己的運算式和運算式編寫經驗，並可插入至工作流程設計工具。  
   
-###  <a name="BKMK_BackwardCompatRehostedDesigner"></a>中，選擇重新裝載設計工具中的 Workflow 4.5 功能  
+###  <a name="BKMK_BackwardCompatRehostedDesigner"></a> 中，選擇重新裝載設計工具中的 Workflow 4.5 功能  
  為保持回溯相容性，重新裝載的設計工具預設中並未啟用包含在 [!INCLUDE[net_v45](../../../includes/net-v45-md.md)] 中的一些新功能。 這是為了確保現有的應用程式 (使用重新裝載設計工具) 不會因為更新至最新版本而中斷。 若要在重新裝載的設計工具中啟用新功能，請將 <xref:System.Activities.Presentation.DesignerConfigurationService.TargetFrameworkName%2A> 設為 ".NET Framework 4.5"，或者設定 <xref:System.Activities.Presentation.DesignerConfigurationService> 的個別成員以啟用個別功能。  
   
-##  <a name="BKMK_NewWFModels"></a>新的工作流程開發模型  
+##  <a name="BKMK_NewWFModels"></a> 新的工作流程開發模型  
  除了流程圖和循序工作流程開發模型外，此版本還包括狀態機器工作流程和合約優先工作流程服務。  
   
-###  <a name="BKMK_StateMachine"></a>狀態機器工作流程  
+###  <a name="BKMK_StateMachine"></a> 狀態機器工作流程  
  狀態機器工作流程組件的.NET Framework 4，版本 4.0.1 中引進[Microsoft.NET Framework 4 平台更新 1](http://go.microsoft.com/fwlink/?LinkID=215092)。 此更新包括若干新類別和活動，可讓開發人員建立狀態機器工作流程。 這些類別和活動在 [!INCLUDE[net_v45](../../../includes/net-v45-md.md)] 中皆已更新。 更新包括：  
   
 1.  可設定狀態中斷點的功能  
@@ -219,5 +220,5 @@ ms.lasthandoff: 12/22/2017
   
  如需有關如何建立狀態機器工作流程的詳細資訊，請參閱[狀態機器工作流程](../../../docs/framework/windows-workflow-foundation/state-machine-workflows.md)。  
   
-###  <a name="BKMK_ContractFirst"></a>合約優先工作流程開發  
- 合約優先工作流程開發工具可讓開發人員在 Code First 中設計合約，然後，只要在 [!INCLUDE[vs_current_short](../../../includes/vs-current-short-md.md)] 中按幾下滑鼠，就可在代表各作業的工具箱中自動產生活動範本。 之後，這些活動可以用於建立工作流程，以實作合約所定義的作業。 工作流程設計工具將會驗證工作流程服務，以確保這些作業都有進行實作且工作流程的簽章與合約簽章相符。 開發人員也可以在工作流程服務與實作合約的集合之間建立關聯。 如需合約優先工作流程服務開發的詳細資訊，請參閱[How to： 建立會取用現有服務合約的工作流程服務](../../../docs/framework/windows-workflow-foundation/how-to-create-a-workflow-service-that-consumes-an-existing-service-contract.md)。
+###  <a name="BKMK_ContractFirst"></a> 合約優先工作流程開發  
+ 合約優先工作流程開發工具可讓開發人員在中設計合約程式碼第一次，然後按幾下滑鼠，Visual Studio 中，自動產生活動範本 」 代表每個作業的工具箱中。 之後，這些活動可以用於建立工作流程，以實作合約所定義的作業。 工作流程設計工具將會驗證工作流程服務，以確保這些作業都有進行實作且工作流程的簽章與合約簽章相符。 開發人員也可以在工作流程服務與實作合約的集合之間建立關聯。 如需合約優先工作流程服務開發的詳細資訊，請參閱[How to： 建立會取用現有服務合約的工作流程服務](../../../docs/framework/windows-workflow-foundation/how-to-create-a-workflow-service-that-consumes-an-existing-service-contract.md)。

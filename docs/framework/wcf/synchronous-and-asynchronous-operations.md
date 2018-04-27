@@ -1,12 +1,13 @@
 ---
-title: "同步和非同步作業"
-ms.custom: 
+title: 同步和非同步作業
+ms.custom: ''
 ms.date: 03/30/2017
 ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.technology: dotnet-clr
-ms.tgt_pltfrm: 
+ms.reviewer: ''
+ms.suite: ''
+ms.technology:
+- dotnet-clr
+ms.tgt_pltfrm: ''
 ms.topic: article
 dev_langs:
 - csharp
@@ -15,16 +16,17 @@ helpviewer_keywords:
 - service contracts [WCF], synchronous operations
 - service contracts [WCF], asynchronous operations
 ms.assetid: db8a51cb-67e6-411b-9035-e5821ed350c9
-caps.latest.revision: "24"
+caps.latest.revision: 24
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.workload: dotnet
-ms.openlocfilehash: 3d108c8c84af2563e48a9f339df2a96f8218c742
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.workload:
+- dotnet
+ms.openlocfilehash: 123186dd5f0d63693c04c0857709292ce122f918
+ms.sourcegitcommit: 86adcc06e35390f13c1e372c36d2e044f1fc31ef
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 04/26/2018
 ---
 # <a name="synchronous-and-asynchronous-operations"></a>同步和非同步作業
 本主題討論實作和呼叫非同步服務作業。  
@@ -53,7 +55,7 @@ ms.lasthandoff: 12/22/2017
   
 -   如果您是叫用 ASP.NET 頁面內的作業，請使用非同步頁面。  
   
--   如果您是從任何為單一執行緒的應用程式叫用作業，例如 Windows Forms 或 [!INCLUDE[avalon1](../../../includes/avalon1-md.md)]。 使用事件架構非同步呼叫模型時，結果事件會在 UI 執行緒上引發，並將回應新增至應用程式中，而不需要您自己去處理多個執行緒。  
+-   如果您叫用作業，從任何為單一執行緒，例如 Windows Form 或 Windows Presentation Foundation (WPF) 應用程式。 使用事件架構非同步呼叫模型時，結果事件會在 UI 執行緒上引發，並將回應新增至應用程式中，而不需要您自己去處理多個執行緒。  
   
 -   一般而言，如果您在同步與非同步呼叫之間有選擇，請選擇非同步呼叫。  
   
@@ -167,7 +169,7 @@ Function DoWork(ByVal data As String, ByRef inout As String, _out outonly As out
 await simpleServiceClient.SampleMethodTaskAsync("hello, world");  
 ```  
   
- 使用事件架構非同步模式時，只需要加入事件處理常式以接收回應的通知 -- 結果事件會自動在使用者介面執行緒上引發。 若要使用此方法，同時指定**/async**和**/tcv:Version35**命令與選項[ServiceModel Metadata Utility Tool (Svcutil.exe)](../../../docs/framework/wcf/servicemodel-metadata-utility-tool-svcutil-exe.md)，如下列範例。  
+ 使用事件架構非同步模式時，只需要加入事件處理常式以接收回應的通知 -- 結果事件會自動在使用者介面執行緒上引發。 若要使用此方法，同時指定 **/async**和 **/tcv:Version35**命令與選項[ServiceModel Metadata Utility Tool (Svcutil.exe)](../../../docs/framework/wcf/servicemodel-metadata-utility-tool-svcutil-exe.md)，如下列範例。  
   
 ```  
 svcutil http://localhost:8000/servicemodelsamples/service/mex /async /tcv:Version35  
@@ -175,7 +177,7 @@ svcutil http://localhost:8000/servicemodelsamples/service/mex /async /tcv:Versio
   
  當完成時，Svcutil.exe 會產生 [!INCLUDE[indigo2](../../../includes/indigo2-md.md)] 用戶端類別，其中的事件基礎結構能夠呼叫應用程式去實作與指派事件處理常式，以接收回應並採取適當的動作。 如需完整範例，請參閱[如何： 非同步呼叫服務作業](../../../docs/framework/wcf/feature-details/how-to-call-wcf-service-operations-asynchronously.md)。  
   
- 但是，事件架構非同步呼叫只能在 [!INCLUDE[netfx35_long](../../../includes/netfx35-long-md.md)] 中使用。 此外，使用 [!INCLUDE[netfx35_short](../../../includes/netfx35-short-md.md)] 建立 [!INCLUDE[indigo2](../../../includes/indigo2-md.md)] 用戶端通道時，即使在 <xref:System.ServiceModel.ChannelFactory%601?displayProperty=nameWithType> 中，亦不支援此呼叫。 透過 [!INCLUDE[indigo2](../../../includes/indigo2-md.md)] 用戶端通道物件，您必須使用 <xref:System.IAsyncResult?displayProperty=nameWithType> 物件非同步的叫用您的作業。 若要使用此方法，指定**/async**命令選項加[ServiceModel Metadata Utility Tool (Svcutil.exe)](../../../docs/framework/wcf/servicemodel-metadata-utility-tool-svcutil-exe.md)，如下列範例所示。  
+ 但是，事件架構非同步呼叫只能在 [!INCLUDE[netfx35_long](../../../includes/netfx35-long-md.md)] 中使用。 此外，使用 [!INCLUDE[netfx35_short](../../../includes/netfx35-short-md.md)] 建立 [!INCLUDE[indigo2](../../../includes/indigo2-md.md)] 用戶端通道時，即使在 <xref:System.ServiceModel.ChannelFactory%601?displayProperty=nameWithType> 中，亦不支援此呼叫。 透過 [!INCLUDE[indigo2](../../../includes/indigo2-md.md)] 用戶端通道物件，您必須使用 <xref:System.IAsyncResult?displayProperty=nameWithType> 物件非同步的叫用您的作業。 若要使用此方法，指定 **/async**命令選項加[ServiceModel Metadata Utility Tool (Svcutil.exe)](../../../docs/framework/wcf/servicemodel-metadata-utility-tool-svcutil-exe.md)，如下列範例所示。  
   
 ```  
 svcutil http://localhost:8000/servicemodelsamples/service/mex /async   
@@ -191,8 +193,8 @@ svcutil http://localhost:8000/servicemodelsamples/service/mex /async
 ### <a name="event-based-asynchronous-clients-and-message-contracts"></a>事件架構非同步用戶端和訊息合約  
  事件架構非同步模型的設計方針指出，如果傳回多個值，則其中一個值會傳回做為 `Result` 屬性，其他值則傳回做為 <xref:System.EventArgs> 物件上的屬性。 這麼做的結果就是，如果用戶端使用事件架構非同步命令選項匯入中繼資料，且作業傳回多個值，則預設 <xref:System.EventArgs> 物件會傳回一個值做為 `Result` 屬性，而其餘則做為 <xref:System.EventArgs> 物件的屬性。  
   
- 如果您想要接收的訊息物件做為`Result`屬性，並沒有傳回的值物件，該物件上的屬性，請使用**/messageContract**命令選項。 這會產生一個簽章，此簽章會將回應訊息傳回做為 `Result` 物件的 <xref:System.EventArgs> 屬性。 然後，所有的內部傳回值都成為回應訊息物件的屬性。  
+ 如果您想要接收的訊息物件做為`Result`屬性，並沒有傳回的值物件，該物件上的屬性，請使用 **/messageContract**命令選項。 這會產生一個簽章，此簽章會將回應訊息傳回做為 `Result` 物件的 <xref:System.EventArgs> 屬性。 然後，所有的內部傳回值都成為回應訊息物件的屬性。  
   
-## <a name="see-also"></a>請參閱  
+## <a name="see-also"></a>另請參閱  
  <xref:System.ServiceModel.OperationContractAttribute.IsOneWay%2A>  
  <xref:System.ServiceModel.OperationContractAttribute.AsyncPattern%2A>

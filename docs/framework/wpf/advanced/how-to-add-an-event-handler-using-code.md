@@ -1,12 +1,13 @@
 ---
-title: "如何：使用程式碼加入事件處理常式"
-ms.custom: 
+title: 如何：使用程式碼加入事件處理常式
+ms.custom: ''
 ms.date: 03/30/2017
 ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.technology: dotnet-wpf
-ms.tgt_pltfrm: 
+ms.reviewer: ''
+ms.suite: ''
+ms.technology:
+- dotnet-wpf
+ms.tgt_pltfrm: ''
 ms.topic: article
 dev_langs:
 - csharp
@@ -15,16 +16,17 @@ helpviewer_keywords:
 - event handlers [WPF], adding
 - XAML [WPF], adding event handlers
 ms.assetid: 269c61e0-6bd9-4291-9bed-1c5ee66da486
-caps.latest.revision: "16"
+caps.latest.revision: 16
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.workload: dotnet
-ms.openlocfilehash: 3abcd441219e58df2e5a0d4b66447e255c6aabd4
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.workload:
+- dotnet
+ms.openlocfilehash: 4e7627589ff7e422c4ad3cd7a37fdc14c8a9c9f4
+ms.sourcegitcommit: 86adcc06e35390f13c1e372c36d2e044f1fc31ef
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 04/26/2018
 ---
 # <a name="how-to-add-an-event-handler-using-code"></a>如何：使用程式碼加入事件處理常式
 這個範例示範如何使用程式碼，將事件處理常式加入至項目。  
@@ -34,7 +36,7 @@ ms.lasthandoff: 12/22/2017
 ## <a name="example"></a>範例  
  下列範例會將新<xref:System.Windows.Controls.Button>到現有的頁面中一開始定義[!INCLUDE[TLA2#tla_xaml](../../../../includes/tla2sharptla-xaml-md.md)]。 實作事件處理常式方法的程式碼後置檔案，並再將該方法做為新的事件處理常式加入上<xref:System.Windows.Controls.Button>。  
   
- [!INCLUDE[TLA2#tla_cshrp](../../../../includes/tla2sharptla-cshrp-md.md)]範例會使用`+=`運算子來指派到的事件處理常式。 這是用來指派中的處理常式的相同運算子[!INCLUDE[TLA#tla_clr](../../../../includes/tlasharptla-clr-md.md)]事件處理模型。 [!INCLUDE[TLA#tla_visualb](../../../../includes/tlasharptla-visualb-md.md)]不支援此運算子來加入事件處理常式。 它需要使用兩種技術的其中一個：  
+ C# 範例會使用`+=`運算子來指派到的事件處理常式。 這是用來指派中的處理常式的相同運算子[!INCLUDE[TLA#tla_clr](../../../../includes/tlasharptla-clr-md.md)]事件處理模型。 Microsoft Visual Basic 不支援此運算子來加入事件處理常式。 它需要使用兩種技術的其中一個：  
   
 -   使用<xref:System.Windows.UIElement.AddHandler%2A>方法搭配`AddressOf`運算子，以便參考的事件處理常式實作。  
   
@@ -48,6 +50,6 @@ ms.lasthandoff: 12/22/2017
 > [!NOTE]
 >  加入事件處理常式中一開始剖析[!INCLUDE[TLA2#tla_xaml](../../../../includes/tla2sharptla-xaml-md.md)]頁面是更簡單。 在您要加入事件處理常式物件的項目，加入的屬性符合您想要處理之事件的名稱。 然後指定該屬性的值做為您的程式碼後置檔案中定義的事件處理常式方法名稱[!INCLUDE[TLA2#tla_xaml](../../../../includes/tla2sharptla-xaml-md.md)]頁面。 如需詳細資訊，請參閱[XAML 概觀 (WPF)](../../../../docs/framework/wpf/advanced/xaml-overview-wpf.md)或[路由傳送事件概觀](../../../../docs/framework/wpf/advanced/routed-events-overview.md)。  
   
-## <a name="see-also"></a>請參閱  
+## <a name="see-also"></a>另請參閱  
  [路由事件概觀](../../../../docs/framework/wpf/advanced/routed-events-overview.md)  
  [HOW-TO 主題](../../../../docs/framework/wpf/advanced/events-how-to-topics.md)

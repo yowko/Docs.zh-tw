@@ -1,11 +1,12 @@
 ---
 title: Comparison Operators in Visual Basic
-ms.custom: 
+ms.custom: ''
 ms.date: 07/20/2015
 ms.prod: .net
-ms.reviewer: 
-ms.suite: 
-ms.technology: devlang-visual-basic
+ms.reviewer: ''
+ms.suite: ''
+ms.technology:
+- devlang-visual-basic
 ms.topic: article
 helpviewer_keywords:
 - comparison operators [Visual Basic], comparing strings
@@ -21,32 +22,32 @@ helpviewer_keywords:
 - comparison operators [Visual Basic], comparing numeric values
 - operators [Visual Basic], comparison
 ms.assetid: 0b570339-5407-474f-8421-e183a8b303ee
-caps.latest.revision: "13"
+caps.latest.revision: 13
 author: dotnet-bot
 ms.author: dotnetcontent
-ms.openlocfilehash: d8bf37ad30f410251f18aea6747734fc24d42cd0
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.openlocfilehash: 77c5520be63d6d05cc4b895b99b466cd8e486f6a
+ms.sourcegitcommit: 86adcc06e35390f13c1e372c36d2e044f1fc31ef
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 04/26/2018
 ---
 # <a name="comparison-operators-in-visual-basic"></a>Comparison Operators in Visual Basic
 比較運算子比較兩個運算式，並傳回`Boolean`值，表示其值的關聯性。 比較數值、 運算子、 用於比較字串和運算子比較物件有運算子。 本文件討論所有的三種類型的運算子。  
   
 ## <a name="comparing-numeric-values"></a>比較數值  
- [!INCLUDE[vbprvb](~/includes/vbprvb-md.md)]比較數值資料，請使用六個數值的比較運算子。 每個運算子會做為運算元評估為數值的兩個運算式。 下表列出的運算子，並顯示每個範例。  
+ Visual Basic 會比較數值資料，請使用六個數值的比較運算子。 每個運算子會做為運算元評估為數值的兩個運算式。 下表列出的運算子，並顯示每個範例。  
   
 |運算子|測試的條件|範例|  
 |--------------|----------------------|--------------|  
-|`=`（相等）|第二個值是第一個運算式相等的值嗎？|`23`   `=`   `33    ' False`<br /><br /> `23`   `=`   `23    ' True`<br /><br /> `23`   `=`   `12    ' False`|  
-|`<>`（不等比較）|是第一個運算式的值等於第二個值？|`23`   `<>`   `33    ' True`<br /><br /> `23`   `<>`   `23    ' False`<br /><br /> `23`   `<>`   `12    ' True`|  
-|`<`（小於）|第一個運算式的值大於或等於第二個值是？|`23`   `<`   `33    ' True`<br /><br /> `23`   `<`   `23    ' False`<br /><br /> `23`   `<`   `12    ' False`|  
-|`>`（大於）|是第一個運算式的值大於第二個值？|`23`   `>`   `33    ' False`<br /><br /> `23`   `>`   `23    ' False`<br /><br /> `23`   `>`   `12    ' True`|  
-|`<=`（小於或等於）|小於或等於第二個值是第一個運算式的值？|`23`   `<=`   `33    ' True`<br /><br /> `23`   `<=`   `23    ' True`<br /><br /> `23`   `<=`   `12    ' False`|  
-|`>=`（大於或等於）|第一個運算式的值是大於或等於第二個值？|`23`   `>=`   `33    ' False`<br /><br /> `23`   `>=`   `23    ' True`<br /><br /> `23`   `>=`   `12    ' True`|  
+|`=` （相等）|第二個值是第一個運算式相等的值嗎？|`23`   `=`   `33    ' False`<br /><br /> `23`   `=`   `23    ' True`<br /><br /> `23`   `=`   `12    ' False`|  
+|`<>` （不等比較）|是第一個運算式的值等於第二個值？|`23`   `<>`   `33    ' True`<br /><br /> `23`   `<>`   `23    ' False`<br /><br /> `23`   `<>`   `12    ' True`|  
+|`<` （小於）|第一個運算式的值大於或等於第二個值是？|`23`   `<`   `33    ' True`<br /><br /> `23`   `<`   `23    ' False`<br /><br /> `23`   `<`   `12    ' False`|  
+|`>` （大於）|是第一個運算式的值大於第二個值？|`23`   `>`   `33    ' False`<br /><br /> `23`   `>`   `23    ' False`<br /><br /> `23`   `>`   `12    ' True`|  
+|`<=` （小於或等於）|小於或等於第二個值是第一個運算式的值？|`23`   `<=`   `33    ' True`<br /><br /> `23`   `<=`   `23    ' True`<br /><br /> `23`   `<=`   `12    ' False`|  
+|`>=` （大於或等於）|第一個運算式的值是大於或等於第二個值？|`23`   `>=`   `33    ' False`<br /><br /> `23`   `>=`   `23    ' True`<br /><br /> `23`   `>=`   `12    ' True`|  
   
 ## <a name="comparing-strings"></a>比較字串  
- [!INCLUDE[vbprvb](~/includes/vbprvb-md.md)]比較字串時，使用[Like 運算子](../../../../visual-basic/language-reference/operators/like-operator.md)以及數值比較運算子。 `Like`運算子可讓您指定的模式。 字串接著會比較模式中，以及如果相符，則結果是`True`。 否則，結果就是`False`。 數值運算子可讓您比較`String`值根據其排序次序，如下列範例所示。  
+ Visual Basic 中比較字串時，使用[Like 運算子](../../../../visual-basic/language-reference/operators/like-operator.md)以及數值比較運算子。 `Like`運算子可讓您指定的模式。 字串接著會比較模式中，以及如果相符，則結果是`True`。 否則，結果就是`False`。 數值運算子可讓您比較`String`值根據其排序次序，如下列範例所示。  
   
  `"73" < "9"`  
   
@@ -67,7 +68,7 @@ ms.lasthandoff: 11/21/2017
  排序順序根據二進位比較或根據設定的文字比較`Option Compare`。 如需詳細資訊，請參閱[選項比較陳述式](../../../../visual-basic/language-reference/statements/option-compare-statement.md)。  
   
 ## <a name="comparing-objects"></a>比較物件  
- [!INCLUDE[vbprvb](~/includes/vbprvb-md.md)]比較兩個物件參考變數[Is 運算子](../../../../visual-basic/language-reference/operators/is-operator.md)和[IsNot 運算子](../../../../visual-basic/language-reference/operators/isnot-operator.md)。 您可以使用這些運算子來判斷兩個參考變數參考相同的物件執行個體。 下列範例將說明這點。  
+ Visual Basic 會比較兩個物件參考變數與[Is 運算子](../../../../visual-basic/language-reference/operators/is-operator.md)和[IsNot 運算子](../../../../visual-basic/language-reference/operators/isnot-operator.md)。 您可以使用這些運算子來判斷兩個參考變數參考相同的物件執行個體。 下列範例將說明這點。  
   
  [!code-vb[VbVbalrOperators#65](../../../../visual-basic/language-reference/operators/codesnippet/VisualBasic/comparison-operators_1.vb)]  
   

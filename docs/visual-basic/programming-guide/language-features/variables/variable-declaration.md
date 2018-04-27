@@ -1,12 +1,13 @@
 ---
-title: "Visual Basic 中的變數宣告"
-ms.custom: 
+title: Visual Basic 中的變數宣告
+ms.custom: ''
 ms.date: 07/20/2015
 ms.prod: .net
-ms.reviewer: 
-ms.suite: 
-ms.technology: devlang-visual-basic
-ms.tgt_pltfrm: 
+ms.reviewer: ''
+ms.suite: ''
+ms.technology:
+- devlang-visual-basic
+ms.tgt_pltfrm: ''
 ms.topic: article
 helpviewer_keywords:
 - variables [Visual Basic], declaring
@@ -24,14 +25,14 @@ helpviewer_keywords:
 - local variables [Visual Basic], declarations
 - scope [Visual Basic], variables
 ms.assetid: d8f10226-92b1-480f-9f53-df377b2d7e15
-caps.latest.revision: "31"
+caps.latest.revision: 31
 author: dotnet-bot
 ms.author: dotnetcontent
-ms.openlocfilehash: 7f7b924aed1da7db816aa5c11239e301428770b7
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.openlocfilehash: 8edd0b65b08efd437cc35e8f58ed7ed423736920
+ms.sourcegitcommit: 86adcc06e35390f13c1e372c36d2e044f1fc31ef
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 04/26/2018
 ---
 # <a name="variable-declaration-in-visual-basic"></a>Visual Basic 中的變數宣告
 您宣告變數，以指定其名稱和特性。 變數宣告陳述式是[Dim 陳述式](../../../../visual-basic/language-reference/statements/dim-statement.md)。 其位置和內容會決定變數的特性。  
@@ -41,7 +42,7 @@ ms.lasthandoff: 11/21/2017
 ## <a name="declaration-levels"></a>宣告層級  
   
 ### <a name="local-and-member-variables"></a>本機和成員變數  
- A*區域變數*是其中一個程序內宣告。 A*成員變數*隸屬[!INCLUDE[vbprvb](~/includes/vbprvb-md.md)]輸入; 它在模組層級，在類別、 結構或模組，但不是在任何程序內部的類別、 結構或模組內宣告。  
+ A*區域變數*是其中一個程序內宣告。 A*成員變數*成員的 Visual Basic 型別; 它在模組層級，在類別、 結構或模組，但不是在任何程序內部的類別、 結構或模組內宣告。  
   
 ### <a name="shared-and-instance-variables"></a>共用與執行個體變數  
  在類別或結構中，成員變數的類別目錄會取決於共用。 如果它以宣告[共用](../../../../visual-basic/language-reference/modifiers/shared.md)關鍵字，它是*共用的變數*，而且它存在於類別或結構的所有執行個體之間共用的單一複本。  
@@ -51,15 +52,15 @@ ms.lasthandoff: 11/21/2017
 ## <a name="declaring-data-type"></a>宣告的資料類型  
  [為](../../../../visual-basic/language-reference/statements/as-clause.md)宣告陳述式中的子句可讓您定義資料型別或物件類型所宣告的變數。 您可以指定任何下列類型的變數：  
   
--   基本資料類型，例如`Boolean`， `Long`，或`Decimal`  
+-   基本資料類型，例如`Boolean`， `Long`，或 `Decimal`  
   
 -   複合資料類型，例如陣列或結構  
   
 -   物件類型或類別，定義您的應用程式或其他應用程式  
   
--   A[!INCLUDE[dnprdnshort](~/includes/dnprdnshort-md.md)]類別，例如<xref:System.Windows.Forms.Label>或<xref:System.Windows.Forms.TextBox>  
+-   A[!INCLUDE[dnprdnshort](~/includes/dnprdnshort-md.md)]類別，例如<xref:System.Windows.Forms.Label>或 <xref:System.Windows.Forms.TextBox>  
   
--   介面類型，例如<xref:System.IComparable>或<xref:System.IDisposable>  
+-   介面類型，例如<xref:System.IComparable>或 <xref:System.IDisposable>  
   
  您可以宣告一個陳述式中的數個變數，而不必重複的資料類型。 下列陳述式之變數`i`， `j`，和`k`宣告為類型`Integer`，`l`和`m`為`Long`，和`x`和`y`為`Single`:  
   

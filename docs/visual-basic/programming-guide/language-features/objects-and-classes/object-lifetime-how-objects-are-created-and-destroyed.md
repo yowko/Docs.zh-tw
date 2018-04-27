@@ -32,11 +32,11 @@ ms.assetid: f1ee8458-b156-44e0-9a8a-5dd171648cd8
 caps.latest.revision: 22
 author: dotnet-bot
 ms.author: dotnetcontent
-ms.openlocfilehash: f985d6bf7b26ec22d6e533eae1f1d7ea0682e56c
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.openlocfilehash: d93d0c94bdbeb93e0527ef6b5c6248b3b580599f
+ms.sourcegitcommit: 86adcc06e35390f13c1e372c36d2e044f1fc31ef
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 04/26/2018
 ---
 # <a name="object-lifetime-how-objects-are-created-and-destroyed-visual-basic"></a>物件存留期：物件的建立和終結 (Visual Basic)
 您可以使用 `New` 關鍵字來建立類別的執行個體，即物件。 在使用新物件之前，經常必須在新物件上執行初始設定工作。 常見的初始設定工作包括開啟檔案、連線到資料庫，以及讀取登錄機碼的值。 Visual Basic 控制項的新物件使用呼叫的程序初始化*建構函式*（允許控制初始設定的特殊方法）。  
@@ -44,10 +44,10 @@ ms.lasthandoff: 11/21/2017
  物件離開範圍之後，它會被通用語言執行平台 (CLR) 所釋放。 Visual Basic 控制使用呼叫的程序的系統資源的釋放*解構函式*。 建構函式與解構函式一起支援建立穩固和可預測的類別庫。  
   
 ## <a name="using-constructors-and-destructors"></a>使用建構函式和解構函式  
- 建構函式和解構函式控制物件的建立和解構。 Visual Basic 中的 `Sub New` 和 `Sub Finalize` 程序會初始設定並終結物件；它們取代 `Class_Initialize` 6.0 及舊版中所用的 `Class_Terminate` 和 [!INCLUDE[vbprvb](~/includes/vbprvb-md.md)] 方法。  
+ 建構函式和解構函式控制物件的建立和解構。 `Sub New`和`Sub Finalize`在 Visual Basic 中的程序初始設定並終結物件; 它們取代`Class_Initialize`和`Class_Terminate`Visual Basic 6.0 及舊版中使用的方法。  
   
 ### <a name="sub-new"></a>Sub New  
- `Sub New` 建構函式只能在建立類別時執行一次。 不能從相同類別或衍生類別中的其他建構函式的程式碼的第一行以外的任何地方明確呼叫它。 此外，`Sub New` 方法中的程式碼永遠會在類別中的任何其他程式碼執行之前執行。 [!INCLUDE[vbprvblong](~/includes/vbprvblong-md.md)]和更新版本會隱含地建立`Sub New`建構函式在執行階段，如果您未明確定義`Sub New`類別的程序。  
+ `Sub New` 建構函式只能在建立類別時執行一次。 不能從相同類別或衍生類別中的其他建構函式的程式碼的第一行以外的任何地方明確呼叫它。 此外，`Sub New` 方法中的程式碼永遠會在類別中的任何其他程式碼執行之前執行。 [!INCLUDE[vbprvblong](~/includes/vbprvblong-md.md)] 和更新版本會隱含地建立`Sub New`建構函式在執行階段，如果您未明確定義`Sub New`類別的程序。  
   
  若要建立類別的建構函式，請在類別定義中的任何地方建立名為 `Sub New` 的程序。 若要建立參數化建構函式，請指定 `Sub New` 之引數的名稱和資料類型，就像您會為任何其他程序指定引數一樣，如下列程式碼所示：  
   
@@ -57,7 +57,7 @@ ms.lasthandoff: 11/21/2017
   
  [!code-vb[VbVbalrOOP#116](../../../../visual-basic/misc/codesnippet/VisualBasic/object-lifetime-how-objects-are-created-and-destroyed_2.vb)]  
   
- 當您定義衍生自另一個類別的類別時，建構函式的第一行必須是基底類別建構函式的呼叫，除非基底類別具有不帶任何參數的可存取建構函式。 例如，包含上述建構函式的基底類別呼叫就是 `MyBase.New(s)`。 否則，`MyBase.New` 是選擇性的，[!INCLUDE[vbprvb](~/includes/vbprvb-md.md)] 執行階段會隱含呼叫它。  
+ 當您定義衍生自另一個類別的類別時，建構函式的第一行必須是基底類別建構函式的呼叫，除非基底類別具有不帶任何參數的可存取建構函式。 例如，包含上述建構函式的基底類別呼叫就是 `MyBase.New(s)`。 否則，`MyBase.New`是選擇性的和 Visual Basic 執行階段會隱含呼叫它。  
   
  撰寫程式碼以呼叫父物件的建構函式之後，您可以將任何其他初始設定程式碼加入 `Sub New` 程序。 `Sub New` 在被當做參數化建構函式呼叫時，可以接受引數。 會從呼叫建構函式的程序傳遞這些參數，例如，`Dim AnObject As New ThisClass(X)`。  
   

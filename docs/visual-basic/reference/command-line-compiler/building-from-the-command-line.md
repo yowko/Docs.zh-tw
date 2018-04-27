@@ -19,19 +19,19 @@ helpviewer_keywords:
 - command-line compilers [Visual Basic], Visual Basic
 - command line [Visual Basic], Visual Basic
 ms.assetid: e61947e9-a42e-4717-a699-5f70a98cdd03
-caps.latest.revision: ''
+caps.latest.revision: 13
 author: dotnet-bot
 ms.author: dotnetcontent
-ms.openlocfilehash: c3f71a84feffce46bafd92ff701a0250c059a82e
-ms.sourcegitcommit: 498799639937c89de777361aab74261efe7b79ea
+ms.openlocfilehash: 1fd4054838925267647986a5166fd88037b17fae
+ms.sourcegitcommit: 86adcc06e35390f13c1e372c36d2e044f1fc31ef
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 03/22/2018
+ms.lasthandoff: 04/26/2018
 ---
 # <a name="building-from-the-command-line-visual-basic"></a>從命令列建置 (Visual Basic)
-A[!INCLUDE[vbprvb](~/includes/vbprvb-md.md)]專案由一或多個不同的來源檔案所組成。 在稱為編譯過程中，這些檔案會回到一起成單一套件，可以為應用程式執行單一可執行檔。  
+Visual Basic 專案是由一或多個不同的來源檔案所組成。 在稱為編譯過程中，這些檔案會回到一起成單一套件，可以為應用程式執行單一可執行檔。  
   
- [!INCLUDE[vbprvb](~/includes/vbprvb-md.md)] 提供命令列編譯器編譯程式從替代[!INCLUDE[vsprvs](~/includes/vsprvs-md.md)]整合式的開發環境 (IDE)。 命令列編譯器可供您在不需要完整的 IDE 功能的情況 — 例如，當您使用或撰寫具有有限的系統記憶體或儲存空間的電腦。  
+ Visual Basic 提供命令列編譯器編譯程式從替代[!INCLUDE[vsprvs](~/includes/vsprvs-md.md)]整合式的開發環境 (IDE)。 命令列編譯器可供您在不需要完整的 IDE 功能的情況 — 例如，當您使用或撰寫具有有限的系統記憶體或儲存空間的電腦。  
   
   若要編譯原始程式檔從[!INCLUDE[vsprvs](~/includes/vsprvs-md.md)]IDE 中，選擇**建置**命令**建置**功能表。  
   

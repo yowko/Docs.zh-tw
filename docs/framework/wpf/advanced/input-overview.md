@@ -1,12 +1,13 @@
 ---
-title: "輸入概觀"
-ms.custom: 
+title: 輸入概觀
+ms.custom: ''
 ms.date: 03/30/2017
 ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.technology: dotnet-wpf
-ms.tgt_pltfrm: 
+ms.reviewer: ''
+ms.suite: ''
+ms.technology:
+- dotnet-wpf
+ms.tgt_pltfrm: ''
 ms.topic: article
 dev_langs:
 - csharp
@@ -31,16 +32,17 @@ helpviewer_keywords:
 - focus [WPF]
 - mouse position [WPF]
 ms.assetid: ee5258b7-6567-415a-9b1c-c0cbe46e79ef
-caps.latest.revision: "50"
+caps.latest.revision: 50
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.workload: dotnet
-ms.openlocfilehash: 910eed7c1786730a3ffce5add995e543021f4759
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.workload:
+- dotnet
+ms.openlocfilehash: b10890cc433e1adf72b7e26c91e919bd239942b8
+ms.sourcegitcommit: 86adcc06e35390f13c1e372c36d2e044f1fc31ef
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 04/26/2018
 ---
 # <a name="input-overview"></a>輸入概觀
 <a name="introduction"></a> [!INCLUDE[TLA#tla_winclient](../../../../includes/tlasharptla-winclient-md.md)] 子系統提供一個功能強大的 [!INCLUDE[TLA#tla_api](../../../../includes/tlasharptla-api-md.md)]，以取得來自各種裝置的輸入，包括滑鼠、鍵盤、觸控和手寫筆。 本主題描述 [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] 所提供的服務，以及說明輸入系統的架構。  
@@ -70,7 +72,7 @@ ms.lasthandoff: 12/22/2017
  <xref:System.Windows.Input.Mouse>和<xref:System.Windows.Input.Keyboard>類別涵蓋整個本概觀中詳述。  
   
 ### <a name="stylus-input"></a>手寫筆輸入  
- [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)]擁有其整合式支援<xref:System.Windows.Input.Stylus>。  <xref:System.Windows.Input.Stylus>是畫筆輸入所做的熱門[!INCLUDE[TLA#tla_tpc](../../../../includes/tlasharptla-tpc-md.md)]。  [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] 應用程式可以使用滑鼠 [!INCLUDE[TLA2#tla_api](../../../../includes/tla2sharptla-api-md.md)] 來將手寫筆視為滑鼠，但是 [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] 也會公開手寫筆裝置抽象概念，其使用的模型類似鍵盤和滑鼠。  所有手寫筆相關的 [!INCLUDE[TLA2#tla_api#plural](../../../../includes/tla2sharptla-apisharpplural-md.md)] 都會包含 "Stylus" 這個單字。  
+ [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] 擁有其整合式支援<xref:System.Windows.Input.Stylus>。  <xref:System.Windows.Input.Stylus>是畫筆輸入所做的熱門[!INCLUDE[TLA#tla_tpc](../../../../includes/tlasharptla-tpc-md.md)]。  [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] 應用程式可以使用滑鼠 [!INCLUDE[TLA2#tla_api](../../../../includes/tla2sharptla-api-md.md)] 來將手寫筆視為滑鼠，但是 [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] 也會公開手寫筆裝置抽象概念，其使用的模型類似鍵盤和滑鼠。  所有手寫筆相關的 [!INCLUDE[TLA2#tla_api#plural](../../../../includes/tla2sharptla-apisharpplural-md.md)] 都會包含 "Stylus" 這個單字。  
   
  因為手寫筆可以當作滑鼠，所以只支援滑鼠輸入的應用程式仍然可以自動取得某種程度的手寫筆支援。 以這種方式使用手寫筆時，應用程式可以處理適當的手寫筆事件，然後處理對應的滑鼠事件。 此外，還可以透過手寫筆裝置抽象概念來取得筆跡輸入這類較高階服務。  如需將筆跡作為輸入的詳細資訊，請參閱[筆跡入門](../../../../docs/framework/wpf/advanced/getting-started-with-ink.md)。  
   
@@ -84,7 +86,7 @@ ms.lasthandoff: 12/22/2017
   
 <a name="handling_input_events"></a>   
 ## <a name="handling-input-events"></a>處理輸入事件  
- 若要接收項目的輸入，事件處理常式必須與該特定事件建立關聯。  在 [!INCLUDE[TLA2#tla_xaml](../../../../includes/tla2sharptla-xaml-md.md)] 中，這相當簡單︰您可以參考事件名稱作為將接聽此事件之項目的屬性。  然後，您可以根據委派，將屬性的值設定為您所定義之事件處理常式的名稱。  事件處理常式必須使用 [!INCLUDE[TLA#tla_cshrp](../../../../includes/tlasharptla-cshrp-md.md)] 這類程式碼進行撰寫，而且可以包含在程式碼後置檔案中。  
+ 若要接收項目的輸入，事件處理常式必須與該特定事件建立關聯。  在 [!INCLUDE[TLA2#tla_xaml](../../../../includes/tla2sharptla-xaml-md.md)] 中，這相當簡單︰您可以參考事件名稱作為將接聽此事件之項目的屬性。  然後，您可以根據委派，將屬性的值設定為您所定義之事件處理常式的名稱。  此事件處理常式必須撰寫程式碼，例如 C# 中，而且可以包含在程式碼後置檔案中。  
   
  作業系統報告在鍵盤焦點位於項目時所發生的按鍵動作時，會發生鍵盤事件。 滑鼠和手寫筆事件各分為兩個分類︰報告相對於項目之指標位置變更的事件，以及報告裝置按鈕狀態變更的事件。  
   
@@ -330,7 +332,7 @@ ms.lasthandoff: 12/22/2017
 ### <a name="keyboard-focus"></a>鍵盤焦點  
  鍵盤焦點是指接收鍵盤輸入的項目。  整個桌面只能有一個項目有鍵盤焦點。  在[!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)]，具有鍵盤焦點的項目會有<xref:System.Windows.IInputElement.IsKeyboardFocused%2A>設`true`。  靜態<xref:System.Windows.Input.Keyboard>方法<xref:System.Windows.Input.Keyboard.FocusedElement%2A>傳回目前擁有鍵盤焦點的項目。  
   
- 可以取得鍵盤焦點，按下 tab 鍵的項目，或按一下滑鼠按一下特定項目，例如<xref:System.Windows.Controls.TextBox>。  鍵盤焦點，還可以取得以程式設計方式使用<xref:System.Windows.Input.Keyboard.Focus%2A>方法<xref:System.Windows.Input.Keyboard>類別。  <xref:System.Windows.Input.Keyboard.Focus%2A>嘗試將指定的項目鍵盤焦點。  傳回的項目<xref:System.Windows.Input.Keyboard.Focus%2A>是目前擁有鍵盤焦點的項目。  
+ 可以取得鍵盤焦點，按下 tab 鍵的項目，或按一下滑鼠按一下特定項目，例如<xref:System.Windows.Controls.TextBox>。  鍵盤焦點，還可以取得以程式設計方式使用<xref:System.Windows.Input.Keyboard.Focus%2A>方法<xref:System.Windows.Input.Keyboard>類別。  <xref:System.Windows.Input.Keyboard.Focus%2A> 嘗試將指定的項目鍵盤焦點。  傳回的項目<xref:System.Windows.Input.Keyboard.Focus%2A>是目前擁有鍵盤焦點的項目。  
   
  若要取得鍵盤焦點的項目順序<xref:System.Windows.UIElement.Focusable%2A>屬性和<xref:System.Windows.UIElement.IsVisible%2A>屬性必須設為**true**。  部分類別，例如<xref:System.Windows.Controls.Panel>，有<xref:System.Windows.UIElement.Focusable%2A>設`false`預設; 因此，您可能要將此屬性設定為`true`如果您想要能夠取得焦點的項目。  
   
@@ -375,11 +377,11 @@ ms.lasthandoff: 12/22/2017
 ## <a name="commands"></a>命令  
  命令比裝置輸入更接近語意層級的輸入處理。  命令是簡單指示詞，例如 `Cut`、`Copy`、`Paste` 或 `Open`。  命令適用於將命令邏輯集中。  在同一個命令可能會存取從<xref:System.Windows.Controls.Menu>上<xref:System.Windows.Controls.ToolBar>，或透過鍵盤快速鍵。 命令也提供一種機制，可在命令變成無法使用時停用控制項。  
   
- <xref:System.Windows.Input.RoutedCommand>是[!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)]實作<xref:System.Windows.Input.ICommand>。  當<xref:System.Windows.Input.RoutedCommand>執行時，<xref:System.Windows.Input.CommandManager.PreviewExecuted>和<xref:System.Windows.Input.CommandManager.Executed>哪些通道和透過項目樹狀結構的泡泡，例如其他輸入的命令目標上所引發的事件。  如果未設定命令目標，則具有鍵盤焦點的項目就是命令目標。  執行該命令的邏輯會附加至<xref:System.Windows.Input.CommandBinding>。  當<xref:System.Windows.Input.CommandManager.Executed>事件到達<xref:System.Windows.Input.CommandBinding>該特定命令，<xref:System.Windows.Input.ExecutedRoutedEventHandler>上<xref:System.Windows.Input.CommandBinding>呼叫。  此處理常式會執行命令的動作。  
+ <xref:System.Windows.Input.RoutedCommand> 是[!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)]實作<xref:System.Windows.Input.ICommand>。  當<xref:System.Windows.Input.RoutedCommand>執行時，<xref:System.Windows.Input.CommandManager.PreviewExecuted>和<xref:System.Windows.Input.CommandManager.Executed>哪些通道和透過項目樹狀結構的泡泡，例如其他輸入的命令目標上所引發的事件。  如果未設定命令目標，則具有鍵盤焦點的項目就是命令目標。  執行該命令的邏輯會附加至<xref:System.Windows.Input.CommandBinding>。  當<xref:System.Windows.Input.CommandManager.Executed>事件到達<xref:System.Windows.Input.CommandBinding>該特定命令，<xref:System.Windows.Input.ExecutedRoutedEventHandler>上<xref:System.Windows.Input.CommandBinding>呼叫。  此處理常式會執行命令的動作。  
   
  如需命令的詳細資訊，請參閱[命令概觀](../../../../docs/framework/wpf/advanced/commanding-overview.md)。  
   
- [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)]提供程式庫，其中包含的常見命令<xref:System.Windows.Input.ApplicationCommands>， <xref:System.Windows.Input.MediaCommands>， <xref:System.Windows.Input.ComponentCommands>， <xref:System.Windows.Input.NavigationCommands>，和<xref:System.Windows.Documents.EditingCommands>，或者您也可以定義自己。  
+ [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] 提供程式庫，其中包含的常見命令<xref:System.Windows.Input.ApplicationCommands>， <xref:System.Windows.Input.MediaCommands>， <xref:System.Windows.Input.ComponentCommands>， <xref:System.Windows.Input.NavigationCommands>，和<xref:System.Windows.Documents.EditingCommands>，或者您也可以定義自己。  
   
  下列範例示範如何設定<xref:System.Windows.Controls.MenuItem>以便按一下時它將會叫用<xref:System.Windows.Input.ApplicationCommands.Paste%2A>命令<xref:System.Windows.Controls.TextBox>，此時是假設<xref:System.Windows.Controls.TextBox>具有鍵盤焦點。  
   
@@ -404,7 +406,7 @@ ms.lasthandoff: 12/22/2017
   
  具有其他資源可詳細說明 [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] 架構項目和事件路由。 如需詳細資訊，請參閱下列概觀：[命令概觀](../../../../docs/framework/wpf/advanced/commanding-overview.md)、[焦點概觀](../../../../docs/framework/wpf/advanced/focus-overview.md)、[基底項目概觀](../../../../docs/framework/wpf/advanced/base-elements-overview.md)、[WPF 中的樹狀結構](../../../../docs/framework/wpf/advanced/trees-in-wpf.md)和[路由事件概觀](../../../../docs/framework/wpf/advanced/routed-events-overview.md)。  
   
-## <a name="see-also"></a>請參閱  
+## <a name="see-also"></a>另請參閱  
  [焦點概觀](../../../../docs/framework/wpf/advanced/focus-overview.md)  
  [命令概觀](../../../../docs/framework/wpf/advanced/commanding-overview.md)  
  [路由事件概觀](../../../../docs/framework/wpf/advanced/routed-events-overview.md)  

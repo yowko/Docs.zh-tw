@@ -1,23 +1,24 @@
 ---
-title: "緩衝的接收"
-ms.custom: 
+title: 緩衝的接收
+ms.custom: ''
 ms.date: 03/30/2017
 ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.tgt_pltfrm: 
+ms.reviewer: ''
+ms.suite: ''
+ms.tgt_pltfrm: ''
 ms.topic: article
 ms.assetid: 9d46d9b9-96c9-4531-9695-ab526b4d704a
-caps.latest.revision: "7"
+caps.latest.revision: 7
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.workload: dotnet
-ms.openlocfilehash: a7a486d3fbfb520ffe3b32c392566e5147c5dfcc
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.workload:
+- dotnet
+ms.openlocfilehash: 9cd4dfcbfc9d417766615c624905f8bce2c10e54
+ms.sourcegitcommit: 86adcc06e35390f13c1e372c36d2e044f1fc31ef
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 04/26/2018
 ---
 # <a name="buffered-receive"></a>緩衝的接收
 這個範例示範如何設定 [!INCLUDE[wf](../../../../includes/wf-md.md)] 中的緩衝接收功能。 緩衝接收可讓工作流程作者建立工作流程時不必擔心接收訊息的順序。 緩衝接收功能會在本機緩衝處理訊息，並在工作流程準備要接收訊息時傳遞訊息。  
@@ -47,7 +48,7 @@ ms.lasthandoff: 12/22/2017
   
  服務也會使用 <xref:System.ServiceModel.Description.ServiceMetadataBehavior> 來公開服務的中繼資料。  
   
- 同樣地，用戶端端點也是使用 <xref:System.ServiceModel.NetMsmqBinding> 設定的。 用戶端程式碼和組態使用所產生**加入服務參考**功能[!INCLUDE[vs_current_short](../../../../includes/vs-current-short-md.md)]。 下列範例是在 App.config 檔案中產生的用戶端端點。  
+ 同樣地，用戶端端點也是使用 <xref:System.ServiceModel.NetMsmqBinding> 設定的。 用戶端程式碼和組態使用所產生**加入服務參考**Visual Studio 功能。 下列範例是在 App.config 檔案中產生的用戶端端點。  
   
 ```xml  
 <endpoint address="net.msmq://localhost/private/LoanService/Service1.xamlx"  
@@ -95,7 +96,7 @@ ms.lasthandoff: 12/22/2017
   
 #### <a name="to-run-the-sample"></a>若要執行範例  
   
-1.  瀏覽至 http://localhost/private/loanservice/service1.xamlx，以確保服務執行中。  
+1.  瀏覽至http://localhost/private/loanservice/service1.xamlx以確保服務正在執行。  
   
 2.  按 F5 執行 LoanClient 應用程式。 一旦工作流程完成時，out.txt 檔案應該會儲存至 C:\Inbox，這個檔案包含訊息交換結果。  
   

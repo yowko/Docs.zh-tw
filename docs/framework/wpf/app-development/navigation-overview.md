@@ -1,12 +1,13 @@
 ---
-title: "巡覽概觀"
-ms.custom: 
+title: 巡覽概觀
+ms.custom: ''
 ms.date: 03/30/2017
 ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.technology: dotnet-wpf
-ms.tgt_pltfrm: 
+ms.reviewer: ''
+ms.suite: ''
+ms.technology:
+- dotnet-wpf
+ms.tgt_pltfrm: ''
 ms.topic: article
 dev_langs:
 - csharp
@@ -31,19 +32,20 @@ helpviewer_keywords:
 - programmatic navigation [WPF]
 - hyperlinks [WPF]
 ms.assetid: 86ad2143-606a-4e34-bf7e-51a2594248b8
-caps.latest.revision: "69"
+caps.latest.revision: 69
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.workload: dotnet
-ms.openlocfilehash: 3a3b7d865a503189ebb5b3adadc7258603461c9b
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.workload:
+- dotnet
+ms.openlocfilehash: 07609671d061851e6ede2f2bd90e4bee38e43159
+ms.sourcegitcommit: 86adcc06e35390f13c1e372c36d2e044f1fc31ef
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 04/26/2018
 ---
 # <a name="navigation-overview"></a>巡覽概觀
-[!INCLUDE[TLA#tla_wpf](../../../../includes/tlasharptla-wpf-md.md)]支援兩種類型的應用程式中可用的瀏覽器樣式瀏覽： 獨立應用程式和[!INCLUDE[TLA#tla_xbap#plural](../../../../includes/tlasharptla-xbapsharpplural-md.md)]。 封裝內容以進行巡覽，[!INCLUDE[TLA2#tla_wpf](../../../../includes/tla2sharptla-wpf-md.md)]提供<xref:System.Windows.Controls.Page>類別。 您可以從一個導覽<xref:System.Windows.Controls.Page>到另一個以宣告方式，利用<xref:System.Windows.Documents.Hyperlink>，或以程式設計的方式，利用<xref:System.Windows.Navigation.NavigationService>。 [!INCLUDE[TLA2#tla_wpf](../../../../includes/tla2sharptla-wpf-md.md)] 使用日誌記憶曾經巡覽過的頁面，以利返回巡覽。  
+[!INCLUDE[TLA#tla_wpf](../../../../includes/tlasharptla-wpf-md.md)] 支援兩種類型的應用程式中可用的瀏覽器樣式瀏覽： 獨立應用程式和[!INCLUDE[TLA#tla_xbap#plural](../../../../includes/tlasharptla-xbapsharpplural-md.md)]。 封裝內容以進行巡覽，[!INCLUDE[TLA2#tla_wpf](../../../../includes/tla2sharptla-wpf-md.md)]提供<xref:System.Windows.Controls.Page>類別。 您可以從一個導覽<xref:System.Windows.Controls.Page>到另一個以宣告方式，利用<xref:System.Windows.Documents.Hyperlink>，或以程式設計的方式，利用<xref:System.Windows.Navigation.NavigationService>。 [!INCLUDE[TLA2#tla_wpf](../../../../includes/tla2sharptla-wpf-md.md)] 使用日誌記憶曾經巡覽過的頁面，以利返回巡覽。  
   
  <xref:System.Windows.Controls.Page><xref:System.Windows.Documents.Hyperlink>， <xref:System.Windows.Navigation.NavigationService>，並將日誌構成所提供的功能支援核心[!INCLUDE[TLA2#tla_wpf](../../../../includes/tla2sharptla-wpf-md.md)]。 本概觀會探討這些功能的詳細資料之前涵蓋進階的巡覽支援，包括瀏覽至鬆散[!INCLUDE[TLA#tla_xaml](../../../../includes/tlasharptla-xaml-md.md)]檔案[!INCLUDE[TLA#tla_html](../../../../includes/tlasharptla-html-md.md)]檔案和物件。  
   
@@ -118,7 +120,7 @@ ms.lasthandoff: 12/22/2017
   
 -   在程式碼後置類別必須是`partial`類別具有相同名稱的指定`x:Class`屬性標記，並必須衍生自<xref:System.Windows.Controls.Page>。 這可讓相關聯的程式碼後置檔案`partial`建置應用程式時，所產生的標記檔案類別 (請參閱[建置 WPF 應用程式](../../../../docs/framework/wpf/app-development/building-a-wpf-application-wpf.md))。  
   
--   在程式碼後置<xref:System.Windows.Controls.Page>類別必須實作的建構函式呼叫`InitializeComponent`方法。 `InitializeComponent`實作標記所產生檔案的`partial`類別，以註冊事件，並設定標記中定義的屬性。  
+-   在程式碼後置<xref:System.Windows.Controls.Page>類別必須實作的建構函式呼叫`InitializeComponent`方法。 `InitializeComponent` 實作標記所產生檔案的`partial`類別，以註冊事件，並設定標記中定義的屬性。  
   
 > [!NOTE]
 >  當您新增新<xref:System.Windows.Controls.Page>至您的專案使用[!INCLUDE[TLA#tla_visualstu](../../../../includes/tlasharptla-visualstu-md.md)]、<xref:System.Windows.Controls.Page>使用標記和程式碼後置會實作並包含必要的設定，以建立做為標記和程式碼後置檔案之間的關聯此處所述。  
@@ -215,7 +217,7 @@ ms.lasthandoff: 12/22/2017
 [!code-xaml[NavigationOverviewSnippets#PageThatNavigatesXAML3](../../../../samples/snippets/csharp/VS_Snippets_Wpf/NavigationOverviewSnippets/CSharp/PageThatNavigatesToFragment.xaml#pagethatnavigatesxaml3)]  
   
 > [!NOTE]
->  本章節描述中的預設片段瀏覽實作[!INCLUDE[TLA2#tla_wpf](../../../../includes/tla2sharptla-wpf-md.md)]。 [!INCLUDE[TLA2#tla_wpf](../../../../includes/tla2sharptla-wpf-md.md)]也可讓您實作您自己的部分，需要處理的片段巡覽配置<xref:System.Windows.Navigation.NavigationService.FragmentNavigation?displayProperty=nameWithType>事件。  
+>  本章節描述中的預設片段瀏覽實作[!INCLUDE[TLA2#tla_wpf](../../../../includes/tla2sharptla-wpf-md.md)]。 [!INCLUDE[TLA2#tla_wpf](../../../../includes/tla2sharptla-wpf-md.md)] 也可讓您實作您自己的部分，需要處理的片段巡覽配置<xref:System.Windows.Navigation.NavigationService.FragmentNavigation?displayProperty=nameWithType>事件。  
   
 > [!IMPORTANT]
 >  您可以導覽至包含鬆散片段[!INCLUDE[TLA2#tla_xaml](../../../../includes/tla2sharptla-xaml-md.md)]頁面 (僅限標記[!INCLUDE[TLA2#tla_xaml](../../../../includes/tla2sharptla-xaml-md.md)]具有檔案`Page`是根項目) 可以透過瀏覽網頁時，才[!INCLUDE[TLA2#tla_http](../../../../includes/tla2sharptla-http-md.md)]。  
@@ -276,7 +278,7 @@ ms.lasthandoff: 12/22/2017
  [!code-csharp[NavigationOverviewSnippets#NSNavigationPageCODEBEHIND](../../../../samples/snippets/csharp/VS_Snippets_Wpf/NavigationOverviewSnippets/CSharp/NSNavigationPage.xaml.cs#nsnavigationpagecodebehind)]
  [!code-vb[NavigationOverviewSnippets#NSNavigationPageCODEBEHIND](../../../../samples/snippets/visualbasic/VS_Snippets_Wpf/NavigationOverviewSnippets/VisualBasic/NSNavigationPage.xaml.vb#nsnavigationpagecodebehind)]  
   
- 當<xref:System.Windows.Documents.Hyperlink>上<xref:System.Windows.Controls.Page>是按一下，瀏覽起始藉由執行個體化<xref:System.Windows.Controls.Page>瀏覽至使用非預設建構函式和呼叫<xref:System.Windows.Navigation.NavigationService.Navigate%2A?displayProperty=nameWithType>方法。 <xref:System.Windows.Navigation.NavigationService.Navigate%2A>接受物件的參考，<xref:System.Windows.Navigation.NavigationService>會巡覽至，而不是組件[!INCLUDE[TLA2#tla_uri](../../../../includes/tla2sharptla-uri-md.md)]。  
+ 當<xref:System.Windows.Documents.Hyperlink>上<xref:System.Windows.Controls.Page>是按一下，瀏覽起始藉由執行個體化<xref:System.Windows.Controls.Page>瀏覽至使用非預設建構函式和呼叫<xref:System.Windows.Navigation.NavigationService.Navigate%2A?displayProperty=nameWithType>方法。 <xref:System.Windows.Navigation.NavigationService.Navigate%2A> 接受物件的參考，<xref:System.Windows.Navigation.NavigationService>會巡覽至，而不是組件[!INCLUDE[TLA2#tla_uri](../../../../includes/tla2sharptla-uri-md.md)]。  
   
 #### <a name="programmatic-navigation-with-a-pack-uri"></a>以程式設計的巡覽及 Pack URI  
  如果您要建構的組件[!INCLUDE[TLA2#tla_uri](../../../../includes/tla2sharptla-uri-md.md)]以程式設計方式 (當您只可以判斷組件[!INCLUDE[TLA2#tla_uri](../../../../includes/tla2sharptla-uri-md.md)]在執行階段，例如)，您可以使用<xref:System.Windows.Navigation.NavigationService.Navigate%2A?displayProperty=nameWithType>方法。 這在下列範例中顯示。  
@@ -338,7 +340,7 @@ ms.lasthandoff: 12/22/2017
   
 -   <xref:System.Windows.Application.FragmentNavigation?displayProperty=nameWithType>  
   
- 每次<xref:System.Windows.Navigation.NavigationService>引發事件時，<xref:System.Windows.Application>類別會引發對應的事件。 <xref:System.Windows.Controls.Frame>和<xref:System.Windows.Navigation.NavigationWindow>提供相同的事件，以偵測它們個別的範圍內的導覽。  
+ 每次<xref:System.Windows.Navigation.NavigationService>引發事件時，<xref:System.Windows.Application>類別會引發對應的事件。 <xref:System.Windows.Controls.Frame> 和<xref:System.Windows.Navigation.NavigationWindow>提供相同的事件，以偵測它們個別的範圍內的導覽。  
   
  在某些情況下，<xref:System.Windows.Controls.Page>可能會想要在這些事件中。 例如，<xref:System.Windows.Controls.Page>可能會處理<xref:System.Windows.Navigation.NavigationService.Navigating?displayProperty=nameWithType>事件，以判斷是否要取消巡覽離開本身。 這在下列範例中顯示。  
   
@@ -455,7 +457,7 @@ ms.lasthandoff: 12/22/2017
   
 3.  <xref:System.Windows.Controls.Page>巡覽回。  
   
- [!INCLUDE[TLA2#tla_wpf](../../../../includes/tla2sharptla-wpf-md.md)]使用下列控制項上時，會自動使用這項支援<xref:System.Windows.Controls.Page>:  
+ [!INCLUDE[TLA2#tla_wpf](../../../../includes/tla2sharptla-wpf-md.md)] 使用下列控制項上時，會自動使用這項支援<xref:System.Windows.Controls.Page>:  
   
 -   <xref:System.Windows.Controls.CheckBox>  
   
@@ -513,13 +515,13 @@ ms.lasthandoff: 12/22/2017
   
  以下是一些支援 cookie 的方式[!INCLUDE[TLA2#tla_wpf](../../../../includes/tla2sharptla-wpf-md.md)]:  
   
--   [!INCLUDE[TLA2#tla_wpf](../../../../includes/tla2sharptla-wpf-md.md)]獨立應用程式和[!INCLUDE[TLA2#tla_xbap#plural](../../../../includes/tla2sharptla-xbapsharpplural-md.md)]可以同時建立並管理 cookie。  
+-   [!INCLUDE[TLA2#tla_wpf](../../../../includes/tla2sharptla-wpf-md.md)] 獨立應用程式和[!INCLUDE[TLA2#tla_xbap#plural](../../../../includes/tla2sharptla-xbapsharpplural-md.md)]可以同時建立並管理 cookie。  
   
 -   所建立的 cookie[!INCLUDE[TLA2#tla_xbap](../../../../includes/tla2sharptla-xbap-md.md)]可以從瀏覽器存取。  
   
 -   來自相同網域的 [!INCLUDE[TLA2#tla_xbap#plural](../../../../includes/tla2sharptla-xbapsharpplural-md.md)] 可以建立及共用 Cookie。  
   
--   [!INCLUDE[TLA2#tla_xbap#plural](../../../../includes/tla2sharptla-xbapsharpplural-md.md)]和[!INCLUDE[TLA2#tla_html](../../../../includes/tla2sharptla-html-md.md)]來自相同網域的頁面可以建立並共用 cookie。  
+-   [!INCLUDE[TLA2#tla_xbap#plural](../../../../includes/tla2sharptla-xbapsharpplural-md.md)] 和[!INCLUDE[TLA2#tla_html](../../../../includes/tla2sharptla-html-md.md)]來自相同網域的頁面可以建立並共用 cookie。  
   
 -   分派 cookie 時[!INCLUDE[TLA2#tla_xbap#plural](../../../../includes/tla2sharptla-xbapsharpplural-md.md)]和鬆散[!INCLUDE[TLA2#tla_xaml](../../../../includes/tla2sharptla-xaml-md.md)]頁面提出 Web 要求。  
   
@@ -537,15 +539,15 @@ ms.lasthandoff: 12/22/2017
   
 <a name="The_NavigationWindow_Class"></a>   
 ## <a name="the-navigationwindow-class"></a>NavigationWindow 類別  
- 至此，您已了解最可能用來建置有可巡覽內容之應用程式的巡覽服務範圍。 這些服務的內容中我們已經討論過[!INCLUDE[TLA2#tla_xbap#plural](../../../../includes/tla2sharptla-xbapsharpplural-md.md)]，不過並不限於[!INCLUDE[TLA2#tla_xbap#plural](../../../../includes/tla2sharptla-xbapsharpplural-md.md)]。 現在的作業系統和[!INCLUDE[TLA2#tla_mswin](../../../../includes/tla2sharptla-mswin-md.md)]應用程式利用的現代化使用者將瀏覽器樣式瀏覽合併至獨立應用程式的瀏覽器體驗。 常見範例包括︰  
+ 至此，您已了解最可能用來建置有可巡覽內容之應用程式的巡覽服務範圍。 這些服務的內容中我們已經討論過[!INCLUDE[TLA2#tla_xbap#plural](../../../../includes/tla2sharptla-xbapsharpplural-md.md)]，不過並不限於[!INCLUDE[TLA2#tla_xbap#plural](../../../../includes/tla2sharptla-xbapsharpplural-md.md)]。 新作業系統和 Windows 應用程式利用的現代化使用者將瀏覽器樣式瀏覽合併至獨立應用程式的瀏覽器體驗。 常見範例包括︰  
   
 -   **文字同義字**︰巡覽文字選擇。  
   
 -   **檔案總管**︰巡覽檔案和資料夾。  
   
--   **精靈**︰將複雜的工作細分成可往來巡覽的多個頁面。 範例是處理加入和移除 Windows 元件精靈[!INCLUDE[TLA2#tla_mswin](../../../../includes/tla2sharptla-mswin-md.md)]功能。  
+-   **精靈**︰將複雜的工作細分成可往來巡覽的多個頁面。 範例是處理加入和移除 Windows 功能 [Windows 元件精靈]。  
   
- 將瀏覽器樣式瀏覽合併至獨立應用程式，您可以使用<xref:System.Windows.Navigation.NavigationWindow>類別。 <xref:System.Windows.Navigation.NavigationWindow>衍生自<xref:System.Windows.Window>及擴充它，以瀏覽相同的支援，[!INCLUDE[TLA2#tla_xbap#plural](../../../../includes/tla2sharptla-xbapsharpplural-md.md)]提供。 您可以使用<xref:System.Windows.Navigation.NavigationWindow>作為獨立應用程式在主視窗或例如對話方塊中的第二個視窗。  
+ 將瀏覽器樣式瀏覽合併至獨立應用程式，您可以使用<xref:System.Windows.Navigation.NavigationWindow>類別。 <xref:System.Windows.Navigation.NavigationWindow> 衍生自<xref:System.Windows.Window>及擴充它，以瀏覽相同的支援，[!INCLUDE[TLA2#tla_xbap#plural](../../../../includes/tla2sharptla-xbapsharpplural-md.md)]提供。 您可以使用<xref:System.Windows.Navigation.NavigationWindow>作為獨立應用程式在主視窗或例如對話方塊中的第二個視窗。  
   
  若要實作<xref:System.Windows.Navigation.NavigationWindow>，就像使用中大部分的最上層類別[!INCLUDE[TLA2#tla_wpf](../../../../includes/tla2sharptla-wpf-md.md)](<xref:System.Windows.Window>，<xref:System.Windows.Controls.Page>等等)，使用標記和程式碼後置的組合。 這在下列範例中顯示。  
   
@@ -592,7 +594,7 @@ ms.lasthandoff: 12/22/2017
   
 <a name="Frame_in_Standalone_Applications"></a>   
 ## <a name="the-frame-class"></a>Frame 類別  
- 這兩個瀏覽器和<xref:System.Windows.Navigation.NavigationWindow>是該主機可瀏覽內容的視窗。 在某些情況下，應用程式會有不需要由整個視窗裝載的內容。 這類內容反可以裝載於其他內容中。 您可以導覽內容插入至其他內容使用<xref:System.Windows.Controls.Frame>類別。 <xref:System.Windows.Controls.Frame>提供為相同的支援<xref:System.Windows.Navigation.NavigationWindow>和[!INCLUDE[TLA2#tla_xbap#plural](../../../../includes/tla2sharptla-xbapsharpplural-md.md)]。  
+ 這兩個瀏覽器和<xref:System.Windows.Navigation.NavigationWindow>是該主機可瀏覽內容的視窗。 在某些情況下，應用程式會有不需要由整個視窗裝載的內容。 這類內容反可以裝載於其他內容中。 您可以導覽內容插入至其他內容使用<xref:System.Windows.Controls.Frame>類別。 <xref:System.Windows.Controls.Frame> 提供為相同的支援<xref:System.Windows.Navigation.NavigationWindow>和[!INCLUDE[TLA2#tla_xbap#plural](../../../../includes/tla2sharptla-xbapsharpplural-md.md)]。  
   
  下列範例示範如何將加入<xref:System.Windows.Controls.Frame>至<xref:System.Windows.Controls.Page>以宣告方式透過使用`Frame`項目。  
   
@@ -633,7 +635,7 @@ ms.lasthandoff: 12/22/2017
   
 <a name="Navigation_Hosts"></a>   
 ## <a name="navigation-hosts"></a>巡覽裝載  
- <xref:System.Windows.Controls.Frame>和<xref:System.Windows.Navigation.NavigationWindow>是稱為巡覽裝載的類別。 A*瀏覽主機*是類別，可以瀏覽至並顯示內容。 若要達成此目的，每個瀏覽主機會使用它自己<xref:System.Windows.Navigation.NavigationService>和日誌。 巡覽裝載的基本建構如下圖所示。  
+ <xref:System.Windows.Controls.Frame> 和<xref:System.Windows.Navigation.NavigationWindow>是稱為巡覽裝載的類別。 A*瀏覽主機*是類別，可以瀏覽至並顯示內容。 若要達成此目的，每個瀏覽主機會使用它自己<xref:System.Windows.Navigation.NavigationService>和日誌。 巡覽裝載的基本建構如下圖所示。  
   
  ![導覽器圖表](../../../../docs/framework/wpf/app-development/media/navigationoverviewfigure15.png "NavigationOverviewFigure15")  
   
@@ -738,9 +740,9 @@ ms.lasthandoff: 12/22/2017
   
 <a name="Security"></a>   
 ## <a name="security"></a>安全性  
- [!INCLUDE[TLA2#tla_wpf](../../../../includes/tla2sharptla-wpf-md.md)]瀏覽支援可讓[!INCLUDE[TLA2#tla_xbap#plural](../../../../includes/tla2sharptla-xbapsharpplural-md.md)]來瀏覽至跨網際網路，而且可讓應用程式裝載協力廠商內容。 若要從有害行為，保護應用程式和使用者[!INCLUDE[TLA2#tla_wpf](../../../../includes/tla2sharptla-wpf-md.md)]提供各種不同的安全性功能所討論的[安全性](../../../../docs/framework/wpf/security-wpf.md)和[WPF 部分信任安全性](../../../../docs/framework/wpf/wpf-partial-trust-security.md)。  
+ [!INCLUDE[TLA2#tla_wpf](../../../../includes/tla2sharptla-wpf-md.md)] 瀏覽支援可讓[!INCLUDE[TLA2#tla_xbap#plural](../../../../includes/tla2sharptla-xbapsharpplural-md.md)]來瀏覽至跨網際網路，而且可讓應用程式裝載協力廠商內容。 若要從有害行為，保護應用程式和使用者[!INCLUDE[TLA2#tla_wpf](../../../../includes/tla2sharptla-wpf-md.md)]提供各種不同的安全性功能所討論的[安全性](../../../../docs/framework/wpf/security-wpf.md)和[WPF 部分信任安全性](../../../../docs/framework/wpf/wpf-partial-trust-security.md)。  
   
-## <a name="see-also"></a>請參閱  
+## <a name="see-also"></a>另請參閱  
  <xref:System.Windows.Application.SetCookie%2A>  
  <xref:System.Windows.Application.GetCookie%2A>  
  [應用程式管理概觀](../../../../docs/framework/wpf/app-development/application-management-overview.md)  

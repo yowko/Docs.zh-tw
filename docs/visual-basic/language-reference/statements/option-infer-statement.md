@@ -1,10 +1,11 @@
 ---
-title: "Option Infer 陳述式"
+title: Option Infer 陳述式
 ms.date: 07/20/2015
 ms.prod: .net
-ms.reviewer: 
-ms.suite: 
-ms.technology: devlang-visual-basic
+ms.reviewer: ''
+ms.suite: ''
+ms.technology:
+- devlang-visual-basic
 ms.topic: article
 f1_keywords:
 - vb.OptionInfer
@@ -16,14 +17,14 @@ helpviewer_keywords:
 - declaring variables [Visual Basic], inferred
 - inferred variable declaration
 ms.assetid: 4ad3e6e9-8f5b-4209-a248-de22ef6e4652
-caps.latest.revision: "72"
+caps.latest.revision: 72
 author: dotnet-bot
 ms.author: dotnetcontent
-ms.openlocfilehash: 1c8bd94bc8dd379edfda8c4350428684a5cda0b1
-ms.sourcegitcommit: 34ec7753acf76f90a0fa845235ef06663dc9e36e
+ms.openlocfilehash: fb6aea2b1e8faf9afd7d252d8828358130fb5374
+ms.sourcegitcommit: 86adcc06e35390f13c1e372c36d2e044f1fc31ef
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 04/26/2018
 ---
 # <a name="option-infer-statement"></a>Option Infer 陳述式
 可讓您在宣告變數時使用區域類型推斷。  
@@ -57,7 +58,7 @@ Option Infer 開啟時的 IntelliSense
 Option Infer 關閉時的 IntelliSense  
   
 > [!NOTE]
->  當變數被宣告為 `Object` 時，執行階段類型可以在程式執行時變更。 [!INCLUDE[vbprvb](~/includes/vbprvb-md.md)]執行作業呼叫*boxing*和*unboxing*之間進行轉換`Object`和實值類型，可讓執行速度變慢。 Boxing 和 unboxing 的相關資訊，請參閱[Visual Basic 語言規格](../../../visual-basic/reference/language-specification/index.md)。
+>  當變數被宣告為 `Object` 時，執行階段類型可以在程式執行時變更。 Visual Basic 會在執行作業呼叫*boxing*和*unboxing*之間進行轉換`Object`和實值類型，可讓執行速度變慢。 Boxing 和 unboxing 的相關資訊，請參閱[Visual Basic 語言規格](../../../visual-basic/reference/language-specification/index.md)。
   
  類型推斷會套用在程序層級，不會套用在類別、結構、模組或介面中的程序之外。  
   
@@ -100,7 +101,7 @@ Option Infer 關閉時的 IntelliSense
   
  [!code-vb[VbVbalrTypeInference#11](../../../visual-basic/language-reference/statements/codesnippet/VisualBasic/option-infer-statement_2.vb)]  
   
-## <a name="see-also"></a>請參閱  
+## <a name="see-also"></a>另請參閱  
  [Dim 陳述式](../../../visual-basic/language-reference/statements/dim-statement.md)  
  [區域類型推斷](../../../visual-basic/programming-guide/language-features/variables/local-type-inference.md)  
  [Option Compare 陳述式](../../../visual-basic/language-reference/statements/option-compare-statement.md)  

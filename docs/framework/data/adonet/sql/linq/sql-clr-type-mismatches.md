@@ -1,27 +1,29 @@
 ---
-title: "SQL-CLR 類型不符"
-ms.custom: 
+title: SQL-CLR 類型不符
+ms.custom: ''
 ms.date: 03/30/2017
 ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.technology: dotnet-ado
-ms.tgt_pltfrm: 
+ms.reviewer: ''
+ms.suite: ''
+ms.technology:
+- dotnet-ado
+ms.tgt_pltfrm: ''
 ms.topic: article
 dev_langs:
 - csharp
 - vb
 ms.assetid: 0a90c33f-7ed7-4501-ad5f-6224c5da8e9b
-caps.latest.revision: "2"
+caps.latest.revision: 2
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.workload: dotnet
-ms.openlocfilehash: 6a027bd898409708dd6800908a6736f5853058df
-ms.sourcegitcommit: ed26cfef4e18f6d93ab822d8c29f902cff3519d1
+ms.workload:
+- dotnet
+ms.openlocfilehash: 6006bb8fd1f6b49382c89acc2b55efcb035ffbf5
+ms.sourcegitcommit: 86adcc06e35390f13c1e372c36d2e044f1fc31ef
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 01/17/2018
+ms.lasthandoff: 04/26/2018
 ---
 # <a name="sql-clr-type-mismatches"></a>SQL-CLR 類型不符
 [!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)] 會自動執行物件模型 (Object Model) 與 SQL Server 之間大部分的轉譯作業。 不過，在某些情況下，還是無法進行精確的轉譯。 下列各節將摘要列出 Common Language Runtime (CLR) 型別與 SQL Server 資料庫型別之間的這些主要不符。 您可以找到更多特定的型別對應和在函式轉譯詳細[SQL CLR 類型對應](../../../../../../docs/framework/data/adonet/sql/linq/sql-clr-type-mapping.md)和[Data Types and Functions](../../../../../../docs/framework/data/adonet/sql/linq/data-types-and-functions.md)。  
@@ -53,7 +55,7 @@ Select DateOfBirth From Customer Where CustomerId = @id
   
     -   **固定長度字元型別**。 TRANSACT-SQL 會區分 Unicode 與非 Unicode 類別目錄和每個類別中有三種不同類型： 固定長度`nchar` / `char`，可變長度`nvarchar` / `varchar`，和較大大小`ntext` / `text`。 固定長度字元型別可以對應至 CLR <xref:System.Char?displayProperty=nameWithType> 型別供字元擷取之用，但它們在轉換時和行為上並不會真的對應至這個型別。  
   
-    -   **位元**。 雖然 `bit` 定義域與 `Nullable<Boolean>` 具有相同數目的值，但是它們是不同的型別。 `Bit`會使用值`1`和`0`而不是`true` / `false`，而且無法當做布林運算式的對等用法。  
+    -   **位元**。 雖然 `bit` 定義域與 `Nullable<Boolean>` 具有相同數目的值，但是它們是不同的型別。 `Bit` 會使用值`1`和`0`而不是`true` / `false`，而且無法當做布林運算式的對等用法。  
   
     -   **時間戳記**。 與 CLR <xref:System.TimeSpan?displayProperty=nameWithType> 型別不同的是，SQL Server `TIMESTAMP` 型別代表資料庫針對每次更新所產生的 8 位元組唯一數字，因此不是根據 <xref:System.DateTime> 值之間的差異。  
   
@@ -118,7 +120,7 @@ or col1 != col2
   
  在上一個案例中，雖然產生的 SQL 會有對等的行為，但是轉譯作業可能不會精確地反映您的意圖。  
   
- [!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)]不會強制 C#`null`或[!INCLUDE[vbprvb](../../../../../../includes/vbprvb-md.md)]`nothing`在 SQL 上的比較語意。 比較運算子會轉譯為語法上的 SQL 對等用法。 而語意會反映伺服器所定義的 SQL 語意或連接設定。 在預設 SQL Server 設定下，兩個 null 值會視為不相等的值 (雖然您可以變更設定來變更語意)。 不過，[!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)] 在轉譯查詢時並不會考慮伺服器設定。  
+ [!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)] 不會強制 C#`null`或 Visual Basic`nothing`在 SQL 上的比較語意。 比較運算子會轉譯為語法上的 SQL 對等用法。 而語意會反映伺服器所定義的 SQL 語意或連接設定。 在預設 SQL Server 設定下，兩個 null 值會視為不相等的值 (雖然您可以變更設定來變更語意)。 不過，[!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)] 在轉譯查詢時並不會考慮伺服器設定。  
   
  結果為常值 `null` (`nothing`) 的比較作業會轉譯為適當的 SQL 版本 (`is null` 或 `is not null`)。  
   
@@ -179,7 +181,7 @@ Where Col1 = Col2
     > [!NOTE]
     >  這個 `Like` 運算子行為僅適用於 C#，Visual Basic 的 `Like` 關鍵字仍未改變。  
   
--   在 SQL 中一律會檢查溢位，但是在 C# (而不是 [!INCLUDE[vbprvb](../../../../../../includes/vbprvb-md.md)]) 中必須明確指定溢位檢查，以避免發生繞回問題。 假設有三個整數資料行：C1、C2，和負責儲存 C1+C2 的 C3 (Update T Set C3 = C1 + C2)。  
+-   溢位一定會先在 SQL 中檢查但有明確指定在 C# 中 （不在 Visual Basic) 若要避免發生繞回問題。 假設有三個整數資料行：C1、C2，和負責儲存 C1+C2 的 C3 (Update T Set C3 = C1 + C2)。  
   
     ```  
     create table T3 (  
@@ -197,7 +199,7 @@ Where Col1 = Col2
   
 -   SQL 會在 [!INCLUDE[dnprdnshort](../../../../../../includes/dnprdnshort-md.md)] 使用 Banker's Rounding (四捨六入五成雙) 時，執行對稱式算術捨入。 如需詳細資訊，請參閱知識庫文件 196652。  
   
--   根據預設，在通用地區設定 (Locale) 中，SQL 中的字元字串比較作業不會區分大小寫。 在 Visual Basic 和 C# 中，則會區分大小寫。 例如，如果 `s == "Food"` 是 `s = "Food"`，則 [!INCLUDE[vbprvb](../../../../../../includes/vbprvb-md.md)] (`s == "Food"` 中是 `s`) 和 `food` 會產生不同的結果。  
+-   根據預設，在通用地區設定 (Locale) 中，SQL 中的字元字串比較作業不會區分大小寫。 在 Visual Basic 和 C# 中，則會區分大小寫。 例如， `s == "Food"` (`s = "Food"`在 Visual Basic 中) 和`s == "Food"`可以產生不同的結果，如果`s`是`food`。  
   
     ```  
     -- Assume default US-English locale (case insensitive).  
@@ -304,5 +306,5 @@ Where Col1 + Col2 > 4
   
  除了語意差異以外，請務必考量在 SQL Server 與 CLR 型別系統之間跨越時，對效能造成的影響。 如果是大型資料集，這類效能問題可能會決定部署應用程式的可行性。  
   
-## <a name="see-also"></a>請參閱  
+## <a name="see-also"></a>另請參閱  
  [背景資訊](../../../../../../docs/framework/data/adonet/sql/linq/background-information.md)

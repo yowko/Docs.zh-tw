@@ -1,12 +1,13 @@
 ---
-title: "逐步解說：利用 Windows Form 建立多窗格使用者介面"
-ms.custom: 
+title: 逐步解說：利用 Windows Form 建立多窗格使用者介面
+ms.custom: ''
 ms.date: 03/30/2017
 ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.technology: dotnet-winforms
-ms.tgt_pltfrm: 
+ms.reviewer: ''
+ms.suite: ''
+ms.technology:
+- dotnet-winforms
+ms.tgt_pltfrm: ''
 ms.topic: article
 dev_langs:
 - csharp
@@ -19,16 +20,17 @@ helpviewer_keywords:
 - TreeView control [Windows Forms], examples
 - Splitter control [Windows Forms], examples
 ms.assetid: e79f6bcc-3740-4d1e-b46a-c5594d9b7327
-caps.latest.revision: "20"
+caps.latest.revision: 20
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.workload: dotnet
-ms.openlocfilehash: f29fb5fc4f873431471cd1c037446a5157d5f07c
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.workload:
+- dotnet
+ms.openlocfilehash: 6011eb2d49e537a2f5dfc540611af40a30b3e721
+ms.sourcegitcommit: 86adcc06e35390f13c1e372c36d2e044f1fc31ef
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 04/26/2018
 ---
 # <a name="how-to-create-a-multipane-user-interface-with-windows-forms"></a>逐步解說：利用 Windows Form 建立多窗格使用者介面
 在下列程序中，您將建立類似搭配使用 Microsoft Outlook 中的多窗格使用者介面**資料夾** 清單中，**訊息** 窗格中，與**預覽**窗格。 這種排列方式被達成透過停駐控制項的表單來達成。  
@@ -175,7 +177,7 @@ ms.lasthandoff: 12/22/2017
     }  
     ```  
   
-3.  在[!INCLUDE[vbprvb](../../../../includes/vbprvb-md.md)]，加入至您在建立程序呼叫`New()`程序。 在[!INCLUDE[csprcs](../../../../includes/csprcs-md.md)]，將這行程式碼加入至表單類別的建構函式。  
+3.  在 Visual Basic 中，加入至您在建立程序呼叫`New()`程序。 在 Visual C# 中，將這行程式碼加入表單類別的建構函式。  
   
     ```vb  
     ' Add this to the New procedure.  
@@ -187,7 +189,7 @@ ms.lasthandoff: 12/22/2017
     createOutlookUI();  
     ```  
   
-## <a name="see-also"></a>請參閱  
+## <a name="see-also"></a>另請參閱  
  <xref:System.Windows.Forms.SplitContainer>  
  [SplitContainer 控制項](../../../../docs/framework/winforms/controls/splitcontainer-control-windows-forms.md)  
  [操作說明：使用設計工具，以 Windows Forms 建立多窗格使用者介面](../../../../docs/framework/winforms/controls/create-a-multipane-user-interface-with-wf-using-the-designer.md)

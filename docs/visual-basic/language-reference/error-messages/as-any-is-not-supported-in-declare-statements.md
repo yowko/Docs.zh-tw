@@ -1,5 +1,5 @@
 ---
-title: '&#39;做為任何 &#39;不支援 &#39; Declare &#39;陳述式'
+title: '&#39;做為任何&#39;中不支援&#39;Declare&#39;陳述式'
 ms.date: 07/20/2015
 ms.prod: .net
 ms.suite: ''
@@ -15,14 +15,14 @@ ms.assetid: 7e5cf519-8b64-4ac5-8116-705fe26c846d
 caps.latest.revision: 11
 author: dotnet-bot
 ms.author: dotnetcontent
-ms.openlocfilehash: 59120622688ee38d5b8f45c08dfc3ae40711fb8b
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.openlocfilehash: d8146e339ac5cb005b99c9a1e02f1cd248c4558b
+ms.sourcegitcommit: 86adcc06e35390f13c1e372c36d2e044f1fc31ef
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 04/26/2018
 ---
-# <a name="39as-any39-is-not-supported-in-39declare39-statements"></a>&#39;做為任何 &#39;不支援 &#39; Declare &#39;陳述式
-`Any`資料類型用於`Declare`允許無法包含任何資料類型的引數使用的 Visual Basic 6.0 及舊版中的陳述式。 [!INCLUDE[vbprvb](~/includes/vbprvb-md.md)]多載，不過，支援，因此讓`Any`資料型別已經過時。  
+# <a name="39as-any39-is-not-supported-in-39declare39-statements"></a>&#39;做為任何&#39;中不支援&#39;Declare&#39;陳述式
+`Any`資料類型用於`Declare`允許無法包含任何資料類型的引數使用的 Visual Basic 6.0 及舊版中的陳述式。 多載，不過，Visual Basic 支援，因此讓`Any`資料型別已經過時。  
   
  **錯誤 ID:** BC30828  
   

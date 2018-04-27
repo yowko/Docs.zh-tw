@@ -12,18 +12,18 @@ ms.assetid: df6e7c50-5f3e-4381-98ed-ba5c3e9fe228
 caps.latest.revision: 21
 author: dotnet-bot
 ms.author: dotnetcontent
-ms.openlocfilehash: 1bef4da309f5e281b4016912d4b0da8237db6ec0
-ms.sourcegitcommit: bd1ef61f4bb794b25383d3d72e71041a5ced172e
+ms.openlocfilehash: 26cb885187cff31a085e34c60c820fe7c0bdc787
+ms.sourcegitcommit: 86adcc06e35390f13c1e372c36d2e044f1fc31ef
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/18/2017
+ms.lasthandoff: 04/26/2018
 ---
 # <a name="reference-visual-basic"></a>參考 (Visual Basic)
-本節提供 [!INCLUDE[vbprvb](~/includes/vbprvb-md.md)] 程式設計各種層面的相關參考資訊的連結。  
+本節提供 Visual Basic 程式設計各種層面相關參考資訊的連結。  
   
-## <a name="in-this-section"></a>本章節內容  
+## <a name="in-this-section"></a>本節內容  
  [Visual Basic 語言參考](../../visual-basic/language-reference/index.md)  
- 提供 [!INCLUDE[vbprvb](~/includes/vbprvb-md.md)] 語言各種層面的參考資訊。  
+ 提供 Visual Basic 語言的各種層面的參考資訊。  
   
  [Visual Basic 命令列編譯器](../../visual-basic/reference/command-line-compiler/index.md)  
  提供命令列編譯器相關資訊的連結，該編譯器可提供從 Visual Studio IDE 編譯程式的替代方法。  
@@ -32,7 +32,7 @@ ms.lasthandoff: 10/18/2017
  提供使用 [!INCLUDE[dnprdnshort](~/includes/dnprdnshort-md.md)] 類別庫之相關資訊的連結。  
   
  [Visual Basic 語言規格](../../visual-basic/reference/language-specification/index.md)  
- 提供完整 [!INCLUDE[vbprvb](~/includes/vbprvb-md.md)] 語言規格的連結，該規格包含有關語言所有層面的詳細資訊。  
+ 提供完整的 Visual Basic 語言規格，其中包含所有層面語言的詳細的資訊連結。  
   
 ## <a name="reference"></a>參考資料  
  <xref:Microsoft.VisualBasic.PowerPacks?displayProperty=nameWithType>  

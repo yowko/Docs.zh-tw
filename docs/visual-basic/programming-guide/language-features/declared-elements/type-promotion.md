@@ -1,11 +1,12 @@
 ---
-title: "類型提升 (Visual Basic)"
-ms.custom: 
+title: 類型提升 (Visual Basic)
+ms.custom: ''
 ms.date: 07/20/2015
 ms.prod: .net
-ms.reviewer: 
-ms.suite: 
-ms.technology: devlang-visual-basic
+ms.reviewer: ''
+ms.suite: ''
+ms.technology:
+- devlang-visual-basic
 ms.topic: article
 helpviewer_keywords:
 - declared elements [Visual Basic], scope
@@ -16,17 +17,17 @@ helpviewer_keywords:
 - type promotion
 - declared elements [Visual Basic], visibility
 ms.assetid: 035eeb15-e4c5-4288-ab3c-6bd5d22f7051
-caps.latest.revision: "17"
+caps.latest.revision: 17
 author: dotnet-bot
 ms.author: dotnetcontent
-ms.openlocfilehash: f3a55c023afe7afe96f862f0b3cbbdb03a15b902
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.openlocfilehash: ddb0d61f0f1c94e8e28493d0c62afe1e09503804
+ms.sourcegitcommit: 86adcc06e35390f13c1e372c36d2e044f1fc31ef
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 04/26/2018
 ---
 # <a name="type-promotion-visual-basic"></a>類型提升 (Visual Basic)
-當您宣告程式設計項目在模組中，[!INCLUDE[vbprvb](~/includes/vbprvb-md.md)]提升其範圍包含模組的命名空間。 這稱為*輸入促銷*。  
+當您宣告的模組中的程式設計項目時，Visual Basic 會將其範圍包含模組的命名空間以提升。 這稱為*輸入促銷*。  
   
  下列範例會示範模組的基本架構定義，該模組的兩個成員。  
   
@@ -46,7 +47,7 @@ ms.lasthandoff: 11/21/2017
   
  [!code-vb[VbVbalrDeclaredElements#3](../../../../visual-basic/programming-guide/language-features/declared-elements/codesnippet/VisualBasic/type-promotion_3.vb)]  
   
- 在上述範例中，[!INCLUDE[vbprvb](~/includes/vbprvb-md.md)]無法升級類別`abc`至`thisNameSpace`因為已經有具有相同名稱的命名空間層級的列舉。 若要存取`abcSub`，您必須使用完整限定性條件字串`thisNamespace.thisModule.abc.abcSub`。 不過，類別`xyz`仍然會升級，而且您可以存取`xyzSub`使用較短的限定性條件字串`thisNamespace.xyz.xyzSub`。  
+ 在上述範例中，Visual Basic 無法將升級類別`abc`至`thisNameSpace`因為已經有具有相同名稱的命名空間層級的列舉。 若要存取`abcSub`，您必須使用完整限定性條件字串`thisNamespace.thisModule.abc.abcSub`。 不過，類別`xyz`仍然會升級，而且您可以存取`xyzSub`使用較短的限定性條件字串`thisNamespace.xyz.xyzSub`。  
   
 ### <a name="defeat-of-type-promotion-for-partial-types"></a>部分類型的型別提升失敗  
  如果類別或結構，在模組內使用[部分](../../../../visual-basic/language-reference/modifiers/partial.md)關鍵字，型別提升會自動失效該類別或結構，指出是否在命名空間具有相同名稱的成員。 模組中的其他項目都仍有資格型別提升。  

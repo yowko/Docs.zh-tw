@@ -1,5 +1,5 @@
 ---
-title: 名稱為 &#39;&lt;名稱&gt;&#39; 不宣告
+title: 名稱&#39;&lt;名稱&gt;&#39;未宣告
 ms.date: 07/20/2015
 ms.prod: .net
 ms.reviewer: ''
@@ -16,20 +16,20 @@ ms.assetid: 765f099b-e21e-47c6-a906-a065444e56b3
 caps.latest.revision: 11
 author: dotnet-bot
 ms.author: dotnetcontent
-ms.openlocfilehash: 7a63ae74c7179d71756e2b9b4bf6b41a71ce12a6
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.openlocfilehash: 26245952a2dc5341dedba6c497c47773b882b49b
+ms.sourcegitcommit: 86adcc06e35390f13c1e372c36d2e044f1fc31ef
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 04/26/2018
 ---
-# <a name="name-39ltnamegt39-is-not-declared"></a>名稱為 &#39;&lt;名稱&gt;&#39; 不宣告
+# <a name="name-39ltnamegt39-is-not-declared"></a>名稱&#39;&lt;名稱&gt;&#39;未宣告
 陳述式參考了程式設計項目，但編譯器找不到具有相同名稱的項目。  
   
  **錯誤 ID:** BC30451  
   
 ## <a name="to-correct-this-error"></a>更正這個錯誤  
   
-1.  請檢查參考陳述式中的名稱拼寫。 [!INCLUDE[vbprvb](~/includes/vbprvb-md.md)]不區分大小寫，但拼字的任何其他變化會視為完全不同的名稱。 請注意，底線 (`_`) 是名稱的一部分，因此也是拼字的一部分。  
+1.  請檢查參考陳述式中的名稱拼寫。 Visual Basic 不區分大小寫，但拼字的任何其他變化會視為完全不同的名稱。 請注意，底線 (`_`) 是名稱的一部分，因此也是拼字的一部分。  
   
 2.  檢查您是否有成員存取運算子 (`.`) 之間的物件和其成員。 例如，如果您有 <xref:System.Windows.Forms.TextBox> 控制項，名為 `TextBox1`，那麼要存取它的 <xref:System.Windows.Forms.TextBoxBase.Text%2A> 屬性，您應該輸入 `TextBox1.Text`。 如果您改為輸入 `TextBox1Text`，便會建立不同的名稱。  
   

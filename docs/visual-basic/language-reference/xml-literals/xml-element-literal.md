@@ -17,11 +17,11 @@ ms.assetid: 95039642-7893-48b7-b23f-45a6c55d8f67
 caps.latest.revision: 32
 author: dotnet-bot
 ms.author: dotnetcontent
-ms.openlocfilehash: de5825a6af1dd1b93c3c85651125cf817dc564f2
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.openlocfilehash: 58b11c61253b199bdeeb2f373eed5f6a358b9e0e
+ms.sourcegitcommit: 86adcc06e35390f13c1e372c36d2e044f1fc31ef
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 04/26/2018
 ---
 # <a name="xml-element-literal-visual-basic"></a>XML 項目常值 (Visual Basic)
 
@@ -39,24 +39,24 @@ ms.lasthandoff: 11/21/2017
   
 -   `<`  
   
-     必要項。 開啟 開始項目標記。  
+     必要。 開啟 開始項目標記。  
   
 -   `name`  
   
-     必要項。 元素名稱。 格式為下列其中一項：  
+     必要。 元素名稱。 格式為下列其中一項：  
   
     -   常值文字的項目名稱，表單`[ePrefix:]eName`，其中：  
   
-        |組件|說明|  
+        |組件|描述|  
         |---|---|  
-        |`ePrefix`|選擇項。 XML 命名空間前置詞的項目。 必須是全域的 XML 命名空間定義與`Imports`檔案中，或在專案層級或本機的 XML 命名空間中這個項目或父項目所定義的陳述式。|  
-        |`eName`|必要項。 元素名稱。 格式為下列其中一項：<br /><br /> -常值文字。 請參閱[宣告的 XML 項目和屬性的名稱](../../../visual-basic/programming-guide/language-features/xml/names-of-declared-xml-elements-and-attributes.md)。<br />內嵌運算式的形式`<%= eNameExp %>`。 型別`eNameExp`必須`String`或隱含轉換為型別<xref:System.Xml.Linq.XName>。|  
+        |`ePrefix`|選擇性。 XML 命名空間前置詞的項目。 必須是全域的 XML 命名空間定義與`Imports`檔案中，或在專案層級或本機的 XML 命名空間中這個項目或父項目所定義的陳述式。|  
+        |`eName`|必要。 元素名稱。 格式為下列其中一項：<br /><br /> -常值文字。 請參閱[宣告的 XML 項目和屬性的名稱](../../../visual-basic/programming-guide/language-features/xml/names-of-declared-xml-elements-and-attributes.md)。<br />內嵌運算式的形式`<%= eNameExp %>`。 型別`eNameExp`必須`String`或隱含轉換為型別<xref:System.Xml.Linq.XName>。|  
   
     -   內嵌運算式的形式`<%= nameExp %>`。 型別`nameExp`必須`String`或隱含地轉換成類型<xref:System.Xml.Linq.XName>。 項目的結尾標記中不允許內嵌的運算式。  
   
 -   `attributeList`  
   
-     選擇項。 常值中所宣告的屬性清單。  
+     選擇性。 常值中所宣告的屬性清單。  
   
      `attribute [ attribute ... ]`  
   
@@ -64,25 +64,25 @@ ms.lasthandoff: 11/21/2017
   
     -   屬性指派，表單`[aPrefix:]aName=aValue`，其中：  
   
-        |組件|說明|  
+        |組件|描述|  
         |---|---|  
-        |`aPrefix`|選擇項。 屬性的 XML 命名空間前置詞。 必須是全域的 XML 命名空間定義與`Imports`陳述式或區域的 XML 命名空間中這個項目或父項目所定義。|  
-        |`aName`|必要項。 屬性的名稱。 格式為下列其中一項：<br /><br /> -常值文字。 請參閱[宣告的 XML 項目和屬性的名稱](../../../visual-basic/programming-guide/language-features/xml/names-of-declared-xml-elements-and-attributes.md)。<br />內嵌運算式的形式`<%= aNameExp %>`。 型別`aNameExp`必須`String`或隱含轉換為型別<xref:System.Xml.Linq.XName>。|  
-        |`aValue`|選擇項。 屬性的值。 格式為下列其中一項：<br /><br /> -常值文字，以引號括住。<br />內嵌運算式的形式`<%= aValueExp %>`。 不允許任何類型。|  
+        |`aPrefix`|選擇性。 屬性的 XML 命名空間前置詞。 必須是全域的 XML 命名空間定義與`Imports`陳述式或區域的 XML 命名空間中這個項目或父項目所定義。|  
+        |`aName`|必要。 屬性的名稱。 格式為下列其中一項：<br /><br /> -常值文字。 請參閱[宣告的 XML 項目和屬性的名稱](../../../visual-basic/programming-guide/language-features/xml/names-of-declared-xml-elements-and-attributes.md)。<br />內嵌運算式的形式`<%= aNameExp %>`。 型別`aNameExp`必須`String`或隱含轉換為型別<xref:System.Xml.Linq.XName>。|  
+        |`aValue`|選擇性。 屬性的值。 格式為下列其中一項：<br /><br /> -常值文字，以引號括住。<br />內嵌運算式的形式`<%= aValueExp %>`。 不允許任何類型。|  
   
     -   內嵌運算式的形式`<%= aExp %>`。  
   
 -   `/>`  
   
-     選擇項。 表示項目是空的項目，不含內容。  
+     選擇性。 表示項目是空的項目，不含內容。  
   
 -   `>`  
   
-     必要項。 結束起始或空白項目標記。  
+     必要。 結束起始或空白項目標記。  
   
 -   `elementContents`  
   
-     選擇項。 項目的內容。  
+     選擇性。 項目的內容。  
   
      `content [ content ... ]`  
   
@@ -102,7 +102,7 @@ ms.lasthandoff: 11/21/2017
   
 -   `</[name]>`  
   
-     選擇項。 代表項目的結尾標記。 選擇性`name`內嵌運算式的結果時，不允許參數。  
+     選擇性。 代表項目的結尾標記。 選擇性`name`內嵌運算式的結果時，不允許參數。  
   
 ## <a name="return-value"></a>傳回值  
  <xref:System.Xml.Linq.XElement> 物件。  
@@ -111,18 +111,18 @@ ms.lasthandoff: 11/21/2017
  您可以使用 XML 元素常值的語法來建立<xref:System.Xml.Linq.XElement>您的程式碼中的物件。  
   
 > [!NOTE]
->  XML 常值可以跨越多行，而不使用行接續字元。 這項功能可讓您從 XML 文件內容複製並貼上直接將[!INCLUDE[vbprvb](~/includes/vbprvb-md.md)]程式。  
+>  XML 常值可以跨越多行，而不使用行接續字元。 這項功能可讓您從 XML 文件內容複製並貼上直接在 Visual Basic 程式。  
   
  內嵌運算式的形式`<%= exp %>`可讓您將動態資訊加入至 XML 元素常值。 如需詳細資訊，請參閱[XML 中內嵌的運算式](../../../visual-basic/programming-guide/language-features/xml/embedded-expressions-in-xml.md)。  
   
- [!INCLUDE[vbprvb](~/includes/vbprvb-md.md)]編譯器會將 XML 元素常值轉換成呼叫<xref:System.Xml.Linq.XElement.%23ctor%2A>建構函式，而且如果它是必要項，<xref:System.Xml.Linq.XAttribute.%23ctor%2A>建構函式。  
+ Visual Basic 編譯器會將 XML 元素常值轉換成呼叫<xref:System.Xml.Linq.XElement.%23ctor%2A>建構函式，而且如果它是必要項，<xref:System.Xml.Linq.XAttribute.%23ctor%2A>建構函式。  
   
 ## <a name="xml-namespaces"></a>XML 命名空間  
  當您必須建立 XML 常值的項目和程式碼中多次相同的命名空間，XML 命名空間前置詞很有用。 您可以使用全域 XML 命名空間前置詞，您定義使用`Imports`陳述式或使用您定義的本機前置詞`xmlns:xmlPrefix="xmlNamespace"`屬性語法。 如需詳細資訊，請參閱[Imports 陳述式 （XML 命名空間）](../../../visual-basic/language-reference/statements/imports-statement-xml-namespace.md)。  
   
  XML 命名空間之範圍規則，根據本機的前置詞的優先順序高於通用的前置詞。 不過，如果 XML 常值定義的 XML 命名空間，該命名空間不適用於內嵌的運算式中出現的運算式。 內嵌的運算式可以存取只有的全域 XML 命名空間。  
   
- [!INCLUDE[vbprvb](~/includes/vbprvb-md.md)]編譯器會將轉換成產生的程式碼中的一個區域命名空間定義使用 XML 常值每個全域 XML 命名空間。 未使用的全域 XML 命名空間不會出現在產生的程式碼中。  
+ Visual Basic 編譯器將轉換成產生的程式碼中的一個區域命名空間定義使用 XML 常值每個全域 XML 命名空間。 未使用的全域 XML 命名空間不會出現在產生的程式碼中。  
   
 ## <a name="example"></a>範例  
  下列範例會示範如何建立簡單的 XML 項目具有兩個巢狀的空項目。  

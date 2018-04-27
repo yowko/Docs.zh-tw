@@ -31,11 +31,11 @@ ms.assetid: dea01dad-a8ac-484a-bb3a-8c45a1b1eccc
 caps.latest.revision: 21
 author: dotnet-bot
 ms.author: dotnetcontent
-ms.openlocfilehash: cf6b3ce7e5f9549ca04c4980bd3c91513b343ff6
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.openlocfilehash: 06702cdc9073065a418b17d198dbb43be4aefca1
+ms.sourcegitcommit: 86adcc06e35390f13c1e372c36d2e044f1fc31ef
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 04/26/2018
 ---
 # <a name="how-to-break-and-combine-statements-in-code-visual-basic"></a>如何：在程式碼中中斷和合併陳述式 (Visual Basic)
 撰寫程式碼，就表示您有時候可能會建立冗長且必須水平捲軸在程式碼編輯器中的陳述式。 雖然這不會影響的方式執行程式碼，但是它困難為您或其他人閱讀的程式碼，因為它會出現在監視器。 在這種情況下，您應該考慮分為數行的單一長陳述式。  
@@ -59,7 +59,7 @@ ms.lasthandoff: 11/21/2017
   
      您無法繼續註解使用行接續字元。 編譯器不會檢查特殊意義的註解中的字元。 多行註解，針對重複的註解符號 (`'`) 在每一行。  
   
- 雖然建議的方法，將每個陳述式放在不同行是[!INCLUDE[vbprvb](~/includes/vbprvb-md.md)]也可讓您將多個陳述式放在同一行。  
+ 雖然建議的方法是將每個陳述式放在不同行，Visual Basic 也可讓您將多個陳述式放在同一行。  
   
 ### <a name="to-place-multiple-statements-on-the-same-line"></a>若要將多個陳述式放在同一行  
   

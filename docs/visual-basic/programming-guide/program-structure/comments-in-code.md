@@ -1,11 +1,12 @@
 ---
-title: "程式碼中的註解 (Visual Basic)"
-ms.custom: 
+title: 程式碼中的註解 (Visual Basic)
+ms.custom: ''
 ms.date: 07/20/2015
 ms.prod: .net
-ms.reviewer: 
-ms.suite: 
-ms.technology: devlang-visual-basic
+ms.reviewer: ''
+ms.suite: ''
+ms.technology:
+- devlang-visual-basic
 ms.topic: article
 helpviewer_keywords:
 - Uncomment button
@@ -20,17 +21,17 @@ helpviewer_keywords:
 - comments
 - code comments
 ms.assetid: 90136fba-22eb-49f9-ba81-63db629b4a47
-caps.latest.revision: "17"
+caps.latest.revision: 17
 author: dotnet-bot
 ms.author: dotnetcontent
-ms.openlocfilehash: 0cf1aa755c479c73c64951f80ab0b76985507da6
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.openlocfilehash: 9cd3277ea61ac9b46d8d20028bd100811988f611
+ms.sourcegitcommit: 86adcc06e35390f13c1e372c36d2e044f1fc31ef
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 04/26/2018
 ---
 # <a name="comments-in-code-visual-basic"></a>程式碼中的註解 (Visual Basic)
-當您閱讀程式碼範例時，常會遇到註解符號 (`'`)。 這個符號會告知[!INCLUDE[vbprvb](~/includes/vbprvb-md.md)]編譯器忽略它後面的文字或*註解*。 註解是為了閱讀者方便而加入至程式碼的簡短說明。  
+當您閱讀程式碼範例時，常會遇到註解符號 (`'`)。 這個符號會告知 Visual Basic 編譯器忽略它後面的文字或*註解*。 註解是為了閱讀者方便而加入至程式碼的簡短說明。  
   
  以簡短註解做為所有程序開頭是良好的程式設計作法，此註解會描述程序的基本特性 (作用為何)。 這對於您自己以及對於其他檢查程式碼的人都有好處。 您應該將描述功能特性的註解，與實作 (Implementation) 細節 (程序是如何運作) 分開。 當您將實作細節包含在描述中，請記得在更新函式時，將實作細節一同更新。  
   
@@ -43,7 +44,7 @@ ms.lasthandoff: 11/21/2017
  [!code-vb[VbVbcnConventions#17](../../../visual-basic/programming-guide/language-features/codesnippet/VisualBasic/comments-in-code_2.vb)]  
   
 ## <a name="commenting-guidelines"></a>註解方針  
- 下表提供哪些註解類型可以出現在一段程式碼之前的一般方針。 這些都是建議，[!INCLUDE[vbprvb](~/includes/vbprvb-md.md)] 不會強制加入註解的規則。 撰寫對您自己與其他閱讀程式碼的人而言最有效的註解。  
+ 下表提供哪些註解類型可以出現在一段程式碼之前的一般方針。 這些都是建議，Visual Basic 不會強制加入註解的規則。 撰寫對您自己與其他閱讀程式碼的人而言最有效的註解。  
   
 |||  
 |---|---|  

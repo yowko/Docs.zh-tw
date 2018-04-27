@@ -13,11 +13,11 @@ ms.assetid: 6ce3a161-7316-46bd-a785-0d50e5414020
 caps.latest.revision: 8
 author: dotnet-bot
 ms.author: dotnetcontent
-ms.openlocfilehash: 2c86d46c884617be152a5954426e9ddd6ef61651
-ms.sourcegitcommit: bd1ef61f4bb794b25383d3d72e71041a5ced172e
+ms.openlocfilehash: bff3ec554a594e99bc65e5cd8df28a056dcc1ebd
+ms.sourcegitcommit: 86adcc06e35390f13c1e372c36d2e044f1fc31ef
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/18/2017
+ms.lasthandoff: 04/26/2018
 ---
 # <a name="pathfile-access-error"></a>路徑/檔案存取錯誤
 檔案存取或磁碟存取作業時，作業系統無法建立路徑和檔案名稱之間的連接。  
@@ -30,7 +30,7 @@ ms.lasthandoff: 10/18/2017
   
 3.  請確定您未嘗試開啟唯讀檔案中循序`Output`或`Append`模式。 如果這種情況，請開啟檔案的`Input`模式或變更檔案的唯讀屬性。  
   
-4.  請確定您未嘗試變更[!INCLUDE[vbprvb](~/includes/vbprvb-md.md)]資料庫或文件中的專案。  
+4.  請確定您未嘗試變更 Visual Basic 專案中的資料庫或文件。  
   
 ## <a name="see-also"></a>另請參閱  
  [錯誤類型](../../../visual-basic/programming-guide/language-features/error-types.md)

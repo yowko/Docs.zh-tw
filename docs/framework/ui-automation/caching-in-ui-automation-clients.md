@@ -1,27 +1,29 @@
 ---
-title: "UI 自動化用戶端中的快取"
-ms.custom: 
+title: UI 自動化用戶端中的快取
+ms.custom: ''
 ms.date: 03/30/2017
 ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.technology: dotnet-bcl
-ms.tgt_pltfrm: 
+ms.reviewer: ''
+ms.suite: ''
+ms.technology:
+- dotnet-bcl
+ms.tgt_pltfrm: ''
 ms.topic: article
 helpviewer_keywords:
 - UI Automation caching in clients
 - caching, UI Automation clients
 ms.assetid: 94c15031-4975-43cc-bcd5-c9439ed21c9c
-caps.latest.revision: "24"
+caps.latest.revision: 24
 author: Xansky
 ms.author: mhopkins
 manager: markl
-ms.workload: dotnet
-ms.openlocfilehash: cce1890357f5781f1772b6a0aa583e493e2cfa8b
-ms.sourcegitcommit: c0dd436f6f8f44dc80dc43b07f6841a00b74b23f
+ms.workload:
+- dotnet
+ms.openlocfilehash: 5bbd54d4e1e8a6a1eae52f50696aecddd1f8bd8a
+ms.sourcegitcommit: 86adcc06e35390f13c1e372c36d2e044f1fc31ef
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 01/19/2018
+ms.lasthandoff: 04/26/2018
 ---
 # <a name="caching-in-ui-automation-clients"></a>UI 自動化用戶端中的快取
 > [!NOTE]
@@ -67,7 +69,7 @@ ms.lasthandoff: 01/19/2018
 ## <a name="activating-the-cacherequest"></a>啟動 CacheRequest  
  僅有在目前執行緒的 <xref:System.Windows.Automation.AutomationElement> 為作用中時擷取 <xref:System.Windows.Automation.CacheRequest> 物件才會執行快取。 有兩個方法可以啟動 <xref:System.Windows.Automation.CacheRequest>。  
   
- 一般方式是呼叫 <xref:System.Windows.Automation.CacheRequest.Activate%2A>。 此方法會傳回實作 <xref:System.IDisposable>的物件。 只要 <xref:System.IDisposable> 物件存在，要求就會保持作用中狀態。 控制物件存留期最簡單的方式是在呼叫內包含 `using` ([!INCLUDE[TLA#tla_cshrp](../../../includes/tlasharptla-cshrp-md.md)]) 或 `Using` ([!INCLUDE[TLA2#tla_visualb](../../../includes/tla2sharptla-visualb-md.md)]) 區塊。 這可確保該要求可從堆疊推出，即使引發例外狀況亦同。  
+ 一般方式是呼叫 <xref:System.Windows.Automation.CacheRequest.Activate%2A>。 此方法會傳回實作 <xref:System.IDisposable>的物件。 只要 <xref:System.IDisposable> 物件存在，要求就會保持作用中狀態。 若要控制物件存留期最簡單的方式是在呼叫內包含`using`(C#) 或`Using`(Visual Basic) 的區塊。 這可確保該要求可從堆疊推出，即使引發例外狀況亦同。  
   
  另一種方法是呼叫 <xref:System.Windows.Automation.CacheRequest.Push%2A>，這種方法在您要將快取要求進行巢狀處理時相當有用。 這會將要求放置在堆疊上，並且啟動要求。 要求會保持作用中狀態，直到 <xref:System.Windows.Automation.CacheRequest.Pop%2A>將要求從堆疊移除為止。 如果另一個要求被推入到堆疊，要求則會暫時變成非作用中，只有堆疊最上層的要求仍然保持作用中的狀態。  
   
@@ -112,7 +114,7 @@ ms.lasthandoff: 01/19/2018
   
  更新快取不會更改任何現有 <xref:System.Windows.Automation.AutomationElement> 參考的屬性。  
   
-## <a name="see-also"></a>請參閱  
+## <a name="see-also"></a>另請參閱  
  [用戶端的 UI 自動化事件](../../../docs/framework/ui-automation/ui-automation-events-for-clients.md)  
  [在 UI 自動化中使用快取](../../../docs/framework/ui-automation/use-caching-in-ui-automation.md)  
  [FetchTimer 範例](http://msdn.microsoft.com/library/5b7d3294-de22-4f24-b2d6-d4785a304b90)

@@ -1,12 +1,12 @@
 ---
-title: "參數設計"
-ms.custom: 
+title: 參數設計
+ms.custom: ''
 ms.date: 03/30/2017
 ms.prod: .net
-ms.reviewer: 
-ms.suite: 
+ms.reviewer: ''
+ms.suite: ''
 ms.technology: dotnet-standard
-ms.tgt_pltfrm: 
+ms.tgt_pltfrm: ''
 ms.topic: article
 helpviewer_keywords:
 - member design guidelines [.NET Framework], parameters
@@ -15,18 +15,18 @@ helpviewer_keywords:
 - parameters, design guidelines
 - reserved parameters
 ms.assetid: 3f33bf46-4a7b-43b3-bb78-1ffebe0dcfa6
-caps.latest.revision: "11"
+caps.latest.revision: 11
 author: rpetrusha
 ms.author: ronpet
 manager: wpickett
 ms.workload:
 - dotnet
 - dotnetcore
-ms.openlocfilehash: f95301bab57e8bdb6b22c54140a4c02ed208b8d3
-ms.sourcegitcommit: e7f04439d78909229506b56935a1105a4149ff3d
+ms.openlocfilehash: 0d89ed81c06558a6bc101864a7fef3173f019fd0
+ms.sourcegitcommit: 2e8acae16ae802f2d6d04e3ce0a6dbf04e476513
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 12/23/2017
+ms.lasthandoff: 04/18/2018
 ---
 # <a name="parameter-design"></a>參數設計
 此章節提供參數的設計，包括區段，並檢查這些引數的指導方針有廣泛的指導方針。 此外，您應該參閱中所述的指導方針[命名參數](../../../docs/standard/design-guidelines/naming-parameters.md)。  
@@ -82,9 +82,9 @@ ms.lasthandoff: 12/23/2017
   
  引數傳遞時透過傳值參數，該成員會收到一份中傳遞的實際引數。 如果引數是實值類型，會將引數的複本放在堆疊上。 如果引數是參考類型，參考的複本放在堆疊上。 最熱門 CLR 語言，例如 C#、 VB.NET 和 c + +，以傳值方式傳遞參數的預設值。  
   
- 引數傳遞時`ref`參數，該成員接收傳遞的實際引數的參考。 如果引數是實值類型，參考的引數放在堆疊上。 如果引數是參考類型，參考的參考會放在堆疊上。 `Ref`參數可以用來允許修改由呼叫端傳遞引數的成員。  
+ 引數傳遞時`ref`參數，該成員接收傳遞的實際引數的參考。 如果引數是實值類型，參考的引數放在堆疊上。 如果引數是參考類型，參考的參考會放在堆疊上。 `Ref` 參數可以用來允許修改由呼叫端傳遞引數的成員。  
   
- `Out`參數是類似於`ref`參數，但有一些小差異。 參數一開始會視為未設定，並且無法在指派一些值之前讀取成員主體中。 此外，參數有成員傳回之前指派一些值。  
+ `Out` 參數是類似於`ref`參數，但有一些小差異。 參數一開始會視為未設定，並且無法在指派一些值之前讀取成員主體中。 此外，參數有成員傳回之前指派一些值。  
   
  **請避免 x**使用`out`或`ref`參數。  
   
@@ -164,8 +164,8 @@ public class String {
   
  *部分 © 2005年，2009 Microsoft Corporation。All rights reserved.*  
   
- *皮耳森教育，inc.從權限所印製[Framework 設計方針： 慣例、 慣用語和可重複使用.NET 程式庫，第 2 版的模式](http://www.informit.com/store/framework-design-guidelines-conventions-idioms-and-9780321545619)Krzysztof Cwalina 並 Brad Abrams，發行 2008 年 10 月 22 日由Addison Wesley Professional，做為 Microsoft Windows 程式開發系列的一部分。*  
+ *皮耳森教育，inc.從權限所印製[Framework 設計方針： 慣例、 慣用語和可重複使用.NET 程式庫，第 2 版的模式](https://www.informit.com/store/framework-design-guidelines-conventions-idioms-and-9780321545619)Krzysztof Cwalina 並 Brad Abrams，發行 2008 年 10 月 22 日由Addison Wesley Professional，做為 Microsoft Windows 程式開發系列的一部分。*  
   
-## <a name="see-also"></a>請參閱  
+## <a name="see-also"></a>另請參閱  
  [成員設計方針](../../../docs/standard/design-guidelines/member.md)  
  [Framework 設計方針](../../../docs/standard/design-guidelines/index.md)

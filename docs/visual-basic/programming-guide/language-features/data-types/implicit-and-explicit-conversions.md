@@ -1,11 +1,12 @@
 ---
-title: "隱含和明確轉換 (Visual Basic)"
-ms.custom: 
+title: 隱含和明確轉換 (Visual Basic)
+ms.custom: ''
 ms.date: 07/20/2015
 ms.prod: .net
-ms.reviewer: 
-ms.suite: 
-ms.technology: devlang-visual-basic
+ms.reviewer: ''
+ms.suite: ''
+ms.technology:
+- devlang-visual-basic
 ms.topic: article
 helpviewer_keywords:
 - conversions [Visual Basic], type
@@ -26,17 +27,17 @@ helpviewer_keywords:
 - data type conversion [Visual Basic], implicit
 - implicit data type conversions [Visual Basic]
 ms.assetid: 77de1659-af8a-492c-967e-e7ef60ccce66
-caps.latest.revision: "25"
+caps.latest.revision: 25
 author: dotnet-bot
 ms.author: dotnetcontent
-ms.openlocfilehash: 6e9dd698e1cc84464cd12d33767feec960c511ca
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.openlocfilehash: 9827cecce0a15d37d2ffe3ccf691404149b156fb
+ms.sourcegitcommit: 86adcc06e35390f13c1e372c36d2e044f1fc31ef
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 04/26/2018
 ---
 # <a name="implicit-and-explicit-conversions-visual-basic"></a>隱含和明確轉換 (Visual Basic)
-*隱含轉換*不需要任何特殊的語法，在原始程式碼中。 在下列範例中，[!INCLUDE[vbprvb](~/includes/vbprvb-md.md)]的值隱含轉換`k`的單精確度浮點值，然後再將它指派給`q`。  
+*隱含轉換*不需要任何特殊的語法，在原始程式碼中。 在下列範例中，Visual Basic 將隱含轉換的值`k`的單精確度浮點值，然後再將它指派給`q`。  
   
 ```  
 Dim k As Integer  
@@ -46,7 +47,7 @@ k = 432
 q = k  
 ```  
   
- *明確轉換*使用類型轉換關鍵字。 [!INCLUDE[vbprvb](~/includes/vbprvb-md.md)]提供數個這類關鍵字，會強制轉型為所需的資料類型的括號括住的運算式。 這些關鍵字做為函式，但是編譯器會產生內嵌程式碼，因此執行速度稍微比函式呼叫。  
+ *明確轉換*使用類型轉換關鍵字。 Visual Basic 提供數個這類關鍵字，會強制轉型為所需的資料類型的括號括住的運算式。 這些關鍵字做為函式，但是編譯器會產生內嵌程式碼，因此執行速度稍微比函式呼叫。  
   
  在上述範例中，下列延伸`CInt`關鍵字的值轉換`q`回之前將它指派給整數`k`。  
   
@@ -62,28 +63,28 @@ k = CInt(q)
   
 |類型轉換關鍵字|將運算式轉換成資料類型|要轉換之運算式的可允許的資料類型|  
 |---|---|---|  
-|`CBool`|[Boolean 資料類型](../../../../visual-basic/language-reference/data-types/boolean-data-type.md)|任何數值類型 (包括`Byte`， `SByte`，並且會在列舉型別)， `String`，`Object`|  
-|`CByte`|[Byte 資料類型](../../../../visual-basic/language-reference/data-types/byte-data-type.md)|任何數值類型 (包括`SByte`和列舉型別)， `Boolean`， `String`，`Object`|  
+|`CBool`|[Boolean 資料類型](../../../../visual-basic/language-reference/data-types/boolean-data-type.md)|任何數值類型 (包括`Byte`， `SByte`，並且會在列舉型別)， `String`， `Object`|  
+|`CByte`|[Byte 資料類型](../../../../visual-basic/language-reference/data-types/byte-data-type.md)|任何數值類型 (包括`SByte`和列舉型別)， `Boolean`， `String`， `Object`|  
 |`CChar`|[Char 資料類型](../../../../visual-basic/language-reference/data-types/char-data-type.md)|`String`, `Object`|  
 |`CDate`|[Date 資料類型](../../../../visual-basic/language-reference/data-types/date-data-type.md)|`String`, `Object`|  
-|`CDbl`|[Double 資料類型](../../../../visual-basic/language-reference/data-types/double-data-type.md)|任何數值類型 (包括`Byte`， `SByte`，並且會在列舉型別)， `Boolean`， `String`，`Object`|  
-|`CDec`|[Decimal 資料類型](../../../../visual-basic/language-reference/data-types/decimal-data-type.md)|任何數值類型 (包括`Byte`， `SByte`，並且會在列舉型別)， `Boolean`， `String`，`Object`|  
-|`CInt`|[Integer 資料類型](../../../../visual-basic/language-reference/data-types/integer-data-type.md)|任何數值類型 (包括`Byte`， `SByte`，並且會在列舉型別)， `Boolean`， `String`，`Object`|  
-|`CLng`|[Long 資料類型](../../../../visual-basic/language-reference/data-types/long-data-type.md)|任何數值類型 (包括`Byte`， `SByte`，並且會在列舉型別)， `Boolean`， `String`，`Object`|  
+|`CDbl`|[Double 資料類型](../../../../visual-basic/language-reference/data-types/double-data-type.md)|任何數值類型 (包括`Byte`， `SByte`，並且會在列舉型別)， `Boolean`， `String`， `Object`|  
+|`CDec`|[Decimal 資料類型](../../../../visual-basic/language-reference/data-types/decimal-data-type.md)|任何數值類型 (包括`Byte`， `SByte`，並且會在列舉型別)， `Boolean`， `String`， `Object`|  
+|`CInt`|[Integer 資料類型](../../../../visual-basic/language-reference/data-types/integer-data-type.md)|任何數值類型 (包括`Byte`， `SByte`，並且會在列舉型別)， `Boolean`， `String`， `Object`|  
+|`CLng`|[Long 資料類型](../../../../visual-basic/language-reference/data-types/long-data-type.md)|任何數值類型 (包括`Byte`， `SByte`，並且會在列舉型別)， `Boolean`， `String`， `Object`|  
 |`CObj`|[Object 資料類型](../../../../visual-basic/language-reference/data-types/object-data-type.md)|任何型別|  
-|`CSByte`|[SByte 資料類型](../../../../visual-basic/language-reference/data-types/sbyte-data-type.md)|任何數值類型 (包括`Byte`和列舉型別)， `Boolean`， `String`，`Object`|  
-|`CShort`|[Short 資料類型](../../../../visual-basic/language-reference/data-types/short-data-type.md)|任何數值類型 (包括`Byte`， `SByte`，並且會在列舉型別)， `Boolean`， `String`，`Object`|  
-|`CSng`|[Single 資料類型](../../../../visual-basic/language-reference/data-types/single-data-type.md)|任何數值類型 (包括`Byte`， `SByte`，並且會在列舉型別)， `Boolean`， `String`，`Object`|  
-|`CStr`|[String 資料類型](../../../../visual-basic/language-reference/data-types/string-data-type.md)|任何數值類型 (包括`Byte`， `SByte`，並且會在列舉型別)， `Boolean`， `Char`，`Char`陣列、 `Date`，`Object`|  
+|`CSByte`|[SByte 資料類型](../../../../visual-basic/language-reference/data-types/sbyte-data-type.md)|任何數值類型 (包括`Byte`和列舉型別)， `Boolean`， `String`， `Object`|  
+|`CShort`|[Short 資料類型](../../../../visual-basic/language-reference/data-types/short-data-type.md)|任何數值類型 (包括`Byte`， `SByte`，並且會在列舉型別)， `Boolean`， `String`， `Object`|  
+|`CSng`|[Single 資料類型](../../../../visual-basic/language-reference/data-types/single-data-type.md)|任何數值類型 (包括`Byte`， `SByte`，並且會在列舉型別)， `Boolean`， `String`， `Object`|  
+|`CStr`|[String 資料類型](../../../../visual-basic/language-reference/data-types/string-data-type.md)|任何數值類型 (包括`Byte`， `SByte`，並且會在列舉型別)， `Boolean`， `Char`，`Char`陣列、 `Date`， `Object`|  
 |`CType`|輸入指定下列逗號 (`,`)|當轉換成*基本資料型別*（包括基礎類型的陣列），相同類型做為允許對應轉換關鍵字<br /><br /> 當轉換成*複合資料類型*，它實作的介面以及它所繼承的類別<br /><br /> 轉換為類別或結構上您有多載時`CType`，該類別或結構|  
-|`CUInt`|[UInteger 資料類型](../../../../visual-basic/language-reference/data-types/uinteger-data-type.md)|任何數值類型 (包括`Byte`， `SByte`，並且會在列舉型別)， `Boolean`， `String`，`Object`|  
-|`CULng`|[ULong 資料類型](../../../../visual-basic/language-reference/data-types/ulong-data-type.md)|任何數值類型 (包括`Byte`， `SByte`，並且會在列舉型別)， `Boolean`， `String`，`Object`|  
-|`CUShort`|[UShort 資料類型](../../../../visual-basic/language-reference/data-types/ushort-data-type.md)|任何數值類型 (包括`Byte`， `SByte`，並且會在列舉型別)， `Boolean`， `String`，`Object`|  
+|`CUInt`|[UInteger 資料類型](../../../../visual-basic/language-reference/data-types/uinteger-data-type.md)|任何數值類型 (包括`Byte`， `SByte`，並且會在列舉型別)， `Boolean`， `String`， `Object`|  
+|`CULng`|[ULong 資料類型](../../../../visual-basic/language-reference/data-types/ulong-data-type.md)|任何數值類型 (包括`Byte`， `SByte`，並且會在列舉型別)， `Boolean`， `String`， `Object`|  
+|`CUShort`|[UShort 資料類型](../../../../visual-basic/language-reference/data-types/ushort-data-type.md)|任何數值類型 (包括`Byte`， `SByte`，並且會在列舉型別)， `Boolean`， `String`， `Object`|  
   
 ## <a name="the-ctype-function"></a>CType 函式  
  [CType 函式](../../../../visual-basic/language-reference/functions/ctype-function.md)兩個引數上運作。 第一個要轉換的運算式，而第二個目的地資料類型或物件類別。 請注意第一個引數必須是運算式，不是型別。  
   
- `CType`是*內嵌函式*，這表示已編譯的程式碼會進行轉換，通常不會產生函式呼叫。 這可改善效能。  
+ `CType` 是*內嵌函式*，這表示已編譯的程式碼會進行轉換，通常不會產生函式呼叫。 這可改善效能。  
   
  如需的比較`CType`與其他類型轉換關鍵字，請參閱[DirectCast 運算子](../../../../visual-basic/language-reference/operators/directcast-operator.md)和[TryCast 運算子](../../../../visual-basic/language-reference/operators/trycast-operator.md)。  
   
@@ -109,7 +110,7 @@ h = CType(cZ, iZone)
 ```  
   
 ### <a name="array-types"></a>陣列類型  
- `CType`也可以轉換陣列資料類型，如下列範例所示。  
+ `CType` 也可以轉換陣列資料類型，如下列範例所示。  
   
 ```  
 Dim v() As classV  

@@ -1,11 +1,12 @@
 ---
-title: "疑難排解程序 (Visual Basic)"
-ms.custom: 
+title: 疑難排解程序 (Visual Basic)
+ms.custom: ''
 ms.date: 07/20/2015
 ms.prod: .net
-ms.reviewer: 
-ms.suite: 
-ms.technology: devlang-visual-basic
+ms.reviewer: ''
+ms.suite: ''
+ms.technology:
+- devlang-visual-basic
 ms.topic: article
 helpviewer_keywords:
 - troubleshooting Visual Basic, procedures
@@ -14,14 +15,14 @@ helpviewer_keywords:
 - troubleshooting procedures
 - procedures [Visual Basic], about procedures
 ms.assetid: 525721e8-2e02-4f75-b5d8-6b893462cf2b
-caps.latest.revision: "17"
+caps.latest.revision: 17
 author: dotnet-bot
 ms.author: dotnetcontent
-ms.openlocfilehash: b838644baa5ad10f1deb917cff5751a0f625fca6
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.openlocfilehash: 7e54c965dc15131734be2c5bcfe04ad70292bf23
+ms.sourcegitcommit: 86adcc06e35390f13c1e372c36d2e044f1fc31ef
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 04/26/2018
 ---
 # <a name="troubleshooting-procedures-visual-basic"></a>疑難排解程序 (Visual Basic)
 此頁面會列出處理程序時，可能會發生的一些常見問題。  
@@ -83,11 +84,11 @@ ms.lasthandoff: 11/21/2017
   
  下列項目，即使它們屬於參數清單中，不是元件的程序的簽章：  
   
--   程序修飾詞關鍵字，例如`Public`， `Shared`，和`Static`  
+-   程序修飾詞關鍵字，例如`Public`， `Shared`，和 `Static`  
   
 -   參數名稱  
   
--   參數修飾詞關鍵字，例如`ByRef`和`Optional`  
+-   參數修飾詞關鍵字，例如`ByRef`和 `Optional`  
   
 -   傳回值 （除了轉換運算子） 的資料類型  
   
@@ -99,7 +100,7 @@ ms.lasthandoff: 11/21/2017
  如果您多載的程序有一或多個[選擇性](../../../../visual-basic/language-reference/modifiers/optional.md)參數或[ParamArray](../../../../visual-basic/language-reference/modifiers/paramarray.md)參數，您必須避免重複的任一*隱含多載*。 如需資訊，請參閱[中多載化程序的考量](./considerations-in-overloading-procedures.md)。  
   
 ## <a name="calling-a-wrong-version-of-an-overloaded-procedure"></a>呼叫的多載的程序的版本錯誤  
- 如果程序有數個多載的版本，您應該先熟悉其所有的參數清單，並了解如何[!INCLUDE[vbprvb](~/includes/vbprvb-md.md)]解析多載之間的呼叫。 否則您無法呼叫非預期的多載。  
+ 如果程序有數個多載的版本，您應該先熟悉其所有的參數清單，並了解 Visual Basic 如何解析多載之間的呼叫。 否則您無法呼叫非預期的多載。  
   
  當您決定您想要呼叫哪個多的載時, 請務必遵守下列規則：  
   

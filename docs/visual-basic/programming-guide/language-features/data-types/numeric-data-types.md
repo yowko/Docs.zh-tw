@@ -1,11 +1,12 @@
 ---
-title: "數字資料類型 (Visual Basic)"
-ms.custom: 
+title: 數字資料類型 (Visual Basic)
+ms.custom: ''
 ms.date: 07/20/2015
 ms.prod: .net
-ms.reviewer: 
-ms.suite: 
-ms.technology: devlang-visual-basic
+ms.reviewer: ''
+ms.suite: ''
+ms.technology:
+- devlang-visual-basic
 ms.topic: article
 helpviewer_keywords:
 - integral types [Visual Basic], Visual Basic
@@ -29,19 +30,19 @@ helpviewer_keywords:
 - Single data type [Visual Basic], numeric types
 - Decimal data type [Visual Basic], numeric data types
 ms.assetid: a27bd4d0-7e14-43eb-9cc4-b42eaab323c9
-caps.latest.revision: "25"
+caps.latest.revision: 25
 author: dotnet-bot
 ms.author: dotnetcontent
-ms.openlocfilehash: 9c185b7c04d589bfe74d1cca0c60df3e81ab80d3
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.openlocfilehash: c5e7a5340f9b0d103acc14350f30f17d8d709de3
+ms.sourcegitcommit: 86adcc06e35390f13c1e372c36d2e044f1fc31ef
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 04/26/2018
 ---
 # <a name="numeric-data-types-visual-basic"></a>數字資料類型 (Visual Basic)
-[!INCLUDE[vbprvb](~/includes/vbprvb-md.md)]提供數個*數值資料型別*來處理各種表示相互轉換的數字。 *整數類資料*類型表示只有整數 （正數、 負數和零），和*整數*類型與整數和分數部分代表數字。  
+Visual Basic 提供數個*數值資料型別*來處理各種表示相互轉換的數字。 *整數類資料*類型表示只有整數 （正數、 負數和零），和*整數*類型與整數和分數部分代表數字。  
   
- 顯示並行所比較資料表[!INCLUDE[vbprvb](~/includes/vbprvb-md.md)]資料類型，請參閱[資料型別](../../../../visual-basic/language-reference/data-types/data-type-summary.md)。  
+ 顯示的 Visual Basic 資料類型來並行比較表，請參閱[資料型別](../../../../visual-basic/language-reference/data-types/data-type-summary.md)。  
   
 ## <a name="integral-numeric-types"></a>整數數字類型  
  *整數類資料類型*則代表不含小數部分的唯一數字。  
@@ -51,10 +52,10 @@ ms.lasthandoff: 11/21/2017
  *不帶正負號*整數類資料類型[Byte 資料類型](../../../../visual-basic/language-reference/data-types/byte-data-type.md)（8 位元）、 [UShort 資料類型](../../../../visual-basic/language-reference/data-types/ushort-data-type.md)（16 位元）、 [UInteger 資料類型](../../../../visual-basic/language-reference/data-types/uinteger-data-type.md)（32 位元） 和[ULong 資料類型](../../../../visual-basic/language-reference/data-types/ulong-data-type.md)（64 位元）。 如果變數包含二進位資料或未知的性質的資料，請將它做為其中一個這些類型宣告。  
   
 ### <a name="performance"></a>效能  
- 算術運算是整數類資料類型與其他資料型別的更快。 它們是以最快`Integer`和`UInteger`中的型別[!INCLUDE[vbprvb](~/includes/vbprvb-md.md)]。  
+ 算術運算是整數類資料類型與其他資料型別的更快。 它們是以最快`Integer`和`UInteger`Visual Basic 中的類型。  
   
 ### <a name="large-integers"></a>大整數  
- 如果您需要保存整數大於`Integer`可以保存的資料類型，您可以使用`Long`資料改為輸入。 `Long`變數可以保留從-9223372036854775808 到 9,223,372,036,854,775,807 的數字。 作業`Long`稍微低於與`Integer`。  
+ 如果您需要保存整數大於`Integer`可以保存的資料類型，您可以使用`Long`資料改為輸入。 `Long` 變數可以保留從-9223372036854775808 到 9,223,372,036,854,775,807 的數字。 作業`Long`稍微低於與`Integer`。  
   
  如果您需要更大的值，您可以使用[Decimal 資料類型](../../../../visual-basic/language-reference/data-types/decimal-data-type.md)。 您可以保有數字-79228162514264337593543950335 到 79228162514264337593543950335 中從`Decimal`變數，如果您未使用任何小數位數。 不過，作業`Decimal`數字會慢很多超過其他任何數值資料型別。  
   
@@ -69,7 +70,7 @@ ms.lasthandoff: 11/21/2017
   
  非整數數值資料類型為`Decimal`（128 位元固定的點），[單一的資料型別](../../../../visual-basic/language-reference/data-types/single-data-type.md)（32 位元浮點） 和[Double 資料類型](../../../../visual-basic/language-reference/data-types/double-data-type.md)（64 位元浮點數）。 它們都是帶正負號的類型。 如果變數可以包含一小部分，將它宣告為其中一個類型。  
   
- `Decimal`不是浮點數資料類型。 `Decimal`數字必須是二進位的整數值，指定值的哪些部分是十進位小數的整數縮放比例。  
+ `Decimal` 不是浮點數資料類型。 `Decimal` 數字必須是二進位的整數值，指定值的哪些部分是十進位小數的整數縮放比例。  
   
  您可以使用`Decimal`貨幣值的變數。 優點是值的精確度。 `Double`資料型別會加快，需要較少的記憶體，但它會受制於捨入錯誤。 `Decimal`資料類型會保留完整的精確度為 28 的小數位數。  
   
@@ -78,7 +79,7 @@ ms.lasthandoff: 11/21/2017
  非整數的數字值可以表示為 mmmEeee 中, 即 mmm*尾數*（有效位數） 而且 eee*指數*（10 的次方）。 非整數類型的最高的正數值會 7.9228162514264337593543950335 e + 28 `Decimal`，3.4028235 e + 38 `Single`，和 1.79769313486231570 e + 308 `Double`。  
   
 ### <a name="performance"></a>效能  
- `Double`是最有效率的分數的資料類型，因為在目前的平台上的處理器執行雙精度浮點數運算。 不過，作業`Double`速度與整數類資料類型，例如`Integer`。  
+ `Double` 是最有效率的分數的資料類型，因為在目前的平台上的處理器執行雙精度浮點數運算。 不過，作業`Double`速度與整數類資料類型，例如`Integer`。  
   
 ### <a name="small-magnitudes"></a>最小範圍  
  數字最小的可能範圍 （最接近 0），與`Double`變數可以保有數字越小越-4.94065645841246544-324 負值，4.94065645841246544-324 的正數值。  

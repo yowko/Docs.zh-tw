@@ -14,11 +14,11 @@ ms.assetid: 78a15cd0-7708-4e79-85d1-c154b7a14a8c
 caps.latest.revision: 16
 author: dotnet-bot
 ms.author: dotnetcontent
-ms.openlocfilehash: d44f58951d99f1b4b551af75dc0a0e895e337e2c
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.openlocfilehash: 86dae99f2d17a506a27cf491a76083df618ba27b
+ms.sourcegitcommit: 86adcc06e35390f13c1e372c36d2e044f1fc31ef
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 04/26/2018
 ---
 # <a name="processing-the-xml-file-visual-basic"></a>處理 XML 檔案 (Visual Basic)
 編譯器會針對程式碼中，標記為要產生文件的每個建構產生識別碼字串。 (如需如何標記您的程式碼的資訊，請參閱[XML 註解標記](../../../visual-basic/language-reference/xmldoc/recommended-xml-tags-for-documentation-comments.md)。)識別碼字串可唯一識別此建構。 處理 XML 檔案的程式可以使用來識別對應的識別碼字串[!INCLUDE[dnprdnshort](~/includes/dnprdnshort-md.md)]中繼資料/反映項目。  
@@ -34,12 +34,12 @@ ms.lasthandoff: 11/21/2017
 |字元|描述|  
 |---|---|  
 |N|namespace<br /><br /> 您無法將文件註解加入命名空間，但您可以進行 CREF 參考這些有支援。|  
-|T|類型： `Class`， `Module`， `Interface`， `Structure`， `Enum`，`Delegate`|  
-|F|欄位：`Dim`|  
+|T|類型： `Class`， `Module`， `Interface`， `Structure`， `Enum`， `Delegate`|  
+|F|欄位： `Dim`|  
 |P|屬性： `Property` （包括預設屬性）|  
-|M|方法： `Sub`， `Function`， `Declare`，`Operator`|  
-|E|事件：`Event`|  
-|!|錯誤字串<br /><br /> 字串的其餘部分提供與錯誤相關的資訊。 [!INCLUDE[vbprvb](~/includes/vbprvb-md.md)]編譯器會產生無法解析的連結資訊時發生錯誤。|  
+|M|方法： `Sub`， `Function`， `Declare`， `Operator`|  
+|E|事件： `Event`|  
+|!|錯誤字串<br /><br /> 字串的其餘部分提供與錯誤相關的資訊。 Visual Basic 編譯器會產生無法解析的連結資訊時發生錯誤。|  
   
 -   第二個部分`String`是項目，從命名空間的根目錄開始的完整的名稱。 項目、 其封入類型，和命名空間名稱，並以句號分隔。 如果項目本身的名稱包含句點，它們被數字符號 （#）。 它會假設沒有項目，直接在其名稱中有數字的符號。 例如，完整的名稱的`String`建構函式會`System.String.#ctor`。  
   

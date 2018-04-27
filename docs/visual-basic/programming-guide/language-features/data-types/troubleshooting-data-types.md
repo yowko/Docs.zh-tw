@@ -1,11 +1,12 @@
 ---
-title: "疑難排解資料類型 (Visual Basic)"
-ms.custom: 
+title: 疑難排解資料類型 (Visual Basic)
+ms.custom: ''
 ms.date: 07/20/2015
 ms.prod: .net
-ms.reviewer: 
-ms.suite: 
-ms.technology: devlang-visual-basic
+ms.reviewer: ''
+ms.suite: ''
+ms.technology:
+- devlang-visual-basic
 ms.topic: article
 helpviewer_keywords:
 - Char data type [Visual Basic], converting
@@ -25,14 +26,14 @@ helpviewer_keywords:
 - floating-point numbers [Visual Basic], comparison
 - floating-point numbers
 ms.assetid: 90040d67-b630-4125-a6ae-37195b079042
-caps.latest.revision: "29"
+caps.latest.revision: 29
 author: dotnet-bot
 ms.author: dotnetcontent
-ms.openlocfilehash: 4d2fb1cd1be9c88ad0dd413eedb8a226fe59f41e
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.openlocfilehash: f34e7bc50a51032387cf01db3fae17ef44b8b4d9
+ms.sourcegitcommit: 86adcc06e35390f13c1e372c36d2e044f1fc31ef
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 04/26/2018
 ---
 # <a name="troubleshooting-data-types-visual-basic"></a>疑難排解資料類型 (Visual Basic)
 此頁面會列出您內建資料類型上執行作業時所發生的一些常見問題。  
@@ -74,7 +75,7 @@ ms.lasthandoff: 11/21/2017
  請注意，並非足夠宣告`decimalRemainder`為`Decimal`。 您也必須強制常值加入至`Decimal`，或者使用`Double`預設和`decimalRemainder`接收相同的不正確值`doubleRemainder`。  
   
 ## <a name="boolean-type-does-not-convert-to-numeric-type-accurately"></a>布林型別不會精確地轉換成數值類型  
- [布林資料型別](../../../../visual-basic/language-reference/data-types/boolean-data-type.md)值不會儲存為數字，並儲存的值不是數字相等。 為了與舊版中，相容[!INCLUDE[vbprvb](~/includes/vbprvb-md.md)]提供轉換關鍵字 ([CType 函式](../../../../visual-basic/language-reference/functions/ctype-function.md)， `CBool`， `CInt`，依此類推) 之間進行轉換`Boolean`和數字類型。 不過，其他語言有時會執行這些轉換不同，一樣[!INCLUDE[dnprdnshort](~/includes/dnprdnshort-md.md)]方法。  
+ [布林資料型別](../../../../visual-basic/language-reference/data-types/boolean-data-type.md)值不會儲存為數字，並儲存的值不是數字相等。 為了與舊版相容，Visual Basic 提供轉換關鍵字 ([CType 函式](../../../../visual-basic/language-reference/functions/ctype-function.md)， `CBool`， `CInt`，依此類推) 之間進行轉換`Boolean`和數字類型。 不過，其他語言有時會執行這些轉換不同，一樣[!INCLUDE[dnprdnshort](~/includes/dnprdnshort-md.md)]方法。  
   
  您不需撰寫程式碼所使用的對等數值`True`和`False`。 可能的話，您應該限制使用`Boolean`為其所設計的邏輯值的變數。 如果您必須混合`Boolean`和數字的值，請確定您了解您所選取的轉換方法。  
   
@@ -87,7 +88,7 @@ ms.lasthandoff: 11/21/2017
  如果您必須將轉換`Boolean`值設定為數值資料類型，請謹慎使用哪一種轉換方法的相關。  
   
 ## <a name="character-literal-generates-compiler-error"></a>字元常值會產生編譯器錯誤  
- 如果沒有任何型別字元，[!INCLUDE[vbprvb](~/includes/vbprvb-md.md)]假設預設的常值的資料型別。 字元常值的預設類型 — 以引號括住 (`" "`) — 是`String`。  
+ 如果沒有任何型別字元，在 Visual Basic 會假設預設常值的資料型別。 字元常值的預設類型 — 以引號括住 (`" "`) — 是`String`。  
   
  `String`資料型別並不會擴展為[Char 資料類型](../../../../visual-basic/language-reference/data-types/char-data-type.md)。 這表示，如果您想要指派常值，以便`Char`變數時，您必須讓縮小轉換，或是將常值來強制`Char`型別。  
 
@@ -102,7 +103,7 @@ ms.lasthandoff: 11/21/2017
  一定會有風險使用縮小轉換，因為它們可以在執行階段失敗。 例如，從轉換`String`至`Char`就會失敗`String`該值包含一個以上的字元。 因此，它更加程式設計使用`C`輸入字元。  
   
 ## <a name="string-conversion-fails-at-run-time"></a>字串轉換會在執行階段失敗  
- [字串資料型別](../../../../visual-basic/language-reference/data-types/string-data-type.md)參與極少數的擴展轉換。 `String`可擴展為本身只和`Object`，僅限和`Char`和`Char()`(`Char`陣列) 擴展為`String`。 這是因為`String`變數和常數可以包含其他資料類型不能包含的值。  
+ [字串資料型別](../../../../visual-basic/language-reference/data-types/string-data-type.md)參與極少數的擴展轉換。 `String` 可擴展為本身只和`Object`，僅限和`Char`和`Char()`(`Char`陣列) 擴展為`String`。 這是因為`String`變數和常數可以包含其他資料類型不能包含的值。  
   
  當型別檢查切換 ([Option Strict 陳述式](../../../../visual-basic/language-reference/statements/option-strict-statement.md)) 是`On`，編譯器不允許所有隱含的縮小轉換。 這包括涉及`String`。 您的程式碼仍然可以使用轉換關鍵字例如`CStr`和[CType 函式](../../../../visual-basic/language-reference/functions/ctype-function.md)，哪些 direct[!INCLUDE[dnprdnshort](~/includes/dnprdnshort-md.md)]嘗試轉換。  
   

@@ -1,11 +1,12 @@
 ---
-title: "Visual Basic 中的遮蔽功能"
-ms.custom: 
+title: Visual Basic 中的遮蔽功能
+ms.custom: ''
 ms.date: 07/20/2015
 ms.prod: .net
-ms.reviewer: 
-ms.suite: 
-ms.technology: devlang-visual-basic
+ms.reviewer: ''
+ms.suite: ''
+ms.technology:
+- devlang-visual-basic
 ms.topic: article
 helpviewer_keywords:
 - inheritance [Visual Basic], shadowing
@@ -24,17 +25,17 @@ helpviewer_keywords:
 - objects [Visual Basic], names
 - names [Visual Basic], shadowing
 ms.assetid: 54bb4c25-12c4-4181-b4a0-93546053964e
-caps.latest.revision: "24"
+caps.latest.revision: 24
 author: dotnet-bot
 ms.author: dotnetcontent
-ms.openlocfilehash: cbfce3edc122ca875552b2d41ba876fe5cfcfc4d
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.openlocfilehash: 489e1786b08085f229f66b2dbc434b96b06d86df
+ms.sourcegitcommit: 86adcc06e35390f13c1e372c36d2e044f1fc31ef
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 04/26/2018
 ---
 # <a name="shadowing-in-visual-basic"></a>Visual Basic 中的遮蔽功能
-當兩個的程式設計項目共用相同的名稱時，可以隱藏其中一個，或*陰影*，另一個。 在這種情況下，加上陰影的項目不是可參考。相反地，當您的程式碼使用的項目名稱，[!INCLUDE[vbprvb](~/includes/vbprvb-md.md)]編譯器解析遮蔽的項目。  
+當兩個的程式設計項目共用相同的名稱時，可以隱藏其中一個，或*陰影*，另一個。 在這種情況下，加上陰影的項目不是可參考。相反地，當您的程式碼使用的項目名稱時，Visual Basic 編譯器解析遮蔽的項目。  
   
 ## <a name="purpose"></a>用途  
  遮蔽的主要目的是要保護的定義類別成員。 基底類別可能進行的變更，建立名稱與您已定義的名稱相同的項目。 如果發生這種情況，`Shadows`修飾詞強制參考您要解析為成員的類別透過您定義的而不是新的基底類別項目。  

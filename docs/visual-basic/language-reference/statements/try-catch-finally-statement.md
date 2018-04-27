@@ -1,10 +1,11 @@
 ---
-title: "Try...Catch...Finally 陳述式 (Visual Basic)"
+title: Try...Catch...Finally 陳述式 (Visual Basic)
 ms.date: 07/20/2015
 ms.prod: .net
-ms.reviewer: 
-ms.suite: 
-ms.technology: devlang-visual-basic
+ms.reviewer: ''
+ms.suite: ''
+ms.technology:
+- devlang-visual-basic
 ms.topic: article
 f1_keywords:
 - vb.Try...Catch...Finally
@@ -24,14 +25,14 @@ helpviewer_keywords:
 - Visual Basic code, handling errors while running
 - structured exception handling, Try...Catch...Finally statements
 ms.assetid: d6488026-ccb3-42b8-a810-0d97b9d6472b
-caps.latest.revision: "69"
+caps.latest.revision: 69
 author: dotnet-bot
 ms.author: dotnetcontent
-ms.openlocfilehash: c297a84b37b455a4b30b1848aa9bdd30dc567ec1
-ms.sourcegitcommit: 34ec7753acf76f90a0fa845235ef06663dc9e36e
+ms.openlocfilehash: 701475d41d24ad89e6c83796f7cc5cd4b7802a32
+ms.sourcegitcommit: 86adcc06e35390f13c1e372c36d2e044f1fc31ef
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 04/26/2018
 ---
 # <a name="trycatchfinally-statement-visual-basic"></a>Try...Catch...Finally 陳述式 (Visual Basic)
 提供了處理部分或所有可能的錯誤時繼續執行程式碼中指定的一段程式碼，可能發生的方式。  
@@ -70,17 +71,17 @@ End Try
 ## <a name="remarks"></a>備註  
  如果您預期特定的例外狀況可能會發生在特定的一段程式碼時，將程式碼放`Try`封鎖，並使用`Catch`保留控制項和處理例外狀況，如果發生的區塊。  
   
- A`Try…Catch`陳述式組成`Try`區塊後面接著一個或多個`Catch`子句，指定不同的例外狀況處理常式。 當擲回例外狀況`Try`區塊，[!INCLUDE[vbprvb](~/includes/vbprvb-md.md)]尋找`Catch`處理例外狀況的陳述式。 如果比對`Catch`找不到陳述式，[!INCLUDE[vbprvb](~/includes/vbprvb-md.md)]會檢查呼叫目前的方法，在呼叫堆疊向上等的方法。 如果沒有`Catch`找不到區塊，[!INCLUDE[vbprvb](~/includes/vbprvb-md.md)]向使用者顯示未處理的例外狀況訊息，並停止執行程式。  
+ A`Try…Catch`陳述式組成`Try`區塊後面接著一個或多個`Catch`子句，指定不同的例外狀況處理常式。 當擲回例外狀況`Try`封鎖，Visual Basic 會搜尋`Catch`處理例外狀況的陳述式。 如果比對`Catch`找不到陳述式、 Visual Basic 會檢查呼叫目前的方法，在呼叫堆疊向上等的方法。 如果沒有`Catch`找不到區塊、 Visual Basic 向使用者顯示未處理的例外狀況訊息，並停止執行程式。  
   
  您可以使用多個`Catch`陳述式中的`Try…Catch`陳述式。 如果您這樣做，請的順序`Catch`子句十分重要，因為它們會依順序檢查。 在較不特定的例外狀況之前攔截較特定的例外狀況。  
   
  下列`Catch`陳述式條件最特定且將會攔截所有例外狀況衍生自<xref:System.Exception>類別。 您通常應該使用其中一個這些變化最後`Catch`中區塊`Try...Catch...Finally`結構之後攔截您預期的所有特定例外狀況。 控制流程可以永遠無法抵達`Catch`遵循其中一個這些變化的區塊。  
   
--   `type`是`Exception`，例如：`Catch ex As Exception`  
+-   `type`是`Exception`，例如： `Catch ex As Exception`  
   
--   陳述式沒有`exception`變數，例如：`Catch`  
+-   陳述式沒有`exception`變數，例如： `Catch`  
   
- 當`Try…Catch…Finally`陳述式巢狀方式置於另一個`Try`區塊，[!INCLUDE[vbprvb](~/includes/vbprvb-md.md)]先檢查每個`Catch`陳述式中最內側`Try`區塊。 如果沒有相符的`Catch`找不到陳述式，搜尋會繼續進行`Catch`陳述式的外部`Try…Catch…Finally`區塊。  
+ 當`Try…Catch…Finally`陳述式巢狀方式置於另一個`Try`區塊中，Visual Basic 會先檢查每個`Catch`陳述式中最內側`Try`區塊。 如果沒有相符的`Catch`找不到陳述式，搜尋會繼續進行`Catch`陳述式的外部`Try…Catch…Finally`區塊。  
   
  從本機變數`Try`區塊中沒有`Catch`封鎖，因為它們是不同的區塊。 如果您想要使用多個區塊中的變數，將外部變數宣告`Try...Catch...Finally`結構。  
   
@@ -108,7 +109,7 @@ End Try
 ## <a name="exception-argument"></a>例外狀況引數  
  `Catch`區塊`exception`引數是的執行個體<xref:System.Exception>類別或衍生自類別`Exception`類別。 `Exception`類別執行個體對應至錯誤的發生`Try`區塊。  
   
- 內容`Exception`物件來識別可能的原因和位置的例外狀況的說明。 例如，<xref:System.Exception.StackTrace%2A>屬性清單導致例外狀況，可幫助您尋找程式碼中發生錯誤的呼叫的方法。 <xref:System.Exception.Message%2A>傳回描述例外狀況的訊息。 <xref:System.Exception.HelpLink%2A>傳回相關聯的說明檔的連結。 <xref:System.Exception.InnerException%2A>傳回`Exception`造成目前例外狀況，或它的物件傳回`Nothing`如果沒有任何原始`Exception`。  
+ 內容`Exception`物件來識別可能的原因和位置的例外狀況的說明。 例如，<xref:System.Exception.StackTrace%2A>屬性清單導致例外狀況，可幫助您尋找程式碼中發生錯誤的呼叫的方法。 <xref:System.Exception.Message%2A> 傳回描述例外狀況的訊息。 <xref:System.Exception.HelpLink%2A> 傳回相關聯的說明檔的連結。 <xref:System.Exception.InnerException%2A> 傳回`Exception`造成目前例外狀況，或它的物件傳回`Nothing`如果沒有任何原始`Exception`。  
   
 ## <a name="considerations-when-using-a-trycatch-statement"></a>考量時使用 Try...Catch 陳述式  
  使用`Try…Catch`陳述式只能用來表示不尋常或非預期的程式事件的發生。 這麼做的原因包括：  
@@ -134,7 +135,7 @@ End Try
   
  `Await`運算式不能在`Catch`區塊或`Finally`區塊。  
   
-## <a name="iterators"></a>Iterator  
+## <a name="iterators"></a>迭代器  
  Iterator 函式或`Get`存取子會對集合執行自訂反覆項目。 迭代器會使用[產生](../../../visual-basic/language-reference/statements/yield-statement.md)陳述式來傳回一次一個集合的每個項目。 您可以使用呼叫 iterator 函式[每個...下一個陳述式](../../../visual-basic/language-reference/statements/for-each-next-statement.md)。  
   
  A`Yield`陳述式可以是內部`Try`區塊。 A`Try`包含區塊`Yield`陳述式可以有`Catch`封鎖了，而且可以有`Finally`區塊。 請參閱 「 嘗試區塊在 Visual Basic 中 」 一節[迭代器](../../programming-guide/concepts/iterators.md)的範例。  
@@ -188,7 +189,7 @@ End Try
   
  [!code-vb[csAsyncExceptions#3](../../../csharp/language-reference/keywords/codesnippet/VisualBasic/try-catch-finally-statement_8.vb)]  
   
-## <a name="see-also"></a>請參閱  
+## <a name="see-also"></a>另請參閱  
  <xref:Microsoft.VisualBasic.Information.Err%2A>  
  <xref:System.Exception>  
  [Exit 陳述式](../../../visual-basic/language-reference/statements/exit-statement.md)  

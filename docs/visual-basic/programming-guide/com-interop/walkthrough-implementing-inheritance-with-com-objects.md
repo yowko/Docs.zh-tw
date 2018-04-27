@@ -1,11 +1,12 @@
 ---
-title: "逐步解說：實作 COM 物件的繼承 (Visual Basic)"
-ms.custom: 
+title: 逐步解說：實作 COM 物件的繼承 (Visual Basic)
+ms.custom: ''
 ms.date: 07/20/2015
 ms.prod: .net
-ms.reviewer: 
-ms.suite: 
-ms.technology: devlang-visual-basic
+ms.reviewer: ''
+ms.suite: ''
+ms.technology:
+- devlang-visual-basic
 ms.topic: article
 helpviewer_keywords:
 - inheritance [Visual Basic], COM reusability
@@ -13,17 +14,17 @@ helpviewer_keywords:
 - inheritance [Visual Basic], walkthroughs
 - derived classes [Visual Basic], COM reusability
 ms.assetid: f8e7263a-de13-48d1-b67c-ca1adf3544d9
-caps.latest.revision: "16"
+caps.latest.revision: 16
 author: dotnet-bot
 ms.author: dotnetcontent
-ms.openlocfilehash: 8d6906c58431a0e844e8f430ade10ae819e77ff2
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.openlocfilehash: 10c6bdf46e351b23705107da3b693531718cfd37
+ms.sourcegitcommit: 86adcc06e35390f13c1e372c36d2e044f1fc31ef
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 04/26/2018
 ---
 # <a name="walkthrough-implementing-inheritance-with-com-objects-visual-basic"></a>逐步解說：實作 COM 物件的繼承 (Visual Basic)
-您可以取得 Visual Basic 類別從`Public`中 COM 物件，即使這些較舊版本中建立的類別[!INCLUDE[vbprvb](~/includes/vbprvb-md.md)]。 屬性和類別繼承自 COM 物件的方法可以覆寫或多載一樣屬性和任何其他基底類別的方法可以覆寫或多載。 從 COM 物件的繼承時，您有現有的類別程式庫，您不希望重新編譯。  
+您可以取得 Visual Basic 類別從`Public`中 COM 物件，即使這些舊版本的 Visual Basic 中建立的類別。 屬性和類別繼承自 COM 物件的方法可以覆寫或多載一樣屬性和任何其他基底類別的方法可以覆寫或多載。 從 COM 物件的繼承時，您有現有的類別程式庫，您不希望重新編譯。  
   
  下列程序示範如何使用 Visual Basic 6.0 中建立的 COM 物件，包含類別，並以它做為基底類別。  
   
@@ -77,18 +78,18 @@ ms.lasthandoff: 11/21/2017
 10. 建立並註冊的 COM 物件，依序按一下**進行 ComObject1.dll**上**檔案**功能表。  
   
     > [!NOTE]
-    >  雖然您也可以公開類別，以建立[!INCLUDE[vbprvb](~/includes/vbprvb-md.md)]為 COM 物件，它不是真正的 COM 物件，也不能在這個逐步解說。 如需詳細資訊，請參閱[.NET Framework 應用程式中的 COM 互通性](../../../visual-basic/programming-guide/com-interop/com-interoperability-in-net-framework-applications.md)。  
+    >  雖然您也可以公開使用 Visual Basic 為 COM 物件建立的類別，它不是真正的 COM 物件，並不能用在這個逐步解說。 如需詳細資訊，請參閱[.NET Framework 應用程式中的 COM 互通性](../../../visual-basic/programming-guide/com-interop/com-interoperability-in-net-framework-applications.md)。  
   
 ## <a name="interop-assemblies"></a>Interop 組件  
- 在下列程序中，您將建立 interop 組件，可做為 （例如 COM 物件） 的 unmanaged 程式碼與 managed 程式碼之間的橋樑[!INCLUDE[vsprvs](~/includes/vsprvs-md.md)]使用。 Interop 組件，[!INCLUDE[vbprvb](~/includes/vbprvb-md.md)]建立控制代碼的許多使用 COM 的詳細資料物件，例如*interop 封送處理*，封裝參數和傳回值為對等資料的程序類型，因為它們將移到而且，從 COM 物件。 中的參考[!INCLUDE[vbprvb](~/includes/vbprvb-md.md)]interop 組件，而不是實際的 COM 物件的應用程式指向。  
+ 在下列程序中，您將建立 interop 組件，可做為 （例如 COM 物件） 的 unmanaged 程式碼與 managed 程式碼之間的橋樑[!INCLUDE[vsprvs](~/includes/vsprvs-md.md)]使用。 Visual Basic 建立的 interop 組件會處理許多細節，例如使用 COM 物件的*interop 封送處理*，封裝參數和傳回值為對等資料的程序類型，因為它們將移到和從 COM 物件。 在 Visual Basic 應用程式中的參考指向的 interop 組件不是實際的 COM 物件。  
   
 #### <a name="to-use-a-com-object-with-visual-basic-2005-and-later-versions"></a>使用 COM 物件來與 Visual Basic 2005 和更新版本  
   
-1.  開啟新的 [!INCLUDE[vbprvb](~/includes/vbprvb-md.md)] Windows 應用程式專案。  
+1.  開啟新的 Visual Basic Windows 應用程式專案。  
   
 2.  在 [專案] 功能表上，按一下 [新增參考]。  
   
-     **加入參考**對話方塊隨即出現。  
+     [新增參考] 對話方塊隨即顯示。  
   
 3.  在**COM**索引標籤上，按兩下`ComObject1`中**元件名稱**清單，然後按一下**確定**。  
   
@@ -124,7 +125,7 @@ ms.lasthandoff: 11/21/2017
   
 3.  按 F5 執行專案。  
   
- 當您按一下表單上的按鈕`AddNumbers`與第一次呼叫方法`Short`資料類型的數字和[!INCLUDE[vbprvb](~/includes/vbprvb-md.md)]從基底類別選擇適當的方法。 第二個呼叫`AddNumbers`導向至多載方法，從`MathClass`。 第三個呼叫呼叫`SubtractNumbers`方法，延伸的類別。 基底類別中的屬性已設定，而且將會顯示值。  
+ 當您按一下表單上的按鈕`AddNumbers`與第一次呼叫方法`Short`資料類型的數字，Visual Basic 中的基底類別選擇適當方法。 第二個呼叫`AddNumbers`導向至多載方法，從`MathClass`。 第三個呼叫呼叫`SubtractNumbers`方法，延伸的類別。 基底類別中的屬性已設定，而且將會顯示值。  
   
 ## <a name="next-steps"></a>後續步驟  
  您可能已注意到，多載`AddNumbers`函式看似具有相同的資料類型繼承自基底類別之 COM 物件的方法。 這是因為基底類別方法的參數與引數會定義為 Visual Basic 6.0 中的 16 位元整數，但這些元素會公開為 16 位元整數型別的`Short`在新版的 Visual Basic 中。 新的函式接受 32 位元整數，而且會多載基底類別函式。  

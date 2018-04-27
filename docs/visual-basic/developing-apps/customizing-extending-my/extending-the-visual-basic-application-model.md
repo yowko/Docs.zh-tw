@@ -11,11 +11,11 @@ ms.assetid: e91d3bed-4c27-40e3-871d-2be17467c72c
 caps.latest.revision: 21
 author: dotnet-bot
 ms.author: dotnetcontent
-ms.openlocfilehash: 15e6ea1a8b2df0b8ed1b84abceee9e6be2c556f9
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.openlocfilehash: 5ffd882c2a1d04c29483d380e972d6ce70bdb5c4
+ms.sourcegitcommit: 86adcc06e35390f13c1e372c36d2e044f1fc31ef
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 04/26/2018
 ---
 # <a name="extending-the-visual-basic-application-model"></a>擴充 Visual Basic 應用程式模型
 您可以將功能加入應用程式模型藉由覆寫`Overridable`成員<xref:Microsoft.VisualBasic.ApplicationServices.WindowsFormsApplicationBase>類別。 這項技術可讓您自訂應用程式模型的行為，並加入您自己的方法呼叫，在應用程式啟動和關機。  
@@ -25,11 +25,11 @@ ms.lasthandoff: 11/21/2017
   
  下圖顯示一般的 Visual Basic Windows Form 應用程式中的應用程式模型的呼叫順序。 開始時的順序`Sub Main`程序呼叫<xref:Microsoft.VisualBasic.ApplicationServices.WindowsFormsApplicationBase.Run%2A>方法。  
   
- ![Visual Basic 應用程式模型 #45; &#45;執行](../../../visual-basic/developing-apps/customizing-extending-my/media/vb_modelrun.gif "VB_ModelRun")  
+ ![Visual Basic 應用程式模型&#45;&#45;執行](../../../visual-basic/developing-apps/customizing-extending-my/media/vb_modelrun.gif "VB_ModelRun")  
   
  Visual Basic 應用程式模型也提供<xref:Microsoft.VisualBasic.ApplicationServices.WindowsFormsApplicationBase.StartupNextInstance>和<xref:Microsoft.VisualBasic.ApplicationServices.WindowsFormsApplicationBase.UnhandledException>事件。 下圖顯示引發這些事件的機制。  
   
- ![Visual Basic 應用程式模型 #45; &#45;接下來執行個體](../../../visual-basic/developing-apps/customizing-extending-my/media/vb_modelnext.gif "VB_ModelNext")  
+ ![Visual Basic 應用程式模型&#45;&#45;下一個執行個體](../../../visual-basic/developing-apps/customizing-extending-my/media/vb_modelnext.gif "VB_ModelNext")  
   
  ![Visual Basic 應用程式模型未處理例外狀況](../../../visual-basic/developing-apps/customizing-extending-my/media/vb_unhandex.gif "VB_UnhandEx")  
   
@@ -50,7 +50,7 @@ ms.lasthandoff: 11/21/2017
   
     2.  <xref:Microsoft.VisualBasic.ApplicationServices.WindowsFormsApplicationBase.OnCreateSplashScreen%2A>. 可讓設計工具發出初始化啟動顯示畫面的程式碼。  
   
-         根據預設，這個方法沒有任何作用。 如果您選取應用程式啟動顯示畫面[!INCLUDE[vbprvb](~/includes/vbprvb-md.md)]**專案設計工具**，設計工具會覆寫<xref:Microsoft.VisualBasic.ApplicationServices.WindowsFormsApplicationBase.OnCreateSplashScreen%2A>方法設定的方法與<xref:Microsoft.VisualBasic.ApplicationServices.WindowsFormsApplicationBase.SplashScreen%2A>屬性的新執行個體的啟動顯示畫面表單。  
+         根據預設，這個方法沒有任何作用。 如果您選取您在 Visual Basic 中的應用程式啟動顯示畫面**專案設計工具**，設計工具會覆寫<xref:Microsoft.VisualBasic.ApplicationServices.WindowsFormsApplicationBase.OnCreateSplashScreen%2A>方法設定的方法與<xref:Microsoft.VisualBasic.ApplicationServices.WindowsFormsApplicationBase.SplashScreen%2A>啟動顯示畫面表單的新執行個體的屬性.  
   
 2.  <xref:Microsoft.VisualBasic.ApplicationServices.WindowsFormsApplicationBase.OnStartup%2A>. 提供的擴充點引發`Startup`事件。 如果此函數會傳回，就會停止應用程式啟動順序`False`。  
   
@@ -62,7 +62,7 @@ ms.lasthandoff: 11/21/2017
   
     1.  <xref:Microsoft.VisualBasic.ApplicationServices.WindowsFormsApplicationBase.OnCreateMainForm%2A>. 提供方法，讓設計工具發出初始化主要表單的程式碼。  
   
-         根據預設，這個方法沒有任何作用。 不過，當您選取主表單中的應用程式[!INCLUDE[vbprvb](~/includes/vbprvb-md.md)]**專案設計工具**，設計工具會覆寫<xref:Microsoft.VisualBasic.ApplicationServices.WindowsFormsApplicationBase.OnCreateMainForm%2A>方法設定的方法與<xref:Microsoft.VisualBasic.ApplicationServices.WindowsFormsApplicationBase.MainForm%2A>主要表單的新執行個體的屬性.  
+         根據預設，這個方法沒有任何作用。 不過，當您選取主要表單在 Visual Basic 中的應用程式**專案設計工具**，設計工具會覆寫<xref:Microsoft.VisualBasic.ApplicationServices.WindowsFormsApplicationBase.OnCreateMainForm%2A>方法設定的方法與<xref:Microsoft.VisualBasic.ApplicationServices.WindowsFormsApplicationBase.MainForm%2A>主要表單的新執行個體的屬性。  
   
     2.  <xref:Microsoft.VisualBasic.ApplicationServices.WindowsFormsApplicationBase.HideSplashScreen%2A>. 如果應用程式具有定義的啟動顯示畫面，而其為開啟，這個方法會關閉在啟動顯示畫面。  
   
@@ -85,7 +85,7 @@ ms.lasthandoff: 11/21/2017
  <xref:Microsoft.VisualBasic.ApplicationServices.WindowsFormsApplicationBase.OnStartupNextInstance(Microsoft.VisualBasic.ApplicationServices.StartupNextInstanceEventArgs)>建構函式呼叫<xref:Microsoft.VisualBasic.ApplicationServices.WindowsFormsApplicationBase.UseCompatibleTextRendering%2A>屬性來判斷要用於應用程式的表單的文字轉譯引擎。 根據預設，<xref:Microsoft.VisualBasic.ApplicationServices.WindowsFormsApplicationBase.UseCompatibleTextRendering%2A>屬性會傳回`False`，指出使用 GDI 文字轉譯引擎，這是在預設[!INCLUDE[vbprvblong](~/includes/vbprvblong-md.md)]。 您可以覆寫<xref:Microsoft.VisualBasic.ApplicationServices.WindowsFormsApplicationBase.UseCompatibleTextRendering%2A>屬性，以傳回`True`，這表示使用 GDI + 文字轉譯引擎，這是 Visual Basic.NET 2002年和 Visual Basic.NET 2003年中的預設值。  
   
 ## <a name="configuring-the-application"></a>設定應用程式  
- 一部分[!INCLUDE[vbprvb](~/includes/vbprvb-md.md)]應用程式模型、<xref:Microsoft.VisualBasic.ApplicationServices.WindowsFormsApplicationBase.UseCompatibleTextRendering>類別提供受保護的內容，設定應用程式。 應該實作類別的建構函式中設定這些屬性。  
+ Visual Basic 應用程式模型的一部分<xref:Microsoft.VisualBasic.ApplicationServices.WindowsFormsApplicationBase.UseCompatibleTextRendering>類別提供受保護的內容，設定應用程式。 應該實作類別的建構函式中設定這些屬性。  
   
  在預設 Windows Form 專案中，**專案設計工具**建立程式碼以設定與設計工具設定的屬性。 只有當應用程式正在啟動; 時，會使用這些屬性設定這些應用程式啟動後沒有任何作用。  
   

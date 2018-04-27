@@ -1,24 +1,26 @@
 ---
-title: "參考資料"
-ms.custom: 
+title: 參考資料
+ms.custom: ''
 ms.date: 03/30/2017
 ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.technology: dotnet-ado
-ms.tgt_pltfrm: 
+ms.reviewer: ''
+ms.suite: ''
+ms.technology:
+- dotnet-ado
+ms.tgt_pltfrm: ''
 ms.topic: article
 ms.assetid: 312c3935-a947-4220-a837-0039d9fc458b
-caps.latest.revision: "3"
+caps.latest.revision: 3
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.workload: dotnet
-ms.openlocfilehash: 13950af006ff756dfb5daa874ac5ca3c0f5dac0a
-ms.sourcegitcommit: c0dd436f6f8f44dc80dc43b07f6841a00b74b23f
+ms.workload:
+- dotnet
+ms.openlocfilehash: 8906c02395531685d732c55b2baf03e492fca615
+ms.sourcegitcommit: 86adcc06e35390f13c1e372c36d2e044f1fc31ef
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 01/19/2018
+ms.lasthandoff: 04/26/2018
 ---
 # <a name="reference"></a>參考資料
 本節提供參考資訊給 [!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)] 開發人員。  
@@ -42,7 +44,7 @@ ms.lasthandoff: 01/19/2018
  提供 [!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)] 相關常見問題的答案。  
   
  [SQL Server Compact 和 LINQ to SQL](../../../../../../docs/framework/data/adonet/sql/linq/sql-server-compact-and-linq-to-sql.md)  
- 描述 [!INCLUDE[ssEW](../../../../../../includes/ssew-md.md)] 應用程式中的 [!INCLUDE[ssNoVersion](../../../../../../includes/ssnoversion-md.md)] 和 [!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)] 有何不同。  
+ 描述如何[!INCLUDE[ssEW](../../../../../../includes/ssew-md.md)]不同於 SQL Server 中[!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)]應用程式。  
   
  [標準查詢運算子轉譯](../../../../../../docs/framework/data/adonet/sql/linq/standard-query-operator-translation.md)  
  描述如何[!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)]將標準查詢運算子轉譯為 SQL 命令。  

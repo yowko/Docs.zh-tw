@@ -1,30 +1,32 @@
 ---
-title: "TextBox 概觀"
-ms.custom: 
+title: TextBox 概觀
+ms.custom: ''
 ms.date: 03/30/2017
 ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.technology: dotnet-wpf
-ms.tgt_pltfrm: 
+ms.reviewer: ''
+ms.suite: ''
+ms.technology:
+- dotnet-wpf
+ms.tgt_pltfrm: ''
 ms.topic: article
 helpviewer_keywords:
 - controls [WPF], TextBox
 - TextBox control [WPF], about TextBox control
 ms.assetid: 1ba6dc5b-11a7-4247-9213-36c6729ee35f
-caps.latest.revision: "10"
+caps.latest.revision: 10
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.workload: dotnet
-ms.openlocfilehash: 50e36192198c172843d79a4195e894b848f84c90
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.workload:
+- dotnet
+ms.openlocfilehash: 02e7a5046dec689b1088585d58e4e424751ac512
+ms.sourcegitcommit: 86adcc06e35390f13c1e372c36d2e044f1fc31ef
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 04/26/2018
 ---
 # <a name="textbox-overview"></a>TextBox 概觀
-<xref:System.Windows.Controls.TextBox>類別可讓您顯示或編輯未格式化的文字。 常見用法<xref:System.Windows.Controls.TextBox>正在編輯未格式化的文字，在表單中。 例如，要求使用者的名稱、 電話號碼，表單等會使用<xref:System.Windows.Controls.TextBox>文字輸入控制項。 本主題將介紹<xref:System.Windows.Controls.TextBox>類別，並提供有關如何使用中的範例[!INCLUDE[TLA#tla_xaml](../../../../includes/tlasharptla-xaml-md.md)]和[!INCLUDE[TLA#tla_lhcshrp](../../../../includes/tlasharptla-lhcshrp-md.md)]。  
+<xref:System.Windows.Controls.TextBox>類別可讓您顯示或編輯未格式化的文字。 常見用法<xref:System.Windows.Controls.TextBox>正在編輯未格式化的文字，在表單中。 例如，要求使用者的名稱、 電話號碼，表單等會使用<xref:System.Windows.Controls.TextBox>文字輸入控制項。 本主題將介紹<xref:System.Windows.Controls.TextBox>類別，並提供有關如何使用中的範例[!INCLUDE[TLA#tla_xaml](../../../../includes/tlasharptla-xaml-md.md)]和 C#。  
   
  
   
@@ -32,7 +34,7 @@ ms.lasthandoff: 12/22/2017
 ## <a name="textbox-or-richtextbox"></a>TextBox 或 RichTextBox？  
  同時<xref:System.Windows.Controls.TextBox>和<xref:System.Windows.Controls.RichTextBox>允許使用者輸入文字，但兩個控制項使用不同的情況。 A<xref:System.Windows.Controls.TextBox>需要較少的系統資源則<xref:System.Windows.Controls.RichTextBox>因此理想當時才需要編輯只能使用純文字 （亦即，在表單中的使用）。 A<xref:System.Windows.Controls.RichTextBox>是較佳選擇時所需的使用者編輯格式化的文字、 影像、 資料表或其他支援內容。 例如，編輯文件、 文件或需要格式化的部落格映像，等最佳方式是使用<xref:System.Windows.Controls.RichTextBox>。 下表摘要說明主要功能<xref:System.Windows.Controls.TextBox>和<xref:System.Windows.Controls.TextBox>。  
   
-|控制項|即時拼字檢查|操作功能表|格式等命令<xref:System.Windows.Documents.EditingCommands.ToggleBold%2A>(Ctr + B)|<xref:System.Windows.Documents.FlowDocument>類似影像、 段落、 資料表等內容。|  
+|控制項|即時拼字檢查|操作功能表|格式等命令<xref:System.Windows.Documents.EditingCommands.ToggleBold%2A>(Ctr + B)|<xref:System.Windows.Documents.FlowDocument> 類似影像、 段落、 資料表等內容。|  
 |-------------|------------------------------|------------------|------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|  
 |<xref:System.Windows.Controls.TextBox>|[是]|是|否|否。|  
 |<xref:System.Windows.Controls.RichTextBox>|[是]|[是]|是 (請參閱 [RichTextBox 概觀](../../../../docs/framework/wpf/controls/richtextbox-overview.md))|是 (請參閱 [RichTextBox 概觀](../../../../docs/framework/wpf/controls/richtextbox-overview.md))|  
@@ -78,6 +80,6 @@ ms.lasthandoff: 12/22/2017
 ## <a name="detect-when-content-changes"></a>偵測內容變更  
  通常<xref:System.Windows.Controls.Primitives.TextBoxBase.TextChanged>事件應該用來偵測每次中的文字<xref:System.Windows.Controls.TextBox>或<xref:System.Windows.Controls.RichTextBox>變更，而不是<xref:System.Windows.UIElement.KeyDown>如您所預期。 如需範例，請參閱[偵測 TextBox 中的文字變更](../../../../docs/framework/wpf/controls/how-to-detect-when-text-in-a-textbox-has-changed.md)。  
   
-## <a name="see-also"></a>請參閱  
+## <a name="see-also"></a>另請參閱  
  [HOW-TO 主題](../../../../docs/framework/wpf/controls/textbox-how-to-topics.md)  
  [RichTextBox 概觀](../../../../docs/framework/wpf/controls/richtextbox-overview.md)

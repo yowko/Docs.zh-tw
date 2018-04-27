@@ -16,11 +16,11 @@ ms.author: douglasl
 manager: craigg
 ms.workload:
 - dotnet
-ms.openlocfilehash: e25f6dceb6018b719a0a8a07822b20d85a08a012
-ms.sourcegitcommit: b750a8e3979749b214e7e10c82efb0a0524dfcb1
+ms.openlocfilehash: 757c64fdc66d9c564fc151bc78fdbda23d9b6705
+ms.sourcegitcommit: 86adcc06e35390f13c1e372c36d2e044f1fc31ef
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/09/2018
+ms.lasthandoff: 04/26/2018
 ---
 # <a name="filestream-data"></a>FILESTREAM 資料
 FILESTREAM 儲存體屬性適用於儲存在 varbinary(max) 資料行中的二進位 (BLOB) 資料。 在引進 FILESTREAM 之前，儲存二進位資料需要特殊處理。 文字文件、影像和視訊等非結構化資料通常會儲存在資料庫外部，因而難以管理。  
@@ -28,13 +28,13 @@ FILESTREAM 儲存體屬性適用於儲存在 varbinary(max) 資料行中的二�
 > [!NOTE]
 >  您必須安裝 .NET Framework 3.5 SP1 (或更新版本) 才能使用 SqlClient 來處理 FILESTREAM 資料。  
   
- 針對 varbinary(max) 資料行指定 FILESTREAM 屬性會導致 [!INCLUDE[ssNoVersion](../../../../../includes/ssnoversion-md.md)] 將資料儲存在本機 NTFS 檔案系統上，而非資料庫檔案中。 雖然系統會以不同的方式儲存資料，但是您仍可使用支援搭配儲存在資料庫中之 varbinary(max) 資料的相同 [!INCLUDE[tsql](../../../../../includes/tsql-md.md)] 陳述式 (Statement)。  
+ 針對 varbinary(max) 資料行指定 FILESTREAM 屬性會導致 SQL Server 將資料儲存在本機 NTFS 檔案系統上，而非資料庫檔案中。 雖然系統會以不同的方式儲存資料，但是您仍可使用支援搭配儲存在資料庫中之 varbinary(max) 資料的相同 [!INCLUDE[tsql](../../../../../includes/tsql-md.md)] 陳述式 (Statement)。  
   
 ## <a name="sqlclient-support-for-filestream"></a>FILESTREAM 的 SqlClient 支援  
- [!INCLUDE[dnprdnshort](../../../../../includes/dnprdnshort-md.md)] Data Provider for [!INCLUDE[ssNoVersion](../../../../../includes/ssnoversion-md.md)] (<xref:System.Data.SqlClient>) 支援使用 <xref:System.Data.SqlTypes.SqlFileStream> 命名空間中定義的 <xref:System.Data.SqlTypes> 類別來讀取和寫入 FILESTREAM 資料。 `SqlFileStream` 繼承自 <xref:System.IO.Stream> 類別，可提供讀取和寫入資料流的方法。 讀取資料流會將資料從資料流傳送至資料結構中，例如位元組的陣列。 寫入則會將資料從資料結構傳送至資料流中。  
+ [!INCLUDE[dnprdnshort](../../../../../includes/dnprdnshort-md.md)] Data Provider for SQL Server <xref:System.Data.SqlClient>、 支援讀取和寫入 FILESTREAM 資料使用<xref:System.Data.SqlTypes.SqlFileStream>類別中定義<xref:System.Data.SqlTypes>命名空間。 `SqlFileStream` 繼承自 <xref:System.IO.Stream> 類別，可提供讀取和寫入資料流的方法。 讀取資料流會將資料從資料流傳送至資料結構中，例如位元組的陣列。 寫入則會將資料從資料結構傳送至資料流中。  
   
-### <a name="creating-the-includessnoversionincludesssnoversion-mdmd-table"></a>建立 [!INCLUDE[ssNoVersion](../../../../../includes/ssnoversion-md.md)] 資料表  
- 下列 [!INCLUDE[tsql](../../../../../includes/tsql-md.md)] 陳述式會建立名為 employees 的資料表並插入一個資料列。 一旦您啟用了 FILESTREAM 儲存體之後，就可以使用這份資料表搭配後面的程式碼範例。 《[!INCLUDE[ssNoVersion](../../../../../includes/ssnoversion-md.md)] 線上叢書》中的資源連結位於本主題的結尾。  
+### <a name="creating-the-sql-server-table"></a>建立 SQL Server 資料表  
+ 下列 [!INCLUDE[tsql](../../../../../includes/tsql-md.md)] 陳述式會建立名為 employees 的資料表並插入一個資料列。 一旦您啟用了 FILESTREAM 儲存體之後，就可以使用這份資料表搭配後面的程式碼範例。 SQL Server 線上叢書 》 中的資源連結位於本主題的結尾。  
   
 ```  
 CREATE TABLE employees  
@@ -182,8 +182,8 @@ namespace FileStreamTest
   
  如需其他範例，請參閱[如何儲存和擷取二進位資料至檔案資料流資料行](http://www.codeproject.com/Articles/32216/How-to-store-and-fetch-binary-data-into-a-file-str)。  
   
-## <a name="resources-in-includessnoversionincludesssnoversion-mdmd-books-online"></a>《[!INCLUDE[ssNoVersion](../../../../../includes/ssnoversion-md.md)] 線上叢書》中的資源  
- FILESTREAM 的完整文件位於《[!INCLUDE[ssNoVersion](../../../../../includes/ssnoversion-md.md)] 線上叢書》中的下列章節。  
+## <a name="resources-in-sql-server-books-online"></a>SQL Server 線上叢書中的資源  
+ FILESTREAM 的完整文件位於 SQL Server 線上叢書 》 中的下列章節。  
   
 |主題|描述|  
 |-----------|-----------------|  

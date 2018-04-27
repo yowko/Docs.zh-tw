@@ -18,11 +18,11 @@ ms.assetid: f7bbee56-0911-41de-b907-96f20450137b
 caps.latest.revision: 20
 author: dotnet-bot
 ms.author: dotnetcontent
-ms.openlocfilehash: 008b5857418a572046797bf061a05f265669d427
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.openlocfilehash: d5c84fecbb035c229cc3576bc556db6ecb6f3934
+ms.sourcegitcommit: 86adcc06e35390f13c1e372c36d2e044f1fc31ef
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 04/26/2018
 ---
 # <a name="xml-document-literal-visual-basic"></a>XML 文件常值 (Visual Basic)
 常值代表<xref:System.Xml.Linq.XDocument>物件。  
@@ -40,10 +40,10 @@ rootElement
   
 |詞彙|定義|  
 |---|---|  
-|`encoding`|選擇項。 使用宣告哪一種編碼文件常值文字。|  
-|`standalone`|選擇項。 常值文字。 必須是"yes"或"no"。|  
-|`piCommentList`|選擇項。 XML 處理指示和 XML 註解的清單。 會採用下列格式：<br /><br /> `piComment [` `piComment` `... ]`<br /><br /> 每個`piComment`可以是下列其中之一：<br /><br /> -   [XML 處理指示常值](../../../visual-basic/language-reference/xml-literals/xml-processing-instruction-literal.md)。<br />-   [XML 註解常值](../../../visual-basic/language-reference/xml-literals/xml-comment-literal.md)。|  
-|`rootElement`|必要項。 文件的根項目。 格式為下列其中一項：<br /><br /> <ul><li>[XML 項目常值](../../../visual-basic/language-reference/xml-literals/xml-element-literal.md)。</li><li>內嵌運算式的形式`<%=` `elementExp` `%>`。 `elementExp`傳回下列其中之一：<br /><br /> <ul><li><xref:System.Xml.Linq.XElement> 物件。</li><li>集合，其中包含一個<xref:System.Xml.Linq.XElement>物件和任何數目的<xref:System.Xml.Linq.XProcessingInstruction>和<xref:System.Xml.Linq.XComment>物件。</li></ul></li></ul><br /> 如需詳細資訊，請參閱[XML 中內嵌的運算式](../../../visual-basic/programming-guide/language-features/xml/embedded-expressions-in-xml.md)。|  
+|`encoding`|選擇性。 使用宣告哪一種編碼文件常值文字。|  
+|`standalone`|選擇性。 常值文字。 必須是"yes"或"no"。|  
+|`piCommentList`|選擇性。 XML 處理指示和 XML 註解的清單。 會採用下列格式：<br /><br /> `piComment [` `piComment` `... ]`<br /><br /> 每個`piComment`可以是下列其中之一：<br /><br /> -   [XML 處理指示常值](../../../visual-basic/language-reference/xml-literals/xml-processing-instruction-literal.md)。<br />-   [XML 註解常值](../../../visual-basic/language-reference/xml-literals/xml-comment-literal.md)。|  
+|`rootElement`|必要。 文件的根項目。 格式為下列其中一項：<br /><br /> <ul><li>[XML 項目常值](../../../visual-basic/language-reference/xml-literals/xml-element-literal.md)。</li><li>內嵌運算式的形式`<%=` `elementExp` `%>`。 `elementExp`傳回下列其中之一：<br /><br /> <ul><li><xref:System.Xml.Linq.XElement> 物件。</li><li>集合，其中包含一個<xref:System.Xml.Linq.XElement>物件和任何數目的<xref:System.Xml.Linq.XProcessingInstruction>和<xref:System.Xml.Linq.XComment>物件。</li></ul></li></ul><br /> 如需詳細資訊，請參閱[XML 中內嵌的運算式](../../../visual-basic/programming-guide/language-features/xml/embedded-expressions-in-xml.md)。|  
   
 ## <a name="return-value"></a>傳回值  
  <xref:System.Xml.Linq.XDocument> 物件。  
@@ -54,9 +54,9 @@ rootElement
  XML 文件常值不能出現在 XML 項目。  
   
 > [!NOTE]
->  XML 常值可以跨越多行，而不使用行接續字元。 這可讓您從 XML 文件內容複製並貼上直接將[!INCLUDE[vbprvb](~/includes/vbprvb-md.md)]程式。  
+>  XML 常值可以跨越多行，而不使用行接續字元。 這可讓您從 XML 文件內容複製並貼上直接在 Visual Basic 程式。  
   
- [!INCLUDE[vbprvb](~/includes/vbprvb-md.md)]編譯器會將 XML 文件常值轉換成呼叫<xref:System.Xml.Linq.XDocument.%23ctor%2A>和<xref:System.Xml.Linq.XDeclaration.%23ctor%2A>建構函式。  
+ Visual Basic 編譯器會將 XML 文件常值轉換成呼叫<xref:System.Xml.Linq.XDocument.%23ctor%2A>和<xref:System.Xml.Linq.XDeclaration.%23ctor%2A>建構函式。  
   
 ## <a name="example"></a>範例  
  下列範例會建立 XML 文件具有 XML 宣告、 處理指示、 註解和此項目包含另一個項目。  

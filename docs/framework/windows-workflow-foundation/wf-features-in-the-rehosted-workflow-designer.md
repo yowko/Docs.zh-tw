@@ -1,23 +1,24 @@
 ---
-title: "針對重新裝載之工作流程設計工具中的新 Workflow Foundation 4.5 功能提供的支援"
-ms.custom: 
+title: 針對重新裝載之工作流程設計工具中的新 Workflow Foundation 4.5 功能提供的支援
+ms.custom: ''
 ms.date: 03/30/2017
 ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.tgt_pltfrm: 
+ms.reviewer: ''
+ms.suite: ''
+ms.tgt_pltfrm: ''
 ms.topic: article
 ms.assetid: 1a4a4038-d8e6-41dd-99ea-93bd76286772
-caps.latest.revision: "3"
+caps.latest.revision: 3
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.workload: dotnet
-ms.openlocfilehash: ee8467eaeaef490f4c7a8bfbcb204506d71f5500
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.workload:
+- dotnet
+ms.openlocfilehash: 999c18f20264a71cf73bbd5afd352ad3104a03e8
+ms.sourcegitcommit: 86adcc06e35390f13c1e372c36d2e044f1fc31ef
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 04/26/2018
 ---
 # <a name="support-for-new-workflow-foundation-45-features-in-the-rehosted-workflow-designer"></a>針對重新裝載之工作流程設計工具中的新 Workflow Foundation 4.5 功能提供的支援
 [!INCLUDE[wf](../../../includes/wf-md.md)] 中的 [!INCLUDE[net_v45](../../../includes/net-v45-md.md)] 引入了很多新功能，包括幾項工作流程設計工具經驗的增強功能。 本主題詳細介紹重新裝載的設計工具支援其中哪些功能，以及目前不支援的功能。  
@@ -54,7 +55,7 @@ ms.lasthandoff: 12/22/2017
   
  下列螢幕擷取畫面顯示 `WriteLine` 活動，此活動位在 `Body` 的 `NoPersistScope` 中。  
   
- ![自動 &#45; 環繞置放位置](../../../docs/framework/windows-workflow-foundation/media/autosurround1.png "AutoSurround1")  
+ ![自動&#45;環繞置放位置](../../../docs/framework/windows-workflow-foundation/media/autosurround1.png "AutoSurround1")  
   
  當第二個 `Sequence` 降到第一個之下時，下列螢幕擷取畫面會顯示在 `Body` 中自動建立的 `WriteLine` 活動。  
   
@@ -75,7 +76,7 @@ ms.lasthandoff: 12/22/2017
  您也可以在設計工具中拖放多個活動選取項目，或者使用內容功能表與選取項目互動。  
   
 ### <a name="outline-view-of-workflow-items"></a>工作流程項目的大綱檢視  
- 為簡化階層工作流程的巡覽功能，工作流程的元件會顯示在樹狀大綱檢閱中。 大綱檢視會顯示在**文件大綱**檢視。 若要開啟此檢視的[!INCLUDE[vs_current_short](../../../includes/vs-current-short-md.md)]，從頂端功能表中，選取**檢視**，**其他視窗**，**文件大綱**，或按 Ctrl + W、 u。 按一下大綱檢視中的節點，會巡覽至工作流程設計工具中對應的活動，且大綱檢視會更新以顯示在設計工具中選取的活動。 重新裝載的設計工具支援此功能。  
+ 為簡化階層工作流程的巡覽功能，工作流程的元件會顯示在樹狀大綱檢閱中。 大綱檢視會顯示在**文件大綱**檢視。 若要在 Visual Studio 中開啟此檢視，從頂端功能表中，選取**檢視**，**其他視窗**，**文件大綱**，或按 Ctrl + W、 u。 按一下大綱檢視中的節點，會巡覽至工作流程設計工具中對應的活動，且大綱檢視會更新以顯示在設計工具中選取的活動。 重新裝載的設計工具支援此功能。  
   
  從完成的工作流程中的下列螢幕擷取畫面[入門教學課程](../../../docs/framework/windows-workflow-foundation/getting-started-tutorial.md)與循序工作流程大綱檢視會顯示。  
   
@@ -93,7 +94,7 @@ ms.lasthandoff: 12/22/2017
   
  您也可以將活動拖曳到流程圖節點和狀態之間的連接，以在其他兩個節點之間自動插入該節點。 下列螢幕擷取畫面顯示反白顯示的連接線，在此可以從工具箱中拖曳及放置活動。  
   
- ![自動 &#45; 用於置放活動處理的插入](../../../docs/framework/windows-workflow-foundation/media/autoinsert.png "Autoinsert")  
+ ![自動&#45;用於置放活動的控制代碼插入](../../../docs/framework/windows-workflow-foundation/media/autoinsert.png "Autoinsert")  
   
  重新裝載的設計工具支援自動連接和自動插入。  
   
@@ -149,7 +150,7 @@ ms.lasthandoff: 12/22/2017
  如需有關如何建立狀態機器工作流程的詳細資訊，請參閱[狀態機器工作流程](../../../docs/framework/windows-workflow-foundation/state-machine-workflows.md)。 重新裝載的設計工具支援狀態機器工作流程。  
   
 ### <a name="contract-first-workflow-development"></a>合約優先工作流程開發  
- 合約優先工作流程開發工具可讓開發人員在 Code First 中設計合約，然後，只要在 [!INCLUDE[vs_current_short](../../../includes/vs-current-short-md.md)] 中按幾下滑鼠，就可在代表各作業的工具箱中自動產生活動範本。 之後，這些活動可以用於建立工作流程，以實作合約所定義的作業。 工作流程設計工具將會驗證工作流程服務，以確保這些作業都有進行實作且工作流程的簽章與合約簽章相符。 開發人員也可以在工作流程服務與實作合約的集合之間建立關聯。 如需合約優先工作流程服務開發的詳細資訊，請參閱[How to： 建立會取用現有服務合約的工作流程服務](../../../docs/framework/windows-workflow-foundation/how-to-create-a-workflow-service-that-consumes-an-existing-service-contract.md)。  
+ 合約優先工作流程開發工具可讓開發人員在中設計合約程式碼第一次，然後按幾下滑鼠，Visual Studio 中，自動產生活動範本 」 代表每個作業的工具箱中。 之後，這些活動可以用於建立工作流程，以實作合約所定義的作業。 工作流程設計工具將會驗證工作流程服務，以確保這些作業都有進行實作且工作流程的簽章與合約簽章相符。 開發人員也可以在工作流程服務與實作合約的集合之間建立關聯。 如需合約優先工作流程服務開發的詳細資訊，請參閱[How to： 建立會取用現有服務合約的工作流程服務](../../../docs/framework/windows-workflow-foundation/how-to-create-a-workflow-service-that-consumes-an-existing-service-contract.md)。  
   
 > [!WARNING]
 >  工作流程設計工具不支援合約優先工作流程開發。

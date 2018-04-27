@@ -1,24 +1,25 @@
 ---
-title: "Visual Basic 執行階段訊息"
+title: Visual Basic 執行階段訊息
 ms.date: 07/20/2015
 ms.prod: .net
-ms.technology: devlang-visual-basic
+ms.technology:
+- devlang-visual-basic
 ms.topic: article
 helpviewer_keywords:
 - errors [Visual Basic], run-time
 - run-time errors [Visual Basic], Visual Basic
 ms.assetid: 130f7c2b-8eb1-4a6e-81aa-e30e27d3d4f7
-caps.latest.revision: "8"
+caps.latest.revision: 8
 author: dotnet-bot
 ms.author: dotnetcontent
-ms.openlocfilehash: 37c88c7d88e01e6201a4679ae312e045c8cfab4a
-ms.sourcegitcommit: 34ec7753acf76f90a0fa845235ef06663dc9e36e
+ms.openlocfilehash: 14258d0cb19b62ec93672998039b8d59a1943fb2
+ms.sourcegitcommit: 86adcc06e35390f13c1e372c36d2e044f1fc31ef
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 04/26/2018
 ---
 # <a name="visual-basic-run-time-messages"></a>Visual Basic 執行階段訊息
-本節包含執行階段發生的 [!INCLUDE[vbprvb](~/includes/vbprvb-md.md)] 錯誤訊息。  
+本章節包含在執行階段發生的 Visual Basic 錯誤訊息。  
   
  [\<位址 > 不是有效的遠端檔案位址](../../visual-basic/misc/address-is-not-a-valid-remote-file-address.md)  
   
@@ -558,6 +559,6 @@ ms.lasthandoff: 12/21/2017
   
  [您必須指定目前資料夾或其中一個子資料夾底下的路徑](../../visual-basic/misc/you-must-specify-path-that-is-under-the-current-folder-or-one-of-sub-folders.md)  
   
-## <a name="see-also"></a>請參閱  
+## <a name="see-also"></a>另請參閱  
    
  [錯誤訊息](../../visual-basic/language-reference/error-messages/index.md)

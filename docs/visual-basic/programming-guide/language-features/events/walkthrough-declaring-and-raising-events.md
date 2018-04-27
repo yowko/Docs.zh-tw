@@ -1,11 +1,12 @@
 ---
-title: "宣告和引發事件 (Visual Basic)"
-ms.custom: 
+title: 宣告和引發事件 (Visual Basic)
+ms.custom: ''
 ms.date: 07/20/2015
 ms.prod: .net
-ms.reviewer: 
-ms.suite: 
-ms.technology: devlang-visual-basic
+ms.reviewer: ''
+ms.suite: ''
+ms.technology:
+- devlang-visual-basic
 ms.topic: article
 helpviewer_keywords:
 - declarations [Visual Basic], events
@@ -15,14 +16,14 @@ helpviewer_keywords:
 - events [Visual Basic], raising
 - raising events [Visual Basic], walkthroughs
 ms.assetid: 8ffb3be8-097d-4d3c-b71e-04555ebda2a2
-caps.latest.revision: "16"
+caps.latest.revision: 16
 author: dotnet-bot
 ms.author: dotnetcontent
-ms.openlocfilehash: 0bf75cfba5102be5d837af385e2d3578f78a03c0
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.openlocfilehash: 27db585084703607a7389f5a0aa3eba6f70dd793
+ms.sourcegitcommit: 86adcc06e35390f13c1e372c36d2e044f1fc31ef
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 04/26/2018
 ---
 # <a name="walkthrough-declaring-and-raising-events-visual-basic"></a>逐步解說：宣告和引發事件 (Visual Basic)
 本逐步解說示範如何宣告和引發事件的類別，名為`Widget`。 完成步驟之後，您可能想要閱讀附屬主題: <<c0> [ 逐步解說： 處理事件](../../../../visual-basic/programming-guide/language-features/events/walkthrough-handling-events.md)，其示範如何使用事件`Widget`來提供應用程式中的狀態資訊的物件。  
@@ -36,7 +37,7 @@ ms.lasthandoff: 11/21/2017
   
 #### <a name="to-build-the-code-example-for-this-topic"></a>若要建立本主題的程式碼範例  
   
-1.  開啟新[!INCLUDE[vbprvb](~/includes/vbprvb-md.md)]Windows 應用程式專案，並建立名為表單`Form1`。  
+1.  開啟新的 Visual Basic Windows 應用程式專案，並建立名為表單`Form1`。  
   
 2.  加入兩個按鈕和標籤以`Form1`。  
   
@@ -61,7 +62,7 @@ ms.lasthandoff: 11/21/2017
 > [!NOTE]
 >  您可以宣告事件引數，就像您一樣引數的程序，但有下列例外狀況： 事件不可以有`Optional`或`ParamArray`引數和事件不會有傳回值。  
   
- `PercentDone`就會引發事件`LongTask`方法`Widget`類別。 `LongTask`會採用兩個引數： 做的動作 （work) 和之前的最小時間間隔的時間長度方法偽裝`LongTask`引發暫停`PercentDone`事件。  
+ `PercentDone`就會引發事件`LongTask`方法`Widget`類別。 `LongTask` 會採用兩個引數： 做的動作 （work) 和之前的最小時間間隔的時間長度方法偽裝`LongTask`引發暫停`PercentDone`事件。  
   
 #### <a name="to-raise-the-percentdone-event"></a>若要引發 PercentDone 事件  
   

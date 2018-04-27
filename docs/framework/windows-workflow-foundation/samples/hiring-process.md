@@ -1,23 +1,24 @@
 ---
-title: "招聘程序"
-ms.custom: 
+title: 招聘程序
+ms.custom: ''
 ms.date: 03/30/2017
 ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.tgt_pltfrm: 
+ms.reviewer: ''
+ms.suite: ''
+ms.tgt_pltfrm: ''
 ms.topic: article
 ms.assetid: d5fcacbb-c884-4b37-a5d6-02b1b8eec7b4
-caps.latest.revision: "13"
+caps.latest.revision: 13
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.workload: dotnet
-ms.openlocfilehash: 30cad662a9cca679f7e8ce720cfde3d369b9ba60
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.workload:
+- dotnet
+ms.openlocfilehash: 8cfa23ab5f36b3a40de107a546dd4700a4523595
+ms.sourcegitcommit: 86adcc06e35390f13c1e372c36d2e044f1fc31ef
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 04/26/2018
 ---
 # <a name="hiring-process"></a>招聘程序
 此範例示範如何使用傳訊活動和裝載為工作流程服務的兩個工作流程來實作商務程序。 這些工作流程是虛擬公司 Contoso, Inc. 的 IT 基礎結構的一部分。  
@@ -129,7 +130,7 @@ ms.lasthandoff: 12/22/2017
 |自訂追蹤|此範例包含的自訂追蹤參與者會儲存 `HiringRequestProcess` 的記錄 (這樣會記錄已經執行的動作、動作執行者與執行時間)。 原始程式碼位於 HiringRequestService 的 Tracking 資料夾中。|HiringRequestService|  
 |ETW 追蹤|系統提供的 ETW 追蹤會設定於 HiringRequestService 服務的 App.config 檔案中。|HiringRequestService|  
 |活動撰寫|此程序定義會使用 <xref:System.Activities.Activity> 的免費撰寫。 此流程圖包含幾個序列和平行活動，這些活動同時也包含其他活動 (依此類推)。|HiringRequestService|  
-|平行活動|-   <xref:System.Activities.Statements.ParallelForEach%601>用來在 CEO 和人力資源部門經理的收件匣中註冊，以平行方式 （等候兩位人力資源部門經理的核准步驟）。<br />-   <xref:System.Activities.Statements.Parallel>用來執行某些清除工作。 在已完成和已拒絕步驟中|HiringRequestService|  
+|平行活動|-   <xref:System.Activities.Statements.ParallelForEach%601> 用來在 CEO 和人力資源部門經理的收件匣中註冊，以平行方式 （等候兩位人力資源部門經理的核准步驟）。<br />-   <xref:System.Activities.Statements.Parallel> 用來執行某些清除工作。 在已完成和已拒絕步驟中|HiringRequestService|  
 |模型取消|此流程圖會使用 <xref:System.Activities.Statements.CancellationScope> 建立取消行為 (在此案例中，它會執行某些清除工作)。|HiringRequestService|  
 |客戶持續性參與者|`HiringRequestPersistenceParticipant` 會將工作流程變數中的資料儲存到 Contoso HR 資料庫內所儲存的資料表中。|HiringRequestService|  
 |工作流程服務|`ResumeRequestService` 是使用工作流程服務所實作。 工作流程定義和服務資訊會包含在 ResumeRequestService.xamlx 中。 此服務會設定為使用持續性與追蹤。|ResumeRequestService|  
@@ -141,13 +142,13 @@ ms.lasthandoff: 12/22/2017
 ## <a name="data-storage"></a>資料儲存  
  資料會儲存在名為 `ContosoHR` 的 SQL Server 資料庫中 (用來建立此資料庫的指令碼位於 `DbSetup` 資料夾中)。 工作流程執行個體會儲存在名為 `InstanceStore` 的 SQL Server 資料庫中 (用來建立執行個體存放區的指令碼屬於 [!INCLUDE[netfx_current_short](../../../../includes/netfx-current-short-md.md)] 散發的一部分)。  
   
- 從 [!INCLUDE[vs_current_short](../../../../includes/vs-current-short-md.md)] 命令提示字元執行 Setup.cmd 指令碼來建立這兩個資料庫。  
+ 從 Visual Studio 命令提示字元執行 Setup.cmd 指令碼會建立兩個資料庫。  
   
 ## <a name="running-the-sample"></a>執行範例  
   
 #### <a name="to-create-the-databases"></a>若要建立資料庫  
   
-1.  開啟 [!INCLUDE[vs_current_short](../../../../includes/vs-current-short-md.md)] 命令提示字元。  
+1.  開啟 Visual Studio 命令提示字元。  
   
 2.  巡覽至範例資料夾。  
   
@@ -157,7 +158,7 @@ ms.lasthandoff: 12/22/2017
   
 #### <a name="to-set-up-the-solution-for-execution"></a>若要設定執行的方案  
   
-1.  以系統管理員身分執行 [!INCLUDE[vs_current_short](../../../../includes/vs-current-short-md.md)]。 開啟 HiringRequest.sln。  
+1.  以系統管理員身分執行 Visual Studio。 開啟 HiringRequest.sln。  
   
 2.  以滑鼠右鍵按一下方案中的**方案總管 中**選取**屬性**。  
   
@@ -221,7 +222,7 @@ ms.lasthandoff: 12/22/2017
   
 ## <a name="troubleshooting"></a>疑難排解  
   
-1.  確定當您執行 [!INCLUDE[vs_current_short](../../../../includes/vs-current-short-md.md)] 時，具有系統管理員權限。  
+1.  請確定您系統管理員權限執行 Visual Studio。  
   
 2.  如果此方案建置失敗，請確認以下事項：  
   
@@ -237,7 +238,7 @@ ms.lasthandoff: 12/22/2017
   
         2.  以滑鼠右鍵按一下**Contoso**選取**更新 Web/服務參考**。  
   
-        3.  在 [!INCLUDE[vs_current_short](../../../../includes/vs-current-short-md.md)] 中按 CTRL+SHIFT+B 重新建置此方案。  
+        3.  重建方案在 Visual Studio 中按 CTRL + SHIFT + B。  
   
 ## <a name="uninstalling"></a>解除安裝  
   

@@ -1,11 +1,12 @@
 ---
 title: Value Types and Reference Types
-ms.custom: 
+ms.custom: ''
 ms.date: 07/20/2015
 ms.prod: .net
-ms.reviewer: 
-ms.suite: 
-ms.technology: devlang-visual-basic
+ms.reviewer: ''
+ms.suite: ''
+ms.technology:
+- devlang-visual-basic
 ms.topic: article
 helpviewer_keywords:
 - reference data types [Visual Basic]
@@ -16,17 +17,17 @@ helpviewer_keywords:
 - data types [Visual Basic], value types
 - data types [Visual Basic], reference types
 ms.assetid: fc82ce15-5a40-4c5c-a1e1-a556830e7391
-caps.latest.revision: "14"
+caps.latest.revision: 14
 author: dotnet-bot
 ms.author: dotnetcontent
-ms.openlocfilehash: 2b54945d27d186771e8b5353e753afd74c56d71b
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.openlocfilehash: 9cbab25e4af6b96ae22fe18d0b8a8fdbc7a7c7a7
+ms.sourcegitcommit: 86adcc06e35390f13c1e372c36d2e044f1fc31ef
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 04/26/2018
 ---
 # <a name="value-types-and-reference-types"></a>Value Types and Reference Types
-在 Visual Basic 中，資料類型會實作其分類為基礎。 [!INCLUDE[vbprvb](~/includes/vbprvb-md.md)]資料型別可以根據自己的資料或資料指標，特定類型的變數是否儲存分類。 如果它會儲存它自己的資料很*實值型別*; 如果它是的記憶體中其他位置的資料會保留指標*參考型別*。  
+在 Visual Basic 中，資料類型會實作其分類為基礎。 Visual Basic 資料類型可以根據自己的資料或資料指標，特定類型的變數是否儲存分類。 如果它會儲存它自己的資料很*實值型別*; 如果它是的記憶體中其他位置的資料會保留指標*參考型別*。  
   
 ## <a name="value-types"></a>實值類型  
  資料類型是*實值型別*如果它包含在它自己的記憶體配置中的資料。 實值類型包括：  
@@ -37,7 +38,7 @@ ms.lasthandoff: 11/21/2017
   
 -   所有的結構，即使它們的成員屬於參考類型  
   
--   列舉型別，因為其基礎類型一律為`SByte`， `Short`， `Integer`， `Long`， `Byte`， `UShort`， `UInteger`，或`ULong`  
+-   列舉型別，因為其基礎類型一律為`SByte`， `Short`， `Integer`， `Long`， `Byte`， `UShort`， `UInteger`，或 `ULong`  
   
  每個結構是實值類型，即使它包含參考類型的成員。 基於這個理由，實值類型例如`Char`和`Integer`.NET Framework 結構來實作。  
   
@@ -50,7 +51,7 @@ ms.lasthandoff: 11/21/2017
   
 -   所有的陣列，即使其元素為實值類型  
   
--   類別類型例如<xref:System.Windows.Forms.Form>  
+-   類別類型例如 <xref:System.Windows.Forms.Form>  
   
 -   委派  
   
@@ -78,7 +79,7 @@ Dim totals() As Single = New Single(8) {}
 ## <a name="working-with-the-object-data-type"></a>使用物件資料類型  
  您可以將參考類型或實值類型指派給變數`Object`資料型別。 `Object`變數一律會保留指標的資料，永遠不會資料本身。 不過，如果您指派至實值類型`Object`變數，其行為就如同它包含它自己的資料。 如需詳細資訊，請參閱[物件資料類型](../../../../visual-basic/language-reference/data-types/object-data-type.md)。  
   
- 您可以找出是否`Object`變數做為參考類型或實值類型傳遞至<xref:Microsoft.VisualBasic.Information.IsReference%2A>方法中的<xref:Microsoft.VisualBasic.Information>類別<xref:Microsoft.VisualBasic?displayProperty=nameWithType>命名空間。 <xref:Microsoft.VisualBasic.Information.IsReference%2A?displayProperty=nameWithType>傳回`True`如果內容`Object`變數代表參考型別。  
+ 您可以找出是否`Object`變數做為參考類型或實值類型傳遞至<xref:Microsoft.VisualBasic.Information.IsReference%2A>方法中的<xref:Microsoft.VisualBasic.Information>類別<xref:Microsoft.VisualBasic?displayProperty=nameWithType>命名空間。 <xref:Microsoft.VisualBasic.Information.IsReference%2A?displayProperty=nameWithType> 傳回`True`如果內容`Object`變數代表參考型別。  
   
 ## <a name="see-also"></a>另請參閱  
  [可為 Null 的值類型](../../../../visual-basic/programming-guide/language-features/data-types/nullable-value-types.md)  

@@ -1,11 +1,12 @@
 ---
-title: "如何：呼叫使用不帶正負號類型的 Windows 函式 (Visual Basic)"
-ms.custom: 
+title: 如何：呼叫使用不帶正負號類型的 Windows 函式 (Visual Basic)
+ms.custom: ''
 ms.date: 07/20/2015
 ms.prod: .net
-ms.reviewer: 
-ms.suite: 
-ms.technology: devlang-visual-basic
+ms.reviewer: ''
+ms.suite: ''
+ms.technology:
+- devlang-visual-basic
 ms.topic: article
 helpviewer_keywords:
 - Windows functions [Visual Basic], calling
@@ -20,21 +21,21 @@ helpviewer_keywords:
 - data types [Visual Basic], numeric
 - unsigned types [Visual Basic], using
 ms.assetid: c2c0e712-8dc2-43b9-b4c6-345fbb02e7ce
-caps.latest.revision: "18"
+caps.latest.revision: 18
 author: dotnet-bot
 ms.author: dotnetcontent
-ms.openlocfilehash: 78e6789e7def5deeb8394e3aefecfdc187ec6ef6
-ms.sourcegitcommit: c0dd436f6f8f44dc80dc43b07f6841a00b74b23f
+ms.openlocfilehash: dd0738300ec846041e78f19836f29e7adff1c821
+ms.sourcegitcommit: 86adcc06e35390f13c1e372c36d2e044f1fc31ef
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 01/19/2018
+ms.lasthandoff: 04/26/2018
 ---
 # <a name="how-to-call-a-windows-function-that-takes-unsigned-types-visual-basic"></a>如何：呼叫使用不帶正負號類型的 Windows 函式 (Visual Basic)
-如果您正在耗用類別、 模組或具有不帶正負號的整數類型的成員的結構，您可以存取這些成員與[!INCLUDE[vbprvb](~/includes/vbprvb-md.md)]。  
+如果您正在耗用類別、 模組或具有不帶正負號的整數類型的成員的結構，您可以存取這些成員與 Visual Basic。  
   
 ### <a name="to-call-a-windows-function-that-takes-an-unsigned-type"></a>若要呼叫 Windows 函式採用不帶正負號的類型  
   
-1.  使用[Declare 陳述式](../../../visual-basic/language-reference/statements/declare-statement.md)告訴[!INCLUDE[vbprvb](~/includes/vbprvb-md.md)]哪一個程式庫會保存函式、 其名稱為該文件庫中，其呼叫的順序為何，以及如何將字串轉換呼叫它時。  
+1.  使用[Declare 陳述式](../../../visual-basic/language-reference/statements/declare-statement.md)告訴 Visual Basic 的程式庫會保存函式、 其名稱為該文件庫中，其呼叫的順序為何，以及如何呼叫它時，將字串轉換。  
   
 2.  在`Declare`陳述式中，使用`UInteger`， `ULong`， `UShort`，或`Byte`視需要針對每個參數具有不帶正負號的類型。  
   
@@ -85,7 +86,7 @@ ms.lasthandoff: 01/19/2018
     > [!IMPORTANT]
     >  呼叫 Windows API 需要 unmanaged 程式碼權限，這可能會影響在部分信任情況下執行。 如需詳細資訊，請參閱<xref:System.Security.Permissions.SecurityPermission>和[程式碼存取權限](http://msdn.microsoft.com/library/e5ae402f-6dda-4732-bbe8-77296630f675)。  
   
-## <a name="see-also"></a>請參閱  
+## <a name="see-also"></a>另請參閱  
  [資料類型](../../../visual-basic/language-reference/data-types/data-type-summary.md)  
  [Integer 資料類型](../../../visual-basic/language-reference/data-types/integer-data-type.md)  
  [UInteger 資料類型](../../../visual-basic/language-reference/data-types/uinteger-data-type.md)  

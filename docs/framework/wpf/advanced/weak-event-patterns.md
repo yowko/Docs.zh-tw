@@ -1,34 +1,36 @@
 ---
-title: "弱式事件模式"
-ms.custom: 
+title: 弱式事件模式
+ms.custom: ''
 ms.date: 03/30/2017
 ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.technology: dotnet-wpf
-ms.tgt_pltfrm: 
+ms.reviewer: ''
+ms.suite: ''
+ms.technology:
+- dotnet-wpf
+ms.tgt_pltfrm: ''
 ms.topic: article
 helpviewer_keywords:
 - weak event pattern implementation [WPF]
 - event handlers [WPF], weak event pattern
 - IWeakEventListener interface [WPF]
 ms.assetid: e7c62920-4812-4811-94d8-050a65c856f6
-caps.latest.revision: "18"
+caps.latest.revision: 18
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.workload: dotnet
-ms.openlocfilehash: 21a36797f945f37a641e7002bbb9937a664650fd
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.workload:
+- dotnet
+ms.openlocfilehash: f96327f8eaad36f3faebf48db083125816589821
+ms.sourcegitcommit: 86adcc06e35390f13c1e372c36d2e044f1fc31ef
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 04/26/2018
 ---
 # <a name="weak-event-patterns"></a>弱式事件模式
-在應用程式，它可能會附加到事件來源的處理常式不會終結搭配此處理常式附加到來源的接聽程式物件。 這種情況可能會導致記憶體流失無關。 [!INCLUDE[TLA#tla_winclient](../../../../includes/tlasharptla-winclient-md.md)]導入了可用來解決這個問題，提供專用的管理員類別的特定事件，該事件的接聽項上實作介面的設計模式。 此設計模式又稱為*弱式事件模式*。  
+在應用程式，它可能會附加到事件來源的處理常式不會終結搭配此處理常式附加到來源的接聽程式物件。 這種情況可能會導致記憶體流失無關。 [!INCLUDE[TLA#tla_winclient](../../../../includes/tlasharptla-winclient-md.md)] 導入了可用來解決這個問題，提供專用的管理員類別的特定事件，該事件的接聽項上實作介面的設計模式。 此設計模式又稱為*弱式事件模式*。  
   
 ## <a name="why-implement-the-weak-event-pattern"></a>為什麼實作弱式事件模式？  
- 接聽事件可能會導致記憶體流失。 接聽事件的典型技巧是使用附加至來源上的事件處理常式的特定語言的語法。 例如，在[!INCLUDE[TLA#tla_cshrp](../../../../includes/tlasharptla-cshrp-md.md)]，語法是： `source.SomeEvent += new SomeEventHandler(MyEventHandler)`。  
+ 接聽事件可能會導致記憶體流失。 接聽事件的典型技巧是使用附加至來源上的事件處理常式的特定語言的語法。 例如，在 C# 中，該語法是： `source.SomeEvent += new SomeEventHandler(MyEventHandler)`。  
   
  這項技術建立的事件接聽程式從事件來源的強式參考。 一般來說，附加事件處理常式，接聽程式會導致物件存留期 （除非明確移除事件處理常式），會受到來源的物件存留期，接聽程式。 但在某些情況下，您可能想物件存留期的接聽程式會由其他因素，例如是否目前屬於應用程式，而不是由來源的存留期的視覺化樹狀結構。 一般事件模式時的來源物件存留期超出接聽程式的物件存留期時，會導致記憶體流失： 接聽程式就會保持運作時間比預期長。  
   
@@ -140,7 +142,7 @@ ms.lasthandoff: 12/22/2017
     SomeEventWeakEventManager.RemoveHandler(source, OnSomeEvent);  
     ```  
   
-## <a name="see-also"></a>請參閱  
+## <a name="see-also"></a>另請參閱  
  <xref:System.Windows.WeakEventManager>  
  <xref:System.Windows.IWeakEventListener>  
  [路由事件概觀](../../../../docs/framework/wpf/advanced/routed-events-overview.md)  

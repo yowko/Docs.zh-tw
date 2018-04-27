@@ -1,11 +1,12 @@
 ---
-title: "如何：呼叫屬性程序 (Visual Basic)"
-ms.custom: 
+title: 如何：呼叫屬性程序 (Visual Basic)
+ms.custom: ''
 ms.date: 07/20/2015
 ms.prod: .net
-ms.reviewer: 
-ms.suite: 
-ms.technology: devlang-visual-basic
+ms.reviewer: ''
+ms.suite: ''
+ms.technology:
+- devlang-visual-basic
 ms.topic: article
 helpviewer_keywords:
 - Visual Basic code, procedures
@@ -14,19 +15,19 @@ helpviewer_keywords:
 - properties [Visual Basic], property procedures
 - procedure calls [Visual Basic], property procedures
 ms.assetid: 96bc4d74-d9c3-4b7a-954d-58ac8553cd94
-caps.latest.revision: "16"
+caps.latest.revision: 16
 author: dotnet-bot
 ms.author: dotnetcontent
-ms.openlocfilehash: cf9080e3c2b23302257499f13e734231f3614495
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.openlocfilehash: 38b3704328916a487f94879ea0096ae923f19082
+ms.sourcegitcommit: 86adcc06e35390f13c1e372c36d2e044f1fc31ef
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 04/26/2018
 ---
 # <a name="how-to-call-a-property-procedure-visual-basic"></a>如何：呼叫屬性程序 (Visual Basic)
 您可以將值儲存在屬性或擷取其值呼叫屬性程序。 存取屬性相同的方式存取的變數。  
   
- 屬性的`Set`程序可儲存值，並將其`Get`程序擷取的值。 不過，您沒有明確呼叫這些程序的名稱。 就如同您儲存或擷取變數的值，您可以使用指派陳述式或運算式中的屬性。 [!INCLUDE[vbprvb](~/includes/vbprvb-md.md)]會呼叫屬性程序。  
+ 屬性的`Set`程序可儲存值，並將其`Get`程序擷取的值。 不過，您沒有明確呼叫這些程序的名稱。 就如同您儲存或擷取變數的值，您可以使用指派陳述式或運算式中的屬性。 Visual Basic 會將屬性的程序呼叫。  
   
 ### <a name="to-call-a-propertys-get-procedure"></a>若要呼叫的屬性 Get 的程序  
   

@@ -1,30 +1,32 @@
 ---
-title: "Visual Basic 和 WPF 事件處理"
-ms.custom: 
+title: Visual Basic 和 WPF 事件處理
+ms.custom: ''
 ms.date: 03/30/2017
 ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.technology: dotnet-wpf
-ms.tgt_pltfrm: 
+ms.reviewer: ''
+ms.suite: ''
+ms.technology:
+- dotnet-wpf
+ms.tgt_pltfrm: ''
 ms.topic: article
 helpviewer_keywords:
 - Visual Basic [WPF], event handlers
 - event handlers [WPF], Visual Basic
 ms.assetid: ad4eb9aa-3afc-4a71-8cf6-add3fbea54a1
-caps.latest.revision: "12"
+caps.latest.revision: 12
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.workload: dotnet
-ms.openlocfilehash: ed10e52c59112714a500fe52ccf5b398c14a97b7
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.workload:
+- dotnet
+ms.openlocfilehash: f61b63e7f80ec779d03c230bd4f24eed00098242
+ms.sourcegitcommit: 86adcc06e35390f13c1e372c36d2e044f1fc31ef
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 04/26/2018
 ---
 # <a name="visual-basic-and-wpf-event-handling"></a>Visual Basic 和 WPF 事件處理
-如[!INCLUDE[TLA#tla_visualbnet](../../../../includes/tlasharptla-visualbnet-md.md)]語言具體來說，您可以使用特定語言`Handles`關鍵字加入事件處理常式關聯執行個體，而不是附加屬性的事件處理常式，或使用<xref:System.Windows.UIElement.AddHandler%2A>方法。 不過，將處理常式附加至執行個體的 `Handles` 技術有一些限制，因為 `Handles` 語法無法支援 [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] 事件系統中某些特定的路由事件功能。  
+Microsoft Visual Basic.NET 語言具體來說，您可以使用特定語言`Handles`關鍵字加入事件處理常式關聯執行個體，而不是附加屬性的事件處理常式，或使用<xref:System.Windows.UIElement.AddHandler%2A>方法。 不過，將處理常式附加至執行個體的 `Handles` 技術有一些限制，因為 `Handles` 語法無法支援 [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] 事件系統中某些特定的路由事件功能。  
   
 ## <a name="using-handles-in-a-wpf-application"></a>在 WPF 應用程式中使用「Handles」  
  使用 `Handles` 連線到執行個體和事件的事件處理常式全需定義於執行個體的部分類別宣告中，這也是透過元素上的屬性值所指派之事件處理常式的需求。 您只能指定`Handles`具有的頁面上的項目<xref:System.Windows.FrameworkContentElement.Name%2A>屬性值 (或[X:name 指示詞](../../../../docs/framework/xaml-services/x-name-directive.md)宣告)。 這是因為<xref:System.Windows.FrameworkContentElement.Name%2A>中[!INCLUDE[TLA2#tla_xaml](../../../../includes/tla2sharptla-xaml-md.md)]會建立，才能支援執行個體參考*Instance.Event*所需的參考格式`Handles`語法。 唯一的項目可以用於`Handles`沒有<xref:System.Windows.FrameworkContentElement.Name%2A>參考是定義部分類別的根項目執行個體。  
@@ -45,7 +47,7 @@ ms.lasthandoff: 12/22/2017
  `Handles` 無法附加要針對已經標示為已處理之事件叫用的處理常式。 相反地，您必須使用程式碼和呼叫`handledEventsToo`多載<xref:System.Windows.UIElement.AddHandler%28System.Windows.RoutedEvent%2CSystem.Delegate%2CSystem.Boolean%29>。  
   
 > [!NOTE]
->  當您在 XAML 中指定相同事件的事件處理常式時，請勿在 [!INCLUDE[vb_current_short](../../../../includes/vb-current-short-md.md)] 程式碼中使用 `Handles` 語法。 在這個情況下，會呼叫事件處理常式兩次。  
+>  請勿使用`Handles`當您指定的相同事件的事件處理常式在 XAML 中的 Visual Basic 程式碼的語法。 在這個情況下，會呼叫事件處理常式兩次。  
   
 ## <a name="how-wpf-implements-handles-functionality"></a>WPF 如何實作「Handles」功能  
  當[!INCLUDE[TLA#tla_xaml](../../../../includes/tlasharptla-xaml-md.md)]網頁進行編譯，中繼檔案會宣告`Friend``WithEvents`具有的頁面上的每個項目參考<xref:System.Windows.FrameworkContentElement.Name%2A>屬性集 (或[X:name 指示詞](../../../../docs/framework/xaml-services/x-name-directive.md)宣告)。 每個具名執行個體可能都是可透過 `Handles` 指派給處理常式的元素。  
@@ -53,7 +55,7 @@ ms.lasthandoff: 12/22/2017
 > [!NOTE]
 >  在 [!INCLUDE[TLA#tla_visualstu](../../../../includes/tlasharptla-visualstu-md.md)] 內，[!INCLUDE[TLA2#tla_intellisense](../../../../includes/tla2sharptla-intellisense-md.md)] 可以顯示您已完成讓元素可供頁面中的 `Handles` 參考使用。 不過，這可能需要採取一次編譯傳遞，讓中繼檔案可以填入所有的 `Friends` 參考。  
   
-## <a name="see-also"></a>請參閱  
+## <a name="see-also"></a>另請參閱  
  <xref:System.Windows.UIElement.AddHandler%2A>  
  [將路由事件標記為已處理以及類別處理](../../../../docs/framework/wpf/advanced/marking-routed-events-as-handled-and-class-handling.md)  
  [路由事件概觀](../../../../docs/framework/wpf/advanced/routed-events-overview.md)  
