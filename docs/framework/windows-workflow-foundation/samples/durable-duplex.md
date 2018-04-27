@@ -1,29 +1,30 @@
 ---
-title: "永久性雙工"
-ms.custom: 
+title: 永久性雙工
+ms.custom: ''
 ms.date: 03/30/2017
 ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.tgt_pltfrm: 
+ms.reviewer: ''
+ms.suite: ''
+ms.tgt_pltfrm: ''
 ms.topic: article
 ms.assetid: 4e76d1a1-f3d8-4a0f-8746-4a322cdff6eb
-caps.latest.revision: "10"
+caps.latest.revision: 10
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.workload: dotnet
-ms.openlocfilehash: b1298f150709b48f18de654be2ab17adfdcbf42a
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.workload:
+- dotnet
+ms.openlocfilehash: 50d0ac9efae8e6d795455a63d793b2e84407b987
+ms.sourcegitcommit: 2042de78fcdceebb6b8ac4b7a292b93e8782cbf5
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 04/27/2018
 ---
 # <a name="durable-duplex"></a>永久性雙工
-這個範例示範如何透過 [!INCLUDE[wf](../../../../includes/wf-md.md)] 的訊息活動來設定永久性的雙工訊息交換。 永久性的雙工訊息交換是長時間進行的雙向訊息交換。 此訊息交換的存留期間可能比通訊通道的存留期間以及服務執行個體的記憶體中存留期間還要長。  
+這個範例示範如何安裝及設定使用訊息活動中 Windows Workflow Foundation (WF) 的永久性雙工訊息交換。 永久性的雙工訊息交換是長時間進行的雙向訊息交換。 此訊息交換的存留期間可能比通訊通道的存留期間以及服務執行個體的記憶體中存留期間還要長。  
   
 ## <a name="sample-details"></a>範例詳細資料  
- 在這個範例中，設定兩個透過 [!INCLUDE[indigo1](../../../../includes/indigo1-md.md)] 實作的 [!INCLUDE[wf2](../../../../includes/wf2-md.md)] 服務，來進行永久性的雙工訊息交換。 永久性雙工訊息交換由兩個單向訊息透過 MSMQ 傳送並使用相互關聯[.NET Context Exchange](http://go.microsoft.com/fwlink/?LinkID=166059)。 訊息是使用 <xref:System.ServiceModel.Activities.Send> 和 <xref:System.ServiceModel.Activities.Receive> 訊息活動來傳送。 .NET Context Exchange 用來在傳送的訊息上指定回呼位址。 兩個服務是透過使用 Windows Process Activation Services (WAS) 所主控，並設定為啟用服務執行個體的持續性。  
+ 在此範例中，兩個[!INCLUDE[indigo1](../../../../includes/indigo1-md.md)]實作使用 Windows Workflow Foundation 的服務設定為永久性雙工訊息交換。 永久性雙工訊息交換由兩個單向訊息透過 MSMQ 傳送並使用相互關聯[.NET Context Exchange](http://go.microsoft.com/fwlink/?LinkID=166059)。 訊息是使用 <xref:System.ServiceModel.Activities.Send> 和 <xref:System.ServiceModel.Activities.Receive> 訊息活動來傳送。 .NET Context Exchange 用來在傳送的訊息上指定回呼位址。 兩個服務是透過使用 Windows Process Activation Services (WAS) 所主控，並設定為啟用服務執行個體的持續性。  
   
  第一個服務 (Service1.xamlx) 會傳送要求給傳送服務 (Service2.xamlx)，使其做些工作。 一旦工作完成，Service2.xamlx 會傳回通知給 Service1.xamlx，表示工作已完成。 工作流程主控台應用程式會設定這些服務接聽的佇列，並傳送初始開始訊息以啟動 Service1.xamlx。 一旦 Service1.xamlx 從 Service2.xamlx 收到所要求工作已完成的通知，Service1.xamlx 會將結果儲存至 XML 檔案。 在等候回呼訊息時，Service1.xamlx 會使用預設 <xref:System.ServiceModel.Activities.Description.WorkflowIdleBehavior> 保存其執行個體狀態。 Service2.xamlx 會在完成 Service1.xamlx 所要求工作的過程中保存其執行個體狀態。  
   
@@ -154,7 +155,7 @@ ms.lasthandoff: 12/22/2017
   
 4.  執行範例。  
   
-    1.  瀏覽至 http://localhost/private/durableduplex/service1.xamlx 和 http://localhost/private/durableduplex/service2.xamlx，以確保兩個服務執行中。  
+    1.  瀏覽至http://localhost/private/durableduplex/service1.xamlx和http://localhost/private/durableduplex/service2.xamlx以確保這兩個服務正在執行。  
   
     2.  按下 F5，執行 DurableDuplexClient。  
   

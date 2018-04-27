@@ -14,16 +14,16 @@ ms.author: dotnetcontent
 manager: wpickett
 ms.workload:
 - dotnet
-ms.openlocfilehash: 5388ed3f55d97f3282a710ac59fe36cfb32fa49c
-ms.sourcegitcommit: 86adcc06e35390f13c1e372c36d2e044f1fc31ef
+ms.openlocfilehash: 6e9481364a70257f6c1711692daf5c81eee9fd88
+ms.sourcegitcommit: 2042de78fcdceebb6b8ac4b7a292b93e8782cbf5
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/26/2018
+ms.lasthandoff: 04/27/2018
 ---
 # <a name="using-a-custom-expression-editor"></a>使用自訂運算式編輯器
 可以實作自訂運算式編輯器，以提供更豐富、更簡單的運算式編輯體驗。 在一些案例中，您可能會想要使用自訂運算式編輯器：  
   
--   為 IntelliSense 和重新裝載的工作流程設計工具中其他豐富的編輯功能提供支援。 由於預設的 [!INCLUDE[vsprvs](../../../includes/vsprvs-md.md)] 運算式編輯器無法在重新裝載的應用程式中使用，因此必須提供這項功能。  
+-   為 IntelliSense 和重新裝載的工作流程設計工具中其他豐富的編輯功能提供支援。 必須提供這項功能，因為無法在重新裝載的應用程式中使用預設 Visual Studio 的運算式編輯器。  
   
 -   若要簡化的運算式編輯體驗，商務分析師的使用者，讓它們比方說，不需要了解 Visual Basic 或 Visual Basic 運算式處理。  
   

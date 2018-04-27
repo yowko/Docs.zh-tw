@@ -21,18 +21,18 @@ ms.assetid: a31fbd95-9ace-4c3d-bbb1-51222a2272b2
 caps.latest.revision: 39
 author: dotnet-bot
 ms.author: dotnetcontent
-ms.openlocfilehash: 9863286a8eda2559ab678c77a81cc7d6063c3e3d
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.openlocfilehash: 90eb33bdbc01afc983869c919f9d7b2feab44037
+ms.sourcegitcommit: 2042de78fcdceebb6b8ac4b7a292b93e8782cbf5
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 04/27/2018
 ---
 # <a name="namespace-statement"></a>Namespace 陳述式
 宣告命名空間的名稱，並遵循編譯該命名空間中宣告的原始程式碼。  
   
 ## <a name="syntax"></a>語法  
   
-```  
+```vb  
 Namespace [Global.] { name | name.name }  
     [ componenttypes ]  
 End Namespace  
@@ -40,13 +40,13 @@ End Namespace
   
 ## <a name="parts"></a>組件  
  Global  
- 選擇項。 可讓您定義超出您的專案的根命名空間的命名空間。 請參閱[Visual Basic 中的命名空間](../../../visual-basic/programming-guide/program-structure/namespaces.md)。  
+ 選擇性。 可讓您定義超出您的專案的根命名空間的命名空間。 請參閱[Visual Basic 中的命名空間](../../../visual-basic/programming-guide/program-structure/namespaces.md)。  
   
  `name`  
- 必要項。 唯一名稱識別命名空間。 必須是有效的 Visual Basic 識別項。 如需詳細資訊，請參閱[宣告項目名稱](../../../visual-basic/programming-guide/language-features/declared-elements/declared-element-names.md)。  
+ 必要。 唯一名稱識別命名空間。 必須是有效的 Visual Basic 識別項。 如需詳細資訊，請參閱[宣告項目名稱](../../../visual-basic/programming-guide/language-features/declared-elements/declared-element-names.md)。  
   
  `componenttypes`  
- 選擇項。 命名空間所組成的項目。 這些包括但不限於列舉、 結構、 介面、 類別、 模組、 委派，以及其他命名空間。  
+ 選擇性。 命名空間所組成的項目。 這些包括但不限於列舉、 結構、 介面、 類別、 模組、 委派，以及其他命名空間。  
   
  `End Namespace`  
  終止`Namespace`區塊。  

@@ -16,11 +16,11 @@ ms.assetid: 3b77b7e3-8b17-40de-b4e1-05e4b9b325ad
 caps.latest.revision: 8
 author: dotnet-bot
 ms.author: dotnetcontent
-ms.openlocfilehash: 298faf593dc15d6ede5fbb4238599373f3a49a82
-ms.sourcegitcommit: 86adcc06e35390f13c1e372c36d2e044f1fc31ef
+ms.openlocfilehash: b02f4bb120b4072facc913fb9b83dcf498208cbe
+ms.sourcegitcommit: 2042de78fcdceebb6b8ac4b7a292b93e8782cbf5
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/26/2018
+ms.lasthandoff: 04/27/2018
 ---
 # <a name="unable-to-write-temporary-file-because-temporary-path-is-not-available"></a>無法寫入暫存檔，因為無法使用暫存路徑
 Visual Basic 無法判斷儲存暫存檔的路徑。  
@@ -29,9 +29,9 @@ Visual Basic 無法判斷儲存暫存檔的路徑。
   
 ## <a name="to-correct-this-error"></a>更正這個錯誤  
   
-1.  重新啟動 [!INCLUDE[vsprvs](~/includes/vsprvs-md.md)]。  
+1.  重新啟動 Visual Studio。  
   
-2.  如果問題持續發生，請重新安裝 [!INCLUDE[vsprvs](~/includes/vsprvs-md.md)]。  
+2.  如果此問題持續發生，請重新安裝 Visual Studio。  
   
 ## <a name="see-also"></a>另請參閱  
  [告訴我們](/visualstudio/ide/talk-to-us)

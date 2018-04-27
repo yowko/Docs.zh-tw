@@ -16,11 +16,11 @@ ms.author: dotnetcontent
 manager: wpickett
 ms.workload:
 - dotnet
-ms.openlocfilehash: d40b59faa4d0f50e59daaa71da6127da367f008b
-ms.sourcegitcommit: 86adcc06e35390f13c1e372c36d2e044f1fc31ef
+ms.openlocfilehash: b8b3e3006072855673c37786ffb763fcd610e40c
+ms.sourcegitcommit: 2042de78fcdceebb6b8ac4b7a292b93e8782cbf5
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/26/2018
+ms.lasthandoff: 04/27/2018
 ---
 # <a name="building-the-windows-communication-foundation-samples"></a>建置 Windows Communication Foundation 範例
 [!INCLUDE[indigo1](../../../../includes/indigo1-md.md)]範例可以使用 Visual Studio 2010 或建置**msbuild**從命令列命令。 本主題將同時說明這兩個程序。  
@@ -39,9 +39,9 @@ ms.lasthandoff: 04/26/2018
   
 ### <a name="to-build-the-sample-using-visual-studio"></a>若要使用 Visual Studio 建置範例  
   
-1.  如果您是使用 [!INCLUDE[wv](../../../../includes/wv-md.md)]、[!INCLUDE[lserver](../../../../includes/lserver-md.md)]、Windows 7 或 Windows Server 2008 R2，而且正在執行 [!INCLUDE[vs_current_long](../../../../includes/vs-current-long-md.md)]，則必須使用更高的權限來執行 [!INCLUDE[vsprvs](../../../../includes/vsprvs-md.md)]。 若要這樣做，請以滑鼠右鍵按一下 開始 功能表上的圖示，然後按一下 **系統管理員身分執行**。  
+1.  如果您使用[!INCLUDE[wv](../../../../includes/wv-md.md)]， [!INCLUDE[lserver](../../../../includes/lserver-md.md)]，Windows 7 或 Windows Server 2008 R2，且在執行[!INCLUDE[vs_current_long](../../../../includes/vs-current-long-md.md)]，您必須使用更高權限執行 Visual Studio。 若要這樣做，請以滑鼠右鍵按一下 開始 功能表上的圖示，然後按一下 **系統管理員身分執行**。  
   
-2.  從**檔案**功能表在 Visual Studio 中，按一下**開啟**，然後按一下 **專案/方案**。 請巡覽至您安裝此範例的目錄之下語言特定的子目錄，然後按兩下 .sln 檔案圖示以在 [!INCLUDE[vsprvs](../../../../includes/vsprvs-md.md)] 中開啟方案。  
+2.  從**檔案**功能表在 Visual Studio 中，按一下**開啟**，然後按一下 **專案/方案**。 瀏覽至安裝範例所在的目錄下的特定語言子目錄，然後按兩下.sln 檔案圖示，以在 Visual Studio 中開啟方案。  
   
 3.  在**建置**功能表上，選取**重建方案**。 用戶端程式檔會建置至 client\bin，服務程式檔則建置至 service\bin。 如果服務是由 IIS 裝載，則服務程式檔也會被複製到 servicemodelsamples 目錄及其 \bin 子目錄中。  
   

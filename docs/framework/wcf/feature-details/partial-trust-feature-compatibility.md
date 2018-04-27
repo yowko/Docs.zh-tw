@@ -16,11 +16,11 @@ ms.author: dotnetcontent
 manager: wpickett
 ms.workload:
 - dotnet
-ms.openlocfilehash: 72282c62ad23ec825eab7054ab1909d07a062b45
-ms.sourcegitcommit: 86adcc06e35390f13c1e372c36d2e044f1fc31ef
+ms.openlocfilehash: 20cb6c1cd7a3b06b57bce02d5c3caacc7e2e42b7
+ms.sourcegitcommit: 2042de78fcdceebb6b8ac4b7a292b93e8782cbf5
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/26/2018
+ms.lasthandoff: 04/27/2018
 ---
 # <a name="partial-trust-feature-compatibility"></a>部分信任功能相容性
 當[!INCLUDE[indigo1](../../../../includes/indigo1-md.md)] 在部分信任的環境中執行時，僅支援有限的功能子集。 部分信任環境所支援的功能，主要是用在如 [Supported Deployment Scenarios](../../../../docs/framework/wcf/feature-details/supported-deployment-scenarios.md) 主題所述的特定案例中。  
@@ -154,7 +154,7 @@ ms.lasthandoff: 04/26/2018
 >  為了避免在追蹤檔中大量出現重複錯誤， [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] 會在第一次安全性失敗之後停用資源或動作的追蹤。 第一次嘗試存取資源或執行動作時，會針對每個失敗的資源存取產生一個例外狀況追蹤。  
   
 ## <a name="wcf-service-host"></a>WCF 服務主機  
- [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] 服務主機不支援部分信任。 如果您想要在部分信任情況下使用 [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] 服務，請勿使用 [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] 中的 [!INCLUDE[vsprvs](../../../../includes/vsprvs-md.md)] 服務程式庫專案範本來建置服務。 反之，請選擇 [!INCLUDE[vsprvs](../../../../includes/vsprvs-md.md)] 服務網站範本在 [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] 中建立新的網站，如此可在支援 [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] 部分信任的 Web 伺服器裝載服務。  
+ [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] 服務主機不支援部分信任。 如果您想要使用[!INCLUDE[indigo2](../../../../includes/indigo2-md.md)]服務在部分信任中，請勿使用[!INCLUDE[indigo2](../../../../includes/indigo2-md.md)]服務程式庫專案範本在 Visual Studio 中建置您的服務。 相反地，在選擇的 Visual Studio 中建立新的網站[!INCLUDE[indigo2](../../../../includes/indigo2-md.md)]服務網站範本，其可裝載在所在的網頁伺服器服務[!INCLUDE[indigo2](../../../../includes/indigo2-md.md)]支援部分信任。  
   
 ## <a name="other-limitations"></a>其他限制  
  [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] 一般來說會受到裝載應用程式加諸其上的安全性考量限制。 例如，如果 [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] 是裝載於 XAML 瀏覽器應用程式 (XBAP)，則會受限於各種 XBAP 限制，如 [Windows Presentation Foundation Partial Trust Security](http://go.microsoft.com/fwlink/?LinkId=89138)(Windows Presentation Foundation 部分信任安全性) 一文中所述。  

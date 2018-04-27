@@ -12,11 +12,11 @@ ms.assetid: f2230f53-a745-4731-89e6-033943faa209
 caps.latest.revision: 9
 author: dotnet-bot
 ms.author: dotnetcontent
-ms.openlocfilehash: 2a9562acf05cd27eed7bc1ad963845af9a7ca5f9
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.openlocfilehash: 9d73c7111c3d89cadcad317c9a67e5f483da7125
+ms.sourcegitcommit: 2042de78fcdceebb6b8ac4b7a292b93e8782cbf5
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 04/27/2018
 ---
 # <a name="deploying-applications-that-reference-power-packs-controls-visual-studio"></a>部署參考 Power Packs 控制項 (Visual Studio) 的應用程式
 如果您想要部署參考 Power Packs 控制項的應用程式 (<xref:Microsoft.VisualBasic.PowerPacks.LineShape>， <xref:Microsoft.VisualBasic.PowerPacks.OvalShape>， <xref:Microsoft.VisualBasic.PowerPacks.RectangleShape>，或<xref:Microsoft.VisualBasic.PowerPacks.DataRepeater>)，必須在目的地電腦上安裝的控制項。  
@@ -24,7 +24,7 @@ ms.lasthandoff: 11/21/2017
 ## <a name="installing-the-power-packs-controls-as-a-prerequisite"></a>安裝 Power Packs 控制項的必要元件  
  若要順利部署應用程式，您也必須部署應用程式參考的所有元件。 安裝必要條件元件的程序稱為 *「啟動載入」*(Bootstrapping)。  
   
- 當[!INCLUDE[vsprvs](~/includes/vsprvs-md.md)]安裝開發電腦上，啟動載入器套件加入至 Power Pack[!INCLUDE[vsprvs](~/includes/vsprvs-md.md)]啟動載入器目錄。 接著，當您遵循程序加入 [!INCLUDE[ndptecclick](~/includes/ndptecclick-md.md)] 或 Windows Installer 部署的必要條件時，就可以使用這個套件。  
+ 在開發電腦上安裝 Visual Studio 時，Power Pack 啟動載入器套件加入到 Visual Studio 啟動載入器目錄。 接著，當您遵循程序加入 [!INCLUDE[ndptecclick](~/includes/ndptecclick-md.md)] 或 Windows Installer 部署的必要條件時，就可以使用這個套件。  
   
  預設會從安裝套件所在的相同位置來部署啟動載入的元件。 或者，您也可以視需要選擇從使用者可下載元件的 URL 或檔案共用位置來部署元件。  
   
@@ -35,6 +35,6 @@ ms.lasthandoff: 11/21/2017
   
  啟動載入或者，您可以使用電子軟體發佈系統，例如 Microsoft Systems Management Server 預先部署 Power Packs 控制項。  
   
-## <a name="see-also"></a>請參閱  
+## <a name="see-also"></a>另請參閱  
  [如何：使用 ClickOnce 應用程式安裝必要條件](/visualstudio/deployment/how-to-install-prerequisites-with-a-clickonce-application)  
  [Visual Basic Power Packs 控制項](../../../visual-basic/developing-apps/windows-forms/power-packs-controls.md)

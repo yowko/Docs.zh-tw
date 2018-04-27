@@ -15,11 +15,11 @@ ms.assetid: 3ffd1bdf-1b8d-47f5-87eb-75b659f64294
 caps.latest.revision: 14
 author: dotnet-bot
 ms.author: dotnetcontent
-ms.openlocfilehash: f3f9d7fb51198041356cfc68d49cc703dfdf78b5
-ms.sourcegitcommit: 86adcc06e35390f13c1e372c36d2e044f1fc31ef
+ms.openlocfilehash: a2c418855cd2e79c31301705706ff1b98f119a97
+ms.sourcegitcommit: 2042de78fcdceebb6b8ac4b7a292b93e8782cbf5
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/26/2018
+ms.lasthandoff: 04/27/2018
 ---
 # <a name="com-interop-visual-basic"></a>COM Interop (Visual Basic)
 元件物件模型 (COM) 可讓物件向其他元件公開其功能以及主控應用程式。 大部分的現今軟體都會包括 COM 物件。 雖然 .NET 組件是新應用程式的最佳選擇，但您有時可能需要採用 COM 物件。 本節涵蓋一些建立和使用 Visual Basic 中使用 COM 物件相關聯的問題。  
@@ -32,7 +32,7 @@ ms.lasthandoff: 04/26/2018
  涵蓋如何將參考新增至具有型別程式庫的 COM 物件。  
   
  [操作說明：使用 ActiveX 控制項](../../../visual-basic/programming-guide/com-interop/how-to-work-with-activex-controls.md)  
- 示範如何使用現有 ActiveX 控制項來新增 [!INCLUDE[vsprvs](~/includes/vsprvs-md.md)] 工具箱的功能。  
+ 示範如何使用現有的 ActiveX 控制項，將功能加入 Visual Studio 工具箱。  
   
  [逐步解說：呼叫 Windows API](../../../visual-basic/programming-guide/com-interop/walkthrough-calling-windows-apis.md)  
  逐步解說如何呼叫屬於 Windows 作業系統之 API 的程序。  

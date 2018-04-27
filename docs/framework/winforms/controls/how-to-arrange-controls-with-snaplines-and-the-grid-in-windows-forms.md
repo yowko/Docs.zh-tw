@@ -1,13 +1,13 @@
 ---
-title: "如何：使用 Windows Form 中的對齊線和格線排列控制項"
-ms.custom: 
+title: 如何：使用 Windows Form 中的對齊線和格線排列控制項
+ms.custom: ''
 ms.date: 03/30/2017
 ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
+ms.reviewer: ''
+ms.suite: ''
 ms.technology:
 - dotnet-winforms
-ms.tgt_pltfrm: 
+ms.tgt_pltfrm: ''
 ms.topic: article
 f1_keywords:
 - GridSize
@@ -16,20 +16,20 @@ helpviewer_keywords:
 - Windows Forms, grid options in designer
 - controls [Windows Forms], aligning
 ms.assetid: bb54bce5-880f-4a36-af68-8cf92058dc1c
-caps.latest.revision: 
+caps.latest.revision: 10
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
 ms.workload:
 - dotnet
-ms.openlocfilehash: 166ccba959bd9facb8e24d580d47577a0c8746a8
-ms.sourcegitcommit: c0dd436f6f8f44dc80dc43b07f6841a00b74b23f
+ms.openlocfilehash: 3f7467abe6669b88e1a55851fd745c2dcb56c150
+ms.sourcegitcommit: 2042de78fcdceebb6b8ac4b7a292b93e8782cbf5
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 01/19/2018
+ms.lasthandoff: 04/27/2018
 ---
 # <a name="how-to-arrange-controls-with-snaplines-and-the-grid-in-windows-forms"></a>如何：使用 Windows Form 中的對齊線和格線排列控制項
-使用的版面配置功能[!INCLUDE[vsprvs](../../../../includes/vsprvs-md.md)]，您可以精確地控制項在表單上放置的位置。 控制項加入表單，或移到表單上自動對齊的資料列和資料行的 Windows Form 設計工具方格中，或您可以使用對齊線功能對齊控制項。  
+使用 Visual Studio 的版面配置功能，您可以精確地指出控制項在表單上放置的位置。 控制項加入表單，或移到表單上自動對齊的資料列和資料行的 Windows Form 設計工具方格中，或您可以使用對齊線功能對齊控制項。  
   
 > [!NOTE]
 >  根據您目前使用的設定或版本，您所看到的對話方塊與功能表命令可能會與 [說明] 中描述的不同。 若要變更設定，請從 [ **工具** ] 功能表中選取 [ **匯入和匯出設定** ]。 如需詳細資訊，請參閱 [在 Visual Studio 中自訂開發設定](http://msdn.microsoft.com/library/22c4debb-4e31-47a8-8f19-16f328d7dcd3)  
@@ -48,7 +48,7 @@ ms.lasthandoff: 01/19/2018
   
      如需詳細資訊，請參閱[逐步解說： 在 Windows Form 使用對齊線排列的控制項](../../../../docs/framework/winforms/controls/walkthrough-arranging-controls-on-windows-forms-using-snaplines.md)。 您現在可以使用對齊線對齊及排列表單上的控制項。  
   
-## <a name="see-also"></a>請參閱  
+## <a name="see-also"></a>另請參閱  
  [選項對話方塊、 Windows Form 設計工具，一般](http://msdn.microsoft.com/library/8dd170af-72f0-4212-b04b-034ceee92834)  
  [逐步解說：使用對齊線排列 Windows Forms 上的控制項](../../../../docs/framework/winforms/controls/walkthrough-arranging-controls-on-windows-forms-using-snaplines.md)  
  [Windows Forms 控制項](../../../../docs/framework/winforms/controls/index.md)  

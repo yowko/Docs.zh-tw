@@ -1,13 +1,13 @@
 ---
-title: "附加屬性概觀"
-ms.custom: 
+title: 附加屬性概觀
+ms.custom: ''
 ms.date: 03/30/2017
 ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
+ms.reviewer: ''
+ms.suite: ''
 ms.technology:
 - dotnet-wpf
-ms.tgt_pltfrm: 
+ms.tgt_pltfrm: ''
 ms.topic: article
 dev_langs:
 - csharp
@@ -15,17 +15,17 @@ dev_langs:
 helpviewer_keywords:
 - attached properties [WPF Designer]
 ms.assetid: 75928354-dc01-47e8-a018-8409aec1f32d
-caps.latest.revision: 
+caps.latest.revision: 28
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
 ms.workload:
 - dotnet
-ms.openlocfilehash: 2d1d0eb55e75cd450d55b69aadca9c60e157eb09
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.openlocfilehash: ceba94d80ca66ab228804ffff2a5b8f89a68d7c4
+ms.sourcegitcommit: 2042de78fcdceebb6b8ac4b7a292b93e8782cbf5
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 04/27/2018
 ---
 # <a name="attached-properties-overview"></a>附加屬性概觀
 附加屬性是透過 XAML 所定義的概觀。 附加屬性是要用作可在任何物件上設定的全域屬性類型。 在 [!INCLUDE[TLA#tla_winclient](../../../../includes/tlasharptla-winclient-md.md)] 中，附加屬性一般會定義為沒有傳統屬性「包裝函式」的特殊形式相依性屬性。  
@@ -67,7 +67,7 @@ ms.lasthandoff: 12/22/2017
 ### <a name="an-example-of-a-parent-defined-attached-property"></a>父代已定義的附加屬性範例  
  [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] 定義附加屬性的最常見情節是父項目支援子項目集合，同時實作會個別報告每個子項目之行為細節的行為。  
   
- <xref:System.Windows.Controls.DockPanel>定義<xref:System.Windows.Controls.DockPanel.Dock%2A?displayProperty=nameWithType>附加屬性，以及<xref:System.Windows.Controls.DockPanel>具有類別層級程式碼做為其呈現邏輯的一部分 (具體而言，<xref:System.Windows.Controls.DockPanel.MeasureOverride%2A>和<xref:System.Windows.Controls.DockPanel.ArrangeOverride%2A>)。 A<xref:System.Windows.Controls.DockPanel>執行個體一律會檢查以查看是否任一其直屬子系項目已設定的值<xref:System.Windows.Controls.DockPanel.Dock%2A?displayProperty=nameWithType>。 如果是這樣，這些值會變成套用至該特定子項目之轉譯邏輯的輸入。 巢狀<xref:System.Windows.Controls.DockPanel>每一個執行個體都將視為自己的當前子系項目集合，但該行為是依實作方式<xref:System.Windows.Controls.DockPanel>處理程序<xref:System.Windows.Controls.DockPanel.Dock%2A?displayProperty=nameWithType>值。 理論上，可能會有附加屬性影響直屬父代以外的項目。 如果<xref:System.Windows.Controls.DockPanel.Dock%2A?displayProperty=nameWithType>之中未包含任何項目上設定附加的屬性<xref:System.Windows.Controls.DockPanel>採取它、 任何錯誤或例外狀況的父項目，就會引發。 這只是表示已設定全域屬性值，但它有沒有目前<xref:System.Windows.Controls.DockPanel>無法使用該資訊的父代。  
+ <xref:System.Windows.Controls.DockPanel> 定義<xref:System.Windows.Controls.DockPanel.Dock%2A?displayProperty=nameWithType>附加屬性，以及<xref:System.Windows.Controls.DockPanel>具有類別層級程式碼做為其呈現邏輯的一部分 (具體而言，<xref:System.Windows.Controls.DockPanel.MeasureOverride%2A>和<xref:System.Windows.Controls.DockPanel.ArrangeOverride%2A>)。 A<xref:System.Windows.Controls.DockPanel>執行個體一律會檢查以查看是否任一其直屬子系項目已設定的值<xref:System.Windows.Controls.DockPanel.Dock%2A?displayProperty=nameWithType>。 如果是這樣，這些值會變成套用至該特定子項目之轉譯邏輯的輸入。 巢狀<xref:System.Windows.Controls.DockPanel>每一個執行個體都將視為自己的當前子系項目集合，但該行為是依實作方式<xref:System.Windows.Controls.DockPanel>處理程序<xref:System.Windows.Controls.DockPanel.Dock%2A?displayProperty=nameWithType>值。 理論上，可能會有附加屬性影響直屬父代以外的項目。 如果<xref:System.Windows.Controls.DockPanel.Dock%2A?displayProperty=nameWithType>之中未包含任何項目上設定附加的屬性<xref:System.Windows.Controls.DockPanel>採取它、 任何錯誤或例外狀況的父項目，就會引發。 這只是表示已設定全域屬性值，但它有沒有目前<xref:System.Windows.Controls.DockPanel>無法使用該資訊的父代。  
   
 <a name="attached_properties_code"></a>   
 ## <a name="attached-properties-in-code"></a>程式碼中的附加屬性  
@@ -106,7 +106,7 @@ ms.lasthandoff: 12/22/2017
  您附加的屬性定義為相依性屬性，藉由宣告`public` `static` `readonly`欄位型別的<xref:System.Windows.DependencyProperty>。 您使用的傳回值來定義此欄位<xref:System.Windows.DependencyProperty.RegisterAttached%2A>方法。 欄位名稱必須符合附加 `Property` 字串的附加屬性名稱，以遵循命名識別欄位與其所代表屬性的已建立 [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] 模式。 附加屬性提供者也必須提供靜態 `Get`<屬性名稱> 和 `Set`<屬性名稱> 方法作為附加屬性的存取子；無法這麼做會導致屬性系統無法使用您的附加屬性。  
   
 > [!NOTE]
->  如果您省略附加屬性的 get 存取子，則屬性的資料繫結無法在設計工具中運作，例如 [!INCLUDE[vsprvs](../../../../includes/vsprvs-md.md)] 和 Expression Blend。  
+>  如果您省略附加的屬性 get 存取子，屬性的資料繫結將不適用於設計工具，例如 Visual Studio 和 Expression Blend。  
   
 #### <a name="the-get-accessor"></a>Get 存取子  
  `Get`<屬性名稱> 存取子的簽章必須是︰  
@@ -151,7 +151,7 @@ ms.lasthandoff: 12/22/2017
   
 -   您也可以將屬性註冊為附加屬性和相依性屬性，但仍公開「包裝函式」實作。 在此情況下，可以在該項目上設定屬性，或透過 XAML 附加屬性語法的任何項目上設定屬性。 舉例來說，具有適當的案例來設定標準和附加使用方式的屬性是<xref:System.Windows.FrameworkElement.FlowDirection%2A?displayProperty=nameWithType>。  
   
-## <a name="see-also"></a>請參閱  
+## <a name="see-also"></a>另請參閱  
  <xref:System.Windows.DependencyProperty>  
  [相依性屬性概觀](../../../../docs/framework/wpf/advanced/dependency-properties-overview.md)  
  [自訂相依性屬性](../../../../docs/framework/wpf/advanced/custom-dependency-properties.md)  

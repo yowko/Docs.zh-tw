@@ -889,11 +889,11 @@ ms.assetid: 48320e4a-6e17-45a6-9966-88c6ec89bd2f
 caps.latest.revision: 15
 author: BillWagner
 ms.author: wiwagn
-ms.openlocfilehash: 4aeea86778b44cbe8e71ed64ee5a3a3a1618cccd
-ms.sourcegitcommit: 86adcc06e35390f13c1e372c36d2e044f1fc31ef
+ms.openlocfilehash: c6cabc4c619e6ace4c376fd125e7531f10bf9b88
+ms.sourcegitcommit: 2042de78fcdceebb6b8ac4b7a292b93e8782cbf5
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/26/2018
+ms.lasthandoff: 04/27/2018
 ---
 # <a name="sorry-we-don39t-have-specifics-on-this-c-error"></a>很抱歉，我們不&#39;t 這個 C# 錯誤的詳細資訊
 很抱歉，我們沒有任何有關此錯誤的特定資訊。 您可以搜尋錯誤號碼與訊息文字，以在網路上尋找資訊。 或者，您可以詢問其他開發人員使用其中一個論壇：  
@@ -902,7 +902,7 @@ ms.lasthandoff: 04/26/2018
  如需有關的問題和 Visual C# 語言語法和編譯器的一般討論區中提供的論壇。  
   
  [Visual C# IDE](https://social.msdn.microsoft.com/Forums/en-US/home?forum=csharpide)  
- 提供關於如何在 [!INCLUDE[vsprvs](~/includes/vsprvs-md.md)] 環境中工作之問題的論壇。  
+ 提供有關如何在 Visual Studio 環境中運作的問題的論壇。  
   
  [Visual C# 一般討論區](https://social.msdn.microsoft.com/Forums/vstudio/en-US/home?forum=csharpgeneral)  
  提供有關問題的論壇，並會發出 Visual C# 不討論其他論壇中。  
@@ -914,6 +914,6 @@ ms.lasthandoff: 04/26/2018
  [Visual C# 程式設計人員的其他資源](../../csharp/getting-started/additional-resources.md)  
   
 ## <a name="see-also"></a>另請參閱  
- [C# 程式設計手冊](../../csharp/programming-guide/index.md)  
+ [C# 程式設計指南](../../csharp/programming-guide/index.md)  
  [C# 參考](../../csharp/language-reference/index.md)  
  [告訴我們](/visualstudio/ide/talk-to-us)  

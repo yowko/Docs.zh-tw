@@ -1,23 +1,24 @@
 ---
-title: "外部 Ruleset 工具組"
-ms.custom: 
+title: 外部 Ruleset 工具組
+ms.custom: ''
 ms.date: 03/30/2017
 ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.tgt_pltfrm: 
+ms.reviewer: ''
+ms.suite: ''
+ms.tgt_pltfrm: ''
 ms.topic: article
 ms.assetid: a306d283-a031-475e-aa01-9ae86e7adcb0
-caps.latest.revision: "7"
+caps.latest.revision: 7
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.workload: dotnet
-ms.openlocfilehash: 7fbac6bf8be169aca8ad61c69b8d024f44928d8b
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.workload:
+- dotnet
+ms.openlocfilehash: 40e28bb2b17e511a1b8953ccc8ff9bdf4f0f7392
+ms.sourcegitcommit: 2042de78fcdceebb6b8ac4b7a292b93e8782cbf5
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 04/27/2018
 ---
 # <a name="external-ruleset-toolkit"></a>外部 Ruleset 工具組
 通常在工作流程應用程式內使用規則時，這些規則算是組件的一部分。 在某些案例中，您可能會想要將 RuleSet 與組件分開維護，讓它們不需要重新建置及部署工作流程組件便可加以更新。 這個範例可讓您用資料庫來管理及編輯 RuleSet，並可從執行階段的工作流程中存取這些 RuleSet。 這樣可讓執行中的工作流程執行個體自動納入 RuleSet 變更。  
@@ -67,9 +68,9 @@ ms.lasthandoff: 12/22/2017
   
  圖 3：RuleSet 編輯器  
   
- 這等於重新裝載屬於 Windows Workflow Foundation [!INCLUDE[vsprvs](../../../../includes/vsprvs-md.md)] 增益集之一部分的編輯器對話方塊。 它會提供相同的功能，包括 Intellisense 支援。 編寫對目標型別 （例如工作流程中） 與工具，在規則集相關聯的規則當您按一下**瀏覽**在主要工具對話方塊中，**工作流程/類型選取器**對話方塊隨即出現，如圖 4 所示。  
+ 這是重新裝載屬於 Windows Workflow Foundation 的 Visual Studio 增益集編輯器對話方塊。 它會提供相同的功能，包括 Intellisense 支援。 編寫對目標型別 （例如工作流程中） 與工具，在規則集相關聯的規則當您按一下**瀏覽**在主要工具對話方塊中，**工作流程/類型選取器**對話方塊隨即出現，如圖 4 所示。  
   
- ![工作流程 &#47;輸入選取範圍](../../../../docs/framework/windows-workflow-foundation/samples/media/71f08d57-e8f2-499e-8151-ece2cbdcabfd.gif "71f08d57-e8f2-499e-8151-ece2cbdcabfd")  
+ ![工作流程&#47;輸入選取範圍](../../../../docs/framework/windows-workflow-foundation/samples/media/71f08d57-e8f2-499e-8151-ece2cbdcabfd.gif "71f08d57-e8f2-499e-8151-ece2cbdcabfd")  
   
  圖 4：工作流程/類型選取器  
   
@@ -83,7 +84,7 @@ ms.lasthandoff: 12/22/2017
   
  圖 5：驗證錯誤  
   
- 從**資料**功能表在工具中，您可以匯入及匯出 Ruleset。 當您按一下**匯入**，檔案選擇器對話方塊隨即出現，您可以從中選取.rules 檔案。 這個檔案不一定是您最初在 [!INCLUDE[vsprvs](../../../../includes/vsprvs-md.md)] 中建立的檔案。 此 .rules 檔案應該會包含已序列化的 `RuleDefinitions` 執行個體，該執行個體會包含條件的集合和 RuleSet 的集合。 雖然此工具不會使用該條件集合，但是它會使用 `RuleDefinitions` .rules 格式來允許與 [!INCLUDE[vsprvs](../../../../includes/vsprvs-md.md)] 環境的互動。  
+ 從**資料**功能表在工具中，您可以匯入及匯出 Ruleset。 當您按一下**匯入**，檔案選擇器對話方塊隨即出現，您可以從中選取.rules 檔案。 這可能會或可能不是最初在 Visual Studio 中建立檔案。 此 .rules 檔案應該會包含已序列化的 `RuleDefinitions` 執行個體，該執行個體會包含條件的集合和 RuleSet 的集合。 工具不會使用該條件集合，但是它會使用`RuleDefinitions`.rules 格式來允許與 Visual Studio 環境的互動。  
   
  選取.rules 檔案之後， **RuleSet 選取器**對話方塊隨即出現 （請參閱圖 6）。 您可以使用此對話方塊，選擇要匯入之檔案中的 RuleSet (預設值是指定所有 RuleSet)。 在此 .rules 檔案中的 RuleSet 並沒有版本號碼，因為它們在 WF 專案中的版本控制和組件中的版本是相同的。 在匯入過程中，此工具會自動指派下一個可用的主要版本號碼 （其中您可以變更匯入之後）;您可以看到在指派的版本號碼**RuleSet 選取器**清單。  
   
@@ -141,7 +142,7 @@ ms.lasthandoff: 12/22/2017
   
 9. 應用程式組態檔會新增至工作流程專案，以指定要由服務使用的資料庫的連線字串。 這個連線字串應該就是 RuleSet 工具所使用的連線字串，它會指向包含該 RuleSet 資料表的資料庫。  
   
-10. 現在，您可以用處理其他任何工作流程主控台應用程式的方式來執行 `RuleSetToolkitUsageSample` 專案。 在 [!INCLUDE[vsprvs](../../../../includes/vsprvs-md.md)] 中按 F5 或 Ctrl+F5，或直接執行 RuleSetToolkitUsageSample.exe 檔案。  
+10. 現在，您可以用處理其他任何工作流程主控台應用程式的方式來執行 `RuleSetToolkitUsageSample` 專案。 按 F5 或 Ctrl + F5，在 Visual Studio 中，或直接執行 RuleSetToolkitUsageSample.exe 檔案。  
   
     > [!NOTE]
     >  您必須先關閉 RuleSet 工具才可重新編譯此使用範例，因為工具會載入此使用範例組件。

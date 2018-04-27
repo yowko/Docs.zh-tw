@@ -1,24 +1,26 @@
 ---
-title: "XMLSerializer 範例"
-ms.custom: 
+title: XMLSerializer 範例
+ms.custom: ''
 ms.date: 03/30/2017
 ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.technology: dotnet-clr
-ms.tgt_pltfrm: 
+ms.reviewer: ''
+ms.suite: ''
+ms.technology:
+- dotnet-clr
+ms.tgt_pltfrm: ''
 ms.topic: article
 ms.assetid: 7d134453-9a35-4202-ba77-9ca3a65babc3
-caps.latest.revision: "23"
+caps.latest.revision: 23
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.workload: dotnet
-ms.openlocfilehash: c89194eebbfe4f25b8d8120be16a18306a92a889
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.workload:
+- dotnet
+ms.openlocfilehash: af051dffa93aea6586adaea1e49081ddc357a210
+ms.sourcegitcommit: 2042de78fcdceebb6b8ac4b7a292b93e8782cbf5
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 04/27/2018
 ---
 # <a name="xmlserializer-sample"></a>XMLSerializer 範例
 這個範例會示範如何序列化和還原序列化與 <xref:System.Xml.Serialization.XmlSerializer> 相容的型別。 預設的 [!INCLUDE[indigo1](../../../../includes/indigo1-md.md)] 格式器為 <xref:System.Runtime.Serialization.DataContractSerializer> 類別。 當無法使用 <xref:System.Xml.Serialization.XmlSerializer> 類別時，<xref:System.Runtime.Serialization.DataContractSerializer> 類別可以用來序列化與還原序列化型別。 這時通常需要精確控制 XML，例如，當資料片段必須是 XML 屬性而且不是 XML 項目的情況下。 當建立非 <xref:System.Xml.Serialization.XmlSerializer> 服務的用戶端時，通常也會自動選取 [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)]。  
@@ -30,7 +32,7 @@ ms.lasthandoff: 12/22/2017
   
  <xref:System.ServiceModel.ServiceContractAttribute> 和 <xref:System.ServiceModel.XmlSerializerFormatAttribute> 必須套用至介面，如下列範例程式碼所示。  
   
-```  
+```csharp  
 [ServiceContract(Namespace="http://Microsoft.ServiceModel.Samples"), XmlSerializerFormat]  
 public interface IXmlSerializerCalculator  
 {  
@@ -47,7 +49,7 @@ public interface IXmlSerializerCalculator
   
  `ComplexNumber` 類別的 Public 成員會由 <xref:System.Xml.Serialization.XmlSerializer> 序列化成 XML 屬性。 <xref:System.Runtime.Serialization.DataContractSerializer> 無法用來建立這類 XML 執行個體。  
   
-```  
+```csharp  
 public class ComplexNumber  
 {  
     private double real;  
@@ -83,7 +85,7 @@ public class ComplexNumber
   
  服務實作會計算並傳回適當的結果，即接受並傳回 `ComplexNumber` 型別的值。  
   
-```  
+```csharp  
 public class XmlSerializerCalculatorService : IXmlSerializerCalculator  
 {  
     public ComplexNumber Add(ComplexNumber n1, ComplexNumber n2)  
@@ -97,7 +99,7 @@ public class XmlSerializerCalculatorService : IXmlSerializerCalculator
   
  用戶端實作也會使用複數。 服務合約和資料類型由產生 generatedClient.cs 原始程式檔中定義[ServiceModel Metadata Utility Tool (Svcutil.exe)](../../../../docs/framework/wcf/servicemodel-metadata-utility-tool-svcutil-exe.md)取自服務中繼資料。 在這個範例中，Svcutil.exe 能夠偵測合約何時無法由 <xref:System.Runtime.Serialization.DataContractSerializer> 序列化，而還原成發出 `XmlSerializable` 型別。 如果要強制使用 <xref:System.Xml.Serialization.XmlSerializer>，您可以將 /serializer:XmlSerializer (使用 XmlSerializer) 命令選項傳遞至 Svcutil.exe 工具。  
   
-```  
+```csharp  
 // Create a client.  
 XmlSerializerCalculatorClient client = new  
                          XmlSerializerCalculatorClient();  
@@ -145,4 +147,4 @@ Press <ENTER> to terminate client.
 >   
 >  `<InstallDrive>:\WF_WCF_Samples\WCF\Basic\Client\Interop\XmlSerializer`  
   
-## <a name="see-also"></a>請參閱
+## <a name="see-also"></a>另請參閱

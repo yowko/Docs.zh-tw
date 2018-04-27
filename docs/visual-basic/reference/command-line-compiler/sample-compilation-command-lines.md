@@ -16,14 +16,14 @@ helpviewer_keywords:
 ms.assetid: 5bfbb487-5f47-4267-969a-39dfb917beeb
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: cf20e2916efd2eb10065be22c319e34ddb2bda9a
-ms.sourcegitcommit: c883637b41ee028786edceece4fa872939d2e64c
+ms.openlocfilehash: b61ef6facf33fa043cad28a78405a19308a9864f
+ms.sourcegitcommit: 2042de78fcdceebb6b8ac4b7a292b93e8782cbf5
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 03/23/2018
+ms.lasthandoff: 04/27/2018
 ---
 # <a name="sample-compilation-command-lines-visual-basic"></a>編譯命令列範例 (Visual Basic)
-編譯 Visual Basic 程式中的替代方法為[!INCLUDE[vsprvs](~/includes/vsprvs-md.md)]，您可以從命令列，以產生可執行檔 (.exe) 或動態連結程式庫 (.dll) 檔案進行編譯。  
+Visual Basic 中編譯程式從 Visual Studio 或者，您可以編譯從命令列，以產生可執行檔 (.exe) 或動態連結程式庫 (.dll) 檔案。  
   
  Visual Basic 命令列編譯器支援一組完整的選項來控制輸入和輸出檔案、 組件，以及偵錯和前置處理器選項。 每個選項可互換的兩種形式：`-option`和`/option`。 這份文件只會顯示`-option`表單。  
   

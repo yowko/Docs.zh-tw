@@ -12,11 +12,11 @@ ms.assetid: df6e7c50-5f3e-4381-98ed-ba5c3e9fe228
 caps.latest.revision: 21
 author: dotnet-bot
 ms.author: dotnetcontent
-ms.openlocfilehash: 26cb885187cff31a085e34c60c820fe7c0bdc787
-ms.sourcegitcommit: 86adcc06e35390f13c1e372c36d2e044f1fc31ef
+ms.openlocfilehash: 15d71f039223b464a3b5affb9ba7b37886b93200
+ms.sourcegitcommit: 2042de78fcdceebb6b8ac4b7a292b93e8782cbf5
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/26/2018
+ms.lasthandoff: 04/27/2018
 ---
 # <a name="reference-visual-basic"></a>參考 (Visual Basic)
 本節提供 Visual Basic 程式設計各種層面相關參考資訊的連結。  
@@ -43,10 +43,10 @@ ms.lasthandoff: 04/26/2018
   
 ## <a name="related-sections"></a>相關章節  
  [一般使用者介面項目 (Visual Studio)](/visualstudio/ide/reference/general-user-interface-elements-visual-studio)  
- 包含 [!INCLUDE[vsprvs](~/includes/vsprvs-md.md)] 中使用的對話方塊和視窗的主題。  
+ 包含對話方塊和視窗使用 Visual Studio 中的主題。  
   
  [Visual Studio 中的 XML 工具](/visualstudio/xml-tools/xml-tools-in-visual-studio)  
- 提供 [!INCLUDE[vsprvs](~/includes/vsprvs-md.md)] 中可用的各種 XML 工具的相關主題連結。  
+ 提供 Visual Studio 中可用的各種 XML 工具的主題連結。  
   
  [Automation 與擴充性參考](http://msdn.microsoft.com/library/93112562-db21-4188-9383-ed19ad79bddf)  
- 提供涵蓋 [!INCLUDE[vsprvs](~/includes/vsprvs-md.md)] 中共用及語言特定元件的自動化和擴充性主題連結。
+ 提供包含自動化與在 Visual Studio 中，共用和特定語言元件的擴充性主題的連結。

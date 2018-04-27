@@ -1,12 +1,13 @@
 ---
-title: "逐步解說： 建立主從式表單使用兩個 Windows Form DataGridView 控制項"
-ms.custom: 
+title: 逐步解說： 建立主從式表單使用兩個 Windows Form DataGridView 控制項
+ms.custom: ''
 ms.date: 03/30/2017
 ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.technology: dotnet-winforms
-ms.tgt_pltfrm: 
+ms.reviewer: ''
+ms.suite: ''
+ms.technology:
+- dotnet-winforms
+ms.tgt_pltfrm: ''
 ms.topic: article
 dev_langs:
 - csharp
@@ -17,16 +18,17 @@ helpviewer_keywords:
 - master-details lists [Windows Forms], displaying on Windows Forms
 - walkthroughs [Windows Forms], DataGridView control
 ms.assetid: c5fa29e8-47f7-4691-829b-0e697a691f36
-caps.latest.revision: "19"
+caps.latest.revision: 19
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.workload: dotnet
-ms.openlocfilehash: af6f1bcb172543b372cbca52f54b675b6baf87d2
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.workload:
+- dotnet
+ms.openlocfilehash: e5c3dfc547fe775b38ad4c2e658755268f791502
+ms.sourcegitcommit: 2042de78fcdceebb6b8ac4b7a292b93e8782cbf5
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 04/27/2018
 ---
 # <a name="walkthrough-creating-a-masterdetail-form-using-two-windows-forms-datagridview-controls"></a>逐步解說：使用兩個 Windows Form DataGridView 控制項建立主要/詳細表單
 其中一個最常見的案例使用<xref:System.Windows.Forms.DataGridView>控制項是*主從式*表單，其中會顯示兩個資料庫資料表之間的父子式關聯性。 主要資料表中選取資料列會讓使用對應的子資料來更新詳細資料資料表。  
@@ -44,7 +46,7 @@ ms.lasthandoff: 12/22/2017
   
 #### <a name="to-create-a-masterdetail-form"></a>若要建立主要/詳細表單  
   
-1.  建立衍生自類別<xref:System.Windows.Forms.Form>和包含兩個<xref:System.Windows.Forms.DataGridView>控制項及兩個<xref:System.Windows.Forms.BindingSource>元件。 下列程式碼提供基本的形式初始化，而且包含`Main`方法。 如果您使用[!INCLUDE[vsprvs](../../../../includes/vsprvs-md.md)]設計工具來建立表單，您可以使用設計工具產生的程式碼，而不是這個程式碼，但一定要使用變數宣告中所顯示的名稱。  
+1.  建立衍生自類別<xref:System.Windows.Forms.Form>和包含兩個<xref:System.Windows.Forms.DataGridView>控制項及兩個<xref:System.Windows.Forms.BindingSource>元件。 下列程式碼提供基本的形式初始化，而且包含`Main`方法。 如果您使用 Visual Studio 設計工具來建立表單時，您可以使用設計工具產生的程式碼，而不是這個程式碼，但請務必使用變數宣告中所顯示的名稱。  
   
      [!code-csharp[System.Windows.Forms.DataGridViewMasterDetails#01](../../../../samples/snippets/csharp/VS_Snippets_Winforms/System.Windows.Forms.DataGridViewMasterDetails/CS/masterdetails.cs#01)]
      [!code-vb[System.Windows.Forms.DataGridViewMasterDetails#01](../../../../samples/snippets/visualbasic/VS_Snippets_Winforms/System.Windows.Forms.DataGridViewMasterDetails/VB/masterdetails.vb#01)]  
@@ -86,7 +88,7 @@ ms.lasthandoff: 12/22/2017
   
 -   自訂儲存格的外觀。 如需詳細資訊，請參閱[How to： 自訂 Windows Form DataGridView 控制項中的儲存格外觀](../../../../docs/framework/winforms/controls/customize-the-appearance-of-cells-in-the-datagrid.md)和[How to： 設定預設儲存格樣式的 Windows Form DataGridView 控制項](../../../../docs/framework/winforms/controls/how-to-set-default-cell-styles-for-the-windows-forms-datagridview-control.md)。  
   
-## <a name="see-also"></a>請參閱  
+## <a name="see-also"></a>另請參閱  
  <xref:System.Windows.Forms.DataGridView>  
  <xref:System.Windows.Forms.BindingSource>  
  [在 Windows Forms DataGridView 控制項中顯示資料](../../../../docs/framework/winforms/controls/displaying-data-in-the-windows-forms-datagridview-control.md)  

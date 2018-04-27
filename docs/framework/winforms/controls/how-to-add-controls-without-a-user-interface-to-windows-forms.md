@@ -1,13 +1,13 @@
 ---
-title: "如何：將沒有使用者介面的控制項加入至 Windows Form"
-ms.custom: 
+title: 如何：將沒有使用者介面的控制項加入至 Windows Form
+ms.custom: ''
 ms.date: 03/30/2017
 ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
+ms.reviewer: ''
+ms.suite: ''
 ms.technology:
 - dotnet-winforms
-ms.tgt_pltfrm: 
+ms.tgt_pltfrm: ''
 ms.topic: article
 dev_langs:
 - csharp
@@ -22,17 +22,17 @@ helpviewer_keywords:
 - Windows Forms controls, nonvisual
 - nonvisual controls [Windows Forms]
 ms.assetid: 52134d9c-cff6-4eed-8e2b-3d5eb3bd494e
-caps.latest.revision: 
+caps.latest.revision: 12
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
 ms.workload:
 - dotnet
-ms.openlocfilehash: 3abbf931cff9ad459e8c9221f91430ecccefa9cc
-ms.sourcegitcommit: c0dd436f6f8f44dc80dc43b07f6841a00b74b23f
+ms.openlocfilehash: e900c1c34f69531a14cfa11803ef5a6afb4783c6
+ms.sourcegitcommit: 2042de78fcdceebb6b8ac4b7a292b93e8782cbf5
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 01/19/2018
+ms.lasthandoff: 04/27/2018
 ---
 # <a name="how-to-add-controls-without-a-user-interface-to-windows-forms"></a>如何：將沒有使用者介面的控制項加入至 Windows Form
 隱藏式控制項 （或元件） 提供您的應用程式的功能。 不像其他控制項，並不提供給使用者的使用者介面元件，並因此不需要在 Windows Form 設計工具介面上顯示。 當元件加入至表單時，Windows Form 設計工具會顯示可調整大小的紙匣底端的表單顯示所有元件的位置。 一旦已將控制項加入至元件匣中，您可以選取的元件，並設定其屬性，就像處理任何其他控制項在表單上。  
@@ -48,7 +48,7 @@ ms.lasthandoff: 01/19/2018
   
      您的元件會出現在元件匣中。  
   
- 此外，元件可以在執行階段加入至表單。 這會是常見的案例中，尤其是因為元件沒有視覺化的運算式，不像具有使用者介面的控制項。 在下列範例中，<xref:System.Windows.Forms.Timer>在執行階段加入元件。 (請注意，[!INCLUDE[vsprvs](../../../../includes/vsprvs-md.md)]包含的不同計時器的數字; 在此情況下，使用 Windows Form<xref:System.Windows.Forms.Timer>元件。 如需中的不同計時器[!INCLUDE[vsprvs](../../../../includes/vsprvs-md.md)]，請參閱[伺服器為基礎的計時器簡介](http://msdn.microsoft.com/library/adc0bc0a-a519-4812-bafc-fb9d1a5801fc)。)  
+ 此外，元件可以在執行階段加入至表單。 這會是常見的案例中，尤其是因為元件沒有視覺化的運算式，不像具有使用者介面的控制項。 在下列範例中，<xref:System.Windows.Forms.Timer>在執行階段加入元件。 (請注意，Visual Studio 包含的不同計時器的數字; 在此情況下，使用 Windows Form<xref:System.Windows.Forms.Timer>元件。 如需 Visual Studio 中的不同計時器的詳細資訊，請參閱[伺服器為基礎的計時器簡介](http://msdn.microsoft.com/library/adc0bc0a-a519-4812-bafc-fb9d1a5801fc)。)  
   
 > [!CAUTION]
 >  元件通常具有必須設定元件，有效地運作的控制項特定屬性。 如果是<xref:System.Windows.Forms.Timer>元件下方，設定`Interval`屬性。 請記得，將元件加入至您的專案，確定您設定必要的屬性，該元件時。  
@@ -92,7 +92,7 @@ ms.lasthandoff: 01/19/2018
     > [!IMPORTANT]
     >  藉由參考惡意的使用者控制項，您可能會公開本機電腦透過網路的安全性風險。 這只會考量使用者惡意破壞性的自訂控制項，且您不小心將其加入您專案的建立。  
   
-## <a name="see-also"></a>請參閱  
+## <a name="see-also"></a>另請參閱  
  [Windows Forms 控制項](../../../../docs/framework/winforms/controls/index.md)  
  [操作說明：將控制項新增至 Windows Forms](../../../../docs/framework/winforms/controls/how-to-add-controls-to-windows-forms.md)  
  [操作說明：將 ActiveX 控制項新增至 Windows Forms](../../../../docs/framework/winforms/controls/how-to-add-activex-controls-to-windows-forms.md)  

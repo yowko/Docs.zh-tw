@@ -1,13 +1,13 @@
 ---
-title: "DataGrid 控制項概觀 (Windows Form)"
-ms.custom: 
+title: DataGrid 控制項概觀 (Windows Form)
+ms.custom: ''
 ms.date: 03/30/2017
 ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
+ms.reviewer: ''
+ms.suite: ''
 ms.technology:
 - dotnet-winforms
-ms.tgt_pltfrm: 
+ms.tgt_pltfrm: ''
 ms.topic: article
 f1_keywords:
 - DataGrid
@@ -28,17 +28,17 @@ helpviewer_keywords:
 - parent table navigation in DataGrid
 - child tables [Windows Forms], dataGrid control
 ms.assetid: 85604bce-bc03-49d9-9030-dda8896c44b1
-caps.latest.revision: 
+caps.latest.revision: 22
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
 ms.workload:
 - dotnet
-ms.openlocfilehash: 10220efc0bb77ddcc7f0f9fa0e3f2793a032a1bd
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.openlocfilehash: fd74ed0e31fff211f0197ad27f297f9fbecf5cab
+ms.sourcegitcommit: 2042de78fcdceebb6b8ac4b7a292b93e8782cbf5
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 04/27/2018
 ---
 # <a name="datagrid-control-overview-windows-forms"></a>DataGrid 控制項概觀 (Windows Form)
 > [!NOTE]
@@ -103,7 +103,7 @@ ms.lasthandoff: 12/22/2017
 |多個相關的資料表。|格線可以顯示用來選取資料表的樹狀檢視，或者您可以指定格線顯示父資料表。 父資料表中的記錄可讓使用者巡覽至相關的子資料列。|  
   
 > [!NOTE]
->  資料集中的資料表會使用 <xref:System.Data.DataRelation> 來建立關聯。  另請參閱 [HYPERLINK "http://msdn.microsoft.com/library/dbwcse3d(v=vs.110)" 資料集中的關聯性](http://msdn.microsoft.com/library/dbwcse3d\(v=vs.110\))或[資料集中的關聯性](http://msdn.microsoft.com/library/dbwcse3d\(v=vs.120\))。  
+>  資料集中的資料表會使用 <xref:System.Data.DataRelation> 來建立關聯。  另請參閱[超連結"http://msdn.microsoft.com/library/dbwcse3d(v=vs.110)」 中的資料集的關聯性](http://msdn.microsoft.com/library/dbwcse3d\(v=vs.110\))或[集中的關聯性](http://msdn.microsoft.com/library/dbwcse3d\(v=vs.120\))。  
   
  當 <xref:System.Windows.Forms.DataGrid> 控制項顯示資料表，且 <xref:System.Windows.Forms.DataGrid.AllowSorting%2A> 屬性設為 `true` 時，按一下資料行標頭，即可重新排序資料。 使用者也可以加入資料列以及編輯儲存格。  
   
@@ -137,7 +137,7 @@ ms.lasthandoff: 12/22/2017
   
  資料行樣式與資料集中的資料行相關，就像資料表樣式與資料表相關。 就像每個資料表一次只能有一個為其定義的資料表樣式，因此，在特定資料表樣式中，每個資料行也只能有一個為其定義的資料行樣式。 此關聯性定義在資料行的 <xref:System.Windows.Forms.DataGridColumnStyle.MappingName%2A> 屬性中。  
   
- 如果您已經建立資料表樣式，但未加入資料行樣式，在執行階段建立表單和格線時，[!INCLUDE[vsprvs](../../../../includes/vsprvs-md.md)] 將會加入預設資料行樣式。 不過，如果您已經建立資料表樣式，並加入任何資料行樣式，[!INCLUDE[vsprvs](../../../../includes/vsprvs-md.md)] 將不會建立任何資料行樣式。 此外，您也需要定義資料行樣式，並為它們指派對應名稱，使您想要資料行出現在格線中。  
+ 如果您已經建立資料表樣式沒有資料行樣式加入至它，Visual Studio 會將預設資料行樣式，在執行階段建立表單和資料格時。 不過，如果您有建立資料表樣式，並加入任何資料行樣式，Visual Studio 不會建立任何資料行樣式。 此外，您也需要定義資料行樣式，並為它們指派對應名稱，使您想要資料行出現在格線中。  
   
  因為您藉由指派資料行樣式給資料行，指定將哪些資料行內含在資料格中，但沒有任何資料行樣式已指派給資料行，所以您包含資料集中未顯示在格線內的資料行。 不過，因為資料行內含在資料集中，所以您可以用程式設計方式來編輯未顯示的資料。  
   
@@ -152,7 +152,7 @@ ms.lasthandoff: 12/22/2017
 ## <a name="events"></a>事件  
  除了 <xref:System.Windows.Forms.Control.MouseDown>、<xref:System.Windows.Forms.Control.Enter> 和 <xref:System.Windows.Forms.DataGrid.Scroll> 之類的一般控制項事件，<xref:System.Windows.Forms.DataGrid> 控制項還可支援在格線內編輯和巡覽的相關聯事件。 <xref:System.Windows.Forms.DataGrid.CurrentCell%2A> 屬性會決定選取哪一個儲存格。 當使用者巡覽至新的儲存格時，會引發 <xref:System.Windows.Forms.DataGrid.CurrentCellChanged> 事件。 當使用者透過父/子關聯性，巡覽至新的資料表時，會引發 <xref:System.Windows.Forms.DataGrid.Navigate> 事件。 如果使用者在檢視子資料表時按一下上一頁按鈕，會引發 <xref:System.Windows.Forms.DataGrid.BackButtonClick> 事件，按一下顯示/隱藏父資料列圖示時，會引發 <xref:System.Windows.Forms.DataGrid.ShowParentDetailsButtonClick> 事件。  
   
-## <a name="see-also"></a>請參閱  
+## <a name="see-also"></a>另請參閱  
  [DataGrid 控制項](../../../../docs/framework/winforms/controls/datagrid-control-windows-forms.md)  
  [操作說明：將 Windows Forms DataGrid 控制項繫結至資料來源](../../../../docs/framework/winforms/controls/how-to-bind-the-windows-forms-datagrid-control-to-a-data-source.md)  
  [操作說明：將資料表和資料行新增至 Windows Forms DataGrid 控制項](../../../../docs/framework/winforms/controls/how-to-add-tables-and-columns-to-the-windows-forms-datagrid-control.md)  

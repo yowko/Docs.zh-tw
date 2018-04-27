@@ -13,17 +13,17 @@ ms.assetid: 0b919d30-7fd6-42db-85c8-543d15312441
 caps.latest.revision: 20
 author: dotnet-bot
 ms.author: dotnetcontent
-ms.openlocfilehash: aaa7fbd679eceea53a673646173dc14dc4f209bc
-ms.sourcegitcommit: 86adcc06e35390f13c1e372c36d2e044f1fc31ef
+ms.openlocfilehash: 230229203029740b82e706fe2aa7ff8ee06c486a
+ms.sourcegitcommit: 2042de78fcdceebb6b8ac4b7a292b93e8782cbf5
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/26/2018
+ms.lasthandoff: 04/27/2018
 ---
 # <a name="windows-forms-application-basics-visual-basic"></a>Windows Forms 應用程式基本概念 (Visual Basic)
 Visual Basic 中很重要的一部分是能夠建立本機使用者的電腦執行的 Windows Form 應用程式。 您可以使用 Visual Studio 來建立使用 Windows Form 應用程式和使用者介面。 在 Windows Forms 應用程式中的類別上建立<xref:System.Windows.Forms>命名空間。  
   
 ## <a name="designing-windows-forms-applications"></a>設計 Windows Forms 應用程式  
- 您可以建立 Windows Form 和 Windows 服務應用程式與[!INCLUDE[vsprvs](~/includes/vsprvs-md.md)]。 如需詳細資訊，請參閱下列主題：  
+ 您可以使用 Visual Studio 建立 Windows Form 和 Windows 服務應用程式。 如需詳細資訊，請參閱下列主題：  
   
 -   [開始使用 Windows Form](../../../framework/winforms/getting-started-with-windows-forms.md)。 如何建立和撰寫 Windows Form 提供相關資訊。  
    
@@ -32,7 +32,7 @@ Visual Basic 中很重要的一部分是能夠建立本機使用者的電腦執�
 -   [Windows 服務應用程式](../../../framework/windows-services/index.md)。 列出各主題，說明如何建立 Windows 服務。  
   
 ## <a name="building-rich-interactive-user-interfaces"></a>建置豐富、互動式的使用者介面  
- Windows Form 是的智慧型用戶端元件[!INCLUDE[dnprdnshort](~/includes/dnprdnshort-md.md)]，一組 managed 程式庫可讓一般的應用程式工作，例如讀取和寫入至檔案系統。 使用類似的開發環境[!INCLUDE[vsprvs](~/includes/vsprvs-md.md)]，您可以與遠端電腦透過網路來建立 Windows Forms 應用程式的顯示資訊、 要求使用者，輸入，並進行通訊。  
+ Windows Form 是的智慧型用戶端元件[!INCLUDE[dnprdnshort](~/includes/dnprdnshort-md.md)]，一組 managed 程式庫可讓一般的應用程式工作，例如讀取和寫入至檔案系統。 使用類似 Visual Studio 開發環境，您可以建立 Windows Forms 應用程式的顯示資訊、 要求使用者，輸入，並進行通訊與遠端電腦透過網路。  
   
  在 Windows Form 表單是一種視覺化介面，在上面顯示的資訊給使用者。 通常，您會建立 Windows Forms 應用程式會放置在表單上的控制項，以及開發對使用者動作，例如滑鼠點選或是按下按鍵的回應。 「控制項」是獨立的使用者介面 (UI) 項目，可顯示資料或接受資料輸入。  
   
@@ -44,7 +44,7 @@ Visual Basic 中很重要的一部分是能夠建立本機使用者的電腦執�
   
  Windows Form 有豐富的 UI 控制項，可以模擬高階應用程式 (例如 Microsoft Office) 中的功能。 使用<xref:System.Windows.Forms.ToolStrip>和<xref:System.Windows.Forms.MenuStrip>控制項，您可以建立包含文字和影像、 顯示子功能表，以及裝載其他控制項，例如文字方塊和下拉式方塊的工具列和功能表。  
   
- 與[!INCLUDE[vsprvs](~/includes/vsprvs-md.md)]拖放表單設計工具中，您可以輕鬆建立 Windows Forms 應用程式： 只選取您的游標控制項，並將它們放要在表單上。 在設計工具提供工具，例如格線和 「 對齊線 」 來讓您輕鬆對齊控制項。 及您是否使用[!INCLUDE[vsprvs](~/includes/vsprvs-md.md)]編譯或在命令列中，您可以使用<xref:System.Windows.Forms.FlowLayoutPanel>，<xref:System.Windows.Forms.TableLayoutPanel>和<xref:System.Windows.Forms.SplitContainer>控制項來建立進階表單配置用最少的時間和精力。  
+ 使用 Visual Studio 拖放表單設計工具中，您可以輕鬆地建立 Windows Forms 應用程式： 只選取您的游標控制項，並將它們放要在表單上。 在設計工具提供工具，例如格線和 「 對齊線 」 來讓您輕鬆對齊控制項。 當您使用 Visual Studio，或在命令列進行編譯，您可以使用<xref:System.Windows.Forms.FlowLayoutPanel>，<xref:System.Windows.Forms.TableLayoutPanel>和<xref:System.Windows.Forms.SplitContainer>控制項來建立進階表單配置用最少的時間和精力。  
   
 ### <a name="custom-ui-elements"></a>自訂 UI 項目  
  最後，如果您必須建立您自己自訂的 UI 項目，<xref:System.Drawing>命名空間包含所有您需要呈現線條、 圓形和其他圖形，直接在表單上的類別。  
@@ -53,7 +53,7 @@ Visual Basic 中很重要的一部分是能夠建立本機使用者的電腦執�
   
 |以|請參閱|  
 |--------|---------|  
-|建立新的 Windows Form 應用程式使用 [!INCLUDE[vsprvs](~/includes/vsprvs-md.md)]|[逐步解說： 建立簡單的 Windows Form](http://msdn.microsoft.com/library/2d9daec0-0543-41d0-acb1-964f685bddbb)|  
+|使用 Visual Studio 中建立新的 Windows Form 應用程式|[逐步解說： 建立簡單的 Windows Form](http://msdn.microsoft.com/library/2d9daec0-0543-41d0-acb1-964f685bddbb)|  
 |使用表單上的控制項|[操作說明：將控制項新增至 Windows Forms](../../../framework/winforms/controls/how-to-add-controls-to-windows-forms.md)|   
 |建立與圖形 <xref:System.Drawing>|[圖形程式設計入門](../../../framework/winforms/advanced/getting-started-with-graphics-programming.md)|  
 |建立自訂控制項|[操作說明：繼承自 UserControl 類別](../../../framework/winforms/controls/how-to-inherit-from-the-usercontrol-class.md)|  
@@ -67,7 +67,7 @@ Visual Basic 中很重要的一部分是能夠建立本機使用者的電腦執�
  您可以建立資料繫結控制項輕鬆地使用資料來源視窗中，會顯示專案資料來源，例如資料庫、 Web 服務和物件。 將項目從這個視窗拖曳到專案中的表單上，即可建立資料繫結控制項。 您也可以將物件從 [資料來源] 視窗拖曳至現有的控制項，以將現有的控制項繫結至資料。  
   
 ### <a name="settings"></a>設定  
- 您可以管理在 Windows Form 資料繫結的另一種是設定。 大部分的智慧型用戶端應用程式必須保留其執行階段狀態，例如表單的最後已知大小的一些資訊，並保留使用者喜好設定的資料，例如儲存檔案的預設位置。 應用程式設定功能藉由提供簡單的方法來儲存用戶端電腦上設定這兩種因應這些需求。 定義一次使用[!INCLUDE[vsprvs](~/includes/vsprvs-md.md)]或程式碼編輯器中，這些設定會保存為 XML，並且在執行階段自動讀回記憶體。  
+ 您可以管理在 Windows Form 資料繫結的另一種是設定。 大部分的智慧型用戶端應用程式必須保留其執行階段狀態，例如表單的最後已知大小的一些資訊，並保留使用者喜好設定的資料，例如儲存檔案的預設位置。 應用程式設定功能藉由提供簡單的方法來儲存用戶端電腦上設定這兩種因應這些需求。 一旦定義使用 Visual Studio 或程式碼編輯器中，這些設定會保存為 XML，並且在執行階段自動讀回記憶體。  
   
  如需使用這些功能的逐步解說資訊，請參閱下列說明主題。  
   
@@ -78,7 +78,7 @@ Visual Basic 中很重要的一部分是能夠建立本機使用者的電腦執�
 |使用 資料來源視窗|[逐步解說：顯示 Windows Form 上的資料](/visualstudio/data-tools/accessing-data-in-visual-studio)|  
   
 ## <a name="deploying-applications-to-client-computers"></a>將應用程式部署到用戶端電腦  
- 一旦您撰寫您的應用程式，您必須傳送給您的使用者，讓它們可以安裝並執行它自己的用戶端電腦上。 使用[!INCLUDE[ndptecclick](~/includes/ndptecclick-md.md)]技術，您可以部署應用程式內[!INCLUDE[vsprvs](~/includes/vsprvs-md.md)]藉由使用按幾下滑鼠，和使用者提供指向您在網站上的應用程式的 URL。 [!INCLUDE[ndptecclick](~/includes/ndptecclick-md.md)] 管理的所有項目和您的應用程式中的相依性，並確保應用程式已正確安裝用戶端電腦上。  
+ 一旦您撰寫您的應用程式，您必須傳送給您的使用者，讓它們可以安裝並執行它自己的用戶端電腦上。 使用[!INCLUDE[ndptecclick](~/includes/ndptecclick-md.md)]技術，您可以使用按幾下滑鼠來部署您從 Visual Studio 中的應用程式並為使用者提供指向您在網站上的應用程式的 URL。 [!INCLUDE[ndptecclick](~/includes/ndptecclick-md.md)] 管理的所有項目和您的應用程式中的相依性，並確保應用程式已正確安裝用戶端電腦上。  
   
  [!INCLUDE[ndptecclick](~/includes/ndptecclick-md.md)] 應用程式可以設定為只在使用者連線到網路時執行，或是線上和離線時都可執行。 當您指定應用程式應該支援離線作業時，[!INCLUDE[ndptecclick](~/includes/ndptecclick-md.md)]將連結加入至您的應用程式在使用者的**啟動**功能表上，以便使用者可以開啟它而不使用的 URL。  
   

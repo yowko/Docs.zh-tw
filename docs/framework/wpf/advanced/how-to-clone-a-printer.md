@@ -1,12 +1,13 @@
 ---
-title: "如何：複製印表機"
-ms.custom: 
+title: 如何：複製印表機
+ms.custom: ''
 ms.date: 03/30/2017
 ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.technology: dotnet-wpf
-ms.tgt_pltfrm: 
+ms.reviewer: ''
+ms.suite: ''
+ms.technology:
+- dotnet-wpf
+ms.tgt_pltfrm: ''
 ms.topic: article
 dev_langs:
 - csharp
@@ -18,19 +19,20 @@ helpviewer_keywords:
 - print queues [WPF], cloning
 - cloning print queues [WPF]
 ms.assetid: dd6997c9-fe04-40f8-88a6-92e3ac0889eb
-caps.latest.revision: "8"
+caps.latest.revision: 8
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.workload: dotnet
-ms.openlocfilehash: 43a08faf27186bde85dd12f027034f759378debf
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.workload:
+- dotnet
+ms.openlocfilehash: 9ffb9f5ab8e7b768d888f5f2800fae668e47bfc3
+ms.sourcegitcommit: 2042de78fcdceebb6b8ac4b7a292b93e8782cbf5
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 04/27/2018
 ---
 # <a name="how-to-clone-a-printer"></a>如何：複製印表機
-大部分的企業，在某個時間點，購買多台印表機的相同模型。 一般而言，這些所有在安裝有幾乎相同的組態設定。 安裝每一部印表機可能會很費時而且容易產生錯誤。 <xref:System.Printing.IndexedProperties?displayProperty=nameWithType>命名空間和<xref:System.Printing.PrintServer.InstallPrintQueue%2A>都會以公開的類別[!INCLUDE[TLA#tla_avalonwinfx](../../../../includes/tlasharptla-avalonwinfx-md.md)]讓您能夠立即安裝任何數目的其他列印佇列，就會遭到複製，從現有的列印佇列。  
+大部分的企業，在某個時間點，購買多台印表機的相同模型。 一般而言，這些所有在安裝有幾乎相同的組態設定。 安裝每一部印表機可能會很費時而且容易產生錯誤。 <xref:System.Printing.IndexedProperties?displayProperty=nameWithType>命名空間和<xref:System.Printing.PrintServer.InstallPrintQueue%2A>都會以 Microsoft.NET Framework 公開的類別會讓您能夠立即安裝任何數目的其他列印佇列，就會遭到複製，從現有的列印佇列。  
   
 ## <a name="example"></a>範例  
  在下列範例中，第二個列印佇列會複製從現有的列印佇列。 第二個後者只能在其名稱、 位置、 連接埠，以及共用的狀態。 執行此作業的主要步驟如下所示。  
@@ -66,7 +68,7 @@ ms.lasthandoff: 12/22/2017
  [!code-csharp[ClonePrinter#ClonePrinter](../../../../samples/snippets/csharp/VS_Snippets_Wpf/ClonePrinter/CSharp/Program.cs#cloneprinter)]
  [!code-vb[ClonePrinter#ClonePrinter](../../../../samples/snippets/visualbasic/VS_Snippets_Wpf/ClonePrinter/visualbasic/program.vb#cloneprinter)]  
   
-## <a name="see-also"></a>請參閱  
+## <a name="see-also"></a>另請參閱  
  <xref:System.Printing.IndexedProperties>  
  <xref:System.Printing.IndexedProperties.PrintPropertyDictionary>  
  <xref:System.Printing.LocalPrintServer>  

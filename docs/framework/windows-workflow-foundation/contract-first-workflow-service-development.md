@@ -1,26 +1,27 @@
 ---
-title: "合約優先工作流程服務開發"
-ms.custom: 
+title: 合約優先工作流程服務開發
+ms.custom: ''
 ms.date: 03/30/2017
 ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.tgt_pltfrm: 
+ms.reviewer: ''
+ms.suite: ''
+ms.tgt_pltfrm: ''
 ms.topic: article
 ms.assetid: e5dbaa7b-005f-4330-848d-58ac4f42f093
-caps.latest.revision: "2"
+caps.latest.revision: 2
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.workload: dotnet
-ms.openlocfilehash: bdafa52219dc7a275ceb64e24e8ecd91f0ec8068
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.workload:
+- dotnet
+ms.openlocfilehash: 4bc0c8fafd80651114d85d2d6b06c57dec6199b5
+ms.sourcegitcommit: 2042de78fcdceebb6b8ac4b7a292b93e8782cbf5
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 04/27/2018
 ---
 # <a name="contract-first-workflow-service-development"></a>合約優先工作流程服務開發
-從 [!INCLUDE[net_v45](../../../includes/net-v45-md.md)] 開始，[!INCLUDE[wf](../../../includes/wf-md.md)] 即採用合約優先工作流程開發形式，在 Web 服務與工作流程之間提供更好的整合。 合約優先工作流程開發工具可讓您在 Code First 中設計合約。 此工具會自動在合約中的作業工具箱內產生活動範本。 本主題提供工作流程服務概觀，說明如何將工作流程服務中的活動和屬性 (property) 對應至服務合約的屬性 (attribute)。 建立合約優先工作流程服務的逐步範例，請參閱[How to： 建立會取用現有服務合約的工作流程服務](../../../docs/framework/windows-workflow-foundation/how-to-create-a-workflow-service-that-consumes-an-existing-service-contract.md)。  
+從開始[!INCLUDE[net_v45](../../../includes/net-v45-md.md)]，Windows Workflow Foundation (WF) 功能更佳的 web 服務與合約優先工作流程開發形式中的工作流程之間的整合。 合約優先工作流程開發工具可讓您在 Code First 中設計合約。 此工具會自動在合約中的作業工具箱內產生活動範本。 本主題提供工作流程服務概觀，說明如何將工作流程服務中的活動和屬性 (property) 對應至服務合約的屬性 (attribute)。 建立合約優先工作流程服務的逐步範例，請參閱[How to： 建立會取用現有服務合約的工作流程服務](../../../docs/framework/windows-workflow-foundation/how-to-create-a-workflow-service-that-consumes-an-existing-service-contract.md)。  
   
 ## <a name="in-this-topic"></a>本主題內容  
   
@@ -42,7 +43,7 @@ ms.lasthandoff: 12/22/2017
   
     -   [產生的設定之傳訊活動](../../../docs/framework/windows-workflow-foundation/contract-first-workflow-service-development.md#ActivityGeneration)  
   
-##  <a name="MappingAttributes"></a>將服務合約屬性對應至工作流程屬性  
+##  <a name="MappingAttributes"></a> 將服務合約屬性對應至工作流程屬性  
  下列各節中的表格會指定不同的 WCF 屬性 (attribute) 和屬性 (property)，以及其如何對應至合約優先工作流程中的傳訊活動和屬性 (property)。  
   
 -   [服務合約屬性](../../../docs/framework/windows-workflow-foundation/contract-first-workflow-service-development.md#ServiceContract)  
@@ -55,7 +56,7 @@ ms.lasthandoff: 12/22/2017
   
 -   [錯誤合約屬性](../../../docs/framework/windows-workflow-foundation/contract-first-workflow-service-development.md#FaultContract)  
   
-###  <a name="ServiceContract"></a>服務合約屬性  
+###  <a name="ServiceContract"></a> 服務合約屬性  
   
 |屬性名稱|支援|描述|WF 驗證|  
 |-------------------|---------------|-----------------|-------------------|  
@@ -70,7 +71,7 @@ ms.lasthandoff: 12/22/2017
   
  在此插入小節主體。  
   
-###  <a name="OperationContract"></a>作業合約屬性  
+###  <a name="OperationContract"></a> 作業合約屬性  
   
 |屬性名稱|支援|描述|WF 驗證|  
 |-------------------|---------------|-----------------|-------------------|  
@@ -85,7 +86,7 @@ ms.lasthandoff: 12/22/2017
 |ReplyAction|是|取得或設定作業之回覆訊息的 SOAP 動作值。|SendReply.Action 應相符。|  
 |TypeId|否|實作在衍生的類別中時，會取得此屬性的唯一識別項。 (繼承自屬性。)|(N/A)|  
   
-###  <a name="MessageContract"></a>訊息合約屬性  
+###  <a name="MessageContract"></a> 訊息合約屬性  
   
 |屬性名稱|支援|描述|WF 驗證|  
 |-------------------|---------------|-----------------|-------------------|  
@@ -96,7 +97,7 @@ ms.lasthandoff: 12/22/2017
 |WrapperName|是|取得或設定訊息本文中包裝函式項目的名稱。|無驗證 (Receive.Content 和 SendReply.Content 必須符合訊息合約類型)。|  
 |WrapperNamespace|否|取得或設定訊息本文包裝函式項目的命名空間。|(N/A)|  
   
-###  <a name="DataContract"></a>資料合約屬性  
+###  <a name="DataContract"></a> 資料合約屬性  
   
 |屬性名稱|支援|描述|WF 驗證|  
 |-------------------|---------------|-----------------|-------------------|  
@@ -105,7 +106,7 @@ ms.lasthandoff: 12/22/2017
 |命名空間|是|取得或設定型別之資料合約的命名空間。|無驗證 (Receive.Content 和 SendReply.Content 必須符合訊息合約類型)。|  
 |TypeId|否|實作在衍生的類別中時，會取得此屬性的唯一識別項。 (繼承自屬性。)|(N/A)|  
   
-###  <a name="FaultContract"></a>錯誤合約屬性  
+###  <a name="FaultContract"></a> 錯誤合約屬性  
   
 |屬性名稱|支援|描述|WF 驗證|  
 |-------------------|---------------|-----------------|-------------------|  
@@ -117,19 +118,19 @@ ms.lasthandoff: 12/22/2017
 |ProtectionLevel|否|指定 SOAP 錯誤從繫結要求的保護層級。|(N/A)|  
 |TypeId|否|實作在衍生的類別中時，會取得此屬性的唯一識別項。 (繼承自屬性。)|(N/A)|  
   
-##  <a name="AdditionalSupport"></a>其他支援和實作資訊  
+##  <a name="AdditionalSupport"></a> 其他支援和實作資訊  
   
 -   [不支援的服務合約功能](../../../docs/framework/windows-workflow-foundation/contract-first-workflow-service-development.md#UnsupportedFeatures)  
   
 -   [產生的設定之傳訊活動](../../../docs/framework/windows-workflow-foundation/contract-first-workflow-service-development.md#ActivityGeneration)  
   
-###  <a name="UnsupportedFeatures"></a>不支援的服務合約功能  
+###  <a name="UnsupportedFeatures"></a> 不支援的服務合約功能  
   
 -   在合約中不支援使用 TPL (工作平行程式庫) 工作。  
   
 -   在服務合約中不支援繼承。  
   
-###  <a name="ActivityGeneration"></a>產生的設定之傳訊活動  
+###  <a name="ActivityGeneration"></a> 產生的設定之傳訊活動  
  已將兩個公用靜態方法加入至 <xref:System.ServiceModel.Activities.Receive> 和 <xref:System.ServiceModel.Activities.SendReply> 活動，以支援在使用合約優先工作流程服務時，產生預先設定的訊息活動。  
   
 -   <xref:System.ServiceModel.Activities.Receive.FromOperationDescription%2A?displayProperty=nameWithType>  

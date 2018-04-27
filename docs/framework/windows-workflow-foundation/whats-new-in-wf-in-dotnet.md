@@ -14,17 +14,17 @@ ms.author: dotnetcontent
 manager: wpickett
 ms.workload:
 - dotnet
-ms.openlocfilehash: b57cf990f9fdf987f4cc414cb42db6cf9fe0da21
-ms.sourcegitcommit: 86adcc06e35390f13c1e372c36d2e044f1fc31ef
+ms.openlocfilehash: 4aa77a0135cea18847c4d4425171b0bdcf447988
+ms.sourcegitcommit: 2042de78fcdceebb6b8ac4b7a292b93e8782cbf5
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/26/2018
+ms.lasthandoff: 04/27/2018
 ---
 # <a name="what39s-new-in-windows-workflow-foundation-in-net-45"></a>什麼&#39;s.NET 4.5 中 Windows Workflow Foundation 的新功能
-[!INCLUDE[wf](../../../includes/wf-md.md)] 中的 [!INCLUDE[net_v45](../../../includes/net-v45-md.md)] 引進許多新功能，如新增活動、設計工具功能和工作流程開發模型。 然而，重新裝載之工作流程設計工具並不支援所有在 [!INCLUDE[net_v45](../../../includes/net-v45-md.md)] 中引進的新工作流程功能。 [!INCLUDE[crabout](../../../includes/crabout-md.md)] 新功能所支援，請參閱[新 Workflow Foundation 4.5 功能，在重新裝載工作流程設計工具中支援](../../../docs/framework/windows-workflow-foundation/wf-features-in-the-rehosted-workflow-designer.md)。 [!INCLUDE[crabout](../../../includes/crabout-md.md)] 移轉.NET 3.0 和.NET 3.5 工作流程應用程式使用最新的版本，請參閱[移轉指引](../../../docs/framework/windows-workflow-foundation/migration-guidance.md)。 本主題提供 [!INCLUDE[net_v45](../../../includes/net-v45-md.md)] 中引進之新工作流程功能的概觀。  
+Windows Workflow Foundation (WF) 中[!INCLUDE[net_v45](../../../includes/net-v45-md.md)]引進許多新功能的詳細資訊，如新增活動、 設計工具功能和工作流程開發模型。 然而，重新裝載之工作流程設計工具並不支援所有在 [!INCLUDE[net_v45](../../../includes/net-v45-md.md)] 中引進的新工作流程功能。 [!INCLUDE[crabout](../../../includes/crabout-md.md)] 新功能所支援，請參閱[新 Workflow Foundation 4.5 功能，在重新裝載工作流程設計工具中支援](../../../docs/framework/windows-workflow-foundation/wf-features-in-the-rehosted-workflow-designer.md)。 [!INCLUDE[crabout](../../../includes/crabout-md.md)] 移轉.NET 3.0 和.NET 3.5 工作流程應用程式使用最新的版本，請參閱[移轉指引](../../../docs/framework/windows-workflow-foundation/migration-guidance.md)。 本主題提供 [!INCLUDE[net_v45](../../../includes/net-v45-md.md)] 中引進之新工作流程功能的概觀。  
   
 > [!WARNING]
->  [!INCLUDE[wf2](../../../includes/wf2-md.md)] 引進的 [!INCLUDE[net_v45](../../../includes/net-v45-md.md)] 新功能並不適用於目標為舊版 Framework 的專案。 如果將目標為 [!INCLUDE[net_v45](../../../includes/net-v45-md.md)] 的專案重設為舊版 Framework，就可能發生若干問題。  
+>  中引進新的 Windows Workflow Foundation 功能[!INCLUDE[net_v45](../../../includes/net-v45-md.md)]不適用於舊版 framework 為目標的專案。 如果將目標為 [!INCLUDE[net_v45](../../../includes/net-v45-md.md)] 的專案重設為舊版 Framework，就可能發生若干問題。  
 >   
 >  -   C# 運算式會在設計工具中取代訊息**XAML 中的值已設定**。  
 > -   會出現許多建置錯誤，包括下列錯誤。  

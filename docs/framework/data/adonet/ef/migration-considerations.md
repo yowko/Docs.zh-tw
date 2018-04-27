@@ -1,24 +1,26 @@
 ---
-title: "移轉考量 (Entity Framework)"
-ms.custom: 
+title: 移轉考量 (Entity Framework)
+ms.custom: ''
 ms.date: 03/30/2017
 ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.technology: dotnet-ado
-ms.tgt_pltfrm: 
+ms.reviewer: ''
+ms.suite: ''
+ms.technology:
+- dotnet-ado
+ms.tgt_pltfrm: ''
 ms.topic: article
 ms.assetid: c85b6fe8-cc32-4642-8f0a-dc0e5a695936
-caps.latest.revision: "6"
+caps.latest.revision: 6
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.workload: dotnet
-ms.openlocfilehash: 8e4c1b06e5a3a7717b99379fd9bca2c5a8a14a6a
-ms.sourcegitcommit: c0dd436f6f8f44dc80dc43b07f6841a00b74b23f
+ms.workload:
+- dotnet
+ms.openlocfilehash: c31d7d481d5016b8f2d440f8a727e5bfcf66717c
+ms.sourcegitcommit: 2042de78fcdceebb6b8ac4b7a292b93e8782cbf5
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 01/19/2018
+ms.lasthandoff: 04/27/2018
 ---
 # <a name="migration-considerations-entity-framework"></a>移轉考量 (Entity Framework)
 [!INCLUDE[vstecado](../../../../../includes/vstecado-md.md)] Entity Framework 可以為現有應用程式提供幾項優勢， 其中一項最重要的優勢，就是使用概念模型將應用程式所使用的資料結構從資料來源中的結構描述分隔。 這樣能方便您以後對儲存體模型或資料來源本身進行變更，而不必對應用程式進行補償變更。 如需優點的使用[!INCLUDE[adonet_ef](../../../../../includes/adonet-ef-md.md)]，請參閱[Entity Framework 概觀](../../../../../docs/framework/data/adonet/ef/overview.md)和[實體資料模型](../../../../../docs/framework/data/adonet/entity-data-model.md)。  
@@ -44,7 +46,7 @@ ms.lasthandoff: 01/19/2018
   
 1.  升級應用程式。  
   
-     所使用的較舊版本建立的專案[!INCLUDE[vsprvs](../../../../../includes/vsprvs-md.md)]和[!INCLUDE[dnprdnshort](../../../../../includes/dnprdnshort-md.md)]必須升級以使用[!INCLUDE[vsOrcas](../../../../../includes/vsorcas-md.md)]SP1 和[!INCLUDE[dnprdnshort](../../../../../includes/dnprdnshort-md.md)]以 3.5 版 SP1 開始。  
+     使用舊版 Visual Studio 建立的專案和[!INCLUDE[dnprdnshort](../../../../../includes/dnprdnshort-md.md)]必須升級以使用[!INCLUDE[vsOrcas](../../../../../includes/vsorcas-md.md)]SP1 和[!INCLUDE[dnprdnshort](../../../../../includes/dnprdnshort-md.md)]以 3.5 版 SP1 開始。  
   
 2.  定義模型與對應  
   
@@ -59,15 +61,15 @@ ms.lasthandoff: 01/19/2018
   
      針對概念模型執行查詢時，[!INCLUDE[adonet_ef](../../../../../includes/adonet-ef-md.md)] 會使用特殊格式化的連接字串。 此連接字串會封裝與模型和對應檔以及資料來源連接有關的資訊。 如需詳細資訊，請參閱[如何： 定義連接字串](../../../../../docs/framework/data/adonet/ef/how-to-define-the-connection-string.md)。  
   
-4.  設定 [!INCLUDE[vsprvs](../../../../../includes/vsprvs-md.md)] 專案。  
+4.  設定 Visual Studio 專案。  
   
-     您必須將 [!INCLUDE[adonet_ef](../../../../../includes/adonet-ef-md.md)] 組件及模型和對應檔的參考加入至 [!INCLUDE[vsprvs](../../../../../includes/vsprvs-md.md)] 專案。 您可以將這些對應檔加入至專案，以確保它們與應用程式一起部署在連接字串中所指示的位置。 如需詳細資訊，請參閱[How to： 手動設定 Entity Framework 專案](http://msdn.microsoft.com/library/73f6ae1d-b3b2-4577-aebd-ad5a75954e9e)。  
+     若要參考[!INCLUDE[adonet_ef](../../../../../includes/adonet-ef-md.md)]組件的模型和對應檔案必須新增至 Visual Studio 專案。 您可以將這些對應檔加入至專案，以確保它們與應用程式一起部署在連接字串中所指示的位置。 如需詳細資訊，請參閱[How to： 手動設定 Entity Framework 專案](http://msdn.microsoft.com/library/73f6ae1d-b3b2-4577-aebd-ad5a75954e9e)。  
   
 ## <a name="considerations-for-applications-with-existing-objects"></a>適用於具有現有物件的應用程式之考量  
  從 [!INCLUDE[dnprdnshort](../../../../../includes/dnprdnshort-md.md)] 4 版開始，[!INCLUDE[adonet_ef](../../../../../includes/adonet-ef-md.md)] 可支援「單純」(plain old) CLR 物件 (POCO)，又稱為非持續性物件。 大部分的情況下，只要稍加變更您現有的物件，它們都能與 [!INCLUDE[adonet_ef](../../../../../includes/adonet-ef-md.md)] 搭配使用。 如需詳細資訊，請參閱[處理 POCO 實體](http://msdn.microsoft.com/library/5e0fb82a-b6d1-41a1-b37b-c12db61629d3)。 您也可以移轉的應用程式[!INCLUDE[adonet_ef](../../../../../includes/adonet-ef-md.md)]並使用 Entity Framework 工具所產生的資料類別。 如需詳細資訊，請參閱[How to： 使用實體資料模型精靈](http://msdn.microsoft.com/library/dadb058a-c5d9-4c5c-8b01-28044112231d)。  
   
 ## <a name="considerations-for-applications-that-use-adonet-providers"></a>適用於使用 ADO.NET 提供者的應用程式之考量  
- [!INCLUDE[vstecado](../../../../../includes/vstecado-md.md)]提供者，如 SqlClient，可讓您查詢要傳回表格式資料的資料來源。 也將資料載入至[!INCLUDE[vstecado](../../../../../includes/vstecado-md.md)]資料集。 下列清單說明適用於升級使用現有 [!INCLUDE[vstecado](../../../../../includes/vstecado-md.md)] 提供者的應用程式之考量：  
+ [!INCLUDE[vstecado](../../../../../includes/vstecado-md.md)] 提供者，如 SqlClient，可讓您查詢要傳回表格式資料的資料來源。 也將資料載入至[!INCLUDE[vstecado](../../../../../includes/vstecado-md.md)]資料集。 下列清單說明適用於升級使用現有 [!INCLUDE[vstecado](../../../../../includes/vstecado-md.md)] 提供者的應用程式之考量：  
   
  使用資料讀取器 (Reader) 顯示表格式資料。  
  您可以考慮執行[!INCLUDE[esql](../../../../../includes/esql-md.md)]查詢使用 EntityClient 提供者，並且列舉整個傳回<xref:System.Data.EntityClient.EntityDataReader>物件。 只有在應用程式使用資料讀取器顯示表格式資料，而且不需要 [!INCLUDE[adonet_ef](../../../../../includes/adonet-ef-md.md)] 提供的功能進行將資料具體化為物件、追蹤變更和處理更新時才這麼做。 您可以繼續使用對資料來源進行更新的現有資料存取程式碼，不過您可以使用從 <xref:System.Data.EntityClient.EntityConnection.StoreConnection%2A> 的 <xref:System.Data.EntityClient.EntityConnection> 屬性存取的現有連接。 如需詳細資訊，請參閱[Entity Framework 的 EntityClient 提供者](../../../../../docs/framework/data/adonet/ef/entityclient-provider-for-the-entity-framework.md)。  
@@ -104,8 +106,8 @@ ms.lasthandoff: 01/19/2018
  如果應用程式需要有查詢 XML 資料的功能，您還是可以使用 LINQ to XML 來善用 LINQ 查詢的優勢。 如需詳細資訊，請參閱[LINQ to XML](http://msdn.microsoft.com/library/f0fe21e9-ee43-4a55-b91a-0800e5782c13)。  
   
  維護狀態的應用程式。  
- [!INCLUDE[vstecasp](../../../../../includes/vstecasp-md.md)]Web 應用程式必須經常維護 Web 網頁或使用者工作階段狀態。 中的物件<xref:System.Data.Objects.ObjectContext>執行個體可以儲存在用戶端檢視狀態或工作階段狀態，在伺服器上，並稍後擷取和重新附加至新的物件內容。 如需詳細資訊，請參閱[附加和卸離物件](http://msdn.microsoft.com/library/41d5c1ef-1b78-4502-aa10-7e1438d62d23)。  
+ [!INCLUDE[vstecasp](../../../../../includes/vstecasp-md.md)] Web 應用程式必須經常維護 Web 網頁或使用者工作階段狀態。 中的物件<xref:System.Data.Objects.ObjectContext>執行個體可以儲存在用戶端檢視狀態或工作階段狀態，在伺服器上，並稍後擷取和重新附加至新的物件內容。 如需詳細資訊，請參閱[附加和卸離物件](http://msdn.microsoft.com/library/41d5c1ef-1b78-4502-aa10-7e1438d62d23)。  
   
-## <a name="see-also"></a>請參閱  
+## <a name="see-also"></a>另請參閱  
  [部署考量](../../../../../docs/framework/data/adonet/ef/deployment-considerations.md)  
  [Entity Framework 詞彙](../../../../../docs/framework/data/adonet/ef/terminology.md)

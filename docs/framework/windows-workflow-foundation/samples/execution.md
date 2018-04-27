@@ -1,26 +1,27 @@
 ---
-title: "執行"
-ms.custom: 
+title: 執行
+ms.custom: ''
 ms.date: 03/30/2017
 ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.tgt_pltfrm: 
+ms.reviewer: ''
+ms.suite: ''
+ms.tgt_pltfrm: ''
 ms.topic: article
 ms.assetid: a9dcedcc-9f4c-45c2-8222-6bcbf48f3534
-caps.latest.revision: "7"
+caps.latest.revision: 7
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.workload: dotnet
-ms.openlocfilehash: 30ae225ac5482bfd6955dd0e87cbfb4bbdae2b4a
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.workload:
+- dotnet
+ms.openlocfilehash: d13abd5095757b5f09d1166a3bf1654963d1a31b
+ms.sourcegitcommit: 2042de78fcdceebb6b8ac4b7a292b93e8782cbf5
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 04/27/2018
 ---
 # <a name="execution"></a>執行
-本節中的範例示範如何執行 [!INCLUDE[wf](../../../../includes/wf-md.md)] 工作流程。  
+本節包含示範執行工作流程中 Windows Workflow Foundation (WF) 範例。  
   
 ## <a name="in-this-section"></a>本節內容  
  [工作流程管理端點範例](../../../../docs/framework/windows-workflow-foundation/samples/workflow-management-endpoint-sample.md)  

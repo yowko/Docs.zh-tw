@@ -1,27 +1,29 @@
 ---
-title: "逐步解說：當地語系化混合應用程式"
-ms.custom: 
+title: 逐步解說：當地語系化混合應用程式
+ms.custom: ''
 ms.date: 03/30/2017
 ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.technology: dotnet-wpf
-ms.tgt_pltfrm: 
+ms.reviewer: ''
+ms.suite: ''
+ms.technology:
+- dotnet-wpf
+ms.tgt_pltfrm: ''
 ms.topic: article
 helpviewer_keywords:
 - localization [WPF interoperability]
 - hybrid applications [WPF interoperability]
 ms.assetid: fbc0c54e-930a-4c13-8e9c-27b83665010a
-caps.latest.revision: "17"
+caps.latest.revision: 17
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.workload: dotnet
-ms.openlocfilehash: 9f9bb7588ef1f6962a5cd55196154ac7f666d53b
-ms.sourcegitcommit: c0dd436f6f8f44dc80dc43b07f6841a00b74b23f
+ms.workload:
+- dotnet
+ms.openlocfilehash: b00553c005b714094f208fc6d4ed40e838b90b49
+ms.sourcegitcommit: 2042de78fcdceebb6b8ac4b7a292b93e8782cbf5
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 01/19/2018
+ms.lasthandoff: 04/27/2018
 ---
 # <a name="walkthrough-localizing-a-hybrid-application"></a>逐步解說：當地語系化混合應用程式
 本逐步解說會示範如何當地語系化[!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)]中的項目[!INCLUDE[TLA#tla_winforms](../../../../includes/tlasharptla-winforms-md.md)]-混合式應用程式。  
@@ -75,7 +77,7 @@ ms.lasthandoff: 01/19/2018
   
 5.  按 F5 鍵建置並執行應用程式。  
   
-     這兩個`SimpleControl`項目和標籤控制項： 將文字顯示**"Hello"**。  
+     這兩個`SimpleControl`項目和標籤控制項： 將文字顯示 **"Hello"**。  
   
 ## <a name="enabling-localization"></a>啟用當地語系化  
  Windows Forms 設計工具提供在附屬組件中啟用當地語系化的設定。  
@@ -123,7 +125,7 @@ ms.lasthandoff: 01/19/2018
   
 #### <a name="to-assign-resource-identifiers"></a>指派資源識別碼  
   
-1.  從 [開始] 功能表中，開啟[!INCLUDE[vsprvs](../../../../includes/vsprvs-md.md)]命令提示字元。  
+1.  從 [開始] 功能表中，開啟 Visual Studio 命令提示字元。  
   
 2.  使用下列命令，將資源識別碼指派給可當地語系化的內容。  
   
@@ -150,7 +152,7 @@ ms.lasthandoff: 01/19/2018
     LocBaml /parse LocalizingWpfInWf.g.en-US.resources /out:temp.csv  
     ```  
   
-3.  開啟 temp.csv 檔案[!INCLUDE[vsprvs](../../../../includes/vsprvs-md.md)]或其他文字編輯器。 取代字串`"Hello"`與西班牙文的翻譯， `"Hola"`。  
+3.  使用 Visual Studio 或其他文字編輯器中開啟 temp.csv 檔案。 取代字串`"Hello"`與西班牙文的翻譯， `"Hola"`。  
   
 4.  儲存 temp.csv 檔案。  
   
@@ -176,7 +178,7 @@ ms.lasthandoff: 01/19/2018
   
      應用程式會顯示當地語系化字串，而不是英文字串。  
   
-## <a name="see-also"></a>請參閱  
+## <a name="see-also"></a>另請參閱  
  <xref:System.Windows.Forms.Integration.ElementHost>  
  <xref:System.Windows.Forms.Integration.WindowsFormsHost>  
  [將應用程式當地語系化](../../../../docs/framework/wpf/advanced/how-to-localize-an-application.md)  

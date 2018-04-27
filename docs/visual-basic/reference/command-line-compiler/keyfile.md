@@ -13,11 +13,11 @@ helpviewer_keywords:
 ms.assetid: ffa82a4b-517a-4c6c-9889-5bae7b534bb8
 author: dotnet-bot
 ms.author: dotnetcontent
-ms.openlocfilehash: 02169f1f43ba93b68dc47f5bad038b78d3635a80
-ms.sourcegitcommit: 498799639937c89de777361aab74261efe7b79ea
+ms.openlocfilehash: 319d01e8162dbc3806b0d9ba59e90410acb1acd5
+ms.sourcegitcommit: 2042de78fcdceebb6b8ac4b7a292b93e8782cbf5
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 03/22/2018
+ms.lasthandoff: 04/27/2018
 ---
 # <a name="-keyfile"></a>-keyfile
 指定一個檔案，其中包含可為組件提供強式名稱的金鑰或金鑰組。  
@@ -48,7 +48,7 @@ ms.lasthandoff: 03/22/2018
  請參閱[Creating and using strong-named Assemblies](../../../framework/app-domains/create-and-use-strong-named-assemblies.md)如需有關簽署組件。  
   
 > [!NOTE]
->  `-keyfile`選項不是可從[!INCLUDE[vsprvs](~/includes/vsprvs-md.md)]開發環境中，只有在從命令列編譯時，它是可用。  
+>  `-keyfile`選項不是從 Visual Studio 開發環境中使用; 其只有在從命令列編譯時。  
   
 ## <a name="example"></a>範例  
  下列程式碼會編譯原始程式檔`Input.vb`，並指定金鑰檔案。  

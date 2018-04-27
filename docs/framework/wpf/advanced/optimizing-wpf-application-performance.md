@@ -1,12 +1,13 @@
 ---
-title: "最佳化 WPF 應用程式效能"
-ms.custom: 
+title: 最佳化 WPF 應用程式效能
+ms.custom: ''
 ms.date: 03/30/2017
 ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.technology: dotnet-wpf
-ms.tgt_pltfrm: 
+ms.reviewer: ''
+ms.suite: ''
+ms.technology:
+- dotnet-wpf
+ms.tgt_pltfrm: ''
 ms.topic: article
 helpviewer_keywords:
 - application rendering [WPF], performance
@@ -14,19 +15,20 @@ helpviewer_keywords:
 - applications [WPF], optimizing
 - WPF application [WPF], optimizing
 ms.assetid: ac8c6aa3-3c68-4a24-9827-3b6c829c1ebf
-caps.latest.revision: "45"
+caps.latest.revision: 45
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.workload: dotnet
-ms.openlocfilehash: 385bcb8678b11e1cb8f84ae509b1f1b6777665d7
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.workload:
+- dotnet
+ms.openlocfilehash: d2de2d4009cb29c5e9cbdace0d69c220f95a54e1
+ms.sourcegitcommit: 2042de78fcdceebb6b8ac4b7a292b93e8782cbf5
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 04/27/2018
 ---
 # <a name="optimizing-wpf-application-performance"></a>最佳化 WPF 應用程式效能
-本節的目的在於為參考[!INCLUDE[TLA#tla_winclient](../../../../includes/tlasharptla-winclient-md.md)]應用程式開發人員所需的方式來改善其應用程式的效能。 如果您是開發人員而言是新[!INCLUDE[TLA#tla_avalonwinfx](../../../../includes/tlasharptla-avalonwinfx-md.md)]和[!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)]，您應該先熟悉這兩個平台。 本節假設兩者的實用知識，並寫入的程式設計人員已經知道要取得其應用程式啟動且正在執行。  
+本節的目的在於為參考[!INCLUDE[TLA#tla_winclient](../../../../includes/tlasharptla-winclient-md.md)]應用程式開發人員所需的方式來改善其應用程式的效能。 如果您是新的 Microsoft.NET framework 開發人員和[!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)]，您應該先熟悉這兩個平台。 本節假設兩者的實用知識，並寫入的程式設計人員已經知道要取得其應用程式啟動且正在執行。  
   
 > [!NOTE]
 >  本章節中提供的效能資料會根據[!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)]應用程式上執行，2.8 GHz 電腦且 512 RAM 和 ATI Radeon 9700 圖形卡。  
@@ -54,7 +56,7 @@ ms.lasthandoff: 12/22/2017
   
  [應用程式啟動時間](../../../../docs/framework/wpf/advanced/application-startup-time.md)  
   
-## <a name="see-also"></a>請參閱  
+## <a name="see-also"></a>另請參閱  
  <xref:System.Windows.Media.RenderOptions>  
  <xref:System.Windows.Media.RenderCapability>  
  [圖形轉譯層](../../../../docs/framework/wpf/advanced/graphics-rendering-tiers.md)  

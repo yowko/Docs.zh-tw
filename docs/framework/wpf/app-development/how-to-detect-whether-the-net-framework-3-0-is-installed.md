@@ -20,21 +20,21 @@ ms.author: dotnetcontent
 manager: wpickett
 ms.workload:
 - dotnet
-ms.openlocfilehash: 48295a187870340948b045a64b852f1e6fdc1a65
-ms.sourcegitcommit: 86adcc06e35390f13c1e372c36d2e044f1fc31ef
+ms.openlocfilehash: dfa5eb8ec1e4f9f2eeeb142670b92d5ec35ab6cf
+ms.sourcegitcommit: 2042de78fcdceebb6b8ac4b7a292b93e8782cbf5
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/26/2018
+ms.lasthandoff: 04/27/2018
 ---
 # <a name="how-to-detect-whether-the-net-framework-30-is-installed"></a>如何：偵測有無安裝 .NET Framework 3.0
-系統管理員可以部署之前[!INCLUDE[TLA#tla_avalonwinfx](../../../../includes/tlasharptla-avalonwinfx-md.md)]應用程式在系統上，他們必須先確認[!INCLUDE[TLA2#tla_avalonwinfx](../../../../includes/tla2sharptla-avalonwinfx-md.md)]執行階段會出現。 本主題提供撰寫的指令碼 HTML/javascript，系統管理員可以用來判斷是否[!INCLUDE[TLA2#tla_avalonwinfx](../../../../includes/tla2sharptla-avalonwinfx-md.md)]存在於系統上。  
+系統管理員可以部署的系統上的 Microsoft.NET Framework 應用程式之前，他們必須先確認.NET Framework 執行階段已存在。 本主題提供以 HTML/JavaScript 撰寫的指令碼的系統管理員可用來判斷.NET Framework 是否存在於系統上。  
   
 > [!NOTE]
 >  如需詳細資訊，在安裝時，部署和偵測 Microsoft.NET Framework，請參閱[部署 Microsoft.NET Framework 3.0](http://go.microsoft.com/fwlink/?LinkId=96739)。  
   
 <a name="content_expiration"></a>   
 ## <a name="detect-the-net-clr-user-agent-string"></a>偵測 「.NET CLR"使用者代理字串  
- 當[!INCLUDE[TLA2#tla_avalonwinfx](../../../../includes/tla2sharptla-avalonwinfx-md.md)]已安裝，MSI 新增 「.NET CLR"和版本號碼的使用者代理字串。 下列範例顯示簡單的 HTML 網頁中內嵌的指令碼。 指令碼搜尋使用者代理字串，以判斷是否[!INCLUDE[TLA2#tla_avalonwinfx](../../../../includes/tla2sharptla-avalonwinfx-md.md)]已安裝，且在搜尋結果中顯示狀態訊息。  
+ 安裝.NET Framework 時，MSI 加入 「.NET CLR"，版本號碼的使用者代理字串。 下列範例顯示簡單的 HTML 網頁中內嵌的指令碼。 指令碼會搜尋要判斷.NET Framework 是否已安裝，且在搜尋結果中顯示狀態訊息的使用者代理字串。  
   
 ```  
 <HTML>  

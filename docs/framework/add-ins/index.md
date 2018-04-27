@@ -26,11 +26,11 @@ ms.author: ronpet
 manager: wpickett
 ms.workload:
 - dotnet
-ms.openlocfilehash: 4d288d321063512f91ad94b417bb1a6bf38c9ef9
-ms.sourcegitcommit: cf22b29db780e532e1090c6e755aa52d28273fa6
+ms.openlocfilehash: 2e31605f428f4e1dc58ee3332977f14dfd394489
+ms.sourcegitcommit: 2042de78fcdceebb6b8ac4b7a292b93e8782cbf5
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 02/01/2018
+ms.lasthandoff: 04/27/2018
 ---
 # <a name="add-ins-and-extensibility"></a>增益集和擴充性
 <a name="top"></a> 增益集可以為主應用程式提供擴充的功能或服務。 [!INCLUDE[dnprdnshort](../../../includes/dnprdnshort-md.md)] 提供程式設計模型，開發人員可用來開發增益集，並且在其主應用程式中加以啟動。 模型的做法是在主應用程式與增益集之間建構通訊管線。 此模型是藉由使用 <xref:System.AddIn>、 <xref:System.AddIn.Hosting>、 <xref:System.AddIn.Pipeline>和 <xref:System.AddIn.Contract> 命名空間中的類型來實作。  
@@ -54,7 +54,7 @@ ms.lasthandoff: 02/01/2018
   
  下圖顯示管線。  
   
- ![新增 &#45; 管線模型中。] (../../../docs/framework/add-ins/media/addin1.png "AddIn1")  
+ ![新增&#45;管線模型中。] (../../../docs/framework/add-ins/media/addin1.png "AddIn1")  
 增益集管線  
   
  這些區段的組件不一定要在相同的應用程式定義域中。 您可以將增益集載入至其本身的新應用程式定義域、現有的應用程式定義域，甚至主機的應用程式定義域中。 您可以將多個增益集載入相同的應用程式定義域中，讓增益集能夠共用資源和安全性內容。  
@@ -116,7 +116,7 @@ ms.lasthandoff: 02/01/2018
   
 |標題|描述|  
 |-----------|-----------------|  
-|[Pipeline Development](../../../docs/framework/add-ins/pipeline-development.md)|說明從主應用程式到增益集之區段的通訊管道。 提供逐步解說主題中的程式碼範例，說明如何建構管線，以及如何將區段部署至 [!INCLUDE[vsprvs](../../../includes/vsprvs-md.md)]中的管線。|  
+|[Pipeline Development](../../../docs/framework/add-ins/pipeline-development.md)|說明從主應用程式到增益集之區段的通訊管道。 提供逐步解說主題描述如何建構管線，以及如何將區段部署至 Visual Studio 中的管線中的程式碼範例。|  
 |[應用程式定義域和組件](http://msdn.microsoft.com/library/433b04ae-4ba8-4849-9dbd-79194f240346)|說明應用程式定義域 (針對安全性、可靠性和版本控制提供隔離界限) 與組件之間的關係。|  
   
  [回到頁首](#top)  

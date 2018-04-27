@@ -1,24 +1,26 @@
 ---
-title: "交易的批次處理"
-ms.custom: 
+title: 交易的批次處理
+ms.custom: ''
 ms.date: 03/30/2017
 ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.technology: dotnet-clr
-ms.tgt_pltfrm: 
+ms.reviewer: ''
+ms.suite: ''
+ms.technology:
+- dotnet-clr
+ms.tgt_pltfrm: ''
 ms.topic: article
 ms.assetid: ecd328ed-332e-479c-a894-489609bcddd2
-caps.latest.revision: "23"
+caps.latest.revision: 23
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.workload: dotnet
-ms.openlocfilehash: 87d8e3e09618b214dcafb7afd82970dde54fc4fc
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.workload:
+- dotnet
+ms.openlocfilehash: 50596aaf5290146148ecb9636b78f7f9180c0b79
+ms.sourcegitcommit: 2042de78fcdceebb6b8ac4b7a292b93e8782cbf5
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 04/27/2018
 ---
 # <a name="transacted-batching"></a>交易的批次處理
 這個範例會示範如何使用訊息佇列 (MSMQ) 批次處理交易讀取作業。 「交易的批次處理」是效能最佳化功能，可用於佇列通訊中的交易讀取作業。  
@@ -142,8 +144,8 @@ ms.lasthandoff: 12/22/2017
  服務行為會定義 `TransactionScopeRequired` 已設為 `true` 的作業行為， 這樣會確定此方法存取的任何資源管理員都使用從佇列擷取訊息時所使用的相同交易範圍。 在此範例中，會使用基本資料庫來存放訊息中所含的訂單資訊。 交易範圍也會保證在方法擲回例外狀況時，訊息仍會傳回佇列。 如果沒有設定這個作業行為，佇列通道就會建立交易，在分派訊息之前讀取佇列中的訊息並自動認可，因此若作業失敗，訊息就會遺失。 最常見的案例是服務作業登記在用來從佇列讀取訊息的交易中，如同下列程式碼所示範。  
   
  請注意，`ReleaseServiceInstanceOnTransactionComplete` 設定為 `false`。 這是批次作業的重要需求。 `ReleaseServiceInstanceOnTransactionComplete` 上的 `ServiceBehaviorAttribute` 屬性會指出完成交易之後，服務執行個體應該執行的動作。 根據預設，完成交易時會釋放服務執行個體。 批次作業的核心觀念在於使用單一交易，就可讀取及分派佇列中的許多訊息。 因此，釋放服務執行個體就會永久停止完成交易，而不再使用批次作業。 如果這個屬性設定為 `true`，而且交易的批次處理行為已新增至端點，批次作業驗證行為就會擲回例外狀況。  
-  
-```  
+
+```csharp
 // Service class that implements the service contract.  
 // Added code to write output to the console window.  
 [ServiceBehavior(ReleaseServiceInstanceOnTransactionComplete=false,   
@@ -160,11 +162,11 @@ public class OrderProcessorService : IOrderProcessor
     }  
     …  
 }  
-```  
-  
+```
+
  `Orders` 類別會封裝訂單處理。 在此範例中，會使用訂單資訊更新資料庫。  
-  
-```  
+
+```csharp
 // Order Processing Logic  
 public class Orders  
 {  
@@ -234,8 +236,8 @@ public class Orders
                                      {1} ", rowsAffected, po.PONumber);  
     }  
 }  
-```  
-  
+```
+
  會在服務應用程式組態中，指定批次作業行為與其組態。  
   
 ```xml  
@@ -292,8 +294,8 @@ public class Orders
 >  批次的大小是由您的應用程式所決定。 如果批次大小太小，可能不會得到希望的效能。 另一方面，如果批次大小太大，可能使效能下降。 例如，交易可以存留較久的時間並在資料庫上持有鎖定，或者應用程式變成鎖死，因而導致回復批次並重做工作。  
   
  用戶端會建立一個交易範圍。 與佇列的通訊會發生在交易範圍內，導致其被視為原子單位 (Atomic Unit)，其中會將所有訊息都傳送至佇列，或是不傳送任何訊息至佇列。 呼叫交易範圍上的 <xref:System.Transactions.TransactionScope.Complete%2A>，即可認可交易。  
-  
-```  
+
+```csharp
 //Client implementation code.  
 class Client  
 {  
@@ -340,8 +342,8 @@ class Client
         Console.ReadLine();  
     }  
 }  
-```  
-  
+```
+
  當您執行範例時，用戶端與服務活動都會顯示在服務與用戶端主控台視窗中。 您可以查看來自用戶端的服務接收訊息。 在每個主控台視窗中按下 ENTER 鍵，即可關閉服務與用戶端。 請注意，因為佇列正在使用中，所以用戶端與服務不需要同時啟動與執行。 您可以執行用戶端，關閉用戶端，然後再啟動服務，服務還是會收到訊息。 以批次讀取訊息及處理訊息時，您會看到可以捲動的輸出。  
   
 ```  
@@ -385,4 +387,4 @@ Processing Purchase Order: ea94486b-7c86-4309-a42d-2f06c00656cd
 >   
 >  `<InstallDrive>:\WF_WCF_Samples\WCF\Basic\Binding\Net\MSMQ\Batching`  
   
-## <a name="see-also"></a>請參閱
+## <a name="see-also"></a>另請參閱

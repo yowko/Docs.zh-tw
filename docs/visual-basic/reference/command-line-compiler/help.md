@@ -16,11 +16,11 @@ helpviewer_keywords:
 ms.assetid: eb984aa5-ac98-4d0b-a0d2-24238d7bc8dc
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 4d56312743d70ed0d2f361c27d027a726562dc73
-ms.sourcegitcommit: 498799639937c89de777361aab74261efe7b79ea
+ms.openlocfilehash: 59b89d91cd81f735b44e030f72288f6b9a4d2b79
+ms.sourcegitcommit: 2042de78fcdceebb6b8ac4b7a292b93e8782cbf5
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 03/22/2018
+ms.lasthandoff: 04/27/2018
 ---
 # <a name="-help---visual-basic"></a>-help、-? (Visual Basic)
 顯示編譯器選項。  
@@ -37,7 +37,7 @@ ms.lasthandoff: 03/22/2018
  如果您在編譯中包含這個選項，會建立任何輸出檔案，並不會進行編譯。  
   
 > [!NOTE]
->  `-help`選項不是可從[!INCLUDE[vsprvs](~/includes/vsprvs-md.md)]開發環境中，只有在從命令列編譯時，它是可用。  
+>  `-help`選項不是從 Visual Studio 開發環境中使用; 其只有在從命令列編譯時。  
   
 ## <a name="example"></a>範例  
  下列程式碼會顯示從命令列說明。  

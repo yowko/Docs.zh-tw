@@ -14,11 +14,11 @@ ms.author: dotnetcontent
 manager: wpickett
 ms.workload:
 - dotnet
-ms.openlocfilehash: 788cc6b25e4faa8a680f5ec23d88a5d18d0a7c87
-ms.sourcegitcommit: 86adcc06e35390f13c1e372c36d2e044f1fc31ef
+ms.openlocfilehash: 866fe3ebcec295b57444f937b3b6fd6677bfe0f4
+ms.sourcegitcommit: 2042de78fcdceebb6b8ac4b7a292b93e8782cbf5
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/26/2018
+ms.lasthandoff: 04/27/2018
 ---
 # <a name="debugging-workflows"></a>偵錯工作流程
 [!INCLUDE[netfx_current_long](../../../includes/netfx-current-long-md.md)]提供一些從開發環境進行偵錯工作流程的選項。 可在設計工具、XAML 與程式碼中將工作流程偵錯。  
@@ -36,7 +36,7 @@ ms.lasthandoff: 04/26/2018
  工作流程偵錯也支援使用 Visual Studio 的基礎結構來附加至處理序。 這可讓工作流程的作者在不同的主機環境中 (例如 Internet Information Services (IIS) 7.0) 執行時偵錯工作流程。  
   
 ## <a name="remote-debugging"></a>Remote Debugging  
- [!INCLUDE[wf](../../../includes/wf-md.md)] 遠端偵錯功能相同遠端偵錯其他 Visual Studio 元件。 如需使用遠端偵錯資訊，請參閱[How to： 啟用遠端偵錯](http://go.microsoft.com/fwlink/?LinkId=196257)。  
+ Windows Workflow Foundation (WF) 遠端偵錯功能相同遠端偵錯其他 Visual Studio 元件。 如需使用遠端偵錯資訊，請參閱[How to： 啟用遠端偵錯](http://go.microsoft.com/fwlink/?LinkId=196257)。  
   
 > [!NOTE]
 >  如果工作流程應用程式以 x86 為目標架構，而執行 64 位元作業系統的電腦上裝載，則遠端偵錯將會無法運作，除非在遠端電腦上安裝 Visual Studio 或工作流程應用程式的目標變更為**任何 CPU**。  

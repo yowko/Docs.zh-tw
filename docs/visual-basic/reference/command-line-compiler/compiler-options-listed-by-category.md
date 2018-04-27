@@ -1,6 +1,6 @@
 ---
 title: 依分類列出 Visual Basic 編譯器選項
-ms.date: 03/09/2018
+ms.date: 04/12/2018
 ms.prod: .net
 ms.reviewer: ''
 ms.suite: ''
@@ -12,14 +12,14 @@ helpviewer_keywords:
 ms.assetid: fbe36f7a-7cfa-4f77-a8d4-2be5958568e3
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: e66ec709a32b39e2e7427d6ce165f62212dac543
-ms.sourcegitcommit: c883637b41ee028786edceece4fa872939d2e64c
+ms.openlocfilehash: a90c54ae1bb4d89b2fbe0df62730bc55c0ceb64f
+ms.sourcegitcommit: 2042de78fcdceebb6b8ac4b7a292b93e8782cbf5
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 03/23/2018
+ms.lasthandoff: 04/27/2018
 ---
 # <a name="visual-basic-compiler-options-listed-by-category"></a>依分類列出的 Visual Basic 編譯器選項
-Visual Basic 命令列編譯器可作為內編譯程式的替代方法[!INCLUDE[vsprvs](~/includes/vsprvs-md.md)]整合式的開發環境 (IDE)。 以下是 Visual Basic 命令列編譯器選項，依功能分類排序的清單。  
+Visual Basic 命令列編譯器可作為從 Visual Studio 整合式的開發環境 (IDE) 內編譯程式的替代方案。 以下是 Visual Basic 命令列編譯器選項，依功能分類排序的清單。  
 
 [!INCLUDE[compiler-options](~/includes/compiler-options.md)]
   
@@ -31,7 +31,7 @@ Visual Basic 命令列編譯器可作為內編譯程式的替代方法[!INCLUDE[
 |[-utf8output](../../../visual-basic/reference/command-line-compiler/utf8output.md)|使用 UTF-8 編碼顯示編譯器輸出。|  
 |[-verbose](../../../visual-basic/reference/command-line-compiler/verbose.md)|在編譯期間輸出額外資訊。|  
 |`-modulename:<string>`|指定來源模組的名稱|  
-|[-preferreduilang](../../../csharp/language-reference/compiler-options/preferreduilang-compiler-option.md)|指定編譯器輸出的語言。|  
+|[-preferreduilang](../../../csharp/language-reference/compiler-options/preferreduilang-compiler-option.md)|指定編譯器輸出的語言。|
   
 ## <a name="optimization"></a>最佳化  
   
@@ -45,6 +45,7 @@ Visual Basic 命令列編譯器可作為內編譯程式的替代方法[!INCLUDE[
 |選項|用途|  
 |---|---|  
 |[-doc](../../../visual-basic/reference/command-line-compiler/doc.md)|將文件註解處理成 XML 檔案。|  
+|[-具決定性](../../../visual-basic/reference/command-line-compiler/deterministic.md)|可讓編譯器輸出的二進位內容是相同編譯如果輸入是相同的組件。|
 |[-netcf](../../../visual-basic/reference/command-line-compiler/netcf.md)|設定要以 [!INCLUDE[Compact](~/includes/compact-md.md)] 為目標的編譯器。|  
 |[-out](../../../visual-basic/reference/command-line-compiler/out.md)|指定輸出檔。|  
 |[-refonly](refonly-compiler-option.md)|輸出只參考的組件。|

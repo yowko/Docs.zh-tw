@@ -1,29 +1,31 @@
 ---
-title: "ADO.NET 資料集"
-ms.custom: 
+title: ADO.NET 資料集
+ms.custom: ''
 ms.date: 03/30/2017
 ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.technology: dotnet-ado
-ms.tgt_pltfrm: 
+ms.reviewer: ''
+ms.suite: ''
+ms.technology:
+- dotnet-ado
+ms.tgt_pltfrm: ''
 ms.topic: article
 ms.assetid: 82b641bb-6001-4512-bf1a-2830acdd92ab
-caps.latest.revision: "6"
+caps.latest.revision: 6
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.workload: dotnet
-ms.openlocfilehash: b9d566f99802ea80ae73132579bb3068b1ff3b28
-ms.sourcegitcommit: ed26cfef4e18f6d93ab822d8c29f902cff3519d1
+ms.workload:
+- dotnet
+ms.openlocfilehash: 9458206ea7edfeba61f9805c2b601d6aa9198256
+ms.sourcegitcommit: 2042de78fcdceebb6b8ac4b7a292b93e8782cbf5
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 01/17/2018
+ms.lasthandoff: 04/27/2018
 ---
 # <a name="adonet-datasets"></a>ADO.NET 資料集
 <xref:System.Data.DataSet> 物件對於支援 [!INCLUDE[vstecado](../../../../includes/vstecado-md.md)] 的中斷連接、分散式的資料案例非常重要。 **資料集**是常駐記憶體的表示法提供與資料來源無關的一致性關聯式程式設計模型的資料。 它可與多個不同的資料來源一起使用、與 XML 資料一起使用，或管理應用程式的本機資料。 **資料集**表示一組完整的資料，包括相關的資料表、 條件約束及資料表間的關聯性。 下圖顯示**資料集**物件模型。  
   
- ![ADO.Net graphic](../../../../docs/framework/data/adonet/media/ado-1-bpuedev11.png "ado_1_bpuedev11")  
+ ![ADO.Net 圖形](../../../../docs/framework/data/adonet/media/ado-1-bpuedev11.png "ado_1_bpuedev11")  
 DataSet 物件模型  
   
  中的物件與方法**資料集**與關聯式資料庫模型中一致。  
@@ -52,11 +54,11 @@ DataSet 物件模型
  **資料集**， **DataTable**，和**DataColumn**都**ExtendedProperties**屬性。 **ExtendedProperties**是**PropertyCollection**您可以在其中放置自訂資訊，例如 SELECT 陳述式，用來產生結果集或產生資料時的時間。 **ExtendedProperties**集合會保存在一起的結構描述資訊**資料集**。  
   
 ## <a name="linq-to-dataset"></a>LINQ to DataSet  
- [!INCLUDE[linq_dataset](../../../../includes/linq-dataset-md.md)] 可為儲存在 DataSet 的中斷連接資料提供 Language-integrated Query (LINQ) 功能。 [!INCLUDE[linq_dataset](../../../../includes/linq-dataset-md.md)]使用標準[!INCLUDE[vbteclinq](../../../../includes/vbteclinq-md.md)]語法，並提供編譯時期語法檢查、 靜態型別和 IntelliSense 支援，當您使用[!INCLUDE[vsprvs](../../../../includes/vsprvs-md.md)]IDE。  
+ [!INCLUDE[linq_dataset](../../../../includes/linq-dataset-md.md)] 可為儲存在 DataSet 的中斷連接資料提供 Language-integrated Query (LINQ) 功能。 [!INCLUDE[linq_dataset](../../../../includes/linq-dataset-md.md)] 使用標準[!INCLUDE[vbteclinq](../../../../includes/vbteclinq-md.md)]語法，並使用 Visual Studio IDE 時提供編譯時期語法檢查、 靜態型別和 IntelliSense 支援。  
   
  如需詳細資訊，請參閱 [LINQ to DataSet](../../../../docs/framework/data/adonet/linq-to-dataset.md)。  
   
-## <a name="see-also"></a>請參閱  
+## <a name="see-also"></a>另請參閱  
  [ADO.NET 概觀](../../../../docs/framework/data/adonet/ado-net-overview.md)  
  [DataSet、DataTable 和 DataView](../../../../docs/framework/data/adonet/dataset-datatable-dataview/index.md)  
  [在 ADO.NET 中擷取和修改資料](../../../../docs/framework/data/adonet/retrieving-and-modifying-data.md)  

@@ -1,26 +1,27 @@
 ---
-title: "設定活動驗證"
-ms.custom: 
+title: 設定活動驗證
+ms.custom: ''
 ms.date: 03/30/2017
 ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.tgt_pltfrm: 
+ms.reviewer: ''
+ms.suite: ''
+ms.tgt_pltfrm: ''
 ms.topic: article
 ms.assetid: 25a4eccb-b8fc-4857-a01d-2683b6341219
-caps.latest.revision: "5"
+caps.latest.revision: 5
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.workload: dotnet
-ms.openlocfilehash: d75f03a9af5caa5569cbfd4d1d09cda8936f6562
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.workload:
+- dotnet
+ms.openlocfilehash: f0b7099cbae2faf53e99f73a52f4c25f42ed6834
+ms.sourcegitcommit: 2042de78fcdceebb6b8ac4b7a292b93e8782cbf5
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 04/27/2018
 ---
 # <a name="configuring-activity-validation"></a>設定活動驗證
-活動驗證可讓活動作者和使用者在執行前，先在活動的組態中識別及報告錯誤。 [!INCLUDE[wf](../../../includes/wf-md.md)] 提供下列三種活動驗證：  
+活動驗證可讓活動作者和使用者在執行前，先在活動的組態中識別及報告錯誤。 Windows Workflow Foundation (WF) 提供下列三種活動驗證：  
   
 -   `RequiredArgument` 與 `OverloadGroup` 屬性。  
   

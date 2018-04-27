@@ -1,12 +1,13 @@
 ---
-title: "資料繫結和 Windows Form"
-ms.custom: 
+title: 資料繫結和 Windows Form
+ms.custom: ''
 ms.date: 03/30/2017
 ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.technology: dotnet-winforms
-ms.tgt_pltfrm: 
+ms.reviewer: ''
+ms.suite: ''
+ms.technology:
+- dotnet-winforms
+ms.tgt_pltfrm: ''
 ms.topic: article
 helpviewer_keywords:
 - master-details lists
@@ -19,16 +20,17 @@ helpviewer_keywords:
 - Windows Forms controls, data binding
 - data-bound controls [Windows Forms], Windows Forms
 ms.assetid: 419aac5e-819b-4aad-88b0-73a2f8c0bd27
-caps.latest.revision: "20"
+caps.latest.revision: 20
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.workload: dotnet
-ms.openlocfilehash: f2a4d023600456adf1e14b801ee6c24fd0a2348c
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.workload:
+- dotnet
+ms.openlocfilehash: db0e3ad5602d7ee608299bc5b9c5c85b860cab7d
+ms.sourcegitcommit: 2042de78fcdceebb6b8ac4b7a292b93e8782cbf5
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 04/27/2018
 ---
 # <a name="data-binding-and-windows-forms"></a>資料繫結和 Windows Form
 在 Windows Forms 中，您不只可以繫結至傳統的資料來源，也能繫結至幾乎任何包含資料的結構。 您可以繫結至執行階段計算、從檔案讀取，或衍生自其他控制項之值的值陣列。  
@@ -48,7 +50,7 @@ ms.lasthandoff: 12/22/2017
   
 |資料繫結的類型|描述|  
 |--------------------------|-----------------|  
-|簡單資料繫結|控制項繫結至單一資料項目的能力，例如資料集中資料表的資料行值。 這是一般適用於例如 <xref:System.Windows.Forms.TextBox> 控制項或 <xref:System.Windows.Forms.Label> 控制項等控制項的繫結類型，這些控制項通常只會顯示單一值。 事實上，控制項上的任何屬性都可以繫結至資料庫中的欄位。 在 [!INCLUDE[vsprvs](../../../includes/vsprvs-md.md)] 中對這項功能有廣泛的支援。<br /><br /> 如需詳細資訊，請參閱:<br /><br /> -   [與資料繫結相關的介面](../../../docs/framework/winforms/interfaces-related-to-data-binding.md)<br />-   [如何： 巡覽 Windows Form 中的資料](../../../docs/framework/winforms/how-to-navigate-data-in-windows-forms.md)<br />-   [如何： 建立 Windows Form 上的簡單繫結控制項](../../../docs/framework/winforms/how-to-create-a-simple-bound-control-on-a-windows-form.md)|  
+|簡單資料繫結|控制項繫結至單一資料項目的能力，例如資料集中資料表的資料行值。 這是一般適用於例如 <xref:System.Windows.Forms.TextBox> 控制項或 <xref:System.Windows.Forms.Label> 控制項等控制項的繫結類型，這些控制項通常只會顯示單一值。 事實上，控制項上的任何屬性都可以繫結至資料庫中的欄位。 沒有對 Visual Studio 中的這項功能有廣泛的支援。<br /><br /> 如需詳細資訊，請參閱:<br /><br /> -   [與資料繫結相關的介面](../../../docs/framework/winforms/interfaces-related-to-data-binding.md)<br />-   [如何： 巡覽 Windows Form 中的資料](../../../docs/framework/winforms/how-to-navigate-data-in-windows-forms.md)<br />-   [如何： 建立 Windows Form 上的簡單繫結控制項](../../../docs/framework/winforms/how-to-create-a-simple-bound-control-on-a-windows-form.md)|  
 |複雜資料繫結|控制項繫結至一個以上資料項目的能力，在資料庫中通常會超過一筆記錄。 複雜繫結也稱為清單架構繫結。 支援複雜繫結的控制項範例有 <xref:System.Windows.Forms.DataGridView>、<xref:System.Windows.Forms.ListBox> 和 <xref:System.Windows.Forms.ComboBox> 控制項。 如需複雜資料繫結的範例，請參閱[How to： 將 Windows Form ComboBox 或 ListBox 控制項繫結至資料](../../../docs/framework/winforms/controls/how-to-bind-a-windows-forms-combobox-or-listbox-control-to-data.md)。|  
   
 ## <a name="bindingsource-component"></a>BindingSource 元件  
@@ -64,7 +66,7 @@ ms.lasthandoff: 12/22/2017
 |主從式關係|主從式應用程式是查看相關資料的一種格式。 明確地說，有兩個具有相連關係的資料表 — 在一般的商業範例中，「客戶」資料表和「訂單」資料表，它們之間連結了客戶和個別訂單的關係。 如需有關建立主從式應用程式使用兩個 Windows Form<xref:System.Windows.Forms.DataGridView>控制項，請參閱[How to： 建立主從式表單使用兩個 Windows Form DataGridView 控制項](../../../docs/framework/winforms/controls/create-a-master-detail-form-using-two-datagridviews.md)|  
 |查閱資料表|另一個常見的資料展示/管理案例是資料表查閱。 通常，在較大的資料顯示中，<xref:System.Windows.Forms.ComboBox> 控制項是用來顯示和管理資料。 關鍵在於 <xref:System.Windows.Forms.ComboBox> 控制項中顯示的資料與寫入資料庫的資料不同。 例如，如果您有 <xref:System.Windows.Forms.ComboBox> 控制項，顯示可從雜貨店取得的項目，您可能會想看到產品的名稱 (麵包、牛奶、蛋)。 不過，為了簡化資料庫中的資訊擷取以及資料庫的正規化，您可能會將特定訂單的特定項目資訊儲存為項目編號 (#501、#603 等)。 因此，表單上 <xref:System.Windows.Forms.ComboBox> 控制項中的雜貨項目的「易記名稱」，與訂單中出現的相關項目編號，兩者之間有隱含的連接。 這是資料表查閱的本質。 如需詳細資訊，請參閱[How to： 使用 Windows Form BindingSource 元件建立查閱資料表](../../../docs/framework/winforms/controls/how-to-create-a-lookup-table-with-the-windows-forms-bindingsource-component.md)。|  
   
-## <a name="see-also"></a>請參閱  
+## <a name="see-also"></a>另請參閱  
  <xref:System.Windows.Forms.Binding>  
  [Windows Forms 資料繫結](../../../docs/framework/winforms/windows-forms-data-binding.md)  
  [操作說明：將 Windows Forms DataGrid 控制項繫結至資料來源](../../../docs/framework/winforms/controls/how-to-bind-the-windows-forms-datagrid-control-to-a-data-source.md)  

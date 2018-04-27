@@ -16,14 +16,14 @@ ms.assetid: b770e8f5-e07d-491a-ab4b-a977980f9ba2
 caps.latest.revision: 11
 author: dotnet-bot
 ms.author: dotnetcontent
-ms.openlocfilehash: c02e95573d0ba894bf68510219bd66965fc234fc
-ms.sourcegitcommit: 86adcc06e35390f13c1e372c36d2e044f1fc31ef
+ms.openlocfilehash: 4497c9586182cca9e2be97dc39e5ccb242725d25
+ms.sourcegitcommit: 2042de78fcdceebb6b8ac4b7a292b93e8782cbf5
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/26/2018
+ms.lasthandoff: 04/27/2018
 ---
 # <a name="how-to-collapse-and-hide-sections-of-code-visual-basic"></a>如何：摺疊和隱藏程式碼區段 (Visual Basic)
-`#Region`指示詞可讓您可以摺疊並隱藏 Visual Basic 檔案中的程式碼區段。 `#Region`指示詞可讓您使用時，指定一段程式碼，您可以展開或摺疊[!INCLUDE[vsprvs](~/includes/vsprvs-md.md)]程式碼編輯器。 選擇性地隱藏程式碼的功能可讓您的檔案，更容易管理而且更容易閱讀。 如需詳細資訊，請參閱[大綱](/visualstudio/ide/outlining)。  
+`#Region`指示詞可讓您可以摺疊並隱藏 Visual Basic 檔案中的程式碼區段。 `#Region`指示詞可讓您使用 Visual Studio 程式碼編輯器時，指定一段程式碼，您可以展開或摺疊。 選擇性地隱藏程式碼的功能可讓您的檔案，更容易管理而且更容易閱讀。 如需詳細資訊，請參閱[大綱](/visualstudio/ide/outlining)。  
   
  `#Region` 指示詞會支援這類程式碼區塊語意`#If...#End If`。 這表示無法在單一區塊中開始與結束在另一個。開始和結束必須在相同的區塊。 `#Region` 指示詞不支援在函式內。  
   

@@ -16,11 +16,11 @@ ms.assetid: a0d35dc7-c5f9-4d74-92ff-a1c6f28d5235
 caps.latest.revision: 17
 author: dotnet-bot
 ms.author: dotnetcontent
-ms.openlocfilehash: 645dd4a8a9d1c78fd54f0f31ad0efd772b671d39
-ms.sourcegitcommit: 86adcc06e35390f13c1e372c36d2e044f1fc31ef
+ms.openlocfilehash: d132fa514008d072158a0e6bedaff511c55b18c0
+ms.sourcegitcommit: 2042de78fcdceebb6b8ac4b7a292b93e8782cbf5
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/26/2018
+ms.lasthandoff: 04/27/2018
 ---
 # <a name="documenting-your-code-with-xml-visual-basic"></a>使用 XML 在程式碼中加入文件 (Visual Basic)
 您可以在 Visual Basic 中，文件使用 XML 的程式碼  
@@ -40,7 +40,7 @@ ms.lasthandoff: 04/26/2018
   
     -   `cref` 屬性可以附加至任何標記，以提供程式碼項目的參考。 編譯器會驗證此程式碼項目存在。 如果驗證失敗，則編譯器會發出警告。 編譯器也會遵守任何`Imports`陳述式時搜尋類型中所述`cref`屬性。  
   
-    -   \<摘要 > 標記中的 IntelliSense 即可使用[!INCLUDE[vsprvs](~/includes/vsprvs-md.md)]以顯示類型或成員的其他資訊。  
+    -   \<摘要 > 標記由 Visual Studio 中的 IntelliSense 用於顯示類型或成員的其他資訊。  
   
 ## <a name="related-sections"></a>相關章節  
  如需建立文件註解的 XML 檔案的詳細資訊，請參閱下列主題：  

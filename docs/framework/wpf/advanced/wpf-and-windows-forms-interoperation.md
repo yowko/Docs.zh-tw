@@ -1,12 +1,13 @@
 ---
-title: "WPF 和 Windows Form 互通"
-ms.custom: 
+title: WPF 和 Windows Form 互通
+ms.custom: ''
 ms.date: 03/30/2017
 ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.technology: dotnet-wpf
-ms.tgt_pltfrm: 
+ms.reviewer: ''
+ms.suite: ''
+ms.technology:
+- dotnet-wpf
+ms.tgt_pltfrm: ''
 ms.topic: article
 helpviewer_keywords:
 - Windows Forms [WPF], interoperability with
@@ -15,16 +16,17 @@ helpviewer_keywords:
 - interoperability [WPF], Windows Forms
 - hybrid control [WPF interoperability]
 ms.assetid: 9e8aa6b6-112c-4579-98d1-c974917df499
-caps.latest.revision: "23"
+caps.latest.revision: 23
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.workload: dotnet
-ms.openlocfilehash: 49a27fa04c28376dd5e627d2a80a180a5d81a3b7
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.workload:
+- dotnet
+ms.openlocfilehash: 315037c49e00e097eebd51e2a511aa7f01e468ae
+ms.sourcegitcommit: 2042de78fcdceebb6b8ac4b7a292b93e8782cbf5
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 04/27/2018
 ---
 # <a name="wpf-and-windows-forms-interoperation"></a>WPF 和 Windows Form 互通
 [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] 和 [!INCLUDE[TLA#tla_winforms](../../../../includes/tlasharptla-winforms-md.md)] 呈現兩個建立應用程式介面的不同架構。 <xref:System.Windows.Forms.Integration?displayProperty=nameWithType>命名空間提供類別，可讓一般互通的案例。 實作互通性功能的兩個類別都<xref:System.Windows.Forms.Integration.WindowsFormsHost>和<xref:System.Windows.Forms.Integration.ElementHost>。 本主題描述支援的交互操作情節以及不支援的情節。  
@@ -35,7 +37,7 @@ ms.lasthandoff: 12/22/2017
   
 <a name="Windows_Presentation_Foundation_Application_Hosting"></a>   
 ## <a name="hosting-windows-forms-controls-in-wpf"></a>在 WPF 中裝載 Windows Forms 控制項  
- [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] 控制項裝載 [!INCLUDE[TLA2#tla_winforms](../../../../includes/tla2sharptla-winforms-md.md)] 控制項時，支援下列交互操作情節︰  
+ 支援下列互通的案例時[!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)]控制項裝載 Windows Form 控制項：  
   
 -   [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] 控制項可能會使用 XAML 來裝載一或多個 [!INCLUDE[TLA#tla_winforms](../../../../includes/tlasharptla-winforms-md.md)] 控制項。  
   
@@ -79,11 +81,11 @@ ms.lasthandoff: 12/22/2017
 |行為|支援|不支援|  
 |--------------|---------------|-------------------|  
 |透明度|[!INCLUDE[TLA#tla_winforms](../../../../includes/tlasharptla-winforms-md.md)] 控制項轉譯支援透明度。 [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] 父控制項的背景可能會變成裝載之 [!INCLUDE[TLA#tla_winforms](../../../../includes/tlasharptla-winforms-md.md)] 控制項的背景。|部分 [!INCLUDE[TLA#tla_winforms](../../../../includes/tlasharptla-winforms-md.md)] 控制項不支援透明度。 例如，<xref:System.Windows.Forms.TextBox>和<xref:System.Windows.Forms.ComboBox>控制項不會被透明時由[!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)]。|  
-|定位處理|裝載之 [!INCLUDE[TLA#tla_winforms](../../../../includes/tlasharptla-winforms-md.md)] 控制項的定位順序會與在 [!INCLUDE[TLA#tla_winforms](../../../../includes/tlasharptla-winforms-md.md)] 應用程式中裝載這些控制項時相同。<br /><br /> 使用 TAB 鍵和 SHIFT+TAB 鍵從 [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] 控制項跳到 [!INCLUDE[TLA#tla_winforms](../../../../includes/tlasharptla-winforms-md.md)] 控制項會如常運作。<br /><br /> [!INCLUDE[TLA#tla_winforms](../../../../includes/tlasharptla-winforms-md.md)]控制項有<xref:System.Windows.Forms.Control.TabStop%2A>屬性值為`false`不會接收焦點時使用者索引標籤控制項。<br /><br /> -每個<xref:System.Windows.Forms.Integration.WindowsFormsHost>控制項有<xref:System.Windows.Forms.Integration.WindowsFormsHost.TabIndex%2A>值，決定何時，<xref:System.Windows.Forms.Integration.WindowsFormsHost>控制項將會接收焦點。<br />-   [!INCLUDE[TLA#tla_winforms](../../../../includes/tlasharptla-winforms-md.md)]內包含的控制項<xref:System.Windows.Forms.Integration.WindowsFormsHost>容器遵循所指定的順序<xref:System.Windows.Forms.Control.TabIndex%2A>屬性。 從最後一個定位點索引進行定位處理時，會將焦點放在下一個 [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] 控制項 (如果有的話)。 如果沒有其他可設為焦點的 [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] 控制項，則定位處理會傳回定位順序中的第一個 [!INCLUDE[TLA#tla_winforms](../../../../includes/tlasharptla-winforms-md.md)] 控制項。<br />-   <xref:System.Windows.Forms.Integration.WindowsFormsHost.TabIndex%2A>控制項內的值<xref:System.Windows.Forms.Integration.WindowsFormsHost>相對於同層級[!INCLUDE[TLA#tla_winforms](../../../../includes/tlasharptla-winforms-md.md)]控制項中所包含的<xref:System.Windows.Forms.Integration.WindowsFormsHost>控制項。<br />-   定位處理接受控制項特定行為。 例如，按下 TAB 鍵在<xref:System.Windows.Forms.TextBox>控制項具有<xref:System.Windows.Forms.TextBoxBase.AcceptsTab%2A>屬性值`true` 索引標籤的方塊中輸入文字而不是將焦點移。|不適用。|  
+|定位處理|裝載之 [!INCLUDE[TLA#tla_winforms](../../../../includes/tlasharptla-winforms-md.md)] 控制項的定位順序會與在 [!INCLUDE[TLA#tla_winforms](../../../../includes/tlasharptla-winforms-md.md)] 應用程式中裝載這些控制項時相同。<br /><br /> 使用 TAB 鍵和 SHIFT+TAB 鍵從 [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] 控制項跳到 [!INCLUDE[TLA#tla_winforms](../../../../includes/tlasharptla-winforms-md.md)] 控制項會如常運作。<br /><br /> [!INCLUDE[TLA#tla_winforms](../../../../includes/tlasharptla-winforms-md.md)] 控制項有<xref:System.Windows.Forms.Control.TabStop%2A>屬性值為`false`不會接收焦點時使用者索引標籤控制項。<br /><br /> -每個<xref:System.Windows.Forms.Integration.WindowsFormsHost>控制項有<xref:System.Windows.Forms.Integration.WindowsFormsHost.TabIndex%2A>值，決定何時，<xref:System.Windows.Forms.Integration.WindowsFormsHost>控制項將會接收焦點。<br />-   [!INCLUDE[TLA#tla_winforms](../../../../includes/tlasharptla-winforms-md.md)] 內包含的控制項<xref:System.Windows.Forms.Integration.WindowsFormsHost>容器遵循所指定的順序<xref:System.Windows.Forms.Control.TabIndex%2A>屬性。 從最後一個定位點索引進行定位處理時，會將焦點放在下一個 [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] 控制項 (如果有的話)。 如果沒有其他可設為焦點的 [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] 控制項，則定位處理會傳回定位順序中的第一個 [!INCLUDE[TLA#tla_winforms](../../../../includes/tlasharptla-winforms-md.md)] 控制項。<br />-   <xref:System.Windows.Forms.Integration.WindowsFormsHost.TabIndex%2A> 控制項內的值<xref:System.Windows.Forms.Integration.WindowsFormsHost>相對於同層級[!INCLUDE[TLA#tla_winforms](../../../../includes/tlasharptla-winforms-md.md)]控制項中所包含的<xref:System.Windows.Forms.Integration.WindowsFormsHost>控制項。<br />-   定位處理接受控制項特定行為。 例如，按下 TAB 鍵在<xref:System.Windows.Forms.TextBox>控制項具有<xref:System.Windows.Forms.TextBoxBase.AcceptsTab%2A>屬性值`true` 索引標籤的方塊中輸入文字而不是將焦點移。|不適用。|  
 |使用方向鍵巡覽|瀏覽箭號與金鑰存放在<xref:System.Windows.Forms.Integration.WindowsFormsHost>控制項是一般相同[!INCLUDE[TLA#tla_winforms](../../../../includes/tlasharptla-winforms-md.md)]容器控制項： 向上鍵和向左鍵選取上一個控制項，並向下箭號與向右箭號的索引鍵選取下一個控制項。<br />-向上箭頭和向左鍵從第一個控制項中所包含的索引鍵<xref:System.Windows.Forms.Integration.WindowsFormsHost>控制項執行 SHIFT + TAB 鍵盤快速鍵相同的動作。 如果沒有可設定焦點[!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)]控制項，焦點升高超過<xref:System.Windows.Forms.Integration.WindowsFormsHost>控制項。 此行為不同於標準<xref:System.Windows.Forms.ContainerControl>中的行為不換行到最後一個控制項就會發生。 如果沒有其他可設為焦點的 [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] 控制項，則焦點會回到定位順序中的最後一個 [!INCLUDE[TLA#tla_winforms](../../../../includes/tlasharptla-winforms-md.md)] 控制項。<br />-向下箭號與向右箭號從最後一個控制項中所包含的索引鍵<xref:System.Windows.Forms.Integration.WindowsFormsHost>控制項執行 TAB 鍵相同的動作。 如果沒有可設定焦點[!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)]控制項，焦點升高超過<xref:System.Windows.Forms.Integration.WindowsFormsHost>控制項。 此行為不同於標準<xref:System.Windows.Forms.ContainerControl>中的行為不換行的第一個控制項，就會發生。 如果沒有其他可設為焦點的 [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] 控制項，則焦點會回到定位順序中的第一個 [!INCLUDE[TLA#tla_winforms](../../../../includes/tlasharptla-winforms-md.md)] 控制項。|不適用。|  
 |快速鍵|除非在「不支援」的資料行中註明，否則快速鍵會如常運作。|跨技術的重複快速鍵不會像一般重複快速鍵一樣運作。 跨技術重複快速鍵時，即至少一個快速鍵位於 [!INCLUDE[TLA#tla_winforms](../../../../includes/tlasharptla-winforms-md.md)] 控制項，而另一個快速鍵位於 [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] 控制項，則 [!INCLUDE[TLA#tla_winforms](../../../../includes/tlasharptla-winforms-md.md)] 控制項一律會收到快速鍵。 按下重複快速鍵時，不會切換控制項之間的焦點。|  
-|快速鍵|除非在「不支援」的資料行中註明，否則快速鍵會如常運作。|在前置處理階段處理的 -   [!INCLUDE[TLA#tla_winforms](../../../../includes/tlasharptla-winforms-md.md)] 快速鍵，其優先順序高於 [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] 快速鍵。 例如，如果您有<xref:System.Windows.Forms.ToolStrip>控制使用 CTRL + S 快速鍵定義，而且沒有[!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)]命令繫結至 CTRL + S、<xref:System.Windows.Forms.ToolStrip>控制處理常式永遠會叫用第一次，不論焦點。<br />-   [!INCLUDE[TLA#tla_winforms](../../../../includes/tlasharptla-winforms-md.md)]快速鍵都由<xref:System.Windows.Forms.Control.KeyDown>事件會在最後處理[!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)]。 您可以覆寫，以避免這種行為[!INCLUDE[TLA#tla_winforms](../../../../includes/tlasharptla-winforms-md.md)]控制項的<xref:System.Windows.Forms.Control.IsInputKey%2A>方法或處理<xref:System.Windows.Forms.Control.PreviewKeyDown>事件。 傳回`true`從<xref:System.Windows.Forms.Control.IsInputKey%2A>方法，或設定值<xref:System.Windows.Forms.PreviewKeyDownEventArgs.IsInputKey%2A?displayProperty=nameWithType>屬性`true`中您<xref:System.Windows.Forms.Control.PreviewKeyDown>事件處理常式。|  
-|AcceptsReturn、AcceptsTab 和其他控制項特定行為|變更預設鍵盤行為的屬性如往常般運作假設[!INCLUDE[TLA#tla_winforms](../../../../includes/tlasharptla-winforms-md.md)]控制覆寫<xref:System.Windows.Forms.Control.IsInputKey%2A>方法以傳回`true`。|[!INCLUDE[TLA#tla_winforms](../../../../includes/tlasharptla-winforms-md.md)]變更預設值的控制項由處理鍵盤行為<xref:System.Windows.Forms.Control.KeyDown>最後主應用程式中處理事件[!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)]控制項。 因為這些控制項會最後處理，所以它們會產生非預期的行為。|  
+|快速鍵|除非在「不支援」的資料行中註明，否則快速鍵會如常運作。|在前置處理階段處理的 -   [!INCLUDE[TLA#tla_winforms](../../../../includes/tlasharptla-winforms-md.md)] 快速鍵，其優先順序高於 [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] 快速鍵。 例如，如果您有<xref:System.Windows.Forms.ToolStrip>控制使用 CTRL + S 快速鍵定義，而且沒有[!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)]命令繫結至 CTRL + S、<xref:System.Windows.Forms.ToolStrip>控制處理常式永遠會叫用第一次，不論焦點。<br />-   [!INCLUDE[TLA#tla_winforms](../../../../includes/tlasharptla-winforms-md.md)] 快速鍵都由<xref:System.Windows.Forms.Control.KeyDown>事件會在最後處理[!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)]。 您可以覆寫，以避免這種行為[!INCLUDE[TLA#tla_winforms](../../../../includes/tlasharptla-winforms-md.md)]控制項的<xref:System.Windows.Forms.Control.IsInputKey%2A>方法或處理<xref:System.Windows.Forms.Control.PreviewKeyDown>事件。 傳回`true`從<xref:System.Windows.Forms.Control.IsInputKey%2A>方法，或設定值<xref:System.Windows.Forms.PreviewKeyDownEventArgs.IsInputKey%2A?displayProperty=nameWithType>屬性`true`中您<xref:System.Windows.Forms.Control.PreviewKeyDown>事件處理常式。|  
+|AcceptsReturn、AcceptsTab 和其他控制項特定行為|變更預設鍵盤行為的屬性如往常般運作假設[!INCLUDE[TLA#tla_winforms](../../../../includes/tlasharptla-winforms-md.md)]控制覆寫<xref:System.Windows.Forms.Control.IsInputKey%2A>方法以傳回`true`。|[!INCLUDE[TLA#tla_winforms](../../../../includes/tlasharptla-winforms-md.md)] 變更預設值的控制項由處理鍵盤行為<xref:System.Windows.Forms.Control.KeyDown>最後主應用程式中處理事件[!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)]控制項。 因為這些控制項會最後處理，所以它們會產生非預期的行為。|  
 |Enter 和 Leave 事件|當焦點不會包含<xref:System.Windows.Forms.Integration.ElementHost>控制，請輸入，以及在單一的焦點變更時如往常般引發保持事件<xref:System.Windows.Forms.Integration.WindowsFormsHost>控制項。|發生下列焦點變更時，不會引發 Enter 和 Leave 事件：<br /><br /> -從外部至內部<xref:System.Windows.Forms.Integration.WindowsFormsHost>控制項。<br />來源內的外部至<xref:System.Windows.Forms.Integration.WindowsFormsHost>控制項。<br />-外<xref:System.Windows.Forms.Integration.WindowsFormsHost>控制項。<br />-從[!INCLUDE[TLA#tla_winforms](../../../../includes/tlasharptla-winforms-md.md)]控制項裝載於<xref:System.Windows.Forms.Integration.WindowsFormsHost>控制權傳輸至<xref:System.Windows.Forms.Integration.ElementHost>控制項裝載於相同<xref:System.Windows.Forms.Integration.WindowsFormsHost>。|  
 |多執行緒|支援各種多執行緒。|[!INCLUDE[TLA#tla_winforms](../../../../includes/tlasharptla-winforms-md.md)] 和 [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] 技術採用單一執行緒並行模型。 在偵錯期間，其他執行緒中架構物件的呼叫將會引發例外狀況，來強制執行這項需求。|  
 |安全性|所有交互操作情節都需要完全信任。|在部分信任中，不允許交互操作情節。|  
@@ -93,7 +95,7 @@ ms.lasthandoff: 12/22/2017
   
 <a name="Windows_Forms_Application_Hosting_Windows"></a>   
 ## <a name="hosting-wpf-controls-in-windows-forms"></a>將 WPF 控制項裝載在 Windows Forms 中  
- [!INCLUDE[TLA2#tla_winforms](../../../../includes/tla2sharptla-winforms-md.md)] 控制項裝載 [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] 控制項時，支援下列交互操作情節︰  
+ 當 Windows Form 控制項裝載支援下列的互通性案例[!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)]控制項：  
   
 -   使用程式碼來裝載一或多個 [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] 控制項。  
   
@@ -128,7 +130,7 @@ ms.lasthandoff: 12/22/2017
 |剪貼簿|所有剪貼簿作業都會如常運作。 這包括 [!INCLUDE[TLA#tla_winforms](../../../../includes/tlasharptla-winforms-md.md)] 與 [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] 控制項之間的剪下和貼上。|不適用。|  
 |拖放功能|所有拖放作業都會如常運作。 這包括 [!INCLUDE[TLA#tla_winforms](../../../../includes/tlasharptla-winforms-md.md)] 與 [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] 控制項之間的作業。|不適用。|  
   
-## <a name="see-also"></a>請參閱  
+## <a name="see-also"></a>另請參閱  
  <xref:System.Windows.Forms.Integration.ElementHost>  
  <xref:System.Windows.Forms.Integration.WindowsFormsHost>  
  [逐步解說：在 WPF 中裝載 Windows Forms 控制項](../../../../docs/framework/wpf/advanced/walkthrough-hosting-a-windows-forms-control-in-wpf.md)  

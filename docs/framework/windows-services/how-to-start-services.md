@@ -1,27 +1,29 @@
 ---
-title: "如何：啟動服務"
-ms.custom: 
+title: 如何：啟動服務
+ms.custom: ''
 ms.date: 03/30/2017
 ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.technology: dotnet-clr
-ms.tgt_pltfrm: 
+ms.reviewer: ''
+ms.suite: ''
+ms.technology:
+- dotnet-clr
+ms.tgt_pltfrm: ''
 ms.topic: article
 helpviewer_keywords:
 - Windows Service applications, starting
 - services, starting
 ms.assetid: 9ea77955-2d96-4c3d-913c-14db7604cdad
-caps.latest.revision: "16"
+caps.latest.revision: 16
 author: ghogen
 ms.author: ghogen
 manager: douge
-ms.workload: dotnet
-ms.openlocfilehash: 8352edaa9386adc1fbf3057c6e98f5a9cf9ce4a1
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.workload:
+- dotnet
+ms.openlocfilehash: 47e27f579c0ed7d1be0b061bc6e79bba0c060abb
+ms.sourcegitcommit: 2042de78fcdceebb6b8ac4b7a292b93e8782cbf5
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 04/27/2018
 ---
 # <a name="how-to-start-services"></a>如何：啟動服務
 安裝服務之後，它必須啟動。 開始呼叫<xref:System.ServiceProcess.ServiceBase.OnStart%2A>服務類別上的方法。 通常，<xref:System.ServiceProcess.ServiceBase.OnStart%2A>方法來定義服務將會執行實際工作。 服務啟動之後，它會保持有效，直到以手動方式暫停或停止。  
@@ -29,7 +31,7 @@ ms.lasthandoff: 12/22/2017
  服務可以設定要自動或手動啟動。 安裝所在的電腦已重新開機，或第一次開啟時，將會啟動時自動啟動服務。 使用者必須啟動服務，以手動方式啟動。  
   
 > [!NOTE]
->  根據預設，服務則是以建立[!INCLUDE[vsprvs](../../../includes/vsprvs-md.md)]設定為手動啟動。  
+>  根據預設，使用 Visual Studio 建立的服務會設定為手動啟動。  
   
  有數種方式，您可以手動啟動服務，從**伺服器總管**，從**服務控制管理員**，或從程式碼使用的元件呼叫<xref:System.ServiceProcess.ServiceController>。  
   
@@ -87,7 +89,7 @@ ms.lasthandoff: 12/22/2017
   
 2.  呼叫 <xref:System.ServiceProcess.ServiceController.Start%2A> 方法啟動服務。  
   
-## <a name="see-also"></a>請參閱  
+## <a name="see-also"></a>另請參閱  
  [Windows 服務應用程式簡介](../../../docs/framework/windows-services/introduction-to-windows-service-applications.md)  
  [如何：建立 Windows 服務](../../../docs/framework/windows-services/how-to-create-windows-services.md)  
  [如何：將 Installer 新增至服務應用程式](../../../docs/framework/windows-services/how-to-add-installers-to-your-service-application.md)

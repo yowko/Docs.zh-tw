@@ -27,11 +27,11 @@ ms.author: dotnetcontent
 manager: wpickett
 ms.workload:
 - dotnet
-ms.openlocfilehash: 61e4893ac32d2013b090a748078ec1e3a84ea3ac
-ms.sourcegitcommit: 86adcc06e35390f13c1e372c36d2e044f1fc31ef
+ms.openlocfilehash: 77c69c5c39d90dcc28aa9c6084d84ace29df6f18
+ms.sourcegitcommit: 2042de78fcdceebb6b8ac4b7a292b93e8782cbf5
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/26/2018
+ms.lasthandoff: 04/27/2018
 ---
 # <a name="more-secure-file-and-data-access-in-windows-forms"></a>Windows Form 中更安全的檔案和資料存取
 [!INCLUDE[dnprdnshort](../../../includes/dnprdnshort-md.md)] 使用權限協助保護資源與資料。 您的應用程式可以讀取或寫入資料的位置取決於應用程式授與權限。 當您的應用程式在部分信任的環境中執行時，您可能無法存取您的資料，或者您可能要改變您存取資料的方式。  
@@ -39,7 +39,7 @@ ms.lasthandoff: 04/26/2018
  當您遇到安全性限制時，您有兩個選項：判斷權限 (假設已授與您的應用程式)，或者使用被寫成具有在部分信任環境運作功能的版本。 下列章節將討論如何使用在部分信任環境執行的應用程式所產生的檔案、資料庫以及登錄存取。  
   
 > [!NOTE]
->  根據預設，產生 [!INCLUDE[ndptecclick](../../../includes/ndptecclick-md.md)] 部署的工具預設這些部署去要求來自執行那些程式之電腦的完全信任。 如果您決定想要執行於部分信任中的額外安全性優點，您必須在 [!INCLUDE[vsprvs](../../../includes/vsprvs-md.md)] 或 [!INCLUDE[winsdklong](../../../includes/winsdklong-md.md)] 下列工具(Mage.exe 或 MageUI.exe) 中改變這項預設值。  如需有關 Windows Forms 安全性，以及如何判斷您的應用程式的適當信任層級的詳細資訊，請參閱[安全性的 Windows Form 概觀](../../../docs/framework/winforms/security-in-windows-forms-overview.md)。  
+>  根據預設，產生 [!INCLUDE[ndptecclick](../../../includes/ndptecclick-md.md)] 部署的工具預設這些部署去要求來自執行那些程式之電腦的完全信任。 如果您決定您想要在部分信任中執行的額外的安全性優點，您必須變更此預設值，在 Visual Studio 或其中一個[!INCLUDE[winsdklong](../../../includes/winsdklong-md.md)]工具 （Mage.exe 或 MageUI.exe）。 如需有關 Windows Forms 安全性，以及如何判斷您的應用程式的適當信任層級的詳細資訊，請參閱[安全性的 Windows Form 概觀](../../../docs/framework/winforms/security-in-windows-forms-overview.md)。  
   
 ## <a name="file-access"></a>檔案存取  
  <xref:System.Security.Permissions.FileIOPermission> 類別控制在 [!INCLUDE[dnprdnshort](../../../includes/dnprdnshort-md.md)] 中的檔案與資料夾存取。 根據預設，安全性系統並未將 <xref:System.Security.Permissions.FileIOPermission> 授與部分安全性環境，例如近端內部網路或者網際網路區域。 然而，如果您修改您應用程式的設計或使用不同方法來存取檔案，需要檔案存取的應用程式依然能夠在這些環境中運作。 根據預設，近端內部網路區域已經被授與權限能夠存取相同網站與相同目錄、連線到網站的原始來源、以及從其安裝目錄讀取。 根據預設，網際網路區域只被授與連回其原始網站的權限。  

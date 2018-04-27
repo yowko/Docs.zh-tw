@@ -16,11 +16,11 @@ ms.assetid: 72528d02-77b7-4b4c-8b9e-d12f666f92ef
 caps.latest.revision: 8
 author: dotnet-bot
 ms.author: dotnetcontent
-ms.openlocfilehash: 63dfdf0f2fe8869577d450f21c4f12b5eec125bb
-ms.sourcegitcommit: 86adcc06e35390f13c1e372c36d2e044f1fc31ef
+ms.openlocfilehash: ab3f9d2729dec1d97dc00fac3527e492d3c5880a
+ms.sourcegitcommit: 2042de78fcdceebb6b8ac4b7a292b93e8782cbf5
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/26/2018
+ms.lasthandoff: 04/27/2018
 ---
 # <a name="class-39ltclassnamegt39-cannot-be-found"></a>類別&#39; &lt;classname&gt; &#39;找不到
 類別\<類別名稱 >' 找不到。 此狀況通常是因為 'Microsoft.VisualBasic.dll' 不符。  
@@ -33,7 +33,7 @@ ms.lasthandoff: 04/26/2018
   
 1.  再次編譯程式，看看錯誤是否重複發生。  
   
-2.  如果錯誤重複發生，請儲存您的工作，然後重新啟動 [!INCLUDE[vsprvs](~/includes/vsprvs-md.md)]。  
+2.  如果錯誤重複發生，請儲存工作並重新啟動 Visual Studio。  
   
 3.  如果錯誤持續發生，請重新安裝 Visual Basic。  
   

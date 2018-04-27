@@ -13,11 +13,11 @@ ms.assetid: 309c0ad5-83e4-4f96-99ea-83cd95107417
 caps.latest.revision: 18
 author: dotnet-bot
 ms.author: dotnetcontent
-ms.openlocfilehash: da42d58190e8069154cd8383cf0a87e0b19f5ae4
-ms.sourcegitcommit: 86adcc06e35390f13c1e372c36d2e044f1fc31ef
+ms.openlocfilehash: bffbb8dabdd2463633c9d2ca8de3ef120850be3f
+ms.sourcegitcommit: 2042de78fcdceebb6b8ac4b7a292b93e8782cbf5
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/26/2018
+ms.lasthandoff: 04/27/2018
 ---
 # <a name="constants-and-enumerations-visual-basic"></a>常數和列舉類型 (Visual Basic)
 Visual Basic 提供了一些預先定義的常數和列舉型別供開發人員。 常數用來儲存應用程式的執行過程中維持的值。 列舉提供使用相關常數組和建立常數值與名稱之關聯的便利方法。  
@@ -31,7 +31,7 @@ Visual Basic 提供了一些預先定義的常數和列舉型別供開發人員�
 |---|---|  
 |`CONFIG`|對應至的目前設定的字串**現用方案組態**方塊中**Configuration Manager**。|  
 |`DEBUG`|A`Boolean`值可在設定**專案屬性** 對話方塊。 根據預設，定義專案的偵錯組態`DEBUG`。 當`DEBUG`定義，<xref:System.Diagnostics.Debug>類別方法會產生輸出至**輸出**視窗。 未定義時，<xref:System.Diagnostics.Debug>類別方法便不會編譯，並會產生任何偵錯輸出。|  
-|`TARGET`|字串，表示命令列的設定或專案的輸出類型 **/目標**選項。 可能值`TARGET`是：<br /><br /> -「 winexe 」 的 Windows 應用程式。<br />-"exe"為主控台應用程式。<br />-「 程式庫 」 之類別程式庫。<br />-「 模組 」 的模組。<br />- **/目標**選項可以設定在[!INCLUDE[vsprvs](~/includes/vsprvs-md.md)]整合式的開發環境。 如需詳細資訊，請參閱[/target (Visual Basic)](../../visual-basic/reference/command-line-compiler/target.md)。|  
+|`TARGET`|字串，表示命令列的設定或專案的輸出類型 **/目標**選項。 可能值`TARGET`是：<br /><br /> -「 winexe 」 的 Windows 應用程式。<br />-"exe"為主控台應用程式。<br />-「 程式庫 」 之類別程式庫。<br />-「 模組 」 的模組。<br />- **/目標**可能會在 Visual Studio 整合式的開發環境中設定選項。 如需詳細資訊，請參閱[/target (Visual Basic)](../../visual-basic/reference/command-line-compiler/target.md)。|  
 |`TRACE`|A`Boolean`值可在設定**專案屬性** 對話方塊。 根據預設，專案的所有組態都定義`TRACE`。 當`TRACE`定義，<xref:System.Diagnostics.Trace>類別方法會產生輸出至**輸出**視窗。 未定義時，<xref:System.Diagnostics.Trace>類別方法便不會編譯，且沒有`Trace`會產生輸出。|  
 |`VBC_VER`|Visual Basic 版本，表示中的數字*主要*。*次要*格式。 版本號碼[!INCLUDE[vbprvblong](~/includes/vbprvblong-md.md)]是 8.0。|  
   

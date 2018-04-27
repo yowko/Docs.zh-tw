@@ -1,12 +1,13 @@
 ---
-title: "Windows Form 中的安全性概觀"
-ms.custom: 
+title: Windows Form 中的安全性概觀
+ms.custom: ''
 ms.date: 03/30/2017
 ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.technology: dotnet-winforms
-ms.tgt_pltfrm: 
+ms.reviewer: ''
+ms.suite: ''
+ms.technology:
+- dotnet-winforms
+ms.tgt_pltfrm: ''
 ms.topic: article
 helpviewer_keywords:
 - code access security [Windows Forms], Windows Forms
@@ -15,16 +16,17 @@ helpviewer_keywords:
 - security [Windows Forms], about security
 - access control [Windows Forms], Windows Forms
 ms.assetid: 4810dc9f-ea23-4ce1-8ea1-657f0ff1d820
-caps.latest.revision: "16"
+caps.latest.revision: 16
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.workload: dotnet
-ms.openlocfilehash: e56ae77a36ce0000fd518a3324ab5e5b8409d1d4
-ms.sourcegitcommit: c0dd436f6f8f44dc80dc43b07f6841a00b74b23f
+ms.workload:
+- dotnet
+ms.openlocfilehash: 57f46620e7b98bb1a4c120684075dbe065db9714
+ms.sourcegitcommit: 2042de78fcdceebb6b8ac4b7a292b93e8782cbf5
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 01/19/2018
+ms.lasthandoff: 04/27/2018
 ---
 # <a name="security-in-windows-forms-overview"></a>Windows Form 中的安全性概觀
 在 [!INCLUDE[dnprdnshort](../../../includes/dnprdnshort-md.md)] 發行之前，在使用者電腦上執行的所有程式碼，對資源的存取權限都和電腦的使用者相同。 例如，如果使用者可以存取檔案系統，程式碼就可以存取檔案系統，如果使用者可以存取某個資料庫，程式碼就可以存取該資料庫。 就使用者明確安裝在本機電腦上的可執行檔中的程式碼而言，也許這些權限是可接受的，但是就來自網際網路或近端內部網路的潛在惡意程式碼而言，可能就無法接受了。 不應該讓這個程式碼在沒有權限的情況下，存取使用者的電腦資源。  
@@ -60,7 +62,7 @@ ms.lasthandoff: 01/19/2018
   
  當您要求選擇性權限時，您必須處理當應用程式執行的動作需要未被授與的權限時，所產生的安全性例外狀況。 適當處理 <xref:System.Security.SecurityException> 可確保您的應用程式能夠繼續運作。 您的應用程式可以使用例外狀況來判斷是否應該為使用者停用某功能。 例如，如果未授與必要的檔案權限，應用程式可以停用 [儲存] 功能表選項。  
   
- 有時候，很難知道您是否已確立所有適當的權限。 比方說，表面上看起來無害的方法呼叫，可能會在其執行期間的某個時間點存取檔案系統。 如果您未以所有的必要權限來部署應用程式，在桌面上偵錯時，測試可能沒問題，但部署時可能會失敗。 [!INCLUDE[dnprdnlong](../../../includes/dnprdnlong-md.md)] SDK 和 [!INCLUDE[vsprvslong](../../../includes/vsprvslong-md.md)] 都有包含用來計算應用程式所需權限的工具：分別是 MT.exe 命令列工具，以及 [!INCLUDE[vsprvs](../../../includes/vsprvs-md.md)] 的計算權限功能。  
+ 有時候，很難知道您是否已確立所有適當的權限。 比方說，表面上看起來無害的方法呼叫，可能會在其執行期間的某個時間點存取檔案系統。 如果您未以所有的必要權限來部署應用程式，在桌面上偵錯時，測試可能沒問題，但部署時可能會失敗。 這兩個[!INCLUDE[dnprdnlong](../../../includes/dnprdnlong-md.md)]SDK 和[!INCLUDE[vsprvslong](../../../includes/vsprvslong-md.md)]包含用來計算應用程式所需的權限： MT.exe 可命令列工具及 Visual studio 中，「 計算使用權限 」 功能分別。  
   
  下列主題說明其他 Windows Form 安全性功能。  
   
@@ -86,14 +88,14 @@ ms.lasthandoff: 01/19/2018
   
  您要選擇哪一種技術，將取決於您的部署環境。 如需詳細資訊，請參閱[選擇 ClickOnce 部署策略](/visualstudio/deployment/choosing-a-clickonce-deployment-strategy)。  
   
- 根據預設，使用 [!INCLUDE[vsprvs](../../../includes/vsprvs-md.md)] 或 [!INCLUDE[dnprdnlong](../../../includes/dnprdnlong-md.md)] SDK 工具 (Mage.exe 和 MageUI.exe) 來部署的 [!INCLUDE[ndptecclick](../../../includes/ndptecclick-md.md)] 應用程式，會設定為要在具有完全信任的用戶端電腦上執行。 如果您在部署應用程式時，是使用部分信任，或是只有使用某些額外的權限，則必須變更這個預設值。 您可以在設定部署時，使用 [!INCLUDE[vsprvs](../../../includes/vsprvs-md.md)] 或 [!INCLUDE[dnprdnlong](../../../includes/dnprdnlong-md.md)] SDK 工具 MageUI.exe 來執行此作業。 如需有關如何使用 MageUI.exe 的詳細資訊，請參閱＜逐步解說：從命令列部署 ClickOnce 應用程式＞。  另請參閱[如何：設定 ClickOnce 應用程式的自訂權限](http://msdn.microsoft.com/library/hafybdaa\(v=vs.110\))或[如何：設定 ClickOnce 應用程式的自訂權限](http://msdn.microsoft.com/library/hafybdaa\(v=vs.120\))。  
+ 根據預設，[!INCLUDE[ndptecclick](../../../includes/ndptecclick-md.md)]部署使用 Visual Studio 的應用程式或[!INCLUDE[dnprdnlong](../../../includes/dnprdnlong-md.md)]SDK 工具 （Mage.exe 和 MageUI.exe） 設定為具有完全信任的用戶端電腦上執行。 如果您在部署應用程式時，是使用部分信任，或是只有使用某些額外的權限，則必須變更這個預設值。 您可以使用 Visual Studio 或[!INCLUDE[dnprdnlong](../../../includes/dnprdnlong-md.md)]SDK 工具 MageUI.exe，當您設定您的部署。 如需有關如何使用 MageUI.exe 的詳細資訊，請參閱＜逐步解說：從命令列部署 ClickOnce 應用程式＞。  另請參閱[如何：設定 ClickOnce 應用程式的自訂權限](http://msdn.microsoft.com/library/hafybdaa\(v=vs.110\))或[如何：設定 ClickOnce 應用程式的自訂權限](http://msdn.microsoft.com/library/hafybdaa\(v=vs.120\))。  
   
  如需有關 [!INCLUDE[ndptecclick](../../../includes/ndptecclick-md.md)] 安全性層面和權限提高的詳細資訊，請參閱[保護 ClickOnce 應用程式](/visualstudio/deployment/securing-clickonce-applications)。 如需有關受信任的應用程式部署的詳細資訊，請參閱[受信任的應用程式部署概觀](/visualstudio/deployment/trusted-application-deployment-overview)。  
   
 ### <a name="testing-the-application"></a>測試應用程式  
- 如果您已使用 [!INCLUDE[vsprvs](../../../includes/vsprvs-md.md)] 來部署您的 Windows Form 應用程式，您可以從開發環境啟用部分信任中的偵錯或受限制的權限集合。  另請參閱[如何：以限制使用權限偵錯 ClickOnce 應用程式](http://msdn.microsoft.com/library/593zkfdf\(v=vs.110\))或[如何：以限制使用權限偵錯 ClickOnce 應用程式](http://msdn.microsoft.com/library/593zkfdf\(v=vs.120\))。  
+ 如果您已經使用 Visual Studio 部署 Windows Forms 應用程式，您可以啟用偵錯部分信任或受限制的使用權限集合從開發環境中。  另請參閱[如何：以限制使用權限偵錯 ClickOnce 應用程式](http://msdn.microsoft.com/library/593zkfdf\(v=vs.110\))或[如何：以限制使用權限偵錯 ClickOnce 應用程式](http://msdn.microsoft.com/library/593zkfdf\(v=vs.120\))。  
   
-## <a name="see-also"></a>請參閱  
+## <a name="see-also"></a>另請參閱  
  [Windows Forms 安全性](../../../docs/framework/winforms/windows-forms-security.md)  
  [程式碼存取安全性的基本概念](../../../docs/framework/misc/code-access-security-basics.md)  
  [ClickOnce 安全性和部署](/visualstudio/deployment/clickonce-security-and-deployment)  

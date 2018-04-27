@@ -26,11 +26,11 @@ ms.assetid: b324cc1e-b03c-4f39-aea6-6a6d5bfd0e37
 caps.latest.revision: 21
 author: dotnet-bot
 ms.author: dotnetcontent
-ms.openlocfilehash: f3ff175a0f8d152febf2d50c294d401b12285fc7
-ms.sourcegitcommit: 86adcc06e35390f13c1e372c36d2e044f1fc31ef
+ms.openlocfilehash: 1fae8215543c50484dc5ea7fc24f292ba84e2699
+ms.sourcegitcommit: 2042de78fcdceebb6b8ac4b7a292b93e8782cbf5
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/26/2018
+ms.lasthandoff: 04/27/2018
 ---
 # <a name="troubleshooting-interoperability-visual-basic"></a>疑難排解互通性 (Visual Basic)
 當您 COM 和 managed 程式碼之間的交互操作[!INCLUDE[dnprdnshort](~/includes/dnprdnshort-md.md)]，您可能會遇到一或多個下列常見的問題。  
@@ -107,7 +107,7 @@ Set db = DBEngine.OpenDatabase("C:\nwind.mdb")
  您可以檢查例外狀況物件的內容來找到錯誤描述、 HRESULT，以及 COM 錯誤的來源等資訊。  
   
 ##  <a name="vbconinteroperabilitymarshalinganchor10"></a> ActiveX 控制項問題  
- 大部分的 ActiveX 控制項可搭配 Visual Basic 6.0 使用 Visual Basic.NET 運作時發生問題。 主要的例外狀況是容器控制項中或以視覺化方式包含其他控制項的控制項。 無法以正常運作的舊版控制項的一些範例[!INCLUDE[vsprvs](~/includes/vsprvs-md.md)]如下：  
+ 大部分的 ActiveX 控制項可搭配 Visual Basic 6.0 使用 Visual Basic.NET 運作時發生問題。 主要的例外狀況是容器控制項中或以視覺化方式包含其他控制項的控制項。 使用 Visual Studio 無法正確運作的舊版控制項的一些範例如下所示：  
   
 -   Microsoft Forms 2.0 框架控制項  
   
@@ -115,7 +115,7 @@ Set db = DBEngine.OpenDatabase("C:\nwind.mdb")
   
 -   Sheridan 索引標籤控制項  
   
- 有只有少數的因應措施不支援的 ActiveX 控制項問題。 您可以移轉現有的控制項，[!INCLUDE[vsprvs](~/includes/vsprvs-md.md)]如果您擁有原始的原始程式碼。 否則，您可以洽詢軟體廠商更新。ActiveX 控制項不支援的網路相容版本的控制項來取代。  
+ 有只有少數的因應措施不支援的 ActiveX 控制項問題。 如果您擁有原始的原始程式碼，您可以將現有的控制項移轉到 Visual Studio 中。 否則，您可以洽詢軟體廠商更新。ActiveX 控制項不支援的網路相容版本的控制項來取代。  
   
 ##  <a name="vbconinteroperabilitymarshalinganchor11"></a> 傳遞的控制項 ByRef 的 ReadOnly 屬性  
  Visual Basic.NET 有時會引發 COM 錯誤，例如，「 錯誤 0x800A017F CTL_E_SETNOTSUPPORTED"，當您將傳遞`ReadOnly`的一些較舊的 ActiveX 控制項做為屬性`ByRef`其他程序的參數。 從 Visual Basic 6.0 的類似程序呼叫不會引發錯誤，而且參數會視為以值傳遞。 Visual Basic.NET 錯誤訊息指出您要變更此屬性沒有屬性，`Set`程序。  

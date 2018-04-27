@@ -1,27 +1,29 @@
 ---
-title: "Windows Form 概觀"
-ms.custom: 
+title: Windows Form 概觀
+ms.custom: ''
 ms.date: 03/30/2017
 ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.technology: dotnet-winforms
-ms.tgt_pltfrm: 
+ms.reviewer: ''
+ms.suite: ''
+ms.technology:
+- dotnet-winforms
+ms.tgt_pltfrm: ''
 ms.topic: article
 helpviewer_keywords:
 - smart clients
 - Windows Forms, about Windows Forms
 ms.assetid: 3a2b6284-c8d6-4e1c-8c69-0bed38f38cd4
-caps.latest.revision: "34"
+caps.latest.revision: 34
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.workload: dotnet
-ms.openlocfilehash: bc9ff97583566bd950486d96bd100f05ef651c7e
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.workload:
+- dotnet
+ms.openlocfilehash: 2620d8314a11e0a90864120c40dbc3935cce75fe
+ms.sourcegitcommit: 2042de78fcdceebb6b8ac4b7a292b93e8782cbf5
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 04/27/2018
 ---
 # <a name="windows-forms-overview"></a>Windows Form 概觀
 以下概觀將討論智慧型用戶端應用程式的優點、Windows Form 程式設計的主要功能，以及如何使用 Windows Form 來建置智慧型用戶端，以符合當今企業和終端使用者的需求。  
@@ -30,7 +32,7 @@ ms.lasthandoff: 12/22/2017
  使用 Windows Form 來開發智慧型用戶端。 「智慧型用戶端」是豐富的圖形化應用程式，容易部署及更新，無論是否連接至網際網路都能運作，而且在存取本機電腦上的資源時，所使用的方法比傳統的 Windows 應用程式更安全。  
   
 ### <a name="building-rich-interactive-user-interfaces"></a>建置豐富、互動式的使用者介面  
- Windows Form 是一種適用於 [!INCLUDE[dnprdnshort](../../../includes/dnprdnshort-md.md)] 的智慧型用戶端技術，它是一組 Managed 程式庫，可簡化常見的應用程式工作，例如讀取和寫入檔案系統。 當您使用類似 [!INCLUDE[vsprvs](../../../includes/vsprvs-md.md)] 的開發環境時，可以建立 Windows Form 智慧型用戶端應用程式來顯示資訊、要求使用者輸入，以及透過網路與遠端電腦通訊。  
+ Windows Form 是一種適用於 [!INCLUDE[dnprdnshort](../../../includes/dnprdnshort-md.md)] 的智慧型用戶端技術，它是一組 Managed 程式庫，可簡化常見的應用程式工作，例如讀取和寫入檔案系統。 當您使用類似 Visual Studio 開發環境時，則您可以透過網路來建立與遠端電腦 Windows Form 智慧型用戶端應用程式顯示資訊、 要求使用者，輸入，並進行通訊。  
   
  在 Windows Forms 中，「表單」是一種視覺化介面，您可以在上面顯示要提供給使用者的資訊。 通常在建置 Windows Forms 應用程式時，您會將控制項加入表單，以及開發對使用者動作的回應，例如滑鼠點選或是按下按鍵。 「控制項」是獨立的使用者介面 (UI) 項目，可顯示資料或接受資料輸入。  
   
@@ -40,7 +42,7 @@ ms.lasthandoff: 12/22/2017
   
  Windows Form 有豐富的 UI 控制項，可以模擬高階應用程式 (例如 Microsoft Office) 中的功能。 當您使用 <xref:System.Windows.Forms.ToolStrip> 和 <xref:System.Windows.Forms.MenuStrip> 控制項時，您可以建立包含文字和影像的工具列和功能表、顯示子功能表，以及裝載其他控制項，例如文字方塊和下拉式方塊。  
   
- 使用 [!INCLUDE[vsprvs](../../../includes/vsprvs-md.md)] 拖放式 Windows Form 設計工具，可讓您輕鬆建立 Windows Form 應用程式。 只要用您的游標選取控制項，然後將其加入表單上您想要的位置即可。 設計工具提供像是格線和對齊線之類的工具，可讓您輕鬆對齊控制項。 不論您是使用 [!INCLUDE[vsprvs](../../../includes/vsprvs-md.md)] 或是在命令列中編譯，都可以使用 <xref:System.Windows.Forms.FlowLayoutPanel>、<xref:System.Windows.Forms.TableLayoutPanel> 和 <xref:System.Windows.Forms.SplitContainer> 控制項來建立進階表單配置，以節省時間。  
+ 使用 Visual Studio 拖放 Windows Form 設計工具，您可以輕鬆地建立 Windows Forms 應用程式。 只要用您的游標選取控制項，然後將其加入表單上您想要的位置即可。 設計工具提供像是格線和對齊線之類的工具，可讓您輕鬆對齊控制項。 當您使用 Visual Studio，或在命令列進行編譯，您可以使用<xref:System.Windows.Forms.FlowLayoutPanel>，<xref:System.Windows.Forms.TableLayoutPanel>和<xref:System.Windows.Forms.SplitContainer>控制項來建立進階表單配置，以較少的時間。  
   
  最後，如果您必須建立自己的自訂 UI 項目，<xref:System.Drawing> 命名空間包含許多類別選項，可直接在表單上呈現線條、圓形和其他形狀。  
   
@@ -64,7 +66,7 @@ ms.lasthandoff: 12/22/2017
   
  您可以使用 [資料來源] 視窗，輕鬆地建立資料繫結控制項。 此視窗會顯示您專案中的資料來源，例如資料庫、Web 服務和物件。 將項目從這個視窗拖曳到專案中的表單上，即可建立資料繫結控制項。 您也可以將物件從 [資料來源] 視窗拖曳至現有的控制項，以將現有的控制項繫結至資料。  
   
- 在 Windows Forms 中，另一種管理資料繫結的方法是「設定」。 大部分的智慧型用戶端應用程式必須保留其執行階段狀態的一些相關資訊 (例如表單的最後已知大小)，以及保留使用者偏好設定資料 (例如儲存檔案的預設位置)。 應用程式設定功能為因應這些需求，提供了一種簡單的方法，可將這兩種設定都儲存在用戶端電腦上。 在使用 [!INCLUDE[vsprvs](../../../includes/vsprvs-md.md)] 或程式碼編輯器來定義這些設定之後，這些設定會保存為 XML，並且在執行階段自動讀回記憶體中。  
+ 在 Windows Forms 中，另一種管理資料繫結的方法是「設定」。 大部分的智慧型用戶端應用程式必須保留其執行階段狀態的一些相關資訊 (例如表單的最後已知大小)，以及保留使用者偏好設定資料 (例如儲存檔案的預設位置)。 應用程式設定功能為因應這些需求，提供了一種簡單的方法，可將這兩種設定都儲存在用戶端電腦上。 使用 Visual Studio 或程式碼編輯器中定義這些設定之後，設定會保存為 XML，並且在執行階段自動讀回記憶體。  
   
 #### <a name="help-displaying-and-manipulating-data"></a>顯示和操作資料的說明  
  如需如何使用這些功能的逐步解說資訊，請參閱下列說明主題。  
@@ -77,7 +79,7 @@ ms.lasthandoff: 12/22/2017
 |使用應用程式設定|[如何：建立應用程式設定](../../../docs/framework/winforms/advanced/how-to-create-application-settings.md)|  
   
 ### <a name="deploying-applications-to-client-computers"></a>將應用程式部署到用戶端電腦  
- 撰寫應用程式之後，您必須將該應用程式傳送給您的使用者，讓它們能夠自己在用戶端電腦上安裝及執行該應用程式。 當您使用 [!INCLUDE[ndptecclick](../../../includes/ndptecclick-md.md)] 技術時，只需要按幾下滑鼠，就可以從 [!INCLUDE[vsprvs](../../../includes/vsprvs-md.md)] 中部署應用程式，並可提供 URL 給使用者，指向您在網站上的應用程式。 [!INCLUDE[ndptecclick](../../../includes/ndptecclick-md.md)] 會管理您應用程式中的所有項目和相依性，並確保應用程式已正確安裝在用戶端電腦上。  
+ 撰寫應用程式之後，您必須將該應用程式傳送給您的使用者，讓它們能夠自己在用戶端電腦上安裝及執行該應用程式。 當您使用[!INCLUDE[ndptecclick](../../../includes/ndptecclick-md.md)]技術，您可以部署應用程式從 Visual Studio 內使用按幾下，並指向您在網站上的應用程式的 URL 提供給使用者。 [!INCLUDE[ndptecclick](../../../includes/ndptecclick-md.md)] 會管理您應用程式中的所有項目和相依性，並確保應用程式已正確安裝在用戶端電腦上。  
   
  [!INCLUDE[ndptecclick](../../../includes/ndptecclick-md.md)] 應用程式可以設定為只在使用者連線到網路時執行，或是線上和離線時都可執行。 當您指定應用程式應該支援離線作業時，[!INCLUDE[ndptecclick](../../../includes/ndptecclick-md.md)] 會在使用者的 [開始] 功能表中新增應用程式的連結。 然後使用者就可以直接開啟應用程式，而不需要使用 URL。  
   
@@ -103,7 +105,7 @@ ms.lasthandoff: 12/22/2017
 |列印表單的內容|[如何：列印 Windows Forms 中的圖形](../../../docs/framework/winforms/advanced/how-to-print-graphics-in-windows-forms.md)<br /><br /> [如何：在 Windows Forms 中列印多頁文字檔](../../../docs/framework/winforms/advanced/how-to-print-a-multi-page-text-file-in-windows-forms.md)|  
 |深入了解 Windows Form 安全性|[Windows Forms 中的安全性概觀](../../../docs/framework/winforms/security-in-windows-forms-overview.md)|  
   
-## <a name="see-also"></a>請參閱  
+## <a name="see-also"></a>另請參閱  
  [Windows Forms 使用者入門](../../../docs/framework/winforms/getting-started-with-windows-forms.md)  
  [建立新的 Windows Forms](../../../docs/framework/winforms/creating-a-new-windows-form.md)  
  [ToolStrip 控制項概觀](../../../docs/framework/winforms/controls/toolstrip-control-overview-windows-forms.md)  

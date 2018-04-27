@@ -1,31 +1,32 @@
 ---
-title: "在 Windows 事件追蹤中追蹤事件"
-ms.custom: 
+title: 在 Windows 事件追蹤中追蹤事件
+ms.custom: ''
 ms.date: 03/30/2017
 ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.tgt_pltfrm: 
+ms.reviewer: ''
+ms.suite: ''
+ms.tgt_pltfrm: ''
 ms.topic: article
 ms.assetid: f812659b-0943-45ff-9430-4defa733182b
-caps.latest.revision: "19"
+caps.latest.revision: 19
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.workload: dotnet
-ms.openlocfilehash: 6798494e442b2e7633461fb821c56130a2af2508
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.workload:
+- dotnet
+ms.openlocfilehash: 1a1038f848563c106ee1cac441b8a247e161e268
+ms.sourcegitcommit: 2042de78fcdceebb6b8ac4b7a292b93e8782cbf5
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 04/27/2018
 ---
 # <a name="tracking-events-into-event-tracing-in-windows"></a>在 Windows 事件追蹤中追蹤事件
-這個範例會示範如何在工作流程服務上啟用 [!INCLUDE[wf](../../../../includes/wf-md.md)] 追蹤以及在 Windows 事件追蹤 (ETW) 中發出追蹤事件。 為了將工作流程追蹤記錄發出到 ETW，此範例會使用 ETW 追蹤參與者 (<xref:System.Activities.Tracking.EtwTrackingParticipant>)。  
+這個範例示範如何啟用 Windows Workflow Foundation (WF) 追蹤工作流程服務上以及發出追蹤事件中事件的 Windows 追蹤 (ETW)。 為了將工作流程追蹤記錄發出到 ETW，此範例會使用 ETW 追蹤參與者 (<xref:System.Activities.Tracking.EtwTrackingParticipant>)。  
   
  範例中的工作流程會接收要求、將對等的輸入資料指派給輸入變數，並將對等項目傳回用戶端。 當輸入資料為 0 時，將會發生除以零的例外狀況而無法處理，所以導致工作流程中止。 當啟用追蹤時，錯誤追蹤記錄會發出到 ETW，有助於之後的疑難排解。 ETW 追蹤參與者會設定追蹤設定檔來訂閱追蹤記錄。 追蹤設定檔會定義於 Web.config 檔案中，並當做組態參數提供給 ETW 追蹤參與者。 ETW 追蹤參與者會在工作流程服務的 Web.config 檔案中設定，而且會當做服務行為套用到此服務。 在這個範例中，您會使用事件檢視器檢視事件記錄檔中的追蹤事件。  
   
 ## <a name="workflow-tracking-details"></a>工作流程追蹤詳細資料  
- [!INCLUDE[wf2](../../../../includes/wf2-md.md)] 會提供追蹤基礎結構，以追蹤工作流程執行個體的執行。 追蹤執行階段會建立工作流程執行個體，以發出與工作流程開發週期相關的事件、來自工作流程活動的事件和自訂事件。 下表詳細說明追蹤基礎結構的主要元件。  
+ Windows Workflow Foundation 提供追蹤基礎結構，來追蹤工作流程執行個體執行。 追蹤執行階段會建立工作流程執行個體，以發出與工作流程開發週期相關的事件、來自工作流程活動的事件和自訂事件。 下表詳細說明追蹤基礎結構的主要元件。  
   
 |元件|描述|  
 |---------------|-----------------|  
@@ -55,7 +56,7 @@ ms.lasthandoff: 12/22/2017
   
 3.  若要執行此方案，請按 F5。  
   
-     根據預設，此服務會接聽連接埠 53797 (http://localhost:53797/SampleWorkflowService.xamlx)。  
+     根據預設，服務會接聽連接埠 53797 (http://localhost:53797/SampleWorkflowService.xamlx)。  
   
 4.  使用 [!INCLUDE[fileExplorer](../../../../includes/fileexplorer-md.md)] 開啟 WCF 測試用戶端。  
   
@@ -65,7 +66,7 @@ ms.lasthandoff: 12/22/2017
   
 5.  在 WCF 測試用戶端中，選取**加入服務**從**檔案**功能表。  
   
-     在輸入方塊中加入端點位址。 預設為 http://localhost:53797/SampleWorkflowService.xamlx。  
+     在輸入方塊中加入端點位址。 預設值為 http://localhost:53797/SampleWorkflowService.xamlx。  
   
 6.  開啟 [事件檢視器] 應用程式。  
   
@@ -159,5 +160,5 @@ ms.lasthandoff: 12/22/2017
 >   
 >  `<InstallDrive>:\WF_WCF_Samples\WF\Basic\Tracking\EtwTracking`  
   
-## <a name="see-also"></a>請參閱  
+## <a name="see-also"></a>另請參閱  
  [AppFabric 監控範例](http://go.microsoft.com/fwlink/?LinkId=193959)

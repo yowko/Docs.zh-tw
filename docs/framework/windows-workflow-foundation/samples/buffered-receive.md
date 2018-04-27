@@ -14,14 +14,14 @@ ms.author: dotnetcontent
 manager: wpickett
 ms.workload:
 - dotnet
-ms.openlocfilehash: 9cd4dfcbfc9d417766615c624905f8bce2c10e54
-ms.sourcegitcommit: 86adcc06e35390f13c1e372c36d2e044f1fc31ef
+ms.openlocfilehash: abec64433d10a23dca6186c6c9a553bbed12a017
+ms.sourcegitcommit: 2042de78fcdceebb6b8ac4b7a292b93e8782cbf5
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/26/2018
+ms.lasthandoff: 04/27/2018
 ---
 # <a name="buffered-receive"></a>緩衝的接收
-這個範例示範如何設定 [!INCLUDE[wf](../../../../includes/wf-md.md)] 中的緩衝接收功能。 緩衝接收可讓工作流程作者建立工作流程時不必擔心接收訊息的順序。 緩衝接收功能會在本機緩衝處理訊息，並在工作流程準備要接收訊息時傳遞訊息。  
+這個範例示範如何安裝及設定緩衝的接收功能在 Windows Workflow Foundation (WF)。 緩衝接收可讓工作流程作者建立工作流程時不必擔心接收訊息的順序。 緩衝接收功能會在本機緩衝處理訊息，並在工作流程準備要接收訊息時傳遞訊息。  
   
 ## <a name="demonstrates"></a>示範  
  使用緩衝接收搭配訊息活動的失序訊息處理。  

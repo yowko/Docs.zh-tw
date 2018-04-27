@@ -1,10 +1,11 @@
 ---
-title: "Module 陳述式"
+title: Module 陳述式
 ms.date: 07/20/2015
 ms.prod: .net
-ms.reviewer: 
-ms.suite: 
-ms.technology: devlang-visual-basic
+ms.reviewer: ''
+ms.suite: ''
+ms.technology:
+- devlang-visual-basic
 ms.topic: article
 f1_keywords:
 - Module
@@ -18,21 +19,21 @@ helpviewer_keywords:
 - classes [Visual Basic], vs. modules
 - declarations [Visual Basic], modules
 ms.assetid: a1243afc-14a5-45df-95d5-51118aeac362
-caps.latest.revision: "24"
+caps.latest.revision: 24
 author: dotnet-bot
 ms.author: dotnetcontent
-ms.openlocfilehash: 92cdcd1919f21243118108da3bc382ea5d954130
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.openlocfilehash: 51f8fd063449c072a69cdffd9f6ce2a96cc3f68c
+ms.sourcegitcommit: 2042de78fcdceebb6b8ac4b7a292b93e8782cbf5
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 04/27/2018
 ---
 # <a name="module-statement"></a>Module 陳述式
 宣告模組的名稱，並引進變數、 屬性、 事件和組成模組的程序的定義。  
   
 ## <a name="syntax"></a>語法  
   
-```  
+```vb 
 [ <attributelist> ] [ accessmodifier ]  Module name  
     [ statements ]  
 End Module  
@@ -40,10 +41,10 @@ End Module
   
 ## <a name="parts"></a>組件  
  `attributelist`  
- 選擇項。 請參閱[屬性清單](../../../visual-basic/language-reference/statements/attribute-list.md)。  
+ 選擇性。 請參閱[屬性清單](../../../visual-basic/language-reference/statements/attribute-list.md)。  
   
  `accessmodifier`  
- 選擇項。 可以是下列其中一項：  
+ 選擇性。 可以是下列其中一項：  
   
 -   [Public](../../../visual-basic/language-reference/modifiers/public.md)  
   
@@ -52,10 +53,10 @@ End Module
  請參閱[存取 Visual Basic 中的層級](../../../visual-basic/programming-guide/language-features/declared-elements/access-levels.md)。  
   
  `name`  
- 必要項。 此模組的名稱。 請參閱[宣告項目名稱](../../../visual-basic/programming-guide/language-features/declared-elements/declared-element-names.md)。  
+ 必要。 此模組的名稱。 請參閱[宣告項目名稱](../../../visual-basic/programming-guide/language-features/declared-elements/declared-element-names.md)。  
   
  `statements`  
- 選擇項。 定義的變數、 屬性、 事件、 程序和此模組的巢狀的類型的陳述式。  
+ 選擇性。 定義的變數、 屬性、 事件、 程序和此模組的巢狀的類型的陳述式。  
   
  `End Module`  
  終止`Module`定義。  

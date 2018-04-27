@@ -21,11 +21,11 @@ ms.author: dotnetcontent
 manager: wpickett
 ms.workload:
 - dotnet
-ms.openlocfilehash: 491cbf19ac3c8f1817b12c895655ca1958972a62
-ms.sourcegitcommit: 86adcc06e35390f13c1e372c36d2e044f1fc31ef
+ms.openlocfilehash: 3669260d34aac0783f2ebd735c79ced91741408a
+ms.sourcegitcommit: 2042de78fcdceebb6b8ac4b7a292b93e8782cbf5
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/26/2018
+ms.lasthandoff: 04/27/2018
 ---
 # <a name="wcf-client-overview"></a>WCF 用戶端概觀
 本節描述用戶端應用程式的功能、[!INCLUDE[indigo1](../../../includes/indigo1-md.md)] 用戶端的設定、建立和使用方式，以及保護用戶端應用程式安全的方法。  
@@ -73,11 +73,11 @@ svcutil /language:vb /out:ClientCode.vb /config:app.config http://computerName/M
  為說明 <xref:System.ServiceModel.ClientBase%601> 類別的使用方式，請假設已從服務應用程式產生下列簡單服務合約。  
   
 > [!NOTE]
->  如果您使用 [!INCLUDE[vsprvs](../../../includes/vsprvs-md.md)] 來建立 [!INCLUDE[indigo2](../../../includes/indigo2-md.md)] 用戶端，當您在專案中新增服務參考時，就會自動將物件載入物件瀏覽器中。  
+>  如果您使用 Visual Studio 來建立您[!INCLUDE[indigo2](../../../includes/indigo2-md.md)]用戶端，會自動將物件載入物件瀏覽器時加入服務參考加入專案。  
   
  [!code-csharp[C_GeneratedCodeFiles#12](../../../samples/snippets/csharp/VS_Snippets_CFX/c_generatedcodefiles/cs/proxycode.cs#12)]  
   
- 如果不是使用 [!INCLUDE[vsprvs](../../../includes/vsprvs-md.md)]，請檢查產生的合約程式碼以尋找擴充 <xref:System.ServiceModel.ClientBase%601> 和服務合約介面 `ISampleService` 的型別。 在這種情況下，該型別看起來類似下列程式碼：  
+ 如果您不使用 Visual Studio，請檢查產生的合約程式碼，以尋找擴充的型別<xref:System.ServiceModel.ClientBase%601>和服務合約介面`ISampleService`。 在這種情況下，該型別看起來類似下列程式碼：  
   
  [!code-csharp[C_GeneratedCodeFiles#14](../../../samples/snippets/csharp/VS_Snippets_CFX/c_generatedcodefiles/cs/proxycode.cs#14)]  
   

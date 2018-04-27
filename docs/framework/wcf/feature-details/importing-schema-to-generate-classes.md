@@ -22,11 +22,11 @@ ms.author: dotnetcontent
 manager: wpickett
 ms.workload:
 - dotnet
-ms.openlocfilehash: 7fc755ff7f1b6c583a1e9aa1bc209495563812f0
-ms.sourcegitcommit: 86adcc06e35390f13c1e372c36d2e044f1fc31ef
+ms.openlocfilehash: 43eaa4ffe562cf1dde5abd7e7540125dcf383732
+ms.sourcegitcommit: 2042de78fcdceebb6b8ac4b7a292b93e8782cbf5
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/26/2018
+ms.lasthandoff: 04/27/2018
 ---
 # <a name="importing-schema-to-generate-classes"></a>匯入結構描述以產生類別
 如果要從可在 [!INCLUDE[indigo1](../../../../includes/indigo1-md.md)] 中使用的結構描述產生類別，請使用 <xref:System.Runtime.Serialization.XsdDataContractImporter> 類別。 這個主題將說明處理程序和變化。  
@@ -154,7 +154,7 @@ ms.lasthandoff: 04/26/2018
  `ReferencedTypes`屬性會對應至 **/參考**切換移入特定的 Svcutil.exe 工具作業模式。  
   
 > [!NOTE]
->  當使用 Svcutil.exe 或 (在[!INCLUDE[vsprvs](../../../../includes/vsprvs-md.md)])**加入服務參考**會自動參照 MsCorLib.dll 中的類型的所有工具。  
+>  當使用 Svcutil.exe 或 （在 Visual Studio)**加入服務參考**會自動參照 MsCorLib.dll 中的類型的所有工具。  
   
 #### <a name="import-options-importing-non-datacontract-schema-as-ixmlserializable-types"></a>匯入選項：匯入非 DataContract 結構描述做為 IXmlSerializable 型別  
  <xref:System.Runtime.Serialization.XsdDataContractImporter> 支援結構描述的有限子集。 如果有不支援的結構描述建構存在 (例如，XML 屬性)，匯入嘗試便會失敗並有例外狀況。 然而，將 <xref:System.Runtime.Serialization.ImportOptions.ImportXmlType%2A> 屬性設定為 `true` 可延伸受支援的結構描述範圍。 當設定為 `true` 時，<xref:System.Runtime.Serialization.XsdDataContractImporter> 會產生實作 <xref:System.Xml.Serialization.IXmlSerializable> 介面的型別。 如此可直接存取這些型別的 XML 表示法。  

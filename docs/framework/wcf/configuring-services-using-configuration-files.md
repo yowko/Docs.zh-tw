@@ -18,11 +18,11 @@ ms.author: dotnetcontent
 manager: wpickett
 ms.workload:
 - dotnet
-ms.openlocfilehash: e5ad91fa70a743b7135648cb10c7c519e3559bdb
-ms.sourcegitcommit: 86adcc06e35390f13c1e372c36d2e044f1fc31ef
+ms.openlocfilehash: 5f1c7449372ad012280b360c09017a15733fb95b
+ms.sourcegitcommit: 2042de78fcdceebb6b8ac4b7a292b93e8782cbf5
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/26/2018
+ms.lasthandoff: 04/27/2018
 ---
 # <a name="configuring-services-using-configuration-files"></a>使用組態檔設定服務
 使用組態檔來設定 [!INCLUDE[indigo1](../../../includes/indigo1-md.md)] 服務可讓您在部署時 (而不是在設計階段) 彈性提供端點與服務行為資料。 本主題概要說明可用的主要技巧。  
@@ -37,9 +37,9 @@ ms.lasthandoff: 04/26/2018
 ## <a name="systemconfiguration-webconfig-and-appconfig"></a>System.Configuration：Web.config 和 App.config  
  [!INCLUDE[indigo2](../../../includes/indigo2-md.md)] 使用 [!INCLUDE[dnprdnshort](../../../includes/dnprdnshort-md.md)]的 System.Configuration 組態系統。  
   
- 在 [!INCLUDE[vsprvs](../../../includes/vsprvs-md.md)]中設定服務時，請使用 Web.config 檔或 App.config 檔來指定設定。 組態檔名稱的選擇取決於您為服務選擇的裝載環境。 如果您選擇使用 IIS 來裝載服務，請使用 Web.config 檔。 如果您使用其他任何裝載環境，請使用 App.config 檔。  
+ 設定服務時 Visual Studio 中，使用 Web.config 檔或 App.config 檔案以指定的設定。 組態檔名稱的選擇取決於您為服務選擇的裝載環境。 如果您選擇使用 IIS 來裝載服務，請使用 Web.config 檔。 如果您使用其他任何裝載環境，請使用 App.config 檔。  
   
- 在 [!INCLUDE[vsprvs](../../../includes/vsprvs-md.md)]中，名為 App.config 的檔案是用來建立最後的組態檔。 最後實際使用的組態名稱取決於組件名稱。 例如，名為 "Cohowinery.exe" 的組件，其最後的組態檔名為 "Cohowinery.exe.config"。 但是，您只需要修改 App.config 檔案。 對該檔案進行的變更，會在編譯階段自動套用至最後的應用程式組態檔中。  
+ 在 Visual Studio 中，名為 App.config 的檔案用來建立最後的組態檔。 最後實際使用的組態名稱取決於組件名稱。 例如，名為 "Cohowinery.exe" 的組件，其最後的組態檔名為 "Cohowinery.exe.config"。 但是，您只需要修改 App.config 檔案。 對該檔案進行的變更，會在編譯階段自動套用至最後的應用程式組態檔中。  
   
  在使用 App.config 檔案時，一旦應用程式啟動且套用了組態，組態系統會將 App.config 檔案與 Machine.config 檔案的內容合併。 這項機制可讓您透過 Machine.config 檔案來設定整部電腦。 App.config 檔案可以用來覆寫 Machine.config 檔案的設定，您也可以鎖定 Machine.config 檔案的設定以便加以取用。 在 Web.config 情況中，組態系統會將所有目錄乃至應用程式目錄中的 Web.config 檔案合併至已套用的組態。 [!INCLUDE[crabout](../../../includes/crabout-md.md)] 組態與設定值優先權的詳細資訊，請參閱 <xref:System.Configuration> 命名空間中的主題。  
   

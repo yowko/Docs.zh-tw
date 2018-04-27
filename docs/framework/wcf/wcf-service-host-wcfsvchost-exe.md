@@ -1,38 +1,40 @@
 ---
-title: "WCF 服務主機 (WcfSvcHost.exe)"
-ms.custom: 
+title: WCF 服務主機 (WcfSvcHost.exe)
+ms.custom: ''
 ms.date: 03/30/2017
 ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.technology: dotnet-clr
-ms.tgt_pltfrm: 
+ms.reviewer: ''
+ms.suite: ''
+ms.technology:
+- dotnet-clr
+ms.tgt_pltfrm: ''
 ms.topic: article
 ms.assetid: 8643a63d-a357-4c39-bd6c-cdfdf71e370e
-caps.latest.revision: "27"
+caps.latest.revision: 27
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.workload: dotnet
-ms.openlocfilehash: 495088463a6a7463ce1452588dc55d35110f0092
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.workload:
+- dotnet
+ms.openlocfilehash: 1da8d7a08e7887e8ba3fd50a8f809e2ff551a7fd
+ms.sourcegitcommit: 2042de78fcdceebb6b8ac4b7a292b93e8782cbf5
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 04/27/2018
 ---
 # <a name="wcf-service-host-wcfsvchostexe"></a>WCF 服務主機 (WcfSvcHost.exe)
-[!INCLUDE[indigo1](../../../includes/indigo1-md.md)] 服務主機 (WcfSvcHost.exe) 可讓您啟動 [!INCLUDE[vsprvs](../../../includes/vsprvs-md.md)] 偵錯工具 (F5) 來自動裝載並測試您已實作的服務。 然後，您可以使用 [!INCLUDE[indigo2](../../../includes/indigo2-md.md)] 測試用戶端 (WcfTestClient.exe) 或自己的用戶端來測試服務，以尋找並修正任何可能的錯誤。  
+[!INCLUDE[indigo1](../../../includes/indigo1-md.md)] 服務主機 (WcfSvcHost.exe) 可讓您啟動 Visual Studio 偵錯工具 (F5) 來自動裝載並測試您已實作的服務。 然後，您可以使用 [!INCLUDE[indigo2](../../../includes/indigo2-md.md)] 測試用戶端 (WcfTestClient.exe) 或自己的用戶端來測試服務，以尋找並修正任何可能的錯誤。  
   
 ## <a name="wcf-service-host"></a>WCF 服務主機  
- [!INCLUDE[indigo2](../../../includes/indigo2-md.md)] 服務主機會列舉 [!INCLUDE[indigo2](../../../includes/indigo2-md.md)] 服務專案中的服務、載入專案的組態，以及為它找到的每一個服務產生主機的實體。 這項工具已透過 [!INCLUDE[vsprvs](../../../includes/vsprvs-md.md)] 服務範本整合在 [!INCLUDE[indigo2](../../../includes/indigo2-md.md)] 中，而且當您開始對專案進行偵錯時就會自動叫用它。  
+ [!INCLUDE[indigo2](../../../includes/indigo2-md.md)] 服務主機會列舉 [!INCLUDE[indigo2](../../../includes/indigo2-md.md)] 服務專案中的服務、載入專案的組態，以及為它找到的每一個服務產生主機的實體。 工具已整合至 Visual Studio 透過[!INCLUDE[indigo2](../../../includes/indigo2-md.md)]服務範本，並在開始偵錯您的專案時叫用。  
   
  藉由使用 [!INCLUDE[indigo2](../../../includes/indigo2-md.md)] 服務主機，您就可以在開發期間裝載 [!INCLUDE[indigo2](../../../includes/indigo2-md.md)] 服務 (在 [!INCLUDE[indigo2](../../../includes/indigo2-md.md)] 服務程式庫專案中)，而不需要撰寫額外的程式碼或認可特定主機。  
   
 > [!NOTE]
->  [!INCLUDE[indigo2](../../../includes/indigo2-md.md)] 服務主機不支援部分信任。 如果您想要在部分信任情況下使用 [!INCLUDE[indigo2](../../../includes/indigo2-md.md)] 服務，請勿使用 [!INCLUDE[indigo2](../../../includes/indigo2-md.md)] 中的 [!INCLUDE[vsprvs](../../../includes/vsprvs-md.md)] 服務程式庫專案範本來建置服務。 反之，請選擇 [!INCLUDE[vsprvs](../../../includes/vsprvs-md.md)] 服務網站範本在 [!INCLUDE[indigo2](../../../includes/indigo2-md.md)] 中建立新的網站；如此可在支援 [!INCLUDE[indigo2](../../../includes/indigo2-md.md)] 部分信任的 WebServer 裝載服務。  
+>  [!INCLUDE[indigo2](../../../includes/indigo2-md.md)] 服務主機不支援部分信任。 如果您想要使用[!INCLUDE[indigo2](../../../includes/indigo2-md.md)]服務在部分信任，請勿使用[!INCLUDE[indigo2](../../../includes/indigo2-md.md)]服務程式庫專案範本在 Visual Studio 中建置您的服務。 相反地，在 Visual Studio 中建立新的網站，藉由選擇[!INCLUDE[indigo2](../../../includes/indigo2-md.md)]服務網站範本，其可裝載的 web 伺服器中的服務[!INCLUDE[indigo2](../../../includes/indigo2-md.md)]受到部分信任。  
   
 ## <a name="project-types-hosted-by-wcf-service-host"></a>WCF 服務主機裝載的專案類型  
- [!INCLUDE[indigo2](../../../includes/indigo2-md.md)] 服務主機可以裝載下列 [!INCLUDE[indigo2](../../../includes/indigo2-md.md)] 服務程式庫專案類型：[!INCLUDE[indigo2](../../../includes/indigo2-md.md)] 服務程式庫、循序工作流程服務程式庫、狀態機器工作流程服務程式庫和新聞訂閱服務程式庫。 [!INCLUDE[indigo2](../../../includes/indigo2-md.md)]服務主機也可以裝載這些服務，可以加入至服務程式庫的專案使用**加入項目**功能。 這包括 [!INCLUDE[indigo2](../../../includes/indigo2-md.md)] 服務、WF 狀態機器服務、WF 循序服務、XAML WF 狀態機器服務和 XAML WF 循序服務。  
+ [!INCLUDE[indigo2](../../../includes/indigo2-md.md)] 服務主機可以裝載下列 [!INCLUDE[indigo2](../../../includes/indigo2-md.md)] 服務程式庫專案類型：[!INCLUDE[indigo2](../../../includes/indigo2-md.md)] 服務程式庫、循序工作流程服務程式庫、狀態機器工作流程服務程式庫和新聞訂閱服務程式庫。 [!INCLUDE[indigo2](../../../includes/indigo2-md.md)] 服務主機也可以裝載這些服務，可以加入至服務程式庫的專案使用**加入項目**功能。 這包括 [!INCLUDE[indigo2](../../../includes/indigo2-md.md)] 服務、WF 狀態機器服務、WF 循序服務、XAML WF 狀態機器服務和 XAML WF 循序服務。  
   
  但是，您應該注意到，此工具無法協助您設定主機。 對於這項工作，您必須手動編輯 App.config 檔案。 此工具也不會驗證使用者定義的組態檔。  
   
@@ -40,7 +42,7 @@ ms.lasthandoff: 12/22/2017
 >  您不可以在實際執行環境中使用 [!INCLUDE[indigo2](../../../includes/indigo2-md.md)] 服務主機來裝載服務，因為它不是為了這個用途而設計的。  [!INCLUDE[indigo2](../../../includes/indigo2-md.md)] 服務主機不支援這類環境的可靠性、安全性和管理便利性需求。 請改用 IIS，因為它提供比較好的可靠性和監視功能，而且是一般慣用於裝載服務的解決方案。 服務一旦開發完成，您就應該將它從 [!INCLUDE[indigo2](../../../includes/indigo2-md.md)] 服務主機移轉至 IIS。  
   
 ## <a name="scenarios-for-using-wcf-service-host-inside-visual-studio"></a>在 Visual Studio 內使用 WCF 服務主機的案例  
- 下表列出中的所有參數**命令列引數**對話方塊中，以滑鼠右鍵按一下您的專案中可以找到**方案總管 中**中[!INCLUDE[vsprvs](../../../includes/vsprvs-md.md)]，選取**屬性**，然後選取**偵錯** 索引標籤，然後按一下**起始專案**。 這些參數在設定 [!INCLUDE[indigo2](../../../includes/indigo2-md.md)] 服務主機時十分有用。  
+ 下表列出中的所有參數**命令列引數**對話方塊中，以滑鼠右鍵按一下您的專案中可以找到**方案總管 中**在 Visual Studio 中，選取**屬性**，然後選取**偵錯** 索引標籤，然後按一下**起始專案**。 這些參數在設定 [!INCLUDE[indigo2](../../../includes/indigo2-md.md)] 服務主機時十分有用。  
   
 |參數|意義|  
 |---------------|-------------|  
@@ -51,12 +53,12 @@ ms.lasthandoff: 12/22/2017
 #### <a name="using-wcf-test-client"></a>使用 WCF 測試用戶端  
  在您建立新的 [!INCLUDE[indigo2](../../../includes/indigo2-md.md)] 服務專案並按下 F5 啟動偵錯工具之後，[!INCLUDE[indigo2](../../../includes/indigo2-md.md)] 服務主機會開始裝載它在專案中找到的所有服務。 [!INCLUDE[indigo2](../../../includes/indigo2-md.md)] 測試用戶端會自動開啟，並顯示組態檔中定義之服務端點的清單。 您可以從主視窗中測試參數並叫用服務。  
   
- 若要先確定[!INCLUDE[indigo2](../../../includes/indigo2-md.md)]測試用戶端時，以滑鼠右鍵按一下您的專案中**方案總管 中**中[!INCLUDE[vsprvs](../../../includes/vsprvs-md.md)]，選取**屬性**，然後選取**偵錯** 索引標籤。按一下**起始專案**，並確定下列項目出現在**命令列引數** 對話方塊。  
+ 若要先確定[!INCLUDE[indigo2](../../../includes/indigo2-md.md)]測試用戶端時，以滑鼠右鍵按一下您的專案中**方案總管 中**在 Visual Studio 中，選取**屬性**，然後選取**偵錯** 索引標籤。按一下**起始專案**，並確定下列項目出現在**命令列引數** 對話方塊。  
   
  `/client:WcfTestClient.exe`  
   
 #### <a name="using-a-custom-client"></a>使用自訂用戶端  
- 若要使用自訂用戶端，以滑鼠右鍵按一下您的專案中**方案總管 中**中[!INCLUDE[vsprvs](../../../includes/vsprvs-md.md)]，選取**屬性**，然後選取**偵錯** 索引標籤。按一下**起始專案**和編輯`/client`中的參數**命令列引數**對話方塊中，以指向自訂的用戶端，如下列範例所示。  
+ 若要使用自訂用戶端，以滑鼠右鍵按一下您的專案中**方案總管 中**在 Visual Studio 中，選取**屬性**，然後選取**偵錯** 索引標籤。按一下**起始專案**和編輯`/client`中的參數**命令列引數**對話方塊中，以指向自訂的用戶端，如下列範例所示。  
   
  `/client:"path/CustomClient.exe"`  
   
@@ -71,13 +73,13 @@ ms.lasthandoff: 12/22/2017
  `/client:iexplore.exe /clientArgs:http://localhost:8731/Design_Time_Addresses/Feed1/`  
   
 #### <a name="specifying-no-client"></a>不指定任何用戶端  
- 若要指定之後會使用任何用戶端[!INCLUDE[indigo2](../../../includes/indigo2-md.md)]服務裝載，以滑鼠右鍵按一下您的專案中**方案總管 中**中[!INCLUDE[vsprvs](../../../includes/vsprvs-md.md)]，選取**屬性**，然後選取 **偵錯** 索引標籤。按一下**起始專案**留下**命令列引數**對話方塊保留空白。  
+ 若要指定之後會使用任何用戶端[!INCLUDE[indigo2](../../../includes/indigo2-md.md)]服務裝載，以滑鼠右鍵按一下您的專案中**方案總管 中**在 Visual Studio 中，選取**屬性**，然後選取**偵錯** 索引標籤。按一下**起始專案**留下**命令列引數**對話方塊保留空白。  
   
 #### <a name="using-a-custom-host"></a>使用自訂主機  
- 若要使用自訂主機，以滑鼠右鍵按一下您的專案中**方案總管 中**中[!INCLUDE[vsprvs](../../../includes/vsprvs-md.md)]，選取**屬性**，然後選取**偵錯** 索引標籤。按一下**起始外部程式**和輸入自訂主應用程式的完整路徑。 您也可以使用**命令列引數**對話方塊來指定要傳遞給主機的引數。  
+ 若要使用自訂主機，以滑鼠右鍵按一下您的專案中**方案總管 中**在 Visual Studio 中，選取**屬性**，然後選取**偵錯** 索引標籤。按一下**起始外部程式**和輸入自訂主應用程式的完整路徑。 您也可以使用**命令列引數**對話方塊來指定要傳遞給主機的引數。  
   
 ## <a name="wcf-service-host-user-interface"></a>WCF 服務主機使用者介面  
- 當您初次叫用[!INCLUDE[indigo2](../../../includes/indigo2-md.md)]服務主機 (內按下 F5 [!INCLUDE[vsprvs](../../../includes/vsprvs-md.md)])、 **WCF 服務主機**視窗會自動開啟。 當 [!INCLUDE[indigo2](../../../includes/indigo2-md.md)] 服務主機正在執行時，程式的圖示會出現在通知區域中。 按兩下圖示以開啟**WCF 服務主機**視窗  
+ 當您初次叫用[!INCLUDE[indigo2](../../../includes/indigo2-md.md)]（藉由按下 F5，在 Visual Studio 內，） 的服務主機**WCF 服務主機**視窗會自動開啟。 當 [!INCLUDE[indigo2](../../../includes/indigo2-md.md)] 服務主機正在執行時，程式的圖示會出現在通知區域中。 按兩下圖示以開啟**WCF 服務主機**視窗  
   
  如果在服務裝載期間發生錯誤，[[!INCLUDE[indigo2](../../../includes/indigo2-md.md)] 服務主機] 對話方塊將會開啟以顯示相關的資訊。  
   
@@ -102,7 +104,7 @@ ms.lasthandoff: 12/22/2017
 ## <a name="stopping-wcf-service-host"></a>停止 WCF 服務主機  
  您可以透過下列四種方式關閉 [!INCLUDE[indigo2](../../../includes/indigo2-md.md)] 服務主機：  
   
--   停止 [!INCLUDE[vsprvs](../../../includes/vsprvs-md.md)] 中的偵錯工作階段。  
+-   停止 Visual Studio 中的偵錯工作階段。  
   
 -   選取**結束**從**檔案**功能表**WCF 服務主機**視窗。  
   
@@ -111,7 +113,7 @@ ms.lasthandoff: 12/22/2017
 -   正在使用 [!INCLUDE[indigo2](../../../includes/indigo2-md.md)] 測試用戶端時，將它結束。  
   
 ## <a name="using-service-host-without-administrator-privilege"></a>在沒有系統管理員權限的情況下使用服務主機  
- 為了讓沒有系統管理員權限的使用者能夠開發 [!INCLUDE[indigo2](../../../includes/indigo2-md.md)] 服務，在安裝 [!INCLUDE[vsprvs](../../../includes/vsprvs-md.md)] 期間會建立命名空間 "http://+:8731/Design_Time_Addresses" 的 ACL (存取控制清單)。 ACL 會設定為 (UI)，其中包含已登入電腦的所有互動使用者。 系統管理員可以在這個 ACL 中新增或移除使用者，或是開啟其他連接埠。這個 ACL 可讓使用者使用 [!INCLUDE[indigo2](../../../includes/indigo2-md.md)] 服務自動主機 (wcfSvcHost.exe)，而不需授與系統管理員權限。  
+ 為了讓沒有系統管理員權限來開發使用者[!INCLUDE[indigo2](../../../includes/indigo2-md.md)]，ACL （存取控制清單） 建立服務命名空間"http://+:8731/Design_Time_Addresses"Visual Studio 安裝期間。 ACL 會設定為 (UI)，其中包含已登入電腦的所有互動使用者。 系統管理員可以在這個 ACL 中新增或移除使用者，或是開啟其他連接埠。這個 ACL 可讓使用者使用 [!INCLUDE[indigo2](../../../includes/indigo2-md.md)] 服務自動主機 (wcfSvcHost.exe)，而不需授與系統管理員權限。  
   
  您可以在有更高權限的系統管理員帳戶下，使用 [!INCLUDE[wv](../../../includes/wv-md.md)] 中的 netsh.exe 工具來修改存取權。 下列是使用 netsh.exe 的範例。  
   
@@ -121,5 +123,5 @@ netsh http add urlacl url=http://+:8001/MyService user=<domain>\<user>
   
  如需有關 netsh.exe 的詳細資訊，請參閱 「[如何使用 Netsh.exe 工具和命令列參數](http://go.microsoft.com/fwlink/?LinkId=97877)"。  
   
-## <a name="see-also"></a>請參閱  
+## <a name="see-also"></a>另請參閱  
  [WCF 測試用戶端 (WcfTestClient.exe)](../../../docs/framework/wcf/wcf-test-client-wcftestclient-exe.md)

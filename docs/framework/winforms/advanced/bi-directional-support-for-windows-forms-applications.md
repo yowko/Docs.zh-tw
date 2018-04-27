@@ -1,8 +1,9 @@
 ---
-title: "對 Windows Forms 應用程式的雙向支援"
+title: 對 Windows Forms 應用程式的雙向支援
 ms.date: 09/30/2017
 ms.prod: .net-framework
-ms.technology: dotnet-winforms
+ms.technology:
+- dotnet-winforms
 ms.topic: article
 helpviewer_keywords:
 - globalization [Windows Forms], bi-directional support in Windows
@@ -13,15 +14,16 @@ helpviewer_keywords:
 author: rpetrusha
 ms.author: ronpet
 manager: wpickett
-ms.workload: dotnet
-ms.openlocfilehash: a8ae0e958c842c2f3cf3fbb788cad1cde6e6cc2b
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.workload:
+- dotnet
+ms.openlocfilehash: d670fedb2fe693a871de8f0147b81b97b4958853
+ms.sourcegitcommit: 2042de78fcdceebb6b8ac4b7a292b93e8782cbf5
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 04/27/2018
 ---
 # <a name="bi-directional-support-for-windows-forms-applications"></a>對 Windows Forms 應用程式的雙向支援
-您可以使用 [!INCLUDE[vsprvs](../../../../includes/vsprvs-md.md)] 來建立 Windows 架構應用程式，以支援像阿拉伯文和希伯來文之類的雙向 (由右至左) 語言。 這包括標準表單、對話方塊、MDI 表單，以及您可以在這些表單中使用的所有控制項，也就是 <xref:System.Windows.Forms.Control> 命名空間中的所有物件。  
+您可以使用 Visual Studio 建立 Windows 架構的應用程式支援雙向 （由右至左） 語言，如阿拉伯文與希伯來文。 這包括標準表單、對話方塊、MDI 表單，以及您可以在這些表單中使用的所有控制項，也就是 <xref:System.Windows.Forms.Control> 命名空間中的所有物件。  
   
 ## <a name="culture-support"></a>文化特性支援  
  文化特性和 UI 文化特性設定可決定應用程式如何使用日期、時間、貨幣和其他資訊。 對文化特性和 UI 文化特性的支援同樣適用於雙向語言，因為其適用於任何其他語言。   另請參閱[全域 Windows Forms 和 Web Forms 的文化特性特定類別](http://msdn.microsoft.com/library/94ye9x8c\(v=vs.110\))或[全域 Windows Forms 和 Web Forms 的文化特性特定類別](http://msdn.microsoft.com/library/94ye9x8c\(v=vs.120\))  
@@ -121,6 +123,6 @@ ms.lasthandoff: 12/22/2017
   
  有些控制項已密封。 因此，您不能從其衍生新的控制項。 其中包括 <xref:System.Windows.Forms.ImageList> 和 <xref:System.Windows.Forms.ProgressBar> 控制項。  
   
-## <a name="see-also"></a>請參閱  
+## <a name="see-also"></a>另請參閱  
  [ASP.NET Web 應用程式的雙向支援](http://msdn.microsoft.com/library/5576f9b1-9b86-41ef-8354-092d366bcd03)  
  [全球化 Windows Forms](../../../../docs/framework/winforms/advanced/globalizing-windows-forms.md)

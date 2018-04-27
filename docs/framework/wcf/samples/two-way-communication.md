@@ -1,24 +1,26 @@
 ---
-title: "雙向通訊"
-ms.custom: 
+title: 雙向通訊
+ms.custom: ''
 ms.date: 03/30/2017
 ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.technology: dotnet-clr
-ms.tgt_pltfrm: 
+ms.reviewer: ''
+ms.suite: ''
+ms.technology:
+- dotnet-clr
+ms.tgt_pltfrm: ''
 ms.topic: article
 ms.assetid: fb64192d-b3ea-4e02-9fb3-46a508d26c60
-caps.latest.revision: "24"
+caps.latest.revision: 24
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.workload: dotnet
-ms.openlocfilehash: 3ea6ea34e83f9c813062620c5029ea4b812cd777
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.workload:
+- dotnet
+ms.openlocfilehash: 9eb37e7e307bc9748113e5580ee96c8863d3ef89
+ms.sourcegitcommit: 2042de78fcdceebb6b8ac4b7a292b93e8782cbf5
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 04/27/2018
 ---
 # <a name="two-way-communication"></a>雙向通訊
 這個範例會示範如何透過 MSMQ 來執行交易雙向佇列通訊。 這個範例會使用 `netMsmqBinding` 繫結。 在此範例中，服務是自我裝載的主控台應用程式，可讓您觀察接收佇列訊息的服務。  
@@ -33,33 +35,33 @@ ms.lasthandoff: 12/22/2017
  這個範例會示範使用佇列的雙向通訊。 用戶端會將採購單從交易範圍內傳送至佇列。 服務會接收訂單，處理訂單，然後從在交易範圍內的佇列，根據訂單狀態回呼 (Call Back) 用戶端。 為了促進雙向通訊，用戶端與服務都會使用佇列將採購單和訂單狀態加入佇列。  
   
  服務合約 `IOrderProcessor` 會定義適合與佇列一起使用的單向服務作業。 服務作業包含可用來傳送訂單狀態的回覆端點。 回覆端點是將訂單狀態傳回用戶端的佇列 URI。 訂單處理應用程式會實作這個合約。  
-  
-```  
+
+```csharp
 [ServiceContract(Namespace="http://Microsoft.ServiceModel.Samples")]  
 public interface IOrderProcessor  
 {  
     [OperationContract(IsOneWay = true)]  
     void SubmitPurchaseOrder(PurchaseOrder po, string   
                                   reportOrderStatusTo);  
-}  
-```  
+}
+```
   
  用來傳送訂單狀態的回覆合約是由用戶端指定。 用戶端會實作訂單狀態合約。 服務會使用這個合約產生的 Proxy 將訂單狀態傳回用戶端。  
-  
-```  
+
+```csharp
 [ServiceContract]  
 public interface IOrderStatus  
 {  
     [OperationContract(IsOneWay = true)]  
     void OrderStatus(string poNumber, string status);  
 }  
-```  
-  
+```
+
  服務作業會處理已送出的採購單。 <xref:System.ServiceModel.OperationBehaviorAttribute> 會套用至服務作業，以便指定自動登記在用來從佇列接收訊息的交易中，以及指定在服務作業完成時自動完成交易。 `Orders` 類別會封裝訂單處理功能。 在本例中，這個類別會將採購單新增至字典。 `Orders` 類別中的作業可以使用服務作業所登記的交易。  
   
  除了處理已送出的採購單，服務作業也會將訂單狀態回覆至用戶端。  
-  
-```  
+
+```csharp
 [OperationBehavior(TransactionScopeRequired = true, TransactionAutoComplete = true)]  
 public void SubmitPurchaseOrder(PurchaseOrder po, string reportOrderStatusTo)  
 {  
@@ -79,16 +81,16 @@ public void SubmitPurchaseOrder(PurchaseOrder po, string reportOrderStatusTo)
     //Close the client.  
     client.Close();  
 }  
-```  
-  
+```
+
  MSMQ 佇列名稱是指定在組態檔的 appSettings 區段中。 服務端點會定義在組態檔的 System.ServiceModel 區段中。  
   
 > [!NOTE]
 >  MSMQ 佇列名稱與端點位址會使用稍微不同的定址慣例。 MSMQ 佇列名稱會使用點 (.) 來代表本機電腦，並在其路徑中使用反斜線分隔符號。 [!INCLUDE[indigo1](../../../../includes/indigo1-md.md)] 端點位址會指定 net.msmq: scheme，使用 "localhost" 代表本機電腦，並在其路徑中使用正斜線。 若要讀取裝載於遠端電腦的佇列，請將 "." 和 "localhost" 取代成遠端電腦名稱。  
   
  服務會自我裝載。 使用 MSMQ 傳輸時，必須事先建立使用的佇列。 這個動作可手動或透過程式碼完成。 在這個範例中，服務會檢查佇列是否存在，並在需要時建立佇列。 佇列名稱會從組態檔中讀取。 基底地址由[ServiceModel Metadata Utility Tool (Svcutil.exe)](../../../../docs/framework/wcf/servicemodel-metadata-utility-tool-svcutil-exe.md)以產生 proxy 服務。  
-  
-```  
+
+```csharp
 // Host the service within this EXE console application.  
 public static void Main()  
 {  
@@ -112,11 +114,11 @@ public static void Main()
         Console.ReadLine();  
     }  
 }  
-```  
-  
+```
+
  用戶端會建立異動。 與佇列的通訊會發生在交易範圍內，這點會導致其被視為不可部分完成的原子單位 (Atomic Unit)，其中的訊息若不是全部成功，就是全部失敗。  
-  
-```  
+
+```csharp
 // Create a ServiceHost for the OrderStatus service type.  
 using (ServiceHost serviceHost = new ServiceHost(typeof(OrderStatusService)))  
 {  
@@ -152,11 +154,11 @@ using (ServiceHost serviceHost = new ServiceHost(typeof(OrderStatusService)))
     // Close the ServiceHost to shutdown the service.  
     serviceHost.Close();  
 }  
-```  
-  
+```
+
  用戶端程式碼會實作 `IOrderStatus` 合約以接收服務的訂單狀態。 在此範例中，它會印出訂單狀態。  
-  
-```  
+
+```csharp
 [ServiceBehavior]  
 public class OrderStatusService : IOrderStatus  
 {  
@@ -168,8 +170,8 @@ public class OrderStatusService : IOrderStatus
                                                            status);  
     }  
 }  
-```  
-  
+```
+
  訂單狀態佇列會建立在 `Main` 方法中。 用戶端組態會包含訂單狀態服務組態來裝載訂單狀態服務，如下列範例組態所示。  
   
 ```xml  
@@ -323,7 +325,7 @@ Status of order 124a1f69-3699-4b16-9bcc-43147a8756fc:Pending
   
 3.  這個範例的服務會在 `OrderProcessorService` 中建立繫結。 在繫結具現化後新增程式碼行，以便將安全性模式設定為 `None`。  
   
-    ```  
+    ```csharp
     NetMsmqBinding msmqCallbackBinding = new NetMsmqBinding();  
     msmqCallbackBinding.Security.Mode = NetMsmqSecurityMode.None;  
     ```  
@@ -342,4 +344,4 @@ Status of order 124a1f69-3699-4b16-9bcc-43147a8756fc:Pending
 >   
 >  `<InstallDrive>:\WF_WCF_Samples\WF\Basic\Binding\Net\MSMQ\Two-Way`  
   
-## <a name="see-also"></a>請參閱
+## <a name="see-also"></a>另請參閱

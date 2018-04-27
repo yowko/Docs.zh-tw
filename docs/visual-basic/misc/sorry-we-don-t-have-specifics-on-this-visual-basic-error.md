@@ -3052,11 +3052,11 @@ ms.assetid: 0938efc2-e205-450b-9314-99951fcbd702
 caps.latest.revision: 21
 author: dotnet-bot
 ms.author: dotnetcontent
-ms.openlocfilehash: 4ab447c06504d6c3bb7c51107e422b2cba1f45e3
-ms.sourcegitcommit: 86adcc06e35390f13c1e372c36d2e044f1fc31ef
+ms.openlocfilehash: 2af9ad571f1e89c11d3aafc118124093d1246f19
+ms.sourcegitcommit: 2042de78fcdceebb6b8ac4b7a292b93e8782cbf5
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/26/2018
+ms.lasthandoff: 04/27/2018
 ---
 # <a name="sorry-we-don39t-have-specifics-on-this-visual-basic-error"></a>很抱歉，我們不&#39;t 這個 Visual Basic 錯誤的詳細資訊
 很抱歉，我們沒有任何有關此錯誤的特定資訊。 您可以搜尋錯誤號碼與訊息文字，以在網路上尋找資訊。 或者，您可以要求其他開發人員使用這些論壇的其中一個：  
@@ -3068,7 +3068,7 @@ ms.lasthandoff: 04/26/2018
  提供有關問題的論壇，並升級為 Visual Basic 及使用互通性功能的問題。  
   
  [Visual Basic IDE](http://go.microsoft.com/fwlink/?LinkId=145971)  
- 提供關於如何在 [!INCLUDE[vsprvs](~/includes/vsprvs-md.md)] 環境中工作之問題的論壇。  
+ 提供有關如何在 Visual Studio 環境中運作的問題的論壇。  
   
  [Visual Basic General](http://go.microsoft.com/fwlink/?LinkId=145973) (Visual Basic 一般)  
  提供有關問題的論壇和 Visual Basic 不討論其他論壇中的問題。  

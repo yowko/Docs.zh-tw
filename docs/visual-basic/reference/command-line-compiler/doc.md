@@ -13,11 +13,11 @@ helpviewer_keywords:
 ms.assetid: 5fc32ec9-a149-4648-994c-a8d0cccd0a65
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 0948b9ef0675541ca595bb297e01e62c9d79a181
-ms.sourcegitcommit: 498799639937c89de777361aab74261efe7b79ea
+ms.openlocfilehash: e7dc75a0600c9694c4a20f028c810c6aca54eeb6
+ms.sourcegitcommit: 2042de78fcdceebb6b8ac4b7a292b93e8782cbf5
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 03/22/2018
+ms.lasthandoff: 04/27/2018
 ---
 # <a name="-doc"></a>-doc
 將文件註解處理成 XML 檔案。  
@@ -46,7 +46,7 @@ ms.lasthandoff: 03/22/2018
   
 -   成員，例如欄位、[事件](../../../visual-basic/language-reference/statements/event-statement.md)，[屬性](../../../visual-basic/language-reference/statements/property-statement.md)，[函式](../../../visual-basic/language-reference/statements/function-statement.md)，或[副程式](../../../visual-basic/language-reference/statements/sub-statement.md)。  
   
- 若要使用產生的 XML 檔案，與[!INCLUDE[vsprvs](~/includes/vsprvs-md.md)] [IntelliSense](/visualstudio/ide/using-intellisense)功能，可讓您想要支援的組件相同的 XML 檔案的檔案名稱。 請確認 XML 檔案位於與組件相同的目錄，以便組件中的參考時[!INCLUDE[vsprvs](~/includes/vsprvs-md.md)]專案的.xml 檔案位於以及。 XML 文件檔並不需要在單一專案或專案所參考的專案中的程式碼的 IntelliSense。  
+ 若要使用產生的 XML 檔案與 Visual Studio [IntelliSense](/visualstudio/ide/using-intellisense)功能，可讓您想要支援的組件相同的 XML 檔案的檔案名稱。 請確定 XML 檔案與組件相同的目錄中，讓組件參考時 Visual Studio 專案中，以及找到的.xml 檔案。 XML 文件檔並不需要在單一專案或專案所參考的專案中的程式碼的 IntelliSense。  
   
  除非您使用編譯`/target:module`，XML 檔案包含標記`<assembly></assembly>`。 這些標記會指定包含編譯輸出檔的組件資訊清單之檔案的名稱。  
   

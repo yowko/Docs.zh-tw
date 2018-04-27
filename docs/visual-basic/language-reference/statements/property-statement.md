@@ -2,9 +2,10 @@
 title: Property Statement
 ms.date: 07/20/2015
 ms.prod: .net
-ms.reviewer: 
-ms.suite: 
-ms.technology: devlang-visual-basic
+ms.reviewer: ''
+ms.suite: ''
+ms.technology:
+- devlang-visual-basic
 ms.topic: article
 f1_keywords:
 - vb.PropertySet
@@ -16,21 +17,21 @@ helpviewer_keywords:
 - property procedures [Visual Basic], Property statements
 - Property keyword [Visual Basic]
 ms.assetid: 3155edaf-8ebd-45c6-9cef-11d5d2dc8d38
-caps.latest.revision: "41"
+caps.latest.revision: 41
 author: dotnet-bot
 ms.author: dotnetcontent
-ms.openlocfilehash: af4666ecb059f141480be2295055644537819293
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.openlocfilehash: 558b62dd8c676532355ef12134ad8cb803b70796
+ms.sourcegitcommit: 2042de78fcdceebb6b8ac4b7a292b93e8782cbf5
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 04/27/2018
 ---
 # <a name="property-statement"></a>Property Statement
 宣告屬性，以及用來儲存及擷取屬性值的屬性程序的名稱。  
   
 ## <a name="syntax"></a>語法  
   
-```  
+```vb  
 [ <attributelist> ] [ Default ] [ accessmodifier ]   
 [ propertymodifiers ] [ Shared ] [ Shadows ] [ ReadOnly | WriteOnly ] [ Iterator ]  
 Property name ( [ parameterlist ] ) [ As returntype ] [ Implements implementslist ]  
@@ -51,11 +52,11 @@ Property name ( [ parameterlist ] ) [ As returntype ] [ Implements implementslis
   
 -   `attributelist`  
   
-     選擇項。 適用於此屬性的屬性清單或`Get`或`Set`程序。 請參閱[屬性清單](../../../visual-basic/language-reference/statements/attribute-list.md)。  
+     選擇性。 適用於此屬性的屬性清單或`Get`或`Set`程序。 請參閱[屬性清單](../../../visual-basic/language-reference/statements/attribute-list.md)。  
   
 -   `Default`  
   
-     選擇項。 指定這個屬性是類別或結構定義所在的預設屬性。 預設屬性必須接受參數，可設定及擷取但沒有指定屬性名稱。 如果您宣告屬性做為`Default`，您不能使用`Private`屬性或其中一個屬性程序。  
+     選擇性。 指定這個屬性是類別或結構定義所在的預設屬性。 預設屬性必須接受參數，可設定及擷取但沒有指定屬性名稱。 如果您宣告屬性做為`Default`，您不能使用`Private`屬性或其中一個屬性程序。  
   
 -   `accessmodifier`  
   
@@ -75,7 +76,7 @@ Property name ( [ parameterlist ] ) [ As returntype ] [ Implements implementslis
   
 -   `propertymodifiers`  
   
-     選擇項。 可以是下列其中一項：  
+     選擇性。 可以是下列其中一項：  
   
     -   [多載](../../../visual-basic/language-reference/modifiers/overloads.md)  
   
@@ -93,31 +94,31 @@ Property name ( [ parameterlist ] ) [ As returntype ] [ Implements implementslis
   
 -   `Shared`  
   
-     選擇項。 請參閱[共用](../../../visual-basic/language-reference/modifiers/shared.md)。  
+     選擇性。 請參閱[共用](../../../visual-basic/language-reference/modifiers/shared.md)。  
   
 -   `Shadows`  
   
-     選擇項。 請參閱[陰影](../../../visual-basic/language-reference/modifiers/shadows.md)。  
+     選擇性。 請參閱[陰影](../../../visual-basic/language-reference/modifiers/shadows.md)。  
   
 -   `ReadOnly`  
   
-     選擇項。 請參閱[ReadOnly](../../../visual-basic/language-reference/modifiers/readonly.md)。  
+     選擇性。 請參閱[ReadOnly](../../../visual-basic/language-reference/modifiers/readonly.md)。  
   
 -   `WriteOnly`  
   
-     選擇項。 請參閱[WriteOnly](../../../visual-basic/language-reference/modifiers/writeonly.md)。  
+     選擇性。 請參閱[WriteOnly](../../../visual-basic/language-reference/modifiers/writeonly.md)。  
   
 -   `Iterator`  
   
-     選擇項。 請參閱[迭代器](../../../visual-basic/language-reference/modifiers/iterator.md)。  
+     選擇性。 請參閱[迭代器](../../../visual-basic/language-reference/modifiers/iterator.md)。  
   
 -   `name`  
   
-     必要項。 屬性的名稱。 請參閱[宣告項目名稱](../../../visual-basic/programming-guide/language-features/declared-elements/declared-element-names.md)。  
+     必要。 屬性的名稱。 請參閱[宣告項目名稱](../../../visual-basic/programming-guide/language-features/declared-elements/declared-element-names.md)。  
   
 -   `parameterlist`  
   
-     選擇項。 本機變數的名稱，表示這個屬性的參數和可能的其他參數的清單`Set`程序。 請參閱[參數清單](../../../visual-basic/language-reference/statements/parameter-list.md)。  
+     選擇性。 本機變數的名稱，表示這個屬性的參數和可能的其他參數的清單`Set`程序。 請參閱[參數清單](../../../visual-basic/language-reference/statements/parameter-list.md)。  
   
 -   `returntype`  
   
@@ -125,7 +126,7 @@ Property name ( [ parameterlist ] ) [ As returntype ] [ Implements implementslis
   
 -   `Implements`  
   
-     選擇項。 表示這個屬性會實作一個或多個屬性，每一個定義中包含這個屬性的類別或結構所實作的介面。 請參閱[實作陳述式](../../../visual-basic/language-reference/statements/implements-statement.md)。  
+     選擇性。 表示這個屬性會實作一個或多個屬性，每一個定義中包含這個屬性的類別或結構所實作的介面。 請參閱[實作陳述式](../../../visual-basic/language-reference/statements/implements-statement.md)。  
   
 -   `implementslist`  
   
@@ -137,18 +138,18 @@ Property name ( [ parameterlist ] ) [ As returntype ] [ Implements implementslis
   
      `interface.definedname`  
   
-    |組件|說明|  
+    |組件|描述|  
     |---|---|  
-    |`interface`|必要項。 這個屬性所實作的介面名稱所含的類別或結構。|  
-    |`definedname`|必要項。 屬性定義中依據名稱`interface`。|  
+    |`interface`|必要。 這個屬性所實作的介面名稱所含的類別或結構。|  
+    |`definedname`|必要。 屬性定義中依據名稱`interface`。|  
   
 -   `Get`  
   
-     選擇項。 必要屬性已標記為`WriteOnly`。 啟動`Get`屬性程序用來傳回屬性的值。  
+     選擇性。 必要屬性已標記為`WriteOnly`。 啟動`Get`屬性程序用來傳回屬性的值。  
   
 -   `statements`  
   
-     選擇項。 在中執行的陳述式區塊`Get`或`Set`程序。  
+     選擇性。 在中執行的陳述式區塊`Get`或`Set`程序。  
   
 -   `End Get`  
   
@@ -156,7 +157,7 @@ Property name ( [ parameterlist ] ) [ As returntype ] [ Implements implementslis
   
 -   `Set`  
   
-     選擇項。 必要屬性已標記為`ReadOnly`。 啟動`Set`屬性程序用來儲存屬性的值。  
+     選擇性。 必要屬性已標記為`ReadOnly`。 啟動`Set`屬性程序用來儲存屬性的值。  
   
 -   `End Set`  
   

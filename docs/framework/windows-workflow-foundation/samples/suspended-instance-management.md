@@ -1,23 +1,24 @@
 ---
-title: "暫停的執行個體管理"
-ms.custom: 
+title: 暫停的執行個體管理
+ms.custom: ''
 ms.date: 03/30/2017
 ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.tgt_pltfrm: 
+ms.reviewer: ''
+ms.suite: ''
+ms.tgt_pltfrm: ''
 ms.topic: article
 ms.assetid: f5ca3faa-ba1f-4857-b92c-d927e4b29598
-caps.latest.revision: "6"
+caps.latest.revision: 6
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.workload: dotnet
-ms.openlocfilehash: 6e04f1e2f334993975b2c4261efdc28ba318dfa3
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.workload:
+- dotnet
+ms.openlocfilehash: 5f5073e9de217637141d7e3c9d70bb6a0b7a9cd0
+ms.sourcegitcommit: 2042de78fcdceebb6b8ac4b7a292b93e8782cbf5
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 04/27/2018
 ---
 # <a name="suspended-instance-management"></a>暫停的執行個體管理
 這個範例會示範如何管理已暫止的工作流程執行個體。  <xref:System.ServiceModel.Activities.Description.WorkflowUnhandledExceptionBehavior> 的預設動作為 `AbandonAndSuspend`。 這表示根據預設，從裝載於 <xref:System.ServiceModel.WorkflowServiceHost> 中之工作流程執行個體所擲回的未處理例外狀況將會造成此執行個體從記憶體中處置 (放棄)，而且此執行個體的永久性/持續版本將會標示為已暫停。 暫停的工作流程執行個體要等到取消暫停之後才能夠執行。  
@@ -25,7 +26,7 @@ ms.lasthandoff: 12/22/2017
  此範例會示範如何實作命令列公用程式來查詢暫停的執行個體，以及如何提供使用者繼續或終止執行個體的選擇。 在這個範例中，工作流程服務會故意擲回例外狀況，使得它遭到暫停。 然後可以使用此命令列公用程式來查詢執行個體，之後再繼續或終止執行個體。  
   
 ## <a name="demonstrates"></a>示範  
- 在 <xref:System.ServiceModel.WorkflowServiceHost> 中，<xref:System.ServiceModel.Activities.Description.WorkflowUnhandledExceptionBehavior> 搭配 <xref:System.ServiceModel.Activities.WorkflowControlEndpoint> 和 [!INCLUDE[wf](../../../../includes/wf-md.md)]。  
+ <xref:System.ServiceModel.WorkflowServiceHost> 與<xref:System.ServiceModel.Activities.Description.WorkflowUnhandledExceptionBehavior>和<xref:System.ServiceModel.Activities.WorkflowControlEndpoint>中 Windows Workflow Foundation (WF)。  
   
 ## <a name="discussion"></a>討論  
  這個範例中所實作的命令列公用程式是 [!INCLUDE[netfx_current_long](../../../../includes/netfx-current-long-md.md)] 隨附之 SQL 執行個體存放區實作所特有。 如果您擁有執行個體存放區的自訂實作，您可以改寫此公用程式，其方式是使用您的執行個體存放區所特有的實作來取代範例中的 `WorkflowInstanceCommand` 實作。  

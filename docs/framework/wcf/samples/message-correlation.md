@@ -1,24 +1,26 @@
 ---
-title: "訊息相互關聯"
-ms.custom: 
+title: 訊息相互關聯
+ms.custom: ''
 ms.date: 03/30/2017
 ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.technology: dotnet-clr
-ms.tgt_pltfrm: 
+ms.reviewer: ''
+ms.suite: ''
+ms.technology:
+- dotnet-clr
+ms.tgt_pltfrm: ''
 ms.topic: article
 ms.assetid: 3f62babd-c991-421f-bcd8-391655c82a1f
-caps.latest.revision: "26"
+caps.latest.revision: 26
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.workload: dotnet
-ms.openlocfilehash: 95336c55b2c3e83e2bd68bb653bbaacc446d8934
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.workload:
+- dotnet
+ms.openlocfilehash: 52dd8d66a4a28b515ebfaee88c4383889839fff0
+ms.sourcegitcommit: 2042de78fcdceebb6b8ac4b7a292b93e8782cbf5
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 04/27/2018
 ---
 # <a name="message-correlation"></a>訊息相互關聯
 這個範例示範訊息佇列 (MSMQ) 應用程式如何將 MSMQ 訊息傳送至 [!INCLUDE[indigo1](../../../../includes/indigo1-md.md)] 服務，以及如何在要求/回應案例中將傳送者與接收者應用程式之間的訊息相互關聯。 這個範例會使用 msmqIntegrationBinding 繫結。 本實例中的服務是自我裝載的主控台應用程式，可讓您觀察接收佇列訊息的服務。 K  
@@ -28,8 +30,8 @@ ms.lasthandoff: 12/22/2017
  `IOrderProcessor` 服務合約會定義適合與佇列一起使用的單向服務作業。 MSMQ 訊息沒有 Action 標頭，所以不可能自動將不同 MSMQ 訊息對應到作業合約。 因此，這種情況下只能有一個作業合約。 如果您想要在服務中定義更多的作業合約，應用程式就必須提供資訊，說明 MSMQ 訊息中的哪個標頭 (例如，標籤或 correlationID) 可以用來決定分派哪個作業合約。 這示範於[自訂 Demux](../../../../docs/framework/wcf/samples/custom-demux.md)。  
   
  MSMQ 訊息也不會包含有關作業合約的不同參數各自對應到哪個標頭的資訊。 因此，在作業合約中只能有一個參數。 參數的類型是<!--zz <xref:System.ServiceModel.MSMQIntegration.MsmqMessage%601>`MsmqMessage<T>`-->，`System.ServiceModel.MSMQIntegration.MsmqMessage`其中包含基礎 MSMQ 訊息。 `MsmqMessage<T>` 類別中的型別 "T" 代表已序列化為 MSMQ 訊息本文的資料。 在這個範例中，`PurchaseOrder` 型別會序列化為 MSMQ 訊息本文。  
-  
-```  
+
+```csharp
 [ServiceContract(Namespace = "http://Microsoft.ServiceModel.Samples")]  
 [ServiceKnownType(typeof(PurchaseOrder))]  
 public interface IOrderProcessor  
@@ -37,11 +39,11 @@ public interface IOrderProcessor
     [OperationContract(IsOneWay = true, Action = "*")]  
     void SubmitPurchaseOrder(MsmqMessage<PurchaseOrder> msg);  
 }  
-```  
-  
+```
+
  服務作業會處理採購單，並在服務主控台視窗中顯示採購單內容及其狀態。 <xref:System.ServiceModel.OperationBehaviorAttribute> 將作業設定為先向佇列登記交易，然後在作業回傳時標記交易完成。 `PurchaseOrder` 包含必須由服務進行處理的採購單明細。  
-  
-```  
+
+```csharp
 // Service class that implements the service contract.  
 public class OrderProcessorService : IOrderProcessor  
 {  
@@ -74,13 +76,13 @@ public class OrderProcessorService : IOrderProcessor
         client.Close();  
     }  
 }  
-```  
-  
+```
+
  服務會使用自訂用戶端 `OrderResponseClient`，將 MSMQ 訊息傳送至佇列。 由於接收和處理訊息的應用程式是 MSMQ 應用程式，而非 [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] 應用程式，所以兩個應用程式之間沒有隱含的服務合約。 因此，我們無法在這個案例中使用 Svcutil.exe 工具來建立 Proxy。  
   
  對所有使用 [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] 繫結傳送訊息的 `msmqIntegrationBinding` 應用程式來說，自訂 Proxy 基本上都相同。 與其他 Proxy 不同的是，它並不包含服務作業的範圍， 而只是一項送出訊息的作業。  
-  
-```  
+
+```csharp
 [System.ServiceModel.ServiceContractAttribute(Namespace = "http://Microsoft.ServiceModel.Samples")]  
 public interface IOrderResponse  
 {  
@@ -108,11 +110,11 @@ public partial class OrderResponseClient : System.ServiceModel.ClientBase<IOrder
         base.Channel.SendOrderResponse(msg);  
     }  
 }  
-```  
-  
+```
+
  服務會自我裝載。 使用 MSMQ 整合傳輸時，必須事先建立使用的佇列。 這個動作可手動或透過程式碼完成。 在這個範例中，服務包含檢查佇列是否存在並在需要時建立佇列的 <xref:System.Messaging> 程式碼。 佇列名稱會從組態檔中讀取。  
-  
-```  
+
+```csharp
 public static void Main()  
 {  
        // Get the MSMQ queue name from application settings in configuration.  
@@ -134,7 +136,7 @@ public static void Main()
             serviceHost.Close();  
       }  
 }  
-```  
+```
   
  傳送訂單要求的 MSMQ 佇列可以在組態檔的 appSettings 區段中指定。 用戶端和服務端點則是在組態檔的 system.serviceModel 區段中定義。 這兩個都會指定 `msmqIntegrationbinding` 繫結。  
   
@@ -176,8 +178,8 @@ public static void Main()
 ```  
   
  用戶端應用程式會使用 <xref:System.Messaging>，傳送永久性的交易式訊息至佇列。 訊息的本文會包含採購單。  
-  
-```  
+
+```csharp
 static void PlaceOrder()  
 {  
     //Connect to the queue  
@@ -219,8 +221,8 @@ static void PlaceOrder()
     orderMessageID = msg.Id;  
     Console.WriteLine("Placed the order, waiting for response...");  
 }  
-```  
-  
+```
+
  接收訂單回應的 MSMQ 佇列是在組態檔的 appSettings 區段中指定，如下列範例組態所示。  
   
 > [!NOTE]
@@ -233,8 +235,8 @@ static void PlaceOrder()
 ```  
   
  用戶端應用程式會儲存其傳送至服務之訂單要求訊息的 `messageID`，並等候服務的回應。 一旦回應抵達佇列，用戶端就會使用訊息的 `correlationID` 屬性 (其中包含用戶端原先傳送至服務之訂單訊息的 `messageID`)，將此回應與它所傳送的訂單訊息相互關聯。  
-  
-```  
+
+```csharp
 static void DisplayOrderStatus()  
 {  
     MessageQueue orderResponseQueue = new   
@@ -273,8 +275,8 @@ static void DisplayOrderStatus()
     }  
   }  
 }  
-```  
-  
+```
+
  當您執行範例時，用戶端與服務活動都會顯示在服務與用戶端主控台視窗中。 您可以看到服務從用戶端接收訊息，再將回應傳送給用戶端。 用戶端會顯示從服務收到的回應。 在每個主控台視窗中按下 ENTER 鍵，即可關閉服務與用戶端。  
   
 > [!NOTE]
@@ -323,6 +325,6 @@ static void DisplayOrderStatus()
 >   
 >  `<InstallDrive>:\WF_WCF_Samples\WCF\Basic\Binding\MSMQIntegration\MessageCorrelation`  
   
-## <a name="see-also"></a>請參閱  
+## <a name="see-also"></a>另請參閱  
  [WCF 中的佇列](../../../../docs/framework/wcf/feature-details/queuing-in-wcf.md)  
  [訊息佇列](http://go.microsoft.com/fwlink/?LinkId=94968)

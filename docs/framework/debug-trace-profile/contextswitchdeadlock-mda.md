@@ -1,12 +1,13 @@
 ---
 title: contextSwitchDeadlock MDA
-ms.custom: 
+ms.custom: ''
 ms.date: 03/30/2017
 ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.technology: dotnet-clr
-ms.tgt_pltfrm: 
+ms.reviewer: ''
+ms.suite: ''
+ms.technology:
+- dotnet-clr
+ms.tgt_pltfrm: ''
 ms.topic: article
 helpviewer_keywords:
 - deadlocks [.NET Framework]
@@ -19,16 +20,17 @@ helpviewer_keywords:
 - message pumping
 - context switching deadlocks
 ms.assetid: 26dfaa15-9ddb-4b0a-b6da-999bba664fa6
-caps.latest.revision: "22"
+caps.latest.revision: 22
 author: mairaw
 ms.author: mairaw
 manager: wpickett
-ms.workload: dotnet
-ms.openlocfilehash: 816afbae0cca18de24c11152541a509b54c119b8
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.workload:
+- dotnet
+ms.openlocfilehash: 2f3ee9aef3bc824ee25e577a5dbd14aeaa210be3
+ms.sourcegitcommit: 2042de78fcdceebb6b8ac4b7a292b93e8782cbf5
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 04/27/2018
 ---
 # <a name="contextswitchdeadlock-mda"></a>contextSwitchDeadlock MDA
 試圖進行 COM 內容轉換期間，偵測到死結時，會啟用 `contextSwitchDeadlock` Managed 偵錯助理 (MDA)。  
@@ -54,7 +56,7 @@ ms.lasthandoff: 12/22/2017
  若要判斷是否錯誤地啟用 MDA，請停用所有中斷點、重新啟動應用程式，並且讓它不間斷地執行。 如果未啟用 MDA，則可能初始啟用時發生錯誤。 若是如此，請停用 MDA，以避免阻礙偵錯工作階段。  
   
 > [!NOTE]
->  此 MDA 在 [!INCLUDE[vsprvslong](../../../includes/vsprvslong-md.md)] 及較新版本的預設集中。 當 [!INCLUDE[vsprvs](../../../includes/vsprvs-md.md)] 中啟用裝載處理序時，您無法停用預設集中的 MDA。 預設會啟用裝載處理序，所以必須明確將其停用。 如需如何停用 MDA 的資訊，請參閱[診斷 Managed 偵錯助理的錯誤](../../../docs/framework/debug-trace-profile/diagnosing-errors-with-managed-debugging-assistants.md)中的＜啟用和停用 MDA＞。  
+>  此 MDA 在 [!INCLUDE[vsprvslong](../../../includes/vsprvslong-md.md)] 及較新版本的預設集中。 在 Visual Studio 中啟用裝載處理序時，您無法停用預設集中的 Mda。 預設會啟用裝載處理序，所以必須明確將其停用。 如需如何停用 MDA 的資訊，請參閱[診斷 Managed 偵錯助理的錯誤](../../../docs/framework/debug-trace-profile/diagnosing-errors-with-managed-debugging-assistants.md)中的＜啟用和停用 MDA＞。  
   
 ## <a name="resolution"></a>解決方式  
  遵循有關 STA 訊息幫浦的 COM 規則。  
@@ -75,7 +77,7 @@ ms.lasthandoff: 12/22/2017
 </mdaConfig>  
 ```  
   
-## <a name="see-also"></a>請參閱  
+## <a name="see-also"></a>另請參閱  
  <xref:System.Runtime.InteropServices.MarshalAsAttribute>  
  [診斷 Managed 偵錯助理的錯誤](../../../docs/framework/debug-trace-profile/diagnosing-errors-with-managed-debugging-assistants.md)  
  [Interop 封送處理](../../../docs/framework/interop/interop-marshaling.md)

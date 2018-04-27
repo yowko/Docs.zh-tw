@@ -1,27 +1,29 @@
 ---
-title: "標準控制項的 UI 自動化支援"
-ms.custom: 
+title: 標準控制項的 UI 自動化支援
+ms.custom: ''
 ms.date: 03/30/2017
 ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.technology: dotnet-bcl
-ms.tgt_pltfrm: 
+ms.reviewer: ''
+ms.suite: ''
+ms.technology:
+- dotnet-bcl
+ms.tgt_pltfrm: ''
 ms.topic: article
 helpviewer_keywords:
 - controls, UI Automation support for
 - UI Automation, support for standard controls
 ms.assetid: 3770ea8a-2655-4add-9c59-fe0610ad5084
-caps.latest.revision: "11"
+caps.latest.revision: 11
 author: Xansky
 ms.author: mhopkins
 manager: markl
-ms.workload: dotnet
-ms.openlocfilehash: f7529c68e96f93ebbba9fc5e750e09331bda9699
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.workload:
+- dotnet
+ms.openlocfilehash: af46a984f1b4c2577daee120752590ff18b9d1d8
+ms.sourcegitcommit: 2042de78fcdceebb6b8ac4b7a292b93e8782cbf5
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 04/27/2018
 ---
 # <a name="ui-automation-support-for-standard-controls"></a>標準控制項的 UI 自動化支援
 > [!NOTE]
@@ -99,15 +101,15 @@ ms.lasthandoff: 12/22/2017
 |SysDateTimePick32|自訂|  
 |SysMonthCal32|行事曆|  
 |MS_WINNOTE|ToolTip|  
-|VBBubble|工具提示|  
+|VBBubble|ToolTip|  
 |ScrollBar (當做獨立控制項使用時)|滑桿|  
 |SuperGrid|自訂|  
   
 <a name="Windows_Forms_Controls"></a>   
 ## <a name="windows-forms-controls"></a>Windows Form 控制項  
- [!INCLUDE[TLA2#tla_winforms](../../../includes/tla2sharptla-winforms-md.md)] 控制項是透過 UIAutomationClientsideProviders.dll 中的用戶端提供者公開至 [!INCLUDE[TLA#tla_uiautomation](../../../includes/tlasharptla-uiautomation-md.md)] 。 此組件會自動註冊為用於使用者介面自動化用戶端應用程式。  
+ Windows Form 控制項都會公開至[!INCLUDE[TLA#tla_uiautomation](../../../includes/tlasharptla-uiautomation-md.md)]透過 UIAutomationClientsideProviders.dll 中的用戶端提供者。 此組件會自動註冊為用於使用者介面自動化用戶端應用程式。  
   
- 一般來說， [!INCLUDE[TLA2#tla_winforms](../../../includes/tla2sharptla-winforms-md.md)] 支援 [!INCLUDE[TLA2#tla_win32](../../../includes/tla2sharptla-win32-md.md)] 控制項 (即 [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)]通用控制項的 Managed 包裝函式)。 支援的控制項如下。  
+ 一般而言，Windows Form 控制項的 managed 包裝函式[!INCLUDE[TLA2#tla_win32](../../../includes/tla2sharptla-win32-md.md)]通用控制項都受到[!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)]。 支援的控制項如下。  
   
 |類別名稱|  
 |----------------|  
@@ -121,7 +123,7 @@ ms.lasthandoff: 12/22/2017
 |GroupBox|  
 |HscrollBar|  
 |ImageList|  
-|標籤|  
+|ThisAddIn|  
 |ListBox|  
 |ListView|  
 |MainMenu/ContextMenu|  
@@ -178,5 +180,5 @@ ms.lasthandoff: 12/22/2017
 |RaftingContainer|  
 |StatusStrip|  
   
-## <a name="see-also"></a>請參閱  
+## <a name="see-also"></a>另請參閱  
  [UI 自動化控制項類型](../../../docs/framework/ui-automation/ui-automation-control-types.md)

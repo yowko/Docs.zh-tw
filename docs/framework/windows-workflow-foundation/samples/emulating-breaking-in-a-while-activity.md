@@ -1,34 +1,35 @@
 ---
-title: "While 活動中的模擬中斷"
-ms.custom: 
+title: While 活動中的模擬中斷
+ms.custom: ''
 ms.date: 03/30/2017
 ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.tgt_pltfrm: 
+ms.reviewer: ''
+ms.suite: ''
+ms.tgt_pltfrm: ''
 ms.topic: article
 ms.assetid: ddff715d-d623-4b54-b841-60bacbc3ca21
-caps.latest.revision: "10"
+caps.latest.revision: 10
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.workload: dotnet
-ms.openlocfilehash: 22a03c2e7dcc8d024ed407e7df24a4e9db4e2bf6
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.workload:
+- dotnet
+ms.openlocfilehash: 27264832dd82719d7ccb81e1398df343653515b1
+ms.sourcegitcommit: 2042de78fcdceebb6b8ac4b7a292b93e8782cbf5
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 04/27/2018
 ---
 # <a name="emulating-breaking-in-a-while-activity"></a>While 活動中的模擬中斷
 這個範例會示範如何中斷下列活動的迴圈機制：<xref:System.Activities.Statements.DoWhile>、<xref:System.Activities.Statements.ForEach%601>、<xref:System.Activities.Statements.While> 和 <xref:System.Activities.Statements.ParallelForEach%601>。  
   
- 這項處理很實用，因為 [!INCLUDE[wf](../../../../includes/wf-md.md)] 不包括可中斷這些迴圈執行的任何活動。  
+ 這是很有用，因為 Windows Workflow Foundation (WF) 不包括可中斷這些迴圈執行的任何活動。  
   
 ## <a name="scenario"></a>情節  
  此範例會從廠商清單中尋找第一家可靠的廠商 (`Vendor` 類別的執行個體)。 每一家廠商都有 `ID`、`Name` 以及數值信賴值 (可決定廠商的信賴度)。 此範例會建立一個名為 `FindReliableVendor` 的自訂活動，此活動會接收兩個輸入參數 (廠商清單及最低信賴值)，並傳回清單中符合提供之準則的第一家廠商。  
   
 ## <a name="breaking-a-loop"></a>中斷迴圈  
- [!INCLUDE[wf](../../../../includes/wf-md.md)] 不包括可中斷迴圈的活動。 此程式碼範例會使用 <xref:System.Activities.Statements.If> 活動和幾個變數來完成中斷迴圈的工作。 在範例中，一旦 <xref:System.Activities.Statements.While> 變數指派了 `reliableVendor` 以外的值，`null` 活動就會中斷。  
+ Windows Workflow Foundation (WF) 不會包括可中斷迴圈的活動。 此程式碼範例會使用 <xref:System.Activities.Statements.If> 活動和幾個變數來完成中斷迴圈的工作。 在範例中，一旦 <xref:System.Activities.Statements.While> 變數指派了 `reliableVendor` 以外的值，`null` 活動就會中斷。  
   
  下列程式碼範例示範此範例如何中斷 while 迴圈。  
   

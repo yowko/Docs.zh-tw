@@ -12,14 +12,14 @@ ms.assetid: 6e90eb8a-1a4e-4387-8a68-9287dc7875e8
 caps.latest.revision: 14
 author: dotnet-bot
 ms.author: dotnetcontent
-ms.openlocfilehash: e1e57ac4650eb625ce2eb18e092024ac40607d81
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.openlocfilehash: 4163fbb1bd429442badfa429034d34133f825898
+ms.sourcegitcommit: 2042de78fcdceebb6b8ac4b7a292b93e8782cbf5
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 04/27/2018
 ---
 # <a name="registry-summary-visual-basic"></a>登錄摘要 (Visual Basic)
-[!INCLUDE[vsprvs](~/includes/vsprvs-md.md)]語言關鍵字和執行階段程式庫成員會依用途組織和使用。  
+Visual Studio 語言關鍵字和執行階段程式庫成員會依用途組織和使用。  
   
  使用`My`功能可以讓您與產能和這些項目比登錄作業的效能。 如需詳細資訊，請參閱<xref:Microsoft.VisualBasic.MyServices.RegistryProxy>。  
   

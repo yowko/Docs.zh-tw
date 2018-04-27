@@ -16,14 +16,14 @@ ms.assetid: 0fd9a8f6-f34e-4c35-a49d-9b9bbd8da4a9
 caps.latest.revision: 28
 author: dotnet-bot
 ms.author: dotnetcontent
-ms.openlocfilehash: f1ccf08ba58fa6af60bd8ffd7cba79b205dc0f3d
-ms.sourcegitcommit: 86adcc06e35390f13c1e372c36d2e044f1fc31ef
+ms.openlocfilehash: 20239045426e466ba58427bb9794ea7e55b3aa4c
+ms.sourcegitcommit: 2042de78fcdceebb6b8ac4b7a292b93e8782cbf5
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/26/2018
+ms.lasthandoff: 04/27/2018
 ---
 # <a name="how-to-invoke-the-command-line-compiler-visual-basic"></a>如何：叫用命令列編譯器 (Visual Basic)
-您可以在命令列中，也稱為 MS-DOS 命令提示字元中輸入可執行檔的名稱來叫用命令列編譯器。 如果您從預設 Windows 命令提示字元進行編譯，您必須輸入的可執行檔的完整的路徑。 若要覆寫此預設行為，您可以使用[!INCLUDE[vsprvs](~/includes/vsprvs-md.md)]命令提示字元，或修改的 PATH 環境變數。 兩者都可讓您只要輸入編譯器名稱從任何目錄進行編譯。  
+您可以在命令列中，也稱為 MS-DOS 命令提示字元中輸入可執行檔的名稱來叫用命令列編譯器。 如果您從預設 Windows 命令提示字元進行編譯，您必須輸入的可執行檔的完整的路徑。 若要覆寫此預設行為，您可以使用 Visual Studio 命令提示字元中，或修改 PATH 環境變數。 兩者都可讓您只要輸入編譯器名稱從任何目錄進行編譯。  
   
 [!INCLUDE[note_settings_general](~/includes/note-settings-general-md.md)]  
   
@@ -31,9 +31,9 @@ ms.lasthandoff: 04/26/2018
   
 1.  開啟 Microsoft Visual Studio 程式群組中的 Visual Studio Tools 程式資料夾。  
   
-2.  您可以使用[!INCLUDE[vsprvs](~/includes/vsprvs-md.md)]編譯器存取從您的電腦上的任何目錄，如果在安裝 Visual Studio 命令提示字元。  
+2.  如果在安裝 Visual Studio，您可以使用 Visual Studio 命令提示字元存取從任何目錄的編譯器，您的電腦。  
   
-3.  叫用[!INCLUDE[vsprvs](~/includes/vsprvs-md.md)]命令提示字元。  
+3.  叫用 Visual Studio 命令提示字元。  
   
 4.  在命令列中，輸入`vbc.exe` *sourceFileName*然後按 ENTER 鍵。  
   

@@ -17,11 +17,11 @@ ms.author: dotnetcontent
 manager: wpickett
 ms.workload:
 - dotnet
-ms.openlocfilehash: 8bf63c59c0948dd8414232a52fc12fafa0d13aa1
-ms.sourcegitcommit: 86adcc06e35390f13c1e372c36d2e044f1fc31ef
+ms.openlocfilehash: 909461811907c1eb3f494b29294db45dbbe8b01d
+ms.sourcegitcommit: 2042de78fcdceebb6b8ac4b7a292b93e8782cbf5
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/26/2018
+ms.lasthandoff: 04/27/2018
 ---
 # <a name="globalization-for-wpf"></a>WPF 的全球化
 本主題將介紹問題，您應該瞭解的撰寫時[!INCLUDE[TLA#tla_winclient](../../../../includes/tlasharptla-winclient-md.md)]的全球市場的應用程式。 全球化的程式設計項目中所定義[!INCLUDE[TLA#tla_net](../../../../includes/tlasharptla-net-md.md)]中`System.Globalization`。  
@@ -180,7 +180,7 @@ ms.lasthandoff: 04/26/2018
   
 <a name="using_clickonce"></a>   
 ## <a name="using-clickonce-with-localized-applications"></a>使用 ClickOnce 與當地語系化的應用程式  
- ClickOnce 是新的 Windows Form 部署技術，將獍旓[!INCLUDE[TLA#tla_visualstu2005](../../../../includes/tlasharptla-visualstu2005-md.md)]。 它能讓應用程式安裝及升級 Web 應用程式。 當地語系化使用 ClickOnce 部署的應用程式時，只能在已當地語系化的文化特性中檢視它。 例如，如果部署的應用程式當地語系化為日文它只能檢視在日文[!INCLUDE[TLA#tla_win](../../../../includes/tlasharptla-win-md.md)]不能在英文[!INCLUDE[TLA2#tla_win](../../../../includes/tla2sharptla-win-md.md)]。 這會產生一個問題，因為它是日文的使用者執行的英文版的常見案例[!INCLUDE[TLA2#tla_win](../../../../includes/tla2sharptla-win-md.md)]。  
+ ClickOnce 是新的 Windows Form 部署技術，將獍旓[!INCLUDE[TLA#tla_visualstu2005](../../../../includes/tlasharptla-visualstu2005-md.md)]。 它能讓應用程式安裝及升級 Web 應用程式。 當地語系化使用 ClickOnce 部署的應用程式時，只能在已當地語系化的文化特性中檢視它。 例如，如果部署的應用程式當地語系化為日文它只能檢視在日文[!INCLUDE[TLA#tla_win](../../../../includes/tlasharptla-win-md.md)]不在英文版的 Windows 上。 這顯現的問題，因為它是日文的使用者執行 Windows 的英文版的常見案例。  
   
  此問題的解決方案是設定中性的語言後援屬性。 應用程式開發人員可以選擇性地從主要組件中移除資源，指定可在附屬組件中找到的資源對應至特定的文化特性。 若要控制此程序使用<xref:System.Resources.NeutralResourcesLanguageAttribute>。 建構函式<xref:System.Resources.NeutralResourcesLanguageAttribute>類別有兩個簽章，一個會採用<xref:System.Resources.UltimateResourceFallbackLocation>參數來指定位置其中<xref:System.Resources.ResourceManager>應該擷取後援資源： 主要組件或附屬組件。 下列範例顯示如何使用這個屬性。 此程式碼所造成的最終後援位置<xref:System.Resources.ResourceManager>尋找"de"目錄的子目錄中的目前執行的組件的資源。  
   

@@ -20,14 +20,14 @@ ms.author: dotnetcontent
 manager: wpickett
 ms.workload:
 - dotnet
-ms.openlocfilehash: 4b38cbe1bab4c3d2bf0c6ee518dd26df4ff440dc
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.openlocfilehash: 5949bebe91767539c230ba166f9389f09dc2392b
+ms.sourcegitcommit: 2042de78fcdceebb6b8ac4b7a292b93e8782cbf5
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 04/27/2018
 ---
 # <a name="windows-forms"></a>Windows Forms
-由於表單是應用程式的基礎單位，因此在表單的功能和設計方面需要多加考量。 表單基本上就像是一個空白面板，身為開發人員的您可使用控制項建立使用者介面，並使用程式碼管理資料，來增強表單。 為了達到這個目的，[!INCLUDE[vsprvs](../../../includes/vsprvs-md.md)] 提供整合式開發環境 (IDE) 以協助您撰寫程式碼，並且提供一組以 [!INCLUDE[dnprdnshort](../../../includes/dnprdnshort-md.md)] 撰寫的豐富控制項。 您可以利用程式碼來補充這些控制項的功能，進而輕鬆快速地開發所需的方案。  
+由於表單是應用程式的基礎單位，因此在表單的功能和設計方面需要多加考量。 表單基本上就像是一個空白面板，身為開發人員的您可使用控制項建立使用者介面，並使用程式碼管理資料，來增強表單。 為此，Visual Studio 為您提供的整合式的開發環境 (IDE) 以協助您撰寫程式碼，以及設定與撰寫的豐富控制項[!INCLUDE[dnprdnshort](../../../includes/dnprdnshort-md.md)]。 您可以利用程式碼來補充這些控制項的功能，進而輕鬆快速地開發所需的方案。  
   
 ## <a name="in-this-section"></a>本節內容  
  [Windows Forms 使用者入門](../../../docs/framework/winforms/getting-started-with-windows-forms.md)  

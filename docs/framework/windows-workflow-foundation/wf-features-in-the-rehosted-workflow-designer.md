@@ -14,17 +14,17 @@ ms.author: dotnetcontent
 manager: wpickett
 ms.workload:
 - dotnet
-ms.openlocfilehash: 999c18f20264a71cf73bbd5afd352ad3104a03e8
-ms.sourcegitcommit: 86adcc06e35390f13c1e372c36d2e044f1fc31ef
+ms.openlocfilehash: a11a1cddbb5b65bf174cabe7774ad62791657f54
+ms.sourcegitcommit: 2042de78fcdceebb6b8ac4b7a292b93e8782cbf5
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/26/2018
+ms.lasthandoff: 04/27/2018
 ---
 # <a name="support-for-new-workflow-foundation-45-features-in-the-rehosted-workflow-designer"></a>針對重新裝載之工作流程設計工具中的新 Workflow Foundation 4.5 功能提供的支援
-[!INCLUDE[wf](../../../includes/wf-md.md)] 中的 [!INCLUDE[net_v45](../../../includes/net-v45-md.md)] 引入了很多新功能，包括幾項工作流程設計工具經驗的增強功能。 本主題詳細介紹重新裝載的設計工具支援其中哪些功能，以及目前不支援的功能。  
+Windows Workflow Foundation (WF) 中[!INCLUDE[net_v45](../../../includes/net-v45-md.md)]導入許多新功能，包括數個工作流程設計工具經驗的增強功能。 本主題詳細介紹重新裝載的設計工具支援其中哪些功能，以及目前不支援的功能。  
   
 > [!NOTE]
->  如需的所有新的清單[!INCLUDE[wf](../../../includes/wf-md.md)]中引進的功能[!INCLUDE[net_v45](../../../includes/net-v45-md.md)]，包括那些不相關設計工具重新裝載的請參閱 < [What's New in.NET 4.5 中 Windows Workflow Foundation](../../../docs/framework/windows-workflow-foundation/whats-new-in-wf-in-dotnet.md)。  
+>  如需所有中引進新的 Windows Workflow Foundation (WF) 功能的清單[!INCLUDE[net_v45](../../../includes/net-v45-md.md)]，包括那些不相關設計工具重新裝載的請參閱 < [What's New in.NET 4.5 中 Windows Workflow Foundation](../../../docs/framework/windows-workflow-foundation/whats-new-in-wf-in-dotnet.md)。  
   
 ## <a name="activities"></a>活動  
  內建活動程式庫包含新的活動及現有活動的新功能。 重新裝載的設計工具支援所有新活動。 如需有關這些新的活動的詳細資訊，請參閱[活動](../../../docs/framework/windows-workflow-foundation/whats-new-in-wf-in-dotnet.md#BKMK_NewActivities)區段[What's New in.NET 4.5 中 Windows Workflow Foundation](../../../docs/framework/windows-workflow-foundation/whats-new-in-wf-in-dotnet.md)。  

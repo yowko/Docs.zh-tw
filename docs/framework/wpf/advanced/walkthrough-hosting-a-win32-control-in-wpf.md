@@ -22,11 +22,11 @@ ms.author: dotnetcontent
 manager: wpickett
 ms.workload:
 - dotnet
-ms.openlocfilehash: ab80f39a15952bee8296166ea19a78498c3c1b23
-ms.sourcegitcommit: 86adcc06e35390f13c1e372c36d2e044f1fc31ef
+ms.openlocfilehash: 7c33e764b9af46aec3788e7e113d01c4c5fc9905
+ms.sourcegitcommit: 2042de78fcdceebb6b8ac4b7a292b93e8782cbf5
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/26/2018
+ms.lasthandoff: 04/27/2018
 ---
 # <a name="walkthrough-hosting-a-win32-control-in-wpf"></a>逐步解說：在 WPF 中裝載 Win32 控制項
 [!INCLUDE[TLA#tla_winclient](../../../../includes/tlasharptla-winclient-md.md)] 提供用來建立應用程式的豐富環境。 不過，當您擁有了大筆投資的[!INCLUDE[TLA#tla_win32](../../../../includes/tlasharptla-win32-md.md)]程式碼，它可能是更有效率地重複使用最少部分中的程式碼程式[!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)]而不是它完全重寫應用程式。 [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] 提供簡單的機制，以裝載[!INCLUDE[TLA2#tla_win32](../../../../includes/tla2sharptla-win32-md.md)]視窗，請在[!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)]頁面。  
@@ -141,7 +141,7 @@ ms.lasthandoff: 04/26/2018
   
 <a name="communication"></a>   
 ## <a name="implement-communication-between-the-control-and-the-page"></a>實作控制項與頁面之間的通訊  
- 您傳送操作控制項[!INCLUDE[TLA2#tla_win](../../../../includes/tla2sharptla-win-md.md)]訊息。 在使用者透過將通知傳送至其主視窗與控制項互動時，控制項就會通知您。 [裝載 WPF 範例中的 Win32 ListBox 控制項](http://go.microsoft.com/fwlink/?LinkID=159998)範例包括 UI，它會提供數個範例的運作方式：  
+ 您可以操作控制項傳送的 Windows 訊息。 在使用者透過將通知傳送至其主視窗與控制項互動時，控制項就會通知您。 [裝載 WPF 範例中的 Win32 ListBox 控制項](http://go.microsoft.com/fwlink/?LinkID=159998)範例包括 UI，它會提供數個範例的運作方式：  
   
 -   將項目附加至清單。  
   

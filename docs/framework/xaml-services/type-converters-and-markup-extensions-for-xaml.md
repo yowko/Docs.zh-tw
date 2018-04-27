@@ -1,12 +1,13 @@
 ---
-title: "XAML 的類型轉換子和標記延伸"
-ms.custom: 
+title: XAML 的類型轉換子和標記延伸
+ms.custom: ''
 ms.date: 03/30/2017
 ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.technology: dotnet-wpf
-ms.tgt_pltfrm: 
+ms.reviewer: ''
+ms.suite: ''
+ms.technology:
+- dotnet-wpf
+ms.tgt_pltfrm: ''
 ms.topic: article
 helpviewer_keywords:
 - XAML [XAML Services], type converter services
@@ -15,16 +16,17 @@ helpviewer_keywords:
 - value converters for XAML [XAML Services]
 - XAML [XAML Services], service context
 ms.assetid: db07a952-05ce-4aa4-b6f9-aac7397d0326
-caps.latest.revision: "13"
+caps.latest.revision: 13
 author: wadepickett
 ms.author: wpickett
 manager: wpickett
-ms.workload: dotnet
-ms.openlocfilehash: 946049cea6c9148d600cb50e6d49a4cc686c6d2d
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.workload:
+- dotnet
+ms.openlocfilehash: 6425685083c3b73d75d2d7c8a4509ae035542085
+ms.sourcegitcommit: 2042de78fcdceebb6b8ac4b7a292b93e8782cbf5
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 04/27/2018
 ---
 # <a name="type-converters-and-markup-extensions-for-xaml"></a>XAML 的類型轉換子和標記延伸
 類型轉換器和標記延伸是 XAML 類型系統和 XAML 寫入器用以產生物件圖形元件的兩項技術。 雖然兩者共用某些特性，但類型轉換器和標記延伸在 XAML 節點資料流中會以不同的方式表示。 在本文件集中，有時會將類型轉換器、標記延伸和類似的建構統稱為值轉換器。  
@@ -56,7 +58,7 @@ ms.lasthandoff: 12/22/2017
  如需 XAML 之標記延伸實作模式的詳細資訊，請參閱 [Markup Extensions for XAML Overview](../../../docs/framework/xaml-services/markup-extensions-for-xaml-overview.md)。  
   
 > [!NOTE]
->  <xref:System.Windows.Markup.MarkupExtension> 和 <xref:System.Windows.Markup.ValueSerializer> 類型都在 <xref:System.Windows.Markup> 命名空間中，而不在 <xref:System.Xaml> 命名空間中。 這並不表示這些類型專屬於會在其他情況下填入包含字串 [!INCLUDE[TLA2#tla_winforms](../../../includes/tla2sharptla-winforms-md.md)] 之 CLR 命名空間的 WPF 或 `Windows`技術。 <xref:System.Windows.Markup.MarkupExtension> 和 <xref:System.Windows.Markup.ValueSerializer> 位於 System.Xaml 組件中，並且沒有特定架構相依性。 這些類型在 [!INCLUDE[net_v30_short](../../../includes/net-v30-short-md.md)] 存在於 CLR 命名空間中，到了 [!INCLUDE[net_v40_short](../../../includes/net-v40-short-md.md)] 仍存在於 CLR 命名空間中，這是為了避免破壞現有 WPF 專案中的參考。 如需詳細資訊，請參閱 [Types Migrated from WPF to System.Xaml](../../../docs/framework/xaml-services/types-migrated-from-wpf-to-system-xaml.md)。  
+>  <xref:System.Windows.Markup.MarkupExtension> 和 <xref:System.Windows.Markup.ValueSerializer> 類型都在 <xref:System.Windows.Markup> 命名空間中，而不在 <xref:System.Xaml> 命名空間中。 這不表示這些類型專屬於否則填入包含字串的 CLR 命名空間的 WPF 或 Windows Form 技術`Windows`。 <xref:System.Windows.Markup.MarkupExtension> 和 <xref:System.Windows.Markup.ValueSerializer> 位於 System.Xaml 組件中，並且沒有特定架構相依性。 這些類型在 [!INCLUDE[net_v30_short](../../../includes/net-v30-short-md.md)] 存在於 CLR 命名空間中，到了 [!INCLUDE[net_v40_short](../../../includes/net-v40-short-md.md)] 仍存在於 CLR 命名空間中，這是為了避免破壞現有 WPF 專案中的參考。 如需詳細資訊，請參閱 [Types Migrated from WPF to System.Xaml](../../../docs/framework/xaml-services/types-migrated-from-wpf-to-system-xaml.md)。  
   
 <a name="value_serializers"></a>   
 ## <a name="value-serializers"></a>值序列化程式  
@@ -76,7 +78,7 @@ ms.lasthandoff: 12/22/2017
 ## <a name="service-context-for-a-value-converter"></a>值轉換器的服務內容  
  當您實作值轉換器時，您通常會需要存取套用值轉換器的內容。 這個內容稱為服務內容。 服務內容可能包含作用中的 XAML 結構描述內容、XAML 結構描述內容和 XAML 物件寫入器提供之類型對應系統的存取等資訊。 如需值轉換器的可用服務內容，以及如何存取服務內容可能提供之服務的詳細資訊，請參閱 [Service Contexts Available to Type Converters and Markup Extensions](../../../docs/framework/xaml-services/service-contexts-available-to-type-converters-and-markup-extensions.md)。  
   
-## <a name="see-also"></a>請參閱  
+## <a name="see-also"></a>另請參閱  
  <xref:System.Windows.Markup.MarkupExtension>  
  <xref:System.Xaml.XamlObjectWriter>  
  [XAML 標記延伸概觀](../../../docs/framework/xaml-services/markup-extensions-for-xaml-overview.md)  

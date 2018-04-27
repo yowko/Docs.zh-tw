@@ -1,12 +1,13 @@
 ---
-title: "如何：調整 Windows Form 的大小"
-ms.custom: 
+title: 如何：調整 Windows Form 的大小
+ms.custom: ''
 ms.date: 03/30/2017
 ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.technology: dotnet-winforms
-ms.tgt_pltfrm: 
+ms.reviewer: ''
+ms.suite: ''
+ms.technology:
+- dotnet-winforms
+ms.tgt_pltfrm: ''
 ms.topic: article
 dev_langs:
 - csharp
@@ -16,19 +17,20 @@ helpviewer_keywords:
 - resizing Windows Forms
 - Windows Forms, resizing
 ms.assetid: 5d9dd47e-e68c-48c9-a0a3-a9ff34ba009d
-caps.latest.revision: "13"
+caps.latest.revision: 13
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.workload: dotnet
-ms.openlocfilehash: cc2e9f81094d16030dbe4595a8132569edab782a
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.workload:
+- dotnet
+ms.openlocfilehash: 22f1c829257f8cd23379de54063ae88802908fe0
+ms.sourcegitcommit: 2042de78fcdceebb6b8ac4b7a292b93e8782cbf5
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 04/27/2018
 ---
 # <a name="how-to-resize-windows-forms"></a>如何：調整 Windows Form 的大小
-您可以使用幾種方式來指定 Windows Form 的大小。 您可以為 <xref:System.Windows.Forms.Form.Size%2A> 屬性設定新值，或個別調整 <xref:System.Windows.Forms.Control.Height%2A> 或 <xref:System.Windows.Forms.Control.Width%2A> 屬性，以程式設計方式來變更表單的高度和寬度。 如果您使用 [!INCLUDE[vsprvs](../../../includes/vsprvs-md.md)]，可以利用 Windows Form 設計工具來變更大小。 另請參閱[How to： 使用設計工具調整 Windows Form](http://msdn.microsoft.com/library/37k2zkwx\(v=vs.110\))。  
+您可以使用幾種方式來指定 Windows Form 的大小。 您可以為 <xref:System.Windows.Forms.Form.Size%2A> 屬性設定新值，或個別調整 <xref:System.Windows.Forms.Control.Height%2A> 或 <xref:System.Windows.Forms.Control.Width%2A> 屬性，以程式設計方式來變更表單的高度和寬度。 如果您使用 Visual Studio，您可以變更使用 Windows Form 設計工具的大小。 另請參閱[How to： 使用設計工具調整 Windows Form](http://msdn.microsoft.com/library/37k2zkwx\(v=vs.110\))。  
   
 ### <a name="to-resize-a-form-programmatically"></a>以程式設計方式調整表單的大小  
   
@@ -123,6 +125,6 @@ ms.lasthandoff: 12/22/2017
     f->Size->X += 100;  
     ```  
   
-## <a name="see-also"></a>請參閱  
+## <a name="see-also"></a>另請參閱  
  [Windows Forms 使用者入門](../../../docs/framework/winforms/getting-started-with-windows-forms.md)  
  [增強 Windows Forms 應用程式](../../../docs/framework/winforms/advanced/index.md)

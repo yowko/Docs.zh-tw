@@ -1,24 +1,26 @@
 ---
-title: "自訂 Demux"
-ms.custom: 
+title: 自訂 Demux
+ms.custom: ''
 ms.date: 03/30/2017
 ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.technology: dotnet-clr
-ms.tgt_pltfrm: 
+ms.reviewer: ''
+ms.suite: ''
+ms.technology:
+- dotnet-clr
+ms.tgt_pltfrm: ''
 ms.topic: article
 ms.assetid: fc54065c-518e-4146-b24a-0fe00038bfa7
-caps.latest.revision: "41"
+caps.latest.revision: 41
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.workload: dotnet
-ms.openlocfilehash: 540469571f06f9c2ab38f9754a40aae5a3c3b267
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.workload:
+- dotnet
+ms.openlocfilehash: 45184c2d884347baef4090ed496e22e77aab5423
+ms.sourcegitcommit: 2042de78fcdceebb6b8ac4b7a292b93e8782cbf5
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 04/27/2018
 ---
 # <a name="custom-demux"></a>自訂 Demux
 這個範例會示範 MSMQ 訊息標頭如何對應至不同的服務作業以便[!INCLUDE[indigo1](../../../../includes/indigo1-md.md)]服務使用<xref:System.ServiceModel.MsmqIntegration.MsmqIntegrationBinding>不限於使用一項服務作業中所示[訊息佇列Windows Communication Foundation](../../../../docs/framework/wcf/samples/message-queuing-to-wcf.md)和[Windows Communication Foundation 至訊息佇列](../../../../docs/framework/wcf/samples/wcf-to-message-queuing.md)範例。  
@@ -26,8 +28,8 @@ ms.lasthandoff: 12/22/2017
  這個範例中的服務是自我裝載的主控台應用程式，可讓您觀察接收佇列訊息的服務。  
   
  服務合約為 `IOrderProcessor`，這會定義適合與佇列搭配使用的單向服務。  
-  
-```  
+
+```csharp
 [ServiceContract]  
 [KnownType(typeof(PurchaseOrder))]  
 [KnownType(typeof(String))]  
@@ -39,11 +41,11 @@ public interface IOrderProcessor
     [OperationContract(IsOneWay = true, Name = "CancelPurchaseOrder")]  
     void CancelPurchaseOrder(MsmqMessage<string> ponumber);  
 }  
-```  
-  
+```
+
  MSMQ 訊息沒有 Action 標頭。 無法將不同的 MSMQ 訊息自動對應至作業合約。 因此，這時只能有一個作業合約。 為了克服這項限制，服務會實作 <xref:System.ServiceModel.Dispatcher.IDispatchOperationSelector.SelectOperation%2A> 介面的 <xref:System.ServiceModel.Dispatcher.IDispatchOperationSelector> 方法。 <xref:System.ServiceModel.Dispatcher.IDispatchOperationSelector.SelectOperation%2A> 方法能夠讓服務將指定的訊息標頭對應至特定服務作業。 在這個範例中，訊息的標籤標頭會對應至服務作業。 作業合約的 `Name` 參數會判定必須將指定訊息標籤分派到其中的服務作業。 例如，如果訊息的標籤標頭包含 "SubmitPurchaseOrder"，就會叫用 "SubmitPurchaseOrder" 服務作業。  
-  
-```  
+
+```csharp
 public class OperationSelector : IDispatchOperationSelector  
 {  
     public string SelectOperation(ref System.ServiceModel.Channels.Message message)  
@@ -52,29 +54,29 @@ public class OperationSelector : IDispatchOperationSelector
         return property.Label;  
     }  
 }  
-```  
-  
+```
+
  服務必須實作 <xref:System.ServiceModel.Description.IContractBehavior.ApplyDispatchBehavior%28System.ServiceModel.Description.ContractDescription%2CSystem.ServiceModel.Description.ServiceEndpoint%2CSystem.ServiceModel.Dispatcher.DispatchRuntime%29> 介面的 <xref:System.ServiceModel.Description.IContractBehavior> 方法，如下列範例程式碼所示。 這會將自訂 `OperationSelector` 套用至服務架構分派執行階段。  
-  
-```  
+
+```csharp
 void IContractBehavior.ApplyDispatchBehavior(ContractDescription description, ServiceEndpoint endpoint, DispatchRuntime dispatch)  
 {  
     dispatch.OperationSelector = new OperationSelector();  
 }  
-```  
-  
+```
+
  在執行至 OperationSelector 之前，訊息必須通過發送器的 <xref:System.ServiceModel.Dispatcher.EndpointDispatcher.ContractFilter%2A>。 根據預設，如果在服務實作之任何合約上都找不到訊息的動作，該訊息就會遭到拒絕。 為了避免這項檢查，我們會實作名為 <xref:System.ServiceModel.Description.IEndpointBehavior> 的 `MatchAllFilterBehavior`，此行為會藉由套用 `ContractFilter` 讓任何訊息通過 <xref:System.ServiceModel.Dispatcher.MatchAllMessageFilter>，如下列所示。  
-  
-```  
+
+```csharp
 public void ApplyDispatchBehavior(ServiceEndpoint serviceEndpoint, EndpointDispatcher endpointDispatcher)  
 {  
     endpointDispatcher.ContractFilter = new MatchAllMessageFilter();  
 }  
-```  
+```
   
  當服務接收到訊息時，便會使用該標籤標頭提供的資訊分派適當的服務作業。 訊息本文會還原序列化為 `PurchaseOrder` 物件，如下列範例程式碼所示。  
-  
-```  
+
+```csharp
 [OperationBehavior(TransactionScopeRequired = true, TransactionAutoComplete = true)]  
 public void SubmitPurchaseOrder(MsmqMessage<PurchaseOrder> msg)  
 {  
@@ -83,11 +85,11 @@ public void SubmitPurchaseOrder(MsmqMessage<PurchaseOrder> msg)
     po.Status = (OrderStates)statusIndexer.Next(3);  
     Console.WriteLine("Processing {0} ", po);  
 }  
-```  
-  
+```
+
  服務會自我裝載。 使用 MSMQ 時，必須事先建立使用的佇列。 這個動作可手動或透過程式碼完成。 在這個範例中，該服務包含的程式碼會檢查佇列的存在，並在佇列不存在時建立佇列。 佇列名稱會從組態檔中讀取。  
-  
-```  
+
+```csharp
 public static void Main()  
 {  
     // Get MSMQ queue name from app settings in configuration  
@@ -115,8 +117,8 @@ public static void Main()
         serviceHost.Close();  
     }  
 }  
-```  
-  
+```
+
  MSMQ 佇列名稱是指定在組態檔的 appSettings 區段中。  
   
 > [!NOTE]
@@ -204,6 +206,6 @@ Purchase Order 28fc457a-1a56-4fe0-9dde-156965c21ed6 is canceled
 >   
 >  `<InstallDrive>:\WF_WCF_Samples\WCF\Basic\Binding\MSMQIntegration\CustomDemux`  
   
-## <a name="see-also"></a>請參閱  
+## <a name="see-also"></a>另請參閱  
  [WCF 中的佇列](../../../../docs/framework/wcf/feature-details/queuing-in-wcf.md)  
  [訊息佇列](http://go.microsoft.com/fwlink/?LinkId=95143)

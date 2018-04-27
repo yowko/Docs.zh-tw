@@ -1,12 +1,13 @@
 ---
-title: "逐步解說：在 WPF 應用程式中快取應用程式資料"
-ms.custom: 
+title: 逐步解說：在 WPF 應用程式中快取應用程式資料
+ms.custom: ''
 ms.date: 03/30/2017
 ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.technology: dotnet-wpf
-ms.tgt_pltfrm: 
+ms.reviewer: ''
+ms.suite: ''
+ms.technology:
+- dotnet-wpf
+ms.tgt_pltfrm: ''
 ms.topic: article
 dev_langs:
 - csharp
@@ -16,16 +17,17 @@ helpviewer_keywords:
 - caching [.NET Framework]
 - caching [WPF]
 ms.assetid: dac2c9ce-042b-4d23-91eb-28f584415cef
-caps.latest.revision: "25"
+caps.latest.revision: 25
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.workload: dotnet
-ms.openlocfilehash: 81d808b982852d5cc6dc187a3c8389748a0dc0bf
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.workload:
+- dotnet
+ms.openlocfilehash: a8d3fe2dbfe0b4b5fb9081d71cec080dfa54add8
+ms.sourcegitcommit: 2042de78fcdceebb6b8ac4b7a292b93e8782cbf5
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 04/27/2018
 ---
 # <a name="walkthrough-caching-application-data-in-a-wpf-application"></a>逐步解說：在 WPF 應用程式中快取應用程式資料
 快取可讓您將資料儲存在記憶體中，以進行快速存取。 一次存取資料時，應用程式可以從快取，而要擷取的原始來源取得資料。 這可以改善效能和延展性。 此外，暫時無法使用資料來源時，快取可讓資料可用。  
@@ -67,7 +69,7 @@ ms.lasthandoff: 12/22/2017
   
 #### <a name="to-create-a-wpf-application"></a>建立 WPF 應用程式  
   
-1.  啟動 [!INCLUDE[vsprvs](../../../../includes/vsprvs-md.md)]。  
+1.  啟動 Visual Studio。  
   
 2.  在**檔案**功能表上，按一下 **新增**，然後按一下 **新專案**。  
   
@@ -86,7 +88,7 @@ ms.lasthandoff: 12/22/2017
   
 7.  按一下 [確定 **Deploying Office Solutions**]。  
   
-     WPF 設計工具會在中開啟**設計**檢視，並顯示 MainWindow.xaml 檔案。 [!INCLUDE[vsprvs](../../../../includes/vsprvs-md.md)]建立**我的專案**資料夾、 Application.xaml 檔案和 MainWindow.xaml 檔案。  
+     WPF 設計工具會在中開啟**設計**檢視，並顯示 MainWindow.xaml 檔案。 Visual Studio 會建立**我的專案**資料夾、 Application.xaml 檔案和 MainWindow.xaml 檔案。  
   
 ## <a name="targeting-the-net-framework-and-adding-a-reference-to-the-caching-assemblies"></a>以.NET Framework 為目標，並加入快取的組件的參考  
  根據預設，WPF 應用程式目標[!INCLUDE[net_client_v40_long](../../../../includes/net-client-v40-long-md.md)]。 若要使用<xref:System.Runtime.Caching>WPF 應用程式中的命名空間，應用程式必須為目標[!INCLUDE[net_v40_short](../../../../includes/net-v40-short-md.md)] (不[!INCLUDE[net_client_v40_long](../../../../includes/net-client-v40-long-md.md)])，而且必須包含命名空間的參考。  
@@ -122,7 +124,7 @@ ms.lasthandoff: 12/22/2017
   
     1.  在**方案總管 中**，以滑鼠右鍵按一下專案名稱，然後按一下**加入參考**。  
   
-    2.  選取**.NET**索引標籤上，選取`System.Runtime.Caching`，然後按一下 **確定**。  
+    2.  選取 **.NET**索引標籤上，選取`System.Runtime.Caching`，然後按一下 **確定**。  
   
 #### <a name="to-change-the-target-net-framework-in-a-visual-c-project"></a>若要變更 Visual C# 專案中的目標.NET Framework  
   
@@ -132,13 +134,13 @@ ms.lasthandoff: 12/22/2017
   
 2.  按一下 [應用程式]  索引標籤。  
   
-3.  在**目標 framework**清單中，選取[!INCLUDE[net_v40_short](../../../../includes/net-v40-short-md.md)]。 (請勿選取**.NET Framework 4 Client Profile**。)  
+3.  在**目標 framework**清單中，選取[!INCLUDE[net_v40_short](../../../../includes/net-v40-short-md.md)]。 (請勿選取 **.NET Framework 4 Client Profile**。)  
   
 4.  新增快取的組件的參考，依照下列步驟：  
   
     1.  以滑鼠右鍵按一下**參考**資料夾，然後按一下**加入參考**。  
   
-    2.  選取**.NET**索引標籤上，選取`System.Runtime.Caching`，然後按一下 **確定**。  
+    2.  選取 **.NET**索引標籤上，選取`System.Runtime.Caching`，然後按一下 **確定**。  
   
 ## <a name="adding-a-button-to-the-wpf-window"></a>將按鈕加入至 WPF 視窗  
  接下來，您會在 加入按鈕控制項，以及建立的按鈕的事件處理常式`Click`事件。 稍後您將加入程式碼，因此當您按一下按鈕時，會快取文字檔案的內容，並顯示。  
@@ -336,7 +338,7 @@ ms.lasthandoff: 12/22/2017
  [!code-csharp[CachingWPFApplications#1](../../../../samples/snippets/csharp/VS_Snippets_Wpf/CachingWPFApplications/CSharp/MainWindow.xaml.cs#1)]
  [!code-vb[CachingWPFApplications#1](../../../../samples/snippets/visualbasic/VS_Snippets_Wpf/CachingWPFApplications/VisualBasic/MainWindow.xaml.vb#1)]  
   
-## <a name="see-also"></a>請參閱  
+## <a name="see-also"></a>另請參閱  
  <xref:System.Runtime.Caching.MemoryCache>  
  <xref:System.Runtime.Caching.ObjectCache>  
  <xref:System.Runtime.Caching>  

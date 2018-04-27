@@ -1,26 +1,27 @@
 ---
-title: "工作流程裝載選項"
-ms.custom: 
+title: 工作流程裝載選項
+ms.custom: ''
 ms.date: 03/30/2017
 ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.tgt_pltfrm: 
+ms.reviewer: ''
+ms.suite: ''
+ms.tgt_pltfrm: ''
 ms.topic: article
 ms.assetid: 37bcd668-9c5c-4e7c-81da-a1f1b3a16514
-caps.latest.revision: "3"
+caps.latest.revision: 3
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.workload: dotnet
-ms.openlocfilehash: be885a964ad7e8d63045febfa279b23d0d85ab1f
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.workload:
+- dotnet
+ms.openlocfilehash: 3f022a5162ab8624d0c696efde6416484e77e874
+ms.sourcegitcommit: 2042de78fcdceebb6b8ac4b7a292b93e8782cbf5
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 04/27/2018
 ---
 # <a name="workflow-hosting-options"></a>工作流程裝載選項
-大部分的 [!INCLUDE[wf](../../../includes/wf-md.md)] 範例是使用裝載於主控台應用程式中的工作流程，但這並不是真實世界工作流程中的實際情況。 實際商務應用程式中的工作流程會裝載在持續性程序中，可能是開發人員撰寫的 Windows 服務，或是像 [!INCLUDE[iisver](../../../includes/iisver-md.md)] 或 AppFabric 之類的伺服器應用程式。 這些方法之間差異如下。  
+大部分的 Windows Workflow Foundation (WF) 範例使用主控台應用程式中裝載的工作流程，但這不是實際案例中的實際工作流程。 實際商務應用程式中的工作流程會裝載在持續性程序中，可能是開發人員撰寫的 Windows 服務，或是像 [!INCLUDE[iisver](../../../includes/iisver-md.md)] 或 AppFabric 之類的伺服器應用程式。 這些方法之間差異如下。  
   
 ## <a name="hosting-workflows-in-iis-with-windows-appfabric"></a>在具有 Windows AppFabric 的 IIS 中裝載工作流程  
  使用具有 AppFabric 的 IIS 是工作流程的慣用主機。 使用 AppFabric 的工作流程主應用程式是 Windows 啟用服務，它會單獨由 IIS 中移除對 HTTP 的相依性。  

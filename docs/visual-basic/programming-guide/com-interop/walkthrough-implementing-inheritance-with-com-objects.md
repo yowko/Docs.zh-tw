@@ -17,11 +17,11 @@ ms.assetid: f8e7263a-de13-48d1-b67c-ca1adf3544d9
 caps.latest.revision: 16
 author: dotnet-bot
 ms.author: dotnetcontent
-ms.openlocfilehash: 10c6bdf46e351b23705107da3b693531718cfd37
-ms.sourcegitcommit: 86adcc06e35390f13c1e372c36d2e044f1fc31ef
+ms.openlocfilehash: b03b81c9e04e79f8ce7763ecf8a489d248ff480b
+ms.sourcegitcommit: 2042de78fcdceebb6b8ac4b7a292b93e8782cbf5
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/26/2018
+ms.lasthandoff: 04/27/2018
 ---
 # <a name="walkthrough-implementing-inheritance-with-com-objects-visual-basic"></a>逐步解說：實作 COM 物件的繼承 (Visual Basic)
 您可以取得 Visual Basic 類別從`Public`中 COM 物件，即使這些舊版本的 Visual Basic 中建立的類別。 屬性和類別繼承自 COM 物件的方法可以覆寫或多載一樣屬性和任何其他基底類別的方法可以覆寫或多載。 從 COM 物件的繼承時，您有現有的類別程式庫，您不希望重新編譯。  
@@ -81,7 +81,7 @@ ms.lasthandoff: 04/26/2018
     >  雖然您也可以公開使用 Visual Basic 為 COM 物件建立的類別，它不是真正的 COM 物件，並不能用在這個逐步解說。 如需詳細資訊，請參閱[.NET Framework 應用程式中的 COM 互通性](../../../visual-basic/programming-guide/com-interop/com-interoperability-in-net-framework-applications.md)。  
   
 ## <a name="interop-assemblies"></a>Interop 組件  
- 在下列程序中，您將建立 interop 組件，可做為 （例如 COM 物件） 的 unmanaged 程式碼與 managed 程式碼之間的橋樑[!INCLUDE[vsprvs](~/includes/vsprvs-md.md)]使用。 Visual Basic 建立的 interop 組件會處理許多細節，例如使用 COM 物件的*interop 封送處理*，封裝參數和傳回值為對等資料的程序類型，因為它們將移到和從 COM 物件。 在 Visual Basic 應用程式中的參考指向的 interop 組件不是實際的 COM 物件。  
+ 在下列程序中，您將建立 interop 組件，可做為 unmanaged 程式碼 （例如 COM 物件） 與 Visual Studio 會使用 managed 程式碼之間的橋樑。 Visual Basic 建立的 interop 組件會處理許多細節，例如使用 COM 物件的*interop 封送處理*，封裝參數和傳回值為對等資料的程序類型，因為它們將移到和從 COM 物件。 在 Visual Basic 應用程式中的參考指向的 interop 組件不是實際的 COM 物件。  
   
 #### <a name="to-use-a-com-object-with-visual-basic-2005-and-later-versions"></a>使用 COM 物件來與 Visual Basic 2005 和更新版本  
   

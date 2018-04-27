@@ -14,11 +14,11 @@ ms.author: dotnetcontent
 manager: wpickett
 ms.workload:
 - dotnet
-ms.openlocfilehash: 2d7377d843e4ab8bd583e135dcdfd2cbfca67b8d
-ms.sourcegitcommit: 86adcc06e35390f13c1e372c36d2e044f1fc31ef
+ms.openlocfilehash: 8fa5a9e4287bcbcb490754b84a8b5060d321f779
+ms.sourcegitcommit: 2042de78fcdceebb6b8ac4b7a292b93e8782cbf5
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/26/2018
+ms.lasthandoff: 04/27/2018
 ---
 # <a name="durable-delay-in-xamlx"></a>XAMLX 中的永久性延遲
 這個範例示範如何使用永久性延遲，此延遲會在延遲期間將工作流程保存至永久性裝置。  
@@ -37,7 +37,7 @@ ms.lasthandoff: 04/26/2018
   
  .Xamlx 檔案是裝載於 Visual Studio 中的工作流程服務。 Visual Studio 會使用 Cassini，使用工作流程服務主機來裝載工作流程。  
   
- 除了裝載工作流程以外，工作流程服務主機也會透過載入和卸載的方式來管理工作流程執行個體。 為了啟動 [!INCLUDE[wf](../../../../includes/wf-md.md)] 定義的執行個體 (在工作流程服務主機上)，請設定用戶端傳送訊息給工作流程中的 <xref:System.ServiceModel.Activities.Receive> 活動。 這個 <xref:System.ServiceModel.Activities.Receive> 會將它的 <xref:System.ServiceModel.Activities.Receive.CanCreateInstance%2A> 屬性設定為 `true`，以便在收到訊息時，建立新的工作流程執行個體。  
+ 除了裝載工作流程以外，工作流程服務主機也會透過載入和卸載的方式來管理工作流程執行個體。 若要啟動的 Windows Workflow Foundation (WF) 上的定義 （工作流程服務主機上） 執行個體，將設定傳送訊息給用戶端<xref:System.ServiceModel.Activities.Receive>工作流程活動。 這個 <xref:System.ServiceModel.Activities.Receive> 會將它的 <xref:System.ServiceModel.Activities.Receive.CanCreateInstance%2A> 屬性設定為 `true`，以便在收到訊息時，建立新的工作流程執行個體。  
   
  在初始化期間，卸載執行個體的行為會加入至組態檔中，這個組態檔會指定工作流程服務主機應將執行個體卸載至持續性存放區 (資料庫) 的情況。 在這個範例中，它會在工作流程閒置後 (觸發延遲時) 立即卸載執行個體。  
   

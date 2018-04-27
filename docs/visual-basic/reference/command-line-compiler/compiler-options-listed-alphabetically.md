@@ -1,6 +1,6 @@
 ---
 title: Visual Basic Compiler Options Listed Alphabetically
-ms.date: 03/09/2018
+ms.date: 04/12/2018
 ms.prod: .net
 ms.reviewer: ''
 ms.suite: ''
@@ -12,14 +12,14 @@ helpviewer_keywords:
 ms.assetid: e67febba-bacf-4e1f-a143-c141e063f90e
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 4c78246a1e9fe14b0ba64ac447293d02e8416079
-ms.sourcegitcommit: c883637b41ee028786edceece4fa872939d2e64c
+ms.openlocfilehash: a6e95c52c708128267ab6dc79a1b37d21b30bac2
+ms.sourcegitcommit: 2042de78fcdceebb6b8ac4b7a292b93e8782cbf5
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 03/23/2018
+ms.lasthandoff: 04/27/2018
 ---
 # <a name="visual-basic-compiler-options-listed-alphabetically"></a>依字母順序列出的 Visual Basic 編譯器選項
-Visual Basic 命令列編譯器可作為從編譯程式的替代方案[!INCLUDE[vsprvs](~/includes/vsprvs-md.md)]整合式的開發環境 (IDE)。 以下是 Visual Basic 命令列編譯器選項，依字母順序排序的清單。  
+Visual Basic 命令列編譯器可作為從 Visual Studio 整合式的開發環境 (IDE) 編譯程式的替代方法。 以下是 Visual Basic 命令列編譯器選項，依字母順序排序的清單。  
 
 [!INCLUDE[compiler-options](~/includes/compiler-options.md)]
   
@@ -37,6 +37,7 @@ Visual Basic 命令列編譯器可作為從編譯程式的替代方案[!INCLUDE[
 |[-debug](../../../visual-basic/reference/command-line-compiler/debug.md)|產生偵錯資訊。|  
 |[-define](../../../visual-basic/reference/command-line-compiler/define.md)|定義條件式編譯的符號。|  
 |[-delaysign](../../../visual-basic/reference/command-line-compiler/delaysign.md)|指定將要完整簽署還是部分簽署組件。|  
+|[-具決定性](../../../visual-basic/reference/command-line-compiler/deterministic.md)|可讓編譯器輸出的二進位內容是相同編譯如果輸入是相同的組件。|
 |[-doc](../../../visual-basic/reference/command-line-compiler/doc.md)|將文件註解處理成 XML 檔案。|  
 |[-errorreport](../../../visual-basic/reference/command-line-compiler/errorreport.md)|指定 Visual Basic 編譯器報告編譯器內部錯誤的方式。|  
 |[-filealign](../../../visual-basic/reference/command-line-compiler/filealign.md)|指定要對齊輸出檔案區段的位置。|  

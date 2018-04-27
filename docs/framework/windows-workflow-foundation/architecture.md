@@ -1,26 +1,27 @@
 ---
-title: "Windows 工作流程架構"
-ms.custom: 
+title: Windows 工作流程架構
+ms.custom: ''
 ms.date: 03/30/2017
 ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.tgt_pltfrm: 
+ms.reviewer: ''
+ms.suite: ''
+ms.tgt_pltfrm: ''
 ms.topic: article
 ms.assetid: 1d4c6495-d64a-46d0-896a-3a01fac90aa9
-caps.latest.revision: "20"
+caps.latest.revision: 20
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.workload: dotnet
-ms.openlocfilehash: ed13d7885cb8abd760aed6bd5812cb8b7c75bc02
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.workload:
+- dotnet
+ms.openlocfilehash: a3a59369738ada0c6b770d272afa9c6c79c2ce01
+ms.sourcegitcommit: 2042de78fcdceebb6b8ac4b7a292b93e8782cbf5
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 04/27/2018
 ---
 # <a name="windows-workflow-architecture"></a>Windows 工作流程架構
-[!INCLUDE[wf](../../../includes/wf-md.md)] 會引發開發互動式長期執行應用程式的抽象層級。 工作的單元會封裝為活動。 活動會在環境中執行，該環境會為流程控制、例外狀況處理、錯誤傳播、狀態資料保存、從記憶體載入及卸載處理中的工作流程、追蹤，以及交易流程提供機能。  
+Windows Workflow Foundation (WF) 會引發開發互動式長期執行應用程式的抽象層級。 工作的單元會封裝為活動。 活動會在環境中執行，該環境會為流程控制、例外狀況處理、錯誤傳播、狀態資料保存、從記憶體載入及卸載處理中的工作流程、追蹤，以及交易流程提供機能。  
   
 ## <a name="activity-architecture"></a>活動架構  
  活動會開發成衍生自 <xref:System.Activities.Activity>、<xref:System.Activities.CodeActivity>、<xref:System.Activities.AsyncCodeActivity> 或 <xref:System.Activities.NativeActivity> 的 CLR 型別，或者其傳回 <xref:System.Activities.Activity%601>、<xref:System.Activities.CodeActivity%601>、<xref:System.Activities.AsyncCodeActivity%601> 或 <xref:System.Activities.NativeActivity%601> 等值的變數。 開發衍生自 <xref:System.Activities.Activity> 的活動，可讓使用者組合預先存在的活動，以快速建立在工作流程環境中執行的工作單位。 另一方面，<xref:System.Activities.CodeActivity> 則可讓使用者能夠使用主要用於存取活動引數的 <xref:System.Activities.CodeActivityContext>，在 Managed 程式碼中撰寫執行邏輯。 <xref:System.Activities.AsyncCodeActivity> 類似 <xref:System.Activities.CodeActivity>，但可用來實作非同步工作。 開發衍生自 <xref:System.Activities.NativeActivity> 的活動，可讓使用者透過 <xref:System.Activities.NativeActivityContext> 來存取執行階段，以進行排定子系、建立書籤、叫用非同步工作、註冊交易等功能。  

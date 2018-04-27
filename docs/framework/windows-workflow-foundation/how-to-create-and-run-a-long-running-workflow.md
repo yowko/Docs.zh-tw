@@ -1,29 +1,30 @@
 ---
 title: 'How to: Create and Run a Long Running Workflow'
-ms.custom: 
+ms.custom: ''
 ms.date: 03/30/2017
 ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.tgt_pltfrm: 
+ms.reviewer: ''
+ms.suite: ''
+ms.tgt_pltfrm: ''
 ms.topic: article
 dev_langs:
 - csharp
 - vb
 ms.assetid: c0043c89-2192-43c9-986d-3ecec4dd8c9c
-caps.latest.revision: "40"
+caps.latest.revision: 40
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.workload: dotnet
-ms.openlocfilehash: a667c303cd1a98e0b027ca2026fe9c719e6baf4f
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.workload:
+- dotnet
+ms.openlocfilehash: 10ca88533297e56d48b73b6368c2e8457380f543
+ms.sourcegitcommit: 2042de78fcdceebb6b8ac4b7a292b93e8782cbf5
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 04/27/2018
 ---
 # <a name="how-to-create-and-run-a-long-running-workflow"></a>How to: Create and Run a Long Running Workflow
-[!INCLUDE[wf](../../../includes/wf-md.md)] 的其中一個核心功能，就是執行階段可持續閒置的工作流程，以及將其卸載至資料庫中。 中的步驟[如何： 執行工作流程](../../../docs/framework/windows-workflow-foundation/how-to-run-a-workflow.md)所示範的工作流程主機使用的主控台應用程式基本概念。 範例包括啟動工作流程、工作流程開發週期處理常式，以及繼續使用書籤。 為有效示範工作流程持續性，必須要有較複雜的工作流程主機，以支援啟動與繼續使用多個工作流程執行個體。 教學課程中的這個步驟，示範如何建立 Windows 表單主應用程式，以支援啟動與繼續使用多個工作流程執行個體、工作流程持續性，並且為後續教學課程步驟中示範的追蹤和版本設定等進階功能提供基礎。  
+其中一個核心功能的 Windows Workflow Foundation (WF) 是保存及卸載閒置的工作流程，以資料庫的執行階段的能力。 中的步驟[如何： 執行工作流程](../../../docs/framework/windows-workflow-foundation/how-to-run-a-workflow.md)所示範的工作流程主機使用的主控台應用程式基本概念。 範例包括啟動工作流程、工作流程開發週期處理常式，以及繼續使用書籤。 為有效示範工作流程持續性，必須要有較複雜的工作流程主機，以支援啟動與繼續使用多個工作流程執行個體。 教學課程中的這個步驟，示範如何建立 Windows 表單主應用程式，以支援啟動與繼續使用多個工作流程執行個體、工作流程持續性，並且為後續教學課程步驟中示範的追蹤和版本設定等進階功能提供基礎。  
   
 > [!NOTE]
 >  此教學課程的步驟和後續步驟使用的所有三個工作流程類型[How to： 建立工作流程](../../../docs/framework/windows-workflow-foundation/how-to-create-a-workflow.md)。 如果您未完成所有三種類型，您就可以下載完整的版的步驟從[Windows Workflow Foundation (WF45)-入門教學課程](http://go.microsoft.com/fwlink/?LinkID=248976)。  
@@ -53,7 +54,7 @@ ms.lasthandoff: 12/22/2017
   
 -   [若要建置並執行應用程式](../../../docs/framework/windows-workflow-foundation/how-to-create-and-run-a-long-running-workflow.md#BKMK_BuildAndRun)  
   
-###  <a name="BKMK_CreatePersistenceDatabase"></a>若要建立持續性資料庫  
+###  <a name="BKMK_CreatePersistenceDatabase"></a> 若要建立持續性資料庫  
   
 1.  開啟 SQL Server Management Studio 並連接到本機伺服器，例如**。 \SQLEXPRESS**。 以滑鼠右鍵按一下**資料庫**本機伺服器，然後選取節點**新資料庫**。 將新資料庫命名**WF45GettingStartedTutorial**，接受所有其他值，然後選取**確定**。  
   
@@ -75,7 +76,7 @@ ms.lasthandoff: 12/22/2017
     > [!WARNING]
     >  務必按照正確順序執行前面的兩個步驟。 如果未按照正確順序執行查詢，會發生錯誤，而且也無法正確地設定持續性資料庫。  
   
-###  <a name="BKMK_AddReference"></a>若要加入至 DurableInstancing 組件參考  
+###  <a name="BKMK_AddReference"></a> 若要加入至 DurableInstancing 組件參考  
   
 1.  以滑鼠右鍵按一下**NumberGuessWorkflowHost**中**方案總管 中**選取**加入參考**。  
   
@@ -83,7 +84,7 @@ ms.lasthandoff: 12/22/2017
   
 3.  核取方塊旁的**System.runtime.durableinstancing**和**System.activities.durableinstancing**從**搜尋結果**清單，然後按**確定**。  
   
-###  <a name="BKMK_CreateForm"></a>若要建立工作流程主控台表單  
+###  <a name="BKMK_CreateForm"></a> 若要建立工作流程主控台表單  
   
 > [!NOTE]
 >  此程序中的步驟描述如何手動加入及設定表單。 如果需要，可以下載教學課程的方案檔，並將完成的表單加入到專案中。 若要下載教學課程檔案，請參閱[Windows Workflow Foundation (WF45)-入門教學課程](http://go.microsoft.com/fwlink/?LinkID=248976)。 一旦下載檔案時，以滑鼠右鍵按一下**NumberGuessWorkflowHost**選擇**加入參考**。 將參考加入**System.Windows.Forms**和**System.Drawing**。 如果您將加入新的表單，從這些參考會自動加入**新增**，**新項目**功能表上，但匯入表單時必須以手動方式新增。 一旦加入參考之後，以滑鼠右鍵按一下**NumberGuessWorkflowHost**中**方案總管 中**選擇**新增**，**現有項目**。 瀏覽至`Form`資料夾在專案檔中，選取**WorkflowHostForm.cs** (或**WorkflowHostForm.vb**)，然後按一下**新增**。 如果您選擇匯入表單，則您可以跳到下一節[添加屬性和 helper 方法的表單](../../../docs/framework/windows-workflow-foundation/how-to-create-and-run-a-long-running-workflow.md#BKMK_AddHelperMethods)。  
@@ -131,7 +132,7 @@ ms.lasthandoff: 12/22/2017
   
  ![WF45 使用者入門教學課程的工作流程主控台表單](../../../docs/framework/windows-workflow-foundation/media/wf45gettingstartedtutorialworkflowhostform.png "WF45GettingStartedTutorialWorkflowHostForm")  
   
-###  <a name="BKMK_AddHelperMethods"></a>若要加入的屬性和 helper 方法的表單  
+###  <a name="BKMK_AddHelperMethods"></a> 若要加入的屬性和 helper 方法的表單  
  本節中的步驟會將設定表單 UI 的屬性和 Helper 方法加入到表單類別中，以支援執行及繼續使用數字猜測工作流程。  
   
 1.  以滑鼠右鍵按一下**WorkflowHostForm**中**方案總管 中**選擇**檢視程式碼**。  
@@ -432,7 +433,7 @@ ms.lasthandoff: 12/22/2017
     }  
     ```  
   
-###  <a name="BKMK_ConfigureWorkflowApplication"></a>若要設定執行個體存放區、 工作流程開發週期處理常式，以及擴充功能  
+###  <a name="BKMK_ConfigureWorkflowApplication"></a> 若要設定執行個體存放區、 工作流程開發週期處理常式，以及擴充功能  
   
 1.  將 `ConfigureWorkflowApplication` 方法加入至表單類別。  
   
@@ -701,8 +702,8 @@ ms.lasthandoff: 12/22/2017
     }  
     ```  
   
-###  <a name="BKMK_WorkflowVersionMap"></a>若要啟用啟動與繼續使用多個工作流程類型  
- 主機必須提供工作流程定義，才能繼續工作流程執行個體。 本教學課程包含三種工作流程型別，後續的教學課程將介紹這些類型的多個版本。 `WorkflowIdentity` 提供方法，讓主應用程式能夠將識別資訊與持續的工作流程執行個體建立關聯。 本節中的步驟示範如何建立公用程式類別，以協助將持續性工作流程執行個體的工作流程識別對應至相對應的工作流程定義。 [!INCLUDE[crabout](../../../includes/crabout-md.md)]`WorkflowIdentity`和版本控制，請參閱[使用 WorkflowIdentity 與版本控制](../../../docs/framework/windows-workflow-foundation/using-workflowidentity-and-versioning.md)。  
+###  <a name="BKMK_WorkflowVersionMap"></a> 若要啟用啟動與繼續使用多個工作流程類型  
+ 主機必須提供工作流程定義，才能繼續工作流程執行個體。 本教學課程包含三種工作流程型別，後續的教學課程將介紹這些類型的多個版本。 `WorkflowIdentity` 提供方法，讓主應用程式能夠將識別資訊與持續的工作流程執行個體建立關聯。 本節中的步驟示範如何建立公用程式類別，以協助將持續性工作流程執行個體的工作流程識別對應至相對應的工作流程定義。 [!INCLUDE[crabout](../../../includes/crabout-md.md)] `WorkflowIdentity` 與版本控制，請參閱[使用 WorkflowIdentity 與版本控制](../../../docs/framework/windows-workflow-foundation/using-workflowidentity-and-versioning.md)。  
   
 1.  以滑鼠右鍵按一下**NumberGuessWorkflowHost**中**方案總管 中**選擇**新增**，**類別**。 型別`WorkflowVersionMap`到**名稱**方塊，然後按一下**新增**。  
   
@@ -818,7 +819,7 @@ ms.lasthandoff: 12/22/2017
   
      `WorkflowVersionMap` 包含三個工作流程識別，其對應於此教學課程中的三個工作流程定義，在下列章節中，啟動及繼續使用工作流程時會使用這些識別。  
   
-###  <a name="BKMK_StartWorkflow"></a>若要啟動新的工作流程  
+###  <a name="BKMK_StartWorkflow"></a> 若要啟動新的工作流程  
   
 1.  加入 `Click` 的 `NewGame` 處理常式。 若要加入處理常式，切換到**設計 檢視**的表單，並按兩下`NewGame`。 會加入 `NewGame_Click` 處理常式，且表單的檢視會切換成程式碼檢視。 每當使用者按一下此按鈕，就會啟動新的工作流程。  
   
@@ -1013,7 +1014,7 @@ ms.lasthandoff: 12/22/2017
     }  
     ```  
   
-###  <a name="BKMK_ResumeWorkflow"></a>若要繼續工作流程  
+###  <a name="BKMK_ResumeWorkflow"></a> 若要繼續工作流程  
   
 1.  加入 `Click` 的 `EnterGuess` 處理常式。 若要加入處理常式，切換到**設計 檢視**的表單，並按兩下`EnterGuess`。 每當使用者按一下此按鈕，就會繼續使用該工作流程。  
   
@@ -1229,7 +1230,7 @@ ms.lasthandoff: 12/22/2017
     }  
     ```  
   
-###  <a name="BKMK_TerminateWorkflow"></a>終止工作流程  
+###  <a name="BKMK_TerminateWorkflow"></a> 終止工作流程  
   
 1.  加入 `Click` 的 `QuitGame` 處理常式。 若要加入處理常式，切換到**設計 檢視**的表單，並按兩下`QuitGame`。 每當使用者按一下此按鈕，就會終止目前選取的工作流程。  
   
@@ -1303,7 +1304,7 @@ ms.lasthandoff: 12/22/2017
     wfApp.Terminate("User resigns.");  
     ```  
   
-###  <a name="BKMK_BuildAndRun"></a>若要建置並執行應用程式  
+###  <a name="BKMK_BuildAndRun"></a> 若要建置並執行應用程式  
   
 1.  按兩下**Program.cs** (或**Module1.vb**) 中**方案總管 中**以顯示程式碼。  
   

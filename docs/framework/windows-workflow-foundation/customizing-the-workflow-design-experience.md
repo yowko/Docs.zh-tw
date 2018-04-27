@@ -16,11 +16,11 @@ ms.author: dotnetcontent
 manager: wpickett
 ms.workload:
 - dotnet
-ms.openlocfilehash: 0ee64ae3db9dbf98f2a62397075406c118a867bb
-ms.sourcegitcommit: 86adcc06e35390f13c1e372c36d2e044f1fc31ef
+ms.openlocfilehash: 37296298bda514d507b8fe65af516de74289d6a0
+ms.sourcegitcommit: 2042de78fcdceebb6b8ac4b7a292b93e8782cbf5
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/26/2018
+ms.lasthandoff: 04/27/2018
 ---
 # <a name="customizing-the-workflow-design-experience"></a>自訂工作流程設計經驗
 在 [!INCLUDE[wfd1](../../../includes/wfd1-md.md)] 中，設計自訂活動及重新裝載 [!INCLUDE[netfx40_short](../../../includes/netfx40-short-md.md)] 的案例已大幅簡化。 無論開發或部署都變得更加容易、更有彈性。 索引鍵的基礎結構變更是，新的活動設計工具程式設計模型建置 Windows Presentation Foundation (WPF) 時。 因此，您可以非常輕易地透過宣告的方式定義活動設計工具，以及將 [!INCLUDE[wfd2](../../../includes/wfd2-md.md)] 重新裝載於其他應用程式中。 重新裝載時，可開發自訂運算式編輯器以支援 IntelliSense 或簡化的運算式網域。 使用工作流程服務，與 [!INCLUDE[indigo1](../../../includes/indigo1-md.md)] 整合變得更加緊密。 自訂活動設計工具和模型項目樹狀可用來加強重新裝載工作流程設計工具中的設計階段經驗。  
@@ -30,7 +30,7 @@ ms.lasthandoff: 04/26/2018
  描述如何建立新的自訂活動設計工具和範本。  
   
  [重新裝載工作流程設計工具](../../../docs/framework/windows-workflow-foundation/rehosting-the-workflow-designer.md)  
- 描述如何在 [!INCLUDE[wfd1](../../../includes/wfd1-md.md)] 之外重新裝載 [!INCLUDE[vsprvs](../../../includes/vsprvs-md.md)]，以及如何顯示驗證錯誤。  
+ 描述如何重新裝載[!INCLUDE[wfd1](../../../includes/wfd1-md.md)]之外，Visual Studio，以及如何顯示驗證錯誤。  
   
  [使用自訂運算式編輯器](../../../docs/framework/windows-workflow-foundation/using-a-custom-expression-editor.md)  
  描述如何實作自訂運算式編輯器，與重新裝載於 [!INCLUDE[vs2010](../../../includes/vs2010-md.md)] 之外的工作流程設計工具搭配使用。  

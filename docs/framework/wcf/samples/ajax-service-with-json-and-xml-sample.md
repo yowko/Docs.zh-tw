@@ -1,24 +1,26 @@
 ---
-title: "含 JSON 和 XML 的 AJAX 服務範例"
-ms.custom: 
+title: 含 JSON 和 XML 的 AJAX 服務範例
+ms.custom: ''
 ms.date: 03/30/2017
 ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.technology: dotnet-clr
-ms.tgt_pltfrm: 
+ms.reviewer: ''
+ms.suite: ''
+ms.technology:
+- dotnet-clr
+ms.tgt_pltfrm: ''
 ms.topic: article
 ms.assetid: 8ea5860d-0c42-4ae9-941a-e07efdd8e29c
-caps.latest.revision: "15"
+caps.latest.revision: 15
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.workload: dotnet
-ms.openlocfilehash: 7d831d4663031419977b75c6cfe183ac4bd52a86
-ms.sourcegitcommit: c0dd436f6f8f44dc80dc43b07f6841a00b74b23f
+ms.workload:
+- dotnet
+ms.openlocfilehash: f1a3f2185743be6d6331db4aa253a0767484b32d
+ms.sourcegitcommit: 2042de78fcdceebb6b8ac4b7a292b93e8782cbf5
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 01/19/2018
+ms.lasthandoff: 04/27/2018
 ---
 # <a name="ajax-service-with-json-and-xml-sample"></a>含 JSON 和 XML 的 AJAX 服務範例
 這個範例會示範如何使用 [!INCLUDE[indigo1](../../../../includes/indigo1-md.md)] 建立會傳回 JavaScript 物件標記法 (JSON) 或 XML 資料的 Asynchronous JavaScript 與 XML (AJAX) 服務。 您可以從 Web 瀏覽器用戶端使用 JavaScript 程式碼存取 AJAX 服務。 這個範例是根據[基本 AJAX 服務](../../../../docs/framework/wcf/samples/basic-ajax-service.md)範例。  
@@ -30,9 +32,9 @@ ms.lasthandoff: 01/19/2018
 > [!NOTE]
 >  此範例的安裝程序與建置指示位於本主題的結尾。  
   
- 若要啟用非 ASP.NET AJAX 用戶端，請使用 .svc 檔案中的 <xref:System.ServiceModel.Activation.WebServiceHostFactory> (而非 <xref:System.ServiceModel.Activation.WebScriptServiceHostFactory>)。 <xref:System.ServiceModel.Activation.WebServiceHostFactory> 會將 <xref:System.ServiceModel.Description.WebHttpEndpoint> 標準端點加入至服務。 此端點是在相對於 .svc 檔的空位址設定，這表示此服務的位址會是 http://localhost/ServiceModelSamples/service.svc，不含任何有別於作業名稱的其他後置字元。  
+ 若要啟用非 ASP.NET AJAX 用戶端，請使用 .svc 檔案中的 <xref:System.ServiceModel.Activation.WebServiceHostFactory> (而非 <xref:System.ServiceModel.Activation.WebScriptServiceHostFactory>)。 <xref:System.ServiceModel.Activation.WebServiceHostFactory> 會將 <xref:System.ServiceModel.Description.WebHttpEndpoint> 標準端點加入至服務。 在與.svc 檔; 相對的空位址設定端點這表示服務的位址是http://localhost/ServiceModelSamples/service.svc，與作業名稱以外的任何其他後置字元。  
   
-```html  
+```svc
 <%@ServiceHost language="c#" Debug="true" Service="Microsoft.Samples.XmlAjaxService.CalculatorService" Factory="System.ServiceModel.Activation.WebServiceHostFactory" %>  
 ```  
   
@@ -52,28 +54,28 @@ ms.lasthandoff: 01/19/2018
  預設資料格式<xref:System.ServiceModel.Description.WebHttpEndpoint>為 XML，而預設資料格式<xref:System.ServiceModel.Description.WebScriptEndpoint>為 JSON。 如需詳細資訊，請參閱[不含 ASP.NET 建立 WCF AJAX 服務](../../../../docs/framework/wcf/feature-details/creating-wcf-ajax-services-without-aspnet.md)。  
   
  下列範例中的服務是包含兩種作業的標準 [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] 服務。 這兩種作業的 <xref:System.ServiceModel.Web.WebMessageBodyStyle.Wrapped> 或 <xref:System.ServiceModel.Web.WebGetAttribute> 屬性上都必須是 <xref:System.ServiceModel.Web.WebInvokeAttribute> 本文樣式，這是 `webHttp` 行為的特定需求，而且不會影響 JSON/XML 資料格式切換。  
-  
-```  
+
+```csharp
 [OperationContract]  
 [WebInvoke(ResponseFormat = WebMessageFormat.Xml, BodyStyle = WebMessageBodyStyle.Wrapped)]  
 MathResult DoMathXml(double n1, double n2);  
-```  
-  
+```
+
  指定作業的回應格式為 XML，這是預設設定[ \<webHttp >](../../../../docs/framework/configure-apps/file-schema/wcf/webhttp.md)行為。 然而，明確指定回應格式是較好的做法。  
   
  其他作業會使用 `WebInvokeAttribute` 屬性，並且明確地指定回應型別為 JSON 而不是 XML。  
-  
-```  
+
+```csharp
 [OperationContract]  
 [WebInvoke(ResponseFormat = WebMessageFormat.Json, BodyStyle = WebMessageBodyStyle.Wrapped)]  
 MathResult DoMathJson(double n1, double n2);  
-```  
-  
+```
+
  請注意，在這兩種情況中，作業都會傳回屬於標準 `MathResult` 資料合約型別的複雜型別 [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)]。  
   
- 用戶端網頁 XmlAjaxClientPage.htm 包含的 JavaScript 程式碼叫用前述兩項作業的其中一個當使用者按一下**執行計算 (傳回 JSON)**或**執行計算 (傳回 XML)**網頁上的按鈕。 叫用此服務的程式碼會建構 JSON 本文，然後使用 HTTP POST 加以傳送。 建立要求以手動方式在 JavaScript 中，不同於[基本 AJAX 服務](../../../../docs/framework/wcf/samples/basic-ajax-service.md)範例，並使用 ASP.NET AJAX 的其他範例。  
-  
-```  
+ 用戶端網頁 XmlAjaxClientPage.htm 包含的 JavaScript 程式碼叫用前述兩項作業的其中一個當使用者按一下**執行計算 (傳回 JSON)** 或**執行計算 (傳回 XML)** 網頁上的按鈕。 叫用此服務的程式碼會建構 JSON 本文，然後使用 HTTP POST 加以傳送。 建立要求以手動方式在 JavaScript 中，不同於[基本 AJAX 服務](../../../../docs/framework/wcf/samples/basic-ajax-service.md)範例，並使用 ASP.NET AJAX 的其他範例。  
+
+```csharp
 // Create HTTP request  
 var xmlHttp;  
 // Request instantiation code omitted…  
@@ -92,19 +94,19 @@ body = body + document.getElementById("num2").value + '}';
 xmlHttp.open("POST", url, true);  
 xmlHttp.setRequestHeader("Content-type", "application/json");  
 xmlHttp.send(body);  
-```  
-  
+```
+
  當服務回應時，回應會不經任何處理地顯示在頁面的文字方塊中。 這麼做是為了示範，以便您可直接觀察所使用的 XML 和 JSON 資料格式。  
-  
-```  
+
+```javascript
 // Create result handler   
 xmlHttp.onreadystatechange=function(){  
      if(xmlHttp.readyState == 4){  
           document.getElementById("result").value = xmlHttp.responseText;  
      }  
 }  
-```  
-  
+```
+
 > [!IMPORTANT]
 >  這些範例可能已安裝在您的電腦上。 請先檢查下列 (預設) 目錄，然後再繼續。  
 >   
@@ -120,7 +122,7 @@ xmlHttp.onreadystatechange=function(){
   
 2.  中所述，建置此方案 XmlAjaxService.sln[建置 Windows Communication Foundation 範例](../../../../docs/framework/wcf/samples/building-the-samples.md)。  
   
-3.  瀏覽到 http://localhost/ServiceModelSamples/XmlAjaxClientPage.htm (不要使用瀏覽器從專案目錄開啟 XmlAjaxClientPage.htm)。  
+3.  瀏覽至http://localhost/ServiceModelSamples/XmlAjaxClientPage.htm（不要在瀏覽器從專案目錄開啟 XmlAjaxClientPage.htm）。  
   
-## <a name="see-also"></a>請參閱  
+## <a name="see-also"></a>另請參閱  
  [使用 HTTP POST 的 AJAX 服務](../../../../docs/framework/wcf/samples/ajax-service-using-http-post.md)

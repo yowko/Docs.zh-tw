@@ -11,17 +11,17 @@ dev_langs:
 - csharp
 - vb
 ms.assetid: c09b1e99-21b5-4d96-9c04-ec31db3f4436
-caps.latest.revision: ''
+caps.latest.revision: 39
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
 ms.workload:
 - dotnet
-ms.openlocfilehash: 4a3b9698d6a060120addff52e6600916a2de19fc
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.openlocfilehash: 0d0d48d1e78efb3484f521958edf22d97ca8053d
+ms.sourcegitcommit: 2042de78fcdceebb6b8ac4b7a292b93e8782cbf5
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 04/27/2018
 ---
 # <a name="how-to-create-an-activity"></a>HOW TO：建立活動
 活動是 [!INCLUDE[wf1](../../../includes/wf1-md.md)] 中的行為核心單位。 活動的執行邏輯可以實作在 Managed 程式碼中，或是使用其他活動來實作。 本主題示範如何建立兩個活動。 第一個活動是簡單的活動，使用程式碼來實作其執行邏輯。 第二個活動的實作則是使用其他活動來定義。 教學課程中的下列步驟將會使用這些活動。  
@@ -42,10 +42,10 @@ ms.lasthandoff: 12/22/2017
     > [!TIP]
     >  如果沒有顯示 [ **方案總管** ] 視窗，請選取 [ **檢視** ] 功能表上的 [ **方案總管** ]。  
   
-5.  在 [ **已安裝** ] 節點中，選取 [ **Visual C#**]、[ **工作流程** ] \(或 [ **Visual Basic**]、[ **工作流程**])。 請確認**.NET Framework 4.5**中選取[!INCLUDE[dnprdnshort](../../../includes/dnprdnshort-md.md)]版本 下拉式清單中。 選取**活動程式庫**從**工作流程**清單。 型別`NumberGuessWorkflowActivities`中**名稱**方塊，然後按一下**確定**。  
+5.  在 [ **已安裝** ] 節點中，選取 [ **Visual C#**]、[ **工作流程** ] \(或 [ **Visual Basic**]、[ **工作流程**])。 請確認 **.NET Framework 4.5**中選取[!INCLUDE[dnprdnshort](../../../includes/dnprdnshort-md.md)]版本 下拉式清單中。 選取**活動程式庫**從**工作流程**清單。 型別`NumberGuessWorkflowActivities`中**名稱**方塊，然後按一下**確定**。  
   
     > [!NOTE]
-    >  依據哪個程式語言設定為主要語言[!INCLUDE[vsprvs](../../../includes/vsprvs-md.md)]、 **Visual C#**或**Visual Basic**節點可能會顯示在**其他語言**節點**已安裝**節點。  
+    >  依據設定哪個程式語言為 Visual Studio 主要語言而異，[ **Visual C#** ] 或 [ **Visual Basic** ] 節點可能會顯示在 [ **已安裝** ] 節點中的 [ **其他語言** ] 節點下。  
   
 6.  以滑鼠右鍵按一下**Activity1.xaml**中**方案總管 中**選擇**刪除**。 按一下 [ **確定** ] 以確認。  
   
@@ -117,7 +117,7 @@ ms.lasthandoff: 12/22/2017
   
      如需如何使用這些活動，來建立工作流程的指示，請參閱下一個步驟教學課程中， [How to： 建立工作流程](../../../docs/framework/windows-workflow-foundation/how-to-create-a-workflow.md)。  
   
-## <a name="see-also"></a>請參閱  
+## <a name="see-also"></a>另請參閱  
  <xref:System.Activities.CodeActivity>  
  <xref:System.Activities.NativeActivity%601>  
  [設計及實作自訂活動](../../../docs/framework/windows-workflow-foundation/designing-and-implementing-custom-activities.md)  

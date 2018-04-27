@@ -1,24 +1,26 @@
 ---
-title: "工作階段和佇列"
-ms.custom: 
+title: 工作階段和佇列
+ms.custom: ''
 ms.date: 03/30/2017
 ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.technology: dotnet-clr
-ms.tgt_pltfrm: 
+ms.reviewer: ''
+ms.suite: ''
+ms.technology:
+- dotnet-clr
+ms.tgt_pltfrm: ''
 ms.topic: article
 ms.assetid: 47d7c5c2-1e6f-4619-8003-a0ff67dcfbd6
-caps.latest.revision: "27"
+caps.latest.revision: 27
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.workload: dotnet
-ms.openlocfilehash: 0de2668eb03a658632bb8a18c711f780b333e86b
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.workload:
+- dotnet
+ms.openlocfilehash: f1aeaa72937d23a321eb615ad8b1eb4ec1e7b48e
+ms.sourcegitcommit: 2042de78fcdceebb6b8ac4b7a292b93e8782cbf5
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 04/27/2018
 ---
 # <a name="sessions-and-queues"></a>工作階段和佇列
 這個範例示範如何透過訊息佇列 (MSMQ) 傳輸，傳送和接收佇列通訊中的一組相關訊息。 這個範例會使用 `netMsmqBinding` 繫結。 這個服務是自我裝載的主控台應用程式，可讓您觀察接收佇列訊息的服務。  
@@ -42,8 +44,8 @@ ms.lasthandoff: 12/22/2017
  在範例中，用戶端會傳送一些訊息給服務做為單一異動範圍內工作階段的一部分。  
   
  服務合約為 `IOrderTaker`，這會定義適合與佇列搭配使用的單向服務。 在下列範例程式碼中示範用於合約的 <xref:System.ServiceModel.SessionMode> 將會顯示該訊息是工作階段的一部分。  
-  
-```  
+
+```csharp
 [ServiceContract(Namespace = "http://Microsoft.ServiceModel.Samples", SessionMode=SessionMode.Required)]  
 public interface IOrderTaker  
 {  
@@ -56,11 +58,11 @@ public interface IOrderTaker
     [OperationContract(IsOneWay = true)]  
     void EndPurchaseOrder();  
 }  
-```  
-  
+```
+
  服務會定義服務作業，但定義的方式只是讓第一項作業登記在異動中，而不自動完成異動。 後續的作業也會登記在相同的異動中，但是不自動完成。 只有工作階段中的最後一項作業，才會自動完成交易。 因此，服務合約中的數個作業引動過程都會使用同一個異動。 如果有任何作業擲回例外狀況，交易就會復原，並將工作階段重新放回佇列中。 要等到最後一項作業完成，交易才會獲得認可。 服務會使用 `PerSession` 做為 <xref:System.ServiceModel.InstanceContextMode>，以便在同一個服務執行個體上接收工作階段中的所有訊息。  
-  
-```  
+
+```csharp
 [ServiceBehavior(InstanceContextMode=InstanceContextMode.PerSession)]  
 public class OrderTakerService : IOrderTaker  
 {  
@@ -92,11 +94,11 @@ public class OrderTakerService : IOrderTaker
        Console.WriteLine(po.ToString());  
     }  
 }  
-```  
-  
+```
+
  服務會自我裝載。 使用 MSMQ 傳輸時，必須事先建立使用的佇列。 這個動作可手動或透過程式碼完成。 在這個範例中，服務包含檢查佇列是否存在並在需要時建立佇列的 <xref:System.Messaging> 程式碼。 您可以使用 <xref:System.Configuration.ConfigurationManager.AppSettings%2A> 類別，從組態檔中讀取佇列名稱。  
-  
-```  
+
+```csharp
 // Host the service within this EXE console application.  
 public static void Main()  
 {  
@@ -123,8 +125,8 @@ public static void Main()
         serviceHost.Close();   
     }  
 }  
-```  
-  
+```
+
  MSMQ 佇列名稱是指定在組態檔的 appSettings 區段中。 服務的端點是定義在組態檔的 system.serviceModel 區段中，並且會指定 `netMsmqBinding` 繫結。  
   
 ```xml  
@@ -150,8 +152,8 @@ public static void Main()
 ```  
   
  用戶端會建立一個異動範圍。 工作階段中的所有訊息都會傳送到該交易範圍內的佇列，形成不可部分完成的原子單位 (Atomic Unit)，其中的訊息若不是全部成功，就是全部失敗。 藉由呼叫 <xref:System.Transactions.TransactionScope.Complete%2A> 來認可交易。  
-  
-```  
+
+```csharp
 //Create a transaction scope.  
 using (TransactionScope scope = new TransactionScope(TransactionScopeOption.Required))  
 {  
@@ -178,8 +180,8 @@ using (TransactionScope scope = new TransactionScope(TransactionScopeOption.Requ
     // Complete the transaction.  
     scope.Complete();  
 }  
-```  
-  
+```
+
 > [!NOTE]
 >  您對工作階段中的所有訊息只能使用單一異動，而且必須在認可異動之前傳送工作階段中的所有訊息。 關閉用戶端就會關閉工作階段。 因此，必須在交易完成之前先關閉用戶端，才能將工作階段中的所有訊息傳送至佇列。  
   
@@ -280,4 +282,4 @@ Purchase Order: 7c86fef0-2306-4c51-80e6-bcabcc1a6e5e
     > [!NOTE]
     >  將安全性模式設定為 `None`，相當於將 <xref:System.ServiceModel.MsmqTransportSecurity.MsmqAuthenticationMode%2A>、<xref:System.ServiceModel.MsmqTransportSecurity.MsmqProtectionLevel%2A> 和 `Message` 安全性設定為 `None`。  
   
-## <a name="see-also"></a>請參閱
+## <a name="see-also"></a>另請參閱

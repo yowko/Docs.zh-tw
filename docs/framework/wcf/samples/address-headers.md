@@ -1,24 +1,26 @@
 ---
-title: "位址標頭"
-ms.custom: 
+title: 位址標頭
+ms.custom: ''
 ms.date: 03/30/2017
 ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.technology: dotnet-clr
-ms.tgt_pltfrm: 
+ms.reviewer: ''
+ms.suite: ''
+ms.technology:
+- dotnet-clr
+ms.tgt_pltfrm: ''
 ms.topic: article
 ms.assetid: b0c94d4a-3bde-4b4d-bb6d-9f12bc3a6940
-caps.latest.revision: "10"
+caps.latest.revision: 10
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.workload: dotnet
-ms.openlocfilehash: aafd6ec911464dcc2b936b9f9fc74b9bc39808bf
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.workload:
+- dotnet
+ms.openlocfilehash: 1392e06b0148ee24c9591839b58baf45da5109d4
+ms.sourcegitcommit: 2042de78fcdceebb6b8ac4b7a292b93e8782cbf5
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 04/27/2018
 ---
 # <a name="address-headers"></a>位址標頭
 位址標頭範例會示範用戶端如何將參考參數傳遞至使用 [!INCLUDE[indigo1](../../../../includes/indigo1-md.md)] 的服務。  
@@ -35,7 +37,7 @@ ms.lasthandoff: 12/22/2017
 ## <a name="client"></a>用戶端  
  對於要傳送參考參數的用戶端，它必須將 `AddressHeader` 新增至 `EndpointAddress` 的 `ServiceEndpoint`。 因為 `EndpointAddress` 類別是不變的，所以必須使用 `EndpointAddressBuilder` 類別才能修改端點位址。 下列程式碼會初始化用戶端，以便將參考參數當做其訊息部分來傳送。  
   
-```  
+```csharp   
 HelloClient client = new HelloClient();  
 EndpointAddressBuilder builder =   
     new EndpointAddressBuilder(client.Endpoint.Address);  
@@ -54,23 +56,21 @@ client.Endpoint.Address = builder.ToEndpointAddress();
 ## <a name="server"></a>伺服器  
  服務作業 `Hello()` 的實作會使用目前 `OperationContext`，檢查傳入訊息上的標頭值。  
   
-```  
+```csharp   
 string id = null;  
 // look at headers on incoming message  
 for (int i = 0;   
      i < OperationContext.Current.IncomingMessageHeaders.Count;   
      ++i)  
 {  
-    MessageHeaderInfo h =   
-        OperationContext.Current.IncomingMessageHeaders[i];  
+    MessageHeaderInfo h = OperationContext.Current.IncomingMessageHeaders[i];  
     // for any reference parameters with the correct name & namespace  
     if (h.IsReferenceParameter &&   
         h.Name == IDName &&   
         h.Namespace == IDNamespace)  
     {  
         // read the value of that header  
-        XmlReader xr =   
-OperationContext.Current.IncomingMessageHeaders.GetReaderAtHeader(i);  
+        XmlReader xr = OperationContext.Current.IncomingMessageHeaders.GetReaderAtHeader(i);  
         id = xr.ReadElementContentAsString();  
     }  
 }  
@@ -96,4 +96,4 @@ return "Hello, " + id;
 >   
 >  `<InstallDrive>:\WF_WCF_Samples\WCF\Basic\Client\AddressHeaders`  
   
-## <a name="see-also"></a>請參閱
+## <a name="see-also"></a>另請參閱

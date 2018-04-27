@@ -1,27 +1,29 @@
 ---
-title: "實作商務邏輯 (LINQ to SQL)"
-ms.custom: 
+title: 實作商務邏輯 (LINQ to SQL)
+ms.custom: ''
 ms.date: 03/30/2017
 ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.technology: dotnet-ado
-ms.tgt_pltfrm: 
+ms.reviewer: ''
+ms.suite: ''
+ms.technology:
+- dotnet-ado
+ms.tgt_pltfrm: ''
 ms.topic: article
 dev_langs:
 - csharp
 - vb
 ms.assetid: c4577590-7b12-42e1-84a6-95aa2562727e
-caps.latest.revision: "4"
+caps.latest.revision: 4
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.workload: dotnet
-ms.openlocfilehash: d905f34c29fbd8a15cb8225a4a547490a5c14efd
-ms.sourcegitcommit: ed26cfef4e18f6d93ab822d8c29f902cff3519d1
+ms.workload:
+- dotnet
+ms.openlocfilehash: f519162818739d04cbe66b107911a0e0c30d93bc
+ms.sourcegitcommit: 2042de78fcdceebb6b8ac4b7a292b93e8782cbf5
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 01/17/2018
+ms.lasthandoff: 04/27/2018
 ---
 # <a name="implementing-business-logic-linq-to-sql"></a>實作商務邏輯 (LINQ to SQL)
 本主題中的「商務邏輯」一詞，指的是您套用到資料的任何自訂規則或驗證測試，待套用之後，資料才會在資料庫中插入、更新或刪除。 商務邏輯有時也稱為「商務規則」或「定義域邏輯」。 在 N-Tier 應用程式中，這通常會設計為邏輯層，以便與展示層或資料存取層分開修改。 資料存取層可在資料庫中的資料更新、插入或刪除之前或之後叫用 (Invoke) 商務邏輯。  
@@ -166,7 +168,7 @@ public string CustomerID
 }  
 ```  
   
- 在您的類別部分中，您可以撰寫方法的實作定義。 在[!INCLUDE[vsprvs](../../../../../../includes/vsprvs-md.md)]之後您輸入,`partial`您會看到 IntelliSense 為類別另一部分中的方法定義。  
+ 在您的類別部分中，您可以撰寫方法的實作定義。 在 Visual Studio 中，輸入值之後`partial`您會看到 IntelliSense 為類別另一部分中的方法定義。  
   
 ```vb  
 Partial Public Class Customer  
@@ -194,7 +196,7 @@ partial class Customer
   
  [逐步解說： 為實體類別加入驗證](http://msdn.microsoft.com/library/85b06a02-b2e3-4534-95b8-d077c8d4c1d7)  
   
-## <a name="see-also"></a>請參閱  
+## <a name="see-also"></a>另請參閱  
  [部分類別和方法](~/docs/csharp/programming-guide/classes-and-structs/partial-classes-and-methods.md)  
  [部分方法](~/docs/visual-basic/programming-guide/language-features/procedures/partial-methods.md)  
  [LINQ to SQL Tools in Visual Studio](/visualstudio/data-tools/linq-to-sql-tools-in-visual-studio2) (Visual Studio 中的 LINQ to SQL 工具)  

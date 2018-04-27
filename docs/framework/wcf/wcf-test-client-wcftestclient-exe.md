@@ -1,24 +1,26 @@
 ---
-title: "WCF 測試用戶端 (WcfTestClient.exe)"
-ms.custom: 
+title: WCF 測試用戶端 (WcfTestClient.exe)
+ms.custom: ''
 ms.date: 03/30/2017
 ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.technology: dotnet-clr
-ms.tgt_pltfrm: 
+ms.reviewer: ''
+ms.suite: ''
+ms.technology:
+- dotnet-clr
+ms.tgt_pltfrm: ''
 ms.topic: article
 ms.assetid: d4302855-677f-4640-aa90-c5d785d72fb7
-caps.latest.revision: "45"
+caps.latest.revision: 45
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.workload: dotnet
-ms.openlocfilehash: 18866260c5d14cf27634afcd8391b159abac1dd1
-ms.sourcegitcommit: 2142a4732bb4ff519b9817db4c24a237b9810d4b
+ms.workload:
+- dotnet
+ms.openlocfilehash: 2eb32d36b1e6710f666391f918aff68c33566ab8
+ms.sourcegitcommit: 2042de78fcdceebb6b8ac4b7a292b93e8782cbf5
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 01/05/2018
+ms.lasthandoff: 04/27/2018
 ---
 # <a name="wcf-test-client-wcftestclientexe"></a>WCF 測試用戶端 (WcfTestClient.exe)
 [!INCLUDE[indigo1](../../../includes/indigo1-md.md)] 測試用戶端 (WcfTestClient.exe) 是一種 GUI 工具，可以讓使用者用來輸入測試參數、將該輸入送出至服務，以及檢視服務傳回的回應。 與 [!INCLUDE[indigo2](../../../includes/indigo2-md.md)] 服務主機搭配時，可以提供順暢無礙的服務測試經驗。  
@@ -172,9 +174,9 @@ ms.lasthandoff: 01/05/2018
 ## <a name="closing-wcf-test-client"></a>關閉 WCF 測試用戶端  
  您可以透過下列方式關閉 [!INCLUDE[indigo2](../../../includes/indigo2-md.md)] 測試用戶端：  
   
--   在**檔案**功能表上，按一下 **結束**。 或者，在[!INCLUDE[indigo2](../../../includes/indigo2-md.md)]測試用戶端主視窗中，按一下 **關閉**。 如果 [!INCLUDE[indigo2](../../../includes/indigo2-md.md)] 測試用戶端是由 [!INCLUDE[vsprvs](../../../includes/vsprvs-md.md)] 啟動的，這兩個動作也會關閉 [!INCLUDE[indigo2](../../../includes/indigo2-md.md)] 服務自動主機並停止 [!INCLUDE[vsprvs](../../../includes/vsprvs-md.md)] 偵錯程序。  
+-   在**檔案**功能表上，按一下 **結束**。 或者，在[!INCLUDE[indigo2](../../../includes/indigo2-md.md)]測試用戶端主視窗中，按一下 **關閉**。 這兩種動作也關閉[!INCLUDE[indigo2](../../../includes/indigo2-md.md)]服務自動主機並停止如果 Visual Studio 偵錯程序[!INCLUDE[indigo2](../../../includes/indigo2-md.md)]由 Visual Studio 啟動測試用戶端。  
   
--   以滑鼠右鍵按一下**WCF 服務主機**圖示在通知區域中，然後按一下**結束。** 這會同時關閉 [!INCLUDE[indigo2](../../../includes/indigo2-md.md)] 服務自動主機和 [!INCLUDE[indigo2](../../../includes/indigo2-md.md)] 測試用戶端，並且停止 [!INCLUDE[vsprvs](../../../includes/vsprvs-md.md)] 偵錯程序。  
+-   以滑鼠右鍵按一下**WCF 服務主機**圖示在通知區域中，然後按一下**結束。** 這會同時關閉[!INCLUDE[indigo2](../../../includes/indigo2-md.md)]服務自動主機和[!INCLUDE[indigo2](../../../includes/indigo2-md.md)]測試用戶端，並停止 Visual Studio 偵錯程序。  
   
-## <a name="see-also"></a>請參閱  
+## <a name="see-also"></a>另請參閱  
  [WCF 服務主機 (WcfSvcHost.exe)](../../../docs/framework/wcf/wcf-service-host-wcfsvchost-exe.md)

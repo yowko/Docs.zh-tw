@@ -10,17 +10,17 @@ ms.technology:
 ms.tgt_pltfrm: ''
 ms.topic: article
 ms.assetid: e3834149-7b8c-4a54-806b-b4296720f31d
-caps.latest.revision: ''
+caps.latest.revision: 29
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
 ms.workload:
 - dotnet
-ms.openlocfilehash: a4c3d1dc8116e9c1b26febc4d8473b15d8648c01
-ms.sourcegitcommit: 15316053918995cc1380163a7d7e7edd5c44e6d7
+ms.openlocfilehash: e0f8077e425464d5a9f33662366377d573719659
+ms.sourcegitcommit: 2042de78fcdceebb6b8ac4b7a292b93e8782cbf5
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 03/19/2018
+ms.lasthandoff: 04/27/2018
 ---
 # <a name="msmq-activation"></a>MSMQ 啟用
 這個範例示範如何在 Windows Process Activation Service (WAS) 中裝載可從訊息佇列讀取的應用程式。 這個範例會使用`netMsmqBinding`，並且根據[雙向通訊](../../../../docs/framework/wcf/samples/two-way-communication.md)範例。 本例中的服務是 Web 裝載的應用程式，而用戶端則會自我裝載並輸出至主控台，以便觀察所送出採購單的狀態。  
@@ -33,7 +33,7 @@ ms.lasthandoff: 03/19/2018
 >   
 >  \<InstallDrive>:\WF_WCF_Samples  
 >   
->  如果此目錄不存在，請移至[!INCLUDE[indigo1](../../../../includes/indigo1-md.md)]超連結 "http://go.microsoft.com/fwlink/?LinkId=150780" \t"_blank"和[!INCLUDE[wf](../../../../includes/wf-md.md)]範例[!INCLUDE[netfx40_long](../../../../includes/netfx40-long-md.md)]以下載所有[!INCLUDE[indigo2](../../../../includes/indigo2-md.md)]和[!INCLUDE[wf1](../../../../includes/wf1-md.md)]範例。 此範例位於下列目錄。  
+>  如果此目錄不存在，請移至[!INCLUDE[indigo1](../../../../includes/indigo1-md.md)]超連結"http://go.microsoft.com/fwlink/?LinkId=150780"\t"_blank"和 Windows Workflow Foundation (WF) 範例[!INCLUDE[netfx40_long](../../../../includes/netfx40-long-md.md)]以下載所有[!INCLUDE[indigo2](../../../../includes/indigo2-md.md)]和[!INCLUDE[wf1](../../../../includes/wf1-md.md)]範例。 此範例位於下列目錄。  
 >   
 >  \<InstallDrive>:\Samples\WCFWFCardSpace\WCF\Basic\Services\Hosting\WASHost\MsmqActivation.  
   
@@ -282,7 +282,7 @@ Status of order 70cf9d63-3dfa-4e69-81c2-23aa4478ebed :Pending
         > [!NOTE]
         >  這個命令是單行文字。  
   
-         這個命令可讓您使用 http://localhost/servicemodelsamples 和 net.msmq://localhost/servicemodelsamples 存取 /servicemodelsamples 應用程式。  
+         此命令會啟用 /servicemodelsamples 應用程式使用存取http://localhost/servicemodelsamples和 net.msmq: //localhost/servicemodelsamples。  
   
 7.  如果您之前未曾這麼做，請確定 MSMQ 啟動服務已啟用。 從**啟動**功能表上，按一下 **執行**，然後輸入`Services.msc`。 搜尋的服務清單**Net.Msmq 接聽程式介面卡**。 以滑鼠右鍵按一下並選取**屬性**。 設定**啟動類型**至**自動**，按一下 [**套用**按一下**啟動**] 按鈕。 這個步驟只需要在第一次使用 Net.Msmq 接聽程式配接器服務之前執行一次。  
   

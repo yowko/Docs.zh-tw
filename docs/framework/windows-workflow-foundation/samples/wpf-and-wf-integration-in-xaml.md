@@ -14,14 +14,14 @@ ms.author: dotnetcontent
 manager: wpickett
 ms.workload:
 - dotnet
-ms.openlocfilehash: 0447df0e6d4f14a4171a315858f992ad23d69373
-ms.sourcegitcommit: 86adcc06e35390f13c1e372c36d2e044f1fc31ef
+ms.openlocfilehash: 6bc761b93ff8d5c0dc79a86d0159d50d65fb727c
+ms.sourcegitcommit: 2042de78fcdceebb6b8ac4b7a292b93e8782cbf5
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/26/2018
+ms.lasthandoff: 04/27/2018
 ---
 # <a name="wpf-and-wf-integration-in-xaml"></a>XAML 中的 WPF 及 WF 整合
-這個範例會示範如何建立使用 Windows Presentation Foundation (WPF) 應用程式和[!INCLUDE[wf](../../../../includes/wf-md.md)]單一 XAML 文件中的功能。 為了完成這項作業，此範例會使用 [!INCLUDE[wf](../../../../includes/wf-md.md)] 和 XAML 擴充性。  
+這個範例示範如何建立使用 Windows Presentation Foundation (WPF) 和 Windows Workflow Foundation (WF) 功能在單一 XAML 文件中的應用程式。 若要完成這項作業，此範例會使用 Windows Workflow Foundation (WF) 和 XAML 擴充性。  
   
 ## <a name="sample-details"></a>範例詳細資料  
  ShowWindow.xaml 檔案會還原序列化為 <xref:System.Activities.Statements.Sequence> 活動，其包含的兩個字串變數是由序列的活動所操作：`ShowWindow` 和 `WriteLine`。 <xref:System.Activities.Statements.WriteLine> 活動會將指派給 <xref:System.Activities.Statements.WriteLine.Text%2A> 屬性的運算式輸出到主控台視窗。 `ShowWindow` 活動的執行邏輯中會顯示 [!INCLUDE[avalon2](../../../../includes/avalon2-md.md)] 視窗。 視窗的 <xref:System.Activities.ActivityContext.DataContext%2A> 包含序列中宣告的變數。 `ShowWindow` 活動中宣告的視窗控制項使用資料繫結來操作這些變數。 最後，視窗包含按鈕控制項。 按鈕的 `Click` 事件是由名為 <xref:System.Activities.ActivityDelegate> 的 `MarkupExtension` 處理，其中包含 `CloseWindow` 活動。 `MarkUpExtension` 會叫用所包含的活動，以內容形式提供 `x:Name` 所識別的任何物件，以及包含視窗的 <xref:System.Activities.ActivityContext.DataContext%2A>。 因此，`CloseWindow.InArgument<Window>` 可透過參考視窗名稱的運算式來繫結。  

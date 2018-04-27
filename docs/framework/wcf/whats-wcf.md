@@ -20,11 +20,11 @@ ms.author: dotnetcontent
 manager: wpickett
 ms.workload:
 - dotnet
-ms.openlocfilehash: 1e194a0784eb27043bbd0c127cde6883b4fafb2e
-ms.sourcegitcommit: 9a4fe1a1c37b26532654b4bbe22d702237950009
+ms.openlocfilehash: 2fa6efdc61620647d5c6318746e61e09cdde7a46
+ms.sourcegitcommit: 2042de78fcdceebb6b8ac4b7a292b93e8782cbf5
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/16/2018
+ms.lasthandoff: 04/27/2018
 ---
 # <a name="what-is-windows-communication-foundation"></a>何謂 Windows Communication Foundation
 [!INCLUDE[indigo1](../../../includes/indigo1-md.md)] 是用於建置服務導向應用程式的架構。 使用 [!INCLUDE[indigo2](../../../includes/indigo2-md.md)]，您可以在各個服務端點之間傳送非同步訊息形式的資料。 服務端點可能是由 IIS 裝載之持續上線服務的一部分，或為應用程式中裝載的服務。 端點則大致是某項服務的用戶端，會向該服務端點要求資料。 訊息可為簡單的單一字元或以 XML 傳送的字組，乃至如二進位資料的資料流這般複雜的形式都沒問題。 其中幾個範例案例包括：  
@@ -80,7 +80,7 @@ ms.lasthandoff: 04/16/2018
   
 -   **永久性的訊息**  
   
-     永久性的訊息是指不會因為通訊中斷而遺失的訊息。 處於永久性訊息模式的訊息一律儲存至資料庫。 萬一發生中斷，資料庫可以讓您在恢復連線後繼續進行訊息交換。 您也能夠使用 [!INCLUDE[wf](../../../includes/wf-md.md)]建立永久性的訊息。 [!INCLUDE[crdefault](../../../includes/crdefault-md.md)] [Workflow Services](../../../docs/framework/wcf/feature-details/workflow-services.md).  
+     永久性的訊息是指不會因為通訊中斷而遺失的訊息。 處於永久性訊息模式的訊息一律儲存至資料庫。 萬一發生中斷，資料庫可以讓您在恢復連線後繼續進行訊息交換。 您也可以建立使用 Windows Workflow Foundation (WF) 永久性的訊息。 [!INCLUDE[crdefault](../../../includes/crdefault-md.md)] [Workflow Services](../../../docs/framework/wcf/feature-details/workflow-services.md).  
   
 -   **異動**  
   
@@ -97,7 +97,7 @@ ms.lasthandoff: 04/16/2018
 ## <a name="wcf-integration-with-other-microsoft-technologies"></a>WCF 與其他 Microsoft 技術的整合  
  [!INCLUDE[indigo2](../../../includes/indigo2-md.md)] 是具有靈活彈性的平台。 由於提供了極大彈性，許多其他 Microsoft 產品也使用 [!INCLUDE[indigo2](../../../includes/indigo2-md.md)] 。 了解 [!INCLUDE[indigo2](../../../includes/indigo2-md.md)]的基本概念後，您在使用任何這些產品時就能立即掌握優勢。  
   
- 第一項與 [!INCLUDE[indigo2](../../../includes/indigo2-md.md)] 搭檔的技術為 Windows Workflow Foundation (WF)。 工作流程，以簡化應用程式開發步驟封裝在工作流程中為 「 活動 」。 若是使用第一版的 [!INCLUDE[wf2](../../../includes/wf2-md.md)]，開發人員則必須為工作流程建立主應用程式。 下一版的 [!INCLUDE[wf2](../../../includes/wf2-md.md)] 已與 [!INCLUDE[indigo2](../../../includes/indigo2-md.md)]相整合。 如此可讓任何工作流程輕鬆地裝載在 [!INCLUDE[indigo2](../../../includes/indigo2-md.md)] 服務中，您只要自動選擇 WF/WCF ( [!INCLUDE[vs_current_long](../../../includes/vs-current-long-md.md)]中的專案類型) 即可。  
+ 第一項與 [!INCLUDE[indigo2](../../../includes/indigo2-md.md)] 搭檔的技術為 Windows Workflow Foundation (WF)。 工作流程，以簡化應用程式開發步驟封裝在工作流程中為 「 活動 」。 在第一個 Windows Workflow Foundation 的版本中，開發人員則必須建立工作流程主機。 Windows Workflow Foundation 的下一個版本已與整合[!INCLUDE[indigo2](../../../includes/indigo2-md.md)]。 如此可讓任何工作流程輕鬆地裝載在 [!INCLUDE[indigo2](../../../includes/indigo2-md.md)] 服務中，您只要自動選擇 WF/WCF ( [!INCLUDE[vs_current_long](../../../includes/vs-current-long-md.md)]中的專案類型) 即可。  
   
  Microsoft BizTalk Server R2 同樣使用 [!INCLUDE[indigo2](../../../includes/indigo2-md.md)] 做為通訊技術。 BizTalk 是設計用來接收標準化格式的資料以及轉換成其他格式。 訊息必須傳遞至中央訊息槽，以在該處使用嚴格對應或利用 BizTalk 功能 (例如工作流程引擎) 才可轉換訊息。 BizTalk 如今已可使用 [!INCLUDE[indigo2](../../../includes/indigo2-md.md)] 企業營運 (LOB) 配接器將訊息傳遞至訊息槽。  
   

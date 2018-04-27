@@ -1,29 +1,30 @@
 ---
-title: "使用追蹤擷取 WF 資料"
-ms.custom: 
+title: 使用追蹤擷取 WF 資料
+ms.custom: ''
 ms.date: 03/30/2017
 ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.tgt_pltfrm: 
+ms.reviewer: ''
+ms.suite: ''
+ms.tgt_pltfrm: ''
 ms.topic: article
 ms.assetid: e30c68f5-8c6a-495a-bd20-667a4364c68e
-caps.latest.revision: "14"
+caps.latest.revision: 14
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.workload: dotnet
-ms.openlocfilehash: 4d6c269dc9c8b5a0050cfc3ffcefc3160b07c897
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.workload:
+- dotnet
+ms.openlocfilehash: 44e49aa0c9b3b9b53b921fe90838875ab34b7772
+ms.sourcegitcommit: 2042de78fcdceebb6b8ac4b7a292b93e8782cbf5
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 04/27/2018
 ---
 # <a name="extract-wf-data-using-tracking"></a>使用追蹤擷取 WF 資料
 此範例會示範如何使用工作流程追蹤，從活動中擷取工作流程變數和引數。 也會示範如何加入追蹤記錄的註釋，以及在自訂追蹤記錄內擷取資料裝載。 此範例會使用 Windows 事件追蹤 (ETW) 追蹤參與者，從工作流程中擷取資料。  
   
 ## <a name="sample-details"></a>範例詳細資料  
- [!INCLUDE[wf](../../../../includes/wf-md.md)] 會提供可取得執行工作流程執行個體可見性的追蹤。 追蹤執行階段會在工作流程執行期間發出工作流程追蹤記錄。 連同工作流程追蹤記錄，工作流程執行個體內的資料也可以從工作流程中擷取。 下列清單詳述可以從追蹤記錄中擷取的資料型別：  
+ Windows Workflow Foundation (WF) 提供追蹤，以掌握執行工作流程執行個體。 追蹤執行階段會在工作流程執行期間發出工作流程追蹤記錄。 連同工作流程追蹤記錄，工作流程執行個體內的資料也可以從工作流程中擷取。 下列清單詳述可以從追蹤記錄中擷取的資料型別：  
   
 1.  活動內的工作流程變數以及活動執行期間的追蹤記錄。  
   
@@ -165,5 +166,5 @@ ms.lasthandoff: 12/22/2017
 >   
 >  `<InstallDrive>:\WF_WCF_Samples\WF\Basic\Tracking\ExtractWfData`  
   
-## <a name="see-also"></a>請參閱  
+## <a name="see-also"></a>另請參閱  
  [AppFabric 監控範例](http://go.microsoft.com/fwlink/?LinkId=193959)

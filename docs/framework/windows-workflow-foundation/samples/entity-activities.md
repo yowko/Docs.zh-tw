@@ -1,35 +1,36 @@
 ---
-title: "實體活動"
-ms.custom: 
+title: 實體活動
+ms.custom: ''
 ms.date: 03/30/2017
 ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.tgt_pltfrm: 
+ms.reviewer: ''
+ms.suite: ''
+ms.tgt_pltfrm: ''
 ms.topic: article
 ms.assetid: c04f7413-7fb8-40c6-819e-dc92b145b62e
-caps.latest.revision: "9"
+caps.latest.revision: 9
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.workload: dotnet
-ms.openlocfilehash: c507c3da7f4583bf6ffb7b869cecbf0bfd305077
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.workload:
+- dotnet
+ms.openlocfilehash: 81f8b1852b939d7ceb8b9afae4435ca12239b880
+ms.sourcegitcommit: 2042de78fcdceebb6b8ac4b7a292b93e8782cbf5
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 04/27/2018
 ---
 # <a name="entity-activities"></a>實體活動
-這個範例示範如何與 [!INCLUDE[wf2](../../../../includes/wf2-md.md)] 搭配使用 ADO.NET Entity Framework，以簡化資料存取。  
+這個範例示範如何使用 Windows Workflow Foundation 中的 ADO.NET Entity Framework，以簡化資料存取。  
   
- ADO.NET Entity Framework 可讓開發人員使用網域特有之物件、屬性和關聯性形式的資料，例如客戶、訂單、訂單詳細資料以及這些實體之間的關聯性。 ADO.NET Entity Framework 處理這項作業的方式，是提供可針對概念應用程式模型來進行程式設計的抽象層級，而不是直接針對關聯式儲存結構描述來進行程式設計。 [!INCLUDE[crabout](../../../../includes/crabout-md.md)]ADO.NET Entity Framework，請參閱[ADO.NET Entity Framework](http://go.microsoft.com/fwlink/?LinkId=165549)。  
+ ADO.NET Entity Framework 可讓開發人員使用網域特有之物件、屬性和關聯性形式的資料，例如客戶、訂單、訂單詳細資料以及這些實體之間的關聯性。 ADO.NET Entity Framework 處理這項作業的方式，是提供可針對概念應用程式模型來進行程式設計的抽象層級，而不是直接針對關聯式儲存結構描述來進行程式設計。 [!INCLUDE[crabout](../../../../includes/crabout-md.md)] ADO.NET Entity Framework，請參閱[ADO.NET Entity Framework](http://go.microsoft.com/fwlink/?LinkId=165549)。  
   
 ## <a name="sample-details"></a>範例詳細資料  
  這個範例會使用 `Northwind` 資料庫，而且包含了用來建立及移除 `Northwind` 資料庫的指令碼 (Setup.cmd 和 Cleanup.cmd)。 此範例中的專案包含了根據 `Northwind` 資料庫的實體資料模型。 您可以開啟專案中包含的 `Northwind.edmx` 檔案來尋找此模型。 這個模型會定義可以使用 ADO.NET Entity Framework 存取之物件的形狀。  
   
  下列活動包含在此範例中：  
   
--   `EntitySQLQuery`：`EntitySQLQuery` 活動可讓您從根據 Entity SQL 查詢字串的資料庫中擷取物件。 Entity SQL 是一種與存放區無關的語言而且與 SQL 非常類似，它可讓您指定以概念模型為基礎的查詢以及屬於模型或網域之一部分的實體。 [!INCLUDE[crabout](../../../../includes/crabout-md.md)]Entity SQL 語言，請參閱[Entity SQL 語言](http://go.microsoft.com/fwlink/?LinkId=165646)。  
+-   `EntitySQLQuery`：`EntitySQLQuery` 活動可讓您從根據 Entity SQL 查詢字串的資料庫中擷取物件。 Entity SQL 是一種與存放區無關的語言而且與 SQL 非常類似，它可讓您指定以概念模型為基礎的查詢以及屬於模型或網域之一部分的實體。 [!INCLUDE[crabout](../../../../includes/crabout-md.md)] Entity SQL 語言，請參閱[Entity SQL 語言](http://go.microsoft.com/fwlink/?LinkId=165646)。  
   
 -   `EntityLinqQuery`：這個活動可讓您從根據 LINQ 查詢或述詞的資料庫中擷取物件。  
   

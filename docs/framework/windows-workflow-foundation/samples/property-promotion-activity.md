@@ -1,23 +1,24 @@
 ---
-title: "屬性促銷活動"
-ms.custom: 
+title: 屬性促銷活動
+ms.custom: ''
 ms.date: 03/30/2017
 ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.tgt_pltfrm: 
+ms.reviewer: ''
+ms.suite: ''
+ms.tgt_pltfrm: ''
 ms.topic: article
 ms.assetid: 802196b7-1159-4c05-b41b-d3bfdfcc88d9
-caps.latest.revision: "6"
+caps.latest.revision: 6
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.workload: dotnet
-ms.openlocfilehash: 244cea33b684a8674681c4d1974d5d857c4c402b
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.workload:
+- dotnet
+ms.openlocfilehash: 12f7aa4bd10a22a3cd3ea361e32016b95e41e46b
+ms.sourcegitcommit: 2042de78fcdceebb6b8ac4b7a292b93e8782cbf5
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 04/27/2018
 ---
 # <a name="property-promotion-activity"></a>屬性促銷活動
 此範例提供了端對端方案，此方案會將 <xref:System.Activities.DurableInstancing.SqlWorkflowInstanceStore> 提升功能直接整合到工作流程撰寫經驗。 將會提供組態元素、工作流程活動、可簡化使用提升功能之工作流程延伸模組的集合。 此外，此範例也包含一個簡單的工作流程，可示範如何使用這個集合。  
@@ -109,7 +110,7 @@ go
  `promotedValue` 元素的順序與提升屬性在 `InstancePromotedProperties` 檢視中的位置相關。 `Count` 是第一個 `promotedValue` 元素。 因此，它會對應到 `Value1` 檢視表中的 `InstancePromotedProperties` 資料行。 `LastIncrementedAt` 是第二個 `promotedValue` 元素。 因此，它會對應到 `Value2` 檢視表中的 `InstancePromotedProperties` 資料行。  
   
 #### <a name="using-the-promotevalue-activity"></a>使用 PromoteValue 活動  
- 在 [!INCLUDE[wf2](../../../../includes/wf2-md.md)] 設計工具中檢查 CounterService.xamlx 檔案。 請注意 WF 定義中有兩個特殊活動：`PromoteValue<DateTime>` 和 `PromoteValue<Int32>`。  
+ 檢查 CounterService.xamlx 檔案中 Windows Workflow Foundation Designer。 請注意 WF 定義中有兩個特殊活動：`PromoteValue<DateTime>` 和 `PromoteValue<Int32>`。  
   
  `PromoteValue<Int32>` 活動將它的 `Name` 成員定義為 `Count`。 這會符合組態中的第一個 `promotedValue` 元素，並將其 `Value` 定義為 `Counter` 工作流程變數。 當保存此工作流程時，`Counter` 工作流程變數會當做提升屬性保存到 `Value1` 檢視表的 `InstancePromotedProperties` 資料行中。  
   
@@ -200,5 +201,5 @@ public class SqlWorkflowInstanceStorePromotionBehavior :
 >   
 >  `<InstallDrive>:\WF_WCF_Samples\WF\Basic\Persistence\PropertyPromotionActivity`  
   
-## <a name="see-also"></a>請參閱  
+## <a name="see-also"></a>另請參閱  
  [AppFabric 主控與持續性範例](http://go.microsoft.com/fwlink/?LinkId=193961)

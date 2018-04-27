@@ -1,24 +1,26 @@
 ---
-title: "下載範例資料庫 (LINQ to DataSet)"
-ms.custom: 
+title: 下載範例資料庫 (LINQ to DataSet)
+ms.custom: ''
 ms.date: 03/30/2017
 ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.technology: dotnet-ado
-ms.tgt_pltfrm: 
+ms.reviewer: ''
+ms.suite: ''
+ms.technology:
+- dotnet-ado
+ms.tgt_pltfrm: ''
 ms.topic: article
 ms.assetid: eb42a7af-d410-4b7f-b4a8-13c72ce6fd09
-caps.latest.revision: "2"
+caps.latest.revision: 2
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.workload: dotnet
-ms.openlocfilehash: c8c1c2dabb13393764ca8b1fd9c1a717b9e2527e
-ms.sourcegitcommit: ed26cfef4e18f6d93ab822d8c29f902cff3519d1
+ms.workload:
+- dotnet
+ms.openlocfilehash: 8e19e51ecf4868d0d49e26b4aafd7e8b3840992d
+ms.sourcegitcommit: 2042de78fcdceebb6b8ac4b7a292b93e8782cbf5
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 01/17/2018
+ms.lasthandoff: 04/27/2018
 ---
 # <a name="downloading-sample-databases-linq-to-dataset"></a>下載範例資料庫 (LINQ to DataSet)
 範例和逐步解說中的[!INCLUDE[linq_dataset](../../../../includes/linq-dataset-md.md)]文件會使用 AdventureWorks 範例資料庫。 您可以從 Microsoft 下載網站免費下載這個產品。 [!INCLUDE[linq_dataset](../../../../includes/linq-dataset-md.md)] 文件中的範例和逐步解說會使用 SQL Server 當做資料存放區。 除了 SQL Server 以外，可免費取得的 SQL Server Express Edition 也可以當做資料存放區使用。  
@@ -74,7 +76,7 @@ ms.lasthandoff: 01/17/2018
      如果您已將這些檔案安裝至不同的磁碟機或目錄，就必須先適當地修訂路徑，然後再執行 `sp_attach_db` 預存程序 (Stored Procedure)。  
   
 ## <a name="downloading-sql-server-express-edition"></a>下載 SQL Server Express Edition  
- 範例和逐步解說中的[!INCLUDE[linq_dataset](../../../../includes/linq-dataset-md.md)]區段使用 SQL Server 2005 做為資料存放區，而改為使用 SQL Server Express Edition，則可修改。 SQL Server Express Edition 可免費取得，而且可以將它連同應用程式一起轉散發。 如果您正使用 [!INCLUDE[vsprvs](../../../../includes/vsprvs-md.md)]，SQL Server Express Edition 會隨附於專業版和更高階的版本中。  
+ 範例和逐步解說中的[!INCLUDE[linq_dataset](../../../../includes/linq-dataset-md.md)]區段使用 SQL Server 2005 做為資料存放區，而改為使用 SQL Server Express Edition，則可修改。 SQL Server Express Edition 可免費取得，而且可以將它連同應用程式一起轉散發。 如果您使用 Visual Studio，SQL Server Express Edition 隨附於專業版 （含） 以上版本。  
   
 #### <a name="to-download-and-install-sql-server-express-edition"></a>若要下載並安裝 SQL Server Express Edition  
   
@@ -84,5 +86,5 @@ ms.lasthandoff: 01/17/2018
   
 3.  請遵循網站上的安裝指示進行。  
   
-## <a name="see-also"></a>請參閱  
+## <a name="see-also"></a>另請參閱  
  [快速入門](../../../../docs/framework/data/adonet/getting-started-linq-to-dataset.md)

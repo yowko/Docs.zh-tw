@@ -1,35 +1,35 @@
 ---
-title: "逐步解說：在 Windows Form 中裝載 WPF 複合控制項"
-ms.custom: 
+title: 逐步解說：在 Windows Form 中裝載 WPF 複合控制項
+ms.custom: ''
 ms.date: 03/30/2017
 ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
+ms.reviewer: ''
+ms.suite: ''
 ms.technology:
 - dotnet-wpf
-ms.tgt_pltfrm: 
+ms.tgt_pltfrm: ''
 ms.topic: article
 helpviewer_keywords:
 - hosting WPF content in Windows Forms [WPF]
 ms.assetid: 0ac41286-4c1b-4b17-9196-d985cb844ce1
-caps.latest.revision: 
+caps.latest.revision: 34
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
 ms.workload:
 - dotnet
-ms.openlocfilehash: 129d699455467679c86c803e6d3124e6a7dfa1f9
-ms.sourcegitcommit: c0dd436f6f8f44dc80dc43b07f6841a00b74b23f
+ms.openlocfilehash: f5a3cef6bc2614691584828ff61e0f8ea40b9f95
+ms.sourcegitcommit: 2042de78fcdceebb6b8ac4b7a292b93e8782cbf5
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 01/19/2018
+ms.lasthandoff: 04/27/2018
 ---
 # <a name="walkthrough-hosting-a-wpf-composite-control-in-windows-forms"></a>逐步解說：在 Windows Form 中裝載 WPF 複合控制項
-[!INCLUDE[TLA#tla_winclient](../../../../includes/tlasharptla-winclient-md.md)] 提供用來建立應用程式的豐富環境。 不過，當您擁有了大筆投資的[!INCLUDE[TLA#tla_winforms](../../../../includes/tlasharptla-winforms-md.md)]的程式碼，它可更有效率地擴充您現有[!INCLUDE[TLA#tla_winforms](../../../../includes/tlasharptla-winforms-md.md)]應用程式[!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)]而非將它重新改寫。 常見的案例是當您想要將內嵌其中一個或更多控制項實作[!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)]內您[!INCLUDE[TLA2#tla_winforms](../../../../includes/tla2sharptla-winforms-md.md)]應用程式。 如需自訂 WPF 控制項的詳細資訊，請參閱[控制項自訂](../../../../docs/framework/wpf/controls/control-customization.md)。  
+[!INCLUDE[TLA#tla_winclient](../../../../includes/tlasharptla-winclient-md.md)] 提供用來建立應用程式的豐富環境。 不過，當您擁有了大筆投資的[!INCLUDE[TLA#tla_winforms](../../../../includes/tlasharptla-winforms-md.md)]的程式碼，它可更有效率地擴充您現有[!INCLUDE[TLA#tla_winforms](../../../../includes/tlasharptla-winforms-md.md)]應用程式[!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)]而非將它重新改寫。 常見的案例是當您想要將內嵌其中一個或更多控制項實作[!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)]Windows Forms 應用程式中。 如需自訂 WPF 控制項的詳細資訊，請參閱[控制項自訂](../../../../docs/framework/wpf/controls/control-customization.md)。  
   
- 這個逐步解說會引導您透過應用程式裝載[!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)]複合控制項，執行中的資料項目[!INCLUDE[TLA2#tla_winforms](../../../../includes/tla2sharptla-winforms-md.md)]應用程式。 複合控制項會封裝在 DLL 中。 這個一般程序可以延伸到更複雜的應用程式和控制項。 本逐步解說的設計幾乎相同的外觀和功能[逐步解說： 在 WPF 中的 Windows Form 複合控制項裝載](../../../../docs/framework/wpf/advanced/walkthrough-hosting-a-windows-forms-composite-control-in-wpf.md)。 主要差異在於裝載案例相反。  
+ 這個逐步解說會引導您透過應用程式裝載[!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)]複合控制項，以在 Windows Forms 應用程式中執行資料輸入。 複合控制項會封裝在 DLL 中。 這個一般程序可以延伸到更複雜的應用程式和控制項。 本逐步解說的設計幾乎相同的外觀和功能[逐步解說： 在 WPF 中的 Windows Form 複合控制項裝載](../../../../docs/framework/wpf/advanced/walkthrough-hosting-a-windows-forms-composite-control-in-wpf.md)。 主要差異在於裝載案例相反。  
   
- 本逐步解說分為兩節。 第一節將簡短描述的實作[!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)]複合控制項。 第二個區段詳細資料中將討論如何裝載中的複合控制項[!INCLUDE[TLA2#tla_winforms](../../../../includes/tla2sharptla-winforms-md.md)]應用程式，從控制項，接收事件，以及存取某些控制項的屬性。  
+ 本逐步解說分為兩節。 第一節將簡短描述的實作[!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)]複合控制項。 第二節詳細討論如何裝載 Windows Form 應用程式中的複合控制項，接收事件，從控制項，並存取部分控制項的屬性。  
   
  這個逐步解說中所述的工作包括：  
   
@@ -57,11 +57,11 @@ WPF 複合控制項
   
 2.  在 Visual C# 和 Windows 類別目錄中，選取**WPF 使用者控制項程式庫**範本。  
   
-3.  將新專案`MyControls`。  
+3.  將新專案命名為 `MyControls`。  
   
 4.  位置，請指定方便具名的最上層資料夾，例如`WindowsFormsHostingWpfControl`。 稍後，您會將主應用程式放在此資料夾中。  
   
-5.  按一下**確定**建立專案。 預設專案包含單一的控制項，名為`UserControl1`。  
+5.  按一下 [確定] 建立專案。 預設專案包含單一的控制項，名為`UserControl1`。  
   
 6.  在 [方案總管] 中，重新命名`UserControl1`至`MyControl1`。  
   
@@ -79,7 +79,7 @@ WPF 複合控制項
  [!INCLUDE[TLA#tla_ui](../../../../includes/tlasharptla-ui-md.md)]複合控制項是實作與[!INCLUDE[TLA#tla_xaml](../../../../includes/tlasharptla-xaml-md.md)]。 複合控制項[!INCLUDE[TLA2#tla_ui](../../../../includes/tla2sharptla-ui-md.md)]包含五個<xref:System.Windows.Controls.TextBox>項目。 每個<xref:System.Windows.Controls.TextBox>項目都具有相關聯<xref:System.Windows.Controls.TextBlock>做為標籤的項目。 有兩個<xref:System.Windows.Controls.Button>項目底部，**確定**和**取消**。 使用者按一下任一個按鈕時，控制項會引發自訂事件，以將資訊傳回給主應用程式。  
   
 #### <a name="basic-layout"></a>基本版面配置  
- 各種[!INCLUDE[TLA2#tla_ui](../../../../includes/tla2sharptla-ui-md.md)]元素都包含在<xref:System.Windows.Controls.Grid>項目。 您可以使用<xref:System.Windows.Controls.Grid>要排列的複合內容控制大致相同方式使用`Table`HTML 中的項目。 [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)]也有<xref:System.Windows.Documents.Table>項目，但<xref:System.Windows.Controls.Grid>是更輕鬆且更適合簡單配置工作。  
+ 各種[!INCLUDE[TLA2#tla_ui](../../../../includes/tla2sharptla-ui-md.md)]元素都包含在<xref:System.Windows.Controls.Grid>項目。 您可以使用<xref:System.Windows.Controls.Grid>要排列的複合內容控制大致相同方式使用`Table`HTML 中的項目。 [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] 也有<xref:System.Windows.Documents.Table>項目，但<xref:System.Windows.Controls.Grid>是更輕鬆且更適合簡單配置工作。  
   
  下列 XAML 顯示基本版面配置。 此 XAML 定義控制項的整體結構，藉由指定的資料行數目和資料列<xref:System.Windows.Controls.Grid>項目。  
   
@@ -124,7 +124,7 @@ WPF 複合控制項
   
 3.  引發自訂`OnButtonClick`事件，通知使用者已完成，並且將資料傳遞回主機的主機。  
   
- 此控制項也會公開一些可讓您變更外觀的色彩和字型屬性。 不同於<xref:System.Windows.Forms.Integration.WindowsFormsHost>類別，這時會使用主機[!INCLUDE[TLA2#tla_winforms](../../../../includes/tla2sharptla-winforms-md.md)]控制項，<xref:System.Windows.Forms.Integration.ElementHost>類別會公開控制項的<xref:System.Windows.Controls.Panel.Background%2A>只屬性。 若要維護與之間文字相似度這個程式碼範例中所討論的範例[逐步解說： 在 WPF 中的 Windows Form 複合控制項裝載](../../../../docs/framework/wpf/advanced/walkthrough-hosting-a-windows-forms-composite-control-in-wpf.md)，控制會直接公開的剩餘屬性。  
+ 此控制項也會公開一些可讓您變更外觀的色彩和字型屬性。 不同於<xref:System.Windows.Forms.Integration.WindowsFormsHost>類別，這用來裝載 Windows Form 控制項，<xref:System.Windows.Forms.Integration.ElementHost>類別會公開控制項的<xref:System.Windows.Controls.Panel.Background%2A>只屬性。 若要維護與之間文字相似度這個程式碼範例中所討論的範例[逐步解說： 在 WPF 中的 Windows Form 複合控制項裝載](../../../../docs/framework/wpf/advanced/walkthrough-hosting-a-windows-forms-composite-control-in-wpf.md)，控制會直接公開的剩餘屬性。  
   
 #### <a name="the-basic-structure-of-the-code-behind-file"></a>程式碼後置檔案的基本結構  
  此程式碼後置檔案包含單一命名空間， `MyControls`，其中會包含兩個類別：`MyControl1`和`MyControlEventArgs`。  
@@ -193,7 +193,7 @@ namespace MyControls
   
 <a name="winforms_host_section"></a>   
 ## <a name="implementing-the-windows-forms-host-application"></a>實作 Windows Forms 主應用程式  
- [!INCLUDE[TLA2#tla_winforms](../../../../includes/tla2sharptla-winforms-md.md)]裝載應用程式會使用<xref:System.Windows.Forms.Integration.ElementHost>主機的物件[!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)]複合控制項。 應用程式的控制代碼`OnButtonClick`事件接收複合控制項中的資料。 應用程式也會有一組選項按鈕，可用來修改控制項的外觀。 下圖顯示應用程式。  
+ Windows Form 中裝載應用程式會使用<xref:System.Windows.Forms.Integration.ElementHost>主機的物件[!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)]複合控制項。 應用程式的控制代碼`OnButtonClick`事件接收複合控制項中的資料。 應用程式也會有一組選項按鈕，可用來修改控制項的外觀。 下圖顯示應用程式。  
   
  ![Windows Form 裝載 Avalon 控制項](../../../../docs/framework/wpf/advanced/media/wfhost.png "WFHost")  
 Windows Forms 應用程式中裝載的 WPF 複合控制項  
@@ -205,11 +205,11 @@ Windows Forms 應用程式中裝載的 WPF 複合控制項
   
 2.  在 Visual C# 和 Windows 類別目錄中，選取**Windows Forms 應用程式**範本。  
   
-3.  將新專案`WFHost`。  
+3.  將新專案命名為 `WFHost`。  
   
 4.  針對位置，指定包含 MyControls 專案的相同最上層資料夾。  
   
-5.  按一下**確定**建立專案。  
+5.  按一下 [確定] 建立專案。  
   
  您也需要將參考加入至包含的 DLL`MyControl1`和其他組件。  
   
@@ -308,9 +308,9 @@ Windows Forms 應用程式中裝載的 WPF 複合控制項
   
  中的其餘兩行`Form1_Load`方法附加至兩個控制項事件的處理常式：  
   
--   `OnButtonClick`是在使用者按一下時，會將複合控制項所引發自訂事件**確定**或**取消** 按鈕。 您可以處理事件以取得使用者回應，以及收集使用者所指定的任何資料。  
+-   `OnButtonClick` 是在使用者按一下時，會將複合控制項所引發自訂事件**確定**或**取消** 按鈕。 您可以處理事件以取得使用者回應，以及收集使用者所指定的任何資料。  
   
--   <xref:System.Windows.FrameworkElement.Loaded>是標準的事件所引發[!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)]控制時完全載入。 因為此範例需要使用控制項中的屬性來初始化數個全域變數，所以在這裡使用這個事件。 在表單的時間<xref:System.Windows.Forms.Form.Load>事件，控制項不是完全載入，而這些值仍會設定為`null`。 您必須等候直到在控制項的<xref:System.Windows.FrameworkElement.Loaded>才能存取這些屬性，就會發生事件。  
+-   <xref:System.Windows.FrameworkElement.Loaded> 是標準的事件所引發[!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)]控制時完全載入。 因為此範例需要使用控制項中的屬性來初始化數個全域變數，所以在這裡使用這個事件。 在表單的時間<xref:System.Windows.Forms.Form.Load>事件，控制項不是完全載入，而這些值仍會設定為`null`。 您必須等候直到在控制項的<xref:System.Windows.FrameworkElement.Loaded>才能存取這些屬性，就會發生事件。  
   
  <xref:System.Windows.FrameworkElement.Loaded>上述程式碼所示事件處理常式。 `OnButtonClick`處理常式會在下一節中討論。  
   
@@ -334,7 +334,7 @@ Windows Forms 應用程式中裝載的 WPF 複合控制項
   
  建置並執行應用程式。 按一下不同的選項按鈕，以查看在 WPF 複合控制項上的效果。  
   
-## <a name="see-also"></a>請參閱  
+## <a name="see-also"></a>另請參閱  
  <xref:System.Windows.Forms.Integration.ElementHost>  
  <xref:System.Windows.Forms.Integration.WindowsFormsHost>  
  [WPF 設計工具](http://msdn.microsoft.com/library/c6c65214-8411-4e16-b254-163ed4099c26)  

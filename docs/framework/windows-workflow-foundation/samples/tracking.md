@@ -1,26 +1,27 @@
 ---
-title: "追蹤"
-ms.custom: 
+title: 追蹤
+ms.custom: ''
 ms.date: 03/30/2017
 ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.tgt_pltfrm: 
+ms.reviewer: ''
+ms.suite: ''
+ms.tgt_pltfrm: ''
 ms.topic: article
 ms.assetid: afdcd9bd-b462-4b2a-aac7-bebf9c80be81
-caps.latest.revision: "4"
+caps.latest.revision: 4
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.workload: dotnet
-ms.openlocfilehash: 79ec9c423f86a0a736ed1b99d8ddf0f5a38160c0
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.workload:
+- dotnet
+ms.openlocfilehash: 6bb7d918fcc3b0948d5902764d8351a8f86b0389
+ms.sourcegitcommit: 2042de78fcdceebb6b8ac4b7a292b93e8782cbf5
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 04/27/2018
 ---
 # <a name="tracking"></a>追蹤
-本節包含示範 [!INCLUDE[wf](../../../../includes/wf-md.md)] 工作流程追蹤的範例。  
+本節包含示範工作流程追蹤中 Windows Workflow Foundation (WF) 範例。  
   
 ## <a name="in-this-section"></a>本節內容  
  [自訂追蹤](../../../../docs/framework/windows-workflow-foundation/samples/custom-tracking.md)  

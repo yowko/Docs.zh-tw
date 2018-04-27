@@ -1,37 +1,38 @@
 ---
-title: "Windows Workflow Foundation 程式設計"
-ms.custom: 
+title: Windows Workflow Foundation 程式設計
+ms.custom: ''
 ms.date: 03/30/2017
 ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.tgt_pltfrm: 
+ms.reviewer: ''
+ms.suite: ''
+ms.tgt_pltfrm: ''
 ms.topic: article
 helpviewer_keywords:
 - Windows Workflow Foundation [WF], programming
 - programming [WF]
 - WF [WF], programming
 ms.assetid: f62354e2-6a2b-4e8c-a4bc-533fb96267a4
-caps.latest.revision: "16"
+caps.latest.revision: 16
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.workload: dotnet
-ms.openlocfilehash: 7ad763512a4f39f2d0b2e2f03b052de5b8dcc031
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.workload:
+- dotnet
+ms.openlocfilehash: 0b704357d914f72049d0639c402bf2ae64975d00
+ms.sourcegitcommit: 2042de78fcdceebb6b8ac4b7a292b93e8782cbf5
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 04/27/2018
 ---
 # <a name="windows-workflow-foundation-programming"></a>Windows Workflow Foundation 程式設計
-本節包含入門主題集，您必須了解這些主題才能成為熟練的 [!INCLUDE[wf](../../../includes/wf-md.md)] 程式設計人員。  
+本節包含的入門主題集，您應該了解變得非常熟悉的 Windows Workflow Foundation (WF) 程式設計。  
   
 ## <a name="in-this-section"></a>本節內容  
  [設計工作流程](../../../docs/framework/windows-workflow-foundation/designing-workflows.md)  
  描述工作流程開發中使用之流程控制開發架構的主題。  
   
  [使用及建立活動](../../../docs/framework/windows-workflow-foundation/using-and-creating-activities.md)  
- 描述 [!INCLUDE[wf](../../../includes/wf-md.md)] 中可用系統提供活動的主題。  
+ 描述可用的 Windows Workflow Foundation (WF) 的系統提供活動的主題。  
   
  [Windows Workflow Foundation 資料模型](../../../docs/framework/windows-workflow-foundation/data-model.md)  
  描述 [!INCLUDE[wf1](../../../includes/wf1-md.md)] 中變數、引數與運算式的主題。  
@@ -55,7 +56,7 @@ ms.lasthandoff: 12/22/2017
  描述自動或手動保存工作流程資料以及從記憶體卸載工作流程之選項的主題。  
   
  [移轉指引](../../../docs/framework/windows-workflow-foundation/migration-guidance.md)  
- 描述如何從舊版 [!INCLUDE[wf](../../../includes/wf-md.md)] 移轉工作流程的主題。  
+ 描述如何從舊版的 Windows Workflow Foundation (WF) 移轉工作流程主題。  
   
  [工作流程追蹤及追蹤](../../../docs/framework/windows-workflow-foundation/workflow-tracking-and-tracing.md)  
  描述工作流程追蹤，以及這些功能如何用於監視工作流程應用程式的主題。  
@@ -64,4 +65,4 @@ ms.lasthandoff: 12/22/2017
  討論當使用 SQL 和 [!INCLUDE[indigo1](../../../includes/indigo1-md.md)] 時，如何保持工作流程的安全性。  
   
  [Windows Workflow Foundation 4 效能](../../../docs/framework/windows-workflow-foundation/performance.md)  
- 討論 [!INCLUDE[wf2](../../../includes/wf2-md.md)] 4 的效能，並與舊版本的 WF 比較。
+ 討論 Windows Workflow Foundation 4 效能，並與舊版本的 WF 比較。

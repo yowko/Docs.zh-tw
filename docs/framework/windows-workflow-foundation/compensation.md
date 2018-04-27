@@ -1,32 +1,33 @@
 ---
-title: "補償"
-ms.custom: 
+title: 補償
+ms.custom: ''
 ms.date: 03/30/2017
 ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.tgt_pltfrm: 
+ms.reviewer: ''
+ms.suite: ''
+ms.tgt_pltfrm: ''
 ms.topic: article
 ms.assetid: 722e9766-48d7-456c-9496-d7c5c8f0fa76
-caps.latest.revision: "26"
+caps.latest.revision: 26
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.workload: dotnet
-ms.openlocfilehash: 7dd56b41b7b661b58446219d426be1a19edba059
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.workload:
+- dotnet
+ms.openlocfilehash: 861e0c9eb4e9afa5f9924160efed428d565bac4e
+ms.sourcegitcommit: 2042de78fcdceebb6b8ac4b7a292b93e8782cbf5
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 04/27/2018
 ---
 # <a name="compensation"></a>補償
-[!INCLUDE[wf](../../../includes/wf-md.md)] 中的「補償」，是一種在發生後續錯誤時，能讓先前完成的工作復原或得到補償 (依照應用程式定義的邏輯) 的機制。 本節描述如何在工作流程中使用補償。  
+補償中 Windows Workflow Foundation (WF) 是一種機制讓先前由已完成的工作可以復原或得到補償 （應用程式定義的邏輯） 發生後續失敗時。 本節描述如何在工作流程中使用補償。  
   
 ## <a name="compensation-vs-transactions"></a>補償與異動  
  交易可讓您將多項作業結合成單一工作單位。 如果交易處理序的任何部分中發生錯誤，使用交易可讓應用程式中止 (回復) 在交易內部執行的所有變更。 然而，如果屬於長期執行的工作，可能就不適合使用交易。 例如，假設有一項旅遊計劃應用程式實作為工作流程。 工作流程的步驟包括預訂班機、等待經理核准，然後繳交班機費用。 這些處理程序可能要耗費許多天，因此讓預定班機與繳交班機費用的步驟都在同一個交易中，會是一個不實際的選擇。 在此類型案例中，如果處理程序稍後失敗，則可以使用補償復原工作流程的預定班機步驟。  
   
 > [!NOTE]
->  本主題介紹工作流程中的補償。 [!INCLUDE[crabout](../../../includes/crabout-md.md)]交易的工作流程，請參閱[交易](../../../docs/framework/windows-workflow-foundation/workflow-transactions.md)和<xref:System.Activities.Statements.TransactionScope>。 [!INCLUDE[crabout](../../../includes/crabout-md.md)]交易，請參閱 <xref:System.Transactions?displayProperty=nameWithType> 和 <xref:System.Transactions.Transaction?displayProperty=nameWithType>。  
+>  本主題介紹工作流程中的補償。 [!INCLUDE[crabout](../../../includes/crabout-md.md)] 交易的工作流程，請參閱[交易](../../../docs/framework/windows-workflow-foundation/workflow-transactions.md)和<xref:System.Activities.Statements.TransactionScope>。 [!INCLUDE[crabout](../../../includes/crabout-md.md)]交易，請參閱 <xref:System.Transactions?displayProperty=nameWithType> 和 <xref:System.Transactions.Transaction?displayProperty=nameWithType>。  
   
 ## <a name="using-compensableactivity"></a>使用 CompensableActivity  
  <xref:System.Activities.Statements.CompensableActivity> 是 [!INCLUDE[wf1](../../../includes/wf1-md.md)] 中的核心補償活動。 任何執行可能需補償之工作的活動，都會置放在 <xref:System.Activities.Statements.CompensableActivity.Body%2A> 的 <xref:System.Activities.Statements.CompensableActivity> 中。 在此範例中，購買機票的預定步驟會置放在 <xref:System.Activities.Statements.CompensableActivity.Body%2A> 的 <xref:System.Activities.Statements.CompensableActivity> 中，而預定取消則會置放在 <xref:System.Activities.Statements.CompensableActivity.CompensationHandler%2A> 中。 工作流程中的 <xref:System.Activities.Statements.CompensableActivity> 之後緊接著兩個活動，這兩個活動會等候經理核准，然後完成機票購買步驟。 如果錯誤狀況導致在 <xref:System.Activities.Statements.CompensableActivity> 順利完成之後取消工作流程，則會排定 <xref:System.Activities.Statements.CompensableActivity.CompensationHandler%2A> 處理常式中的活動，並取消班機。  
@@ -176,7 +177,7 @@ Activity wf = new Sequence()
 **工作流程未處理的例外狀況：**   
 **System.ApplicationException： 工作流程中模擬的錯誤條件。**   
 **CancelCreditCard： 取消信用卡收費。**   
-**工作流程已成功完成，狀態： 已取消。**  [!INCLUDE[crabout](../../../includes/crabout-md.md)]取消作業，請參閱[取消](../../../docs/framework/windows-workflow-foundation/modeling-cancellation-behavior-in-workflows.md)。  
+**工作流程已成功完成，狀態： 已取消。**  [!INCLUDE[crabout](../../../includes/crabout-md.md)] 取消作業，請參閱[取消](../../../docs/framework/windows-workflow-foundation/modeling-cancellation-behavior-in-workflows.md)。  
   
 ### <a name="explicit-compensation-using-the-compensate-activity"></a>使用補償活動的明確補償  
  上一節的說明涵蓋了隱含補償。 隱含補償適用於簡單的案例，旦若因排定補償處理而需較明確的控制，則可以使用 <xref:System.Activities.Statements.Compensate> 活動。 若要以 <xref:System.Activities.Statements.Compensate> 活動啟動補償程序，就會使用需要補償之 <xref:System.Activities.Statements.CompensationToken> 的 <xref:System.Activities.Statements.CompensableActivity>。 <xref:System.Activities.Statements.Compensate> 活動可用於在任何已完成但尚未確認或補償之 <xref:System.Activities.Statements.CompensableActivity> 上啟動補償。 例如，<xref:System.Activities.Statements.Compensate> 活動可用於 <xref:System.Activities.Statements.TryCatch.Catches%2A> 活動的 <xref:System.Activities.Statements.TryCatch> 區段，或在 <xref:System.Activities.Statements.CompensableActivity> 完成後的任何時間點。 在此範例中，<xref:System.Activities.Statements.Compensate> 活動的 <xref:System.Activities.Statements.TryCatch.Catches%2A> 區段中會使用 <xref:System.Activities.Statements.TryCatch> 活動，以反轉 <xref:System.Activities.Statements.CompensableActivity> 的動作。  
@@ -332,7 +333,7 @@ Activity wf = new Sequence()
 ## <a name="nesting-compensation-activities"></a>巢狀補償活動  
  <xref:System.Activities.Statements.CompensableActivity> 可置於另一個 <xref:System.Activities.Statements.CompensableActivity.Body%2A> 的 <xref:System.Activities.Statements.CompensableActivity> 區段中。 不可將 <xref:System.Activities.Statements.CompensableActivity> 放在另一個 <xref:System.Activities.Statements.CompensableActivity> 的處理常式中。 父 <xref:System.Activities.Statements.CompensableActivity> 必須確保一旦取消、確認或補償父活動後，就必須在父系完成取消、確認或補償之前確認或補償所有可補償的子活動 (已成功完成且尚未確認或補償)。 若無法明確建立模型，父 <xref:System.Activities.Statements.CompensableActivity> 會隱含補償可補償的子活動 (若父活動收到取消或補償信號)。 如果父活動收到確認信號，就會隱含確認可補償的子活動。 如果在父 <xref:System.Activities.Statements.CompensableActivity> 的處理常式中明確建立處理取消、確認或補償邏輯的模型，則會隱含確認所有未明確處理的子活動。  
   
-## <a name="see-also"></a>請參閱  
+## <a name="see-also"></a>另請參閱  
  <xref:System.Activities.Statements.CompensableActivity>  
  <xref:System.Activities.Statements.Compensate>  
  <xref:System.Activities.Statements.Confirm>  

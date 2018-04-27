@@ -1,26 +1,27 @@
 ---
-title: "持續性"
-ms.custom: 
+title: 持續性
+ms.custom: ''
 ms.date: 03/30/2017
 ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.tgt_pltfrm: 
+ms.reviewer: ''
+ms.suite: ''
+ms.tgt_pltfrm: ''
 ms.topic: article
 ms.assetid: 79c14759-9f87-458a-b339-beec8300e339
-caps.latest.revision: "5"
+caps.latest.revision: 5
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.workload: dotnet
-ms.openlocfilehash: 3b326c56ce96b9b0f2d2089976b530d530d9a55b
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.workload:
+- dotnet
+ms.openlocfilehash: 2e07e215b9afed5cc2af950186cfe66c9808c8f2
+ms.sourcegitcommit: 2042de78fcdceebb6b8ac4b7a292b93e8782cbf5
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 04/27/2018
 ---
 # <a name="persistence"></a>持續性
-本節包含示範如何在 [!INCLUDE[wf](../../../../includes/wf-md.md)] 中將工作流程保存到永久性媒體的範例。  
+本節包含示範工作流程保存到永久性媒體的 Windows Workflow Foundation (WF) 範例。  
   
 ## <a name="in-this-section"></a>本節內容  
  [持續工作流程應用程式](../../../../docs/framework/windows-workflow-foundation/samples/persisting-a-workflow-application.md)  

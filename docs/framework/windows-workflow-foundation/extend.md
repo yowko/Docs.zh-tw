@@ -18,14 +18,14 @@ ms.author: dotnetcontent
 manager: wpickett
 ms.workload:
 - dotnet
-ms.openlocfilehash: 06ee3a1e62320aef3b1a67afe5610b13a95de375
-ms.sourcegitcommit: 86adcc06e35390f13c1e372c36d2e044f1fc31ef
+ms.openlocfilehash: 1006b32d7a265c94753081eab7b2bd279ed3dbdf
+ms.sourcegitcommit: 2042de78fcdceebb6b8ac4b7a292b93e8782cbf5
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/26/2018
+ms.lasthandoff: 04/27/2018
 ---
 # <a name="extending-windows-workflow-foundation"></a>擴充 Windows Workflow Foundation
-下面章節描述如何在 [!INCLUDE[wf](../../../includes/wf-md.md)] 外部的重新裝載環境中，使用自訂活動和設計工具來擴充 [!INCLUDE[vs2010](../../../includes/vs2010-md.md)]。  
+下列章節描述如何使用自訂活動和設計工具外部重新裝載環境中的擴充 Windows Workflow Foundation (WF) [!INCLUDE[vs2010](../../../includes/vs2010-md.md)]。  
   
 ## <a name="in-this-section"></a>本節內容  
  [自訂工作流程設計體驗](../../../docs/framework/windows-workflow-foundation/customizing-the-workflow-design-experience.md)  
