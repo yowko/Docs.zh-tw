@@ -1,1 +1,1 @@
-如需此類別代表之項目的詳細資訊，請參閱下列規格：[的 OASIS 安全性聲明標記語言 (SAML) V2.0 的中繼資料](http://go.microsoft.com/fwlink/?LinkId=231291)(http://go.microsoft.com/fwlink/?LinkId=231291)。
+如需這個類別所代表項目的詳細資訊，請參閱下列規格：[Metadata for the OASIS Security Assertion Markup Language (SAML) V2.0](http://go.microsoft.com/fwlink/?LinkId=231291) (OASIS 安全性聲明標記語言 (SAML) 2.0 版的中繼資料) (http://go.microsoft.com/fwlink/?LinkId=231291)。

@@ -1,1 +1,1 @@
-矩陣轉換<xref:System.Numerics.Vector2>， <xref:System.Numerics.Vector3>，和<xref:System.Numerics.Vector4>執行個體以資料列： 向量*v*轉換的矩陣*M*與*vM*乘法。
+針對矩陣轉換，<xref:System.Numerics.Vector2><xref:System.Numerics.Vector3> 和 <xref:System.Numerics.Vector4> 執行個體會以資料列表示：向量 *v* 由矩陣 *M* 與 *vM* 乘法轉換。
