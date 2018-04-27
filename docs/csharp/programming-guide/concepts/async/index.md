@@ -9,11 +9,11 @@ ms.assetid: 9bcf896a-5826-4189-8c1a-3e35fa08243a
 caps.latest.revision: 5
 author: BillWagner
 ms.author: wiwagn
-ms.openlocfilehash: c9f2699646db17c9358f84f4c5407e7aab8b60cf
-ms.sourcegitcommit: 83dd5ec003e788ccb3e33f3412a7af39ae347646
+ms.openlocfilehash: 70dd5606ba81619658eda24f8c4bfd4970d29308
+ms.sourcegitcommit: 86adcc06e35390f13c1e372c36d2e044f1fc31ef
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 03/15/2018
+ms.lasthandoff: 04/26/2018
 ---
 # <a name="asynchronous-programming-with-async-and-await-c"></a>使用 async 和 await 進行非同步程式設計 (C#)
 您可以使用非同步程式設計，避免發生效能瓶頸並增強應用程式的整體回應性。 不過，撰寫非同步應用程式的傳統技術可能很複雜，因而難以撰寫、偵錯和維護。  
@@ -98,7 +98,7 @@ string urlContents = await client.GetStringAsync();
   
     -   如果您撰寫的是非同步事件處理常式，則為 `void`。  
 
-    -   任何具有 `GetAwaiter` 方法的其他類型 (從 C# 7 開始)。
+    -   任何具有 `GetAwaiter` 方法的其他類型 (從 C# 7.0 開始)。
   
      如需詳細資訊，請參閱[傳回型別和參數](#BKMK_ReturnTypesandParameters)一節。  
   
@@ -179,7 +179,7 @@ async 方法通常會傳回 <xref:System.Threading.Tasks.Task> 或 <xref:System.
   
 如果方法沒有 return 陳述式，或者方法的 return 陳述式不會傳回運算元，請使用 <xref:System.Threading.Tasks.Task> 作為傳回型別。  
 
-從 C# 7 開始，您也可以指定任何其他傳回型別，前提是該類型包括 `GetAwaiter` 方法。 這類類型的範例是 <xref:System.Threading.Tasks.ValueTask%601>。 它提供於 [System.Threading.Tasks.Extension](https://www.nuget.org/packages/System.Threading.Tasks.Extensions/) NuGet 套件中。
+從 C# 7.0 開始，您也可以指定任何其他傳回型別，前提是該類型包括 `GetAwaiter` 方法。 這類類型的範例是 <xref:System.Threading.Tasks.ValueTask%601>。 它提供於 [System.Threading.Tasks.Extension](https://www.nuget.org/packages/System.Threading.Tasks.Extensions/) NuGet 套件中。
   
  下列範例將示範如何宣告和呼叫會傳回 <xref:System.Threading.Tasks.Task%601> 或 <xref:System.Threading.Tasks.Task> 的方法。  
   

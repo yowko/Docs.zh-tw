@@ -12,11 +12,11 @@ ms.assetid: 6685467b-28fa-4cde-9516-f0e00ad08911
 caps.latest.revision: 36
 author: dotnet-bot
 ms.author: dotnetcontent
-ms.openlocfilehash: e53ba3e1134b09edcc87a0421b7699bcf3bb1d39
-ms.sourcegitcommit: d95a91d685565f4d95c8773b558752864a6a3d7e
+ms.openlocfilehash: 58e63d95c2f10329f85d6150b58f196294de38d1
+ms.sourcegitcommit: 86adcc06e35390f13c1e372c36d2e044f1fc31ef
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 03/12/2018
+ms.lasthandoff: 04/26/2018
 ---
 # <a name="get-started-with-visual-basic"></a>開始使用 Visual Basic
 本文的這一節可協助您開始進行 Visual Basic 應用程式開發。  
@@ -55,10 +55,10 @@ ms.lasthandoff: 03/12/2018
  提供頁面的連結，這些頁面會介紹物件導向程式設計，並且描述如何建立自己的物件，以及如何使用物件簡化您的編碼。  
   
  [範例](../../visual-basic/sample-applications.md)  
- 提供 [!INCLUDE[vbprvb](~/includes/vbprvb-md.md)] 中範例程式碼的連結。  
+ 提供 Visual Basic 中範例程式碼的連結。  
   
  [逐步解說](../../visual-basic/walkthroughs.md)  
- 提供示範 [!INCLUDE[vbprvb](~/includes/vbprvb-md.md)] 語言相關方面的 [說明] 頁清單。  
+ 提供示範 Visual Basic 語言相關方面的 [說明] 頁清單。  
   
  [告訴我們](/visualstudio/ide/talk-to-us)  
  說明如何接受支援和提供意見。  
@@ -66,7 +66,7 @@ ms.lasthandoff: 03/12/2018
  [Visual Studio](/visualstudio/)  
  提供 [!INCLUDE[vsprvs](~/includes/vsprvs-md.md)] 文件的連結。  
   
- [C#](../../csharp/index.md) 提供利用 [!INCLUDE[csprcs](~/includes/csprcs-md.md)] 進行應用程式開發的相關文件連結。  
+ [C#](../../csharp/index.md) 提供利用 Visual Basic 進行應用程式開發的相關文件連結。  
   
  [Visual C++](/cpp/)  
  提供 Visual C++ 文件的連結。  

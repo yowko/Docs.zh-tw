@@ -217,7 +217,7 @@
 ## [C# 的新功能](csharp/whats-new/index.md)
 ### [C# 7.2 的新功能](csharp/whats-new/csharp-7-2.md)
 ### [C# 7.1 的新功能](csharp/whats-new/csharp-7-1.md)
-### [C# 7 的新功能](csharp/whats-new/csharp-7.md)
+### [C# 7.0 的新功能](csharp/whats-new/csharp-7.md)
 ### [C# 6 的新功能](csharp/whats-new/csharp-6.md)
 ### [C# 版本歷程記錄](csharp/whats-new/csharp-version-history.md)
 ### [語言和架構之間的關係](csharp/whats-new/relationships-between-language-and-library.md)

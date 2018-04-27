@@ -25,11 +25,11 @@ ms.assetid: 0301e31f-22ad-49af-ac3c-d5eae7f0ac43
 caps.latest.revision: 40
 author: BillWagner
 ms.author: wiwagn
-ms.openlocfilehash: c62a168c845575e4fd3df212db379548926d2fab
-ms.sourcegitcommit: b750a8e3979749b214e7e10c82efb0a0524dfcb1
+ms.openlocfilehash: a52fad2755c8c255d9489cd7148b0d279c0e1a5e
+ms.sourcegitcommit: 86adcc06e35390f13c1e372c36d2e044f1fc31ef
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/09/2018
+ms.lasthandoff: 04/26/2018
 ---
 # <a name="c-operators"></a>C# 運算子
 C# 提供許多運算子，也就是指定要在運算式中執行哪些作業 (數學、索引化、函式呼叫等) 的符號。 您可以[多載](../../../csharp/programming-guide/statements-expressions-operators/overloadable-operators.md)許多運算子，以便在套用至使用者定義型別時變更它們的意義。  
@@ -63,7 +63,7 @@ C# 提供許多運算子，也就是指定要在運算式中執行哪些作業 (
   
  [unchecked](../../../csharp/language-reference/keywords/unchecked.md) – 停用整數作業的溢位檢查。 這是預設編譯器行為。  
   
- [default(T)](../../../csharp/programming-guide/statements-expressions-operators/default-value-expressions.md) - 傳回類型 T 的預設值：參考型別為 `null`、數字型別為零，而結構型別的成員則填入零/`null`。  
+ [default(T)](../../../csharp/programming-guide/statements-expressions-operators/default-value-expressions.md) - 產生類型 T 的預設值。  
   
  [delegate](../../../csharp/programming-guide/statements-expressions-operators/anonymous-methods.md) – 宣告並傳回委派執行個體。  
   
