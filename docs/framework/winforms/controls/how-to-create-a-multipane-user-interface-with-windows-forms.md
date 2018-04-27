@@ -1,12 +1,13 @@
 ---
-title: "逐步解說：利用 Windows Form 建立多窗格使用者介面"
-ms.custom: 
+title: 逐步解說：利用 Windows Form 建立多窗格使用者介面
+ms.custom: ''
 ms.date: 03/30/2017
 ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.technology: dotnet-winforms
-ms.tgt_pltfrm: 
+ms.reviewer: ''
+ms.suite: ''
+ms.technology:
+- dotnet-winforms
+ms.tgt_pltfrm: ''
 ms.topic: article
 dev_langs:
 - csharp
@@ -19,29 +20,30 @@ helpviewer_keywords:
 - TreeView control [Windows Forms], examples
 - Splitter control [Windows Forms], examples
 ms.assetid: e79f6bcc-3740-4d1e-b46a-c5594d9b7327
-caps.latest.revision: "20"
+caps.latest.revision: 20
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.workload: dotnet
-ms.openlocfilehash: f29fb5fc4f873431471cd1c037446a5157d5f07c
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.workload:
+- dotnet
+ms.openlocfilehash: 6011eb2d49e537a2f5dfc540611af40a30b3e721
+ms.sourcegitcommit: 86adcc06e35390f13c1e372c36d2e044f1fc31ef
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 04/26/2018
 ---
-# <a name="how-to-create-a-multipane-user-interface-with-windows-forms"></a><span data-ttu-id="0c8c7-102">逐步解說：利用 Windows Form 建立多窗格使用者介面</span><span class="sxs-lookup"><span data-stu-id="0c8c7-102">How to: Create a Multipane User Interface with Windows Forms</span></span>
-<span data-ttu-id="0c8c7-103">在下列程序中，您將建立類似搭配使用 Microsoft Outlook 中的多窗格使用者介面**資料夾** 清單中，**訊息** 窗格中，與**預覽**窗格。</span><span class="sxs-lookup"><span data-stu-id="0c8c7-103">In the following procedure, you will create a multipane user interface that is similar to the one used in Microsoft Outlook, with a **Folder** list, a **Messages** pane, and a **Preview** pane.</span></span> <span data-ttu-id="0c8c7-104">這種排列方式被達成透過停駐控制項的表單來達成。</span><span class="sxs-lookup"><span data-stu-id="0c8c7-104">This arrangement is achieved chiefly through docking controls with the form.</span></span>  
+# <a name="how-to-create-a-multipane-user-interface-with-windows-forms"></a><span data-ttu-id="e6a38-102">逐步解說：利用 Windows Form 建立多窗格使用者介面</span><span class="sxs-lookup"><span data-stu-id="e6a38-102">How to: Create a Multipane User Interface with Windows Forms</span></span>
+<span data-ttu-id="e6a38-103">在下列程序中，您將建立類似搭配使用 Microsoft Outlook 中的多窗格使用者介面**資料夾** 清單中，**訊息** 窗格中，與**預覽**窗格。</span><span class="sxs-lookup"><span data-stu-id="e6a38-103">In the following procedure, you will create a multipane user interface that is similar to the one used in Microsoft Outlook, with a **Folder** list, a **Messages** pane, and a **Preview** pane.</span></span> <span data-ttu-id="e6a38-104">這種排列方式被達成透過停駐控制項的表單來達成。</span><span class="sxs-lookup"><span data-stu-id="e6a38-104">This arrangement is achieved chiefly through docking controls with the form.</span></span>  
   
- <span data-ttu-id="0c8c7-105">將控制項停駐，您決定哪一個父容器的邊緣控制項視窗固定至。</span><span class="sxs-lookup"><span data-stu-id="0c8c7-105">When you dock a control, you determine which edge of the parent container a control is fastened to.</span></span> <span data-ttu-id="0c8c7-106">因此，如果您設定<xref:System.Windows.Forms.SplitContainer.Dock%2A>屬性<xref:System.Windows.Forms.DockStyle.Right>，控制項的右邊緣會停駐於其父控制項的右邊緣。</span><span class="sxs-lookup"><span data-stu-id="0c8c7-106">Thus, if you set the <xref:System.Windows.Forms.SplitContainer.Dock%2A> property to <xref:System.Windows.Forms.DockStyle.Right>, the right edge of the control will be docked to the right edge of its parent control.</span></span> <span data-ttu-id="0c8c7-107">此外，停駐控制項的邊緣會調整大小以符合其容器控制項。</span><span class="sxs-lookup"><span data-stu-id="0c8c7-107">Additionally, the docked edge of the control is resized to match that of its container control.</span></span> <span data-ttu-id="0c8c7-108">如需有關如何<xref:System.Windows.Forms.SplitContainer.Dock%2A>屬性雖然有效，請參閱[How to： 在 Windows Form 上的停駐控制項](../../../../docs/framework/winforms/controls/how-to-dock-controls-on-windows-forms.md)。</span><span class="sxs-lookup"><span data-stu-id="0c8c7-108">For more information about how the <xref:System.Windows.Forms.SplitContainer.Dock%2A> property works, see [How to: Dock Controls on Windows Forms](../../../../docs/framework/winforms/controls/how-to-dock-controls-on-windows-forms.md).</span></span>  
+ <span data-ttu-id="e6a38-105">將控制項停駐，您決定哪一個父容器的邊緣控制項視窗固定至。</span><span class="sxs-lookup"><span data-stu-id="e6a38-105">When you dock a control, you determine which edge of the parent container a control is fastened to.</span></span> <span data-ttu-id="e6a38-106">因此，如果您設定<xref:System.Windows.Forms.SplitContainer.Dock%2A>屬性<xref:System.Windows.Forms.DockStyle.Right>，控制項的右邊緣會停駐於其父控制項的右邊緣。</span><span class="sxs-lookup"><span data-stu-id="e6a38-106">Thus, if you set the <xref:System.Windows.Forms.SplitContainer.Dock%2A> property to <xref:System.Windows.Forms.DockStyle.Right>, the right edge of the control will be docked to the right edge of its parent control.</span></span> <span data-ttu-id="e6a38-107">此外，停駐控制項的邊緣會調整大小以符合其容器控制項。</span><span class="sxs-lookup"><span data-stu-id="e6a38-107">Additionally, the docked edge of the control is resized to match that of its container control.</span></span> <span data-ttu-id="e6a38-108">如需有關如何<xref:System.Windows.Forms.SplitContainer.Dock%2A>屬性雖然有效，請參閱[How to： 在 Windows Form 上的停駐控制項](../../../../docs/framework/winforms/controls/how-to-dock-controls-on-windows-forms.md)。</span><span class="sxs-lookup"><span data-stu-id="e6a38-108">For more information about how the <xref:System.Windows.Forms.SplitContainer.Dock%2A> property works, see [How to: Dock Controls on Windows Forms](../../../../docs/framework/winforms/controls/how-to-dock-controls-on-windows-forms.md).</span></span>  
   
- <span data-ttu-id="0c8c7-109">此程序著重於排列<xref:System.Windows.Forms.SplitContainer>和其他控制項在表單上，而非新增功能，讓模擬 Microsoft Outlook 應用程式。</span><span class="sxs-lookup"><span data-stu-id="0c8c7-109">This procedure focuses on arranging the <xref:System.Windows.Forms.SplitContainer> and the other controls on the form, not on adding functionality to make the application mimic Microsoft Outlook.</span></span>  
+ <span data-ttu-id="e6a38-109">此程序著重於排列<xref:System.Windows.Forms.SplitContainer>和其他控制項在表單上，而非新增功能，讓模擬 Microsoft Outlook 應用程式。</span><span class="sxs-lookup"><span data-stu-id="e6a38-109">This procedure focuses on arranging the <xref:System.Windows.Forms.SplitContainer> and the other controls on the form, not on adding functionality to make the application mimic Microsoft Outlook.</span></span>  
   
- <span data-ttu-id="0c8c7-110">若要建立此使用者介面，您將放內的所有控制項<xref:System.Windows.Forms.SplitContainer>控制項，其中包含<xref:System.Windows.Forms.TreeView>左側面板中的控制項。</span><span class="sxs-lookup"><span data-stu-id="0c8c7-110">To create this user interface, you place all the controls within a <xref:System.Windows.Forms.SplitContainer> control, which contains a <xref:System.Windows.Forms.TreeView> control in the left-hand panel.</span></span> <span data-ttu-id="0c8c7-111">右手邊的面板<xref:System.Windows.Forms.SplitContainer>控制項包含第二個<xref:System.Windows.Forms.SplitContainer>用來控制<xref:System.Windows.Forms.ListView>上述控制項<xref:System.Windows.Forms.RichTextBox>控制項。</span><span class="sxs-lookup"><span data-stu-id="0c8c7-111">The right-hand panel of the <xref:System.Windows.Forms.SplitContainer> control contains a second <xref:System.Windows.Forms.SplitContainer> control with a <xref:System.Windows.Forms.ListView> control above a <xref:System.Windows.Forms.RichTextBox> control.</span></span> <span data-ttu-id="0c8c7-112">這些<xref:System.Windows.Forms.SplitContainer>控制項可讓獨立調整表單上其他控制項的大小。</span><span class="sxs-lookup"><span data-stu-id="0c8c7-112">These <xref:System.Windows.Forms.SplitContainer> controls enable independent resizing of the other controls on the form.</span></span> <span data-ttu-id="0c8c7-113">您可以調整此程序以您自己的特殊功能的自訂使用者介面中的技術。</span><span class="sxs-lookup"><span data-stu-id="0c8c7-113">You can adapt the techniques in this procedure to craft custom user interfaces of your own.</span></span>  
+ <span data-ttu-id="e6a38-110">若要建立此使用者介面，您將放內的所有控制項<xref:System.Windows.Forms.SplitContainer>控制項，其中包含<xref:System.Windows.Forms.TreeView>左側面板中的控制項。</span><span class="sxs-lookup"><span data-stu-id="e6a38-110">To create this user interface, you place all the controls within a <xref:System.Windows.Forms.SplitContainer> control, which contains a <xref:System.Windows.Forms.TreeView> control in the left-hand panel.</span></span> <span data-ttu-id="e6a38-111">右手邊的面板<xref:System.Windows.Forms.SplitContainer>控制項包含第二個<xref:System.Windows.Forms.SplitContainer>用來控制<xref:System.Windows.Forms.ListView>上述控制項<xref:System.Windows.Forms.RichTextBox>控制項。</span><span class="sxs-lookup"><span data-stu-id="e6a38-111">The right-hand panel of the <xref:System.Windows.Forms.SplitContainer> control contains a second <xref:System.Windows.Forms.SplitContainer> control with a <xref:System.Windows.Forms.ListView> control above a <xref:System.Windows.Forms.RichTextBox> control.</span></span> <span data-ttu-id="e6a38-112">這些<xref:System.Windows.Forms.SplitContainer>控制項可讓獨立調整表單上其他控制項的大小。</span><span class="sxs-lookup"><span data-stu-id="e6a38-112">These <xref:System.Windows.Forms.SplitContainer> controls enable independent resizing of the other controls on the form.</span></span> <span data-ttu-id="e6a38-113">您可以調整此程序以您自己的特殊功能的自訂使用者介面中的技術。</span><span class="sxs-lookup"><span data-stu-id="e6a38-113">You can adapt the techniques in this procedure to craft custom user interfaces of your own.</span></span>  
   
-### <a name="to-create-an-outlook-style-user-interface-programmatically"></a><span data-ttu-id="0c8c7-114">若要以程式設計方式建立的 Outlook 樣式使用者介面</span><span class="sxs-lookup"><span data-stu-id="0c8c7-114">To create an Outlook-style user interface programmatically</span></span>  
+### <a name="to-create-an-outlook-style-user-interface-programmatically"></a><span data-ttu-id="e6a38-114">若要以程式設計方式建立的 Outlook 樣式使用者介面</span><span class="sxs-lookup"><span data-stu-id="e6a38-114">To create an Outlook-style user interface programmatically</span></span>  
   
-1.  <span data-ttu-id="0c8c7-115">在表單中，宣告每個包含您的使用者介面的控制項。</span><span class="sxs-lookup"><span data-stu-id="0c8c7-115">Within a form, declare each control that comprises your user interface.</span></span> <span data-ttu-id="0c8c7-116">此範例中，使用<xref:System.Windows.Forms.TreeView>， <xref:System.Windows.Forms.ListView>， <xref:System.Windows.Forms.SplitContainer>，和<xref:System.Windows.Forms.RichTextBox>控制項，以模擬 Microsoft Outlook 的使用者介面。</span><span class="sxs-lookup"><span data-stu-id="0c8c7-116">For this example, use the <xref:System.Windows.Forms.TreeView>, <xref:System.Windows.Forms.ListView>, <xref:System.Windows.Forms.SplitContainer>, and <xref:System.Windows.Forms.RichTextBox> controls to mimic the Microsoft Outlook user interface.</span></span>  
+1.  <span data-ttu-id="e6a38-115">在表單中，宣告每個包含您的使用者介面的控制項。</span><span class="sxs-lookup"><span data-stu-id="e6a38-115">Within a form, declare each control that comprises your user interface.</span></span> <span data-ttu-id="e6a38-116">此範例中，使用<xref:System.Windows.Forms.TreeView>， <xref:System.Windows.Forms.ListView>， <xref:System.Windows.Forms.SplitContainer>，和<xref:System.Windows.Forms.RichTextBox>控制項，以模擬 Microsoft Outlook 的使用者介面。</span><span class="sxs-lookup"><span data-stu-id="e6a38-116">For this example, use the <xref:System.Windows.Forms.TreeView>, <xref:System.Windows.Forms.ListView>, <xref:System.Windows.Forms.SplitContainer>, and <xref:System.Windows.Forms.RichTextBox> controls to mimic the Microsoft Outlook user interface.</span></span>  
   
     ```vb  
     Private WithEvents treeView1 As System.Windows.Forms.TreeView  
@@ -61,7 +63,7 @@ ms.lasthandoff: 12/22/2017
     private System.Windows.Forms. SplitContainer splitContainer1;  
     ```  
   
-2.  <span data-ttu-id="0c8c7-117">建立您的使用者介面會定義程序。</span><span class="sxs-lookup"><span data-stu-id="0c8c7-117">Create a procedure that defines your user interface.</span></span> <span data-ttu-id="0c8c7-118">下列程式碼設定的屬性，讓表單將類似於 Microsoft Outlook 中的使用者介面。</span><span class="sxs-lookup"><span data-stu-id="0c8c7-118">The following code sets the properties so that the form will resemble the user interface in Microsoft Outlook.</span></span> <span data-ttu-id="0c8c7-119">不過，藉由使用其他控制項，或停駐它們以不同的方式，它也一樣簡單來建立其他使用者介面一樣具有彈性。</span><span class="sxs-lookup"><span data-stu-id="0c8c7-119">However, by using other controls or docking them differently, it is just as easy to create other user interfaces that are equally flexible.</span></span>  
+2.  <span data-ttu-id="e6a38-117">建立您的使用者介面會定義程序。</span><span class="sxs-lookup"><span data-stu-id="e6a38-117">Create a procedure that defines your user interface.</span></span> <span data-ttu-id="e6a38-118">下列程式碼設定的屬性，讓表單將類似於 Microsoft Outlook 中的使用者介面。</span><span class="sxs-lookup"><span data-stu-id="e6a38-118">The following code sets the properties so that the form will resemble the user interface in Microsoft Outlook.</span></span> <span data-ttu-id="e6a38-119">不過，藉由使用其他控制項，或停駐它們以不同的方式，它也一樣簡單來建立其他使用者介面一樣具有彈性。</span><span class="sxs-lookup"><span data-stu-id="e6a38-119">However, by using other controls or docking them differently, it is just as easy to create other user interfaces that are equally flexible.</span></span>  
   
     ```vb  
     Public Sub CreateOutlookUI()  
@@ -175,7 +177,7 @@ ms.lasthandoff: 12/22/2017
     }  
     ```  
   
-3.  <span data-ttu-id="0c8c7-120">在[!INCLUDE[vbprvb](../../../../includes/vbprvb-md.md)]，加入至您在建立程序呼叫`New()`程序。</span><span class="sxs-lookup"><span data-stu-id="0c8c7-120">In [!INCLUDE[vbprvb](../../../../includes/vbprvb-md.md)], add a call to the procedure you just created in the `New()` procedure.</span></span> <span data-ttu-id="0c8c7-121">在[!INCLUDE[csprcs](../../../../includes/csprcs-md.md)]，將這行程式碼加入至表單類別的建構函式。</span><span class="sxs-lookup"><span data-stu-id="0c8c7-121">In [!INCLUDE[csprcs](../../../../includes/csprcs-md.md)], add this line of code to the constructor for the form class.</span></span>  
+3.  <span data-ttu-id="e6a38-120">在 Visual Basic 中，加入至您在建立程序呼叫`New()`程序。</span><span class="sxs-lookup"><span data-stu-id="e6a38-120">In Visual Basic, add a call to the procedure you just created in the `New()` procedure.</span></span> <span data-ttu-id="e6a38-121">在 Visual C# 中，將這行程式碼加入表單類別的建構函式。</span><span class="sxs-lookup"><span data-stu-id="e6a38-121">In Visual C#, add this line of code to the constructor for the form class.</span></span>  
   
     ```vb  
     ' Add this to the New procedure.  
@@ -187,7 +189,7 @@ ms.lasthandoff: 12/22/2017
     createOutlookUI();  
     ```  
   
-## <a name="see-also"></a><span data-ttu-id="0c8c7-122">請參閱</span><span class="sxs-lookup"><span data-stu-id="0c8c7-122">See Also</span></span>  
+## <a name="see-also"></a><span data-ttu-id="e6a38-122">另請參閱</span><span class="sxs-lookup"><span data-stu-id="e6a38-122">See Also</span></span>  
  <xref:System.Windows.Forms.SplitContainer>  
- [<span data-ttu-id="0c8c7-123">SplitContainer 控制項</span><span class="sxs-lookup"><span data-stu-id="0c8c7-123">SplitContainer Control</span></span>](../../../../docs/framework/winforms/controls/splitcontainer-control-windows-forms.md)  
- [<span data-ttu-id="0c8c7-124">操作說明：使用設計工具，以 Windows Forms 建立多窗格使用者介面</span><span class="sxs-lookup"><span data-stu-id="0c8c7-124">How to: Create a Multipane User Interface with Windows Forms Using the Designer</span></span>](../../../../docs/framework/winforms/controls/create-a-multipane-user-interface-with-wf-using-the-designer.md)
+ [<span data-ttu-id="e6a38-123">SplitContainer 控制項</span><span class="sxs-lookup"><span data-stu-id="e6a38-123">SplitContainer Control</span></span>](../../../../docs/framework/winforms/controls/splitcontainer-control-windows-forms.md)  
+ [<span data-ttu-id="e6a38-124">操作說明：使用設計工具，以 Windows Forms 建立多窗格使用者介面</span><span class="sxs-lookup"><span data-stu-id="e6a38-124">How to: Create a Multipane User Interface with Windows Forms Using the Designer</span></span>](../../../../docs/framework/winforms/controls/create-a-multipane-user-interface-with-wf-using-the-designer.md)

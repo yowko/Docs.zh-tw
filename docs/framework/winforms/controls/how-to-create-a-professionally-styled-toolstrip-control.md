@@ -1,12 +1,13 @@
 ---
-title: "如何：建立專業樣式的 ToolStrip 控制項"
-ms.custom: 
+title: 如何：建立專業樣式的 ToolStrip 控制項
+ms.custom: ''
 ms.date: 03/30/2017
 ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.technology: dotnet-winforms
-ms.tgt_pltfrm: 
+ms.reviewer: ''
+ms.suite: ''
+ms.technology:
+- dotnet-winforms
+ms.tgt_pltfrm: ''
 ms.topic: article
 dev_langs:
 - csharp
@@ -17,40 +18,41 @@ helpviewer_keywords:
 - ToolStripRenderer class [Windows Forms]
 - ToolStrip control [Windows Forms]
 ms.assetid: c208b2f6-8105-474b-9075-d582e1792870
-caps.latest.revision: "9"
+caps.latest.revision: 9
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.workload: dotnet
-ms.openlocfilehash: a5f026092131b4dee6b432a175d5bcbe353b20c9
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.workload:
+- dotnet
+ms.openlocfilehash: 7ab44faf9e95a2ff5f1957bd6f46fc62944a4f44
+ms.sourcegitcommit: 86adcc06e35390f13c1e372c36d2e044f1fc31ef
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 04/26/2018
 ---
-# <a name="how-to-create-a-professionally-styled-toolstrip-control"></a><span data-ttu-id="c0049-102">如何：建立專業樣式的 ToolStrip 控制項</span><span class="sxs-lookup"><span data-stu-id="c0049-102">How to: Create a Professionally Styled ToolStrip Control</span></span>
-<span data-ttu-id="c0049-103">您可以藉由自行撰寫衍生自 <xref:System.Windows.Forms.ToolStripProfessionalRenderer> 類型的類別，賦與應用程式的 <xref:System.Windows.Forms.ToolStrip> 控制項專業外觀和行為 (外觀及操作)。</span><span class="sxs-lookup"><span data-stu-id="c0049-103">You can give your application’s <xref:System.Windows.Forms.ToolStrip> controls a professional appearance and behavior (look and feel) by writing your own class derived from the <xref:System.Windows.Forms.ToolStripProfessionalRenderer> type.</span></span>  
+# <a name="how-to-create-a-professionally-styled-toolstrip-control"></a><span data-ttu-id="4e390-102">如何：建立專業樣式的 ToolStrip 控制項</span><span class="sxs-lookup"><span data-stu-id="4e390-102">How to: Create a Professionally Styled ToolStrip Control</span></span>
+<span data-ttu-id="4e390-103">您可以藉由自行撰寫衍生自 <xref:System.Windows.Forms.ToolStripProfessionalRenderer> 類型的類別，賦與應用程式的 <xref:System.Windows.Forms.ToolStrip> 控制項專業外觀和行為 (外觀及操作)。</span><span class="sxs-lookup"><span data-stu-id="4e390-103">You can give your application’s <xref:System.Windows.Forms.ToolStrip> controls a professional appearance and behavior (look and feel) by writing your own class derived from the <xref:System.Windows.Forms.ToolStripProfessionalRenderer> type.</span></span>  
   
- <span data-ttu-id="c0049-104">在 [!INCLUDE[vsprvs](../../../../includes/vsprvs-md.md)]中對這項功能有廣泛的支援。</span><span class="sxs-lookup"><span data-stu-id="c0049-104">There is extensive support for this feature in [!INCLUDE[vsprvs](../../../../includes/vsprvs-md.md)].</span></span>  
+ <span data-ttu-id="4e390-104">在 [!INCLUDE[vsprvs](../../../../includes/vsprvs-md.md)]中對這項功能有廣泛的支援。</span><span class="sxs-lookup"><span data-stu-id="4e390-104">There is extensive support for this feature in [!INCLUDE[vsprvs](../../../../includes/vsprvs-md.md)].</span></span>  
   
- <span data-ttu-id="c0049-105">請參閱[逐步解說：建立專業樣式的 ToolStrip 控制項](../../../../docs/framework/winforms/controls/walkthrough-creating-a-professionally-styled-toolstrip-control.md)。</span><span class="sxs-lookup"><span data-stu-id="c0049-105">See [Walkthrough: Creating a Professionally Styled ToolStrip Control](../../../../docs/framework/winforms/controls/walkthrough-creating-a-professionally-styled-toolstrip-control.md).</span></span>  
+ <span data-ttu-id="4e390-105">請參閱[逐步解說：建立專業樣式的 ToolStrip 控制項](../../../../docs/framework/winforms/controls/walkthrough-creating-a-professionally-styled-toolstrip-control.md)。</span><span class="sxs-lookup"><span data-stu-id="4e390-105">See [Walkthrough: Creating a Professionally Styled ToolStrip Control](../../../../docs/framework/winforms/controls/walkthrough-creating-a-professionally-styled-toolstrip-control.md).</span></span>  
   
-## <a name="example"></a><span data-ttu-id="c0049-106">範例</span><span class="sxs-lookup"><span data-stu-id="c0049-106">Example</span></span>  
- <span data-ttu-id="c0049-107">下列程式碼範例示範如何使用<xref:System.Windows.Forms.ToolStrip>控制項建立複合控制項，以模擬**瀏覽窗格**Microsoft® Outlook® 提供的。</span><span class="sxs-lookup"><span data-stu-id="c0049-107">The following code example demonstrates how to use <xref:System.Windows.Forms.ToolStrip> controls to create a composite control that mimics the **Navigation Pane** provided by Microsoft® Outlook®.</span></span>  
+## <a name="example"></a><span data-ttu-id="4e390-106">範例</span><span class="sxs-lookup"><span data-stu-id="4e390-106">Example</span></span>  
+ <span data-ttu-id="4e390-107">下列程式碼範例示範如何使用<xref:System.Windows.Forms.ToolStrip>控制項建立複合控制項，以模擬**瀏覽窗格**Microsoft® Outlook® 提供的。</span><span class="sxs-lookup"><span data-stu-id="4e390-107">The following code example demonstrates how to use <xref:System.Windows.Forms.ToolStrip> controls to create a composite control that mimics the **Navigation Pane** provided by Microsoft® Outlook®.</span></span>  
   
  [!code-csharp[System.Windows.Forms.ToolStrip.StackView#1](../../../../samples/snippets/csharp/VS_Snippets_Winforms/System.Windows.Forms.ToolStrip.StackView/CS/StackView.cs#1)]
  [!code-vb[System.Windows.Forms.ToolStrip.StackView#1](../../../../samples/snippets/visualbasic/VS_Snippets_Winforms/System.Windows.Forms.ToolStrip.StackView/VB/StackView.vb#1)]  
   
-## <a name="compiling-the-code"></a><span data-ttu-id="c0049-108">編譯程式碼</span><span class="sxs-lookup"><span data-stu-id="c0049-108">Compiling the Code</span></span>  
- <span data-ttu-id="c0049-109">這個範例需要：</span><span class="sxs-lookup"><span data-stu-id="c0049-109">This example requires:</span></span>  
+## <a name="compiling-the-code"></a><span data-ttu-id="4e390-108">編譯程式碼</span><span class="sxs-lookup"><span data-stu-id="4e390-108">Compiling the Code</span></span>  
+ <span data-ttu-id="4e390-109">這個範例需要：</span><span class="sxs-lookup"><span data-stu-id="4e390-109">This example requires:</span></span>  
   
--   <span data-ttu-id="c0049-110">System.Drawing 和 System.Windows.Forms 組件的參考。</span><span class="sxs-lookup"><span data-stu-id="c0049-110">References to the System.Drawing and System.Windows.Forms assemblies.</span></span>  
+-   <span data-ttu-id="4e390-110">System.Drawing 和 System.Windows.Forms 組件的參考。</span><span class="sxs-lookup"><span data-stu-id="4e390-110">References to the System.Drawing and System.Windows.Forms assemblies.</span></span>  
   
- <span data-ttu-id="c0049-111">如需從 [!INCLUDE[vbprvb](../../../../includes/vbprvb-md.md)] 或 [!INCLUDE[csprcs](../../../../includes/csprcs-md.md)] 的命令列建置這個範例的資訊，請參閱[從命令列建置](~/docs/visual-basic/reference/command-line-compiler/building-from-the-command-line.md)或[使用 csc.exe 建置命令列](~/docs/csharp/language-reference/compiler-options/command-line-building-with-csc-exe.md)。</span><span class="sxs-lookup"><span data-stu-id="c0049-111">For information about building this example from the command line for [!INCLUDE[vbprvb](../../../../includes/vbprvb-md.md)] or [!INCLUDE[csprcs](../../../../includes/csprcs-md.md)], see [Building from the Command Line](~/docs/visual-basic/reference/command-line-compiler/building-from-the-command-line.md) or [Command-line Building With csc.exe](~/docs/csharp/language-reference/compiler-options/command-line-building-with-csc-exe.md).</span></span> <span data-ttu-id="c0049-112">您也可以將程式碼貼在新的專案中，以在 [!INCLUDE[vsprvs](../../../../includes/vsprvs-md.md)] 中建置這個範例。</span><span class="sxs-lookup"><span data-stu-id="c0049-112">You can also build this example in [!INCLUDE[vsprvs](../../../../includes/vsprvs-md.md)] by pasting the code into a new project.</span></span>  <span data-ttu-id="c0049-113">另請參閱[逐步解說：建立專業樣式的 ToolStrip 控制項](http://msdn.microsoft.com/library/ms233664\(v=vs.110\))。</span><span class="sxs-lookup"><span data-stu-id="c0049-113">Also see [Walkthrough: Creating a Professionally Styled ToolStrip Control](http://msdn.microsoft.com/library/ms233664\(v=vs.110\)).</span></span>  
+ <span data-ttu-id="4e390-111">Visual Basic 或 Visual C# 中建置這個範例，從命令列的相關資訊，請參閱[從命令列建置](~/docs/visual-basic/reference/command-line-compiler/building-from-the-command-line.md)或[使用 csc.exe 建置](~/docs/csharp/language-reference/compiler-options/command-line-building-with-csc-exe.md)。</span><span class="sxs-lookup"><span data-stu-id="4e390-111">For information about building this example from the command line for Visual Basic or Visual C#, see [Building from the Command Line](~/docs/visual-basic/reference/command-line-compiler/building-from-the-command-line.md) or [Command-line Building With csc.exe](~/docs/csharp/language-reference/compiler-options/command-line-building-with-csc-exe.md).</span></span> <span data-ttu-id="4e390-112">您也可以將程式碼貼在新的專案中，以在 [!INCLUDE[vsprvs](../../../../includes/vsprvs-md.md)] 中建置這個範例。</span><span class="sxs-lookup"><span data-stu-id="4e390-112">You can also build this example in [!INCLUDE[vsprvs](../../../../includes/vsprvs-md.md)] by pasting the code into a new project.</span></span>  <span data-ttu-id="4e390-113">另請參閱[逐步解說：建立專業樣式的 ToolStrip 控制項](http://msdn.microsoft.com/library/ms233664\(v=vs.110\))。</span><span class="sxs-lookup"><span data-stu-id="4e390-113">Also see [Walkthrough: Creating a Professionally Styled ToolStrip Control](http://msdn.microsoft.com/library/ms233664\(v=vs.110\)).</span></span>  
   
-## <a name="see-also"></a><span data-ttu-id="c0049-114">請參閱</span><span class="sxs-lookup"><span data-stu-id="c0049-114">See Also</span></span>  
+## <a name="see-also"></a><span data-ttu-id="4e390-114">另請參閱</span><span class="sxs-lookup"><span data-stu-id="4e390-114">See Also</span></span>  
  <xref:System.Windows.Forms.MenuStrip>  
  <xref:System.Windows.Forms.ToolStrip>  
  <xref:System.Windows.Forms.StatusStrip>  
- [<span data-ttu-id="c0049-115">ToolStrip 控制項</span><span class="sxs-lookup"><span data-stu-id="c0049-115">ToolStrip Control</span></span>](../../../../docs/framework/winforms/controls/toolstrip-control-windows-forms.md)  
- [<span data-ttu-id="c0049-116">操作說明：對表單提供標準功能表項目</span><span class="sxs-lookup"><span data-stu-id="c0049-116">How to: Provide Standard Menu Items to a Form</span></span>](../../../../docs/framework/winforms/controls/how-to-provide-standard-menu-items-to-a-form.md)
+ [<span data-ttu-id="4e390-115">ToolStrip 控制項</span><span class="sxs-lookup"><span data-stu-id="4e390-115">ToolStrip Control</span></span>](../../../../docs/framework/winforms/controls/toolstrip-control-windows-forms.md)  
+ [<span data-ttu-id="4e390-116">操作說明：對表單提供標準功能表項目</span><span class="sxs-lookup"><span data-stu-id="4e390-116">How to: Provide Standard Menu Items to a Form</span></span>](../../../../docs/framework/winforms/controls/how-to-provide-standard-menu-items-to-a-form.md)

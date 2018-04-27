@@ -1,11 +1,12 @@
 ---
-title: "如何：取得屬性值 (Visual Basic)"
-ms.custom: 
+title: 如何：取得屬性值 (Visual Basic)
+ms.custom: ''
 ms.date: 07/20/2015
 ms.prod: .net
-ms.reviewer: 
-ms.suite: 
-ms.technology: devlang-visual-basic
+ms.reviewer: ''
+ms.suite: ''
+ms.technology:
+- devlang-visual-basic
 ms.topic: article
 helpviewer_keywords:
 - property values [Visual Basic]
@@ -14,46 +15,46 @@ helpviewer_keywords:
 - Visual Basic code, properties
 - properties [Visual Basic], values
 ms.assetid: 3954423e-6ab7-4a4c-b55c-a8d27be47891
-caps.latest.revision: "11"
+caps.latest.revision: 11
 author: dotnet-bot
 ms.author: dotnetcontent
-ms.openlocfilehash: 6cde5408ea09398a79a3da01ae9b2d0202c58eaf
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.openlocfilehash: 7161052b9d9b388d8da8bd421c3b220f15037805
+ms.sourcegitcommit: 86adcc06e35390f13c1e372c36d2e044f1fc31ef
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 04/26/2018
 ---
-# <a name="how-to-get-a-value-from-a-property-visual-basic"></a><span data-ttu-id="bcc0c-102">如何：取得屬性值 (Visual Basic)</span><span class="sxs-lookup"><span data-stu-id="bcc0c-102">How to: Get a Value from a Property (Visual Basic)</span></span>
-<span data-ttu-id="bcc0c-103">您可以在運算式中包含的屬性名稱擷取屬性的值。</span><span class="sxs-lookup"><span data-stu-id="bcc0c-103">You retrieve a property's value by including the property name in an expression.</span></span>  
+# <a name="how-to-get-a-value-from-a-property-visual-basic"></a><span data-ttu-id="10851-102">如何：取得屬性值 (Visual Basic)</span><span class="sxs-lookup"><span data-stu-id="10851-102">How to: Get a Value from a Property (Visual Basic)</span></span>
+<span data-ttu-id="10851-103">您可以在運算式中包含的屬性名稱擷取屬性的值。</span><span class="sxs-lookup"><span data-stu-id="10851-103">You retrieve a property's value by including the property name in an expression.</span></span>  
   
- <span data-ttu-id="bcc0c-104">屬性的`Get`程序會擷取值，但您沒有明確呼叫它的名稱。</span><span class="sxs-lookup"><span data-stu-id="bcc0c-104">The property's `Get` procedure retrieves the value, but you do not explicitly call it by name.</span></span> <span data-ttu-id="bcc0c-105">就像您會使用變數，您可以使用屬性。</span><span class="sxs-lookup"><span data-stu-id="bcc0c-105">You use the property just as you would use a variable.</span></span> [!INCLUDE[vbprvb](~/includes/vbprvb-md.md)]<span data-ttu-id="bcc0c-106">會呼叫屬性程序。</span><span class="sxs-lookup"><span data-stu-id="bcc0c-106"> makes the calls to the property's procedures.</span></span>  
+ <span data-ttu-id="10851-104">屬性的`Get`程序會擷取值，但您沒有明確呼叫它的名稱。</span><span class="sxs-lookup"><span data-stu-id="10851-104">The property's `Get` procedure retrieves the value, but you do not explicitly call it by name.</span></span> <span data-ttu-id="10851-105">就像您會使用變數，您可以使用屬性。</span><span class="sxs-lookup"><span data-stu-id="10851-105">You use the property just as you would use a variable.</span></span> <span data-ttu-id="10851-106">Visual Basic 會將屬性的程序呼叫。</span><span class="sxs-lookup"><span data-stu-id="10851-106">Visual Basic makes the calls to the property's procedures.</span></span>  
   
-### <a name="to-retrieve-a-value-from-a-property"></a><span data-ttu-id="bcc0c-107">若要擷取屬性的值</span><span class="sxs-lookup"><span data-stu-id="bcc0c-107">To retrieve a value from a property</span></span>  
+### <a name="to-retrieve-a-value-from-a-property"></a><span data-ttu-id="10851-107">若要擷取屬性的值</span><span class="sxs-lookup"><span data-stu-id="10851-107">To retrieve a value from a property</span></span>  
   
-1.  <span data-ttu-id="bcc0c-108">使用屬性名稱的運算式中使用變數名稱的方式相同。</span><span class="sxs-lookup"><span data-stu-id="bcc0c-108">Use the property name in an expression the same way you would use a variable name.</span></span> <span data-ttu-id="bcc0c-109">您可以使用屬性您可以在任何地方使用的變數或常數。</span><span class="sxs-lookup"><span data-stu-id="bcc0c-109">You can use a property anywhere you can use a variable or a constant.</span></span>  
+1.  <span data-ttu-id="10851-108">使用屬性名稱的運算式中使用變數名稱的方式相同。</span><span class="sxs-lookup"><span data-stu-id="10851-108">Use the property name in an expression the same way you would use a variable name.</span></span> <span data-ttu-id="10851-109">您可以使用屬性您可以在任何地方使用的變數或常數。</span><span class="sxs-lookup"><span data-stu-id="10851-109">You can use a property anywhere you can use a variable or a constant.</span></span>  
   
-     <span data-ttu-id="bcc0c-110">-或-</span><span class="sxs-lookup"><span data-stu-id="bcc0c-110">-or-</span></span>  
+     <span data-ttu-id="10851-110">-或-</span><span class="sxs-lookup"><span data-stu-id="10851-110">-or-</span></span>  
   
-     <span data-ttu-id="bcc0c-111">使用下列相等的屬性名稱 (`=`) 登入指派陳述式。</span><span class="sxs-lookup"><span data-stu-id="bcc0c-111">Use the property name following the equal (`=`) sign in an assignment statement.</span></span>  
+     <span data-ttu-id="10851-111">使用下列相等的屬性名稱 (`=`) 登入指派陳述式。</span><span class="sxs-lookup"><span data-stu-id="10851-111">Use the property name following the equal (`=`) sign in an assignment statement.</span></span>  
   
-     <span data-ttu-id="bcc0c-112">下列範例會讀取的值[!INCLUDE[vbprvb](~/includes/vbprvb-md.md)]`Now`屬性，以隱含方式呼叫其`Get`程序。</span><span class="sxs-lookup"><span data-stu-id="bcc0c-112">The following example reads the value of the [!INCLUDE[vbprvb](~/includes/vbprvb-md.md)] `Now` property, implicitly calling its `Get` procedure.</span></span>  
+     <span data-ttu-id="10851-112">下列範例會讀取值的 Visual Basic`Now`屬性，以隱含方式呼叫其`Get`程序。</span><span class="sxs-lookup"><span data-stu-id="10851-112">The following example reads the value of the Visual Basic `Now` property, implicitly calling its `Get` procedure.</span></span>  
   
      [!code-vb[VbVbalrDateProperties#4](./codesnippet/VisualBasic/how-to-get-a-value-from-a-property_1.vb)]  
   
-2.  <span data-ttu-id="bcc0c-113">如果屬性引數，請遵循以括號來括住的引數清單的屬性名稱。</span><span class="sxs-lookup"><span data-stu-id="bcc0c-113">If the property takes arguments, follow the property name with parentheses to enclose the argument list.</span></span> <span data-ttu-id="bcc0c-114">如果有任何引數，您可以選擇性地省略括號。</span><span class="sxs-lookup"><span data-stu-id="bcc0c-114">If there are no arguments, you can optionally omit the parentheses.</span></span>  
+2.  <span data-ttu-id="10851-113">如果屬性引數，請遵循以括號來括住的引數清單的屬性名稱。</span><span class="sxs-lookup"><span data-stu-id="10851-113">If the property takes arguments, follow the property name with parentheses to enclose the argument list.</span></span> <span data-ttu-id="10851-114">如果有任何引數，您可以選擇性地省略括號。</span><span class="sxs-lookup"><span data-stu-id="10851-114">If there are no arguments, you can optionally omit the parentheses.</span></span>  
   
-3.  <span data-ttu-id="bcc0c-115">將引數放在括號，並以逗號分隔的引數清單。</span><span class="sxs-lookup"><span data-stu-id="bcc0c-115">Place the arguments in the argument list within the parentheses, separated by commas.</span></span> <span data-ttu-id="bcc0c-116">請確定您提供的引數的屬性會定義的對應參數的順序相同。</span><span class="sxs-lookup"><span data-stu-id="bcc0c-116">Be sure you supply the arguments in the same order that the property defines the corresponding parameters.</span></span>  
+3.  <span data-ttu-id="10851-115">將引數放在括號，並以逗號分隔的引數清單。</span><span class="sxs-lookup"><span data-stu-id="10851-115">Place the arguments in the argument list within the parentheses, separated by commas.</span></span> <span data-ttu-id="10851-116">請確定您提供的引數的屬性會定義的對應參數的順序相同。</span><span class="sxs-lookup"><span data-stu-id="10851-116">Be sure you supply the arguments in the same order that the property defines the corresponding parameters.</span></span>  
   
- <span data-ttu-id="bcc0c-117">屬性的值加入運算式如同變數或常數會或儲存在變數或指派陳述式左邊的屬性。</span><span class="sxs-lookup"><span data-stu-id="bcc0c-117">The value of the property participates in the expression just as a variable or constant would, or it is stored in the variable or property on the left side of the assignment statement.</span></span>  
+ <span data-ttu-id="10851-117">屬性的值加入運算式如同變數或常數會或儲存在變數或指派陳述式左邊的屬性。</span><span class="sxs-lookup"><span data-stu-id="10851-117">The value of the property participates in the expression just as a variable or constant would, or it is stored in the variable or property on the left side of the assignment statement.</span></span>  
   
-## <a name="see-also"></a><span data-ttu-id="bcc0c-118">另請參閱</span><span class="sxs-lookup"><span data-stu-id="bcc0c-118">See Also</span></span>  
- [<span data-ttu-id="bcc0c-119">程序</span><span class="sxs-lookup"><span data-stu-id="bcc0c-119">Procedures</span></span>](./index.md)  
- [<span data-ttu-id="bcc0c-120">屬性程序</span><span class="sxs-lookup"><span data-stu-id="bcc0c-120">Property Procedures</span></span>](./property-procedures.md)  
- [<span data-ttu-id="bcc0c-121">程序參數和引數</span><span class="sxs-lookup"><span data-stu-id="bcc0c-121">Procedure Parameters and Arguments</span></span>](./procedure-parameters-and-arguments.md)  
- [<span data-ttu-id="bcc0c-122">Property 陳述式</span><span class="sxs-lookup"><span data-stu-id="bcc0c-122">Property Statement</span></span>](../../../../visual-basic/language-reference/statements/property-statement.md)  
- [<span data-ttu-id="bcc0c-123">在 Visual Basic 中屬性和變數之間的差異</span><span class="sxs-lookup"><span data-stu-id="bcc0c-123">Differences Between Properties and Variables in Visual Basic</span></span>](./differences-between-properties-and-variables.md)  
- [<span data-ttu-id="bcc0c-124">如何：建立屬性</span><span class="sxs-lookup"><span data-stu-id="bcc0c-124">How to: Create a Property</span></span>](./how-to-create-a-property.md)  
- [<span data-ttu-id="bcc0c-125">如何：宣告混合存取層級的屬性</span><span class="sxs-lookup"><span data-stu-id="bcc0c-125">How to: Declare a Property with Mixed Access Levels</span></span>](./how-to-declare-a-property-with-mixed-access-levels.md)  
- [<span data-ttu-id="bcc0c-126">如何：呼叫屬性程序</span><span class="sxs-lookup"><span data-stu-id="bcc0c-126">How to: Call a Property Procedure</span></span>](./how-to-call-a-property-procedure.md)  
- [<span data-ttu-id="bcc0c-127">如何： 宣告及呼叫在 Visual Basic 中的預設屬性</span><span class="sxs-lookup"><span data-stu-id="bcc0c-127">How to: Declare and Call a Default Property in Visual Basic</span></span>](./how-to-declare-and-call-a-default-property.md)  
- [<span data-ttu-id="bcc0c-128">如何：將值置入屬性</span><span class="sxs-lookup"><span data-stu-id="bcc0c-128">How to: Put a Value in a Property</span></span>](./how-to-put-a-value-in-a-property.md)
+## <a name="see-also"></a><span data-ttu-id="10851-118">另請參閱</span><span class="sxs-lookup"><span data-stu-id="10851-118">See Also</span></span>  
+ [<span data-ttu-id="10851-119">程序</span><span class="sxs-lookup"><span data-stu-id="10851-119">Procedures</span></span>](./index.md)  
+ [<span data-ttu-id="10851-120">屬性程序</span><span class="sxs-lookup"><span data-stu-id="10851-120">Property Procedures</span></span>](./property-procedures.md)  
+ [<span data-ttu-id="10851-121">程序參數和引數</span><span class="sxs-lookup"><span data-stu-id="10851-121">Procedure Parameters and Arguments</span></span>](./procedure-parameters-and-arguments.md)  
+ [<span data-ttu-id="10851-122">Property 陳述式</span><span class="sxs-lookup"><span data-stu-id="10851-122">Property Statement</span></span>](../../../../visual-basic/language-reference/statements/property-statement.md)  
+ [<span data-ttu-id="10851-123">在 Visual Basic 中屬性和變數之間的差異</span><span class="sxs-lookup"><span data-stu-id="10851-123">Differences Between Properties and Variables in Visual Basic</span></span>](./differences-between-properties-and-variables.md)  
+ [<span data-ttu-id="10851-124">如何：建立屬性</span><span class="sxs-lookup"><span data-stu-id="10851-124">How to: Create a Property</span></span>](./how-to-create-a-property.md)  
+ [<span data-ttu-id="10851-125">如何：宣告混合存取層級的屬性</span><span class="sxs-lookup"><span data-stu-id="10851-125">How to: Declare a Property with Mixed Access Levels</span></span>](./how-to-declare-a-property-with-mixed-access-levels.md)  
+ [<span data-ttu-id="10851-126">如何：呼叫屬性程序</span><span class="sxs-lookup"><span data-stu-id="10851-126">How to: Call a Property Procedure</span></span>](./how-to-call-a-property-procedure.md)  
+ [<span data-ttu-id="10851-127">如何： 宣告及呼叫在 Visual Basic 中的預設屬性</span><span class="sxs-lookup"><span data-stu-id="10851-127">How to: Declare and Call a Default Property in Visual Basic</span></span>](./how-to-declare-and-call-a-default-property.md)  
+ [<span data-ttu-id="10851-128">如何：將值置入屬性</span><span class="sxs-lookup"><span data-stu-id="10851-128">How to: Put a Value in a Property</span></span>](./how-to-put-a-value-in-a-property.md)
