@@ -1,1 +1,1 @@
-Visual C++ 元件擴充功能
+<span data-ttu-id="136a0-101">Visual C++ 元件擴充功能</span><span class="sxs-lookup"><span data-stu-id="136a0-101">Visual C++ component extensions</span></span>

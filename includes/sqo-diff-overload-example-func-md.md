@@ -1,2 +1,2 @@
 > [!NOTE]
->  這個程式碼範例會使用此多載方法的多載，這個多載不是本主題描述的特定多載。 若要將此範例延伸到本主題中使用，請變更 `selector` 函式的主體。
+>  <span data-ttu-id="61913-101">這個程式碼範例會使用此多載方法的多載，這個多載不是本主題描述的特定多載。</span><span class="sxs-lookup"><span data-stu-id="61913-101">This code example uses an overload of this overloaded method that is different from the specific overload that this topic describes.</span></span> <span data-ttu-id="61913-102">若要將此範例延伸到本主題中使用，請變更 `selector` 函式的主體。</span><span class="sxs-lookup"><span data-stu-id="61913-102">To extend the example to this topic, change the body of the `selector` function.</span></span>

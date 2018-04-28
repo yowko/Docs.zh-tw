@@ -1,1 +1,1 @@
-每一像素位元數 (BPP)
+<span data-ttu-id="eba0c-101">每一像素位元數 (BPP)</span><span class="sxs-lookup"><span data-stu-id="eba0c-101">bits per pixel (BPP)</span></span>

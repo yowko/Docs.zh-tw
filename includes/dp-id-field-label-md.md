@@ -1,1 +1,1 @@
-相依性屬性識別項欄位：
+<span data-ttu-id="16b8a-101">相依性屬性識別項欄位：</span><span class="sxs-lookup"><span data-stu-id="16b8a-101">Dependency property identifier field:</span></span>

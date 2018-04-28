@@ -1,1 +1,1 @@
-裝置獨立單位 (1/96 英吋)
+<span data-ttu-id="e61d0-101">裝置獨立單位 (1/96 英吋)</span><span class="sxs-lookup"><span data-stu-id="e61d0-101">device-independent unit (1/96th inch)</span></span>
