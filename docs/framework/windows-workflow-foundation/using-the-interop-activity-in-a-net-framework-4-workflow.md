@@ -1,64 +1,65 @@
 ---
-title: "在 .NET Framework 4 工作流程中使用 Interop 活動"
-ms.custom: 
+title: 在 .NET Framework 4 工作流程中使用 Interop 活動
+ms.custom: ''
 ms.date: 03/30/2017
 ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.tgt_pltfrm: 
+ms.reviewer: ''
+ms.suite: ''
+ms.tgt_pltfrm: ''
 ms.topic: article
 ms.assetid: 9bb747f0-eb33-4f70-84cd-317382372dcd
-caps.latest.revision: "20"
+caps.latest.revision: 20
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.workload: dotnet
-ms.openlocfilehash: 0a02d6dbc7c6f6583a174bd10853d8c8070ac273
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.workload:
+- dotnet
+ms.openlocfilehash: ebef74097d22c9624a29470f4cda231bbb32fe90
+ms.sourcegitcommit: 03ee570f6f528a7d23a4221dcb26a9498edbdf8c
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 04/28/2018
 ---
-# <a name="using-the-interop-activity-in-a-net-framework-4-workflow"></a><span data-ttu-id="65586-102">在 .NET Framework 4 工作流程中使用 Interop 活動</span><span class="sxs-lookup"><span data-stu-id="65586-102">Using the Interop Activity in a .NET Framework 4 Workflow</span></span>
-<span data-ttu-id="65586-103">使用 [!INCLUDE[vstecwinfx](../../../includes/vstecwinfx-md.md)] 或 [!INCLUDE[netfx35_short](../../../includes/netfx35-short-md.md)] 建立的活動，可以經由使用 [!INCLUDE[netfx_current_short](../../../includes/netfx-current-short-md.md)] 活動，在 <xref:System.Activities.Statements.Interop> 工作流程中使用。</span><span class="sxs-lookup"><span data-stu-id="65586-103">Activities created using [!INCLUDE[vstecwinfx](../../../includes/vstecwinfx-md.md)] or [!INCLUDE[netfx35_short](../../../includes/netfx35-short-md.md)] can be used in a [!INCLUDE[netfx_current_short](../../../includes/netfx-current-short-md.md)] workflow by using the <xref:System.Activities.Statements.Interop> activity.</span></span> <span data-ttu-id="65586-104">本主題提供使用 <xref:System.Activities.Statements.Interop> 活動的概觀。</span><span class="sxs-lookup"><span data-stu-id="65586-104">This topic provides an overview of using the <xref:System.Activities.Statements.Interop> activity.</span></span>  
+# <a name="using-the-interop-activity-in-a-net-framework-4-workflow"></a><span data-ttu-id="b7605-102">在 .NET Framework 4 工作流程中使用 Interop 活動</span><span class="sxs-lookup"><span data-stu-id="b7605-102">Using the Interop Activity in a .NET Framework 4 Workflow</span></span>
+<span data-ttu-id="b7605-103">使用 [!INCLUDE[vstecwinfx](../../../includes/vstecwinfx-md.md)] 或 [!INCLUDE[netfx35_short](../../../includes/netfx35-short-md.md)] 建立的活動，可以經由使用 [!INCLUDE[netfx_current_short](../../../includes/netfx-current-short-md.md)] 活動，在 <xref:System.Activities.Statements.Interop> 工作流程中使用。</span><span class="sxs-lookup"><span data-stu-id="b7605-103">Activities created using [!INCLUDE[vstecwinfx](../../../includes/vstecwinfx-md.md)] or [!INCLUDE[netfx35_short](../../../includes/netfx35-short-md.md)] can be used in a [!INCLUDE[netfx_current_short](../../../includes/netfx-current-short-md.md)] workflow by using the <xref:System.Activities.Statements.Interop> activity.</span></span> <span data-ttu-id="b7605-104">本主題提供使用 <xref:System.Activities.Statements.Interop> 活動的概觀。</span><span class="sxs-lookup"><span data-stu-id="b7605-104">This topic provides an overview of using the <xref:System.Activities.Statements.Interop> activity.</span></span>  
   
 > [!NOTE]
->  <span data-ttu-id="65586-105"><xref:System.Activities.Statements.Interop>活動不會顯示在工作流程設計工具的工具箱除非工作流程的專案具有其**目標 Framework**設定設為**.Net Framework 4**或更新版本。</span><span class="sxs-lookup"><span data-stu-id="65586-105">The <xref:System.Activities.Statements.Interop> activity does not appear in the workflow designer toolbox unless the workflow's project has its **Target Framework** setting set to **.Net Framework 4** or later.</span></span>  
+>  <span data-ttu-id="b7605-105"><xref:System.Activities.Statements.Interop>活動不會顯示在工作流程設計工具的工具箱除非工作流程的專案具有其**目標 Framework**設定設為 **.Net Framework 4**或更新版本。</span><span class="sxs-lookup"><span data-stu-id="b7605-105">The <xref:System.Activities.Statements.Interop> activity does not appear in the workflow designer toolbox unless the workflow's project has its **Target Framework** setting set to **.Net Framework 4** or later.</span></span>  
   
-## <a name="using-the-interop-activity-in-net-framework-45-workflows"></a><span data-ttu-id="65586-106">在 .NET Framework 4.5 Workflows 中使用 Interop 活動</span><span class="sxs-lookup"><span data-stu-id="65586-106">Using the Interop Activity in .NET Framework 4.5 Workflows</span></span>  
- <span data-ttu-id="65586-107">在本主題中，會建立一個 [!INCLUDE[netfx35_short](../../../includes/netfx35-short-md.md)] 活動程式庫，其中包含 `DiscountCalculator` 活動。</span><span class="sxs-lookup"><span data-stu-id="65586-107">In this topic, a [!INCLUDE[netfx35_short](../../../includes/netfx35-short-md.md)] activity library is created that contains a `DiscountCalculator` activity.</span></span> <span data-ttu-id="65586-108">`DiscountCalculator` 會根據購買金額計算折扣，並且由包含 <xref:System.Workflow.Activities.SequenceActivity> 的 <xref:System.Workflow.Activities.PolicyActivity> 組成。</span><span class="sxs-lookup"><span data-stu-id="65586-108">The `DiscountCalculator` calculates a discount based on a purchase amount and consists of a <xref:System.Workflow.Activities.SequenceActivity> that contains a <xref:System.Workflow.Activities.PolicyActivity>.</span></span>  
+## <a name="using-the-interop-activity-in-net-framework-45-workflows"></a><span data-ttu-id="b7605-106">在 .NET Framework 4.5 Workflows 中使用 Interop 活動</span><span class="sxs-lookup"><span data-stu-id="b7605-106">Using the Interop Activity in .NET Framework 4.5 Workflows</span></span>  
+ <span data-ttu-id="b7605-107">在本主題中，會建立一個 [!INCLUDE[netfx35_short](../../../includes/netfx35-short-md.md)] 活動程式庫，其中包含 `DiscountCalculator` 活動。</span><span class="sxs-lookup"><span data-stu-id="b7605-107">In this topic, a [!INCLUDE[netfx35_short](../../../includes/netfx35-short-md.md)] activity library is created that contains a `DiscountCalculator` activity.</span></span> <span data-ttu-id="b7605-108">`DiscountCalculator` 會根據購買金額計算折扣，並且由包含 <xref:System.Workflow.Activities.SequenceActivity> 的 <xref:System.Workflow.Activities.PolicyActivity> 組成。</span><span class="sxs-lookup"><span data-stu-id="b7605-108">The `DiscountCalculator` calculates a discount based on a purchase amount and consists of a <xref:System.Workflow.Activities.SequenceActivity> that contains a <xref:System.Workflow.Activities.PolicyActivity>.</span></span>  
   
 > [!NOTE]
->  <span data-ttu-id="65586-109">在本主題中建立的 [!INCLUDE[netfx35_short](../../../includes/netfx35-short-md.md)] 活動會使用 <xref:System.Workflow.Activities.PolicyActivity> 實作活動的邏輯。</span><span class="sxs-lookup"><span data-stu-id="65586-109">The [!INCLUDE[netfx35_short](../../../includes/netfx35-short-md.md)] activity created in this topic uses a <xref:System.Workflow.Activities.PolicyActivity> to implement the logic of the activity.</span></span> <span data-ttu-id="65586-110">不需使用自訂的 [!INCLUDE[netfx35_short](../../../includes/netfx35-short-md.md)] 活動或 <xref:System.Activities.Statements.Interop> 活動，即可在 [!INCLUDE[netfx_current_short](../../../includes/netfx-current-short-md.md)] 工作流程中使用規則。</span><span class="sxs-lookup"><span data-stu-id="65586-110">It is not required to use a custom [!INCLUDE[netfx35_short](../../../includes/netfx35-short-md.md)] activity or the <xref:System.Activities.Statements.Interop> activity in order to use rules in a [!INCLUDE[netfx_current_short](../../../includes/netfx-current-short-md.md)] workflow.</span></span> <span data-ttu-id="65586-111">如需範例的使用中的規則[!INCLUDE[netfx_current_short](../../../includes/netfx-current-short-md.md)]工作流程，而不使用<xref:System.Activities.Statements.Interop>活動，請參閱[.NET Framework 4.5 中的 [原則] 活動](../../../docs/framework/windows-workflow-foundation/samples/policy-activity-in-net-framework-4-5.md)範例。</span><span class="sxs-lookup"><span data-stu-id="65586-111">For an example of using rules in a [!INCLUDE[netfx_current_short](../../../includes/netfx-current-short-md.md)] workflow without using the <xref:System.Activities.Statements.Interop> activity, see the [Policy Activity in .NET Framework 4.5](../../../docs/framework/windows-workflow-foundation/samples/policy-activity-in-net-framework-4-5.md) sample.</span></span>  
+>  <span data-ttu-id="b7605-109">在本主題中建立的 [!INCLUDE[netfx35_short](../../../includes/netfx35-short-md.md)] 活動會使用 <xref:System.Workflow.Activities.PolicyActivity> 實作活動的邏輯。</span><span class="sxs-lookup"><span data-stu-id="b7605-109">The [!INCLUDE[netfx35_short](../../../includes/netfx35-short-md.md)] activity created in this topic uses a <xref:System.Workflow.Activities.PolicyActivity> to implement the logic of the activity.</span></span> <span data-ttu-id="b7605-110">不需使用自訂的 [!INCLUDE[netfx35_short](../../../includes/netfx35-short-md.md)] 活動或 <xref:System.Activities.Statements.Interop> 活動，即可在 [!INCLUDE[netfx_current_short](../../../includes/netfx-current-short-md.md)] 工作流程中使用規則。</span><span class="sxs-lookup"><span data-stu-id="b7605-110">It is not required to use a custom [!INCLUDE[netfx35_short](../../../includes/netfx35-short-md.md)] activity or the <xref:System.Activities.Statements.Interop> activity in order to use rules in a [!INCLUDE[netfx_current_short](../../../includes/netfx-current-short-md.md)] workflow.</span></span> <span data-ttu-id="b7605-111">如需範例的使用中的規則[!INCLUDE[netfx_current_short](../../../includes/netfx-current-short-md.md)]工作流程，而不使用<xref:System.Activities.Statements.Interop>活動，請參閱[.NET Framework 4.5 中的 [原則] 活動](../../../docs/framework/windows-workflow-foundation/samples/policy-activity-in-net-framework-4-5.md)範例。</span><span class="sxs-lookup"><span data-stu-id="b7605-111">For an example of using rules in a [!INCLUDE[netfx_current_short](../../../includes/netfx-current-short-md.md)] workflow without using the <xref:System.Activities.Statements.Interop> activity, see the [Policy Activity in .NET Framework 4.5](../../../docs/framework/windows-workflow-foundation/samples/policy-activity-in-net-framework-4-5.md) sample.</span></span>  
   
-#### <a name="to-create-the-net-framework-35-activity-library-project"></a><span data-ttu-id="65586-112">若要建立 .NET Framework 3.5 活動程式庫專案</span><span class="sxs-lookup"><span data-stu-id="65586-112">To create the .NET Framework 3.5 activity library project</span></span>  
+#### <a name="to-create-the-net-framework-35-activity-library-project"></a><span data-ttu-id="b7605-112">若要建立 .NET Framework 3.5 活動程式庫專案</span><span class="sxs-lookup"><span data-stu-id="b7605-112">To create the .NET Framework 3.5 activity library project</span></span>  
   
-1.  <span data-ttu-id="65586-113">開啟[!INCLUDE[vs_current_long](../../../includes/vs-current-long-md.md)]選取**新增**然後**專案...**</span><span class="sxs-lookup"><span data-stu-id="65586-113">Open [!INCLUDE[vs_current_long](../../../includes/vs-current-long-md.md)] and select **New** and then **Project…**</span></span> <span data-ttu-id="65586-114">從**檔案**功能表。</span><span class="sxs-lookup"><span data-stu-id="65586-114">from the **File** menu.</span></span>  
+1.  <span data-ttu-id="b7605-113">開啟[!INCLUDE[vs_current_long](../../../includes/vs-current-long-md.md)]選取**新增**然後**專案...**</span><span class="sxs-lookup"><span data-stu-id="b7605-113">Open [!INCLUDE[vs_current_long](../../../includes/vs-current-long-md.md)] and select **New** and then **Project…**</span></span> <span data-ttu-id="b7605-114">從**檔案**功能表。</span><span class="sxs-lookup"><span data-stu-id="b7605-114">from the **File** menu.</span></span>  
   
-2.  <span data-ttu-id="65586-115">展開**其他專案類型**節點**已安裝的範本**窗格，然後選取**Visual Studio 方案**。</span><span class="sxs-lookup"><span data-stu-id="65586-115">Expand the **Other Project Types** node in the **Installed Templates** pane and select **Visual Studio Solutions**.</span></span>  
+2.  <span data-ttu-id="b7605-115">展開**其他專案類型**節點**已安裝的範本**窗格，然後選取**Visual Studio 方案**。</span><span class="sxs-lookup"><span data-stu-id="b7605-115">Expand the **Other Project Types** node in the **Installed Templates** pane and select **Visual Studio Solutions**.</span></span>  
   
-3.  <span data-ttu-id="65586-116">選取**空白方案**從**Visual Studio 方案**清單。</span><span class="sxs-lookup"><span data-stu-id="65586-116">Select **Blank Solution** from the **Visual Studio Solutions** list.</span></span> <span data-ttu-id="65586-117">型別`PolicyInteropDemo`中**名稱**方塊，然後按一下**確定**。</span><span class="sxs-lookup"><span data-stu-id="65586-117">Type `PolicyInteropDemo` in the **Name** box and click **OK**.</span></span>  
+3.  <span data-ttu-id="b7605-116">選取**空白方案**從**Visual Studio 方案**清單。</span><span class="sxs-lookup"><span data-stu-id="b7605-116">Select **Blank Solution** from the **Visual Studio Solutions** list.</span></span> <span data-ttu-id="b7605-117">型別`PolicyInteropDemo`中**名稱**方塊，然後按一下**確定**。</span><span class="sxs-lookup"><span data-stu-id="b7605-117">Type `PolicyInteropDemo` in the **Name** box and click **OK**.</span></span>  
   
-4.  <span data-ttu-id="65586-118">以滑鼠右鍵按一下**PolicyInteropDemo**中**方案總管 中**選取**新增**然後**新的專案...**.</span><span class="sxs-lookup"><span data-stu-id="65586-118">Right-click **PolicyInteropDemo** in **Solution Explorer** and select **Add** and then **New Project…**.</span></span>  
+4.  <span data-ttu-id="b7605-118">以滑鼠右鍵按一下**PolicyInteropDemo**中**方案總管 中**選取**新增**然後**新的專案...**.</span><span class="sxs-lookup"><span data-stu-id="b7605-118">Right-click **PolicyInteropDemo** in **Solution Explorer** and select **Add** and then **New Project…**.</span></span>  
   
     > [!TIP]
-    >  <span data-ttu-id="65586-119">如果**方案總管 中**視窗未顯示，請選取**方案總管 中**從**檢視**功能表。</span><span class="sxs-lookup"><span data-stu-id="65586-119">If the **Solution Explorer** window is not visible, select **Solution Explorer** from the **View** menu.</span></span>  
+    >  <span data-ttu-id="b7605-119">如果**方案總管 中**視窗未顯示，請選取**方案總管 中**從**檢視**功能表。</span><span class="sxs-lookup"><span data-stu-id="b7605-119">If the **Solution Explorer** window is not visible, select **Solution Explorer** from the **View** menu.</span></span>  
   
-5.  <span data-ttu-id="65586-120">在**已安裝的範本**清單中，選取**Visual C#**然後**工作流程**。</span><span class="sxs-lookup"><span data-stu-id="65586-120">In the **Installed Templates** list, select **Visual C#** and then **Workflow**.</span></span> <span data-ttu-id="65586-121">選取**.NET Framework 3.5**從.NET Framework 版本下拉式清單中，然後選取**Workflow Activity Library**從**範本**清單。</span><span class="sxs-lookup"><span data-stu-id="65586-121">Select **.NET Framework 3.5** from the .NET Framework version drop-down list, and then select **Workflow Activity Library** from the **Templates** list.</span></span>  
+5.  <span data-ttu-id="b7605-120">在**已安裝的範本**清單中，選取**Visual C#** 然後**工作流程**。</span><span class="sxs-lookup"><span data-stu-id="b7605-120">In the **Installed Templates** list, select **Visual C#** and then **Workflow**.</span></span> <span data-ttu-id="b7605-121">選取 **.NET Framework 3.5**從.NET Framework 版本下拉式清單中，然後選取**Workflow Activity Library**從**範本**清單。</span><span class="sxs-lookup"><span data-stu-id="b7605-121">Select **.NET Framework 3.5** from the .NET Framework version drop-down list, and then select **Workflow Activity Library** from the **Templates** list.</span></span>  
   
-6.  <span data-ttu-id="65586-122">型別`PolicyActivityLibrary`中**名稱**方塊，然後按一下**確定**。</span><span class="sxs-lookup"><span data-stu-id="65586-122">Type `PolicyActivityLibrary` in the **Name** box and click **OK**.</span></span>  
+6.  <span data-ttu-id="b7605-122">型別`PolicyActivityLibrary`中**名稱**方塊，然後按一下**確定**。</span><span class="sxs-lookup"><span data-stu-id="b7605-122">Type `PolicyActivityLibrary` in the **Name** box and click **OK**.</span></span>  
   
-7.  <span data-ttu-id="65586-123">以滑鼠右鍵按一下**Activity1.cs**中**方案總管 中**選取**刪除**。</span><span class="sxs-lookup"><span data-stu-id="65586-123">Right-click **Activity1.cs** in **Solution Explorer** and select **Delete**.</span></span> <span data-ttu-id="65586-124">按一下 [ **確定** ] 以確認。</span><span class="sxs-lookup"><span data-stu-id="65586-124">Click **OK** to confirm.</span></span>  
+7.  <span data-ttu-id="b7605-123">以滑鼠右鍵按一下**Activity1.cs**中**方案總管 中**選取**刪除**。</span><span class="sxs-lookup"><span data-stu-id="b7605-123">Right-click **Activity1.cs** in **Solution Explorer** and select **Delete**.</span></span> <span data-ttu-id="b7605-124">按一下 [ **確定** ] 以確認。</span><span class="sxs-lookup"><span data-stu-id="b7605-124">Click **OK** to confirm.</span></span>  
   
-#### <a name="to-create-the-discountcalculator-activity"></a><span data-ttu-id="65586-125">若要建立 DiscountCalculator 活動</span><span class="sxs-lookup"><span data-stu-id="65586-125">To create the DiscountCalculator activity</span></span>  
+#### <a name="to-create-the-discountcalculator-activity"></a><span data-ttu-id="b7605-125">若要建立 DiscountCalculator 活動</span><span class="sxs-lookup"><span data-stu-id="b7605-125">To create the DiscountCalculator activity</span></span>  
   
-1.  <span data-ttu-id="65586-126">以滑鼠右鍵按一下**PolicyActivityLibrary**中**方案總管 中**選取**新增**然後**活動...**.</span><span class="sxs-lookup"><span data-stu-id="65586-126">Right-click **PolicyActivityLibrary** in **Solution Explorer** and select **Add** and then **Activity…**.</span></span>  
+1.  <span data-ttu-id="b7605-126">以滑鼠右鍵按一下**PolicyActivityLibrary**中**方案總管 中**選取**新增**然後**活動...**.</span><span class="sxs-lookup"><span data-stu-id="b7605-126">Right-click **PolicyActivityLibrary** in **Solution Explorer** and select **Add** and then **Activity…**.</span></span>  
   
-2.  <span data-ttu-id="65586-127">選取**活動 （程式碼分開置放）**從**Visual C# 項目**清單。</span><span class="sxs-lookup"><span data-stu-id="65586-127">Select **Activity (with code separation)** from the **Visual C# Items** list.</span></span> <span data-ttu-id="65586-128">型別`DiscountCalculator`中**名稱**方塊，然後按一下**確定**。</span><span class="sxs-lookup"><span data-stu-id="65586-128">Type `DiscountCalculator` in the **Name** box and click **OK**.</span></span>  
+2.  <span data-ttu-id="b7605-127">選取**活動 （程式碼分開置放）**從**Visual C# 項目**清單。</span><span class="sxs-lookup"><span data-stu-id="b7605-127">Select **Activity (with code separation)** from the **Visual C# Items** list.</span></span> <span data-ttu-id="b7605-128">型別`DiscountCalculator`中**名稱**方塊，然後按一下**確定**。</span><span class="sxs-lookup"><span data-stu-id="b7605-128">Type `DiscountCalculator` in the **Name** box and click **OK**.</span></span>  
   
-3.  <span data-ttu-id="65586-129">以滑鼠右鍵按一下**DiscountCalculator.xoml**中**方案總管 中**選取**檢視程式碼**。</span><span class="sxs-lookup"><span data-stu-id="65586-129">Right-click **DiscountCalculator.xoml** in **Solution Explorer** and select **View Code**.</span></span>  
+3.  <span data-ttu-id="b7605-129">以滑鼠右鍵按一下**DiscountCalculator.xoml**中**方案總管 中**選取**檢視程式碼**。</span><span class="sxs-lookup"><span data-stu-id="b7605-129">Right-click **DiscountCalculator.xoml** in **Solution Explorer** and select **View Code**.</span></span>  
   
-4.  <span data-ttu-id="65586-130">將下列三個屬性加入至 `DiscountCalculator` 類別。</span><span class="sxs-lookup"><span data-stu-id="65586-130">Add the following three properties to the `DiscountCalculator` class.</span></span>  
+4.  <span data-ttu-id="b7605-130">將下列三個屬性加入至 `DiscountCalculator` 類別。</span><span class="sxs-lookup"><span data-stu-id="b7605-130">Add the following three properties to the `DiscountCalculator` class.</span></span>  
   
     ```csharp  
     public partial class DiscountCalculator : SequenceActivity  
@@ -69,79 +70,79 @@ ms.lasthandoff: 12/22/2017
     }  
     ```  
   
-5.  <span data-ttu-id="65586-131">以滑鼠右鍵按一下**DiscountCalculator.xoml**中**方案總管 中**選取**檢視表設計工具**。</span><span class="sxs-lookup"><span data-stu-id="65586-131">Right-click **DiscountCalculator.xoml** in **Solution Explorer** and select **View Designer**.</span></span>  
+5.  <span data-ttu-id="b7605-131">以滑鼠右鍵按一下**DiscountCalculator.xoml**中**方案總管 中**選取**檢視表設計工具**。</span><span class="sxs-lookup"><span data-stu-id="b7605-131">Right-click **DiscountCalculator.xoml** in **Solution Explorer** and select **View Designer**.</span></span>  
   
-6.  <span data-ttu-id="65586-132">拖曳**原則**活動從**Windows Workflow v3.0**區段**工具箱**並將它放**DiscountCalculator**活動.</span><span class="sxs-lookup"><span data-stu-id="65586-132">Drag a **Policy** activity from the **Windows Workflow v3.0** section of the **Toolbox** and drop it in the **DiscountCalculator** activity.</span></span>  
-  
-    > [!TIP]
-    >  <span data-ttu-id="65586-133">如果**工具箱**視窗未顯示，請選取**工具箱**從**檢視**功能表。</span><span class="sxs-lookup"><span data-stu-id="65586-133">If the **Toolbox** window is not visible, select **Toolbox** from the **View** menu.</span></span>  
-  
-#### <a name="to-configure-the-rules"></a><span data-ttu-id="65586-134">若要設定規則</span><span class="sxs-lookup"><span data-stu-id="65586-134">To configure the rules</span></span>  
-  
-1.  <span data-ttu-id="65586-135">按一下新加入**原則**活動加以選取，如果未選取。</span><span class="sxs-lookup"><span data-stu-id="65586-135">Click the newly added **Policy** activity to select it, if it is not already selected.</span></span>  
-  
-2.  <span data-ttu-id="65586-136">按一下**RuleSetReference**屬性**屬性**視窗，以選取它，然後按一下屬性右邊的省略符號按鈕。</span><span class="sxs-lookup"><span data-stu-id="65586-136">Click the **RuleSetReference** property in the **Properties** window to select it, and click the ellipsis button to the right of the property.</span></span>  
+6.  <span data-ttu-id="b7605-132">拖曳**原則**活動從**Windows Workflow v3.0**區段**工具箱**並將它放**DiscountCalculator**活動.</span><span class="sxs-lookup"><span data-stu-id="b7605-132">Drag a **Policy** activity from the **Windows Workflow v3.0** section of the **Toolbox** and drop it in the **DiscountCalculator** activity.</span></span>  
   
     > [!TIP]
-    >  <span data-ttu-id="65586-137">如果**屬性**看不到視窗中，選擇**屬性 視窗**從**檢視**功能表。</span><span class="sxs-lookup"><span data-stu-id="65586-137">If the **Properties** window is not visible, choose **Properties Window** from the **View** menu.</span></span>  
+    >  <span data-ttu-id="b7605-133">如果**工具箱**視窗未顯示，請選取**工具箱**從**檢視**功能表。</span><span class="sxs-lookup"><span data-stu-id="b7605-133">If the **Toolbox** window is not visible, select **Toolbox** from the **View** menu.</span></span>  
   
-3.  <span data-ttu-id="65586-138">選取**按一下 新增...**.</span><span class="sxs-lookup"><span data-stu-id="65586-138">Select **Click New…**.</span></span>  
+#### <a name="to-configure-the-rules"></a><span data-ttu-id="b7605-134">若要設定規則</span><span class="sxs-lookup"><span data-stu-id="b7605-134">To configure the rules</span></span>  
   
-4.  <span data-ttu-id="65586-139">按一下**新增規則**。</span><span class="sxs-lookup"><span data-stu-id="65586-139">Click **Add Rule**.</span></span>  
+1.  <span data-ttu-id="b7605-135">按一下新加入**原則**活動加以選取，如果未選取。</span><span class="sxs-lookup"><span data-stu-id="b7605-135">Click the newly added **Policy** activity to select it, if it is not already selected.</span></span>  
   
-5.  <span data-ttu-id="65586-140">將下列運算式輸入到**條件**方塊。</span><span class="sxs-lookup"><span data-stu-id="65586-140">Type the following expression into the **Condition** box.</span></span>  
+2.  <span data-ttu-id="b7605-136">按一下**RuleSetReference**屬性**屬性**視窗，以選取它，然後按一下屬性右邊的省略符號按鈕。</span><span class="sxs-lookup"><span data-stu-id="b7605-136">Click the **RuleSetReference** property in the **Properties** window to select it, and click the ellipsis button to the right of the property.</span></span>  
+  
+    > [!TIP]
+    >  <span data-ttu-id="b7605-137">如果**屬性**看不到視窗中，選擇**屬性 視窗**從**檢視**功能表。</span><span class="sxs-lookup"><span data-stu-id="b7605-137">If the **Properties** window is not visible, choose **Properties Window** from the **View** menu.</span></span>  
+  
+3.  <span data-ttu-id="b7605-138">選取**按一下 新增...**.</span><span class="sxs-lookup"><span data-stu-id="b7605-138">Select **Click New…**.</span></span>  
+  
+4.  <span data-ttu-id="b7605-139">按一下**新增規則**。</span><span class="sxs-lookup"><span data-stu-id="b7605-139">Click **Add Rule**.</span></span>  
+  
+5.  <span data-ttu-id="b7605-140">將下列運算式輸入到**條件**方塊。</span><span class="sxs-lookup"><span data-stu-id="b7605-140">Type the following expression into the **Condition** box.</span></span>  
   
     ```  
     this.Subtotal >= 50 && this.Subtotal < 100  
     ```  
   
-6.  <span data-ttu-id="65586-141">將下列運算式輸入到**Then 動作**方塊。</span><span class="sxs-lookup"><span data-stu-id="65586-141">Type the following expression into the **Then Actions** box.</span></span>  
+6.  <span data-ttu-id="b7605-141">將下列運算式輸入到**Then 動作**方塊。</span><span class="sxs-lookup"><span data-stu-id="b7605-141">Type the following expression into the **Then Actions** box.</span></span>  
   
     ```  
     this.DiscountPercent = 0.075  
     ```  
   
-7.  <span data-ttu-id="65586-142">按一下**新增規則**。</span><span class="sxs-lookup"><span data-stu-id="65586-142">Click **Add Rule**.</span></span>  
+7.  <span data-ttu-id="b7605-142">按一下**新增規則**。</span><span class="sxs-lookup"><span data-stu-id="b7605-142">Click **Add Rule**.</span></span>  
   
-8.  <span data-ttu-id="65586-143">將下列運算式輸入到**條件**方塊。</span><span class="sxs-lookup"><span data-stu-id="65586-143">Type the following expression into the **Condition** box.</span></span>  
+8.  <span data-ttu-id="b7605-143">將下列運算式輸入到**條件**方塊。</span><span class="sxs-lookup"><span data-stu-id="b7605-143">Type the following expression into the **Condition** box.</span></span>  
   
     ```  
     this.Subtotal >= 100  
     ```  
   
-9. <span data-ttu-id="65586-144">將下列運算式輸入到**Then 動作**方塊。</span><span class="sxs-lookup"><span data-stu-id="65586-144">Type the following expression into the **Then Actions** box.</span></span>  
+9. <span data-ttu-id="b7605-144">將下列運算式輸入到**Then 動作**方塊。</span><span class="sxs-lookup"><span data-stu-id="b7605-144">Type the following expression into the **Then Actions** box.</span></span>  
   
     ```  
     this.DiscountPercent = 0.15  
     ```  
   
-10. <span data-ttu-id="65586-145">按一下**新增規則**。</span><span class="sxs-lookup"><span data-stu-id="65586-145">Click **Add Rule**.</span></span>  
+10. <span data-ttu-id="b7605-145">按一下**新增規則**。</span><span class="sxs-lookup"><span data-stu-id="b7605-145">Click **Add Rule**.</span></span>  
   
-11. <span data-ttu-id="65586-146">將下列運算式輸入到**條件**方塊。</span><span class="sxs-lookup"><span data-stu-id="65586-146">Type the following expression into the **Condition** box.</span></span>  
+11. <span data-ttu-id="b7605-146">將下列運算式輸入到**條件**方塊。</span><span class="sxs-lookup"><span data-stu-id="b7605-146">Type the following expression into the **Condition** box.</span></span>  
   
     ```  
     this.DiscountPercent > 0  
     ```  
   
-12. <span data-ttu-id="65586-147">將下列運算式輸入到**Then 動作**方塊。</span><span class="sxs-lookup"><span data-stu-id="65586-147">Type the following expression into the **Then Actions** box.</span></span>  
+12. <span data-ttu-id="b7605-147">將下列運算式輸入到**Then 動作**方塊。</span><span class="sxs-lookup"><span data-stu-id="b7605-147">Type the following expression into the **Then Actions** box.</span></span>  
   
     ```  
     this.Total = this.Subtotal - this.Subtotal * this.DiscountPercent  
     ```  
   
-13. <span data-ttu-id="65586-148">將下列運算式輸入到**Else 動作**方塊。</span><span class="sxs-lookup"><span data-stu-id="65586-148">Type the following expression into the **Else Actions** box.</span></span>  
+13. <span data-ttu-id="b7605-148">將下列運算式輸入到**Else 動作**方塊。</span><span class="sxs-lookup"><span data-stu-id="b7605-148">Type the following expression into the **Else Actions** box.</span></span>  
   
     ```  
     this.Total = this.Subtotal  
     ```  
   
-14. <span data-ttu-id="65586-149">按一下**確定**關閉**規則集編輯器** 對話方塊。</span><span class="sxs-lookup"><span data-stu-id="65586-149">Click **OK** to close the **Rule Set Editor** dialog box.</span></span>  
+14. <span data-ttu-id="b7605-149">按一下**確定**關閉**規則集編輯器** 對話方塊。</span><span class="sxs-lookup"><span data-stu-id="b7605-149">Click **OK** to close the **Rule Set Editor** dialog box.</span></span>  
   
-15. <span data-ttu-id="65586-150">請確認新建立<xref:System.Workflow.Activities.Rules.RuleSet>中選取**名稱**清單，然後按**確定**。</span><span class="sxs-lookup"><span data-stu-id="65586-150">Ensure that the newly-created <xref:System.Workflow.Activities.Rules.RuleSet> is selected in the **Name** list, and click **OK**.</span></span>  
+15. <span data-ttu-id="b7605-150">請確認新建立<xref:System.Workflow.Activities.Rules.RuleSet>中選取**名稱**清單，然後按**確定**。</span><span class="sxs-lookup"><span data-stu-id="b7605-150">Ensure that the newly-created <xref:System.Workflow.Activities.Rules.RuleSet> is selected in the **Name** list, and click **OK**.</span></span>  
   
-16. <span data-ttu-id="65586-151">按下 CTRL+SHIFT+B 以建置方案。</span><span class="sxs-lookup"><span data-stu-id="65586-151">Press CTRL+SHIFT+B to build the solution.</span></span>  
+16. <span data-ttu-id="b7605-151">按下 CTRL+SHIFT+B 以建置方案。</span><span class="sxs-lookup"><span data-stu-id="b7605-151">Press CTRL+SHIFT+B to build the solution.</span></span>  
   
- <span data-ttu-id="65586-152">下列程式碼範例顯示在本程序中加入至 `DiscountCalculator` 活動的規則。</span><span class="sxs-lookup"><span data-stu-id="65586-152">The rules added to the `DiscountCalculator` activity in this procedure are shown in the following code example.</span></span>  
+ <span data-ttu-id="b7605-152">下列程式碼範例顯示在本程序中加入至 `DiscountCalculator` 活動的規則。</span><span class="sxs-lookup"><span data-stu-id="b7605-152">The rules added to the `DiscountCalculator` activity in this procedure are shown in the following code example.</span></span>  
   
 ```  
 Rule1: IF this.Subtotal >= 50 && this.Subtotal < 100   
@@ -155,49 +156,49 @@ Rule3: IF this.DiscountPercent > 0
        ELSE this.Total = this.Subtotal  
 ```  
   
- <span data-ttu-id="65586-153">執行 <xref:System.Workflow.Activities.PolicyActivity> 時，這三個規則會評估並修改 `Subtotal` 活動的 `DiscountPercent`、`Total` 及 `DiscountCalculator` 屬性值，以計算所需的折扣。</span><span class="sxs-lookup"><span data-stu-id="65586-153">When the <xref:System.Workflow.Activities.PolicyActivity> executes, these three rules evaluate and modify the `Subtotal`, `DiscountPercent`, and `Total` property values of the `DiscountCalculator` activity to calculate the desired discount.</span></span>  
+ <span data-ttu-id="b7605-153">執行 <xref:System.Workflow.Activities.PolicyActivity> 時，這三個規則會評估並修改 `Subtotal` 活動的 `DiscountPercent`、`Total` 及 `DiscountCalculator` 屬性值，以計算所需的折扣。</span><span class="sxs-lookup"><span data-stu-id="b7605-153">When the <xref:System.Workflow.Activities.PolicyActivity> executes, these three rules evaluate and modify the `Subtotal`, `DiscountPercent`, and `Total` property values of the `DiscountCalculator` activity to calculate the desired discount.</span></span>  
   
-## <a name="using-the-discountcalculator-activity-with-the-interop-activity"></a><span data-ttu-id="65586-154">搭配使用 DiscountCalculator 活動與 Interop 活動</span><span class="sxs-lookup"><span data-stu-id="65586-154">Using the DiscountCalculator Activity with the Interop Activity</span></span>  
- <span data-ttu-id="65586-155">若要在 `DiscountCalculator` 工作流程內使用 [!INCLUDE[netfx_current_short](../../../includes/netfx-current-short-md.md)] 活動，需使用 <xref:System.Activities.Statements.Interop> 活動。</span><span class="sxs-lookup"><span data-stu-id="65586-155">To use the `DiscountCalculator` activity inside a [!INCLUDE[netfx_current_short](../../../includes/netfx-current-short-md.md)] workflow, the <xref:System.Activities.Statements.Interop> activity is used.</span></span> <span data-ttu-id="65586-156">本節中會建立兩個工作流程 (其中一個使用程式碼，另一個使用工作流程設計工具)，示範如何搭配使用 <xref:System.Activities.Statements.Interop> 活動與 `DiscountCalculator` 活動。</span><span class="sxs-lookup"><span data-stu-id="65586-156">In this section two workflows are created, one using code and one using the workflow designer, which show how to use the <xref:System.Activities.Statements.Interop> activity with the `DiscountCalculator` activity.</span></span> <span data-ttu-id="65586-157">兩個工作流程會使用同樣的主應用程式。</span><span class="sxs-lookup"><span data-stu-id="65586-157">The same host application is used for both workflows.</span></span>  
+## <a name="using-the-discountcalculator-activity-with-the-interop-activity"></a><span data-ttu-id="b7605-154">搭配使用 DiscountCalculator 活動與 Interop 活動</span><span class="sxs-lookup"><span data-stu-id="b7605-154">Using the DiscountCalculator Activity with the Interop Activity</span></span>  
+ <span data-ttu-id="b7605-155">若要在 `DiscountCalculator` 工作流程內使用 [!INCLUDE[netfx_current_short](../../../includes/netfx-current-short-md.md)] 活動，需使用 <xref:System.Activities.Statements.Interop> 活動。</span><span class="sxs-lookup"><span data-stu-id="b7605-155">To use the `DiscountCalculator` activity inside a [!INCLUDE[netfx_current_short](../../../includes/netfx-current-short-md.md)] workflow, the <xref:System.Activities.Statements.Interop> activity is used.</span></span> <span data-ttu-id="b7605-156">本節中會建立兩個工作流程 (其中一個使用程式碼，另一個使用工作流程設計工具)，示範如何搭配使用 <xref:System.Activities.Statements.Interop> 活動與 `DiscountCalculator` 活動。</span><span class="sxs-lookup"><span data-stu-id="b7605-156">In this section two workflows are created, one using code and one using the workflow designer, which show how to use the <xref:System.Activities.Statements.Interop> activity with the `DiscountCalculator` activity.</span></span> <span data-ttu-id="b7605-157">兩個工作流程會使用同樣的主應用程式。</span><span class="sxs-lookup"><span data-stu-id="b7605-157">The same host application is used for both workflows.</span></span>  
   
-#### <a name="to-create-the-host-application"></a><span data-ttu-id="65586-158">若要建立主應用程式</span><span class="sxs-lookup"><span data-stu-id="65586-158">To create the host application</span></span>  
+#### <a name="to-create-the-host-application"></a><span data-ttu-id="b7605-158">若要建立主應用程式</span><span class="sxs-lookup"><span data-stu-id="b7605-158">To create the host application</span></span>  
   
-1.  <span data-ttu-id="65586-159">以滑鼠右鍵按一下**PolicyInteropDemo**中**方案總管 中**選取**新增**，然後**新的專案...**.</span><span class="sxs-lookup"><span data-stu-id="65586-159">Right-click **PolicyInteropDemo** in **Solution Explorer** and select **Add**, and then **New Project…**.</span></span>  
+1.  <span data-ttu-id="b7605-159">以滑鼠右鍵按一下**PolicyInteropDemo**中**方案總管 中**選取**新增**，然後**新的專案...**.</span><span class="sxs-lookup"><span data-stu-id="b7605-159">Right-click **PolicyInteropDemo** in **Solution Explorer** and select **Add**, and then **New Project…**.</span></span>  
   
-2.  <span data-ttu-id="65586-160">請確認**.NET Framework 4.5**在.NET Framework 版本下拉式清單中，選取，然後選取**工作流程主控台應用程式**從**Visual C# 項目**清單。</span><span class="sxs-lookup"><span data-stu-id="65586-160">Ensure that **.NET Framework 4.5** is selected in the .NET Framework version drop-down list, and select  **Workflow Console Application** from the **Visual C# Items** list.</span></span>  
+2.  <span data-ttu-id="b7605-160">請確認 **.NET Framework 4.5**在.NET Framework 版本下拉式清單中，選取，然後選取**工作流程主控台應用程式**從**Visual C# 項目**清單。</span><span class="sxs-lookup"><span data-stu-id="b7605-160">Ensure that **.NET Framework 4.5** is selected in the .NET Framework version drop-down list, and select  **Workflow Console Application** from the **Visual C# Items** list.</span></span>  
   
-3.  <span data-ttu-id="65586-161">型別`PolicyInteropHost`到**名稱**方塊，然後按一下**確定**。</span><span class="sxs-lookup"><span data-stu-id="65586-161">Type `PolicyInteropHost` into the **Name** box and click **OK**.</span></span>  
+3.  <span data-ttu-id="b7605-161">型別`PolicyInteropHost`到**名稱**方塊，然後按一下**確定**。</span><span class="sxs-lookup"><span data-stu-id="b7605-161">Type `PolicyInteropHost` into the **Name** box and click **OK**.</span></span>  
   
-4.  <span data-ttu-id="65586-162">以滑鼠右鍵按一下**PolicyInteropHost**中**方案總管 中**選取**屬性**。</span><span class="sxs-lookup"><span data-stu-id="65586-162">Right-click **PolicyInteropHost** in **Solution Explorer** and select **Properties**.</span></span>  
+4.  <span data-ttu-id="b7605-162">以滑鼠右鍵按一下**PolicyInteropHost**中**方案總管 中**選取**屬性**。</span><span class="sxs-lookup"><span data-stu-id="b7605-162">Right-click **PolicyInteropHost** in **Solution Explorer** and select **Properties**.</span></span>  
   
-5.  <span data-ttu-id="65586-163">在**目標 framework**下拉式清單中，變更選取項目從**.NET Framework 4 Client Profile**至**.NET Framework 4.5**。</span><span class="sxs-lookup"><span data-stu-id="65586-163">In the **Target framework** drop-down list, change the selection from **.NET Framework 4 Client Profile** to **.NET Framework 4.5**.</span></span> <span data-ttu-id="65586-164">按一下**是**確認。</span><span class="sxs-lookup"><span data-stu-id="65586-164">Click **Yes** to confirm.</span></span>  
+5.  <span data-ttu-id="b7605-163">在**目標 framework**下拉式清單中，變更選取項目從 **.NET Framework 4 Client Profile**至 **.NET Framework 4.5**。</span><span class="sxs-lookup"><span data-stu-id="b7605-163">In the **Target framework** drop-down list, change the selection from **.NET Framework 4 Client Profile** to **.NET Framework 4.5**.</span></span> <span data-ttu-id="b7605-164">按一下**是**確認。</span><span class="sxs-lookup"><span data-stu-id="b7605-164">Click **Yes** to confirm.</span></span>  
   
-6.  <span data-ttu-id="65586-165">以滑鼠右鍵按一下**PolicyInteropHost**中**方案總管 中**選取**加入參考...**.</span><span class="sxs-lookup"><span data-stu-id="65586-165">Right-click **PolicyInteropHost** in **Solution Explorer** and select **Add Reference…**.</span></span>  
+6.  <span data-ttu-id="b7605-165">以滑鼠右鍵按一下**PolicyInteropHost**中**方案總管 中**選取**加入參考...**.</span><span class="sxs-lookup"><span data-stu-id="b7605-165">Right-click **PolicyInteropHost** in **Solution Explorer** and select **Add Reference…**.</span></span>  
   
-7.  <span data-ttu-id="65586-166">選取**PolicyActivityLibrary**從**專案**索引標籤上，按一下 **確定**。</span><span class="sxs-lookup"><span data-stu-id="65586-166">Select **PolicyActivityLibrary** from the **Projects** tab and click **OK**.</span></span>  
+7.  <span data-ttu-id="b7605-166">選取**PolicyActivityLibrary**從**專案**索引標籤上，按一下 **確定**。</span><span class="sxs-lookup"><span data-stu-id="b7605-166">Select **PolicyActivityLibrary** from the **Projects** tab and click **OK**.</span></span>  
   
-8.  <span data-ttu-id="65586-167">以滑鼠右鍵按一下**PolicyInteropHost**中**方案總管 中**選取**加入參考...**.</span><span class="sxs-lookup"><span data-stu-id="65586-167">Right-click **PolicyInteropHost** in **Solution Explorer** and select **Add Reference…**.</span></span>  
+8.  <span data-ttu-id="b7605-167">以滑鼠右鍵按一下**PolicyInteropHost**中**方案總管 中**選取**加入參考...**.</span><span class="sxs-lookup"><span data-stu-id="b7605-167">Right-click **PolicyInteropHost** in **Solution Explorer** and select **Add Reference…**.</span></span>  
   
-9. <span data-ttu-id="65586-168">選取**.net**， **System.Workflow.ComponentModel**，然後**System.workflow.componentmodel**從**.NET**索引標籤上，按一下 **確定**。</span><span class="sxs-lookup"><span data-stu-id="65586-168">Select **System.Workflow.Activities**, **System.Workflow.ComponentModel**, and then **System.Workflow.Runtime** from the **.NET** tab and click **OK**.</span></span>  
+9. <span data-ttu-id="b7605-168">選取 **.net**， **System.Workflow.ComponentModel**，然後**System.workflow.componentmodel**從 **.NET**索引標籤上，按一下 **確定**。</span><span class="sxs-lookup"><span data-stu-id="b7605-168">Select **System.Workflow.Activities**, **System.Workflow.ComponentModel**, and then **System.Workflow.Runtime** from the **.NET** tab and click **OK**.</span></span>  
   
-10. <span data-ttu-id="65586-169">以滑鼠右鍵按一下**PolicyInteropHost**中**方案總管 中**選取**設定為啟始專案**。</span><span class="sxs-lookup"><span data-stu-id="65586-169">Right-click **PolicyInteropHost** in **Solution Explorer** and select **Set as StartUp Project**.</span></span>  
+10. <span data-ttu-id="b7605-169">以滑鼠右鍵按一下**PolicyInteropHost**中**方案總管 中**選取**設定為啟始專案**。</span><span class="sxs-lookup"><span data-stu-id="b7605-169">Right-click **PolicyInteropHost** in **Solution Explorer** and select **Set as StartUp Project**.</span></span>  
   
-11. <span data-ttu-id="65586-170">按下 CTRL+SHIFT+B 以建置方案。</span><span class="sxs-lookup"><span data-stu-id="65586-170">Press CTRL+SHIFT+B to build the solution.</span></span>  
+11. <span data-ttu-id="b7605-170">按下 CTRL+SHIFT+B 以建置方案。</span><span class="sxs-lookup"><span data-stu-id="b7605-170">Press CTRL+SHIFT+B to build the solution.</span></span>  
   
-### <a name="using-the-interop-activity-in-code"></a><span data-ttu-id="65586-171">在程式碼中使用 Interop 活動</span><span class="sxs-lookup"><span data-stu-id="65586-171">Using the Interop Activity in Code</span></span>  
- <span data-ttu-id="65586-172">在此範例中，會使用包含 <xref:System.Activities.Statements.Interop> 活動和 `DiscountCalculator` 活動的程式碼建立工作流程定義。</span><span class="sxs-lookup"><span data-stu-id="65586-172">In this example, a workflow definition is created using code that contains the <xref:System.Activities.Statements.Interop> activity and the `DiscountCalculator` activity.</span></span> <span data-ttu-id="65586-173">使用 <xref:System.Activities.WorkflowInvoker> 叫用這個工作流程，使用 <xref:System.Activities.Statements.WriteLine> 活動則會將規則評估的結果寫入至主控台。</span><span class="sxs-lookup"><span data-stu-id="65586-173">This workflow is invoked using <xref:System.Activities.WorkflowInvoker> and the results of the rule evaluation are written to the console using a <xref:System.Activities.Statements.WriteLine> activity.</span></span>  
+### <a name="using-the-interop-activity-in-code"></a><span data-ttu-id="b7605-171">在程式碼中使用 Interop 活動</span><span class="sxs-lookup"><span data-stu-id="b7605-171">Using the Interop Activity in Code</span></span>  
+ <span data-ttu-id="b7605-172">在此範例中，會使用包含 <xref:System.Activities.Statements.Interop> 活動和 `DiscountCalculator` 活動的程式碼建立工作流程定義。</span><span class="sxs-lookup"><span data-stu-id="b7605-172">In this example, a workflow definition is created using code that contains the <xref:System.Activities.Statements.Interop> activity and the `DiscountCalculator` activity.</span></span> <span data-ttu-id="b7605-173">使用 <xref:System.Activities.WorkflowInvoker> 叫用這個工作流程，使用 <xref:System.Activities.Statements.WriteLine> 活動則會將規則評估的結果寫入至主控台。</span><span class="sxs-lookup"><span data-stu-id="b7605-173">This workflow is invoked using <xref:System.Activities.WorkflowInvoker> and the results of the rule evaluation are written to the console using a <xref:System.Activities.Statements.WriteLine> activity.</span></span>  
   
-##### <a name="to-use-the-interop-activity-in-code"></a><span data-ttu-id="65586-174">若要在程式碼中使用 Interop 活動</span><span class="sxs-lookup"><span data-stu-id="65586-174">To use the Interop activity in code</span></span>  
+##### <a name="to-use-the-interop-activity-in-code"></a><span data-ttu-id="b7605-174">若要在程式碼中使用 Interop 活動</span><span class="sxs-lookup"><span data-stu-id="b7605-174">To use the Interop activity in code</span></span>  
   
-1.  <span data-ttu-id="65586-175">以滑鼠右鍵按一下**Program.cs**中**方案總管 中**選取**檢視程式碼**。</span><span class="sxs-lookup"><span data-stu-id="65586-175">Right-click **Program.cs** in **Solution Explorer** and select **View Code**.</span></span>  
+1.  <span data-ttu-id="b7605-175">以滑鼠右鍵按一下**Program.cs**中**方案總管 中**選取**檢視程式碼**。</span><span class="sxs-lookup"><span data-stu-id="b7605-175">Right-click **Program.cs** in **Solution Explorer** and select **View Code**.</span></span>  
   
-2.  <span data-ttu-id="65586-176">將下列 `using` 陳述式加入至檔案最上方。</span><span class="sxs-lookup"><span data-stu-id="65586-176">Add the following `using` statement at the top of the file.</span></span>  
+2.  <span data-ttu-id="b7605-176">將下列 `using` 陳述式加入至檔案最上方。</span><span class="sxs-lookup"><span data-stu-id="b7605-176">Add the following `using` statement at the top of the file.</span></span>  
   
     ```csharp  
     using PolicyActivityLibrary;  
     ```  
   
-3.  <span data-ttu-id="65586-177">移除 `Main` 方法的內容，並以下列程式碼取代。</span><span class="sxs-lookup"><span data-stu-id="65586-177">Remove the contents of the `Main` method and replace with the following code.</span></span>  
+3.  <span data-ttu-id="b7605-177">移除 `Main` 方法的內容，並以下列程式碼取代。</span><span class="sxs-lookup"><span data-stu-id="b7605-177">Remove the contents of the `Main` method and replace with the following code.</span></span>  
   
     ```csharp  
     static void Main(string[] args)  
@@ -206,7 +207,7 @@ Rule3: IF this.DiscountPercent > 0
     }  
     ```  
   
-4.  <span data-ttu-id="65586-178">在名為 `Program` 的 `CalculateDiscountUsingCodeWorkflow` 類別中建立新方法，其中包含下列程式碼。</span><span class="sxs-lookup"><span data-stu-id="65586-178">Create a new method in the `Program` class called `CalculateDiscountUsingCodeWorkflow` that contains the following code.</span></span>  
+4.  <span data-ttu-id="b7605-178">在名為 `Program` 的 `CalculateDiscountUsingCodeWorkflow` 類別中建立新方法，其中包含下列程式碼。</span><span class="sxs-lookup"><span data-stu-id="b7605-178">Create a new method in the `Program` class called `CalculateDiscountUsingCodeWorkflow` that contains the following code.</span></span>  
   
     ```csharp  
     static void CalculateDiscountUsingCodeWorkflow()  
@@ -256,9 +257,9 @@ Rule3: IF this.DiscountPercent > 0
     ```  
   
     > [!NOTE]
-    >  <span data-ttu-id="65586-179">`Subtotal` 活動的 `DiscountPercent`、`Total` 和 `DiscountCalculator` 屬性會以 <xref:System.Activities.Statements.Interop> 活動的引數形式出現，並且繫結至 <xref:System.Activities.Statements.Interop> 活動之 <xref:System.Activities.Statements.Interop.ActivityProperties%2A> 集合的本機工作流程變數。</span><span class="sxs-lookup"><span data-stu-id="65586-179">The `Subtotal`, `DiscountPercent`, and `Total` properties of the `DiscountCalculator` activity are surfaced as arguments of the <xref:System.Activities.Statements.Interop> activity, and bound to local workflow variables in the <xref:System.Activities.Statements.Interop> activity’s <xref:System.Activities.Statements.Interop.ActivityProperties%2A> collection.</span></span> <span data-ttu-id="65586-180">`Subtotal` 會加入成為 <xref:System.Activities.ArgumentDirection.In> 引數，因為 `Subtotal` 資料會流入 <xref:System.Activities.Statements.Interop> 活動中，此外會加入 `DiscountPercent` 和 `Total` 做為 <xref:System.Activities.ArgumentDirection.Out> 引數，因為它們的資料會流出 <xref:System.Activities.Statements.Interop> 活動。</span><span class="sxs-lookup"><span data-stu-id="65586-180">`Subtotal` is added as an <xref:System.Activities.ArgumentDirection.In> argument because the `Subtotal` data flows into the <xref:System.Activities.Statements.Interop> activity, and `DiscountPercent` and `Total` are added as <xref:System.Activities.ArgumentDirection.Out> arguments because their data flows out of the <xref:System.Activities.Statements.Interop> activity.</span></span> <span data-ttu-id="65586-181">請注意，兩個 <xref:System.Activities.ArgumentDirection.Out> 引數是以 `DiscountPercentOut` 和 `TotalOut` 這兩個名稱加入，表示它們代表 <xref:System.Activities.ArgumentDirection.Out> 引數。</span><span class="sxs-lookup"><span data-stu-id="65586-181">Note that the two <xref:System.Activities.ArgumentDirection.Out> arguments are added with the names `DiscountPercentOut` and `TotalOut` to indicate that they represent <xref:System.Activities.ArgumentDirection.Out> arguments.</span></span> <span data-ttu-id="65586-182">`DiscountCalculator` 型別會指定為 <xref:System.Activities.Statements.Interop> 活動的 <xref:System.Activities.Statements.Interop.ActivityType%2A>。</span><span class="sxs-lookup"><span data-stu-id="65586-182">The `DiscountCalculator` type is specified as the <xref:System.Activities.Statements.Interop> activity’s <xref:System.Activities.Statements.Interop.ActivityType%2A>.</span></span>  
+    >  <span data-ttu-id="b7605-179">`Subtotal` 活動的 `DiscountPercent`、`Total` 和 `DiscountCalculator` 屬性會以 <xref:System.Activities.Statements.Interop> 活動的引數形式出現，並且繫結至 <xref:System.Activities.Statements.Interop> 活動之 <xref:System.Activities.Statements.Interop.ActivityProperties%2A> 集合的本機工作流程變數。</span><span class="sxs-lookup"><span data-stu-id="b7605-179">The `Subtotal`, `DiscountPercent`, and `Total` properties of the `DiscountCalculator` activity are surfaced as arguments of the <xref:System.Activities.Statements.Interop> activity, and bound to local workflow variables in the <xref:System.Activities.Statements.Interop> activity’s <xref:System.Activities.Statements.Interop.ActivityProperties%2A> collection.</span></span> <span data-ttu-id="b7605-180">`Subtotal` 會加入成為 <xref:System.Activities.ArgumentDirection.In> 引數，因為 `Subtotal` 資料會流入 <xref:System.Activities.Statements.Interop> 活動中，此外會加入 `DiscountPercent` 和 `Total` 做為 <xref:System.Activities.ArgumentDirection.Out> 引數，因為它們的資料會流出 <xref:System.Activities.Statements.Interop> 活動。</span><span class="sxs-lookup"><span data-stu-id="b7605-180">`Subtotal` is added as an <xref:System.Activities.ArgumentDirection.In> argument because the `Subtotal` data flows into the <xref:System.Activities.Statements.Interop> activity, and `DiscountPercent` and `Total` are added as <xref:System.Activities.ArgumentDirection.Out> arguments because their data flows out of the <xref:System.Activities.Statements.Interop> activity.</span></span> <span data-ttu-id="b7605-181">請注意，兩個 <xref:System.Activities.ArgumentDirection.Out> 引數是以 `DiscountPercentOut` 和 `TotalOut` 這兩個名稱加入，表示它們代表 <xref:System.Activities.ArgumentDirection.Out> 引數。</span><span class="sxs-lookup"><span data-stu-id="b7605-181">Note that the two <xref:System.Activities.ArgumentDirection.Out> arguments are added with the names `DiscountPercentOut` and `TotalOut` to indicate that they represent <xref:System.Activities.ArgumentDirection.Out> arguments.</span></span> <span data-ttu-id="b7605-182">`DiscountCalculator` 型別會指定為 <xref:System.Activities.Statements.Interop> 活動的 <xref:System.Activities.Statements.Interop.ActivityType%2A>。</span><span class="sxs-lookup"><span data-stu-id="b7605-182">The `DiscountCalculator` type is specified as the <xref:System.Activities.Statements.Interop> activity’s <xref:System.Activities.Statements.Interop.ActivityType%2A>.</span></span>  
   
-5.  <span data-ttu-id="65586-183">按 CTRL+F5 建置並執行應用程式。</span><span class="sxs-lookup"><span data-stu-id="65586-183">Press CTRL+F5 to build and run the application.</span></span> <span data-ttu-id="65586-184">將 `Subtotal` 的值替換成不同的值，測試出 `DiscountCalculator` 活動所提供的不同折扣層級。</span><span class="sxs-lookup"><span data-stu-id="65586-184">Substitute different values for the `Subtotal` value to test out the different discount levels provided by the `DiscountCalculator` activity.</span></span>  
+5.  <span data-ttu-id="b7605-183">按 CTRL+F5 建置並執行應用程式。</span><span class="sxs-lookup"><span data-stu-id="b7605-183">Press CTRL+F5 to build and run the application.</span></span> <span data-ttu-id="b7605-184">將 `Subtotal` 的值替換成不同的值，測試出 `DiscountCalculator` 活動所提供的不同折扣層級。</span><span class="sxs-lookup"><span data-stu-id="b7605-184">Substitute different values for the `Subtotal` value to test out the different discount levels provided by the `DiscountCalculator` activity.</span></span>  
   
     ```csharp  
     Variable<double> Subtotal = new Variable<double>  
@@ -268,65 +269,65 @@ Rule3: IF this.DiscountPercent > 0
     };  
     ```  
   
-### <a name="using-the-interop-activity-in-the-workflow-designer"></a><span data-ttu-id="65586-185">在工作流程設計工具中使用 Interop 活動</span><span class="sxs-lookup"><span data-stu-id="65586-185">Using the Interop Activity in the Workflow Designer</span></span>  
- <span data-ttu-id="65586-186">在這個範例中，會使用工作流程設計工具建立工作流程。</span><span class="sxs-lookup"><span data-stu-id="65586-186">In this example, a workflow is created using the workflow designer.</span></span> <span data-ttu-id="65586-187">這個工作流程與上一個範例中的工作流程具有相同的功能，但不會使用 <xref:System.Activities.Statements.WriteLine> 活動顯示折扣，而是由主應用程式在工作流程完成時擷取並顯示折扣資訊。</span><span class="sxs-lookup"><span data-stu-id="65586-187">This workflow has the same functionality as the previous example, except than instead of using a <xref:System.Activities.Statements.WriteLine> activity to display the discount, the host application retrieves and displays the discount information when the workflow completes.</span></span> <span data-ttu-id="65586-188">同時，這個工作流程不使用區域工作流程變數來包含資料，而是在工作流程設計工具中建立引數，並在叫用工作流程時從主機傳入值。</span><span class="sxs-lookup"><span data-stu-id="65586-188">Also, instead of using local workflow variables to contain the data, arguments are created in the workflow designer and the values are passed in from the host when the workflow is invoked.</span></span>  
+### <a name="using-the-interop-activity-in-the-workflow-designer"></a><span data-ttu-id="b7605-185">在工作流程設計工具中使用 Interop 活動</span><span class="sxs-lookup"><span data-stu-id="b7605-185">Using the Interop Activity in the Workflow Designer</span></span>  
+ <span data-ttu-id="b7605-186">在這個範例中，會使用工作流程設計工具建立工作流程。</span><span class="sxs-lookup"><span data-stu-id="b7605-186">In this example, a workflow is created using the workflow designer.</span></span> <span data-ttu-id="b7605-187">這個工作流程與上一個範例中的工作流程具有相同的功能，但不會使用 <xref:System.Activities.Statements.WriteLine> 活動顯示折扣，而是由主應用程式在工作流程完成時擷取並顯示折扣資訊。</span><span class="sxs-lookup"><span data-stu-id="b7605-187">This workflow has the same functionality as the previous example, except than instead of using a <xref:System.Activities.Statements.WriteLine> activity to display the discount, the host application retrieves and displays the discount information when the workflow completes.</span></span> <span data-ttu-id="b7605-188">同時，這個工作流程不使用區域工作流程變數來包含資料，而是在工作流程設計工具中建立引數，並在叫用工作流程時從主機傳入值。</span><span class="sxs-lookup"><span data-stu-id="b7605-188">Also, instead of using local workflow variables to contain the data, arguments are created in the workflow designer and the values are passed in from the host when the workflow is invoked.</span></span>  
   
-##### <a name="to-host-the-policyactivity-using-a-workflow-designer-created-workflow"></a><span data-ttu-id="65586-189">若要使用工作流程設計工具建立的工作流程裝載 PolicyActivity</span><span class="sxs-lookup"><span data-stu-id="65586-189">To host the PolicyActivity using a Workflow Designer-created workflow</span></span>  
+##### <a name="to-host-the-policyactivity-using-a-workflow-designer-created-workflow"></a><span data-ttu-id="b7605-189">若要使用工作流程設計工具建立的工作流程裝載 PolicyActivity</span><span class="sxs-lookup"><span data-stu-id="b7605-189">To host the PolicyActivity using a Workflow Designer-created workflow</span></span>  
   
-1.  <span data-ttu-id="65586-190">以滑鼠右鍵按一下**Workflow1.xaml**中**方案總管 中**選取**刪除**。</span><span class="sxs-lookup"><span data-stu-id="65586-190">Right-click **Workflow1.xaml** in **Solution Explorer** and select **Delete**.</span></span> <span data-ttu-id="65586-191">按一下 [ **確定** ] 以確認。</span><span class="sxs-lookup"><span data-stu-id="65586-191">Click **OK** to confirm.</span></span>  
+1.  <span data-ttu-id="b7605-190">以滑鼠右鍵按一下**Workflow1.xaml**中**方案總管 中**選取**刪除**。</span><span class="sxs-lookup"><span data-stu-id="b7605-190">Right-click **Workflow1.xaml** in **Solution Explorer** and select **Delete**.</span></span> <span data-ttu-id="b7605-191">按一下 [ **確定** ] 以確認。</span><span class="sxs-lookup"><span data-stu-id="b7605-191">Click **OK** to confirm.</span></span>  
   
-2.  <span data-ttu-id="65586-192">以滑鼠右鍵按一下**PolicyInteropHost**中**方案總管 中**選取**新增**，**新項目...**.</span><span class="sxs-lookup"><span data-stu-id="65586-192">Right-click **PolicyInteropHost** in **Solution Explorer** and select **Add**, **New Item…**.</span></span>  
+2.  <span data-ttu-id="b7605-192">以滑鼠右鍵按一下**PolicyInteropHost**中**方案總管 中**選取**新增**，**新項目...**.</span><span class="sxs-lookup"><span data-stu-id="b7605-192">Right-click **PolicyInteropHost** in **Solution Explorer** and select **Add**, **New Item…**.</span></span>  
   
-3.  <span data-ttu-id="65586-193">展開**Visual C# 項目**節點，然後選取**工作流程**。</span><span class="sxs-lookup"><span data-stu-id="65586-193">Expand the **Visual C# Items** node and select **Workflow**.</span></span> <span data-ttu-id="65586-194">選取**活動**從**Visual C# 項目**清單。</span><span class="sxs-lookup"><span data-stu-id="65586-194">Select **Activity** from the **Visual C# Items** list.</span></span>  
+3.  <span data-ttu-id="b7605-193">展開**Visual C# 項目**節點，然後選取**工作流程**。</span><span class="sxs-lookup"><span data-stu-id="b7605-193">Expand the **Visual C# Items** node and select **Workflow**.</span></span> <span data-ttu-id="b7605-194">選取**活動**從**Visual C# 項目**清單。</span><span class="sxs-lookup"><span data-stu-id="b7605-194">Select **Activity** from the **Visual C# Items** list.</span></span>  
   
-4.  <span data-ttu-id="65586-195">型別`DiscountWorkflow`到**名稱**方塊，然後按一下**新增**。</span><span class="sxs-lookup"><span data-stu-id="65586-195">Type `DiscountWorkflow` into the **Name** box and click **Add**.</span></span>  
+4.  <span data-ttu-id="b7605-195">型別`DiscountWorkflow`到**名稱**方塊，然後按一下**新增**。</span><span class="sxs-lookup"><span data-stu-id="b7605-195">Type `DiscountWorkflow` into the **Name** box and click **Add**.</span></span>  
   
-5.  <span data-ttu-id="65586-196">按一下**引數**按鈕上顯示工作流程設計工具的左下方**引數**窗格。</span><span class="sxs-lookup"><span data-stu-id="65586-196">Click the **Arguments** button on the lower left side of the workflow designer to display the **Arguments** pane.</span></span>  
+5.  <span data-ttu-id="b7605-196">按一下**引數**按鈕上顯示工作流程設計工具的左下方**引數**窗格。</span><span class="sxs-lookup"><span data-stu-id="b7605-196">Click the **Arguments** button on the lower left side of the workflow designer to display the **Arguments** pane.</span></span>  
   
-6.  <span data-ttu-id="65586-197">按一下**建立引數**。</span><span class="sxs-lookup"><span data-stu-id="65586-197">Click **Create Argument**.</span></span>  
+6.  <span data-ttu-id="b7605-197">按一下**建立引數**。</span><span class="sxs-lookup"><span data-stu-id="b7605-197">Click **Create Argument**.</span></span>  
   
-7.  <span data-ttu-id="65586-198">型別`Subtotal`到**名稱**方塊中，選取**中**從**方向**下拉式清單中，選取**Double**從**引數型別**下拉式清單中，然後按下 ENTER 儲存引數。</span><span class="sxs-lookup"><span data-stu-id="65586-198">Type `Subtotal` into the **Name** box, select **In** from the **Direction** drop-down, select **Double** from the **Argument type** drop-down, and then press ENTER to save the argument.</span></span>  
-  
-    > [!NOTE]
-    >  <span data-ttu-id="65586-199">如果**Double**不在**引數型別**下拉式清單中，選取**瀏覽型別...**，型別`System.Double`中**型別名稱**方塊，然後按一下**確定**。</span><span class="sxs-lookup"><span data-stu-id="65586-199">If **Double** is not in the **Argument type** drop-down list, select **Browse for Types …**, type `System.Double` in the **Type Name** box, and click **OK**.</span></span>  
-  
-8.  <span data-ttu-id="65586-200">按一下**建立引數**。</span><span class="sxs-lookup"><span data-stu-id="65586-200">Click **Create Argument**.</span></span>  
-  
-9. <span data-ttu-id="65586-201">型別`DiscountPercent`到**名稱**方塊中，選取**出**從**方向**下拉式清單中，選取**Double**從**引數型別**下拉式清單中，然後按下 ENTER 儲存引數。</span><span class="sxs-lookup"><span data-stu-id="65586-201">Type `DiscountPercent` into the **Name** box, select **Out** from the **Direction** drop-down, select **Double** from the **Argument type** drop-down, and then press ENTER to save the argument.</span></span>  
-  
-10. <span data-ttu-id="65586-202">按一下**建立引數**。</span><span class="sxs-lookup"><span data-stu-id="65586-202">Click **Create Argument**.</span></span>  
-  
-11. <span data-ttu-id="65586-203">型別`Total`到**名稱**方塊中，選取**出**從**方向**下拉式清單中，選取**Double**從**引數型別**下拉式清單中，然後按下 ENTER 儲存引數。</span><span class="sxs-lookup"><span data-stu-id="65586-203">Type `Total` into the **Name** box, select **Out** from the **Direction** drop-down, select **Double** from the **Argument type** drop-down, and then press ENTER to save the argument.</span></span>  
-  
-12. <span data-ttu-id="65586-204">按一下**引數**按鈕以關閉工作流程設計工具的左下方**引數**窗格。</span><span class="sxs-lookup"><span data-stu-id="65586-204">Click the **Arguments** button on the lower left side of the workflow designer to close the **Arguments** pane.</span></span>  
-  
-13. <span data-ttu-id="65586-205">拖曳**順序**活動從**控制流程**區段**工具箱**拖放到工作流程設計工具介面。</span><span class="sxs-lookup"><span data-stu-id="65586-205">Drag a **Sequence** activity from the **Control Flow** section of the **Toolbox** and drop it onto the workflow designer surface.</span></span>  
-  
-14. <span data-ttu-id="65586-206">拖曳**Interop**活動從**移轉**區段**工具箱**並將它放**順序**活動。</span><span class="sxs-lookup"><span data-stu-id="65586-206">Drag an **Interop** activity from the **Migration** section of the **Toolbox** and drop it in the **Sequence** activity.</span></span>  
-  
-15. <span data-ttu-id="65586-207">按一下**Interop**活動**按一下即可瀏覽...**</span><span class="sxs-lookup"><span data-stu-id="65586-207">Click the **Interop** activity on the **Click to browse…**</span></span> <span data-ttu-id="65586-208">加上標籤中，輸入**DiscountCalculator**中**型別名稱**方塊，然後按一下**確定**。</span><span class="sxs-lookup"><span data-stu-id="65586-208">label, type **DiscountCalculator** in the **Type Name** box, and click **OK**.</span></span>  
+7.  <span data-ttu-id="b7605-198">型別`Subtotal`到**名稱**方塊中，選取**中**從**方向**下拉式清單中，選取**Double**從**引數型別**下拉式清單中，然後按下 ENTER 儲存引數。</span><span class="sxs-lookup"><span data-stu-id="b7605-198">Type `Subtotal` into the **Name** box, select **In** from the **Direction** drop-down, select **Double** from the **Argument type** drop-down, and then press ENTER to save the argument.</span></span>  
   
     > [!NOTE]
-    >  <span data-ttu-id="65586-209">將 <xref:System.Activities.Statements.Interop> 活動加入至工作流程中，並將 `DiscountCalculator` 型別指定為其 <xref:System.Activities.Statements.Interop.ActivityType%2A> 時，<xref:System.Activities.Statements.Interop> 活動會公開三個 <xref:System.Activities.ArgumentDirection.In> 引數和三個 <xref:System.Activities.ArgumentDirection.Out> 引數 (代表 `DiscountCalculator` 活動的三個公用屬性)。</span><span class="sxs-lookup"><span data-stu-id="65586-209">When the <xref:System.Activities.Statements.Interop> activity is added to the workflow and the `DiscountCalculator` type is specified as its <xref:System.Activities.Statements.Interop.ActivityType%2A>, the <xref:System.Activities.Statements.Interop> activity exposes three <xref:System.Activities.ArgumentDirection.In> arguments and three <xref:System.Activities.ArgumentDirection.Out> arguments that represent the three public properties of the `DiscountCalculator` activity.</span></span> <span data-ttu-id="65586-210"><xref:System.Activities.ArgumentDirection.In>引數具有相同名稱做為三個公用屬性，以及三個<xref:System.Activities.ArgumentDirection.Out>引數具有相同的名稱**出**附加至屬性名稱。</span><span class="sxs-lookup"><span data-stu-id="65586-210">The <xref:System.Activities.ArgumentDirection.In> arguments have the same name as the three public properties, and the three <xref:System.Activities.ArgumentDirection.Out> arguments have the same names with **Out** appended to the property name.</span></span> <span data-ttu-id="65586-211">在下列步驟中，在前述步驟中建立的工作流程引數會繫結至 <xref:System.Activities.Statements.Interop> 活動的引數。</span><span class="sxs-lookup"><span data-stu-id="65586-211">In the following steps, the workflow arguments created in the previous steps are bound to the <xref:System.Activities.Statements.Interop> activity’s arguments.</span></span>  
+    >  <span data-ttu-id="b7605-199">如果**Double**不在**引數型別**下拉式清單中，選取**瀏覽型別...**，型別`System.Double`中**型別名稱**方塊，然後按一下**確定**。</span><span class="sxs-lookup"><span data-stu-id="b7605-199">If **Double** is not in the **Argument type** drop-down list, select **Browse for Types …**, type `System.Double` in the **Type Name** box, and click **OK**.</span></span>  
   
-16. <span data-ttu-id="65586-212">型別`DiscountPercent`到**輸入 VB 運算式**方塊右邊的**Discountpercent**屬性並按下 TAB 鍵。</span><span class="sxs-lookup"><span data-stu-id="65586-212">Type `DiscountPercent` into the **Enter a VB expression** box to the right of the **DiscountPercentOut** property and press TAB.</span></span>  
+8.  <span data-ttu-id="b7605-200">按一下**建立引數**。</span><span class="sxs-lookup"><span data-stu-id="b7605-200">Click **Create Argument**.</span></span>  
   
-17. <span data-ttu-id="65586-213">型別`Subtotal`到**輸入 VB 運算式**方塊右邊的**Subtotal**屬性並按下 TAB 鍵。</span><span class="sxs-lookup"><span data-stu-id="65586-213">Type `Subtotal` into the **Enter a VB expression** box to the right of the **Subtotal** property and press TAB.</span></span>  
+9. <span data-ttu-id="b7605-201">型別`DiscountPercent`到**名稱**方塊中，選取**出**從**方向**下拉式清單中，選取**Double**從**引數型別**下拉式清單中，然後按下 ENTER 儲存引數。</span><span class="sxs-lookup"><span data-stu-id="b7605-201">Type `DiscountPercent` into the **Name** box, select **Out** from the **Direction** drop-down, select **Double** from the **Argument type** drop-down, and then press ENTER to save the argument.</span></span>  
   
-18. <span data-ttu-id="65586-214">型別`Total`到**輸入 VB 運算式**方塊右邊的**TotalOut**屬性並按下 TAB 鍵。</span><span class="sxs-lookup"><span data-stu-id="65586-214">Type `Total` into the **Enter a VB expression** box to the right of the **TotalOut** property and press TAB.</span></span>  
+10. <span data-ttu-id="b7605-202">按一下**建立引數**。</span><span class="sxs-lookup"><span data-stu-id="b7605-202">Click **Create Argument**.</span></span>  
   
-19. <span data-ttu-id="65586-215">以滑鼠右鍵按一下**Program.cs**中**方案總管 中**選取**檢視程式碼**。</span><span class="sxs-lookup"><span data-stu-id="65586-215">Right-click **Program.cs** in **Solution Explorer** and select **View Code**.</span></span>  
+11. <span data-ttu-id="b7605-203">型別`Total`到**名稱**方塊中，選取**出**從**方向**下拉式清單中，選取**Double**從**引數型別**下拉式清單中，然後按下 ENTER 儲存引數。</span><span class="sxs-lookup"><span data-stu-id="b7605-203">Type `Total` into the **Name** box, select **Out** from the **Direction** drop-down, select **Double** from the **Argument type** drop-down, and then press ENTER to save the argument.</span></span>  
   
-20. <span data-ttu-id="65586-216">將下列 `using` 陳述式加入至檔案最上方。</span><span class="sxs-lookup"><span data-stu-id="65586-216">Add the following `using` statement at the top of the file.</span></span>  
+12. <span data-ttu-id="b7605-204">按一下**引數**按鈕以關閉工作流程設計工具的左下方**引數**窗格。</span><span class="sxs-lookup"><span data-stu-id="b7605-204">Click the **Arguments** button on the lower left side of the workflow designer to close the **Arguments** pane.</span></span>  
+  
+13. <span data-ttu-id="b7605-205">拖曳**順序**活動從**控制流程**區段**工具箱**拖放到工作流程設計工具介面。</span><span class="sxs-lookup"><span data-stu-id="b7605-205">Drag a **Sequence** activity from the **Control Flow** section of the **Toolbox** and drop it onto the workflow designer surface.</span></span>  
+  
+14. <span data-ttu-id="b7605-206">拖曳**Interop**活動從**移轉**區段**工具箱**並將它放**順序**活動。</span><span class="sxs-lookup"><span data-stu-id="b7605-206">Drag an **Interop** activity from the **Migration** section of the **Toolbox** and drop it in the **Sequence** activity.</span></span>  
+  
+15. <span data-ttu-id="b7605-207">按一下**Interop**活動**按一下即可瀏覽...**</span><span class="sxs-lookup"><span data-stu-id="b7605-207">Click the **Interop** activity on the **Click to browse…**</span></span> <span data-ttu-id="b7605-208">加上標籤中，輸入**DiscountCalculator**中**型別名稱**方塊，然後按一下**確定**。</span><span class="sxs-lookup"><span data-stu-id="b7605-208">label, type **DiscountCalculator** in the **Type Name** box, and click **OK**.</span></span>  
+  
+    > [!NOTE]
+    >  <span data-ttu-id="b7605-209">將 <xref:System.Activities.Statements.Interop> 活動加入至工作流程中，並將 `DiscountCalculator` 型別指定為其 <xref:System.Activities.Statements.Interop.ActivityType%2A> 時，<xref:System.Activities.Statements.Interop> 活動會公開三個 <xref:System.Activities.ArgumentDirection.In> 引數和三個 <xref:System.Activities.ArgumentDirection.Out> 引數 (代表 `DiscountCalculator` 活動的三個公用屬性)。</span><span class="sxs-lookup"><span data-stu-id="b7605-209">When the <xref:System.Activities.Statements.Interop> activity is added to the workflow and the `DiscountCalculator` type is specified as its <xref:System.Activities.Statements.Interop.ActivityType%2A>, the <xref:System.Activities.Statements.Interop> activity exposes three <xref:System.Activities.ArgumentDirection.In> arguments and three <xref:System.Activities.ArgumentDirection.Out> arguments that represent the three public properties of the `DiscountCalculator` activity.</span></span> <span data-ttu-id="b7605-210"><xref:System.Activities.ArgumentDirection.In>引數具有相同名稱做為三個公用屬性，以及三個<xref:System.Activities.ArgumentDirection.Out>引數具有相同的名稱**出**附加至屬性名稱。</span><span class="sxs-lookup"><span data-stu-id="b7605-210">The <xref:System.Activities.ArgumentDirection.In> arguments have the same name as the three public properties, and the three <xref:System.Activities.ArgumentDirection.Out> arguments have the same names with **Out** appended to the property name.</span></span> <span data-ttu-id="b7605-211">在下列步驟中，在前述步驟中建立的工作流程引數會繫結至 <xref:System.Activities.Statements.Interop> 活動的引數。</span><span class="sxs-lookup"><span data-stu-id="b7605-211">In the following steps, the workflow arguments created in the previous steps are bound to the <xref:System.Activities.Statements.Interop> activity’s arguments.</span></span>  
+  
+16. <span data-ttu-id="b7605-212">型別`DiscountPercent`到**輸入 VB 運算式**方塊右邊的**Discountpercent**屬性並按下 TAB 鍵。</span><span class="sxs-lookup"><span data-stu-id="b7605-212">Type `DiscountPercent` into the **Enter a VB expression** box to the right of the **DiscountPercentOut** property and press TAB.</span></span>  
+  
+17. <span data-ttu-id="b7605-213">型別`Subtotal`到**輸入 VB 運算式**方塊右邊的**Subtotal**屬性並按下 TAB 鍵。</span><span class="sxs-lookup"><span data-stu-id="b7605-213">Type `Subtotal` into the **Enter a VB expression** box to the right of the **Subtotal** property and press TAB.</span></span>  
+  
+18. <span data-ttu-id="b7605-214">型別`Total`到**輸入 VB 運算式**方塊右邊的**TotalOut**屬性並按下 TAB 鍵。</span><span class="sxs-lookup"><span data-stu-id="b7605-214">Type `Total` into the **Enter a VB expression** box to the right of the **TotalOut** property and press TAB.</span></span>  
+  
+19. <span data-ttu-id="b7605-215">以滑鼠右鍵按一下**Program.cs**中**方案總管 中**選取**檢視程式碼**。</span><span class="sxs-lookup"><span data-stu-id="b7605-215">Right-click **Program.cs** in **Solution Explorer** and select **View Code**.</span></span>  
+  
+20. <span data-ttu-id="b7605-216">將下列 `using` 陳述式加入至檔案最上方。</span><span class="sxs-lookup"><span data-stu-id="b7605-216">Add the following `using` statement at the top of the file.</span></span>  
   
     ```csharp  
     using System.Collections.Generic;  
     ```  
   
-21. <span data-ttu-id="65586-217">註解 `CalculateDiscountInCode` 方法中對 `Main` 方法的呼叫，然後加入下列程式碼。</span><span class="sxs-lookup"><span data-stu-id="65586-217">Comment out the call to the `CalculateDiscountInCode` method in the `Main` method and add the following code.</span></span>  
+21. <span data-ttu-id="b7605-217">註解 `CalculateDiscountInCode` 方法中對 `Main` 方法的呼叫，然後加入下列程式碼。</span><span class="sxs-lookup"><span data-stu-id="b7605-217">Comment out the call to the `CalculateDiscountInCode` method in the `Main` method and add the following code.</span></span>  
   
     > [!NOTE]
-    >  <span data-ttu-id="65586-218">如果您未遵循前述程序，而出現預設的 `Main` 程式碼，請以下列程式碼取代 `Main` 的內容。</span><span class="sxs-lookup"><span data-stu-id="65586-218">If you did not follow the previous procedure and the default `Main` code is present, replace the contents of `Main` with the following code.</span></span>  
+    >  <span data-ttu-id="b7605-218">如果您未遵循前述程序，而出現預設的 `Main` 程式碼，請以下列程式碼取代 `Main` 的內容。</span><span class="sxs-lookup"><span data-stu-id="b7605-218">If you did not follow the previous procedure and the default `Main` code is present, replace the contents of `Main` with the following code.</span></span>  
   
     ```csharp  
     static void Main(string[] args)  
@@ -336,7 +337,7 @@ Rule3: IF this.DiscountPercent > 0
     }  
     ```  
   
-22. <span data-ttu-id="65586-219">在名為 `Program` 的 `CalculateDiscountUsingDesignerWorkflow` 類別中建立新方法，其中包含下列程式碼。</span><span class="sxs-lookup"><span data-stu-id="65586-219">Create a new method in the `Program` class called `CalculateDiscountUsingDesignerWorkflow` that contains the following code.</span></span>  
+22. <span data-ttu-id="b7605-219">在名為 `Program` 的 `CalculateDiscountUsingDesignerWorkflow` 類別中建立新方法，其中包含下列程式碼。</span><span class="sxs-lookup"><span data-stu-id="b7605-219">Create a new method in the `Program` class called `CalculateDiscountUsingDesignerWorkflow` that contains the following code.</span></span>  
   
     ```csharp  
     static void CalculateDiscountUsingDesignerWorkflow()  
@@ -358,22 +359,22 @@ Rule3: IF this.DiscountPercent > 0
     }  
     ```  
   
-23. <span data-ttu-id="65586-220">按 CTRL+F5 建置並執行應用程式。</span><span class="sxs-lookup"><span data-stu-id="65586-220">Press CTRL+F5 to build and run the application.</span></span> <span data-ttu-id="65586-221">若要指定不同的 `Subtotal` 金額，請變更下列程式碼中 `SubtotalValue` 的值。</span><span class="sxs-lookup"><span data-stu-id="65586-221">To specify a different `Subtotal` amount, change the value of `SubtotalValue` in the following code.</span></span>  
+23. <span data-ttu-id="b7605-220">按 CTRL+F5 建置並執行應用程式。</span><span class="sxs-lookup"><span data-stu-id="b7605-220">Press CTRL+F5 to build and run the application.</span></span> <span data-ttu-id="b7605-221">若要指定不同的 `Subtotal` 金額，請變更下列程式碼中 `SubtotalValue` 的值。</span><span class="sxs-lookup"><span data-stu-id="b7605-221">To specify a different `Subtotal` amount, change the value of `SubtotalValue` in the following code.</span></span>  
   
     ```csharp  
     double SubtotalValue = 125.99; // Change this value.  
     ```  
   
-## <a name="rules-features-overview"></a><span data-ttu-id="65586-222">規則功能概觀</span><span class="sxs-lookup"><span data-stu-id="65586-222">Rules Features Overview</span></span>  
- <span data-ttu-id="65586-223">[!INCLUDE[wf1](../../../includes/wf1-md.md)] 規則引擎可支援以優先順序為主的方式處理規則，並且支援向前鏈結。</span><span class="sxs-lookup"><span data-stu-id="65586-223">The [!INCLUDE[wf1](../../../includes/wf1-md.md)] rules engine provides support for processing rules in a priority-based manner with support for forward chaining.</span></span> <span data-ttu-id="65586-224">規則可針對單一項目或集合中之項目進行評估。</span><span class="sxs-lookup"><span data-stu-id="65586-224">Rules can be evaluated for a single item or for items in a collection.</span></span> <span data-ttu-id="65586-225">如需規則概觀與特定規則功能的詳細資訊，請參閱下表。</span><span class="sxs-lookup"><span data-stu-id="65586-225">For an overview of rules and information on specific rules functionality, please refer to the following table.</span></span>  
+## <a name="rules-features-overview"></a><span data-ttu-id="b7605-222">規則功能概觀</span><span class="sxs-lookup"><span data-stu-id="b7605-222">Rules Features Overview</span></span>  
+ <span data-ttu-id="b7605-223">[!INCLUDE[wf1](../../../includes/wf1-md.md)] 規則引擎可支援以優先順序為主的方式處理規則，並且支援向前鏈結。</span><span class="sxs-lookup"><span data-stu-id="b7605-223">The [!INCLUDE[wf1](../../../includes/wf1-md.md)] rules engine provides support for processing rules in a priority-based manner with support for forward chaining.</span></span> <span data-ttu-id="b7605-224">規則可針對單一項目或集合中之項目進行評估。</span><span class="sxs-lookup"><span data-stu-id="b7605-224">Rules can be evaluated for a single item or for items in a collection.</span></span> <span data-ttu-id="b7605-225">如需規則概觀與特定規則功能的詳細資訊，請參閱下表。</span><span class="sxs-lookup"><span data-stu-id="b7605-225">For an overview of rules and information on specific rules functionality, please refer to the following table.</span></span>  
   
-|<span data-ttu-id="65586-226">規則功能</span><span class="sxs-lookup"><span data-stu-id="65586-226">Rules Feature</span></span>|<span data-ttu-id="65586-227">文件</span><span class="sxs-lookup"><span data-stu-id="65586-227">Documentation</span></span>|  
+|<span data-ttu-id="b7605-226">規則功能</span><span class="sxs-lookup"><span data-stu-id="b7605-226">Rules Feature</span></span>|<span data-ttu-id="b7605-227">文件</span><span class="sxs-lookup"><span data-stu-id="b7605-227">Documentation</span></span>|  
 |-------------------|-------------------|  
-|<span data-ttu-id="65586-228">規則概觀</span><span class="sxs-lookup"><span data-stu-id="65586-228">Rules Overview</span></span>|[<span data-ttu-id="65586-229">Windows Workflow Foundation 規則引擎簡介</span><span class="sxs-lookup"><span data-stu-id="65586-229">Introduction to the Windows Workflow Foundation Rules Engine</span></span>](http://go.microsoft.com/fwlink/?LinkID=152836)|  
-|<span data-ttu-id="65586-230">RuleSet</span><span class="sxs-lookup"><span data-stu-id="65586-230">RuleSet</span></span>|<span data-ttu-id="65586-231">[工作流程中使用 Ruleset](http://go.microsoft.com/fwlink/?LinkId=178516)和<xref:System.Workflow.Activities.Rules.RuleSet></span><span class="sxs-lookup"><span data-stu-id="65586-231">[Using RuleSets in Workflows](http://go.microsoft.com/fwlink/?LinkId=178516) and <xref:System.Workflow.Activities.Rules.RuleSet></span></span>|  
-|<span data-ttu-id="65586-232">規則評估</span><span class="sxs-lookup"><span data-stu-id="65586-232">Evaluation of Rules</span></span>|[<span data-ttu-id="65586-233">Ruleset 中的規則評估</span><span class="sxs-lookup"><span data-stu-id="65586-233">Rules Evaluation in RuleSets</span></span>](http://go.microsoft.com/fwlink/?LinkId=178517)|  
-|<span data-ttu-id="65586-234">規則鏈結</span><span class="sxs-lookup"><span data-stu-id="65586-234">Rules Chaining</span></span>|<span data-ttu-id="65586-235">[向前鏈結控制項](http://go.microsoft.com/fwlink/?LinkId=178518)和[規則的向前鏈結](http://go.microsoft.com/fwlink/?LinkId=178519)</span><span class="sxs-lookup"><span data-stu-id="65586-235">[Forward Chaining Control](http://go.microsoft.com/fwlink/?LinkId=178518) and [Forward Chaining of Rules](http://go.microsoft.com/fwlink/?LinkId=178519)</span></span>|  
-|<span data-ttu-id="65586-236">處理規則中的集合</span><span class="sxs-lookup"><span data-stu-id="65586-236">Processing Collections in Rules</span></span>|[<span data-ttu-id="65586-237">處理規則中的集合</span><span class="sxs-lookup"><span data-stu-id="65586-237">Processing Collections in Rules</span></span>](http://go.microsoft.com/fwlink/?LinkId=178520)|  
-|<span data-ttu-id="65586-238">使用 PolicyActivity</span><span class="sxs-lookup"><span data-stu-id="65586-238">Using the PolicyActivity</span></span>|<span data-ttu-id="65586-239">[使用 PolicyActivity 活動](http://go.microsoft.com/fwlink/?LinkId=178521)和<xref:System.Workflow.Activities.PolicyActivity></span><span class="sxs-lookup"><span data-stu-id="65586-239">[Using the PolicyActivity Activity](http://go.microsoft.com/fwlink/?LinkId=178521) and <xref:System.Workflow.Activities.PolicyActivity></span></span>|  
+|<span data-ttu-id="b7605-228">規則概觀</span><span class="sxs-lookup"><span data-stu-id="b7605-228">Rules Overview</span></span>|[<span data-ttu-id="b7605-229">Windows Workflow Foundation 規則引擎簡介</span><span class="sxs-lookup"><span data-stu-id="b7605-229">Introduction to the Windows Workflow Foundation Rules Engine</span></span>](http://go.microsoft.com/fwlink/?LinkID=152836)|  
+|<span data-ttu-id="b7605-230">RuleSet</span><span class="sxs-lookup"><span data-stu-id="b7605-230">RuleSet</span></span>|<span data-ttu-id="b7605-231">[工作流程中使用 Ruleset](http://go.microsoft.com/fwlink/?LinkId=178516)和 <xref:System.Workflow.Activities.Rules.RuleSet></span><span class="sxs-lookup"><span data-stu-id="b7605-231">[Using RuleSets in Workflows](http://go.microsoft.com/fwlink/?LinkId=178516) and <xref:System.Workflow.Activities.Rules.RuleSet></span></span>|  
+|<span data-ttu-id="b7605-232">規則評估</span><span class="sxs-lookup"><span data-stu-id="b7605-232">Evaluation of Rules</span></span>|[<span data-ttu-id="b7605-233">Ruleset 中的規則評估</span><span class="sxs-lookup"><span data-stu-id="b7605-233">Rules Evaluation in RuleSets</span></span>](http://go.microsoft.com/fwlink/?LinkId=178517)|  
+|<span data-ttu-id="b7605-234">規則鏈結</span><span class="sxs-lookup"><span data-stu-id="b7605-234">Rules Chaining</span></span>|<span data-ttu-id="b7605-235">[向前鏈結控制項](http://go.microsoft.com/fwlink/?LinkId=178518)和[規則的向前鏈結](http://go.microsoft.com/fwlink/?LinkId=178519)</span><span class="sxs-lookup"><span data-stu-id="b7605-235">[Forward Chaining Control](http://go.microsoft.com/fwlink/?LinkId=178518) and [Forward Chaining of Rules](http://go.microsoft.com/fwlink/?LinkId=178519)</span></span>|  
+|<span data-ttu-id="b7605-236">處理規則中的集合</span><span class="sxs-lookup"><span data-stu-id="b7605-236">Processing Collections in Rules</span></span>|[<span data-ttu-id="b7605-237">處理規則中的集合</span><span class="sxs-lookup"><span data-stu-id="b7605-237">Processing Collections in Rules</span></span>](http://go.microsoft.com/fwlink/?LinkId=178520)|  
+|<span data-ttu-id="b7605-238">使用 PolicyActivity</span><span class="sxs-lookup"><span data-stu-id="b7605-238">Using the PolicyActivity</span></span>|<span data-ttu-id="b7605-239">[使用 PolicyActivity 活動](http://go.microsoft.com/fwlink/?LinkId=178521)和 <xref:System.Workflow.Activities.PolicyActivity></span><span class="sxs-lookup"><span data-stu-id="b7605-239">[Using the PolicyActivity Activity](http://go.microsoft.com/fwlink/?LinkId=178521) and <xref:System.Workflow.Activities.PolicyActivity></span></span>|  
   
- <span data-ttu-id="65586-240">在 [!INCLUDE[netfx_current_short](../../../includes/netfx-current-short-md.md)] 中建立的工作流程不會使用 [!INCLUDE[wf1](../../../includes/wf1-md.md)] 提供的所有規則功能，例如宣告式活動條件及條件式活動 (例如 <xref:System.Workflow.Activities.ConditionedActivityGroup> 和 <xref:System.Workflow.Activities.ReplicatorActivity>)。</span><span class="sxs-lookup"><span data-stu-id="65586-240">Workflows created in [!INCLUDE[netfx_current_short](../../../includes/netfx-current-short-md.md)] do not use all of the rules features provided by [!INCLUDE[wf1](../../../includes/wf1-md.md)], such as declarative activity conditions and conditional activities such as the <xref:System.Workflow.Activities.ConditionedActivityGroup> and <xref:System.Workflow.Activities.ReplicatorActivity>.</span></span> <span data-ttu-id="65586-241">如有必要，這個功能可供以 [!INCLUDE[vstecwinfx](../../../includes/vstecwinfx-md.md)] 和 [!INCLUDE[netfx35_short](../../../includes/netfx35-short-md.md)] 建立的工作流程使用。</span><span class="sxs-lookup"><span data-stu-id="65586-241">If required, this functionality is available for workflows created using [!INCLUDE[vstecwinfx](../../../includes/vstecwinfx-md.md)] and [!INCLUDE[netfx35_short](../../../includes/netfx35-short-md.md)].</span></span> [!INCLUDE[crdefault](../../../includes/crdefault-md.md)]<span data-ttu-id="65586-242">[移轉指引](../../../docs/framework/windows-workflow-foundation/migration-guidance.md)。</span><span class="sxs-lookup"><span data-stu-id="65586-242"> [Migration Guidance](../../../docs/framework/windows-workflow-foundation/migration-guidance.md).</span></span>
+ <span data-ttu-id="b7605-240">在 [!INCLUDE[netfx_current_short](../../../includes/netfx-current-short-md.md)] 中建立的工作流程不會使用 [!INCLUDE[wf1](../../../includes/wf1-md.md)] 提供的所有規則功能，例如宣告式活動條件及條件式活動 (例如 <xref:System.Workflow.Activities.ConditionedActivityGroup> 和 <xref:System.Workflow.Activities.ReplicatorActivity>)。</span><span class="sxs-lookup"><span data-stu-id="b7605-240">Workflows created in [!INCLUDE[netfx_current_short](../../../includes/netfx-current-short-md.md)] do not use all of the rules features provided by [!INCLUDE[wf1](../../../includes/wf1-md.md)], such as declarative activity conditions and conditional activities such as the <xref:System.Workflow.Activities.ConditionedActivityGroup> and <xref:System.Workflow.Activities.ReplicatorActivity>.</span></span> <span data-ttu-id="b7605-241">如有必要，這個功能可供以 [!INCLUDE[vstecwinfx](../../../includes/vstecwinfx-md.md)] 和 [!INCLUDE[netfx35_short](../../../includes/netfx35-short-md.md)] 建立的工作流程使用。</span><span class="sxs-lookup"><span data-stu-id="b7605-241">If required, this functionality is available for workflows created using [!INCLUDE[vstecwinfx](../../../includes/vstecwinfx-md.md)] and [!INCLUDE[netfx35_short](../../../includes/netfx35-short-md.md)].</span></span> <span data-ttu-id="b7605-242">如需詳細資訊，請參閱[移轉指引](../../../docs/framework/windows-workflow-foundation/migration-guidance.md)。</span><span class="sxs-lookup"><span data-stu-id="b7605-242">For more information, see [Migration Guidance](../../../docs/framework/windows-workflow-foundation/migration-guidance.md).</span></span>
