@@ -1,90 +1,87 @@
 ---
-title: "使用 F # 使用 Azure 封裝管理"
-description: "使用 Paket 或 Nuget 來管理 F # Azure 相依性"
-keywords: "visual f #、 f #，功能性程式設計，.NET 中，.NET Core，Azure"
+title: '使用 F # 使用 Azure 封裝管理'
+description: '使用 Paket 或 Nuget 來管理 F # Azure 相依性'
 author: sylvanc
 ms.author: phcart
 ms.date: 09/20/2016
-ms.topic: article
-ms.prod: .net
-ms.technology: devlang-fsharp
+ms.topic: conceptual
+ms.prod: dotnet-fsharp
 ms.devlang: fsharp
-ms.assetid: dd32ef9c-5416-467e-9fa3-c9ee3bb08456
-ms.openlocfilehash: d1a807053f5c4c45492f206739922aacdf6d4122
-ms.sourcegitcommit: 655fd4f78741967f80c409cef98347fdcf77857d
+ms.openlocfilehash: da6938c6ee29292571f4269c68a9148c13738422
+ms.sourcegitcommit: 03ee570f6f528a7d23a4221dcb26a9498edbdf8c
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 02/28/2018
+ms.lasthandoff: 04/28/2018
 ---
-# <a name="package-management-for-f-azure-dependencies"></a><span data-ttu-id="0a12b-104">F# Azure 相依性的套件管理</span><span class="sxs-lookup"><span data-stu-id="0a12b-104">Package Management for F# Azure Dependencies</span></span>
+# <a name="package-management-for-f-azure-dependencies"></a><span data-ttu-id="9fbb2-103">F# Azure 相依性的套件管理</span><span class="sxs-lookup"><span data-stu-id="9fbb2-103">Package Management for F# Azure Dependencies</span></span>
 
-<span data-ttu-id="0a12b-105">當您使用封裝管理員時，取得 Azure 開發的封裝很容易。</span><span class="sxs-lookup"><span data-stu-id="0a12b-105">Obtaining packages for Azure development is easy when you use a package manager.</span></span> <span data-ttu-id="0a12b-106">有兩種選項[Paket](https://fsprojects.github.io/Paket/)和[NuGet](https://www.nuget.org/)。</span><span class="sxs-lookup"><span data-stu-id="0a12b-106">The two options are [Paket](https://fsprojects.github.io/Paket/) and [NuGet](https://www.nuget.org/).</span></span>
+<span data-ttu-id="9fbb2-104">當您使用封裝管理員時，取得 Azure 開發的封裝很容易。</span><span class="sxs-lookup"><span data-stu-id="9fbb2-104">Obtaining packages for Azure development is easy when you use a package manager.</span></span> <span data-ttu-id="9fbb2-105">有兩種選項[Paket](https://fsprojects.github.io/Paket/)和[NuGet](https://www.nuget.org/)。</span><span class="sxs-lookup"><span data-stu-id="9fbb2-105">The two options are [Paket](https://fsprojects.github.io/Paket/) and [NuGet](https://www.nuget.org/).</span></span>
 
-## <a name="using-paket"></a><span data-ttu-id="0a12b-107">使用 Paket</span><span class="sxs-lookup"><span data-stu-id="0a12b-107">Using Paket</span></span>
+## <a name="using-paket"></a><span data-ttu-id="9fbb2-106">使用 Paket</span><span class="sxs-lookup"><span data-stu-id="9fbb2-106">Using Paket</span></span>
 
-<span data-ttu-id="0a12b-108">如果您使用[Paket](https://fsprojects.github.io/Paket/)為相依性管理員中，您可以使用`paket.exe`工具來加入 Azure 相依性。</span><span class="sxs-lookup"><span data-stu-id="0a12b-108">If you're using [Paket](https://fsprojects.github.io/Paket/) as your dependency manager, you can use the `paket.exe` tool to add Azure dependencies.</span></span> <span data-ttu-id="0a12b-109">例如: </span><span class="sxs-lookup"><span data-stu-id="0a12b-109">For example:</span></span>
+<span data-ttu-id="9fbb2-107">如果您使用[Paket](https://fsprojects.github.io/Paket/)為相依性管理員中，您可以使用`paket.exe`工具來加入 Azure 相依性。</span><span class="sxs-lookup"><span data-stu-id="9fbb2-107">If you're using [Paket](https://fsprojects.github.io/Paket/) as your dependency manager, you can use the `paket.exe` tool to add Azure dependencies.</span></span> <span data-ttu-id="9fbb2-108">例如: </span><span class="sxs-lookup"><span data-stu-id="9fbb2-108">For example:</span></span>
 
     > paket add nuget WindowsAzure.Storage
 
-<span data-ttu-id="0a12b-110">或者，如果您使用[Mono](https://www.mono-project.com/)適用於跨平台.NET 開發：</span><span class="sxs-lookup"><span data-stu-id="0a12b-110">Or, if you're using [Mono](https://www.mono-project.com/) for cross-platform .NET development:</span></span>
+<span data-ttu-id="9fbb2-109">或者，如果您使用[Mono](https://www.mono-project.com/)適用於跨平台.NET 開發：</span><span class="sxs-lookup"><span data-stu-id="9fbb2-109">Or, if you're using [Mono](https://www.mono-project.com/) for cross-platform .NET development:</span></span>
 
     > mono paket.exe add nuget WindowsAzure.Storage
 
-<span data-ttu-id="0a12b-111">這會新增`WindowsAzure.Storage`至目前目錄中專案的封裝相依性的設定，修改`paket.dependencies`檔案，並下載套件。</span><span class="sxs-lookup"><span data-stu-id="0a12b-111">This will add `WindowsAzure.Storage` to your set of package dependencies for the project in the current directory, modify the `paket.dependencies` file, and download the package.</span></span> <span data-ttu-id="0a12b-112">如果您先前設定的相依性，或使用專案所在的相依性已設定由另一個開發人員，您可以解決並安裝相依項目在本機像這樣：</span><span class="sxs-lookup"><span data-stu-id="0a12b-112">If you have previously set up dependencies, or are working with a project where dependencies have been set up by another developer, you can resolve and install dependencies locally like this:</span></span>
+<span data-ttu-id="9fbb2-110">這會新增`WindowsAzure.Storage`至目前目錄中專案的封裝相依性的設定，修改`paket.dependencies`檔案，並下載套件。</span><span class="sxs-lookup"><span data-stu-id="9fbb2-110">This will add `WindowsAzure.Storage` to your set of package dependencies for the project in the current directory, modify the `paket.dependencies` file, and download the package.</span></span> <span data-ttu-id="9fbb2-111">如果您先前設定的相依性，或使用專案所在的相依性已設定由另一個開發人員，您可以解決並安裝相依項目在本機像這樣：</span><span class="sxs-lookup"><span data-stu-id="9fbb2-111">If you have previously set up dependencies, or are working with a project where dependencies have been set up by another developer, you can resolve and install dependencies locally like this:</span></span>
 
     > paket install
 
-<span data-ttu-id="0a12b-113">或者，若為單聲道開發：</span><span class="sxs-lookup"><span data-stu-id="0a12b-113">Or, for Mono development:</span></span>
+<span data-ttu-id="9fbb2-112">或者，若為單聲道開發：</span><span class="sxs-lookup"><span data-stu-id="9fbb2-112">Or, for Mono development:</span></span>
 
     > mono paket.exe install
 
-<span data-ttu-id="0a12b-114">您可以更新所有套件相依性的最新版本，就像這樣：</span><span class="sxs-lookup"><span data-stu-id="0a12b-114">You can update all your package dependencies to the latest version like this:</span></span>
+<span data-ttu-id="9fbb2-113">您可以更新所有套件相依性的最新版本，就像這樣：</span><span class="sxs-lookup"><span data-stu-id="9fbb2-113">You can update all your package dependencies to the latest version like this:</span></span>
 
     > paket update
 
-<span data-ttu-id="0a12b-115">或者，若為單聲道開發：</span><span class="sxs-lookup"><span data-stu-id="0a12b-115">Or, for Mono development:</span></span>
+<span data-ttu-id="9fbb2-114">或者，若為單聲道開發：</span><span class="sxs-lookup"><span data-stu-id="9fbb2-114">Or, for Mono development:</span></span>
 
     > mono paket.exe update
 
-## <a name="using-nuget"></a><span data-ttu-id="0a12b-116">使用 Nuget</span><span class="sxs-lookup"><span data-stu-id="0a12b-116">Using Nuget</span></span>
+## <a name="using-nuget"></a><span data-ttu-id="9fbb2-115">使用 Nuget</span><span class="sxs-lookup"><span data-stu-id="9fbb2-115">Using Nuget</span></span>
 
-<span data-ttu-id="0a12b-117">如果您使用[NuGet](https://www.nuget.org/)為相依性管理員中，您可以使用`nuget.exe`工具來加入 Azure 相依性。</span><span class="sxs-lookup"><span data-stu-id="0a12b-117">If you're using [NuGet](https://www.nuget.org/) as your dependency manager, you can use the `nuget.exe` tool to add Azure dependencies.</span></span> <span data-ttu-id="0a12b-118">例如: </span><span class="sxs-lookup"><span data-stu-id="0a12b-118">For example:</span></span>
+<span data-ttu-id="9fbb2-116">如果您使用[NuGet](https://www.nuget.org/)為相依性管理員中，您可以使用`nuget.exe`工具來加入 Azure 相依性。</span><span class="sxs-lookup"><span data-stu-id="9fbb2-116">If you're using [NuGet](https://www.nuget.org/) as your dependency manager, you can use the `nuget.exe` tool to add Azure dependencies.</span></span> <span data-ttu-id="9fbb2-117">例如: </span><span class="sxs-lookup"><span data-stu-id="9fbb2-117">For example:</span></span>
 
     > nuget install WindowsAzure.Storage -ExcludeVersion
 
-<span data-ttu-id="0a12b-119">或者，若為單聲道開發：</span><span class="sxs-lookup"><span data-stu-id="0a12b-119">Or, for Mono development:</span></span>
+<span data-ttu-id="9fbb2-118">或者，若為單聲道開發：</span><span class="sxs-lookup"><span data-stu-id="9fbb2-118">Or, for Mono development:</span></span>
 
     > mono nuget.exe install WindowsAzure.Storage -ExcludeVersion
 
-<span data-ttu-id="0a12b-120">這會新增`WindowsAzure.Storage`至目前的目錄和下載封裝中的專案的封裝相依性的設定。</span><span class="sxs-lookup"><span data-stu-id="0a12b-120">This will add `WindowsAzure.Storage` to your set of package dependencies for the project in the current directory, and download the package.</span></span> <span data-ttu-id="0a12b-121">如果您先前設定的相依性，或使用專案所在的相依性已設定由另一個開發人員，您可以解決並安裝相依項目在本機像這樣：</span><span class="sxs-lookup"><span data-stu-id="0a12b-121">If you have previously set up dependencies, or are working with a project where dependencies have been set up by another developer, you can resolve and install dependencies locally like this:</span></span>
+<span data-ttu-id="9fbb2-119">這會新增`WindowsAzure.Storage`至目前的目錄和下載封裝中的專案的封裝相依性的設定。</span><span class="sxs-lookup"><span data-stu-id="9fbb2-119">This will add `WindowsAzure.Storage` to your set of package dependencies for the project in the current directory, and download the package.</span></span> <span data-ttu-id="9fbb2-120">如果您先前設定的相依性，或使用專案所在的相依性已設定由另一個開發人員，您可以解決並安裝相依項目在本機像這樣：</span><span class="sxs-lookup"><span data-stu-id="9fbb2-120">If you have previously set up dependencies, or are working with a project where dependencies have been set up by another developer, you can resolve and install dependencies locally like this:</span></span>
 
     > nuget restore 
 
-<span data-ttu-id="0a12b-122">或者，若為單聲道開發：</span><span class="sxs-lookup"><span data-stu-id="0a12b-122">Or, for Mono development:</span></span>
+<span data-ttu-id="9fbb2-121">或者，若為單聲道開發：</span><span class="sxs-lookup"><span data-stu-id="9fbb2-121">Or, for Mono development:</span></span>
 
     > mono nuget.exe restore
 
-<span data-ttu-id="0a12b-123">您可以更新所有套件相依性的最新版本，就像這樣：</span><span class="sxs-lookup"><span data-stu-id="0a12b-123">You can update all your package dependencies to the latest version like this:</span></span>
+<span data-ttu-id="9fbb2-122">您可以更新所有套件相依性的最新版本，就像這樣：</span><span class="sxs-lookup"><span data-stu-id="9fbb2-122">You can update all your package dependencies to the latest version like this:</span></span>
 
     > nuget update
 
-<span data-ttu-id="0a12b-124">或者，若為單聲道開發：</span><span class="sxs-lookup"><span data-stu-id="0a12b-124">Or, for Mono development:</span></span>
+<span data-ttu-id="9fbb2-123">或者，若為單聲道開發：</span><span class="sxs-lookup"><span data-stu-id="9fbb2-123">Or, for Mono development:</span></span>
 
     > mono nuget.exe update
 
-## <a name="referencing-assemblies"></a><span data-ttu-id="0a12b-125">參考組件</span><span class="sxs-lookup"><span data-stu-id="0a12b-125">Referencing Assemblies</span></span>
+## <a name="referencing-assemblies"></a><span data-ttu-id="9fbb2-124">參考組件</span><span class="sxs-lookup"><span data-stu-id="9fbb2-124">Referencing Assemblies</span></span>
 
-<span data-ttu-id="0a12b-126">若要在 F # 指令碼中使用您的封裝，您需要參考組件中使用的封裝包含`#r`指示詞。</span><span class="sxs-lookup"><span data-stu-id="0a12b-126">In order to use your packages in your F# script, you need to reference the assemblies included in the packages using a `#r` directive.</span></span> <span data-ttu-id="0a12b-127">例如: </span><span class="sxs-lookup"><span data-stu-id="0a12b-127">For example:</span></span>
+<span data-ttu-id="9fbb2-125">若要在 F # 指令碼中使用您的封裝，您需要參考組件中使用的封裝包含`#r`指示詞。</span><span class="sxs-lookup"><span data-stu-id="9fbb2-125">In order to use your packages in your F# script, you need to reference the assemblies included in the packages using a `#r` directive.</span></span> <span data-ttu-id="9fbb2-126">例如: </span><span class="sxs-lookup"><span data-stu-id="9fbb2-126">For example:</span></span>
 
     > #r "packages/WindowsAzure.Storage/lib/net40/Microsoft.WindowsAzure.Storage.dll"
 
-<span data-ttu-id="0a12b-128">如您所見，您必須指定 DLL 和完整的 DLL 名稱可能不完全與封裝名稱相同的相對路徑。</span><span class="sxs-lookup"><span data-stu-id="0a12b-128">As you can see, you'll need to specify the relative path to the DLL and the full DLL name, which may not be exactly the same as the package name.</span></span> <span data-ttu-id="0a12b-129">路徑必須包含的 framework 版本，可能是封裝的版本號碼。</span><span class="sxs-lookup"><span data-stu-id="0a12b-129">The path will include a framework version and possibly a package version number.</span></span> <span data-ttu-id="0a12b-130">若要尋找所有已安裝的組件，您可以使用類似下面的 Windows 命令列上：</span><span class="sxs-lookup"><span data-stu-id="0a12b-130">To find all the installed assemblies, you can use something like this on a Windows command line:</span></span>
+<span data-ttu-id="9fbb2-127">如您所見，您必須指定 DLL 和完整的 DLL 名稱可能不完全與封裝名稱相同的相對路徑。</span><span class="sxs-lookup"><span data-stu-id="9fbb2-127">As you can see, you'll need to specify the relative path to the DLL and the full DLL name, which may not be exactly the same as the package name.</span></span> <span data-ttu-id="9fbb2-128">路徑必須包含的 framework 版本，可能是封裝的版本號碼。</span><span class="sxs-lookup"><span data-stu-id="9fbb2-128">The path will include a framework version and possibly a package version number.</span></span> <span data-ttu-id="9fbb2-129">若要尋找所有已安裝的組件，您可以使用類似下面的 Windows 命令列上：</span><span class="sxs-lookup"><span data-stu-id="9fbb2-129">To find all the installed assemblies, you can use something like this on a Windows command line:</span></span>
 
     > cd packages/WindowsAzure.Storage
     > dir /s/b *.dll
 
-<span data-ttu-id="0a12b-131">或 Unix 殼層，如下：</span><span class="sxs-lookup"><span data-stu-id="0a12b-131">Or in a Unix shell, something like this:</span></span>
+<span data-ttu-id="9fbb2-130">或 Unix 殼層，如下：</span><span class="sxs-lookup"><span data-stu-id="9fbb2-130">Or in a Unix shell, something like this:</span></span>
 
     > find packages/WindowsAzure.Storage -name "*.dll"
 
-<span data-ttu-id="0a12b-132">這可讓您的路徑已安裝的組件。</span><span class="sxs-lookup"><span data-stu-id="0a12b-132">This will give you the paths to the installed assemblies.</span></span> <span data-ttu-id="0a12b-133">從該處，您可以選取 framework 版本的正確路徑。</span><span class="sxs-lookup"><span data-stu-id="0a12b-133">From there, you can select the correct path for your framework version.</span></span>
+<span data-ttu-id="9fbb2-131">這可讓您的路徑已安裝的組件。</span><span class="sxs-lookup"><span data-stu-id="9fbb2-131">This will give you the paths to the installed assemblies.</span></span> <span data-ttu-id="9fbb2-132">從該處，您可以選取 framework 版本的正確路徑。</span><span class="sxs-lookup"><span data-stu-id="9fbb2-132">From there, you can select the correct path for your framework version.</span></span>
