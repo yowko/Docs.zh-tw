@@ -1,28 +1,28 @@
 ---
-title: "設定訊息記錄"
-ms.custom: 
+title: 設定訊息記錄
+ms.custom: ''
 ms.date: 03/30/2017
 ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
+ms.reviewer: ''
+ms.suite: ''
 ms.technology:
 - dotnet-clr
-ms.tgt_pltfrm: 
+ms.tgt_pltfrm: ''
 ms.topic: article
 helpviewer_keywords:
 - message logging [WCF]
 ms.assetid: 0ff4c857-8f09-4b85-9dc0-89084706e4c9
-caps.latest.revision: 
+caps.latest.revision: 40
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
 ms.workload:
 - dotnet
-ms.openlocfilehash: a867d5f85177ad9a19a5766c65a8f1f98c04cd17
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.openlocfilehash: 63bdbc68851ace71b3afef30e274b9821ed1ad5f
+ms.sourcegitcommit: 03ee570f6f528a7d23a4221dcb26a9498edbdf8c
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 04/28/2018
 ---
 # <a name="configuring-message-logging"></a>設定訊息記錄
 本主題描述如何針對不同的案例設定訊息記錄。  
@@ -58,7 +58,7 @@ ms.lasthandoff: 12/22/2017
 </system.serviceModel>  
 ```  
   
- [!INCLUDE[crabout](../../../../includes/crabout-md.md)]訊息記錄設定，請參閱[追蹤和訊息記錄的建議設定](../../../../docs/framework/wcf/diagnostics/tracing/recommended-settings-for-tracing-and-message-logging.md)。  
+ [!INCLUDE[crabout](../../../../includes/crabout-md.md)] 訊息記錄設定，請參閱[追蹤和訊息記錄的建議設定](../../../../docs/framework/wcf/diagnostics/tracing/recommended-settings-for-tracing-and-message-logging.md)。  
   
  您可以使用 `add` 來指定所要使用之接聽項的名稱和型別。 在範例組態中，我們已將接聽項命名為 "messages"，並且加入標準 .NET Framework 追蹤接聽項 (`System.Diagnostics.XmlWriterTraceListener`) 做為要使用的型別。 如果您要使用 `System.Diagnostics.XmlWriterTraceListener`，就必須在組態檔中指定輸出檔案位置和名稱。 將 `initializeData` 設定為記錄檔的名稱，即可做到這點。 否則，系統會擲回例外狀況 (Exception)。 您也可以實作會將記錄發出到預設檔案的自訂接聽項。  
   
@@ -73,7 +73,7 @@ ms.lasthandoff: 12/22/2017
 <source name="System.ServiceModel.MessageLogging" switchValue="Verbose">  
 ```  
   
- 如果想要停用追蹤來源，您就應該改成使用 `logMessagesAtServiceLevel` 項目的 `logMalformedMessages`、`logMessagesAtTransportLevel` 及 `messageLogging` 屬性。 您應該將所有這些屬性都設定為 `false`。 使用先前程式碼範例中的組態檔、透過組態編輯器 UI 介面，或是使用 WMI，都可以做到這點。 [!INCLUDE[crabout](../../../../includes/crabout-md.md)]設定編輯器 」 工具，請參閱[組態編輯器工具 (SvcConfigEditor.exe)](../../../../docs/framework/wcf/configuration-editor-tool-svcconfigeditor-exe.md)。 [!INCLUDE[crabout](../../../../includes/crabout-md.md)]WMI 中，請參閱[使用 Windows Management Instrumentation 進行診斷](../../../../docs/framework/wcf/diagnostics/wmi/index.md)。  
+ 如果想要停用追蹤來源，您就應該改成使用 `logMessagesAtServiceLevel` 項目的 `logMalformedMessages`、`logMessagesAtTransportLevel` 及 `messageLogging` 屬性。 您應該將所有這些屬性都設定為 `false`。 使用先前程式碼範例中的組態檔、透過組態編輯器 UI 介面，或是使用 WMI，都可以做到這點。 [!INCLUDE[crabout](../../../../includes/crabout-md.md)] 設定編輯器 」 工具，請參閱[組態編輯器工具 (SvcConfigEditor.exe)](../../../../docs/framework/wcf/configuration-editor-tool-svcconfigeditor-exe.md)。 [!INCLUDE[crabout](../../../../includes/crabout-md.md)] WMI 中，請參閱[使用 Windows Management Instrumentation 進行診斷](../../../../docs/framework/wcf/diagnostics/wmi/index.md)。  
   
 ## <a name="logging-levels-and-options"></a>記錄層級和選項  
  對於傳入的訊息，系統會緊接在訊息形成之後、在訊息到達服務層級中的使用者程式碼之前，以及在偵測到格式錯誤的訊息時進行記錄。  
@@ -107,7 +107,7 @@ ms.lasthandoff: 12/22/2017
   
  如果組態檔中未定義追蹤接聽項，則無論指定的記錄層級為何，都不會產生記錄輸出。  
   
- 包含本節所描述屬性的訊息記錄選項，可以在執行階段使用 Windows Management Instrumentation (WMI) 來加以變更。 這可藉由存取[AppDomainInfo](../../../../docs/framework/wcf/diagnostics/wmi/appdomaininfo.md)會公開下列布林值屬性執行個體： `LogMessagesAtServiceLevel`， `LogMessagesAtTransportLevel`，和`LogMalformedMessages`。 因此，如果您為訊息記錄設定一個追蹤接聽項，但在組態中將這些選項設定為 `false`，那麼您可以在稍後應用程式執行時，將選項變更為 `true`。 這會在執行階段有效地啟用訊息記錄。 同樣地，如果您在組態檔中啟用訊息記錄，則您可以在執行階段使用 WMI 來停用訊息記錄。 [!INCLUDE[crdefault](../../../../includes/crdefault-md.md)][使用 Windows Management Instrumentation 進行診斷](../../../../docs/framework/wcf/diagnostics/wmi/index.md)。  
+ 包含本節所描述屬性的訊息記錄選項，可以在執行階段使用 Windows Management Instrumentation (WMI) 來加以變更。 這可藉由存取[AppDomainInfo](../../../../docs/framework/wcf/diagnostics/wmi/appdomaininfo.md)會公開下列布林值屬性執行個體： `LogMessagesAtServiceLevel`， `LogMessagesAtTransportLevel`，和`LogMalformedMessages`。 因此，如果您為訊息記錄設定一個追蹤接聽項，但在組態中將這些選項設定為 `false`，那麼您可以在稍後應用程式執行時，將選項變更為 `true`。 這會在執行階段有效地啟用訊息記錄。 同樣地，如果您在組態檔中啟用訊息記錄，則您可以在執行階段使用 WMI 來停用訊息記錄。 如需詳細資訊，請參閱[使用 Windows Management Instrumentation 進行診斷](../../../../docs/framework/wcf/diagnostics/wmi/index.md)。  
   
  訊息記錄中的 `source` 欄位會指定要用哪種內容來記錄訊息：何時傳送/接收要求訊息、針對要求-回覆或單向要求、在服務模型或傳輸層，或是在發生格式錯誤訊息的情況下。  
   
@@ -176,7 +176,7 @@ ms.lasthandoff: 12/22/2017
   
  請注意，`type` 屬性應該設定為此型別的限定組件名稱。  
   
-## <a name="see-also"></a>請參閱  
+## <a name="see-also"></a>另請參閱  
  [\<messageLogging >](../../../../docs/framework/configure-apps/file-schema/wcf/messagelogging.md)  
  [訊息記錄](../../../../docs/framework/wcf/diagnostics/message-logging.md)  
  [追蹤與訊息記錄的建議設定](../../../../docs/framework/wcf/diagnostics/tracing/recommended-settings-for-tracing-and-message-logging.md)

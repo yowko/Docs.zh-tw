@@ -4,17 +4,17 @@ description: 透過逐步使用 MSTest 建置範例 Visual Basic 方案的互動
 author: billwagner
 ms.author: wiwagn
 ms.date: 09/01/2017
-ms.topic: article
+ms.topic: conceptual
 dev_langs:
 - vb
-ms.prod: .net-core
+ms.prod: dotnet-core
 ms.workload:
 - dotnetcore
-ms.openlocfilehash: 667dd6ab5ee226edd6e5f57f2eff053f4758ac50
-ms.sourcegitcommit: b750a8e3979749b214e7e10c82efb0a0524dfcb1
+ms.openlocfilehash: c573d0a4eae38a15f22730748022effdc00ff0a6
+ms.sourcegitcommit: 03ee570f6f528a7d23a4221dcb26a9498edbdf8c
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/09/2018
+ms.lasthandoff: 04/28/2018
 ---
 # <a name="unit-testing-visual-basic-net-core-libraries-using-dotnet-test-and-mstest"></a>使用 dotnet test 與 MStest 為 Visual Basic .NET Core 程式庫進行單元測試
 

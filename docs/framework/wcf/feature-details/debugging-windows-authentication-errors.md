@@ -1,12 +1,13 @@
 ---
-title: "偵錯 Windows 驗證錯誤"
-ms.custom: 
+title: 偵錯 Windows 驗證錯誤
+ms.custom: ''
 ms.date: 03/30/2017
 ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.technology: dotnet-clr
-ms.tgt_pltfrm: 
+ms.reviewer: ''
+ms.suite: ''
+ms.technology:
+- dotnet-clr
+ms.tgt_pltfrm: ''
 ms.topic: article
 dev_langs:
 - csharp
@@ -15,16 +16,17 @@ helpviewer_keywords:
 - WCF, authentication
 - WCF, Windows authentication
 ms.assetid: 181be4bd-79b1-4a66-aee2-931887a6d7cc
-caps.latest.revision: "21"
+caps.latest.revision: 21
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.workload: dotnet
-ms.openlocfilehash: b24d5a8ebccbd454579394a986614e0d40d8d0e6
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.workload:
+- dotnet
+ms.openlocfilehash: e6efcb5097729ac5f096e78883e9bc49598c9a37
+ms.sourcegitcommit: 03ee570f6f528a7d23a4221dcb26a9498edbdf8c
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 04/28/2018
 ---
 # <a name="debugging-windows-authentication-errors"></a>偵錯 Windows 驗證錯誤
 當使用 Windows 驗證做為安全性機制時，安全性支援提供者介面 (SSPI) 便會處理安全性程序。 當安全性錯誤發生在 SSPI 層時，這些錯誤會由 [!INCLUDE[indigo1](../../../../includes/indigo1-md.md)] 提出。 本主題會提供可協助診斷這些錯誤的架構與問題集。  
@@ -73,11 +75,11 @@ ms.lasthandoff: 12/22/2017
 ### <a name="kerberos-protocol"></a>Kerberos 通訊協定  
   
 #### <a name="spnupn-problems-with-the-kerberos-protocol"></a>Kerberos 通訊協定的 SPN/UPN 問題  
- 當使用 Windows 驗證，而且 SSPI 有使用或交涉 Kerberos 通訊協定時，用戶端端點所使用的 URL 就必須包含在服務 URL 內之服務主機的完整網域名稱。 這是假設執行服務的帳戶具有存取權的電腦新增到 Active Directory 網域，這最常由執行此服務時，會建立此電腦 （預設值） 服務主要名稱 (SPN) 金鑰網路服務帳戶。 如果服務無法存取電腦 SPN 金鑰，您就必須在用戶端端點身分識別中，提供用來執行服務之帳戶的正確 SPN 或使用者主要名稱 (UPN)。 [!INCLUDE[crabout](../../../../includes/crabout-md.md)]如何[!INCLUDE[indigo2](../../../../includes/indigo2-md.md)]搭配 SPN 和 UPN，請參閱[服務識別和驗證](../../../../docs/framework/wcf/feature-details/service-identity-and-authentication.md)。  
+ 當使用 Windows 驗證，而且 SSPI 有使用或交涉 Kerberos 通訊協定時，用戶端端點所使用的 URL 就必須包含在服務 URL 內之服務主機的完整網域名稱。 這是假設執行服務的帳戶具有存取權的電腦新增到 Active Directory 網域，這最常由執行此服務時，會建立此電腦 （預設值） 服務主要名稱 (SPN) 金鑰網路服務帳戶。 如果服務無法存取電腦 SPN 金鑰，您就必須在用戶端端點身分識別中，提供用來執行服務之帳戶的正確 SPN 或使用者主要名稱 (UPN)。 [!INCLUDE[crabout](../../../../includes/crabout-md.md)] 如何[!INCLUDE[indigo2](../../../../includes/indigo2-md.md)]搭配 SPN 和 UPN，請參閱[服務識別和驗證](../../../../docs/framework/wcf/feature-details/service-identity-and-authentication.md)。  
   
  在負載平衡的使用案例 (例如 Web 伺服陣列與 Web 處理序區) 中，常見的作法是為每一個應用程式定義一個唯一的帳戶、指派一個 SPN 給該帳戶，並且確保應用程式的所有服務都以該帳戶執行。  
   
- 如果您要取得服務帳戶的 SPN，您必須是 Active Directory 網域的管理員。 [!INCLUDE[crdefault](../../../../includes/crdefault-md.md)][適用於 Windows 的 Kerberos 技術補充](http://go.microsoft.com/fwlink/?LinkID=88330)。  
+ 如果您要取得服務帳戶的 SPN，您必須是 Active Directory 網域的管理員。 如需詳細資訊，請參閱[補充 Windows 的 Kerberos 技術](http://go.microsoft.com/fwlink/?LinkID=88330)。  
   
 #### <a name="kerberos-protocol-direct-requires-the-service-to-run-under-a-domain-machine-account"></a>Kerberos 通訊協定 Direct 要求使用網域電腦帳戶來執行服務。  
  當 `ClientCredentialType` 屬性設定為 `Windows`，而且 <xref:System.ServiceModel.MessageSecurityOverHttp.NegotiateServiceCredential%2A> 屬性設定為 `false` 時，便會發生這種情況，如下列程式碼所示。  
@@ -132,7 +134,7 @@ ms.lasthandoff: 12/22/2017
  [!code-csharp[C_DebuggingWindowsAuth#6](../../../../samples/snippets/csharp/VS_Snippets_CFX/c_debuggingwindowsauth/cs/source.cs#6)]
  [!code-vb[C_DebuggingWindowsAuth#6](../../../../samples/snippets/visualbasic/VS_Snippets_CFX/c_debuggingwindowsauth/vb/source.vb#6)]  
   
- [!INCLUDE[crabout](../../../../includes/crabout-md.md)]模擬，請參閱[委派和模擬](../../../../docs/framework/wcf/feature-details/delegation-and-impersonation-with-wcf.md)。  
+ [!INCLUDE[crabout](../../../../includes/crabout-md.md)] 模擬，請參閱[委派和模擬](../../../../docs/framework/wcf/feature-details/delegation-and-impersonation-with-wcf.md)。  
   
  或者，用戶端會使用內建帳戶 SYSTEM 來執行為 Windows 服務。  
   
@@ -155,7 +157,7 @@ ms.lasthandoff: 12/22/2017
 #### <a name="developing-and-deploying-with-different-identities"></a>以不同的身分進行開發及部署  
  如果您在某一台電腦上開發應用程式，然後又在另一台電腦上進行部署，而且在每一台電腦上都使用不同的帳戶類型進行驗證，您可能會產生不同的行為。 例如，假設您是使用 `SSPI Negotiated`驗證模式，在 Windows XP Pro 機器上開發應用程式。 您又使用本機使用者帳戶進行身分驗證，然後又使用了 NTLM 通訊協定。 應用程式開發完成後，您以網域帳戶先在 Windows Server 2003 機器上部署服務而後執行。 此時，用戶端將無法驗證該服務，因為用戶端使用的是 Kerberos 及網域控制站。  
   
-## <a name="see-also"></a>請參閱  
+## <a name="see-also"></a>另請參閱  
  <xref:System.ServiceModel.Security.WindowsClientCredential>  
  <xref:System.ServiceModel.Security.WindowsServiceCredential>  
  <xref:System.ServiceModel.Security.WindowsClientCredential>  

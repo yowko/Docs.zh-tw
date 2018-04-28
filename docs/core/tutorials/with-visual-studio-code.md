@@ -1,19 +1,19 @@
 ---
-title: "C# 與 Visual Studio Code 使用者入門 - C# 指南"
-description: "了解如何在 C# 中使用 Visual Studio Code 建立您的第一個 .NET Core 應用程式並進行偵錯。"
+title: C# 與 Visual Studio Code 使用者入門 - C# 指南
+description: 了解如何在 C# 中使用 Visual Studio Code 建立並偵錯您的第一個 .NET Core 應用程式。
 author: kendrahavens
 ms.author: mairaw
 ms.date: 09/27/2017
-ms.topic: article
+ms.topic: conceptual
 ms.prod: .net
 ms.technology: devlang-csharp
 ms.workload:
 - dotnetcore
-ms.openlocfilehash: 0c37040220bb7f38cdd75176bb9ed2a2199b7096
-ms.sourcegitcommit: 099aa20d9b6450d1b7452d782a55771a6ad8ff35
+ms.openlocfilehash: d4ee1c9ef66ef61156453786f65d16470d7a5ea2
+ms.sourcegitcommit: 03ee570f6f528a7d23a4221dcb26a9498edbdf8c
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 02/05/2018
+ms.lasthandoff: 04/28/2018
 ---
 # <a name="get-started-with-c-and-visual-studio-code"></a>C# 與 Visual Studio Code 使用者入門
 
@@ -46,7 +46,7 @@ ms.lasthandoff: 02/05/2018
 
 3. 解析組建資產：
 
-    * 針對 **.NET Core 1.x**，輸入 `dotnet restore`。 執行 `dotnet restore` 可讓您存取建置專案所需的必要 .NET Core 封裝。
+    * 針對 **.NET Core 1.x**，鍵入 `dotnet restore`。 執行 `dotnet restore` 可讓您存取建置專案所需的必要 .NET Core 封裝。
 
       ![DotNet 還原命令](media/with-visual-studio-code/dotnetrestore.png)
 
@@ -58,7 +58,7 @@ ms.lasthandoff: 02/05/2018
 
       ![DotNet 執行命令](media/with-visual-studio-code/dotnetrun.png)
 
-您也可以觀看簡短的影片教學課程，以取得 [Windows](https://channel9.msdn.com/Blogs/dotnet/Get-started-with-VS-Code-using-CSharp-and-NET-Core)、[macOS](https://channel9.msdn.com/Blogs/dotnet/Get-started-with-VS-Code-using-CSharp-and-NET-Core-on-MacOS) 或 [Linux](https://channel9.msdn.com/Blogs/dotnet/Get-started-with-VS-Code-Csharp-dotnet-Core-Ubuntu) 上的進一步設定說明。
+您也可以觀看簡短的影片教學課程，以取得 [Windows (英文)](https://channel9.msdn.com/Blogs/dotnet/Get-started-with-VS-Code-using-CSharp-and-NET-Core)、[macOS (英文)](https://channel9.msdn.com/Blogs/dotnet/Get-started-with-VS-Code-using-CSharp-and-NET-Core-on-MacOS) 或 [Linux (英文)](https://channel9.msdn.com/Blogs/dotnet/Get-started-with-VS-Code-Csharp-dotnet-Core-Ubuntu) 上的進一步設定說明。
 
 ## <a name="debug"></a>偵錯
 
@@ -66,7 +66,7 @@ ms.lasthandoff: 02/05/2018
 
     ![開啟 Program.cs 檔案](media/with-visual-studio-code/opencs.png)
 
-2. Visual Studio Code 應該會提示您新增遺失的資產，以建置您的應用程式並進行偵錯。 選取 [是]。 
+2. Visual Studio Code 應該會提示您新增遺失的資產，以建置和偵錯您的應用程式。 選取 [是]。 
 
     ![遺失資產的提示](media/with-visual-studio-code/missing-assets.png)
 
@@ -78,7 +78,7 @@ ms.lasthandoff: 02/05/2018
 
     ![選取 .NET Core](media/with-visual-studio-code/selectcore.png)
 
-5. 按一下第 9 行旁邊的**編輯器邊界** (編輯器中行號左側的空白處)，將中斷點新增至您的專案。
+5. 按一下第 9 行旁邊的「編輯器邊界」(編輯器中行號左側的空白處)，將中斷點新增至您的專案。
 
     ![設定中斷點](media/with-visual-studio-code/setbreakpoint.png)
 
@@ -90,8 +90,8 @@ ms.lasthandoff: 02/05/2018
 7. 選取頂端的綠色箭頭以繼續偵錯，或者選取頂端的紅色正方形以停止偵錯。
 
 > [!TIP] 
-> 如需在 Visual Studio Code 中使用 OmniSharp 進行 .NET Core 偵錯的詳細資訊與疑難排解祕訣，請參閱[設定 .NET Core 偵錯工具的指示](https://github.com/OmniSharp/omnisharp-vscode/blob/master/debugger.md) \(英文\)。
+> 如需在 Visual Studio Code 中使用 OmniSharp 進行 .NET Core 偵錯的詳細資訊與疑難排解祕訣，請參閱 [Instructions for setting up the .NET Core debugger](https://github.com/OmniSharp/omnisharp-vscode/blob/master/debugger.md) (設定 .NET Core 偵錯工具的指示)。
 
 ## <a name="see-also"></a>另請參閱
 [設定 Visual Studio Code](https://code.visualstudio.com/docs/setup/setup-overview)   
-[在 Visual Studio Code 中偵錯](https://code.visualstudio.com/Docs/editor/debugging) \(英文\)
+[在 Visual Studio Code 中偵錯 (英文)](https://code.visualstudio.com/Docs/editor/debugging)

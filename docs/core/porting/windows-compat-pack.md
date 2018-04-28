@@ -1,18 +1,18 @@
 ---
-title: "移植到 .NET Core - 使用 Windows 相容性套件"
-description: "了解 Windows 相容性套件，以及如何使用它將現有的 .NET Framework 程式碼移植到 .NET Core"
-keywords: ".NET, .NET Core, Windows, 相容性"
+title: 移植到 .NET Core - 使用 Windows 相容性套件
+description: 了解 Windows 相容性套件，以及如何使用它將現有的 .NET Framework 程式碼移植到 .NET Core
 author: terrajobst
 ms.author: mairaw
 ms.date: 11/13/2017
-ms.topic: article
-ms.prod: .net-core
-ms.workload: dotnetcore
-ms.openlocfilehash: 3b1fe02aad4f78499158ecb7fa9b8521cb7d992e
-ms.sourcegitcommit: e7f04439d78909229506b56935a1105a4149ff3d
+ms.topic: conceptual
+ms.prod: dotnet-core
+ms.workload:
+- dotnetcore
+ms.openlocfilehash: 4ef7d9c847d48ae7bbb2d553b1c05cb90a1c5a7a
+ms.sourcegitcommit: 03ee570f6f528a7d23a4221dcb26a9498edbdf8c
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 12/23/2017
+ms.lasthandoff: 04/28/2018
 ---
 # <a name="using-the-windows-compatibility-pack"></a>使用 Windows 相容性套件
 

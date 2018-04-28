@@ -1,20 +1,17 @@
 ---
-title: "以 Windows 8 上的 .NET Framework 2.0 為目標平台"
-description: "深入了解使用 F # 時，目標為舊版的.NET Framework。"
-keywords: "Visual F#, F#, 函式程式設計"
+title: 以 Windows 8 上的 .NET Framework 2.0 為目標平台
+description: '深入了解使用 F # 時，目標為舊版的.NET Framework。'
 author: cartermp
 ms.author: phcart
 ms.date: 05/16/2016
 ms.topic: language-reference
-ms.prod: .net
-ms.technology: devlang-fsharp
+ms.prod: dotnet-fsharp
 ms.devlang: fsharp
-ms.assetid: 63989543-95c3-4ab7-81f3-3834a8b15010
-ms.openlocfilehash: 2c0191267da5bee7b844c11cdee168ccfb3321c4
-ms.sourcegitcommit: bd1ef61f4bb794b25383d3d72e71041a5ced172e
+ms.openlocfilehash: 7c9bd8087da94a476105729b6f5b050fc66629a2
+ms.sourcegitcommit: 03ee570f6f528a7d23a4221dcb26a9498edbdf8c
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/18/2017
+ms.lasthandoff: 04/28/2018
 ---
 # <a name="targeting-older-versions-of-net"></a>以舊版 .NET 為目標
 
@@ -55,7 +52,7 @@ This project requires the 2.0 F# runtime, but that runtime is not installed.
 2. 選擇**控制台**圖示，選擇**程式**圖示，然後選擇 **開啟或關閉 Windows 功能**連結。
 <br />
 
-3. 請確定**.NET Framework 3.5 （包括.NET 2.0 和 3.0）**核取方塊已選取，然後選擇**確定** 按鈕。
+3. 請確定 **.NET Framework 3.5 （包括.NET 2.0 和 3.0）**核取方塊已選取，然後選擇**確定** 按鈕。
 <br />  您不需要選取核取方塊，任何的子節點的.NET framework 的選擇性元件。
 <br />  如果尚未，啟用.NET Framework 3.5。
 <br />

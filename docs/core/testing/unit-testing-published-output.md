@@ -1,17 +1,18 @@
 ---
-title: "使用 dotnet vstest 測試已發行的輸出"
-description: "了解如何使用 dotnet vstest 命令在已發行的輸出上執行測試。"
+title: 使用 dotnet vstest 測試已發行的輸出
+description: 了解如何使用 dotnet vstest 命令在已發行的輸出上執行測試。
 author: kendrahavens
 ms.author: kehavens
 ms.date: 10/18/2017
-ms.topic: article
-ms.prod: .net-core
-ms.workload: dotnetcore
-ms.openlocfilehash: 373c557d3fc640ed9071a732bba9f082ca6a4d33
-ms.sourcegitcommit: e7f04439d78909229506b56935a1105a4149ff3d
+ms.topic: conceptual
+ms.prod: dotnet-core
+ms.workload:
+- dotnetcore
+ms.openlocfilehash: 2f750a8bb0907069691c4a4491beeb4b1733df29
+ms.sourcegitcommit: 03ee570f6f528a7d23a4221dcb26a9498edbdf8c
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 12/23/2017
+ms.lasthandoff: 04/28/2018
 ---
 # <a name="test-published-output-with-dotnet-vstest"></a>使用 dotnet vstest 測試已發行的輸出
 

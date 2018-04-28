@@ -1,35 +1,35 @@
 ---
-title: "稽核安全性事件"
-ms.custom: 
+title: 稽核安全性事件
+ms.custom: ''
 ms.date: 03/30/2017
 ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
+ms.reviewer: ''
+ms.suite: ''
 ms.technology:
 - dotnet-clr
-ms.tgt_pltfrm: 
+ms.tgt_pltfrm: ''
 ms.topic: article
 helpviewer_keywords:
 - auditing security events [WCF]
 ms.assetid: 5633f61c-a3c9-40dd-8070-1c373b66a716
-caps.latest.revision: 
+caps.latest.revision: 27
 author: BrucePerlerMS
 ms.author: bruceper
 manager: mbaldwin
 ms.workload:
 - dotnet
-ms.openlocfilehash: cb8f112c71c743fd6650baf04b8db55ceaeef4ae
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.openlocfilehash: 948ff11cf1b7ecacc6f9f5fdebfc3a0cbd1ef5b1
+ms.sourcegitcommit: 03ee570f6f528a7d23a4221dcb26a9498edbdf8c
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 04/28/2018
 ---
 # <a name="auditing-security-events"></a>稽核安全性事件
 以 [!INCLUDE[indigo1](../../../../includes/indigo1-md.md)] 建立的應用程式可以使用稽核功能記錄安全性事件 (可能為成功、失敗或兩者並存)。 事件會寫入至 Windows 系統事件記錄檔，並且可以使用 [事件檢視器] 加以檢查。  
   
  稽核為系統管理員提供了一種方法，可偵測已發生或正在進行的攻擊。 此外，稽核可以協助開發人員偵錯安全性相關的問題。 例如，若授權的組態中出現錯誤，或是在檢查原則時不小心拒絕了某個授權使用者的存取，則開發人員可以藉由檢查事件日誌，快速地探索及隔離導致這個錯誤的原因。  
   
- [!INCLUDE[crabout](../../../../includes/crabout-md.md)][!INCLUDE[indigo2](../../../../includes/indigo2-md.md)]安全性，請參閱[安全性概觀](../../../../docs/framework/wcf/feature-details/security-overview.md)。 [!INCLUDE[crabout](../../../../includes/crabout-md.md)]程式設計[!INCLUDE[indigo2](../../../../includes/indigo2-md.md)]，請參閱[基本 WCF 程式設計](../../../../docs/framework/wcf/basic-wcf-programming.md)。  
+ [!INCLUDE[crabout](../../../../includes/crabout-md.md)] [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] 安全性，請參閱[安全性概觀](../../../../docs/framework/wcf/feature-details/security-overview.md)。 [!INCLUDE[crabout](../../../../includes/crabout-md.md)] 程式設計[!INCLUDE[indigo2](../../../../includes/indigo2-md.md)]，請參閱[基本 WCF 程式設計](../../../../docs/framework/wcf/basic-wcf-programming.md)。  
   
 ## <a name="audit-level-and-behavior"></a>稽核層級和行為  
  安全性稽核目前有兩種層級：  
@@ -41,7 +41,7 @@ ms.lasthandoff: 12/22/2017
  您可以檢查兩種稽核層級為成功或失敗，也就是*稽核行為*。  
   
 ## <a name="audit-log-location"></a>稽核記錄檔的位置  
- 決定稽核層級和行為後，您 (或系統管理員) 就可以指定稽核記錄檔的位置。 您有三種選擇，包括：預設、應用程式和安全性。 指定為 [預設] 時，實際的記錄檔取決於您所使用的系統，以及該系統是否支援寫入至安全性記錄檔。 [!INCLUDE[crdefault](../../../../includes/crdefault-md.md)]本主題稍後的＜作業系統＞一節。  
+ 決定稽核層級和行為後，您 (或系統管理員) 就可以指定稽核記錄檔的位置。 您有三種選擇，包括：預設、應用程式和安全性。 指定為 [預設] 時，實際的記錄檔取決於您所使用的系統，以及該系統是否支援寫入至安全性記錄檔。 如需詳細資訊，請參閱本主題稍後的 < 作業系統 > 一節。  
   
  若要寫入安全性記錄檔，您必須具備 `SeAuditPrivilege`。 根據預設，只有本機系統帳戶和網路服務帳戶具有此權限。 若要管理安全性記錄函式 `read` 和 `delete`，您必須具備 `SeSecurityPrivilege`。 根據預設，只有系統管理員具有此權限。  
   
@@ -86,10 +86,10 @@ ms.lasthandoff: 12/22/2017
 </configuration>  
 ```  
   
- 如果已啟用稽核，但未指定 `auditLogLocation`，則支援寫入至安全性記錄檔的平台會使用的預設記錄名稱為「安全性」記錄檔，否則便是「應用程式」記錄檔。 只有 [!INCLUDE[ws2003](../../../../includes/ws2003-md.md)] 和 [!INCLUDE[wv](../../../../includes/wv-md.md)] 作業系統支援寫入至安全性記錄檔。 [!INCLUDE[crdefault](../../../../includes/crdefault-md.md)]本主題稍後的＜作業系統＞一節。  
+ 如果已啟用稽核，但未指定 `auditLogLocation`，則支援寫入至安全性記錄檔的平台會使用的預設記錄名稱為「安全性」記錄檔，否則便是「應用程式」記錄檔。 只有 [!INCLUDE[ws2003](../../../../includes/ws2003-md.md)] 和 [!INCLUDE[wv](../../../../includes/wv-md.md)] 作業系統支援寫入至安全性記錄檔。 如需詳細資訊，請參閱本主題稍後的 < 作業系統 > 一節。  
   
 ## <a name="security-considerations"></a>安全性考量  
- 如果惡意使用者得知已啟用稽核，攻擊者就可以傳送無效的訊息，而造成寫入稽核項目。 如果是因為這個方法而填滿稽核記錄檔，稽核系統就會失敗。 若要減輕這個威脅，請將 <xref:System.ServiceModel.Description.ServiceSecurityAuditBehavior.SuppressAuditFailure%2A> 屬性設定為 `true`，並使用 [事件檢視器] 的屬性來控制稽核行為。 [!INCLUDE[crdefault](../../../../includes/crdefault-md.md)]在您檢視和管理事件記錄檔可在 Windows XP 中使用事件檢視器的 Microsoft 支援文章[如何檢視及管理在 Windows XP 中的事件檢視器中的事件記錄檔](http://go.microsoft.com/fwlink/?LinkId=89150)。  
+ 如果惡意使用者得知已啟用稽核，攻擊者就可以傳送無效的訊息，而造成寫入稽核項目。 如果是因為這個方法而填滿稽核記錄檔，稽核系統就會失敗。 若要減輕這個威脅，請將 <xref:System.ServiceModel.Description.ServiceSecurityAuditBehavior.SuppressAuditFailure%2A> 屬性設定為 `true`，並使用 [事件檢視器] 的屬性來控制稽核行為。 如需詳細資訊，請參閱 Microsoft 技術支援文件上檢視及管理使用事件檢視器可在 Windows XP 中的事件記錄檔[如何檢視及管理在 Windows XP 中的事件檢視器中的事件記錄檔](http://go.microsoft.com/fwlink/?LinkId=89150)。  
   
  在 [!INCLUDE[wxp](../../../../includes/wxp-md.md)] 上，任何通過驗證的使用者都可以檢視寫入 [應用程式記錄檔] 的稽核事件。  
   
@@ -111,7 +111,7 @@ ms.lasthandoff: 12/22/2017
 |稽核原則管理|不適用。|安全性記錄檔也可以藉由本機安全性授權 (LSA) 原則與組態來加以控制。 您也必須啟用 [稽核物件存取] 類別。|  
 |預設的使用者經驗|所有通過驗證的使用者都可以寫入應用程式記錄檔，因此不需要為應用程式處理序額外執行設定權限的步驟。|應用程式處理序 (內容) 必須具有 `SeAuditPrivilege`。|  
   
-## <a name="see-also"></a>請參閱  
+## <a name="see-also"></a>另請參閱  
  <xref:System.ServiceModel.Description.ServiceSecurityAuditBehavior>  
  <xref:System.ServiceModel.AuditLogLocation>  
  [安全性概觀](../../../../docs/framework/wcf/feature-details/security-overview.md)  

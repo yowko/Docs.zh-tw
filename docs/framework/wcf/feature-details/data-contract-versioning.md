@@ -1,12 +1,13 @@
 ---
-title: "資料合約版本控制"
-ms.custom: 
+title: 資料合約版本控制
+ms.custom: ''
 ms.date: 03/30/2017
 ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.technology: dotnet-clr
-ms.tgt_pltfrm: 
+ms.reviewer: ''
+ms.suite: ''
+ms.technology:
+- dotnet-clr
+ms.tgt_pltfrm: ''
 ms.topic: article
 dev_langs:
 - csharp
@@ -16,16 +17,17 @@ helpviewer_keywords:
 - versioning [WCF]
 - data contracts [WCF], versioning
 ms.assetid: 4a0700cb-5f5f-4137-8705-3a3ecf06461f
-caps.latest.revision: "35"
+caps.latest.revision: 35
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.workload: dotnet
-ms.openlocfilehash: e9773725a0d4626a8488249ead6440ad67a2a14a
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.workload:
+- dotnet
+ms.openlocfilehash: f232cb1cf98fe01aa0542c2a4b459fb7fc7b5089
+ms.sourcegitcommit: 03ee570f6f528a7d23a4221dcb26a9498edbdf8c
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 04/28/2018
 ---
 # <a name="data-contract-versioning"></a>資料合約版本控制
 隨著應用程式的發展，您也必須變更服務所使用的資料合約。 本主題說明如何設定資料合約的版本。 本主題描述資料合約版本控制的機制。 如需完整的概觀和規定的版本控制指導方針，請參閱[最佳做法： 資料合約版本控制](../../../../docs/framework/wcf/best-practices-data-contract-versioning.md)。  
@@ -114,19 +116,19 @@ ms.lasthandoff: 12/22/2017
   
  如果要求嚴格遵循結構描述，則許多被視為是不中斷的變更實際上是中斷變更。 在上述範例中，只具有 `CarV1` 項目的 `Model` 執行個體會根據 `CarV2` 結構描述 (即具有 `Model` 和 `Horsepower` 兩者，但兩者皆是選用項目) 進行驗證。 不過，反向並不成立：`CarV2` 執行個體根據 `CarV1` 結構描述所進行的驗證則可能會失敗。  
   
- 往返還需要一些其他考量。 [!INCLUDE[crdefault](../../../../includes/crdefault-md.md)]「 結構描述考量 > 一節中[向前相容資料合約](../../../../docs/framework/wcf/feature-details/forward-compatible-data-contracts.md)。  
+ 往返還需要一些其他考量。 如需詳細資訊，請參閱中的 < 結構描述考量 > 一節[向前相容資料合約](../../../../docs/framework/wcf/feature-details/forward-compatible-data-contracts.md)。  
   
 ### <a name="other-permitted-changes"></a>其他允許的變更  
- 實作 <xref:System.Runtime.Serialization.IExtensibleDataObject> 介面為不中斷變更。 不過，實作 <xref:System.Runtime.Serialization.IExtensibleDataObject> 的版本之前的類型版本，並不存在反覆存取支援。 [!INCLUDE[crdefault](../../../../includes/crdefault-md.md)][向前相容資料合約](../../../../docs/framework/wcf/feature-details/forward-compatible-data-contracts.md)。  
+ 實作 <xref:System.Runtime.Serialization.IExtensibleDataObject> 介面為不中斷變更。 不過，實作 <xref:System.Runtime.Serialization.IExtensibleDataObject> 的版本之前的類型版本，並不存在反覆存取支援。 如需詳細資訊，請參閱[向前相容資料合約](../../../../docs/framework/wcf/feature-details/forward-compatible-data-contracts.md)。  
   
 ## <a name="enumerations"></a>列舉  
- 新增或移除列舉型別成員是中斷變更。 變更列舉型別成員的名稱是中斷變更，除非其合約名稱保持為與舊版中使用 `EnumMemberAtttribute` 屬性的名稱相同。 [!INCLUDE[crdefault](../../../../includes/crdefault-md.md)][列舉資料合約中的型別](../../../../docs/framework/wcf/feature-details/enumeration-types-in-data-contracts.md)。  
+ 新增或移除列舉型別成員是中斷變更。 變更列舉型別成員的名稱是中斷變更，除非其合約名稱保持為與舊版中使用 `EnumMemberAtttribute` 屬性的名稱相同。 如需詳細資訊，請參閱[列舉資料合約中的型別](../../../../docs/framework/wcf/feature-details/enumeration-types-in-data-contracts.md)。  
   
 ## <a name="collections"></a>集合  
- 大多數的集合變更是不中斷的，因為大部份的集合類型可以在資料合約模型內互相交換。 不過，將非自訂的集合進行自訂 (反之亦然) 則是中斷變更。 同時，變更集合的自訂設定是中斷變更，也就是變更其資料合約名稱和命名空間、重複元素名稱、主要元素名稱，以及值元素名稱。 [!INCLUDE[crabout](../../../../includes/crabout-md.md)]集合自訂化，請參閱[集合資料合約中的型別](../../../../docs/framework/wcf/feature-details/collection-types-in-data-contracts.md)。  
+ 大多數的集合變更是不中斷的，因為大部份的集合類型可以在資料合約模型內互相交換。 不過，將非自訂的集合進行自訂 (反之亦然) 則是中斷變更。 同時，變更集合的自訂設定是中斷變更，也就是變更其資料合約名稱和命名空間、重複元素名稱、主要元素名稱，以及值元素名稱。 [!INCLUDE[crabout](../../../../includes/crabout-md.md)] 集合自訂化，請參閱[集合資料合約中的型別](../../../../docs/framework/wcf/feature-details/collection-types-in-data-contracts.md)。  
 當然，變更集合之內容的資料合約 (例如，從整數的清單變更為字串的清單) 是中斷變更。  
   
-## <a name="see-also"></a>請參閱  
+## <a name="see-also"></a>另請參閱  
  <xref:System.Runtime.Serialization.DataMemberAttribute.Name%2A>  
  <xref:System.Runtime.Serialization.DataMemberAttribute>  
  <xref:System.Runtime.Serialization.DataContractAttribute.Name%2A>  

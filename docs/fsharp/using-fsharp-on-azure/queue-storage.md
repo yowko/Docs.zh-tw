@@ -1,20 +1,17 @@
 ---
-title: "開始使用 Azure 佇列儲存體使用 F #"
-description: "Azure 佇列提供可靠、 非同步應用程式元件之間的訊息。 雲端訊息可讓您獨立擴充的應用程式元件。"
-keywords: "visual f #、 f #，功能性程式設計，.NET 中，.NET Core，Azure"
+title: '開始使用 Azure 佇列儲存體使用 F #'
+description: Azure 佇列提供可靠、 非同步應用程式元件之間的訊息。 雲端訊息可讓您獨立擴充的應用程式元件。
 author: sylvanc
 ms.author: phcart
 ms.date: 09/20/2016
-ms.topic: article
-ms.prod: .net
-ms.technology: devlang-fsharp
+ms.topic: conceptual
+ms.prod: dotnet-fsharp
 ms.devlang: fsharp
-ms.assetid: 70dc554c-8f4d-42a7-8e2a-6438657d012a
-ms.openlocfilehash: 50b2d69a1753add688aa14c3314a0ca2df9f03a4
-ms.sourcegitcommit: 655fd4f78741967f80c409cef98347fdcf77857d
+ms.openlocfilehash: bd49fd0f0e8d91449443051ab9a4ffc2d2638e11
+ms.sourcegitcommit: 03ee570f6f528a7d23a4221dcb26a9498edbdf8c
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 02/28/2018
+ms.lasthandoff: 04/28/2018
 ---
 # <a name="get-started-with-azure-queue-storage-using-f"></a>開始使用 Azure 佇列儲存體使用 F # #
 

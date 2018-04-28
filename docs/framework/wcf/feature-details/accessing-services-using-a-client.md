@@ -19,11 +19,11 @@ ms.author: dotnetcontent
 manager: wpickett
 ms.workload:
 - dotnet
-ms.openlocfilehash: 5258f2eaf9ca60dc43ff8182c058d9c68043200f
-ms.sourcegitcommit: 86adcc06e35390f13c1e372c36d2e044f1fc31ef
+ms.openlocfilehash: 2138a412af30812b4ff443963604dda52eafea11
+ms.sourcegitcommit: 03ee570f6f528a7d23a4221dcb26a9498edbdf8c
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/26/2018
+ms.lasthandoff: 04/28/2018
 ---
 # <a name="accessing-services-using-a-client"></a>使用用戶端存取服務
 用戶端應用程式必須建立、設定，以及使用 [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] 用戶端或通道物件來與服務通訊。 [WCF 用戶端概觀](../../../../docs/framework/wcf/wcf-client-overview.md)主題提供的物件和建立基本用戶端和通道物件，以及使用它們的相關步驟的概觀。  
@@ -53,7 +53,7 @@ ms.lasthandoff: 04/26/2018
 > [!NOTE]
 >  通常嘗試明確地偵測錯的工作階段通道不會有任何效用，因為您收到通知的時間會依工作階段實作而有不同。 例如，由於 <xref:System.ServiceModel.NetTcpBinding?displayProperty=nameWithType> (已停用可靠工作階段) 會面臨 TCP 連線的工作階段，如果您接聽服務或用戶端上的 <xref:System.ServiceModel.ICommunicationObject.Faulted?displayProperty=nameWithType> 事件，您就有可能會在發生網路失敗時立刻收到通知。 但可靠工作階段 (透過已啟用 <xref:System.ServiceModel.Channels.ReliableSessionBindingElement?displayProperty=nameWithType> 的繫結所建立) 是設計用來隔離服務與小型的網路失敗。 如果工作階段可在合理的時間內重新建立，則相同繫結 (針對可靠工作階段所設定) 就可能不會發生錯誤，除非中斷情形持續了更長的一段時間。  
   
- 根據預設，大部分系統提供的繫結 (會將通道公開至應用程式層) 都會使用工作階段，但 <xref:System.ServiceModel.BasicHttpBinding?displayProperty=nameWithType> 則不會。 [!INCLUDE[crdefault](../../../../includes/crdefault-md.md)] [使用工作階段](../../../../docs/framework/wcf/using-sessions.md)。  
+ 根據預設，大部分系統提供的繫結 (會將通道公開至應用程式層) 都會使用工作階段，但 <xref:System.ServiceModel.BasicHttpBinding?displayProperty=nameWithType> 則不會。 如需詳細資訊，請參閱[Sessions<](../../../../docs/framework/wcf/using-sessions.md)。  
   
 ### <a name="the-proper-use-of-sessions"></a>工作階段的正確用法  
  工作階段會提供特定方式來瞭解整個訊息交換是否已經完成，以及兩端是否都認為此工作階段成功。 建議由呼叫應用程式在一個 try 區塊中開啟通道、使用通道，以及關閉通道。 如果工作階段通道已開啟，而呼叫一次 <xref:System.ServiceModel.ICommunicationObject.Close%2A?displayProperty=nameWithType> 方法後有成功傳回該呼叫，就表示工作階段成功。 在這個案例中所謂的成功，是指所有傳遞可保證已達成指定的繫結，而且另一端在呼叫 <xref:System.ServiceModel.ICommunicationObject.Abort%2A?displayProperty=nameWithType> 之前並沒有呼叫通道上的 <xref:System.ServiceModel.ICommunicationObject.Close%2A>。  
@@ -64,7 +64,7 @@ ms.lasthandoff: 04/26/2018
  在用戶端應用程式中處理例外狀況是很直接的工作。 如果通道是在 try 區塊中開啟、使用以及關閉，則除非有擲回例外狀況，否則對話就算成功。 一般來說，如果有擲回例外狀況，對話就會中止。  
   
 > [!NOTE]
->  使用`using`陳述式 (`Using`在 Visual Basic 中) 不建議使用。 這是因為 `using` 陳述式的結尾可能會引發例外狀況而遮蓋掉您想瞭解的其他例外狀況。 [!INCLUDE[crdefault](../../../../includes/crdefault-md.md)] [避免 Using 陳述式發生問題](../../../../docs/framework/wcf/samples/avoiding-problems-with-the-using-statement.md)。  
+>  使用`using`陳述式 (`Using`在 Visual Basic 中) 不建議使用。 這是因為 `using` 陳述式的結尾可能會引發例外狀況而遮蓋掉您想瞭解的其他例外狀況。 如需詳細資訊，請參閱[避免 Using 陳述式的問題](../../../../docs/framework/wcf/samples/avoiding-problems-with-the-using-statement.md)。  
   
  下列程式碼範例會顯示使用 try/catch 區塊而非 `using` 陳述式的建議用戶端模式。  
   
@@ -79,7 +79,7 @@ ms.lasthandoff: 04/26/2018
  更完整與應用程式層級的錯誤訊息工作的相關資訊，請參閱[指定與處理合約和服務中的錯誤](../../../../docs/framework/wcf/specifying-and-handling-faults-in-contracts-and-services.md)。 [預期的例外狀況](../../../../docs/framework/wcf/samples/expected-exceptions.md)描述預期的例外狀況，並示範如何處理它們。 [!INCLUDE[crabout](../../../../includes/crabout-md.md)] 開發通道時處理錯誤，請參閱[處理的例外狀況和錯誤](../../../../docs/framework/wcf/extending/handling-exceptions-and-faults.md)。  
   
 ### <a name="client-blocking-and-performance"></a>用戶端封鎖和效能  
- 當應用程式同步呼叫要求-回覆作業時，除非有收到傳回值或擲回例外狀況 (例如 <xref:System.TimeoutException?displayProperty=nameWithType>)，否則用戶端會封鎖。 這個行為類似本機行為。 當應用程式同步叫用 [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] 用戶端物件或通道上的作業時，除非通道層可以將資料寫入至網路或有擲回例外狀況，否則用戶端不會傳回。 雖然單向訊息交換模式 (指定方式是標示作業的 <xref:System.ServiceModel.OperationContractAttribute.IsOneWay%2A?displayProperty=nameWithType> 設定為 `true`) 可以讓某些用戶端更能有效回應，但單向作業也會根據繫結和已經傳送的訊息來執行封鎖。 單向作業只能進行訊息交換，無法執行其他作業。 [!INCLUDE[crdefault](../../../../includes/crdefault-md.md)] [單向服務](../../../../docs/framework/wcf/feature-details/one-way-services.md)。  
+ 當應用程式同步呼叫要求-回覆作業時，除非有收到傳回值或擲回例外狀況 (例如 <xref:System.TimeoutException?displayProperty=nameWithType>)，否則用戶端會封鎖。 這個行為類似本機行為。 當應用程式同步叫用 [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] 用戶端物件或通道上的作業時，除非通道層可以將資料寫入至網路或有擲回例外狀況，否則用戶端不會傳回。 雖然單向訊息交換模式 (指定方式是標示作業的 <xref:System.ServiceModel.OperationContractAttribute.IsOneWay%2A?displayProperty=nameWithType> 設定為 `true`) 可以讓某些用戶端更能有效回應，但單向作業也會根據繫結和已經傳送的訊息來執行封鎖。 單向作業只能進行訊息交換，無法執行其他作業。 如需詳細資訊，請參閱[單向服務](../../../../docs/framework/wcf/feature-details/one-way-services.md)。  
   
  不論在何種訊息交換模式下，大型資料區塊都會減慢用戶端的處理速度。 若要了解如何處理這些問題，請參閱[大型資料和串流處理](../../../../docs/framework/wcf/feature-details/large-data-and-streaming.md)。  
   

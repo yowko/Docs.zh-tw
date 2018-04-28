@@ -1,24 +1,26 @@
 ---
-title: "建立不含 ASP.NET 的 WCF AJAX 服務"
-ms.custom: 
+title: 建立不含 ASP.NET 的 WCF AJAX 服務
+ms.custom: ''
 ms.date: 03/30/2017
 ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.technology: dotnet-clr
-ms.tgt_pltfrm: 
+ms.reviewer: ''
+ms.suite: ''
+ms.technology:
+- dotnet-clr
+ms.tgt_pltfrm: ''
 ms.topic: article
 ms.assetid: ba4a7d1b-e277-4978-9f62-37684e6dc934
-caps.latest.revision: "7"
+caps.latest.revision: 7
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.workload: dotnet
-ms.openlocfilehash: a9e321a3ea972208bb136c76e52168d89da8d162
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.workload:
+- dotnet
+ms.openlocfilehash: b652bcd522a8eea81b3d1218fbd054ee0b2caea8
+ms.sourcegitcommit: 03ee570f6f528a7d23a4221dcb26a9498edbdf8c
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 04/28/2018
 ---
 # <a name="creating-wcf-ajax-services-without-aspnet"></a>建立不含 ASP.NET 的 WCF AJAX 服務
 [!INCLUDE[indigo1](../../../../includes/indigo1-md.md)] AJAX 服務可以從任何已啟用 JavaScript 的網頁存取，不需要 ASP.NET AJAX。 本主題會說明如何建立此類 [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] 服務。  
@@ -82,7 +84,7 @@ string[] GetCities(string firstLetters);
   
  這項作業是使用 HTTP POST 來存取`http://serviceaddress/endpointaddress/GetCities`並傳回 XML 訊息。  
   
- 您可以使用完整的 Web 程式設計模型來自訂這些基本面。 例如，您可以使用 <xref:System.ServiceModel.Web.WebGetAttribute> 或 <xref:System.ServiceModel.Web.WebInvokeAttribute> 屬性來控制作業回應的 HTTP 動詞命令，或使用這些個別屬性的 `UriTemplate` 屬性來指定自訂 URI。 [!INCLUDE[crdefault](../../../../includes/crdefault-md.md)][WCF Web HTTP 程式設計模型](../../../../docs/framework/wcf/feature-details/wcf-web-http-programming-model.md)主題。  
+ 您可以使用完整的 Web 程式設計模型來自訂這些基本面。 例如，您可以使用 <xref:System.ServiceModel.Web.WebGetAttribute> 或 <xref:System.ServiceModel.Web.WebInvokeAttribute> 屬性來控制作業回應的 HTTP 動詞命令，或使用這些個別屬性的 `UriTemplate` 屬性來指定自訂 URI。 如需詳細資訊，請參閱[WCF Web HTTP 程式設計模型](../../../../docs/framework/wcf/feature-details/wcf-web-http-programming-model.md)主題。  
   
  JSON 資料格式經常用於 AJAX 服務中。 若要建立傳回 JSON 而非 XML 的作業，請將 <xref:System.ServiceModel.Web.WebGetAttribute.ResponseFormat%2A> (或 <xref:System.ServiceModel.Web.WebInvokeAttribute.ResponseFormat%2A>) 屬性設定為 <xref:System.ServiceModel.Web.WebMessageFormat.Json>。 [獨立 JSON 序列化](../../../../docs/framework/wcf/feature-details/stand-alone-json-serialization.md)主題說明如何內建.NET 型別和資料合約型別對應至 JSON。  
   

@@ -18,18 +18,18 @@ ms.author: dotnetcontent
 manager: wpickett
 ms.workload:
 - dotnet
-ms.openlocfilehash: 5f1c7449372ad012280b360c09017a15733fb95b
-ms.sourcegitcommit: 2042de78fcdceebb6b8ac4b7a292b93e8782cbf5
+ms.openlocfilehash: 46bafbb0063f72b56f647caaa9dd0fa2944f3298
+ms.sourcegitcommit: 03ee570f6f528a7d23a4221dcb26a9498edbdf8c
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/27/2018
+ms.lasthandoff: 04/28/2018
 ---
 # <a name="configuring-services-using-configuration-files"></a>使用組態檔設定服務
 使用組態檔來設定 [!INCLUDE[indigo1](../../../includes/indigo1-md.md)] 服務可讓您在部署時 (而不是在設計階段) 彈性提供端點與服務行為資料。 本主題概要說明可用的主要技巧。  
   
  [!INCLUDE[indigo2](../../../includes/indigo2-md.md)] 服務可使用 [!INCLUDE[dnprdnshort](../../../includes/dnprdnshort-md.md)] 組態技術來設定。 最常見的是，會將 XML 項目新增至裝載 [!INCLUDE[indigo2](../../../includes/indigo2-md.md)] 服務的網際網路資訊服務 (IIS) 網站的 Web.config 檔案。 這些項目允許您變更詳細資料，例如各電腦的端點位址 (用於與服務通訊的實際位址)。 此外， [!INCLUDE[indigo2](../../../includes/indigo2-md.md)] 還包含了一些系統提供的項目，方便您快速選取最基本的服務功能。 從 [!INCLUDE[netfx40_long](../../../includes/netfx40-long-md.md)]開始， [!INCLUDE[indigo2](../../../includes/indigo2-md.md)] 隨附可簡化 [!INCLUDE[indigo2](../../../includes/indigo2-md.md)] 組態需求的新預設組態模型。 如果您沒有對特定服務提供任何 [!INCLUDE[indigo2](../../../includes/indigo2-md.md)] 組態，執行階段會以一些標準端點和預設繫結/行為來設定服務。 事實上，撰寫組態是程式設計 [!INCLUDE[indigo2](../../../includes/indigo2-md.md)] 應用程式的主要部分。  
   
- [!INCLUDE[crdefault](../../../includes/crdefault-md.md)] [設定服務的繫結](../../../docs/framework/wcf/configuring-bindings-for-wcf-services.md)。 如需的最常用的項目，請參閱 <<c0> [ 之繫結](../../../docs/framework/wcf/system-provided-bindings.md)。 [!INCLUDE[crabout](../../../includes/crabout-md.md)] 預設端點、繫結和行為的詳細資訊，請參閱 [Simplified Configuration](../../../docs/framework/wcf/simplified-configuration.md) and [Simplified Configuration for WCF Services](../../../docs/framework/wcf/samples/simplified-configuration-for-wcf-services.md).  
+ 如需詳細資訊，請參閱[設定服務的繫結](../../../docs/framework/wcf/configuring-bindings-for-wcf-services.md)。 如需的最常用的項目，請參閱 <<c0> [ 之繫結](../../../docs/framework/wcf/system-provided-bindings.md)。 [!INCLUDE[crabout](../../../includes/crabout-md.md)] 預設端點、繫結和行為的詳細資訊，請參閱 [Simplified Configuration](../../../docs/framework/wcf/simplified-configuration.md) and [Simplified Configuration for WCF Services](../../../docs/framework/wcf/samples/simplified-configuration-for-wcf-services.md).  
   
 > [!IMPORTANT]
 >  部署並存案例時，如果部署了兩個不同的服務版本，您就必須指定組態檔所參考之組件的部分名稱。 這是因為組態檔會在所有服務版本之間共用，而且它們可能會在不同的 .NET Framework 版本底下執行。  

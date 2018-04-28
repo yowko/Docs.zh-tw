@@ -1,29 +1,27 @@
 ---
-title: "在 Visual Studio 2017 中使用 .NET Core 測試類別庫"
-description: "了解如何使用 Visual Studio 2017 測試以 C# 撰寫的類別庫"
-keywords: ".NET Core, .NET 標準類別庫, Visual Studio 2017, 單元測試"
+title: 在 Visual Studio 2017 中使用 .NET Core 測試類別庫
+description: 了解如何使用 Visual Studio 2017 測試以 C# 撰寫的類別庫
 author: BillWagner
 ms.author: wiwagn
 ms.date: 08/07/2017
-ms.topic: article
-ms.prod: .net-core
+ms.topic: conceptual
+ms.prod: dotnet-core
 ms.technology: devlang-csharp
 ms.devlang: csharp
-ms.assetid: 069ad711-3eaa-45c6-94d7-b40249cc8b99
 dev_langs:
 - csharp
 - vb
 ms.workload:
 - dotnetcore
-ms.openlocfilehash: fb5a23ccdcacadd70a58ec6c9a35fbee86af667b
-ms.sourcegitcommit: e7f04439d78909229506b56935a1105a4149ff3d
+ms.openlocfilehash: 0356ea286238f4b722a42795c9456f7532766f7d
+ms.sourcegitcommit: 03ee570f6f528a7d23a4221dcb26a9498edbdf8c
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 12/23/2017
+ms.lasthandoff: 04/28/2018
 ---
 # <a name="testing-a-class-library-with-net-core-in-visual-studio-2017"></a>在 Visual Studio 2017 中使用 .NET Core 測試類別庫
 
-於[在 Visual Studio 2017 中使用 C# 和 .NET Core 建置類別庫](library-with-visual-studio.md)或[在 Visual Studio 2017 中使用 Visual Basic 和 .NET Core 建置類別庫](vb-library-with-visual-studio.md)中，您建立了一個將擴充方法新增至 <xref:System.String> 類別的簡易類別庫。 現在我們將建立單元測試，確定它如預期般運作。 我們會將我們的單元測試專案加入在上一個主題中建立的方案。
+於[在 Visual Studio 2017 中使用 C# 和 .NET Core 建置類別庫](library-with-visual-studio.md)或[在 Visual Studio 2017 中使用 Visual Basic 和 .NET Core 建置類別庫](vb-library-with-visual-studio.md)中，您建立了一個將擴充方法新增至 <xref:System.String> 類別的簡易類別庫。 現在我們將建立單元測試，確定它如預期般運作。 您會將您的單元測試專案新增至上一個主題中所建立的方案。
 
 ## <a name="creating-a-unit-test-project"></a>建立單元測試專案
 
@@ -119,7 +117,7 @@ Assert 方法 | 功能
 
    請注意，您在 `TestStartsWithUpper` 方法中的大寫字元測試包含希臘文大寫字母 alpha (U+0391) 和斯拉夫文大寫字母 EM (U+041C)，`TestDoesNotStartWithUpper` 方法中的小寫字元測試包含希臘文小寫字母 alpha (U+03B1) 和斯拉夫文小寫字母 Ghe (U+0433)。
 
-1. 在功能表列上，選擇 **[檔案]** > **[將 UnitTest1.cs As 另存為]**。 在 **[另存新檔]** 對話方塊中，選擇 **[儲存]** 按鈕旁的箭號，然後選擇 **[以編碼方式儲存]***。
+1. 在功能表列上，選取 [檔案] >  [將 UnitTest1.cs As 另存為]。 在 **[另存新檔]** 對話方塊中，選擇 **[儲存]** 按鈕旁的箭號，然後選擇 **[以編碼方式儲存]***。
 
    ![[另存新檔] 對話方塊](./media/testing-library-with-visual-studio/savefileas.png)
 # <a name="visual-basictabvisual-basic"></a>[Visual Basic](#tab/visual-basic) 
@@ -134,15 +132,15 @@ Assert 方法 | 功能
    ![[另存新檔] 對話方塊](./media/testing-library-with-visual-studio/savefileas.png)
 ---
 
-1. 在 **[確認另存新檔]** 對話方塊中，選擇 **[是]** 按鈕以儲存檔案。
+1. 在 [確認另存新檔] 對話方塊中，選取 [是] 按鈕以儲存檔案。
 
-1. 在 **[進階儲存選項]** 對話方塊的，選取 **[編碼]** 下拉式清單中選擇 **[Unicode (UTF-8 有簽章) - 字碼頁 65001]**，然後選擇 **[確定]**。
+1. 在 [進階儲存選項] 對話方塊中，選取 [編碼] 下拉式清單中的 [Unicode (UTF-8 有簽章) - 字碼頁 65001]，然後選取 [確定]。
 
    ![[進階儲存選項] 對話方塊](./media/testing-library-with-visual-studio/advancedsaveoptions.png)
 
    如果您無法將您的原始程式碼儲存為 UTF8 編碼檔案，Visual Studio 可能會將它儲存為 ASCII 檔案。 發生該情況時，執行階段無法正確解碼 ASCII 範圍之外的 UTF8 字元，因此測試結果將不精確。
 
-1. 在功能表列上，選擇 **[測試]** > **[執行]** > **[所有測試]**。 **[測試總管]** 視窗隨即開啟並顯示測試成功執行。 這三項測試都會列在 [通過的測試] 區段中，而 [摘要] 區段則報告測試回合的結果。
+1. 在功能表列上，選擇 **[測試]** > **[執行]** > **[所有測試]**。 [測試總管] 視窗隨即開啟並顯示測試成功執行。 這三項測試都會列在 [通過的測試] 區段中，而 [摘要] 區段則報告測試回合的結果。
 
    ![[測試總管] 視窗](./media/testing-library-with-visual-studio/firsttest.png)
 
@@ -165,7 +163,7 @@ Assert 方法 | 功能
 
    ![[測試總管] 視窗](./media/testing-library-with-visual-studio/failedtest.png)
 
-1. 在 **[失敗的測試]** 區段中選擇失敗的測試 `TestDoesNotStartWith`。 **[測試總管]** 下方的窗格會顯示判斷提示產生的訊息：「Assert.IsFalse 失敗。 預期為 'Error': false; 實際為: True」。 因為發生失敗，陣列中 "Error" 之後的所有字串並未經過測試。
+1. 在 [失敗的測試] 區段中，選取失敗的測試 `TestDoesNotStartWith`。 **[測試總管]** 下方的窗格會顯示判斷提示產生的訊息：「Assert.IsFalse 失敗。 'Error' 的預期︰false；實際：True」。 因為發生失敗，陣列中 "Error" 之後的所有字串並未經過測試。
 
    ![[測試總管] 視窗顯示「為 False」的判斷提示失敗](./media/testing-library-with-visual-studio/failedtestdetail.png)
 

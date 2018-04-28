@@ -16,16 +16,16 @@ ms.author: dotnetcontent
 manager: wpickett
 ms.workload:
 - dotnet
-ms.openlocfilehash: 1e81a8eb27725edeccf3e5c7489109ba47b70dec
-ms.sourcegitcommit: 86adcc06e35390f13c1e372c36d2e044f1fc31ef
+ms.openlocfilehash: 4e2afa9e868c1f561aed699a2bdf7d09c17898b3
+ms.sourcegitcommit: 03ee570f6f528a7d23a4221dcb26a9498edbdf8c
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/26/2018
+ms.lasthandoff: 04/28/2018
 ---
 # <a name="hosting-in-a-managed-application"></a>在 Managed 應用程式中裝載
 [!INCLUDE[indigo1](../../../../includes/indigo1-md.md)] 服務可以裝載於任何 [!INCLUDE[dnprdnshort](../../../../includes/dnprdnshort-md.md)] 應用程式中。 自我裝載服務是最彈性的裝載選項，因為它只需要最基本的基礎結構就可部署。 但是，它同時也是最不穩固的裝載選項，因為 Managed 應用程式無法在 [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] 中提供其他裝載選項的進階裝載與管理功能，例如網際網路資訊服務 (IIS) 和 Windows 服務。  
   
- 若要建立自我裝載服務，請建立並開啟 <xref:System.ServiceModel.ServiceHost>的執行個體，以便啟動服務來接聽訊息。 [!INCLUDE[crdefault](../../../../includes/crdefault-md.md)] [如何： 將 WCF 服務裝載於 Managed 應用程式](../../../../docs/framework/wcf/how-to-host-a-wcf-service-in-a-managed-application.md)。  
+ 若要建立自我裝載服務，請建立並開啟 <xref:System.ServiceModel.ServiceHost>的執行個體，以便啟動服務來接聽訊息。 如需詳細資訊，請參閱[How to： 裝載中受管理的應用程式的 WCF 服務](../../../../docs/framework/wcf/how-to-host-a-wcf-service-in-a-managed-application.md)。  
   
  如需如何定義合約、 實作合約，以及裝載內部的受管理的應用程式服務的完整範例，請參閱[入門教學課程](../../../../docs/framework/wcf/getting-started-tutorial.md)和[自我裝載](../../../../docs/framework/wcf/samples/self-host.md)。  
   

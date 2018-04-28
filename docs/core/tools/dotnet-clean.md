@@ -1,18 +1,19 @@
 ---
-title: "dotnet clean 命令 - .NET Core CLI"
-description: "dotnet clean 命令會清除目前的目錄。"
+title: dotnet clean 命令 - .NET Core CLI
+description: dotnet clean 命令會清除目前的目錄。
 author: mairaw
 ms.author: mairaw
 ms.date: 08/13/2017
-ms.topic: article
-ms.prod: .net-core
+ms.topic: conceptual
+ms.prod: dotnet-core
 ms.technology: dotnet-cli
-ms.workload: dotnetcore
-ms.openlocfilehash: f56ccc485884114262cd1364cf9398e302f2c48a
-ms.sourcegitcommit: e7f04439d78909229506b56935a1105a4149ff3d
+ms.workload:
+- dotnetcore
+ms.openlocfilehash: 92db35df770b1e1d2438127c4b529d4cb480c8df
+ms.sourcegitcommit: 03ee570f6f528a7d23a4221dcb26a9498edbdf8c
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 12/23/2017
+ms.lasthandoff: 04/28/2018
 ---
 # <a name="dotnet-clean"></a>dotnet-clean
 

@@ -1,32 +1,34 @@
 ---
-title: "HOW TO：安全中繼資料端點"
-ms.custom: 
+title: HOW TO：安全中繼資料端點
+ms.custom: ''
 ms.date: 03/30/2017
 ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.technology: dotnet-clr
-ms.tgt_pltfrm: 
+ms.reviewer: ''
+ms.suite: ''
+ms.technology:
+- dotnet-clr
+ms.tgt_pltfrm: ''
 ms.topic: article
 dev_langs:
 - csharp
 - vb
 ms.assetid: 9f71b6ae-737c-4382-8d89-0a7b1c7e182b
-caps.latest.revision: "13"
+caps.latest.revision: 13
 author: BrucePerlerMS
 ms.author: bruceper
 manager: mbaldwin
-ms.workload: dotnet
-ms.openlocfilehash: 6923703230d6792d8938de149f64c41a3bf95699
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.workload:
+- dotnet
+ms.openlocfilehash: 50a62366063123de9e1773b2926f79b76a1b1c3b
+ms.sourcegitcommit: 03ee570f6f528a7d23a4221dcb26a9498edbdf8c
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 04/28/2018
 ---
 # <a name="how-to-secure-metadata-endpoints"></a>HOW TO：安全中繼資料端點
 服務的中繼資料可能包含有關應用程式而可能會遭到惡意使用者利用的敏感資訊。 服務的取用者也可能會要求安全機制來取得關於服務的中繼資料。 因此，有時候會需要使用安全端點來發行中繼資料。  
   
- 為了保護應用程式端點，中繼資料端點安全通常會以定義於 [!INCLUDE[indigo1](../../../../includes/indigo1-md.md)] 的標準安全性機制進行保護  ([!INCLUDE[crdefault](../../../../includes/crdefault-md.md)] [安全性概觀](../../../../docs/framework/wcf/feature-details/security-overview.md)。)  
+ 為了保護應用程式端點，中繼資料端點安全通常會以定義於 [!INCLUDE[indigo1](../../../../includes/indigo1-md.md)] 的標準安全性機制進行保護  (如需詳細資訊，請參閱[安全性概觀](../../../../docs/framework/wcf/feature-details/security-overview.md)。)  
   
  本主題會逐步解說建立受 Secure Sockets Layer (SSL) 憑證保護之端點 (也就是 HTTPS 端點) 的步驟。  
   
@@ -103,7 +105,7 @@ ms.lasthandoff: 12/22/2017
   
 -   <xref:System.ServiceModel.Description?displayProperty=nameWithType>  
   
-## <a name="see-also"></a>請參閱  
+## <a name="see-also"></a>另請參閱  
  <xref:System.ServiceModel.Description.ServiceMetadataBehavior.HttpsGetEnabled%2A>  
  <xref:System.ServiceModel.Description.ServiceMetadataBehavior>  
  <xref:System.ServiceModel.Description.ServiceMetadataBehavior.HttpsGetUrl%2A>  

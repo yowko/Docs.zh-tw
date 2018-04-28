@@ -1,21 +1,19 @@
 ---
 title: 適用於 .NET Core 之 csproj 格式的新增項目
 description: 深入了解現有和 .NET Core csproj 檔案之間的差異
-keywords: 參考, csproj, .NET Core
 author: blackdwarf
 ms.author: mairaw
 ms.date: 09/22/2017
-ms.topic: article
-ms.prod: .net-core
+ms.topic: conceptual
+ms.prod: dotnet-core
 ms.devlang: dotnet
-ms.assetid: bdc29497-64f2-4d11-a21b-4097e0bdf5c9
 ms.workload:
 - dotnetcore
-ms.openlocfilehash: fdf91bdb24819c2d92b708e5937980ac2fb0d5fc
-ms.sourcegitcommit: 935d5267c44f9bce801468ef95f44572f1417e8c
+ms.openlocfilehash: ed1a25337ac1594d4ca748d0c6f79bdcc038a1e8
+ms.sourcegitcommit: 03ee570f6f528a7d23a4221dcb26a9498edbdf8c
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 03/28/2018
+ms.lasthandoff: 04/28/2018
 ---
 # <a name="additions-to-the-csproj-format-for-net-core"></a>適用於 .NET Core 之 csproj 格式的新增項目
 

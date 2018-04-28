@@ -1,21 +1,19 @@
 ---
-title: "移轉到 .NET Core - 程式庫"
-description: "了解如何將程式庫專案從 .NET Framework 移植到 .NET Core。"
-keywords: .NET, .NET Core
+title: 移轉到 .NET Core - 程式庫
+description: 了解如何將程式庫專案從 .NET Framework 移植到 .NET Core。
 author: cartermp
 ms.author: mairaw
 ms.date: 07/14/2017
-ms.topic: article
-ms.prod: .net-core
+ms.topic: conceptual
+ms.prod: dotnet-core
 ms.devlang: dotnet
-ms.assetid: a0fd860d-d6b6-4659-b325-8a6e6f5fa4a1
 ms.workload:
 - dotnetcore
-ms.openlocfilehash: 24c74f0396dd7bfdf19fc0e11a29110fdbf27173
-ms.sourcegitcommit: cf22b29db780e532e1090c6e755aa52d28273fa6
+ms.openlocfilehash: ca71ed4b2423846db4b2c2fc0ba87c49330b7d14
+ms.sourcegitcommit: 03ee570f6f528a7d23a4221dcb26a9498edbdf8c
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 02/01/2018
+ms.lasthandoff: 04/28/2018
 ---
 # <a name="porting-to-net-core---libraries"></a>移轉到 .NET Core - 程式庫
 

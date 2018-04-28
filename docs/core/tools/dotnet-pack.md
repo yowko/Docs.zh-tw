@@ -1,19 +1,19 @@
 ---
-title: "dotnet pack 命令 - .NET Core CLI"
-description: "dotnet pack 命令會建立 .NET Core 專案的 NuGet 套件。"
+title: dotnet pack 命令 - .NET Core CLI
+description: dotnet pack 命令會建立 .NET Core 專案的 NuGet 套件。
 author: mairaw
 ms.author: mairaw
 ms.date: 03/10/2018
-ms.topic: article
-ms.prod: .net-core
+ms.topic: conceptual
+ms.prod: dotnet-core
 ms.technology: dotnet-cli
 ms.workload:
 - dotnetcore
-ms.openlocfilehash: 401a4491c27ea10d0fdf1877417f1e2d5da6839f
-ms.sourcegitcommit: 83dd5ec003e788ccb3e33f3412a7af39ae347646
+ms.openlocfilehash: fdbf3b23813f09ad9902f6b0457f176139b405a4
+ms.sourcegitcommit: 03ee570f6f528a7d23a4221dcb26a9498edbdf8c
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 03/15/2018
+ms.lasthandoff: 04/28/2018
 ---
 # <a name="dotnet-pack"></a>dotnet pack
 

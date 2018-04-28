@@ -1,13 +1,13 @@
 ---
-title: "指定用戶端執行階段行為"
-ms.custom: 
+title: 指定用戶端執行階段行為
+ms.custom: ''
 ms.date: 03/30/2017
 ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
+ms.reviewer: ''
+ms.suite: ''
 ms.technology:
 - dotnet-clr
-ms.tgt_pltfrm: 
+ms.tgt_pltfrm: ''
 ms.topic: article
 dev_langs:
 - csharp
@@ -15,20 +15,20 @@ dev_langs:
 helpviewer_keywords:
 - behaviors [WCF], system-provided client
 ms.assetid: d16d3405-be70-4edb-8f62-b5f614ddeca5
-caps.latest.revision: 
+caps.latest.revision: 8
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
 ms.workload:
 - dotnet
-ms.openlocfilehash: a8c05dc56ec8fac0a77b1a21536d815b5b65f830
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.openlocfilehash: fb6ba82af23f51e43da57adb0e65c77ee3436676
+ms.sourcegitcommit: 03ee570f6f528a7d23a4221dcb26a9498edbdf8c
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 04/28/2018
 ---
 # <a name="specifying-client-run-time-behavior"></a>指定用戶端執行階段行為
-[!INCLUDE[indigo1](../../../includes/indigo1-md.md)] 用戶端就如同 [!INCLUDE[indigo1](../../../includes/indigo1-md.md)] 服務，可以在設定之後修改執行階段行為，以配合用戶端應用程式。 指定用戶端執行階段行為時有三個屬性可供使用。 雙工用戶端回呼物件可以使用 <xref:System.ServiceModel.CallbackBehaviorAttribute> 和 <xref:System.ServiceModel.Description.CallbackDebugBehavior> 屬性來修改其執行階段行為。 而另一個屬性 <xref:System.ServiceModel.Description.ClientViaBehavior> 則可用來區隔邏輯目的和立即網路目的。 此外，雙工用戶端回呼類型也可使用一些服務端的行為。 [!INCLUDE[crdefault](../../../includes/crdefault-md.md)][指定服務執行階段行為](../../../docs/framework/wcf/specifying-service-run-time-behavior.md)。  
+[!INCLUDE[indigo1](../../../includes/indigo1-md.md)] 用戶端就如同 [!INCLUDE[indigo1](../../../includes/indigo1-md.md)] 服務，可以在設定之後修改執行階段行為，以配合用戶端應用程式。 指定用戶端執行階段行為時有三個屬性可供使用。 雙工用戶端回呼物件可以使用 <xref:System.ServiceModel.CallbackBehaviorAttribute> 和 <xref:System.ServiceModel.Description.CallbackDebugBehavior> 屬性來修改其執行階段行為。 而另一個屬性 <xref:System.ServiceModel.Description.ClientViaBehavior> 則可用來區隔邏輯目的和立即網路目的。 此外，雙工用戶端回呼類型也可使用一些服務端的行為。 如需詳細資訊，請參閱[指定服務執行階段行為](../../../docs/framework/wcf/specifying-service-run-time-behavior.md)。  
   
 ## <a name="using-the-callbackbehaviorattribute"></a>使用 CallbackBehaviorAttribute  
  您可以使用 <xref:System.ServiceModel.CallbackBehaviorAttribute> 類別，即可設定或擴充用戶端應用程式中回呼合約實作的執行行為。 這個屬性對回呼類別執行的函式類似於 <xref:System.ServiceModel.ServiceBehaviorAttribute> 類別，而執行個體化行為和交易設定則為其例外。  
@@ -56,5 +56,5 @@ ms.lasthandoff: 12/22/2017
 ## <a name="using-the-clientviabehavior-behavior"></a>使用 ClientViaBehavior 行為  
  您可以使用 <xref:System.ServiceModel.Description.ClientViaBehavior> 行為，對應該建立的傳輸通道指定統一資源識別項。 當立即網路目的不是訊息的預期處理器時，請使用這個行為。 當呼叫應用程式不需要知道最終目的，或者目的 `Via` 標頭不是位址時，這個行為可啟用多重躍點交談。  
   
-## <a name="see-also"></a>請參閱  
+## <a name="see-also"></a>另請參閱  
  [指定服務執行階段行為](../../../docs/framework/wcf/specifying-service-run-time-behavior.md)

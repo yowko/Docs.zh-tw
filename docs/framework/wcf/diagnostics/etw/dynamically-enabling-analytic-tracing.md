@@ -1,35 +1,37 @@
 ---
-title: "動態地啟用分析的追蹤"
-ms.custom: 
+title: 動態地啟用分析的追蹤
+ms.custom: ''
 ms.date: 03/30/2017
 ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.technology: dotnet-clr
-ms.tgt_pltfrm: 
+ms.reviewer: ''
+ms.suite: ''
+ms.technology:
+- dotnet-clr
+ms.tgt_pltfrm: ''
 ms.topic: article
 ms.assetid: 58b63cfc-307a-427d-b69d-9917ff9f44ac
-caps.latest.revision: "12"
+caps.latest.revision: 12
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.workload: dotnet
-ms.openlocfilehash: 18dda3f63a12a9f9a2320f413137943e5864ad27
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.workload:
+- dotnet
+ms.openlocfilehash: d070c66eebbf1a067254c38c6e5bfc7f40742863
+ms.sourcegitcommit: 03ee570f6f528a7d23a4221dcb26a9498edbdf8c
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 04/28/2018
 ---
 # <a name="dynamically-enabling-analytic-tracing"></a>動態地啟用分析的追蹤
 使用隨附於 Windows 作業系統的工具，您可以使用 Windows 事件追蹤 (ETW) 來動態啟用或停用追蹤。 對所有的 [!INCLUDE[netfx_current_long](../../../../../includes/netfx-current-long-md.md)] [!INCLUDE[indigo1](../../../../../includes/indigo1-md.md)] 服務而言，分析追蹤可以不需要以修改應用程式的 Web.config 檔案或重新啟動服務的方式，來動態啟用或停用。 這樣可讓發出追蹤事件的應用程式維持不變。  
   
  [!INCLUDE[indigo2](../../../../../includes/indigo2-md.md)] 追蹤選項可以使用類似的方法來設定。 例如，您可以將嚴重性層級從 **Error** 變更為 **Information** ，無須干擾應用程式。 使用下列工具即可達到這個目的：  
   
--   **Logman** – 命令列工具，用來設定、控制和查詢追蹤資料。 [!INCLUDE[crdefault](../../../../../includes/crdefault-md.md)][Logman 建立追蹤](http://go.microsoft.com/fwlink/?LinkId=165426)和[Logman 更新追蹤](http://go.microsoft.com/fwlink/?LinkId=165427)。  
+-   **Logman** – 命令列工具，用來設定、控制和查詢追蹤資料。 如需詳細資訊，請參閱[Logman 建立追蹤](http://go.microsoft.com/fwlink/?LinkId=165426)和[Logman 更新追蹤](http://go.microsoft.com/fwlink/?LinkId=165427)。  
   
--   **EventViewer** - Windows 圖形管理工具，用來檢視追蹤結果。 [!INCLUDE[crdefault](../../../../../includes/crdefault-md.md)][WCF 服務和 Windows 事件追蹤](../../../../../docs/framework/wcf/samples/wcf-services-and-event-tracing-for-windows.md)和[事件檢視器](http://go.microsoft.com/fwlink/?LinkId=165428)。  
+-   **EventViewer** - Windows 圖形管理工具，用來檢視追蹤結果。 如需詳細資訊，請參閱[WCF 服務和 Windows 事件追蹤](../../../../../docs/framework/wcf/samples/wcf-services-and-event-tracing-for-windows.md)和[事件檢視器](http://go.microsoft.com/fwlink/?LinkId=165428)。  
   
--   **Perfmon** – Windows 圖形管理工具，使用計數器來監事追蹤計數器和對於效能的追蹤效果。 [!INCLUDE[crdefault](../../../../../includes/crdefault-md.md)][手動建立資料收集器集合工具](http://go.microsoft.com/fwlink/?LinkId=165429)。  
+-   **Perfmon** – Windows 圖形管理工具，使用計數器來監事追蹤計數器和對於效能的追蹤效果。 如需詳細資訊，請參閱[資料收集器設定手動建立](http://go.microsoft.com/fwlink/?LinkId=165429)。  
   
 ### <a name="keywords"></a>關鍵字  
  使用 <xref:System.ServiceModel.Activation.Configuration.ServiceModelActivationSectionGroup.Diagnostics%2A> 類別時，.NET Framework 追蹤訊息一般會由嚴重性層級加以篩選 (例如，[錯誤]、[警告] 和 [資訊])。 ETW 支援嚴重性層級的概念，不過會使用關鍵字引入全新、有彈性的篩選機制。 關鍵字是任意的文字值，可讓追蹤事件提供額外的內容，說明該事件的意義。  
@@ -51,5 +53,5 @@ ms.lasthandoff: 12/22/2017
 |`ServiceHost`|由服務主機所發出的事件。|  
 |`WCFMessageLogging`|[!INCLUDE[indigo2](../../../../../includes/indigo2-md.md)] 訊息記錄事件。|  
   
-## <a name="see-also"></a>請參閱  
+## <a name="see-also"></a>另請參閱  
  [WCF 服務和 Windows 的事件追蹤](../../../../../docs/framework/wcf/samples/wcf-services-and-event-tracing-for-windows.md)

@@ -1,28 +1,28 @@
 ---
-title: "分析追蹤的概觀"
-ms.custom: 
+title: 分析追蹤的概觀
+ms.custom: ''
 ms.date: 03/30/2017
 ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
+ms.reviewer: ''
+ms.suite: ''
 ms.technology:
 - dotnet-clr
-ms.tgt_pltfrm: 
+ms.tgt_pltfrm: ''
 ms.topic: article
 helpviewer_keywords:
 - analytic tracing [WCF], overview
 ms.assetid: ae55e9cc-0809-442f-921f-d644290ebf15
-caps.latest.revision: 
+caps.latest.revision: 22
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
 ms.workload:
 - dotnet
-ms.openlocfilehash: 3492821d56f7089c2aa53bba566690ded02f8a5b
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.openlocfilehash: c29065ebe03617e288d7ebde3dc6b42cbfcf6061
+ms.sourcegitcommit: 03ee570f6f528a7d23a4221dcb26a9498edbdf8c
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 04/28/2018
 ---
 # <a name="analytic-tracing-overview"></a>分析追蹤的概觀
 [!INCLUDE[netfx_current_long](../../../../../includes/netfx-current-long-md.md)] 中的分析追蹤是一項高效能、低詳細等級的追蹤功能，設定於 Windows 事件追蹤 (ETW) 之上。 ETW 是在核心層級執行，可大幅降低追蹤作業的負荷。 它能有效率地緩衝使用者和核心模式的事件，並且允許動態啟用記錄，而不需重新啟動服務。 事件發出和接收之後，即可在事件記錄檔中使用追蹤資料。  
@@ -54,10 +54,10 @@ ms.lasthandoff: 12/22/2017
  `ServiceModelReg.exe -i -c:etw`  
   
 ### <a name="dynamic-configuration"></a>動態組態  
- ETW 基礎結構可讓您使用標準 Windows 工具，以動態方式啟用和設定追蹤。 [!INCLUDE[crdefault](../../../../../includes/crdefault-md.md)][動態地啟用分析追蹤](../../../../../docs/framework/wcf/diagnostics/etw/dynamically-enabling-analytic-tracing.md)。  
+ ETW 基礎結構可讓您使用標準 Windows 工具，以動態方式啟用和設定追蹤。 如需詳細資訊，請參閱[動態地啟用分析追蹤](../../../../../docs/framework/wcf/diagnostics/etw/dynamically-enabling-analytic-tracing.md)。  
   
 ### <a name="message-flow-tracing"></a>訊息流程追蹤  
  [!INCLUDE[crabout](../../../../../includes/crabout-md.md)] 如何啟用訊息流程追蹤的詳細資訊，請參閱 [Configuring Message Flow Tracing](../../../../../docs/framework/wcf/diagnostics/etw/configuring-message-flow-tracing.md)。  
   
 ### <a name="keywords"></a>關鍵字  
- 關鍵字可用來篩選追蹤訊息，以及定義發出事件的 [!INCLUDE[dnprdnshort](../../../../../includes/dnprdnshort-md.md)] 元件。 [!INCLUDE[crdefault](../../../../../includes/crdefault-md.md)][動態地啟用分析追蹤](../../../../../docs/framework/wcf/diagnostics/etw/dynamically-enabling-analytic-tracing.md)。
+ 關鍵字可用來篩選追蹤訊息，以及定義發出事件的 [!INCLUDE[dnprdnshort](../../../../../includes/dnprdnshort-md.md)] 元件。 如需詳細資訊，請參閱[動態地啟用分析追蹤](../../../../../docs/framework/wcf/diagnostics/etw/dynamically-enabling-analytic-tracing.md)。

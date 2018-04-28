@@ -1,21 +1,19 @@
 ---
-title: ".NET Core 使用者入門"
-description: "尋找資源以了解如何在 Windows、Linux 和 macOS 上建置 .NET Core 應用程式。"
-keywords: .NET, .NET Core
+title: .NET Core 使用者入門
+description: 尋找資源以了解如何在 Windows、Linux 和 macOS 上建置 .NET Core 應用程式。
 author: johalex
 ms.author: johalex
 ms.date: 09/14/2017
-ms.topic: article
-ms.prod: .net-core
+ms.topic: conceptual
+ms.prod: dotnet-core
 ms.devlang: dotnet
-ms.assetid: d1453a0d-317c-4da6-b68e-422a2c0bfe49
 ms.workload:
 - dotnetcore
-ms.openlocfilehash: 0428f93d4044fa0dd65a6f48ee425948fe052697
-ms.sourcegitcommit: 655fd4f78741967f80c409cef98347fdcf77857d
+ms.openlocfilehash: ba4e010f81cea00122fd450f02a75598bb7293b8
+ms.sourcegitcommit: 03ee570f6f528a7d23a4221dcb26a9498edbdf8c
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 02/28/2018
+ms.lasthandoff: 04/28/2018
 ---
 # <a name="get-started-with-net-core"></a>.NET Core 使用者入門
 

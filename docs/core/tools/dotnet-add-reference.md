@@ -1,18 +1,19 @@
 ---
-title: "dotnet-add reference 命令 - .NET Core CLI"
-description: "dotnet add reference 命令提供方便的選項，以新增專案對專案參考。"
+title: dotnet-add reference 命令 - .NET Core CLI
+description: dotnet add reference 命令提供方便的選項，以新增專案對專案參考。
 author: mairaw
 ms.author: mairaw
 ms.date: 09/19/2017
-ms.topic: article
-ms.prod: .net-core
+ms.topic: conceptual
+ms.prod: dotnet-core
 ms.technology: dotnet-cli
-ms.workload: dotnetcore
-ms.openlocfilehash: 9a79468168979a7c89efe48e11175f926e39cf4f
-ms.sourcegitcommit: e7f04439d78909229506b56935a1105a4149ff3d
+ms.workload:
+- dotnetcore
+ms.openlocfilehash: c82696eee2fbe4bbad86e59cf5de1c2e74d048f6
+ms.sourcegitcommit: 03ee570f6f528a7d23a4221dcb26a9498edbdf8c
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 12/23/2017
+ms.lasthandoff: 04/28/2018
 ---
 # <a name="dotnet-add-reference"></a>dotnet-add reference
 

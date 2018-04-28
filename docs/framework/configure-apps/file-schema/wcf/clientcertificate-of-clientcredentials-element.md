@@ -1,33 +1,35 @@
 ---
-title: "&lt;clientCredentials&gt; 的 &lt;clientCertificate&gt; 項目"
-ms.custom: 
+title: '&lt;clientCredentials&gt; 的 &lt;clientCertificate&gt; 項目'
+ms.custom: ''
 ms.date: 03/30/2017
 ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.technology: dotnet-clr
-ms.tgt_pltfrm: 
+ms.reviewer: ''
+ms.suite: ''
+ms.technology:
+- dotnet-clr
+ms.tgt_pltfrm: ''
 ms.topic: article
 ms.assetid: 3b3fa000-3434-4142-a178-11903bdd2c5d
-caps.latest.revision: "14"
+caps.latest.revision: 14
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.workload: dotnet
-ms.openlocfilehash: 1b5603ad7402e46f8b977fe21b0ad1d43c4bfbf8
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.workload:
+- dotnet
+ms.openlocfilehash: 9c5616aab5cb54e94a62370ad682eaa55eceb8ef
+ms.sourcegitcommit: 03ee570f6f528a7d23a4221dcb26a9498edbdf8c
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 04/28/2018
 ---
 # <a name="ltclientcertificategt-of-ltclientcredentialsgt-element"></a>&lt;clientCredentials&gt; 的 &lt;clientCertificate&gt; 項目
 定義用於向服務驗證的 X.509 憑證。  
   
- \<系統。ServiceModel >  
+ \<system.ServiceModel>  
 \<行為 >  
-\<endpointBehaviors >  
+\<endpointBehaviors>  
 \<行為 >  
-\<clientCredentials >  
+\<clientCredentials>  
 \<clientCertificate >  
   
 ## <a name="syntax"></a>語法  
@@ -50,21 +52,21 @@ X509FindType="FindByThumbPrint/FindBySubjectName/FindBySubjectDistinguishedName/
 |`findValue`|字串，其中包含要在 X.509 憑證存放區內搜尋的值。 這個屬性所包含的型別必須滿足 `X509FindType` 屬性值的需求。 預設為空字串。|  
 |`storeLocation`|指定 X.509 憑證的位置，用戶端會使用該憑證來進行對服務的自我驗證。 有效值包括以下的值：<br /><br /> -LocalMachine: 指派憑證存放區至本機電腦。<br />-CurrentUser: 指派憑證存放區目前的使用者。<br /><br /> 預設為 LocalMachine。 此屬性的型別為 <xref:System.Security.Cryptography.X509Certificates.StoreLocation>。|  
 |`storeName`|指定要搜尋之 X.509 憑證存放區的名稱。 有效值包括以下的值：<br /><br /> -AddressBook： 其他使用者的憑證存放區。<br />-AuthRoot： 協力廠商憑證授權單位 (Ca) 的存放區的憑證。<br />-CertificateAuthority： 中繼憑證授權單位 (Ca) 憑證存放區。<br />-不允許： 憑證已撤銷之憑證存放區。<br />-My： 憑證個人憑證存放區。<br />-Root： 信任的根憑證授權單位 (Ca) 憑證存放區。<br />-TrustedPeople： 直接信任之人員和資源的憑證存放區。<br />-TrustedPublisher： 直接信任之發行者的憑證存放區。<br /><br /> 預設為 My。 此屬性的型別為 <xref:System.Security.Cryptography.X509Certificates.StoreName>。|  
-|X509FindType|定義要執行之 X.509 搜尋的類型。 `findValue` 屬性中所包含的型別必須滿足此屬性的需求。 有效值包括以下的值：<br /><br /> -FindByThumbPrint<br />-FindBySubjectName<br />-FindBySubjectDistinguishedName<br />-FindByIssuerName<br />-FindByIssuerDistinguishedName<br />-FindBySerialNumber<br />-FindByTimeValid<br />-FindByTimeNotYetValid<br />-FindByTemplateName<br />-FindByApplicationPolicy<br />-FindByCertificatePolicy<br />-FindByExtension<br />-FindByKeyUsage<br />-FindBySubjectKeyIdentifier<br /><br /> 預設值為 FindBySubjectDistinguishedName。 此屬性的型別為 <xref:System.Security.Cryptography.X509Certificates.X509FindType>。|  
+|X509FindType|定義要執行之 X.509 搜尋的類型。 `findValue` 屬性中所包含的型別必須滿足此屬性的需求。 有效值包括以下的值：<br /><br /> -FindByThumbPrint<br />-   FindBySubjectName<br />-FindBySubjectDistinguishedName<br />-FindByIssuerName<br />-FindByIssuerDistinguishedName<br />-FindBySerialNumber<br />-   FindByTimeValid<br />-   FindByTimeNotYetValid<br />-FindByTemplateName<br />-   FindByApplicationPolicy<br />-   FindByCertificatePolicy<br />-FindByExtension<br />-FindByKeyUsage<br />-   FindBySubjectKeyIdentifier<br /><br /> 預設值為 FindBySubjectDistinguishedName。 此屬性的型別為 <xref:System.Security.Cryptography.X509Certificates.X509FindType>。|  
   
-### <a name="child-elements"></a>子元素  
+### <a name="child-elements"></a>子項目  
  無。  
   
 ### <a name="parent-elements"></a>父項目  
   
 |項目|描述|  
 |-------------|-----------------|  
-|[\<clientCredentials >](../../../../../docs/framework/configure-apps/file-schema/wcf/clientcredentials.md)|指定用來對服務驗證用戶端的認證。|  
+|[\<clientCredentials>](../../../../../docs/framework/configure-apps/file-schema/wcf/clientcredentials.md)|指定用來對服務驗證用戶端的認證。|  
   
 ## <a name="remarks"></a>備註  
- 這個組態項目會指定憑證，此憑證會用來驗證具有這個項目的用戶端。 [!INCLUDE[crdefault](../../../../../includes/crdefault-md.md)][How to： 指定用戶端認證值](../../../../../docs/framework/wcf/how-to-specify-client-credential-values.md)。  
+ 這個組態項目會指定憑證，此憑證會用來驗證具有這個項目的用戶端。 如需詳細資訊，請參閱[How to： 指定用戶端認證值](../../../../../docs/framework/wcf/how-to-specify-client-credential-values.md)。  
   
-## <a name="see-also"></a>請參閱  
+## <a name="see-also"></a>另請參閱  
  <xref:System.ServiceModel.Configuration.ClientCredentialsElement>  
  <xref:System.ServiceModel.Configuration.ClientCredentialsElement.ClientCertificate%2A>  
  <xref:System.ServiceModel.Description.ClientCredentials>  

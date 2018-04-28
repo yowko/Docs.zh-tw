@@ -1,24 +1,26 @@
 ---
-title: "HOW TO：以 WorkflowServiceHost 設定工作流程服務的未處理例外狀況行為"
-ms.custom: 
+title: HOW TO：以 WorkflowServiceHost 設定工作流程服務的未處理例外狀況行為
+ms.custom: ''
 ms.date: 03/30/2017
 ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.technology: dotnet-clr
-ms.tgt_pltfrm: 
+ms.reviewer: ''
+ms.suite: ''
+ms.technology:
+- dotnet-clr
+ms.tgt_pltfrm: ''
 ms.topic: article
 ms.assetid: 51b25c86-292c-43e4-8d13-273d2badc8ad
-caps.latest.revision: "10"
+caps.latest.revision: 10
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.workload: dotnet
-ms.openlocfilehash: 5b0aa73a1fa96623469e8e3a140e501e7b7a0cfa
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.workload:
+- dotnet
+ms.openlocfilehash: 5cf06b90169e3915af48396aa2f6c426f1329a95
+ms.sourcegitcommit: 03ee570f6f528a7d23a4221dcb26a9498edbdf8c
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 04/28/2018
 ---
 # <a name="how-to-configure-workflow-unhandled-exception-behavior-with-workflowservicehost"></a>HOW TO：以 WorkflowServiceHost 設定工作流程服務的未處理例外狀況行為
 <xref:System.ServiceModel.Activities.Description.WorkflowUnhandledExceptionBehavior> 是一項行為，可讓您指定裝載於 <xref:System.ServiceModel.Activities.WorkflowServiceHost> 的工作流程內發生未處理的例外狀況時，所採取的動作。 本主題示範如何組態檔中設定此行為。  
@@ -38,7 +40,7 @@ ms.lasthandoff: 12/22/2017
     ```  
   
     > [!NOTE]
-    >  上述組態範例會使用簡化的組態。 [!INCLUDE[crdefault](../../../../includes/crdefault-md.md)][簡化組態](../../../../docs/framework/wcf/simplified-configuration.md)。  
+    >  上述組態範例會使用簡化的組態。 如需詳細資訊，請參閱[簡化的組態](../../../../docs/framework/wcf/simplified-configuration.md)。  
   
      此行為可以在程式碼中設定，如下列範例所示。  
   
@@ -60,8 +62,8 @@ ms.lasthandoff: 12/22/2017
      **terminate**  
      完成記憶體中的執行個體並將其從執行個體庫中移除。  
   
-     [!INCLUDE[crabout](../../../../includes/crabout-md.md)]<xref:System.ServiceModel.Activities.Description.WorkflowUnhandledExceptionBehavior>，請參閱[工作流程服務主機擴充性](../../../../docs/framework/wcf/feature-details/workflow-service-host-extensibility.md)。  
+     [!INCLUDE[crabout](../../../../includes/crabout-md.md)] <xref:System.ServiceModel.Activities.Description.WorkflowUnhandledExceptionBehavior>請參閱[工作流程服務主機擴充性](../../../../docs/framework/wcf/feature-details/workflow-service-host-extensibility.md)。  
   
-## <a name="see-also"></a>請參閱  
+## <a name="see-also"></a>另請參閱  
  [工作流程服務主機擴充性](../../../../docs/framework/wcf/feature-details/workflow-service-host-extensibility.md)  
  [工作流程服務](../../../../docs/framework/wcf/feature-details/workflow-services.md)

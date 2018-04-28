@@ -21,11 +21,11 @@ ms.author: bruceper
 manager: mbaldwin
 ms.workload:
 - dotnet
-ms.openlocfilehash: 7416f8429f347d0b8dc6227415ad366b3ff63986
-ms.sourcegitcommit: 86adcc06e35390f13c1e372c36d2e044f1fc31ef
+ms.openlocfilehash: 19bb6d4a172568611f73e3a50d0c526016c65aac
+ms.sourcegitcommit: 03ee570f6f528a7d23a4221dcb26a9498edbdf8c
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/26/2018
+ms.lasthandoff: 04/28/2018
 ---
 # <a name="best-practices-for-security-in-wcf"></a>WCF 中安全性的最佳做法
 下列各節將列出在使用 [!INCLUDE[indigo1](../../../../includes/indigo1-md.md)] 建立安全應用程式時，應該考慮採用的最佳做法。 [!INCLUDE[crabout](../../../../includes/crabout-md.md)] 安全性，請參閱[安全性考量](../../../../docs/framework/wcf/feature-details/security-considerations-in-wcf.md)，[資料的安全性考量](../../../../docs/framework/wcf/feature-details/security-considerations-for-data.md)，和[與中繼資料的安全性考量](../../../../docs/framework/wcf/feature-details/security-considerations-with-metadata.md)。  
@@ -60,7 +60,7 @@ ms.lasthandoff: 04/26/2018
  請務必信任您的中繼資料來源，並確認中繼資料未遭受任何竄改。 使用 HTTP 通訊協定擷取的中繼資料會以純文字傳送出去且可以竄改。 如果服務使用 <xref:System.ServiceModel.Description.ServiceMetadataBehavior.HttpsGetEnabled%2A> 和 <xref:System.ServiceModel.Description.ServiceMetadataBehavior.HttpsGetUrl%2A> 屬性，請以服務建立者提供的 URL 來使用 HTTPS 通訊協定下載資料。  
   
 ## <a name="publish-metadata-using-security"></a>使用安全性發行中繼資料  
- 若要預防服務的已發行中繼資料遭到竄改，請使用傳輸或訊息層級的安全性來保護中繼資料交換端點的安全。 [!INCLUDE[crdefault](../../../../includes/crdefault-md.md)] [發行中繼資料端點](../../../../docs/framework/wcf/publishing-metadata-endpoints.md)和[How to： 使用程式碼的服務發行中繼資料](../../../../docs/framework/wcf/feature-details/how-to-publish-metadata-for-a-service-using-code.md)。  
+ 若要預防服務的已發行中繼資料遭到竄改，請使用傳輸或訊息層級的安全性來保護中繼資料交換端點的安全。 如需詳細資訊，請參閱[發行中繼資料端點](../../../../docs/framework/wcf/publishing-metadata-endpoints.md)和[How to： 服務使用程式碼發行中繼資料](../../../../docs/framework/wcf/feature-details/how-to-publish-metadata-for-a-service-using-code.md)。  
   
 ## <a name="ensure-use-of-local-issuer"></a>確定本機簽發者的用途  
  如果已指定特定繫結的簽發者位址和繫結，這時使用該繫結的端點就不會使用該本機簽發者。 預期一定要使用該本機簽發者的用戶端應該要確定自己沒有使用這類繫結，否則它們就會修改繫結，進而使得簽發者位址成為 null。  

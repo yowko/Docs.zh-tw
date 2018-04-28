@@ -1,12 +1,13 @@
 ---
-title: "資料合約已知型別"
-ms.custom: 
+title: 資料合約已知型別
+ms.custom: ''
 ms.date: 03/30/2017
 ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.technology: dotnet-clr
-ms.tgt_pltfrm: 
+ms.reviewer: ''
+ms.suite: ''
+ms.technology:
+- dotnet-clr
+ms.tgt_pltfrm: ''
 ms.topic: article
 dev_langs:
 - csharp
@@ -16,23 +17,24 @@ helpviewer_keywords:
 - KnownTypeAttribute [WCF]
 - KnownTypes [WCF]
 ms.assetid: 1a0baea1-27b7-470d-9136-5bbad86c4337
-caps.latest.revision: "42"
+caps.latest.revision: 42
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.workload: dotnet
-ms.openlocfilehash: 24d26358c0bf0440b2fbba143629a0e4bda21cec
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.workload:
+- dotnet
+ms.openlocfilehash: c9c180a0f1544fa187ddb53ec79a47f908c298d7
+ms.sourcegitcommit: 03ee570f6f528a7d23a4221dcb26a9498edbdf8c
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 04/28/2018
 ---
 # <a name="data-contract-known-types"></a>資料合約已知型別
 <xref:System.Runtime.Serialization.KnownTypeAttribute> 類別可讓您預先指定在還原序列化期間應該納入考量的型別。 如需實用範例，請參閱 [Known Types](../../../../docs/framework/wcf/samples/known-types.md) 範例。  
   
  一般來說，當您在用戶端與服務之間傳送參數並傳回值時，兩邊的端點都會共用要傳送之資料的所有資料合約。 但是，這種現象在下列情況中不會出現：  
   
--   傳送的資料合約是由預期的資料合約衍生而來。 [!INCLUDE[crdefault](../../../../includes/crdefault-md.md)]中的繼承的相關章節[資料合約等價](../../../../docs/framework/wcf/feature-details/data-contract-equivalence.md))。 在此情況下，所傳送資料的資料合約與接收的端點所預期的資料合約不會一樣。  
+-   傳送的資料合約是由預期的資料合約衍生而來。 如需詳細資訊，請參閱中的繼承的相關章節[資料合約等價](../../../../docs/framework/wcf/feature-details/data-contract-equivalence.md))。 在此情況下，所傳送資料的資料合約與接收的端點所預期的資料合約不會一樣。  
   
 -   要傳送的資訊宣告型別是一種介面，而不是類別、結構或列舉。 因此，您無法預先得知實際傳送了哪種可實作介面的型別，也因此接收的端點無法預先判斷已傳送資料的資料合約。  
   
@@ -178,7 +180,7 @@ ms.lasthandoff: 12/22/2017
   
  在先前的組態檔中，會宣告稱為 `MyCompany.Library.Shape` 的資料合約型別，而讓 `MyCompany.Library.Circle` 做為已知的型別。  
   
-## <a name="see-also"></a>請參閱  
+## <a name="see-also"></a>另請參閱  
  <xref:System.Runtime.Serialization.KnownTypeAttribute>  
  <xref:System.Collections.Hashtable>  
  <xref:System.Object>  

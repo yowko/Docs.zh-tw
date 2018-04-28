@@ -1,12 +1,13 @@
 ---
-title: "從類別匯出結構描述"
-ms.custom: 
+title: 從類別匯出結構描述
+ms.custom: ''
 ms.date: 03/30/2017
 ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.technology: dotnet-clr
-ms.tgt_pltfrm: 
+ms.reviewer: ''
+ms.suite: ''
+ms.technology:
+- dotnet-clr
+ms.tgt_pltfrm: ''
 ms.topic: article
 helpviewer_keywords:
 - WCF, schema import and export
@@ -15,16 +16,17 @@ helpviewer_keywords:
 - XsdDataContractExporter class
 - XsdDataContractImporter class
 ms.assetid: bb57b962-70c1-45a9-93d5-e721e340a13f
-caps.latest.revision: "11"
+caps.latest.revision: 11
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.workload: dotnet
-ms.openlocfilehash: 01e841e76c4a6cf06169113422921367d671ea98
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.workload:
+- dotnet
+ms.openlocfilehash: d9e63223fce7f86b0cf2a64ba4e7aa2e54ca6219
+ms.sourcegitcommit: 03ee570f6f528a7d23a4221dcb26a9498edbdf8c
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 04/28/2018
 ---
 # <a name="exporting-schemas-from-classes"></a>從類別匯出結構描述
 如果要從用於資料合約模型中的類別產生 XML 結構描述定義語言 (XSD)，請使用 <xref:System.Runtime.Serialization.XsdDataContractExporter> 類別。 這個主題將說明建立結構描述的程序。  
@@ -54,9 +56,9 @@ ms.lasthandoff: 12/22/2017
 ## <a name="export-options"></a>匯出選項  
  您可以將 <xref:System.Runtime.Serialization.XsdDataContractExporter.Options%2A> 之 <xref:System.Runtime.Serialization.XsdDataContractExporter> 屬性設定為 <xref:System.Runtime.Serialization.ExportOptions> 類別的執行個體，以控制匯出處理程序的各方面。 特別是，您可以設定下列選項：  
   
--   <xref:System.Runtime.Serialization.ExportOptions.KnownTypes%2A>. `Type` 的這個集合代表正在匯出之型別的已知型別 ([!INCLUDE[crdefault](../../../../includes/crdefault-md.md)] [資料合約已知型別](../../../../docs/framework/wcf/feature-details/data-contract-known-types.md)。)除了傳遞至 `Export` 方法的型別之外，每次呼叫 `Export` 也會匯出這些已知型別。  
+-   <xref:System.Runtime.Serialization.ExportOptions.KnownTypes%2A>. `Type` 的這個集合代表正在匯出之型別的已知型別 (如需詳細資訊，請參閱[資料合約已知型別](../../../../docs/framework/wcf/feature-details/data-contract-known-types.md)。)除了傳遞至 `Export` 方法的型別之外，每次呼叫 `Export` 也會匯出這些已知型別。  
   
--   <xref:System.Runtime.Serialization.ExportOptions.DataContractSurrogate%2A>. <xref:System.Runtime.Serialization.IDataContractSurrogate> 可以透過將會自訂匯出程序的這個屬性來提供。 [!INCLUDE[crdefault](../../../../includes/crdefault-md.md)][資料合約 Surrogate](../../../../docs/framework/wcf/extending/data-contract-surrogates.md)。 根據預設，不會使用 Surrogate。  
+-   <xref:System.Runtime.Serialization.ExportOptions.DataContractSurrogate%2A>. <xref:System.Runtime.Serialization.IDataContractSurrogate> 可以透過將會自訂匯出程序的這個屬性來提供。 如需詳細資訊，請參閱[資料合約 Surrogate](../../../../docs/framework/wcf/extending/data-contract-surrogates.md)。 根據預設，不會使用 Surrogate。  
   
 ## <a name="helper-methods"></a>Helper 方法  
  除了匯出結構描述的主要角色之外， `XsdDataContractExporter` 還提供數種有用的 Helper 方法，提供有關型別的資訊。 這些活動包括：  
@@ -69,7 +71,7 @@ ms.lasthandoff: 12/22/2017
   
  匯出選項會影響所有這些方法。  
   
-## <a name="see-also"></a>請參閱  
+## <a name="see-also"></a>另請參閱  
  <xref:System.Runtime.Serialization.DataContractSerializer>  
  <xref:System.Runtime.Serialization.XsdDataContractImporter>  
  <xref:System.Runtime.Serialization.XsdDataContractExporter>  

@@ -1,19 +1,19 @@
 ---
-title: "dotnet publish 命令 - .NET Core CLI"
-description: "dotnet publish 命令會將 .NET Core 專案發行到目錄中。"
+title: dotnet publish 命令 - .NET Core CLI
+description: dotnet publish 命令會將 .NET Core 專案發行到目錄中。
 author: mairaw
 ms.author: mairaw
 ms.date: 03/10/2018
-ms.topic: article
-ms.prod: .net-core
+ms.topic: conceptual
+ms.prod: dotnet-core
 ms.technology: dotnet-cli
 ms.workload:
 - dotnetcore
-ms.openlocfilehash: 2aa69217e949b970b632c4fad72838b63c2a8988
-ms.sourcegitcommit: 83dd5ec003e788ccb3e33f3412a7af39ae347646
+ms.openlocfilehash: fca05b22495f41ed85e89b077faad367a901e009
+ms.sourcegitcommit: 03ee570f6f528a7d23a4221dcb26a9498edbdf8c
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 03/15/2018
+ms.lasthandoff: 04/28/2018
 ---
 # <a name="dotnet-publish"></a>dotnet publish
 

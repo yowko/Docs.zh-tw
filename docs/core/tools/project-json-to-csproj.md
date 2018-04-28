@@ -1,21 +1,20 @@
 ---
-title: "project.json 與 csproj 比較 - .NET Core"
-description: "查看 project.json 與 csproj 項目的對應。"
-keywords: project.json, csproj, .NET Core, MSBuild
+title: project.json 與 csproj 比較 - .NET Core
+description: 查看 project.json 與 csproj 項目的對應。
 author: natemcmaster
 ms.author: mairaw
 ms.date: 03/13/2017
-ms.topic: article
-ms.prod: .net-core
+ms.topic: conceptual
+ms.prod: dotnet-core
 ms.technology: dotnet-cli
 ms.devlang: dotnet
-ms.assetid: 79c50621-a24a-4e64-bbb9-b953113e841c
-ms.workload: dotnetcore
-ms.openlocfilehash: 655f74def4d6163959d7dbbe605f7322fb0573c8
-ms.sourcegitcommit: e7f04439d78909229506b56935a1105a4149ff3d
+ms.workload:
+- dotnetcore
+ms.openlocfilehash: c5753d73f062aa107d7afbec6146ea3452901fb1
+ms.sourcegitcommit: 03ee570f6f528a7d23a4221dcb26a9498edbdf8c
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 12/23/2017
+ms.lasthandoff: 04/28/2018
 ---
 # <a name="a-mapping-between-projectjson-and-csproj-properties"></a>project.json 與 csproj 屬性的對應
 
@@ -335,7 +334,7 @@ csproj 中沒有對應項。
 
 如需詳細資訊，請參閱[獨立性部署 (SCD)](../deploying/index.md#self-contained-deployments-scd)。
 
-## <a name="tools"></a>工具
+## <a name="tools"></a>tools
 ```json
 {
   "tools": {

@@ -22,11 +22,11 @@ ms.author: dotnetcontent
 manager: wpickett
 ms.workload:
 - dotnet
-ms.openlocfilehash: 5c1acfdfdbac2660fd4de7ec391c94b39890f669
-ms.sourcegitcommit: 86adcc06e35390f13c1e372c36d2e044f1fc31ef
+ms.openlocfilehash: 885faab43b620cf347c1780d445a72361cb5cdb4
+ms.sourcegitcommit: 03ee570f6f528a7d23a4221dcb26a9498edbdf8c
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/26/2018
+ms.lasthandoff: 04/28/2018
 ---
 # <a name="delegation-and-impersonation-with-wcf"></a>使用 WCF 的委派和模擬
 「*模擬* 」(Impersonation) 是服務用來限制用戶端存取服務網域資源的常用技術。 服務網域資源可以是像是本機檔案 (模擬) 的電腦資源，或是在另一部電腦上的資源，例如檔案共用 (委派)。 如需範例應用程式，請參閱 [Impersonating the Client](../../../../docs/framework/wcf/samples/impersonating-the-client.md)。 如需如何使用模擬的範例，請參閱 [如何：在服務上模擬用戶端](../../../../docs/framework/wcf/how-to-impersonate-a-client-on-a-service.md)。  
@@ -84,7 +84,7 @@ ms.lasthandoff: 04/26/2018
  呼叫者必須透過可對應至 Windows 使用者帳戶的認證通過驗證， [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] 基礎結構才能模擬呼叫端。 如果服務是設定成使用無法對應至 Windows 帳戶的認證來進行驗證，該服務方法就不會執行。  
   
 > [!NOTE]
->  在 [!INCLUDE[wxp](../../../../includes/wxp-md.md)]上，如果有建立可設定狀態的 SCT，模擬便會失敗，並會造成 <xref:System.InvalidOperationException>。 [!INCLUDE[crdefault](../../../../includes/crdefault-md.md)] [不支援的案例](../../../../docs/framework/wcf/feature-details/unsupported-scenarios.md)。  
+>  在 [!INCLUDE[wxp](../../../../includes/wxp-md.md)]上，如果有建立可設定狀態的 SCT，模擬便會失敗，並會造成 <xref:System.InvalidOperationException>。 如需詳細資訊，請參閱[不支援的案例](../../../../docs/framework/wcf/feature-details/unsupported-scenarios.md)。  
   
 ## <a name="impersonation-in-a-service-method-imperative-model"></a>使用服務方法的模擬：命令式模型  
  有時候呼叫者並不需要模擬整個服務，而只需要模擬服務的部份即可運作。 在此情況下，請從服務方法內取得呼叫者的 Windows 身分識別，而且以命令方式執行模擬。 使用 <xref:System.ServiceModel.ServiceSecurityContext.WindowsIdentity%2A> 的 <xref:System.ServiceModel.ServiceSecurityContext> 屬性傳回 <xref:System.Security.Principal.WindowsIdentity> 類別的執行個體，並先呼叫 <xref:System.Security.Principal.WindowsIdentity.Impersonate%2A> 方法，再使用該執行個體，即可完成這項執行。  

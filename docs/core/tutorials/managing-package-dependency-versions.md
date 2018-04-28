@@ -1,21 +1,19 @@
 ---
 title: 如何管理 .NET Core 1.0 的套件相依性版本
 description: 了解您的 .NET Core 程式庫和應用程式的套件相依性版本管理。
-keywords: .NET, .NET Core
 author: cartermp
 ms.author: mairaw
 ms.date: 06/20/2016
-ms.topic: article
-ms.prod: .net-core
+ms.topic: conceptual
+ms.prod: dotnet-core
 ms.devlang: dotnet
-ms.assetid: 4424a947-bdf9-4775-8d48-dc350a4e0aee
 ms.workload:
 - dotnetcore
-ms.openlocfilehash: 2bb55f3bcd6678a127f099afbb9461cafe1a9c94
-ms.sourcegitcommit: c883637b41ee028786edceece4fa872939d2e64c
-ms.translationtype: MT
+ms.openlocfilehash: 7b508f3d83833361bd830bb232587df2ad090661
+ms.sourcegitcommit: 03ee570f6f528a7d23a4221dcb26a9498edbdf8c
+ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 03/26/2018
+ms.lasthandoff: 04/28/2018
 ---
 # <a name="how-to-manage-package-dependency-versions-for-net-core-10"></a>如何管理 .NET Core 1.0 的套件相依性版本
 

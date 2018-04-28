@@ -1,20 +1,17 @@
 ---
-title: "型別提供者疑難排解"
-description: "探索可能的解決方案，當您使用 F # 中的型別提供者時遇到最常見的問題。"
-keywords: "Visual F#, F#, 函式程式設計"
+title: 型別提供者疑難排解
+description: '探索可能的解決方案，當您使用 F # 中的型別提供者時遇到最常見的問題。'
 author: cartermp
 ms.author: phcart
 ms.date: 05/16/2016
 ms.topic: language-reference
-ms.prod: .net
-ms.technology: devlang-fsharp
+ms.prod: dotnet-fsharp
 ms.devlang: fsharp
-ms.assetid: 44533045-9862-43c5-81d9-3e05157e975a
-ms.openlocfilehash: 2b54454d7950dfdd6512d849fd739f505ef3317d
-ms.sourcegitcommit: bd1ef61f4bb794b25383d3d72e71041a5ced172e
+ms.openlocfilehash: e7374a051ca63e003288702c6d882e72d77d71e8
+ms.sourcegitcommit: 03ee570f6f528a7d23a4221dcb26a9498edbdf8c
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/18/2017
+ms.lasthandoff: 04/28/2018
 ---
 # <a name="troubleshooting-type-providers"></a>型別提供者疑難排解
 

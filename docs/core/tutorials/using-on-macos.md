@@ -1,21 +1,19 @@
 ---
 title: 在 macOS 上開始使用 .NET Core
 description: 本文件提供使用 Visual Studio Code 建立 .NET Core 方案的步驟及工作流程。
-keywords: .NET, .NET Core, Mac, macOS, Visual Studio Code
 author: bleroy
 ms.author: mairaw
 ms.date: 03/23/2017
 ms.topic: get-started-article
-ms.prod: .net-core
+ms.prod: dotnet-core
 ms.devlang: dotnet
-ms.assetid: 8ad82148-dac8-4b31-9128-b0e9610f4d9b
 ms.workload:
 - dotnetcore
-ms.openlocfilehash: d130ef34961d19c450dd7142c8a5996c83465646
-ms.sourcegitcommit: b750a8e3979749b214e7e10c82efb0a0524dfcb1
+ms.openlocfilehash: 18f825e75e7d32198a52a091948bc9dd064dacbd
+ms.sourcegitcommit: 03ee570f6f528a7d23a4221dcb26a9498edbdf8c
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/09/2018
+ms.lasthandoff: 04/28/2018
 ---
 # <a name="getting-started-with-net-core-on-macos"></a>在 macOS 上開始使用 .NET Core
 

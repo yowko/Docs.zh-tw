@@ -4,15 +4,15 @@ description: 了解執行階段識別碼 (RID) 以及 RID 在 .NET Core 中的�
 author: mairaw
 ms.author: mairaw
 ms.date: 09/07/2017
-ms.topic: article
-ms.prod: .net-core
+ms.topic: conceptual
+ms.prod: dotnet-core
 ms.workload:
 - dotnetcore
-ms.openlocfilehash: 9343d475319084ddfe3450b4c1d2bbcbd394ad1f
-ms.sourcegitcommit: b750a8e3979749b214e7e10c82efb0a0524dfcb1
+ms.openlocfilehash: 42707d96744ff765c2ea6ae2298da3e8b27f912f
+ms.sourcegitcommit: 03ee570f6f528a7d23a4221dcb26a9498edbdf8c
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/09/2018
+ms.lasthandoff: 04/28/2018
 ---
 # <a name="net-core-rid-catalog"></a>.NET Core RID 類別目錄
 

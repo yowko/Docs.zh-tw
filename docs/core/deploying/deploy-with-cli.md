@@ -1,20 +1,19 @@
 ---
-title: "使用 CLI 工具部署.NET Core 應用程式"
-description: "了解使用命令列介面 (CLI) 工具的 .NET Core 應用程式部署"
-keywords: ".NET、.NET Core、.NET Core 部署"
+title: 使用 CLI 工具部署.NET Core 應用程式
+description: 了解使用命令列介面 (CLI) 工具的 .NET Core 應用程式部署
 author: rpetrusha
 ms.author: ronpet
 ms.date: 04/18/2017
-ms.topic: article
-ms.prod: .net-core
+ms.topic: conceptual
+ms.prod: dotnet-core
 ms.devlang: dotnet
-ms.assetid: 82ebe16d-5e1c-46cc-91e8-71974296429c
-ms.workload: dotnetcore
-ms.openlocfilehash: 302383ec44afd91d1df7f6c717b268d5f965c8c9
-ms.sourcegitcommit: e7f04439d78909229506b56935a1105a4149ff3d
+ms.workload:
+- dotnetcore
+ms.openlocfilehash: 21e824e6092b0d30e0499ff05c5471a291c8d269
+ms.sourcegitcommit: 03ee570f6f528a7d23a4221dcb26a9498edbdf8c
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 12/23/2017
+ms.lasthandoff: 04/28/2018
 ---
 # <a name="deploying-net-core-apps-with-command-line-interface-cli-tools"></a>使用命令列介面 (CLI) 工具部署 .NET Core 應用程式
 

@@ -1,21 +1,19 @@
 ---
 title: 組織專案以支援 .NET Framework 及 .NET Core
 description: 協助想要同時針對 .NET Framework 及 .NET Core 編譯解決方案的專案擁有者。
-keywords: .NET, .NET Core, .NET Framework, 專案配置, 多個架構
 author: conniey
 ms.author: mairaw
 ms.date: 04/06/2017
-ms.topic: article
-ms.prod: .net-core
+ms.topic: conceptual
+ms.prod: dotnet-core
 ms.devlang: dotnet
-ms.assetid: 3af62252-1dfa-4336-8d2f-5cfdb57d7724
 ms.workload:
 - dotnetcore
-ms.openlocfilehash: 2392c6e477138e21dc98055fe7ecca84789f07af
-ms.sourcegitcommit: b750a8e3979749b214e7e10c82efb0a0524dfcb1
+ms.openlocfilehash: 5e2b56c325f54f49bf53b00c74a0e89137928c03
+ms.sourcegitcommit: 03ee570f6f528a7d23a4221dcb26a9498edbdf8c
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/09/2018
+ms.lasthandoff: 04/28/2018
 ---
 # <a name="organizing-your-project-to-support-net-framework-and-net-core"></a>組織專案以支援 .NET Framework 及 .NET Core
 

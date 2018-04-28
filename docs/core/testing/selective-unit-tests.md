@@ -1,20 +1,19 @@
 ---
-title: "執行多樣化選擇的單元測試"
-description: "示範如何使用篩選運算式搭配 dotnet 測試命令執行多樣化選擇的單元測試。"
-keywords: ".NET, .NET Core, 單元測試, 多樣化選擇的測試"
+title: 執行多樣化選擇的單元測試
+description: 示範如何使用篩選運算式搭配 dotnet 測試命令執行多樣化選擇的單元測試。
 author: smadala
 ms.author: mairaw
 ms.date: 03/22/2017
-ms.topic: article
-ms.prod: .net-core
+ms.topic: conceptual
+ms.prod: dotnet-core
 ms.devlang: dotnet
-ms.assetid: 13d01272-bbf8-456c-a97a-560001d1a7f2
-ms.workload: dotnetcore
-ms.openlocfilehash: a650e971afd63171b0cc12f679d81bc222a609a5
-ms.sourcegitcommit: e7f04439d78909229506b56935a1105a4149ff3d
+ms.workload:
+- dotnetcore
+ms.openlocfilehash: 77ac7ab5a46150bd3654d50e6686087c804b8440
+ms.sourcegitcommit: 03ee570f6f528a7d23a4221dcb26a9498edbdf8c
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 12/23/2017
+ms.lasthandoff: 04/28/2018
 ---
 # <a name="running-selective-unit-tests"></a>執行多樣化選擇的單元測試
 

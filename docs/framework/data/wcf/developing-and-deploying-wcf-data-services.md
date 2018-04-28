@@ -21,11 +21,11 @@ ms.author: dotnetcontent
 manager: wpickett
 ms.workload:
 - dotnet
-ms.openlocfilehash: 6fbfd28931f484c5b643dad278b358e7ac2a2945
-ms.sourcegitcommit: 86adcc06e35390f13c1e372c36d2e044f1fc31ef
+ms.openlocfilehash: d20d4c39a6cca744ac981d1a143d2847d9b20e5a
+ms.sourcegitcommit: 03ee570f6f528a7d23a4221dcb26a9498edbdf8c
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/26/2018
+ms.lasthandoff: 04/28/2018
 ---
 # <a name="developing-and-deploying-wcf-data-services"></a>開發和部署 WCF Data Services
 本主題提供有關開發及部署 [!INCLUDE[ssAstoria](../../../../includes/ssastoria-md.md)]的資訊。 如需更多的基本資訊[!INCLUDE[ssAstoria](../../../../includes/ssastoria-md.md)]，請參閱[入門](../../../../docs/framework/data/wcf/getting-started-with-wcf-data-services.md)和[概觀](../../../../docs/framework/data/wcf/wcf-data-services-overview.md)。  
@@ -89,7 +89,7 @@ ms.lasthandoff: 04/26/2018
   
 -   透過讓您檢查要求和回應訊息的內容對資料服務進行偵錯時，HTTP 檢查程式可能會很有幫助。 可以顯示原始封包的任何網路封包分析器可用於檢查資料服務的 HTTP 要求及其回應。  
   
--   對資料服務進行偵錯時，可能比正常作業期間更想要從資料服務取得有關錯誤的詳細資訊。 您可以從資料服務取得其他錯誤資訊，方法是，將 <xref:System.Data.Services.DataServiceConfiguration.UseVerboseErrors%2A> 中的 <xref:System.Data.Services.DataServiceConfiguration> 屬性 (Property) 設為 `true` ，然後在資料服務類別上，將 <xref:System.ServiceModel.Description.ServiceDebugBehavior.IncludeExceptionDetailInFaults%2A> 屬性 (Attribute) 的 <xref:System.ServiceModel.Description.ServiceDebugBehavior> 屬性 (Property) 設為 `true`。 [!INCLUDE[crdefault](../../../../includes/crdefault-md.md)] 文章 [偵錯 WCF Data Services](http://go.microsoft.com/fwlink/?LinkId=201868)。 您也可以在 [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] 中啟用追蹤來檢視在 HTTP 訊息層引發的例外狀況。 如需詳細資訊，請參閱 [Configuring Tracing](../../../../docs/framework/wcf/diagnostics/tracing/configuring-tracing.md)。  
+-   對資料服務進行偵錯時，可能比正常作業期間更想要從資料服務取得有關錯誤的詳細資訊。 您可以從資料服務取得其他錯誤資訊，方法是，將 <xref:System.Data.Services.DataServiceConfiguration.UseVerboseErrors%2A> 中的 <xref:System.Data.Services.DataServiceConfiguration> 屬性 (Property) 設為 `true` ，然後在資料服務類別上，將 <xref:System.ServiceModel.Description.ServiceDebugBehavior.IncludeExceptionDetailInFaults%2A> 屬性 (Attribute) 的 <xref:System.ServiceModel.Description.ServiceDebugBehavior> 屬性 (Property) 設為 `true`。 如需詳細資訊，請參閱下列文章[偵錯 WCF Data Services](http://go.microsoft.com/fwlink/?LinkId=201868)。 您也可以在 [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] 中啟用追蹤來檢視在 HTTP 訊息層引發的例外狀況。 如需詳細資訊，請參閱 [Configuring Tracing](../../../../docs/framework/wcf/diagnostics/tracing/configuring-tracing.md)。  
   
 -   資料服務通常會開發為[!INCLUDE[vstecasp](../../../../includes/vstecasp-md.md)]應用程式專案，但是您也可以建立您資料服務當做[!INCLUDE[vstecasp](../../../../includes/vstecasp-md.md)]Visual Studio 中的網站專案。 兩種專案類型之間差異的詳細資訊，請參閱[NIB: Web 應用程式專案與 Visual Studio 中的網站專案](http://msdn.microsoft.com/library/2861815e-f5a2-4378-a2f8-b8a86dc012f5)。  
   

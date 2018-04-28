@@ -1,24 +1,26 @@
 ---
-title: "新聞訂閱架構"
-ms.custom: 
+title: 新聞訂閱架構
+ms.custom: ''
 ms.date: 03/30/2017
 ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.technology: dotnet-clr
-ms.tgt_pltfrm: 
+ms.reviewer: ''
+ms.suite: ''
+ms.technology:
+- dotnet-clr
+ms.tgt_pltfrm: ''
 ms.topic: article
 ms.assetid: ed4ca86e-e3d8-4acb-87aa-1921fbc353be
-caps.latest.revision: "25"
+caps.latest.revision: 25
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.workload: dotnet
-ms.openlocfilehash: 22df793bd5873d6f69c3a2e86e96d4a1cefcff0d
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.workload:
+- dotnet
+ms.openlocfilehash: bcb64a4e03cae5e6186754dacb87e17a22d13001
+ms.sourcegitcommit: 03ee570f6f528a7d23a4221dcb26a9498edbdf8c
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 04/28/2018
 ---
 # <a name="architecture-of-syndication"></a>新聞訂閱架構
 新聞訂閱 API 主要是提供格式中性的程式設計模型，以便在網路上透過各種格式來撰寫新聞訂閱內容。 抽象資料模型包含下列類別：  
@@ -41,7 +43,7 @@ ms.lasthandoff: 12/22/2017
   
  [!code-csharp[S_UE_SyndicationBoth#0](../../../../samples/snippets/csharp/VS_Snippets_CFX/s_ue_syndicationboth/cs/service.cs#0)]  
   
- 新聞訂閱支援建置在 [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] REST 程式設計模型上，後者會定義 <xref:System.ServiceModel.WebHttpBinding> 繫結，以搭配 <xref:System.ServiceModel.Description.WebHttpBehavior> 來提供可用的摘要服務。 [!INCLUDE[crabout](../../../../includes/crabout-md.md)][!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] REST 程式設計模型，請參閱[WCF Web HTTP 程式設計模型概觀](../../../../docs/framework/wcf/feature-details/wcf-web-http-programming-model-overview.md)。  
+ 新聞訂閱支援建置在 [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] REST 程式設計模型上，後者會定義 <xref:System.ServiceModel.WebHttpBinding> 繫結，以搭配 <xref:System.ServiceModel.Description.WebHttpBehavior> 來提供可用的摘要服務。 [!INCLUDE[crabout](../../../../includes/crabout-md.md)] [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] REST 程式設計模型，請參閱[WCF Web HTTP 程式設計模型概觀](../../../../docs/framework/wcf/feature-details/wcf-web-http-programming-model-overview.md)。  
   
 > [!NOTE]
 >  Atom 1.0 規格允許在其任何日期建構中指定小數秒數。 序列化和還原序列化 [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] 實作時，將會忽略小數秒數。  
@@ -86,9 +88,9 @@ ms.lasthandoff: 12/22/2017
   
 ## <a name="extensibility"></a>擴充性  
   
--   擴充性是新聞訂閱通訊協定的一項重要功能。 Atom 1.0 和 RSS 2.0 都可讓您將屬性與項目新增至規格中未定義的新聞訂閱摘要。 [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] 新聞訂閱程式設計模型提供兩種使用自訂屬性與延伸的方式：衍生新類別，與鬆散型別的存取。 [!INCLUDE[crdefault](../../../../includes/crdefault-md.md)][新聞訂閱擴充性](../../../../docs/framework/wcf/feature-details/syndication-extensibility.md)。  
+-   擴充性是新聞訂閱通訊協定的一項重要功能。 Atom 1.0 和 RSS 2.0 都可讓您將屬性與項目新增至規格中未定義的新聞訂閱摘要。 [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] 新聞訂閱程式設計模型提供兩種使用自訂屬性與延伸的方式：衍生新類別，與鬆散型別的存取。 如需詳細資訊，請參閱[新聞訂閱擴充性](../../../../docs/framework/wcf/feature-details/syndication-extensibility.md)。  
   
-## <a name="see-also"></a>請參閱  
+## <a name="see-also"></a>另請參閱  
  [WCF 摘要整合概觀](../../../../docs/framework/wcf/feature-details/wcf-syndication-overview.md)  
  [WCF 摘要整合物件模型對應到 Atom 和 RSS 的方式](../../../../docs/framework/wcf/feature-details/how-the-wcf-syndication-object-model-maps-to-atom-and-rss.md)  
  [WCF Web HTTP 程式設計模型](../../../../docs/framework/wcf/feature-details/wcf-web-http-programming-model.md)
