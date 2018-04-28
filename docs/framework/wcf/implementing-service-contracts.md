@@ -1,28 +1,28 @@
 ---
-title: "實作服務合約"
-ms.custom: 
+title: 實作服務合約
+ms.custom: ''
 ms.date: 03/30/2017
 ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
+ms.reviewer: ''
+ms.suite: ''
 ms.technology:
 - dotnet-clr
-ms.tgt_pltfrm: 
+ms.tgt_pltfrm: ''
 ms.topic: article
 helpviewer_keywords:
 - implementing service contracts [WCF]
 ms.assetid: aefb6f56-47e3-4f24-ab0a-9bc07bf9885f
-caps.latest.revision: 
+caps.latest.revision: 17
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
 ms.workload:
 - dotnet
-ms.openlocfilehash: 1b4085e23120ad654121f33111eda68276259096
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.openlocfilehash: 2a9c34f67de6f4f8b4a8d22dac7e8bf1c9555498
+ms.sourcegitcommit: 03ee570f6f528a7d23a4221dcb26a9498edbdf8c
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 04/28/2018
 ---
 # <a name="implementing-service-contracts"></a>實作服務合約
 服務是一種類別，會在一或多個端點公開可供用戶端使用的功能。 如果要建立服務，請寫入實作 [!INCLUDE[indigo1](../../../includes/indigo1-md.md)] 合約的類別。 您可以使用下列其中一種作法： 您可以將合約另外定義為介面，然後建立實作該介面的類別。 或者，您可以將 <xref:System.ServiceModel.ServiceContractAttribute> 屬性置於類別本身，而將 <xref:System.ServiceModel.OperationContractAttribute> 屬性置於可供服務之用戶端使用的方法上，以直接建立類別和合約。  
@@ -66,11 +66,11 @@ class MathService
   
  請注意，前述服務會公開不同的合約，因為合約名稱不同。 在第一個案例中，公開的合約名為 "`IMath`"，而在第二個案例中，合約名為 "`MathService`"。  
   
- 您可以在服務和作業實作層級進行一些設定，例如並行和執行個體。 [!INCLUDE[crdefault](../../../includes/crdefault-md.md)][設計和實作服務](../../../docs/framework/wcf/designing-and-implementing-services.md)。  
+ 您可以在服務和作業實作層級進行一些設定，例如並行和執行個體。 如需詳細資訊，請參閱[設計與實作服務](../../../docs/framework/wcf/designing-and-implementing-services.md)。  
   
- 在實作服務合約之後，必須為服務建立一或多個端點。 [!INCLUDE[crdefault](../../../includes/crdefault-md.md)][端點建立概觀](../../../docs/framework/wcf/endpoint-creation-overview.md)。 [!INCLUDE[crabout](../../../includes/crabout-md.md)]執行服務，請參閱[裝載服務](../../../docs/framework/wcf/hosting-services.md)。  
+ 在實作服務合約之後，必須為服務建立一或多個端點。 如需詳細資訊，請參閱[端點建立概觀](../../../docs/framework/wcf/endpoint-creation-overview.md)。 [!INCLUDE[crabout](../../../includes/crabout-md.md)] 執行服務，請參閱[裝載服務](../../../docs/framework/wcf/hosting-services.md)。  
   
-## <a name="see-also"></a>請參閱  
+## <a name="see-also"></a>另請參閱  
  [設計與實作服務](../../../docs/framework/wcf/designing-and-implementing-services.md)  
  [如何：使用合約類別來建立服務](../../../docs/framework/wcf/feature-details/how-to-create-a-wcf-contract-with-a-class.md)  
  [如何：使用合約介面來建立服務](../../../docs/framework/wcf/feature-details/how-to-create-a-service-with-a-contract-interface.md)  

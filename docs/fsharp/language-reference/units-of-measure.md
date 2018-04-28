@@ -1,20 +1,17 @@
 ---
-title: "測量單位 (F#)"
-description: "了解如何浮點數和 F # 中的帶正負號的整數值可以具有相關聯的度量單位，通常會表示長度、 磁碟區，以及大量使用。"
-keywords: "Visual F#, F#, 函式程式設計"
+title: 測量單位 (F#)
+description: '了解如何浮點數和 F # 中的帶正負號的整數值可以具有相關聯的度量單位，通常會表示長度、 磁碟區，以及大量使用。'
 author: cartermp
 ms.author: phcart
 ms.date: 05/16/2016
 ms.topic: language-reference
-ms.prod: .net
-ms.technology: devlang-fsharp
+ms.prod: dotnet-fsharp
 ms.devlang: fsharp
-ms.assetid: cb2eb658-df6c-422e-afad-97422609c773
-ms.openlocfilehash: 2d0683e864c5684a78c02e177c296d3067295723
-ms.sourcegitcommit: bd1ef61f4bb794b25383d3d72e71041a5ced172e
+ms.openlocfilehash: 336a1e04426fb39f5ceb98e06a06cd7eadc36e85
+ms.sourcegitcommit: 03ee570f6f528a7d23a4221dcb26a9498edbdf8c
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/18/2017
+ms.lasthandoff: 04/28/2018
 ---
 # <a name="units-of-measure"></a>測量單位
 

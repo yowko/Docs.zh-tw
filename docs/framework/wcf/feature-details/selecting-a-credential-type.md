@@ -1,26 +1,26 @@
 ---
-title: "選取認證類型"
-ms.custom: 
+title: 選取認證類型
+ms.custom: ''
 ms.date: 03/30/2017
 ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
+ms.reviewer: ''
+ms.suite: ''
 ms.technology:
 - dotnet-clr
-ms.tgt_pltfrm: 
+ms.tgt_pltfrm: ''
 ms.topic: article
 ms.assetid: bf707063-3f30-4304-ab53-0e63413728a8
-caps.latest.revision: 
+caps.latest.revision: 25
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
 ms.workload:
 - dotnet
-ms.openlocfilehash: 9e6b3d84db619ba1b4b5785b134cfe87d1b15cdc
-ms.sourcegitcommit: cf22b29db780e532e1090c6e755aa52d28273fa6
+ms.openlocfilehash: 9858475520b949d5b9ee62ecdc0994bbb9398953
+ms.sourcegitcommit: 03ee570f6f528a7d23a4221dcb26a9498edbdf8c
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 02/01/2018
+ms.lasthandoff: 04/28/2018
 ---
 # <a name="selecting-a-credential-type"></a>選取認證類型
 *認證*是指資料[!INCLUDE[indigo1](../../../../includes/indigo1-md.md)]用以建立宣告的身分識別或功能。 例如，護照是政府發給的認證，以證明一個國家或地區的公民身分。 在 [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] 中，認證可以有許多形式，例如使用者名稱權杖和 X.509 憑證。 本主題將說明認證、如何在 [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] 中使用，以及如何為應用程式選擇正確的認證。  
@@ -55,7 +55,7 @@ ms.lasthandoff: 02/01/2018
 |Windows|允許在使用 Windows 認證建立的安全性內容下發生 SOAP 訊息交換。|  
 |使用者名稱|允許服務要求用戶端必須使用使用者名稱認證進行驗證。 請注意，[!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] 不允許任何利用使用者名稱的密碼編譯作業，例如產生簽章或加密資料。 [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] 會在利用使用者名稱認證時，確保傳輸安全受到保護。|  
 |憑證|允許服務要求用戶端使用 X.509 憑證進行驗證。|  
-|發行的權杖|根據安全性原則設定的自訂權杖類型。 預設的權杖類型為 Security Assertions Markup Language (SAML)。 權杖是由安全的權杖服務所發行。 [!INCLUDE[crdefault](../../../../includes/crdefault-md.md)][同盟與發行的權杖](../../../../docs/framework/wcf/feature-details/federation-and-issued-tokens.md)。|  
+|發行的權杖|根據安全性原則設定的自訂權杖類型。 預設的權杖類型為 Security Assertions Markup Language (SAML)。 權杖是由安全的權杖服務所發行。 如需詳細資訊，請參閱[同盟和發出的權杖](../../../../docs/framework/wcf/feature-details/federation-and-issued-tokens.md)。|  
   
 ### <a name="negotiation-model-of-service-credentials"></a>服務認證的交涉模型  
  *交涉*是藉由交換認證來建立用戶端和服務之間的信任的程序。 此處理程序會在用戶端和服務之間反覆執行，以便只透露交涉處理程序中下一個步驟所需要的資訊。 實際上，最終結果是將服務的認證傳遞至要用於後續作業中的用戶端。  
@@ -77,7 +77,7 @@ ms.lasthandoff: 02/01/2018
  根據您是對服務或用戶端進行程式設計，設定認證值的方法會有些許不同。  
   
 ### <a name="setting-service-credentials"></a>設定服務認證  
- 如果您是使用傳輸模式，並使用 HTTP 做為傳輸，您必須使用網際網路資訊服務 (IIS) 或使用憑證設定連接埠。 [!INCLUDE[crdefault](../../../../includes/crdefault-md.md)][傳輸安全性概觀](../../../../docs/framework/wcf/feature-details/transport-security-overview.md)和[HTTP 傳輸安全性](../../../../docs/framework/wcf/feature-details/http-transport-security.md)。  
+ 如果您是使用傳輸模式，並使用 HTTP 做為傳輸，您必須使用網際網路資訊服務 (IIS) 或使用憑證設定連接埠。 如需詳細資訊，請參閱[傳輸安全性概觀](../../../../docs/framework/wcf/feature-details/transport-security-overview.md)和[HTTP 傳輸安全性](../../../../docs/framework/wcf/feature-details/http-transport-security.md)。  
   
  如果要在程式碼中提供含有認證的服務，請建立 <xref:System.ServiceModel.ServiceHost> 類別的執行個體，並使用 <xref:System.ServiceModel.Description.ServiceCredentials> 類別指定適當的認證 (透過 <xref:System.ServiceModel.ServiceHostBase.Credentials%2A> 屬性存取)。  
   
@@ -110,7 +110,7 @@ ms.lasthandoff: 02/01/2018
   
  [!INCLUDE[crabout](../../../../includes/crabout-md.md)] 認證以及安全工作階段，請參閱[安全工作階段的安全性考量](../../../../docs/framework/wcf/feature-details/security-considerations-for-secure-sessions.md)。  
   
-## <a name="see-also"></a>請參閱  
+## <a name="see-also"></a>另請參閱  
  <xref:System.ServiceModel.ClientBase%601?displayProperty=nameWithType>  
  <xref:System.ServiceModel.ClientBase%601.ClientCredentials%2A?displayProperty=nameWithType>  
  <xref:System.ServiceModel.Description.ClientCredentials.ClientCertificate%2A?displayProperty=nameWithType>  

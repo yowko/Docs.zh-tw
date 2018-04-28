@@ -1,12 +1,13 @@
 ---
-title: "最佳做法：資料合約版本控制"
-ms.custom: 
+title: 最佳做法：資料合約版本控制
+ms.custom: ''
 ms.date: 03/30/2017
 ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.technology: dotnet-clr
-ms.tgt_pltfrm: 
+ms.reviewer: ''
+ms.suite: ''
+ms.technology:
+- dotnet-clr
+ms.tgt_pltfrm: ''
 ms.topic: article
 helpviewer_keywords:
 - data contracts
@@ -14,19 +15,20 @@ helpviewer_keywords:
 - best practices [WCF], data contract versioning
 - Windows Communication Foundation, data contracts
 ms.assetid: bf0ab338-4d36-4e12-8002-8ebfdeb346cb
-caps.latest.revision: "24"
+caps.latest.revision: 24
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.workload: dotnet
-ms.openlocfilehash: 78373d482aaaa0121a6c2708f543188d9cc9464d
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.workload:
+- dotnet
+ms.openlocfilehash: dfb3d781a570db6a929a7d984aa45c224dda66bd
+ms.sourcegitcommit: 03ee570f6f528a7d23a4221dcb26a9498edbdf8c
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 04/28/2018
 ---
 # <a name="best-practices-data-contract-versioning"></a>最佳做法：資料合約版本控制
-本主題會列出最佳做法以建立可隨時間輕鬆改進的資料合約。 [!INCLUDE[crabout](../../../includes/crabout-md.md)]資料合約，請參閱[使用資料合約](../../../docs/framework/wcf/feature-details/using-data-contracts.md)。  
+本主題會列出最佳做法以建立可隨時間輕鬆改進的資料合約。 [!INCLUDE[crabout](../../../includes/crabout-md.md)] 資料合約，請參閱[使用資料合約](../../../docs/framework/wcf/feature-details/using-data-contracts.md)。  
   
 ## <a name="note-on-schema-validation"></a>結構描述驗證注意事項  
  在討論資料合約版本設定時，重要的是要注意，除了項目根據預設標示為選擇性以外，由 [!INCLUDE[indigo1](../../../includes/indigo1-md.md)] 匯出的資料合約結構描述沒有任何版本設定支援。  
@@ -46,7 +48,7 @@ ms.lasthandoff: 12/22/2017
   
  雖然在這些範例中，名稱已變更 (附加一個 "2")，但建議您將新的命名空間加上版本號碼或日期，來變更命名空間而非名稱。 例如，`http://schemas.contoso.com/2005/05/21/PurchaseOrder` 資料合約會變更為 `http://schemas.contoso.com/2005/10/14/PurchaseOrder` 資料合約。  
   
- [!INCLUDE[crdefault](../../../includes/crdefault-md.md)]最佳作法：[服務版本設定](../../../docs/framework/wcf/service-versioning.md)。  
+ 如需詳細資訊，請參閱 < 最佳作法：[服務版本控制](../../../docs/framework/wcf/service-versioning.md)。  
   
  雖然有時候，您必須為應用程式傳送的訊息，保證具有嚴格結構描述相容性，但不能依賴傳入訊息來達到嚴格的結構描述相容性。 此案例具有一項危險性，就是傳入訊息可能會包含一些無關的資料。 這些無關值會由 [!INCLUDE[indigo2](../../../includes/indigo2-md.md)] 儲存及傳回，因此造成傳送結構描述無效的訊息。 如果要避免這個問題，應關閉往返功能。 執行這項作業的方法有兩種。  
   
@@ -54,7 +56,7 @@ ms.lasthandoff: 12/22/2017
   
 -   將 <xref:System.ServiceModel.ServiceBehaviorAttribute> 屬性設定為 <xref:System.ServiceModel.ServiceBehaviorAttribute.IgnoreExtensionDataObject%2A>，以套用 `true` 屬性至您的服務合約。  
   
- [!INCLUDE[crabout](../../../includes/crabout-md.md)]反覆存取，請參閱[向前相容資料合約](../../../docs/framework/wcf/feature-details/forward-compatible-data-contracts.md)。  
+ [!INCLUDE[crabout](../../../includes/crabout-md.md)] 反覆存取，請參閱[向前相容資料合約](../../../docs/framework/wcf/feature-details/forward-compatible-data-contracts.md)。  
   
 ## <a name="versioning-when-schema-validation-is-not-required"></a>不需要結構描述驗證時的版本設定  
  嚴格結構描述相容性很少有需要。 許多平台都會容許結構描述未描述的額外項目。 這所容許之，如中所述功能的完整[資料合約版本控制](../../../docs/framework/wcf/feature-details/data-contract-versioning.md)和[向前相容資料合約](../../../docs/framework/wcf/feature-details/forward-compatible-data-contracts.md)可用。 建議使用下列指導方針。  
@@ -65,9 +67,9 @@ ms.lasthandoff: 12/22/2017
   
 2.  如果繼承沒有用來做為版本設定機制，並遵循特定規則，便允許搭配使用繼承和資料合約。 如果型別衍生自特定的基底型別，在未來版本中請勿讓它衍生自不同的基底型別 (除非它有相同的資料合約)。 這種情形有一個例外狀況：只有在不包含名稱與繼承中其他型別之任何可能版本中的其他成員相同的資料成員時，您才可以將型別插入資料合約類型和其基底型別之間的繼承中。 一般來說，在相同繼承階層之不同層級使用名稱相同的資料成員，會導致嚴重的版本設定問題，應加以避免。  
   
-3.  從資料合約的第一個版本開始時，請永遠實作 <xref:System.Runtime.Serialization.IExtensibleDataObject> 以啟用往返。 [!INCLUDE[crdefault](../../../includes/crdefault-md.md)][向前相容資料合約](../../../docs/framework/wcf/feature-details/forward-compatible-data-contracts.md)。 如果您已發行型別的一或多個版本，而沒有實作這個介面，請在型別的下一個版本中實作它。  
+3.  從資料合約的第一個版本開始時，請永遠實作 <xref:System.Runtime.Serialization.IExtensibleDataObject> 以啟用往返。 如需詳細資訊，請參閱[向前相容資料合約](../../../docs/framework/wcf/feature-details/forward-compatible-data-contracts.md)。 如果您已發行型別的一或多個版本，而沒有實作這個介面，請在型別的下一個版本中實作它。  
   
-4.  在較新的版本中，請勿變更資料合約名稱或命名空間。 如果變更做為資料合約基礎之型別的名稱或命名空間，請使用適當的機制以確定保留資料合約名稱和命名空間，例如 <xref:System.Runtime.Serialization.DataContractAttribute.Name%2A> 的 <xref:System.Runtime.Serialization.DataContractAttribute> 屬性。 [!INCLUDE[crabout](../../../includes/crabout-md.md)]命名，請參閱[資料合約名稱](../../../docs/framework/wcf/feature-details/data-contract-names.md)。  
+4.  在較新的版本中，請勿變更資料合約名稱或命名空間。 如果變更做為資料合約基礎之型別的名稱或命名空間，請使用適當的機制以確定保留資料合約名稱和命名空間，例如 <xref:System.Runtime.Serialization.DataContractAttribute.Name%2A> 的 <xref:System.Runtime.Serialization.DataContractAttribute> 屬性。 [!INCLUDE[crabout](../../../includes/crabout-md.md)] 命名，請參閱[資料合約名稱](../../../docs/framework/wcf/feature-details/data-contract-names.md)。  
   
 5.  在較新的版本中，請勿變更任何資料成員的名稱。 如果變更做為資料成員基礎的欄位、屬性或事件的名稱，請使用 `Name` 的 <xref:System.Runtime.Serialization.DataMemberAttribute> 屬性來保留現有的資料成員名稱。  
   
@@ -79,7 +81,7 @@ ms.lasthandoff: 12/22/2017
   
     1.  <xref:System.Runtime.Serialization.DataMemberAttribute.IsRequired%2A> 屬性應永遠保持為 `false` 的預設值。  
   
-    2.  如果無法接受成員為 `null` 預設值或零，而成員未出現在傳入的資料流中，就應使用 <xref:System.Runtime.Serialization.OnDeserializingAttribute> 以提供合理的預設值來提供回呼方法。 [!INCLUDE[crabout](../../../includes/crabout-md.md)]回撥，請參閱[版本相容序列化回呼](../../../docs/framework/wcf/feature-details/version-tolerant-serialization-callbacks.md)。  
+    2.  如果無法接受成員為 `null` 預設值或零，而成員未出現在傳入的資料流中，就應使用 <xref:System.Runtime.Serialization.OnDeserializingAttribute> 以提供合理的預設值來提供回呼方法。 [!INCLUDE[crabout](../../../includes/crabout-md.md)] 回撥，請參閱[版本相容序列化回呼](../../../docs/framework/wcf/feature-details/version-tolerant-serialization-callbacks.md)。  
   
     3.  `Order` 上的 `DataMemberAttribute` 屬性應用於確定所有新增的資料成員都會出現在現有的資料成員之後。 執行這項操作的建議方法如下：資料合約第一個版本中的所有資料成員都不應設定其 `Order` 屬性。 資料合約第二個版本中加入的所有資料成員都不應將其 `Order` 屬性設定為 2。 資料合約第三個版本中加入的所有資料成員都不應將其 `Order` 屬性設定為 3，以此類推。 您可以將一個以上的資料成員設定為相同的 `Order` 號碼。  
   
@@ -101,7 +103,7 @@ ms.lasthandoff: 12/22/2017
   
  當情況特殊時，可以放心略過此處列出的一些指導方針。 在違背指導方針之前，請確定您完全瞭解其中的序列化、還原序列化以及結構描述機制。  
   
-## <a name="see-also"></a>請參閱  
+## <a name="see-also"></a>另請參閱  
  <xref:System.Runtime.Serialization.DataContractAttribute.Name%2A>  
  <xref:System.Runtime.Serialization.DataContractAttribute>  
  <xref:System.Runtime.Serialization.DataMemberAttribute.Order%2A>  

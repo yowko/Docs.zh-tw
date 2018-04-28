@@ -1,13 +1,13 @@
 ---
-title: "設定資料服務 (WCF 資料服務)"
-ms.custom: 
+title: 設定資料服務 (WCF 資料服務)
+ms.custom: ''
 ms.date: 03/30/2017
 ms.prod: .net-framework-oob
-ms.reviewer: 
-ms.suite: 
+ms.reviewer: ''
+ms.suite: ''
 ms.technology:
 - dotnet-clr
-ms.tgt_pltfrm: 
+ms.tgt_pltfrm: ''
 ms.topic: article
 dev_langs:
 - csharp
@@ -15,20 +15,20 @@ dev_langs:
 helpviewer_keywords:
 - WCF Data Services, configuring
 ms.assetid: 59efd4c8-cc7a-4800-a0a4-d3f8abe6c55c
-caps.latest.revision: 
+caps.latest.revision: 10
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
 ms.workload:
 - dotnet
-ms.openlocfilehash: d9dd82926385ee97b05694d954b94d7821a1e638
-ms.sourcegitcommit: c0dd436f6f8f44dc80dc43b07f6841a00b74b23f
+ms.openlocfilehash: 7c3c82e1e4460e82dd7e6bd88771eae96f132c8e
+ms.sourcegitcommit: 03ee570f6f528a7d23a4221dcb26a9498edbdf8c
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 01/19/2018
+ms.lasthandoff: 04/28/2018
 ---
 # <a name="configuring-the-data-service-wcf-data-services"></a>設定資料服務 (WCF 資料服務)
-與[!INCLUDE[ssAstoria](../../../../includes/ssastoria-md.md)]，您可以建立資料服務公開[!INCLUDE[ssODataFull](../../../../includes/ssodatafull-md.md)]摘要。 這些摘要中的資料可以來自各種不同的資料來源。 [!INCLUDE[ssAstoria](../../../../includes/ssastoria-md.md)]使用資料提供者將此資料公開為[!INCLUDE[ssODataShort](../../../../includes/ssodatashort-md.md)]摘要。 這些提供者包含 [!INCLUDE[adonet_ef](../../../../includes/adonet-ef-md.md)] 提供者、反映提供者，以及一組自訂資料服務提供者介面。 提供者實作會針對此服務定義資料模型。 如需詳細資訊，請參閱[資料服務提供者](../../../../docs/framework/data/wcf/data-services-providers-wcf-data-services.md)。  
+與[!INCLUDE[ssAstoria](../../../../includes/ssastoria-md.md)]，您可以建立資料服務公開[!INCLUDE[ssODataFull](../../../../includes/ssodatafull-md.md)]摘要。 這些摘要中的資料可以來自各種不同的資料來源。 [!INCLUDE[ssAstoria](../../../../includes/ssastoria-md.md)] 使用資料提供者將此資料公開為[!INCLUDE[ssODataShort](../../../../includes/ssodatashort-md.md)]摘要。 這些提供者包含 [!INCLUDE[adonet_ef](../../../../includes/adonet-ef-md.md)] 提供者、反映提供者，以及一組自訂資料服務提供者介面。 提供者實作會針對此服務定義資料模型。 如需詳細資訊，請參閱[資料服務提供者](../../../../docs/framework/data/wcf/data-services-providers-wcf-data-services.md)。  
   
  在 [!INCLUDE[ssAstoria](../../../../includes/ssastoria-md.md)] 中，資料服務是繼承自 <xref:System.Data.Services.DataService%601> 類別的一種類別，其中資料服務的類型即為資料模型的實體容器。 此實體容器具有一個或多個可傳回 <xref:System.Linq.IQueryable%601> (用於存取資料模型中的資料集) 的屬性。  
   
@@ -49,10 +49,10 @@ ms.lasthandoff: 01/19/2018
 |<xref:System.Data.Services.DataServiceBehavior.InvokeInterceptorsOnLinkDelete%2A>|可讓您指定是否要在刪除兩個實體間的關聯性時，叫用註冊的變更攔截器。|  
 |<xref:System.Data.Services.DataServiceConfiguration.MaxBatchCount%2A>|可讓您限制單一批次中允許的變更集與查詢作業數目。 如需詳細資訊，請參閱[OData： 批次](http://go.microsoft.com/fwlink/?LinkId=185602)和[批次處理作業](../../../../docs/framework/data/wcf/batching-operations-wcf-data-services.md)。|  
 |<xref:System.Data.Services.DataServiceConfiguration.MaxChangesetCount%2A>|可讓您限制單一變更集中包含的變更次數。 如需詳細資訊，請參閱[How to： 啟用分頁的資料服務結果](../../../../docs/framework/data/wcf/how-to-enable-paging-of-data-service-results-wcf-data-services.md)。|  
-|<xref:System.Data.Services.DataServiceConfiguration.MaxExpandCount%2A>|可讓您使用 `$expand` 查詢運算子限制包含在單一要求中的相關實體數目，進而限制回應的大小。 [!INCLUDE[crdefault](../../../../includes/crdefault-md.md)]請參閱[OData: URI 慣例](http://go.microsoft.com/fwlink/?LinkId=185564)和[載入延後內容](../../../../docs/framework/data/wcf/loading-deferred-content-wcf-data-services.md)。|  
-|<xref:System.Data.Services.DataServiceConfiguration.MaxExpandDepth%2A>|可讓您使用 `$expand` 查詢運算子限制包含在單一要求中的相關實體圖形深度，進而限制回應的大小。 [!INCLUDE[crdefault](../../../../includes/crdefault-md.md)]請參閱[OData: URI 慣例](http://go.microsoft.com/fwlink/?LinkId=185564)和[載入延後內容](../../../../docs/framework/data/wcf/loading-deferred-content-wcf-data-services.md)。|  
+|<xref:System.Data.Services.DataServiceConfiguration.MaxExpandCount%2A>|可讓您使用 `$expand` 查詢運算子限制包含在單一要求中的相關實體數目，進而限制回應的大小。 如需詳細資訊，請參閱 < 請參閱[OData: URI 慣例](http://go.microsoft.com/fwlink/?LinkId=185564)和[載入延後內容](../../../../docs/framework/data/wcf/loading-deferred-content-wcf-data-services.md)。|  
+|<xref:System.Data.Services.DataServiceConfiguration.MaxExpandDepth%2A>|可讓您使用 `$expand` 查詢運算子限制包含在單一要求中的相關實體圖形深度，進而限制回應的大小。 如需詳細資訊，請參閱 < 請參閱[OData: URI 慣例](http://go.microsoft.com/fwlink/?LinkId=185564)和[載入延後內容](../../../../docs/framework/data/wcf/loading-deferred-content-wcf-data-services.md)。|  
 |<xref:System.Data.Services.DataServiceConfiguration.MaxObjectCountOnInsert%2A>|可讓您限制單一 POST 要求中可包含及插入的實體數目。|  
-|<xref:System.Data.Services.DataServiceBehavior.MaxProtocolVersion%2A>|定義資料服務所使用的 Atom 通訊協定版本。 當 <xref:System.Data.Services.DataServiceBehavior.MaxProtocolVersion%2A> 的值設定為小於 <xref:System.Data.Services.Common.DataServiceProtocolVersion> 的最大值時，存取資料服務的用戶端就無法使用 [!INCLUDE[ssAstoria](../../../../includes/ssastoria-md.md)] 的最新功能。 [!INCLUDE[crdefault](../../../../includes/crdefault-md.md)][資料服務版本設定](../../../../docs/framework/data/wcf/data-service-versioning-wcf-data-services.md)。|  
+|<xref:System.Data.Services.DataServiceBehavior.MaxProtocolVersion%2A>|定義資料服務所使用的 Atom 通訊協定版本。 當 <xref:System.Data.Services.DataServiceBehavior.MaxProtocolVersion%2A> 的值設定為小於 <xref:System.Data.Services.Common.DataServiceProtocolVersion> 的最大值時，存取資料服務的用戶端就無法使用 [!INCLUDE[ssAstoria](../../../../includes/ssastoria-md.md)] 的最新功能。 如需詳細資訊，請參閱[資料服務版本控制](../../../../docs/framework/data/wcf/data-service-versioning-wcf-data-services.md)。|  
 |<xref:System.Data.Services.DataServiceConfiguration.MaxResultsPerCollection%2A>|可讓您限制以資料摘要傳回之每個實體集中的實體數目來限制回應的大小。|  
 |<xref:System.Data.Services.DataServiceConfiguration.RegisterKnownType%2A>|將資料型別加入至按資料服務辨識的型別清單。|  
 |<xref:System.Data.Services.DataServiceConfiguration.SetEntitySetAccessRule%2A>|設定資料服務中可用之實體集資源的存取權限。 可提供星號 (`*`) 值給名稱參數，將所有剩餘實體集的存取權限設為相同層級。 建議您設定實體集的存取權，以提供最少權限來存取用戶端應用程式所需的資料服務資源。 如需詳細資訊，請參閱 [Securing WCF Data Services](../../../../docs/framework/data/wcf/securing-wcf-data-services.md)。 如需給定 URI 和 HTTP 動作所需的最低存取權限的範例，請參閱中的資料表[最少資源存取需求](../../../../docs/framework/data/wcf/configuring-the-data-service-wcf-data-services.md#accessRequirements)> 一節。|  
@@ -68,7 +68,7 @@ ms.lasthandoff: 01/19/2018
 |------------------|-----------|--------------|-------------|------------|-----------|  
 |`/Customers`|<xref:System.Data.Services.EntitySetRights.ReadMultiple>|不支援|不支援|<xref:System.Data.Services.EntitySetRights.WriteAppend>|不支援|  
 |`/Customers('ALFKI')`|<xref:System.Data.Services.EntitySetRights.ReadSingle>|<xref:System.Data.Services.EntitySetRights.ReadSingle> 和 <xref:System.Data.Services.EntitySetRights.WriteDelete>|<xref:System.Data.Services.EntitySetRights.ReadSingle> 和 <xref:System.Data.Services.EntitySetRights.WriteMerge>|N/A|<xref:System.Data.Services.EntitySetRights.ReadSingle> 和 <xref:System.Data.Services.EntitySetRights.WriteReplace>|  
-|`/Customers('ALFKI')/Orders`|`Customers`: <xref:System.Data.Services.EntitySetRights.ReadSingle><br /><br /> -和-<br /><br /> `Orders`: <xref:System.Data.Services.EntitySetRights.ReadMultiple>|不支援|不支援|`Customers`：<xref:System.Data.Services.EntitySetRights.ReadSingle> 和 <xref:System.Data.Services.EntitySetRights.WriteMerge> 或 <xref:System.Data.Services.EntitySetRights.WriteReplace><br /><br /> -和-<br /><br /> `Orders``:`和<xref:System.Data.Services.EntitySetRights.WriteAppend>|不支援|  
+|`/Customers('ALFKI')/Orders`|`Customers`: <xref:System.Data.Services.EntitySetRights.ReadSingle><br /><br /> -和-<br /><br /> `Orders`: <xref:System.Data.Services.EntitySetRights.ReadMultiple>|不支援|不支援|`Customers`：<xref:System.Data.Services.EntitySetRights.ReadSingle> 和 <xref:System.Data.Services.EntitySetRights.WriteMerge> 或 <xref:System.Data.Services.EntitySetRights.WriteReplace><br /><br /> -和-<br /><br /> `Orders` `:` 和 <xref:System.Data.Services.EntitySetRights.WriteAppend>|不支援|  
 |`/Customers('ALFKI')/Orders(10643)`|`Customers`: <xref:System.Data.Services.EntitySetRights.ReadSingle><br /><br /> -和-<br /><br /> `Orders`: <xref:System.Data.Services.EntitySetRights.ReadSingle>|`Customers`: <xref:System.Data.Services.EntitySetRights.ReadSingle><br /><br /> -和-<br /><br /> `Orders`：<xref:System.Data.Services.EntitySetRights.ReadSingle> 和 <xref:System.Data.Services.EntitySetRights.WriteDelete>|`Customers`: <xref:System.Data.Services.EntitySetRights.ReadSingle><br /><br /> -和-<br /><br /> `Orders`：<xref:System.Data.Services.EntitySetRights.ReadSingle> 和 <xref:System.Data.Services.EntitySetRights.WriteMerge>|不支援|`Customers`: <xref:System.Data.Services.EntitySetRights.ReadSingle><br /><br /> -和-<br /><br /> `Orders`：<xref:System.Data.Services.EntitySetRights.ReadSingle> 和 <xref:System.Data.Services.EntitySetRights.WriteReplace>|  
 |`/Orders(10643)/Customer`|`Customers`: <xref:System.Data.Services.EntitySetRights.ReadSingle><br /><br /> -和-<br /><br /> `Orders`: <xref:System.Data.Services.EntitySetRights.ReadSingle>|`Customers`：<xref:System.Data.Services.EntitySetRights.ReadSingle> 和 <xref:System.Data.Services.EntitySetRights.WriteDelete><br /><br /> -和-<br /><br /> `Orders`: <xref:System.Data.Services.EntitySetRights.ReadSingle>|`Customers`：<xref:System.Data.Services.EntitySetRights.ReadSingle> 和 <xref:System.Data.Services.EntitySetRights.WriteMerge>；<br /><br /> -和-<br /><br /> `Orders`: <xref:System.Data.Services.EntitySetRights.ReadSingle>|`Customers`: <xref:System.Data.Services.EntitySetRights.WriteAppend><br /><br /> -和-<br /><br /> `Orders`：<xref:System.Data.Services.EntitySetRights.WriteAppend> 和 <xref:System.Data.Services.EntitySetRights.ReadSingle>|不支援|  
 |`/Customers('ALFKI')/$links/Orders`|`Customers`: <xref:System.Data.Services.EntitySetRights.ReadSingle><br /><br /> -和-<br /><br /> `Orders`: <xref:System.Data.Services.EntitySetRights.ReadMultiple>|不支援|不支援|`Customers`：<xref:System.Data.Services.EntitySetRights.ReadSingle> 和 <xref:System.Data.Services.EntitySetRights.WriteMerge> 或 <xref:System.Data.Services.EntitySetRights.WriteReplace><br /><br /> -和-<br /><br /> `Orders`: <xref:System.Data.Services.EntitySetRights.ReadSingle>|不支援|  
@@ -96,6 +96,6 @@ ms.lasthandoff: 01/19/2018
   
  如需詳細資訊，請參閱[資料服務版本控制](../../../../docs/framework/data/wcf/data-service-versioning-wcf-data-services.md)。  
   
-## <a name="see-also"></a>請參閱  
+## <a name="see-also"></a>另請參閱  
  [定義 WCF Data Services](../../../../docs/framework/data/wcf/defining-wcf-data-services.md)  
  [裝載資料服務](../../../../docs/framework/data/wcf/hosting-the-data-service-wcf-data-services.md)

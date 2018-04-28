@@ -1,20 +1,17 @@
 ---
-title: "類別 (F#)"
-description: "了解 F # 類別的型別，代表物件的屬性、 方法和事件的方式。"
-keywords: "Visual F#, F#, 函式程式設計"
+title: 類別 (F#)
+description: '了解 F # 類別的型別，代表物件的屬性、 方法和事件的方式。'
 author: cartermp
 ms.author: phcart
 ms.date: 05/16/2016
 ms.topic: language-reference
-ms.prod: .net
-ms.technology: devlang-fsharp
+ms.prod: dotnet-fsharp
 ms.devlang: fsharp
-ms.assetid: d58679d5-7753-4b3b-a12f-6e9f00ed5ba3
-ms.openlocfilehash: 2a73baba1f7c1b0d3bd09d22c9d6d9f0524daef3
-ms.sourcegitcommit: bd1ef61f4bb794b25383d3d72e71041a5ced172e
+ms.openlocfilehash: 0bfb45b6481576729bfe8d4bd016fb151757660a
+ms.sourcegitcommit: 03ee570f6f528a7d23a4221dcb26a9498edbdf8c
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/18/2017
+ms.lasthandoff: 04/28/2018
 ---
 # <a name="classes"></a>類別
 

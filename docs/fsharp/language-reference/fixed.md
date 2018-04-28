@@ -1,20 +1,17 @@
 ---
-title: "Fixed 的關鍵字 （F #）"
+title: 'Fixed 的關鍵字 （F #）'
 description: "了解如何您可以 [pin] 若要避免使用 F # 集合至堆疊本機 'fixed' 關鍵字。"
-keywords: "Visual F#, F#, 函式程式設計"
 author: cartermp
 ms.author: phcart
 ms.date: 04/24/2017
 ms.topic: language-reference
-ms.prod: .net
-ms.technology: devlang-fsharp
+ms.prod: dotnet-fsharp
 ms.devlang: fsharp
-ms.assetid: 5795ce1f-11bf-4798-9f1f-6e44ffa1477e
-ms.openlocfilehash: 1605603bc35941e21c798600140036fb678869b5
-ms.sourcegitcommit: c0dd436f6f8f44dc80dc43b07f6841a00b74b23f
+ms.openlocfilehash: 8c1d486ec754335dfbaeec439b1eb949494e4241
+ms.sourcegitcommit: 03ee570f6f528a7d23a4221dcb26a9498edbdf8c
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 01/19/2018
+ms.lasthandoff: 04/28/2018
 ---
 # <a name="the-fixed-keyword"></a>Fixed 的關鍵字
 
@@ -30,7 +27,7 @@ use ptr = fixed expression
 
 這會擴充以允許擷取指標，並繫結的名稱，會導致從正在收集或在記憶體回收期間移動至運算式的語法。  
 
-從運算式的指標透過固定`fixed`透過應用程式識別項繫結關鍵字`use`關鍵字。  資源管理，透過的語意如下`use`關鍵字。  指標被固定在範圍內，而一旦超出範圍時，它不再被固定的。  `fixed`不能使用的內容之外`use`繫結。  必須繫結指標的名稱與`use`。
+從運算式的指標透過固定`fixed`透過應用程式識別項繫結關鍵字`use`關鍵字。  資源管理，透過的語意如下`use`關鍵字。  指標被固定在範圍內，而一旦超出範圍時，它不再被固定的。  `fixed` 不能使用的內容之外`use`繫結。  必須繫結指標的名稱與`use`。
 
 使用`fixed`必須發生在函式或方法中的運算式。  它不能在指令碼層級或模組層級的範圍。
 
@@ -68,6 +65,6 @@ let doPointerWork() =
 doPointerWork()
 ```
 
-## <a name="see-also"></a>請參閱
+## <a name="see-also"></a>另請參閱
 
 [NativePtr 模組](https://msdn.microsoft.com/visualfsharpdocs/conceptual/nativeinterop.nativeptr-module-%5Bfsharp%5D)

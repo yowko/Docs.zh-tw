@@ -1,28 +1,28 @@
 ---
-title: "中繼資料架構概觀"
-ms.custom: 
+title: 中繼資料架構概觀
+ms.custom: ''
 ms.date: 03/30/2017
 ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
+ms.reviewer: ''
+ms.suite: ''
 ms.technology:
 - dotnet-clr
-ms.tgt_pltfrm: 
+ms.tgt_pltfrm: ''
 ms.topic: article
 helpviewer_keywords:
 - metadata [WCF], overview
 ms.assetid: 1d37645e-086d-4d68-a358-f3c5b6e8205e
-caps.latest.revision: 
+caps.latest.revision: 24
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
 ms.workload:
 - dotnet
-ms.openlocfilehash: a8890cc05ec6b0b889dafcb787e216b50a681876
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.openlocfilehash: bce838d9584480028c7b02d1ba19547fe208bf2c
+ms.sourcegitcommit: 03ee570f6f528a7d23a4221dcb26a9498edbdf8c
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 04/28/2018
 ---
 # <a name="metadata-architecture-overview"></a>中繼資料架構概觀
 [!INCLUDE[indigo1](../../../../includes/indigo1-md.md)] 提供豐富的基礎結構，讓您匯出、發行、擷取與匯入服務中繼資料。 [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] 服務使用中繼資料描述如何與服務端點互動，讓 Svcutil.exe 之類的工具可以自動產生用戶端程式碼來存取服務。  
@@ -39,7 +39,7 @@ ms.lasthandoff: 12/22/2017
   
 -   <xref:System.ServiceModel.Description.MetadataLocation> 執行個體。  
   
- <xref:System.ServiceModel.Description.MetadataReference?displayProperty=nameWithType> 執行個體會指向另一個中繼資料交換 (MEX) 端點，而 <xref:System.ServiceModel.Description.MetadataLocation?displayProperty=nameWithType> 執行個體則是透過 HTTP URL 指向中繼資料文件。 [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] 支援使用 WSDL 文件來描述服務端點、服務合約、繫結、訊息交換模式、訊息以及服務所實作的錯誤訊息。 服務所使用的資料型別會透過 XML 結構描述於 WSDL 文件中說明 ( [!INCLUDE[crdefault](../../../../includes/crdefault-md.md)][結構描述匯入和匯出](../../../../docs/framework/wcf/feature-details/schema-import-and-export.md)。 您可以針對服務行為、合約行為，與可延伸服務功能的繫結項目，使用 [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] 來匯出與匯入 WSDL 延伸。 [!INCLUDE[crdefault](../../../../includes/crdefault-md.md)][匯出 WCF 擴充的自訂中繼資料](../../../../docs/framework/wcf/extending/exporting-custom-metadata-for-a-wcf-extension.md)。  
+ <xref:System.ServiceModel.Description.MetadataReference?displayProperty=nameWithType> 執行個體會指向另一個中繼資料交換 (MEX) 端點，而 <xref:System.ServiceModel.Description.MetadataLocation?displayProperty=nameWithType> 執行個體則是透過 HTTP URL 指向中繼資料文件。 [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] 支援使用 WSDL 文件來描述服務端點、服務合約、繫結、訊息交換模式、訊息以及服務所實作的錯誤訊息。 服務所使用的資料型別會透過 XML 結構描述於 WSDL 文件中說明 ( 如需詳細資訊，請參閱[結構描述匯入和匯出](../../../../docs/framework/wcf/feature-details/schema-import-and-export.md)。 您可以針對服務行為、合約行為，與可延伸服務功能的繫結項目，使用 [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] 來匯出與匯入 WSDL 延伸。 如需詳細資訊，請參閱[WCF 延伸模組的自訂中繼資料匯出](../../../../docs/framework/wcf/extending/exporting-custom-metadata-for-a-wcf-extension.md)。  
   
 ## <a name="exporting-service-metadata"></a>匯出服務中繼資料  
  在[!INCLUDE[indigo2](../../../../includes/indigo2-md.md)]，*中繼資料匯出*是描述服務端點，並將其投射至並行標準化表示法，用戶端可用來了解如何使用服務的程序。 若要從 <xref:System.ServiceModel.Description.ServiceEndpoint> 執行個體匯出中繼資料，請使用 <xref:System.ServiceModel.Description.MetadataExporter> 抽象類別的實作。 <xref:System.ServiceModel.Description.MetadataExporter?displayProperty=nameWithType> 實作會產生可封裝到 <xref:System.ServiceModel.Description.MetadataSet> 執行個體的中繼資料。  
@@ -59,7 +59,7 @@ ms.lasthandoff: 12/22/2017
   
  若要加入使用 MEX 通訊協定的中繼資料端點，服務將端點加入至您使用名為 IMetadataExchange 的服務合約的服務主機。[!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] 定義<xref:System.ServiceModel.Description.IMetadataExchange>具有此服務合約名稱的介面。 WS-MetadataExchange 端點或 MEX 端點都可以使用靜態處理站方法在 <xref:System.ServiceModel.Description.MetadataExchangeBindings> 類別上所公開的四個預設繫結中的其中一個，以比對 [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] 工具 (例如 Svcutil.exe) 使用的預設繫結。 您也可以使用自訂繫結設定 MEX 中繼資料端點。  
   
- <xref:System.ServiceModel.Description.ServiceMetadataBehavior> 會使用 <xref:System.ServiceModel.Description.WsdlExporter?displayProperty=nameWithType> 匯出服務中所有服務端點的中繼資料。 [!INCLUDE[crabout](../../../../includes/crabout-md.md)]匯出中繼資料從一項服務，請參閱[匯出和匯入中繼資料](../../../../docs/framework/wcf/feature-details/exporting-and-importing-metadata.md)。  
+ <xref:System.ServiceModel.Description.ServiceMetadataBehavior> 會使用 <xref:System.ServiceModel.Description.WsdlExporter?displayProperty=nameWithType> 匯出服務中所有服務端點的中繼資料。 [!INCLUDE[crabout](../../../../includes/crabout-md.md)] 匯出中繼資料從一項服務，請參閱[匯出和匯入中繼資料](../../../../docs/framework/wcf/feature-details/exporting-and-importing-metadata.md)。  
   
  <xref:System.ServiceModel.Description.ServiceMetadataBehavior> 會將 <xref:System.ServiceModel.Description.ServiceMetadataExtension> 執行個體新增為服務主機的延伸以提升您的服務主機效能。 <xref:System.ServiceModel.Description.ServiceMetadataExtension?displayProperty=nameWithType> 為中繼資料發行通訊協定提供實作。 您也可以藉由存取 <xref:System.ServiceModel.Description.ServiceMetadataExtension?displayProperty=nameWithType> 屬性，使用 <xref:System.ServiceModel.Description.ServiceMetadataExtension.Metadata%2A> 在執行階段取得服務的中繼資料。  
   
@@ -84,7 +84,7 @@ ms.lasthandoff: 12/22/2017
   
  根據預設，<xref:System.ServiceModel.Description.MetadataExchangeClient?displayProperty=nameWithType> 執行個體與單一的 <xref:System.ServiceModel.Channels.ChannelFactoryBase> 執行個體有密切的關係。 您可以透過覆寫 <xref:System.ServiceModel.Channels.ChannelFactoryBase> 虛擬方法，以變更或取代 <xref:System.ServiceModel.Description.MetadataExchangeClient?displayProperty=nameWithType> 所使用的 <xref:System.ServiceModel.Description.MetadataExchangeClient.GetChannelFactory%2A> 執行個體。 同樣地，您可以覆寫 <xref:System.Net.HttpWebRequest?displayProperty=nameWithType> 虛擬方法，以變更或取代由 <xref:System.ServiceModel.Description.MetadataExchangeClient?displayProperty=nameWithType> 使用的 <xref:System.ServiceModel.Description.MetadataExchangeClient.GetWebRequest%2A?displayProperty=nameWithType> 執行個體。  
   
- 您可以擷取服務中繼資料使用 Ws-metadataexchange 或 HTTP/GET 要求來使用 Svcutil.exe 工具，並傳遞**/target:metadata**交換器和位址。 Svcutil.exe 會在指定的位址下載中繼資料，並將檔案儲存到磁碟中。 Svcutil.exe 會在內部使用 <xref:System.ServiceModel.Description.MetadataExchangeClient?displayProperty=nameWithType> 執行個體，而且會從應用程式組態檔載入 MEX 端點組態，而其名稱必須符合傳遞至 Svcutil.exe 的位址 (如果存在的話) 配置。 否則，Svcutil.exe 預設會使用 <xref:System.ServiceModel.Description.MetadataExchangeBindings> 靜態處理站型別所定義的其中一個繫結。  
+ 您可以擷取服務中繼資料使用 Ws-metadataexchange 或 HTTP/GET 要求來使用 Svcutil.exe 工具，並傳遞 **/target:metadata**交換器和位址。 Svcutil.exe 會在指定的位址下載中繼資料，並將檔案儲存到磁碟中。 Svcutil.exe 會在內部使用 <xref:System.ServiceModel.Description.MetadataExchangeClient?displayProperty=nameWithType> 執行個體，而且會從應用程式組態檔載入 MEX 端點組態，而其名稱必須符合傳遞至 Svcutil.exe 的位址 (如果存在的話) 配置。 否則，Svcutil.exe 預設會使用 <xref:System.ServiceModel.Description.MetadataExchangeBindings> 靜態處理站型別所定義的其中一個繫結。  
   
 ## <a name="importing-service-metadata"></a>匯入服務中繼資料  
  在 [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] 中，中繼資料匯入指的是從中繼資料中產生服務的抽象表示法或其元件部分的處理序。 例如，[!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] 可以從 WSDL 文件中為服務匯入 <xref:System.ServiceModel.Description.ServiceEndpoint> 執行個體、<xref:System.ServiceModel.Channels.Binding> 執行個體或 <xref:System.ServiceModel.Description.ContractDescription> 執行個體。 若要將服務中繼資料匯入 [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)]，請使用 <xref:System.ServiceModel.Description.MetadataImporter> 抽象類別的實作。 衍生自 <xref:System.ServiceModel.Description.MetadataImporter?displayProperty=nameWithType> 類別實作的型別，會支援匯入中繼資料格式以利用 [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] 中的 WS-Policy 匯入邏輯。  
@@ -100,7 +100,7 @@ ms.lasthandoff: 12/22/2017
 ## <a name="dynamic-bindings"></a>動態繫結  
  當端點繫結變更，或當您想要建立使用相同合約但具有不同繫結的端點通道時，可以針對用來建立服務端點通道的繫結進行動態更新。 您可以針對可實作特定合約的服務端點使用 <xref:System.ServiceModel.Description.MetadataResolver> 靜態類別，於執行階段擷取並匯入中繼資料。 您可以接著使用匯入的 <xref:System.ServiceModel.Description.ServiceEndpoint?displayProperty=nameWithType> 物件來建立所需端點的用戶端或通道處理站。  
   
-## <a name="see-also"></a>請參閱  
+## <a name="see-also"></a>另請參閱  
  <xref:System.ServiceModel.Description>  
  [中繼資料格式](../../../../docs/framework/wcf/feature-details/metadata-formats.md)  
  [匯出和匯入中繼資料](../../../../docs/framework/wcf/feature-details/exporting-and-importing-metadata.md)  

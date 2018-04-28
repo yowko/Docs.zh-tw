@@ -1,20 +1,17 @@
 ---
-title: "F# 集合類型"
-description: "了解 F # 集合類型，以及它們之間的差異從.NET Framework 中集合類型。"
-keywords: "Visual F#, F#, 函式程式設計"
+title: F# 集合類型
+description: '了解 F # 集合類型，以及它們之間的差異從.NET Framework 中集合類型。'
 author: cartermp
 ms.author: phcart
 ms.date: 05/16/2016
 ms.topic: language-reference
-ms.prod: .net
-ms.technology: devlang-fsharp
+ms.prod: dotnet-fsharp
 ms.devlang: fsharp
-ms.assetid: cdf6a7e6-6b3d-4c44-b7b6-773a2b700331
-ms.openlocfilehash: c22178641a88c304e0f666b07aca94e620161071
-ms.sourcegitcommit: bd1ef61f4bb794b25383d3d72e71041a5ced172e
+ms.openlocfilehash: 0baad5bdf88e8f381240b822a3f6132898dc9ff9
+ms.sourcegitcommit: 03ee570f6f528a7d23a4221dcb26a9498edbdf8c
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/18/2017
+ms.lasthandoff: 04/28/2018
 ---
 # <a name="f-collection-types"></a>F# 集合類型
 
@@ -32,7 +29,7 @@ ms.lasthandoff: 10/18/2017
 |----|-----------|-------------|
 |[清單](https://msdn.microsoft.com/library/c627b668-477b-4409-91ed-06d7f1b3e4a7)|相同類型的項目已排序、 不可變系列。 實作為連結清單。|[清單](lists.md)<br /><br />[List 模組](https://msdn.microsoft.com/library/a2264ba3-2d45-40dd-9040-4f7aa2ad9788)|
 |[陣列](https://msdn.microsoft.com/library/0cda8040-9396-40dd-8dcd-cf48542165a1)|具有相同類型的所有連續的資料元素的固定大小，以零為起始的可變動集合。|[陣列](arrays.md)<br /><br />[Array 模組](https://msdn.microsoft.com/library/0cda8040-9396-40dd-8dcd-cf48542165a1)<br /><br />[Array2D 模組](https://msdn.microsoft.com/library/ae1a9746-7817-4430-bcdb-a79c2411bbd3)<br /><br />[Array3D 模組](https://msdn.microsoft.com/library/c8355e2d-add8-48a4-8aa6-1c57ae74c560)|
-|[seq](https://msdn.microsoft.com/library/2f0c87c6-8a0d-4d33-92a6-10d1d037ce75)|邏輯一連串的是一種類型的所有項目。 當您使用較大，已排序集合的資料，但不一定要使用的所有項目時，順序會特別有用。 需要個別項目只能做為計算的順序，因此序列可以優於清單，如果不使用的所有項目。 順序由`seq<'T>`類型，這是別名的`IEnumerable<T>`。 因此，任何.NET Framework 型別可實作`System.Collections.Generic.IEnumerable<'T>`可用做為序列。|[序列](sequences.md)<br /><br />[Seq 模組](https://msdn.microsoft.com/library/54e8f059-ca52-4632-9ae9-49685ee9b684)|
+|[Seq](https://msdn.microsoft.com/library/2f0c87c6-8a0d-4d33-92a6-10d1d037ce75)|邏輯一連串的是一種類型的所有項目。 當您使用較大，已排序集合的資料，但不一定要使用的所有項目時，順序會特別有用。 需要個別項目只能做為計算的順序，因此序列可以優於清單，如果不使用的所有項目。 順序由`seq<'T>`類型，這是別名的`IEnumerable<T>`。 因此，任何.NET Framework 型別可實作`System.Collections.Generic.IEnumerable<'T>`可用做為序列。|[序列](sequences.md)<br /><br />[Seq 模組](https://msdn.microsoft.com/library/54e8f059-ca52-4632-9ae9-49685ee9b684)|
 |[對應](https://msdn.microsoft.com/library/975316ea-55e3-4987-9994-90897ad45664)|不可變字典的項目。 元素的存取金鑰。|[對應模組](https://msdn.microsoft.com/library/bfe61ead-f16c-416f-af98-56dbcbe23e4f)|
 |[Set](https://msdn.microsoft.com/library/50cebdce-0cd7-4c5c-8ebc-f3a9e90b38d8)|不可變資料集為基礎的二進位樹狀結構，其中的比較會是 F # 結構的比較函式，這麼做可能會使用的實作`System.IComparable`索引鍵值的介面。|[設定模組](https://msdn.microsoft.com/library/61efa732-d55d-4c32-993f-628e2f98e6a0)|
 
@@ -41,7 +38,7 @@ ms.lasthandoff: 10/18/2017
 
 
 
-|函式|陣列|清單|序列|對應|設定|描述|
+|功能|陣列|清單|序列|對應|設定|描述|
 |--------|-----|----|--------|---|---|-----------|
 |append|O(M)|O （N)|O （N)|-|-|傳回新的集合，其中包含後面接著第二個集合的項目之第一個集合的項目。|
 |加入|-|-|-|O (log N)|O (log N)|新增項目會傳回新的集合。|
@@ -61,10 +58,10 @@ ms.lasthandoff: 10/18/2017
 |copy|O （N)|-|O （N)|-|-|複製集合。|
 |建立|O （N)|-|-|-|-|建立項目的所有一開始會指定的值的整個陣列。|
 |延遲|-|-|O （1)|-|-|從給定的延遲規格的序列傳回內建的順序。|
-|差異|-|-|-|-|O （M &#42; log N）|傳回從第一個集合中移除第二個集合的項目新資料集。|
-|相異|||O （1) &#42;|||傳回序列，其中包含根據一般的雜湊和相等比較項目上重複的項目。 如果項目序列中發生多次，則會捨棄之後出現。|
-|distinctBy|||O （1) &#42;|||傳回序列，其中包含根據泛型雜湊和相等比較指定的索引鍵產生函式所傳回的索引鍵重複的項目。 如果項目序列中發生多次，則會捨棄之後出現。|
-|空的|O （1)|O （1)|O （1)|O （1)|O （1)|建立空的集合。|
+|差異|-|-|-|-|O (M &#42; log N)|傳回從第一個集合中移除第二個集合的項目新資料集。|
+|相異|||O （1)&AMP;#42;|||傳回序列，其中包含根據一般的雜湊和相等比較項目上重複的項目。 如果項目序列中發生多次，則會捨棄之後出現。|
+|distinctBy|||O （1)&AMP;#42;|||傳回序列，其中包含根據泛型雜湊和相等比較指定的索引鍵產生函式所傳回的索引鍵重複的項目。 如果項目序列中發生多次，則會捨棄之後出現。|
+|空白|O （1)|O （1)|O （1)|O （1)|O （1)|建立空的集合。|
 |exists|O （N)|O （N)|O （N)|O (log N)|O (log N)|測試是否序列中任何項目符合指定述詞。|
 |exists2|O(min(N,M))|-|O(min(N,M))|||測試是否任何對輸入序列的對應元素符合指定述詞。|
 |fill|O （N)|||||陣列的項目範圍設為指定的值。|
@@ -82,13 +79,13 @@ ms.lasthandoff: 10/18/2017
 |head|-|O （1)|O （1)|-|-|傳回集合中的第一個項目。|
 |init|O （N)|O （N)|O （1)|-|-|建立給定維度和產生器函式來計算元素的集合。|
 |initInfinite|-|-|O （1)|-|-|產生的序列，時反覆執行，藉由呼叫指定的函式會傳回連續元素。|
-|Intersect|-|-|-|-|O （log N &#42; 記錄 M）|計算兩個集合的交集。|
-|intersectMany|-|-|-|-|O (N1 &#42;N2...)|計算序列中的集合交集。 序列不能空白。|
+|Intersect|-|-|-|-|O (log N&#42;記錄 M)|計算兩個集合的交集。|
+|intersectMany|-|-|-|-|O (N1 &AMP;#42; N2...)|計算序列中的集合交集。 序列不能空白。|
 |IsEmpty|O （1)|O （1)|O （1)|O （1)|-|傳回`true`如果集合是空的。|
-|isProperSubset|-|-|-|-|O （M &#42; log N）|傳回`true`如果第一個集合的所有項目會在第二個集合，而且至少一個元素的第二個集合不是第一個集合中。|
-|isProperSuperset|-|-|-|-|O （M &#42; log N）|傳回`true`如果第二個集合的所有項目是第一個集合，而且至少一個元素的第一組不在第二個集合。|
-|isSubset|-|-|-|-|O （M &#42; log N）|傳回`true`第一個集合的所有項目是否在第二個集合。|
-|isSuperset|-|-|-|-|O （M &#42; log N）|傳回`true`如果所有項目，第二個集合的第一個集合中。|
+|isProperSubset|-|-|-|-|O (M &#42; log N)|傳回`true`如果第一個集合的所有項目會在第二個集合，而且至少一個元素的第二個集合不是第一個集合中。|
+|isProperSuperset|-|-|-|-|O (M &#42; log N)|傳回`true`如果第二個集合的所有項目是第一個集合，而且至少一個元素的第一組不在第二個集合。|
+|isSubset|-|-|-|-|O (M &#42; log N)|傳回`true`第一個集合的所有項目是否在第二個集合。|
+|isSuperset|-|-|-|-|O (M &#42; log N)|傳回`true`如果所有項目，第二個集合的第一個集合中。|
 |iter|O （N)|O （N)|O （N)|O （N)|O （N)|將指定的函數套用至集合的每個項目。|
 |iteri|O （N)|O （N)|O （N)|-|-|將指定的函數套用至集合的每個項目。 傳遞至函式的整數表示的項目索引。|
 |iteri2|O （N)|O （N)|-|-|-|指定的函數套用至一組取自比對兩個陣列在索引中的項目。 傳遞至函式的整數表示的項目索引。 兩個陣列必須有相同的長度。|
@@ -145,8 +142,8 @@ ms.lasthandoff: 10/18/2017
 |tryFindKey|-|-|-|O (log N)|-|傳回符合指定述詞，或傳回之集合中第一個對應的索引鍵`None`如果沒有這類元素存在。|
 |tryPick|O （N)|O （N)|O （N)|O (log N)|-|指定的函式套用至連續的項目，傳回第一個結果，此函數會傳回其中`Some`某些值。 如果沒有這類元素存在，則此作業會傳回`None`。|
 |展開|-|-|O （N)|-|-|傳回序列，其中包含指定的計算會產生的項目。|
-|union|-|-|-|-|O （M &#42; log N）|計算兩個集合的聯集。|
-|unionMany|-|-|-|-|O (N1 &#42;N2...)|計算集合的序列的聯集。|
+|union|-|-|-|-|O (M &#42; log N)|計算兩個集合的聯集。|
+|unionMany|-|-|-|-|O (N1 &AMP;#42; N2...)|計算集合的序列的聯集。|
 |unzip|O （N)|O （N)|O （N)|-|-|將一份組分割成兩個 list。|
 |unzip3|O （N)|O （N)|O （N)|-|-|將三合一的清單分割成三個清單中。|
 |視窗型|-|-|O （N)|-|-|傳回會產生滑動視窗包含輸入序列中繪製的項目的序列。 全新的陣列傳回每個視窗。|

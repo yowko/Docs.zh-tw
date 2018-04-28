@@ -1,20 +1,17 @@
 ---
-title: "模式比對 (F#)"
-description: "了解如何使用模式在 F # 中比較具有邏輯結構的資料、 將資料分解成構成部分，或從資料擷取資訊。"
-keywords: "Visual F#, F#, 函式程式設計"
+title: 模式比對 (F#)
+description: '了解如何使用模式在 F # 中比較具有邏輯結構的資料、 將資料分解成構成部分，或從資料擷取資訊。'
 author: cartermp
 ms.author: phcart
 ms.date: 05/16/2016
 ms.topic: language-reference
-ms.prod: .net
-ms.technology: devlang-fsharp
+ms.prod: dotnet-fsharp
 ms.devlang: fsharp
-ms.assetid: 5562ee98-e2f1-4dcd-8e2f-16ae27baaade
-ms.openlocfilehash: 7c7a3110a8f34c0c96c12d4584010a9ac4b485fa
-ms.sourcegitcommit: bd1ef61f4bb794b25383d3d72e71041a5ced172e
+ms.openlocfilehash: 31a5b321e5daecdc3add9a205d60b63b2c00ccd2
+ms.sourcegitcommit: 03ee570f6f528a7d23a4221dcb26a9498edbdf8c
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/18/2017
+ms.lasthandoff: 04/28/2018
 ---
 # <a name="pattern-matching"></a>模式比對
 
@@ -38,15 +35,15 @@ match expression with
 
 |名稱|描述|範例|
 |----|-----------|-------|
-|常數模式|任何數值、 字元或字串常值、 列舉常數或定義常值的識別項|`1.0`, `"test"`, `30`, `Color.Red`|
+|常數模式|任何數值、 字元或字串常值、 列舉常數或定義常值的識別項|`1.0`、`"test"`、`30``Color.Red`|
 |識別項模式|差別等位、 例外狀況標籤或現用模式大小寫的 case 值|`Some(x)`<br /><br />`Failure(msg)`|
 |變數模式|*identifier*|`a`|
-|`as`模式|*模式*為*識別碼*|`(a, b) as tuple1`|
-|或圖樣|*pattern1* &#124;*pattern2*|<code>([h] &#124; [h; _])</code>|
+|`as` 模式|*模式*為*識別碼*|`(a, b) as tuple1`|
+|或圖樣|*pattern1* &#124; *pattern2*|<code>([h] &#124; [h; _])</code>|
 |和模式|*pattern1* &amp; *pattern2*|`(a, b) & (_, "test")`|
 |Cons 模式|*識別項*::*清單識別碼*|`h :: t`|
 |清單模式|[ *pattern_1*;...;*pattern_n* ]|`[ a; b; c ]`|
-|陣列模式|[&#124;*pattern_1*;..;*pattern_n* &#124;]|<code>[&#124; a; b; c &#124;]</code>|
+|陣列模式|[&#124; *pattern_1*;..;*pattern_n* &#124;]|<code>[&#124; a; b; c &#124;]</code>|
 |括號括住模式|(*模式*)|`( a )`|
 |Tuple 模式|( *pattern_1*，...， *pattern_n* )|`( a, b )`|
 |記錄模式|{ *identifier1* = *pattern_1*;...;*identifier_n* = *pattern_n* }|`{ Name = name; }`|

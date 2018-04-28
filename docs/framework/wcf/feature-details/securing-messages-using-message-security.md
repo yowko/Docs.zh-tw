@@ -1,24 +1,26 @@
 ---
-title: "使用訊息安全性來保護訊息的安全"
-ms.custom: 
+title: 使用訊息安全性來保護訊息的安全
+ms.custom: ''
 ms.date: 03/30/2017
 ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.technology: dotnet-clr
-ms.tgt_pltfrm: 
+ms.reviewer: ''
+ms.suite: ''
+ms.technology:
+- dotnet-clr
+ms.tgt_pltfrm: ''
 ms.topic: article
 ms.assetid: a17ebe67-836b-4c52-9a81-2c3d58e225ee
-caps.latest.revision: "16"
+caps.latest.revision: 16
 author: BrucePerlerMS
 ms.author: bruceper
 manager: mbaldwin
-ms.workload: dotnet
-ms.openlocfilehash: be727fe2b69258a058ba99dc8aa40ae148d3dd99
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.workload:
+- dotnet
+ms.openlocfilehash: be9d55e508308f23e70be81ac0d4fe0dfd0ea9cd
+ms.sourcegitcommit: 03ee570f6f528a7d23a4221dcb26a9498edbdf8c
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 04/28/2018
 ---
 # <a name="securing-messages-using-message-security"></a>使用訊息安全性來保護訊息的安全
 本章節會討論使用 [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)]<xref:System.ServiceModel.NetMsmqBinding>時的  訊息安全性。  
@@ -52,7 +54,7 @@ ms.lasthandoff: 12/22/2017
   
  由於佇列中斷的關係，用戶端和服務可能不會在同時位於線上。 因此，用戶端和服務必須超出範圍地交換憑證。 尤其是用戶端因為有在其信任的存放區中保存服務的憑證 (該憑證可以鏈結至憑證授權單位)，所以它必定會信任自己是與正確的服務進行通訊。 為了驗證用戶端，服務會使用訊息附加的 X.509 憑證來比對在其存放區中的憑證，以便確認該用戶端的真實性。 同樣的，該憑證一定會鏈結至憑證授權單位。  
   
- 在執行 Windows 的電腦上，憑證會保存在幾種存放區中。 [!INCLUDE[crabout](../../../../includes/crabout-md.md)]不同的存放區，請參閱[憑證存放區](http://go.microsoft.com/fwlink/?LinkId=87787)。  
+ 在執行 Windows 的電腦上，憑證會保存在幾種存放區中。 [!INCLUDE[crabout](../../../../includes/crabout-md.md)] 不同的存放區，請參閱[憑證存放區](http://go.microsoft.com/fwlink/?LinkId=87787)。  
   
 ### <a name="windows"></a>Windows  
  Windows 訊息認證類型會使用 Kerberos 通訊協定。  
@@ -63,7 +65,7 @@ ms.lasthandoff: 12/22/2017
   
  請注意，當使用這個認證類型時，服務必須在 SERVICE 帳戶下執行。  
   
- 選擇訊息認證時會預設使用 Kerberos 通訊協定。 [!INCLUDE[crdefault](../../../../includes/crdefault-md.md)][瀏覽 Kerberos，分散式安全性 Windows 2000 中的通訊協定](http://go.microsoft.com/fwlink/?LinkId=87790)。  
+ 選擇訊息認證時會預設使用 Kerberos 通訊協定。 如需詳細資訊，請參閱[瀏覽 Kerberos、 Windows 2000 中的分散式安全性的通訊協定](http://go.microsoft.com/fwlink/?LinkId=87790)。  
   
 ### <a name="username-password"></a>Username Password  
  使用這個屬性，用戶端便可使用訊息之安全性標頭中的使用者名稱密碼，來向伺服器進行驗證。  
@@ -74,7 +76,7 @@ ms.lasthandoff: 12/22/2017
 ## <a name="using-transport-and-message-security"></a>使用傳輸和訊息安全性  
  當同時使用傳輸安全性和訊息安全性時，在傳輸層級和 SOAP 訊息層級中用來保護訊息安全的必須是相同的憑證。  
   
-## <a name="see-also"></a>請參閱  
+## <a name="see-also"></a>另請參閱  
  [使用傳輸安全性來保護訊息的安全](../../../../docs/framework/wcf/feature-details/securing-messages-using-transport-security.md)  
  [訊息佇列上的訊息安全性](../../../../docs/framework/wcf/samples/message-security-over-message-queuing.md)  
  [安全性概念](../../../../docs/framework/wcf/feature-details/security-concepts.md)  

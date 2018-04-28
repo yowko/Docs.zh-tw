@@ -1,36 +1,38 @@
 ---
-title: "HOW TO：使用 X.509 憑證來確保服務安全"
-ms.custom: 
+title: HOW TO：使用 X.509 憑證來確保服務安全
+ms.custom: ''
 ms.date: 03/30/2017
 ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.technology: dotnet-clr
-ms.tgt_pltfrm: 
+ms.reviewer: ''
+ms.suite: ''
+ms.technology:
+- dotnet-clr
+ms.tgt_pltfrm: ''
 ms.topic: article
 dev_langs:
 - csharp
 - vb
 ms.assetid: 2d06c2aa-d0d7-4e5e-ad7e-77416aa1c10b
-caps.latest.revision: "8"
+caps.latest.revision: 8
 author: BrucePerlerMS
 ms.author: bruceper
 manager: mbaldwin
-ms.workload: dotnet
-ms.openlocfilehash: e1ad7cd844ffbd3f45517f7d812ad3f5fa1ae3c3
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.workload:
+- dotnet
+ms.openlocfilehash: 31028b6fe2cc34a9ae5cabe410bef0d753fd9436
+ms.sourcegitcommit: 03ee570f6f528a7d23a4221dcb26a9498edbdf8c
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 04/28/2018
 ---
 # <a name="how-to-secure-a-service-with-an-x509-certificate"></a>HOW TO：使用 X.509 憑證來確保服務安全
 使用 X.509 憑證確保服務安全是 [!INCLUDE[indigo1](../../../../includes/indigo1-md.md)] 中大部分繫結使用的基本技術。 此主題會介紹使用 X.509 憑證設定自我主控服務的步驟。  
   
- 必要條件是能夠用來驗證伺服器的有效憑證。 憑證必須透過受信任的憑證授權單位發行至伺服器。 如果憑證無效，任何嘗試使用服務的用戶端都不會信任該服務，因此無法建立連線。 [!INCLUDE[crabout](../../../../includes/crabout-md.md)]使用憑證，請參閱[使用憑證](../../../../docs/framework/wcf/feature-details/working-with-certificates.md)。  
+ 必要條件是能夠用來驗證伺服器的有效憑證。 憑證必須透過受信任的憑證授權單位發行至伺服器。 如果憑證無效，任何嘗試使用服務的用戶端都不會信任該服務，因此無法建立連線。 [!INCLUDE[crabout](../../../../includes/crabout-md.md)] 使用憑證，請參閱[使用憑證](../../../../docs/framework/wcf/feature-details/working-with-certificates.md)。  
   
 ### <a name="to-configure-a-service-with-a-certificate-using-code"></a>使用程式碼搭配憑證設定服務  
   
-1.  建立服務合約以及實作的服務。 [!INCLUDE[crdefault](../../../../includes/crdefault-md.md)][設計和實作服務](../../../../docs/framework/wcf/designing-and-implementing-services.md)。  
+1.  建立服務合約以及實作的服務。 如需詳細資訊，請參閱[設計與實作服務](../../../../docs/framework/wcf/designing-and-implementing-services.md)。  
   
 2.  建立 <xref:System.ServiceModel.WSHttpBinding> 類別的執行個體，並將其安全性模式設定為 <xref:System.ServiceModel.SecurityMode.Message>，如下列程式碼所示。  
   
@@ -93,5 +95,5 @@ ms.lasthandoff: 12/22/2017
   
 -   <xref:System.Runtime.Serialization>  
   
-## <a name="see-also"></a>請參閱  
+## <a name="see-also"></a>另請參閱  
  [使用憑證](../../../../docs/framework/wcf/feature-details/working-with-certificates.md)

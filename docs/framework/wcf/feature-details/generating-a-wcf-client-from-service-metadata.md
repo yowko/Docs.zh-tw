@@ -10,17 +10,17 @@ ms.technology:
 ms.tgt_pltfrm: ''
 ms.topic: article
 ms.assetid: 27f8f545-cc44-412a-b104-617e0781b803
-caps.latest.revision: ''
+caps.latest.revision: 9
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
 ms.workload:
 - dotnet
-ms.openlocfilehash: 9eedf84d1dccb8bc2540aca7e6bd338b4e58326d
-ms.sourcegitcommit: c883637b41ee028786edceece4fa872939d2e64c
+ms.openlocfilehash: 3f48de4b4073a6b34671b3eab5e07890790c71ce
+ms.sourcegitcommit: 03ee570f6f528a7d23a4221dcb26a9498edbdf8c
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 03/26/2018
+ms.lasthandoff: 04/28/2018
 ---
 # <a name="generating-a-wcf-client-from-service-metadata"></a>從服務中繼資料產生 WCF 用戶端
 本主題說明如何使用 Svcutil.exe 中不同的參數，從中繼資料文件中產生用戶端。  
@@ -60,13 +60,13 @@ svcutil.exe [/t:code]  <metadataDocumentPath>* | <url>* | <epr>
   
 |選項|描述|  
 |------------|-----------------|  
-|**/language:\<language>**|指定要用於產生程式碼的程式語言。 請提供在 Machine.config 檔案中註冊的語言名稱，或繼承自 <xref:System.CodeDom.Compiler.CodeDomProvider> 之類別的完整名稱。<br /><br /> 值：c#、cs、csharp、vb、vbs、visualbasic、vbscript、javascript、c++、mc、cpp<br /><br /> 預設：csharp<br /><br /> 簡短形式：`/l`<br /><br /> [!INCLUDE[crdefault](../../../../includes/crdefault-md.md)] [CodeDomProvider 類別](http://go.microsoft.com/fwlink/?LinkId=94778)。|  
+|**/language:\<語言 >**|指定要用於產生程式碼的程式語言。 請提供在 Machine.config 檔案中註冊的語言名稱，或繼承自 <xref:System.CodeDom.Compiler.CodeDomProvider> 之類別的完整名稱。<br /><br /> 值：c#、cs、csharp、vb、vbs、visualbasic、vbscript、javascript、c++、mc、cpp<br /><br /> 預設：csharp<br /><br /> 簡短形式：`/l`<br /><br /> 如需詳細資訊，請參閱[CodeDomProvider 類別](http://go.microsoft.com/fwlink/?LinkId=94778)。|  
   
 ## <a name="choosing-a-namespace-for-the-client"></a>選擇用戶端命名空間  
   
 |選項|描述|  
 |------------|-----------------|  
-|**/namespace:\<string,string>**|指定從 WSDL 或 XML 結構描述 `targetNamespace` 到 Common Language Runtime (CLR) 命名空間的對應。 使用萬用字元 (*) 做為 `targetNamespace` 會對應至所有的 `targetNamespaces`，而不會明確對應至該 CLR 命名空間。<br /><br /> 為了確保訊息合約名稱不會與作業名稱衝突，您應該以雙冒號 (`::`) 來限定型別參照，或確定名稱為唯一。<br /><br /> 預設：衍生自 `DataContracts` 的結構描述文件之目標命名空間。 預設命名空間用於所有其他產生的型別。<br /><br /> 簡短形式：`/n`|  
+|**/namespace:\<字串、 字串 >**|指定從 WSDL 或 XML 結構描述 `targetNamespace` 到 Common Language Runtime (CLR) 命名空間的對應。 使用萬用字元 (*) 做為 `targetNamespace` 會對應至所有的 `targetNamespaces`，而不會明確對應至該 CLR 命名空間。<br /><br /> 為了確保訊息合約名稱不會與作業名稱衝突，您應該以雙冒號 (`::`) 來限定型別參照，或確定名稱為唯一。<br /><br /> 預設：衍生自 `DataContracts` 的結構描述文件之目標命名空間。 預設命名空間用於所有其他產生的型別。<br /><br /> 簡短形式：`/n`|  
   
 ## <a name="choosing-a-data-binding"></a>選擇資料繫結  
   
@@ -78,7 +78,7 @@ svcutil.exe [/t:code]  <metadataDocumentPath>* | <url>* | <epr>
   
 |選項|描述|  
 |------------|-----------------|  
-|**/config:\<configFile>**|針對產生的組態檔指定檔案名稱。<br /><br /> 預設：output.config|  
+|**/config:\<configFile >**|針對產生的組態檔指定檔案名稱。<br /><br /> 預設：output.config|  
 |**/mergeConfig**|將產生的組態合併至現有檔案，而非覆寫現有檔案。|  
 |**/noConfig**|不要產生組態檔。|  
   

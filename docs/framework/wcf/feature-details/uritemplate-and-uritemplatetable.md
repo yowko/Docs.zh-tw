@@ -10,17 +10,17 @@ ms.technology:
 ms.tgt_pltfrm: ''
 ms.topic: article
 ms.assetid: 5cbbe03f-4a9e-4d44-9e02-c5773239cf52
-caps.latest.revision: ''
+caps.latest.revision: 24
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
 ms.workload:
 - dotnet
-ms.openlocfilehash: ac77fe2c83828d2cc9473417d2b29b2d2e540923
-ms.sourcegitcommit: c883637b41ee028786edceece4fa872939d2e64c
+ms.openlocfilehash: b0fedb812cee5cfa1e4c2ff921a78beb2a6c1beb
+ms.sourcegitcommit: 03ee570f6f528a7d23a4221dcb26a9498edbdf8c
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 03/26/2018
+ms.lasthandoff: 04/28/2018
 ---
 # <a name="uritemplate-and-uritemplatetable"></a>UriTemplate 與 UriTemplateTable
 Web 開發人員需要能夠描述其服務所回應的 URI 形式與配置。 [!INCLUDE[indigo1](../../../../includes/indigo1-md.md)] 新增了兩個類別，讓開發人員可以更充分的掌控其 URI。 <xref:System.UriTemplate> 和 <xref:System.UriTemplateTable> 在 [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] 中構成 URI 分派引擎的基礎。 這些類別可以自行利用，讓開發人員充分運用範本與 URI 對應機制，而無須實作 [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] 服務。  
@@ -51,7 +51,7 @@ Web 開發人員需要能夠描述其服務所回應的 URI 形式與配置。 [
   
  <xref:System.UriTemplate.PathSegmentVariableNames%2A> 屬性包含範本字串之路徑片段中所使用的變數名稱集合。  
   
- <xref:System.UriTemplate.IsEquivalentTo%28System.UriTemplate%29> 以 <xref:System.UriTemplate> 做為參數，並傳回布林值指出兩個範本是否相等。 [!INCLUDE[crdefault](../../../../includes/crdefault-md.md)]本主題稍後＜相等的範本＞一節。  
+ <xref:System.UriTemplate.IsEquivalentTo%28System.UriTemplate%29> 以 <xref:System.UriTemplate> 做為參數，並傳回布林值指出兩個範本是否相等。 如需詳細資訊，請參閱本主題稍後的相等的範本一節。  
   
  <xref:System.UriTemplate> 的設計即是可與符合 HTTP URI 文法的任何 URI 配置搭配使用。 以下是支援的 URI 配置範例：  
   
@@ -100,13 +100,13 @@ Web 開發人員需要能夠描述其服務所回應的 URI 形式與配置。 [
   
 -   "shoe / {船} / *"  
   
--   "shoe/boat?x=2"  
+-   "shoe/船？ x = 2"  
   
 -   "shoe / {船}？ x = {床}"  
   
 -   "shoe/{boat}?x={bed}&y=band"  
   
--   "?x={shoe}"  
+-   "？ x = {shoe}"  
   
 -   "shoe?x=3&y={var}  
   
@@ -137,7 +137,7 @@ Web 開發人員需要能夠描述其服務所回應的 URI 形式與配置。 [
   
  以下範例列出無效的路徑片段：  
   
--   /{}：變數必須命名。  
+-   /{} -變數必須命名。  
   
 -   /{shoe}{boat}：變數之間必須以常值分隔。  
   
@@ -202,7 +202,7 @@ foreach (string key in m1.BoundVariables.AllKeys)
 ```  
   
 > [!NOTE]
->  如 http://localhost:8000/// 的 URI 並不符合上列程式碼中的範本，但若 URI 為 http://localhost:8000/ 便是符合的格式。  
+>  這類形式的 URIhttp://localhost:8000///不符合前述的程式碼，不過列出範本的 URI，例如http://localhost:8000/沒有。  
   
  下列程式碼示範以範例建立 URI 比對時，會如何處理預設變數。  
   

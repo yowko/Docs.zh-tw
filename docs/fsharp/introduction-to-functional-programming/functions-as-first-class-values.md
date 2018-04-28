@@ -1,20 +1,17 @@
 ---
-title: "當做優先使用值的函式 (F#)"
-description: "了解如何提高函式，才能在 F # 程式語言中的第一級狀態。"
-keywords: "Visual F#, F#, 函式程式設計"
+title: 當做優先使用值的函式 (F#)
+description: '了解如何提高函式，才能在 F # 程式語言中的第一級狀態。'
 author: cartermp
 ms.author: phcart
 ms.date: 05/16/2016
 ms.topic: language-reference
-ms.prod: .net
-ms.technology: devlang-fsharp
+ms.prod: dotnet-fsharp
 ms.devlang: fsharp
-ms.assetid: 6b76b93b-a141-40f4-976c-7f0c558d6d09
-ms.openlocfilehash: bca0e09edbe0aa86f0db746282acd4f4b3237a03
-ms.sourcegitcommit: bd1ef61f4bb794b25383d3d72e71041a5ced172e
+ms.openlocfilehash: 7db99aa23211ce4a7af5cdfcc809017fafb1d5a1
+ms.sourcegitcommit: 03ee570f6f528a7d23a4221dcb26a9498edbdf8c
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/18/2017
+ms.lasthandoff: 04/28/2018
 ---
 # <a name="functions-as-first-class-values"></a>當做優先使用值的函式
 
@@ -206,6 +203,6 @@ F # 提供兩個運算子，`<<`和`>>`，撰寫函式。 例如，`let squareAn
 
 [函式](../language-reference/functions/index.md)
 
-[`let`繫結](../language-reference/functions/let-bindings.md)
+[`let` 繫結](../language-reference/functions/let-bindings.md)
 
 [Lambda 運算式：`fun`關鍵字](../language-reference/functions/lambda-expressions-the-fun-keyword.md)

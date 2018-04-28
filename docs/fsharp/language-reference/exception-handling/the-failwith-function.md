@@ -1,20 +1,17 @@
 ---
-title: "例外狀況：failwith 函式 (F#)"
+title: 例外狀況：failwith 函式 (F#)
 description: "了解如何 'failwith' 函式會產生 F # 例外狀況。"
-keywords: "Visual F#, F#, 函式程式設計"
 author: cartermp
 ms.author: phcart
 ms.date: 05/16/2016
 ms.topic: language-reference
-ms.prod: .net
-ms.technology: devlang-fsharp
+ms.prod: dotnet-fsharp
 ms.devlang: fsharp
-ms.assetid: 2e0c1f28-cc6c-4ecd-bb93-3816c4dd7cd3
-ms.openlocfilehash: 295a4d754e0df015ba67daa9cf80d7df5b40199c
-ms.sourcegitcommit: ffb9aa26cd5211dc6d96ebb42968d8357048880e
+ms.openlocfilehash: af1e3b7dc96b3b822e2e19b7bac435940d15922f
+ms.sourcegitcommit: 03ee570f6f528a7d23a4221dcb26a9498edbdf8c
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 11/09/2017
+ms.lasthandoff: 04/28/2018
 ---
 # <a name="exceptions-the-failwith-function"></a>例外狀況：failwith 函式
 

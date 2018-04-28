@@ -1,27 +1,29 @@
 ---
-title: "序列化和還原序列化"
-ms.custom: 
+title: 序列化和還原序列化
+ms.custom: ''
 ms.date: 03/30/2017
 ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.technology: dotnet-clr
-ms.tgt_pltfrm: 
+ms.reviewer: ''
+ms.suite: ''
+ms.technology:
+- dotnet-clr
+ms.tgt_pltfrm: ''
 ms.topic: article
 dev_langs:
 - csharp
 - vb
 ms.assetid: 3d71814c-bda7-424b-85b7-15084ff9377a
-caps.latest.revision: "13"
+caps.latest.revision: 13
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.workload: dotnet
-ms.openlocfilehash: a73fa30f1ebae805abd6f3e7e397d005d5b7130d
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.workload:
+- dotnet
+ms.openlocfilehash: 4d5caa913a49205c387c22a615b2b8da2dba0a77
+ms.sourcegitcommit: 03ee570f6f528a7d23a4221dcb26a9498edbdf8c
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 04/28/2018
 ---
 # <a name="serialization-and-deserialization"></a>序列化和還原序列化
 [!INCLUDE[indigo1](../../../../includes/indigo1-md.md)] 包含新的序列化 (Serialization) 引擎， <xref:System.Runtime.Serialization.DataContractSerializer>。 <xref:System.Runtime.Serialization.DataContractSerializer> 會在 [!INCLUDE[dnprdnshort](../../../../includes/dnprdnshort-md.md)] 物件與 XML 之間轉譯 (雙向)。 本主題會說明序列化程式的運作方式。  
@@ -85,12 +87,12 @@ ms.lasthandoff: 12/22/2017
  這些值都可以傳遞做為 <xref:System.Xml.XmlDictionaryString> 類別的字串或執行個體，以便透過二進位 XML 格式加以最佳化。  
   
 ### <a name="setting-the-maximum-objects-quota"></a>設定最大物件數量配額  
- 某些 `DataContractSerializer` 建構函式多載包含有 `maxItemsInObjectGraph` 參數。 這項參數可決定序列化程式在單一 <xref:System.Runtime.Serialization.XmlObjectSerializer.ReadObject%2A> 方法呼叫中能夠序列化或還原序列化的最大物件數量 (此方法一定會讀取一個根物件，但是這個物件可能會在其資料成員中又有其他物件。 這些物件可能又會有其他物件，依此類推)。預設值為 65536。 請注意，當序列化或還原序列化陣列時，每個陣列項目都視為個別物件。 另外請注意，有些物件可能有大量記憶體表示，因此只有這個配額可能不足以防止阻絕服務攻擊。 [!INCLUDE[crdefault](../../../../includes/crdefault-md.md)][資料的安全性考量](../../../../docs/framework/wcf/feature-details/security-considerations-for-data.md)。 如果您需要將這個配額調高到預設值以上，請在傳送 (序列化) 和接收 (還原序列化) 端都執行這項操作，因為它會在讀取與寫入資料時同時套用。  
+ 某些 `DataContractSerializer` 建構函式多載包含有 `maxItemsInObjectGraph` 參數。 這項參數可決定序列化程式在單一 <xref:System.Runtime.Serialization.XmlObjectSerializer.ReadObject%2A> 方法呼叫中能夠序列化或還原序列化的最大物件數量 (此方法一定會讀取一個根物件，但是這個物件可能會在其資料成員中又有其他物件。 這些物件可能又會有其他物件，依此類推)。預設值為 65536。 請注意，當序列化或還原序列化陣列時，每個陣列項目都視為個別物件。 另外請注意，有些物件可能有大量記憶體表示，因此只有這個配額可能不足以防止阻絕服務攻擊。 如需詳細資訊，請參閱[資料的安全性考量](../../../../docs/framework/wcf/feature-details/security-considerations-for-data.md)。 如果您需要將這個配額調高到預設值以上，請在傳送 (序列化) 和接收 (還原序列化) 端都執行這項操作，因為它會在讀取與寫入資料時同時套用。  
   
 ### <a name="round-trips"></a>來回行程  
  在一個作業中還原序列化物件後重新加以序列化的程序，我們稱為「 *來回行程* 」(Round Trip)。 因此，它會從 XML 變成物件執行個體，並回到原本的 XML 資料流。  
   
- 某些 `DataContractSerializer` 建構函式多載包含有 `ignoreExtensionDataObject` 參數 (預設為 `false` )。 在此預設模式中，只要資料合約實作 <xref:System.Runtime.Serialization.IExtensibleDataObject> 介面，資料就可以從較新版的資料合約一路經由較舊版本的資料合約再傳回較新版的資料合約來完成無資料損失的來回行程。 例如，假定 `Person` 資料合約的第 1 版包含 `Name` 和 `PhoneNumber` 資料成員，而第 2 版新增了 `Nickname` 成員。 如果實作了 `IExtensibleDataObject` ，則當從第 2 版傳送資訊到第 1 版時，會儲存 `Nickname` 資料，然後在資料序列化期間重新將它發出，這樣一來，來回行程期間就不會損失任何資料。 [!INCLUDE[crdefault](../../../../includes/crdefault-md.md)][向前相容資料合約](../../../../docs/framework/wcf/feature-details/forward-compatible-data-contracts.md)和[資料合約版本控制](../../../../docs/framework/wcf/feature-details/data-contract-versioning.md)。  
+ 某些 `DataContractSerializer` 建構函式多載包含有 `ignoreExtensionDataObject` 參數 (預設為 `false` )。 在此預設模式中，只要資料合約實作 <xref:System.Runtime.Serialization.IExtensibleDataObject> 介面，資料就可以從較新版的資料合約一路經由較舊版本的資料合約再傳回較新版的資料合約來完成無資料損失的來回行程。 例如，假定 `Person` 資料合約的第 1 版包含 `Name` 和 `PhoneNumber` 資料成員，而第 2 版新增了 `Nickname` 成員。 如果實作了 `IExtensibleDataObject` ，則當從第 2 版傳送資訊到第 1 版時，會儲存 `Nickname` 資料，然後在資料序列化期間重新將它發出，這樣一來，來回行程期間就不會損失任何資料。 如需詳細資訊，請參閱[向前相容資料合約](../../../../docs/framework/wcf/feature-details/forward-compatible-data-contracts.md)和[資料合約版本控制](../../../../docs/framework/wcf/feature-details/data-contract-versioning.md)。  
   
 #### <a name="security-and-schema-validity-concerns-with-round-trips"></a>來回行程的安全性與結構描述有效性考量  
  來回行程可能包含一些安全性意涵。 例如，還原序列化與儲存大量的非直接關聯資料時，可能會帶來安全性風險。 由於重新發出這項資料時並無法加以驗證，特別是當牽涉到數位簽章時，因此可能會有一些安全上的考量。 例如，在之前的案例中，第 1 版的端點可能會簽署包含惡意資料的 `Nickname` 值。 最後，還是可能有一些結構描述上的有效性考量：端點可能想要一直發出能夠恪遵其陳述的合約規定，而非其他額外值的資料。 在先前的範例中，第 1 版端點的合約告知僅發出 `Name` 和 `PhoneNumber`，而且假如使用結構描述驗證法的話，發出額外的 `Nickname` 值將讓驗證失敗。  
@@ -135,7 +137,7 @@ ms.lasthandoff: 12/22/2017
 </PurchaseOrder>  
 ```  
   
- "ser" 命名空間指的是標準序列化命名空間 http://schemas.microsoft.com/2003/10/Serialization/。 每個資料片段只會序列化一次，並賦予一個 ID 號碼，後續使用時會導致參照到已經序列化的資料。  
+ "Ser"命名空間是指標準序列化命名空間， http://schemas.microsoft.com/2003/10/Serialization/。 每個資料片段只會序列化一次，並賦予一個 ID 號碼，後續使用時會導致參照到已經序列化的資料。  
   
 > [!IMPORTANT]
 >  如果 "id" 及 "ref" 這兩個屬性都出現在資料合約 `XMLElement`中，那麼會接受 "ref" 屬性而忽略 "id" 屬性。  
@@ -152,7 +154,7 @@ ms.lasthandoff: 12/22/2017
 >  啟用 `preserveObjectReferences` 模式時，請將 `maxItemsInObjectGraph` 值設定為正確的配額，這點請您要特別注意。 因為陣列在此模式中的處理方式不同，攻擊者很容易就能夠建構小型的惡意訊息，導致大量的記憶體取用只受到 `maxItemsInObjectGraph` 配額的限制。  
   
 ### <a name="specifying-a-data-contract-surrogate"></a>指定資料合約代理  
- 某些 `DataContractSerializer` 建構函式多載包含有 `dataContractSurrogate` 參數 (可能會設定為 `null`)。 另一方面，您可以用它來指定「 *資料合約代理*」(Data Contract Surrogate)，這是一種可實作 <xref:System.Runtime.Serialization.IDataContractSurrogate> 介面的型別。 您可以接著使用此介面來自訂序列化與還原序列化處理序。 [!INCLUDE[crdefault](../../../../includes/crdefault-md.md)][資料合約 Surrogate](../../../../docs/framework/wcf/extending/data-contract-surrogates.md)。  
+ 某些 `DataContractSerializer` 建構函式多載包含有 `dataContractSurrogate` 參數 (可能會設定為 `null`)。 另一方面，您可以用它來指定「 *資料合約代理*」(Data Contract Surrogate)，這是一種可實作 <xref:System.Runtime.Serialization.IDataContractSurrogate> 介面的型別。 您可以接著使用此介面來自訂序列化與還原序列化處理序。 如需詳細資訊，請參閱[資料合約 Surrogate](../../../../docs/framework/wcf/extending/data-contract-surrogates.md)。  
   
 ## <a name="serialization"></a>序列化  
  下列資訊將套用至任何繼承自 <xref:System.Runtime.Serialization.XmlObjectSerializer>的類別，包括 <xref:System.Runtime.Serialization.DataContractSerializer> 和 <xref:System.Runtime.Serialization.NetDataContractSerializer> 類別。  
@@ -265,13 +267,13 @@ ms.lasthandoff: 12/22/2017
   
 -   <xref:System.Runtime.Serialization.NetDataContractSerializer.Serialize%2A> 和 <xref:System.Runtime.Serialization.NetDataContractSerializer.Deserialize%2A> 方法都是 <xref:System.Runtime.Serialization.XmlObjectSerializer.WriteObject%2A> 和 <xref:System.Runtime.Serialization.XmlObjectSerializer.ReadObject%2A> 方法的別名。 這些都是為了在使用二進位或 SOAP 序列化時提供更一致的程式設計模型而存在的。  
   
- [!INCLUDE[crabout](../../../../includes/crabout-md.md)]這些功能，請參閱[二進位序列化](../../../../docs/standard/serialization/binary-serialization.md)。  
+ [!INCLUDE[crabout](../../../../includes/crabout-md.md)] 這些功能，請參閱[二進位序列化](../../../../docs/standard/serialization/binary-serialization.md)。  
   
  `NetDataContractSerializer` 和 `DataContractSerializer` 使用的 XML 格式一般都不相容。 亦即，不支援使用其中一個序列化程式來序列化，並以另一個序列化程式來還原序列化的情況。  
   
  同時請注意， `NetDataContractSerializer` 不會在物件圖形中為每個節點輸出完整的 [!INCLUDE[dnprdnshort](../../../../includes/dnprdnshort-md.md)] 型別和組件名稱。 它只會針對不夠清楚的部分來輸出資訊。 亦即，它會在根物件層級以及任何多型案例中輸出。  
   
-## <a name="see-also"></a>請參閱  
+## <a name="see-also"></a>另請參閱  
  <xref:System.Runtime.Serialization.DataContractSerializer>  
  <xref:System.Runtime.Serialization.NetDataContractSerializer>  
  <xref:System.Runtime.Serialization.XmlObjectSerializer>  

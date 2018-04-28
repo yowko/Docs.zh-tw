@@ -1,26 +1,26 @@
 ---
-title: "工作流程持續性"
-ms.custom: 
+title: 工作流程持續性
+ms.custom: ''
 ms.date: 03/30/2017
 ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.tgt_pltfrm: 
+ms.reviewer: ''
+ms.suite: ''
+ms.tgt_pltfrm: ''
 ms.topic: article
 helpviewer_keywords:
 - programming [WF], persistence
 ms.assetid: 39e69d1f-b771-4c16-9e18-696fa43b65b2
-caps.latest.revision: 
+caps.latest.revision: 26
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
 ms.workload:
 - dotnet
-ms.openlocfilehash: 9e65f07fc01d0d364d7271c4f1378b968b687881
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.openlocfilehash: d2278762895978f90d80977f9e538b0e10a4f3f8
+ms.sourcegitcommit: 03ee570f6f528a7d23a4221dcb26a9498edbdf8c
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 04/28/2018
 ---
 # <a name="workflow-persistence"></a>工作流程持續性
 工作流程持續性是永久擷取工作流程執行個體的狀態，與處理序或電腦資訊無關。 這麼做是為了在發生系統故障時提供已知的工作流程執行個體復原點，或者藉由卸載非正在進行工作的工作流程執行個體來保留記憶體，或者將工作流程執行個體的狀態從某個節點移到伺服器陣列中的另一個節點。  
@@ -33,7 +33,7 @@ ms.lasthandoff: 12/22/2017
   
  若要儲存及載入應用程式特定資料與工作流程執行個體相關資訊，您可以建立擴充 <xref:System.Activities.Persistence.PersistenceParticipant> 類別的持續性參與者。 持續性參與者會參與保存程序，將自訂可序列化資料儲存至持續性存放區中，以便將執行個體存放區中的資料載入記憶體中，以及在持續性異動下執行任何其他邏輯。 如需詳細資訊，請參閱[持續性參與者](../../../docs/framework/windows-workflow-foundation/persistence-participants.md)。  
   
- Windows Server App Fabric 會簡化設定持續性的程序。 [!INCLUDE[crdefault](../../../includes/crdefault-md.md)][與 Windows Server App Fabric 持續性概念](http://go.microsoft.com/fwlink/?LinkId=201200)  
+ Windows Server App Fabric 會簡化設定持續性的程序。 如需詳細資訊，請參閱[與 Windows Server App Fabric 持續性概念](http://go.microsoft.com/fwlink/?LinkId=201200)  
   
 ## <a name="implicit-persistence-points"></a>隱含的保存點  
  下列清單包含當執行個體存放區與工作流程相關時，保存工作流程的條件範例。  

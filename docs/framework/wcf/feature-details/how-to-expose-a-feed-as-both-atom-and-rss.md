@@ -1,34 +1,36 @@
 ---
-title: "HOW TO：將摘要同時公開為 Atom 和 RSS"
-ms.custom: 
+title: HOW TO：將摘要同時公開為 Atom 和 RSS
+ms.custom: ''
 ms.date: 03/30/2017
 ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.technology: dotnet-clr
-ms.tgt_pltfrm: 
+ms.reviewer: ''
+ms.suite: ''
+ms.technology:
+- dotnet-clr
+ms.tgt_pltfrm: ''
 ms.topic: article
 dev_langs:
 - csharp
 - vb
 ms.assetid: fe374932-67f5-487d-9325-f868812b92e4
-caps.latest.revision: "23"
+caps.latest.revision: 23
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.workload: dotnet
-ms.openlocfilehash: 6584f71450917669024c965c121edebb7dffc677
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.workload:
+- dotnet
+ms.openlocfilehash: 5a2ca8d6ce6cf907538c534f97300e418f5e825f
+ms.sourcegitcommit: 03ee570f6f528a7d23a4221dcb26a9498edbdf8c
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 04/28/2018
 ---
 # <a name="how-to-expose-a-feed-as-both-atom-and-rss"></a>HOW TO：將摘要同時公開為 Atom 和 RSS
-[!INCLUDE[indigo1](../../../../includes/indigo1-md.md)] 可以讓您建立公開新聞訂閱摘要的服務。 本主題討論如何同時使用 Atom 1.0 和 RSS 2.0，建立可公開新聞訂閱摘要的新聞訂閱服務。 此服務會公開可傳回任何一種新聞訂閱格式的端點。 為了簡要說明，此範例中使用的服務為自我裝載。 在實際執行環境中，此類型的服務會在 IIS 或 WAS 下裝載。 [!INCLUDE[crabout](../../../../includes/crabout-md.md)]不同[!INCLUDE[indigo2](../../../../includes/indigo2-md.md)]裝載選項，請參閱[主控](../../../../docs/framework/wcf/feature-details/hosting.md)。  
+[!INCLUDE[indigo1](../../../../includes/indigo1-md.md)] 可以讓您建立公開新聞訂閱摘要的服務。 本主題討論如何同時使用 Atom 1.0 和 RSS 2.0，建立可公開新聞訂閱摘要的新聞訂閱服務。 此服務會公開可傳回任何一種新聞訂閱格式的端點。 為了簡要說明，此範例中使用的服務為自我裝載。 在實際執行環境中，此類型的服務會在 IIS 或 WAS 下裝載。 [!INCLUDE[crabout](../../../../includes/crabout-md.md)] 不同[!INCLUDE[indigo2](../../../../includes/indigo2-md.md)]裝載選項，請參閱[主控](../../../../docs/framework/wcf/feature-details/hosting.md)。  
   
 ### <a name="to-create-a-basic-syndication-service"></a>若要建立基本新聞訂閱服務  
   
-1.  使用以 <xref:System.ServiceModel.Web.WebGetAttribute> 屬性標記的介面來定義服務合約。 每個公開為新聞訂閱摘要的作業，都會傳回 <xref:System.ServiceModel.Syndication.SyndicationFeedFormatter> 物件。 請注意 <xref:System.ServiceModel.Web.WebGetAttribute> 的參數。 `UriTemplate` 會指定用來叫用此服務作業的 URL。 這個參數的字串包含常值和變數在大括號 ({*格式*})。 此變數對應至服務作業的 `format` 參數。 [!INCLUDE[crdefault](../../../../includes/crdefault-md.md)] <xref:System.UriTemplate>。 `BodyStyle` 會影響此服務作業所傳送與接收之訊息的寫入方式。 <xref:System.ServiceModel.Web.WebMessageBodyStyle.Bare> 會指定傳送至此服務作業，以及來自此服務作業的資料都不得透過基礎結構定義的 XML 元素來包裝。 [!INCLUDE[crdefault](../../../../includes/crdefault-md.md)] <xref:System.ServiceModel.Web.WebMessageBodyStyle>。  
+1.  使用以 <xref:System.ServiceModel.Web.WebGetAttribute> 屬性標記的介面來定義服務合約。 每個公開為新聞訂閱摘要的作業，都會傳回 <xref:System.ServiceModel.Syndication.SyndicationFeedFormatter> 物件。 請注意 <xref:System.ServiceModel.Web.WebGetAttribute> 的參數。 `UriTemplate` 會指定用來叫用此服務作業的 URL。 這個參數的字串包含常值和變數在大括號 ({*格式*})。 此變數對應至服務作業的 `format` 參數。 如需詳細資訊，請參閱<xref:System.UriTemplate>。 `BodyStyle` 會影響此服務作業所傳送與接收之訊息的寫入方式。 <xref:System.ServiceModel.Web.WebMessageBodyStyle.Bare> 會指定傳送至此服務作業，以及來自此服務作業的資料都不得透過基礎結構定義的 XML 元素來包裝。 如需詳細資訊，請參閱<xref:System.ServiceModel.Web.WebMessageBodyStyle>。  
   
      [!code-csharp[htAtomRss#0](../../../../samples/snippets/csharp/VS_Snippets_CFX/htatomrss/cs/program.cs#0)]
      [!code-vb[htAtomRss#0](../../../../samples/snippets/visualbasic/VS_Snippets_CFX/htatomrss/vb/program.vb#0)]  
@@ -77,7 +79,7 @@ ms.lasthandoff: 12/22/2017
   
 1.  開啟 Internet Explorer 並輸入下列 URL，然後按下 ENTER。 http://localhost:8000/BlogService/GetBlog  
   
-     URL 包含服務的基底位址 (http://localhost:8000/BlogService)、端點的相對位址，以及要呼叫的服務作業。  
+     URL 包含服務的基底位址 (http://localhost:8000/BlogService)，相對位址的端點，以及要呼叫的服務作業。  
   
 ### <a name="to-call-getblog-from-code"></a>若要從程式碼呼叫 GetBlog()  
   
@@ -106,6 +108,6 @@ ms.lasthandoff: 12/22/2017
 ## <a name="compiling-the-code"></a>編譯程式碼  
  在編譯先前的程式碼時，請參考 System.ServiceModel.dll 和 System.ServiceModel.Web.dll。  
   
-## <a name="see-also"></a>請參閱  
+## <a name="see-also"></a>另請參閱  
  <xref:System.ServiceModel.WebHttpBinding>  
  <xref:System.ServiceModel.Web.WebGetAttribute>

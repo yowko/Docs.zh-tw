@@ -1,24 +1,26 @@
 ---
-title: "工作階段、執行個體與並行"
-ms.custom: 
+title: 工作階段、執行個體與並行
+ms.custom: ''
 ms.date: 03/30/2017
 ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.technology: dotnet-clr
-ms.tgt_pltfrm: 
+ms.reviewer: ''
+ms.suite: ''
+ms.technology:
+- dotnet-clr
+ms.tgt_pltfrm: ''
 ms.topic: article
 ms.assetid: 50797a3b-7678-44ed-8138-49ac1602f35b
-caps.latest.revision: "16"
+caps.latest.revision: 16
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.workload: dotnet
-ms.openlocfilehash: 5d4559f177b05f7d238c9f30649a5b01af7fb6f9
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.workload:
+- dotnet
+ms.openlocfilehash: 6dd96ea552bb92dd90c1c47abac744c55e2e67e5
+ms.sourcegitcommit: 03ee570f6f528a7d23a4221dcb26a9498edbdf8c
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 04/28/2018
 ---
 # <a name="sessions-instancing-and-concurrency"></a>工作階段、執行個體與並行
 「 *工作階段* 」(Session) 是兩個端點之間所傳送之所有訊息的相互關聯。 「*執行個體* 」(Instancing) 是指控制使用者定義之服務物件的存留時間，以及其相關的 <xref:System.ServiceModel.InstanceContext> 物件。 「*並行* 」(Concurrency) 是指控制在 <xref:System.ServiceModel.InstanceContext> 中同時執行的執行緒數目。  
@@ -93,7 +95,7 @@ public class CalculatorService : ICalculatorInstance
 -   <xref:System.ServiceModel.ConcurrencyMode.Reentrant>：每一個服務執行個體在同一時間內會處理一個訊息，但接受可重新進入 (Re-entrant) 的作業呼叫。 此服務只在其透過 [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] 用戶端物件向外呼叫時，才會接受這些呼叫。  
   
 > [!NOTE]
->  您應該了解，開發能夠安全地使用一個以上之執行緒的程式碼，可能會很難順利地撰寫。 在使用 <xref:System.ServiceModel.ConcurrencyMode.Multiple> 或 <xref:System.ServiceModel.ConcurrencyMode.Reentrant> 值之前，請確定已適當地設計您的服務以使用這些模式 [!INCLUDE[crdefault](../../../../includes/crdefault-md.md)] <xref:System.ServiceModel.ServiceBehaviorAttribute.ConcurrencyMode%2A>。  
+>  您應該了解，開發能夠安全地使用一個以上之執行緒的程式碼，可能會很難順利地撰寫。 在使用 <xref:System.ServiceModel.ConcurrencyMode.Multiple> 或 <xref:System.ServiceModel.ConcurrencyMode.Reentrant> 值之前，請確定已適當地設計您的服務以使用這些模式 如需詳細資訊，請參閱<xref:System.ServiceModel.ServiceBehaviorAttribute.ConcurrencyMode%2A>。  
   
  並存的使用與執行個體模式有關。 在<xref:System.ServiceModel.InstanceContextMode.PerCall>執行個體中，並行無關，因為每個訊息會處理新<xref:System.ServiceModel.InstanceContext>，因此，永遠不會多個執行緒是作用中<xref:System.ServiceModel.InstanceContext>。  
   
@@ -118,7 +120,7 @@ public class CalculatorService : ICalculatorConcurrency
 |PerSession|-工作階段通道的行為： 工作階段和<xref:System.ServiceModel.InstanceContext>每個通道。<br />的無工作階段通道行為： 擲回例外狀況。|-工作階段通道的行為： 工作階段和<xref:System.ServiceModel.InstanceContext>每個通道。<br />的無工作階段通道行為：<xref:System.ServiceModel.InstanceContext>每個呼叫。|-工作階段通道的行為： 擲回例外狀況。<br />的無工作階段通道行為：<xref:System.ServiceModel.InstanceContext>每個呼叫。|  
 |Single|-工作階段通道的行為： 工作階段，另一個<xref:System.ServiceModel.InstanceContext>所有呼叫。<br />的無工作階段通道行為： 擲回例外狀況。|-工作階段通道的行為： 工作階段和<xref:System.ServiceModel.InstanceContext>建立或使用者指定 singleton。<br />的無工作階段通道行為：<xref:System.ServiceModel.InstanceContext>建立或使用者指定 singleton。|-工作階段通道的行為： 擲回例外狀況。<br />的無工作階段通道行為：<xref:System.ServiceModel.InstanceContext>每個建立之單一個體或使用者指定之單一。|  
   
-## <a name="see-also"></a>請參閱  
+## <a name="see-also"></a>另請參閱  
  [使用工作階段](../../../../docs/framework/wcf/using-sessions.md)  
  [如何：建立需要工作階段的服務](../../../../docs/framework/wcf/feature-details/how-to-create-a-service-that-requires-sessions.md)  
  [如何：控制服務執行個體](../../../../docs/framework/wcf/feature-details/how-to-control-service-instancing.md)  

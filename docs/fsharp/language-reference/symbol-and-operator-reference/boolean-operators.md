@@ -1,20 +1,17 @@
 ---
-title: "Boolean 運算子 (F#)"
-description: "深入了解 F # 程式語言中可用的布林運算子。"
-keywords: "Visual F#, F#, 函式程式設計"
+title: Boolean 運算子 (F#)
+description: '深入了解 F # 程式語言中可用的布林運算子。'
 author: cartermp
 ms.author: phcart
 ms.date: 05/16/2016
 ms.topic: language-reference
-ms.prod: .net
-ms.technology: devlang-fsharp
+ms.prod: dotnet-fsharp
 ms.devlang: fsharp
-ms.assetid: f79370b8-4bc2-4704-b514-d392c80942bd
-ms.openlocfilehash: 63588f2e371bf2c0f15de0b8a26a46be82f832c7
-ms.sourcegitcommit: bd1ef61f4bb794b25383d3d72e71041a5ced172e
+ms.openlocfilehash: 0b11b5133b02b6f507c7886b2fbaebf30abf46cb
+ms.sourcegitcommit: 03ee570f6f528a7d23a4221dcb26a9498edbdf8c
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/18/2017
+ms.lasthandoff: 04/28/2018
 ---
 # <a name="boolean-operators"></a>Boolean 運算子
 
@@ -24,7 +21,7 @@ ms.lasthandoff: 10/18/2017
 ## <a name="summary-of-boolean-operators"></a>布林運算子的摘要
 下表摘要說明在 F # 語言中使用布林運算子。 唯一支援的這些運算子的類型是`bool`型別。
 
-|運算子|說明|
+|運算子|描述|
 |--------|-----------|
 |`not`|布林值的否定|
 |<code>&#124;&#124;</code>|布林值 OR|

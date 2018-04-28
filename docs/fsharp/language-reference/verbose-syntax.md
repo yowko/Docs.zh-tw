@@ -1,20 +1,17 @@
 ---
-title: "詳細語法 (F#)"
-description: "了解 F # 程式語言中的詳細資訊和輕量型語法之間的差異。"
-keywords: "Visual F#, F#, 函式程式設計"
+title: 詳細語法 (F#)
+description: '了解 F # 程式語言中的詳細資訊和輕量型語法之間的差異。'
 author: cartermp
 ms.author: phcart
 ms.date: 05/16/2016
 ms.topic: language-reference
-ms.prod: .net
-ms.technology: devlang-fsharp
+ms.prod: dotnet-fsharp
 ms.devlang: fsharp
-ms.assetid: 0a6792b3-b312-4453-a025-21d9760eee5d
-ms.openlocfilehash: 2cef359a879897825733a3186be97b38896f5953
-ms.sourcegitcommit: bd1ef61f4bb794b25383d3d72e71041a5ced172e
+ms.openlocfilehash: fd040a66a789bc6717fd14e6a9f28274c9e3542b
+ms.sourcegitcommit: 03ee570f6f528a7d23a4221dcb26a9498edbdf8c
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/18/2017
+ms.lasthandoff: 04/28/2018
 ---
 # <a name="verbose-syntax"></a>詳細語法
 

@@ -1,23 +1,24 @@
 ---
-title: "宣告式條件約束"
-ms.custom: 
+title: 宣告式條件約束
+ms.custom: ''
 ms.date: 03/30/2017
 ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.tgt_pltfrm: 
+ms.reviewer: ''
+ms.suite: ''
+ms.tgt_pltfrm: ''
 ms.topic: article
 ms.assetid: 67001ed1-7f4d-4ada-ae57-a31176901a53
-caps.latest.revision: "12"
+caps.latest.revision: 12
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.workload: dotnet
-ms.openlocfilehash: a11c62c7011d7ffb13ed0d0ebf060a3cbeb7d7f8
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.workload:
+- dotnet
+ms.openlocfilehash: f5ab784498805473830b46962d9e02591fc3eace
+ms.sourcegitcommit: 03ee570f6f528a7d23a4221dcb26a9498edbdf8c
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 04/28/2018
 ---
 # <a name="declarative-constraints"></a>宣告式條件約束
 宣告式條件約束提供強大的驗證方法，適用於驗證活動及該活動與其他活動之間的關聯性。 條件約束是在撰寫處理序期間針對活動所設定的，但工作流程主機亦可指定其他條件約束。 本主題介紹使用宣告式條件約束來提供活動驗證的概觀。  
@@ -146,7 +147,7 @@ public sealed class CreateState : CodeActivity
 }  
 ```  
   
- [!INCLUDE[crdefault](../../../includes/crdefault-md.md)]Windows Workflow Foundation[驗證](../../../docs/framework/windows-workflow-foundation/samples/validation.md)範例。  
+ 如需詳細資訊，請參閱 < Windows Workflow Foundation[驗證](../../../docs/framework/windows-workflow-foundation/samples/validation.md)範例。  
   
 ## <a name="additional-constraints"></a>其他條件約束  
  工作流程主機作者可以為工作流程中的活動指定其他驗證條件約束，方法是建立條件約束並將它們加入至 <xref:System.Activities.Validation.ValidationSettings.AdditionalConstraints%2A> 執行個體的 <xref:System.Activities.Validation.ValidationSettings> 字典中。 <xref:System.Activities.Validation.ValidationSettings.AdditionalConstraints%2A> 中的每個項目均包含條件約束所套用的活動型別，以及該活動型別之其他約束條件的清單。 叫用工作流程的驗證時，指定型別的每個活動 (包括衍生類別) 都會評估該條件約束。 在這個範例中，會將上一節的 `ActivityDisplayNameIsNotSetWarning` 條件約束套用至工作流程中的所有活動。  
@@ -187,4 +188,4 @@ else
 }  
 ```  
   
- 如果 <xref:System.Activities.Validation.ValidationSettings.OnlyUseAdditionalConstraints%2A> 的 <xref:System.Activities.Validation.ValidationSettings> 屬性是 `true`，則當透過呼叫 <xref:System.Activities.Validation.ActivityValidationServices.Validate%2A> 來叫用驗證時，只會評估指定的其他條件約束。 這項功能非常適合用於檢查工作流程中的特定驗證組態。 但是請注意，叫用工作流程時會評估工作流程中設定的驗證邏輯，而且必須通過驗證，工作流程才能順利開始。 [!INCLUDE[crabout](../../../includes/crabout-md.md)]叫用驗證，請參閱[叫用活動驗證](../../../docs/framework/windows-workflow-foundation/invoking-activity-validation.md)。
+ 如果 <xref:System.Activities.Validation.ValidationSettings.OnlyUseAdditionalConstraints%2A> 的 <xref:System.Activities.Validation.ValidationSettings> 屬性是 `true`，則當透過呼叫 <xref:System.Activities.Validation.ActivityValidationServices.Validate%2A> 來叫用驗證時，只會評估指定的其他條件約束。 這項功能非常適合用於檢查工作流程中的特定驗證組態。 但是請注意，叫用工作流程時會評估工作流程中設定的驗證邏輯，而且必須通過驗證，工作流程才能順利開始。 [!INCLUDE[crabout](../../../includes/crabout-md.md)] 叫用驗證，請參閱[叫用活動驗證](../../../docs/framework/windows-workflow-foundation/invoking-activity-validation.md)。

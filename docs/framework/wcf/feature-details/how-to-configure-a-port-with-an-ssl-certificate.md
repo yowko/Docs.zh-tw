@@ -1,12 +1,13 @@
 ---
-title: "HOW TO：使用 SSL 憑證設定連接埠"
-ms.custom: 
+title: HOW TO：使用 SSL 憑證設定連接埠
+ms.custom: ''
 ms.date: 03/30/2017
 ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.technology: dotnet-clr
-ms.tgt_pltfrm: 
+ms.reviewer: ''
+ms.suite: ''
+ms.technology:
+- dotnet-clr
+ms.tgt_pltfrm: ''
 ms.topic: article
 dev_langs:
 - csharp
@@ -16,23 +17,24 @@ helpviewer_keywords:
 - WCF, security mode
 - WCF, security
 ms.assetid: b8abcc8e-a5f5-4317-aca5-01e3c40ab24d
-caps.latest.revision: "18"
+caps.latest.revision: 18
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.workload: dotnet
-ms.openlocfilehash: 3fbd3b640e90ecf0ff5857bd33465e8c60135eac
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.workload:
+- dotnet
+ms.openlocfilehash: bbf3d4b9888d07a89d1b6a8225a7f7415e8c67cc
+ms.sourcegitcommit: 03ee570f6f528a7d23a4221dcb26a9498edbdf8c
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 04/28/2018
 ---
 # <a name="how-to-configure-a-port-with-an-ssl-certificate"></a>HOW TO：使用 SSL 憑證設定連接埠
-當以使用傳輸安全性的 [!INCLUDE[indigo1](../../../../includes/indigo1-md.md)] 類別建立自我裝載的 <xref:System.ServiceModel.WSHttpBinding> 服務時，也必須使用 X.509 憑證設定連接埠。 如果您沒有建立自我裝載的服務，可以將您的服務裝載在 Internet Information Services (IIS) 上。 [!INCLUDE[crdefault](../../../../includes/crdefault-md.md)][HTTP 傳輸安全性](../../../../docs/framework/wcf/feature-details/http-transport-security.md)。  
+當以使用傳輸安全性的 [!INCLUDE[indigo1](../../../../includes/indigo1-md.md)] 類別建立自我裝載的 <xref:System.ServiceModel.WSHttpBinding> 服務時，也必須使用 X.509 憑證設定連接埠。 如果您沒有建立自我裝載的服務，可以將您的服務裝載在 Internet Information Services (IIS) 上。 如需詳細資訊，請參閱[HTTP 傳輸安全性](../../../../docs/framework/wcf/feature-details/http-transport-security.md)。  
   
  若要設定連接埠，使用的工具取決於電腦上執行的作業系統。  
   
- 如果您是執行 [!INCLUDE[ws2003](../../../../includes/ws2003-md.md)] 或 [!INCLUDE[wxp](../../../../includes/wxp-md.md)]，請使用 HttpCfg.exe 工具。 這個工具會隨 [!INCLUDE[ws2003](../../../../includes/ws2003-md.md)] 進行安裝。 與[!INCLUDE[wxp](../../../../includes/wxp-md.md)]，您可以下載此工具在[Windows XP Service Pack 2 支援工具](http://go.microsoft.com/fwlink/?LinkId=88606)。 [!INCLUDE[crdefault](../../../../includes/crdefault-md.md)][Httpcfg 概觀](http://go.microsoft.com/fwlink/?LinkId=88605)。 [Windows 支援工具文件](http://go.microsoft.com/fwlink/?LinkId=94840)說明 Httpcfg.exe 工具的語法。  
+ 如果您是執行 [!INCLUDE[ws2003](../../../../includes/ws2003-md.md)] 或 [!INCLUDE[wxp](../../../../includes/wxp-md.md)]，請使用 HttpCfg.exe 工具。 這個工具會隨 [!INCLUDE[ws2003](../../../../includes/ws2003-md.md)] 進行安裝。 與[!INCLUDE[wxp](../../../../includes/wxp-md.md)]，您可以下載此工具在[Windows XP Service Pack 2 支援工具](http://go.microsoft.com/fwlink/?LinkId=88606)。 如需詳細資訊，請參閱[Httpcfg 概觀](http://go.microsoft.com/fwlink/?LinkId=88605)。 [Windows 支援工具文件](http://go.microsoft.com/fwlink/?LinkId=94840)說明 Httpcfg.exe 工具的語法。  
   
  如果您是執行 [!INCLUDE[wv](../../../../includes/wv-md.md)]，可以使用已安裝的 Netsh.exe 工具。  
   
@@ -66,9 +68,9 @@ ms.lasthandoff: 12/22/2017
   
 ### <a name="to-get-a-certificates-thumbprint"></a>若要取得憑證的指紋  
   
-1.  使用憑證 MMC 嵌入式管理單元，尋找目的為用戶端驗證的 X.509 憑證。 [!INCLUDE[crdefault](../../../../includes/crdefault-md.md)][如何： 檢視憑證 MMC 嵌入式管理單元](../../../../docs/framework/wcf/feature-details/how-to-view-certificates-with-the-mmc-snap-in.md)。  
+1.  使用憑證 MMC 嵌入式管理單元，尋找目的為用戶端驗證的 X.509 憑證。 如需詳細資訊，請參閱[How to： 使用 MMC 嵌入式管理單元檢視憑證](../../../../docs/framework/wcf/feature-details/how-to-view-certificates-with-the-mmc-snap-in.md)。  
   
-2.  存取憑證的指紋。 [!INCLUDE[crdefault](../../../../includes/crdefault-md.md)][How to： 擷取憑證的指紋](../../../../docs/framework/wcf/feature-details/how-to-retrieve-the-thumbprint-of-a-certificate.md)。  
+2.  存取憑證的指紋。 如需詳細資訊，請參閱[How to： 擷取憑證的指紋](../../../../docs/framework/wcf/feature-details/how-to-retrieve-the-thumbprint-of-a-certificate.md)。  
   
 3.  將憑證的指紋複製到文字編輯器中，例如「記事本」。  
   
@@ -94,7 +96,7 @@ ms.lasthandoff: 12/22/2017
   
     -   **Certhash**參數會指定憑證的指紋。  
   
-    -   **Ipport**參數指定的 IP 位址和連接埠，以及運作方式就像是**-i**上述 Httpcfg.exe 工具的參數。  
+    -   **Ipport**參數指定的 IP 位址和連接埠，以及運作方式就像是 **-i**上述 Httpcfg.exe 工具的參數。  
   
     -   **Appid**參數是可以用來識別擁有端應用程式的 GUID。  
   
@@ -122,7 +124,7 @@ ms.lasthandoff: 12/22/2017
     httpcfg query ssl>myMachinePorts.txt  
     ```  
   
-2.  在[!INCLUDE[ws2003](../../../../includes/ws2003-md.md)]或[!INCLUDE[wxp](../../../../includes/wxp-md.md)]，使用 HttpCfg.exe 工具搭配**刪除**和**ssl**關鍵字。 使用**-i**參數來指定`IP`:`port`數目，而**-h**參數來指定憑證指紋。  
+2.  在[!INCLUDE[ws2003](../../../../includes/ws2003-md.md)]或[!INCLUDE[wxp](../../../../includes/wxp-md.md)]，使用 HttpCfg.exe 工具搭配**刪除**和**ssl**關鍵字。 使用 **-i**參數來指定`IP`:`port`數目，而 **-h**參數來指定憑證指紋。  
   
     ```  
     httpcfg delete ssl -i 0.0.0.0:8005 -h 0000000000003ed9cd0c315bbb6dc1c08da5e6  
@@ -140,5 +142,5 @@ ms.lasthandoff: 12/22/2017
  [!code-csharp[c_WsHttpService#3](../../../../samples/snippets/csharp/VS_Snippets_CFX/c_wshttpservice/cs/source.cs#3)]
  [!code-vb[c_WsHttpService#3](../../../../samples/snippets/visualbasic/VS_Snippets_CFX/c_wshttpservice/vb/source.vb#3)]  
   
-## <a name="see-also"></a>請參閱  
+## <a name="see-also"></a>另請參閱  
  [HTTP 傳輸安全性](../../../../docs/framework/wcf/feature-details/http-transport-security.md)

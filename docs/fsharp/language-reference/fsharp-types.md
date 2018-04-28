@@ -1,20 +1,17 @@
 ---
-title: "F# 類型"
-description: "深入了解 F # 和 F # 型別如何命名及描述中使用的類型。"
-keywords: "Visual F#, F#, 函式程式設計"
+title: F# 類型
+description: '深入了解 F # 和 F # 型別如何命名及描述中使用的類型。'
 author: cartermp
 ms.author: phcart
 ms.date: 05/16/2016
 ms.topic: language-reference
-ms.prod: .net
-ms.technology: devlang-fsharp
+ms.prod: dotnet-fsharp
 ms.devlang: fsharp
-ms.assetid: c7272a0d-5ab6-4eae-bceb-e49af498b917
-ms.openlocfilehash: 9b7235637f301f91ae2cc8fbc59adc27cdfd5bd0
-ms.sourcegitcommit: bd1ef61f4bb794b25383d3d72e71041a5ced172e
+ms.openlocfilehash: 42521ed75a76753af81d3bbb9693ec5af29536ad
+ms.sourcegitcommit: 03ee570f6f528a7d23a4221dcb26a9498edbdf8c
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/18/2017
+ms.lasthandoff: 04/28/2018
 ---
 # <a name="f-types"></a>F# 類型
 
@@ -44,26 +41,26 @@ F # 提供有用的集合型別與記住的功能性程式設計所設計。 使
 
 |類型|類型語法|範例|
 |----|-----------|--------|
-|基本類型|*型別名稱*|`int`<br /><br />`float`<br /><br />`string`|
-|彙總類型 （類別、 結構、 等位、 記錄、 列舉，等等）|*型別名稱*|`System.DateTime`<br /><br />`Color`|
+|基本類型|*type-name*|`int`<br /><br />`float`<br /><br />`string`|
+|彙總類型 （類別、 結構、 等位、 記錄、 列舉，等等）|*type-name*|`System.DateTime`<br /><br />`Color`|
 |類型縮寫|*類型縮寫名稱*|`bigint`|
 |完整的類型|*namespaces.type 名稱*<br /><br />或<br /><br />*modules.type 名稱*<br /><br />或<br /><br />*namespaces.modules.type 名稱*|`System.IO.StreamWriter`|
 |array|*型別名稱*[] 或<br /><br />*型別名稱*陣列|`int[]`<br /><br />`array<int>`<br /><br />`int array`|
 |二維陣列|*型別名稱*[、]|`int[,]`<br /><br />`float[,]`|
 |三維陣列|*型別名稱*[、]|`float[,,]`|
-|tuple|*型別 name1* &#42;*類型 name2* ...|例如，`(1,'b',3)`類型`int * char * int`|
+|tuple|*型別 name1* &#42; *類型 name2* ...|例如，`(1,'b',3)`類型 `int * char * int`|
 |Generic Type - 泛型類型|*型別參數**泛型型別名稱*<br /><br />或<br /><br />*泛型型別名稱*&lt;*型別參數清單*&gt;|`'a list`<br /><br />`list<'a>`<br /><br />`Dictionary<'key, 'value>`|
 |建構的型別 （已提供的特定型別引數的泛型類型）|*型別引數**泛型型別名稱*<br /><br />或<br /><br />*泛型型別名稱*&lt;*型別引數清單*&gt;|`int option`<br /><br />`string list`<br /><br />`int ref`<br /><br />`option<int>`<br /><br />`list<string>`<br /><br />`ref<int>`<br /><br />`Dictionary<int, string>`|
-|具有單一參數的函式類型|*參數 type1*  - &gt; *傳回型別*|使用的函式`int`並傳回`string`類型`int -> string`|
-|具有多個參數的函式類型|*參數 type1*  - &gt; *參數 type2*  - &gt; ...-&gt; *傳回型別*|使用的函式`int`和`float`並傳回`string`類型`int -> float -> string`|
-|做為參數的較高順序函式|(*函式類型*)|`List.map`具有型別`('a -> 'b) -> 'a list -> 'b list`|
+|具有單一參數的函式類型|*參數 type1*  - &gt; *傳回型別*|使用的函式`int`並傳回`string`類型 `int -> string`|
+|具有多個參數的函式類型|*參數 type1*  - &gt; *參數 type2*  - &gt; ...-&gt; *傳回型別*|使用的函式`int`和`float`並傳回`string`類型 `int -> float -> string`|
+|做為參數的較高順序函式|(*函式類型*)|`List.map` 具有型別 `('a -> 'b) -> 'a list -> 'b list`|
 |Delegate - 委派|委派的*函式類型*|`delegate of unit -> int`|
 |彈性類型|#*型別名稱*|`#System.Windows.Forms.Control`<br /><br />`#seq<int>`|
 
 ## <a name="related-topics"></a>相關主題
 
 
-|主題|說明|
+|主題|描述|
 |-----|-----------|
 |[基本類型](primitive-types.md)|說明內建的簡單類型，例如整數類資料類型的布林類型和字元類型。|
 |[單位類型](unit-type.md)|描述`unit`類型、 類型具有一個值，且會以 （）; 相當於`void`在 C# 和`Nothing`在 Visual Basic 中。|

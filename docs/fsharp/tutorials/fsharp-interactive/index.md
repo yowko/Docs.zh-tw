@@ -1,20 +1,17 @@
 ---
 title: F# Interactive (fsi.exe) 參考
 description: '了解如何 F # Interactive (fsi.exe) 用來以互動方式在主控台執行 F # 程式碼或執行 F # 指令碼。'
-keywords: Visual F#, F#, 函式程式設計
 author: cartermp
 ms.author: phcart
 ms.date: 05/16/2016
 ms.topic: language-reference
-ms.prod: .net
-ms.technology: devlang-fsharp
+ms.prod: dotnet-fsharp
 ms.devlang: fsharp
-ms.assetid: 36af8d1b-dc08-4a37-9497-d23c0a0ac11c
-ms.openlocfilehash: a18f339d898374a59858cd774154b3846594d183
-ms.sourcegitcommit: cf22b29db780e532e1090c6e755aa52d28273fa6
+ms.openlocfilehash: e745562e4165ce6744fcb6d07268b1a5761194aa
+ms.sourcegitcommit: 03ee570f6f528a7d23a4221dcb26a9498edbdf8c
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 02/01/2018
+ms.lasthandoff: 04/28/2018
 ---
 # <a name="interactive-programming-with-f"></a>F# 互動式程式設計 #
 

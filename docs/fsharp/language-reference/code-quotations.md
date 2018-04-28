@@ -1,20 +1,17 @@
 ---
-title: "程式碼引號 (F#)"
-description: "了解 F # 程式碼引號，可讓您產生並以程式設計方式使用 F # 程式碼運算式的語言功能。"
-keywords: "Visual F#, F#, 函式程式設計"
+title: 程式碼引號 (F#)
+description: '了解 F # 程式碼引號，可讓您產生並以程式設計方式使用 F # 程式碼運算式的語言功能。'
 author: cartermp
 ms.author: phcart
 ms.date: 05/16/2016
 ms.topic: language-reference
-ms.prod: .net
-ms.technology: devlang-fsharp
+ms.prod: dotnet-fsharp
 ms.devlang: fsharp
-ms.assetid: 4559e659-2b04-48bd-8a0b-8527920eec95
-ms.openlocfilehash: f7a08013bc6487b570a62576bb01ca2dd65ce8b1
-ms.sourcegitcommit: bd1ef61f4bb794b25383d3d72e71041a5ced172e
+ms.openlocfilehash: cfa2e4b9a4ad1776315dfa8ea82fb8fc3f13a552
+ms.sourcegitcommit: 03ee570f6f528a7d23a4221dcb26a9498edbdf8c
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/18/2017
+ms.lasthandoff: 04/28/2018
 ---
 # <a name="code-quotations"></a>程式碼引號
 
@@ -87,8 +84,8 @@ let f = fun (x:System.Int32) -> x + 10 in f 10
 
 ## <a name="example"></a>範例
 
-### <a name="description"></a>說明
-您也可以使用中的三個使用中模式[ExprShape 模組](https://msdn.microsoft.com/library/7685150e-2432-4d39-9338-57292eff18de)周遊使用較少的使用中模式的運算式樹狀架構。 當您想要周遊樹狀結構，但您不需要在大多數的節點中的所有資訊時，這些現用模式可能很有用。 當您使用這些模式時，任何 F # 運算式會比對下列三種模式的其中一個：`ShapeVar`如果運算式是一個變數，`ShapeLambda`如果運算式是 lambda 運算式或`ShapeCombination`如果運算式可以是任何其他項目。 如果您使用作用中的模式，如同先前的程式碼範例會周遊運算式樹狀架構，您必須使用許多的多個模式處理所有可能 F # 運算式型別，與您的程式碼將會更複雜。 如需詳細資訊，請參閱[ExprShape.ShapeVar &#124;ShapeLambda &#124;ShapeCombination 現用模式](https://msdn.microsoft.com/visualfsharpdocs/conceptual/exprshape.shapevarhshapelambdahshapecombination-active-pattern-%5bfsharp%5d)。
+### <a name="description"></a>描述
+您也可以使用中的三個使用中模式[ExprShape 模組](https://msdn.microsoft.com/library/7685150e-2432-4d39-9338-57292eff18de)周遊使用較少的使用中模式的運算式樹狀架構。 當您想要周遊樹狀結構，但您不需要在大多數的節點中的所有資訊時，這些現用模式可能很有用。 當您使用這些模式時，任何 F # 運算式會比對下列三種模式的其中一個：`ShapeVar`如果運算式是一個變數，`ShapeLambda`如果運算式是 lambda 運算式或`ShapeCombination`如果運算式可以是任何其他項目。 如果您使用作用中的模式，如同先前的程式碼範例會周遊運算式樹狀架構，您必須使用許多的多個模式處理所有可能 F # 運算式型別，與您的程式碼將會更複雜。 如需詳細資訊，請參閱[ExprShape.ShapeVar&#124;ShapeLambda&#124;ShapeCombination 現用模式](https://msdn.microsoft.com/visualfsharpdocs/conceptual/exprshape.shapevarhshapelambdahshapecombination-active-pattern-%5bfsharp%5d)。
 
 下列程式碼範例可以用於做為基礎更複雜的周遊。 在這段程式碼，為包含函式呼叫的運算式建立運算式樹狀架構`add`。 [SpecificCall](https://msdn.microsoft.com/library/05a77b21-20fe-4b9a-8e07-aa999538198d)現用模式用於偵測的任何呼叫`add`運算式樹狀結構中。 此現用模式會指派至呼叫的引數`exprList`值。 在此情況下，有一些只有兩個，因此這些提取，且此函式就會遞迴呼叫的引數。 結果會插入到代表呼叫的程式碼引號`mul`使用接合運算子 (`%%`)。 `println`函式，從上一個範例用來顯示結果。
 

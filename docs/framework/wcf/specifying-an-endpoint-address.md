@@ -1,13 +1,13 @@
 ---
-title: "指定端點位址"
-ms.custom: 
+title: 指定端點位址
+ms.custom: ''
 ms.date: 03/30/2017
 ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
+ms.reviewer: ''
+ms.suite: ''
 ms.technology:
 - dotnet-clr
-ms.tgt_pltfrm: 
+ms.tgt_pltfrm: ''
 ms.topic: article
 dev_langs:
 - csharp
@@ -15,17 +15,17 @@ dev_langs:
 helpviewer_keywords:
 - endpoints [WCF], addressing
 ms.assetid: ac24f5ad-9558-4298-b168-c473c68e819b
-caps.latest.revision: 
+caps.latest.revision: 41
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
 ms.workload:
 - dotnet
-ms.openlocfilehash: 403ff897de4dc9ee95a854d9658bdee344755d59
-ms.sourcegitcommit: c0dd436f6f8f44dc80dc43b07f6841a00b74b23f
+ms.openlocfilehash: 09a3bf2d552b49e36375210e3036e344a9702405
+ms.sourcegitcommit: 03ee570f6f528a7d23a4221dcb26a9498edbdf8c
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 01/19/2018
+ms.lasthandoff: 04/28/2018
 ---
 # <a name="specifying-an-endpoint-address"></a>指定端點位址
 所有 [!INCLUDE[indigo1](../../../includes/indigo1-md.md)] 服務的通訊都會透過其端點進行。 每個 <xref:System.ServiceModel.Description.ServiceEndpoint> 都包含有 <xref:System.ServiceModel.Description.ServiceEndpoint.Address%2A>、<xref:System.ServiceModel.Description.ServiceEndpoint.Binding%2A> 和 <xref:System.ServiceModel.Description.ServiceEndpoint.Contract%2A>。 合約會指定哪些為可用的作業。 繫結會指定如何與服務通訊，而位址則指定何處可找到服務。 每個端點必須具備唯一的位址。 端點位址是由 <xref:System.ServiceModel.EndpointAddress> 類別所代表，其中包含代表服務位址的統一資源識別元 (URI)、代表服務之安全性身分識別的 <xref:System.ServiceModel.EndpointAddress.Identity%2A>，以及選用的 <xref:System.ServiceModel.EndpointAddress.Headers%2A> 集合。 選用標頭會提供更多詳細的定址資訊來識別端點或與端點互動。 例如，標頭會指出如何處理傳入訊息、端點應該將回覆訊息傳送到哪裡，或是當有多個執行個體可用時，要使用哪個服務執行個體來處理來自特定使用者的傳入訊息。  
@@ -33,7 +33,7 @@ ms.lasthandoff: 01/19/2018
 ## <a name="definition-of-an-endpoint-address"></a>端點位址的定義  
  在 [!INCLUDE[indigo2](../../../includes/indigo2-md.md)] 中，<xref:System.ServiceModel.EndpointAddress> 會依據 WS-Addressing 標準的定義，製造端點參考 (EPR) 的模型。  
   
- 大部分傳輸的位址 URI 具有四個部分。 例如，"http://www.fabrikam.com:322/mathservice.svc/secureEndpoint" 這個 URI 便具有下列四個部分：  
+ 大部分傳輸的位址 URI 具有四個部分。 例如，此 URI"http://www.fabrikam.com:322/mathservice.svc/secureEndpoint」 具有下列四個部分：  
   
 -   配置：http:  
   
@@ -49,7 +49,7 @@ ms.lasthandoff: 01/19/2018
   
  在 [!INCLUDE[indigo2](../../../includes/indigo2-md.md)] 中，有兩種方式可以用來指定服務的端點位址。 您可以為每個與服務相關聯的端點指定絕對位址，或是為服務的 <xref:System.ServiceModel.ServiceHost> 提供基底位址，然後指定相對於此基底位址所定義之服務相關聯的每個端點位址。 您可以透過組態或程式碼，使用這些程序中的任何一個來指定服務的端點位址。 如果您沒有指定相對位址，則服務會使用基底位址。 您可以讓同一個服務使用多個基底位址，但是每個服務只允許每個傳輸使用一個基底位址。 如果您具有多個端點，而其中每一個都設定為不同的繫結，則其位址必須是唯一的。 使用相同繫結但不同合約的端點可以使用相同的位址。  
   
- 使用 IIS 裝載時，您不用自行管理 <xref:System.ServiceModel.ServiceHost> 執行個體。 裝載於 IIS 時，基底位址一律是服務的 .svc 檔案中指定的位址。 因此請務必針對 IIS 裝載的服務端點使用相對端點位址。 在部署服務時，提供完整的端點位址可能會導致錯誤。 [!INCLUDE[crdefault](../../../includes/crdefault-md.md)][部署網際網路資訊服務裝載的 WCF 服務](../../../docs/framework/wcf/feature-details/deploying-an-internet-information-services-hosted-wcf-service.md)。  
+ 使用 IIS 裝載時，您不用自行管理 <xref:System.ServiceModel.ServiceHost> 執行個體。 裝載於 IIS 時，基底位址一律是服務的 .svc 檔案中指定的位址。 因此請務必針對 IIS 裝載的服務端點使用相對端點位址。 在部署服務時，提供完整的端點位址可能會導致錯誤。 如需詳細資訊，請參閱[部署 Internet Information Services-Hosted WCF 服務](../../../docs/framework/wcf/feature-details/deploying-an-internet-information-services-hosted-wcf-service.md)。  
   
 ## <a name="defining-endpoint-addresses-in-configuration"></a>在組態中定義端點位址  
  若要在組態檔中定義的端點，使用[\<端點 >](http://msdn.microsoft.com/library/13aa23b7-2f08-4add-8dbf-a99f8127c017)項目。  
@@ -58,7 +58,7 @@ ms.lasthandoff: 01/19/2018
   
  當<xref:System.ServiceModel.Channels.CommunicationObject.Open%2A>呼叫方法時 （也就是當裝載應用程式會嘗試啟動服務），系統會尋找[\<服務 >](../../../docs/framework/configure-apps/file-schema/wcf/service.md)具有 name 屬性，指定 「 UE 項目。Samples.HelloService"。 如果[\<服務 >](../../../docs/framework/configure-apps/file-schema/wcf/service.md)找到項目，系統就會載入指定的類別並建立使用組態檔中提供的端點定義的端點。 這項機制可讓您透過兩行程式碼輕鬆地載入並啟動服務，同時不用在程式碼中留下繫結與位址資訊。 使用這種方法的好處是，您不用重新編譯或重新部署應用程式，便可進行這些變更。  
   
- 選擇性標頭中宣告[\<標頭 >](../../../docs/framework/configure-apps/file-schema/wcf/headers-element.md)。 下列是用來指定組態檔中服務端點的項目範例，此指定組態檔會區分以下兩個標頭的不同：來自 http://tempuri1.org/ 的 "Gold" 用戶端和來自 http://tempuri2.org/ 的 "Standard" 用戶端。 呼叫此服務的用戶端必須擁有適當[\<標頭 >](../../../docs/framework/configure-apps/file-schema/wcf/headers-element.md)其組態檔中。  
+ 選擇性標頭中宣告[\<標頭 >](../../../docs/framework/configure-apps/file-schema/wcf/headers-element.md)。 下列是用來區分兩個標頭的組態檔中指定服務端點項目的範例： 從"Gold"用戶端http://tempuri1.org/和 「 標準 」 的用戶端從http://tempuri2.org/。 呼叫此服務的用戶端必須擁有適當[\<標頭 >](../../../docs/framework/configure-apps/file-schema/wcf/headers-element.md)其組態檔中。  
   
  [!code-xml[S_UEHelloWorld#1](../../../samples/snippets/common/VS_Snippets_CFX/s_uehelloworld/common/serviceapp.config#1)]  
   
@@ -95,7 +95,7 @@ ms.lasthandoff: 01/19/2018
   
  如果沒有明確提供端點，在呼叫 <xref:System.ServiceModel.ServiceHostBase.AddDefaultEndpoints%2A> 之前，仍可藉由在 <xref:System.ServiceModel.ServiceHost> 上呼叫 <xref:System.ServiceModel.Channels.CommunicationObject.Open%2A> 來加入預設端點。 [!INCLUDE[crabout](../../../includes/crabout-md.md)] 預設端點、繫結和行為的詳細資訊，請參閱 [Simplified Configuration](../../../docs/framework/wcf/simplified-configuration.md) and [Simplified Configuration for WCF Services](../../../docs/framework/wcf/samples/simplified-configuration-for-wcf-services.md).  
   
-## <a name="see-also"></a>請參閱  
+## <a name="see-also"></a>另請參閱  
  <xref:System.ServiceModel.EndpointAddress>  
  [服務身分識別和驗證](../../../docs/framework/wcf/feature-details/service-identity-and-authentication.md)  
  [建立端點概觀](../../../docs/framework/wcf/endpoint-creation-overview.md)  

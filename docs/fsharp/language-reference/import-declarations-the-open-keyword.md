@@ -1,20 +1,17 @@
 ---
-title: "匯入宣告：open 關鍵字 (F#)"
-description: "了解 F # 匯入宣告，以及如何指定模組或命名空間而不需要使用完整限定的名稱，您可以參考其項目。"
-keywords: "Visual F#, F#, 函式程式設計"
+title: 匯入宣告：open 關鍵字 (F#)
+description: '了解 F # 匯入宣告，以及如何指定模組或命名空間而不需要使用完整限定的名稱，您可以參考其項目。'
 author: cartermp
 ms.author: phcart
 ms.date: 05/16/2016
 ms.topic: language-reference
-ms.prod: .net
-ms.technology: devlang-fsharp
+ms.prod: dotnet-fsharp
 ms.devlang: fsharp
-ms.assetid: 1e98e48c-52e9-4314-8954-85d5583125f0
-ms.openlocfilehash: a6d79bed3dd202657d06956edf9499a9b21a5f03
-ms.sourcegitcommit: bd1ef61f4bb794b25383d3d72e71041a5ced172e
+ms.openlocfilehash: ddbc1086e2adbe8dae408f4d39fd5af888d7fd5e
+ms.sourcegitcommit: 03ee570f6f528a7d23a4221dcb26a9498edbdf8c
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/18/2017
+ms.lasthandoff: 04/28/2018
 ---
 # <a name="import-declarations-the-open-keyword"></a>匯入宣告：`open`關鍵字
 
@@ -57,7 +54,7 @@ printfn "%A" empty
 ## <a name="namespaces-that-are-open-by-default"></a>開啟預設的命名空間
 F # 它們會以隱含方式開啟而不需要明確匯入宣告的程式碼經常會使用某些命名空間。 下表顯示開啟的預設命名空間。
 
-|命名空間|說明|
+|命名空間|描述|
 |---------|-----------|
 |`Microsoft.FSharp.Core`|包含基本 F # 型別定義的內建類型，例如`int`和`float`。|
 |`Microsoft.FSharp.Core.Operators`|包含基本的算術運算，例如`+`和`*`。|

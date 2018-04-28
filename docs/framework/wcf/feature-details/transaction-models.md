@@ -1,24 +1,26 @@
 ---
-title: "異動模型"
-ms.custom: 
+title: 異動模型
+ms.custom: ''
 ms.date: 03/30/2017
 ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.technology: dotnet-clr
-ms.tgt_pltfrm: 
+ms.reviewer: ''
+ms.suite: ''
+ms.technology:
+- dotnet-clr
+ms.tgt_pltfrm: ''
 ms.topic: article
 ms.assetid: 48a8bc1b-128b-4cf1-a421-8cc73223c340
-caps.latest.revision: "9"
+caps.latest.revision: 9
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.workload: dotnet
-ms.openlocfilehash: 782a6b5bdb206d285d619b8085993b591785aca5
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.workload:
+- dotnet
+ms.openlocfilehash: ab3baf8cc0bb6af951f6f3e6396b7545d0c6b301
+ms.sourcegitcommit: 03ee570f6f528a7d23a4221dcb26a9498edbdf8c
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 04/28/2018
 ---
 # <a name="transaction-models"></a>異動模型
 本主題描述異動程式設計模型與 Microsoft 提供的基礎結構元件之間的關係。  
@@ -35,13 +37,13 @@ ms.lasthandoff: 12/22/2017
 ## <a name="systemtransactions-transactions"></a>System.Transactions 異動  
  <xref:System.Transactions> 命名空間會提供根據 <xref:System.Transactions.Transaction> 類別的明確程式設計模型，以及使用 <xref:System.Transactions.TransactionScope> 類別的隱含程式設計模型，而其中交易會由基礎結構自動管理。  
   
- [!INCLUDE[crabout](../../../../includes/crabout-md.md)]如何建立交易式應用程式使用這兩個模型，請參閱[撰寫異動應用程式](http://go.microsoft.com/fwlink/?LinkId=94947)。  
+ [!INCLUDE[crabout](../../../../includes/crabout-md.md)] 如何建立交易式應用程式使用這兩個模型，請參閱[撰寫異動應用程式](http://go.microsoft.com/fwlink/?LinkId=94947)。  
   
  在 [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] 服務或應用程式中，<xref:System.Transactions> 提供用於在用戶端應用程式中建立交易，以及在服務中需要時與交易明確互動的程式設計模型。  
   
 ## <a name="msdtc-transactions"></a>MSDTC 異動  
  Microsoft Distributed Transaction Coordinator (MSDTC) 是對分散式異動提供支援的異動管理員。  
   
- [!INCLUDE[crdefault](../../../../includes/crdefault-md.md)][DTC 程式設計人員參考](http://go.microsoft.com/fwlink/?LinkId=94948)。  
+ 如需詳細資訊，請參閱[DTC 程式設計人員參考](http://go.microsoft.com/fwlink/?LinkId=94948)。  
   
  在 [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] 服務或應用程式中，MSDTC 為在用戶端或服務中建立的交易協調提供基礎結構。

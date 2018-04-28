@@ -1,20 +1,17 @@
 ---
-title: "明確欄位：val 關鍵字 (F#)"
+title: 明確欄位：val 關鍵字 (F#)
 description: "深入了解 F # 'val' 關鍵字，用來宣告位置以儲存類別或結構類型中的值，但沒有初始化型別。"
-keywords: "Visual F#, F#, 函式程式設計"
 author: cartermp
 ms.author: phcart
 ms.date: 05/16/2016
 ms.topic: language-reference
-ms.prod: .net
-ms.technology: devlang-fsharp
+ms.prod: dotnet-fsharp
 ms.devlang: fsharp
-ms.assetid: 3bdbc745-436b-407f-bf54-5d11ca829cd0
-ms.openlocfilehash: cee53a48f08aec89b0bdd40189ed331cadee877d
-ms.sourcegitcommit: bd1ef61f4bb794b25383d3d72e71041a5ced172e
+ms.openlocfilehash: dc277680121976c0469b18c77bd84443cd251afb
+ms.sourcegitcommit: 03ee570f6f528a7d23a4221dcb26a9498edbdf8c
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/18/2017
+ms.lasthandoff: 04/28/2018
 ---
 # <a name="explicit-fields-the-val-keyword"></a>明確欄位：val 關鍵字
 
@@ -49,7 +46,7 @@ val [ mutable ] [ access-modifier ] field-name : type-name
 
 
 >[!WARNING] 
-`Note`.NET Framework 命名空間`System.ComponentModel`包含具有相同名稱的屬性。 如需此屬性的詳細資訊，請參閱 `System.ComponentModel.DefaultValueAttribute`。
+`Note` .NET Framework 命名空間`System.ComponentModel`包含具有相同名稱的屬性。 如需此屬性的詳細資訊，請參閱 `System.ComponentModel.DefaultValueAttribute`。
 
 
 下列程式碼示範在具有主要建構函式的類別中使用明確欄位，也示範 `let` 繫結，方便對照。 請注意，`let` 繫結的欄位 `myInt1` 是 private。 從成員方法參考 `let` 繫結欄位 `myInt1` 時，不需要自我識別項 `this`。 但是，當您參考明確欄位 `myInt2` 和 `myString` 時，需要自我識別項。

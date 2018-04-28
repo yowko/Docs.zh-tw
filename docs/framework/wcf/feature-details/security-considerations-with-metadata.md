@@ -1,33 +1,35 @@
 ---
-title: "中繼資料的安全性考量"
-ms.custom: 
+title: 中繼資料的安全性考量
+ms.custom: ''
 ms.date: 03/30/2017
 ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.technology: dotnet-clr
-ms.tgt_pltfrm: 
+ms.reviewer: ''
+ms.suite: ''
+ms.technology:
+- dotnet-clr
+ms.tgt_pltfrm: ''
 ms.topic: article
 ms.assetid: e78ef8ab-4f63-4656-ab93-b1deab2666d5
-caps.latest.revision: "10"
+caps.latest.revision: 10
 author: BrucePerlerMS
 ms.author: bruceper
 manager: mbaldwin
-ms.workload: dotnet
-ms.openlocfilehash: 098b31e479322d9de3a299f06652e819a5388c42
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.workload:
+- dotnet
+ms.openlocfilehash: d033a3e22def60c5d82191fd7fcc93bd67f4548b
+ms.sourcegitcommit: 03ee570f6f528a7d23a4221dcb26a9498edbdf8c
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 04/28/2018
 ---
 # <a name="security-considerations-with-metadata"></a>中繼資料的安全性考量
 使用 [!INCLUDE[indigo1](../../../../includes/indigo1-md.md)] 中的中繼資料功能時，請考量發行、擷取和使用服務中繼資料的安全性影響。  
   
 ## <a name="when-to-publish-metadata"></a>發行中繼資料的時機  
- [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] 服務預設不會發行中繼資料。 若要發佈的中繼資料[!INCLUDE[indigo2](../../../../includes/indigo2-md.md)]將中繼資料端點加入至您的服務，您必須明確啟用中繼資料發行的服務 (請參閱[發行中繼資料](../../../../docs/framework/wcf/feature-details/publishing-metadata.md))。 停用中繼資料發行則會降低服務的攻擊面，並降低非預期資料暴露的風險。 不是所有服務都必須發行中繼資料。 如果您不需要發行中繼資料，可以考慮關閉這個功能。 請注意，仍然可以直接從您使用的服務組件產生中繼資料和用戶端程式碼[ServiceModel Metadata Utility Tool (Svcutil.exe)](../../../../docs/framework/wcf/servicemodel-metadata-utility-tool-svcutil-exe.md)。 [!INCLUDE[crabout](../../../../includes/crabout-md.md)]使用 Svcutil.exe 來匯出中繼資料，請參閱[How to： 使用 Svcutil.exe 來匯出中繼資料編譯服務程式碼](../../../../docs/framework/wcf/feature-details/how-to-use-svcutil-exe-to-export-metadata-from-compiled-service-code.md)。  
+ [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] 服務預設不會發行中繼資料。 若要發佈的中繼資料[!INCLUDE[indigo2](../../../../includes/indigo2-md.md)]將中繼資料端點加入至您的服務，您必須明確啟用中繼資料發行的服務 (請參閱[發行中繼資料](../../../../docs/framework/wcf/feature-details/publishing-metadata.md))。 停用中繼資料發行則會降低服務的攻擊面，並降低非預期資料暴露的風險。 不是所有服務都必須發行中繼資料。 如果您不需要發行中繼資料，可以考慮關閉這個功能。 請注意，仍然可以直接從您使用的服務組件產生中繼資料和用戶端程式碼[ServiceModel Metadata Utility Tool (Svcutil.exe)](../../../../docs/framework/wcf/servicemodel-metadata-utility-tool-svcutil-exe.md)。 [!INCLUDE[crabout](../../../../includes/crabout-md.md)] 使用 Svcutil.exe 來匯出中繼資料，請參閱[How to： 使用 Svcutil.exe 來匯出中繼資料編譯服務程式碼](../../../../docs/framework/wcf/feature-details/how-to-use-svcutil-exe-to-export-metadata-from-compiled-service-code.md)。  
   
 ## <a name="publishing-metadata-using-a-secure-binding"></a>使用安全繫結發行中繼資料  
- [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] 提供的預設中繼資料繫結並不安全，而這些繫結會允許匿名存取中繼資料。 [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] 服務發行的服務中繼資料包含服務的詳細描述，並可能有意或無意包含敏感資訊。 例如，服務中繼資料可能包含原意不是要公開廣播的基礎結構作業的相關資訊。 若要防止未經授權存取服務中繼資料，您可以在中繼資料端點中使用安全繫結。 中繼資料端點會回應至使用 Secure Sockets Layer (SSL) 來確保中繼資料安全的 HTTP/GET 要求。 [!INCLUDE[crdefault](../../../../includes/crdefault-md.md)][How to： 安全中繼資料端點](../../../../docs/framework/wcf/feature-details/how-to-secure-metadata-endpoints.md)。  
+ [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] 提供的預設中繼資料繫結並不安全，而這些繫結會允許匿名存取中繼資料。 [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] 服務發行的服務中繼資料包含服務的詳細描述，並可能有意或無意包含敏感資訊。 例如，服務中繼資料可能包含原意不是要公開廣播的基礎結構作業的相關資訊。 若要防止未經授權存取服務中繼資料，您可以在中繼資料端點中使用安全繫結。 中繼資料端點會回應至使用 Secure Sockets Layer (SSL) 來確保中繼資料安全的 HTTP/GET 要求。 如需詳細資訊，請參閱[How to： 安全中繼資料端點](../../../../docs/framework/wcf/feature-details/how-to-secure-metadata-endpoints.md)。  
   
  確保中繼資料端點的安全同樣能對要求者提供一種方法，可安全地擷取服務中繼資料而避免遇到竄改或詐騙等風險。  
   
@@ -49,6 +51,6 @@ ms.lasthandoff: 12/22/2017
 ## <a name="protecting-application-configuration-files"></a>保護應用程式組態檔  
  服務的應用程式組態檔可能會控制發行中繼資料的方法以及是否發行中繼資料。 強烈建議您透過適當的存取控制清單 (ACL) 來保護應用程式組態檔，以確保攻擊者無法修改這類設定。  
   
-## <a name="see-also"></a>請參閱  
+## <a name="see-also"></a>另請參閱  
  [如何：保護中繼資料端點的安全](../../../../docs/framework/wcf/feature-details/how-to-secure-metadata-endpoints.md)  
  [安全性](../../../../docs/framework/wcf/feature-details/security.md)

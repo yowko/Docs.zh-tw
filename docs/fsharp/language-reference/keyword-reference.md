@@ -1,20 +1,17 @@
 ---
-title: "關鍵字參考 (F#)"
-description: "尋找所有的 F # 語言關鍵字的相關資訊的連結。"
-keywords: "Visual F#, F#, 函式程式設計"
+title: 關鍵字參考 (F#)
+description: '尋找所有的 F # 語言關鍵字的相關資訊的連結。'
 author: cartermp
 ms.author: phcart
 ms.date: 05/16/2016
 ms.topic: language-reference
-ms.prod: .net
-ms.technology: devlang-fsharp
+ms.prod: dotnet-fsharp
 ms.devlang: fsharp
-ms.assetid: 5795ce1f-11bf-4798-9f1f-6e44ffa1477e
-ms.openlocfilehash: cdfdd86843acf05a8b33647823f934a161f6d885
-ms.sourcegitcommit: bd1ef61f4bb794b25383d3d72e71041a5ced172e
+ms.openlocfilehash: 35a127a38db4874699ef7b43681cb967a139c81e
+ms.sourcegitcommit: 03ee570f6f528a7d23a4221dcb26a9498edbdf8c
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/18/2017
+ms.lasthandoff: 04/28/2018
 ---
 # <a name="keyword-reference"></a>關鍵字參考
 
@@ -24,10 +21,10 @@ ms.lasthandoff: 10/18/2017
 
 下表會顯示所有 F # 關鍵字，依字母順序，以及簡短描述和包含的詳細資訊的相關主題連結。
 
-|關鍵字|連結|說明|
+|關鍵字|連結|描述|
 |-------|----|-----------|
 |`abstract`|[成員](members/index.md)<br /><br />[抽象類別](abstract-classes.md)|表示可以在其中宣告或類型，是虛擬的其預設實作中不具任何實作的方法。|
-|`and`|[`let`繫結](functions/let-bindings.md)<br /><br />[成員](members/index.md)<br /><br />[條件約束](generics/constraints.md)|相互遞迴繫結中使用，在屬性宣告，以及使用泛型參數的多個條件約束。|
+|`and`|[`let` 繫結](functions/let-bindings.md)<br /><br />[成員](members/index.md)<br /><br />[條件約束](generics/constraints.md)|相互遞迴繫結中使用，在屬性宣告，以及使用泛型參數的多個條件約束。|
 |`as`|[類別](classes.md)<br /><br />[模式比對](Pattern-Matching.md)|用來提供目前類別物件的物件名稱。 也可用來為指定整個模式比對模式的名稱。|
 |`assert`|[判斷提示](assertions.md)|用來驗證程式碼在偵錯期間。|
 |`base`|[類別](classes.md)<br /><br />[繼承](inheritance.md)|做為基底類別物件的名稱。|
@@ -58,7 +55,7 @@ ms.lasthandoff: 10/18/2017
 |`interface`|[介面](interfaces.md)|用來宣告和實作的介面。|
 |`internal`|[存取控制](access-control.md)|用來指定成員的可見組件內，但超出它。|
 |`lazy`|[延遲運算](lazy-computations.md)|用來指定只在需要結果時，才要執行的計算。|
-|`let`|[`let`繫結](functions/let-bindings.md)|用來建立關聯，或繫結至值或函式的名稱。|
+|`let`|[`let` 繫結](functions/let-bindings.md)|用來建立關聯，或繫結至值或函式的名稱。|
 |`let!`|[非同步工作流程](asynchronous-workflows.md)<br /><br />[計算運算式](computation-expressions.md)|用來繫結的名稱，以非同步的計算結果的非同步工作流程中，或在其他計算運算式中，用來繫結的結果，也就是計算類型的名稱。|
 |`match`|[比對運算式](match-expressions.md)|用來比較值 」 模式的分支。|
 |`member`|[成員](members/index.md)|用來宣告屬性或方法中的物件類型。|

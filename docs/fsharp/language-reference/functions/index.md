@@ -1,20 +1,17 @@
 ---
 title: 函式 (F#)
 description: '深入了解在 F # 和 F # 支援的方式常見函式程式設計建構函式。'
-keywords: Visual F#, F#, 函式程式設計
 author: cartermp
 ms.author: phcart
 ms.date: 05/16/2016
 ms.topic: language-reference
-ms.prod: .net
-ms.technology: devlang-fsharp
+ms.prod: dotnet-fsharp
 ms.devlang: fsharp
-ms.assetid: 6dea2c3e-2f9d-4c9d-97a2-d8f9a72b6f4c
-ms.openlocfilehash: adb2b0b3680c97582dfefda41c43735f9f09e6c9
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.openlocfilehash: 4cdab85dd63cc74a4c6e7abf660f8f32cc088120
+ms.sourcegitcommit: 03ee570f6f528a7d23a4221dcb26a9498edbdf8c
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 04/28/2018
 ---
 # <a name="functions"></a>函式
 
@@ -115,7 +112,7 @@ let vol = cylinderVolume 2.0 3.0
 [!code-fsharp[Main](../../../../samples/snippets/fsharp/lang-ref-1/snippet107.fs)]
     
 ## <a name="recursive-functions"></a>遞迴函式
-「遞迴函式」是會自我呼叫的函式。 您必須在 **let** 關鍵字後面指定 **rec** 關鍵字來使用遞迴函式。 請從函式主體中叫用遞迴函式，就像叫用任何函式呼叫一樣。 下列遞迴函式會計算 *n*個 Fibonacci 數字。 Fibonacci 數字序列自古聞名，此序列中的每個連續數字都是前兩個數字的總和。
+「遞迴函式」是會自我呼叫的函式。 您必須在 **let** 關鍵字後面指定 **rec** 關鍵字來使用遞迴函式。 請從函式主體中叫用遞迴函式，就像叫用任何函式呼叫一樣。 下列遞迴函式會計算第 *n* 個 Fibonacci 數字。 Fibonacci 數字序列自古聞名，此序列中的每個連續數字都是前兩個數字的總和。
 
 [!code-fsharp[Main](../../../../samples/snippets/fsharp/lang-ref-1/snippet108.fs)]
 
@@ -205,7 +202,7 @@ let result4 = Pipeline2 2
 您可以多載類型的方法，但不是函式的方法。 如需詳細資訊，請參閱[方法](../members/methods.md)。
 
 
-## <a name="see-also"></a>請參閱
+## <a name="see-also"></a>另請參閱
 [值](../values/index.md)
 
 [F# 語言參考](../index.md)

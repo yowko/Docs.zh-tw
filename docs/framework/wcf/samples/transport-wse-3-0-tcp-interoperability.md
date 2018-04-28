@@ -1,24 +1,26 @@
 ---
-title: "傳輸：WSE 3.0 TCP 互通性"
-ms.custom: 
+title: 傳輸：WSE 3.0 TCP 互通性
+ms.custom: ''
 ms.date: 03/30/2017
 ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.technology: dotnet-clr
-ms.tgt_pltfrm: 
+ms.reviewer: ''
+ms.suite: ''
+ms.technology:
+- dotnet-clr
+ms.tgt_pltfrm: ''
 ms.topic: article
 ms.assetid: 5f7c3708-acad-4eb3-acb9-d232c77d1486
-caps.latest.revision: "18"
+caps.latest.revision: 18
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.workload: dotnet
-ms.openlocfilehash: 63641f7a99b7c567e871d6a67dd72380f0c077ed
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.workload:
+- dotnet
+ms.openlocfilehash: 510d523cea78aa16a16adc8572c839e95059c068
+ms.sourcegitcommit: 03ee570f6f528a7d23a4221dcb26a9498edbdf8c
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 04/28/2018
 ---
 # <a name="transport-wse-30-tcp-interoperability"></a>傳輸：WSE 3.0 TCP 互通性
 WSE 3.0 TCP 互通性傳輸範例會示範如何實作 TCP 雙工工作階段，以做為自訂 [!INCLUDE[indigo1](../../../../includes/indigo1-md.md)] 傳輸。 也會示範如何使用通道層的擴充性，透過網路與現有的已部署系統相連結。 下列步驟會顯示如何建置此自訂 [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] 傳輸：  
@@ -31,7 +33,7 @@ WSE 3.0 TCP 互通性傳輸範例會示範如何實作 TCP 雙工工作階段，
   
 4.  確認已將所有網路特定例外狀況正規化為適當的 <xref:System.ServiceModel.CommunicationException> 衍生類別。  
   
-5.  新增繫結項目，而此繫結項目會將自訂傳輸新增至通道堆疊。 [!INCLUDE[crdefault](../../../../includes/crdefault-md.md)][新增繫結項目]。  
+5.  新增繫結項目，而此繫結項目會將自訂傳輸新增至通道堆疊。 如需詳細資訊，請參閱 [新增繫結項目]。  
   
 ## <a name="creating-iduplexsessionchannel"></a>建立 IDuplexSessionChannel  
  撰寫 WSE 3.0 TCP 互通性傳輸的第一個步驟，就是在 <xref:System.ServiceModel.Channels.IDuplexSessionChannel> 之上建立 <xref:System.Net.Sockets.Socket> 的實作。 `WseTcpDuplexSessionChannel` 是衍生自 <xref:System.ServiceModel.Channels.ChannelBase>。 傳送訊息的邏輯由兩個主要部分所組成：(1) 將訊息編碼成位元組，以及 (2) 框架處理這些位元組並在網路上傳送。  
@@ -63,7 +65,7 @@ WSE 3.0 TCP 互通性傳輸範例會示範如何實作 TCP 雙工工作階段，
 ## <a name="channel-factory"></a>通道處理站  
  撰寫 TCP 傳輸的下一個步驟為，建立用戶端通道的 <xref:System.ServiceModel.Channels.IChannelFactory> 實作。  
   
--   `WseTcpChannelFactory`衍生自<xref:System.ServiceModel.Channels.ChannelFactoryBase> \<IDuplexSessionChannel >。 這是覆寫 `OnCreateChannel` 以產生用戶端通道的處理站。  
+-   `WseTcpChannelFactory` 衍生自<xref:System.ServiceModel.Channels.ChannelFactoryBase> \<IDuplexSessionChannel >。 這是覆寫 `OnCreateChannel` 以產生用戶端通道的處理站。  
   
  `protected override IDuplexSessionChannel OnCreateChannel(EndpointAddress remoteAddress, Uri via)`  
   
@@ -73,7 +75,7 @@ WSE 3.0 TCP 互通性傳輸範例會示範如何實作 TCP 雙工工作階段，
   
  `}`  
   
--   `ClientWseTcpDuplexSessionChannel`將邏輯加入至基底`WseTcpDuplexSessionChannel`連接至 TCP 伺服器在`channel.Open`時間。 首先會將主機名稱解析為 IP 位址，如下列程式碼所示。  
+-   `ClientWseTcpDuplexSessionChannel` 將邏輯加入至基底`WseTcpDuplexSessionChannel`連接至 TCP 伺服器在`channel.Open`時間。 首先會將主機名稱解析為 IP 位址，如下列程式碼所示。  
   
  `hostEntry = Dns.GetHostEntry(Via.Host);`  
   
@@ -90,7 +92,7 @@ WSE 3.0 TCP 互通性傳輸範例會示範如何實作 TCP 雙工工作階段，
 ## <a name="channel-listener"></a>通道接聽程式  
  撰寫 TCP 傳輸的下一個步驟為，建立可接受伺服器通道的 <xref:System.ServiceModel.Channels.IChannelListener> 實作。  
   
--   `WseTcpChannelListener`衍生自<xref:System.ServiceModel.Channels.ChannelListenerBase> \<IDuplexSessionChannel > 和覆寫 [Begin] Open 和 On [Begin] Close 以控制其接聽通訊端的存留期。 在 OnOpen 中，您會建立通訊端以接聽 IP_ANY。 更進階的實作則可以建立第二個通訊端，就也可以階聽 IPv6。 這些實作也允許在主機名稱中指定 IP 位址。  
+-   `WseTcpChannelListener` 衍生自<xref:System.ServiceModel.Channels.ChannelListenerBase> \<IDuplexSessionChannel > 和覆寫 [Begin] Open 和 On [Begin] Close 以控制其接聽通訊端的存留期。 在 OnOpen 中，您會建立通訊端以接聽 IP_ANY。 更進階的實作則可以建立第二個通訊端，就也可以階聽 IPv6。 這些實作也允許在主機名稱中指定 IP 位址。  
   
  `IPEndPoint localEndpoint = new IPEndPoint(IPAddress.Any, uri.Port);`  
   
@@ -206,4 +208,4 @@ Symbols:
   
     8.  會在新主控台中啟動 TCP 傳輸測試用戶端。 用戶端要求積存會從服務進行引用，並在其主控台視窗中顯示結果。  
   
-## <a name="see-also"></a>請參閱
+## <a name="see-also"></a>另請參閱

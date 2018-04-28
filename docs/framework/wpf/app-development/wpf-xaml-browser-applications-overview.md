@@ -1,12 +1,13 @@
 ---
-title: "WPF XAML 瀏覽器應用程式概觀"
-ms.custom: 
+title: WPF XAML 瀏覽器應用程式概觀
+ms.custom: ''
 ms.date: 03/30/2017
 ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.technology: dotnet-wpf
-ms.tgt_pltfrm: 
+ms.reviewer: ''
+ms.suite: ''
+ms.technology:
+- dotnet-wpf
+ms.tgt_pltfrm: ''
 ms.topic: article
 dev_langs:
 - csharp
@@ -17,20 +18,21 @@ helpviewer_keywords:
 - XAML browser applications (XBAP)
 - browser-hosted applications [WPF]
 ms.assetid: 3a7a86a8-75d5-4898-96b9-73da151e5e16
-caps.latest.revision: "47"
+caps.latest.revision: 47
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.workload: dotnet
-ms.openlocfilehash: 0f4f410f0f6c209dbc43642a15ae85a788390f4a
-ms.sourcegitcommit: c0dd436f6f8f44dc80dc43b07f6841a00b74b23f
+ms.workload:
+- dotnet
+ms.openlocfilehash: 0afdce00cc169a5be9224a7b675e4666c1349bd5
+ms.sourcegitcommit: 03ee570f6f528a7d23a4221dcb26a9498edbdf8c
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 01/19/2018
+ms.lasthandoff: 04/28/2018
 ---
 # <a name="wpf-xaml-browser-applications-overview"></a>WPF XAML 瀏覽器應用程式概觀
 <a name="introduction"></a>
-[!INCLUDE[TLA#tla_xbap#plural](../../../../includes/tlasharptla-xbapsharpplural-md.md)]結合的 Web 應用程式與豐富型用戶端應用程式的功能。 如同 Web 應用程式，XBAP 可以部署至 Web 伺服器，並且從 Internet Explorer 或 Firefox 啟動。 如同豐富型用戶端應用程式，XBAP 可以利用 [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] 的功能。 開發 XBAP 也類似於豐富型用戶端開發。 本主題提供 XBAP 開發的簡單、高階介紹，並且描述 XBAP 開發與標準豐富型用戶端開發的不同之處。  
+[!INCLUDE[TLA#tla_xbap#plural](../../../../includes/tlasharptla-xbapsharpplural-md.md)] 結合的 Web 應用程式與豐富型用戶端應用程式的功能。 如同 Web 應用程式，XBAP 可以部署至 Web 伺服器，並且從 Internet Explorer 或 Firefox 啟動。 如同豐富型用戶端應用程式，XBAP 可以利用 [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] 的功能。 開發 XBAP 也類似於豐富型用戶端開發。 本主題提供 XBAP 開發的簡單、高階介紹，並且描述 XBAP 開發與標準豐富型用戶端開發的不同之處。  
   
  此主題包括下列章節：  
   
@@ -63,7 +65,7 @@ ms.lasthandoff: 01/19/2018
 |應用程式資訊清單 (.manifest)|它包含與應用程式相關聯的中繼資料，副檔名為 .manifest。|  
 |部署資訊清單 (.xbap)|這個檔案包含資訊，[!INCLUDE[TLA#tla_clickonce](../../../../includes/tlasharptla-clickonce-md.md)] 用來部署應用程式，副檔名為 .xbap。|  
   
- 您將 XBAP 部署至 Web 伺服器，例如，[!INCLUDE[TLA#tla_iis50](../../../../includes/tlasharptla-iis50-md.md)] 或更新版本。 您不需要在 Web 伺服器上安裝 [!INCLUDE[TLA2#tla_winfx](../../../../includes/tla2sharptla-winfx-md.md)]，但是您必須註冊 [!INCLUDE[TLA2#tla_wpf](../../../../includes/tla2sharptla-wpf-md.md)] [!INCLUDE[TLA#tla_mime](../../../../includes/tlasharptla-mime-md.md)] 型別和副檔名。 如需詳細資訊，請參閱[設定 IIS 5.0 和 IIS 6.0 以部署 WPF 應用程式](../../../../docs/framework/wpf/app-development/how-to-configure-iis-5-0-and-iis-6-0-to-deploy-wpf-applications.md)。  
+ 您將 XBAP 部署至 Web 伺服器，例如，[!INCLUDE[TLA#tla_iis50](../../../../includes/tlasharptla-iis50-md.md)] 或更新版本。 您不必安裝.NET Framework 的 Web 伺服器上，但您需要註冊[!INCLUDE[TLA2#tla_wpf](../../../../includes/tla2sharptla-wpf-md.md)][!INCLUDE[TLA#tla_mime](../../../../includes/tlasharptla-mime-md.md)]類型和檔案名稱的擴充功能。 如需詳細資訊，請參閱[設定 IIS 5.0 和 IIS 6.0 以部署 WPF 應用程式](../../../../docs/framework/wpf/app-development/how-to-configure-iis-5-0-and-iis-6-0-to-deploy-wpf-applications.md)。  
   
  若要準備您的 XBAP 以進行部署，將 .exe 和相關聯的資訊清單複製到 Web 伺服器。 建立 HTML 網頁，其中包含可開啟部署資訊清單 (它是副檔名為 .xbap 的檔案) 的超連結。 當使用者按一下 .xbap 檔案的連結，[!INCLUDE[TLA2#tla_clickonce](../../../../includes/tla2sharptla-clickonce-md.md)] 會自動處理下載和啟動應用程式的機制。 下列範例程式碼顯示包含指向 XBAP 之超連結的 HTML 網頁。  
   
@@ -152,7 +154,7 @@ ms.lasthandoff: 01/19/2018
   
 -   自訂 ActiveX 控制項可能會遇到通訊問題，因為 WPF 應用程式是在個別執行緒中執行。  
   
--   <xref:System.Windows.Interop.HwndHost.MessageHook>不會不取得引發因為<xref:System.Windows.Interop.HwndHost>無法在另一個執行緒或處理序中執行視窗子類別。  
+-   <xref:System.Windows.Interop.HwndHost.MessageHook> 不會不取得引發因為<xref:System.Windows.Interop.HwndHost>無法在另一個執行緒或處理序中執行視窗子類別。  
   
 ### <a name="creating-a-full-trust-xbap"></a>建立完全信任 XBAP  
  如果您的 XBAP 需要完全信任，您可以變更專案以啟用此權限。 下列步驟描述如何啟用完全信任︰  
@@ -197,6 +199,6 @@ ms.lasthandoff: 01/19/2018
   
  此外，改善的並行 [!INCLUDE[ndptecclick](../../../../includes/ndptecclick-md.md)] 下載序列，會改善最多 10% 的開始時間。 在 [!INCLUDE[ndptecclick](../../../../includes/ndptecclick-md.md)] 下載和驗證資訊清單之後，應用程式下載會啟動且更新進度列開始更新。  
   
-## <a name="see-also"></a>請參閱  
+## <a name="see-also"></a>另請參閱  
  [設定 Visual Studio 來偵錯 XAML 瀏覽器應用程式以呼叫 Web 服務](../../../../docs/framework/wpf/app-development/configure-vs-to-debug-a-xaml-browser-to-call-a-web-service.md)  
  [部署 WPF 應用程式](../../../../docs/framework/wpf/app-development/deploying-a-wpf-application-wpf.md)

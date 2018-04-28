@@ -1,24 +1,26 @@
 ---
-title: "HOW TO：建立異動式服務"
-ms.custom: 
+title: HOW TO：建立異動式服務
+ms.custom: ''
 ms.date: 03/30/2017
 ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.technology: dotnet-clr
-ms.tgt_pltfrm: 
+ms.reviewer: ''
+ms.suite: ''
+ms.technology:
+- dotnet-clr
+ms.tgt_pltfrm: ''
 ms.topic: article
 ms.assetid: 1bd2e4ed-a557-43f9-ba98-4c70cb75c154
-caps.latest.revision: "12"
+caps.latest.revision: 12
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.workload: dotnet
-ms.openlocfilehash: 4a61c1c4aeba63baee3c5e2ba5110710ed9f45f2
-ms.sourcegitcommit: c0dd436f6f8f44dc80dc43b07f6841a00b74b23f
+ms.workload:
+- dotnet
+ms.openlocfilehash: 9e39ecd346b5d5fb4113fd17abe9bde715a12aa4
+ms.sourcegitcommit: 03ee570f6f528a7d23a4221dcb26a9498edbdf8c
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 01/19/2018
+ms.lasthandoff: 04/28/2018
 ---
 # <a name="how-to-create-a-transactional-service"></a>HOW TO：建立異動式服務
 這個範例示範建立異動式服務的各層面，以及使用用戶端初始化的異動以協調服務作業。  
@@ -76,7 +78,7 @@ ms.lasthandoff: 01/19/2018
     }  
     ```  
   
-3.  在組態檔中設定繫結、指定應該流動的交易內容，以及要用來執行這些動作的通訊協定。 [!INCLUDE[crdefault](../../../../includes/crdefault-md.md)][ServiceModel 異動組態](../../../../docs/framework/wcf/feature-details/servicemodel-transaction-configuration.md)。 明確地說，在端點項目的 `binding` 屬性中會指定繫結類型。 [\<端點 >](http://msdn.microsoft.com/library/13aa23b7-2f08-4add-8dbf-a99f8127c017)元素包含`bindingConfiguration`屬性必須參考名為繫結組態`transactionalOleTransactionsTcpBinding`，如下列範例組態所示。  
+3.  在組態檔中設定繫結、指定應該流動的交易內容，以及要用來執行這些動作的通訊協定。 如需詳細資訊，請參閱[ServiceModel 異動組態](../../../../docs/framework/wcf/feature-details/servicemodel-transaction-configuration.md)。 明確地說，在端點項目的 `binding` 屬性中會指定繫結類型。 [\<端點 >](http://msdn.microsoft.com/library/13aa23b7-2f08-4add-8dbf-a99f8127c017)元素包含`bindingConfiguration`屬性必須參考名為繫結組態`transactionalOleTransactionsTcpBinding`，如下列範例組態所示。  
   
     ```xml  
     <service name="CalculatorService">  

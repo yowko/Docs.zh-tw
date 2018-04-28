@@ -1,20 +1,17 @@
 ---
-title: "類別中的 let 繫結 (F#)"
+title: 類別中的 let 繫結 (F#)
 description: "了解如何在類別定義中使用 'let' 繫結定義私用欄位和 F # 類別的私用函式。"
-keywords: "Visual F#, F#, 函式程式設計"
 author: cartermp
 ms.author: phcart
 ms.date: 05/16/2016
 ms.topic: language-reference
-ms.prod: .net
-ms.technology: devlang-fsharp
+ms.prod: dotnet-fsharp
 ms.devlang: fsharp
-ms.assetid: 9d3710f5-68b1-4e4c-b02b-27fe018f20e8
-ms.openlocfilehash: 1337cc0794e366e8c39745f5c45065362c9c38c9
-ms.sourcegitcommit: bd1ef61f4bb794b25383d3d72e71041a5ced172e
+ms.openlocfilehash: c4511a541403dde517acaf902e86de8d48f13781
+ms.sourcegitcommit: 03ee570f6f528a7d23a4221dcb26a9498edbdf8c
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/18/2017
+ms.lasthandoff: 04/28/2018
 ---
 # <a name="let-bindings-in-classes"></a>類別中的 let 繫結
 
@@ -60,4 +57,4 @@ A`let`繫結，不是靜態的執行個體稱為`let`繫結。 執行個體`let`
 
 [類別中的 `do` 繫結](do-bindings-in-classes.md)
 
-[`let`繫結](../functions/let-bindings.md)
+[`let` 繫結](../functions/let-bindings.md)

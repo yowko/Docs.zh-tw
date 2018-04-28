@@ -38,11 +38,11 @@ ms.author: dotnetcontent
 manager: wpickett
 ms.workload:
 - dotnet
-ms.openlocfilehash: 07609671d061851e6ede2f2bd90e4bee38e43159
-ms.sourcegitcommit: 86adcc06e35390f13c1e372c36d2e044f1fc31ef
+ms.openlocfilehash: 7c84c5742fcbb0d1554bd6fc379fc44f3b9cb055
+ms.sourcegitcommit: 03ee570f6f528a7d23a4221dcb26a9498edbdf8c
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/26/2018
+ms.lasthandoff: 04/28/2018
 ---
 # <a name="navigation-overview"></a>巡覽概觀
 [!INCLUDE[TLA#tla_wpf](../../../../includes/tlasharptla-wpf-md.md)] 支援兩種類型的應用程式中可用的瀏覽器樣式瀏覽： 獨立應用程式和[!INCLUDE[TLA#tla_xbap#plural](../../../../includes/tlasharptla-xbapsharpplural-md.md)]。 封裝內容以進行巡覽，[!INCLUDE[TLA2#tla_wpf](../../../../includes/tla2sharptla-wpf-md.md)]提供<xref:System.Windows.Controls.Page>類別。 您可以從一個導覽<xref:System.Windows.Controls.Page>到另一個以宣告方式，利用<xref:System.Windows.Documents.Hyperlink>，或以程式設計的方式，利用<xref:System.Windows.Navigation.NavigationService>。 [!INCLUDE[TLA2#tla_wpf](../../../../includes/tla2sharptla-wpf-md.md)] 使用日誌記憶曾經巡覽過的頁面，以利返回巡覽。  
@@ -89,7 +89,7 @@ ms.lasthandoff: 04/26/2018
   
 <a name="CreatingAXAMLPage"></a>   
 ### <a name="implementing-a-page"></a>實作頁面  
- 在[!INCLUDE[TLA2#tla_wpf](../../../../includes/tla2sharptla-wpf-md.md)]，您可以瀏覽至包含的數種內容類型[!INCLUDE[TLA2#tla_winfx](../../../../includes/tla2sharptla-winfx-md.md)]物件、 自訂物件，列舉值、 使用者控制項[!INCLUDE[TLA2#tla_xaml](../../../../includes/tla2sharptla-xaml-md.md)]檔案，並[!INCLUDE[TLA#tla_html](../../../../includes/tlasharptla-html-md.md)]檔案。 不過，您可以找到最常見且便利的方式封裝內容是使用<xref:System.Windows.Controls.Page>。 此外，<xref:System.Windows.Controls.Page>實作瀏覽特定的功能，以增強其外觀，並簡化開發。  
+ 在[!INCLUDE[TLA2#tla_wpf](../../../../includes/tla2sharptla-wpf-md.md)]，您可以瀏覽至包含.NET Framework 物件、 自訂物件，列舉值、 使用者控制項的數種內容類型[!INCLUDE[TLA2#tla_xaml](../../../../includes/tla2sharptla-xaml-md.md)]檔案，並[!INCLUDE[TLA#tla_html](../../../../includes/tlasharptla-html-md.md)]檔案。 不過，您可以找到最常見且便利的方式封裝內容是使用<xref:System.Windows.Controls.Page>。 此外，<xref:System.Windows.Controls.Page>實作瀏覽特定的功能，以增強其外觀，並簡化開發。  
   
  使用<xref:System.Windows.Controls.Page>，以宣告方式，您可以實作可瀏覽的頁面[!INCLUDE[TLA2#tla_xaml](../../../../includes/tla2sharptla-xaml-md.md)]內容使用類似下列的標記。  
   

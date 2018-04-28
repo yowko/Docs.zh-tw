@@ -1,20 +1,17 @@
 ---
-title: "存取控制 (F#)"
-description: "了解如何控制對等型別、 方法和函式，F # 程式語言中的程式設計項目。"
-keywords: "Visual F#, F#, 函式程式設計"
+title: 存取控制 (F#)
+description: '了解如何控制對等型別、 方法和函式，F # 程式語言中的程式設計項目。'
 author: cartermp
 ms.author: phcart
 ms.date: 05/16/2016
 ms.topic: language-reference
-ms.prod: .net
-ms.technology: devlang-fsharp
+ms.prod: dotnet-fsharp
 ms.devlang: fsharp
-ms.assetid: 955b06fe-d1cd-431d-8db6-93e83b697453
-ms.openlocfilehash: a02e20a585a0456577901f2762a0eeb0e3ecd2f0
-ms.sourcegitcommit: bd1ef61f4bb794b25383d3d72e71041a5ced172e
+ms.openlocfilehash: fee5f719904b61c3082d56f73448defdea39f472
+ms.sourcegitcommit: 03ee570f6f528a7d23a4221dcb26a9498edbdf8c
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/18/2017
+ms.lasthandoff: 04/28/2018
 ---
 # <a name="access-control"></a>存取控制
 
@@ -25,11 +22,11 @@ ms.lasthandoff: 10/18/2017
 F # 中的存取控制規範`public`， `internal`，和`private`可以套用至模組、 類型、 方法、 值定義、 函式、 屬性和明確欄位。
 
 
-- `public`表示所有呼叫端都可以存取實體。
+- `public` 表示所有呼叫端都可以存取實體。
 
-- `internal`表示實體，可以存取只能從相同組件。
+- `internal` 表示實體，可以存取只能從相同組件。
 
-- `private`表示實體，可以存取只能從封入類型或模組。
+- `private` 表示實體，可以存取只能從封入類型或模組。
 
 
 >[!NOTE] 

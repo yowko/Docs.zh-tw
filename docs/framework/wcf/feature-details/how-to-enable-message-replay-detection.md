@@ -1,12 +1,13 @@
 ---
-title: "HOW TO：啟用訊息重新執行偵測"
-ms.custom: 
+title: HOW TO：啟用訊息重新執行偵測
+ms.custom: ''
 ms.date: 03/30/2017
 ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.technology: dotnet-clr
-ms.tgt_pltfrm: 
+ms.reviewer: ''
+ms.suite: ''
+ms.technology:
+- dotnet-clr
+ms.tgt_pltfrm: ''
 ms.topic: article
 dev_langs:
 - csharp
@@ -17,27 +18,28 @@ helpviewer_keywords:
 - WCF, custom bindings
 - WCF, security
 ms.assetid: 8b847e91-69a3-49e1-9e5f-0c455e50d804
-caps.latest.revision: "10"
+caps.latest.revision: 10
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.workload: dotnet
-ms.openlocfilehash: b6524f0e32d5876851ce89b01a439ed1d1d09da3
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.workload:
+- dotnet
+ms.openlocfilehash: 55cd4b928c640f506e058f6a441189842bc9b8a3
+ms.sourcegitcommit: 03ee570f6f528a7d23a4221dcb26a9498edbdf8c
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 04/28/2018
 ---
 # <a name="how-to-enable-message-replay-detection"></a>HOW TO：啟用訊息重新執行偵測
 當攻擊者複製兩方之間的訊息資料流，並且對其中一方或多方重新執行資料流時，即表示發生重新執行攻擊。 除非緩解攻擊，否則受到攻擊的電腦會將資料流當成合法訊息來處理，導致發生一連串負面的影響，例如項目的重複排序。  
   
- [!INCLUDE[crabout](../../../../includes/crabout-md.md)]訊息重新執行偵測，請參閱[訊息重新執行偵測](http://go.microsoft.com/fwlink/?LinkId=88536)。  
+ [!INCLUDE[crabout](../../../../includes/crabout-md.md)] 訊息重新執行偵測，請參閱[訊息重新執行偵測](http://go.microsoft.com/fwlink/?LinkId=88536)。  
   
  下列程序將示範在您透過 [!INCLUDE[indigo1](../../../../includes/indigo1-md.md)] 控制重新執行偵測時所用到的各種不同屬性。  
   
 ### <a name="to-control-replay-detection-on-the-client-using-code"></a>若要透過程式碼在用戶端上控制重新執行偵測  
   
-1.  建立用於 <xref:System.ServiceModel.Channels.SecurityBindingElement> 的 <xref:System.ServiceModel.Channels.CustomBinding>。 [!INCLUDE[crdefault](../../../../includes/crdefault-md.md)][How to： 建立自訂繫結使用 SecurityBindingElement](../../../../docs/framework/wcf/feature-details/how-to-create-a-custom-binding-using-the-securitybindingelement.md)。 下列範例會使用 <xref:System.ServiceModel.Channels.SymmetricSecurityBindingElement> (使用 <xref:System.ServiceModel.Channels.SecurityBindingElement.CreateKerberosBindingElement%2A> 類別的 <xref:System.ServiceModel.Channels.SecurityBindingElement> 來建立)。  
+1.  建立用於 <xref:System.ServiceModel.Channels.SecurityBindingElement> 的 <xref:System.ServiceModel.Channels.CustomBinding>。 如需詳細資訊，請參閱[How to： 建立自訂繫結使用 SecurityBindingElement](../../../../docs/framework/wcf/feature-details/how-to-create-a-custom-binding-using-the-securitybindingelement.md)。 下列範例會使用 <xref:System.ServiceModel.Channels.SymmetricSecurityBindingElement> (使用 <xref:System.ServiceModel.Channels.SecurityBindingElement.CreateKerberosBindingElement%2A> 類別的 <xref:System.ServiceModel.Channels.SecurityBindingElement> 來建立)。  
   
 2.  請使用 <xref:System.ServiceModel.Channels.SecurityBindingElement.LocalClientSettings%2A> 屬性將參照傳回 <xref:System.ServiceModel.Channels.LocalClientSecuritySettings> 類別，並在必要時設定下列任何一個屬性：  
   
@@ -113,7 +115,7 @@ ms.lasthandoff: 12/22/2017
   
 -   <xref:System.ServiceModel.Channels>  
   
-## <a name="see-also"></a>請參閱  
+## <a name="see-also"></a>另請參閱  
  <xref:System.ServiceModel.Channels.LocalClientSecuritySettings>  
  <xref:System.ServiceModel.Channels.LocalServiceSecuritySettings>  
  [安全對話與安全工作階段](../../../../docs/framework/wcf/feature-details/secure-conversations-and-secure-sessions.md)  

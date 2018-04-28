@@ -1,29 +1,30 @@
 ---
-title: "在 .NET Framework 4 工作流程中使用 Interop 活動"
-ms.custom: 
+title: 在 .NET Framework 4 工作流程中使用 Interop 活動
+ms.custom: ''
 ms.date: 03/30/2017
 ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.tgt_pltfrm: 
+ms.reviewer: ''
+ms.suite: ''
+ms.tgt_pltfrm: ''
 ms.topic: article
 ms.assetid: 9bb747f0-eb33-4f70-84cd-317382372dcd
-caps.latest.revision: "20"
+caps.latest.revision: 20
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.workload: dotnet
-ms.openlocfilehash: 0a02d6dbc7c6f6583a174bd10853d8c8070ac273
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.workload:
+- dotnet
+ms.openlocfilehash: ebef74097d22c9624a29470f4cda231bbb32fe90
+ms.sourcegitcommit: 03ee570f6f528a7d23a4221dcb26a9498edbdf8c
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 04/28/2018
 ---
 # <a name="using-the-interop-activity-in-a-net-framework-4-workflow"></a>在 .NET Framework 4 工作流程中使用 Interop 活動
 使用 [!INCLUDE[vstecwinfx](../../../includes/vstecwinfx-md.md)] 或 [!INCLUDE[netfx35_short](../../../includes/netfx35-short-md.md)] 建立的活動，可以經由使用 [!INCLUDE[netfx_current_short](../../../includes/netfx-current-short-md.md)] 活動，在 <xref:System.Activities.Statements.Interop> 工作流程中使用。 本主題提供使用 <xref:System.Activities.Statements.Interop> 活動的概觀。  
   
 > [!NOTE]
->  <xref:System.Activities.Statements.Interop>活動不會顯示在工作流程設計工具的工具箱除非工作流程的專案具有其**目標 Framework**設定設為**.Net Framework 4**或更新版本。  
+>  <xref:System.Activities.Statements.Interop>活動不會顯示在工作流程設計工具的工具箱除非工作流程的專案具有其**目標 Framework**設定設為 **.Net Framework 4**或更新版本。  
   
 ## <a name="using-the-interop-activity-in-net-framework-45-workflows"></a>在 .NET Framework 4.5 Workflows 中使用 Interop 活動  
  在本主題中，會建立一個 [!INCLUDE[netfx35_short](../../../includes/netfx35-short-md.md)] 活動程式庫，其中包含 `DiscountCalculator` 活動。 `DiscountCalculator` 會根據購買金額計算折扣，並且由包含 <xref:System.Workflow.Activities.SequenceActivity> 的 <xref:System.Workflow.Activities.PolicyActivity> 組成。  
@@ -44,7 +45,7 @@ ms.lasthandoff: 12/22/2017
     > [!TIP]
     >  如果**方案總管 中**視窗未顯示，請選取**方案總管 中**從**檢視**功能表。  
   
-5.  在**已安裝的範本**清單中，選取**Visual C#**然後**工作流程**。 選取**.NET Framework 3.5**從.NET Framework 版本下拉式清單中，然後選取**Workflow Activity Library**從**範本**清單。  
+5.  在**已安裝的範本**清單中，選取**Visual C#** 然後**工作流程**。 選取 **.NET Framework 3.5**從.NET Framework 版本下拉式清單中，然後選取**Workflow Activity Library**從**範本**清單。  
   
 6.  型別`PolicyActivityLibrary`中**名稱**方塊，然後按一下**確定**。  
   
@@ -164,13 +165,13 @@ Rule3: IF this.DiscountPercent > 0
   
 1.  以滑鼠右鍵按一下**PolicyInteropDemo**中**方案總管 中**選取**新增**，然後**新的專案...**.  
   
-2.  請確認**.NET Framework 4.5**在.NET Framework 版本下拉式清單中，選取，然後選取**工作流程主控台應用程式**從**Visual C# 項目**清單。  
+2.  請確認 **.NET Framework 4.5**在.NET Framework 版本下拉式清單中，選取，然後選取**工作流程主控台應用程式**從**Visual C# 項目**清單。  
   
 3.  型別`PolicyInteropHost`到**名稱**方塊，然後按一下**確定**。  
   
 4.  以滑鼠右鍵按一下**PolicyInteropHost**中**方案總管 中**選取**屬性**。  
   
-5.  在**目標 framework**下拉式清單中，變更選取項目從**.NET Framework 4 Client Profile**至**.NET Framework 4.5**。 按一下**是**確認。  
+5.  在**目標 framework**下拉式清單中，變更選取項目從 **.NET Framework 4 Client Profile**至 **.NET Framework 4.5**。 按一下**是**確認。  
   
 6.  以滑鼠右鍵按一下**PolicyInteropHost**中**方案總管 中**選取**加入參考...**.  
   
@@ -178,7 +179,7 @@ Rule3: IF this.DiscountPercent > 0
   
 8.  以滑鼠右鍵按一下**PolicyInteropHost**中**方案總管 中**選取**加入參考...**.  
   
-9. 選取**.net**， **System.Workflow.ComponentModel**，然後**System.workflow.componentmodel**從**.NET**索引標籤上，按一下 **確定**。  
+9. 選取 **.net**， **System.Workflow.ComponentModel**，然後**System.workflow.componentmodel**從 **.NET**索引標籤上，按一下 **確定**。  
   
 10. 以滑鼠右鍵按一下**PolicyInteropHost**中**方案總管 中**選取**設定為啟始專案**。  
   
@@ -370,10 +371,10 @@ Rule3: IF this.DiscountPercent > 0
 |規則功能|文件|  
 |-------------------|-------------------|  
 |規則概觀|[Windows Workflow Foundation 規則引擎簡介](http://go.microsoft.com/fwlink/?LinkID=152836)|  
-|RuleSet|[工作流程中使用 Ruleset](http://go.microsoft.com/fwlink/?LinkId=178516)和<xref:System.Workflow.Activities.Rules.RuleSet>|  
+|RuleSet|[工作流程中使用 Ruleset](http://go.microsoft.com/fwlink/?LinkId=178516)和 <xref:System.Workflow.Activities.Rules.RuleSet>|  
 |規則評估|[Ruleset 中的規則評估](http://go.microsoft.com/fwlink/?LinkId=178517)|  
 |規則鏈結|[向前鏈結控制項](http://go.microsoft.com/fwlink/?LinkId=178518)和[規則的向前鏈結](http://go.microsoft.com/fwlink/?LinkId=178519)|  
 |處理規則中的集合|[處理規則中的集合](http://go.microsoft.com/fwlink/?LinkId=178520)|  
-|使用 PolicyActivity|[使用 PolicyActivity 活動](http://go.microsoft.com/fwlink/?LinkId=178521)和<xref:System.Workflow.Activities.PolicyActivity>|  
+|使用 PolicyActivity|[使用 PolicyActivity 活動](http://go.microsoft.com/fwlink/?LinkId=178521)和 <xref:System.Workflow.Activities.PolicyActivity>|  
   
- 在 [!INCLUDE[netfx_current_short](../../../includes/netfx-current-short-md.md)] 中建立的工作流程不會使用 [!INCLUDE[wf1](../../../includes/wf1-md.md)] 提供的所有規則功能，例如宣告式活動條件及條件式活動 (例如 <xref:System.Workflow.Activities.ConditionedActivityGroup> 和 <xref:System.Workflow.Activities.ReplicatorActivity>)。 如有必要，這個功能可供以 [!INCLUDE[vstecwinfx](../../../includes/vstecwinfx-md.md)] 和 [!INCLUDE[netfx35_short](../../../includes/netfx35-short-md.md)] 建立的工作流程使用。 [!INCLUDE[crdefault](../../../includes/crdefault-md.md)][移轉指引](../../../docs/framework/windows-workflow-foundation/migration-guidance.md)。
+ 在 [!INCLUDE[netfx_current_short](../../../includes/netfx-current-short-md.md)] 中建立的工作流程不會使用 [!INCLUDE[wf1](../../../includes/wf1-md.md)] 提供的所有規則功能，例如宣告式活動條件及條件式活動 (例如 <xref:System.Workflow.Activities.ConditionedActivityGroup> 和 <xref:System.Workflow.Activities.ReplicatorActivity>)。 如有必要，這個功能可供以 [!INCLUDE[vstecwinfx](../../../includes/vstecwinfx-md.md)] 和 [!INCLUDE[netfx35_short](../../../includes/netfx35-short-md.md)] 建立的工作流程使用。 如需詳細資訊，請參閱[移轉指引](../../../docs/framework/windows-workflow-foundation/migration-guidance.md)。

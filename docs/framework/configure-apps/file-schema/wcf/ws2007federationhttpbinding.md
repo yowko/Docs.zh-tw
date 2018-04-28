@@ -10,23 +10,23 @@ ms.technology:
 ms.tgt_pltfrm: ''
 ms.topic: article
 ms.assetid: 9af4ec79-cdef-457e-9dca-09d5eb821594
-caps.latest.revision: ''
+caps.latest.revision: 14
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
 ms.workload:
 - dotnet
-ms.openlocfilehash: b1f85d4cc45075f82035fa5b8c0c95341ba142d6
-ms.sourcegitcommit: c883637b41ee028786edceece4fa872939d2e64c
+ms.openlocfilehash: 3025eec9c01d325d7d00a7355ff908eb1e19e410
+ms.sourcegitcommit: 03ee570f6f528a7d23a4221dcb26a9498edbdf8c
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 03/26/2018
+ms.lasthandoff: 04/28/2018
 ---
 # <a name="ltws2007federationhttpbindinggt"></a>&lt;ws2007FederationHttpBinding&gt;
 安全且互通的繫結衍生自[ \<wsFederationHttpBinding >](../../../../../docs/framework/configure-apps/file-schema/wcf/wsfederationhttpbinding.md)且支援聯合的安全性。  
   
  \<system.ServiceModel>  
-\<bindings>  
+\<繫結 >  
 \<ws2007FederationHttpBinding>  
   
 ## <a name="syntax"></a>語法  
@@ -100,10 +100,10 @@ ms.lasthandoff: 03/26/2018
   
 |項目|描述|  
 |-------------|-----------------|  
-|[\<bindings>](../../../../../docs/framework/configure-apps/file-schema/wcf/bindings.md)|這個項目會保存標準和自訂繫結的集合。|  
+|[\<繫結 >](../../../../../docs/framework/configure-apps/file-schema/wcf/bindings.md)|這個項目會保存標準和自訂繫結的集合。|  
   
 ## <a name="remarks"></a>備註  
- 聯合是在多個企業或信任網域上共用識別以便進行驗證和授權的能力。 它使用 WS-Trust 通訊協定從一信任網域對應身分識別表示至其他信任網域。 聯合 HTTP 繫結支援 SOAP 安全性以及混合模式安全性，但不支援獨立使用傳輸安全性。 使用這個繫結設定的服務必須使用 HTTP 傳輸。 [!INCLUDE[crdefault](../../../../../includes/crdefault-md.md)] [\<wsFederationHttpBinding >](../../../../../docs/framework/configure-apps/file-schema/wcf/wsfederationhttpbinding.md)。  
+ 聯合是在多個企業或信任網域上共用識別以便進行驗證和授權的能力。 它使用 WS-Trust 通訊協定從一信任網域對應身分識別表示至其他信任網域。 聯合 HTTP 繫結支援 SOAP 安全性以及混合模式安全性，但不支援獨立使用傳輸安全性。 使用這個繫結設定的服務必須使用 HTTP 傳輸。 如需詳細資訊，請參閱[ \<wsFederationHttpBinding >](../../../../../docs/framework/configure-apps/file-schema/wcf/wsfederationhttpbinding.md)。  
   
 ## <a name="example"></a>範例  
   
@@ -145,4 +145,4 @@ ms.lasthandoff: 03/26/2018
  [繫結](../../../../../docs/framework/wcf/bindings.md)  
  [設定系統提供的繫結](../../../../../docs/framework/wcf/feature-details/configuring-system-provided-bindings.md)  
  [使用繫結來設定 Windows Communication Foundation 服務和用戶端](http://msdn.microsoft.com/library/bd8b277b-932f-472f-a42a-b02bb5257dfb)  
- [\<binding>](../../../../../docs/framework/misc/binding.md)
+ [\<繫結 >](../../../../../docs/framework/misc/binding.md)

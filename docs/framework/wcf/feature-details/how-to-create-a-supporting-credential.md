@@ -1,30 +1,32 @@
 ---
-title: "HOW TO：建立支援的認證"
-ms.custom: 
+title: HOW TO：建立支援的認證
+ms.custom: ''
 ms.date: 03/30/2017
 ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.technology: dotnet-clr
-ms.tgt_pltfrm: 
+ms.reviewer: ''
+ms.suite: ''
+ms.technology:
+- dotnet-clr
+ms.tgt_pltfrm: ''
 ms.topic: article
 ms.assetid: d0952919-8bb4-4978-926c-9cc108f89806
-caps.latest.revision: "9"
+caps.latest.revision: 9
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.workload: dotnet
-ms.openlocfilehash: 4afad13300e2eb50a9625a5991bc8cb724c21dd6
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.workload:
+- dotnet
+ms.openlocfilehash: e74ba51306ba8761d916f580b21de9b3ba9cb7f4
+ms.sourcegitcommit: 03ee570f6f528a7d23a4221dcb26a9498edbdf8c
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 04/28/2018
 ---
 # <a name="how-to-create-a-supporting-credential"></a>HOW TO：建立支援的認證
 您可能具有需要多個認證的自訂安全性配置。 例如，服務對用戶端的要求可能不只是提供使用者名稱和密碼，可能也要提供可證明用戶端已超過 18 歲的認證。 第二個認證是*支援認證*。 這個主題會說明如何在 [!INCLUDE[indigo1](../../../../includes/indigo1-md.md)] 用戶端中實作這類認證。  
   
 > [!NOTE]
->  支援認證的規格為 WS-SecurityPolicy 規格的一部分。 [!INCLUDE[crdefault](../../../../includes/crdefault-md.md)][Web 服務安全性規格](http://go.microsoft.com/fwlink/?LinkId=88537)。  
+>  支援認證的規格為 WS-SecurityPolicy 規格的一部分。 如需詳細資訊，請參閱[Web 服務安全性規格](http://go.microsoft.com/fwlink/?LinkId=88537)。  
   
 ## <a name="supporting-tokens"></a>支援權杖  
  簡單地說，當您使用訊息安全性，*主要認證*永遠用來保護訊息 （例如，X.509 憑證或 Kerberos 票證）。  
@@ -46,7 +48,7 @@ ms.lasthandoff: 12/22/2017
 |已簽署和加密|已簽署的加密支援權杖是出現在 `wsse:SecurityHeader` 時，也會進行加密的已簽署支援權杖。|  
   
 ## <a name="programming-supporting-credentials"></a>程式設計的支援認證  
- 若要建立的服務，您必須建立的支援權杖會使用[ \<customBinding >](../../../../docs/framework/configure-apps/file-schema/wcf/custombinding.md)。 ([!INCLUDE[crdefault](../../../../includes/crdefault-md.md)] [How to： 建立自訂繫結使用 SecurityBindingElement](../../../../docs/framework/wcf/feature-details/how-to-create-a-custom-binding-using-the-securitybindingelement.md)。)  
+ 若要建立的服務，您必須建立的支援權杖會使用[ \<customBinding >](../../../../docs/framework/configure-apps/file-schema/wcf/custombinding.md)。 (如需詳細資訊，請參閱[How to： 建立自訂繫結使用 SecurityBindingElement](../../../../docs/framework/wcf/feature-details/how-to-create-a-custom-binding-using-the-securitybindingelement.md)。)  
   
  建立自訂繫結的第一個步驟為建立安全性繫結項目，可以是下列三種類型的其中之一：  
   
@@ -91,5 +93,5 @@ ms.lasthandoff: 12/22/2017
 ### <a name="code"></a>程式碼  
  [!code-csharp[c_SupportingCredential#1](../../../../samples/snippets/csharp/VS_Snippets_CFX/c_supportingcredential/cs/source.cs#1)]  
   
-## <a name="see-also"></a>請參閱  
+## <a name="see-also"></a>另請參閱  
  [如何：使用 SecurityBindingElement 建立自訂繫結](../../../../docs/framework/wcf/feature-details/how-to-create-a-custom-binding-using-the-securitybindingelement.md)

@@ -1,24 +1,26 @@
 ---
-title: "建立 ASP.NET AJAX 的 WCF 服務"
-ms.custom: 
+title: 建立 ASP.NET AJAX 的 WCF 服務
+ms.custom: ''
 ms.date: 03/30/2017
 ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.technology: dotnet-clr
-ms.tgt_pltfrm: 
+ms.reviewer: ''
+ms.suite: ''
+ms.technology:
+- dotnet-clr
+ms.tgt_pltfrm: ''
 ms.topic: article
 ms.assetid: 04c0402c-e617-4ba5-aedf-d17692234776
-caps.latest.revision: "18"
+caps.latest.revision: 18
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.workload: dotnet
-ms.openlocfilehash: c2e3ba1d360c55f10cde9447b3961d84ffe1cdb2
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.workload:
+- dotnet
+ms.openlocfilehash: 64ab5c6bf4b555504562dbf68a60d032743df865
+ms.sourcegitcommit: 03ee570f6f528a7d23a4221dcb26a9498edbdf8c
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 04/28/2018
 ---
 # <a name="creating-wcf-services-for-aspnet-ajax"></a>建立 ASP.NET AJAX 的 WCF 服務
 Microsoft ASP.NET AJAX 可讓您使用反應靈敏和熟悉的使用者介面項目，快速建立包含豐富使用者經驗的 Web 網頁。 ASP.NET AJAX 提供用戶端指令碼的程式庫，其中加入跨平台的 ECMAScript (JavaScript) 和動態 HTML (DHTML) 技術，並將它們與 ASP.NET 2.0 伺服器基礎的開發平台整合。 您可以使用 ASP.NET AJAX 功能來改善使用者經驗和 Web 應用程式的效率。  
@@ -31,13 +33,13 @@ Microsoft ASP.NET AJAX 可讓您使用反應靈敏和熟悉的使用者介面項
   
  如果您不是使用 Visual Studio 範本，則您可以透過下列兩種方法來建立 ASP.NET AJAX 端點：  
   
--   使用動態主機啟動 (而不是透過任何組態) 來建立端點。 如果您不熟悉 WCF 組態系統的話，這是最基本的操作方式。 [!INCLUDE[crdefault](../../../../includes/crdefault-md.md)][How to： 不使用組態新增 ASP.NET AJAX 端點](../../../../docs/framework/wcf/feature-details/how-to-add-an-aspnet-ajax-endpoint-without-using-configuration.md)。  
+-   使用動態主機啟動 (而不是透過任何組態) 來建立端點。 如果您不熟悉 WCF 組態系統的話，這是最基本的操作方式。 如需詳細資訊，請參閱[如何： 加入 ASP.NET AJAX 端點而不使用組態](../../../../docs/framework/wcf/feature-details/how-to-add-an-aspnet-ajax-endpoint-without-using-configuration.md)。  
   
--   透過組態將啟用 AJAX 的端點新增至 [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] 服務。 [!INCLUDE[crdefault](../../../../includes/crdefault-md.md)][How to： 使用組態新增 ASP.NET AJAX 端點](../../../../docs/framework/wcf/feature-details/how-to-use-configuration-to-add-an-aspnet-ajax-endpoint.md)。  
+-   透過組態將啟用 AJAX 的端點新增至 [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] 服務。 如需詳細資訊，請參閱[How to： 使用組態新增 ASP.NET AJAX 端點](../../../../docs/framework/wcf/feature-details/how-to-use-configuration-to-add-an-aspnet-ajax-endpoint.md)。  
   
  Web 程式設計模型中所述[WCF Web HTTP 程式設計模型概觀](../../../../docs/framework/wcf/feature-details/wcf-web-http-programming-model-overview.md)可搭配 ASP.NET AJAX 服務。 尤其是：  
   
--   您可以使用 <xref:System.ServiceModel.Web.WebGetAttribute> 和 <xref:System.ServiceModel.Web.WebInvokeAttribute> 屬性，在 HTTP GET 和 HTTP POST 動詞之間進行選擇。 如果使用方式正確的話，可能會大幅改善應用程式的效能。 [!INCLUDE[crdefault](../../../../includes/crdefault-md.md)][How to： 選擇 HTTP POST 和 HTTP GET 要求的 ASP.NET AJAX 端點](../../../../docs/framework/wcf/feature-details/http-post-and-http-get-requests-for-aspnet-ajax-endpoints.md)。  
+-   您可以使用 <xref:System.ServiceModel.Web.WebGetAttribute> 和 <xref:System.ServiceModel.Web.WebInvokeAttribute> 屬性，在 HTTP GET 和 HTTP POST 動詞之間進行選擇。 如果使用方式正確的話，可能會大幅改善應用程式的效能。 如需詳細資訊，請參閱[How to： 選擇 HTTP POST 和 HTTP GET 要求的 ASP.NET AJAX 端點](../../../../docs/framework/wcf/feature-details/http-post-and-http-get-requests-for-aspnet-ajax-endpoints.md)。  
   
 -   您可以使用 <xref:System.ServiceModel.Web.WebGetAttribute.ResponseFormat%2A> 和 <xref:System.ServiceModel.Web.WebInvokeAttribute.ResponseFormat%2A> 屬性，讓您的服務傳回 XML 資料，而不是預設的 JavaScript Object Notation (JSON)。 使用 ASP.NET AJAX 架構來執行這項作業會導致 JavaScript 用戶端接收 XML DOM 物件。  
   
@@ -68,7 +70,7 @@ Microsoft ASP.NET AJAX 可讓您使用反應靈敏和熟悉的使用者介面項
   
  您甚至不需要透過 ASP.NET AJAX 架構，就可以取用 [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] 中的 AJAX 端點。 要進行這項作業之前，您必須先了解 [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] 對 AJAX 支援的支援架構。 如需這個架構的討論，請參閱[WCF Web HTTP 程式設計物件模型](../../../../docs/framework/wcf/feature-details/wcf-web-http-programming-object-model.md)。 如需示範這種方法的程式碼範例，請參閱[含 JSON 和 XML 的 AJAX 服務](../../../../docs/framework/wcf/samples/ajax-service-with-json-and-xml-sample.md)。  
   
-## <a name="see-also"></a>請參閱  
+## <a name="see-also"></a>另請參閱  
  [WCF Web HTTP 程式設計模型](../../../../docs/framework/wcf/feature-details/wcf-web-http-programming-model.md)  
  [如何：不使用組態新增 ASP.NET AJAX 端點](../../../../docs/framework/wcf/feature-details/how-to-add-an-aspnet-ajax-endpoint-without-using-configuration.md)  
  [如何：使用組態新增 ASP.NET AJAX 端點](../../../../docs/framework/wcf/feature-details/how-to-use-configuration-to-add-an-aspnet-ajax-endpoint.md)  

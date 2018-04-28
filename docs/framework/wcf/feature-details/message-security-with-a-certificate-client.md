@@ -1,30 +1,32 @@
 ---
-title: "憑證用戶端的訊息安全性"
-ms.custom: 
+title: 憑證用戶端的訊息安全性
+ms.custom: ''
 ms.date: 03/30/2017
 ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.technology: dotnet-clr
-ms.tgt_pltfrm: 
+ms.reviewer: ''
+ms.suite: ''
+ms.technology:
+- dotnet-clr
+ms.tgt_pltfrm: ''
 ms.topic: article
 dev_langs:
 - csharp
 - vb
 ms.assetid: 99770573-c815-4428-a38c-e4335c8bd7ce
-caps.latest.revision: "16"
+caps.latest.revision: 16
 author: BrucePerlerMS
 ms.author: bruceper
 manager: mbaldwin
-ms.workload: dotnet
-ms.openlocfilehash: e778b48b3ff00c3053992f8e754f674cd7705ece
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.workload:
+- dotnet
+ms.openlocfilehash: 9bb7efa82e14f899ddcbb2fdfd26eba2023bdd61
+ms.sourcegitcommit: 03ee570f6f528a7d23a4221dcb26a9498edbdf8c
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 04/28/2018
 ---
 # <a name="message-security-with-a-certificate-client"></a>憑證用戶端的訊息安全性
-下列狀況顯示使用訊息安全性模式加以保障的 [!INCLUDE[indigo1](../../../../includes/indigo1-md.md)] 用戶端及服務。 用戶端與服務皆以憑證驗證。 [!INCLUDE[crdefault](../../../../includes/crdefault-md.md)][分散式應用程式安全性](../../../../docs/framework/wcf/feature-details/distributed-application-security.md)。  
+下列狀況顯示使用訊息安全性模式加以保障的 [!INCLUDE[indigo1](../../../../includes/indigo1-md.md)] 用戶端及服務。 用戶端與服務皆以憑證驗證。 如需詳細資訊，請參閱[分散式應用程式安全性](../../../../docs/framework/wcf/feature-details/distributed-application-security.md)。  
   
  範例應用程式，請參閱[訊息安全性憑證](../../../../docs/framework/wcf/samples/message-security-certificate.md)。  
   
@@ -112,7 +114,7 @@ ms.lasthandoff: 12/22/2017
  [!code-vb[C_SecurityScenarios#17](../../../../samples/snippets/visualbasic/VS_Snippets_CFX/c_securityscenarios/vb/source.vb#17)]  
   
 ### <a name="configuration"></a>組態  
- 下列組態指定使用端點行為的用戶端憑證。 如需憑證的詳細資訊，請參閱[使用憑證](../../../../docs/framework/wcf/feature-details/working-with-certificates.md)。 程式碼也會使用 <`identity`> 項目來指定預期的伺服器識別網域名稱系統 (DNS)。 [!INCLUDE[crabout](../../../../includes/crabout-md.md)]身分識別，請參閱[服務識別和驗證](../../../../docs/framework/wcf/feature-details/service-identity-and-authentication.md)。  
+ 下列組態指定使用端點行為的用戶端憑證。 如需憑證的詳細資訊，請參閱[使用憑證](../../../../docs/framework/wcf/feature-details/working-with-certificates.md)。 程式碼也會使用 <`identity`> 項目來指定預期的伺服器識別網域名稱系統 (DNS)。 [!INCLUDE[crabout](../../../../includes/crabout-md.md)] 身分識別，請參閱[服務識別和驗證](../../../../docs/framework/wcf/feature-details/service-identity-and-authentication.md)。  
   
 ```xml  
 <?xml version="1.0" encoding="utf-8"?>  
@@ -154,7 +156,7 @@ ms.lasthandoff: 12/22/2017
 </configuration>  
 ```  
   
-## <a name="see-also"></a>請參閱  
+## <a name="see-also"></a>另請參閱  
  [安全性概觀](../../../../docs/framework/wcf/feature-details/security-overview.md)  
  [服務身分識別和驗證](../../../../docs/framework/wcf/feature-details/service-identity-and-authentication.md)  
  [使用憑證](../../../../docs/framework/wcf/feature-details/working-with-certificates.md)  

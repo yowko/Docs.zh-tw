@@ -1,20 +1,17 @@
 ---
-title: "結構 (F#)"
-description: "深入了解 F # 結構，壓縮物件型別通常更有效率的類別，只需要編寫小量的資料和簡單行為的類型。"
-keywords: "Visual F#, F#, 函式程式設計"
+title: 結構 (F#)
+description: '深入了解 F # 結構，壓縮物件型別通常更有效率的類別，只需要編寫小量的資料和簡單行為的類型。'
 author: cartermp
 ms.author: phcart
 ms.date: 05/16/2016
 ms.topic: language-reference
-ms.prod: .net
-ms.technology: devlang-fsharp
+ms.prod: dotnet-fsharp
 ms.devlang: fsharp
-ms.assetid: 50819506-3210-418f-9602-0ee1c9a52177
-ms.openlocfilehash: 542b69a5aacb8fcfb0e8f6d6c943fe1954c4c59c
-ms.sourcegitcommit: bd1ef61f4bb794b25383d3d72e71041a5ced172e
+ms.openlocfilehash: 14a4799b13c40e363dd400f7effd53264acc5614
+ms.sourcegitcommit: 03ee570f6f528a7d23a4221dcb26a9498edbdf8c
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/18/2017
+ms.lasthandoff: 04/28/2018
 ---
 # <a name="structures"></a>結構
 

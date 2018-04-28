@@ -1,20 +1,17 @@
 ---
 title: 值 (F#)
 description: '了解如何在 F # 中的值為具有特定類型的數量。'
-keywords: Visual F#, F#, 函式程式設計
 author: cartermp
 ms.author: phcart
 ms.date: 05/16/2016
 ms.topic: language-reference
-ms.prod: .net
-ms.technology: devlang-fsharp
+ms.prod: dotnet-fsharp
 ms.devlang: fsharp
-ms.assetid: 5e1e73c3-5adb-4bba-9976-d57f1ff6cd8d
-ms.openlocfilehash: a1e077552ba39a483be3129c89af48b547219733
-ms.sourcegitcommit: bd1ef61f4bb794b25383d3d72e71041a5ced172e
+ms.openlocfilehash: b40e4a0409a9161a4ef48c8d4ad82b4da346538e
+ms.sourcegitcommit: 03ee570f6f528a7d23a4221dcb26a9498edbdf8c
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/18/2017
+ms.lasthandoff: 04/28/2018
 ---
 # <a name="values"></a>值
 
@@ -47,7 +44,7 @@ F# 不是純函式語言，但完全支援函式程式設計。 使用不可變�
 ## <a name="related-topics"></a>相關主題
 
 
-|標題|說明|
+|標題|描述|
 |-----|-----------|
 |[let 繫結](../functions/let-bindings.md)|提供使用資訊`let`關鍵字來將名稱繫結至值和函式。|
 |[函式](../functions/index.md)|提供 F# 函式的概觀。|

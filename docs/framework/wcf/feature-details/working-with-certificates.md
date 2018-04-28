@@ -21,11 +21,11 @@ ms.author: dotnetcontent
 manager: wpickett
 ms.workload:
 - dotnet
-ms.openlocfilehash: ba49d990c9f067ae2c10ae2a60cbad24b30f43eb
-ms.sourcegitcommit: b750a8e3979749b214e7e10c82efb0a0524dfcb1
+ms.openlocfilehash: e731fd31f2a247466891abbf75d67a61dba7f286
+ms.sourcegitcommit: 03ee570f6f528a7d23a4221dcb26a9498edbdf8c
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/09/2018
+ms.lasthandoff: 04/28/2018
 ---
 # <a name="working-with-certificates"></a>使用憑證
 在針對 [!INCLUDE[indigo1](../../../../includes/indigo1-md.md)] 安全性設計程式時，通常會採用 X.509 數位憑證來驗證用戶端與伺服器、加密，以及數位簽署訊息。 本主題將扼要說明 X.509 數位憑證功能及如何在 [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] 中使用這些憑證，同時針對這些概念的進一步說明以及如何運用 [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] 與憑證來完成一般工作的方法說明提供連結。  
@@ -37,7 +37,7 @@ ms.lasthandoff: 04/09/2018
  憑證必須由憑證授權單位發行，此單位通常是憑證的協力廠商簽發者。 在 Windows 網域中，會包含憑證授權單位以便用來對網域中的電腦發行憑證。  
   
 ## <a name="viewing-certificates"></a>檢視憑證  
- 使用憑證時，通常需要檢視並檢查其內容。 您可以透過 Microsoft Management Console (MMC) 嵌入式管理單元工具輕鬆達到這個目的。 [!INCLUDE[crdefault](../../../../includes/crdefault-md.md)] [如何： 檢視憑證 MMC 嵌入式管理單元](../../../../docs/framework/wcf/feature-details/how-to-view-certificates-with-the-mmc-snap-in.md)。  
+ 使用憑證時，通常需要檢視並檢查其內容。 您可以透過 Microsoft Management Console (MMC) 嵌入式管理單元工具輕鬆達到這個目的。 如需詳細資訊，請參閱[How to： 使用 MMC 嵌入式管理單元檢視憑證](../../../../docs/framework/wcf/feature-details/how-to-view-certificates-with-the-mmc-snap-in.md)。  
   
 ## <a name="certificate-stores"></a>憑證存放區  
  您可以在存放區中找到憑證。 兩個主要的存放區位置還可進一步細分為子存放區。 如果您是電腦的系統管理員，就可以使用 MMC 嵌入式管理單元工具來同時檢視兩個主要的存放區。 非系統管理員只能檢視目前使用者的存放區。  
@@ -87,7 +87,7 @@ ms.lasthandoff: 04/09/2018
   
  您也可以使用組態來設定屬性。 下列項目可用來指定驗證模式：  
   
--   [\<authentication>](../../../../docs/framework/configure-apps/file-schema/wcf/authentication-of-servicecertificate-element.md)  
+-   [\<驗證 >](../../../../docs/framework/configure-apps/file-schema/wcf/authentication-of-servicecertificate-element.md)  
   
 -   [\<peerAuthentication>](../../../../docs/framework/configure-apps/file-schema/wcf/peerauthentication-element.md)  
   
@@ -96,7 +96,7 @@ ms.lasthandoff: 04/09/2018
 ## <a name="custom-authentication"></a>自訂驗證  
  `CertificateValidationMode` 屬性同時可讓您自訂憑證的驗證方式。 根據預設，層級會設為 `ChainTrust`。 若要使用 <xref:System.ServiceModel.Security.X509CertificateValidationMode.Custom> 值，您必須同時將 `CustomCertificateValidatorType` 屬性 (Attribute) 設為可用來驗證憑證的組件與型別。 若要建立自訂驗證程式，您必須繼承自抽象 <xref:System.IdentityModel.Selectors.X509CertificateValidator> 類別。  
   
- 在建立自訂的驗證器時，要覆寫之最重要的方法是 <xref:System.IdentityModel.Selectors.X509CertificateValidator.Validate%2A> 方法。 如需自訂驗證的範例，請參閱[X.509 憑證驗證程式](../../../../docs/framework/wcf/samples/x-509-certificate-validator.md)範例。 [!INCLUDE[crdefault](../../../../includes/crdefault-md.md)] [自訂認證與認證驗證](../../../../docs/framework/wcf/extending/custom-credential-and-credential-validation.md)。  
+ 在建立自訂的驗證器時，要覆寫之最重要的方法是 <xref:System.IdentityModel.Selectors.X509CertificateValidator.Validate%2A> 方法。 如需自訂驗證的範例，請參閱[X.509 憑證驗證程式](../../../../docs/framework/wcf/samples/x-509-certificate-validator.md)範例。 如需詳細資訊，請參閱[自訂認證與認證驗證](../../../../docs/framework/wcf/extending/custom-credential-and-credential-validation.md)。  
   
 ## <a name="using-makecertexe-to-build-a-certificate-chain"></a>使用 Makecert.exe 來建置憑證鏈結  
  憑證建立工具 (Makecert.exe) 可建立 X.509 憑證與私密金鑰/公開金鑰組。 您可以將私密金鑰儲存到磁碟，然後用它來發行並簽署新的憑證，藉此模擬鏈結憑證的階層架構。 此工具主要當作開發服務時的輔助工具用途，請勿用來建立實際部署所需的憑證。 在開發 [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] 服務時，請透過下列步驟並使用 Makecert.exe 來建置信任鏈結。  

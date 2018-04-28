@@ -1,12 +1,13 @@
 ---
-title: "了解保護層級"
-ms.custom: 
+title: 了解保護層級
+ms.custom: ''
 ms.date: 03/30/2017
 ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.technology: dotnet-clr
-ms.tgt_pltfrm: 
+ms.reviewer: ''
+ms.suite: ''
+ms.technology:
+- dotnet-clr
+ms.tgt_pltfrm: ''
 ms.topic: article
 dev_langs:
 - csharp
@@ -15,16 +16,17 @@ helpviewer_keywords:
 - WCF, security
 - ProtectionLevel property
 ms.assetid: 0c034608-a1ac-4007-8287-b1382eaa8bf2
-caps.latest.revision: "22"
+caps.latest.revision: 22
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.workload: dotnet
-ms.openlocfilehash: c379cf39f30bf7e75907dba5fb06ba4e3862e299
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.workload:
+- dotnet
+ms.openlocfilehash: 4b079d7f6e22f0c1904433c2822b92da91923ef2
+ms.sourcegitcommit: 03ee570f6f528a7d23a4221dcb26a9498edbdf8c
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 04/28/2018
 ---
 # <a name="understanding-protection-level"></a>了解保護層級
 在許多不同的類別上都可找到 `ProtectionLevel` 屬性，例如 <xref:System.ServiceModel.ServiceContractAttribute> 和 <xref:System.ServiceModel.OperationContractAttribute> 類別。 此屬性會控制如何保護訊息的部分 (或全部) 內容。 本主題會說明 [!INCLUDE[indigo1](../../../includes/indigo1-md.md)] 功能及其運作方式。  
@@ -84,7 +86,7 @@ ms.lasthandoff: 12/22/2017
  若要程式設計階層中任何一點的 `ProtectionLevel`，只要在套用屬性 (Attribute) 時將屬性 (Property) 設定為適當值即可。 如需範例，請參閱[How to： 設定 ProtectionLevel 屬性](../../../docs/framework/wcf/how-to-set-the-protectionlevel-property.md)。  
   
 > [!NOTE]
->  設定錯誤和訊息合約上的屬性時，需要了解這些功能的運作方式。 [!INCLUDE[crdefault](../../../includes/crdefault-md.md)][How to： 設定 ProtectionLevel 屬性](../../../docs/framework/wcf/how-to-set-the-protectionlevel-property.md)和[使用訊息合約](../../../docs/framework/wcf/feature-details/using-message-contracts.md)。  
+>  設定錯誤和訊息合約上的屬性時，需要了解這些功能的運作方式。 如需詳細資訊，請參閱[How to： 設定 ProtectionLevel 屬性](../../../docs/framework/wcf/how-to-set-the-protectionlevel-property.md)和[使用訊息合約](../../../docs/framework/wcf/feature-details/using-message-contracts.md)。  
   
 ## <a name="ws-addressing-dependency"></a>WS-Addressing 相依性  
  在大部分情況下，使用[ServiceModel Metadata Utility Tool (Svcutil.exe)](../../../docs/framework/wcf/servicemodel-metadata-utility-tool-svcutil-exe.md)來產生用戶端可確保用戶端和服務的合約完全相同。 不過，似乎相同的合約可能會導致用戶端擲回例外狀況。 每當有繫結不支援 WS-Addressing 規格，而且在合約中指定了多重的保護層級時，便會發生這種情形。 例如，當 <xref:System.ServiceModel.BasicHttpBinding> 類別不支援此規格，或是您建立了不支援 WS-Addressing 的繫結。 `ProtectionLevel` 功能必須依賴 WS-Addressing 規格，才能在單一合約上啟用不同的保護層級。 如果繫結不支援 WS-Addressing 規格，則所有的層級都會設定為相同的保護層級。 合約上所有範圍的有效保護層級，都會設定為在合約上使用的最強保護層級。  
@@ -105,7 +107,7 @@ ms.lasthandoff: 12/22/2017
   
  當用戶端呼叫 `Price` 方法時，它會在從服務接收回覆時擲回例外狀況。 這個例外狀況的發生是因為用戶端沒有在 `ProtectionLevel` 上指定 `ServiceContractAttribute`，使得用戶端對包括 <xref:System.Net.Security.ProtectionLevel.EncryptAndSign> 方法的所有方法使用預設值 (`Price`)。 然而，此服務會傳回使用 <xref:System.Net.Security.ProtectionLevel.Sign> 層級的值，因為服務合約會定義將其保護層級設定為 <xref:System.Net.Security.ProtectionLevel.Sign> 的單一方法。 在此情況下，在驗證來自於服務的回應時，用戶端便會擲回錯誤。  
   
-## <a name="see-also"></a>請參閱  
+## <a name="see-also"></a>另請參閱  
  <xref:System.ServiceModel.ServiceContractAttribute>  
  <xref:System.ServiceModel.OperationContractAttribute>  
  <xref:System.ServiceModel.FaultContractAttribute>  

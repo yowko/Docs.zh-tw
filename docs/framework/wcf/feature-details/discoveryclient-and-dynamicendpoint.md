@@ -1,24 +1,26 @@
 ---
-title: "DiscoveryClient 與 DynamicEndpoint"
-ms.custom: 
+title: DiscoveryClient 與 DynamicEndpoint
+ms.custom: ''
 ms.date: 03/30/2017
 ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.technology: dotnet-clr
-ms.tgt_pltfrm: 
+ms.reviewer: ''
+ms.suite: ''
+ms.technology:
+- dotnet-clr
+ms.tgt_pltfrm: ''
 ms.topic: article
 ms.assetid: 7cd418f0-0eab-48d1-a493-7eb907867ec3
-caps.latest.revision: "5"
+caps.latest.revision: 5
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.workload: dotnet
-ms.openlocfilehash: 6e3ac334d53480ba8b63cc8e8f117dd74315963c
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.workload:
+- dotnet
+ms.openlocfilehash: c652e58b20a6fe836e647ed07c6a84328ee4631e
+ms.sourcegitcommit: 03ee570f6f528a7d23a4221dcb26a9498edbdf8c
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 04/28/2018
 ---
 # <a name="discoveryclient-and-dynamicendpoint"></a>DiscoveryClient 與 DynamicEndpoint
 <xref:System.ServiceModel.Discovery.DiscoveryClient> 和 <xref:System.ServiceModel.Discovery.DynamicEndpoint> 是用於用戶端的兩個類別，可搜尋服務。 <xref:System.ServiceModel.Discovery.DiscoveryClient> 可提供您服務清單，用來比對一組特定準則，並讓您連接至服務。 <xref:System.ServiceModel.Discovery.DynamicEndpoint> 可執行相同作業，而且可自動連接至找到的其中一項服務。 任何端點都可成為 <xref:System.ServiceModel.Discovery.DynamicEndpoint>，也可在組態中加入搜尋準則，因此當您需要在方案中探索，但不想修改用戶端邏輯時 (您只需要修改端點)，<xref:System.ServiceModel.Discovery.DynamicEndpoint> 便非常有用。 <xref:System.ServiceModel.Discovery.DiscoveryClient> 也可對搜尋作業進行更細微的控制。 上述的用法和優點在下方有更詳盡的說明。  
@@ -90,7 +92,7 @@ static void discoveryClient_FindCompleted(object sender, FindCompletedEventArgs 
         }  
 ```  
   
- [!INCLUDE[crabout](../../../../includes/crabout-md.md)]讓非同步尋找呼叫，請參閱[非同步尋找](../../../../docs/framework/wcf/samples/asynchronous-find-sample.md)。  
+ [!INCLUDE[crabout](../../../../includes/crabout-md.md)] 讓非同步尋找呼叫，請參閱[非同步尋找](../../../../docs/framework/wcf/samples/asynchronous-find-sample.md)。  
   
  您可以使用 <xref:System.ServiceModel.Discovery.DiscoveryClient.Resolve%2A> 和 <xref:System.ServiceModel.Discovery.DiscoveryClient.ResolveAsync%28System.ServiceModel.Discovery.ResolveCriteria%29> 方法，找出以端點位址為基礎的服務。 當端點位址不是網路位址時，這便非常有用。 Resolve 方法會使用 <xref:System.ServiceModel.Discovery.ResolveCriteria> 執行個體，可讓您指定正在解析的服務端點位址、解析作業持續時間上限和組態集。 下列範例示範如何使用 <xref:System.ServiceModel.Discovery.DiscoveryClient.Resolve%2A> 方法來解析服務。  
   
@@ -102,7 +104,7 @@ EndpointAddress newEp = response.EndpointDiscoveryMetadata.Address;
 ```  
   
 ## <a name="dynamicendpoint"></a>DynamicEndpoint  
- <xref:System.ServiceModel.Discovery.DynamicEndpoint>是標準的端點 ([!INCLUDE[crdefault](../../../../includes/crdefault-md.md)] [標準端點](../../../../docs/framework/wcf/feature-details/standard-endpoints.md)) 的執行探索，並自動選取相符的服務。 只要建立 <xref:System.ServiceModel.Discovery.DynamicEndpoint>，傳入要搜尋的合約和要使用的繫結，然後傳送 <xref:System.ServiceModel.Discovery.DynamicEndpoint> 執行個體至 WCF 用戶端即可。 下列範例示範如何建立和使用 <xref:System.ServiceModel.Discovery.DynamicEndpoint> 來呼叫計算機服務。 每次開啟用戶端時，都會執行探索。 組態中定義任何端點也可以轉換成<xref:System.ServiceModel.Discovery.DynamicEndpoint>加`kind ="dynamicEndpoint"`屬性設定為端點組態項目。  
+ <xref:System.ServiceModel.Discovery.DynamicEndpoint> 是標準的端點 (如需詳細資訊，請參閱[標準端點](../../../../docs/framework/wcf/feature-details/standard-endpoints.md)) 的執行探索，並自動選取相符的服務。 只要建立 <xref:System.ServiceModel.Discovery.DynamicEndpoint>，傳入要搜尋的合約和要使用的繫結，然後傳送 <xref:System.ServiceModel.Discovery.DynamicEndpoint> 執行個體至 WCF 用戶端即可。 下列範例示範如何建立和使用 <xref:System.ServiceModel.Discovery.DynamicEndpoint> 來呼叫計算機服務。 每次開啟用戶端時，都會執行探索。 組態中定義任何端點也可以轉換成<xref:System.ServiceModel.Discovery.DynamicEndpoint>加`kind ="dynamicEndpoint"`屬性設定為端點組態項目。  
   
 ```  
 DynamicEndpoint dynamicEndpoint = new DynamicEndpoint(ContractDescription.GetContract(typeof(ICalculatorService)), new WSHttpBinding());  
@@ -118,7 +120,7 @@ double result = client.Add(value1, value2);
 Console.WriteLine("Add({0},{1}) = {2}", value1, value2, result);  
 ```  
   
-## <a name="see-also"></a>請參閱  
+## <a name="see-also"></a>另請參閱  
  [探索範圍](../../../../docs/framework/wcf/samples/discovery-with-scopes-sample.md)  
  [非同步尋找](../../../../docs/framework/wcf/samples/asynchronous-find-sample.md)  
  [基本](../../../../docs/framework/wcf/samples/basic-sample.md)

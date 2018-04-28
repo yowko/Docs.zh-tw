@@ -16,11 +16,11 @@ ms.author: dotnetcontent
 manager: wpickett
 ms.workload:
 - dotnet
-ms.openlocfilehash: 90e9d5f3a2cff454ff7892877f012f8679b9ccac
-ms.sourcegitcommit: 2042de78fcdceebb6b8ac4b7a292b93e8782cbf5
+ms.openlocfilehash: bfd7c3e36bf28c364adf3cd230522cfc40a9503b
+ms.sourcegitcommit: 03ee570f6f528a7d23a4221dcb26a9498edbdf8c
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/27/2018
+ms.lasthandoff: 04/28/2018
 ---
 # <a name="workflow-security"></a>工作流程安全性
 Windows Workflow Foundation (WF) 已與幾種不同技術的詳細資訊，例如 Microsoft SQL Server 整合和[!INCLUDE[indigo1](../../../includes/indigo1-md.md)]。 如果與這些技術互動的方式不適當，可能會造成工作流程上的安全性問題。  
@@ -41,15 +41,15 @@ Windows Workflow Foundation (WF) 已與幾種不同技術的詳細資訊，例�
   
 -   當使用大量子活動、位置、書籤、主機延伸或範圍時，或當使用有大量承載的書籤時，可能會耗盡記憶體，或在持續性期間過度配置不當的資料庫空間。 可使用物件層級與資料庫層級的安全性來減少這種情況。  
   
--   使用 <xref:System.Activities.DurableInstancing.SqlWorkflowInstanceStore> 時，必須保護執行個體存放區的安全。 [!INCLUDE[crdefault](../../../includes/crdefault-md.md)] [SQL Server 最佳作法](http://go.microsoft.com/fwlink/?LinkId=164972)。  
+-   使用 <xref:System.Activities.DurableInstancing.SqlWorkflowInstanceStore> 時，必須保護執行個體存放區的安全。 如需詳細資訊，請參閱[SQL Server 最佳作法](http://go.microsoft.com/fwlink/?LinkId=164972)。  
   
--   應加密執行個體存放區中的敏感資料。 [!INCLUDE[crdefault](../../../includes/crdefault-md.md)] [SQL 安全性加密](http://go.microsoft.com/fwlink/?LinkId=164976)。  
+-   應加密執行個體存放區中的敏感資料。 如需詳細資訊，請參閱[SQL 安全性加密](http://go.microsoft.com/fwlink/?LinkId=164976)。  
   
 -   因為資料庫連接字串通常包含在組態檔中，應該使用 Windows 層級的安全性 (ACL) 以確保組態檔 (通常為 Web.Config) 是安全的，且登入和密碼資訊沒有包含在連接字串中。 資料庫和 Web 伺服器之間應改用 Windows 驗證。  
   
 ## <a name="considerations-for-workflowservicehost"></a>WorkflowServiceHost 的考量  
   
--   您應該保護在工作流程中使用的 [!INCLUDE[indigo1](../../../includes/indigo1-md.md)] 端點。 [!INCLUDE[crdefault](../../../includes/crdefault-md.md)] [WCF 安全性概觀](http://go.microsoft.com/fwlink/?LinkID=164975)。  
+-   您應該保護在工作流程中使用的 [!INCLUDE[indigo1](../../../includes/indigo1-md.md)] 端點。 如需詳細資訊，請參閱[WCF 安全性概觀](http://go.microsoft.com/fwlink/?LinkID=164975)。  
   
 -   可使用 <xref:System.ServiceModel.ServiceAuthorizationManager> 實作主機層級授權。 請參閱[How To： 建立自訂授權管理員服務](http://go.microsoft.com/fwlink/?LinkId=192228)如需詳細資訊。 這也會在下列範例示範：[保護工作流程服務](../../../docs/framework/windows-workflow-foundation/samples/securing-workflow-services.md)。  
   

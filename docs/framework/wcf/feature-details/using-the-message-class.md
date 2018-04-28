@@ -1,27 +1,29 @@
 ---
-title: "使用 Message 類別"
-ms.custom: 
+title: 使用 Message 類別
+ms.custom: ''
 ms.date: 03/30/2017
 ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.technology: dotnet-clr
-ms.tgt_pltfrm: 
+ms.reviewer: ''
+ms.suite: ''
+ms.technology:
+- dotnet-clr
+ms.tgt_pltfrm: ''
 ms.topic: article
 dev_langs:
 - csharp
 - vb
 ms.assetid: d1d62bfb-2aa3-4170-b6f8-c93d3afdbbed
-caps.latest.revision: "14"
+caps.latest.revision: 14
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.workload: dotnet
-ms.openlocfilehash: 5c3e33f4db403fdc4ad1d4efd14282fe2beac8dc
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.workload:
+- dotnet
+ms.openlocfilehash: c63a0a88997a1c35b24562bcca3e0fdb40ebfd41
+ms.sourcegitcommit: 03ee570f6f528a7d23a4221dcb26a9498edbdf8c
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 04/28/2018
 ---
 # <a name="using-the-message-class"></a>使用 Message 類別
 <xref:System.ServiceModel.Channels.Message> 類別對 [!INCLUDE[indigo1](../../../../includes/indigo1-md.md)] 來說十分重要。 用戶端和服務之間的通訊，最終結果都是要傳送和接收 <xref:System.ServiceModel.Channels.Message> 執行個體。  
@@ -172,7 +174,7 @@ ms.lasthandoff: 12/22/2017
   
  您可使用 <xref:System.ServiceModel.Channels.MessageHeaders.FindHeader%2A> 方法擷取特定標頭。 這個方法會採用要尋找的標頭名稱和命名空間，並傳回其索引。 如果標頭在多個地方出現，則會擲出例外狀況。 如果找不到標頭，則會傳回 -1。  
   
- 在 SOAP 標頭模型中，標頭所擁有的 `Actor` 值會指定標頭的預定收件者。 最基本的 `FindHeader` 多載只會搜尋用於訊息最終接收者的標頭。 不過，其他多載則可讓您指定搜尋中所含的 `Actor` 值。 [!INCLUDE[crdefault](../../../../includes/crdefault-md.md)] SOAP 規格。  
+ 在 SOAP 標頭模型中，標頭所擁有的 `Actor` 值會指定標頭的預定收件者。 最基本的 `FindHeader` 多載只會搜尋用於訊息最終接收者的標頭。 不過，其他多載則可讓您指定搜尋中所含的 `Actor` 值。 如需詳細資訊，請參閱 SOAP 規格。  
   
  將會提供 <xref:System.ServiceModel.Channels.MessageHeaders.CopyTo%28System.ServiceModel.Channels.MessageHeaderInfo%5B%5D%2CSystem.Int32%29> 方法以將標頭從 <xref:System.ServiceModel.Channels.MessageHeaders> 集合複製至 <xref:System.ServiceModel.Channels.MessageHeaderInfo> 物件的陣列。  
   

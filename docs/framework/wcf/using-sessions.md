@@ -1,13 +1,13 @@
 ---
-title: "使用工作階段"
-ms.custom: 
+title: 使用工作階段
+ms.custom: ''
 ms.date: 03/30/2017
 ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
+ms.reviewer: ''
+ms.suite: ''
 ms.technology:
 - dotnet-clr
-ms.tgt_pltfrm: 
+ms.tgt_pltfrm: ''
 ms.topic: article
 dev_langs:
 - csharp
@@ -15,17 +15,17 @@ dev_langs:
 helpviewer_keywords:
 - sessions [WCF]
 ms.assetid: 864ba12f-3331-4359-a359-6d6d387f1035
-caps.latest.revision: 
+caps.latest.revision: 32
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
 ms.workload:
 - dotnet
-ms.openlocfilehash: f5f6df22918dedf32738a8cb9d73af2e625923a4
-ms.sourcegitcommit: c0dd436f6f8f44dc80dc43b07f6841a00b74b23f
+ms.openlocfilehash: 9f6a6a819b4667bc60ab0abb575d6fff397d67fe
+ms.sourcegitcommit: 03ee570f6f528a7d23a4221dcb26a9498edbdf8c
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 01/19/2018
+ms.lasthandoff: 04/28/2018
 ---
 # <a name="using-sessions"></a>使用工作階段
 在 [!INCLUDE[indigo1](../../../includes/indigo1-md.md)] 應用程式中，「 *工作階段* 」(Session) 會使一組訊息相互關連至對話。 [!INCLUDE[indigo2](../../../includes/indigo2-md.md)] 工作階段不同於 [!INCLUDE[vstecasp](../../../includes/vstecasp-md.md)] 應用程式中可用的工作階段物件，而且支援不同的行為，控制的方式也不一樣。 本主題說明工作階段在 [!INCLUDE[indigo2](../../../includes/indigo2-md.md)] 應用程式中啟用的功能及其用法。  
@@ -75,13 +75,13 @@ ms.lasthandoff: 01/19/2018
   
  [!INCLUDE[indigo2](../../../includes/indigo2-md.md)] 提供下列類型的工作階段架構應用程式行為：  
   
--   <xref:System.ServiceModel.Channels.SecurityBindingElement?displayProperty=nameWithType> 支援安全性工作階段，其中通訊兩端均同意特定安全對話。 [!INCLUDE[crdefault](../../../includes/crdefault-md.md)][保護服務](../../../docs/framework/wcf/securing-services.md)。 例如，<xref:System.ServiceModel.WSHttpBinding?displayProperty=nameWithType> 繫結同時支援安全性工作階段與可靠工作階段，但根據預設，只會使用加密並以數位方式簽署訊息的安全工作階段。  
+-   <xref:System.ServiceModel.Channels.SecurityBindingElement?displayProperty=nameWithType> 支援安全性工作階段，其中通訊兩端均同意特定安全對話。 如需詳細資訊，請參閱[保護 Services](../../../docs/framework/wcf/securing-services.md)。 例如，<xref:System.ServiceModel.WSHttpBinding?displayProperty=nameWithType> 繫結同時支援安全性工作階段與可靠工作階段，但根據預設，只會使用加密並以數位方式簽署訊息的安全工作階段。  
   
 -   <xref:System.ServiceModel.NetTcpBinding?displayProperty=nameWithType> 繫結支援 TCP/IP 架構工作階段，可確保所有訊息都在通訊端層級由連線建立相互關聯。  
   
--   <xref:System.ServiceModel.Channels.ReliableSessionBindingElement?displayProperty=nameWithType> 項目會實作 WS-ReliableMessaging 規格，支援可在其中將訊息設定為依序傳遞且只傳遞一次的可靠工作階段，確保即使訊息在對話期間行經多個節點仍會收到訊息。 [!INCLUDE[crdefault](../../../includes/crdefault-md.md)][可靠工作階段](../../../docs/framework/wcf/feature-details/reliable-sessions.md)。  
+-   <xref:System.ServiceModel.Channels.ReliableSessionBindingElement?displayProperty=nameWithType> 項目會實作 WS-ReliableMessaging 規格，支援可在其中將訊息設定為依序傳遞且只傳遞一次的可靠工作階段，確保即使訊息在對話期間行經多個節點仍會收到訊息。 如需詳細資訊，請參閱[可靠工作階段](../../../docs/framework/wcf/feature-details/reliable-sessions.md)。  
   
--   <xref:System.ServiceModel.NetMsmqBinding?displayProperty=nameWithType> 繫結提供 MSMQ 資料包工作階段。 [!INCLUDE[crdefault](../../../includes/crdefault-md.md)][WCF 中的佇列](../../../docs/framework/wcf/feature-details/queues-in-wcf.md)。  
+-   <xref:System.ServiceModel.NetMsmqBinding?displayProperty=nameWithType> 繫結提供 MSMQ 資料包工作階段。 如需詳細資訊，請參閱[WCF 中的佇列](../../../docs/framework/wcf/feature-details/queues-in-wcf.md)。  
   
  設定 <xref:System.ServiceModel.ServiceContractAttribute.SessionMode%2A> 屬性不會指定合約所需的工作階段類型，只代表它需要工作階段。  
   
@@ -130,7 +130,7 @@ ms.lasthandoff: 01/19/2018
   
 -   通道上藉由呼叫 <xref:System.ServiceModel.ICommunicationObject.Open%2A?displayProperty=nameWithType> 所傳回的 <xref:System.ServiceModel.ChannelFactory%601.CreateChannel%2A?displayProperty=nameWithType>。  
   
--   <xref:System.ServiceModel.ClientBase%601.Open%2A?displayProperty=nameWithType>在[!INCLUDE[indigo2](../../../includes/indigo2-md.md)]所產生的用戶端物件[ServiceModel Metadata Utility Tool (Svcutil.exe)](../../../docs/framework/wcf/servicemodel-metadata-utility-tool-svcutil-exe.md)。  
+-   <xref:System.ServiceModel.ClientBase%601.Open%2A?displayProperty=nameWithType> 在[!INCLUDE[indigo2](../../../includes/indigo2-md.md)]所產生的用戶端物件[ServiceModel Metadata Utility Tool (Svcutil.exe)](../../../docs/framework/wcf/servicemodel-metadata-utility-tool-svcutil-exe.md)。  
   
 -   針對任何一個 [!INCLUDE[indigo2](../../../includes/indigo2-md.md)] 用戶端物件型別的初始化作業 (根據預設，所有作業都是初始化作業)。 呼叫第一個作業之後， [!INCLUDE[indigo2](../../../includes/indigo2-md.md)] 用戶端物件就會自動開啟通道並初始化工作階段。  
   
@@ -144,10 +144,10 @@ ms.lasthandoff: 01/19/2018
   
  如需範例，請參閱 [How to: Create a Service That Requires Sessions](../../../docs/framework/wcf/feature-details/how-to-create-a-service-that-requires-sessions.md) 、 [Default Service Behavior](../../../docs/framework/wcf/samples/default-service-behavior.md) 和 [Instancing](../../../docs/framework/wcf/samples/instancing.md) 範例。  
   
- [!INCLUDE[crabout](../../../includes/crabout-md.md)]用戶端與工作階段，請參閱[使用 WCF 用戶端存取服務](../../../docs/framework/wcf/feature-details/accessing-services-using-a-client.md)。  
+ [!INCLUDE[crabout](../../../includes/crabout-md.md)] 用戶端與工作階段，請參閱[使用 WCF 用戶端存取服務](../../../docs/framework/wcf/feature-details/accessing-services-using-a-client.md)。  
   
 ## <a name="sessions-interact-with-instancecontext-settings"></a>與 InstanceContext 設定互動的工作階段  
- 合約內的 <xref:System.ServiceModel.SessionMode> 列舉與 <xref:System.ServiceModel.ServiceBehaviorAttribute.InstanceContextMode%2A?displayProperty=nameWithType> 屬性之間會進行互動，以控制通道和特定服務物件之間的關聯。 [!INCLUDE[crdefault](../../../includes/crdefault-md.md)][工作階段中，執行個體與並行](../../../docs/framework/wcf/feature-details/sessions-instancing-and-concurrency.md)。  
+ 合約內的 <xref:System.ServiceModel.SessionMode> 列舉與 <xref:System.ServiceModel.ServiceBehaviorAttribute.InstanceContextMode%2A?displayProperty=nameWithType> 屬性之間會進行互動，以控制通道和特定服務物件之間的關聯。 如需詳細資訊，請參閱[工作階段、 執行個體，以及並行](../../../docs/framework/wcf/feature-details/sessions-instancing-and-concurrency.md)。  
   
 ### <a name="sharing-instancecontext-objects"></a>共用 InstanceContext 物件  
  您也可以自行執行該關聯，以控制哪個工作階段架構通道或呼叫與哪個 <xref:System.ServiceModel.InstanceContext> 物件關聯。 如需完整範例，請參閱[InstanceContextSharing](http://msdn.microsoft.com/library/4a6a46d7-b7d7-4bb5-a0dd-03ffa3cbc230)。  
@@ -158,6 +158,6 @@ ms.lasthandoff: 01/19/2018
 > [!NOTE]
 >  此時 MaxConcurrentSessions 沒有作用，因為只有一個可用的「工作階段」。  
   
-## <a name="see-also"></a>請參閱  
+## <a name="see-also"></a>另請參閱  
  <xref:System.ServiceModel.OperationContractAttribute.IsInitiating%2A>  
  <xref:System.ServiceModel.OperationContractAttribute.IsTerminating%2A>

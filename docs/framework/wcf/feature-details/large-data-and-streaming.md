@@ -1,29 +1,29 @@
 ---
-title: "大型資料與資料流"
-ms.custom: 
+title: 大型資料與資料流
+ms.custom: ''
 ms.date: 03/30/2017
 ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
+ms.reviewer: ''
+ms.suite: ''
 ms.technology:
 - dotnet-clr
-ms.tgt_pltfrm: 
+ms.tgt_pltfrm: ''
 ms.topic: article
 ms.assetid: ab2851f5-966b-4549-80ab-c94c5c0502d2
-caps.latest.revision: 
+caps.latest.revision: 27
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
 ms.workload:
 - dotnet
-ms.openlocfilehash: e9551fcf4f302be899dcee8737b3bcfad15f1210
-ms.sourcegitcommit: cf22b29db780e532e1090c6e755aa52d28273fa6
+ms.openlocfilehash: b37af67a3deeed4e55939ff1c1baf73752233e94
+ms.sourcegitcommit: 03ee570f6f528a7d23a4221dcb26a9498edbdf8c
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 02/01/2018
+ms.lasthandoff: 04/28/2018
 ---
 # <a name="large-data-and-streaming"></a>大型資料與資料流
-[!INCLUDE[indigo1](../../../../includes/indigo1-md.md)] 是以 XML 為基礎的通訊基礎結構。 因為 XML 資料通常編碼中所定義的標準文字格式[XML 1.0 規格](http://go.microsoft.com/fwlink/?LinkId=94838)、 已連線系統開發人員和設計師通常關心傳送訊息的網路使用量 （或大小） 之間網路和以文字為基礎的編碼 XML 會造成特殊的挑戰，對有效率的二進位資料傳輸。  
+[!INCLUDE[indigo1](../../../../includes/indigo1-md.md)] 是 XML 通訊基礎結構。 因為 XML 資料通常編碼中所定義的標準文字格式[XML 1.0 規格](http://go.microsoft.com/fwlink/?LinkId=94838)、 已連線系統開發人員和設計師通常關心傳送訊息的網路使用量 （或大小） 之間網路和以文字為基礎的編碼 XML 會造成特殊的挑戰，對有效率的二進位資料傳輸。  
   
 ## <a name="basic-considerations"></a>基本考量  
  為了提供有關 [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] 之下列資訊的背景資訊，本節特別針對通常適用於已連線系統基礎結構的編碼、二進位資料以及資料流，提出一些一般性的問題與考量。  
@@ -41,7 +41,7 @@ ms.lasthandoff: 02/01/2018
   
  因此，文字與二進位之間的選擇並不如假設二進位訊息永遠小於 XML 文字訊息那樣容易。  
   
- XML 文字訊息有一項無庸置疑的優點，就是它們是以標準為基礎，並提供最廣泛的互通性選項和平台支援。 [!INCLUDE[crdefault](../../../../includes/crdefault-md.md)]本主題稍後的＜編碼方式＞一節。  
+ XML 文字訊息有一項無庸置疑的優點，就是它們是以標準為基礎，並提供最廣泛的互通性選項和平台支援。 如需詳細資訊，請參閱本主題稍後的 < 編碼方式 > 一節。  
   
 ### <a name="binary-content"></a>二進位內容  
  就結果訊息大小方面，有一個部分是二進位編碼優於文字編碼的，即為大型二進位資料項目 (例如必須在服務和其取用者之間交換的圖片、視訊、音訊剪輯，或任何其他形式的不透明二進位資料)。 若要讓資料的這些型別符合 XML 文字，常用的方法是使用 Base64 編碼方式進行編碼。  
@@ -52,7 +52,7 @@ ms.lasthandoff: 02/01/2018
   
  MTOM SOAP 訊息是從其未編碼的版本修改，讓參照個別 MIME 部分的特殊項目標記取代包含二進位資料之訊息中的原始項目。 因此，SOAP 訊息會指向與其一起傳送的 MIME 部分，來參照二進位內容，否則就只會包含 XML 文字資料。 由於這個模型與已建立的 SMTP 模型非常接近，因此有廣泛的工具支援可在許多平台上編碼及解碼 MTOM 訊息，讓它具有極大的互通性選擇。  
   
- 同樣的，如同 Base64，MTOM 也有一些 MIME 格式的必要額外負荷，因此只有在二進位資料項目的大小超過約 1 KB 時，才會看到使用 MTOM 的優點。 由於額外負荷之故，如果二進位承載保持在該臨界值之下，以 MTOM 編碼的訊息可能會大於使用 Base64 編碼二進位資料的訊息。 [!INCLUDE[crdefault](../../../../includes/crdefault-md.md)]本主題稍後的＜編碼方式＞一節。  
+ 同樣的，如同 Base64，MTOM 也有一些 MIME 格式的必要額外負荷，因此只有在二進位資料項目的大小超過約 1 KB 時，才會看到使用 MTOM 的優點。 由於額外負荷之故，如果二進位承載保持在該臨界值之下，以 MTOM 編碼的訊息可能會大於使用 Base64 編碼二進位資料的訊息。 如需詳細資訊，請參閱本主題稍後的 < 編碼方式 > 一節。  
   
 ### <a name="large-data-content"></a>大型資料內容  
  除了網路使用量以外，先前提到的 500 MB 承載也會為服務和用戶端帶來很大的本機挑戰。 根據預設，[!INCLUDE[indigo2](../../../../includes/indigo2-md.md)]處理中的訊息*經過緩衝處理的模式*。 這表示在傳送之前或接收之後，訊息的整個內容都會存在於記憶體中。 雖然這對大部分的案例都是一個很好的策略，而且對於訊息功能 (例如數位簽章和可靠的傳遞) 是必要的，但是大型訊息可能會很容易耗盡系統的資源。  
@@ -67,14 +67,14 @@ ms.lasthandoff: 02/01/2018
   
 -   當初始化傳輸時，無法完整提供使用。  
   
- 對於沒有這些條件約束的資料，通常比一個大型訊息更能夠在一個工作階段的範圍內傳送訊息的序列。 [!INCLUDE[crdefault](../../../../includes/crdefault-md.md)]本主題稍後的＜資料流資料＞一節。  
+ 對於沒有這些條件約束的資料，通常比一個大型訊息更能夠在一個工作階段的範圍內傳送訊息的序列。 如需詳細資訊，請參閱本主題稍後的 「 資料流資料 」 一節。  
   
  傳送大量資料時必須設定`maxAllowedContentLength`IIS 設定 (如需詳細資訊，請參閱[設定 IIS 要求限制](http://go.microsoft.com/fwlink/?LinkId=253165)) 和`maxReceivedMessageSize`設定繫結 (例如[System.ServiceModel.BasicHttpBinding.MaxReceivedMessageSize](xref:System.ServiceModel.HttpBindingBase.MaxReceivedMessageSize%2A)或<xref:System.ServiceModel.NetTcpBinding.MaxReceivedMessageSize%2A>)。 `maxAllowedContentLength`屬性預設為 28.6 M 和`maxReceivedMessageSize`屬性預設為 64 KB。  
   
 ## <a name="encodings"></a>編碼方式  
  *編碼*定義一組有關如何在網路上呈現訊息的規則。 *編碼器*實作這類編碼，並負責在寄件者端，encoder<xref:System.ServiceModel.Channels.Message>記憶體中訊息轉換成位元組資料流或位元組緩衝區可透過網路傳送。 在接收者端，編碼器會將位元組序列變成記憶體中的訊息。  
   
- [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] 包含三種編碼器，並可讓您撰寫及插入您自己的編碼器，如有必要。  
+ [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] 包括三種編碼器，並允許您撰寫及插入您自己的編碼器 (如有需要)。  
   
  根據預設，每個標準繫結都包括預先設定的編碼器，讓前置詞為 Net* 的繫結使用二進位編碼器 (藉由包含 <xref:System.ServiceModel.Channels.BinaryMessageEncodingBindingElement> 類別)，而 <xref:System.ServiceModel.BasicHttpBinding> 和 <xref:System.ServiceModel.WSHttpBinding> 類別則使用文字訊息編碼器 (藉由 <xref:System.ServiceModel.Channels.TextMessageEncodingBindingElement> 類別)。  
   
@@ -246,10 +246,10 @@ public class UploadStreamMessage
   
  因此，在這種情況中，限制傳入訊息大小上限是不夠的。 必須有 `MaxBufferSize` 屬性才能限制 [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] 緩衝處理的記憶體。 重要的是在資料流處理時，將它設定為安全值 (或保留為預設值)。 例如，假設您的服務必須接收大小高達 4 GB 的檔案，然後儲存在本機磁碟上。 也請假設您的記憶體受到一次只能緩衝處理 64 KB 資料的限制。 然後您會將 `MaxReceivedMessageSize` 設定為 4 GB，而將 `MaxBufferSize` 設定為 64 KB。 同時，在您的服務實作中，必須確保您只從 64 KB 區塊的傳入資料流讀取，而且在前一個區塊寫入磁碟並從記憶體捨棄之前，不會讀取下一個區塊。  
   
- 另外很重要的是，要了解這個配額只限制 [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] 所完成的緩衝，而無法防止您在自己的服務或用戶端實作中執行的任何緩衝。 [!INCLUDE[crabout](../../../../includes/crabout-md.md)]其他安全性考量，請參閱[資料的安全性考量](../../../../docs/framework/wcf/feature-details/security-considerations-for-data.md)。  
+ 另外很重要的是，要了解這個配額只限制 [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] 所完成的緩衝，而無法防止您在自己的服務或用戶端實作中執行的任何緩衝。 [!INCLUDE[crabout](../../../../includes/crabout-md.md)] 其他安全性考量，請參閱[資料的安全性考量](../../../../docs/framework/wcf/feature-details/security-considerations-for-data.md)。  
   
 > [!NOTE]
 >  使用緩衝或資料流傳輸是由端點處決定。 如果是 HTTP 傳輸，傳輸模式不會在連線上傳播，或是在 Proxy 伺服器與其他媒介之間進行傳播。 設定傳輸模式不會反映在服務介面的描述中。 在產生 [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] 用戶端至服務之後，您必須為要搭配資料流傳輸使用的服務編輯組態檔，以設定模式。 如果是 TCP 和具名管道傳輸，會傳播傳輸模式做為原則判斷提示。  
   
-## <a name="see-also"></a>請參閱  
+## <a name="see-also"></a>另請參閱  
  [如何：啟用資料流](../../../../docs/framework/wcf/feature-details/how-to-enable-streaming.md)

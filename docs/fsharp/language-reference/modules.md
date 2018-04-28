@@ -1,20 +1,17 @@
 ---
-title: "模組 (F#)"
-description: "了解如何 F # 模組是 F # 程式碼，例如值、 類型和函式的值，在 F # 程式中的群組。"
-keywords: "Visual F#, F#, 函式程式設計"
+title: 模組 (F#)
+description: '了解如何 F # 模組是 F # 程式碼，例如值、 類型和函式的值，在 F # 程式中的群組。'
 author: cartermp
 ms.author: phcart
 ms.date: 04/24/2017
 ms.topic: language-reference
-ms.prod: .net
-ms.technology: devlang-fsharp
+ms.prod: dotnet-fsharp
 ms.devlang: fsharp
-ms.assetid: 46de2d18-da51-40fa-a262-92edecada79d
-ms.openlocfilehash: 9b189903511f53d3ecceb30f3d056e189b00511d
-ms.sourcegitcommit: 3a96c706e4dbb4667bf3bf37edac9e1666646f93
+ms.openlocfilehash: fc7ac25902169aa39c3f7c088cd87ab58bcb7296
+ms.sourcegitcommit: 03ee570f6f528a7d23a4221dcb26a9498edbdf8c
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 02/27/2018
+ms.lasthandoff: 04/28/2018
 ---
 # <a name="modules"></a>模組
 
@@ -136,7 +133,7 @@ module rec RecursiveModule =
 
 這項功能，您也可以在[命名空間](namespaces.md)F # 4.1。
 
-## <a name="see-also"></a>請參閱
+## <a name="see-also"></a>另請參閱
 
 [F # 語言參考](index.md)
 [命名空間](namespaces.md)

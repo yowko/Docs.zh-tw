@@ -1,27 +1,29 @@
 ---
-title: "HOW TO：指定用戶端認證值"
-ms.custom: 
+title: HOW TO：指定用戶端認證值
+ms.custom: ''
 ms.date: 03/30/2017
 ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.technology: dotnet-clr
-ms.tgt_pltfrm: 
+ms.reviewer: ''
+ms.suite: ''
+ms.technology:
+- dotnet-clr
+ms.tgt_pltfrm: ''
 ms.topic: article
 dev_langs:
 - csharp
 - vb
 ms.assetid: 82293d7f-471a-4549-8f19-0be890e7b074
-caps.latest.revision: "28"
+caps.latest.revision: 28
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.workload: dotnet
-ms.openlocfilehash: cd818a2342ff5b44e4e8ab1b237f7c657d3bf438
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.workload:
+- dotnet
+ms.openlocfilehash: 35244032a36af8d3d23fd9d88006ea032a99b44b
+ms.sourcegitcommit: 03ee570f6f528a7d23a4221dcb26a9498edbdf8c
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 04/28/2018
 ---
 # <a name="how-to-specify-client-credential-values"></a>HOW TO：指定用戶端認證值
 使用 [!INCLUDE[indigo1](../../../includes/indigo1-md.md)] 可以讓服務指定用戶端向服務驗證自身的方式。 例如，服務可以規定用戶端必須出示憑證交付驗證。  
@@ -32,9 +34,9 @@ ms.lasthandoff: 12/22/2017
   
 2.  開啟 XML 組態檔。 如果您是使用 Svcutil.exe 工具，檔案的預設名稱即為 Output.config。  
   
-3.  尋找**\<安全性 >**具有項目**模式**屬性 (**< 安全性模式 =** `MessageOrTransport`  **>** 其中`MessageOrTransport`設為其中一種安全性模式。  
+3.  尋找**\<安全性 >** 具有項目**模式**屬性 (**< 安全性模式 =** `MessageOrTransport` **>** 其中`MessageOrTransport`設為其中一種安全性模式。  
   
-4.  找出符合模式值的子項目。 例如，如果模式設定為**訊息**，尋找**\<訊息 >**中所包含的項目**\<安全性 >**項目。  
+4.  找出符合模式值的子項目。 例如，如果模式設定為**訊息**，尋找**\<訊息 >** 中所包含的項目**\<安全性 >** 項目。  
   
 5.  請注意值指派給**clientCredentialType**屬性。 實際值取決於使用的模式是傳輸還是訊息。  
   
@@ -50,7 +52,7 @@ ms.lasthandoff: 12/22/2017
 ```  
   
 ## <a name="example-tcp-transport-mode-with-certificate-as-client-credential"></a>範例：TCP 傳輸模式結合用戶端認證的憑證  
- 這個範例會將安全性模式設為傳輸模式，並將用戶端認證值設為 X.509 憑證。 下列程序示範如何透過程式碼與組態，設定用戶端的用戶端認證值。 這是假設您已經使用[ServiceModel Metadata Utility Tool (Svcutil.exe)](../../../docs/framework/wcf/servicemodel-metadata-utility-tool-svcutil-exe.md)從服務傳回中繼資料 （程式碼和組態）。 [!INCLUDE[crdefault](../../../includes/crdefault-md.md)][How to： 建立用戶端](../../../docs/framework/wcf/how-to-create-a-wcf-client.md)。  
+ 這個範例會將安全性模式設為傳輸模式，並將用戶端認證值設為 X.509 憑證。 下列程序示範如何透過程式碼與組態，設定用戶端的用戶端認證值。 這是假設您已經使用[ServiceModel Metadata Utility Tool (Svcutil.exe)](../../../docs/framework/wcf/servicemodel-metadata-utility-tool-svcutil-exe.md)從服務傳回中繼資料 （程式碼和組態）。 如需詳細資訊，請參閱[How to： 建立用戶端](../../../docs/framework/wcf/how-to-create-a-wcf-client.md)。  
   
 #### <a name="to-specify-the-client-credential-value-on-the-client-in-code"></a>若要透過程式碼指定用戶端的用戶端認證值  
   
@@ -73,7 +75,7 @@ ms.lasthandoff: 12/22/2017
   
 3.  新增[ \<clientCertificate >](../../../docs/framework/configure-apps/file-schema/wcf/clientcertificate-of-servicecredentials.md)元素[ \<clientCredentials >](../../../docs/framework/configure-apps/file-schema/wcf/clientcredentials.md)項目。  
   
-4.  將下列屬性設為適當的值：`storeLocation`、`storeName`、`x509FindType` 和 `findValue`，如下列程式碼所示。 [!INCLUDE[crabout](../../../includes/crabout-md.md)]憑證，請參閱[使用憑證](../../../docs/framework/wcf/feature-details/working-with-certificates.md)。  
+4.  將下列屬性設為適當的值：`storeLocation`、`storeName`、`x509FindType` 和 `findValue`，如下列程式碼所示。 [!INCLUDE[crabout](../../../includes/crabout-md.md)] 憑證，請參閱[使用憑證](../../../docs/framework/wcf/feature-details/working-with-certificates.md)。  
   
     ```xml  
     <behaviors>  
@@ -102,7 +104,7 @@ ms.lasthandoff: 12/22/2017
     </client>  
     ```  
   
-## <a name="see-also"></a>請參閱  
+## <a name="see-also"></a>另請參閱  
  <xref:System.ServiceModel.NetTcpBinding>  
  <xref:System.ServiceModel.Security.X509CertificateRecipientServiceCredential.SetCertificate%2A>  
  <xref:System.ServiceModel.Security.X509CertificateRecipientServiceCredential>  
@@ -113,10 +115,10 @@ ms.lasthandoff: 12/22/2017
  [ServiceModel 中繼資料公用程式工具 (Svcutil.exe)](../../../docs/framework/wcf/servicemodel-metadata-utility-tool-svcutil-exe.md)  
  [使用憑證](../../../docs/framework/wcf/feature-details/working-with-certificates.md)  
  [如何：建立用戶端](../../../docs/framework/wcf/how-to-create-a-wcf-client.md)  
- [\<netTcpBinding >](../../../docs/framework/configure-apps/file-schema/wcf/nettcpbinding.md)  
- [\<安全性 >](../../../docs/framework/configure-apps/file-schema/wcf/security-of-nettcpbinding.md)  
- [\<訊息 >](../../../docs/framework/configure-apps/file-schema/wcf/message-element-of-nettcpbinding.md)  
+ [\<netTcpBinding>](../../../docs/framework/configure-apps/file-schema/wcf/nettcpbinding.md)  
+ [\<security>](../../../docs/framework/configure-apps/file-schema/wcf/security-of-nettcpbinding.md)  
+ [\<message>](../../../docs/framework/configure-apps/file-schema/wcf/message-element-of-nettcpbinding.md)  
  [\<行為 >](../../../docs/framework/configure-apps/file-schema/wcf/behavior-of-endpointbehaviors.md)  
  [\<行為 >](../../../docs/framework/configure-apps/file-schema/wcf/behaviors.md)  
  [\<clientCertificate >](../../../docs/framework/configure-apps/file-schema/wcf/clientcertificate-of-servicecredentials.md)  
- [\<clientCredentials >](../../../docs/framework/configure-apps/file-schema/wcf/clientcredentials.md)
+ [\<clientCredentials>](../../../docs/framework/configure-apps/file-schema/wcf/clientcredentials.md)

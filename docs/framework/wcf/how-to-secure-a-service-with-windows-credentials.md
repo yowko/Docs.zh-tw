@@ -21,11 +21,11 @@ ms.author: bruceper
 manager: mbaldwin
 ms.workload:
 - dotnet
-ms.openlocfilehash: cbe29ed57a7eee3a74166dabd2b8931e73cd2860
-ms.sourcegitcommit: 86adcc06e35390f13c1e372c36d2e044f1fc31ef
+ms.openlocfilehash: c754a4ec57751b2ca5a809c771b2fb5235ec0510
+ms.sourcegitcommit: 03ee570f6f528a7d23a4221dcb26a9498edbdf8c
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/26/2018
+ms.lasthandoff: 04/28/2018
 ---
 # <a name="how-to-secure-a-service-with-windows-credentials"></a>HOW TO：使用 Windows 認證來確保服務安全
 本主題說明如何在上啟用傳輸安全性[!INCLUDE[indigo1](../../../includes/indigo1-md.md)]位於 Windows 網域，且由相同的網域中的用戶端呼叫服務。 [!INCLUDE[crabout](../../../includes/crabout-md.md)] 此案例中，請參閱[Windows 驗證的傳輸安全性](../../../docs/framework/wcf/feature-details/transport-security-with-windows-authentication.md)。 範例應用程式，請參閱[WSHttpBinding](../../../docs/framework/wcf/samples/wshttpbinding.md)範例。  
@@ -87,7 +87,7 @@ ms.lasthandoff: 04/26/2018
   
 ##### <a name="to-use-a-binding-in-a-client-with-code"></a>搭配程式碼在用戶端中使用繫結  
   
-1.  使用 SvcUtil.exe 工具，從服務的中繼資料產生 Proxy 程式碼。 [!INCLUDE[crdefault](../../../includes/crdefault-md.md)] [如何： 建立用戶端](../../../docs/framework/wcf/how-to-create-a-wcf-client.md)。 產生的 Proxy 程式碼繼承自 <xref:System.ServiceModel.ClientBase%601> 類別，這樣可確保每個用戶端都有與 [!INCLUDE[indigo2](../../../includes/indigo2-md.md)] 服務進行通訊時所需要的建構函式 (Constructor)、方法和屬性。 在這個範例中，產生的程式碼包含 `CalculatorClient` 類別，這個類別會實作 `ICalculator` 介面，因此就會與服務程式碼相容。  
+1.  使用 SvcUtil.exe 工具，從服務的中繼資料產生 Proxy 程式碼。 如需詳細資訊，請參閱[How to： 建立用戶端](../../../docs/framework/wcf/how-to-create-a-wcf-client.md)。 產生的 Proxy 程式碼繼承自 <xref:System.ServiceModel.ClientBase%601> 類別，這樣可確保每個用戶端都有與 [!INCLUDE[indigo2](../../../includes/indigo2-md.md)] 服務進行通訊時所需要的建構函式 (Constructor)、方法和屬性。 在這個範例中，產生的程式碼包含 `CalculatorClient` 類別，這個類別會實作 `ICalculator` 介面，因此就會與服務程式碼相容。  
   
 2.  此程序的程式碼會插入至用戶端程式的 `Main` 方法開頭。  
   
@@ -140,7 +140,7 @@ ms.lasthandoff: 04/26/2018
   
 ##### <a name="to-use-a-binding-in-a-client-with-configuration"></a>搭配組態在用戶端中使用繫結  
   
-1.  使用 SvcUtil.exe 工具，從服務的中繼資料產生 Proxy 程式碼和組態檔。 [!INCLUDE[crdefault](../../../includes/crdefault-md.md)] [如何： 建立用戶端](../../../docs/framework/wcf/how-to-create-a-wcf-client.md)。  
+1.  使用 SvcUtil.exe 工具，從服務的中繼資料產生 Proxy 程式碼和組態檔。 如需詳細資訊，請參閱[How to： 建立用戶端](../../../docs/framework/wcf/how-to-create-a-wcf-client.md)。  
   
 2.  取代[\<繫結 >](../../../docs/framework/configure-apps/file-schema/wcf/bindings.md)上一節中的組態程式碼產生的組態檔的區段。  
   

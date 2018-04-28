@@ -1,13 +1,13 @@
 ---
-title: "資料傳輸架構概觀"
-ms.custom: 
+title: 資料傳輸架構概觀
+ms.custom: ''
 ms.date: 03/30/2017
 ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
+ms.reviewer: ''
+ms.suite: ''
 ms.technology:
 - dotnet-clr
-ms.tgt_pltfrm: 
+ms.tgt_pltfrm: ''
 ms.topic: article
 dev_langs:
 - csharp
@@ -15,17 +15,17 @@ dev_langs:
 helpviewer_keywords:
 - data transfer [WCF], architectural overview
 ms.assetid: 343c2ca2-af53-4936-a28c-c186b3524ee9
-caps.latest.revision: 
+caps.latest.revision: 14
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
 ms.workload:
 - dotnet
-ms.openlocfilehash: 829635bd7fd73b58004c59862f4d589e95f67f9b
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.openlocfilehash: cb64b871b8e4ba3036d70f3b84e2fde1667f4529
+ms.sourcegitcommit: 03ee570f6f528a7d23a4221dcb26a9498edbdf8c
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 04/28/2018
 ---
 # <a name="data-transfer-architectural-overview"></a>資料傳輸架構概觀
 [!INCLUDE[indigo1](../../../../includes/indigo1-md.md)] 可以想成是訊息基礎架構。 它可以接收訊息、加以處理，然後分派到使用者程式碼執行進一步動作，或是使用使用者程式碼提供的資料建構訊息，然後傳遞到目的地。 此主題將針對進階程式開發人員，描述處理訊息與所包含資料的架構。 如需如何傳送與接收資料的簡化型工作導向檢視，請參閱 [Specifying Data Transfer in Service Contracts](../../../../docs/framework/wcf/feature-details/specifying-data-transfer-in-service-contracts.md)。  
@@ -97,14 +97,14 @@ ms.lasthandoff: 12/22/2017
 |從資料流通道堆疊傳入|`Stream` 物件，表示透過網路傳入並且搭配 <xref:System.Xml.XmlReader> 的資料|使用 `XmlReader` 從儲存的 `WriteNode` 寫出內容|傳回儲存的 `XmlReader`|  
 |從非資料流的通道堆疊傳入|包含搭配 `XmlReader` 之本文資料的緩衝區|使用 `XmlReader` 從儲存的 `WriteNode`寫出內容|傳回儲存的 lang|  
   
- \*這些項目都不會直接實作在`Message`子類別，但在子類別的<xref:System.ServiceModel.Channels.BodyWriter>類別。 如需 <xref:System.ServiceModel.Channels.BodyWriter>的詳細資訊，請參閱 [Using the Message Class](../../../../docs/framework/wcf/feature-details/using-the-message-class.md)。  
+ \* 這些項目都不會直接實作在`Message`子類別，但在子類別的<xref:System.ServiceModel.Channels.BodyWriter>類別。 如需 <xref:System.ServiceModel.Channels.BodyWriter>的詳細資訊，請參閱 [Using the Message Class](../../../../docs/framework/wcf/feature-details/using-the-message-class.md)。  
   
 ## <a name="message-headers"></a>訊息標頭  
  包含標頭的訊息。 標頭邏輯上是由與名稱、命名空間，以及一些其他屬性關聯的 XML Infoset 所組成。 使用 `Headers` 的 <xref:System.ServiceModel.Channels.Message>屬性可以存取訊息標頭。 每個標頭是由 <xref:System.ServiceModel.Channels.MessageHeader> 類別表示。 通常當使用設定的通道堆疊搭配 SOAP 訊息運作時，訊息標頭會對應到 SOAP 訊息標頭。  
   
  將資訊放入訊息標頭以及從中擷取資訊就像使用訊息本文。 因為不支援資料流所以處理序稍微經過簡化。 您可以存取相同標頭的內容一次以上，並且以任意順序存取標頭，以強制一定要緩衝處理標頭。 並沒有取得標頭之 XML 讀取器的一般用途機制，但是 `MessageHeader` 內部有個 [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] 子類別，表示具備這類功能的可讀取標頭。 當使用自訂應用程式標頭的訊息傳入時， `MessageHeader` 的型別是由通道堆疊建立。 這可讓服務架構使用還原序列化引擎 (例如 <xref:System.Runtime.Serialization.DataContractSerializer>) 來解譯這些標頭。  
   
- [!INCLUDE[crdefault](../../../../includes/crdefault-md.md)] [Using the Message Class](../../../../docs/framework/wcf/feature-details/using-the-message-class.md)。  
+ 如需詳細資訊，請參閱[使用 Message 類別](../../../../docs/framework/wcf/feature-details/using-the-message-class.md)。  
   
 ## <a name="message-properties"></a>郵件內容  
  訊息會包含屬性。 「 *屬性* 」(Property) 是與字串名稱關聯的任何 [!INCLUDE[dnprdnshort](../../../../includes/dnprdnshort-md.md)] 物件。 透過 `Properties` 的 `Message`屬性可以存取屬性。  
@@ -113,7 +113,7 @@ ms.lasthandoff: 12/22/2017
   
  例如，包含當做 [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] 一部分的 HTTP 傳輸通道，當其將回應傳送至用戶端時，能夠產生各種 HTTP 狀態碼，例如「404 (找不到)」和「500 (內部伺服器錯誤)」。 在傳送之前的回覆訊息，它會檢查是否`Properties`的`Message`包含稱為"httpResponse"，其中包含的型別物件的屬性<xref:System.ServiceModel.Channels.HttpResponseMessageProperty>。 如果找到這類屬性，它會查看 <xref:System.ServiceModel.Channels.HttpResponseMessageProperty.StatusCode%2A> 屬性然後使用該狀態碼。 如果找不到，就會使用預設「200 (確定)」代碼。  
   
- [!INCLUDE[crdefault](../../../../includes/crdefault-md.md)] [Using the Message Class](../../../../docs/framework/wcf/feature-details/using-the-message-class.md)。  
+ 如需詳細資訊，請參閱[使用 Message 類別](../../../../docs/framework/wcf/feature-details/using-the-message-class.md)。  
   
 ### <a name="the-message-as-a-whole"></a>整個訊息  
  到目前為止，已經單獨討論過存取訊息各部分的方法。 但是， <xref:System.ServiceModel.Channels.Message> 類別也提供方法與整個訊息一起運作。 例如， `WriteMessage` 方法會將整個訊息寫出至 XML 寫入器。  
@@ -240,7 +240,7 @@ ms.lasthandoff: 12/22/2017
  [!code-csharp[C_DataArchitecture#9](../../../../samples/snippets/csharp/VS_Snippets_CFX/c_dataarchitecture/cs/source.cs#9)]
  [!code-vb[C_DataArchitecture#9](../../../../samples/snippets/visualbasic/VS_Snippets_CFX/c_dataarchitecture/vb/source.vb#9)]  
   
- 標記為要序列化的項目 (使用 <xref:System.ServiceModel.MessageBodyMemberAttribute>、 <xref:System.ServiceModel.MessageHeaderAttribute>或其他相關屬性) 必須可序列化，才能參與訊息合約。 [!INCLUDE[crdefault](../../../../includes/crdefault-md.md)] 本主題稍後的＜序列化＞一節。  
+ 標記為要序列化的項目 (使用 <xref:System.ServiceModel.MessageBodyMemberAttribute>、 <xref:System.ServiceModel.MessageHeaderAttribute>或其他相關屬性) 必須可序列化，才能參與訊息合約。 如需詳細資訊，請參閱本主題稍後的 < 序列化 > 一節。  
   
 ### <a name="4-parameters"></a>4.參數  
  想要描述作業而在多個資料片段執行作業的程式開發人員，通常不需要訊息合約提供的控制等級。 例如，當建立新的服務時，人們通常不想決定要使用不包裝或包裝模式，以及決定包裝函式項目的名稱。 做這些決定通常需要深入了解 Web 服務與 SOAP。  
@@ -255,7 +255,7 @@ ms.lasthandoff: 12/22/2017
  建議方法是將要傳送或接收的資訊描述當做作業合約參數的簡單清單，除非有特殊原因必須使用更複雜的訊息合約或 `Message` 架構的程式設計模型。  
   
 ### <a name="5-stream"></a>5.資料流  
- 在作業合約中使用 `Stream` 或其中一個子類別，或是當做訊息合約中的單獨訊息本文部分，可以視為與上述不同的程式設計模型。 以這種方式使用 `Stream` 是確保合約能夠用在經過資料流處理方式的唯一辦法，除非寫入專屬的與資料流相容之 `Message` 子類別。 [!INCLUDE[crdefault](../../../../includes/crdefault-md.md)][大型的資料與資料流](../../../../docs/framework/wcf/feature-details/large-data-and-streaming.md)。  
+ 在作業合約中使用 `Stream` 或其中一個子類別，或是當做訊息合約中的單獨訊息本文部分，可以視為與上述不同的程式設計模型。 以這種方式使用 `Stream` 是確保合約能夠用在經過資料流處理方式的唯一辦法，除非寫入專屬的與資料流相容之 `Message` 子類別。 如需詳細資訊，請參閱[大型資料和串流處理](../../../../docs/framework/wcf/feature-details/large-data-and-streaming.md)。  
   
  當以這種方式使用 `Stream` 或其中一個子類別時，就不會叫用序列化程式。 針對傳出訊息會建立特殊的資料流 `Message` 子類別，然後會如同 <xref:System.Xml.IStreamProvider> 介面上章節中所述寫出資料流。 針對傳入訊息，服務架構會在傳入訊息上建立 `Stream` 子類別，然後將其提供給作業使用。  
   
@@ -285,5 +285,5 @@ ms.lasthandoff: 12/22/2017
   
  <xref:System.ServiceModel.Description.DataContractSerializerOperationBehavior> 和 <xref:System.ServiceModel.Description.XmlSerializerOperationBehavior> 是分別負責插入 `DataContractSerializer` 與 `XmlSerializer`之訊息格式器的作業行為。 <xref:System.ServiceModel.Description.DataContractSerializerOperationBehavior> 行為實際上能夠與任何衍生自 <xref:System.Runtime.Serialization.XmlObjectSerializer>的序列化程式共同運作，其中包含 <xref:System.Runtime.Serialization.NetDataContractSerializer> (在「使用獨立序列化」中會詳細描述)。 行為會呼叫其中一個 `CreateSerializer` 虛擬方法多載以取得序列化程式。 若要插入不同的序列化程式，請建立新的 <xref:System.ServiceModel.Description.DataContractSerializerOperationBehavior> 子類別，然後同時覆寫 `CreateSerializer` 多載。  
   
-## <a name="see-also"></a>請參閱  
+## <a name="see-also"></a>另請參閱  
  [指定服務合約中的資料傳輸](../../../../docs/framework/wcf/feature-details/specifying-data-transfer-in-service-contracts.md)

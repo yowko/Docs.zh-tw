@@ -1,20 +1,17 @@
 ---
-title: "呼叫端資訊 （F #）"
-description: "描述如何使用呼叫端資訊引數屬性來取得方法的呼叫端資訊。"
-keywords: "Visual F#, F#, 函式程式設計"
+title: '呼叫端資訊 （F #）'
+description: 描述如何使用呼叫端資訊引數屬性來取得方法的呼叫端資訊。
 author: cartermp
 ms.author: phcart
 ms.date: 04/25/2017
 ms.topic: language-reference
-ms.prod: .net
-ms.technology: devlang-fsharp
+ms.prod: dotnet-fsharp
 ms.devlang: fsharp
-ms.assetid: a3dcc335-433b-4672-ac2d-ae6b11b816f3
-ms.openlocfilehash: 533d2f0429ddb31e6d1dd7efca2f0760069a2945
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.openlocfilehash: 840c6c6308c55fe2a2dbefd52b159a32fb92f787
+ms.sourcegitcommit: 03ee570f6f528a7d23a4221dcb26a9498edbdf8c
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 04/28/2018
 ---
 # <a name="caller-information"></a>呼叫端資訊
 
@@ -77,7 +74,7 @@ type Tracer() =
 |屬性建構函式|套用屬性的成員名稱。 如果屬性為成員內的任何項目 (例如參數、傳回值或泛型類型參數)，這個結果會是與該項目相關聯的成員名稱。|
 |無包含的成員 (例如，組件層級或套用至類型的屬性)。|選擇性參數的預設值。|
 
-## <a name="see-also"></a>請參閱
+## <a name="see-also"></a>另請參閱
  [屬性](attributes.md)  
  [具名引數](parameters-and-arguments.md#named-arguments)  
  [選擇性參數](parameters-and-arguments.md#optional-parameters)  

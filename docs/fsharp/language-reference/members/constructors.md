@@ -1,20 +1,17 @@
 ---
-title: "建構函式 (F#)"
-description: "了解如何定義及使用 F # 中的建構函式，建立和初始化類別和結構的物件。"
-keywords: "Visual F#, F#, 函式程式設計"
+title: 建構函式 (F#)
+description: '了解如何定義及使用 F # 中的建構函式，建立和初始化類別和結構的物件。'
 author: cartermp
 ms.author: phcart
 ms.date: 05/16/2016
 ms.topic: language-reference
-ms.prod: .net
-ms.technology: devlang-fsharp
+ms.prod: dotnet-fsharp
 ms.devlang: fsharp
-ms.assetid: e0da2250-29de-4145-a1be-e5faff080759
-ms.openlocfilehash: 60ed93f1c1dc15e99465d969c9e4fd3e61c28ffa
-ms.sourcegitcommit: bd1ef61f4bb794b25383d3d72e71041a5ced172e
+ms.openlocfilehash: d9062ae747c37bdc14104658ad0ec7d11f5545f0
+ms.sourcegitcommit: 03ee570f6f528a7d23a4221dcb26a9498edbdf8c
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/18/2017
+ms.lasthandoff: 04/28/2018
 ---
 # <a name="constructors"></a>建構函式
 

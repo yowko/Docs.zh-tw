@@ -22,11 +22,11 @@ ms.author: dotnetcontent
 manager: wpickett
 ms.workload:
 - dotnet
-ms.openlocfilehash: 43eaa4ffe562cf1dde5abd7e7540125dcf383732
-ms.sourcegitcommit: 2042de78fcdceebb6b8ac4b7a292b93e8782cbf5
+ms.openlocfilehash: 4d7988630e2eba3e6d5ebdc8b15b23aeb280a66f
+ms.sourcegitcommit: 03ee570f6f528a7d23a4221dcb26a9498edbdf8c
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/27/2018
+ms.lasthandoff: 04/28/2018
 ---
 # <a name="importing-schema-to-generate-classes"></a>匯入結構描述以產生類別
 如果要從可在 [!INCLUDE[indigo1](../../../../includes/indigo1-md.md)] 中使用的結構描述產生類別，請使用 <xref:System.Runtime.Serialization.XsdDataContractImporter> 類別。 這個主題將說明處理程序和變化。  
@@ -114,7 +114,7 @@ ms.lasthandoff: 04/27/2018
  [!code-xml[C_SchemaImportExport#12](../../../../samples/snippets/csharp/VS_Snippets_CFX/c_schemaimportexport/common/source.config#12)]  
   
 > [!NOTE]
->  任何關聯也都可以視為是清單。 例如，您可以將前述關聯視為是剛好有兩個欄位 (字串欄位和整數欄位) 之複雜 `city` 物件的清單。 這兩種模式在 XSD 結構描述中都有表示法。 由於並沒有方法可以區分清單和關聯，因此這類模式永遠會被視為是清單，除非結構描述中有 [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] 特定的特別附註。 附註會指出指定的模式表示關聯。 [!INCLUDE[crdefault](../../../../includes/crdefault-md.md)] [資料合約結構描述參考](../../../../docs/framework/wcf/feature-details/data-contract-schema-reference.md)。  
+>  任何關聯也都可以視為是清單。 例如，您可以將前述關聯視為是剛好有兩個欄位 (字串欄位和整數欄位) 之複雜 `city` 物件的清單。 這兩種模式在 XSD 結構描述中都有表示法。 由於並沒有方法可以區分清單和關聯，因此這類模式永遠會被視為是清單，除非結構描述中有 [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] 特定的特別附註。 附註會指出指定的模式表示關聯。 如需詳細資訊，請參閱[資料合約結構描述參考](../../../../docs/framework/wcf/feature-details/data-contract-schema-reference.md)。  
   
  一般來說，會匯入清單做為衍生自泛型清單的集合資料合約或做為 [!INCLUDE[dnprdnshort](../../../../includes/dnprdnshort-md.md)] 陣列，視結構描述是否遵循集合的標準命名樣式而定。 這更詳細地描述[集合資料合約中的型別](../../../../docs/framework/wcf/feature-details/collection-types-in-data-contracts.md)。 關聯通常會被匯入做為 <xref:System.Collections.Generic.Dictionary%602> 或衍生自目錄物件的集合資料合約。 例如，請試想下列結構描述。  
   
@@ -161,7 +161,7 @@ ms.lasthandoff: 04/27/2018
   
 ##### <a name="design-considerations"></a>設計考量  
   
--   直接使用較弱型別的 XML 表示法可能會很困難。 請考慮使用另一種序列化引擎 (例如 <xref:System.Xml.Serialization.XmlSerializer>) 以強型別方式來使用與資料合約不相容的結構描述。 [!INCLUDE[crdefault](../../../../includes/crdefault-md.md)] [使用 XmlSerializer 類別](../../../../docs/framework/wcf/feature-details/using-the-xmlserializer-class.md)。  
+-   直接使用較弱型別的 XML 表示法可能會很困難。 請考慮使用另一種序列化引擎 (例如 <xref:System.Xml.Serialization.XmlSerializer>) 以強型別方式來使用與資料合約不相容的結構描述。 如需詳細資訊，請參閱[使用 XmlSerializer 類別](../../../../docs/framework/wcf/feature-details/using-the-xmlserializer-class.md)。  
   
 -   即使 <xref:System.Runtime.Serialization.XsdDataContractImporter> 屬性設定為 <xref:System.Runtime.Serialization.ImportOptions.ImportXmlType%2A>，有些結構描述建構仍然無法由 `true` 匯入。 請再次考慮針對此類案例使用 <xref:System.Xml.Serialization.XmlSerializer>。  
   
@@ -190,7 +190,7 @@ ms.lasthandoff: 04/27/2018
   
 -   <xref:System.Runtime.Serialization.ImportOptions.CodeProvider%2A> 屬性。 請指定 <xref:System.CodeDom.Compiler.CodeDomProvider>，用於為所產生的類別產生程式碼。 匯入機制會嘗試避免 <xref:System.CodeDom.Compiler.CodeDomProvider> 不支援的功能。 如果沒有設定 <xref:System.Runtime.Serialization.ImportOptions.CodeProvider%2A>，使用 [!INCLUDE[dnprdnshort](../../../../includes/dnprdnshort-md.md)] 的完整功能便沒有限制。  
   
--   <xref:System.Runtime.Serialization.ImportOptions.DataContractSurrogate%2A> 屬性。 <xref:System.Runtime.Serialization.IDataContractSurrogate> 實作可以使用這個屬性來指定。 <xref:System.Runtime.Serialization.IDataContractSurrogate> 會自訂匯入處理程序。 [!INCLUDE[crdefault](../../../../includes/crdefault-md.md)] [資料合約 Surrogate](../../../../docs/framework/wcf/extending/data-contract-surrogates.md)。 根據預設，不會使用 Surrogate。  
+-   <xref:System.Runtime.Serialization.ImportOptions.DataContractSurrogate%2A> 屬性。 <xref:System.Runtime.Serialization.IDataContractSurrogate> 實作可以使用這個屬性來指定。 <xref:System.Runtime.Serialization.IDataContractSurrogate> 會自訂匯入處理程序。 如需詳細資訊，請參閱[資料合約 Surrogate](../../../../docs/framework/wcf/extending/data-contract-surrogates.md)。 根據預設，不會使用 Surrogate。  
   
 ## <a name="see-also"></a>另請參閱  
  <xref:System.Runtime.Serialization.DataContractSerializer>  

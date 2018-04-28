@@ -1,27 +1,29 @@
 ---
-title: "WCF 疑難排解快速入門"
-ms.custom: 
+title: WCF 疑難排解快速入門
+ms.custom: ''
 ms.date: 03/30/2017
 ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.technology: dotnet-clr
-ms.tgt_pltfrm: 
+ms.reviewer: ''
+ms.suite: ''
+ms.technology:
+- dotnet-clr
+ms.tgt_pltfrm: ''
 ms.topic: article
 helpviewer_keywords:
 - WCF [WCF], troubleshooting
 - Windows Communication Foundation [WCF], troubleshooting
 ms.assetid: a9ea7a53-f31a-46eb-806e-898e465a4992
-caps.latest.revision: "22"
+caps.latest.revision: 22
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.workload: dotnet
-ms.openlocfilehash: d0bcd7d08a698a2a839094204dcc5f7105ef8f6b
-ms.sourcegitcommit: c0dd436f6f8f44dc80dc43b07f6841a00b74b23f
+ms.workload:
+- dotnet
+ms.openlocfilehash: 490b756a9beae09b20a36d3fc6a20c85aad76618
+ms.sourcegitcommit: 03ee570f6f528a7d23a4221dcb26a9498edbdf8c
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 01/19/2018
+ms.lasthandoff: 04/28/2018
 ---
 # <a name="wcf-troubleshooting-quickstart"></a>WCF 疑難排解快速入門
 本主題列出客戶在開發 WCF 用戶端和服務時會碰到的幾個已知問題。 如果您遇到的問題不在此清單中，建議您為您的服務設定追蹤。 這會產生一個追蹤檔案，您可以使用追蹤檔案檢視器檢視這個檔案，並取得服務中可能會發生之例外狀況的詳細資訊。 如需設定追蹤的詳細資訊，請參閱： [Configuring Tracing](../../../docs/framework/wcf/diagnostics/tracing/configuring-tracing.md)。 如需追蹤檔案檢視器的詳細資訊，請參閱： [Service Trace Viewer Tool (SvcTraceViewer.exe)](../../../docs/framework/wcf/service-trace-viewer-tool-svctraceviewer-exe.md)。  
@@ -62,11 +64,11 @@ ms.lasthandoff: 01/19/2018
   
 <a name="BKMK_q1"></a>   
 ## <a name="sometimes-i-receive-a-messagesecurityexception-on-the-second-request-if-my-client-is-idle-for-a-while-after-the-first-request-what-is-happening"></a>如果我的用戶端在第一個要求之後閒置一陣子，有時我會在第二個要求收到 MessageSecurityException。 這是為什麼？  
- 第二個要求會失敗的主要原因有兩個：(1) 工作階段已逾時或 (2) 主控服務的 Web 伺服器已回收。 第一種情況中，在服務逾時之前工作階段都是有效的。當服務未在服務繫結中指定的時間內收到來自用戶端的要求時 (<xref:System.ServiceModel.Channels.Binding.ReceiveTimeout%2A>)，服務會終止安全性工作階段。 後續的用戶端訊息會造成 <xref:System.ServiceModel.Security.MessageSecurityException>。 用戶端必須以此服務重新建立安全工作階段，以傳送未來的訊息或使用可設定狀態的安全性內容權杖。 可設定狀態的安全性內容權杖也允許安全工作階段存留已回收的 Web 伺服器。 [!INCLUDE[crabout](../../../includes/crabout-md.md)]使用可設定狀態的安全性內容權杖，安全工作階段，請參閱[How to： 建立安全工作階段的安全性內容權杖](../../../docs/framework/wcf/feature-details/how-to-create-a-security-context-token-for-a-secure-session.md)。 或者，您可以停用安全工作階段。 當您使用[ \<wsHttpBinding >](../../../docs/framework/configure-apps/file-schema/wcf/wshttpbinding.md)繫結，您可以設定`establishSecurityContext`屬性`false`停用安全工作階段。 如果要為其他繫結停用安全工作階段，必須建立自訂繫結。 如需有關建立自訂繫結的詳細資料，請參閱 [How to: Create a Custom Binding Using the SecurityBindingElement](../../../docs/framework/wcf/feature-details/how-to-create-a-custom-binding-using-the-securitybindingelement.md)。 在您套用其中任何一種選項之前，必須瞭解您應用程式的安全性需求。  
+ 第二個要求會失敗的主要原因有兩個：(1) 工作階段已逾時或 (2) 主控服務的 Web 伺服器已回收。 第一種情況中，在服務逾時之前工作階段都是有效的。當服務未在服務繫結中指定的時間內收到來自用戶端的要求時 (<xref:System.ServiceModel.Channels.Binding.ReceiveTimeout%2A>)，服務會終止安全性工作階段。 後續的用戶端訊息會造成 <xref:System.ServiceModel.Security.MessageSecurityException>。 用戶端必須以此服務重新建立安全工作階段，以傳送未來的訊息或使用可設定狀態的安全性內容權杖。 可設定狀態的安全性內容權杖也允許安全工作階段存留已回收的 Web 伺服器。 [!INCLUDE[crabout](../../../includes/crabout-md.md)] 使用可設定狀態的安全性內容權杖，安全工作階段，請參閱[How to： 建立安全工作階段的安全性內容權杖](../../../docs/framework/wcf/feature-details/how-to-create-a-security-context-token-for-a-secure-session.md)。 或者，您可以停用安全工作階段。 當您使用[ \<wsHttpBinding >](../../../docs/framework/configure-apps/file-schema/wcf/wshttpbinding.md)繫結，您可以設定`establishSecurityContext`屬性`false`停用安全工作階段。 如果要為其他繫結停用安全工作階段，必須建立自訂繫結。 如需有關建立自訂繫結的詳細資料，請參閱 [How to: Create a Custom Binding Using the SecurityBindingElement](../../../docs/framework/wcf/feature-details/how-to-create-a-custom-binding-using-the-securitybindingelement.md)。 在您套用其中任何一種選項之前，必須瞭解您應用程式的安全性需求。  
   
 <a name="BKMK_q2"></a>   
 ## <a name="my-service-starts-to-reject-new-clients-after-about-10-clients-are-interacting-with-it-what-is-happening"></a>我的服務在與大約 10 個用戶端互動之後，開始拒絕新的用戶端。 這是為什麼？  
- 根據預設，服務同時只能有 10 個工作階段。 因此，如果服務繫結使用工作階段，服務會接受新用戶端連線直到到達該數目，然後拒絕新用戶端連線，直到其中一個目前工作階段結束為止。 您可以使用許多種方法來支援多個用戶端。 如果您的服務不需要工作階段，請勿使用工作階段繫結 ([!INCLUDE[crdefault](../../../includes/crdefault-md.md)] [使用工作階段](../../../docs/framework/wcf/using-sessions.md)。)另一種選擇是將 <xref:System.ServiceModel.Description.ServiceThrottlingBehavior.MaxConcurrentSessions%2A> 屬性的值變更為適合您情況的數目，以增加工作階段限制。  
+ 根據預設，服務同時只能有 10 個工作階段。 因此，如果服務繫結使用工作階段，服務會接受新用戶端連線直到到達該數目，然後拒絕新用戶端連線，直到其中一個目前工作階段結束為止。 您可以使用許多種方法來支援多個用戶端。 如果您的服務不需要工作階段，請勿使用工作階段繫結 (如需詳細資訊，請參閱[Sessions<](../../../docs/framework/wcf/using-sessions.md)。)另一種選擇是將 <xref:System.ServiceModel.Description.ServiceThrottlingBehavior.MaxConcurrentSessions%2A> 屬性的值變更為適合您情況的數目，以增加工作階段限制。  
   
 <a name="BKMK_q3"></a>   
 ## <a name="can-i-load-my-service-configuration-from-somewhere-other-than-the-wcf-applications-configuration-file"></a>我可以從 WCF 應用程式的組態檔以外的地方載入我的服務組態嗎？  
@@ -159,13 +161,13 @@ public class MyServiceHost : ServiceHost
   
 -   無法依存以標準方式序列化的例外狀況。 有些 (例如 <xref:System.Security.SecurityException>) 可能完全不能序列化。  
   
--   對用戶端公開內部實作詳細資料。 [!INCLUDE[crdefault](../../../includes/crdefault-md.md)][指定與處理合約和服務中的錯誤](../../../docs/framework/wcf/specifying-and-handling-faults-in-contracts-and-services.md)。  
+-   對用戶端公開內部實作詳細資料。 如需詳細資訊，請參閱[指定與處理合約和服務中的錯誤](../../../docs/framework/wcf/specifying-and-handling-faults-in-contracts-and-services.md)。  
   
  然而，如果您是對應用程式進行偵錯，可以使用 <xref:System.ServiceModel.Description.ServiceDebugBehavior> 類別來序列化例外狀況資訊，並傳回用戶端。  
   
 <a name="BKMK_q6"></a>   
 ## <a name="it-seems-like-one-way-and-request-reply-operations-return-at-roughly-the-same-speed-when-the-reply-contains-no-data-whats-happening"></a>當回覆未包含任何資料時，單向和要求與回覆作業似乎會以大約相同的速度傳回。 這是為什麼？  
- 將作業指定為單向只是表示作業合約接受輸入訊息，而沒有傳回輸出訊息。 在 [!INCLUDE[indigo2](../../../includes/indigo2-md.md)]中，當傳出資料已寫入網路或擲回例外狀況時，所有用戶端叫用都會傳回。 單向作業的運作方式相同，如果找不到服務可以擲回，或如果服務尚未準備好從網路接受資料便會封鎖。 通常在 [!INCLUDE[indigo2](../../../includes/indigo2-md.md)]中，這會造成單向呼叫比要求與回覆更快傳回用戶端，但是任何減慢傳出資料在網路上的傳送速度的情況，都會減慢單向作業以及要求與回覆作業。 [!INCLUDE[crdefault](../../../includes/crdefault-md.md)][單向服務](../../../docs/framework/wcf/feature-details/one-way-services.md)和[使用 WCF 用戶端存取服務](../../../docs/framework/wcf/feature-details/accessing-services-using-a-client.md)。  
+ 將作業指定為單向只是表示作業合約接受輸入訊息，而沒有傳回輸出訊息。 在 [!INCLUDE[indigo2](../../../includes/indigo2-md.md)]中，當傳出資料已寫入網路或擲回例外狀況時，所有用戶端叫用都會傳回。 單向作業的運作方式相同，如果找不到服務可以擲回，或如果服務尚未準備好從網路接受資料便會封鎖。 通常在 [!INCLUDE[indigo2](../../../includes/indigo2-md.md)]中，這會造成單向呼叫比要求與回覆更快傳回用戶端，但是任何減慢傳出資料在網路上的傳送速度的情況，都會減慢單向作業以及要求與回覆作業。 如需詳細資訊，請參閱[單向服務](../../../docs/framework/wcf/feature-details/one-way-services.md)和[使用 WCF 用戶端存取服務](../../../docs/framework/wcf/feature-details/accessing-services-using-a-client.md)。  
   
 <a name="BKMK_q77"></a>   
 ## <a name="im-using-an-x509-certificate-with-my-service-and-i-get-a-systemsecuritycryptographycryptographicexception-whats-happening"></a>我使用 X.509 憑證搭配我的服務，然後得到 System.Security.Cryptography.CryptographicException。 發生什麼事？  
@@ -260,5 +262,5 @@ public string Echo(string input)
 }  
 ```  
   
-## <a name="see-also"></a>請參閱  
+## <a name="see-also"></a>另請參閱  
  [偵錯 Windows 驗證錯誤](../../../docs/framework/wcf/feature-details/debugging-windows-authentication-errors.md)

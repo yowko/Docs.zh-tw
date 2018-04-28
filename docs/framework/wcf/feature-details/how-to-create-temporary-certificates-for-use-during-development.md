@@ -1,27 +1,29 @@
 ---
-title: "HOW TO：建立開發時要使用的暫時憑證"
-ms.custom: 
+title: HOW TO：建立開發時要使用的暫時憑證
+ms.custom: ''
 ms.date: 03/30/2017
 ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.technology: dotnet-clr
-ms.tgt_pltfrm: 
+ms.reviewer: ''
+ms.suite: ''
+ms.technology:
+- dotnet-clr
+ms.tgt_pltfrm: ''
 ms.topic: article
 helpviewer_keywords:
 - certificates [WCF], creating temporary certificates
 - temporary certificates [WCF]
 ms.assetid: bc5f6637-5513-4d27-99bb-51aad7741e4a
-caps.latest.revision: "14"
+caps.latest.revision: 14
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.workload: dotnet
-ms.openlocfilehash: 4d6c955c3498c830403f628b4805611fadc44d68
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.workload:
+- dotnet
+ms.openlocfilehash: ccbc8c6fa638c674dea28c312b2dedbc9d41968a
+ms.sourcegitcommit: 03ee570f6f528a7d23a4221dcb26a9498edbdf8c
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 04/28/2018
 ---
 # <a name="how-to-create-temporary-certificates-for-use-during-development"></a>HOW TO：建立開發時要使用的暫時憑證
 當使用 [!INCLUDE[indigo1](../../../../includes/indigo1-md.md)]開發安全的服務或用戶端時，常常必須提供要用來做為認證的 X.509 憑證。 憑證通常是憑證鏈結的一部分，在電腦的 [受信任的根憑證授權單位] 存放區中有根授權。 具有憑證鏈結可讓您設定一組憑證的範圍，其中根授權通常來自您的組織或企業單位。 如果要在開發期間進行模擬，您可以建立兩種憑證以滿足安全性需求。 第一種是放在 [受信任的根憑證授權單位] 存放區中的自我簽署憑證，而第二種憑證是從第一種建立的，並放在個人存放區或本機位置，或目前使用者位置的個人存放區。 本主題將逐步帶領您使用由 [SDK 所提供的](http://go.microsoft.com/fwlink/?LinkId=248185)憑證建立工具 (MakeCert.exe) [!INCLUDE[dnprdnshort](../../../../includes/dnprdnshort-md.md)] 來建立這兩種憑證。  
@@ -37,7 +39,7 @@ ms.lasthandoff: 12/22/2017
   
 1.  請使用 MakeCert.exe 工具搭配下列參數：  
   
-    1.  `-n` `subjectName`. 指定主體名稱。 慣例是使用 "CN = " 做為主體名稱的前置詞，代表「一般名稱」。  
+    1.  `-n` `subjectName`。 指定主體名稱。 慣例是使用 "CN = " 做為主體名稱的前置詞，代表「一般名稱」。  
   
     2.  `-r`. 指定憑證為自我簽署的。  
   
@@ -74,7 +76,7 @@ ms.lasthandoff: 12/22/2017
   
 #### <a name="to-install-a-self-signed-certificate-in-the-trusted-root-certification-authorities"></a>在受信任的根憑證授權單位中安裝自我簽署憑證  
   
-1.  請開啟憑證嵌入式管理單元。 [!INCLUDE[crdefault](../../../../includes/crdefault-md.md)][如何： 檢視憑證 MMC 嵌入式管理單元](../../../../docs/framework/wcf/feature-details/how-to-view-certificates-with-the-mmc-snap-in.md)。  
+1.  請開啟憑證嵌入式管理單元。 如需詳細資訊，請參閱[How to： 使用 MMC 嵌入式管理單元檢視憑證](../../../../docs/framework/wcf/feature-details/how-to-view-certificates-with-the-mmc-snap-in.md)。  
   
 2.  開啟資料夾以儲存憑證，可以是 [ **本機電腦** ] 或 [ **目前使用者**]。  
   
@@ -122,7 +124,7 @@ ms.lasthandoff: 12/22/2017
 ## <a name="net-framework-security"></a>.NET Framework 安全性  
  請用滑鼠右鍵按一下憑證，然後按一下 [ **刪除** ]，以確定從 [ **受信任的根憑證授權單位** ] 和 [ **個人**] 資料夾中刪除暫時的根授權憑證。  
   
-## <a name="see-also"></a>請參閱  
+## <a name="see-also"></a>另請參閱  
  [使用憑證](../../../../docs/framework/wcf/feature-details/working-with-certificates.md)  
  [如何：使用 MMC 嵌入式管理單元來檢視憑證](../../../../docs/framework/wcf/feature-details/how-to-view-certificates-with-the-mmc-snap-in.md)  
  [保護服務和用戶端的安全](../../../../docs/framework/wcf/feature-details/securing-services-and-clients.md)

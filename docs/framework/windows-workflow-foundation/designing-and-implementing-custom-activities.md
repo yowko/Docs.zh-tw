@@ -1,29 +1,30 @@
 ---
-title: "設計和實作自訂活動"
-ms.custom: 
+title: 設計和實作自訂活動
+ms.custom: ''
 ms.date: 03/30/2017
 ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.tgt_pltfrm: 
+ms.reviewer: ''
+ms.suite: ''
+ms.tgt_pltfrm: ''
 ms.topic: article
 ms.assetid: 4e30e63d-6e33-4842-a7a4-ce807cef1fad
-caps.latest.revision: "22"
+caps.latest.revision: 22
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.workload: dotnet
-ms.openlocfilehash: d162635a82027d1aaa46545dabad3e103d0f339c
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.workload:
+- dotnet
+ms.openlocfilehash: bafa54764ba8b02dd05cadd65c3f3cbc64c4b081
+ms.sourcegitcommit: 03ee570f6f528a7d23a4221dcb26a9498edbdf8c
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 04/28/2018
 ---
 # <a name="designing-and-implementing-custom-activities"></a>設計和實作自訂活動
 [!INCLUDE[netfx_current_long](../../../includes/netfx-current-long-md.md)] 中的自訂活動建立方法，是將系統提供的活動組合到複合活動中，或是建立衍生自 <xref:System.Activities.CodeActivity>、<xref:System.Activities.AsyncCodeActivity> 或 <xref:System.Activities.NativeActivity> 的新型別。 本節描述如何以上述兩種方法建立自訂活動。  
   
 > [!IMPORTANT]
->  在工作流程設計工具中，自訂活動預設會顯示成附有活動名稱的簡單矩形。 若要在工作流程設計工具中提供自訂的視覺化活動表示形式，您還必須建立自訂的設計工具。 [!INCLUDE[crdefault](../../../includes/crdefault-md.md)][使用自訂活動設計工具和範本](../../../docs/framework/windows-workflow-foundation/using-custom-activity-designers-and-templates.md)。  
+>  在工作流程設計工具中，自訂活動預設會顯示成附有活動名稱的簡單矩形。 若要在工作流程設計工具中提供自訂的視覺化活動表示形式，您還必須建立自訂的設計工具。 如需詳細資訊，請參閱[使用自訂活動設計工具和範本](../../../docs/framework/windows-workflow-foundation/using-custom-activity-designers-and-templates.md)。  
   
 ## <a name="in-this-section"></a>本節內容  
  [活動撰寫選項](../../../docs/framework/windows-workflow-foundation/activity-authoring-options-in-wf.md)  

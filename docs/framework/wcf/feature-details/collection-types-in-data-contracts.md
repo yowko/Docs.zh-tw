@@ -17,17 +17,17 @@ helpviewer_keywords:
 - data contracts [WCF], collection types
 - collection types [WCF]
 ms.assetid: 9b45b28e-0a82-4ea3-8c33-ec0094aff9d5
-caps.latest.revision: ''
+caps.latest.revision: 19
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
 ms.workload:
 - dotnet
-ms.openlocfilehash: e74bd7d90d5653890fd5cf48e76c81d0227c6172
-ms.sourcegitcommit: c883637b41ee028786edceece4fa872939d2e64c
+ms.openlocfilehash: 528c1661b99ff5f50d42bb7a42371c302e335c90
+ms.sourcegitcommit: 03ee570f6f528a7d23a4221dcb26a9498edbdf8c
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 03/26/2018
+ms.lasthandoff: 04/28/2018
 ---
 # <a name="collection-types-in-data-contracts"></a>資料合約中的集合型別
 「 *集合* 」(Collection) 是特定型別之項目的清單。 在 [!INCLUDE[dnprdnshort](../../../../includes/dnprdnshort-md.md)]中，可以使用陣列或其他多種型別 (泛型清單、泛型 <xref:System.ComponentModel.BindingList%601>, <xref:System.Collections.Specialized.StringCollection>或 <xref:System.Collections.ArrayList>) 來表示這類清單。 例如，集合可能含有特定「客戶」的地址清單。 不論實際型別為何，這些集合統稱為「 *清單集合*」(List Collection)。  
@@ -40,7 +40,7 @@ ms.lasthandoff: 03/26/2018
   
  關於集合型別的其他需求，例如包含稱為 `Add` 的方法和預設建構函式 (Constructor)，都會在下列各節中詳細討論。 這樣便可確保集合型別能夠序列化與還原序列化。 這表示不直接支援某些集合，例如泛型 <xref:System.Collections.ObjectModel.ReadOnlyCollection%601> (因為沒有預設建構函式)。 不過，如需規避這些限制的詳細資訊，請參閱本主題稍後的「使用集合介面型別和唯讀集合」一節。  
   
- 包含在集合中的型別必須是資料合約類型，否則必須是可序列化的型別。 [!INCLUDE[crdefault](../../../../includes/crdefault-md.md)] [資料合約序列化程式所支援的型別](../../../../docs/framework/wcf/feature-details/types-supported-by-the-data-contract-serializer.md)。  
+ 包含在集合中的型別必須是資料合約類型，否則必須是可序列化的型別。 如需詳細資訊，請參閱[資料合約序列化程式所支援的型別](../../../../docs/framework/wcf/feature-details/types-supported-by-the-data-contract-serializer.md)。  
   
  [!INCLUDE[crabout](../../../../includes/crabout-md.md)] 被視為有效集合的條件以及如何序列化集合的詳細資訊，請參閱本主題「進階集合規則」一節中有關序列化集合的資訊。  
   
@@ -152,7 +152,7 @@ ms.lasthandoff: 03/26/2018
 </cust_list>  
 ```  
   
- [!INCLUDE[crdefault](../../../../includes/crdefault-md.md)] 本主題稍後的「進階集合規則」一節。  
+ 如需詳細資訊，請參閱本主題稍後的 「 進階集合規則 」 一節。  
   
 ### <a name="customizing-the-repeating-element-name-in-list-collections"></a>自訂清單集合中的重複項目名稱  
  清單集合包含一些重複的項目。 通常，每個重複項目都會以項目表示，該項目會根據集合內所包含型別的資料合約名稱來命名。  

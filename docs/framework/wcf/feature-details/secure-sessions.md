@@ -1,30 +1,32 @@
 ---
-title: "安全工作階段"
-ms.custom: 
+title: 安全工作階段
+ms.custom: ''
 ms.date: 03/30/2017
 ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.technology: dotnet-clr
-ms.tgt_pltfrm: 
+ms.reviewer: ''
+ms.suite: ''
+ms.technology:
+- dotnet-clr
+ms.tgt_pltfrm: ''
 ms.topic: article
 ms.assetid: 7b50602f-d7b5-42e9-8e92-1f0413df0d8b
-caps.latest.revision: "14"
+caps.latest.revision: 14
 author: BrucePerlerMS
 ms.author: bruceper
 manager: mbaldwin
-ms.workload: dotnet
-ms.openlocfilehash: 65a54c06efffb2e3167c77bd109a50a31b971add
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.workload:
+- dotnet
+ms.openlocfilehash: 9506e791cf4da947eaadaff1669e5f2f975431c8
+ms.sourcegitcommit: 03ee570f6f528a7d23a4221dcb26a9498edbdf8c
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 04/28/2018
 ---
 # <a name="secure-sessions"></a>安全工作階段
-[!INCLUDE[indigo1](../../../../includes/indigo1-md.md)] 其中一項功能，就是保證按照訊息傳送時的順序來接收訊息的可靠工作階段。 本節中的主題將就建立可靠工作階段時要考量的安全性影響提供說明。 [!INCLUDE[crabout](../../../../includes/crabout-md.md)]可靠工作階段，請參閱[Sessions<](../../../../docs/framework/wcf/using-sessions.md)。  
+[!INCLUDE[indigo1](../../../../includes/indigo1-md.md)] 其中一項功能，就是保證按照訊息傳送時的順序來接收訊息的可靠工作階段。 本節中的主題將就建立可靠工作階段時要考量的安全性影響提供說明。 [!INCLUDE[crabout](../../../../includes/crabout-md.md)] 可靠工作階段，請參閱[Sessions<](../../../../docs/framework/wcf/using-sessions.md)。  
   
 > [!NOTE]
->  當 Windows XP 需要模擬時，請使用不包含具狀態之安全性內容權杖 (SCT) 的安全工作階段。 當可設定狀態的 SCT 與模擬一起使用時，就會擲回 <xref:System.InvalidOperationException>。 [!INCLUDE[crdefault](../../../../includes/crdefault-md.md)][不支援的案例](../../../../docs/framework/wcf/feature-details/unsupported-scenarios.md)。  
+>  當 Windows XP 需要模擬時，請使用不包含具狀態之安全性內容權杖 (SCT) 的安全工作階段。 當可設定狀態的 SCT 與模擬一起使用時，就會擲回 <xref:System.InvalidOperationException>。 如需詳細資訊，請參閱[不支援的案例](../../../../docs/framework/wcf/feature-details/unsupported-scenarios.md)。  
   
 ## <a name="in-this-section"></a>本節內容  
   
@@ -45,7 +47,7 @@ ms.lasthandoff: 12/22/2017
   
  [設計與實作服務](../../../../docs/framework/wcf/designing-and-implementing-services.md)  
   
-## <a name="see-also"></a>請參閱  
+## <a name="see-also"></a>另請參閱  
  [如何：啟用訊息偵測重送攻擊](../../../../docs/framework/wcf/feature-details/how-to-enable-message-replay-detection.md)  
  [重新執行攻擊](../../../../docs/framework/wcf/feature-details/replay-attacks.md)  
  [如何：建立需要工作階段的服務](../../../../docs/framework/wcf/feature-details/how-to-create-a-service-that-requires-sessions.md)

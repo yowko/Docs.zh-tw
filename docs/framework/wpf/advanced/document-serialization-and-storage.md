@@ -20,14 +20,14 @@ ms.author: dotnetcontent
 manager: wpickett
 ms.workload:
 - dotnet
-ms.openlocfilehash: e65a20323e3797d6d56ac7941e4ac9aeeb0ed473
-ms.sourcegitcommit: 86adcc06e35390f13c1e372c36d2e044f1fc31ef
+ms.openlocfilehash: e6b1cc63b5118280a0a06fe63961c6e54792ed09
+ms.sourcegitcommit: 03ee570f6f528a7d23a4221dcb26a9498edbdf8c
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/26/2018
+ms.lasthandoff: 04/28/2018
 ---
 # <a name="document-serialization-and-storage"></a>文件序列化與儲存
-Microsoft.NET Framework 提供一種強大的環境建立及顯示高品質的文件。  增強的功能包括同時支援固定文件和非固定格式文件、進階檢視控制項，再加上強大的 2D 和 3D 圖形功能，可將 [!INCLUDE[TLA2#tla_winfx](../../../../includes/tla2sharptla-winfx-md.md)] 應用程式帶往更高品質和使用者體驗的全新境界。  [!INCLUDE[TLA2#tla_winfx](../../../../includes/tla2sharptla-winfx-md.md)] 的一項重要功能，就是能夠彈性地管理在記憶體內部表示的文件，而幾乎所有應用程式都必須能夠有效率地將文件儲存至資料存放區，以及從資料存放區載入文件。  將文件從記憶體內部表示轉換成外部資料存放區的程序，稱為序列化。  讀取資料存放區並重新建立原始記憶體內部執行個體的反向程序，則稱為還原序列化。  
+Microsoft.NET Framework 提供一種強大的環境建立及顯示高品質的文件。  增強的功能支援固定文件和非固定格式文件，進階檢視控制項，結合功能強大的 2D 和 3D 圖形的功能，可將新的層級的品質和使用者經驗的.NET Framework 應用程式。  能夠彈性地管理文件的記憶體中表示法是.NET Framework 的主要功能，能夠有效率地儲存和載入資料存放區都需要的幾乎所有應用程式。  將文件從記憶體內部表示轉換成外部資料存放區的程序，稱為序列化。  讀取資料存放區並重新建立原始記憶體內部執行個體的反向程序，則稱為還原序列化。  
   
  
   
@@ -35,7 +35,7 @@ Microsoft.NET Framework 提供一種強大的環境建立及顯示高品質的�
 ## <a name="about-document-serialization"></a>關於文件序列化  
  在理想情況下，與記憶體之間進行的文件序列化和還原序列化程序，對於應用程式而言是透明的。  應用程式會呼叫序列化程式的 "write" 方法來儲存文件，而還原序列化程式的 "read" 方法則會存取資料存放區並在記憶體中重新建立原始執行個體。  只要序列化和還原序列化程序會將文件重新建立成原始格式，資料是以哪種格式儲存對應用程式而言通常並不重要。  
   
- 應用程式通常會提供多種序列化選項，以供使用者將文件儲存到不同媒體或不同格式。  例如，應用程式可能會提供 [另存新檔] 選項，以將文件儲存至磁碟檔案、資料庫或 Web 服務。  同樣地，不同序列化程式可能會將文件儲存成不同格式，例如 HTML、RTF、XML、XPS 或其他協力廠商格式。  對應用程式而言，序列化定義了一個介面，可將每個特定序列化程式實作時的儲存媒體詳細資料加以隔離。  除了將封裝儲存體的詳細資料的優點[!INCLUDE[TLA2#tla_winfx](../../../../includes/tla2sharptla-winfx-md.md)] <xref:System.Windows.Documents.Serialization> [!INCLUDE[TLA2#tla_api#plural](../../../../includes/tla2sharptla-apisharpplural-md.md)]提供數種重要的功能。  
+ 應用程式通常會提供多種序列化選項，以供使用者將文件儲存到不同媒體或不同格式。  例如，應用程式可能會提供 [另存新檔] 選項，以將文件儲存至磁碟檔案、資料庫或 Web 服務。  同樣地，不同序列化程式可能會將文件儲存成不同格式，例如 HTML、RTF、XML、XPS 或其他協力廠商格式。  對應用程式而言，序列化定義了一個介面，可將每個特定序列化程式實作時的儲存媒體詳細資料加以隔離。  除了將封裝儲存體的詳細資料，.NET Framework 的優點<xref:System.Windows.Documents.Serialization>[!INCLUDE[TLA2#tla_api#plural](../../../../includes/tla2sharptla-apisharpplural-md.md)]提供數種重要的功能。  
   
 ### <a name="features-of-net-framework-30-document-serializers"></a>.NET Framework 3.0 文件序列化程式的功能  
   
@@ -45,7 +45,7 @@ Microsoft.NET Framework 提供一種強大的環境建立及顯示高品質的�
   
 -   透過增強的功能支援外掛程式序列化程式：  
   
-    -   供所有 [!INCLUDE[TLA2#tla_winfx](../../../../includes/tla2sharptla-winfx-md.md)] 應用程式使用的系統範圍存取權。  
+    -   所有.NET Framework 應用程式所使用的整個系統的存取權。  
   
     -   輕鬆探索應用程式外掛程式。  
   
@@ -63,7 +63,7 @@ Microsoft.NET Framework 提供一種強大的環境建立及顯示高品質的�
  外掛程式序列化程式可以協助應用程式開發人員擴充新的儲存設計和檔案格式，而不需要針對建置階段可能出現的每種格式直接撰寫程式碼。  外掛程式序列化程式同時也能夠提供協力廠商開發人員標準化的方法，來針對自訂或專屬檔案格式部署、安裝和更新可供系統存取的外掛程式。  
   
 ### <a name="using-a-plug-in-serializer"></a>使用外掛程式序列化程式  
- 外掛程式序列化程式很容易使用。  <xref:System.Windows.Documents.Serialization.SerializerProvider>類別列舉<xref:System.Windows.Documents.Serialization.SerializerDescriptor>物件的系統上的每個外掛程式安裝。  <xref:System.Windows.Documents.Serialization.SerializerDescriptor.IsLoadable%2A>屬性篩選依據目前的設定已安裝的外掛程式，並確認序列化程式可以載入，且應用程式使用。  <xref:System.Windows.Documents.Serialization.SerializerDescriptor>也提供其他屬性，例如<xref:System.Windows.Documents.Serialization.SerializerDescriptor.DisplayName%2A>和<xref:System.Windows.Documents.Serialization.SerializerDescriptor.DefaultFileExtension%2A>，應用程式可以用來提示使用者選取可用的輸出格式的序列化程式。  [!INCLUDE[TLA2#tla_xps](../../../../includes/tla2sharptla-xps-md.md)] 的預設外掛程式序列化程式會隨 [!INCLUDE[TLA2#tla_winfx](../../../../includes/tla2sharptla-winfx-md.md)] 提供，而且一律會被列舉。  在使用者選取的輸出格式之後,<xref:System.Windows.Documents.Serialization.SerializerProvider.CreateSerializerWriter%2A>方法用來建立<xref:System.Windows.Documents.Serialization.SerializerWriter>特定格式。  <xref:System.Windows.Documents.Serialization.SerializerWriter>.<xref:System.Windows.Documents.Serialization.SerializerWriter.Write%2A> 然後可以呼叫方法來輸出文件資料流資料存放區。  
+ 外掛程式序列化程式很容易使用。  <xref:System.Windows.Documents.Serialization.SerializerProvider>類別列舉<xref:System.Windows.Documents.Serialization.SerializerDescriptor>物件的系統上的每個外掛程式安裝。  <xref:System.Windows.Documents.Serialization.SerializerDescriptor.IsLoadable%2A>屬性篩選依據目前的設定已安裝的外掛程式，並確認序列化程式可以載入，且應用程式使用。  <xref:System.Windows.Documents.Serialization.SerializerDescriptor>也提供其他屬性，例如<xref:System.Windows.Documents.Serialization.SerializerDescriptor.DisplayName%2A>和<xref:System.Windows.Documents.Serialization.SerializerDescriptor.DefaultFileExtension%2A>，應用程式可以用來提示使用者選取可用的輸出格式的序列化程式。  預設外掛程式序列化程式[!INCLUDE[TLA2#tla_xps](../../../../includes/tla2sharptla-xps-md.md)]隨附.NET Framework，並且會一律列舉。  在使用者選取的輸出格式之後,<xref:System.Windows.Documents.Serialization.SerializerProvider.CreateSerializerWriter%2A>方法用來建立<xref:System.Windows.Documents.Serialization.SerializerWriter>特定格式。  <xref:System.Windows.Documents.Serialization.SerializerWriter>.<xref:System.Windows.Documents.Serialization.SerializerWriter.Write%2A> 然後可以呼叫方法來輸出文件資料流資料存放區。  
   
  下列範例說明使用的應用程式<xref:System.Windows.Documents.Serialization.SerializerProvider>"PlugInFileFilter"屬性中的方法。  PlugInFileFilter 列舉已安裝的外掛程式和組建的可用檔案選項使用的篩選條件字串<xref:Microsoft.Win32.SaveFileDialog>。  
   
@@ -75,14 +75,14 @@ Microsoft.NET Framework 提供一種強大的環境建立及顯示高品質的�
   
 <a name="InstallingPluginSerializers"></a>   
 ### <a name="installing-plug-in-serializers"></a>安裝外掛程式序列化程式  
- <xref:System.Windows.Documents.Serialization.SerializerProvider>類別會提供外掛程式序列化程式探索及存取的上層應用程式介面。  <xref:System.Windows.Documents.Serialization.SerializerProvider> 找出並提供應用程式已安裝且可存取的系統上的序列化程式的清單。  已安裝之序列化程式的內容是透過登錄設定定義。  外掛程式序列化程式可以使用新增至登錄<xref:System.Windows.Documents.Serialization.SerializerProvider.RegisterSerializer%2A>方法; 或者如果[!INCLUDE[TLA2#tla_winfx](../../../../includes/tla2sharptla-winfx-md.md)]尚未安裝，安裝外掛程式指令碼可以直接設定登錄值本身。  <xref:System.Windows.Documents.Serialization.SerializerProvider.UnregisterSerializer%2A>方法可用來移除先前安裝外掛程式，或登錄設定可以來重設同樣解除安裝指令碼。  
+ <xref:System.Windows.Documents.Serialization.SerializerProvider>類別會提供外掛程式序列化程式探索及存取的上層應用程式介面。  <xref:System.Windows.Documents.Serialization.SerializerProvider> 找出並提供應用程式已安裝且可存取的系統上的序列化程式的清單。  已安裝之序列化程式的內容是透過登錄設定定義。  外掛程式序列化程式可以使用新增至登錄<xref:System.Windows.Documents.Serialization.SerializerProvider.RegisterSerializer%2A>方法; 或如果不是.NET Framework 安裝，安裝外掛程式指令碼可以直接設定登錄值本身。  <xref:System.Windows.Documents.Serialization.SerializerProvider.UnregisterSerializer%2A>方法可用來移除先前安裝外掛程式，或登錄設定可以來重設同樣解除安裝指令碼。  
   
 ### <a name="creating-a-plug-in-serializer"></a>建立外掛程式序列化程式  
  外掛程式序列化程式和連結的序列化程式使用已公開的相同公用方法和事件，而且同樣都能設計成以同步或非同步方式運作。  若要建立外掛程式序列化程式，通常要遵循三個基本步驟：  
   
 1.  首先將序列化程式實作為連結的序列化程式並加以偵錯。  一開始就建立已編譯的序列化程式並將之直接連結到測試應用程式中，將可以完整存取中斷點和其他有助於進行測試的偵錯服務。  
   
-2.  序列化程式會經過完整測試之後，<xref:System.Windows.Documents.Serialization.ISerializerFactory>介面會新增至建立外掛程式。  <xref:System.Windows.Documents.Serialization.ISerializerFactory>介面可讓您完整存取所有[!INCLUDE[TLA2#tla_winfx](../../../../includes/tla2sharptla-winfx-md.md)]物件，其中包含邏輯樹狀目錄中，<xref:System.Windows.UIElement>物件<xref:System.Windows.Documents.IDocumentPaginatorSource>，和<xref:System.Windows.Media.Visual>項目。  此外<xref:System.Windows.Documents.Serialization.ISerializerFactory>提供相同的同步和非同步方法和連結的序列化程式所使用的事件。  由於大型文件的輸出可能很費時，因此建議使用非同步作業，以維持與使用者的良好互動，並提供 [取消] 選項以防資料存放區發生問題。  
+2.  序列化程式會經過完整測試之後，<xref:System.Windows.Documents.Serialization.ISerializerFactory>介面會新增至建立外掛程式。  <xref:System.Windows.Documents.Serialization.ISerializerFactory>介面可讓您完整存取所有的.NET Framework 物件包含邏輯樹狀目錄中，<xref:System.Windows.UIElement>物件<xref:System.Windows.Documents.IDocumentPaginatorSource>，和<xref:System.Windows.Media.Visual>項目。  此外<xref:System.Windows.Documents.Serialization.ISerializerFactory>提供相同的同步和非同步方法和連結的序列化程式所使用的事件。  由於大型文件的輸出可能很費時，因此建議使用非同步作業，以維持與使用者的良好互動，並提供 [取消] 選項以防資料存放區發生問題。  
   
 3.  建立外掛程式序列化程式之後，實作用於散發和安裝 (及解除安裝) 外掛程式的安裝指令碼 (請參閱上面的＜[安裝外掛程式序列化程式](#InstallingPluginSerializers)＞)。  
   

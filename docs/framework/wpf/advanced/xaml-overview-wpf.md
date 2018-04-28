@@ -33,11 +33,11 @@ ms.author: dotnetcontent
 manager: wpickett
 ms.workload:
 - dotnet
-ms.openlocfilehash: 87785d6bba58442a1a5ad27f5304aa63e16c1aa9
-ms.sourcegitcommit: 86adcc06e35390f13c1e372c36d2e044f1fc31ef
+ms.openlocfilehash: ec0c7645d4d6a1affe78e23a9498ea5f5f8d5235
+ms.sourcegitcommit: 03ee570f6f528a7d23a4221dcb26a9498edbdf8c
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/26/2018
+ms.lasthandoff: 04/28/2018
 ---
 # <a name="xaml-overview-wpf"></a>XAML 概觀 (WPF)
 本主題說明 XAML 語言的功能，並示範如何使用 XAML 撰寫 [!INCLUDE[TLA#tla_winclient](../../../../includes/tlasharptla-winclient-md.md)] 應用程式。 本主題特別針對以 [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] 實作的 XAML 進行描述。 就語言概念而言，XAML 本身涵蓋的範圍比 [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] 還要廣。  
@@ -46,7 +46,7 @@ ms.lasthandoff: 04/26/2018
   
 <a name="what_is_xaml"></a>   
 ## <a name="what-is-xaml"></a>何謂 XAML？  
- XAML 是一種宣告式的標記語言。 XAML 套用至 [!INCLUDE[TLA2#tla_winfx](../../../../includes/tla2sharptla-winfx-md.md)] 程式撰寫模型時，可簡化 [!INCLUDE[TLA2#tla_winfx](../../../../includes/tla2sharptla-winfx-md.md)] 應用程式的 [!INCLUDE[TLA2#tla_ui](../../../../includes/tla2sharptla-ui-md.md)] 建立。 您可以在宣告式 XAML 標記中建立可見的 [!INCLUDE[TLA2#tla_ui](../../../../includes/tla2sharptla-ui-md.md)] 元素，然後藉由使用程式碼後置的檔案 (已透過部分類別定義而聯結至該標記)，區隔 [!INCLUDE[TLA2#tla_ui](../../../../includes/tla2sharptla-ui-md.md)] 定義和執行階段邏輯。 XAML 會以組件中定義的一組支援型別，直接表示物件的執行個體化。 這一點有別於其他大部分的標記語言，通常大部分的標記語言是與支援型別系統沒有此種直接關連的直譯式語言。 XAML 會啟用工作流程，其中個別獨立的人員因而能夠使用不同的工具，操作應用程式的 [!INCLUDE[TLA2#tla_ui](../../../../includes/tla2sharptla-ui-md.md)] 與邏輯。  
+ XAML 是一種宣告式的標記語言。 當套用至.NET Framework 程式設計模型，可簡化 XAML 建立[!INCLUDE[TLA2#tla_ui](../../../../includes/tla2sharptla-ui-md.md)].NET Framework 應用程式。 您可以在宣告式 XAML 標記中建立可見的 [!INCLUDE[TLA2#tla_ui](../../../../includes/tla2sharptla-ui-md.md)] 元素，然後藉由使用程式碼後置的檔案 (已透過部分類別定義而聯結至該標記)，區隔 [!INCLUDE[TLA2#tla_ui](../../../../includes/tla2sharptla-ui-md.md)] 定義和執行階段邏輯。 XAML 會以組件中定義的一組支援型別，直接表示物件的執行個體化。 這一點有別於其他大部分的標記語言，通常大部分的標記語言是與支援型別系統沒有此種直接關連的直譯式語言。 XAML 會啟用工作流程，其中個別獨立的人員因而能夠使用不同的工具，操作應用程式的 [!INCLUDE[TLA2#tla_ui](../../../../includes/tla2sharptla-ui-md.md)] 與邏輯。  
   
  XAML 檔案以文字表示時，則為通常有 `.xaml` 副檔名的 XML 檔案。 這些檔案可以採用任何 XML 編碼，但通常會採用 UTF-8 編碼。  
   

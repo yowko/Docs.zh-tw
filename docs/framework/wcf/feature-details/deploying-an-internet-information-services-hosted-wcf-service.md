@@ -1,24 +1,26 @@
 ---
-title: "部署已裝載網際網路資訊服務的 WCF 服務"
-ms.custom: 
+title: 部署已裝載網際網路資訊服務的 WCF 服務
+ms.custom: ''
 ms.date: 03/30/2017
 ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.technology: dotnet-clr
-ms.tgt_pltfrm: 
+ms.reviewer: ''
+ms.suite: ''
+ms.technology:
+- dotnet-clr
+ms.tgt_pltfrm: ''
 ms.topic: article
 ms.assetid: 04ebd329-3fbd-44c3-b3ab-1de3517e27d7
-caps.latest.revision: "30"
+caps.latest.revision: 30
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.workload: dotnet
-ms.openlocfilehash: 869e3b81e94e6efaa8d6cd9f4f021b52b6b43f48
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.workload:
+- dotnet
+ms.openlocfilehash: ca37e8b3f59875ed912c02d0a8237a040bf79518
+ms.sourcegitcommit: 03ee570f6f528a7d23a4221dcb26a9498edbdf8c
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 04/28/2018
 ---
 # <a name="deploying-an-internet-information-services-hosted-wcf-service"></a>部署已裝載網際網路資訊服務的 WCF 服務
 開發與部署由 Internet Information Services (IIS) 裝載的 [!INCLUDE[indigo1](../../../../includes/indigo1-md.md)] 服務包含下列工作：  
@@ -46,7 +48,7 @@ ms.lasthandoff: 12/22/2017
   
 -   Windows 7：  
   
- 最後，您必須確認 ASP.NET 設定成使用 .NET Framework 4 版。 您可以使用 -i 選項來執行 ASPNET_Regiis 工具，藉以達成此目的。 [!INCLUDE[crdefault](../../../../includes/crdefault-md.md)][ASP.NET IIS 註冊工具](http://go.microsoft.com/fwlink/?LinkId=201186)  
+ 最後，您必須確認 ASP.NET 設定成使用 .NET Framework 4 版。 您可以使用 -i 選項來執行 ASPNET_Regiis 工具，藉以達成此目的。 如需詳細資訊，請參閱[ASP.NET IIS 註冊工具](http://go.microsoft.com/fwlink/?LinkId=201186)  
   
 ## <a name="create-a-new-iis-application-or-reuse-an-existing-aspnet-application"></a>建立新的 IIS 應用程式或是重複使用現有的 ASP.NET 應用程式  
  IIS 裝載的 [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] 服務必須駐留在 IIS 應用程式裡面。 您可以建立新的 IIS 應用程式來專門裝載 [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] 服務。 或者，您可以將 [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] 服務部署到已經裝載 [!INCLUDE[vstecasplong](../../../../includes/vstecasplong-md.md)] 內容 (例如 .aspx 網頁和 ASP.NET Web 服務 [ASMX]) 的現有應用程式上。 [!INCLUDE[crabout](../../../../includes/crabout-md.md)] 這些選項的詳細資訊，請參閱 [WCF Services and ASP.NET](../../../../docs/framework/wcf/feature-details/wcf-services-and-aspnet.md)。  
@@ -89,21 +91,21 @@ new ServiceHost( typeof( MyNamespace.MyServiceImplementationTypeName ) );
 -   主控應用程式[!INCLUDE[indigo2](../../../../includes/indigo2-md.md)]IIS 外部的服務可以控制所傳遞的基底的一組位址的 Uri 來裝載的服務的基底位址<xref:System.ServiceModel.ServiceHost>建構函式或藉由提供[\<主機 >](../../../../docs/framework/configure-apps/file-schema/wcf/host.md)服務組態中的項目。 IIS 所裝載的服務無法控制自己的基底位址；IIS 裝載服務的基底位址就是所屬 .svc 檔案的位址。  
   
 ### <a name="endpoint-addresses-for-iis-hosted-services"></a>IIS 裝載服務的端點位址  
- 透過 IIS 裝載時，端點位址一律視為相對於 .svc 檔案 (用來代表服務) 的位址。 例如，如果 [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] 服務的起始位址為包含下列端點組態的 http://localhost/Application1/MyService.svc。  
+ 透過 IIS 裝載時，端點位址一律視為相對於 .svc 檔案 (用來代表服務) 的位址。 例如，如果的基底位址[!INCLUDE[indigo2](../../../../includes/indigo2-md.md)]服務http://localhost/Application1/MyService.svc使用下列端點組態。  
   
 ```xml  
 <endpoint address="anotherEndpoint" .../>  
 ```  
   
- 這會提供可以透過 "http://localhost/Application1/MyService.svc/anotherEndpoint" 抵達的端點。  
+ 這會提供的端點，可以在達到 「http://localhost/Application1/MyService.svc/anotherEndpoint"。  
   
- 同理，使用空字串當成相對位址的端點組態項目也會提供可透過 http://localhost/Application1/MyService.svc (亦即基底位址) 抵達的端點。  
+ 同樣地，端點組態項目，其使用空字串，與相對位址會提供可在連線的端點http://localhost/Application1/MyService.svc，這是基底地址。  
   
 ```xml  
 <endpoint address="" ... />  
 ```  
   
- 請務必針對 IIS 裝載服務端點使用相對端點位址。 如果端點位址並未指向 IIS 應用程式 (負責裝載會公開端點的服務)，則提供完整的端點位址 (例如，http://localhost/MyService.svc) 可能會在部署服務時導致錯誤。 針對裝載的服務使用相對端點位址可以避免這些潛在的衝突。  
+ 請務必針對 IIS 裝載服務端點使用相對端點位址。 提供完整的端點位址 (例如，http://localhost/MyService.svc)如果端點位址並未指向 IIS 應用程式裝載服務公開的端點可能導致服務部署中的錯誤。 針對裝載的服務使用相對端點位址可以避免這些潛在的衝突。  
   
 ### <a name="available-transports"></a>可用的傳輸  
  IIS 5.1 和[!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] 所裝載的 [!INCLUDE[iis601](../../../../includes/iis601-md.md)] 服務僅限於使用 HTTP 通訊。 在這些 IIS 平台上，設定裝載的服務來使用非 HTTP 繫結會在服務啟動期間導致錯誤。 在 [!INCLUDE[iisver](../../../../includes/iisver-md.md)]上，支援的傳輸包括 HTTP、Net.TCP、Net.Pipe、Net.MSMQ，和 msmq.formatname，以便提供與現有 MSMQ 應用程式的回溯相容性。  
@@ -113,7 +115,7 @@ new ServiceHost( typeof( MyNamespace.MyServiceImplementationTypeName ) );
   
  例如，設定為使用 HTTP 摘要式驗證的 [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] 端點必須駐留在同時設定為允許使用 HTTP 摘要式驗證的 IIS 虛擬目錄中。 如果 IIS 設定與 [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] 端點設定組合不相符，會在服務啟動期間導致錯誤。  
   
-## <a name="see-also"></a>請參閱  
+## <a name="see-also"></a>另請參閱  
  [在 Internet Information Services 中裝載](../../../../docs/framework/wcf/feature-details/hosting-in-internet-information-services.md)  
  [Internet Information Services 裝載最佳做法](../../../../docs/framework/wcf/feature-details/internet-information-services-hosting-best-practices.md)  
  [Windows Server App Fabric 裝載功能](http://go.microsoft.com/fwlink/?LinkId=201276)

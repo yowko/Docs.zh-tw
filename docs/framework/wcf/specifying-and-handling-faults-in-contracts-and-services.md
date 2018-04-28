@@ -1,28 +1,28 @@
 ---
-title: "指定與處理合約和服務中的錯誤"
-ms.custom: 
+title: 指定與處理合約和服務中的錯誤
+ms.custom: ''
 ms.date: 03/30/2017
 ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
+ms.reviewer: ''
+ms.suite: ''
 ms.technology:
 - dotnet-clr
-ms.tgt_pltfrm: 
+ms.tgt_pltfrm: ''
 ms.topic: article
 helpviewer_keywords:
 - handling faults [WCF]
 ms.assetid: a9696563-d404-4905-942d-1e0834c26dea
-caps.latest.revision: 
+caps.latest.revision: 22
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
 ms.workload:
 - dotnet
-ms.openlocfilehash: 57fc01b77379389ca4d86d241ec8f3d672b519b6
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.openlocfilehash: 70f8c1f89a5570f5b77eaba1bf72c42706d88947
+ms.sourcegitcommit: 03ee570f6f528a7d23a4221dcb26a9498edbdf8c
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 04/28/2018
 ---
 # <a name="specifying-and-handling-faults-in-contracts-and-services"></a>指定與處理合約和服務中的錯誤
 [!INCLUDE[indigo1](../../../includes/indigo1-md.md)] 應用程式會將 Managed 例外狀況物件對應至 SOAP 錯誤物件，並將 SOAP 錯誤物件對應至 Managed 例外狀況物件來處理錯誤情況。 本節中的主題討論如何設計合約以將錯誤條件公開為自訂 SOAP 錯誤、如何將此類錯誤當成服務實作的一部份傳回，以及用戶端如何捕捉此類錯誤。  
@@ -47,12 +47,12 @@ ms.lasthandoff: 12/22/2017
 ## <a name="map-exceptions-to-soap-faults"></a>將例外狀況對應至 SOAP 錯誤  
  建立可以處理錯誤情況的作業的第一步，就是決定用戶端應用程式在哪種情況下應該收到有關錯誤的通知。 某些作業會有專屬自身功能的一些錯誤情況。 例如，`PurchaseOrder` 作業可能會將特定資訊傳回給已經無法再初始化採購單的客戶。 在其他情況中 (例如 `Calculator` 服務)，更常見的 `MathFault` SOAP 錯誤也許能夠說明整個服務的所有錯誤情況。 一旦識別出您服務用戶端的錯誤情況，就可以建構自訂 SOAP 錯誤，並在引發 SOAP 錯誤的對應錯誤情況時將作業標示為傳回該 SOAP 錯誤。  
   
- [!INCLUDE[crabout](../../../includes/crabout-md.md)]此步驟的開發您的服務或用戶端，請參閱[定義與指定的錯誤](../../../docs/framework/wcf/defining-and-specifying-faults.md)。  
+ [!INCLUDE[crabout](../../../includes/crabout-md.md)] 此步驟的開發您的服務或用戶端，請參閱[定義與指定的錯誤](../../../docs/framework/wcf/defining-and-specifying-faults.md)。  
   
 ## <a name="clients-and-services-handle-soap-faults-as-exceptions"></a>用戶端與服務會將 SOAP 錯誤當成例外狀況來處理。  
  要在 [!INCLUDE[indigo2](../../../includes/indigo2-md.md)] 應用程式中成功處理錯誤的第一步，就是辨識作業錯誤情況、定義自訂 SOAP 錯誤，並將這些作業標示為傳回這些錯誤。 下一步則是適當地實作這些錯誤的傳送與接收作業。 一般來說，服務會傳送錯誤以通知用戶端應用程式有關錯誤的情況，但是雙工用戶端可以同時將 SOAP 錯誤傳送給服務。  
   
- [!INCLUDE[crdefault](../../../includes/crdefault-md.md)][傳送和接收錯誤](../../../docs/framework/wcf/sending-and-receiving-faults.md)。  
+ 如需詳細資訊，請參閱[傳送和接收錯誤](../../../docs/framework/wcf/sending-and-receiving-faults.md)。  
   
 ## <a name="undeclared-soap-faults-and-debugging"></a>未宣告的 SOAP 錯誤與偵錯  
  已宣告的 SOAP 錯誤非常適合用來建置穩固、可互通，與分散式應用程式。 但是，在某些情況下則適合透過服務 (或雙工用戶端) 來傳送未宣告的 SOAP 錯誤，此錯誤並未在該作業的 Web 服務描述語言 (WSDL) 中提及。 例如，當您開發服務時，一旦碰到未預期的情況，就可以將資訊傳回用戶端以便進行偵錯。 此外，您可以將 <xref:System.ServiceModel.ServiceBehaviorAttribute.IncludeExceptionDetailInFaults%2A?displayProperty=nameWithType> 屬性或 <xref:System.ServiceModel.Description.ServiceDebugBehavior.IncludeExceptionDetailInFaults%2A?displayProperty=nameWithType> 屬性設為 `true` 以允許 [!INCLUDE[indigo2](../../../includes/indigo2-md.md)] 用戶端取得有關內部服務作業例外狀況的資訊。 同時傳送個別的錯誤，並設定偵錯行為屬性中所述[傳送和接收錯誤](../../../docs/framework/wcf/sending-and-receiving-faults.md)。  
@@ -68,7 +68,7 @@ ms.lasthandoff: 12/22/2017
 ## <a name="fault-serialization-issues"></a>錯誤序列化問題  
  還原序列化錯誤合約時，WCF 會先嘗試使用錯誤合約型別來比對 SOAP 訊息中的錯誤合約名稱。 如果它找不到完全符合的項目，就會按照字母順序，在可用的錯誤合約清單中搜尋相容型別。 如果有兩個錯誤合約是相容型別 (例如，其中一個合約是另一個合約的子類別)，可能會使用錯誤的型別來還原序列化錯誤合約。 只有當錯誤合約沒有指定名稱、命名空間和動作時，才會發生這種情況。 若要避免此問題發生，請一律指定名稱、命名空間和動作屬性，藉以完整限定錯誤合約。 此外，如果您已經定義許多衍生自共用基底類別的相關錯誤合約，請務必使用 `[DataMember(IsRequired=true)]` 來標記任何新成員。 如需這個 `IsRequired` 屬性的詳細資訊，請參閱 <xref:System.Runtime.Serialization.DataMemberAttribute>。 這個屬性可避免基底類別成為相容型別，並且強制將錯誤合約還原序列化成正確的衍生型別。  
   
-## <a name="see-also"></a>請參閱  
+## <a name="see-also"></a>另請參閱  
  <xref:System.ServiceModel.FaultException>  
  <xref:System.ServiceModel.FaultContractAttribute>  
  <xref:System.ServiceModel.FaultException>  

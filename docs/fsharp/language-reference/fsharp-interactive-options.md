@@ -1,20 +1,17 @@
 ---
-title: "F# Interactive 選項"
-description: "了解命令列選項支援 F # Interactive fsi.exe。"
-keywords: "Visual F#, F#, 函式程式設計"
+title: F# Interactive 選項
+description: '了解命令列選項支援 F # Interactive fsi.exe。'
 author: cartermp
 ms.author: phcart
 ms.date: 05/16/2016
 ms.topic: language-reference
-ms.prod: .net
-ms.technology: devlang-fsharp
+ms.prod: dotnet-fsharp
 ms.devlang: fsharp
-ms.assetid: f9f3e39b-ce6c-41ff-991f-0625f46441ae
-ms.openlocfilehash: f0a8893abca0435307907aa9c169646bf3dec2d5
-ms.sourcegitcommit: adcf9bdafeaa6bc243af7bf70b45f3df954f256a
+ms.openlocfilehash: 45ed12e63a440ce176947cbfca189781c8675e10
+ms.sourcegitcommit: 03ee570f6f528a7d23a4221dcb26a9498edbdf8c
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 02/15/2018
+ms.lasthandoff: 04/28/2018
 ---
 # <a name="f-interactive-options"></a>F# Interactive 選項
 
@@ -44,32 +41,32 @@ F # 指令碼檔案的副檔名是`.fsx`。
 |**--codepage:&lt;int&gt;**|與相同**fsc.exe**編譯器選項。 如需詳細資訊，請參閱[編譯器選項](compiler-options.md)。|
 |**--consolecolors**[**+**&#124;**-**]|輸出警告和錯誤訊息中的色彩。|
 |**--crossoptimize**[**+**&#124;**-**]|啟用或停用跨模組最佳化。|
-|**--debug**[**+**&#124;**-**]<br /><br />**--debug:**[**full**&#124;**pdbonly**&#124;**portable**&#124;**embedded**]<br /><br />**-g**[**+**&#124;**-**]<br /><br />**-g:**[**完整**&#124;**pdbonly**&#124;**可攜式**&#124;**內嵌**]|與相同**fsc.exe**編譯器選項。 如需詳細資訊，請參閱[編譯器選項](compiler-options.md)。|
+|**--debug**[**+**&#124;**-**]<br /><br />**-偵錯：**[**完整**&#124;**pdbonly**&#124;**可攜式**&#124;**內嵌**]<br /><br />**-g**[**+**&#124;**-**]<br /><br />**-g:**[**完整**&#124;**pdbonly**&#124;**可攜式**&#124;**內嵌**]|與相同**fsc.exe**編譯器選項。 如需詳細資訊，請參閱[編譯器選項](compiler-options.md)。|
 |**--define:&lt;string&gt;**|與相同**fsc.exe**編譯器選項。 如需詳細資訊，請參閱[編譯器選項](compiler-options.md)。|
 |**--deterministic**[**+**&#124;**-**]|產生的具決定性的組件 （包括模組版本 GUID 與時間戳記）。|
 |**--exec**|指示 F # interactive 結束之後載入檔案或執行命令列上指定的指令碼檔案。|
 |**--fullpaths**|與相同**fsc.exe**編譯器選項。 如需詳細資訊，請參閱[編譯器選項](compiler-options.md)。|
 |**--gui**[**+**&#124;**-**]|啟用或停用 Windows Form 事件迴圈。 會啟用預設值。|
 |**--help**<br /><br />**-?**|用來顯示命令列語法和每個選項的簡短描述。|
-|**--lib:&lt;folder-list&gt;**<br /><br />**-I:&lt;folder-list&gt;**|與相同**fsc.exe**編譯器選項。 如需詳細資訊，請參閱[編譯器選項](compiler-options.md)。|
-|**--load:&lt;filename&gt;**|編譯指定的來源處的程式碼啟動，並將已編譯的 F # 建構載入到工作階段。 如果包含指令碼的指示詞，例如目標來源**#use**或**#load**，則您必須使用**-使用**或**#use**而不是**-載入**或**#load**。|
+|**-lib:&lt;資料夾清單&gt;**<br /><br />**-I:&lt;資料夾清單&gt;**|與相同**fsc.exe**編譯器選項。 如需詳細資訊，請參閱[編譯器選項](compiler-options.md)。|
+|**-載入：&lt;檔名&gt;**|編譯指定的來源處的程式碼啟動，並將已編譯的 F # 建構載入到工作階段。 如果包含指令碼的指示詞，例如目標來源 **#use**或 **#load**，則您必須使用 **-使用**或 **#use**而不是 **-載入**或 **#load**。|
 |**--mlcompatibility**|與相同**fsc.exe**編譯器選項。 如需詳細資訊，請參閱[編譯器選項](compiler-options.md)。|
 |**--noframework**|與相同**fsc.exe**編譯器選項。 如需詳細資訊，請參閱[編譯器選項](compiler-options.md)|
 |**--nologo**|與相同**fsc.exe**編譯器選項。 如需詳細資訊，請參閱[編譯器選項](compiler-options.md)。|
-|**--nowarn:&lt;warning-list&gt;**|與相同**fsc.exe**編譯器選項。 如需詳細資訊，請參閱[編譯器選項](compiler-options.md)。|
+|**-nowarn:&lt;警告清單&gt;**|與相同**fsc.exe**編譯器選項。 如需詳細資訊，請參閱[編譯器選項](compiler-options.md)。|
 |**--optimize**[**+**&#124;**-**]|與相同**fsc.exe**編譯器選項。 如需詳細資訊，請參閱[編譯器選項](compiler-options.md)。|
 |**--preferreduilang:&lt;lang&gt;**| 指定慣用的輸出語言文化特性名稱 （例如 ES-ES、 JA-JP）。 |
 |**--quiet**|隱藏 F # Interactive 的輸出到**stdout**資料流。|
 |**--quotations-debug**|指定的額外偵錯資訊應該發出對衍生自 F # 引號常值，而且反映定義的運算式。 偵錯資訊已加入至 F # 運算式樹狀結構節點的自訂屬性。 請參閱[程式碼引號](code-quotations.md)和[Expr.CustomAttributes](https://msdn.microsoft.com/library/eb89943f-5f5b-474e-b125-030ca412edb3)。|
 |**--readline**[**+**&#124;**-**]|啟用或停用在互動模式中的 tab 鍵自動完成。|
-|**--reference:&lt;filename&gt;**<br /><br />**-r:&lt;filename&gt;**|與相同**fsc.exe**編譯器選項。 如需詳細資訊，請參閱[編譯器選項](compiler-options.md)。|
+|**-參考：&lt;檔名&gt;**<br /><br />**-:&lt;檔名&gt;**|與相同**fsc.exe**編譯器選項。 如需詳細資訊，請參閱[編譯器選項](compiler-options.md)。|
 |**--shadowcopyreferences**[**+**&#124;**-**]|可避免參考遭 F # 互動式處理序。|
 |**--simpleresolution**|解決使用目錄為基礎的規則，而不是 MSBuild 解析的組件參考。|
 |**--tailcalls**[**+**&#124;**-**]|啟用或停用造成可重複使用之結尾遞迴函式的堆疊框架結尾 IL 指令的使用。 這個選項預設為啟用。|
-|**--targetprofile:&lt;string&gt;**|指定這個組件的目標 framework 設定檔。 有效值是 mscorlib、 netcore 或 netstandard。  預設值是 mscorlib。|
-|**--use:&lt;filename&gt;**|會告知使用指定的檔案，在啟動做為初始輸入的直譯器。|
+|**-targetprofile:&lt;字串&gt;**|指定這個組件的目標 framework 設定檔。 有效值是 mscorlib、 netcore 或 netstandard。  預設值是 mscorlib。|
+|**-使用：&lt;檔名&gt;**|會告知使用指定的檔案，在啟動做為初始輸入的直譯器。|
 |**--utf8output**|Fsc.exe 編譯器選項相同。 如需詳細資訊，請參閱[編譯器選項](compiler-options.md)。|
-|**--warn:&lt;warning-level&gt;**|與相同**fsc.exe**編譯器選項。 如需詳細資訊，請參閱[編譯器選項](compiler-options.md)。|
+|**-警告：&lt;警告層級&gt;**|與相同**fsc.exe**編譯器選項。 如需詳細資訊，請參閱[編譯器選項](compiler-options.md)。|
 |**--warnaserror**[**+**&#124;**-**]|與相同**fsc.exe**編譯器選項。 如需詳細資訊，請參閱[編譯器選項](compiler-options.md)。|
 |**--warnaserror**[**+**&#124;**-**]:**&lt;int-list&gt;**|與相同**fsc.exe**編譯器選項。 如需詳細資訊，請參閱[編譯器選項](compiler-options.md)。|
 

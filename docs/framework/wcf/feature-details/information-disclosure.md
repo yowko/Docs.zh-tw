@@ -16,11 +16,11 @@ ms.author: dotnetcontent
 manager: wpickett
 ms.workload:
 - dotnet
-ms.openlocfilehash: 0af083ba1d97fcf07eab6f9d789f023a9194070c
-ms.sourcegitcommit: 86adcc06e35390f13c1e372c36d2e044f1fc31ef
+ms.openlocfilehash: c603032e175fd8390abea2db625321d3e3558c1a
+ms.sourcegitcommit: 03ee570f6f528a7d23a4221dcb26a9498edbdf8c
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/26/2018
+ms.lasthandoff: 04/28/2018
 ---
 # <a name="information-disclosure"></a>資訊洩露
 資訊洩漏讓攻擊者可以取得與系統有關的寶貴資訊。 因此，公開資訊時，請務必考慮您要公開的是哪些資訊，以及是否會遭到惡意使用者的使用。 下列列出可能的資訊洩漏攻擊，並針對各種攻擊提供減少受到攻擊的方法。  
@@ -32,7 +32,7 @@ ms.lasthandoff: 04/26/2018
  維持原則的安全相當重要，特別是在原則中公開敏感的發行權杖需求或權杖簽發者資訊的聯合案例中。 在這些情況中，建議保護聯合服務的原則端點，以避免攻擊者取得與服務有關的資訊，例如放在發行權杖中的宣告類型，或將用戶端重新導向至惡意的權杖簽發者。 例如，攻擊者可以透過重新設定聯合信任鏈結來找出使用者名組/密碼組，以終止執行中間人攻擊的簽發者。 同時，也建議透過原則擷取來取得繫結的同盟用戶端，確認他們信任所取得之同盟信任鏈結中的簽發者。 [!INCLUDE[crabout](../../../../includes/crabout-md.md)] 聯合案例中，請參閱[同盟](../../../../docs/framework/wcf/feature-details/federation.md)。  
   
 ## <a name="memory-dumps-can-reveal-claim-information"></a>記憶體傾印會洩漏宣告資訊  
- 應用程式失敗時，Dr.Watson 等產生的記錄檔會包含宣告資訊。 這項資訊不應該匯出到其他實體，例如支援團隊等，否則可能會一併匯出包含私人資料的宣告資訊。 只要不將記錄檔傳送給未知的實體，即可減少這種情況。 [!INCLUDE[crdefault](../../../../includes/crdefault-md.md)] [Windows Server 2003](http://go.microsoft.com/fwlink/?LinkId=89160)。  
+ 應用程式失敗時，Dr.Watson 等產生的記錄檔會包含宣告資訊。 這項資訊不應該匯出到其他實體，例如支援團隊等，否則可能會一併匯出包含私人資料的宣告資訊。 只要不將記錄檔傳送給未知的實體，即可減少這種情況。 如需詳細資訊，請參閱[Windows Server 2003](http://go.microsoft.com/fwlink/?LinkId=89160)。  
   
 ## <a name="endpoint-addresses"></a>端點位址  
  端點位址包含與端點通訊所需的資訊。 SOAP 安全性必須在交換的安全性交涉訊息中加入完整位址，以便在用戶端和伺服器之間交涉對稱金鑰。 因為安全性交涉是開機處理序，所以在執行此處理序期間無法將位址標頭加密。 因此，位址不應含有任何機密資料，否則會導致發生資訊洩漏攻擊。  

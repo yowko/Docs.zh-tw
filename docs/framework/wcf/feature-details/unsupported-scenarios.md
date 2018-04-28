@@ -1,24 +1,26 @@
 ---
-title: "不支援的案例"
-ms.custom: 
+title: 不支援的案例
+ms.custom: ''
 ms.date: 03/30/2017
 ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.technology: dotnet-clr
-ms.tgt_pltfrm: 
+ms.reviewer: ''
+ms.suite: ''
+ms.technology:
+- dotnet-clr
+ms.tgt_pltfrm: ''
 ms.topic: article
 ms.assetid: 72027d0f-146d-40c5-9d72-e94392c8bb40
-caps.latest.revision: "43"
+caps.latest.revision: 43
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.workload: dotnet
-ms.openlocfilehash: 96ae88fd29391bf173da33398dfb41b3a06441ba
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.workload:
+- dotnet
+ms.openlocfilehash: 7738eba66619e8a312ed2f9bd43142dbb097b259
+ms.sourcegitcommit: 03ee570f6f528a7d23a4221dcb26a9498edbdf8c
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 04/28/2018
 ---
 # <a name="unsupported-scenarios"></a>不支援的案例
 由於各種因素使然，[!INCLUDE[indigo1](../../../../includes/indigo1-md.md)] 並不支援某些特定的安全性案例。 例如，[!INCLUDE[wxp](../../../../includes/wxp-md.md)] Home Edition 不會實作 SSPI 或 Kerberos 驗證通訊協定，因此 [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] 不支援在該平台上使用 Windows 驗證來執行服務。 當您在 Windows XP Home Edition 下執行 [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] 時，則支援如使用者名稱/密碼與 HTTP/HTTPS 整合式驗證之類的其他驗證機制。  
@@ -39,7 +41,7 @@ ms.lasthandoff: 12/22/2017
   
 -   建立以狀態為基礎的安全性內容權杖 (SCT) (根據預設會停用建立作業)。  
   
- 您只能透過自訂繫結來建立以狀態為基礎的 SCT ( [!INCLUDE[crdefault](../../../../includes/crdefault-md.md)][How to： 建立安全性內容權杖的安全工作階段](../../../../docs/framework/wcf/feature-details/how-to-create-a-security-context-token-for-a-secure-session.md)。)在程式碼中，您可以使用 <xref:System.ServiceModel.Channels.SymmetricSecurityBindingElement> 或 <xref:System.ServiceModel.Channels.AsymmetricSecurityBindingElement> 方法來建立安全性繫結項目 (可能是 <xref:System.ServiceModel.Channels.SecurityBindingElement.CreateSspiNegotiationBindingElement%28System.Boolean%29?displayProperty=nameWithType> 或 <xref:System.ServiceModel.Channels.SecurityBindingElement.CreateSecureConversationBindingElement%28System.ServiceModel.Channels.SecurityBindingElement%2CSystem.Boolean%29?displayProperty=nameWithType>)，並將 `requireCancellation` 參數設為 `false`，藉此啟用權杖。 此參數會參考 SCT 的快取。 將值設為 `false` 會啟用以狀態為基礎的 SCT 功能。  
+ 您只能透過自訂繫結來建立以狀態為基礎的 SCT ( 如需詳細資訊，請參閱[How to： 建立安全工作階段的安全性內容權杖](../../../../docs/framework/wcf/feature-details/how-to-create-a-security-context-token-for-a-secure-session.md)。)在程式碼中，您可以使用 <xref:System.ServiceModel.Channels.SymmetricSecurityBindingElement> 或 <xref:System.ServiceModel.Channels.AsymmetricSecurityBindingElement> 方法來建立安全性繫結項目 (可能是 <xref:System.ServiceModel.Channels.SecurityBindingElement.CreateSspiNegotiationBindingElement%28System.Boolean%29?displayProperty=nameWithType> 或 <xref:System.ServiceModel.Channels.SecurityBindingElement.CreateSecureConversationBindingElement%28System.ServiceModel.Channels.SecurityBindingElement%2CSystem.Boolean%29?displayProperty=nameWithType>)，並將 `requireCancellation` 參數設為 `false`，藉此啟用權杖。 此參數會參考 SCT 的快取。 將值設為 `false` 會啟用以狀態為基礎的 SCT 功能。  
   
  或者，在組態中，藉此啟用權杖建立 <`customBinding`>，然後再新增 <`security`> 項目，並設定`authenticationMode`屬性設為 SecureConversation 和`requireSecurityContextCancellation`屬性`true`。  
   
@@ -53,10 +55,10 @@ ms.lasthandoff: 12/22/2017
  如果模擬的內容沒有載入組件的存取權，而且同時也是 Common Language Runtime (CLR) 第一次嘗試載入該 AppDomain 的組件，則 <xref:System.AppDomain> 會快取失敗結果。 即使還原模擬後，後續的組件載入嘗試一樣會失敗，而且即使還原後的內容具有載入組件的存取權也一樣。 這是因為 CLR 並未在使用者內容變更之後重新嘗試載入。 您必須重新啟動應用程式定義域，從失敗中進行還原。  
   
 > [!NOTE]
->  <xref:System.ServiceModel.Security.WindowsClientCredential.AllowedImpersonationLevel%2A> 類別的 <xref:System.ServiceModel.Security.WindowsClientCredential><xref:System.Security.Principal.TokenImpersonationLevel.Identification>屬性預設值為 。 在大多數情況下，識別層級的模擬內容沒有載入任何其他組件的權限。 這是預設值，因此您應該要瞭解這個常見的情況。 當模擬的處理序沒有 `SeImpersonate` 權限時，一樣會發生識別層級的模擬情況。 [!INCLUDE[crdefault](../../../../includes/crdefault-md.md)][委派和模擬](../../../../docs/framework/wcf/feature-details/delegation-and-impersonation-with-wcf.md)。  
+>  <xref:System.ServiceModel.Security.WindowsClientCredential.AllowedImpersonationLevel%2A> 類別的 <xref:System.ServiceModel.Security.WindowsClientCredential><xref:System.Security.Principal.TokenImpersonationLevel.Identification>屬性預設值為 。 在大多數情況下，識別層級的模擬內容沒有載入任何其他組件的權限。 這是預設值，因此您應該要瞭解這個常見的情況。 當模擬的處理序沒有 `SeImpersonate` 權限時，一樣會發生識別層級的模擬情況。 如需詳細資訊，請參閱[委派和模擬](../../../../docs/framework/wcf/feature-details/delegation-and-impersonation-with-wcf.md)。  
   
 ### <a name="delegation-requires-credential-negotiation"></a>委派需要認證交涉  
- 若要將 Kerberos 驗證通訊協定與委派搭配使用，您必須實作具有認證交涉的 Kerberos 通訊協定 (有時也稱做「多線」(Multi-leg) 或「多步驟」(Multi-step) Kerberos)。 如果您實作不具有認證交涉的 Kerberos 驗證 (有時也稱做「單次」(One-shot) 或「單支線」(Single-leg) Kerberos)，則會擲回例外狀況。 [!INCLUDE[crabout](../../../../includes/crabout-md.md)]瞭解如何實作認證交涉，請參閱[偵錯 Windows 驗證錯誤](../../../../docs/framework/wcf/feature-details/debugging-windows-authentication-errors.md)。  
+ 若要將 Kerberos 驗證通訊協定與委派搭配使用，您必須實作具有認證交涉的 Kerberos 通訊協定 (有時也稱做「多線」(Multi-leg) 或「多步驟」(Multi-step) Kerberos)。 如果您實作不具有認證交涉的 Kerberos 驗證 (有時也稱做「單次」(One-shot) 或「單支線」(Single-leg) Kerberos)，則會擲回例外狀況。 [!INCLUDE[crabout](../../../../includes/crabout-md.md)] 瞭解如何實作認證交涉，請參閱[偵錯 Windows 驗證錯誤](../../../../docs/framework/wcf/feature-details/debugging-windows-authentication-errors.md)。  
   
 ## <a name="cryptography"></a>密碼編譯  
   
@@ -73,7 +75,7 @@ ms.lasthandoff: 12/22/2017
  與 FIPS 相容的 AES 加密在識別層級模擬底下的雙工回呼中無法發揮作用。  
   
 ### <a name="cngksp-certificates"></a>CNG/KSP 憑證  
- *密碼編譯 API: Next Generation (CNG)*會長期取代 cryptoapi。 這個 API 已可在 unmanaged 程式碼上[!INCLUDE[wv](../../../../includes/wv-md.md)]，[!INCLUDE[lserver](../../../../includes/lserver-md.md)]和更新版本的 Windows 版本。  
+ *密碼編譯 API: Next Generation (CNG)* 會長期取代 cryptoapi。 這個 API 已可在 unmanaged 程式碼上[!INCLUDE[wv](../../../../includes/wv-md.md)]，[!INCLUDE[lserver](../../../../includes/lserver-md.md)]和更新版本的 Windows 版本。  
   
  .NET framework 4.6.1 和更早版本不支援這些憑證因為它們使用舊版的 CryptoAPI 來處理 CNG/KSP 憑證。 使用這些憑證與.NET Framework 4.6.1 和更早版本會造成例外狀況。  
   
@@ -81,18 +83,18 @@ ms.lasthandoff: 12/22/2017
   
 -   對 `p/invoke` 執行 `CertGetCertificateContextProperty` 後，檢查所傳回 `dwProvType` 的 `CertGetCertificateContextProperty`。  
   
--   使用`certutil`命令從命令列來查詢憑證。 [!INCLUDE[crdefault](../../../../includes/crdefault-md.md)][疑難排解憑證的 Certutil 工作](http://go.microsoft.com/fwlink/?LinkId=120056)。  
+-   使用`certutil`命令從命令列來查詢憑證。 如需詳細資訊，請參閱[疑難排解憑證的 Certutil 工作](http://go.microsoft.com/fwlink/?LinkId=120056)。  
   
 ## <a name="message-security-fails-if-using-aspnet-impersonation-and-aspnet-compatibility-is-required"></a>如果需要使用 ASP.NET 模擬與 ASP.NET 相容性的話，訊息安全性就會失敗  
  [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] 並不支援系列設定組合，因為這些組合可能會讓用戶端驗證無法進行：  
   
 -   [!INCLUDE[vstecasp](../../../../includes/vstecasp-md.md)] 模擬已啟用。 這是 Web.config 檔案中設定`impersonate`屬性 <`identity`> 項目`true`。  
   
--   [!INCLUDE[vstecasp](../../../../includes/vstecasp-md.md)]藉由設定啟用相容性模式`aspNetCompatibilityEnabled`屬性[ \<serviceHostingEnvironment >](../../../../docs/framework/configure-apps/file-schema/wcf/servicehostingenvironment.md)至`true`。  
+-   [!INCLUDE[vstecasp](../../../../includes/vstecasp-md.md)] 藉由設定啟用相容性模式`aspNetCompatibilityEnabled`屬性[ \<serviceHostingEnvironment >](../../../../docs/framework/configure-apps/file-schema/wcf/servicehostingenvironment.md)至`true`。  
   
 -   已使用訊息模式安全性。  
   
- 解決辦法就是關閉 [!INCLUDE[vstecasp](../../../../includes/vstecasp-md.md)] 相容性模式。 或者，如果還需要 [!INCLUDE[vstecasp](../../../../includes/vstecasp-md.md)] 相容性模式，則停用 [!INCLUDE[vstecasp](../../../../includes/vstecasp-md.md)] 模擬功能並改用 [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] 提供的模擬功能。 [!INCLUDE[crdefault](../../../../includes/crdefault-md.md)][委派和模擬](../../../../docs/framework/wcf/feature-details/delegation-and-impersonation-with-wcf.md)。  
+ 解決辦法就是關閉 [!INCLUDE[vstecasp](../../../../includes/vstecasp-md.md)] 相容性模式。 或者，如果還需要 [!INCLUDE[vstecasp](../../../../includes/vstecasp-md.md)] 相容性模式，則停用 [!INCLUDE[vstecasp](../../../../includes/vstecasp-md.md)] 模擬功能並改用 [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] 提供的模擬功能。 如需詳細資訊，請參閱[委派和模擬](../../../../docs/framework/wcf/feature-details/delegation-and-impersonation-with-wcf.md)。  
   
 ## <a name="ipv6-literal-address-failure"></a>IPv6 常值位址失敗  
  安全性要求會失敗的情況為：當用戶端與服務位於同一部電腦，以及服務使用 IPv6 常值位址時。  
@@ -104,11 +106,11 @@ ms.lasthandoff: 12/22/2017
   
  舉例來說，當服務具有下列三個端點位址時，就會發生這種狀況：  
   
--   http://localhost/CalculatorService/service (服務)  
+-   http://localhost/CalculatorService/service （服務）  
   
 -   http://localhost/CalculatorService/issue_ticket (STS)  
   
--   http://localhost/CalculatorService/mex (中繼資料端點)  
+-   http://localhost/CalculatorService/mex （中繼資料端點）  
   
  這會擲回例外狀況。  
   
@@ -119,7 +121,7 @@ ms.lasthandoff: 12/22/2017
   
  解決方式是匯入之後直接在用戶端修改繫結。  
   
-## <a name="see-also"></a>請參閱  
+## <a name="see-also"></a>另請參閱  
  [安全性考量](../../../../docs/framework/wcf/feature-details/security-considerations-in-wcf.md)  
  [資訊洩漏](../../../../docs/framework/wcf/feature-details/information-disclosure.md)  
  [權限提高](../../../../docs/framework/wcf/feature-details/elevation-of-privilege.md)  

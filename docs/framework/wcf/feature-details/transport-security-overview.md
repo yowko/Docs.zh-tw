@@ -13,17 +13,17 @@ dev_langs:
 - csharp
 - vb
 ms.assetid: 00959326-aa9d-44d0-af61-54933d4adc7f
-caps.latest.revision: ''
+caps.latest.revision: 23
 author: BrucePerlerMS
 ms.author: bruceper
 manager: mbaldwin
 ms.workload:
 - dotnet
-ms.openlocfilehash: 71325089f2c72f6f01b2179bd150d21a98b3a8e2
-ms.sourcegitcommit: c883637b41ee028786edceece4fa872939d2e64c
+ms.openlocfilehash: 5619041ccf4ce4d899f3c9a478d125a1a2d8d32a
+ms.sourcegitcommit: 03ee570f6f528a7d23a4221dcb26a9498edbdf8c
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 03/26/2018
+ms.lasthandoff: 04/28/2018
 ---
 # <a name="transport-security-overview"></a>傳輸安全性概觀
 [!INCLUDE[indigo1](../../../../includes/indigo1-md.md)] 中的傳輸安全性機制主要取決於所使用的繫結和傳輸。 例如，使用 <xref:System.ServiceModel.WSHttpBinding> 類別時，傳輸為 HTTP，而保護此傳輸的主要機制則為 Secure Sockets Layer (SSL) over HTTP，通常稱為 HTTPS。 本主題將討論 [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] 系統提供繫結中所使用的主要傳輸安全性機制。  
@@ -72,10 +72,10 @@ ms.lasthandoff: 03/26/2018
  這個類型會對應至 IIS 中的整合式 Windows 驗證。 當設定為這個值時，該伺服器必須出現在以 Kerberos 通訊協定做為網域控制站的 Windows 網域上。 如果伺服器未存在以 Kerberos 為基礎的網域中，或是如果 Kerberos 系統失敗，您可以使用下一節所介紹的 NT LAN Manager (NTLM) 值。 [!INCLUDE[crabout](../../../../includes/crabout-md.md)] [!INCLUDE[iis601](../../../../includes/iis601-md.md)]請參閱[IIS 6.0 中的整合式 Windows 驗證](http://go.microsoft.com/fwlink/?LinkId=88597)。 [!INCLUDE[crabout](../../../../includes/crabout-md.md)] [!INCLUDE[iisver](../../../../includes/iisver-md.md)]請參閱[IIS 7.0 Beta： 在 IIS 7.0 中設定伺服器憑證](http://go.microsoft.com/fwlink/?LinkId=88595)。  
   
 #### <a name="ntlm"></a>NTLM  
- 這個類型可讓伺服器在 Kerberos 通訊協定失敗時，使用 NTLM 進行驗證。 [!INCLUDE[crabout](../../../../includes/crabout-md.md)] 設定 IIS 中的[!INCLUDE[iis601](../../../../includes/iis601-md.md)]，請參閱[強制 NTLM 驗證](http://go.microsoft.com/fwlink/?LinkId=88598)。 若是 [!INCLUDE[iisver](../../../../includes/iisver-md.md)]，Windows 驗證會包含 NTLM 驗證。 [!INCLUDE[crdefault](../../../../includes/crdefault-md.md)] [IIS 7.0 Beta： 在 IIS 7.0 中設定伺服器憑證](http://go.microsoft.com/fwlink/?LinkID=88595)。  
+ 這個類型可讓伺服器在 Kerberos 通訊協定失敗時，使用 NTLM 進行驗證。 [!INCLUDE[crabout](../../../../includes/crabout-md.md)] 設定 IIS 中的[!INCLUDE[iis601](../../../../includes/iis601-md.md)]，請參閱[強制 NTLM 驗證](http://go.microsoft.com/fwlink/?LinkId=88598)。 若是 [!INCLUDE[iisver](../../../../includes/iisver-md.md)]，Windows 驗證會包含 NTLM 驗證。 如需詳細資訊，請參閱[IIS 7.0 Beta： 在 IIS 7.0 中設定伺服器憑證](http://go.microsoft.com/fwlink/?LinkID=88595)。  
   
 ## <a name="wshttpbinding"></a>WsHttpBinding  
- <xref:System.ServiceModel.WSHttpBinding> 類別主要是用來與實作 WS-* 規格的服務進行交互操作。 此繫結的傳輸安全性為使用 HTTP 或 HTTPS 的安全通訊端層 (SSL)。 若要建立使用 SSL 的 [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] 應用程式，請使用 IIS 裝載應用程式。 或者，如果您要建立自我裝載的應用程式，請使用 HttpCfg.exe 工具將 X.509 憑證繫結至電腦上的特定連接埠。 連接埠號碼會指定做為 [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] 應用程式中的端點位址。 當使用傳輸模式時，端點位址必須包含 HTTPS 通訊協定，否則會在執行階段擲回例外狀況。 [!INCLUDE[crdefault](../../../../includes/crdefault-md.md)] [HTTP 傳輸安全性](../../../../docs/framework/wcf/feature-details/http-transport-security.md)。  
+ <xref:System.ServiceModel.WSHttpBinding> 類別主要是用來與實作 WS-* 規格的服務進行交互操作。 此繫結的傳輸安全性為使用 HTTP 或 HTTPS 的安全通訊端層 (SSL)。 若要建立使用 SSL 的 [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] 應用程式，請使用 IIS 裝載應用程式。 或者，如果您要建立自我裝載的應用程式，請使用 HttpCfg.exe 工具將 X.509 憑證繫結至電腦上的特定連接埠。 連接埠號碼會指定做為 [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] 應用程式中的端點位址。 當使用傳輸模式時，端點位址必須包含 HTTPS 通訊協定，否則會在執行階段擲回例外狀況。 如需詳細資訊，請參閱[HTTP 傳輸安全性](../../../../docs/framework/wcf/feature-details/http-transport-security.md)。  
   
  若是用戶端驗證，請將 <xref:System.ServiceModel.HttpTransportSecurity.ClientCredentialType%2A> 類別的 <xref:System.ServiceModel.HttpTransportSecurity> 屬性設定為其中一個 <xref:System.ServiceModel.HttpClientCredentialType> 列舉值。 這些列舉值會與 <xref:System.ServiceModel.BasicHttpBinding> 的用戶端認證類型完全相同，而且是設計成與 IIS 服務進行裝載。  
   

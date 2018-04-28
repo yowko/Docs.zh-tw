@@ -14,11 +14,11 @@ ms.author: dotnetcontent
 manager: wpickett
 ms.workload:
 - dotnet
-ms.openlocfilehash: b34a0118c9223e8d09bf56de39e3fea1b115688f
-ms.sourcegitcommit: 2042de78fcdceebb6b8ac4b7a292b93e8782cbf5
+ms.openlocfilehash: ae5bf1088ec03229eb996b0e43b3d3395497571a
+ms.sourcegitcommit: 03ee570f6f528a7d23a4221dcb26a9498edbdf8c
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/27/2018
+ms.lasthandoff: 04/28/2018
 ---
 # <a name="windows-workflow-foundation-4-performance"></a>Windows Workflow Foundation 4 效能
 Dustin Metzgar  
@@ -36,7 +36,7 @@ Dustin Metzgar
   
  [!INCLUDE[indigo1](../../../includes/indigo1-md.md)] 是 Microsoft 的統一程式設計模型，用於建置服務導向的應用程式。 它一開始是做為 .NET 3.0 的一部分與 WF3 一併導入，而現在已成為 [!INCLUDE[dnprdnshort](../../../includes/dnprdnshort-md.md)] 的其中一個重要元件。  
   
- Windows Server AppFabric 是一組整合式技術，可讓您更輕鬆地建置、調整及管理 IIS 上執行的 Web 與複合應用程式。 它提供了監視及管理服務和工作流程的工具。 [!INCLUDE[crdefault](../../../includes/crdefault-md.md)] [Windows Server AppFabric](http://msdn.microsoft.com/windowsserver/ee695849.aspx)  
+ Windows Server AppFabric 是一組整合式技術，可讓您更輕鬆地建置、調整及管理 IIS 上執行的 Web 與複合應用程式。 它提供了監視及管理服務和工作流程的工具。 如需詳細資訊，請參閱[Windows Server AppFabric](http://msdn.microsoft.com/windowsserver/ee695849.aspx)  
   
 ## <a name="goals"></a>目標  
  本主題的目標在於說明 WF4 的效能特性，其中包含的資料會針對不同的案例加以計算。 此外也會提供 WF4 與 WF3 之間的詳細比較，藉此說明這個新修訂中所做的優越改良。 本文的案例和資料會將 WF4 和 WF3 各層面的基礎成本加以量化。 這項資料除了能讓您充分了解 WF4 的效能特性之外，同時有助於規劃從 WF3 移轉至 WF4 的作業，或是在應用程式開發的過程中使用 WF4。 不過，應用本文資料得出的結論時，務必謹慎考慮。 複合工作流程應用程式的效能主要取決於工作流程的實作方式以及不同元件的整合方式。 因此必須謹慎評估每一個應用程式，才能判斷出該應用程式的效能特性。  
@@ -67,7 +67,7 @@ Dustin Metzgar
 ### <a name="messaging"></a>傳訊  
  WF3 一開始僅透過外部事件或叫用 Web 服務提供相當有限的傳訊支援。 在 .NET 3.5 中，工作流程可透過 [!INCLUDE[indigo2](../../../includes/indigo2-md.md)] 和 [!INCLUDE[indigo2](../../../includes/indigo2-md.md)] 實作為 <xref:System.Workflow.Activities.SendActivity> 用戶端，或是公開為 <xref:System.Workflow.Activities.ReceiveActivity> 服務。 WF4 已強化這個以工作流程為架構的傳訊程式設計概念，方法是將 [!INCLUDE[indigo2](../../../includes/indigo2-md.md)] 傳訊邏輯緊密整合至 WF。  
   
- .NET 4 的 [!INCLUDE[indigo2](../../../includes/indigo2-md.md)] 中提供的統一訊息處理管線，可大幅提升 WF4 服務的效能和延展性，比 WF3 要高出許多。 WF4 還提供更豐富的傳訊程式設計支援，可建立複雜的訊息交換模式 (MEP) 模型。 開發人員可以使用具型別的服務合約輕鬆進行程式設計，或使用不具型別的服務合約獲得更佳的效能，而不必付出序列化成本。 WF4 中透過 <xref:System.ServiceModel.Activities.SendMessageChannelCache> 類別提供的用戶端通道快取支援，可幫助開發人員執行最少的工作來建置快速的應用程式。 [!INCLUDE[crdefault](../../../includes/crdefault-md.md)] [變更快取共用層級傳送活動](../../../docs/framework/wcf/feature-details/changing-the-cache-sharing-levels-for-send-activities.md)。  
+ .NET 4 的 [!INCLUDE[indigo2](../../../includes/indigo2-md.md)] 中提供的統一訊息處理管線，可大幅提升 WF4 服務的效能和延展性，比 WF3 要高出許多。 WF4 還提供更豐富的傳訊程式設計支援，可建立複雜的訊息交換模式 (MEP) 模型。 開發人員可以使用具型別的服務合約輕鬆進行程式設計，或使用不具型別的服務合約獲得更佳的效能，而不必付出序列化成本。 WF4 中透過 <xref:System.ServiceModel.Activities.SendMessageChannelCache> 類別提供的用戶端通道快取支援，可幫助開發人員執行最少的工作來建置快速的應用程式。 如需詳細資訊，請參閱[傳送活動的變更快取共用層級](../../../docs/framework/wcf/feature-details/changing-the-cache-sharing-levels-for-send-activities.md)。  
   
 ### <a name="declarative-programming"></a>宣告式程式設計  
  WF4 提供清楚且簡單的宣告式程式設計架構來建立商務程序和服務的模型。 程式設計模型支援完全以宣告的方式撰寫活動，沒有任何 Code-Beside，因而大幅簡化了工作流程的撰寫。 在 [!INCLUDE[netfx40_short](../../../includes/netfx40-short-md.md)] 中，XAML 宣告式程式設計架構已整合至單一組件 System.Xaml.dll，以同時支援 WPF 和 WF。  
@@ -314,7 +314,7 @@ public sealed class CompensableActivityEmptyCompensation : CodeActivity
  此圖中其中一個值得注意的明顯趨勢為：巢狀結構對於 WF3 和 WF4 的記憶體使用量相對來說影響較小。  指定之工作流程中的活動數目對記憶體的影響程度最大。  若查看序列 1000、複雜深度 5 序列 5 及複雜深度 7 序列 1 這些變化的資料，就能清楚得知，活動數目增加到千位數時，記憶體使用量也會更明顯地增加。  在有將近 29000 個活動的極端案例中 (深度 7 序列 1)，WF4 使用的記憶體幾乎比 WF3 少 79%。  
   
 ### <a name="multiple-workflow-definitions-test"></a>多個工作流程定義測試  
- 由於 WF3 和 WF4 中可用於裝載工作流程的選項有所不同，因此會分成兩項不同的測試來測量每個工作流程定義的記憶體使用量。  這兩項測試執行的方式與工作流程複雜度測試不同，因為根據定義初始化和執行指定之工作流程的次數只有一次。  這是因為工作流程定義及其主機在 AppDomain 的存留期會保留在記憶體中。  為執行指定之工作流程執行個體而使用的記憶體應該在記憶體回收期間清除。  WF4 的移轉指引包含有關裝載選項的詳細資訊。 [!INCLUDE[crdefault](../../../includes/crdefault-md.md)] [： WF 移轉工作流程裝載](http://go.microsoft.com/fwlink/?LinkID=153313)。  
+ 由於 WF3 和 WF4 中可用於裝載工作流程的選項有所不同，因此會分成兩項不同的測試來測量每個工作流程定義的記憶體使用量。  這兩項測試執行的方式與工作流程複雜度測試不同，因為根據定義初始化和執行指定之工作流程的次數只有一次。  這是因為工作流程定義及其主機在 AppDomain 的存留期會保留在記憶體中。  為執行指定之工作流程執行個體而使用的記憶體應該在記憶體回收期間清除。  WF4 的移轉指引包含有關裝載選項的詳細資訊。 如需詳細資訊，請參閱[WF 移轉操作手冊： 工作流程裝載](http://go.microsoft.com/fwlink/?LinkID=153313)。  
   
  您可以透過使用幾種方式建立許多工作流程定義，以進工作流程定義測試。  例如，您可以使用程式碼產生建立一組除了名稱之外完全相同的 1000 個工作流程，然後將每一個工作流程儲存到不同的檔案中。  這種方式原本是用於主控台裝載的測試。  在 WF3 中，<xref:System.Workflow.Runtime.WorkflowRuntime> 類別是用來執行工作流程定義。  WF4 可使用 <xref:System.Activities.WorkflowApplication> 來建立單一工作流程執行個體，也可以直接使用 <xref:System.Activities.WorkflowInvoker> 來執行活動，就像使用方法呼叫一樣。  <xref:System.Activities.WorkflowApplication> 是單一工作流程執行個體的主機，其功能與 <xref:System.Workflow.Runtime.WorkflowRuntime> 相近，因此在這項測試中使用。  
   

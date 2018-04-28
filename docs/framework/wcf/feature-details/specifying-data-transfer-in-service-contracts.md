@@ -1,13 +1,13 @@
 ---
-title: "指定服務合約中的資料傳輸"
-ms.custom: 
+title: 指定服務合約中的資料傳輸
+ms.custom: ''
 ms.date: 03/30/2017
 ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
+ms.reviewer: ''
+ms.suite: ''
 ms.technology:
 - dotnet-clr
-ms.tgt_pltfrm: 
+ms.tgt_pltfrm: ''
 ms.topic: article
 dev_langs:
 - csharp
@@ -15,17 +15,17 @@ dev_langs:
 helpviewer_keywords:
 - service contracts [WCF], data transfer
 ms.assetid: 7c5a26c8-89c9-4bcb-a4bc-7131e6d01f0c
-caps.latest.revision: 
+caps.latest.revision: 38
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
 ms.workload:
 - dotnet
-ms.openlocfilehash: c650a59402099e1fe71a0292dd0ccfc409d3448d
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.openlocfilehash: fc64ff14c321bd2053b0a97b3cf1ac075b02e973
+ms.sourcegitcommit: 03ee570f6f528a7d23a4221dcb26a9498edbdf8c
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 04/28/2018
 ---
 # <a name="specifying-data-transfer-in-service-contracts"></a>指定服務合約中的資料傳輸
 [!INCLUDE[indigo1](../../../../includes/indigo1-md.md)] 可以想成是訊息基礎結構。 服務作業可以接收訊息、處理訊息，並傳送訊息。 訊息會透過作業合約來加以描述。 例如，請參考下列合約。  
@@ -65,7 +65,7 @@ float GetAirfare(string fromCity, string toCity, out string currency);
     Function GetAirfare(fromCity As String, toCity As String) As Double  
 ```  
   
- 此外，您可以使用參考參數，讓參數同時成為要求與回覆訊息的一部分。 參數必須是可以序列化 (轉換為 XML) 的型別。 根據預設，[!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] 會使用稱為 <xref:System.Runtime.Serialization.DataContractSerializer> 類別的元件執行此轉換。 支援大多數的基本型別 (例如 `int`、`string`、`float` 和 `DateTime`)。 使用者定義型別通常必須具有資料合約。 [!INCLUDE[crdefault](../../../../includes/crdefault-md.md)][使用資料合約](../../../../docs/framework/wcf/feature-details/using-data-contracts.md)。  
+ 此外，您可以使用參考參數，讓參數同時成為要求與回覆訊息的一部分。 參數必須是可以序列化 (轉換為 XML) 的型別。 根據預設，[!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] 會使用稱為 <xref:System.Runtime.Serialization.DataContractSerializer> 類別的元件執行此轉換。 支援大多數的基本型別 (例如 `int`、`string`、`float` 和 `DateTime`)。 使用者定義型別通常必須具有資料合約。 如需詳細資訊，請參閱[使用資料合約](../../../../docs/framework/wcf/feature-details/using-data-contracts.md)。  
   
 ```csharp
 public interface IAirfareQuoteService  
@@ -137,7 +137,7 @@ Class Itinerary
 End Class  
 ```  
   
- [!INCLUDE[crdefault](../../../../includes/crdefault-md.md)][使用 XmlSerializer 類別](../../../../docs/framework/wcf/feature-details/using-the-xmlserializer-class.md)。 請記住，我們不建議您模仿此處所示做法切換到 <xref:System.Xml.Serialization.XmlSerializer>，除非您有特殊的理由需要按照主題中所述的步驟來執行。  
+ 如需詳細資訊，請參閱[使用 XmlSerializer 類別](../../../../docs/framework/wcf/feature-details/using-the-xmlserializer-class.md)。 請記住，我們不建議您模仿此處所示做法切換到 <xref:System.Xml.Serialization.XmlSerializer>，除非您有特殊的理由需要按照主題中所述的步驟來執行。  
   
  若要將 .NET 參數名稱從合約名稱中隔離出來，可以使用 <xref:System.ServiceModel.MessageParameterAttribute> 屬性 (Attribute)，並使用 `Name` 屬性 (Property) 來設定合約名稱。 例如，下列作業合約等同於本主題中第一個範例。  
   
@@ -254,7 +254,7 @@ Public Class Itinerary
 End Class  
 ```  
   
- [!INCLUDE[crdefault](../../../../includes/crdefault-md.md)][使用訊息合約](../../../../docs/framework/wcf/feature-details/using-message-contracts.md)。  
+ 如需詳細資訊，請參閱[使用訊息合約](../../../../docs/framework/wcf/feature-details/using-message-contracts.md)。  
   
  在先前的範例中，預設仍舊使用 <xref:System.Runtime.Serialization.DataContractSerializer> 類別。 <xref:System.Xml.Serialization.XmlSerializer> 類別也可以搭配訊息合約一起使用。 若要這麼做，請將 <xref:System.ServiceModel.XmlSerializerFormatAttribute> 屬性套用到作業或合約，然後在訊息標頭與本文成員中使用與 <xref:System.Xml.Serialization.XmlSerializer> 類別相容的型別。  
   
@@ -314,7 +314,7 @@ Public Class UploadFileMessage
 End Class  
 ```  
   
- [!INCLUDE[crdefault](../../../../includes/crdefault-md.md)][大型的資料與資料流](../../../../docs/framework/wcf/feature-details/large-data-and-streaming.md)。  
+ 如需詳細資訊，請參閱[大型資料和串流處理](../../../../docs/framework/wcf/feature-details/large-data-and-streaming.md)。  
   
 ## <a name="using-the-message-class"></a>使用 Message 類別  
  若要對傳送或收到的訊息擁有完整的程式掌控權，可以直接使用 <xref:System.ServiceModel.Channels.Message> 類別，如下列範例程式碼所示。  
@@ -381,7 +381,7 @@ Public Class
 End Class  
 ```  
   
- 這些額外的錯誤可以藉由擲回適當資料合約型別的 <xref:System.ServiceModel.FaultException%601> 來產生。 [!INCLUDE[crdefault](../../../../includes/crdefault-md.md)][處理例外狀況和錯誤](../../../../docs/framework/wcf/extending/handling-exceptions-and-faults.md)。  
+ 這些額外的錯誤可以藉由擲回適當資料合約型別的 <xref:System.ServiceModel.FaultException%601> 來產生。 如需詳細資訊，請參閱[處理的例外狀況和錯誤](../../../../docs/framework/wcf/extending/handling-exceptions-and-faults.md)。  
   
  您無法使用 <xref:System.Xml.Serialization.XmlSerializer> 類別來描述錯誤。 <xref:System.ServiceModel.XmlSerializerFormatAttribute> 對錯誤合約沒有任何作用。  
   
@@ -440,7 +440,7 @@ End Class
   
  您可以在使用 <xref:System.Xml.Serialization.XmlIncludeAttribute> 時，使用 <xref:System.Xml.Serialization.XmlSerializer> 屬性。  
   
- 您可以將 <xref:System.ServiceModel.ServiceKnownTypeAttribute> 屬性套用到作業或整個服務上。 它能接受型別或方法名稱，以呼叫並取得已知型別的清單，就像是 <xref:System.Runtime.Serialization.KnownTypeAttribute> 屬性一樣。 [!INCLUDE[crdefault](../../../../includes/crdefault-md.md)][資料合約已知型別](../../../../docs/framework/wcf/feature-details/data-contract-known-types.md)。  
+ 您可以將 <xref:System.ServiceModel.ServiceKnownTypeAttribute> 屬性套用到作業或整個服務上。 它能接受型別或方法名稱，以呼叫並取得已知型別的清單，就像是 <xref:System.Runtime.Serialization.KnownTypeAttribute> 屬性一樣。 如需詳細資訊，請參閱[資料合約已知型別](../../../../docs/framework/wcf/feature-details/data-contract-known-types.md)。  
   
 ## <a name="specifying-the-use-and-style"></a>指定使用方式與樣式  
  在使用 Web 服務描述語言 (WSDL) 來描述服務時，最常用到的兩種樣式就是文件與遠端程序呼叫 (RPC)。 在文件樣式中，整個訊息本文會透過結構描述來描述，而 WSDL 則是藉由參照結構描述中的項目來描述不同的訊息本文部分。 在 RPC 樣式中，WSDL 會參照每個訊息部分的結構描述型別 (而不是項目)。 在某些情況下，您必須手動選取其中一種樣式。 您可以套用 <xref:System.ServiceModel.DataContractFormatAttribute> 屬性，並設定 `Style` 屬性 (當 <xref:System.Runtime.Serialization.DataContractSerializer> 正在使用時)，或是在 `Style` 屬性上設定 <xref:System.ServiceModel.XmlSerializerFormatAttribute> (當使用 <xref:System.Xml.Serialization.XmlSerializer> 時)，來完成。  
@@ -453,7 +453,7 @@ End Class
  您可以用很多方法來自訂資料的序列化方式。  
   
 ### <a name="changing-server-serialization-settings"></a>變更伺服器序列化設定  
- 當預設的 <xref:System.Runtime.Serialization.DataContractSerializer> 正在使用中，您可以藉由將 <xref:System.ServiceModel.ServiceBehaviorAttribute> 屬性套用到服務，來控制序列化處理序的某些層面。 具體來說，您可以使用 `MaxItemsInObjectGraph` 屬性來設定配額，以限制 <xref:System.Runtime.Serialization.DataContractSerializer> 可以還原序列化的最大物件數。 您可以使用 `IgnoreExtensionDataObject` 屬性來關閉反覆存取版本控制功能。 [!INCLUDE[crabout](../../../../includes/crabout-md.md)]配額，請參閱[資料的安全性考量](../../../../docs/framework/wcf/feature-details/security-considerations-for-data.md)。 [!INCLUDE[crabout](../../../../includes/crabout-md.md)]反覆存取，請參閱[向前相容資料合約](../../../../docs/framework/wcf/feature-details/forward-compatible-data-contracts.md)。  
+ 當預設的 <xref:System.Runtime.Serialization.DataContractSerializer> 正在使用中，您可以藉由將 <xref:System.ServiceModel.ServiceBehaviorAttribute> 屬性套用到服務，來控制序列化處理序的某些層面。 具體來說，您可以使用 `MaxItemsInObjectGraph` 屬性來設定配額，以限制 <xref:System.Runtime.Serialization.DataContractSerializer> 可以還原序列化的最大物件數。 您可以使用 `IgnoreExtensionDataObject` 屬性來關閉反覆存取版本控制功能。 [!INCLUDE[crabout](../../../../includes/crabout-md.md)] 配額，請參閱[資料的安全性考量](../../../../docs/framework/wcf/feature-details/security-considerations-for-data.md)。 [!INCLUDE[crabout](../../../../includes/crabout-md.md)] 反覆存取，請參閱[向前相容資料合約](../../../../docs/framework/wcf/feature-details/forward-compatible-data-contracts.md)。  
   
 ```csharp  
 [ServiceBehavior(MaxItemsInObjectGraph=100000)]  
@@ -479,7 +479,7 @@ End Interface
 ### <a name="serialization-behaviors"></a>序列化行為  
  [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] 提供兩個可用的行為，分別是 <xref:System.ServiceModel.Description.DataContractSerializerOperationBehavior> 和 <xref:System.ServiceModel.Description.XmlSerializerOperationBehavior>，而這兩個行為會根據特定作業所使用的序列化程式自動插入。 由於這些行為是自動套用的，一般來說您不需要知道它們的存在。  
   
- 然而，`DataContractSerializerOperationBehavior` 具有 `MaxItemsInObjectGraph`、`IgnoreExtensionDataObject`，和 `DataContractSurrogate` 屬性，可供您用來自訂序列化處理序。 開頭的兩個屬性具有如上一節所述相同的意義。 您可以使用 `DataContractSurrogate` 屬性來啟用資料合約替代，這是一項功能強大的機制，可供您用來自訂與延伸序列化處理序。 [!INCLUDE[crdefault](../../../../includes/crdefault-md.md)][資料合約 Surrogate](../../../../docs/framework/wcf/extending/data-contract-surrogates.md)。  
+ 然而，`DataContractSerializerOperationBehavior` 具有 `MaxItemsInObjectGraph`、`IgnoreExtensionDataObject`，和 `DataContractSurrogate` 屬性，可供您用來自訂序列化處理序。 開頭的兩個屬性具有如上一節所述相同的意義。 您可以使用 `DataContractSurrogate` 屬性來啟用資料合約替代，這是一項功能強大的機制，可供您用來自訂與延伸序列化處理序。 如需詳細資訊，請參閱[資料合約 Surrogate](../../../../docs/framework/wcf/extending/data-contract-surrogates.md)。  
   
  您可以使用 `DataContractSerializerOperationBehavior` 來同時自訂用戶端與伺服器序列化。 下列範例說明如何增加用戶端上的 `MaxItemsInObjectGraph` 配額。  
   
@@ -585,9 +585,9 @@ Dim serviceHost As ServiceHost = New ServiceHost(GetType(IDataService))
   
 3.  在開啟服務主機或是建立用戶端通道之前，請移除現有的 <xref:System.ServiceModel.Description.DataContractSerializerOperationBehavior> 行為並插入您在先前步驟所建立的自訂衍生類別。  
   
- [!INCLUDE[crabout](../../../../includes/crabout-md.md)]進階序列化概念，請參閱[序列化和還原序列化](../../../../docs/framework/wcf/feature-details/serialization-and-deserialization.md)。  
+ [!INCLUDE[crabout](../../../../includes/crabout-md.md)] 進階序列化概念，請參閱[序列化和還原序列化](../../../../docs/framework/wcf/feature-details/serialization-and-deserialization.md)。  
   
-## <a name="see-also"></a>請參閱  
+## <a name="see-also"></a>另請參閱  
  [使用 XmlSerializer 類別](../../../../docs/framework/wcf/feature-details/using-the-xmlserializer-class.md)  
  [如何：啟用資料流](../../../../docs/framework/wcf/feature-details/how-to-enable-streaming.md)  
  [如何：建立類別或結構的基本資料合約](../../../../docs/framework/wcf/feature-details/how-to-create-a-basic-data-contract-for-a-class-or-structure.md)

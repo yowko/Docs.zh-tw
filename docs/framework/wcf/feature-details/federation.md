@@ -1,12 +1,13 @@
 ---
-title: "同盟"
-ms.custom: 
+title: 同盟
+ms.custom: ''
 ms.date: 03/30/2017
 ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.technology: dotnet-clr
-ms.tgt_pltfrm: 
+ms.reviewer: ''
+ms.suite: ''
+ms.technology:
+- dotnet-clr
+ms.tgt_pltfrm: ''
 ms.topic: article
 dev_langs:
 - csharp
@@ -15,16 +16,17 @@ helpviewer_keywords:
 - WCF, federation
 - federation [WCF]
 ms.assetid: 2f1e646f-8361-48d4-9d5d-1b961f31ede4
-caps.latest.revision: "26"
+caps.latest.revision: 26
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.workload: dotnet
-ms.openlocfilehash: 3c87fa08a698350d601f72d5d19ef353bd4257a9
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.workload:
+- dotnet
+ms.openlocfilehash: 0e7aef1f53675089ee311aa79a54abf60441b728
+ms.sourcegitcommit: 03ee570f6f528a7d23a4221dcb26a9498edbdf8c
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 04/28/2018
 ---
 # <a name="federation"></a>同盟
 此主題提供聯合安全性概念的簡短概觀。 同時描述 [!INCLUDE[indigo1](../../../../includes/indigo1-md.md)] 對部署聯合安全性架構的支援。 示範同盟的範例應用程式，請參閱[聯合範例](../../../../docs/framework/wcf/samples/federation-sample.md)。  
@@ -37,7 +39,7 @@ ms.lasthandoff: 12/22/2017
 ### <a name="elements-of-a-federated-security-architecture"></a>聯合安全性架構的項目  
  聯合安全性架構有三個索引鍵項目，如下表所示。  
   
-|元素|描述|  
+|項目|描述|  
 |-------------|-----------------|  
 |網域/領域|安全性管理或信任的單一單位。 一般的網域會包含單一組織。|  
 |同盟|已建立信任的網域集合。 信任的層級可能會有所不同，但是一般來說會包含驗證，並且幾乎都包含授權。 一般的聯合可能會包含一些組織，這些組織已建立對資源集合之共用存取的信任。|  
@@ -71,14 +73,14 @@ ms.lasthandoff: 12/22/2017
   
  在聯合安全性架構中，組織 A 的使用者了解如果想要存取組織 B 中的 Web 服務，就必須在組織 B 提交來自 STS 的有效安全性權杖，以便驗證與授權存取特定服務。  
   
- 在連絡 STS B 時，使用者會接收到來自與 STS 關聯之原則的另一個間接取值層級。 在 STS B 將安全性權杖發行給他們之前，他們必須提交來自 STS A 的有效安全性權杖 (也就是用戶端信任領域)。 這是在兩個組織之間建立信任關係的必然結果，並且表示組織 B 不需要管理組織 A 使用者的識別。實際上，STS B 通常會有 Null 的 `issuerAddress` 和 `issuerMetadataAddress`。 [!INCLUDE[crdefault](../../../../includes/crdefault-md.md)][How to： 設定本機簽發者](../../../../docs/framework/wcf/feature-details/how-to-configure-a-local-issuer.md)。 在此情況下，用戶端會查閱本機原則以尋找 STS A。這個組態稱為*首頁領域同盟*與進一步調整因為 STS B 不需要維護 STS A 的相關資訊  
+ 在連絡 STS B 時，使用者會接收到來自與 STS 關聯之原則的另一個間接取值層級。 在 STS B 將安全性權杖發行給他們之前，他們必須提交來自 STS A 的有效安全性權杖 (也就是用戶端信任領域)。 這是在兩個組織之間建立信任關係的必然結果，並且表示組織 B 不需要管理組織 A 使用者的識別。實際上，STS B 通常會有 Null 的 `issuerAddress` 和 `issuerMetadataAddress`。 如需詳細資訊，請參閱[How to： 設定本機簽發者](../../../../docs/framework/wcf/feature-details/how-to-configure-a-local-issuer.md)。 在此情況下，用戶端會查閱本機原則以尋找 STS A。這個組態稱為*首頁領域同盟*與進一步調整因為 STS B 不需要維護 STS A 的相關資訊  
   
  然後使用者就可以在組織 A 連絡 STS，並藉由提交平常用來存取組織內任何其他資源的驗證認證以取得安全性權杖。這也可以改善使用者必須維護多個認證集合，或在多個服務站台使用相同認證集合的問題。  
   
  使用者一旦取得來自 STS A 的安全性權杖，就會將權杖提交給 STS B。組織 B 就會開始執行使用者要求的授權，並且從自己的安全性權杖集合將安全性權杖發行給使用者。 然後使用者可以將其權杖提交給組織 B 的資源以存取服務。  
   
 ## <a name="support-for-federated-security-in-wcf"></a>在 WCF 中支援聯合安全性  
- [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)]提供部署聯合的安全性架構，透過的通行支援[ \<wsFederationHttpBinding >](../../../../docs/framework/configure-apps/file-schema/wcf/wsfederationhttpbinding.md)。  
+ [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] 提供部署聯合的安全性架構，透過的通行支援[ \<wsFederationHttpBinding >](../../../../docs/framework/configure-apps/file-schema/wcf/wsfederationhttpbinding.md)。  
   
  [ \<WsFederationHttpBinding >](../../../../docs/framework/configure-apps/file-schema/wcf/wsfederationhttpbinding.md)項目會提供安全、 可靠且互通的繫結牽涉到使用 HTTP 做為要求-回覆通訊樣式，基礎傳輸機制，做為編碼的 wire 格式採用文字和 XML。  
   
@@ -159,7 +161,7 @@ operationRequirementType="FederationSample.MyServiceOperationRequirement, MyServ
 ```  
   
 > [!NOTE]
->  關於 `MyService` 需要的宣告有一點應該要注意。 第二個圖形表示 `MyService` 需要 SAML 權杖使用 `accessAuthorized` 宣告。 更精確地說，這會指定 `MyService` 需要的宣告類型。 這個宣告類型的完整名稱是 http://tempuri.org:accessAuthorized (與關聯的命名空間合併)，在服務組態檔中會使用這個類型。 這個宣告的值表示這個宣告存在，並且假設 STS B 會將它設定為 `true`。  
+>  關於 `MyService` 需要的宣告有一點應該要注意。 第二個圖形表示 `MyService` 需要 SAML 權杖使用 `accessAuthorized` 宣告。 更精確地說，這會指定 `MyService` 需要的宣告類型。 這種宣告類型的完整名稱是http://tempuri.org:accessAuthorized（以及關聯的命名空間），用在服務組態檔中。 這個宣告的值表示這個宣告存在，並且假設 STS B 會將它設定為 `true`。  
   
  在執行階段時，`MyServiceOperationRequirement` 類別會強制執行這個原則，而這個類別是 `MyService` 實作的一部分。  
   
@@ -218,7 +220,7 @@ operationRequirementType="FederationSample.MyServiceOperationRequirement, MyServ
 ```  
   
 > [!NOTE]
->  同樣地，`userAuthenticated` 宣告是 STS B 需要的宣告類型。這個宣告類型的完整名稱是 http://tempuri.org:userAuthenticated (與關聯的命名空間合併)，在 STS 組態檔中會使用這個類型。 這個宣告的值表示這個宣告存在，並且假設 STS A 會將它設定為 `true`。  
+>  同樣地，`userAuthenticated`宣告是 STS B 所需的宣告類型這種宣告類型的完整名稱是http://tempuri.org:userAuthenticated（以及關聯的命名空間），用在 STS 組態檔中。 這個宣告的值表示這個宣告存在，並且假設 STS A 會將它設定為 `true`。  
   
  在執行階段時，`STS_B_OperationRequirement` 類別會強制執行這個原則，而這個類別是 STS B 實作的一部分。  
   
@@ -300,5 +302,5 @@ operationRequirementType="FederationSample.MyServiceOperationRequirement, MyServ
 ## <a name="summary"></a>總結  
  聯合安全性清楚地分隔責任，並協助建置安全且可擴充的服務架構。 做為建置與部署分散式應用程式的平台，[!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] 提供實作聯合安全性的原生支援。  
   
-## <a name="see-also"></a>請參閱  
+## <a name="see-also"></a>另請參閱  
  [安全性](../../../../docs/framework/wcf/feature-details/security.md)

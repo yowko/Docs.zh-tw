@@ -1,27 +1,29 @@
 ---
 title: Net.TCP Port Sharing
-ms.custom: 
+ms.custom: ''
 ms.date: 03/30/2017
 ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.technology: dotnet-clr
-ms.tgt_pltfrm: 
+ms.reviewer: ''
+ms.suite: ''
+ms.technology:
+- dotnet-clr
+ms.tgt_pltfrm: ''
 ms.topic: article
 helpviewer_keywords:
 - port activation [WCF]
 - port sharing [WCF]
 ms.assetid: f13692ee-a179-4439-ae72-50db9534eded
-caps.latest.revision: "14"
+caps.latest.revision: 14
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.workload: dotnet
-ms.openlocfilehash: 013c9e963ca75cc612d869a55b33d69aebbcad33
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.workload:
+- dotnet
+ms.openlocfilehash: c7abf272cb1d069b0fbdcd561256580de5a82c29
+ms.sourcegitcommit: 03ee570f6f528a7d23a4221dcb26a9498edbdf8c
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 04/28/2018
 ---
 # <a name="nettcp-port-sharing"></a>Net.TCP Port Sharing
 [!INCLUDE[indigo1](../../../../includes/indigo1-md.md)] 針對高效能通訊提供全新的 TCP 架構網路通訊協定 (net.tcp://)。 [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] 同時引進全新的系統元件 Net.TCP 連接埠共用服務，可讓多個使用者處理序共用 net.tcp 連接埠。  
@@ -49,17 +51,17 @@ ms.lasthandoff: 12/22/2017
  當使用 net.tcp:// 連接埠共用的 [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] 服務開啟時，[!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] TCP 傳輸基礎結構不會在應用程式處理序中直接開啟 TCP 通訊端。 反之，傳輸基礎結構會將服務的基底位址統一資源識別元 (URI) 註冊到 Net.TCP 連接埠共用服務，並等候連接埠共用服務代表自己接聽訊息。  連接埠共用服務會在訊息抵達時，將目的地為應用程式服務的訊息分派出去。  
   
 ## <a name="installing-port-sharing"></a>安裝連接埠共用  
- 儘管所有支援 [!INCLUDE[vstecwinfx](../../../../includes/vstecwinfx-md.md)] 的作業系統都可使用 Net.TCP 連接埠共用服務，但是預設不會啟用此服務。 為了安全起見，第一次使用 Net.TCP 連接埠共用服務前，系統管理員必須先手動加以啟用。 Net.TCP Port Sharing Service 會公開組態選項，讓您操控連接埠共用服務所擁有的數個網路通訊端特徵。 [!INCLUDE[crdefault](../../../../includes/crdefault-md.md)][How to： 啟用 Net.TCP Port Sharing Service](../../../../docs/framework/wcf/feature-details/how-to-enable-the-net-tcp-port-sharing-service.md)。  
+ 儘管所有支援 [!INCLUDE[vstecwinfx](../../../../includes/vstecwinfx-md.md)] 的作業系統都可使用 Net.TCP 連接埠共用服務，但是預設不會啟用此服務。 為了安全起見，第一次使用 Net.TCP 連接埠共用服務前，系統管理員必須先手動加以啟用。 Net.TCP Port Sharing Service 會公開組態選項，讓您操控連接埠共用服務所擁有的數個網路通訊端特徵。 如需詳細資訊，請參閱[How to： 啟用 Net.TCP Port Sharing Service](../../../../docs/framework/wcf/feature-details/how-to-enable-the-net-tcp-port-sharing-service.md)。  
   
 ## <a name="using-nettcp-port-sharing-in-an-application"></a>在應用程式中使用 Net.tcp Port Sharing  
  在 [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] 應用程式中使用 net.tcp:// 連接埠共用的最簡單方式，就是使用 <xref:System.ServiceModel.NetTcpBinding> 來公開服務，然後使用 <xref:System.ServiceModel.NetTcpBinding.PortSharingEnabled%2A> 屬性來啟用 Net.TCP Port Sharing Service。  
   
- [!INCLUDE[crabout](../../../../includes/crabout-md.md)]如何執行這項操作，請參閱[How to： 將 WCF 服務設定為使用連接埠共用](../../../../docs/framework/wcf/feature-details/how-to-configure-a-wcf-service-to-use-port-sharing.md)。  
+ [!INCLUDE[crabout](../../../../includes/crabout-md.md)] 如何執行這項操作，請參閱[How to： 將 WCF 服務設定為使用連接埠共用](../../../../docs/framework/wcf/feature-details/how-to-configure-a-wcf-service-to-use-port-sharing.md)。  
   
 ## <a name="security-implications-of-port-sharing"></a>連接埠共用的安全性含意  
  儘管 Net.TCP 連接埠共用服務會在應用程式與網路之間提供一層處理，您還是應該將使用連接埠共用的應用程式視為直接在網路上接聽一樣來加以保護。 具體來說，使用連接埠共用的應用程式應該評估執行時所需的處理序權限。 請考慮使用內建的網路服務帳戶來執行應用程式，在此情況下會以網路通訊所需的最低處理序權限來執行。  
   
-## <a name="see-also"></a>請參閱  
+## <a name="see-also"></a>另請參閱  
  [設定 Net.TCP 連接埠共用服務](../../../../docs/framework/wcf/feature-details/configuring-the-net-tcp-port-sharing-service.md)  
  [裝載](../../../../docs/framework/wcf/feature-details/hosting.md)  
  [如何：將 WCF 服務設為使用連接埠共用](../../../../docs/framework/wcf/feature-details/how-to-configure-a-wcf-service-to-use-port-sharing.md)  

@@ -1,24 +1,26 @@
 ---
-title: "WCF 中的佇列"
-ms.custom: 
+title: WCF 中的佇列
+ms.custom: ''
 ms.date: 03/30/2017
 ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.technology: dotnet-clr
-ms.tgt_pltfrm: 
+ms.reviewer: ''
+ms.suite: ''
+ms.technology:
+- dotnet-clr
+ms.tgt_pltfrm: ''
 ms.topic: article
 ms.assetid: e98d76ba-1acf-42cd-b137-0f8214661112
-caps.latest.revision: "21"
+caps.latest.revision: 21
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.workload: dotnet
-ms.openlocfilehash: 3c50bbc54d56d3fdc7a848af0e77cfbb2c15c9bb
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.workload:
+- dotnet
+ms.openlocfilehash: 01dc36c73d9e668dd98cb5ba8b275d3d5177ba61
+ms.sourcegitcommit: 03ee570f6f528a7d23a4221dcb26a9498edbdf8c
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 04/28/2018
 ---
 # <a name="queuing-in-wcf"></a>WCF 中的佇列
 本節說明如何在 [!INCLUDE[indigo1](../../../../includes/indigo1-md.md)] 中使用佇列通訊。  
@@ -49,12 +51,12 @@ ms.lasthandoff: 12/22/2017
   
  MSMQ 佇列的安全也可以使用向 Active Directory 目錄服務註冊的 Windows 身分識別來保護。 在安裝 MSMQ 時，您可以安裝 Active Directory 整合，而此時電腦必須是 Windows 網域網路的成員。  
   
- [!INCLUDE[crabout](../../../../includes/crabout-md.md)]MSMQ 中，請參閱[安裝訊息佇列 (MSMQ)](../../../../docs/framework/wcf/samples/installing-message-queuing-msmq.md)。  
+ [!INCLUDE[crabout](../../../../includes/crabout-md.md)] MSMQ 中，請參閱[安裝訊息佇列 (MSMQ)](../../../../docs/framework/wcf/samples/installing-message-queuing-msmq.md)。  
   
 ### <a name="netmsmqbinding"></a>NetMsmqBinding  
  [ \<NetMsmqBinding >](../../../../docs/framework/configure-apps/file-schema/wcf/netmsmqbinding.md)的佇列繫結[!INCLUDE[indigo2](../../../../includes/indigo2-md.md)]提供兩個[!INCLUDE[indigo2](../../../../includes/indigo2-md.md)]通訊使用 MSMQ 的端點。 因此，繫結會公開特定用於 MSMQ 的屬性。 不過，在 `NetMsmqBinding` 中不會公開所有 MSMQ 功能和屬性。 精簡型 `NetMsmqBinding` 是使用大多數客戶都認為足夠的最佳功能組來設計。  
   
- `NetMsmqBinding` 闡述了到目前為止以繫結屬性為形式討論的核心佇列概念。 這些屬性接著會向 MSMQ 傳達傳輸及傳送訊息的方式。 下列章節討論屬性分類。 [!INCLUDE[crdefault](../../../../includes/crdefault-md.md)]更完整說明特定屬性的概念主題。  
+ `NetMsmqBinding` 闡述了到目前為止以繫結屬性為形式討論的核心佇列概念。 這些屬性接著會向 MSMQ 傳達傳輸及傳送訊息的方式。 下列章節討論屬性分類。 如需詳細資訊，請參閱概念性主題的更完整地描述特定的屬性。  
   
 #### <a name="exactlyonce-and-durable-properties"></a>ExactlyOnce 和 Durable 屬性  
  `ExactlyOnce` 和 `Durable` 屬性會影響在佇列之間傳輸訊息的方式：  
@@ -77,17 +79,17 @@ ms.lasthandoff: 12/22/2017
   
  繫結中有兩個重要的屬性：  
   
--   `DeadLetterQueue`：這個屬性是一種列舉，指出是否要求寄不出的信件佇列。 列舉中也包含寄不出的信件佇列種類 (如果有要求的話)。 這些值則為 `None`、`System` 和 `Custom`。 [!INCLUDE[crabout](../../../../includes/crabout-md.md)]解譯這些屬性，請參閱[使用寄不出信件佇列來處理訊息傳輸失敗](../../../../docs/framework/wcf/feature-details/using-dead-letter-queues-to-handle-message-transfer-failures.md)  
+-   `DeadLetterQueue`：這個屬性是一種列舉，指出是否要求寄不出的信件佇列。 列舉中也包含寄不出的信件佇列種類 (如果有要求的話)。 這些值則為 `None`、`System` 和 `Custom`。 [!INCLUDE[crabout](../../../../includes/crabout-md.md)] 解譯這些屬性，請參閱[使用寄不出信件佇列來處理訊息傳輸失敗](../../../../docs/framework/wcf/feature-details/using-dead-letter-queues-to-handle-message-transfer-failures.md)  
   
 -   `CustomDeadLetterQueue`：這個屬性是應用程式特定之寄不出的信件佇列的統一資源識別碼 (URI) 位址。 這是必要的如果`DeadLetterQueue`。`Custom` 會選擇。  
   
 #### <a name="poison-message-handling-properties"></a>有害訊息處理屬性  
- 當服務在交易中從目標佇列中讀取訊息時，可能會因為各種原因而無法處理訊息。 然後服務會將訊息放回佇列，以便再次讀取。 若要處理重複失敗的訊息，可以在繫結中設定一組有害訊息處理屬性。 有害訊息處理屬性有四個：`ReceiveRetryCount`、`MaxRetryCycles`、`RetryCycleDelay` 和 `ReceiveErrorHandling`。 [!INCLUDE[crabout](../../../../includes/crabout-md.md)]這些屬性，請參閱[有害訊息處理](../../../../docs/framework/wcf/feature-details/poison-message-handling.md)。  
+ 當服務在交易中從目標佇列中讀取訊息時，可能會因為各種原因而無法處理訊息。 然後服務會將訊息放回佇列，以便再次讀取。 若要處理重複失敗的訊息，可以在繫結中設定一組有害訊息處理屬性。 有害訊息處理屬性有四個：`ReceiveRetryCount`、`MaxRetryCycles`、`RetryCycleDelay` 和 `ReceiveErrorHandling`。 [!INCLUDE[crabout](../../../../includes/crabout-md.md)] 這些屬性，請參閱[有害訊息處理](../../../../docs/framework/wcf/feature-details/poison-message-handling.md)。  
   
 #### <a name="security-properties"></a>安全性屬性  
- MSMQ 會公開本身的安全性模型，例如佇列上或傳送驗證訊息上的存取控制清單 (ACL)。 `NetMsmqBinding` 會將這些安全性屬性當做部分傳輸安全性設定公開。 在傳輸安全性的繫結中有兩個屬性：`MsmqAuthenticationMode` 和 `MsmqProtectionLevel`。 這些屬性中的設定取決於設定 MSMQ 的方式。 [!INCLUDE[crdefault](../../../../includes/crdefault-md.md)][保護訊息使用傳輸安全性](../../../../docs/framework/wcf/feature-details/securing-messages-using-transport-security.md)。  
+ MSMQ 會公開本身的安全性模型，例如佇列上或傳送驗證訊息上的存取控制清單 (ACL)。 `NetMsmqBinding` 會將這些安全性屬性當做部分傳輸安全性設定公開。 在傳輸安全性的繫結中有兩個屬性：`MsmqAuthenticationMode` 和 `MsmqProtectionLevel`。 這些屬性中的設定取決於設定 MSMQ 的方式。 如需詳細資訊，請參閱[保護訊息使用傳輸安全性](../../../../docs/framework/wcf/feature-details/securing-messages-using-transport-security.md)。  
   
- 除了傳輸安全性以外，也可以使用訊息安全性來保護實際的 SOAP 訊息本身。 [!INCLUDE[crdefault](../../../../includes/crdefault-md.md)][保護訊息使用訊息安全性](../../../../docs/framework/wcf/feature-details/securing-messages-using-message-security.md)。  
+ 除了傳輸安全性以外，也可以使用訊息安全性來保護實際的 SOAP 訊息本身。 如需詳細資訊，請參閱[保護訊息使用訊息安全性](../../../../docs/framework/wcf/feature-details/securing-messages-using-message-security.md)。  
   
  `MsmqTransportSecurity` 也會公開 `MsmqEncryptionAlgorithm` 和 `MsmqHashAlgorithm` 這兩個屬性。 進行訊息的佇列對佇列傳輸加密，以及進行簽章雜湊處理時，可選用這些不同演算法的列舉。  
   
@@ -100,7 +102,7 @@ ms.lasthandoff: 12/22/2017
   
 -   `QueueTransferProtocol`：用於佇列對佇列訊息傳輸的通訊協定列舉。 MSMQ 會實作原生佇列對佇列傳輸通訊協定，以及稱為 SOAP Reliable Messaging Protocol (SRMP) 的 SOAP 架構通訊協定。 在佇列對佇列傳輸中使用 HTTP 傳輸時，就會使用 SRMP。 在佇列對佇列傳輸中使用 HTTPS 時，則會使用 SRMP。  
   
--   `UseActiveDirectory`：布林值，指出是否必須使用 Active Directory 解析佇列位址。 根據預設，這個屬性為關閉狀態。 [!INCLUDE[crdefault](../../../../includes/crdefault-md.md)][服務端點與佇列定址](../../../../docs/framework/wcf/feature-details/service-endpoints-and-queue-addressing.md)。  
+-   `UseActiveDirectory`：布林值，指出是否必須使用 Active Directory 解析佇列位址。 根據預設，這個屬性為關閉狀態。 如需詳細資訊，請參閱[服務端點與佇列定址](../../../../docs/framework/wcf/feature-details/service-endpoints-and-queue-addressing.md)。  
   
 ### <a name="msmqintegrationbinding"></a>MsmqIntegrationBinding  
  若要讓 `MsmqIntegrationBinding` 端點與使用 C、C++、COM 或 System.Messaging API 所撰寫的現有 MSMQ 應用程式進行通訊，則會用到 [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)]。  
@@ -138,6 +140,6 @@ ms.lasthandoff: 12/22/2017
   
 -   [訊息佇列上的訊息安全性](../../../../docs/framework/wcf/samples/message-security-over-message-queuing.md)  
   
-## <a name="see-also"></a>請參閱  
+## <a name="see-also"></a>另請參閱  
  [服務端點與佇列定址](../../../../docs/framework/wcf/feature-details/service-endpoints-and-queue-addressing.md)  
  [以 Web 裝載佇列應用程式](../../../../docs/framework/wcf/feature-details/web-hosting-a-queued-application.md)

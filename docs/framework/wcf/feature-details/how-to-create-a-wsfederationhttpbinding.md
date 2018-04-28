@@ -1,12 +1,13 @@
 ---
-title: "HOW TO：建立 WSFederationHttpBinding"
-ms.custom: 
+title: HOW TO：建立 WSFederationHttpBinding
+ms.custom: ''
 ms.date: 03/30/2017
 ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.technology: dotnet-clr
-ms.tgt_pltfrm: 
+ms.reviewer: ''
+ms.suite: ''
+ms.technology:
+- dotnet-clr
+ms.tgt_pltfrm: ''
 ms.topic: article
 dev_langs:
 - csharp
@@ -15,16 +16,17 @@ helpviewer_keywords:
 - WCF, federation
 - federation
 ms.assetid: e54897d7-aa6c-46ec-a278-b2430c8c2e10
-caps.latest.revision: "16"
+caps.latest.revision: 16
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.workload: dotnet
-ms.openlocfilehash: 22322c7b8cd03abcf3a98c49b9d43125b37d956d
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.workload:
+- dotnet
+ms.openlocfilehash: 8962564bbefc3f43261a2979ae9765369b211f15
+ms.sourcegitcommit: 03ee570f6f528a7d23a4221dcb26a9498edbdf8c
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 04/28/2018
 ---
 # <a name="how-to-create-a-wsfederationhttpbinding"></a>HOW TO：建立 WSFederationHttpBinding
 在[!INCLUDE[indigo1](../../../../includes/indigo1-md.md)]、<xref:System.ServiceModel.WSFederationHttpBinding>類別 ([\<wsFederationHttpBinding >](../../../../docs/framework/configure-apps/file-schema/wcf/wsfederationhttpbinding.md)組態中) 會提供一個機制來公開聯合的服務。 也就是，要求用戶端使用由安全性權杖服務發出的安全性權杖進行驗證的一種服務。 這個主題會表示如何在程式碼和組態中設定 <xref:System.ServiceModel.WSFederationHttpBinding>。 一旦建立了繫結，就可以設定端點以使用該繫結。  
@@ -44,9 +46,9 @@ ms.lasthandoff: 12/22/2017
   
      如果沒有指定權杖型別，用戶端會產生不具權杖型別 URI 的 WS-Trust 要求安全性權杖 (Request Security Token，RST)，而根據預設，服務會預期使用安全性判斷提示標記語言 (Security Assertions Markup Language，SAML) 1.1 權杖來進行用戶端驗證。  
   
-     SAML 1.1 權杖的 URI 為 "http://docs.oasis-open.org/wss/oasis-wss-saml-token-profile-1.1#SAMLV1.1"。  
+     SAML 1.1 權杖的 URI 是"http://docs.oasis-open.org/wss/oasis-wss-saml-token-profile-1.1#SAMLV1.1"。  
   
-4.  選擇項。 在聯合服務上，請將 <xref:System.ServiceModel.FederatedMessageSecurityOverHttp.IssuerMetadataAddress%2A> 屬性設定為安全性權杖服務的中繼資料 URL。 中繼資料端點可讓服務的用戶端選取適當的繫結/端點組 (如果已將服務設定為發行中繼資料)。 [!INCLUDE[crabout](../../../../includes/crabout-md.md)]發行中繼資料，請參閱[發行中繼資料](../../../../docs/framework/wcf/feature-details/publishing-metadata.md)。  
+4.  選擇性。 在聯合服務上，請將 <xref:System.ServiceModel.FederatedMessageSecurityOverHttp.IssuerMetadataAddress%2A> 屬性設定為安全性權杖服務的中繼資料 URL。 中繼資料端點可讓服務的用戶端選取適當的繫結/端點組 (如果已將服務設定為發行中繼資料)。 [!INCLUDE[crabout](../../../../includes/crabout-md.md)] 發行中繼資料，請參閱[發行中繼資料](../../../../docs/framework/wcf/feature-details/publishing-metadata.md)。  
   
  您也可以設定其他屬性，包括在發行的權杖中當做證明金鑰使用的金鑰類型、在用戶端和服務之間使用的演算法套件、是否交涉或明確指定服務認證、服務預期發行的權杖要包含的任何特定宣告，以及必須新增至要求 (這些是用戶端傳送至安全性權杖服務的要求) 的其他 XML 項目。  
   
@@ -63,7 +65,7 @@ ms.lasthandoff: 12/22/2017
   
 4.  設定<xref:System.ServiceModel.FederatedMessageSecurityOverHttp.IssuedKeyType%2A>屬性<xref:System.IdentityModel.Tokens.SecurityKeyType>`SymmetricKey`或。`AsymmetricKey` 視需要而定。  
   
-5.  將 <xref:System.ServiceModel.FederatedMessageSecurityOverHttp.IssuedTokenType%2A> 屬性設定為適當值。 如果未設定值，[!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] 預設為 "http://docs.oasis-open.org/wss/oasis-wss-saml-token-profile-1.1#SAMLV1.1"，而這表示 SAML 1.1 權杖。  
+5.  將 <xref:System.ServiceModel.FederatedMessageSecurityOverHttp.IssuedTokenType%2A> 屬性設定為適當值。 如果未不設定任何值，[!INCLUDE[indigo2](../../../../includes/indigo2-md.md)]預設值為"http://docs.oasis-open.org/wss/oasis-wss-saml-token-profile-1.1#SAMLV1.1"，這表示 SAML 1.1 權杖。  
   
 6.  如果未指定本機簽發者，則在用戶端上為必要項；在服務上則為選擇項。 建立其中包含安全性權杖服務之位址和身分識別資訊的 <xref:System.ServiceModel.EndpointAddress>，並將 <xref:System.ServiceModel.EndpointAddress> 執行個體指派給 <xref:System.ServiceModel.FederatedMessageSecurityOverHttp.IssuerAddress%2A> 屬性。  
   
@@ -99,9 +101,9 @@ ms.lasthandoff: 12/22/2017
   
 11. 選擇項。 加入 `<identity>` 子項目，並指定安全性權杖服務的識別。  
   
-12. [!INCLUDE[crdefault](../../../../includes/crdefault-md.md)][服務身分識別和驗證](../../../../docs/framework/wcf/feature-details/service-identity-and-authentication.md)。  
+12. 如需詳細資訊，請參閱[服務識別和驗證](../../../../docs/framework/wcf/feature-details/service-identity-and-authentication.md)。  
   
-13. 如果未指定本機簽發者，則在用戶端上為必要項；在服務上則不要使用。 建立[\<繫結 >](../../../../docs/framework/misc/binding.md)可用來與安全性權杖服務通訊的繫結區段中的項目。 [!INCLUDE[crabout](../../../../includes/crabout-md.md)]建立繫結，請參閱[How to： 在組態中指定服務繫結](../../../../docs/framework/wcf/how-to-specify-a-service-binding-in-configuration.md)。  
+13. 如果未指定本機簽發者，則在用戶端上為必要項；在服務上則不要使用。 建立[\<繫結 >](../../../../docs/framework/misc/binding.md)可用來與安全性權杖服務通訊的繫結區段中的項目。 [!INCLUDE[crabout](../../../../includes/crabout-md.md)] 建立繫結，請參閱[How to： 在組態中指定服務繫結](../../../../docs/framework/wcf/how-to-specify-a-service-binding-in-configuration.md)。  
   
 14. 藉由設定 `binding` 項目的 `bindingConfiguration` 和 `<issuer>` 屬性，指定在前面的步驟中所建立的繫結。  
   
@@ -115,7 +117,7 @@ ms.lasthandoff: 12/22/2017
  [!code-csharp[c_FederationBinding#2](../../../../samples/snippets/csharp/VS_Snippets_CFX/c_federationbinding/cs/source.cs#2)] 
  [!code-vb[c_FederationBinding#2](../../../../samples/snippets/visualbasic/VS_Snippets_CFX/c_federationbinding/vb/source.vb#2)]  
   
-## <a name="see-also"></a>請參閱  
+## <a name="see-also"></a>另請參閱  
  [同盟](../../../../docs/framework/wcf/feature-details/federation.md)  
  [同盟範例](../../../../docs/framework/wcf/samples/federation-sample.md)  
  [如何：在 WSFederationHttpBinding 上停用安全工作階段](../../../../docs/framework/wcf/feature-details/how-to-disable-secure-sessions-on-a-wsfederationhttpbinding.md)

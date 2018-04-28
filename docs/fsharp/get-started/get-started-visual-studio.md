@@ -1,20 +1,17 @@
 ---
-title: "開始使用 F # Visual Studio 中"
-description: "了解如何使用 F # 與 Visual Studio。"
-keywords: "Visual F#, F#, 函式程式設計"
+title: '開始使用 F # Visual Studio 中'
+description: '了解如何使用 F # 與 Visual Studio。'
 author: cartermp
 ms.author: phcart
 ms.date: 02/13/2017
-ms.topic: article
-ms.prod: .net
-ms.technology: devlang-fsharp
+ms.topic: conceptual
+ms.prod: dotnet-fsharp
 ms.devlang: fsharp
-ms.assetid: 8db75596-19a9-4eda-b20d-a12d517c8cc1
-ms.openlocfilehash: 818bf50507a88e1d765da8d0505ed8da4790b71f
-ms.sourcegitcommit: 655fd4f78741967f80c409cef98347fdcf77857d
+ms.openlocfilehash: 29e24f755e6d97c4b31c0d01b254bf90cf77bf17
+ms.sourcegitcommit: 03ee570f6f528a7d23a4221dcb26a9498edbdf8c
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 02/28/2018
+ms.lasthandoff: 04/28/2018
 ---
 # <a name="get-started-with-f-in-visual-studio"></a>開始使用 F # Visual Studio 中
 

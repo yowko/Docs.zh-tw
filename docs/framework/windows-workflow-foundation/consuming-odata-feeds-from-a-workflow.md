@@ -14,11 +14,11 @@ ms.author: dotnetcontent
 manager: wpickett
 ms.workload:
 - dotnet
-ms.openlocfilehash: 2057e2b1c03a1ebcd68d7d59be8839171305707f
-ms.sourcegitcommit: 2042de78fcdceebb6b8ac4b7a292b93e8782cbf5
+ms.openlocfilehash: 09eb22c0c4bfaf549bd18cccae0c84957e730aa6
+ms.sourcegitcommit: 03ee570f6f528a7d23a4221dcb26a9498edbdf8c
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/27/2018
+ms.lasthandoff: 04/28/2018
 ---
 # <a name="consuming-odata-feeds-from-a-workflow"></a>從流程中使用 OData 摘要
 WCF 資料服務是 [!INCLUDE[dnprdnshort](../../../includes/dnprdnshort-md.md)] 的一個元件，可讓您建立使用 Open Data Protocol (OData) 的服務，利用具像狀態傳輸 (REST) 的語意透過 Web 或內部網路公開及取用資料。 OData 會將資料公開為可由 URI 定址的資源。 任何可以傳送 HTTP 要求並處理資料服務傳回之 OData 摘要的應用程式，都可以與 OData 型資料服務互動。 此外，WCF 資料服務也包含用戶端程式庫，在您從 [!INCLUDE[dnprdnshort](../../../includes/dnprdnshort-md.md)] 應用程式取用 OData 摘要時，可為您提供更豐富的程式設計體驗。 本主題提供在工作流程中取用 OData 摘要的概觀 (不論有沒有使用用戶端程式庫)。  
@@ -37,13 +37,13 @@ WCF 資料服務是 [!INCLUDE[dnprdnshort](../../../includes/dnprdnshort-md.md)]
  請注意，此服務不會公開任何服務作業，而且 [ **服務** ] 清單中有項目代表 Northwind 資料服務所公開的實體。 當加入服務參考時，將會針對這些實體產生類別，而且這些類別可用於用戶端程式碼。 本主題的範例會使用這些類別和 `NorthwindEntities` 類別來執行查詢。  
   
 > [!NOTE]
->  [!INCLUDE[crdefault](../../../includes/crdefault-md.md)] [產生資料服務用戶端程式庫 (WCF Data Services)](http://go.microsoft.com/fwlink/?LinkID=191611)。  
+>  如需詳細資訊，請參閱[產生資料服務用戶端程式庫 (WCF Data Services)](http://go.microsoft.com/fwlink/?LinkID=191611)。  
   
 ### <a name="using-asynchronous-methods"></a>使用非同步方法  
  為了對付透過 Web 存取資源時可能發生的延遲問題，我們建議您以非同步方式存取 WCF 資料服務。 WCF 資料服務用戶端程式庫包含叫用查詢的非同步方法，並提供 Windows Workflow Foundation (WF)<xref:System.Activities.AsyncCodeActivity>類別，可撰寫非同步活動。 您可以撰寫<xref:System.Activities.AsyncCodeActivity> 衍生活動，以利用具有非同步方法的 [!INCLUDE[dnprdnshort](../../../includes/dnprdnshort-md.md)] 類別，或者可以將要非同步執行的程式碼放在方法中，然後使用委派來叫用此程式碼。 本章節提供 <xref:System.Activities.AsyncCodeActivity> 衍生活動的兩個範例，一個範例會使用 WCF 資料服務用戶端程式庫的非同步方法，另一個範例則使用委派。  
   
 > [!NOTE]
->  [!INCLUDE[crdefault](../../../includes/crdefault-md.md)] [非同步作業 (WCF Data Services)](http://go.microsoft.com/fwlink/?LinkId=193396)和[建立非同步活動](../../../docs/framework/windows-workflow-foundation/creating-asynchronous-activities-in-wf.md)。  
+>  如需詳細資訊，請參閱[非同步作業 (WCF Data Services)](http://go.microsoft.com/fwlink/?LinkId=193396)和[建立非同步活動](../../../docs/framework/windows-workflow-foundation/creating-asynchronous-activities-in-wf.md)。  
   
 ### <a name="using-client-library-asynchronous-methods"></a>使用用戶端程式庫非同步方法  
  <xref:System.Data.Services.Client.DataServiceQuery%601> 類別會提供 <xref:System.Data.Services.Client.DataServiceQuery%601.BeginExecute%2A> 和 <xref:System.Data.Services.Client.DataServiceQuery%601.EndExecute%2A> 方法，以非同步方式查詢 OData 服務。 這些方法可以從 <xref:System.Activities.AsyncCodeActivity.BeginExecute%2A> 衍生類別的 <xref:System.Activities.AsyncCodeActivity.EndExecute%2A> 和 <xref:System.Activities.AsyncCodeActivity> 覆寫來呼叫。 當 <xref:System.Activities.AsyncCodeActivity> <xref:System.Activities.AsyncCodeActivity.BeginExecute%2A> 覆寫傳回時，工作流程可以進入閒置狀態 (但不會持久)，而且當非同步工作完成時，執行階段會叫用 <xref:System.Activities.AsyncCodeActivity.EndExecute%2A> 。  

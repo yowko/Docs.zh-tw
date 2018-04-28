@@ -1,13 +1,13 @@
 ---
-title: "HOW TO：使用 SecurityBindingElement 建立自訂繫結"
-ms.custom: 
+title: HOW TO：使用 SecurityBindingElement 建立自訂繫結
+ms.custom: ''
 ms.date: 03/30/2017
 ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
+ms.reviewer: ''
+ms.suite: ''
 ms.technology:
 - dotnet-clr
-ms.tgt_pltfrm: 
+ms.tgt_pltfrm: ''
 ms.topic: article
 dev_langs:
 - csharp
@@ -15,20 +15,20 @@ dev_langs:
 helpviewer_keywords:
 - security [WCF], creating custom bindings
 ms.assetid: 203a9f9e-3a73-427c-87aa-721c56265b29
-caps.latest.revision: 
+caps.latest.revision: 19
 author: BrucePerlerMS
 ms.author: bruceper
 manager: mbaldwin
 ms.workload:
 - dotnet
-ms.openlocfilehash: e230c02d53f8222034dfd79872cde9c540c31963
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.openlocfilehash: 3dc83697a27bf99a63305bf89a57fbcb4d459b45
+ms.sourcegitcommit: 03ee570f6f528a7d23a4221dcb26a9498edbdf8c
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 04/28/2018
 ---
 # <a name="how-to-create-a-custom-binding-using-the-securitybindingelement"></a>HOW TO：使用 SecurityBindingElement 建立自訂繫結
-[!INCLUDE[indigo1](../../../../includes/indigo1-md.md)] 包括數個系統提供之繫結，您可以對這些繫結進行設定，但是自訂這些繫結並不具有設定所有安全性選項時 [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] 所支援的完整彈性。 本主題示範如何直接從個別的繫結元素建立自訂繫結，並強調一些可在建立這類繫結時指定的安全設定。 [!INCLUDE[crabout](../../../../includes/crabout-md.md)]建立自訂繫結，請參閱[擴充繫結](../../../../docs/framework/wcf/extending/extending-bindings.md)。  
+[!INCLUDE[indigo1](../../../../includes/indigo1-md.md)] 包括數個系統提供之繫結，您可以對這些繫結進行設定，但是自訂這些繫結並不具有設定所有安全性選項時 [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] 所支援的完整彈性。 本主題示範如何直接從個別的繫結元素建立自訂繫結，並強調一些可在建立這類繫結時指定的安全設定。 [!INCLUDE[crabout](../../../../includes/crabout-md.md)] 建立自訂繫結，請參閱[擴充繫結](../../../../docs/framework/wcf/extending/extending-bindings.md)。  
   
 > [!WARNING]
 >  <xref:System.ServiceModel.Channels.SecurityBindingElement> 不支援 <xref:System.ServiceModel.Channels.IDuplexSessionChannel> 通道圖案，當 <xref:System.ServiceModel.TransferMode> 設定為 <xref:System.ServiceModel.TransferMode.Buffered> 時，這是 TCP 傳輸使用的預設通道圖案。 您必須將 <xref:System.ServiceModel.TransferMode> 設定為 <xref:System.ServiceModel.TransferMode.Streamed>，才能在這個情況中使用 <xref:System.ServiceModel.Channels.SecurityBindingElement>。  
@@ -88,9 +88,9 @@ ms.lasthandoff: 12/22/2017
 |||SSL 或 Windows StreamSecurityBindingElement|SSL 或 Windows StreamSecurityBindingElement|SSL 或 Windows StreamSecurityBindingElement|  
 |||TcpTransportBindingElement|TcpTransportBindingElement|TcpTransportBindingElement|  
   
- 請注意，SecurityBindingElements 有許多可以設定的項目。 [!INCLUDE[crdefault](../../../../includes/crdefault-md.md)][SecurityBindingElement 驗證模式](../../../../docs/framework/wcf/feature-details/securitybindingelement-authentication-modes.md)。  
+ 請注意，SecurityBindingElements 有許多可以設定的項目。 如需詳細資訊，請參閱[SecurityBindingElement 驗證模式](../../../../docs/framework/wcf/feature-details/securitybindingelement-authentication-modes.md)。  
   
- [!INCLUDE[crdefault](../../../../includes/crdefault-md.md)][安全對話與安全工作階段](../../../../docs/framework/wcf/feature-details/secure-conversations-and-secure-sessions.md)。  
+ 如需詳細資訊，請參閱[安全對話與安全工作階段](../../../../docs/framework/wcf/feature-details/secure-conversations-and-secure-sessions.md)。  
   
 ## <a name="procedures"></a>程序  
   
@@ -119,7 +119,7 @@ ms.lasthandoff: 12/22/2017
  [!code-csharp[c_CustomBinding#20](../../../../samples/snippets/csharp/VS_Snippets_CFX/c_custombinding/cs/c_custombinding.cs#20)]
  [!code-vb[c_CustomBinding#20](../../../../samples/snippets/visualbasic/VS_Snippets_CFX/c_custombinding/vb/source.vb#20)]  
   
-## <a name="see-also"></a>請參閱  
+## <a name="see-also"></a>另請參閱  
  <xref:System.ServiceModel.Channels.SecurityBindingElement>  
  <xref:System.ServiceModel.Channels.TransportSecurityBindingElement>  
  <xref:System.ServiceModel.Channels.SymmetricSecurityBindingElement>  

@@ -20,11 +20,11 @@ ms.author: dotnetcontent
 manager: wpickett
 ms.workload:
 - dotnet
-ms.openlocfilehash: d795008e014deaa126dac1bb978ac825f2536208
-ms.sourcegitcommit: 86adcc06e35390f13c1e372c36d2e044f1fc31ef
+ms.openlocfilehash: e6d800b35a69c08ab9f7bd90165691eab7d8743f
+ms.sourcegitcommit: 03ee570f6f528a7d23a4221dcb26a9498edbdf8c
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/26/2018
+ms.lasthandoff: 04/28/2018
 ---
 # <a name="data-service-versioning-wcf-data-services"></a>資料服務版本控制 (WCF Data Services)
 [!INCLUDE[ssODataFull](../../../../includes/ssodatafull-md.md)]可讓您建立資料服務，讓用戶端可以存取資料，做為使用 Uri 中的資料模型為基礎的資源。 [!INCLUDE[ssODataShort](../../../../includes/ssodatashort-md.md)] 也支援服務作業的定義。 初始部署並在其存留期期間潛在進行數次之後，可能會因為各種原因而需要變更這些資料服務 (例如變更商務需要、資訊技術需求) 或處理其他問題。 當您針對現有的資料服務進行變更時，必須考慮是否要定義新的資料服務版本，以及如何妥善地將對於現有用戶端應用程式的影響降至最低。 本主題提供建立新資料服務版本時機和方式的指引。 本主題也會描述 [!INCLUDE[ssAstoria](../../../../includes/ssastoria-md.md)] 如何處理支援不同版本 [!INCLUDE[ssODataShort](../../../../includes/ssodatashort-md.md)] 通訊協定之用戶端與資料服務之間的交換。  
@@ -82,7 +82,7 @@ ms.lasthandoff: 04/26/2018
 |第 3 版|-您可以下載並安裝支援的發行前版本[!INCLUDE[ssODataShort](../../../../includes/ssodatashort-md.md)]從第 3 版[Microsoft Download Center](http://go.microsoft.com/fwlink/?LinkId=203885)。|  
   
 ### <a name="metadata-versions"></a>中繼資料版本  
- 根據預設，[!INCLUDE[ssAstoria](../../../../includes/ssastoria-md.md)] 會使用 1.1 版的 CSDL 來代表資料模型。 這就是以反映提供者或自訂資料服務提供者為基礎之資料模型的情況。 但是，當使用 [!INCLUDE[adonet_ef](../../../../includes/adonet-ef-md.md)] 來定義資料模型時，傳回的 CSDL 版本會與 [!INCLUDE[adonet_ef](../../../../includes/adonet-ef-md.md)] 所使用的版本相同。 CSDL 的版本取決於命名空間的[結構描述項目](http://msdn.microsoft.com/library/396074d8-f99c-4f50-a073-68bce848224f)。 [!INCLUDE[crdefault](../../../../includes/crdefault-md.md)] 規格[ \[MC-CSDL\]： 概念結構定義檔案格式](http://go.microsoft.com/fwlink/?LinkId=159072)。  
+ 根據預設，[!INCLUDE[ssAstoria](../../../../includes/ssastoria-md.md)] 會使用 1.1 版的 CSDL 來代表資料模型。 這就是以反映提供者或自訂資料服務提供者為基礎之資料模型的情況。 但是，當使用 [!INCLUDE[adonet_ef](../../../../includes/adonet-ef-md.md)] 來定義資料模型時，傳回的 CSDL 版本會與 [!INCLUDE[adonet_ef](../../../../includes/adonet-ef-md.md)] 所使用的版本相同。 CSDL 的版本取決於命名空間的[結構描述項目](http://msdn.microsoft.com/library/396074d8-f99c-4f50-a073-68bce848224f)。 如需詳細資訊，請參閱規格[ \[MC-CSDL\]： 概念結構定義檔案格式](http://go.microsoft.com/fwlink/?LinkId=159072)。  
   
  傳回之中繼資料的 `DataServices` 項目還包含 `DataServiceVersion` 屬性，該值與回應訊息中 `DataServiceVersion` 標頭的值相同。 用戶端應用程式，例如**加入服務參考**對話方塊中，在 Visual Studio 中使用這項資訊來產生用戶端資料服務類別使用的版本正確[!INCLUDE[ssAstoria](../../../../includes/ssastoria-md.md)]裝載的資料服務。 如需詳細資訊，請參閱[OData： 通訊協定版本控制](http://go.microsoft.com/fwlink/?LinkId=186071)。  
   

@@ -1,20 +1,17 @@
 ---
-title: "迴圈：for...in 運算式 (F#)"
-description: "請參閱如何 F # for...in..運算式中迴圈建構用來反覆查看的可列舉集合中的模式比對。"
-keywords: "Visual F#, F#, 函式程式設計"
+title: 迴圈：for...in 運算式 (F#)
+description: '請參閱如何 F # for...in..運算式中迴圈建構用來反覆查看的可列舉集合中的模式比對。'
 author: cartermp
 ms.author: phcart
 ms.date: 05/16/2016
 ms.topic: language-reference
-ms.prod: .net
-ms.technology: devlang-fsharp
+ms.prod: dotnet-fsharp
 ms.devlang: fsharp
-ms.assetid: f54e3228-4aec-4d0a-ae37-bc3376508284
-ms.openlocfilehash: d86aeb3bdd975261e59004d636354a740bd95c47
-ms.sourcegitcommit: bd1ef61f4bb794b25383d3d72e71041a5ced172e
+ms.openlocfilehash: eaf0f4fc6419d8e0bff46795120ee5e42c4efe1d
+ms.sourcegitcommit: 03ee570f6f528a7d23a4221dcb26a9498edbdf8c
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/18/2017
+ms.lasthandoff: 04/28/2018
 ---
 # <a name="loops-forin-expression"></a>迴圈：for...in 運算式
 
@@ -138,7 +135,7 @@ a b c d e f g h i j k l m n o p q r s t u v w x y z
 Number of elements in list1: 5
 ```
 
-`Note`您可以使用`for...in`在循序項運算式和其他計算的運算式，在此情況下的自訂的版本`for...in`運算式使用。 如需詳細資訊，請參閱[序列](sequences.md)，[非同步工作流程](asynchronous-workflows.md)，和[計算運算式](computation-expressions.md)。
+`Note` 您可以使用`for...in`在循序項運算式和其他計算的運算式，在此情況下的自訂的版本`for...in`運算式使用。 如需詳細資訊，請參閱[序列](sequences.md)，[非同步工作流程](asynchronous-workflows.md)，和[計算運算式](computation-expressions.md)。
 
 
 ## <a name="see-also"></a>另請參閱

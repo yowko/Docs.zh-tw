@@ -1,27 +1,29 @@
 ---
-title: "HOW TO：註冊和設定服務 Moniker"
-ms.custom: 
+title: HOW TO：註冊和設定服務 Moniker
+ms.custom: ''
 ms.date: 03/30/2017
 ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.technology: dotnet-clr
-ms.tgt_pltfrm: 
+ms.reviewer: ''
+ms.suite: ''
+ms.technology:
+- dotnet-clr
+ms.tgt_pltfrm: ''
 ms.topic: article
 helpviewer_keywords:
 - COM [WCF], configure service monikers
 - COM [WCF], register service monikers
 ms.assetid: e5e16c80-8a8e-4eef-af53-564933b651ef
-caps.latest.revision: "20"
+caps.latest.revision: 20
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.workload: dotnet
-ms.openlocfilehash: 6e5c57927a455b5d2a253becac35b1bf9033933f
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.workload:
+- dotnet
+ms.openlocfilehash: 52b3ec27560ca2dc47b7951cb209f33f307fa7ea
+ms.sourcegitcommit: 03ee570f6f528a7d23a4221dcb26a9498edbdf8c
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 04/28/2018
 ---
 # <a name="how-to-register-and-configure-a-service-moniker"></a>HOW TO：註冊和設定服務 Moniker
 在具有型別之合約的 COM 應用程式中使用 [!INCLUDE[indigo1](../../../../includes/indigo1-md.md)] 服務 Moniker 之前，您必須使用 COM 註冊必要的屬性化型別，並以必要的繫結組態設定 COM 應用程式和 Moniker。  
@@ -36,7 +38,7 @@ ms.lasthandoff: 12/22/2017
     [assembly: ComVisible(true)]  
     ```  
   
-3.  將 Managed [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] 用戶端編譯為強式名稱的組件。 這樣做將需要以密碼金鑰組 (Key Pairs) 進行簽署。 [!INCLUDE[crdefault](../../../../includes/crdefault-md.md)][簽署為強式名稱組件](http://go.microsoft.com/fwlink/?LinkId=94874).NET 開發人員指南中。  
+3.  將 Managed [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] 用戶端編譯為強式名稱的組件。 這樣做將需要以密碼金鑰組 (Key Pairs) 進行簽署。 如需詳細資訊，請參閱[簽署以強式名稱組件](http://go.microsoft.com/fwlink/?LinkId=94874).NET 開發人員指南中。  
   
 4.  使用組件註冊 (Regasm.exe) 工具並搭配 `/tlb` 選項，以使用 COM 註冊組件中的型別。  
   
@@ -108,5 +110,5 @@ ms.lasthandoff: 12/22/2017
   
      這樣會修改匯入的介面定義，讓所有方法都會傳回 `HResult`。 其他傳回值都會轉換為 Out 參數。 整體的執行方法仍然相同。 這樣可讓您在 Proxy 上呼叫方法時，判斷發生例外狀況的原因。 不過這個功能只能用於 C++ 程式碼。  
   
-## <a name="see-also"></a>請參閱  
+## <a name="see-also"></a>另請參閱  
  [ServiceModel 中繼資料公用程式工具 (Svcutil.exe)](../../../../docs/framework/wcf/servicemodel-metadata-utility-tool-svcutil-exe.md)

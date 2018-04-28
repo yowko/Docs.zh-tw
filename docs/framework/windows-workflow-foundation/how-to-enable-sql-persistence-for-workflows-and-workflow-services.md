@@ -1,31 +1,32 @@
 ---
-title: "HOW TO：啟用工作流程與工作流程服務的 SQL 持續性"
-ms.custom: 
+title: HOW TO：啟用工作流程與工作流程服務的 SQL 持續性
+ms.custom: ''
 ms.date: 03/30/2017
 ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.tgt_pltfrm: 
+ms.reviewer: ''
+ms.suite: ''
+ms.tgt_pltfrm: ''
 ms.topic: article
 dev_langs:
 - csharp
 - vb
 ms.assetid: ca7bf77f-3e5d-4b23-b17a-d0b60f46411d
-caps.latest.revision: "36"
+caps.latest.revision: 36
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.workload: dotnet
-ms.openlocfilehash: 60fac3cba4da35b5146f777abd912ad15f0f29eb
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.workload:
+- dotnet
+ms.openlocfilehash: 5d687c00edd9d495f3b7715474d7eb2e107c23f0
+ms.sourcegitcommit: 03ee570f6f528a7d23a4221dcb26a9498edbdf8c
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 04/28/2018
 ---
 # <a name="how-to-enable-sql-persistence-for-workflows-and-workflow-services"></a>HOW TO：啟用工作流程與工作流程服務的 SQL 持續性
 本主題描述如何設定 SQL 工作流程執行個體存放區功能，以程式設計方式或使用組態檔來啟用工作流程與工作流程服務的持續性。  
   
- Windows Server App Fabric 會簡化設定持續性的程序。 [!INCLUDE[crdefault](../../../includes/crdefault-md.md)][App Fabric 持續性組態](http://go.microsoft.com/fwlink/?LinkId=201204)  
+ Windows Server App Fabric 會簡化設定持續性的程序。 如需詳細資訊，請參閱[App Fabric 持續性組態](http://go.microsoft.com/fwlink/?LinkId=201204)  
   
  使用 SQL 工作流程執行個體存放區功能之前，請建立一個讓此功能用於保存工作流程執行個體的資料庫。 [!INCLUDE[netfx_current_short](../../../includes/netfx-current-short-md.md)] 安裝程式會將與 SQL 工作流程執行個體存放區功能相關聯的 SQL 指令碼檔複製至 %WINDIR%\Microsoft.NET\Framework\v4.xxx\SQL\EN 資料夾。 針對 SQL Server 2005 或 SQL Server 2008 資料庫執行這些指令碼檔，且這個資料庫可供 SQL 工作流程執行個體存放區用來保存工作流程執行個體。 先執行 SqlWorkflowInstanceStoreSchema.sql 檔，然後再執行 SqlWorkflowInstanceStoreLogic.sql 檔。  
   
@@ -40,7 +41,7 @@ ms.lasthandoff: 12/22/2017
 >   
 >  System.Data.SqlClient.SqlException：找不到預存程序 'System.Activities.DurableInstancing.CreateLockOwner'  
   
- 下列各節描述如何使用 SQL 工作流程執行個體存放區啟用工作流程與工作流程服務的持續性。 [!INCLUDE[crabout](../../../includes/crabout-md.md)]屬性的 SQL 工作流程執行個體存放區，請參閱[屬性的 SQL 工作流程執行個體存放區](../../../docs/framework/windows-workflow-foundation/properties-of-sql-workflow-instance-store.md)。  
+ 下列各節描述如何使用 SQL 工作流程執行個體存放區啟用工作流程與工作流程服務的持續性。 [!INCLUDE[crabout](../../../includes/crabout-md.md)] 屬性的 SQL 工作流程執行個體存放區，請參閱[屬性的 SQL 工作流程執行個體存放區](../../../docs/framework/windows-workflow-foundation/properties-of-sql-workflow-instance-store.md)。  
   
 ## <a name="enabling-persistence-for-self-hosted-workflows-that-use-workflowapplication"></a>啟用使用 WorkflowApplication 之自我裝載工作流程的持續性  
  您可以使用 <xref:System.Activities.WorkflowApplication> 物件模型，以程式設計方式啟用使用 <xref:System.Activities.DurableInstancing.SqlWorkflowInstanceStore> 之自我裝載工作流程的持續性。 下列程序包含執行此作業的步驟。  

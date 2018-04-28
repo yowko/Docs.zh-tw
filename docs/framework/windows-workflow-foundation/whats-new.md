@@ -17,11 +17,11 @@ ms.author: dotnetcontent
 manager: wpickett
 ms.workload:
 - dotnet
-ms.openlocfilehash: 605e1401eb2f2fdee7bb39c6636c0245154041a4
-ms.sourcegitcommit: 2042de78fcdceebb6b8ac4b7a292b93e8782cbf5
+ms.openlocfilehash: 6604c4fccec50369d83cede58ff2931c2015c5b9
+ms.sourcegitcommit: 03ee570f6f528a7d23a4221dcb26a9498edbdf8c
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/27/2018
+ms.lasthandoff: 04/28/2018
 ---
 # <a name="what39s-new-in-windows-workflow-foundation"></a>什麼&#39;s Windows Workflow Foundation 的新功能
 Windows Workflow Foundation (WF) 中[!INCLUDE[netfx40_long](../../../includes/netfx40-long-md.md)]從舊版變更數種開發架構。 現在，建立、執行與維護工作流程以及實作新功能的主機都變得更簡單了。 [!INCLUDE[crabout](../../../includes/crabout-md.md)] 移轉.NET 3.0 和.NET 3.5 工作流程應用程式使用最新的版本，請參閱[移轉指引](../../../docs/framework/windows-workflow-foundation/migration-guidance.md)。  
@@ -44,7 +44,7 @@ Windows Workflow Foundation (WF) 中[!INCLUDE[netfx40_long](../../../includes/ne
 -   新的傳訊活動，例如 <xref:System.ServiceModel.Activities.SendContent> 和 <xref:System.ServiceModel.Activities.ReceiveReply>。  
   
 ## <a name="explicit-activity-data-model"></a>明確的活動資料模型  
- [!INCLUDE[netfx40_short](../../../includes/netfx40-short-md.md)] 包含用於儲存或移動資料的新選項。 使用 <xref:System.Activities.Variable> 可將資料儲存在活動中。 將資料移入與移出活動時，會使用特殊的引數型別來判斷資料的移動方向。 這些型別為 <xref:System.Activities.InArgument>、<xref:System.Activities.InOutArgument> 與 <xref:System.Activities.OutArgument>。 [!INCLUDE[crdefault](../../../includes/crdefault-md.md)] [Windows Workflow Foundation 資料模型](../../../docs/framework/windows-workflow-foundation/data-model.md)。  
+ [!INCLUDE[netfx40_short](../../../includes/netfx40-short-md.md)] 包含用於儲存或移動資料的新選項。 使用 <xref:System.Activities.Variable> 可將資料儲存在活動中。 將資料移入與移出活動時，會使用特殊的引數型別來判斷資料的移動方向。 這些型別為 <xref:System.Activities.InArgument>、<xref:System.Activities.InOutArgument> 與 <xref:System.Activities.OutArgument>。 如需詳細資訊，請參閱[Windows Workflow Foundation 資料模型](../../../docs/framework/windows-workflow-foundation/data-model.md)。  
   
 ## <a name="enhanced-hosting-persistence-and-tracking-options"></a>增強型裝載、保存及追蹤選項  
  [!INCLUDE[netfx40_short](../../../includes/netfx40-short-md.md)] 包含保存增強功能，如下所示：  
@@ -66,4 +66,4 @@ Windows Workflow Foundation (WF) 中[!INCLUDE[netfx40_long](../../../includes/ne
 -   現在，恢復暫止中的工作流程會利用 <xref:System.Activities.Bookmark> 物件來管理。  
   
 ## <a name="easier-ability-to-extend-wf-designer-experience"></a>更易於擴充 WF 設計工具經驗的能力  
- 新的 WF 設計工具建立 Windows Presentation Foundation (WPF) 和提供重新裝載 WF 設計工具，Visual Studio 外部時所要使用更簡單的模型，並也會提供更簡單的機制，來建立自訂活動設計工具。 [!INCLUDE[crdefault](../../../includes/crdefault-md.md)] [自訂工作流程設計經驗](../../../docs/framework/windows-workflow-foundation/customizing-the-workflow-design-experience.md)。
+ 新的 WF 設計工具建立 Windows Presentation Foundation (WPF) 和提供重新裝載 WF 設計工具，Visual Studio 外部時所要使用更簡單的模型，並也會提供更簡單的機制，來建立自訂活動設計工具。 如需詳細資訊，請參閱[自訂工作流程設計經驗](../../../docs/framework/windows-workflow-foundation/customizing-the-workflow-design-experience.md)。

@@ -21,11 +21,11 @@ ms.author: dotnetcontent
 manager: wpickett
 ms.workload:
 - dotnet
-ms.openlocfilehash: 94ff361e89693f53c8d1baedcac749cf5178086e
-ms.sourcegitcommit: 86adcc06e35390f13c1e372c36d2e044f1fc31ef
+ms.openlocfilehash: df3e207cdca3a40bb0cfaff1890f6e010bd0790c
+ms.sourcegitcommit: 03ee570f6f528a7d23a4221dcb26a9498edbdf8c
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/26/2018
+ms.lasthandoff: 04/28/2018
 ---
 # <a name="designing-service-contracts"></a>設計服務合約
 本主題說明何謂服務合約、如何定義服務合約、能夠進行哪些作業 (以及對基礎訊息交換的影響)、使用哪些資料型別以及其他問題，協助您設計能夠適當滿足情況需求的作業。  
@@ -65,7 +65,7 @@ ms.lasthandoff: 04/26/2018
   
  如需使用介面來建立服務合約的範例，請參閱[How to： 建立服務合約介面](../../../docs/framework/wcf/feature-details/how-to-create-a-service-with-a-contract-interface.md)。  
   
- 不過，您可以使用類別定義服務合約，同時實作該合約。 直接將 <xref:System.ServiceModel.ServiceContractAttribute> 和 <xref:System.ServiceModel.OperationContractAttribute> 分別套用至類別及該類別上的方法，藉此建立服務的好處在於速度和單純性。 而缺點則在於，Managed 類別不支援多重繼承，因此一次只能實作一個服務合約。 此外，對類別或方法簽章所做的任何修改，都會修改該服務的公開合約，如此可能會讓未修改的用戶端無法使用您的服務。 [!INCLUDE[crdefault](../../../includes/crdefault-md.md)] [實作服務合約](../../../docs/framework/wcf/implementing-service-contracts.md)。  
+ 不過，您可以使用類別定義服務合約，同時實作該合約。 直接將 <xref:System.ServiceModel.ServiceContractAttribute> 和 <xref:System.ServiceModel.OperationContractAttribute> 分別套用至類別及該類別上的方法，藉此建立服務的好處在於速度和單純性。 而缺點則在於，Managed 類別不支援多重繼承，因此一次只能實作一個服務合約。 此外，對類別或方法簽章所做的任何修改，都會修改該服務的公開合約，如此可能會讓未修改的用戶端無法使用您的服務。 如需詳細資訊，請參閱[實作服務合約](../../../docs/framework/wcf/implementing-service-contracts.md)。  
   
  如需使用類別來建立服務合約和實作一次的範例，請參閱[How to： 建立服務合約類別與](../../../docs/framework/wcf/feature-details/how-to-create-a-wcf-contract-with-a-class.md)。  
   
@@ -193,7 +193,7 @@ End Interface
  保護層級是一個值，會指定支援服務的訊息 (或訊息部分) 為經過簽署、經過簽署且加密，或是已傳送但未包含簽章或加密。 保護層級可設定的範圍有許多種：於服務層級、適用特殊作業、適用該作業內的訊息，或訊息部分。 設定於某一範圍的值會變成更小範圍的預設值，除非有明確覆寫的值。 如果繫結組態無法提供合約所需的最小保護層級，則會擲回例外狀況。 而如果合約上未明確設定保護層級值，繫結組態就會控制所有訊息的保護層級 (如果繫結具備訊息安全性的話)。 這是預設行為。  
   
 > [!IMPORTANT]
->  決定是否將合約的各種範圍明確設定為低於 <xref:System.Net.Security.ProtectionLevel.EncryptAndSign?displayProperty=nameWithType> 的完整保護層級，通常是犧牲某種程度的安全性換取較高效能的決策。 在這種情況下，您的決定必須包含作業及其交換的資料值。 [!INCLUDE[crdefault](../../../includes/crdefault-md.md)] [保護服務](../../../docs/framework/wcf/securing-services.md)。  
+>  決定是否將合約的各種範圍明確設定為低於 <xref:System.Net.Security.ProtectionLevel.EncryptAndSign?displayProperty=nameWithType> 的完整保護層級，通常是犧牲某種程度的安全性換取較高效能的決策。 在這種情況下，您的決定必須包含作業及其交換的資料值。 如需詳細資訊，請參閱[保護 Services](../../../docs/framework/wcf/securing-services.md)。  
   
  例如，下列程式碼範例不會設定合約上的 <xref:System.ServiceModel.ServiceContractAttribute.ProtectionLevel%2A> 或 <xref:System.ServiceModel.OperationContractAttribute.ProtectionLevel%2A> 屬性。  
   
@@ -273,7 +273,7 @@ End Interface
  [!INCLUDE[crabout](../../../includes/crabout-md.md)] 保護層級，以及如何使用它們，請參閱[了解保護層級](../../../docs/framework/wcf/understanding-protection-level.md)。 [!INCLUDE[crabout](../../../includes/crabout-md.md)] 安全性，請參閱[保護 Services](../../../docs/framework/wcf/securing-services.md)。  
   
 ##### <a name="other-operation-signature-requirements"></a>其他作業簽署需求  
- 某些應用程式功能需要特殊類型的作業簽章。 例如，<xref:System.ServiceModel.NetMsmqBinding> 繫結支援長期服務和用戶端，其中應用程式可以在通訊期間重新啟動，並且從中斷的位置繼續進行，而不會遺漏任何訊息  ([!INCLUDE[crdefault](../../../includes/crdefault-md.md)] [WCF 中的佇列](../../../docs/framework/wcf/feature-details/queues-in-wcf.md)。)不過，永久性作業只能採用一個 `in` 參數，而且沒有傳回值。  
+ 某些應用程式功能需要特殊類型的作業簽章。 例如，<xref:System.ServiceModel.NetMsmqBinding> 繫結支援長期服務和用戶端，其中應用程式可以在通訊期間重新啟動，並且從中斷的位置繼續進行，而不會遺漏任何訊息  (如需詳細資訊，請參閱[WCF 中的佇列](../../../docs/framework/wcf/feature-details/queues-in-wcf.md)。)不過，永久性作業只能採用一個 `in` 參數，而且沒有傳回值。  
   
  另一個範例是在作業中使用 <xref:System.IO.Stream> 類型。 遊於 <xref:System.IO.Stream> 參數包含整個訊息本文，因此如果輸入或輸出 (也就是 `ref` 參數、`out` 參數或傳回值) 為 <xref:System.IO.Stream> 類型，則必須是作業中指定的唯一輸入或輸出。 此外，參數或傳回型別都必須是 <xref:System.IO.Stream>、<xref:System.ServiceModel.Channels.Message?displayProperty=nameWithType> 或 <xref:System.Xml.Serialization.IXmlSerializable?displayProperty=nameWithType>。 [!INCLUDE[crabout](../../../includes/crabout-md.md)] 資料流，請參閱[大型資料和串流處理](../../../docs/framework/wcf/feature-details/large-data-and-streaming.md)。  
   

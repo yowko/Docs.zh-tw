@@ -14,11 +14,11 @@ ms.author: dotnetcontent
 manager: wpickett
 ms.workload:
 - dotnet
-ms.openlocfilehash: 90999867ee1dd678e279832d73d7ecaaa416fe7b
-ms.sourcegitcommit: 2042de78fcdceebb6b8ac4b7a292b93e8782cbf5
+ms.openlocfilehash: af520c1520f605d34076e6ecabdf84deb52fbfd0
+ms.sourcegitcommit: 03ee570f6f528a7d23a4221dcb26a9498edbdf8c
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/27/2018
+ms.lasthandoff: 04/28/2018
 ---
 # <a name="using-workflowinvoker-and-workflowapplication"></a>使用 WorkflowInvoker 與 WorkflowApplication
 Windows Workflow Foundation (WF) 提供幾個方法來裝載工作流程。 <xref:System.Activities.WorkflowInvoker> 提供一種簡單方法來叫用工作流程，如同方法呼叫一般，但只能用於不使用持續性的工作流程。 <xref:System.Activities.WorkflowApplication> 提供更豐富的模型，可執行包含生命週期事件通知、執行控制、書籤繼續以及持續性的工作流程。 <xref:System.ServiceModel.Activities.WorkflowServiceHost> 支援傳訊活動，主要搭配工作流程服務使用。 本主題會向您介紹如何使用 <xref:System.Activities.WorkflowInvoker> 和 <xref:System.Activities.WorkflowApplication> 進行工作流程裝載。 [!INCLUDE[crabout](../../../includes/crabout-md.md)] 裝載工作流程與<xref:System.ServiceModel.Activities.WorkflowServiceHost>，請參閱[工作流程服務](../../../docs/framework/wcf/feature-details/workflow-services.md)和[裝載工作流程服務概觀](../../../docs/framework/wcf/feature-details/hosting-workflow-services-overview.md)。  
@@ -35,7 +35,7 @@ Windows Workflow Foundation (WF) 提供幾個方法來裝載工作流程。 <xre
 > [!NOTE]
 >  只有在超過逾時間隔及工作流程在執行期間變成閒置狀態時，才會擲回 <xref:System.TimeoutException>。 需要比指定的逾時間隔還長的時間才能完成的工作流程，會在工作流程沒有變成閒置狀態時成功完成。  
   
- <xref:System.Activities.WorkflowInvoker> 也提供叫用方法的非同步版本。 [!INCLUDE[crdefault](../../../includes/crdefault-md.md)] <xref:System.Activities.WorkflowInvoker.InvokeAsync%2A> 和<xref:System.Activities.WorkflowInvoker.BeginInvoke%2A>。  
+ <xref:System.Activities.WorkflowInvoker> 也提供叫用方法的非同步版本。 如需詳細資訊，請參閱 <xref:System.Activities.WorkflowInvoker.InvokeAsync%2A> 與 <xref:System.Activities.WorkflowInvoker.BeginInvoke%2A>。  
   
 ### <a name="setting-input-arguments-of-a-workflow"></a>設定工作流程的輸入引數  
  若要將資料傳入工作流程，可以使用以引數名稱做為索引鍵，且對應工作流程輸入引數之輸入參數的字典。 在此範例中，會叫用 <xref:System.Activities.Statements.WriteLine> 並使用輸入參數的字典指定其 <xref:System.Activities.Statements.WriteLine.Text%2A> 引數的值。  

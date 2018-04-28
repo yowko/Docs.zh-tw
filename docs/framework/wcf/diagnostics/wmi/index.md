@@ -16,11 +16,11 @@ ms.author: dotnetcontent
 manager: wpickett
 ms.workload:
 - dotnet
-ms.openlocfilehash: 3df15e80a550857adbfbf30ebf8b6ef902426a1a
-ms.sourcegitcommit: 86adcc06e35390f13c1e372c36d2e044f1fc31ef
+ms.openlocfilehash: e8fd88edd711513d1b143029d8088401c9945d13
+ms.sourcegitcommit: 03ee570f6f528a7d23a4221dcb26a9498edbdf8c
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/26/2018
+ms.lasthandoff: 04/28/2018
 ---
 # <a name="using-windows-management-instrumentation-for-diagnostics"></a>使用 Windows Management Instrumentation 進行診斷
 [!INCLUDE[indigo1](../../../../../includes/indigo1-md.md)] 會透過 [!INCLUDE[indigo2](../../../../../includes/indigo2-md.md)] Windows Management Instrumentation (WMI) 提供者，在執行階段公開服務的檢查資料。  
@@ -160,7 +160,7 @@ ms.lasthandoff: 04/26/2018
 Whoami /user  
 ```  
   
- 這個方法會提供目前使用者的 SID，但無法用來取得任意使用者的 SID。 另一個取得 SID 的方法是使用[getsid.exe](http://go.microsoft.com/fwlink/?LinkId=186467)工具[Windows 2000 Resource Kit 工具的系統管理工作](http://go.microsoft.com/fwlink/?LinkId=178660)。 此工具會比較兩個使用者 (本機或網域) 的 SID，並以副作用方式將兩個 SID 列印至命令列。 [!INCLUDE[crdefault](../../../../../includes/crdefault-md.md)] [已知的 Sid](http://go.microsoft.com/fwlink/?LinkId=186468)。  
+ 這個方法會提供目前使用者的 SID，但無法用來取得任意使用者的 SID。 另一個取得 SID 的方法是使用[getsid.exe](http://go.microsoft.com/fwlink/?LinkId=186467)工具[Windows 2000 Resource Kit 工具的系統管理工作](http://go.microsoft.com/fwlink/?LinkId=178660)。 此工具會比較兩個使用者 (本機或網域) 的 SID，並以副作用方式將兩個 SID 列印至命令列。 如需詳細資訊，請參閱[已知 Sid](http://go.microsoft.com/fwlink/?LinkId=186468)。  
   
 ## <a name="accessing-remote-wmi-object-instances"></a>存取遠端 WMI 物件執行個體  
  如果您需要在遠端電腦上存取 [!INCLUDE[indigo2](../../../../../includes/indigo2-md.md)] WMI 執行個體，則您必須在用來存取的工具上啟用封包私密性。 下列小節說明如何使用 WMI CIM Studio、Windows Management Instrumentation 測試器以及 .NET SDK 2.0 來完成這項工作。  

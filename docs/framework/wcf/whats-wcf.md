@@ -20,11 +20,11 @@ ms.author: dotnetcontent
 manager: wpickett
 ms.workload:
 - dotnet
-ms.openlocfilehash: 2fa6efdc61620647d5c6318746e61e09cdde7a46
-ms.sourcegitcommit: 2042de78fcdceebb6b8ac4b7a292b93e8782cbf5
+ms.openlocfilehash: d9650fd6a4fa40cb425c9f15d4a12e6c73d8c599
+ms.sourcegitcommit: 03ee570f6f528a7d23a4221dcb26a9498edbdf8c
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/27/2018
+ms.lasthandoff: 04/28/2018
 ---
 # <a name="what-is-windows-communication-foundation"></a>何謂 Windows Communication Foundation
 [!INCLUDE[indigo1](../../../includes/indigo1-md.md)] 是用於建置服務導向應用程式的架構。 使用 [!INCLUDE[indigo2](../../../includes/indigo2-md.md)]，您可以在各個服務端點之間傳送非同步訊息形式的資料。 服務端點可能是由 IIS 裝載之持續上線服務的一部分，或為應用程式中裝載的服務。 端點則大致是某項服務的用戶端，會向該服務端點要求資料。 訊息可為簡單的單一字元或以 XML 傳送的字組，乃至如二進位資料的資料流這般複雜的形式都沒問題。 其中幾個範例案例包括：  
@@ -44,7 +44,7 @@ ms.lasthandoff: 04/27/2018
  儘管在 [!INCLUDE[indigo2](../../../includes/indigo2-md.md)]面市之前，原本就能建立這幾類應用程式，但 [!INCLUDE[indigo2](../../../includes/indigo2-md.md)] 使得端點開發比以往更為容易。 簡言之， [!INCLUDE[indigo2](../../../includes/indigo2-md.md)] 的設計提供了便於管理的方式以讓您建立 Web 服務與 Web 服務用戶端。  
   
 ## <a name="features-of-wcf"></a>WCF 的功能  
- [!INCLUDE[indigo2](../../../includes/indigo2-md.md)] 包括下列功能集。 [!INCLUDE[crdefault](../../../includes/crdefault-md.md)] [WCF Feature Details](../../../docs/framework/wcf/feature-details/index.md).  
+ [!INCLUDE[indigo2](../../../includes/indigo2-md.md)] 包括下列功能集。 如需詳細資訊，請參閱[WCF 功能詳細資料](../../../docs/framework/wcf/feature-details/index.md)。  
   
 -   **服務導向**  
   
@@ -60,15 +60,15 @@ ms.lasthandoff: 04/27/2018
   
 -   **服務中繼資料**  
   
-     [!INCLUDE[indigo2](../../../includes/indigo2-md.md)] 支援採用業界標準 (如 WSDL、XML 結構描述及 WS-Policy) 指定的格式來發行服務中繼資料。 這份中繼資料可用於自動產生和設定將要存取 [!INCLUDE[indigo2](../../../includes/indigo2-md.md)] 服務的用戶端。 您可以透過 HTTP 及 HTTPS，或者使用 Web 服務中繼資料交換標準來發行中繼資料。 [!INCLUDE[crdefault](../../../includes/crdefault-md.md)] [Metadata](../../../docs/framework/wcf/feature-details/metadata.md).  
+     [!INCLUDE[indigo2](../../../includes/indigo2-md.md)] 支援採用業界標準 (如 WSDL、XML 結構描述及 WS-Policy) 指定的格式來發行服務中繼資料。 這份中繼資料可用於自動產生和設定將要存取 [!INCLUDE[indigo2](../../../includes/indigo2-md.md)] 服務的用戶端。 您可以透過 HTTP 及 HTTPS，或者使用 Web 服務中繼資料交換標準來發行中繼資料。 如需詳細資訊，請參閱[中繼資料](../../../docs/framework/wcf/feature-details/metadata.md)。  
   
 -   **資料合約**  
   
-     由於 [!INCLUDE[indigo2](../../../includes/indigo2-md.md)] 是使用 [!INCLUDE[dnprdnshort](../../../includes/dnprdnshort-md.md)]所建置，其亦包含了便利的程式碼方法，以讓您提供希望強制履行的合約。 其中一種通用的合約類型就是資料合約。 基本上，當您使用 Visual C# 或 Visual Basic 撰寫服務程式碼時，處理資料最簡單的做法，就是建立類別，以屬於資料實體的屬性來表示資料實體。 [!INCLUDE[indigo2](../../../includes/indigo2-md.md)] 包含完善的系統，能以如此簡便的方式來處理資料。 一旦表示資料的類別已建立，您的服務便會自動產生中繼資料，而讓用戶端能夠遵照您所設計的資料型別。 [!INCLUDE[crdefault](../../../includes/crdefault-md.md)] [Using Data Contracts](../../../docs/framework/wcf/feature-details/using-data-contracts.md)  
+     由於 [!INCLUDE[indigo2](../../../includes/indigo2-md.md)] 是使用 [!INCLUDE[dnprdnshort](../../../includes/dnprdnshort-md.md)]所建置，其亦包含了便利的程式碼方法，以讓您提供希望強制履行的合約。 其中一種通用的合約類型就是資料合約。 基本上，當您使用 Visual C# 或 Visual Basic 撰寫服務程式碼時，處理資料最簡單的做法，就是建立類別，以屬於資料實體的屬性來表示資料實體。 [!INCLUDE[indigo2](../../../includes/indigo2-md.md)] 包含完善的系統，能以如此簡便的方式來處理資料。 一旦表示資料的類別已建立，您的服務便會自動產生中繼資料，而讓用戶端能夠遵照您所設計的資料型別。 如需詳細資訊，請參閱[使用資料合約](../../../docs/framework/wcf/feature-details/using-data-contracts.md)  
   
 -   **安全性**  
   
-     訊息經過加密後可以保護隱私權，而您也可以要求使用者必須先驗證才能接收訊息。 使用諸如 SSL 或 WS-SecureConversation 等公認的標準即可實作安全性。 [!INCLUDE[crdefault](../../../includes/crdefault-md.md)] [安全性](../../../docs/framework/wcf/feature-details/security.md).  
+     訊息經過加密後可以保護隱私權，而您也可以要求使用者必須先驗證才能接收訊息。 使用諸如 SSL 或 WS-SecureConversation 等公認的標準即可實作安全性。 如需詳細資訊，請參閱[安全性](../../../docs/framework/wcf/feature-details/security.md)。  
   
 -   **多重傳輸與編碼**  
   
@@ -80,7 +80,7 @@ ms.lasthandoff: 04/27/2018
   
 -   **永久性的訊息**  
   
-     永久性的訊息是指不會因為通訊中斷而遺失的訊息。 處於永久性訊息模式的訊息一律儲存至資料庫。 萬一發生中斷，資料庫可以讓您在恢復連線後繼續進行訊息交換。 您也可以建立使用 Windows Workflow Foundation (WF) 永久性的訊息。 [!INCLUDE[crdefault](../../../includes/crdefault-md.md)] [Workflow Services](../../../docs/framework/wcf/feature-details/workflow-services.md).  
+     永久性的訊息是指不會因為通訊中斷而遺失的訊息。 處於永久性訊息模式的訊息一律儲存至資料庫。 萬一發生中斷，資料庫可以讓您在恢復連線後繼續進行訊息交換。 您也可以建立使用 Windows Workflow Foundation (WF) 永久性的訊息。 如需詳細資訊，請參閱[工作流程服務](../../../docs/framework/wcf/feature-details/workflow-services.md)。  
   
 -   **異動**  
   

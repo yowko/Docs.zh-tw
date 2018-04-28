@@ -16,11 +16,11 @@ ms.author: wpickett
 manager: wpickett
 ms.workload:
 - dotnet
-ms.openlocfilehash: ec5e29ae9022470f8b583dc1b673a0b93040c862
-ms.sourcegitcommit: 86adcc06e35390f13c1e372c36d2e044f1fc31ef
+ms.openlocfilehash: ae7bd21f7dcb60f8cec3e9e4592969c63234cf13
+ms.sourcegitcommit: 03ee570f6f528a7d23a4221dcb26a9498edbdf8c
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/26/2018
+ms.lasthandoff: 04/28/2018
 ---
 # <a name="default-xaml-schema-context-and-wpf-xaml-schema-context"></a>預設 XAML 結構描述內容和 WPF XAML 結構描述內容
 XAML 結構描述內容是概念性的實體，會限定使用特定的 XAML 詞彙的 XAML 生產環境與撰寫的行為，包含型別對應的解析，載入組件的方式、 如何特定讀取器和寫入器物件之間的互動方式設定會被解譯。 本主題描述.NET Framework XAML 服務和相關聯的預設 XAML 結構描述內容，以 CLR 型別系統為基礎的功能。 本主題也描述適用於 WPF XAML 結構描述內容。  
@@ -70,7 +70,7 @@ XAML 結構描述內容是概念性的實體，會限定使用特定的 XAML 詞
     -   如果名稱是在對應中不合格，呼叫<xref:System.Reflection.Assembly.LoadWithPartialName%2A?displayProperty=nameWithType>。  
   
 #### <a name="xamlbuildtask"></a>XamlBuildTask  
- `XamlBuildTask` 用於[!INCLUDE[vsindigo](../../../includes/vsindigo-md.md)]及 Windows Workflow Foundation。  
+ `XamlBuildTask` 適用於 Windows Communication Foundation (WCF) 及 Windows Workflow Foundation。  
   
  請注意，組件參考透過`XamlBuildTask`一定是完整格式。  
   

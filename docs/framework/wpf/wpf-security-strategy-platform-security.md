@@ -31,11 +31,11 @@ ms.author: dotnetcontent
 manager: wpickett
 ms.workload:
 - dotnet
-ms.openlocfilehash: c3c1654bd63d59bf6588b1dc18593ef7a33f37c0
-ms.sourcegitcommit: 2042de78fcdceebb6b8ac4b7a292b93e8782cbf5
+ms.openlocfilehash: 61197255c11745c2c3f6f60db084b96dc812cb00
+ms.sourcegitcommit: 03ee570f6f528a7d23a4221dcb26a9498edbdf8c
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/27/2018
+ms.lasthandoff: 04/28/2018
 ---
 # <a name="wpf-security-strategy---platform-security"></a>WPF 安全性策略 – 平台安全性
 [!INCLUDE[TLA#tla_wpf](../../../includes/tlasharptla-wpf-md.md)] 除了提供各種安全性服務之外，還會利用基礎平台 (包括作業系統、[!INCLUDE[TLA2#tla_clr](../../../includes/tla2sharptla-clr-md.md)] 和 [!INCLUDE[TLA2#tla_ie](../../../includes/tla2sharptla-ie-md.md)]) 的安全性功能。 這三層安全性功能一起為 [!INCLUDE[TLA2#tla_wpf](../../../includes/tla2sharptla-wpf-md.md)] 提供了強大、深入防禦的安全性模型，即使其中一層失敗，還有兩層可以幫忙把關，如下圖所示：  
@@ -123,11 +123,11 @@ ms.lasthandoff: 04/27/2018
   
  不符合驗證規則的 Managed 程式碼除非受到信任，否則無法執行。  
   
- 可驗證程式碼的優點是在 [!INCLUDE[TLA2#tla_wpf](../../../includes/tla2sharptla-wpf-md.md)] 上建置 [!INCLUDE[TLA2#tla_winfx](../../../includes/tla2sharptla-winfx-md.md)] 的主要原因。 只要是使用可驗證程式碼的地方，潛在弱點遭受攻擊的可能性都會大幅降低。  
+ 可驗證程式碼的優點就是索引鍵的原因為何[!INCLUDE[TLA2#tla_wpf](../../../includes/tla2sharptla-wpf-md.md)].NET Framework 為基礎。 只要是使用可驗證程式碼的地方，潛在弱點遭受攻擊的可能性都會大幅降低。  
   
 <a name="Code_Access_Security"></a>   
 ### <a name="code-access-security"></a>程式碼存取安全性  
- 用戶端電腦公開了可供 Managed 應用程式存取的各種資源，包括檔案系統、登錄、列印服務、使用者介面、反映和環境變數。 受管理的應用程式可以存取任何用戶端電腦上的資源之前，必須有[!INCLUDE[TLA2#tla_winfx](../../../includes/tla2sharptla-winfx-md.md)][!INCLUDE[TLA#tla_cas](../../../includes/tlasharptla-cas-md.md)]執行這項操作的權限。 [!INCLUDE[TLA2#tla_cas](../../../includes/tla2sharptla-cas-md.md)] 中的權限是 <xref:System.Security.CodeAccessPermission> 的子類別；[!INCLUDE[TLA2#tla_cas](../../../includes/tla2sharptla-cas-md.md)] 會針對 Managed 應用程式可存取的每個資源各實作一個子類別。  
+ 用戶端電腦公開了可供 Managed 應用程式存取的各種資源，包括檔案系統、登錄、列印服務、使用者介面、反映和環境變數。 受管理的應用程式可以存取任何用戶端電腦上的資源之前，它必須具備.NET Framework 權限，若要這樣做。 [!INCLUDE[TLA2#tla_cas](../../../includes/tla2sharptla-cas-md.md)] 中的權限是 <xref:System.Security.CodeAccessPermission> 的子類別；[!INCLUDE[TLA2#tla_cas](../../../includes/tla2sharptla-cas-md.md)] 會針對 Managed 應用程式可存取的每個資源各實作一個子類別。  
   
  當 Managed 應用程式開始執行時，[!INCLUDE[TLA2#tla_cas](../../../includes/tla2sharptla-cas-md.md)] 會授與應用程式一組權限，稱為權限集合，其中的權限會由應用程式提供的辨識項來決定。 如果是 [!INCLUDE[TLA2#tla_wpf](../../../includes/tla2sharptla-wpf-md.md)] 應用程式，所提供的辨識項就是應用程式啟動的位置 (或區域)。 [!INCLUDE[TLA2#tla_cas](../../../includes/tla2sharptla-cas-md.md)] 可識別下列區域：  
   
@@ -187,17 +187,17 @@ ms.lasthandoff: 04/27/2018
   
 <a name="ClickOnce_Deployment"></a>   
 ### <a name="clickonce-deployment"></a>ClickOnce 部署  
- [!INCLUDE[TLA#tla_clickonce](../../../includes/tlasharptla-clickonce-md.md)] 是隨附於完整部署技術[!INCLUDE[TLA2#tla_winfx](../../../includes/tla2sharptla-winfx-md.md)]，並與整合[!INCLUDE[TLA#tla_visualstu](../../../includes/tlasharptla-visualstu-md.md)](請參閱[ClickOnce 部署概觀](http://msdn.microsoft.com/library/142dbbz4.aspx)如需詳細資訊)。 獨立 [!INCLUDE[TLA2#tla_wpf](../../../includes/tla2sharptla-wpf-md.md)] 應用程式可以透過 [!INCLUDE[TLA#tla_clickonce](../../../includes/tlasharptla-clickonce-md.md)] 部署，而瀏覽器裝載的應用程式則必須透過 [!INCLUDE[TLA2#tla_clickonce](../../../includes/tla2sharptla-clickonce-md.md)] 部署。  
+ [!INCLUDE[TLA#tla_clickonce](../../../includes/tlasharptla-clickonce-md.md)] 是一種廣泛的部署技術，隨附於.NET Framework 中，並與整合[!INCLUDE[TLA#tla_visualstu](../../../includes/tlasharptla-visualstu-md.md)](請參閱[ClickOnce 部署概觀](http://msdn.microsoft.com/library/142dbbz4.aspx)如需詳細資訊)。 獨立 [!INCLUDE[TLA2#tla_wpf](../../../includes/tla2sharptla-wpf-md.md)] 應用程式可以透過 [!INCLUDE[TLA#tla_clickonce](../../../includes/tlasharptla-clickonce-md.md)] 部署，而瀏覽器裝載的應用程式則必須透過 [!INCLUDE[TLA2#tla_clickonce](../../../includes/tla2sharptla-clickonce-md.md)] 部署。  
   
  透過 [!INCLUDE[TLA2#tla_clickonce](../../../includes/tla2sharptla-clickonce-md.md)] 部署的應用程式會取得 [!INCLUDE[TLA#tla_cas](../../../includes/tlasharptla-cas-md.md)] 所提供的多一層安全性；基本上，[!INCLUDE[TLA#tla_clickonce](../../../includes/tlasharptla-clickonce-md.md)] 所部署的應用程式會要求這些應用程式所需的權限。 只有在所要求的權限不超過應用程式部署來源區域的權限集合時，才會將這些權限授與應用程式。 藉由將權限集合減少到只含需要的權限，應用程式可以存取的資源將會降到最基本的數量，即使這些權限比啟動區域的權限集合所提供的權限還少也沒關係。 因此，如果應用程式遭到劫持，用戶端電腦遭到破壞的可能性將會降低。  
   
 <a name="Security_Critical_Methodology"></a>   
 ### <a name="security-critical-methodology"></a>安全性關鍵方法  
- 使用權限來對 [!INCLUDE[TLA2#tla_wpf](../../../includes/tla2sharptla-wpf-md.md)] 應用程式啟用網際網路區域沙箱的 [!INCLUDE[TLA2#tla_winfxwebapp](../../../includes/tla2sharptla-winfxwebapp-md.md)] 程式碼，必須盡可能以最高度的安全性稽核和控制來保存。 為了滿足這個需求，[!INCLUDE[TLA2#tla_winfx](../../../includes/tla2sharptla-winfx-md.md)] 提供新的支援來管理需要提高權限的程式碼。 具體來說，[!INCLUDE[TLA2#tla_clr](../../../includes/tla2sharptla-clr-md.md)]可讓您識別，藉此提高權限的程式碼，並將它與<xref:System.Security.SecurityCriticalAttribute>; 任何程式碼未標記為<xref:System.Security.SecurityCriticalAttribute>變成*透明*透過這種方法。 相反地，未標記為 <xref:System.Security.SecurityCriticalAttribute> 的 Managed 程式碼將無法提高權限。  
+ 使用權限來對 [!INCLUDE[TLA2#tla_wpf](../../../includes/tla2sharptla-wpf-md.md)] 應用程式啟用網際網路區域沙箱的 [!INCLUDE[TLA2#tla_winfxwebapp](../../../includes/tla2sharptla-winfxwebapp-md.md)] 程式碼，必須盡可能以最高度的安全性稽核和控制來保存。 若要簡化這項需求，.NET Framework 會提供新的支援來管理可提高權限的程式碼。 具體來說，[!INCLUDE[TLA2#tla_clr](../../../includes/tla2sharptla-clr-md.md)]可讓您識別，藉此提高權限的程式碼，並將它與<xref:System.Security.SecurityCriticalAttribute>; 任何程式碼未標記為<xref:System.Security.SecurityCriticalAttribute>變成*透明*透過這種方法。 相反地，未標記為 <xref:System.Security.SecurityCriticalAttribute> 的 Managed 程式碼將無法提高權限。  
   
  安全性關鍵的方法可將組織[!INCLUDE[TLA2#tla_wpf](../../../includes/tla2sharptla-wpf-md.md)]高權限的程式碼*安全性關鍵的核心*，被透明的其餘部分。 隔離安全性關鍵程式碼可讓[!INCLUDE[TLA2#tla_wpf](../../../includes/tla2sharptla-wpf-md.md)]工程小組專注在標準安全性作法超過安全性關鍵的核心上額外的安全性分析和原始檔控制 (請參閱[WPF 安全性策略-安全性工程](../../../docs/framework/wpf/wpf-security-strategy-security-engineering.md))。  
   
- 請注意，[!INCLUDE[TLA2#tla_winfx](../../../includes/tla2sharptla-winfx-md.md)] 允許利用信任的程式碼來擴充 [!INCLUDE[TLA2#tla_winfxwebapp](../../../includes/tla2sharptla-winfxwebapp-md.md)] 網際網路區域沙箱，開發人員只要在撰寫的 Managed 組件上標記 <xref:System.Security.AllowPartiallyTrustedCallersAttribute> (APTCA)，然後再將組件部署至使用者的全域組件快取 (GAC) 即可。 在組件上標記 APTCA 是一項極為敏感的安全性作業，因為這可讓任何程式碼 (包括來自網際網路的惡意程式碼) 呼叫該組件。 執行這項操作時請謹慎為之，一定要採取最佳做法，而且使用者必須選擇信任該軟體才能安裝軟體。  
+ 請注意，.NET Framework 允許受信任的程式碼來擴充[!INCLUDE[TLA2#tla_winfxwebapp](../../../includes/tla2sharptla-winfxwebapp-md.md)]允許開發人員撰寫的 managed 組件標示為的網際網路區域沙箱<xref:System.Security.AllowPartiallyTrustedCallersAttribute>(APTCA) 並部署到使用者的全域組件快取 (GAC)。 在組件上標記 APTCA 是一項極為敏感的安全性作業，因為這可讓任何程式碼 (包括來自網際網路的惡意程式碼) 呼叫該組件。 執行這項操作時請謹慎為之，一定要採取最佳做法，而且使用者必須選擇信任該軟體才能安裝軟體。  
   
 <a name="Microsoft_Internet_Explorer_Security"></a>   
 ## <a name="microsoft-internet-explorer-security"></a>Microsoft Internet Explorer 安全性  

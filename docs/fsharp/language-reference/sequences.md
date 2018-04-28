@@ -1,20 +1,17 @@
 ---
-title: "序列 (F#)"
-description: "了解如何使用 F # 序列，當您使用較大，已排序集合的資料，但不一定要使用的所有項目。"
-keywords: "Visual F#, F#, 函式程式設計"
+title: 序列 (F#)
+description: '了解如何使用 F # 序列，當您使用較大，已排序集合的資料，但不一定要使用的所有項目。'
 author: cartermp
 ms.author: phcart
 ms.date: 05/16/2016
 ms.topic: language-reference
-ms.prod: .net
-ms.technology: devlang-fsharp
+ms.prod: dotnet-fsharp
 ms.devlang: fsharp
-ms.assetid: 23dc7d75-cd26-4df2-9be3-9d1aba5c4443
-ms.openlocfilehash: b0562a6efbd2398cd8730bb835a1833955fee1c7
-ms.sourcegitcommit: bd1ef61f4bb794b25383d3d72e71041a5ced172e
+ms.openlocfilehash: a3521037112d40998ed00cd6fed376882c2f2c88
+ms.sourcegitcommit: 03ee570f6f528a7d23a4221dcb26a9498edbdf8c
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/18/2017
+ms.lasthandoff: 04/28/2018
 ---
 # <a name="sequences"></a>序列
 
@@ -90,7 +87,7 @@ F # 運算式會產生序列的值是由循序項運算式所組成。 他們可
 0 10 20 30 40
 ```
 
-使用[Seq.ofArray](https://msdn.microsoft.com/library/299cd4d9-be72-4511-aac8-089e1ddaac99)和[Seq.ofList &#60;'T &#62;函式](https://msdn.microsoft.com/visualfsharpdocs/conceptual/seq.oflist%5b%27t%5d-function-%5bfsharp%5d)，您可以建立從陣列和清單的順序。 不過，您也可以轉換陣列和清單順序使用轉換運算子。 這兩種技術是以下列程式碼所示。
+使用[Seq.ofArray](https://msdn.microsoft.com/library/299cd4d9-be72-4511-aac8-089e1ddaac99)和[Seq.ofList&#60;t&#62;函式](https://msdn.microsoft.com/visualfsharpdocs/conceptual/seq.oflist%5b%27t%5d-function-%5bfsharp%5d)，您可以建立從陣列和清單的順序。 不過，您也可以轉換陣列和清單順序使用轉換運算子。 這兩種技術是以下列程式碼所示。
 
 [!code-fsharp[Main](../../../samples/snippets/fsharp/fssequences/snippet11.fs)]
 
@@ -102,7 +99,7 @@ F # 運算式會產生序列的值是由循序項運算式所組成。 他們可
 
 [!code-fsharp[Main](../../../samples/snippets/fsharp/fssequences/snippet13.fs)]
 
-[Seq.unfold](https://msdn.microsoft.com/library/7d9232fc-742e-42bc-bdf7-6f130f0eff21)產生一連串的計算函式取用狀態，並將其轉換為產生的序列中每個後續項目。 狀態為只是用來計算每個項目，並可隨著每個項目會計算值。 第二個引數`Seq.unfold`是用來啟動順序的起始值。 `Seq.unfold`使用狀態，可讓您藉由傳回終止順序選項的型別`None`值。 下列程式碼顯示的順序，兩個範例`seq1`和`fib`，由產生`unfold`作業。 首先， `seq1`，是只具有最多 100 的數字的簡單順序。 第二個， `fib`，會使用`unfold`來計算 Fibonacci 順序。 費式數列序列中的每個項目是先前的兩個 Fibonacci 數字的總和，因為狀態值是序列中前兩個數字所組成的 tuple。 初始值是`(1,1)`，序列中的前兩個數字。
+[Seq.unfold](https://msdn.microsoft.com/library/7d9232fc-742e-42bc-bdf7-6f130f0eff21)產生一連串的計算函式取用狀態，並將其轉換為產生的序列中每個後續項目。 狀態為只是用來計算每個項目，並可隨著每個項目會計算值。 第二個引數`Seq.unfold`是用來啟動順序的起始值。 `Seq.unfold` 使用狀態，可讓您藉由傳回終止順序選項的型別`None`值。 下列程式碼顯示的順序，兩個範例`seq1`和`fib`，由產生`unfold`作業。 首先， `seq1`，是只具有最多 100 的數字的簡單順序。 第二個， `fib`，會使用`unfold`來計算 Fibonacci 順序。 費式數列序列中的每個項目是先前的兩個 Fibonacci 數字的總和，因為狀態值是序列中前兩個數字所組成的 tuple。 初始值是`(1,1)`，序列中的前兩個數字。
 
 [!code-fsharp[Main](../../../samples/snippets/fsharp/fssequences/snippet14.fs)]
 
@@ -198,7 +195,7 @@ List 支援排序函式也會使用序列。 這包括[Seq.sort](https://msdn.mi
 
 先前的程式碼中，第一個項目會計算和檢查，且結果為-1。
 
-[Seq.countBy](https://msdn.microsoft.com/library/721702a5-150e-4fe8-81cd-ffbf8476cc1f)接受函式產生一個值，稱為*金鑰*每個項目。 每個項目產生金鑰，在每個項目上呼叫此函式。 `Seq.countBy`則會傳回序列，其中包含的索引鍵值，以及產生索引鍵的每個值的項目數目的計數。
+[Seq.countBy](https://msdn.microsoft.com/library/721702a5-150e-4fe8-81cd-ffbf8476cc1f)接受函式產生一個值，稱為*金鑰*每個項目。 每個項目產生金鑰，在每個項目上呼叫此函式。 `Seq.countBy` 則會傳回序列，其中包含的索引鍵值，以及產生索引鍵的每個值的項目數目的計數。
 
 [!code-fsharp[Main](../../../samples/snippets/fsharp/fssequences/snippet201.fs)]
 
@@ -210,7 +207,7 @@ List 支援排序函式也會使用序列。 這包括[Seq.sort](https://msdn.mi
 
 上述輸出會顯示已 34 的項目所產生的索引鍵為 1，將原始序列所產生的索引鍵 2 的 33 值和 33 所產生的索引鍵 0 的值。
 
-您可以藉由呼叫來群組序列的項目[Seq.groupBy](https://msdn.microsoft.com/library/d46a04df-1a42-40cc-a368-058c9c5806fd)。 `Seq.groupBy`會將序列和函式會產生金鑰的項目。 此函式順序的每個項目上執行。 `Seq.groupBy`傳回序列的 tuple，其中每個 tuple 的第一個元素是機碼，而第二個是一串產生該索引鍵的項目。
+您可以藉由呼叫來群組序列的項目[Seq.groupBy](https://msdn.microsoft.com/library/d46a04df-1a42-40cc-a368-058c9c5806fd)。 `Seq.groupBy` 會將序列和函式會產生金鑰的項目。 此函式順序的每個項目上執行。 `Seq.groupBy` 傳回序列的 tuple，其中每個 tuple 的第一個元素是機碼，而第二個是一串產生該索引鍵的項目。
 
 下列程式碼範例示範使用`Seq.groupBy`分割成三個群組具有相異索引鍵的值 0、 1 和 2 從 1 到 100 之間的數字的序列。
 
@@ -224,7 +221,7 @@ List 支援排序函式也會使用序列。 這包括[Seq.sort](https://msdn.mi
 
 您可以建立一連串以消除重複的項目，藉由呼叫[Seq.distinct](https://msdn.microsoft.com/library/99d01014-7e0e-4e7b-9d0a-41a61d93f401)。 您可以使用或者[Seq.distinctBy](https://msdn.microsoft.com/library/9293293b-9420-49c8-848f-401a9cd49b75)，其採用索引鍵產生函式呼叫的每個項目。 產生的序列包含具有唯一的索引鍵; 原始序列的項目更新產生的較早的項目重複的索引鍵的項目都會被捨棄。
 
-下列程式碼範例說明使用`Seq.distinct`。 `Seq.distinct`示範藉由產生代表二進位數字的順序，然後顯示 僅不同的項目為 0 和 1。
+下列程式碼範例說明使用`Seq.distinct`。 `Seq.distinct` 示範藉由產生代表二進位數字的順序，然後顯示 僅不同的項目為 0 和 1。
 
 [!code-fsharp[Main](../../../samples/snippets/fsharp/fssequences/snippet22.fs)]
 
@@ -233,7 +230,7 @@ List 支援排序函式也會使用序列。 這包括[Seq.sort](https://msdn.mi
 [!code-fsharp[Main](../../../samples/snippets/fsharp/fssequences/snippet23.fs)]
     
 ## <a name="readonly-and-cached-sequences"></a>在 Readonly 和快取的順序
-[Seq.readonly](https://msdn.microsoft.com/library/88059cb4-3bb0-4126-9448-fbcd48fe13a7)建立序列的唯讀複本。 `Seq.readonly`當您具有讀寫集合，例如陣列、 且不想修改原始集合，則會是很有用。 此函式可以用來保留資料的封裝。 在下列程式碼範例中，會建立包含陣列的類型。 屬性會公開的陣列，但是它會使用建立陣列中的順序傳回而不是傳回陣列， `Seq.readonly`。
+[Seq.readonly](https://msdn.microsoft.com/library/88059cb4-3bb0-4126-9448-fbcd48fe13a7)建立序列的唯讀複本。 `Seq.readonly` 當您具有讀寫集合，例如陣列、 且不想修改原始集合，則會是很有用。 此函式可以用來保留資料的封裝。 在下列程式碼範例中，會建立包含陣列的類型。 屬性會公開的陣列，但是它會使用建立陣列中的順序傳回而不是傳回陣列， `Seq.readonly`。
 
 [!code-fsharp[Main](../../../samples/snippets/fsharp/fssequences/snippet24.fs)]
 

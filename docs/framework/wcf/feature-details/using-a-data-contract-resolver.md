@@ -1,24 +1,26 @@
 ---
-title: "使用資料合約解析程式"
-ms.custom: 
+title: 使用資料合約解析程式
+ms.custom: ''
 ms.date: 03/30/2017
 ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.technology: dotnet-clr
-ms.tgt_pltfrm: 
+ms.reviewer: ''
+ms.suite: ''
+ms.technology:
+- dotnet-clr
+ms.tgt_pltfrm: ''
 ms.topic: article
 ms.assetid: 2e68a16c-36f0-4df4-b763-32021bff2b89
-caps.latest.revision: "5"
+caps.latest.revision: 5
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.workload: dotnet
-ms.openlocfilehash: 28bba68c985191b69fea3b7ab85812917a827b30
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.workload:
+- dotnet
+ms.openlocfilehash: 20ef713c67ee21aa8f7a92975bc6e6ce8798a087
+ms.sourcegitcommit: 03ee570f6f528a7d23a4221dcb26a9498edbdf8c
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 04/28/2018
 ---
 # <a name="using-a-data-contract-resolver"></a>使用資料合約解析程式
 資料合約解析程式可讓您動態設定已知型別。 在序列化或還原序列化資料合約未預期的型別時，就會需要已知型別。 [!INCLUDE[crabout](../../../../includes/crabout-md.md)] 如需已知型別的詳細資訊，請參閱 [Data Contract Known Types](../../../../docs/framework/wcf/feature-details/data-contract-known-types.md)就會將 CLR 型別對應至 XSD。 已知型別通常會以靜態方式指定。 這表示，實作作業時，您必須知道此作業可能會接收的所有可能型別。 不過，這項條件在某些情況中並不成立，此時，能夠以動態方式指定已知型別就很重要。  
@@ -96,9 +98,9 @@ if (serializerBehavior == null)
 SerializerBehavior.DataContractResolver = new MyCustomerResolver();  
 ```  
   
- 您可以透過實作可套用至服務的屬性，以宣告方式指定資料合約解析程式。  [!INCLUDE[crdefault](../../../../includes/crdefault-md.md)][KnownAssemblyAttribute](../../../../docs/framework/wcf/samples/knownassemblyattribute.md)範例。 這個範例會實作稱為"KnownAssembly"的屬性，將加上自訂資料合約解析程式服務的行為。  
+ 您可以透過實作可套用至服務的屬性，以宣告方式指定資料合約解析程式。  如需詳細資訊，請參閱[KnownAssemblyAttribute](../../../../docs/framework/wcf/samples/knownassemblyattribute.md)範例。 這個範例會實作稱為"KnownAssembly"的屬性，將加上自訂資料合約解析程式服務的行為。  
   
-## <a name="see-also"></a>請參閱  
+## <a name="see-also"></a>另請參閱  
  [資料合約已知類型](../../../../docs/framework/wcf/feature-details/data-contract-known-types.md)  
  [DataContractSerializer 範例](../../../../docs/framework/wcf/samples/datacontractserializer-sample.md)  
  [KnownAssemblyAttribute](../../../../docs/framework/wcf/samples/knownassemblyattribute.md)

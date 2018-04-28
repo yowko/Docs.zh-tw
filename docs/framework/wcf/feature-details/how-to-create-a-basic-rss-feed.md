@@ -1,27 +1,29 @@
 ---
-title: "HOW TO：建立基本 RSS 摘要"
-ms.custom: 
+title: HOW TO：建立基本 RSS 摘要
+ms.custom: ''
 ms.date: 03/30/2017
 ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.technology: dotnet-clr
-ms.tgt_pltfrm: 
+ms.reviewer: ''
+ms.suite: ''
+ms.technology:
+- dotnet-clr
+ms.tgt_pltfrm: ''
 ms.topic: article
 dev_langs:
 - csharp
 - vb
 ms.assetid: 431879b8-a5f8-4947-ad1e-4768c726aca8
-caps.latest.revision: "18"
+caps.latest.revision: 18
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.workload: dotnet
-ms.openlocfilehash: 79e5bc1bedbe6fd0911931c83878ed20bc4bd17e
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.workload:
+- dotnet
+ms.openlocfilehash: a730bb0087ecfa396442dedf48fb64b1ab3ac512
+ms.sourcegitcommit: 03ee570f6f528a7d23a4221dcb26a9498edbdf8c
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 04/28/2018
 ---
 # <a name="how-to-create-a-basic-rss-feed"></a>HOW TO：建立基本 RSS 摘要
 [!INCLUDE[indigo1](../../../../includes/indigo1-md.md)] 可以讓您建立公開新聞訂閱摘要的服務。 本主題討論如何建立可公開 RSS 新聞訂閱摘要的新聞訂閱服務。  
@@ -34,7 +36,7 @@ ms.lasthandoff: 12/22/2017
      [!code-vb[htRssBasic#0](../../../../samples/snippets/visualbasic/VS_Snippets_CFX/htrssbasic/vb/program.vb#0)]  
   
     > [!NOTE]
-    >  所有套用 <xref:System.ServiceModel.Web.WebGetAttribute> 屬性的服務作業都會對應至 HTTP GET 要求。 若要將您的作業對應至不同的 HTTP 方法，請改用 <xref:System.ServiceModel.Web.WebInvokeAttribute>。 [!INCLUDE[crdefault](../../../../includes/crdefault-md.md)][How to： 建立基本 WCF Web HTTP 服務](../../../../docs/framework/wcf/feature-details/how-to-create-a-basic-wcf-web-http-service.md)。  
+    >  所有套用 <xref:System.ServiceModel.Web.WebGetAttribute> 屬性的服務作業都會對應至 HTTP GET 要求。 若要將您的作業對應至不同的 HTTP 方法，請改用 <xref:System.ServiceModel.Web.WebInvokeAttribute>。 如需詳細資訊，請參閱[How to： 建立基本的 WCF Web HTTP 服務](../../../../docs/framework/wcf/feature-details/how-to-create-a-basic-wcf-web-http-service.md)。  
   
 2.  實作服務合約。  
   
@@ -75,7 +77,7 @@ ms.lasthandoff: 12/22/2017
   
 ### <a name="to-call-getblog-with-an-http-get"></a>若要使用 HTTP GET 呼叫 GetBlog()  
   
-1.  開啟 Internet Explorer 並輸入下列 URL，然後按下 ENTER：http://localhost:8000/BlogService/GetBlog。 URL 包含服務的基底位址 (http://localhost:8000/BlogService)、端點的相對位址，以及要呼叫的服務作業。  
+1.  開啟 Internet Explorer 中，輸入下列 URL，然後按 ENTER: http://localhost:8000/BlogService/GetBlog。 URL 包含服務的基底位址 (http://localhost:8000/BlogService)，相對位址的端點，以及要呼叫的服務作業。  
   
 ### <a name="to-call-getblog-from-code"></a>若要從程式碼呼叫 GetBlog()  
   
@@ -105,6 +107,6 @@ ms.lasthandoff: 12/22/2017
 ## <a name="compiling-the-code"></a>編譯程式碼  
  在編譯先前的程式碼時，請參考 System.ServiceModel.dll 和 System.ServiceModel.Web.dll。  
   
-## <a name="see-also"></a>請參閱  
+## <a name="see-also"></a>另請參閱  
  <xref:System.ServiceModel.WebHttpBinding>  
  <xref:System.ServiceModel.Web.WebGetAttribute>

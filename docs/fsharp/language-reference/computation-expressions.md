@@ -1,20 +1,17 @@
 ---
-title: "計算運算式 (F#)"
-description: "了解如何建立方便的語法撰寫 F # 可以排序，合併使用控制流程建構和繫結中的計算。"
-keywords: "Visual F#, F#, 函式程式設計"
+title: 計算運算式 (F#)
+description: '了解如何建立方便的語法撰寫 F # 可以排序，合併使用控制流程建構和繫結中的計算。'
 author: cartermp
 ms.author: phcart
 ms.date: 05/16/2016
 ms.topic: language-reference
-ms.prod: .net
-ms.technology: devlang-fsharp
+ms.prod: dotnet-fsharp
 ms.devlang: fsharp
-ms.assetid: acabbf5d-fbb8-479f-894c-7251bf16c8c3
-ms.openlocfilehash: c4ff998c65f3a5c458f36312f6887d869569d814
-ms.sourcegitcommit: 96cc82cac4650adfb65ba351506d8a8fbcd17b5c
+ms.openlocfilehash: 990ea509e4fef84d3e3ee37471b28e2b8d019fad
+ms.sourcegitcommit: 03ee570f6f528a7d23a4221dcb26a9498edbdf8c
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 02/19/2018
+ms.lasthandoff: 04/28/2018
 ---
 # <a name="computation-expressions"></a>計算運算式
 
@@ -226,7 +223,7 @@ comp |> step |> step |> step |> step |> step |> step |> step |> step
 ## <a name="custom-operations"></a>自訂作業
 您可以定義自訂計算運算式上的作業，並使用為計算運算式中運算子的自訂作業。 例如，您可以在查詢運算式中包含查詢運算子。 當您定義自訂的作業時，您必須定義結果和計算運算式中的方法。 若要定義自訂的作業，將其放在計算運算式產生器類別，然後套用[ `CustomOperationAttribute` ](https://msdn.microsoft.com/library/199f3927-79df-484b-ba66-85f58cc49b19)。 這個屬性會接受字串做為引數是要用於自訂作業的名稱。 此名稱來自於範圍的計算運算式的左大括號開頭。 因此，您不應該使用具有自訂作業相同的名稱，此區塊中的識別項。 例如，避免這類的識別項使用`all`或`last`查詢運算式中。
 
-## <a name="see-also"></a>請參閱
+## <a name="see-also"></a>另請參閱
 [F# 語言參考](index.md)
 
 [非同步工作流程](asynchronous-workflows.md)

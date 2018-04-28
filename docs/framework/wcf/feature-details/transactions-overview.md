@@ -1,28 +1,30 @@
 ---
-title: "Windows Communication Foundation 交易概觀"
-ms.custom: 
+title: Windows Communication Foundation 交易概觀
+ms.custom: ''
 ms.date: 03/30/2017
 ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.technology: dotnet-clr
-ms.tgt_pltfrm: 
+ms.reviewer: ''
+ms.suite: ''
+ms.technology:
+- dotnet-clr
+ms.tgt_pltfrm: ''
 ms.topic: article
 helpviewer_keywords:
 - transactions [WCF]
 - WCF, transactions
 - Windows Communication Foundation, transactions
 ms.assetid: c7757854-1207-4019-8b31-552578b7d570
-caps.latest.revision: "16"
+caps.latest.revision: 16
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.workload: dotnet
-ms.openlocfilehash: 6fb90d0f93e9bdf7dd9779ffd5d4b1288ba56e7a
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.workload:
+- dotnet
+ms.openlocfilehash: 76edd7cf30d9da06db6e0c2f4624bf9a6d677eca
+ms.sourcegitcommit: 03ee570f6f528a7d23a4221dcb26a9498edbdf8c
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 04/28/2018
 ---
 # <a name="windows-communication-foundation-transactions-overview"></a>Windows Communication Foundation 異動概觀
 異動提供了將一組動作或作業分組為單一個不可分割的執行單位。 交易就是具有下列屬性的作業集合：  
@@ -39,7 +41,7 @@ ms.lasthandoff: 12/22/2017
   
  [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] 實作 WS-AtomicTransaction (WS-AT) 通訊協定的支援，該通訊協定可讓 [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] 應用程式將交易流向可互通的應用程式，例如使用協力廠商技術建構的互通式 Web 服務。 [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] 同時也實作 OLE Transactions 通訊協定的支援，該通訊協定可用在不需要 interop 功能來啟用交易流程的情節中。  
   
- 您可以使用應用程式組態檔，將繫結設定成啟用或停用交易流程，以及設定繫結上所需要的交易通訊協定。 此外，您也可以使用組態檔設定服務層級的異動逾時。 [!INCLUDE[crdefault](../../../../includes/crdefault-md.md)][啟用交易流程](../../../../docs/framework/wcf/feature-details/enabling-transaction-flow.md)。  
+ 您可以使用應用程式組態檔，將繫結設定成啟用或停用交易流程，以及設定繫結上所需要的交易通訊協定。 此外，您也可以使用組態檔設定服務層級的異動逾時。 如需詳細資訊，請參閱[啟用交易流程](../../../../docs/framework/wcf/feature-details/enabling-transaction-flow.md)。  
   
  <xref:System.ServiceModel> 命名空間 (Namespace) 中的交易屬性可讓您完成下列工作：  
   
@@ -49,8 +51,8 @@ ms.lasthandoff: 12/22/2017
   
 -   使用合約方法上的 <xref:System.ServiceModel.ServiceContractAttribute> 和 <xref:System.ServiceModel.OperationContractAttribute> 屬性，即可要求、允許或拒絕交易流程。  
   
- [!INCLUDE[crdefault](../../../../includes/crdefault-md.md)][ServiceModel 交易屬性](../../../../docs/framework/wcf/feature-details/servicemodel-transaction-attributes.md)。  
+ 如需詳細資訊，請參閱[ServiceModel 交易屬性](../../../../docs/framework/wcf/feature-details/servicemodel-transaction-attributes.md)。  
   
-## <a name="see-also"></a>請參閱  
+## <a name="see-also"></a>另請參閱  
  [ServiceModel 異動屬性](../../../../docs/framework/wcf/feature-details/servicemodel-transaction-attributes.md)  
  [啟用異動流程](../../../../docs/framework/wcf/feature-details/enabling-transaction-flow.md)

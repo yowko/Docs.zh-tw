@@ -1,24 +1,26 @@
 ---
-title: "WCF 錯誤處理"
-ms.custom: 
+title: WCF 錯誤處理
+ms.custom: ''
 ms.date: 03/30/2017
 ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.technology: dotnet-clr
-ms.tgt_pltfrm: 
+ms.reviewer: ''
+ms.suite: ''
+ms.technology:
+- dotnet-clr
+ms.tgt_pltfrm: ''
 ms.topic: article
 ms.assetid: 1e4b1e0f-9598-449d-9d73-90bda62305b8
-caps.latest.revision: "3"
+caps.latest.revision: 3
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.workload: dotnet
-ms.openlocfilehash: 860f96ee92db6a11238942202d4e202ba912d748
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.workload:
+- dotnet
+ms.openlocfilehash: b85ef2b0c077b67cc341a48c9260393e158033c5
+ms.sourcegitcommit: 03ee570f6f528a7d23a4221dcb26a9498edbdf8c
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 04/28/2018
 ---
 # <a name="wcf-error-handling"></a>WCF 錯誤處理
 WCF 應用程式遇到的錯誤屬於下列其中一個群組：  
@@ -46,10 +48,10 @@ WCF 應用程式遇到的錯誤屬於下列其中一個群組：
 -   處理 <xref:System.ServiceModel.ServiceHost> 事件  
   
 ## <a name="fault-contracts"></a>錯誤合約  
- 錯誤合約可讓您以獨立於平台的方式定義服務作業期間可能會發生的錯誤。 根據預設，從服務作業內部擲回的所有例外狀況都會當做 <xref:System.ServiceModel.FaultException> 物件傳回給用戶端。 <xref:System.ServiceModel.FaultException> 物件所包含的資訊非常少。 您可以定義錯誤合約並將錯誤當做 <xref:System.ServiceModel.FaultException%601> 傳回，藉以控制傳送至用戶端的資訊。 [!INCLUDE[crdefault](../../../includes/crdefault-md.md)][指定與處理合約和服務中的錯誤](../../../docs/framework/wcf/specifying-and-handling-faults-in-contracts-and-services.md)。  
+ 錯誤合約可讓您以獨立於平台的方式定義服務作業期間可能會發生的錯誤。 根據預設，從服務作業內部擲回的所有例外狀況都會當做 <xref:System.ServiceModel.FaultException> 物件傳回給用戶端。 <xref:System.ServiceModel.FaultException> 物件所包含的資訊非常少。 您可以定義錯誤合約並將錯誤當做 <xref:System.ServiceModel.FaultException%601> 傳回，藉以控制傳送至用戶端的資訊。 如需詳細資訊，請參閱[指定與處理合約和服務中的錯誤](../../../docs/framework/wcf/specifying-and-handling-faults-in-contracts-and-services.md)。  
   
 ## <a name="ierrorhandler"></a>IErrorHandler  
- <xref:System.ServiceModel.Dispatcher.IErrorHandler> 介面可讓您進一步控制 WCF 應用程式如何回應錯誤。  它不僅能讓您完全控制傳送至用戶端的錯誤訊息，還能讓您執行自訂錯誤處理，例如記錄。  [!INCLUDE[crdefault](../../../includes/crabout-md.md)]<xref:System.ServiceModel.Dispatcher.IErrorHandler>和[擴充控制錯誤處理和報告](../../../docs/framework/wcf/samples/extending-control-over-error-handling-and-reporting.md)  
+ <xref:System.ServiceModel.Dispatcher.IErrorHandler> 介面可讓您進一步控制 WCF 應用程式如何回應錯誤。  它不僅能讓您完全控制傳送至用戶端的錯誤訊息，還能讓您執行自訂錯誤處理，例如記錄。  [!INCLUDE[crdefault](../../../includes/crabout-md.md)] <xref:System.ServiceModel.Dispatcher.IErrorHandler> 和[擴充控制錯誤處理和報告](../../../docs/framework/wcf/samples/extending-control-over-error-handling-and-reporting.md)  
   
 ## <a name="servicehost-events"></a>ServiceHost 事件  
  <xref:System.ServiceModel.ServiceHost> 類別會裝載服務並定義許多處理錯誤可能需要的事件。 例如:   
@@ -58,4 +60,4 @@ WCF 應用程式遇到的錯誤屬於下列其中一個群組：
   
 2. <!--zz  <xref:System.ServiceModel.ServiceHost.UnknownMessageReceived>  --> `System.ServiceModel.ServiceHost.UnknownMessageReceived`
   
- [!INCLUDE[crdefault](../../../includes/crdefault-md.md)] <xref:System.ServiceModel.ServiceHost>
+ 如需詳細資訊，請參閱<xref:System.ServiceModel.ServiceHost>。

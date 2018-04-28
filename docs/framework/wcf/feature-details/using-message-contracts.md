@@ -1,13 +1,13 @@
 ---
-title: "使用訊息合約"
-ms.custom: 
+title: 使用訊息合約
+ms.custom: ''
 ms.date: 03/30/2017
 ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
+ms.reviewer: ''
+ms.suite: ''
 ms.technology:
 - dotnet-clr
-ms.tgt_pltfrm: 
+ms.tgt_pltfrm: ''
 ms.topic: article
 dev_langs:
 - csharp
@@ -15,27 +15,27 @@ dev_langs:
 helpviewer_keywords:
 - message contracts [WCF]
 ms.assetid: 1e19c64a-ae84-4c2f-9155-91c54a77c249
-caps.latest.revision: 
+caps.latest.revision: 46
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
 ms.workload:
 - dotnet
-ms.openlocfilehash: db19b5188c98d157b98d65422ee38d4ed59f733a
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.openlocfilehash: e9f6d0e9d64c510b47b0697d02178f1c0a95f61b
+ms.sourcegitcommit: 03ee570f6f528a7d23a4221dcb26a9498edbdf8c
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 04/28/2018
 ---
 # <a name="using-message-contracts"></a>使用訊息合約
-通常當建置 [!INCLUDE[indigo1](../../../../includes/indigo1-md.md)] 應用程式時，程式開發人員會特別注意資料結構與序列化的問題，並且本身不需要考慮傳送資料的訊息結構。 針對這類應用程式，建立參數的資料合約或傳回值是很明確的。 ([!INCLUDE[crdefault](../../../../includes/crdefault-md.md)] [指定服務合約中的資料傳輸](../../../../docs/framework/wcf/feature-details/specifying-data-transfer-in-service-contracts.md)。)  
+通常當建置 [!INCLUDE[indigo1](../../../../includes/indigo1-md.md)] 應用程式時，程式開發人員會特別注意資料結構與序列化的問題，並且本身不需要考慮傳送資料的訊息結構。 針對這類應用程式，建立參數的資料合約或傳回值是很明確的。 (如需詳細資訊，請參閱[在服務合約中指定資料傳輸](../../../../docs/framework/wcf/feature-details/specifying-data-transfer-in-service-contracts.md)。)  
   
  但是，有時候完整控制 SOAP 訊息的結構與控制其內容一樣重要。 當互通性很重要，或是要具體控制在訊息層級或訊息部分的安全性問題時，這就顯得特別重要。 在這些情況下，您可以建立*訊息合約*，可讓您指定所需的精確 SOAP 訊息的結構。  
   
  此主題會討論如何使用各種訊息合約屬性，以建立作業的特定訊息合約。  
   
 ## <a name="using-message-contracts-in-operations"></a>在作業中使用訊息合約  
- [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)]支援在建立模型的作業*遠端程序呼叫 (RPC) 樣式*或*傳訊樣式*。 在 RPC 樣式作業中，您可以使用任何可序列化類型，並且有存取本機呼叫的功能，例如多個參數以及 `ref` 與 `out` 參數。 在這個樣式中，選擇的序列化形式會控制基礎訊息中的資料結構，並且 [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] 執行階段會建立訊息以支援作業。 這可以讓不熟悉 SOAP 和 SOAP 訊息的程式開發人員，快速而輕鬆地建立與使用服務應用程式。  
+ [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] 支援在建立模型的作業*遠端程序呼叫 (RPC) 樣式*或*傳訊樣式*。 在 RPC 樣式作業中，您可以使用任何可序列化類型，並且有存取本機呼叫的功能，例如多個參數以及 `ref` 與 `out` 參數。 在這個樣式中，選擇的序列化形式會控制基礎訊息中的資料結構，並且 [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] 執行階段會建立訊息以支援作業。 這可以讓不熟悉 SOAP 和 SOAP 訊息的程式開發人員，快速而輕鬆地建立與使用服務應用程式。  
   
  下列程式碼範例顯示根據 RPC 樣式建立模型的服務作業。  
   
@@ -44,7 +44,7 @@ ms.lasthandoff: 12/22/2017
 public BankingTransactionResponse PostBankingTransaction(BankingTransaction bt);  
 ```  
   
- 通常資料合約已足夠定義訊息的結構描述。 例如，在之前的範例中，如果 `BankingTransaction` 和 `BankingTransactionResponse` 都有定義基礎 SOAP 訊息內容的資料合約，對大部分的應用程式來說就已足夠。 [!INCLUDE[crabout](../../../../includes/crabout-md.md)]資料合約，請參閱[使用資料合約](../../../../docs/framework/wcf/feature-details/using-data-contracts.md)。  
+ 通常資料合約已足夠定義訊息的結構描述。 例如，在之前的範例中，如果 `BankingTransaction` 和 `BankingTransactionResponse` 都有定義基礎 SOAP 訊息內容的資料合約，對大部分的應用程式來說就已足夠。 [!INCLUDE[crabout](../../../../includes/crabout-md.md)] 資料合約，請參閱[使用資料合約](../../../../docs/framework/wcf/feature-details/using-data-contracts.md)。  
   
  但是，偶爾也會需要精確控制透過網路傳輸 SOAP 訊息結構的方式。 最常見的案例是插入自訂 SOAP 標頭。 另一個常見的案例是定義訊息標頭與本文的安全性屬性，也就是決定是否要數位簽署或加密這些項目。 最後，某些協力廠商 SOAP 堆疊會要求訊息使用特定的格式。 訊息樣式作業提供這項控制。  
   
@@ -167,7 +167,7 @@ public class BankingTransaction
 >  在訊息中如果有一個以上未包裝的訊息本文部分，就不符合 WS-I Basic Profile 1.1 並且不建議在設計新訊息合約時使用。 但是，在某些特定互通性案例中，可能會需要有一個以上未包裝的訊息本文部分。 如果您要在訊息本文中傳輸一段以上的資料，建議您使用預設 (包裝) 模式。 在未包裝訊息中有一個以上的訊息標頭是完全可接受的。  
   
 ## <a name="using-custom-types-inside-message-contracts"></a>在訊息合約中使用自訂類型  
- 每個個別訊息標頭與訊息本文部分，會針對使用訊息的服務合約，使用選擇的序列化引擎進行序列化 (轉變成 XML)。 預設的序列化引擎 `XmlFormatter` 能夠處理擁有資料合約的任何類型，不論是使用明確的方式 (藉由擁有 <xref:System.Runtime.Serialization.DataContractAttribute?displayProperty=nameWithType>) 或隱含的方式 (藉由成為基本型別、擁有 <xref:System.SerializableAttribute?displayProperty=nameWithType> 等等)。 [!INCLUDE[crdefault](../../../../includes/crdefault-md.md)][使用資料合約](../../../../docs/framework/wcf/feature-details/using-data-contracts.md)。  
+ 每個個別訊息標頭與訊息本文部分，會針對使用訊息的服務合約，使用選擇的序列化引擎進行序列化 (轉變成 XML)。 預設的序列化引擎 `XmlFormatter` 能夠處理擁有資料合約的任何類型，不論是使用明確的方式 (藉由擁有 <xref:System.Runtime.Serialization.DataContractAttribute?displayProperty=nameWithType>) 或隱含的方式 (藉由成為基本型別、擁有 <xref:System.SerializableAttribute?displayProperty=nameWithType> 等等)。 如需詳細資訊，請參閱[使用資料合約](../../../../docs/framework/wcf/feature-details/using-data-contracts.md)。  
   
  在之前的範例中，`Operation` 和 `BankingTransactionData` 型別必須擁有資料合約，並且 `transactionDate` 是可序列化的，因為 <xref:System.DateTime> 是基本型別 (並且擁有隱含資料合約)。  
   
@@ -316,7 +316,7 @@ bt.documentApprover.MustUnderstand = false; // override the static default of 't
  當接收到訊息然後傳回訊息時，SOAP 屬性設定只會為 <xref:System.ServiceModel.MessageHeader%601> 型別的標頭而往返。  
   
 ## <a name="order-of-soap-body-parts"></a>SOAP 本文部分的順序  
- 在某些情況下，您會需要控制本文部分的順序。 根據預設，本文項目的順序是依字母順序排列，但是可以透過 <xref:System.ServiceModel.MessageBodyMemberAttribute.Order%2A?displayProperty=nameWithType> 屬性控制。 這個屬性與 <xref:System.Runtime.Serialization.DataMemberAttribute.Order%2A?displayProperty=nameWithType> 屬性有相同的語意，除了在繼承案例中的行為有所不同 (在訊息合約中，基底型別本文成員不會排序在衍生型別本文成員之前)。 [!INCLUDE[crdefault](../../../../includes/crdefault-md.md)][資料成員順序](../../../../docs/framework/wcf/feature-details/data-member-order.md)。  
+ 在某些情況下，您會需要控制本文部分的順序。 根據預設，本文項目的順序是依字母順序排列，但是可以透過 <xref:System.ServiceModel.MessageBodyMemberAttribute.Order%2A?displayProperty=nameWithType> 屬性控制。 這個屬性與 <xref:System.Runtime.Serialization.DataMemberAttribute.Order%2A?displayProperty=nameWithType> 屬性有相同的語意，除了在繼承案例中的行為有所不同 (在訊息合約中，基底型別本文成員不會排序在衍生型別本文成員之前)。 如需詳細資訊，請參閱[資料成員順序](../../../../docs/framework/wcf/feature-details/data-member-order.md)。  
   
  在下列程式碼範例中，`amount` 通常會第一個出現 (因為依字母順序它是第一個)。 但是，<xref:System.ServiceModel.MessageBodyMemberAttribute.Order%2A> 屬性會將它放在第三位。  
   
@@ -460,6 +460,6 @@ public class OperationDetails
   
  如果您要接收訊息物件做為 `Result` 屬性，並讓傳回的值做為該物件的屬性，則使用 `/messageContract` 命令選項。 這會產生一個簽章，此簽章會將回應訊息傳回做為 `Result` 物件的 <xref:System.EventArgs> 屬性。 然後，所有的內部傳回值都成為回應訊息物件的屬性。  
   
-## <a name="see-also"></a>請參閱  
+## <a name="see-also"></a>另請參閱  
  [使用資料合約](../../../../docs/framework/wcf/feature-details/using-data-contracts.md)  
  [設計與實作服務](../../../../docs/framework/wcf/designing-and-implementing-services.md)

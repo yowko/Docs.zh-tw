@@ -21,11 +21,11 @@ ms.author: dotnetcontent
 manager: wpickett
 ms.workload:
 - dotnet
-ms.openlocfilehash: 3669260d34aac0783f2ebd735c79ced91741408a
-ms.sourcegitcommit: 2042de78fcdceebb6b8ac4b7a292b93e8782cbf5
+ms.openlocfilehash: b0042d9b90066553d6fc962bba1b7a7b990ca242
+ms.sourcegitcommit: 03ee570f6f528a7d23a4221dcb26a9498edbdf8c
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/27/2018
+ms.lasthandoff: 04/28/2018
 ---
 # <a name="wcf-client-overview"></a>WCF 用戶端概觀
 本節描述用戶端應用程式的功能、[!INCLUDE[indigo1](../../../includes/indigo1-md.md)] 用戶端的設定、建立和使用方式，以及保護用戶端應用程式安全的方法。  
@@ -83,7 +83,7 @@ svcutil /language:vb /out:ClientCode.vb /config:app.config http://computerName/M
   
  您可以將這個類別建立成本機物件，其方式是使用其中一個建構函式，然後加以設定，再用來連接到型別為 `ISampleService` 的服務。  
   
- 建議您先建立 [!INCLUDE[indigo2](../../../includes/indigo2-md.md)] 用戶端物件，然後在單一的 try/catch 區塊內使用並關閉它。 您不應該使用`using`陳述式 (`Using`在 Visual Basic 中) 因為這可能會遮罩中特定失敗模式的例外狀況。 [!INCLUDE[crdefault](../../../includes/crdefault-md.md)] 下列各節以及為[避免 Using 陳述式的問題](../../../docs/framework/wcf/samples/avoiding-problems-with-the-using-statement.md)。  
+ 建議您先建立 [!INCLUDE[indigo2](../../../includes/indigo2-md.md)] 用戶端物件，然後在單一的 try/catch 區塊內使用並關閉它。 您不應該使用`using`陳述式 (`Using`在 Visual Basic 中) 因為這可能會遮罩中特定失敗模式的例外狀況。 如需詳細資訊，請參閱下列各節以及[避免 Using 陳述式的問題](../../../docs/framework/wcf/samples/avoiding-problems-with-the-using-statement.md)。  
   
 ### <a name="contracts-bindings-and-addresses"></a>合約、繫結和位址  
  您必須先設定用戶端物件，才可以建立 [!INCLUDE[indigo2](../../../includes/indigo2-md.md)] 用戶端物件。 具體來說，它必須有服務*端點*使用。 端點是服務合約、繫結和位址的組合  ([!INCLUDE[crabout](../../../includes/crabout-md.md)]端點，請參閱[端點： 位址、 繫結和合約](../../../docs/framework/wcf/feature-details/endpoints-addresses-bindings-and-contracts.md)。)一般而言，這項資訊位於[\<端點 >](../../../docs/framework/configure-apps/file-schema/wcf/endpoint-of-client.md)中用戶端應用程式組態檔，例如，Svcutil.exe 工具產生的而且當您建立您的用戶端時自動載入的項目物件。 這兩個 [!INCLUDE[indigo2](../../../includes/indigo2-md.md)] 用戶端型別也有多載，可讓您以程式設計方式來指定這項資訊。  
@@ -140,7 +140,7 @@ Namespace Microsoft.ServiceModel.Samples
 End Interface  
 ```  
   
- 就可以建立 [!INCLUDE[indigo2](../../../includes/indigo2-md.md)] 用戶端物件並呼叫其方法來呼叫作業，如下列程式碼範例所示。 請注意，開啟、呼叫和關閉 [!INCLUDE[indigo2](../../../includes/indigo2-md.md)] 用戶端物件的動作都是在單一的 try/catch 區塊中進行。 [!INCLUDE[crdefault](../../../includes/crdefault-md.md)] [使用 WCF 用戶端存取服務](../../../docs/framework/wcf/feature-details/accessing-services-using-a-client.md)和[避免 Using 陳述式發生問題](../../../docs/framework/wcf/samples/avoiding-problems-with-the-using-statement.md)。  
+ 就可以建立 [!INCLUDE[indigo2](../../../includes/indigo2-md.md)] 用戶端物件並呼叫其方法來呼叫作業，如下列程式碼範例所示。 請注意，開啟、呼叫和關閉 [!INCLUDE[indigo2](../../../includes/indigo2-md.md)] 用戶端物件的動作都是在單一的 try/catch 區塊中進行。 如需詳細資訊，請參閱[使用 WCF 用戶端存取服務](../../../docs/framework/wcf/feature-details/accessing-services-using-a-client.md)和[避免 Using 陳述式的問題](../../../docs/framework/wcf/samples/avoiding-problems-with-the-using-statement.md)。  
   
  [!code-csharp[C_GeneratedCodeFiles#20](../../../samples/snippets/csharp/VS_Snippets_CFX/c_generatedcodefiles/cs/proxycode.cs#20)]  
   
@@ -167,7 +167,7 @@ End Interface
   
  雙工 [!INCLUDE[indigo2](../../../includes/indigo2-md.md)] 用戶端物件的運作方式類似其非雙工的對應物件，但不同之處在於前者會公開支援回呼所需的功能，包括回呼服務的組態。  
   
- 例如，您可以在回呼類別上使用 <xref:System.ServiceModel.CallbackBehaviorAttribute?displayProperty=nameWithType> 屬性 (Attribute) 的屬性 (Property)，控制回呼物件執行階段行為的各種層面。 此外，還可以使用 <xref:System.ServiceModel.Description.CallbackDebugBehavior?displayProperty=nameWithType> 類別，讓例外狀況資訊回傳給呼叫回呼物件的服務。 [!INCLUDE[crdefault](../../../includes/crdefault-md.md)] [雙工服務](../../../docs/framework/wcf/feature-details/duplex-services.md)。 如需完整範例，請參閱[雙工](../../../docs/framework/wcf/samples/duplex.md)。  
+ 例如，您可以在回呼類別上使用 <xref:System.ServiceModel.CallbackBehaviorAttribute?displayProperty=nameWithType> 屬性 (Attribute) 的屬性 (Property)，控制回呼物件執行階段行為的各種層面。 此外，還可以使用 <xref:System.ServiceModel.Description.CallbackDebugBehavior?displayProperty=nameWithType> 類別，讓例外狀況資訊回傳給呼叫回呼物件的服務。 如需詳細資訊，請參閱[雙工服務](../../../docs/framework/wcf/feature-details/duplex-services.md)。 如需完整範例，請參閱[雙工](../../../docs/framework/wcf/samples/duplex.md)。  
   
  在執行 Internet Information Services (IIS) 5.1 的 Windows XP 電腦上，雙工用戶端必須使用 <xref:System.ServiceModel.WSDualHttpBinding?displayProperty=nameWithType> 類別來指定用戶端基底位址，否則會擲回例外狀況。 下列程式碼範例示範如何在程式碼中執行這項工作。  
   
@@ -179,7 +179,7 @@ End Interface
  [!code-csharp[S_DualHttp#134](../../../samples/snippets/csharp/VS_Snippets_CFX/s_dualhttp/cs/program.cs#134)]  
   
 ## <a name="calling-services-asynchronously"></a>以非同步方式呼叫服務  
- 呼叫作業的方式完全取決於用戶端開發人員。 這是因為透過 Managed 程式碼來表達呼叫程序時，您可以將組成作業的訊息對應至同步或非同步的方法。 因此，如果要建置以非同步方式呼叫作業的用戶端，您可以透過 Svcutil.exe，使用 `/async` 選項來產生非同步用戶端程式碼。 [!INCLUDE[crdefault](../../../includes/crdefault-md.md)] [如何： 以非同步方式呼叫服務作業](../../../docs/framework/wcf/feature-details/how-to-call-wcf-service-operations-asynchronously.md)。  
+ 呼叫作業的方式完全取決於用戶端開發人員。 這是因為透過 Managed 程式碼來表達呼叫程序時，您可以將組成作業的訊息對應至同步或非同步的方法。 因此，如果要建置以非同步方式呼叫作業的用戶端，您可以透過 Svcutil.exe，使用 `/async` 選項來產生非同步用戶端程式碼。 如需詳細資訊，請參閱[如何： 非同步呼叫服務作業](../../../docs/framework/wcf/feature-details/how-to-call-wcf-service-operations-asynchronously.md)。  
   
 ## <a name="calling-services-using-wcf-client-channels"></a>使用 WCF 用戶端通道呼叫服務  
  [!INCLUDE[indigo2](../../../includes/indigo2-md.md)] 用戶端型別會擴充 <xref:System.ServiceModel.ClientBase%601>，而後者則是從 <xref:System.ServiceModel.IClientChannel?displayProperty=nameWithType> 介面衍生以公開基礎通道系統。 您可以搭配 <xref:System.ServiceModel.ChannelFactory%601?displayProperty=nameWithType> 類別使用目標服務合約來叫用服務。 如需詳細資訊，請參閱[WCF 用戶端架構](../../../docs/framework/wcf/feature-details/client-architecture.md)。  

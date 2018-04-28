@@ -1,20 +1,17 @@
 ---
 title: '開始使用 Azure 資料表儲存體使用 F #'
 description: 將結構化的資料儲存在雲端中使用 Azure 資料表儲存體或 Azure Cosmos DB。
-keywords: 'visual f #、 f #，功能性程式設計，.NET 中，.NET Core，Azure'
 author: sylvanc
 ms.author: phcart
 ms.date: 03/26/2018
-ms.topic: article
-ms.prod: .net
-ms.technology: devlang-fsharp
+ms.topic: conceptual
+ms.prod: dotnet-fsharp
 ms.devlang: fsharp
-ms.assetid: 9e5d6cea-a98c-461e-a5cc-75f1d154eafd
-ms.openlocfilehash: 6d40211e13e8d213aa5a40d585dd384abf49ddfa
-ms.sourcegitcommit: 935d5267c44f9bce801468ef95f44572f1417e8c
+ms.openlocfilehash: 50721ca44bbae5c52984b08a30bc87507fbf063d
+ms.sourcegitcommit: 03ee570f6f528a7d23a4221dcb26a9498edbdf8c
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 03/28/2018
+ms.lasthandoff: 04/28/2018
 ---
 # <a name="get-started-with-azure-table-storage-and-the-azure-cosmos-db-table-api-using-f"></a>開始使用 Azure 資料表儲存體和 Azure Cosmos DB 資料表 API 使用 F # # 
 

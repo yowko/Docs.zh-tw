@@ -12,23 +12,23 @@ ms.topic: article
 helpviewer_keywords:
 - data contracts [WCF], schema reference
 ms.assetid: 9ebb0ebe-8166-4c93-980a-7c8f1f38f7c0
-caps.latest.revision: ''
+caps.latest.revision: 24
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
 ms.workload:
 - dotnet
-ms.openlocfilehash: 57ccc812aab5df0a9acd99bdcde327d56e4bad8d
-ms.sourcegitcommit: c883637b41ee028786edceece4fa872939d2e64c
+ms.openlocfilehash: 739046945a019541f279b15d2d1b945f526861fb
+ms.sourcegitcommit: 03ee570f6f528a7d23a4221dcb26a9498edbdf8c
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 03/23/2018
+ms.lasthandoff: 04/28/2018
 ---
 # <a name="data-contract-schema-reference"></a>資料合約結構描述參考
 本主題說明 <xref:System.Runtime.Serialization.DataContractSerializer> 用來描述 XML 序列化之 Common Language Runtime (CLR) 型別的 XML 結構描述 (XSD) 子集。  
   
 ## <a name="datacontractserializer-mappings"></a>DataContractSerializer 對應  
- 當您使用中繼資料端點或 `DataContractSerializer` ，從 [!INCLUDE[indigo1](../../../../includes/indigo1-md.md)] 服務匯出中繼資料時， [DataContractSerializer](../../../../docs/framework/wcf/servicemodel-metadata-utility-tool-svcutil-exe.md)就會將 CLR 型別對應至 XSD。 [!INCLUDE[crdefault](../../../../includes/crdefault-md.md)] [資料合約序列化程式](../../../../docs/framework/wcf/feature-details/data-contract-serializer.md)。  
+ 當您使用中繼資料端點或 `DataContractSerializer` ，從 [!INCLUDE[indigo1](../../../../includes/indigo1-md.md)] 服務匯出中繼資料時， [DataContractSerializer](../../../../docs/framework/wcf/servicemodel-metadata-utility-tool-svcutil-exe.md)就會將 CLR 型別對應至 XSD。 如需詳細資訊，請參閱[資料合約序列化程式](../../../../docs/framework/wcf/feature-details/data-contract-serializer.md)。  
   
  當您使用 Svcutil.exe 來存取 Web 服務描述語言 (WSDL) 或 XSD 文件並產生服務或用戶端的資料合約時， `DataContractSerializer` 也會將 XSD 對應至 CLR 型別。  
   
@@ -342,7 +342,7 @@ public enum MyEnum
 </xs:simpleType>  
 ```  
   
-### <a name="xslist"></a>\<xs:list>  
+### <a name="xslist"></a>\<: list >  
  `DataContractSerializer` 會將標示為 `System.FlagsAttribute` 的列舉型別對應至衍生自 `xs:list` 的 `xs:string`。 不支援其他任何 `xs:list` 變化。  
   
 ### <a name="xslist-attributes"></a>\<: list >： 屬性  

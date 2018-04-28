@@ -1,27 +1,29 @@
 ---
-title: "SecurityBindingElement 驗證模式"
-ms.custom: 
+title: SecurityBindingElement 驗證模式
+ms.custom: ''
 ms.date: 03/30/2017
 ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.technology: dotnet-clr
-ms.tgt_pltfrm: 
+ms.reviewer: ''
+ms.suite: ''
+ms.technology:
+- dotnet-clr
+ms.tgt_pltfrm: ''
 ms.topic: article
 dev_langs:
 - csharp
 - vb
 ms.assetid: 12300bf4-c730-4405-9f65-d286f68b5a43
-caps.latest.revision: "13"
+caps.latest.revision: 13
 author: BrucePerlerMS
 ms.author: bruceper
 manager: mbaldwin
-ms.workload: dotnet
-ms.openlocfilehash: 05b44d9972a393b36a97fd5afcb6581229332df9
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.workload:
+- dotnet
+ms.openlocfilehash: 8ca854d6b0431b5fe4972972d9d39de934f64b4d
+ms.sourcegitcommit: 03ee570f6f528a7d23a4221dcb26a9498edbdf8c
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 04/28/2018
 ---
 # <a name="securitybindingelement-authentication-modes"></a>SecurityBindingElement 驗證模式
 [!INCLUDE[indigo1](../../../../includes/indigo1-md.md)] 提供數個模式，可讓用戶端和服務用來相互驗證。 您可以在 <xref:System.ServiceModel.Channels.SecurityBindingElement> 類別上使用靜態方法或透過組態，建立這些驗證模式的安全性繫結項目。 本主題會簡短說明這 18 種驗證模式。  
@@ -60,7 +62,7 @@ ms.lasthandoff: 12/22/2017
      [!code-csharp[c_CustomBindingsAuthMode#3](../../../../samples/snippets/csharp/VS_Snippets_CFX/c_custombindingsauthmode/cs/source.cs#3)]
      [!code-vb[c_CustomBindingsAuthMode#3](../../../../samples/snippets/visualbasic/VS_Snippets_CFX/c_custombindingsauthmode/vb/source.vb#3)]  
   
-3.  使用繫結項目來建立自訂繫結。 [!INCLUDE[crdefault](../../../../includes/crdefault-md.md)][自訂繫結](../../../../docs/framework/wcf/extending/custom-bindings.md)。  
+3.  使用繫結項目來建立自訂繫結。 如需詳細資訊，請參閱[自訂繫結](../../../../docs/framework/wcf/extending/custom-bindings.md)。  
   
 ## <a name="mode-descriptions"></a>模式描述  
   
@@ -89,7 +91,7 @@ ms.lasthandoff: 12/22/2017
  在此驗證模式中，用戶端會使用 Kerberos 票證向服務進行驗證。 相同的票證也會提供伺服器驗證。 安全性繫結項目是由 `SymmetricSecurityBindingElement` 方法傳回的 <xref:System.ServiceModel.Channels.SecurityBindingElement.CreateKerberosBindingElement%2A>。 或者，可以將 `authenticationMode` 屬性設定為 `Kerberos`。  
   
 > [!NOTE]
->  為了使用此驗證模式，服務帳戶必須與某個服務主要名稱 (SPN) 相關聯。 如果要這樣做，請以 NETWORK SERVICE 帳戶或 LOCAL SYSTEM 帳戶執行此服務。 或者，使用 SetSpn.exe 工具來建立服務帳戶的 SPN。 在任一情況下，用戶端必須使用正確的 SPN 中[ \<servicePrincipalName >](../../../../docs/framework/configure-apps/file-schema/wcf/serviceprincipalname.md)項目，或使用<xref:System.ServiceModel.EndpointAddress>建構函式。 [!INCLUDE[crdefault](../../../../includes/crdefault-md.md)][服務身分識別和驗證](../../../../docs/framework/wcf/feature-details/service-identity-and-authentication.md)。  
+>  為了使用此驗證模式，服務帳戶必須與某個服務主要名稱 (SPN) 相關聯。 如果要這樣做，請以 NETWORK SERVICE 帳戶或 LOCAL SYSTEM 帳戶執行此服務。 或者，使用 SetSpn.exe 工具來建立服務帳戶的 SPN。 在任一情況下，用戶端必須使用正確的 SPN 中[ \<servicePrincipalName >](../../../../docs/framework/configure-apps/file-schema/wcf/serviceprincipalname.md)項目，或使用<xref:System.ServiceModel.EndpointAddress>建構函式。 如需詳細資訊，請參閱[服務識別和驗證](../../../../docs/framework/wcf/feature-details/service-identity-and-authentication.md)。  
   
 > [!NOTE]
 >  當使用 `Kerberos` 驗證模式時，就不會支援 <xref:System.Security.Principal.TokenImpersonationLevel.Anonymous> 與 <xref:System.Security.Principal.TokenImpersonationLevel.Delegation> 模擬等級。  
@@ -98,7 +100,7 @@ ms.lasthandoff: 12/22/2017
  在此驗證模式中，用戶端會使用 Kerberos 票證向服務進行驗證。 Kerberos 權杖會當做簽署支援權杖 (也就是簽署訊息簽章的權杖) 出現在 SOAP 層中。 服務會在傳輸層上使用 X.509 憑證來進行驗證。 安全性繫結項目是由 `TransportSecurityBindingElement` 方法傳回的 <xref:System.ServiceModel.Channels.SecurityBindingElement.CreateKerberosOverTransportBindingElement%2A>。 或者，可以將 `authenticationMode` 屬性設定為 `KerberosOverTransport`。  
   
 > [!NOTE]
->  為了使用此驗證模式，服務帳戶必須與某個 SPN 相關聯。 如果要這樣做，請以 NETWORK SERVICE 帳戶或 LOCAL SYSTEM 帳戶執行此服務。 或者，使用 SetSpn.exe 工具來建立服務帳戶的 SPN。 在任一情況下，用戶端必須使用正確的 SPN 中[ \<servicePrincipalName >](../../../../docs/framework/configure-apps/file-schema/wcf/serviceprincipalname.md)項目，或使用<xref:System.ServiceModel.EndpointAddress>建構函式。 [!INCLUDE[crdefault](../../../../includes/crdefault-md.md)][服務身分識別和驗證](../../../../docs/framework/wcf/feature-details/service-identity-and-authentication.md)。  
+>  為了使用此驗證模式，服務帳戶必須與某個 SPN 相關聯。 如果要這樣做，請以 NETWORK SERVICE 帳戶或 LOCAL SYSTEM 帳戶執行此服務。 或者，使用 SetSpn.exe 工具來建立服務帳戶的 SPN。 在任一情況下，用戶端必須使用正確的 SPN 中[ \<servicePrincipalName >](../../../../docs/framework/configure-apps/file-schema/wcf/serviceprincipalname.md)項目，或使用<xref:System.ServiceModel.EndpointAddress>建構函式。 如需詳細資訊，請參閱[服務識別和驗證](../../../../docs/framework/wcf/feature-details/service-identity-and-authentication.md)。  
   
 ### <a name="mutualcertificate"></a>MutualCertificate  
  在此驗證模式中，用戶端會使用出現在 SOAP 層中當做簽署支援權杖 (也就是簽署訊息簽章的權杖) 的 X.509 憑證來進行驗證。 服務也會使用 X.509 憑證來進行驗證。 安全性繫結項目是由 `SymmetricSecurityBindingElement` 方法傳回的 <xref:System.ServiceModel.Channels.SecurityBindingElement.CreateMutualCertificateBindingElement%2A>。 或者，可以將 `authenticationMode` 屬性設定為 `MutualCertificate`。  
@@ -131,6 +133,6 @@ ms.lasthandoff: 12/22/2017
 ### <a name="usernameovertransport"></a>UserNameOverTransport  
  在此驗證模式中，用戶端會使用當做簽署支援權杖 (也就是由訊息簽章簽署的權杖) 出現在 SOAP 層中的「使用者名稱權杖」進行驗證。 服務會在傳輸層上使用 X.509 憑證來進行驗證。 安全性繫結項目是由 `TransportSecurityBindingElement` 方法傳回的 <xref:System.ServiceModel.Channels.SecurityBindingElement.CreateUserNameOverTransportBindingElement%2A>。 或者，可以將 `authenticationMode` 屬性設定為 `UserNameOverTransport`。  
   
-## <a name="see-also"></a>請參閱  
+## <a name="see-also"></a>另請參閱  
  <xref:System.ServiceModel.Channels.SecurityBindingElement>  
  [如何：為指定的驗證模式建立 SecurityBindingElement](../../../../docs/framework/wcf/feature-details/how-to-create-a-securitybindingelement-for-a-specified-authentication-mode.md)

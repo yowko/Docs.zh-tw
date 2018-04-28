@@ -27,11 +27,11 @@ ms.author: dotnetcontent
 manager: wpickett
 ms.workload:
 - dotnet
-ms.openlocfilehash: 5c1b03cf39608566ed80e2288204480e77994ad7
-ms.sourcegitcommit: 86adcc06e35390f13c1e372c36d2e044f1fc31ef
+ms.openlocfilehash: edc4bc985f7117dc66d29053d62a283d67b01a85
+ms.sourcegitcommit: 03ee570f6f528a7d23a4221dcb26a9498edbdf8c
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/26/2018
+ms.lasthandoff: 04/28/2018
 ---
 # <a name="how-to-configure-iis-50-and-iis-60-to-deploy-wpf-applications"></a>如何：設定 IIS 5.0 和 IIS 6.0 以部署 WPF 應用程式
 您可以從大多數網頁伺服器部署 [!INCLUDE[TLA#tla_winclient](../../../../includes/tlasharptla-winclient-md.md)] 應用程式，只要這些伺服器是以適當的 [!INCLUDE[TLA#tla_mime](../../../../includes/tlasharptla-mime-md.md)] 類型所設定。 根據預設，[!INCLUDE[TLA#tla_iis70](../../../../includes/tlasharptla-iis70-md.md)] 是以這些 [!INCLUDE[TLA2#tla_mime](../../../../includes/tla2sharptla-mime-md.md)] 類型所設定，但 [!INCLUDE[TLA#tla_iis50](../../../../includes/tlasharptla-iis50-md.md)] 和 [!INCLUDE[TLA#tla_iis60](../../../../includes/tlasharptla-iis60-md.md)] 則不是。  
@@ -40,7 +40,7 @@ ms.lasthandoff: 04/26/2018
   
   
 > [!NOTE]
->  您可以檢查登錄中的 *UserAgent* 字串，以判斷系統是否已安裝 [!INCLUDE[TLA2#tla_winfx](../../../../includes/tla2sharptla-winfx-md.md)]。 如需詳細資訊，以及可檢查 *UserAgent* 字串以判斷系統上是否已安裝 [!INCLUDE[TLA2#tla_winfx](../../../../includes/tla2sharptla-winfx-md.md)] 的指令碼，請參閱[偵測有無安裝 .NET Framework 3.0](../../../../docs/framework/wpf/app-development/how-to-detect-whether-the-net-framework-3-0-is-installed.md)。  
+>  您可以檢查*UserAgent*登錄，以判斷系統是否已安裝.NET Framework 中的字串。 詳細資料和指令碼，以檢查*UserAgent*字串，以判斷系統上是否已安裝.NET Framework，請參閱[偵測是否安裝.NET Framework 3.0 是](../../../../docs/framework/wpf/app-development/how-to-detect-whether-the-net-framework-3-0-is-installed.md)。  
   
 <a name="content_expiration"></a>   
 ## <a name="adjust-the-content-expiration-setting"></a>調整內容到期設定  

@@ -1,28 +1,28 @@
 ---
-title: "資料合約代理"
-ms.custom: 
+title: 資料合約代理
+ms.custom: ''
 ms.date: 03/30/2017
 ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
+ms.reviewer: ''
+ms.suite: ''
 ms.technology:
 - dotnet-clr
-ms.tgt_pltfrm: 
+ms.tgt_pltfrm: ''
 ms.topic: article
 helpviewer_keywords:
 - data contracts [WCF], surrogates
 ms.assetid: 8c31134c-46c5-4ed7-94af-bab0ac0dfce5
-caps.latest.revision: 
+caps.latest.revision: 8
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
 ms.workload:
 - dotnet
-ms.openlocfilehash: f6fcae1989b75a668fd6ff38596b06feca7be9e8
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.openlocfilehash: e6b372b998d7b3a91189032947a9ad8c68074b5d
+ms.sourcegitcommit: 03ee570f6f528a7d23a4221dcb26a9498edbdf8c
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 04/28/2018
 ---
 # <a name="data-contract-surrogates"></a>資料合約代理
 資料合約*surrogate*是資料合約模型上建置的進階的功能。 這項功能是專為在使用者想要變更型別序列化、還原序列化或投射至中繼資料的方式時，用來自訂和替換型別所設計。 某些可能使用代理的情況包括：尚未指定型別的資料合約、欄位和屬性 (Property) 尚未以 <xref:System.Runtime.Serialization.DataMemberAttribute> 屬性 (Attribute) 標記，或是使用者希望動態建立結構描述變形時。  
@@ -75,7 +75,7 @@ ms.lasthandoff: 12/22/2017
   
  `targetType` 參數會參考宣告的成員型別。 這個參數是由 <xref:System.Runtime.Serialization.IDataContractSurrogate.GetDataContractType%2A> 方法傳回的代理型別。 序列化程式不會強制傳回的物件必須能夠指派給這個型別。 `obj`參數是要序列化的物件，如有必要將轉換成其代理。 如果代理的物件不會處理該物件的話，這個方法就必須傳回輸入物件。 否則將傳回新的代理物件。 如果物件為 null，則不會呼叫代理。 這個物件內可定義許多不同執行個體的代理對應。  
   
- 建立 <xref:System.Runtime.Serialization.DataContractSerializer> 時，您可以指示它保留物件參考  ([!INCLUDE[crdefault](../../../../includes/crdefault-md.md)] [序列化和還原序列化](../../../../docs/framework/wcf/feature-details/serialization-and-deserialization.md)。)只要在其建構函式中將 `preserveObjectReferences` 參數設為 `true`，就能達到這個目的。 在這個情況下，只會呼叫物件的代理一次，因為後續的所有序列化會直接將參考寫入資料流中。 如果 `preserveObjectReferences` 設為 `false`，則會在每次遇到執行個體時呼叫代理。  
+ 建立 <xref:System.Runtime.Serialization.DataContractSerializer> 時，您可以指示它保留物件參考  (如需詳細資訊，請參閱[序列化和還原序列化](../../../../docs/framework/wcf/feature-details/serialization-and-deserialization.md)。)只要在其建構函式中將 `preserveObjectReferences` 參數設為 `true`，就能達到這個目的。 在這個情況下，只會呼叫物件的代理一次，因為後續的所有序列化會直接將參考寫入資料流中。 如果 `preserveObjectReferences` 設為 `false`，則會在每次遇到執行個體時呼叫代理。  
   
  如果序列化的執行個體型別與宣告的型別不同，則型別資訊會寫入資料流中 (例如 `xsi:type`)，讓執行個體能夠在另一端還原序列化。 這項程序無論物件是否為代理都會發生。  
   
@@ -144,7 +144,7 @@ ms.lasthandoff: 12/22/2017
 ### <a name="getknowncustomdatatypes-method"></a>GetKnownCustomDataTypes 方法  
  這個方法會從結構描述取得定義的自訂資料型別。 這個方法對於結構描述的匯入作業來說是選擇性的。  
   
- 這個方法會在結構描述匯出和匯入開始時呼叫。 然後傳回在匯出或匯入的結構描述中使用的自訂資料型別。 這個方法會收到傳遞的 <xref:System.Collections.ObjectModel.Collection%601> (`customDataTypes` 參數)，此為型別的集合。 這個方法應將額外的已知型別加入這個集合中。 必須有已知的自訂資料型別，才能使用 <xref:System.Runtime.Serialization.DataContractSerializer> 序列化和還原序列化自訂資料。 [!INCLUDE[crdefault](../../../../includes/crdefault-md.md)][資料合約已知型別](../../../../docs/framework/wcf/feature-details/data-contract-known-types.md)。  
+ 這個方法會在結構描述匯出和匯入開始時呼叫。 然後傳回在匯出或匯入的結構描述中使用的自訂資料型別。 這個方法會收到傳遞的 <xref:System.Collections.ObjectModel.Collection%601> (`customDataTypes` 參數)，此為型別的集合。 這個方法應將額外的已知型別加入這個集合中。 必須有已知的自訂資料型別，才能使用 <xref:System.Runtime.Serialization.DataContractSerializer> 序列化和還原序列化自訂資料。 如需詳細資訊，請參閱[資料合約已知型別](../../../../docs/framework/wcf/feature-details/data-contract-known-types.md)。  
   
 ## <a name="implementing-a-surrogate"></a>實作代理  
  若要在 [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] 內使用資料合約代理，您必須執行幾項特殊的程序。  
@@ -204,7 +204,7 @@ ms.lasthandoff: 12/22/2017
   
      [!code-csharp[C_IDataContractSurrogate#10](../../../../samples/snippets/csharp/VS_Snippets_CFX/c_idatacontractsurrogate/cs/source.cs#10)]  
   
-## <a name="see-also"></a>請參閱  
+## <a name="see-also"></a>另請參閱  
  <xref:System.Runtime.Serialization.DataContractSerializer>  
  <xref:System.Runtime.Serialization.IDataContractSurrogate>  
  <xref:System.ServiceModel.Description.DataContractSerializerOperationBehavior>  

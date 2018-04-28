@@ -1,27 +1,29 @@
 ---
-title: "資料的安全性考量"
-ms.custom: 
+title: 資料的安全性考量
+ms.custom: ''
 ms.date: 03/30/2017
 ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.technology: dotnet-clr
-ms.tgt_pltfrm: 
+ms.reviewer: ''
+ms.suite: ''
+ms.technology:
+- dotnet-clr
+ms.tgt_pltfrm: ''
 ms.topic: article
 dev_langs:
 - csharp
 - vb
 ms.assetid: a7eb98da-4a93-4692-8b59-9d670c79ffb2
-caps.latest.revision: "23"
+caps.latest.revision: 23
 author: BrucePerlerMS
 ms.author: bruceper
 manager: mbaldwin
-ms.workload: dotnet
-ms.openlocfilehash: bb7a40bc38a3fdf3f7be2b31e30e768e26be2d15
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.workload:
+- dotnet
+ms.openlocfilehash: aa0692c130fdfcf3685c152cdcb73a07d041ab9b
+ms.sourcegitcommit: 03ee570f6f528a7d23a4221dcb26a9498edbdf8c
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 04/28/2018
 ---
 # <a name="security-considerations-for-data"></a>資料的安全性考量
 處理 [!INCLUDE[indigo1](../../../../includes/indigo1-md.md)]中的資料時，必須考慮一些威脅類別。 下表列出與資料處理有關的最重要威脅類別。 [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] 提供可減輕這些威脅的工具。  
@@ -44,7 +46,7 @@ ms.lasthandoff: 12/22/2017
   
  您應該要確保各種擴充點中均未插入惡意程式碼。 這對於在部分信任下執行、從部分信任組件處理類型，或是建立無法由部分信任程式碼使用的元件時，特別有關係。 如需詳細資訊，請參閱本主題稍後的「部分信任威脅」。  
   
- 請注意，在部分信任中執行時，資料合約序列化基礎結構只支援資料合約程式設計模型的有限子集 - 例如，使用不支援 <xref:System.SerializableAttribute> 屬性的私用資料成員或型別。 [!INCLUDE[crdefault](../../../../includes/crdefault-md.md)][部分信任](../../../../docs/framework/wcf/feature-details/partial-trust.md)。  
+ 請注意，在部分信任中執行時，資料合約序列化基礎結構只支援資料合約程式設計模型的有限子集 - 例如，使用不支援 <xref:System.SerializableAttribute> 屬性的私用資料成員或型別。 如需詳細資訊，請參閱[部分信任](../../../../docs/framework/wcf/feature-details/partial-trust.md)。  
   
 ## <a name="avoiding-unintentional-information-disclosure"></a>避免意外的資訊洩漏  
  當設計具有安全性的可序列化型別時，可能要考量資訊洩漏的問題。  
@@ -121,7 +123,7 @@ ms.lasthandoff: 12/22/2017
 ### <a name="slow-stream-attacks"></a>慢速資料流攻擊  
  資料流阻絕服務攻擊的類別不包含記憶體消耗。 相反地，攻擊包含資料的慢速傳送者或接收者。 在等候傳送或接收資料時，如執行緒和可用連線等資源會用盡。 這種情況可能是由於惡意攻擊或慢速網路連線上的合法傳送者/接收者所引起。  
   
- 如果要降低這些攻擊，請正確設定傳輸逾時。 [!INCLUDE[crdefault](../../../../includes/crdefault-md.md)][傳輸配額](../../../../docs/framework/wcf/feature-details/transport-quotas.md)。 其次，當使用 `Read` 中的資料流時，絕對不要使用同步 `Write` 或 [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)]作業。  
+ 如果要降低這些攻擊，請正確設定傳輸逾時。 如需詳細資訊，請參閱[傳輸配額](../../../../docs/framework/wcf/feature-details/transport-quotas.md)。 其次，當使用 `Read` 中的資料流時，絕對不要使用同步 `Write` 或 [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)]作業。  
   
 ## <a name="using-xml-safely"></a>安全使用 XML  
   
@@ -177,7 +179,7 @@ ms.lasthandoff: 12/22/2017
   
  <xref:System.Xml.XmlDictionaryReaderQuotas.MaxNameTableCharCount%2A>、 `MaxStringContentLength`和 `MaxArrayLength` 屬性只限制記憶體消耗。 通常不需要它們來降低非資料流使用中的威脅，因為記憶體使用已經受到 `MaxReceivedMessageSize`的限制。 然而， `MaxReceivedMessageSize` 會計算預先展開的位元組。 當二進位編碼正在使用中時，記憶體消耗有可能會超過 `MaxReceivedMessageSize`，其只受到 <xref:System.ServiceModel.Channels.BinaryMessageEncodingBindingElement.MaxSessionSize%2A>因數的限制。 因此，當使用二進位編碼時，永遠設定所有的讀取器配額 (特別是 <xref:System.Xml.XmlDictionaryReaderQuotas.MaxStringContentLength%2A>) 是很重要的。  
   
- 當搭配使用二進位編碼和 <xref:System.Runtime.Serialization.DataContractSerializer>時， `IExtensibleDataObject` 介面可能會誤用來掛接字典展開攻擊。 這個介面基本上是為不屬於合約之任意資料提供無限制的儲存區。 如果無法將配額設定得夠低，讓 `MaxSessionSize` 乘以 `MaxReceivedMessageSize` 不會引起問題，當使用二進位編碼時，請停用 `IExtensibleDataObject` 功能。 請將 `IgnoreExtensionDataObject` 屬性 (Attribute) 上的 `true` 屬性 (Property) 設定為 `ServiceBehaviorAttribute` 。 或者，請不要實作 `IExtensibleDataObject` 介面。 [!INCLUDE[crdefault](../../../../includes/crdefault-md.md)][向前相容資料合約](../../../../docs/framework/wcf/feature-details/forward-compatible-data-contracts.md)。  
+ 當搭配使用二進位編碼和 <xref:System.Runtime.Serialization.DataContractSerializer>時， `IExtensibleDataObject` 介面可能會誤用來掛接字典展開攻擊。 這個介面基本上是為不屬於合約之任意資料提供無限制的儲存區。 如果無法將配額設定得夠低，讓 `MaxSessionSize` 乘以 `MaxReceivedMessageSize` 不會引起問題，當使用二進位編碼時，請停用 `IExtensibleDataObject` 功能。 請將 `IgnoreExtensionDataObject` 屬性 (Attribute) 上的 `true` 屬性 (Property) 設定為 `ServiceBehaviorAttribute` 。 或者，請不要實作 `IExtensibleDataObject` 介面。 如需詳細資訊，請參閱[向前相容資料合約](../../../../docs/framework/wcf/feature-details/forward-compatible-data-contracts.md)。  
   
 ### <a name="quotas-summary"></a>配額摘要  
  下表為有關配額的指引摘要。  
@@ -259,7 +261,7 @@ ms.lasthandoff: 12/22/2017
   
 -   當 <xref:System.Runtime.Serialization.DataContractSerializer> 還原序列化大部分的類別時，建構函式不會執行。 因此，請勿依賴在建構函式中完成的任何狀態管理。  
   
--   請使用回呼來確保物件處於有效狀態中。 以 <xref:System.Runtime.Serialization.OnDeserializedAttribute> 屬性標示的回呼特別有用，因為它是在還原序列化完成之後執行，並有機會檢查和更正整體狀態。 [!INCLUDE[crdefault](../../../../includes/crdefault-md.md)][版本相容序列化回呼](../../../../docs/framework/wcf/feature-details/version-tolerant-serialization-callbacks.md)。  
+-   請使用回呼來確保物件處於有效狀態中。 以 <xref:System.Runtime.Serialization.OnDeserializedAttribute> 屬性標示的回呼特別有用，因為它是在還原序列化完成之後執行，並有機會檢查和更正整體狀態。 如需詳細資訊，請參閱[版本相容序列化回呼](../../../../docs/framework/wcf/feature-details/version-tolerant-serialization-callbacks.md)。  
   
 -   請勿將資料合約類型設計為依賴呼叫 setter 屬性必須遵守的特定順序。  
   
@@ -267,10 +269,10 @@ ms.lasthandoff: 12/22/2017
   
 -   就狀態安全性而言，請勿依賴 <xref:System.Runtime.Serialization.DataMemberAttribute.IsRequired%2A> 屬性 (Attribute) 的 `DataMemberAttribute` 屬性 (Property) 來保證資料的存在。 資料可能永遠是 `null`、`zero` 或 `invalid`。  
   
--   在沒有先驗證之前，絕對不要信任從不受信任的資料來源還原序列化的物件圖形。 每個個別物件可能處於一致性狀態，但是整個物件圖形可能不是。 此外，即使物件圖形保留模式已停用，已還原序列化圖形仍可能有相同物件的多個參照，或是有循環參照。 [!INCLUDE[crdefault](../../../../includes/crdefault-md.md)][序列化和還原序列化](../../../../docs/framework/wcf/feature-details/serialization-and-deserialization.md)。  
+-   在沒有先驗證之前，絕對不要信任從不受信任的資料來源還原序列化的物件圖形。 每個個別物件可能處於一致性狀態，但是整個物件圖形可能不是。 此外，即使物件圖形保留模式已停用，已還原序列化圖形仍可能有相同物件的多個參照，或是有循環參照。 如需詳細資訊，請參閱[序列化和還原序列化](../../../../docs/framework/wcf/feature-details/serialization-and-deserialization.md)。  
   
 ### <a name="using-the-netdatacontractserializer-securely"></a>安全使用 NetDataContractSerializer  
- <xref:System.Runtime.Serialization.NetDataContractSerializer> 是對型別使用緊密結合的序列化引擎。 這與 <xref:System.Runtime.Serialization.Formatters.Binary.BinaryFormatter> 和 <xref:System.Runtime.Serialization.Formatters.Soap.SoapFormatter>很類似。 也就是說，它會從傳入資料讀取 [!INCLUDE[dnprdnshort](../../../../includes/dnprdnshort-md.md)] 組件和型別名稱，以判斷要產生何種型別。 雖然它是 [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)]的一部分，但是未提供插入此序列化引擎的方法；必須撰寫自訂程式碼。 提供 `NetDataContractSerializer` 主要是簡化從 [!INCLUDE[dnprdnshort](../../../../includes/dnprdnshort-md.md)] 遠端處理到 [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)]的移轉。 [!INCLUDE[crdefault](../../../../includes/crdefault-md.md)]中相關的章節[序列化和還原序列化](../../../../docs/framework/wcf/feature-details/serialization-and-deserialization.md)。  
+ <xref:System.Runtime.Serialization.NetDataContractSerializer> 是對型別使用緊密結合的序列化引擎。 這與 <xref:System.Runtime.Serialization.Formatters.Binary.BinaryFormatter> 和 <xref:System.Runtime.Serialization.Formatters.Soap.SoapFormatter>很類似。 也就是說，它會從傳入資料讀取 [!INCLUDE[dnprdnshort](../../../../includes/dnprdnshort-md.md)] 組件和型別名稱，以判斷要產生何種型別。 雖然它是 [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)]的一部分，但是未提供插入此序列化引擎的方法；必須撰寫自訂程式碼。 提供 `NetDataContractSerializer` 主要是簡化從 [!INCLUDE[dnprdnshort](../../../../includes/dnprdnshort-md.md)] 遠端處理到 [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)]的移轉。 如需詳細資訊，請參閱中相關的章節[序列化和還原序列化](../../../../docs/framework/wcf/feature-details/serialization-and-deserialization.md)。  
   
  由於訊息本身可能會指出可以載入的任何型別，因此 <xref:System.Runtime.Serialization.NetDataContractSerializer> 機制原本就是不安全的，且只應搭配受信任的資料使用。 藉由撰寫安全、型別有限制的型別繫結器，且該繫別器只允許載入安全型別 (使用 <xref:System.Runtime.Serialization.NetDataContractSerializer.Binder%2A> 屬性)，有可能保護它的安全。  
   
@@ -364,7 +366,7 @@ ms.lasthandoff: 12/22/2017
   
 -   一般來說，當使用接受配額的元件時，請了解它的安全性含意並設定為安全值。  
   
-## <a name="see-also"></a>請參閱  
+## <a name="see-also"></a>另請參閱  
  <xref:System.Runtime.Serialization.DataContractSerializer>  
  <xref:System.Xml.XmlDictionaryReader>  
  <xref:System.Xml.Serialization.XmlSerializer>  

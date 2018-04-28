@@ -1,20 +1,17 @@
 ---
-title: "XML 文件 (F#)"
-description: "從註解產生文件，以了解 F # 中的支援。"
-keywords: "Visual F#, F#, 函式程式設計"
+title: XML 文件 (F#)
+description: '從註解產生文件，以了解 F # 中的支援。'
 author: cartermp
 ms.author: phcart
 ms.date: 05/16/2016
 ms.topic: language-reference
-ms.prod: .net
-ms.technology: devlang-fsharp
+ms.prod: dotnet-fsharp
 ms.devlang: fsharp
-ms.assetid: d99ab1b6-e170-4ec2-a543-43ea7ab15bb2
-ms.openlocfilehash: 20768a7d4ea17c926318043f658691819a3d7d2f
-ms.sourcegitcommit: bd1ef61f4bb794b25383d3d72e71041a5ced172e
+ms.openlocfilehash: c9514532904f81030752bf7a4044f70a18222cab
+ms.sourcegitcommit: 03ee570f6f528a7d23a4221dcb26a9498edbdf8c
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/18/2017
+ms.lasthandoff: 04/28/2018
 ---
 # <a name="xml-documentation"></a>XML 文件
 
@@ -24,7 +21,7 @@ ms.lasthandoff: 10/18/2017
 ## <a name="generating-documentation-from-comments"></a>從註解產生文件
 相同內其他.NET Framework 語言的支援 F # 中產生文件從註解。 如同其他.NET Framework 語言， [-doc 編譯器選項](https://msdn.microsoft.com/library/434394ae-0d4a-459c-a684-bffede519a04)可讓您產生 XML 檔案，其中包含您可以使用 Sandcastle 之類的工具來轉換文件的資訊。 組件的語言所撰寫的其他.NET Framework 通常用於使用所設計的工具所產生的文件產生 Api 為基礎的 F # 建構的編譯形式的檢視。 除非工具是專門為了支援 F #，這些工具所產生的文件不符合應用程式開發介面 F # 檢視。
 
-如需如何從 XML 產生文件的詳細資訊，請參閱[XML 文件註解 &#40;& #35。程式設計手冊 &#41;](https://msdn.microsoft.com/library/b2s063f7).
+如需如何從 XML 產生文件的詳細資訊，請參閱[XML 文件註解&#40;C&#35;程式設計指南&#41;](https://msdn.microsoft.com/library/b2s063f7)。
 
 
 ## <a name="recommended-tags"></a>建議的標記
@@ -32,16 +29,16 @@ ms.lasthandoff: 10/18/2017
 
 
 
-|標記語法|說明|
+|標記語法|描述|
 |----------|-----------|
 |**&lt;c&gt;***文字***&lt;/c&gt;**|指定*文字*是程式碼。 這個標記可以供文件產生器，來顯示文字的字型，適用於程式碼。|
-|**&lt;摘要&gt;***文字* **&lt; /摘要&gt;**|指定*文字*程式項目的簡短描述。 描述通常是一個或兩個句子。|
-|**&lt;註解&gt;***文字* **&lt; /註解&gt;**|指定*文字*包含補充資訊的程式項目。|
+|**&lt;摘要&gt;***文字*** &lt; /摘要&gt;**|指定*文字*程式項目的簡短描述。 描述通常是一個或兩個句子。|
+|**&lt;註解&gt;***文字*** &lt; /註解&gt;**|指定*文字*包含補充資訊的程式項目。|
 |**&lt;name ="***名稱***"&gt;***描述***&lt;/param&gt;**|指定的名稱和函式或方法參數的描述。|
 |**&lt;typeparam 名稱 ="***名稱***"&gt;***描述***&lt;/typeparam&gt;**|指定的名稱和型別參數的描述。|
-|**&lt;傳回&gt;***文字* **&lt; /returns>&gt;**|指定*文字*描述函式或方法的傳回值。|
+|**&lt;傳回&gt;***文字*** &lt; /returns>&gt;**|指定*文字*描述函式或方法的傳回值。|
 |**&lt;例外狀況 cref ="***類型***"&gt;***描述***&lt;/exception&gt;**|指定可以產生的例外狀況的情況下擲回的類型。|
-|**&lt;cref ="***參考***"&gt;***文字* **&lt; /請參閱&gt;**|指定的內嵌連結，另一個程式項目。 *參考*是它會出現在 XML 文件檔的名稱。 *文字*是連結中所顯示的文字。|
+|**&lt;cref ="***參考***"&gt;***文字*** &lt; /請參閱&gt;**|指定的內嵌連結，另一個程式項目。 *參考*是它會出現在 XML 文件檔的名稱。 *文字*是連結中所顯示的文字。|
 |**&lt;另請參閱 cref ="***參考***"/&gt;**|指定另一種類型的文件的 < 另請參閱連結。 *參考*是它會出現在 XML 文件檔的名稱。 另請參閱通常會出現在文件頁面底部的連結。|
 |**&lt;para&gt;***文字***&lt;/para&gt;**|指定一段文字。 這用來分隔文字內**備註**標記。|
 

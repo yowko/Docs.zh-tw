@@ -1,20 +1,17 @@
 ---
-title: "清單 (F#)"
-description: "深入了解 F # 清單、 排序、 不可變的數列相同型別的項目。"
-keywords: "Visual F#, F#, 函式程式設計"
+title: 清單 (F#)
+description: '深入了解 F # 清單、 排序、 不可變的數列相同型別的項目。'
 author: cartermp
 ms.author: phcart
 ms.date: 05/16/2016
 ms.topic: language-reference
-ms.prod: .net
-ms.technology: devlang-fsharp
+ms.prod: dotnet-fsharp
 ms.devlang: fsharp
-ms.assetid: a1a6075f-064d-4aee-8222-2b59ff16cc12
-ms.openlocfilehash: 5802a5a1c48ad05c1765c4c0fa2e8a81a92dee8d
-ms.sourcegitcommit: bd1ef61f4bb794b25383d3d72e71041a5ced172e
+ms.openlocfilehash: e29dbdac5e920c009bf7758fd2cc1ad486041cad
+ms.sourcegitcommit: 03ee570f6f528a7d23a4221dcb26a9498edbdf8c
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/18/2017
+ms.lasthandoff: 04/28/2018
 ---
 # <a name="lists"></a>清單
 
@@ -68,7 +65,7 @@ F # 中的清單都會實作為單向連結清單，這表示存取清單的開�
 ## <a name="properties"></a>屬性
 list 類型支援下列屬性：
 
-|屬性|類型|說明|
+|屬性|類型|描述|
 |--------|----|-----------|
 |[標頭](https://msdn.microsoft.com/library/5f9414fd-6bdb-470a-8b72-40016db30740)|`'T`|第一個元素。|
 |[空白](https://msdn.microsoft.com/library/44406ecb-1918-4d32-b32a-ca1f69840386)|`'T list`|此為靜態屬性，會傳回適當類型的空 list。|
@@ -411,7 +408,7 @@ List.iteri2: element 2 of list1 is 3; element 2 of list2 is 6
 
 [!code-fsharp[Main](../../../samples/snippets/fsharp/lists/snippet28.fs)]
 
-`List.fold`和[List.scan](https://msdn.microsoft.com/library/21f636db-885c-4a72-970e-e3841f33a1b8)差別在於`List.fold`傳回此額外的參數，最終的值，但`List.scan`傳回此額外參數 （與最終值） 的中間值的清單。
+`List.fold` 和[List.scan](https://msdn.microsoft.com/library/21f636db-885c-4a72-970e-e3841f33a1b8)差別在於`List.fold`傳回此額外的參數，最終的值，但`List.scan`傳回此額外參數 （與最終值） 的中間值的清單。
 
 所有這些函式包含一個反向的變化，例如[List.foldBack](https://msdn.microsoft.com/library/b9a58e66-efe1-445f-a90c-ac9ffb9d40c7)，其中的順序在不同的周遊和引數的順序。 此外，`List.fold`和`List.foldBack`有變化[List.fold2](https://msdn.microsoft.com/library/6cfcd043-a65d-4423-805a-2ab234cb5343)和[List.foldBack2](https://msdn.microsoft.com/library/56371d3e-5271-4183-9e8c-15a02eda9aa2)，可接受兩個等長的清單。 對每個元素執行的函式，皆可使用兩個 list 的對應元素執行特定動作。 如下列範例所示，兩個 list 的元素類型可以不同，其中一個 list 包含銀行帳戶的交易金額，另一個 list 則包含交易的類型 (存款或提款)。
 

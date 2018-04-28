@@ -1,20 +1,17 @@
 ---
-title: "基本類型 (F#)"
-description: "探索用於 F # 語言的基本基本類型。"
-keywords: "Visual F#, F#, 函式程式設計"
+title: 基本類型 (F#)
+description: '探索用於 F # 語言的基本基本類型。'
 author: cartermp
 ms.author: phcart
 ms.date: 05/16/2016
 ms.topic: language-reference
-ms.prod: .net
-ms.technology: devlang-fsharp
+ms.prod: dotnet-fsharp
 ms.devlang: fsharp
-ms.assetid: 2f23d98b-551b-4fd2-9f4f-0fd7254288ed
-ms.openlocfilehash: b493cdf7116d94f66940d03b86e584bcecbbb0f1
-ms.sourcegitcommit: 5fb6646b5ee3769ffb214e672041833ea4ceeb26
+ms.openlocfilehash: 7832151ee211f56547ecad98fc31f1454cb18870
+ms.sourcegitcommit: 03ee570f6f528a7d23a4221dcb26a9498edbdf8c
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 11/08/2017
+ms.lasthandoff: 04/28/2018
 ---
 # <a name="primitive-types"></a>基本類型
 
@@ -23,7 +20,7 @@ ms.lasthandoff: 11/08/2017
 ## <a name="summary-of-primitive-types"></a>基本類型的摘要
 下表摘要說明基本的 F # 類型的屬性。
 
-|類型|.NET 型別|說明|
+|類型|.NET 型別|描述|
 |----|---------|-----------|
 |`bool`|`System.Boolean`|可能的值為 `true` 和 `false`。|
 |`byte`|`System.Byte`|從 0 到 255 之間的值。|
@@ -45,7 +42,7 @@ ms.lasthandoff: 11/08/2017
 |`float, double`|`System.Double`|64 位元浮點類型。|
 
 >[!NOTE]
-您也可以使用 64 位元整數類型的執行與整數太大的計算[bigint](https://msdn.microsoft.com/library/dc8be18d-4042-46c4-b136-2f21a84f6efa)型別。 `bigint`不是基本型別。它是的縮寫`System.Numerics.BigInteger`。
+您也可以使用 64 位元整數類型的執行與整數太大的計算[bigint](https://msdn.microsoft.com/library/dc8be18d-4042-46c4-b136-2f21a84f6efa)型別。 `bigint` 不是基本型別。它是的縮寫`System.Numerics.BigInteger`。
 
 ## <a name="see-also"></a>另請參閱
 [F# 語言參考](index.md)

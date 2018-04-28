@@ -1,24 +1,26 @@
 ---
-title: "獨立 JSON 序列化"
-ms.custom: 
+title: 獨立 JSON 序列化
+ms.custom: ''
 ms.date: 03/30/2017
 ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.technology: dotnet-clr
-ms.tgt_pltfrm: 
+ms.reviewer: ''
+ms.suite: ''
+ms.technology:
+- dotnet-clr
+ms.tgt_pltfrm: ''
 ms.topic: article
 ms.assetid: 312bd7b2-1300-4b12-801e-ebe742bd2287
-caps.latest.revision: "32"
+caps.latest.revision: 32
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.workload: dotnet
-ms.openlocfilehash: 8583ac00f1216e68f95c3d41d8c896b555d0aa8d
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.workload:
+- dotnet
+ms.openlocfilehash: 1a0a11d613ffb8f71437edd73a8be64fb5f55a4c
+ms.sourcegitcommit: 03ee570f6f528a7d23a4221dcb26a9498edbdf8c
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 04/28/2018
 ---
 # <a name="stand-alone-json-serialization"></a>獨立 JSON 序列化
 JSON (JavaScript 物件標記法) 是專為在瀏覽器內的網頁上執行的 JavaScript 程式碼而設計的資料格式。 它是 [!INCLUDE[indigo1](../../../../includes/indigo1-md.md)] 中建立的 ASP.NET AJAX 服務所使用的預設資料格式。  
@@ -38,7 +40,7 @@ JSON (JavaScript 物件標記法) 是專為在瀏覽器內的網頁上執行的 
 |<xref:System.Enum>|number|請參閱本主題稍後的＜列舉與 JSON＞。|  
 |<xref:System.Boolean>|Boolean|--|  
 |<xref:System.String>, <xref:System.Char>|String|--|  
-|<xref:System.TimeSpan>, <xref:System.Guid>, <xref:System.Uri>|String|JSON 中這些型別的格式和 XML 中相同 (本質上如同 ISO 8601 Duration 格式中的 TimeSpan、"12345678-ABCD-ABCD-ABCD-1234567890AB" 格式中的 GUID，以及如 "http://www.example.com" 的自然字串形式的 URI)。 精確的資訊，請參閱[資料合約結構描述參考](../../../../docs/framework/wcf/feature-details/data-contract-schema-reference.md)。|  
+|<xref:System.TimeSpan>, <xref:System.Guid>, <xref:System.Uri>|String|在 JSON 中這些類型的格式為 XML 中相同 (基本上，ISO 8601 Duration 格式中的 TimeSpan、"12345678-ABCD-ABCD-ABCD-1234567890AB"格式的 GUID 和以其自然字串形式的 URI，例如"http://www.example.com")。 精確的資訊，請參閱[資料合約結構描述參考](../../../../docs/framework/wcf/feature-details/data-contract-schema-reference.md)。|  
 |<xref:System.Xml.XmlQualifiedName>|String|格式為 "name:namespace" (第一個冒號前面的就是名稱)。 名稱或命名空間可能會遺失。 如果沒有命名空間，冒號也可以省略。|  
 |型別 <xref:System.Array> 的 <xref:System.Byte>|數字陣列|每個數字代表一個位元組值。|  
 |<xref:System.DateTime>|DateTime 或字串|請參閱本主題稍後的＜日期/時間與 JSON＞。|  
@@ -51,7 +53,7 @@ JSON (JavaScript 物件標記法) 是專為在瀏覽器內的網頁上執行的 
 |任何型別的 `Null` 值|Null|可為 Null 的型別也受支援，並且會以和不可為 Null 的型別相同的方式對應至 JSON。|  
   
 ### <a name="enumerations-and-json"></a>列舉與 JSON  
- 在 JSON 中，列舉成員值會被視為數字，它處理這些值的方式與資料合約不同。在資料合約中，這些值會包含為成員名稱。 [!INCLUDE[crabout](../../../../includes/crabout-md.md)]資料合約處理，請參閱[列舉資料合約中的型別](../../../../docs/framework/wcf/feature-details/enumeration-types-in-data-contracts.md)。  
+ 在 JSON 中，列舉成員值會被視為數字，它處理這些值的方式與資料合約不同。在資料合約中，這些值會包含為成員名稱。 [!INCLUDE[crabout](../../../../includes/crabout-md.md)] 資料合約處理，請參閱[列舉資料合約中的型別](../../../../docs/framework/wcf/feature-details/enumeration-types-in-data-contracts.md)。  
   
 -   例如，如果您具有 `public enum Color {red, green, blue, yellow, pink}`，則序列化 `yellow` 會產生數字 3，而不是字串 "yellow"。  
   
@@ -117,7 +119,7 @@ JSON (JavaScript 物件標記法) 是專為在瀏覽器內的網頁上執行的 
  如需多型序列化運作方式的詳細資訊，以及使用時必須遵守的一些限制說明，請參閱本主題稍後的「進階資訊」一節。  
   
 ### <a name="versioning"></a>版本控制  
- 在 JSON 中完全支援資料合約版本控制功能，包括 <xref:System.Runtime.Serialization.IExtensibleDataObject> 介面。 此外，在大部分的情況中，可能可以在一種格式中還原序列化型別 (例如 XML)，然後再序列化成另一種格式 (例如 JSON)，而且仍然保有 <xref:System.Runtime.Serialization.IExtensibleDataObject> 中的資料。 [!INCLUDE[crdefault](../../../../includes/crdefault-md.md)][向前相容資料合約](../../../../docs/framework/wcf/feature-details/forward-compatible-data-contracts.md)。 請記住，JSON 並未循序，因此，任何順序資訊都會遺失。 此外，JSON 不支援多個具有相同索引鍵名稱的索引鍵/值組。 最後，<xref:System.Runtime.Serialization.IExtensibleDataObject> 上的所有作業原本就是多型的，也就是說，它們的衍生型別會指派給 <xref:System.Object> (所有型別的基底型別)。  
+ 在 JSON 中完全支援資料合約版本控制功能，包括 <xref:System.Runtime.Serialization.IExtensibleDataObject> 介面。 此外，在大部分的情況中，可能可以在一種格式中還原序列化型別 (例如 XML)，然後再序列化成另一種格式 (例如 JSON)，而且仍然保有 <xref:System.Runtime.Serialization.IExtensibleDataObject> 中的資料。 如需詳細資訊，請參閱[向前相容資料合約](../../../../docs/framework/wcf/feature-details/forward-compatible-data-contracts.md)。 請記住，JSON 並未循序，因此，任何順序資訊都會遺失。 此外，JSON 不支援多個具有相同索引鍵名稱的索引鍵/值組。 最後，<xref:System.Runtime.Serialization.IExtensibleDataObject> 上的所有作業原本就是多型的，也就是說，它們的衍生型別會指派給 <xref:System.Object> (所有型別的基底型別)。  
   
 ## <a name="json-in-urls"></a>URL 中的 JSON  
  當以 HTTP GET 動詞命令來使用 ASP.NET AJAX 端點時 (使用 <xref:System.ServiceModel.Web.WebGetAttribute> 屬性)，傳入參數會出現在要求 URL 中而非訊息本文。 支援 JSON 即使在要求 URL 中，因此如果您的作業採用`Int`名為"number"和`Person`複雜類型，稱為"p"，URL 可能類似下列的 URL。  
@@ -192,13 +194,13 @@ http://example.com/myservice.svc/MyOperation?number=7&p={"name":"John","age":42}
  由於與型別提示有潛在的衝突，因此稱為 "__type" 的資料成員是禁止的。  
   
 #### <a name="reducing-the-size-of-type-hints"></a>縮小型別提示的大小  
- 若要縮小 JSON 訊息的大小，會以 "#" 字元取代預設的資料合約命名空間前置字元 (http://schemas.datacontract.org/2004/07/) (若要進行這項取代可逆轉的請使用逸出規則： 如果命名空間開頭為"#"或"\\"字元，它們會加上額外的"\\"字元)。 因此，如果 "Circle" 是 .NET 命名空間 "MyApp.Shapes" 中的型別，它的預設資料合約命名空間為 http://schemas.datacontract.org/2004/07/MyApp。 Shapes 和 JSON 表示如下所示。  
+ 若要縮小 JSON 訊息，預設資料合約命名空間前置詞 (http://schemas.datacontract.org/2004/07/)取代為"#"字元。 (若要進行這項取代可逆轉的請使用逸出規則： 如果命名空間開頭為"#"或"\\"字元，它們會加上額外的"\\"字元)。 因此，如果"Circle"是.NET 命名空間"MyApp.Shapes"中的型別，其預設資料合約命名空間會http://schemas.datacontract.org/2004/07/MyApp。 Shapes 和 JSON 表示如下所示。  
   
 ```json  
 {"__type":"Circle:#MyApp.Shapes","x":50,"y":70,"radius":10}  
 ```  
   
- 還原序列化時，截斷的 (#MyApp.Shapes) 和完整的 (http://schemas.datacontract.org/2004/07/MyApp.Shapes) 名稱均可解讀。  
+ 截斷 (#MyApp.Shapes) 和完整 (http://schemas.datacontract.org/2004/07/MyApp.Shapes)名稱均可解讀還原序列化。  
   
 #### <a name="type-hint-position-in-json-objects"></a>JSON 物件中的型別提示位置  
  請注意，型別提示必須最先出現在 JSON 表示中。 只有在這種情況中，索引鍵/值組的順序在 JSON 處理中才會十分重要。 例如，下列不是指定型別提示的有效方法。  
@@ -256,7 +258,7 @@ http://example.com/myservice.svc/MyOperation?number=7&p={"name":"John","age":42}
   
  當再還原序列化成 <xref:System.Object> 時：  
   
--   `Shape`必須是已知型別清單中。 具有<xref:System.Collections.Generic.List%601>型別的`Shape`已知型別中沒有任何作用。 請注意，您沒有新增`Shape`要序列化的已知型別在此情況下-這會自動完成。  
+-   `Shape` 必須是已知型別清單中。 具有<xref:System.Collections.Generic.List%601>型別的`Shape`已知型別中沒有任何作用。 請注意，您沒有新增`Shape`要序列化的已知型別在此情況下-這會自動完成。  
   
 -   集合會還原序列化為<xref:System.Array>型別的<xref:System.Object>包含`Shape`執行個體。  
   
@@ -271,5 +273,5 @@ http://example.com/myservice.svc/MyOperation?number=7&p={"name":"John","age":42}
 ### <a name="valid-json-key-names"></a>有效的 JSON 索引鍵名稱  
  序列化程式 XML 會編碼不是有效的 XML 名稱的索引鍵名稱。 例如，資料成員的 「 123 」 的名稱會有編碼的名稱這類 「 _x0031\__x0032\__x0033\_"因為"123"是無效的 XML 項目名稱 （以數字開始）。 有些在 XML 名稱中無效的國際字元集可能會引起類似的情況。 如需 XML 對 JSON 處理這個影響的說明，請參閱[對應之間 JSON 和 XML](../../../../docs/framework/wcf/feature-details/mapping-between-json-and-xml.md)。  
   
-## <a name="see-also"></a>請參閱  
+## <a name="see-also"></a>另請參閱  
  [JSON 和其他資料傳輸格式的支援](../../../../docs/framework/wcf/feature-details/support-for-json-and-other-data-transfer-formats.md)

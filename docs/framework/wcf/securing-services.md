@@ -14,17 +14,17 @@ helpviewer_keywords:
 - WCF security
 - WCF, security
 ms.assetid: f0ecc6f7-f4b5-42a4-9cb1-b02e28e26620
-caps.latest.revision: ''
+caps.latest.revision: 28
 author: BrucePerlerMS
 ms.author: bruceper
 manager: mbaldwin
 ms.workload:
 - dotnet
-ms.openlocfilehash: 2b8e84fe75f812cdcb97dcc24a0edad2d238515b
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.openlocfilehash: d5fed0e842abd815d0483e26e1e1f350899d1506
+ms.sourcegitcommit: 03ee570f6f528a7d23a4221dcb26a9498edbdf8c
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 04/28/2018
 ---
 # <a name="securing-services"></a>保護服務的安全
 [!INCLUDE[indigo1](../../../includes/indigo1-md.md)] 服務的安全性是由兩個主要需求所組成：傳輸安全性和授權 (第三個需求，安全性事件稽核的述[稽核](../../../docs/framework/wcf/feature-details/auditing-security-events.md)。)簡言之，傳輸安全性包含驗證 (驗證服務和用戶端兩者的身分識別)、機密性 (訊息加密) 和完整性 (用來偵測竄改的數位簽章)。 授權會控制存取資源，例如，只允許有權限的使用者讀取檔案。 使用 [!INCLUDE[indigo2](../../../includes/indigo2-md.md)]的功能，即可輕鬆實作這兩個主要需求。  
@@ -54,10 +54,10 @@ ms.lasthandoff: 12/22/2017
  若要保護只在 Windows 網域上執行的應用程式，您可以使用 <xref:System.ServiceModel.WSHttpBinding> 或 <xref:System.ServiceModel.NetTcpBinding> 繫結的預設安全性設定。 根據預設，相同 Windows 網域上的任何人都可以存取 [!INCLUDE[indigo2](../../../includes/indigo2-md.md)] 服務。 因為這些使用者已經登入網路，所以他們都是受信任的。 服務和用戶端之間的訊息會為了機密性而加密，且為了完整性而簽署。 [!INCLUDE[crabout](../../../includes/crabout-md.md)] 如何建立可使用 Windows 安全性之服務的詳細資訊，請參閱 [如何：使用 Windows 認證來確保服務安全](../../../docs/framework/wcf/how-to-secure-a-service-with-windows-credentials.md)」(Credential)。  
   
 ### <a name="authorization-using-the-principalpermissionattribute-class"></a>使用 PrincipalPermissionAttribute 類別的授權  
- 如果您必須限制存取電腦上的資源，最簡單的方式是使用 <xref:System.Security.Permissions.PrincipalPermissionAttribute> 類別。 這個屬性可藉由要求使用者應為指定的 Windows 群組或角色或特定使用者，來限制服務作業的引動過程。 [!INCLUDE[crdefault](../../../includes/crdefault-md.md)][How to: PrincipalPermissionAttribute 類別以限制存取](../../../docs/framework/wcf/how-to-restrict-access-with-the-principalpermissionattribute-class.md)。  
+ 如果您必須限制存取電腦上的資源，最簡單的方式是使用 <xref:System.Security.Permissions.PrincipalPermissionAttribute> 類別。 這個屬性可藉由要求使用者應為指定的 Windows 群組或角色或特定使用者，來限制服務作業的引動過程。 如需詳細資訊，請參閱[How to： 使用 PrincipalPermissionAttribute 類別的限制存取](../../../docs/framework/wcf/how-to-restrict-access-with-the-principalpermissionattribute-class.md)。  
   
 ### <a name="impersonation"></a>模擬  
- 模擬是另一個可用來控制存取資源的機制。 根據預設，由 IIS 裝載的服務必須在 ASPNET 帳戶的身分識別下執行。 ASPNET 帳戶只能存取它有權限的資源。 不過，也可以將資料夾的 ACL 設定為排除 ASPNET 服務帳戶，但允許某些其他身分識別來存取資料夾。 接下來的問題是，如果不允許 ASPNET 帳戶存取資料夾，如何允許其他使用者存取資料夾。 答案是使用模擬，藉此讓服務能使用用戶端的認證來存取特定資源。 另一個範例是當存取只有某些使用者有權限的 SQL Server 資料庫。 [!INCLUDE[crabout](../../../includes/crabout-md.md)]使用模擬，請參閱[How to： 服務上模擬用戶端](../../../docs/framework/wcf/how-to-impersonate-a-client-on-a-service.md)和[委派和模擬](../../../docs/framework/wcf/feature-details/delegation-and-impersonation-with-wcf.md)。  
+ 模擬是另一個可用來控制存取資源的機制。 根據預設，由 IIS 裝載的服務必須在 ASPNET 帳戶的身分識別下執行。 ASPNET 帳戶只能存取它有權限的資源。 不過，也可以將資料夾的 ACL 設定為排除 ASPNET 服務帳戶，但允許某些其他身分識別來存取資料夾。 接下來的問題是，如果不允許 ASPNET 帳戶存取資料夾，如何允許其他使用者存取資料夾。 答案是使用模擬，藉此讓服務能使用用戶端的認證來存取特定資源。 另一個範例是當存取只有某些使用者有權限的 SQL Server 資料庫。 [!INCLUDE[crabout](../../../includes/crabout-md.md)] 使用模擬，請參閱[How to： 服務上模擬用戶端](../../../docs/framework/wcf/how-to-impersonate-a-client-on-a-service.md)和[委派和模擬](../../../docs/framework/wcf/feature-details/delegation-and-impersonation-with-wcf.md)。  
   
 ## <a name="security-on-the-internet"></a>網際網路上的安全性  
  網際網路上的安全性和內部網路上的安全性有相同需求。 服務必須出示其認證，以證明其真實性，而用戶端則必須向服務證明其身分識別。 一旦證明用戶端的身分識別，服務就可以控制用戶端對資源的存取權限。 不過，由於網際網路的異質性，所出示的認證與 Windows 網域上所使用的並不相同。 在網域上，Kerberos 控制器會使用認證的票證來處理使用者驗證，但在網際網路上，服務和用戶端則仰賴多個不同方式來出示認證。 不過，本主題的目標是提出通用方法，來建立可在網際網路上存取的 [!INCLUDE[indigo2](../../../includes/indigo2-md.md)] 服務。  
@@ -71,7 +71,7 @@ ms.lasthandoff: 12/22/2017
 ### <a name="credentials-used-by-iis"></a>IIS 使用的認證  
  不同於 Kerberos 控制器所支援的 Windows 網域，在網際網路的環境中，沒有單一控制器來管理任何時候數以百萬計的登入使用者。 取而代之的是網際網路上最常見的 X.509 憑證 (也稱為 Secure Sockets Layer (SSL) 憑證)。 這些憑證通常是由「 *憑證授權單位*」(Certificate Authority) 發行，這是保證憑證和發給對象真實性的第三方公司。 若要在網際網路上公開服務，您也必須提供這類受信任的憑證來驗證服務。  
   
- 這時產生一個問題：如何取得這類憑證？ 當您準備好部署服務及購買服務憑證時，一個來源是第三方憑證授權單位，例如 Authenticode 或 VeriSign。 不過，如果您在使用 [!INCLUDE[indigo2](../../../includes/indigo2-md.md)] 的開發階段，尚未準備購買憑證，有些建立 X.509 憑證的工具和技巧可用來模擬實際執行部署。 [!INCLUDE[crdefault](../../../includes/crdefault-md.md)][使用憑證](../../../docs/framework/wcf/feature-details/working-with-certificates.md)。  
+ 這時產生一個問題：如何取得這類憑證？ 當您準備好部署服務及購買服務憑證時，一個來源是第三方憑證授權單位，例如 Authenticode 或 VeriSign。 不過，如果您在使用 [!INCLUDE[indigo2](../../../includes/indigo2-md.md)] 的開發階段，尚未準備購買憑證，有些建立 X.509 憑證的工具和技巧可用來模擬實際執行部署。 如需詳細資訊，請參閱[使用憑證](../../../docs/framework/wcf/feature-details/working-with-certificates.md)。  
   
 ## <a name="security-modes"></a>安全性模式  
  [!INCLUDE[indigo2](../../../includes/indigo2-md.md)] 安全性程式設計需要一些關鍵的決策點。 最基本的是「 *安全性模式*」(Security Mode) 的選擇。 兩個主要安全性模式是「 *傳輸模式* 」(Transport Mode) 和「 *訊息模式*」(Message Mode)。  
@@ -104,14 +104,14 @@ ms.lasthandoff: 12/22/2017
  「 *認證值* 」(Credential Value) 是服務使用的實際認證。 一旦指定認證類型，您可能也要使用實際認證來設定服務。 如果已選取 Windows (而且服務將在 Windows 網域上執行)，則不需要指定實際認證值。  
   
 ## <a name="identity"></a>身分識別  
- 在 [!INCLUDE[indigo2](../../../includes/indigo2-md.md)]中，「 *識別* 」(Identity) 一詞對伺服器和用戶端有不同意義。 簡言之，當執行服務時，識別是在驗證後指派至安全性內容。 若要檢視實際識別，請檢查 <xref:System.ServiceModel.ServiceSecurityContext.WindowsIdentity%2A> 類別的 <xref:System.ServiceModel.ServiceSecurityContext.PrimaryIdentity%2A> 和 <xref:System.ServiceModel.ServiceSecurityContext> 屬性。 [!INCLUDE[crdefault](../../../includes/crdefault-md.md)][How to： 檢查安全性內容](../../../docs/framework/wcf/how-to-examine-the-security-context.md)。  
+ 在 [!INCLUDE[indigo2](../../../includes/indigo2-md.md)]中，「 *識別* 」(Identity) 一詞對伺服器和用戶端有不同意義。 簡言之，當執行服務時，識別是在驗證後指派至安全性內容。 若要檢視實際識別，請檢查 <xref:System.ServiceModel.ServiceSecurityContext.WindowsIdentity%2A> 類別的 <xref:System.ServiceModel.ServiceSecurityContext.PrimaryIdentity%2A> 和 <xref:System.ServiceModel.ServiceSecurityContext> 屬性。 如需詳細資訊，請參閱[How to： 檢查安全性內容](../../../docs/framework/wcf/how-to-examine-the-security-context.md)。  
   
- 相對之下，在用戶端，識別是用來驗證服務。 在設計階段，用戶端開發人員可以設定[\<識別 >](../../../docs/framework/configure-apps/file-schema/wcf/identity.md)從服務取得的值的項目。 在執行階段，用戶端會比對服務的實際識別，來檢查項目的值。 如果檢查失敗，用戶端會結束通訊。 如果服務在特定使用者的識別下執行，此值可以是使用者主要名稱 (UPN)，如果服務在電腦帳戶下執行，則為服務主要名稱 (SPN)。 [!INCLUDE[crdefault](../../../includes/crdefault-md.md)][服務身分識別和驗證](../../../docs/framework/wcf/feature-details/service-identity-and-authentication.md)。 認證也可以是憑證，或是憑證上識別憑證的欄位。  
+ 相對之下，在用戶端，識別是用來驗證服務。 在設計階段，用戶端開發人員可以設定[\<識別 >](../../../docs/framework/configure-apps/file-schema/wcf/identity.md)從服務取得的值的項目。 在執行階段，用戶端會比對服務的實際識別，來檢查項目的值。 如果檢查失敗，用戶端會結束通訊。 如果服務在特定使用者的識別下執行，此值可以是使用者主要名稱 (UPN)，如果服務在電腦帳戶下執行，則為服務主要名稱 (SPN)。 如需詳細資訊，請參閱[服務識別和驗證](../../../docs/framework/wcf/feature-details/service-identity-and-authentication.md)。 認證也可以是憑證，或是憑證上識別憑證的欄位。  
   
 ## <a name="protection-levels"></a>保護層級  
- `ProtectionLevel` 屬性 (Property) 會出現在多個屬性 (Attribute) 類別 (例如 <xref:System.ServiceModel.ServiceContractAttribute> 和 <xref:System.ServiceModel.OperationContractAttribute> 類別)。 保護層級是一個值，會指定支援服務的訊息 (或訊息部分) 為經過簽署、經過簽署且加密，或是已傳送但未包含簽章或加密。 [!INCLUDE[crabout](../../../includes/crabout-md.md)]屬性，請參閱[了解保護層級](../../../docs/framework/wcf/understanding-protection-level.md)，及程式設計範例，請參閱[How to： 設定 ProtectionLevel 屬性](../../../docs/framework/wcf/how-to-set-the-protectionlevel-property.md)。 [!INCLUDE[crabout](../../../includes/crabout-md.md)] 如需在內容中使用 `ProtectionLevel` 來設計服務合約的詳細資訊，請參閱 [Designing Service Contracts](../../../docs/framework/wcf/designing-service-contracts.md)」(Credential)。  
+ `ProtectionLevel` 屬性 (Property) 會出現在多個屬性 (Attribute) 類別 (例如 <xref:System.ServiceModel.ServiceContractAttribute> 和 <xref:System.ServiceModel.OperationContractAttribute> 類別)。 保護層級是一個值，會指定支援服務的訊息 (或訊息部分) 為經過簽署、經過簽署且加密，或是已傳送但未包含簽章或加密。 [!INCLUDE[crabout](../../../includes/crabout-md.md)] 屬性，請參閱[了解保護層級](../../../docs/framework/wcf/understanding-protection-level.md)，及程式設計範例，請參閱[How to： 設定 ProtectionLevel 屬性](../../../docs/framework/wcf/how-to-set-the-protectionlevel-property.md)。 [!INCLUDE[crabout](../../../includes/crabout-md.md)] 如需在內容中使用 `ProtectionLevel` 來設計服務合約的詳細資訊，請參閱 [Designing Service Contracts](../../../docs/framework/wcf/designing-service-contracts.md)」(Credential)。  
   
-## <a name="see-also"></a>請參閱  
+## <a name="see-also"></a>另請參閱  
  <xref:System.ServiceModel>  
  <xref:System.ServiceModel.Description.ServiceCredentials>  
  <xref:System.ServiceModel.ServiceContractAttribute>  

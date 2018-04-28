@@ -1,20 +1,17 @@
 ---
-title: "非同步工作流程 (F#)"
-description: "了解支援的 F # 程式語言，以非同步方式執行計算的詳細執行而不封鎖其他工作的執行。"
-keywords: "Visual F#, F#, 函式程式設計"
+title: 非同步工作流程 (F#)
+description: '了解支援的 F # 程式語言，以非同步方式執行計算的詳細執行而不封鎖其他工作的執行。'
 author: cartermp
 ms.author: phcart
 ms.date: 05/16/2016
 ms.topic: language-reference
-ms.prod: .net
-ms.technology: devlang-fsharp
+ms.prod: dotnet-fsharp
 ms.devlang: fsharp
-ms.assetid: ee2bb9bf-e04a-4fbe-bf58-46d07229e981
-ms.openlocfilehash: e1cbdb452c8f77d97a0231a5ec75d752a98d2ed6
-ms.sourcegitcommit: 655fd4f78741967f80c409cef98347fdcf77857d
+ms.openlocfilehash: 1521ea3719f906a45b11d19a27256e87c5643e28
+ms.sourcegitcommit: 03ee570f6f528a7d23a4221dcb26a9498edbdf8c
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 02/28/2018
+ms.lasthandoff: 04/28/2018
 ---
 # <a name="asynchronous-workflows"></a>非同步工作流程
 
@@ -72,7 +69,7 @@ let! (result2 : byte[])  = stream.AsyncRead(bufferSize)
 
 [!code-fsharp[Main](../../../samples/snippets/fsharp/lang-ref-2/snippet8003.fs)]
 
-## <a name="see-also"></a>請參閱
+## <a name="see-also"></a>另請參閱
 
 [F# 語言參考](index.md)
 

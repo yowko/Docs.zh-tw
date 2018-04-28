@@ -1,20 +1,17 @@
 ---
-title: "例外狀況：try...with 運算式 (F#)"
+title: 例外狀況：try...with 運算式 (F#)
 description: "了解如何使用 例外狀況處理 F # 'try...with' 運算式。"
-keywords: "Visual F#, F#, 函式程式設計"
 author: cartermp
 ms.author: phcart
 ms.date: 05/16/2016
 ms.topic: language-reference
-ms.prod: .net
-ms.technology: devlang-fsharp
+ms.prod: dotnet-fsharp
 ms.devlang: fsharp
-ms.assetid: 36721076-95cd-4636-ae43-79dd512bee6c
-ms.openlocfilehash: 163dfab49d4aaf23123800246fae2cad33e2257c
-ms.sourcegitcommit: bd1ef61f4bb794b25383d3d72e71041a5ced172e
+ms.openlocfilehash: 06e40b79fc1958918dc0615ce9d1004e0a6e74a5
+ms.sourcegitcommit: 03ee570f6f528a7d23a4221dcb26a9498edbdf8c
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/18/2017
+ms.lasthandoff: 04/28/2018
 ---
 # <a name="exceptions-the-trywith-expression"></a>例外狀況：try...with 運算式
 
@@ -49,7 +46,7 @@ with
 |:? *例外狀況類型*|符合指定的.NET 例外狀況類型。|
 |:? *例外狀況型別*為*識別碼*|符合指定的.NET 例外狀況類型，但可讓例外狀況名稱的值。|
 |*例外狀況名稱*(*引數*)|比對的 F # 例外狀況類型，並將引數繫結。|
-|*identifier*|比對任何例外狀況，並將名稱繫結到的例外狀況物件。 相當於**： 嗎？做為 System.Exception***識別碼*|
+|*identifier*|比對任何例外狀況，並將名稱繫結到的例外狀況物件。 相當於 **： 嗎？System.Exception 為 * * * 識別碼*|
 |*識別項*時*條件*|如果條件為 true，則比對任何例外狀況。|
 
 ## <a name="examples"></a>範例

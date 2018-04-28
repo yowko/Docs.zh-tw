@@ -14,11 +14,11 @@ ms.author: dotnetcontent
 manager: wpickett
 ms.workload:
 - dotnet
-ms.openlocfilehash: 4ca32eb9543498279448617e33169ddd22882702
-ms.sourcegitcommit: b750a8e3979749b214e7e10c82efb0a0524dfcb1
+ms.openlocfilehash: 9a215be76002b9e8fca8ac4a9073885b3b30a97b
+ms.sourcegitcommit: 03ee570f6f528a7d23a4221dcb26a9498edbdf8c
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/09/2018
+ms.lasthandoff: 04/28/2018
 ---
 # <a name="serializing-workflows-and-activities-to-and-from-xaml"></a>序列化工作流程及 XAML 之間的活動 
 除了將工作流程定義編譯成包含在組件中的類型之外，工作流程定義也可以序列化為 XAML。 這些序列化的定義可重新載入以供編輯或檢閱、傳遞至建置系統以進行編譯，或載入及叫用。 本主題提供序列化工作流程定義以及使用 XAML 工作流程定義的概觀。  
@@ -28,7 +28,7 @@ ms.lasthandoff: 04/09/2018
   
  [!code-csharp[CFX_WorkflowApplicationExample#41](../../../samples/snippets/csharp/VS_Snippets_CFX/cfx_workflowapplicationexample/cs/program.cs#41)]  
   
- 每個 <xref:System.Activities.DynamicActivityProperty> 執行個體代表工作流程的一個輸入引數，而 <xref:System.Activities.ActivityBuilder.Implementation%2A> 包含形成工作流程邏輯的活動。 請注意，此範例中的右值 (r-value) 運算式是 Visual Basic 運算式。 Lambda 運算式不可序列化成 XAML，除非使用 <xref:System.Activities.Expressions.ExpressionServices.Convert%2A>。 如果想要在工作流程設計工具中開啟或編輯序列化的工作流程，則應使用 Visual Basic 運算式。 [!INCLUDE[crdefault](../../../includes/crdefault-md.md)] [撰寫工作流程、 活動和運算式使用命令式程式碼](../../../docs/framework/windows-workflow-foundation/authoring-workflows-activities-and-expressions-using-imperative-code.md)。  
+ 每個 <xref:System.Activities.DynamicActivityProperty> 執行個體代表工作流程的一個輸入引數，而 <xref:System.Activities.ActivityBuilder.Implementation%2A> 包含形成工作流程邏輯的活動。 請注意，此範例中的右值 (r-value) 運算式是 Visual Basic 運算式。 Lambda 運算式不可序列化成 XAML，除非使用 <xref:System.Activities.Expressions.ExpressionServices.Convert%2A>。 如果想要在工作流程設計工具中開啟或編輯序列化的工作流程，則應使用 Visual Basic 運算式。 如需詳細資訊，請參閱[撰寫工作流程、 活動和運算式使用命令式程式碼](../../../docs/framework/windows-workflow-foundation/authoring-workflows-activities-and-expressions-using-imperative-code.md)。  
   
  若要將 <xref:System.Activities.ActivityBuilder> 執行個體代表的工作流程定義序列化為 XAML，請使用 <xref:System.Activities.XamlIntegration.ActivityXamlServices> 建立 <xref:System.Xaml.XamlWriter>，然後使用 <xref:System.Xaml.XamlServices> 將工作流程定義序列化 (使用 <xref:System.Xaml.XamlWriter>)。 <xref:System.Activities.XamlIntegration.ActivityXamlServices> 包含的方法可雙向對應 <xref:System.Activities.ActivityBuilder> 執行個體與 XAML，而且可以載入 XAML 工作流程及傳回可叫用的 <xref:System.Activities.DynamicActivity>。 在下列範例中，會將上一個範例的 <xref:System.Activities.ActivityBuilder> 執行個體序列化為字串，然後儲存至檔案。  
   
@@ -97,7 +97,7 @@ ActivityXamlServicesSettings settings = new ActivityXamlServicesSettings
 DynamicActivity<int> wf = ActivityXamlServices.Load(new StringReader(serializedAB), settings) as DynamicActivity<int>;  
 ```  
   
- [!INCLUDE[crdefault](../../../includes/crdefault-md.md)] [C# 運算式](../../../docs/framework/windows-workflow-foundation/csharp-expressions.md)。  
+ 如需詳細資訊，請參閱[C# 運算式](../../../docs/framework/windows-workflow-foundation/csharp-expressions.md)。  
   
  序列化的工作流程定義也可以載入至<xref:System.Activities.ActivityBuilder>所使用的執行個體<xref:System.Activities.XamlIntegration.ActivityXamlServices><xref:System.Activities.XamlIntegration.ActivityXamlServices.CreateBuilderReader%2A>方法。 在序列化的工作流程載入至 <xref:System.Activities.ActivityBuilder> 執行個體之後，可對它進行檢查和修改。 對自訂工作流程設計工具作者來說，這項功能很實用，在設計過程中提供了儲存及重新載入工作流程定義的機制。 在下列範例中，會載入上一個範例的序列化工作流程定義，並檢查其屬性。  
   

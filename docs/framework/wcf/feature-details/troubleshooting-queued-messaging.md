@@ -1,24 +1,26 @@
 ---
-title: "佇列訊息的疑難排解"
-ms.custom: 
+title: 佇列訊息的疑難排解
+ms.custom: ''
 ms.date: 03/30/2017
 ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.technology: dotnet-clr
-ms.tgt_pltfrm: 
+ms.reviewer: ''
+ms.suite: ''
+ms.technology:
+- dotnet-clr
+ms.tgt_pltfrm: ''
 ms.topic: article
 ms.assetid: a5f2836f-018d-42f5-a571-1e97e64ea5b0
-caps.latest.revision: "19"
+caps.latest.revision: 19
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.workload: dotnet
-ms.openlocfilehash: a35de5ea587ad77a13105442f0c47344638b611c
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.workload:
+- dotnet
+ms.openlocfilehash: d7de2912029efb61135d5329f186ed2c1ca95840
+ms.sourcegitcommit: 03ee570f6f528a7d23a4221dcb26a9498edbdf8c
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 04/28/2018
 ---
 # <a name="troubleshooting-queued-messaging"></a>佇列訊息的疑難排解
 本章節包含在 [!INCLUDE[indigo1](../../../../includes/indigo1-md.md)] 中使用佇列之常見問題與疑難排解說明。  
@@ -46,7 +48,7 @@ ms.lasthandoff: 12/22/2017
   
 -   只有 MSMQ 4.0 支援遠端交易讀取。  
   
- [!INCLUDE[crdefault](../../../../includes/crdefault-md.md)][Windows Vista、 Windows Server 2003 和 Windows XP 中的佇列功能差異](../../../../docs/framework/wcf/feature-details/diff-in-queue-in-vista-server-2003-windows-xp.md)。  
+ 如需詳細資訊，請參閱[Windows Vista、 Windows Server 2003 和 Windows XP 中的佇列功能差異](../../../../docs/framework/wcf/feature-details/diff-in-queue-in-vista-server-2003-windows-xp.md)。  
   
  **問：**可以使用 MSMQ 3.0 另一端的某一端在佇列的通訊和 MSMQ 4.0？  
   

@@ -1,20 +1,17 @@
 ---
-title: "屬性 (F#)"
-description: "深入了解 F # 的屬性，表示與物件相關聯的值的成員。"
-keywords: "Visual F#, F#, 函式程式設計"
+title: 屬性 (F#)
+description: '深入了解 F # 的屬性，表示與物件相關聯的值的成員。'
 author: cartermp
 ms.author: phcart
 ms.date: 05/16/2016
 ms.topic: language-reference
-ms.prod: .net
-ms.technology: devlang-fsharp
+ms.prod: dotnet-fsharp
 ms.devlang: fsharp
-ms.assetid: 98b363a5-ee6a-4b7b-b8ae-b244f2a0b316
-ms.openlocfilehash: 53b93b20310c557ad9c30226bc08f85cbf2f3010
-ms.sourcegitcommit: bd1ef61f4bb794b25383d3d72e71041a5ced172e
+ms.openlocfilehash: 6cad5d0e32958374e080f9b8046f7eb73b6bf615
+ms.sourcegitcommit: 03ee570f6f528a7d23a4221dcb26a9498edbdf8c
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/18/2017
+ms.lasthandoff: 04/28/2018
 ---
 # <a name="properties"></a>屬性
 
@@ -74,7 +71,7 @@ with set parameter =
 
 [!code-fsharp[Main](../../../../samples/snippets/fsharp/lang-ref-1/snippet3203.fs)]
 
-私用值的資料內容會呼叫該保留*支援存放區*。 若要讓編譯器會自動建立的備份存放區，使用關鍵字`member val`，請省略自我識別項，然後提供運算式以初始化屬性。 如果屬性是可變動，包括`with get, set`。 例如，下列類別類型包含兩個自動實作的屬性。 `Property1`是唯讀的而且初始化為提供的主要建構函式的引數和`Property2`是可設定的屬性初始化為空字串：
+私用值的資料內容會呼叫該保留*支援存放區*。 若要讓編譯器會自動建立的備份存放區，使用關鍵字`member val`，請省略自我識別項，然後提供運算式以初始化屬性。 如果屬性是可變動，包括`with get, set`。 例如，下列類別類型包含兩個自動實作的屬性。 `Property1` 是唯讀的而且初始化為提供的主要建構函式的引數和`Property2`是可設定的屬性初始化為空字串：
 
 ```fsharp
 type MyClass(property1 : int) =

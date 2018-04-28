@@ -1,20 +1,17 @@
 ---
-title: "延遲運算 (F#)"
-description: "了解 F # 延遲運算如何改善您的應用程式和程式庫的效能。"
-keywords: "Visual F#, F#, 函式程式設計"
+title: 延遲運算 (F#)
+description: '了解 F # 延遲運算如何改善您的應用程式和程式庫的效能。'
 author: cartermp
 ms.author: phcart
 ms.date: 05/16/2016
 ms.topic: language-reference
-ms.prod: .net
-ms.technology: devlang-fsharp
+ms.prod: dotnet-fsharp
 ms.devlang: fsharp
-ms.assetid: 3499293e-1d53-4b02-b764-f687fbdaa7fe
-ms.openlocfilehash: 984c96ab68a8919e2382eefe8260b07f191027dd
-ms.sourcegitcommit: bd1ef61f4bb794b25383d3d72e71041a5ced172e
+ms.openlocfilehash: 72dc5a14a845b52ae2512314d730516ca0cf4b9d
+ms.sourcegitcommit: 03ee570f6f528a7d23a4221dcb26a9498edbdf8c
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/18/2017
+ms.lasthandoff: 04/28/2018
 ---
 # <a name="lazy-computations"></a>延遲運算
 
@@ -32,7 +29,7 @@ let identifier = lazy ( expression )
 
 延遲運算可讓您藉由限制的計算結果都需要這些情況下執行改善效能。
 
-若要強制執行計算，您可以呼叫方法`Force`。 `Force`會執行一次只能執行。 後續呼叫`Force`傳回相同結果，但不是執行任何程式碼。
+若要強制執行計算，您可以呼叫方法`Force`。 `Force` 會執行一次只能執行。 後續呼叫`Force`傳回相同結果，但不是執行任何程式碼。
 
 下列程式碼說明如何使用延遲的計算，以及使用`Force`。 在此程式碼的型別`result`是`Lazy<int>`，而`Force`方法會傳回`int`。
 

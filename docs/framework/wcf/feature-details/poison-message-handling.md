@@ -10,17 +10,17 @@ ms.technology:
 ms.tgt_pltfrm: ''
 ms.topic: article
 ms.assetid: 8d1c5e5a-7928-4a80-95ed-d8da211b8595
-caps.latest.revision: ''
+caps.latest.revision: 29
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
 ms.workload:
 - dotnet
-ms.openlocfilehash: 8202c9f715944c6d556c0023444475838cfd5eab
-ms.sourcegitcommit: c883637b41ee028786edceece4fa872939d2e64c
+ms.openlocfilehash: 14b3eebb83115617ce32ab0ff45184cd6754e58c
+ms.sourcegitcommit: 03ee570f6f528a7d23a4221dcb26a9498edbdf8c
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 03/26/2018
+ms.lasthandoff: 04/28/2018
 ---
 # <a name="poison-message-handling"></a>有害訊息處理
 A*有害訊息*是超過嘗試傳遞至應用程式的最大數目的訊息。 這種情形可能會在佇列架構的應用程式因為錯誤而無法處理訊息時發生。 為了符合可靠性的需求，佇列的應用程式會在交易中接收訊息。 若中止了接收佇列訊息的交易，則會讓訊息留在佇列中，而訊息將會在新的交易中重試。 如果造成交易中止的問題未予以更正，則接收的應用程式可能會卡在接收及中止相同訊息的迴圈中，直到超過傳遞嘗試次數的上限為止，因而形成有害訊息。  
@@ -75,7 +75,7 @@ A*有害訊息*是超過嘗試傳遞至應用程式的最大數目的訊息。 �
 ## <a name="best-practice-handling-msmqpoisonmessageexception"></a>最佳做法：處理 MsmqPoisonMessageException  
  當服務判定訊息是有害時，佇列的傳輸便會擲回 <xref:System.ServiceModel.MsmqPoisonMessageException>，其中包含有害訊息的 `LookupId`。  
   
- 接收應用程式可實作 <xref:System.ServiceModel.Dispatcher.IErrorHandler> 介面，以處理應用程式所需的任何錯誤。 [!INCLUDE[crdefault](../../../../includes/crdefault-md.md)] [擴充對錯誤處理和報告的控制](../../../../docs/framework/wcf/samples/extending-control-over-error-handling-and-reporting.md)。  
+ 接收應用程式可實作 <xref:System.ServiceModel.Dispatcher.IErrorHandler> 介面，以處理應用程式所需的任何錯誤。 如需詳細資訊，請參閱[擴充控制透過錯誤處理和報告](../../../../docs/framework/wcf/samples/extending-control-over-error-handling-and-reporting.md)。  
   
  應用程式可能需要以某種自動處理的方式將有害訊息移至有害訊息序列，讓服務能夠存取佇列中其餘的訊息。 唯一會使用錯誤處理常式機制接聽有害訊息例外狀況的情況，是在 <xref:System.ServiceModel.Configuration.MsmqBindingElementBase.ReceiveErrorHandling%2A> 設定設為 <xref:System.ServiceModel.ReceiveErrorHandling.Fault> 的時候。 Message Queuing 3.0 的有害訊息範例會示範這種行為。 以下將說明處理有害訊息時所採取的步驟，包括最佳做法：  
   

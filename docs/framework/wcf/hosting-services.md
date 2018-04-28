@@ -18,11 +18,11 @@ ms.author: dotnetcontent
 manager: wpickett
 ms.workload:
 - dotnet
-ms.openlocfilehash: db4662245f348eca795440f149160a66d87c998f
-ms.sourcegitcommit: 86adcc06e35390f13c1e372c36d2e044f1fc31ef
+ms.openlocfilehash: 8311c558c180de5010850a982dc4cca7576382a3
+ms.sourcegitcommit: 03ee570f6f528a7d23a4221dcb26a9498edbdf8c
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/26/2018
+ms.lasthandoff: 04/28/2018
 ---
 # <a name="hosting-services"></a>裝載服務
 如果要成為作用中的服務，必須將服務裝載在建立及控制其內容和存留時間的執行階段環境中。 [!INCLUDE[indigo1](../../../includes/indigo1-md.md)] 服務是設計為在支援 Managed 程式碼的 Windows 處理序中執行的。  
@@ -34,12 +34,12 @@ ms.lasthandoff: 04/26/2018
 ## <a name="hosting-options"></a>裝載選項  
   
 #### <a name="self-hosting-in-a-managed-application"></a>在 Managed 應用程式中自我裝載  
- [!INCLUDE[indigo2](../../../includes/indigo2-md.md)] 服務可以裝載於任何 Managed 應用程式。 這是最彈性的選項，因為它只需要最少的基礎結構就可部署。 您可以將服務的程式碼嵌入 Managed 應用程式程式碼中，然後建立並開啟 <xref:System.ServiceModel.ServiceHost> 的執行個體以便提供服務。 [!INCLUDE[crdefault](../../../includes/crdefault-md.md)] [如何： 將 WCF 服務裝載於 Managed 應用程式](../../../docs/framework/wcf/how-to-host-a-wcf-service-in-a-managed-application.md)。  
+ [!INCLUDE[indigo2](../../../includes/indigo2-md.md)] 服務可以裝載於任何 Managed 應用程式。 這是最彈性的選項，因為它只需要最少的基礎結構就可部署。 您可以將服務的程式碼嵌入 Managed 應用程式程式碼中，然後建立並開啟 <xref:System.ServiceModel.ServiceHost> 的執行個體以便提供服務。 如需詳細資訊，請參閱[How to： 裝載中受管理的應用程式的 WCF 服務](../../../docs/framework/wcf/how-to-host-a-wcf-service-in-a-managed-application.md)。  
   
  此選項可讓兩個常見的案例：[!INCLUDE[indigo2](../../../includes/indigo2-md.md)]執行在主控台應用程式與豐富型用戶端應用程式，例如服務根據 Windows Presentation Foundation (WPF) 或 Windows Forms (WinForms)。 在應用程式開發階段，於主控台應用程式中裝載 [!INCLUDE[indigo2](../../../includes/indigo2-md.md)] 服務一般來說是很有用的方式。 這樣一來，您可以很容易地進行偵錯、取得追蹤資訊以便了解應用程式裡面所發生的事，以及藉由將它們複製到新的位置輕易地加以移動。 這個裝載選項同時可讓豐富型用戶端應用程式 (例如， [!INCLUDE[avalon2](../../../includes/avalon2-md.md)] 和 WinForms 應用程式) 更容易與外界通訊。 例如，使用 [!INCLUDE[avalon2](../../../includes/avalon2-md.md)] 做為使用者介面，並同時裝載 [!INCLUDE[indigo2](../../../includes/indigo2-md.md)] 服務以允許其他用戶端與其連線並共用資訊的對等共同作業用戶端。  
   
 #### <a name="managed-windows-services"></a>Managed Windows 服務  
- 這個裝載選項包含可將 [!INCLUDE[indigo2](../../../includes/indigo2-md.md)] 服務裝載為 Managed Windows 服務 (之前稱為 NT 服務) 的註冊應用程式定義域 (AppDomain)，如此一來便可透過 Windows 服務的服務控制管理員 (SCM) 來控制服務的處理序存留期。 就像自我裝載選項一樣，此類型的裝載環境要求將某些裝載程式碼撰寫成應用程式的一部分。 此服務可同時實作為 Windows 服務以及 [!INCLUDE[indigo2](../../../includes/indigo2-md.md)] 服務，方法是讓它繼承 <xref:System.ServiceProcess.ServiceBase> 類別以及 [!INCLUDE[indigo2](../../../includes/indigo2-md.md)] 服務合約介面。 <xref:System.ServiceModel.ServiceHost> 接著會透過覆寫的 <xref:System.ServiceProcess.ServiceBase.OnStart%28System.String%5B%5D%29> 方法來建立並開啟，並透過覆寫的 <xref:System.ServiceProcess.ServiceBase.OnStop> 方法加以關閉。 繼承自 <xref:System.Configuration.Install.Installer> 的安裝程式類別必須同時實作，以允許藉由 Installutil.exe 工具將程式安裝為 Windows 服務。 [!INCLUDE[crdefault](../../../includes/crdefault-md.md)] [如何： 將 WCF 服務裝載於 Managed 的 Windows 服務](../../../docs/framework/wcf/feature-details/how-to-host-a-wcf-service-in-a-managed-windows-service.md)。 Managed Windows 服務裝載選項所啟用的案例，就是在非訊息啟動的安全環境中由 IIS 外部所裝載的長期執行之 [!INCLUDE[indigo2](../../../includes/indigo2-md.md)] 服務案例。 服務的存留期會改由作業系統來控制。 所有 Windows 版本都提供這個裝載選項。  
+ 這個裝載選項包含可將 [!INCLUDE[indigo2](../../../includes/indigo2-md.md)] 服務裝載為 Managed Windows 服務 (之前稱為 NT 服務) 的註冊應用程式定義域 (AppDomain)，如此一來便可透過 Windows 服務的服務控制管理員 (SCM) 來控制服務的處理序存留期。 就像自我裝載選項一樣，此類型的裝載環境要求將某些裝載程式碼撰寫成應用程式的一部分。 此服務可同時實作為 Windows 服務以及 [!INCLUDE[indigo2](../../../includes/indigo2-md.md)] 服務，方法是讓它繼承 <xref:System.ServiceProcess.ServiceBase> 類別以及 [!INCLUDE[indigo2](../../../includes/indigo2-md.md)] 服務合約介面。 <xref:System.ServiceModel.ServiceHost> 接著會透過覆寫的 <xref:System.ServiceProcess.ServiceBase.OnStart%28System.String%5B%5D%29> 方法來建立並開啟，並透過覆寫的 <xref:System.ServiceProcess.ServiceBase.OnStop> 方法加以關閉。 繼承自 <xref:System.Configuration.Install.Installer> 的安裝程式類別必須同時實作，以允許藉由 Installutil.exe 工具將程式安裝為 Windows 服務。 如需詳細資訊，請參閱[How to： 裝載中受管理的 Windows 服務的 WCF 服務](../../../docs/framework/wcf/feature-details/how-to-host-a-wcf-service-in-a-managed-windows-service.md)。 Managed Windows 服務裝載選項所啟用的案例，就是在非訊息啟動的安全環境中由 IIS 外部所裝載的長期執行之 [!INCLUDE[indigo2](../../../includes/indigo2-md.md)] 服務案例。 服務的存留期會改由作業系統來控制。 所有 Windows 版本都提供這個裝載選項。  
   
 #### <a name="internet-information-services-iis"></a>Internet Information Services (IIS)  
  IIS 裝載選項會與 [!INCLUDE[vstecasp](../../../includes/vstecasp-md.md)] 整合並使用這些技術所提供的功能，例如處理序回收、閒置關機、處理序健康狀態監控，以及訊息啟動。 在 [!INCLUDE[wxp](../../../includes/wxp-md.md)] 和 [!INCLUDE[ws2003](../../../includes/ws2003-md.md)] 作業系統中，建議您採用這個解決方案來裝載必須具備高度可用性與高度擴充性的 Web 服務應用程式。 IIS 同時提供整合式管理功能，而這也是客戶希望從企業級伺服器產品中所得到的功能。 這個裝載選項要求必須正確設定 IIS，但不要求您將任何裝載程式碼撰寫為應用程式的一部分。 [!INCLUDE[crabout](../../../includes/crabout-md.md)] 如何為 [!INCLUDE[indigo2](../../../includes/indigo2-md.md)] 服務設定 IIS 裝載的詳細資訊，請參閱 [How to: Host a WCF Service in IIS](../../../docs/framework/wcf/feature-details/how-to-host-a-wcf-service-in-iis.md).  

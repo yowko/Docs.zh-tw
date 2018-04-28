@@ -1,24 +1,26 @@
 ---
-title: "傳訊活動"
-ms.custom: 
+title: 傳訊活動
+ms.custom: ''
 ms.date: 03/30/2017
 ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.technology: dotnet-clr
-ms.tgt_pltfrm: 
+ms.reviewer: ''
+ms.suite: ''
+ms.technology:
+- dotnet-clr
+ms.tgt_pltfrm: ''
 ms.topic: article
 ms.assetid: 8498f215-1823-4aba-a6e1-391407f8c273
-caps.latest.revision: "13"
+caps.latest.revision: 13
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.workload: dotnet
-ms.openlocfilehash: 8ba5d49f357fe1cf56a45f733e91c1dbc2208736
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.workload:
+- dotnet
+ms.openlocfilehash: 8db31e8559d22e35f0d754a44ce425e144487296
+ms.sourcegitcommit: 03ee570f6f528a7d23a4221dcb26a9498edbdf8c
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 04/28/2018
 ---
 # <a name="messaging-activities"></a>傳訊活動
 訊息傳遞活動允許工作流程傳送和接收 WCF 訊息。 藉由將訊息傳遞活動加入至工作流程，您就可以製作任何複雜訊息交換模式 (MEP) 的模型。  
@@ -48,7 +50,7 @@ ms.lasthandoff: 12/22/2017
 ## <a name="messaging-activities-and-message-exchange-patterns"></a>訊息活動和訊息交換模式  
  資料包 MEP 包含傳送訊息的用戶端，以及接收訊息的服務。 如果用戶端是工作流程，請使用 <xref:System.ServiceModel.Activities.Send> 活動傳送訊息。 若要在工作流程中接收訊息，請使用 <xref:System.ServiceModel.Activities.Receive> 活動。 <xref:System.ServiceModel.Activities.Send> 和 <xref:System.ServiceModel.Activities.Receive> 活動各有一個名為 `Content` 的屬性。 此屬性包含要傳送或接收的資料。 實作要求-回應 MEP 時，用戶端和服務都會使用多組活動。 用戶端會使用 <xref:System.ServiceModel.Activities.Send> 活動傳送訊息，並且使用 <xref:System.ServiceModel.Activities.ReceiveReply> 活動接收來自服務的回應。 這兩種活動之間是透過 <xref:System.ServiceModel.Activities.ReceiveReply.Request%2A> 屬性建立關聯。 此屬性會設定為傳送原始訊息的 <xref:System.ServiceModel.Activities.Send> 活動。 服務也會使用一組關聯的活動：<xref:System.ServiceModel.Activities.Receive> 和 <xref:System.ServiceModel.Activities.SendReply>。 這兩種活動之間是透過 <xref:System.ServiceModel.Activities.SendReply.Request%2A> 屬性建立關聯。 此屬性會設定為接收原始訊息的 <xref:System.ServiceModel.Activities.Receive> 活動。 <xref:System.ServiceModel.Activities.ReceiveReply> 和 <xref:System.ServiceModel.Activities.SendReply> 活動就像 <xref:System.ServiceModel.Activities.Send> 和 <xref:System.ServiceModel.Activities.Receive>，可讓您傳送 <xref:System.ServiceModel.Channels.Message> 執行個體或訊息合約型別。  
   
- 由於工作流程會長時間執行，因此雙工通訊模式必須也支援長時間執行的對話。 若要支援長時間執行的對話，初始化對話的用戶端必須讓服務可在之後資料能夠使用時回呼。 例如，訂單要求提交讓管理員核准之後，可能經過一天、一週甚至一年都未處理；管理訂單核准的工作流程必須知道要在核准之後繼續執行。 使用相互關聯的工作流程中可支援這種雙向通訊模式。 若要實作雙工模式，請使用 <xref:System.ServiceModel.Activities.Send> 和 <xref:System.ServiceModel.Activities.Receive> 活動。 在<xref:System.ServiceModel.Activities.Receive>活動，初始化相互關聯使用的特殊值<!--zz <xref:System.ServiceModel.Activities.CorrelationHandle.CallbackHandleName%2A>--> `System.ServiceModel.Activities.CorrelationHandle.CallbackHandleName`。 在 <xref:System.ServiceModel.Activities.Send> 活動上，將該相互關聯控制代碼設定為 <xref:System.ServiceModel.Activities.Send.CorrelatesWith%2A> 屬性值。 [!INCLUDE[crdefault](../../../../includes/crdefault-md.md)][永久性雙工](../../../../docs/framework/wcf/feature-details/durable-duplex-correlation.md)。  
+ 由於工作流程會長時間執行，因此雙工通訊模式必須也支援長時間執行的對話。 若要支援長時間執行的對話，初始化對話的用戶端必須讓服務可在之後資料能夠使用時回呼。 例如，訂單要求提交讓管理員核准之後，可能經過一天、一週甚至一年都未處理；管理訂單核准的工作流程必須知道要在核准之後繼續執行。 使用相互關聯的工作流程中可支援這種雙向通訊模式。 若要實作雙工模式，請使用 <xref:System.ServiceModel.Activities.Send> 和 <xref:System.ServiceModel.Activities.Receive> 活動。 在<xref:System.ServiceModel.Activities.Receive>活動，初始化相互關聯使用的特殊值<!--zz <xref:System.ServiceModel.Activities.CorrelationHandle.CallbackHandleName%2A>--> `System.ServiceModel.Activities.CorrelationHandle.CallbackHandleName`。 在 <xref:System.ServiceModel.Activities.Send> 活動上，將該相互關聯控制代碼設定為 <xref:System.ServiceModel.Activities.Send.CorrelatesWith%2A> 屬性值。 如需詳細資訊，請參閱[永久性雙工](../../../../docs/framework/wcf/feature-details/durable-duplex-correlation.md)。  
   
 > [!NOTE]
 >  使用回呼相互關聯 （「 永久性雙工 」） 的雙工的工作流程的實作供長時間執行的對話。 這與採用回呼合約的 WCF 雙工不同，後者會處理短時間執行 (通道的存留期) 的對話。  
@@ -112,8 +114,8 @@ Request = rcv
  To make setting up a request/response MEP on the client and service easier, [!INCLUDE[vs_current_long](../../../../includes/vs-current-long-md.md)] provides two messaging activity templates. <xref:System.ServiceModel.Activities.Design.ReceiveAndSendReply> is used on the service and <xref:System.ServiceModel.Activities.Design.SendAndReceiveReply> is used on the client. In both cases the templates add the appropriate messaging activities to your workflow. On the service, the <xref:System.ServiceModel.Activities.Design.ReceiveAndSendReply> adds a <xref:System.ServiceModel.Activities.Receive> activity followed by a <xref:System.ServiceModel.Activities.SendReply> activity. The <xref:System.ServiceModel.Activities.SendReply.Request> property is automatically set to the <xref:System.ServiceModel.Activities.Receive> activity. On the client, the <xref:System.ServiceModel.Activities.Design.SendAndReceiveReply> adds a <xref:System.ServiceModel.Activities.Send> activity followed by a <xref:System.ServiceModel.Activities.ReceiveReply>. The <xref:System.ServiceModel.Activities.ReceiveReply.Request%2A> property is automatically set to the <xref:System.ServiceModel.Activities.Send> activity. To use these templates, just drag and drop the appropriate template onto your workflow.  
 -->
 ## <a name="messaging-activities-and-transactions"></a>訊息傳遞活動和異動  
- 呼叫工作流程服務時，您可能想要讓交易流向服務作業。 若要執行這項操作，請將 <xref:System.ServiceModel.Activities.Receive> 活動放置到 <xref:System.ServiceModel.Activities.TransactedReceiveScope> 活動內。 <xref:System.ServiceModel.Activities.TransactedReceiveScope> 活動包含 `Receive` 活動和主體。 流向服務的交易會在執行 <xref:System.ServiceModel.Activities.TransactedReceiveScope> 主體的整個過程中維持環境。 當主體執行完成時，異動即完成。 [!INCLUDE[crabout](../../../../includes/crabout-md.md)]工作流程和交易，請參閱[工作流程交易](../../../../docs/framework/windows-workflow-foundation/workflow-transactions.md)。  
+ 呼叫工作流程服務時，您可能想要讓交易流向服務作業。 若要執行這項操作，請將 <xref:System.ServiceModel.Activities.Receive> 活動放置到 <xref:System.ServiceModel.Activities.TransactedReceiveScope> 活動內。 <xref:System.ServiceModel.Activities.TransactedReceiveScope> 活動包含 `Receive` 活動和主體。 流向服務的交易會在執行 <xref:System.ServiceModel.Activities.TransactedReceiveScope> 主體的整個過程中維持環境。 當主體執行完成時，異動即完成。 [!INCLUDE[crabout](../../../../includes/crabout-md.md)] 工作流程和交易，請參閱[工作流程交易](../../../../docs/framework/windows-workflow-foundation/workflow-transactions.md)。  
   
-## <a name="see-also"></a>請參閱  
+## <a name="see-also"></a>另請參閱  
  [如何傳送及接收工作流程服務中的錯誤](http://go.microsoft.com/fwlink/?LinkId=189151)  
  [建立長期執行的工作流程服務](../../../../docs/framework/wcf/feature-details/creating-a-long-running-workflow-service.md)

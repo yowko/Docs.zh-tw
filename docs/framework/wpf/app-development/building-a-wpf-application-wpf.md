@@ -21,11 +21,11 @@ ms.author: dotnetcontent
 manager: wpickett
 ms.workload:
 - dotnet
-ms.openlocfilehash: 054f6cd6ae71428aca6b99eb510b2ac34fc6c4b6
-ms.sourcegitcommit: 86adcc06e35390f13c1e372c36d2e044f1fc31ef
+ms.openlocfilehash: b7003756e5c805c21fc5f4013deccf64b5ba8811
+ms.sourcegitcommit: 03ee570f6f528a7d23a4221dcb26a9498edbdf8c
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/26/2018
+ms.lasthandoff: 04/28/2018
 ---
 # <a name="building-a-wpf-application-wpf"></a>建置 WPF 應用程式 (WPF)
 [!INCLUDE[TLA#tla_wpf](../../../../includes/tlasharptla-wpf-md.md)] 應用程式可以建置為 [!INCLUDE[dnprdnshort](../../../../includes/dnprdnshort-md.md)] 可執行檔 (.exe)、程式庫 (.dll)，或這兩種組件類型的組合。 本主題介紹如何建置 [!INCLUDE[TLA2#tla_wpf](../../../../includes/tla2sharptla-wpf-md.md)] 應用程式，並說明建置流程中的主要步驟。  
@@ -51,7 +51,7 @@ ms.lasthandoff: 04/26/2018
 ### <a name="pre-build-initializations"></a>建置前初始化  
  建置之前，[!INCLUDE[TLA2#tla_msbuild](../../../../includes/tla2sharptla-msbuild-md.md)] 會判斷重要工具和程式庫的位置，包括：  
   
--   [!INCLUDE[TLA2#tla_winfx](../../../../includes/tla2sharptla-winfx-md.md)]。  
+-   .NET Framework。  
   
 -   [!INCLUDE[TLA2#tla_wcsdk](../../../../includes/tla2sharptla-wcsdk-md.md)] 目錄。  
   
@@ -63,7 +63,7 @@ ms.lasthandoff: 04/26/2018
   
 <a name="Resolving_references"></a>   
 ### <a name="resolving-references"></a>解析參考  
- 建置流程會找出並繫結建置應用程式專案所需的組件。 此邏輯包含在 `ResolveAssemblyReference` 工作中。 在專案檔中宣告為 `Reference` 的所有組件會連同有關系統上已安裝組件之搜尋路徑和中繼資料的資訊，一起提供給工作。 此工作會尋找組件，然後使用已安裝組件的中繼資料，篩選出不需要顯示在輸出資訊清單中的核心 [!INCLUDE[TLA2#tla_wpf](../../../../includes/tla2sharptla-wpf-md.md)] 組件。 這樣做是為了避免在 ClickOnce 資訊清單中出現多餘的資訊。 例如，因為 PresentationFramework.dll 可視為針對 [!INCLUDE[TLA2#tla_wpf](../../../../includes/tla2sharptla-wpf-md.md)] 並在其上建置的應用程式代表，而且在每部已安裝 [!INCLUDE[TLA2#tla_winfx](../../../../includes/tla2sharptla-winfx-md.md)] 的機器上，所有 [!INCLUDE[TLA2#tla_wpf](../../../../includes/tla2sharptla-wpf-md.md)] 組件都位於相同位置，所以不需要在資訊清單中包含所有 [!INCLUDE[TLA2#tla_winfx](../../../../includes/tla2sharptla-winfx-md.md)] 參考組件的全部資訊。  
+ 建置流程會找出並繫結建置應用程式專案所需的組件。 此邏輯包含在 `ResolveAssemblyReference` 工作中。 在專案檔中宣告為 `Reference` 的所有組件會連同有關系統上已安裝組件之搜尋路徑和中繼資料的資訊，一起提供給工作。 此工作會尋找組件，然後使用已安裝組件的中繼資料，篩選出不需要顯示在輸出資訊清單中的核心 [!INCLUDE[TLA2#tla_wpf](../../../../includes/tla2sharptla-wpf-md.md)] 組件。 這樣做是為了避免在 ClickOnce 資訊清單中出現多餘的資訊。 例如，由於 PresentationFramework.dll 可以視為代表建置的應用程式和[!INCLUDE[TLA2#tla_wpf](../../../../includes/tla2sharptla-wpf-md.md)]，而且因為所有[!INCLUDE[TLA2#tla_wpf](../../../../includes/tla2sharptla-wpf-md.md)]組件存在於已.NET Framework 之每部電腦上的相同位置安裝之後，沒有需要包含在資訊清單中的所有.NET Framework 參考組件上的所有資訊。  
   
 <a name="Markup_Compilation___Pass_1"></a>   
 ### <a name="markup-compilationpass-1"></a>標記編譯 - 第一階段  

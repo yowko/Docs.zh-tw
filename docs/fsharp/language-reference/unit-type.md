@@ -1,20 +1,17 @@
 ---
-title: "單位類型 (F#)"
+title: 單位類型 (F#)
 description: "了解 F # 'unit' 型別通常如何使用保留值需要的語言語法所需或預期任何值時的位置。"
-keywords: "Visual F#, F#, 函式程式設計"
 author: cartermp
 ms.author: phcart
 ms.date: 05/16/2016
 ms.topic: language-reference
-ms.prod: .net
-ms.technology: devlang-fsharp
+ms.prod: dotnet-fsharp
 ms.devlang: fsharp
-ms.assetid: eabbb6d7-80f3-4fa5-80b4-0f48982466a7
-ms.openlocfilehash: 60ac08c0e3f8380a8f9dec7a083ede93c68bb0e8
-ms.sourcegitcommit: bd1ef61f4bb794b25383d3d72e71041a5ced172e
+ms.openlocfilehash: 1a8c8f74e31c5426a9fb6a7143e9d2ac9a7104c0
+ms.sourcegitcommit: 03ee570f6f528a7d23a4221dcb26a9498edbdf8c
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/18/2017
+ms.lasthandoff: 04/28/2018
 ---
 # <a name="unit-type"></a>單位類型
 

@@ -1,20 +1,17 @@
 ---
-title: "原始碼程式行、檔案與路徑識別項 (F#)"
-description: "了解如何使用內建 F # 識別碼的值可讓您存取原始程式碼行號、 目錄和檔案名稱，在程式碼中。"
-keywords: "Visual F#, F#, 函式程式設計"
+title: 原始碼程式行、檔案與路徑識別項 (F#)
+description: '了解如何使用內建 F # 識別碼的值可讓您存取原始程式碼行號、 目錄和檔案名稱，在程式碼中。'
 author: cartermp
 ms.author: phcart
 ms.date: 05/16/2016
 ms.topic: language-reference
-ms.prod: .net
-ms.technology: devlang-fsharp
+ms.prod: dotnet-fsharp
 ms.devlang: fsharp
-ms.assetid: 4cfe7439-275c-4d08-980b-784e240bbf29
-ms.openlocfilehash: 44cc0914226c120f2b877ce3decd25caa6817eec
-ms.sourcegitcommit: bd1ef61f4bb794b25383d3d72e71041a5ced172e
+ms.openlocfilehash: 18a26f0aa0a0c1f9c0b448ec46eaebd540391324
+ms.sourcegitcommit: 03ee570f6f528a7d23a4221dcb26a9498edbdf8c
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/18/2017
+ms.lasthandoff: 04/28/2018
 ---
 # <a name="source-line-file-and-path-identifiers"></a>原始碼程式行、檔案與路徑識別項
 
@@ -34,7 +31,7 @@ __SOURCE_FILE__
 
 下表摘要說明原始程式行、 檔案和 F # 中可用的路徑識別項。 這些識別項不是前置處理器巨集;它們是編譯器可辨識的內建值。
 
-|預先定義的識別項|說明|
+|預先定義的識別項|描述|
 |---------------------|-----------|
 |`__LINE__`|判斷值為目前的行號，考慮`#line`指示詞。|
 |`__SOURCE_DIRECTORY__`|評估目前的完整路徑的來源目錄中，為考慮`#line`指示詞。|

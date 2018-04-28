@@ -14,11 +14,11 @@ ms.author: dotnetcontent
 manager: wpickett
 ms.workload:
 - dotnet
-ms.openlocfilehash: 4aa77a0135cea18847c4d4425171b0bdcf447988
-ms.sourcegitcommit: 2042de78fcdceebb6b8ac4b7a292b93e8782cbf5
+ms.openlocfilehash: fa529ddbdfa05ce876c99efd4a717c6136cf6686
+ms.sourcegitcommit: 03ee570f6f528a7d23a4221dcb26a9498edbdf8c
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/27/2018
+ms.lasthandoff: 04/28/2018
 ---
 # <a name="what39s-new-in-windows-workflow-foundation-in-net-45"></a>什麼&#39;s.NET 4.5 中 Windows Workflow Foundation 的新功能
 Windows Workflow Foundation (WF) 中[!INCLUDE[net_v45](../../../includes/net-v45-md.md)]引進許多新功能的詳細資訊，如新增活動、 設計工具功能和工作流程開發模型。 然而，重新裝載之工作流程設計工具並不支援所有在 [!INCLUDE[net_v45](../../../includes/net-v45-md.md)] 中引進的新工作流程功能。 [!INCLUDE[crabout](../../../includes/crabout-md.md)] 新功能所支援，請參閱[新 Workflow Foundation 4.5 功能，在重新裝載工作流程設計工具中支援](../../../docs/framework/windows-workflow-foundation/wf-features-in-the-rehosted-workflow-designer.md)。 [!INCLUDE[crabout](../../../includes/crabout-md.md)] 移轉.NET 3.0 和.NET 3.5 工作流程應用程式使用最新的版本，請參閱[移轉指引](../../../docs/framework/windows-workflow-foundation/migration-guidance.md)。 本主題提供 [!INCLUDE[net_v45](../../../includes/net-v45-md.md)] 中引進之新工作流程功能的概觀。  
@@ -40,7 +40,7 @@ Windows Workflow Foundation (WF) 中[!INCLUDE[net_v45](../../../includes/net-v45
   
 -   引進動態更新，可提供用於更新持續性工作流程執行個體定義的機制。 如需詳細資訊，請參閱[動態更新](../../../docs/framework/windows-workflow-foundation/dynamic-update.md)和[How to： 更新執行的工作流程執行個體定義](../../../docs/framework/windows-workflow-foundation/how-to-update-the-definition-of-a-running-workflow-instance.md)。  
   
--   提供 SqlWorkflowInstanceStoreSchemaUpgrade.sql 資料庫指令碼，以升級使用 [!INCLUDE[netfx40_short](../../../includes/netfx40-short-md.md)] 資料庫指令碼建立的持續性資料庫。 這個指令碼可更新 [!INCLUDE[netfx40_short](../../../includes/netfx40-short-md.md)] 持續性資料庫，以支援 [!INCLUDE[net_v45](../../../includes/net-v45-md.md)] 引進的新版本控制功能。 資料庫中持續性的工作流程執行個體會提供版本控制預設值，並可以參與並存執行和動態更新。 [!INCLUDE[crdefault](../../../includes/crdefault-md.md)] [升級.NET Framework 4 持續性資料庫以支援工作流程版本控制](../../../docs/framework/windows-workflow-foundation/using-workflowidentity-and-versioning.md#UpdatingWF4PersistenceDatabases)。  
+-   提供 SqlWorkflowInstanceStoreSchemaUpgrade.sql 資料庫指令碼，以升級使用 [!INCLUDE[netfx40_short](../../../includes/netfx40-short-md.md)] 資料庫指令碼建立的持續性資料庫。 這個指令碼可更新 [!INCLUDE[netfx40_short](../../../includes/netfx40-short-md.md)] 持續性資料庫，以支援 [!INCLUDE[net_v45](../../../includes/net-v45-md.md)] 引進的新版本控制功能。 資料庫中持續性的工作流程執行個體會提供版本控制預設值，並可以參與並存執行和動態更新。 如需詳細資訊，請參閱[升級.NET Framework 4 持續性資料庫以支援工作流程版本控制](../../../docs/framework/windows-workflow-foundation/using-workflowidentity-and-versioning.md#UpdatingWF4PersistenceDatabases)。  
   
 ##  <a name="BKMK_NewActivities"></a> 活動  
  內建活動程式庫包含新的活動及現有活動的新功能。  

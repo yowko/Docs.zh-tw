@@ -10,17 +10,17 @@ ms.technology:
 ms.tgt_pltfrm: ''
 ms.topic: article
 ms.assetid: 381fdc3a-6e6c-4890-87fe-91cca6f4b476
-caps.latest.revision: ''
+caps.latest.revision: 45
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
 ms.workload:
 - dotnet
-ms.openlocfilehash: 70d1b76108c9eab0280e6499ab2b4d0c70def853
-ms.sourcegitcommit: c883637b41ee028786edceece4fa872939d2e64c
+ms.openlocfilehash: ba8a2eb97b071608b16b5549ead403b578329ee5
+ms.sourcegitcommit: 03ee570f6f528a7d23a4221dcb26a9498edbdf8c
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 03/26/2018
+ms.lasthandoff: 04/28/2018
 ---
 # <a name="wcf-web-http-programming-model-overview"></a>WCF Web HTTP 程式設計模型概觀
 [!INCLUDE[indigo1](../../../../includes/indigo1-md.md)] WEB HTTP 程式設計模型提供了使用 [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] 建置 WEB HTTP 服務所需的基本項目。 [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] WEB HTTP 服務的設計可供最廣泛用戶端存取，包括具有下列獨特需求的網頁瀏覽器：  
@@ -33,13 +33,13 @@ ms.lasthandoff: 03/26/2018
   
  [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] WEB HTTP 程式設計模型將 [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] 的觸角延伸至擴及 Web 樣式案例，包括 WEB HTTP 服務、AJAX 和 JSON 服務，以及新聞訂閱 (ATOM/RSS) 摘要。 [!INCLUDE[crabout](../../../../includes/crabout-md.md)] AJAX 和 JSON 服務，請參閱[AJAX 整合與 JSON 支援](../../../../docs/framework/wcf/feature-details/ajax-integration-and-json-support.md)。 [!INCLUDE[crabout](../../../../includes/crabout-md.md)] 新聞訂閱，請參閱[WCF 新聞訂閱概觀](../../../../docs/framework/wcf/feature-details/wcf-syndication-overview.md)。  
   
- 可從 WEB HTTP 服務傳回的資料型別沒有額外的限制。 WEB HTTP 服務作業可傳回任何可序列化型別。 因為 WEB HTTP 服務作業可由 Web 瀏覽器叫用，所以可在 URL 中指定的資料型別具有一項限制。 如需預設都支援何種類型的詳細資訊請參閱**UriTemplate 查詢字串參數和 Url**下一節。 您可以提供自己的 T:System.ServiceModel.Dispatcher.QueryStringConverter 實作來變更預設行為，其中指定如何將 URL 中指定的參數轉換成實際的參數型別。 [!INCLUDE[crdefault](../../../../includes/crdefault-md.md)] <xref:System.ServiceModel.Dispatcher.QueryStringConverter>  
+ 可從 WEB HTTP 服務傳回的資料型別沒有額外的限制。 WEB HTTP 服務作業可傳回任何可序列化型別。 因為 WEB HTTP 服務作業可由 Web 瀏覽器叫用，所以可在 URL 中指定的資料型別具有一項限制。 如需預設都支援何種類型的詳細資訊請參閱**UriTemplate 查詢字串參數和 Url**下一節。 您可以提供自己的 T:System.ServiceModel.Dispatcher.QueryStringConverter 實作來變更預設行為，其中指定如何將 URL 中指定的參數轉換成實際的參數型別。 如需詳細資訊，請參閱<xref:System.ServiceModel.Dispatcher.QueryStringConverter>。  
   
 > [!CAUTION]
 >  以 [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] WEB HTTP 程式設計模型所撰寫的服務並未使用 SOAP 訊息。 由於未使用 SOAP，即無法使用 [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] 提供的安全性功能。 不過，您可透過以 HTTPS 裝載服務的方式來使用傳輸型安全性。 [!INCLUDE[crabout](../../../../includes/crabout-md.md)] [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] 安全性，請參閱[安全性概觀](../../../../docs/framework/wcf/feature-details/security-overview.md)  
   
 > [!WARNING]
->  安裝適用於 IIS 的 WebDAV 延伸模組可能會導致 Web HTTP 服務傳回 HTTP 405 錯誤，因為 WebDAV 延伸模組會嘗試處理所有 PUT 要求。 若要解決此問題，您可以解除安裝 WebDAV 延伸模組或停用網站的 WebDAV 延伸模組。 [!INCLUDE[crdefault](../../../../includes/crdefault-md.md)] [IIS 和 WebDav](http://learn.iis.net/page.aspx/357/webdav-for-iis-70/)  
+>  安裝適用於 IIS 的 WebDAV 延伸模組可能會導致 Web HTTP 服務傳回 HTTP 405 錯誤，因為 WebDAV 延伸模組會嘗試處理所有 PUT 要求。 若要解決此問題，您可以解除安裝 WebDAV 延伸模組或停用網站的 WebDAV 延伸模組。 如需詳細資訊，請參閱[IIS 和 WebDav](http://learn.iis.net/page.aspx/357/webdav-for-iis-70/)  
   
 ## <a name="uri-processing-with-uritemplate-and-uritemplatetable"></a>使用 UriTemplate 和 UriTemplateTable 來進行 URI 處理  
  URI 範本提供一個有效的語法，以便表示大量結構上類似的 URI 集合。 例如，下列範本會表示以 "a" 開頭及以 "c" 結尾的所有三段式 URI 集合 (不論是否有中繼區段：a/{segment}/c)。  
@@ -130,7 +130,7 @@ interface ICustomer
 |<xref:System.Decimal>|標準標記法中任何一個小數 (不含指數)|  
 |<xref:System.Boolean>|True 或 False (不區分大小寫)|  
 |<xref:System.String>|任何字串 (不支援 null 字串且不會進行逸出)|  
-|<xref:System.DateTime>|MM/DD/YYYY<br /><br /> MM/DD/YYYY HH:MM:SS [AM&#124;PM]<br /><br /> 月/日/年<br /><br /> 月份日期年 hh: mm: [AM&#124;PM]|  
+|<xref:System.DateTime>|MM/DD/YYYY<br /><br /> MM/DD/YYYY HH: MM: [AM&AMP;#124;PM]<br /><br /> 月/日/年<br /><br /> 月份日期年 hh: mm: [AM&#124;PM]|  
 |<xref:System.TimeSpan>|DD.HH:MM:SS<br /><br /> 其中 DD = 天數，HH = 小時，MM = 分鐘，SS = 秒數|  
 |<xref:System.Guid>|GUID，例如：<br /><br /> 936DA01F-9ABD-4d9d-80C7-02AF85C822A8|  
 |<xref:System.DateTimeOffset>|MM/DD/YYYY HH:MM:SS MM:SS<br /><br /> 其中 DD = 天數，HH = 小時，MM = 分鐘，SS = 秒數|  

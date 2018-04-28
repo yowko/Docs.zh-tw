@@ -1,24 +1,26 @@
 ---
-title: "探索繫結項目範例"
-ms.custom: 
+title: 探索繫結項目範例
+ms.custom: ''
 ms.date: 03/30/2017
 ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.technology: dotnet-clr
-ms.tgt_pltfrm: 
+ms.reviewer: ''
+ms.suite: ''
+ms.technology:
+- dotnet-clr
+ms.tgt_pltfrm: ''
 ms.topic: article
 ms.assetid: af513015-85bf-417b-8729-1bdff77ff6d6
-caps.latest.revision: "12"
+caps.latest.revision: 12
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.workload: dotnet
-ms.openlocfilehash: dbbaefbd32048924434342dc3f902c99a3c2448c
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.workload:
+- dotnet
+ms.openlocfilehash: 624209221dc8c2745afa6b4db20df6e47c7374f1
+ms.sourcegitcommit: 03ee570f6f528a7d23a4221dcb26a9498edbdf8c
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 04/28/2018
 ---
 # <a name="discovery-binding-element-sample"></a>探索繫結項目範例
 此範例示範如何使用探索用戶端繫結項目探索服務。 此功能可讓開發人員將探索用戶端通道加入至其現有的用戶端通道堆疊中，讓程式設計模型變得非常直覺。 開啟相關聯的通道時，就會使用探索解析服務的位址。 這個範例包含下列專案：  
@@ -93,7 +95,7 @@ static CustomBinding CreateCustomBindingWithDiscoveryElement()
             return customBinding; }  
 ```  
   
- 具現化 <xref:System.ServiceModel.Discovery.DiscoveryClientBindingElement> 之後，開發人員會指定搜尋服務時使用的準則。 在此情況下，探索尋找準則為 `ICalculatorService` 類型。 此外，開發人員會指定 <xref:System.ServiceModel.Discovery.DiscoveryEndpointProvider>，以傳回指定搜尋服務之位置的 <xref:System.ServiceModel.Discovery.DiscoveryEndpoint>。 <xref:System.ServiceModel.Discovery.DiscoveryEndpointProvider> 會傳回新的 <xref:System.ServiceModel.Discovery.DiscoveryEndpoint> 執行個體。 [!INCLUDE[crdefault](../../../../includes/crdefault-md.md)][使用探索用戶端通道的自訂繫結](../../../../docs/framework/wcf/feature-details/using-a-custom-binding-with-the-discovery-client-channel.md)。  
+ 具現化 <xref:System.ServiceModel.Discovery.DiscoveryClientBindingElement> 之後，開發人員會指定搜尋服務時使用的準則。 在此情況下，探索尋找準則為 `ICalculatorService` 類型。 此外，開發人員會指定 <xref:System.ServiceModel.Discovery.DiscoveryEndpointProvider>，以傳回指定搜尋服務之位置的 <xref:System.ServiceModel.Discovery.DiscoveryEndpoint>。 <xref:System.ServiceModel.Discovery.DiscoveryEndpointProvider> 會傳回新的 <xref:System.ServiceModel.Discovery.DiscoveryEndpoint> 執行個體。 如需詳細資訊，請參閱[使用具有探索用戶端通道的自訂繫結](../../../../docs/framework/wcf/feature-details/using-a-custom-binding-with-the-discovery-client-channel.md)。  
   
 ```  
 // Extend DiscoveryEndpointProvider class to change the default DiscoveryEndpoint  
@@ -131,4 +133,4 @@ CalculatorServiceClient client = new CalculatorServiceClient(CreateCustomBinding
   
 4.  請注意，用戶端不需知道位址，就能找到此服務。  
   
-## <a name="see-also"></a>請參閱
+## <a name="see-also"></a>另請參閱

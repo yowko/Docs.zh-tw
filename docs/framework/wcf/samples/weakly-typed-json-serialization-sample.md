@@ -1,24 +1,26 @@
 ---
-title: "弱型別 JSON 序列化範例"
-ms.custom: 
+title: 弱型別 JSON 序列化範例
+ms.custom: ''
 ms.date: 03/30/2017
 ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.technology: dotnet-clr
-ms.tgt_pltfrm: 
+ms.reviewer: ''
+ms.suite: ''
+ms.technology:
+- dotnet-clr
+ms.tgt_pltfrm: ''
 ms.topic: article
 ms.assetid: 0b30e501-4ef5-474d-9fad-a9d559cf9c52
-caps.latest.revision: "13"
+caps.latest.revision: 13
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.workload: dotnet
-ms.openlocfilehash: dedf1188afd886c44d897aa1d93ffa226e906ada
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.workload:
+- dotnet
+ms.openlocfilehash: 4cc75ff1078c35c177f0809d25cd32ca3b2b8e16
+ms.sourcegitcommit: 03ee570f6f528a7d23a4221dcb26a9498edbdf8c
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 04/28/2018
 ---
 # <a name="weakly-typed-json-serialization-sample"></a>弱型別 JSON 序列化範例
 當將使用者定義的型別序列化為指定的 Wire 格式，或是將 Wire 格式還原序列化為使用者定義的型別時，服務和用戶端都必須提供指定的使用者定義型別，以供使用。 一般而言，若要完成這項操作， <xref:System.Runtime.Serialization.DataContractAttribute> 屬性會套用至這些使用者定義的型別，而 <xref:System.Runtime.Serialization.DataMemberAttribute> 屬性會套用至其成員。 這個機制也適用於使用 JavaScript Object Notation (JSON) 物件的情況，如主題 [How to: Serialize and Deserialize JSON Data](../../../../docs/framework/wcf/feature-details/how-to-serialize-and-deserialize-json-data.md)中所述。  
@@ -121,7 +123,7 @@ XmlDictionaryReader reader = channel.GetMemberProfile().GetReaderAtBodyContents(
 JsonObject json = new JsonObject(reader);  
 ```  
   
- `JsonObject` 建構函式會採用透過 <xref:System.Xml.XmlDictionaryReader>方法取得的 <xref:System.ServiceModel.Channels.Message.GetReaderAtBodyContents%2A> 。 讀取器包含用戶端所接收之 JSON 訊息的 XML 表示。 [!INCLUDE[crdefault](../../../../includes/crdefault-md.md)]本主題[對應之間 JSON 和 XML](../../../../docs/framework/wcf/feature-details/mapping-between-json-and-xml.md)。  
+ `JsonObject` 建構函式會採用透過 <xref:System.Xml.XmlDictionaryReader>方法取得的 <xref:System.ServiceModel.Channels.Message.GetReaderAtBodyContents%2A> 。 讀取器包含用戶端所接收之 JSON 訊息的 XML 表示。 如需詳細資訊，請參閱主題[對應之間 JSON 和 XML](../../../../docs/framework/wcf/feature-details/mapping-between-json-and-xml.md)。  
   
  此程式會產生下列輸出：  
   
@@ -151,4 +153,4 @@ My favorite bands are Band ABC and Band XYZ.
 >   
 >  `<InstallDrive>:\WF_WCF_Samples\WCF\Scenario\Ajax\WeaklyTypedJson`  
   
-## <a name="see-also"></a>請參閱
+## <a name="see-also"></a>另請參閱

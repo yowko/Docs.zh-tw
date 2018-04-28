@@ -1,20 +1,17 @@
 ---
-title: "選項 (F#)"
-description: "了解如何使用 F # 選項類型時的實際值可能不存在的具名的值或變數。"
-keywords: "Visual F#, F#, 函式程式設計"
+title: 選項 (F#)
+description: '了解如何使用 F # 選項類型時的實際值可能不存在的具名的值或變數。'
 author: cartermp
 ms.author: phcart
 ms.date: 05/16/2016
 ms.topic: language-reference
-ms.prod: .net
-ms.technology: devlang-fsharp
+ms.prod: dotnet-fsharp
 ms.devlang: fsharp
-ms.assetid: a15b5cf1-9055-4481-918c-4c8a051b5829
-ms.openlocfilehash: 537ba69aecc1ab489de63d67c5f9ff857afb4a28
-ms.sourcegitcommit: bd1ef61f4bb794b25383d3d72e71041a5ced172e
+ms.openlocfilehash: ce9be0793c86d8d588fb4f905394bd2383c262e1
+ms.sourcegitcommit: 03ee570f6f528a7d23a4221dcb26a9498edbdf8c
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/18/2017
+ms.lasthandoff: 04/28/2018
 ---
 # <a name="options"></a>選項
 
@@ -52,7 +49,7 @@ ms.lasthandoff: 10/18/2017
 
 
 
-|屬性或方法|類型|說明|
+|屬性或方法|類型|描述|
 |------------------|----|-----------|
 |[無](https://msdn.microsoft.com/library/83ef260a-aa33-4e6f-aee6-b9bf0a461476)|`'T option`|可讓您建立具有選項值的靜態屬性`None`值。|
 |[IsNone](https://msdn.microsoft.com/library/f08532ca-1716-4f60-ae59-8ef6256df234)|`bool`|傳回`true`若選項有`None`值。|

@@ -1,20 +1,17 @@
 ---
-title: "陣列 (F#)"
-description: "了解如何建立和使用 F # 程式語言中的陣列。"
-keywords: "Visual F#, F#, 函式程式設計"
+title: 陣列 (F#)
+description: '了解如何建立和使用 F # 程式語言中的陣列。'
 author: cartermp
 ms.author: phcart
 ms.date: 05/16/2016
 ms.topic: language-reference
-ms.prod: .net
-ms.technology: devlang-fsharp
+ms.prod: dotnet-fsharp
 ms.devlang: fsharp
-ms.assetid: 61fa9084-abdc-4cf5-8213-91ec1211866b
-ms.openlocfilehash: 7c9d8405230f4d765d3afdeaa154ddc598d0d1ec
-ms.sourcegitcommit: bd1ef61f4bb794b25383d3d72e71041a5ced172e
+ms.openlocfilehash: 650321e864556ff0ba8591e09ffa34877c8a39b7
+ms.sourcegitcommit: 03ee570f6f528a7d23a4221dcb26a9498edbdf8c
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/18/2017
+ms.lasthandoff: 04/28/2018
 ---
 # <a name="arrays"></a>陣列
 
@@ -68,7 +65,7 @@ API 參考連結將帶您前往 MSDN。  docs.microsoft.com API 參考不完整�
 程式庫模組[ `Microsoft.FSharp.Collections.Array` ](https://msdn.microsoft.com/library/0cda8040-9396-40dd-8dcd-cf48542165a1)支援一維陣列上的作業。 模組`Array2D`， `Array3D`，和`Array4D`包含支援兩個、 三和四個維度，在陣列上的作業分別函式。 您可以建立陣列的陣序規範大於 4 使用<xref:System.Array?displayProperty=nameWithType>。
 
 ### <a name="simple-functions"></a>簡單函式
-[`Array.get`](https://msdn.microsoft.com/library/dd93e85d-7e80-4d76-8de0-b6d45bcf07bc)取得項目。 [`Array.length`](https://msdn.microsoft.com/library/0d775b6a-4a8f-4bd1-83e5-843b3251725f)提供陣列的長度。 [`Array.set`](https://msdn.microsoft.com/library/847edc0d-4dc5-4a39-98c7-d4320c60e790)設定為指定值的項目。 下列程式碼範例說明如何使用這些函式。
+[`Array.get`](https://msdn.microsoft.com/library/dd93e85d-7e80-4d76-8de0-b6d45bcf07bc) 取得項目。 [`Array.length`](https://msdn.microsoft.com/library/0d775b6a-4a8f-4bd1-83e5-843b3251725f) 提供陣列的長度。 [`Array.set`](https://msdn.microsoft.com/library/847edc0d-4dc5-4a39-98c7-d4320c60e790) 設定為指定值的項目。 下列程式碼範例說明如何使用這些函式。
 
 [!code-fsharp[Main](../../../samples/snippets/fsharp/arrays/snippet9.fs)]
 
@@ -80,7 +77,7 @@ API 參考連結將帶您前往 MSDN。  docs.microsoft.com API 參考不完整�
 
 ### <a name="functions-that-create-arrays"></a>建立陣列的函式
 
-幾個函式會建立陣列，而不需要現有的陣列。 [`Array.empty`](https://msdn.microsoft.com/library/c3694b92-1c16-4c54-9bf2-fe398fadce32)建立新的陣列不包含任何項目。 [`Array.create`](https://msdn.microsoft.com/library/e848c8d6-1142-4080-9727-8dacc26066be)建立指定大小的陣列，並將所有項目設定為提供的值。 [`Array.init`](https://msdn.microsoft.com/library/ee898089-63b0-40aa-910c-5ae7e32f6665)建立陣列，指定維度與函式來產生項目。 [`Array.zeroCreate`](https://msdn.microsoft.com/library/fa5b8e7a-1b5b-411c-8622-b58d7a14d3b2)建立的陣列中的所有項目會初始化為零的值為陣列的型別。 下列程式碼會示範這些函式。
+幾個函式會建立陣列，而不需要現有的陣列。 [`Array.empty`](https://msdn.microsoft.com/library/c3694b92-1c16-4c54-9bf2-fe398fadce32) 建立新的陣列不包含任何項目。 [`Array.create`](https://msdn.microsoft.com/library/e848c8d6-1142-4080-9727-8dacc26066be) 建立指定大小的陣列，並將所有項目設定為提供的值。 [`Array.init`](https://msdn.microsoft.com/library/ee898089-63b0-40aa-910c-5ae7e32f6665) 建立陣列，指定維度與函式來產生項目。 [`Array.zeroCreate`](https://msdn.microsoft.com/library/fa5b8e7a-1b5b-411c-8622-b58d7a14d3b2) 建立的陣列中的所有項目會初始化為零的值為陣列的型別。 下列程式碼會示範這些函式。
 
 [!code-fsharp[Main](../../../samples/snippets/fsharp/arrays/snippet91.fs)]
 
@@ -92,7 +89,7 @@ Area of floats set to 5.0: [|5.0; 5.0; 5.0; 5.0; 5.0; 5.0; 5.0; 5.0; 5.0; 5.0|]
 Array of squares: [|0; 1; 4; 9; 16; 25; 36; 49; 64; 81|]
 ```
 
-[`Array.copy`](https://msdn.microsoft.com/library/9d0202f1-1ea0-475e-9d66-4f8ccc3c5b5f)建立新的陣列，其中包含從現有的陣列複製的項目。 請注意，此複本的淺層複本，這表示如果項目類型是參考類型，則複製只參考而非基礎物件。 下列程式碼範例會說明這點。
+[`Array.copy`](https://msdn.microsoft.com/library/9d0202f1-1ea0-475e-9d66-4f8ccc3c5b5f) 建立新的陣列，其中包含從現有的陣列複製的項目。 請注意，此複本的淺層複本，這表示如果項目類型是參考類型，則複製只參考而非基礎物件。 下列程式碼範例會說明這點。
 
 [!code-fsharp[Main](../../../samples/snippets/fsharp/arrays/snippet11.fs)]
 
@@ -105,7 +102,7 @@ Array of squares: [|0; 1; 4; 9; 16; 25; 36; 49; 64; 81|]
 
 字串`Test1`只會出現在第一個陣列建立新的項目作業覆寫中的參考，因為`firstArray`但不會影響原始參考為空字串，仍存在於`secondArray`。 字串`Test2`顯示在兩個陣列，因為`Insert`作業<xref:System.Text.StringBuilder?displayProperty=nameWithType>類型會影響基礎<xref:System.Text.StringBuilder?displayProperty=nameWithType>中兩個陣列參考的物件。
 
-[`Array.sub`](https://msdn.microsoft.com/library/40fb12ba-41d7-4ef0-b33a-56727deeef9d)從陣列中的子範圍中產生新的陣列。 您可以提供起始的索引和長度指定做為子範圍。 下列程式碼示範 `Array.sub` 的用法。
+[`Array.sub`](https://msdn.microsoft.com/library/40fb12ba-41d7-4ef0-b33a-56727deeef9d) 從陣列中的子範圍中產生新的陣列。 您可以提供起始的索引和長度指定做為子範圍。 下列程式碼示範 `Array.sub` 的用法。
 
 [!code-fsharp[Main](../../../samples/snippets/fsharp/arrays/snippet12.fs)]
 
@@ -114,7 +111,7 @@ Array of squares: [|0; 1; 4; 9; 16; 25; 36; 49; 64; 81|]
 ```
 [|5; 6; 7; 8; 9; 10; 11; 12; 13; 14|]
 ```
-[`Array.append`](https://msdn.microsoft.com/library/08836310-5036-4474-b9a2-2c73e2293911)藉由結合兩個現有的陣列建立新的陣列。
+[`Array.append`](https://msdn.microsoft.com/library/08836310-5036-4474-b9a2-2c73e2293911) 藉由結合兩個現有的陣列建立新的陣列。
 
 下列程式碼示範**Array.append**。
 
@@ -126,7 +123,7 @@ Array of squares: [|0; 1; 4; 9; 16; 25; 36; 49; 64; 81|]
 [|1; 2; 3; 4; 5; 6|]
 ```
 
-[`Array.choose`](https://msdn.microsoft.com/library/f5c8a5e2-637f-44d4-b35c-be96a6618b09)選取要在新的陣列包含陣列的項目。 下列程式碼示範`Array.choose`。 請注意，陣列的項目類型並沒有比對選項類型中傳回的值類型。 在此範例中，項目類型是`int`且選項多項式函式的結果`elem*elem - 1`，做為浮點數。
+[`Array.choose`](https://msdn.microsoft.com/library/f5c8a5e2-637f-44d4-b35c-be96a6618b09) 選取要在新的陣列包含陣列的項目。 下列程式碼示範`Array.choose`。 請注意，陣列的項目類型並沒有比對選項類型中傳回的值類型。 在此範例中，項目類型是`int`且選項多項式函式的結果`elem*elem - 1`，做為浮點數。
 
 [!code-fsharp[Main](../../../samples/snippets/fsharp/arrays/snippet14.fs)]
 
@@ -136,7 +133,7 @@ Array of squares: [|0; 1; 4; 9; 16; 25; 36; 49; 64; 81|]
 [|3.0; 15.0; 35.0; 63.0; 99.0|]
 ```
 
-[`Array.collect`](https://msdn.microsoft.com/library/c3b60c3b-9455-48c9-bc2b-e88f0434342a)現有陣列的每個陣列項目上執行指定的函式和收集函式所產生的項目，然後將它們合併成新的陣列。 下列程式碼示範`Array.collect`。
+[`Array.collect`](https://msdn.microsoft.com/library/c3b60c3b-9455-48c9-bc2b-e88f0434342a) 現有陣列的每個陣列項目上執行指定的函式和收集函式所產生的項目，然後將它們合併成新的陣列。 下列程式碼示範`Array.collect`。
 
 [!code-fsharp[Main](../../../samples/snippets/fsharp/arrays/snippet15.fs)]
 
@@ -146,7 +143,7 @@ Array of squares: [|0; 1; 4; 9; 16; 25; 36; 49; 64; 81|]
 [|0; 1; 0; 1; 2; 3; 4; 5; 0; 1; 2; 3; 4; 5; 6; 7; 8; 9; 10|]
 ```
 
-[`Array.concat`](https://msdn.microsoft.com/library/f7219b79-1ec8-4a25-96b1-edbedb358302)會接受一連串的陣列，並將它們合併成單一陣列。 下列程式碼示範`Array.concat`。
+[`Array.concat`](https://msdn.microsoft.com/library/f7219b79-1ec8-4a25-96b1-edbedb358302) 會接受一連串的陣列，並將它們合併成單一陣列。 下列程式碼示範`Array.concat`。
 
 [!code-fsharp[Main](../../../samples/snippets/fsharp/arrays/snippet16.fs)]
 
@@ -157,7 +154,7 @@ Array of squares: [|0; 1; 4; 9; 16; 25; 36; 49; 64; 81|]
 (3, 2, 6); (3, 3, 9)|]
 ```
 
-[`Array.filter`](https://msdn.microsoft.com/library/b885b214-47fc-4639-9664-b8c183a39ede)會採用布林條件函式，並產生包含這些條件為 true 的輸入陣列中項目的新陣列。 下列程式碼示範`Array.filter`。
+[`Array.filter`](https://msdn.microsoft.com/library/b885b214-47fc-4639-9664-b8c183a39ede) 會採用布林條件函式，並產生包含這些條件為 true 的輸入陣列中項目的新陣列。 下列程式碼示範`Array.filter`。
 
 [!code-fsharp[Main](../../../samples/snippets/fsharp/arrays/snippet17.fs)]
 
@@ -167,7 +164,7 @@ Array of squares: [|0; 1; 4; 9; 16; 25; 36; 49; 64; 81|]
 [|2; 4; 6; 8; 10|]
 ```
 
-[`Array.rev`](https://msdn.microsoft.com/library/1bbf822c-763b-4794-af21-97d2e48ef709)藉由反轉現有陣列的順序來產生新的陣列。 下列程式碼示範`Array.rev`。
+[`Array.rev`](https://msdn.microsoft.com/library/1bbf822c-763b-4794-af21-97d2e48ef709) 藉由反轉現有陣列的順序來產生新的陣列。 下列程式碼示範`Array.rev`。
 
 [!code-fsharp[Main](../../../samples/snippets/fsharp/arrays/snippet18.fs)]  
 
@@ -334,7 +331,7 @@ false
 
 ### <a name="searching-arrays"></a>搜尋陣列
 
-[`Array.find`](https://msdn.microsoft.com/library/db6d920a-de19-4520-85a4-d83de77c1b33)會採用布林值的函式，並傳回第一個元素的函式會傳回`true`，或是引發<xref:System.Collections.Generic.KeyNotFoundException?displayProperty=nameWithType>如果找到符合的條件沒有任何項目。 [`Array.findIndex`](https://msdn.microsoft.com/library/5ae3a8f9-7b8f-44ea-a740-d5700f4d899f)就像`Array.find`，只不過它會傳回而不是項目本身的項目索引。
+[`Array.find`](https://msdn.microsoft.com/library/db6d920a-de19-4520-85a4-d83de77c1b33) 會採用布林值的函式，並傳回第一個元素的函式會傳回`true`，或是引發<xref:System.Collections.Generic.KeyNotFoundException?displayProperty=nameWithType>如果找到符合的條件沒有任何項目。 [`Array.findIndex`](https://msdn.microsoft.com/library/5ae3a8f9-7b8f-44ea-a740-d5700f4d899f) 就像`Array.find`，只不過它會傳回而不是項目本身的項目索引。
 
 下列程式碼會使用`Array.find`和`Array.findIndex`找出的數字是正方形和完美的 cube。
 
@@ -346,7 +343,7 @@ false
 The first element that is both a square and a cube is 64 and its index is 62.
 ```
 
-[`Array.tryFind`](https://msdn.microsoft.com/library/7bd65f6c-df77-454c-ac3a-6f7baecec9d9)就像`Array.find`，只不過其結果是選項類型，並傳回`None`如果不找到任何項目。 `Array.tryFind`應該使用而不是`Array.find`時您不知道相符的項目是否為陣列。 同樣地， [ `Array.tryFindIndex` ](https://msdn.microsoft.com/library/da82f7fe-95e9-4fd5-a924-cd3c9d10618a)就像是[ `Array.findIndex` ](https://msdn.microsoft.com/library/5ae3a8f9-7b8f-44ea-a740-d5700f4d899f)不同之處在於選項類型為傳回的值。 如果不找到任何元素，則選項`None`。
+[`Array.tryFind`](https://msdn.microsoft.com/library/7bd65f6c-df77-454c-ac3a-6f7baecec9d9) 就像`Array.find`，只不過其結果是選項類型，並傳回`None`如果不找到任何項目。 `Array.tryFind` 應該使用而不是`Array.find`時您不知道相符的項目是否為陣列。 同樣地， [ `Array.tryFindIndex` ](https://msdn.microsoft.com/library/da82f7fe-95e9-4fd5-a924-cd3c9d10618a)就像是[ `Array.findIndex` ](https://msdn.microsoft.com/library/5ae3a8f9-7b8f-44ea-a740-d5700f4d899f)不同之處在於選項類型為傳回的值。 如果不找到任何元素，則選項`None`。
 
 下列程式碼示範 `Array.tryFind` 的用法。 此程式碼視先前的程式碼而定。
 
@@ -380,7 +377,7 @@ Found an element 4096 with square root 64 and cube root 16.
 
 使用[ `Array.max` ](https://msdn.microsoft.com/library/f03fbda0-fce6-40e2-a85d-79c9d81f710b)或[ `Array.min` ](https://msdn.microsoft.com/library/d6b3da5f-bac0-4355-9846-4b72d95bc3fd)取得的最大或最小項目，如果項目型別支援它。 同樣地， [ `Array.maxBy` ](https://msdn.microsoft.com/library/18dbe7c5-482e-4766-8e01-12a76f847045)和[ `Array.minBy` ](https://msdn.microsoft.com/library/24091583-be78-4cc9-9fab-de6d7506af4f)讓函式先執行，或許是為了支援比較類型轉換。
 
-[`Array.sum`](https://msdn.microsoft.com/library/4ffdb8c8-cd94-4b0b-9e5c-a7c9c17963c2)新增陣列的項目和[ `Array.sumBy` ](https://msdn.microsoft.com/library/41698ba6-1adc-4169-8cc5-7a0e3f8de56b)每個項目上呼叫的函式，並將相加的結果。
+[`Array.sum`](https://msdn.microsoft.com/library/4ffdb8c8-cd94-4b0b-9e5c-a7c9c17963c2) 新增陣列的項目和[ `Array.sumBy` ](https://msdn.microsoft.com/library/41698ba6-1adc-4169-8cc5-7a0e3f8de56b)每個項目上呼叫的函式，並將相加的結果。
 
 若要在陣列中每個項目上執行函式，而不儲存傳回值，使用[ `Array.iter` ](https://msdn.microsoft.com/library/94eba0f1-ecd7-459f-b89f-ed2a2923e516)。 對於牽涉到兩個陣列的長度相等的函式，使用[ `Array.iter2` ](https://msdn.microsoft.com/library/018aa9b9-f186-4142-be8a-a62462794fdc)。 如果您也要保留一個陣列的函式的結果，請使用[ `Array.map` ](https://msdn.microsoft.com/library/38cbe824-0480-47be-85fd-df3afdd97a45)或[ `Array.map2` ](https://msdn.microsoft.com/library/bb7aafe8-4a1f-45b9-92fc-1af9eafbea5c)，一次在兩個陣列上操作。
 
@@ -392,7 +389,7 @@ Found an element 4096 with square root 64 and cube root 16.
 
 ### <a name="modifying-arrays"></a>修改陣列
 
-[`Array.set`](https://msdn.microsoft.com/library/847edc0d-4dc5-4a39-98c7-d4320c60e790)設定為指定值的項目。 [`Array.fill`](https://msdn.microsoft.com/library/c83c9886-81d9-44f9-a195-61c7b87f7df2)設定為指定值陣列中的項目範圍。 下列程式碼提供的範例`Array.fill`。
+[`Array.set`](https://msdn.microsoft.com/library/847edc0d-4dc5-4a39-98c7-d4320c60e790) 設定為指定值的項目。 [`Array.fill`](https://msdn.microsoft.com/library/c83c9886-81d9-44f9-a195-61c7b87f7df2) 設定為指定值陣列中的項目範圍。 下列程式碼提供的範例`Array.fill`。
 
 [!code-fsharp[Main](../../../samples/snippets/fsharp/arrays/snippet28.fs)]
 
@@ -406,7 +403,7 @@ Found an element 4096 with square root 64 and cube root 16.
 
 ### <a name="converting-to-and-from-other-types"></a>從其他類型轉換
 
-[`Array.ofList`](https://msdn.microsoft.com/library/e7225239-f561-45a4-b0b5-69a1cdcae78b)從清單建立陣列。 [`Array.ofSeq`](https://msdn.microsoft.com/library/6bedf5e0-4b22-46da-b09c-6aa09eff220c)從序列建立陣列。 [`Array.toList`](https://msdn.microsoft.com/library/4deff724-0be4-4688-92e7-9d67a1097786)和[ `Array.toSeq` ](https://msdn.microsoft.com/library/ac28dbab-406c-4fe0-ab08-c1ce5e247af4)從陣列類型轉換成這些集合類型。
+[`Array.ofList`](https://msdn.microsoft.com/library/e7225239-f561-45a4-b0b5-69a1cdcae78b) 從清單建立陣列。 [`Array.ofSeq`](https://msdn.microsoft.com/library/6bedf5e0-4b22-46da-b09c-6aa09eff220c) 從序列建立陣列。 [`Array.toList`](https://msdn.microsoft.com/library/4deff724-0be4-4688-92e7-9d67a1097786) 和[ `Array.toSeq` ](https://msdn.microsoft.com/library/ac28dbab-406c-4fe0-ab08-c1ce5e247af4)從陣列類型轉換成這些集合類型。
 
 ### <a name="sorting-arrays"></a>排序陣列
 
@@ -414,7 +411,7 @@ Found an element 4096 with square root 64 and cube root 16.
 
 ### <a name="arrays-and-tuples"></a>陣列和 Tuple
 
-函式[ `Array.zip` ](https://msdn.microsoft.com/library/23e086b8-b266-4db2-8b68-e88e6a8e2187)和[ `Array.unzip` ](https://msdn.microsoft.com/library/a529b47c-2e2b-4f79-ad44-c578432d2f48) tuple 配對的陣列轉換成 tuple 的陣列，反之亦然。 [`Array.zip3`](https://msdn.microsoft.com/library/1745744a-d2ca-4c3e-b825-3f15d9f4000d)和[ `Array.unzip3` ](https://msdn.microsoft.com/library/bc3e6db0-f334-444f-8c30-813942880677)很相似，不同之處在於它們使用三個元素的 tuple 或三個陣列的 tuple。
+函式[ `Array.zip` ](https://msdn.microsoft.com/library/23e086b8-b266-4db2-8b68-e88e6a8e2187)和[ `Array.unzip` ](https://msdn.microsoft.com/library/a529b47c-2e2b-4f79-ad44-c578432d2f48) tuple 配對的陣列轉換成 tuple 的陣列，反之亦然。 [`Array.zip3`](https://msdn.microsoft.com/library/1745744a-d2ca-4c3e-b825-3f15d9f4000d) 和[ `Array.unzip3` ](https://msdn.microsoft.com/library/bc3e6db0-f334-444f-8c30-813942880677)很相似，不同之處在於它們使用三個元素的 tuple 或三個陣列的 tuple。
 
 ## <a name="parallel-computations-on-arrays"></a>在陣列上的平行運算
 

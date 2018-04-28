@@ -1,20 +1,17 @@
 ---
 title: F# 語言參考
 description: '找到 F # 語言功能的資訊從這個語言的語彙基元、 概念、 類型、 運算式和編譯器支援建構主題參考。'
-keywords: Visual F#, F#, 函式程式設計
 author: cartermp
 ms.author: phcart
 ms.date: 05/16/2016
 ms.topic: language-reference
-ms.prod: .net
-ms.technology: devlang-fsharp
+ms.prod: dotnet-fsharp
 ms.devlang: fsharp
-ms.assetid: b1707be1-7b7c-4fdd-a717-d9c190bc5fb5
-ms.openlocfilehash: 0d26d5a6f47ce8a92aefe338ea8c39295d042794
-ms.sourcegitcommit: bd1ef61f4bb794b25383d3d72e71041a5ced172e
+ms.openlocfilehash: 5ab0ef364696e92064209118920dff0def21e0c8
+ms.sourcegitcommit: 03ee570f6f528a7d23a4221dcb26a9498edbdf8c
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/18/2017
+ms.lasthandoff: 04/28/2018
 ---
 # <a name="f-language-reference"></a>F# 語言參考
 
@@ -26,7 +23,7 @@ ms.lasthandoff: 10/18/2017
 
 
 
-|標題|說明|
+|標題|描述|
 |-----|-----------|
 |[關鍵字參考](keyword-reference.md)|包含所有 F# 語言關鍵字相關資訊的連結。|
 |[符號和運算子參考](symbol-and-operator-reference/index.md)|包含 F# 語言使用之符號和運算子的表格。|
@@ -97,7 +94,7 @@ ms.lasthandoff: 10/18/2017
 ## <a name="f-expressions"></a>F# 運算式
 下表列出描述 F# 運算式的主題。
 
-|標題|說明|
+|標題|描述|
 |-----|-----------|
 |[條件運算式：`if...then...else`](conditional-expressions-if-then-else.md)|描述 `if...then...else` 運算式，這個運算式會根據指定的布林運算式，執行不同的程式碼分支，也會運算出不同的值。|
 |[比對運算式](match-expressions.md)|描述 `match` 運算式，此種運算式提供分支控制，可根據運算式與一組模式的比較結果，決定程式應沿著哪個分支繼續執行。|
@@ -114,7 +111,7 @@ ms.lasthandoff: 10/18/2017
 ## <a name="compiler-supported-constructs"></a>編譯器支援的建構
 下表列出描述編譯器支援之特殊建構的主題。
 
-|主題|說明|
+|主題|描述|
 |-----|-----------|
 |[編譯器選項](compiler-options.md)|描述 F # 編譯器的命令列選項。|
 |[編譯器指示詞](compiler-directives.md)|描述處理器指示詞和編譯器指示詞。|

@@ -1,20 +1,17 @@
 ---
-title: "資源管理：use 關鍵字 (F#)"
+title: 資源管理：use 關鍵字 (F#)
 description: "了解 F # 關鍵字 'use' 和 '使用' 函式，可以控制的初始設定和版本的資源。"
-keywords: "Visual F#, F#, 函式程式設計"
 author: cartermp
 ms.author: phcart
 ms.date: 05/16/2016
 ms.topic: language-reference
-ms.prod: .net
-ms.technology: devlang-fsharp
+ms.prod: dotnet-fsharp
 ms.devlang: fsharp
-ms.assetid: 00c3040e-859f-4dad-a7b5-7b8d44dc232c
-ms.openlocfilehash: d4e8626f07f1c77e52e8fabd5ccc07dbf1fa8ddd
-ms.sourcegitcommit: bd1ef61f4bb794b25383d3d72e71041a5ced172e
+ms.openlocfilehash: 0e134bf5b302911324dd224316941fee693b787b
+ms.sourcegitcommit: 03ee570f6f528a7d23a4221dcb26a9498edbdf8c
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/18/2017
+ms.lasthandoff: 04/28/2018
 ---
 # <a name="resource-management-the-use-keyword"></a>資源管理：use 關鍵字
 
@@ -44,7 +41,7 @@ ms.lasthandoff: 10/18/2017
 ## <a name="using-function"></a>使用函式
 `using`函式具有下列格式：
 
-`using`(*expression1*)*函式或 lambda*
+`using` (*expression1*)*函式或 lambda*
 
 在`using`運算式*expression1*建立必須處置的物件。 結果*expression1* （必須處置的物件） 會變成引數，*值*至*函式或 lambda*，這是其中一個必須要有單一的函式其餘的值相符的型別引數所產生的*expression1*，或必須要有該類型的引數的 lambda 運算式。 在執行函式結束時，執行階段會呼叫`Dispose`並釋出資源 (除非值為`null`，在此情況下呼叫 Dispose 就不會嘗試)。
 
@@ -56,7 +53,7 @@ ms.lasthandoff: 10/18/2017
 
 [!code-fsharp[Main](../../../samples/snippets/fsharp/lang-ref-2/snippet6303.fs)]
 
-請注意，函式可能會有一些已套用的引數的函式。 下列程式碼範例為其示範。 它會建立包含字串的檔案`XYZ`。
+請注意，函式可能會有一些已套用的引數的函式。 下列程式碼範例示範此工作。 它會建立包含字串的檔案`XYZ`。
 
 [!code-fsharp[Main](../../../samples/snippets/fsharp/lang-ref-2/snippet6304.fs)]
 

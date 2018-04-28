@@ -1,23 +1,24 @@
 ---
-title: "持續性的最佳作法"
-ms.custom: 
+title: 持續性的最佳作法
+ms.custom: ''
 ms.date: 03/30/2017
 ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.tgt_pltfrm: 
+ms.reviewer: ''
+ms.suite: ''
+ms.tgt_pltfrm: ''
 ms.topic: article
 ms.assetid: 6974c5a4-1af8-4732-ab53-7d694608a3a0
-caps.latest.revision: "7"
+caps.latest.revision: 7
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.workload: dotnet
-ms.openlocfilehash: 408257d9ec51e9d60cb899c16cbef3a26cdc609f
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.workload:
+- dotnet
+ms.openlocfilehash: cfea5b8728774a4e788f3f0d866c6741d5b0bbe9
+ms.sourcegitcommit: 03ee570f6f528a7d23a4221dcb26a9498edbdf8c
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 04/28/2018
 ---
 # <a name="persistence-best-practices"></a>持續性的最佳作法
 本文件包含與工作流程持續性相關之工作流程設計與組態的最佳作法。  
@@ -31,7 +32,7 @@ ms.lasthandoff: 12/22/2017
   
  如果您的工作流程會忙碌一段很長的時間，我們建議您在整段忙碌期間定期保存工作流程執行個體。 若要這樣做，請在維持工作流程執行個體忙碌的整個活動序列中加入 <xref:System.Activities.Statements.Persist> 活動。 如此一來，應用程式定義域回收、主機故障或電腦故障就不會造成系統必須回復到忙碌期間的開頭。 請注意，將 <xref:System.Activities.Statements.Persist> 活動加入至您的工作流程可能會造成效能的降低。  
   
- Windows Server App Fabric 會大幅簡化持續性的組態與使用。 [!INCLUDE[crdefault](../../../includes/crdefault-md.md)][Windows Server App Fabric 持續性](http://go.microsoft.com/fwlink/?LinkID=201200&clcid=0x409)  
+ Windows Server App Fabric 會大幅簡化持續性的組態與使用。 如需詳細資訊，請參閱[Windows Server App Fabric 持續性](http://go.microsoft.com/fwlink/?LinkID=201200&clcid=0x409)  
   
 ## <a name="configuration-of-scalability-parameters"></a>延展性參數的組態  
  延展性和效能需求會決定以下參數的設定：  

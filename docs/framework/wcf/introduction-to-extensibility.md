@@ -1,30 +1,30 @@
 ---
-title: "擴充性簡介"
-ms.custom: 
+title: 擴充性簡介
+ms.custom: ''
 ms.date: 03/30/2017
 ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
+ms.reviewer: ''
+ms.suite: ''
 ms.technology:
 - dotnet-clr
-ms.tgt_pltfrm: 
+ms.tgt_pltfrm: ''
 ms.topic: article
 helpviewer_keywords:
 - WCF [WCF], extensibility
 - Windows Communication Foundation [WCF], extensibility
 - extensibility [WCF]
 ms.assetid: ef56c251-d63c-4b3f-944f-b0c67bfb0f68
-caps.latest.revision: 
+caps.latest.revision: 7
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
 ms.workload:
 - dotnet
-ms.openlocfilehash: 3e16ed674c87bdb1418257a30f7f79b970127b06
-ms.sourcegitcommit: 08684dd61444c2f072b89b926370f750e456fca1
+ms.openlocfilehash: 331e71f26b1c703f7df27086d943e799b4eb13e2
+ms.sourcegitcommit: 03ee570f6f528a7d23a4221dcb26a9498edbdf8c
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 02/14/2018
+ms.lasthandoff: 04/28/2018
 ---
 # <a name="introduction-to-extensibility"></a>擴充性簡介
 [!INCLUDE[indigo1](../../../includes/indigo1-md.md)] 應用程式模型是設計用來解決任何分散式應用程式大部分的通訊要求， 但是一定有預設應用程式模型和系統提供的實作所不支援的情況。 [!INCLUDE[indigo2](../../../includes/indigo2-md.md)] 擴充性模型是用來讓您能修改每個層級的系統行為，甚至到取代整個系統模型，所以可以支援自訂的情況。 本主題會概述各種擴充區域，並指向每個擴充區域的詳細資訊。  
@@ -46,24 +46,24 @@ ms.lasthandoff: 02/14/2018
  所有訊息都會通過通道系統，但是只有應用程式訊息會從通道系統傳遞至應用程式。 若要建立新的通道層級功能，您必須擴充通道系統。 若要建立新的應用程式層級功能，您必須擴充服務或用戶端執行階段 (分別是發送器和通道處理站)。 [!INCLUDE[crabout](../../../includes/crabout-md.md)] 擴充應用程式執行階段，請參閱[擴充 ServiceHost 與服務模型層](../../../docs/framework/wcf/extending/extending-servicehost-and-the-service-model-layer.md)。  
   
 #### <a name="extending-security"></a>擴充安全性  
- 若要建置自訂安全性機制，例如權杖和認證，您必須擴充安全性系統。 [!INCLUDE[crdefault](../../../includes/crdefault-md.md)] [擴充安全性](../../../docs/framework/wcf/extending/extending-security.md)。  
+ 若要建置自訂安全性機制，例如權杖和認證，您必須擴充安全性系統。 如需詳細資訊，請參閱[擴充安全性](../../../docs/framework/wcf/extending/extending-security.md)。  
   
 #### <a name="extending-metadata"></a>擴充中繼資料  
- 若要以不同於預設的方式公開中繼資料，您必須擴充中繼資料系統。 [!INCLUDE[crdefault](../../../includes/crdefault-md.md)] [擴充中繼資料系統](../../../docs/framework/wcf/extending/extending-the-metadata-system.md)。  
+ 若要以不同於預設的方式公開中繼資料，您必須擴充中繼資料系統。 如需詳細資訊，請參閱[擴充中繼資料系統](../../../docs/framework/wcf/extending/extending-the-metadata-system.md)。  
   
 #### <a name="extending-serialization"></a>擴充序列化  
- 若要建置自訂編碼器、提供資料代理或其他涉及自訂傳輸資料的工作，您必須擴充序列化系統。 [!INCLUDE[crdefault](../../../includes/crdefault-md.md)] [擴充編碼器與序列化程式](../../../docs/framework/wcf/extending/extending-encoders-and-serializers.md)。  
+ 若要建置自訂編碼器、提供資料代理或其他涉及自訂傳輸資料的工作，您必須擴充序列化系統。 如需詳細資訊，請參閱[擴充編碼器與序列化程式](../../../docs/framework/wcf/extending/extending-encoders-and-serializers.md)。  
   
 #### <a name="extending-bindings"></a>擴充繫結  
- 若要將傳輸或通訊協定通道與應用程式層產生關聯，您必須擴充繫結系統。 [!INCLUDE[crdefault](../../../includes/crdefault-md.md)] [擴充繫結](../../../docs/framework/wcf/extending/extending-bindings.md)。  
+ 若要將傳輸或通訊協定通道與應用程式層產生關聯，您必須擴充繫結系統。 如需詳細資訊，請參閱[擴充繫結](../../../docs/framework/wcf/extending/extending-bindings.md)。  
   
 ### <a name="extending-the-channel-system"></a>擴充通道系統  
  若要建立通道支援自訂傳輸或通訊協定功能，請參閱[擴充通道層](../../../docs/framework/wcf/extending/extending-the-channel-layer.md)。  
   
 ### <a name="extending-the-service-hosting-system"></a>擴充服務裝載系統  
- 若要修改服務範圍的應用程式模型，您必須擴充 <xref:System.ServiceModel.ServiceHostBase?displayProperty=nameWithType> 類別。 [!INCLUDE[crdefault](../../../includes/crdefault-md.md)] [擴充 ServiceHost 與服務模型層](../../../docs/framework/wcf/extending/extending-servicehost-and-the-service-model-layer.md)。  
+ 若要修改服務範圍的應用程式模型，您必須擴充 <xref:System.ServiceModel.ServiceHostBase?displayProperty=nameWithType> 類別。 如需詳細資訊，請參閱[擴充 ServiceHost 與服務模型層](../../../docs/framework/wcf/extending/extending-servicehost-and-the-service-model-layer.md)。  
   
- 若要修改裝載應用程式定義域與服務主機之間的關係，您必須擴充 <xref:System.ServiceModel.Activation.ServiceHostFactory?displayProperty=nameWithType> 類別。 [!INCLUDE[crdefault](../../../includes/crdefault-md.md)] [使用 ServiceHostFactory 擴充裝載](../../../docs/framework/wcf/extending/extending-hosting-using-servicehostfactory.md)。  
+ 若要修改裝載應用程式定義域與服務主機之間的關係，您必須擴充 <xref:System.ServiceModel.Activation.ServiceHostFactory?displayProperty=nameWithType> 類別。 如需詳細資訊，請參閱[擴充裝載使用 ServiceHostFactory](../../../docs/framework/wcf/extending/extending-hosting-using-servicehostfactory.md)。  
   
-## <a name="see-also"></a>請參閱  
+## <a name="see-also"></a>另請參閱  
  [擴充 WCF](../../../docs/framework/wcf/extending/index.md)

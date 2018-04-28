@@ -1,32 +1,33 @@
 ---
 title: OperationScope
-ms.custom: 
+ms.custom: ''
 ms.date: 03/30/2017
 ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.tgt_pltfrm: 
+ms.reviewer: ''
+ms.suite: ''
+ms.tgt_pltfrm: ''
 ms.topic: article
 ms.assetid: 56206a21-1e63-422d-b92a-e5d8b713e707
-caps.latest.revision: "7"
+caps.latest.revision: 7
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.workload: dotnet
-ms.openlocfilehash: 837be2de516f604dd6869449d99df238fb6dbd24
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.workload:
+- dotnet
+ms.openlocfilehash: 3bf92d7a726a53c5d625f31b0386e11c941cdde9
+ms.sourcegitcommit: 03ee570f6f528a7d23a4221dcb26a9498edbdf8c
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 04/28/2018
 ---
 # <a name="operationscope"></a>OperationScope
 這個範例示範 <xref:System.ServiceModel.Activities.Receive> 和 <xref:System.ServiceModel.Activities.SendReply> 訊息活動如何用來將現有自訂活動公開成為工作流程服務中的作業。 這個範例包含一個名為 `OperationScope` 的新自訂活動。 它可讓使用者將作業主體分別撰寫成自訂活動，然後使用 `OperationScope` 活動，將它們輕鬆公開為服務作業，以便於開發工作流程服務。 例如，接收兩個 `Add` 引數並傳回一個 `in` 引數的自訂 `out` 活動，可以藉由放置在 `Add` 中，公開為工作流程服務的 `OperationScope` 作業。  
   
  範圍的運作方式是檢查當成主體提供的活動。 任何未繫結的 `in` 引數都會假定為傳入訊息中的輸入。 所有 `out` 引數，不論是否繫結，都會假定為後續回覆訊息中的輸出。 公開作業名稱是取自 `OperationScope` 活動的顯示名稱。 最終結果是主體活動包裝在 <xref:System.ServiceModel.Activities.Receive> 和 <xref:System.ServiceModel.Activities.SendReply> 中，其中來自訊息的參數繫結至活動的引數。  
   
- 這個範例使用 HTTP 端點公開工作流程服務。 若要執行，必須加入 URL ACL。 [!INCLUDE[crdefault](../../../../includes/crdefault-md.md)][設定 HTTP 和 HTTPS](http://go.microsoft.com/fwlink/?LinkId=70353)。 執行下列命令以高權限的提示字元會加入適當 Acl (確定將 Domain 和 Username 替換 %網域 %\\%username%)。  
+ 這個範例使用 HTTP 端點公開工作流程服務。 若要執行，必須加入 URL ACL。 如需詳細資訊，請參閱[設定 HTTP 和 HTTPS](http://go.microsoft.com/fwlink/?LinkId=70353)。 執行下列命令以高權限的提示字元會加入適當 Acl (確定將 Domain 和 Username 替換 %網域 %\\%username%)。  
   
- **netsh http 新增 urlacl url = http: / / +: 8000 / 使用者 = %網域 %\\%username%**  
+ **netsh http 新增 urlacl url =http://+:8000/使用者 = %網域 %\\%username%**  
   
 ### <a name="to-run-the-sample"></a>若要執行範例  
   
