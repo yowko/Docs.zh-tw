@@ -1,12 +1,13 @@
 ---
-title: "如何：使用 ResourceDictionary 管理可當地語系化的字串資源"
-ms.custom: 
+title: 如何：使用 ResourceDictionary 管理可當地語系化的字串資源
+ms.custom: ''
 ms.date: 03/30/2017
 ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.technology: dotnet-wpf
-ms.tgt_pltfrm: 
+ms.reviewer: ''
+ms.suite: ''
+ms.technology:
+- dotnet-wpf
+ms.tgt_pltfrm: ''
 ms.topic: article
 dev_langs:
 - csharp
@@ -17,39 +18,40 @@ helpviewer_keywords:
 - ResourceDictionary [WPF]
 - localization [WPF], packaging string resources
 ms.assetid: 19e7d9a5-20df-4ad3-b157-fe6515902e5e
-caps.latest.revision: "9"
+caps.latest.revision: 9
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.workload: dotnet
-ms.openlocfilehash: 9fba115ea8c954da177afcacbf679f41474e2b68
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.workload:
+- dotnet
+ms.openlocfilehash: 70f8f02f315580c8056ee698b5e45b1a31a3dc74
+ms.sourcegitcommit: 94d33cadc5ff81d2ac389bf5f26422c227832052
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 04/30/2018
 ---
-# <a name="how-to-use-a-resourcedictionary-to-manage-localizable-string-resources"></a><span data-ttu-id="1a8d6-102">如何：使用 ResourceDictionary 管理可當地語系化的字串資源</span><span class="sxs-lookup"><span data-stu-id="1a8d6-102">How to: Use a ResourceDictionary to Manage Localizable String Resources</span></span>
-<span data-ttu-id="1a8d6-103">這個範例示範如何使用<xref:System.Windows.ResourceDictionary>封裝可當地語系化字串資源的[!INCLUDE[TLA#tla_wpf](../../../../includes/tlasharptla-wpf-md.md)]應用程式。</span><span class="sxs-lookup"><span data-stu-id="1a8d6-103">This example shows how to use a <xref:System.Windows.ResourceDictionary> to package localizable string resources for [!INCLUDE[TLA#tla_wpf](../../../../includes/tlasharptla-wpf-md.md)] applications.</span></span>  
+# <a name="how-to-use-a-resourcedictionary-to-manage-localizable-string-resources"></a><span data-ttu-id="01a76-102">如何：使用 ResourceDictionary 管理可當地語系化的字串資源</span><span class="sxs-lookup"><span data-stu-id="01a76-102">How to: Use a ResourceDictionary to Manage Localizable String Resources</span></span>
+<span data-ttu-id="01a76-103">這個範例示範如何使用<xref:System.Windows.ResourceDictionary>Windows Presentation Foundation (WPF) 應用程式的封裝可當地語系化字串資源。</span><span class="sxs-lookup"><span data-stu-id="01a76-103">This example shows how to use a <xref:System.Windows.ResourceDictionary> to package localizable string resources for Windows Presentation Foundation (WPF) applications.</span></span>  
   
-### <a name="to-use-a-resourcedictionary-to-manage-localizable-string-resources"></a><span data-ttu-id="1a8d6-104">若要使用 ResourceDictionary 管理可當地語系化的字串資源</span><span class="sxs-lookup"><span data-stu-id="1a8d6-104">To use a ResourceDictionary to manage localizable string resources</span></span>  
+### <a name="to-use-a-resourcedictionary-to-manage-localizable-string-resources"></a><span data-ttu-id="01a76-104">若要使用 ResourceDictionary 管理可當地語系化的字串資源</span><span class="sxs-lookup"><span data-stu-id="01a76-104">To use a ResourceDictionary to manage localizable string resources</span></span>  
   
-1.  <span data-ttu-id="1a8d6-105">建立<xref:System.Windows.ResourceDictionary>，其中包含您想要當地語系化的字串。</span><span class="sxs-lookup"><span data-stu-id="1a8d6-105">Create a <xref:System.Windows.ResourceDictionary> that contains the strings you would like to localize.</span></span> <span data-ttu-id="1a8d6-106">下列程式碼示範範例。</span><span class="sxs-lookup"><span data-stu-id="1a8d6-106">The following code shows an example.</span></span>  
+1.  <span data-ttu-id="01a76-105">建立<xref:System.Windows.ResourceDictionary>，其中包含您想要當地語系化的字串。</span><span class="sxs-lookup"><span data-stu-id="01a76-105">Create a <xref:System.Windows.ResourceDictionary> that contains the strings you would like to localize.</span></span> <span data-ttu-id="01a76-106">下列程式碼示範範例。</span><span class="sxs-lookup"><span data-stu-id="01a76-106">The following code shows an example.</span></span>  
   
      [!code-xaml[StringLocalizationSample#StringResourceDictionary](../../../../samples/snippets/csharp/VS_Snippets_Wpf/StringLocalizationSample/CSharp/StringResources.xaml#stringresourcedictionary)]  
   
-     <span data-ttu-id="1a8d6-107">此程式碼定義之字串資源`localizedMessage`，型別<xref:System.String>，從<xref:System>mscorlib.dll 中的命名空間。</span><span class="sxs-lookup"><span data-stu-id="1a8d6-107">This code defines a string resource, `localizedMessage`, of type <xref:System.String>, from the <xref:System> namespace in mscorlib.dll.</span></span>  
+     <span data-ttu-id="01a76-107">此程式碼定義之字串資源`localizedMessage`，型別<xref:System.String>，從<xref:System>mscorlib.dll 中的命名空間。</span><span class="sxs-lookup"><span data-stu-id="01a76-107">This code defines a string resource, `localizedMessage`, of type <xref:System.String>, from the <xref:System> namespace in mscorlib.dll.</span></span>  
   
-2.  <span data-ttu-id="1a8d6-108">新增<xref:System.Windows.ResourceDictionary>您的應用程式中，使用下列程式碼。</span><span class="sxs-lookup"><span data-stu-id="1a8d6-108">Add the <xref:System.Windows.ResourceDictionary> to your application, using the following code.</span></span>  
+2.  <span data-ttu-id="01a76-108">新增<xref:System.Windows.ResourceDictionary>您的應用程式中，使用下列程式碼。</span><span class="sxs-lookup"><span data-stu-id="01a76-108">Add the <xref:System.Windows.ResourceDictionary> to your application, using the following code.</span></span>  
   
      [!code-xaml[StringLocalizationSample#ReferencingStringResourceDictionary](../../../../samples/snippets/csharp/VS_Snippets_Wpf/StringLocalizationSample/CSharp/App.xaml#referencingstringresourcedictionary)]  
   
-3.  <span data-ttu-id="1a8d6-109">使用字串資源標記中，從使用[!INCLUDE[TLA#tla_xaml](../../../../includes/tlasharptla-xaml-md.md)]像下面這樣。</span><span class="sxs-lookup"><span data-stu-id="1a8d6-109">Use the string resource from markup, using [!INCLUDE[TLA#tla_xaml](../../../../includes/tlasharptla-xaml-md.md)] like the following.</span></span>  
+3.  <span data-ttu-id="01a76-109">使用字串資源標記中，從使用[!INCLUDE[TLA#tla_xaml](../../../../includes/tlasharptla-xaml-md.md)]像下面這樣。</span><span class="sxs-lookup"><span data-stu-id="01a76-109">Use the string resource from markup, using [!INCLUDE[TLA#tla_xaml](../../../../includes/tlasharptla-xaml-md.md)] like the following.</span></span>  
   
      [!code-xaml[StringLocalizationSample#GetLocalizedResourceFromMarkup](../../../../samples/snippets/csharp/VS_Snippets_Wpf/StringLocalizationSample/CSharp/MainWindow.xaml#getlocalizedresourcefrommarkup)]  
   
-4.  <span data-ttu-id="1a8d6-110">使用類似下列程式碼，即可利用來自程式碼後置的字串資源。</span><span class="sxs-lookup"><span data-stu-id="1a8d6-110">Use the string resource from code-behind, using code like the following.</span></span>  
+4.  <span data-ttu-id="01a76-110">使用類似下列程式碼，即可利用來自程式碼後置的字串資源。</span><span class="sxs-lookup"><span data-stu-id="01a76-110">Use the string resource from code-behind, using code like the following.</span></span>  
   
      [!code-csharp[StringLocalizationSample#GetLocalizedResourceFromCode](../../../../samples/snippets/csharp/VS_Snippets_Wpf/StringLocalizationSample/CSharp/MainWindow.xaml.cs#getlocalizedresourcefromcode)]
      [!code-vb[StringLocalizationSample#GetLocalizedResourceFromCode](../../../../samples/snippets/visualbasic/VS_Snippets_Wpf/StringLocalizationSample/VisualBasic/MainWindow.xaml.vb#getlocalizedresourcefromcode)]  
   
-5.  <span data-ttu-id="1a8d6-111">將應用程式當地語系化。</span><span class="sxs-lookup"><span data-stu-id="1a8d6-111">Localize the application.</span></span> <span data-ttu-id="1a8d6-112">如需詳細資訊，請參閱[當地語系化應用程式](../../../../docs/framework/wpf/advanced/how-to-localize-an-application.md)。</span><span class="sxs-lookup"><span data-stu-id="1a8d6-112">For more information, see [Localize an Application](../../../../docs/framework/wpf/advanced/how-to-localize-an-application.md).</span></span>
+5.  <span data-ttu-id="01a76-111">將應用程式當地語系化。</span><span class="sxs-lookup"><span data-stu-id="01a76-111">Localize the application.</span></span> <span data-ttu-id="01a76-112">如需詳細資訊，請參閱[當地語系化應用程式](../../../../docs/framework/wpf/advanced/how-to-localize-an-application.md)。</span><span class="sxs-lookup"><span data-stu-id="01a76-112">For more information, see [Localize an Application](../../../../docs/framework/wpf/advanced/how-to-localize-an-application.md).</span></span>
