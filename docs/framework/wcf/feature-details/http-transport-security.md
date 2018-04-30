@@ -1,24 +1,26 @@
 ---
-title: "HTTP 傳輸安全性"
-ms.custom: 
+title: HTTP 傳輸安全性
+ms.custom: ''
 ms.date: 03/30/2017
 ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.technology: dotnet-clr
-ms.tgt_pltfrm: 
+ms.reviewer: ''
+ms.suite: ''
+ms.technology:
+- dotnet-clr
+ms.tgt_pltfrm: ''
 ms.topic: article
 ms.assetid: d3439262-c58e-4d30-9f2b-a160170582bb
-caps.latest.revision: "14"
+caps.latest.revision: 14
 author: BrucePerlerMS
 ms.author: bruceper
 manager: mbaldwin
-ms.workload: dotnet
-ms.openlocfilehash: f81a95546d593cd5a0acb6a89edf2f6c763f07df
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.workload:
+- dotnet
+ms.openlocfilehash: 2787c38603fd0f88878596a809d7e3c5cfdfb350
+ms.sourcegitcommit: 94d33cadc5ff81d2ac389bf5f26422c227832052
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 04/30/2018
 ---
 # <a name="http-transport-security"></a>HTTP 傳輸安全性
 使用 HTTP 來傳輸時，會由安全通訊端層 (SSL) 實作提供安全性。 在網際網路上會廣泛使用 SSL 以對用戶端驗證服務，進而對通道提供機密性 (加密)。 這個主題會說明 SSL 的運作方式，以及如何在 [!INCLUDE[indigo1](../../../../includes/indigo1-md.md)] 中實作 SSL。  
@@ -61,8 +63,8 @@ ms.lasthandoff: 12/22/2017
 ### <a name="using-httpcfg-for-ssl"></a>對 SSL 使用 HttpCfg  
  如果您要建立自我裝載[!INCLUDE[indigo2](../../../../includes/indigo2-md.md)]應用程式，下載 HttpCfg.exe 工具，可在[Windows XP Service Pack 2 支援工具網站](http://go.microsoft.com/fwlink/?LinkId=29002)。  
   
- [!INCLUDE[crabout](../../../../includes/crabout-md.md)]使用 HttpCfg.exe 工具來設定連接埠使用 X.509 憑證，請參閱[How to： 使用 SSL 憑證設定連接埠](../../../../docs/framework/wcf/feature-details/how-to-configure-a-port-with-an-ssl-certificate.md)。  
+ 如需有關使用 HttpCfg.exe 工具來設定連接埠使用 X.509 憑證的詳細資訊，請參閱[How to： 使用 SSL 憑證設定連接埠](../../../../docs/framework/wcf/feature-details/how-to-configure-a-port-with-an-ssl-certificate.md)。  
   
-## <a name="see-also"></a>請參閱  
+## <a name="see-also"></a>另請參閱  
  [傳輸安全性](../../../../docs/framework/wcf/feature-details/transport-security.md)  
  [訊息安全性](../../../../docs/framework/wcf/feature-details/message-security-in-wcf.md)

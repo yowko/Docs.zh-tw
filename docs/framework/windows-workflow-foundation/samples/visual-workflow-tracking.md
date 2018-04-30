@@ -1,29 +1,30 @@
 ---
-title: "Visual 工作流程追蹤"
-ms.custom: 
+title: Visual 工作流程追蹤
+ms.custom: ''
 ms.date: 03/30/2017
 ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.tgt_pltfrm: 
+ms.reviewer: ''
+ms.suite: ''
+ms.tgt_pltfrm: ''
 ms.topic: article
 ms.assetid: 0143448f-2044-40a0-8a3d-941f6d12468b
-caps.latest.revision: "10"
+caps.latest.revision: 10
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.workload: dotnet
-ms.openlocfilehash: 687cc2acbff7c85b89c4502fff863e48dada97de
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.workload:
+- dotnet
+ms.openlocfilehash: 6bf9a053eaf21f1e0612ea7b91c79755b9ef0e29
+ms.sourcegitcommit: 94d33cadc5ff81d2ac389bf5f26422c227832052
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 04/30/2018
 ---
 # <a name="visual-workflow-tracking"></a>Visual 工作流程追蹤
 這個範例示範如何使用透過 [!INCLUDE[netfx_current_short](../../../../includes/netfx-current-short-md.md)] 提供的偵錯功能，撰寫視覺化工作流程追蹤應用程式。  
   
 ## <a name="sample-details"></a>範例詳細資料  
- 應用程式會執行簡單的流程圖工作流程 (於 Workflow.xaml 中定義)，並且重新裝載工作流程設計工具，以顯示目前執行的工作流程。 工作流程執行時，目前執行的活動會以黃色外框和偵錯箭頭顯示。 此外，工作流程產生的追蹤記錄也會在應用程式視窗中顯示。 [!INCLUDE[crabout](../../../../includes/crabout-md.md)]工作流程追蹤，請參閱[工作流程追蹤](../../../../docs/framework/windows-workflow-foundation/workflow-tracking-and-tracing.md)。 [!INCLUDE[crabout](../../../../includes/crabout-md.md)]重新裝載工作流程設計工具，請參閱[重新裝載工作流程設計工具](../../../../docs/framework/windows-workflow-foundation/rehosting-the-workflow-designer.md)。  
+ 應用程式會執行簡單的流程圖工作流程 (於 Workflow.xaml 中定義)，並且重新裝載工作流程設計工具，以顯示目前執行的工作流程。 工作流程執行時，目前執行的活動會以黃色外框和偵錯箭頭顯示。 此外，工作流程產生的追蹤記錄也會在應用程式視窗中顯示。 如需工作流程追蹤的詳細資訊，請參閱[工作流程追蹤](../../../../docs/framework/windows-workflow-foundation/workflow-tracking-and-tracing.md)。 如需有關重新裝載工作流程設計工具的詳細資訊，請參閱[重新裝載工作流程設計工具](../../../../docs/framework/windows-workflow-foundation/rehosting-the-workflow-designer.md)。  
   
  工作流程模擬器是透過維持兩個字典的方式運作。 其中一個包含目前執行的活動物件與活動執行個體化所在的 XAML 行號之間的對應。 另一個包含活動執行個體 ID 與活動物件之間的對應。 使用自訂追蹤設定檔發出追蹤記錄時，應用程式會判斷目前執行之活動的執行個體 ID，並且將它對應回執行個體化該活動的 XAML 檔案。 接著會指示重新裝載的工作流程設計工具在設計工具介面上反白顯示該活動，並且使用與工作流程偵錯工具相同的方法，在活動周圍具體繪製黃色框線，並且在設計工具左側顯示黃色箭頭。  
   

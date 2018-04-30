@@ -1,48 +1,50 @@
 ---
-title: "HOW TO：在 Managed 應用程式中裝載 WCF 服務"
-ms.custom: 
+title: HOW TO：在 Managed 應用程式中裝載 WCF 服務
+ms.custom: ''
 ms.date: 03/30/2017
 ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.technology: dotnet-clr
-ms.tgt_pltfrm: 
+ms.reviewer: ''
+ms.suite: ''
+ms.technology:
+- dotnet-clr
+ms.tgt_pltfrm: ''
 ms.topic: article
 dev_langs:
 - csharp
 - vb
 ms.assetid: 5eb29db0-b6dc-4e77-8c68-0a62f79d743b
-caps.latest.revision: "42"
+caps.latest.revision: 42
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.workload: dotnet
-ms.openlocfilehash: 6491faa6134c1e80e07294d8f888200c04fa8704
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.workload:
+- dotnet
+ms.openlocfilehash: 5f2671dc381e0d3ef8f55ced01268de6205fcb7d
+ms.sourcegitcommit: 94d33cadc5ff81d2ac389bf5f26422c227832052
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 04/30/2018
 ---
 # <a name="how-to-host-a-wcf-service-in-a-managed-application"></a>HOW TO：在 Managed 應用程式中裝載 WCF 服務
 若要將服務裝載於 Managed 應用程式中，請將服務的程式碼嵌入 Managed 應用程式的程式碼，再以命令式程式碼或透過組態以宣告方式定義服務的端點 (亦可使用預設端點)，然後建立 <xref:System.ServiceModel.ServiceHost> 的執行個體。  
   
  若要開始接收訊息，請呼叫 <xref:System.ServiceModel.ICommunicationObject.Open%2A> 上的 <xref:System.ServiceModel.ServiceHost>。 這樣會建立並開啟服務的接聽項。 用這種方式來裝載服務一般稱為「自我裝載」，因為 Managed 應用程式會自行執行裝載工作。 若要關閉服務，請呼叫 <xref:System.ServiceModel.Channels.CommunicationObject.Close%2A?displayProperty=nameWithType> 上的 <xref:System.ServiceModel.ServiceHost>。  
   
- 服務也可以裝載在 Managed Windows 服務、Internet Information Services (IIS) 或 Windows Process Activation Service (WAS) 中。 [!INCLUDE[crabout](../../../includes/crabout-md.md)]裝載服務的選項，請參閱[裝載服務](../../../docs/framework/wcf/hosting-services.md)。  
+ 服務也可以裝載在 Managed Windows 服務、Internet Information Services (IIS) 或 Windows Process Activation Service (WAS) 中。 如需裝載服務選項的詳細資訊，請參閱[裝載服務](../../../docs/framework/wcf/hosting-services.md)。  
   
- 將服務裝載在 Managed 應用程式中是最有彈性的選項，因為這麼做只需要部署最基本基礎結構。 [!INCLUDE[crabout](../../../includes/crabout-md.md)]裝載在 managed 應用程式的服務，請參閱[受管理的應用程式中裝載](../../../docs/framework/wcf/feature-details/hosting-in-a-managed-application.md)。  
+ 將服務裝載在 Managed 應用程式中是最有彈性的選項，因為這麼做只需要部署最基本基礎結構。 如需有關如何在 managed 應用程式中裝載服務的詳細資訊，請參閱[受管理的應用程式中裝載](../../../docs/framework/wcf/feature-details/hosting-in-a-managed-application.md)。  
   
  下列程序示範如何在主控台應用程式中實作自我裝載的服務。  
   
 ### <a name="to-create-a-self-hosted-service"></a>若要建立自我裝載服務  
   
-1.  開啟[!INCLUDE[vs_current_long](../../../includes/vs-current-long-md.md)]選取**新增**，**專案...**從**檔案**功能表。  
+1.  開啟[!INCLUDE[vs_current_long](../../../includes/vs-current-long-md.md)]選取**新增**，**專案...** 從**檔案**功能表。  
   
 2.  在**已安裝的範本**清單中，選取**Visual C#**， **Windows**或**Visual Basic**， **Windows**. 取決於您[!INCLUDE[vs_current_long](../../../includes/vs-current-long-md.md)]設定、 一個或這兩種可能會顯示在**其他語言**節點**已安裝的範本**清單。  
   
 3.  選取**主控台應用程式**從**Windows**清單。 型別`SelfHost`中**名稱**方塊，然後按一下**確定**。  
   
-4.  以滑鼠右鍵按一下**SelfHost**中**方案總管] 中**選取**加入參考...**.選取**System.ServiceModel**從**.NET**索引標籤上，按一下 [**確定**。  
+4.  以滑鼠右鍵按一下**SelfHost**中**方案總管] 中**選取**加入參考...**.選取**System.ServiceModel**從 **.NET**索引標籤上，按一下 [**確定**。  
   
     > [!TIP]
     >  如果**方案總管 中**視窗未顯示，請選取**方案總管 中**從**檢視**功能表。  
@@ -58,7 +60,7 @@ ms.lasthandoff: 12/22/2017
      [!code-vb[CFX_SelfHost4#2](../../../samples/snippets/visualbasic/VS_Snippets_CFX/cfx_selfhost4/vb/module1.vb#2)]  
   
     > [!NOTE]
-    >  [!INCLUDE[crabout](../../../includes/crabout-md.md)]如何定義和實作服務介面，請參閱[如何： 定義服務合約](../../../docs/framework/wcf/how-to-define-a-wcf-service-contract.md)和[How to： 實作服務合約](../../../docs/framework/wcf/how-to-implement-a-wcf-contract.md)。  
+    >  如需如何定義及實作服務介面的詳細資訊，請參閱[如何： 定義服務合約](../../../docs/framework/wcf/how-to-define-a-wcf-service-contract.md)和[How to： 實作服務合約](../../../docs/framework/wcf/how-to-implement-a-wcf-contract.md)。  
   
 7.  在 `Main` 方法頂端使用服務的基底位址，建立 <xref:System.Uri> 類別的執行個體。  
   
@@ -71,7 +73,7 @@ ms.lasthandoff: 12/22/2017
      [!code-vb[CFX_SelfHost4#4](../../../samples/snippets/visualbasic/VS_Snippets_CFX/cfx_selfhost4/vb/module1.vb#4)]       
   
     > [!NOTE]
-    >  本範例將使用預設端點，所以這項服務不需要組態檔。 如果沒有設定端點，執行階段就會針對服務所實作的每份服務合約，為每個基底位址各建立一個端點。 [!INCLUDE[crabout](../../../includes/crabout-md.md)]預設端點，請參閱[簡化的組態](../../../docs/framework/wcf/simplified-configuration.md)和[簡化 WCF 服務的組態](../../../docs/framework/wcf/samples/simplified-configuration-for-wcf-services.md)。  
+    >  本範例將使用預設端點，所以這項服務不需要組態檔。 如果沒有設定端點，執行階段就會針對服務所實作的每份服務合約，為每個基底位址各建立一個端點。 如需有關預設端點的詳細資訊，請參閱[簡化的組態](../../../docs/framework/wcf/simplified-configuration.md)和[簡化 WCF 服務的組態](../../../docs/framework/wcf/samples/simplified-configuration-for-wcf-services.md)。  
   
 9. 按下 CTRL+SHIFT+B 以建置方案。  
   
@@ -84,7 +86,7 @@ ms.lasthandoff: 12/22/2017
     > [!TIP]
     >  若要開啟**WCF 測試用戶端**，開啟[!INCLUDE[vs_current_long](../../../includes/vs-current-long-md.md)]命令提示字元並執行**WcfTestClient.exe**。  
   
-3.  選取**新增服務...**從**檔案**功能表。  
+3.  選取**新增服務...** 從**檔案**功能表。  
   
 4.  型別`http://localhost:8080/hello`輸入地址 方塊，然後按一下**確定**。  
   
@@ -99,7 +101,7 @@ ms.lasthandoff: 12/22/2017
  [!code-csharp[CFX_SelfHost4#5](../../../samples/snippets/csharp/VS_Snippets_CFX/cfx_selfhost4/cs/program.cs#5)]
  [!code-vb[CFX_SelfHost4#5](../../../samples/snippets/visualbasic/VS_Snippets_CFX/cfx_selfhost4/vb/module1.vb#5)]  
   
-## <a name="see-also"></a>請參閱  
+## <a name="see-also"></a>另請參閱  
  <xref:System.Uri>  
  <xref:System.Configuration.ConfigurationManager.AppSettings%2A>  
  <xref:System.Configuration.ConfigurationManager>  

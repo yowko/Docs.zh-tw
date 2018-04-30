@@ -1,34 +1,36 @@
 ---
-title: "交易通訊協定 1.0 版"
-ms.custom: 
+title: 交易通訊協定 1.0 版
+ms.custom: ''
 ms.date: 03/30/2017
 ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.technology: dotnet-clr
-ms.tgt_pltfrm: 
+ms.reviewer: ''
+ms.suite: ''
+ms.technology:
+- dotnet-clr
+ms.tgt_pltfrm: ''
 ms.topic: article
 ms.assetid: 034679af-0002-402e-98a8-ef73dcd71bb6
-caps.latest.revision: "3"
+caps.latest.revision: 3
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.workload: dotnet
-ms.openlocfilehash: e616f989416fcee77caa9b9a5d87cfa6812eab32
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.workload:
+- dotnet
+ms.openlocfilehash: 60867daa7b8519f745c37371604807c51aa1cbb9
+ms.sourcegitcommit: 94d33cadc5ff81d2ac389bf5f26422c227832052
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 04/30/2018
 ---
 # <a name="transaction-protocols-version-10"></a>異動通訊協定 1.0 版
-[!INCLUDE[indigo1](../../../../includes/indigo1-md.md)] 第 1 版實作了 WS-Atomic 交易與 WS-Coordination 通訊協定 1.0 版。 [!INCLUDE[crabout](../../../../includes/crabout-md.md)]版本 1.1，請參閱[交易通訊協定](../../../../docs/framework/wcf/feature-details/transaction-protocols.md)。  
+[!INCLUDE[indigo1](../../../../includes/indigo1-md.md)] 第 1 版實作了 WS-Atomic 交易與 WS-Coordination 通訊協定 1.0 版。 如需 1.1 版的詳細資訊，請參閱[交易通訊協定](../../../../docs/framework/wcf/feature-details/transaction-protocols.md)。  
   
 |規格/文件|連結|  
 |-----------------------------|----------|  
 |WS-Coordination|http://msdn.microsoft.com/ws/2005/08/ws-coordination/|  
 |WS-AtomicTransaction|http://msdn.microsoft.com/ws/2005/08/ws-atomictransaction/|  
   
- 這些通訊協定規格的互通性需要滿足兩個層級：在應用程式之間，以及在交易管理員之間的層級 (請參閱下圖)。 規格詳細描述兩種互通性層級的訊息格式和訊息交換。 對應用程式之間的交換也會如同針對標準應用程式交換一樣，套用特定安全性、可靠性和編碼。 但是，交易管理員之間若要成功地達成互通性，便需要有一致的特定繫結，因為使用者通常不會設定它。  
+ 這些通訊協定規格的互通性需要滿足兩個層級：在應用程式之間，以及在異動管理員之間的層級 (請參閱下圖)。 規格詳細描述兩種互通性層級的訊息格式和訊息交換。 對應用程式之間的交換也會如同針對標準應用程式交換一樣，套用特定安全性、可靠性和編碼。 但是，交易管理員之間若要成功地達成互通性，便需要有一致的特定繫結，因為使用者通常不會設定它。  
   
  此主題描述 WS-Atomic 異動 (WS-AT) 安全性規格的組成，並且描述使用在異動管理員之間通訊的安全繫結程序。 本文件中描述的方法已經使用 WS-AT 和 WS-Coordination 的其他實作成功通過測試，其中包含 IBM、IONA、Sun Microsystems 和其他實作。  
   
@@ -78,7 +80,7 @@ ms.lasthandoff: 12/22/2017
 |o|http://docs.oasis-open.org/wss/2004/01/oasis-200401-wss-wssecurity-secext-1.0.xsd|  
 |xsd|http://www.w3.org/2001/XMLSchema|  
   
-## <a name="transaction-manager-bindings"></a>交易管理員繫結  
+## <a name="transaction-manager-bindings"></a>異動管理員繫結程序  
  R1001：交易管理員必須使用 SOAP 1.1 和 WS-Addressing 2004/08 以便交換 WS-Atomic 交易和 WS-Coordination 訊息。  
   
  應用程式訊息並不限於這些繫結，並且會在稍後描述。  

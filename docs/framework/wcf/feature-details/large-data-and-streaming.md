@@ -16,11 +16,11 @@ ms.author: dotnetcontent
 manager: wpickett
 ms.workload:
 - dotnet
-ms.openlocfilehash: b37af67a3deeed4e55939ff1c1baf73752233e94
-ms.sourcegitcommit: 03ee570f6f528a7d23a4221dcb26a9498edbdf8c
+ms.openlocfilehash: e367c11b48e6f4034afb1f42ded3498d748848a7
+ms.sourcegitcommit: 94d33cadc5ff81d2ac389bf5f26422c227832052
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/28/2018
+ms.lasthandoff: 04/30/2018
 ---
 # <a name="large-data-and-streaming"></a>大型資料與資料流
 [!INCLUDE[indigo1](../../../../includes/indigo1-md.md)] 是 XML 通訊基礎結構。 因為 XML 資料通常編碼中所定義的標準文字格式[XML 1.0 規格](http://go.microsoft.com/fwlink/?LinkId=94838)、 已連線系統開發人員和設計師通常關心傳送訊息的網路使用量 （或大小） 之間網路和以文字為基礎的編碼 XML 會造成特殊的挑戰，對有效率的二進位資料傳輸。  
@@ -246,7 +246,7 @@ public class UploadStreamMessage
   
  因此，在這種情況中，限制傳入訊息大小上限是不夠的。 必須有 `MaxBufferSize` 屬性才能限制 [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] 緩衝處理的記憶體。 重要的是在資料流處理時，將它設定為安全值 (或保留為預設值)。 例如，假設您的服務必須接收大小高達 4 GB 的檔案，然後儲存在本機磁碟上。 也請假設您的記憶體受到一次只能緩衝處理 64 KB 資料的限制。 然後您會將 `MaxReceivedMessageSize` 設定為 4 GB，而將 `MaxBufferSize` 設定為 64 KB。 同時，在您的服務實作中，必須確保您只從 64 KB 區塊的傳入資料流讀取，而且在前一個區塊寫入磁碟並從記憶體捨棄之前，不會讀取下一個區塊。  
   
- 另外很重要的是，要了解這個配額只限制 [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] 所完成的緩衝，而無法防止您在自己的服務或用戶端實作中執行的任何緩衝。 [!INCLUDE[crabout](../../../../includes/crabout-md.md)] 其他安全性考量，請參閱[資料的安全性考量](../../../../docs/framework/wcf/feature-details/security-considerations-for-data.md)。  
+ 另外很重要的是，要了解這個配額只限制 [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] 所完成的緩衝，而無法防止您在自己的服務或用戶端實作中執行的任何緩衝。 如需其他安全性考量的詳細資訊，請參閱[資料的安全性考量](../../../../docs/framework/wcf/feature-details/security-considerations-for-data.md)。  
   
 > [!NOTE]
 >  使用緩衝或資料流傳輸是由端點處決定。 如果是 HTTP 傳輸，傳輸模式不會在連線上傳播，或是在 Proxy 伺服器與其他媒介之間進行傳播。 設定傳輸模式不會反映在服務介面的描述中。 在產生 [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] 用戶端至服務之後，您必須為要搭配資料流傳輸使用的服務編輯組態檔，以設定模式。 如果是 TCP 和具名管道傳輸，會傳播傳輸模式做為原則判斷提示。  

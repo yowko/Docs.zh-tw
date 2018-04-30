@@ -16,14 +16,14 @@ ms.author: bruceper
 manager: mbaldwin
 ms.workload:
 - dotnet
-ms.openlocfilehash: 98323b4d29b68d57d3c01e9a007b5f0f9fc08377
-ms.sourcegitcommit: 03ee570f6f528a7d23a4221dcb26a9498edbdf8c
+ms.openlocfilehash: bb10d98eb96213029ae43533935312c6f1cf09c7
+ms.sourcegitcommit: 94d33cadc5ff81d2ac389bf5f26422c227832052
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/28/2018
+ms.lasthandoff: 04/30/2018
 ---
 # <a name="security-behaviors-in-wcf"></a>WCF 中的安全性行為
-在 [!INCLUDE[indigo1](../../../../includes/indigo1-md.md)] 中，行為會修改服務層級或端點層級的執行階段行為  ([!INCLUDE[crabout](../../../../includes/crabout-md.md)]行為一般情況下，請參閱[指定服務執行階段行為](../../../../docs/framework/wcf/specifying-service-run-time-behavior.md)。)*安全性行為*讓您控制認證、 驗證、 授權和稽核記錄。 您可以藉由程式設計的方式或透過組態的方式使用這些行為。 本主題將著重於設定下列與安全性功能相關的行為：  
+在 [!INCLUDE[indigo1](../../../../includes/indigo1-md.md)] 中，行為會修改服務層級或端點層級的執行階段行為  (如需有關行為一般情況下，請參閱[指定服務執行階段行為](../../../../docs/framework/wcf/specifying-service-run-time-behavior.md)。)*安全性行為*讓您控制認證、 驗證、 授權和稽核記錄。 您可以藉由程式設計的方式或透過組態的方式使用這些行為。 本主題將著重於設定下列與安全性功能相關的行為：  
   
 -   [\<serviceCredentials >](../../../../docs/framework/configure-apps/file-schema/wcf/servicecredentials.md)。  
   
@@ -38,7 +38,7 @@ ms.lasthandoff: 04/28/2018
 ## <a name="setting-credentials-with-behaviors"></a>設定認證與行為  
  使用[ \<serviceCredentials >](../../../../docs/framework/configure-apps/file-schema/wcf/servicecredentials.md)和[ \<clientCredentials >](../../../../docs/framework/configure-apps/file-schema/wcf/clientcredentials.md)來設定服務或用戶端的認證值。 基礎繫結組態會判斷是否必須設定認證。 例如，若安全性模式設定為 `None`，則用戶端和服務不需互相驗證彼此，也不需要任何類型的認證。  
   
- 另一方面，服務繫結可以要求用戶端認證類型。 在這種情況下，您必須使用行為設定認證值 ([!INCLUDE[crabout](../../../../includes/crabout-md.md)]可能的認證類型，請參閱[選取認證類型](../../../../docs/framework/wcf/feature-details/selecting-a-credential-type.md)。)在某些情況下 (如：使用 Windows 認證進行驗證時)，環境會自動建立實際的認證值，您不需要明確地設定認證值 (除非您想要指定不同的認證集合)。  
+ 另一方面，服務繫結可以要求用戶端認證類型。 在這種情況下，您必須使用行為設定認證值 (如需可能的認證類型的詳細資訊，請參閱[選取認證類型](../../../../docs/framework/wcf/feature-details/selecting-a-credential-type.md)。)在某些情況下 (如：使用 Windows 認證進行驗證時)，環境會自動建立實際的認證值，您不需要明確地設定認證值 (除非您想要指定不同的認證集合)。  
   
  所有的服務憑證會尋找子項目的所[ \<serviceBehaviors >](../../../../docs/framework/configure-apps/file-schema/wcf/servicebehaviors.md)。 下列範例示範當成服務認證使用的憑證。  
   
@@ -66,10 +66,10 @@ ms.lasthandoff: 04/28/2018
 ### <a name="servicecertificate-element"></a>\<serviceCertificate > 項目  
  使用此項目指定 X.509 憑證，而該憑證將用以驗證使用訊息安全性模式的用戶端服務。 如果您是使用會定期更新的憑證，則其指紋將會變更。 在這種情況下，請使用主體名稱當成 `X509FindType`，因為憑證可以使用相同的主體名稱重新發出。  
   
- [!INCLUDE[crabout](../../../../includes/crabout-md.md)] 使用項目，請參閱[How to： 指定用戶端認證值](../../../../docs/framework/wcf/how-to-specify-client-credential-values.md)。  
+ 如需使用元素的詳細資訊，請參閱[How to： 指定用戶端認證值](../../../../docs/framework/wcf/how-to-specify-client-credential-values.md)。  
   
 ### <a name="certificate-of-clientcertificate-element"></a>\<憑證 > 的\<clientCertificate > 項目  
- 使用[\<憑證 >](../../../../docs/framework/configure-apps/file-schema/wcf/certificate-of-clientcertificate-element.md)項目時，服務必須具有用戶端憑證，進而與用戶端安全地通訊。 這種情況發生在使用雙工通訊模式時。 在較為典型的要求-回覆模式下，用戶端會在要求中納入其憑證，以便讓服務使用此憑證安全地將回覆傳回用戶端。 不過，雙工通訊模式便沒有要求和回覆。 由於服務無法從通訊中推斷用戶端的憑證，服務即需要用戶端的憑證，以便與用戶端安全地傳遞訊息。 您必須以頻外的方式來取得用戶端的憑證，並使用此元素來指定憑證。 [!INCLUDE[crabout](../../../../includes/crabout-md.md)] 雙工服務，請參閱[How to： 建立雙工合約](../../../../docs/framework/wcf/feature-details/how-to-create-a-duplex-contract.md)。  
+ 使用[\<憑證 >](../../../../docs/framework/configure-apps/file-schema/wcf/certificate-of-clientcertificate-element.md)項目時，服務必須具有用戶端憑證，進而與用戶端安全地通訊。 這種情況發生在使用雙工通訊模式時。 在較為典型的要求-回覆模式下，用戶端會在要求中納入其憑證，以便讓服務使用此憑證安全地將回覆傳回用戶端。 不過，雙工通訊模式便沒有要求和回覆。 由於服務無法從通訊中推斷用戶端的憑證，服務即需要用戶端的憑證，以便與用戶端安全地傳遞訊息。 您必須以頻外的方式來取得用戶端的憑證，並使用此元素來指定憑證。 如需雙工服務的詳細資訊，請參閱[How to： 建立雙工合約](../../../../docs/framework/wcf/feature-details/how-to-create-a-duplex-contract.md)。  
   
 ### <a name="authentication-of-clientcertificate-element"></a>\<驗證 > 的\<clientCertificate > 項目  
  [\<驗證 >](../../../../docs/framework/configure-apps/file-schema/wcf/authentication-of-clientcertificate-element.md)項目可讓您自訂用戶端的驗證方式。 您可以將 `CertificateValidationMode` 屬性 (Attribute) 設定為 `None`、`ChainTrust`、`PeerOrChainTrust`、`PeerTrust` 或 `Custom`。 根據預設，層級設為`ChainTrust`，指定的每個憑證必須出現在結尾中的憑證階層中*根授權*在鏈結頂端。 這是最安全的模式。 您也可以將值設定為 `PeerOrChainTrust`，指定可接受自行發出的憑證 (對等信任)，以及信任鏈結內的憑證。 這個值會在開發及偵錯用戶端和服務時使用，因為自行發出的憑證不需要從受信任的授權單位購買。 部署用戶端時，請改用 `ChainTrust` 值。 您也可以將值設定為 `Custom`。 設定為 `Custom` 值時，您還必須將 `CustomCertificateValidatorType` 屬性設定為可用來驗證憑證的組件與型別。 若要建立自己的自訂驗證程式，您必須繼承自抽象 <xref:System.IdentityModel.Selectors.X509CertificateValidator> 類別。  
@@ -97,7 +97,7 @@ ms.lasthandoff: 04/28/2018
   
  如需詳細資訊，請參閱<xref:System.IdentityModel.Selectors.SamlSecurityTokenAuthenticator>。  
   
- [!INCLUDE[crabout](../../../../includes/crabout-md.md)] 使用這個組態項目，請參閱[How to： 設定聯合服務的認證](../../../../docs/framework/wcf/feature-details/how-to-configure-credentials-on-a-federation-service.md)。  
+ 如需有關使用這個組態項目，請參閱[How to： 設定聯合服務的認證](../../../../docs/framework/wcf/feature-details/how-to-configure-credentials-on-a-federation-service.md)。  
   
 #### <a name="allowing-anonymous-cardspace-users"></a>允許匿名的 CardSpace 使用者  
  將 `AllowUntrustedRsaIssuers` 項目的 `<IssuedTokenAuthentication>` 屬性設定為 `true`，以明確地允許任何用戶端提出以任一 RSA 金鑰組所簽署之自行發行的權杖。 簽發者是*不受信任*因為索引鍵沒有任何與其相關聯的簽發者資料。 [!INCLUDE[infocard](../../../../includes/infocard-md.md)] 使用者可以建立自動發行資訊卡，其中包含自行提供的身分識別宣告。 使用這個功能時必須要很小心。 若要使用此功能，請考慮使用 RSA 公開金鑰做為更安全的密碼，這個金鑰應該與使用者名稱一起儲存在資料庫中。 允許用戶端存取服務之前，請確認用戶端所提出的 RSA 公開金鑰，此動作可透過將用戶端所提出的 RSA 公開金鑰與所呈現之使用者名稱對應的儲存公開金鑰進行比較來達成。 這個情況是假設您已建立註冊程式，以便讓使用者註冊其使用者名稱，並將其與自行發行的 RSA 公開金鑰產生關聯。  
@@ -105,7 +105,7 @@ ms.lasthandoff: 04/28/2018
 ## <a name="client-credentials"></a>用戶端認證  
  在需要雙向驗證的情況下，用戶端認證可用於驗證服務的用戶端。 在用戶端必須以服務的憑證保護傳遞給服務的訊息時，您可以使用此章節的說明指定服務憑證。  
   
- 您也可以將用戶端設定為同盟案例的一部分，以便從安全權杖服務或權杖的本機簽發者使用發行的權杖。 [!INCLUDE[crabout](../../../../includes/crabout-md.md)] 聯合的實例，請參閱[同盟和發出的權杖](../../../../docs/framework/wcf/feature-details/federation-and-issued-tokens.md)。 在下找到的所有用戶端認證[ \<endpointBehaviors >](../../../../docs/framework/configure-apps/file-schema/wcf/endpointbehaviors.md)，如下列程式碼所示。  
+ 您也可以將用戶端設定為同盟案例的一部分，以便從安全權杖服務或權杖的本機簽發者使用發行的權杖。 如需聯合案例的詳細資訊，請參閱[同盟和發出的權杖](../../../../docs/framework/wcf/feature-details/federation-and-issued-tokens.md)。 在下找到的所有用戶端認證[ \<endpointBehaviors >](../../../../docs/framework/configure-apps/file-schema/wcf/endpointbehaviors.md)，如下列程式碼所示。  
   
 ```xml  
 <behaviors>  

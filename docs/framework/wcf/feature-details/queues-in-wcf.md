@@ -1,28 +1,28 @@
 ---
-title: "Windows Communication Foundation 中的佇列"
-ms.custom: 
+title: Windows Communication Foundation 中的佇列
+ms.custom: ''
 ms.date: 03/30/2017
 ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
+ms.reviewer: ''
+ms.suite: ''
 ms.technology:
 - dotnet-clr
-ms.tgt_pltfrm: 
+ms.tgt_pltfrm: ''
 ms.topic: article
 helpviewer_keywords:
 - queues [WCF]
 ms.assetid: 43008409-1bb4-4bd4-85d7-862c8f10ae20
-caps.latest.revision: 
+caps.latest.revision: 17
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
 ms.workload:
 - dotnet
-ms.openlocfilehash: 4dfc78d355db4bd8c9d43541545e6fac35086b39
-ms.sourcegitcommit: c0dd436f6f8f44dc80dc43b07f6841a00b74b23f
+ms.openlocfilehash: 82eb421b86f57cfe7c9a23de3ab24de2d4c470cb
+ms.sourcegitcommit: 94d33cadc5ff81d2ac389bf5f26422c227832052
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 01/19/2018
+ms.lasthandoff: 04/30/2018
 ---
 # <a name="queues-in-windows-communication-foundation"></a>Windows Communication Foundation 中的佇列
 本節中的主題討論 [!INCLUDE[indigo1](../../../../includes/indigo1-md.md)] 對佇列的支援。 [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] 利用 Microsoft Message Queuing (舊稱 MSMQ) 做為傳輸，以支援佇列功能，並且可以完成下列案例：  
@@ -35,7 +35,7 @@ ms.lasthandoff: 01/19/2018
   
 -   中斷操作。 當透過高延遲網路或可用性有限的網路進行通訊時 (例如使用行動裝置)，傳送、接收和處理操作可能中斷。 佇列能夠使這些操作繼續進行，即使已經與端點中斷連線也是一樣。 重新建立連線後，佇列會將訊息轉送至接收應用程式。  
   
- 若要使用 [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] 應用程式中的佇列功能，您可以使用其中一個標準繫結，或者如果其中一個標準繫結無法滿足您的需求時，您可以建立自訂繫結。 [!INCLUDE[crabout](../../../../includes/crabout-md.md)]相關的標準繫結，以及如何選擇一個，請參閱[How to： 與 WCF 端點和訊息佇列應用程式交換訊息](../../../../docs/framework/wcf/feature-details/how-to-exchange-messages-with-wcf-endpoints-and-message-queuing-applications.md)。 [!INCLUDE[crabout](../../../../includes/crabout-md.md)]建立自訂繫結，請參閱[自訂繫結](../../../../docs/framework/wcf/extending/custom-bindings.md)。  
+ 若要使用 [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] 應用程式中的佇列功能，您可以使用其中一個標準繫結，或者如果其中一個標準繫結無法滿足您的需求時，您可以建立自訂繫結。 如需相關的標準繫結，以及如何選擇其中一個的詳細資訊，請參閱[How to： 與 WCF 端點和訊息佇列應用程式交換訊息](../../../../docs/framework/wcf/feature-details/how-to-exchange-messages-with-wcf-endpoints-and-message-queuing-applications.md)。 如需有關如何建立自訂繫結的詳細資訊，請參閱[自訂繫結](../../../../docs/framework/wcf/extending/custom-bindings.md)。  
   
 ## <a name="in-this-section"></a>本節內容  
  [佇列概觀](../../../../docs/framework/wcf/feature-details/queues-overview.md)  
@@ -77,5 +77,5 @@ ms.lasthandoff: 01/19/2018
  [佇列通訊的最佳做法](../../../../docs/framework/wcf/feature-details/best-practices-for-queued-communication.md)  
  說明使用 [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] 佇列通訊的最佳做法。  
   
-## <a name="see-also"></a>請參閱  
+## <a name="see-also"></a>另請參閱  
  [訊息佇列](http://msdn.microsoft.com/library/ff917e87-05d5-478f-9430-0f560675ece1)

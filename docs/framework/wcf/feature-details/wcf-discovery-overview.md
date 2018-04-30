@@ -16,11 +16,11 @@ ms.author: dotnetcontent
 manager: wpickett
 ms.workload:
 - dotnet
-ms.openlocfilehash: 7b44a1587c704b0995821c7126f0264695861558
-ms.sourcegitcommit: 03ee570f6f528a7d23a4221dcb26a9498edbdf8c
+ms.openlocfilehash: c0ac6cec6a86b431d71534880f1a883d648c4332
+ms.sourcegitcommit: 94d33cadc5ff81d2ac389bf5f26422c227832052
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/28/2018
+ms.lasthandoff: 04/30/2018
 ---
 # <a name="wcf-discovery-overview"></a>WCF 探索概觀
 探索 API 為使用 WS-Discovery 通訊協定動態發行和探索 Web 服務的作業，提供了統一的程式設計模型。 這些 API 可讓服務自行發行，並且讓用戶端尋找發行的服務。 一旦服務變成可探索，就能夠傳送公告訊息，以及接聽和回應探索要求。 可探索的服務可以傳送 Hello 訊息，公告服務抵達網路，以及傳送 Bye 訊息，公告服務離開網路。 若要尋找服務，用戶端可傳送包含特定準則的 `Probe` 要求，例如服務合約型別、關鍵字以及在網路上的範圍。 服務會接收 `Probe` 要求並判斷是否符合準則。 如果服務符合準則，則會將 `ProbeMatch` 訊息傳回至用戶端做為回應，其中包含連絡服務所需的資訊。 用戶端也可以傳送 `Resolve` 要求，以尋找可能已變更其端點位址的服務。 相符的服務會透過將 `Resolve` 訊息傳回用戶端的方式回應 `ResolveMatch` 要求。  
@@ -159,7 +159,7 @@ class Client
 ```  
   
 ## <a name="discovery-and-message-level-security"></a>探索和訊息層級安全性  
- 使用訊息層級安全性時，必須在服務探索端點上指定 <xref:System.ServiceModel.EndpointIdentity>，並在用戶端探索端點上指定相符的 <xref:System.ServiceModel.EndpointIdentity>。 [!INCLUDE[crabout](../../../../includes/crabout-md.md)] 訊息層級安全性，請參閱[訊息安全性](../../../../docs/framework/wcf/feature-details/message-security-in-wcf.md)。  
+ 使用訊息層級安全性時，必須在服務探索端點上指定 <xref:System.ServiceModel.EndpointIdentity>，並在用戶端探索端點上指定相符的 <xref:System.ServiceModel.EndpointIdentity>。 如需詳細訊息層級安全性的詳細資訊，請參閱[訊息安全性](../../../../docs/framework/wcf/feature-details/message-security-in-wcf.md)。  
   
 ## <a name="discovery-and-web-hosted-services"></a>探索和 Web 裝載的服務  
  WCF 服務必須處於執行中狀態，才能呈現可探索狀態。 在 IIS 或 WAS 底下裝載的 WCF 服務要等到 IIS/WAS 接收預定傳送至服務的訊息時才會執行，因此這些服務預設無法呈現可探索狀態。  有兩個選項可讓 Web 裝載的服務呈現可探索狀態：  
@@ -168,9 +168,9 @@ class Client
   
 2.  使用探索 Proxy 來代表服務通訊  
   
- Windows Server AppFabric 具有自動啟動功能，可讓服務在接收任何訊息之前啟動。 設定這項自動啟動功能之後，即可將 IIS/WAS 裝載的服務設定為可探索。 [!INCLUDE[crabout](../../../../includes/crabout-md.md)] 自動啟動功能，請參閱[Windows Server AppFabric 自動啟動功能](http://go.microsoft.com/fwlink/?LinkId=205545)。 除了開啟自動啟動功能以外，您也必須針對探索設定服務。 如需詳細資訊，請參閱[How to： 以程式設計方式將探索能力的 WCF 服務和用戶端](../../../../docs/framework/wcf/feature-details/how-to-programmatically-add-discoverability-to-a-wcf-service-and-client.md)[組態檔中設定的探索](../../../../docs/framework/wcf/feature-details/configuring-discovery-in-a-configuration-file.md)。  
+ Windows Server AppFabric 具有自動啟動功能，可讓服務在接收任何訊息之前啟動。 設定這項自動啟動功能之後，即可將 IIS/WAS 裝載的服務設定為可探索。 如需有關自動啟動功能，請參閱[Windows Server AppFabric 自動啟動功能](http://go.microsoft.com/fwlink/?LinkId=205545)。 除了開啟自動啟動功能以外，您也必須針對探索設定服務。 如需詳細資訊，請參閱[How to： 以程式設計方式將探索能力的 WCF 服務和用戶端](../../../../docs/framework/wcf/feature-details/how-to-programmatically-add-discoverability-to-a-wcf-service-and-client.md)[組態檔中設定的探索](../../../../docs/framework/wcf/feature-details/configuring-discovery-in-a-configuration-file.md)。  
   
- 當 WCF 服務並未執行時，探索 Proxy 可用來代表服務通訊。 此 Proxy 可接聽探查或解析訊息並回應用戶端。 然後，用戶端就可以將訊息直接傳送至服務。 當用戶端將訊息傳送至服務時，服務將具現化以回應訊息。 [!INCLUDE[crabout](../../../../includes/crabout-md.md)] 實作探索 proxy，請參閱[實作探索 Proxy](../../../../docs/framework/wcf/feature-details/implementing-a-discovery-proxy.md)。  
+ 當 WCF 服務並未執行時，探索 Proxy 可用來代表服務通訊。 此 Proxy 可接聽探查或解析訊息並回應用戶端。 然後，用戶端就可以將訊息直接傳送至服務。 當用戶端將訊息傳送至服務時，服務將具現化以回應訊息。 如需有關實作探索 proxy，請參閱[實作探索 Proxy](../../../../docs/framework/wcf/feature-details/implementing-a-discovery-proxy.md)。  
   
 > [!NOTE]
 >  WCF 探索才能正常運作，所有 Nic （網路介面控制器） 應該都只有 1 個 IP 位址。

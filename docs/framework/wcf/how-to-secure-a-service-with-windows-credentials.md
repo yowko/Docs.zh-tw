@@ -21,14 +21,14 @@ ms.author: bruceper
 manager: mbaldwin
 ms.workload:
 - dotnet
-ms.openlocfilehash: c754a4ec57751b2ca5a809c771b2fb5235ec0510
-ms.sourcegitcommit: 03ee570f6f528a7d23a4221dcb26a9498edbdf8c
+ms.openlocfilehash: 2828b6b9df313bab5a904712ad4e97cc7062f387
+ms.sourcegitcommit: 94d33cadc5ff81d2ac389bf5f26422c227832052
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/28/2018
+ms.lasthandoff: 04/30/2018
 ---
 # <a name="how-to-secure-a-service-with-windows-credentials"></a>HOW TO：使用 Windows 認證來確保服務安全
-本主題說明如何在上啟用傳輸安全性[!INCLUDE[indigo1](../../../includes/indigo1-md.md)]位於 Windows 網域，且由相同的網域中的用戶端呼叫服務。 [!INCLUDE[crabout](../../../includes/crabout-md.md)] 此案例中，請參閱[Windows 驗證的傳輸安全性](../../../docs/framework/wcf/feature-details/transport-security-with-windows-authentication.md)。 範例應用程式，請參閱[WSHttpBinding](../../../docs/framework/wcf/samples/wshttpbinding.md)範例。  
+本主題說明如何在上啟用傳輸安全性[!INCLUDE[indigo1](../../../includes/indigo1-md.md)]位於 Windows 網域，且由相同的網域中的用戶端呼叫服務。 如需有關此案例的詳細資訊，請參閱[Windows 驗證的傳輸安全性](../../../docs/framework/wcf/feature-details/transport-security-with-windows-authentication.md)。 範例應用程式，請參閱[WSHttpBinding](../../../docs/framework/wcf/samples/wshttpbinding.md)範例。  
   
  這個主題假設您擁有現有的合約介面、已定義了實作 (Implementation)，以及一些附加內容。 您也可以修改現有的服務和用戶端。  
   
@@ -57,7 +57,7 @@ ms.lasthandoff: 04/28/2018
      [!code-vb[c_SecureWindowsService#1](../../../samples/snippets/visualbasic/VS_Snippets_CFX/c_securewindowsservice/vb/secureservice.vb#1)]  
   
 ### <a name="using-the-binding-in-a-service"></a>在服務中使用繫結  
- 這是第二個程序，說明如何在自我裝載的服務中使用繫結。 [!INCLUDE[crabout](../../../includes/crabout-md.md)] 裝載服務，請參閱[裝載服務](../../../docs/framework/wcf/hosting-services.md)。  
+ 這是第二個程序，說明如何在自我裝載的服務中使用繫結。 如需主機服務的詳細資訊，請參閱[裝載服務](../../../docs/framework/wcf/hosting-services.md)。  
   
 ##### <a name="to-use-a-binding-in-a-service"></a>在服務中使用繫結  
   

@@ -1,24 +1,26 @@
 ---
-title: "路由服務"
-ms.custom: 
+title: 路由服務
+ms.custom: ''
 ms.date: 03/30/2017
 ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.technology: dotnet-clr
-ms.tgt_pltfrm: 
+ms.reviewer: ''
+ms.suite: ''
+ms.technology:
+- dotnet-clr
+ms.tgt_pltfrm: ''
 ms.topic: article
 ms.assetid: ca7c216a-5141-4132-8193-102c181d2eba
-caps.latest.revision: "13"
+caps.latest.revision: 13
 author: wadepickett
 ms.author: wpickett
 manager: wpickett
-ms.workload: dotnet
-ms.openlocfilehash: a7214a14b11ae1f91906c8d2140bc82836988390
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.workload:
+- dotnet
+ms.openlocfilehash: 8ff2a99bc06ab0de2aedce98ea029f484e47053f
+ms.sourcegitcommit: 94d33cadc5ff81d2ac389bf5f26422c227832052
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 04/30/2018
 ---
 # <a name="routing-service"></a>路由服務
 「路由服務」是一種泛型 SOAP 媒介，可做為訊息路由器。 路由服務的核心功能是可根據訊息內容傳送訊息的能力，這可讓訊息根據訊息 (不論是標頭或訊息本文) 內部本身的值轉送至用戶端端點。  
@@ -98,12 +100,12 @@ ms.lasthandoff: 12/22/2017
   
  如果路由服務在嘗試傳送訊息時發生 <xref:System.ServiceModel.CommunicationException> 情況，錯誤處理便會開始。  這些例外狀況通常表示，嘗試與定義的用戶端端點 (如 <xref:System.ServiceModel.EndpointNotFoundException>、<xref:System.ServiceModel.ServerTooBusyException> 或 <xref:System.ServiceModel.CommunicationObjectFaultedException>) 進行通訊時發生問題。  錯誤處理程式碼也會攔截並嘗試重新傳送時**TimeoutException**發生時，這是另一個常見的例外狀況不衍生自**CommunicationException**。  
   
- [!INCLUDE[crabout](../../../../includes/crabout-md.md)]錯誤處理，請參閱[路由簡介](../../../../docs/framework/wcf/feature-details/routing-introduction.md)。  
+ 如需有關錯誤處理的詳細資訊，請參閱[路由簡介](../../../../docs/framework/wcf/feature-details/routing-introduction.md)。  
   
 ## <a name="backup-endpoints"></a>備份端點  
  除了篩選資料表中與每個篩選定義關聯的目的地用戶端端點之外，您也可以建立備份端點清單，在傳輸失敗時傳送訊息至該端點。 如果錯誤發生且備份清單是用於篩選項目，路由服務便會嘗試將訊息傳送至已在清單中定義的第一個端點。 如果此次傳輸失敗，服務會嘗試下一個端點並繼續此程序，直到傳輸成功、傳回非傳輸相關的錯誤，或備份清單中的所有端點已傳回傳輸錯誤。  
   
- [!INCLUDE[crabout](../../../../includes/crabout-md.md)]備份端點，請參閱[路由簡介](../../../../docs/framework/wcf/feature-details/routing-introduction.md)和[訊息篩選條件](../../../../docs/framework/wcf/feature-details/message-filters.md)。  
+ 如需有關備份端點的詳細資訊，請參閱[路由簡介](../../../../docs/framework/wcf/feature-details/routing-introduction.md)和[訊息篩選條件](../../../../docs/framework/wcf/feature-details/message-filters.md)。  
   
 ## <a name="streaming"></a>資料流  
  如果您將繫結設定為支援資料流，路由服務就可以成功地串流處理訊息。  不過，在某些情況下，您可能必須緩衝處理訊息：  
@@ -116,7 +118,7 @@ ms.lasthandoff: 12/22/2017
   
 -   動態組態  
   
-## <a name="see-also"></a>請參閱  
+## <a name="see-also"></a>另請參閱  
  [路由簡介](../../../../docs/framework/wcf/feature-details/routing-introduction.md)  
  [路由合約](../../../../docs/framework/wcf/feature-details/routing-contracts.md)  
  [訊息篩選](../../../../docs/framework/wcf/feature-details/message-filters.md)

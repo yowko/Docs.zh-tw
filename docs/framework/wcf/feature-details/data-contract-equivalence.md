@@ -21,11 +21,11 @@ ms.author: dotnetcontent
 manager: wpickett
 ms.workload:
 - dotnet
-ms.openlocfilehash: 9d4463a04ac2113778d9ea0d315beeef7d564764
-ms.sourcegitcommit: 03ee570f6f528a7d23a4221dcb26a9498edbdf8c
+ms.openlocfilehash: aebd21186f7d038dfa5d7c3c65f833d41f4a1f71
+ms.sourcegitcommit: 94d33cadc5ff81d2ac389bf5f26422c227832052
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/28/2018
+ms.lasthandoff: 04/30/2018
 ---
 # <a name="data-contract-equivalence"></a>資料合約等價
 若要讓用戶端成功地將特定型別的資料傳送至服務，或讓服務成功地將資料傳送至用戶端，傳送的型別不一定要存在於接收端。 唯一的需求是這兩個型別的資料合約必須相等  (某些情況下，嚴格對等不是必要項目，如所述[資料合約版本控制](../../../../docs/framework/wcf/feature-details/data-contract-versioning.md)。)  
@@ -37,7 +37,7 @@ ms.lasthandoff: 04/28/2018
 > [!NOTE]
 >  請注意，資料合約名稱、命名空間和資料成員名稱必須區分大小寫。  
   
- [!INCLUDE[crabout](../../../../includes/crabout-md.md)] 資料合約名稱和命名空間，以及資料成員名稱，請參閱[資料合約名稱](../../../../docs/framework/wcf/feature-details/data-contract-names.md)。  
+ 如需資料合約名稱和命名空間，以及資料成員名稱的詳細資訊，請參閱[資料合約名稱](../../../../docs/framework/wcf/feature-details/data-contract-names.md)。  
   
  如果兩個型別存在於同一端 (傳送者或接收者)，但資料合約不相等 (例如，具有不同的資料成員)，則不應該為它們指定相同的名稱和命名空間。 這樣做可能會導致擲回例外狀況。  
   

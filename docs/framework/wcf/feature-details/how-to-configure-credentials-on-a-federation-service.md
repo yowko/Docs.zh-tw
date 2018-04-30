@@ -22,20 +22,20 @@ ms.author: dotnetcontent
 manager: wpickett
 ms.workload:
 - dotnet
-ms.openlocfilehash: ffb33ea70f67e209648e470656a2719404dd7f2d
-ms.sourcegitcommit: 03ee570f6f528a7d23a4221dcb26a9498edbdf8c
+ms.openlocfilehash: 063f4da3ca920f17f77b3cc53f7c5903fc89b8cf
+ms.sourcegitcommit: 94d33cadc5ff81d2ac389bf5f26422c227832052
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/28/2018
+ms.lasthandoff: 04/30/2018
 ---
 # <a name="how-to-configure-credentials-on-a-federation-service"></a>HOW TO：設定聯合服務的認證
 在 [!INCLUDE[indigo1](../../../../includes/indigo1-md.md)] 中，建立聯合服務認證的過程包含了下列主要程序：  
   
-1.  設定 <xref:System.ServiceModel.WSFederationHttpBinding> 或類似的自訂繫結。 [!INCLUDE[crabout](../../../../includes/crabout-md.md)] 建立適當的繫結，請參閱[How to： 建立 WSFederationHttpBinding](../../../../docs/framework/wcf/feature-details/how-to-create-a-wsfederationhttpbinding.md)。  
+1.  設定 <xref:System.ServiceModel.WSFederationHttpBinding> 或類似的自訂繫結。 如需有關建立適當的繫結的詳細資訊，請參閱[How to： 建立 WSFederationHttpBinding](../../../../docs/framework/wcf/feature-details/how-to-create-a-wsfederationhttpbinding.md)。  
   
 2.  設定 <xref:System.ServiceModel.Security.IssuedTokenServiceCredential>，此認證可控制如何驗證提供給服務的已發行權杖。  
   
- 本主題會提供第二個步驟的詳細資訊。 [!INCLUDE[crabout](../../../../includes/crabout-md.md)] 如何聯合的服務的運作方式，請參閱[同盟](../../../../docs/framework/wcf/feature-details/federation.md)。  
+ 本主題會提供第二個步驟的詳細資訊。 如需同盟的服務的運作方式的詳細資訊，請參閱[同盟](../../../../docs/framework/wcf/feature-details/federation.md)。  
   
 ### <a name="to-set-the-properties-of-issuedtokenservicecredential-in-code"></a>使用程式碼來設定 IssuedTokenServiceCredential 的屬性  
   
@@ -80,7 +80,7 @@ ms.lasthandoff: 04/28/2018
   
 -   當已發行權杖的簽章使用 X.509 簽發者序號、X.509 主體金鑰識別碼或 X.509 指紋安全性識別碼時，已發行權杖必須由 <xref:System.ServiceModel.Security.IssuedTokenServiceCredential.KnownCertificates%2A> 類別之 <xref:System.ServiceModel.Security.IssuedTokenServiceCredential> 屬性所傳回集合中的憑證完成簽署。  
   
--   當已發行權杖使用 X.509 憑證完成簽署時，該憑證都必須根據 <xref:System.ServiceModel.Security.X509ServiceCertificateAuthentication.CertificateValidationMode%2A> 屬性值所指定的語意進行驗證，無論該憑證是否當做 <xref:System.IdentityModel.Tokens.X509RawDataKeyIdentifierClause> 傳送到信賴憑證者或者是從 <xref:System.ServiceModel.Security.IssuedTokenServiceCredential.KnownCertificates%2A> 屬性取得。 [!INCLUDE[crabout](../../../../includes/crabout-md.md)] X.509 憑證驗證，請參閱[使用憑證](../../../../docs/framework/wcf/feature-details/working-with-certificates.md)。  
+-   當已發行權杖使用 X.509 憑證完成簽署時，該憑證都必須根據 <xref:System.ServiceModel.Security.X509ServiceCertificateAuthentication.CertificateValidationMode%2A> 屬性值所指定的語意進行驗證，無論該憑證是否當做 <xref:System.IdentityModel.Tokens.X509RawDataKeyIdentifierClause> 傳送到信賴憑證者或者是從 <xref:System.ServiceModel.Security.IssuedTokenServiceCredential.KnownCertificates%2A> 屬性取得。 如需 X.509 憑證驗證的詳細資訊，請參閱[使用憑證](../../../../docs/framework/wcf/feature-details/working-with-certificates.md)。  
   
  例如，將 <xref:System.ServiceModel.Security.IssuedTokenServiceCredential.CertificateValidationMode%2A> 設定為 <xref:System.ServiceModel.Security.X509CertificateValidationMode.PeerTrust>，便會對任何簽署憑證是位於 `TrustedPeople` 憑證存放區中的憑證進行驗證。 在此情況下，請將 <xref:System.ServiceModel.Security.IssuedTokenServiceCredential.TrustedStoreLocation%2A> 屬性設定為 <xref:System.Security.Cryptography.X509Certificates.StoreLocation.CurrentUser> 或 <xref:System.Security.Cryptography.X509Certificates.StoreLocation.LocalMachine>。 您可以選擇包括 <xref:System.ServiceModel.Security.X509CertificateValidationMode.Custom> 的其他模式。 若是選擇 `Custom`，您就必須將 <xref:System.IdentityModel.Selectors.X509CertificateValidator> 類別的執行個體指派給 <xref:System.ServiceModel.Security.IssuedTokenServiceCredential.CustomCertificateValidator%2A> 屬性。 自訂驗證器可以使用其所偏好的任何準則來驗證憑證。 如需詳細資訊，請參閱[How to： 建立採用自訂憑證驗證程式服務](../../../../docs/framework/wcf/extending/how-to-create-a-service-that-employs-a-custom-certificate-validator.md)。  
   

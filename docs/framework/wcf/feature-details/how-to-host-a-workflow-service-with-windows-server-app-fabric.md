@@ -1,27 +1,29 @@
 ---
-title: "HOW TO：使用 Windows Server App Fabric 裝載工作流程服務"
-ms.custom: 
+title: HOW TO：使用 Windows Server App Fabric 裝載工作流程服務
+ms.custom: ''
 ms.date: 03/30/2017
 ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.technology: dotnet-clr
-ms.tgt_pltfrm: 
+ms.reviewer: ''
+ms.suite: ''
+ms.technology:
+- dotnet-clr
+ms.tgt_pltfrm: ''
 ms.topic: article
 ms.assetid: 83b62cce-5fc2-4c6d-b27c-5742ba3bac73
-caps.latest.revision: "7"
+caps.latest.revision: 7
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.workload: dotnet
-ms.openlocfilehash: fc7af813f7fff422a2513c58c9e3cba6376de060
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.workload:
+- dotnet
+ms.openlocfilehash: ef60a291af39a39d3427d74b8a6ea7d00382c8d6
+ms.sourcegitcommit: 94d33cadc5ff81d2ac389bf5f26422c227832052
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 04/30/2018
 ---
 # <a name="how-to-host-a-workflow-service-with-windows-server-app-fabric"></a>HOW TO：使用 Windows Server App Fabric 裝載工作流程服務
-在 AppFabric 中裝載工作流程服務與在 IIS/WAS 底下裝載很相似。 唯一的差異在於 AppFabric 針對部署、監視和管理工作流程服務所提供的工具。 本主題會使用工作流程服務中建立[建立長時間執行工作流程服務](../../../../docs/framework/wcf/feature-details/creating-a-long-running-workflow-service.md)。 該主題將逐步引導您建立工作流程服務。 本主題會說明如何使用 AppFabric 來裝載工作流程服務。 [!INCLUDE[crabout](../../../../includes/crabout-md.md)]Windows Server App Fabric，請參閱[Windows Server App Fabric 文件](http://go.microsoft.com/fwlink/?LinkID=193037&clcid=0x409)。 完成下列步驟之前，請先確定您已安裝 Windows Server AppFabric。  若要執行這會開啟 Internet Information services (inetmgr.exe)，按一下您的伺服器名稱**連線**檢視中，按一下 [網站]，然後按一下**Default Web Site**。 在右手邊的畫面應該會看到一節**App Fabric**。 如果您沒有看見此區段 (位於右側窗格的頂端)，表示您沒有安裝 App Fabric。 [!INCLUDE[crabout](../../../../includes/crabout-md.md)]安裝 Windows Server App Fabric 看到[安裝 Windows Server App Fabric](http://go.microsoft.com/fwlink/?LinkId=193136)。  
+在 AppFabric 中裝載工作流程服務與在 IIS/WAS 底下裝載很相似。 唯一的差異在於 AppFabric 針對部署、監視和管理工作流程服務所提供的工具。 本主題會使用工作流程服務中建立[建立長時間執行工作流程服務](../../../../docs/framework/wcf/feature-details/creating-a-long-running-workflow-service.md)。 該主題將逐步引導您建立工作流程服務。 本主題會說明如何使用 AppFabric 來裝載工作流程服務。 如需有關 Windows Server App Fabric 的詳細資訊，請參閱[Windows Server App Fabric 文件](http://go.microsoft.com/fwlink/?LinkID=193037&clcid=0x409)。 完成下列步驟之前，請先確定您已安裝 Windows Server AppFabric。  若要執行這會開啟 Internet Information services (inetmgr.exe)，按一下您的伺服器名稱**連線**檢視中，按一下 [網站]，然後按一下**Default Web Site**。 在右手邊的畫面應該會看到一節**App Fabric**。 如果您沒有看見此區段 (位於右側窗格的頂端)，表示您沒有安裝 App Fabric。 如需安裝 Windows Server App Fabric 的詳細資訊，請參閱[安裝 Windows Server App Fabric](http://go.microsoft.com/fwlink/?LinkId=193136)。  
   
 ### <a name="creating-a-simple-workflow-service"></a>建立簡單的工作流程服務  
   
@@ -51,37 +53,37 @@ ms.lasthandoff: 12/22/2017
   
      ![App Fabric 組態監視索引標籤](../../../../docs/framework/wcf/feature-details/media/appfabricconfiguration-monitoring.gif "AppFabricConfiguration 監視")  
   
-     [!INCLUDE[crabout](../../../../includes/crabout-md.md)]設定工作流程服務監視在 Appfabric 中看到[設定監視使用 App Fabric](http://go.microsoft.com/fwlink/?LinkId=193153)。  
+     如需有關設定工作流程服務監視在 Appfabric 中看到[設定監視使用 App Fabric](http://go.microsoft.com/fwlink/?LinkId=193153)。  
   
 6.  選取**工作流程持續性** 索引標籤。這樣可讓您將應用程式設定為使用 AppFabric 的預設持續性提供者，如下列螢幕擷取畫面所示。  
   
-     ![App Fabric 組態 &#45;持續性](../../../../docs/framework/wcf/feature-details/media/appfabricconfiguration-persistence.gif "AppFabricConfiguration 持續性")  
+     ![App Fabric 組態&#45;持續性](../../../../docs/framework/wcf/feature-details/media/appfabricconfiguration-persistence.gif "AppFabricConfiguration 持續性")  
   
-     [!INCLUDE[crabout](../../../../includes/crabout-md.md)]在 Windows Server App Fabric 中設定工作流程持續性看到[App Fabric 中設定工作流程持續性](http://go.microsoft.com/fwlink/?LinkId=193148)。  
+     如需在 Windows Server App Fabric 中設定工作流程持續性的詳細資訊，請參閱[App Fabric 中設定工作流程持續性](http://go.microsoft.com/fwlink/?LinkId=193148)。  
   
 7.  選取**工作流程主機管理** 索引標籤。這樣可讓您指定應該卸載並保存閒置工作流程服務執行個體的時間，如下列螢幕擷取畫面所示。  
   
      ![App Fabric 組態工作流程主機管理](../../../../docs/framework/wcf/feature-details/media/appfabricconfiguration-management.gif "AppFabricConfiguration 管理")  
   
-     [!INCLUDE[crabout](../../../../includes/crabout-md.md)]工作流程主機管理組態，請參閱[App Fabric 中設定工作流程主機管理](http://go.microsoft.com/fwlink/?LinkId=193151)。  
+     如需工作流程主機管理的設定詳細資訊，請參閱[App Fabric 中設定工作流程主機管理](http://go.microsoft.com/fwlink/?LinkId=193151)。  
   
 8.  選取**自動啟動** 索引標籤。這樣可讓您針對應用程式中的工作流程服務指定自動啟動設定，如下列螢幕擷取畫面所示。  
   
-     ![App Fabric 自動 &#45; 開始設定](../../../../docs/framework/wcf/feature-details/media/appfabricconfigurationautostart.gif "AppFabricConfigurationAutostart")  
+     ![App Fabric 自動&#45;啟動組態](../../../../docs/framework/wcf/feature-details/media/appfabricconfigurationautostart.gif "AppFabricConfigurationAutostart")  
   
-     [!INCLUDE[crabout](../../../../includes/crabout-md.md)]設定自動啟動[設定自動啟動使用 App Fabric](http://go.microsoft.com/fwlink/?LinkId=193150)。  
+     如需設定自動啟動的詳細資訊，請參閱[設定自動啟動使用 App Fabric](http://go.microsoft.com/fwlink/?LinkId=193150)。  
   
 9. 選取**節流** 索引標籤。這樣可讓您針對工作流程服務進行節流設定，如下列螢幕擷取畫面所示。  
   
      ![App Fabric 組態節流](../../../../docs/framework/wcf/feature-details/media/appfabricconfigurationthrottling.gif "AppFabricConfigurationThrottling")  
   
-     [!INCLUDE[crabout](../../../../includes/crabout-md.md)]設定節流看到[使用 App Fabric 設定節流](http://go.microsoft.com/fwlink/?LinkId=193149)。  
+     如需設定節流的詳細資訊，請參閱[使用 App Fabric 設定節流](http://go.microsoft.com/fwlink/?LinkId=193149)。  
   
 10. 選取**安全性** 索引標籤。這樣可讓您針對應用程式進行安全性設定，如下列螢幕擷取畫面所示。  
   
      ![App Fabric 安全性設定](../../../../docs/framework/wcf/feature-details/media/appfabricconfiguration-security.gif "AppFabricConfiguration 安全性")  
   
-     [!INCLUDE[crabout](../../../../includes/crabout-md.md)]設定安全性與 Windows Server App Fabric[使用 App Fabric 的 設定安全性](http://go.microsoft.com/fwlink/?LinkId=193152)。  
+     如需使用 Windows Server App Fabric 設定安全性的詳細資訊，請參閱[使用 App Fabric 的 設定安全性](http://go.microsoft.com/fwlink/?LinkId=193152)。  
   
 ### <a name="using-windows-server-app-fabric"></a>使用 Windows Server AppFabric  
   
@@ -101,7 +103,7 @@ ms.lasthandoff: 12/22/2017
   
      如需有關 Windows Server App Fabric 功能和使用方式請參閱[Windows Server App Fabric 裝載的功能](http://go.microsoft.com/fwlink/?LinkID=193143&clcid=0x409)  
   
-## <a name="see-also"></a>請參閱  
+## <a name="see-also"></a>另請參閱  
  [建立長期執行的工作流程服務](../../../../docs/framework/wcf/feature-details/creating-a-long-running-workflow-service.md)  
  [Windows Server App Fabric 裝載功能](http://go.microsoft.com/fwlink/?LinkId=193143)  
  [安裝 Windows Server App Fabric](http://go.microsoft.com/fwlink/?LinkId=193136)  

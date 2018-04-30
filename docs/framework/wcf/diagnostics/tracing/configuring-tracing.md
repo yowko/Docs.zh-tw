@@ -18,11 +18,11 @@ ms.author: dotnetcontent
 manager: wpickett
 ms.workload:
 - dotnet
-ms.openlocfilehash: 2ad8a3a79967c42b8e8afdd9b9d796a7a1dfdd79
-ms.sourcegitcommit: 03ee570f6f528a7d23a4221dcb26a9498edbdf8c
+ms.openlocfilehash: 23dbf9808976496686dfe9d595487110da41730b
+ms.sourcegitcommit: 94d33cadc5ff81d2ac389bf5f26422c227832052
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/28/2018
+ms.lasthandoff: 04/30/2018
 ---
 # <a name="configuring-tracing"></a>設定追蹤
 本主題將說明如何啟用追蹤、設定追蹤來源以發出追蹤並設定追蹤層級、設定活動追蹤與傳播以支援端對端追蹤相互關聯，以及設定追蹤接聽項來存取追蹤。  
@@ -146,7 +146,7 @@ ms.lasthandoff: 04/28/2018
 </system.diagnostics>  
 ```  
   
- [!INCLUDE[crabout](../../../../../includes/crabout-md.md)] 建立使用者定義追蹤來源，請參閱[擴充追蹤](../../../../../docs/framework/wcf/samples/extending-tracing.md)。  
+ 如需有關如何建立使用者定義的追蹤來源的詳細資訊，請參閱[擴充追蹤](../../../../../docs/framework/wcf/samples/extending-tracing.md)。  
   
 ## <a name="configuring-trace-listeners-to-consume-traces"></a>設定追蹤接聽項來使用追蹤  
  在執行階段，[!INCLUDE[indigo2](../../../../../includes/indigo2-md.md)] 會將追蹤資料輸送到負責處理資料的接聽項。 [!INCLUDE[indigo2](../../../../../includes/indigo2-md.md)] 會為 <xref:System.Diagnostics> 提供幾項預先定義的接聽項，其格式與輸出時使用的格式不同。 您也可以新增自訂接聽項型別。  
@@ -187,7 +187,7 @@ ms.lasthandoff: 04/28/2018
   
  `propagateActivity` 屬性會指出是否應該將活動傳播至其他參與訊息交換的端點。 將這個值設定為 `true` 之後，您就可以使用任意兩個端點所產生的追蹤檔，來觀察一個端點上的一組追蹤如何流動至另一個端點的一組追蹤。  
   
- [!INCLUDE[crabout](../../../../../includes/crabout-md.md)] 活動追蹤與傳播，請參閱[傳播](../../../../../docs/framework/wcf/diagnostics/tracing/propagation.md)。  
+ 如需活動追蹤與傳播的詳細資訊，請參閱[傳播](../../../../../docs/framework/wcf/diagnostics/tracing/propagation.md)。  
   
  同時`propagateActivity`和`ActivityTracing`布林值會套用至 System.ServiceModel TraceSource。 `ActivityTracing`值也適用於任何追蹤來源，包括[!INCLUDE[indigo2](../../../../../includes/indigo2-md.md)]或使用者定義的。  
   

@@ -1,12 +1,13 @@
 ---
-title: "對話方塊概觀"
-ms.custom: 
+title: 對話方塊概觀
+ms.custom: ''
 ms.date: 03/30/2017
 ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.technology: dotnet-wpf
-ms.tgt_pltfrm: 
+ms.reviewer: ''
+ms.suite: ''
+ms.technology:
+- dotnet-wpf
+ms.tgt_pltfrm: ''
 ms.topic: article
 dev_langs:
 - csharp
@@ -17,16 +18,17 @@ helpviewer_keywords:
 - message boxes [WPF]
 - modal dialog boxes [WPF]
 ms.assetid: 0d23d544-a393-4a02-a3aa-d8cd5d3d6511
-caps.latest.revision: "25"
+caps.latest.revision: 25
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.workload: dotnet
-ms.openlocfilehash: 112a9badaf9a64b2c6d3f73d64c27fbc36ec48a3
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.workload:
+- dotnet
+ms.openlocfilehash: dfe22dec0827f0ceb880b9410b64668f219a422f
+ms.sourcegitcommit: 94d33cadc5ff81d2ac389bf5f26422c227832052
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 04/30/2018
 ---
 # <a name="dialog-boxes-overview"></a>對話方塊概觀
 獨立應用程式通常具有主視窗，同時會顯示主要資料的應用程式運作，並公開的功能來處理該資料透過[!INCLUDE[TLA#tla_ui](../../../../includes/tlasharptla-ui-md.md)]機制類似功能表列、 工具列和狀態列。 重要的應用程式還可能顯示其他視窗來執行下列動作：  
@@ -43,7 +45,7 @@ ms.lasthandoff: 12/22/2017
   
  A*非強制回應*對話方塊中，相反地，不會防止使用者啟動其他視窗開啟時。 例如，如果使用者想要尋找出現在文件中的特定字組，主視窗通常會開啟對話方塊，詢問使用者要尋找哪個字組。 不過，由於尋找字組並不會防止使用者編輯文件，因此對話方塊不需要是強制回應。 非強制回應對話方塊至少提供**關閉**按鈕來關閉對話方塊，並可能會提供其他按鈕來執行特定的功能，例如**找下一個**按鈕來尋找下一個的比對文字搜尋的尋找的準則。  
   
- [!INCLUDE[TLA#tla_wpf](../../../../includes/tlasharptla-wpf-md.md)] 可讓您建立幾種對話方塊類型，包括訊息方塊、通用對話方塊和自訂對話方塊。 本主題將討論每個，而[對話方塊範例](http://go.microsoft.com/fwlink/?LinkID=159984)提供相符的範例。  
+ Windows Presentation Foundation (WPF) 可讓您建立數種類型的對話方塊中，包括訊息方塊中，通用對話方塊和自訂對話方塊。 本主題將討論每個，而[對話方塊範例](http://go.microsoft.com/fwlink/?LinkID=159984)提供相符的範例。  
   
  
   
@@ -53,7 +55,7 @@ ms.lasthandoff: 12/22/2017
   
  ![文書處理器對話方塊](../../../../docs/framework/wpf/app-development/media/dialogboxesoverviewfigure1.png "DialogBoxesOverviewFigure1")  
   
- 若要建立訊息方塊，您使用<xref:System.Windows.MessageBox>類別。 <xref:System.Windows.MessageBox>可讓您設定訊息方塊文字、 標題、 圖示和按鈕，使用下列程式碼。  
+ 若要建立訊息方塊，您使用<xref:System.Windows.MessageBox>類別。 <xref:System.Windows.MessageBox> 可讓您設定訊息方塊文字、 標題、 圖示和按鈕，使用下列程式碼。  
   
  [!code-csharp[DialogBoxesOverviewSnippets#MsgBoxConfigureCODEBEHIND](../../../../samples/snippets/csharp/VS_Snippets_Wpf/DialogBoxesOverviewSnippets/CSharp/Window1.xaml.cs#msgboxconfigurecodebehind)]
  [!code-vb[DialogBoxesOverviewSnippets#MsgBoxConfigureCODEBEHIND](../../../../samples/snippets/visualbasic/VS_Snippets_Wpf/DialogBoxesOverviewSnippets/VisualBasic/window1.xaml.vb#msgboxconfigurecodebehind)]  
@@ -72,13 +74,13 @@ ms.lasthandoff: 12/22/2017
   
  雖然<xref:System.Windows.MessageBox>可能提供較簡單的對話方塊方塊使用者體驗，使用的優點<xref:System.Windows.MessageBox>是，視窗會顯示由部分信任安全性沙箱中執行的應用程式的唯一類型 (請參閱[安全性](../../../../docs/framework/wpf/security-wpf.md))，例如[!INCLUDE[TLA#tla_xbap#plural](../../../../includes/tlasharptla-xbapsharpplural-md.md)]。  
   
- 大多數對話方塊所顯示及收集的資料會比訊息方塊的結果更複雜，包括文字、選取範圍 (核取方塊)、互斥選取範圍 (選項按鈕)，以及清單選取範圍 (清單方塊、下拉式方塊、下拉式清單方塊)。 對於這些[!INCLUDE[TLA#tla_wpf](../../../../includes/tlasharptla-wpf-md.md)]提供數個通用對話方塊，並可讓您建立您自己的對話方塊中，雖然任一個的使用受到以完全信任執行的應用程式。  
+ 大多數對話方塊所顯示及收集的資料會比訊息方塊的結果更複雜，包括文字、選取範圍 (核取方塊)、互斥選取範圍 (選項按鈕)，以及清單選取範圍 (清單方塊、下拉式方塊、下拉式清單方塊)。 對於這些 Windows Presentation Foundation (WPF) 提供數個通用對話方塊，並可讓您建立您自己的對話方塊中，雖然任一個的使用受到以完全信任執行的應用程式。  
   
 <a name="Common_Dialogs"></a>   
 ## <a name="common-dialog-boxes"></a>通用對話方塊  
  [!INCLUDE[TLA#tla_mswin](../../../../includes/tlasharptla-mswin-md.md)] 實作所有應用程式通用之各種可重複使用的對話方塊，包括用於開啟檔案、儲存檔案和列印的對話方塊。 由於這些對話方塊是由作業系統實作，因此可在作業系統上執行的所有應用程式之間共用，以協助確保使用者體驗的一致性；當使用者在一個應用程式中熟悉如何使用某個作業系統提供的對話方塊時，就不需要了解如何在其他應用程式中使用該對話方塊。 因為這些對話方塊的所有應用程式可以使用，因為它們可以協助提供一致的使用者體驗，其稱為*通用對話方塊*。  
   
- [!INCLUDE[TLA#tla_wpf](../../../../includes/tlasharptla-wpf-md.md)] 會封裝 [開啟檔案]、[儲存檔案] 和 [列印] 通用對話方塊，然後將這些對話方塊公開為 Managed 類別，以供您在獨立應用程式中使用。 本主題提供每個對話方塊的簡短概觀。  
+ Windows Presentation Foundation (WPF) 封裝開啟檔案、 儲存檔案，並列印通用對話方塊和其公開為 managed 的類別，供您使用獨立應用程式中。 本主題提供每個對話方塊的簡短概觀。  
   
 <a name="Open_File_Dialog"></a>   
 ### <a name="open-file-dialog"></a>開啟檔案對話方塊  
@@ -94,7 +96,7 @@ ms.lasthandoff: 12/22/2017
  如需 [開啟檔案] 對話方塊的詳細資訊，請參閱<xref:Microsoft.Win32.OpenFileDialog?displayProperty=nameWithType>。  
   
 > [!NOTE]
->  <xref:Microsoft.Win32.OpenFileDialog>可以用來安全地擷取檔案名稱，以部分信任執行的應用程式 (請參閱[安全性](../../../../docs/framework/wpf/security-wpf.md))。  
+>  <xref:Microsoft.Win32.OpenFileDialog> 可以用來安全地擷取檔案名稱，以部分信任執行的應用程式 (請參閱[安全性](../../../../docs/framework/wpf/security-wpf.md))。  
   
 <a name="Save_File_Dialog"></a>   
 ### <a name="save-file-dialog-box"></a>儲存檔案對話方塊  
@@ -124,7 +126,7 @@ ms.lasthandoff: 12/22/2017
   
 <a name="Custom_Dialog_Boxes"></a>   
 ## <a name="custom-dialog-boxes"></a>自訂對話方塊  
- 雖然通用對話方塊很有用，而且應該盡可能使用，但這類對話方塊並不支援定義域專屬對話方塊的需求。 在此情況下，您必須建立自己的對話方塊。 如稍後所示，對話方塊是具有特殊行為的視窗。 <xref:System.Windows.Window>實作這些行為，因此，您使用<xref:System.Windows.Window>建立自訂強制回應和非強制回應對話方塊。  
+ 雖然通用對話方塊很有用，而且應該盡可能使用，但這類對話方塊並不支援定義域專屬對話方塊的需求。 在此情況下，您必須建立自己的對話方塊。 如稍後所示，對話方塊是具有特殊行為的視窗。 <xref:System.Windows.Window> 實作這些行為，因此，您使用<xref:System.Windows.Window>建立自訂強制回應和非強制回應對話方塊。  
   
 <a name="Creating_a_Modal_Custom_Dialog_Box"></a>   
 ### <a name="creating-a-modal-custom-dialog-box"></a>建立自訂強制回應對話方塊  
@@ -307,7 +309,7 @@ ms.lasthandoff: 12/22/2017
  不同於<xref:System.Windows.Window.ShowDialog%2A>，<xref:System.Windows.Window.Show%2A>會立即傳回。 因此，呼叫視窗無法得知非強制回應對話方塊何時關閉，因此不會知道何時要檢查對話方塊結果，或從對話方塊取得資料以進一步處理。 相反地，對話方塊必須建立其他方式，以將資料傳回呼叫視窗進行處理。  
   
 #### <a name="processing-data-returned-from-a-modeless-dialog-box"></a>處理從非強制回應對話方塊傳回的資料  
- 在此範例中，`FindDialogBox`可能會傳回一或多個尋找結果到主視窗中，根據不含任何特定的頻率所搜尋的文字。 如同強制回應對話方塊，非強制回應對話方塊可以透過屬性傳回結果。 不過，主控對話方塊的視窗必須知道何時要查看這些屬性。 其中一個做法是，讓對話方塊實作每次找到文字時所引發的事件。 `FindDialogBox`實作`TextFoundEvent`基於此目的，會先需要委派。  
+ 在此範例中，`FindDialogBox`可能會傳回一或多個尋找結果到主視窗中，根據不含任何特定的頻率所搜尋的文字。 如同強制回應對話方塊，非強制回應對話方塊可以透過屬性傳回結果。 不過，主控對話方塊的視窗必須知道何時要查看這些屬性。 其中一個做法是，讓對話方塊實作每次找到文字時所引發的事件。 `FindDialogBox` 實作`TextFoundEvent`基於此目的，會先需要委派。  
   
  [!code-csharp[DialogBoxSample#TextFoundEventHandlerCODE](../../../../samples/snippets/csharp/VS_Snippets_Wpf/DialogBoxSample/CSharp/TextFoundEventHandler.cs#textfoundeventhandlercode)]
  [!code-vb[DialogBoxSample#TextFoundEventHandlerCODE](../../../../samples/snippets/visualbasic/VS_Snippets_Wpf/DialogBoxSample/VisualBasic/TextFoundEventHandler.vb#textfoundeventhandlercode)]  
@@ -355,7 +357,7 @@ ms.lasthandoff: 12/22/2017
 [!code-csharp[DialogBoxSample#FindDialogCloseCODEBEHIND2](../../../../samples/snippets/csharp/VS_Snippets_Wpf/DialogBoxSample/CSharp/FindDialogBox.xaml.cs#finddialogclosecodebehind2)]
 [!code-vb[DialogBoxSample#FindDialogCloseCODEBEHIND2](../../../../samples/snippets/visualbasic/VS_Snippets_Wpf/DialogBoxSample/VisualBasic/FindDialogBox.xaml.vb#finddialogclosecodebehind2)]  
   
-## <a name="see-also"></a>請參閱  
+## <a name="see-also"></a>另請參閱  
  [快顯功能表概觀](../../../../docs/framework/wpf/controls/popup-overview.md)  
  [對話方塊範例](http://go.microsoft.com/fwlink/?LinkID=159984)  
  [ColorPicker Custom Control Sample](http://go.microsoft.com/fwlink/?LinkID=159977) (ColorPicker 自訂控制項範例)

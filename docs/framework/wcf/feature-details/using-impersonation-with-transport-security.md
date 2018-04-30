@@ -1,27 +1,29 @@
 ---
-title: "使用模擬搭配傳輸安全性"
-ms.custom: 
+title: 使用模擬搭配傳輸安全性
+ms.custom: ''
 ms.date: 03/30/2017
 ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.technology: dotnet-clr
-ms.tgt_pltfrm: 
+ms.reviewer: ''
+ms.suite: ''
+ms.technology:
+- dotnet-clr
+ms.tgt_pltfrm: ''
 ms.topic: article
 ms.assetid: 426df8cb-6337-4262-b2c0-b96c2edf21a9
-caps.latest.revision: "12"
+caps.latest.revision: 12
 author: BrucePerlerMS
 ms.author: bruceper
 manager: mbaldwin
-ms.workload: dotnet
-ms.openlocfilehash: 57b40493d0e9bcbbaaf1366c74ff116343f6ee96
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.workload:
+- dotnet
+ms.openlocfilehash: d5610a107a198a3d8fd0517dca6ca7e2f4d22cbb
+ms.sourcegitcommit: 94d33cadc5ff81d2ac389bf5f26422c227832052
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 04/30/2018
 ---
 # <a name="using-impersonation-with-transport-security"></a>使用模擬搭配傳輸安全性
-*模擬*是上的用戶端識別讓伺服器應用程式的能力。 對服務而言，驗證存取資源時使用模擬是很常見的。 伺服器應用程式使用服務帳戶執行，但是伺服器在接受用戶端連線會模擬用戶端，藉此使用用戶端的認證執行存取檢查。 傳輸安全性是一種用於傳遞認證與使用該認證保護通訊安全性的機制。 本主題說明如何搭配模擬功能來使用 [!INCLUDE[indigo1](../../../../includes/indigo1-md.md)] 中的傳輸安全性。 [!INCLUDE[crabout](../../../../includes/crabout-md.md)]模擬使用訊息安全性，請參閱[委派和模擬](../../../../docs/framework/wcf/feature-details/delegation-and-impersonation-with-wcf.md)。  
+*模擬*是上的用戶端識別讓伺服器應用程式的能力。 對服務而言，驗證存取資源時使用模擬是很常見的。 伺服器應用程式使用服務帳戶執行，但是伺服器在接受用戶端連線會模擬用戶端，藉此使用用戶端的認證執行存取檢查。 傳輸安全性是一種用於傳遞認證與使用該認證保護通訊安全性的機制。 本主題說明如何搭配模擬功能來使用 [!INCLUDE[indigo1](../../../../includes/indigo1-md.md)] 中的傳輸安全性。 如需有關模擬使用訊息安全性的詳細資訊，請參閱[委派和模擬](../../../../docs/framework/wcf/feature-details/delegation-and-impersonation-with-wcf.md)。  
   
 ## <a name="five-impersonation-levels"></a>五個模擬等級  
  傳輸安全性運用如下表所述的五種模擬等級。  
@@ -48,7 +50,7 @@ ms.lasthandoff: 12/22/2017
   
 -   具名管道無法搭配 `Impersonate` 或 `Delegate` 模擬等級使用。 具名管道無法在這些模擬等級強制執行電腦保證。  
   
- [!INCLUDE[crabout](../../../../includes/crabout-md.md)]具名管道，請參閱[選擇傳輸](../../../../docs/framework/wcf/feature-details/choosing-a-transport.md)。  
+ 如需有關具名管道的詳細資訊，請參閱[選擇傳輸](../../../../docs/framework/wcf/feature-details/choosing-a-transport.md)。  
   
 ### <a name="http-transport"></a>HTTP 傳輸  
  使用 HTTP 傳輸的繫結 (<xref:System.ServiceModel.WSHttpBinding>和<xref:System.ServiceModel.BasicHttpBinding>) 中所述，支援數種驗證配置，[了解 HTTP 驗證](../../../../docs/framework/wcf/feature-details/understanding-http-authentication.md)。 支援的模擬等級視驗證配置而定。 下列項目會與 HTTP 傳輸一併使用：  
@@ -63,9 +65,9 @@ ms.lasthandoff: 12/22/2017
   
 -   只能夠透過交涉選擇的 Kerberos 驗證配置可以搭配任何支援的模擬等級使用。  
   
- [!INCLUDE[crabout](../../../../includes/crabout-md.md)]HTTP 傳輸，請參閱[選擇傳輸](../../../../docs/framework/wcf/feature-details/choosing-a-transport.md)。  
+ 如需 HTTP 傳輸的詳細資訊，請參閱[選擇傳輸](../../../../docs/framework/wcf/feature-details/choosing-a-transport.md)。  
   
-## <a name="see-also"></a>請參閱  
+## <a name="see-also"></a>另請參閱  
  [委派和模擬](../../../../docs/framework/wcf/feature-details/delegation-and-impersonation-with-wcf.md)  
  [授權](../../../../docs/framework/wcf/feature-details/authorization-in-wcf.md)  
  [如何：在服務上模擬用戶端](../../../../docs/framework/wcf/how-to-impersonate-a-client-on-a-service.md)  

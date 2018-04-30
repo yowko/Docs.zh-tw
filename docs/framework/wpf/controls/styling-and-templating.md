@@ -1,12 +1,13 @@
 ---
-title: "樣式設定和範本化"
-ms.custom: 
+title: 樣式設定和範本化
+ms.custom: ''
 ms.date: 03/30/2017
 ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.technology: dotnet-wpf
-ms.tgt_pltfrm: 
+ms.reviewer: ''
+ms.suite: ''
+ms.technology:
+- dotnet-wpf
+ms.tgt_pltfrm: ''
 ms.topic: article
 dev_langs:
 - csharp
@@ -22,16 +23,17 @@ helpviewer_keywords:
 - styles [WPF], triggers
 - styles [WPF], event triggers
 ms.assetid: 481765e5-5467-4a75-9f7b-e10e2ac410d9
-caps.latest.revision: "34"
+caps.latest.revision: 34
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.workload: dotnet
-ms.openlocfilehash: c33739d0e753146ffdc8b825d88c6ca7ba63fa1a
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.workload:
+- dotnet
+ms.openlocfilehash: 7aafd709bfc1da63d11a56ada59aedf0ada12f3a
+ms.sourcegitcommit: 94d33cadc5ff81d2ac389bf5f26422c227832052
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 04/30/2018
 ---
 # <a name="styling-and-templating"></a>樣式設定和範本化
 [!INCLUDE[TLA#tla_winclient](../../../../includes/tlasharptla-winclient-md.md)] 樣式設定和範本化係指一套功能 (樣式、範本、觸發程序及分鏡腳本)，可讓開發人員和設計人員創造引人注目的效果，並為其產品建立一致的外觀。 雖然開發人員和 (或) 設計人員可以依個別應用程式廣泛地自訂外觀，但強大的樣式設定和範本化模型仍有其必要性，這可允許在應用程式內或應用程式之間維護及共用外觀。 [!INCLUDE[TLA#tla_winclient](../../../../includes/tlasharptla-winclient-md.md)] 便有提供該模型。  
@@ -181,15 +183,15 @@ ms.lasthandoff: 12/22/2017
  ![樣式設定範例螢幕擷取畫面](../../../../docs/framework/wpf/controls/media/stylingintro-eventtriggers.png "StylingIntro_EventTriggers")  
   
 ### <a name="multitriggers-datatriggers-and-multidatatriggers"></a>MultiTrigger、DataTrigger 及 MultiDataTrigger  
- 除了<xref:System.Windows.Trigger>和<xref:System.Windows.EventTrigger>，有其他類型的觸發程序。 <xref:System.Windows.MultiTrigger>可讓您設定多個條件為基礎的屬性值。 您使用<xref:System.Windows.DataTrigger>和<xref:System.Windows.MultiDataTrigger>當條件的屬性是資料繫結。  
+ 除了<xref:System.Windows.Trigger>和<xref:System.Windows.EventTrigger>，有其他類型的觸發程序。 <xref:System.Windows.MultiTrigger> 可讓您設定多個條件為基礎的屬性值。 您使用<xref:System.Windows.DataTrigger>和<xref:System.Windows.MultiDataTrigger>當條件的屬性是資料繫結。  
   
 <a name="styling_themes"></a>   
 ## <a name="shared-resources-and-themes"></a>共用的資源和佈景主題  
- 典型的 [!INCLUDE[TLA#tla_wpf](../../../../includes/tlasharptla-wpf-md.md)] 應用程式可能會有多個透過應用程式套用的使用者介面 (UI) 資源。 這組資源集體可視為應用程式的佈景主題。 [!INCLUDE[TLA#tla_wpf](../../../../includes/tlasharptla-wpf-md.md)]提供的支援封裝的使用者介面 (UI) 資源為主題所使用的資源字典會封裝為<xref:System.Windows.ResourceDictionary>類別。  
+ 一般的 Windows Presentation Foundation (WPF) 應用程式可能會有多個會套用在整個應用程式的使用者介面 (UI) 資源。 這組資源集體可視為應用程式的佈景主題。 Windows Presentation Foundation (WPF) 提供支援封裝的使用者介面 (UI) 資源為主題所使用的資源字典會封裝為<xref:System.Windows.ResourceDictionary>類別。  
   
- 定義 [!INCLUDE[TLA#tla_wpf](../../../../includes/tlasharptla-wpf-md.md)] 佈景主題時，是透過使用 [!INCLUDE[TLA#tla_wpf](../../../../includes/tlasharptla-wpf-md.md)] 所公開來自訂任何元素之視覺效果的樣式設定和範本化機制來定義。  
+ Windows Presentation Foundation (WPF) 佈景主題定義使用自訂視覺效果的任何項目設定樣式和樣板化機制 Windows Presentation Foundation (WPF) 公開。  
   
- [!INCLUDE[TLA#tla_wpf](../../../../includes/tlasharptla-wpf-md.md)] 佈景主題資源儲存在內嵌資源字典中。 這些資源字典必須內嵌在已簽署的組件內，並且可內嵌在與程式碼本身相同的組件中，也可內嵌在並存的組件中。 以 PresentationFramework.dll (包含 [!INCLUDE[TLA#tla_wpf](../../../../includes/tlasharptla-wpf-md.md)] 控制項的組件) 為例，佈景主題資源是位於一系列並存的組件中。  
+ Windows Presentation Foundation (WPF) 佈景主題資源會儲存內嵌的資源字典中。 這些資源字典必須內嵌在已簽署的組件內，並且可內嵌在與程式碼本身相同的組件中，也可內嵌在並存的組件中。 如果 PresentationFramework.dll，其中包含 Windows Presentation Foundation (WPF) 控制項的組件佈景主題資源，系統會以一系列的-並存組件。  
   
  當搜尋元素的樣式時，佈景主題會成為最後一個要查看的地方。 一般而言，搜尋會從元素樹狀目錄往上開始、搜尋適當的資源，然後查看應用程式資源集合，最後查詢系統。 這會為應用程式開發人員提供一個機會，可在到達佈景主題之前，先為樹狀目錄或應用程式層級的任何物件，重新定義樣式。  
   
@@ -209,7 +211,7 @@ ms.lasthandoff: 12/22/2017
   
  如果您要為自訂控制項建立佈景主題，請參閱[控制項撰寫概觀](../../../../docs/framework/wpf/controls/control-authoring-overview.md)的＜外部控制項程式庫＞一節。  
   
-## <a name="see-also"></a>請參閱  
+## <a name="see-also"></a>另請參閱  
  [WPF 中的 Pack URI](../../../../docs/framework/wpf/app-development/pack-uris-in-wpf.md)  
  [操作說明：尋找 ControlTemplate 產生的元素](../../../../docs/framework/wpf/controls/how-to-find-controltemplate-generated-elements.md)  
  [尋找 DataTemplate 產生的元素](../../../../docs/framework/wpf/data/how-to-find-datatemplate-generated-elements.md)

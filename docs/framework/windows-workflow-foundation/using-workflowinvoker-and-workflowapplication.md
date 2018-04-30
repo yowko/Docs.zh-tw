@@ -14,14 +14,14 @@ ms.author: dotnetcontent
 manager: wpickett
 ms.workload:
 - dotnet
-ms.openlocfilehash: af520c1520f605d34076e6ecabdf84deb52fbfd0
-ms.sourcegitcommit: 03ee570f6f528a7d23a4221dcb26a9498edbdf8c
+ms.openlocfilehash: d0b12fc6c91f57ec49050a0a37b16f64d0e54e6d
+ms.sourcegitcommit: 94d33cadc5ff81d2ac389bf5f26422c227832052
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/28/2018
+ms.lasthandoff: 04/30/2018
 ---
 # <a name="using-workflowinvoker-and-workflowapplication"></a>使用 WorkflowInvoker 與 WorkflowApplication
-Windows Workflow Foundation (WF) 提供幾個方法來裝載工作流程。 <xref:System.Activities.WorkflowInvoker> 提供一種簡單方法來叫用工作流程，如同方法呼叫一般，但只能用於不使用持續性的工作流程。 <xref:System.Activities.WorkflowApplication> 提供更豐富的模型，可執行包含生命週期事件通知、執行控制、書籤繼續以及持續性的工作流程。 <xref:System.ServiceModel.Activities.WorkflowServiceHost> 支援傳訊活動，主要搭配工作流程服務使用。 本主題會向您介紹如何使用 <xref:System.Activities.WorkflowInvoker> 和 <xref:System.Activities.WorkflowApplication> 進行工作流程裝載。 [!INCLUDE[crabout](../../../includes/crabout-md.md)] 裝載工作流程與<xref:System.ServiceModel.Activities.WorkflowServiceHost>，請參閱[工作流程服務](../../../docs/framework/wcf/feature-details/workflow-services.md)和[裝載工作流程服務概觀](../../../docs/framework/wcf/feature-details/hosting-workflow-services-overview.md)。  
+Windows Workflow Foundation (WF) 提供幾個方法來裝載工作流程。 <xref:System.Activities.WorkflowInvoker> 提供一種簡單方法來叫用工作流程，如同方法呼叫一般，但只能用於不使用持續性的工作流程。 <xref:System.Activities.WorkflowApplication> 提供更豐富的模型，可執行包含生命週期事件通知、執行控制、書籤繼續以及持續性的工作流程。 <xref:System.ServiceModel.Activities.WorkflowServiceHost> 支援傳訊活動，主要搭配工作流程服務使用。 本主題會向您介紹如何使用 <xref:System.Activities.WorkflowInvoker> 和 <xref:System.Activities.WorkflowApplication> 進行工作流程裝載。 如需有關裝載工作流程與<xref:System.ServiceModel.Activities.WorkflowServiceHost>，請參閱[工作流程服務](../../../docs/framework/wcf/feature-details/workflow-services.md)和[裝載工作流程服務概觀](../../../docs/framework/wcf/feature-details/hosting-workflow-services-overview.md)。  
   
 ## <a name="using-workflowinvoker"></a>使用 WorkflowInvoker  
  <xref:System.Activities.WorkflowInvoker>如同方法叫用般，提供執行工作流程的模型。 若要使用 <xref:System.Activities.WorkflowInvoker> 叫用工作流程，請呼叫 <xref:System.Activities.WorkflowInvoker.Invoke%2A> 方法，並傳入要叫用之工作流程的工作流程定義。 在此範例中，會使用 <xref:System.Activities.Statements.WriteLine> 叫用 <xref:System.Activities.WorkflowInvoker> 活動。  
@@ -78,7 +78,7 @@ Windows Workflow Foundation (WF) 提供幾個方法來裝載工作流程。 <xre
  [!code-csharp[CFX_WorkflowApplicationExample#21](../../../samples/snippets/csharp/VS_Snippets_CFX/cfx_workflowapplicationexample/cs/program.cs#21)]  
   
 > [!NOTE]
->  <xref:System.Activities.WorkflowApplication> 與 <xref:System.Activities.WorkflowInvoker> 會採用輸入參數的字典，並傳回 `out` 引數的字典。 這些字典參數、屬性與傳回值都屬於型別 `IDictionary<string, object>`。 傳入的字典類別實際執行個體，可以是任何實作 `IDictionary<string, object>` 的類別。 在這些範例中，會使用 `Dictionary<string, object>`。 [!INCLUDE[crabout](../../../includes/crabout-md.md)] 字典，請參閱<xref:System.Collections.Generic.IDictionary%602>和<xref:System.Collections.Generic.Dictionary%602>。  
+>  <xref:System.Activities.WorkflowApplication> 與 <xref:System.Activities.WorkflowInvoker> 會採用輸入參數的字典，並傳回 `out` 引數的字典。 這些字典參數、屬性與傳回值都屬於型別 `IDictionary<string, object>`。 傳入的字典類別實際執行個體，可以是任何實作 `IDictionary<string, object>` 的類別。 在這些範例中，會使用 `Dictionary<string, object>`。 如需字典的詳細資訊，請參閱<xref:System.Collections.Generic.IDictionary%602>和<xref:System.Collections.Generic.Dictionary%602>。  
   
 ### <a name="passing-data-into-a-running-workflow-using-bookmarks"></a>使用書籤將資料傳入執行中的工作流程  
  書籤是一種機制，可讓活動被動等候繼續，也可將資料傳遞至執行中的工作流程執行個體。 如果活動正在等候資料，就可建立 <xref:System.Activities.Bookmark> 並註冊當恢復 <xref:System.Activities.Bookmark> 時要呼叫的回呼方法，如下列範例所示。  

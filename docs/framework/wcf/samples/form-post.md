@@ -1,24 +1,26 @@
 ---
-title: "表單張貼"
-ms.custom: 
+title: 表單張貼
+ms.custom: ''
 ms.date: 03/30/2017
 ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.technology: dotnet-clr
-ms.tgt_pltfrm: 
+ms.reviewer: ''
+ms.suite: ''
+ms.technology:
+- dotnet-clr
+ms.tgt_pltfrm: ''
 ms.topic: article
 ms.assetid: fa6f84f9-2e07-4e3c-92d0-a245308b7dff
-caps.latest.revision: "9"
+caps.latest.revision: 9
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.workload: dotnet
-ms.openlocfilehash: fe1be9177f3e811a3037377360f46f42904d5af3
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.workload:
+- dotnet
+ms.openlocfilehash: 31d2ebbdb6f899390d7b3af485c1583fb80ae6dc
+ms.sourcegitcommit: 94d33cadc5ff81d2ac389bf5f26422c227832052
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 04/30/2018
 ---
 # <a name="form-post"></a>表單張貼
 這個範例示範如何擴充 WCF REST 程式設計模型，以支援新的傳入要求格式。 這個範例還包括格式子的實作，可將 HTML 表單張貼的要求還原序列化為 [!INCLUDE[dnprdnshort](../../../../includes/dnprdnshort-md.md)] 類型。 此外，這個範例使用 T4 範本傳回 HTML 頁面，該頁面提供可讓使用者回傳至 WCF REST 服務的 HTML 表單。  
@@ -38,7 +40,7 @@ ms.lasthandoff: 12/22/2017
   
  此主控台應用程式專案擴充[基本資源服務](../../../../docs/framework/wcf/samples/basic-resource-service.md)範例。 「基本資源服務」範例會示範如何以使用 WCF REST 程式設計模型的方式公開資源。 在「基本資源服務」範例中會公開客戶集合資源，以便建立、擷取、更新和刪除集合中的客戶。 「基本資源服務」範例僅使用兩種原本就支援的傳入要求格式：XML 和 JSON。  
   
- 在這個「表單張貼」範例中的主控台應用程式會利用 HtmlFormProcessing 程式庫中的自訂格式子，該程式庫可讓使用者使用瀏覽器從 HTML 表單張貼傳送要求，藉此建立客戶。 它還會加入傳回 HTML 頁面的作業，該頁面包括回傳至服務的表單。 這個 HTML 頁面是使用預先處理的 T4 範本產生，而這個範本是由 .tt 檔和自動產生的 .cs 檔所組成。 .tt 檔可讓開發人員以包含變數和控制項結構的範本形式撰寫回應。 [!INCLUDE[crabout](../../../../includes/crabout-md.md)]T4，請參閱[所使用文字範本產生成品](http://go.microsoft.com/fwlink/?LinkId=178139)。  
+ 在這個「表單張貼」範例中的主控台應用程式會利用 HtmlFormProcessing 程式庫中的自訂格式子，該程式庫可讓使用者使用瀏覽器從 HTML 表單張貼傳送要求，藉此建立客戶。 它還會加入傳回 HTML 頁面的作業，該頁面包括回傳至服務的表單。 這個 HTML 頁面是使用預先處理的 T4 範本產生，而這個範本是由 .tt 檔和自動產生的 .cs 檔所組成。 .tt 檔可讓開發人員以包含變數和控制項結構的範本形式撰寫回應。 如需 T4 的詳細資訊，請參閱[所使用文字範本產生成品](http://go.microsoft.com/fwlink/?LinkId=178139)。  
   
 #### <a name="to-run-the-sample"></a>若要執行範例  
   

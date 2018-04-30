@@ -1,23 +1,24 @@
 ---
-title: "使用原則處理訂"
-ms.custom: 
+title: 使用原則處理訂
+ms.custom: ''
 ms.date: 03/30/2017
 ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.tgt_pltfrm: 
+ms.reviewer: ''
+ms.suite: ''
+ms.tgt_pltfrm: ''
 ms.topic: article
 ms.assetid: 66833724-dc36-4fad-86b0-59ffeaa3ba6a
-caps.latest.revision: "8"
+caps.latest.revision: 8
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.workload: dotnet
-ms.openlocfilehash: d86c7890af651ba9f0ee0ec2a1763f9c579bac89
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.workload:
+- dotnet
+ms.openlocfilehash: f99db44a636a5255990f734d34266b3b2e4a678b
+ms.sourcegitcommit: 94d33cadc5ff81d2ac389bf5f26422c227832052
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 04/30/2018
 ---
 # <a name="order-processing-with-policy"></a>使用原則處理訂
 訂單處理原則範例將示範在 Windows Workflow Foundation (WF) 的 [!INCLUDE[netfx35_long](../../../../includes/netfx35-long-md.md)] 中引入的一些主要功能。 下列是 WF 規則引擎的新功能：  
@@ -34,7 +35,7 @@ ms.lasthandoff: 12/22/2017
  此範例將示範 `OrderProcessingPolicy` 專案，其中會輸入包含可用項目的編號清單以及郵遞區號的客戶訂單。 如果兩個項目都正確，訂單便會成功處理，否則，原則會建立錯誤物件，並利用多載 `+` 運算子和預先定義的擴充方法來通知使用者發生錯誤。  
   
 > [!NOTE]
->  [!INCLUDE[crabout](../../../../includes/crabout-md.md)]擴充方法，請參閱[C# 3.0 版規則](http://go.microsoft.com/fwlink/?LinkId=95402)。  
+>  如需擴充方法的詳細資訊，請參閱[C# 3.0 版規則](http://go.microsoft.com/fwlink/?LinkId=95402)。  
   
  此範例是由下列專案所組成：  
   

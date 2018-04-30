@@ -18,18 +18,18 @@ ms.author: dotnetcontent
 manager: wpickett
 ms.workload:
 - dotnet
-ms.openlocfilehash: 46bafbb0063f72b56f647caaa9dd0fa2944f3298
-ms.sourcegitcommit: 03ee570f6f528a7d23a4221dcb26a9498edbdf8c
+ms.openlocfilehash: 62a8774ab2843d0b1f0a19ad04fc0a76abb7cac5
+ms.sourcegitcommit: 94d33cadc5ff81d2ac389bf5f26422c227832052
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/28/2018
+ms.lasthandoff: 04/30/2018
 ---
 # <a name="configuring-services-using-configuration-files"></a>使用組態檔設定服務
 使用組態檔來設定 [!INCLUDE[indigo1](../../../includes/indigo1-md.md)] 服務可讓您在部署時 (而不是在設計階段) 彈性提供端點與服務行為資料。 本主題概要說明可用的主要技巧。  
   
  [!INCLUDE[indigo2](../../../includes/indigo2-md.md)] 服務可使用 [!INCLUDE[dnprdnshort](../../../includes/dnprdnshort-md.md)] 組態技術來設定。 最常見的是，會將 XML 項目新增至裝載 [!INCLUDE[indigo2](../../../includes/indigo2-md.md)] 服務的網際網路資訊服務 (IIS) 網站的 Web.config 檔案。 這些項目允許您變更詳細資料，例如各電腦的端點位址 (用於與服務通訊的實際位址)。 此外， [!INCLUDE[indigo2](../../../includes/indigo2-md.md)] 還包含了一些系統提供的項目，方便您快速選取最基本的服務功能。 從 [!INCLUDE[netfx40_long](../../../includes/netfx40-long-md.md)]開始， [!INCLUDE[indigo2](../../../includes/indigo2-md.md)] 隨附可簡化 [!INCLUDE[indigo2](../../../includes/indigo2-md.md)] 組態需求的新預設組態模型。 如果您沒有對特定服務提供任何 [!INCLUDE[indigo2](../../../includes/indigo2-md.md)] 組態，執行階段會以一些標準端點和預設繫結/行為來設定服務。 事實上，撰寫組態是程式設計 [!INCLUDE[indigo2](../../../includes/indigo2-md.md)] 應用程式的主要部分。  
   
- 如需詳細資訊，請參閱[設定服務的繫結](../../../docs/framework/wcf/configuring-bindings-for-wcf-services.md)。 如需的最常用的項目，請參閱 <<c0> [ 之繫結](../../../docs/framework/wcf/system-provided-bindings.md)。 [!INCLUDE[crabout](../../../includes/crabout-md.md)] 預設端點、繫結和行為的詳細資訊，請參閱 [Simplified Configuration](../../../docs/framework/wcf/simplified-configuration.md) and [Simplified Configuration for WCF Services](../../../docs/framework/wcf/samples/simplified-configuration-for-wcf-services.md).  
+ 如需詳細資訊，請參閱[設定服務的繫結](../../../docs/framework/wcf/configuring-bindings-for-wcf-services.md)。 如需的最常用的項目，請參閱 <<c0> [ 之繫結](../../../docs/framework/wcf/system-provided-bindings.md)。 如需有關預設端點、 繫結和行為的詳細資訊，請參閱[簡化的組態](../../../docs/framework/wcf/simplified-configuration.md)和[簡化 WCF 服務的組態](../../../docs/framework/wcf/samples/simplified-configuration-for-wcf-services.md)。  
   
 > [!IMPORTANT]
 >  部署並存案例時，如果部署了兩個不同的服務版本，您就必須指定組態檔所參考之組件的部分名稱。 這是因為組態檔會在所有服務版本之間共用，而且它們可能會在不同的 .NET Framework 版本底下執行。  
@@ -41,7 +41,7 @@ ms.lasthandoff: 04/28/2018
   
  在 Visual Studio 中，名為 App.config 的檔案用來建立最後的組態檔。 最後實際使用的組態名稱取決於組件名稱。 例如，名為 "Cohowinery.exe" 的組件，其最後的組態檔名為 "Cohowinery.exe.config"。 但是，您只需要修改 App.config 檔案。 對該檔案進行的變更，會在編譯階段自動套用至最後的應用程式組態檔中。  
   
- 在使用 App.config 檔案時，一旦應用程式啟動且套用了組態，組態系統會將 App.config 檔案與 Machine.config 檔案的內容合併。 這項機制可讓您透過 Machine.config 檔案來設定整部電腦。 App.config 檔案可以用來覆寫 Machine.config 檔案的設定，您也可以鎖定 Machine.config 檔案的設定以便加以取用。 在 Web.config 情況中，組態系統會將所有目錄乃至應用程式目錄中的 Web.config 檔案合併至已套用的組態。 [!INCLUDE[crabout](../../../includes/crabout-md.md)] 組態與設定值優先權的詳細資訊，請參閱 <xref:System.Configuration> 命名空間中的主題。  
+ 在使用 App.config 檔案時，一旦應用程式啟動且套用了組態，組態系統會將 App.config 檔案與 Machine.config 檔案的內容合併。 這項機制可讓您透過 Machine.config 檔案來設定整部電腦。 App.config 檔案可以用來覆寫 Machine.config 檔案的設定，您也可以鎖定 Machine.config 檔案的設定以便加以取用。 在 Web.config 情況中，組態系統會將所有目錄乃至應用程式目錄中的 Web.config 檔案合併至已套用的組態。 如需設定和設定值優先權的詳細資訊，請參閱本節中的主題<xref:System.Configuration>命名空間。  
   
 ## <a name="major-sections-of-the-configuration-file"></a>組態檔的主要區段  
  組態檔的主要區段包含下列項目。  
@@ -114,7 +114,7 @@ ms.lasthandoff: 04/28/2018
 ### <a name="the-binding-element"></a>\<繫結 > 項目  
  `binding`內的項目`bindings`項目可以是其中一個系統提供的繫結 (請參閱[之繫結](../../../docs/framework/wcf/system-provided-bindings.md)) 或自訂繫結 (請參閱[自訂繫結](../../../docs/framework/wcf/extending/custom-bindings.md))。 `binding` 項目具有的 `name` 屬性可將繫結與 `bindingConfiguration` 項目的 `endpoint` 屬性所指定的端點相互關聯。 如果未指定名稱，則該繫結會對應於該繫結型別的預設值。  
   
- [!INCLUDE[crabout](../../../includes/crabout-md.md)] 設定服務和用戶端，請參閱[設定的 Windows Communication Foundation 應用程式](http://msdn.microsoft.com/library/13cb368e-88d4-4c61-8eed-2af0361c6d7a)。  
+ 如需有關如何設定服務和用戶端的詳細資訊，請參閱[設定的 Windows Communication Foundation 應用程式](http://msdn.microsoft.com/library/13cb368e-88d4-4c61-8eed-2af0361c6d7a)。  
   
  [\<繫結 >](../../../docs/framework/misc/binding.md)  
   

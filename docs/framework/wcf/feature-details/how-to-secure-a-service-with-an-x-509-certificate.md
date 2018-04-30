@@ -19,16 +19,16 @@ ms.author: bruceper
 manager: mbaldwin
 ms.workload:
 - dotnet
-ms.openlocfilehash: 31028b6fe2cc34a9ae5cabe410bef0d753fd9436
-ms.sourcegitcommit: 03ee570f6f528a7d23a4221dcb26a9498edbdf8c
+ms.openlocfilehash: 89ad47ad898184b99f32743855091c0985722f77
+ms.sourcegitcommit: 94d33cadc5ff81d2ac389bf5f26422c227832052
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/28/2018
+ms.lasthandoff: 04/30/2018
 ---
 # <a name="how-to-secure-a-service-with-an-x509-certificate"></a>HOW TO：使用 X.509 憑證來確保服務安全
 使用 X.509 憑證確保服務安全是 [!INCLUDE[indigo1](../../../../includes/indigo1-md.md)] 中大部分繫結使用的基本技術。 此主題會介紹使用 X.509 憑證設定自我主控服務的步驟。  
   
- 必要條件是能夠用來驗證伺服器的有效憑證。 憑證必須透過受信任的憑證授權單位發行至伺服器。 如果憑證無效，任何嘗試使用服務的用戶端都不會信任該服務，因此無法建立連線。 [!INCLUDE[crabout](../../../../includes/crabout-md.md)] 使用憑證，請參閱[使用憑證](../../../../docs/framework/wcf/feature-details/working-with-certificates.md)。  
+ 必要條件是能夠用來驗證伺服器的有效憑證。 憑證必須透過受信任的憑證授權單位發行至伺服器。 如果憑證無效，任何嘗試使用服務的用戶端都不會信任該服務，因此無法建立連線。 如需有關如何使用憑證的詳細資訊，請參閱[使用憑證](../../../../docs/framework/wcf/feature-details/working-with-certificates.md)。  
   
 ### <a name="to-configure-a-service-with-a-certificate-using-code"></a>使用程式碼搭配憑證設定服務  
   

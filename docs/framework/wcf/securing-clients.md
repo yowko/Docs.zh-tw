@@ -1,37 +1,37 @@
 ---
-title: "確保用戶端的安全"
-ms.custom: 
+title: 確保用戶端的安全
+ms.custom: ''
 ms.date: 03/30/2017
 ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
+ms.reviewer: ''
+ms.suite: ''
 ms.technology:
 - dotnet-clr
-ms.tgt_pltfrm: 
+ms.tgt_pltfrm: ''
 ms.topic: article
 helpviewer_keywords:
 - clients [WCF], security considerations
 ms.assetid: 44c8578c-9a5b-4acd-8168-1c30a027c4c5
-caps.latest.revision: 
+caps.latest.revision: 22
 author: BrucePerlerMS
 ms.author: bruceper
 manager: mbaldwin
 ms.workload:
 - dotnet
-ms.openlocfilehash: 611272f9d0369a89d401315e9b6379d2e8cd27c0
-ms.sourcegitcommit: c0dd436f6f8f44dc80dc43b07f6841a00b74b23f
+ms.openlocfilehash: 7d06df1a9c4ef5a7cb64f71d2f7afc77c41a0e6f
+ms.sourcegitcommit: 94d33cadc5ff81d2ac389bf5f26422c227832052
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 01/19/2018
+ms.lasthandoff: 04/30/2018
 ---
 # <a name="securing-clients"></a>確保用戶端的安全
-在 [!INCLUDE[indigo1](../../../includes/indigo1-md.md)] 中，服務說明用戶端的安全性需求。 也就是說，服務會指定使用哪一個安全性模式，以及用戶端是否必須提供認證。 因此，保護用戶端安全的程序便十分簡單，只要使用從服務 (如果已發行) 取得的中繼資料並建立用戶端即可。 中繼資料指定如何設定用戶端。 如果服務要求用戶端提供認證，則您必須取得符合要求的認證。 本主題將進一步探討此程序。 [!INCLUDE[crabout](../../../includes/crabout-md.md)]建立安全的服務，請參閱[保護 Services](../../../docs/framework/wcf/securing-services.md)。  
+在 [!INCLUDE[indigo1](../../../includes/indigo1-md.md)] 中，服務說明用戶端的安全性需求。 也就是說，服務會指定使用哪一個安全性模式，以及用戶端是否必須提供認證。 因此，保護用戶端安全的程序便十分簡單，只要使用從服務 (如果已發行) 取得的中繼資料並建立用戶端即可。 中繼資料指定如何設定用戶端。 如果服務要求用戶端提供認證，則您必須取得符合要求的認證。 本主題將進一步探討此程序。 如需建立安全服務的詳細資訊，請參閱[保護 Services](../../../docs/framework/wcf/securing-services.md)。  
   
 ## <a name="the-service-specifies-security"></a>指定安全性的服務  
  根據預設值，[!INCLUDE[indigo2](../../../includes/indigo2-md.md)] 繫結已啟用安全性功能  (例外狀況是 <xref:System.ServiceModel.BasicHttpBinding>)。因此，如果服務是以 [!INCLUDE[indigo2](../../../includes/indigo2-md.md)] 建立，則服務較有可能實作安全性以確保驗證、機密性和完整性。 在該情況下，服務提供的中繼資料將指示它需要什麼來建立安全的通訊通道。 如果服務中繼資料沒有任何安全性需要，那麼就沒有方法強制服務採用安全性配置 (例如透過 HTTP 的 Secure Sockets Layer (SSL))。 如果服務要求用戶端提供認證，則用戶端開發人員、部署人員或管理員必須提供用戶端用來向服務驗證的實際認證。  
   
 ## <a name="obtaining-metadata"></a>取得中繼資料  
- 建立用戶端時，第一個步驟是取得與用戶端通訊的服務中繼資料。 有兩種方法可以達到這個目的： 首先，如果服務發行中繼資料交換 (MEX) 端點，或透過 HTTP 或 HTTPS 提供它的中繼資料，您可以下載中繼資料使用[ServiceModel Metadata Utility Tool (Svcutil.exe)](../../../docs/framework/wcf/servicemodel-metadata-utility-tool-svcutil-exe.md)，如此就會產生兩者用戶端，以及組態檔的程式碼檔案。 ([!INCLUDE[crabout](../../../includes/crabout-md.md)]使用工具，請參閱[使用 WCF 用戶端存取服務](../../../docs/framework/wcf/accessing-services-using-a-wcf-client.md)。)如果服務未發行 MEX 端點，而且也沒有透過 HTTP 或 HTTPS 提供它的中繼資料，您必須向服務建立者要求描述安全性需求與中繼資料的文件。  
+ 建立用戶端時，第一個步驟是取得與用戶端通訊的服務中繼資料。 有兩種方法可以達到這個目的： 首先，如果服務發行中繼資料交換 (MEX) 端點，或透過 HTTP 或 HTTPS 提供它的中繼資料，您可以下載中繼資料使用[ServiceModel Metadata Utility Tool (Svcutil.exe)](../../../docs/framework/wcf/servicemodel-metadata-utility-tool-svcutil-exe.md)，如此就會產生兩者用戶端，以及組態檔的程式碼檔案。 (如需有關如何使用工具的詳細資訊，請參閱[使用 WCF 用戶端存取服務](../../../docs/framework/wcf/accessing-services-using-a-wcf-client.md)。)如果服務未發行 MEX 端點，而且也沒有透過 HTTP 或 HTTPS 提供它的中繼資料，您必須向服務建立者要求描述安全性需求與中繼資料的文件。  
   
 > [!IMPORTANT]
 >  建議使用來自受信任來源且不可竄改的中繼資料。 使用 HTTP 通訊協定擷取的中繼資料會以純文字傳送出去且可以竄改。 如果服務使用 <xref:System.ServiceModel.Description.ServiceMetadataBehavior.HttpsGetEnabled%2A> 和 <xref:System.ServiceModel.Description.ServiceMetadataBehavior.HttpsGetUrl%2A> 屬性，請以服務建立者提供的 URL 來使用 HTTPS 通訊協定下載資料。  
@@ -147,7 +147,7 @@ ms.lasthandoff: 01/19/2018
 > [!NOTE]
 >  使用應用程式組態檔無法設定某些用戶端認證值，例如使用者名稱和密碼，或者 Windows 使用者和密碼值。 這類認證值只能在程式碼中指定。  
   
- [!INCLUDE[crabout](../../../includes/crabout-md.md)]設定用戶端認證，請參閱[How to： 指定用戶端認證值](../../../docs/framework/wcf/how-to-specify-client-credential-values.md)。  
+ 如需有關如何設定用戶端認證的詳細資訊，請參閱[How to： 指定用戶端認證值](../../../docs/framework/wcf/how-to-specify-client-credential-values.md)。  
   
 > [!NOTE]
 >  `ClientCredentialType` 設定為 `SecurityMode` 時，會忽略 `"TransportWithMessageCredential",`，如下列範例組態所示。  
@@ -165,13 +165,13 @@ ms.lasthandoff: 01/19/2018
 </wsHttpBinding>  
 ```  
   
-## <a name="see-also"></a>請參閱  
+## <a name="see-also"></a>另請參閱  
  <xref:System.ServiceModel.ClientBase%601.ClientCredentials%2A>  
  <xref:System.ServiceModel.ClientBase%601>  
  <xref:System.ServiceModel.Description.ClientCredentials>  
  <xref:System.ServiceModel.Description.ServiceMetadataBehavior.HttpsGetEnabled%2A>  
  <xref:System.ServiceModel.Description.ServiceMetadataBehavior.HttpsGetUrl%2A>  
- [\<bindings>](../../../docs/framework/configure-apps/file-schema/wcf/bindings.md)  
+ [\<繫結 >](../../../docs/framework/configure-apps/file-schema/wcf/bindings.md)  
  [設定編輯器工具 (SvcConfigEditor.exe)](../../../docs/framework/wcf/configuration-editor-tool-svcconfigeditor-exe.md)  
  [保護服務安全](../../../docs/framework/wcf/securing-services.md)  
  [使用 WCF 用戶端存取服務](../../../docs/framework/wcf/accessing-services-using-a-wcf-client.md)  

@@ -1,23 +1,24 @@
 ---
-title: "必要引數與多載群組"
-ms.custom: 
+title: 必要引數與多載群組
+ms.custom: ''
 ms.date: 03/30/2017
 ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.tgt_pltfrm: 
+ms.reviewer: ''
+ms.suite: ''
+ms.tgt_pltfrm: ''
 ms.topic: article
 ms.assetid: 4ca3ed06-b9af-4b85-8b70-88c2186aefa3
-caps.latest.revision: "6"
+caps.latest.revision: 6
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.workload: dotnet
-ms.openlocfilehash: 8b6025fb65c5e2d4d0683d302638f8a1d2803662
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.workload:
+- dotnet
+ms.openlocfilehash: 47e94c65ff722d3b4f98b026d69ecd31bc02b934
+ms.sourcegitcommit: 94d33cadc5ff81d2ac389bf5f26422c227832052
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 04/30/2018
 ---
 # <a name="required-arguments-and-overload-groups"></a>必要引數與多載群組
 您可以設定活動，讓繫結活動所需的某些引數有效，以便用於執行。 `RequiredArgument` 屬性用於指出活動的特定引數是必要的，而 `OverloadGroup` 屬性則用於群組必要引數的分類。 透過使用屬性，活動作者可以提供簡單或複雜的活動驗證組態。  
@@ -73,7 +74,7 @@ public sealed class Add : CodeActivity<int>
   
  **未提供必要的活動引數 'Operand1' 的值。**  
 > [!NOTE]
->  [!INCLUDE[crabout](../../../includes/crabout-md.md)]如何檢查和處理驗證錯誤和警告，請參閱[叫用活動驗證](../../../docs/framework/windows-workflow-foundation/invoking-activity-validation.md)。  
+>  如需檢查和處理驗證錯誤和警告的相關詳細資訊，請參閱[叫用活動驗證](../../../docs/framework/windows-workflow-foundation/invoking-activity-validation.md)。  
   
 ## <a name="using-overload-groups"></a>使用多載群組  
  多載群組提供方法，指出活動中哪些引數組合是有效的。 引數會使用 <xref:System.Activities.OverloadGroupAttribute> 群組在一起。 每個群組會擁有一個由 <xref:System.Activities.OverloadGroupAttribute> 所指定的名稱。唯有繫結多載群組中的一組引數時，活動才有效。 在下列範例中，取自[OverloadGroups](../../../docs/framework/windows-workflow-foundation/samples/overloadgroups.md)範例中，`CreateLocation`類別定義。  

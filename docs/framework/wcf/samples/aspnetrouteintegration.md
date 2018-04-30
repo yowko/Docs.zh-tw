@@ -1,27 +1,29 @@
 ---
 title: AspNetRouteIntegration
-ms.custom: 
+ms.custom: ''
 ms.date: 03/30/2017
 ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.technology: dotnet-clr
-ms.tgt_pltfrm: 
+ms.reviewer: ''
+ms.suite: ''
+ms.technology:
+- dotnet-clr
+ms.tgt_pltfrm: ''
 ms.topic: article
 ms.assetid: 0638ce0e-d053-47df-a447-688e447a03fb
-caps.latest.revision: "8"
+caps.latest.revision: 8
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.workload: dotnet
-ms.openlocfilehash: bf4f96116e8a4e687e7818796fa4b95e1b9b171a
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.workload:
+- dotnet
+ms.openlocfilehash: 93d248030c4b32bd7725cf9c6fbbb829a19f7845
+ms.sourcegitcommit: 94d33cadc5ff81d2ac389bf5f26422c227832052
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 04/30/2018
 ---
 # <a name="aspnetrouteintegration"></a>AspNetRouteIntegration
-此範例示範如何使用 ASP.NET 路由裝載 [!INCLUDE[indigo1](../../../../includes/indigo1-md.md)] REST 服務。 [基本資源服務](../../../../docs/framework/wcf/samples/basic-resource-service.md)範例示範此案例中的自我裝載的版本，並討論深度的服務實作。 本主題著重在 ASP.NET 整合功能。 [!INCLUDE[crabout](../../../../includes/crabout-md.md)] ASP.NET 路由的詳細資訊，請參閱 <xref:System.Web.Routing>。  
+此範例示範如何使用 ASP.NET 路由裝載 [!INCLUDE[indigo1](../../../../includes/indigo1-md.md)] REST 服務。 [基本資源服務](../../../../docs/framework/wcf/samples/basic-resource-service.md)範例示範此案例中的自我裝載的版本，並討論深度的服務實作。 本主題著重在 ASP.NET 整合功能。 如需 ASP.NET 路由的詳細資訊，請參閱<xref:System.Web.Routing>。  
   
 ## <a name="sample-details"></a>範例詳細資料  
  [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] 服務會以資源導向/REST 的方式公開客戶的集合。 此服務就像以 SOAP 為基礎的 [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] 服務，可以使用 .svc 檔案在 ASP.NET 中裝載。 不過，這通常不適用於 HTTP 情況，因為它必須在服務的 URL 中擁有 .svc。 此外，它需要部署 .svc 檔案以及服務程式庫。 您可以如本範例中所示範的方式，使用 ASP.NET 路由裝載服務來避免這些限制。  
@@ -72,4 +74,4 @@ ms.lasthandoff: 12/22/2017
 >   
 >  `<InstallDrive>:\WF_WCF_Samples\WCF\Basic\Web\AspNetRouteIntegration`  
   
-## <a name="see-also"></a>請參閱
+## <a name="see-also"></a>另請參閱

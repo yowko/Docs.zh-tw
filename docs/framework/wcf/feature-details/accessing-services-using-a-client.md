@@ -19,11 +19,11 @@ ms.author: dotnetcontent
 manager: wpickett
 ms.workload:
 - dotnet
-ms.openlocfilehash: 2138a412af30812b4ff443963604dda52eafea11
-ms.sourcegitcommit: 03ee570f6f528a7d23a4221dcb26a9498edbdf8c
+ms.openlocfilehash: 209d10f9545be65870f584fa79444f7fab90211a
+ms.sourcegitcommit: 94d33cadc5ff81d2ac389bf5f26422c227832052
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/28/2018
+ms.lasthandoff: 04/30/2018
 ---
 # <a name="accessing-services-using-a-client"></a>使用用戶端存取服務
 用戶端應用程式必須建立、設定，以及使用 [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] 用戶端或通道物件來與服務通訊。 [WCF 用戶端概觀](../../../../docs/framework/wcf/wcf-client-overview.md)主題提供的物件和建立基本用戶端和通道物件，以及使用它們的相關步驟的概觀。  
@@ -76,7 +76,7 @@ ms.lasthandoff: 04/28/2018
   
  即使在關閉時發生例外狀況，資料包通道也絕不會發生錯誤。 此外，無法使用安全對話來進行驗證的非雙工用戶端通常會擲回 <xref:System.ServiceModel.Security.MessageSecurityException?displayProperty=nameWithType>。 不過，如果使用安全對話的雙工用戶端驗證失敗，則用戶端就會轉而收到 <xref:System.TimeoutException?displayProperty=nameWithType>。  
   
- 更完整與應用程式層級的錯誤訊息工作的相關資訊，請參閱[指定與處理合約和服務中的錯誤](../../../../docs/framework/wcf/specifying-and-handling-faults-in-contracts-and-services.md)。 [預期的例外狀況](../../../../docs/framework/wcf/samples/expected-exceptions.md)描述預期的例外狀況，並示範如何處理它們。 [!INCLUDE[crabout](../../../../includes/crabout-md.md)] 開發通道時處理錯誤，請參閱[處理的例外狀況和錯誤](../../../../docs/framework/wcf/extending/handling-exceptions-and-faults.md)。  
+ 更完整與應用程式層級的錯誤訊息工作的相關資訊，請參閱[指定與處理合約和服務中的錯誤](../../../../docs/framework/wcf/specifying-and-handling-faults-in-contracts-and-services.md)。 [預期的例外狀況](../../../../docs/framework/wcf/samples/expected-exceptions.md)描述預期的例外狀況，並示範如何處理它們。 如需如何開發通道時處理錯誤的詳細資訊，請參閱[處理的例外狀況和錯誤](../../../../docs/framework/wcf/extending/handling-exceptions-and-faults.md)。  
   
 ### <a name="client-blocking-and-performance"></a>用戶端封鎖和效能  
  當應用程式同步呼叫要求-回覆作業時，除非有收到傳回值或擲回例外狀況 (例如 <xref:System.TimeoutException?displayProperty=nameWithType>)，否則用戶端會封鎖。 這個行為類似本機行為。 當應用程式同步叫用 [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] 用戶端物件或通道上的作業時，除非通道層可以將資料寫入至網路或有擲回例外狀況，否則用戶端不會傳回。 雖然單向訊息交換模式 (指定方式是標示作業的 <xref:System.ServiceModel.OperationContractAttribute.IsOneWay%2A?displayProperty=nameWithType> 設定為 `true`) 可以讓某些用戶端更能有效回應，但單向作業也會根據繫結和已經傳送的訊息來執行封鎖。 單向作業只能進行訊息交換，無法執行其他作業。 如需詳細資訊，請參閱[單向服務](../../../../docs/framework/wcf/feature-details/one-way-services.md)。  
@@ -85,7 +85,7 @@ ms.lasthandoff: 04/28/2018
   
  如果您的應用程式必須在完成作業的同時執行更多工作，則您應該在 [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] 用戶端實作的服務合約介面上建立非同步方法組。 若要這樣做最簡單的方式是使用`/async`上切換[ServiceModel Metadata Utility Tool (Svcutil.exe)](../../../../docs/framework/wcf/servicemodel-metadata-utility-tool-svcutil-exe.md)。 如需範例，請參閱[如何： 非同步呼叫服務作業](../../../../docs/framework/wcf/feature-details/how-to-call-wcf-service-operations-asynchronously.md)。  
   
- [!INCLUDE[crabout](../../../../includes/crabout-md.md)] 增加用戶端效能，請參閱[中介層用戶端應用程式](../../../../docs/framework/wcf/feature-details/middle-tier-client-applications.md)。  
+ 如需增加用戶端效能的詳細資訊，請參閱[中介層用戶端應用程式](../../../../docs/framework/wcf/feature-details/middle-tier-client-applications.md)。  
   
 ### <a name="enabling-the-user-to-select-credentials-dynamically"></a>讓使用者以動態方式選取認證  
  <xref:System.ServiceModel.Dispatcher.IInteractiveChannelInitializer> 介面可讓應用程式顯示使用者介面，以便使用者選擇要在逾時計時器啟動之前用來建立通道的認證。  

@@ -16,17 +16,17 @@ ms.author: dotnetcontent
 manager: wpickett
 ms.workload:
 - dotnet
-ms.openlocfilehash: c9ae96facd79ae3d268c630ff7bf8adf411eb775
-ms.sourcegitcommit: 86adcc06e35390f13c1e372c36d2e044f1fc31ef
+ms.openlocfilehash: 5550e97d97adf28a84566c5d7936369656c65e43
+ms.sourcegitcommit: 94d33cadc5ff81d2ac389bf5f26422c227832052
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/26/2018
+ms.lasthandoff: 04/30/2018
 ---
 # <a name="accessing-the-service-from-a-web-browser-wcf-data-services-quickstart"></a>從 Web 瀏覽器存取服務 (WCF 資料服務快速入門)
 在此工作中，您將從 Visual Studio 啟動 [!INCLUDE[ssAstoria](../../../../includes/ssastoria-md.md)]，並且選擇性停用 Web 瀏覽器中的摘要讀取功能。 然後會擷取服務定義文件，以及提交至公開的資源的網頁瀏覽器透過 HTTP GET 要求來存取資料服務資源。  
   
 > [!NOTE]
->  根據預設，Visual Studio 會在您的電腦上自動指派連接埠號碼給 `localhost` URI。 這項工作會在 URI 範例中使用連接埠號碼 `12345`。 [!INCLUDE[crabout](../../../../includes/crabout-md.md)] 如何在您 Visual Studio 專案，請參閱中設定特定通訊埠編號[建立資料服務](../../../../docs/framework/data/wcf/creating-the-data-service.md)。  
+>  根據預設，Visual Studio 會在您的電腦上自動指派連接埠號碼給 `localhost` URI。 這項工作會在 URI 範例中使用連接埠號碼 `12345`。 如需有關如何在 Visual Studio 專案中設定特定通訊埠編號，請參閱[建立資料服務](../../../../docs/framework/data/wcf/creating-the-data-service.md)。  
   
 ### <a name="to-request-the-default-service-document-by-using-internet-explorer"></a>若要使用 Internet Explorer 要求預設服務文件  
   

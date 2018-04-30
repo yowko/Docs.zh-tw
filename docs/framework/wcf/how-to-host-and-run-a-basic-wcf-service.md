@@ -17,11 +17,11 @@ ms.author: dotnetcontent
 manager: wpickett
 ms.workload:
 - dotnet
-ms.openlocfilehash: a13e5a0044c51700acce6b123688868443f635ae
-ms.sourcegitcommit: 86adcc06e35390f13c1e372c36d2e044f1fc31ef
+ms.openlocfilehash: d8c9fdefd286e32b169b96065e6164a236941133
+ms.sourcegitcommit: 94d33cadc5ff81d2ac389bf5f26422c227832052
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/26/2018
+ms.lasthandoff: 04/30/2018
 ---
 # <a name="how-to-host-and-run-a-basic-windows-communication-foundation-service"></a>HOW TO：裝載和執行基本 Windows Communication Foundation 服務
 這是在建立 [!INCLUDE[indigo1](../../../includes/indigo1-md.md)] 應用程式時必須進行的六個工作中的第三個。 六個工作的概觀，請參閱[入門教學課程](../../../docs/framework/wcf/getting-started-tutorial.md)主題。  
@@ -159,10 +159,10 @@ ms.lasthandoff: 04/26/2018
   
     2.  步驟 2：建立 <xref:System.ServiceModel.ServiceHost> 類別的執行個體以裝載服務。 建構函式接受兩個參數：實作服務合約之類別的型別以及服務的基底位址。  
   
-    3.  步驟 3： 建立<!--zz <xref:System.ServiceModel.ServiceEndpoint>-->` System.ServiceModel.ServiceEndpoint`執行個體。 服務端點是由位址、繫結和服務合約所組成。 <!--zz <xref:System.ServiceModel.ServiceEndpoint>--> ` System.ServiceModel.ServiceEndpoint`服務合約介面型別、 繫結和位址，因此會採用建構函式。 服務合約是您在服務類型中所定義和實作的 `ICalculator`。 這個範例使用的繫結是 <xref:System.ServiceModel.WSHttpBinding>，這是用來連接至符合 WS-* 規格之端點的內建繫結。 如需有關 WCF 繫結的詳細資訊，請參閱[WCF 繫結概觀](../../../docs/framework/wcf/bindings-overview.md)。 位址會附加至基底位址以識別端點。 此程式碼中指定的位址是"CalculatorService"，因此端點的完整的位址是`"http://localhost:8000/GettingStarted/CalculatorService"`新增服務端點是選擇性時使用.NET Framework 4.0 或更新版本。 在這些版本中，如果沒有在程式碼或組態中加入端點，則 WCF 會為服務所實作之合約與基底位址的每個組合加入一個預設端點。 如需有關預設端點請參閱[指定端點位址](../../../docs/framework/wcf/specifying-an-endpoint-address.md)。 [!INCLUDE[crabout](../../../includes/crabout-md.md)] 預設端點、繫結和行為的詳細資訊，請參閱 [Simplified Configuration](../../../docs/framework/wcf/simplified-configuration.md) and [Simplified Configuration for WCF Services](../../../docs/framework/wcf/samples/simplified-configuration-for-wcf-services.md).  
+    3.  步驟 3： 建立<!--zz <xref:System.ServiceModel.ServiceEndpoint>-->` System.ServiceModel.ServiceEndpoint`執行個體。 服務端點是由位址、繫結和服務合約所組成。 <!--zz <xref:System.ServiceModel.ServiceEndpoint>--> ` System.ServiceModel.ServiceEndpoint`服務合約介面型別、 繫結和位址，因此會採用建構函式。 服務合約是您在服務類型中所定義和實作的 `ICalculator`。 這個範例使用的繫結是 <xref:System.ServiceModel.WSHttpBinding>，這是用來連接至符合 WS-* 規格之端點的內建繫結。 如需有關 WCF 繫結的詳細資訊，請參閱[WCF 繫結概觀](../../../docs/framework/wcf/bindings-overview.md)。 位址會附加至基底位址以識別端點。 此程式碼中指定的位址是"CalculatorService"，因此端點的完整的位址是`"http://localhost:8000/GettingStarted/CalculatorService"`新增服務端點是選擇性時使用.NET Framework 4.0 或更新版本。 在這些版本中，如果沒有在程式碼或組態中加入端點，則 WCF 會為服務所實作之合約與基底位址的每個組合加入一個預設端點。 如需有關預設端點請參閱[指定端點位址](../../../docs/framework/wcf/specifying-an-endpoint-address.md)。 如需有關預設端點、 繫結和行為的詳細資訊，請參閱[簡化的組態](../../../docs/framework/wcf/simplified-configuration.md)和[簡化 WCF 服務的組態](../../../docs/framework/wcf/samples/simplified-configuration-for-wcf-services.md)。  
   
         > [!IMPORTANT]
-        >  使用 .NET Framework 4 (含) 以後版本時，加入服務端點是選擇性的。 在這些版本中，如果沒有在程式碼或組態中加入端點，則 WCF 會為服務所實作之合約與基底位址的每個組合加入一個預設端點。 如需有關預設端點請參閱[指定端點位址](../../../docs/framework/wcf/specifying-an-endpoint-address.md)。 [!INCLUDE[crabout](../../../includes/crabout-md.md)] 預設端點、繫結和行為的詳細資訊，請參閱 [Simplified Configuration](../../../docs/framework/wcf/simplified-configuration.md) and [Simplified Configuration for WCF Services](../../../docs/framework/wcf/samples/simplified-configuration-for-wcf-services.md).  
+        >  使用 .NET Framework 4 (含) 以後版本時，加入服務端點是選擇性的。 在這些版本中，如果沒有在程式碼或組態中加入端點，則 WCF 會為服務所實作之合約與基底位址的每個組合加入一個預設端點。 如需有關預設端點請參閱[指定端點位址](../../../docs/framework/wcf/specifying-an-endpoint-address.md)。 如需有關預設端點、 繫結和行為的詳細資訊，請參閱[簡化的組態](../../../docs/framework/wcf/simplified-configuration.md)和[簡化 WCF 服務的組態](../../../docs/framework/wcf/samples/simplified-configuration-for-wcf-services.md)。  
   
     4.  步驟 4：啟用中繼資料交換。 用戶端會使用中繼資料交換來產生用於呼叫服務作業的 Proxy。 若要啟用中繼資料交換建立<xref:System.ServiceModel.Description.ServiceMetadataBehavior>執行個體、 將它的<xref:System.ServiceModel.Description.ServiceMetadataBehavior.HttpGetEnabled%2A>屬性`true`，並將行為加入至<!--zz <xref:System.ServiceModel.ServiceHost.Behaviors%2A>  -->`System.ServiceModel.ServiceHost.Behaviors%2A`集合<xref:System.ServiceModel.ServiceHost>執行個體。  
   
@@ -424,7 +424,7 @@ End Module
 ```  
   
 > [!NOTE]
->  此類服務需要權限才能將 HTTP 位址註冊到電腦上，以便接聽。 系統管理員帳戶具有此權限，但是非系統管理員帳戶則必須被授與 HTTP 命名空間的權限。 [!INCLUDE[crabout](../../../includes/crabout-md.md)] 如何設定命名空間保留區，請參閱[設定 HTTP 和 HTTPS](../../../docs/framework/wcf/feature-details/configuring-http-and-https.md)。 以 Visual Studio 執行時，必須以系統管理權限執行 service.exe。  
+>  此類服務需要權限才能將 HTTP 位址註冊到電腦上，以便接聽。 系統管理員帳戶具有此權限，但是非系統管理員帳戶則必須被授與 HTTP 命名空間的權限。 如需如何設定命名空間保留區的詳細資訊，請參閱[設定 HTTP 和 HTTPS](../../../docs/framework/wcf/feature-details/configuring-http-and-https.md)。 以 Visual Studio 執行時，必須以系統管理權限執行 service.exe。  
   
  服務目前正在執行中。 若要繼續[How to： 建立用戶端](../../../docs/framework/wcf/how-to-create-a-wcf-client.md)。 如需疑難排解資訊，請參閱[疑難排解入門教學課程](../../../docs/framework/wcf/troubleshooting-the-getting-started-tutorial.md)。  
   

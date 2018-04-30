@@ -16,17 +16,17 @@ ms.author: bruceper
 manager: mbaldwin
 ms.workload:
 - dotnet
-ms.openlocfilehash: d033a3e22def60c5d82191fd7fcc93bd67f4548b
-ms.sourcegitcommit: 03ee570f6f528a7d23a4221dcb26a9498edbdf8c
+ms.openlocfilehash: 393730ffe57c4678f53d16e67b8b8f64ad16509c
+ms.sourcegitcommit: 94d33cadc5ff81d2ac389bf5f26422c227832052
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/28/2018
+ms.lasthandoff: 04/30/2018
 ---
 # <a name="security-considerations-with-metadata"></a>中繼資料的安全性考量
 使用 [!INCLUDE[indigo1](../../../../includes/indigo1-md.md)] 中的中繼資料功能時，請考量發行、擷取和使用服務中繼資料的安全性影響。  
   
 ## <a name="when-to-publish-metadata"></a>發行中繼資料的時機  
- [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] 服務預設不會發行中繼資料。 若要發佈的中繼資料[!INCLUDE[indigo2](../../../../includes/indigo2-md.md)]將中繼資料端點加入至您的服務，您必須明確啟用中繼資料發行的服務 (請參閱[發行中繼資料](../../../../docs/framework/wcf/feature-details/publishing-metadata.md))。 停用中繼資料發行則會降低服務的攻擊面，並降低非預期資料暴露的風險。 不是所有服務都必須發行中繼資料。 如果您不需要發行中繼資料，可以考慮關閉這個功能。 請注意，仍然可以直接從您使用的服務組件產生中繼資料和用戶端程式碼[ServiceModel Metadata Utility Tool (Svcutil.exe)](../../../../docs/framework/wcf/servicemodel-metadata-utility-tool-svcutil-exe.md)。 [!INCLUDE[crabout](../../../../includes/crabout-md.md)] 使用 Svcutil.exe 來匯出中繼資料，請參閱[How to： 使用 Svcutil.exe 來匯出中繼資料編譯服務程式碼](../../../../docs/framework/wcf/feature-details/how-to-use-svcutil-exe-to-export-metadata-from-compiled-service-code.md)。  
+ [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] 服務預設不會發行中繼資料。 若要發佈的中繼資料[!INCLUDE[indigo2](../../../../includes/indigo2-md.md)]將中繼資料端點加入至您的服務，您必須明確啟用中繼資料發行的服務 (請參閱[發行中繼資料](../../../../docs/framework/wcf/feature-details/publishing-metadata.md))。 停用中繼資料發行則會降低服務的攻擊面，並降低非預期資料暴露的風險。 不是所有服務都必須發行中繼資料。 如果您不需要發行中繼資料，可以考慮關閉這個功能。 請注意，仍然可以直接從您使用的服務組件產生中繼資料和用戶端程式碼[ServiceModel Metadata Utility Tool (Svcutil.exe)](../../../../docs/framework/wcf/servicemodel-metadata-utility-tool-svcutil-exe.md)。 如需有關如何使用 Svcutil.exe 來匯出中繼資料的詳細資訊，請參閱[How to： 使用 Svcutil.exe 來匯出中繼資料編譯服務程式碼](../../../../docs/framework/wcf/feature-details/how-to-use-svcutil-exe-to-export-metadata-from-compiled-service-code.md)。  
   
 ## <a name="publishing-metadata-using-a-secure-binding"></a>使用安全繫結發行中繼資料  
  [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] 提供的預設中繼資料繫結並不安全，而這些繫結會允許匿名存取中繼資料。 [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] 服務發行的服務中繼資料包含服務的詳細描述，並可能有意或無意包含敏感資訊。 例如，服務中繼資料可能包含原意不是要公開廣播的基礎結構作業的相關資訊。 若要防止未經授權存取服務中繼資料，您可以在中繼資料端點中使用安全繫結。 中繼資料端點會回應至使用 Secure Sockets Layer (SSL) 來確保中繼資料安全的 HTTP/GET 要求。 如需詳細資訊，請參閱[How to： 安全中繼資料端點](../../../../docs/framework/wcf/feature-details/how-to-secure-metadata-endpoints.md)。  

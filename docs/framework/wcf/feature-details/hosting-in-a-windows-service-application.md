@@ -1,27 +1,29 @@
 ---
-title: "在 Windows 服務應用程式中裝載"
-ms.custom: 
+title: 在 Windows 服務應用程式中裝載
+ms.custom: ''
 ms.date: 03/30/2017
 ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.technology: dotnet-clr
-ms.tgt_pltfrm: 
+ms.reviewer: ''
+ms.suite: ''
+ms.technology:
+- dotnet-clr
+ms.tgt_pltfrm: ''
 ms.topic: article
 ms.assetid: f4199998-27f3-4dd9-aee4-0a4addfa9f24
-caps.latest.revision: "12"
+caps.latest.revision: 12
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.workload: dotnet
-ms.openlocfilehash: d1a39162097c21f20c0dd04f3911442602871436
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.workload:
+- dotnet
+ms.openlocfilehash: c1f0d2336c2682bd525a66c6e5b12ce2d17ad219
+ms.sourcegitcommit: 94d33cadc5ff81d2ac389bf5f26422c227832052
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 04/30/2018
 ---
 # <a name="hosting-in-a-windows-service-application"></a>在 Windows 服務應用程式中裝載
-Windows 服務 (之前稱為 Windows NT 服務) 所提供的處理序模型特別適合那些必須駐留在長時間執行的可執行檔中，且不會顯示任何使用者介面形式的應用程式使用。 Windows 服務應用程式的處理序存留期是由服務控制管理員 (SCM) 負責管理，可讓您啟動、停止與暫停 Windows 服務應用程式。 您可以設定 Windows 服務處理序啟動時自動啟動電腦，因此適合裝載 「 永遠開啟 」 應用程式的環境。 [!INCLUDE[crabout](../../../../includes/crabout-md.md)]Windows 服務應用程式，請參閱[Windows 服務應用程式](http://go.microsoft.com/fwlink/?LinkId=89450)。  
+Windows 服務 (之前稱為 Windows NT 服務) 所提供的處理序模型特別適合那些必須駐留在長時間執行的可執行檔中，且不會顯示任何使用者介面形式的應用程式使用。 Windows 服務應用程式的處理序存留期是由服務控制管理員 (SCM) 負責管理，可讓您啟動、停止與暫停 Windows 服務應用程式。 您可以設定 Windows 服務處理序啟動時自動啟動電腦，因此適合裝載 「 永遠開啟 」 應用程式的環境。 如需 Windows 服務應用程式的詳細資訊，請參閱[Windows 服務應用程式](http://go.microsoft.com/fwlink/?LinkId=89450)。  
   
  裝載長時間執行 [!INCLUDE[indigo1](../../../../includes/indigo1-md.md)] 服務的應用程式會有許多 Windows 服務的特徵。 值得一提的是，[!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] 服務這項長時間執行的伺服器可執行檔不會直接與使用者互動，因此不會實作任何形式的使用者介面。 因此，建置穩固、長時間執行的 [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] 應用程式時，可以選擇將 [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] 服務裝載到 Windows 服務應用程式中。  
   
@@ -47,7 +49,7 @@ Windows 服務 (之前稱為 Windows NT 服務) 所提供的處理序模型特�
   
      負責裝載 [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] 服務的 Windows 服務應用程式，其部署與管理方式將與不使用 [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] 的 Windows 服務應用程式相同。  
   
-## <a name="see-also"></a>請參閱  
+## <a name="see-also"></a>另請參閱  
  <xref:System.ServiceProcess>  
  [逐步解說：在元件設計工具中建立 Windows 服務應用程式](http://go.microsoft.com/fwlink/?LinkId=94875)  
  [如何：在 Managed Windows 服務中裝載 WCF 服務](../../../../docs/framework/wcf/feature-details/how-to-host-a-wcf-service-in-a-managed-windows-service.md)  

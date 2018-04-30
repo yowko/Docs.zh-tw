@@ -16,11 +16,11 @@ ms.author: dotnetcontent
 manager: wpickett
 ms.workload:
 - dotnet
-ms.openlocfilehash: c603032e175fd8390abea2db625321d3e3558c1a
-ms.sourcegitcommit: 03ee570f6f528a7d23a4221dcb26a9498edbdf8c
+ms.openlocfilehash: 1b3da2dc36dca913c638ce269213903c2a024a04
+ms.sourcegitcommit: 94d33cadc5ff81d2ac389bf5f26422c227832052
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/28/2018
+ms.lasthandoff: 04/30/2018
 ---
 # <a name="information-disclosure"></a>資訊洩露
 資訊洩漏讓攻擊者可以取得與系統有關的寶貴資訊。 因此，公開資訊時，請務必考慮您要公開的是哪些資訊，以及是否會遭到惡意使用者的使用。 下列列出可能的資訊洩漏攻擊，並針對各種攻擊提供減少受到攻擊的方法。  
@@ -29,7 +29,7 @@ ms.lasthandoff: 04/28/2018
  如果您正在使用 HTTP 傳輸層上的訊息層級安全性，請注意，訊息層級安全性不會保護 HTTP 標頭。 保護 HTTP 標頭的唯一方法就是使用 HTTPS 傳輸取代 HTTP。 HTTPS 傳輸使用 Secure Sockets Layer (SSL) 通訊協定加密整個訊息，包括 HTTP 標頭。  
   
 ## <a name="policy-information"></a>原則資訊  
- 維持原則的安全相當重要，特別是在原則中公開敏感的發行權杖需求或權杖簽發者資訊的聯合案例中。 在這些情況中，建議保護聯合服務的原則端點，以避免攻擊者取得與服務有關的資訊，例如放在發行權杖中的宣告類型，或將用戶端重新導向至惡意的權杖簽發者。 例如，攻擊者可以透過重新設定聯合信任鏈結來找出使用者名組/密碼組，以終止執行中間人攻擊的簽發者。 同時，也建議透過原則擷取來取得繫結的同盟用戶端，確認他們信任所取得之同盟信任鏈結中的簽發者。 [!INCLUDE[crabout](../../../../includes/crabout-md.md)] 聯合案例中，請參閱[同盟](../../../../docs/framework/wcf/feature-details/federation.md)。  
+ 維持原則的安全相當重要，特別是在原則中公開敏感的發行權杖需求或權杖簽發者資訊的聯合案例中。 在這些情況中，建議保護聯合服務的原則端點，以避免攻擊者取得與服務有關的資訊，例如放在發行權杖中的宣告類型，或將用戶端重新導向至惡意的權杖簽發者。 例如，攻擊者可以透過重新設定聯合信任鏈結來找出使用者名組/密碼組，以終止執行中間人攻擊的簽發者。 同時，也建議透過原則擷取來取得繫結的同盟用戶端，確認他們信任所取得之同盟信任鏈結中的簽發者。 如需同盟案例的詳細資訊，請參閱[同盟](../../../../docs/framework/wcf/feature-details/federation.md)。  
   
 ## <a name="memory-dumps-can-reveal-claim-information"></a>記憶體傾印會洩漏宣告資訊  
  應用程式失敗時，Dr.Watson 等產生的記錄檔會包含宣告資訊。 這項資訊不應該匯出到其他實體，例如支援團隊等，否則可能會一併匯出包含私人資料的宣告資訊。 只要不將記錄檔傳送給未知的實體，即可減少這種情況。 如需詳細資訊，請參閱[Windows Server 2003](http://go.microsoft.com/fwlink/?LinkId=89160)。  
@@ -67,7 +67,7 @@ MyChannelFactory.Credentials.Windows.ClientCredential = new System.Net.NetworkCr
   
  程式碼沒有指定網域名稱，因此將會使用 NTLM。  
   
- 如果有指定網域，但使用端點識別功能來指定無效的服務主體名稱，則會使用 NTLM。 [!INCLUDE[crabout](../../../../includes/crabout-md.md)] 如何指定端點身分識別，請參閱[服務識別和驗證](../../../../docs/framework/wcf/feature-details/service-identity-and-authentication.md)。  
+ 如果有指定網域，但使用端點識別功能來指定無效的服務主體名稱，則會使用 NTLM。 如需有關如何指定端點身分識別的詳細資訊，請參閱[服務識別和驗證](../../../../docs/framework/wcf/feature-details/service-identity-and-authentication.md)。  
   
 ## <a name="see-also"></a>另請參閱  
  [安全性考量](../../../../docs/framework/wcf/feature-details/security-considerations-in-wcf.md)  

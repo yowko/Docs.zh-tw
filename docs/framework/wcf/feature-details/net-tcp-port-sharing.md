@@ -19,11 +19,11 @@ ms.author: dotnetcontent
 manager: wpickett
 ms.workload:
 - dotnet
-ms.openlocfilehash: c7abf272cb1d069b0fbdcd561256580de5a82c29
-ms.sourcegitcommit: 03ee570f6f528a7d23a4221dcb26a9498edbdf8c
+ms.openlocfilehash: d9427d091855a4f658cc971ceca1116cfd74e2ab
+ms.sourcegitcommit: 94d33cadc5ff81d2ac389bf5f26422c227832052
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/28/2018
+ms.lasthandoff: 04/30/2018
 ---
 # <a name="nettcp-port-sharing"></a>Net.TCP Port Sharing
 [!INCLUDE[indigo1](../../../../includes/indigo1-md.md)] 針對高效能通訊提供全新的 TCP 架構網路通訊協定 (net.tcp://)。 [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] 同時引進全新的系統元件 Net.TCP 連接埠共用服務，可讓多個使用者處理序共用 net.tcp 連接埠。  
@@ -56,7 +56,7 @@ ms.lasthandoff: 04/28/2018
 ## <a name="using-nettcp-port-sharing-in-an-application"></a>在應用程式中使用 Net.tcp Port Sharing  
  在 [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] 應用程式中使用 net.tcp:// 連接埠共用的最簡單方式，就是使用 <xref:System.ServiceModel.NetTcpBinding> 來公開服務，然後使用 <xref:System.ServiceModel.NetTcpBinding.PortSharingEnabled%2A> 屬性來啟用 Net.TCP Port Sharing Service。  
   
- [!INCLUDE[crabout](../../../../includes/crabout-md.md)] 如何執行這項操作，請參閱[How to： 將 WCF 服務設定為使用連接埠共用](../../../../docs/framework/wcf/feature-details/how-to-configure-a-wcf-service-to-use-port-sharing.md)。  
+ 如需如何執行這項操作的詳細資訊，請參閱[How to： 將 WCF 服務設定為使用連接埠共用](../../../../docs/framework/wcf/feature-details/how-to-configure-a-wcf-service-to-use-port-sharing.md)。  
   
 ## <a name="security-implications-of-port-sharing"></a>連接埠共用的安全性含意  
  儘管 Net.TCP 連接埠共用服務會在應用程式與網路之間提供一層處理，您還是應該將使用連接埠共用的應用程式視為直接在網路上接聽一樣來加以保護。 具體來說，使用連接埠共用的應用程式應該評估執行時所需的處理序權限。 請考慮使用內建的網路服務帳戶來執行應用程式，在此情況下會以網路通訊所需的最低處理序權限來執行。  

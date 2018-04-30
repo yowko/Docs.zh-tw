@@ -1,24 +1,26 @@
 ---
-title: "含 WCF 服務的 ASMX 用戶端"
-ms.custom: 
+title: 含 WCF 服務的 ASMX 用戶端
+ms.custom: ''
 ms.date: 03/30/2017
 ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.technology: dotnet-clr
-ms.tgt_pltfrm: 
+ms.reviewer: ''
+ms.suite: ''
+ms.technology:
+- dotnet-clr
+ms.tgt_pltfrm: ''
 ms.topic: article
 ms.assetid: 3ea381ee-ac7d-4d62-8c6c-12dc3650879f
-caps.latest.revision: "21"
+caps.latest.revision: 21
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.workload: dotnet
-ms.openlocfilehash: 4df9060f173647767a3a070a451e0f2d3e02cf0d
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.workload:
+- dotnet
+ms.openlocfilehash: 26fc56ae465c2792f895f08a8e55577d3b74b97d
+ms.sourcegitcommit: 94d33cadc5ff81d2ac389bf5f26422c227832052
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 04/30/2018
 ---
 # <a name="asmx-client-with-a-wcf-service"></a>含 WCF 服務的 ASMX 用戶端
 這個範例示範如何使用 [!INCLUDE[indigo1](../../../../includes/indigo1-md.md)] 建立服務，然後從像是 ASMX 用戶端的非 [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] 用戶端存取服務。  
@@ -149,7 +151,7 @@ Press <ENTER> to terminate client.
 3.  若要在單一或跨電腦組態中執行範例時，請依照中的指示[執行 Windows Communication Foundation 範例](../../../../docs/framework/wcf/samples/running-the-samples.md)。  
   
 > [!NOTE]
->  [!INCLUDE[crabout](../../../../includes/crabout-md.md)]複雜資料傳遞和傳回類型，請參閱： [Windows Form 用戶端中資料繫結](../../../../docs/framework/wcf/samples/data-binding-in-a-windows-forms-client.md)， [Windows Presentation Foundation 用戶端中的資料繫結](../../../../docs/framework/wcf/samples/data-binding-in-a-wpf-client.md)，和[中 ASP.NET 資料繫結用戶端](../../../../docs/framework/wcf/samples/data-binding-in-an-aspnet-client.md)  
+>  如需有關複雜資料傳遞和傳回類型，請參閱： [Windows Form 用戶端中資料繫結](../../../../docs/framework/wcf/samples/data-binding-in-a-windows-forms-client.md)， [Windows Presentation Foundation 用戶端中的資料繫結](../../../../docs/framework/wcf/samples/data-binding-in-a-wpf-client.md)，和[資料在 ASP.NET 用戶端的繫結](../../../../docs/framework/wcf/samples/data-binding-in-an-aspnet-client.md)  
   
 > [!IMPORTANT]
 >  這些範例可能已安裝在您的電腦上。 請先檢查下列 (預設) 目錄，然後再繼續。  
@@ -160,4 +162,4 @@ Press <ENTER> to terminate client.
 >   
 >  `<InstallDrive>:\WF_WCF_Samples\WCF\Basic\Services\Interop\ASMX`  
   
-## <a name="see-also"></a>請參閱
+## <a name="see-also"></a>另請參閱

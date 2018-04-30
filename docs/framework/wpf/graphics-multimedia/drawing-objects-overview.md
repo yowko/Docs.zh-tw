@@ -1,12 +1,13 @@
 ---
-title: "繪圖物件概觀"
-ms.custom: 
+title: 繪圖物件概觀
+ms.custom: ''
 ms.date: 03/30/2017
 ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.technology: dotnet-wpf
-ms.tgt_pltfrm: 
+ms.reviewer: ''
+ms.suite: ''
+ms.technology:
+- dotnet-wpf
+ms.tgt_pltfrm: ''
 ms.topic: article
 helpviewer_keywords:
 - ImageDrawing objects [WPF]
@@ -16,16 +17,17 @@ helpviewer_keywords:
 - Drawing objects [WPF]
 - DrawingGroup objects [WPF]
 ms.assetid: 9b5ce5c0-e204-4320-a7a8-0b2210d62f88
-caps.latest.revision: "25"
+caps.latest.revision: 25
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.workload: dotnet
-ms.openlocfilehash: c9b77b47a3f3ade27f2ba86304b1868a8d388482
-ms.sourcegitcommit: c0dd436f6f8f44dc80dc43b07f6841a00b74b23f
+ms.workload:
+- dotnet
+ms.openlocfilehash: 3672e4b1deacd8fb50a5318270854daae9c74761
+ms.sourcegitcommit: 94d33cadc5ff81d2ac389bf5f26422c227832052
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 01/19/2018
+ms.lasthandoff: 04/30/2018
 ---
 # <a name="drawing-objects-overview"></a>繪圖物件概觀
 本主題將介紹<xref:System.Windows.Media.Drawing>物件，並說明如何使用它們來有效率地繪製圖案、 點陣圖、 文字與媒體。 使用<xref:System.Windows.Media.Drawing>物件，當您建立美工圖案、 繪製<xref:System.Windows.Media.DrawingBrush>，或使用<xref:System.Windows.Media.Visual>物件。  
@@ -36,17 +38,17 @@ ms.lasthandoff: 01/19/2018
 ## <a name="what-is-a-drawing-object"></a>什麼是繪圖物件？  
  A<xref:System.Windows.Media.Drawing>物件描述可見的內容，例如圖形、 點陣圖、 視訊或一行文字。 不同類型的繪圖可描繪不同類型的內容。 以下列出不同類型的繪圖物件。  
   
--   <xref:System.Windows.Media.GeometryDrawing>– 繪製圖形。  
+-   <xref:System.Windows.Media.GeometryDrawing> – 繪製圖形。  
   
--   <xref:System.Windows.Media.ImageDrawing>– 繪製影像。  
+-   <xref:System.Windows.Media.ImageDrawing> – 繪製影像。  
   
--   <xref:System.Windows.Media.GlyphRunDrawing>– 繪製文字。  
+-   <xref:System.Windows.Media.GlyphRunDrawing> – 繪製文字。  
   
--   <xref:System.Windows.Media.VideoDrawing>– 播放音訊或視訊檔案。  
+-   <xref:System.Windows.Media.VideoDrawing> – 播放音訊或視訊檔案。  
   
--   <xref:System.Windows.Media.DrawingGroup>– 繪製其他繪圖。 您可以使用繪圖群組，來將其他繪圖結合為單一複合繪圖。  
+-   <xref:System.Windows.Media.DrawingGroup> – 繪製其他繪圖。 您可以使用繪圖群組，來將其他繪圖結合為單一複合繪圖。  
   
- <xref:System.Windows.Media.Drawing>物件是多用途;您可以使用許多方式<xref:System.Windows.Media.Drawing>物件。  
+ <xref:System.Windows.Media.Drawing> 物件是多用途;您可以使用許多方式<xref:System.Windows.Media.Drawing>物件。  
   
 -   顯示做為映像使用<xref:System.Windows.Media.DrawingImage>和<xref:System.Windows.Controls.Image>控制項。  
   
@@ -86,7 +88,7 @@ GeometryDrawing
   
  下列範例會在 (75,75) 繪製 100 x 100 像素的影像。 下圖顯示<xref:System.Windows.Media.ImageDrawing>範例所建立。 若要顯示的範圍加入灰色框線<xref:System.Windows.Media.ImageDrawing>。  
   
- ![100 x 100 ImageDrawing 在 &#40; 75，75 &#41;] (../../../../docs/framework/wpf/graphics-multimedia/media/graphicsmm-simple-imagedrawing-offset.png "graphicsmm_simple_imagedrawing_offset")  
+ ![100 x 100 ImageDrawing 在&#40;75，75&#41;](../../../../docs/framework/wpf/graphics-multimedia/media/graphicsmm-simple-imagedrawing-offset.png "graphicsmm_simple_imagedrawing_offset")  
 100 x 100 的 ImageDrawing  
   
  [!code-csharp[DrawingMiscSnippets_snip#ImageDrawing100by100Inline](../../../../samples/snippets/csharp/VS_Snippets_Wpf/DrawingMiscSnippets_snip/CSharp/ImageDrawingExample.cs#imagedrawing100by100inline)]
@@ -180,7 +182,7 @@ GeometryDrawing
  [!code-csharp[DrawingMiscSnippets_snip#GraphicsMMSimpleDrawingGroupExample](../../../../samples/snippets/csharp/VS_Snippets_Wpf/DrawingMiscSnippets_snip/CSharp/DrawingGroupExample.cs#graphicsmmsimpledrawinggroupexample)]
  [!code-xaml[DrawingMiscSnippets_snip#GraphicsMMSimpleDrawingGroupExample](../../../../samples/snippets/xaml/VS_Snippets_Wpf/DrawingMiscSnippets_snip/XAML/DrawingGroupExample.xaml#graphicsmmsimpledrawinggroupexample)]  
   
- A<xref:System.Windows.Media.DrawingGroup>也可讓您套用到其內容的不透明度遮罩、 轉換、 點陣圖效果，以及其他作業。 <xref:System.Windows.Media.DrawingGroup>作業會依下列順序套用： <xref:System.Windows.Media.DrawingGroup.OpacityMask%2A>， <xref:System.Windows.Media.DrawingGroup.Opacity%2A>， <xref:System.Windows.Media.DrawingGroup.BitmapEffect%2A>， <xref:System.Windows.Media.DrawingGroup.ClipGeometry%2A>， <xref:System.Windows.Media.DrawingGroup.GuidelineSet%2A>，然後<xref:System.Windows.Media.DrawingGroup.Transform%2A>。  
+ A<xref:System.Windows.Media.DrawingGroup>也可讓您套用到其內容的不透明度遮罩、 轉換、 點陣圖效果，以及其他作業。 <xref:System.Windows.Media.DrawingGroup> 作業會依下列順序套用： <xref:System.Windows.Media.DrawingGroup.OpacityMask%2A>， <xref:System.Windows.Media.DrawingGroup.Opacity%2A>， <xref:System.Windows.Media.DrawingGroup.BitmapEffect%2A>， <xref:System.Windows.Media.DrawingGroup.ClipGeometry%2A>， <xref:System.Windows.Media.DrawingGroup.GuidelineSet%2A>，然後<xref:System.Windows.Media.DrawingGroup.Transform%2A>。  
   
  下圖中顯示的順序<xref:System.Windows.Media.DrawingGroup>作業套用。  
   
@@ -232,7 +234,7 @@ DrawingImage
 ## <a name="drawingcontext-objects"></a>DrawingContext 物件  
  <xref:System.Windows.Media.DrawingContext>類別可讓您擴展<xref:System.Windows.Media.Visual>或<xref:System.Windows.Media.Drawing>的視覺內容。 許多這類的較低層級圖形物件使用<xref:System.Windows.Media.DrawingContext>因為它會非常有效率的方式說明圖形化的內容。  
   
- 雖然<xref:System.Windows.Media.DrawingContext>繪製方法看起來類似的繪製方法<xref:System.Drawing.Graphics?displayProperty=nameWithType>類型，它們是實際非常不同。 <xref:System.Windows.Media.DrawingContext>是用於保留的模式的圖形系統，而<xref:System.Drawing.Graphics?displayProperty=nameWithType>即時模式圖形系統搭配使用類型。 當您使用<xref:System.Windows.Media.DrawingContext>物件的繪製命令中，您實際上儲存一組轉譯指令 (雖然正確儲存機制而定，提供物件的類型<xref:System.Windows.Media.DrawingContext>)，將稍後使用的圖形系統，;不會繪製在即時的畫面。 如需 [!INCLUDE[TLA#tla_wpf](../../../../includes/tlasharptla-wpf-md.md)] 圖形系統如何運作的詳細資訊，請參閱 [WPF 圖形轉譯概觀](../../../../docs/framework/wpf/graphics-multimedia/wpf-graphics-rendering-overview.md)。  
+ 雖然<xref:System.Windows.Media.DrawingContext>繪製方法看起來類似的繪製方法<xref:System.Drawing.Graphics?displayProperty=nameWithType>類型，它們是實際非常不同。 <xref:System.Windows.Media.DrawingContext> 是用於保留的模式的圖形系統，而<xref:System.Drawing.Graphics?displayProperty=nameWithType>即時模式圖形系統搭配使用類型。 當您使用<xref:System.Windows.Media.DrawingContext>物件的繪製命令中，您實際上儲存一組轉譯指令 (雖然正確儲存機制而定，提供物件的類型<xref:System.Windows.Media.DrawingContext>)，將稍後使用的圖形系統，;不會繪製在即時的畫面。 如需有關 Windows Presentation Foundation (WPF) 圖形系統的運作方式的詳細資訊，請參閱[WPF 圖形呈現概觀](../../../../docs/framework/wpf/graphics-multimedia/wpf-graphics-rendering-overview.md)。  
   
  您永遠不會直接具現化<xref:System.Windows.Media.DrawingContext>; 可以不過，購買繪圖內容從特定方法，例如<xref:System.Windows.Media.DrawingGroup.Open%2A?displayProperty=nameWithType>和<xref:System.Windows.Media.DrawingVisual.RenderOpen%2A?displayProperty=nameWithType>。  
   
@@ -244,7 +246,7 @@ DrawingImage
   
  [!code-csharp[DrawingMiscSnippets_snip#GraphicsMMRetrieveDrawings](../../../../samples/snippets/csharp/VS_Snippets_Wpf/DrawingMiscSnippets_snip/CSharp/EnumerateDrawingsExample.xaml.cs#graphicsmmretrievedrawings)]  
   
-## <a name="see-also"></a>請參閱  
+## <a name="see-also"></a>另請參閱  
  <xref:System.Windows.Media.Drawing>  
  <xref:System.Windows.Media.DrawingGroup>  
  [2D 圖形和影像處理](../../../../docs/framework/wpf/advanced/optimizing-performance-2d-graphics-and-imaging.md)  

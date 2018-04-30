@@ -1,12 +1,13 @@
 ---
-title: "HOW TO：建立自訂權杖"
-ms.custom: 
+title: HOW TO：建立自訂權杖
+ms.custom: ''
 ms.date: 03/30/2017
 ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.technology: dotnet-clr
-ms.tgt_pltfrm: 
+ms.reviewer: ''
+ms.suite: ''
+ms.technology:
+- dotnet-clr
+ms.tgt_pltfrm: ''
 ms.topic: article
 dev_langs:
 - csharp
@@ -17,16 +18,17 @@ helpviewer_keywords:
 - WSSecurityTokenSerializer class
 - SecurityToken class
 ms.assetid: 6d892973-1558-4115-a9e1-696777776125
-caps.latest.revision: "14"
+caps.latest.revision: 14
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.workload: dotnet
-ms.openlocfilehash: 0aeed7e1beac1a290aebec46a356952ddf994ed7
-ms.sourcegitcommit: c0dd436f6f8f44dc80dc43b07f6841a00b74b23f
+ms.workload:
+- dotnet
+ms.openlocfilehash: c270b63586809044f1bb3e56841ae8cf590e7bb1
+ms.sourcegitcommit: 94d33cadc5ff81d2ac389bf5f26422c227832052
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 01/19/2018
+ms.lasthandoff: 04/30/2018
 ---
 # <a name="how-to-create-a-custom-token"></a>HOW TO：建立自訂權杖
 本主題說明如何使用 <xref:System.IdentityModel.Tokens.SecurityToken> 類別來建立自訂安全性權杖，以及如何將它與自訂安全性權杖提供者和驗證器整合。 如需完整的程式碼範例，請參閱[自訂語彙基元](../../../../docs/framework/wcf/samples/custom-token.md)範例。  
@@ -37,11 +39,11 @@ ms.lasthandoff: 01/19/2018
   
  下列程序說明如何建立自訂安全性權杖，以及如何將它與 [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] 安全性基礎結構整合。 本主題將建立信用卡權杖，它可以用來將用戶端的信用卡相關資訊傳遞給伺服器。  
   
- [!INCLUDE[crabout](../../../../includes/crabout-md.md)]自訂認證和安全性權杖管理員，請參閱[逐步解說： 建立自訂用戶端和服務認證](../../../../docs/framework/wcf/extending/walkthrough-creating-custom-client-and-service-credentials.md)。  
+ 如需有關自訂認證和安全性權杖管理員的詳細資訊，請參閱[逐步解說： 建立自訂用戶端和服務認證](../../../../docs/framework/wcf/extending/walkthrough-creating-custom-client-and-service-credentials.md)。  
   
  如需其他代表安全性權杖的類別，請參閱 <xref:System.IdentityModel.Tokens> 命名空間。  
   
- [!INCLUDE[crabout](../../../../includes/crabout-md.md)]認證、 安全性權杖管理員，以及提供者和驗證器類別，請參閱[安全性架構](http://msdn.microsoft.com/library/16593476-d36a-408d-808c-ae6fd483e28f)。  
+ 如需有關認證、 安全性權杖管理員，以及提供者和驗證器類別的詳細資訊，請參閱[安全性架構](http://msdn.microsoft.com/library/16593476-d36a-408d-808c-ae6fd483e28f)。  
   
 ## <a name="procedures"></a>程序  
  您必須提供用戶端應用程式為安全性基礎結構指定信用卡資訊的方式， 此資訊可由自訂用戶端認證類別提供給應用程式使用。 第一步就是為自訂用戶端認證建立代表信用卡資訊的類別。  
@@ -115,14 +117,14 @@ ms.lasthandoff: 01/19/2018
   
 #### <a name="to-integrate-the-custom-security-token-with-a-security-token-provider"></a>若要將自訂安全性權杖與安全性權杖提供者整合  
   
-1.  安全性權杖提供者會建立、修改 (視需要) 和傳回權杖的執行個體。 若要建立自訂安全性權杖的自訂提供者，請建立繼承自 <xref:System.IdentityModel.Selectors.SecurityTokenProvider> 類別的類別。 下列範例會覆寫 <xref:System.IdentityModel.Selectors.SecurityTokenProvider.GetTokenCore%2A> 方法以傳回 `CreditCardToken` 的執行個體。 [!INCLUDE[crabout](../../../../includes/crabout-md.md)]自訂安全性權杖提供者，請參閱[How to： 建立自訂安全性權杖提供者](../../../../docs/framework/wcf/extending/how-to-create-a-custom-security-token-provider.md)。  
+1.  安全性權杖提供者會建立、修改 (視需要) 和傳回權杖的執行個體。 若要建立自訂安全性權杖的自訂提供者，請建立繼承自 <xref:System.IdentityModel.Selectors.SecurityTokenProvider> 類別的類別。 下列範例會覆寫 <xref:System.IdentityModel.Selectors.SecurityTokenProvider.GetTokenCore%2A> 方法以傳回 `CreditCardToken` 的執行個體。 如需有關自訂安全性權杖提供者的詳細資訊，請參閱[How to： 建立自訂安全性權杖提供者](../../../../docs/framework/wcf/extending/how-to-create-a-custom-security-token-provider.md)。  
   
      [!code-csharp[c_CustomToken#6](../../../../samples/snippets/csharp/VS_Snippets_CFX/c_customtoken/cs/source.cs#6)]
      [!code-vb[c_CustomToken#6](../../../../samples/snippets/visualbasic/VS_Snippets_CFX/c_customtoken/vb/source.vb#6)]  
   
 #### <a name="to-integrate-the-custom-security-token-with-a-security-token-authenticator"></a>若要將自訂安全性權杖與安全性權杖驗證器整合  
   
-1.  當安全性權杖從訊息中擷取出來時，安全性權杖驗證器會驗證其內容。 若要建立自訂安全性權杖的自訂驗證器，請建立繼承自 <xref:System.IdentityModel.Selectors.SecurityTokenAuthenticator> 類別的類別。 下列範例會覆寫 <xref:System.IdentityModel.Selectors.SecurityTokenAuthenticator.ValidateTokenCore%2A> 方法。 [!INCLUDE[crabout](../../../../includes/crabout-md.md)]自訂安全性權杖驗證器，請參閱[How to： 建立自訂安全性權杖驗證器](../../../../docs/framework/wcf/extending/how-to-create-a-custom-security-token-authenticator.md)。  
+1.  當安全性權杖從訊息中擷取出來時，安全性權杖驗證器會驗證其內容。 若要建立自訂安全性權杖的自訂驗證器，請建立繼承自 <xref:System.IdentityModel.Selectors.SecurityTokenAuthenticator> 類別的類別。 下列範例會覆寫 <xref:System.IdentityModel.Selectors.SecurityTokenAuthenticator.ValidateTokenCore%2A> 方法。 如需有關自訂安全性權杖驗證器的詳細資訊，請參閱[How to： 建立自訂安全性權杖驗證器](../../../../docs/framework/wcf/extending/how-to-create-a-custom-security-token-authenticator.md)。  
   
      [!code-csharp[c_CustomToken#7](../../../../samples/snippets/csharp/VS_Snippets_CFX/c_customtoken/cs/source.cs#7)]
      [!code-vb[c_CustomToken#7](../../../../samples/snippets/visualbasic/VS_Snippets_CFX/c_customtoken/vb/source.vb#7)]  
@@ -132,7 +134,7 @@ ms.lasthandoff: 01/19/2018
   
 #### <a name="to-integrate-the-custom-security-token-with-a-security-token-manager"></a>若要將自訂安全性權杖與安全性權杖管理員整合  
   
-1.  安全性權杖管理員會建立適當的權杖提供者、安全性驗證器，以及權杖序列化程式執行個體。 若要建立自訂的權杖管理員，請建立繼承自 <xref:System.ServiceModel.ClientCredentialsSecurityTokenManager> 類別的類別。 該類別的主要方法會使用 <xref:System.IdentityModel.Selectors.SecurityTokenRequirement> 來建立適當的提供者與用戶端或服務認證。 [!INCLUDE[crabout](../../../../includes/crabout-md.md)]自訂安全性權杖管理員，請參閱[逐步解說： 建立自訂用戶端和服務認證](../../../../docs/framework/wcf/extending/walkthrough-creating-custom-client-and-service-credentials.md)。  
+1.  安全性權杖管理員會建立適當的權杖提供者、安全性驗證器，以及權杖序列化程式執行個體。 若要建立自訂的權杖管理員，請建立繼承自 <xref:System.ServiceModel.ClientCredentialsSecurityTokenManager> 類別的類別。 該類別的主要方法會使用 <xref:System.IdentityModel.Selectors.SecurityTokenRequirement> 來建立適當的提供者與用戶端或服務認證。 如需有關自訂安全性權杖管理員的詳細資訊，請參閱[逐步解說： 建立自訂用戶端和服務認證](../../../../docs/framework/wcf/extending/walkthrough-creating-custom-client-and-service-credentials.md)。  
   
      [!code-csharp[c_CustomToken#8](../../../../samples/snippets/csharp/VS_Snippets_CFX/c_customtoken/cs/source.cs#8)]
      [!code-vb[c_CustomToken#8](../../../../samples/snippets/visualbasic/VS_Snippets_CFX/c_customtoken/vb/source.vb#8)]  
@@ -142,7 +144,7 @@ ms.lasthandoff: 01/19/2018
   
 #### <a name="to-integrate-the-custom-security-token-with-custom-client-and-service-credentials"></a>若要將自訂安全性權杖與自訂用戶端及服務認證整合  
   
-1.  您必須新增自訂的用戶端及服務認證才能提供應用程式的 API，以便指定自訂權杖資訊，而先前建立的自訂安全性權杖基礎結構會使用這項資訊來提供並驗證自訂安全性權杖內容。 下列範例會示範執行此作業的方法。 [!INCLUDE[crabout](../../../../includes/crabout-md.md)]自訂用戶端和服務認證，請參閱[逐步解說： 建立自訂用戶端和服務認證](../../../../docs/framework/wcf/extending/walkthrough-creating-custom-client-and-service-credentials.md)。  
+1.  您必須新增自訂的用戶端及服務認證才能提供應用程式的 API，以便指定自訂權杖資訊，而先前建立的自訂安全性權杖基礎結構會使用這項資訊來提供並驗證自訂安全性權杖內容。 下列範例會示範執行此作業的方法。 如需有關自訂用戶端和服務認證的詳細資訊，請參閱[逐步解說： 建立自訂用戶端和服務認證](../../../../docs/framework/wcf/extending/walkthrough-creating-custom-client-and-service-credentials.md)。  
   
      [!code-csharp[c_CustomToken#10](../../../../samples/snippets/csharp/VS_Snippets_CFX/c_customtoken/cs/source.cs#10)]
      [!code-vb[c_CustomToken#10](../../../../samples/snippets/visualbasic/VS_Snippets_CFX/c_customtoken/vb/source.vb#10)]  
@@ -161,7 +163,7 @@ ms.lasthandoff: 01/19/2018
   
  本主題顯示實作和使用自訂權杖所需的各種程式碼。 若要查看完整的範例，說明如何搭配所有這些程式碼片段，請參閱[自訂語彙基元](../../../../docs/framework/wcf/samples/custom-token.md)。  
   
-## <a name="see-also"></a>請參閱  
+## <a name="see-also"></a>另請參閱  
  <xref:System.IdentityModel.Tokens.SecurityToken>  
  <xref:System.ServiceModel.Security.Tokens.SecurityTokenParameters>  
  <xref:System.ServiceModel.Security.WSSecurityTokenSerializer>  

@@ -1,13 +1,13 @@
 ---
-title: "WPF 筆刷概觀"
-ms.custom: 
+title: WPF 筆刷概觀
+ms.custom: ''
 ms.date: 03/30/2017
 ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
+ms.reviewer: ''
+ms.suite: ''
 ms.technology:
 - dotnet-wpf
-ms.tgt_pltfrm: 
+ms.tgt_pltfrm: ''
 ms.topic: article
 dev_langs:
 - csharp
@@ -15,17 +15,17 @@ dev_langs:
 helpviewer_keywords:
 - brushes [WPF], about brushes
 ms.assetid: ecea1955-420b-45c6-bf43-c1404c072c41
-caps.latest.revision: 
+caps.latest.revision: 12
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
 ms.workload:
 - dotnet
-ms.openlocfilehash: ec7e566e6f56c215bbaeafdfb5c5e97cc0add0bf
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.openlocfilehash: 1ef53da1febd6a49af8404e5889a728a1b7c649b
+ms.sourcegitcommit: 94d33cadc5ff81d2ac389bf5f26422c227832052
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 04/30/2018
 ---
 # <a name="wpf-brushes-overview"></a>WPF 筆刷概觀
 螢幕上看見的項目是可見的因為它已繪製的筆刷。 例如，筆刷用來描述的按鈕、 文字、 前景和填滿圖形的背景。 本主題介紹的概念與繪製[!INCLUDE[TLA#tla_winclient](../../../../includes/tlasharptla-winclient-md.md)]筆刷，並提供範例。 筆刷可讓您以任何項目 (從簡單的純色到複雜的圖樣和影像集) 繪製 [!INCLUDE[TLA#tla_ui](../../../../includes/tlasharptla-ui-md.md)] 物件。  
@@ -142,7 +142,7 @@ ms.lasthandoff: 12/22/2017
   
 <a name="paintwithpredefinedbrushesandsystemcolors"></a>   
 ## <a name="paint-using-predefined-and-system-brushes"></a>使用預先定義和系統筆刷繪製  
- 為了方便起見，[!INCLUDE[TLA#tla_wpf](../../../../includes/tlasharptla-wpf-md.md)]提供一組預先定義和系統筆刷可用來繪製物件。  
+ 為了方便起見，Windows Presentation Foundation (WPF) 提供一組預先定義，而且系統筆刷可用來繪製物件。  
   
 -   如需使用預先定義的筆刷的清單，請參閱<xref:System.Windows.Media.Brushes>類別。 如需示範如何使用預先定義的筆刷的範例，請參閱[使用純色繪製區域](../../../../docs/framework/wpf/graphics-multimedia/how-to-paint-an-area-with-a-solid-color.md)。  
   
@@ -150,7 +150,7 @@ ms.lasthandoff: 12/22/2017
   
 <a name="commonbrushfeatures"></a>   
 ## <a name="common-brush-features"></a>常見的筆刷功能  
- <xref:System.Windows.Media.Brush>物件提供<xref:System.Windows.Media.Brush.Opacity%2A>可用來做為筆刷透明或透明部分的屬性。 <xref:System.Windows.Media.Brush.Opacity%2A>為 0 的值會使筆刷完全透明，而<xref:System.Windows.Media.Brush.Opacity%2A>完全不透明的值為 1 可筆刷。 下列範例會使用<xref:System.Windows.Media.Brush.Opacity%2A>屬性使<xref:System.Windows.Media.SolidColorBrush>25%不透明。  
+ <xref:System.Windows.Media.Brush> 物件提供<xref:System.Windows.Media.Brush.Opacity%2A>可用來做為筆刷透明或透明部分的屬性。 <xref:System.Windows.Media.Brush.Opacity%2A>為 0 的值會使筆刷完全透明，而<xref:System.Windows.Media.Brush.Opacity%2A>完全不透明的值為 1 可筆刷。 下列範例會使用<xref:System.Windows.Media.Brush.Opacity%2A>屬性使<xref:System.Windows.Media.SolidColorBrush>25%不透明。  
   
  [!code-xaml[BrushOverviewExamples_snip#OpacityExample1XAML](../../../../samples/snippets/xaml/VS_Snippets_Wpf/BrushOverviewExamples_snip/XAML/OpacityExample.xaml#opacityexample1xaml)]  
   
@@ -173,7 +173,7 @@ ms.lasthandoff: 12/22/2017
   
  如需有關為什麼<xref:System.Windows.Media.VisualBrush>物件不能是凍結時，請參閱<xref:System.Windows.Media.VisualBrush>類型 頁面。  
   
-## <a name="see-also"></a>請參閱  
+## <a name="see-also"></a>另請參閱  
  <xref:System.Windows.Media.Brush>  
  <xref:System.Windows.Media.Brushes>  
  [使用純色和漸層繪製的概觀](../../../../docs/framework/wpf/graphics-multimedia/painting-with-solid-colors-and-gradients-overview.md)  

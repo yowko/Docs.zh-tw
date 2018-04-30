@@ -20,16 +20,16 @@ ms.author: dotnetcontent
 manager: wpickett
 ms.workload:
 - dotnet
-ms.openlocfilehash: 9c66e7d8f610126e2702a6c593a93ee496108ecf
-ms.sourcegitcommit: 86adcc06e35390f13c1e372c36d2e044f1fc31ef
+ms.openlocfilehash: 2dbf3ddb903600df6094c8486fda7183eac2abe7
+ms.sourcegitcommit: 94d33cadc5ff81d2ac389bf5f26422c227832052
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/26/2018
+ms.lasthandoff: 04/30/2018
 ---
 # <a name="getting-started-tutorial"></a>快速入門教學課程
 本節所包含的主題主要是讓您快速獲得 [!INCLUDE[indigo1](../../../includes/indigo1-md.md)] 程式設計經驗。 每個主題已設計成依本主題結尾的清單順序完成。 完成這個入門課程之後，您將對建立 [!INCLUDE[indigo2](../../../includes/indigo2-md.md)] 服務與用戶端應用程式所需的步驟有初步的了解。 服務會公開一個或多個端點，而其中每個端點都會公開一項或多項服務作業。 *端點*服務的指定位置可以找到服務，位址的繫結，其中包含說明定義功能的合約與服務，用戶端必須之間的通訊資訊提供服務給其用戶端。  
   
- 在您逐步執行本教學課程中各主題的程序之後，您將會有執行中的服務和呼叫服務的用戶端。 前面三個主題說明如何定義服務合約、如何實作服務合約以及如何裝載服務。 建立的這個服務是在主控台應用程式中自我裝載的服務。 服務也可以在網際網路資訊服務 (IIS) 之下進行裝載。 [!INCLUDE[crabout](../../../includes/crabout-md.md)] 如何執行這項操作，請參閱[How to： 將 WCF 服務裝載於 IIS](../../../docs/framework/wcf/feature-details/how-to-host-a-wcf-service-in-iis.md)。 服務是在程式碼中進行設定的，但是也可以在組態檔中設定。 [!INCLUDE[crabout](../../../includes/crabout-md.md)] 使用組態檔看到[設定服務使用組態檔](../../../docs/framework/wcf/configuring-services-using-configuration-files.md)。  
+ 在您逐步執行本教學課程中各主題的程序之後，您將會有執行中的服務和呼叫服務的用戶端。 前面三個主題說明如何定義服務合約、如何實作服務合約以及如何裝載服務。 建立的這個服務是在主控台應用程式中自我裝載的服務。 服務也可以在網際網路資訊服務 (IIS) 之下進行裝載。 如需如何執行這項操作的詳細資訊，請參閱[How to： 將 WCF 服務裝載於 IIS](../../../docs/framework/wcf/feature-details/how-to-host-a-wcf-service-in-iis.md)。 服務是在程式碼中進行設定的，但是也可以在組態檔中設定。 如需有關使用組態檔，請參閱[設定服務使用組態檔](../../../docs/framework/wcf/configuring-services-using-configuration-files.md)。  
   
  後面三個主題將說明如何建立用戶端 Proxy、設定用戶端應用程式，以及使用用戶端 Proxy 來呼叫服務所公開的服務作業。 服務會發行定義用戶端應用程式與服務進行通訊所需之資訊的中繼資料。 [!INCLUDE[vs_current_long](../../../includes/vs-current-long-md.md)] 會自動化存取這個中繼資料的程序，並用它來建構和設定服務的用戶端應用程式。 如果您不使用[!INCLUDE[vs_current_long](../../../includes/vs-current-long-md.md)]，您可以使用[ServiceModel Metadata Utility Tool (Svcutil.exe)](../../../docs/framework/wcf/servicemodel-metadata-utility-tool-svcutil-exe.md)來建構和設定服務的用戶端應用程式。  
   

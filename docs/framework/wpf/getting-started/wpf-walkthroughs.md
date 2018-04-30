@@ -19,16 +19,16 @@ ms.author: dotnetcontent
 manager: wpickett
 ms.workload:
 - dotnet
-ms.openlocfilehash: c99d23769e99ea01fe1e1d264361a933228f4c1c
-ms.sourcegitcommit: 2042de78fcdceebb6b8ac4b7a292b93e8782cbf5
+ms.openlocfilehash: b177517b809adfbfa4afdc292f98f949a68101bb
+ms.sourcegitcommit: 94d33cadc5ff81d2ac389bf5f26422c227832052
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/27/2018
+ms.lasthandoff: 04/30/2018
 ---
 # <a name="wpf-walkthroughs"></a>WPF 逐步解說
 逐步解說提供常見情節的逐步指示。 因此是開始學習產品或特定功能領域的最佳入門。  
   
- 本主題包含連結[!INCLUDE[TLA#tla_wpf](../../../../includes/tlasharptla-wpf-md.md)]逐步解說。  
+ 本主題包含 Windows Presentation Foundation (WPF) 的逐步解說連結。  
   
 ## <a name="wpf-designer-walkthroughs"></a>WPF 設計工具的逐步解說  
   

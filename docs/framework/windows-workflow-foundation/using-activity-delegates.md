@@ -14,11 +14,11 @@ ms.author: dotnetcontent
 manager: wpickett
 ms.workload:
 - dotnet
-ms.openlocfilehash: efec9885ae804263f7ae4c6d1d5c3bc4f39831c9
-ms.sourcegitcommit: 68b60d38043e50104ccc90c76f8599b1ffe18346
+ms.openlocfilehash: a8b30882ef2e75f21c3b90d0e13ff06b52fe5229
+ms.sourcegitcommit: 94d33cadc5ff81d2ac389bf5f26422c227832052
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/20/2018
+ms.lasthandoff: 04/30/2018
 ---
 # <a name="using-activity-delegates"></a>使用活動委派
 活動委派可讓活動作者使用特定的簽章以公開回呼，活動使用者可以此為依據來提供活動處理常式。 活動委派有兩種型別可用：<xref:System.Activities.ActivityAction%601>，用來定義沒有傳回值的活動委派，以及 <xref:System.Activities.ActivityFunc%601>，用來定義有傳回值的活動委派。  
@@ -38,7 +38,7 @@ ms.lasthandoff: 04/20/2018
   
  [!code-csharp[CFX_ActivityExample#7](../../../samples/snippets/csharp/VS_Snippets_CFX/CFX_ActivityExample/cs/Program.cs#7)]  
   
- [!INCLUDE[crabout](../../../includes/crabout-md.md)] 物件初始設定式，請參閱[如何： 初始化的物件，而不呼叫建構函式 （C# 程式設計手冊）](http://go.microsoft.com/fwlink/?LinkId=161015)和[How to： 使用物件初始設定式宣告物件](http://go.microsoft.com/fwlink/?LinkId=161016)。  
+ 如需物件初始設定式的詳細資訊，請參閱[如何： 初始化的物件，而不呼叫建構函式 （C# 程式設計手冊）](http://go.microsoft.com/fwlink/?LinkId=161015)和[How to： 使用物件初始設定式宣告物件](http://go.microsoft.com/fwlink/?LinkId=161016)。  
   
  在下列範例中，<xref:System.Activities.Statements.TryCatch> 活動會用於工作流程中。 <xref:System.ApplicationException> 是由工作流程所擲回而且是由 <xref:System.Activities.Statements.Catch%601> 活動所處理。 處理常式<xref:System.Activities.Statements.Catch%601>活動的活動動作是<xref:System.Activities.Statements.WriteLine>活動和例外狀況詳細資料會流向它使用`ex` <xref:System.Activities.DelegateInArgument%601>。  
   

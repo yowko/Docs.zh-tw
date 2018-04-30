@@ -1,12 +1,13 @@
 ---
-title: "如何： 取得和設定主應用程式視窗"
-ms.custom: 
+title: 如何： 取得和設定主應用程式視窗
+ms.custom: ''
 ms.date: 03/30/2017
 ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.technology: dotnet-wpf
-ms.tgt_pltfrm: 
+ms.reviewer: ''
+ms.suite: ''
+ms.technology:
+- dotnet-wpf
+ms.tgt_pltfrm: ''
 ms.topic: article
 dev_langs:
 - csharp
@@ -17,22 +18,23 @@ helpviewer_keywords:
 - windows objects [WPF], getting
 - getting windows objects [WPF]
 ms.assetid: ec902bc4-4a59-46f5-8ec1-963b46789356
-caps.latest.revision: "8"
+caps.latest.revision: 8
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.workload: dotnet
-ms.openlocfilehash: 9aa02b0d5ff4456cf5ef86fa0d4f8431fe3d846b
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.workload:
+- dotnet
+ms.openlocfilehash: 9bdc96c509f88650edd93ba4a7f595e2b161db39
+ms.sourcegitcommit: 94d33cadc5ff81d2ac389bf5f26422c227832052
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 04/30/2018
 ---
 # <a name="how-to-get-and-set-the-main-application-window"></a>如何： 取得和設定主應用程式視窗
 這個範例示範如何取得及設定主應用程式視窗。  
   
 ## <a name="example"></a>範例  
- 第一個<xref:System.Windows.Window>，具現化內[!INCLUDE[TLA#tla_wpf](../../../../includes/tlasharptla-wpf-md.md)]應用程式會自動設定<xref:System.Windows.Application>與主應用程式視窗。 第一個<xref:System.Windows.Window>要具現化的會很有可能是指定為啟動視窗[!INCLUDE[TLA#tla_uri](../../../../includes/tlasharptla-uri-md.md)](請參閱<xref:System.Windows.Application.StartupUri%2A>)。  
+ 第一個<xref:System.Windows.Window>，具現化在 Windows Presentation Foundation (WPF) 應用程式會自動設定由<xref:System.Windows.Application>與主應用程式視窗。 第一個<xref:System.Windows.Window>要具現化的會很有可能是指定為啟動視窗[!INCLUDE[TLA#tla_uri](../../../../includes/tlasharptla-uri-md.md)](請參閱<xref:System.Windows.Application.StartupUri%2A>)。  
   
  第一個<xref:System.Windows.Window>可能也會使用具現化程式碼。 其中一個範例會開啟視窗的應用程式在啟動期間，如下所示：  
   

@@ -1,31 +1,33 @@
 ---
-title: "以 Web 裝載佇列應用程式"
-ms.custom: 
+title: 以 Web 裝載佇列應用程式
+ms.custom: ''
 ms.date: 03/30/2017
 ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.technology: dotnet-clr
-ms.tgt_pltfrm: 
+ms.reviewer: ''
+ms.suite: ''
+ms.technology:
+- dotnet-clr
+ms.tgt_pltfrm: ''
 ms.topic: article
 ms.assetid: c7a539fa-e442-4c08-a7f1-17b7f5a03e88
-caps.latest.revision: "18"
+caps.latest.revision: 18
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.workload: dotnet
-ms.openlocfilehash: a12348c3c49c29812530bc568bb5873ec53f7eb5
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.workload:
+- dotnet
+ms.openlocfilehash: 7b7168d5283a0dbe1001631f855e493335576a80
+ms.sourcegitcommit: 94d33cadc5ff81d2ac389bf5f26422c227832052
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 04/30/2018
 ---
 # <a name="web-hosting-a-queued-application"></a>以 Web 裝載佇列應用程式
 Windows Process Activation Service (WAS) 管理背景工作處理序 (其中包含裝載 [!INCLUDE[indigo1](../../../../includes/indigo1-md.md)] 服務的應用程式) 的啟動與存留期。 WAS 處理序模型會藉由移除 HTTP 上的相依性，將 HTTP 伺服器的 [!INCLUDE[iis601](../../../../includes/iis601-md.md)] 處理序模型一般化。 如此可讓 [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] 服務能在支援訊息啟動以及提供可在指定電腦上裝載大量應用程式之能力的裝載環境中，同時使用 HTTP 和非 HTTP 通訊協定，例如 net.msmq 和 msmq.formatname。  
   
  WAS 包括訊息佇列 (MSMQ) 啟動服務，該服務會在佇列的應用程式所使用的其中一個佇列內置放一個或多個訊息時，啟動佇列的應用程式。 MSMQ 啟動服務是 NT 服務，預設為自動啟動。  
   
- [!INCLUDE[crabout](../../../../includes/crabout-md.md)]WAS 和它的優點，請參閱[Windows Process Activation Service 中裝載](../../../../docs/framework/wcf/feature-details/hosting-in-windows-process-activation-service.md)。 [!INCLUDE[crabout](../../../../includes/crabout-md.md)]MSMQ 中，請參閱[佇列概觀](../../../../docs/framework/wcf/feature-details/queues-overview.md)  
+ 如需 WAS 和它的優點的詳細資訊，請參閱[Windows Process Activation Service 中裝載](../../../../docs/framework/wcf/feature-details/hosting-in-windows-process-activation-service.md)。 如需 MSMQ 的詳細資訊，請參閱[佇列概觀](../../../../docs/framework/wcf/feature-details/queues-overview.md)  
   
 ## <a name="queue-addressing-in-was"></a>WAS 中的佇列定址  
  WAS 應用程式擁有統一資源識別元 (URI) 位址。 應用程式位址包含兩個部分：基底 URI 前置詞和應用程式專屬的相對位址 (路徑)。 這兩個部分合在一起，便提供了應用程式的外部位址。 基底 URI 前置詞根據網站繫結所建構，並使用網站，例如"net.msmq: //localhost"、"msmq.formatname: //localhost"或"net.tcp: //localhost"下的所有應用程式。 然後會由特定應用程式的路徑片段建構應用程式位址 (例如"/ /applicationone") 並將它們附加至基底 URI 前置詞完整的應用程式的 URI，例如"net.msmq: //localhost/applicationone"。  
@@ -52,6 +54,6 @@ Windows Process Activation Service (WAS) 管理背景工作處理序 (其中包�
 ### <a name="subqueue-and-system-queue-caveat"></a>子佇列和系統佇列警告  
  WAS 裝載的應用程式無法根據系統佇列中的訊息啟動，例如整個系統寄不出的信件佇列，或是子佇列，例如有害子佇列。 這是這個產品版本的限制。  
   
-## <a name="see-also"></a>請參閱  
+## <a name="see-also"></a>另請參閱  
  [有害訊息處理](../../../../docs/framework/wcf/feature-details/poison-message-handling.md)  
  [服務端點與佇列定址](../../../../docs/framework/wcf/feature-details/service-endpoints-and-queue-addressing.md)

@@ -1,24 +1,26 @@
 ---
-title: "HOW TO：將啟用 AJAX 的 ASP.NET Web 服務移轉至 WCF"
-ms.custom: 
+title: HOW TO：將啟用 AJAX 的 ASP.NET Web 服務移轉至 WCF
+ms.custom: ''
 ms.date: 03/30/2017
 ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.technology: dotnet-clr
-ms.tgt_pltfrm: 
+ms.reviewer: ''
+ms.suite: ''
+ms.technology:
+- dotnet-clr
+ms.tgt_pltfrm: ''
 ms.topic: article
 ms.assetid: 1428df4d-b18f-4e6d-bd4d-79ab3dd5147c
-caps.latest.revision: "17"
+caps.latest.revision: 17
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.workload: dotnet
-ms.openlocfilehash: 2ca8dbbffdb48c33160e3c4f7495057b9ce60c13
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.workload:
+- dotnet
+ms.openlocfilehash: 2b728e6283a2f038b7e5ef4c535da41f4eb8ebef
+ms.sourcegitcommit: 94d33cadc5ff81d2ac389bf5f26422c227832052
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 04/30/2018
 ---
 # <a name="how-to-migrate-ajax-enabled-aspnet-web-services-to-wcf"></a>HOW TO：將啟用 AJAX 的 ASP.NET Web 服務移轉至 WCF
 本主題將概述用來將基本 ASP.NET AJAX 服務移轉至相等之啟用 AJAX 的 [!INCLUDE[indigo1](../../../../includes/indigo1-md.md)] 服務的程序。 其中將示範如何建立功能相等的 [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] 版本的 ASP.NET AJAX 服務。 然後這兩項服務可以並存使用，或是 [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] 服務可以用於取代 ASP.NET AJAX 服務。  
@@ -33,7 +35,7 @@ ms.lasthandoff: 12/22/2017
   
  在程序之後的範例中，會提供來自本主題中所述程序的程式碼。  
   
- [!INCLUDE[crabout](../../../../includes/crabout-md.md)]公開[!INCLUDE[indigo2](../../../../includes/indigo2-md.md)]服務透過啟用 AJAX 的端點，請參閱[How to： 使用組態新增 ASP.NET AJAX 端點](../../../../docs/framework/wcf/feature-details/how-to-use-configuration-to-add-an-aspnet-ajax-endpoint.md)主題。  
+ 如需有關公開[!INCLUDE[indigo2](../../../../includes/indigo2-md.md)]服務透過啟用 AJAX 的端點，請參閱[How to： 使用組態新增 ASP.NET AJAX 端點](../../../../docs/framework/wcf/feature-details/how-to-use-configuration-to-add-an-aspnet-ajax-endpoint.md)主題。  
   
 ### <a name="to-create-and-test-the-aspnet-web-service-application"></a>若要建立並測試 ASP.NET Web 服務應用程式  
   
@@ -206,7 +208,7 @@ d.Add("two", 2);
   
 -   [{"Key":"one","Value":1},{"Key":"two","Value":2}]，透過 <xref:System.Runtime.Serialization.Json.DataContractJsonSerializer>  
   
--   {"one": 1，"two": 2} 的 ASP.NET ajax<xref:System.Web.Script.Serialization.JavaScriptSerializer>  
+-   {"one": 1，"two": 2} 的 ASP.NET ajax <xref:System.Web.Script.Serialization.JavaScriptSerializer>  
   
  <xref:System.Runtime.Serialization.Json.DataContractJsonSerializer> 的功能較為強大，因為它可以處理其中金鑰類型不是字串的字典，但是 <xref:System.Web.Script.Serialization.JavaScriptSerializer> 卻無法這麼做。 然而後者較容易用來處理 JSON。  
   
@@ -215,13 +217,13 @@ d.Add("two", 2);
 |差異分類|DataContractJsonSerializer|ASP.NET AJAX JavaScriptSerializer|  
 |-----------------------------|--------------------------------|---------------------------------------|  
 |將空的緩衝區 (新的 byte[0]) 還原序列化成 <xref:System.Object> (或 <xref:System.Uri> 或一些其他的類別)。|SerializationException|null|  
-|<xref:System.DBNull.Value> 的序列化|{} (or {"__type":"#System"})|Null|  
+|<xref:System.DBNull.Value> 的序列化|{} (或 {"__type":"#System"})|Null|  
 |[Serializable] 型別的私用成員序列化|已序列化|未序列化|  
 |<xref:System.Runtime.Serialization.ISerializable> 型別的公用屬性序列化。|未序列化|已序列化|  
 |JSON 的 "Extensions"|遵守 JSON 規格，需要在物件成員名稱上加上引號 ({"a":"hello"})。|支援不加引號的物件成員名稱 ({a:"hello"})。|  
-|<xref:System.DateTime> 以 Coordinated Universal Time (UTC) 時間計算|不支援格式"\\/Date(123456789U)\\/"或"\\/Date\\(\d+ (&#124; (\\+\\-[\d{4}]))？\\)\\\\/)".|支援格式"\\/Date(123456789U)\\/"和"\\/Date\\(\d+ (&#124; (\\+\\-[\d{4}]))？\\)\\ \\/)"做為 DateTime 值。|  
+|<xref:System.DateTime> 以 Coordinated Universal Time (UTC) 時間計算|不支援格式"\\/Date(123456789U)\\/"或"\\/Date\\(\d+ (U&#124;(\\+\\-[\d{4}]))？\\)\\\\/)".|支援格式"\\/Date(123456789U)\\/"和"\\/Date\\(\d+ (U&#124;(\\+\\-[\d{4}]))？\\)\\ \\/)"做為 DateTime 值。|  
 |字典表示法|陣列的 KeyValuePair\<K，V >，可處理不是字串的索引鍵類型。|做為實際的 JSON 物件 - 但只能處理屬於字串的金鑰型別。|  
 |逸出字元|一律使用逸出正斜線 (/)；絕不允許使用未逸出的無效 JSON 字元，例如 "\n"。|使用逸出斜線 (/) 做為 DateTime 值。|  
   
-## <a name="see-also"></a>請參閱  
+## <a name="see-also"></a>另請參閱  
  [如何：使用組態新增 ASP.NET AJAX 端點](../../../../docs/framework/wcf/feature-details/how-to-use-configuration-to-add-an-aspnet-ajax-endpoint.md)

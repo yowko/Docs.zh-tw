@@ -16,11 +16,11 @@ ms.author: dotnetcontent
 manager: wpickett
 ms.workload:
 - dotnet
-ms.openlocfilehash: 9858475520b949d5b9ee62ecdc0994bbb9398953
-ms.sourcegitcommit: 03ee570f6f528a7d23a4221dcb26a9498edbdf8c
+ms.openlocfilehash: ae5eb9a10f438f1bb76c51c3c9da68273d94ab57
+ms.sourcegitcommit: 94d33cadc5ff81d2ac389bf5f26422c227832052
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/28/2018
+ms.lasthandoff: 04/30/2018
 ---
 # <a name="selecting-a-credential-type"></a>選取認證類型
 *認證*是指資料[!INCLUDE[indigo1](../../../../includes/indigo1-md.md)]用以建立宣告的身分識別或功能。 例如，護照是政府發給的認證，以證明一個國家或地區的公民身分。 在 [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] 中，認證可以有許多形式，例如使用者名稱權杖和 X.509 憑證。 本主題將說明認證、如何在 [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] 中使用，以及如何為應用程式選擇正確的認證。  
@@ -108,7 +108,7 @@ ms.lasthandoff: 04/28/2018
 > [!IMPORTANT]
 >  當無法切換身分識別時 (也就是，當開啟已建立之安全性內容時的預設行為)，有一種情況要注意。 如果您建立與第二個服務通訊的服務，就無法變更用於對第二個服務開啟 [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] 用戶端的身分識別。 如果允許多個用戶端使用第一個服務，且該服務在存取第二個服務時模擬用戶端，這就會變成問題。 如果服務對所有的呼叫者重複使用相同的用戶端，第二個服務的所有呼叫都會在用於對第二個服務開啟用戶端之第一個呼叫者的身分識別下完成。 換言之，服務會對所有用戶端使用第一個用戶端的身分識別來與第二個服務通訊。 這會造成權限的升級。 如果這不是您的服務所需要的行為，您必須追蹤每個呼叫者，並為每個不同的呼叫者建立第二個服務的新用戶端，然後確保服務只對正確的呼叫者使用正確的用戶端，以與第二個服務通訊。  
   
- [!INCLUDE[crabout](../../../../includes/crabout-md.md)] 認證以及安全工作階段，請參閱[安全工作階段的安全性考量](../../../../docs/framework/wcf/feature-details/security-considerations-for-secure-sessions.md)。  
+ 如需有關認證與安全工作階段的詳細資訊，請參閱[安全工作階段的安全性考量](../../../../docs/framework/wcf/feature-details/security-considerations-for-secure-sessions.md)。  
   
 ## <a name="see-also"></a>另請參閱  
  <xref:System.ServiceModel.ClientBase%601?displayProperty=nameWithType>  

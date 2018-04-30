@@ -1,24 +1,26 @@
 ---
-title: "執行 Windows Communication Foundation 範例"
-ms.custom: 
+title: 執行 Windows Communication Foundation 範例
+ms.custom: ''
 ms.date: 03/30/2017
 ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.technology: dotnet-clr
-ms.tgt_pltfrm: 
+ms.reviewer: ''
+ms.suite: ''
+ms.technology:
+- dotnet-clr
+ms.tgt_pltfrm: ''
 ms.topic: article
 ms.assetid: db8a83da-95c1-4a21-a9d2-48caeb6398ea
-caps.latest.revision: "26"
+caps.latest.revision: 26
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.workload: dotnet
-ms.openlocfilehash: 603a6dce17d527a3f14e408da19006509514df52
-ms.sourcegitcommit: c0dd436f6f8f44dc80dc43b07f6841a00b74b23f
+ms.workload:
+- dotnet
+ms.openlocfilehash: 2aca4555277a1b365ddee1c672a6375edfde9f34
+ms.sourcegitcommit: 94d33cadc5ff81d2ac389bf5f26422c227832052
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 01/19/2018
+ms.lasthandoff: 04/30/2018
 ---
 # <a name="running-the-windows-communication-foundation-samples"></a>執行 Windows Communication Foundation 範例
 此 [!INCLUDE[indigo1](../../../../includes/indigo1-md.md)] 範例可以在單一機器或跨機器組態中執行。 這些範例可依提供現狀直接執行於單一機器上。 在跨機器組態中，就需要修改範例的組態檔設定。 下列程序會說明如何在相同機器與跨機器組態中執行此範例。 請注意，透過網際網路資訊服務 (IIS) 裝載與自我裝載範例中的服務步驟會有所變化。 大部分的範例都是以 IIS 進行裝載；請參閱範例讀我資訊以決定其裝載方式。  
@@ -30,7 +32,7 @@ ms.lasthandoff: 01/19/2018
   
 ### <a name="to-run-the-sample-on-the-same-machine"></a>若要在同一部機器上執行範例  
   
-1.  如果服務是由 IIS 裝載，請輸入下列位址：http://localhost/servicemodelsamples/service.svc，確定您能夠使用瀏覽器來存取服務。 確認頁面應該會顯示在回應中。 如果未顯示 [確認] 頁面，請參閱[疑難排解提示](http://msdn.microsoft.com/library/8787c877-5e96-42da-8214-fa737a38f10b)。  
+1.  如果服務由 IIS 裝載，請確定您可以存取服務使用瀏覽器輸入下列位址： http://localhost/servicemodelsamples/service.svc。 確認頁面應該會顯示在回應中。 如果未顯示 [確認] 頁面，請參閱[疑難排解提示](http://msdn.microsoft.com/library/8787c877-5e96-42da-8214-fa737a38f10b)。  
   
 2.  如果服務是自我裝載，請從語言特定資料夾中的 \service\bin 執行 Service.exe。 服務活動會顯示在服務主控台視窗上。  
   
@@ -64,7 +66,7 @@ ms.lasthandoff: 01/19/2018
   
     1.  如果服務不是使用網域帳戶執行，請開啟用戶端組態檔，並將端點定義的位址值變更成符合服務的新位址。 以位址中的完整網域名稱取代 "localhost" 的任何參考。  
   
-    2.  如果服務是使用網域帳戶執行，請針對服務執行 Svcutil.exe 以重新產生用戶端組態。 [!INCLUDE[crabout](../../../../includes/crabout-md.md)]執行 Svcutil.exe 時，請參閱[建置 Windows Communication Foundation 範例](../../../../docs/framework/wcf/samples/building-the-samples.md)。 使用產生的檔案，而不要使用範例中的組態檔。 產生的組態檔還有其他身分識別資訊，而且包含連接至服務端點需要的所有設定 (即使是預設的設定)。 [!INCLUDE[crabout](../../../../includes/crabout-md.md)]身分識別資訊，請參閱[服務識別和驗證](../../../../docs/framework/wcf/feature-details/service-identity-and-authentication.md)，和[\<識別 >](../../../../docs/framework/configure-apps/file-schema/wcf/identity.md)。  
+    2.  如果服務是使用網域帳戶執行，請針對服務執行 Svcutil.exe 以重新產生用戶端組態。 如需執行 Svcutil.exe 的詳細資訊，請參閱[建置 Windows Communication Foundation 範例](../../../../docs/framework/wcf/samples/building-the-samples.md)。 使用產生的檔案，而不要使用範例中的組態檔。 產生的組態檔還有其他身分識別資訊，而且包含連接至服務端點需要的所有設定 (即使是預設的設定)。 如需身分識別資訊的詳細資訊，請參閱[服務識別和驗證](../../../../docs/framework/wcf/feature-details/service-identity-and-authentication.md)，和[\<識別 >](../../../../docs/framework/configure-apps/file-schema/wcf/identity.md)。  
   
 4.  在用戶端機器上，從命令提示字元啟動 Client.exe。  
   
@@ -74,7 +76,7 @@ ms.lasthandoff: 01/19/2018
   
 2.  如果服務是以 IIS 裝載：  
   
-    1.  在瀏覽器輸入位址 http://localhost/servicemodelsamples/service.svc 來啟動服務。  
+    1.  啟動服務，使用瀏覽器輸入位址http://localhost/servicemodelsamples/service.svc。  
   
     2.  在方案中，選擇 **偵錯**功能表和**附加至處理序**功能表項目。  
   
@@ -90,7 +92,7 @@ ms.lasthandoff: 01/19/2018
   
 -   如果因為考量安全性而以 IIS 裝載服務，則請在完成範例時，移除虛擬目錄定義以及在安裝步驟中所授與的權限。  
   
-## <a name="see-also"></a>請參閱  
+## <a name="see-also"></a>另請參閱  
  [建置 Windows Communication Foundation 範例](../../../../docs/framework/wcf/samples/building-the-samples.md)  
  [工作群組中與跨電腦執行範例](http://msdn.microsoft.com/library/a451a525-e7ce-452d-9da9-620221260113)  
- [疑難排解秘訣](http://msdn.microsoft.com/library/8787c877-5e96-42da-8214-fa737a38f10b)
+ [疑難排解祕訣](http://msdn.microsoft.com/library/8787c877-5e96-42da-8214-fa737a38f10b)

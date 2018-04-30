@@ -1,27 +1,29 @@
 ---
-title: "整合 COM+ 應用程式概觀"
-ms.custom: 
+title: 整合 COM+ 應用程式概觀
+ms.custom: ''
 ms.date: 03/30/2017
 ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.technology: dotnet-clr
-ms.tgt_pltfrm: 
+ms.reviewer: ''
+ms.suite: ''
+ms.technology:
+- dotnet-clr
+ms.tgt_pltfrm: ''
 ms.topic: article
 helpviewer_keywords:
 - Windows Communication Foundation, COM+ integration
 - WCF, COM+ integration
 ms.assetid: e481e48f-7096-40eb-9f20-7f0098412941
-caps.latest.revision: "29"
+caps.latest.revision: 29
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.workload: dotnet
-ms.openlocfilehash: 0fbed530a1b968bb049ee20262eb2b8fa9ba13c2
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.workload:
+- dotnet
+ms.openlocfilehash: 3c723bda93feac3eef18f302ab0c8ec7c702eb7a
+ms.sourcegitcommit: 94d33cadc5ff81d2ac389bf5f26422c227832052
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 04/30/2018
 ---
 # <a name="integrating-with-com-applications-overview"></a>整合 COM+ 應用程式概觀
 [!INCLUDE[indigo1](../../../../includes/indigo1-md.md)] 提供用來建立分散式應用程式的豐富環境。 若您已正在使用裝載於 COM+ 之中的元件架構應用程式邏輯，可以使用 [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] 擴充現有邏輯，而不必重新撰寫程式碼。 一個常見案例就是當您要透過 Web 服務，公開現有的 COM+ 或 Enterprise Services 商務邏輯之時。  
@@ -51,9 +53,9 @@ ms.lasthandoff: 12/22/2017
   
 2.  選取適當的裝載模式。  
   
-3.  使用 COM+ 服務模型組態工具 (ComSvcConfig.exe) 以新增介面的 Web 服務。 [!INCLUDE[crabout](../../../../includes/crabout-md.md)]如何使用 ComSvcConfig.exe，請參閱[How to： 使用 COM + 服務模型組態工具](../../../../docs/framework/wcf/feature-details/how-to-use-the-com-service-model-configuration-tool.md)。  
+3.  使用 COM+ 服務模型組態工具 (ComSvcConfig.exe) 以新增介面的 Web 服務。 如需如何使用 ComSvcConfig.exe 的詳細資訊，請參閱[How to： 使用 COM + 服務模型組態工具](../../../../docs/framework/wcf/feature-details/how-to-use-the-com-service-model-configuration-tool.md)。  
   
-4.  在應用程式組態檔中進行其他服務設定。 [!INCLUDE[crabout](../../../../includes/crabout-md.md)]如何設定元件，請參閱[How to： 設定 COM + 服務設定](../../../../docs/framework/wcf/feature-details/how-to-configure-com-service-settings.md)。  
+4.  在應用程式組態檔中進行其他服務設定。 如需如何設定元件的詳細資訊，請參閱[How to： 設定 COM + 服務設定](../../../../docs/framework/wcf/feature-details/how-to-configure-com-service-settings.md)。  
   
 ## <a name="supported-interfaces"></a>支援的介面  
  對於可公開為 Web 服務之介面的型別，有一些限制存在。 不支援下列介面型別：  
@@ -112,5 +114,5 @@ ms.lasthandoff: 12/22/2017
   
  在整合應用程式上無法使用 COM+ 處理序回收功能。 如果應用程式是設定為使用處理序回收，而且是在 COM+ 主控的處理序中執行元件，將無法啟動服務。 這項需求不包括使用 Web 主控同處理序模式的服務，因為這個服務中未套用處理序回收設定。  
   
-## <a name="see-also"></a>請參閱  
+## <a name="see-also"></a>另請參閱  
  [整合 COM+ 應用程式概觀](../../../../docs/framework/wcf/feature-details/integrating-with-com-applications-overview.md)

@@ -1,23 +1,24 @@
 ---
-title: "工作流程中的模型化取消行為"
-ms.custom: 
+title: 工作流程中的模型化取消行為
+ms.custom: ''
 ms.date: 03/30/2017
 ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.tgt_pltfrm: 
+ms.reviewer: ''
+ms.suite: ''
+ms.tgt_pltfrm: ''
 ms.topic: article
 ms.assetid: d48f6cf3-cdde-4dd3-8265-a665acf32a03
-caps.latest.revision: "11"
+caps.latest.revision: 11
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.workload: dotnet
-ms.openlocfilehash: 94a3cb69e2e897e992a05a19325630ca9bb1ae3a
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.workload:
+- dotnet
+ms.openlocfilehash: e455bf4d74f77c6cd87301dc9a21f56117777ecf
+ms.sourcegitcommit: 94d33cadc5ff81d2ac389bf5f26422c227832052
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 04/30/2018
 ---
 # <a name="modeling-cancellation-behavior-in-workflows"></a>工作流程中的模型化取消行為
 活動可以在工作流程內部取消，例如，由 <xref:System.Activities.Statements.Parallel> 活動在它的 <xref:System.Activities.Statements.Parallel.CompletionCondition%2A> 評估為 `true` 時來取消不完整的分支，或是從工作流程外部取消 (如果主機呼叫 <xref:System.Activities.WorkflowApplication.Cancel%2A>)。 若要提供取消處理，工作流程作者可以使用 <xref:System.Activities.Statements.CancellationScope> 活動、<xref:System.Activities.Statements.CompensableActivity> 活動或是建立可提供取消邏輯的自訂活動。 本主題提供工作流程取消的概觀。  
@@ -26,7 +27,7 @@ ms.lasthandoff: 12/22/2017
  如果交易程序的任何部分發生錯誤，交易可讓應用程式中止 (回復) 在交易內部執行的所有變更。 但是，並非所有可能需要取消或復原的工作都適合交易使用，例如長時間執行的工作或是未牽涉到交易資源的工作。 補償會提供一個模型，可在工作流程發生後續失敗時，復原之前完成的非交易式工作。 取消會提供一個模型給工作流程和活動的作者使用，以便處理尚未完成的非交易式工作。 如果活動尚未完成執行而且遭到取消，則會叫用它的取消邏輯 (如果有的話)。  
   
 > [!NOTE]
->  [!INCLUDE[crabout](../../../includes/crabout-md.md)]交易與補償，請參閱[交易](../../../docs/framework/windows-workflow-foundation/workflow-transactions.md)和[補償](../../../docs/framework/windows-workflow-foundation/compensation.md)。  
+>  如需交易與補償的詳細資訊，請參閱[交易](../../../docs/framework/windows-workflow-foundation/workflow-transactions.md)和[補償](../../../docs/framework/windows-workflow-foundation/compensation.md)。  
   
 ## <a name="using-cancellationscope"></a>使用 CancellationScope  
  <xref:System.Activities.Statements.CancellationScope> 活動有兩個可以包含子活動的區段：<xref:System.Activities.Statements.CancellationScope.Body%2A> 和 <xref:System.Activities.Statements.CancellationScope.CancellationHandler%2A>。 <xref:System.Activities.Statements.CancellationScope.Body%2A> (組成活動邏輯的活動所在的地方) 以及 <xref:System.Activities.Statements.CancellationScope.CancellationHandler%2A> (可提供活動取消邏輯之活動所在的地方)。 只有當活動尚未完成時才可以將它取消。 如果是 <xref:System.Activities.Statements.CancellationScope> 活動，完成指的是 <xref:System.Activities.Statements.CancellationScope.Body%2A> 中的活動完成。 如果排定了取消要求而且尚未完成 <xref:System.Activities.Statements.CancellationScope.Body%2A> 中的活動，則 <xref:System.Activities.Statements.CancellationScope> 將會標示為 <xref:System.Activities.ActivityInstanceState.Canceled> 而且將會執行 <xref:System.Activities.Statements.CancellationScope.CancellationHandler%2A> 活動。  

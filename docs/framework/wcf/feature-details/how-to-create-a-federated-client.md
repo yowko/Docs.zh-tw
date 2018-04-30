@@ -22,16 +22,16 @@ ms.author: dotnetcontent
 manager: wpickett
 ms.workload:
 - dotnet
-ms.openlocfilehash: 38436a83bf58c4903a931ecafebf922800d230c1
-ms.sourcegitcommit: 03ee570f6f528a7d23a4221dcb26a9498edbdf8c
+ms.openlocfilehash: 9a52aa5c2c3af6c7288b2a375e44024195dfe1cc
+ms.sourcegitcommit: 94d33cadc5ff81d2ac389bf5f26422c227832052
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/28/2018
+ms.lasthandoff: 04/30/2018
 ---
 # <a name="how-to-create-a-federated-client"></a>HOW TO：建立聯合用戶端
 在[!INCLUDE[indigo1](../../../../includes/indigo1-md.md)]，建立的用戶端*同盟服務*包含三個主要步驟：  
   
-1.  設定[ \<wsFederationHttpBinding >](../../../../docs/framework/configure-apps/file-schema/wcf/wsfederationhttpbinding.md)或類似的自訂繫結。 [!INCLUDE[crabout](../../../../includes/crabout-md.md)] 建立適當的繫結，請參閱[How to： 建立 WSFederationHttpBinding](../../../../docs/framework/wcf/feature-details/how-to-create-a-wsfederationhttpbinding.md)。 或者，執行[ServiceModel Metadata Utility Tool (Svcutil.exe)](../../../../docs/framework/wcf/servicemodel-metadata-utility-tool-svcutil-exe.md)針對要產生組態檔來與聯合的服務以及一個或多個進行通訊的同盟服務的中繼資料端點安全性權杖服務。  
+1.  設定[ \<wsFederationHttpBinding >](../../../../docs/framework/configure-apps/file-schema/wcf/wsfederationhttpbinding.md)或類似的自訂繫結。 如需有關建立適當的繫結的詳細資訊，請參閱[How to： 建立 WSFederationHttpBinding](../../../../docs/framework/wcf/feature-details/how-to-create-a-wsfederationhttpbinding.md)。 或者，執行[ServiceModel Metadata Utility Tool (Svcutil.exe)](../../../../docs/framework/wcf/servicemodel-metadata-utility-tool-svcutil-exe.md)針對要產生組態檔來與聯合的服務以及一個或多個進行通訊的同盟服務的中繼資料端點安全性權杖服務。  
   
 2.  針對可控制用戶端與安全性權杖服務之間各種互動方式的 <xref:System.ServiceModel.Security.IssuedTokenClientCredential> 設定其屬性。  
   
@@ -40,7 +40,7 @@ ms.lasthandoff: 04/28/2018
 > [!NOTE]
 >  當用戶端使用模擬認證、<xref:System.Security.Cryptography.CryptographicException> 繫結或自訂發行權杖，以及非對稱金鑰時，可能會擲回 <xref:System.ServiceModel.WSFederationHttpBinding>。 當 <xref:System.ServiceModel.WSFederationHttpBinding> 和 <xref:System.ServiceModel.FederatedMessageSecurityOverHttp.IssuedKeyType%2A> 屬性分別設為 <xref:System.ServiceModel.Security.Tokens.IssuedSecurityTokenParameters.KeyType%2A> 時，非對稱金鑰便能與 <xref:System.IdentityModel.Tokens.SecurityKeyType.AsymmetricKey> 繫結或自訂發行權杖一起使用。 當用戶端嘗試傳送訊息，而用戶端想要模擬的身分識別並沒有使用者設定檔時，就會擲回 <xref:System.Security.Cryptography.CryptographicException>。 若要減少發生這個問題，請在傳送訊息之前登入用戶端電腦，或是呼叫 `LoadUserProfile`。  
   
- 本主題提供這些程序的詳細資訊。 [!INCLUDE[crabout](../../../../includes/crabout-md.md)] 建立適當的繫結，請參閱[How to： 建立 WSFederationHttpBinding](../../../../docs/framework/wcf/feature-details/how-to-create-a-wsfederationhttpbinding.md)。 [!INCLUDE[crabout](../../../../includes/crabout-md.md)] 如何聯合的服務的運作方式，請參閱[同盟](../../../../docs/framework/wcf/feature-details/federation.md)。  
+ 本主題提供這些程序的詳細資訊。 如需有關建立適當的繫結的詳細資訊，請參閱[How to： 建立 WSFederationHttpBinding](../../../../docs/framework/wcf/feature-details/how-to-create-a-wsfederationhttpbinding.md)。 如需同盟的服務的運作方式的詳細資訊，請參閱[同盟](../../../../docs/framework/wcf/feature-details/federation.md)。  
   
 ### <a name="to-generate-and-examine-the-configuration-for-a-federated-service"></a>若要產生並檢查聯合服務的組態  
   
@@ -165,7 +165,7 @@ ms.lasthandoff: 04/28/2018
 ## <a name="localissuer-required"></a>需要 LocalIssuer  
  如果用戶端預期一律使用本機發行者，請注意下列事項：如果鏈結中倒數第二個安全性權杖服務指定了發行者位址或發行者中繼資料位址，則預設的 Svcutil.exe 輸出將會導致無法使用本機發行者。  
   
- [!INCLUDE[crabout](../../../../includes/crabout-md.md)] 設定<xref:System.ServiceModel.Security.IssuedTokenClientCredential.LocalIssuerAddress%2A>， <xref:System.ServiceModel.Security.IssuedTokenClientCredential.LocalIssuerBinding%2A>，和<xref:System.ServiceModel.Security.IssuedTokenClientCredential.LocalIssuerChannelBehaviors%2A>屬性<xref:System.ServiceModel.Security.IssuedTokenClientCredential>類別，請參閱[How to： 設定本機簽發者](../../../../docs/framework/wcf/feature-details/how-to-configure-a-local-issuer.md)。  
+ 如需有關設定<xref:System.ServiceModel.Security.IssuedTokenClientCredential.LocalIssuerAddress%2A>， <xref:System.ServiceModel.Security.IssuedTokenClientCredential.LocalIssuerBinding%2A>，和<xref:System.ServiceModel.Security.IssuedTokenClientCredential.LocalIssuerChannelBehaviors%2A>屬性<xref:System.ServiceModel.Security.IssuedTokenClientCredential>類別，請參閱[How to： 設定本機簽發者](../../../../docs/framework/wcf/feature-details/how-to-configure-a-local-issuer.md)。  
   
 ## <a name="scoped-certificates"></a>範圍憑證  
  一般來說，如果因為沒有使用憑證交涉而必須指定服務憑證才能與任何一項安全性權杖服務通訊的話，您可以透過 <xref:System.ServiceModel.Security.X509CertificateRecipientClientCredential.ScopedCertificates%2A> 類別的 <xref:System.ServiceModel.Security.X509CertificateRecipientClientCredential> 屬性來指定服務憑證。 <xref:System.ServiceModel.Security.X509CertificateRecipientClientCredential.SetDefaultCertificate%2A> 方法會採用 <xref:System.Uri> 和 <xref:System.Security.Cryptography.X509Certificates.X509Certificate2> 做為參數。 在指定的 URI 上與端點通訊時，會使用指定的憑證。 或者，您可以使用 <xref:System.ServiceModel.Security.X509CertificateRecipientClientCredential.SetScopedCertificate%2A> 方法，將憑證新增至 <xref:System.ServiceModel.Security.X509CertificateRecipientClientCredential.ScopedCertificates%2A> 屬性所傳回的集合中。  

@@ -14,14 +14,14 @@ ms.author: dotnetcontent
 manager: wpickett
 ms.workload:
 - dotnet
-ms.openlocfilehash: 2eeb5cf57e6efac77de4a76fe8131189273d5438
-ms.sourcegitcommit: 2042de78fcdceebb6b8ac4b7a292b93e8782cbf5
+ms.openlocfilehash: 4153ed905fc9c5c67ce1743fa76497f76b7398cc
+ms.sourcegitcommit: 94d33cadc5ff81d2ac389bf5f26422c227832052
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/27/2018
+ms.lasthandoff: 04/30/2018
 ---
 # <a name="sql-tracking"></a>SQL 追蹤
-此範例示範如何撰寫自訂的 SQL 追蹤參與者，將追蹤記錄寫入至 SQL 資料庫。 Windows Workflow Foundation (WF) 提供工作流程追蹤，讓您查看工作流程執行個體執行。 追蹤執行階段會在工作流程執行期間發出工作流程追蹤記錄。 [!INCLUDE[crabout](../../../../includes/crabout-md.md)] 工作流程追蹤，請參閱[工作流程追蹤](../../../../docs/framework/windows-workflow-foundation/workflow-tracking-and-tracing.md)。  
+此範例示範如何撰寫自訂的 SQL 追蹤參與者，將追蹤記錄寫入至 SQL 資料庫。 Windows Workflow Foundation (WF) 提供工作流程追蹤，讓您查看工作流程執行個體執行。 追蹤執行階段會在工作流程執行期間發出工作流程追蹤記錄。 如需工作流程追蹤的詳細資訊，請參閱[工作流程追蹤](../../../../docs/framework/windows-workflow-foundation/workflow-tracking-and-tracing.md)。  
   
 #### <a name="to-use-this-sample"></a>若要使用這個範例  
   
@@ -52,7 +52,7 @@ ms.lasthandoff: 04/27/2018
   
 10. 在 WCF 測試用戶端中，按兩下  **GetStockPrice**。 這會開啟`GetStockPrice`接受一個參數，輸入的值的作業`Contoso`按一下**Invoke**。  
   
-11. 發出的追蹤記錄會寫入至 SQL 資料庫。 若要檢視追蹤記錄，請在 SQL Management Studio 中開啟 TrackingSample 資料庫並巡覽至資料表。 [!INCLUDE[crabout](../../../../includes/crabout-md.md)] SQL Server Management Studio，請參閱[SQL Server Management Studio 簡介](http://go.microsoft.com/fwlink/?LinkId=165645)。 您可以下載 SQL Server 2008 Management Studio Express[這裡](http://go.microsoft.com/fwlink/?LinkId=180520)。 在資料表上執行 Select 查詢，會顯示個別資料表中所儲存的追蹤記錄資料。  
+11. 發出的追蹤記錄會寫入至 SQL 資料庫。 若要檢視追蹤記錄，請在 SQL Management Studio 中開啟 TrackingSample 資料庫並巡覽至資料表。 如需有關 SQL Server Management Studio 的詳細資訊，請參閱[SQL Server Management Studio 簡介](http://go.microsoft.com/fwlink/?LinkId=165645)。 您可以下載 SQL Server 2008 Management Studio Express[這裡](http://go.microsoft.com/fwlink/?LinkId=180520)。 在資料表上執行 Select 查詢，會顯示個別資料表中所儲存的追蹤記錄資料。  
   
 #### <a name="to-uninstall-the-sample"></a>若要解除安裝範例  
   

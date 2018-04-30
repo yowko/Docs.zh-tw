@@ -1,24 +1,26 @@
 ---
-title: "自訂編碼器"
-ms.custom: 
+title: 自訂編碼器
+ms.custom: ''
 ms.date: 03/30/2017
 ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.technology: dotnet-clr
-ms.tgt_pltfrm: 
+ms.reviewer: ''
+ms.suite: ''
+ms.technology:
+- dotnet-clr
+ms.tgt_pltfrm: ''
 ms.topic: article
 ms.assetid: fa0e1d7f-af36-4bf4-aac9-cd4eab95bc4f
-caps.latest.revision: "15"
+caps.latest.revision: 15
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.workload: dotnet
-ms.openlocfilehash: f1c8223ea7900ba0a89ee2c5c48895a1782d18a0
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.workload:
+- dotnet
+ms.openlocfilehash: 90926fd334eb5ccef3a63f637d5273c408c0c13e
+ms.sourcegitcommit: 94d33cadc5ff81d2ac389bf5f26422c227832052
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 04/30/2018
 ---
 # <a name="custom-encoders"></a>自訂編碼器
 本主題討論如何建立自訂編碼器。  
@@ -34,7 +36,7 @@ ms.lasthandoff: 12/22/2017
 ## <a name="system-provided-encoders"></a>系統提供的編碼器  
  [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] 提供數個系統提供的繫結，這些繫結是為配合一些最常見的應用程式案例而設計的。 這些繫結中的每一個都結合了傳輸、訊息編碼器和其他選項 (例如，安全性)。 本主題將說明如何擴充隨附於 `Text` 的 `Binary`、`MTOM` 和 [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] 訊息編碼器，以及為您自己建立自訂編碼器。 文字訊息編碼器同時支援純 XML 編碼及 SOAP 編碼。 文字訊息編碼器的純 XML 編碼模式稱為 POX ("Plain Old XML") 編碼器，與文字為主的 SOAP 編碼有所區別。  
   
- [!INCLUDE[crabout](../../../../includes/crabout-md.md)]系統提供繫結所提供的繫結項目組合，請參閱中的對應區段[選擇傳輸](../../../../docs/framework/wcf/feature-details/choosing-a-transport.md)。  
+ 如需系統提供的繫結所提供的繫結項目組合的詳細資訊，請參閱中的對應區段[選擇傳輸](../../../../docs/framework/wcf/feature-details/choosing-a-transport.md)。  
   
 ## <a name="how-to-work-with-system-provided-encoders"></a>如何使用系統提供的編碼器  
  您可以使用衍生自 <xref:System.ServiceModel.Channels.MessageEncodingBindingElement> 的類別，將編碼方式加入至繫結。  
@@ -45,7 +47,7 @@ ms.lasthandoff: 12/22/2017
   
 -   <xref:System.ServiceModel.Channels.BinaryMessageEncodingBindingElement>：表示繫結項目，這個繫結項目會指定用於二進位 XML 訊息的字元編碼和訊息版本處理。 這是最有效率、但互通性最差的編碼選項，因為只有 [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] 端點會支援它。  
   
--   <<!--zz xref:System.ServiceModel.Channels.MTOMMessageEncodingBindingElement -->`System.ServiceModel.Channels.MTOMMessageEncodingBindingElement`>： 表示繫結項目，指定的字元編碼和訊息版本處理，用於使用訊息傳輸最佳化機制 (MTOM) 編碼的訊息。 MTOM 是在 [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] 訊息中傳輸二進位資料的有效技術。 MTOM 編碼器會嘗試在效率和互通性之間保持平衡。 MTOM 編碼方式會以文字格式傳輸大部分的 XML，但是在傳輸大型區塊的二進位資料時，會依照原狀來傳送 (不轉換成文字)，好讓這些資料最佳化。  
+-   <<!--zz xref:System.ServiceModel.Channels.MTOMMessageEncodingBindingElement --> `System.ServiceModel.Channels.MTOMMessageEncodingBindingElement`>： 表示繫結項目，指定的字元編碼和訊息版本處理，用於使用訊息傳輸最佳化機制 (MTOM) 編碼的訊息。 MTOM 是在 [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] 訊息中傳輸二進位資料的有效技術。 MTOM 編碼器會嘗試在效率和互通性之間保持平衡。 MTOM 編碼方式會以文字格式傳輸大部分的 XML，但是在傳輸大型區塊的二進位資料時，會依照原狀來傳送 (不轉換成文字)，好讓這些資料最佳化。  
   
  繫結項目會建立二進位、MTOM 或文字的 <xref:System.ServiceModel.Channels.MessageEncoderFactory>。 處理站會建立二進位、MTOM 或文字的 <xref:System.ServiceModel.Channels.MessageEncoderFactory> 執行個體。 一般而言，只會有一個執行個體。 不過，如果是使用工作階段，就可以提供不同的編碼器給每個工作階段。 二進位編碼器會利用這種方式來協調動態字典 (請參閱＜XML 基礎結構＞)。  
   
@@ -102,7 +104,7 @@ ms.lasthandoff: 12/22/2017
   
  有兩個範例隨附[!INCLUDE[indigo2](../../../../includes/indigo2-md.md)]，說明此範例程式碼的程序：[自訂訊息編碼器： 自訂文字編碼器](../../../../docs/framework/wcf/samples/custom-message-encoder-custom-text-encoder.md)和[自訂訊息編碼器： 壓縮編碼器](../../../../docs/framework/wcf/samples/custom-message-encoder-compression-encoder.md)。  
   
-## <a name="see-also"></a>請參閱  
+## <a name="see-also"></a>另請參閱  
  <xref:System.ServiceModel.Channels.MessageEncodingBindingElement>  
  <xref:System.ServiceModel.Channels.MessageEncoderFactory>  
  <xref:System.ServiceModel.Channels.MessageEncoder>  

@@ -19,11 +19,11 @@ ms.author: dotnetcontent
 manager: wpickett
 ms.workload:
 - dotnet
-ms.openlocfilehash: 3a1fceb1017c5225b4e1de6891d6609c9ad5062e
-ms.sourcegitcommit: 03ee570f6f528a7d23a4221dcb26a9498edbdf8c
+ms.openlocfilehash: 7efef63668bb78bdc9a7d66654c9e33ef6c0138c
+ms.sourcegitcommit: 94d33cadc5ff81d2ac389bf5f26422c227832052
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/28/2018
+ms.lasthandoff: 04/30/2018
 ---
 # <a name="xml-and-adonet-types-in-data-contracts"></a>資料合約中的 XML 與 ADO.NET 型別
 [!INCLUDE[indigo1](../../../../includes/indigo1-md.md)] 資料合約模型支援直接代表 XML 的特定型別。 當這些型別序列化為 XML 時，序列化程式會寫出這些型別的 XML 內容，而不做更進一步的處理。 支援的型別為 <xref:System.Xml.XmlElement>、<xref:System.Xml.XmlNode> 的陣列 (但不是 `XmlNode` 型別本身) 以及實作 <xref:System.Xml.Serialization.IXmlSerializable> 的型別。 <xref:System.Data.DataSet> 和 <xref:System.Data.DataTable> 型別以及具型別資料集都常用於資料庫程式撰寫中。 這些型別會實作 `IXmlSerializable` 介面，因此在資料合約模型中是可序列化的。 在本主題最後，會列出這些型別的一些特別考量。  
@@ -48,7 +48,7 @@ ms.lasthandoff: 04/28/2018
 </MyDataContract>  
 ```  
   
- 請注意，包裝函式資料成員項目 `<myDataMember>` 仍然存在。 不能在資料合約模型中移除這個項目。 處理這個模型 (<xref:System.Runtime.Serialization.DataContractSerializer> 和 <xref:System.Runtime.Serialization.NetDataContractSerializer>) 的序列化程式可能會發出特別的屬性到這個包裝函式項目內。 這些屬性包括標準的 XML Schema Instance "nil" 屬性 (允許 `XmlElement` 成為 `null`) 和 "type" 屬性 (允許多型使用 `XmlElement`)。 另外，下列 XML 屬性是 [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] 特定的："Id"、"Ref"、"Type" 和 "Assembly"。 這些屬性可發出以支援使用 `XmlElement` 搭配已啟用的物件圖形保留模式，或使用 <xref:System.Runtime.Serialization.NetDataContractSerializer>  ([!INCLUDE[crabout](../../../../includes/crabout-md.md)]物件圖形保留模式中，請參閱[序列化和還原序列化](../../../../docs/framework/wcf/feature-details/serialization-and-deserialization.md)。)  
+ 請注意，包裝函式資料成員項目 `<myDataMember>` 仍然存在。 不能在資料合約模型中移除這個項目。 處理這個模型 (<xref:System.Runtime.Serialization.DataContractSerializer> 和 <xref:System.Runtime.Serialization.NetDataContractSerializer>) 的序列化程式可能會發出特別的屬性到這個包裝函式項目內。 這些屬性包括標準的 XML Schema Instance "nil" 屬性 (允許 `XmlElement` 成為 `null`) 和 "type" 屬性 (允許多型使用 `XmlElement`)。 另外，下列 XML 屬性是 [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] 特定的："Id"、"Ref"、"Type" 和 "Assembly"。 這些屬性可發出以支援使用 `XmlElement` 搭配已啟用的物件圖形保留模式，或使用 <xref:System.Runtime.Serialization.NetDataContractSerializer>  (如需物件圖形保留模式的詳細資訊，請參閱[序列化和還原序列化](../../../../docs/framework/wcf/feature-details/serialization-and-deserialization.md)。)  
   
  `XmlElement` 的陣列或集合是被允許的，且處理方式和其他任何的陣列或集合相同。 也就是說，整個集合將會有包裝函式項目，而陣列中的各個 `<myDataMember>` 則會有不同的包裝函式項目 (與上例中的 `XmlElement` 類似)。  
   
@@ -150,7 +150,7 @@ ms.lasthandoff: 04/28/2018
 ### <a name="schema-considerations-for-ixmlserializable-content-types"></a>IXmlSerializable 內容型別的結構描述考量  
  當匯出 `IXmlSerializable` 內容型別的結構描述時，會呼叫結構描述提供者方法。 <xref:System.Xml.Schema.XmlSchemaSet> 會傳遞至結構描述提供者方法。 此方法會將有效的結構描述新增至結構描述集。 結構描述集包含在發生結構描述匯出時已知的結構描述。 當結構描述提供者方法必須將項目新增至結構描述集時，必須判斷有適當命名空間的 <xref:System.Xml.Schema.XmlSchema> 是否已經存在於此集中。 如果是，結構描述提供者方法必須將新項目新增至現有的 `XmlSchema`。 否則，就必須建立新的 `XmlSchema` 執行個體。 如果是使用 `IXmlSerializable` 型別的陣列，這就很重要。 例如，如果您的 `IXmlSerializable` 型別在命名空間 "B" 中匯出為型別 "A"，就有可能在呼叫結構描述提供者方法時，結構描述集已經包含 "B" 的結構描述以保存 "ArrayOfA" 型別。  
   
- 除了將型別新增至 <xref:System.Xml.Schema.XmlSchemaSet>，內容型別的結構描述提供者方法還必須傳回非 null 的值。 它會傳回 <xref:System.Xml.XmlQualifiedName>，指定用於指定的 `IXmlSerializable` 型別的結構描述型別的名稱。 這個限定名稱也會做為型別的資料合約名稱和命名空間。 當結構描述提供者方法傳回時，允許立即傳回不存在於結構描述集中的型別。 然而，預期在匯出所有相關型別時 (在 <xref:System.Runtime.Serialization.XsdDataContractExporter.Export%2A> 上為所有相關型別呼叫 <xref:System.Runtime.Serialization.XsdDataContractExporter> 方法，並存取 <xref:System.Runtime.Serialization.XsdDataContractExporter.Schemas%2A> 屬性)，此型別會存在於結構描述集中。 在完成所有相關 `Schemas` 呼叫之前存取 `Export` 屬性會造成 <xref:System.Xml.Schema.XmlSchemaException>。 [!INCLUDE[crabout](../../../../includes/crabout-md.md)] 匯出程序，請參閱[匯出類別中的結構描述](../../../../docs/framework/wcf/feature-details/exporting-schemas-from-classes.md)。  
+ 除了將型別新增至 <xref:System.Xml.Schema.XmlSchemaSet>，內容型別的結構描述提供者方法還必須傳回非 null 的值。 它會傳回 <xref:System.Xml.XmlQualifiedName>，指定用於指定的 `IXmlSerializable` 型別的結構描述型別的名稱。 這個限定名稱也會做為型別的資料合約名稱和命名空間。 當結構描述提供者方法傳回時，允許立即傳回不存在於結構描述集中的型別。 然而，預期在匯出所有相關型別時 (在 <xref:System.Runtime.Serialization.XsdDataContractExporter.Export%2A> 上為所有相關型別呼叫 <xref:System.Runtime.Serialization.XsdDataContractExporter> 方法，並存取 <xref:System.Runtime.Serialization.XsdDataContractExporter.Schemas%2A> 屬性)，此型別會存在於結構描述集中。 在完成所有相關 `Schemas` 呼叫之前存取 `Export` 屬性會造成 <xref:System.Xml.Schema.XmlSchemaException>。 如需匯出程序的詳細資訊，請參閱[匯出類別中的結構描述](../../../../docs/framework/wcf/feature-details/exporting-schemas-from-classes.md)。  
   
  結構描述提供者方法也可能傳回 <xref:System.Xml.Schema.XmlSchemaType> 以使用。 此型別可能是或不是匿名的。 如果是匿名的，每當使用 `IXmlSerializable` 型別做為資料成員時，便會將 `IXmlSerializable` 型別的結構描述匯出為匿名型別。 `IXmlSerializable` 型別仍然會有資料合約名稱和命名空間。 (這取決於中所述[資料合約名稱](../../../../docs/framework/wcf/feature-details/data-contract-names.md)不同之處在於<xref:System.Runtime.Serialization.DataContractAttribute>屬性無法用於自訂的名稱。)如果不是匿名的，則必須是 `XmlSchemaSet` 中的其中一個型別。 這種情況等於傳回型別的 `XmlQualifiedName`。  
   
@@ -211,7 +211,7 @@ ms.lasthandoff: 04/28/2018
   
 -   這些型別的結構描述 (特別是 <xref:System.Data.DataSet> 和其具型別的衍生類別) 可能無法與一些非 [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] 平台互通，或在與這些平台使用時可能會造成可用性不佳。 此外，使用 `DataSet` 型別可能會對效能有影響。 最後，它可能會讓您將來更難處理應用程式的版本。 請考慮使用明確定義的資料合約類型來取代您合約中的 `DataSet` 型別。  
   
--   當匯入 `DataSet` 或 `DataTable` 結構描述時，參照這些型別是很重要的。 使用 Svcutil.exe 命令列工具，這可藉由將 System.Data.dll 組件名稱使`/reference`切換。 如果匯入具型別資料集結構描述，您必須參照具型別資料集的型別。 使用 Svcutil.exe，傳遞的具類型資料集的組件位置`/reference`切換。 [!INCLUDE[crabout](../../../../includes/crabout-md.md)] 參考類型，請參閱[匯入的結構描述產生類別](../../../../docs/framework/wcf/feature-details/importing-schema-to-generate-classes.md)。  
+-   當匯入 `DataSet` 或 `DataTable` 結構描述時，參照這些型別是很重要的。 使用 Svcutil.exe 命令列工具，這可藉由將 System.Data.dll 組件名稱使`/reference`切換。 如果匯入具型別資料集結構描述，您必須參照具型別資料集的型別。 使用 Svcutil.exe，傳遞的具類型資料集的組件位置`/reference`切換。 如需參考類型的詳細資訊，請參閱[匯入的結構描述產生類別](../../../../docs/framework/wcf/feature-details/importing-schema-to-generate-classes.md)。  
   
  支援資料合約模型中具有型別的資料集是受限制的。 具有型別的資料集可以序列化和還原序列化，並可以匯出其結構描述。 但是，資料合約結構描述匯入無法從結構描述產生新的具有型別資料集型別，因為它只會重複使用現有的資料集型別。 您可以在 Svcutil.exe 上使用 `/r` 參數來指向現有具有型別的資料集。 如果您嘗試在使用具型別資料集的服務上使用 Svcutil.exe，但不使用 `/r` 參數，則會自動選取替代的序列化程式 (XmlSerializer)。 如果您必須使用 DataContractSerializer，且必須從結構描述產生資料集，您可以使用下列程序：產生具有型別的資料集型別 (透過在服務上使用 Xsd.exe 工具並加上 `/d` 參數)、編譯該型別，然後在 Svcutil.exe 上使用 `/r` 參數來指向這些型別。  
   

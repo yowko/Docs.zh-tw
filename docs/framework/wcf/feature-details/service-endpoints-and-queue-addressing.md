@@ -1,24 +1,26 @@
 ---
-title: "服務端點與佇列定址"
-ms.custom: 
+title: 服務端點與佇列定址
+ms.custom: ''
 ms.date: 03/30/2017
 ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.technology: dotnet-clr
-ms.tgt_pltfrm: 
+ms.reviewer: ''
+ms.suite: ''
+ms.technology:
+- dotnet-clr
+ms.tgt_pltfrm: ''
 ms.topic: article
 ms.assetid: 7d2d59d7-f08b-44ed-bd31-913908b83d97
-caps.latest.revision: "18"
+caps.latest.revision: 18
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.workload: dotnet
-ms.openlocfilehash: 8488e802ee191c261b65388d48bd26aa37d18206
-ms.sourcegitcommit: c0dd436f6f8f44dc80dc43b07f6841a00b74b23f
+ms.workload:
+- dotnet
+ms.openlocfilehash: f2244ccb1637f944f9e3349cf0d94caa2f6676bf
+ms.sourcegitcommit: 94d33cadc5ff81d2ac389bf5f26422c227832052
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 01/19/2018
+ms.lasthandoff: 04/30/2018
 ---
 # <a name="service-endpoints-and-queue-addressing"></a>服務端點與佇列定址
 本主題將討論用戶端如何針對從佇列讀取的服務進行定址，以及服務端點如何對應至佇列。 提醒您，下列圖例將顯示典型的 [!INCLUDE[indigo1](../../../../includes/indigo1-md.md)] 佇列應用程式部署。  
@@ -32,7 +34,7 @@ ms.lasthandoff: 01/19/2018
   
  路徑名稱會對應至"FormatNames"以決定位址，包括路由與佇列管理員傳輸通訊協定的其他部分。 佇列管理員支援兩種傳輸通訊協定：原生 MSMQ 通訊協定與 SOAP Reliable Messaging Protocol (SRMP)。  
   
- [!INCLUDE[crabout](../../../../includes/crabout-md.md)]MSMQ 路徑與格式名稱，請參閱[有關訊息佇列](http://go.microsoft.com/fwlink/?LinkId=94837)。  
+ 如需 MSMQ 路徑與格式名稱的詳細資訊，請參閱[有關訊息佇列](http://go.microsoft.com/fwlink/?LinkId=94837)。  
   
 ## <a name="netmsmqbinding-and-service-addressing"></a>NetMsmqBinding 與服務定址  
  針對傳送給服務的訊息進行定址時，URI 裡的配置是依據通訊時使用的傳輸所選定的。 [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] 中的每個傳輸都有自己的配置。 配置必須反映通訊時使用的傳輸本質。 例如，net.tcp、net.pipe、HTTP 等等。  
@@ -84,7 +86,7 @@ ms.lasthandoff: 01/19/2018
 |以 WCF URI 為基礎的佇列位址|使用 Active Directory 屬性|佇列傳輸通訊協定屬性|最後的 MSMQ 格式名稱|  
 |----------------------------------|-----------------------------------|--------------------------------------|---------------------------------|  
 |Net.msmq://\<machine-name>/private/abc|False (預設)|Native (預設)|DIRECT=OS:machine-name\private$\abc|  
-|Net.msmq://\<machine-name>/private/abc|False|SRMP|DIRECT=http://machine/msmq/private$/abc|  
+|Net.msmq://\<machine-name>/private/abc|False|SRMP|DIRECT =http://machine/msmq/private$/abc|  
 |Net.msmq://\<machine-name>/private/abc|True|原生|PUBLIC=some-guid (佇列的 GUID)|  
   
 ### <a name="reading-messages-from-the-dead-letter-queue-or-the-poison-message-queue"></a>從寄不出的信件佇列或有害訊息佇列讀取訊息  
@@ -111,9 +113,9 @@ ms.lasthandoff: 01/19/2018
   
  請注意，當您使用 `MsmqIntegrationBinding` 從佇列接收訊息時，只能使用直接格式名稱，與公用與私用格式名稱 (需要 Active Directory 整合)。 然而，我們建議您使用直接格式名稱。 例如，在 [!INCLUDE[wv](../../../../includes/wv-md.md)] 上，使用其他任何格式名稱都會導致錯誤，因為系統會嘗試開啟子佇列，而此子佇列只能由直接格式名稱來開啟。  
   
- 當您使用 `MsmqIntegrationBinding` 為 SRMP 定址時，不需要在直接格式名稱中新增 /msmq/ 以協助網際網路資訊服務 (IIS) 進行分派作業。 例如：當您使用 SRMP 通訊協定 (而不是 DIRECT=http://adatum.com/msmq/private$/abc) 來為佇列 abc 定址，您應該使用 DIRECT=http://adatum.com/private$/abc。  
+ 當您使用 `MsmqIntegrationBinding` 為 SRMP 定址時，不需要在直接格式名稱中新增 /msmq/ 以協助網際網路資訊服務 (IIS) 進行分派作業。 例如： abc 使用 SRMP 通訊協定，而不是 DIRECT 佇列進行定址時 =http://adatum.com/msmq/private$/abc，您應該使用 DIRECT =http://adatum.com/private$/abc。  
   
  請注意，您無法使用包含 `MsmqIntegrationBinding` 的 net.msmq:// 定址。 由於 `MsmqIntegrationBinding` 支援自由格式的 MSMQ 格式名稱定址，您可以透過使用此繫結的 [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] 服務來使用 MSMQ 中的多點傳送與通訊群組清單功能。 當您使用 `CustomDeadLetterQueue` 時，需指定 `MsmqIntegrationBinding` 則是一個例外。 它必須是 net.msmq:// 的格式，與使用 `NetMsmqBinding` 來指定的方式很類似。  
   
-## <a name="see-also"></a>請參閱  
+## <a name="see-also"></a>另請參閱  
  [以 Web 裝載佇列應用程式](../../../../docs/framework/wcf/feature-details/web-hosting-a-queued-application.md)

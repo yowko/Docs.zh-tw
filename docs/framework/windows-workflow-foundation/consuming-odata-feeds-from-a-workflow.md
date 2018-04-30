@@ -14,11 +14,11 @@ ms.author: dotnetcontent
 manager: wpickett
 ms.workload:
 - dotnet
-ms.openlocfilehash: 09eb22c0c4bfaf549bd18cccae0c84957e730aa6
-ms.sourcegitcommit: 03ee570f6f528a7d23a4221dcb26a9498edbdf8c
+ms.openlocfilehash: ce7d7812eadea2d9472a62bd007d2eca6ae07891
+ms.sourcegitcommit: 94d33cadc5ff81d2ac389bf5f26422c227832052
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/28/2018
+ms.lasthandoff: 04/30/2018
 ---
 # <a name="consuming-odata-feeds-from-a-workflow"></a>從流程中使用 OData 摘要
 WCF 資料服務是 [!INCLUDE[dnprdnshort](../../../includes/dnprdnshort-md.md)] 的一個元件，可讓您建立使用 Open Data Protocol (OData) 的服務，利用具像狀態傳輸 (REST) 的語意透過 Web 或內部網路公開及取用資料。 OData 會將資料公開為可由 URI 定址的資源。 任何可以傳送 HTTP 要求並處理資料服務傳回之 OData 摘要的應用程式，都可以與 OData 型資料服務互動。 此外，WCF 資料服務也包含用戶端程式庫，在您從 [!INCLUDE[dnprdnshort](../../../includes/dnprdnshort-md.md)] 應用程式取用 OData 摘要時，可為您提供更豐富的程式設計體驗。 本主題提供在工作流程中取用 OData 摘要的概觀 (不論有沒有使用用戶端程式庫)。  
@@ -78,7 +78,7 @@ WCF 資料服務是 [!INCLUDE[dnprdnshort](../../../includes/dnprdnshort-md.md)]
  在下列範例中，會定義 `ListCustomers` 活動。 這個活動會查詢範例 Northwind 資料服務，並傳回 `List<Customer>` ，其中包含了 Northwind 資料庫中的所有客戶。 非同步工作是由 `GetCustomers` 方法所執行。 這個方法會查詢此服務中的所有客戶，然後將這些客戶複製到 `List<Customer>`。 接著它會檢查結果是否分頁。 如果是的話，它會查詢此服務中的下一頁結果、將這些結果加入至清單中，並繼續進行，直到擷取所有客戶資料為止。  
   
 > [!NOTE]
->  [!INCLUDE[crabout](../../../includes/crabout-md.md)] WCF Data Services 中的分頁，請參閱。 [如何：載入分頁結果 (WCF 資料服務)](http://go.microsoft.com/fwlink/?LinkId=193452)。  
+>  如需 WCF Data Services 中的分頁的詳細資訊，請參閱。 [如何：載入分頁結果 (WCF 資料服務)](http://go.microsoft.com/fwlink/?LinkId=193452)。  
   
  一旦加入所有客戶之後，就會傳回清單。 `GetCustomers` 方法會指定於活動的 <xref:System.Activities.AsyncCodeActivity.BeginExecute%2A> 覆寫中。 因為此方法具有傳回值，所以會建立 `Func<string, List<Customer>>` 來指定此方法。  
   
@@ -143,4 +143,4 @@ WCF 資料服務是 [!INCLUDE[dnprdnshort](../../../includes/dnprdnshort-md.md)]
  **\<連結 rel ="edit"title ="Order"href="Orders(10643)"/ >**  
  **\<連結 rel ="http://schemas.microsoft.com/ado/2007/08/dataservices/related/Customer"**  
  **類型 ="應用程式/atom + xml; 輸入 = 項目"title ="Customer"href ="訂單 （10643）/客戶 」 / >**  
-**...** 此範例提供一種方法，可讓工作流程應用程式作者耗用從 OData 服務傳回的原始資料。 [!INCLUDE[crabout](../../../includes/crabout-md.md)] 使用 URI 存取 WCF 資料服務的詳細資訊，請參閱 [存取資料服務資源 (WCF 資料服務)](http://go.microsoft.com/fwlink/?LinkId=193397) 和 [OData：URI 慣例](http://go.microsoft.com/fwlink/?LinkId=185564)。
+**...** 此範例提供一種方法，可讓工作流程應用程式作者耗用從 OData 服務傳回的原始資料。 如需使用存取 WCF 資料服務 Uri 的詳細資訊，請參閱[存取資料服務資源 (WCF Data Services)](http://go.microsoft.com/fwlink/?LinkId=193397)和[OData: URI 慣例](http://go.microsoft.com/fwlink/?LinkId=185564)。

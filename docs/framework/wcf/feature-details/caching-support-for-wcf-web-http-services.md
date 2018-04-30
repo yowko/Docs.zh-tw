@@ -16,14 +16,14 @@ ms.author: dotnetcontent
 manager: wpickett
 ms.workload:
 - dotnet
-ms.openlocfilehash: 912bfae4ab867540c01af798f883a0249ec297f7
-ms.sourcegitcommit: 03ee570f6f528a7d23a4221dcb26a9498edbdf8c
+ms.openlocfilehash: cffa0e1c18fd3e1207b40c699684ebaa49511384
+ms.sourcegitcommit: 94d33cadc5ff81d2ac389bf5f26422c227832052
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/28/2018
+ms.lasthandoff: 04/30/2018
 ---
 # <a name="caching-support-for-wcf-web-http-services"></a>WCF Web HTTP 服務的快取支援
-[!INCLUDE[netfx_current_long](../../../../includes/netfx-current-long-md.md)] 可讓您使用的 ASP.NET 中 WCF Web HTTP 服務中已提供的宣告式快取機制。 這可讓您快取來自 WCF Web HTTP 服務作業的回應。 當使用者傳送 HTTP GET 至您設為快取的服務時，ASP.NET 會傳回快取的回應，且不會呼叫服務方法。 當快取逾期後，下次使用者傳送 HTTP GET 時，會呼叫您的服務方法且再次快取回應。 [!INCLUDE[crabout](../../../../includes/crabout-md.md)] ASP.NET 快取，請參閱[ASP.NET 快取概觀](http://go.microsoft.com/fwlink/?LinkId=152534)  
+[!INCLUDE[netfx_current_long](../../../../includes/netfx-current-long-md.md)] 可讓您使用的 ASP.NET 中 WCF Web HTTP 服務中已提供的宣告式快取機制。 這可讓您快取來自 WCF Web HTTP 服務作業的回應。 當使用者傳送 HTTP GET 至您設為快取的服務時，ASP.NET 會傳回快取的回應，且不會呼叫服務方法。 當快取逾期後，下次使用者傳送 HTTP GET 時，會呼叫您的服務方法且再次快取回應。 如需 ASP.NET 快取的詳細資訊，請參閱[ASP.NET 快取概觀](http://go.microsoft.com/fwlink/?LinkId=152534)  
   
 ## <a name="basic-web-http-service-caching"></a>基本 Web HTTP 服務快取  
  若要啟用 WEB HTTP 服務快取，您必須先將 <xref:System.ServiceModel.Activation.AspNetCompatibilityRequirementsAttribute> 套用至服務來啟用 ASP.NET 相容性，該服務將 <xref:System.ServiceModel.Activation.AspNetCompatibilityRequirementsAttribute.RequirementsMode%2A> 設定為 <xref:System.ServiceModel.Activation.AspNetCompatibilityRequirementsMode.Allowed> 或 <xref:System.ServiceModel.Activation.AspNetCompatibilityRequirementsMode.Required>。  
@@ -71,7 +71,7 @@ public class Service
 </system.web>  
 ```  
   
- 此組態項目與 ASP.NET 應用程式所使用的項目相同。 [!INCLUDE[crabout](../../../../includes/crabout-md.md)] ASP.NET 快取設定檔的詳細資訊，請參閱 <xref:System.Web.Configuration.OutputCacheProfile>。 若是 Web HTTP 服務，快取設定檔中最重要的屬性是：`cacheDuration` 和 `varyByParam`。 這兩個屬性都是必要項。 `cacheDuration` 可設定應快取回應的時間 (以秒為單位)。 `varyByParam` 可讓您指定用來快取回應的查詢字串參數。 使用不同查詢字串參數值所執行的所有請求會分別快取。 例如，一旦初始要求對http://MyServer/MyHttpService/MyOperation?param=10具有相同 URI 所做的所有後續要求將會傳回快取的回應 （只要尚未經過快取持續時間）。 請求相似但對參數查詢字串參數有不同值的回應會分別快取。 如果您不想要此分別快取行為，請將 `varyByParam` 設為 "none"。  
+ 此組態項目與 ASP.NET 應用程式所使用的項目相同。 如需 ASP.NET 快取設定檔的詳細資訊，請參閱<xref:System.Web.Configuration.OutputCacheProfile>。 若是 Web HTTP 服務，快取設定檔中最重要的屬性是：`cacheDuration` 和 `varyByParam`。 這兩個屬性都是必要項。 `cacheDuration` 可設定應快取回應的時間 (以秒為單位)。 `varyByParam` 可讓您指定用來快取回應的查詢字串參數。 使用不同查詢字串參數值所執行的所有請求會分別快取。 例如，一旦初始要求對http://MyServer/MyHttpService/MyOperation?param=10具有相同 URI 所做的所有後續要求將會傳回快取的回應 （只要尚未經過快取持續時間）。 請求相似但對參數查詢字串參數有不同值的回應會分別快取。 如果您不想要此分別快取行為，請將 `varyByParam` 設為 "none"。  
   
 ## <a name="sql-cache-dependency"></a>SQL 快取相依性  
  Web HTTP 服務回應也可使用 SQL 快取相依性來加以快取。 如果您的 WCF Web HTTP 服務依賴儲存在 SQL 資料庫中的資料，您可能需要快取服務的回應，並在 SQL 資料庫資料表中的資料變更時，使快取的回應失效。 此行為會完全在 Web.config 檔案中設定完成。 您必須先定義中的連接字串 <`connectionStrings`> 項目。  

@@ -1,13 +1,13 @@
 ---
-title: "HOW TO：使用自訂使用者名稱與密碼驗證程式"
-ms.custom: 
+title: HOW TO：使用自訂使用者名稱與密碼驗證程式
+ms.custom: ''
 ms.date: 03/30/2017
 ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
+ms.reviewer: ''
+ms.suite: ''
 ms.technology:
 - dotnet-clr
-ms.tgt_pltfrm: 
+ms.tgt_pltfrm: ''
 ms.topic: article
 dev_langs:
 - csharp
@@ -15,17 +15,17 @@ dev_langs:
 helpviewer_keywords:
 - WCF, username and password
 ms.assetid: 8e08b74b-fa44-4018-b63d-0d0805f85e3f
-caps.latest.revision: 
+caps.latest.revision: 14
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
 ms.workload:
 - dotnet
-ms.openlocfilehash: ee138c52c8cdd63137bf3c468ebbdd064d60d443
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.openlocfilehash: 4ea4f4d7021f02d239b9e2e93a85b5baaf5a0317
+ms.sourcegitcommit: 94d33cadc5ff81d2ac389bf5f26422c227832052
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 04/30/2018
 ---
 # <a name="how-to-use-a-custom-user-name-and-password-validator"></a>HOW TO：使用自訂使用者名稱與密碼驗證程式
 根據預設，使用使用者名稱和密碼進行驗證時，[!INCLUDE[indigo1](../../../../includes/indigo1-md.md)] 會使用 Windows 驗證使用者名稱和密碼。 不過，[!INCLUDE[indigo2](../../../../includes/indigo2-md.md)]可讓自訂使用者名稱和密碼驗證配置，也稱為*驗證*。 若要納入自訂的使用者名稱和密碼驗證程式，請建立衍生自 <xref:System.IdentityModel.Selectors.UserNamePasswordValidator> 的類別，然後予以設定。  
@@ -64,7 +64,7 @@ ms.lasthandoff: 12/22/2017
   
     1.  在組態檔中，在[ \<system.serviceModel >](../../../../docs/framework/configure-apps/file-schema/wcf/system-servicemodel.md)項目，加入[\<繫結 >](../../../../docs/framework/configure-apps/file-schema/wcf/bindings.md)項目。  
   
-    2.  新增[ \<wsHttpBinding >](../../../../docs/framework/configure-apps/file-schema/wcf/wshttpbinding.md)或[ \<basicHttpBinding >](../../../../docs/framework/configure-apps/file-schema/wcf/basichttpbinding.md)要繫結區段項目。 [!INCLUDE[crabout](../../../../includes/crabout-md.md)]建立[!INCLUDE[indigo2](../../../../includes/indigo2-md.md)]繫結項目，請參閱[How to： 在組態中指定服務繫結](../../../../docs/framework/wcf/how-to-specify-a-service-binding-in-configuration.md)。  
+    2.  新增[ \<wsHttpBinding >](../../../../docs/framework/configure-apps/file-schema/wcf/wshttpbinding.md)或[ \<basicHttpBinding >](../../../../docs/framework/configure-apps/file-schema/wcf/basichttpbinding.md)要繫結區段項目。 如需有關建立[!INCLUDE[indigo2](../../../../includes/indigo2-md.md)]繫結項目，請參閱[How to： 在組態中指定服務繫結](../../../../docs/framework/wcf/how-to-specify-a-service-binding-in-configuration.md)。  
   
     3.  設定`mode`屬性[\<安全性 >](../../../../docs/framework/configure-apps/file-schema/wcf/security-of-wshttpbinding.md)或[\<安全性 >](../../../../docs/framework/configure-apps/file-schema/wcf/security-of-basichttpbinding.md)至`Message`， `Transport`， `or``TransportWithMessageCredential`。  
   
@@ -77,7 +77,7 @@ ms.lasthandoff: 12/22/2017
         > [!NOTE]
         >  當 [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] 服務使用傳輸層級安全性裝載在網際網路資訊服務 (IIS) 中，並且 <xref:System.ServiceModel.Security.UserNamePasswordServiceCredential.UserNamePasswordValidationMode%2A> 屬性設定為 <xref:System.ServiceModel.Security.UserNamePasswordValidationMode.Custom> 時，自訂驗證配置會使用 Windows 驗證的子集。 這是因為在這種情況中，IIS 會在 [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] 叫用自訂驗證器之前，先執行 Windows 驗證。  
   
-     [!INCLUDE[crabout](../../../../includes/crabout-md.md)]建立[!INCLUDE[indigo2](../../../../includes/indigo2-md.md)]繫結項目，請參閱[How to： 在組態中指定服務繫結](../../../../docs/framework/wcf/how-to-specify-a-service-binding-in-configuration.md)。  
+     如需有關建立[!INCLUDE[indigo2](../../../../includes/indigo2-md.md)]繫結項目，請參閱[How to： 在組態中指定服務繫結](../../../../docs/framework/wcf/how-to-specify-a-service-binding-in-configuration.md)。  
   
      下列程式碼範例顯示繫結的組態程式碼。  
   
@@ -130,7 +130,7 @@ ms.lasthandoff: 12/22/2017
 [!code-csharp[C_CustomUsernameAndPasswordValidator#2](../../../../samples/snippets/csharp/VS_Snippets_CFX/c_customusernameandpasswordvalidator/cs/service.cs#2)]
 [!code-vb[C_CustomUsernameAndPasswordValidator#2](../../../../samples/snippets/visualbasic/VS_Snippets_CFX/c_customusernameandpasswordvalidator/vb/service.vb#2)]  
   
-## <a name="see-also"></a>請參閱  
+## <a name="see-also"></a>另請參閱  
  <xref:System.IdentityModel.Selectors.UserNamePasswordValidator>  
  [如何：使用 ASP.NET 成員資格提供者](../../../../docs/framework/wcf/feature-details/how-to-use-the-aspnet-membership-provider.md)  
  [驗證](../../../../docs/framework/wcf/feature-details/authentication-in-wcf.md)

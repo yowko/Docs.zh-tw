@@ -18,11 +18,11 @@ ms.author: dotnetcontent
 manager: wpickett
 ms.workload:
 - dotnet
-ms.openlocfilehash: fb9f542d931f5febc2c04d1b0e093cc20f487c57
-ms.sourcegitcommit: 03ee570f6f528a7d23a4221dcb26a9498edbdf8c
+ms.openlocfilehash: 4734407868d9dae2acc422c0f07aad57d42d4566
+ms.sourcegitcommit: 94d33cadc5ff81d2ac389bf5f26422c227832052
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/28/2018
+ms.lasthandoff: 04/30/2018
 ---
 # <a name="denial-of-service"></a>阻斷服務
 當系統由於無法處理訊息，或者處理訊息的速度極為緩慢而爆滿時，就會發生阻絕服務。  
@@ -57,7 +57,7 @@ ms.lasthandoff: 04/28/2018
 ## <a name="auditing-event-log-can-be-filled"></a>稽核事件記錄檔已滿  
  如果惡意使用者發現已啟用稽核，攻擊者就可以傳送無效的訊息，而造成寫入稽核項目。 如果是因為這個方法而填滿稽核記錄檔，稽核系統就會失敗。  
   
- 若要減輕這個威脅，請將 <xref:System.ServiceModel.Description.ServiceSecurityAuditBehavior.SuppressAuditFailure%2A> 屬性設定為 `true`，並使用 [事件檢視器] 的屬性來控制稽核行為。 [!INCLUDE[crabout](../../../../includes/crabout-md.md)] 使用事件檢視器來檢視和管理事件記錄檔，請參閱[事件檢視器](http://go.microsoft.com/fwlink/?LinkId=186123)。 如需詳細資訊，請參閱[稽核](../../../../docs/framework/wcf/feature-details/auditing-security-events.md)。  
+ 若要減輕這個威脅，請將 <xref:System.ServiceModel.Description.ServiceSecurityAuditBehavior.SuppressAuditFailure%2A> 屬性設定為 `true`，並使用 [事件檢視器] 的屬性來控制稽核行為。 如需有關如何使用事件檢視器來檢視和管理事件記錄檔的詳細資訊，請參閱[事件檢視器](http://go.microsoft.com/fwlink/?LinkId=186123)。 如需詳細資訊，請參閱[稽核](../../../../docs/framework/wcf/feature-details/auditing-security-events.md)。  
   
 ## <a name="invalid-implementations-of-iauthorizationpolicy-can-cause-service-hangs"></a>無效的 IAuthorizationPolicy 實作會導致服務停止回應  
  在錯誤的 <xref:System.IdentityModel.Policy.IAuthorizationPolicy.Evaluate%2A> 介面實作上呼叫 <xref:System.IdentityModel.Policy.IAuthorizationPolicy> 方法，將會導致服務停止回應。  
@@ -74,7 +74,7 @@ ms.lasthandoff: 04/28/2018
   
  若要緩解這個情況，參考上使用更精確的搜尋準則使用的確切憑證[ \<serviceCredentials >](../../../../docs/framework/configure-apps/file-schema/wcf/servicecredentials.md)。 例如，請使用 <xref:System.Security.Cryptography.X509Certificates.X509FindType.FindByThumbprint> 選項，並依照其唯一指紋 (雜湊) 指定憑證。  
   
- [!INCLUDE[crabout](../../../../includes/crabout-md.md)] 自動註冊功能，請參閱[Windows Server 2003 中的憑證自動註冊](http://go.microsoft.com/fwlink/?LinkId=95166)。  
+ 如需自動註冊功能的詳細資訊，請參閱[Windows Server 2003 中的憑證自動註冊](http://go.microsoft.com/fwlink/?LinkId=95166)。  
   
 ## <a name="last-of-multiple-alternative-subject-names-used-for-authorization"></a>最後幾個用於授權的多個替代主體名稱  
  在少數情況下，當 X.509 憑證包含多個替代主體名稱，而且您使用替代主體名稱進行授權時，授權可能會失敗。  
@@ -88,7 +88,7 @@ ms.lasthandoff: 04/28/2018
  當服務順利驗證用戶端而且是藉由服務建立安全工作階段時，服務會持續追蹤工作階段，直到用戶端取消服務或工作階段到期為止。 每個建立的工作階段都不利於服務之同時作用中工作階段的數量上限。 達到這個限制時，將會拒絕嘗試以該服務建立新工作階段的用戶端，直到一或多個作用中工作階段到期或由用戶端所取消為止。 用戶端在服務中可以擁有多個工作階段，而且會對該限制計數每個工作階段。  
   
 > [!NOTE]
->  當您使用具狀態的工作階段時，之前的段落就沒有作用。 [!INCLUDE[crabout](../../../../includes/crabout-md.md)] 可設定狀態的工作階段，請參閱[How to： 建立安全工作階段的安全性內容權杖](../../../../docs/framework/wcf/feature-details/how-to-create-a-security-context-token-for-a-secure-session.md)。  
+>  當您使用具狀態的工作階段時，之前的段落就沒有作用。 如需可設定狀態的工作階段的詳細資訊，請參閱[How to： 建立安全工作階段的安全性內容權杖](../../../../docs/framework/wcf/feature-details/how-to-create-a-security-context-token-for-a-secure-session.md)。  
   
  若要避免這個情況，請設定 <xref:System.ServiceModel.Channels.SecurityBindingElement> 類別的 <xref:System.ServiceModel.Channels.SecurityBindingElement> 屬性，以設定作用中工作階段數的上限和工作階段的最長存留時間。  
   

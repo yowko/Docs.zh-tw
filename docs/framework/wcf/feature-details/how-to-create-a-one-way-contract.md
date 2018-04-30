@@ -1,32 +1,34 @@
 ---
-title: "HOW TO：建立單向合約"
-ms.custom: 
+title: HOW TO：建立單向合約
+ms.custom: ''
 ms.date: 03/30/2017
 ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.technology: dotnet-clr
-ms.tgt_pltfrm: 
+ms.reviewer: ''
+ms.suite: ''
+ms.technology:
+- dotnet-clr
+ms.tgt_pltfrm: ''
 ms.topic: article
 dev_langs:
 - csharp
 - vb
 ms.assetid: 85084cd9-31cc-4e95-b667-42ef01336622
-caps.latest.revision: "23"
+caps.latest.revision: 23
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.workload: dotnet
-ms.openlocfilehash: d08fcb955c972ffbd7ef0a48625f1005ab366dd0
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.workload:
+- dotnet
+ms.openlocfilehash: 1a54b64826735d912bdf6507023da56118fb9a69
+ms.sourcegitcommit: 94d33cadc5ff81d2ac389bf5f26422c227832052
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 04/30/2018
 ---
 # <a name="how-to-create-a-one-way-contract"></a>HOW TO：建立單向合約
 本主題說明的基本步驟可用來建立使用單向合約的方法。 此類方法會從用戶端叫用 [!INCLUDE[indigo1](../../../../includes/indigo1-md.md)] 服務上的作業，但是不會期待收到回覆。 例如，您可以使用此合約類型，將通知發行給許多訂閱者。 您也可以在建立雙工 (雙向) 合約時使用單向合約，以供用戶端與伺服器彼此各自進行通訊，並方便任何一方初始化對另一方的呼叫。 這麼做可以特別允許伺服器對用戶端進行單向呼叫，而用戶端會將此呼叫視為事件。 如需指定單向方法的詳細資訊，請參閱 <xref:System.ServiceModel.OperationContractAttribute.IsOneWay%2A> 屬性與 <xref:System.ServiceModel.OperationContractAttribute> 類別。  
   
- [!INCLUDE[crabout](../../../../includes/crabout-md.md)]建立用戶端應用程式的雙工合約，請參閱[How to: Access Services 搭配單向和要求-回覆合約](../../../../docs/framework/wcf/feature-details/how-to-access-wcf-services-with-one-way-and-request-reply-contracts.md)。 如需實用範例，請參閱[單向](../../../../docs/framework/wcf/samples/one-way.md)範例。  
+ 如需建立雙工合約的用戶端應用程式的詳細資訊，請參閱[How to: Access Services 搭配單向和要求-回覆合約](../../../../docs/framework/wcf/feature-details/how-to-access-wcf-services-with-one-way-and-request-reply-contracts.md)。 如需實用範例，請參閱[單向](../../../../docs/framework/wcf/samples/one-way.md)範例。  
   
 ### <a name="to-create-a-one-way-contract"></a>若要建立單向合約  
   
@@ -42,7 +44,7 @@ ms.lasthandoff: 12/22/2017
  [!code-csharp[S_Service_Session#1](../../../../samples/snippets/csharp/VS_Snippets_CFX/s_service_session/cs/service.cs#1)]
  [!code-vb[S_Service_Session#1](../../../../samples/snippets/visualbasic/VS_Snippets_CFX/s_service_session/vb/service.vb#1)]  
   
-## <a name="see-also"></a>請參閱  
+## <a name="see-also"></a>另請參閱  
  <xref:System.ServiceModel.ServiceContractAttribute>  
  <xref:System.ServiceModel.OperationContractAttribute>  
  [設計與實作服務](../../../../docs/framework/wcf/designing-and-implementing-services.md)  

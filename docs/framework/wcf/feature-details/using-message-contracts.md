@@ -21,11 +21,11 @@ ms.author: dotnetcontent
 manager: wpickett
 ms.workload:
 - dotnet
-ms.openlocfilehash: e9f6d0e9d64c510b47b0697d02178f1c0a95f61b
-ms.sourcegitcommit: 03ee570f6f528a7d23a4221dcb26a9498edbdf8c
+ms.openlocfilehash: 600d938b8981ddfabcb79028ae66b5b9d02107b7
+ms.sourcegitcommit: 94d33cadc5ff81d2ac389bf5f26422c227832052
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/28/2018
+ms.lasthandoff: 04/30/2018
 ---
 # <a name="using-message-contracts"></a>使用訊息合約
 通常當建置 [!INCLUDE[indigo1](../../../../includes/indigo1-md.md)] 應用程式時，程式開發人員會特別注意資料結構與序列化的問題，並且本身不需要考慮傳送資料的訊息結構。 針對這類應用程式，建立參數的資料合約或傳回值是很明確的。 (如需詳細資訊，請參閱[在服務合約中指定資料傳輸](../../../../docs/framework/wcf/feature-details/specifying-data-transfer-in-service-contracts.md)。)  
@@ -44,7 +44,7 @@ ms.lasthandoff: 04/28/2018
 public BankingTransactionResponse PostBankingTransaction(BankingTransaction bt);  
 ```  
   
- 通常資料合約已足夠定義訊息的結構描述。 例如，在之前的範例中，如果 `BankingTransaction` 和 `BankingTransactionResponse` 都有定義基礎 SOAP 訊息內容的資料合約，對大部分的應用程式來說就已足夠。 [!INCLUDE[crabout](../../../../includes/crabout-md.md)] 資料合約，請參閱[使用資料合約](../../../../docs/framework/wcf/feature-details/using-data-contracts.md)。  
+ 通常資料合約已足夠定義訊息的結構描述。 例如，在之前的範例中，如果 `BankingTransaction` 和 `BankingTransactionResponse` 都有定義基礎 SOAP 訊息內容的資料合約，對大部分的應用程式來說就已足夠。 如需資料合約的詳細資訊，請參閱[使用資料合約](../../../../docs/framework/wcf/feature-details/using-data-contracts.md)。  
   
  但是，偶爾也會需要精確控制透過網路傳輸 SOAP 訊息結構的方式。 最常見的案例是插入自訂 SOAP 標頭。 另一個常見的案例是定義訊息標頭與本文的安全性屬性，也就是決定是否要數位簽署或加密這些項目。 最後，某些協力廠商 SOAP 堆疊會要求訊息使用特定的格式。 訊息樣式作業提供這項控制。  
   

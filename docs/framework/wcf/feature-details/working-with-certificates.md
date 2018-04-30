@@ -21,16 +21,16 @@ ms.author: dotnetcontent
 manager: wpickett
 ms.workload:
 - dotnet
-ms.openlocfilehash: e731fd31f2a247466891abbf75d67a61dba7f286
-ms.sourcegitcommit: 03ee570f6f528a7d23a4221dcb26a9498edbdf8c
+ms.openlocfilehash: 3c023b27ace10919c51aa13e2635040d9d5b812b
+ms.sourcegitcommit: 94d33cadc5ff81d2ac389bf5f26422c227832052
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/28/2018
+ms.lasthandoff: 04/30/2018
 ---
 # <a name="working-with-certificates"></a>使用憑證
 在針對 [!INCLUDE[indigo1](../../../../includes/indigo1-md.md)] 安全性設計程式時，通常會採用 X.509 數位憑證來驗證用戶端與伺服器、加密，以及數位簽署訊息。 本主題將扼要說明 X.509 數位憑證功能及如何在 [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] 中使用這些憑證，同時針對這些概念的進一步說明以及如何運用 [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] 與憑證來完成一般工作的方法說明提供連結。  
   
- 簡單地說，數位憑證是屬於*公開金鑰基礎結構*(PKI)，這是數位憑證、 憑證授權單位，與其他註冊授權單位，並驗證有效性的系統每個參與電子異動使用公開金鑰加密的合作對象。 憑證授權單位發出憑證，而每個憑證具有一組欄位，其中包含資料，例如*主旨*（發行憑證的實體），有效日期 （當憑證是有效的），(的簽發者實體發出憑證），與公開金鑰。 在 [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] 中，每一個屬性都會被當成 <xref:System.IdentityModel.Claims.Claim> 處理，而且每個宣告還會進一步分成兩種型別：身分識別與權限。 [!INCLUDE[crabout](../../../../includes/crabout-md.md)] X.509 憑證，請參閱[X.509 公用金鑰憑證](http://go.microsoft.com/fwlink/?LinkId=209952)[!INCLUDE[crabout](../../../../includes/crabout-md.md)]宣告和授權，在 WCF 中的看到[管理宣告和授權的方式識別模型](../../../../docs/framework/wcf/feature-details/managing-claims-and-authorization-with-the-identity-model.md)。 [!INCLUDE[crabout](../../../../includes/crabout-md.md)] 實作 PKI，請參閱[Windows Server 2008 R2 憑證服務](http://go.microsoft.com/fwlink/?LinkId=209949)。  
+ 簡單地說，數位憑證是屬於*公開金鑰基礎結構*(PKI)，這是數位憑證、 憑證授權單位，與其他註冊授權單位，並驗證有效性的系統每個參與電子異動使用公開金鑰加密的合作對象。 憑證授權單位發出憑證，而每個憑證具有一組欄位，其中包含資料，例如*主旨*（發行憑證的實體），有效日期 （當憑證是有效的），(的簽發者實體發出憑證），與公開金鑰。 在 [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] 中，每一個屬性都會被當成 <xref:System.IdentityModel.Claims.Claim> 處理，而且每個宣告還會進一步分成兩種型別：身分識別與權限。 如需 X.509 憑證，請參閱[X.509 公用金鑰憑證](http://go.microsoft.com/fwlink/?LinkId=209952)如需有關宣告和授權中，請參閱 WCF[管理宣告和授權的方式識別模型](../../../../docs/framework/wcf/feature-details/managing-claims-and-authorization-with-the-identity-model.md). 如需實作 PKI 的詳細資訊，請參閱[Windows Server 2008 R2 憑證服務](http://go.microsoft.com/fwlink/?LinkId=209949)。  
   
  憑證的主要功能就是向其他人驗證憑證擁有者的身分識別。 憑證包含*公開金鑰*的擁有者，而擁有者本身則保留私密金鑰。 公開金鑰可以用來加密傳送給憑證擁有者的訊息。 只有擁有者才能存取私密金鑰，因此只有擁有者可以解密這些訊息。  
   
@@ -55,7 +55,7 @@ ms.lasthandoff: 04/28/2018
   
 -   **個人**。 此存放區可用來存放與電腦使用者相關聯的憑證。 一般來說，此存放區是用來存放 [受信任的根憑證授權單位] 存放區中所找到的其中一個憑證授權單位所發行的憑證。 另外，此處找到的憑證可能是自動發行並由某個應用程式所信任。  
   
- [!INCLUDE[crabout](../../../../includes/crabout-md.md)] 憑證存放區，請參閱[憑證存放區](http://go.microsoft.com/fwlink/?LinkId=88912)。  
+ 如需憑證存放區的詳細資訊，請參閱[憑證存放區](http://go.microsoft.com/fwlink/?LinkId=88912)。  
   
 ### <a name="selecting-a-store"></a>選取存放區  
  選取存放憑證的位置時，必須考量服務或用戶端執行的方式與時機， 並套用下列一般規則：  
@@ -65,12 +65,12 @@ ms.lasthandoff: 04/28/2018
 -   如果服務或用戶端是使用者帳戶下執行的應用程式，然後使用**目前使用者**儲存。  
   
 ### <a name="accessing-stores"></a>存取存放區  
- 存放區會受到存取控制清單 (ACL) 的保護，就像電腦上的資料夾一樣。 當您建立由網際網路資訊服務 (IIS) 所裝載的服務時，[!INCLUDE[vstecasp](../../../../includes/vstecasp-md.md)] 處理序會透過 [!INCLUDE[vstecasp](../../../../includes/vstecasp-md.md)] 帳戶來執行。 該帳戶必須能夠存取包含服務所使用之憑證的存放區。 每一個主要存放區都會以預設的存取清單加以保護，但是您可以修改此清單。 如果您建立個別的角色來存取存放區，則必須授予該角色存取權限。 若要了解如何修改使用 WinHttpCertConfig.exe 工具的存取清單，請參閱[How to： 建立開發期間使用的暫存憑證](../../../../docs/framework/wcf/feature-details/how-to-create-temporary-certificates-for-use-during-development.md)。 [!INCLUDE[crabout](../../../../includes/crabout-md.md)] 使用用戶端憑證與 IIS，請參閱[如何呼叫 Web 服務所使用的 ASP.NET Web 應用程式中驗證用戶端憑證](http://go.microsoft.com/fwlink/?LinkId=88914)。  
+ 存放區會受到存取控制清單 (ACL) 的保護，就像電腦上的資料夾一樣。 當您建立由網際網路資訊服務 (IIS) 所裝載的服務時，[!INCLUDE[vstecasp](../../../../includes/vstecasp-md.md)] 處理序會透過 [!INCLUDE[vstecasp](../../../../includes/vstecasp-md.md)] 帳戶來執行。 該帳戶必須能夠存取包含服務所使用之憑證的存放區。 每一個主要存放區都會以預設的存取清單加以保護，但是您可以修改此清單。 如果您建立個別的角色來存取存放區，則必須授予該角色存取權限。 若要了解如何修改使用 WinHttpCertConfig.exe 工具的存取清單，請參閱[How to： 建立開發期間使用的暫存憑證](../../../../docs/framework/wcf/feature-details/how-to-create-temporary-certificates-for-use-during-development.md)。 如需有關如何使用 IIS 中的用戶端憑證的詳細資訊，請參閱[如何呼叫 Web 服務所使用的 ASP.NET Web 應用程式中驗證用戶端憑證](http://go.microsoft.com/fwlink/?LinkId=88914)。  
   
 ## <a name="chain-trust-and-certificate-authorities"></a>鏈結信任與憑證授權單位  
  憑證是在階層中建立的，其中每個個別憑證都會連結到核發憑證的 CA。 此連結連至 CA 的憑證。 接著，CA 的憑證會連結至核發 CA 原始憑證的 CA。 在找到根 CA 的憑證之前，會一直重複這個程序。 根 CA 的憑證在本質上會受到信任。  
   
- 數位簽章可用來驗證實體，藉此階層中，也稱為*信任鏈結*。 您可以檢視任何憑證的鏈結，只要按兩下任何憑證，然後按一下使用 MMC 嵌入式管理單元**憑證路徑** 索引標籤[!INCLUDE[crabout](../../../../includes/crabout-md.md)]匯入的憑證授權單位憑證鏈結，請參閱[How to： 指定用來驗證簽章的憑證授權單位憑證鏈結](../../../../docs/framework/wcf/feature-details/specify-the-certificate-authority-chain-verify-signatures-wcf.md)。  
+ 數位簽章可用來驗證實體，藉此階層中，也稱為*信任鏈結*。 您可以檢視任何憑證的鏈結，只要按兩下任何憑證，然後按一下使用 MMC 嵌入式管理單元**憑證路徑** 索引標籤。如需匯入的憑證授權單位憑證鏈結的詳細資訊，請參閱[How to： 指定憑證授權單位憑證鏈結用來驗證簽章](../../../../docs/framework/wcf/feature-details/specify-the-certificate-authority-chain-verify-signatures-wcf.md)。  
   
 > [!NOTE]
 >  您可以藉由將簽發者的憑證放在信任的根授權憑證存放區，為任何簽發者都指定一個信任的根授權。  
@@ -159,9 +159,9 @@ ms.lasthandoff: 04/28/2018
  您也可以使用組態來設定憑證。 如果您要建立服務，在底下指定認證，包括憑證、 [ \<serviceBehaviors >](../../../../docs/framework/configure-apps/file-schema/wcf/servicebehaviors.md)。 當您進行程式設計的用戶端時，憑證會指定下[ \<endpointBehaviors >](../../../../docs/framework/configure-apps/file-schema/wcf/endpointbehaviors.md)。  
   
 ## <a name="mapping-a-certificate-to-a-user-account"></a>將憑證對應至使用者帳戶  
- IIS 與 Active Directory 的其中一項功能，就是能夠將憑證對應至 Windows 使用者帳戶。 [!INCLUDE[crabout](../../../../includes/crabout-md.md)] 此功能，請參閱[將憑證對應至使用者帳戶](http://go.microsoft.com/fwlink/?LinkId=88917)。  
+ IIS 與 Active Directory 的其中一項功能，就是能夠將憑證對應至 Windows 使用者帳戶。 如需功能的詳細資訊，請參閱[將憑證對應至使用者帳戶](http://go.microsoft.com/fwlink/?LinkId=88917)。  
   
- [!INCLUDE[crabout](../../../../includes/crabout-md.md)] 使用 Active Directory 對應，請參閱[用戶端憑證對應與目錄服務對應](http://go.microsoft.com/fwlink/?LinkId=88918)。  
+ 如需使用 Active Directory 對應的詳細資訊，請參閱[用戶端憑證對應與目錄服務對應](http://go.microsoft.com/fwlink/?LinkId=88918)。  
   
  一旦您啟用這項功能，就可以將 <xref:System.ServiceModel.Security.X509ClientCertificateAuthentication.MapClientCertificateToWindowsAccount%2A> 類別的 <xref:System.ServiceModel.Security.X509ClientCertificateAuthentication> 屬性設為 `true`。 在組態中，您可以設定`mapClientCertificateToWindowsAccount`屬性[\<驗證 >](../../../../docs/framework/configure-apps/file-schema/wcf/authentication-of-servicecertificate-element.md)元素`true`，如下列程式碼所示。  
   

@@ -18,11 +18,11 @@ ms.author: dotnetcontent
 manager: wpickett
 ms.workload:
 - dotnet
-ms.openlocfilehash: 70f8c1f89a5570f5b77eaba1bf72c42706d88947
-ms.sourcegitcommit: 03ee570f6f528a7d23a4221dcb26a9498edbdf8c
+ms.openlocfilehash: 00b3687169aa2e5521a3e3348be2a45738e97093
+ms.sourcegitcommit: 94d33cadc5ff81d2ac389bf5f26422c227832052
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/28/2018
+ms.lasthandoff: 04/30/2018
 ---
 # <a name="specifying-and-handling-faults-in-contracts-and-services"></a>指定與處理合約和服務中的錯誤
 [!INCLUDE[indigo1](../../../includes/indigo1-md.md)] 應用程式會將 Managed 例外狀況物件對應至 SOAP 錯誤物件，並將 SOAP 錯誤物件對應至 Managed 例外狀況物件來處理錯誤情況。 本節中的主題討論如何設計合約以將錯誤條件公開為自訂 SOAP 錯誤、如何將此類錯誤當成服務實作的一部份傳回，以及用戶端如何捕捉此類錯誤。  
@@ -47,7 +47,7 @@ ms.lasthandoff: 04/28/2018
 ## <a name="map-exceptions-to-soap-faults"></a>將例外狀況對應至 SOAP 錯誤  
  建立可以處理錯誤情況的作業的第一步，就是決定用戶端應用程式在哪種情況下應該收到有關錯誤的通知。 某些作業會有專屬自身功能的一些錯誤情況。 例如，`PurchaseOrder` 作業可能會將特定資訊傳回給已經無法再初始化採購單的客戶。 在其他情況中 (例如 `Calculator` 服務)，更常見的 `MathFault` SOAP 錯誤也許能夠說明整個服務的所有錯誤情況。 一旦識別出您服務用戶端的錯誤情況，就可以建構自訂 SOAP 錯誤，並在引發 SOAP 錯誤的對應錯誤情況時將作業標示為傳回該 SOAP 錯誤。  
   
- [!INCLUDE[crabout](../../../includes/crabout-md.md)] 此步驟的開發您的服務或用戶端，請參閱[定義與指定的錯誤](../../../docs/framework/wcf/defining-and-specifying-faults.md)。  
+ 開發您的服務或用戶端的這個步驟的相關資訊，請參閱[定義與指定的錯誤](../../../docs/framework/wcf/defining-and-specifying-faults.md)。  
   
 ## <a name="clients-and-services-handle-soap-faults-as-exceptions"></a>用戶端與服務會將 SOAP 錯誤當成例外狀況來處理。  
  要在 [!INCLUDE[indigo2](../../../includes/indigo2-md.md)] 應用程式中成功處理錯誤的第一步，就是辨識作業錯誤情況、定義自訂 SOAP 錯誤，並將這些作業標示為傳回這些錯誤。 下一步則是適當地實作這些錯誤的傳送與接收作業。 一般來說，服務會傳送錯誤以通知用戶端應用程式有關錯誤的情況，但是雙工用戶端可以同時將 SOAP 錯誤傳送給服務。  

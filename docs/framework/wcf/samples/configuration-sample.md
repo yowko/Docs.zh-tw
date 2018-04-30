@@ -1,24 +1,26 @@
 ---
-title: "組態範例"
-ms.custom: 
+title: 組態範例
+ms.custom: ''
 ms.date: 03/30/2017
 ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.technology: dotnet-clr
-ms.tgt_pltfrm: 
+ms.reviewer: ''
+ms.suite: ''
+ms.technology:
+- dotnet-clr
+ms.tgt_pltfrm: ''
 ms.topic: article
 ms.assetid: 75515b4a-8d70-44c8-99e0-7423df41380e
-caps.latest.revision: "21"
+caps.latest.revision: 21
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.workload: dotnet
-ms.openlocfilehash: a9bb0b2acd2aa51765a50b735f218bd92ef11531
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.workload:
+- dotnet
+ms.openlocfilehash: 48f153a26181fa549973ec83e413b1294d7c8ce5
+ms.sourcegitcommit: 94d33cadc5ff81d2ac389bf5f26422c227832052
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 04/30/2018
 ---
 # <a name="configuration-sample"></a>組態範例
 此範例示範如何使用組態檔讓服務變成可搜尋的。  
@@ -98,7 +100,7 @@ behaviorConfiguration="endpointBehaviorConfiguration"
         </endpointBehaviors>  
 ```  
   
- [!INCLUDE[crabout](../../../../includes/crabout-md.md)]範圍，請參閱[探索尋找與尋找準則](../../../../docs/framework/wcf/feature-details/discovery-find-and-findcriteria.md)。  
+ 如需範圍的詳細資訊，請參閱[探索尋找與尋找準則](../../../../docs/framework/wcf/feature-details/discovery-find-and-findcriteria.md)。  
   
  您也可以控制探索端點的特定詳細資料。 這是透過 <xref:System.ServiceModel.Configuration.StandardEndpointsSection> 達成。 在此範例中，所使用的通訊協定版本會經過修改，而且會加入 `maxResponseDelay` 屬性，如下列程式碼範例所示。  
   
@@ -280,4 +282,4 @@ behaviorConfiguration="endpointBehaviorConfiguration"
   
 4.  執行用戶端可執行檔。 請注意，用戶端可以尋找服務。  
   
-## <a name="see-also"></a>請參閱
+## <a name="see-also"></a>另請參閱

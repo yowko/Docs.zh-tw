@@ -1,27 +1,29 @@
 ---
-title: "在工作流程服務中設定序列化"
-ms.custom: 
+title: 在工作流程服務中設定序列化
+ms.custom: ''
 ms.date: 03/30/2017
 ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.technology: dotnet-clr
-ms.tgt_pltfrm: 
+ms.reviewer: ''
+ms.suite: ''
+ms.technology:
+- dotnet-clr
+ms.tgt_pltfrm: ''
 ms.topic: article
 ms.assetid: aa70b290-a2ee-4c3c-90ea-d0a7665096ae
-caps.latest.revision: "4"
+caps.latest.revision: 4
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.workload: dotnet
-ms.openlocfilehash: f8138fb94de953f133ab21cc2320e0914bc380fc
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.workload:
+- dotnet
+ms.openlocfilehash: 47c66077da051fd70300e1961593e906fe8e77aa
+ms.sourcegitcommit: 94d33cadc5ff81d2ac389bf5f26422c227832052
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 04/30/2018
 ---
 # <a name="configuring-serialization-in-a-workflow-service"></a>在工作流程服務中設定序列化
-工作流程服務是 [!INCLUDE[indigo1](../../../../includes/indigo1-md.md)] 服務，因此具有使用 <xref:System.Runtime.Serialization.DataContractSerializer> (預設值) 或 <xref:System.Xml.Serialization.XmlSerializer> 的選項。 撰寫非工作流程服務時，要使用的序列化程式型別會指定於服務或作業合約上。 建立 [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] 工作流程服務時，您不會在程式碼中指定這些合約，而是由合約推斷在執行階段中產生合約。 [!INCLUDE[crabout](../../../../includes/crabout-md.md)]合約推斷，請參閱[工作流程中使用的合約](../../../../docs/framework/wcf/feature-details/using-contracts-in-workflow.md)。  序列化程式是使用 <xref:System.ServiceModel.Activities.Receive.SerializerOption%2A> 屬性來指定。 您可以在設計工具中設定此屬性，如下圖所示。  
+工作流程服務是 [!INCLUDE[indigo1](../../../../includes/indigo1-md.md)] 服務，因此具有使用 <xref:System.Runtime.Serialization.DataContractSerializer> (預設值) 或 <xref:System.Xml.Serialization.XmlSerializer> 的選項。 撰寫非工作流程服務時，要使用的序列化程式型別會指定於服務或作業合約上。 建立 [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] 工作流程服務時，您不會在程式碼中指定這些合約，而是由合約推斷在執行階段中產生合約。 如需合約推斷的詳細資訊，請參閱[工作流程中使用的合約](../../../../docs/framework/wcf/feature-details/using-contracts-in-workflow.md)。  序列化程式是使用 <xref:System.ServiceModel.Activities.Receive.SerializerOption%2A> 屬性來指定。 您可以在設計工具中設定此屬性，如下圖所示。  
   
  ![設定序列化程式](../../../../docs/framework/wcf/feature-details/media/settingserialzier.png "SettingSerialzier")  
   
@@ -38,7 +40,7 @@ Receive approveExpense = new Receive
             };  
 ```  
   
- 此外，您也可以在工作流程服務上指定已知型別。 [!INCLUDE[crabout](../../../../includes/crabout-md.md)]已知類型，請參閱[資料合約已知型別](../../../../docs/framework/wcf/feature-details/data-contract-known-types.md)。 您可以在設計工具或程式碼中指定已知型別。 若要在設計工具中指定已知型別，請在 <xref:System.ServiceModel.Activities.Receive> 活動的 [屬性] 視窗中，按一下 KnownTypes 屬性旁的省略符號按鈕，如下圖所示。  
+ 此外，您也可以在工作流程服務上指定已知型別。 如需有關已知型別，請參閱[資料合約已知型別](../../../../docs/framework/wcf/feature-details/data-contract-known-types.md)。 您可以在設計工具或程式碼中指定已知型別。 若要在設計工具中指定已知型別，請在 <xref:System.ServiceModel.Activities.Receive> 活動的 [屬性] 視窗中，按一下 KnownTypes 屬性旁的省略符號按鈕，如下圖所示。  
   
  ![KnownTypes 屬性](../../../../docs/framework/wcf/feature-details/media/knowntypes.png "KnownTypes")  
   

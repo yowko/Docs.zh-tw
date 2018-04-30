@@ -1,24 +1,26 @@
 ---
-title: "以內容為主的相互關聯"
-ms.custom: 
+title: 以內容為主的相互關聯
+ms.custom: ''
 ms.date: 03/30/2017
 ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.technology: dotnet-clr
-ms.tgt_pltfrm: 
+ms.reviewer: ''
+ms.suite: ''
+ms.technology:
+- dotnet-clr
+ms.tgt_pltfrm: ''
 ms.topic: article
 ms.assetid: f46a2b68-8d24-4122-bbee-9573fc3f9fb4
-caps.latest.revision: "17"
+caps.latest.revision: 17
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.workload: dotnet
-ms.openlocfilehash: 72c7233a1c667b7ee3a1f00cc2fdf3c78f58e789
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.workload:
+- dotnet
+ms.openlocfilehash: 4b4ebd49fbed12f1e8120e67f32496cd782531da
+ms.sourcegitcommit: 94d33cadc5ff81d2ac389bf5f26422c227832052
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 04/30/2018
 ---
 # <a name="content-based-correlation"></a>以內容為主的相互關聯
 工作流程服務與用戶端及其他服務通訊時，交換的訊息中通常會含有能夠將訊息透過唯一方式關聯特定執行個體的資料。 以內容為主的相互關聯會利用訊息中的此項資料 (例如客戶編號或訂單 ID)，將訊息路由至適當的工作流程執行個體。 本主題說明如何在工作流程中使用以內容為主的相互關聯。  
@@ -27,7 +29,7 @@ ms.lasthandoff: 12/22/2017
  當工作流程服務具有多個透過單一用戶端存取的方法，以及交換的訊息中有一個資料片段能夠識別所需的執行個體時，就會使用以內容為主的相互關聯。  
   
 > [!NOTE]
->  若因繫結不是可支援的內容交換繫結其中一個，而無法使用內容相互關聯時，以內容為主的相互關聯就非常有用。 [!INCLUDE[crabout](../../../../includes/crabout-md.md)]內容相互關聯，請參閱[Context Exchange](../../../../docs/framework/wcf/feature-details/context-exchange-correlation.md)。  
+>  若因繫結不是可支援的內容交換繫結其中一個，而無法使用內容相互關聯時，以內容為主的相互關聯就非常有用。 如需內容相互關聯的詳細資訊，請參閱[Context Exchange](../../../../docs/framework/wcf/feature-details/context-exchange-correlation.md)。  
   
  這些通訊中使用的每個傳訊活動，都必須在能夠唯一識別該執行個體的訊息中指定資料的位置。 若要進行這項操作，請使用 <xref:System.ServiceModel.MessageQuerySet> 或 <xref:System.ServiceModel.Activities.QueryCorrelationInitializer> 提供 <xref:System.ServiceModel.Activities.Receive.CorrelatesOn%2A> (會在訊息中查詢能夠唯一識別該執行個體的資料)。  
   

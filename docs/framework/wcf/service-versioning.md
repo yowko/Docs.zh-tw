@@ -10,17 +10,17 @@ ms.technology:
 ms.tgt_pltfrm: ''
 ms.topic: article
 ms.assetid: 37575ead-d820-4a67-8059-da11a2ab48e2
-caps.latest.revision: ''
+caps.latest.revision: 19
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
 ms.workload:
 - dotnet
-ms.openlocfilehash: 791e201907f72f9d590f6d835fd6ec1bfc25633f
-ms.sourcegitcommit: 15316053918995cc1380163a7d7e7edd5c44e6d7
+ms.openlocfilehash: fef65a4134f1cf526a7082b08aa4d8d1c6ea7f4d
+ms.sourcegitcommit: 94d33cadc5ff81d2ac389bf5f26422c227832052
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 03/19/2018
+ms.lasthandoff: 04/30/2018
 ---
 # <a name="service-versioning"></a>服務版本控制
 在初始部署以及存留期間可能的數次部署之後，服務 (以及公開的端點) 可能因各種不同的原因而需要變更，例如變更業務需要、資訊技術需求，或解決其他問題等。 每個變更都會產生新的服務版本。 本主題將說明，如何考量 [!INCLUDE[indigo1](../../../includes/indigo1-md.md)] 中的版本控制。  
@@ -138,7 +138,7 @@ ms.lasthandoff: 03/19/2018
  端點位址和繫結的變更屬於中斷變更，除非用戶端能夠動態地發現新端點位址或繫結。 實作此功能的一項機制是藉由使用通用探索、描述和整合 (UDDI) 登錄以及 UDDI 引動模式，其中用戶端會嘗試與端點進行通訊，並且在發生錯誤時，查詢已知 UDDI 登錄中目前端點的中繼資料。 然後用戶端會使用來自這項中繼資料的位址和繫結與端點進行通訊。 如果此通訊成功，用戶端就會快取位址和繫結資訊以供未來使用。  
   
 ## <a name="routing-service-and-versioning"></a>路由服務與版本控制  
- 如果對服務所做的變更是中斷變更，而且您必須同時執行兩個以上不同的服務版本，就可以使用 WCF 路由服務，將訊息路由傳送至適當的服務執行個體。 WCF 路由服務會使用以內容為基礎的路由，換言之，它會使用訊息內部的資訊來判斷要路由傳送訊息的目標位置。 [!INCLUDE[crabout](../../../includes/crabout-md.md)] 此 WCF 路由服務，請參閱[路由服務](../../../docs/framework/wcf/feature-details/routing-service.md)。 如需如何使用 WCF 路由服務的服務版本設定的範例，請參閱[How To： 服務版本控制](../../../docs/framework/wcf/feature-details/how-to-service-versioning.md)。  
+ 如果對服務所做的變更是中斷變更，而且您必須同時執行兩個以上不同的服務版本，就可以使用 WCF 路由服務，將訊息路由傳送至適當的服務執行個體。 WCF 路由服務會使用以內容為基礎的路由，換言之，它會使用訊息內部的資訊來判斷要路由傳送訊息的目標位置。 如需有關此 WCF 路由服務，請參閱[路由服務](../../../docs/framework/wcf/feature-details/routing-service.md)。 如需如何使用 WCF 路由服務的服務版本設定的範例，請參閱[How To： 服務版本控制](../../../docs/framework/wcf/feature-details/how-to-service-versioning.md)。  
   
 ## <a name="appendix"></a>附錄  
  需要嚴格版本控制時的一般資料合約版本控制方針，是將資料合約視為固定不變，並且在需要變更時建立新的合約。 您必須針對每個新的資料合約建立新類別，因此需要有機制避免採用根據舊資料合約類別撰寫的現有程式碼之後，還須再根據新資料合約類別重新撰寫。  

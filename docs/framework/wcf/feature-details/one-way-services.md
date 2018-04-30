@@ -1,28 +1,30 @@
 ---
-title: "單向服務"
-ms.custom: 
+title: 單向服務
+ms.custom: ''
 ms.date: 03/30/2017
 ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.technology: dotnet-clr
-ms.tgt_pltfrm: 
+ms.reviewer: ''
+ms.suite: ''
+ms.technology:
+- dotnet-clr
+ms.tgt_pltfrm: ''
 ms.topic: article
 helpviewer_keywords:
 - Windows Communication Foundation [WCF], one-way service contracts
 - WCF [WCF], one-way service contracts
 - service contracts [WCF], defining one-way
 ms.assetid: 19053a36-4492-45a3-bfe6-0365ee0205a3
-caps.latest.revision: "18"
+caps.latest.revision: 18
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.workload: dotnet
-ms.openlocfilehash: 0d023d3623777a93cf72715410aed87fe8a63ee5
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.workload:
+- dotnet
+ms.openlocfilehash: 380f6a10994c7eb69f4a59b222aa2d422151f247
+ms.sourcegitcommit: 94d33cadc5ff81d2ac389bf5f26422c227832052
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 04/30/2018
 ---
 # <a name="one-way-services"></a>單向服務
 服務作業的預設行為是要求-回覆模式。 在要求-回覆模式中，用戶端也都會等候回覆訊息，即使該服務作業已透過程式碼表示為 `void` 方法也是如此。 在單向作業中，只會傳輸一則訊息。 接收者不會傳送回覆訊息，傳送者也不會期待回覆訊息。  
@@ -31,7 +33,7 @@ ms.lasthandoff: 12/22/2017
   
 -   當用戶端必須呼叫作業，而且不受作業層級之作業結果影響時。  
   
--   當使用 <xref:System.ServiceModel.NetMsmqBinding> 或 <xref:System.ServiceModel.MsmqIntegration.MsmqIntegrationBinding> 類別時。 ([!INCLUDE[crabout](../../../../includes/crabout-md.md)]此案例中，請參閱[WCF 中的佇列](../../../../docs/framework/wcf/feature-details/queues-in-wcf.md)。)  
+-   當使用 <xref:System.ServiceModel.NetMsmqBinding> 或 <xref:System.ServiceModel.MsmqIntegration.MsmqIntegrationBinding> 類別時。 (如需有關此案例的詳細資訊，請參閱[WCF 中的佇列](../../../../docs/framework/wcf/feature-details/queues-in-wcf.md)。)  
   
  當作業為單向時，就不存在將錯誤資訊帶回到用戶端的回應訊息。 錯誤狀況的偵測方式，可以是透過使用基礎繫結的功能 (例如可靠工作階段)，或是設計使用兩個單向作業的雙工服務合約來進行，而前述的雙工服務會包含一個會從用戶端到服務來呼叫服務作業的單向合約，另一個介於服務與用戶端之間的單向合約，則可讓服務使用用戶端所實作的回呼來將錯誤傳回給用戶端。  
   
@@ -65,5 +67,5 @@ public interface IOneWayCalculator
   
  因此，建議的做法是檢查服務及用戶端上的各種控制項，然後測試您的應用程式案例以判斷兩端的最佳組態。 例如，如果使用工作階段會封鎖服務上的訊息處理，您可以將 <xref:System.ServiceModel.ServiceBehaviorAttribute.InstanceContextMode%2A?displayProperty=nameWithType> 屬性設定為 <xref:System.ServiceModel.InstanceContextMode.PerCall> 以使每則訊息都能由不同的服務執行個體處理，並將 <xref:System.ServiceModel.ServiceBehaviorAttribute.ConcurrencyMode%2A> 設定為 <xref:System.ServiceModel.ConcurrencyMode.Multiple>，以便一次讓一個以上的執行緒發送訊息。 另一種處理方法則是增加服務與用戶端繫結的讀取配額。  
   
-## <a name="see-also"></a>請參閱  
+## <a name="see-also"></a>另請參閱  
  [單向](../../../../docs/framework/wcf/samples/one-way.md)

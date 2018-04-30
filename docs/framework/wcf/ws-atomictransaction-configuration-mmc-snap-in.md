@@ -1,24 +1,26 @@
 ---
-title: "WS-AtomicTransaction 組態 MMC 嵌入式管理單元"
-ms.custom: 
+title: WS-AtomicTransaction 組態 MMC 嵌入式管理單元
+ms.custom: ''
 ms.date: 03/30/2017
 ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.technology: dotnet-clr
-ms.tgt_pltfrm: 
+ms.reviewer: ''
+ms.suite: ''
+ms.technology:
+- dotnet-clr
+ms.tgt_pltfrm: ''
 ms.topic: article
 ms.assetid: 23592973-1d51-44cc-b887-bf8b0d801e9e
-caps.latest.revision: "17"
+caps.latest.revision: 17
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.workload: dotnet
-ms.openlocfilehash: 73db4b201aba6e07891803aa86c56403f135f863
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.workload:
+- dotnet
+ms.openlocfilehash: 2e8b127e0d3c241a1e37ac2161d9fadcea990425
+ms.sourcegitcommit: 94d33cadc5ff81d2ac389bf5f26422c227832052
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 04/30/2018
 ---
 # <a name="ws-atomictransaction-configuration-mmc-snap-in"></a>WS-AtomicTransaction 組態 MMC 嵌入式管理單元
 WS-AtomicTransaction 組態 MMC 嵌入式管理單元用於設定本機電腦和遠端電腦上的部分 WS-AtomicTransaction 設定。  
@@ -42,9 +44,9 @@ regasm.exe /codebase WsatUI.dll
   
  您可以使用這個工具修改基本 WS-AtomicTransaction 設定。 例如，您可以啟用或停用 WS-AtomicTransaction 通訊協定支援、設定 WS-AT 的 HTTP 連接埠、將 SSL 憑證繫結至 HTTP 連接埠、透過指定憑證主體名稱來設定憑證、選取追蹤模式，以及設定預設逾時與最大逾時。  
   
- 如果您必須只在本機電腦上設定 WS-AtomicTransaction 支援，可使用這個工具的命令列版本。 [!INCLUDE[crabout](../../../includes/crabout-md.md)]命令列工具，請參閱[Ws-atomictransaction 組態公用程式 (wsatConfig.exe)](../../../docs/framework/wcf/ws-atomictransaction-configuration-utility-wsatconfig-exe.md)主題。  
+ 如果您必須只在本機電腦上設定 WS-AtomicTransaction 支援，可使用這個工具的命令列版本。 如需有關命令列工具的詳細資訊，請參閱[Ws-atomictransaction 組態公用程式 (wsatConfig.exe)](../../../docs/framework/wcf/ws-atomictransaction-configuration-utility-wsatconfig-exe.md)主題。  
   
- 請注意，MMC 嵌入式管理單元和命令列工具都不支援設定所有 WS-AT 設定。 這些設定只能透過直接修改登錄來編輯。 [!INCLUDE[crabout](../../../includes/crabout-md.md)]這些登錄設定，請參閱[設定 Ws-atomic 交易支援](../../../docs/framework/wcf/feature-details/configuring-ws-atomic-transaction-support.md)。  
+ 請注意，MMC 嵌入式管理單元和命令列工具都不支援設定所有 WS-AT 設定。 這些設定只能透過直接修改登錄來編輯。 如需有關這些登錄設定的詳細資訊，請參閱[設定 Ws-atomic 交易支援](../../../docs/framework/wcf/feature-details/configuring-ws-atomic-transaction-support.md)。  
   
 ### <a name="user-interface-description"></a>使用者介面說明  
  **啟用 Ws-atomic 交易網路支援**:  
@@ -95,9 +97,9 @@ regasm.exe /codebase WsatUI.dll
 > [!NOTE]
 >  當有其他追蹤消費者正在使用 WS-AT 追蹤提供者時，您無法為追蹤事件建立新的記錄工作階段。 在此時任何設定記錄的嘗試，都會導致產生「無法啟用提供者。 錯誤碼：1"。  
   
- [!INCLUDE[crabout](../../../includes/crabout-md.md)]追蹤和記錄，請參閱[管理與診斷](../../../docs/framework/wcf/diagnostics/index.md)。  
+ 如需追蹤和記錄的詳細資訊，請參閱[管理與診斷](../../../docs/framework/wcf/diagnostics/index.md)。  
   
-## <a name="see-also"></a>請參閱  
+## <a name="see-also"></a>另請參閱  
  [設定 WS-Atomic 異動支援](../../../docs/framework/wcf/feature-details/configuring-ws-atomic-transaction-support.md)  
  [WS-AtomicTransaction 設定公用程式 (wsatConfig.exe)](../../../docs/framework/wcf/ws-atomictransaction-configuration-utility-wsatconfig-exe.md)  
  [管理與診斷](../../../docs/framework/wcf/diagnostics/index.md)

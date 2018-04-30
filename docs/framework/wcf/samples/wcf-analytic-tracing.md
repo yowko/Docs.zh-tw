@@ -1,45 +1,47 @@
 ---
-title: "WCF 分析追蹤"
-ms.custom: 
+title: WCF 分析追蹤
+ms.custom: ''
 ms.date: 03/30/2017
 ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.technology: dotnet-clr
-ms.tgt_pltfrm: 
+ms.reviewer: ''
+ms.suite: ''
+ms.technology:
+- dotnet-clr
+ms.tgt_pltfrm: ''
 ms.topic: article
 ms.assetid: 6029c7c7-3515-4d36-9d43-13e8f4971790
-caps.latest.revision: "21"
+caps.latest.revision: 21
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.workload: dotnet
-ms.openlocfilehash: 37dea97db8816f68f0331580cfa21daed7f69914
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.workload:
+- dotnet
+ms.openlocfilehash: 57e3ee18848031bce8ffbb54d26353fe36ee1def
+ms.sourcegitcommit: 94d33cadc5ff81d2ac389bf5f26422c227832052
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 04/30/2018
 ---
 # <a name="wcf-analytic-tracing"></a>WCF 分析追蹤
 此範例示範如何將您自己的追蹤事件加入至 [!INCLUDE[indigo1](../../../../includes/indigo1-md.md)] 寫入到 [!INCLUDE[netfx_current_long](../../../../includes/netfx-current-long-md.md)] 之 ETW 的分析追蹤資料流。 分析追蹤的用意在於輕鬆取得服務的可視性，而不必付出高效能的代價。 此範例示範如何使用 <xref:System.Diagnostics.Eventing?displayProperty=nameWithType> API 撰寫與 [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] 服務整合的事件。  
   
- [!INCLUDE[crabout](../../../../includes/crabout-md.md)]<xref:System.Diagnostics.Eventing?displayProperty=nameWithType> API 的詳細資訊，請參閱 <xref:System.Diagnostics.Eventing?displayProperty=nameWithType>。  
+ 如需有關<xref:System.Diagnostics.Eventing?displayProperty=nameWithType>Api，請參閱<xref:System.Diagnostics.Eventing?displayProperty=nameWithType>。  
   
  若要了解有關在 Windows 事件追蹤的詳細資訊，請參閱[改善偵錯和效能微調與 ETW](http://go.microsoft.com/fwlink/?LinkId=166488)。  
   
 ## <a name="disposing-eventprovider"></a>處置 EventProvider  
- 此範例使用實作 <xref:System.Diagnostics.Eventing.EventProvider?displayProperty=nameWithType> 的 <xref:System.IDisposable?displayProperty=nameWithType> 類別。 實作 [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] 服務的追蹤時，您可能會在服務的存留時間中使用 <xref:System.Diagnostics.Eventing.EventProvider> 的資源。 因此，為了便於讀取，此範例絕不會處置已包裝的 <xref:System.Diagnostics.Eventing.EventProvider>。 如果您的服務因為任何原因而有不同的追蹤需求，而且您必須處置這個資源，則應根據處置 Unmanaged 資源的最佳作法修改此範例。 [!INCLUDE[crabout](../../../../includes/crabout-md.md)]處置 unmanaged 的資源，請參閱[實作 Dispose 方法](http://go.microsoft.com/fwlink/?LinkId=166436)。  
+ 此範例使用實作 <xref:System.Diagnostics.Eventing.EventProvider?displayProperty=nameWithType> 的 <xref:System.IDisposable?displayProperty=nameWithType> 類別。 實作 [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] 服務的追蹤時，您可能會在服務的存留時間中使用 <xref:System.Diagnostics.Eventing.EventProvider> 的資源。 因此，為了便於讀取，此範例絕不會處置已包裝的 <xref:System.Diagnostics.Eventing.EventProvider>。 如果您的服務因為任何原因而有不同的追蹤需求，而且您必須處置這個資源，則應根據處置 Unmanaged 資源的最佳作法修改此範例。 如需處置 unmanaged 的資源的詳細資訊，請參閱[實作 Dispose 方法](http://go.microsoft.com/fwlink/?LinkId=166436)。  
   
 ## <a name="self-hosting-vs-web-hosting"></a>自我裝載與Web 裝載  
- 為 Web 託管服務，WCF 的分析追蹤會提供名為"HostReference"，這用來識別發出追蹤服務的欄位。 可延伸的使用者追蹤可以參與這個模型，而且此範例會示範其最佳作法。 格式，Web 主控件的參考時管道 ' &#124;' 字元實際出現在產生字串可以是下列任何一個：  
+ 為 Web 託管服務，WCF 的分析追蹤會提供名為"HostReference"，這用來識別發出追蹤服務的欄位。 可延伸的使用者追蹤可以參與這個模型，而且此範例會示範其最佳作法。 Web 主控件的格式會參考當管道 '&#124;' 字元實際出現在所產生的字串可以是下列任何一個：  
   
 -   如果應用程式不在根目錄：  
   
-     \<站台名稱 >\<ApplicationVirtualPath > &#124;\<ServiceVirtualPath > &#124;\<ServiceName >  
+     \<站台名稱 >\<ApplicationVirtualPath >&#124;\<ServiceVirtualPath >&#124;\<ServiceName >  
   
 -   如果應用程式在根目錄：  
   
-     \<站台名稱 > &#124;\<ServiceVirtualPath > &#124;\<ServiceName >  
+     \<站台名稱 >&#124;\<ServiceVirtualPath >&#124;\<ServiceName >  
   
  對於自我裝載服務，[!INCLUDE[indigo2](../../../../includes/indigo2-md.md)]的分析追蹤不會填入"HostReference"欄位。 此範例中的 `WCFUserEventProvider` 類別與自我裝載之服務所使用的類別行為一致。  
   
@@ -90,7 +92,7 @@ ms.lasthandoff: 12/22/2017
   
     1.  在 WCF 測試用戶端中，按兩下**add （)** ICalculator 服務節點下。  
   
-         **Add （)**方法會出現在右窗格具有兩個參數。  
+         **Add （)** 方法會出現在右窗格具有兩個參數。  
   
     2.  輸入 2 供第一個參數使用，並輸入 3 供第二個參數使用。  
   
@@ -128,5 +130,5 @@ ms.lasthandoff: 12/22/2017
 >   
 >  `<InstallDrive>:\WF_WCF_Samples\WCF\Basic\Management\ETWTrace`  
   
-## <a name="see-also"></a>請參閱  
+## <a name="see-also"></a>另請參閱  
  [AppFabric 監控範例](http://go.microsoft.com/fwlink/?LinkId=193959)

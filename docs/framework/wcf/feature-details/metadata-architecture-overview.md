@@ -18,11 +18,11 @@ ms.author: dotnetcontent
 manager: wpickett
 ms.workload:
 - dotnet
-ms.openlocfilehash: bce838d9584480028c7b02d1ba19547fe208bf2c
-ms.sourcegitcommit: 03ee570f6f528a7d23a4221dcb26a9498edbdf8c
+ms.openlocfilehash: df603da0f4feedeacc59198c156322c78fd2f388
+ms.sourcegitcommit: 94d33cadc5ff81d2ac389bf5f26422c227832052
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/28/2018
+ms.lasthandoff: 04/30/2018
 ---
 # <a name="metadata-architecture-overview"></a>中繼資料架構概觀
 [!INCLUDE[indigo1](../../../../includes/indigo1-md.md)] 提供豐富的基礎結構，讓您匯出、發行、擷取與匯入服務中繼資料。 [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] 服務使用中繼資料描述如何與服務端點互動，讓 Svcutil.exe 之類的工具可以自動產生用戶端程式碼來存取服務。  
@@ -59,7 +59,7 @@ ms.lasthandoff: 04/28/2018
   
  若要加入使用 MEX 通訊協定的中繼資料端點，服務將端點加入至您使用名為 IMetadataExchange 的服務合約的服務主機。[!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] 定義<xref:System.ServiceModel.Description.IMetadataExchange>具有此服務合約名稱的介面。 WS-MetadataExchange 端點或 MEX 端點都可以使用靜態處理站方法在 <xref:System.ServiceModel.Description.MetadataExchangeBindings> 類別上所公開的四個預設繫結中的其中一個，以比對 [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] 工具 (例如 Svcutil.exe) 使用的預設繫結。 您也可以使用自訂繫結設定 MEX 中繼資料端點。  
   
- <xref:System.ServiceModel.Description.ServiceMetadataBehavior> 會使用 <xref:System.ServiceModel.Description.WsdlExporter?displayProperty=nameWithType> 匯出服務中所有服務端點的中繼資料。 [!INCLUDE[crabout](../../../../includes/crabout-md.md)] 匯出中繼資料從一項服務，請參閱[匯出和匯入中繼資料](../../../../docs/framework/wcf/feature-details/exporting-and-importing-metadata.md)。  
+ <xref:System.ServiceModel.Description.ServiceMetadataBehavior> 會使用 <xref:System.ServiceModel.Description.WsdlExporter?displayProperty=nameWithType> 匯出服務中所有服務端點的中繼資料。 如需有關如何從服務匯出中繼資料的詳細資訊，請參閱[匯出和匯入中繼資料](../../../../docs/framework/wcf/feature-details/exporting-and-importing-metadata.md)。  
   
  <xref:System.ServiceModel.Description.ServiceMetadataBehavior> 會將 <xref:System.ServiceModel.Description.ServiceMetadataExtension> 執行個體新增為服務主機的延伸以提升您的服務主機效能。 <xref:System.ServiceModel.Description.ServiceMetadataExtension?displayProperty=nameWithType> 為中繼資料發行通訊協定提供實作。 您也可以藉由存取 <xref:System.ServiceModel.Description.ServiceMetadataExtension?displayProperty=nameWithType> 屬性，使用 <xref:System.ServiceModel.Description.ServiceMetadataExtension.Metadata%2A> 在執行階段取得服務的中繼資料。  
   

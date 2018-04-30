@@ -1,24 +1,26 @@
 ---
-title: "建立長期執行的工作流程服務"
-ms.custom: 
+title: 建立長期執行的工作流程服務
+ms.custom: ''
 ms.date: 03/30/2017
 ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.technology: dotnet-clr
-ms.tgt_pltfrm: 
+ms.reviewer: ''
+ms.suite: ''
+ms.technology:
+- dotnet-clr
+ms.tgt_pltfrm: ''
 ms.topic: article
 ms.assetid: 4c39bd04-5b8a-4562-a343-2c63c2821345
-caps.latest.revision: "9"
+caps.latest.revision: 9
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.workload: dotnet
-ms.openlocfilehash: 94a62a54fb138e394d8e9fa944e49e6526ae7152
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.workload:
+- dotnet
+ms.openlocfilehash: 1cd7cc70c50ac2aa56d8cca55037769aa0b6a64a
+ms.sourcegitcommit: 94d33cadc5ff81d2ac389bf5f26422c227832052
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 04/30/2018
 ---
 # <a name="creating-a-long-running-workflow-service"></a>建立長期執行的工作流程服務
 本主題會說明如何建立長時間執行的工作流程服務。 長時間執行的工作流程服務可能會執行一段很長的時間。 有時候，此工作流程可能會處於閒置狀態，等候其他某些資訊。 發生這種情況時，此工作流程會保存至 SQL 資料庫並從記憶體中移除。 當其他資訊可用時，此工作流程執行個體就會重新載入記憶體中並繼續執行。  在本案例中，您要實作非常簡化的訂購系統。  用戶端會將初始訊息傳送至工作流程服務，以便啟動訂單。 然後，服務會將訂單 ID 傳回給用戶端。 此時，工作流程服務會等候用戶端的其他訊息、進入閒置狀態並保存至 SQL Server 資料庫。  當用戶端傳送下一則訊息以訂購項目時，工作流程服務就會重新載入記憶體中，並且完成訂單處理作業。 在程式碼範例中，它會傳回一個字串，表示項目已經加入至訂單。 此程式碼範例並非採用此技術的實際應用程式，而是說明長時間執行工作流程服務的簡單範例。 本主題假設您知道如何建立 [!INCLUDE[vs_current_long](../../../../includes/vs-current-long-md.md)] 專案和方案。  
@@ -82,9 +84,9 @@ ms.lasthandoff: 12/22/2017
   
          ![設定 Receive 活動屬性](../../../../docs/framework/wcf/feature-details/media/setreceiveproperties.png "SetReceiveProperties")  
   
-         DisplayName 屬性會針對設計工具中的 Receive 活動設定顯示名稱。 ServiceContractName 和 OperationName 屬性會指定 Receive 活動所實作之服務合約和作業的名稱。 [!INCLUDE[crabout](../../../../includes/crabout-md.md)]在工作流程中使用合約的服務，請參閱[工作流程中使用的合約](../../../../docs/framework/wcf/feature-details/using-contracts-in-workflow.md)。  
+         DisplayName 屬性會針對設計工具中的 Receive 活動設定顯示名稱。 ServiceContractName 和 OperationName 屬性會指定 Receive 活動所實作之服務合約和作業的名稱。 如需工作流程服務中使用合約的詳細資訊，請參閱[工作流程中使用的合約](../../../../docs/framework/wcf/feature-details/using-contracts-in-workflow.md)。  
   
-    2.  按一下**定義...**中連結**ReceiveStartOrder**活動並設定在下圖所示的屬性。  請注意，**參數**選取選項按鈕時，名為`p_customerName`繫結至`customerName`變數。 這會設定**接收**活動接收部分資料，並將該資料繫結至區域變數。  
+    2.  按一下**定義...** 中連結**ReceiveStartOrder**活動並設定在下圖所示的屬性。  請注意，**參數**選取選項按鈕時，名為`p_customerName`繫結至`customerName`變數。 這會設定**接收**活動接收部分資料，並將該資料繫結至區域變數。  
   
          ![設定 Receive 活動接收的資料](../../../../docs/framework/wcf/feature-details/media/setreceivecontent.png "SetReceiveContent")  
   
@@ -92,7 +94,7 @@ ms.lasthandoff: 12/22/2017
   
          ![設定 SendReply 活動屬性](../../../../docs/framework/wcf/feature-details/media/setreplyproperties.png "SetReplyProperties")  
   
-    4.  按一下**定義...**中連結**SendReplyToStartOrder**活動並設定在下圖所示的屬性。 請注意，**參數**選取選項按鈕，則為參數命名為`p_orderId`繫結至`orderId`變數。 這項設定會指定 SendReplyToStartOrder 活動將字串型別的值傳回給呼叫端。  
+    4.  按一下**定義...** 中連結**SendReplyToStartOrder**活動並設定在下圖所示的屬性。 請注意，**參數**選取選項按鈕，則為參數命名為`p_orderId`繫結至`orderId`變數。 這項設定會指定 SendReplyToStartOrder 活動將字串型別的值傳回給呼叫端。  
   
          ![設定 SendReply 活動內容資料](../../../../docs/framework/wcf/feature-details/media/setreplycontent.png "SetReplyContent")  
   
@@ -116,17 +118,17 @@ ms.lasthandoff: 12/22/2017
   
          ![設定 Receive 活動屬性](../../../../docs/framework/wcf/feature-details/media/setreceiveproperties2.png "SetReceiveProperties2")  
   
-    3.  按一下**定義...**中連結**ReceiveAddItem**活動並加入下圖中顯示的參數： 這樣就會設定 receive 活動，以接受兩個參數，訂單 ID 以及所訂購項目的識別碼。  
+    3.  按一下**定義...** 中連結**ReceiveAddItem**活動並加入下圖中顯示的參數： 這樣就會設定 receive 活動，以接受兩個參數，訂單 ID 以及所訂購項目的識別碼。  
   
          ![指定第二個參數接收](../../../../docs/framework/wcf/feature-details/media/addreceive2parameters.png "AddReceive2Parameters")  
   
-    4.  按一下**CorrelateOn**省略符號按鈕，並輸入`orderIdHandle`。 在下**XPath 查詢**，按一下下拉式箭號並選取`p_orderId`。 這樣就會設定第二個 Receive 活動的相互關聯。 [!INCLUDE[crabout](../../../../includes/crabout-md.md)]相互關聯，請參閱[相互關聯](../../../../docs/framework/wcf/feature-details/correlation.md)。  
+    4.  按一下**CorrelateOn**省略符號按鈕，並輸入`orderIdHandle`。 在下**XPath 查詢**，按一下下拉式箭號並選取`p_orderId`。 這樣就會設定第二個 Receive 活動的相互關聯。 如需有關相互關聯，請參閱[相互關聯](../../../../docs/framework/wcf/feature-details/correlation.md)。  
   
          ![設定 CorrelatesOn 屬性](../../../../docs/framework/wcf/feature-details/media/correlateson.png "CorrelatesOn")  
   
     5.  將拖放**如果**活動之後立即**ReceiveAddItem**活動。 這個活動的運作方式就如同 if 陳述式。  
   
-        1.  設定**條件**屬性`itemId=="Zune HD" (itemId="Zune HD" for Visual Basic)`  
+        1.  設定**條件**屬性 `itemId=="Zune HD" (itemId="Zune HD" for Visual Basic)`  
   
         2.  將拖放**指派**活動中的**然後**區段，而另一個到**Else**區段中設定的屬性**指派**下圖所示的活動。  
   
@@ -138,7 +140,7 @@ ms.lasthandoff: 12/22/2017
   
              ![設定 SendReply 活動屬性](../../../../docs/framework/wcf/feature-details/media/setreply2properties.png "SetReply2Properties")  
   
-        4.  按一下**定義...**中連結**SetReplyToAddItem**活動並將它設定在下圖所示。 這會設定**SendReplyToAddItem**活動中的將值傳回`orderResult`變數。  
+        4.  按一下**定義...** 中連結**SetReplyToAddItem**活動並將它設定在下圖所示。 這會設定**SendReplyToAddItem**活動中的將值傳回`orderResult`變數。  
   
              ![設定 SendReply 活動的資料繫結](../../../../docs/framework/wcf/feature-details/media/replytoadditemcontent.gif "ReplyToAddItemContent")  
   
@@ -209,5 +211,5 @@ ms.lasthandoff: 12/22/2017
     Sending add item messageService returned: Item added to orderPress any key to continue . . .  
     ```  
   
-## <a name="see-also"></a>請參閱  
+## <a name="see-also"></a>另請參閱  
  [工作流程服務](../../../../docs/framework/wcf/feature-details/workflow-services.md)

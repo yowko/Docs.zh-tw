@@ -1,23 +1,24 @@
 ---
-title: "使用命令式程式碼撰寫工作流程、活動和運算式"
-ms.custom: 
+title: 使用命令式程式碼撰寫工作流程、活動和運算式
+ms.custom: ''
 ms.date: 03/30/2017
 ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.tgt_pltfrm: 
+ms.reviewer: ''
+ms.suite: ''
+ms.tgt_pltfrm: ''
 ms.topic: article
 ms.assetid: cefc9cfc-2882-4eb9-8c94-7a6da957f2b2
-caps.latest.revision: "16"
+caps.latest.revision: 16
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.workload: dotnet
-ms.openlocfilehash: ee7c5320caa3b7704813b94d4ddfbf1ce0fecf96
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.workload:
+- dotnet
+ms.openlocfilehash: efbefbffdc0314826a361b4a165c67ab1828e40b
+ms.sourcegitcommit: 94d33cadc5ff81d2ac389bf5f26422c227832052
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 04/30/2018
 ---
 # <a name="authoring-workflows-activities-and-expressions-using-imperative-code"></a>使用命令式程式碼撰寫工作流程、活動和運算式
 工作流程定義是配置之活動物件的樹狀。 有很多方式可定義這個活動的樹狀結構，包含手動編輯 XAML 或使用工作流程設計工具來產生 XAML。 不過，XAML 並非必要條件。 您也可以程式設計的方式建立工作流程定義。 本主題提供使用程式碼來建立工作流程定義、活動和運算式的概觀。 如需使用 XAML 工作流程使用程式碼的範例，請參閱[序列化工作流程和活動 xaml](../../../docs/framework/windows-workflow-foundation/serializing-workflows-and-activities-to-and-from-xaml.md)。  
@@ -28,7 +29,7 @@ ms.lasthandoff: 12/22/2017
  [!code-csharp[CFX_WorkflowApplicationExample#47](../../../samples/snippets/csharp/VS_Snippets_CFX/cfx_workflowapplicationexample/cs/program.cs#47)]  
   
 > [!NOTE]
->  本主題中的範例使用 <xref:System.Activities.WorkflowInvoker> 來執行範例工作流程。 [!INCLUDE[crabout](../../../includes/crabout-md.md)]叫用工作流程、 引數傳遞和可用不同的裝載選項，請參閱[使用 WorkflowInvoker 與 WorkflowApplication](../../../docs/framework/windows-workflow-foundation/using-workflowinvoker-and-workflowapplication.md)。  
+>  本主題中的範例使用 <xref:System.Activities.WorkflowInvoker> 來執行範例工作流程。 如需叫用工作流程、 引數傳遞和可用不同的裝載選項的詳細資訊，請參閱[使用 WorkflowInvoker 與 WorkflowApplication](../../../docs/framework/windows-workflow-foundation/using-workflowinvoker-and-workflowapplication.md)。  
   
  在這個範例中，會建立由單一 <xref:System.Activities.Statements.WriteLine> 活動構成的工作流程。 <xref:System.Activities.Statements.WriteLine> 活動的 <xref:System.Activities.Statements.WriteLine.Text%2A> 引數會進行設定，並叫用工作流程。 如果活動包含子活動，則建構方式會相當類似。 下列範例會使用包含兩個 <xref:System.Activities.Statements.Sequence> 活動的 <xref:System.Activities.Statements.WriteLine> 活動。  
   
@@ -39,7 +40,7 @@ ms.lasthandoff: 12/22/2017
   
  [!code-csharp[CFX_WorkflowApplicationExample#49](../../../samples/snippets/csharp/VS_Snippets_CFX/cfx_workflowapplicationexample/cs/program.cs#49)]  
   
- [!INCLUDE[crabout](../../../includes/crabout-md.md)]物件初始設定式，請參閱[如何： 初始化的物件，而不呼叫建構函式 （C# 程式設計手冊）](http://go.microsoft.com/fwlink/?LinkId=161015)和[How to： 使用物件初始設定式宣告物件](http://go.microsoft.com/fwlink/?LinkId=161016)。  
+ 如需物件初始設定式的詳細資訊，請參閱[如何： 初始化的物件，而不呼叫建構函式 （C# 程式設計手冊）](http://go.microsoft.com/fwlink/?LinkId=161015)和[How to： 使用物件初始設定式宣告物件](http://go.microsoft.com/fwlink/?LinkId=161016)。  
   
 ### <a name="working-with-variables-literal-values-and-expressions"></a>處理變數、常值和運算式  
  使用程式碼建立工作流程定義時，請注意哪個程式碼是做為建立工作流程定義的一部分，以及哪個程式碼是做為該工作流程執行個體的一部分執行。 例如，下列工作流程目的是要產生隨機號碼，並將它寫入主控台。  
@@ -71,7 +72,7 @@ new Assign<int>
   
  [!code-csharp[CFX_WorkflowApplicationExample#52](../../../samples/snippets/csharp/VS_Snippets_CFX/cfx_workflowapplicationexample/cs/program.cs#52)]  
   
- [!INCLUDE[crabout](../../../includes/crabout-md.md)]lambda 運算式，請參閱[Lambda 運算式 （C# 程式設計手冊）](http://go.microsoft.com/fwlink/?LinkID=152436)或[Lambda 運算式 (Visual Basic)](http://go.microsoft.com/fwlink/?LinkID=152437)。  
+ 如需 lambda 運算式的詳細資訊，請參閱[Lambda 運算式 （C# 程式設計手冊）](http://go.microsoft.com/fwlink/?LinkID=152436)或[Lambda 運算式 (Visual Basic)](http://go.microsoft.com/fwlink/?LinkID=152437)。  
   
  Lambda 運算式不可序列化為 XAML 格式。 如果嘗試序列化內含 Lambda 運算式的工作流程，會擲回 <xref:System.Activities.Expressions.LambdaSerializationException> 和下列訊息：「此工作流程包含程式碼中指定的 Lambda 運算式。 這些運算式並非 XAML 可序列化。 若要讓您的工作流程成為 XAML 可序列化，請使用 VisualBasicValue/VisualBasicReference 或 ExpressionServices.Convert(lambda)。 這會將您的 Lambda 運算式轉換成運算式活動。」 若要讓此運算式相容於 XAML，請使用 <xref:System.Activities.Expressions.ExpressionServices> 與 <xref:System.Activities.Expressions.ExpressionServices.Convert%2A>，如下列範例所示。  
   
@@ -81,7 +82,7 @@ new Assign<int>
   
  [!code-csharp[CFX_WorkflowApplicationExample#54](../../../samples/snippets/csharp/VS_Snippets_CFX/cfx_workflowapplicationexample/cs/program.cs#54)]  
   
- Visual Basic 運算式會在執行階段編譯成 LINQ 運算式。 前面兩個範例都可序列化為 XAML，但是如果已序列化的 XAML 是要在工作流程設計工具中檢視和編輯，則在運算式使用 <xref:Microsoft.VisualBasic.Activities.VisualBasicValue%601>。 使用 `ExpressionServices.Convert` 的序列化工作流程可在設計工具中開啟，但運算式的值會是空白的。 [!INCLUDE[crabout](../../../includes/crabout-md.md)]序列化為 XAML 工作流程，請參閱[序列化工作流程和活動 xaml](../../../docs/framework/windows-workflow-foundation/serializing-workflows-and-activities-to-and-from-xaml.md)。  
+ Visual Basic 運算式會在執行階段編譯成 LINQ 運算式。 前面兩個範例都可序列化為 XAML，但是如果已序列化的 XAML 是要在工作流程設計工具中檢視和編輯，則在運算式使用 <xref:Microsoft.VisualBasic.Activities.VisualBasicValue%601>。 使用 `ExpressionServices.Convert` 的序列化工作流程可在設計工具中開啟，但運算式的值會是空白的。 如需有關如何序列化為 XAML 工作流程的詳細資訊，請參閱[序列化工作流程和活動 xaml](../../../docs/framework/windows-workflow-foundation/serializing-workflows-and-activities-to-and-from-xaml.md)。  
   
 #### <a name="literal-expressions-and-reference-types"></a>常值運算式及參考類型  
  常值運算式在工作流程中由 <xref:System.Activities.Expressions.Literal%601> 活動表示。 下列 <xref:System.Activities.Statements.WriteLine> 活動的功能相同。  
@@ -117,7 +118,7 @@ new Assign
 },  
 ```  
   
- [!INCLUDE[crabout](../../../includes/crabout-md.md)]運算式，請參閱[運算式](../../../docs/framework/windows-workflow-foundation/expressions.md)。  
+ 如需有關運算式的詳細資訊，請參閱[運算式](../../../docs/framework/windows-workflow-foundation/expressions.md)。  
   
 #### <a name="invoking-methods-on-objects-using-expressions-and-the-invokemethod-activity"></a>在物件上使用運算式和 InvokeMethod 活動的叫用方法  
  <xref:System.Activities.Expressions.InvokeMethod%601> 活動可以用來在 .NET Framework 中叫用類別的靜態和執行個體方法。 在本主題先前的範例中，已使用 <xref:System.Random> 類別來產生隨機數字。  
@@ -147,7 +148,7 @@ new InvokeMethod<int>
   
  [!code-csharp[CFX_WorkflowApplicationExample#55](../../../samples/snippets/csharp/VS_Snippets_CFX/cfx_workflowapplicationexample/cs/program.cs#55)]  
   
- [!INCLUDE[crabout](../../../includes/crabout-md.md)]動態活動，請參閱[在執行階段建立活動](../../../docs/framework/windows-workflow-foundation/creating-an-activity-at-runtime-with-dynamicactivity.md)。  
+ 如需動態活動的詳細資訊，請參閱[在執行階段建立活動](../../../docs/framework/windows-workflow-foundation/creating-an-activity-at-runtime-with-dynamicactivity.md)。  
   
 ## <a name="compiled-activities"></a>已編譯的活動  
  動態活動是使用程式碼來定義包含引數之活動的一種方法，但活動也可以用程式碼建立，並編譯成型別。 可以建立衍生自 <xref:System.Activities.CodeActivity> 的簡單活動，以及衍生自 <xref:System.Activities.AsyncCodeActivity> 的非同步活動。 這些活動可以具有引數、傳回值，並使用命令式程式碼定義其邏輯。 如需建立這些類型的活動的範例，請參閱[CodeActivity 基底類別](../../../docs/framework/windows-workflow-foundation/workflow-activity-authoring-using-the-codeactivity-class.md)和[建立非同步活動](../../../docs/framework/windows-workflow-foundation/creating-asynchronous-activities-in-wf.md)。  

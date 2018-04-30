@@ -1,28 +1,28 @@
 ---
-title: "設定 WS-Atomic 異動支援"
-ms.custom: 
+title: 設定 WS-Atomic 異動支援
+ms.custom: ''
 ms.date: 03/30/2017
 ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
+ms.reviewer: ''
+ms.suite: ''
 ms.technology:
 - dotnet-clr
-ms.tgt_pltfrm: 
+ms.tgt_pltfrm: ''
 ms.topic: article
 helpviewer_keywords:
 - WS-AT protocol [WCF], configuring WS-Atomic Transaction
 ms.assetid: cb9f1c9c-1439-4172-b9bc-b01c3e09ac48
-caps.latest.revision: 
+caps.latest.revision: 31
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
 ms.workload:
 - dotnet
-ms.openlocfilehash: 922b2048a262e722a11ee77c41e96dddec411326
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.openlocfilehash: b2d94c96b8cc225344300540d9fc406a4742db2a
+ms.sourcegitcommit: 94d33cadc5ff81d2ac389bf5f26422c227832052
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 04/30/2018
 ---
 # <a name="configuring-ws-atomic-transaction-support"></a>設定 WS-Atomic 異動支援
 這個主題說明如何使用 [WS-AT 組態公用程式] 來設定 WS-AtomicTransaction (WS-AT) 支援。  
@@ -34,11 +34,11 @@ ms.lasthandoff: 12/22/2017
   
  您可以在 Windows SDK 安裝位置 "%WINDIR%\Microsoft.NET\Framework\v3.0\Windows Communication Foundation" 中存取命令列視窗。  
   
- [!INCLUDE[crabout](../../../../includes/crabout-md.md)]命令列工具，請參閱[Ws-atomictransaction 組態公用程式 (wsatConfig.exe)](../../../../docs/framework/wcf/ws-atomictransaction-configuration-utility-wsatconfig-exe.md)。  
+ 如需命令列工具的詳細資訊，請參閱[Ws-atomictransaction 組態公用程式 (wsatConfig.exe)](../../../../docs/framework/wcf/ws-atomictransaction-configuration-utility-wsatconfig-exe.md)。  
   
  如果您正在[!INCLUDE[wxp](../../../../includes/wxp-md.md)]或[!INCLUDE[ws2003](../../../../includes/ws2003-md.md)]，您可以存取 MMC 嵌入式管理單元，依序巡覽至**控制控制台/系統管理工具/元件服務**、 以滑鼠右鍵按一下**我的電腦**，和選取**屬性**。 這個位置和您設定 Microsoft Distributed Transaction Coordinator (MSDTC) 的位置一樣。 組態的可用選項會分組在之下**WS-AT**  索引標籤。如果您執行 Windows Vista 或[!INCLUDE[lserver](../../../../includes/lserver-md.md)]，MMC 嵌入式管理單元可以找到按一下**啟動** 按鈕，並輸入`dcomcnfg.exe`中**搜尋**方塊。 當 MMC 開啟時，瀏覽至**我的電腦 \ 分散式交易協調器 \ 本機 DTC**節點、 以滑鼠右鍵按一下，然後選取**屬性**。 組態的可用選項會分組在之下**WS-AT**  索引標籤。  
   
- [!INCLUDE[crabout](../../../../includes/crabout-md.md)]此嵌入式管理單元，請參閱[Ws-atomictransaction 組態 MMC 嵌入式管理單元](../../../../docs/framework/wcf/ws-atomictransaction-configuration-mmc-snap-in.md)。  
+ 如需嵌入式管理單元的詳細資訊，請參閱[Ws-atomictransaction 組態 MMC 嵌入式管理單元](../../../../docs/framework/wcf/ws-atomictransaction-configuration-mmc-snap-in.md)。  
   
  若要啟用工具的使用者介面，您必須先登錄下列路徑中的 WsatUI.dll 檔  
   
@@ -88,7 +88,7 @@ ms.lasthandoff: 12/22/2017
 ### <a name="configuring-msdtc-to-use-certificates"></a>設定 MSDTC 以使用憑證  
  由於 WS-AT 通訊協定服務可同時作用為用戶端和伺服器，此服務必須同時接聽連入連線並初始化連出連線。 因此，您必須設定 MSDTC，讓它在與外部的另一方進行通訊時知道要使用的憑證，以及在接受連入通訊時知道要授權的憑證。  
   
- 您可以使用 MMC WS-AT 嵌入式管理單元設定此項。 [!INCLUDE[crabout](../../../../includes/crabout-md.md)]這項工具，請參閱[Ws-atomictransaction 組態 MMC 嵌入式管理單元](../../../../docs/framework/wcf/ws-atomictransaction-configuration-mmc-snap-in.md)主題。 下列步驟描述如何在執行 MSDTC 的兩部電腦之間建立信任。  
+ 您可以使用 MMC WS-AT 嵌入式管理單元設定此項。 如需這項工具的詳細資訊，請參閱[Ws-atomictransaction 組態 MMC 嵌入式管理單元](../../../../docs/framework/wcf/ws-atomictransaction-configuration-mmc-snap-in.md)主題。 下列步驟描述如何在執行 MSDTC 的兩部電腦之間建立信任。  
   
 1.  進行電腦 A 的設定。 「 端點憑證 」，請選取 certA。 為 「 授權憑證 」，請選取 certB。  
   
@@ -131,6 +131,6 @@ ms.lasthandoff: 12/22/2017
   
 -   31：詳細資訊  
   
-## <a name="see-also"></a>請參閱  
+## <a name="see-also"></a>另請參閱  
  [WS-AtomicTransaction 設定公用程式 (wsatConfig.exe)](../../../../docs/framework/wcf/ws-atomictransaction-configuration-utility-wsatconfig-exe.md)  
  [WS-AtomicTransaction 設定 MMC 嵌入式管理單元](../../../../docs/framework/wcf/ws-atomictransaction-configuration-mmc-snap-in.md)

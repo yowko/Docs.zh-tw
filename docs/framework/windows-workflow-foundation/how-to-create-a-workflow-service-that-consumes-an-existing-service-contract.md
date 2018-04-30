@@ -14,17 +14,17 @@ ms.author: dotnetcontent
 manager: wpickett
 ms.workload:
 - dotnet
-ms.openlocfilehash: 09c3f7656284dd73dd5f50c4ef9f77cd5adcbfe7
-ms.sourcegitcommit: 86adcc06e35390f13c1e372c36d2e044f1fc31ef
+ms.openlocfilehash: c7c28d8c2edbda5a42a290786b0ff40e3ab6dd5b
+ms.sourcegitcommit: 94d33cadc5ff81d2ac389bf5f26422c227832052
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/26/2018
+ms.lasthandoff: 04/30/2018
 ---
 # <a name="how-to-create-a-workflow-service-that-consumes-an-existing-service-contract"></a>HOW TO：建立會取用現有服務合約的工作流程服務
 [!INCLUDE[net_v45](../../../includes/net-v45-md.md)] 採用合約優先工作流程開發形式，可在 Web 服務和工作流程中提供更好的整合。 合約優先工作流程開發工具可讓您在 Code First 中設計合約。 此工具會自動在合約中的作業工具箱內產生活動範本。  
   
 > [!NOTE]
->  本主題提供建立合約優先工作流程服務的逐步指示。 [!INCLUDE[crabout](../../../includes/crabout-md.md)] 合約優先工作流程服務開發，請參閱[合約第一個工作流程服務開發](../../../docs/framework/windows-workflow-foundation/contract-first-workflow-service-development.md)。  
+>  本主題提供建立合約優先工作流程服務的逐步指示。 如需合約優先工作流程服務開發的詳細資訊，請參閱[合約第一個工作流程服務開發](../../../docs/framework/windows-workflow-foundation/contract-first-workflow-service-development.md)。  
   
 ### <a name="creating-the-workflow-project"></a>建立工作流程專案  
   

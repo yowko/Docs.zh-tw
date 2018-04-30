@@ -16,11 +16,11 @@ ms.author: dotnetcontent
 manager: wpickett
 ms.workload:
 - dotnet
-ms.openlocfilehash: 5bdf111e6802692aef893cf9dcae88f0f51aa467
-ms.sourcegitcommit: 03ee570f6f528a7d23a4221dcb26a9498edbdf8c
+ms.openlocfilehash: 2de3a8cac6e12d898173f8181b295c3e2e461cc7
+ms.sourcegitcommit: 94d33cadc5ff81d2ac389bf5f26422c227832052
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/28/2018
+ms.lasthandoff: 04/30/2018
 ---
 # <a name="troubleshooting-correlation"></a>疑難排解相互關聯
 相互關聯用於讓工作流程服務訊息彼此之間產生關聯，以及讓工作流程服務訊息和正確的工作流程執行個體產生關聯，但是，如果設定錯誤，將不會收到訊息，而且應用程式將不會正確運作。 本主題提供數個疑難排解相互關聯問題方法的概觀，同時也列出使用相互關聯時可能發生的部分常見問題。  
@@ -91,7 +91,7 @@ host.WorkflowExtensions.Add(new ConsoleTrackingParticipant());
   
  追蹤參與者 (例如 ConsoleTrackingParticipant) 對於擁有主控台視窗的自我裝載工作流程服務相當實用。 Web 主控服務中，對長期存放區會將追蹤資訊記錄的追蹤參與者應該使用，例如內建<xref:System.Activities.Tracking.EtwTrackingParticipant>，或自訂追蹤參與者，可將資訊記錄至檔案，例如`TextWriterTrackingParticpant`從[追蹤使用文字檔](../../../../docs/framework/windows-workflow-foundation/samples/tracking-using-a-text-file.md)範例。  
   
- [!INCLUDE[crabout](../../../../includes/crabout-md.md)] 追蹤及設定追蹤 Web 裝載的工作流程服務，請參閱[工作流程追蹤](../../../../docs/framework/windows-workflow-foundation/workflow-tracking-and-tracing.md)，[流程設定追蹤](../../../../docs/framework/windows-workflow-foundation/configuring-tracking-for-a-workflow.md)，而[追蹤&#91;WF範例&#93;](../../../../docs/framework/windows-workflow-foundation/samples/tracking.md)範例。  
+ 如需有關追蹤及設定 Web 裝載的工作流程服務的追蹤的詳細資訊，請參閱[工作流程追蹤](../../../../docs/framework/windows-workflow-foundation/workflow-tracking-and-tracing.md)，[流程設定追蹤](../../../../docs/framework/windows-workflow-foundation/configuring-tracking-for-a-workflow.md)，而[追蹤&#91;WF 範例&#93;](../../../../docs/framework/windows-workflow-foundation/samples/tracking.md)範例。  
   
 ## <a name="use-wcf-tracing"></a>使用 WCF 追蹤  
  WCF 追蹤可追蹤進出工作流程服務的訊息流量。 疑難排解相互關聯問題 (特別是以內容為主的相互關聯) 時，這個追蹤資訊相當實用。 若要啟用追蹤功能，請在 `system.diagnostics` 檔案 (如果是 Web 裝載的工作流程服務) 或 `web.config` 檔案 (如果是自我裝載的工作流程服務) 的 `app.config` 區段中，指定所需的追蹤接聽項。 若要將訊息內容納入追蹤檔中，在 `true` 之 `logEntireMessage` 區段的 `messageLogging` 項目中，針對 `diagnostics` 指定 `system.serviceModel`。 在以下範例中，追蹤資訊 (包括訊息內容) 會設定為寫入名稱為 `service.svclog` 的檔案。  
@@ -129,7 +129,7 @@ host.WorkflowExtensions.Add(new ConsoleTrackingParticipant());
 </configuration>  
 ```  
   
- 若要檢視追蹤資訊包含在`service.svclog`、[服務追蹤檢視器工具 (SvcTraceViewer.exe)](../../../../docs/framework/wcf/service-trace-viewer-tool-svctraceviewer-exe.md)用。 疑難排解以內容為主的相互關聯問題時，這特別有用，因為您可以檢視訊息內容並正確地查看傳遞的內容，以及是否符合以內容為主之相互關聯的 <xref:System.ServiceModel.CorrelationQuery>。 [!INCLUDE[crabout](../../../../includes/crabout-md.md)] WCF 追蹤，請參閱[服務追蹤檢視器工具 (SvcTraceViewer.exe)](../../../../docs/framework/wcf/service-trace-viewer-tool-svctraceviewer-exe.md)，[設定追蹤](../../../../docs/framework/wcf/diagnostics/tracing/configuring-tracing.md)，和[使用追蹤疑難排解您的應用程式](../../../../docs/framework/wcf/diagnostics/tracing/using-tracing-to-troubleshoot-your-application.md)。  
+ 若要檢視追蹤資訊包含在`service.svclog`、[服務追蹤檢視器工具 (SvcTraceViewer.exe)](../../../../docs/framework/wcf/service-trace-viewer-tool-svctraceviewer-exe.md)用。 疑難排解以內容為主的相互關聯問題時，這特別有用，因為您可以檢視訊息內容並正確地查看傳遞的內容，以及是否符合以內容為主之相互關聯的 <xref:System.ServiceModel.CorrelationQuery>。 如需 WCF 追蹤的詳細資訊，請參閱[服務追蹤檢視器工具 (SvcTraceViewer.exe)](../../../../docs/framework/wcf/service-trace-viewer-tool-svctraceviewer-exe.md)，[設定追蹤](../../../../docs/framework/wcf/diagnostics/tracing/configuring-tracing.md)，和[使用追蹤疑難排解您的應用程式](../../../../docs/framework/wcf/diagnostics/tracing/using-tracing-to-troubleshoot-your-application.md).  
   
 ## <a name="common-context-exchange-correlation-issues"></a>常見的內容交換相互關聯問題  
  特定類型的相互關聯會要求使用特定的繫結類型，才能讓相互關聯正確運作。 範例包括要求-回覆相互關聯 (需要雙向繫結，例如 <xref:System.ServiceModel.BasicHttpBinding>) 與內容交換相互關聯 (需要以內容為主的繫結，例如 <xref:System.ServiceModel.BasicHttpContextBinding>)。 大部分的繫結都支援雙向作業，因此，這不是要求-回覆相互關聯的常見問題，但是只有少數以內容為主的繫結，包括 <xref:System.ServiceModel.BasicHttpContextBinding>、<xref:System.ServiceModel.WSHttpContextBinding> 和 <xref:System.ServiceModel.NetTcpContextBinding>。 如果未使用以上其中一個繫結，對工作流程服務的初始呼叫將會成功，但是後續的呼叫將會失敗，並產生下列 <xref:System.ServiceModel.FaultException>。  
@@ -178,7 +178,7 @@ SendReply ReplyToStartOrder = new SendReply
   
  之間，不允許持續性<xref:System.ServiceModel.Activities.Receive> / <xref:System.ServiceModel.Activities.SendReply>組或<xref:System.ServiceModel.Activities.Send> / <xref:System.ServiceModel.Activities.ReceiveReply>組。 系統會建立不保存區域，這個區域會持續直到兩個活動都完成為止。 如果某個活動 (例如延遲活動) 位於這個不保存區域中，並且導致工作流程變成閒置，工作流程將不會保存，即使主機設定為在工作流程變成閒置時保存它們也一樣。 如果某個活動 (例如持續活動) 嘗試明確保存在不保存區域中，系統就會擲回嚴重的例外狀況、工作流程會中止，而且 <xref:System.ServiceModel.FaultException> 會傳回給呼叫端。 嚴重的例外狀況訊息為「System.InvalidOperationException: 持續活動不能包含在無持續性區塊中」。 此例外狀況不會傳回給呼叫端，不過如果啟用了追蹤，就可以觀察此例外狀況。 傳回給呼叫端之 <xref:System.ServiceModel.FaultException> 的訊息為「無法執行作業，因為 WorkflowInstance '5836145b-7da2-49d0-a052-a49162adeab6' 已完成」。  
   
- [!INCLUDE[crabout](../../../../includes/crabout-md.md)] 要求-回覆相互關聯，請參閱[要求-回覆](../../../../docs/framework/wcf/feature-details/request-reply-correlation.md)。  
+ 如需要求-回覆相互關聯的詳細資訊，請參閱[要求-回覆](../../../../docs/framework/wcf/feature-details/request-reply-correlation.md)。  
   
 ## <a name="common-content-correlation-issues"></a>常見的內容相互關聯問題  
  當工作流程服務收到多個訊息，而且交換的訊息中有一個資料片段能夠識別所需的執行個體時，就會使用以內容為主的相互關聯。 以內容為主的相互關聯會利用訊息中的此項資料 (例如客戶編號或訂單 ID)，將訊息路由至正確的工作流程執行個體。 本節描述使用以內容為主之相互關聯時可能會發生的數個常見問題。  
@@ -263,4 +263,4 @@ sm:header()/tempuri:CartId
 </Receive>  
 ```  
   
- [!INCLUDE[crabout](../../../../includes/crabout-md.md)] 以內容為基礎的相互關聯，請參閱[內容基礎](../../../../docs/framework/wcf/feature-details/content-based-correlation.md)和[相互關聯計算機](../../../../docs/framework/windows-workflow-foundation/samples/correlated-calculator.md)範例。
+ 如需以內容為基礎的相互關聯的詳細資訊，請參閱[內容基礎](../../../../docs/framework/wcf/feature-details/content-based-correlation.md)和[相互關聯計算機](../../../../docs/framework/windows-workflow-foundation/samples/correlated-calculator.md)範例。

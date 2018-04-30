@@ -1,12 +1,13 @@
 ---
-title: "HOW TO：使用 PrincipalPermissionAttribute 類別來限制存取"
-ms.custom: 
+title: HOW TO：使用 PrincipalPermissionAttribute 類別來限制存取
+ms.custom: ''
 ms.date: 03/30/2017
 ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.technology: dotnet-clr
-ms.tgt_pltfrm: 
+ms.reviewer: ''
+ms.suite: ''
+ms.technology:
+- dotnet-clr
+ms.tgt_pltfrm: ''
 ms.topic: article
 dev_langs:
 - csharp
@@ -16,16 +17,17 @@ helpviewer_keywords:
 - WCF, authorization
 - WCF, security
 ms.assetid: 5162f5c4-8781-4cc4-9425-bb7620eaeaf4
-caps.latest.revision: "23"
+caps.latest.revision: 23
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.workload: dotnet
-ms.openlocfilehash: da91e3456fdca863980c89f45e0cc28db19170be
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.workload:
+- dotnet
+ms.openlocfilehash: dffeae6a114563ea6b030c303bd3ed3f3a27f4f5
+ms.sourcegitcommit: 94d33cadc5ff81d2ac389bf5f26422c227832052
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 04/30/2018
 ---
 # <a name="how-to-restrict-access-with-the-principalpermissionattribute-class"></a>HOW TO：使用 PrincipalPermissionAttribute 類別來限制存取
 控制 Windows 網域電腦上資源的存取，是基本的安全性工作。 例如，只有特定使用者能夠檢視機密資料 (如薪資資料)。 本主題說明如何透過將使用者歸屬到預先定義的群組，以限制方法的存取。 如需實用範例，請參閱[授權存取服務作業](../../../docs/framework/wcf/samples/authorizing-access-to-service-operations.md)。  
@@ -50,7 +52,7 @@ ms.lasthandoff: 12/22/2017
   
 ### <a name="to-demand-user-membership"></a>要求使用者成員資格  
   
-1.  開啟包含所實作之服務合約程式碼的 [!INCLUDE[indigo1](../../../includes/indigo1-md.md)] 程式碼檔。 [!INCLUDE[crabout](../../../includes/crabout-md.md)]實作合約，請參閱[實作服務合約](../../../docs/framework/wcf/implementing-service-contracts.md)。  
+1.  開啟包含所實作之服務合約程式碼的 [!INCLUDE[indigo1](../../../includes/indigo1-md.md)] 程式碼檔。 如需實作合約的詳細資訊，請參閱[實作服務合約](../../../docs/framework/wcf/implementing-service-contracts.md)。  
   
 2.  將 <xref:System.Security.Permissions.PrincipalPermissionAttribute> 屬性 (Attribute) 套用至每一個必須限於特定群組的方法。 將 <xref:System.Security.Permissions.SecurityAttribute.Action%2A> 屬性設為 <xref:System.Security.Permissions.SecurityAction.Demand>，並將 <xref:System.Security.Permissions.PrincipalPermissionAttribute.Role%2A> 屬性設為群組名稱。 例如:   
   
@@ -95,7 +97,7 @@ ms.lasthandoff: 12/22/2017
      [!code-csharp[c_PrincipalPermissionAttribute#3](../../../samples/snippets/csharp/VS_Snippets_CFX/c_principalpermissionattribute/cs/source.cs#3)]
      [!code-vb[c_PrincipalPermissionAttribute#3](../../../samples/snippets/visualbasic/VS_Snippets_CFX/c_principalpermissionattribute/vb/source.vb#3)]  
   
-## <a name="see-also"></a>請參閱  
+## <a name="see-also"></a>另請參閱  
  <xref:System.Security.Permissions.PrincipalPermissionAttribute>  
  <xref:System.Security.Permissions.PrincipalPermissionAttribute>  
  <xref:System.Security.Permissions.SecurityAction.Demand>  

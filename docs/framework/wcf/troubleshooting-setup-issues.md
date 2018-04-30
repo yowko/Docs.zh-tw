@@ -1,24 +1,26 @@
 ---
-title: "疑難排解安裝程式問題"
-ms.custom: 
+title: 疑難排解安裝程式問題
+ms.custom: ''
 ms.date: 03/30/2017
 ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.technology: dotnet-clr
-ms.tgt_pltfrm: 
+ms.reviewer: ''
+ms.suite: ''
+ms.technology:
+- dotnet-clr
+ms.tgt_pltfrm: ''
 ms.topic: article
 ms.assetid: 1644f885-c408-4d5f-a5c7-a1a907bc8acd
-caps.latest.revision: "15"
+caps.latest.revision: 15
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.workload: dotnet
-ms.openlocfilehash: 284805f8ca1fb9778dc6bccd9807fa86dc7e2d77
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.workload:
+- dotnet
+ms.openlocfilehash: 9238c1a1c9092e6806ee941bd7c992071cf98e09
+ms.sourcegitcommit: 94d33cadc5ff81d2ac389bf5f26422c227832052
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 04/30/2018
 ---
 # <a name="troubleshooting-setup-issues"></a>疑難排解安裝程式問題
 本主題會說明如何疑難排解 [!INCLUDE[indigo1](../../../includes/indigo1-md.md)] 安裝問題。  
@@ -63,7 +65,7 @@ ms.lasthandoff: 12/22/2017
   
  您必須遵循下列步驟才能解決上述問題。  
   
-1.  執行[WMI Diagnosis Utility，2.0 版](http://go.microsoft.com/fwlink/?LinkId=94685)修復 WMI 服務。 [!INCLUDE[crabout](../../../includes/crabout-md.md)]使用這項工具，請參閱[WMI Diagnosis Utility](http://go.microsoft.com/fwlink/?LinkId=94686)主題。  
+1.  執行[WMI Diagnosis Utility，2.0 版](http://go.microsoft.com/fwlink/?LinkId=94685)修復 WMI 服務。 如需有關使用此工具的詳細資訊，請參閱[WMI Diagnosis Utility](http://go.microsoft.com/fwlink/?LinkId=94686)主題。  
   
  使用修復.NET Framework 3.0 安裝**新增/移除程式**小程式位於**控制台**，或是解除安裝/重新安裝.NET Framework 3.0。  
   
@@ -84,5 +86,5 @@ ms.lasthandoff: 12/22/2017
 aspnet_regiis.exe -i -enable  
 ```  
   
-## <a name="see-also"></a>請參閱  
+## <a name="see-also"></a>另請參閱  
  [設定指示](../../../docs/framework/wcf/samples/set-up-instructions.md)

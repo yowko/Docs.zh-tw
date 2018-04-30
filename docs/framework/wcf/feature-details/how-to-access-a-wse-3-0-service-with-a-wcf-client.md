@@ -1,32 +1,34 @@
 ---
-title: "HOW TO：使用 WCF 用戶端來存取 WSE 3.0 服務"
-ms.custom: 
+title: HOW TO：使用 WCF 用戶端來存取 WSE 3.0 服務
+ms.custom: ''
 ms.date: 03/30/2017
 ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.technology: dotnet-clr
-ms.tgt_pltfrm: 
+ms.reviewer: ''
+ms.suite: ''
+ms.technology:
+- dotnet-clr
+ms.tgt_pltfrm: ''
 ms.topic: article
 dev_langs:
 - csharp
 - vb
 ms.assetid: 1f9bcd9b-8f8f-47fa-8f1e-0d47236eb800
-caps.latest.revision: "12"
+caps.latest.revision: 12
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.workload: dotnet
-ms.openlocfilehash: 49ff6378bcd35ab2d4e2adf3783a1c4e73025d3a
-ms.sourcegitcommit: c0dd436f6f8f44dc80dc43b07f6841a00b74b23f
+ms.workload:
+- dotnet
+ms.openlocfilehash: 382762917e790d54dca31158f2b7ffde560c1427
+ms.sourcegitcommit: 94d33cadc5ff81d2ac389bf5f26422c227832052
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 01/19/2018
+ms.lasthandoff: 04/30/2018
 ---
 # <a name="how-to-access-a-wse-30-service-with-a-wcf-client"></a>HOW TO：使用 WCF 用戶端來存取 WSE 3.0 服務
 當 [!INCLUDE[indigo1](../../../../includes/indigo1-md.md)] 用戶端設定為使用 WS-Addressing August 2004 版本規格時，[!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] 用戶端的連線層級與 Microsoft .NET 服務的 Web Services Enhancements (WSE) 3.0 相容。 不過，WSE 3.0 服務不支援中繼資料交換 (MEX) 通訊協定，因此當您使用[ServiceModel Metadata Utility Tool (Svcutil.exe)](../../../../docs/framework/wcf/servicemodel-metadata-utility-tool-svcutil-exe.md)建立[!INCLUDE[indigo2](../../../../includes/indigo2-md.md)]用戶端類別的安全性設定不會套用至產生[!INCLUDE[indigo2](../../../../includes/indigo2-md.md)]用戶端。 因此，在產生 [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] 用戶端之後，您必須指定 WSE 3.0 服務所需的安全性設定。  
   
- 您可以使用自訂繫結來套用這些安全性設定，將 WSE 3.0 服務的需求，以及 WSE 3.0 服務和 [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] 用戶端之間的互通需求納入考量。 這些互通性需求包含上述的 WS-Addressing August 2004 規格使用和 WSE 3.0 預設訊息保護 <xref:System.ServiceModel.Security.MessageProtectionOrder.SignBeforeEncrypt>。 [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] 的預設訊息保護為 <xref:System.ServiceModel.Security.MessageProtectionOrder.SignBeforeEncryptAndEncryptSignature>。 本主題詳細說明如何建立與 WSE 3.0 服務相互操作的 [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] 繫結。 [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] 也會提供包含這個繫結的範例。 [!INCLUDE[crabout](../../../../includes/crabout-md.md)]此範例中，請參閱[與 ASMX Web 服務互通](../../../../docs/framework/wcf/samples/interoperating-with-asmx-web-services.md)。  
+ 您可以使用自訂繫結來套用這些安全性設定，將 WSE 3.0 服務的需求，以及 WSE 3.0 服務和 [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] 用戶端之間的互通需求納入考量。 這些互通性需求包含上述的 WS-Addressing August 2004 規格使用和 WSE 3.0 預設訊息保護 <xref:System.ServiceModel.Security.MessageProtectionOrder.SignBeforeEncrypt>。 [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] 的預設訊息保護為 <xref:System.ServiceModel.Security.MessageProtectionOrder.SignBeforeEncryptAndEncryptSignature>。 本主題詳細說明如何建立與 WSE 3.0 服務相互操作的 [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] 繫結。 [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] 也會提供包含這個繫結的範例。 如需有關此範例的詳細資訊，請參閱[與 ASMX Web 服務互通](../../../../docs/framework/wcf/samples/interoperating-with-asmx-web-services.md)。  
   
 ### <a name="to-access-a-wse-30-web-service-with-a-wcf-client"></a>若要使用 WCF 用戶端來存取 WSE 3.0 Web 服務  
   
@@ -34,7 +36,7 @@ ms.lasthandoff: 01/19/2018
   
      隨即建立 WSE 3.0 Web 服務的 [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] 用戶端。 因為 WSE 3.0 不支援 MEX 通訊協定，所以您無法使用此工具擷取 Web 服務的安全性需求。 應用程式開發人員必須為用戶端加入安全性設定。  
   
-     [!INCLUDE[crabout](../../../../includes/crabout-md.md)]建立[!INCLUDE[indigo2](../../../../includes/indigo2-md.md)]用戶端，請參閱[How to： 建立用戶端](../../../../docs/framework/wcf/how-to-create-a-wcf-client.md)。  
+     如需有關建立[!INCLUDE[indigo2](../../../../includes/indigo2-md.md)]用戶端，請參閱[How to： 建立用戶端](../../../../docs/framework/wcf/how-to-create-a-wcf-client.md)。  
   
 2.  建立類別，表示可與 WSE 3.0 Web 服務通訊的繫結。  
   
@@ -73,6 +75,6 @@ ms.lasthandoff: 01/19/2018
   
   
   
-## <a name="see-also"></a>請參閱  
+## <a name="see-also"></a>另請參閱  
  <xref:System.ServiceModel.Channels.Binding>  
  [與 WSE 互通](http://msdn.microsoft.com/library/f6816861-96a0-45f9-8736-8e4e82cd3a41)

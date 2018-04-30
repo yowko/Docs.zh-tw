@@ -1,8 +1,9 @@
 ---
-title: "Ink 物件模型：Windows Form 和 COM 與 WPF 的比較"
+title: Ink 物件模型：Windows Form 和 COM 與 WPF 的比較
 ms.date: 03/30/2017
 ms.prod: .net-framework
-ms.technology: dotnet-wpf
+ms.technology:
+- dotnet-wpf
 ms.topic: article
 dev_langs:
 - csharp
@@ -15,20 +16,21 @@ helpviewer_keywords:
 - ink [WPF], enabling
 - events [WPF], tablet pen
 ms.assetid: 577835be-b145-4226-8570-1d309e9b3901
-caps.latest.revision: "9"
+caps.latest.revision: 9
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.workload: dotnet
-ms.openlocfilehash: 38c7692d433fb91584718984ef2ad81e563517db
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.workload:
+- dotnet
+ms.openlocfilehash: 06a2c2049ec7fe7046bd6dae2711fe8e46592fcf
+ms.sourcegitcommit: 94d33cadc5ff81d2ac389bf5f26422c227832052
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 04/30/2018
 ---
 # <a name="the-ink-object-model-windows-forms-and-com-versus-wpf"></a>Ink 物件模型：Windows Form 和 COM 與 WPF 的比較
 
-有基本上是三個支援的平台數位筆跡： Tablet PC Windows Form 平台、 Tablet PC COM 平台和[!INCLUDE[TLA#tla_wpf](../../../../includes/tlasharptla-wpf-md.md)]平台。  類似的物件模型，但是物件的模型的 Windows Form 和 COM 平台共用[!INCLUDE[TLA2#tla_wpf](../../../../includes/tla2sharptla-wpf-md.md)]平台是本質上不同。  本主題討論在高層次的差異，讓已使用過了一個物件模型的開發人員可更了解其他。  
+有基本上是三個支援的平台數位筆跡： Tablet PC Windows Form 平台、 Tablet PC COM 平台和 Windows Presentation Foundation (WPF) 平台。  類似的物件模型，但是物件的模型的 Windows Form 和 COM 平台共用[!INCLUDE[TLA2#tla_wpf](../../../../includes/tla2sharptla-wpf-md.md)]平台是本質上不同。  本主題討論在高層次的差異，讓已使用過了一個物件模型的開發人員可更了解其他。  
   
 ## <a name="enabling-ink-in-an-application"></a>啟用應用程式中的筆墨  
  物件和控制項，讓應用程式接收來自 tablet 畫筆輸入，將傳送所有的三個平台。  Windows Form 和 COM 平台將獍旓[Microsoft.Ink.InkPicture](https://msdn.microsoft.com/library/aa514604.aspx)， [Microsoft.Ink.InkEdit](https://msdn.microsoft.com/library/ms835842.aspx)， [Microsoft.Ink.InkOverlay](https://msdn.microsoft.com/library/ms833057.aspx)和[Microsoft.Ink.InkCollector](https://msdn.microsoft.com/library/ms836493.aspx)類別。  [Microsoft.Ink.InkPicture](https://msdn.microsoft.com/library/aa514604.aspx)和[Microsoft.Ink.InkEdit](https://msdn.microsoft.com/library/ms835842.aspx)是控制項，您可以加入至應用程式以收集筆墨。  [Microsoft.Ink.InkOverlay](https://msdn.microsoft.com/library/ms833057.aspx)和[Microsoft.Ink.InkCollector](https://msdn.microsoft.com/library/ms836493.aspx)可以附加到現有的視窗功能的筆墨視窗和自訂控制項。  
@@ -49,7 +51,7 @@ ms.lasthandoff: 12/22/2017
   
  下列圖例組比較筆墨資料物件模型。  在 Windows Form 和 COM 的平台， [Microsoft.Ink.Ink](https://msdn.microsoft.com/library/aa515768.aspx?displayProperty=nameWithType)物件限制的存留期[Microsoft.Ink.Stroke](https://msdn.microsoft.com/library/ms827842.aspx?displayProperty=nameWithType)物件，與屬於個別筆劃的手寫筆封包。  兩個或多個筆劃可以參考相同[Microsoft.Ink.DrawingAttributes](https://msdn.microsoft.com/library/ms837931.aspx?displayProperty=nameWithType)物件，在下圖所示。  
   
- ![COM &#47; 之 Ink 物件模型的圖表Winforms。] (../../../../docs/framework/wpf/advanced/media/ink-inkownsstrokes.png "Ink_InkOwnsStrokes")  
+ ![Com 之 Ink 物件模型的圖表&#47;Winforms。] (../../../../docs/framework/wpf/advanced/media/ink-inkownsstrokes.png "Ink_InkOwnsStrokes")  
   
  在[!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)]，每個<xref:System.Windows.Ink.Stroke?displayProperty=nameWithType>已存在，前提是必須的參考 common language runtime 物件。  每個<xref:System.Windows.Ink.Stroke>參考<xref:System.Windows.Input.StylusPointCollection>和<xref:System.Windows.Ink.DrawingAttributes?displayProperty=nameWithType>物件，也是 common language runtime 物件。  
   
@@ -64,7 +66,7 @@ ms.lasthandoff: 12/22/2017
 |點擊的測試|<xref:System.Windows.Ink.StrokeCollection.HitTest%2A>|[Microsoft.Ink.Ink.HitTest](https://msdn.microsoft.com/library/aa515934.aspx)|  
 |複製筆墨|<xref:System.Windows.Controls.InkCanvas.CopySelection%2A>|[Microsoft.Ink.Ink.ClipboardCopy](https://msdn.microsoft.com/library/microsoft.ink.ink.clipboardcopy(v=vs.100).aspx)|  
 |貼上筆墨|<xref:System.Windows.Controls.InkCanvas.Paste%2A>|[Microsoft.Ink.Ink.ClipboardPaste](https://msdn.microsoft.com/library/microsoft.ink.ink.clipboardpaste(v=vs.100).aspx)|  
-|存取自訂屬性集合的筆劃|<xref:System.Windows.Ink.StrokeCollection.AddPropertyData%2A>(在內部儲存及存取透過屬性<xref:System.Windows.Ink.StrokeCollection.AddPropertyData%2A>， <xref:System.Windows.Ink.StrokeCollection.RemovePropertyData%2A>，和<xref:System.Windows.Ink.StrokeCollection.ContainsPropertyData%2A>)|使用[Microsoft.Ink.Ink.ExtendedProperties](https://msdn.microsoft.com/library/microsoft.ink.ink.extendedproperties(v=vs.100).aspx)|  
+|存取自訂屬性集合的筆劃|<xref:System.Windows.Ink.StrokeCollection.AddPropertyData%2A> (在內部儲存及存取透過屬性<xref:System.Windows.Ink.StrokeCollection.AddPropertyData%2A>， <xref:System.Windows.Ink.StrokeCollection.RemovePropertyData%2A>，和<xref:System.Windows.Ink.StrokeCollection.ContainsPropertyData%2A>)|使用[Microsoft.Ink.Ink.ExtendedProperties](https://msdn.microsoft.com/library/microsoft.ink.ink.extendedproperties(v=vs.100).aspx)|  
   
 ### <a name="sharing-ink-between-platforms"></a>共用平台之間的筆墨  
  雖然平台的筆墨資料不同的物件模型，但共用平台之間的資料是很容易。 下列範例會從 Windows Forms 應用程式中儲存筆墨，並載入 Windows Presentation Foundation 應用程式中的筆跡。  

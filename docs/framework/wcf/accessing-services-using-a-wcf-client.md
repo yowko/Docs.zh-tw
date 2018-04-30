@@ -1,13 +1,13 @@
 ---
-title: "使用 WCF 用戶端存取服務"
-ms.custom: 
+title: 使用 WCF 用戶端存取服務
+ms.custom: ''
 ms.date: 03/30/2017
 ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
+ms.reviewer: ''
+ms.suite: ''
 ms.technology:
 - dotnet-clr
-ms.tgt_pltfrm: 
+ms.tgt_pltfrm: ''
 ms.topic: article
 dev_langs:
 - csharp
@@ -15,17 +15,17 @@ dev_langs:
 helpviewer_keywords:
 - clients [WCF], consuming services
 ms.assetid: d780af9f-73c5-42db-9e52-077a5e4de7fe
-caps.latest.revision: 
+caps.latest.revision: 36
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
 ms.workload:
 - dotnet
-ms.openlocfilehash: 1f33d64e9ec1881b1ef7b93ba29d233f2f580c29
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.openlocfilehash: 69352ba5c12267f5075ae38c5bdcc0665b3fe050
+ms.sourcegitcommit: 94d33cadc5ff81d2ac389bf5f26422c227832052
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 04/30/2018
 ---
 # <a name="accessing-services-using-a-wcf-client"></a>使用 WCF 用戶端存取服務
 建立服務之後，下一個步驟就是建立 [!INCLUDE[indigo2](../../../includes/indigo2-md.md)] 用戶端 Proxy。 用戶端應用程式會使用 [!INCLUDE[indigo2](../../../includes/indigo2-md.md)] 用戶端 Proxy 與服務進行通訊。 用戶端應用程式通常會匯入服務的中繼資料，以產生可用來叫用服務的 [!INCLUDE[indigo2](../../../includes/indigo2-md.md)] 用戶端程式碼。  
@@ -61,7 +61,7 @@ Svcutil.exe <list of WSDL and XSD files on file system>
 Svcutil.exe <file1 [,file2]>  
 ```  
   
- 如果僅提供一個檔案名稱，這就會是輸出檔的名稱。 如果提供兩個檔案名稱，則第一個檔案為輸入組態檔，其內容會與產生的組態合併，並寫入至第二個檔案。 [!INCLUDE[crabout](../../../includes/crabout-md.md)]組態，請參閱[設定服務的繫結](../../../docs/framework/wcf/configuring-bindings-for-wcf-services.md)。  
+ 如果僅提供一個檔案名稱，這就會是輸出檔的名稱。 如果提供兩個檔案名稱，則第一個檔案為輸入組態檔，其內容會與產生的組態合併，並寫入至第二個檔案。 如需組態的詳細資訊，請參閱[設定服務的繫結](../../../docs/framework/wcf/configuring-bindings-for-wcf-services.md)。  
   
 > [!IMPORTANT]
 >  未受保護的中繼資料要求和未受保護的網路要求一樣，都會構成某些風險：如果您無法確定正在進行通訊的端點是否為名符其實的端點，那麼您所擷取的資料很可能是來自於惡意服務的中繼資料。  
@@ -194,9 +194,9 @@ Console.WriteLine("Add({0},{1}) = {2}", value1, value2, result)
   
 -   <xref:System.ServiceModel.CommunicationObjectAbortedException>：通訊端連接中止。 這種情況可能是處理訊息時發生錯誤、遠端主機超過接收逾時時間，或基礎網路資源問題所造成。  
   
- 發生這類例外狀況時，最佳的解決方式是開啟服務端的追蹤功能，並且判斷該處發生哪種例外狀況。 [!INCLUDE[crabout](../../../includes/crabout-md.md)]追蹤，請參閱[追蹤](../../../docs/framework/wcf/diagnostics/tracing/index.md)和[使用追蹤疑難排解您的應用程式](../../../docs/framework/wcf/diagnostics/tracing/using-tracing-to-troubleshoot-your-application.md)。  
+ 發生這類例外狀況時，最佳的解決方式是開啟服務端的追蹤功能，並且判斷該處發生哪種例外狀況。 如需有關追蹤的詳細資訊，請參閱[追蹤](../../../docs/framework/wcf/diagnostics/tracing/index.md)和[使用追蹤疑難排解您的應用程式](../../../docs/framework/wcf/diagnostics/tracing/using-tracing-to-troubleshoot-your-application.md)。  
   
-## <a name="see-also"></a>請參閱  
+## <a name="see-also"></a>另請參閱  
  [如何：建立用戶端](../../../docs/framework/wcf/how-to-create-a-wcf-client.md)  
  [如何：使用雙面合約存取服務](../../../docs/framework/wcf/feature-details/how-to-access-services-with-a-duplex-contract.md)  
  [如何：以非同步方式呼叫服務作業](../../../docs/framework/wcf/feature-details/how-to-call-wcf-service-operations-asynchronously.md)  

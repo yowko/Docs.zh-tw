@@ -1,32 +1,34 @@
 ---
-title: "分散式應用程式安全性"
-ms.custom: 
+title: 分散式應用程式安全性
+ms.custom: ''
 ms.date: 03/30/2017
 ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.technology: dotnet-clr
-ms.tgt_pltfrm: 
+ms.reviewer: ''
+ms.suite: ''
+ms.technology:
+- dotnet-clr
+ms.tgt_pltfrm: ''
 ms.topic: article
 helpviewer_keywords:
 - distributed application security [WCF]
 - security [WCF], transfer
 ms.assetid: 53928a10-e474-46d0-ab90-5f98f8d7b668
-caps.latest.revision: "32"
+caps.latest.revision: 32
 author: BrucePerlerMS
 ms.author: bruceper
 manager: mbaldwin
-ms.workload: dotnet
-ms.openlocfilehash: 1e67c5da534e7b35d4d27c0164d9389c8afe252b
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.workload:
+- dotnet
+ms.openlocfilehash: 8b5bc311262aae1110f7d0249be60135e318785e
+ms.sourcegitcommit: 94d33cadc5ff81d2ac389bf5f26422c227832052
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 04/30/2018
 ---
 # <a name="distributed-application-security"></a>分散式應用程式安全性
 [!INCLUDE[indigo1](../../../../includes/indigo1-md.md)] 安全性分為三個主要的功能區域：傳輸安全性、存取控制和稽核。 傳輸安全性提供完整性、機密性與驗證。 傳輸安全性是由下列其中一項提供：傳輸安全性、訊息安全性或 `TransportWithMessageCredential`。  
   
- 如需[!INCLUDE[indigo2](../../../../includes/indigo2-md.md)]訊息安全性，請參閱[安全性概觀](../../../../docs/framework/wcf/feature-details/security-overview.md)。 [!INCLUDE[crabout](../../../../includes/crabout-md.md)]其他兩個片段[!INCLUDE[indigo2](../../../../includes/indigo2-md.md)]安全性，請參閱[授權](../../../../docs/framework/wcf/feature-details/authorization-in-wcf.md)和[稽核](../../../../docs/framework/wcf/feature-details/auditing-security-events.md)。  
+ 如需[!INCLUDE[indigo2](../../../../includes/indigo2-md.md)]訊息安全性，請參閱[安全性概觀](../../../../docs/framework/wcf/feature-details/security-overview.md)。 如需其他兩個片段[!INCLUDE[indigo2](../../../../includes/indigo2-md.md)]安全性，請參閱[授權](../../../../docs/framework/wcf/feature-details/authorization-in-wcf.md)和[稽核](../../../../docs/framework/wcf/feature-details/auditing-security-events.md)。  
   
 ## <a name="transfer-security-scenarios"></a>傳輸安全性案例  
  採用 [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] 傳輸安全性的常見案例包括下列各項：  
@@ -68,7 +70,7 @@ ms.lasthandoff: 12/22/2017
   
  在憑證認證中，主體名稱、主體別名或憑證內的特定欄位可用來代表所宣告的身分識別和 (或) 能力。 認證中資料所有權的證明，是使用相關的私密金鑰產生簽章的方式建立。  
   
- [!INCLUDE[crabout](../../../../includes/crabout-md.md)]程式設計傳輸安全性，並指定認證，請參閱[繫結和安全性](../../../../docs/framework/wcf/feature-details/bindings-and-security.md)和[安全性行為](../../../../docs/framework/wcf/feature-details/security-behaviors-in-wcf.md)。  
+ 傳輸安全性程式設計的詳細資訊，而且指定認證，請參閱[繫結和安全性](../../../../docs/framework/wcf/feature-details/bindings-and-security.md)和[安全性行為](../../../../docs/framework/wcf/feature-details/security-behaviors-in-wcf.md)。  
   
 ### <a name="transport-client-credential-types"></a>傳輸用戶端認證類型  
  下表說明建立使用傳輸安全性的應用程式時，可能使用的值。 您可以在程式碼或繫結設定中使用這些值。  
@@ -105,7 +107,7 @@ ms.lasthandoff: 12/22/2017
   
  訊息安全性模式還可讓您執行傳輸安全性，如此服務認證就會在初始交涉的過程中與用戶端交換。 若要啟用交涉，請將 <xref:System.ServiceModel.MessageSecurityOverHttp.NegotiateServiceCredential%2A> 屬性設為 `true`。  
   
-## <a name="see-also"></a>請參閱  
+## <a name="see-also"></a>另請參閱  
  [建立端點概觀](../../../../docs/framework/wcf/endpoint-creation-overview.md)  
  [系統提供的繫結](../../../../docs/framework/wcf/system-provided-bindings.md)  
  [安全性概觀](../../../../docs/framework/wcf/feature-details/security-overview.md)  

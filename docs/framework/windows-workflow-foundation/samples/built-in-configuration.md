@@ -1,23 +1,24 @@
 ---
-title: "內建組態"
-ms.custom: 
+title: 內建組態
+ms.custom: ''
 ms.date: 03/30/2017
 ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.tgt_pltfrm: 
+ms.reviewer: ''
+ms.suite: ''
+ms.tgt_pltfrm: ''
 ms.topic: article
 ms.assetid: 34e85c9b-088d-4347-816c-0f77cb73ef2f
-caps.latest.revision: "15"
+caps.latest.revision: 15
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.workload: dotnet
-ms.openlocfilehash: 3ddf9b316074a69a88f08a0d7f519533f2db0002
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.workload:
+- dotnet
+ms.openlocfilehash: 0c414f34da0cd4bbf484c0a439f8832f02a5ae58
+ms.sourcegitcommit: 94d33cadc5ff81d2ac389bf5f26422c227832052
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 04/30/2018
 ---
 # <a name="built-in-configuration"></a>內建組態
 這個範例示範使用和設定 SQL 工作流程執行個體存放區。 SQL 工作流程執行個體存放區是以 SQL 為基礎的執行個體存放區實作。 它允許執行個體在 SQL Server 或 SQL Server Express 資料庫中來回儲存及載入。  
@@ -36,7 +37,7 @@ ms.lasthandoff: 12/22/2017
   
  計數工作流程是由工作流程服務主機自我主控的。 程式的 `Main` 方法會建立裝載計數工作流程之工作流程服務主機的執行個體。 它會定義可用來連接至計數工作流程的端點。 定義端點之後，它會定義 SQL 工作流程執行個體存放區行為，用來設定 SQL 工作流程執行個體存放區。 接著程式會建立呼叫計數工作流程 Start 方法的用戶端。  
   
- 一旦程式啟動，計數器會自動開始計數。 請注意，載入執行個體以及設定 SQL 工作流程執行個體存放區可能要花幾秒才能完成。 [!INCLUDE[crabout](../../../../includes/crabout-md.md)]工作流程執行個體存放區，請參閱[SQL 工作流程執行個體存放區](../../../../docs/framework/windows-workflow-foundation/sql-workflow-instance-store.md)。  
+ 一旦程式啟動，計數器會自動開始計數。 請注意，載入執行個體以及設定 SQL 工作流程執行個體存放區可能要花幾秒才能完成。 如需工作流程執行個體存放區的詳細資訊，請參閱[SQL 工作流程執行個體存放區](../../../../docs/framework/windows-workflow-foundation/sql-workflow-instance-store.md)。  
   
  此範例包含二個部分：  
   
@@ -116,5 +117,5 @@ ms.lasthandoff: 12/22/2017
 >   
 >  `<InstallDrive>:\WF_WCF_Samples\WF\Basic\Persistence\BuiltInConfiguration`  
   
-## <a name="see-also"></a>請參閱  
+## <a name="see-also"></a>另請參閱  
  [AppFabric 主控與持續性範例](http://go.microsoft.com/fwlink/?LinkId=193961)

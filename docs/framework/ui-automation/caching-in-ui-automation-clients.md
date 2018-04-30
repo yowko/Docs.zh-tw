@@ -19,11 +19,11 @@ ms.author: mhopkins
 manager: markl
 ms.workload:
 - dotnet
-ms.openlocfilehash: 5bbd54d4e1e8a6a1eae52f50696aecddd1f8bd8a
-ms.sourcegitcommit: 86adcc06e35390f13c1e372c36d2e044f1fc31ef
+ms.openlocfilehash: 2db81007b745a1c3ee8434b400ab92a01aeeb6e2
+ms.sourcegitcommit: 94d33cadc5ff81d2ac389bf5f26422c227832052
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/26/2018
+ms.lasthandoff: 04/30/2018
 ---
 # <a name="caching-in-ui-automation-clients"></a>UI 自動化用戶端中的快取
 > [!NOTE]
@@ -33,7 +33,7 @@ ms.lasthandoff: 04/26/2018
   
  在 [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)]中，快取表示預先提取資料。 該資料即可供存取，而不需進一步的跨處理序通訊。 使用者介面自動化用戶端應用程式通常會使用快取來大量擷取屬性和控制項模式。 接著，就會視需要從快取中擷取資訊。 應用程式通常會為了回應 [!INCLUDE[TLA#tla_ui](../../../includes/tlasharptla-ui-md.md)] 中有項目已變更的事件，而定期更新快取。  
   
- 在搭配 [!INCLUDE[TLA#tla_wpf](../../../includes/tlasharptla-wpf-md.md)] 控制項和具有伺服器端使用者介面自動化提供者的自訂控制項時，快取的優勢最明顯。 在存取用戶端提供者 (如 [!INCLUDE[TLA2#tla_win32](../../../includes/tla2sharptla-win32-md.md)] 控制項的預設提供者) 時，優勢較不明顯。  
+ 快取的好處是使用 Windows Presentation Foundation (WPF) 控制項和具有伺服器端 UI 自動化提供者的自訂控制項最為明顯。 在存取用戶端提供者 (如 [!INCLUDE[TLA2#tla_win32](../../../includes/tla2sharptla-win32-md.md)] 控制項的預設提供者) 時，優勢較不明顯。  
   
  下列情況會發生快取：當應用程式啟動 <xref:System.Windows.Automation.CacheRequest> ，然後使用任何會傳回 <xref:System.Windows.Automation.AutomationElement>的方法或屬性時；例如 <xref:System.Windows.Automation.AutomationElement.FindFirst%2A>、 <xref:System.Windows.Automation.AutomationElement.FindAll%2A>。 方法的<xref:System.Windows.Automation.TreeWalker>類別例外，如果快取只執行<xref:System.Windows.Automation.CacheRequest>指定為參數 (例如， <xref:System.Windows.Automation.TreeWalker.GetFirstChild%28System.Windows.Automation.AutomationElement%2CSystem.Windows.Automation.CacheRequest%29?displayProperty=nameWithType>。  
   

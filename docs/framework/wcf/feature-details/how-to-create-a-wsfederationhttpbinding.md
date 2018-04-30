@@ -22,11 +22,11 @@ ms.author: dotnetcontent
 manager: wpickett
 ms.workload:
 - dotnet
-ms.openlocfilehash: 8962564bbefc3f43261a2979ae9765369b211f15
-ms.sourcegitcommit: 03ee570f6f528a7d23a4221dcb26a9498edbdf8c
+ms.openlocfilehash: f43b95df73b35b7dc7c34c2e16364dfa7bbdbee4
+ms.sourcegitcommit: 94d33cadc5ff81d2ac389bf5f26422c227832052
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/28/2018
+ms.lasthandoff: 04/30/2018
 ---
 # <a name="how-to-create-a-wsfederationhttpbinding"></a>HOW TO：建立 WSFederationHttpBinding
 在[!INCLUDE[indigo1](../../../../includes/indigo1-md.md)]、<xref:System.ServiceModel.WSFederationHttpBinding>類別 ([\<wsFederationHttpBinding >](../../../../docs/framework/configure-apps/file-schema/wcf/wsfederationhttpbinding.md)組態中) 會提供一個機制來公開聯合的服務。 也就是，要求用戶端使用由安全性權杖服務發出的安全性權杖進行驗證的一種服務。 這個主題會表示如何在程式碼和組態中設定 <xref:System.ServiceModel.WSFederationHttpBinding>。 一旦建立了繫結，就可以設定端點以使用該繫結。  
@@ -48,7 +48,7 @@ ms.lasthandoff: 04/28/2018
   
      SAML 1.1 權杖的 URI 是"http://docs.oasis-open.org/wss/oasis-wss-saml-token-profile-1.1#SAMLV1.1"。  
   
-4.  選擇性。 在聯合服務上，請將 <xref:System.ServiceModel.FederatedMessageSecurityOverHttp.IssuerMetadataAddress%2A> 屬性設定為安全性權杖服務的中繼資料 URL。 中繼資料端點可讓服務的用戶端選取適當的繫結/端點組 (如果已將服務設定為發行中繼資料)。 [!INCLUDE[crabout](../../../../includes/crabout-md.md)] 發行中繼資料，請參閱[發行中繼資料](../../../../docs/framework/wcf/feature-details/publishing-metadata.md)。  
+4.  選擇性。 在聯合服務上，請將 <xref:System.ServiceModel.FederatedMessageSecurityOverHttp.IssuerMetadataAddress%2A> 屬性設定為安全性權杖服務的中繼資料 URL。 中繼資料端點可讓服務的用戶端選取適當的繫結/端點組 (如果已將服務設定為發行中繼資料)。 如需發行中繼資料的詳細資訊，請參閱[發行中繼資料](../../../../docs/framework/wcf/feature-details/publishing-metadata.md)。  
   
  您也可以設定其他屬性，包括在發行的權杖中當做證明金鑰使用的金鑰類型、在用戶端和服務之間使用的演算法套件、是否交涉或明確指定服務認證、服務預期發行的權杖要包含的任何特定宣告，以及必須新增至要求 (這些是用戶端傳送至安全性權杖服務的要求) 的其他 XML 項目。  
   
@@ -103,7 +103,7 @@ ms.lasthandoff: 04/28/2018
   
 12. 如需詳細資訊，請參閱[服務識別和驗證](../../../../docs/framework/wcf/feature-details/service-identity-and-authentication.md)。  
   
-13. 如果未指定本機簽發者，則在用戶端上為必要項；在服務上則不要使用。 建立[\<繫結 >](../../../../docs/framework/misc/binding.md)可用來與安全性權杖服務通訊的繫結區段中的項目。 [!INCLUDE[crabout](../../../../includes/crabout-md.md)] 建立繫結，請參閱[How to： 在組態中指定服務繫結](../../../../docs/framework/wcf/how-to-specify-a-service-binding-in-configuration.md)。  
+13. 如果未指定本機簽發者，則在用戶端上為必要項；在服務上則不要使用。 建立[\<繫結 >](../../../../docs/framework/misc/binding.md)可用來與安全性權杖服務通訊的繫結區段中的項目。 如需有關如何建立繫結的詳細資訊，請參閱[How to： 在組態中指定服務繫結](../../../../docs/framework/wcf/how-to-specify-a-service-binding-in-configuration.md)。  
   
 14. 藉由設定 `binding` 項目的 `bindingConfiguration` 和 `<issuer>` 屬性，指定在前面的步驟中所建立的繫結。  
   

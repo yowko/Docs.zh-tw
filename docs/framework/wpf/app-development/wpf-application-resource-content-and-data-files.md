@@ -1,12 +1,13 @@
 ---
-title: "WPF 應用程式資源、內容和資料檔案"
-ms.custom: 
+title: WPF 應用程式資源、內容和資料檔案
+ms.custom: ''
 ms.date: 03/30/2017
 ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.technology: dotnet-wpf
-ms.tgt_pltfrm: 
+ms.reviewer: ''
+ms.suite: ''
+ms.technology:
+- dotnet-wpf
+ms.tgt_pltfrm: ''
 ms.topic: article
 dev_langs:
 - csharp
@@ -24,19 +25,20 @@ helpviewer_keywords:
 - application development [WPF], files
 - application management [WPF]
 ms.assetid: 7ad2943b-3961-41d3-8fc6-1582d43f5d99
-caps.latest.revision: "25"
+caps.latest.revision: 25
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.workload: dotnet
-ms.openlocfilehash: 284c3b6788fd43a10d65cfa8bd6c032e4b1e1cd6
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.workload:
+- dotnet
+ms.openlocfilehash: bcf0a725b7b3467a50a9f51850709dd972da217d
+ms.sourcegitcommit: 94d33cadc5ff81d2ac389bf5f26422c227832052
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 04/30/2018
 ---
 # <a name="wpf-application-resource-content-and-data-files"></a>WPF 應用程式資源、內容和資料檔案
-[!INCLUDE[TLA#tla_win](../../../../includes/tlasharptla-win-md.md)]應用程式通常取決於檔案包含非可執行檔的資料，例如[!INCLUDE[TLA#tla_xaml](../../../../includes/tlasharptla-xaml-md.md)]、 影像、 視訊和音訊。 [!INCLUDE[TLA#tla_wpf](../../../../includes/tlasharptla-wpf-md.md)] 提供設定、識別及使用這些資料檔案類型 (稱為應用程式資料檔案) 的特殊支援。 這項支援是以一組特定的應用程式資料檔案類型為中心，包括：  
+[!INCLUDE[TLA#tla_win](../../../../includes/tlasharptla-win-md.md)] 應用程式通常取決於檔案包含非可執行檔的資料，例如[!INCLUDE[TLA#tla_xaml](../../../../includes/tlasharptla-xaml-md.md)]、 影像、 視訊和音訊。 Windows Presentation Foundation (WPF) 提供如何設定、 識別，以及使用這些類型的資料檔案，稱為應用程式資料檔案的特殊支援。 這項支援是以一組特定的應用程式資料檔案類型為中心，包括：  
   
 -   **資源檔**： 資料檔案會編譯到可執行檔或程式庫[!INCLUDE[TLA2#tla_wpf](../../../../includes/tla2sharptla-wpf-md.md)]組件。  
   
@@ -46,7 +48,7 @@ ms.lasthandoff: 12/22/2017
   
  這三種檔案類型之間的其中一個重要區別是資源檔和內容檔是建置階段的已知檔案；組件並明確知道這兩種檔案。 站台上的來源檔案，不過，組件可能完全不知道它們，或透過組件的隱含知識[!INCLUDE[TLA#tla_uri](../../../../includes/tlasharptla-uri-md.md)]參考，後者的情況下不保證來源檔案的參照站台確實存在。  
   
- 若要參考的應用程式資料檔案，[!INCLUDE[TLA#tla_wpf](../../../../includes/tlasharptla-wpf-md.md)]使用組件[!INCLUDE[TLA#tla_uri](../../../../includes/tlasharptla-uri-md.md)]配置，這會在將詳細說明[WPF 中的組件 Uri](../../../../docs/framework/wpf/app-development/pack-uris-in-wpf.md))。  
+ 若要參考應用程式資料檔案，Windows Presentation Foundation (WPF) 使用的組件[!INCLUDE[TLA#tla_uri](../../../../includes/tlasharptla-uri-md.md)]配置，這會在將詳細說明[WPF 中的組件 Uri](../../../../docs/framework/wpf/app-development/pack-uris-in-wpf.md))。  
   
  本主題描述何設定及使用應用程式資料檔案。  
   
@@ -85,7 +87,7 @@ ms.lasthandoff: 12/22/2017
  建立專案時，[!INCLUDE[TLA2#tla_msbuild](../../../../includes/tla2sharptla-msbuild-md.md)]將資源編譯成組件。  
   
 ### <a name="using-resource-files"></a>使用資源檔  
- 若要載入的資源檔，您可以呼叫<xref:System.Windows.Application.GetResourceStream%2A>方法<xref:System.Windows.Application>類別，傳遞到組件[!INCLUDE[TLA2#tla_uri](../../../../includes/tla2sharptla-uri-md.md)]可識別所需的資源檔。 <xref:System.Windows.Application.GetResourceStream%2A>傳回<xref:System.Windows.Resources.StreamResourceInfo>物件，它會公開資源檔案儲存為<xref:System.IO.Stream>並描述其內容的型別。  
+ 若要載入的資源檔，您可以呼叫<xref:System.Windows.Application.GetResourceStream%2A>方法<xref:System.Windows.Application>類別，傳遞到組件[!INCLUDE[TLA2#tla_uri](../../../../includes/tla2sharptla-uri-md.md)]可識別所需的資源檔。 <xref:System.Windows.Application.GetResourceStream%2A> 傳回<xref:System.Windows.Resources.StreamResourceInfo>物件，它會公開資源檔案儲存為<xref:System.IO.Stream>並描述其內容的型別。  
   
  例如，下列程式碼會示範如何使用<xref:System.Windows.Application.GetResourceStream%2A>載入<xref:System.Windows.Controls.Page>資源檔案，並將它設為內容的<xref:System.Windows.Controls.Frame>(`pageFrame`):  
   
@@ -165,7 +167,7 @@ ms.lasthandoff: 12/22/2017
  <xref:System.Windows.Resources.AssemblyAssociatedContentFileAttribute>值也是組建輸出資料夾中的內容檔案的路徑的值。  
   
 ### <a name="using-content-files"></a>使用內容檔  
- 若要載入的內容檔案，您可以呼叫<xref:System.Windows.Application.GetContentStream%2A>方法<xref:System.Windows.Application>類別，傳遞到組件[!INCLUDE[TLA2#tla_uri](../../../../includes/tla2sharptla-uri-md.md)]可識別所需的內容檔案。 <xref:System.Windows.Application.GetContentStream%2A>傳回<xref:System.Windows.Resources.StreamResourceInfo>物件，它會公開內容的檔案做為<xref:System.IO.Stream>並描述其內容的型別。  
+ 若要載入的內容檔案，您可以呼叫<xref:System.Windows.Application.GetContentStream%2A>方法<xref:System.Windows.Application>類別，傳遞到組件[!INCLUDE[TLA2#tla_uri](../../../../includes/tla2sharptla-uri-md.md)]可識別所需的內容檔案。 <xref:System.Windows.Application.GetContentStream%2A> 傳回<xref:System.Windows.Resources.StreamResourceInfo>物件，它會公開內容的檔案做為<xref:System.IO.Stream>並描述其內容的型別。  
   
  例如，下列程式碼會示範如何使用<xref:System.Windows.Application.GetContentStream%2A>載入<xref:System.Windows.Controls.Page>內容檔案，並將它設為內容的<xref:System.Windows.Controls.Frame>(`pageFrame`)。  
   
@@ -227,7 +229,7 @@ ms.lasthandoff: 12/22/2017
  建立專案時，[!INCLUDE[TLA2#tla_msbuild](../../../../includes/tla2sharptla-msbuild-md.md)]將指定的檔案複製到組建輸出資料夾。  
   
 ### <a name="using-site-of-origin-files"></a>使用來源網站檔  
- 若要載入的來源檔案的網站，您可以呼叫<xref:System.Windows.Application.GetRemoteStream%2A>方法<xref:System.Windows.Application>類別，傳遞到組件[!INCLUDE[TLA2#tla_uri](../../../../includes/tla2sharptla-uri-md.md)]識別的來源檔案所要的網站。 <xref:System.Windows.Application.GetRemoteStream%2A>傳回<xref:System.Windows.Resources.StreamResourceInfo>物件，它會公開做為來源檔案的站台<xref:System.IO.Stream>並描述其內容的型別。  
+ 若要載入的來源檔案的網站，您可以呼叫<xref:System.Windows.Application.GetRemoteStream%2A>方法<xref:System.Windows.Application>類別，傳遞到組件[!INCLUDE[TLA2#tla_uri](../../../../includes/tla2sharptla-uri-md.md)]識別的來源檔案所要的網站。 <xref:System.Windows.Application.GetRemoteStream%2A> 傳回<xref:System.Windows.Resources.StreamResourceInfo>物件，它會公開做為來源檔案的站台<xref:System.IO.Stream>並描述其內容的型別。  
   
  例如，下列程式碼會示範如何使用<xref:System.Windows.Application.GetRemoteStream%2A>載入<xref:System.Windows.Controls.Page>來源網站的檔案，並將它設為內容的<xref:System.Windows.Controls.Frame>(`pageFrame`)。  
   
@@ -249,5 +251,5 @@ ms.lasthandoff: 12/22/2017
 ## <a name="rebuilding-after-changing-build-type"></a>在變更組建類型之後重建  
  在變更應用程式資料檔案的組建類型之後，您必須重建整個應用程式，以確認套用這些變更。 若您只建置應用程式，則不會套用變更。  
   
-## <a name="see-also"></a>請參閱  
+## <a name="see-also"></a>另請參閱  
  [WPF 中的 Pack URI](../../../../docs/framework/wpf/app-development/pack-uris-in-wpf.md)

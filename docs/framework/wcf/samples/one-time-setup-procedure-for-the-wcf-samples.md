@@ -1,24 +1,26 @@
 ---
-title: "Windows Communication Foundation 範例的單次安裝程序"
-ms.custom: 
+title: Windows Communication Foundation 範例的單次安裝程序
+ms.custom: ''
 ms.date: 03/30/2017
 ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.technology: dotnet-clr
-ms.tgt_pltfrm: 
+ms.reviewer: ''
+ms.suite: ''
+ms.technology:
+- dotnet-clr
+ms.tgt_pltfrm: ''
 ms.topic: article
 ms.assetid: a5848ffd-3eb5-432d-812e-bd948ccb6bca
-caps.latest.revision: "83"
+caps.latest.revision: 83
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.workload: dotnet
-ms.openlocfilehash: bab723e4e52db9936e635f1348dff86d75de274d
-ms.sourcegitcommit: c0dd436f6f8f44dc80dc43b07f6841a00b74b23f
+ms.workload:
+- dotnet
+ms.openlocfilehash: acb89c8c1819024ebdb77720654ab7280333e456
+ms.sourcegitcommit: 94d33cadc5ff81d2ac389bf5f26422c227832052
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 01/19/2018
+ms.lasthandoff: 04/30/2018
 ---
 # <a name="one-time-setup-procedure-for-the-windows-communication-foundation-samples"></a>Windows Communication Foundation 範例的單次安裝程序
 大部分的 [!INCLUDE[indigo1](../../../../includes/indigo1-md.md)] 範例都是裝載在網際網路資訊服務 (IIS) 中，並且從共用虛擬目錄執行。 這個單次安裝程序會在磁碟上建立資料夾它也會將虛擬目錄加入至名為 IIS **ServiceModelSamples**。  
@@ -30,7 +32,7 @@ ms.lasthandoff: 01/19/2018
   
 ### <a name="one-time-setup-procedure-for-wcf-samples"></a>WCF 範例的單次安裝程序  
   
-1.  請確定已安裝 [!INCLUDE[vstecasp](../../../../includes/vstecasp-md.md)]。 [!INCLUDE[crabout](../../../../includes/crabout-md.md)]如何設定[!INCLUDE[vstecasp](../../../../includes/vstecasp-md.md)]，請參閱[Internet Information Service 裝載指示](../../../../docs/framework/wcf/samples/internet-information-service-hosting-instructions.md)。  
+1.  請確定已安裝 [!INCLUDE[vstecasp](../../../../includes/vstecasp-md.md)]。 如需有關如何設定[!INCLUDE[vstecasp](../../../../includes/vstecasp-md.md)]，請參閱[Internet Information Service 裝載指示](../../../../docs/framework/wcf/samples/internet-information-service-hosting-instructions.md)。  
   
 2.  請確定已安裝 [!INCLUDE[netfx40_long](../../../../includes/netfx40-long-md.md)]。 搜尋下列目錄 v4.0 （或更新版本）： **\Windows\Microsoft.NET\Framework**  
   
@@ -88,7 +90,7 @@ ms.lasthandoff: 01/19/2018
     > [!NOTE]
     >  基於安全性考量，在您完成範例後，請記得執行名為 Cleanupvroot.bat 的批次檔，移除虛擬目錄定義以及在上述安裝步驟中授與的權限。  
   
-13. 自我裝載 (而非裝載於 IIS) 的範例必須有權限將 HTTP 位址註冊到電腦上，以便進行接聽。 HTTP 命名空間保留區的權限來自用以執行範例的使用者帳戶。 根據預設，系統管理員帳戶擁有註冊任何 HTTP 位址的權限。 至於非系統管理員帳戶，則必須具有範例所用之 HTTP 命名空間的權限。 [!INCLUDE[crabout](../../../../includes/crabout-md.md)]如何設定命名空間保留區，請參閱[設定 HTTP 和 HTTPS](../../../../docs/framework/wcf/feature-details/configuring-http-and-https.md)。  
+13. 自我裝載 (而非裝載於 IIS) 的範例必須有權限將 HTTP 位址註冊到電腦上，以便進行接聽。 HTTP 命名空間保留區的權限來自用以執行範例的使用者帳戶。 根據預設，系統管理員帳戶擁有註冊任何 HTTP 位址的權限。 至於非系統管理員帳戶，則必須具有範例所用之 HTTP 命名空間的權限。 如需如何設定命名空間保留區的詳細資訊，請參閱[設定 HTTP 和 HTTPS](../../../../docs/framework/wcf/feature-details/configuring-http-and-https.md)。  
   
 14. 有些範例需要訊息佇列。 請參閱[安裝訊息佇列 (MSMQ)](../../../../docs/framework/wcf/samples/installing-message-queuing-msmq.md)如需安裝指示。  
   
@@ -97,4 +99,4 @@ ms.lasthandoff: 01/19/2018
   
 15. 有些範例需要憑證。 請參閱[Internet Information Services (IIS) 伺服器憑證安裝指示](../../../../docs/framework/wcf/samples/iis-server-certificate-installation-instructions.md)。  
   
-## <a name="see-also"></a>請參閱
+## <a name="see-also"></a>另請參閱

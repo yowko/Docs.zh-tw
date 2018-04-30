@@ -20,11 +20,11 @@ ms.author: dotnetcontent
 manager: wpickett
 ms.workload:
 - dotnet
-ms.openlocfilehash: d9650fd6a4fa40cb425c9f15d4a12e6c73d8c599
-ms.sourcegitcommit: 03ee570f6f528a7d23a4221dcb26a9498edbdf8c
+ms.openlocfilehash: c182cf5e5cc9346645f15293060671a0a0ce1caf
+ms.sourcegitcommit: 94d33cadc5ff81d2ac389bf5f26422c227832052
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/28/2018
+ms.lasthandoff: 04/30/2018
 ---
 # <a name="what-is-windows-communication-foundation"></a>何謂 Windows Communication Foundation
 [!INCLUDE[indigo1](../../../includes/indigo1-md.md)] 是用於建置服務導向應用程式的架構。 使用 [!INCLUDE[indigo2](../../../includes/indigo2-md.md)]，您可以在各個服務端點之間傳送非同步訊息形式的資料。 服務端點可能是由 IIS 裝載之持續上線服務的一部分，或為應用程式中裝載的服務。 端點則大致是某項服務的用戶端，會向該服務端點要求資料。 訊息可為簡單的單一字元或以 XML 傳送的字組，乃至如二進位資料的資料流這般複雜的形式都沒問題。 其中幾個範例案例包括：  
@@ -52,11 +52,11 @@ ms.lasthandoff: 04/28/2018
   
 -   **互通性**  
   
-     [!INCLUDE[indigo2](../../../includes/indigo2-md.md)] 實作了 Web 服務互通性的最新業界標準。 [!INCLUDE[crabout](../../../includes/crabout-md.md)] 受支援標準的詳細資訊，請參閱 [Interoperability and Integration](../../../docs/framework/wcf/feature-details/interoperability-and-integration.md).  
+     [!INCLUDE[indigo2](../../../includes/indigo2-md.md)] 實作了 Web 服務互通性的最新業界標準。 如需支援的標準的詳細資訊，請參閱[互通性與整合](../../../docs/framework/wcf/feature-details/interoperability-and-integration.md)。  
   
 -   **多種訊息模式**  
   
-     訊息將以數種模式的其中一種進行交換。 最常見的模式為要求/回覆模式，即某端點向另一端點要求資料， 然後由該另一端點予以回覆。 其他模式還包括單向訊息，則是僅由單一端點傳送訊息，但從不期待會收到回覆。 更複雜的模式為雙工交換模式，其中會由兩個端點建立連線，並相互往返傳送資料，類似立即訊息程式。 [!INCLUDE[crabout](../../../includes/crabout-md.md)] 如何使用 [!INCLUDE[indigo2](../../../includes/indigo2-md.md)] 來實作各種訊息交換模式的詳細資訊，請參閱 [Contracts](../../../docs/framework/wcf/feature-details/contracts.md).  
+     訊息將以數種模式的其中一種進行交換。 最常見的模式為要求/回覆模式，即某端點向另一端點要求資料， 然後由該另一端點予以回覆。 其他模式還包括單向訊息，則是僅由單一端點傳送訊息，但從不期待會收到回覆。 更複雜的模式為雙工交換模式，其中會由兩個端點建立連線，並相互往返傳送資料，類似立即訊息程式。 如需有關如何實作不同訊息交換模式使用[!INCLUDE[indigo2](../../../includes/indigo2-md.md)]看到[合約](../../../docs/framework/wcf/feature-details/contracts.md)。  
   
 -   **服務中繼資料**  
   
@@ -72,11 +72,11 @@ ms.lasthandoff: 04/28/2018
   
 -   **多重傳輸與編碼**  
   
-     訊息可以透過數種內建傳輸通訊協定與編碼的任何方式進行傳送。 最常見的通訊協定與編碼是將傳送文字編碼的 SOAP 訊息使用位於全球資訊網上使用超文字傳輸通訊協定 (HTTP)。 或者， [!INCLUDE[indigo2](../../../includes/indigo2-md.md)] 也能讓您透過 TCP、具名管道或 MSMQ 傳送訊息。 這些訊息可編碼為文字，或採用最佳化的二進位格式。  使用 MTOM 標準將能有效傳送二進位資料。 如果所提供的傳輸或編碼都無法滿足您的需求，您還可以建立自己的自訂傳輸或編碼。 [!INCLUDE[crabout](../../../includes/crabout-md.md)] 支援的傳輸與編碼[!INCLUDE[indigo2](../../../includes/indigo2-md.md)]看到[傳輸](../../../docs/framework/wcf/feature-details/transports.md)。  
+     訊息可以透過數種內建傳輸通訊協定與編碼的任何方式進行傳送。 最常見的通訊協定與編碼是將傳送文字編碼的 SOAP 訊息使用位於全球資訊網上使用超文字傳輸通訊協定 (HTTP)。 或者， [!INCLUDE[indigo2](../../../includes/indigo2-md.md)] 也能讓您透過 TCP、具名管道或 MSMQ 傳送訊息。 這些訊息可編碼為文字，或採用最佳化的二進位格式。  使用 MTOM 標準將能有效傳送二進位資料。 如果所提供的傳輸或編碼都無法滿足您的需求，您還可以建立自己的自訂傳輸或編碼。 如需有關支援的傳輸與編碼[!INCLUDE[indigo2](../../../includes/indigo2-md.md)]看到[傳輸](../../../docs/framework/wcf/feature-details/transports.md)。  
   
 -   **可靠的佇列訊息**  
   
-     [!INCLUDE[indigo2](../../../includes/indigo2-md.md)] 使用透過 WS-Reliable 傳訊來實作的可靠工作階段以及 MSMQ，來支援可靠的訊息交換。 [!INCLUDE[crabout](../../../includes/crabout-md.md)] 中的可靠及佇列訊息支援[!INCLUDE[indigo2](../../../includes/indigo2-md.md)]看到[佇列和可靠工作階段](../../../docs/framework/wcf/feature-details/queues-and-reliable-sessions.md)。  
+     [!INCLUDE[indigo2](../../../includes/indigo2-md.md)] 使用透過 WS-Reliable 傳訊來實作的可靠工作階段以及 MSMQ，來支援可靠的訊息交換。 如需詳細資訊，關於可靠及佇列訊息支援[!INCLUDE[indigo2](../../../includes/indigo2-md.md)]看到[佇列和可靠工作階段](../../../docs/framework/wcf/feature-details/queues-and-reliable-sessions.md)。  
   
 -   **永久性的訊息**  
   
@@ -84,7 +84,7 @@ ms.lasthandoff: 04/28/2018
   
 -   **異動**  
   
-     WCF 還支援使用三種交易模型中的任一種進行交易：WS-AtomicTtransaction、 <xref:System.Transactions> 命名空間中的應用程式開發介面，以及 Microsoft 分散式交易協調器。 [!INCLUDE[crabout](../../../includes/crabout-md.md)] 中的交易支援[!INCLUDE[indigo2](../../../includes/indigo2-md.md)]看到[交易](../../../docs/framework/wcf/feature-details/transactions-in-wcf.md)。  
+     WCF 還支援使用三種交易模型中的任一種進行交易：WS-AtomicTtransaction、 <xref:System.Transactions> 命名空間中的應用程式開發介面，以及 Microsoft 分散式交易協調器。 如需有關交易支援[!INCLUDE[indigo2](../../../includes/indigo2-md.md)]看到[交易](../../../docs/framework/wcf/feature-details/transactions-in-wcf.md)。  
   
 -   **AJAX 與 REST 支援**  
   
@@ -92,7 +92,7 @@ ms.lasthandoff: 04/28/2018
   
 -   **擴充性**  
   
-     [!INCLUDE[indigo2](../../../includes/indigo2-md.md)] 架構具有若干擴充點。 如果需要額外的功能，有數個進入點可讓您自訂服務的行為。 [!INCLUDE[crabout](../../../includes/crabout-md.md)] 請參閱可用的擴充點[延伸 WCF](../../../docs/framework/wcf/extending/index.md)。  
+     [!INCLUDE[indigo2](../../../includes/indigo2-md.md)] 架構具有若干擴充點。 如果需要額外的功能，有數個進入點可讓您自訂服務的行為。 如需有關可用的擴充點看到[延伸 WCF](../../../docs/framework/wcf/extending/index.md)。  
   
 ## <a name="wcf-integration-with-other-microsoft-technologies"></a>WCF 與其他 Microsoft 技術的整合  
  [!INCLUDE[indigo2](../../../includes/indigo2-md.md)] 是具有靈活彈性的平台。 由於提供了極大彈性，許多其他 Microsoft 產品也使用 [!INCLUDE[indigo2](../../../includes/indigo2-md.md)] 。 了解 [!INCLUDE[indigo2](../../../includes/indigo2-md.md)]的基本概念後，您在使用任何這些產品時就能立即掌握優勢。  

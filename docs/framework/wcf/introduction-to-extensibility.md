@@ -20,11 +20,11 @@ ms.author: dotnetcontent
 manager: wpickett
 ms.workload:
 - dotnet
-ms.openlocfilehash: 331e71f26b1c703f7df27086d943e799b4eb13e2
-ms.sourcegitcommit: 03ee570f6f528a7d23a4221dcb26a9498edbdf8c
+ms.openlocfilehash: 991c3879990fd5b6562a2270c65e1560efadc022
+ms.sourcegitcommit: 94d33cadc5ff81d2ac389bf5f26422c227832052
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/28/2018
+ms.lasthandoff: 04/30/2018
 ---
 # <a name="introduction-to-extensibility"></a>擴充性簡介
 [!INCLUDE[indigo1](../../../includes/indigo1-md.md)] 應用程式模型是設計用來解決任何分散式應用程式大部分的通訊要求， 但是一定有預設應用程式模型和系統提供的實作所不支援的情況。 [!INCLUDE[indigo2](../../../includes/indigo2-md.md)] 擴充性模型是用來讓您能修改每個層級的系統行為，甚至到取代整個系統模型，所以可以支援自訂的情況。 本主題會概述各種擴充區域，並指向每個擴充區域的詳細資訊。  
@@ -43,7 +43,7 @@ ms.lasthandoff: 04/28/2018
   
  應用程式訊息包含您或您的客戶所建立，並且用於用戶端或服務作業的資料。 視您的需要而定，這些訊息適用於形式為訊息或物件的應用程式層級擴充系統。  
   
- 所有訊息都會通過通道系統，但是只有應用程式訊息會從通道系統傳遞至應用程式。 若要建立新的通道層級功能，您必須擴充通道系統。 若要建立新的應用程式層級功能，您必須擴充服務或用戶端執行階段 (分別是發送器和通道處理站)。 [!INCLUDE[crabout](../../../includes/crabout-md.md)] 擴充應用程式執行階段，請參閱[擴充 ServiceHost 與服務模型層](../../../docs/framework/wcf/extending/extending-servicehost-and-the-service-model-layer.md)。  
+ 所有訊息都會通過通道系統，但是只有應用程式訊息會從通道系統傳遞至應用程式。 若要建立新的通道層級功能，您必須擴充通道系統。 若要建立新的應用程式層級功能，您必須擴充服務或用戶端執行階段 (分別是發送器和通道處理站)。 如需擴充應用程式執行階段的詳細資訊，請參閱[擴充 ServiceHost 與服務模型層](../../../docs/framework/wcf/extending/extending-servicehost-and-the-service-model-layer.md)。  
   
 #### <a name="extending-security"></a>擴充安全性  
  若要建置自訂安全性機制，例如權杖和認證，您必須擴充安全性系統。 如需詳細資訊，請參閱[擴充安全性](../../../docs/framework/wcf/extending/extending-security.md)。  

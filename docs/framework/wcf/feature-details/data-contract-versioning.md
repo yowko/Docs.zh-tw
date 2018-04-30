@@ -23,11 +23,11 @@ ms.author: dotnetcontent
 manager: wpickett
 ms.workload:
 - dotnet
-ms.openlocfilehash: f232cb1cf98fe01aa0542c2a4b459fb7fc7b5089
-ms.sourcegitcommit: 03ee570f6f528a7d23a4221dcb26a9498edbdf8c
+ms.openlocfilehash: fd1679bb50a0dc6ee4997f7ae427c1cbdc0948ef
+ms.sourcegitcommit: 94d33cadc5ff81d2ac389bf5f26422c227832052
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/28/2018
+ms.lasthandoff: 04/30/2018
 ---
 # <a name="data-contract-versioning"></a>資料合約版本控制
 隨著應用程式的發展，您也必須變更服務所使用的資料合約。 本主題說明如何設定資料合約的版本。 本主題描述資料合約版本控制的機制。 如需完整的概觀和規定的版本控制指導方針，請參閱[最佳做法： 資料合約版本控制](../../../../docs/framework/wcf/best-practices-data-contract-versioning.md)。  
@@ -125,7 +125,7 @@ ms.lasthandoff: 04/28/2018
  新增或移除列舉型別成員是中斷變更。 變更列舉型別成員的名稱是中斷變更，除非其合約名稱保持為與舊版中使用 `EnumMemberAtttribute` 屬性的名稱相同。 如需詳細資訊，請參閱[列舉資料合約中的型別](../../../../docs/framework/wcf/feature-details/enumeration-types-in-data-contracts.md)。  
   
 ## <a name="collections"></a>集合  
- 大多數的集合變更是不中斷的，因為大部份的集合類型可以在資料合約模型內互相交換。 不過，將非自訂的集合進行自訂 (反之亦然) 則是中斷變更。 同時，變更集合的自訂設定是中斷變更，也就是變更其資料合約名稱和命名空間、重複元素名稱、主要元素名稱，以及值元素名稱。 [!INCLUDE[crabout](../../../../includes/crabout-md.md)] 集合自訂化，請參閱[集合資料合約中的型別](../../../../docs/framework/wcf/feature-details/collection-types-in-data-contracts.md)。  
+ 大多數的集合變更是不中斷的，因為大部份的集合類型可以在資料合約模型內互相交換。 不過，將非自訂的集合進行自訂 (反之亦然) 則是中斷變更。 同時，變更集合的自訂設定是中斷變更，也就是變更其資料合約名稱和命名空間、重複元素名稱、主要元素名稱，以及值元素名稱。 如需集合自訂化的詳細資訊，請參閱[集合資料合約中的型別](../../../../docs/framework/wcf/feature-details/collection-types-in-data-contracts.md)。  
 當然，變更集合之內容的資料合約 (例如，從整數的清單變更為字串的清單) 是中斷變更。  
   
 ## <a name="see-also"></a>另請參閱  

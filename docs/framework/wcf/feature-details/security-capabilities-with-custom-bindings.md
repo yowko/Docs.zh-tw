@@ -1,27 +1,29 @@
 ---
-title: "自訂繫結的安全性功能"
-ms.custom: 
+title: 自訂繫結的安全性功能
+ms.custom: ''
 ms.date: 03/30/2017
 ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.technology: dotnet-clr
-ms.tgt_pltfrm: 
+ms.reviewer: ''
+ms.suite: ''
+ms.technology:
+- dotnet-clr
+ms.tgt_pltfrm: ''
 ms.topic: article
 ms.assetid: a2425679-484a-4e6c-9c98-7da7304f1516
-caps.latest.revision: "11"
+caps.latest.revision: 11
 author: BrucePerlerMS
 ms.author: bruceper
 manager: mbaldwin
-ms.workload: dotnet
-ms.openlocfilehash: 2f26e68b9654ccd565328003596e324558f7505f
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.workload:
+- dotnet
+ms.openlocfilehash: 31da996feae4e6509bea637bd17b4f538a75c5af
+ms.sourcegitcommit: 94d33cadc5ff81d2ac389bf5f26422c227832052
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 04/30/2018
 ---
 # <a name="security-capabilities-with-custom-bindings"></a>自訂繫結的安全性功能
-您可以使用一種系統提供的繫結來執行常見的安全性工作。 不過，如果需要更多控制，您可以依照這些主題中的說明，使用 <xref:System.ServiceModel.Channels.SecurityBindingElement> 來建立自訂繫結。 [!INCLUDE[crabout](../../../../includes/crabout-md.md)]自訂繫結，請參閱[自訂繫結](../../../../docs/framework/wcf/extending/custom-bindings.md)。  
+您可以使用一種系統提供的繫結來執行常見的安全性工作。 不過，如果需要更多控制，您可以依照這些主題中的說明，使用 <xref:System.ServiceModel.Channels.SecurityBindingElement> 來建立自訂繫結。 如需有關自訂繫結的詳細資訊，請參閱[自訂繫結](../../../../docs/framework/wcf/extending/custom-bindings.md)。  
   
 ## <a name="in-this-section"></a>本節內容  
  [SecurityBindingElement 驗證模式](../../../../docs/framework/wcf/feature-details/securitybindingelement-authentication-modes.md)  
@@ -54,14 +56,14 @@ ms.lasthandoff: 12/22/2017
 ## <a name="reference"></a>參考資料  
  <xref:System.ServiceModel.Channels.SecurityBindingElement>  
   
- [\<安全性 >](../../../../docs/framework/configure-apps/file-schema/wcf/security-of-custombinding.md)  
+ [\<security>](../../../../docs/framework/configure-apps/file-schema/wcf/security-of-custombinding.md)  
   
 ## <a name="related-sections"></a>相關章節  
  [了解保護層級](../../../../docs/framework/wcf/understanding-protection-level.md)  
   
  [保護服務和用戶端的安全](../../../../docs/framework/wcf/feature-details/securing-services-and-clients.md)  
   
-## <a name="see-also"></a>請參閱  
+## <a name="see-also"></a>另請參閱  
  [繫結和安全性](../../../../docs/framework/wcf/feature-details/bindings-and-security.md)  
  [安全性概觀](../../../../docs/framework/wcf/feature-details/security-overview.md)  
  [系統提供的繫結](../../../../docs/framework/wcf/system-provided-bindings.md)

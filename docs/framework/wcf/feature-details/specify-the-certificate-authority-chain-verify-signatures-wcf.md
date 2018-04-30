@@ -1,27 +1,29 @@
 ---
-title: "HOW TO：指定用來驗證簽章的憑證授權單位憑證鏈結 (WCF)"
-ms.custom: 
+title: HOW TO：指定用來驗證簽章的憑證授權單位憑證鏈結 (WCF)
+ms.custom: ''
 ms.date: 03/30/2017
 ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.technology: dotnet-clr
-ms.tgt_pltfrm: 
+ms.reviewer: ''
+ms.suite: ''
+ms.technology:
+- dotnet-clr
+ms.tgt_pltfrm: ''
 ms.topic: article
 helpviewer_keywords:
 - certificates [WCF], specifying the certificate authority certificate chain
 - certificates [WCF], verifying signatures
 ms.assetid: 7c719355-aa41-4567-80d0-5115a8cf73fd
-caps.latest.revision: "6"
+caps.latest.revision: 6
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.workload: dotnet
-ms.openlocfilehash: f0ea15e8fe9580f561eedf048ed2aaf2e2ed248f
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.workload:
+- dotnet
+ms.openlocfilehash: 29637ea7f0a1e533a6735ebfa6f428fe20039e48
+ms.sourcegitcommit: 94d33cadc5ff81d2ac389bf5f26422c227832052
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 04/30/2018
 ---
 # <a name="how-to-specify-the-certificate-authority-certificate-chain-used-to-verify-signatures-wcf"></a>HOW TO：指定用來驗證簽章的憑證授權單位憑證鏈結 (WCF)
 當 [!INCLUDE[indigo1](../../../../includes/indigo1-md.md)] 收到透過 X.509 憑證簽署的 SOAP 訊息時，根據預設會確認 X.509 憑證是由受信任的憑證授權單位所發行。 它會搜尋憑證存放區並判斷該憑證授權單位的憑證是否已指定為受信任來完成所有程序。 為了讓 [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] 做出正確的判斷，憑證授權單位憑證鏈結必須安裝在正確的憑證存放區。  
@@ -42,7 +44,7 @@ ms.lasthandoff: 12/22/2017
   
          在 Microsoft Management Console (MMC) 中，開啟 [憑證] 嵌入式管理單元。 憑證存放區，[!INCLUDE[indigo2](../../../../includes/indigo2-md.md)]會設定為從選取擷取 X.509 憑證**受信任的根****憑證授權單位**資料夾。 在下**受信任的根憑證授權單位**資料夾中，以滑鼠右鍵按一下**憑證**資料夾，指向**所有工作**，然後按一下 **匯入**. 提供在步驟 a 中匯出的檔案。  
   
-         [!INCLUDE[crabout](../../../../includes/crabout-md.md)]使用 [憑證] 嵌入式管理單元 mmc，請參閱[How to： 使用 MMC 嵌入式管理單元檢視憑證](../../../../docs/framework/wcf/feature-details/how-to-view-certificates-with-the-mmc-snap-in.md)。  
+         如需使用 MMC 憑證嵌入式管理單元的詳細資訊，請參閱[How to： 使用 MMC 嵌入式管理單元檢視憑證](../../../../docs/framework/wcf/feature-details/how-to-view-certificates-with-the-mmc-snap-in.md)。  
   
-## <a name="see-also"></a>請參閱  
+## <a name="see-also"></a>另請參閱  
  [使用憑證](../../../../docs/framework/wcf/feature-details/working-with-certificates.md)

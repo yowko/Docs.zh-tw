@@ -18,11 +18,11 @@ ms.author: dotnetcontent
 manager: wpickett
 ms.workload:
 - dotnet
-ms.openlocfilehash: 63bdbc68851ace71b3afef30e274b9821ed1ad5f
-ms.sourcegitcommit: 03ee570f6f528a7d23a4221dcb26a9498edbdf8c
+ms.openlocfilehash: 6e2d45e7b8769ee525835ad3dc50262a03a5a7b6
+ms.sourcegitcommit: 94d33cadc5ff81d2ac389bf5f26422c227832052
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/28/2018
+ms.lasthandoff: 04/30/2018
 ---
 # <a name="configuring-message-logging"></a>設定訊息記錄
 本主題描述如何針對不同的案例設定訊息記錄。  
@@ -58,7 +58,7 @@ ms.lasthandoff: 04/28/2018
 </system.serviceModel>  
 ```  
   
- [!INCLUDE[crabout](../../../../includes/crabout-md.md)] 訊息記錄設定，請參閱[追蹤和訊息記錄的建議設定](../../../../docs/framework/wcf/diagnostics/tracing/recommended-settings-for-tracing-and-message-logging.md)。  
+ 如需訊息記錄設定的詳細資訊，請參閱[追蹤和訊息記錄的建議設定](../../../../docs/framework/wcf/diagnostics/tracing/recommended-settings-for-tracing-and-message-logging.md)。  
   
  您可以使用 `add` 來指定所要使用之接聽項的名稱和型別。 在範例組態中，我們已將接聽項命名為 "messages"，並且加入標準 .NET Framework 追蹤接聽項 (`System.Diagnostics.XmlWriterTraceListener`) 做為要使用的型別。 如果您要使用 `System.Diagnostics.XmlWriterTraceListener`，就必須在組態檔中指定輸出檔案位置和名稱。 將 `initializeData` 設定為記錄檔的名稱，即可做到這點。 否則，系統會擲回例外狀況 (Exception)。 您也可以實作會將記錄發出到預設檔案的自訂接聽項。  
   
@@ -73,7 +73,7 @@ ms.lasthandoff: 04/28/2018
 <source name="System.ServiceModel.MessageLogging" switchValue="Verbose">  
 ```  
   
- 如果想要停用追蹤來源，您就應該改成使用 `logMessagesAtServiceLevel` 項目的 `logMalformedMessages`、`logMessagesAtTransportLevel` 及 `messageLogging` 屬性。 您應該將所有這些屬性都設定為 `false`。 使用先前程式碼範例中的組態檔、透過組態編輯器 UI 介面，或是使用 WMI，都可以做到這點。 [!INCLUDE[crabout](../../../../includes/crabout-md.md)] 設定編輯器 」 工具，請參閱[組態編輯器工具 (SvcConfigEditor.exe)](../../../../docs/framework/wcf/configuration-editor-tool-svcconfigeditor-exe.md)。 [!INCLUDE[crabout](../../../../includes/crabout-md.md)] WMI 中，請參閱[使用 Windows Management Instrumentation 進行診斷](../../../../docs/framework/wcf/diagnostics/wmi/index.md)。  
+ 如果想要停用追蹤來源，您就應該改成使用 `logMessagesAtServiceLevel` 項目的 `logMalformedMessages`、`logMessagesAtTransportLevel` 及 `messageLogging` 屬性。 您應該將所有這些屬性都設定為 `false`。 使用先前程式碼範例中的組態檔、透過組態編輯器 UI 介面，或是使用 WMI，都可以做到這點。 如需組態編輯器工具的詳細資訊，請參閱[組態編輯器工具 (SvcConfigEditor.exe)](../../../../docs/framework/wcf/configuration-editor-tool-svcconfigeditor-exe.md)。 如需有關 WMI 的詳細資訊，請參閱[使用 Windows Management Instrumentation 進行診斷](../../../../docs/framework/wcf/diagnostics/wmi/index.md)。  
   
 ## <a name="logging-levels-and-options"></a>記錄層級和選項  
  對於傳入的訊息，系統會緊接在訊息形成之後、在訊息到達服務層級中的使用者程式碼之前，以及在偵測到格式錯誤的訊息時進行記錄。  
@@ -91,7 +91,7 @@ ms.lasthandoff: 04/28/2018
  記錄在這層的是要送到網路上傳輸或是在傳輸後而要進行編碼或解碼的訊息。 如果有定義篩選條件，就只會記錄符合篩選條件的訊息。 否則，便會記錄傳輸層級中的所有訊息。 所有的基礎結構訊息都會記錄在這層，其中包括可信賴傳訊訊息。 若是已進行資料流處理的訊息，則只記錄標頭。 此外，安全訊息會以加密形式記錄在此層級，除了使用 HTTPS 一類的安全傳輸的情況以外。  
   
 ### <a name="malformed-level"></a>格式錯誤層級  
- 格式錯誤訊息是指 [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] 堆疊在任何處理階段所拒絕的訊息。 格式錯誤訊息會依現狀加以記錄：也就是若有加密，便會以加密形式記錄，並包含不正確的 XML 和其他格式。 `maxSizeOfMessageToLog` 定義了要以 CDATA 形式記錄之訊息的大小。 根據預設，`maxSizeOfMessageToLog` 會等於 256 K。 [!INCLUDE[crabout](../../../../includes/crabout-md.md)]這個屬性的詳細資訊，請參閱＜其他選項＞一節。  
+ 格式錯誤訊息是指 [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] 堆疊在任何處理階段所拒絕的訊息。 格式錯誤訊息會依現狀加以記錄：也就是若有加密，便會以加密形式記錄，並包含不正確的 XML 和其他格式。 `maxSizeOfMessageToLog` 定義了要以 CDATA 形式記錄之訊息的大小。 根據預設，`maxSizeOfMessageToLog` 會等於 256 K。 如需有關這個屬性的詳細資訊，請參閱其他選項 > 一節。  
   
 ### <a name="other-options"></a>其他選項  
  除了記錄層級，使用者也可以指定下列選項：  

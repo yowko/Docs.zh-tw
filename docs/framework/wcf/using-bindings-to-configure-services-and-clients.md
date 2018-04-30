@@ -1,28 +1,28 @@
 ---
-title: "使用繫結來設定服務和用戶端"
-ms.custom: 
+title: 使用繫結來設定服務和用戶端
+ms.custom: ''
 ms.date: 03/30/2017
 ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
+ms.reviewer: ''
+ms.suite: ''
 ms.technology:
 - dotnet-clr
-ms.tgt_pltfrm: 
+ms.tgt_pltfrm: ''
 ms.topic: article
 helpviewer_keywords:
 - bindings [WCF], using
 ms.assetid: c39479c3-0766-4a17-ba4c-97a74607f392
-caps.latest.revision: 
+caps.latest.revision: 33
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
 ms.workload:
 - dotnet
-ms.openlocfilehash: e63bb0b44e19ec9186096a819801ea05195b5523
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.openlocfilehash: 68c8c2c93ce29147247c332848025fd931bf7854
+ms.sourcegitcommit: 94d33cadc5ff81d2ac389bf5f26422c227832052
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 04/30/2018
 ---
 # <a name="using-bindings-to-configure-services-and-clients"></a>使用繫結來設定服務和用戶端
 繫結是指定連接端點所需要之通訊詳細資料的物件。 更明確的說，繫結包含藉由定義傳輸、網路格式 (訊息編碼) 的細節，用於建立用戶端或服務執行階段的組態資訊，以及用於個別端點或用戶端通道的通訊協定。 如果要建立可以運作的 [!INCLUDE[indigo1](../../../includes/indigo1-md.md)] 服務，服務中每個端點都需要繫結。 本主題將說明什麼是繫結、如何定義繫結，以及如何為端點指定特定繫結。  
@@ -53,7 +53,7 @@ ms.lasthandoff: 12/22/2017
  如需完整的系統提供繫結，並說明，請參閱[之繫結](../../../docs/framework/wcf/system-provided-bindings.md)。  
   
 ## <a name="custom-bindings"></a>自訂繫結  
- 如果系統提供的繫結集合沒有服務應用程式所需的正確功能組合，您可以建立 <xref:System.ServiceModel.Channels.CustomBinding> 繫結。 [!INCLUDE[crabout](../../../includes/crabout-md.md)]項目<xref:System.ServiceModel.Channels.CustomBinding>繫結，請參閱[ \<customBinding >](../../../docs/framework/configure-apps/file-schema/wcf/custombinding.md)和[自訂繫結](../../../docs/framework/wcf/extending/custom-bindings.md)。  
+ 如果系統提供的繫結集合沒有服務應用程式所需的正確功能組合，您可以建立 <xref:System.ServiceModel.Channels.CustomBinding> 繫結。 如需有關的項目<xref:System.ServiceModel.Channels.CustomBinding>繫結，請參閱[ \<customBinding >](../../../docs/framework/configure-apps/file-schema/wcf/custombinding.md)和[自訂繫結](../../../docs/framework/wcf/extending/custom-bindings.md)。  
   
 ## <a name="using-bindings"></a>使用繫結  
  使用繫結牽涉到兩個基本步驟：  
@@ -69,7 +69,7 @@ ms.lasthandoff: 12/22/2017
   
 -   [如何： 設定用戶端](../../../docs/framework/wcf/how-to-configure-a-basic-wcf-client.md)提供建立使用設定的用戶端的範例。  
   
-## <a name="see-also"></a>請參閱  
+## <a name="see-also"></a>另請參閱  
  [建立端點概觀](../../../docs/framework/wcf/endpoint-creation-overview.md)  
  [如何：在設定中指定服務繫結](../../../docs/framework/wcf/how-to-specify-a-service-binding-in-configuration.md)  
  [如何：在程式碼中指定服務繫結](../../../docs/framework/wcf/how-to-specify-a-service-binding-in-code.md)  

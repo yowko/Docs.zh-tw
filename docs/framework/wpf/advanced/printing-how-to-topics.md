@@ -1,34 +1,36 @@
 ---
-title: "列印 HOW TO 主題"
-ms.custom: 
+title: 列印 HOW TO 主題
+ms.custom: ''
 ms.date: 03/30/2017
 ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.technology: dotnet-wpf
-ms.tgt_pltfrm: 
+ms.reviewer: ''
+ms.suite: ''
+ms.technology:
+- dotnet-wpf
+ms.tgt_pltfrm: ''
 ms.topic: article
 helpviewer_keywords:
 - printing [WPF]
 - print system management [WPF]
 ms.assetid: 5f3d391a-4afd-49ee-ad99-ceb737c0c8a8
-caps.latest.revision: "10"
+caps.latest.revision: 10
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.workload: dotnet
-ms.openlocfilehash: 9647ce04528df390620dba67619a538d96aa7068
-ms.sourcegitcommit: c0dd436f6f8f44dc80dc43b07f6841a00b74b23f
+ms.workload:
+- dotnet
+ms.openlocfilehash: 0865e0f2d28ec44647882c030050638144fa715d
+ms.sourcegitcommit: 94d33cadc5ff81d2ac389bf5f26422c227832052
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 01/19/2018
+ms.lasthandoff: 04/30/2018
 ---
 # <a name="printing-how-to-topics"></a>列印 HOW TO 主題
 此章節的主題示範如何使用 列印和列印系統管理功能隨附[!INCLUDE[TLA#tla_winclient](../../../../includes/tlasharptla-winclient-md.md)]以及新[!INCLUDE[TLA#tla_xps](../../../../includes/tlasharptla-xps-md.md)]列印路徑。  
   
 ## <a name="in-this-section"></a>本節內容  
  [叫用列印對話方塊](../../../../docs/framework/wpf/advanced/how-to-invoke-a-print-dialog.md)  
- XAML 標記宣告的指示[!INCLUDE[TLA#tla_win](../../../../includes/tlasharptla-win-md.md)]列印對話方塊物件和使用程式碼來叫用從對話方塊[!INCLUDE[TLA#tla_wpf](../../../../includes/tlasharptla-wpf-md.md)]應用程式。  
+ XAML 標記宣告的指示[!INCLUDE[TLA#tla_win](../../../../includes/tlasharptla-win-md.md)]列印對話方塊物件和叫用 [從] 對話方塊的 Windows Presentation Foundation (WPF) 應用程式中使用程式碼。  
   
  [複製印表機](../../../../docs/framework/wpf/advanced/how-to-clone-a-printer.md)  
  指示如何使用完全相同的屬性與現有安裝的第二個列印佇列列印佇列。  
@@ -57,7 +59,7 @@ ms.lasthandoff: 01/19/2018
  [驗證和合併 PrintTicket](../../../../docs/framework/wpf/advanced/how-to-validate-and-merge-printtickets.md)  
  檢查列印票證無效，而且，它不會要求任何項目不支援的印表機的指示。  
   
-## <a name="see-also"></a>請參閱  
+## <a name="see-also"></a>另請參閱  
  <xref:System.Printing>  
  <xref:System.Printing.IndexedProperties>  
  <xref:System.Printing.Interop>  

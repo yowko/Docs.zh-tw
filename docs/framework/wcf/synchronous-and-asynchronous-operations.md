@@ -22,11 +22,11 @@ ms.author: dotnetcontent
 manager: wpickett
 ms.workload:
 - dotnet
-ms.openlocfilehash: 123186dd5f0d63693c04c0857709292ce122f918
-ms.sourcegitcommit: 86adcc06e35390f13c1e372c36d2e044f1fc31ef
+ms.openlocfilehash: c626699dc5291f4d4f6d432e89708661b233f16d
+ms.sourcegitcommit: 94d33cadc5ff81d2ac389bf5f26422c227832052
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/26/2018
+ms.lasthandoff: 04/30/2018
 ---
 # <a name="synchronous-and-asynchronous-operations"></a>同步和非同步作業
 本主題討論實作和呼叫非同步服務作業。  
@@ -51,7 +51,7 @@ ms.lasthandoff: 04/26/2018
   
 -   在下列情況中，在用戶端中使用非同步化方法或呼叫應用程式：  
   
--   如果您是從中介層應用程式叫用作業。 ([!INCLUDE[crabout](../../../includes/crabout-md.md)]這類情況，請參閱[中介層用戶端應用程式](../../../docs/framework/wcf/feature-details/middle-tier-client-applications.md)。)  
+-   如果您是從中介層應用程式叫用作業。 (如需這種情況的詳細資訊，請參閱[中介層用戶端應用程式](../../../docs/framework/wcf/feature-details/middle-tier-client-applications.md)。)  
   
 -   如果您是叫用 ASP.NET 頁面內的作業，請使用非同步頁面。  
   

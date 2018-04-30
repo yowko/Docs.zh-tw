@@ -18,11 +18,11 @@ ms.author: dotnetcontent
 manager: wpickett
 ms.workload:
 - dotnet
-ms.openlocfilehash: 7b051cdeebf83b34b6e503d8d9cb54a38a46a2a6
-ms.sourcegitcommit: 03ee570f6f528a7d23a4221dcb26a9498edbdf8c
+ms.openlocfilehash: 989ae3d70bce2a4cb374904ee6b2f30f770ccf8a
+ms.sourcegitcommit: 94d33cadc5ff81d2ac389bf5f26422c227832052
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/28/2018
+ms.lasthandoff: 04/30/2018
 ---
 # <a name="choosing-a-transport"></a>選擇傳輸
 本主題將說明選擇 [!INCLUDE[indigo1](../../../../includes/indigo1-md.md)] 中包含的三種主要傳輸的準則：HTTP、TCP 和具名管道。 [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] 也包括訊息佇列 (亦稱為 MSMQ) 傳輸，但是本文件不討論訊息佇列。  
@@ -39,7 +39,7 @@ ms.lasthandoff: 04/28/2018
  本節將說明選擇這三種主要傳輸其中之一的主要原因，包括進行選擇的詳細決策圖表。  
   
 ### <a name="when-to-use-http-transport"></a>使用 HTTP 傳輸的時機  
- HTTP 是用戶端和伺服器之間的要求/回應通訊協定。 最常用的應用程式是由使用 Web 伺服器進行通訊的 Web 瀏覽器用戶端所組成的。 用戶端會將要求傳送至伺服器，接聽用戶端要求訊息。 當伺服器收到要求時，會傳回一個回應，其中包含要求的狀態。 如果成功，會傳回選擇性資料 (例如網頁、錯誤訊息或其他資訊)。 [!INCLUDE[crabout](../../../../includes/crabout-md.md)] HTTP 通訊協定，請參閱[HTTP-超文字傳輸通訊協定](http://go.microsoft.com/fwlink/?LinkId=94858)。  
+ HTTP 是用戶端和伺服器之間的要求/回應通訊協定。 最常用的應用程式是由使用 Web 伺服器進行通訊的 Web 瀏覽器用戶端所組成的。 用戶端會將要求傳送至伺服器，接聽用戶端要求訊息。 當伺服器收到要求時，會傳回一個回應，其中包含要求的狀態。 如果成功，會傳回選擇性資料 (例如網頁、錯誤訊息或其他資訊)。 如需 HTTP 通訊協定的詳細資訊，請參閱[HTTP-超文字傳輸通訊協定](http://go.microsoft.com/fwlink/?LinkId=94858)。  
   
  HTTP 通訊協定不是以連線為基礎，一旦傳送回應，便不會維護狀態。 若要處理多頁交易，應用程式必須持續必要的狀態。  
   

@@ -16,11 +16,11 @@ ms.author: dotnetcontent
 manager: wpickett
 ms.workload:
 - dotnet
-ms.openlocfilehash: a730daeadbed0f7453b8312612c096846d4e2cda
-ms.sourcegitcommit: 03ee570f6f528a7d23a4221dcb26a9498edbdf8c
+ms.openlocfilehash: 5b8171f382812480078b76588089871233bdf9ca
+ms.sourcegitcommit: 94d33cadc5ff81d2ac389bf5f26422c227832052
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/28/2018
+ms.lasthandoff: 04/30/2018
 ---
 # <a name="diagnosing-transactional-applications"></a>診斷異動式應用程式
 本主題說明如何使用 [!INCLUDE[indigo1](../../../../includes/indigo1-md.md)] 的管理和診斷功能，對交易式應用程式進行疑難排解。  
@@ -58,7 +58,7 @@ ms.lasthandoff: 04/28/2018
 |每秒流動的交易數|每秒鐘流動至此端點處作業的交易數。 每當傳送給端點的訊息中出現一筆交易時，此計數器就會遞增。|  
   
 ## <a name="windows-management-instrumentation"></a>Windows Management Instrumentation  
- [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] 會透過 [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] Windows Management Instrumentation (WMI) 提供者，在執行階段公開服務的檢查資料。 [!INCLUDE[crabout](../../../../includes/crabout-md.md)] 存取 WMI 資料，請參閱[使用 Windows Management Instrumentation 進行診斷](../../../../docs/framework/wcf/diagnostics/wmi/index.md)。  
+ [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] 會透過 [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] Windows Management Instrumentation (WMI) 提供者，在執行階段公開服務的檢查資料。 如需存取 WMI 資料的詳細資訊，請參閱[使用 Windows Management Instrumentation 進行診斷](../../../../docs/framework/wcf/diagnostics/wmi/index.md)。  
   
  許多唯讀的 WMI 屬性會指示服務套用的異動設定， 下表則列出這些設定。  
   

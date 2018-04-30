@@ -1,12 +1,13 @@
 ---
-title: "如何：使用 ResourceDictionary 管理可當地語系化的字串資源"
-ms.custom: 
+title: 如何：使用 ResourceDictionary 管理可當地語系化的字串資源
+ms.custom: ''
 ms.date: 03/30/2017
 ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.technology: dotnet-wpf
-ms.tgt_pltfrm: 
+ms.reviewer: ''
+ms.suite: ''
+ms.technology:
+- dotnet-wpf
+ms.tgt_pltfrm: ''
 ms.topic: article
 dev_langs:
 - csharp
@@ -17,19 +18,20 @@ helpviewer_keywords:
 - ResourceDictionary [WPF]
 - localization [WPF], packaging string resources
 ms.assetid: 19e7d9a5-20df-4ad3-b157-fe6515902e5e
-caps.latest.revision: "9"
+caps.latest.revision: 9
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.workload: dotnet
-ms.openlocfilehash: 9fba115ea8c954da177afcacbf679f41474e2b68
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.workload:
+- dotnet
+ms.openlocfilehash: 70f8f02f315580c8056ee698b5e45b1a31a3dc74
+ms.sourcegitcommit: 94d33cadc5ff81d2ac389bf5f26422c227832052
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 04/30/2018
 ---
 # <a name="how-to-use-a-resourcedictionary-to-manage-localizable-string-resources"></a>如何：使用 ResourceDictionary 管理可當地語系化的字串資源
-這個範例示範如何使用<xref:System.Windows.ResourceDictionary>封裝可當地語系化字串資源的[!INCLUDE[TLA#tla_wpf](../../../../includes/tlasharptla-wpf-md.md)]應用程式。  
+這個範例示範如何使用<xref:System.Windows.ResourceDictionary>Windows Presentation Foundation (WPF) 應用程式的封裝可當地語系化字串資源。  
   
 ### <a name="to-use-a-resourcedictionary-to-manage-localizable-string-resources"></a>若要使用 ResourceDictionary 管理可當地語系化的字串資源  
   

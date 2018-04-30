@@ -1,28 +1,28 @@
 ---
-title: "設定 Windows Communication Foundation 服務的繫結"
-ms.custom: 
+title: 設定 Windows Communication Foundation 服務的繫結
+ms.custom: ''
 ms.date: 03/30/2017
 ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
+ms.reviewer: ''
+ms.suite: ''
 ms.technology:
 - dotnet-clr
-ms.tgt_pltfrm: 
+ms.tgt_pltfrm: ''
 ms.topic: article
 helpviewer_keywords:
 - binding configuration [WCF]
 ms.assetid: 99a85fd8-f7eb-4a84-a93e-7721b37d415c
-caps.latest.revision: 
+caps.latest.revision: 36
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
 ms.workload:
 - dotnet
-ms.openlocfilehash: b11810e0a39c5b6091a63ef33e5abfccb95b7555
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.openlocfilehash: f98d7c7b7d816687487a652f0527886300f0ee86
+ms.sourcegitcommit: 94d33cadc5ff81d2ac389bf5f26422c227832052
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 04/30/2018
 ---
 # <a name="configuring-bindings-for-windows-communication-foundation-services"></a>設定 Windows Communication Foundation 服務的繫結
 建立應用程式時，您經常會需要在應用程式部署後，延後系統管理員的決定。 例如，我們很多時都無法預知服務位址，或統一資源識別元 (URI)。 這時候，為位址進行硬式編碼並不是理想的作法，較好的作法是讓系統管理員在建立服務後再處理。 這樣的靈活性是透過組態達成。  
@@ -47,13 +47,13 @@ ms.lasthandoff: 12/22/2017
 ```  
   
 ### <a name="servicemodel-elements"></a>ServiceModel 項目  
- 您可以使用界限的區段`system.ServiceModel`項目來設定服務類型與一或多個端點，以及服務的設定。 然後可以使用位址、合約與繫結來設定每個端點。 [!INCLUDE[crabout](../../../includes/crabout-md.md)]端點，請參閱[端點建立概觀](../../../docs/framework/wcf/endpoint-creation-overview.md)。 如果沒有指定任何端點，則執行階段會加入預設端點。 [!INCLUDE[crabout](../../../includes/crabout-md.md)] 預設端點、繫結和行為的詳細資訊，請參閱 [Simplified Configuration](../../../docs/framework/wcf/simplified-configuration.md) and [Simplified Configuration for WCF Services](../../../docs/framework/wcf/samples/simplified-configuration-for-wcf-services.md).  
+ 您可以使用界限的區段`system.ServiceModel`項目來設定服務類型與一或多個端點，以及服務的設定。 然後可以使用位址、合約與繫結來設定每個端點。 如需端點的詳細資訊，請參閱[端點建立概觀](../../../docs/framework/wcf/endpoint-creation-overview.md)。 如果沒有指定任何端點，則執行階段會加入預設端點。 如需有關預設端點、 繫結和行為的詳細資訊，請參閱[簡化的組態](../../../docs/framework/wcf/simplified-configuration.md)和[簡化 WCF 服務的組態](../../../docs/framework/wcf/samples/simplified-configuration-for-wcf-services.md)。  
   
  繫結程序指定傳輸 (HTTP、TCP、管道、訊息佇列) 與通訊協定 (安全性、可靠性、異動流) 並且包含繫結程序項目，每個皆指定端點如何與外界通訊。  
   
  例如，指定[ \<basicHttpBinding >](../../../docs/framework/configure-apps/file-schema/wcf/basichttpbinding.md)指出端點使用 HTTP 做為傳輸的項目。 這是在執行階段，當使用此端點的服務開啟時，用來連接端點。  
   
- 有兩類的繫結：預先定義和自訂。 預先定義的繫結包含有用的項目組合，在一般狀況下使用。 一份預先定義繫結類型，[!INCLUDE[indigo2](../../../includes/indigo2-md.md)]提供，請參閱[之繫結](../../../docs/framework/wcf/system-provided-bindings.md)。 若無預先定義的繫結程序集合擁有服務應用程式所需的正確功能組合，您可以建構自訂繫結程序來滿足應用程式的要求。 [!INCLUDE[crabout](../../../includes/crabout-md.md)]自訂繫結，請參閱[ \<customBinding >](../../../docs/framework/configure-apps/file-schema/wcf/custombinding.md)。  
+ 有兩類的繫結：預先定義和自訂。 預先定義的繫結包含有用的項目組合，在一般狀況下使用。 一份預先定義繫結類型，[!INCLUDE[indigo2](../../../includes/indigo2-md.md)]提供，請參閱[之繫結](../../../docs/framework/wcf/system-provided-bindings.md)。 若無預先定義的繫結程序集合擁有服務應用程式所需的正確功能組合，您可以建構自訂繫結程序來滿足應用程式的要求。 如需有關自訂繫結的詳細資訊，請參閱[ \<customBinding >](../../../docs/framework/configure-apps/file-schema/wcf/custombinding.md)。  
   
  以下四個範例說明用來設定 [!INCLUDE[indigo2](../../../includes/indigo2-md.md)] 服務，最常見的繫結組態。  
   
@@ -174,7 +174,7 @@ ms.lasthandoff: 12/22/2017
 </bindings>  
 ```  
   
-## <a name="see-also"></a>請參閱  
+## <a name="see-also"></a>另請參閱  
  [簡化設定](../../../docs/framework/wcf/simplified-configuration.md)  
  [系統提供的繫結](../../../docs/framework/wcf/system-provided-bindings.md)  
  [建立端點概觀](../../../docs/framework/wcf/endpoint-creation-overview.md)  

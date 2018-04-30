@@ -1,28 +1,28 @@
 ---
-title: "啟用異動流程"
-ms.custom: 
+title: 啟用異動流程
+ms.custom: ''
 ms.date: 03/30/2017
 ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
+ms.reviewer: ''
+ms.suite: ''
 ms.technology:
 - dotnet-clr
-ms.tgt_pltfrm: 
+ms.tgt_pltfrm: ''
 ms.topic: article
 helpviewer_keywords:
 - transactions [WCF], enabling flow
 ms.assetid: a03f5041-5049-43f4-897c-e0292d4718f7
-caps.latest.revision: 
+caps.latest.revision: 17
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
 ms.workload:
 - dotnet
-ms.openlocfilehash: 814df9ff4fb11b0aa59270ac251b5dbd9ed7fe96
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.openlocfilehash: ffc7a1af9c9a021e93c0fca14c0d7d2826f8af6a
+ms.sourcegitcommit: 94d33cadc5ff81d2ac389bf5f26422c227832052
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 04/30/2018
 ---
 # <a name="enabling-transaction-flow"></a>啟用異動流程
 [!INCLUDE[indigo1](../../../../includes/indigo1-md.md)] 提供靈活自如的選項，可控制交易流程。 服務的交易流程設定可以使用屬性和組態的組合來表示。  
@@ -78,7 +78,7 @@ ms.lasthandoff: 12/22/2017
   
  如果該繫結已停用交易流程，但是服務合約上的其中一個作業需要傳入交易，則會在服務啟動時擲回驗證例外狀況。  
   
- 大多數由 [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] 提供的標準繫結都會包含 `transactionFlow` 和 `transactionProtocol` 屬性，可讓您將特定的繫結設定為接受傳入交易。 [!INCLUDE[crabout](../../../../includes/crabout-md.md)]設定組態項目，請參閱[\<繫結 >](../../../../docs/framework/misc/binding.md)。  
+ 大多數由 [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] 提供的標準繫結都會包含 `transactionFlow` 和 `transactionProtocol` 屬性，可讓您將特定的繫結設定為接受傳入交易。 如需有關設定組態項目，請參閱[\<繫結 >](../../../../docs/framework/misc/binding.md)。  
   
  系統管理員或部署者都可以透過組態檔，在部署時使用端點層級異動流程來設定異動流程需求或條件約束。  
   

@@ -1,12 +1,13 @@
 ---
-title: "WPF 架構"
-ms.custom: 
+title: WPF 架構
+ms.custom: ''
 ms.date: 03/30/2017
 ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.technology: dotnet-wpf
-ms.tgt_pltfrm: 
+ms.reviewer: ''
+ms.suite: ''
+ms.technology:
+- dotnet-wpf
+ms.tgt_pltfrm: ''
 ms.topic: article
 helpviewer_keywords:
 - properties [WPF], attached
@@ -23,19 +24,20 @@ helpviewer_keywords:
 - data templates [WPF]
 - thread [WPF], affinity
 ms.assetid: 8579c10b-76ab-4c52-9691-195ce02333c8
-caps.latest.revision: "17"
+caps.latest.revision: 17
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.workload: dotnet
-ms.openlocfilehash: 4d688bb460b01c0b3fe4d7571916b887cd485b87
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.workload:
+- dotnet
+ms.openlocfilehash: 29c8e2d632c37a299389b1bdc7f3f19f7df2f7e7
+ms.sourcegitcommit: 94d33cadc5ff81d2ac389bf5f26422c227832052
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 04/30/2018
 ---
 # <a name="wpf-architecture"></a>WPF 架構
-本主題提供 [!INCLUDE[TLA#tla_wpf](../../../../includes/tlasharptla-wpf-md.md)] 類別階層的導覽。 它涵蓋大部分的 [!INCLUDE[TLA2#tla_wpf](../../../../includes/tla2sharptla-wpf-md.md)] 主要子系統，並描述其互動方式。 它也會詳述 [!INCLUDE[TLA2#tla_wpf](../../../../includes/tla2sharptla-wpf-md.md)] 架構設計人員所進行的一些選擇。  
+本主題提供 Windows Presentation Foundation (WPF) 的類別階層架構的導覽。 它涵蓋大部分的 [!INCLUDE[TLA2#tla_wpf](../../../../includes/tla2sharptla-wpf-md.md)] 主要子系統，並描述其互動方式。 它也會詳述 [!INCLUDE[TLA2#tla_wpf](../../../../includes/tla2sharptla-wpf-md.md)] 架構設計人員所進行的一些選擇。  
   
   
 <a name="System_Object"></a>   
@@ -64,7 +66,7 @@ ms.lasthandoff: 12/22/2017
   
  若要讓屬性驅動多個系統，則需要比 [!INCLUDE[TLA2#tla_clr](../../../../includes/tla2sharptla-clr-md.md)] 所提供的屬性系統更豐富的屬性系統。 這項豐富性的簡單範例是變更通知。 若要啟用雙向繫結，您需要繫結兩端都支援變更通知。 若要讓行為繫結至屬性值，您需要在屬性值變更時收到通知。 [!INCLUDE[TLA#tla_netframewk](../../../../includes/tlasharptla-netframewk-md.md)] 的 **INotifyPropertyChange** 介面可讓物件發行變更通知，不過它是選擇性的。  
   
- [!INCLUDE[TLA2#tla_wpf](../../../../includes/tla2sharptla-wpf-md.md)]提供更豐富的屬性系統，衍生自<xref:System.Windows.DependencyObject>型別。 屬性系統實際上是「相依性」屬性系統，因此它會追蹤屬性運算式之間的相依性，並在相依性變更時自動重新驗證屬性值。 例如，如果您有繼承的屬性 (例如<xref:System.Windows.Controls.Control.FontSize%2A>)，如果在屬性上父項目繼承的值變更，系統就會自動更新。  
+ [!INCLUDE[TLA2#tla_wpf](../../../../includes/tla2sharptla-wpf-md.md)] 提供更豐富的屬性系統，衍生自<xref:System.Windows.DependencyObject>型別。 屬性系統實際上是「相依性」屬性系統，因此它會追蹤屬性運算式之間的相依性，並在相依性變更時自動重新驗證屬性值。 例如，如果您有繼承的屬性 (例如<xref:System.Windows.Controls.Control.FontSize%2A>)，如果在屬性上父項目繼承的值變更，系統就會自動更新。  
   
  [!INCLUDE[TLA2#tla_wpf](../../../../includes/tla2sharptla-wpf-md.md)] 屬性系統的基礎是屬性運算式的概念。 在這個第一版 [!INCLUDE[TLA2#tla_wpf](../../../../includes/tla2sharptla-wpf-md.md)] 中，已關閉屬性運算式系統，而且運算式都會提供為架構的一部分。 運算式是屬性系統沒有資料繫結、樣式或繼承硬式編碼，而是由架構內的稍後層級所提供的原因。  
   
@@ -74,9 +76,9 @@ ms.lasthandoff: 12/22/2017
   
 <a name="System_Windows_Media_Visual"></a>   
 ## <a name="systemwindowsmediavisual"></a>System.Windows.Media.Visual  
- 定義系統之後，下一個步驟是將像素繪製到螢幕。 <xref:System.Windows.Media.Visual>類別會提供每一個都會選擇性地包含繪圖指示和如何呈現這些指示 （剪輯、 轉換等等） 的相關中繼資料建立視覺化的物件樹狀結構。 <xref:System.Windows.Media.Visual>設計非常輕量且具有彈性，因此大部分的功能有沒有公用[!INCLUDE[TLA2#tla_api](../../../../includes/tla2sharptla-api-md.md)]曝光度和高度依賴受保護的回呼函式。  
+ 定義系統之後，下一個步驟是將像素繪製到螢幕。 <xref:System.Windows.Media.Visual>類別會提供每一個都會選擇性地包含繪圖指示和如何呈現這些指示 （剪輯、 轉換等等） 的相關中繼資料建立視覺化的物件樹狀結構。 <xref:System.Windows.Media.Visual> 設計非常輕量且具有彈性，因此大部分的功能有沒有公用[!INCLUDE[TLA2#tla_api](../../../../includes/tla2sharptla-api-md.md)]曝光度和高度依賴受保護的回呼函式。  
   
- <xref:System.Windows.Media.Visual>其實是進入點[!INCLUDE[TLA2#tla_wpf](../../../../includes/tla2sharptla-wpf-md.md)]複合系統。 <xref:System.Windows.Media.Visual>這些兩個子系統，managed 之間的連線點[!INCLUDE[TLA#tla_api](../../../../includes/tlasharptla-api-md.md)]和 unmanaged 的 milcore。  
+ <xref:System.Windows.Media.Visual> 其實是進入點[!INCLUDE[TLA2#tla_wpf](../../../../includes/tla2sharptla-wpf-md.md)]複合系統。 <xref:System.Windows.Media.Visual> 這些兩個子系統，managed 之間的連線點[!INCLUDE[TLA#tla_api](../../../../includes/tlasharptla-api-md.md)]和 unmanaged 的 milcore。  
   
  [!INCLUDE[TLA2#tla_wpf](../../../../includes/tla2sharptla-wpf-md.md)] 透過周遊 milcore 所管理的 Unmanaged 資料結構來顯示資料。 這些結構稱為組合節點，代表具有每個節點之轉譯指示的階層式顯示樹狀結構。 下圖右側所說明的這個樹狀結構只能透過訊息通訊協定進行存取。  
   
@@ -100,11 +102,11 @@ ms.lasthandoff: 12/22/2017
   
 <a name="System_Windows_UIElement"></a>   
 ## <a name="systemwindowsuielement"></a>System.Windows.UIElement  
- <xref:System.Windows.UIElement>定義核心子系統包括版面配置、 輸入和事件。  
+ <xref:System.Windows.UIElement> 定義核心子系統包括版面配置、 輸入和事件。  
   
  版面配置是 [!INCLUDE[TLA2#tla_wpf](../../../../includes/tla2sharptla-wpf-md.md)] 中的核心概念。 在許多系統中，會有固定一組版面配置模型 (HTML 支援三種版面配置模型：非固定、絕對和資料表) 或沒有版面配置模型 (User32 實際上只支援絕對定位)。 [!INCLUDE[TLA2#tla_wpf](../../../../includes/tla2sharptla-wpf-md.md)] 一開始的假設是開發人員和設計人員想要具彈性且可擴充的版面配置模型，而此模型可透過屬性值驅動，而非命令式邏輯。 在<xref:System.Windows.UIElement>導入的層級，版面配置的基本合約是 – 兩階段使用的模型<xref:System.Windows.UIElement.Measure%2A>和<xref:System.Windows.UIElement.Arrange%2A>傳遞。  
   
- <xref:System.Windows.UIElement.Measure%2A>可讓元件，以確定它想要採取的大小。 這是從不同階段<xref:System.Windows.UIElement.Arrange%2A>因為有許多情況下，父項目將會詢問測量來判斷其最理想的位置和大小的數次的子系。 父項目要求子項目進行測量的事實示範 [!INCLUDE[TLA2#tla_wpf](../../../../includes/tla2sharptla-wpf-md.md)] 的另一個重要原理：內容大小。 [!INCLUDE[TLA2#tla_wpf](../../../../includes/tla2sharptla-wpf-md.md)] 中的所有控制項都支援調整成其內容原本大小的能力。 這會讓當地語系化更為簡單，並在調整事物時允許動態配置項目。 <xref:System.Windows.UIElement.Arrange%2A>階段允許的位置，並判斷每個子系的最終大小的父系。  
+ <xref:System.Windows.UIElement.Measure%2A> 可讓元件，以確定它想要採取的大小。 這是從不同階段<xref:System.Windows.UIElement.Arrange%2A>因為有許多情況下，父項目將會詢問測量來判斷其最理想的位置和大小的數次的子系。 父項目要求子項目進行測量的事實示範 [!INCLUDE[TLA2#tla_wpf](../../../../includes/tla2sharptla-wpf-md.md)] 的另一個重要原理：內容大小。 [!INCLUDE[TLA2#tla_wpf](../../../../includes/tla2sharptla-wpf-md.md)] 中的所有控制項都支援調整成其內容原本大小的能力。 這會讓當地語系化更為簡單，並在調整事物時允許動態配置項目。 <xref:System.Windows.UIElement.Arrange%2A>階段允許的位置，並判斷每個子系的最終大小的父系。  
   
  說的輸出端通常花費許多時間[!INCLUDE[TLA2#tla_wpf](../../../../includes/tla2sharptla-wpf-md.md)]–<xref:System.Windows.Media.Visual>和相關物件。 不過，輸入端上也會進行極大的創新。 [!INCLUDE[TLA2#tla_wpf](../../../../includes/tla2sharptla-wpf-md.md)] 輸入模型的最基本變更可能是一致模型，而使用此模型，即可透過系統來路由傳送輸入事件。  
   
@@ -120,11 +122,11 @@ ms.lasthandoff: 12/22/2017
   
 <a name="System_Windows_FrameworkElement"></a>   
 ## <a name="systemwindowsframeworkelement"></a>System.Windows.FrameworkElement  
- <xref:System.Windows.FrameworkElement>可以在查看兩個不同的方式。 它在 [!INCLUDE[TLA2#tla_wpf](../../../../includes/tla2sharptla-wpf-md.md)] 低層級所引進的子系統上引進一組原則和自訂。 它同時引進一組新的子系統。  
+ <xref:System.Windows.FrameworkElement> 可以在查看兩個不同的方式。 它在 [!INCLUDE[TLA2#tla_wpf](../../../../includes/tla2sharptla-wpf-md.md)] 低層級所引進的子系統上引進一組原則和自訂。 它同時引進一組新的子系統。  
   
- 所導入的主要原則<xref:System.Windows.FrameworkElement>周圍的應用程式配置。 <xref:System.Windows.FrameworkElement>所導入的基本版面配置合約上建置<xref:System.Windows.UIElement>，並將 「 位置 」，它可以輕鬆擁有一致的導向配置語意的屬性集配置作者的版面配置的概念。 屬性，例如<xref:System.Windows.FrameworkElement.HorizontalAlignment%2A>， <xref:System.Windows.FrameworkElement.VerticalAlignment%2A>， <xref:System.Windows.FrameworkElement.MinWidth%2A>，和<xref:System.Windows.FrameworkElement.Margin%2A>（若要提供幾個） 提供所有元件衍生自<xref:System.Windows.FrameworkElement>版面配置容器內的一致行為。  
+ 所導入的主要原則<xref:System.Windows.FrameworkElement>周圍的應用程式配置。 <xref:System.Windows.FrameworkElement> 所導入的基本版面配置合約上建置<xref:System.Windows.UIElement>，並將 「 位置 」，它可以輕鬆擁有一致的導向配置語意的屬性集配置作者的版面配置的概念。 屬性，例如<xref:System.Windows.FrameworkElement.HorizontalAlignment%2A>， <xref:System.Windows.FrameworkElement.VerticalAlignment%2A>， <xref:System.Windows.FrameworkElement.MinWidth%2A>，和<xref:System.Windows.FrameworkElement.Margin%2A>（若要提供幾個） 提供所有元件衍生自<xref:System.Windows.FrameworkElement>版面配置容器內的一致行為。  
   
- <xref:System.Windows.FrameworkElement>也提供更容易[!INCLUDE[TLA2#tla_api](../../../../includes/tla2sharptla-api-md.md)]核心層級中的中找到的許多功能公開[!INCLUDE[TLA2#tla_wpf](../../../../includes/tla2sharptla-wpf-md.md)]。 例如，<xref:System.Windows.FrameworkElement>可直接存取透過動畫<xref:System.Windows.FrameworkElement.BeginStoryboard%2A>方法。 A<xref:System.Windows.Media.Animation.Storyboard>提供向指令碼針對一組屬性的多個動畫。  
+ <xref:System.Windows.FrameworkElement> 也提供更容易[!INCLUDE[TLA2#tla_api](../../../../includes/tla2sharptla-api-md.md)]核心層級中的中找到的許多功能公開[!INCLUDE[TLA2#tla_wpf](../../../../includes/tla2sharptla-wpf-md.md)]。 例如，<xref:System.Windows.FrameworkElement>可直接存取透過動畫<xref:System.Windows.FrameworkElement.BeginStoryboard%2A>方法。 A<xref:System.Windows.Media.Animation.Storyboard>提供向指令碼針對一組屬性的多個動畫。  
   
  兩個最重要的事情，<xref:System.Windows.FrameworkElement>導入了資料繫結和樣式。  
   
@@ -138,7 +140,7 @@ ms.lasthandoff: 12/22/2017
 ## <a name="systemwindowscontrolscontrol"></a>System.Windows.Controls.Control  
  控制項的最重要功能是設定範本。 如果您將 WPF 的組合系統視為保留模式轉譯系統，則設定範本可讓控制項透過參數化宣告方式描述其轉譯。 A<xref:System.Windows.Controls.ControlTemplate>其實只是指令碼來建立子系的一組項目，以繫結至控制項所提供的屬性。  
   
- <xref:System.Windows.Controls.Control>提供一組內建屬性， <xref:System.Windows.Controls.Control.Foreground%2A>， <xref:System.Windows.Controls.Control.Background%2A>， <xref:System.Windows.Controls.Control.Padding%2A>、 舉範本作者可以再使用來自訂控制項的顯示。 控制項的實作會提供資料模型和互動模型。 互動模型定義一組命令 (例如視窗的 Close) 以及輸入手勢的繫結 (例如按一下視窗右上角的紅色 X)。 資料模型提供一組屬性來自訂互動模型或是自訂顯示 (透過範本決定)。  
+ <xref:System.Windows.Controls.Control> 提供一組內建屬性， <xref:System.Windows.Controls.Control.Foreground%2A>， <xref:System.Windows.Controls.Control.Background%2A>， <xref:System.Windows.Controls.Control.Padding%2A>、 舉範本作者可以再使用來自訂控制項的顯示。 控制項的實作會提供資料模型和互動模型。 互動模型定義一組命令 (例如視窗的 Close) 以及輸入手勢的繫結 (例如按一下視窗右上角的紅色 X)。 資料模型提供一組屬性來自訂互動模型或是自訂顯示 (透過範本決定)。  
   
  資料模型 (屬性)、互動模型 (命令和事件) 與顯示模型 (範本) 之間的這項分割可啟用控制項外觀和行為的完整自訂。  
   
@@ -152,7 +154,7 @@ ms.lasthandoff: 12/22/2017
   
  當您開始開發 [!INCLUDE[TLA2#tla_wpf](../../../../includes/tla2sharptla-wpf-md.md)] 應用程式時，應該會覺得十分熟悉。 設定屬性、使用物件和資料繫結的方式，大致與使用 [!INCLUDE[TLA#tla_winforms](../../../../includes/tlasharptla-winforms-md.md)] 或 [!INCLUDE[TLA#tla_aspnet](../../../../includes/tlasharptla-aspnet-md.md)] 相同。 更深入調查 [!INCLUDE[TLA2#tla_wpf](../../../../includes/tla2sharptla-wpf-md.md)] 的架構，即會發現您可以建立更多的應用程式，而這些應用程式基本上會將資料視為應用程式的核心驅動程式。  
   
-## <a name="see-also"></a>請參閱  
+## <a name="see-also"></a>另請參閱  
  <xref:System.Windows.Media.Visual>  
  <xref:System.Windows.UIElement>  
  <xref:System.Windows.Input.ICommand>  

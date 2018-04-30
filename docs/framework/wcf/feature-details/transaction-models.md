@@ -16,11 +16,11 @@ ms.author: dotnetcontent
 manager: wpickett
 ms.workload:
 - dotnet
-ms.openlocfilehash: ab3baf8cc0bb6af951f6f3e6396b7545d0c6b301
-ms.sourcegitcommit: 03ee570f6f528a7d23a4221dcb26a9498edbdf8c
+ms.openlocfilehash: 3c68a23e9ee86050a9db4c63c8c97d017794bce8
+ms.sourcegitcommit: 94d33cadc5ff81d2ac389bf5f26422c227832052
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/28/2018
+ms.lasthandoff: 04/30/2018
 ---
 # <a name="transaction-models"></a>異動模型
 本主題描述異動程式設計模型與 Microsoft 提供的基礎結構元件之間的關係。  
@@ -37,7 +37,7 @@ ms.lasthandoff: 04/28/2018
 ## <a name="systemtransactions-transactions"></a>System.Transactions 異動  
  <xref:System.Transactions> 命名空間會提供根據 <xref:System.Transactions.Transaction> 類別的明確程式設計模型，以及使用 <xref:System.Transactions.TransactionScope> 類別的隱含程式設計模型，而其中交易會由基礎結構自動管理。  
   
- [!INCLUDE[crabout](../../../../includes/crabout-md.md)] 如何建立交易式應用程式使用這兩個模型，請參閱[撰寫異動應用程式](http://go.microsoft.com/fwlink/?LinkId=94947)。  
+ 如需如何建立交易式應用程式使用這兩個模型的詳細資訊，請參閱[撰寫異動應用程式](http://go.microsoft.com/fwlink/?LinkId=94947)。  
   
  在 [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] 服務或應用程式中，<xref:System.Transactions> 提供用於在用戶端應用程式中建立交易，以及在服務中需要時與交易明確互動的程式設計模型。  
   

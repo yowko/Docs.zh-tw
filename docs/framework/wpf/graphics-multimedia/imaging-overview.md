@@ -1,12 +1,13 @@
 ---
-title: "影像處理概觀"
-ms.custom: 
+title: 影像處理概觀
+ms.custom: ''
 ms.date: 03/30/2017
 ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.technology: dotnet-wpf
-ms.tgt_pltfrm: 
+ms.reviewer: ''
+ms.suite: ''
+ms.technology:
+- dotnet-wpf
+ms.tgt_pltfrm: ''
 ms.topic: article
 dev_langs:
 - csharp
@@ -28,16 +29,17 @@ helpviewer_keywords:
 - decoding image formats [WPF]
 - rotating images [WPF]
 ms.assetid: 72aad87a-e6f3-4937-94cd-a18b7766e990
-caps.latest.revision: "32"
+caps.latest.revision: 32
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.workload: dotnet
-ms.openlocfilehash: c7d0a880dd30fe737a1bd4d1368dde16ed0df1e3
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.workload:
+- dotnet
+ms.openlocfilehash: 8715f04f6cdec84e74d53213c0a5a5ff360c7d28
+ms.sourcegitcommit: 94d33cadc5ff81d2ac389bf5f26422c227832052
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 04/30/2018
 ---
 # <a name="imaging-overview"></a>影像處理概觀
 本主題提供 [!INCLUDE[TLA#tla_wic](../../../../includes/tlasharptla-wic-md.md)] 的簡介。 [!INCLUDE[TLA2#tla_wic](../../../../includes/tla2sharptla-wic-md.md)] 可讓開發人員顯示、轉換及格式化影像。  
@@ -61,7 +63,7 @@ ms.lasthandoff: 12/22/2017
   
 -   支援檔案內、專屬中繼資料。  
   
--   Managed 元件會利用 Unmanaged 基礎結構來提供影像與其他 [!INCLUDE[TLA2#tla_wpf](../../../../includes/tla2sharptla-wpf-md.md)] 功能 (例如 [!INCLUDE[TLA#tla_ui](../../../../includes/tlasharptla-ui-md.md)]、動畫和圖形) 的緊密整合。 Managed 元件也受益於 [!INCLUDE[TLA#tla_wpf](../../../../includes/tlasharptla-wpf-md.md)] 影像處理轉碼器擴充性模型，該模型會自動辨識 [!INCLUDE[TLA2#tla_wpf](../../../../includes/tla2sharptla-wpf-md.md)] 應用程式中的新影像格式。  
+-   Managed 元件會利用 Unmanaged 基礎結構來提供影像與其他 [!INCLUDE[TLA2#tla_wpf](../../../../includes/tla2sharptla-wpf-md.md)] 功能 (例如 [!INCLUDE[TLA#tla_ui](../../../../includes/tlasharptla-ui-md.md)]、動畫和圖形) 的緊密整合。 將 managed 的元件也會受惠 Windows Presentation Foundation (WPF) 影像轉碼器擴充性模型可讓新的映像格式中的自動辨識[!INCLUDE[TLA2#tla_wpf](../../../../includes/tla2sharptla-wpf-md.md)]應用程式。  
   
  大部分的 managed [!INCLUDE[TLA2#tla_wic](../../../../includes/tla2sharptla-wic-md.md)] [!INCLUDE[TLA2#tla_api](../../../../includes/tla2sharptla-api-md.md)]位於<xref:System.Windows.Media.Imaging?displayProperty=nameWithType>命名空間，但是數個重要類型、 例如<xref:System.Windows.Media.ImageBrush>和<xref:System.Windows.Media.ImageDrawing>位於<xref:System.Windows.Media?displayProperty=nameWithType>命名空間和<xref:System.Windows.Controls.Image>位於<xref:System.Windows.Controls?displayProperty=nameWithType>命名空間。  
   
@@ -71,7 +73,7 @@ ms.lasthandoff: 12/22/2017
 ## <a name="wpf-image-formats"></a>WPF 影像格式  
  轉碼器可以用來將特定媒體格式解碼或編碼。 [!INCLUDE[TLA2#tla_wic](../../../../includes/tla2sharptla-wic-md.md)] 包含 [!INCLUDE[TLA2#tla_bmp](../../../../includes/tla2sharptla-bmp-md.md)]、[!INCLUDE[TLA2#tla_jpeg](../../../../includes/tla2sharptla-jpeg-md.md)]、[!INCLUDE[TLA2#tla_png](../../../../includes/tla2sharptla-png-md.md)]、[!INCLUDE[TLA2#tla_tiff](../../../../includes/tla2sharptla-tiff-md.md)]、[!INCLUDE[TLA2#tla_wdp](../../../../includes/tla2sharptla-wdp-md.md)]、[!INCLUDE[TLA2#tla_gif](../../../../includes/tla2sharptla-gif-md.md)] 和 ICON 影像格式的轉碼器。 每個轉碼器都可以讓應用程式解碼和編碼各自的影像格式 (但 ICON 在編碼部分是例外)。  
   
- <xref:System.Windows.Media.Imaging.BitmapSource>重要的類別用於解碼和影像的編碼。 它是 [!INCLUDE[TLA2#tla_wic](../../../../includes/tla2sharptla-wic-md.md)] 管線的基本建置組塊，代表在特定大小和解析度下的單一固定像素集。 A<xref:System.Windows.Media.Imaging.BitmapSource>可個別畫面格的多個框架映像，或可以執行轉換的結果<xref:System.Windows.Media.Imaging.BitmapSource>。 它是父項中使用的主要類別的許多[!INCLUDE[TLA2#tla_wpf](../../../../includes/tla2sharptla-wpf-md.md)]映像例如<xref:System.Windows.Media.Imaging.BitmapFrame>。  
+ <xref:System.Windows.Media.Imaging.BitmapSource> 重要的類別用於解碼和影像的編碼。 它是 [!INCLUDE[TLA2#tla_wic](../../../../includes/tla2sharptla-wic-md.md)] 管線的基本建置組塊，代表在特定大小和解析度下的單一固定像素集。 A<xref:System.Windows.Media.Imaging.BitmapSource>可個別畫面格的多個框架映像，或可以執行轉換的結果<xref:System.Windows.Media.Imaging.BitmapSource>。 它是父項中使用的主要類別的許多[!INCLUDE[TLA2#tla_wpf](../../../../includes/tla2sharptla-wpf-md.md)]映像例如<xref:System.Windows.Media.Imaging.BitmapFrame>。  
   
  A<xref:System.Windows.Media.Imaging.BitmapFrame>用來儲存影像格式的點陣圖的實際資料。 許多的影像格式僅支援單一<xref:System.Windows.Media.Imaging.BitmapFrame>，但是格式例如[!INCLUDE[TLA2#tla_gif](../../../../includes/tla2sharptla-gif-md.md)]和[!INCLUDE[TLA2#tla_tiff](../../../../includes/tla2sharptla-tiff-md.md)]支援每個影像的多個框架。 畫面格會由解碼器作為輸入資料並傳遞至編碼器以建立影像檔。  
   
@@ -100,25 +102,25 @@ ms.lasthandoff: 12/22/2017
   
 <a name="_displayingimages"></a>   
 ## <a name="displaying-images-in-wpf"></a>在 WPF 中顯示影像  
- 有幾種方式可在 [!INCLUDE[TLA#tla_wpf](../../../../includes/tlasharptla-wpf-md.md)] 應用程式中顯示影像。 可以使用顯示映像<xref:System.Windows.Controls.Image>控制項繪製 visual 使用<xref:System.Windows.Media.ImageBrush>，或使用繪製<xref:System.Windows.Media.ImageDrawing>。  
+ 有幾種方式顯示在 Windows Presentation Foundation (WPF) 應用程式中的影像。 可以使用顯示映像<xref:System.Windows.Controls.Image>控制項繪製 visual 使用<xref:System.Windows.Media.ImageBrush>，或使用繪製<xref:System.Windows.Media.ImageDrawing>。  
   
 ### <a name="using-the-image-control"></a>使用影像控制項  
- <xref:System.Windows.Controls.Image>架構項目的而在應用程式中顯示影像的主要方法。 在[!INCLUDE[TLA2#tla_xaml](../../../../includes/tla2sharptla-xaml-md.md)]，<xref:System.Windows.Controls.Image>可以用於兩種方式，則屬性語法或屬性的語法。 下列範例顯示如何使用屬性 (Attribute) 語法和屬性 (Property) 標記語法呈現 200 像素寬的影像。 如需屬性 (Attribute) 語法和屬性 (Property) 語法的詳細資訊，請參閱[相依性屬性概觀](../../../../docs/framework/wpf/advanced/dependency-properties-overview.md)。  
+ <xref:System.Windows.Controls.Image> 架構項目的而在應用程式中顯示影像的主要方法。 在[!INCLUDE[TLA2#tla_xaml](../../../../includes/tla2sharptla-xaml-md.md)]，<xref:System.Windows.Controls.Image>可以用於兩種方式，則屬性語法或屬性的語法。 下列範例顯示如何使用屬性 (Attribute) 語法和屬性 (Property) 標記語法呈現 200 像素寬的影像。 如需屬性 (Attribute) 語法和屬性 (Property) 語法的詳細資訊，請參閱[相依性屬性概觀](../../../../docs/framework/wpf/advanced/dependency-properties-overview.md)。  
   
  [!code-xaml[ImageElementExample_snip#ImageSimpleExampleInlineMarkup](../../../../samples/snippets/csharp/VS_Snippets_Wpf/ImageElementExample_snip/CSharp/ImageSimpleExample.xaml#imagesimpleexampleinlinemarkup)]  
   
- 許多範例都使用<xref:System.Windows.Media.Imaging.BitmapImage>物件參考的映像檔。 <xref:System.Windows.Media.Imaging.BitmapImage>具特製化<xref:System.Windows.Media.Imaging.BitmapSource>而最佳化的[!INCLUDE[TLA#tla_xaml](../../../../includes/tlasharptla-xaml-md.md)]載入和簡單的方法，來顯示影像做為<xref:System.Windows.Controls.Image.Source%2A>的<xref:System.Windows.Controls.Image>控制項。  
+ 許多範例都使用<xref:System.Windows.Media.Imaging.BitmapImage>物件參考的映像檔。 <xref:System.Windows.Media.Imaging.BitmapImage> 具特製化<xref:System.Windows.Media.Imaging.BitmapSource>而最佳化的[!INCLUDE[TLA#tla_xaml](../../../../includes/tlasharptla-xaml-md.md)]載入和簡單的方法，來顯示影像做為<xref:System.Windows.Controls.Image.Source%2A>的<xref:System.Windows.Controls.Image>控制項。  
   
  下列範例示範如何使用程式碼呈現 200 像素寬的影像。  
   
 > [!NOTE]
->  <xref:System.Windows.Media.Imaging.BitmapImage>實作<xref:System.ComponentModel.ISupportInitialize>最佳化初始化多個屬性上的介面。 只有在物件初始化期間，才會發生屬性變更。 呼叫<xref:System.Windows.Media.Imaging.BitmapImage.BeginInit%2A>發出信號，初始設定開始和<xref:System.Windows.Media.Imaging.BitmapImage.EndInit%2A>來表示已完成初始設定。 初始化之後，所做的屬性變更都會被忽略。  
+>  <xref:System.Windows.Media.Imaging.BitmapImage> 實作<xref:System.ComponentModel.ISupportInitialize>最佳化初始化多個屬性上的介面。 只有在物件初始化期間，才會發生屬性變更。 呼叫<xref:System.Windows.Media.Imaging.BitmapImage.BeginInit%2A>發出信號，初始設定開始和<xref:System.Windows.Media.Imaging.BitmapImage.EndInit%2A>來表示已完成初始設定。 初始化之後，所做的屬性變更都會被忽略。  
   
  [!code-csharp[ImageElementExample_snip#ImageSimpleExampleInlineCode1](../../../../samples/snippets/csharp/VS_Snippets_Wpf/ImageElementExample_snip/CSharp/ImageSimpleExample.xaml.cs#imagesimpleexampleinlinecode1)]
  [!code-vb[ImageElementExample_snip#ImageSimpleExampleInlineCode1](../../../../samples/snippets/visualbasic/VS_Snippets_Wpf/ImageElementExample_snip/VB/ImageSimpleExample.xaml.vb#imagesimpleexampleinlinecode1)]  
   
 #### <a name="rotating-converting-and-cropping-images"></a>旋轉、轉換和裁剪影像  
- [!INCLUDE[TLA2#tla_wpf](../../../../includes/tla2sharptla-wpf-md.md)]可讓使用者使用的內容轉換的映像<xref:System.Windows.Media.Imaging.BitmapImage>或使用其他<xref:System.Windows.Media.Imaging.BitmapSource>物件，例如<xref:System.Windows.Media.Imaging.CroppedBitmap>或<xref:System.Windows.Media.Imaging.FormatConvertedBitmap>。 這些影像轉換作業可以縮放或旋轉影像、變更影像的像素格式，或裁剪影像。  
+ [!INCLUDE[TLA2#tla_wpf](../../../../includes/tla2sharptla-wpf-md.md)] 可讓使用者使用的內容轉換的映像<xref:System.Windows.Media.Imaging.BitmapImage>或使用其他<xref:System.Windows.Media.Imaging.BitmapSource>物件，例如<xref:System.Windows.Media.Imaging.CroppedBitmap>或<xref:System.Windows.Media.Imaging.FormatConvertedBitmap>。 這些影像轉換作業可以縮放或旋轉影像、變更影像的像素格式，或裁剪影像。  
   
  使用執行影像旋轉<xref:System.Windows.Media.Imaging.BitmapImage.Rotation%2A>屬性<xref:System.Windows.Media.Imaging.BitmapImage>。 只能以 90 度遞增的角度旋轉。 在下列範例中，影像會旋轉 90 度。  
   
@@ -177,15 +179,15 @@ ms.lasthandoff: 12/22/2017
 ## <a name="image-metadata"></a>影像中繼資料  
  某些影像檔包含描述檔案內容或特性的中繼資料。 例如，大部分數位相機建立的影像，會包含用來擷取影像之相機廠牌與型號的中繼資料。 每種影像格式處理中繼資料的方式也有所不同，但 [!INCLUDE[TLA2#tla_wic](../../../../includes/tla2sharptla-wic-md.md)] 可針對每種支援的影像格式提供統一的中繼資料儲存及擷取方式。  
   
- 中繼資料的存取透過提供<xref:System.Windows.Media.Imaging.BitmapSource.Metadata%2A>屬性<xref:System.Windows.Media.Imaging.BitmapSource>物件。 <xref:System.Windows.Media.Imaging.BitmapSource.Metadata%2A>傳回<xref:System.Windows.Media.Imaging.BitmapMetadata>物件，其中包含映像所包含的所有中繼資料。 此資料可能位於單一的中繼資料結構描述，或不同結構描述的組合中。 [!INCLUDE[TLA2#tla_wic](../../../../includes/tla2sharptla-wic-md.md)] 支援下列影像中繼資料結構描述：[!INCLUDE[TLA#tla_exif](../../../../includes/tlasharptla-exif-md.md)]、tEXt (PNG 文字型資料)、[!INCLUDE[TLA#tla_ifd](../../../../includes/tlasharptla-ifd-md.md)]、[!INCLUDE[TLA#tla_iptc](../../../../includes/tlasharptla-iptc-md.md)] 和 [!INCLUDE[TLA#tla_xmp](../../../../includes/tlasharptla-xmp-md.md)]。  
+ 中繼資料的存取透過提供<xref:System.Windows.Media.Imaging.BitmapSource.Metadata%2A>屬性<xref:System.Windows.Media.Imaging.BitmapSource>物件。 <xref:System.Windows.Media.Imaging.BitmapSource.Metadata%2A> 傳回<xref:System.Windows.Media.Imaging.BitmapMetadata>物件，其中包含映像所包含的所有中繼資料。 此資料可能位於單一的中繼資料結構描述，或不同結構描述的組合中。 [!INCLUDE[TLA2#tla_wic](../../../../includes/tla2sharptla-wic-md.md)] 支援下列影像中繼資料結構描述：[!INCLUDE[TLA#tla_exif](../../../../includes/tlasharptla-exif-md.md)]、tEXt (PNG 文字型資料)、[!INCLUDE[TLA#tla_ifd](../../../../includes/tlasharptla-ifd-md.md)]、[!INCLUDE[TLA#tla_iptc](../../../../includes/tlasharptla-iptc-md.md)] 和 [!INCLUDE[TLA#tla_xmp](../../../../includes/tlasharptla-xmp-md.md)]。  
   
- 若要簡化讀取中繼資料的程序<xref:System.Windows.Media.Imaging.BitmapMetadata>提供幾個具名的屬性可輕鬆地存取這類<xref:System.Windows.Media.Imaging.BitmapMetadata.Author%2A>， <xref:System.Windows.Media.Imaging.BitmapMetadata.Title%2A>，和<xref:System.Windows.Media.Imaging.BitmapMetadata.CameraModel%2A>。 許多具名屬性也可以用於寫入中繼資料。 讀取中繼資料的其他支援是由中繼資料查詢讀取器提供。 <xref:System.Windows.Media.Imaging.BitmapMetadata.GetQuery%2A>方法用來擷取中繼資料查詢讀取器所提供字串查詢，例如*"/ app1/exif /"*。 在下列範例中，<xref:System.Windows.Media.Imaging.BitmapMetadata.GetQuery%2A>用來取得文字儲存於*"/ 文字/說明 「*位置。  
+ 若要簡化讀取中繼資料的程序<xref:System.Windows.Media.Imaging.BitmapMetadata>提供幾個具名的屬性可輕鬆地存取這類<xref:System.Windows.Media.Imaging.BitmapMetadata.Author%2A>， <xref:System.Windows.Media.Imaging.BitmapMetadata.Title%2A>，和<xref:System.Windows.Media.Imaging.BitmapMetadata.CameraModel%2A>。 許多具名屬性也可以用於寫入中繼資料。 讀取中繼資料的其他支援是由中繼資料查詢讀取器提供。 <xref:System.Windows.Media.Imaging.BitmapMetadata.GetQuery%2A>方法用來擷取中繼資料查詢讀取器所提供字串查詢，例如 *"/ app1/exif /"*。 在下列範例中，<xref:System.Windows.Media.Imaging.BitmapMetadata.GetQuery%2A>用來取得文字儲存於 *"/ 文字/說明 「*位置。  
   
  [!code-cpp[BitmapMetadata#GetQuery](../../../../samples/snippets/cpp/VS_Snippets_Wpf/BitMapMetadata/CPP/BitmapMetadata.cpp#getquery)]
  [!code-csharp[BitmapMetadata#GetQuery](../../../../samples/snippets/csharp/VS_Snippets_Wpf/BitMapMetadata/CSharp/BitmapMetadata.cs#getquery)]
  [!code-vb[BitmapMetadata#GetQuery](../../../../samples/snippets/visualbasic/VS_Snippets_Wpf/BitMapMetadata/VB/BitmapMetadata.vb#getquery)]  
   
- 若要寫入中繼資料，必須使用中繼資料查詢寫入器。 <xref:System.Windows.Media.Imaging.BitmapMetadata.SetQuery%2A>取得查詢寫入者，並設定所需的值。 在下列範例中，<xref:System.Windows.Media.Imaging.BitmapMetadata.SetQuery%2A>用來寫入文字儲存於*"/ 文字/說明 「*位置。  
+ 若要寫入中繼資料，必須使用中繼資料查詢寫入器。 <xref:System.Windows.Media.Imaging.BitmapMetadata.SetQuery%2A> 取得查詢寫入者，並設定所需的值。 在下列範例中，<xref:System.Windows.Media.Imaging.BitmapMetadata.SetQuery%2A>用來寫入文字儲存於 *"/ 文字/說明 「*位置。  
   
  [!code-cpp[BitmapMetadata#SetQuery](../../../../samples/snippets/cpp/VS_Snippets_Wpf/BitMapMetadata/CPP/BitmapMetadata.cpp#setquery)]
  [!code-csharp[BitmapMetadata#SetQuery](../../../../samples/snippets/csharp/VS_Snippets_Wpf/BitMapMetadata/CSharp/BitmapMetadata.cs#setquery)]
@@ -200,7 +202,7 @@ ms.lasthandoff: 12/22/2017
 > [!NOTE]
 >  轉碼器必須經過數位簽署，系統才能辨識它。  
   
-## <a name="see-also"></a>請參閱  
+## <a name="see-also"></a>另請參閱  
  <xref:System.Windows.Media.Imaging.BitmapSource>  
  <xref:System.Windows.Media.Imaging.BitmapImage>  
  <xref:System.Windows.Controls.Image>  

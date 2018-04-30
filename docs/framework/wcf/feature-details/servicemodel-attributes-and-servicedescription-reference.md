@@ -1,29 +1,31 @@
 ---
-title: "ServiceModel 屬性與 ServiceDescription 參考"
-ms.custom: 
+title: ServiceModel 屬性與 ServiceDescription 參考
+ms.custom: ''
 ms.date: 03/30/2017
 ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.technology: dotnet-clr
-ms.tgt_pltfrm: 
+ms.reviewer: ''
+ms.suite: ''
+ms.technology:
+- dotnet-clr
+ms.tgt_pltfrm: ''
 ms.topic: article
 ms.assetid: 4ab86b17-eab9-4846-a881-0099f9a7cc64
-caps.latest.revision: "13"
+caps.latest.revision: 13
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.workload: dotnet
-ms.openlocfilehash: 61a0811176a5db17e040073d031fa50865a09857
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.workload:
+- dotnet
+ms.openlocfilehash: ba8888c2a1bd3c16ab6d216c365870c0df0e499a
+ms.sourcegitcommit: 94d33cadc5ff81d2ac389bf5f26422c227832052
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 04/30/2018
 ---
 # <a name="servicemodel-attributes-and-servicedescription-reference"></a>ServiceModel 屬性與 ServiceDescription 參考
 *描述樹狀目錄*是類型的階層 (從<xref:System.ServiceModel.Description.ServiceDescription?displayProperty=nameWithType>類別)，描述服務的每個層面。 [!INCLUDE[indigo1](../../../../includes/indigo1-md.md)] 會使用描述樹狀目錄來建置有效的服務執行階段，以發行 Web 服務描述語言 (WSDL)、XML 結構描述定義語言 (XSD)，以及用戶端可用來連接和使用服務之服務的相關原則判斷提示 (中繼資料)，並產生描述樹狀目錄值的各種程式碼和組態檔表示法。  
   
- 本主題說明如何從服務合約取得與合約有關的屬性，以及如何實作這些屬性並新增到描述樹狀目錄中。 在某些情況下，屬性值會轉換成行為屬性，然後行為會插入描述樹狀目錄中。 [!INCLUDE[crabout](../../../../includes/crabout-md.md)]如何描述樹狀目錄值會轉換成中繼資料，請參閱[ServiceDescription 與 WSDL 參考](../../../../docs/framework/wcf/feature-details/servicedescription-and-wsdl-reference.md)。  
+ 本主題說明如何從服務合約取得與合約有關的屬性，以及如何實作這些屬性並新增到描述樹狀目錄中。 在某些情況下，屬性值會轉換成行為屬性，然後行為會插入描述樹狀目錄中。 如需如何將描述樹狀目錄值轉換成中繼資料的詳細資訊，請參閱[ServiceDescription 與 WSDL 參考](../../../../docs/framework/wcf/feature-details/servicedescription-and-wsdl-reference.md)。  
   
 ## <a name="mapping-operations-to-the-description-tree"></a>將操作對應至描述樹狀目錄  
  在 [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] 應用程式中，服務合約是藉由使用屬性將介面或類別及其方法標記為操作群組的介面 (或類別) 來模組化。 開啟 <xref:System.ServiceModel.ServiceHost> 類別時，會反映任何服務合約和實作並與組態資訊合併至描述樹狀目錄中。  
@@ -44,7 +46,7 @@ ms.lasthandoff: 12/22/2017
 |---------------------------------------|-------------------------------------|  
 |CallbackContract|<xref:System.ServiceModel.Description.ContractDescription.CallbackContractType%2A>，<xref:System.ServiceModel.Description.MessageDescription> 加入至所有操作 <xref:System.ServiceModel.Description.OperationDescription.Messages%2A> 中。|  
 |ConfigurationName|<xref:System.ServiceModel.Description.ContractDescription.ConfigurationName%2A>|  
-|ProtectionLevel|<xref:System.ServiceModel.Description.ContractDescription.ProtectionLevel%2A> 與可能的子系保護層級。 [!INCLUDE[crabout](../../../../includes/crabout-md.md)]保護層級階層，請參閱[了解保護層級](../../../../docs/framework/wcf/understanding-protection-level.md)。|  
+|ProtectionLevel|<xref:System.ServiceModel.Description.ContractDescription.ProtectionLevel%2A> 與可能的子系保護層級。 如需保護層級階層的詳細資訊，請參閱[了解保護層級](../../../../docs/framework/wcf/understanding-protection-level.md)。|  
 |SessionMode|<xref:System.ServiceModel.Description.ContractDescription.SessionMode%2A>|  
   
 |ServiceKnownTypesAttribute 值|受影響的描述樹狀目錄值|  
@@ -59,7 +61,7 @@ ms.lasthandoff: 12/22/2017
 |IsInitiating|<xref:System.ServiceModel.Description.OperationDescription.IsInitiating%2A>|  
 |IsTerminating|<xref:System.ServiceModel.Description.OperationDescription.IsTerminating%2A>|  
 |名稱|<xref:System.ServiceModel.Description.OperationDescription.Name%2A>|  
-|ProtectionLevel|<xref:System.ServiceModel.Description.OperationDescription.ProtectionLevel%2A> 與可能的子系保護層級。 [!INCLUDE[crabout](../../../../includes/crabout-md.md)]保護層級階層，請參閱[了解保護層級](../../../../docs/framework/wcf/understanding-protection-level.md)。|  
+|ProtectionLevel|<xref:System.ServiceModel.Description.OperationDescription.ProtectionLevel%2A> 與可能的子系保護層級。 如需保護層級階層的詳細資訊，請參閱[了解保護層級](../../../../docs/framework/wcf/understanding-protection-level.md)。|  
 |ReplyAction|<xref:System.ServiceModel.Description.MessageDescription.Action%2A> 用於輸出訊息或輸入訊息，視合約/回呼合約而定。|  
   
 |FaultContractAttribute 值|受影響的描述樹狀目錄值|  
@@ -122,7 +124,7 @@ ms.lasthandoff: 12/22/2017
 |-------------------------------------|-------------------------------------|  
 |名稱|<xref:System.ServiceModel.Description.MessagePartDescription.Name%2A> 中的對應部分 <xref:System.ServiceModel.Description.MessageBodyDescription.Parts%2A>|  
   
- [!INCLUDE[crabout](../../../../includes/crabout-md.md)]如何描述樹狀目錄值會轉換成中繼資料，請參閱[ServiceDescription 與 WSDL 參考](../../../../docs/framework/wcf/feature-details/servicedescription-and-wsdl-reference.md)。  
+ 如需如何將描述樹狀目錄值轉換成中繼資料的詳細資訊，請參閱[ServiceDescription 與 WSDL 參考](../../../../docs/framework/wcf/feature-details/servicedescription-and-wsdl-reference.md)。  
   
-## <a name="see-also"></a>請參閱  
+## <a name="see-also"></a>另請參閱  
  [ServiceDescription 與 WSDL 參考](../../../../docs/framework/wcf/feature-details/servicedescription-and-wsdl-reference.md)

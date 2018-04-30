@@ -20,11 +20,11 @@ ms.author: bruceper
 manager: mbaldwin
 ms.workload:
 - dotnet
-ms.openlocfilehash: d5fed0e842abd815d0483e26e1e1f350899d1506
-ms.sourcegitcommit: 03ee570f6f528a7d23a4221dcb26a9498edbdf8c
+ms.openlocfilehash: ffc985d528bfdcdd9b62772a8a8ba61823c95e76
+ms.sourcegitcommit: 94d33cadc5ff81d2ac389bf5f26422c227832052
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/28/2018
+ms.lasthandoff: 04/30/2018
 ---
 # <a name="securing-services"></a>保護服務的安全
 [!INCLUDE[indigo1](../../../includes/indigo1-md.md)] 服務的安全性是由兩個主要需求所組成：傳輸安全性和授權 (第三個需求，安全性事件稽核的述[稽核](../../../docs/framework/wcf/feature-details/auditing-security-events.md)。)簡言之，傳輸安全性包含驗證 (驗證服務和用戶端兩者的身分識別)、機密性 (訊息加密) 和完整性 (用來偵測竄改的數位簽章)。 授權會控制存取資源，例如，只允許有權限的使用者讀取檔案。 使用 [!INCLUDE[indigo2](../../../includes/indigo2-md.md)]的功能，即可輕鬆實作這兩個主要需求。  
@@ -51,13 +51,13 @@ ms.lasthandoff: 04/28/2018
  [!INCLUDE[indigo2](../../../includes/indigo2-md.md)] 基礎結構是設計為使用這些 Windows 安全性機制。 因此，如果要建立將會部署在內部網路上的服務，而且服務用戶端限制在 Windows 網域的成員，即可輕鬆實作安全性。 只有有效的使用者才能登入網域。 當使用者登入之後，Kerberos 控制器會讓每個使用者與其他電腦或應用程式建立安全內容。 在本機電腦上，可以輕鬆建立群組。若要保護特定資料夾，這些群組就可以用於電腦上指派存取權限。  
   
 ## <a name="implementing-windows-security-on-intranet-services"></a>在內部網路服務上實作 Windows 安全性  
- 若要保護只在 Windows 網域上執行的應用程式，您可以使用 <xref:System.ServiceModel.WSHttpBinding> 或 <xref:System.ServiceModel.NetTcpBinding> 繫結的預設安全性設定。 根據預設，相同 Windows 網域上的任何人都可以存取 [!INCLUDE[indigo2](../../../includes/indigo2-md.md)] 服務。 因為這些使用者已經登入網路，所以他們都是受信任的。 服務和用戶端之間的訊息會為了機密性而加密，且為了完整性而簽署。 [!INCLUDE[crabout](../../../includes/crabout-md.md)] 如何建立可使用 Windows 安全性之服務的詳細資訊，請參閱 [如何：使用 Windows 認證來確保服務安全](../../../docs/framework/wcf/how-to-secure-a-service-with-windows-credentials.md)」(Credential)。  
+ 若要保護只在 Windows 網域上執行的應用程式，您可以使用 <xref:System.ServiceModel.WSHttpBinding> 或 <xref:System.ServiceModel.NetTcpBinding> 繫結的預設安全性設定。 根據預設，相同 Windows 網域上的任何人都可以存取 [!INCLUDE[indigo2](../../../includes/indigo2-md.md)] 服務。 因為這些使用者已經登入網路，所以他們都是受信任的。 服務和用戶端之間的訊息會為了機密性而加密，且為了完整性而簽署。 如需如何建立使用 Windows 安全性的服務的詳細資訊，請參閱[How to： 安全 Windows 認證的服務](../../../docs/framework/wcf/how-to-secure-a-service-with-windows-credentials.md)。  
   
 ### <a name="authorization-using-the-principalpermissionattribute-class"></a>使用 PrincipalPermissionAttribute 類別的授權  
  如果您必須限制存取電腦上的資源，最簡單的方式是使用 <xref:System.Security.Permissions.PrincipalPermissionAttribute> 類別。 這個屬性可藉由要求使用者應為指定的 Windows 群組或角色或特定使用者，來限制服務作業的引動過程。 如需詳細資訊，請參閱[How to： 使用 PrincipalPermissionAttribute 類別的限制存取](../../../docs/framework/wcf/how-to-restrict-access-with-the-principalpermissionattribute-class.md)。  
   
 ### <a name="impersonation"></a>模擬  
- 模擬是另一個可用來控制存取資源的機制。 根據預設，由 IIS 裝載的服務必須在 ASPNET 帳戶的身分識別下執行。 ASPNET 帳戶只能存取它有權限的資源。 不過，也可以將資料夾的 ACL 設定為排除 ASPNET 服務帳戶，但允許某些其他身分識別來存取資料夾。 接下來的問題是，如果不允許 ASPNET 帳戶存取資料夾，如何允許其他使用者存取資料夾。 答案是使用模擬，藉此讓服務能使用用戶端的認證來存取特定資源。 另一個範例是當存取只有某些使用者有權限的 SQL Server 資料庫。 [!INCLUDE[crabout](../../../includes/crabout-md.md)] 使用模擬，請參閱[How to： 服務上模擬用戶端](../../../docs/framework/wcf/how-to-impersonate-a-client-on-a-service.md)和[委派和模擬](../../../docs/framework/wcf/feature-details/delegation-and-impersonation-with-wcf.md)。  
+ 模擬是另一個可用來控制存取資源的機制。 根據預設，由 IIS 裝載的服務必須在 ASPNET 帳戶的身分識別下執行。 ASPNET 帳戶只能存取它有權限的資源。 不過，也可以將資料夾的 ACL 設定為排除 ASPNET 服務帳戶，但允許某些其他身分識別來存取資料夾。 接下來的問題是，如果不允許 ASPNET 帳戶存取資料夾，如何允許其他使用者存取資料夾。 答案是使用模擬，藉此讓服務能使用用戶端的認證來存取特定資源。 另一個範例是當存取只有某些使用者有權限的 SQL Server 資料庫。 如需有關如何使用模擬的詳細資訊，請參閱[How to： 服務上模擬用戶端](../../../docs/framework/wcf/how-to-impersonate-a-client-on-a-service.md)和[委派和模擬](../../../docs/framework/wcf/feature-details/delegation-and-impersonation-with-wcf.md)。  
   
 ## <a name="security-on-the-internet"></a>網際網路上的安全性  
  網際網路上的安全性和內部網路上的安全性有相同需求。 服務必須出示其認證，以證明其真實性，而用戶端則必須向服務證明其身分識別。 一旦證明用戶端的身分識別，服務就可以控制用戶端對資源的存取權限。 不過，由於網際網路的異質性，所出示的認證與 Windows 網域上所使用的並不相同。 在網域上，Kerberos 控制器會使用認證的票證來處理使用者驗證，但在網際網路上，服務和用戶端則仰賴多個不同方式來出示認證。 不過，本主題的目標是提出通用方法，來建立可在網際網路上存取的 [!INCLUDE[indigo2](../../../includes/indigo2-md.md)] 服務。  
@@ -78,10 +78,10 @@ ms.lasthandoff: 04/28/2018
   
  第三個模式是「 *使用訊息認證的傳輸模式*」(Transport With Message Credentials Mode)，此模式會結合這兩個主要模式的語意。  
   
- 安全性模式決定如何保護訊息，每個選項互有利弊，說明如下。 [!INCLUDE[crabout](../../../includes/crabout-md.md)] 設定安全性模式的詳細資訊，請參閱 [How to: Set the Security Mode](../../../docs/framework/wcf/how-to-set-the-security-mode.md)」(Credential)。  
+ 安全性模式決定如何保護訊息，每個選項互有利弊，說明如下。 如需有關如何設定安全性模式的詳細資訊，請參閱[How to： 設定安全性模式](../../../docs/framework/wcf/how-to-set-the-security-mode.md)。  
   
 #### <a name="transport-mode"></a>傳輸模式  
- 在網路和應用程式之間有多個層次。 下列其中一種是*傳輸*層*，*它負責管理端點間的訊息傳輸。 眼前目的只需要瞭解 [!INCLUDE[indigo2](../../../includes/indigo2-md.md)] 使用數個傳輸通訊協定，而且每個通訊協定都會保護訊息傳輸 ([!INCLUDE[crabout](../../../includes/crabout-md.md)]傳輸，請參閱[傳輸](../../../docs/framework/wcf/feature-details/transports.md)。)  
+ 在網路和應用程式之間有多個層次。 下列其中一種是*傳輸*層*，*它負責管理端點間的訊息傳輸。 眼前目的只需要瞭解 [!INCLUDE[indigo2](../../../includes/indigo2-md.md)] 使用數個傳輸通訊協定，而且每個通訊協定都會保護訊息傳輸 (如需傳輸的詳細資訊，請參閱[傳輸](../../../docs/framework/wcf/feature-details/transports.md)。)  
   
  常用的通訊協定包含 HTTP 和 TCP。 每個這些通訊協定都會藉由通訊協定特定的 (一或多個) 機制來保護訊息傳輸。 例如，HTTP 通訊協定使用 SSL over HTTP (通常縮寫為 "HTTPS") 而受到保護。 因此，當您選取安全性的傳輸模式時，會依照通訊協定規定來選擇使用機制。 例如，如果您選取 <xref:System.ServiceModel.WSHttpBinding> 類別，並將其安全性模式設定為 Transport，同時會選取 SSL over HTTP (HTTPS) 做為安全性機制。 傳輸模式的優點是比訊息模式更有效率，因為安全性是整合在相當低的層級。 使用傳輸模式時，安全性機制必須依照傳輸規格來實作，因此只有在點對點傳輸時訊息才能安全流動。  
   
@@ -96,7 +96,7 @@ ms.lasthandoff: 04/28/2018
   
  但並不是所有狀況都需要用戶端認證類型。 使用 SSL over HTTP (HTTPS) 時，服務會向用戶端驗證自身。 在這個驗證過程中，服務的憑證會在一個名為「 *交涉*」(Negotiation) 的處理序中傳送至用戶端。 SSL 安全傳輸會確保所有訊息都是機密的。  
   
- 如果建立的服務需要驗證用戶端，則用戶端認證類型的選擇取決於選取的傳輸和安全性模式。 例如，使用 HTTP 傳輸且選擇傳輸模式時，有數個選項，例如「基本」、「摘要」等 ([!INCLUDE[crabout](../../../includes/crabout-md.md)] 如需這些認證類型的詳細資訊，請參閱 [Understanding HTTP Authentication](../../../docs/framework/wcf/feature-details/understanding-http-authentication.md)中描述)。  
+ 如果建立的服務需要驗證用戶端，則用戶端認證類型的選擇取決於選取的傳輸和安全性模式。 例如，使用 HTTP 傳輸且選擇傳輸模式時，有數個選項，例如「基本」、「摘要」等 (如需有關這些認證類型，請參閱[了解 HTTP 驗證](../../../docs/framework/wcf/feature-details/understanding-http-authentication.md)。)  
   
  如果在 Windows 網域上建立的服務只提供給該網路的其他使用者使用，最簡單的方法是 Windows 用戶端認證類型。 不過，您可能也要提供憑證給服務。 在 [How to: Specify Client Credential Values](../../../docs/framework/wcf/how-to-specify-client-credential-values.md)中，會示範這個用法。  
   
@@ -109,7 +109,7 @@ ms.lasthandoff: 04/28/2018
  相對之下，在用戶端，識別是用來驗證服務。 在設計階段，用戶端開發人員可以設定[\<識別 >](../../../docs/framework/configure-apps/file-schema/wcf/identity.md)從服務取得的值的項目。 在執行階段，用戶端會比對服務的實際識別，來檢查項目的值。 如果檢查失敗，用戶端會結束通訊。 如果服務在特定使用者的識別下執行，此值可以是使用者主要名稱 (UPN)，如果服務在電腦帳戶下執行，則為服務主要名稱 (SPN)。 如需詳細資訊，請參閱[服務識別和驗證](../../../docs/framework/wcf/feature-details/service-identity-and-authentication.md)。 認證也可以是憑證，或是憑證上識別憑證的欄位。  
   
 ## <a name="protection-levels"></a>保護層級  
- `ProtectionLevel` 屬性 (Property) 會出現在多個屬性 (Attribute) 類別 (例如 <xref:System.ServiceModel.ServiceContractAttribute> 和 <xref:System.ServiceModel.OperationContractAttribute> 類別)。 保護層級是一個值，會指定支援服務的訊息 (或訊息部分) 為經過簽署、經過簽署且加密，或是已傳送但未包含簽章或加密。 [!INCLUDE[crabout](../../../includes/crabout-md.md)] 屬性，請參閱[了解保護層級](../../../docs/framework/wcf/understanding-protection-level.md)，及程式設計範例，請參閱[How to： 設定 ProtectionLevel 屬性](../../../docs/framework/wcf/how-to-set-the-protectionlevel-property.md)。 [!INCLUDE[crabout](../../../includes/crabout-md.md)] 如需在內容中使用 `ProtectionLevel` 來設計服務合約的詳細資訊，請參閱 [Designing Service Contracts](../../../docs/framework/wcf/designing-service-contracts.md)」(Credential)。  
+ `ProtectionLevel` 屬性 (Property) 會出現在多個屬性 (Attribute) 類別 (例如 <xref:System.ServiceModel.ServiceContractAttribute> 和 <xref:System.ServiceModel.OperationContractAttribute> 類別)。 保護層級是一個值，會指定支援服務的訊息 (或訊息部分) 為經過簽署、經過簽署且加密，或是已傳送但未包含簽章或加密。 如需屬性的詳細資訊，請參閱[了解保護層級](../../../docs/framework/wcf/understanding-protection-level.md)，及程式設計範例，請參閱[How to： 設定 ProtectionLevel 屬性](../../../docs/framework/wcf/how-to-set-the-protectionlevel-property.md)。 如需有關設計服務合約有`ProtectionLevel`在內容中，請參閱[設計服務合約](../../../docs/framework/wcf/designing-service-contracts.md)。  
   
 ## <a name="see-also"></a>另請參閱  
  <xref:System.ServiceModel>  

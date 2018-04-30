@@ -1,12 +1,13 @@
 ---
-title: "HOW TO：設定 ProtectionLevel 屬性"
-ms.custom: 
+title: HOW TO：設定 ProtectionLevel 屬性
+ms.custom: ''
 ms.date: 03/30/2017
 ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.technology: dotnet-clr
-ms.tgt_pltfrm: 
+ms.reviewer: ''
+ms.suite: ''
+ms.technology:
+- dotnet-clr
+ms.tgt_pltfrm: ''
 ms.topic: article
 dev_langs:
 - csharp
@@ -15,19 +16,20 @@ helpviewer_keywords:
 - WCF, security
 - ProtectionLevel property
 ms.assetid: 3d4e8f80-0f9e-4a26-9899-beb6584e78df
-caps.latest.revision: "10"
+caps.latest.revision: 10
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.workload: dotnet
-ms.openlocfilehash: a9b90df85259dfe48f071ca2b4b8404cfe8e673e
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.workload:
+- dotnet
+ms.openlocfilehash: abb1d3cc64b7992b9983e81c5f8a5c30c2343f30
+ms.sourcegitcommit: 94d33cadc5ff81d2ac389bf5f26422c227832052
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 04/30/2018
 ---
 # <a name="how-to-set-the-protectionlevel-property"></a>HOW TO：設定 ProtectionLevel 屬性
-您可以套用適當的屬性 (Attribute) 並設定屬性 (Property)，藉此設定保護層級。 您可以設定服務層級的保護，以影響每一個訊息的所有部分，或是從方法到訊息部分，設定越發細微的保護層級。 [!INCLUDE[crabout](../../../includes/crabout-md.md)]`ProtectionLevel`屬性，請參閱[了解保護層級](../../../docs/framework/wcf/understanding-protection-level.md)。  
+您可以套用適當的屬性 (Attribute) 並設定屬性 (Property)，藉此設定保護層級。 您可以設定服務層級的保護，以影響每一個訊息的所有部分，或是從方法到訊息部分，設定越發細微的保護層級。 如需有關`ProtectionLevel`屬性，請參閱[了解保護層級](../../../docs/framework/wcf/understanding-protection-level.md)。  
   
 > [!NOTE]
 >  您只能在程式碼中設定保護層級，而不能在組態中設定。  
@@ -53,7 +55,7 @@ ms.lasthandoff: 12/22/2017
      [!code-vb[C_ProtectionLevel#2](../../../samples/snippets/visualbasic/VS_Snippets_CFX/c_protectionlevel/vb/source.vb#2)]  
   
 ## <a name="protecting-fault-messages"></a>保護錯誤訊息  
- 在服務上擲回的例外狀況可以當成 SOAP 錯誤傳送至用戶端。 [!INCLUDE[crabout](../../../includes/crabout-md.md)]正在建立強類型錯誤，請參閱[指定與處理合約和服務中的錯誤](../../../docs/framework/wcf/specifying-and-handling-faults-in-contracts-and-services.md)和[How to： 在服務合約中宣告的錯誤](../../../docs/framework/wcf/how-to-declare-faults-in-service-contracts.md)。  
+ 在服務上擲回的例外狀況可以當成 SOAP 錯誤傳送至用戶端。 如需有關建立強型別錯誤，請參閱[指定與處理合約和服務中的錯誤](../../../docs/framework/wcf/specifying-and-handling-faults-in-contracts-and-services.md)和[How to： 在服務合約中宣告的錯誤](../../../docs/framework/wcf/how-to-declare-faults-in-service-contracts.md)。  
   
 #### <a name="to-protect-a-fault-message"></a>保護錯誤訊息  
   
@@ -72,7 +74,7 @@ ms.lasthandoff: 12/22/2017
      [!code-vb[C_ProtectionLevel#4](../../../samples/snippets/visualbasic/VS_Snippets_CFX/c_protectionlevel/vb/source.vb#4)]  
   
 ## <a name="protecting-message-parts"></a>保護訊息部分  
- 使用訊息合約保護訊息的部分。 [!INCLUDE[crabout](../../../includes/crabout-md.md)]訊息合約，請參閱[使用訊息合約](../../../docs/framework/wcf/feature-details/using-message-contracts.md)。  
+ 使用訊息合約保護訊息的部分。 如需訊息合約的詳細資訊，請參閱[使用訊息合約](../../../docs/framework/wcf/feature-details/using-message-contracts.md)。  
   
 #### <a name="to-protect-a-message-body"></a>保護訊息本文  
   
@@ -99,7 +101,7 @@ ms.lasthandoff: 12/22/2017
  [!code-csharp[C_ProtectionLevel#0](../../../samples/snippets/csharp/VS_Snippets_CFX/c_protectionlevel/cs/source.cs#0)]
  [!code-vb[C_ProtectionLevel#0](../../../samples/snippets/visualbasic/VS_Snippets_CFX/c_protectionlevel/vb/source.vb#0)]  
   
-## <a name="see-also"></a>請參閱  
+## <a name="see-also"></a>另請參閱  
  <xref:System.ServiceModel.ServiceContractAttribute>  
  <xref:System.ServiceModel.OperationContractAttribute>  
  <xref:System.ServiceModel.FaultContractAttribute>  

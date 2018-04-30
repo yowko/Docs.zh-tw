@@ -23,11 +23,11 @@ ms.author: dotnetcontent
 manager: wpickett
 ms.workload:
 - dotnet
-ms.openlocfilehash: 528c1661b99ff5f50d42bb7a42371c302e335c90
-ms.sourcegitcommit: 03ee570f6f528a7d23a4221dcb26a9498edbdf8c
+ms.openlocfilehash: c771d78c5e78feabcfe883934ed7ea3589c938d2
+ms.sourcegitcommit: 94d33cadc5ff81d2ac389bf5f26422c227832052
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/28/2018
+ms.lasthandoff: 04/30/2018
 ---
 # <a name="collection-types-in-data-contracts"></a>資料合約中的集合型別
 「 *集合* 」(Collection) 是特定型別之項目的清單。 在 [!INCLUDE[dnprdnshort](../../../../includes/dnprdnshort-md.md)]中，可以使用陣列或其他多種型別 (泛型清單、泛型 <xref:System.ComponentModel.BindingList%601>, <xref:System.Collections.Specialized.StringCollection>或 <xref:System.Collections.ArrayList>) 來表示這類清單。 例如，集合可能含有特定「客戶」的地址清單。 不論實際型別為何，這些集合統稱為「 *清單集合*」(List Collection)。  
@@ -42,7 +42,7 @@ ms.lasthandoff: 04/28/2018
   
  包含在集合中的型別必須是資料合約類型，否則必須是可序列化的型別。 如需詳細資訊，請參閱[資料合約序列化程式所支援的型別](../../../../docs/framework/wcf/feature-details/types-supported-by-the-data-contract-serializer.md)。  
   
- [!INCLUDE[crabout](../../../../includes/crabout-md.md)] 被視為有效集合的條件以及如何序列化集合的詳細資訊，請參閱本主題「進階集合規則」一節中有關序列化集合的資訊。  
+ 如需有關何謂以及什麼不是有效的集合，以及如何序列化集合的詳細資訊，請參閱本主題 「 進階集合規則 」 一節中的序列化集合的相關資訊。  
   
 ## <a name="interchangeable-collections"></a>可互換的集合  
  相同型別的所有清單集合，都會被視為具有相同的資料合約 (除非有使用 <xref:System.Runtime.Serialization.CollectionDataContractAttribute> 屬性來自訂這些集合，如本主題稍後所討論)。 例如，下列資料合約是相等的。  
@@ -91,7 +91,7 @@ ms.lasthandoff: 04/28/2018
 ## <a name="customizing-collection-types"></a>自訂集合型別  
  您可以使用 <xref:System.Runtime.Serialization.CollectionDataContractAttribute> 屬性來自訂集合型別，此屬性有數種用法。  
   
- 請注意，自訂集合類型會影響集合的可互換性，所以我們一般會建議您盡可能避免套用這個屬性。 [!INCLUDE[crabout](../../../../includes/crabout-md.md)] 這個問題的詳細資訊，請參閱本主題稍後的＜進階集合規則＞一節。  
+ 請注意，自訂集合類型會影響集合的可互換性，所以我們一般會建議您盡可能避免套用這個屬性。 如需有關此問題的詳細資訊，請參閱本主題稍後的 「 進階集合規則 」 一節。  
   
 ### <a name="collection-data-contract-naming"></a>集合資料合約命名  
  如 [Data Contract Names](../../../../docs/framework/wcf/feature-details/data-contract-names.md)中所述，命名集合型別的規則與命名一般資料合約類型的規則相似，不過其中仍有某些重要差異：  
@@ -203,7 +203,7 @@ ms.lasthandoff: 04/28/2018
 </CountriesOrRegionsWithCapitals>  
 ```  
   
- [!INCLUDE[crabout](../../../../includes/crabout-md.md)] 字典集合的詳細資訊，請參閱本主題稍後的「進階集合規則」一節。  
+ 如需有關字典集合的詳細資訊，請參閱本主題稍後的 「 進階集合規則 」 一節。  
   
 ## <a name="collections-and-known-types"></a>集合與已知型別  
  當使用多型方式，將集合取代其他集合或集合介面時，您並不需要將集合型別新增到已知型別中。 例如，如果您宣告 <xref:System.Collections.IEnumerable> 型別的資料成員，並使用該成員傳送 <xref:System.Collections.ArrayList>的執行個體，這時您並不需要將 <xref:System.Collections.ArrayList> 新增到已知型別。  
@@ -318,7 +318,7 @@ svcutil.exe MyService.wsdl MyServiceSchema.xsd /r:C:\full_path_to_system_dll\Sys
   
 -   允許結合集合型別 (即新增集合的集合)。 不規則陣列會被視為集合的集合。 不支援多維陣列。  
   
--   位元組的陣列與 <xref:System.Xml.XmlNode> 的陣列，都是會被視為基本型別 (而非集合) 的特殊陣列型別。 序列化位元組陣列時，會產生含有 Base64 編碼資料區塊的單一 XML 元素，而不是針對各個位元組產生個別元素。 [!INCLUDE[crabout](../../../../includes/crabout-md.md)] 如何處理 <xref:System.Xml.XmlNode> 陣列的詳細資訊，請參閱 [XML and ADO.NET Types in Data Contracts](../../../../docs/framework/wcf/feature-details/xml-and-ado-net-types-in-data-contracts.md). 當然，這些特殊型別本身可以參與集合：位元組陣列的陣列會產生多個 XML 項目，其中每個項目會包含 Base64 編碼資料的區塊。  
+-   位元組的陣列與 <xref:System.Xml.XmlNode> 的陣列，都是會被視為基本型別 (而非集合) 的特殊陣列型別。 序列化位元組陣列時，會產生含有 Base64 編碼資料區塊的單一 XML 元素，而不是針對各個位元組產生個別元素。 如需詳細資訊的陣列<xref:System.Xml.XmlNode>是處理，請參閱[XML 和 ADO.NET 資料合約中的型別](../../../../docs/framework/wcf/feature-details/xml-and-ado-net-types-in-data-contracts.md)。 當然，這些特殊型別本身可以參與集合：位元組陣列的陣列會產生多個 XML 項目，其中每個項目會包含 Base64 編碼資料的區塊。  
   
 -   如果集合型別套用了 <xref:System.Runtime.Serialization.DataContractAttribute> 屬性，該型別就會被視為一般資料合約類型，而不是集合。  
   
@@ -361,7 +361,7 @@ svcutil.exe MyService.wsdl MyServiceSchema.xsd /r:C:\full_path_to_system_dll\Sys
   
 -   除非已使用 Name 覆寫，否則清單集合資料合約的預設名稱，就會是 "ArrayOf" 字串與集合中所包含型別之資料合約名稱的組合。 例如，整數泛型清單的資料合約名稱是 "ArrayOfint"。 請記住， `Object` 的資料合約名稱是 "anyType"，因此非泛型清單 (例如， <xref:System.Collections.ArrayList> ) 的資料合約名稱會是 "ArrayOfanyType"。  
   
- 除非已使用 `Name` 覆寫，否則字典集合資料合約的預設名稱，就會是 "ArrayOfKeyValueOf" 字串與索引鍵型別之資料合約名稱加上值型別之資料合約名稱的組合。 例如，字串與整數之泛型字典的資料合約名稱為 "ArrayOfKeyValueOfstringint"。 此外，如果索引鍵或值型別其中一個不是基本型別，便會在名稱後附加索引鍵與值型別之資料合約命名空間的命名空間雜湊。 [!INCLUDE[crabout](../../../../includes/crabout-md.md)] 命名空間雜湊的詳細資訊，請參閱 [Data Contract Names](../../../../docs/framework/wcf/feature-details/data-contract-names.md).  
+ 除非已使用 `Name` 覆寫，否則字典集合資料合約的預設名稱，就會是 "ArrayOfKeyValueOf" 字串與索引鍵型別之資料合約名稱加上值型別之資料合約名稱的組合。 例如，字串與整數之泛型字典的資料合約名稱為 "ArrayOfKeyValueOfstringint"。 此外，如果索引鍵或值型別其中一個不是基本型別，便會在名稱後附加索引鍵與值型別之資料合約命名空間的命名空間雜湊。 如需命名空間雜湊的詳細資訊，請參閱[資料合約名稱](../../../../docs/framework/wcf/feature-details/data-contract-names.md)。  
   
  每個字典集合資料合約都具有表示字典中一個項目的附屬資料合約。 除了 "ArrayOf" 的前置詞以外，該合約的名稱與字典資料合約的名稱相同，而且其命名空間也與字典資料合約相同。 例如，對於 "ArrayOfKeyValueOfstringint" 字典資料合約，"KeyValueofstringint" 資料合約表示字典中的一個項目。 您可以使用 `ItemName` 屬性來自訂這個資料合約的名稱，如下節所示。  
   

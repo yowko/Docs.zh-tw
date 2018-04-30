@@ -19,11 +19,11 @@ ms.author: dotnetcontent
 manager: wpickett
 ms.workload:
 - dotnet
-ms.openlocfilehash: 4d5caa913a49205c387c22a615b2b8da2dba0a77
-ms.sourcegitcommit: 03ee570f6f528a7d23a4221dcb26a9498edbdf8c
+ms.openlocfilehash: 2343ebe5a2a029ddb40da98d28f5c442aa7b6962
+ms.sourcegitcommit: 94d33cadc5ff81d2ac389bf5f26422c227832052
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/28/2018
+ms.lasthandoff: 04/30/2018
 ---
 # <a name="serialization-and-deserialization"></a>序列化和還原序列化
 [!INCLUDE[indigo1](../../../../includes/indigo1-md.md)] 包含新的序列化 (Serialization) 引擎， <xref:System.Runtime.Serialization.DataContractSerializer>。 <xref:System.Runtime.Serialization.DataContractSerializer> 會在 [!INCLUDE[dnprdnshort](../../../../includes/dnprdnshort-md.md)] 物件與 XML 之間轉譯 (雙向)。 本主題會說明序列化程式的運作方式。  
@@ -54,7 +54,7 @@ ms.lasthandoff: 04/28/2018
  [!code-vb[c_StandaloneDataContractSerializer#2](../../../../samples/snippets/visualbasic/VS_Snippets_CFX/c_standalonedatacontractserializer/vb/source.vb#2)]  
   
 ### <a name="specifying-known-types"></a>指定已知型別  
- 如果透過 <xref:System.Runtime.Serialization.KnownTypeAttribute> 屬性或其他一些機制來序列化尚未處理的型別時運用了多型 (Polymorphism)，則必須透過 `knownTypes` 參數將可能的已知型別清單傳遞至序列化程式的建構函式中。 [!INCLUDE[crabout](../../../../includes/crabout-md.md)] 如需已知型別的詳細資訊，請參閱 [Data Contract Known Types](../../../../docs/framework/wcf/feature-details/data-contract-known-types.md)。  
+ 如果透過 <xref:System.Runtime.Serialization.KnownTypeAttribute> 屬性或其他一些機制來序列化尚未處理的型別時運用了多型 (Polymorphism)，則必須透過 `knownTypes` 參數將可能的已知型別清單傳遞至序列化程式的建構函式中。 如需已知型別的詳細資訊，請參閱[資料合約已知型別](../../../../docs/framework/wcf/feature-details/data-contract-known-types.md)。  
   
  下列範例說明類別 ( `LibraryPatron`)，其中包含了特定型別的集合 ( `LibraryItem`)。 第二個類別定義了 `LibraryItem` 型別。 第三與第四個類別 (`Book` 和 `Newspaper`) 則繼承了 `LibraryItem` 類別。  
   
@@ -267,7 +267,7 @@ ms.lasthandoff: 04/28/2018
   
 -   <xref:System.Runtime.Serialization.NetDataContractSerializer.Serialize%2A> 和 <xref:System.Runtime.Serialization.NetDataContractSerializer.Deserialize%2A> 方法都是 <xref:System.Runtime.Serialization.XmlObjectSerializer.WriteObject%2A> 和 <xref:System.Runtime.Serialization.XmlObjectSerializer.ReadObject%2A> 方法的別名。 這些都是為了在使用二進位或 SOAP 序列化時提供更一致的程式設計模型而存在的。  
   
- [!INCLUDE[crabout](../../../../includes/crabout-md.md)] 這些功能，請參閱[二進位序列化](../../../../docs/standard/serialization/binary-serialization.md)。  
+ 如需有關這些功能的詳細資訊，請參閱[二進位序列化](../../../../docs/standard/serialization/binary-serialization.md)。  
   
  `NetDataContractSerializer` 和 `DataContractSerializer` 使用的 XML 格式一般都不相容。 亦即，不支援使用其中一個序列化程式來序列化，並以另一個序列化程式來還原序列化的情況。  
   

@@ -16,11 +16,11 @@ ms.author: dotnetcontent
 manager: wpickett
 ms.workload:
 - dotnet
-ms.openlocfilehash: 14b3eebb83115617ce32ab0ff45184cd6754e58c
-ms.sourcegitcommit: 03ee570f6f528a7d23a4221dcb26a9498edbdf8c
+ms.openlocfilehash: 6fa35209b2dafc088605848a0dc96a53a2813dfd
+ms.sourcegitcommit: 94d33cadc5ff81d2ac389bf5f26422c227832052
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/28/2018
+ms.lasthandoff: 04/30/2018
 ---
 # <a name="poison-message-handling"></a>有害訊息處理
 A*有害訊息*是超過嘗試傳遞至應用程式的最大數目的訊息。 這種情形可能會在佇列架構的應用程式因為錯誤而無法處理訊息時發生。 為了符合可靠性的需求，佇列的應用程式會在交易中接收訊息。 若中止了接收佇列訊息的交易，則會讓訊息留在佇列中，而訊息將會在新的交易中重試。 如果造成交易中止的問題未予以更正，則接收的應用程式可能會卡在接收及中止相同訊息的迴圈中，直到超過傳遞嘗試次數的上限為止，因而形成有害訊息。  
@@ -104,7 +104,7 @@ A*有害訊息*是超過嘗試傳遞至應用程式的最大數目的訊息。 �
  工作階段如同單一訊息一樣，會進行相同的重試和有害訊息處理程序。 先前所列出的有害訊息屬性會套用到整個工作階段。 這表示會重試整個工作階段，而且如果訊息遭拒絕，將移至最後的有害訊息佇列或傳送者寄不出的信件佇列。  
   
 ## <a name="batching-and-poison-messages"></a>批次處理及有害訊息  
- 如果訊息變成有害訊息，而且是批次的一部分，那麼整個批次都會復原，而通道會回到一次讀取一個訊息的狀態。 [!INCLUDE[crabout](../../../../includes/crabout-md.md)] 批次處理，請參閱[異動中批次處理的訊息](../../../../docs/framework/wcf/feature-details/batching-messages-in-a-transaction.md)  
+ 如果訊息變成有害訊息，而且是批次的一部分，那麼整個批次都會復原，而通道會回到一次讀取一個訊息的狀態。 如需批次處理的詳細資訊，請參閱[異動中批次處理的訊息](../../../../docs/framework/wcf/feature-details/batching-messages-in-a-transaction.md)  
   
 ## <a name="poison-message-handling-for-messages-in-a-poison-queue"></a>有害佇列中之訊息的有害訊息處理  
  當訊息放入有害訊息佇列時，有害訊息處理就不會結束。 有害訊息佇列中的訊息必須繼續讀取和處理。 您可以在最終有害子佇列中讀取訊息時，使用有害訊息處理設定的子集。 適當的設定為 `ReceiveRetryCount` 和 `ReceiveErrorHandling`。 您可以將 `ReceiveErrorHandling` 設定為 Drop、Reject 或 Fault。 如果 `MaxRetryCycles` 設為 Move，則會忽略 `ReceiveErrorHandling` 並且擲回例外狀況。  

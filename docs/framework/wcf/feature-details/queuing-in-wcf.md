@@ -16,11 +16,11 @@ ms.author: dotnetcontent
 manager: wpickett
 ms.workload:
 - dotnet
-ms.openlocfilehash: 01dc36c73d9e668dd98cb5ba8b275d3d5177ba61
-ms.sourcegitcommit: 03ee570f6f528a7d23a4221dcb26a9498edbdf8c
+ms.openlocfilehash: 8bf4a668fe882212da1c6626b66a4f55390a562f
+ms.sourcegitcommit: 94d33cadc5ff81d2ac389bf5f26422c227832052
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/28/2018
+ms.lasthandoff: 04/30/2018
 ---
 # <a name="queuing-in-wcf"></a>WCF 中的佇列
 本節說明如何在 [!INCLUDE[indigo1](../../../../includes/indigo1-md.md)] 中使用佇列通訊。  
@@ -51,7 +51,7 @@ ms.lasthandoff: 04/28/2018
   
  MSMQ 佇列的安全也可以使用向 Active Directory 目錄服務註冊的 Windows 身分識別來保護。 在安裝 MSMQ 時，您可以安裝 Active Directory 整合，而此時電腦必須是 Windows 網域網路的成員。  
   
- [!INCLUDE[crabout](../../../../includes/crabout-md.md)] MSMQ 中，請參閱[安裝訊息佇列 (MSMQ)](../../../../docs/framework/wcf/samples/installing-message-queuing-msmq.md)。  
+ 如需 MSMQ 的詳細資訊，請參閱[安裝訊息佇列 (MSMQ)](../../../../docs/framework/wcf/samples/installing-message-queuing-msmq.md)。  
   
 ### <a name="netmsmqbinding"></a>NetMsmqBinding  
  [ \<NetMsmqBinding >](../../../../docs/framework/configure-apps/file-schema/wcf/netmsmqbinding.md)的佇列繫結[!INCLUDE[indigo2](../../../../includes/indigo2-md.md)]提供兩個[!INCLUDE[indigo2](../../../../includes/indigo2-md.md)]通訊使用 MSMQ 的端點。 因此，繫結會公開特定用於 MSMQ 的屬性。 不過，在 `NetMsmqBinding` 中不會公開所有 MSMQ 功能和屬性。 精簡型 `NetMsmqBinding` 是使用大多數客戶都認為足夠的最佳功能組來設計。  
@@ -79,12 +79,12 @@ ms.lasthandoff: 04/28/2018
   
  繫結中有兩個重要的屬性：  
   
--   `DeadLetterQueue`：這個屬性是一種列舉，指出是否要求寄不出的信件佇列。 列舉中也包含寄不出的信件佇列種類 (如果有要求的話)。 這些值則為 `None`、`System` 和 `Custom`。 [!INCLUDE[crabout](../../../../includes/crabout-md.md)] 解譯這些屬性，請參閱[使用寄不出信件佇列來處理訊息傳輸失敗](../../../../docs/framework/wcf/feature-details/using-dead-letter-queues-to-handle-message-transfer-failures.md)  
+-   `DeadLetterQueue`：這個屬性是一種列舉，指出是否要求寄不出的信件佇列。 列舉中也包含寄不出的信件佇列種類 (如果有要求的話)。 這些值則為 `None`、`System` 和 `Custom`。 如需這些屬性的解譯方式的詳細資訊，請參閱[使用寄不出信件佇列來處理訊息傳輸失敗](../../../../docs/framework/wcf/feature-details/using-dead-letter-queues-to-handle-message-transfer-failures.md)  
   
 -   `CustomDeadLetterQueue`：這個屬性是應用程式特定之寄不出的信件佇列的統一資源識別碼 (URI) 位址。 這是必要的如果`DeadLetterQueue`。`Custom` 會選擇。  
   
 #### <a name="poison-message-handling-properties"></a>有害訊息處理屬性  
- 當服務在交易中從目標佇列中讀取訊息時，可能會因為各種原因而無法處理訊息。 然後服務會將訊息放回佇列，以便再次讀取。 若要處理重複失敗的訊息，可以在繫結中設定一組有害訊息處理屬性。 有害訊息處理屬性有四個：`ReceiveRetryCount`、`MaxRetryCycles`、`RetryCycleDelay` 和 `ReceiveErrorHandling`。 [!INCLUDE[crabout](../../../../includes/crabout-md.md)] 這些屬性，請參閱[有害訊息處理](../../../../docs/framework/wcf/feature-details/poison-message-handling.md)。  
+ 當服務在交易中從目標佇列中讀取訊息時，可能會因為各種原因而無法處理訊息。 然後服務會將訊息放回佇列，以便再次讀取。 若要處理重複失敗的訊息，可以在繫結中設定一組有害訊息處理屬性。 有害訊息處理屬性有四個：`ReceiveRetryCount`、`MaxRetryCycles`、`RetryCycleDelay` 和 `ReceiveErrorHandling`。 如需有關這些屬性的詳細資訊，請參閱[有害訊息處理](../../../../docs/framework/wcf/feature-details/poison-message-handling.md)。  
   
 #### <a name="security-properties"></a>安全性屬性  
  MSMQ 會公開本身的安全性模型，例如佇列上或傳送驗證訊息上的存取控制清單 (ACL)。 `NetMsmqBinding` 會將這些安全性屬性當做部分傳輸安全性設定公開。 在傳輸安全性的繫結中有兩個屬性：`MsmqAuthenticationMode` 和 `MsmqProtectionLevel`。 這些屬性中的設定取決於設定 MSMQ 的方式。 如需詳細資訊，請參閱[保護訊息使用傳輸安全性](../../../../docs/framework/wcf/feature-details/securing-messages-using-transport-security.md)。  

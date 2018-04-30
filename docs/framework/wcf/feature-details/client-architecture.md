@@ -1,27 +1,29 @@
 ---
-title: "用戶端架構"
-ms.custom: 
+title: 用戶端架構
+ms.custom: ''
 ms.date: 03/30/2017
 ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.technology: dotnet-clr
-ms.tgt_pltfrm: 
+ms.reviewer: ''
+ms.suite: ''
+ms.technology:
+- dotnet-clr
+ms.tgt_pltfrm: ''
 ms.topic: article
 ms.assetid: 02624403-0d77-41cb-9a86-ab55e98c7966
-caps.latest.revision: "7"
+caps.latest.revision: 7
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.workload: dotnet
-ms.openlocfilehash: 6418c3b5c82ac42fb7e6d3ce85913896a3f76442
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.workload:
+- dotnet
+ms.openlocfilehash: 12db0d4f5717287439b66810e6354b12a4c68b77
+ms.sourcegitcommit: 94d33cadc5ff81d2ac389bf5f26422c227832052
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 04/30/2018
 ---
 # <a name="client-architecture"></a>用戶端架構
-應用程式會使用 [!INCLUDE[indigo1](../../../../includes/indigo1-md.md)] 用戶端物件來叫用服務作業。 本主題將討論 [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] 用戶端物件、[!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] 用戶端通道，以及它們與基礎通道架構之間的關係。 如需的基本概觀[!INCLUDE[indigo2](../../../../includes/indigo2-md.md)]用戶端物件，請參閱[WCF 用戶端概觀](../../../../docs/framework/wcf/wcf-client-overview.md)。 [!INCLUDE[crabout](../../../../includes/crabout-md.md)]通道層，請參閱[擴充通道層](../../../../docs/framework/wcf/extending/extending-the-channel-layer.md)。  
+應用程式會使用 [!INCLUDE[indigo1](../../../../includes/indigo1-md.md)] 用戶端物件來叫用服務作業。 本主題將討論 [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] 用戶端物件、[!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] 用戶端通道，以及它們與基礎通道架構之間的關係。 如需的基本概觀[!INCLUDE[indigo2](../../../../includes/indigo2-md.md)]用戶端物件，請參閱[WCF 用戶端概觀](../../../../docs/framework/wcf/wcf-client-overview.md)。 如需通道層的詳細資訊，請參閱[擴充通道層](../../../../docs/framework/wcf/extending/extending-the-channel-layer.md)。  
   
 ## <a name="overview"></a>總覽  
  服務模型執行階段會建立 [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] 用戶端，該用戶端是由下列項目所組成：  
@@ -48,7 +50,7 @@ ms.lasthandoff: 12/22/2017
   
  對於通道處理站，請特別記住它們會先針對提供給它們的組態建立用戶端通道的新執行個體，然後才呼叫 <xref:System.ServiceModel.ChannelFactory%601.CreateChannel%2A?displayProperty=nameWithType>。 一旦呼叫 <xref:System.ServiceModel.ChannelFactory%601.CreateChannel%2A> (或 <xref:System.ServiceModel.ClientBase%601.Open%2A?displayProperty=nameWithType>、<xref:System.ServiceModel.ClientBase%601.CreateChannel%2A?displayProperty=nameWithType>，或在 [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] 用戶端物件上的任何作業) 之後，您就無法修改此通道處理站，也無法取得不同服務執行個體的通道，即使您只是要變更目標端點位址也是如此。 如果想要使用不同的組態來建立用戶端物件或用戶端通道，您就必須先建立新的通道處理站。  
   
- [!INCLUDE[crabout](../../../../includes/crabout-md.md)]使用的各種問題[!INCLUDE[indigo2](../../../../includes/indigo2-md.md)]用戶端物件和[!INCLUDE[indigo2](../../../../includes/indigo2-md.md)]用戶端通道，請參閱[使用 WCF 用戶端存取服務](../../../../docs/framework/wcf/feature-details/accessing-services-using-a-client.md)。  
+ 如需有關使用的各種問題[!INCLUDE[indigo2](../../../../includes/indigo2-md.md)]用戶端物件和[!INCLUDE[indigo2](../../../../includes/indigo2-md.md)]用戶端通道，請參閱[使用 WCF 用戶端存取服務](../../../../docs/framework/wcf/feature-details/accessing-services-using-a-client.md)。  
   
  下列兩個小節將說明 [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] 用戶端通道物件的建立和使用方式。  
   

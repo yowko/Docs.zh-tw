@@ -21,16 +21,16 @@ ms.author: dotnetcontent
 manager: wpickett
 ms.workload:
 - dotnet
-ms.openlocfilehash: 6b0b331da49fca7be5106610e4b6f144220cc849
-ms.sourcegitcommit: 03ee570f6f528a7d23a4221dcb26a9498edbdf8c
+ms.openlocfilehash: e56a95bf773e22166297bc153ee3ef88320db0f9
+ms.sourcegitcommit: 94d33cadc5ff81d2ac389bf5f26422c227832052
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/28/2018
+ms.lasthandoff: 04/30/2018
 ---
 # <a name="how-to-allow-metadata-requests-while-authorizing"></a>HOW TO：授權時同時允許中繼資料要求
 自訂授權期間，可能需要允許處理中繼資料的要求。 下列主題逐步解說要驗證如此要求的步驟。  
   
- [!INCLUDE[crabout](../../../../includes/crabout-md.md)] [!INCLUDE[indigo1](../../../../includes/indigo1-md.md)] 授權，請參閱[授權](../../../../docs/framework/wcf/feature-details/authorization-in-wcf.md)。  
+ 如需有關[!INCLUDE[indigo1](../../../../includes/indigo1-md.md)]授權，請參閱[授權](../../../../docs/framework/wcf/feature-details/authorization-in-wcf.md)。  
   
 ### <a name="to-allow-metadata-requests-during-authorization"></a>授權時同時允許中繼資料要求  
   

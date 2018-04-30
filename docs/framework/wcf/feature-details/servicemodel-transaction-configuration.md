@@ -1,34 +1,34 @@
 ---
-title: "ServiceModel 異動組態"
-ms.custom: 
+title: ServiceModel 異動組態
+ms.custom: ''
 ms.date: 03/30/2017
 ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
+ms.reviewer: ''
+ms.suite: ''
 ms.technology:
 - dotnet-clr
-ms.tgt_pltfrm: 
+ms.tgt_pltfrm: ''
 ms.topic: article
 helpviewer_keywords:
 - transactions [WCF], ServiceModel configuration
 ms.assetid: 5636067a-7fbd-4485-aaa2-8141c502acf3
-caps.latest.revision: 
+caps.latest.revision: 8
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
 ms.workload:
 - dotnet
-ms.openlocfilehash: 650f34c37917a7f7ce407df1a3af42d177593c33
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.openlocfilehash: 96cf83be06949160cf3efa73344e4a7680d24e09
+ms.sourcegitcommit: 94d33cadc5ff81d2ac389bf5f26422c227832052
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 04/30/2018
 ---
 # <a name="servicemodel-transaction-configuration"></a>ServiceModel 異動組態
 [!INCLUDE[indigo1](../../../../includes/indigo1-md.md)] 提供了三個屬性，可用於設定服務的交易：`transactionFlow`、`transactionProtocol` 和 `transactionTimeout`。  
   
 ## <a name="configuring-transactionflow"></a>設定 transactionFlow  
- 大部分所提供預先定義的繫結 [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] 會包含 `transactionFlow` 和 `transactionProtocol` 屬性，因此您可以將繫結設定為接受使用特定交易流程通訊協定之特定端點的傳入交易。 此外，您可以使用 `transactionFlow` 元素及其 `transactionProtocol` 屬性來建置您自訂的繫結。 [!INCLUDE[crabout](../../../../includes/crabout-md.md)]設定組態項目，請參閱[\<繫結 >](../../../../docs/framework/misc/binding.md)和[WCF 組態結構描述](../../../../docs/framework/configure-apps/file-schema/wcf/index.md)。  
+ 大部分所提供預先定義的繫結 [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] 會包含 `transactionFlow` 和 `transactionProtocol` 屬性，因此您可以將繫結設定為接受使用特定交易流程通訊協定之特定端點的傳入交易。 此外，您可以使用 `transactionFlow` 元素及其 `transactionProtocol` 屬性來建置您自訂的繫結。 如需有關設定組態項目，請參閱[\<繫結 >](../../../../docs/framework/misc/binding.md)和[WCF 組態結構描述](../../../../docs/framework/configure-apps/file-schema/wcf/index.md)。  
   
  `transactionFlow` 屬性會指定是否要為使用繫結的服務端點啟用交易流程。  
   
@@ -75,6 +75,6 @@ ms.lasthandoff: 12/22/2017
   
  請注意，所使用的逾時值會是這個 `transactionTimeout` 組態設定和任何 <xref:System.ServiceModel.ServiceBehaviorAttribute.TransactionTimeout%2A> 屬性間的較小值。  
   
-## <a name="see-also"></a>請參閱  
+## <a name="see-also"></a>另請參閱  
  [\<繫結 >](../../../../docs/framework/misc/binding.md)  
  [WCF 組態結構描述](../../../../docs/framework/configure-apps/file-schema/wcf/index.md)

@@ -18,11 +18,11 @@ ms.author: dotnetcontent
 manager: wpickett
 ms.workload:
 - dotnet
-ms.openlocfilehash: 739046945a019541f279b15d2d1b945f526861fb
-ms.sourcegitcommit: 03ee570f6f528a7d23a4221dcb26a9498edbdf8c
+ms.openlocfilehash: 075f8d89caccd7723f3a1dc54fde695a8fb624ab
+ms.sourcegitcommit: 94d33cadc5ff81d2ac389bf5f26422c227832052
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/28/2018
+ms.lasthandoff: 04/30/2018
 ---
 # <a name="data-contract-schema-reference"></a>資料合約結構描述參考
 本主題說明 <xref:System.Runtime.Serialization.DataContractSerializer> 用來描述 XML 序列化之 Common Language Runtime (CLR) 型別的 XML 結構描述 (XSD) 子集。  
@@ -245,7 +245,7 @@ ms.lasthandoff: 04/28/2018
   
 -   只包含 `xs:string` 限制 Facet 的 `xs:enumeration` 簡單型別限制會對應至列舉資料合約。  
   
--   其他所有簡單型別限制則會對應至所限制的型別上。 例如， `xs:int` 的限制會對應至整數，就像 `xs:int` 本身一樣。 [!INCLUDE[crabout](../../../../includes/crabout-md.md)] 基本類型對應的詳細資訊，請參閱＜類型/基本對應＞。  
+-   其他所有簡單型別限制則會對應至所限制的型別上。 例如， `xs:int` 的限制會對應至整數，就像 `xs:int` 本身一樣。 如需基本類型對應的詳細資訊，請參閱 < 類型/基本對應。  
   
 ### <a name="xsrestriction-attributes"></a>\<xs: restriction >： 屬性  
   
@@ -549,7 +549,7 @@ public class Employee : Person
 </xs:complexType>  
 ```  
   
- 在資料合約序列化結構描述中宣告的選用屬性 `ser:FactoryType` 會參考可以還原序列化型別的處理站類別。 處理站類別必須是正在使用之 `DataContractSerializer` 執行個體的已知型別集合的一部分。 [!INCLUDE[crabout](../../../../includes/crabout-md.md)] 如需已知型別的詳細資訊，請參閱 [Data Contract Known Types](../../../../docs/framework/wcf/feature-details/data-contract-known-types.md)就會將 CLR 型別對應至 XSD。  
+ 在資料合約序列化結構描述中宣告的選用屬性 `ser:FactoryType` 會參考可以還原序列化型別的處理站類別。 處理站類別必須是正在使用之 `DataContractSerializer` 執行個體的已知型別集合的一部分。 如需已知型別的詳細資訊，請參閱[資料合約已知型別](../../../../docs/framework/wcf/feature-details/data-contract-known-types.md)。  
   
 ## <a name="datacontract-serialization-schema"></a>DataContract 序列化結構描述  
  由 `DataContractSerializer` 匯出的一些結構描述使用來自特殊資料合約序列化命名空間的型別、項目和屬性：  

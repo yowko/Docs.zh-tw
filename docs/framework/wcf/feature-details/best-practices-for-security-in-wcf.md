@@ -21,14 +21,14 @@ ms.author: bruceper
 manager: mbaldwin
 ms.workload:
 - dotnet
-ms.openlocfilehash: 19bb6d4a172568611f73e3a50d0c526016c65aac
-ms.sourcegitcommit: 03ee570f6f528a7d23a4221dcb26a9498edbdf8c
+ms.openlocfilehash: 0545ff40247b7ff86cb6227fa8cf4af8666c3629
+ms.sourcegitcommit: 94d33cadc5ff81d2ac389bf5f26422c227832052
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/28/2018
+ms.lasthandoff: 04/30/2018
 ---
 # <a name="best-practices-for-security-in-wcf"></a>WCF 中安全性的最佳做法
-下列各節將列出在使用 [!INCLUDE[indigo1](../../../../includes/indigo1-md.md)] 建立安全應用程式時，應該考慮採用的最佳做法。 [!INCLUDE[crabout](../../../../includes/crabout-md.md)] 安全性，請參閱[安全性考量](../../../../docs/framework/wcf/feature-details/security-considerations-in-wcf.md)，[資料的安全性考量](../../../../docs/framework/wcf/feature-details/security-considerations-for-data.md)，和[與中繼資料的安全性考量](../../../../docs/framework/wcf/feature-details/security-considerations-with-metadata.md)。  
+下列各節將列出在使用 [!INCLUDE[indigo1](../../../../includes/indigo1-md.md)] 建立安全應用程式時，應該考慮採用的最佳做法。 如需有關安全性的詳細資訊，請參閱[安全性考量](../../../../docs/framework/wcf/feature-details/security-considerations-in-wcf.md)，[資料的安全性考量](../../../../docs/framework/wcf/feature-details/security-considerations-for-data.md)，和[與中繼資料的安全性考量](../../../../docs/framework/wcf/feature-details/security-considerations-with-metadata.md)。  
   
 ## <a name="identify-services-performing-windows-authentication-with-spns"></a>利用 SPN 識別執行 Windows 驗證的服務  
  服務可以透過使用者主要名稱 (UPN) 或服務主要名稱 (SPN) 進行識別。 以如網路服務的電腦帳戶來執行的服務，都有一個對應於所執行電腦的 SPN 身分識別。 雖然 `setspn` 工具可用於指派 SPN 給使用者帳戶，但是以使用者帳戶執行的服務都有一個對應於所執行之使用者身分的 UPN 身分識別。 對服務進行設定，讓服務可以透過 SPN 識別，並且設定用戶端要連結到該服務，以使用該 SPN，才能確保服務不容易受到特定攻擊。 這個方法也適用於使用 Kerberos 或 SSPI 交涉的繫結。  在 SSPI 又改回使用 NTLM 的情況下，用戶端應該仍然能夠指定 SPN。  
@@ -66,7 +66,7 @@ ms.lasthandoff: 04/28/2018
  如果已指定特定繫結的簽發者位址和繫結，這時使用該繫結的端點就不會使用該本機簽發者。 預期一定要使用該本機簽發者的用戶端應該要確定自己沒有使用這類繫結，否則它們就會修改繫結，進而使得簽發者位址成為 null。  
   
 ## <a name="saml-token-size-quotas"></a>SAML 權杖大小配額  
- 當安全性判斷提示標記語言 SAML 權杖在訊息中序列化，不論這些權杖是由安全性權杖服務 (STS) 所核發，或者這些權杖由用戶端視為驗證的一部份提供至服務，最大訊息大小配額必須大到足以容納 SAML 權杖及其他訊息部份。 正常情況下，預設訊息大小配額應足夠。 然而，若 SAML 權杖因為包含數百個宣告而變很大時，您就需要增加配額以容納序列化的權杖。 [!INCLUDE[crabout](../../../../includes/crabout-md.md)] 配額，請參閱[資料的安全性考量](../../../../docs/framework/wcf/feature-details/security-considerations-for-data.md)。  
+ 當安全性判斷提示標記語言 SAML 權杖在訊息中序列化，不論這些權杖是由安全性權杖服務 (STS) 所核發，或者這些權杖由用戶端視為驗證的一部份提供至服務，最大訊息大小配額必須大到足以容納 SAML 權杖及其他訊息部份。 正常情況下，預設訊息大小配額應足夠。 然而，若 SAML 權杖因為包含數百個宣告而變很大時，您就需要增加配額以容納序列化的權杖。 如需有關配額的詳細資訊，請參閱[資料的安全性考量](../../../../docs/framework/wcf/feature-details/security-considerations-for-data.md)。  
   
 ## <a name="set-securitybindingelementincludetimestamp-to-true-on-custom-bindings"></a>在自訂繫結上，將 SecurityBindingElement.IncludeTimestamp 設定為 True  
  當您建立自訂繫結時，您必須將 <xref:System.ServiceModel.Channels.SecurityBindingElement.IncludeTimestamp%2A> 設定為 `true`。 否則，如果 <xref:System.ServiceModel.Channels.SecurityBindingElement.IncludeTimestamp%2A> 設定為 `false`，而且用戶端使用以非對稱金鑰為基礎的權杖 (如 X509 憑證)，則不會簽署訊息。  

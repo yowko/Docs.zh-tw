@@ -1,33 +1,35 @@
 ---
-title: "與 POX 應用程式的互通性"
-ms.custom: 
+title: 與 POX 應用程式的互通性
+ms.custom: ''
 ms.date: 03/30/2017
 ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.technology: dotnet-clr
-ms.tgt_pltfrm: 
+ms.reviewer: ''
+ms.suite: ''
+ms.technology:
+- dotnet-clr
+ms.tgt_pltfrm: ''
 ms.topic: article
 ms.assetid: 449276b8-4633-46f0-85c9-81f01d127636
-caps.latest.revision: "15"
+caps.latest.revision: 15
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.workload: dotnet
-ms.openlocfilehash: 8cb7e209397e593ae1fd81c2bc2552e54a32adf0
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.workload:
+- dotnet
+ms.openlocfilehash: 42f6bbb1a5605bd0a604f5cfe31ce5ea48d9bb10
+ms.sourcegitcommit: 94d33cadc5ff81d2ac389bf5f26422c227832052
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 04/30/2018
 ---
 # <a name="interoperability-with-pox-applications"></a>與 POX 應用程式的互通性
 "Plain Old XML"(POX) 應用程式交換僅包含 XML 應用程式資料不是在 SOAP envelope 內包含的原始 HTTP 訊息來進行通訊。 [!INCLUDE[indigo1](../../../../includes/indigo1-md.md)] 可提供使用 POX 訊息的服務和用戶端。 在服務上可使用 [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] 實作將端點公開給用戶端 (例如 Web 瀏覽器) 的服務，以及傳送和接收 POX 訊息的指令碼語言。 在用戶端上可以使用 [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] 程式設計模型來實作與 POX 式服務通訊的用戶端。  
   
 > [!NOTE]
->  本文件原本是針對 [!INCLUDE[dnprdnshort](../../../../includes/dnprdnshort-md.md)] 3.0 而撰寫。  [!INCLUDE[dnprdnshort](../../../../includes/dnprdnshort-md.md)] 3.5 具有可使用 POX 應用程式的內建支援。 [!INCLUDE[crabout](../../../../includes/crabout-md.md)]請參閱[WCF Web HTTP 程式設計模型](../../../../docs/framework/wcf/feature-details/wcf-web-http-programming-model.md)  
+>  本文件原本是針對 [!INCLUDE[dnprdnshort](../../../../includes/dnprdnshort-md.md)] 3.0 而撰寫。  [!INCLUDE[dnprdnshort](../../../../includes/dnprdnshort-md.md)] 3.5 具有可使用 POX 應用程式的內建支援。 如需詳細資訊，請參閱有關[WCF Web HTTP 程式設計模型](../../../../docs/framework/wcf/feature-details/wcf-web-http-programming-model.md)  
   
 ## <a name="pox-programming-with-wcf"></a>使用 WCF 的 POX 程式撰寫  
- [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)]使用 POX 訊息使用透過 HTTP 通訊的服務[ \<customBinding >](../../../../docs/framework/configure-apps/file-schema/wcf/custombinding.md)。  
+ [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] 使用 POX 訊息使用透過 HTTP 通訊的服務[ \<customBinding >](../../../../docs/framework/configure-apps/file-schema/wcf/custombinding.md)。  
   
 ```xml  
 <customBinding>  
@@ -67,7 +69,7 @@ private static Binding CreatePoxBinding()
   
 -   <xref:System.ServiceModel.Channels.HttpResponseMessageProperty>，包含有關 HTTP 回應的資訊，例如 HTTP 狀態代碼、狀態說明與任何 HTTP 回應標頭。  
   
- 下列程式碼範例示範如何建立定址為 http://localhost:8100/customers 的 HTTP GET 要求訊息。  
+ 下列程式碼範例示範如何建立定址至 HTTP GET 要求訊息http://localhost:8100/customers。  
   
 ```  
 Message request = Message.CreateMessage( MessageVersion.None, String.Empty );  

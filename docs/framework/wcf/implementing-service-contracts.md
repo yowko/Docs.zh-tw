@@ -18,11 +18,11 @@ ms.author: dotnetcontent
 manager: wpickett
 ms.workload:
 - dotnet
-ms.openlocfilehash: 2a9c34f67de6f4f8b4a8d22dac7e8bf1c9555498
-ms.sourcegitcommit: 03ee570f6f528a7d23a4221dcb26a9498edbdf8c
+ms.openlocfilehash: 5e477b11893d2b74ebe1674225e05b13cb9f67ca
+ms.sourcegitcommit: 94d33cadc5ff81d2ac389bf5f26422c227832052
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/28/2018
+ms.lasthandoff: 04/30/2018
 ---
 # <a name="implementing-service-contracts"></a>實作服務合約
 服務是一種類別，會在一或多個端點公開可供用戶端使用的功能。 如果要建立服務，請寫入實作 [!INCLUDE[indigo1](../../../includes/indigo1-md.md)] 合約的類別。 您可以使用下列其中一種作法： 您可以將合約另外定義為介面，然後建立實作該介面的類別。 或者，您可以將 <xref:System.ServiceModel.ServiceContractAttribute> 屬性置於類別本身，而將 <xref:System.ServiceModel.OperationContractAttribute> 屬性置於可供服務之用戶端使用的方法上，以直接建立類別和合約。  
@@ -68,7 +68,7 @@ class MathService
   
  您可以在服務和作業實作層級進行一些設定，例如並行和執行個體。 如需詳細資訊，請參閱[設計與實作服務](../../../docs/framework/wcf/designing-and-implementing-services.md)。  
   
- 在實作服務合約之後，必須為服務建立一或多個端點。 如需詳細資訊，請參閱[端點建立概觀](../../../docs/framework/wcf/endpoint-creation-overview.md)。 [!INCLUDE[crabout](../../../includes/crabout-md.md)] 執行服務，請參閱[裝載服務](../../../docs/framework/wcf/hosting-services.md)。  
+ 在實作服務合約之後，必須為服務建立一或多個端點。 如需詳細資訊，請參閱[端點建立概觀](../../../docs/framework/wcf/endpoint-creation-overview.md)。 如需如何執行服務的詳細資訊，請參閱[裝載服務](../../../docs/framework/wcf/hosting-services.md)。  
   
 ## <a name="see-also"></a>另請參閱  
  [設計與實作服務](../../../docs/framework/wcf/designing-and-implementing-services.md)  

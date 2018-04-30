@@ -21,23 +21,23 @@ ms.author: bruceper
 manager: mbaldwin
 ms.workload:
 - dotnet
-ms.openlocfilehash: 5eb1019694f6228edbe3656849b85dfa7611ef18
-ms.sourcegitcommit: 03ee570f6f528a7d23a4221dcb26a9498edbdf8c
+ms.openlocfilehash: 440bbcf03eef8f32a28073bfc9f5aeeb824a50fd
+ms.sourcegitcommit: 94d33cadc5ff81d2ac389bf5f26422c227832052
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/28/2018
+ms.lasthandoff: 04/30/2018
 ---
 # <a name="bindings-and-security"></a>繫結和安全性
 包含在 [!INCLUDE[indigo1](../../../../includes/indigo1-md.md)] 內之系統提供的繫結，提供了一種快速設計 [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] 應用程式的方法。 除了一個例外狀況以外，所有繫結預設都會啟用安全性配置。 本主題將根據您的安全性需求，協助您選取正確的繫結。  
   
- 如需[!INCLUDE[indigo2](../../../../includes/indigo2-md.md)]安全性，請參閱[安全性概觀](../../../../docs/framework/wcf/feature-details/security-overview.md)。 [!INCLUDE[crabout](../../../../includes/crabout-md.md)] 程式設計[!INCLUDE[indigo2](../../../../includes/indigo2-md.md)]使用繫結，請參閱[程式設計 WCF 安全性](../../../../docs/framework/wcf/feature-details/programming-wcf-security.md)。  
+ 如需[!INCLUDE[indigo2](../../../../includes/indigo2-md.md)]安全性，請參閱[安全性概觀](../../../../docs/framework/wcf/feature-details/security-overview.md)。 如需有關程式設計[!INCLUDE[indigo2](../../../../includes/indigo2-md.md)]使用繫結，請參閱[程式設計 WCF 安全性](../../../../docs/framework/wcf/feature-details/programming-wcf-security.md)。  
   
  如果您已經選取繫結，您可以進一步了解與中安全性相關聯的執行階段行為[安全性行為](../../../../docs/framework/wcf/feature-details/security-behaviors-in-wcf.md)。  
   
  某些安全性功能無法使用系統提供的繫結進行程式設計。 如需使用自訂繫結的控制項，請參閱[自訂繫結的安全性功能](../../../../docs/framework/wcf/feature-details/security-capabilities-with-custom-bindings.md)。  
   
 ## <a name="security-functions-of-bindings"></a>繫結的安全性功能  
- [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] 包含一些系統提供的繫結，可滿足大部分的需求。 如果特定繫結不敷使用，您也可以建立自訂繫結。 如需系統提供繫結的清單，請參閱[之繫結](../../../../docs/framework/wcf/system-provided-bindings.md)。 [!INCLUDE[crabout](../../../../includes/crabout-md.md)] 自訂繫結，請參閱[自訂繫結](../../../../docs/framework/wcf/extending/custom-bindings.md)。  
+ [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] 包含一些系統提供的繫結，可滿足大部分的需求。 如果特定繫結不敷使用，您也可以建立自訂繫結。 如需系統提供繫結的清單，請參閱[之繫結](../../../../docs/framework/wcf/system-provided-bindings.md)。 如需有關自訂繫結的詳細資訊，請參閱[自訂繫結](../../../../docs/framework/wcf/extending/custom-bindings.md)。  
   
  [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] 內的每一個繫結都有兩種型式：在組態檔內當做 API 使用，以及當做 XML 項目使用。 例如， `WSHttpBinding` (API) 中有對應的[ \<wsHttpBinding >](../../../../docs/framework/configure-apps/file-schema/wcf/wshttpbinding.md)。  
   

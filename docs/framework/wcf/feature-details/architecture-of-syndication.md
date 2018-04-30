@@ -16,11 +16,11 @@ ms.author: dotnetcontent
 manager: wpickett
 ms.workload:
 - dotnet
-ms.openlocfilehash: bcb64a4e03cae5e6186754dacb87e17a22d13001
-ms.sourcegitcommit: 03ee570f6f528a7d23a4221dcb26a9498edbdf8c
+ms.openlocfilehash: 2516a80f8d92b4e64372be140d2ee3d5db4c7b54
+ms.sourcegitcommit: 94d33cadc5ff81d2ac389bf5f26422c227832052
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/28/2018
+ms.lasthandoff: 04/30/2018
 ---
 # <a name="architecture-of-syndication"></a>新聞訂閱架構
 新聞訂閱 API 主要是提供格式中性的程式設計模型，以便在網路上透過各種格式來撰寫新聞訂閱內容。 抽象資料模型包含下列類別：  
@@ -43,7 +43,7 @@ ms.lasthandoff: 04/28/2018
   
  [!code-csharp[S_UE_SyndicationBoth#0](../../../../samples/snippets/csharp/VS_Snippets_CFX/s_ue_syndicationboth/cs/service.cs#0)]  
   
- 新聞訂閱支援建置在 [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] REST 程式設計模型上，後者會定義 <xref:System.ServiceModel.WebHttpBinding> 繫結，以搭配 <xref:System.ServiceModel.Description.WebHttpBehavior> 來提供可用的摘要服務。 [!INCLUDE[crabout](../../../../includes/crabout-md.md)] [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] REST 程式設計模型，請參閱[WCF Web HTTP 程式設計模型概觀](../../../../docs/framework/wcf/feature-details/wcf-web-http-programming-model-overview.md)。  
+ 新聞訂閱支援建置在 [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] REST 程式設計模型上，後者會定義 <xref:System.ServiceModel.WebHttpBinding> 繫結，以搭配 <xref:System.ServiceModel.Description.WebHttpBehavior> 來提供可用的摘要服務。 如需有關[!INCLUDE[indigo2](../../../../includes/indigo2-md.md)]REST 程式設計模型，請參閱[WCF Web HTTP 程式設計模型概觀](../../../../docs/framework/wcf/feature-details/wcf-web-http-programming-model-overview.md)。  
   
 > [!NOTE]
 >  Atom 1.0 規格允許在其任何日期建構中指定小數秒數。 序列化和還原序列化 [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] 實作時，將會忽略小數秒數。  

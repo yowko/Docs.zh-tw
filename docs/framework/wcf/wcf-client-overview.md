@@ -21,11 +21,11 @@ ms.author: dotnetcontent
 manager: wpickett
 ms.workload:
 - dotnet
-ms.openlocfilehash: b0042d9b90066553d6fc962bba1b7a7b990ca242
-ms.sourcegitcommit: 03ee570f6f528a7d23a4221dcb26a9498edbdf8c
+ms.openlocfilehash: 7f083ea44b9bdbd9bf85d65c42d663d87af8d812
+ms.sourcegitcommit: 94d33cadc5ff81d2ac389bf5f26422c227832052
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/28/2018
+ms.lasthandoff: 04/30/2018
 ---
 # <a name="wcf-client-overview"></a>WCF 用戶端概觀
 本節描述用戶端應用程式的功能、[!INCLUDE[indigo1](../../../includes/indigo1-md.md)] 用戶端的設定、建立和使用方式，以及保護用戶端應用程式安全的方法。  
@@ -86,13 +86,13 @@ svcutil /language:vb /out:ClientCode.vb /config:app.config http://computerName/M
  建議您先建立 [!INCLUDE[indigo2](../../../includes/indigo2-md.md)] 用戶端物件，然後在單一的 try/catch 區塊內使用並關閉它。 您不應該使用`using`陳述式 (`Using`在 Visual Basic 中) 因為這可能會遮罩中特定失敗模式的例外狀況。 如需詳細資訊，請參閱下列各節以及[避免 Using 陳述式的問題](../../../docs/framework/wcf/samples/avoiding-problems-with-the-using-statement.md)。  
   
 ### <a name="contracts-bindings-and-addresses"></a>合約、繫結和位址  
- 您必須先設定用戶端物件，才可以建立 [!INCLUDE[indigo2](../../../includes/indigo2-md.md)] 用戶端物件。 具體來說，它必須有服務*端點*使用。 端點是服務合約、繫結和位址的組合  ([!INCLUDE[crabout](../../../includes/crabout-md.md)]端點，請參閱[端點： 位址、 繫結和合約](../../../docs/framework/wcf/feature-details/endpoints-addresses-bindings-and-contracts.md)。)一般而言，這項資訊位於[\<端點 >](../../../docs/framework/configure-apps/file-schema/wcf/endpoint-of-client.md)中用戶端應用程式組態檔，例如，Svcutil.exe 工具產生的而且當您建立您的用戶端時自動載入的項目物件。 這兩個 [!INCLUDE[indigo2](../../../includes/indigo2-md.md)] 用戶端型別也有多載，可讓您以程式設計方式來指定這項資訊。  
+ 您必須先設定用戶端物件，才可以建立 [!INCLUDE[indigo2](../../../includes/indigo2-md.md)] 用戶端物件。 具體來說，它必須有服務*端點*使用。 端點是服務合約、繫結和位址的組合  (如需端點的詳細資訊，請參閱[端點： 位址、 繫結和合約](../../../docs/framework/wcf/feature-details/endpoints-addresses-bindings-and-contracts.md)。)一般而言，這項資訊位於[\<端點 >](../../../docs/framework/configure-apps/file-schema/wcf/endpoint-of-client.md)中用戶端應用程式組態檔，例如，Svcutil.exe 工具產生的而且當您建立您的用戶端時自動載入的項目物件。 這兩個 [!INCLUDE[indigo2](../../../includes/indigo2-md.md)] 用戶端型別也有多載，可讓您以程式設計方式來指定這項資訊。  
   
  例如，針對前面範例中使用的 `ISampleService` 所產生的組態檔會包含下列端點資訊。  
   
  [!code-xml[C_GeneratedCodeFiles#19](../../../samples/snippets/csharp/VS_Snippets_CFX/c_generatedcodefiles/common/client.exe.config#19)]  
   
- 這個組態檔會在 `<client>` 元素中指定目標端點。 [!INCLUDE[crabout](../../../includes/crabout-md.md)]使用多個目標端點的詳細資訊，請參閱 <xref:System.ServiceModel.ClientBase%601.%23ctor%2A?displayProperty=nameWithType> 或 <xref:System.ServiceModel.ChannelFactory%601.%23ctor%2A?displayProperty=nameWithType> 建構函式。  
+ 這個組態檔會在 `<client>` 元素中指定目標端點。 如需有關使用多個目標端點的詳細資訊，請參閱<xref:System.ServiceModel.ClientBase%601.%23ctor%2A?displayProperty=nameWithType>或<xref:System.ServiceModel.ChannelFactory%601.%23ctor%2A?displayProperty=nameWithType>建構函式。  
   
 ## <a name="calling-operations"></a>呼叫作業  
  建立並設定用戶端物件之後，請建立 try/catch 區塊，然後就當做物件是在本機一般來呼叫作業，再關閉 [!INCLUDE[indigo2](../../../includes/indigo2-md.md)] 用戶端物件。 當用戶端應用程式呼叫第一項作業時，[!INCLUDE[indigo2](../../../includes/indigo2-md.md)] 會自動開啟基礎通道，而當物件遭回收時，則會關閉基礎通道  (或者，您也可以在呼叫其他作業之前或之後明確地開啟和關閉通道)。  
@@ -145,14 +145,14 @@ End Interface
  [!code-csharp[C_GeneratedCodeFiles#20](../../../samples/snippets/csharp/VS_Snippets_CFX/c_generatedcodefiles/cs/proxycode.cs#20)]  
   
 ## <a name="handling-errors"></a>處理錯誤  
- 當開啟基礎用戶端通道 (無論是明確或是自動呼叫作業)、使用用戶端或通道物件來呼叫作業，或關閉基礎用戶端通道時，都可能會在用戶端應用程式中發生例外狀況。 除了要由作業傳回因 SOAP 錯誤而擲回的任何 <xref:System.TimeoutException?displayProperty=nameWithType> 物件之外，建議您最少還要讓應用程式有能力處理可能發生的 <xref:System.ServiceModel.CommunicationException?displayProperty=nameWithType> 和 <xref:System.ServiceModel.FaultException?displayProperty=nameWithType> 例外狀況。 作業合約中指定的 SOAP 錯誤會針對用戶端應用程式引發為 <xref:System.ServiceModel.FaultException%601?displayProperty=nameWithType>，其中的類型參數是 SOAP 錯誤的詳細類型。 [!INCLUDE[crabout](../../../includes/crabout-md.md)] 處理用戶端應用程式中的錯誤狀況，請參閱[傳送和接收錯誤](../../../docs/framework/wcf/sending-and-receiving-faults.md)。 如需完整範例將示範如何在用戶端中處理錯誤，請參閱[預期的例外狀況](../../../docs/framework/wcf/samples/expected-exceptions.md)。  
+ 當開啟基礎用戶端通道 (無論是明確或是自動呼叫作業)、使用用戶端或通道物件來呼叫作業，或關閉基礎用戶端通道時，都可能會在用戶端應用程式中發生例外狀況。 除了要由作業傳回因 SOAP 錯誤而擲回的任何 <xref:System.TimeoutException?displayProperty=nameWithType> 物件之外，建議您最少還要讓應用程式有能力處理可能發生的 <xref:System.ServiceModel.CommunicationException?displayProperty=nameWithType> 和 <xref:System.ServiceModel.FaultException?displayProperty=nameWithType> 例外狀況。 作業合約中指定的 SOAP 錯誤會針對用戶端應用程式引發為 <xref:System.ServiceModel.FaultException%601?displayProperty=nameWithType>，其中的類型參數是 SOAP 錯誤的詳細類型。 如需有關處理用戶端應用程式中的錯誤狀況的詳細資訊，請參閱[傳送和接收錯誤](../../../docs/framework/wcf/sending-and-receiving-faults.md)。 如需完整範例將示範如何在用戶端中處理錯誤，請參閱[預期的例外狀況](../../../docs/framework/wcf/samples/expected-exceptions.md)。  
   
 ## <a name="configuring-and-securing-clients"></a>設定和保護用戶端  
  設定用戶端時，通常是先從組態檔載入用戶端或通道物件的必要目標端點資訊；儘管可以透過用戶端建構函式和屬性，使用程式設計方式載入這項資訊， 但是為了啟用特定用戶端行為，並符合許多安全性案例的需要，您應該另外執行其他必要的設定步驟。  
   
  例如，服務合約的安全性需求會在服務合約介面中宣告；如果 Svcutil.exe 建立了組態檔，這個檔案通常應包含能夠支援服務安全性需求的繫結。 不過，在某些情況下，可能需要進行更多的安全性設定，例如設定用戶端認證。 如需安全性組態的完整資訊[!INCLUDE[indigo2](../../../includes/indigo2-md.md)]用戶端，請參閱[保護用戶端](../../../docs/framework/wcf/securing-clients.md)。  
   
- 此外，還可以在用戶端應用程式中啟用某些自訂修改，例如自訂執行階段行為。 [!INCLUDE[crabout](../../../includes/crabout-md.md)] 如何設定自訂用戶端行為，請參閱[設定用戶端行為](../../../docs/framework/wcf/configuring-client-behaviors.md)。  
+ 此外，還可以在用戶端應用程式中啟用某些自訂修改，例如自訂執行階段行為。 如需如何設定自訂用戶端行為的詳細資訊，請參閱[設定用戶端行為](../../../docs/framework/wcf/configuring-client-behaviors.md)。  
   
 ## <a name="creating-callback-objects-for-duplex-services"></a>建立雙工服務的回呼物件  
  雙工服務會指定回呼合約，這是用戶端應用程式為了在服務根據合約需求進行呼叫時提供其所需之回呼物件而必須實作的合約。 雖然回呼物件並非完整的服務 (例如，您無法透過回呼物件啟始通道)，但基於實作和組態設定的目的，不妨將它們視為一種服務。  

@@ -1,30 +1,32 @@
 ---
-title: "聯合範例"
-ms.custom: 
+title: 聯合範例
+ms.custom: ''
 ms.date: 03/30/2017
 ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.technology: dotnet-clr
-ms.tgt_pltfrm: 
+ms.reviewer: ''
+ms.suite: ''
+ms.technology:
+- dotnet-clr
+ms.tgt_pltfrm: ''
 ms.topic: article
 ms.assetid: 7e9da0ca-e925-4644-aa96-8bfaf649d4bb
-caps.latest.revision: "26"
+caps.latest.revision: 26
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.workload: dotnet
-ms.openlocfilehash: 6c87984b08a073f37dcf155a39fab0f5e580e985
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.workload:
+- dotnet
+ms.openlocfilehash: 58a8ab012682d5acb04b201c36d931276426ffe8
+ms.sourcegitcommit: 94d33cadc5ff81d2ac389bf5f26422c227832052
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 04/30/2018
 ---
 # <a name="federation-sample"></a>聯合範例
 這個範例將示範聯合安全性。  
   
 ## <a name="sample-details"></a>範例詳細資料  
- [!INCLUDE[indigo1](../../../../includes/indigo1-md.md)] 透過 `wsFederationHttpBinding` 提供部署聯合安全性架構的支援。 `wsFederationHttpBinding` 提供安全、可靠以及可互通的繫結，其中包括使用 HTTP 做為要求/回覆通訊的基礎傳輸機制，以及採用文字/XML 做為編碼的 Wire 格式。 [!INCLUDE[crabout](../../../../includes/crabout-md.md)]中的同盟[!INCLUDE[indigo2](../../../../includes/indigo2-md.md)]，請參閱[同盟](../../../../docs/framework/wcf/feature-details/federation.md)。  
+ [!INCLUDE[indigo1](../../../../includes/indigo1-md.md)] 透過 `wsFederationHttpBinding` 提供部署聯合安全性架構的支援。 `wsFederationHttpBinding` 提供安全、可靠以及可互通的繫結，其中包括使用 HTTP 做為要求/回覆通訊的基礎傳輸機制，以及採用文字/XML 做為編碼的 Wire 格式。 如需有關中同盟[!INCLUDE[indigo2](../../../../includes/indigo2-md.md)]，請參閱[同盟](../../../../docs/framework/wcf/feature-details/federation.md)。  
   
  本案例由 4 個部分組成：  
   
@@ -128,4 +130,4 @@ ms.lasthandoff: 12/22/2017
 >   
 >  `<InstallDrive>:\WF_WCF_Samples\WCF\Scenario\Federation`  
   
-## <a name="see-also"></a>請參閱
+## <a name="see-also"></a>另請參閱

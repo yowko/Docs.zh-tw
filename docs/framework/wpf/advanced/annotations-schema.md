@@ -1,28 +1,30 @@
 ---
-title: "附註結構描述"
-ms.custom: 
+title: 附註結構描述
+ms.custom: ''
 ms.date: 03/30/2017
 ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.technology: dotnet-wpf
-ms.tgt_pltfrm: 
+ms.reviewer: ''
+ms.suite: ''
+ms.technology:
+- dotnet-wpf
+ms.tgt_pltfrm: ''
 ms.topic: article
 helpviewer_keywords:
 - XML schema definition (XSD)
 - Microsoft Annotations Framework [WPF]
 - documents [WPF], annotations
 ms.assetid: a893442b-e220-4603-bf6a-b01fefcb4b37
-caps.latest.revision: "14"
+caps.latest.revision: 14
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.workload: dotnet
-ms.openlocfilehash: 7989269e8076eda1deef6384b7efdb51c2d279ec
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.workload:
+- dotnet
+ms.openlocfilehash: a78e287065fb714878d4d97b037d44440d063a5a
+ms.sourcegitcommit: 94d33cadc5ff81d2ac389bf5f26422c227832052
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 04/30/2018
 ---
 # <a name="annotations-schema"></a>附註結構描述
 本主題說明 Microsoft Annotations Framework 用來儲存和擷取使用者註釋資料的 XML 結構描述定義 (XSD)。  
@@ -37,7 +39,7 @@ ms.lasthandoff: 12/22/2017
   
  核心結構描述定義的主要 XML 結構<xref:System.Windows.Annotations.Annotation>。  大部分的核心結構描述中定義的 XML 項目對應到以<xref:System.Windows.Annotations>命名空間。  核心結構描述會公開三個擴充點，應用程式可以在其中新增它們自己的 XML 資料。  這些擴充點包含<xref:System.Windows.Annotations.Annotation.Authors%2A>， <xref:System.Windows.Annotations.ContentLocatorPart>，和 「 內容 」。  (內容項目中的形式提供<xref:System.Xml.XmlElement>清單。)  
   
- 本主題中所述的基底結構描述定義的延伸<xref:System.Windows.Annotations.Annotation.Authors%2A>， <xref:System.Windows.Annotations.ContentLocatorPart>，和內容類型包含與初始[!INCLUDE[TLA#tla_wpf](../../../../includes/tlasharptla-wpf-md.md)]版本。  
+ 本主題中所述的基底結構描述定義的延伸<xref:System.Windows.Annotations.Annotation.Authors%2A>， <xref:System.Windows.Annotations.ContentLocatorPart>，和內容類型包含在初始 Windows Presentation Foundation (WPF) 版本。  
   
 <a name="CoreSchema"></a>   
 ## <a name="annotations-xml-core-schema"></a>註釋 XML 核心結構描述  
@@ -592,7 +594,7 @@ ms.lasthandoff: 12/22/2017
 </anc:Annotations>  
 ```  
   
-## <a name="see-also"></a>請參閱  
+## <a name="see-also"></a>另請參閱  
  <xref:System.Windows.Annotations>  
  <xref:System.Windows.Annotations.Storage>  
  <xref:System.Windows.Annotations.Annotation>  

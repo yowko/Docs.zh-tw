@@ -21,16 +21,16 @@ ms.author: dotnetcontent
 manager: wpickett
 ms.workload:
 - dotnet
-ms.openlocfilehash: a0229ce5c6b7081ae493af22b0daeee444736783
-ms.sourcegitcommit: 03ee570f6f528a7d23a4221dcb26a9498edbdf8c
+ms.openlocfilehash: 5bd550b7408e9db00daf7793cd0a7f1261e21ccf
+ms.sourcegitcommit: 94d33cadc5ff81d2ac389bf5f26422c227832052
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/28/2018
+ms.lasthandoff: 04/30/2018
 ---
 # <a name="service-identity-and-authentication"></a>服務身分識別和驗證
 服務的*端點身分識別*是從服務 Web 服務描述語言 (WSDL) 產生的值。 這個值會傳播至任何用戶端上，用來驗證服務。 在用戶端初始化對某個端點的通訊，且服務也向用戶端進行自我驗證之後，用戶端就會比較端點身分識別值與端點驗證處理序傳回的實際值。 如果兩者相符，則可確定用戶端已聯繫所需的服務端點。 這項功能可以防範*網路釣魚*藉由防止用戶端重新導向至惡意服務所裝載的端點。  
   
- 範例應用程式，示範身分識別設定，請參閱[服務身分識別範例](../../../../docs/framework/wcf/samples/service-identity-sample.md)。 [!INCLUDE[crabout](../../../../includes/crabout-md.md)] 端點和端點位址，請參閱[位址](../../../../docs/framework/wcf/feature-details/endpoint-addresses.md)。  
+ 範例應用程式，示範身分識別設定，請參閱[服務身分識別範例](../../../../docs/framework/wcf/samples/service-identity-sample.md)。 如需有關端點和端點位址的詳細資訊，請參閱[位址](../../../../docs/framework/wcf/feature-details/endpoint-addresses.md)。  
   
 > [!NOTE]
 >  當您使用 NT LanMan (NTLM) 進行驗證時，因為用戶端在 NTLM 協定下無法驗證伺服器，所以不會檢查服務身分識別。 當電腦是 Windows 工作群組的一部分，或者執行的是不支援 Kerberos 驗證的舊版 Windows 時，就會使用 NTLM。  
@@ -56,14 +56,14 @@ ms.lasthandoff: 04/28/2018
 |身分識別類型|描述|典型案例|  
 |-------------------|-----------------|----------------------|  
 |網域名稱系統 (DNS)|您可以使用此項目來搭配 X.509 憑證或 Windows 帳戶， 它會比較認證中指定的 DNS 名稱與此項目中指定的值。|DNS 檢查可讓您使用包含 DNS 或主體名稱的憑證。 如果重新發行的憑證包含相同的 DNS 或主體名稱，則身分識別檢查仍舊有效。 重新發行憑證時，憑證會取得新的 RSA 金鑰，但會保留相同的 DNS 或主體名稱， 表示用戶端不需要更新與服務相關的用戶端身分識別資訊。|  
-|憑證。 當 `ClientCredentialType` 設為 Certificate 時的預設值。|此項目會指定 Base64 編碼格式的 X.509 憑證值，以便與用戶端進行比較。<br /><br /> 如果您使用 [!INCLUDE[infocard](../../../../includes/infocard-md.md)] 做為驗證服務的認證，也要使用此項目。|此項目會根據憑證的指紋值將驗證限制為單一憑證， 因為指紋值是唯一的，所以這麼做可以讓驗證更加嚴格， 同時也要特別注意，如果重新發行的憑證具有相同的主體名稱，也會具有新的指紋。 因此，用戶端必須先知道新的指紋，才能驗證服務。 [!INCLUDE[crabout](../../../../includes/crabout-md.md)] 尋找憑證的指紋，請參閱[How to： 擷取憑證的指紋](../../../../docs/framework/wcf/feature-details/how-to-retrieve-the-thumbprint-of-a-certificate.md)。|  
+|憑證。 當 `ClientCredentialType` 設為 Certificate 時的預設值。|此項目會指定 Base64 編碼格式的 X.509 憑證值，以便與用戶端進行比較。<br /><br /> 如果您使用 [!INCLUDE[infocard](../../../../includes/infocard-md.md)] 做為驗證服務的認證，也要使用此項目。|此項目會根據憑證的指紋值將驗證限制為單一憑證， 因為指紋值是唯一的，所以這麼做可以讓驗證更加嚴格， 同時也要特別注意，如果重新發行的憑證具有相同的主體名稱，也會具有新的指紋。 因此，用戶端必須先知道新的指紋，才能驗證服務。 如需尋找憑證的指紋的詳細資訊，請參閱[How to： 擷取憑證的指紋](../../../../docs/framework/wcf/feature-details/how-to-retrieve-the-thumbprint-of-a-certificate.md)。|  
 |憑證參考|與先前所述之「憑證」選項相同。 但是，這個項目可讓您指定憑證名稱與存放區位置，以便從中擷取憑證。|與先前所述之「憑證」案例相同。<br /><br /> 好處是憑證存放區位置可以變更。|  
 |RSA|此項目會指定 RSA 金鑰值，以便與用戶端進行比較。 此選項與憑證選項很類似，但不是使用憑證的指紋，而是改為使用憑證的 RSA 金鑰。|RSA 檢查可讓您根據憑證的 RSA 金鑰將驗證限制為單一憑證， 雖然這個做法可以更嚴格地驗證 RSA 金鑰，但是如果 RSA 金鑰值改變，服務就再也無法與現有的用戶端一起使用。|  
 |使用者主要名稱 (UPN)。 當 `ClientCredentialType` 設為 Windows，且服務處理序不是以其中一個系統帳戶執行時的預設值。|此項目會指定用來執行服務的 UPN。 請參閱 Kerberos 通訊協定和身分識別的[覆寫服務進行驗證的身分識別](../../../../docs/framework/wcf/extending/overriding-the-identity-of-a-service-for-authentication.md)。|這樣可確保服務在特定 Windows 使用者帳戶底下執行。 使用者帳戶可以是目前登入的使用者或是在特定使用者帳戶底下執行的服務。<br /><br /> 如果服務是在 Active Directory 環境中的網域帳戶底下執行，此設定便能充分善用 Windows Kerberos 安全性的優勢。|  
 |服務主要名稱 (SPN)。 當 `ClientCredentialType` 設為 Windows，且服務處理序在 LocalService、LocalSystem 或 NetworkService 系統帳戶底下執行時的預設值。|此項目會指定與服務帳戶關聯的 SPN。 請參閱 Kerberos 通訊協定和身分識別的[覆寫服務進行驗證的身分識別](../../../../docs/framework/wcf/extending/overriding-the-identity-of-a-service-for-authentication.md)。|這樣可確保 SPN 及與其關聯之特定 Windows 帳戶都能識別服務。<br /><br /> 您可以使用 Setspn.exe 工具讓電腦帳戶與服務的使用者帳戶產生關聯。<br /><br /> 如果服務是在其中一個系統帳戶或具有相關 SPN 名稱的網域帳戶底下執行，而且電腦是 Active Directory 環境中的網域成員時，此設定便能充分善用 Windows Kerberos 安全性的優勢。|  
   
 ## <a name="specifying-identity-at-the-service"></a>指定服務端的身分識別  
- 一般來說，您不需要在服務上設定身分識別，因為選擇用戶端認證類型，即表示服務中繼資料中公開的身分識別類型。 [!INCLUDE[crabout](../../../../includes/crabout-md.md)] 如何覆寫或指定服務身分識別，請參閱[覆寫服務進行驗證的身分識別](../../../../docs/framework/wcf/extending/overriding-the-identity-of-a-service-for-authentication.md)。  
+ 一般來說，您不需要在服務上設定身分識別，因為選擇用戶端認證類型，即表示服務中繼資料中公開的身分識別類型。 如需如何覆寫，或指定的服務識別的詳細資訊，請參閱[覆寫服務進行驗證的身分識別](../../../../docs/framework/wcf/extending/overriding-the-identity-of-a-service-for-authentication.md)。  
   
 ## <a name="using-the-identity-element-in-configuration"></a>使用\<識別 > 組態中的項目  
  如果您在先前對 `Certificate,` 顯示的繫結中變更用戶端認證類型，則產生的 WSDL 會包含 Base64 序列化 X.509 憑證做為身分識別值，如下列程式碼所示。 這是 Windows 以外所有用戶端認證類型的預設值。  
@@ -123,7 +123,7 @@ ms.lasthandoff: 04/28/2018
  [!code-csharp[C_Identity#8](../../../../samples/snippets/csharp/VS_Snippets_CFX/c_identity/cs/source.cs#8)]
  [!code-vb[C_Identity#8](../../../../samples/snippets/visualbasic/VS_Snippets_CFX/c_identity/vb/source.vb#8)]  
   
- [!INCLUDE[crabout](../../../../includes/crabout-md.md)] 堆疊繫結正確的自訂繫結項目，請參閱[Creating User-Defined 繫結](../../../../docs/framework/wcf/extending/creating-user-defined-bindings.md)。 [!INCLUDE[crabout](../../../../includes/crabout-md.md)] 建立自訂繫結與<xref:System.ServiceModel.Channels.SecurityBindingElement>，請參閱[How to： 指定的驗證模式建立 SecurityBindingElement](../../../../docs/framework/wcf/feature-details/how-to-create-a-securitybindingelement-for-a-specified-authentication-mode.md)。  
+ 如需有關如何堆疊的繫結項目正確自訂繫結，請參閱[Creating User-Defined 繫結](../../../../docs/framework/wcf/extending/creating-user-defined-bindings.md)。 如需有關建立自訂繫結與<xref:System.ServiceModel.Channels.SecurityBindingElement>，請參閱[How to： 指定的驗證模式建立 SecurityBindingElement](../../../../docs/framework/wcf/feature-details/how-to-create-a-securitybindingelement-for-a-specified-authentication-mode.md)。  
   
 ## <a name="see-also"></a>另請參閱  
  [如何：使用 SecurityBindingElement 建立自訂繫結](../../../../docs/framework/wcf/feature-details/how-to-create-a-custom-binding-using-the-securitybindingelement.md)  

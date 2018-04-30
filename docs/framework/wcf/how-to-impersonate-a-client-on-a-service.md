@@ -23,17 +23,17 @@ ms.author: dotnetcontent
 manager: wpickett
 ms.workload:
 - dotnet
-ms.openlocfilehash: 95330e062ff0ab6ba080deeb01a73bb64fac4dfc
-ms.sourcegitcommit: 03ee570f6f528a7d23a4221dcb26a9498edbdf8c
+ms.openlocfilehash: 096a3dd1ae5035f6b015ec88ccd8f1ada1dc55ea
+ms.sourcegitcommit: 94d33cadc5ff81d2ac389bf5f26422c227832052
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/28/2018
+ms.lasthandoff: 04/30/2018
 ---
 # <a name="how-to-impersonate-a-client-on-a-service"></a>HOW TO：在服務上模擬用戶端
-模擬 [!INCLUDE[indigo1](../../../includes/indigo1-md.md)] 服務上的用戶端使服務可以代表用戶端執行動作。 關於存取控制清單 (ACL) 檢查的動作，例如存取機器上的目錄和檔案或存取 SQL Server 資料庫，請根據用戶端使用者帳戶檢查 ACL。 本主題說明在 Windows 網域中啟用用戶端以設定用戶端模擬等級所需的基本步驟。 如需此文件的實用範例，請參閱 [Impersonating the Client](../../../docs/framework/wcf/samples/impersonating-the-client.md)。 [!INCLUDE[crabout](../../../includes/crabout-md.md)] 用戶端模擬，請參閱[委派和模擬](../../../docs/framework/wcf/feature-details/delegation-and-impersonation-with-wcf.md)。  
+模擬 [!INCLUDE[indigo1](../../../includes/indigo1-md.md)] 服務上的用戶端使服務可以代表用戶端執行動作。 關於存取控制清單 (ACL) 檢查的動作，例如存取機器上的目錄和檔案或存取 SQL Server 資料庫，請根據用戶端使用者帳戶檢查 ACL。 本主題說明在 Windows 網域中啟用用戶端以設定用戶端模擬等級所需的基本步驟。 如需此文件的實用範例，請參閱 [Impersonating the Client](../../../docs/framework/wcf/samples/impersonating-the-client.md)。 如需有關用戶端模擬的詳細資訊，請參閱[委派和模擬](../../../docs/framework/wcf/feature-details/delegation-and-impersonation-with-wcf.md)。  
   
 > [!NOTE]
->  用戶端和服務在相同電腦上執行，且用戶端在系統帳戶下執行時 (也就是 `Local System` 或 `Network Service`)，以可設定狀態的安全性內容權杖建立安全的工作階段時無法模擬用戶端。 WinForms 或主控台應用程式通常在目前登入的帳戶下執行，因此根據預設值可以模擬該帳戶。 但當用戶端是 [!INCLUDE[vstecasp](../../../includes/vstecasp-md.md)] 頁面，而且該頁面是裝載於 [!INCLUDE[iis601](../../../includes/iis601-md.md)] 或 IIS 7.0中時，根據預設，用戶端不會以 `Network Service` 帳戶執行。 所有支援安全工作階段的系統提供繫結預設為使用沒有狀態的安全性內容權杖。 不過，如果用戶端是 [!INCLUDE[vstecasp](../../../includes/vstecasp-md.md)] 頁面，而且已使用含有可設定狀態之安全性內容權杖的安全工作階段，就無法模擬該用戶端。 [!INCLUDE[crabout](../../../includes/crabout-md.md)] 在安全工作階段中使用具狀態之安全性內容權杖，請參閱[How to： 建立安全工作階段的安全性內容權杖](../../../docs/framework/wcf/feature-details/how-to-create-a-security-context-token-for-a-secure-session.md)。  
+>  用戶端和服務在相同電腦上執行，且用戶端在系統帳戶下執行時 (也就是 `Local System` 或 `Network Service`)，以可設定狀態的安全性內容權杖建立安全的工作階段時無法模擬用戶端。 WinForms 或主控台應用程式通常在目前登入的帳戶下執行，因此根據預設值可以模擬該帳戶。 但當用戶端是 [!INCLUDE[vstecasp](../../../includes/vstecasp-md.md)] 頁面，而且該頁面是裝載於 [!INCLUDE[iis601](../../../includes/iis601-md.md)] 或 IIS 7.0中時，根據預設，用戶端不會以 `Network Service` 帳戶執行。 所有支援安全工作階段的系統提供繫結預設為使用沒有狀態的安全性內容權杖。 不過，如果用戶端是 [!INCLUDE[vstecasp](../../../includes/vstecasp-md.md)] 頁面，而且已使用含有可設定狀態之安全性內容權杖的安全工作階段，就無法模擬該用戶端。 如需有關在安全工作階段中使用具狀態之安全性內容權杖的詳細資訊，請參閱[How to： 建立安全工作階段的安全性內容權杖](../../../docs/framework/wcf/feature-details/how-to-create-a-security-context-token-for-a-secure-session.md)。  
   
 ### <a name="to-enable-impersonation-of-a-client-from-a-cached-windows-token-on-a-service"></a>若要從服務上的快取 Windows 權杖啟用用戶端模擬  
   

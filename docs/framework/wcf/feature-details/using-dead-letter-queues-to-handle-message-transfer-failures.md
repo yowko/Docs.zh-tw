@@ -1,27 +1,29 @@
 ---
-title: "使用寄不出的信件佇列來處理訊息傳輸失敗"
-ms.custom: 
+title: 使用寄不出的信件佇列來處理訊息傳輸失敗
+ms.custom: ''
 ms.date: 03/30/2017
 ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.technology: dotnet-clr
-ms.tgt_pltfrm: 
+ms.reviewer: ''
+ms.suite: ''
+ms.technology:
+- dotnet-clr
+ms.tgt_pltfrm: ''
 ms.topic: article
 dev_langs:
 - csharp
 - vb
 ms.assetid: 9e891c6a-d960-45ea-904f-1a00e202d61a
-caps.latest.revision: "19"
+caps.latest.revision: 19
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.workload: dotnet
-ms.openlocfilehash: 9f10b3895fcdea0c3ab80617acd9874953b7665e
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.workload:
+- dotnet
+ms.openlocfilehash: b51999b1984dedf1baf23e41c1592382849c431b
+ms.sourcegitcommit: 94d33cadc5ff81d2ac389bf5f26422c227832052
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 04/30/2018
 ---
 # <a name="using-dead-letter-queues-to-handle-message-transfer-failures"></a>使用寄不出的信件佇列來處理訊息傳輸失敗
 佇列訊息可能會傳遞失敗。 這些失敗的訊息都會記錄在寄不出的信件佇列中。 造成傳遞失敗的原因可能是網路失敗、佇列已刪除、佇列已滿、驗證失敗，或是未能準時傳遞。  
@@ -54,7 +56,7 @@ ms.lasthandoff: 12/22/2017
   
 -   若要從自訂的寄不出信件佇列讀取訊息，URI 必須是的表單： net.msmq://localhost/private/\<*自訂 dlq 名稱*> 其中*自訂 dlq 名稱*是自訂的名稱寄不出信件佇列。  
   
- [!INCLUDE[crabout](../../../../includes/crabout-md.md)]如何解決佇列，請參閱[服務端點與佇列定址](../../../../docs/framework/wcf/feature-details/service-endpoints-and-queue-addressing.md)。  
+ 如需如何位址佇列的詳細資訊，請參閱[服務端點與佇列定址](../../../../docs/framework/wcf/feature-details/service-endpoints-and-queue-addressing.md)。  
   
  接收者上的 [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] 堆疊會比對服務正在接聽的位址和該訊息上的位址。 如果這些位址相符，便發送該訊息，否則，就不發送該訊息。 這種做法在從寄不出的信件佇列讀取訊息時會發生問題，因為寄不出的信件佇列中的訊息通常是定位傳送給該服務，而不定位傳送給寄不出的信件佇列服務。 因此，從寄不出的信件佇列讀取的服務必須安裝位址篩選 `ServiceBehavior`，這個行為會指示堆疊比對佇列中的所有訊息，而不管收訊者為何。 具體來說，您必須在從寄不出的信件佇列讀取訊息的服務中新增含有 `ServiceBehavior` 參數的 <xref:System.ServiceModel.AddressFilterMode.Any>。  
   
@@ -84,7 +86,7 @@ ms.lasthandoff: 12/22/2017
   
   
   
-## <a name="see-also"></a>請參閱  
+## <a name="see-also"></a>另請參閱  
  [佇列概觀](../../../../docs/framework/wcf/feature-details/queues-overview.md)  
  [如何：與 WCF 端點交換佇列訊息](../../../../docs/framework/wcf/feature-details/how-to-exchange-queued-messages-with-wcf-endpoints.md)  
  [有害訊息處理](../../../../docs/framework/wcf/feature-details/poison-message-handling.md)

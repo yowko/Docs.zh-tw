@@ -1,13 +1,13 @@
 ---
-title: "HOW TO：建立雙工合約"
-ms.custom: 
+title: HOW TO：建立雙工合約
+ms.custom: ''
 ms.date: 03/30/2017
 ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
+ms.reviewer: ''
+ms.suite: ''
 ms.technology:
 - dotnet-clr
-ms.tgt_pltfrm: 
+ms.tgt_pltfrm: ''
 ms.topic: article
 dev_langs:
 - csharp
@@ -15,20 +15,20 @@ dev_langs:
 helpviewer_keywords:
 - duplex contracts [WCF]
 ms.assetid: 500a75b6-998a-47d5-8e3b-24e3aba2a434
-caps.latest.revision: 
+caps.latest.revision: 28
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
 ms.workload:
 - dotnet
-ms.openlocfilehash: 003b07326612f3b51390d691c7bba0ef1c1b85dc
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.openlocfilehash: c06bd4f050eda3c3374684b5401b8c85fb9e1df9
+ms.sourcegitcommit: 94d33cadc5ff81d2ac389bf5f26422c227832052
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 04/30/2018
 ---
 # <a name="how-to-create-a-duplex-contract"></a>HOW TO：建立雙工合約
-本主題說明的基本步驟可用來建立使用雙工 (雙向) 合約的方法。 雙工合約可供用戶端與伺服器彼此各自進行通訊，方便任何一方初始化對另一方的呼叫。 雙工合約是 [!INCLUDE[indigo1](../../../../includes/indigo1-md.md)] 服務可用的三種訊息模式之一。 其他兩種訊息模式分別是單向和要求-回覆。 雙工合約是由用戶端和伺服器之間的兩個單向合約組成，而且不需要相互關聯方法呼叫。 當您的服務必須查詢用戶端以獲得更多資訊，或是明確地在用戶端上引發事件時，請使用這種合約。 [!INCLUDE[crabout](../../../../includes/crabout-md.md)]建立用戶端應用程式的雙工合約，請參閱[How to: Access Services 搭配雙工合約](../../../../docs/framework/wcf/feature-details/how-to-access-services-with-a-duplex-contract.md)。 如需實用範例，請參閱[雙工](../../../../docs/framework/wcf/samples/duplex.md)範例。  
+本主題說明的基本步驟可用來建立使用雙工 (雙向) 合約的方法。 雙工合約可供用戶端與伺服器彼此各自進行通訊，方便任何一方初始化對另一方的呼叫。 雙工合約是 [!INCLUDE[indigo1](../../../../includes/indigo1-md.md)] 服務可用的三種訊息模式之一。 其他兩種訊息模式分別是單向和要求-回覆。 雙工合約是由用戶端和伺服器之間的兩個單向合約組成，而且不需要相互關聯方法呼叫。 當您的服務必須查詢用戶端以獲得更多資訊，或是明確地在用戶端上引發事件時，請使用這種合約。 如需建立雙工合約的用戶端應用程式的詳細資訊，請參閱[How to: Access Services 搭配雙工合約](../../../../docs/framework/wcf/feature-details/how-to-access-services-with-a-duplex-contract.md)。 如需實用範例，請參閱[雙工](../../../../docs/framework/wcf/samples/duplex.md)範例。  
   
 ### <a name="to-create-a-duplex-contract"></a>若要建立雙工合約  
   
@@ -80,7 +80,7 @@ ms.lasthandoff: 12/22/2017
   
 -   您必須保護公開雙工服務的端點安全。 當服務收到雙工訊息時，會查看該傳入訊息中的 ReplyTo 項目，以判斷傳送回覆的位置。 如果通道不安全，那麼未受信任的用戶端可能會傳送惡意訊息，其中包含目標電腦的 ReplyTo，而導致該目標電腦發生阻絕服務。 如果是一般的要求-回覆訊息，這根本不是問題，因為電腦會忽略 ReplyTo 並且在原始傳入訊息所用的通道上傳送回應。  
   
-## <a name="see-also"></a>請參閱  
+## <a name="see-also"></a>另請參閱  
  <xref:System.ServiceModel.ServiceContractAttribute>  
  <xref:System.ServiceModel.OperationContractAttribute>  
  [如何：使用雙面合約存取服務](../../../../docs/framework/wcf/feature-details/how-to-access-services-with-a-duplex-contract.md)  

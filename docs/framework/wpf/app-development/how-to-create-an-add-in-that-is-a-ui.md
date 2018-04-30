@@ -1,12 +1,13 @@
 ---
-title: "如何：建立本身為 UI 的增益集"
-ms.custom: 
+title: 如何：建立本身為 UI 的增益集
+ms.custom: ''
 ms.date: 03/30/2017
 ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.technology: dotnet-wpf
-ms.tgt_pltfrm: 
+ms.reviewer: ''
+ms.suite: ''
+ms.technology:
+- dotnet-wpf
+ms.tgt_pltfrm: ''
 ms.topic: article
 helpviewer_keywords:
 - creating an add-in that is a UI [WPF]
@@ -16,19 +17,20 @@ helpviewer_keywords:
 - implementing UI add-ins [WPF]
 - pipeline segments [WPF], creating add-ins
 ms.assetid: 86375525-282b-4039-8352-8680051a10ea
-caps.latest.revision: "8"
+caps.latest.revision: 8
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.workload: dotnet
-ms.openlocfilehash: fea1c718eedb12d49eced9964e4f9045badf07ed
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.workload:
+- dotnet
+ms.openlocfilehash: cadb992a68f4ee9f06ad37adf71856cdc4f46503
+ms.sourcegitcommit: 94d33cadc5ff81d2ac389bf5f26422c227832052
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 04/30/2018
 ---
 # <a name="how-to-create-an-add-in-that-is-a-ui"></a>如何：建立本身為 UI 的增益集
-這個範例示範如何建立增益集是[!INCLUDE[TLA#tla_wpf](../../../../includes/tlasharptla-wpf-md.md)][!INCLUDE[TLA#tla_ui](../../../../includes/tlasharptla-ui-md.md)]由其中裝載[!INCLUDE[TLA2#tla_wpf](../../../../includes/tla2sharptla-wpf-md.md)]獨立應用程式。  
+這個範例示範如何建立增益集是 Windows Presentation Foundation (WPF) 是由裝載[!INCLUDE[TLA2#tla_wpf](../../../../includes/tla2sharptla-wpf-md.md)]獨立應用程式。  
   
  增益集是[!INCLUDE[TLA2#tla_ui](../../../../includes/tla2sharptla-ui-md.md)]也就是[!INCLUDE[TLA2#tla_wpf](../../../../includes/tla2sharptla-wpf-md.md)]使用者控制項。 此使用者控制項的內容是單一按鈕，當按下時，會顯示訊息方塊。 [!INCLUDE[TLA2#tla_wpf](../../../../includes/tla2sharptla-wpf-md.md)]獨立應用程式裝載增益集[!INCLUDE[TLA2#tla_ui](../../../../includes/tla2sharptla-ui-md.md)]做為主要應用程式視窗的內容。  
   
@@ -64,7 +66,7 @@ ms.lasthandoff: 12/22/2017
   
  [!code-csharp[SimpleAddInIsAUISample#AddInSideAdapterCode](../../../../samples/snippets/csharp/VS_Snippets_Wpf/SimpleAddInIsAUISample/CSharp/AddInSideAdapters/WPFAddIn_ViewToContractAddInSideAdapter.cs#addinsideadaptercode)]  
   
- 在其中的增益集是會傳回增益集模型[!INCLUDE[TLA2#tla_ui](../../../../includes/tla2sharptla-ui-md.md)](請參閱[建立增益集，傳回的 UI](../../../../docs/framework/wpf/app-development/how-to-create-an-add-in-that-returns-a-ui.md))，增益集配接器轉換<xref:System.Windows.FrameworkElement>至<xref:System.AddIn.Contract.INativeHandleContract>藉由呼叫<xref:System.AddIn.Pipeline.FrameworkElementAdapters.ViewToContractAdapter%2A>。 <xref:System.AddIn.Pipeline.FrameworkElementAdapters.ViewToContractAdapter%2A>必須也先呼叫在這個模型中，雖然您必須實作從中撰寫程式碼呼叫此方法。 您可以覆寫<xref:System.AddIn.Pipeline.ContractBase.QueryContract%2A>和實作程式碼呼叫<xref:System.AddIn.Pipeline.FrameworkElementAdapters.ViewToContractAdapter%2A>如果正在呼叫的程式碼<xref:System.AddIn.Pipeline.ContractBase.QueryContract%2A>預期<xref:System.AddIn.Contract.INativeHandleContract>。 在此情況下，呼叫端會是主應用程式端配接器，後續小節將進行說明。  
+ 在其中的增益集是會傳回增益集模型[!INCLUDE[TLA2#tla_ui](../../../../includes/tla2sharptla-ui-md.md)](請參閱[建立增益集，傳回的 UI](../../../../docs/framework/wpf/app-development/how-to-create-an-add-in-that-returns-a-ui.md))，增益集配接器轉換<xref:System.Windows.FrameworkElement>至<xref:System.AddIn.Contract.INativeHandleContract>藉由呼叫<xref:System.AddIn.Pipeline.FrameworkElementAdapters.ViewToContractAdapter%2A>。 <xref:System.AddIn.Pipeline.FrameworkElementAdapters.ViewToContractAdapter%2A> 必須也先呼叫在這個模型中，雖然您必須實作從中撰寫程式碼呼叫此方法。 您可以覆寫<xref:System.AddIn.Pipeline.ContractBase.QueryContract%2A>和實作程式碼呼叫<xref:System.AddIn.Pipeline.FrameworkElementAdapters.ViewToContractAdapter%2A>如果正在呼叫的程式碼<xref:System.AddIn.Pipeline.ContractBase.QueryContract%2A>預期<xref:System.AddIn.Contract.INativeHandleContract>。 在此情況下，呼叫端會是主應用程式端配接器，後續小節將進行說明。  
   
 > [!NOTE]
 >  您也需要覆寫<xref:System.AddIn.Pipeline.ContractBase.QueryContract%2A>主應用程式間啟用定位處理此模型中[!INCLUDE[TLA2#tla_ui](../../../../includes/tla2sharptla-ui-md.md)]和增益集[!INCLUDE[TLA2#tla_ui](../../../../includes/tla2sharptla-ui-md.md)]。 如需詳細資訊，請參閱 < WPF 增益集限制 「 [WPF 增益集概觀](../../../../docs/framework/wpf/app-development/wpf-add-ins-overview.md)。  
@@ -115,6 +117,6 @@ ms.lasthandoff: 12/22/2017
   
  此活動完全與主應用程式隔離。  
   
-## <a name="see-also"></a>請參閱  
+## <a name="see-also"></a>另請參閱  
  [增益集和擴充性](../../../../docs/framework/add-ins/index.md)  
  [WPF 增益集概觀](../../../../docs/framework/wpf/app-development/wpf-add-ins-overview.md)

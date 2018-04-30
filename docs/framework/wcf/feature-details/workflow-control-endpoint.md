@@ -1,24 +1,26 @@
 ---
-title: "工作流程控制端點"
-ms.custom: 
+title: 工作流程控制端點
+ms.custom: ''
 ms.date: 03/30/2017
 ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.technology: dotnet-clr
-ms.tgt_pltfrm: 
+ms.reviewer: ''
+ms.suite: ''
+ms.technology:
+- dotnet-clr
+ms.tgt_pltfrm: ''
 ms.topic: article
 ms.assetid: 1b883334-1590-4fbb-b0d6-65197efe0700
-caps.latest.revision: "11"
+caps.latest.revision: 11
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.workload: dotnet
-ms.openlocfilehash: 676451ac3dce4ff9d328bf4c46809444e0e7cb7c
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.workload:
+- dotnet
+ms.openlocfilehash: 3cd72919acd8e6392d809f22ddd87042d00008f6
+ms.sourcegitcommit: 94d33cadc5ff81d2ac389bf5f26422c227832052
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 04/30/2018
 ---
 # <a name="workflow-control-endpoint"></a>工作流程控制端點
 工作流程控制端點可讓開發人員呼叫控制作業，以便從遠端控制使用 <xref:System.ServiceModel.Activities.WorkflowServiceHost> 所裝載的工作流程執行個體。 這項功能可以使用程式設計的方式執行多種控制作業，像是暫停、繼續及終止。  
@@ -57,10 +59,10 @@ ms.lasthandoff: 12/22/2017
 |TransactedTerminate|執行異動 (從用戶端流動進入或在本機建立) 之下的 [結束] 作業。 如果系統會維持工作流程執行個體的長期狀態，則在此項作業執行期間工作流程執行個體必須保存。|  
 |TransactedUnsuspend|執行交易 (從用戶端流動進入或在本機建立) 之下的 [取消暫停] 作業。 如果系統會維持工作流程執行個體的長期狀態，則在此項作業執行期間工作流程執行個體必須保存。|  
   
- <xref:System.ServiceModel.Activities.IWorkflowInstanceManagement> 合約並未提供建立新工作流程執行個體的方法，只能管理現有的工作流程執行個體。 [!INCLUDE[crabout](../../../../includes/crabout-md.md)]從遠端建立新的工作流程執行個體，請參閱[工作流程服務主機擴充性](../../../../docs/framework/wcf/feature-details/workflow-service-host-extensibility.md)。  
+ <xref:System.ServiceModel.Activities.IWorkflowInstanceManagement> 合約並未提供建立新工作流程執行個體的方法，只能管理現有的工作流程執行個體。 如需從遠端建立新的工作流程執行個體的詳細資訊，請參閱[工作流程服務主機擴充性](../../../../docs/framework/wcf/feature-details/workflow-service-host-extensibility.md)。  
   
 ## <a name="workflowcontrolendpoint"></a>WorkflowControlEndpoint  
- <xref:System.ServiceModel.Activities.WorkflowControlEndpoint> 是標準端點，含有固定合約 <xref:System.ServiceModel.Activities.IWorkflowInstanceManagement>。 將此端點加入至 <xref:System.ServiceModel.Activities.WorkflowServiceHost> 執行個體之後，可以使用此端點傳送命令作業給主機執行個體所裝載的任何工作流程執行個體。 [!INCLUDE[crabout](../../../../includes/crabout-md.md)]標準端點，請參閱[標準端點](../../../../docs/framework/wcf/feature-details/standard-endpoints.md)。  
+ <xref:System.ServiceModel.Activities.WorkflowControlEndpoint> 是標準端點，含有固定合約 <xref:System.ServiceModel.Activities.IWorkflowInstanceManagement>。 將此端點加入至 <xref:System.ServiceModel.Activities.WorkflowServiceHost> 執行個體之後，可以使用此端點傳送命令作業給主機執行個體所裝載的任何工作流程執行個體。 如需標準端點的詳細資訊，請參閱[標準端點](../../../../docs/framework/wcf/feature-details/standard-endpoints.md)。  
   
 ## <a name="workflowcontrolclient"></a>WorkflowControlClient  
  <xref:System.ServiceModel.Activities.WorkflowControlClient> 類別可讓您傳送控制訊息至 <xref:System.ServiceModel.Activities.WorkflowControlEndpoint> 上的 <xref:System.ServiceModel.Activities.WorkflowServiceHost>。 其中包含方法，而該方法會提供給 <xref:System.ServiceModel.Activities.IWorkflowInstanceManagement> 合約所支援的各項作業 (交易的作業除外)。 <xref:System.ServiceModel.Activities.WorkflowControlClient> 會使用環境交易來判斷是否應該使用交易的作業。

@@ -19,11 +19,11 @@ ms.author: dotnetcontent
 manager: wpickett
 ms.workload:
 - dotnet
-ms.openlocfilehash: 35244032a36af8d3d23fd9d88006ea032a99b44b
-ms.sourcegitcommit: 03ee570f6f528a7d23a4221dcb26a9498edbdf8c
+ms.openlocfilehash: 856d33f88b55c35927998b15acc7bbf8ff1e9fe2
+ms.sourcegitcommit: 94d33cadc5ff81d2ac389bf5f26422c227832052
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/28/2018
+ms.lasthandoff: 04/30/2018
 ---
 # <a name="how-to-specify-client-credential-values"></a>HOW TO：指定用戶端認證值
 使用 [!INCLUDE[indigo1](../../../includes/indigo1-md.md)] 可以讓服務指定用戶端向服務驗證自身的方式。 例如，服務可以規定用戶端必須出示憑證交付驗證。  
@@ -75,7 +75,7 @@ ms.lasthandoff: 04/28/2018
   
 3.  新增[ \<clientCertificate >](../../../docs/framework/configure-apps/file-schema/wcf/clientcertificate-of-servicecredentials.md)元素[ \<clientCredentials >](../../../docs/framework/configure-apps/file-schema/wcf/clientcredentials.md)項目。  
   
-4.  將下列屬性設為適當的值：`storeLocation`、`storeName`、`x509FindType` 和 `findValue`，如下列程式碼所示。 [!INCLUDE[crabout](../../../includes/crabout-md.md)] 憑證，請參閱[使用憑證](../../../docs/framework/wcf/feature-details/working-with-certificates.md)。  
+4.  將下列屬性設為適當的值：`storeLocation`、`storeName`、`x509FindType` 和 `findValue`，如下列程式碼所示。 如需憑證的詳細資訊，請參閱[使用憑證](../../../docs/framework/wcf/feature-details/working-with-certificates.md)。  
   
     ```xml  
     <behaviors>  

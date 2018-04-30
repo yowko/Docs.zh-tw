@@ -18,16 +18,16 @@ ms.author: dotnetcontent
 manager: wpickett
 ms.workload:
 - dotnet
-ms.openlocfilehash: c29065ebe03617e288d7ebde3dc6b42cbfcf6061
-ms.sourcegitcommit: 03ee570f6f528a7d23a4221dcb26a9498edbdf8c
+ms.openlocfilehash: 530f6ce3d253cfc50818c82fc70e401382b50b85
+ms.sourcegitcommit: 94d33cadc5ff81d2ac389bf5f26422c227832052
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/28/2018
+ms.lasthandoff: 04/30/2018
 ---
 # <a name="analytic-tracing-overview"></a>分析追蹤的概觀
 [!INCLUDE[netfx_current_long](../../../../../includes/netfx-current-long-md.md)] 中的分析追蹤是一項高效能、低詳細等級的追蹤功能，設定於 Windows 事件追蹤 (ETW) 之上。 ETW 是在核心層級執行，可大幅降低追蹤作業的負荷。 它能有效率地緩衝使用者和核心模式的事件，並且允許動態啟用記錄，而不需重新啟動服務。 事件發出和接收之後，即可在事件記錄檔中使用追蹤資料。  
   
- [!INCLUDE[crabout](../../../../../includes/crabout-md.md)] ETW 的詳細資訊，請參閱 [使用 ETW 改善偵錯和效能調整](http://go.microsoft.com/fwlink/?LinkId=164781)。  
+ 如需 ETW 的詳細資訊，請參閱[改善偵錯和效能微調與 ETW](http://go.microsoft.com/fwlink/?LinkId=164781)。  
   
  除了使用 Windows 系統、安全性和應用程式事件記錄檔分析應用程式之外， [!INCLUDE[wv](../../../../../includes/wv-md.md)] 和 [!INCLUDE[lserver](../../../../../includes/lserver-md.md)] 也在應用程式和服務記錄檔最上層節點下引進了額外的記錄檔。 這些新記錄檔的目的在於儲存特定應用程式或特定元件的事件，而非影響整個系統的全域事件 (例如安全性事件記錄檔可能會記錄的事件類型)。 [!INCLUDE[netfx_current_short](../../../../../includes/netfx-current-short-md.md)] 會統合並相互關聯以下項目的記錄檔： [!INCLUDE[indigo2](../../../../../includes/indigo2-md.md)] 追蹤事件、 [!INCLUDE[indigo2](../../../../../includes/indigo2-md.md)] 訊息記錄和 [!INCLUDE[wf1](../../../../../includes/wf1-md.md)] 應用程式和服務記錄檔的追蹤記錄。  
   
@@ -57,7 +57,7 @@ ms.lasthandoff: 04/28/2018
  ETW 基礎結構可讓您使用標準 Windows 工具，以動態方式啟用和設定追蹤。 如需詳細資訊，請參閱[動態地啟用分析追蹤](../../../../../docs/framework/wcf/diagnostics/etw/dynamically-enabling-analytic-tracing.md)。  
   
 ### <a name="message-flow-tracing"></a>訊息流程追蹤  
- [!INCLUDE[crabout](../../../../../includes/crabout-md.md)] 如何啟用訊息流程追蹤的詳細資訊，請參閱 [Configuring Message Flow Tracing](../../../../../docs/framework/wcf/diagnostics/etw/configuring-message-flow-tracing.md)。  
+ 如需如何啟用訊息流程追蹤的詳細資訊，請參閱[設定訊息流程追蹤](../../../../../docs/framework/wcf/diagnostics/etw/configuring-message-flow-tracing.md)。  
   
 ### <a name="keywords"></a>關鍵字  
  關鍵字可用來篩選追蹤訊息，以及定義發出事件的 [!INCLUDE[dnprdnshort](../../../../../includes/dnprdnshort-md.md)] 元件。 如需詳細資訊，請參閱[動態地啟用分析追蹤](../../../../../docs/framework/wcf/diagnostics/etw/dynamically-enabling-analytic-tracing.md)。

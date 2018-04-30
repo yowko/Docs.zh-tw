@@ -16,11 +16,11 @@ ms.author: dotnetcontent
 manager: wpickett
 ms.workload:
 - dotnet
-ms.openlocfilehash: d7de2912029efb61135d5329f186ed2c1ca95840
-ms.sourcegitcommit: 03ee570f6f528a7d23a4221dcb26a9498edbdf8c
+ms.openlocfilehash: 1342f2383e7cf2aa15ea60be03c93044e4332612
+ms.sourcegitcommit: 94d33cadc5ff81d2ac389bf5f26422c227832052
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/28/2018
+ms.lasthandoff: 04/30/2018
 ---
 # <a name="troubleshooting-queued-messaging"></a>佇列訊息的疑難排解
 本章節包含在 [!INCLUDE[indigo1](../../../../includes/indigo1-md.md)] 中使用佇列之常見問題與疑難排解說明。  
@@ -125,7 +125,7 @@ ms.lasthandoff: 04/28/2018
   
  **問：**那裡找到常見問題的解答 msmq？  
   
- **答：** [!INCLUDE[crabout](../../../../includes/crabout-md.md)] MSMQ 中，請參閱[Microsoft Message Queuing](http://go.microsoft.com/fwlink/?LinkId=87810)。  
+ **答：** MSMQ 的詳細資訊，請參閱[Microsoft Message Queuing](http://go.microsoft.com/fwlink/?LinkId=87810)。  
   
  **問：**為什麼的確我的服務會擲回`ProtocolException`時從同時包含佇列讀取佇列工作階段訊息和佇列資料包訊息？  
   

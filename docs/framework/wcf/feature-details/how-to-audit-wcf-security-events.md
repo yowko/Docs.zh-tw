@@ -1,13 +1,13 @@
 ---
-title: "HOW TO：稽核 Windows Communication Foundation 安全性事件"
-ms.custom: 
+title: HOW TO：稽核 Windows Communication Foundation 安全性事件
+ms.custom: ''
 ms.date: 03/30/2017
 ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
+ms.reviewer: ''
+ms.suite: ''
 ms.technology:
 - dotnet-clr
-ms.tgt_pltfrm: 
+ms.tgt_pltfrm: ''
 ms.topic: article
 dev_langs:
 - csharp
@@ -15,20 +15,20 @@ dev_langs:
 helpviewer_keywords:
 - security [WCF], auditing events
 ms.assetid: e71e9587-3336-46a2-9a9e-d72a1743ecec
-caps.latest.revision: 
+caps.latest.revision: 19
 author: BrucePerlerMS
 ms.author: bruceper
 manager: mbaldwin
 ms.workload:
 - dotnet
-ms.openlocfilehash: d3456eb374add7768fa6f2d01bc1b7b610c9577e
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.openlocfilehash: 72eff4af38636577dc9e3b35af1f1155d5ed892c
+ms.sourcegitcommit: 94d33cadc5ff81d2ac389bf5f26422c227832052
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 04/30/2018
 ---
 # <a name="how-to-audit-windows-communication-foundation-security-events"></a>HOW TO：稽核 Windows Communication Foundation 安全性事件
-[!INCLUDE[indigo1](../../../../includes/indigo1-md.md)] 可讓您將安全性事件記錄至 Windows 事件記錄檔，而您可以使用 Windows 事件檢視器來檢視事件記錄檔。 這個主題會說明如何將應用程式設定為會記錄安全性事件。 [!INCLUDE[crabout](../../../../includes/crabout-md.md)][!INCLUDE[indigo2](../../../../includes/indigo2-md.md)]稽核，請參閱[稽核](../../../../docs/framework/wcf/feature-details/auditing-security-events.md)。  
+[!INCLUDE[indigo1](../../../../includes/indigo1-md.md)] 可讓您將安全性事件記錄至 Windows 事件記錄檔，而您可以使用 Windows 事件檢視器來檢視事件記錄檔。 這個主題會說明如何將應用程式設定為會記錄安全性事件。 如需有關[!INCLUDE[indigo2](../../../../includes/indigo2-md.md)]稽核，請參閱[稽核](../../../../docs/framework/wcf/feature-details/auditing-security-events.md)。  
   
 ### <a name="to-audit-security-events-in-code"></a>若要在程式碼中稽核安全性事件  
   
@@ -100,7 +100,7 @@ ms.lasthandoff: 12/22/2017
   
  如果<xref:System.ServiceModel.AuditLogLocation>屬性設定為<xref:System.ServiceModel.AuditLogLocation.Security>和**稽核物件存取**中未設定**本機安全性原則**，不會稽核事件寫入安全性記錄檔。 請注意，這時不會傳回任何失敗，但是稽核項目也不會寫入安全性記錄檔中。  
   
-## <a name="see-also"></a>請參閱  
+## <a name="see-also"></a>另請參閱  
  <xref:System.ServiceModel.Description.ServiceSecurityAuditBehavior.AuditLogLocation%2A>  
  <xref:System.ServiceModel.Description.ServiceSecurityAuditBehavior>  
  <xref:System.ServiceModel.AuditLogLocation>  

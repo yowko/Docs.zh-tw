@@ -19,11 +19,11 @@ ms.author: bruceper
 manager: mbaldwin
 ms.workload:
 - dotnet
-ms.openlocfilehash: a50b3d3ec2a99d53bc7d5817f3ed530ef92d474b
-ms.sourcegitcommit: 03ee570f6f528a7d23a4221dcb26a9498edbdf8c
+ms.openlocfilehash: 1475891cf83c05552da247ffb04a866d80a396ea
+ms.sourcegitcommit: 94d33cadc5ff81d2ac389bf5f26422c227832052
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/28/2018
+ms.lasthandoff: 04/30/2018
 ---
 # <a name="security-overview"></a>安全性概觀
 [!INCLUDE[indigo1](../../../../includes/indigo1-md.md)] 是 SOAP 訊息架構的分散式程式設計平台，而確保用戶端和服務之間的訊息安全，對保護資料而言是最基本的要務。 [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] 會根據現有安全性基礎結構和認可的 SOAP 訊息安全性標準，提供交換安全訊息的多用途和互通平台。  
@@ -98,7 +98,7 @@ ms.lasthandoff: 04/28/2018
   
 -   *訊息安全性模式*，而在另一方面，使用 WEB 服務安全性 （和其他規格） 來實作傳輸安全性。 因為訊息安全性是直接套用至 SOAP 訊息，並且會與應用程式資料包含在 SOAP 封套中，所以它的優點是與傳輸通訊協定無關、更具擴充性和確保端對端安全性 (相對於點對點)。因為必須處理 SOAP 訊息的 XML 特性，它的缺點是比傳輸安全性慢上好幾倍。  
   
- [!INCLUDE[crabout](../../../../includes/crabout-md.md)] 這些差異，請參閱[保護服務和用戶端](../../../../docs/framework/wcf/feature-details/securing-services-and-clients.md)。  
+ 如需有關這些差異的詳細資訊，請參閱[保護服務和用戶端](../../../../docs/framework/wcf/feature-details/securing-services-and-clients.md)。  
   
  第三個安全性模式同時使用前兩個模式，且結合兩者的優點。 這個模式稱為 `TransportWithMessageCredential`。 在這個模式中，訊息安全性會用來驗證用戶端，而傳輸安全性則會用來驗證伺服器及提供訊息機密性和完整性。 `TransportWithMessageCredential` 安全性模式因此受惠，幾乎與傳輸安全性模式一樣快速，並且以訊息安全性的相同方式提供用戶端驗證擴充性。 不過，不像訊息安全性模式，它不會提供完整的端對端安全性。  
   

@@ -1,28 +1,29 @@
 ---
 title: Expressions2
-ms.custom: 
+ms.custom: ''
 ms.date: 03/30/2017
 ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.tgt_pltfrm: 
+ms.reviewer: ''
+ms.suite: ''
+ms.tgt_pltfrm: ''
 ms.topic: article
 ms.assetid: 43a85905-77b5-4893-bb38-1cb9b293d69d
-caps.latest.revision: "14"
+caps.latest.revision: 14
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.workload: dotnet
-ms.openlocfilehash: a22cf5ae3434e0f79a4cba1b772b02316ccdb007
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.workload:
+- dotnet
+ms.openlocfilehash: c8470a3bb93385724f50e18d25c148ee609c3a77
+ms.sourcegitcommit: 94d33cadc5ff81d2ac389bf5f26422c227832052
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 04/30/2018
 ---
 # <a name="expressions"></a>運算式
 這個範例示範如何在工作流程中使用基本運算式。 其中包含的工作流程會計算某虛構公司兩個員工的基本薪資統計資料。 兩個類別 `Employee` 和 `SalaryStats` 定義於 Employee.cs 和 SalaryStats.cs。 工作流程中使用這些類別，示範如何對複雜類型的變數屬性執行簡單算術和字串運算。  
   
- 薪資計算工作流程同時以 XAML 和 C# 定義，示範兩種撰寫樣式。 XAML 版本是包含於 SalaryCalculation.xaml，可在工作流程設計工具中檢視和編輯。 C# 版本是位於 Program.cs。 XAML 中使用的運算式符合 Visual Basic 語法，會使用 <xref:Microsoft.VisualBasic.Activities.VisualBasicValue%601> 和 <xref:Microsoft.VisualBasic.Activities.VisualBasicReference%601> 運算式活動來執行。 [!INCLUDE[crabout](../../../../includes/crabout-md.md)]請參閱 < Visual Basic 運算式， [Visual Basic 運算式](http://go.microsoft.com/fwlink/?LinkId=165912)。 另一方面，C# 運算式是撰寫為 Lambda 運算式，會使用 <xref:System.Activities.Expressions.LambdaValue%601> 和 <xref:System.Activities.Expressions.LambdaReference%601> 運算式活動。 將運算式撰寫為 Lambda 運算式允許 C# 編譯器提供語法反白顯示和靜態驗證。 [!INCLUDE[crabout](../../../../includes/crabout-md.md)]lambda 運算式，在 C# 中，請參閱[Lambda 運算式 （C# 程式設計手冊）](http://go.microsoft.com/fwlink/?LinkId=182082)。 如果在程式碼中使用 Visual Basic 來撰寫工作流程，則會使用 Visual Basic Lambda 運算式。 [!INCLUDE[crabout](../../../../includes/crabout-md.md)]lambda 運算式，在 Visual Basic，請參閱[Lambda 運算式 (Visual Basic)](http://go.microsoft.com/fwlink/?LinkId=152437)。 [!INCLUDE[crabout](../../../../includes/crabout-md.md)]關於編寫工作流程使用程式碼，請參閱[撰寫工作流程、 活動和運算式使用命令式程式碼](../../../../docs/framework/windows-workflow-foundation/authoring-workflows-activities-and-expressions-using-imperative-code.md)。  
+ 薪資計算工作流程同時以 XAML 和 C# 定義，示範兩種撰寫樣式。 XAML 版本是包含於 SalaryCalculation.xaml，可在工作流程設計工具中檢視和編輯。 C# 版本是位於 Program.cs。 XAML 中使用的運算式符合 Visual Basic 語法，會使用 <xref:Microsoft.VisualBasic.Activities.VisualBasicValue%601> 和 <xref:Microsoft.VisualBasic.Activities.VisualBasicReference%601> 運算式活動來執行。 如需 Visual Basic 運算式，請參閱 < [Visual Basic 運算式](http://go.microsoft.com/fwlink/?LinkId=165912)。 另一方面，C# 運算式是撰寫為 Lambda 運算式，會使用 <xref:System.Activities.Expressions.LambdaValue%601> 和 <xref:System.Activities.Expressions.LambdaReference%601> 運算式活動。 將運算式撰寫為 Lambda 運算式允許 C# 編譯器提供語法反白顯示和靜態驗證。 如需 C# 中 lambda 運算式的詳細資訊，請參閱[Lambda 運算式 （C# 程式設計手冊）](http://go.microsoft.com/fwlink/?LinkId=182082)。 如果在程式碼中使用 Visual Basic 來撰寫工作流程，則會使用 Visual Basic Lambda 運算式。 如需在 Visual Basic 中的 lambda 運算式的詳細資訊，請參閱[Lambda 運算式 (Visual Basic)](http://go.microsoft.com/fwlink/?LinkId=152437)。 如需有關編寫工作流程使用程式碼，請參閱[撰寫工作流程、 活動和運算式使用命令式程式碼](../../../../docs/framework/windows-workflow-foundation/authoring-workflows-activities-and-expressions-using-imperative-code.md)。  
   
 #### <a name="to-run-the-sample"></a>若要執行範例  
   
