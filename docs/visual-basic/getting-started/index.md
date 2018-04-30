@@ -12,11 +12,11 @@ ms.assetid: 6685467b-28fa-4cde-9516-f0e00ad08911
 caps.latest.revision: 36
 author: dotnet-bot
 ms.author: dotnetcontent
-ms.openlocfilehash: 58e63d95c2f10329f85d6150b58f196294de38d1
-ms.sourcegitcommit: 86adcc06e35390f13c1e372c36d2e044f1fc31ef
+ms.openlocfilehash: ebaa934ffaed985439ed65b9f5308404171a91bd
+ms.sourcegitcommit: 2042de78fcdceebb6b8ac4b7a292b93e8782cbf5
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/26/2018
+ms.lasthandoff: 04/27/2018
 ---
 # <a name="get-started-with-visual-basic"></a>開始使用 Visual Basic
 本文的這一節可協助您開始進行 Visual Basic 應用程式開發。  
@@ -64,7 +64,7 @@ ms.lasthandoff: 04/26/2018
  說明如何接受支援和提供意見。  
   
  [Visual Studio](/visualstudio/)  
- 提供 [!INCLUDE[vsprvs](~/includes/vsprvs-md.md)] 文件的連結。  
+ 提供 Visual Studio 文件的連結。  
   
  [C#](../../csharp/index.md) 提供利用 Visual Basic 進行應用程式開發的相關文件連結。  
   
@@ -72,4 +72,4 @@ ms.lasthandoff: 04/26/2018
  提供 Visual C++ 文件的連結。  
   
  [Office 和 SharePoint 開發](https://msdn.microsoft.com/library/d2tx7z6d)  
- 提供有關使用 Microsoft Office 和 [!INCLUDE[vsprvs](~/includes/vsprvs-md.md)] 做為您商務應用程式的資訊。
+ 提供有關使用 Microsoft Office 和 Visual Studio 作為您商務應用程式的資訊。
