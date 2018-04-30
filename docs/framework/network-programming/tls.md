@@ -19,11 +19,11 @@ ms.author: dotnetcontent
 manager: wpickett
 ms.workload:
 - dotnet
-ms.openlocfilehash: 64829eee5b21a44acb18cbec9b901d77d49cab90
-ms.sourcegitcommit: 32172ca05d5dcce7ef3d327b9c8639c736e0fe2b
+ms.openlocfilehash: 7298c87c3e61103577d4262ab2dc2645d7e6265a
+ms.sourcegitcommit: b750a8e3979749b214e7e10c82efb0a0524dfcb1
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 03/20/2018
+ms.lasthandoff: 04/09/2018
 ---
 # <a name="transport-layer-security-tls-best-practices-with-the-net-framework"></a>.NET Framework 的傳輸層安全性 (TLS) 最佳做法
 
@@ -78,7 +78,7 @@ ms.lasthandoff: 03/20/2018
 
 ### <a name="for-tcp-sockets-networking"></a>針對 TCP 通訊端網路功能
 
-<xref:System.Net.Security.SslStream>，在使用 .NET Framework 4.7 及更新版本的情況下，預設會讓 OS 選擇最佳的安全性通訊協定和版本。 若要在可能的情況下取得最佳的預設 OS 選擇，請不要使用會採用明確 <xref:System.Security.Authentication.SslProtocols> 參數之 <xref:System.Net.Security.SslStream> 的方法多載。 否則，請傳遞 <xref:System.Security.Authentication.SslProtocols.None?displayProperty=nameWithType>。 我們建議您不要使用 <xref:System.Security.Authentication.SslProtocols.Default>；設定 `SslProtocols.Default` 會強制使用 SSL 3.0 /TLS 1.0 並防止 TLS 1.2。
+<xref:System.Net.Security.SslStream>，在使用 .NET Framework 4.7 及更新版本的情況下，預設會讓 OS 選擇最佳的安全性通訊協定和版本。 若要在可能的情況下取得最佳的預設 OS 選擇，請不要使用會採用明確 <xref:System.Security.Authentication.SslProtocols> 參數之 <xref:System.Net.Security.SslStream> 的方法多載。 否則，請傳遞 <xref:System.Security.Authentication.SslProtocols.None?displayProperty=nameWithType>。 建議您不要使用 <xref:System.Security.Authentication.SslProtocols.Default>；設定 `SslProtocols.Default` 會強制使用 SSL 3.0/TLS 1.0 並防止 TLS 1.2。
 
 不要為 <xref:System.Net.ServicePointManager.SecurityProtocol> 屬性 (針對 HTTP 網路功能) 設定值。
 
@@ -114,7 +114,7 @@ WCF 會使用和其他 .NET Framework 相同的網路堆疊。
 
 使用下列小節來對程式碼進行稽核，以確認您沒有使用特定的 TLS 或 SSL 版本：
 
-### <a name="for-net-framework-46---462-and-not-wfc"></a>針對 .NET Framework 4.6 至 4.6.2 且非 WCF
+### <a name="for-net-framework-46---462-and-not-wcf"></a>針對 .NET Framework 4.6 - 4.6.2 且非 WCF
 
 將 `DontEnableSystemDefaultTlsVersions` `AppContext` 參數設定為 `false`。 請參閱[透過 AppContext 參數設定安全性](#configuring-security-via-appcontext-switches)。
 

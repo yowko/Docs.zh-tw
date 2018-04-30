@@ -11,11 +11,11 @@ ms.topic: article
 ms.workload:
 - dotnet
 - dotnetcore
-ms.openlocfilehash: 7538c760d396349fe9b1e93a21839e3e59d7f046
-ms.sourcegitcommit: c883637b41ee028786edceece4fa872939d2e64c
-ms.translationtype: MT
+ms.openlocfilehash: 279dd4ea2ffb36e13a22f366ece145174918b759
+ms.sourcegitcommit: 2e8acae16ae802f2d6d04e3ce0a6dbf04e476513
+ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 03/26/2018
+ms.lasthandoff: 04/18/2018
 ---
 # <a name="subscribing-to-events"></a>訂閱事件
 
@@ -112,7 +112,7 @@ public async Task<IActionResult> UpdateProduct([FromBody]CatalogItem product)
 
 -   使用完整的[事件溯源模式](https://msdn.microsoft.com/library/dn589792.aspx)。
 
--   使用[交易記錄採礦](http://www.scoop.it/t/sql-server-transaction-log-mining)。
+-   使用[交易記錄採礦](https://www.scoop.it/t/sql-server-transaction-log-mining)。
 
 -   使用[寄件匣模式](http://gistlabs.com/2014/05/the-outbox/)。 這是交易式資料表，可儲存整合事件 (以延伸本機交易)。
 
@@ -302,7 +302,7 @@ namespace Microsoft.eShopOnContainers.Services.Basket.API.IntegrationEvents.Even
 
 ### <a name="additional-resources"></a>其他資源
 
--   **接受訊息等冪**（在此頁面上的子標題） [*https://msdn.microsoft.com/library/jj591565.aspx*](https://msdn.microsoft.com/library/jj591565.aspx)
+-   **接受訊息等冪** (本頁的子標題) [*https://msdn.microsoft.com/library/jj591565.aspx*](https://msdn.microsoft.com/library/jj591565.aspx)
 
 ## <a name="deduplicating-integration-event-messages"></a>刪除重複的整合事件訊息
 
@@ -322,63 +322,63 @@ namespace Microsoft.eShopOnContainers.Services.Basket.API.IntegrationEvents.Even
 
 ### <a name="additional-resources"></a>其他資源
 
--   **分岔的 eShopOnContainers 使用 NServiceBus （特定軟體）**
+-   **使用 NServiceBus 的分支 eShopOnContainers (特定軟體)**
     [*http://go.particular.net/eShopOnContainers*](http://go.particular.net/eShopOnContainers)
 
 -   **事件驅動訊息**
-    [*http://soapatterns.org/design\_模式/事件\_驅動\_傳訊*](http://soapatterns.org/design_patterns/event_driven_messaging)
+    [*http://soapatterns.org/design\_patterns/event\_driven\_messaging*](http://soapatterns.org/design_patterns/event_driven_messaging)
 
--   **Jimmy Bogard：重構朝向彈性： 評估結合**
+-   **Jimmy Bogard：重構朝向彈性：評估結合程度**
     [*https://jimmybogard.com/refactoring-towards-resilience-evaluating-coupling/*](https://jimmybogard.com/refactoring-towards-resilience-evaluating-coupling/)
 
--   **發行-訂閱通道**
+-   **發佈訂閱頻道**
     [*http://www.enterpriseintegrationpatterns.com/patterns/messaging/PublishSubscribeChannel.html*](http://www.enterpriseintegrationpatterns.com/patterns/messaging/PublishSubscribeChannel.html)
 
--   **已繫結的內容之間的通訊**
+-   **已繫結內容之間的通訊**
     [*https://msdn.microsoft.com/library/jj591572.aspx*](https://msdn.microsoft.com/library/jj591572.aspx)
 
 -   **最終一致性**
-    [*https://en.wikipedia.org/wiki/Eventual\_一致性*](https://en.wikipedia.org/wiki/Eventual_consistency)
+    [*https://en.wikipedia.org/wiki/Eventual\_consistency*](https://en.wikipedia.org/wiki/Eventual_consistency)
 
--   **Philip Brown：整合策略繫結的內容**
+-   **Philip Brown：整合已繫結內容的策略**
     [*http://culttt.com/2014/11/26/strategies-integrating-bounded-contexts/*](http://culttt.com/2014/11/26/strategies-integrating-bounded-contexts/)
 
--   **Chris Richardson：開發使用彙總 」、 「 事件來源和 「 CQRS-第 2 部分的交易式 Microservices**
+-   **Chris Richardson：使用彙總、事件溯源和 CQRS 開發交易微服務 - 第 2 部分**
     [*https://www.infoq.com/articles/microservices-aggregates-events-cqrs-part-2-richardson*](https://www.infoq.com/articles/microservices-aggregates-events-cqrs-part-2-richardson)
 
--   **Chris Richardson：事件 Sourcing 模式**
-    [*http://microservices.io/patterns/data/event-sourcing.html*](http://microservices.io/patterns/data/event-sourcing.html)
+-   **Chris Richardson：事件溯源模式**
+    [*https://microservices.io/patterns/data/event-sourcing.html*](https://microservices.io/patterns/data/event-sourcing.html)
 
--   **簡介 事件來源**
+-   **事件溯源簡介**
     [*https://msdn.microsoft.com/library/jj591559.aspx*](https://msdn.microsoft.com/library/jj591559.aspx)
 
 -   **Event Store 資料庫**. 官方網站。
     [*https://geteventstore.com/*](https://geteventstore.com/)
 
--   **Patrick Nommensen：Microservices 的事件驅動的資料管理**
+-   **Patrick Nommensen：微服務的事件驅動資料管理**
     *<https://dzone.com/articles/event-driven-data-management-for-microservices-1> *
 
--   **CAP 理論**
-    [*https://en.wikipedia.org/wiki/CAP\_理論*](https://en.wikipedia.org/wiki/CAP_theorem)
+-   **CAP 定理**
+    [*https://en.wikipedia.org/wiki/CAP\_theorem*](https://en.wikipedia.org/wiki/CAP_theorem)
 
--   **什麼是 CAP 理論？**
+-   **什麼是 CAP 定理？**
     [*https://www.quora.com/What-Is-CAP-Theorem-1*](https://www.quora.com/What-Is-CAP-Theorem-1)
 
 -   **資料一致性入門**
     [*https://msdn.microsoft.com/library/dn589800.aspx*](https://msdn.microsoft.com/library/dn589800.aspx)
 
--   **Rick Saling：CAP 理論： 原因 」 的所有項目不同"與雲端和網際網路**
+-   **Rick Saling：CAP 定理：為何「所有一切」都和雲端及網際網路不同**
     [*https://blogs.msdn.microsoft.com/rickatmicrosoft/2013/01/03/the-cap-theorem-why-everything-is-different-with-the-cloud-and-internet/*](https://blogs.msdn.microsoft.com/rickatmicrosoft/2013/01/03/the-cap-theorem-why-everything-is-different-with-the-cloud-and-internet/)
 
--   **Eric Brewer：CAP 十二年稍後： 如何變更 「 規則 」**
+-   **Eric Brewer：CAP 十二年後：「規則」變更的方式**
     [*https://www.infoq.com/articles/cap-twelve-years-later-how-the-rules-have-changed*](https://www.infoq.com/articles/cap-twelve-years-later-how-the-rules-have-changed)
 
--   **參與外部 (DTC) 交易**(MSMQ) [  *https://msdn.microsoft.com/library/ms978430.aspx \#bdadotnetasync2\_topic3c*](https://msdn.microsoft.com/library/ms978430.aspx%23bdadotnetasync2_topic3c)
+-   **參與外部 (DTC) 交易** (MSMQ) [*https://msdn.microsoft.com/library/ms978430.aspx\#bdadotnetasync2\_topic3c*](https://msdn.microsoft.com/library/ms978430.aspx%23bdadotnetasync2_topic3c)
 
--   **Azure 服務匯流排：代理訊息： 重複的偵測**
+-   **Azure 服務匯流排：代理傳訊：重複偵測**
     [*https://code.msdn.microsoft.com/Brokered-Messaging-c0acea25*](https://code.msdn.microsoft.com/Brokered-Messaging-c0acea25)
 
--   **可靠性指南**（RabbitMQ 文件） [  *https://www.rabbitmq.com/reliability.html\#取用者*](https://www.rabbitmq.com/reliability.html%23consumer)
+-   **可靠性指南** (RabbitMQ 文件)[*https://www.rabbitmq.com/reliability.html\#取用者*](https://www.rabbitmq.com/reliability.html%23consumer)
 
 
 

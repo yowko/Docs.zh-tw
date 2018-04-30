@@ -1,7 +1,7 @@
 ---
-title: "建立、發展以及版本控制微服務 API 與協定"
-description: "適用於容器化 .NET 應用程式的.NET 微服務架構 | 建立、發展以及版本控制微服務 API 與協定"
-keywords: "Docker, 微服務, ASP.NET, 容器"
+title: 建立、發展以及版本控制微服務 API 與協定
+description: 適用於容器化 .NET 應用程式的.NET 微服務架構 | 建立、發展以及版本控制微服務 API 與協定
+keywords: Docker, 微服務, ASP.NET, 容器
 author: CESARDELATORRE
 ms.author: wiwagn
 ms.date: 05/26/2017
@@ -11,11 +11,11 @@ ms.topic: article
 ms.workload:
 - dotnet
 - dotnetcore
-ms.openlocfilehash: 3aaa7eaa8bc535874369cf08414f2211cae1bed9
-ms.sourcegitcommit: e7f04439d78909229506b56935a1105a4149ff3d
+ms.openlocfilehash: 7a80405f0a206cfaa0462392eddfc95878353cd7
+ms.sourcegitcommit: 2e8acae16ae802f2d6d04e3ce0a6dbf04e476513
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 12/23/2017
+ms.lasthandoff: 04/18/2018
 ---
 # <a name="creating-evolving-and-versioning-microservice-apis-and-contracts"></a>建立、發展以及版本控制微服務 API 與協定
 
@@ -33,13 +33,13 @@ API 定義的性質取決於您所用的通訊協定。 比方說，如果您使
 
 ## <a name="additional-resources"></a>其他資源
 
--   **Scott Hanselman。ASP.NET Core RESTful Web API versioning made easy (ASP.NET Core RESTful Web API 版本設定變得更輕鬆)**
-    <http://www.hanselman.com/blog/ASPNETCoreRESTfulWebAPIVersioningMadeEasy.aspx>
+-   **Scott Hanselman。ASP.NET Core RESTful Web API 版本控制更為簡單**
+    <https://www.hanselman.com/blog/ASPNETCoreRESTfulWebAPIVersioningMadeEasy.aspx>
 
--   **符合 REST 限制的 Web API 版本控制**
+-   **進行 RESTful Web API 的版本控制**
     [*https://docs.microsoft.com/azure/architecture/best-practices/api-design#versioning-a-restful-web-api*](https://docs.microsoft.com/azure/architecture/best-practices/api-design#versioning-a-restful-web-api)
 
--   **Roy Fielding。Versioning, Hypermedia, and REST (版本控制、超媒體及 REST)**
+-   **Roy Fielding。版本控制、超媒體和 REST**
     <https://www.infoq.com/articles/roy-fielding-on-versioning>
 
 

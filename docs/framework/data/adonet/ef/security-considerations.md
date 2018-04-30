@@ -1,24 +1,26 @@
 ---
-title: "安全性考量 (Entity Framework)"
-ms.custom: 
+title: 安全性考量 (Entity Framework)
+ms.custom: ''
 ms.date: 03/30/2017
 ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.technology: dotnet-ado
-ms.tgt_pltfrm: 
+ms.reviewer: ''
+ms.suite: ''
+ms.technology:
+- dotnet-ado
+ms.tgt_pltfrm: ''
 ms.topic: article
 ms.assetid: 84758642-9b72-4447-86f9-f831fef46962
-caps.latest.revision: "4"
+caps.latest.revision: 4
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.workload: dotnet
-ms.openlocfilehash: 68b077ec6c7edd30882c9c84a10aa14060a589e8
-ms.sourcegitcommit: c0dd436f6f8f44dc80dc43b07f6841a00b74b23f
+ms.workload:
+- dotnet
+ms.openlocfilehash: d70b1a6aff3e93122b5d0fb21affdfcd13d817e6
+ms.sourcegitcommit: 86adcc06e35390f13c1e372c36d2e044f1fc31ef
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 01/19/2018
+ms.lasthandoff: 04/26/2018
 ---
 # <a name="security-considerations-entity-framework"></a>安全性考量 (Entity Framework)
 本主題將描述與開發、部署和執行 [!INCLUDE[adonet_ef](../../../../../includes/adonet-ef-md.md)] 應用程式有關的安全性考量。 您也應該遵循建立安全 [!INCLUDE[dnprdnshort](../../../../../includes/dnprdnshort-md.md)] 應用程式的建議事項。 如需詳細資訊，請參閱[安全性概觀](../../../../../docs/framework/data/adonet/security-overview.md)。  
@@ -84,7 +86,7 @@ ms.lasthandoff: 01/19/2018
   
 -   <xref:System.Security.Permissions.SecurityPermission>：<xref:System.Security.Permissions.SecurityPermissionFlag.SerializationFormatter> (用以使用 <xref:System.Runtime.Serialization.ISerializable> 介面來序列化例外狀況 (Exception))。  
   
--   開啟資料庫連接及執行命令，針對資料庫中，例如權限<xref:System.Data.SqlClient.SqlClientPermission>如[!INCLUDE[ssNoVersion](../../../../../includes/ssnoversion-md.md)]資料庫。  
+-   開啟資料庫連接及執行命令，針對資料庫中，例如權限<xref:System.Data.SqlClient.SqlClientPermission>為 SQL Server 資料庫。  
   
  如需詳細資訊，請參閱 [Code Access Security and ADO.NET](../../../../../docs/framework/data/adonet/code-access-security.md)。  
   
@@ -172,7 +174,7 @@ ms.lasthandoff: 01/19/2018
 #### <a name="do-not-accept-metadataworkspace-objects-from-untrusted-sources"></a>請勿接受來自未受信任來源的 MetadataWorkspace 物件。  
  應用程式不應該接受來自未受信任來源之 <xref:System.Data.Metadata.Edm.MetadataWorkspace> 類別的執行個體 (Instance)。 您應該改為根據這類來源明確建構並填入工作區 (Workspace)。  
   
-## <a name="see-also"></a>請參閱  
+## <a name="see-also"></a>另請參閱  
  [設定 ADO.NET 應用程式的安全性](../../../../../docs/framework/data/adonet/securing-ado-net-applications.md)  
  [部署考量](../../../../../docs/framework/data/adonet/ef/deployment-considerations.md)  
  [移轉考量](../../../../../docs/framework/data/adonet/ef/migration-considerations.md)

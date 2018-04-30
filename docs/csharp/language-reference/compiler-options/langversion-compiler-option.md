@@ -1,5 +1,5 @@
 ---
-title: "-langversion (C# 編譯器選項)"
+title: -langversion (C# 編譯器選項)
 ms.date: 07/20/2015
 ms.prod: .net
 ms.technology:
@@ -12,14 +12,14 @@ helpviewer_keywords:
 - -langversion compiler option [C#]
 - langversion compiler option [C#]
 ms.assetid: 3fb00b05-a0ff-4782-b313-13a4c0f62d94
-caps.latest.revision: 
+caps.latest.revision: 33
 author: BillWagner
 ms.author: wiwagn
-ms.openlocfilehash: 11aab223ee70ff69d8c3470e747738bfe44540ea
-ms.sourcegitcommit: c0dd436f6f8f44dc80dc43b07f6841a00b74b23f
+ms.openlocfilehash: f1088221a96d0176f08b4c01044e20ab6238fc13
+ms.sourcegitcommit: b750a8e3979749b214e7e10c82efb0a0524dfcb1
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 01/19/2018
+ms.lasthandoff: 04/09/2018
 ---
 # <a name="-langversion-c-compiler-options"></a>-langversion (C# 編譯器選項)
 讓編譯器只接受所選擇 C# 語言規格中所含的語法。  
@@ -36,7 +36,7 @@ ms.lasthandoff: 01/19/2018
   
 |選項|意義|  
 |------------|-------------|  
-|default|編譯器會接受它可支援的所有有效語言語法。 <sup id="TDefault">[Default](#FDefault)</sup>| 
+|default|編譯器會接受它可支援之最新主要版本的所有有效語言語法。 <sup id="TDefault">[Default](#FDefault)</sup>| 
 |ISO-1|編譯器只會接受 ISO/IEC 23270:2003 C# (1.0/1.1) <sup id="TISO1">[ISO1](#FISO1)</sup> 中所含的語法。|  
 |ISO-2|編譯器只會接受 ISO/IEC 23270:2006 C# (2.0) <sup id="TISO2">[ISO2](#FISO2)</sup> 中所含的語法。|
 |3|編譯器只會接受 C# 3.0 或較低 <sup id="TCS3">[CS3](#FCS3)</sup> 中所含的語法。|

@@ -1,7 +1,7 @@
 ---
-title: "設計 DDD 導向微服務"
-description: "容器化 .NET 應用程式的 .NET 微服務架構 | 設計 DDD 導向微服務"
-keywords: "Docker, 微服務, ASP.NET, 容器"
+title: 設計 DDD 導向微服務
+description: 容器化 .NET 應用程式的 .NET 微服務架構 | 設計 DDD 導向微服務
+keywords: Docker, 微服務, ASP.NET, 容器
 author: CESARDELATORRE
 ms.author: wiwagn
 ms.date: 11/06/2017
@@ -11,11 +11,11 @@ ms.topic: article
 ms.workload:
 - dotnet
 - dotnetcore
-ms.openlocfilehash: 38b65bc6752dd8b6ed4083c0bc5a5eccabcffbcc
-ms.sourcegitcommit: e7f04439d78909229506b56935a1105a4149ff3d
+ms.openlocfilehash: d2d07abe55f30e0b12a7f0cba937abd1b7e32629
+ms.sourcegitcommit: 2e8acae16ae802f2d6d04e3ce0a6dbf04e476513
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 12/23/2017
+ms.lasthandoff: 04/18/2018
 ---
 # <a name="designing-a-ddd-oriented-microservice"></a>設計 DDD 導向微服務
 
@@ -49,7 +49,7 @@ ms.lasthandoff: 12/23/2017
 
 **圖 9-5**。 eShopOnContainers 訂購微服務中的 DDD 層
 
-您會希望將系統設計成每一個層都只會跟特定的其他層通訊。 若層是作為不同的類別程式庫實作的，這會比較容易強制執行，因為您可以清楚的識別程式庫之間設定了哪些相依性。 例如，領域模型層不應該相依於任何其他的層 (領域模型類別應為純舊 CLR 物件 ([POCO](https://en.wikipedia.org/wiki/Plain_Old_CLR_Object)) 類別)。 如圖 9-6 中所示，**Ordering.Domain** 層程式庫只在 .NET Core 程式庫或 NuGet 套件上具有相依性，在任何其他自訂程式庫 (例如資料程式庫或永續性程式庫) 上則不具有相依性。
+您會希望將系統設計成每一個層都只會跟特定的其他層通訊。 若層是作為不同的類別程式庫實作的，這會比較容易強制執行，因為您可以清楚的識別程式庫之間設定了哪些相依性。 例如，領域模型層不應該相依於任何其他的層 (領域模型類別應為簡單的 CLR 物件 ([POCO](https://en.wikipedia.org/wiki/Plain_Old_CLR_Object)) 類別)。 如圖 9-6 中所示，**Ordering.Domain** 層程式庫只在 .NET Core 程式庫或 NuGet 套件上具有相依性，在任何其他自訂程式庫 (例如資料程式庫或永續性程式庫) 上則不具有相依性。
 
 ![](./media/image7.PNG)
 
@@ -57,7 +57,7 @@ ms.lasthandoff: 12/23/2017
 
 ### <a name="the-domain-model-layer"></a>領域模型層
 
-Eric Evans 的優良書籍 [Domain Driven Design (領域驅動設計)](http://domainlanguage.com/ddd/) 提到了下列關於領域模型層及應用程式層的內容。
+Eric Evans 的優良書籍 [Domain Driven Design (領域驅動設計)](https://domainlanguage.com/ddd/) 提到了下列關於領域模型層及應用程式層的內容。
 
 **領域模型層**負責呈現商務概念、商務情況的資訊，以及商務規則。 反映商務情況的狀態會受控並用於此處，即使儲存它的技術細節已委派給基礎結構。 此層是商務軟體的核心。
 
@@ -75,7 +75,7 @@ Eric Evans 的優良書籍 [Domain Driven Design (領域驅動設計)](http://do
 
 ### <a name="the-application-layer"></a>應用程式層
 
-接下來移動到應用程式層，我們可以再次引用 Eric Evan 的書籍 [Domain Driven Design (領域驅動設計)](http://domainlanguage.com/ddd/)：
+接下來移動到應用程式層，我們可以再次引用 Eric Evan 的書籍 [Domain Driven Design (領域驅動設計)](https://domainlanguage.com/ddd/)：
 
 **應用程式層：**定義軟體應執行的工作，並指示表達性領域物件解決問題。 此層負責的工作對於商務來說是有意義的，或是對與其他系統應用程式層進行的互動來說是必要的。 此圖層會保持精簡。 它並不會包含商務規則或知識，而只負責協調工作並將工作委派給下一層領域物件的共同作業。 它不具有反映商務情況的狀態，但可以擁有反映使用者或程式工作進度的狀態。
 
@@ -101,13 +101,13 @@ Eric Evans 的優良書籍 [Domain Driven Design (領域驅動設計)](http://do
 
 #### <a name="additional-resources"></a>其他資源
 
--   **DevIQ。Persistence Ignorance (永續性無知) 準則**
+-   **DevIQ。持續性無知準則**
     [*http://deviq.com/persistence-ignorance/*](http://deviq.com/persistence-ignorance/)
 
--   **Oren Eini。Infrastructure Ignorance (基礎結構無知)**
+-   **Oren Eini。基礎結構無知**
     [*https://ayende.com/blog/3137/infrastructure-ignorance*](https://ayende.com/blog/3137/infrastructure-ignorance)
 
--   **Angel Lopez。Layered Architecture In Domain-Driven Design (領域驅動設計中的分層結構)**
+-   **Angel Lopez。網域導向設計中的分層架構**
     [*https://ajlopez.wordpress.com/2008/09/12/layered-architecture-in-domain-driven-design/*](https://ajlopez.wordpress.com/2008/09/12/layered-architecture-in-domain-driven-design/)
 
 

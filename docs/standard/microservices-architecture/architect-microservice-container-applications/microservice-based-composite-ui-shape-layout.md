@@ -1,7 +1,7 @@
 ---
-title: "根據微服務建立複合 UI，包括多個微服務所產生的視覺 UI 形狀和配置"
-description: "容器化 .NET 應用程式的 .NET 微服務架構 | 根據微服務建立複合 UI，包括多個微服務所產生的視覺 UI 形狀和配置"
-keywords: "Docker, 微服務, ASP.NET, 容器"
+title: 根據微服務建立複合 UI，包括多個微服務所產生的視覺 UI 形狀和配置
+description: 容器化 .NET 應用程式的 .NET 微服務架構 | 根據微服務建立複合 UI，包括多個微服務所產生的視覺 UI 形狀和配置
+keywords: Docker, 微服務, ASP.NET, 容器
 author: CESARDELATORRE
 ms.author: wiwagn
 ms.date: 05/26/2017
@@ -11,11 +11,11 @@ ms.topic: article
 ms.workload:
 - dotnet
 - dotnetcore
-ms.openlocfilehash: 12b170e9d4c46fbb697f988596af6566d33099a4
-ms.sourcegitcommit: e7f04439d78909229506b56935a1105a4149ff3d
+ms.openlocfilehash: 55b643fa6f87e5e2b1f49ba201032df655195b46
+ms.sourcegitcommit: 2e8acae16ae802f2d6d04e3ce0a6dbf04e476513
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 12/23/2017
+ms.lasthandoff: 04/18/2018
 ---
 # <a name="creating-composite-ui-based-on-microservices-including-visual-ui-shape-and-layout-generated-by-multiple-microservices"></a>根據微服務建立複合 UI，包括多個微服務所產生的視覺 UI 形狀和配置
 
@@ -47,20 +47,20 @@ ms.lasthandoff: 12/23/2017
 
 ## <a name="additional-resources"></a>其他資源
 
--   **使用 ASP.NET 的複合 UI (Particular 的 Workshop)**
+-   **使用 ASP.NET 的複合 UI (特定研討)**
     [*http://go.particular.net/workshop-composite-ui-demo*](http://go.particular.net/workshop-composite-ui-demo)
 
--   **Ruben Oostinga：The Monolithic Frontend in the Microservices Architecture (微服務架構中的整合型前端)**
+-   **Ruben Oostinga：微服務架構中的整合前端**
     [*http://blog.xebia.com/the-monolithic-frontend-in-the-microservices-architecture/*](http://blog.xebia.com/the-monolithic-frontend-in-the-microservices-architecture/)
 
--   **Mauro Servienti：The secret of better UI composition (改進 UI 組合的秘訣)**
+-   **Mauro Servienti：更佳 UI 組合的祕密**
     [*https://particular.net/blog/secret-of-better-ui-composition*](https://particular.net/blog/secret-of-better-ui-composition)
 
--   **Viktor Farcic：Including Front-End Web Components Into Microservices (將前端 Web 元件加入微服務)**
+-   **Viktor Farcic：將前端 Web 元件併入微服務**
     [*https://technologyconversations.com/2015/08/09/including-front-end-web-components-into-microservices/*](https://technologyconversations.com/2015/08/09/including-front-end-web-components-into-microservices/)
 
 -   **Managing Frontend in the Microservices Architecture (管理微服務架構中的前端)**\
-    [*http://allegro.tech/2016/03/Managing-Frontend-in-the-microservices-architecture.html*](http://allegro.tech/2016/03/Managing-Frontend-in-the-microservices-architecture.html)
+    [*https://allegro.tech/2016/03/Managing-Frontend-in-the-microservices-architecture.html*](https://allegro.tech/2016/03/Managing-Frontend-in-the-microservices-architecture.html)
 
 
 >[!div class="step-by-step"]

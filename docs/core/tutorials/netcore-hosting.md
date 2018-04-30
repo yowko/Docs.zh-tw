@@ -1,21 +1,19 @@
 ---
-title: "裝載 .NET Core"
-description: "從機器碼裝載 .NET Core 執行階段"
-keywords: ".NET, .NET Core, 裝載, 裝載 .NET Core"
+title: 裝載 .NET Core
+description: 從機器碼裝載 .NET Core 執行階段
 author: mjrousos
-ms.author: mikerou
+ms.author: mairaw
 ms.date: 2/3/2017
-ms.topic: article
-ms.prod: .net-core
+ms.topic: conceptual
+ms.prod: dotnet-core
 ms.devlang: dotnet
-ms.assetid: 13edec8b-614d-47ed-9e95-ed6d3b94ec0c
 ms.workload:
 - dotnetcore
-ms.openlocfilehash: 3c358ab9173032b1f76d30b756ee6290233b2702
-ms.sourcegitcommit: 655fd4f78741967f80c409cef98347fdcf77857d
+ms.openlocfilehash: e09c849699bed63f0a271dfeede1e9e4b66e716f
+ms.sourcegitcommit: 03ee570f6f528a7d23a4221dcb26a9498edbdf8c
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 02/28/2018
+ms.lasthandoff: 04/28/2018
 ---
 # <a name="hosting-net-core"></a>裝載 .NET Core
 
@@ -35,7 +33,7 @@ ms.lasthandoff: 02/28/2018
 
 ## <a name="creating-the-host"></a>建立主機
 
-dotnet/docs GitHub 存放庫中提供示範本文所述步驟的[範例主機](https://github.com/dotnet/docs/tree/master/samples/core/hosting)。 範例 *host.cpp* 檔案中的註解清楚地將本教學課程中的編號步驟關聯到範例中的執行位置。 如需下載指示，請參閱[範例和教學課程](../../samples-and-tutorials/index.md#viewing-and-downloading-samples)。
+dotnet/samples GitHub 存放庫中提供示範本文所述步驟的[範例主機](https://github.com/dotnet/samples/tree/master/core/hosting)。 範例 *host.cpp* 檔案中的註解清楚地將本教學課程中的編號步驟關聯到範例中的執行位置。 如需下載指示，請參閱[範例和教學課程](../../samples-and-tutorials/index.md#viewing-and-downloading-samples)。
 
 請記住，範例主機是為了用於學習，因此錯誤檢查較不嚴謹，並設計成可讀性比效率更重要。 如需更多真實世界主機範例，請參閱 [dotnet/coreclr](https://github.com/dotnet/coreclr/tree/master/src/coreclr/hosts) 存放庫。 特別是 [CoreRun 主機](https://github.com/dotnet/coreclr/tree/master/src/coreclr/hosts/corerun)，這是適合在讀完較簡單範例之後進行研究的一般用途主機。
 
@@ -90,7 +88,7 @@ AppDomain 旗標會指定與安全性和 Interop 相關的 AppDomain 行為。 �
 *  `PLATFORM_RESOURCE_ROOTS`：此清單包含要在其中探查資源附屬組件的路徑 (位於文化特性專屬子目錄中)。
 *  `AppDomainCompatSwitch`：此字串指定針對沒有明確目標 Framework Moniker (指出組件要執行之架構的組件層級屬性) 的組件，所應使用的相容性 Quirks。 一般而言，這應該設定為 `"UseLatestBehaviorWhenTFMNotSpecified"`，但某些主機可能會想要改為取得舊版 Silverlight 或 Windows Phone 相容性 Quirks。
 
-在我們的[簡單範例主機](https://github.com/dotnet/docs/tree/master/samples/core/hosting)中，這些屬性會設定如下：
+在我們的[簡單範例主機](https://github.com/dotnet/samples/tree/master/core/hosting)中，這些屬性會設定如下：
 
 [!code-cpp[NetCoreHost#6](../../../samples/core/hosting/host.cpp#6)]
 

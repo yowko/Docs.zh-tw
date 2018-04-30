@@ -1,6 +1,6 @@
 ---
-title: "本機環境教學課程 - C# 本機快速入門"
-description: "本快速入門提供於本機執行快速入門的基本概念"
+title: 本機環境教學課程 - C# 本機快速入門
+description: 本快速入門提供於本機執行快速入門的基本概念
 author: billwagner
 ms.topic: article
 ms.date: 12/07/2017
@@ -8,11 +8,11 @@ ms.prod: .net
 ms.technology: devlang-csharp
 ms.devlang: csharp
 ms.custom: mvc
-ms.openlocfilehash: 9957f524e04f8ff64d4f640cf085b16cf9a2c0c6
-ms.sourcegitcommit: d2da0142247ef42a219a5d2907f153e62dc6ea0d
+ms.openlocfilehash: ec70b6bca55d370d90e912793cfec82a45141c51
+ms.sourcegitcommit: 2e8acae16ae802f2d6d04e3ce0a6dbf04e476513
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 02/01/2018
+ms.lasthandoff: 04/18/2018
 ---
 # <a name="local-environment"></a>本機環境
 
@@ -35,19 +35,25 @@ ms.lasthandoff: 02/01/2018
 
 在 [C# 中的數字](numbers-in-csharp-local.md)快速入門中，您將會學習電腦儲存數字的方式，以及如何使用不同的數值型別來執行計算。 您將會學習進位的基本概念，以及如何使用 C# 執行數學計算。 
 
-此快速入門假設您已完成 [Hello World](hello-world.yml) 教學課程。
+本快速入門假設您已完成 [Hello World](hello-world.yml) 課程。
 
 ## <a name="branches-and-loopsbranches-and-loops-localmd"></a>[分支和迴圈](branches-and-loops-local.md)
 
 [分支和迴圈](branches-and-loops-local.md)快速入門會指導您如何根據儲存在變數中的值，以選取不同程式碼執行路徑的基本概念。 您將會學習控制流程的基本概念，也就是程式做出決定並選擇不同動作的基礎機制。 
 
-此入門課程假設您已經完成 [Hello World](hello-world.yml) 和 [C# 中的數字](numbers-in-csharp-local.md)課程。
+本快速入門假設您已完成 [Hello World](hello-world.yml) 和 [C# 中的數字](numbers-in-csharp-local.md)課程。
+
+## <a name="string-interpolationinterpolated-strings-localmd"></a>[字串內插補點](interpolated-strings-local.md)
+
+[字串內插補點](interpolated-strings-local.md)快速入門示範如何在字串中插入值。 您會學到如何使用內嵌 C# 運算式建立插入字串，以及如何控制結果字串中運算式結果的文字外觀。
+
+本快速入門假設您已完成 [Hello World](hello-world.yml)、[C# 中的數字](numbers-in-csharp-local.md)和[分支和迴圈](branches-and-loops-local.md)課程。
 
 ## <a name="list-collectionarrays-and-collectionsmd"></a>[List 集合](arrays-and-collections.md)
 
 [List 集合](arrays-and-collections.md)課程會為您說明可儲存資料序列的「List 集合」類型。 您將會學習如何新增及移除項目、搜尋項目，以及對清單進行排序。 您會探索各種不同的清單。 
 
-此快速入門假設您已經完成上述快速入門。
+本快速入門假設您已完成上述的課程。
 
 ## <a name="introduction-to-classesintroduction-to-classesmd"></a>[類別簡介](introduction-to-classes.md)
 

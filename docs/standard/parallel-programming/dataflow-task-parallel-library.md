@@ -1,5 +1,5 @@
 ---
-title: "資料流程 (工作平行程式庫)"
+title: 資料流程 (工作平行程式庫)
 ms.date: 03/30/2017
 ms.prod: .net
 ms.technology: dotnet-standard
@@ -17,11 +17,11 @@ manager: wpickett
 ms.workload:
 - dotnet
 - dotnetcore
-ms.openlocfilehash: f91100303cb0970ed430eebe2a377a487017b47d
-ms.sourcegitcommit: c0dd436f6f8f44dc80dc43b07f6841a00b74b23f
+ms.openlocfilehash: 7671001fb63a5e09c5d7a3dc4b2414d41a790e16
+ms.sourcegitcommit: 2e8acae16ae802f2d6d04e3ce0a6dbf04e476513
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 01/19/2018
+ms.lasthandoff: 04/18/2018
 ---
 # <a name="dataflow-task-parallel-library"></a>資料流程 (工作平行程式庫)
 <a name="top"></a> 工作平行程式庫 (TPL) 提供資料流程元件，協助讓啟用並行的應用程式更強固。 這些資料流程元件合稱為「TPL 資料流程程式庫」。 此資料流程模型以提供針對廣泛資料流程以及管線工作的同處理序訊息傳遞，將以行動為基礎的程式撰寫升級。 資料流程元件會在 TPL 的類型與排程基礎結構上建置，並整合 C#、[!INCLUDE[vbprvb](../../../includes/vbprvb-md.md)] 以及 F# 語言對非同步程式設計的支援。 當您有多個必須非同步式互相溝通的作業時，或當您因為資料變為可用而要處理資料時，這些資料流程元件就會相當實用。 例如，請考慮一個應用程式，它會處理來自網路攝影機的影像資料。 使用資料流模型，應用程式就可以在影像畫面可用時處理它們。 例如，如果應用程式因執行光源修正或消除紅眼而增強影像畫面，則您可以建立資料流程元件的「管線」。 此管線的每個階段都可能使用更廣泛的平行處理原則功能 (例如 TPL 提供的功能) 來轉換該影像。  
@@ -84,7 +84,7 @@ ms.lasthandoff: 01/19/2018
  [!code-csharp[TPLDataflow_Overview#11](../../../samples/snippets/csharp/VS_Snippets_Misc/tpldataflow_overview/cs/program.cs#11)]
  [!code-vb[TPLDataflow_Overview#11](../../../samples/snippets/visualbasic/VS_Snippets_Misc/tpldataflow_overview/vb/program.vb#11)]  
   
- 您也可以使用在接續工作主體中的屬性 (例如 <xref:System.Threading.Tasks.Task.IsCanceled%2A>)，判斷資料流程區塊完成狀態中的其他資訊。 如需接續工作及其與取消跟錯誤處理之關聯的詳細資訊，請參閱[使用接續工作鏈結工作](../../../docs/standard/parallel-programming/chaining-tasks-by-using-continuation-tasks.md)、[工作取消](../../../docs/standard/parallel-programming/task-cancellation.md)、[例外狀況處理](../../../docs/standard/parallel-programming/exception-handling-task-parallel-library.md)，以及[NIB：如何：處理工作擲回的例外狀況](http://msdn.microsoft.com/library/d6c47ec8-9de9-4880-beb3-ff19ae51565d)。  
+ 您也可以使用在接續工作主體中的屬性 (例如 <xref:System.Threading.Tasks.Task.IsCanceled%2A>)，判斷資料流程區塊完成狀態中的其他資訊。 如需接續工作及其與取消跟錯誤處理之關聯的詳細資訊，請參閱[使用接續工作鏈結工作](../../../docs/standard/parallel-programming/chaining-tasks-by-using-continuation-tasks.md)、[工作取消](../../../docs/standard/parallel-programming/task-cancellation.md)、[例外狀況處理](../../../docs/standard/parallel-programming/exception-handling-task-parallel-library.md)，以及[NIB：如何：處理工作擲回的例外狀況](https://msdn.microsoft.com/library/d6c47ec8-9de9-4880-beb3-ff19ae51565d)。  
   
  [回到頁首](#top)  
   
@@ -166,8 +166,8 @@ ms.lasthandoff: 01/19/2018
   
 |類型|同步委派類型|非同步委派類型|  
 |----------|-------------------------------|--------------------------------|  
-|<xref:System.Threading.Tasks.Dataflow.ActionBlock%601>|`System.Action`|`System.Func\<TInput, Task>`|  
-|<xref:System.Threading.Tasks.Dataflow.TransformBlock%602>|`System.Func\<TInput, TOutput>`2`|`System.Func<TInput, Task<TOutput>>`|  
+|<xref:System.Threading.Tasks.Dataflow.ActionBlock%601>|`System.Action`|`System.Func<TInput, Task>`|  
+|<xref:System.Threading.Tasks.Dataflow.TransformBlock%602>|`System.Func<TInput, TOutput>`|`System.Func<TInput, Task<TOutput>>`|  
 |<xref:System.Threading.Tasks.Dataflow.TransformManyBlock%602>|`System.Func<TInput, IEnumerable<TOutput>>`|`System.Func<TInput, Task<IEnumerable<TOutput>>>`|  
   
  當您使用執行區塊類型時，也可以使用 Lambda 運算式。 如需示範如何使用 Lambda 運算式搭配執行區塊的範例，請參閱[如何：在資料流程區塊收到資料時執行動作](../../../docs/standard/parallel-programming/how-to-perform-action-when-a-dataflow-block-receives-data.md)。  

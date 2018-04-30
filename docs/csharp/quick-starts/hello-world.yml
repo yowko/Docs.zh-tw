@@ -13,11 +13,11 @@ metadata:
   ms.custom: mvc
   ms.prod: .net
   ms.technology: devlang-csharp
-  ms.openlocfilehash: 8d7e98e8dbd3e9b49269ce0d1cb1900059715b54
-  ms.sourcegitcommit: 935d5267c44f9bce801468ef95f44572f1417e8c
+  ms.openlocfilehash: 23070437088b71fd8f620d29b014226e34a51d5e
+  ms.sourcegitcommit: 2e8acae16ae802f2d6d04e3ce0a6dbf04e476513
   ms.translationtype: HT
   ms.contentlocale: zh-TW
-  ms.lasthandoff: 03/28/2018
+  ms.lasthandoff: 04/18/2018
 items:
 - durationInMinutes: 1
   content: >
@@ -27,7 +27,7 @@ items:
   content: "在互動式視窗中執行下列程式碼。 若要這樣做，請在互動式視窗中輸入下列程式碼區塊，並按一下 [執行] 按鈕：\n\n```csharp\nConsole.WriteLine(\"Hello World!\");\n```\n\n恭喜您！ 您已執行您的第一個 C# 程式。 這是一個會列印 \"Hello World!\" 訊息的簡單程式。 它會使用 <xref:System.Console.WriteLine%2A?displayProperty=nameWithType> 方法來列印該訊息。 `Console` 是代表主控台視窗的型別。 `WriteLine` 是 `Console` 型別的方法，會將文字行列印至文字主控台。\n\n讓我們繼續探索。 本課程的其餘部分會探索使用 `string` 型別，它代表 C# 中的文字。 就像 `Console` 型別，`string` 型別也具有方法。 `string` 方法可以處理文字。 \n\n> [!NOTE]\n> 此線上程式碼撰寫體驗仍處於預覽模式。 如果您遇到問題，請在 [dotnet/try 存放庫](https://github.com/dotnet/try/issues) \\(英文\\) 中回報。\n"
 - title: 宣告和使用變數
   durationInMinutes: 3
-  content: "您的第一個程式會在螢幕上列印 `string` \"Hello World!\" 。 \n\n> [!TIP]\n> 在您探索 C# (或任何程式設計語言) 時，可能會在撰寫程式碼時犯錯。 **編譯器**會找出那些錯誤並回報給您。 當輸出包含錯誤訊息時，請仔細查看範例程式碼以及互動式視窗中的程式碼，看看有哪些可以修正。\n> 該練習將有助於您了解 C# 程式碼的結構。 \n\n您的第一個程式僅能列印一則訊息。 您可以使用**變數**來撰寫更有用的程式。 **變數**是一種符號，可以使用不同的值來執行相同的程式碼。 讓我們來試試看吧！ 使用下列程式碼取代您在互動式視窗中所撰寫的程式碼：\n\n```csharp\nstring aFriend = \"Bill\";\nConsole.WriteLine(aFriend);\n```\n\n第一行會宣告一個變數 `aFriend`，並為其指派一個值 \"Bill\"。 第二行會列印出名稱。\n\n您可以將不同的值指派給任何您宣告的變數。 您可以將名稱變更為您的任何一位朋友。 在互動式視窗中，在您已新增的程式碼之後加入這兩行：\n\n```csharp\naFriend = \"Maria\";\nConsole.WriteLine(aFriend);\n```\n\n請注意，同一行程式碼會根據儲存在 `aFriend` 變數中的值，列印兩個不同的訊息。\n\n您可能也注意到，最後兩個訊息中遺漏 \"Hello\" 這個字。 讓我們來修正。  將列印訊息的程式碼行修改為下列內容：\n\n```csharp\nConsole.WriteLine(\"Hello \" + aFriend);\n```\n\n再次按一下 [執行] 來查看結果。\n\n隨著教學的進行，使用 `+` 建立要列印的字串便顯得繁雜。 [字串內插補點](../language-reference/tokens/interpolated.md)可讓您以更精確且可讀性更高的方式拼湊字串。\n\n如果在字串的左引號前新增 `$`，即可接著把運算式 (如 `aFriend` 變數) 用大括號括住在字串內。\n\n\n```csharp\nConsole.WriteLine($\"Hello {aFriend}\");\n```\n\n再次按一下 [執行] 來查看結果。\n\n> [!NOTE]\n> 此線上程式碼撰寫體驗仍處於預覽模式。 如果您遇到問題，請在 [dotnet/try 存放庫](https://github.com/dotnet/try/issues) \\(英文\\) 中回報。\n"
+  content: "您的第一個程式會在螢幕上列印 `string` \"Hello World!\" 。 \n\n> [!TIP]\n> 在您探索 C# (或任何程式設計語言) 時，可能會在撰寫程式碼時犯錯。 **編譯器**會找出那些錯誤並回報給您。 當輸出包含錯誤訊息時，請仔細查看範例程式碼以及互動式視窗中的程式碼，看看有哪些可以修正。\n> 該練習將有助於您了解 C# 程式碼的結構。 \n\n您的第一個程式僅能列印一則訊息。 您可以使用**變數**來撰寫更有用的程式。 **變數**是一種符號，可以使用不同的值來執行相同的程式碼。 讓我們來試試看吧！ 使用下列程式碼取代您在互動式視窗中所撰寫的程式碼：\n\n```csharp\nstring aFriend = \"Bill\";\nConsole.WriteLine(aFriend);\n```\n\n第一行會宣告一個變數 `aFriend`，並為其指派一個值 \"Bill\"。 第二行會列印出名稱。\n\n您可以將不同的值指派給任何您宣告的變數。 您可以將名稱變更為您的任何一位朋友。 在互動式視窗中，在您已新增的程式碼之後加入這兩行：\n\n```csharp\naFriend = \"Maira\";\nConsole.WriteLine(aFriend);\n```\n\n請注意，同一行程式碼會根據儲存在 `aFriend` 變數中的值，列印兩個不同的訊息。\n\n您可能也注意到，最後兩個訊息中遺漏 \"Hello\" 這個字。 讓我們來修正。  將列印訊息的程式碼行修改為下列內容：\n\n```csharp\nConsole.WriteLine(\"Hello \" + aFriend);\n```\n\n再次按一下 [執行] 來查看結果。\n\n隨著教學的進行，使用 `+` 建立要列印的字串便顯得繁雜。 [字串內插補點](../language-reference/tokens/interpolated.md)可讓您以更精確且可讀性更高的方式拼湊字串。\n\n如果在字串的左引號前新增 `$`，即可接著把運算式 (如 `aFriend` 變數) 用大括弧括住在字串內。\n\n\n```csharp\nConsole.WriteLine($\"Hello {aFriend}\");\n```\n\n再次按一下 [執行] 來查看結果。\n\n> [!NOTE]\n> 此線上程式碼撰寫體驗仍處於預覽模式。 如果您遇到問題，請在 [dotnet/try 存放庫](https://github.com/dotnet/try/issues) \\(英文\\) 中回報。\n"
 - title: 處理字串
   durationInMinutes: 5
   content: >

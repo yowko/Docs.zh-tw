@@ -11,15 +11,15 @@ ms.topic: article
 ms.workload:
 - dotnet
 - dotnetcore
-ms.openlocfilehash: 76db5388c75d4eb3b5cc23c1e57cc391a15f2934
-ms.sourcegitcommit: c883637b41ee028786edceece4fa872939d2e64c
-ms.translationtype: MT
+ms.openlocfilehash: cab12426308be258134e0385c5a6eb6cdb5d544b
+ms.sourcegitcommit: 2e8acae16ae802f2d6d04e3ce0a6dbf04e476513
+ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 03/26/2018
+ms.lasthandoff: 04/18/2018
 ---
 # <a name="designing-the-infrastructure-persistence-layer"></a>設計基礎結構持續性層
 
-資料持續性元件可讓您存取裝載於微服務界限 (也就是微服務的資料庫) 內的資料。 它們包含儲存機制和[工作單位](http://martinfowler.com/eaaCatalog/unitOfWork.html)類別 (例如自訂 EF DBContext) 等元件的實際實作。
+資料持續性元件可讓您存取裝載於微服務界限 (也就是微服務的資料庫) 內的資料。 它們包含儲存機制和[工作單位](https://martinfowler.com/eaaCatalog/unitOfWork.html)類別 (例如自訂 EF DBContext) 等元件的實際實作。
 
 ## <a name="the-repository-pattern"></a>儲存機制模式
 
@@ -90,7 +90,7 @@ public interface IOrderRepository : IRepository<Order>
 
 工作單位是指涉及多項插入、更新或刪除作業的單一交易。 簡單來說，這表示針對特定使用者動作 (例如網站註冊)，所有插入、更新和刪除交易都會在單一交易中處理。 比起更耗時地處理多個資料庫交易，這樣做會更有效率。
 
-稍後在單一動作中，當來自應用程式層的程式碼命令時，就會執行多個持續性作業。 將記憶體內部變更套用至實際資料庫儲存體的決策通常會採用[工作單位模式](http://martinfowler.com/eaaCatalog/unitOfWork.html)。 在 EF 中，工作單位模式會實作為 DBContext。
+稍後在單一動作中，當來自應用程式層的程式碼命令時，就會執行多個持續性作業。 將記憶體內部變更套用至實際資料庫儲存體的決策通常會採用[工作單位模式](https://martinfowler.com/eaaCatalog/unitOfWork.html)。 在 EF 中，工作單位模式會實作為 DBContext。
 
 在許多情況下，此模式或對儲存體套用作業的方式可提高應用程式效能，並降低不一致的可能性。 此外，它會降低資料庫資料表中的交易封鎖，因為所有預期的作業都會認可為單一交易的一部分。 相較於對資料庫執行許多隔離作業，這樣做會更有效率。 因此，選取的 ORM 能夠藉由群組相同交易內的數個更新動作來最佳化對資料庫的執行，這與許多小型且個別的交易執行正好相反。
 
@@ -138,21 +138,21 @@ public interface ISpecification<T>
 
 ### <a name="the-repository-pattern"></a>儲存機制模式
 
--   **Edward Hieatt 和 Rob Mee：儲存機制模式。**
-    [*http://martinfowler.com/eaaCatalog/repository.html*](http://martinfowler.com/eaaCatalog/repository.html)
+-   **Edward Hieatt 和 Rob Mee：存放庫模式。**
+    [*https://martinfowler.com/eaaCatalog/repository.html*](https://martinfowler.com/eaaCatalog/repository.html)
 
--   **儲存機制模式**
+-   **存放庫模式**
     [*https://msdn.microsoft.com/library/ff649690.aspx*](https://msdn.microsoft.com/library/ff649690.aspx)
 
--   **儲存機制模式： 資料持續抽象方法**
+-   **存放庫模式：資料持續性抽象概念**
     [*http://deviq.com/repository-pattern/*](http://deviq.com/repository-pattern/)
 
--   **Eric Evans：Domain-Driven Design: Tackling Complexity in the Heart of Software.** （書籍; 儲存機制模式的討論包括） [*https://www.amazon.com/Domain-Driven-Design-Tackling-Complexity-Software/dp/0321125215/*](https://www.amazon.com/Domain-Driven-Design-Tackling-Complexity-Software/dp/0321125215/)
+-   **Eric Evans：Domain-Driven Design: Tackling Complexity in the Heart of Software.** (書籍，包括存放庫模式的討論) [*https://www.amazon.com/Domain-Driven-Design-Tackling-Complexity-Software/dp/0321125215/*](https://www.amazon.com/Domain-Driven-Design-Tackling-Complexity-Software/dp/0321125215/)
 
 ### <a name="unit-of-work-pattern"></a>工作單位模式
 
--   **Martin Fowler：工作模式的單位。**
-    [*http://martinfowler.com/eaaCatalog/unitOfWork.html*](http://martinfowler.com/eaaCatalog/unitOfWork.html)
+-   **Martin Fowler：工作單位模式。**
+    [*https://martinfowler.com/eaaCatalog/unitOfWork.html*](https://martinfowler.com/eaaCatalog/unitOfWork.html)
 
 <!-- -->
 

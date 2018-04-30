@@ -1,5 +1,5 @@
 ---
-title: "yield (C# 參考)"
+title: yield (C# 參考)
 ms.date: 07/20/2015
 ms.prod: .net
 ms.technology:
@@ -11,14 +11,14 @@ f1_keywords:
 helpviewer_keywords:
 - yield keyword [C#]
 ms.assetid: 1089194f-9e53-46a2-8642-53ccbe9d414d
-caps.latest.revision: 
+caps.latest.revision: 46
 author: BillWagner
 ms.author: wiwagn
-ms.openlocfilehash: 11fe3734df61333916e7a07010393bddc96e525c
-ms.sourcegitcommit: 83dd5ec003e788ccb3e33f3412a7af39ae347646
+ms.openlocfilehash: 98453fb218dca1feb36c64331403d6761d231a0e
+ms.sourcegitcommit: 9a4fe1a1c37b26532654b4bbe22d702237950009
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 03/15/2018
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="yield-c-reference"></a>yield (C# 參考)
 在陳述式中使用 `yield` 關鍵字時，您會表示關鍵字所在的方法、運算子或 `get` 存取子是迭代器。 如果使用 `yield` 定義迭代器，當您為自訂集合類型實作 <xref:System.Collections.Generic.IEnumerator%601> 和 <xref:System.Collections.IEnumerable> 模式時，就不需要明確的額外類別 (保存列舉之狀態的類別，請參閱 <xref:System.Collections.IEnumerator> 中的範例)。  
@@ -79,7 +79,7 @@ foreach (string element in elements)
  在 `foreach` 迴圈的每個後續反覆項目上，迭代器主體會從上次停止的位置繼續執行，並且在到達 `yield return` 陳述式時再次停止。 當 Iterator 方法結束或到達 `foreach` 陳述式時，`yield break` 迴圈便完成。  
   
 ## <a name="example"></a>範例  
- 下列範例中的陳述式 `yield return` 位於 `for` 迴圈內。 `foreach` 中 `Process` 陳述式主體的每個反覆項目都會建立對 `Power` Iterator 函式的呼叫。 每次呼叫 Iterator 函式都會執行下一個 `yield return` 陳述式，這會在 `for` 迴圈的下一個反覆項目期間發生。  
+ 下列範例中的陳述式 `yield return` 位於 `for` 迴圈內。 `Main` 方法中 `foreach` 陳述式主體的每個反覆項目都會建立對 `Power` Iterator 函式的呼叫。 每次呼叫 Iterator 函式都會執行下一個 `yield return` 陳述式，這會在 `for` 迴圈的下一個反覆項目期間發生。  
   
  Iterator 方法的傳回類型是 <xref:System.Collections.IEnumerable>，其為 Iterator 介面類型。 呼叫 Iterator 方法時，它會傳回包含數字乘冪的可列舉物件。  
   

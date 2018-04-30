@@ -11,11 +11,11 @@ ms.topic: article
 ms.workload:
 - dotnet
 - dotnetcore
-ms.openlocfilehash: be8644e45be8db88c99332476e74c5c968764c74
-ms.sourcegitcommit: c883637b41ee028786edceece4fa872939d2e64c
-ms.translationtype: MT
+ms.openlocfilehash: ca4bfd31b505754b508555ff2771a6380ae023b4
+ms.sourcegitcommit: 2e8acae16ae802f2d6d04e3ce0a6dbf04e476513
+ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 03/26/2018
+ms.lasthandoff: 04/18/2018
 ---
 # <a name="creating-a-simple-data-driven-crud-microservice"></a>建立簡單資料驅動 CRUD 微服務
 
@@ -35,7 +35,7 @@ eShopOnContainers 應用程式範例的目錄微服務即為這種簡單資料�
 
 **圖 8-5**。 簡單資料驅動/CRUD 微服務設計
 
-當您開發這種服務時，您只需要 [ASP.NET Core](https://docs.microsoft.com/aspnet/core/) 及一個資料存取 API 或 ORM，像是 [Entity Framework Core](https://docs.microsoft.com/ef/core/index)。 您也可以透過 [Swashbuckle](https://github.com/domaindrivendev/Swashbuckle.AspNetCore) 自動產生 [Swagger](http://swagger.io/) 中繼資料來提供您服務提供之內容的描述，如下一節中所解釋的。
+當您開發這種服務時，您只需要 [ASP.NET Core](https://docs.microsoft.com/aspnet/core/) 及一個資料存取 API 或 ORM，像是 [Entity Framework Core](https://docs.microsoft.com/ef/core/index)。 您也可以透過 [Swashbuckle](https://github.com/domaindrivendev/Swashbuckle.AspNetCore) 自動產生 [Swagger](https://swagger.io/) 中繼資料來提供您服務提供之內容的描述，如下一節中所解釋的。
 
 請注意，在 Docker 容器中執行像是 SQL Server 這種資料庫伺服器對開發環境來說是非常適合的，因為您可以設定所有的相依性並使其順利執行，而無須在雲端或內部部署環境佈建資料庫。 這在執行整合測試時會非常方便。 然而，針對生產環境，我們不建議在容器內執行資料庫伺服器，因為使用此方法，您通常無法取得高度的可用性。 針對 Azure 中的生產環境，通常建議您使用 Azure SQL DB 或任何其他可提供高度可用性及延展性的資料庫技術。 例如，若要採用 NoSQL，您可能會選擇 DocumentDB。
 
@@ -66,7 +66,7 @@ Entity Framework (EF) Core 是常見 Entity Framework 資料存取技術的輕�
 
 #### <a name="the-data-model"></a>資料模型
 
-運用 EF Core，使用模型來執行資料存取。 模型包含多個實體類別以及一個代表含資料庫之工作階段的衍生內容，可讓您查詢和儲存資料。 您可以從現有資料庫產生模型、手動撰寫符合您資料庫的模型程式碼，或使用 EF 移轉從您的模型建立資料庫 (並在您的模型隨著時間變更時進行修改)。 針對目錄微服務，我們會使用最後一個方法。 您可以在下列程式碼範例中看到 CatalogItem 實體類別的範例。該實體類別為一個簡單的純舊 CLR 物件 ([POCO](https://en.wikipedia.org/wiki/Plain_Old_CLR_Object)) 實體類別。
+運用 EF Core，使用模型來執行資料存取。 模型包含多個實體類別以及一個代表含資料庫之工作階段的衍生內容，可讓您查詢和儲存資料。 您可以從現有資料庫產生模型、手動撰寫符合您資料庫的模型程式碼，或使用 EF 移轉從您的模型建立資料庫 (並在您的模型隨著時間變更時進行修改)。 針對目錄微服務，我們會使用最後一個方法。 您可以在下列程式碼範例中看到 CatalogItem 實體類別的範例。該實體類別為一個簡單的簡單的 CLR 物件 ([POCO](https://en.wikipedia.org/wiki/Plain_Old_CLR_Object)) 實體類別。
 
 ```csharp
 public class CatalogItem
@@ -293,30 +293,30 @@ public class CatalogController : ControllerBase
 
 ### <a name="additional-resources"></a>其他資源
 
--   **Scott Hanselman。進行簡單的 ASP.NET Core RESTful Web 應用程式開發介面版本控制**
-    [*http://www.hanselman.com/blog/ASPNETCoreRESTfulWebAPIVersioningMadeEasy.aspx*](http://www.hanselman.com/blog/ASPNETCoreRESTfulWebAPIVersioningMadeEasy.aspx)
+-   **Scott Hanselman。ASP.NET Core RESTful Web API 版本控制更為簡單**
+    [*https://www.hanselman.com/blog/ASPNETCoreRESTfulWebAPIVersioningMadeEasy.aspx*](https://www.hanselman.com/blog/ASPNETCoreRESTfulWebAPIVersioningMadeEasy.aspx)
 
--   **版本控制 RESTful web API**
+-   **進行 RESTful Web API 的版本控制**
     [*https://docs.microsoft.com/azure/architecture/best-practices/api-design#versioning-a-restful-web-api*](https://docs.microsoft.com/azure/architecture/best-practices/api-design#versioning-a-restful-web-api)
 
--   **Roy Fielding。版本控制、 超和其他**
+-   **Roy Fielding。版本控制、超媒體和 REST**
     [*https://www.infoq.com/articles/roy-fielding-on-versioning*](https://www.infoq.com/articles/roy-fielding-on-versioning)
 
 ## <a name="generating-swagger-description-metadata-from-your-aspnet-core-web-api"></a>從您的 ASP.NET Core Web API 產生 Swagger 描述中繼資料 
 
-[Swagger](http://swagger.io/) 是一種常用的開放原始碼架構，由可協助您設計、建置、記錄文件及取用您 RESTful API 的龐大工具生態系統所支援。 它已逐漸成為 API 描述中繼資料領域的標準。 您應在任何形式的微服務中包含 Swagger 描述中繼資料，無論是資料驅動微服務，或是更進階的網域驅動微服務 (如下一節所述)。
+[Swagger](https://swagger.io/) 是一種常用的開放原始碼架構，由可協助您設計、建置、記錄文件及取用您 RESTful API 的龐大工具生態系統所支援。 它已逐漸成為 API 描述中繼資料領域的標準。 您應在任何形式的微服務中包含 Swagger 描述中繼資料，無論是資料驅動微服務，或是更進階的網域驅動微服務 (如下一節所述)。
 
 Swagger 的核心是 Swagger 規格，即儲存於 JSON 或 YAML 檔案中的 API 描述中繼資料。 規格會為您的 API 建立 RESTful 合約，以人類易懂及電腦可讀取的格式詳述其所有的資源和作業，以進行簡單的部署、探索及整合。
 
 規格是 OpenAPI 規格 (OAS) 的基礎，並且是在開放、透明且共同作業的社群開發的，以標準化定義 RESTful 介面的方式。
 
-規格定義了可探索到服務的結構，以及理解其功能的方式。 如需詳細資訊，包括 web 編輯器和公司、 Spotify、 超級、 寬限時間和 Microsoft Swagger 規格的範例請參閱 Swagger 站台 (<http://swagger.io>)。
+規格定義了可探索到服務的結構，以及理解其功能的方式。 如需詳細資訊，包含 Web 編輯器及來自像是 Spotify、Uber、Slack 及 Microsoft 等公司 Swagger 規格的範例，請參閱 Swagger 網站 (<https://swagger.io/>)。
 
 ### <a name="why-use-swagger"></a>為何要使用 Swagger？
 
 為您的 API 產生 Swagger 中繼資料的主要理由如下。
 
-**讓其他產品可自動取用及與您的 API 整合**。 有數十種產品及[商業工具](http://swagger.io/commercial-tools/)和許多[程式庫和架構](http://swagger.io/open-source-integrations/)支援 Swagger。 Microsoft 具有能自動取用 Swagger 式 API 的高階產品和工具，例如：
+**讓其他產品可自動取用及與您的 API 整合**。 有數十種產品及[商業工具](https://swagger.io/commercial-tools/)和許多[程式庫和架構](https://swagger.io/open-source-integrations/)支援 Swagger。 Microsoft 具有能自動取用 Swagger 式 API 的高階產品和工具，例如：
 
 -   [AutoRest](https://github.com/Azure/AutoRest)。 您可以為呼叫 Swagger 自動產生 .NET 用戶端類別。 此工具可於 CLI 中使用，也可以與 Visual Studio 整合以讓使用者透過 GUI 簡單的進行操作。
 
@@ -415,7 +415,7 @@ public class Startup
 
 ### <a name="additional-resources"></a>其他資源
 
--   **ASP.NET Web API 說明頁面使用 Swagger**
+-   **使用 Swagger 的 ASP.NET Web API 說明頁面**
     [*https://docs.microsoft.com/aspnet/core/tutorials/web-api-help-pages-using-swagger*](https://docs.microsoft.com/aspnet/core/tutorials/web-api-help-pages-using-swagger)
 
 

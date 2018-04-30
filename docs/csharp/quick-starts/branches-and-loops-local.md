@@ -1,6 +1,6 @@
 ---
-title: "分支和迴圈教學課程 - C# 本機快速入門"
-description: "在這個關於分支和迴圈的快速入門中，您將會撰寫 C# 程式碼以探索支援條件式分支和迴圈的語言語法，以重複執行陳述式。"
+title: 分支和迴圈教學課程 - C# 本機快速入門
+description: 在這個關於分支和迴圈的快速入門中，您將會撰寫 C# 程式碼以探索支援條件式分支和迴圈的語言語法，以重複執行陳述式。
 author: billwagner
 ms.author: wiwagn
 ms.date: 10/31/2017
@@ -9,11 +9,11 @@ ms.prod: .net
 ms.technology: devlang-csharp
 ms.devlang: csharp
 ms.custom: mvc
-ms.openlocfilehash: 7d69b2b9bb02e2999bcd785da653bd4a13ed947c
-ms.sourcegitcommit: d2da0142247ef42a219a5d2907f153e62dc6ea0d
+ms.openlocfilehash: ea9fb2322202dfa19344e6119e748827535b0739
+ms.sourcegitcommit: 2e8acae16ae802f2d6d04e3ce0a6dbf04e476513
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 02/01/2018
+ms.lasthandoff: 04/18/2018
 ---
 # <a name="branches-and-loops"></a>分支和迴圈
 
@@ -68,7 +68,7 @@ else
 
 > [!IMPORTANT]
 > `if` 和 `else` 陳述式之下的縮排是為了方便人類閱讀。
-> C# 語言不會將縮排或空格視為有意義的內容。 `if` 或 `else` 關鍵字之後的陳述式將會根據條件來執行。 本快速入門中的所有範例都遵循常見的做法，根據陳述式的控制流程將程式碼行加以縮排。
+> C# 語言不會將縮排或空白字元視為有意義的內容。 `if` 或 `else` 關鍵字之後的陳述式將會根據條件來執行。 本快速入門中的所有範例都遵循常見的做法，根據陳述式的控制流程將程式碼行加以縮排。
 
 因為縮排沒有意義，當您要依條件執行的區塊中有超過一個陳述式時，就需要使用 `{` 和 `}` 來表示。 C# 程式設計人員通常會在所有的 `if` 和 `else` 子句上使用這些大括號。 下列範例與您剛剛所建立的內容相同。 修改程式碼，使它符合下列程式碼：
 
@@ -249,11 +249,11 @@ for(int index = 0; index < 10; index++)
 - `if` 陳述式可提供條件，以判斷數字是否應為總和的一部分。
 - `for` 迴圈可協助您將 1 到 20 的所有數字重複一系列的步驟。
 
-請自己試試看。 然後檢查成果。 您獲得的答案應該是 63。 您可以[在 GitHub 上檢視完整的程式碼](https://github.com/dotnet/docs/tree/master/samples/csharp/branches-quickstart/Program.cs#L46-L54) \(英文\) 來查看其中一個可能的答案。
+請自己試試看。 然後檢查成果。 您獲得的答案應該是 63。 您可以[在 GitHub 上檢視完整的程式碼](https://github.com/dotnet/samples/tree/master/csharp/branches-quickstart/Program.cs#L46-L54) \(英文\) 來查看其中一個可能的答案。
 
 您已經完成＜分支和迴圈＞快速入門。
 
-您可以在自己的開發環境中，繼續完成[插入字串](interpolated-strings-local.md)快速入門。
+您可以在自己的開發環境中，繼續完成[字串插補](interpolated-strings-local.md)快速入門。
 
 您可以在下列主題中深入了解這些概念：
 

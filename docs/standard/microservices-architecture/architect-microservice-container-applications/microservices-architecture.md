@@ -1,7 +1,7 @@
 ---
-title: "微服務架構"
-description: "容器化 .NET 應用程式的 .NET 微服務架構 | 微服務架構"
-keywords: "Docker, 微服務, ASP.NET, 容器"
+title: 微服務架構
+description: 容器化 .NET 應用程式的 .NET 微服務架構 | 微服務架構
+keywords: Docker, 微服務, ASP.NET, 容器
 author: CESARDELATORRE
 ms.author: wiwagn
 ms.date: 05/26/2017
@@ -11,11 +11,11 @@ ms.topic: article
 ms.workload:
 - dotnet
 - dotnetcore
-ms.openlocfilehash: 453f8a22157eee9601f2586d49d872d90634bb61
-ms.sourcegitcommit: e7f04439d78909229506b56935a1105a4149ff3d
+ms.openlocfilehash: 78d3903e7ed4abf27e78812de87ccbcb9f733663
+ms.sourcegitcommit: 2e8acae16ae802f2d6d04e3ce0a6dbf04e476513
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 12/23/2017
+ms.lasthandoff: 04/18/2018
 ---
 # <a name="microservices-architecture"></a>微服務架構
 
@@ -51,19 +51,19 @@ ms.lasthandoff: 12/23/2017
 
 ## <a name="additional-resources"></a>其他資源
 
--   **Mark Russinovich：Microservices: An application revolution powered by the cloud (微服務：由雲端提供的應用程式變革)**
+-   **Mark Russinovich：微服務：採用雲端技術的應用程式變革**
     [*https://azure.microsoft.com/blog/microservices-an-application-revolution-powered-by-the-cloud/*](https://azure.microsoft.com/blog/microservices-an-application-revolution-powered-by-the-cloud/)
 
--   **Martin Fowler：Microservices (微服務)**
-    [*http://www.martinfowler.com/articles/microservices.html*](http://www.martinfowler.com/articles/microservices.html)
+-   **Martin Fowler：微服務**
+    [*https://www.martinfowler.com/articles/microservices.html*](https://www.martinfowler.com/articles/microservices.html)
 
--   **Martin Fowler：Microservice Prerequisites (微服務必要條件)**
-    [*http://martinfowler.com/bliki/MicroservicePrerequisites.html*](http://martinfowler.com/bliki/MicroservicePrerequisites.html)
+-   **Martin Fowler：微服務先決條件**
+    [*https://martinfowler.com/bliki/MicroservicePrerequisites.html*](https://martinfowler.com/bliki/MicroservicePrerequisites.html)
 
--   **Jimmy Nilsson：Chunk Cloud Computing (區塊雲端運算)**
+-   **Jimmy Nilsson：區塊雲端運算**
     [*https://www.infoq.com/articles/CCC-Jimmy-Nilsson*](https://www.infoq.com/articles/CCC-Jimmy-Nilsson)
 
--   **Cesar de la Torre：Containerized Docker Application Lifecycle with Microsoft Platform and Tools (利用 Microsoft 平台和工具的容器化 Docker 應用程式生命週期)** (可下載的電子書) [*https://aka.ms/dockerlifecycleebook*](https://aka.ms/dockerlifecycleebook)
+-   **Cesar de la Torre：Microsoft 平台和工具的容器化 Docker 應用程式生命週期** (可下載的電子書) [*https://aka.ms/dockerlifecycleebook*](https://aka.ms/dockerlifecycleebook)
 
 
 

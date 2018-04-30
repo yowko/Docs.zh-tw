@@ -6,14 +6,15 @@ ms.author: wiwagn
 ms.date: 10/06/2017
 ms.prod: .net-core
 ms.technology: dotnet-docker
+ms.topic: article
 ms.workload:
 - dotnet
 - dotnetcore
-ms.openlocfilehash: bdb215d64253fb7d22ae2c5648030336850006b5
-ms.sourcegitcommit: f28752eab00d2bd97e971542c0f49ce63cfbc239
+ms.openlocfilehash: f4f52bd3438ef9b2e0b74ee91831947a4dd6869d
+ms.sourcegitcommit: 2e8acae16ae802f2d6d04e3ce0a6dbf04e476513
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 01/29/2018
+ms.lasthandoff: 04/18/2018
 ---
 # <a name="architectural-principles"></a>架構原則
 
@@ -81,7 +82,7 @@ ms.lasthandoff: 01/29/2018
 
 ### <a name="persistence-ignorance"></a>持續性無知
 
-**續性無知** (PI) 指的是需要持續的，但其程式碼不會受到持續性技術選項影響的類型。 這類的類型在 .NET 中有時稱為純舊 CLR 物件 (POCO)，因為它們不需要繼承特定的基底類別或實作特定介面。 持續性無知的價值在於它允許以多種方式保存相同的商務模型，為應用程式提供額外的彈性。 持續性選項可能會隨著時間變更，從一種資料庫技術變為另一種技術，或是除了應用程式一開始的選項之外，可能還需要其他形式的持續性 (例如，除了關聯式資料庫之外，還使用 Redis 快取或 Azure DocumentDb)。
+**續性無知** (PI) 指的是需要持續的，但其程式碼不會受到持續性技術選項影響的類型。 這類的類型在 .NET 中有時稱為簡單的 CLR 物件 (POCO)，因為它們不需要繼承特定的基底類別或實作特定介面。 持續性無知的價值在於它允許以多種方式保存相同的商務模型，為應用程式提供額外的彈性。 持續性選項可能會隨著時間變更，從一種資料庫技術變為另一種技術，或是除了應用程式一開始的選項之外，可能還需要其他形式的持續性 (例如，除了關聯式資料庫之外，還使用 Redis 快取或 Azure DocumentDb)。
 
 違反這個原則的一些範例包括：
 
@@ -108,7 +109,7 @@ ms.lasthandoff: 01/29/2018
 > ### <a name="references--modern-web-applications"></a>參考 – 現代化 Web 應用程式
 > - **關注點分離**  
 > <http://deviq.com/separation-of-concerns/>
-> - **封裝** <http://deviq.com/encapsulation/>
+> - **封裝**<http://deviq.com/encapsulation/>
 > - **相依性反轉準則**  
 > <http://deviq.com/dependency-inversion-principle/>
 > - **明確相依性準則**  

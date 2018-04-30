@@ -1,7 +1,7 @@
 ---
-title: "直接用戶端與微服務通訊與 API 閘道模式"
-description: "容器化 .NET 應用程式的 .NET 微服務架構 | 直接用戶端與微服務通訊與 API 閘道模式"
-keywords: "Docker, 微服務, ASP.NET, 容器, API 閘道"
+title: 直接用戶端與微服務通訊與 API 閘道模式
+description: 容器化 .NET 應用程式的 .NET 微服務架構 | 直接用戶端與微服務通訊與 API 閘道模式
+keywords: Docker, 微服務, ASP.NET, 容器, API 閘道
 author: CESARDELATORRE
 ms.author: wiwagn
 ms.date: 10/18/2017
@@ -11,11 +11,11 @@ ms.topic: article
 ms.workload:
 - dotnet
 - dotnetcore
-ms.openlocfilehash: 96a02958ef5750aec7a92ff0dd145edc15a5953a
-ms.sourcegitcommit: e7f04439d78909229506b56935a1105a4149ff3d
+ms.openlocfilehash: fa3f4bb97cf942ee7698b1efa1dcd09b3f2ca571
+ms.sourcegitcommit: 2e8acae16ae802f2d6d04e3ce0a6dbf04e476513
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 12/23/2017
+ms.lasthandoff: 04/18/2018
 ---
 # <a name="direct-client-to-microservice-communication-versus-the-api-gateway-pattern"></a>直接用戶端與微服務通訊與 API 閘道模式
 
@@ -57,7 +57,7 @@ ms.lasthandoff: 12/23/2017
 
 ## <a name="using-an-api-gateway"></a>使用 API 閘道
 
-當您使用多個用戶端應用程式來設計和建置大型或複雜微服務應用程式時，可以考慮使用的不錯方法是 [API 閘道](http://microservices.io/patterns/apigateway.html)。 這個服務提供特定一組微服務的單一進入點。 它與物件導向設計中的[外觀模式](https://en.wikipedia.org/wiki/Facade_pattern)類似但在此情況下，它是分散式系統的一部分。 API 閘道模式有時也稱為「前端的後端 [(BFF)](http://samnewman.io/patterns/architectural/bff/)」，因為您是在考量用戶端應用程式需求時建置它。
+當您使用多個用戶端應用程式來設計和建置大型或複雜微服務應用程式時，可以考慮使用的不錯方法是 [API 閘道](https://microservices.io/patterns/apigateway.html)。 這個服務提供特定一組微服務的單一進入點。 它與物件導向設計中的[外觀模式](https://en.wikipedia.org/wiki/Facade_pattern)類似但在此情況下，它是分散式系統的一部分。 API 閘道模式有時也稱為「前端的後端 [(BFF)](https://samnewman.io/patterns/architectural/bff/)」，因為您是在考量用戶端應用程式需求時建置它。
 
 圖 4-13 顯示自訂 API 閘道如何納入微服務架構。
 請務必在該圖表中將它反白顯示，您會使用面向多個和不同用戶端應用程式的單一自訂 API 閘道服務。 這項事實的風險可能十分重大，因為 API 閘道服務將會根據用戶端應用程式的許多不同需求而成長和演變。 最後，它會因為這些不同需求而十分繁雜，而且可能十分類似整合型應用程式或整合型服務。 這是極為建議將 API 閘道分割為多個服務或多個較小 API 閘道 (例如一個板型規格一個) 的原因。
@@ -110,16 +110,16 @@ API 閘道層中的細微性可能特別適用於根據微服務的更進階複�
 
 ## <a name="additional-resources"></a>其他資源
 
--   **Charles Richardson：Pattern: API Gateway / Backend for Front-End**
-    [*http://microservices.io/patterns/apigateway.html*](http://microservices.io/patterns/apigateway.html) (模式：API 閘道/前端的後端)
+-   **Charles Richardson：模式：API 閘道/前端的後端**
+    [*https://microservices.io/patterns/apigateway.html*](https://microservices.io/patterns/apigateway.html)
 
 -   **Azure API 管理**
     [*https://azure.microsoft.com/services/api-management/*](https://azure.microsoft.com/services/api-management/)
 
--   **Udi Dahan：Service Oriented Composition (服務導向組合)**\
+-   **Udi Dahan.Service Oriented Composition (服務導向組合)**\
     [*http://udidahan.com/2014/07/30/service-oriented-composition-with-video/*](http://udidahan.com/2014/07/30/service-oriented-composition-with-video/)
 
--   **Clemens Vasters：Messaging and Microservices at GOTO 2016** (影片) [*https://www.youtube.com/watch?v=rXi5CLjIQ9k*](https://www.youtube.com/watch?v=rXi5CLjIQ9k) (GOTO 2016 的訊息和微服務)
+-   **Clemens Vasters：GOTO 2016 的傳訊和微服務** (影片) [*https://www.youtube.com/watch?v=rXi5CLjIQ9k*](https://www.youtube.com/watch?v=rXi5CLjIQ9k)
 
 
 >[!div class="step-by-step"]

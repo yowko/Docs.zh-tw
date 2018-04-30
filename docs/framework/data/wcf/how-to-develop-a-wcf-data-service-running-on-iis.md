@@ -1,12 +1,13 @@
 ---
-title: "HOW TO：開發在 IIS 上執行的 WCF Data Service"
-ms.custom: 
+title: HOW TO：開發在 IIS 上執行的 WCF Data Service
+ms.custom: ''
 ms.date: 03/30/2017
 ms.prod: .net-framework-oob
-ms.reviewer: 
-ms.suite: 
-ms.technology: dotnet-clr
-ms.tgt_pltfrm: 
+ms.reviewer: ''
+ms.suite: ''
+ms.technology:
+- dotnet-clr
+ms.tgt_pltfrm: ''
 ms.topic: article
 dev_langs:
 - csharp
@@ -16,16 +17,17 @@ helpviewer_keywords:
 - WCF Data Services, deploying
 - WCF Data Services, hosting
 ms.assetid: f6f768c5-4989-49e3-a36f-896ab4ded86e
-caps.latest.revision: "5"
+caps.latest.revision: 5
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.workload: dotnet
-ms.openlocfilehash: b93b6e8b6e687f2e39fd5792aba08eaa47fa29fd
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.workload:
+- dotnet
+ms.openlocfilehash: f9df38d200be864ab24efdb0d002fe7b75cfc3e4
+ms.sourcegitcommit: 86adcc06e35390f13c1e372c36d2e044f1fc31ef
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 04/26/2018
 ---
 # <a name="how-to-develop-a-wcf-data-service-running-on-iis"></a>HOW TO：開發在 IIS 上執行的 WCF Data Service
 本主題示範如何使用[!INCLUDE[ssAstoria](../../../../includes/ssastoria-md.md)]來建立 ASP.NET Web 應用程式執行網際網路資訊服務 (IIS) 所裝載的 Northwind 範例資料庫為基礎的資料服務。 如需如何建立相同的 Northwind 資料服務，以在 ASP.NET 程式開發伺服器執行的 ASP.NET Web 應用程式的範例，請參閱[WCF Data Services 快速入門](../../../../docs/framework/data/wcf/quickstart-wcf-data-services.md)。  
@@ -142,7 +144,7 @@ ms.lasthandoff: 12/22/2017
   
 5.  執行下列步驟中，連接到資料庫的資料模型，然後按一下**下一步**:  
   
-    -   如果您沒有已設定的資料庫連接，按一下**新連線**並建立新的連接。 如需詳細資訊，請參閱[How to： 建立連接至 SQL Server 資料庫](http://go.microsoft.com/fwlink/?LinkId=123631)。 此 [!INCLUDE[ssNoVersion](../../../../includes/ssnoversion-md.md)] 執行個體必須已附加 Northwind 範例資料庫。  
+    -   如果您沒有已設定的資料庫連接，按一下**新連線**並建立新的連接。 如需詳細資訊，請參閱[How to： 建立連接至 SQL Server 資料庫](http://go.microsoft.com/fwlink/?LinkId=123631)。 此 SQL Server 執行個體必須已附加 Northwind 範例資料庫。  
   
          \-或-  
   
@@ -170,5 +172,5 @@ ms.lasthandoff: 12/22/2017
      [!code-csharp[Astoria Quickstart Service#ServiceDefinition](../../../../samples/snippets/csharp/VS_Snippets_Misc/astoria quickstart service/cs/northwind.svc.cs#servicedefinition)]
      [!code-vb[Astoria Quickstart Service#ServiceDefinition](../../../../samples/snippets/visualbasic/VS_Snippets_Misc/astoria quickstart service/vb/northwind.svc.vb#servicedefinition)]  
   
-## <a name="see-also"></a>請參閱  
+## <a name="see-also"></a>另請參閱  
  [將資料當作服務公開](../../../../docs/framework/data/wcf/exposing-your-data-as-a-service-wcf-data-services.md)

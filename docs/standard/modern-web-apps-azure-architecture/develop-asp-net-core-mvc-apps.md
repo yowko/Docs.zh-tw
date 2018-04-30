@@ -6,14 +6,15 @@ ms.author: wiwagn
 ms.date: 10/07/2017
 ms.prod: .net-core
 ms.technology: dotnet-docker
+ms.topic: article
 ms.workload:
 - dotnet
 - dotnetcore
-ms.openlocfilehash: c10bf66dd37f0d99c038db7f95999d84986152fa
-ms.sourcegitcommit: e7f04439d78909229506b56935a1105a4149ff3d
+ms.openlocfilehash: c5e2d603062095c02af500ae74a9ea708cf9aefa
+ms.sourcegitcommit: 2e8acae16ae802f2d6d04e3ce0a6dbf04e476513
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 12/23/2017
+ms.lasthandoff: 04/18/2018
 ---
 # <a name="develop-aspnet-core-mvc-apps"></a>開發 ASP.NET Core MVC 應用程式
 
@@ -74,14 +75,14 @@ public class ProductsController : Controller
 > ### <a name="references--mapping-requests-to-responses"></a>參考資料 - 將要求對應至回應
 > - **路由至控制器動作**
 > <https://docs.microsoft.com/aspnet/core/mvc/controllers/routing>
-> - **模型繫結** https://docs.microsoft.com/aspnet/core/mvc/models/model-binding
+> - **模型繫結**https://docs.microsoft.com/aspnet/core/mvc/models/model-binding
 > - **模型驗證**
 > <https://docs.microsoft.com/aspnet/core/mvc/models/validation>
-> - **篩選條件** https://docs.microsoft.com/aspnet/core/mvc/controllers/filters
+> - **篩選條件**https://docs.microsoft.com/aspnet/core/mvc/controllers/filters
 
 ## <a name="working-with-dependencies"></a>使用相依性
 
-ASP.NET Core 已內建支援，並在內部使用稱為[相依性插入](https://docs.microsoft.com/aspnet/core/fundamentals/dependency-injection)的技術。 相依性插入是在應用程式的不同組件之間啟用鬆散結合的一項技術。 建議您啟用鬆散結合，因為它可讓您更輕鬆地隔離應用程式組件，以便進行測試或取代。 此外，變更應用程式的某個組件，也較不可能會對應用程式的其他地方造成非預期的影響。 相依性插入是以相依性反轉準則為基礎，而且通常是實現開啟/關閉準則的關鍵。 當您評估應用程式搭配其相依性的運作情況時，請注意[靜態黏貼](http://deviq.com/static-cling/)程式碼異味，並記住「[New 就是黏附](http://ardalis.com/new-is-glue)」此一箴言。
+ASP.NET Core 已內建支援，並在內部使用稱為[相依性插入](https://docs.microsoft.com/aspnet/core/fundamentals/dependency-injection)的技術。 相依性插入是在應用程式的不同組件之間啟用鬆散結合的一項技術。 建議您啟用鬆散結合，因為它可讓您更輕鬆地隔離應用程式組件，以便進行測試或取代。 此外，變更應用程式的某個組件，也較不可能會對應用程式的其他地方造成非預期的影響。 相依性插入是以相依性反轉準則為基礎，而且通常是實現開啟/關閉準則的關鍵。 當您評估應用程式搭配其相依性的運作情況時，請注意[靜態黏貼](http://deviq.com/static-cling/)程式碼異味，並記住「[New 就是黏附](https://ardalis.com/new-is-glue)」此一箴言。
 
 靜態黏貼發生於您的類別呼叫靜態方法或存取靜態屬性時，並對基礎結構具有副作用或相依性。 例如，如果您有一個方法呼叫靜態方法，而該方法接著寫入資料庫，則您的方法會與資料庫緊密結合。 任何中斷資料庫呼叫的項目都會中斷您的方法。 測試這類方法眾所周知很困難，因為這類測試需要商用模擬程式庫來模擬靜態呼叫，或只能透過適當的測試資料庫進行測試。 未相依於基礎結構的靜態呼叫 (特別是完全無狀態的呼叫) 可安心呼叫，不會影響結合或可測試性 (將程式碼結合到靜態呼叫本身除外)。
 
@@ -283,8 +284,8 @@ public async Task<IActionResult> Put(int id, [FromBody]Author author)
 > ### <a name="references--structuring-applications"></a>參考資料 - 建構應用程式
 > - **區域**  
 > <https://docs.microsoft.com/aspnet/core/mvc/controllers/areas>
-> - **MSDN - Feature Slices for ASP.NET Core MVC (ASP.NET Core MVC 的功能切割)**
->  <https://msdn.microsoft.com/magazine/mt763233.aspx>
+> - **MSDN – Feature Slices for ASP.NET Core MVC**
+>  <https://msdn.microsoft.com/magazine/mt763233.aspx> (MSDN – ASP.NET Core MVC 的功能分區)
 > - **篩選**  
 > <https://docs.microsoft.com/aspnet/core/mvc/controllers/filters>
 > - **MSDN - Real World ASP.NET Core MVC Filters (真實世界的 ASP.NET Core MVC 篩選條件)**  
@@ -400,7 +401,7 @@ public void ConfigureServices(IServiceCollection services)
 
 ## <a name="client-communication"></a>用戶端通訊
 
-除了透過 Web API 提供頁面及回應資料要求，ASP.NET Core 應用程式還可以直接與連線的用戶端通訊。 此輸出通訊可以使用各種傳輸技術，最常見的是 WebSockets。 ASP.NET Core SignalR 是一種程式庫，可讓您輕鬆地對應用程式執行即時伺服器對用戶端通訊功能。 SignalR 支援各種傳輸技術 (包括 WebSockets)，並從開發人員擷取許多實作詳細資料。
+除了透過 Web API 提供頁面及回應資料要求，ASP.NET Core 應用程式還可以直接與連線的用戶端通訊。 此輸出通訊可以使用各種傳輸技術，最常見的是 WebSockets。 ASP.NET Core SignalR 是一種程式庫，可讓您簡單地將即時伺服器對用戶端通訊功能新增至應用程式。 SignalR 支援各種傳輸技術 (包括 WebSockets)，並從開發人員擷取許多實作詳細資料。
 
 ASP.NET Core SignalR 目前正在開發中，下一版 ASP.NET Core 將會提供使用。 不過，目前有其他[開放原始碼 WebSockets 程式庫](https://github.com/radu-matei/websocket-manager)可用。
 

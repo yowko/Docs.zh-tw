@@ -13,20 +13,20 @@ dev_langs:
 - csharp
 - vb
 ms.assetid: 34d1d971-5e18-4c22-9bf6-d3612e27ea59
-caps.latest.revision: ''
+caps.latest.revision: 7
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
 ms.workload:
 - dotnet
-ms.openlocfilehash: 7d890e4c2041ae4c70a79adfc0ab4141402fcd3f
-ms.sourcegitcommit: c0dd436f6f8f44dc80dc43b07f6841a00b74b23f
+ms.openlocfilehash: 781def411214b0804cdc094c00b2f655b6c3823d
+ms.sourcegitcommit: 86adcc06e35390f13c1e372c36d2e044f1fc31ef
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 01/19/2018
+ms.lasthandoff: 04/26/2018
 ---
 # <a name="creating-the-data-service"></a>建立資料服務
-在這個工作中，您將建立使用的範例資料服務[!INCLUDE[ssAstoria](../../../../includes/ssastoria-md.md)]公開[!INCLUDE[ssODataFull](../../../../includes/ssodatafull-md.md)]Northwind 範例資料庫為基礎的摘要。 這個工作包含下列基本步驟：  
+在這個工作中，您將建立使用的範例資料服務[!INCLUDE[ssAstoria](../../../../includes/ssastoria-md.md)]公開 [!INCLUDE[ssODataFull](../../../../includes/ssodatafull-md.md)] Northwind 範例資料庫為基礎的摘要。 這個工作包含下列基本步驟：  
   
 1.  建立 [!INCLUDE[vstecasp](../../../../includes/vstecasp-md.md)] Web 應用程式。  
   
@@ -37,16 +37,16 @@ ms.lasthandoff: 01/19/2018
 4.  啟用資料服務的存取。  
   
 > [!NOTE]
->  當您完成這項工作時所建立的 [!INCLUDE[vstecasp](../../../../includes/vstecasp-md.md)] Web 應用程式會在 [!INCLUDE[vstecasp](../../../../includes/vstecasp-md.md)] 提供的 [!INCLUDE[vs_current_short](../../../../includes/vs-current-short-md.md)] 程式開發伺服器上執行。 [!INCLUDE[vstecasp](../../../../includes/vstecasp-md.md)] 程式開發伺服器只支援從本機電腦存取。 若要一併在開發期間更輕鬆地測試資料服務並進行疑難排解，請考慮使用 Internet Information Services (IIS) 執行可裝載資料服務的應用程式。 如需詳細資訊，請參閱 [如何：開發在 IIS 上執行的 WCF 資料服務](../../../../docs/framework/data/wcf/how-to-develop-a-wcf-data-service-running-on-iis.md)。  
+>  [!INCLUDE[vstecasp](../../../../includes/vstecasp-md.md)]完成這項工作時，您建立的 Web 應用程式上執行[!INCLUDE[vstecasp](../../../../includes/vstecasp-md.md)]Visual Studio 所提供的程式開發伺服器。 [!INCLUDE[vstecasp](../../../../includes/vstecasp-md.md)] 程式開發伺服器只支援從本機電腦存取。 若要一併在開發期間更輕鬆地測試資料服務並進行疑難排解，請考慮使用 Internet Information Services (IIS) 執行可裝載資料服務的應用程式。 如需詳細資訊，請參閱 [如何：開發在 IIS 上執行的 WCF 資料服務](../../../../docs/framework/data/wcf/how-to-develop-a-wcf-data-service-running-on-iis.md)。  
   
 ### <a name="to-create-the-aspnet-web-application"></a>若要建立 ASP.NET Web 應用程式  
   
-1.  在[!INCLUDE[vs_current_short](../../../../includes/vs-current-short-md.md)]上**檔案**功能表上，選取**新增**，然後選取**專案**。  
+1.  在 Visual Studio 中，在**檔案**功能表上，選取**新增**，然後選取**專案**。  
   
-2.  在**新專案**對話方塊之下[!INCLUDE[vbprvb](../../../../includes/vbprvb-md.md)]或[!INCLUDE[csprcs](../../../../includes/csprcs-md.md)]選取**Web**範本，，然後選取**ASP.NET Web 應用程式**。  
+2.  在**新專案**對話方塊中的，在 Visual Basic 或 Visual C# 選取**Web**範本，，然後選取**ASP.NET Web 應用程式**。  
   
     > [!NOTE]
-    >  如果您使用 [!INCLUDE[vs_current_short](../../../../includes/vs-current-short-md.md)] Web Developer，就必須建立新網站，而非建立新的 Web 應用程式。  
+    >  如果您使用 Visual Studio Web Developer，您必須建立新網站，而非建立新的 Web 應用程式。  
   
 3.  型別`NorthwindService`做為專案的名稱。  
   
@@ -70,7 +70,7 @@ ms.lasthandoff: 01/19/2018
   
 5.  執行下列步驟中，連接到資料庫的資料模型，然後按一下**下一步**:  
   
-    -   如果您沒有已設定的資料庫連接，按一下**新連線**並建立新的連接。 如需詳細資訊，請參閱[How to： 建立連接至 SQL Server 資料庫](http://go.microsoft.com/fwlink/?LinkId=123631)。 此 [!INCLUDE[ssNoVersion](../../../../includes/ssnoversion-md.md)] 執行個體必須已附加 Northwind 範例資料庫。  
+    -   如果您沒有已設定的資料庫連接，按一下**新連線**並建立新的連接。 如需詳細資訊，請參閱[How to： 建立連接至 SQL Server 資料庫](http://go.microsoft.com/fwlink/?LinkId=123631)。 此 SQL Server 執行個體必須已附加 Northwind 範例資料庫。  
   
          \-或-  
   
@@ -81,7 +81,7 @@ ms.lasthandoff: 01/19/2018
 7.  按一下**完成**關閉精靈。  
   
     > [!NOTE]
-    >  這樣產生的資料模型會在實體類型上公開外部索引鍵屬性。 使用 [!INCLUDE[vs_current_short](../../../../includes/vs-current-short-md.md)] 2008 建立的資料模型不包含這些外部索引鍵屬性。 因此，您必須更新之前為了存取 Northwind 資料服務所建立之任何用戶端應用程式的用戶端資料服務類別，此資料服務是在嘗試存取這一版的 Northwind 資料服務之前使用 [!INCLUDE[vs_current_short](../../../../includes/vs-current-short-md.md)] 2008 所建立。  
+    >  這樣產生的資料模型會在實體類型上公開外部索引鍵屬性。 使用 Visual Studio 2008 建立的資料模型不包含這些外部索引鍵屬性。 因此，您必須更新之前為了存取 Northwind 資料服務所建立之任何用戶端應用程式的用戶端資料服務類別，此資料服務是在嘗試存取這一版的 Northwind 資料服務之前使用 Visual Studio 2008 所建立。  
   
 ### <a name="to-create-the-data-service"></a>若要建立資料服務  
   
@@ -91,7 +91,7 @@ ms.lasthandoff: 01/19/2018
   
 3.  服務的名稱，輸入`Northwind`。  
   
-     [!INCLUDE[vs_current_short](../../../../includes/vs-current-short-md.md)]Visual Studio 會針對新的服務建立 XML 標記和程式碼檔案。 根據預設，程式碼編輯器視窗隨即開啟。 在**方案總管 中**，服務將會具有名稱 Northwind，副檔名。 為.svc.cs 或.svc.vb。  
+     Visual StudioVisual Studio 會建立新服務的 XML 標記和程式碼檔案。 根據預設，程式碼編輯器視窗隨即開啟。 在**方案總管 中**，服務將會具有名稱 Northwind，副檔名。 為.svc.cs 或.svc.vb。  
   
 4.  在資料服務的程式碼裡，於定義資料服務和型別的類別定義中，取代註解 `/* TODO: put your data source class name here */`，該型別是資料模型的實體容器，在這個案例中是 `NorthwindEntities`。 類別定義看起來應如下列：  
   
@@ -111,9 +111,9 @@ ms.lasthandoff: 01/19/2018
     >  任何可存取 [!INCLUDE[vstecasp](../../../../includes/vstecasp-md.md)] 應用程式的用戶端也可以存取資料服務公開的資源。 在產生資料服務的過程中，若要避免未經授權存取資源，您也應該要保護應用程式本身。 如需詳細資訊，請參閱 [Securing WCF Data Services](../../../../docs/framework/data/wcf/securing-wcf-data-services.md)。  
   
 ## <a name="next-steps"></a>後續步驟  
- 您已成功建立新的資料服務公開[!INCLUDE[ssODataShort](../../../../includes/ssodatashort-md.md)]摘要，根據 Northwind 範例資料庫，而且您已啟用的存取權之用戶端上的權限摘要[!INCLUDE[vstecasp](../../../../includes/vstecasp-md.md)]Web 應用程式。 接下來，您會開始從資料服務[!INCLUDE[vs_current_short](../../../../includes/vs-current-short-md.md)]，您將存取[!INCLUDE[ssODataShort](../../../../includes/ssodatashort-md.md)]透過網頁瀏覽器的 HTTP GET 要求提交摘要：  
+ 您已成功建立新的資料服務公開[!INCLUDE[ssODataShort](../../../../includes/ssodatashort-md.md)]摘要，根據 Northwind 範例資料庫，而且您已啟用的存取權之用戶端上的權限摘要[!INCLUDE[vstecasp](../../../../includes/vstecasp-md.md)]Web 應用程式。 接著，您會從 Visual Studio 啟動資料服務，然後透過 Web 瀏覽器送出 HTTP GET 要求，以存取 [!INCLUDE[ssODataShort](../../../../includes/ssodatashort-md.md)] 摘要：  
   
  [從網頁瀏覽器存取服務](../../../../docs/framework/data/wcf/accessing-the-service-from-a-web-browser-wcf-data-services-quickstart.md)  
   
-## <a name="see-also"></a>請參閱  
+## <a name="see-also"></a>另請參閱  
  [ADO.NET 實體資料模型工具](http://msdn.microsoft.com/library/91076853-0881-421b-837a-f582f36be527)

@@ -1,9 +1,10 @@
 ---
-title: "如何：將應用程式當地語系化"
+title: 如何：將應用程式當地語系化
 ms.date: 03/30/2017
 ms.prod: .net-framework
-ms.technology: dotnet-wpf
-ms.tgt_pltfrm: 
+ms.technology:
+- dotnet-wpf
+ms.tgt_pltfrm: ''
 ms.topic: article
 dev_langs:
 - csharp
@@ -16,12 +17,13 @@ ms.assetid: 5001227e-9326-48a4-9dcd-ba1b89ee6653
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.workload: dotnet
-ms.openlocfilehash: 83ed8ee8b8bfd9c3d6dadfedad8889af10a86466
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.workload:
+- dotnet
+ms.openlocfilehash: 3c5621de2a2d10e67f45fa2d6980cb84c388630f
+ms.sourcegitcommit: 86adcc06e35390f13c1e372c36d2e044f1fc31ef
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 04/26/2018
 ---
 # <a name="how-to-localize-an-application"></a>如何：將應用程式當地語系化
 本教學課程說明如何使用 LocBaml 工具來建立當地語系化的應用程式。  
@@ -88,7 +90,7 @@ ms.lasthandoff: 12/22/2017
 <a name="build_locbaml"></a>   
 ## <a name="build-the-locbaml-tool"></a>建置 LocBaml 工具  
   
-1.  建置 LocBaml 時所需的所有檔案都位在 [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] 範例中。 下載[!INCLUDE[TLA#tla_lhcshrp](../../../../includes/tlasharptla-lhcshrp-md.md)]檔案從[LocBaml 工具範例](http://go.microsoft.com/fwlink/?LinkID=160016)。  
+1.  建置 LocBaml 時所需的所有檔案都位在 [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] 範例中。 C# 從下載的檔案[LocBaml 工具範例](http://go.microsoft.com/fwlink/?LinkID=160016)。  
   
 2.  從命令列執行專案檔 (locbaml.csproj)，以建置工具：  
   
@@ -98,17 +100,17 @@ ms.lasthandoff: 12/22/2017
   
 4.  當您執行 LocBaml 時，可指定的選項如下：  
   
-    -   **剖析**或**-p:**剖析 Baml，資源，或[!INCLUDE[TLA2#tla_dll](../../../../includes/tla2sharptla-dll-md.md)]產生.csv 或.txt 檔案的檔案。  
+    -   **剖析**或 **-p:** 剖析 Baml，資源，或[!INCLUDE[TLA2#tla_dll](../../../../includes/tla2sharptla-dll-md.md)]產生.csv 或.txt 檔案的檔案。  
   
-    -   **產生**或**-g:**當地語系化的二進位檔使用產生的轉譯的檔案。  
+    -   **產生**或 **-g:** 當地語系化的二進位檔使用產生的轉譯的檔案。  
   
-    -   **out**或**-o** {*filedirectory*] **:**輸出檔名稱。  
+    -   **out**或 **-o** {*filedirectory*] **:** 輸出檔名稱。  
   
-    -   **文化特性**或**的 cul** {*文化特性*] **:**輸出組件的地區設定。  
+    -   **文化特性**或**的 cul** {*文化特性*] **:** 輸出組件的地區設定。  
   
-    -   **轉譯**或**-trans** {*translation.csv*] **:** Translated 或當地語系化的檔案。  
+    -   **轉譯**或 **-trans** {*translation.csv*] **:** Translated 或當地語系化的檔案。  
   
-    -   **asmpath**或**-asmpath:** {*filedirectory*] **:**如果您[!INCLUDE[TLA2#tla_xaml](../../../../includes/tla2sharptla-xaml-md.md)]程式碼包含自訂控制項，您必須提供**asmpath**自訂控制項組件。  
+    -   **asmpath**或 **-asmpath:** {*filedirectory*] **:** 如果您[!INCLUDE[TLA2#tla_xaml](../../../../includes/tla2sharptla-xaml-md.md)]程式碼包含自訂控制項，您必須提供**asmpath**自訂控制項組件。  
   
     -   **nologo：**顯示無標誌或著作權資訊。  
   
@@ -172,7 +174,7 @@ ms.lasthandoff: 12/22/2017
   
 <a name="merge_translations"></a>   
 ## <a name="use-locbaml-to-generate-a-new-resourcesdll-file"></a>使用 LocBaml 來產生新的 .resources.dll 檔案  
- 藉由使用 LocBaml 來剖析 HelloApp.resources.dll 而識別的內容已轉譯，且必須合併回原始應用程式。 使用**產生**或**-g**產生新的選項.resources.dll 檔案。  
+ 藉由使用 LocBaml 來剖析 HelloApp.resources.dll 而識別的內容已轉譯，且必須合併回原始應用程式。 使用**產生**或 **-g**產生新的選項.resources.dll 檔案。  
   
 1.  使用下列語法來產生新的 HelloApp.resources.dll 檔案。 將文化特性標示為 en-US (/cul:en-US)。  
   
@@ -195,7 +197,7 @@ ms.lasthandoff: 12/22/2017
   
 7.  若要測試新的附屬組件，您需要變更您的應用程式用來執行的文化特性。 您可以使用下列其中一種做法：  
   
-    -   變更您的作業系統地區設定 (**啟動**&#124;**控制台**&#124;**地區及語言選項**)。  
+    -   變更您的作業系統地區設定 (**啟動** &#124; **控制台** &#124; **地區及語言選項**)。  
   
     -   在您的應用程式中，將下列程式碼加入 App.xaml.cs：  
   
@@ -216,6 +218,6 @@ ms.lasthandoff: 12/22/2017
 ## <a name="whats-next"></a>後續步驟  
  您現在對於如何使用 LocBaml 工具，應該有基本的了解。  您應該能夠建立包含 UID 的檔案。 藉由使用 LocBaml 工具，您應該能夠剖析檔案來擷取可當地語系化的內容，而在內容轉譯之後，您應該能夠產生將轉譯內容合併的 .resources.dll 檔案。 本主題可能無法顧及所有細節，但是您現在已經有了使用 LocBaml 將應用程式當地語系化所需的知識。  
   
-## <a name="see-also"></a>請參閱  
+## <a name="see-also"></a>另請參閱  
  [WPF 的全球化](../../../../docs/framework/wpf/advanced/globalization-for-wpf.md)  
  [使用自動配置概觀](../../../../docs/framework/wpf/advanced/use-automatic-layout-overview.md)

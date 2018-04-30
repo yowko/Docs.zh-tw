@@ -1,7 +1,7 @@
 ---
-title: "分散式資料管理的挑戰和解決方案"
-description: "容器化 .NET 應用程式的 .NET 微服務架構 | 分散式資料管理的挑戰和解決方案"
-keywords: "Docker, 微服務, ASP.NET, 容器"
+title: 分散式資料管理的挑戰和解決方案
+description: 容器化 .NET 應用程式的 .NET 微服務架構 | 分散式資料管理的挑戰和解決方案
+keywords: Docker, 微服務, ASP.NET, 容器
 author: CESARDELATORRE
 ms.author: wiwagn
 ms.date: 05/26/2017
@@ -11,11 +11,11 @@ ms.topic: article
 ms.workload:
 - dotnet
 - dotnetcore
-ms.openlocfilehash: b0252586a508c059099885991b87c79346e0d809
-ms.sourcegitcommit: e7f04439d78909229506b56935a1105a4149ff3d
+ms.openlocfilehash: a26f4243acee52e493a10f13ff18899823fd03ba
+ms.sourcegitcommit: 2e8acae16ae802f2d6d04e3ce0a6dbf04e476513
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 12/23/2017
+ms.lasthandoff: 04/18/2018
 ---
 # <a name="challenges-and-solutions-for-distributed-data-management"></a>分散式資料管理的挑戰和解決方案
 
@@ -89,29 +89,29 @@ ms.lasthandoff: 12/23/2017
 
 ## <a name="additional-resources"></a>其他資源
 
--   **CAP theorem**
-    [*https://en.wikipedia.org/wiki/CAP\_theorem*](https://en.wikipedia.org/wiki/CAP_theorem) (CAP 定理)
+-   **CAP 原理**
+    [*https://en.wikipedia.org/wiki/CAP\_theorem*](https://en.wikipedia.org/wiki/CAP_theorem)
 
--   **Eventual consistency**
-    [*https://en.wikipedia.org/wiki/Eventual\_consistency*](https://en.wikipedia.org/wiki/Eventual_consistency) (最終一致性)
+-   **最終一致性**
+    [*https://en.wikipedia.org/wiki/Eventual\_consistency*](https://en.wikipedia.org/wiki/Eventual_consistency)
 
 -   **資料一致性入門**
     [*https://msdn.microsoft.com/library/dn589800.aspx*](https://msdn.microsoft.com/library/dn589800.aspx)
 
--   **Martin Fowler：CQRS (Command and Query Responsibility Segregation)**
-    [*http://martinfowler.com/bliki/CQRS.html*](http://martinfowler.com/bliki/CQRS.html) (CQRS (命令與查詢責任隔離))
+-   **Martin Fowler：CQRS (命令與查詢職責分離)**
+    [*https://martinfowler.com/bliki/CQRS.html*](https://martinfowler.com/bliki/CQRS.html)
 
 -   **具體化檢視**
     [*https://docs.microsoft.com/azure/architecture/patterns/materialized-view*](https://docs.microsoft.com/azure/architecture/patterns/materialized-view)
 
--   **Charles Row。ACID vs.BASE: The Shifting pH of Database Transaction Processing**
-    [*http://www.dataversity.net/acid-vs-base-the-shifting-ph-of-database-transaction-processing/*](http://www.dataversity.net/acid-vs-base-the-shifting-ph-of-database-transaction-processing/) (ACID 與 BASE：調節資料庫交易處理的 pH 值
+-   **Charles Row。ACID vs.基礎：資料庫交易處理的轉換 pH**
+    [*http://www.dataversity.net/acid-vs-base-the-shifting-ph-of-database-transaction-processing/*](http://www.dataversity.net/acid-vs-base-the-shifting-ph-of-database-transaction-processing/)
 
 -   **補償交易**
     [*https://docs.microsoft.com/azure/architecture/patterns/compensating-transaction*](https://docs.microsoft.com/azure/architecture/patterns/compensating-transaction)
 
--   **Udi Dahan。Service Oriented Composition**
-    [*http://udidahan.com/2014/07/30/service-oriented-composition-with-video/*](http://udidahan.com/2014/07/30/service-oriented-composition-with-video/) (服務導向組合)
+-   **Udi Dahan.服務導向組合**
+    [*http://udidahan.com/2014/07/30/service-oriented-composition-with-video/*](http://udidahan.com/2014/07/30/service-oriented-composition-with-video/)
 
 
 >[!div class="step-by-step"]

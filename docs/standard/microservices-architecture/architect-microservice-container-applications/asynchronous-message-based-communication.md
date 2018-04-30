@@ -1,7 +1,7 @@
 ---
-title: "非同步訊息通訊"
-description: "容器化 .NET 應用程式的 .NET 微服務架構 | 非同步訊息通訊"
-keywords: "Docker, 微服務, ASP.NET, 容器"
+title: 非同步訊息通訊
+description: 容器化 .NET 應用程式的 .NET 微服務架構 | 非同步訊息通訊
+keywords: Docker, 微服務, ASP.NET, 容器
 author: CESARDELATORRE
 ms.author: wiwagn
 ms.date: 05/26/2017
@@ -11,11 +11,11 @@ ms.topic: article
 ms.workload:
 - dotnet
 - dotnetcore
-ms.openlocfilehash: 7469c41afa16bf96bc81a36c571e3e005c50d904
-ms.sourcegitcommit: c0dd436f6f8f44dc80dc43b07f6841a00b74b23f
+ms.openlocfilehash: 7c216dba3b763c310fe17e6294ae5f2b091f71f9
+ms.sourcegitcommit: 2e8acae16ae802f2d6d04e3ce0a6dbf04e476513
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 01/19/2018
+ms.lasthandoff: 04/18/2018
 ---
 # <a name="asynchronous-message-based-communication"></a>非同步訊息通訊
 
@@ -59,7 +59,7 @@ ms.lasthandoff: 01/19/2018
 
 如同在[分散式資料管理的挑戰和解決方案](#challenges-and-solutions-for-distributed-data-management)小節中稍早所提，您可以使用整合事件來實作跨越多個微服務的商務工作。 因此，您在這些服務之間會有最終一致性。 最終一致的交易是由分散式動作的集合所組成。 在每個動作中，相關的微服務會更新領域實體，並發行另一個整合事件，在相同的端對端商務工作內引發下一個動作。
 
-很重要的一點是，您可能想要傳達給訂閱相同事件訂閱的多個微服務。 若要這樣做，您可以根據事件驅動通訊，使用發行/訂閱傳訊，如圖 4-19 所示。 這個發行/訂閱機制不是微服務架構所獨有。 它是類似 DDD 中的[繫結內容](http://martinfowler.com/bliki/BoundedContext.html)的通訊方式，或是[命令和查詢責任隔離 (CQRS)](http://martinfowler.com/bliki/CQRS.html)架構模式中，您將更新寫入資料庫傳播到讀取資料庫的方式。 目標是在分散式系統的多個資料來源之間有最終一致性。
+很重要的一點是，您可能想要傳達給訂閱相同事件訂閱的多個微服務。 若要這樣做，您可以根據事件驅動通訊，使用發行/訂閱傳訊，如圖 4-19 所示。 這個發行/訂閱機制不是微服務架構所獨有。 它是類似 DDD 中的[繫結內容](https://martinfowler.com/bliki/BoundedContext.html)的通訊方式，或是[命令和查詢責任隔離 (CQRS)](https://martinfowler.com/bliki/CQRS.html)架構模式中，您將更新寫入資料庫傳播到讀取資料庫的方式。 目標是在分散式系統的多個資料來源之間有最終一致性。
 
 ![](./media/image19.png)
 
@@ -81,7 +81,7 @@ ms.lasthandoff: 01/19/2018
 
 -   使用像昃 MSMQ 的交易式 (DTC 型) 佇列。 (不過，這是傳統方法。)
 
--   使用[交易記錄採礦](http://www.scoop.it/t/sql-server-transaction-log-mining)。
+-   使用[交易記錄採礦](https://www.scoop.it/t/sql-server-transaction-log-mining)。
 
 -   使用完整的[事件溯源模式](https://msdn.microsoft.com/library/dn589792.aspx)。
 
@@ -91,25 +91,25 @@ ms.lasthandoff: 01/19/2018
 
 ## <a name="additional-resources"></a>其他資源
 
--   **Event-Driven Messaging (事件驅動傳訊)**
+-   **事件驅動訊息**
     [*http://soapatterns.org/design\_patterns/event\_driven\_messaging*](http://soapatterns.org/design_patterns/event_driven_messaging)
 
--   **Publish/Subscribe Channel**
+-   **發佈/訂閱頻道**
     [*http://www.enterpriseintegrationpatterns.com/patterns/messaging/PublishSubscribeChannel.html*](http://www.enterpriseintegrationpatterns.com/patterns/messaging/PublishSubscribeChannel.html)
 
--   **Udi Dahan.Clarified CQRS (釐清 CQRS)**
+-   **Udi Dahan.已釐清的 CQRS**
     [*http://udidahan.com/2009/12/09/clarified-cqrs/*](http://udidahan.com/2009/12/09/clarified-cqrs/)
 
--   **Command and Query Responsibility Segregation (CQRS) (命令與查詢責任隔離 (CQRS))**
+-   **命令與查詢職責分離 (CQRS)**
     [*https://docs.microsoft.com/azure/architecture/patterns/cqrs*](https://docs.microsoft.com/azure/architecture/patterns/cqrs)
 
--   **Communicating Between Bounded Contexts (在繫結內容之間通訊)**
+-   **已繫結內容之間的通訊**
     [*https://msdn.microsoft.com/library/jj591572.aspx*](https://msdn.microsoft.com/library/jj591572.aspx)
 
--   **Eventual consistency (最統一致性)**
+-   **最終一致性**
     [*https://en.wikipedia.org/wiki/Eventual\_consistency*](https://en.wikipedia.org/wiki/Eventual_consistency)
 
--   **Jimmy Bogard：Refactoring Towards Resilience: Evaluating Coupling (傾向復原的重構：評估結合)**
+-   **Jimmy Bogard：重構朝向彈性：評估結合程度**
     [*https://jimmybogard.com/refactoring-towards-resilience-evaluating-coupling/*](https://jimmybogard.com/refactoring-towards-resilience-evaluating-coupling/)
 
 

@@ -13,11 +13,11 @@ ms.assetid: 1e38e9d9-8284-46ee-a15f-199adc4f26f4
 ms.workload:
 - dotnet
 - dotnetcore
-ms.openlocfilehash: f2dddc21dfb124fe97c397a156743981a67e4037
-ms.sourcegitcommit: e7f04439d78909229506b56935a1105a4149ff3d
+ms.openlocfilehash: 85e30292fdc0e0e529eacdd328d4515bba5ee3e8
+ms.sourcegitcommit: 9a4fe1a1c37b26532654b4bbe22d702237950009
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 12/23/2017
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="async-overview"></a>非同步總覽
 
@@ -41,4 +41,14 @@ ms.lasthandoff: 12/23/2017
 
 ## <a name="whats-next"></a>後續步驟
 
-若要深入探討非同步概念和程式設計，請參閱[深入了解非同步](async-in-depth.md)和[工作架構非同步程式設計](~/docs/standard/parallel-programming/task-based-asynchronous-programming.md)。
+如需詳細資訊，請參閱[深入了解非同步](async-in-depth.md)主題。
+
+[非同步程式設計模式](/asynchronous-programming-patterns/index.md)主題概述 .NET 中所支援的三個非同步程式設計模式：  
+  
+-   [非同步程式設計模型 (APM)](asynchronous-programming-patterns/asynchronous-programming-model-apm.md) (舊版)  
+  
+-   [事件架構非同步模式 (EAP)](asynchronous-programming-patterns/event-based-asynchronous-pattern-eap.md) (舊版)  
+  
+-   [工作架構非同步模式 (TAP)](asynchronous-programming-patterns/task-based-asynchronous-pattern-tap.md) (新的開發建議)  
+
+如需建議且以工作為基礎之程式設計模型的詳細資訊，請參閱[以工作為基礎的非同步程式設計](parallel-programming/task-based-asynchronous-programming.md)主題。

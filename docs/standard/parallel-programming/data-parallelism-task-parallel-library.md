@@ -21,11 +21,11 @@ manager: wpickett
 ms.workload:
 - dotnet
 - dotnetcore
-ms.openlocfilehash: 0644e2d9e7a52dd5747c9442a4771aa7400cdcb0
-ms.sourcegitcommit: c0dd436f6f8f44dc80dc43b07f6841a00b74b23f
+ms.openlocfilehash: 8d048c89ee416de0b225d3e58cd24e73e1570785
+ms.sourcegitcommit: 2e8acae16ae802f2d6d04e3ce0a6dbf04e476513
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 01/19/2018
+ms.lasthandoff: 04/18/2018
 ---
 # <a name="data-parallelism-task-parallel-library"></a>資料平行處理原則 (工作平行程式庫)
 「資料平行處理原則」是指在來源集合或陣列中的元素上，同時 (也就是平行) 執行相同作業的情節。 在資料平行作業中，會將來源集合分割，讓多個執行緒可以同時在不同區段上操作。  
@@ -45,7 +45,7 @@ ms.lasthandoff: 01/19/2018
   
  <xref:System.Threading.Tasks.Parallel.For%2A?displayProperty=nameWithType> 和 <xref:System.Threading.Tasks.Parallel.ForEach%2A?displayProperty=nameWithType> 方法都有數個多載，可讓您停止或中斷迴圈執行、監視其他執行緒上的迴圈狀態、維護執行緒區域狀態、完成執行緒區域物件、控制並行程度等等。 啟用這個功能的 Helper 類型包括 <xref:System.Threading.Tasks.ParallelLoopState>、<xref:System.Threading.Tasks.ParallelOptions>、<xref:System.Threading.Tasks.ParallelLoopResult>、<xref:System.Threading.CancellationToken> 和 <xref:System.Threading.CancellationTokenSource>。  
   
- 如需詳細資訊，請參閱[平行程式設計模式](http://go.microsoft.com/fwlink/p/?LinkId=265491)。  
+ 如需詳細資訊，請參閱[平行程式設計模式：了解及套用使用 .NET Framework 4 的平行模式](https://www.microsoft.com/download/details.aspx?id=19222)。  
   
  PLINQ 可支援使用宣告式 (或類似查詢) 語法的資料平行處理原則。 如需詳細資訊，請參閱 [Parallel LINQ (PLINQ)](../../../docs/standard/parallel-programming/parallel-linq-plinq.md)。  
   
@@ -55,7 +55,7 @@ ms.lasthandoff: 01/19/2018
 |-----------|-----------------|  
 |[操作說明：撰寫簡單的 Parallel.For 迴圈](../../../docs/standard/parallel-programming/how-to-write-a-simple-parallel-for-loop.md)|說明如何透過任何陣列或可建立索引的 <xref:System.Collections.Generic.IEnumerable%601> 來源集合，撰寫 <xref:System.Threading.Tasks.Parallel.For%2A> 迴圈。|  
 |[操作說明：撰寫簡單的 Parallel.ForEach 迴圈](../../../docs/standard/parallel-programming/how-to-write-a-simple-parallel-foreach-loop.md)|說明如何透過任何 <xref:System.Collections.Generic.IEnumerable%601> 來源集合，撰寫 <xref:System.Threading.Tasks.Parallel.ForEach%2A> 迴圈。|  
-|[如何：停止或中斷 Parallel.For 迴圈](http://msdn.microsoft.com/library/de52e4f1-9346-4ad5-b582-1a4d54dc7f7e)|描述如何停止或中斷平行迴圈，讓所有執行緒都能收到動作的通知。|  
+|[如何：停止或中斷 Parallel.For 迴圈](https://msdn.microsoft.com/library/de52e4f1-9346-4ad5-b582-1a4d54dc7f7e)|描述如何停止或中斷平行迴圈，讓所有執行緒都能收到動作的通知。|  
 |[操作說明：撰寫含有執行緒區域變數的 Parallel.For 迴圈](../../../docs/standard/parallel-programming/how-to-write-a-parallel-for-loop-with-thread-local-variables.md)|說明如何撰寫 <xref:System.Threading.Tasks.Parallel.For%2A> 迴圈 (其中每個執行緒各維護一個任何其他執行緒都看不到的私用變數)，以及當迴圈完成時，如何同步處理所有執行緒的結果。|  
 |[操作說明：撰寫含有執行緒區域變數的 Parallel.ForEach 迴圈](../../../docs/standard/parallel-programming/how-to-write-a-parallel-foreach-loop-with-thread-local-variables.md)|說明如何撰寫 <xref:System.Threading.Tasks.Parallel.ForEach%2A> 迴圈 (其中每個執行緒各維護一個任何其他執行緒都看不到的私用變數)，以及當迴圈完成時，如何同步處理所有執行緒的結果。|  
 |[操作說明：取消 Parallel.For 或 ForEach 迴圈](../../../docs/standard/parallel-programming/how-to-cancel-a-parallel-for-or-foreach-loop.md)|說明如何使用 <xref:System.Threading.CancellationToken?displayProperty=nameWithType> 來取消平行迴圈|  
