@@ -8,15 +8,15 @@ ms.topic: article
 ms.prod: .net
 ms.technology: devlang-csharp
 ms.devlang: csharp
-ms.openlocfilehash: 57fa8f52320b30a1cb228b41e3f5e6655c235561
-ms.sourcegitcommit: 9a4fe1a1c37b26532654b4bbe22d702237950009
+ms.openlocfilehash: 98c58d083cb806a92e28c1c9d27effa1124fd153
+ms.sourcegitcommit: 86adcc06e35390f13c1e372c36d2e044f1fc31ef
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/16/2018
+ms.lasthandoff: 04/26/2018
 ---
 # <a name="ref-returns-and-ref-locals"></a>ref 傳回值和 ref 區域變數
 
-從 C# 7 開始，C# 支援參考傳回值 (ref 傳回值)。 參考傳回值允許方法將變數參考 (而非值) 傳回給呼叫者。 呼叫者接著可以選擇將傳回的變數視為以傳值方式或以傳址方式傳回。 呼叫者可建立本身為參考傳回值的新變數，稱為 ref 區域變數。
+從 C# 7.0 開始，C# 支援參考傳回值 (ref 傳回值)。 參考傳回值允許方法將變數參考 (而非值) 傳回給呼叫者。 呼叫者接著可以選擇將傳回的變數視為以傳值方式或以傳址方式傳回。 呼叫者可建立本身為參考傳回值的新變數，稱為 ref 區域變數。
 
 ## <a name="what-is-a-reference-return-value"></a>何謂參考傳回值？
 
