@@ -16,11 +16,11 @@ ms.assetid: 568f1645-1305-4906-8625-5d77af81e04f
 caps.latest.revision: 22
 author: BillWagner
 ms.author: wiwagn
-ms.openlocfilehash: d6b740e78503d0937c9a0f38a573bb7dd778075d
-ms.sourcegitcommit: 86adcc06e35390f13c1e372c36d2e044f1fc31ef
+ms.openlocfilehash: 16c08ff42ce77b3901f5909571c528394d139e03
+ms.sourcegitcommit: 2042de78fcdceebb6b8ac4b7a292b93e8782cbf5
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/26/2018
+ms.lasthandoff: 04/27/2018
 ---
 # <a name="walkthrough-creating-and-using-dynamic-objects-c-and-visual-basic"></a>逐步解說：建立和使用動態物件 (C# 和 Visual Basic)
 
@@ -48,7 +48,7 @@ ms.lasthandoff: 04/26/2018
   
 #### <a name="to-create-a-custom-dynamic-class"></a>若要建立自訂動態類別  
   
-1.  啟動 [!INCLUDE[vsprvs](~/includes/vsprvs-md.md)]。  
+1.  啟動 Visual Studio。  
   
 2.  在 [ **檔案** ] 功能表上，指向 [ **新增** ]，然後按一下 [ **專案**]。  
   
@@ -143,7 +143,7 @@ ms.lasthandoff: 04/26/2018
   
 #### <a name="to-create-a-custom-dynamic-class"></a>若要建立自訂動態類別  
   
-1.  在 [!INCLUDE[vsprvs](~/includes/vsprvs-md.md)] 的 [檔案] 功能表中，指向 [新增]，然後按一下 [專案]。  
+1.  在 Visual Studio 的 [檔案] 功能表上，指向 [新增]，然後按一下 [專案]。  
   
 2.  在 [新增專案] 對話方塊的 [專案類型] 窗格中，確認已選取 [Windows]。 選取 [範本] 窗格中的 [主控台應用程式]。 在 [名稱] 方塊中，輸入 `DynamicIronPythonSample` 並按一下 [確定]。 隨即會建立新專案。  
   
