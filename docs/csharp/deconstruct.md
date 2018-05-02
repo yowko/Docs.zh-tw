@@ -1,6 +1,6 @@
 ---
-title: "解構元組和其他類型"
-description: "了解如何解構 Tuple 和其他類型。"
+title: 解構元組和其他類型
+description: 了解如何解構 Tuple 和其他類型。
 keywords: .NET,.NET Core,C#
 author: rpetrusha
 ms-author: ronpet
@@ -10,11 +10,11 @@ ms.prod: .net
 ms.technology: devlang-csharp
 ms.devlang: csharp
 ms.assetid: 0b0c4b0f-4a47-4f66-9b8e-f5c63b195960
-ms.openlocfilehash: e626eeb1f3de2716e1ffe4fcbec1c16558e5bf0e
-ms.sourcegitcommit: a3ba258f7a8cab5c6d19a3743dd95e904ecebc44
+ms.openlocfilehash: 5a119f935b1cc80fe5cf738f03057c68c7eb5ba5
+ms.sourcegitcommit: 86adcc06e35390f13c1e372c36d2e044f1fc31ef
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 11/27/2017
+ms.lasthandoff: 04/26/2018
 ---
 # <a name="deconstructing-tuples-and-other-types"></a>解構元組和其他類型 #
 
@@ -24,7 +24,7 @@ ms.lasthandoff: 11/27/2017
 
 從一個物件擷取多個欄位和屬性值可能一樣麻煩：您必須逐成員將欄位或屬性值指派給個別變數。 
 
-從 C# 7 開始，您可以透過單一 *deconstruct* 作業，從一個元組擷取多個項目，或從一個物件擷取多個欄位、屬性和計算值。 當您解構元組時，您會將其項目指派給個別變數。 當您解構物件時，您會將選取的值指派給個別變數。 
+從 C# 7.0 開始，您可以透過單一 *deconstruct* 作業，從一個 Tuple 擷取多個項目，或從一個物件擷取多個欄位、屬性和計算值。 當您解構元組時，您會將其項目指派給個別變數。 當您解構物件時，您會將選取的值指派給個別變數。 
 
 ## <a name="deconstructing-a-tuple"></a>解構元組
 
@@ -34,7 +34,7 @@ C# 提供解構元組的內建支援，讓您以單一作業將元組中的所�
 var (name, address, city, zip) = contact.GetAddressInfo();
 ```
 
-有三種方法來拆解 tuple:
+解構 Tuple 的方式有三種：
 
 - 您可以明確地宣告括弧內每個欄位的類型。 下列範例會使用此方法來解構 `QueryCityData` 方法傳回的 3 元組。
 
@@ -50,7 +50,7 @@ var (name, address, city, zip) = contact.GetAddressInfo();
 
     這樣做很麻煩，因此不建議使用。
 
-- 最後，您可能會毀滅 tuple 到已經宣告的變數。
+- 最後，您可能會將 Tuple 解構成已宣告的變數。
 
     [!code-csharp[Deconstruction-Declared](../../samples/snippets/csharp/programming-guide/deconstructing-tuples/deconstruct-tuple5.cs#1)]
 
@@ -58,11 +58,11 @@ var (name, address, city, zip) = contact.GetAddressInfo();
 
 請注意，您也必須將元組的每個項目指派給個別變數。 如果您省略任何項目，編譯器會產生錯誤 CS8132：「無法將 'x' 項目的元組解構為 'y' 變數」。
 
-請注意您不能混用宣告和解構指派給現有變數的左側。 編譯器會產生錯誤 CS8184，「 解構不能混用宣告和左右手邊的運算式。 」 當成員包含新的宣告和現有的變數。
+請注意，您不能在解構左側混用現有變數的宣告和指派。 當成員包含新宣告和現有的變數時，編譯器會產生錯誤 CS8184： 「解構不得混合左側的宣告與運算式。
 
 ## <a name="deconstructing-tuple-elements-with-discards"></a>使用 Discard 解構元組項目
 
-解構元組時，您通常只對部分項目的值感興趣。 從 C# 7 開始，您可以利用 C# 的 *discard* 支援，這是您已選擇忽略其值的唯寫變數。 Discard 是由指派中的底線字元 ("\_") 指定。 您可以視需要捨棄許多值，每個值都會以單一 discard `_` 表示。
+解構元組時，您通常只對部分項目的值感興趣。 從 C# 7.0 開始，您可以使 C# 的 *discard* 支援，這是您已選擇忽略其值的唯寫變數。 Discard 是由指派中的底線字元 ("\_") 指定。 您可以視需要捨棄許多值，每個值都會以單一 discard `_` 表示。
 
 下列範例說明如何搭配使用元組與 discard。 `QueryCityDataForYears` 方法會傳回 6 元組，其中包含城市名稱、其區碼、年份、該年的城市人口、次年的年份、次年的城市人口。 此範例會顯示這兩年之間的人口變化。 在元組可用的資料中，我們對城市區碼不感興趣，並在設計階段得知城市名稱及兩個日期。 因此，我們只對元組中所儲存的兩個人口值感興趣，而可以將其餘值視為 discard。  
 
@@ -108,6 +108,6 @@ var (name, address, city, zip) = contact.GetAddressInfo();
 
 [!code-csharp[Extension-deconstruct](../../samples/snippets/csharp/programming-guide/deconstructing-tuples/deconstruct-extension1.cs)]
  
-## <a name="see-also"></a>請參閱
+## <a name="see-also"></a>另請參閱
 [Discard](discards.md)   
 [元組](tuples.md)  

@@ -1,22 +1,24 @@
 ---
-title: ".NET Framework 4 移轉問題"
+title: .NET Framework 4 移轉問題
 ms.date: 05/02/2017
 ms.prod: .net-framework
-ms.technology: dotnet-clr
+ms.technology:
+- dotnet-clr
 ms.topic: article
 helpviewer_keywords:
 - .NET Framework 4, migration
 - application compatibility
 ms.assetid: df478548-8c05-4de2-8ba7-adcdbe1c2a60
 author: rpetrusha
-ms.author: mariaw
+ms.author: ronpet
 manager: wpickett
-ms.workload: mariaw
-ms.openlocfilehash: b92299279e57a0662f7438cad7c6009d53bda9ee
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.workload:
+- mariaw
+ms.openlocfilehash: 05c86759b16fa4e1cbf31b7409601cb6b91cd08e
+ms.sourcegitcommit: 2e8acae16ae802f2d6d04e3ce0a6dbf04e476513
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 04/18/2018
 ---
 # <a name="net-framework-4-migration-issues"></a>.NET Framework 4 移轉問題
 
@@ -152,7 +154,7 @@ ms.lasthandoff: 12/22/2017
 
 | 功能 | 3.5 SP1 的差異 |
 | ------- | ------------------------ |
-| **POCO 案例** | <xref:System.Data.Objects.DataClasses.IRelatedEnd> 介面有新的方法可改善其在純舊 CLR 物件 (POCO) 案例中的使用性。 這些新方法接受 <xref:System.Object> 作為參數，而不接受 <xref:System.Data.Objects.DataClasses.IEntityWithRelationships> 實體。 |
+| **POCO 案例** | <xref:System.Data.Objects.DataClasses.IRelatedEnd> 介面有新的方法可改善其在簡單的 CLR 物件 (POCO) 案例中的使用性。 這些新方法接受 <xref:System.Object> 作為參數，而不接受 <xref:System.Data.Objects.DataClasses.IEntityWithRelationships> 實體。 |
 | **編輯資料列** | <xref:System.Data.DataView> 類別所實作的 <xref:System.Collections.IList.IndexOf%2A> 方法現在會正確地傳回所編輯資料列的值，而不是傳回 -1。 |
 | **事件** | 現在，資料列處於已修改狀態並呼叫 <xref:System.Data.DataRow.RejectChanges%2A> 方法時，會引發 <xref:System.Data.DataRowView.PropertyChanged> 事件。 這項變更可讓您更輕鬆地建立可公開 <xref:System.Data.DataSet> 物件內容的 UI 控制項。 |
 | **例外狀況** | 未設定或開啟連線時，<xref:System.Data.SqlClient.SqlCommand.Prepare%2A> 方法現在會擲回 <xref:System.InvalidOperationException>，而不是 <xref:System.NullReferenceException>。 |
