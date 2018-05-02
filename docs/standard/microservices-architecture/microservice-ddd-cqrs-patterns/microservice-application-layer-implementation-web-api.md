@@ -11,11 +11,11 @@ ms.topic: article
 ms.workload:
 - dotnet
 - dotnetcore
-ms.openlocfilehash: bdb080369c26a3d7ffab97f93ba3419d6bd84754
-ms.sourcegitcommit: b750a8e3979749b214e7e10c82efb0a0524dfcb1
+ms.openlocfilehash: b960636863ae1dcb0c955d96875d499b54b04105
+ms.sourcegitcommit: 86adcc06e35390f13c1e372c36d2e044f1fc31ef
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/09/2018
+ms.lasthandoff: 04/26/2018
 ---
 # <a name="implementing-the-microservice-application-layer-using-the-web-api"></a>使用 Web API 實作微服務應用程式層
 
@@ -158,7 +158,7 @@ public class ApplicationModule : Autofac.Module
 }
 ```
 
-註冊程序和概念與您可向內建 ASP.NET Core iOS 容器註冊類型的方式極為類似，但使用 Autofac 時的語法略為不同。
+註冊程序和概念與您可向內建 ASP.NET Core IoC 容器註冊類型的方式極為類似，但使用 Autofac 時的語法略為不同。
 
 在範例程式碼中，會一起註冊抽象 IOrderRepository 與實作類別 OrderRepository。 這表示只要建構函式透過 IOrderRepository 抽象或介面來宣告相依性，IoC 容器就會插入 OrderRepository 類別的執行個體。
 

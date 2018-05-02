@@ -14,11 +14,11 @@ ms.assetid: a52de048-fbe0-41b0-82ec-8e4ac04d3a71
 caps.latest.revision: 11
 author: BillWagner
 ms.author: wiwagn
-ms.openlocfilehash: a2e8426e5c5be16be0114b5ccc66f30793ce7dda
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.openlocfilehash: 3cdf639065ee5bf0cb9e920061557991c0a4b921
+ms.sourcegitcommit: 86adcc06e35390f13c1e372c36d2e044f1fc31ef
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 04/26/2018
 ---
 # <a name="get-c-reference"></a>get (C# 參考)
 
@@ -28,7 +28,7 @@ ms.lasthandoff: 11/21/2017
  
  [!code-csharp[get#1](../../../../samples/snippets/csharp/language-reference/keywords/get/get-1.cs)]  
   
-`get` 存取子通常是由傳回值的單一陳述式所組成，如上述範例所示。 從 C# 7 開始，您可以將 `get` 存取子實作為運算式主體成員。 下列範例會將 `get` 和 `set` 存取子實作為運算式主體成員。
+`get` 存取子通常是由傳回值的單一陳述式所組成，如上述範例所示。 從 C# 7.0 開始，您可以將 `get` 存取子實作為運算式主體成員。 下列範例會將 `get` 和 `set` 存取子實作為運算式主體成員。
 
  [!code-csharp[get#3](../../../../samples/snippets/csharp/language-reference/keywords/get/get-3.cs)]   
  
@@ -40,7 +40,7 @@ ms.lasthandoff: 11/21/2017
 
  [!INCLUDE[CSharplangspec](~/includes/csharplangspec-md.md)]  
   
-## <a name="see-also"></a>另請參閱  
+## <a name="see-also"></a>請參閱  
  [C# 參考](../../../csharp/language-reference/index.md)  
  [C# 程式設計指南](../../../csharp/programming-guide/index.md)  
  [C# 關鍵字](../../../csharp/language-reference/keywords/index.md)[屬性](../../../csharp/programming-guide/classes-and-structs/properties.md)

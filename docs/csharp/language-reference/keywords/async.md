@@ -15,11 +15,11 @@ ms.assetid: 16f14f09-b2ce-42c7-a875-e4eca5d50674
 caps.latest.revision: 52
 author: BillWagner
 ms.author: wiwagn
-ms.openlocfilehash: 2ddbd0f7268dd5dae4095d661cf800b5b481cbbd
-ms.sourcegitcommit: 83dd5ec003e788ccb3e33f3412a7af39ae347646
+ms.openlocfilehash: 50b22ea94e8079e29c1e2ba2a595544ce23bd216
+ms.sourcegitcommit: 86adcc06e35390f13c1e372c36d2e044f1fc31ef
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 03/15/2018
+ms.lasthandoff: 04/26/2018
 ---
 # <a name="async-c-reference"></a>async (C# 參考)
 使用 `async` 修飾詞可將方法、[Lambda 運算式](../../../csharp/programming-guide/statements-expressions-operators/lambda-expressions.md)或[匿名方法](../../../csharp/programming-guide/statements-expressions-operators/anonymous-methods.md)指定為非同步。 如果您在方法或運算式上使用這個修飾詞，則它是指「非同步方法」。 下例定義名為 `ExampleMethodAsync` 的非同步方法： 
@@ -76,7 +76,7 @@ string contents = await httpClient.GetStringAsync(requestUrl);
 - <xref:System.Threading.Tasks.Task>
 - <xref:System.Threading.Tasks.Task%601>
 - [void](../../../csharp/language-reference/keywords/void.md)，應該只用於事件處理常式。
-- 自 C# 7 開始，任何具有可存取 `GetAwaiter` 方法的類型。 `System.Threading.Tasks.ValueTask<TResult>` 類型就是一個這種實作。 新增 NuGet 套件 `System.Threading.Tasks.Extensions` 即可使用。 
+- 自 C# 7.0 開始，任何具有可存取 `GetAwaiter` 方法的型別。 `System.Threading.Tasks.ValueTask<TResult>` 類型就是一個這種實作。 新增 NuGet 套件 `System.Threading.Tasks.Extensions` 即可使用。 
 
 非同步方法不可宣告任何 [in](../../../csharp/language-reference/keywords/in-parameter-modifier.md)、[ref](../../../csharp/language-reference/keywords/ref.md) 或 [out](../../../csharp/language-reference/keywords/out-parameter-modifier.md) 參數，也不可以有 [參考傳回值](../../programming-guide/classes-and-structs/ref-returns.md)，但可以呼叫有這類參數的方法。  
   
@@ -84,7 +84,7 @@ string contents = await httpClient.GetStringAsync(requestUrl);
   
 您主要是使用 `void` 傳回類型定義需要該傳回類型的事件處理常式。 傳回 `void` 之非同步方法的呼叫端無法等候它，而且無法攔截方法擲回的例外狀況。  
 
-自 C# 7 開始，您會傳回另一個類型，通常是實值型別，具有 `GetAwaiter` 方法可將程式碼效能關鍵區段中的記憶體配置降至最低。 
+自 C# 7.0 開始，您會傳回另一個型別，通常是實值型別，具有 `GetAwaiter` 方法可將程式碼效能關鍵區段中的記憶體配置降至最低。 
 
 如需詳細資訊和範例，請參閱[非同步方法的傳回型別](../../../csharp/programming-guide/concepts/async/async-return-types.md)。  
   

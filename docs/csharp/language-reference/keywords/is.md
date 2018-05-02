@@ -15,15 +15,15 @@ ms.assetid: bc62316a-d41f-4f90-8300-c6f4f0556e43
 caps.latest.revision: 20
 author: BillWagner
 ms.author: wiwagn
-ms.openlocfilehash: 9f0242439caa21268a6c314409f41587890c4126
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.openlocfilehash: 44c15eb9d65adf10904f8777847b0653ff1dbc99
+ms.sourcegitcommit: 86adcc06e35390f13c1e372c36d2e044f1fc31ef
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 04/26/2018
 ---
 # <a name="is-c-reference"></a>is (C# 參考) #
 
-檢查物件是否與指定的類型相容，或 (從 C# 7 開始) 根據模式來測試運算式。
+檢查物件是否與指定的類型相容，或 (從 C# 7.0 開始) 根據模式來測試運算式。
 
 ## <a name="testing-for-type-compatibility"></a>測試類型相容性 ##
 
@@ -60,11 +60,11 @@ ms.lasthandoff: 11/21/2017
 `expr` 可以是傳回值的任何運算式，但匿名方法和 Lambda 運算式則除外。 下列範例使用 `is` 來評估方法呼叫的傳回值。   
 [!code-csharp[is#4](../../../../samples/snippets/csharp/language-reference/keywords/is/is4.cs#4)]
 
-從 C# 7 開始，您可以搭配[類型模式](#type)使用模式比對來撰寫更簡潔的程式碼，以使用 `is` 陳述式。
+從 C# 7.0 開始，您可以搭配[類型模式](#type)使用模式比對來撰寫更簡潔的程式碼，以使用 `is` 陳述式。
 
 ## <a name="pattern-matching-with-is"></a>以 `is` 進行的模式比對 ##
 
-從 C# 7 開始，`is` 和 [switch](../../../csharp/language-reference/keywords/switch.md) 陳述式支援模式比對。 `is` 關鍵字支援下列模式：
+從 C# 7.0 開始，`is` 和 [switch](../../../csharp/language-reference/keywords/switch.md) 陳述式支援模式比對。 `is` 關鍵字支援下列模式：
 
 - [類型模式](#type)，測試運算式是否可轉換成指定的類型；如果可以的話，則會將它轉換成該類型的變數。
 
@@ -112,7 +112,7 @@ ms.lasthandoff: 11/21/2017
 
 ### <a name="a-nameconstant--constant-pattern"></a><a name="constant" /> 常數模式 ###
 
-以常數模式執行模式比對時，`is` 會測試運算式是否等於指定的常數。 在 C# 6 (含) 以前版本中，[switch](switch.md) 陳述式支援常數模式。 從 C# 7 開始，`is` 陳述式也提供支援。 它的語法為：
+以常數模式執行模式比對時，`is` 會測試運算式是否等於指定的常數。 在 C# 6 (含) 以前版本中，[switch](switch.md) 陳述式支援常數模式。 從 C# 7.0 開始，`is` 陳述式也提供支援。 它的語法為：
 
 ```csharp
    expr is constant
@@ -154,7 +154,7 @@ ms.lasthandoff: 11/21/2017
   
 [!INCLUDE[CSharplangspec](~/includes/csharplangspec-md.md)]  
   
-## <a name="see-also"></a>請參閱  
+## <a name="see-also"></a>另請參閱  
  [C# 參考](../../../csharp/language-reference/index.md)  
  [C# 關鍵字](../../../csharp/language-reference/keywords/index.md)  
  [typeof](../../../csharp/language-reference/keywords/typeof.md)  

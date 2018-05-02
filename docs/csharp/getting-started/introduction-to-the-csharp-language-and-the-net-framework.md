@@ -1,28 +1,29 @@
 ---
-title: "C# 語言和 .NET Framework 簡介"
-description: "了解 C# 與 .NET 的基本概念。 取得 C# 語言與 .NET 生態系統的概觀。"
+title: C# 語言和 .NET Framework 簡介
+description: 了解 C# 與 .NET 的基本概念。 取得 C# 語言與 .NET 生態系統的概觀。
 ms.date: 07/20/2015
 ms.prod: .net
-ms.technology: devlang-csharp
+ms.technology:
+- devlang-csharp
 ms.topic: get-started-article
 helpviewer_keywords:
 - C# language, about C# language
 - Visual C#, about
 ms.assetid: 0a2dff4e-cd84-42ff-8141-e89889b24081
-caps.latest.revision: "32"
+caps.latest.revision: 32
 author: BillWagner
 ms.author: wiwagn
-ms.openlocfilehash: b2ffb641f436a41c97a94a6ec117f6087851d482
-ms.sourcegitcommit: 8bde7a3432f30fc771079744955c75c58c4eb393
+ms.openlocfilehash: 9713b61e9af25e6acba2d6b11b46f2e99f1f1800
+ms.sourcegitcommit: 86adcc06e35390f13c1e372c36d2e044f1fc31ef
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 01/20/2018
+ms.lasthandoff: 04/26/2018
 ---
 # <a name="introduction-to-the-c-language-and-the-net-framework"></a>C# 語言和 .NET Framework 簡介
 C# 是型別安全的優質物件導向語言，可讓開發人員建置各種在 [!INCLUDE[dnprdnshort](~/includes/dnprdnshort-md.md)] 上執行且兼俱安全性與穩定性的應用程式。 您可以使用 C# 建立 Windows 用戶端應用程式、XML Web 服務、分散式元件、主從應用程式、資料庫應用程式，而且還不僅止於此。 Visual C# 提供進階的程式碼編輯器、使用方便的使用者介面設計工具、整合式偵錯工具及許多其他工具，以根據 C# 語言和 [!INCLUDE[dnprdnshort](~/includes/dnprdnshort-md.md)] 輕鬆地開發應用程式。  
   
 > [!NOTE]
-> [!INCLUDE[csprcs](~/includes/csprcs-md.md)] 文件假設您了解基本程式設計概念。 如果您是新手，可能會想要瀏覽網站上的 [!INCLUDE[csprcsxpr](~/includes/csprcsxpr-md.md)]。 您也可以利用 C# 的相關書籍和 Web 資源來了解實用的程式設計技能。  
+> Visual C# 文件假設您了解基本程式設計概念。 如果您是新手，可能會想要瀏覽網站上提供的 Visual C# Express。 您也可以利用 C# 的相關書籍和 Web 資源來了解實用的程式設計技能。  
   
 ## <a name="c-language"></a>C# 語言  
  C# 語法的表達能力相當高，同時也很簡單且易於了解。 熟悉 C、C++ 或 Java 的任何人都能立即辨識出 C# 的大括號語法。 了解上述任何一種語言的開發人員一般都能在極短時間內開始用 C# 有效率地工作。 C# 語法可大幅簡化 C++ 的複雜性，並提供強大的功能，例如可為 Null 的實值型別、列舉、委派、lambda 運算式，還有 Java 中所沒有的直接記憶體存取。 C# 支援泛型方法和型別，提供更高的型別安全和效能。C# 也支援迭代器，讓集合類別的實作者定義自訂的反覆項目表現方式，使得用戶端程式碼可以容易地使用。 [!INCLUDE[vbteclinqext](~/includes/vbteclinqext-md.md)] 運算式可讓強型別查詢成為優先使用的語言建構。  

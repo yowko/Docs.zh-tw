@@ -1,37 +1,52 @@
 ---
-title: "預設值運算式 (C# 程式設計指南)"
-description: "預設值運算式會為任何參考型別或實值型別產生預設值"
-ms.date: 08/23/2017
+title: 預設值運算式 (C# 程式設計指南)
+description: 預設值運算式會為任何參考型別或實值型別產生預設值
+ms.date: 04/25/2018
 ms.prod: .net
-ms.technology: devlang-csharp
+ms.technology:
+- devlang-csharp
 ms.topic: article
 helpviewer_keywords:
 - generics [C#], default keyword
 - default keyword [C#], generic programming
-ms.assetid: b9daf449-4e64-496e-8592-6ed2c8875a98
-caps.latest.revision: "22"
 author: BillWagner
 ms.author: wiwagn
-ms.openlocfilehash: c2bb1c269e5347d615c47ab828506aef538c4761
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.openlocfilehash: 174ac79c9e2c4a4e628816b1178d420ec7cfc809
+ms.sourcegitcommit: 86adcc06e35390f13c1e372c36d2e044f1fc31ef
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 04/26/2018
 ---
 # <a name="default-value-expressions-c-programming-guide"></a>預設值運算式 (C# 程式設計指南)
 
-預設值運算式會為型別產生預設值。 預設值運算式對泛型類別和方法特別有用。 使用泛型時會發生一個問題，也就是當您無法預先知道下列資訊時，如何將預設值指派給參數化型別 `T`：
+預設值運算式 `default(T)` 會產生型別 `T` 的預設值。 下表顯示將為各種型別產生哪些值：
+
+|類型|預設值|
+|---------|---------|
+|任何參考類型|`null`|
+|數值型別|零|
+|[bool](../../language-reference/keywords/bool.md)|`false`|
+|[char](../../language-reference/keywords/char.md)|`'\0'`|
+|[enum](../../language-reference/keywords/enum.md)|這個值是由運算式 `(E)0` 所產生，其中 `E` 是列舉識別碼。|
+|[struct](../../language-reference/keywords/struct.md)|這個值是藉由將所有實值型別欄位設定為其預設值，並將所有參考型別欄位設定為 `null` 所產生。|
+|可為 Null 的型別|<xref:System.Nullable%601.HasValue%2A> 屬性是 `false` 且未定義 <xref:System.Nullable%601.Value%2A> 屬性的執行個體。|
+
+預設值運算式對泛型類別和方法特別有用。 使用泛型時會發生一個問題，也就是當您無法預先知道下列資訊時，如何指派參數化型別 `T` 的預設值：
 
 - `T` 是參考型別或實值型別。
-- 如果 `T` 是實值型別，則會是數值或使用者定義結構。
+- 如果 `T` 是實值型別，則其是數值還是結構。
 
- 假設有參數化型別 `T` 的變數 `t`，陳述式 `t = null` 就只在 `T` 為參考型別時有效。 指派 `t = 0` 僅適用於數值型別，而不適用於結構。 解決方案是使用預設值運算式，若為參考型別 (類別類型及介面類型)，其傳回 `null`；若為數值型別，其傳回零。 若是使用者定義結構，其傳回已初始化為零位元模式的結構，而依據成員為數值或參考型別，來為各成員產生 0 或 `null`。 若是可為 Null 的實值型別，`default` 會傳回 <xref:System.Nullable%601?displayProperty=nameWithType>，該值會與任何結構一樣經過初始化。
+ 假設有參數化型別 `T` 的變數 `t`，陳述式 `t = null` 就只在 `T` 為參考型別時有效。 指派 `t = 0` 僅適用於數值型別，而不適用於結構。 若要解決該問題，請使用預設值運算式：
+
+```csharp
+T t = default(T);
+```
 
 `default(T)` 運算式不限於泛型類別及方法。 預設值運算式可搭配任何 managed 型別使用。 以下任一運算式均有效：
 
  [!code-csharp[csProgGuideGenerics#1](../../../../samples/snippets/csharp/programming-guide/statements-expressions-operators/default-value-expressions.cs)]
 
- 下列 `GenericList<T>` 類別的範例示範如何在泛型類別中使用 `default(T)` 運算子。 如需詳細資訊，請參閱[泛型概觀](../generics/introduction-to-generics.md)。
+ 下列 `GenericList<T>` 類別的範例示範如何在泛型類別中使用 `default(T)` 運算子。 如需詳細資訊，請參閱[泛型簡介](../generics/introduction-to-generics.md)。
 
  [!code-csharp[csProgGuideGenerics#2](../../../../samples/snippets/csharp/VS_Snippets_VBCSharp/csProgGuideGenerics/CS/Generics.cs#Snippet41)]
 
@@ -49,9 +64,11 @@ ms.lasthandoff: 11/21/2017
 
 [!code-csharp[csProgGuideGenerics#3](../../../../samples/snippets/csharp/programming-guide/statements-expressions-operators/default-literal.cs)]
 
-## <a name="see-also"></a>請參閱
+## <a name="see-also"></a>另請參閱
 
- <xref:System.Collections.Generic>[C# 程式設計手冊](../index.md)  
- [泛型](../generics/index.md)  
+ <xref:System.Collections.Generic>  
+ [C# 程式設計指南](../index.md)  
+ [泛型 (C# 程式設計手冊)](../generics/index.md)  
  [泛型方法](../generics/generic-methods.md)  
- [泛型](~/docs/standard/generics/index.md)  
+ [.NET 的泛型](~/docs/standard/generics/index.md)  
+ [預設值表](../../language-reference/keywords/default-values-table.md)

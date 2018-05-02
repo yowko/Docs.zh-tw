@@ -13,11 +13,11 @@ ms.assetid: 3673e4ca-6098-4ec1-890f-8fceb2a794a2
 caps.latest.revision: 11
 author: BillWagner
 ms.author: wiwagn
-ms.openlocfilehash: 0604a559be25c300fcdc6041975306b465fc595f
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.openlocfilehash: 9b196bbbce110acb596602fa4de2507515cdbb68
+ms.sourcegitcommit: 86adcc06e35390f13c1e372c36d2e044f1fc31ef
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 04/26/2018
 ---
 # <a name="pragma-checksum-c-reference"></a>#pragma 總和檢查碼 (C# 參考)
 產生來源檔案的總和檢查碼協助偵錯[!INCLUDE[vstecasp](~/includes/vstecasp-md.md)]頁面。  
@@ -43,7 +43,7 @@ ms.lasthandoff: 11/21/2017
   
  這個解決方案不適用於 [!INCLUDE[vstecasp](~/includes/vstecasp-md.md)] 專案，因為計算過的總和檢查碼適合產生的來源檔案，不是 .aspx 檔案。 若要解決這個問題，`#pragma checksum` 會為 [!INCLUDE[vstecasp](~/includes/vstecasp-md.md)] 頁面提供總和檢查碼支援。  
   
- 當您在 [!INCLUDE[csprcs](~/includes/csprcs-md.md)] 中建立 [!INCLUDE[vstecasp](~/includes/vstecasp-md.md)] 專案時，產生的來源檔案會包含 .aspx 檔案的總和檢查碼，來源於此產生。 接著編譯器會將這項資訊寫入 PDB 檔案中。  
+ 當您在 Visual C# 中建立 [!INCLUDE[vstecasp](~/includes/vstecasp-md.md)] 專案時，產生的來源檔案會包含 .aspx 檔案的總和檢查碼，來源於此產生。 接著編譯器會將這項資訊寫入 PDB 檔案中。  
   
  如果編譯器在檔案中未遇到任何 `#pragma checksum` 指示詞，它會計算總和檢查碼並將值寫入 PDB 檔案。  
   
@@ -59,7 +59,7 @@ class TestClass
 }  
 ```  
   
-## <a name="see-also"></a>另請參閱  
+## <a name="see-also"></a>請參閱  
  [C# 參考](../../../csharp/language-reference/index.md)  
  [C# 程式設計指南](../../../csharp/programming-guide/index.md)  
  [C# 前置處理器指示詞](../../../csharp/language-reference/preprocessor-directives/index.md)

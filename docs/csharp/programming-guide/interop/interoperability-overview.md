@@ -1,5 +1,5 @@
 ---
-title: "互通性概觀 (C# 程式設計手冊)"
+title: 互通性概觀 (C# 程式設計手冊)
 ms.date: 07/20/2015
 ms.prod: .net
 ms.technology:
@@ -12,14 +12,14 @@ helpviewer_keywords:
 - interoperability, about interoperability
 - platform invoke
 ms.assetid: c025b2e0-2357-4c27-8461-118f0090aeff
-caps.latest.revision: 
+caps.latest.revision: 43
 author: BillWagner
 ms.author: wiwagn
-ms.openlocfilehash: 5ebdd2d58f2fe502dbeb14148c303487774f531b
-ms.sourcegitcommit: 099aa20d9b6450d1b7452d782a55771a6ad8ff35
+ms.openlocfilehash: 58538b690958e11b1590c13e6709cac4109ef49d
+ms.sourcegitcommit: 86adcc06e35390f13c1e372c36d2e044f1fc31ef
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 02/05/2018
+ms.lasthandoff: 04/26/2018
 ---
 # <a name="interoperability-overview-c-programming-guide"></a>互通性概觀 (C# 程式設計手冊)
 本主題說明可在 C# Managed 程式碼和 Unmanaged 程式碼之間啟用互通性的方法。  
@@ -55,18 +55,18 @@ ms.lasthandoff: 02/05/2018
   
 1.  在 C# 專案中新增 Interop 屬性。  
   
-     您可以藉由修改 [!INCLUDE[csprcs](~/includes/csprcs-md.md)] 專案屬性來顯示組件 COM。 如需詳細資訊，請參閱[組件資訊對話方塊](/visualstudio/ide/reference/assembly-information-dialog-box)。  
+     您可以藉由修改 Visual C# 專案屬性來顯示組件 COM。 如需詳細資訊，請參閱[組件資訊對話方塊](/visualstudio/ide/reference/assembly-information-dialog-box)。  
   
 2.  產生 COM 型別程式庫並註冊供 COM 使用。  
   
-     您可以修改 [!INCLUDE[csprcs](~/includes/csprcs-md.md)] 專案屬性，以自動為 COM Interop 註冊 C# 組件。 [!INCLUDE[vsprvs](~/includes/vsprvs-md.md)] 使用 [Regasm.exe (組件登錄工具)](../../../../docs/framework/tools/regasm-exe-assembly-registration-tool.md)，並使用接受 Managed 組件作為輸入的 `/tlb` 命令列參數，以產生型別程式庫。 此型別程式庫描述組件中的 `public` 類型，並新增登錄項目，讓 COM 用戶端可以建立 Managed 類別。  
+     您可以修改 Visual C# 專案屬性，以自動為 COM Interop 註冊 C# 組件。 [!INCLUDE[vsprvs](~/includes/vsprvs-md.md)] 使用 [Regasm.exe (組件登錄工具)](../../../../docs/framework/tools/regasm-exe-assembly-registration-tool.md)，並使用接受 Managed 組件作為輸入的 `/tlb` 命令列參數，以產生型別程式庫。 此型別程式庫描述組件中的 `public` 類型，並新增登錄項目，讓 COM 用戶端可以建立 Managed 類別。  
   
  如需詳細資訊，請參閱[將 .NET Framework 元件公開給 COM](../../../../docs/framework/interop/exposing-dotnet-components-to-com.md) 和[範例 COM 類別](../../../csharp/programming-guide/interop/example-com-class.md)。  
   
-## <a name="see-also"></a>另請參閱  
+## <a name="see-also"></a>請參閱  
  [Improving Interop Performance](https://msdn.microsoft.com/library/ms998551.aspx) (提升 Interop 效能)  
  [COM 和.NET 之間的互通性簡介](https://msdn.microsoft.com/library/office/bb610378.aspx) \(機器翻譯\)  
  [Visual Basic 中的 COM Interop 簡介](../../../../docs/visual-basic/programming-guide/com-interop/introduction-to-com-interop.md)  
  [在受控碼和非受控碼之間進行封送處理](../../../../docs/framework/interop/interop-marshaling.md)  
- [與非受控程式碼互通](../../../../docs/framework/interop/index.md)  
+ [與 Unmanaged 程式碼互通](../../../../docs/framework/interop/index.md)  
  [C# 程式設計指南](../../../csharp/programming-guide/index.md)

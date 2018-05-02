@@ -1,11 +1,12 @@
 ---
-title: ".NET Framework 檔案 I/O 和檔案系統基本概念 (Visual Basic)"
-ms.custom: 
+title: .NET Framework 檔案 I/O 和檔案系統基本概念 (Visual Basic)
+ms.custom: ''
 ms.date: 07/20/2015
 ms.prod: .net
-ms.reviewer: 
-ms.suite: 
-ms.technology: devlang-visual-basic
+ms.reviewer: ''
+ms.suite: ''
+ms.technology:
+- devlang-visual-basic
 ms.topic: article
 helpviewer_keywords:
 - file access, file I/O in Visual Basic
@@ -15,14 +16,14 @@ helpviewer_keywords:
 - streams
 - streams, definition
 ms.assetid: 49d837c0-cf28-416f-8606-4d83d7b479ef
-caps.latest.revision: "30"
+caps.latest.revision: 30
 author: dotnet-bot
 ms.author: dotnetcontent
-ms.openlocfilehash: d6cfdb939bd4bf84fafbffceefccd5cd522018c2
-ms.sourcegitcommit: 34ec7753acf76f90a0fa845235ef06663dc9e36e
+ms.openlocfilehash: 02eaa98b8a52a2b9efa2b273b2a58158a5848b86
+ms.sourcegitcommit: 86adcc06e35390f13c1e372c36d2e044f1fc31ef
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 04/26/2018
 ---
 # <a name="basics-of-net-framework-file-io-and-the-file-system-visual-basic"></a>.NET Framework 檔案 I/O 和檔案系統基本概念 (Visual Basic)
 <xref:System.IO> 命名空間中的類別是用來處理磁碟機、檔案和目錄。  
@@ -30,7 +31,7 @@ ms.lasthandoff: 12/21/2017
  <xref:System.IO> 命名空間包含 <xref:System.IO.File> 和 <xref:System.IO.Directory> 類別，以提供管理檔案和目錄的 [!INCLUDE[dnprdnshort](~/includes/dnprdnshort-md.md)] 功能。 因為這些物件的方法是靜態或共用成員，所以您可以直接使用它們，而不需要先建立類別的執行個體。 這些類別是與 <xref:System.IO.FileInfo> 和 <xref:System.IO.DirectoryInfo> 類別相關聯，對 `My` 功能的使用者而言這應該十分熟悉。 若要使用這些類別，您必須完整限定名稱，或在受影響程式碼的開頭包含 `Imports` 陳述式來匯入適當的命名空間。 如需詳細資訊，請參閱 [Imports 陳述式 (.NET 命名空間和類型)](../../../../visual-basic/language-reference/statements/imports-statement-net-namespace-and-type.md)。  
   
 > [!NOTE]
->  本節中的其他主題使用 `My.Computer.FileSystem` 物件，而非處理磁碟機、檔案和目錄的 `System.IO` 類別。 `My.Computer.FileSystem` 物件主要用於 [!INCLUDE[vbprvb](~/includes/vbprvb-md.md)] 程式。 `System.IO` 類別是要用於任何支援 [!INCLUDE[dnprdnshort](~/includes/dnprdnshort-md.md)] 的語言 (包括 [!INCLUDE[vbprvb](~/includes/vbprvb-md.md)])。  
+>  本節中的其他主題使用 `My.Computer.FileSystem` 物件，而非處理磁碟機、檔案和目錄的 `System.IO` 類別。 `My.Computer.FileSystem` 物件主要用於 Visual Basic 程式。 `System.IO` 類別是要用於任何支援 [!INCLUDE[dnprdnshort](~/includes/dnprdnshort-md.md)] 的語言 (包括 Visual Basic)。  
   
 ## <a name="definition-of-a-stream"></a>資料流的定義  
  [!INCLUDE[dnprdnshort](~/includes/dnprdnshort-md.md)] 使用資料流來支援讀取和寫入檔案。 您可以將資料流視為一組包含開始和結束的一維連續資料，而資料指標表示目前在資料流中的位置。  

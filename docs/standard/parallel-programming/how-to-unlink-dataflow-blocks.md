@@ -1,5 +1,5 @@
 ---
-title: "如何：取消連結資料流程區塊"
+title: 如何：取消連結資料流程區塊
 ms.date: 03/30/2017
 ms.prod: .net
 ms.technology: dotnet-standard
@@ -18,11 +18,11 @@ manager: wpickett
 ms.workload:
 - dotnet
 - dotnetcore
-ms.openlocfilehash: db3c0d3a6d94e2e9eb65046267f14feff0c056cb
-ms.sourcegitcommit: 6a9030eb5bd0f00e1d144f81958adb195cfb1f6f
+ms.openlocfilehash: c7cdfa227e330a4b8ed46395c9793e5dca570fac
+ms.sourcegitcommit: 86adcc06e35390f13c1e372c36d2e044f1fc31ef
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 01/10/2018
+ms.lasthandoff: 04/26/2018
 ---
 # <a name="how-to-unlink-dataflow-blocks"></a>如何：取消連結資料流程區塊
 本文件將說明如何解除目標資料流程區塊與其來源之間的連結。
@@ -40,13 +40,13 @@ ms.lasthandoff: 01/10/2018
  若要在其中一個對 `TrySolution` 的呼叫計算出值之後讓其餘呼叫結束，`TrySolution` 方法會採用 <xref:System.Threading.CancellationToken> 物件，該物件會在 `ReceiveFromAny(T)` 的呼叫傳回之後取消。 <xref:System.Threading.SpinWait.SpinUntil%2A> 方法會在這個 <xref:System.Threading.CancellationToken> 物件取消時傳回。  
   
 ## <a name="compiling-the-code"></a>編譯程式碼  
- 請複製範例程式碼，並將它貼入 Visual Studio 專案中，或是貼入名為 `DataflowReceiveAny.cs` 的檔案中 (在 [!INCLUDE[vbprvb](../../../includes/vbprvb-md.md)]中為 `DataflowReceiveAny.vb`)，然後在 Visual Studio 的 [命令提示字元] 視窗中執行下列命令。  
+ 請複製範例程式碼，並將它貼入 Visual Studio 專案中，或是貼入名為 `DataflowReceiveAny.cs` 的檔案中 (在 Visual Basic 中為 `DataflowReceiveAny.vb`)，然後在 Visual Studio 的 [命令提示字元] 視窗中執行下列命令。  
   
- [!INCLUDE[csprcs](../../../includes/csprcs-md.md)]  
+ Visual C#  
   
  **csc.exe /r:System.Threading.Tasks.Dataflow.dll DataflowReceiveAny.cs**  
   
- [!INCLUDE[vbprvb](../../../includes/vbprvb-md.md)]  
+ Visual Basic  
   
  **vbc.exe /r:System.Threading.Tasks.Dataflow.dll DataflowReceiveAny.vb**  
 

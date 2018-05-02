@@ -1,22 +1,23 @@
 ---
-title: "如何：訂閱及取消訂閱事件 (C# 程式設計手冊)"
+title: 如何：訂閱及取消訂閱事件 (C# 程式設計手冊)
 ms.date: 07/20/2015
 ms.prod: .net
-ms.technology: devlang-csharp
+ms.technology:
+- devlang-csharp
 ms.topic: article
 helpviewer_keywords:
 - event handlers [C#], creating
 - Code Editor, event handlers
 - events [C#], creating using the IDE
 ms.assetid: 6319f39f-282c-4173-8a62-6c4657cf51cd
-caps.latest.revision: "15"
+caps.latest.revision: 15
 author: BillWagner
 ms.author: wiwagn
-ms.openlocfilehash: 5555cc8913bff953601c54aa7430143dc22173c0
-ms.sourcegitcommit: 2142a4732bb4ff519b9817db4c24a237b9810d4b
+ms.openlocfilehash: ecb65a2156f83d9da722329ff6159bb08e464eaa
+ms.sourcegitcommit: 86adcc06e35390f13c1e372c36d2e044f1fc31ef
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 01/05/2018
+ms.lasthandoff: 04/26/2018
 ---
 # <a name="how-to-subscribe-to-and-unsubscribe-from-events-c-programming-guide"></a>如何：訂閱及取消訂閱事件 (C# 程式設計手冊)
 如果您想要撰寫在引發事件時所呼叫的自訂程式碼，您可以訂閱由其他類別發行的事件。 例如，您可以訂閱某個按鈕的 `click` 事件，讓應用程式在使用者按下該按鈕時執行某項動作。  
@@ -29,7 +30,7 @@ ms.lasthandoff: 01/05/2018
   
 3.  按兩下您要建立的事件，例如 `Load` 事件。  
   
-     [!INCLUDE[csprcs](~/includes/csprcs-md.md)] 會建立空的事件處理常式方法，並將其新增至您的程式碼。 您也可以在 [程式碼] 檢視中手動新增程式碼。 例如，下列程式碼行會宣告一個事件處理常式方法，該方法將會在 `Form` 類別引發 `Load` 事件時呼叫。  
+     Visual C# 會建立空的事件處理常式方法，並將其新增至您的程式碼。 您也可以在 [程式碼] 檢視中手動新增程式碼。 例如，下列程式碼行會宣告一個事件處理常式方法，該方法將會在 `Form` 類別引發 `Load` 事件時呼叫。  
   
      [!code-csharp[csProgGuideEvents#11](../../../csharp/programming-guide/events/codesnippet/CSharp/how-to-subscribe-to-and-unsubscribe-from-events_1.cs)]  
   

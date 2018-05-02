@@ -1,5 +1,5 @@
 ---
-title: "如何：寫入訊息至資料流程區塊及讀取資料流程區塊中的訊息"
+title: 如何：寫入訊息至資料流程區塊及讀取資料流程區塊中的訊息
 ms.date: 03/30/2017
 ms.prod: .net
 ms.technology: dotnet-standard
@@ -17,11 +17,11 @@ manager: wpickett
 ms.workload:
 - dotnet
 - dotnetcore
-ms.openlocfilehash: b64ef07c6ef28377c11dc879ad17f7c806e9f66a
-ms.sourcegitcommit: 6a9030eb5bd0f00e1d144f81958adb195cfb1f6f
+ms.openlocfilehash: 032fa1190039969095f8b91bb6ee0138a583ddd9
+ms.sourcegitcommit: 86adcc06e35390f13c1e372c36d2e044f1fc31ef
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 01/10/2018
+ms.lasthandoff: 04/26/2018
 ---
 # <a name="how-to-write-messages-to-and-read-messages-from-a-dataflow-block"></a>如何：寫入訊息至資料流程區塊及讀取資料流程區塊中的訊息
 本文件將說明如何使用 TPL 資料流程程式庫，在資料流程區塊中寫物和讀取訊息。 TPL 資料流程程式庫提供了在資料流程區塊中寫入和讀取訊息的同步和非同步方法。 本文件將使用 <xref:System.Threading.Tasks.Dataflow.BufferBlock%601?displayProperty=nameWithType> 類別。 <xref:System.Threading.Tasks.Dataflow.BufferBlock%601> 類別會緩衝訊息，並且同時做為訊息來源和訊息目標。  
@@ -57,13 +57,13 @@ ms.lasthandoff: 01/10/2018
  [!code-vb[TPLDataflow_ReadWrite#1](../../../samples/snippets/visualbasic/VS_Snippets_Misc/tpldataflow_readwrite/vb/dataflowreadwrite.vb#1)]  
   
 ## <a name="compiling-the-code"></a>編譯程式碼  
- 請複製範例程式碼，並將它貼入 Visual Studio 專案中，或是貼入名為 `DataflowReadWrite.cs` 的檔案中 (在 [!INCLUDE[vbprvb](../../../includes/vbprvb-md.md)]中為 `DataflowReadWrite.vb`)，然後在 Visual Studio 的 [命令提示字元] 視窗中執行下列命令。  
+ 請複製範例程式碼，並將它貼入 Visual Studio 專案中，或是貼入名為 `DataflowReadWrite.cs` 的檔案中 (在 Visual Basic 中為 `DataflowReadWrite.vb`)，然後在 Visual Studio 的 [命令提示字元] 視窗中執行下列命令。  
   
- [!INCLUDE[csprcs](../../../includes/csprcs-md.md)]  
+ Visual C#  
   
  **csc.exe /r:System.Threading.Tasks.Dataflow.dll DataflowReadWrite.cs**  
   
- [!INCLUDE[vbprvb](../../../includes/vbprvb-md.md)]  
+ Visual Basic  
   
  **vbc.exe /r:System.Threading.Tasks.Dataflow.dll DataflowReadWrite.vb**  
   

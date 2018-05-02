@@ -14,11 +14,11 @@ ms.assetid: 30d7e4e5-cc2e-4635-a597-14a724879619
 caps.latest.revision: 14
 author: BillWagner
 ms.author: wiwagn
-ms.openlocfilehash: b810280724dcf608859bfa455947a75ce64b7abe
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.openlocfilehash: 8b095520326c439601caa8fefa458dda75ba603e
+ms.sourcegitcommit: 86adcc06e35390f13c1e372c36d2e044f1fc31ef
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 04/26/2018
 ---
 # <a name="set-c-reference"></a>set (C# 參考)
 `set` 關鍵字會在屬性或索引子中定義「存取子」方法，以將值指派給屬性或索引子項目。 如需詳細資訊和範例，請參閱[屬性](../../../csharp/programming-guide/classes-and-structs/properties.md)、[自動實作的屬性](../../../csharp/programming-guide/classes-and-structs/auto-implemented-properties.md)和[索引子](../../../csharp/programming-guide/indexers/index.md)。  
@@ -27,7 +27,7 @@ ms.lasthandoff: 11/21/2017
  
  [!code-csharp[set#1](../../../../samples/snippets/csharp/language-reference/keywords/get/get-1.cs)]  
 
-`set` 存取子通常是由傳回值的單一陳述式所組成，如上述範例所示。 從 C# 7 開始，您可以將 `set` 存取子實作為運算式主體成員。 下列範例會將 `get` 和 `set` 存取子實作為運算式主體成員。
+`set` 存取子通常是由傳回值的單一陳述式所組成，如上述範例所示。 從 C# 7.0 開始，您可以將 `set` 存取子實作為運算式主體成員。 下列範例會將 `get` 和 `set` 存取子實作為運算式主體成員。
 
  [!code-csharp[set#3](../../../../samples/snippets/csharp/language-reference/keywords/get/get-3.cs)]   
     
@@ -38,7 +38,7 @@ ms.lasthandoff: 11/21/2017
 ## <a name="c-language-specification"></a>C# 語言規格  
  [!INCLUDE[CSharplangspec](~/includes/csharplangspec-md.md)]  
   
-## <a name="see-also"></a>另請參閱  
+## <a name="see-also"></a>請參閱  
  [C# 參考](../../../csharp/language-reference/index.md)  
  [C# 程式設計指南](../../../csharp/programming-guide/index.md)  
  [C# 關鍵字](../../../csharp/language-reference/keywords/index.md)  

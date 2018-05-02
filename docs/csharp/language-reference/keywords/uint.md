@@ -1,5 +1,5 @@
 ---
-title: "uint (C# 參考)"
+title: uint (C# 參考)
 ms.date: 03/14/2017
 ms.prod: .net
 ms.technology:
@@ -11,14 +11,14 @@ f1_keywords:
 helpviewer_keywords:
 - uint keyword [C#]
 ms.assetid: e93e42c6-ec72-4b0b-89df-2fd8d36f7a7b
-caps.latest.revision: 
+caps.latest.revision: 18
 author: BillWagner
 ms.author: wiwagn
-ms.openlocfilehash: d32f7146d1f9e13d8cf0f275f4fd78b693b09d31
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.openlocfilehash: 4a4f3439888ad3744be1633bb39e1c241343343a
+ms.sourcegitcommit: 86adcc06e35390f13c1e372c36d2e044f1fc31ef
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 04/26/2018
 ---
 # <a name="uint-c-reference"></a>uint (C# 參考)
 
@@ -32,7 +32,7 @@ ms.lasthandoff: 11/21/2017
   
 ## <a name="literals"></a>常值  
 
-您可以針對 `uint` 變數指派十進位常值、十六進位常值，或二進位常值 (自 C# 7 起)，以將其宣告和初始化。 如果整數常值超出 `uint` 的範圍 (亦即，如果小於 <xref:System.UInt32.MinValue?displayProperty=nameWithType> 或大於 <xref:System.UInt32.MaxValue?displayProperty=nameWithType>)，就會發生編譯錯誤。
+您可以針對 `uint` 變數指派十進位常值、十六進位常值，或二進位常值 (自 C# 7.0 起)，以將其宣告和初始化。 如果整數常值超出 `uint` 的範圍 (亦即，如果小於 <xref:System.UInt32.MinValue?displayProperty=nameWithType> 或大於 <xref:System.UInt32.MaxValue?displayProperty=nameWithType>)，就會發生編譯錯誤。
 
 在下列範例中，以十進位、十六進位和二進位常值表示的 3,000,000,000 整數，會指派給 `uint` 值。  
   
@@ -41,11 +41,11 @@ ms.lasthandoff: 11/21/2017
 > [!NOTE] 
 > 您可以使用 `0x` 或 `0X` 前置詞來表示十六進位常值，以 `0b` 或 `0B` 前置詞來表示二進位常值。 十進位常值沒有前置詞。 
 
-開始使用 C# 7，已加入一組功能，以提升可讀性。 
- - C# 7.0 可讓使用底線字元， `_`，做為千位分隔符號。
- - 可讓 C# 7.2`_`来做為二進位或十六進位常值、 數字分隔符號 after 前置字元。 十進位常值不允許有前置底線。
+從 C# 7.0 開始，已新增一組功能來提升可讀性。 
+ - C# 7.0 允許使用底線字元 (`_`) 作為數字分隔符號。
+ - C# 7.2 允許針對二進位或十六進位常值，在前置詞之後使用 `_` 作為數字分隔符號。 十進位常值不允許有前置底線。
 
-某些範例如下所示。
+一些範例如下所示。
 
 [!code-csharp[uint](../../../../samples/snippets/csharp/language-reference/keywords/numeric-literals.cs#UIntS)]  
  
@@ -93,7 +93,7 @@ uint y = (uint)3.0;
 ## <a name="c-language-specification"></a>C# 語言規格  
  [!INCLUDE[CSharplangspec](~/includes/csharplangspec-md.md)]  
   
-## <a name="see-also"></a>另請參閱  
+## <a name="see-also"></a>請參閱  
  <xref:System.UInt32>  
  [C# 參考](../../../csharp/language-reference/index.md)  
  [C# 程式設計指南](../../../csharp/programming-guide/index.md)  

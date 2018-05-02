@@ -14,11 +14,11 @@ ms.assetid: e295a8a2-b357-4ee7-a12e-385a44146fa8
 caps.latest.revision: 38
 author: BillWagner
 ms.author: wiwagn
-ms.openlocfilehash: 6f40bea2c7d39d88839a70e73e391113bee86f14
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.openlocfilehash: 186384c0a251d72b8726b3ae2f8f3faf0e6e008f
+ms.sourcegitcommit: 86adcc06e35390f13c1e372c36d2e044f1fc31ef
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 04/26/2018
 ---
 # <a name="properties-c-programming-guide"></a>屬性 (C# 程式設計手冊)
 
@@ -51,7 +51,7 @@ ms.lasthandoff: 11/21/2017
 
  [!code-csharp[Properties#2](../../../../samples/snippets/csharp/programming-guide/classes-and-structs/properties-2.cs)]  
 
- 從 C# 7 開始，可同時將 `get` 和 `set` 存取子實作為運算式主體成員。 在此情況下，必須同時有 `get` 和 `set` 關鍵字。 下列範例說明如何使用運算式主體定義來表示這兩個存取子。 請注意，`return` 關鍵字不能搭配 `get` 存取子使用。
+ 從 C# 7.0 開始，可同時將 `get` 和 `set` 存取子實作為運算式主體成員。 在此情況下，必須同時有 `get` 和 `set` 關鍵字。 下列範例說明如何使用運算式主體定義來表示這兩個存取子。 請注意，`return` 關鍵字不能搭配 `get` 存取子使用。
  
   [!code-csharp[Properties#3](../../../../samples/snippets/csharp/programming-guide/classes-and-structs/properties-3.cs)]  
 
@@ -78,7 +78,7 @@ ms.lasthandoff: 11/21/2017
 ## <a name="c-language-specification"></a>C# 語言規格  
  [!INCLUDE[CSharplangspec](~/includes/csharplangspec-md.md)]  
   
-## <a name="see-also"></a>請參閱
+## <a name="see-also"></a>另請參閱
  [C# 程式設計指南](../../../csharp/programming-guide/index.md)  
  [使用屬性](../../../csharp/programming-guide/classes-and-structs/using-properties.md)  
  [索引子](../../../csharp/programming-guide/indexers/index.md)  

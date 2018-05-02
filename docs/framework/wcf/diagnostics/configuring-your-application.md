@@ -16,22 +16,22 @@ ms.author: dotnetcontent
 manager: wpickett
 ms.workload:
 - dotnet
-ms.openlocfilehash: 922b9c5c53e04719f3ed48d0ff6386f21bf83e99
-ms.sourcegitcommit: 86adcc06e35390f13c1e372c36d2e044f1fc31ef
-ms.translationtype: HT
+ms.openlocfilehash: 170583239ed357904e723aebdaef9809938b5123
+ms.sourcegitcommit: 94d33cadc5ff81d2ac389bf5f26422c227832052
+ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/26/2018
+ms.lasthandoff: 04/30/2018
 ---
 # <a name="configuring-your-application"></a>設定您的應用程式
 [!INCLUDE[indigo1](../../../../includes/indigo1-md.md)] 會使用 .NET 組態系統，並讓您在機器和應用程式範圍內設定服務。  
   
- 由 [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] 定義的組態設定位於 `<system.serviceModel>` 節群組中。 [!INCLUDE[crabout](../../../../includes/crabout-md.md)]如何設定 [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] 服務的詳細資訊，請參閱下列主題：  
+ 由 [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] 定義的組態設定位於 `<system.serviceModel>` 節群組中。 如需有關如何設定[!INCLUDE[indigo2](../../../../includes/indigo2-md.md)]服務，請參閱下列主題：  
   
 -   [設定服務](../../../../docs/framework/wcf/configuring-services.md)  
   
 -   [\<system.serviceModel>](../../../../docs/framework/configure-apps/file-schema/wcf/system-servicemodel.md)  
   
- 應用程式定義的組態設定會定義在 `<appSettings>` 節群組中。 [!INCLUDE[crabout](../../../../includes/crabout-md.md)] 應用程式設定.NET 設定檔中，請參閱[ \<appSettings >](http://go.microsoft.com/fwlink/?LinkId=95159)。  
+ 應用程式定義的組態設定會定義在 `<appSettings>` 節群組中。 如需.NET 組態檔中的應用程式設定的詳細資訊，請參閱[ \<appSettings >](http://go.microsoft.com/fwlink/?LinkId=95159)。  
   
 ## <a name="using-the-configuration-editor"></a>使用組態編輯器  
  [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)][組態編輯器工具 (SvcConfigEditor.exe)](../../../../docs/framework/wcf/configuration-editor-tool-svcconfigeditor-exe.md)可讓系統管理員和開發人員建立及修改組態設定[!INCLUDE[indigo2](../../../../includes/indigo2-md.md)]服務以使用圖形化使用者介面。 有了這項工具，您可以管理 [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] 繫結、行為、服務及診斷的設定，而不用直接編輯 XML 組態檔。  

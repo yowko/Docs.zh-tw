@@ -14,21 +14,19 @@ ms.assetid: 14c48aaa-7d35-4058-a1a4-f53353050579
 caps.latest.revision: 11
 author: BillWagner
 ms.author: wiwagn
-ms.openlocfilehash: 1078dd21101a41969754de1afc8919f8ac0bda8c
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.openlocfilehash: 3885dbe2d82768d01cb1b3981bcaae65331d91d7
+ms.sourcegitcommit: 86adcc06e35390f13c1e372c36d2e044f1fc31ef
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 04/26/2018
 ---
 # <a name="default-c-reference"></a>default (C# 參考)
-
-`default` 關鍵字。
 
 `default` 關鍵字可用於 `switch` 陳述式或預設值運算式中：
 
 - [switch 陳述式](switch.md)：指定預設標籤。
 
-- [預設值運算式](../../programming-guide/statements-expressions-operators/default-value-expressions.md)：為型別產生預設值。 參考型別為 null，實值型別為零，結構則為 0 位元模式。
+- [預設值運算式](../../programming-guide/statements-expressions-operators/default-value-expressions.md)：產生型別的預設值。
 
 ## <a name="see-also"></a>另請參閱
 

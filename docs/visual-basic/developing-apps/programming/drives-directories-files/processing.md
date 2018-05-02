@@ -1,11 +1,12 @@
 ---
-title: "處理磁碟機、目錄和檔案 (Visual Basic)"
-ms.custom: 
+title: 處理磁碟機、目錄和檔案 (Visual Basic)
+ms.custom: ''
 ms.date: 07/20/2015
 ms.prod: .net
-ms.reviewer: 
-ms.suite: 
-ms.technology: devlang-visual-basic
+ms.reviewer: ''
+ms.suite: ''
+ms.technology:
+- devlang-visual-basic
 ms.topic: article
 helpviewer_keywords:
 - drives
@@ -15,19 +16,19 @@ helpviewer_keywords:
 - files [Visual Basic], accessing
 - directories [Visual Studio], processing
 ms.assetid: f1db14c8-a4fd-4d0b-8323-c7cb29d688c2
-caps.latest.revision: "15"
+caps.latest.revision: 15
 author: dotnet-bot
 ms.author: dotnetcontent
-ms.openlocfilehash: 27a5c3c389860cdc29c4263edbff492738ffe565
-ms.sourcegitcommit: bd1ef61f4bb794b25383d3d72e71041a5ced172e
+ms.openlocfilehash: aad7ea3a24bf0f738999c58a7934d1ffcf92b967
+ms.sourcegitcommit: 86adcc06e35390f13c1e372c36d2e044f1fc31ef
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/18/2017
+ms.lasthandoff: 04/26/2018
 ---
 # <a name="processing-drives-directories-and-files-visual-basic"></a>處理磁碟機、目錄和檔案 (Visual Basic)
-您可以使用 [!INCLUDE[vbprvb](~/includes/vbprvb-md.md)]，利用 `My.Computer.FileSystem` 物件處理磁碟機、資料夾和檔案，這個物件提供更佳效能，而且比 `FileOpen` 和 `Write` 函式等傳統方法更容易使用 (不過仍然可供使用)。 下列各節詳細討論這些方法。  
+您可以使用 Visual Basic，利用 `My.Computer.FileSystem` 物件來處理磁碟機、資料夾和檔案，這個物件提供更佳效能，而且比 `FileOpen` 和 `Write` 函式等傳統方法更容易使用 (不過仍然可供使用)。 下列各節詳細討論這些方法。  
   
-## <a name="in-this-section"></a>本章節內容  
+## <a name="in-this-section"></a>本節內容  
  [使用 Visual Basic 存取檔案](../../../../visual-basic/developing-apps/programming/drives-directories-files/file-access.md)  
  說明如何使用 `My.Computer.FileSystem` 物件來處理檔案、磁碟機和資料夾。  
   

@@ -1,5 +1,5 @@
 ---
-title: "如何：實作和呼叫自訂擴充方法 (C# 程式設計手冊)"
+title: 如何：實作和呼叫自訂擴充方法 (C# 程式設計手冊)
 ms.date: 07/20/2015
 ms.prod: .net
 ms.technology:
@@ -8,14 +8,14 @@ ms.topic: article
 helpviewer_keywords:
 - extension methods [C#], implementing and calling
 ms.assetid: 7dab2a56-cf8e-4a47-a444-fe610a02772a
-caps.latest.revision: 
+caps.latest.revision: 15
 author: BillWagner
 ms.author: wiwagn
-ms.openlocfilehash: a277412c69d26f20721381d9cfa839c7f082f2f2
-ms.sourcegitcommit: c0dd436f6f8f44dc80dc43b07f6841a00b74b23f
+ms.openlocfilehash: e73ccee84c35678a4923347ab04619bb6017aca5
+ms.sourcegitcommit: 86adcc06e35390f13c1e372c36d2e044f1fc31ef
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 01/19/2018
+ms.lasthandoff: 04/26/2018
 ---
 # <a name="how-to-implement-and-call-a-custom-extension-method-c-programming-guide"></a>如何：實作和呼叫自訂擴充方法 (C# 程式設計手冊)
 本主題示範如何針對任何 .NET 類型實作您自己的延伸模組方法。 用戶端程式碼可以使用您的擴充方法，方法是將參考新增至包含這些方法的 DLL，然後新增 [using](../../../csharp/language-reference/keywords/using-directive.md) 指示詞，以指定會在其中定義擴充方法的命名空間。  
@@ -42,7 +42,7 @@ ms.lasthandoff: 01/19/2018
  [!code-csharp[csProgGuideExtensionMethods#1](../../../csharp/programming-guide/classes-and-structs/codesnippet/CSharp/how-to-implement-and-call-a-custom-extension-method_1.cs)]  
   
 ## <a name="compiling-the-code"></a>編譯程式碼  
- 若要執行此程式碼，請將它複製並貼至已在 [!INCLUDE[vs_current_short](~/includes/vs-current-short-md.md)] 中建立的 Visual C# 主控台應用程式專案。 根據預設，此專案是以 [!INCLUDE[dnprdnshort](~/includes/dnprdnshort-md.md)] 3.5 版為目標，且有 System.Core.dll 的參考，以及 System.Linq 的 `using` 指示詞。 如果專案中遺漏上述一或多個需求，您可以手動新增這些需求。  
+ 若要執行此程式碼，請將它複製並貼到已在 Visual Studio 中建立的 Visual C# 主控台應用程式專案。 根據預設，此專案是以 [!INCLUDE[dnprdnshort](~/includes/dnprdnshort-md.md)] 3.5 版為目標，且有 System.Core.dll 的參考，以及 System.Linq 的 `using` 指示詞。 如果專案中遺漏上述一或多個需求，您可以手動新增這些需求。  
   
 ## <a name="net-framework-security"></a>.NET Framework 安全性  
  擴充方法沒有特定安全性弱點。 它們無法用於模擬類型上的現有方法，因為所有名稱衝突已使用類型自行定義的執行個體或靜態方法解決。 擴充方法無法存取擴充類別中的任何私用資料。  
@@ -56,4 +56,4 @@ ms.lasthandoff: 01/19/2018
  [internal](../../../csharp/language-reference/keywords/internal.md)  
  [public](../../../csharp/language-reference/keywords/public.md)  
  [this](../../../csharp/language-reference/keywords/this.md)  
- [命名空間](../../../csharp/language-reference/keywords/namespace.md)
+ [namespace](../../../csharp/language-reference/keywords/namespace.md)

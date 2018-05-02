@@ -1,6 +1,6 @@
 ---
-title: "-unsafe (C# 編譯器選項)"
-ms.date: 07/20/2015
+title: -unsafe (C# 編譯器選項)
+ms.date: 04/25/2018
 ms.prod: .net
 ms.technology:
 - devlang-csharp
@@ -11,15 +11,13 @@ helpviewer_keywords:
 - -unsafe compiler option [C#]
 - unsafe compiler option [C#]
 - /unsafe compiler option [C#]
-ms.assetid: fdb77ed9-da03-45bd-bb7f-250704da1bcc
-caps.latest.revision: 
 author: BillWagner
 ms.author: wiwagn
-ms.openlocfilehash: b253a9ddafead823480f9893e809f17b6c22a179
-ms.sourcegitcommit: c0dd436f6f8f44dc80dc43b07f6841a00b74b23f
+ms.openlocfilehash: 35868923ed2f34587c66f04395324489e8b36538
+ms.sourcegitcommit: 86adcc06e35390f13c1e372c36d2e044f1fc31ef
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 01/19/2018
+ms.lasthandoff: 04/26/2018
 ---
 # <a name="-unsafe-c-compiler-options"></a>-unsafe (C# 編譯器選項)
 **-unsafe** 編譯器選項允許程式碼使用 [unsafe](../../../csharp/language-reference/keywords/unsafe.md) 關鍵字來進行編譯。  
@@ -41,6 +39,16 @@ ms.lasthandoff: 01/19/2018
   
 3.  選取 [容許 Unsafe 程式碼] 核取方塊。  
   
+### <a name="to-add-this-option-in-a-csproj-file"></a>在 csproj 檔案中新增此選項
+
+請開啟專案的 .csproj 檔案，並新增下列項目：
+
+```xml
+  <PropertyGroup>
+    <AllowUnsafeBlocks>true</AllowUnsafeBlocks>
+  </PropertyGroup>
+```
+
  如需如何以程式設計方式設定這個編譯器選項的詳細資訊，請參閱 <xref:VSLangProj80.CSharpProjectConfigurationProperties3.AllowUnsafeBlocks%2A>。  
   
 ## <a name="example"></a>範例  

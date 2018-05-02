@@ -1,12 +1,12 @@
 ---
-title: "BlockingCollection 概觀"
-ms.custom: 
+title: BlockingCollection 概觀
+ms.custom: ''
 ms.date: 03/30/2017
 ms.prod: .net
-ms.reviewer: 
-ms.suite: 
+ms.reviewer: ''
+ms.suite: ''
 ms.technology: dotnet-standard
-ms.tgt_pltfrm: 
+ms.tgt_pltfrm: ''
 ms.topic: article
 dev_langs:
 - csharp
@@ -14,18 +14,18 @@ dev_langs:
 helpviewer_keywords:
 - BlockingCollection, overview
 ms.assetid: 987ea3d7-0ad5-4238-8b64-331ce4eb3f0b
-caps.latest.revision: 
+caps.latest.revision: 12
 author: mairaw
 ms.author: mairaw
 manager: wpickett
 ms.workload:
 - dotnet
 - dotnetcore
-ms.openlocfilehash: 5e2235c1a5bbe4a39cf029059290268faa5be154
-ms.sourcegitcommit: e7f04439d78909229506b56935a1105a4149ff3d
+ms.openlocfilehash: 74303f07134401193d07d3b5d584c9498f023d90
+ms.sourcegitcommit: 86adcc06e35390f13c1e372c36d2e044f1fc31ef
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 12/23/2017
+ms.lasthandoff: 04/26/2018
 ---
 # <a name="blockingcollection-overview"></a>BlockingCollection 概觀
 <xref:System.Collections.Concurrent.BlockingCollection%601> 是提供下列功能的安全執行緒集合類別︰  
@@ -85,7 +85,7 @@ BlockingCollection<string> bc = new BlockingCollection<string>(new ConcurrentBag
  如需詳細資訊，請參閱[操作說明：將界限和封鎖功能加入至集合](../../../../docs/standard/collections/thread-safe/how-to-add-bounding-and-blocking.md)。  
   
 ## <a name="ienumerable-support"></a>IEnumerable 支援  
- <xref:System.Collections.Concurrent.BlockingCollection%601> 提供 <xref:System.Collections.Concurrent.BlockingCollection%601.GetConsumingEnumerable%2A> 方法讓消費者可以使用 `foreach` ([!INCLUDE[vbprvb](../../../../includes/vbprvb-md.md)] 中的 `For Each`) 移除項目，直到收集完成為止；這表示集合會是空的，而且不會再新增任何項目。 如需詳細資訊，請參閱[如何：使用 ForEach 來移除 BlockingCollection 中的項目](../../../../docs/standard/collections/thread-safe/how-to-use-foreach-to-remove.md)。  
+ <xref:System.Collections.Concurrent.BlockingCollection%601> 提供 <xref:System.Collections.Concurrent.BlockingCollection%601.GetConsumingEnumerable%2A> 方法讓消費者可以使用 `foreach` (Visual Basic 中的 `For Each`) 移除項目，直到收集完成為止；這表示集合會是空的，而且不會再新增任何項目。 如需詳細資訊，請參閱[如何：使用 ForEach 來移除 BlockingCollection 中的項目](../../../../docs/standard/collections/thread-safe/how-to-use-foreach-to-remove.md)。  
   
 ## <a name="using-many-blockingcollections-as-one"></a>將多個 BlockingCollection 當成一個使用  
  如果消費者需要同時從多個集合擷取項目，您可以建立 <xref:System.Collections.Concurrent.BlockingCollection%601> 陣列，並使用將新增至或擷取自陣列中任何集合的靜態方法 (例如 <xref:System.Collections.Concurrent.BlockingCollection%601.TakeFromAny%2A> 和 <xref:System.Collections.Concurrent.BlockingCollection%601.AddToAny%2A>)。 如果封鎖其中一個集合，則方法會立即嘗試另一個集合，直到找到可執行作業的集合為止。 如需詳細資訊，請參閱[如何：在管線中使用封鎖回收的陣列](../../../../docs/standard/collections/thread-safe/how-to-use-arrays-of-blockingcollections.md)。  

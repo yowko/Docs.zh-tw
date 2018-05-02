@@ -1,7 +1,7 @@
 ---
-title: "官方 .NET Docker 映像"
-description: "容器化 .NET 應用程式的 .NET 微服務架構 | 官方 .NET Docker 映像"
-keywords: "Docker, 微服務, ASP.NET, 容器"
+title: 官方 .NET Docker 映像
+description: 容器化 .NET 應用程式的 .NET 微服務架構 | 官方 .NET Docker 映像
+keywords: Docker, 微服務, ASP.NET, 容器
 author: CESARDELATORRE
 ms.author: wiwagn
 ms.date: 10/18/2017
@@ -11,11 +11,11 @@ ms.topic: article
 ms.workload:
 - dotnet
 - dotnetcore
-ms.openlocfilehash: 42872caa1a9306187daeefd35feb9bec3fae60af
-ms.sourcegitcommit: e7f04439d78909229506b56935a1105a4149ff3d
+ms.openlocfilehash: adbe63a2d2f93819b5b29c6dd8d8089cd35ad2f3
+ms.sourcegitcommit: 86adcc06e35390f13c1e372c36d2e044f1fc31ef
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 12/23/2017
+ms.lasthandoff: 04/26/2018
 ---
 # <a name="official-net-docker-images"></a>官方 .NET Docker 映像
 
@@ -41,7 +41,7 @@ Microsoft 對 .NET 存放庫的願景，是要提供細微且專注的存放庫�
 
 ### <a name="during-development-and-build"></a>開發與建置期間
 
-開發期間的重點是，您逐一查看變更的速度以及偵錯變更的能力。 映像大小的重要性，不如變更程式碼及快速查看變更的能力。 有些工具和「組建代理程式容器」，會在開發及建置處理程序期間使用開發 ASP.NET Core 映像 (microsoft/aspnetcore-build)。 在 Docker 容器內部建置時，重要的層面是為編譯應用程式所需要的項目。 這包括編譯器和任何其他 .NET 相依性，加上如 npm、Gulp 和 Bower 等 Web 開發相依性。
+開發期間的重點是，您逐一查看變更的速度以及偵錯變更的能力。 映像大小的重要性，不如變更程式碼及快速查看變更的能力。 有些工具和「組建代理程式容器」，會在開發與建置程序期間使用開發 ASP.NET Core 映像 (microsoft/aspnetcore-build)。 在 Docker 容器內部建置時，重要的層面是為編譯應用程式所需要的項目。 這包括編譯器和任何其他 .NET 相依性，加上如 npm、Gulp 和 Bower 等 Web 開發相依性。
 
 這種組建映像為何如此重要？ 您不會將此映像部署到生產環境。 此映像是您用來建置要放入生產環境映像的內容。 此映像可用於持續整合 (CI) 環境或組建環境。 例如，不是直接在組建代理程式主機 (例如 VM) 上手動安裝所有應用程式相依性，組建代理程式會使用所需的全部相依性具現化 .NET Core 組建映像，來建置應用程式。 組建代理程式只需要知道如何執行此 Docker 映像。 這可簡化 CI 環境，並使其更容易預測。
 

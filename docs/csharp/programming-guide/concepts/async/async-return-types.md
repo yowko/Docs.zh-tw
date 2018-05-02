@@ -1,21 +1,22 @@
 ---
-title: "非同步方法的傳回型別 (C#)"
-ms.custom: 
+title: 非同步方法的傳回型別 (C#)
+ms.custom: ''
 ms.date: 05/29/2017
 ms.prod: .net
-ms.reviewer: 
-ms.suite: 
-ms.technology: devlang-csharp
+ms.reviewer: ''
+ms.suite: ''
+ms.technology:
+- devlang-csharp
 ms.topic: article
 ms.assetid: ddb2539c-c898-48c1-ad92-245e4a996df8
-caps.latest.revision: "3"
+caps.latest.revision: 3
 author: BillWagner
 ms.author: wiwagn
-ms.openlocfilehash: 7aee1ebdf24a2ac564268e1f36d3aac707dea463
-ms.sourcegitcommit: 7e99f66ef09d2903e22c789c67ff5a10aa953b2f
+ms.openlocfilehash: 4927d6324b6bda5a897ce81928fc13cae303a99a
+ms.sourcegitcommit: 86adcc06e35390f13c1e372c36d2e044f1fc31ef
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 11/18/2017
+ms.lasthandoff: 04/26/2018
 ---
 # <a name="async-return-types-c"></a>非同步方法的傳回型別 (C#)
 非同步方法可有下列傳回型別：
@@ -26,7 +27,7 @@ ms.lasthandoff: 11/18/2017
 
 - 處理常式為 `void`。 
 
-- 自 C# 7 開始，任何具有可存取 `GetAwaiter` 方法的類型。 `GetAwaiter` 方法傳回的物件必須實作 <xref:System.Runtime.CompilerServices.ICriticalNotifyCompletion?displayProperty=nameWithType> 介面。
+- 自 C# 7.0 開始，任何具有可存取 `GetAwaiter` 方法的型別。 `GetAwaiter` 方法傳回的物件必須實作 <xref:System.Runtime.CompilerServices.ICriticalNotifyCompletion?displayProperty=nameWithType> 介面。
   
 如需非同步方法的詳細資訊，請參閱[使用 async 和 await 進行非同步程式設計 (C#)](../../../../csharp/programming-guide/concepts/async/index.md)。  
   
@@ -76,7 +77,7 @@ ms.lasthandoff: 11/18/2017
  
 ## <a name="generalized-async-return-types-and-valuetaskt"></a>通用的非同步傳回型別和 ValueTask<T>
 
-自 C# 7 開始，非同步方法可以傳回具有可存取 `GetAwaiter` 方法的任何類型。
+自 C# 7.0 開始，非同步方法可以傳回具有可存取 `GetAwaiter` 方法的任何型別。
  
 因為 <xref:System.Threading.Tasks.Task> 和 <xref:System.Threading.Tasks.Task%601> 是參考型別，所以效能關鍵路徑中的記憶體配置，會對效能造成不良影響，特別是當配置出現在緊密迴圈中時。 支援通用的傳回型別，表示您可以傳回輕量型的實值型別，而不是參考型別，以避免額外的記憶體配置。 
 
@@ -84,7 +85,7 @@ ms.lasthandoff: 11/18/2017
   
 [!code-csharp[return-value](../../../../../samples/snippets/csharp/programming-guide/async/async-valuetask.cs)]
 
-## <a name="see-also"></a>請參閱  
+## <a name="see-also"></a>另請參閱  
 <xref:System.Threading.Tasks.Task.FromResult%2A>   
 [逐步解說：使用 async 和 await 存取 Web (C#)](../../../../csharp/programming-guide/concepts/async/walkthrough-accessing-the-web-by-using-async-and-await.md)   
 [非同步程式中的控制流程 (C#)](../../../../csharp/programming-guide/concepts/async/control-flow-in-async-programs.md)   

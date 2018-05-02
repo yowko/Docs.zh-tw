@@ -1,5 +1,5 @@
 ---
-title: "如何：使用 JoinBlock 從多個來源讀取資料"
+title: 如何：使用 JoinBlock 從多個來源讀取資料
 ms.date: 03/30/2017
 ms.prod: .net
 ms.technology: dotnet-standard
@@ -18,11 +18,11 @@ manager: wpickett
 ms.workload:
 - dotnet
 - dotnetcore
-ms.openlocfilehash: f7d4e552404f99580bceafe7f900db4607201c3d
-ms.sourcegitcommit: 6a9030eb5bd0f00e1d144f81958adb195cfb1f6f
+ms.openlocfilehash: ba353a34306b06e0f1df4696af5545799e7a5b37
+ms.sourcegitcommit: 86adcc06e35390f13c1e372c36d2e044f1fc31ef
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 01/10/2018
+ms.lasthandoff: 04/26/2018
 ---
 # <a name="how-to-use-joinblock-to-read-data-from-multiple-sources"></a>如何：使用 JoinBlock 從多個來源讀取資料
 本文件將說明，如何在有多個來源的資料可用時，使用 <xref:System.Threading.Tasks.Dataflow.JoinBlock%602> 類別執行作業。 另外也會示範如何使用非窮盡模式，讓多個聯結區塊更有效率地共用資料來源。
@@ -38,13 +38,13 @@ ms.lasthandoff: 01/10/2018
  為了要讓 `MemoryResource` 物件共用集區的使用更有效率，這個範例會指定 <xref:System.Threading.Tasks.Dataflow.GroupingDataflowBlockOptions> 物件並將其 <xref:System.Threading.Tasks.Dataflow.GroupingDataflowBlockOptions.Greedy%2A> 屬性設定為 `False`，建立以非窮盡模式執行的 <xref:System.Threading.Tasks.Dataflow.JoinBlock%602> 物件。 非窮盡聯結區塊會延後所有傳入訊息，直到每個來源都有一個為止。 如果有任一個延後的訊息被另一個區塊所接受，聯結區塊就會重新啟動處理序。 非窮盡模式會在其他區塊等待資料的同時，讓共用一個或多個來源區塊的聯結區塊往前進行。 在這個範例中，如果 `MemoryResource` 物件已加入至 `memoryResources` 集區，則要接收其第二個資料來源的第一個聯結區塊就能繼續往前進行。 如果這個範例是使用窮盡模式，也就是預設值，則聯結區塊可能會採用 `MemoryResource` 物件並等待可供使用的第二個資源。 不過，如果其他聯結區塊都有自己的第二個資料來源可用，就無法繼續往前進行，因為 `MemoryResource` 物件已由另一個聯結區塊佔用。  
   
 ## <a name="compiling-the-code"></a>編譯程式碼  
- 請複製範例程式碼，並將它貼入 Visual Studio 專案中，或是貼入名為 `DataflowNonGreedyJoin.cs` 的檔案中 (在 [!INCLUDE[vbprvb](../../../includes/vbprvb-md.md)]中為 `DataflowNonGreedyJoin.vb`)，然後在 Visual Studio 的 [命令提示字元] 視窗中執行下列命令。  
+ 請複製範例程式碼，並將它貼入 Visual Studio 專案中，或是貼入名為 `DataflowNonGreedyJoin.cs` 的檔案中 (在 Visual Basic 中為 `DataflowNonGreedyJoin.vb`)，然後在 Visual Studio 的 [命令提示字元] 視窗中執行下列命令。  
   
- [!INCLUDE[csprcs](../../../includes/csprcs-md.md)]  
+ Visual C#  
   
  **csc.exe /r:System.Threading.Tasks.Dataflow.dll DataflowNonGreedyJoin.cs**  
   
- [!INCLUDE[vbprvb](../../../includes/vbprvb-md.md)]  
+ Visual Basic  
   
  **vbc.exe /r:System.Threading.Tasks.Dataflow.dll DataflowNonGreedyJoin.vb**  
   

@@ -1,19 +1,20 @@
 ---
-title: "運算式主體成員 (C# 程式設計手冊)"
+title: 運算式主體成員 (C# 程式設計手冊)
 ms.date: 07/20/2015
 ms.prod: .net
-ms.technology: devlang-csharp
+ms.technology:
+- devlang-csharp
 ms.topic: article
 helpviewer_keywords:
 - expression-bodied members[C#]
 - C# language, expresion-bodied members
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: ead1e474fe87bd9fbd0f972bc0f2fc4fefc12ecf
-ms.sourcegitcommit: 7e99f66ef09d2903e22c789c67ff5a10aa953b2f
+ms.openlocfilehash: 5690a2ddb9127bb0c9b06d3607e3d105fca9a2e8
+ms.sourcegitcommit: 86adcc06e35390f13c1e372c36d2e044f1fc31ef
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 11/18/2017
+ms.lasthandoff: 04/26/2018
 ---
 # <a name="expression-bodied-members-c-programming-guide"></a>運算式主體成員 (C# 程式設計手冊)
 運算式主體定義可讓您以極為簡潔且可讀的形式提供成員的實作。 只要任何所支援成員 (例如方法或屬性) 的邏輯包含單一運算式，就可以使用運算式主體定義。 運算式主體定義的一般語法如下︰
@@ -24,16 +25,16 @@ member => expression;
 
 其中 *expression* 是有效的運算式。 
 
-方法和屬性 get 存取子的運算式主體定義支援是在 C# 6 中引進，並在 C# 7 中擴充。 運算式主體定義可以與下表中所列的類型成員搭配使用︰ 
+方法和屬性 get 存取子的運算式主體定義支援是在 C# 6 中引進，並在 C# 7.0 中擴充。 運算式主體定義可以與下表中所列的類型成員搭配使用︰ 
 
 |成員  |支援作為... |
 |---------|---------|
 |[方法](#methods)  |C# 6 |
-|[建構函式](#constructors)   |C# 7 |
-|[完成項](#finalizers)     |C# 7 |
+|[建構函式](#constructors)   |C# 7.0 |
+|[完成項](#finalizers)     |C# 7.0 |
 |[屬性 Get](#property-get-statements)  |C# 6 |
-|[屬性 Set](#property-set-statements)  |C# 7 |
-|[索引子](#indexers)       |C# 7 |
+|[屬性 Set](#property-set-statements)  |C# 7.0 |
+|[索引子](#indexers)       |C# 7.0 |
 
 ## <a name="methods"></a>方法
 

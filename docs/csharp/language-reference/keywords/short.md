@@ -1,5 +1,5 @@
 ---
-title: "short (C# 參考)"
+title: short (C# 參考)
 ms.date: 03/14/2017
 ms.prod: .net
 ms.technology:
@@ -11,14 +11,14 @@ f1_keywords:
 helpviewer_keywords:
 - short keyword [C#]
 ms.assetid: 04c10688-e51a-4a87-bfec-83f7fb42ff11
-caps.latest.revision: 
+caps.latest.revision: 17
 author: BillWagner
 ms.author: wiwagn
-ms.openlocfilehash: 8ca3c5444c4fa7a49b7169be3e2a5b15d1a72207
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.openlocfilehash: 6f73189891ecb52b81cfc1861a19194113ab2c32
+ms.sourcegitcommit: 86adcc06e35390f13c1e372c36d2e044f1fc31ef
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 04/26/2018
 ---
 # <a name="short-c-reference"></a>short (C# 參考)
 
@@ -30,7 +30,7 @@ ms.lasthandoff: 11/21/2017
   
 ## <a name="literals"></a>常值  
 
-您可以針對 `short` 變數指派十進位常值、十六進位常值，或二進位常值 (自 C# 7 起)，以將其宣告和初始化。  如果整數常值超出 `short` 的範圍 (亦即，如果小於 <xref:System.Int16.MinValue?displayProperty=nameWithType> 或大於 <xref:System.Int16.MaxValue?displayProperty=nameWithType>)，就會發生編譯錯誤。 
+您可以針對 `short` 變數指派十進位常值、十六進位常值，或二進位常值 (自 C# 7.0 起)，以將其宣告和初始化。  如果整數常值超出 `short` 的範圍 (亦即，如果小於 <xref:System.Int16.MinValue?displayProperty=nameWithType> 或大於 <xref:System.Int16.MaxValue?displayProperty=nameWithType>)，就會發生編譯錯誤。 
 
 在下列範例中，以十進位、十六進位和二進位常值表示的 1,034 整數，從 [int](../../../csharp/language-reference/keywords/int.md) 隱含轉換成 `short` 值。  
   
@@ -39,11 +39,11 @@ ms.lasthandoff: 11/21/2017
 > [!NOTE] 
 > 您可以使用 `0x` 或 `0X` 前置詞來表示十六進位常值，以 `0b` 或 `0B` 前置詞來表示二進位常值。 十進位常值沒有前置詞。
 
-開始使用 C# 7，已加入一組功能，以提升可讀性。 
- - C# 7.0 可讓使用底線字元， `_`，做為千位分隔符號。
- - 可讓 C# 7.2`_`来做為二進位或十六進位常值、 數字分隔符號 after 前置字元。 十進位常值不允許有前置底線。
+從 C# 7.0 開始，已新增一組功能來提升可讀性。 
+ - C# 7.0 允許使用底線字元 (`_`) 作為數字分隔符號。
+ - C# 7.2 允許針對二進位或十六進位常值，在前置詞之後使用 `_` 作為數字分隔符號。 十進位常值不允許有前置底線。
 
-某些範例如下所示。
+一些範例如下所示。
 
 [!code-csharp[Short](../../../../samples/snippets/csharp/language-reference/keywords/numeric-literals.cs#ShortS)]  
  
@@ -79,7 +79,7 @@ short x = 5, y = 12;
 short z  = x + y;        // Compiler error CS0266: no conversion from int to short
 ```
 
- 若要修正這個問題，請使用轉型：  
+ 若要修正這個問題，請使用轉換：  
   
 ```csharp
 short z  = (short)(x + y);   // Explicit conversion
@@ -106,7 +106,7 @@ short y = (short)3.0;   // OK: explicit conversion
 ## <a name="c-language-specification"></a>C# 語言規格  
  [!INCLUDE[CSharplangspec](~/includes/csharplangspec-md.md)]  
   
-## <a name="see-also"></a>另請參閱  
+## <a name="see-also"></a>請參閱  
  <xref:System.Int16>  
  [C# 參考](../../../csharp/language-reference/index.md)  
  [C# 程式設計指南](../../../csharp/programming-guide/index.md)  

@@ -1,6 +1,6 @@
 ---
 title: .NET Portability Analyzer - .NET
-description: "了解如何使用.NET Portability Analyzer 工具來評估程式碼移植到不同 .NET 實作之間的可行性，包括 .NET Core、.NET Standard、UWP 和 Xamarin。"
+description: 了解如何使用.NET Portability Analyzer 工具來評估程式碼移植到不同 .NET 實作之間的可行性，包括 .NET Core、.NET Standard、UWP 和 Xamarin。
 keywords: .NET, .NET Core
 author: blackdwarf
 ms.author: mairaw
@@ -13,15 +13,15 @@ ms.assetid: 0375250f-5704-4993-a6d5-e21c499cea1e
 ms.workload:
 - dotnet
 - dotnetcore
-ms.openlocfilehash: 7e3d628fe4b4a8f01e692a70892658fceeb87953
-ms.sourcegitcommit: 75a180acb5d8a2dbd4a52915ce8e980749fb1d05
+ms.openlocfilehash: 3d813292a821c2ebfa7b40ee873cf36e71104ebf
+ms.sourcegitcommit: 86adcc06e35390f13c1e372c36d2e044f1fc31ef
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 02/24/2018
+ms.lasthandoff: 04/26/2018
 ---
 # <a name="the-net-portability-analyzer"></a>.NET Portability Analyzer
 
-要將您的程式庫變成多平台？ 想要查看需要多少工作，才能讓您的應用程式相容於其他 .NET 實作和設定檔 (包括 .NET Core、.NET Standard、UWP 和適用於 iOS、Android 和 Mac 的 Xamarin) 嗎？ [.NET Portability Analyzer](http://go.microsoft.com/fwlink/?LinkID=507467) 是一項工具，其藉由分析組件來提供您有關程式在跨 .NET 實作上之彈性的詳細報表。 Portability Analyzer 會以 Visual Studio 擴充功能和主控台應用程式的形式提供給您。
+要將您的程式庫變成多平台？ 想要查看需要多少工作，才能讓您的應用程式相容於其他 .NET 實作和設定檔 (包括 .NET Core、.NET Standard、UWP 和適用於 iOS、Android 和 Mac 的 Xamarin) 嗎？ [.NET Portability Analyzer](https://marketplace.visualstudio.com/items?itemName=ConnieYau.NETPortabilityAnalyzer) 是一項工具，其藉由分析組件來提供您有關程式在跨 .NET 實作上之彈性的詳細報表。 Portability Analyzer 會以 Visual Studio 擴充功能和主控台應用程式的形式提供給您。
 
 ## <a name="new-targets"></a>新目標
 
@@ -33,7 +33,7 @@ ms.lasthandoff: 02/24/2018
 
 ## <a name="how-to-use-portability-analyzer"></a>如何使用 Portability Analyzer
 
-若要開始使用.NET Portability Analyzer，必須從 [Visual Studio 組件庫](http://go.microsoft.com/fwlink/?LinkID=507467) 下載及安裝此延伸模組。 它適用於 Visual Studio 2015 和 Visual Studio 2017。 您可以在 Visual Studio 中，使用 [分析] > [Portability Analyzer Settings] (Portability Analyzer 設定) 設定此工具，然後選取您的目標平台。
+若要開始使用.NET Portability Analyzer，必須從 [Visual Studio Marketplace](https://marketplace.visualstudio.com/items?itemName=ConnieYau.NETPortabilityAnalyzer) 下載及安裝此延伸模組。 它適用於 Visual Studio 2015 和 Visual Studio 2017。 您可以在 Visual Studio 中，使用 [分析] > [Portability Analyzer Settings] (Portability Analyzer 設定) 設定此工具，然後選取您的目標平台。
 
 ![可攜性螢幕擷取畫面](./media/portability-analyzer/portability-screenshot.png)
 

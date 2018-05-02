@@ -21,11 +21,11 @@ manager: wpickett
 ms.workload:
 - dotnet
 - dotnetcore
-ms.openlocfilehash: c0782498743f857afac4af073fb0a0cb8fc4d55a
-ms.sourcegitcommit: 2e8acae16ae802f2d6d04e3ce0a6dbf04e476513
+ms.openlocfilehash: 87c49eb1cb2b8cef7057e73eca19f74e818b043e
+ms.sourcegitcommit: 86adcc06e35390f13c1e372c36d2e044f1fc31ef
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/18/2018
+ms.lasthandoff: 04/26/2018
 ---
 # <a name="task-based-asynchronous-programming"></a>以工作為基礎的非同步程式設計
 工作平行程式庫 (TPL) 是以「工作」(Task) 的概念為基礎，工作表示非同步作業。 在某些方面，工作類似執行緒或 <xref:System.Threading.ThreadPool> 工作項目，但是抽象等級較高。 「工作平行處理原則」(Task Parallelism) 是指同時執行一個或多個獨立工作。 工作主要提供兩項優點：  
@@ -191,7 +191,7 @@ ms.lasthandoff: 04/18/2018
  等候工作時，也會隱含等候該工作之所有使用 <xref:System.Threading.Tasks.TaskCreationOptions.AttachedToParent?displayProperty=nameWithType> 選項建立的子系。 如果工作已完成，則 <xref:System.Threading.Tasks.Task.Wait%2A?displayProperty=nameWithType> 會立即傳回。 <xref:System.Threading.Tasks.Task.Wait%2A?displayProperty=nameWithType> 方法會擲回工作所引發的任何例外狀況，即使 <xref:System.Threading.Tasks.Task.Wait%2A?displayProperty=nameWithType> 方法是在工作完成之後才呼叫也一樣。  
   
 ## <a name="composing-tasks"></a>組成工作  
- <xref:System.Threading.Tasks.Task> 和 <xref:System.Threading.Tasks.Task%601> 類別提供數種方法，可協助您撰寫多個工作來實作一般模式，以及更有效地使用 C#、[!INCLUDE[vbprvb](../../../includes/vbprvb-md.md)] 和 F# 提供的非同步語言功能。 本節說明 <xref:System.Threading.Tasks.Task.WhenAll%2A>、<xref:System.Threading.Tasks.Task.WhenAny%2A>、<xref:System.Threading.Tasks.Task.Delay%2A> 和 <xref:System.Threading.Tasks.Task.FromResult%2A> 方法。  
+ <xref:System.Threading.Tasks.Task> 和 <xref:System.Threading.Tasks.Task%601> 類別提供數種方法，可協助您撰寫多個工作來實作一般模式，以及更有效地使用 C#、Visual Basic 和 F# 提供的非同步語言功能。 本節說明 <xref:System.Threading.Tasks.Task.WhenAll%2A>、<xref:System.Threading.Tasks.Task.WhenAny%2A>、<xref:System.Threading.Tasks.Task.Delay%2A> 和 <xref:System.Threading.Tasks.Task.FromResult%2A> 方法。  
   
 ### <a name="taskwhenall"></a>Task.WhenAll  
  <xref:System.Threading.Tasks.Task.WhenAll%2A?displayProperty=nameWithType> 方法會以非同步方式來等候多個 <xref:System.Threading.Tasks.Task> 或 <xref:System.Threading.Tasks.Task%601> 物件完成。 這會提供可讓您等候多組不一致工作的多載版本。 例如，您可以在單一方法呼叫中等候多個 <xref:System.Threading.Tasks.Task> 和 <xref:System.Threading.Tasks.Task%601> 物件完成。  

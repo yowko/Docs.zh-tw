@@ -21,11 +21,11 @@ manager: wpickett
 ms.workload:
 - dotnet
 - dotnetcore
-ms.openlocfilehash: 1148d2b245d67304071d8dd23bb1a88bdc020b8d
-ms.sourcegitcommit: 2e8acae16ae802f2d6d04e3ce0a6dbf04e476513
+ms.openlocfilehash: 24541b681844a2023df8d4d05f13b53d55375b80
+ms.sourcegitcommit: 86adcc06e35390f13c1e372c36d2e044f1fc31ef
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/18/2018
+ms.lasthandoff: 04/26/2018
 ---
 # <a name="introduction-to-plinq"></a>PLINQ 簡介
 ## <a name="what-is-a-parallel-query"></a>何謂平行查詢？  
@@ -93,10 +93,10 @@ ms.lasthandoff: 04/18/2018
  某些作業會要求系統以循序方式傳遞來源資料。 <xref:System.Linq.ParallelEnumerable> 查詢運算子會在必要時自動還原為循序模式。 對於使用者定義的查詢運算子和需要循序執行的使用者委派，PLINQ 提供了 <xref:System.Linq.ParallelEnumerable.AsSequential%2A> 方法。 當您使用 <xref:System.Linq.ParallelEnumerable.AsSequential%2A> 時，查詢中的所有後續運算子會循序執行，直到再次呼叫 <xref:System.Linq.ParallelEnumerable.AsParallel%2A> 為止。 如需詳細資訊，請參閱[如何：結合平行和循序 LINQ 查詢](../../../docs/standard/parallel-programming/how-to-combine-parallel-and-sequential-linq-queries.md)。  
   
 ## <a name="options-for-merging-query-results"></a>可供合併查詢結果的選項  
- 當 PLINQ 查詢以平行方式執行時，其來自每個背景工作執行緒的結果，必須合併回主要執行緒以供 `foreach` 迴圈 (在 [!INCLUDE[vbprvb](../../../includes/vbprvb-md.md)] 中是 `For Each`) 取用，或以供插入至清單或陣列。 在某些情況下，指定特定種類的合併作業可能會有幫助，例如，若您要更快速地開始產生結果的話。 基於此目的，PLINQ 支援 <xref:System.Linq.ParallelEnumerable.WithMergeOptions%2A> 方法與 <xref:System.Linq.ParallelMergeOptions> 列舉。 如需詳細資訊，請參閱 [PLINQ 中的合併選項](../../../docs/standard/parallel-programming/merge-options-in-plinq.md)。  
+ 當 PLINQ 查詢以平行方式執行時，其來自每個背景工作執行緒的結果，必須合併回主要執行緒以供 `foreach` 迴圈 (在 Visual Basic 中是 `For Each`) 取用，或以供插入至清單或陣列。 在某些情況下，指定特定種類的合併作業可能會有幫助，例如，若您要更快速地開始產生結果的話。 基於此目的，PLINQ 支援 <xref:System.Linq.ParallelEnumerable.WithMergeOptions%2A> 方法與 <xref:System.Linq.ParallelMergeOptions> 列舉。 如需詳細資訊，請參閱 [PLINQ 中的合併選項](../../../docs/standard/parallel-programming/merge-options-in-plinq.md)。  
   
 ## <a name="the-forall-operator"></a>ForAll 運算子  
- 在循序 [!INCLUDE[vbteclinq](../../../includes/vbteclinq-md.md)] 查詢中，直到在 `foreach` ([!INCLUDE[vbprvb](../../../includes/vbprvb-md.md)] 中為 `For Each`) 迴圈中列舉查詢或叫用 <xref:System.Linq.ParallelEnumerable.ToList%2A>、<xref:System.Linq.ParallelEnumerable.ToArray%2A> 或 <xref:System.Linq.ParallelEnumerable.ToDictionary%2A> 之類的方法為止才會執行查詢。 在 PLINQ 中，您也可以使用 `foreach` 來執行查詢，並逐一查看各項結果。 不過，`foreach` 本身並不會以平行方式執行，因此，所有平行工作的輸出必須合併回用來執行迴圈的執行緒。 在 PLINQ 中，當您必須保留查詢結果的最終排序時，以及每當您以序列方式處理結果時 (例如，當您為每個元素呼叫 `Console.WriteLine` 時)，您都可以使用 `foreach`。 在不必保留順序時，以及在結果本身可以平行處理時，若您需要更快速地執行查詢，請使用 <xref:System.Linq.ParallelEnumerable.ForAll%2A> 方法來執行 PLINQ 查詢。 <xref:System.Linq.ParallelEnumerable.ForAll%2A> 不會執此最終合併步驟。 下列程式碼範例示範如何使用 <xref:System.Linq.ParallelEnumerable.ForAll%2A> 方法。 這裡會使用 <xref:System.Collections.Concurrent.ConcurrentBag%601?displayProperty=nameWithType>，因為它已經過最佳化，能夠用於同時新增的多個執行緒，而不會嘗試移除任何項目。  
+ 在循序 [!INCLUDE[vbteclinq](../../../includes/vbteclinq-md.md)] 查詢中，直到在 `foreach` (Visual Basic 中為 `For Each`) 迴圈中列舉查詢或叫用 <xref:System.Linq.ParallelEnumerable.ToList%2A>、<xref:System.Linq.ParallelEnumerable.ToArray%2A> 或 <xref:System.Linq.ParallelEnumerable.ToDictionary%2A> 之類的方法為止才會執行查詢。 在 PLINQ 中，您也可以使用 `foreach` 來執行查詢，並逐一查看各項結果。 不過，`foreach` 本身並不會以平行方式執行，因此，所有平行工作的輸出必須合併回用來執行迴圈的執行緒。 在 PLINQ 中，當您必須保留查詢結果的最終排序時，以及每當您以序列方式處理結果時 (例如，當您為每個元素呼叫 `Console.WriteLine` 時)，您都可以使用 `foreach`。 在不必保留順序時，以及在結果本身可以平行處理時，若您需要更快速地執行查詢，請使用 <xref:System.Linq.ParallelEnumerable.ForAll%2A> 方法來執行 PLINQ 查詢。 <xref:System.Linq.ParallelEnumerable.ForAll%2A> 不會執此最終合併步驟。 下列程式碼範例示範如何使用 <xref:System.Linq.ParallelEnumerable.ForAll%2A> 方法。 這裡會使用 <xref:System.Collections.Concurrent.ConcurrentBag%601?displayProperty=nameWithType>，因為它已經過最佳化，能夠用於同時新增的多個執行緒，而不會嘗試移除任何項目。  
   
  [!code-csharp[PLINQ#4](../../../samples/snippets/csharp/VS_Snippets_Misc/plinq/cs/plinq2_cs.cs#4)]
  [!code-vb[PLINQ#4](../../../samples/snippets/visualbasic/VS_Snippets_Misc/plinq/vb/plinq2_vb.vb#4)]  

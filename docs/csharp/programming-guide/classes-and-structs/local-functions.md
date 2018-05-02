@@ -9,15 +9,15 @@ helpviewer_keywords:
 - local functions [C#]
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 2b4e95d48e451038f0f7004d0901f329b2c57fe5
-ms.sourcegitcommit: 7e99f66ef09d2903e22c789c67ff5a10aa953b2f
+ms.openlocfilehash: ac18aa57f443f28f55779ff9c92a5349b9b39fd7
+ms.sourcegitcommit: 86adcc06e35390f13c1e372c36d2e044f1fc31ef
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 11/18/2017
+ms.lasthandoff: 04/26/2018
 ---
 # <a name="local-functions-c-programming-guide"></a>區域函式 (C# 程式設計手冊)
 
-從 C# 7 開始，C# 支援「區域函式」。 區域函式是另一個成員中巢狀型別的私用方法。 它們只可以從其包含成員呼叫。 區域函式可以宣告於下列項目中，以及從下列項目呼叫：
+從 C# 7.0 開始，C# 支援「區域函式」。 區域函式是另一個成員中巢狀型別的私用方法。 它們只可以從其包含成員呼叫。 區域函式可以宣告於下列項目中，以及從下列項目呼叫：
 
 - 方法，特別是迭代器方法和非同步方法
 - 建構函式
@@ -81,5 +81,5 @@ ms.lasthandoff: 11/18/2017
 
 [!code-csharp[LocalFunctionAsync`](../../../../samples/snippets/csharp/programming-guide/classes-and-structs/local-functions-async2.cs)] 
 
-## <a name="see-also"></a>請參閱
+## <a name="see-also"></a>另請參閱
 [方法](methods.md)

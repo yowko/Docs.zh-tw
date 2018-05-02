@@ -1,5 +1,5 @@
 ---
-title: "如何：在資料流程區塊中指定工作排程器"
+title: 如何：在資料流程區塊中指定工作排程器
 ms.date: 03/30/2017
 ms.prod: .net
 ms.technology: dotnet-standard
@@ -18,11 +18,11 @@ manager: wpickett
 ms.workload:
 - dotnet
 - dotnetcore
-ms.openlocfilehash: 592b6c5c92a2c752fa0d2694cdb477423b15eb0d
-ms.sourcegitcommit: 6a9030eb5bd0f00e1d144f81958adb195cfb1f6f
+ms.openlocfilehash: 15b1168c34a22394424f250e8ab1887ec8ee1a5e
+ms.sourcegitcommit: 86adcc06e35390f13c1e372c36d2e044f1fc31ef
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 01/10/2018
+ms.lasthandoff: 04/26/2018
 ---
 # <a name="how-to-specify-a-task-scheduler-in-a-dataflow-block"></a>如何：在資料流程區塊中指定工作排程器
 此文件將示範當您在應用程式中使用資料流程時，如何與特定工作排程器產生關聯。 這個範例會使用 Windows Form 應用程式中的 <xref:System.Threading.Tasks.ConcurrentExclusiveSchedulerPair?displayProperty=nameWithType> 類別顯示讀取器工作何時為使用中，以及寫入器工作何時為使用中。 另外還會使用 <xref:System.Threading.Tasks.TaskScheduler.FromCurrentSynchronizationContext%2A?displayProperty=nameWithType> 方法讓資料流程區塊在使用者介面執行緒上執行。
@@ -31,9 +31,9 @@ ms.lasthandoff: 01/10/2018
 
 ## <a name="to-create-the-windows-forms-application"></a>若要建立 Windows Forms 應用程式  
   
-1.  建立 [!INCLUDE[csprcs](../../../includes/csprcs-md.md)] 或 Visual Basic **Windows Forms 應用程式**專案。 在下列步驟中，專案會命名為 `WriterReadersWinForms`。  
+1.  建立 Visual C# 或 Visual Basic **Windows Forms 應用程式**專案。 在下列步驟中，專案會命名為 `WriterReadersWinForms`。  
   
-2.  在主要表單 Form1.cs (在 [!INCLUDE[vbprvb](../../../includes/vbprvb-md.md)] 中為 Form1.vb) 的表單設計工具上，加入四個 <xref:System.Windows.Forms.CheckBox> 控制項。 將 `checkBox1` 的 <xref:System.Windows.Forms.Control.Text%2A> 屬性設定為**讀取器 1**、`checkBox2` 的該屬性設為**讀取器 2**、`checkBox3` 的該屬性設為**讀取器 3**，以及 `checkBox4` 的該屬性設為**寫入器**。 將每個控制項的 <xref:System.Windows.Forms.Control.Enabled%2A> 屬性設為 `False`。  
+2.  在主要表單 Form1.cs (在 Visual Basic 中為 Form1.vb) 的表單設計工具上，新增四個 <xref:System.Windows.Forms.CheckBox> 控制項。 將 `checkBox1` 的 <xref:System.Windows.Forms.Control.Text%2A> 屬性設定為**讀取器 1**、`checkBox2` 的該屬性設為**讀取器 2**、`checkBox3` 的該屬性設為**讀取器 3**，以及 `checkBox4` 的該屬性設為**寫入器**。 將每個控制項的 <xref:System.Windows.Forms.Control.Enabled%2A> 屬性設為 `False`。  
   
 3.  將 <xref:System.Windows.Forms.Timer> 控制項加入表單。 將 <xref:System.Windows.Forms.Timer.Interval%2A> 屬性設定為 `2500`。  
   
@@ -44,7 +44,7 @@ ms.lasthandoff: 01/10/2018
   
 1.  在您的專案中，加入 System.Threading.Tasks.Dataflow.dll 的參考。  
   
-2.  確定 Form1.cs (在 [!INCLUDE[vbprvb](../../../includes/vbprvb-md.md)] 中為 Form1.vb) 包含下列 `using` 陳述式 (在 `Imports` 中為 [!INCLUDE[vbprvb](../../../includes/vbprvb-md.md)])。  
+2.  確定 Form1.cs (在 Visual Basic 中為 Form1.vb) 包含下列 `using` 陳述式 (在 Visual Basic 中為 `Imports`)。  
   
      [!code-csharp[TPLDataflow_WriterReadersWinForms#1](../../../samples/snippets/csharp/VS_Snippets_Misc/tpldataflow_writerreaderswinforms/cs/writerreaderswinforms/form1.cs#1)]
      [!code-vb[TPLDataflow_WriterReadersWinForms#1](../../../samples/snippets/visualbasic/VS_Snippets_Misc/tpldataflow_writerreaderswinforms/vb/writerreaderswinforms/form1.vb#1)]  
@@ -81,7 +81,7 @@ ms.lasthandoff: 01/10/2018
  這個範例也會使用 <xref:System.Threading.Tasks.ConcurrentExclusiveSchedulerPair> 類別讓某些資料流程區塊同時執行，以及讓另一個資料流程區塊相對於同一個 <xref:System.Threading.Tasks.ConcurrentExclusiveSchedulerPair> 物件上執行的所有資料流程區塊獨佔執行。 當多個資料流程區塊共用某一項資源，而其中有些區塊需要獨佔存取該資源時，這項技術會很有用，因為它能讓您不必手動同步處理該資源的存取權。 不必手動同步處理可讓程式碼更有效率。  
   
 ## <a name="example"></a>範例  
- 下列範例顯示 Form1.cs (在 [!INCLUDE[vbprvb](../../../includes/vbprvb-md.md)] 中為 Form1.vb) 的完整程式碼。  
+ 下列範例顯示 Form1.cs (在 Visual Basic 中為 Form1.vb) 的完整程式碼。  
   
  [!code-csharp[TPLDataflow_WriterReadersWinForms#100](../../../samples/snippets/csharp/VS_Snippets_Misc/tpldataflow_writerreaderswinforms/cs/writerreaderswinforms/form1.cs#100)]
  [!code-vb[TPLDataflow_WriterReadersWinForms#100](../../../samples/snippets/visualbasic/VS_Snippets_Misc/tpldataflow_writerreaderswinforms/vb/writerreaderswinforms/form1.vb#100)]  

@@ -1,11 +1,12 @@
 ---
-title: "在 Visual Basic 中管理檔案和目錄"
-ms.custom: 
+title: 在 Visual Basic 中管理檔案和目錄
+ms.custom: ''
 ms.date: 07/20/2015
 ms.prod: .net
-ms.reviewer: 
-ms.suite: 
-ms.technology: devlang-visual-basic
+ms.reviewer: ''
+ms.suite: ''
+ms.technology:
+- devlang-visual-basic
 ms.topic: article
 helpviewer_keywords:
 - files [Visual Basic], reading text
@@ -21,19 +22,19 @@ helpviewer_keywords:
 - writing to files [Visual Basic], walkthroughs
 - I/O [Visual Basic], reading text from files
 ms.assetid: cae77565-9f78-4e46-8e42-eb2f9f8e1ffd
-caps.latest.revision: "49"
+caps.latest.revision: 49
 author: dotnet-bot
 ms.author: dotnetcontent
-ms.openlocfilehash: bd1e61503394741e7943d30d383f2e7c5ea35f68
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.openlocfilehash: bff2e66b1a196117117370f7620f3f55576ad19b
+ms.sourcegitcommit: 86adcc06e35390f13c1e372c36d2e044f1fc31ef
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 04/26/2018
 ---
 # <a name="walkthrough-manipulating-files-and-directories-in-visual-basic"></a>逐步解說：在 Visual Basic 中管理檔案和目錄
-本逐步解說提供 [!INCLUDE[vbprvb](~/includes/vbprvb-md.md)] 中檔案 I/O 的基本概念簡介。 其中說明如何建立一個小型應用程式，以提列並檢查目錄中的文字檔案。 針對每個選取的文字檔案，應用程式會提供檔案屬性和第一行內容。 您也可以選擇將資訊寫入記錄檔。  
+本逐步解說提供 Visual Basic 中檔案 I/O 的基本概念簡介。 其中說明如何建立一個小型應用程式，以提列並檢查目錄中的文字檔案。 針對每個選取的文字檔案，應用程式會提供檔案屬性和第一行內容。 您也可以選擇將資訊寫入記錄檔。  
   
- 本逐步解說使用 [!INCLUDE[vbprvb](~/includes/vbprvb-md.md)] 所提供的 `My.Computer.FileSystem Object` 成員。 如需詳細資訊，請參閱 <xref:Microsoft.VisualBasic.FileIO.FileSystem>。 本逐步解說最後會提供使用來自 <xref:System.IO> 命名空間之類別的對等範例。  
+ 本逐步解說使用 Visual Basic 所提供的 `My.Computer.FileSystem Object` 成員。 如需詳細資訊，請參閱 <xref:Microsoft.VisualBasic.FileIO.FileSystem>。 本逐步解說最後會提供使用來自 <xref:System.IO> 命名空間之類別的對等範例。  
   
 [!INCLUDE[note_settings_general](~/includes/note-settings-general-md.md)]  
   
@@ -53,11 +54,11 @@ ms.lasthandoff: 11/21/2017
   
     |控制項|屬性|值|  
     |-------------|--------------|-----------|  
-    |**ListBox**|**Name**|`filesListBox`|  
-    |**Button**|**Name**<br /><br /> **文字**|`browseButton`<br /><br /> **瀏覽**|  
-    |**Button**|**Name**<br /><br /> **文字**|`examineButton`<br /><br /> **檢查**|  
-    |**CheckBox**|**Name**<br /><br /> **文字**|`saveCheckBox`<br /><br /> **儲存結果**|  
-    |**FolderBrowserDialog**|**Name**|`FolderBrowserDialog1`|  
+    |**ListBox**|**名稱**|`filesListBox`|  
+    |**Button**|**名稱**<br /><br /> **Text**|`browseButton`<br /><br /> **瀏覽**|  
+    |**Button**|**名稱**<br /><br /> **Text**|`examineButton`<br /><br /> **檢查**|  
+    |**CheckBox**|**名稱**<br /><br /> **Text**|`saveCheckBox`<br /><br /> **儲存結果**|  
+    |**FolderBrowserDialog**|**名稱**|`FolderBrowserDialog1`|  
   
 ### <a name="to-select-a-folder-and-list-files-in-a-folder"></a>若要選取資料夾，並列出資料夾中的檔案  
   
@@ -105,7 +106,7 @@ ms.lasthandoff: 11/21/2017
   
      <xref:Microsoft.VisualBasic.FileIO.FileSystem.OpenTextFileReader%2A> 方法會將檔案內容讀入 <xref:System.IO.StreamReader>。 系統會由 `StreamReader` 取得第一行的內容，並將其新增至 `StringBuilder`。  
   
-4.  執行應用程式。 按一下 [瀏覽]，並瀏覽至包含 .txt 檔案的資料夾。 按一下 [確定]。  
+4.  執行應用程式。 按一下 [瀏覽]，並瀏覽至包含 .txt 檔案的資料夾。 按一下 [確定 **Deploying Office Solutions**]。  
   
      選取 `ListBox` 中的檔案，然後按一下 [檢查]。 `MessageBox` 隨即顯示檔案資訊。  
   
@@ -167,7 +168,7 @@ ms.lasthandoff: 11/21/2017
   
  [!code-vb[VbVbcnMyFileSystem#111](../../../../visual-basic/developing-apps/programming/drives-directories-files/codesnippet/VisualBasic/walkthrough-manipulating-files-and-directories_9.vb)]  
   
-## <a name="see-also"></a>另請參閱  
+## <a name="see-also"></a>請參閱  
  <xref:System.IO>  
  <xref:Microsoft.VisualBasic.FileIO.FileSystem>  
  <xref:Microsoft.VisualBasic.FileIO.FileSystem.CurrentDirectory%2A>  

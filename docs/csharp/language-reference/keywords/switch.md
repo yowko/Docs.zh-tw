@@ -1,8 +1,9 @@
 ---
-title: "switch 關鍵字 (C# 參考)"
+title: switch 關鍵字 (C# 參考)
 ms.date: 03/07/2017
 ms.prod: .net
-ms.technology: devlang-csharp
+ms.technology:
+- devlang-csharp
 ms.topic: article
 f1_keywords:
 - switch_CSharpKeyword
@@ -15,14 +16,14 @@ helpviewer_keywords:
 - case statement [C#]
 - default keyword [C#]
 ms.assetid: 44bae8b8-8841-4d85-826b-8a94277daecb
-caps.latest.revision: "47"
+caps.latest.revision: 47
 author: BillWagner
 ms.author: wiwagn
-ms.openlocfilehash: 1c345d0c6c935271600a386752e18c19a25cc389
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.openlocfilehash: 6506278edb782f61b83cecfccba3126282c0ecf8
+ms.sourcegitcommit: 86adcc06e35390f13c1e372c36d2e044f1fc31ef
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 04/26/2018
 ---
 # <a name="switch-c-reference"></a>switch (C# 參考)
 `switch` 是一個選取範圍陳述式，可根據使用「比對運算式」的模式比對，從候選項清單中選擇要執行的單一「參數區段」。 
@@ -53,7 +54,7 @@ ms.lasthandoff: 11/21/2017
 - 整數值，例如 [int](int.md) 或 [long](long.md)。
 - [enum](enum.md) 值。
 
-從 C# 7 開始，比對運算式可以是任何非 Null 運算式。
+從 C# 7.0 開始，比對運算式可以是任何非 Null 運算式。
  
 ## <a name="the-switch-section"></a>參數區段
  
@@ -91,7 +92,7 @@ switch (caseSwitch)
 
  因為 C# 6 只支援常數模式，且不允許重複常數值，所以 case 標籤定義互斥值，而且只有一個模式可以符合比對運算式。 因此，`case` 陳述式的出現順序並不重要。
 
- 不過，在 C# 7 中，因為支援其他模式，所以 case 標籤不需要定義互斥值，而且可以有多個模式符合比對運算式。 因為只會執行包含第一個相符模式的參數區段中的陳述式，所以 `case` 陳述式的出現順序現在十分重要。 如果 C# 偵測到一或多個 case 陳述式等於或為先前陳述式子集的參數區段，則會產生編譯器錯誤 CS8120：「先前的案例已處理切換案例。」 
+ 不過，在 C# 7.0 中，因為支援其他模式，所以 case 標籤不需要定義互斥值，而且可以有多個模式符合比對運算式。 因為只會執行包含第一個相符模式的參數區段中的陳述式，所以 `case` 陳述式的出現順序現在十分重要。 如果 C# 偵測到一或多個 case 陳述式等於或為先前陳述式子集的參數區段，則會產生編譯器錯誤 CS8120：「先前的案例已處理切換案例。」 
 
  下列範例說明使用各種非互斥模式的 `switch` 陳述式。 如果您移動 `case 0:` 參數區段，讓它不再是 `switch` 陳述式中的第一個區段，則 C# 會產生編譯器錯誤，因為值為零的整數是所有整數的子集，而這是 `case int val` 陳述式所定義的模式。
 
@@ -111,7 +112,7 @@ switch (caseSwitch)
 
 ## <a name="a-namepattern--pattern-matching-with-the-switch-statement"></a>使用 `switch` 陳述式進行的 <a name="pattern" /> 模式比對
   
-每個 `case` 陳述式都會定義一個模式，並在模式符合比對運算式時，執行其包含參數區段。 所有版本的 C# 都支援常數模式。 從 C# 7 開始，支援其餘的模式。 
+每個 `case` 陳述式都會定義一個模式，並在模式符合比對運算式時，執行其包含參數區段。 所有版本的 C# 都支援常數模式。 從 C# 7.0 開始，支援其餘的模式。 
   
 ### <a name="constant-pattern"></a>常數模式 
 
@@ -181,7 +182,7 @@ case null:
 
 ## <a name="the-case-statement-and-the-when-clause"></a>`case` 陳述式和 `when` 子句
 
-從 C# 7 開始，因為 case 陳述式不需要互斥，所以您可以新增 `when` 子句來指定其他條件，您必須滿足這些條件，case 陳述式才會評估為 true。 `when` 子句可以是任何傳回布林值的運算式。 其中一個更常用的 `when` 子句是用來防止在比對運算式的值為 `null` 時執行參數區段。 
+從 C# 7.0 開始，因為 case 陳述式不需要互斥，所以您可以新增 `when` 子句來指定其他條件，您必須滿足這些條件，case 陳述式才會評估為 true。 `when` 子句可以是任何傳回布林值的運算式。 其中一個更常用的 `when` 子句是用來防止在比對運算式的值為 `null` 時執行參數區段。 
 
  下面範例定義基底 `Shape` 類別、衍生自 `Shape` 的 `Rectangle` 類別，以及衍生自 `Rectangle` 的 `Square` 類別。 它會使用 `when` 子句，確保 `ShowShapeInfo` 將已指派相等長度和寬度的 `Rectangle` 物件識別為 `Square`，即使尚未具現化為 `Square` 物件也是一樣。 此方法不會嘗試顯示為 `null` 的物件或區域為零之組織結構的相關資訊。 
 
@@ -192,7 +193,7 @@ case null:
 ## <a name="c-language-specification"></a>C# 語言規格  
  [!INCLUDE[CSharplangspec](../../../../includes/csharplangspec-md.md)]  
   
-## <a name="see-also"></a>另請參閱  
+## <a name="see-also"></a>請參閱  
 
  [C# 參考](../index.md)  
  [C# 程式設計指南](../../programming-guide/index.md)  

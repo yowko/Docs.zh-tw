@@ -1,5 +1,5 @@
 ---
-title: C# 7 的新功能 - C# 指南
+title: C# 7.0 的新功能 - C# 指南
 description: 取得 C# 語言未來版本 7 的新功能概觀。
 keywords: C#, .NET, .NET Core, 最新功能, 新功能
 author: BillWagner
@@ -10,21 +10,21 @@ ms.prod: .net
 ms.technology: devlang-csharp
 ms.devlang: csharp
 ms.assetid: fd41596d-d0c2-4816-b94d-c4d00a5d0243
-ms.openlocfilehash: 374ac9917464a7e83566440abab10eda8a9c8683
-ms.sourcegitcommit: 32172ca05d5dcce7ef3d327b9c8639c736e0fe2b
+ms.openlocfilehash: 1951c60ee11d0d5c4856f5f92eee8ba690b11f8d
+ms.sourcegitcommit: 86adcc06e35390f13c1e372c36d2e044f1fc31ef
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 03/20/2018
+ms.lasthandoff: 04/26/2018
 ---
-# <a name="whats-new-in-c-7"></a>C# 7 的新功能
+# <a name="whats-new-in-c-70"></a>C# 7.0 的新功能
 
-C# 7 新增許多新功能至 C# 語言︰
+C# 7.0 新增許多新功能至 C# 語言：
 * [`out` 變數](#out-variables)
     - 您可以宣告 `out` 內嵌值作為使用它們之方法的引數。
-* [Tuple](#tuples)
+* [元組](#tuples)
     - 您可以建立包含多個公用欄位的輕量、未具名的類型。 編譯器和 IDE 工具了解這些類型的語意。
-* [Discard](#discards) 變數
-    - Discard 是種僅能用於寫入的暫時性變數，當您不在意指派的值時，便能在指派中使用。 在解構 Tuple 及使用者定義型別，以及使用 `out` 參數呼叫方法時，Discard 變數特別實用。
+* [捨棄](#discards)
+    - 捨棄是當您不在意指派的值時，於指派內使用的僅限寫入且暫時之變數。 解構元組及使用者定義型別，以及使用 `out` 參數呼叫方法時，捨棄特別實用。
 * [模式比對](#pattern-matching)
     - 您可以建立以任意類型和這些類型成員的值為基礎的分支邏輯。
 * [`ref` 區域變數和傳回](#ref-locals-and-returns)
@@ -88,18 +88,18 @@ C# 為類別和結構提供豐富的語法，可用來解釋您的設計目的�
 不會驗證這些欄位，且您不能定義自己的方法
 
 > [!NOTE]
-> Tuple 在 C# 7 之前即可使用，但效率不彰且沒有語言支援。
-> 這表示 Tuple 元素只能參考為 `Item1` 及 `Item2` 等等。 C# 7 加入了 Tuple 的語言支援，讓 Tuple 欄位的語意名稱能使用全新且更具效率的 Tuple 型別。
+> Tuple 在 C# 7.0 之前即可使用，但效率不彰且沒有語言支援。
+> 這表示元組元素只能參考為 `Item1`及 `Item2` 等等。 C# 7.0 加入了 Tuple 的語言支援，讓 Tuple 欄位的語意名稱能使用全新且更具效率的 Tuple 型別。
 
 您可以指派每個成員到一個值，以建立 Tuple︰
 
 [!code-csharp[UnnamedTuple](../../../samples/snippets/csharp/new-in-7/program.cs#04_UnnamedTuple "Unnamed tuple")]
 
-指派會建立成員為 `Item1` 與 `Item2` 的 Tuple，而您能使用與 <xref:System.Tuple> 相同的方式加以使用。您可以變更語法，以建立能夠為 Tuple 中每位成員提供語意名稱的 Tuple：
+指派會建立成員為 `Item1` 與 `Item2` 的元組，而您能使用與 <xref:System.Tuple> 相同的方式加以使用。您可以變更語法，以建立能夠為元組中每位成員提供語意名稱的元組：
 
 [!code-csharp[NamedTuple](../../../samples/snippets/csharp/new-in-7/program.cs#05_NamedTuple "Named tuple")]
 
-`namedLetters` Tuple 包含稱為 `Alpha` 和 `Beta` 的欄位。 這些名稱只會在編譯時間出現而不會保留，例如在執行階段使用反映調查 Tuple 時。
+`namedLetters` Tuple 包含稱為 `Alpha` 和 `Beta` 的欄位。 這些名稱只會在編譯時間出現而不會保留，例如在執行階段使用反映調查元組時。
 
 在 Tuple 指派中，您也可以在指派的右邊，指定欄位的名稱︰
 
@@ -132,9 +132,6 @@ C# 為類別和結構提供豐富的語法，可用來解釋您的設計目的�
 
 [!code-csharp[CallingWithDeconstructor](../../../samples/snippets/csharp/new-in-7/program.cs#10_CallingWithDeconstructor "Deconstructing a tuple")]
 
-<!-- Add wildcards here, if they are in C# 7
--->
-
 您也可以在 .NET 中為任何類型提供類似的解構。 這是藉由撰寫 `Deconstruct` 方法作為類別的成員而達成。 `Deconstruct` 方法為您想要擷取的每個屬性提供一組 `out` 引數。 請考慮這個 `Point` 類別，它會提供 deconstructor 方法，擷取 `X` 和 `Y` 座標︰
 
 [!code-csharp[PointWithDeconstruction](../../../samples/snippets/csharp/new-in-7/point.cs#11_PointWithDeconstruction "Point with deconstruction method")]
@@ -149,25 +146,25 @@ C# 為類別和結構提供豐富的語法，可用來解釋您的設計目的�
 
 您可以在 [Tuple 主題](../tuples.md)中深入了解 Tuple。
 
-## <a name="discards"></a>Discard 變數
+## <a name="discards"></a>捨棄
 
-通常在您解構 Tuple 或以 `out` 參數呼叫方法時，會強制您要定義變數，而您無須在意變數的值也沒有使用該值的打算。 C# 新增了對*捨棄*的支援，來應付這種狀況。 Discard 是僅限寫入的變數，其名稱為 `_` (底線字元)；您可將所有想要捨棄的值指派到單一變數。 Discard 變數類似於未經指派的變數；和指派陳述式一樣，都不能用於程式碼中。
+通常在您解構元組或以 `out` 參數呼叫方法時，會強制您要定義變數，而您無須在意變數的值也沒有使用該值的打算。 C# 新增了對*捨棄*的支援，來應付這種狀況。 捨棄是僅限寫入的變數，其名稱為 `_` (底線字元)；您可將所有想要捨棄的值指派到單一變數。 捨棄類似於未經指派的變數；和指派陳述式一樣，都不能用於程式碼中。
 
-下列情況中支援 Discard 變數：
+下列情況中支援捨棄：
 
-* 解構 Tuple 或使用者定義型別時。
+* 解構元組或使用者定義型別時。
 
 * 以 [out](../language-reference/keywords/out-parameter-modifier.md) 參數呼叫方法時。
 
 * 執行 [is](../language-reference/keywords/is.md) 及 [switch](../language-reference/keywords/switch.md) 陳述式的模式比對作業時。
 
-* 當您想要將指派的值明確識別為 Discard 變數時，可作為獨立識別項使用。
+* 作為獨立識別項，當您想要將指派的值明確識別為捨棄時。
 
-下列範例定義的 `QueryCityDataForYears` 方法，會傳回包含兩個不同年份的城市資料之 6-Tuple。 範例中的方法呼叫只有對方法傳回的兩個母體有效，所以會在解構 Tuple 時，將 Tuple 中剩餘的值視作 Discard 變數來處理。
+下列範例定義的 `QueryCityDataForYears` 方法，會傳回包含兩個不同年份的城市資料之 6 元組。 範例中的方法呼叫只有對方法傳回的兩個母體有效，所以會在解構元組時，將元組中剩餘的值視作捨棄處理。
 
 [!code-csharp[Tuple-discard](../../../samples/snippets/csharp/programming-guide/deconstructing-tuples/discard-tuple1.cs)]
 
-如需詳細資訊，請參閱 [Discard](../discards.md)。
+如需詳細資訊，請參閱[捨棄](../discards.md)。
  
 ## <a name="pattern-matching"></a>模式比對
 
@@ -327,7 +324,7 @@ C# 語言有三個其他的規則可保護您免於濫用 `ref` 區域變數和�
 
 ## <a name="more-expression-bodied-members"></a>更多運算式主體成員
 
-C# 6 引進了成員函式的[運算式主體成員](csharp-6.md#expression-bodied-function-members)和唯讀屬性。 C# 7 展開了可以實作為運算式的允許成員。 在 C# 7 中，您可以實作「建構函式」、「完成項」，以及「屬性」和「索引子」上的 `get` 和 `set` 存取子。 下列程式碼將示範各項的範例：
+C# 6 引進了成員函式的[運算式主體成員](csharp-6.md#expression-bodied-function-members)和唯讀屬性。 C# 7.0 擴充了可以實作為運算式的允許成員。 在 C# 7.0 中，您可以實作「建構函式」、「完成項」，以及「屬性」和「索引子」上的 `get` 和 `set` 存取子。 下列程式碼將示範各項的範例：
 
 [!code-csharp[ExpressionBodiedMembers](../../../samples/snippets/csharp/new-in-7/expressionmembers.cs#36_ExpressionBodiedEverything "new expression-bodied members")]
 
@@ -338,7 +335,7 @@ C# 6 引進了成員函式的[運算式主體成員](csharp-6.md#expression-bodi
 
 ## <a name="throw-expressions"></a>throw 運算式
 
-在 C# 中，`throw` 一直都是陳述式。 因為 `throw` 是陳述式，而不是運算式，所以有您無法在其中使用它的 C# 建構。 這些包含條件運算式、Null 聯合運算式和一些 Lambda 運算式。 新增運算式主體成員會新增 `throw` 運算式適用的更多位置。 為了讓您可以撰寫任何這些建構，C# 7 引進了「Throw 運算式」。
+在 C# 中，`throw` 一直都是陳述式。 因為 `throw` 是陳述式，而不是運算式，所以有您無法在其中使用它的 C# 建構。 這些包含條件運算式、Null 聯合運算式和一些 Lambda 運算式。 新增運算式主體成員會新增 `throw` 運算式適用的更多位置。 為了讓您可以撰寫任何這些建構，C# 7.0 引進了「throw 運算式」。
 
 語法與您一直用於 `throw` 陳述式的語法相同。 唯一的差別在於現在您可以將它們放在新位置，例如在條件運算式中︰
 
@@ -376,7 +373,7 @@ C# 6 引進了成員函式的[運算式主體成員](csharp-6.md#expression-bodi
 
 ## <a name="numeric-literal-syntax-improvements"></a>數值常值的語法增強功能
 
-錯譯數值常數，可能會使得在第一次閱讀它時，更加難以了解程式碼。 這通常發生於那些數字用作位元遮罩或其他符號而不是數字值的時候。 C# 7 包含兩項新功能，可以更輕鬆地以預期用途最容易閱讀的方式來撰寫數字︰「二進位常值」和「數字分隔符號」。
+錯譯數值常數，可能會使得在第一次閱讀它時，更加難以了解程式碼。 這通常發生於那些數字用作位元遮罩或其他符號而不是數字值的時候。 C# 7.0 包含兩項新功能，可以更輕鬆地以預期用途最容易閱讀的方式來撰寫數字︰「二進位常值」和「數字分隔符號」。
 
 當您在建立位元遮罩時，或是每當數字的二進位表示法構成最容易閱讀的程式碼時，請以二進位撰寫該數字︰
 

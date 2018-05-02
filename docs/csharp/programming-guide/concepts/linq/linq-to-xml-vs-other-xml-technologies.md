@@ -1,21 +1,22 @@
 ---
-title: "LINQ to XML 比較其他 XML 技術的比較"
-ms.custom: 
+title: LINQ to XML 比較其他 XML 技術的比較
+ms.custom: ''
 ms.date: 07/20/2015
 ms.prod: .net
-ms.reviewer: 
-ms.suite: 
-ms.technology: devlang-csharp
+ms.reviewer: ''
+ms.suite: ''
+ms.technology:
+- devlang-csharp
 ms.topic: article
 ms.assetid: 01b8e746-12d3-471d-b811-7539e4547784
-caps.latest.revision: "3"
+caps.latest.revision: 3
 author: BillWagner
 ms.author: wiwagn
-ms.openlocfilehash: 4a159c906799a61372c1a40e7464d885339b9256
-ms.sourcegitcommit: bd1ef61f4bb794b25383d3d72e71041a5ced172e
+ms.openlocfilehash: f13e2d64db9265f03aec3fa5da9f171fcb366f72
+ms.sourcegitcommit: 86adcc06e35390f13c1e372c36d2e044f1fc31ef
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/18/2017
+ms.lasthandoff: 04/26/2018
 ---
 # <a name="linq-to-xml-vs-other-xml-technologies"></a>LINQ to XML 比較其他 XML 技術之比較
 這個主題會比較 [!INCLUDE[sqltecxlinq](~/includes/sqltecxlinq-md.md)] 與下列 XML 技術：<xref:System.Xml.XmlReader>、XSLT、MSXML 和 XmlLite。 這個資訊可以協助您決定要使用的技術。  
@@ -49,7 +50,7 @@ ms.lasthandoff: 10/18/2017
 ## <a name="linq-to-xml-vs-msxml"></a>LINQ to XML 比較MSXML  
  MSXML 是 COM 架構的技術，用於處理 Microsoft Windows 隨附的 XML。 MSXML 會提供 DOM 的原始實作 (包含對於 XPath 和 XSLT 的支援)， 同時也包含 SAX2 非快取的事件型剖析器。  
   
- MSXML 運作良好、在大部分的案例中預設是安全的，而且可以在 Internet Explorer 中存取，以便在 AJAX 型的應用程式中執行用戶端的 XML 處理。 從支援 COM (包括 C++、JavaScript 和 [!INCLUDE[vbprvb](~/includes/vbprvb-md.md)] 6.0) 的任何程式設計語言都可以使用 MSXML。  
+ MSXML 運作良好、在大部分的案例中預設是安全的，而且可以在 Internet Explorer 中存取，以便在 AJAX 型的應用程式中執行用戶端的 XML 處理。 從支援 COM (包括 C++、JavaScript 和 Visual Basic 6.0) 的任何程式設計語言都可以使用 MSXML。  
   
  根據 Common Language Runtime (CLR)，不建議將 MSXML 用於 Managed 程式碼中。  
   
@@ -60,5 +61,5 @@ ms.lasthandoff: 10/18/2017
   
  XmlLite 不會與 [!INCLUDE[vbteclinqext](~/includes/vbteclinqext-md.md)] 整合在一起。 因此不會提供程式設計人員生產力提升功能，這種功能是 [!INCLUDE[vbteclinq](~/includes/vbteclinq-md.md)] 背後的驅動力量。  
   
-## <a name="see-also"></a>另請參閱  
+## <a name="see-also"></a>請參閱  
  [使用者入門 (LINQ to XML)](../../../../csharp/programming-guide/concepts/linq/getting-started-linq-to-xml.md)

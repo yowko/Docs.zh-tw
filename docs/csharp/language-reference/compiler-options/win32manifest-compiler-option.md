@@ -1,5 +1,5 @@
 ---
-title: "-win32manifest (C# 編譯器選項)"
+title: -win32manifest (C# 編譯器選項)
 ms.date: 07/20/2015
 ms.prod: .net
 ms.technology:
@@ -12,14 +12,14 @@ helpviewer_keywords:
 - win32manifest compiler option [C#]
 - -win32manifest compiler option [C#]
 ms.assetid: 9460ea1b-6c9f-44b8-8f73-301b30a01de1
-caps.latest.revision: 
+caps.latest.revision: 13
 author: BillWagner
 ms.author: wiwagn
-ms.openlocfilehash: 36a16f1ee037a1379399c7ee2e2c67427eb9d1b2
-ms.sourcegitcommit: c0dd436f6f8f44dc80dc43b07f6841a00b74b23f
+ms.openlocfilehash: cb05f4f01dd7e19d2034de89ac47304b0731ca01
+ms.sourcegitcommit: 86adcc06e35390f13c1e372c36d2e044f1fc31ef
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 01/19/2018
+ms.lasthandoff: 04/26/2018
 ---
 # <a name="-win32manifest-c-compiler-options"></a>-win32manifest (C# 編譯器選項)
 使用 **-win32manifest** 選項，指定要內嵌到專案之可攜式執行檔 (PE) 中的使用者定義 Win32 應用程式資訊清單檔。  
@@ -35,7 +35,7 @@ ms.lasthandoff: 01/19/2018
  自訂資訊清單檔案的名稱和位置。  
   
 ## <a name="remarks"></a>備註  
- 根據預設，[!INCLUDE[csharp_current_short](~/includes/csharp-current-short-md.md)] 編譯器會內嵌應用程式資訊清單，以指定所要求之執行層級的 "asInvoker"。 編譯器會在建置可執行檔所在的資料夾中建立資訊清單，當您使用 Visual Studio 時，通常會是 bin\Debug 或是 bin\Release 資料夾。 如果您要提供自訂資訊清單，例如指定 "highestAvailable" 或 "requireAdministrator" 做為要求的執行層級，請使用此選項指定檔案名稱。  
+ 根據預設，Visual C# 編譯器會內嵌應用程式資訊清單，以指定所要求之執行層級的 "asInvoker"。 編譯器會在建置可執行檔所在的資料夾中建立資訊清單，當您使用 Visual Studio 時，通常會是 bin\Debug 或是 bin\Release 資料夾。 如果您要提供自訂資訊清單，例如指定 "highestAvailable" 或 "requireAdministrator" 做為要求的執行層級，請使用此選項指定檔案名稱。  
   
 > [!NOTE]
 >  此選項與 [-win32res (C# 編譯器選項)](../../../csharp/language-reference/compiler-options/win32res-compiler-option.md) 選項互斥。 如果您嘗試在相同的命令列中使用這兩個選項，則會收到建置錯誤。  

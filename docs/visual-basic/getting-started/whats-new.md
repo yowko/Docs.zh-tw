@@ -15,11 +15,11 @@ ms.assetid: d7e97396-7f42-4873-a81c-4ebcc4b6ca02
 caps.latest.revision: 145
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 4641041657e99fa64bf1b7eb5317a43660ac7e2b
-ms.sourcegitcommit: 935d5267c44f9bce801468ef95f44572f1417e8c
+ms.openlocfilehash: 34c7e7147ce7ae43926de1796bee433667f08331
+ms.sourcegitcommit: 86adcc06e35390f13c1e372c36d2e044f1fc31ef
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 03/28/2018
+ms.lasthandoff: 04/26/2018
 ---
 # <a name="whats-new-for-visual-basic"></a>Visual Basic 的新功能
 
@@ -129,7 +129,7 @@ Tuple 的 Visual Basic 支援可讓您快速定義 Tuple、選擇性地將語意
 
 **C# 參考傳回值的支援**
 
-從 C# 7 開始，C# 支援參考傳回值。 也就是說，當呼叫方法收到參考傳回的值時，它可以變更參考的值。 Visual Basic 不允許您撰寫使用參考傳回值的方法，但允許您使用和修改參考傳回值。
+從 C# 7.0 開始，C# 支援參考傳回值。 也就是說，當呼叫方法收到參考傳回的值時，它可以變更參考的值。 Visual Basic 不允許您撰寫使用參考傳回值的方法，但允許您使用和修改參考傳回值。
 
 例如，以 C# 撰寫的下列 `Sentence` 類別包含 `FindNext` 方法，它可以在句子中尋找以指定子字串開頭的下一個文字。 字串會以參考傳回值傳回，而參考所傳遞至方法的 `Boolean` 變數會指出搜尋是否成功。 這表示，呼叫端不只可以讀取傳回值，還可以修改它，再將修改結果反映在 `Sentence` 類別中。
 

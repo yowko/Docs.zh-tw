@@ -1,5 +1,5 @@
 ---
-title: "long (C# 參考)"
+title: long (C# 參考)
 ms.date: 03/14/2017
 ms.prod: .net
 ms.technology:
@@ -11,14 +11,14 @@ f1_keywords:
 helpviewer_keywords:
 - long keyword [C#]
 ms.assetid: f9b24319-1f39-48be-a42b-d528ee28a7fd
-caps.latest.revision: 
+caps.latest.revision: 17
 author: BillWagner
 ms.author: wiwagn
-ms.openlocfilehash: 7f18bed80550b293195961fd9d42491dd571cbaf
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.openlocfilehash: 4f11c904aadc5cd27482072e9f6f97236c0cdce2
+ms.sourcegitcommit: 86adcc06e35390f13c1e372c36d2e044f1fc31ef
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 04/26/2018
 ---
 # <a name="long-c-reference"></a>long (C# 參考)
 
@@ -30,7 +30,7 @@ ms.lasthandoff: 11/21/2017
   
 ## <a name="literals"></a>常值 
 
-您可以針對 `long` 變數指派十進位常值、十六進位常值，或二進位常值 (自 C# 7 起)，以將其宣告和初始化。 
+您可以針對 `long` 變數指派十進位常值、十六進位常值，或二進位常值 (自 C# 7.0 起)，以將其宣告和初始化。 
 
 在下列範例中，如果整數等於 4,294,967,296，即表示 `long` 值指派了十進位、十六進位和二進位常值。  
   
@@ -39,11 +39,11 @@ ms.lasthandoff: 11/21/2017
 > [!NOTE] 
 > 您可以使用 `0x` 或 `0X` 前置詞來表示十六進位常值，以 `0b` 或 `0B` 前置詞來表示二進位常值。 十進位常值沒有前置詞。 
 
-開始使用 C# 7，已加入一組功能，以提升可讀性。 
- - C# 7.0 可讓使用底線字元， `_`，做為千位分隔符號。
- - 可讓 C# 7.2`_`来做為二進位或十六進位常值、 數字分隔符號 after 前置字元。 十進位常值不允許有前置底線。
+從 C# 7.0 開始，已新增一組功能來提升可讀性。 
+ - C# 7.0 允許使用底線字元 (`_`) 作為數字分隔符號。
+ - C# 7.2 允許針對二進位或十六進位常值，在前置詞之後使用 `_` 作為數字分隔符號。 十進位常值不允許有前置底線。
 
-某些範例如下所示。
+一些範例如下所示。
 
 [!code-csharp[long](../../../../samples/snippets/csharp/language-reference/keywords/numeric-literals.cs#LongS)]  
  
@@ -86,7 +86,7 @@ SampleMethod(5L);   // Calls the method with the long parameter
 898L + 88  
 ```  
   
- 如需混合浮點類型和整數類型之算術運算式的資訊，請參閱 [float](../../../csharp/language-reference/keywords/float.md) 和 [double](../../../csharp/language-reference/keywords/double.md)。  
+ 如需混合浮點類型和整數型別之算術運算式的資訊，請參閱 [float](../../../csharp/language-reference/keywords/float.md) 和 [double](../../../csharp/language-reference/keywords/double.md)。  
   
 ## <a name="conversions"></a>轉換  
  針對從 `long` 轉換為 [float](../../../csharp/language-reference/keywords/float.md)、[double](../../../csharp/language-reference/keywords/double.md) 或 [decimal](../../../csharp/language-reference/keywords/decimal.md)，有一項預先定義的隱含轉換。 否則，必須使用轉型。 例如，下列陳述式會在未明確轉換的情況下產生編譯器錯誤：  
@@ -108,7 +108,7 @@ long y = (long)3.0;   // OK: explicit conversion
 ## <a name="c-language-specification"></a>C# 語言規格  
  [!INCLUDE[CSharplangspec](~/includes/csharplangspec-md.md)]  
   
-## <a name="see-also"></a>另請參閱  
+## <a name="see-also"></a>請參閱  
  <xref:System.Int64>  
  [C# 參考](../../../csharp/language-reference/index.md)  
  [C# 程式設計指南](../../../csharp/programming-guide/index.md)  

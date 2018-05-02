@@ -1,5 +1,5 @@
 ---
-title: "逐步解說：在 Windows Forms 應用程式中使用資料流程"
+title: 逐步解說：在 Windows Forms 應用程式中使用資料流程
 ms.date: 03/30/2017
 ms.prod: .net
 ms.technology: dotnet-standard
@@ -15,11 +15,11 @@ manager: wpickett
 ms.workload:
 - dotnet
 - dotnetcore
-ms.openlocfilehash: 8c0d44ca7933626c95603ccc81102889ba4c23cb
-ms.sourcegitcommit: c0dd436f6f8f44dc80dc43b07f6841a00b74b23f
+ms.openlocfilehash: f28e103d6241d954dd6ac4f7e9c7fcb20a06ea0b
+ms.sourcegitcommit: 86adcc06e35390f13c1e372c36d2e044f1fc31ef
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 01/19/2018
+ms.lasthandoff: 04/26/2018
 ---
 # <a name="walkthrough-using-dataflow-in-a-windows-forms-application"></a>逐步解說：在 Windows Forms 應用程式中使用資料流程
 本文鍵示範如何建立資料流程區塊網路，其可以在 Windows Forms 應用程式中執行映像處理。  
@@ -48,9 +48,9 @@ ms.lasthandoff: 01/19/2018
   
 #### <a name="to-create-the-windows-forms-application"></a>若要建立 Windows Forms 應用程式  
   
-1.  在 [!INCLUDE[vsprvs](../../../includes/vsprvs-md.md)]中，建立 [!INCLUDE[csprcs](../../../includes/csprcs-md.md)] 或 Visual Basic 的 [Windows Forms 應用程式] 專案。 在本文件中，專案命名為 `CompositeImages`。  
+1.  在 [!INCLUDE[vsprvs](../../../includes/vsprvs-md.md)] 中，建立 Visual C# 或 Visual Basic **Windows Forms 應用程式**專案。 在本文件中，專案命名為 `CompositeImages`。  
   
-2.  在主要表單 Form1.cs (在 [!INCLUDE[vbprvb](../../../includes/vbprvb-md.md)] 中為 Form1.vb) 的表單設計工具上，加入 <xref:System.Windows.Forms.ToolStrip> 控制項。  
+2.  在主要表單 Form1.cs (在 Visual Basic 中為 Form1.vb) 的表單設計工具上，新增 <xref:System.Windows.Forms.ToolStrip> 控制項。  
   
 3.  將 <xref:System.Windows.Forms.ToolStripButton> 控制項加入 <xref:System.Windows.Forms.ToolStrip> 控制項。 將 <xref:System.Windows.Forms.ToolStripItem.DisplayStyle%2A> 屬性設為 <xref:System.Windows.Forms.ToolStripItemDisplayStyle.Text>，並將 <xref:System.Windows.Forms.ToolStripItem.Text%2A> 屬性設為 **Choose Folder**。  
   
@@ -66,7 +66,7 @@ ms.lasthandoff: 01/19/2018
   
 1.  將 System.Threading.Tasks.Dataflow.dll 參考新增至您的專案。  
   
-2.  確定 Form1.cs (在 [!INCLUDE[vbprvb](../../../includes/vbprvb-md.md)] 中為 Form1.vb) 包含下列 `using` (在 [!INCLUDE[vbprvb](../../../includes/vbprvb-md.md)] 中為 `Using`) 陳述式：  
+2.  確定 Form1.cs (在 Visual Basic 中為 Form1.vb) 包含下列 `using` (在 Visual Basic 中為 `Using`) 陳述式：  
   
      [!code-csharp[TPLDataflow_CompositeImages#1](../../../samples/snippets/csharp/VS_Snippets_Misc/tpldataflow_compositeimages/cs/compositeimages/form1.cs#1)]  
   
@@ -87,7 +87,7 @@ ms.lasthandoff: 01/19/2018
      [!code-csharp[TPLDataflow_CompositeImages#5](../../../samples/snippets/csharp/VS_Snippets_Misc/tpldataflow_compositeimages/cs/compositeimages/form1.cs#5)]  
   
     > [!NOTE]
-    >  C# 版本的 `CreateCompositeBitmap` 方法會使用指標，以便有效處理 <xref:System.Drawing.Bitmap?displayProperty=nameWithType> 物件。 因此，您必須在專案中啟用 [容許 Unsafe 程式碼] 選項，以便使用 [unsafe](~/docs/csharp/language-reference/keywords/unsafe.md) 關鍵字。 如需如何在 [!INCLUDE[csprcs](../../../includes/csprcs-md.md)] 專案中啟用 unsafe 程式碼的詳細資訊，請參閱[專案設計工具、建置頁 (C#)](/visualstudio/ide/reference/build-page-project-designer-csharp)。  
+    >  C# 版本的 `CreateCompositeBitmap` 方法會使用指標，以便有效處理 <xref:System.Drawing.Bitmap?displayProperty=nameWithType> 物件。 因此，您必須在專案中啟用 [容許 Unsafe 程式碼] 選項，以便使用 [unsafe](~/docs/csharp/language-reference/keywords/unsafe.md) 關鍵字。 如需如何在 Visual C# 專案中啟用不安全程式碼的詳細資訊，請參閱[專案設計工具、建置頁 (C#)](/visualstudio/ide/reference/build-page-project-designer-csharp)。  
   
  下表描述網路的成員。  
   
@@ -98,7 +98,7 @@ ms.lasthandoff: 01/19/2018
 |`displayCompositeBitmap`|<xref:System.Threading.Tasks.Dataflow.ActionBlock%601>|在表單上顯示複合點陣圖。|  
 |`operationCancelled`|<xref:System.Threading.Tasks.Dataflow.ActionBlock%601>|顯示映像以表示作業已取消，讓使用者選取另一個資料夾。|  
   
- 為了連線資料流程區塊以形成網路，此範例會使用 <xref:System.Threading.Tasks.Dataflow.ISourceBlock%601.LinkTo%2A> 方法。 <xref:System.Threading.Tasks.Dataflow.ISourceBlock%601.LinkTo%2A> 方法包含採用 <xref:System.Predicate%601> 物件的多載版本，該物件會判斷目標區塊是否接受或拒絕訊息。 這個篩選機制可讓訊息區塊僅接收特定的值。 在此範例中，網路可以使用兩種方式之一進行分支。 主要分支會從磁碟載入映像、建立複合映像，以及在表單上顯示該映像。 替代分支會取消目前的作業。 <xref:System.Predicate%601> 物件會啟用主要分支上的資料流程區塊，以藉由拒絕特定訊息來切換至替代分支。 例如，如果使用者取消作業，資料流程區塊 `createCompositeBitmap` 會產生 `null` (在 [!INCLUDE[vbprvb](../../../includes/vbprvb-md.md)] 中為 `Nothing`) 做為其輸出。 資料流程區塊 `displayCompositeBitmap` 會拒絕 `null` 輸入值，因此，訊息會提供給 `operationCancelled`。 資料流程區塊 `operationCancelled` 接受所有訊息，因此，會顯示映像表示作業取消。  
+ 為了連線資料流程區塊以形成網路，此範例會使用 <xref:System.Threading.Tasks.Dataflow.ISourceBlock%601.LinkTo%2A> 方法。 <xref:System.Threading.Tasks.Dataflow.ISourceBlock%601.LinkTo%2A> 方法包含採用 <xref:System.Predicate%601> 物件的多載版本，該物件會判斷目標區塊是否接受或拒絕訊息。 這個篩選機制可讓訊息區塊僅接收特定的值。 在此範例中，網路可以使用兩種方式之一進行分支。 主要分支會從磁碟載入映像、建立複合映像，以及在表單上顯示該映像。 替代分支會取消目前的作業。 <xref:System.Predicate%601> 物件會啟用主要分支上的資料流程區塊，以藉由拒絕特定訊息來切換至替代分支。 例如，如果使用者取消作業，資料流程區塊 `createCompositeBitmap` 會產生 `null` (在 Visual Basic 中為 `Nothing`) 作為其輸出。 資料流程區塊 `displayCompositeBitmap` 會拒絕 `null` 輸入值，因此，訊息會提供給 `operationCancelled`。 資料流程區塊 `operationCancelled` 接受所有訊息，因此，會顯示映像表示作業取消。  
   
  下圖顯示映像處理網路。  
   

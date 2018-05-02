@@ -1,13 +1,13 @@
 ---
-title: "逐步解說：使用用戶端應用程式服務"
-ms.custom: 
+title: 逐步解說：使用用戶端應用程式服務
+ms.custom: ''
 ms.date: 03/30/2017
 ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
+ms.reviewer: ''
+ms.suite: ''
 ms.technology:
 - dotnet-clr
-ms.tgt_pltfrm: 
+ms.tgt_pltfrm: ''
 ms.topic: article
 dev_langs:
 - csharp
@@ -16,17 +16,17 @@ helpviewer_keywords:
 - application services host [client application services]
 - client application services, walkthroughs
 ms.assetid: bb7c8950-4517-4dae-b705-b74a14059b26
-caps.latest.revision: 
+caps.latest.revision: 47
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
 ms.workload:
 - dotnet
-ms.openlocfilehash: 71eac85d07ac54cf15edcfcc3a86de58afef5004
-ms.sourcegitcommit: cf22b29db780e532e1090c6e755aa52d28273fa6
+ms.openlocfilehash: fe0e446a0005ffcbf296c2728fd93056c3e38f2a
+ms.sourcegitcommit: 86adcc06e35390f13c1e372c36d2e044f1fc31ef
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 02/01/2018
+ms.lasthandoff: 04/26/2018
 ---
 # <a name="walkthrough-using-client-application-services"></a>逐步解說：使用用戶端應用程式服務
 本主題說明如何建立使用用戶端應用程式服務驗證使用者，以及擷取使用者角色和設定的 Windows 應用程式。  
@@ -50,7 +50,7 @@ ms.lasthandoff: 02/01/2018
 ## <a name="prerequisites"></a>必要條件  
  您需要下列元件才能完成這個逐步解說：  
   
--   [!INCLUDE[vs_orcas_long](../../../includes/vs-orcas-long-md.md)]。  
+-   [!INCLUDE[vs_orcas_long](../../../includes/vs-orcas-long-md.md)].  
   
 ## <a name="creating-the-client-application"></a>建立用戶端應用程式  
  首先您必須建立 Windows Form 專案。 本逐步解說使用 Windows Form，因為很多人已熟悉這項功能，而且其程序類似 Windows Presentation Foundation (WPF) 專案。  
@@ -75,7 +75,7 @@ ms.lasthandoff: 02/01/2018
   
 7.  確定選取了 [使用表單驗證]  ，然後將 [驗證服務位置] 、[角色服務位置] 及 [Web 設定服務位置]  設定為 `http://localhost:55555/AppServices`。  
   
-8.  在 [!INCLUDE[vbprvb](../../../includes/vbprvb-md.md)]的 [應用程式]  索引標籤上，將 [驗證模式]  設定為 [由應用程式定義] 。  
+8.  在 Visual Basic 的 [應用程式] 索引標籤上，將 [驗證模式] 設定為 [由應用程式定義]。  
   
  設計工具會將指定的設定儲存在應用程式的 app.config 檔中。  
   
@@ -315,7 +315,7 @@ ms.lasthandoff: 02/01/2018
 ### <a name="creating-a-login-form"></a>建立登入表單  
  認證提供者是實作 <xref:System.Web.ClientServices.Providers.IClientFormsAuthenticationCredentialsProvider> 介面的類別。 這個介面具有名為 <xref:System.Web.ClientServices.Providers.IClientFormsAuthenticationCredentialsProvider.GetCredentials%2A> 的單一方法，可傳回 <xref:System.Web.ClientServices.Providers.ClientFormsAuthenticationCredentials> 物件。 下列程序說明如何建立實作 <xref:System.Web.ClientServices.Providers.IClientFormsAuthenticationCredentialsProvider.GetCredentials%2A> 的 [登入] 對話方塊，以顯示本身並傳回使用者指定的認證。  
   
- 針對 [!INCLUDE[vbprvb](../../../includes/vbprvb-md.md)] 和 C# 所提供的程序不同，因為 [!INCLUDE[vbprvb](../../../includes/vbprvb-md.md)] 提供 [登入表單]  範本。 這可以節省一些時間和撰寫程式碼的工作。  
+ 針對 Visual Basic 和 C# 所提供的程序不同，因為 Visual Basic 提供 [登入表單] 範本。 這可以節省一些時間和撰寫程式碼的工作。  
   
 ##### <a name="to-create-a-login-dialog-box-as-a-credentials-provider-in-visual-basic"></a>建立 [登入] 對話方塊當做 Visual Basic 中的認證提供者  
   
@@ -407,7 +407,7 @@ ms.lasthandoff: 02/01/2018
  您現在可以執行應用程式並以 employee 身分登入，您會發現按鈕並未顯示；然後再以 manager 身分登入，則會看到按鈕。  
   
 ## <a name="accessing-web-settings"></a>存取 Web 設定  
- 在下列程序中，您會將文字方塊加入表單並繫結至 Web 設定。 如同先前使用驗證和角色的程式碼，您的設定程式碼不會直接存取設定提供者， 而是會使用 `Settings` 針對專案所產生的強類型 `Properties.Settings.Default` 類別 (在 C# 中是當做 `My.Settings` 存取，而在 [!INCLUDE[vbprvb](../../../includes/vbprvb-md.md)]中則是當做 [!INCLUDE[vsprvs](../../../includes/vsprvs-md.md)]存取)。  
+ 在下列程序中，您會將文字方塊加入表單並繫結至 Web 設定。 如同先前使用驗證和角色的程式碼，您的設定程式碼不會直接存取設定提供者， 而是會使用 [!INCLUDE[vsprvs](../../../includes/vsprvs-md.md)] 針對專案所產生的強型別 `Settings` 類別 (在 C# 中是當作 `Properties.Settings.Default` 存取，而在 Visual Basic 中則是當作 `My.Settings` 存取)。  
   
 #### <a name="to-use-web-settings-in-your-user-interface"></a>在使用者介面中使用 Web 設定  
   
@@ -527,7 +527,7 @@ ms.lasthandoff: 02/01/2018
     > [!NOTE]
     >  <xref:System.Web.ClientServices.ClientFormsIdentity.RevalidateUser%2A> 方法只是為了方便而使用。 因為它沒有傳回值，所以無法表示重新驗證是否失敗。 例如，如果在伺服器上的使用者認證已變更，重新驗證就可能會失敗。 在這種情況下，您可能想要加入在服務呼叫失敗之後能夠明確驗證使用者的程式碼。 如需詳細資訊，請參閱本逐步解說稍早的＜存取 Web 設定＞一節。  
   
-     重新驗證後，這段程式碼會呼叫先前加入的 `SaveSettings` 方法，以儲存對本機 Web 設定所做的任何變更。 然後呼叫專案 <xref:System.Configuration.ApplicationSettingsBase.Reload%2A> 類別 (在 C# 中當做 `Settings` 存取，而在 `Properties.Settings.Default` 中則當做 `My.Settings` 存取) 的 [!INCLUDE[vbprvb](../../../includes/vbprvb-md.md)]方法，擷取伺服器上任何新增的值。  
+     重新驗證後，這段程式碼會呼叫先前加入的 `SaveSettings` 方法，以儲存對本機 Web 設定所做的任何變更。 然後呼叫專案 `Settings` 類別 (在 C# 中當作 `Properties.Settings.Default` 存取，而在 Visual Basic 中則當作 `My.Settings` 存取) 的 <xref:System.Configuration.ApplicationSettingsBase.Reload%2A> 方法，擷取伺服器上任何新增的值。  
   
      [!code-csharp[ClientApplicationServices#080](../../../samples/snippets/csharp/VS_Snippets_Winforms/ClientApplicationServices/CS/Form1.cs#080)]
      [!code-vb[ClientApplicationServices#080](../../../samples/snippets/visualbasic/VS_Snippets_Winforms/ClientApplicationServices/VB/Form1.vb#080)]  

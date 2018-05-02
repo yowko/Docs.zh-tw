@@ -9,11 +9,11 @@ ms.topic: article
 ms.prod: .net
 ms.technology: devlang-csharp
 ms.devlang: csharp
-ms.openlocfilehash: d24d190eab5896121231543e6696b6a4861b5bb8
-ms.sourcegitcommit: 935d5267c44f9bce801468ef95f44572f1417e8c
+ms.openlocfilehash: 0a24e8cf22bb8350777879a3adfd2757b89cd305
+ms.sourcegitcommit: 86adcc06e35390f13c1e372c36d2e044f1fc31ef
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 03/28/2018
+ms.lasthandoff: 04/26/2018
 ---
 # <a name="the-history-of-c"></a>C# 的歷史 #
 
@@ -48,7 +48,7 @@ C# 2.0 版帶來了迭代器。 簡潔地說，這可讓您使用 `foreach` 迴�
 
 ## <a name="c-version-30"></a>C# 3.0 版
 
-C# 3.0 版在 2007 年晚期和 Visual Studio 2008 一起出現，不過語言功能的完整陣容實際上是在 C# 3.5 版時齊備。 這個版本標記了 C# 發展的一項重大變更。 它將 C# 樹立為真正令人敬佩的程式設計語言。 讓我們看看此版本的一些主要功能：
+C# 3.0 版在 2007 年晚期和 Visual Studio 2008 一起出現，不過語言功能的完整陣容實際上是在 .NET Framework 3.5 版時齊備。 這個版本標記了 C# 發展的一項重大變更。 它將 C# 樹立為真正令人敬佩的程式設計語言。 讓我們看看此版本的一些主要功能：
 
 - [自動實作屬性](../programming-guide/classes-and-structs/auto-implemented-properties.md)
 - [匿名型別](../programming-guide/classes-and-structs/anonymous-types.md)

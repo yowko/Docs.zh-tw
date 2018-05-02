@@ -1,18 +1,18 @@
 ---
-title: "Windows 上 .NET Core 的必要條件"
-description: "了解在 Windows 電腦上開發及執行 .NET Core 應用程式時，您需要哪些相依性。"
+title: Windows 上 .NET Core 的必要條件
+description: 了解在 Windows 電腦上開發及執行 .NET Core 應用程式時，您需要哪些相依性。
 author: JRAlexander
 ms.author: johalex
-ms.date: 03/02/2018
+ms.date: 04/24/2018
 ms.topic: article
 ms.prod: .net-core
 ms.workload:
 - dotnetcore
-ms.openlocfilehash: 48102f3fb7fa6e93238eefff0e7f1ecbed4d8409
-ms.sourcegitcommit: d3cfda0943364aaf6ccd574f55f584576c8a4fee
+ms.openlocfilehash: ac898ea87c0247581154eb7de65e8cbe6ea6ba15
+ms.sourcegitcommit: 86adcc06e35390f13c1e372c36d2e044f1fc31ef
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 03/08/2018
+ms.lasthandoff: 04/26/2018
 ---
 # <a name="prerequisites-for-net-core-on-windows"></a>Windows 上 .NET Core 的必要條件
 
@@ -50,7 +50,7 @@ ms.lasthandoff: 03/08/2018
 * 透過 *.zip* 檔案安裝 .NET Core。 這可以包含組建/CI/CD 伺服器。
 
 > [!NOTE]
-> *僅針對 Windows 7 和 Windows Server 2008 電腦：*：確定您的 Windows 安裝為最新狀態，而且包含已透過 Windows Update 安裝的 Hotfix [KB2533623](https://support.microsoft.com/help/2533623)。
+> Windows 8.1 和舊版或 Windows Server 2012 R2 和舊版：請確定您的 Windows 安裝為最新狀態，而且包含已透過 Windows Update 安裝的 [KB2999226](https://support.microsoft.com/en-us/help/2999226/update-for-universal-c-runtime-in-windows)。 如果沒有安裝此更新，當您如下所示啟動 .NET Core 應用程式時，將會看到錯誤：`The program can't start because api-ms-win-crt-runtime-1-1-0.dll is missing from your computer. Try reinstalling the program to fix this problem.`。
 
 ## <a name="prerequisites-with-visual-studio-2017"></a>使用 Visual Studio 2017 的必要條件
 

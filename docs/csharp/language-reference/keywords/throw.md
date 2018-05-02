@@ -1,8 +1,9 @@
 ---
-title: "throw (C# 參考)"
+title: throw (C# 參考)
 ms.date: 03/02/2015
 ms.prod: .net
-ms.technology: devlang-csharp
+ms.technology:
+- devlang-csharp
 ms.topic: article
 f1_keywords:
 - throw
@@ -12,14 +13,14 @@ helpviewer_keywords:
 - throw expression [C#]
 - throw keyword [C#]
 ms.assetid: 5ac4feef-4b1a-4c61-aeb4-61d549e5dd42
-caps.latest.revision: "22"
+caps.latest.revision: 22
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: e56bd8f8b6bfcc7c8f1eb2df6ac157e28adac331
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.openlocfilehash: 088a8e70c5aaaae6f833f12cad1052c30fbb6bfa
+ms.sourcegitcommit: 86adcc06e35390f13c1e372c36d2e044f1fc31ef
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 04/26/2018
 ---
 # <a name="throw-c-reference"></a>throw (C# 參考)
 在程式執行期間發出出現例外狀況的訊號。  
@@ -50,9 +51,9 @@ throw [e]
  
 ## <a name="the-throw-expression"></a>`throw` 運算式
 
-從 C# 7 開始，`throw` 可以用作運算式和陳述式。 這可在先前不支援的內容中擲回例外狀況。 它們包括：
+從 C# 7.0 開始，`throw` 可以用作運算式和陳述式。 這可在先前不支援的內容中擲回例外狀況。 它們包括：
 
-- [條件運算子](../operators/conditional-operator.md)。 如果將空字串陣列傳遞給方法，則下列範例會使用 `throw` 運算式來擲回 <xref:System.ArgumentException>。 在 C# 7 之前，這個邏輯必須出現在 `if`/`else` 陳述式中。
+- [條件運算子](../operators/conditional-operator.md)。 如果將空字串陣列傳遞給方法，則下列範例會使用 `throw` 運算式來擲回 <xref:System.ArgumentException>。 在 C# 7.0 之前，這個邏輯必須出現在 `if`/`else` 陳述式中。
 
    [!code-csharp[csrefKeyword#4](../../../../samples/snippets/csharp/language-reference/keywords/throw/conditional.cs#1)]  
   
@@ -68,11 +69,11 @@ throw [e]
 ## <a name="c-language-specification"></a>C# 語言規格  
  [!INCLUDE[CSharplangspec](~/includes/csharplangspec-md.md)]  
   
-## <a name="see-also"></a>另請參閱  
+## <a name="see-also"></a>請參閱  
  [C# 參考](../../../csharp/language-reference/index.md)  
  [C# 程式設計指南](../../../csharp/programming-guide/index.md)  
  [try-catch](../../../csharp/language-reference/keywords/try-catch.md)  
- [Try、 catch 和 throw 陳述式，在 c + +](../../../csharp/language-reference/keywords/try-catch.md)  
+ [C++ 中的 try、catch 和 throw 陳述式](../../../csharp/language-reference/keywords/try-catch.md)  
  [C# 關鍵字](../../../csharp/language-reference/keywords/index.md)  
  [例外狀況處理陳述式](../../../csharp/language-reference/keywords/exception-handling-statements.md)  
  [操作說明：明確擲回例外狀況](../../../standard/exceptions/how-to-explicitly-throw-exceptions.md)

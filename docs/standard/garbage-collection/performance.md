@@ -1,29 +1,29 @@
 ---
-title: "記憶體回收和效能"
-ms.custom: 
+title: 記憶體回收和效能
+ms.custom: ''
 ms.date: 03/30/2017
 ms.prod: .net
-ms.reviewer: 
-ms.suite: 
+ms.reviewer: ''
+ms.suite: ''
 ms.technology: dotnet-standard
-ms.tgt_pltfrm: 
+ms.tgt_pltfrm: ''
 ms.topic: article
 helpviewer_keywords:
 - garbage collection, troubleshooting
 - garbage collection, performance
 ms.assetid: c203467b-e95c-4ccf-b30b-953eb3463134
-caps.latest.revision: 
+caps.latest.revision: 35
 author: rpetrusha
 ms.author: ronpet
 manager: wpickett
 ms.workload:
 - dotnet
 - dotnetcore
-ms.openlocfilehash: e1cf3475ded3582cdf0754e68d13c97bd87b06a8
-ms.sourcegitcommit: 91691981897cf8451033cb01071d8f5d94017f97
+ms.openlocfilehash: daf70cdb7344f895059d0bc8b986edddbf7d53bc
+ms.sourcegitcommit: 86adcc06e35390f13c1e372c36d2e044f1fc31ef
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 01/09/2018
+ms.lasthandoff: 04/26/2018
 ---
 # <a name="garbage-collection-and-performance"></a>記憶體回收和效能
 <a name="top"></a> 本主題描述記憶體回收和記憶體使用量的相關問題。 它解決關於 Managed 堆積的問題，並說明如何將記憶體回收對應用程式的影響降至最低。 每個問題已連結至程序，可讓您用來調查問題。  
@@ -48,9 +48,9 @@ ms.lasthandoff: 01/09/2018
   
 <a name="sos"></a>   
 ### <a name="debugging-with-sos"></a>以 SOS 偵錯  
- 您可以使用 [Windows 偵錯工具 (WinDbg)](/windows-hardware/drivers/debugger/index) 來檢查 Managed 堆積上的物件。  
-  
- 若要安裝 WinDbg，請從 [WDK 與開發人員工具網站](http://go.microsoft.com/fwlink/?LinkID=103787)安裝 Debugging Tools for Windows。  
+ 您可以使用 [Windows 偵錯工具 (WinDbg)](/windows-hardware/drivers/debugger/index) 來檢查 Managed 堆積上的物件。
+ 
+ 若要安裝 WinDbg，請從[下載 Debugging Tools for Windows](/windows-hardware/drivers/debugger/debugger-download-tools) 頁面安裝 Debugging Tools for Windows。
   
 <a name="etw"></a>   
 ### <a name="garbage-collection-etw-events"></a>記憶體回收 ETW 事件  

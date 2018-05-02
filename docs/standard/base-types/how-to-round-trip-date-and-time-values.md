@@ -1,12 +1,12 @@
 ---
-title: "如何：反覆存取日期和時間值"
-ms.custom: 
+title: 如何：反覆存取日期和時間值
+ms.custom: ''
 ms.date: 03/30/2017
 ms.prod: .net
-ms.reviewer: 
-ms.suite: 
+ms.reviewer: ''
+ms.suite: ''
 ms.technology: dotnet-standard
-ms.tgt_pltfrm: 
+ms.tgt_pltfrm: ''
 ms.topic: article
 dev_langs:
 - csharp
@@ -18,18 +18,18 @@ helpviewer_keywords:
 - time [.NET Framework], round-trip values
 - formatting strings [.NET Framework], round-trip values
 ms.assetid: b609b277-edc6-4c74-b03e-ea73324ecbdb
-caps.latest.revision: 
+caps.latest.revision: 12
 author: rpetrusha
 ms.author: ronpet
 manager: wpickett
 ms.workload:
 - dotnet
 - dotnetcore
-ms.openlocfilehash: 68667369e1c7541313a166a1066e1ad9d69b6b71
-ms.sourcegitcommit: e7f04439d78909229506b56935a1105a4149ff3d
+ms.openlocfilehash: 6ded0a08970e55b7f1267cb229eaf668313392c6
+ms.sourcegitcommit: 86adcc06e35390f13c1e372c36d2e044f1fc31ef
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 12/23/2017
+ms.lasthandoff: 04/26/2018
 ---
 # <a name="how-to-round-trip-date-and-time-values"></a>如何：反覆存取日期和時間值
 在許多應用程式中，日期和時間值的用途都是要明確地識別單一時間點。 本主題說明如何儲存並還原 <xref:System.DateTime> 值、<xref:System.DateTimeOffset> 值，以及具有時區資訊的日期和時間值，讓還原值能夠識別出與儲存值相同的時間。  
@@ -93,7 +93,7 @@ ms.lasthandoff: 12/23/2017
 ## <a name="compiling-the-code"></a>編譯程式碼  
  這些範例需要：  
   
--   使用 C# `using` 陳述式或 [!INCLUDE[vbprvb](../../../includes/vbprvb-md.md)] `Imports` 陳述式匯入下列命名空間：  
+-   使用 C# `using` 陳述式或 Visual Basic `Imports` 陳述式匯入下列命名空間：  
   
     -   <xref:System> (僅限 C#)。  
   

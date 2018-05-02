@@ -1,5 +1,5 @@
 ---
-title: "逐步解說：建立和使用動態物件 (C# 和 Visual Basic)"
+title: 逐步解說：建立和使用動態物件 (C# 和 Visual Basic)
 ms.date: 07/20/2015
 ms.prod: .net
 ms.technology:
@@ -13,14 +13,14 @@ helpviewer_keywords:
 - dynamic objects
 - dynamic objects [C#]
 ms.assetid: 568f1645-1305-4906-8625-5d77af81e04f
-caps.latest.revision: 
+caps.latest.revision: 22
 author: BillWagner
 ms.author: wiwagn
-ms.openlocfilehash: eca6da96d3bf9c5c25216e442999be77a332b5c9
-ms.sourcegitcommit: 70dcc89737127e4d5f20500242409b687e51b07e
+ms.openlocfilehash: d6b740e78503d0937c9a0f38a573bb7dd778075d
+ms.sourcegitcommit: 86adcc06e35390f13c1e372c36d2e044f1fc31ef
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 02/11/2018
+ms.lasthandoff: 04/26/2018
 ---
 # <a name="walkthrough-creating-and-using-dynamic-objects-c-and-visual-basic"></a>逐步解說：建立和使用動態物件 (C# 和 Visual Basic)
 
@@ -28,7 +28,7 @@ ms.lasthandoff: 02/11/2018
   
  動態物件也可讓您方便存取動態語言 (諸如 IronPython 和 IronRuby)。 您可以使用動態物件，參考在執行階段受到解譯的動態指令碼。  
   
- 您可以使用晚期繫結，參考動態物件。 在 C# 中，您可以將晚期繫結物件的類型指定為 `dynamic`。 在 [!INCLUDE[vbprvb](~/includes/vbprvb-md.md)] 中，您可以將晚期繫結物件的類型指定為 `Object`。 如需詳細資訊，請參閱 [dynamic](../../../csharp/language-reference/keywords/dynamic.md) 以及[早期和晚期繫結](../../../visual-basic/programming-guide/language-features/early-late-binding/index.md)。  
+ 您可以使用晚期繫結，參考動態物件。 在 C# 中，您可以將晚期繫結物件的類型指定為 `dynamic`。 在 Visual Basic 中，您可以將晚期繫結物件的類型指定為 `Object`。 如需詳細資訊，請參閱 [dynamic](../../../csharp/language-reference/keywords/dynamic.md) 以及[早期和晚期繫結](../../../visual-basic/programming-guide/language-features/early-late-binding/index.md)。  
   
  您可以在 <xref:System.Dynamic?displayProperty=nameWithType> 命名空間中使用類別，以建立自訂動態物件。 例如，您可以建立 <xref:System.Dynamic.ExpandoObject>，並在執行階段中指定該物件的成員。 您也可以建立繼承 <xref:System.Dynamic.DynamicObject> 類別的專屬類型。 接著，您即可覆寫 <xref:System.Dynamic.DynamicObject> 類別的成員，以提供執行階段動態功能。  
   
@@ -127,7 +127,7 @@ ms.lasthandoff: 02/11/2018
   
 #### <a name="to-create-a-sample-application-that-uses-the-custom-dynamic-object"></a>若要建立使用自訂動態物件的範例應用程式  
   
-1.  在方案總管中，如果您是使用 [!INCLUDE[vbprvb](~/includes/vbprvb-md.md)]，請按兩下 Module1.vb 檔案，或者，如果您是使用 Visual C#，請按兩下 Program.cs 檔案。  
+1.  在 [方案總管] 中，如果您是使用 Visual Basic，請按兩下 Module1.vb 檔案；或者，如果您是使用 Visual C#，請按兩下 Program.cs 檔案。  
   
 2.  將下列程式碼加入 Main 程序，以為 TextFile1.txt 檔案建立 `ReadOnlyFile` 類別的執行個體。 程式碼會使用晚期繫結呼叫動態成員，並擷取包含字串 "Customer" 的文字行。  
   
@@ -147,11 +147,11 @@ ms.lasthandoff: 02/11/2018
   
 2.  在 [新增專案] 對話方塊的 [專案類型] 窗格中，確認已選取 [Windows]。 選取 [範本] 窗格中的 [主控台應用程式]。 在 [名稱] 方塊中，輸入 `DynamicIronPythonSample` 並按一下 [確定]。 隨即會建立新專案。  
   
-3.  如果您是使用 [!INCLUDE[vbprvb](~/includes/vbprvb-md.md)]，請以滑鼠右鍵按一下 DynamicIronPythonSample 專案，然後按一下 [屬性]。 按一下 [參考] 節點。按一下 [新增] 按鈕。 如果您是使用 Visual C#，請在方案總管中，以滑鼠右鍵按一下 [參考] 資料夾，然後按一下 [加入參考]。  
+3.  如果您是使用 Visual Basic，請以滑鼠右鍵按一下 DynamicIronPythonSample 專案，然後按一下 [屬性]。 按一下 [參考] 節點。按一下 [新增] 按鈕。 如果您是使用 Visual C#，請在方案總管中，以滑鼠右鍵按一下 [參考] 資料夾，然後按一下 [加入參考]。  
   
-4.  在 [瀏覽] 索引標籤上，瀏覽至安裝 IronPython 程式庫的資料夾。 例如 C:\Program Files\IronPython 2.6 for .NET 4.0。 選取 **IronPython.dll**、**IronPython.Modules.dll**、**Microsoft.Scripting.dll** 和 **Microsoft.Dynamic.dll** 程式庫。 按一下 [確定]。  
+4.  在 [瀏覽] 索引標籤上，瀏覽至安裝 IronPython 程式庫的資料夾。 例如 C:\Program Files\IronPython 2.6 for .NET 4.0。 選取 **IronPython.dll**、**IronPython.Modules.dll**、**Microsoft.Scripting.dll** 和 **Microsoft.Dynamic.dll** 程式庫。 按一下 [確定 **Deploying Office Solutions**]。  
   
-5.  如果您是使用 [!INCLUDE[vbprvb](~/includes/vbprvb-md.md)]，請編輯 Module1.vb 檔案。 如果您是使用 Visual C#，請編輯 Program.cs 檔案。  
+5.  如果您是使用 Visual Basic，請編輯 Module1.vb 檔案。 如果您是使用 Visual C#，請編輯 Program.cs 檔案。  
   
 6.  在檔案頂端，加入下列程式碼以匯入來自 IronPython 程式庫的 `Microsoft.Scripting.Hosting` 和 `IronPython.Hosting` 命名空間。  
   
