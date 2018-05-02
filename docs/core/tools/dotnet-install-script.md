@@ -1,21 +1,20 @@
 ---
-title: "dotnet-install 指令碼"
-description: "了解如何使用 dotnet-install 指令碼來安裝 .NET Core CLI 工具和共用執行階段。"
-keywords: "dotnet-install, dotnet-install 指令碼, .NET Core"
+title: dotnet-install 指令碼
+description: 了解如何使用 dotnet-install 指令碼來安裝 .NET Core CLI 工具和共用執行階段。
 author: blackdwarf
 ms.author: mairaw
 ms.date: 09/11/2017
-ms.topic: article
-ms.prod: .net-core
+ms.topic: conceptual
+ms.prod: dotnet-core
 ms.technology: dotnet-cli
 ms.devlang: dotnet
-ms.assetid: b64e7e6f-ffb4-4fc8-b43b-5731c89479c2
-ms.workload: dotnetcore
-ms.openlocfilehash: bc38ca7b9f00c6c252ff4963c42519a64c456b43
-ms.sourcegitcommit: e7f04439d78909229506b56935a1105a4149ff3d
+ms.workload:
+- dotnetcore
+ms.openlocfilehash: 96336df087ea2ad01584010f0715ad31e079b663
+ms.sourcegitcommit: 03ee570f6f528a7d23a4221dcb26a9498edbdf8c
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 12/23/2017
+ms.lasthandoff: 04/28/2018
 ---
 # <a name="dotnet-install-scripts-reference"></a>dotnet-install 指令碼參考
 
@@ -39,8 +38,8 @@ macOS/Linux：
 
 建議您使用 [.NET Core 主網站](https://dot.net) \(英文\) 所提供的穩定版本。 指令碼的直接路徑如下：
 
-* https://dot.net/v1/dotnet-install.sh (bash, UNIX)
-* https://dot.net/v1/dotnet-install.ps1 (Powershell, Windows)
+* https://dot.net/v1/dotnet-install.sh (bash、UNIX)
+* https://dot.net/v1/dotnet-install.ps1 (Powershell、Windows)
 
 這些指令碼對於自動化案例和非系統管理員安裝非常有幫助。 指令碼有兩種：一種是在 Windows 上使用的 PowerShell 指令碼。 另一個指令碼是可在 Linux/macOS 上運作的 bash 指令碼。 這兩個指令碼有相同的行為。 Bash 指令碼也能讀取 PowerShell 參數，因此您可以搭配 PowerShell 參數使用 Linux/macOS 系統上的指令碼。 
 

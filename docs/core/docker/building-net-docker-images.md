@@ -1,24 +1,22 @@
 ---
-title: "建置 .NET Core Docker 映像"
-description: "了解 Docker 映像和 .NET Core"
-keywords: ".NET、.NET Core、Docker"
+title: 建置 .NET Core Docker 映像
+description: 了解 Docker 映像和 .NET Core
 author: jralexander
 ms.author: johalex
 ms.date: 11/06/2017
 ms.topic: tutorial
-ms.prod: .net-core
+ms.prod: dotnet-core
 ms.technology: dotnet-docker
 ms.devlang: dotnet
-ms.assetid: 03c28597-7e73-46d6-a9c3-f9cb55642739
 ms.custom: mvc
 manager: wpickett
 ms.workload:
 - dotnetcore
-ms.openlocfilehash: d5631bdbc0334640b290c08df17cba0bfe99fe85
-ms.sourcegitcommit: c3957fdb990060559d73cca44ab3e2c7b4d049c0
+ms.openlocfilehash: c1983be59b4a961cabd94915852e0cab7811682c
+ms.sourcegitcommit: 03ee570f6f528a7d23a4221dcb26a9498edbdf8c
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 03/05/2018
+ms.lasthandoff: 04/28/2018
 ---
 # <a name="building-docker-images-for-net-core-applications"></a>建置 .NET Core 應用程式的 Docker 映像
 
@@ -191,7 +189,7 @@ docker run -it --rm --name aspnetcore_sample aspnetapp
 ```
 
 > [!IMPORTANT]
-> 使用 Windows 容器時，您必須在瀏覽器中直接巡覽至**容器 IP 位址** (相對於 http://localhost)。 您可以使用下列步驟來取得容器的 IP 位址：
+> 使用 Windows 容器時，您必須在瀏覽器中直接巡覽至**容器 IP 位址** (相對於 http://localhost))。 您可以使用下列步驟來取得容器的 IP 位址：
 
 * 開啟另一個命令提示字元。
 * 執行 `docker ps` 以查看您的執行中容器。 其中應該會有 "aspnetcore_sample" 容器。

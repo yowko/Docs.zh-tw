@@ -1,12 +1,8 @@
 ---
-title: .NET Framework 中的泛型
-ms.custom: ''
+title: .NET 的泛型
 ms.date: 03/30/2017
 ms.prod: .net
-ms.reviewer: ''
-ms.suite: ''
 ms.technology: dotnet-standard
-ms.tgt_pltfrm: ''
 ms.topic: article
 dev_langs:
 - csharp
@@ -39,16 +35,17 @@ manager: wpickett
 ms.workload:
 - dotnet
 - dotnetcore
-ms.openlocfilehash: d06c2ae074045ae750c079383f43c3d6aa6f726c
-ms.sourcegitcommit: e7f04439d78909229506b56935a1105a4149ff3d
+ms.openlocfilehash: ba9149da420b7b7bdad01e1376793c64adaf1c8d
+ms.sourcegitcommit: 03ee570f6f528a7d23a4221dcb26a9498edbdf8c
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 12/23/2017
+ms.lasthandoff: 04/28/2018
 ---
-# <a name="generics-in-the-net-framework"></a>.NET Framework 中的泛型
+# <a name="generics-in-net"></a>.NET 的泛型
+
 <a name="top"></a> 泛型可讓您將方法、類別、結構或介面，修改成其發揮作用的精確資料類型。 例如，不使用 <xref:System.Collections.Hashtable> 類別，讓索引鍵和值可為任何類型；而改用 <xref:System.Collections.Generic.Dictionary%602> 泛型類別，指定索引鍵所允許的類型以及值所允許的類型。 泛型的優點包括加強程式碼的重複使用程度以及類型安全性。  
   
- 本主題提供.NET Framework 中的泛型概觀，以及泛型類型或方法的摘要。 它包含以下各節：  
+ 本主題提供 .NET 中的泛型概觀，以及泛型類型或方法的摘要。 它包含以下各節：  
   
 -   [定義和使用泛型](#defining_and_using_generics)  
   
@@ -78,7 +75,7 @@ ms.lasthandoff: 12/23/2017
   
 <a name="generics_terminology"></a>   
 ### <a name="generics-terminology"></a>泛型術語  
- 下列詞彙可用以討論在 .NET Framework 中的泛型：  
+ 下列詞彙會用於討論在 .NET 中的泛型：  
   
 -   *「泛型類型定義」* (generic type definition)，是做為範本的類別、結構或介面宣告，且具有可包含或使用之類型的預留位置。 例如，<xref:System.Collections.Generic.Dictionary%602?displayProperty=nameWithType> 類別可包含兩種類型：索引鍵和值。 因為泛型類型定義是只是範本，您無法建立泛型類型定義之類別、結構或介面的執行個體。  
   
@@ -145,11 +142,11 @@ ms.lasthandoff: 12/23/2017
   
 <a name="class_library_and_language_support"></a>   
 ## <a name="class-library-and-language-support"></a>類別庫和語言支援  
- .NET Framework 在下列命名空間中提供數個泛型集合類別：  
+ .NET 在下列命名空間中提供數個泛型集合類別：  
   
--   <xref:System.Collections.Generic> 命名空間分類了 .NET Framework 所提供的大部分泛型集合類型，例如 <xref:System.Collections.Generic.List%601> 和 <xref:System.Collections.Generic.Dictionary%602> 泛型類別。  
+-   <xref:System.Collections.Generic> 命名空間包含 .NET 所提供的大部分泛型集合類型，例如 <xref:System.Collections.Generic.List%601> 和 <xref:System.Collections.Generic.Dictionary%602> 泛型類別。  
   
--   <xref:System.Collections.ObjectModel> 命名空間也分類了其他泛型集合類型，例如 <xref:System.Collections.ObjectModel.ReadOnlyCollection%601> 泛型類別，其對您類別之使用者公開物件模型很有用。  
+-   <xref:System.Collections.ObjectModel> 命名空間也包含其他泛型集合類型 (例如 <xref:System.Collections.ObjectModel.ReadOnlyCollection%601> 泛型類別)，可用來向類別的使用者公開物件模型。  
   
  實作排序及相等比較的泛型介面，和事件處理常式、轉換及搜尋述詞的泛型委派類型，一起提供於 <xref:System> 命名空間中。  
   
@@ -172,11 +169,11 @@ ms.lasthandoff: 12/23/2017
   
 |標題|描述|  
 |-----------|-----------------|  
-|[.NET Framework 中的泛型集合](../../../docs/standard/generics/collections.md)|描述 .NET Framework 中的泛型集合類別以及其他泛型類型。|  
+|[.NET 中的泛型集合](../../../docs/standard/generics/collections.md)|描述 .NET 中的泛型集合類別以及其他泛型類型。|  
 |[管理陣列和清單的泛型委派](../../../docs/standard/generics/delegates-for-manipulating-arrays-and-lists.md)|描述轉換、搜尋述詞以及要在陣列或集合的元素上採取之動作的泛型委派。|  
 |[泛型介面](../../../docs/standard/generics/interfaces.md)|描述提供泛型類型系列中常見功能的泛型介面。|  
 |[共變數和反變數](../../../docs/standard/generics/covariance-and-contravariance.md)|描述泛型類型參數的共變數和反變數。|  
-|[常用的集合類型](../../../docs/standard/collections/commonly-used-collection-types.md)|提供 .NET Framework 中集合類型的特性和使用方式案例的摘要資訊，包括泛型類型。|  
+|[常用的集合類型](../../../docs/standard/collections/commonly-used-collection-types.md)|提供 .NET 中集合類型的特性和使用方式案例的摘要資訊，包括泛型類型。|  
 |[何時使用泛型集合](../../../docs/standard/collections/when-to-use-generic-collections.md)|描述一般的規則，以判斷何時使用泛型集合類型。|  
 |[操作說明：使用反映發出定義泛型型別](../../../docs/framework/reflection-and-codedom/how-to-define-a-generic-type-with-reflection-emit.md)|說明如何產生包括泛型類型和方法的動態組件。|  
 |[Generic Types in Visual Basic](~/docs/visual-basic/programming-guide/language-features/data-types/generic-types.md)|為 Visual Basic 使用者描述泛型功能，包括使用及定義泛型類型的「操作說明」主題。|  

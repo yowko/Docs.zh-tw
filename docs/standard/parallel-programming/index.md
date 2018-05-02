@@ -1,33 +1,28 @@
 ---
 title: .NET 的平行程式設計
-ms.custom: ''
 ms.date: 03/30/2017
 ms.prod: .net
-ms.reviewer: ''
-ms.suite: ''
 ms.technology: dotnet-standard
-ms.tgt_pltfrm: ''
 ms.topic: article
 helpviewer_keywords:
 - parallel programming
-ms.assetid: 4d83c690-ad2d-489e-a2e0-b85b898a672d
-caps.latest.revision: 19
 author: rpetrusha
 ms.author: ronpet
 manager: wpickett
 ms.workload:
 - dotnet
 - dotnetcore
-ms.openlocfilehash: 1e649bcb37b711d01199bd4e4823a9bb0cac60b4
-ms.sourcegitcommit: 2e8acae16ae802f2d6d04e3ce0a6dbf04e476513
+ms.openlocfilehash: 679ffe40e525884070ee62662b7a7e5acd7e58ad
+ms.sourcegitcommit: 03ee570f6f528a7d23a4221dcb26a9498edbdf8c
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/18/2018
+ms.lasthandoff: 04/28/2018
 ---
 # <a name="parallel-programming-in-net"></a>.NET 的平行程式設計
-許多個人電腦和工作站都具有兩個或四個核心 (即 CPU)，而能夠同時執行多個執行緒。 不久的將來，電腦應該會具有更多的核心。 若要利用現今和未來的硬體優勢，您可以將您的程式碼平行化，以便將工作分散到多個處理器。 在過去，平行化作業需要在低階操作執行緒和鎖定。 [!INCLUDE[vs_dev10_long](../../../includes/vs-dev10-long-md.md)] 和 [!INCLUDE[net_v40_short](../../../includes/net-v40-short-md.md)] 提供新的執行階段、新的類別庫類型和新的診斷工具，以加強支援平行程式設計。 這些功能簡化了平行開發作業，讓您能夠利用簡單常見的語法，撰寫效率高、精細且具彈性的平行程式碼，而不需要直接使用執行緒或執行緒集區。 下圖提供 [!INCLUDE[net_v40_short](../../../includes/net-v40-short-md.md)] 中平行程式設計架構的高階概觀。  
+
+許多個人電腦和工作站都具有多個 CPU 核心，以便能夠同時執行多個執行緒。 不久的將來，電腦應該會具有更多的核心。 若要利用現今和未來的硬體優勢，您可以將您的程式碼平行化，以便將工作分散到多個處理器。 在過去，平行化作業需要在低階操作執行緒和鎖定。 Visual Studio 2010 與 .NET Framework 4 提供了新的執行階段、新的類別庫類型和新的診斷工具，以加強支援平行程式設計。 這些功能簡化了平行開發作業，讓您能夠利用簡單常見的語法，撰寫效率高、精細且具彈性的平行程式碼，而不需要直接使用執行緒或執行緒集區。 下圖提供 .NET Framework 4 中平行程式設計架構的高階概觀。
   
- ![.NET 平行程式設計架構](../../../docs/standard/parallel-programming/media/tpl-architecture.png "TPL_Architecture")  
+ ![.NET 平行程式設計架構](./media/tpl-architecture.png "TPL_Architecture")  
   
 ## <a name="related-topics"></a>相關主題  
   
@@ -40,8 +35,8 @@ ms.lasthandoff: 04/18/2018
 |[PLINQ 和 TPL 的自訂 Partitioner](../../../docs/standard/parallel-programming/custom-partitioners-for-plinq-and-tpl.md)|說明 Partitioner 的運作方式，以及如何設定預設 Partitioner 或建立新的 Partitioner。|  
 |[工作排程器](http://msdn.microsoft.com/library/638f8ea5-21db-47a2-a934-86e1e961bf65)|說明排程器的運作方式以及如何設定預設排程器。|  
 |[PLINQ 和 TPL 中的 Lambda 運算式](../../../docs/standard/parallel-programming/lambda-expressions-in-plinq-and-tpl.md)|提供 C# 和 Visual Basic 中之 Lambda 運算式的簡短概觀，並且顯示如何在 PLINQ 和工作平行程式庫中使用這些運算式。|  
-|[進一步閱讀](../../../docs/standard/parallel-programming/for-further-reading-parallel-programming.md)|提供以 .NET Framework 進行平行程式設計的其他文件和範例資源連結。|  
-  
-## <a name="see-also"></a>請參閱  
- [平行程式設計模式：了解及套用平行模式與 .NET Framework 4](https://www.microsoft.com/download/details.aspx?id=19222)  
- [使用 .NET Framework 進行平行程式設計的範例](https://code.msdn.microsoft.com/Samples-for-Parallel-b4b76364)
+|[進一步閱讀](../../../docs/standard/parallel-programming/for-further-reading-parallel-programming.md)|提供以 .NET 進行平行程式設計的額外資訊和範例資源連結。|  
+
+## <a name="see-also"></a>另請參閱  
+ [非同步總覽](../async.md)  
+ [受控執行緒處理](../threading/index.md)  

@@ -17,14 +17,14 @@ manager: wpickett
 ms.workload:
 - dotnet
 - dotnetcore
-ms.openlocfilehash: 7671001fb63a5e09c5d7a3dc4b2414d41a790e16
-ms.sourcegitcommit: 2e8acae16ae802f2d6d04e3ce0a6dbf04e476513
+ms.openlocfilehash: 386d7a4ce7168fbe70d9037254a1540b7bf00478
+ms.sourcegitcommit: 86adcc06e35390f13c1e372c36d2e044f1fc31ef
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/18/2018
+ms.lasthandoff: 04/26/2018
 ---
 # <a name="dataflow-task-parallel-library"></a>資料流程 (工作平行程式庫)
-<a name="top"></a> 工作平行程式庫 (TPL) 提供資料流程元件，協助讓啟用並行的應用程式更強固。 這些資料流程元件合稱為「TPL 資料流程程式庫」。 此資料流程模型以提供針對廣泛資料流程以及管線工作的同處理序訊息傳遞，將以行動為基礎的程式撰寫升級。 資料流程元件會在 TPL 的類型與排程基礎結構上建置，並整合 C#、[!INCLUDE[vbprvb](../../../includes/vbprvb-md.md)] 以及 F# 語言對非同步程式設計的支援。 當您有多個必須非同步式互相溝通的作業時，或當您因為資料變為可用而要處理資料時，這些資料流程元件就會相當實用。 例如，請考慮一個應用程式，它會處理來自網路攝影機的影像資料。 使用資料流模型，應用程式就可以在影像畫面可用時處理它們。 例如，如果應用程式因執行光源修正或消除紅眼而增強影像畫面，則您可以建立資料流程元件的「管線」。 此管線的每個階段都可能使用更廣泛的平行處理原則功能 (例如 TPL 提供的功能) 來轉換該影像。  
+<a name="top"></a> 工作平行程式庫 (TPL) 提供資料流程元件，協助讓啟用並行的應用程式更強固。 這些資料流程元件合稱為「TPL 資料流程程式庫」。 此資料流程模型以提供針對廣泛資料流程以及管線工作的同處理序訊息傳遞，將以行動為基礎的程式撰寫升級。 資料流程元件會在 TPL 的類型與排程基礎結構上建置，並整合 C#、Visual Basic 以及 F# 語言對非同步程式設計的支援。 當您有多個必須非同步式互相溝通的作業時，或當您因為資料變為可用而要處理資料時，這些資料流程元件就會相當實用。 例如，請考慮一個應用程式，它會處理來自網路攝影機的影像資料。 使用資料流模型，應用程式就可以在影像畫面可用時處理它們。 例如，如果應用程式因執行光源修正或消除紅眼而增強影像畫面，則您可以建立資料流程元件的「管線」。 此管線的每個階段都可能使用更廣泛的平行處理原則功能 (例如 TPL 提供的功能) 來轉換該影像。  
   
  本文件提供 TPL 資料流程程式庫的概觀。 此文件描述程式設計模型、預先定義的資料流程區塊類型，以及描述如何設定資料流程區塊以符合應用程式的特定需求。  
 
@@ -116,7 +116,7 @@ ms.lasthandoff: 04/18/2018
  如需示範如何使用 <xref:System.Threading.Tasks.Dataflow.BroadcastBlock%601> 來將訊息廣播到多個目標區塊的完整範例，請參閱[如何：在資料流程區塊中指定工作排程器](../../../docs/standard/parallel-programming/how-to-specify-a-task-scheduler-in-a-dataflow-block.md)。  
   
 #### <a name="writeonceblockt"></a>WriteOnceBlock(T)  
- <xref:System.Threading.Tasks.Dataflow.WriteOnceBlock%601> 類別類似於 <xref:System.Threading.Tasks.Dataflow.BroadcastBlock%601> 類別，但是 <xref:System.Threading.Tasks.Dataflow.WriteOnceBlock%601> 物件只能被寫入一次。 您可以將 <xref:System.Threading.Tasks.Dataflow.WriteOnceBlock%601> 視為類似 C# [readonly](~/docs/csharp/language-reference/keywords/readonly.md) (在 [!INCLUDE[vbprvb](../../../includes/vbprvb-md.md)] 中為 [ReadOnly](~/docs/visual-basic/language-reference/modifiers/readonly.md)) 關鍵字，不過當 <xref:System.Threading.Tasks.Dataflow.WriteOnceBlock%601> 物件接收到值 (而非建構) 時，它就會變成不可變。 與 <xref:System.Threading.Tasks.Dataflow.BroadcastBlock%601> 類別相同的是，當目標從 <xref:System.Threading.Tasks.Dataflow.WriteOnceBlock%601> 物件收到訊息時，並不會從此物件中移除該訊息。 因此，多個目標會接收此訊息的複本。 當您只想要散佈眾多訊息中的第一個時，<xref:System.Threading.Tasks.Dataflow.WriteOnceBlock%601> 類別會很有用。  
+ <xref:System.Threading.Tasks.Dataflow.WriteOnceBlock%601> 類別類似於 <xref:System.Threading.Tasks.Dataflow.BroadcastBlock%601> 類別，但是 <xref:System.Threading.Tasks.Dataflow.WriteOnceBlock%601> 物件只能被寫入一次。 您可以將 <xref:System.Threading.Tasks.Dataflow.WriteOnceBlock%601> 視為類似 C# [readonly](~/docs/csharp/language-reference/keywords/readonly.md) (在 Visual Basic 中為 [ReadOnly](~/docs/visual-basic/language-reference/modifiers/readonly.md)) 關鍵字，不過當 <xref:System.Threading.Tasks.Dataflow.WriteOnceBlock%601> 物件接收到值 (而非建構) 時，它就會變成不可變。 與 <xref:System.Threading.Tasks.Dataflow.BroadcastBlock%601> 類別相同的是，當目標從 <xref:System.Threading.Tasks.Dataflow.WriteOnceBlock%601> 物件收到訊息時，並不會從此物件中移除該訊息。 因此，多個目標會接收此訊息的複本。 當您只想要散佈眾多訊息中的第一個時，<xref:System.Threading.Tasks.Dataflow.WriteOnceBlock%601> 類別會很有用。  
   
  下列基本範例傳遞多個 <xref:System.String> 值至 <xref:System.Threading.Tasks.Dataflow.WriteOnceBlock%601> 物件，然後從該物件讀取值。 由於 <xref:System.Threading.Tasks.Dataflow.WriteOnceBlock%601> 物件只能被寫入一次，所以 <xref:System.Threading.Tasks.Dataflow.WriteOnceBlock%601> 物件接收到訊息之後，就會捨棄後續訊息。  
   
