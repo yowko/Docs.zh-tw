@@ -1,12 +1,12 @@
 ---
-title: "如何：定義和使用自訂數值格式提供者"
-ms.custom: 
+title: 如何：定義和使用自訂數值格式提供者
+ms.custom: ''
 ms.date: 03/30/2017
 ms.prod: .net
-ms.reviewer: 
-ms.suite: 
+ms.reviewer: ''
+ms.suite: ''
 ms.technology: dotnet-standard
-ms.tgt_pltfrm: 
+ms.tgt_pltfrm: ''
 ms.topic: article
 dev_langs:
 - csharp
@@ -21,18 +21,18 @@ helpviewer_keywords:
 - format providers [.NET Framework]
 - custom format strings
 ms.assetid: a281bfbf-6596-45ed-a2d6-3782d535ada2
-caps.latest.revision: 
+caps.latest.revision: 11
 author: rpetrusha
 ms.author: ronpet
 manager: wpickett
 ms.workload:
 - dotnet
 - dotnetcore
-ms.openlocfilehash: f8f06335d96b3e71f14b3df6b40ef3691c0915f1
-ms.sourcegitcommit: e7f04439d78909229506b56935a1105a4149ff3d
+ms.openlocfilehash: eb578b18b3d3ab7ae617873a33745f36e0e8cacb
+ms.sourcegitcommit: 2042de78fcdceebb6b8ac4b7a292b93e8782cbf5
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 12/23/2017
+ms.lasthandoff: 04/27/2018
 ---
 # <a name="how-to-define-and-use-custom-numeric-format-providers"></a>如何：定義和使用自訂數值格式提供者
 [!INCLUDE[dnprdnshort](../../../includes/dnprdnshort-md.md)] 可讓您有效掌控數值的字串表示。 它支援以下自訂數值格式的功能：  
@@ -99,7 +99,7 @@ ms.lasthandoff: 12/23/2017
  在此範例中，實作 <xref:System.ICustomFormatter.Format%2A?displayProperty=nameWithType> 的方法是用來作為 <xref:System.String.Format%28System.IFormatProvider%2CSystem.String%2CSystem.Object%5B%5D%29?displayProperty=nameWithType> 方法的回呼方法。 因此，它會檢查 `formatProvider` 參數，以判斷其中是否包含目前 `TelephoneFormatter` 物件的參考。 不過，此方法也可以直接從程式碼呼叫。 在此情況下，您可以使用 `formatProvider` 參數來提供 <xref:System.Globalization.CultureInfo> 或 <xref:System.Globalization.NumberFormatInfo> 物件，該物件會提供文化特性特定的格式資訊。  
   
 ## <a name="compiling-the-code"></a>編譯程式碼  
- 在命令列中，使用 csc.exe 或 vbc.exe 來編譯程式碼。 若要編譯 [!INCLUDE[vsprvs](../../../includes/vsprvs-md.md)] 中的程式碼，請將它置於主控台應用程式專案範本中。  
+ 在命令列中，使用 csc.exe 或 vbc.exe 來編譯程式碼。 若要在 Visual Studio 中編譯程式碼，請將它放入主控台應用程式專案範本。  
   
 ## <a name="see-also"></a>請參閱  
  [執行格式化作業](../../../docs/standard/base-types/performing-formatting-operations.md)

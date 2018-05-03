@@ -1,12 +1,13 @@
 ---
-title: "逐步解說：在部分信任案例中發出程式碼"
-ms.custom: 
+title: 逐步解說：在部分信任案例中發出程式碼
+ms.custom: ''
 ms.date: 03/30/2017
 ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.technology: dotnet-clr
-ms.tgt_pltfrm: 
+ms.reviewer: ''
+ms.suite: ''
+ms.technology:
+- dotnet-clr
+ms.tgt_pltfrm: ''
 ms.topic: article
 dev_langs:
 - csharp
@@ -21,16 +22,17 @@ helpviewer_keywords:
 - reflection emit, dynamic methods
 - dynamic methods
 ms.assetid: c45be261-2a9d-4c4e-9bd6-27f0931b7d25
-caps.latest.revision: "15"
+caps.latest.revision: 15
 author: rpetrusha
 ms.author: ronpet
 manager: wpickett
-ms.workload: dotnet
-ms.openlocfilehash: 835483d740b60f98c3170a590edbfbfbe970d783
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.workload:
+- dotnet
+ms.openlocfilehash: cbdbf8a391235fc03140e032b35eb674a74dc88a
+ms.sourcegitcommit: 2042de78fcdceebb6b8ac4b7a292b93e8782cbf5
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 04/27/2018
 ---
 # <a name="walkthrough-emitting-code-in-partial-trust-scenarios"></a>逐步解說：在部分信任案例中發出程式碼
 反映發出在完整或部分信任中使用相同的 API 集合，但在部分信任程式碼中，有些功能需要特殊權限。 此外，反映發出還有一項匿名裝載動態方法的功能，設計搭配部分信任使用並可供安全性透明組件使用。  
@@ -144,7 +146,7 @@ ms.lasthandoff: 12/22/2017
      <xref:System.AppDomain.CreateInstanceAndUnwrap%2A> 方法會在目標應用程式定義域中建立物件，傳回可以用來呼叫物件屬性和方法的 proxy。  
   
     > [!NOTE]
-    >  如果您在 [!INCLUDE[vsprvs](../../../includes/vsprvs-md.md)] 中使用這段程式碼，則必須變更類別名稱以包含命名空間。 命名空間是專案的預設名稱。 例如，如果專案是 "PartialTrust"，則類別名稱必須是 "PartialTrust.Worker"。  
+    >  如果您在 Visual Studio 中使用此程式碼，則必須變更類別名稱以包含命名空間。 命名空間是專案的預設名稱。 例如，如果專案是 "PartialTrust"，則類別名稱必須是 "PartialTrust.Worker"。  
   
 6.  新增程式碼以呼叫 `SimpleEmitDemo` 方法。 呼叫會跨應用程式定義域界限封送處理，而程式碼則在沙箱應用程式定義域中執行。  
   
@@ -218,7 +220,7 @@ ms.lasthandoff: 12/22/2017
   
 ## <a name="compiling-the-code"></a>編譯程式碼  
   
--   如果您在 [!INCLUDE[vsprvs](../../../includes/vsprvs-md.md)] 中建置此程式碼範例，當您將它傳遞給 <xref:System.AppDomain.CreateInstanceAndUnwrap%2A> 方法時，即必須變更類別名稱以包含命名空間。 命名空間是專案的預設名稱。 例如，如果專案是 "PartialTrust"，則類別名稱必須是 "PartialTrust.Worker"。  
+-   如果您在 Visual Studio 中建置此程式碼範例，則當您將它傳遞給 <xref:System.AppDomain.CreateInstanceAndUnwrap%2A> 方法時，必須變更類別名稱以包含命名空間。 命名空間是專案的預設名稱。 例如，如果專案是 "PartialTrust"，則類別名稱必須是 "PartialTrust.Worker"。  
   
 ## <a name="see-also"></a>請參閱  
  [反映發出中的安全性問題](../../../docs/framework/reflection-and-codedom/security-issues-in-reflection-emit.md)  

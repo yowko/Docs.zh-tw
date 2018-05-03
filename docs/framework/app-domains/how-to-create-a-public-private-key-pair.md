@@ -1,12 +1,13 @@
 ---
-title: "如何：建立公開/私密金鑰組"
-ms.custom: 
+title: 如何：建立公開/私密金鑰組
+ms.custom: ''
 ms.date: 03/30/2017
 ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.technology: dotnet-bcl
-ms.tgt_pltfrm: 
+ms.reviewer: ''
+ms.suite: ''
+ms.technology:
+- dotnet-bcl
+ms.tgt_pltfrm: ''
 ms.topic: article
 dev_langs:
 - csharp
@@ -22,22 +23,23 @@ helpviewer_keywords:
 - .snk files
 - strong-named assemblies, key pairs
 ms.assetid: 05026813-f3bd-4d7c-9e0b-fc588eb3d114
-caps.latest.revision: "16"
+caps.latest.revision: 16
 author: rpetrusha
 ms.author: ronpet
 manager: wpickett
-ms.workload: dotnet
-ms.openlocfilehash: b8076f5ed713c88f8f538959855408a8c542705a
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.workload:
+- dotnet
+ms.openlocfilehash: 991affd7074cd69c1c56c37ab2d0a55f8b3af148
+ms.sourcegitcommit: 2042de78fcdceebb6b8ac4b7a292b93e8782cbf5
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 04/27/2018
 ---
 # <a name="how-to-create-a-public-private-key-pair"></a>如何：建立公開/私密金鑰組
 若要使用強式名稱簽署組件，您必須擁有公開/私密金鑰組。 這個公用和私密的密碼編譯金鑰組將在編譯期間用來建立強式名稱的組件。 您可以使用[強式名稱工具 (Sn.exe)](../../../docs/framework/tools/sn-exe-strong-name-tool.md) 來建立金鑰組。 金鑰組檔案通常會有 .snk 副檔名。  
   
 > [!NOTE]
->  在 [!INCLUDE[vsprvs](../../../includes/vsprvs-md.md)] 中，C# 和 Visual Basic 專案屬性頁包含 [簽署] 索引標籤，可讓您選取現有的金鑰檔或產生新的金鑰檔，而不必使用 Sn.exe。 在 Visual C++ 中，您可以在 [屬性頁] 視窗的 [組態屬性] 區段之 [連結器] 區段的 [進階] 屬性頁中，指定現有金鑰檔的位置。 使用 <xref:System.Reflection.AssemblyKeyFileAttribute> 屬性識別金鑰檔組，自 [!INCLUDE[vsprvslong](../../../includes/vsprvslong-md.md)] 開始已過時。  
+>  在 Visual Studio 中，C# 和 Visual Basic 專案屬性頁包含 [簽署] 索引標籤，可讓您選取現有的金鑰檔或產生新的金鑰檔，而不必使用 Sn.exe。 在 Visual C++ 中，您可以在 [屬性頁] 視窗的 [組態屬性] 區段之 [連結器] 區段的 [進階] 屬性頁中，指定現有金鑰檔的位置。 使用 <xref:System.Reflection.AssemblyKeyFileAttribute> 屬性識別金鑰檔組，自 [!INCLUDE[vsprvslong](../../../includes/vsprvslong-md.md)] 開始已過時。  
   
 ### <a name="to-create-a-key-pair"></a>建立金鑰組  
   
@@ -69,7 +71,7 @@ sn -p keypair.snk public.snk
   
  使用強式名稱簽署組件時，[組件連結器 (Al.exe)](../../../docs/framework/tools/al-exe-assembly-linker.md) 會尋找金鑰檔的相關目前目錄和輸出目錄。 使用命令列編譯器時，您可以只要將金鑰複製到含有您的程式模組的目前目錄即可。  
   
- 如果您正在使用舊版的 [!INCLUDE[vsprvs](../../../includes/vsprvs-md.md)]，而該版本在專案屬性 (Property) 內沒有 [簽署] 索引標籤，則建議的金鑰檔位置為專案目錄，並指定如下所示的檔案屬性 (Attribute)：  
+ 如果您正在使用舊版的 Visual Studio，而該版本在專案屬性 (Property) 內沒有 [簽署] 索引標籤，則建議的金鑰檔位置為專案目錄，並指定如下所示的檔案屬性 (Attribute)：  
   
  [!code-cpp[AssemblyName_KeyPair#21](../../../samples/snippets/cpp/VS_Snippets_CLR/AssemblyName_KeyPair/CPP/keyfileattrib.cpp#21)]
  [!code-csharp[AssemblyName_KeyPair#21](../../../samples/snippets/csharp/VS_Snippets_CLR/AssemblyName_KeyPair/CS/keyfileattrib.cs#21)]

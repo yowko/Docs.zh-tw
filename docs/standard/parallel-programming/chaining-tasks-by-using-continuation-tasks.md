@@ -21,11 +21,11 @@ manager: wpickett
 ms.workload:
 - dotnet
 - dotnetcore
-ms.openlocfilehash: 64a6fd2f5cbaee17ac35d7b4bd6f08326eafac64
-ms.sourcegitcommit: 2e8acae16ae802f2d6d04e3ce0a6dbf04e476513
+ms.openlocfilehash: ff475259d1835a048d6260cabf4f1d46d2436954
+ms.sourcegitcommit: 2042de78fcdceebb6b8ac4b7a292b93e8782cbf5
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/18/2018
+ms.lasthandoff: 04/27/2018
 ---
 # <a name="chaining-tasks-by-using-continuation-tasks"></a>使用接續工作鏈結工作
 在非同步程式設計中，非同步作業完成時叫用第二個作業，並將資料傳遞給它，是非常普遍的。 傳統上，這項作業使用回呼方法完成。 在工作平行程式庫中，由 *「接續工作」*(continuation task) 提供相同的功能。 接續工作 (也只稱為接續) 是另一項稱為 *「前項」*(antecedent) 的工作所叫用的非同步工作，此時會完成前項。  
@@ -130,7 +130,7 @@ ms.lasthandoff: 04/18/2018
   
  當您為使用 TPL 而轉換現有之使用 [非同步程式設計模型 (APM)](../../../docs/standard/asynchronous-programming-patterns/asynchronous-programming-model-apm.md) 的程式碼時，接續狀態會很有用。 在 APM 中，您通常會在**開始***方法*方法中提供物件狀態，並在稍後使用 <xref:System.IAsyncResult.AsyncState%2A?displayProperty=nameWithType> 屬性來存取該狀態。 藉由使用 <xref:System.Threading.Tasks.Task.ContinueWith%2A> 方法，當您轉換使用 APM 的程式碼為使用 TPL 時，您可以保留此狀態。  
   
- 當您使用 <xref:System.Threading.Tasks.Task> 偵錯工具中的 [!INCLUDE[vsprvs](../../../includes/vsprvs-md.md)] 物件時，接續狀態也相當有用。 例如，在 [平行工作]  視窗中，[工作]  資料行會顯示每項工作的狀態物件之字串表示。 如需 [平行工作] 視窗的詳細資訊，請參閱[使用工作視窗](/visualstudio/debugger/using-the-tasks-window)。  
+ 當您使用 Visual Studio 偵錯工具中的 <xref:System.Threading.Tasks.Task> 物件時，接續狀態也相當有用。 例如，在 [平行工作]  視窗中，[工作]  資料行會顯示每項工作的狀態物件之字串表示。 如需 [平行工作] 視窗的詳細資訊，請參閱[使用工作視窗](/visualstudio/debugger/using-the-tasks-window)。  
   
  下列範例示範如何使用接續狀態。 它會建立接續工作的鏈結。 每個工作會為 <xref:System.DateTime> 方法的 `state` 參數提供目前的時間，此為 <xref:System.Threading.Tasks.Task.ContinueWith%2A> 物件。 每個 <xref:System.DateTime> 物件代表建立接續工作時的時間。 做為其結果，每一項工作會產生第二個 <xref:System.DateTime> 物件，表示工作完成時的時間。 所有工作都完成之後，此範例會顯示建立時間，以及顯示每個接續工作完成的時間。  
   

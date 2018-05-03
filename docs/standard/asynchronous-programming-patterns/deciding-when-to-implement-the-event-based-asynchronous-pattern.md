@@ -1,12 +1,12 @@
 ---
-title: "決定何時實作事件架構非同步模式"
-ms.custom: 
+title: 決定何時實作事件架構非同步模式
+ms.custom: ''
 ms.date: 03/30/2017
 ms.prod: .net
-ms.reviewer: 
-ms.suite: 
+ms.reviewer: ''
+ms.suite: ''
 ms.technology: dotnet-standard
-ms.tgt_pltfrm: 
+ms.tgt_pltfrm: ''
 ms.topic: article
 helpviewer_keywords:
 - Event-based Asynchronous Pattern
@@ -18,18 +18,18 @@ helpviewer_keywords:
 - AsyncOperation class
 - AsyncCompletedEventArgs class
 ms.assetid: a00046aa-785d-4f7f-a8e5-d06475ea50da
-caps.latest.revision: 
+caps.latest.revision: 8
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
 ms.workload:
 - dotnet
 - dotnetcore
-ms.openlocfilehash: 111aaaa86877368ccbd0c9c11a26dff47b065698
-ms.sourcegitcommit: e7f04439d78909229506b56935a1105a4149ff3d
+ms.openlocfilehash: 330dc5ec76fe33a7f6165857334a367f578840ef
+ms.sourcegitcommit: 2042de78fcdceebb6b8ac4b7a292b93e8782cbf5
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 12/23/2017
+ms.lasthandoff: 04/27/2018
 ---
 # <a name="deciding-when-to-implement-the-event-based-asynchronous-pattern"></a>決定何時實作事件架構非同步模式
 事件架構非同步模式提供的模式可公開類別的非同步行為。 引進此模式之後，[!INCLUDE[dnprdnshort](../../../includes/dnprdnshort-md.md)] 定義兩種模式來公開非同步行為：以 <xref:System.IAsyncResult?displayProperty=nameWithType> 介面為基礎的非同步模式與事件架構模式。 本主題說明適合實作這兩種模式的時機。  
@@ -42,7 +42,7 @@ ms.lasthandoff: 12/23/2017
 > [!NOTE]
 >  實作 <xref:System.IAsyncResult> 模式但未一併實作事件架構模式的情況非常罕見。  
   
-## <a name="guidelines"></a>指導方針  
+## <a name="guidelines"></a>方針  
  下列清單說明實作事件架構非同步模式時的指導方針：  
   
 -   使用事件架構模式作為預設 API 來公開類別的非同步行為。  
@@ -63,7 +63,7 @@ ms.lasthandoff: 12/23/2017
   
     -   如果產生的物件模型複雜度超過個別實作的優點，請在相同類別上公開事件架構模式與 <xref:System.IAsyncResult> 模式。 最好在單一類別上公開這兩個模式，而不是避免公開事件架構模式。  
   
-    -   如果您必須在單一類別上公開事件架構模式和 <xref:System.IAsyncResult> 模式，請以進階選項的方式，使用設為 <xref:System.ComponentModel.EditorBrowsableState.Advanced> 的 <xref:System.ComponentModel.EditorBrowsableAttribute> 來標示 <xref:System.IAsyncResult> 模式實作。 這會向 [!INCLUDE[vsprvs](../../../includes/vsprvs-md.md)] IntelliSense 之類的設計環境表示，不要顯示 <xref:System.IAsyncResult> 屬性和方法。 這些屬性和方法仍完全可供使用，但透過 IntelliSense 處理的開發人員會有較清楚的 API 檢視。  
+    -   如果您必須在單一類別上公開事件架構模式和 <xref:System.IAsyncResult> 模式，請以進階選項的方式，使用設為 <xref:System.ComponentModel.EditorBrowsableState.Advanced> 的 <xref:System.ComponentModel.EditorBrowsableAttribute> 來標示 <xref:System.IAsyncResult> 模式實作。 這會向 Visual Studio IntelliSense 這類設計環境表示，不要顯示 <xref:System.IAsyncResult> 屬性和方法。 這些屬性和方法仍完全可供使用，但透過 IntelliSense 處理的開發人員會有較清楚的 API 檢視。  
   
 ## <a name="criteria-for-exposing-the-iasyncresult-pattern-in-addition-to-the-event-based-pattern"></a>除了公開事件架構模式之外還公開 IAsyncResult 模式的準則  
  雖然在先前所述的案例下，事件架構非同步模式有許多優點，但也有一些缺點，如果您最以效能為重，應多加注意。  
@@ -92,7 +92,7 @@ ms.lasthandoff: 12/23/2017
   
 -   只有在您有高效能需求，且已驗證事件架構模式無法符合該需求，但 <xref:System.IAsyncResult> 模式能符合時，才公開 <xref:System.IAsyncResult> 模式。  
   
-## <a name="see-also"></a>另請參閱  
+## <a name="see-also"></a>請參閱  
  [逐步解說：實作支援事件架構非同步模式的元件](../../../docs/standard/asynchronous-programming-patterns/component-that-supports-the-event-based-asynchronous-pattern.md)  
  [事件架構非同步模式 (EAP)](../../../docs/standard/asynchronous-programming-patterns/event-based-asynchronous-pattern-eap.md)  
  [使用事件架構非同步模式設計多執行緒程式](../../../docs/standard/asynchronous-programming-patterns/multithreaded-programming-with-the-event-based-asynchronous-pattern.md)  

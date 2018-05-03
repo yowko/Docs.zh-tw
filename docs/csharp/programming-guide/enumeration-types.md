@@ -1,8 +1,9 @@
 ---
-title: "列舉類型 (C# 程式設計手冊)"
+title: 列舉類型 (C# 程式設計手冊)
 ms.date: 09/10/2017
 ms.prod: .net
-ms.technology: devlang-csharp
+ms.technology:
+- devlang-csharp
 ms.topic: article
 helpviewer_keywords:
 - enumerations [C#]
@@ -10,14 +11,14 @@ helpviewer_keywords:
 - C# Language, enums
 - bit flags [C#]
 ms.assetid: 64a9b731-9e3c-4336-8a09-018db2aa10b7
-caps.latest.revision: "17"
+caps.latest.revision: 17
 author: BillWagner
 ms.author: wiwagn
-ms.openlocfilehash: 13ec7d5d2a44cddb2b7f440c8d811c2e4060d432
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.openlocfilehash: cdaa609acfa34f3b0b3073d88f09fe735d48e9a2
+ms.sourcegitcommit: 2042de78fcdceebb6b8ac4b7a292b93e8782cbf5
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 04/27/2018
 ---
 # <a name="enumeration-types-c-programming-guide"></a>列舉類型 (C# 程式設計手冊)
 
@@ -47,7 +48,7 @@ Console.WriteLine("{0} is month number #{1}.", thisMonth, monthNumber);
 
 - 清楚指定用戶端程式碼的哪些值對變數有效。
 
-- 在 [!INCLUDE[vsprvs](~/includes/vsprvs-md.md)] 中，IntelliSense 會列出已定義的值。
+- 在 Visual Studio 中，IntelliSense 會列出已定義的值。
 
 當您不為列舉程式清單中的項目指定值時，值會自動遞增 1。 在上例中，`Day.Sunday` 的值為 0，`Day.Monday` 的值為 1，依此類推。 當您建立新的 `Day` 物件時，如未明確指定其值，則它會有預設值 `Day.Sunday` (0)。 當您建立列舉時，請選取最符合邏輯的預設值，並指定其值為零。 這會造成所有的列舉都是預設值，如果它們在建立時未明確指派值。
 
@@ -92,7 +93,7 @@ Console.WriteLine("{0} is month number #{1}.", thisMonth, monthNumber);
 
 您也可以使用擴充方法，為列舉建立新的方法。 如需詳細資訊，請參閱[如何：建立列舉的新方法 ](../../csharp/programming-guide/classes-and-structs/how-to-create-a-new-method-for-an-enumeration.md)。
 
-## <a name="see-also"></a>請參閱
+## <a name="see-also"></a>另請參閱
  <xref:System.Enum?displayProperty=nameWithType>  
  [C# 程式設計指南](../../csharp/programming-guide/index.md)  
  [enum](../../csharp/language-reference/keywords/enum.md)
