@@ -1,10 +1,6 @@
 ---
-title: "NameValueSectionHandler 和 DictionarySectionHandler 自訂項目"
+title: NameValueSectionHandler 和 DictionarySectionHandler 自訂項目
 ms.date: 05/01/2017
-ms.prod: .net-framework
-ms.technology:
-- dotnet-clr
-ms.topic: article
 f1_keywords:
 - http://schemas.microsoft.com/.NetConfiguration/v2.0#configuration/sectionName
 helpviewer_keywords:
@@ -12,21 +8,18 @@ helpviewer_keywords:
 ms.assetid: 2303031f-4c1d-4df4-bca1-e9bd96ca40dc
 author: guardrex
 ms.author: mairaw
-manager: wpickett
-ms.workload:
-- dotnet
-ms.openlocfilehash: 2154e2a178050e5bafa7d19f37a766141d0a5838
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.openlocfilehash: 3a16952c5cd3759873faeb0fce45b8aa5170b083
+ms.sourcegitcommit: 11f11ca6cefe555972b3a5c99729d1a7523d8f50
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="custom-element-for-namevaluesectionhandler-and-dictionarysectionhandler"></a>NameValueSectionHandler 和 DictionarySectionHandler 自訂項目
 
 定義自訂組態區段，使用設定<xref:System.Configuration.NameValueSectionHandler>和<xref:System.Configuration.DictionarySectionHandler>類別。
 
 [**\<configuration>**](~/docs/framework/configure-apps/file-schema/configuration-element.md)   
-&nbsp;&nbsp;**\<sectionName >**
+&nbsp;&nbsp;**\<sectionName>**
 
 ## <a name="attributes"></a>屬性
 
@@ -42,13 +35,13 @@ ms.lasthandoff: 12/22/2017
 
 |     | 描述 |
 | --- | ----------- |
-| [**\<新增 >** ](~/docs/framework/configure-apps/file-schema/add-element-for-custom-2.md)如<xref:System.Configuration.NameValueSectionHandler>和<xref:System.Configuration.DictionarySectionHandler>  | 加入自訂應用程式設定。 |
-| [**\<移除 >** ](~/docs/framework/configure-apps/file-schema/remove-element-for-custom-2.md)如<xref:System.Configuration.NameValueSectionHandler>和<xref:System.Configuration.DictionarySectionHandler> |    移除先前定義的設定。 |
-| [**\<清除 >** ](~/docs/framework/configure-apps/file-schema/clear-element-for-custom-2.md)如<xref:System.Configuration.NameValueSectionHandler>和<xref:System.Configuration.DictionarySectionHandler> | 清除所有先前定義的設定區段中。 |
+| [**\<新增 >** ](~/docs/framework/configure-apps/file-schema/add-element-for-custom-2.md)如<xref:System.Configuration.NameValueSectionHandler>和 <xref:System.Configuration.DictionarySectionHandler>  | 加入自訂應用程式設定。 |
+| [**\<移除 >** ](~/docs/framework/configure-apps/file-schema/remove-element-for-custom-2.md)如<xref:System.Configuration.NameValueSectionHandler>和 <xref:System.Configuration.DictionarySectionHandler> |    移除先前定義的設定。 |
+| [**\<清除 >** ](~/docs/framework/configure-apps/file-schema/clear-element-for-custom-2.md)如<xref:System.Configuration.NameValueSectionHandler>和 <xref:System.Configuration.DictionarySectionHandler> | 清除所有先前定義的設定區段中。 |
 
 ## <a name="remarks"></a>備註
 
- **\<SectionName >**項目是所定義的自訂項目**\<區段 >**標記 **\<c >**項目。
+**\<SectionName >** 項目是所定義的自訂項目**\<區段 >** 標記 **\<c >** 項目。
 
 下表顯示每個組態區段處理常式會傳回物件 ConfigurationSettings.GetConfig 方法的型別：
 

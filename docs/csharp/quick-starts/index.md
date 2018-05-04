@@ -1,20 +1,13 @@
 ---
 title: C# 互動式教學課程 - C# 快速入門
 description: 在您的瀏覽器中學習 C#，並開始使用您自己的開發環境
-keywords: C#, Get Started, Lessons, Interactive, 快速入門, 課程, 互動式
-author: billwagner
-ms.author: wiwagn
 ms.date: 01/30/2018
-ms.topic: get-started-article
-ms.prod: .net
-ms.technology: devlang-csharp
-ms.devlang: csharp
 ms.custom: mvc
-ms.openlocfilehash: 091a9b5cfca1f7d7c303b3961704b8a3bbdf34e2
-ms.sourcegitcommit: 2e8acae16ae802f2d6d04e3ce0a6dbf04e476513
+ms.openlocfilehash: 66674b93883211d66883795587e66380a0f43fd7
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/18/2018
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="c-quickstarts"></a>C# 快速入門 #
 
@@ -32,25 +25,25 @@ ms.lasthandoff: 04/18/2018
 
 在 [C# 中的數字](numbers-in-csharp.yml)快速入門中，您將會學習電腦儲存數字的方式，以及如何使用不同的數值型別來執行計算。 您將會學習進位的基本概念，以及如何使用 C# 執行數學計算。 本快速入門也可[在您的本機電腦上執行](numbers-in-csharp-local.md)。
 
-此快速入門假設您已完成 [Hello World](hello-world.yml) 課程。
+本快速入門假設您已完成 [Hello World](hello-world.yml) 課程。
 
 ## <a name="branches-and-loopsbranches-and-loopsyml"></a>[分支和迴圈](branches-and-loops.yml)
 
 [分支和迴圈](branches-and-loops.yml)快速入門會指導您如何根據儲存在變數中的值，以選取不同程式碼執行路徑的基本概念。 您將會學習控制流程的基本概念，也就是程式做出決定並選擇不同動作的基礎機制。 本快速入門也可[在您的本機電腦上執行](branches-and-loops-local.md)。
 
-此快速入門假設您已完成 [Hello World](hello-world.yml) 和 [C# 中的數字](numbers-in-csharp.yml)課程。
+本快速入門假設您已完成 [Hello World](hello-world.yml) 和 [C# 中的數字](numbers-in-csharp.yml)課程。
 
 ## <a name="string-interpolationinterpolated-stringsyml"></a>[字串內插補點](interpolated-strings.yml)
 
-[字串內插補點](interpolated-strings.yml)快速入門會為您示範如何在字串中插入值。 您會學到如何使用內嵌的 C# 運算式建立內插字串，以及如何控制結果字串中運算式結果的文字外觀。 本快速入門也可[在您的本機電腦上執行](interpolated-strings-local.md)。
+[字串內插補點](interpolated-strings.yml)快速入門示範如何在字串中插入值。 您會學到如何使用內嵌 C# 運算式建立插入字串，以及如何控制結果字串中運算式結果的文字外觀。 本快速入門也可[在您的本機電腦上執行](interpolated-strings-local.md)。
 
-此快速入門假設您已經完成 [Hello World](hello-world.yml)、[C# 中的數字](numbers-in-csharp.yml)與[分支和迴圈](branches-and-loops.yml)課程。
+本快速入門假設您已完成 [Hello World](hello-world.yml)、[C# 中的數字](numbers-in-csharp.yml)和[分支和迴圈](branches-and-loops.yml)課程。
 
 ## <a name="list-collectionlist-collectionyml"></a>[List 集合](list-collection.yml)
 
 [List 集合](list-collection.yml)課程會為您說明可儲存資料序列的「List 集合」類型。 您將會學習如何新增及移除項目、搜尋項目，以及對清單進行排序。 您會探索各種不同的清單。 本快速入門也可[在您的本機電腦上執行](arrays-and-collections.md)。
 
-此快速入門假設您已完成上述的課程。
+本快速入門假設您已完成上述的課程。
 
 ## <a name="introduction-to-classesintroduction-to-classesmd"></a>[類別簡介](introduction-to-classes.md)
 

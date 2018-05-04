@@ -1,22 +1,15 @@
 ---
 title: 開始使用 Visual Basic
 ms.date: 08/10/2017
-ms.prod: .net
-ms.technology:
-- devlang-visual-basic
-ms.topic: article
 helpviewer_keywords:
 - get started, Visual Basic
 - Visual Basic, get started
 ms.assetid: 6685467b-28fa-4cde-9516-f0e00ad08911
-caps.latest.revision: 36
-author: dotnet-bot
-ms.author: dotnetcontent
-ms.openlocfilehash: ebaa934ffaed985439ed65b9f5308404171a91bd
-ms.sourcegitcommit: 2042de78fcdceebb6b8ac4b7a292b93e8782cbf5
+ms.openlocfilehash: 9d51aca4c7ad491c0b807ef6a40cb2581f97355b
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/27/2018
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="get-started-with-visual-basic"></a>開始使用 Visual Basic
 本文的這一節可協助您開始進行 Visual Basic 應用程式開發。  

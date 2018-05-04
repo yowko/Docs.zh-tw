@@ -1,30 +1,20 @@
 ---
 title: '&lt;sessionSecurityTokenCache&gt;'
-ms.custom: 
 ms.date: 03/30/2017
-ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.technology: dotnet-clr
-ms.tgt_pltfrm: 
-ms.topic: article
 ms.assetid: d43e676c-0153-485c-ab31-0257a2db7507
-caps.latest.revision: "8"
 author: BrucePerlerMS
-ms.author: bruceper
 manager: mbaldwin
-ms.workload: dotnet
-ms.openlocfilehash: 9f4b87d6c620a07ee831888086bdab75a689875e
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.openlocfilehash: 0b0d3c01a81f110f79f64d75aa2ab2ff2873fedd
+ms.sourcegitcommit: 11f11ca6cefe555972b3a5c99729d1a7523d8f50
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="ltsessionsecuritytokencachegt"></a>&lt;sessionSecurityTokenCache&gt;
 使用的服務或安全性權杖處理常式集合中註冊一份快取工作階段權杖。  
   
- \<system.identityModel >  
-\<identityConfiguration >  
+ \<system.identityModel>  
+\<identityConfiguration>  
 \<會快取 >  
 \<sessionSecurityTokenCache >  
   
@@ -42,7 +32,7 @@ ms.lasthandoff: 12/22/2017
 ```  
   
 ## <a name="attributes-and-elements"></a>屬性和項目  
- 下列章節說明屬性、子項目和父項目。  
+ 下列各節描述屬性、子項目和父項目。  
   
 ### <a name="attributes"></a>屬性  
   
@@ -50,7 +40,7 @@ ms.lasthandoff: 12/22/2017
 |---------------|-----------------|  
 |類型|從衍生的型別<xref:System.IdentityModel.Tokens.SessionSecurityTokenCache>類別。|  
   
-### <a name="child-elements"></a>子元素  
+### <a name="child-elements"></a>子項目  
  無  
   
 ### <a name="parent-elements"></a>父項目  
@@ -71,5 +61,5 @@ ms.lasthandoff: 12/22/2017
 </caches>  
 ```  
   
-## <a name="see-also"></a>請參閱  
+## <a name="see-also"></a>另請參閱  
  <xref:System.IdentityModel.Tokens.SessionSecurityTokenCache>

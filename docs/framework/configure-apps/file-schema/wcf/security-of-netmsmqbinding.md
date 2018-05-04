@@ -1,33 +1,23 @@
 ---
-title: "&lt;netMsmqBinding&gt; 的 &lt;security&gt;"
-ms.custom: 
+title: '&lt;netMsmqBinding&gt; 的 &lt;security&gt;'
 ms.date: 03/30/2017
-ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.technology: dotnet-clr
-ms.tgt_pltfrm: 
-ms.topic: article
 ms.assetid: 001d11a9-7439-498c-b09d-fca20eaf8cd3
-caps.latest.revision: "15"
 author: BrucePerlerMS
-ms.author: bruceper
 manager: mbaldwin
-ms.workload: dotnet
-ms.openlocfilehash: fb381d6970d72cc1ff88ed1238d8d8541c40a40d
-ms.sourcegitcommit: c0dd436f6f8f44dc80dc43b07f6841a00b74b23f
+ms.openlocfilehash: 0ed1021bdc45d0d64a20ff19410ad56e0d304ed3
+ms.sourcegitcommit: 11f11ca6cefe555972b3a5c99729d1a7523d8f50
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 01/19/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="ltsecuritygt-of-ltnetmsmqbindinggt"></a>&lt;netMsmqBinding&gt; 的 &lt;security&gt;
 定義 MSMQ 繫結的安全性設定。 它指定是否啟用傳輸或 SOAP 安全性，以及如果啟用，正在使用的驗證模式和保護層級。  
   
  \<system.ServiceModel>  
-\<bindings>  
+\<繫結 >  
 \<netMsmqBinding>  
-\<binding>  
-\<security>  
+\<繫結 >  
+\<安全性 >  
   
 ## <a name="syntax"></a>語法  
   
@@ -52,7 +42,7 @@ ms.lasthandoff: 01/19/2018
 |---------------|-----------------|  
 |模式|指定負責控制完整性、機密性和驗證的安全性類型。 有效值包括以下的值：<br /><br /> -None： 這會停用安全性。<br />傳輸： 保護和驗證是由傳輸提供。 這會套用在兩個佇列管理員之間的訊息安全性。 應用程式和佇列管理員之間沒有提供安全性。 現有 Msmq 應用程式在功能上相當於這個安全性模式類型。<br />-訊息： 指定端對端應用程式的安全性。 在傳輸層沒有提供安全性。 這與其他標準繫結程序提供的安全性類似。<br />-兩者： 提供傳輸和 SOAP 訊息層級安全性。 這兩個層級需要相同的認證。<br /><br /> 預設值為 Transport。 此屬性的型別為 <xref:System.ServiceModel.NetMsmqSecurityMode>。|  
   
-### <a name="child-elements"></a>子元素  
+### <a name="child-elements"></a>子項目  
   
 |項目|描述|  
 |-------------|-----------------|  
@@ -65,7 +55,7 @@ ms.lasthandoff: 01/19/2018
 |-------------|-----------------|  
 |繫結|繫結項目[ \<netMsmqBinding >](../../../../../docs/framework/configure-apps/file-schema/wcf/netmsmqbinding.md)|  
   
-## <a name="see-also"></a>請參閱  
+## <a name="see-also"></a>另請參閱  
  <xref:System.ServiceModel.Configuration.NetMsmqSecurityElement>  
  <xref:System.ServiceModel.NetMsmqBinding.Security%2A>  
  <xref:System.ServiceModel.Configuration.NetMsmqBindingElement.Security%2A>  
@@ -74,5 +64,5 @@ ms.lasthandoff: 01/19/2018
  [繫結](../../../../../docs/framework/wcf/bindings.md)  
  [設定系統提供的繫結](../../../../../docs/framework/wcf/feature-details/configuring-system-provided-bindings.md)  
  [使用繫結來設定 Windows Communication Foundation 服務和用戶端](http://msdn.microsoft.com/library/bd8b277b-932f-472f-a42a-b02bb5257dfb)  
- [\<binding>](../../../../../docs/framework/misc/binding.md)  
+ [\<繫結 >](../../../../../docs/framework/misc/binding.md)  
  [WCF 中的佇列](../../../../../docs/framework/wcf/feature-details/queues-in-wcf.md)

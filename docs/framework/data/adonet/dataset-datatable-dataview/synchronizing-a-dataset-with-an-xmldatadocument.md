@@ -1,27 +1,15 @@
 ---
-title: "使用 XmlDataDocument 同步處理資料集"
-ms.custom: 
+title: 使用 XmlDataDocument 同步處理資料集
 ms.date: 03/30/2017
-ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.technology: dotnet-ado
-ms.tgt_pltfrm: 
-ms.topic: article
 dev_langs:
 - csharp
 - vb
 ms.assetid: fbc96fa9-b5d1-4f97-b099-c89b0e14ce2c
-caps.latest.revision: "4"
-author: douglaslMS
-ms.author: douglasl
-manager: craigg
-ms.workload: dotnet
-ms.openlocfilehash: c09ddd9ad4d945fc0704e25400dc8c94bdacb933
-ms.sourcegitcommit: ed26cfef4e18f6d93ab822d8c29f902cff3519d1
+ms.openlocfilehash: d026a425f7a38777fcb5bbb4b18816c39a99aa72
+ms.sourcegitcommit: 11f11ca6cefe555972b3a5c99729d1a7523d8f50
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 01/17/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="synchronizing-a-dataset-with-an-xmldatadocument"></a>使用 XmlDataDocument 同步處理資料集
 本節將使用已與 <xref:System.Data.DataSet> 同步處理的強型別 <xref:System.Xml.XmlDataDocument>，來示範處理採購單的其中一個步驟。 請依照下列範例會建立**資料集**的最小化的結構描述，比對只包含來源 XML 文件的一部分。 這些範例使用**XmlDataDocument**來保留來源 XML 文件精確度啟用**資料集**用來公開 XML 文件的子集。  
@@ -242,6 +230,6 @@ public class Sample
 }  
 ```  
   
-## <a name="see-also"></a>請參閱  
+## <a name="see-also"></a>另請參閱  
  [資料集和 XmlDataDocument 同步處理](../../../../../docs/framework/data/adonet/dataset-datatable-dataview/dataset-and-xmldatadocument-synchronization.md)  
  [ADO.NET Managed 提供者和 DataSet 開發人員中心](http://go.microsoft.com/fwlink/?LinkId=217917)

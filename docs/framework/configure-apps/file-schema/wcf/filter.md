@@ -1,28 +1,16 @@
 ---
-title: "&lt;篩選器&gt;"
-ms.custom: 
+title: '&lt;篩選器&gt;'
 ms.date: 03/30/2017
-ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.technology: dotnet-clr
-ms.tgt_pltfrm: 
-ms.topic: article
 ms.assetid: 3266700b-904b-44e4-93a7-e06a1a445100
-caps.latest.revision: "3"
-author: dotnet-bot
-ms.author: dotnetcontent
-manager: wpickett
-ms.workload: dotnet
-ms.openlocfilehash: 186c511cd8a69cef5e30e369641628a10a0972d7
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.openlocfilehash: 93d47fc6b25a75eedae43cd70582abc863a74e6c
+ms.sourcegitcommit: 11f11ca6cefe555972b3a5c99729d1a7523d8f50
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="ltfiltergt"></a>&lt;篩選器&gt;
 
-定義路由篩選條件，可判斷傳入訊息時要使用之 [!INCLUDE[indigo1](../../../../../includes/indigo1-md.md)]<xref:System.ServiceModel.Dispatcher.MessageFilter> 的型別，以及篩選條件所需的任何支援資料或參數。
+定義路由篩選條件，判斷類型的 Windows Communication Foundation (WCF)<xref:System.ServiceModel.Dispatcher.MessageFilter>傳入訊息，也可以在任何支援的資料或篩選器所需的參數與時使用。
 
 \<system.serviceModel >\<路由 >\<篩選 >\<篩選 >
 
@@ -47,7 +35,7 @@ ms.lasthandoff: 12/22/2017
 
 | 屬性  | 描述 |
 | ---------- | ----------- |
-| customType | 字串，其中包含要做為篩選之自訂類型的完整類型名稱。 如果`filterType`設`custom`，這個屬性包含要建立之類別的完整限定的類型名稱。  `filterData`也可能包含要使用的自訂型別篩選評估期間的值。 |
+| customType | 字串，其中包含要做為篩選之自訂類型的完整類型名稱。 如果`filterType`設`custom`，這個屬性包含要建立之類別的完整限定的類型名稱。  `filterData` 也可能包含要使用的自訂型別篩選評估期間的值。 |
 | filterData | 包含篩選資料的字串。 如需如何指定這個屬性的詳細資訊，請參閱 <xref:System.ServiceModel.Routing.Configuration.FilterElement.FilterData%2A>。 |
 | filterType | 包含篩選條件類型的字串。 此屬性的型別為 <xref:System.ServiceModel.Routing.Configuration.FilterType>。  如需此屬性與 `filterData` 屬性如何搭配運作的詳細資訊，請參閱 <xref:System.ServiceModel.Routing.Configuration.FilterElement.FilterData%2A>。 |
 | name       | 字串，其中包含這個篩選項目的唯一名稱。 |
@@ -60,7 +48,7 @@ ms.lasthandoff: 12/22/2017
 
 | 元素 | 描述 |
 | ------- | ----------- |
-| [\<路由 >](../../../../../docs/framework/configure-apps/file-schema/wcf/routing.md) | 組態區段，用於定義一組路由篩選條件，這些篩選條件可判斷傳入訊息時要使用之 [!INCLUDE[ indigo1](../../../../../includes/indigo1-md.md)]<xref:System.ServiceModel.Dispatcher.MessageFilter> 的型別。 |
+| [\<路由 >](../../../../../docs/framework/configure-apps/file-schema/wcf/routing.md) | 定義一組路由篩選條件，判斷類型的 Windows Communication Foundation (WCF) 的組態區段<xref:System.ServiceModel.Dispatcher.MessageFilter>傳入訊息時使用。 |
 
 ## <a name="see-also"></a>另請參閱
 

@@ -1,27 +1,18 @@
 ---
-title: "組件繫結重新導向安全性使用權限"
-ms.custom: 
+title: 組件繫結重新導向安全性使用權限
 ms.date: 03/30/2017
-ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.technology: dotnet-clr
-ms.tgt_pltfrm: 
-ms.topic: article
 helpviewer_keywords:
 - side-by-side execution, assembly binding redirection
 - assemblies [.NET Framework], binding redirection
 ms.assetid: 24a5cdff-7ed9-4195-93f3-edf6899019fc
-caps.latest.revision: "9"
 author: mcleblanc
 ms.author: markl
 manager: markl
-ms.workload: dotnet
-ms.openlocfilehash: d2593df04b93db17f9ca61a98b21aaec1d534d46
-ms.sourcegitcommit: c0dd436f6f8f44dc80dc43b07f6841a00b74b23f
+ms.openlocfilehash: ef9295028aeb7bfcc6df88e9c8bb7f80e2a31368
+ms.sourcegitcommit: 11f11ca6cefe555972b3a5c99729d1a7523d8f50
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 01/19/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="assembly-binding-redirection-security-permission"></a>組件繫結重新導向安全性使用權限
 在應用程式組態檔中進行明確的組件繫結重新導向必須擁有安全性權限。 這適用於 .NET Framework 組件和協力廠商組件的重新導向。 藉由設定授與權<xref:System.Security.Permissions.SecurityPermissionFlag>加上旗標上<xref:System.Security.Permissions.SecurityPermission>。 根據預設，managed 組件具有任何權限。  
@@ -36,12 +27,12 @@ ms.lasthandoff: 01/19/2018
 |----------|-----------------------------------|  
 |受信任的區域 （本機電腦）|**ON**|  
 |內部網路區域|**ON**|  
-|網際網路區域|**OFF**|  
-|不受信任的區域|**OFF**|  
+|網際網路區域|**關閉**|  
+|不受信任的區域|**關閉**|  
   
  系統管理員可以變更這些安全性設定，以支援或限制特定電腦的特定案例。 沒有變更工具**方式是**旗標預設值，從設定系統管理員必須手動編輯使用者的電腦上的 Security.config 檔。  
   
-## <a name="see-also"></a>請參閱  
+## <a name="see-also"></a>另請參閱  
  [發行者原則檔和-並存執行](http://msdn.microsoft.com/library/97a042be-4d72-40c3-91c0-76fd36bdf133)  
  [如何：啟用和停用自動繫結重新導向](../../../docs/framework/configure-apps/how-to-enable-and-disable-automatic-binding-redirection.md)  
  [並存執行](../../../docs/framework/deployment/side-by-side-execution.md)

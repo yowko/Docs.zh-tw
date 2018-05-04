@@ -1,24 +1,12 @@
 ---
 title: '&lt;soapProcessing&gt;'
-ms.custom: 
 ms.date: 03/30/2017
-ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.technology: dotnet-clr
-ms.tgt_pltfrm: 
-ms.topic: article
 ms.assetid: e8707027-e6b8-4539-893d-3cd7c13fbc18
-caps.latest.revision: "4"
-author: dotnet-bot
-ms.author: dotnetcontent
-manager: wpickett
-ms.workload: dotnet
-ms.openlocfilehash: 1aeb100e1b8e160d30566cd43d67cbf49c6b5c4e
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
-ms.translationtype: MT
+ms.openlocfilehash: 780c0e9a1d88c9f00883753091b102fbe9d41aa5
+ms.sourcegitcommit: 11f11ca6cefe555972b3a5c99729d1a7523d8f50
+ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="ltsoapprocessinggt"></a>&lt;soapProcessing&gt;
 
@@ -60,7 +48,7 @@ ms.lasthandoff: 12/22/2017
 
 SOAP 處理是在訊息版本之間轉換訊息的程序。
 
-[!INCLUDE[indigo1](../../../../../includes/indigo1-md.md)] 路由服務可以將其中一種通訊協定的訊息轉換為另一種通訊協定。 如果傳入及傳出的訊息版本不同，會建立正確版本的新訊息。 處理訊息<!--zz <xref:System.ServiceModel.Channel.MessageVersion> -->`MessageVersion`到另一個透過建構新[!INCLUDE[indigo2](../../../../../includes/indigo2-md.md)]包含主體部分和相關的標頭從傳入訊息[!INCLUDE[indigo2](../../../../../includes/indigo2-md.md)]訊息。 定址專用或是在路由器層級辨識的標頭，不會在建構新 WCF 訊息期間使用，因為這些標頭不是屬於不同的版本 (若為定址標頭)，就是已做為用戶端和路由器之間通訊的一部分處理。
+Windows Communication Foundation (WCF) 路由服務可以將訊息從一種通訊協定轉換到另一個。 如果傳入及傳出的訊息版本不同，會建立正確版本的新訊息。 處理訊息<!--zz <xref:System.ServiceModel.Channel.MessageVersion> -->`MessageVersion`到另一個透過建構新[!INCLUDE[indigo2](../../../../../includes/indigo2-md.md)]包含主體部分和相關的標頭從傳入訊息[!INCLUDE[indigo2](../../../../../includes/indigo2-md.md)]訊息。 定址專用或是在路由器層級辨識的標頭，不會在建構新 WCF 訊息期間使用，因為這些標頭不是屬於不同的版本 (若為定址標頭)，就是已做為用戶端和路由器之間通訊的一部分處理。
 
 標頭是否放置在傳出訊息內，是透過標頭是否在通過傳入通道層時標記為辨識所決定。 未經辨識的標題 (例如自訂標題) 不會被移除，因此會透過複製到傳出訊息中的方式通過路由服務。 訊息的主體會複製到傳出訊息中。 接著，會將訊息傳出到輸出通道，此時會建立並加入該通訊協定/傳輸專用的所有標題和其他封套資料。
 

@@ -1,27 +1,15 @@
 ---
-title: "類型系統 (Entity SQL)"
-ms.custom: 
+title: 類型系統 (Entity SQL)
 ms.date: 03/30/2017
-ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.technology: dotnet-ado
-ms.tgt_pltfrm: 
-ms.topic: article
 ms.assetid: 818a505b-a196-41dd-aaac-2ccd5f7a2f1a
-caps.latest.revision: "3"
-author: douglaslMS
-ms.author: douglasl
-manager: craigg
-ms.workload: dotnet
-ms.openlocfilehash: e6eea471aa421cf5a154e6873c7ea64b71733bfd
-ms.sourcegitcommit: c0dd436f6f8f44dc80dc43b07f6841a00b74b23f
+ms.openlocfilehash: 3470ad17ae16e57edbbef13f30186b7e58fd0d2b
+ms.sourcegitcommit: 11f11ca6cefe555972b3a5c99729d1a7523d8f50
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 01/19/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="type-system-entity-sql"></a>類型系統 (Entity SQL)
-[!INCLUDE[esql](../../../../../../includes/esql-md.md)]支援數種類型：  
+[!INCLUDE[esql](../../../../../../includes/esql-md.md)] 支援數種類型：  
   
 -   基本 (簡單) 型別，例如 `Int32` 和 `String.`。  
   
@@ -59,7 +47,7 @@ from (select ref(o) as r from LOB.Orders as o) as o2
   
  如果此參數值為 null，或者參考的目標不存在，結果就是 null。  
   
-## <a name="see-also"></a>請參閱  
+## <a name="see-also"></a>另請參閱  
  [Entity SQL 概觀](../../../../../../docs/framework/data/adonet/ef/language-reference/entity-sql-overview.md)  
  [Entity SQL 參考](../../../../../../docs/framework/data/adonet/ef/language-reference/entity-sql-reference.md)  
  [CAST](../../../../../../docs/framework/data/adonet/ef/language-reference/cast-entity-sql.md)  

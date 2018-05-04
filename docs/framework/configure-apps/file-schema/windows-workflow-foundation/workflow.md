@@ -1,33 +1,23 @@
 ---
-title: '&lt;workflow&gt;'
-ms.custom: 
+title: '&lt;工作流程&gt;'
 ms.date: 03/30/2017
-ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.tgt_pltfrm: 
 ms.topic: reference
 ms.assetid: 560aa9b6-9cf3-460e-b798-f87d14b1d2de
-caps.latest.revision: "5"
-author: dotnet-bot
-ms.author: dotnetcontent
-manager: wpickett
-ms.workload: dotnet
-ms.openlocfilehash: 7130a918f5a0d879fa07e0d6c055aa600e1635c6
-ms.sourcegitcommit: c0dd436f6f8f44dc80dc43b07f6841a00b74b23f
+ms.openlocfilehash: dc7c693fb2d8b47c0b968eb51cc59327fe43bcc0
+ms.sourcegitcommit: 11f11ca6cefe555972b3a5c99729d1a7523d8f50
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 01/19/2018
+ms.lasthandoff: 05/03/2018
 ---
-# <a name="ltworkflowgt"></a>&lt;workflow&gt;
-包含所有的查詢所識別的特定工作流程的組態項目**超連結"http://msdn.microsoft.com/library/system.servicemodel.activities.tracking.configuration.profileworkflowelement.activitydefinitionid (VS.100).aspx"ctivityDefinitionId**屬性。  
+# <a name="ltworkflowgt"></a>&lt;工作流程&gt;
+包含所有的查詢所識別的特定工作流程的組態項目**超連結"http://msdn.microsoft.com/library/system.servicemodel.activities.tracking.configuration.profileworkflowelement.activitydefinitionid(VS.100).aspx"ctivityDefinitionId**屬性。  
   
  如需工作流程追蹤和其設定的詳細資訊，請參閱[工作流程追蹤](../../../../../docs/framework/windows-workflow-foundation/workflow-tracking-and-tracing.md)和[追蹤設定檔](../../../../../docs/framework/windows-workflow-foundation/tracking-profiles.md)。  
   
 \<system.serviceModel>  
-\<tracking>  
+\<追蹤 >  
 \<trackingProfile>  
-\<workflow>  
+\<工作流程 >  
   
 ## <a name="syntax"></a>語法  
   
@@ -96,7 +86,7 @@ ms.lasthandoff: 01/19/2018
 |---------------|-----------------|  
 |activityDefinitionId|指定工作流程之活動定義識別碼的字串，該工作流程正在進行追蹤。|  
   
-### <a name="child-elements"></a>子元素  
+### <a name="child-elements"></a>子項目  
   
 |項目|描述|  
 |-------------|-----------------|  
@@ -143,7 +133,7 @@ ms.lasthandoff: 01/19/2018
 </system.serviceModel>  
 ```  
   
-## <a name="see-also"></a>請參閱  
+## <a name="see-also"></a>另請參閱  
  <xref:System.ServiceModel.Activities.Tracking.Configuration.ProfileWorkflowElement>  
  <xref:System.Activities.Tracking.TrackingProfile>  
  [工作流程追蹤及追蹤](../../../../../docs/framework/windows-workflow-foundation/workflow-tracking-and-tracing.md)  

@@ -1,22 +1,15 @@
 ---
 title: 介面 (C# 程式設計手冊)
 ms.date: 07/20/2015
-ms.prod: .net
-ms.technology:
-- devlang-csharp
-ms.topic: article
 helpviewer_keywords:
 - interfaces [C#]
 - C# language, interfaces
 ms.assetid: 2feda177-ce11-432d-81b4-d50f5f35fd37
-caps.latest.revision: 45
-author: BillWagner
-ms.author: wiwagn
-ms.openlocfilehash: f14d4bf48d117558a4019a8f016e194af27a9ebf
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.openlocfilehash: 6ef872876e800674a58b440e0e4001b86b0f8244
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="interfaces-c-programming-guide"></a>介面 (C# 程式設計手冊)
 介面包含[類別](../../../csharp/language-reference/keywords/class.md)或 [struct](../../../csharp/language-reference/keywords/struct.md) 可實作的一組相關功能定義。  
@@ -62,7 +55,7 @@ ms.lasthandoff: 11/21/2017
   
 -   類別或結構可以實作多個介面。 類別可以繼承基底類別，也會實作一或多個介面。  
   
-## <a name="in-this-section"></a>本章節內容  
+## <a name="in-this-section"></a>本節內容  
  [明確介面實作](../../../csharp/programming-guide/interfaces/explicit-interface-implementation.md)  
  說明如何建立介面特定的類別成員。  
   
@@ -99,6 +92,6 @@ ms.lasthandoff: 11/21/2017
 ## <a name="featured-book-chapter"></a>精選書籍章節  
  [了解 C# 3.0：掌握 C# 3.0 的基本概念 (英文)](http://msdn.microsoft.com/library/orm-9780596521066-01.aspx) 中的[介面](http://msdn.microsoft.com/library/orm-9780596521066-01-13.aspx)  
   
-## <a name="see-also"></a>另請參閱  
+## <a name="see-also"></a>請參閱  
  [C# 程式設計指南](../../../csharp/programming-guide/index.md)  
  [繼承](../../../csharp/programming-guide/classes-and-structs/inheritance.md)

@@ -1,24 +1,12 @@
 ---
-title: "EDM 產生器 (EdmGen.exe)"
-ms.custom: 
+title: EDM 產生器 (EdmGen.exe)
 ms.date: 03/30/2017
-ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.technology: dotnet-ado
-ms.tgt_pltfrm: 
-ms.topic: article
 ms.assetid: fe8297a1-1fc3-48ce-8eeb-f70f63f857aa
-caps.latest.revision: "6"
-author: douglaslMS
-ms.author: douglasl
-manager: craigg
-ms.workload: dotnet
-ms.openlocfilehash: 8d310786a12aa538a8a820c1c05788f30fe28c44
-ms.sourcegitcommit: c0dd436f6f8f44dc80dc43b07f6841a00b74b23f
+ms.openlocfilehash: 90d67af0d2ba3ff04ee5c78b7d0a3f061a69bc1d
+ms.sourcegitcommit: 11f11ca6cefe555972b3a5c99729d1a7523d8f50
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 01/19/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="edm-generator-edmgenexe"></a>EDM 產生器 (EdmGen.exe)
 EdmGen.exe 是用於處理 [!INCLUDE[adonet_ef](../../../../../includes/adonet-ef-md.md)] 模型和對應檔案的命令列工具。 您可以使用 EdmGen.exe 工具執行下列動作：  
@@ -73,7 +61,7 @@ EdmGen /mode:choice [options]
 |`/SupressForeignKeyProperties or /nofk`|防止外部索引鍵資料行公開為概念模型中實體類型上的純量屬性。|  
 |`/help` 或 `?`|顯示工具的命令語法和選項。|  
 |`/nologo`|隱藏著作權訊息。|  
-|`/targetversion:` \<string>|用於編譯產生的程式碼的 .NET Framework 版本。 支援的版本為 4 和 4.5。 預設為 4。|  
+|`/targetversion:` \<字串 >|用於編譯產生的程式碼的 .NET Framework 版本。 支援的版本為 4 和 4.5。 預設為 4。|  
   
 ## <a name="in-this-section"></a>本節內容  
  [如何：使用 EdmGen.exe 產生模型和對應檔](../../../../../docs/framework/data/adonet/ef/how-to-use-edmgen-exe-to-generate-the-model-and-mapping-files.md)  
@@ -82,7 +70,7 @@ EdmGen /mode:choice [options]
   
  [如何：使用 EdmGen.exe 驗證模型和對應檔](../../../../../docs/framework/data/adonet/ef/how-to-use-edmgen-exe-to-validate-model-and-mapping-files.md)  
   
-## <a name="see-also"></a>請參閱  
+## <a name="see-also"></a>另請參閱  
  [ADO.NET 實體資料模型工具](http://msdn.microsoft.com/library/91076853-0881-421b-837a-f582f36be527)  
  [實體資料模型](../../../../../docs/framework/data/adonet/entity-data-model.md)  
  [CSDL、SSDL 和 MSL 規格](../../../../../docs/framework/data/adonet/ef/language-reference/csdl-ssdl-and-msl-specifications.md)

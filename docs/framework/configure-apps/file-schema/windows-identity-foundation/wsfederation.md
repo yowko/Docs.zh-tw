@@ -1,24 +1,14 @@
 ---
 title: '&lt;wsFederation&gt;'
-ms.custom: 
 ms.date: 03/30/2017
-ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.technology: dotnet-clr
-ms.tgt_pltfrm: 
-ms.topic: article
 ms.assetid: c537f770-68bd-4f82-96ad-6424ad91369f
-caps.latest.revision: "8"
 author: BrucePerlerMS
-ms.author: bruceper
 manager: mbaldwin
-ms.workload: dotnet
-ms.openlocfilehash: 7fd4e12d77380942204d37b59644c46aed3a0148
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.openlocfilehash: de7be463403b675e5f03786e85807e6685348680
+ms.sourcegitcommit: 11f11ca6cefe555972b3a5c99729d1a7523d8f50
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="ltwsfederationgt"></a>&lt;wsFederation&gt;
 提供組態<xref:System.IdentityModel.Services.WSFederationAuthenticationModule>(WSFAM)。  
@@ -54,7 +44,7 @@ ms.lasthandoff: 12/22/2017
 ```  
   
 ## <a name="attributes-and-elements"></a>屬性和項目  
- 下列章節說明屬性、子項目和父項目。  
+ 下列各節描述屬性、子項目和父項目。  
   
 ### <a name="attributes"></a>屬性  
   
@@ -77,7 +67,7 @@ ms.lasthandoff: 12/22/2017
 |signOutQueryString|提供擴充點，以便在 WS-同盟登入要求 URL 中指定應用程式定義查詢參數。 選擇性。 預設為空字串，指定應該在要求中包含其他任何參數。 參數會指定為使用下列形式的查詢字串片段： `"param1=value1&param2=value2&param3=value3"` ，依此類推。 **注意：**組態檔中 ' （& s) 」 必須使用其實體參考，來指定查詢字串中的字元`&`。|  
 |signOutReply|在被動登出透過 WS-同盟通訊協定中指定的用戶端應該重新導向安全性權杖服務 (STS) 的 URL。 在 WS-同盟登出要求上設定 wreply 的參數。 選擇性。 預設為空字串，指定應該在要求中包含其他任何參數。|  
   
-### <a name="child-elements"></a>子元素  
+### <a name="child-elements"></a>子項目  
  無  
   
 ### <a name="parent-elements"></a>父項目  
@@ -108,6 +98,6 @@ ms.lasthandoff: 12/22/2017
               persistentCookiesOnPassiveRedirects="true" />
 ```  
   
-## <a name="see-also"></a>請參閱  
+## <a name="see-also"></a>另請參閱  
  <xref:System.IdentityModel.Services.WSFederationAuthenticationModule>  
  <xref:System.IdentityModel.Services.FederatedAuthentication.FederationConfiguration%2A?displayProperty=nameWithType>

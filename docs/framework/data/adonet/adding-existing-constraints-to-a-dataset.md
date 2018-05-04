@@ -1,27 +1,15 @@
 ---
-title: "將現有條件約束加入至資料集"
-ms.custom: 
+title: 將現有條件約束加入至資料集
 ms.date: 03/30/2017
-ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.technology: dotnet-ado
-ms.tgt_pltfrm: 
-ms.topic: article
 dev_langs:
 - csharp
 - vb
 ms.assetid: 307d2809-208b-4cf8-b6a9-5d16f15fc16c
-caps.latest.revision: "4"
-author: douglaslMS
-ms.author: douglasl
-manager: craigg
-ms.workload: dotnet
-ms.openlocfilehash: 2f2f6c60197b1d71feb13ca351ad19298e09ea56
-ms.sourcegitcommit: ed26cfef4e18f6d93ab822d8c29f902cff3519d1
+ms.openlocfilehash: c3c28392a9e4bee0e2f9e0dcf553e13b67c378dd
+ms.sourcegitcommit: 11f11ca6cefe555972b3a5c99729d1a7523d8f50
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 01/17/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="adding-existing-constraints-to-a-dataset"></a>將現有條件約束加入至資料集
 **填滿**方法**DataAdapter**填滿<xref:System.Data.DataSet>只能搭配資料表資料行和資料列從資料來源; 雖然條件約束通常由設定資料來源，**填滿**方法不會加入此結構描述資訊**資料集**預設。 填入**資料集**與資料來源的現有主索引鍵條件約束資訊，您可以呼叫**FillSchema**方法**DataAdapter**，或設定**MissingSchemaAction**屬性**DataAdapter**至**Missingschemaaction**之前先呼叫**填滿**。 這可確保該主索引鍵中的條件約束**資料集**反映出在資料來源。 外部索引鍵條件約束資訊就不會包含與必須明確地如下所示建立[DataTable 條件約束](../../../../docs/framework/data/adonet/dataset-datatable-dataview/datatable-constraints.md)。  
@@ -71,7 +59,7 @@ custAdapter.Fill(custDataSet, "Customers");
 > [!NOTE]
 >  如果**FillSchema**方法**OleDbDataAdapter**傳回多個結果集的命令呼叫物件時，會傳回只從第一個結果集的結構描述資訊。 傳回多個結果的結構描述資訊。 當設定使用**OleDbDataAdapter**，建議您指定**MissingSchemaAction**的**Missingschemaaction**呼叫時，取得結構描述資訊和**填滿**方法。  
   
-## <a name="see-also"></a>請參閱  
+## <a name="see-also"></a>另請參閱  
  [DataAdapter 和 DataReader](../../../../docs/framework/data/adonet/dataadapters-and-datareaders.md)  
  [DataSet、DataTable 和 DataView](../../../../docs/framework/data/adonet/dataset-datatable-dataview/index.md)  
  [在 ADO.NET 中擷取和修改資料](../../../../docs/framework/data/adonet/retrieving-and-modifying-data.md)  

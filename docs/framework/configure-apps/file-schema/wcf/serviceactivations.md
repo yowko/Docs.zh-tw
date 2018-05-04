@@ -1,29 +1,17 @@
 ---
 title: '&lt;v&gt;'
-ms.custom: 
 ms.date: 03/30/2017
-ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.technology: dotnet-clr
-ms.tgt_pltfrm: 
-ms.topic: article
 ms.assetid: 97e665b6-1c51-410b-928a-9bb42c954ddb
-caps.latest.revision: "4"
-author: dotnet-bot
-ms.author: dotnetcontent
-manager: wpickett
-ms.workload: dotnet
-ms.openlocfilehash: 47a7d0984a5fafa7f03a589570e2a1aa2546dd8b
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.openlocfilehash: c62f2bd1a34aca31ea9f9d5de17840f2967b269c
+ms.sourcegitcommit: 11f11ca6cefe555972b3a5c99729d1a7523d8f50
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="ltserviceactivationsgt"></a>&lt;v&gt;
-組態項目，這個項目可讓您加入設定，這些設定定義會對應至您的 [!INCLUDE[indigo1](../../../../../includes/indigo1-md.md)] 服務型別的虛擬服務啟動設定。 如此一來，不需 .svc 檔案也能啟動裝載於 WAS/IIS 中的服務。  
+組態項目，可讓您新增設定，以定義虛擬服務啟用設定對應至您的 Windows Communication Foundation (WCF) 服務類型。 如此一來，不需 .svc 檔案也能啟動裝載於 WAS/IIS 中的服務。  
   
- \<系統。ServiceModel >  
+ \<system.ServiceModel>  
 \<serviceHostingEnvironment >  
 \<v >  
   
@@ -39,12 +27,12 @@ ms.lasthandoff: 12/22/2017
 ```  
   
 ## <a name="attributes-and-elements"></a>屬性和項目  
- 下列章節說明屬性、子項目和父項目。  
+ 下列各節描述屬性、子項目和父項目。  
   
 ### <a name="attributes"></a>屬性  
  無。  
   
-### <a name="child-elements"></a>子元素  
+### <a name="child-elements"></a>子項目  
   
 |項目|描述|  
 |-------------|-----------------|  
@@ -77,7 +65,7 @@ ms.lasthandoff: 12/22/2017
   
  以組態為主的啟動支援透過 HTTP 和非 HTTP 通訊協定啟動。 這項作業需要 relatativeAddress 中的擴充，也就是 .svc、.xoml 或 .xamlx。 您可以將自己的擴充對應至已知的 buildProvider，這樣您就可以透過任何擴充啟動服務。 發生衝突時，`<serviceActivations>` 區段會覆寫 .svc 註冊。  
   
-## <a name="see-also"></a>請參閱  
+## <a name="see-also"></a>另請參閱  
  <xref:System.ServiceModel.Configuration.ServiceActivationElementCollection>  
  <xref:System.ServiceModel.Configuration.ServiceHostingEnvironmentSection>  
  <xref:System.ServiceModel.ServiceHostingEnvironment>

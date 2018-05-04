@@ -1,24 +1,18 @@
 ---
 title: C# 指南
 description: 了解 C# 指南如何協助您擴充 C# 的相關知識，而不論您是新手開發人員或經驗豐富的專家。
-author: BillWagner
 ms.date: 01/30/2018
-ms.topic: article
-ms.prod: .net
-ms.technology: devlang-csharp
-ms.devlang: csharp
 ms.assetid: 52db8280-0e53-40cf-858b-e8eef3997dea
 helpviewer_keywords:
 - documentation [C#]
 - Help, Visual C# documentation
 - C# language
 - Visual C#
-ms.author: wiwagn
-ms.openlocfilehash: bfdde4c3c42943cd26c499f6f9761439fb85cc4e
-ms.sourcegitcommit: d2da0142247ef42a219a5d2907f153e62dc6ea0d
+ms.openlocfilehash: 598ddfbe16a1a09326d811b4eafcf87f3ca6e971
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 02/01/2018
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="c-guide"></a>C# 指南
 

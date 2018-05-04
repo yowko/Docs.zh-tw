@@ -1,29 +1,17 @@
 ---
-title: "&lt;filters&gt; 的 &lt;add&gt;"
-ms.custom: 
+title: '&lt;filters&gt; 的 &lt;add&gt;'
 ms.date: 03/30/2017
-ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.technology: dotnet-clr
-ms.tgt_pltfrm: 
-ms.topic: article
 ms.assetid: e3bf437c-dd99-49f3-9792-9a8721e6eaad
-caps.latest.revision: "4"
-author: dotnet-bot
-ms.author: dotnetcontent
-manager: wpickett
-ms.workload: dotnet
-ms.openlocfilehash: b1ca0d5ae73d01e5bbb719f7bcc9a3f5a19fc291
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.openlocfilehash: 2a26a94c01fdb04b8a9e2d381a28cc909bbdac8f
+ms.sourcegitcommit: 11f11ca6cefe555972b3a5c99729d1a7523d8f50
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="ltaddgt-of-ltfiltersgt"></a>&lt;filters&gt; 的 &lt;add&gt;
 XPath 篩選條件，指定要記錄的訊息類型。  
   
- \<系統。ServiceModel >  
+ \<system.ServiceModel>  
 \<診斷 >  
 \<messageLogging >  
 \<篩選條件 >  
@@ -38,7 +26,7 @@ XPath 篩選條件，指定要記錄的訊息類型。
 ```  
   
 ## <a name="attributes-and-elements"></a>屬性和項目  
- 下列章節說明屬性、子項目和父項目。  
+ 下列各節描述屬性、子項目和父項目。  
   
 ### <a name="attributes"></a>屬性  
   
@@ -46,7 +34,7 @@ XPath 篩選條件，指定要記錄的訊息類型。
 |---------------|-----------------|  
 |篩選|字串，指定查詢由 XPath 1.0 運算式定義的 XML 文件。 如需詳細資訊，請參閱<xref:System.ServiceModel.Dispatcher.XPathMessageFilter>。|  
   
-### <a name="child-elements"></a>子元素  
+### <a name="child-elements"></a>子項目  
  無。  
   
 ### <a name="parent-elements"></a>父項目  
@@ -79,7 +67,7 @@ XPath 篩選條件，指定要記錄的訊息類型。
 </messageLogging>  
 ```  
   
-## <a name="see-also"></a>請參閱  
+## <a name="see-also"></a>另請參閱  
  <xref:System.ServiceModel.Configuration.DiagnosticSection>  
  <xref:System.ServiceModel.Diagnostics>  
  <xref:System.ServiceModel.Configuration.DiagnosticSection.MessageLogging%2A>  

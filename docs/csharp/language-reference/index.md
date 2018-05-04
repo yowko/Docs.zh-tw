@@ -1,10 +1,6 @@
 ---
 title: C# 參考
 ms.date: 02/14/2017
-ms.prod: .net
-ms.technology:
-- devlang-csharp
-ms.topic: article
 helpviewer_keywords:
 - Visual C#, language reference
 - language reference [C#]
@@ -12,19 +8,16 @@ helpviewer_keywords:
 - C# language, reference
 - reference, C# language
 ms.assetid: 06de3167-c16c-4e1a-b3c5-c27841d4569a
-caps.latest.revision: 43
-author: BillWagner
-ms.author: wiwagn
-ms.openlocfilehash: 6f885dcf17bb1e6d6cf4ba628b586f2107675c4a
-ms.sourcegitcommit: bd1ef61f4bb794b25383d3d72e71041a5ced172e
+ms.openlocfilehash: 7ed85e294e25535f7600dab425a74adbbdbc4bc3
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/18/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="c-reference"></a>C# 參考
 本節提供有關 C# 關鍵字、運算子、特殊字元、前置處理器指示詞、編譯器選項以及編譯器錯誤和警告的參考資料。  
   
-## <a name="in-this-section"></a>本章節內容  
+## <a name="in-this-section"></a>本節內容  
  [C# 關鍵字](../../csharp/language-reference/keywords/index.md)  
  提供有關 C# 關鍵字和語法的資訊連結。  
   

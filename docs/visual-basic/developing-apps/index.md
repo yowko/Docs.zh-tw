@@ -1,27 +1,20 @@
 ---
 title: 使用 Visual Basic 開發應用程式
 ms.date: 07/20/2015
-ms.prod: .net
-ms.technology:
-- devlang-visual-basic
-ms.topic: article
 helpviewer_keywords:
 - Visual Basic, developing applications
 - applications [Visual Basic]
 ms.assetid: 1e1c0c81-6d95-4167-a98b-44b1efb6d25f
-caps.latest.revision: 26
-author: dotnet-bot
-ms.author: dotnetcontent
-ms.openlocfilehash: 3752d99e3e9860d5cac2996bb412fdb6c30b5af1
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.openlocfilehash: b4434d6f66ea8329903c92fe664d9704bce19625
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="developing-applications-with-visual-basic"></a>使用 Visual Basic 開發應用程式
 本章節內容涵蓋 Visual Basic 語言的概念文件。  
   
-## <a name="in-this-section"></a>本章節內容  
+## <a name="in-this-section"></a>本節內容  
  [Visual Basic 中的程式設計](../../visual-basic/developing-apps/programming/index.md)  
  內容涵蓋多種程式設計物件。  
   
@@ -44,7 +37,7 @@ ms.lasthandoff: 11/21/2017
  說明您可以如何自訂專案範本，以提供額外 `My` 物件。  
   
 ## <a name="related-sections"></a>相關章節  
- [Visual Basic 程式設計指南](../../visual-basic/programming-guide/index.md)  
+ [Visual Basic 程式設計手冊](../../visual-basic/programming-guide/index.md)  
  逐步解說使用 Visual Basic 進行程式設計的基本要素。  
   
  [Visual Basic 語言參考](../../visual-basic/language-reference/index.md)  

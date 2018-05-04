@@ -1,30 +1,23 @@
 ---
 title: 檔案系統和登錄 (C# 程式設計手冊)
 ms.date: 07/20/2015
-ms.prod: .net
-ms.technology:
-- devlang-csharp
-ms.topic: article
 helpviewer_keywords:
 - file system [C#]
 - registry [C#]
 - files [C#]
 ms.assetid: 0f2511cf-2b02-4b41-b001-b1754677c38f
-caps.latest.revision: 20
-author: BillWagner
-ms.author: wiwagn
-ms.openlocfilehash: 3d1b4e3fa9b6c6da89abd242be855e9fb7c16dd6
-ms.sourcegitcommit: bd1ef61f4bb794b25383d3d72e71041a5ced172e
+ms.openlocfilehash: 20e8b857759253736d11bc31988fadb4843fa87a
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/18/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="file-system-and-the-registry-c-programming-guide"></a>檔案系統和登錄 (C# 程式設計手冊)
 下列主題示範如何使用 C# 和 .NET Framework 來針對檔案、資料夾及登錄執行各種基本作業。  
   
-## <a name="in-this-section"></a>本章節內容  
+## <a name="in-this-section"></a>本節內容  
   
-|**標題**|**說明**|  
+|**標題**|**描述**|  
 |---------------|---------------------|  
 |[如何：逐一查看目錄樹狀](../../../csharp/programming-guide/file-system/how-to-iterate-through-a-directory-tree.md)|示範如何手動逐一查看樹狀目錄。|  
 |[如何：取得有關檔案、資料夾和磁碟機的資訊](../../../csharp/programming-guide/file-system/how-to-get-information-about-files-folders-and-drives.md)|示範如何擷取有關檔案、資料夾和磁碟機的資訊，例如建立時間和大小。|  

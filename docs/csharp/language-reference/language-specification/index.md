@@ -1,24 +1,18 @@
 ---
 title: C# 6.0 草稿語言規格
 ms.date: 07/01/2017
-ms.prod: .net
-ms.technology:
-- devlang-csharp
-ms.topic: reference
+ms.topic: language-reference
 helpviewer_keywords:
 - C# language, specification
 - what's new [C#], language specification
 - Visual C#, C# language specification
 - language specification [C#]
 ms.assetid: e5d5a5cc-636b-4bff-b9c8-a8edc6207c22
-caps.latest.revision: 46
-author: BillWagner
-ms.author: wiwagn
-ms.openlocfilehash: 98c0ae41d9c29238f364d3bfcecc193c6a391149
-ms.sourcegitcommit: 935d5267c44f9bce801468ef95f44572f1417e8c
+ms.openlocfilehash: 66ee5534d87da90fe4bce793a3841b13ff7cc04e
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 03/28/2018
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="c-60-draft-language-specification"></a>C# 6.0 草稿語言規格
 C# 語言規格是 C# 語法和用法的限定來源。 此規格包含語言各方面的詳細資訊，包括 Visual C# 文件未涵蓋的許多重點。

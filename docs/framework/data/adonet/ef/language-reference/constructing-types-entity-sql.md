@@ -1,27 +1,15 @@
 ---
-title: "建構類型 (Entity SQL)"
-ms.custom: 
+title: 建構類型 (Entity SQL)
 ms.date: 03/30/2017
-ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.technology: dotnet-ado
-ms.tgt_pltfrm: 
-ms.topic: article
 ms.assetid: 41fa7bde-8d20-4a3f-a3d2-fb791e128010
-caps.latest.revision: "2"
-author: douglaslMS
-ms.author: douglasl
-manager: craigg
-ms.workload: dotnet
-ms.openlocfilehash: 8a6ae2334c879733e964014716c2b67e77f271d5
-ms.sourcegitcommit: ed26cfef4e18f6d93ab822d8c29f902cff3519d1
+ms.openlocfilehash: 91ed123132965353ff354282f6850e9ef9cba3d0
+ms.sourcegitcommit: 11f11ca6cefe555972b3a5c99729d1a7523d8f50
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 01/17/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="constructing-types-entity-sql"></a>建構類型 (Entity SQL)
-[!INCLUDE[esql](../../../../../../includes/esql-md.md)]提供三種建構函式： 資料列建構函式、 具名型別建構函式和集合建構函式。  
+[!INCLUDE[esql](../../../../../../includes/esql-md.md)] 提供三種建構函式： 資料列建構函式、 具名型別建構函式和集合建構函式。  
   
 ## <a name="row-constructors"></a>資料列建構函式  
  在 [!INCLUDE[esql](../../../../../../includes/esql-md.md)] 中使用資料列建構函式，可以從一個或多個值建構匿名、結構式具型別的記錄。 資料列建構函式的結果型別是資料列型別，而且它的欄位型別會對應到用於建構資料列的值的型別。 例如，下列運算式會建構類型的值`Record(a int, b string, c int)`:  
@@ -74,7 +62,7 @@ ms.lasthandoff: 01/17/2018
   
  如需詳細資訊，請參閱[具名類型建構函式](../../../../../../docs/framework/data/adonet/ef/language-reference/named-type-constructor-entity-sql.md)。  
   
-## <a name="see-also"></a>請參閱  
+## <a name="see-also"></a>另請參閱  
  [Entity SQL 參考](../../../../../../docs/framework/data/adonet/ef/language-reference/entity-sql-reference.md)  
  [Entity SQL 概觀](../../../../../../docs/framework/data/adonet/ef/language-reference/entity-sql-overview.md)  
  [類型系統](../../../../../../docs/framework/data/adonet/ef/language-reference/type-system-entity-sql.md)

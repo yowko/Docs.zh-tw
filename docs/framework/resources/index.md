@@ -1,14 +1,6 @@
 ---
 title: 桌面應用程式中的資源
-ms.custom: ''
 ms.date: 03/30/2017
-ms.prod: .net-framework
-ms.reviewer: ''
-ms.suite: ''
-ms.technology:
-- dotnet-bcl
-ms.tgt_pltfrm: ''
-ms.topic: article
 helpviewer_keywords:
 - deploying applications [.NET Framework], resources
 - application resources
@@ -18,17 +10,13 @@ helpviewer_keywords:
 - packaging application resources
 - localizing resources
 ms.assetid: 8ad495d4-2941-40cf-bf64-e82e85825890
-caps.latest.revision: 19
 author: rpetrusha
 ms.author: ronpet
-manager: wpickett
-ms.workload:
-- dotnet
-ms.openlocfilehash: d8fa1521a5516a4be18352c1bce6abf93e40287f
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.openlocfilehash: 023099adeeebf21b7dba631bde75332524eb0cc3
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="resources-in-desktop-apps"></a>桌面應用程式中的資源
 幾乎每個實際執行品質應用程式都必須使用資源。 資源是任何使用應用程式以邏輯方式部署的非執行檔資料。 資源可能在應用程式中顯示作錯誤訊息，或做為使用者介面的一部分。 資源可以含有一些表單中的資料，包括字串、影像和永續性物件。 (若要將保留物件寫入資源檔，物件必須是可序列化的)。將資料儲存在資源檔中，可讓您不需要重新編譯整個應用程式即可變更資料。 也可讓您將資料儲存在單一位置，不需要依賴儲存在多個位置的硬式編碼資料。  
@@ -62,7 +50,7 @@ ms.lasthandoff: 12/22/2017
   
  如需如何設定目前 UI 文化特性的詳細資訊，請參閱 <xref:System.Globalization.CultureInfo> 和 <xref:System.Globalization.CultureInfo.CurrentUICulture%2A?displayProperty=nameWithType> 參考頁面。  
   
- 然後，您可以使用 <xref:System.Resources.ResourceManager?displayProperty=nameWithType> 類別，針對目前 UI 文化特性或特定文化特性擷取資源。 雖然 <xref:System.Resources.ResourceManager> 類別最常用於擷取傳統型應用程式中的資源，<xref:System.Resources?displayProperty=nameWithType> 命名空間包含您可以用來擷取資源的額外類型。 這些活動包括：  
+ 然後，您可以使用 <xref:System.Resources.ResourceManager?displayProperty=nameWithType> 類別，針對目前 UI 文化特性或特定文化特性擷取資源。 雖然 <xref:System.Resources.ResourceManager> 類別最常用於擷取傳統型應用程式中的資源，<xref:System.Resources?displayProperty=nameWithType> 命名空間包含您可以用來擷取資源的額外類型。 它們包括：  
   
 -   <xref:System.Resources.ResourceReader> 類別，可讓您列舉內嵌在組件中，或儲存在獨立二進位 .resources 檔中的資源。 當您不知道資源在執行階段可用的確切名稱時，這個項目很有用。  
   

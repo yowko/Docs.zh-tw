@@ -1,13 +1,6 @@
 ---
-title: "&lt;gcConcurrent&gt;項目"
-ms.custom: 
+title: '&lt;gcConcurrent&gt;項目'
 ms.date: 03/30/2017
-ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.technology: dotnet-clr
-ms.tgt_pltfrm: 
-ms.topic: article
 f1_keywords:
 - http://schemas.microsoft.com/.NetConfiguration/v2.0#configuration/runtime/gcConcurrent
 - http://schemas.microsoft.com/.NetConfiguration/v2.0#gcConcurrent
@@ -16,16 +9,13 @@ helpviewer_keywords:
 - gcConcurrent element
 - <gcConcurrent> element
 ms.assetid: 503f55ba-26ed-45ac-a2ea-caf994da04cd
-caps.latest.revision: "18"
 author: rpetrusha
 ms.author: ronpet
-manager: wpickett
-ms.workload: dotnet
-ms.openlocfilehash: 254b3be8f270a9186377b264094c919314efb27f
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.openlocfilehash: ee00c3a307523d2cae831274630ad6828cd9daf6
+ms.sourcegitcommit: 11f11ca6cefe555972b3a5c99729d1a7523d8f50
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="ltgcconcurrentgt-element"></a>&lt;gcConcurrent&gt;項目
 指定 Common Language Runtime 是否會在個別的執行緒執行記憶體回收。  
@@ -42,7 +32,7 @@ ms.lasthandoff: 12/22/2017
 ```  
   
 ## <a name="attributes-and-elements"></a>屬性和項目  
- 下列章節說明屬性、子項目和父項目。  
+ 下列各節描述屬性、子項目和父項目。  
   
 ### <a name="attributes"></a>屬性  
   
@@ -57,7 +47,7 @@ ms.lasthandoff: 12/22/2017
 |`false`|不會同時執行記憶體回收。|  
 |`true`|同時執行記憶體回收。 這是預設值。|  
   
-### <a name="child-elements"></a>子元素  
+### <a name="child-elements"></a>子項目  
  無。  
   
 ### <a name="parent-elements"></a>父項目  
@@ -98,7 +88,7 @@ ms.lasthandoff: 12/22/2017
 </configuration>  
 ```  
   
-## <a name="see-also"></a>請參閱  
+## <a name="see-also"></a>另請參閱  
  [執行階段設定結構描述](../../../../../docs/framework/configure-apps/file-schema/runtime/index.md)  
  [組態檔結構描述](../../../../../docs/framework/configure-apps/file-schema/index.md)  
  [記憶體回收的基本概念](../../../../../docs/standard/garbage-collection/fundamentals.md)

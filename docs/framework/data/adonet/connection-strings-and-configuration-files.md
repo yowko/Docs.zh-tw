@@ -1,27 +1,15 @@
 ---
-title: "連接字串和組態檔"
-ms.custom: 
+title: 連接字串和組態檔
 ms.date: 03/30/2017
-ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.technology: dotnet-ado
-ms.tgt_pltfrm: 
-ms.topic: article
 dev_langs:
 - csharp
 - vb
 ms.assetid: 37df2641-661e-407a-a3fb-7bf9540f01e8
-caps.latest.revision: "4"
-author: douglaslMS
-ms.author: douglasl
-manager: craigg
-ms.workload: dotnet
-ms.openlocfilehash: 447b2d6c0e5eeafeaff89aa1d6430eec72d59a4d
-ms.sourcegitcommit: c0dd436f6f8f44dc80dc43b07f6841a00b74b23f
+ms.openlocfilehash: a4876d3b794282852b364f58cc84b58546567d80
+ms.sourcegitcommit: 11f11ca6cefe555972b3a5c99729d1a7523d8f50
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 01/19/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="connection-strings-and-configuration-files"></a>連接字串和組態檔
 在應用程式的程式碼中嵌入連接字串可能會導致安全性漏洞和維護問題。 您可以使用檢視編譯成應用程式的原始碼的未加密的連接字串[Ildasm.exe （IL 解譯器）](../../../../docs/framework/tools/ildasm-exe-il-disassembler.md)工具。 此外，如果連接字串變更，應用程式就必須重新編譯。 基於上述理由，建議您將連接字串儲存在應用程式組態檔中。  
@@ -180,7 +168,7 @@ ms.lasthandoff: 01/19/2018
   
  保護 ASP.NET 應用程式的詳細資訊，請參閱[NIB: ASP.NET 安全性](http://msdn.microsoft.com/library/04b37532-18d9-40b4-8e5f-ee09a70b311d)和[ASP.NET 2.0 安全性作法一眼](http://go.microsoft.com/fwlink/?LinkId=59997)ASP.NET 開發人員中心。  
   
-## <a name="see-also"></a>請參閱  
+## <a name="see-also"></a>另請參閱  
  [連接字串產生器](../../../../docs/framework/data/adonet/connection-string-builders.md)  
  [保護連線資訊](../../../../docs/framework/data/adonet/protecting-connection-information.md)  
  [使用組態類別](http://msdn.microsoft.com/library/98d2b386-baf6-4a17-974b-76e3b4c87acc)  

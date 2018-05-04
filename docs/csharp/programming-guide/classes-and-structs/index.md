@@ -1,12 +1,7 @@
 ---
 title: 類別和結構 (C# 程式設計手冊)
 description: 說明類別和結構 (structs) 在 C# 中的用途。
-keywords: 類別 (C#), 結構 (C#), 結構 (structs) (C#), 參考型別 (C#), 實值型別 (C#)
 ms.date: 01/17/2016
-ms.prod: .net
-ms.technology:
-- devlang-csharp
-ms.topic: article
 helpviewer_keywords:
 - structs [C#], about structs
 - classes [C#], overview
@@ -15,14 +10,11 @@ helpviewer_keywords:
 - objects [C#]
 - C# language, classes
 ms.assetid: cc39dbda-8754-423e-b5b1-16a1db0734c0
-caps.latest.revision: 48
-author: BillWagner
-ms.author: wiwagn
-ms.openlocfilehash: 8c4cbbdd0384c0c0e97d6a7c655e798d0562d9a8
-ms.sourcegitcommit: 7e99f66ef09d2903e22c789c67ff5a10aa953b2f
+ms.openlocfilehash: 801f8e64bf64ee55651521ba53915000cc326303
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 11/18/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="classes-and-structs-c-programming-guide"></a>類別和結構 (C# 程式設計手冊)
 類別和結構是 .NET Framework 中一般型別系統的兩個基本建構。 每一個基本上都是封裝一組屬於相同邏輯單元之資料和行為的資料結構。 資料和行為是類別或結構的「成員」，它們包含類別或結構的方法、屬性和事件等，如本主題稍後所列。  
@@ -47,7 +39,7 @@ ms.lasthandoff: 11/18/2017
   
  如需有關類別的詳細資訊，請參閱[類別](../../../csharp/programming-guide/classes-and-structs/classes.md)和[物件](../../../csharp/programming-guide/classes-and-structs/objects.md)。  
   
-### <a name="members"></a>Members  
+### <a name="members"></a>成員  
  所有的方法、欄位、常數、屬性和事件都必須在型別內宣告。這些便是該型別的「成員」。 和部分其他語言不同，在 C# 中並沒有全域變數或方法。 即使是程式的進入點 (`Main` 方法)，也必須在類別或結構內宣告。 下列清單包含所有可能在類別或結構中宣告的各種成員。  
   
 -   [欄位](../../../csharp/programming-guide/classes-and-structs/fields.md)  
@@ -103,10 +95,10 @@ ms.lasthandoff: 11/18/2017
  您可以透過建立其方法能以該方法屬於原始型別之方式呼叫的個別型別，在不必建立衍生類別的情況下「擴充」類別。 如需詳細資訊，請參閱[擴充方法](../../../csharp/programming-guide/classes-and-structs/extension-methods.md)。  
   
 ### <a name="implicitly-typed-local-variables"></a>隱含類型區域變數  
- 在類別或結構方法內，您可以使用隱含型別來指示編譯器在編譯時間判斷正確的型別。 如需詳細資訊，請參閱[隱含型別區域變數](../../../csharp/programming-guide/classes-and-structs/implicitly-typed-local-variables.md)。  
+ 在類別或結構方法內，您可以使用隱含型別來指示編譯器在編譯時間判斷正確的型別。 如需詳細資訊，請參閱[隱含類型區域變數](../../../csharp/programming-guide/classes-and-structs/implicitly-typed-local-variables.md)。  
   
 ## <a name="c-language-specification"></a>C# 語言規格  
  [!INCLUDE[CSharplangspec](~/includes/csharplangspec-md.md)]  
   
-## <a name="see-also"></a>另請參閱  
+## <a name="see-also"></a>請參閱  
  [C# 程式設計指南](../../../csharp/programming-guide/index.md)

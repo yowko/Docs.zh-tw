@@ -1,33 +1,21 @@
 ---
-title: "&lt;scopedCertificates&gt; 的 &lt;add&gt; 項目"
-ms.custom: 
+title: '&lt;scopedCertificates&gt; 的 &lt;add&gt; 項目'
 ms.date: 03/30/2017
-ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.technology: dotnet-clr
-ms.tgt_pltfrm: 
-ms.topic: article
 ms.assetid: e21c1ef8-d6d6-4bca-ac5a-6fbf4bd77412
-caps.latest.revision: "8"
-author: dotnet-bot
-ms.author: dotnetcontent
-manager: wpickett
-ms.workload: dotnet
-ms.openlocfilehash: eff535f7eb779a69c2368f3ad815f1eb124946ff
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.openlocfilehash: 0eb2f116fc0a2c7d59b90cea71150c7b46ee39fa
+ms.sourcegitcommit: 11f11ca6cefe555972b3a5c99729d1a7523d8f50
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="ltaddgt-of-ltscopedcertificatesgt-element"></a>&lt;scopedCertificates&gt; 的 &lt;add&gt; 項目
 將 X.509 憑證加入至範圍憑證的集合。  
   
- \<系統。ServiceModel >  
+ \<system.ServiceModel>  
 \<行為 >  
 endpointBehaviors 區段  
 \<行為 >  
-\<clientCredentials >  
+\<clientCredentials>  
 \<serviceCertificate >  
 \<但是在 scopedCertificates >  
 \<新增 > 項目\<scopedCertificates >  
@@ -80,7 +68,7 @@ endpointBehaviors 區段
 |-----------|-----------------|  
 |列舉|值包括：AddressBook、AuthRoot、CertificateAuthority、Disallowed、My、Root、TrustedPeople 和 TrustedPublisher。|  
   
-### <a name="child-elements"></a>子元素  
+### <a name="child-elements"></a>子項目  
  無。  
   
 ### <a name="parent-elements"></a>父項目  
@@ -119,7 +107,7 @@ endpointBehaviors 區段
 </behaviors>  
 ```  
   
-## <a name="see-also"></a>請參閱  
+## <a name="see-also"></a>另請參閱  
  <xref:System.ServiceModel.Configuration.X509RecipientCertificateClientElement.ScopedCertificates%2A>  
  <xref:System.ServiceModel.Configuration.X509ScopedServiceCertificateElementCollection>  
  <xref:System.ServiceModel.Configuration.X509ScopedServiceCertificateElement>  

@@ -1,35 +1,26 @@
 ---
-title: "&lt;namedCaches&gt;項目 （快取設定）"
-ms.custom: 
+title: '&lt;namedCaches&gt;項目 （快取設定）'
 ms.date: 03/30/2017
-ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.technology: dotnet-clr
-ms.tgt_pltfrm: 
-ms.topic: article
 helpviewer_keywords:
 - namedCaches element
 - caching [.NET Framework], configuration
 - <namedCaches> element
 ms.assetid: 6bd4fbc5-55a6-4dc4-998b-cdcc7e023330
-caps.latest.revision: "14"
 author: mcleblanc
 ms.author: markl
 manager: markl
-ms.workload: dotnet
-ms.openlocfilehash: 7c25f0039f75ba1c736cff946dbaaff9252dc93e
-ms.sourcegitcommit: 2142a4732bb4ff519b9817db4c24a237b9810d4b
+ms.openlocfilehash: fac50aedbb11eba40482fab71c912f587d85f855
+ms.sourcegitcommit: 11f11ca6cefe555972b3a5c99729d1a7523d8f50
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 01/05/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="ltnamedcachesgt-element-cache-settings"></a>&lt;namedCaches&gt;項目 （快取設定）
 指定的具名組態設定集合<xref:System.Runtime.Caching.MemoryCache>執行個體。 <xref:System.Runtime.Caching.Configuration.MemoryCacheSection.NamedCaches%2A>屬性參考的組態設定集合從一或多個`namedCaches`的組態檔項目。  
   
  \<configuration>  
-\<system.runtime.caching >  
-\<memoryCache >  
+\< system.runtime.caching >  
+\<memoryCache>  
 \<namedCaches >  
   
 ## <a name="syntax"></a>語法  
@@ -55,7 +46,7 @@ ms.lasthandoff: 01/05/2018
 |`physicalMemoryLimitPercentage`|整數值 0 和 100 之間，指定可供快取的實際安裝的電腦記憶體的最大百分比。 預設值為 0，這表示的自動調整啟發學習法<xref:System.Runtime.Caching.MemoryCache>預設會使用類別。|  
 |`pollingInterval`|表示時間間隔的值，在此時間之後，快取實作會比較目前的記憶體負載與針對快取執行個體所設定的絕對和百分比型記憶體限制。 這個值是以"Hh: mm:"格式輸入。|  
   
-### <a name="child-elements"></a>子元素  
+### <a name="child-elements"></a>子項目  
   
 |項目|描述|  
 |-------------|-----------------|  
@@ -98,5 +89,5 @@ ms.lasthandoff: 01/05/2018
 </configuration>  
 ```  
   
-## <a name="see-also"></a>請參閱  
+## <a name="see-also"></a>另請參閱  
  [\<memoryCache > 項目 （快取設定）](../../../../../docs/framework/configure-apps/file-schema/runtime/memorycache-element-cache-settings.md)

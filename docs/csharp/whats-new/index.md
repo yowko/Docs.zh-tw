@@ -1,20 +1,13 @@
 ---
 title: C# 的新功能 - C# 指南
 description: C# 語言的進化方式
-keywords: C#, 最新功能, 新功能, Roslyn
-author: BillWagner
-ms.author: wiwagn
 ms.date: 11/13/2017
-ms.topic: article
-ms.prod: .net
-ms.technology: devlang-csharp
-ms.devlang: csharp
 ms.assetid: 77deec51-a14d-46d4-9bb3-faf449477149
-ms.openlocfilehash: d66f835d57f43d2016d3b20e2205e0052d064acb
-ms.sourcegitcommit: 86adcc06e35390f13c1e372c36d2e044f1fc31ef
+ms.openlocfilehash: 3fc42809943b10d09d59780576dd9768d9e16ec4
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/26/2018
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="whats-new-in-c"></a>C# 的新功能 #
 

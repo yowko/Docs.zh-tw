@@ -1,27 +1,17 @@
 ---
-title: "&lt;relativeBindForResources&gt;項目"
-ms.custom: 
+title: '&lt;relativeBindForResources&gt;項目'
 ms.date: 03/30/2017
-ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.technology: dotnet-clr
-ms.tgt_pltfrm: 
-ms.topic: article
 helpviewer_keywords:
 - RelativeBindForResources element
 - <relativeBindForResources> element
 ms.assetid: 846ffa47-7257-4ce3-8cac-7ff627e0e34f
-caps.latest.revision: "7"
 author: rpetrusha
 ms.author: ronpet
-manager: wpickett
-ms.workload: dotnet
-ms.openlocfilehash: 8409b1fe86776397ceb3db5b338fb8aaadef9cbe
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.openlocfilehash: 7ae5d1ca6403d84c9828dcf9550e9fbf40b28e1b
+ms.sourcegitcommit: 11f11ca6cefe555972b3a5c99729d1a7523d8f50
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="ltrelativebindforresourcesgt-element"></a>&lt;relativeBindForResources&gt;項目
 最佳化附屬組件的探查。  
@@ -38,7 +28,7 @@ ms.lasthandoff: 12/22/2017
 ```  
   
 ## <a name="attributes-and-elements"></a>屬性和項目  
- 下列章節說明屬性、子項目和父項目。  
+ 下列各節描述屬性、子項目和父項目。  
   
 ### <a name="attributes"></a>屬性  
   
@@ -53,7 +43,7 @@ ms.lasthandoff: 12/22/2017
 |`false`|執行階段不會最佳化附屬組件探查。 這是預設值。|  
 |`true`|執行階段會探查最佳化附屬組件。|  
   
-### <a name="child-elements"></a>子元素  
+### <a name="child-elements"></a>子項目  
  無。  
   
 ### <a name="parent-elements"></a>父項目  
@@ -80,7 +70,7 @@ ms.lasthandoff: 12/22/2017
   
 -   它不會引發<xref:System.AppDomain.AssemblyResolve?displayProperty=nameWithType>事件。  
   
-## <a name="see-also"></a>請參閱  
+## <a name="see-also"></a>另請參閱  
  [封裝和部署資源](../../../../../docs/framework/resources/packaging-and-deploying-resources-in-desktop-apps.md)  
  [執行階段設定結構描述](../../../../../docs/framework/configure-apps/file-schema/runtime/index.md)  
  [組態檔結構描述](../../../../../docs/framework/configure-apps/file-schema/index.md)
