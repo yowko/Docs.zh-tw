@@ -1,1 +1,0 @@
-針對矩陣轉換，<xref:System.Numerics.Vector2><xref:System.Numerics.Vector3> 和 <xref:System.Numerics.Vector4> 執行個體會以資料列表示：向量 *v* 由矩陣 *M* 與 *vM* 乘法轉換。

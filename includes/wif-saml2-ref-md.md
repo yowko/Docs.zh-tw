@@ -1,1 +1,0 @@
-如需這個類別所代表項目的詳細資訊，請參閱下列規格：[Assertions and Protocols for the OASIS Security Assertion Markup Language (SAML) V2.0](http://docs.oasis-open.org/security/saml/v2.0/saml-core-2.0-os.pdf) (OASIS 安全性聲明標記語言 (SAML) V2.0 的聲明與通訊協定)。
