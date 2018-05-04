@@ -1,13 +1,6 @@
 ---
-title: "&lt;UseRandomizedStringHashAlgorithm&gt;項目"
-ms.custom: 
+title: '&lt;UseRandomizedStringHashAlgorithm&gt;項目'
 ms.date: 03/30/2017
-ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.technology: dotnet-clr
-ms.tgt_pltfrm: 
-ms.topic: article
 dev_langs:
 - csharp
 - vb
@@ -15,16 +8,13 @@ helpviewer_keywords:
 - UseRandomizedStringHashAlgorithm element
 - <UseRandomizedStringHashAlgorithm> element
 ms.assetid: c08125d6-56cc-4b23-b482-813ff85dc630
-caps.latest.revision: "12"
 author: rpetrusha
 ms.author: ronpet
-manager: wpickett
-ms.workload: dotnet
-ms.openlocfilehash: b6231f362a30f4766ccf5a43d33fa0dc7257ad57
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.openlocfilehash: a515c3011905c4f5c18ed9d3e8edf489428c04d8
+ms.sourcegitcommit: 11f11ca6cefe555972b3a5c99729d1a7523d8f50
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="ltuserandomizedstringhashalgorithmgt-element"></a>&lt;UseRandomizedStringHashAlgorithm&gt;項目
 決定 common language runtime 是否計算字串的雜湊程式碼上每個應用程式定義域做為基準。  
@@ -41,7 +31,7 @@ ms.lasthandoff: 12/22/2017
 ```  
   
 ## <a name="attributes-and-elements"></a>屬性和項目  
- 下列章節說明屬性、子項目和父項目。  
+ 下列各節描述屬性、子項目和父項目。  
   
 ### <a name="attributes"></a>屬性  
   
@@ -56,7 +46,7 @@ ms.lasthandoff: 12/22/2017
 |`0`|Common language runtime 不會計算字串的雜湊程式碼在每個應用程式網域為基礎;單一演算法用來計算字串的雜湊碼。 這是預設值。|  
 |`1`|通用語言執行平台計算雜湊碼的字串上每個應用程式定義域做為基準。 不同的程序和不同的應用程式定義域中的相同字串將會有不同的雜湊碼。|  
   
-### <a name="child-elements"></a>子元素  
+### <a name="child-elements"></a>子項目  
  無。  
   
 ### <a name="parent-elements"></a>父項目  
@@ -104,7 +94,7 @@ String 'This is a string.' in domain 'PerDomain.exe': 5435776D
 String 'This is a string.' in domain 'NewDomain': 75CC8236  
 ```  
   
-## <a name="see-also"></a>請參閱  
+## <a name="see-also"></a>另請參閱  
  <xref:System.StringComparer.GetHashCode%2A?displayProperty=nameWithType>  
  <xref:System.String.GetHashCode%2A?displayProperty=nameWithType>  
  <xref:System.Object.GetHashCode%2A?displayProperty=nameWithType>

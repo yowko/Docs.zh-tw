@@ -1,34 +1,22 @@
 ---
-title: "&lt;clientCredentials&gt; 的 &lt;peer&gt; 項目"
-ms.custom: 
+title: '&lt;clientCredentials&gt; 的 &lt;peer&gt; 項目'
 ms.date: 03/30/2017
-ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.technology: dotnet-clr
-ms.tgt_pltfrm: 
-ms.topic: article
 ms.assetid: 505bd987-0042-4622-b68e-94f439729d53
-caps.latest.revision: "10"
-author: dotnet-bot
-ms.author: dotnetcontent
-manager: wpickett
-ms.workload: dotnet
-ms.openlocfilehash: c3479b52c6e06b7b9ebd69d46780e8dca70d2ef7
-ms.sourcegitcommit: c0dd436f6f8f44dc80dc43b07f6841a00b74b23f
+ms.openlocfilehash: 9d64f682f67dcc7c4f0c0f1600938f8ff9ac0dd6
+ms.sourcegitcommit: 11f11ca6cefe555972b3a5c99729d1a7523d8f50
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 01/19/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="ltpeergt-of-ltclientcredentialsgt-element"></a>&lt;clientCredentials&gt; 的 &lt;peer&gt; 項目
 指定驗證對等用戶端時所使用的認證。  
   
  \<system.ServiceModel>  
-\<behaviors>  
+\<行為 >  
 \<endpointBehaviors>  
-\<behavior>  
+\<行為 >  
 \<clientCredentials>  
-\<peer>  
+\<對等 >  
   
 ## <a name="syntax"></a>語法  
   
@@ -46,7 +34,7 @@ ms.lasthandoff: 01/19/2018
 ### <a name="attributes"></a>屬性  
  無。  
   
-### <a name="child-elements"></a>子元素  
+### <a name="child-elements"></a>子項目  
   
 |項目|描述|  
 |-------------|-----------------|  
@@ -63,7 +51,7 @@ ms.lasthandoff: 01/19/2018
 ## <a name="remarks"></a>備註  
  這個組態項目會指定對等節點用於向網狀結構中其他節點驗證其本身的認證，以及對等節點用來驗證其他對等節點的驗證設定。 如需詳細資訊，請參閱[對等通道訊息驗證](http://msdn.microsoft.com/library/80e73386-514e-4c30-9e4a-b9ca8c173a95)和[保護對等通道應用程式](../../../../../docs/framework/wcf/feature-details/securing-peer-channel-applications.md)。  
   
-## <a name="see-also"></a>請參閱  
+## <a name="see-also"></a>另請參閱  
  <xref:System.ServiceModel.Configuration.ClientCredentialsElement>  
  <xref:System.ServiceModel.Description.ClientCredentials>  
  <xref:System.ServiceModel.Configuration.PeerCredentialElement>  

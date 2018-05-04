@@ -1,19 +1,15 @@
 ---
 title: Roslyn 分析器 - .NET
 description: 了解可找出問題並針對問題提供建議的 Roslyn 分析器相關資訊。
-keywords: .NET, .NET Core
 author: billwagner
 ms.author: billwagner
 ms.date: 01/24/2018
-ms.topic: article
-ms.prod: .net
 ms.technology: dotnet-standard
-ms.devlang: dotnet
-ms.openlocfilehash: 8c6524716ba403bc426df8dc33e64b8b2934d3d7
-ms.sourcegitcommit: 3a96c706e4dbb4667bf3bf37edac9e1666646f93
+ms.openlocfilehash: ec153b8fed08ef245a3a0f58970b4e3955dfacb5
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 02/27/2018
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="the-roslyn-based-analyzers"></a>Roslyn 分析器
 

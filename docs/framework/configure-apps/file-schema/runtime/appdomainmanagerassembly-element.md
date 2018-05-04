@@ -1,27 +1,17 @@
 ---
-title: "&lt;appDomainManagerAssembly&gt;項目"
-ms.custom: 
+title: '&lt;appDomainManagerAssembly&gt;項目'
 ms.date: 03/30/2017
-ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.technology: dotnet-clr
-ms.tgt_pltfrm: 
-ms.topic: article
 helpviewer_keywords:
 - <appDomainManagerAssembly> element
 - appDomainManagerAssembly element
 ms.assetid: c7c56e39-a700-44f5-b94e-411bfce339d9
-caps.latest.revision: "7"
 author: rpetrusha
 ms.author: ronpet
-manager: wpickett
-ms.workload: dotnet
-ms.openlocfilehash: 52e09e898fdcdbf8d14d3648b19e40bdc302daf0
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.openlocfilehash: 7656f4819e8ed6d8c1c87eabcbd5862929d47cdc
+ms.sourcegitcommit: 11f11ca6cefe555972b3a5c99729d1a7523d8f50
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="ltappdomainmanagerassemblygt-element"></a>&lt;appDomainManagerAssembly&gt;項目
 針對處理序中的預設應用程式網域，指定提供應用程式網域管理員的組件。  
@@ -38,7 +28,7 @@ ms.lasthandoff: 12/22/2017
 ```  
   
 ## <a name="attributes-and-elements"></a>屬性和項目  
- 下列章節說明屬性、子項目和父項目。  
+ 下列各節描述屬性、子項目和父項目。  
   
 ### <a name="attributes"></a>屬性  
   
@@ -46,7 +36,7 @@ ms.lasthandoff: 12/22/2017
 |---------------|-----------------|  
 |`value`|必要屬性。 指定處理序中的預設應用程式定義域提供應用程式定義域管理員的組件的顯示名稱。|  
   
-### <a name="child-elements"></a>子元素  
+### <a name="child-elements"></a>子項目  
  無。  
   
 ### <a name="parent-elements"></a>父項目  
@@ -82,7 +72,7 @@ ms.lasthandoff: 12/22/2017
 </configuration>  
 ```  
   
-## <a name="see-also"></a>請參閱  
+## <a name="see-also"></a>另請參閱  
  <xref:System.AppDomainSetup.AppDomainManagerType%2A?displayProperty=nameWithType>  
  <xref:System.AppDomainSetup.AppDomainManagerAssembly%2A?displayProperty=nameWithType>  
  [\<appDomainManagerType > 項目](../../../../../docs/framework/configure-apps/file-schema/runtime/appdomainmanagertype-element.md)  

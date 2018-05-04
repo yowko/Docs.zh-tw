@@ -1,24 +1,12 @@
 ---
-title: "部署考量 (Entity Framework)"
-ms.custom: 
+title: 部署考量 (Entity Framework)
 ms.date: 03/30/2017
-ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.technology: dotnet-ado
-ms.tgt_pltfrm: 
-ms.topic: article
 ms.assetid: 3a847a22-4eb8-4565-b18b-453bbca070db
-caps.latest.revision: "3"
-author: douglaslMS
-ms.author: douglasl
-manager: craigg
-ms.workload: dotnet
-ms.openlocfilehash: d38f90822746c08d576879ab35fa0984e439640b
-ms.sourcegitcommit: c0dd436f6f8f44dc80dc43b07f6841a00b74b23f
+ms.openlocfilehash: 4456a466a7b76c68b3185bf586494f8591440844
+ms.sourcegitcommit: 11f11ca6cefe555972b3a5c99729d1a7523d8f50
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 01/19/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="deployment-considerations-entity-framework"></a>部署考量 (Entity Framework)
 本主題提供的資訊是有關部署使用 ADO.NET Entity Framework 進行資料存取的應用程式。 如需有關 Entity Framework 的詳細資訊，請參閱[入門](../../../../../docs/framework/data/adonet/ef/getting-started.md)。  
@@ -39,6 +27,6 @@ ms.lasthandoff: 01/19/2018
   
 -   因為 Entity Framework 是 .NET Framework 的元件，所以可以將它與應用程式一起轉散發，這是 .NET Framework 授權合約所允許的。  
   
-## <a name="see-also"></a>請參閱  
+## <a name="see-also"></a>另請參閱  
  [ADO.NET Entity Framework](../../../../../docs/framework/data/adonet/ef/index.md)  
  [開發和部署考量](../../../../../docs/framework/data/adonet/ef/development-and-deployment-considerations.md)

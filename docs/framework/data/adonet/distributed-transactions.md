@@ -1,24 +1,12 @@
 ---
-title: "分散式異動"
-ms.custom: 
+title: 分散式異動
 ms.date: 03/30/2017
-ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.technology: dotnet-ado
-ms.tgt_pltfrm: 
-ms.topic: article
 ms.assetid: 718b257c-bcb2-408e-b004-a7b0adb1c176
-caps.latest.revision: "7"
-author: douglaslMS
-ms.author: douglasl
-manager: craigg
-ms.workload: dotnet
-ms.openlocfilehash: c2de777dbd8bf6ac18db95a1cf647d259a252f8d
-ms.sourcegitcommit: ed26cfef4e18f6d93ab822d8c29f902cff3519d1
+ms.openlocfilehash: 7792a719a73ca5183d57bcecc5d346153d824570
+ms.sourcegitcommit: 11f11ca6cefe555972b3a5c99729d1a7523d8f50
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 01/17/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="distributed-transactions"></a>分散式異動
 異動是一組相關工作，尤其是它會做為一個單位的成功 (認可) 或失敗 (中止)。 A*分散式交易*是影響幾個資源的交易。 對於要認可的分散式異動，所有參與者都必須保證資料的任何變更都是永久的。 不管系統是否當機，還是發生其他不可預見的事件，變更必須持續。 如果單一參與者無法做出此保證，則整個交易會失敗，交易範圍內的任何資料變更都將復原。  
@@ -44,7 +32,7 @@ ms.lasthandoff: 01/17/2018
   
  當共用商務物件時，在分散式交易中登記會特別適用。 如果與開啟的連接共用商務物件，則僅當該連接開啟時，才會發生自動交易登記。 如果使用共用的商務物件來執行多個交易，則該物件的開啟連接將不會自動在新起始的交易中登記。 在此情況下，您可以停用連接的自動交易登記，並使用 `EnlistTransaction` 在交易中登記連接。  
   
- `EnlistTransaction`接受單一引數的型別<xref:System.Transactions.Transaction>也就是現有交易的參考。 呼叫連接的 `EnlistTransaction` 方法之後，對使用連接之資料來源所做的所有修改都會包含在交易中。 傳遞 Null 值可將連接從目前的分散式交易登記中取消登記。 請注意，在呼叫 `EnlistTransaction` 之前，必須先開啟連接。  
+ `EnlistTransaction` 接受單一引數的型別<xref:System.Transactions.Transaction>也就是現有交易的參考。 呼叫連接的 `EnlistTransaction` 方法之後，對使用連接之資料來源所做的所有修改都會包含在交易中。 傳遞 Null 值可將連接從目前的分散式交易登記中取消登記。 請注意，在呼叫 `EnlistTransaction` 之前，必須先開啟連接。  
   
 > [!NOTE]
 >  在交易上明確地登記連接之後，直到第一個交易完成之前，無法取消登記或在其他交易中登記它。  
@@ -58,7 +46,7 @@ ms.lasthandoff: 01/17/2018
 ## <a name="configuring-distributed-transactions"></a>設定分散式異動  
  您可能需要透過網路啟用 MS DTC，才能使用分散式交易。 如果已啟用 Windows 防火牆，則必須允許 MS DTC 服務使用網路或開啟 MS DTC 連接埠。  
   
-## <a name="see-also"></a>請參閱  
+## <a name="see-also"></a>另請參閱  
  [異動和並行存取](../../../../docs/framework/data/adonet/transactions-and-concurrency.md)  
  [System.Transactions 與 SQL Server 整合](../../../../docs/framework/data/adonet/system-transactions-integration-with-sql-server.md)  
  [ADO.NET Managed 提供者和 DataSet 開發人員中心](http://go.microsoft.com/fwlink/?LinkId=217917)

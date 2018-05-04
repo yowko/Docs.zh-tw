@@ -1,24 +1,12 @@
 ---
-title: "ADO.NET 架構"
-ms.custom: 
+title: ADO.NET 架構
 ms.date: 03/30/2017
-ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.technology: dotnet-ado
-ms.tgt_pltfrm: 
-ms.topic: article
 ms.assetid: fcd45b99-ae8f-45ab-8b97-d887beda734e
-caps.latest.revision: "7"
-author: douglaslMS
-ms.author: douglasl
-manager: craigg
-ms.workload: dotnet
-ms.openlocfilehash: d1f09901ef6eb30fe3f43ee19ab17ceaaa2b78e8
-ms.sourcegitcommit: ed26cfef4e18f6d93ab822d8c29f902cff3519d1
+ms.openlocfilehash: 384f2397e0e2794c4326d635db9f81fe1078f374
+ms.sourcegitcommit: 11f11ca6cefe555972b3a5c99729d1a7523d8f50
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 01/17/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="adonet-architecture"></a>ADO.NET 架構
 傳統的資料處理主要是依賴相互連接的雙層式模型。 隨著資料處理朝多層式架構發展，程式設計人員也逐漸改用中斷連接的方式，使應用程式更具延展性 (Scalability)。  
@@ -34,7 +22,7 @@ ms.lasthandoff: 01/17/2018
   
  下圖將說明 [!INCLUDE[dnprdnshort](../../../../includes/dnprdnshort-md.md)] 資料提供者與 `DataSet` 之間的關聯性。  
   
- ![ADO.Net graphic](../../../../docs/framework/data/adonet/media/ado-1-bpuedev11.png "ado_1_bpuedev11")  
+ ![ADO.Net 圖形](../../../../docs/framework/data/adonet/media/ado-1-bpuedev11.png "ado_1_bpuedev11")  
 ADO.NET 架構  
   
 ### <a name="choosing-a-datareader-or-a-dataset"></a>選擇 DataReader 或 DataSet  
@@ -67,6 +55,6 @@ ADO.NET 架構
   
  [!INCLUDE[vstecado](../../../../includes/vstecado-md.md)] 中的 [!INCLUDE[dnprdnshort](../../../../includes/dnprdnshort-md.md)] 和 XML 類別的交集在於 `DataSet` 物件。 `DataSet` 可以填入 XML 來源的資料，無論它是檔案或 XML 資料流都一樣。 不管 `DataSet` 的資料來源為何，`DataSet` 都可組合成與全球資訊網協會 (W3C) 相容的 XML，而且包含其結構描述當做 XML 結構描述定義語言 (XSD) 結構描述。 由於 `DataSet` 的原生序列化格式是 XML，所以相當適合當做在各層之間移動資料的媒體，如此當需要在遠端對 XML Web Service 來回傳送資料和結構描述內容時，`DataSet` 將會是最佳選擇。 如需詳細資訊，請參閱 [XML 文件和資料](../../../../docs/standard/data/xml/index.md)。  
   
-## <a name="see-also"></a>請參閱  
+## <a name="see-also"></a>另請參閱  
  [ADO.NET 概觀](../../../../docs/framework/data/adonet/ado-net-overview.md)  
  [ADO.NET Managed 提供者和 DataSet 開發人員中心](http://go.microsoft.com/fwlink/?LinkId=217917)

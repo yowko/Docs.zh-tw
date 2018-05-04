@@ -1,13 +1,6 @@
 ---
-title: "&lt;執行階段&gt;項目"
-ms.custom: 
+title: '&lt;執行階段&gt;項目'
 ms.date: 03/30/2017
-ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.technology: dotnet-clr
-ms.tgt_pltfrm: 
-ms.topic: article
 f1_keywords:
 - http://schemas.microsoft.com/.NetConfiguration/v2.0#runtime
 - http://schemas.microsoft.com/.NetConfiguration/v2.0#configuration/runtime
@@ -16,16 +9,14 @@ helpviewer_keywords:
 - runtime element
 - container tags, <runtime> element
 ms.assetid: 1eb2fae3-de4b-45b6-852f-517c39b751bd
-caps.latest.revision: "70"
 author: mcleblanc
 ms.author: markl
 manager: markl
-ms.workload: dotnet
-ms.openlocfilehash: 547e6a5b800f1adf5ba9835470d2dd405ce97b14
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.openlocfilehash: fb050a8d73c42094caf83ba00c5dfc2e4d472723
+ms.sourcegitcommit: 11f11ca6cefe555972b3a5c99729d1a7523d8f50
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="ltruntimegt-element"></a>&lt;執行階段&gt;項目
 提供 common language runtime 用來設定應用程式的資訊。  
@@ -46,7 +37,7 @@ ms.lasthandoff: 12/22/2017
 ### <a name="attributes"></a>屬性  
  無。  
   
-### <a name="child-elements"></a>子元素  
+### <a name="child-elements"></a>子項目  
   
 |項目|描述|  
 |-------------|-----------------|  
@@ -100,6 +91,6 @@ ms.lasthandoff: 12/22/2017
   
  中的項目[\<執行階段 >](../../../../../docs/framework/configure-apps/file-schema/runtime/runtime-element.md) common language runtime 應用程式啟動時自動讀取 > 一節。 您也可以藉由提供其名稱定義的非預設應用程式定義域的組態檔<xref:System.AppDomainSetup.ConfigurationFile%2A?displayProperty=nameWithType>屬性; 它會讀取設定自動載入應用程式定義域時。 您應該很少，如果有的話，有需要的設定會直接讀取[\<執行階段 >](../../../../../docs/framework/configure-apps/file-schema/runtime/runtime-element.md) > 一節，在您的應用程式組態檔中。  
   
-## <a name="see-also"></a>請參閱  
+## <a name="see-also"></a>另請參閱  
  [執行階段設定結構描述](../../../../../docs/framework/configure-apps/file-schema/runtime/index.md)  
  [組態檔結構描述](../../../../../docs/framework/configure-apps/file-schema/index.md)

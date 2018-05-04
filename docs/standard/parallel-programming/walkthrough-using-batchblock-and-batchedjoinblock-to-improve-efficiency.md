@@ -17,11 +17,11 @@ manager: wpickett
 ms.workload:
 - dotnet
 - dotnetcore
-ms.openlocfilehash: c9ea53fb186551a24f678d905d35caaaa0c26494
-ms.sourcegitcommit: 86adcc06e35390f13c1e372c36d2e044f1fc31ef
+ms.openlocfilehash: e9305fd2a0e61a71f6875d6061f835e9cdae5dd1
+ms.sourcegitcommit: 2042de78fcdceebb6b8ac4b7a292b93e8782cbf5
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/26/2018
+ms.lasthandoff: 04/27/2018
 ---
 # <a name="walkthrough-using-batchblock-and-batchedjoinblock-to-improve-efficiency"></a>逐步解說：使用 BatchBlock 和 BatchedJoinBlock 以改善效率
 TPL 資料流程程式庫提供 <xref:System.Threading.Tasks.Dataflow.BatchBlock%601?displayProperty=nameWithType> 和 <xref:System.Threading.Tasks.Dataflow.BatchedJoinBlock%602?displayProperty=nameWithType> 類別，如此您可以接收來自一或多個來源的資料並緩衝，然後將該已緩衝的資料作為集合散佈。 這個批次機制在您從一或多個來源收集資料時非常實用，而且可接著批次處理多個資料元素。 例如，以使用資料流程將記錄插入資料庫的應用程式為例。 如果多個項目可以同時插入，而不是以循序方式逐一插入，這項作業就會更有效率。 本文件描述如何使用 <xref:System.Threading.Tasks.Dataflow.BatchBlock%601> 類別來改善這類資料庫插入作業的效率。 文中也描述如何使用 <xref:System.Threading.Tasks.Dataflow.BatchedJoinBlock%602> 類別，在程式從資料庫進行讀取時擷取結果以及所發生的任何例外狀況。
@@ -35,7 +35,7 @@ TPL 資料流程程式庫提供 <xref:System.Threading.Tasks.Dataflow.BatchBlock
 2.  確定您電腦上有可用的 Northwind 資料庫複本 (Northwind.sdf)。 這個檔案通常位於資料夾：%Program Files%\Microsoft SQL Server Compact Edition\v3.5\Samples\\。  
   
     > [!IMPORTANT]
-    >  在某些 Windows 版本中，如果 [!INCLUDE[vsprvs](../../../includes/vsprvs-md.md)] 是以非系統管理員模式執行，就無法連線到 Northwind.sdf。 若要連線到 Northwind.sdf，請使用 [以系統管理員身分執行] 模式，啟動 [!INCLUDE[vsprvs](../../../includes/vsprvs-md.md)] 或 [!INCLUDE[vsprvs](../../../includes/vsprvs-md.md)] 命令提示字元。  
+    >  在某些 Windows 版本中，如果 Visual Studio 是以非系統管理員模式執行，就無法連線到 Northwind.sdf。 若要連線到 Northwind.sdf，請使用 [以系統管理員身分執行] 模式，啟動 Visual Studio 或 Visual Studio 命令提示字元。  
   
  本逐步解說包含下列各節：  
   
@@ -57,7 +57,7 @@ TPL 資料流程程式庫提供 <xref:System.Threading.Tasks.Dataflow.BatchBlock
 ## <a name="creating-the-console-application"></a>建立主控台應用程式  
   
 <a name="consoleApp"></a>   
-1.  在 [!INCLUDE[vsprvs](../../../includes/vsprvs-md.md)] 中，建立 Visual C# 或 Visual Basic **主控台應用程式**專案。 在本文件中，專案命名為 `DataflowBatchDatabase`。  
+1.  在 Visual Studio 中，建立 Visual C# 或 Visual Basic **主控台應用程式**專案。 在本文件中，專案命名為 `DataflowBatchDatabase`。  
   
 2.  在您的專案中，加入 System.Data.SqlServerCe.dll 的參考，和 System.Threading.Tasks.Dataflow.dll 的參考。  
   

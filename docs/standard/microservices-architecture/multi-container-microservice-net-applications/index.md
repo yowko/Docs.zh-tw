@@ -1,21 +1,14 @@
 ---
 title: 設計和開發多容器和微服務 .NET 應用程式
 description: 容器化 .NET 應用程式的 .NET 微服務架構 | 設計和開發多容器和微服務 .NET 應用程式
-keywords: Docker, 微服務, ASP.NET, 容器
 author: CESARDELATORRE
 ms.author: wiwagn
 ms.date: 05/26/2017
-ms.prod: .net-core
-ms.technology: dotnet-docker
-ms.topic: article
-ms.workload:
-- dotnet
-- dotnetcore
-ms.openlocfilehash: 2a4c59c63cb3f76975173663948e94a7c64ef193
-ms.sourcegitcommit: e7f04439d78909229506b56935a1105a4149ff3d
+ms.openlocfilehash: 297a53d6d6d37b1fa4a0e021919c9df86edeca03
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 12/23/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="designing-and-developing-multi-container-and-microservice-based-net-applications"></a>設計和開發多容器和微服務 .NET 應用程式
 

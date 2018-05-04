@@ -1,34 +1,20 @@
 ---
 title: '&lt;msmqIntegrationBinding&gt;'
-ms.custom: 
 ms.date: 03/30/2017
-ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.technology:
-- dotnet-clr
-ms.tgt_pltfrm: 
-ms.topic: article
 helpviewer_keywords:
 - msmqIntegrationBinding Element
 ms.assetid: edf277f3-e3bf-4ed8-9f55-83b5788430a7
-caps.latest.revision: 
-author: dotnet-bot
-ms.author: dotnetcontent
-manager: wpickett
-ms.workload:
-- dotnet
-ms.openlocfilehash: 0715952077db755386a0381f68ccc6e33705a031
-ms.sourcegitcommit: c0dd436f6f8f44dc80dc43b07f6841a00b74b23f
+ms.openlocfilehash: bae6b4e6bd11074b47c55bf310215f296394c90d
+ms.sourcegitcommit: 11f11ca6cefe555972b3a5c99729d1a7523d8f50
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 01/19/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="ltmsmqintegrationbindinggt"></a>&lt;msmqIntegrationBinding&gt;
 定義繫結，此繫結可透過 MSMQ 傳遞訊息來提供查詢支援。  
   
  \<system.ServiceModel>  
-\<bindings>  
+\<繫結 >  
 msmqIntegrationBinding  
   
 ## <a name="syntax"></a>語法  
@@ -95,7 +81,7 @@ msmqIntegrationBinding
 |ByteArray|將物件序列化為位元組陣列。|  
 |資料流|格式化為資料流的本文|  
   
-### <a name="child-elements"></a>子元素  
+### <a name="child-elements"></a>子項目  
   
 |項目|描述|  
 |-------------|-----------------|  
@@ -105,7 +91,7 @@ msmqIntegrationBinding
   
 |項目|描述|  
 |-------------|-----------------|  
-|[\<bindings>](../../../../../docs/framework/configure-apps/file-schema/wcf/bindings.md)|這個項目會保存標準和自訂繫結的集合。|  
+|[\<繫結 >](../../../../../docs/framework/configure-apps/file-schema/wcf/bindings.md)|這個項目會保存標準和自訂繫結的集合。|  
   
 ## <a name="remarks"></a>備註  
  這個繫結項目可以用來讓 Windows Communication Foundation (WCF) 應用程式傳送訊息至和接收訊息，從現有的 MSMQ 應用程式使用 COM、 MSMQ 原生 Api 或定義中的型別<xref:System.Messaging?displayProperty=nameWithType>命名空間您可以使用這個組態項目，來指定如何定址佇列、 傳輸保證是否永久儲存訊息，以及應如何保護和驗證訊息。 如需詳細資訊，請參閱[How to： 與 WCF 端點和訊息佇列應用程式交換訊息](../../../../../docs/framework/wcf/feature-details/how-to-exchange-messages-with-wcf-endpoints-and-message-queuing-applications.md)。  
@@ -143,11 +129,11 @@ msmqIntegrationBinding
 </configuration>  
 ```  
   
-## <a name="see-also"></a>請參閱  
+## <a name="see-also"></a>另請參閱  
  <xref:System.ServiceModel.Configuration.MsmqIntegrationBindingElement>  
  <xref:System.ServiceModel.MsmqIntegration.MsmqIntegrationBinding>  
  <xref:System.ServiceModel.MsmqIntegration.MsmqIntegrationBindingElement>  
- [\<binding>](../../../../../docs/framework/misc/binding.md)  
+ [\<繫結 >](../../../../../docs/framework/misc/binding.md)  
  [繫結](../../../../../docs/framework/wcf/bindings.md)  
  [設定系統提供的繫結](../../../../../docs/framework/wcf/feature-details/configuring-system-provided-bindings.md)  
  [使用繫結來設定 Windows Communication Foundation 服務和用戶端](http://msdn.microsoft.com/library/bd8b277b-932f-472f-a42a-b02bb5257dfb)  

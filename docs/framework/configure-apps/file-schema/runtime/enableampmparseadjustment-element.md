@@ -1,26 +1,14 @@
 ---
-title: "&lt;EnableAmPmParseAdjustment&gt;項目"
-ms.custom: 
+title: '&lt;EnableAmPmParseAdjustment&gt;項目'
 ms.date: 03/30/2017
-ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.technology:
-- dotnet-bcl
-- dotnet-clr
-ms.tgt_pltfrm: 
-ms.topic: article
 ms.assetid: fda998a5-f538-4f8b-a18c-ee7f35e16938
-caps.latest.revision: "4"
 author: rpetrusha
 ms.author: ronpet
-manager: wpickett
-ms.workload: dotnet
-ms.openlocfilehash: ed01035d7d5b154ebc6541eb6ac3dbae6a413fbc
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.openlocfilehash: b17f521be31fa4082d9418c7dad734e37994bbb5
+ms.sourcegitcommit: 11f11ca6cefe555972b3a5c99729d1a7523d8f50
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="ltenableampmparseadjustmentgt-element"></a>&lt;EnableAmPmParseAdjustment&gt;項目
 決定是否日期和時間剖析方法使用調整過的一組規則剖析日期字串，包含日、 月、 小時和 AM/PM 指示項。  
@@ -36,7 +24,7 @@ ms.lasthandoff: 12/22/2017
 ```  
   
 ## <a name="attributes-and-elements"></a>屬性和項目  
- 下列章節說明屬性、子項目和父項目。  
+ 下列各節描述屬性、子項目和父項目。  
   
 ### <a name="attributes"></a>屬性  
   
@@ -51,7 +39,7 @@ ms.lasthandoff: 12/22/2017
 |0|日期和時間剖析方法請勿用於調整的規則剖析日期字串，包含只日、 月、 小時和 AM/PM 指示項。|  
 |1|日期和時間剖析方法可用於調整的規則剖析日期字串，包含只日、 月、 小時和 AM/PM 指示項。|  
   
-### <a name="child-elements"></a>子元素  
+### <a name="child-elements"></a>子項目  
  無。  
   
 ### <a name="parent-elements"></a>父項目  
@@ -92,6 +80,6 @@ ms.lasthandoff: 12/22/2017
 |zh-TW|2017 年 1/5/4:00:00 AM|2017 年 4/10/6:00:00 AM|  
 |en-GB|5/1/2017 6:00:00|10/4/2017 6:00:00|  
   
-## <a name="see-also"></a>請參閱  
+## <a name="see-also"></a>另請參閱  
  [\<runtime > 項目](../../../../../docs/framework/configure-apps/file-schema/runtime/runtime-element.md)  
  [\<configuration> 項目](../../../../../docs/framework/configure-apps/file-schema/configuration-element.md)

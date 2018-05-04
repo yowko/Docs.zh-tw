@@ -1,30 +1,21 @@
 ---
-title: "&lt;httpListener&gt;項目 （網路設定）"
-ms.custom: 
+title: '&lt;httpListener&gt;項目 （網路設定）'
 ms.date: 03/30/2017
-ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.technology: dotnet-clr
-ms.tgt_pltfrm: 
-ms.topic: article
 ms.assetid: 62f121fd-3f2e-4033-bb39-48ae996bfbd9
-caps.latest.revision: "7"
 author: mcleblanc
 ms.author: markl
 manager: markl
-ms.workload: dotnet
-ms.openlocfilehash: 8d880583016e6ccc0ae57fea10c35cb32726c93e
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.openlocfilehash: a327f757f26c815d5b2cffe179af68bbe3d152eb
+ms.sourcegitcommit: 11f11ca6cefe555972b3a5c99729d1a7523d8f50
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="lthttplistenergt-element-network-settings"></a>&lt;httpListener&gt;項目 （網路設定）
 自訂所用參數<xref:System.Net.HttpListener>類別。  
   
  \<configuration>  
-\<system.net >  
+\<system.net>  
 \<設定 >  
 \<httpListener >  
   
@@ -39,7 +30,7 @@ ms.lasthandoff: 12/22/2017
 ## <a name="type"></a>類型  
   
 ## <a name="attributes-and-elements"></a>屬性和項目  
- 下列章節說明屬性、子項目和父項目。  
+ 下列各節描述屬性、子項目和父項目。  
   
 ### <a name="attributes"></a>屬性  
   
@@ -47,7 +38,7 @@ ms.lasthandoff: 12/22/2017
 |---------------|-----------------|  
 |unescapeRequestUrl|布林值，指出如果<xref:System.Net.HttpListener>執行個體會使用原始的未逸出的 URI，而不是轉換後的 URI。|  
   
-### <a name="child-elements"></a>子元素  
+### <a name="child-elements"></a>子項目  
  無。  
   
 ### <a name="parent-elements"></a>父項目  
@@ -148,7 +139,7 @@ ms.lasthandoff: 12/22/2017
 |驗證檔||  
 |可以是空白||  
   
-## <a name="see-also"></a>請參閱  
+## <a name="see-also"></a>另請參閱  
  <xref:System.Net.Configuration.HttpListenerElement>  
  <xref:System.Net.HttpListener>  
  <xref:System.Net.HttpListenerRequest.Url%2A>  

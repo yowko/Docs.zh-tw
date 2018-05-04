@@ -1,31 +1,19 @@
 ---
-title: "&lt;serviceBehavior&gt; 的 &lt;routing&gt;"
-ms.custom: 
+title: '&lt;serviceBehavior&gt; 的 &lt;routing&gt;'
 ms.date: 03/30/2017
-ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.technology: dotnet-clr
-ms.tgt_pltfrm: 
-ms.topic: article
 ms.assetid: d8f9c844-4629-4a45-9599-856dc8f01794
-caps.latest.revision: "6"
-author: dotnet-bot
-ms.author: dotnetcontent
-manager: wpickett
-ms.workload: dotnet
-ms.openlocfilehash: eb43a658e26237037ac2a93658d97893005d07cd
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.openlocfilehash: 5fb7febe365f73acf09ba74b07215fe9cc659efb
+ms.sourcegitcommit: 11f11ca6cefe555972b3a5c99729d1a7523d8f50
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="ltroutinggt-of-ltservicebehaviorgt"></a>&lt;serviceBehavior&gt; 的 &lt;routing&gt;
 提供於執行階段存取路由服務的功能，可用來動態修改路由組態。  
   
- \<系統。ServiceModel >  
+ \<system.ServiceModel>  
 \<行為 >  
-\<serviceBehaviors >  
+\<serviceBehaviors>  
 \<行為 >  
 \<路由 >  
   
@@ -44,17 +32,17 @@ ms.lasthandoff: 12/22/2017
 ```  
   
 ## <a name="attributes-and-elements"></a>屬性和項目  
- 下列章節說明屬性、子項目和父項目。  
+ 下列各節描述屬性、子項目和父項目。  
   
 ### <a name="attributes"></a>屬性  
   
 |屬性|描述|  
 |---------------|-----------------|  
 |filterTable|字串，指定路由表的名稱，該路由表包含將由路由服務評估的篩選條件。 此值必須符合`name`屬性[ \<filterTable >](../../../../../docs/framework/configure-apps/file-schema/wcf/filtertable.md)中的項目[ \<filterTables >](../../../../../docs/framework/configure-apps/file-schema/wcf/filtertables.md) > 一節。|  
-|routeOnHeaderOnly|布林值，指定篩選器會檢查訊息本文和標頭，或者只檢查標頭。 預設為 `true`。|  
+|routeOnHeaderOnly|布林值，指定篩選器會檢查訊息本文和標頭，或者只檢查標頭。 預設值為 `true`。|  
 |soapProcessingEnabled|布林值，指定是否應進行 SOAP 處理。|  
   
-### <a name="child-elements"></a>子元素  
+### <a name="child-elements"></a>子項目  
  無。  
   
 ### <a name="parent-elements"></a>父項目  

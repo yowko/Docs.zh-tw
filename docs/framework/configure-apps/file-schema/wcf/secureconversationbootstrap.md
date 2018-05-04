@@ -1,31 +1,21 @@
 ---
 title: '&lt;secureConversationBootstrap&gt;'
-ms.custom: 
 ms.date: 03/30/2017
-ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.technology: dotnet-clr
-ms.tgt_pltfrm: 
-ms.topic: article
 ms.assetid: 66b46f95-fa2d-4b5b-b6ce-0572ab0cdd50
-caps.latest.revision: "13"
 author: BrucePerlerMS
-ms.author: bruceper
 manager: mbaldwin
-ms.workload: dotnet
-ms.openlocfilehash: 5cff19fc6d931f5dd391776c39f3934c8809a5ad
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.openlocfilehash: f7eab333899f5fc379db8fb5683ea3d29d04943c
+ms.sourcegitcommit: 11f11ca6cefe555972b3a5c99729d1a7523d8f50
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="ltsecureconversationbootstrapgt"></a>&lt;secureConversationBootstrap&gt;
 指定用於啟始安全對話服務的預設值。  
   
- \<system.serviceModel >  
+ \<system.serviceModel>  
 \<繫結 >  
-\<customBinding >  
+\<customBinding>  
 \<繫結 >  
 \<安全性 >  
 \<secureConversationBootstrap >  
@@ -53,7 +43,7 @@ messageProtectionOrder="SignBeforeEncrypt/SignBeforeEncryptAndEncryptSignature/E
  `Type`  
   
 ## <a name="attributes-and-elements"></a>屬性和項目  
- 下列章節說明屬性、子項目和父項目。  
+ 下列各節描述屬性、子項目和父項目。  
   
 ### <a name="attributes"></a>屬性  
   
@@ -71,11 +61,11 @@ messageProtectionOrder="SignBeforeEncrypt/SignBeforeEncryptAndEncryptSignature/E
 |`requireSignatureConfirmation`|布林值，指定是否啟用 WS-Security 簽章確認。 設定為 `true` 時，回應程式會確認訊息簽章。 預設為 `false`。<br /><br /> 簽章確認是用來確認服務的回應完全感知要求。|  
 |`securityHeaderLayout`|指定安全性標頭中的項目順序。 有效值為：<br /><br /> Strict。 會根據「使用前宣告」的一般原則，將項目加入至安全性標頭中。<br />-Lax。 會依據符合 WSS: SOAP 訊息安全性的任何順序，將項目加入至安全性標頭中。<br />-LaxWithTimestampFirst。 會依據符合 WSS: SOAP 訊息安全性的任何順序，將項目加入至安全性標頭中，例外的是安全性標頭中的第一個項目必須是 wsse:Timestamp 項目。<br />-LaxWithTimestampLast。 會依據符合 WSS: SOAP 訊息安全性的任何順序，將項目加入至安全性標頭中，例外的是安全性標頭中的最後一個項目必須是 wsse:Timestamp 項目。<br /><br /> 預設為 Strict。<br /><br /> 此項目的型別為 <xref:System.ServiceModel.Channels.SecurityHeaderLayout>。|  
   
-### <a name="child-elements"></a>子元素  
+### <a name="child-elements"></a>子項目  
   
 |項目|描述|  
 |-------------|-----------------|  
-|[\<>](../../../../../docs/framework/configure-apps/file-schema/wcf/issuedtokenparameters.md)|指定目前發行的權杖。 此項目的型別為 <xref:System.ServiceModel.Configuration.IssuedTokenParametersElement>。|  
+|[\<issuedTokenParameters>](../../../../../docs/framework/configure-apps/file-schema/wcf/issuedtokenparameters.md)|指定目前發行的權杖。 此項目的型別為 <xref:System.ServiceModel.Configuration.IssuedTokenParametersElement>。|  
 |[\<localClientSettings >](../../../../../docs/framework/configure-apps/file-schema/wcf/localclientsettings-element.md)|指定此繫結之本機用戶端的安全性設定。 此項目的型別為 <xref:System.ServiceModel.Configuration.LocalClientSecuritySettingsElement>。|  
 |[\<localServiceSettings >](../../../../../docs/framework/configure-apps/file-schema/wcf/localservicesettings-element.md)|指定此繫結之本機服務的安全性設定。 此項目的型別為 <xref:System.ServiceModel.Configuration.LocalServiceSecuritySettingsElement>。|  
   
@@ -83,9 +73,9 @@ messageProtectionOrder="SignBeforeEncrypt/SignBeforeEncryptAndEncryptSignature/E
   
 |項目|描述|  
 |-------------|-----------------|  
-|[\<安全性 >](../../../../../docs/framework/configure-apps/file-schema/wcf/security-of-custombinding.md)|指定自訂繫結的安全性選項。|  
+|[\<security>](../../../../../docs/framework/configure-apps/file-schema/wcf/security-of-custombinding.md)|指定自訂繫結的安全性選項。|  
   
-## <a name="see-also"></a>請參閱  
+## <a name="see-also"></a>另請參閱  
  <xref:System.ServiceModel.Configuration.LocalServiceSecuritySettingsElement>  
  <xref:System.ServiceModel.Channels.SecurityBindingElement.LocalServiceSettings%2A>  
  <xref:System.ServiceModel.Channels.LocalServiceSecuritySettings>  
@@ -93,6 +83,6 @@ messageProtectionOrder="SignBeforeEncrypt/SignBeforeEncryptAndEncryptSignature/E
  [繫結](../../../../../docs/framework/wcf/bindings.md)  
  [擴充繫結](../../../../../docs/framework/wcf/extending/extending-bindings.md)  
  [自訂繫結](../../../../../docs/framework/wcf/extending/custom-bindings.md)  
- [\<customBinding >](../../../../../docs/framework/configure-apps/file-schema/wcf/custombinding.md)  
+ [\<customBinding>](../../../../../docs/framework/configure-apps/file-schema/wcf/custombinding.md)  
  [如何：使用 SecurityBindingElement 建立自訂繫結](../../../../../docs/framework/wcf/feature-details/how-to-create-a-custom-binding-using-the-securitybindingelement.md)  
  [自訂繫結安全性](../../../../../docs/framework/wcf/samples/custom-binding-security.md)

@@ -1,24 +1,12 @@
 ---
-title: "在資料集中使用 XML"
-ms.custom: 
+title: 在資料集中使用 XML
 ms.date: 03/30/2017
-ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.technology: dotnet-ado
-ms.tgt_pltfrm: 
-ms.topic: article
 ms.assetid: 35138159-e199-49ec-baf7-1ec6777e171e
-caps.latest.revision: "4"
-author: douglaslMS
-ms.author: douglasl
-manager: craigg
-ms.workload: dotnet
-ms.openlocfilehash: e2a036f7623637a7e4561461f45ce03ea122be22
-ms.sourcegitcommit: ed26cfef4e18f6d93ab822d8c29f902cff3519d1
+ms.openlocfilehash: c5a4df5f2c77853864f51ee9b226f412f382dd09
+ms.sourcegitcommit: 11f11ca6cefe555972b3a5c99729d1a7523d8f50
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 01/17/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="using-xml-in-a-dataset"></a>在資料集中使用 XML
 透過 ADO.NET，您可以從 XML 資料流或文件填滿 <xref:System.Data.DataSet>。 您可以使用 XML 資料流或文件，為 <xref:System.Data.DataSet> 提供資料、結構描述資訊或同時提供這兩者。 由 XML 資料流或文件提供的資訊，可與 <xref:System.Data.DataSet> 中的現有資料或結構描述資訊結合。  
@@ -57,6 +45,6 @@ ms.lasthandoff: 01/17/2018
  [ADO.NET 概觀](../../../../../docs/framework/data/adonet/ado-net-overview.md)  
  說明 ADO.NET 的架構和元件，以及如何使用它們來存取現有資料來源和管理應用程式資料。  
   
-## <a name="see-also"></a>請參閱  
+## <a name="see-also"></a>另請參閱  
  [DataSet、DataTable 和 DataView](../../../../../docs/framework/data/adonet/dataset-datatable-dataview/index.md)  
  [ADO.NET Managed 提供者和 DataSet 開發人員中心](http://go.microsoft.com/fwlink/?LinkId=217917)

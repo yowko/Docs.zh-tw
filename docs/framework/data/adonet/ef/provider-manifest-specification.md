@@ -1,24 +1,12 @@
 ---
-title: "提供者資訊清單規格"
-ms.custom: 
+title: 提供者資訊清單規格
 ms.date: 03/30/2017
-ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.technology: dotnet-ado
-ms.tgt_pltfrm: 
-ms.topic: article
 ms.assetid: bb450b47-8951-4f99-9350-26f05a4d4e46
-caps.latest.revision: "4"
-author: douglaslMS
-ms.author: douglasl
-manager: craigg
-ms.workload: dotnet
-ms.openlocfilehash: 85096406ae8996713d4861c805d75af42d8c1813
-ms.sourcegitcommit: c0dd436f6f8f44dc80dc43b07f6841a00b74b23f
+ms.openlocfilehash: 02faee9ad69bd75f4df608b9a4767560945c7bb3
+ms.sourcegitcommit: 11f11ca6cefe555972b3a5c99729d1a7523d8f50
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 01/19/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="provider-manifest-specification"></a>提供者資訊清單規格
 本節將討論資料存放區提供者如何支援資料存放區中的型別與函式。  
@@ -72,7 +60,7 @@ ms.lasthandoff: 01/19/2018
 ## <a name="provider-manifest-discoverability"></a>提供者資訊清單探索能力  
  此資訊清單會由實體服務中的許多元件類型 (例如工具或查詢) 間接使用，但是更直接由中繼資料透過資料存放區中繼資料載入器運用。  
   
- ![dfb3d02b&#45;7a8c&#45;4d51&#45;ac5a&#45;a73d8aa145e6](../../../../../docs/framework/data/adonet/ef/media/dfb3d02b-7a8c-4d51-ac5a-a73d8aa145e6.gif "dfb3d02b-7a8c-4d51-ac5a-a73d8aa145e6")  
+ ![dfb3d02b&#45;7a8c&#45;4d 51&#45;ac5a&#45;a73d8aa145e6](../../../../../docs/framework/data/adonet/ef/media/dfb3d02b-7a8c-4d51-ac5a-a73d8aa145e6.gif "dfb3d02b-7a8c-4d51-ac5a-a73d8aa145e6")  
   
  不過，給定的提供者可能會支援不同的存放區或相同存放區的不同版本。 因此，提供者必須針對每個支援的資料存放區報告不同的資訊清單。  
   
@@ -275,7 +263,7 @@ public DbProviderManifest GetProviderManifest(string manifestToken);
 |BuiltIn|Boolean|否|True|如果此函式內建在資料存放區中，則為 True。|  
 |StoreFunctionName|String|否|\<名稱 >|資料存放區中的函式名稱。  允許重新導向函式名稱的層級。|  
 |NiladicFunction|Boolean|否|False|如果此函式不需要參數，而且會在不使用任何參數的情況下呼叫，則為 True。|  
-|ParameterType<br /><br /> 語意|ParameterSemantics|否|AllowImplicit<br /><br /> 轉換|選擇查詢管線應該如何處理參數型別替代項目：<br /><br /> -   ExactMatchOnly<br />-   AllowImplicitPromotion<br />-AllowImplicitConversion|  
+|ParameterType<br /><br /> 語意|ParameterSemantics|否|AllowImplicit<br /><br /> 轉換|選擇查詢管線應該如何處理參數型別替代項目：<br /><br /> -   ExactMatchOnly<br />-AllowImplicitPromotion<br />-AllowImplicitConversion|  
   
  **[參數] 節點**  
   
@@ -285,10 +273,10 @@ public DbProviderManifest GetProviderManifest(string manifestToken);
 |--------------------|---------------|--------------|-------------------|-----------------|  
 |名稱|String|是|N/A|參數的識別碼/名稱。|  
 |類型|String|是|N/A|參數的 EDM 型別。|  
-|模式|參數<br /><br /> Direction|是|N/A|參數的方向：<br /><br /> -   in<br />-out<br />-inout|  
+|模式|參數<br /><br /> Direction|是|N/A|參數的方向：<br /><br /> -在<br />-out<br />-inout|  
   
 ##### <a name="namespace-attribute"></a>Namespace 屬性  
  每個資料存放區提供者都必須針對資訊清單中定義的資訊定義一個命名空間或命名空間群組。 這個命名空間可用於 Entity SQL 查詢中，以便解析函式和型別的名稱。 例如：SqlServer。 不過，該命名空間必須與標準命名空間 EDM 不同，後者是實體服務針對要由 Entity SQL 查詢所支援之標準函式定義的。  
   
-## <a name="see-also"></a>請參閱  
+## <a name="see-also"></a>另請參閱  
  [撰寫 Entity Framework 資料提供者](../../../../../docs/framework/data/adonet/ef/writing-an-ef-data-provider.md)

@@ -1,24 +1,12 @@
 ---
-title: "DataAdapter 和 DataReader"
-ms.custom: 
+title: DataAdapter 和 DataReader
 ms.date: 03/30/2017
-ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.technology: dotnet-ado
-ms.tgt_pltfrm: 
-ms.topic: article
 ms.assetid: cc952ca2-ec19-46ab-9189-15174b52cb74
-caps.latest.revision: "4"
-author: douglaslMS
-ms.author: douglasl
-manager: craigg
-ms.workload: dotnet
-ms.openlocfilehash: 3a7ce8787dec2f80ba04bef08c5ac355a907feaf
-ms.sourcegitcommit: ed26cfef4e18f6d93ab822d8c29f902cff3519d1
+ms.openlocfilehash: 7fd7013478bbf30c2a7e915045e3dd192ca92540
+ms.sourcegitcommit: 11f11ca6cefe555972b3a5c99729d1a7523d8f50
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 01/17/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="dataadapters-and-datareaders"></a>DataAdapter 和 DataReader
 您可以使用 ADO.NET **DataReader**從資料庫擷取資料的唯讀、 順向資料流。 時會傳回結果的查詢會執行，而且會儲存在用戶端上的網路緩衝區中，直到您提出要求時使用**讀取**方法**DataReader**。 使用**DataReader**可以提高應用程式效能，並使用，以擷取資料及 （依預設） 只有一個資料列一次將儲存在記憶體中，可降低系統額外負荷。  
@@ -55,7 +43,7 @@ ms.lasthandoff: 01/17/2018
  [使用 DataAdapter 執行批次作業](../../../../docs/framework/data/adonet/performing-batch-operations-using-dataadapters.md)  
  說明在套用來自 `DataSet` 的更新時，如何藉由減少與 SQL Server 之間的往返次數，提高應用程式效能。  
   
-## <a name="see-also"></a>請參閱  
+## <a name="see-also"></a>另請參閱  
  [連接至資料來源](../../../../docs/framework/data/adonet/connecting-to-a-data-source.md)  
  [命令和參數](../../../../docs/framework/data/adonet/commands-and-parameters.md)  
  [異動和並行存取](../../../../docs/framework/data/adonet/transactions-and-concurrency.md)  

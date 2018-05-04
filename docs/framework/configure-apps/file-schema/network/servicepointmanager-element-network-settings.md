@@ -1,13 +1,6 @@
 ---
-title: "&lt;servicePointManager&gt;項目 （網路設定）"
-ms.custom: 
+title: '&lt;servicePointManager&gt;項目 （網路設定）'
 ms.date: 03/30/2017
-ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.technology: dotnet-clr
-ms.tgt_pltfrm: 
-ms.topic: article
 f1_keywords:
 - http://schemas.microsoft.com/.NetConfiguration/v2.0#servicePointManager
 - http://schemas.microsoft.com/.NetConfiguration/v2.0#configuration/system.net/settings/servicePointManager
@@ -15,22 +8,20 @@ helpviewer_keywords:
 - servicePointManager element
 - <servicePointManager> element
 ms.assetid: 6e5def51-3646-4ef6-a7bd-c69151321bec
-caps.latest.revision: "16"
 author: mcleblanc
 ms.author: markl
 manager: markl
-ms.workload: dotnet
-ms.openlocfilehash: 38ffe6728ca05022caca8f5973b546f2b17412d8
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.openlocfilehash: 5903174f125938923a63fc031421a8d5a020e56d
+ms.sourcegitcommit: 11f11ca6cefe555972b3a5c99729d1a7523d8f50
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="ltservicepointmanagergt-element-network-settings"></a>&lt;servicePointManager&gt;項目 （網路設定）
 設定連線到網路資源。  
   
  \<configuration>  
-\<system.net >  
+\<system.net>  
 \<設定 >  
 \<servicePointManager >  
   
@@ -49,7 +40,7 @@ ms.lasthandoff: 12/22/2017
 ```  
   
 ## <a name="attributes-and-elements"></a>屬性和項目  
- 下列章節說明屬性、子項目和父項目。  
+ 下列各節描述屬性、子項目和父項目。  
   
 ### <a name="attributes"></a>屬性  
   
@@ -63,7 +54,7 @@ ms.lasthandoff: 12/22/2017
 |`expect100Continue`|指定是否 POST 方法應該預期會收到`100-continue`來自伺服器的回應。 預設值是 `true`。|  
 |`useNagleAlgorithm`|指定由服務點管理員所控制的連接是否使用 Nagle 演算法。 預設值是 `true`。|  
   
-### <a name="child-elements"></a>子元素  
+### <a name="child-elements"></a>子項目  
  無。  
   
 ### <a name="parent-elements"></a>父項目  
@@ -77,7 +68,7 @@ ms.lasthandoff: 12/22/2017
 ## <a name="configuration-files"></a>組態檔  
  此項目可以用於應用程式組態檔或電腦組態檔 (Machine.config)。  
   
-## <a name="see-also"></a>請參閱  
+## <a name="see-also"></a>另請參閱  
  <xref:System.Net.ServicePointManager>  
  <xref:System.Net.Security.EncryptionPolicy>  
  [網路設定結構描述](../../../../../docs/framework/configure-apps/file-schema/network/index.md)

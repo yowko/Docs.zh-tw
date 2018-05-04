@@ -1,9 +1,6 @@
 ---
-title: "CoreResponseData 類別"
+title: CoreResponseData 類別
 ms.date: 01/29/2018
-ms.prod: .net-framework
-ms.technology: 
-ms.topic: reference
 topic_type:
 - apiref
 api_name:
@@ -13,15 +10,11 @@ api_location:
 api_type:
 - Assembly
 author: stevewhims
-ms.author: stwhi
-manager: markl
-ms.workload:
-- dotnet
-ms.openlocfilehash: d36affb70e141ccb37f65344944f37b6b83ad4ee
-ms.sourcegitcommit: cf22b29db780e532e1090c6e755aa52d28273fa6
+ms.openlocfilehash: 640a925c3aec86b4743b1b2b62eb3793af1cc0bb
+ms.sourcegitcommit: 11f11ca6cefe555972b3a5c99729d1a7523d8f50
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 02/01/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="coreresponsedata-class"></a>CoreResponseData 類別
 
@@ -40,7 +33,7 @@ internal class CoreResponseData
 
 ## <a name="requirements"></a>需求
 
-**命名空間：**<xref:System.Net>
+**命名空間：** <xref:System.Net>
 
 **組件：**系統 （在 System.dll)
 

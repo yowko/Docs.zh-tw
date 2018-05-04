@@ -1,33 +1,21 @@
 ---
-title: "&lt;scopedCertificates&gt; 項目"
-ms.custom: 
+title: '&lt;scopedCertificates&gt; 項目'
 ms.date: 03/30/2017
-ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.technology: dotnet-clr
-ms.tgt_pltfrm: 
-ms.topic: article
 ms.assetid: c7b6fc35-d4b2-4c18-98bd-83e09591f1d3
-caps.latest.revision: "12"
-author: dotnet-bot
-ms.author: dotnetcontent
-manager: wpickett
-ms.workload: dotnet
-ms.openlocfilehash: 719a52fb1a0f558bda2b337e1402f8aecafc6b8d
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.openlocfilehash: d95e608fa9b94086dac72341eb599f258dae6097
+ms.sourcegitcommit: 11f11ca6cefe555972b3a5c99729d1a7523d8f50
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="ltscopedcertificatesgt-element"></a>&lt;scopedCertificates&gt; 項目
 表示特定服務 (範圍服務) 為驗證所提供之 X.509 憑證的集合。 這個集合通常用來指定聯合案例中安全性權杖服務的服務憑證。  
   
- \<系統。ServiceModel >  
+ \<system.ServiceModel>  
 \<行為 >  
 endpointBehaviors 區段  
 \<行為 >  
-\<clientCredentials >  
+\<clientCredentials>  
 \<serviceCertificate >  
 \<但是在 scopedCertificates > 項目  
 \<新增 > 項目\<scopedCertificates >  
@@ -45,12 +33,12 @@ endpointBehaviors 區段
 ```  
   
 ## <a name="attributes-and-elements"></a>屬性和項目  
- 下列章節說明屬性、子項目和父項目。  
+ 下列各節描述屬性、子項目和父項目。  
   
 ### <a name="attributes"></a>屬性  
  無。  
   
-### <a name="child-elements"></a>子元素  
+### <a name="child-elements"></a>子項目  
   
 |項目|描述|  
 |-------------|-----------------|  
@@ -70,7 +58,7 @@ endpointBehaviors 區段
  如需詳細資訊，請參閱 「 範圍的憑證 」 一節[How to： 建立聯合用戶端](../../../../../docs/framework/wcf/feature-details/how-to-create-a-federated-client.md)。  
   
 ## <a name="example"></a>範例  
- 下列範例指定用戶端以 HTTP 通訊協定與網域名稱為 http://www.contoso.com 的端點通訊時，使用的服務憑證。  
+ 下列範例會指定網域名稱與端點通訊時要使用用戶端的服務憑證http://www.contoso.com透過 HTTP 通訊協定。  
   
 ```xml  
 <serviceCertificate>  
@@ -82,7 +70,7 @@ endpointBehaviors 區段
 </serviceCertificate>  
 ```  
   
-## <a name="see-also"></a>請參閱  
+## <a name="see-also"></a>另請參閱  
  <xref:System.ServiceModel.Configuration.X509RecipientCertificateClientElement.ScopedCertificates%2A>  
  <xref:System.ServiceModel.Configuration.X509ScopedServiceCertificateElementCollection>  
  <xref:System.ServiceModel.Configuration.X509ScopedServiceCertificateElement>  

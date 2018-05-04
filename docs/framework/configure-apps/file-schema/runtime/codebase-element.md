@@ -1,13 +1,6 @@
 ---
-title: "&lt;程式碼基底&gt;項目"
-ms.custom: 
+title: '&lt;程式碼基底&gt;項目'
 ms.date: 03/30/2017
-ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.technology: dotnet-clr
-ms.tgt_pltfrm: 
-ms.topic: article
 f1_keywords:
 - http://schemas.microsoft.com/.NetConfiguration/v2.0#codeBase
 - http://schemas.microsoft.com/.NetConfiguration/v2.0#configuration/runtime/assemblyBinding/dependentAssembly/codeBase
@@ -16,16 +9,14 @@ helpviewer_keywords:
 - container tags, <codeBase> element
 - codeBase element
 ms.assetid: d48a3983-2297-43ff-a14d-1f29d3995822
-caps.latest.revision: "10"
 author: mcleblanc
 ms.author: markl
 manager: markl
-ms.workload: dotnet
-ms.openlocfilehash: 272a4262295b5dd67414dd0ef6523f90b2125836
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.openlocfilehash: 3b614546e8ed23cc1a5e169a33fb5878695037ae
+ms.sourcegitcommit: 11f11ca6cefe555972b3a5c99729d1a7523d8f50
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="ltcodebasegt-element"></a>&lt;程式碼基底&gt;項目
 指定 common language runtime 可以找到組件的位置。  
@@ -45,7 +36,7 @@ href="URL of assembly"/>
 ```  
   
 ## <a name="attributes-and-elements"></a>屬性和項目  
- 下列章節說明屬性、子項目和父項目。  
+ 下列各節描述屬性、子項目和父項目。  
   
 ### <a name="attributes"></a>屬性  
   
@@ -60,7 +51,7 @@ href="URL of assembly"/>
 |-----------|-----------------|  
 |每個部分的版本號碼的有效值為 0 到 65535 之間。|不適用。|  
   
-### <a name="child-elements"></a>子元素  
+### <a name="child-elements"></a>子項目  
  無。  
   
 ### <a name="parent-elements"></a>父項目  
@@ -73,7 +64,7 @@ href="URL of assembly"/>
 |`System.web`|指定 ASP.NET 組態區段的根項目。|  
   
 ## <a name="remarks"></a>備註  
- 為了讓執行階段使用**\<程式碼基底 >**設定在電腦組態檔或發行者原則檔中，檔案也必須重新導向組件版本。 應用程式組態檔可能不需要重新導向組件版本的程式碼基底設定。 決定之後要使用的組件版本，執行階段適用於決定版本的檔案中的程式碼基底設定。 如果指示沒有程式碼基底，執行階段會以一般方式探查組件。  
+ 為了讓執行階段使用**\<程式碼基底 >** 設定在電腦組態檔或發行者原則檔中，檔案也必須重新導向組件版本。 應用程式組態檔可能不需要重新導向組件版本的程式碼基底設定。 決定之後要使用的組件版本，執行階段適用於決定版本的檔案中的程式碼基底設定。 如果指示沒有程式碼基底，執行階段會以一般方式探查組件。  
   
  如果組件具有強式名稱，程式碼基底設定可以位於任何位置近端內部網路或網際網路。 如果組件私用組件，程式碼基底設定必須是相對於應用程式的目錄路徑。  
   
@@ -98,7 +89,7 @@ href="URL of assembly"/>
 </configuration>  
 ```  
   
-## <a name="see-also"></a>請參閱  
+## <a name="see-also"></a>另請參閱  
  [執行階段設定結構描述](../../../../../docs/framework/configure-apps/file-schema/runtime/index.md)  
  [組態檔結構描述](../../../../../docs/framework/configure-apps/file-schema/index.md)  
  [指定組件的位置](../../../../../docs/framework/configure-apps/specify-assembly-location.md)  

@@ -1,25 +1,15 @@
 ---
 title: ADO.NET 程式碼範例
 ms.date: 03/30/2017
-ms.prod: .net-framework
-ms.technology:
-- dotnet-ado
-ms.topic: article
 dev_langs:
 - csharp
 - vb
 ms.assetid: c119657a-9ce6-4940-91e4-ac1d5f0d9584
-caps.latest.revision: 7
-author: douglaslMS
-ms.author: douglasl
-manager: craigg
-ms.workload:
-- dotnet
-ms.openlocfilehash: 8fec055db7069a213b31b9f4443b2f0e7467dd7b
-ms.sourcegitcommit: 86adcc06e35390f13c1e372c36d2e044f1fc31ef
+ms.openlocfilehash: 5b34f93348c43a26f603140f2393389e1bce107a
+ms.sourcegitcommit: 11f11ca6cefe555972b3a5c99729d1a7523d8f50
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/26/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="adonet-code-examples"></a>ADO.NET 程式碼範例
 本主題的程式碼清單示範如何使用下列 ADO.NET 技術來擷取資料庫中的資料：

@@ -1,24 +1,12 @@
 ---
-title: "將 keyref XML 結構描述 (XSD) 條件約束對應至資料集條件約束"
-ms.custom: 
+title: 將 keyref XML 結構描述 (XSD) 條件約束對應至資料集條件約束
 ms.date: 03/30/2017
-ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.technology: dotnet-ado
-ms.tgt_pltfrm: 
-ms.topic: article
 ms.assetid: 5b634fea-cc1e-4f6b-9454-10858105b1c8
-caps.latest.revision: "4"
-author: douglaslMS
-ms.author: douglasl
-manager: craigg
-ms.workload: dotnet
-ms.openlocfilehash: e364efe0856a5291fc8157ef6ab185c2438a3347
-ms.sourcegitcommit: ed26cfef4e18f6d93ab822d8c29f902cff3519d1
+ms.openlocfilehash: a3a5033292db2b47e7a9811e36c0a4af016951fc
+ms.sourcegitcommit: 11f11ca6cefe555972b3a5c99729d1a7523d8f50
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 01/17/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="map-keyref-xml-schema-xsd-constraints-to-dataset-constraints"></a>將 keyref XML 結構描述 (XSD) 條件約束對應至資料集條件約束
 **Keyref**元素可讓您建立文件內的項目之間的連結。 這與關聯式資料庫中的外部索引鍵關聯性很類似。 如果結構描述指定**keyref**項目，項目會轉換的對應外部索引鍵條件約束的資料表中的資料行的結構描述對應程序期間<xref:System.Data.DataSet>。 根據預設， **keyref**項目也會產生關聯，與**ParentTable**， **ChildTable**， **ParentColumn**，和**ChildColumn**在關聯上指定的屬性。  
@@ -27,7 +15,7 @@ ms.lasthandoff: 01/17/2018
   
 |屬性名稱|描述|  
 |--------------------|-----------------|  
-|**msdata:ConstraintOnly**|如果**ConstraintOnly ="true"**上指定**keyref**結構描述中的項目，條件約束會建立，但不會建立關聯。 如果未指定此屬性 (或設為**False**)，條件約束和關聯性會建立在**資料集**。|  
+|**msdata:ConstraintOnly**|如果**ConstraintOnly ="true"** 上指定**keyref**結構描述中的項目，條件約束會建立，但不會建立關聯。 如果未指定此屬性 (或設為**False**)，條件約束和關聯性會建立在**資料集**。|  
 |**msdata:ConstraintName**|如果**ConstraintName**屬性已指定，則會使用該值做為條件約束的名稱。 否則，**名稱**屬性**keyref**結構描述中的項目會提供中的條件約束名稱**資料集**。|  
 |**msdata:UpdateRule**|如果**UpdateRule**屬性中指定**keyref**結構描述中的元素，其值指派給**UpdateRule**中的條件約束屬性**資料集**。 否則**UpdateRule**屬性設定為**Cascade**。|  
 |**msdata:DeleteRule**|如果**DeleteRule**屬性中指定**keyref**結構描述中的元素，其值指派給**DeleteRule**中的條件約束屬性**資料集**。 否則**DeleteRule**屬性設定為**Cascade**。|  
@@ -120,7 +108,7 @@ Order(OrderNumber, EmpNumber)
     RelatedColumns: OrderNumber   
     ```  
   
-## <a name="see-also"></a>請參閱  
+## <a name="see-also"></a>另請參閱  
  [將 XML 結構描述 (XSD) 條件約束對應至資料集條件約束](../../../../../docs/framework/data/adonet/dataset-datatable-dataview/mapping-xml-schema-xsd-constraints-to-dataset-constraints.md)  
  [從 XML 結構描述 (XSD) 產生資料集關聯](../../../../../docs/framework/data/adonet/dataset-datatable-dataview/generating-dataset-relations-from-xml-schema-xsd.md)  
  [ADO.NET Managed 提供者和 DataSet 開發人員中心](http://go.microsoft.com/fwlink/?LinkId=217917)

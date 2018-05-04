@@ -1,23 +1,14 @@
 ---
-title: "不支援的運算式 (Entity SQL)"
+title: 不支援的運算式 (Entity SQL)
 ms.date: 03/30/2017
-ms.prod: .net-framework
-ms.technology:
-- dotnet-ado
-ms.topic: article
 ms.assetid: 5e79da7e-e78a-413c-8fb0-f3f9cd84f579
-author: douglaslMS
-ms.author: douglasl
-manager: craigg
-ms.workload:
-- dotnet
 dev_langs:
 - sql
-ms.openlocfilehash: 075daf0e4f0477dda50231760fbb3d990a9f8468
-ms.sourcegitcommit: c3957fdb990060559d73cca44ab3e2c7b4d049c0
+ms.openlocfilehash: 6d1746bb51af4795f09c47f808cf9a29d0370f18
+ms.sourcegitcommit: 11f11ca6cefe555972b3a5c99729d1a7523d8f50
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 03/05/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="unsupported-expressions"></a>不支援的運算式
 
@@ -32,7 +23,7 @@ sal > all (select salary from employees)
 sal > any (select salary from employees)
 ```
 
-[!INCLUDE[esql](../../../../../../includes/esql-md.md)]不過，不支援這類建構。 同等運算式可以使用 [!INCLUDE[esql](../../../../../../includes/esql-md.md)] 撰寫，如下所示：
+但是 [!INCLUDE[esql](../../../../../../includes/esql-md.md)] 並不支援這類建構。 同等運算式可以使用 [!INCLUDE[esql](../../../../../../includes/esql-md.md)] 撰寫，如下所示：
 
 ```sql
 not exists(select 0 from employees as e where sal > e.salary)
@@ -41,7 +32,7 @@ exists(select 0 from employees as e where sal > e.salary)
 
 ## <a name="-operator"></a>* 運算子
 
-[!INCLUDE[tsql](../../../../../../includes/tsql-md.md)] 支援使用 * 表示所有資料行都應該投影出來 SELECT 子句中的運算子。這在 [!INCLUDE[esql](../../../../../../includes/esql-md.md)] 中不支援。
+[!INCLUDE[tsql](../../../../../../includes/tsql-md.md)] 支援在 SELECT 子句中使用 * 運算子，以指示所有資料行都應該投影出來。這在 [!INCLUDE[esql](../../../../../../includes/esql-md.md)] 中不支援。
 
 ## <a name="see-also"></a>另請參閱
 

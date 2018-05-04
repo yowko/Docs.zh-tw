@@ -1,35 +1,23 @@
 ---
-title: "WCF 的 &lt;state&gt;、&lt;workflowInstanceQuery&gt;"
-ms.custom: 
+title: WCF 的 &lt;state&gt;、&lt;workflowInstanceQuery&gt;
 ms.date: 03/30/2017
-ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.technology: dotnet-clr
-ms.tgt_pltfrm: 
-ms.topic: article
 ms.assetid: 40f21055-766c-4be9-86c4-d1d899007098
-caps.latest.revision: "3"
-author: dotnet-bot
-ms.author: dotnetcontent
-manager: wpickett
-ms.workload: dotnet
-ms.openlocfilehash: edb6cc424be51e03b3c34182a2b456a9658e2bc7
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.openlocfilehash: 69ebedec40243d3e6580b8350c1253fca83e0802
+ms.sourcegitcommit: 11f11ca6cefe555972b3a5c99729d1a7523d8f50
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="ltstategt-of-wcf-ltworkflowinstancequerygt"></a>WCF 的 &lt;state&gt;、&lt;workflowInstanceQuery&gt;
 表示建立追蹤記錄時，追蹤的工作流程執行個體中的訂閱狀態集合。  
   
  如需追蹤設定檔查詢的詳細資訊，請參閱[追蹤設定檔](../../../../../docs/framework/windows-workflow-foundation/tracking-profiles.md)  
   
- \<system.serviceModel >  
+ \<system.serviceModel>  
 \<追蹤 >  
-\<trackingProfile >  
+\<trackingProfile>  
 \<工作流程 >  
-\<workflowInstanceQueries >  
+\<workflowInstanceQueries>  
 \<w >  
 \<狀態 >  
 \<狀態 >  
@@ -41,7 +29,7 @@ ms.lasthandoff: 12/22/2017
 ```
   
 ## <a name="attributes-and-elements"></a>屬性和項目  
- 下列章節說明屬性、子項目和父項目。  
+ 下列各節描述屬性、子項目和父項目。  
   
 ### <a name="attributes"></a>屬性  
   
@@ -49,7 +37,7 @@ ms.lasthandoff: 12/22/2017
 |---------------|-----------------|  
 |name|字串，可指定建立追蹤記錄時，追蹤的工作流程執行個體中的訂閱狀態。|  
   
-### <a name="child-elements"></a>子元素  
+### <a name="child-elements"></a>子項目  
  無。  
   
 ### <a name="parent-elements"></a>父項目  
@@ -92,7 +80,7 @@ ms.lasthandoff: 12/22/2017
 </workflowInstanceQueries>  
 ```  
   
-## <a name="see-also"></a>請參閱  
+## <a name="see-also"></a>另請參閱  
  <xref:System.ServiceModel.Activities.Tracking.Configuration.WorkflowInstanceQueryElement?displayProperty=nameWithType>       
  <xref:System.ServiceModel.Activities.Tracking.Configuration.StateElement?displayProperty=nameWithType>       
  <xref:System.Activities.Tracking.WorkflowInstanceQuery?displayProperty=nameWithType>       

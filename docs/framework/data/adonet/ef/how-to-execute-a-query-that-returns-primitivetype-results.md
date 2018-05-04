@@ -1,27 +1,15 @@
 ---
-title: "如何：執行可傳回 PrimitiveType 結果的查詢"
-ms.custom: 
+title: 如何：執行可傳回 PrimitiveType 結果的查詢
 ms.date: 03/30/2017
-ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.technology: dotnet-ado
-ms.tgt_pltfrm: 
-ms.topic: article
 dev_langs:
 - csharp
 - vb
 ms.assetid: 7139d585-4034-4dfa-916f-2120a8b72792
-caps.latest.revision: "4"
-author: douglaslMS
-ms.author: douglasl
-manager: craigg
-ms.workload: dotnet
-ms.openlocfilehash: d8a38d732023cd30812a4ae2fa00b99345556a78
-ms.sourcegitcommit: c0dd436f6f8f44dc80dc43b07f6841a00b74b23f
+ms.openlocfilehash: 9b58414c0f2a8fabe078724ee91de2c14ada8c3d
+ms.sourcegitcommit: 11f11ca6cefe555972b3a5c99729d1a7523d8f50
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 01/19/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="how-to-execute-a-query-that-returns-primitivetype-results"></a>如何：執行可傳回 PrimitiveType 結果的查詢
 本主題顯示如何使用 <xref:System.Data.EntityClient.EntityCommand>，針對概念模型執行命令，以及如何使用 <xref:System.Data.Metadata.Edm.PrimitiveType> 擷取 <xref:System.Data.EntityClient.EntityDataReader> 結果。  
@@ -47,6 +35,6 @@ ms.lasthandoff: 01/19/2018
  [!code-csharp[DP EntityServices Concepts#eSQLPrimitiveTypes](../../../../../samples/snippets/csharp/VS_Snippets_Data/dp entityservices concepts/cs/source.cs#esqlprimitivetypes)]
  [!code-vb[DP EntityServices Concepts#eSQLPrimitiveTypes](../../../../../samples/snippets/visualbasic/VS_Snippets_Data/dp entityservices concepts/vb/source.vb#esqlprimitivetypes)]  
   
-## <a name="see-also"></a>請參閱  
+## <a name="see-also"></a>另請參閱  
  [Entity SQL 參考](../../../../../docs/framework/data/adonet/ef/language-reference/entity-sql-reference.md)  
  [Entity Framework 的 EntityClient 提供者](../../../../../docs/framework/data/adonet/ef/entityclient-provider-for-the-entity-framework.md)

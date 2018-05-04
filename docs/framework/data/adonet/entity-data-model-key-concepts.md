@@ -1,24 +1,12 @@
 ---
-title: "實體資料模型索引鍵概念"
-ms.custom: 
+title: 實體資料模型索引鍵概念
 ms.date: 03/30/2017
-ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.technology: dotnet-ado
-ms.tgt_pltfrm: 
-ms.topic: article
 ms.assetid: c635a16d-6674-45aa-9344-dcb7df992bab
-caps.latest.revision: "3"
-author: douglaslMS
-ms.author: douglasl
-manager: craigg
-ms.workload: dotnet
-ms.openlocfilehash: f75a4fc0e529b602aca91aa3cfd2dff35e4fe640
-ms.sourcegitcommit: ed26cfef4e18f6d93ab822d8c29f902cff3519d1
+ms.openlocfilehash: d92d2a99562c7eac6fef0ba76cd00241d600c265
+ms.sourcegitcommit: 11f11ca6cefe555972b3a5c99729d1a7523d8f50
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 01/17/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="entity-data-model-key-concepts"></a>實體資料模型索引鍵概念
 實體資料模型 (EDM) 會使用三個索引鍵概念描述資料結構：*實體類型*，*關聯型別*，和*屬性*。 描述任何 EDM 實作中的資料結構時，這些是最重要的概念。  
@@ -49,5 +37,5 @@ ms.lasthandoff: 01/17/2018
   
  [!code-xml[EDM_Example_Model#EDMExampleCSDL](../../../../samples/snippets/xml/VS_Snippets_Data/edm_example_model/xml/books.edmx#edmexamplecsdl)]  
   
-## <a name="see-also"></a>請參閱  
+## <a name="see-also"></a>另請參閱  
  [實體資料模型](../../../../docs/framework/data/adonet/entity-data-model.md)

@@ -1,13 +1,6 @@
 ---
-title: "&lt;追蹤&gt;項目"
-ms.custom: 
+title: '&lt;追蹤&gt;項目'
 ms.date: 03/30/2017
-ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.technology: dotnet-clr
-ms.tgt_pltfrm: 
-ms.topic: article
 f1_keywords:
 - http://schemas.microsoft.com/.NetConfiguration/v2.0#configuration/system.diagnostics/trace
 - http://schemas.microsoft.com/.NetConfiguration/v2.0#trace
@@ -17,16 +10,14 @@ helpviewer_keywords:
 - trace element
 - trace listener, <trace> element
 ms.assetid: 7931c942-63c1-47c3-a045-9d9de3cacdbf
-caps.latest.revision: "13"
 author: mcleblanc
 ms.author: markl
 manager: markl
-ms.workload: dotnet
-ms.openlocfilehash: d7ddcbdbdbbc2924d4f725d2fd401f873a4cfb0b
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.openlocfilehash: 59d5083632630513d2afc1f8d78400310451e46f
+ms.sourcegitcommit: 11f11ca6cefe555972b3a5c99729d1a7523d8f50
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="lttracegt-element"></a>&lt;追蹤&gt;項目
 包含用於收集、儲存及路由傳送追蹤訊息的接聽項。  
@@ -44,7 +35,7 @@ ms.lasthandoff: 12/22/2017
 ```  
   
 ## <a name="attributes-and-elements"></a>屬性和項目  
- 下列章節說明屬性、子項目和父項目。  
+ 下列各節描述屬性、子項目和父項目。  
   
 ### <a name="attributes"></a>屬性  
   
@@ -68,7 +59,7 @@ ms.lasthandoff: 12/22/2017
 |`false`|不會使用全域鎖定，接聽程式是否具備執行緒安全。否則，會使用全域鎖定。|  
 |`true`|會使用全域鎖定不論接聽程式是否具備執行緒安全。 這是預設值。|  
   
-### <a name="child-elements"></a>子元素  
+### <a name="child-elements"></a>子項目  
   
 |項目|描述|  
 |-------------|-----------------|  
@@ -82,7 +73,7 @@ ms.lasthandoff: 12/22/2017
 |`system.diagnostics`|指定用於收集、儲存及路由傳送訊息的追蹤接聽項，以及設定追蹤參數的層級。|  
   
 ## <a name="example"></a>範例  
- 下列範例示範如何使用`<trace>`加入接聽程式的項目`MyListener`至`Listeners`集合。 `MyListener`會建立名為的檔案`MyListener.log`並將輸出寫入檔案。 `useGlobalLock`屬性設為`false`，因而導致全域鎖定未用於追蹤接聽程式是否具備執行緒安全。 `autoflush`屬性設為`true`，因而導致追蹤接聽程式將寫入檔案，而不論是否<xref:System.Diagnostics.Trace.Flush%2A?displayProperty=nameWithType>方法呼叫。 `indentsize`屬性設為 0 （零），這會導致要為零的縮排的接聽程式時<xref:System.Diagnostics.Trace.Indent%2A?displayProperty=nameWithType>方法呼叫。  
+ 下列範例示範如何使用`<trace>`加入接聽程式的項目`MyListener`至`Listeners`集合。 `MyListener` 會建立名為的檔案`MyListener.log`並將輸出寫入檔案。 `useGlobalLock`屬性設為`false`，因而導致全域鎖定未用於追蹤接聽程式是否具備執行緒安全。 `autoflush`屬性設為`true`，因而導致追蹤接聽程式將寫入檔案，而不論是否<xref:System.Diagnostics.Trace.Flush%2A?displayProperty=nameWithType>方法呼叫。 `indentsize`屬性設為 0 （零），這會導致要為零的縮排的接聽程式時<xref:System.Diagnostics.Trace.Indent%2A?displayProperty=nameWithType>方法呼叫。  
   
 ```xml  
 <configuration>  
@@ -96,7 +87,7 @@ ms.lasthandoff: 12/22/2017
 </configuration>  
 ```  
   
-## <a name="see-also"></a>請參閱  
+## <a name="see-also"></a>另請參閱  
  <xref:System.Diagnostics.TraceListener>  
  <xref:System.Diagnostics.DefaultTraceListener>  
  <xref:System.Diagnostics.TextWriterTraceListener>  

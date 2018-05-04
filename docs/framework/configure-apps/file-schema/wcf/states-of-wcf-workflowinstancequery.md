@@ -1,35 +1,23 @@
 ---
-title: "WCF 的 &lt;states&gt;、&lt;workflowInstanceQuery&gt;"
-ms.custom: 
+title: WCF 的 &lt;states&gt;、&lt;workflowInstanceQuery&gt;
 ms.date: 03/30/2017
-ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.technology: dotnet-clr
-ms.tgt_pltfrm: 
-ms.topic: article
 ms.assetid: d17f7525-8035-4e9e-85a0-4cddae59f85d
-caps.latest.revision: "3"
-author: dotnet-bot
-ms.author: dotnetcontent
-manager: wpickett
-ms.workload: dotnet
-ms.openlocfilehash: 5995ebfc2cee0f636d2acd8b1cadead0bc7b67e8
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.openlocfilehash: ef3d8d05dad684b07ee527dbd34ae6269ae57657
+ms.sourcegitcommit: 11f11ca6cefe555972b3a5c99729d1a7523d8f50
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="ltstatesgt-of-wcf-ltworkflowinstancequerygt"></a>WCF 的 &lt;states&gt;、&lt;workflowInstanceQuery&gt;
 表示建立追蹤記錄時，追蹤的工作流程執行個體中的訂閱狀態集合。  
   
  如需追蹤設定檔查詢的詳細資訊，請參閱[追蹤設定檔](../../../../../docs/framework/windows-workflow-foundation/tracking-profiles.md)  
   
- \<system.serviceModel >  
+ \<system.serviceModel>  
 \<追蹤 >  
-\<trackingProfile >  
+\<trackingProfile>  
 \<工作流程 >  
-\<workflowInstanceQueries >  
+\<workflowInstanceQueries>  
 \<w >  
 \<狀態 >  
   
@@ -40,12 +28,12 @@ ms.lasthandoff: 12/22/2017
 ```
   
 ## <a name="attributes-and-elements"></a>屬性和項目  
- 下列章節說明屬性、子項目和父項目。  
+ 下列各節描述屬性、子項目和父項目。  
   
 ### <a name="attributes"></a>屬性  
  無。  
   
-### <a name="child-elements"></a>子元素  
+### <a name="child-elements"></a>子項目  
   
 |項目|描述|  
 |-------------|-----------------|  
@@ -55,7 +43,7 @@ ms.lasthandoff: 12/22/2017
   
 |項目|描述|  
 |-------------|-----------------|  
-|[\<w >](../../../../../docs/framework/configure-apps/file-schema/windows-workflow-foundation/workflowinstancequery.md)|追蹤工作流程執行個體生命週期變更的查詢，例如已開始或已完成的事件。|  
+|[\<workflowInstanceQuery>](../../../../../docs/framework/configure-apps/file-schema/windows-workflow-foundation/workflowinstancequery.md)|追蹤工作流程執行個體生命週期變更的查詢，例如已開始或已完成的事件。|  
   
 ## <a name="remarks"></a>備註  
  按照此集合中的狀態篩選傳回的記錄。  
@@ -91,7 +79,7 @@ ms.lasthandoff: 12/22/2017
 </workflowInstanceQueries>  
 ```  
   
-## <a name="see-also"></a>請參閱  
+## <a name="see-also"></a>另請參閱  
  <xref:System.ServiceModel.Activities.Tracking.Configuration.WorkflowInstanceQueryElement?displayProperty=nameWithType>       
  <xref:System.ServiceModel.Activities.Tracking.Configuration.StateElementCollection?displayProperty=nameWithType>       
  <xref:System.Activities.Tracking.WorkflowInstanceQuery?displayProperty=nameWithType>       

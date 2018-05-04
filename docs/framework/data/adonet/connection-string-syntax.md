@@ -1,26 +1,12 @@
 ---
 title: 連接字串語法
-ms.custom: ''
 ms.date: 03/30/2017
-ms.prod: .net-framework
-ms.reviewer: ''
-ms.suite: ''
-ms.technology:
-- dotnet-ado
-ms.tgt_pltfrm: ''
-ms.topic: article
 ms.assetid: 0977aeee-04d1-4cce-bbed-750c77fce06e
-caps.latest.revision: 11
-author: douglaslMS
-ms.author: douglasl
-manager: craigg
-ms.workload:
-- dotnet
-ms.openlocfilehash: 3939abaf376100e09d244afdb32662729a990ff7
-ms.sourcegitcommit: 86adcc06e35390f13c1e372c36d2e044f1fc31ef
+ms.openlocfilehash: ac7053d1b1b0865f33ae1bcd955493b4c62c7be6
+ms.sourcegitcommit: 11f11ca6cefe555972b3a5c99729d1a7523d8f50
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/26/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="connection-string-syntax"></a>連接字串語法
 每個 .NET Framework 資料提供者都擁有一個 `Connection` 物件，繼承自 <xref:System.Data.Common.DbConnection> 以及提供者特定的 <xref:System.Data.Common.DbConnection.ConnectionString%2A> 屬性。 每個提供者的特定連接字串語法會記錄在其 `ConnectionString` 屬性中。 下表列出 .NET Framework 中包含的四個資料提供者。  
@@ -138,9 +124,9 @@ Data Source=MySqlServer\MSSQL1;"
  <xref:System.Data.OleDb.OleDbConnection.ConnectionString%2A> 的 <xref:System.Data.OleDb.OleDbConnection> 屬性可讓您取得或設定 OLE DB 資料來源 (例如 Microsoft Access) 的連接字串。 您也可以使用 `OleDb` 類別 (Class)，在執行階段建立 <xref:System.Data.OleDb.OleDbConnectionStringBuilder> 連接字串。  
   
 ### <a name="oledb-connection-string-syntax"></a>OleDb 連接字串語法  
- 您必須指定 <xref:System.Data.OleDb.OleDbConnection> 連接字串的提供者名稱。 下列連接字串會使用 Jet 提供者連接至 Microsoft Access 資料庫。 請注意，如果資料庫未受保護 (預設值)，則 `UserID` 及 `Password` 關鍵字是選擇性項目。  
+ 您必須指定 <xref:System.Data.OleDb.OleDbConnection> 連接字串的提供者名稱。 下列連接字串會使用 Jet 提供者連接至 Microsoft Access 資料庫。 請注意，如果資料庫未受保護 (預設值)，則 `User ID` 及 `Password` 關鍵字是選擇性項目。  
   
-```  
+```   
 Provider=Microsoft.Jet.OLEDB.4.0; Data Source=d:\Northwind.mdb;User ID=Admin;Password=;   
 ```  
   

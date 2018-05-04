@@ -15,11 +15,11 @@ ms.assetid: c025b2e0-2357-4c27-8461-118f0090aeff
 caps.latest.revision: 43
 author: BillWagner
 ms.author: wiwagn
-ms.openlocfilehash: 58538b690958e11b1590c13e6709cac4109ef49d
-ms.sourcegitcommit: 86adcc06e35390f13c1e372c36d2e044f1fc31ef
+ms.openlocfilehash: 51a92f89415fd3750d8d2e1880be0d9c2867600d
+ms.sourcegitcommit: 2042de78fcdceebb6b8ac4b7a292b93e8782cbf5
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/26/2018
+ms.lasthandoff: 04/27/2018
 ---
 # <a name="interoperability-overview-c-programming-guide"></a>互通性概觀 (C# 程式設計手冊)
 本主題說明可在 C# Managed 程式碼和 Unmanaged 程式碼之間啟用互通性的方法。  
@@ -42,7 +42,7 @@ ms.lasthandoff: 04/26/2018
   
 2.  將 COM 元件或型別程式庫的參考新增至專案。  
   
-     當您新增參考時，[!INCLUDE[vsprvs](~/includes/vsprvs-md.md)] 會使用接受型別程式庫作為輸入的 [Tlbimp.exe (型別程式庫匯入工具)](../../../../docs/framework/tools/tlbimp-exe-type-library-importer.md)，以輸出 .NET Framework Interop 組件。 此組件 (也稱為執行階段可呼叫包裝函式 (RCW)) 包含 Managed 類別和介面，以包裝型別程式庫中的 COM 類別和介面。 [!INCLUDE[vsprvs](~/includes/vsprvs-md.md)] 會將產生的組件參考新增至專案。  
+     當您新增參考時，Visual Studio 會使用接受型別程式庫作為輸入的 [Tlbimp.exe (型別程式庫匯入工具)](../../../../docs/framework/tools/tlbimp-exe-type-library-importer.md)，以輸出 .NET Framework Interop 組件。 此組件 (也稱為執行階段可呼叫包裝函式 (RCW)) 包含 Managed 類別和介面，以包裝型別程式庫中的 COM 類別和介面。 Visual Studio 會將產生的組件參考新增至專案。  
   
 3.  建立定義於 RCW 之類別的執行個體。 這會接著建立 COM 物件的執行個體。  
   
@@ -59,7 +59,7 @@ ms.lasthandoff: 04/26/2018
   
 2.  產生 COM 型別程式庫並註冊供 COM 使用。  
   
-     您可以修改 Visual C# 專案屬性，以自動為 COM Interop 註冊 C# 組件。 [!INCLUDE[vsprvs](~/includes/vsprvs-md.md)] 使用 [Regasm.exe (組件登錄工具)](../../../../docs/framework/tools/regasm-exe-assembly-registration-tool.md)，並使用接受 Managed 組件作為輸入的 `/tlb` 命令列參數，以產生型別程式庫。 此型別程式庫描述組件中的 `public` 類型，並新增登錄項目，讓 COM 用戶端可以建立 Managed 類別。  
+     您可以修改 Visual C# 專案屬性，以自動為 COM Interop 註冊 C# 組件。 Visual Studio 使用 [Regasm.exe (組件登錄工具)](../../../../docs/framework/tools/regasm-exe-assembly-registration-tool.md)，並使用接受受控組件作為輸入的 `/tlb` 命令列參數，以產生型別程式庫。 此型別程式庫描述組件中的 `public` 類型，並新增登錄項目，讓 COM 用戶端可以建立 Managed 類別。  
   
  如需詳細資訊，請參閱[將 .NET Framework 元件公開給 COM](../../../../docs/framework/interop/exposing-dotnet-components-to-com.md) 和[範例 COM 類別](../../../csharp/programming-guide/interop/example-com-class.md)。  
   

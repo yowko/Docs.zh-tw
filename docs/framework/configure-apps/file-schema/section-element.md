@@ -1,9 +1,6 @@
 ---
-title: "&lt;區段&gt;項目"
+title: '&lt;區段&gt;項目'
 ms.date: 05/01/2017
-ms.prod: .net-framework
-ms.technology: dotnet-clr
-ms.topic: article
 f1_keywords:
 - http://schemas.microsoft.com/.NetConfiguration/v2.0#configuration/configSections/section
 - http://schemas.microsoft.com/.NetConfiguration/v2.0#configuration/configSections/sectionGroup/section
@@ -13,13 +10,11 @@ helpviewer_keywords:
 ms.assetid: ec7d4110-2403-47ac-8218-499bfe9d5ddb
 author: guardrex
 ms.author: mairaw
-manager: wpickett
-ms.workload: dotnet
-ms.openlocfilehash: 4e7de6e5ce6415c58deeca14df74c26e24957054
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.openlocfilehash: 17b44ca93efc26f4732f5fe2926f894257d8f984
+ms.sourcegitcommit: 11f11ca6cefe555972b3a5c99729d1a7523d8f50
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="section-element"></a>\<區段 > 項目
 
@@ -48,7 +43,7 @@ ms.lasthandoff: 12/22/2017
 |           | 描述 |
 | --------- | ----------- |
 | **name**  | 指定之組態區段的名稱。 |
-| **type**  | 指定從組態檔讀取區段的組態區段處理常式類別的名稱。 類型值的語法 」 fully-qualified-section-handler-class-name 簡單組件名稱 」。 簡單的組件名稱是根檔案名稱，而不*.dll*檔案副檔名。 |
+| **type**  | 指定從組態檔讀取區段的組態區段處理常式類別的名稱。 類型值的語法 」 fully-qualified-section-handler-class-name 簡單組件名稱 」。 簡單的組件名稱是根檔案名稱，而不 *.dll*檔案副檔名。 |
 
 ## <a name="optional-attributes"></a>選擇性屬性
 
@@ -57,17 +52,17 @@ ms.lasthandoff: 12/22/2017
 |                     | 描述 |
 | ------------------- | ----------- |
 | **allowDefinition** | 指定可以在使用中的區段的組態檔。 使用下列其中一個值：<br><br>**每個地方**<br>允許以用於任何組態檔區段。 這是預設值。<br>**MachineOnly**<br>允許區段只能用在電腦組態檔 (*Machine.config*)。<br>**MachineToApplication**<br>允許用在電腦組態檔或應用程式組態檔區段。 |
-| **allowLocation**   | 決定是否可以在使用區段**\<位置 >**項目。 使用下列其中一個值：<br><br>**true**<br>允許區段內使用**\<位置 >**項目。 這是預設值。<br>**false**<br>不允許使用於區段**\<位置 >**項目。 |
+| **allowLocation**   | 決定是否可以在使用區段**\<位置 >** 項目。 使用下列其中一個值：<br><br>**true**<br>允許區段內使用**\<位置 >** 項目。 這是預設值。<br>**false**<br>不允許使用於區段**\<位置 >** 項目。 |
 
 ## <a name="parent-elements"></a>父元素
 
 |     | 描述 |
 | --- | ----------- |
-| [**\<c >**項目](~/docs/framework/configure-apps/file-schema/configsections-element-for-configuration.md) | 包含組態區段和命名空間宣告。 |
-| [**\<sectionGroup >**項目](~/docs/framework/configure-apps/file-schema/sectiongroup-element-for-configsections.md) | 定義組態區段的命名空間。 |
+| [**\<c >** 項目](~/docs/framework/configure-apps/file-schema/configsections-element-for-configuration.md) | 包含組態區段和命名空間宣告。 |
+| [**\<sectionGroup >** 項目](~/docs/framework/configure-apps/file-schema/sectiongroup-element-for-configsections.md) | 定義組態區段的命名空間。 |
 
 > [!NOTE]
-> A **\<區段 >**元素為子元素中的其中一個 **\<c >**或 **\<sectionGroup >**但不是兩者。
+> A **\<區段 >** 元素為子元素中的其中一個 **\<c >** 或 **\<sectionGroup >** 但不是兩者。
 
 ## <a name="child-elements"></a>子元素
 

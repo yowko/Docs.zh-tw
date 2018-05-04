@@ -1,31 +1,19 @@
 ---
 title: '&lt;channelPoolSettings&gt;'
-ms.custom: 
 ms.date: 03/30/2017
-ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.technology: dotnet-clr
-ms.tgt_pltfrm: 
-ms.topic: article
 ms.assetid: 4755f3d3-4213-4c68-ae7f-45b67d744459
-caps.latest.revision: "8"
-author: dotnet-bot
-ms.author: dotnetcontent
-manager: wpickett
-ms.workload: dotnet
-ms.openlocfilehash: 09496add0adcc11756b6aae01a0236fe590f819f
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.openlocfilehash: ad722fbc34617ef7f424d5f1c4418e1e1cb45344
+ms.sourcegitcommit: 11f11ca6cefe555972b3a5c99729d1a7523d8f50
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="ltchannelpoolsettingsgt"></a>&lt;channelPoolSettings&gt;
 指定自訂繫結的通道集區設定。  
   
- \<system.serviceModel >  
+ \<system.serviceModel>  
 \<繫結 >  
-\<customBinding >  
+\<customBinding>  
 \<繫結 >  
 \<oneWay >  
 \<channelPoolSettings >  
@@ -40,7 +28,7 @@ ms.lasthandoff: 12/22/2017
 ```  
   
 ## <a name="attributes-and-elements"></a>屬性和項目  
- 下列章節說明屬性、子項目和父項目。  
+ 下列各節描述屬性、子項目和父項目。  
   
 ### <a name="attributes"></a>屬性  
   
@@ -50,7 +38,7 @@ ms.lasthandoff: 12/22/2017
 |`leaseTimeout`|<xref:System.TimeSpan>，指定已傳回到集區之通道多久之後將關閉的間隔時間。 預設為 00:10:00。|  
 |`maxOutboundChannelsPerEndpoint`|正整數，指定每個遠端端點可儲存在集區中的最大通道數目。 預設值為 10。|  
   
-### <a name="child-elements"></a>子元素  
+### <a name="child-elements"></a>子項目  
  無。  
   
 ### <a name="parent-elements"></a>父項目  
@@ -70,7 +58,7 @@ ms.lasthandoff: 12/22/2017
   
 -   `maxOutboundChannelsPerEndpoint` 配額會設定伺服器和用戶端雙方的快取限制，並可用來改善可靠性。 預設值是依據最為保守穩當的資源配置所設定，這個設定值適合開發環境和小規模的安裝情況。 如果安裝時資源不足，或是連線不論是否有額外的資源都會受到限制，服務系統管理員就應該檢查此值。  
   
-## <a name="see-also"></a>請參閱  
+## <a name="see-also"></a>另請參閱  
  <xref:System.ServiceModel.Channels.OneWayBindingElement.ChannelPoolSettings%2A>  
  <xref:System.ServiceModel.Channels.ChannelPoolSettings>  
  <xref:System.ServiceModel.Configuration.OneWayElement.ChannelPoolSettings%2A>  
@@ -80,4 +68,4 @@ ms.lasthandoff: 12/22/2017
  [繫結](../../../../../docs/framework/wcf/bindings.md)  
  [擴充繫結](../../../../../docs/framework/wcf/extending/extending-bindings.md)  
  [自訂繫結](../../../../../docs/framework/wcf/extending/custom-bindings.md)  
- [\<customBinding >](../../../../../docs/framework/configure-apps/file-schema/wcf/custombinding.md)
+ [\<customBinding>](../../../../../docs/framework/configure-apps/file-schema/wcf/custombinding.md)

@@ -1,26 +1,12 @@
 ---
 title: INTERSECT (Entity SQL)
-ms.custom: ''
 ms.date: 03/30/2017
-ms.prod: .net-framework
-ms.reviewer: ''
-ms.suite: ''
-ms.technology:
-- dotnet-ado
-ms.tgt_pltfrm: ''
-ms.topic: article
 ms.assetid: 93c6fe33-f341-4b52-911e-adf503891951
-caps.latest.revision: ''
-author: douglaslMS
-ms.author: douglasl
-manager: craigg
-ms.workload:
-- dotnet
-ms.openlocfilehash: 38814d3f4e8bca6a3a20d14c41d7674a205e30d2
-ms.sourcegitcommit: ed26cfef4e18f6d93ab822d8c29f902cff3519d1
+ms.openlocfilehash: 98515ccf111bf78f49347f744a1226ca1957fbb6
+ms.sourcegitcommit: 11f11ca6cefe555972b3a5c99729d1a7523d8f50
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 01/17/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="intersect-entity-sql"></a>INTERSECT (Entity SQL)
 傳回 INTERSECT 運算元左右兩側之查詢運算式都會傳回的任何相異值集合。 所有運算式都必須具有與 `expression`相同的型別或是共同基底型別或衍生型別。  
@@ -50,5 +36,5 @@ expression INTERSECT expression
   
  [!code-csharp[DP EntityServices Concepts 2#INTERSECT](../../../../../../samples/snippets/csharp/VS_Snippets_Data/dp entityservices concepts 2/cs/entitysql.cs#intersect)]  
   
-## <a name="see-also"></a>請參閱  
+## <a name="see-also"></a>另請參閱  
  [Entity SQL 參考](../../../../../../docs/framework/data/adonet/ef/language-reference/entity-sql-reference.md)

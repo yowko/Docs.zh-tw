@@ -12,11 +12,11 @@ ms.assetid: 3086ab38-3be5-4b22-9385-7d0e16b04f6a
 caps.latest.revision: 23
 author: dotnet-bot
 ms.author: dotnetcontent
-ms.openlocfilehash: 306a618f193f9223443938ae2a9e0996c1b5295c
-ms.sourcegitcommit: 86adcc06e35390f13c1e372c36d2e044f1fc31ef
+ms.openlocfilehash: fb6645279a71252ff0ac81348c460b8981771797
+ms.sourcegitcommit: 2042de78fcdceebb6b8ac4b7a292b93e8782cbf5
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/26/2018
+ms.lasthandoff: 04/27/2018
 ---
 # <a name="accessing-data-in-visual-basic-applications"></a>在 Visual Basic 應用程式中存取資料
 Visual Basic 包括數個新功能，以協助開發可存取資料的應用程式。 將項目從[資料來源視窗](/visualstudio/data-tools/add-new-data-sources)拖曳至表單，以建立 Windows 應用程式的資料繫結表單。 將項目從 [資料來源] 視窗拖曳至現有控制項，以將控制項繫結至資料。  
@@ -26,7 +26,7 @@ Visual Basic 包括數個新功能，以協助開發可存取資料的應用程�
  提供頁面的連結，這些頁面討論如何將資料存取功能納入應用程式。
 
  [適用於 .NET 的 Visual Studio Data Tools](/visualstudio/data-tools/visual-studio-data-tools-for-dotnet)  
- 提供頁面的連結，這些頁面與使用 [!INCLUDE[vsprvs](~/includes/vsprvs-md.md)] 建立可處理資料的應用程式相關。  
+ 提供頁面的連結，這些頁面與使用 Visual Studio 建立可處理資料的應用程式相關。  
   
  [LINQ](../../visual-basic/programming-guide/language-features/linq/index.md)  
  提供主題的連結，這些主題描述如何搭配使用 LINQ 與 Visual Basic。  
@@ -41,7 +41,7 @@ Visual Basic 包括數個新功能，以協助開發可存取資料的應用程�
  提供主題的連結，這些主題與如何建立多層資料應用程式相關。  
      
  [新增連線](/visualstudio/data-tools/add-new-connections)  
- 提供頁面的連結，這些頁面與使用 [!INCLUDE[vsprvs](~/includes/vsprvs-md.md)] 以利用設計階段工具和 ADO.NET 連線物件將應用程式連線至資料相關。  
+ 提供頁面的連結，這些頁面與使用 Visual Studio 以利用設計階段工具和 ADO.NET 連線物件將應用程式連線至資料相關。  
 
  [Visual Studio 中的資料集工具](/visualstudio/data-tools/dataset-tools-in-visual-studio)  
  提供頁面的連結，這些頁面描述如何將資料載入資料集以及如何執行 SQL 陳述式和預存程序。  

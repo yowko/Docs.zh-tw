@@ -1,27 +1,15 @@
 ---
-title: "處理 DataAdapter 的事件"
-ms.custom: 
+title: 處理 DataAdapter 的事件
 ms.date: 03/30/2017
-ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.technology: dotnet-ado
-ms.tgt_pltfrm: 
-ms.topic: article
 dev_langs:
 - csharp
 - vb
 ms.assetid: 11515b25-ee49-4b1d-9294-a142147c1ec5
-caps.latest.revision: "3"
-author: douglaslMS
-ms.author: douglasl
-manager: craigg
-ms.workload: dotnet
-ms.openlocfilehash: 71524de2edbedb24cacc6727654aac5be0a48bb7
-ms.sourcegitcommit: ed26cfef4e18f6d93ab822d8c29f902cff3519d1
+ms.openlocfilehash: f2b07b8d42069fa98ba51dea75f9695e7adce0b0
+ms.sourcegitcommit: 11f11ca6cefe555972b3a5c99729d1a7523d8f50
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 01/17/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="handling-dataadapter-events"></a>處理 DataAdapter 的事件
 ADO.NET <xref:System.Data.Common.DataAdapter> 公開 (Expose) 的三個事件可讓您用來回應資料來源中的資料變更。 下表說明 `DataAdapter` 事件。  
@@ -197,7 +185,7 @@ protected static void FillError(object sender, FillErrorEventArgs args)
 }  
 ```  
   
-## <a name="see-also"></a>請參閱  
+## <a name="see-also"></a>另請參閱  
  [DataAdapter 和 DataReader](../../../../docs/framework/data/adonet/dataadapters-and-datareaders.md)  
  [處理 DataSet 的事件](../../../../docs/framework/data/adonet/dataset-datatable-dataview/handling-dataset-events.md)  
  [處理 DataTable 事件](../../../../docs/framework/data/adonet/dataset-datatable-dataview/handling-datatable-events.md)  

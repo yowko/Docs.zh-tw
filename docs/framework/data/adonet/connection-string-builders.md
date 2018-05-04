@@ -1,27 +1,15 @@
 ---
-title: "連接字串產生器"
-ms.custom: 
+title: 連接字串產生器
 ms.date: 03/30/2017
-ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.technology: dotnet-ado
-ms.tgt_pltfrm: 
-ms.topic: article
 dev_langs:
 - csharp
 - vb
 ms.assetid: 8434b608-c4d3-43d3-8ae3-6d8c6b726759
-caps.latest.revision: "3"
-author: douglaslMS
-ms.author: douglasl
-manager: craigg
-ms.workload: dotnet
-ms.openlocfilehash: beec0aba34bc38ba310aa87dadeeaa4b41c82649
-ms.sourcegitcommit: ed26cfef4e18f6d93ab822d8c29f902cff3519d1
+ms.openlocfilehash: 01bbf726ffa8d1c595b1ef53df420431bf28560f
+ms.sourcegitcommit: 11f11ca6cefe555972b3a5c99729d1a7523d8f50
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 01/17/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="connection-string-builders"></a>連接字串產生器
 在舊版的[!INCLUDE[vstecado](../../../../includes/vstecado-md.md)]的編譯時間檢查含有串連字串值並未發生，連接字串，以便在執行階段，產生不正確的關鍵字<xref:System.ArgumentException>。 每個 [!INCLUDE[dnprdnshort](../../../../includes/dnprdnshort-md.md)] 資料提供者都支援不同語法的連接字串關鍵字，導致人工建構有效連接字串的難度大為增加。 為了處理這個問題，[!INCLUDE[vstecado](../../../../includes/vstecado-md.md)] 2.0 為每個 [!INCLUDE[dnprdnshort](../../../../includes/dnprdnshort-md.md)] 資料提供者導入了全新的連接字串產生器 (Builder)。 每個資料提供者都具有繼承自 <xref:System.Data.Common.DbConnectionStringBuilder> 強型別連接字串產生器類別。 下表列出 [!INCLUDE[dnprdnshort](../../../../includes/dnprdnshort-md.md)] 資料提供者和其相關的連接字串產生器類別。  
@@ -90,7 +78,7 @@ initial catalog="AdventureWorks;NewValue=Bad"
  [!code-csharp[DataWorks SqlConnectionStringBuilder.UserNamePwd#1](../../../../samples/snippets/csharp/VS_Snippets_ADO.NET/DataWorks SqlConnectionStringBuilder.UserNamePwd/CS/source.cs#1)]
  [!code-vb[DataWorks SqlConnectionStringBuilder.UserNamePwd#1](../../../../samples/snippets/visualbasic/VS_Snippets_ADO.NET/DataWorks SqlConnectionStringBuilder.UserNamePwd/VB/source.vb#1)]  
   
-## <a name="see-also"></a>請參閱  
+## <a name="see-also"></a>另請參閱  
  [連接字串](../../../../docs/framework/data/adonet/connection-strings.md)  
  [隱私權和資料安全性](../../../../docs/framework/data/adonet/privacy-and-data-security.md)  
  [ADO.NET Managed 提供者和 DataSet 開發人員中心](http://go.microsoft.com/fwlink/?LinkId=217917)

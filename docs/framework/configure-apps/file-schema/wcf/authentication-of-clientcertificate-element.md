@@ -1,33 +1,21 @@
 ---
-title: "&lt;clientCertificate&gt; 的 &lt;authentication&gt; 項目"
-ms.custom: 
+title: '&lt;clientCertificate&gt; 的 &lt;authentication&gt; 項目'
 ms.date: 03/30/2017
-ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.technology: dotnet-clr
-ms.tgt_pltfrm: 
-ms.topic: article
 ms.assetid: 4a55eea2-1826-4026-b911-b7cc9e9c8bfe
-caps.latest.revision: "16"
-author: dotnet-bot
-ms.author: dotnetcontent
-manager: wpickett
-ms.workload: dotnet
-ms.openlocfilehash: e909bd7f6257445fe4c42dd92ae366676f72d60c
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.openlocfilehash: ccc184f63428fd4a12b9047c0bcf4416e87f24d2
+ms.sourcegitcommit: 11f11ca6cefe555972b3a5c99729d1a7523d8f50
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="ltauthenticationgt-of-ltclientcertificategt-element"></a>&lt;clientCertificate&gt; 的 &lt;authentication&gt; 項目
 指定服務所使用之用戶端憑證的驗證行為。  
   
- \<系統。ServiceModel >  
+ \<system.ServiceModel>  
 \<行為 >  
-\<serviceBehaviors >  
+\<serviceBehaviors>  
 \<行為 >  
-\<serviceCredentials >  
+\<serviceCredentials>  
 \<clientCertificate >  
 \<驗證 >  
   
@@ -56,7 +44,7 @@ trustedStoreLocation="CurrentUser/LocalMachine"
 |includeWindowsGroups|選擇性布林值。 指定 Windows 群組是否包含在安全性內容中。 將這個屬性設定為 `true` 會有效能方面的影響，因為它會造成完整的群組擴充。 如果您不需要建立使用者所屬之群組的清單，請將此屬性設定為 `false`。|  
 |mapClientCertificateToWindowsAcccount|布林值。 指定是否能夠使用憑證將用戶端對應至 Windows 身分識別。 必須啟用 Active Directory 才能這麼做。|  
 |revocationMode|選擇性列舉。 用於檢查撤銷憑證清單 (RCL) 的模式之一。 預設為 `Online`。 使用 HTTP 傳輸安全性時，將忽略此值。|  
-|trustedStoreLocation|選擇性列舉。 兩個系統存放位置的其中一個：`LocalMachine` 或 `CurrentUser`。 當與用戶端交涉服務憑證時，會使用這個值。 針對執行驗證**受信任的人**將儲存在指定的存放區位置。 預設為 `CurrentUser`。|  
+|trustedStoreLocation|選擇性列舉。 兩個系統存放位置的其中一個：`LocalMachine` 或 `CurrentUser`。 當與用戶端交涉服務憑證時，會使用這個值。 針對執行驗證**受信任的人**將儲存在指定的存放區位置。 預設值為 `CurrentUser`。|  
   
 ## <a name="customcertificatevalidatortype-attribute"></a>customCertificateValidatorType 屬性  
   
@@ -82,7 +70,7 @@ trustedStoreLocation="CurrentUser/LocalMachine"
 |-----------|-----------------|  
 |列舉|下列其中一個值：`LocalMachine` 或 `CurrentUser`。 預設為 `CurrentUser`。 如果用戶端應用程式是在系統帳戶下執行，則憑證通常位於 `LocalMachine` 之下。 如果用戶端應用程式是在使用者帳戶下執行，則憑證通常位於 `CurrentUser`。|  
   
-### <a name="child-elements"></a>子元素  
+### <a name="child-elements"></a>子項目  
  無。  
   
 ### <a name="parent-elements"></a>父項目  
@@ -118,7 +106,7 @@ trustedStoreLocation="CurrentUser/LocalMachine"
 </serviceBehaviors>  
 ```  
   
-## <a name="see-also"></a>請參閱  
+## <a name="see-also"></a>另請參閱  
  <xref:System.ServiceModel.Security.X509ClientCertificateAuthentication>  
  <xref:System.ServiceModel.Security.X509CertificateValidationMode>  
  <xref:System.ServiceModel.Security.X509CertificateInitiatorServiceCredential.Authentication%2A>  

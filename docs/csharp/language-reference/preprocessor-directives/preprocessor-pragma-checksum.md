@@ -13,11 +13,11 @@ ms.assetid: 3673e4ca-6098-4ec1-890f-8fceb2a794a2
 caps.latest.revision: 11
 author: BillWagner
 ms.author: wiwagn
-ms.openlocfilehash: 9b196bbbce110acb596602fa4de2507515cdbb68
-ms.sourcegitcommit: 86adcc06e35390f13c1e372c36d2e044f1fc31ef
+ms.openlocfilehash: 37e06d97b082ba6de75d8efa81723442403e39be
+ms.sourcegitcommit: 03ee570f6f528a7d23a4221dcb26a9498edbdf8c
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/26/2018
+ms.lasthandoff: 04/28/2018
 ---
 # <a name="pragma-checksum-c-reference"></a>#pragma 總和檢查碼 (C# 參考)
 產生來源檔案的總和檢查碼協助偵錯[!INCLUDE[vstecasp](~/includes/vstecasp-md.md)]頁面。  
@@ -33,7 +33,7 @@ ms.lasthandoff: 04/26/2018
  需要監視是否有變更或更新的檔案名稱。  
   
  `"{guid}"`  
- 檔案的全域唯一識別碼 (GUID)。  
+ 雜湊演算法的全域唯一識別碼 (GUID)。  
   
  `"checksum_bytes"`  
  代表總和檢查碼位元組的十六進位數字字串。 必須是偶數的十六進位數字。 奇數的數字會導致編譯時期警告，並且忽略指示詞。  
@@ -54,7 +54,7 @@ class TestClass
 {  
     static int Main()  
     {  
-        #pragma checksum "file.cs" "{3673e4ca-6098-4ec1-890f-8fceb2a794a2}" "{012345678AB}" // New checksum  
+        #pragma checksum "file.cs" "{406EA660-64CF-4C82-B6F0-42D48172A799}" "ab007f1d23d9" // New checksum  
     }  
 }  
 ```  

@@ -1,13 +1,6 @@
 ---
-title: "&lt;httpWebRequest&gt;項目 （網路設定）"
-ms.custom: 
+title: '&lt;httpWebRequest&gt;項目 （網路設定）'
 ms.date: 03/30/2017
-ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.technology: dotnet-clr
-ms.tgt_pltfrm: 
-ms.topic: article
 f1_keywords:
 - http://schemas.microsoft.com/.NetConfiguration/v2.0#configuration/system.net/settings/httpWebRequest
 - http://schemas.microsoft.com/.NetConfiguration/v2.0#httpWebRequest
@@ -15,22 +8,20 @@ helpviewer_keywords:
 - <httpWebRequest> element
 - httpWebRequest element
 ms.assetid: 52acd9d2-5bdc-4dc4-9c2a-f0a476ccbb31
-caps.latest.revision: "18"
 author: mcleblanc
 ms.author: markl
 manager: markl
-ms.workload: dotnet
-ms.openlocfilehash: dadb2d7635f132b44d6fca8c56f53b847ffb1ff9
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.openlocfilehash: 1d1dce38e5188824ba1412d3f2a285bd2304f147
+ms.sourcegitcommit: 11f11ca6cefe555972b3a5c99729d1a7523d8f50
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="lthttpwebrequestgt-element-network-settings"></a>&lt;httpWebRequest&gt;項目 （網路設定）
 可自訂 Web 要求參數。  
   
  \<configuration>  
-\<system.net >  
+\<system.net>  
 \<設定 >  
 \<httpWebRequest >  
   
@@ -46,7 +37,7 @@ ms.lasthandoff: 12/22/2017
 ```  
   
 ## <a name="attributes-and-elements"></a>屬性和項目  
- 下列章節說明屬性、子項目和父項目。  
+ 下列各節描述屬性、子項目和父項目。  
   
 ### <a name="attributes"></a>屬性  
   
@@ -57,7 +48,7 @@ ms.lasthandoff: 12/22/2017
 |`maximumUnauthorizedUploadLength`|指定上傳的最大長度，以回應未經授權的錯誤碼，以位元組為單位。 預設值為 -1。 -1 表示沒有大小限制，將會加諸於上傳。|  
 |`useUnsafeHeaderParsing`|指定是否啟用不安全的標頭解析。 預設值是 `false`。|  
   
-### <a name="child-elements"></a>子元素  
+### <a name="child-elements"></a>子項目  
  無。  
   
 ### <a name="parent-elements"></a>父項目  
@@ -87,6 +78,6 @@ ms.lasthandoff: 12/22/2017
 </configuration>  
 ```  
   
-## <a name="see-also"></a>請參閱  
+## <a name="see-also"></a>另請參閱  
  <xref:System.Net.HttpWebRequest.MaximumResponseHeadersLength%2A>  
  [網路設定結構描述](../../../../../docs/framework/configure-apps/file-schema/network/index.md)

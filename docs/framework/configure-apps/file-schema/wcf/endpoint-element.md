@@ -1,29 +1,17 @@
 ---
-title: "&lt;endpoint&gt; 項目"
-ms.custom: 
+title: '&lt;endpoint&gt; 項目'
 ms.date: 03/30/2017
-ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.technology: dotnet-clr
-ms.tgt_pltfrm: 
-ms.topic: article
 ms.assetid: 2fc8fedc-78d0-4e87-8142-fbfd26c15a4e
-caps.latest.revision: "23"
-author: dotnet-bot
-ms.author: dotnetcontent
-manager: wpickett
-ms.workload: dotnet
-ms.openlocfilehash: 7175cf55df6bb735367effa8f806a472b9ce5ea6
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.openlocfilehash: ef436acca40eaac135a54042b62abd76ec55febf
+ms.sourcegitcommit: 11f11ca6cefe555972b3a5c99729d1a7523d8f50
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="ltendpointgt-element"></a>&lt;endpoint&gt; 項目
 指定服務端點的繫結、合約和位址屬性，以用於公開服務。  
   
- \<系統。ServiceModel >  
+ \<system.ServiceModel>  
 \<服務 >  
 \<端點 >  
   
@@ -43,7 +31,7 @@ ms.lasthandoff: 12/22/2017
 ```  
   
 ## <a name="attributes-and-elements"></a>屬性和項目  
- 下列章節說明屬性、子項目和父項目。  
+ 下列各節描述屬性、子項目和父項目。  
   
 ### <a name="attributes"></a>屬性  
   
@@ -63,18 +51,18 @@ ms.lasthandoff: 12/22/2017
 |listenUri|字串，指定服務端點接聽的 URI。 預設為空字串。|  
 |name|選擇性屬性。 指定服務端點名稱的字串。 預設值是繫結名稱和合約描述名稱的串連。 服務可能會有多個端點，因此端點的 `name` 屬性會與服務的名稱有所區別。|  
   
-### <a name="child-elements"></a>子元素  
+### <a name="child-elements"></a>子項目  
   
 |項目|描述|  
 |-------------|-----------------|  
-|[\<標頭 >](../../../../../docs/framework/configure-apps/file-schema/wcf/headers.md)|位址標頭的集合。|  
+|[\<headers>](../../../../../docs/framework/configure-apps/file-schema/wcf/headers.md)|位址標頭的集合。|  
 |[\<身分識別 >](../../../../../docs/framework/configure-apps/file-schema/wcf/identity.md)|身分識別，可讓其他端點與此端點交換訊息，以啟用端點的驗證。|  
   
 ### <a name="parent-elements"></a>父項目  
   
 |項目|描述|  
 |-------------|-----------------|  
-|[\<服務 >](../../../../../docs/framework/configure-apps/file-schema/wcf/service.md)|組態區段，它會定義用戶端可以連線的端點清單。|  
+|[\<service>](../../../../../docs/framework/configure-apps/file-schema/wcf/service.md)|組態區段，它會定義用戶端可以連線的端點清單。|  
   
 ## <a name="example"></a>範例  
  這是服務端點組態的範例。  
@@ -93,7 +81,7 @@ ms.lasthandoff: 12/22/2017
 </endpoint>  
 ```  
   
-## <a name="see-also"></a>請參閱  
+## <a name="see-also"></a>另請參閱  
  <xref:System.ServiceModel.Configuration.ServiceEndpointElement>  
  <xref:System.ServiceModel.EndpointAddress>  
  <xref:System.ServiceModel.Description.ServiceEndpoint>  

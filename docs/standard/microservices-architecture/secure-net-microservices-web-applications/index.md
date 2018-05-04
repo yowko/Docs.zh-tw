@@ -1,21 +1,14 @@
 ---
 title: 保護 .NET 微服務和 Web 應用程式
 description: 容器化 .NET 應用程式的 .NET 微服務架構 | 保護 .NET 微服務和 Web 應用程式
-keywords: Docker, 微服務, ASP.NET, 容器
 author: mjrousos
 ms.author: wiwagn
 ms.date: 05/26/2017
-ms.prod: .net-core
-ms.technology: dotnet-docker
-ms.topic: article
-ms.workload:
-- dotnet
-- dotnetcore
-ms.openlocfilehash: 0ca69ada16fbb5a6757da96a7ea64d2113c15b6f
-ms.sourcegitcommit: 2e8acae16ae802f2d6d04e3ce0a6dbf04e476513
+ms.openlocfilehash: c2c7d692517c6a46225542936e05656db915bf0f
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/18/2018
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="securing-net-microservices-and-web-applications"></a>保護 .NET 微服務和 Web 應用程式
 

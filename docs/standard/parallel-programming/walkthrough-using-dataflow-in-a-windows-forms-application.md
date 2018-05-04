@@ -15,11 +15,11 @@ manager: wpickett
 ms.workload:
 - dotnet
 - dotnetcore
-ms.openlocfilehash: f28e103d6241d954dd6ac4f7e9c7fcb20a06ea0b
-ms.sourcegitcommit: 86adcc06e35390f13c1e372c36d2e044f1fc31ef
+ms.openlocfilehash: 8100f986a98c9e4712603c45a88d48cbb93be649
+ms.sourcegitcommit: 2042de78fcdceebb6b8ac4b7a292b93e8782cbf5
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/26/2018
+ms.lasthandoff: 04/27/2018
 ---
 # <a name="walkthrough-using-dataflow-in-a-windows-forms-application"></a>逐步解說：在 Windows Forms 應用程式中使用資料流程
 本文鍵示範如何建立資料流程區塊網路，其可以在 Windows Forms 應用程式中執行映像處理。  
@@ -48,7 +48,7 @@ ms.lasthandoff: 04/26/2018
   
 #### <a name="to-create-the-windows-forms-application"></a>若要建立 Windows Forms 應用程式  
   
-1.  在 [!INCLUDE[vsprvs](../../../includes/vsprvs-md.md)] 中，建立 Visual C# 或 Visual Basic **Windows Forms 應用程式**專案。 在本文件中，專案命名為 `CompositeImages`。  
+1.  在 Visual Studio 中，建立 Visual C# 或 Visual Basic **Windows Forms 應用程式**專案。 在本文件中，專案命名為 `CompositeImages`。  
   
 2.  在主要表單 Form1.cs (在 Visual Basic 中為 Form1.vb) 的表單設計工具上，新增 <xref:System.Windows.Forms.ToolStrip> 控制項。  
   

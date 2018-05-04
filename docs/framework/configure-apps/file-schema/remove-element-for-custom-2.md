@@ -1,10 +1,6 @@
 ---
-title: "&lt;移除&gt;NameValueSectionHandler DictionarySectionHandler 的項目"
+title: '&lt;移除&gt;NameValueSectionHandler DictionarySectionHandler 的項目'
 ms.date: 05/01/2017
-ms.prod: .net-framework
-ms.technology:
-- dotnet-clr
-ms.topic: article
 f1_keywords:
 - http://schemas.microsoft.com/.NetConfiguration/v2.0#configuration/sectionName/remove
 helpviewer_keywords:
@@ -13,14 +9,11 @@ helpviewer_keywords:
 ms.assetid: 8d8af7f5-26c9-4db9-bbe4-b2a4e6949568
 author: guardrex
 ms.author: mairaw
-manager: wpickett
-ms.workload:
-- dotnet
-ms.openlocfilehash: 27b01120cb279dc23b3b081e35f17addc6d1897d
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.openlocfilehash: 61f1c98d3f12b5aa1d25595ca28328602683b073
+ms.sourcegitcommit: 11f11ca6cefe555972b3a5c99729d1a7523d8f50
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="remove-element-for-namevaluesectionhandler-and-dictionarysectionhandler"></a>\<移除 > NameValueSectionHandler DictionarySectionHandler 的項目
 
@@ -44,9 +37,9 @@ ms.lasthandoff: 12/22/2017
 
 ## <a name="parent-element"></a>父項目
 
-| 元素 | 描述 |
+| 項目 | 描述 |
 | ------- | ------------|
-| [**\<sectionName >**項目](~/docs/framework/configure-apps/file-schema/custom-element-2.md) | 定義自訂組態區段，使用設定<xref:System.Configuration.NameValueSectionHandler>和<xref:System.Configuration.DictionarySectionHandler>類別。 |
+| [**\<sectionName >** 項目](~/docs/framework/configure-apps/file-schema/custom-element-2.md) | 定義自訂組態區段，使用設定<xref:System.Configuration.NameValueSectionHandler>和<xref:System.Configuration.DictionarySectionHandler>類別。 |
 
 ## <a name="child-elements"></a>子元素
 
@@ -54,11 +47,11 @@ ms.lasthandoff: 12/22/2017
 
 ## <a name="remarks"></a>備註
 
-您可以使用**\<移除 >**項目移除您已在組態檔階層架構中較高層級定義的應用程式的設定。
+您可以使用**\<移除 >** 項目移除您已在組態檔階層架構中較高層級定義的應用程式的設定。
 
 ## <a name="example"></a>範例
 
-下列範例示範如何使用**\<移除 >**應用程式組態檔中移除電腦組態檔中預先定義的設定項目。
+下列範例示範如何使用**\<移除 >** 應用程式組態檔中移除電腦組態檔中預先定義的設定項目。
 
 下列的機器組態檔案程式碼會宣告區段 **\<mySection >** ，並將兩項設定，`key1`和`key2`，它：
 

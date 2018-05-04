@@ -1,27 +1,17 @@
 ---
-title: "&lt;UseSmallInternalThreadStacks&gt;項目"
-ms.custom: 
+title: '&lt;UseSmallInternalThreadStacks&gt;項目'
 ms.date: 03/30/2017
-ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.technology: dotnet-clr
-ms.tgt_pltfrm: 
-ms.topic: article
 helpviewer_keywords:
 - UseSmallInternalThreadStacks element
 - <UseSmallInternalThreadStacks> element
 ms.assetid: 1e3f6ec0-1cac-4e1c-9c81-17d948ae5874
-caps.latest.revision: "8"
 author: rpetrusha
 ms.author: ronpet
-manager: wpickett
-ms.workload: dotnet
-ms.openlocfilehash: c96537cad59034578d1284f7dc432e5775f3730b
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.openlocfilehash: a11b9a008878e716e9b3d8cd54abe5eb4169672a
+ms.sourcegitcommit: 11f11ca6cefe555972b3a5c99729d1a7523d8f50
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="ltusesmallinternalthreadstacksgt-element"></a>&lt;UseSmallInternalThreadStacks&gt;項目
 藉由指定明確的堆疊大小，它會建立特定的執行緒，它會在內部使用，而不是使用預設堆疊大小，這些執行緒時，使用 common language runtime (CLR)，減少記憶體的要求。  
@@ -37,7 +27,7 @@ ms.lasthandoff: 12/22/2017
 ```  
   
 ## <a name="attributes-and-elements"></a>屬性和項目  
- 下列章節說明屬性、子項目和父項目。  
+ 下列各節描述屬性、子項目和父項目。  
   
 ### <a name="attributes"></a>屬性  
   
@@ -50,9 +40,9 @@ ms.lasthandoff: 12/22/2017
 |值|描述|  
 |-----------|-----------------|  
 |true|要求明確的堆疊大小。|  
-|false|使用預設堆疊大小。 這是預設值[!INCLUDE[net_v40_long](../../../../../includes/net-v40-long-md.md)]。|  
+|False|使用預設堆疊大小。 這是預設值[!INCLUDE[net_v40_long](../../../../../includes/net-v40-long-md.md)]。|  
   
-### <a name="child-elements"></a>子元素  
+### <a name="child-elements"></a>子項目  
  無。  
   
 ### <a name="parent-elements"></a>父項目  
@@ -81,6 +71,6 @@ ms.lasthandoff: 12/22/2017
 </configuration>  
 ```  
   
-## <a name="see-also"></a>請參閱  
+## <a name="see-also"></a>另請參閱  
  [執行階段設定結構描述](../../../../../docs/framework/configure-apps/file-schema/runtime/index.md)  
  [組態檔結構描述](../../../../../docs/framework/configure-apps/file-schema/index.md)

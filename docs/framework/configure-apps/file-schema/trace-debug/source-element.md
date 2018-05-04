@@ -1,9 +1,6 @@
 ---
-title: "&lt;來源&gt;項目"
+title: '&lt;來源&gt;項目'
 ms.date: 09/29/2017
-ms.prod: .net-framework
-ms.technology: dotnet-clr
-ms.topic: article
 f1_keywords:
 - http://schemas.microsoft.com/.NetConfiguration/v2.0#configuration/system.diagnostics/sources/source
 - http://schemas.microsoft.com/.NetConfiguration/v2.0#source
@@ -13,12 +10,11 @@ helpviewer_keywords:
 author: mcleblanc
 ms.author: markl
 manager: markl
-ms.workload: dotnet
-ms.openlocfilehash: d6c5c65be8a540fdbba64d5a604c0963f9797e0a
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.openlocfilehash: b7c2a71b129a0ad7d1c2a72b18b8a69a111f9495
+ms.sourcegitcommit: 11f11ca6cefe555972b3a5c99729d1a7523d8f50
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="ltsourcegt-element"></a>&lt;來源&gt;項目
 指定起始追蹤訊息的追蹤來源。  
@@ -37,7 +33,7 @@ ms.lasthandoff: 12/22/2017
 ```  
   
 ## <a name="attributes-and-elements"></a>屬性和項目  
- 下列章節說明屬性、子項目和父項目。  
+ 下列各節描述屬性、子項目和父項目。  
   
 ### <a name="attributes"></a>屬性  
   
@@ -48,7 +44,7 @@ ms.lasthandoff: 12/22/2017
 |`switchType`|選擇性屬性。<br /><br /> 指定追蹤參數的類型。 如果有的話，類型必須是有效的類別名稱，並不能是空的字串。|  
 |`extraAttribute`|選擇性屬性。<br /><br /> 指定的值所識別的追蹤來源特定屬性<xref:System.Diagnostics.TraceSource.GetSupportedAttributes%2A>該追蹤來源的方法。|  
   
-### <a name="child-elements"></a>子元素  
+### <a name="child-elements"></a>子項目  
   
 |項目|描述|  
 |-------------|-----------------|  
@@ -88,6 +84,6 @@ ms.lasthandoff: 12/22/2017
 </configuration>  
 ```  
   
-## <a name="see-also"></a>請參閱  
+## <a name="see-also"></a>另請參閱  
  [追蹤和偵錯設定結構描述](../../../../../docs/framework/configure-apps/file-schema/trace-debug/index.md)  
  [追蹤參數](../../../../../docs/framework/debug-trace-profile/trace-switches.md)

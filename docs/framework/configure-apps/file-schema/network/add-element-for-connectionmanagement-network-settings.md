@@ -1,13 +1,6 @@
 ---
-title: "&lt;新增&gt;connectionManagement （網路設定） 的項目"
-ms.custom: 
+title: '&lt;新增&gt;connectionManagement （網路設定） 的項目'
 ms.date: 03/30/2017
-ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.technology: dotnet-clr
-ms.tgt_pltfrm: 
-ms.topic: article
 f1_keywords:
 - http://schemas.microsoft.com/.NetConfiguration/v2.0#add
 - http://schemas.microsoft.com/.NetConfiguration/v2.0#configuration/system.net/connectionManagement/add
@@ -17,22 +10,20 @@ helpviewer_keywords:
 - add element, connectionManagement
 - connectionManagement, add element
 ms.assetid: 856bf57d-1c63-46c7-a178-03d97b0a4149
-caps.latest.revision: "14"
 author: mcleblanc
 ms.author: markl
 manager: markl
-ms.workload: dotnet
-ms.openlocfilehash: 654ada55d30ad95937fa05475ebcbf23ca86652d
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.openlocfilehash: c6cfd036a98c345da23fc7b3699987c9678e149d
+ms.sourcegitcommit: 11f11ca6cefe555972b3a5c99729d1a7523d8f50
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="ltaddgt-element-for-connectionmanagement-network-settings"></a>&lt;新增&gt;connectionManagement （網路設定） 的項目
 將 IP 位址或 DNS 名稱加入連線管理清單中。  
   
  \<configuration>  
-\<system.net >  
+\<system.net>  
 \<connectionManagement >  
 \<add>  
   
@@ -46,7 +37,7 @@ ms.lasthandoff: 12/22/2017
 ```  
   
 ## <a name="attributes-and-elements"></a>屬性和項目  
- 下列章節說明屬性、子項目和父項目。  
+ 下列各節描述屬性、子項目和父項目。  
   
 ### <a name="attributes"></a>屬性  
   
@@ -55,7 +46,7 @@ ms.lasthandoff: 12/22/2017
 |`address`|描述 IP 位址或 DNS 名稱的字串。|  
 |`maxconnection`|允許連接到伺服器的連線數目上限。 如果未提供，預設值為 2。|  
   
-### <a name="child-elements"></a>子元素  
+### <a name="child-elements"></a>子項目  
  無。  
   
 ### <a name="parent-elements"></a>父項目  
@@ -86,7 +77,7 @@ ms.lasthandoff: 12/22/2017
 </configuration>  
 ```  
   
-## <a name="see-also"></a>請參閱  
+## <a name="see-also"></a>另請參閱  
  <xref:System.Net.ServicePoint>  
  <xref:System.Net.ServicePointManager>  
  [網路設定結構描述](../../../../../docs/framework/configure-apps/file-schema/network/index.md)

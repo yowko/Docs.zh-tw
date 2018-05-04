@@ -1,29 +1,17 @@
 ---
-title: "&lt;baseAddressPrefixFilter&gt; 的 &lt;add&gt;"
-ms.custom: 
+title: '&lt;baseAddressPrefixFilter&gt; 的 &lt;add&gt;'
 ms.date: 03/30/2017
-ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.technology: dotnet-clr
-ms.tgt_pltfrm: 
-ms.topic: article
 ms.assetid: b226bede-8459-4de9-b2ac-3d39604ce2bc
-caps.latest.revision: "10"
-author: dotnet-bot
-ms.author: dotnetcontent
-manager: wpickett
-ms.workload: dotnet
-ms.openlocfilehash: ad6ad6f71ef015ad97a2688a7334e8a0c6e5af44
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
-ms.translationtype: MT
+ms.openlocfilehash: 549574d0d6585a857f3e0979e814c827139c7536
+ms.sourcegitcommit: 11f11ca6cefe555972b3a5c99729d1a7523d8f50
+ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="ltaddgt-of-ltbaseaddressprefixfiltergt"></a>&lt;baseAddressPrefixFilter&gt; 的 &lt;add&gt;
-表示組態項目，這個項目會指定通過篩選條件，而且這些篩選條件提供了一項機制，可在將 [!INCLUDE[indigo1](../../../../../includes/indigo1-md.md)] 應用程式裝載於網際網路資訊服務 (IIS) 時挑選適當的 IIS 繫結。  
+表示指定通過篩選條件，提供一個機制，裝載在 IIS 中的 Windows Communication Foundation (WCF) 應用程式時挑選適當的網際網路資訊服務 (IIS) 繫結的組態項目。  
   
- \<系統。ServiceModel >  
+ \<system.ServiceModel>  
 \<ServiceHostingEnvironment >  
 \<baseAddressPrefixFilters >  
 \<add>  
@@ -39,7 +27,7 @@ ms.lasthandoff: 12/22/2017
 ```  
   
 ## <a name="attributes-and-elements"></a>屬性和項目  
- 下列章節說明屬性、子項目和父項目。  
+ 下列各節描述屬性、子項目和父項目。  
   
 ### <a name="attributes"></a>屬性  
   
@@ -47,14 +35,14 @@ ms.lasthandoff: 12/22/2017
 |---------------|-----------------|  
 |prefix|URI，這個 URI 可用來比對基底位址的一部分。|  
   
-### <a name="child-elements"></a>子元素  
+### <a name="child-elements"></a>子項目  
  無。  
   
 ### <a name="parent-elements"></a>父項目  
   
 |項目|描述|  
 |-------------|-----------------|  
-|[\<baseAddressPrefixFilters >](../../../../../docs/framework/configure-apps/file-schema/wcf/baseaddressprefixfilters.md)|組態項目的集合，這個集合會指定通過篩選條件，而且這些篩選條件提供了一項機制，可在將 [!INCLUDE[indigo1](../../../../../includes/indigo1-md.md)] 應用程式裝載於 IIS 時挑選適當的 IIS 繫結。|  
+|[\<baseAddressPrefixFilters >](../../../../../docs/framework/configure-apps/file-schema/wcf/baseaddressprefixfilters.md)|指定通過篩選條件，提供一個機制，裝載在 IIS 中的 Windows Communication Foundation (WCF) 應用程式時挑選適當 IIS 繫結的組態項目的集合。|  
   
 ## <a name="remarks"></a>備註  
  前置詞篩選條件為共用裝載提供者提供一種方式，使其可指定服務所要使用的 URI。 它可讓共用主機在同一個網站上裝載多個應用程式，而且同一個配置中可以有不同的基底位址。  
@@ -90,7 +78,7 @@ http://test2.fabrikam.com/Service.svc
 > [!NOTE]
 >  篩選條件不支援任何萬用字元。 此外，IIS 提供的 baseAddress 中，可能會有位址繫結至不在 `baseAddressPrefixFilters` 清單中的配置， 而且這些位址尚未經過篩選。  
   
-## <a name="see-also"></a>請參閱  
+## <a name="see-also"></a>另請參閱  
  <xref:System.ServiceModel.Configuration.BaseAddressPrefixFilterElement>  
  <xref:System.ServiceModel.Configuration.ServiceHostingEnvironmentSection>  
  <xref:System.ServiceModel.ServiceHostingEnvironment>  

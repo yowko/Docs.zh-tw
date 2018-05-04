@@ -1,24 +1,12 @@
 ---
 title: '@ServiceHost'
-ms.custom: 
 ms.date: 03/30/2017
-ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.technology: dotnet-clr
-ms.tgt_pltfrm: 
-ms.topic: article
 ms.assetid: 96ba6967-00f2-422f-9aa7-15de4d33ebf3
-caps.latest.revision: "9"
-author: dotnet-bot
-ms.author: dotnetcontent
-manager: wpickett
-ms.workload: dotnet
-ms.openlocfilehash: 027debb311a3f9547623b6dff778e82b7e475327
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
-ms.translationtype: MT
+ms.openlocfilehash: f81c71746b6b59a51ee825b44c9e6d9f93eb5fbd
+ms.sourcegitcommit: 11f11ca6cefe555972b3a5c99729d1a7523d8f50
+ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="servicehost"></a>@ServiceHost
 將用來產生服務主機的處理站，與要裝載的服務和存取或編譯 .svc 檔案中提供的程式碼所需的其他程式設計方面加以關聯。  
@@ -43,7 +31,7 @@ CodeBehind = "CodeBehind"%>
  用來具現化服務主機的服務主機處理站之 CLR 型別名稱。 這是一個選擇性的屬性。 如果沒有指定，則使用預設的 <xref:System.ServiceModel.Activation.ServiceHostFactory>，它會傳回 <xref:System.ServiceModel.ServiceHost> 的執行個體。  
   
 #### <a name="debug"></a>偵錯  
- 表示 [!INCLUDE[indigo1](../../../../../includes/indigo1-md.md)] 服務是否應該使用偵錯符號進行編譯。 如果 `true` 服務應以偵錯符號編譯，則為 [!INCLUDE[indigo2](../../../../../includes/indigo2-md.md)]，否則為 `false`。  
+ 表示 Windows Communication Foundation (WCF) 服務是否應該使用偵錯符號進行編譯。 如果 `true` 服務應以偵錯符號編譯，則為 [!INCLUDE[indigo2](../../../../../includes/indigo2-md.md)]，否則為 `false`。  
   
 #### <a name="language"></a>語言  
  指定編譯檔案內 (.svc) 所有內嵌程式碼時使用的語言。 這些值可以表示任何 .NET 支援的語言，包括 C#、VB 和 JS (分別指 C#、Visual Basic .NET 和 JScript .NET)。 這是一個選擇性的屬性。  
@@ -52,7 +40,7 @@ CodeBehind = "CodeBehind"%>
  當實作 XML Web Service 的類別不是存放在相同的檔案中，且尚未編譯為組件並置於 \Bin 目錄內的時候，請指定實作 XML Web Service 的原始程式檔。  
   
 ## <a name="remarks"></a>備註  
- 用來裝載服務的 <xref:System.ServiceModel.ServiceHost> 是 [!INCLUDE[indigo1](../../../../../includes/indigo1-md.md)] 程式設計模型中的擴充點。 因為 <xref:System.ServiceModel.ServiceHost> 是潛在的多型型別，而裝載環境不應直接具現化多型型別，所以使用處理站模式加以具現化。  
+ <xref:System.ServiceModel.ServiceHost>用來裝載服務是 Windows Communication Foundation (WCF) 的程式設計模型中的擴充點。 因為 <xref:System.ServiceModel.ServiceHost> 是潛在的多型型別，而裝載環境不應直接具現化多型型別，所以使用處理站模式加以具現化。  
   
  預設實作會使用 <xref:System.ServiceModel.Activation.ServiceHostFactory> 來建立 <xref:System.ServiceModel.ServiceHost> 的執行個體。 您可以指定在您處理站實作的 CLR 型別名稱，以提供自己的處理站 （一個會傳回衍生的主機），但[ @ServiceHost ](../../../../../docs/framework/configure-apps/file-schema/wcf-directive/servicehost.md)指示詞。  
   
@@ -77,5 +65,5 @@ Factory="WebScriptServiceHostFactory"
 %>  
 ```  
   
-## <a name="see-also"></a>請參閱  
+## <a name="see-also"></a>另請參閱  
  [自訂服務主機](../../../../../docs/framework/wcf/samples/custom-service-host.md)

@@ -1,13 +1,6 @@
 ---
 title: '&lt;system.serviceModel&gt;'
-ms.custom: 
 ms.date: 03/30/2017
-ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.technology: dotnet-clr
-ms.tgt_pltfrm: 
-ms.topic: article
 f1_keywords:
 - http://schemas.microsoft.com/.NetConfiguration/v2.0#system.ServiceModel
 - http://schemas.microsoft.com/.NetConfiguration/v2.0#configuration/system.ServiceModel
@@ -15,19 +8,14 @@ helpviewer_keywords:
 - <system.serviceModel> element
 - system.serviceModel element
 ms.assetid: 78519531-ad7a-40d3-b3e7-42f1103d8854
-caps.latest.revision: "26"
-author: dotnet-bot
-ms.author: dotnetcontent
-manager: wpickett
-ms.workload: dotnet
-ms.openlocfilehash: 02bf740794b1551d3b130922939dbb27e572578e
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
-ms.translationtype: MT
+ms.openlocfilehash: 0ce459b5b3d739770353d9913f30c6feaceabfd8
+ms.sourcegitcommit: 11f11ca6cefe555972b3a5c99729d1a7523d8f50
+ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="ltsystemservicemodelgt"></a>&lt;system.serviceModel&gt;
-此組態區段包含所有 [!INCLUDE[indigo1](../../../../../includes/indigo1-md.md)] ServiceModel 組態項目。  
+這個組態區段包含所有 Windows Communication Foundation (WCF) ServiceModel 組態項目。  
   
 ## <a name="syntax"></a>語法  
   
@@ -61,26 +49,26 @@ ms.lasthandoff: 12/22/2017
 ```  
   
 ## <a name="attributes-and-elements"></a>屬性和項目  
- 下列章節說明屬性、子項目和父項目。  
+ 下列各節描述屬性、子項目和父項目。  
   
 ### <a name="attributes"></a>屬性  
  無  
   
-### <a name="child-elements"></a>子元素  
+### <a name="child-elements"></a>子項目  
   
 |項目|描述|  
 |-------------|-----------------|  
 |[\<行為 >](../../../../../docs/framework/configure-apps/file-schema/wcf/behaviors.md)|這個區段會定義兩個名稱為 `endpointBehaviors` 和 `serviceBehaviors` 的子集合。  每個集合會定義分別由端點和服務使用的行為項目。 每個行為項目都由其唯一的 `name` 屬性所識別。|  
 |[\<繫結 >](../../../../../docs/framework/configure-apps/file-schema/wcf/bindings.md)|這個區段保存標準和自訂繫結的集合。 每一個項目都是由它的唯一 `name` 所識別。 服務會使用 `name` 來連結繫結，以便利用繫結。|  
 |[\<用戶端 >](../../../../../docs/framework/configure-apps/file-schema/wcf/client.md)|這個區段包含用戶端用於連接服務之端點的清單。|  
-|[\<comContracts >](../../../../../docs/framework/configure-apps/file-schema/wcf/comcontracts.md)|這個區段會定義為 WCF 與 COM interop 啟用的 COM 合約。|  
+|[\<comContracts>](../../../../../docs/framework/configure-apps/file-schema/wcf/comcontracts.md)|這個區段會定義為 WCF 與 COM interop 啟用的 COM 合約。|  
 |[\<commonBehaviors >](../../../../../docs/framework/configure-apps/file-schema/wcf/commonbehaviors.md)|這個區段只能定義在 machine.config 檔中。 它會定義兩個名為 `endpointBehaviors` 和 `serviceBehaviors` 的子集合。  每個集合會分別定義由所有 [!INCLUDE[indigo2](../../../../../includes/indigo2-md.md)] 端點和電腦上服務所使用的行為項目。  如果在定義某個行為`<commonBehaviors>`和`<behaviors>`區段中的行為\<行為 > 一節會給予喜好設定。|  
-|[\<擴充功能 >](../../../../../docs/framework/configure-apps/file-schema/wcf/extensions-section.md)|這個區段包含延伸的集合，可讓使用者建立使用者定義的繫結、行為和其他方面的延伸。|  
+|[\<擴充功能 >](../../../../../docs/framework/configure-apps/file-schema/wcf/extensions-section.md)|這個區段包含延伸的集合，可讓使用者建立使用者定義的繫結程序、行為和其他方面的延伸。|  
 |[\<診斷 >](../../../../../docs/framework/configure-apps/file-schema/wcf/diagnostics.md)|這個區段包含 WCF 之診斷功能的設定。 使用者可以啟用/停用追蹤、效能計數器和 WMI 提供者，並且可以新增自訂訊息篩選條件。|  
 |[\<p >](../../../../../docs/framework/configure-apps/file-schema/wcf/protocolmapping.md)|這個區段會定義一組預設傳輸通訊協定配置 （例如 http、 net.tcp、 net.pipe 等） 和 WCF 繫結之間的通訊協定對應。|  
-|[\<路由 >](../../../../../docs/framework/configure-apps/file-schema/wcf/routing.md)|這個區段會定義一組路由篩選條件，這些篩選條件會判斷傳入訊息時所用之 [!INCLUDE[indigo1](../../../../../includes/indigo1-md.md)]<xref:System.ServiceModel.Dispatcher.MessageFilter> 的型別及路由表 (定義當篩選條件相符時的傳送訊息的目標端點)。|  
+|[\<路由 >](../../../../../docs/framework/configure-apps/file-schema/wcf/routing.md)|這個區段會定義一組路由篩選條件，判斷類型的 Windows Communication Foundation (WCF)<xref:System.ServiceModel.Dispatcher.MessageFilter>時傳入的訊息及路由表定義目標端點來傳送訊息時所要使用篩選條件符合。|  
 |[\<serviceHostingEnvironment >](../../../../../docs/framework/configure-apps/file-schema/wcf/servicehostingenvironment.md)|這個區段會定義服務裝載環境為特定傳輸具現化的型別。 如果這個區段是空白的，便會使用預設的型別。|  
-|[\<服務 >](../../../../../docs/framework/configure-apps/file-schema/wcf/services.md)|這個區段包含服務的集合。 對於在組件中定義的各個服務，此項目包含指定服務設定的 `service` 項目。|  
+|[\<services>](../../../../../docs/framework/configure-apps/file-schema/wcf/services.md)|這個區段包含服務的集合。 對於在組件中定義的各個服務，此項目包含指定服務設定的 `service` 項目。|  
 |[\<Kind >](../../../../../docs/framework/configure-apps/file-schema/wcf/standardendpoints.md)|這個區段會定義標準端點的集合，這些端點是可重複使用的預先設定端點。 標準端點會有一個或多個位址、繫結，以及設為固定值的合約屬性。 例如，探索端點中的合約是固定的。 您也可以使用標準端點，以類似定義自訂繫結的新屬性擴充服務端點。|  
   
 ### <a name="parent-elements"></a>父項目  
@@ -133,5 +121,5 @@ ms.lasthandoff: 12/22/2017
 </configuration>  
 ```  
   
-## <a name="see-also"></a>請參閱  
+## <a name="see-also"></a>另請參閱  
  <xref:System.ServiceModel.Configuration.ServiceModelSectionGroup>

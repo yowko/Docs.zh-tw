@@ -1,24 +1,14 @@
 ---
 title: '&lt;certificateReference&gt;'
-ms.custom: 
 ms.date: 03/30/2017
-ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.technology: dotnet-clr
-ms.tgt_pltfrm: 
-ms.topic: article
 ms.assetid: 2ac8bc14-e9f1-48fb-b662-f5991558fbe4
-caps.latest.revision: "4"
 author: BrucePerlerMS
-ms.author: bruceper
 manager: mbaldwin
-ms.workload: dotnet
-ms.openlocfilehash: fd0d4742a162000d438851cef9c00e21368b7ba1
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.openlocfilehash: e0f9a826a4c8d292346d9efee7970a82b88fb612
+ms.sourcegitcommit: 11f11ca6cefe555972b3a5c99729d1a7523d8f50
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="ltcertificatereferencegt"></a>&lt;certificateReference&gt;
 指定用來尋找和驗證 x.509 憑證存放區中的設定。  
@@ -47,7 +37,7 @@ ms.lasthandoff: 12/22/2017
 ```  
   
 ## <a name="attributes-and-elements"></a>屬性和項目  
- 下列章節說明屬性、子項目和父項目。  
+ 下列各節描述屬性、子項目和父項目。  
   
 ### <a name="attributes"></a>屬性  
   
@@ -59,7 +49,7 @@ ms.lasthandoff: 12/22/2017
 |findValue|要在 X.509 憑證存放區內搜尋的值。 選擇性。|  
 |isChainIncluded|指定是否應該使用憑證鏈結中執行驗證。 預設值為"true";使用憑證鏈結會執行驗證。 選擇性。|  
   
-### <a name="child-elements"></a>子元素  
+### <a name="child-elements"></a>子項目  
  無  
   
 ### <a name="parent-elements"></a>父項目  

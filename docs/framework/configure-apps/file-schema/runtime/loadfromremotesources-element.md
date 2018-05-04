@@ -1,27 +1,17 @@
 ---
-title: "&lt;loadFromRemoteSources&gt;項目"
-ms.custom: 
+title: '&lt;loadFromRemoteSources&gt;項目'
 ms.date: 03/30/2017
-ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.technology: dotnet-clr
-ms.tgt_pltfrm: 
-ms.topic: article
 helpviewer_keywords:
 - loadFromRemoteSources element
 - <loadFromRemoteSources> element
 ms.assetid: 006d1280-2ac3-4db6-a984-a3d4e275046a
-caps.latest.revision: "31"
 author: rpetrusha
 ms.author: ronpet
-manager: wpickett
-ms.workload: dotnet
-ms.openlocfilehash: 13b42405a0faf721c46476aadaa0cff8163883c1
-ms.sourcegitcommit: c0dd436f6f8f44dc80dc43b07f6841a00b74b23f
+ms.openlocfilehash: f0d442f71a0e2fc7deacd9aaa02cfba7b66f2349
+ms.sourcegitcommit: 11f11ca6cefe555972b3a5c99729d1a7523d8f50
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 01/19/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="ltloadfromremotesourcesgt-element"></a>&lt;loadFromRemoteSources&gt;項目
 指定是否從遠端來源的組件應該被授與完全信任。  
@@ -30,7 +20,7 @@ ms.lasthandoff: 01/19/2018
 >  如果您已導向至本主題，因為 Visual Studio 專案錯誤清單或建置錯誤中的錯誤訊息，請參閱[How to： 使用 Visual Studio 中的 從 Web 組件](http://msdn.microsoft.com/library/d8635b63-89a0-41aa-90f4-f351b2111070)。  
   
  \<configuration>  
-\<runtime>  
+\<執行階段 >  
 \<loadFromRemoteSources>  
   
 ## <a name="syntax"></a>語法  
@@ -56,7 +46,7 @@ ms.lasthandoff: 01/19/2018
 |`false`|請勿授與完全信任的應用程式從遠端來源。 這是預設值。|  
 |`true`|授與完全信任應用程式從遠端來源。|  
   
-### <a name="child-elements"></a>子元素  
+### <a name="child-elements"></a>子項目  
  無。  
   
 ### <a name="parent-elements"></a>父項目  
@@ -107,7 +97,7 @@ ms.lasthandoff: 01/19/2018
 </configuration>  
 ```  
   
-## <a name="see-also"></a>請參閱  
+## <a name="see-also"></a>另請參閱  
  [更隱含使用了 CAS 原則： loadFromRemoteSources](http://go.microsoft.com/fwlink/p/?LinkId=266839)  
  [如何：在沙箱中執行部分信任的程式碼](../../../../../docs/framework/misc/how-to-run-partially-trusted-code-in-a-sandbox.md)  
  [執行階段設定結構描述](../../../../../docs/framework/configure-apps/file-schema/runtime/index.md)  

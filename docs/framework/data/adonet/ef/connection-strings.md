@@ -1,24 +1,12 @@
 ---
-title: "連接字串"
-ms.custom: 
+title: 連接字串
 ms.date: 03/30/2017
-ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.technology: dotnet-ado
-ms.tgt_pltfrm: 
-ms.topic: article
 ms.assetid: 78d516bc-c99f-4865-8ff1-d856bc1a01c0
-caps.latest.revision: "3"
-author: douglaslMS
-ms.author: douglasl
-manager: craigg
-ms.workload: dotnet
-ms.openlocfilehash: d582383d59928d72c15aabba37b50ed878b67ca5
-ms.sourcegitcommit: c0dd436f6f8f44dc80dc43b07f6841a00b74b23f
+ms.openlocfilehash: ac2c618272044ac9aaaba697f6583c9a814aa79f
+ms.sourcegitcommit: 11f11ca6cefe555972b3a5c99729d1a7523d8f50
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 01/19/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="connection-strings"></a>連接字串
 連接字串 (Connection String) 包含可當做參數從資料提供者 (Data Provider) 傳遞至資料來源的初始化資訊。 此語法會因資料提供者而不同，而且連接字串會在嘗試開啟連接期間進行剖析。 Entity Framework 所使用的連接字串包含用來連接至支援 Entity Framework 之基礎 ADO.NET 資料提供者的資訊。 它們也包含必要之模型和對應檔的相關資訊。  
@@ -102,12 +90,12 @@ Metadata=datadir\metadata\
 Metadata=.\  
 ```  
   
-## <a name="support-for-the-124datadirectory124-substitution-string-and-the-web-application-root-operator-"></a>支援 &#124; DataDirectory &#124;替代字串和 Web 應用程式根目錄運算子 （~）  
- `DataDirectory`和 ~ 運算子用於<xref:System.Data.EntityClient.EntityConnection.ConnectionString%2A>一部分`Metadata`和`Provider Connection String`關鍵字。 <xref:System.Data.EntityClient.EntityConnection> 會分別將 `DataDirectory` 和 ~ 運算子轉送至 <xref:System.Data.Metadata.Edm.MetadataWorkspace> 和存放區提供者。  
+## <a name="support-for-the-124datadirectory124-substitution-string-and-the-web-application-root-operator-"></a>支援&#124;DataDirectory&#124;替代字串和 Web 應用程式根目錄運算子 （~）  
+ `DataDirectory` 和 ~ 運算子用於<xref:System.Data.EntityClient.EntityConnection.ConnectionString%2A>一部分`Metadata`和`Provider Connection String`關鍵字。 <xref:System.Data.EntityClient.EntityConnection> 會分別將 `DataDirectory` 和 ~ 運算子轉送至 <xref:System.Data.Metadata.Edm.MetadataWorkspace> 和存放區提供者。  
   
 |詞彙|描述|  
 |----------|-----------------|  
-|`&#124;DataDirectory&#124;`|解析成對應和中繼資料檔案的相對路徑。 這是透過 `AppDomain.SetData("DataDirectory", objValue)` 方法所設定的值。 `DataDirectory` 替代字串必須以垂直線字元括住，而且其名稱與垂直線字元之間不得存在任何空白字元。 `DataDirectory` 名稱不區分大小寫。<br /><br /> 如果名為 "DataDirectory" 的實體目錄必須當做中繼資料路徑清單的成員傳遞，請在名稱的任一側或兩側加上空白字元，例如：`Metadata="DataDirectory1 &#124; DataDirectory &#124; DataDirectory2"`。 ASP.NET 應用程式解析 &#124; DataDirectory &#124;以"\<應用程式根目錄 > / app_data"資料夾。|  
+|`&#124;DataDirectory&#124;`|解析成對應和中繼資料檔案的相對路徑。 這是透過 `AppDomain.SetData("DataDirectory", objValue)` 方法所設定的值。 `DataDirectory` 替代字串必須以垂直線字元括住，而且其名稱與垂直線字元之間不得存在任何空白字元。 `DataDirectory` 名稱不區分大小寫。<br /><br /> 如果名為 "DataDirectory" 的實體目錄必須當做中繼資料路徑清單的成員傳遞，請在名稱的任一側或兩側加上空白字元，例如：`Metadata="DataDirectory1 &#124; DataDirectory &#124; DataDirectory2"`。 ASP.NET 應用程式解決&#124;DataDirectory&#124;至 「\<應用程式根目錄 > / app_data"資料夾。|  
 |~|解析成 Web 應用程式根目錄。 位於前置位置的 ~ 字元一律會解譯成 Web 應用程式根目錄運算子 (~)，不過它可能會代表有效的本機子目錄。 若要參考這類本機子目錄，使用者應該明確傳遞 `./~`。|  
   
  您應該只在路徑的開頭指定 `DataDirectory` 和 ~ 運算子，因為它們無法在任何其他位置進行解析。 Entity Framework 將嘗試解析 `~/data`，但是它會將 `/data/~` 視為實體路徑。  
@@ -118,7 +106,7 @@ Metadata=.\
   
  `DataDirectory` 替代字串和 ~ 運算子的解析並非遞迴方式。 例如，當 `DataDirectory` 包含 `~` 字元時，就會發生例外狀況。 這可防止無限遞迴 (Infinite Recursion)。  
   
-## <a name="see-also"></a>請參閱  
+## <a name="see-also"></a>另請參閱  
  [處理資料提供者](../../../../../docs/framework/data/adonet/ef/working-with-data-providers.md)  
  [部署考量](../../../../../docs/framework/data/adonet/ef/deployment-considerations.md)  
  [管理連接與交易](http://msdn.microsoft.com/library/b6659d2a-9a45-4e98-acaa-d7a8029e5b99)  

@@ -1,24 +1,14 @@
 ---
 title: '&lt;federationConfiguration&gt;'
-ms.custom: 
 ms.date: 03/30/2017
-ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.technology: dotnet-clr
-ms.tgt_pltfrm: 
-ms.topic: article
 ms.assetid: 8b14054c-6d07-46ab-ab58-03f14beac0f2
-caps.latest.revision: "9"
 author: BrucePerlerMS
-ms.author: bruceper
 manager: mbaldwin
-ms.workload: dotnet
-ms.openlocfilehash: 0014e0224221cd5143709ba0a5b38f10e457b494
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.openlocfilehash: 44014d620dcd03e055eb58b50a1428b8e1b41186
+ms.sourcegitcommit: 11f11ca6cefe555972b3a5c99729d1a7523d8f50
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="ltfederationconfigurationgt"></a>&lt;federationConfiguration&gt;
 設定<xref:System.IdentityModel.Services.WSFederationAuthenticationModule>(WSFAM) 和<xref:System.IdentityModel.Services.SessionAuthenticationModule>(SAM) 時使用同盟驗證透過 WS-同盟通訊協定。 設定<xref:System.Security.Claims.ClaimsAuthorizationManager>時使用<xref:System.IdentityModel.Services.ClaimsPrincipalPermission>或<xref:System.IdentityModel.Services.ClaimsPrincipalPermissionAttribute>類別提供的宣告型存取控制。  
@@ -36,7 +26,7 @@ ms.lasthandoff: 12/22/2017
 ```  
   
 ## <a name="attributes-and-elements"></a>屬性和項目  
- 下列章節說明屬性、子項目和父項目。  
+ 下列各節描述屬性、子項目和父項目。  
   
 ### <a name="attributes"></a>屬性  
   
@@ -45,7 +35,7 @@ ms.lasthandoff: 12/22/2017
 |name|這個同盟的組態項目的名稱。 這個屬性主要是提供的擴充點，未來的通訊協定。 選擇性。|  
 |identityConfigurationName|中所指定的身分識別組態區段名稱[ \<identityConfiguration >](../../../../../docs/framework/configure-apps/file-schema/windows-identity-foundation/identityconfiguration.md)来使用項目。 如果未指定此屬性，則會使用預設身分識別組態區段。 選擇性。|  
   
-### <a name="child-elements"></a>子元素  
+### <a name="child-elements"></a>子項目  
   
 |項目|描述|  
 |-------------|-----------------|  
@@ -76,7 +66,7 @@ ms.lasthandoff: 12/22/2017
   
 4.  如果多個名為`<federationConfiguration>`項目確實存在且未具名`<federationConfiguration>`元素存在，擲回例外狀況。  
   
- 一般而言，只有一個`<federationConfiguration>`區段定義。 此區段是預設的同盟設定。 您可以指定多個唯一命名`<federationConfiguration>`項目; 不過，在此情況下，如果您想要載入同盟設定未命名的以外，您必須提供的處理常式。 <xref:System.IdentityModel.Services.FederatedAuthentication.FederationConfigurationCreated>事件和組<xref:System.IdentityModel.Services.Configuration.FederationConfigurationCreatedEventArgs.FederationConfiguration%2A?displayProperty=nameWithType>屬性來處理常式內部<xref:System.IdentityModel.Services.Configuration.FederationConfiguration>物件從適當的值初始化`<federationConfiguration>`組態檔中的項目。  
+ 一般而言，只有一個`<federationConfiguration>`區段定義。 此區段是預設的同盟設定。 您可以指定多個唯一命名`<federationConfiguration>`項目; 不過，在此情況下，如果您想要載入同盟設定未命名的以外，您必須提供的處理常式。 <xref:System.IdentityModel.Services.FederatedAuthentication.FederationConfigurationCreated> 事件和組<xref:System.IdentityModel.Services.Configuration.FederationConfigurationCreatedEventArgs.FederationConfiguration%2A?displayProperty=nameWithType>屬性來處理常式內部<xref:System.IdentityModel.Services.Configuration.FederationConfiguration>物件從適當的值初始化`<federationConfiguration>`組態檔中的項目。  
   
  `<federationConfiguration>`項目由<xref:System.IdentityModel.Services.Configuration.FederationConfigurationElement>類別。 組態物件本身由<xref:System.IdentityModel.Services.Configuration.FederationConfiguration>類別。 單一<xref:System.IdentityModel.Services.Configuration.FederationConfiguration>執行個體上設定<xref:System.IdentityModel.Services.FederatedAuthentication.FederationConfiguration%2A?displayProperty=nameWithType>屬性，並提供應用程式的同盟的設定。  
   
@@ -101,7 +91,7 @@ ms.lasthandoff: 12/22/2017
 </system.identityModel.services>  
 ```  
   
-## <a name="see-also"></a>請參閱  
+## <a name="see-also"></a>另請參閱  
  <xref:System.IdentityModel.Services.WSFederationAuthenticationModule>  
  <xref:System.IdentityModel.Services.SessionAuthenticationModule>  
  <xref:System.IdentityModel.Services.FederatedAuthentication.FederationConfiguration%2A?displayProperty=nameWithType>  

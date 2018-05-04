@@ -1,30 +1,18 @@
 ---
 title: '&lt;webSocketSettings&gt;'
-ms.custom: 
 ms.date: 03/30/2017
-ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.technology: dotnet-clr
-ms.tgt_pltfrm: 
-ms.topic: article
 ms.assetid: bbf97e02-8dd1-4922-acac-3cd33397b249
-caps.latest.revision: "3"
-author: dotnet-bot
-ms.author: dotnetcontent
-manager: wpickett
-ms.workload: dotnet
-ms.openlocfilehash: 01bc858aeeff750baa3f54e813dea5c9779143f8
-ms.sourcegitcommit: c0dd436f6f8f44dc80dc43b07f6841a00b74b23f
+ms.openlocfilehash: 84aee31b6c15beb32732f89eae7c3d176f57971d
+ms.sourcegitcommit: 11f11ca6cefe555972b3a5c99729d1a7523d8f50
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 01/19/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="ltwebsocketsettingsgt"></a>&lt;webSocketSettings&gt;
 用來指定 Web 通訊端設定的組態元素。  
   
 \<system.ServiceModel>  
-\<bindings>  
+\<繫結 >  
 \<netHttpBinding>  
   
 ## <a name="syntax"></a>語法  
@@ -68,7 +56,7 @@ ms.lasthandoff: 01/19/2018
 |永遠|不論合約為何，永遠使用 Web 通訊端通訊協定。|  
 |永不|永遠不使用 Web 通訊端通訊協定。|  
   
-### <a name="child-elements"></a>子元素  
+### <a name="child-elements"></a>子項目  
  無  
   
 ### <a name="parent-elements"></a>父項目  
@@ -96,7 +84,7 @@ ms.lasthandoff: 01/19/2018
       </netHttpBinding>  
 ```  
   
-## <a name="see-also"></a>請參閱  
+## <a name="see-also"></a>另請參閱  
  <xref:System.ServiceModel.Channels.Binding>  
  <xref:System.ServiceModel.Channels.BindingElement>  
  <xref:System.ServiceModel.BasicHttpBinding>  
@@ -104,4 +92,4 @@ ms.lasthandoff: 01/19/2018
  [繫結](../../../../../docs/framework/wcf/bindings.md)  
  [設定系統提供的繫結](../../../../../docs/framework/wcf/feature-details/configuring-system-provided-bindings.md)  
  [使用繫結來設定 Windows Communication Foundation 服務和用戶端](http://msdn.microsoft.com/library/bd8b277b-932f-472f-a42a-b02bb5257dfb)  
- [\<binding>](../../../../../docs/framework/misc/binding.md)
+ [\<繫結 >](../../../../../docs/framework/misc/binding.md)

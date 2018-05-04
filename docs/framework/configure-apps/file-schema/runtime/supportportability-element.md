@@ -1,27 +1,17 @@
 ---
-title: "&lt;supportPortability&gt;項目"
-ms.custom: 
+title: '&lt;supportPortability&gt;項目'
 ms.date: 03/30/2017
-ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.technology: dotnet-clr
-ms.tgt_pltfrm: 
-ms.topic: article
 helpviewer_keywords:
 - supportPortability element
 - <supportPortability> element
 ms.assetid: 6453ef66-19b4-41f3-b712-52d0c2abc9ca
-caps.latest.revision: "9"
 author: rpetrusha
 ms.author: ronpet
-manager: wpickett
-ms.workload: dotnet
-ms.openlocfilehash: 52ef9cce9ee28c6329f688bb9ac751f0f9016657
-ms.sourcegitcommit: c0dd436f6f8f44dc80dc43b07f6841a00b74b23f
+ms.openlocfilehash: 0a8a454919a195a0f0c03ed6890e51b2723f64fb
+ms.sourcegitcommit: 11f11ca6cefe555972b3a5c99729d1a7523d8f50
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 01/19/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="ltsupportportabilitygt-element"></a>&lt;supportPortability&gt;項目
 指定應用程式可以在兩個不同的 .NET Framework 實作中參考相同的組件，方法是停用將組件視為同等的預設行為 (此預設行為是基於應用程式可攜性的考量)。  
@@ -54,7 +44,7 @@ ms.lasthandoff: 01/19/2018
 |true|啟用支援不同的實作指定的.NET Framework 組件的可攜性。 這是預設值。|  
 |False|停用指定的.NET Framework 組件實作之間的可攜性的支援。 這可讓應用程式具備多個指定的組件實作的參考。|  
   
-### <a name="child-elements"></a>子元素  
+### <a name="child-elements"></a>子項目  
  無。  
   
 ### <a name="parent-elements"></a>父項目  
@@ -87,6 +77,6 @@ ms.lasthandoff: 01/19/2018
 </configuration>  
 ```  
   
-## <a name="see-also"></a>請參閱  
+## <a name="see-also"></a>另請參閱  
  [/appconfig （C# 編譯器選項）](http://msdn.microsoft.com/library/ee523958.aspx)  
  [.NET framework 組件統一概觀](http://msdn.microsoft.com/library/8d8cc65e-031d-463b-bde3-2c6dc2e3bc48)

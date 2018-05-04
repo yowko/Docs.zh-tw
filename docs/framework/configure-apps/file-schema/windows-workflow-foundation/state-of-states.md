@@ -1,32 +1,22 @@
 ---
-title: "&lt;states&gt; 的 &lt;state&gt;"
-ms.custom: 
+title: '&lt;states&gt; 的 &lt;state&gt;'
 ms.date: 03/30/2017
-ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.tgt_pltfrm: 
 ms.topic: reference
 ms.assetid: ab483c7f-a091-4933-ba6b-708d96846d38
-caps.latest.revision: "5"
-author: dotnet-bot
-ms.author: dotnetcontent
-manager: wpickett
-ms.workload: dotnet
-ms.openlocfilehash: 13ae0e8cc59adec0b4e4bd9f2cf4c7ea31811602
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.openlocfilehash: 8893f6acfc7ec4d6989be2c647b0584093a534a1
+ms.sourcegitcommit: 11f11ca6cefe555972b3a5c99729d1a7523d8f50
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="ltstategt-of-ltstatesgt"></a>&lt;states&gt; 的 &lt;state&gt;
 組態項目，其中包含應該發出追蹤記錄之已訂閱活動的狀態。  
   
  如需追蹤設定檔查詢的詳細資訊，請參閱[追蹤設定檔](../../../../../docs/framework/windows-workflow-foundation/tracking-profiles.md)。  
   
-\<system.serviceModel >  
+\<system.serviceModel>  
 \<追蹤 >  
-\<trackingProfile >  
+\<trackingProfile>  
 \<工作流程 >  
 \<activityStateQueries >  
 \<activityStateQuery >  
@@ -51,7 +41,7 @@ ms.lasthandoff: 12/22/2017
 ```  
   
 ## <a name="attributes-and-elements"></a>屬性和項目  
- 下列章節說明屬性、子項目和父項目。  
+ 下列各節描述屬性、子項目和父項目。  
   
 ### <a name="attributes"></a>屬性  
   
@@ -59,7 +49,7 @@ ms.lasthandoff: 12/22/2017
 |---------------|-----------------|  
 |name|可指定追蹤記錄應發出之已訂閱活動狀態的字串。|  
   
-### <a name="child-elements"></a>子元素  
+### <a name="child-elements"></a>子項目  
  無。  
   
 ### <a name="parent-elements"></a>父項目  
@@ -85,7 +75,7 @@ ms.lasthandoff: 12/22/2017
 </activityStateQuery>  
 ```  
   
-## <a name="see-also"></a>請參閱  
+## <a name="see-also"></a>另請參閱  
  <xref:System.ServiceModel.Activities.Tracking.Configuration.StateElement?displayProperty=nameWithType>       
  <xref:System.Activities.Tracking.ActivityStateQuery?displayProperty=nameWithType>       
  [工作流程追蹤及追蹤](../../../../../docs/framework/windows-workflow-foundation/workflow-tracking-and-tracing.md)  

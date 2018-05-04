@@ -1,13 +1,6 @@
 ---
-title: "如何：使用 DEVPATH 找出組件"
-ms.custom: 
+title: 如何：使用 DEVPATH 找出組件
 ms.date: 03/30/2017
-ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.technology: dotnet-clr
-ms.tgt_pltfrm: 
-ms.topic: article
 helpviewer_keywords:
 - DEVPATH
 - .NET Framework application configuration, assemblies
@@ -16,16 +9,14 @@ helpviewer_keywords:
 - locating assemblies
 - assemblies [.NET Framework], location
 ms.assetid: 44d2eadf-7eec-443c-a2ac-d601fd919e17
-caps.latest.revision: "8"
 author: mcleblanc
 ms.author: markl
 manager: markl
-ms.workload: dotnet
-ms.openlocfilehash: 0944f2798c45a039149baaa6e46ce2b56eb5c5df
-ms.sourcegitcommit: c0dd436f6f8f44dc80dc43b07f6841a00b74b23f
+ms.openlocfilehash: 918acf069c63d3aa8187f0f04e1f6c55ec961458
+ms.sourcegitcommit: 11f11ca6cefe555972b3a5c99729d1a7523d8f50
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 01/19/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="how-to-locate-assemblies-by-using-devpath"></a>如何：使用 DEVPATH 找出組件
 開發人員可能想要確定他們建立的共用組件的多個應用程式正常運作。 而不是持續將組件在全域組件快取中，在開發期間，開發人員可以建立 DEVPATH 環境變數指向的組件的組建輸出目錄。  
@@ -54,5 +45,5 @@ ms.lasthandoff: 01/19/2018
 > [!NOTE]
 >  使用此設定只在開發階段。 執行階段不會檢查 DEVPATH 中找到的強式名稱組件上的版本。 它只會使用第一個找到的組件。  
   
-## <a name="see-also"></a>請參閱  
+## <a name="see-also"></a>另請參閱  
  [設定.NET Framework 應用程式](http://msdn.microsoft.com/library/d789b592-fcb5-4e3d-8ac9-e0299adaaa42)

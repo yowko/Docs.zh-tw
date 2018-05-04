@@ -22,18 +22,18 @@ ms.author: dotnetcontent
 manager: wpickett
 ms.workload:
 - dotnet
-ms.openlocfilehash: fe0e446a0005ffcbf296c2728fd93056c3e38f2a
-ms.sourcegitcommit: 86adcc06e35390f13c1e372c36d2e044f1fc31ef
+ms.openlocfilehash: e67d4297ca0fe7028380b6d862f9f86c93bcaa61
+ms.sourcegitcommit: 2042de78fcdceebb6b8ac4b7a292b93e8782cbf5
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/26/2018
+ms.lasthandoff: 04/27/2018
 ---
 # <a name="walkthrough-using-client-application-services"></a>逐步解說：使用用戶端應用程式服務
 本主題說明如何建立使用用戶端應用程式服務驗證使用者，以及擷取使用者角色和設定的 Windows 應用程式。  
   
  在這個逐步解說中，您將執行下列工作：  
   
--   建立 Windows Form 應用程式，並使用 [!INCLUDE[vsprvs](../../../includes/vsprvs-md.md)] 專案設計工具啟用及設定用戶端應用程式服務。  
+-   建立 Windows Forms 應用程式，並使用 Visual Studio 專案設計工具啟用及設定用戶端應用程式服務。  
   
 -   建立簡單的 ASP.NET Web 服務應用程式，以裝載應用程式服務並測試用戶端組態。  
   
@@ -57,7 +57,7 @@ ms.lasthandoff: 04/26/2018
   
 #### <a name="to-create-a-client-application-and-enable-client-application-services"></a>建立用戶端應用程式並啟用用戶端應用程式服務  
   
-1.  在 [!INCLUDE[vsprvs](../../../includes/vsprvs-md.md)] 中，選取 [檔案 &#124; 新增 &#124; 專案] 功能表選項。  
+1.  在 Visual Studio 中，選取 [檔案 &#124; 新增 &#124; 專案] 功能表選項。  
   
 2.  在 [新增專案] 對話方塊中，展開 [專案類型] 窗格中的 [Visual Basic] 或 [Visual C#] 節點，然後選取 [Windows] 專案類型。  
   
@@ -65,7 +65,7 @@ ms.lasthandoff: 04/26/2018
   
 4.  將專案的 [名稱]  變更為 `ClientAppServicesDemo`，然後按一下 [確定] 。  
   
-     在 [!INCLUDE[vsprvs](../../../includes/vsprvs-md.md)]中隨即開啟新的 Windows Form 專案。  
+     在 Visual Studio 中隨即開啟新的 Windows Forms 專案。  
   
 5.  在 [專案]  功能表上，選取 [ClientAppServicesDemo 屬性] 。  
   
@@ -250,7 +250,7 @@ ms.lasthandoff: 04/26/2018
   
 1.  在 [方案總管] 中，於 ClientAppServicesDemo 專案中加入 System.Web 組件的參考。  
   
-2.  選取 Form1 檔案，然後從 [!INCLUDE[vsprvs](../../../includes/vsprvs-md.md)] 主功能表選取 [檢視 &#124; 程式碼]。  
+2.  選取 Form1 檔案，然後從 Visual Studio 主功能表選取 [檢視 &#124; 程式碼]。  
   
 3.  在程式碼編輯器中，將下列陳述式加入 Form1 檔案的頂端。  
   
@@ -331,7 +331,7 @@ ms.lasthandoff: 04/26/2018
   
 5.  在 [屬性] 視窗中，將 [(名稱)] 值指定為 `rememberMeCheckBox`，並將 [文字] 值指定為 `&Remember me`。  
   
-6.  從 [!INCLUDE[vsprvs](../../../includes/vsprvs-md.md)] 主功能表選取 [檢視 &#124; 程式碼]。  
+6.  從 Visual Studio 主功能表選取 [檢視 &#124; 程式碼]。  
   
 7.  在程式碼編輯器中，將下列程式碼加入檔案的頂端。  
   
@@ -371,7 +371,7 @@ ms.lasthandoff: 04/26/2018
   
 #### <a name="to-change-the-user-interface-based-on-user-role"></a>根據使用者角色變更使用者介面  
   
-1.  在 [方案總管] 中，選取 ClientAppServicesDemo 專案中的 Form1，然後從 [!INCLUDE[vsprvs](../../../includes/vsprvs-md.md)] 主功能表選取 [檢視 &#124; 設計工具]。  
+1.  在 [方案總管] 中，選取 ClientAppServicesDemo 專案中的 Form1，然後從 Visual Studio 主功能表選取 [檢視 &#124; 設計工具]。  
   
 2.  在設計工具中，從 [工具箱] 將 <xref:System.Windows.Forms.Button> 控制項新增表單。  
   
@@ -407,7 +407,7 @@ ms.lasthandoff: 04/26/2018
  您現在可以執行應用程式並以 employee 身分登入，您會發現按鈕並未顯示；然後再以 manager 身分登入，則會看到按鈕。  
   
 ## <a name="accessing-web-settings"></a>存取 Web 設定  
- 在下列程序中，您會將文字方塊加入表單並繫結至 Web 設定。 如同先前使用驗證和角色的程式碼，您的設定程式碼不會直接存取設定提供者， 而是會使用 [!INCLUDE[vsprvs](../../../includes/vsprvs-md.md)] 針對專案所產生的強型別 `Settings` 類別 (在 C# 中是當作 `Properties.Settings.Default` 存取，而在 Visual Basic 中則是當作 `My.Settings` 存取)。  
+ 在下列程序中，您會將文字方塊加入表單並繫結至 Web 設定。 如同先前使用驗證和角色的程式碼，您的設定程式碼不會直接存取設定提供者， 而是會使用 Visual Studio 針對專案所產生的強型別 `Settings` 類別 (在 C# 中是當作 `Properties.Settings.Default` 存取，而在 Visual Basic 中則是當作 `My.Settings` 存取)。  
   
 #### <a name="to-use-web-settings-in-your-user-interface"></a>在使用者介面中使用 Web 設定  
   
@@ -425,7 +425,7 @@ ms.lasthandoff: 04/26/2018
   
      `WebSettingsTestText` 設定會以 `DefaultText`的預設值出現在設計工具中。 此外，也會為專案產生包含 `WebSettingsTestText` 屬性的 `Settings` 類別。  
   
-5.  在 [方案總管] 中，選取 ClientAppServicesDemo 專案中的 Form1，然後從 [!INCLUDE[vsprvs](../../../includes/vsprvs-md.md)] 主功能表選取 [檢視 &#124; 設計工具]。  
+5.  在 [方案總管] 中，選取 ClientAppServicesDemo 專案中的 Form1，然後從 Visual Studio 主功能表選取 [檢視 &#124; 設計工具]。  
   
 6.  在設計工具中，將 <xref:System.Windows.Forms.TextBox> 控制項加入表單。  
   
@@ -510,7 +510,7 @@ ms.lasthandoff: 04/26/2018
   
 #### <a name="to-enable-offline-mode-in-your-application"></a>在應用程式中啟用離線模式  
   
-1.  在 [方案總管] 中，選取 ClientAppServicesDemo 專案中的 Form1，然後從 [!INCLUDE[vsprvs](../../../includes/vsprvs-md.md)] 主功能表選取 [檢視 &#124; 設計工具]。  
+1.  在 [方案總管] 中，選取 ClientAppServicesDemo 專案中的 Form1，然後從 Visual Studio 主功能表選取 [檢視 &#124; 設計工具]。  
   
 2.  在設計工具中，將 <xref:System.Windows.Forms.CheckBox> 控制項加入表單。  
   

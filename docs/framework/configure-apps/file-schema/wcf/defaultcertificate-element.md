@@ -1,33 +1,21 @@
 ---
-title: "&lt;defaultCertificate&gt; 項目"
-ms.custom: 
+title: '&lt;defaultCertificate&gt; 項目'
 ms.date: 03/30/2017
-ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.technology: dotnet-clr
-ms.tgt_pltfrm: 
-ms.topic: article
 ms.assetid: f1ddf364-9a00-45d3-b989-ff381c154ce6
-caps.latest.revision: "11"
-author: dotnet-bot
-ms.author: dotnetcontent
-manager: wpickett
-ms.workload: dotnet
-ms.openlocfilehash: eeb4c1b010e2d446303e780966668fc8a6f5ddb7
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.openlocfilehash: a4af1c6ec452b24634fa50162fa71f069e2451f5
+ms.sourcegitcommit: 11f11ca6cefe555972b3a5c99729d1a7523d8f50
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="ltdefaultcertificategt-element"></a>&lt;defaultCertificate&gt; 項目
 指定服務或 STS 不透過交涉通訊協定提供憑證時要使用的 X.509 憑證。  
   
- \<系統。ServiceModel >  
+ \<system.ServiceModel>  
 \<行為 >  
 endpointBehaviors 區段  
 \<行為 >  
-\<clientCredentials >  
+\<clientCredentials>  
 \<serviceCertificate >  
 \<defaultCertificate >  
   
@@ -76,7 +64,7 @@ x509FindType="FindByThumbPrint/FindBySubjectName/FindBySubjectDistinguishedName/
 |-----------|-----------------|  
 |列舉|值包括：AddressBook、AuthRoot、CertificateAuthority、Disallowed、My、Root、TrustedPeople 和 TrustedPublisher。|  
   
-### <a name="child-elements"></a>子元素  
+### <a name="child-elements"></a>子項目  
  無。  
   
 ### <a name="parent-elements"></a>父項目  
@@ -89,7 +77,7 @@ x509FindType="FindByThumbPrint/FindBySubjectName/FindBySubjectDistinguishedName/
  對於使用以憑證為基礎之訊息安全性的繫結，這個組態項目指定的憑證會用來加密傳送給服務的訊息，而且預期會由服務用來簽署對用戶端的回覆。 它會儲存當服務未指定憑證時所要使用的單一憑證。  
   
 ## <a name="example"></a>範例  
- 下列範例會為 URI 開頭為 http://www.contoso.com 的端點指定使用的憑證，並且為不執行憑證交涉的其他端點指定使用的憑證。  
+ 下列範例會指定要用於的端點 URI 開頭憑證http://www.contoso.com和要針對所有其他不執行憑證交涉的端點使用的憑證。  
   
 ```xml  
 <serviceCertificate>  
@@ -107,7 +95,7 @@ x509FindType="FindByThumbPrint/FindBySubjectName/FindBySubjectDistinguishedName/
 </serviceCertificate>  
 ```  
   
-## <a name="see-also"></a>請參閱  
+## <a name="see-also"></a>另請參閱  
  <xref:System.ServiceModel.Configuration.X509DefaultServiceCertificateElement>  
  <xref:System.ServiceModel.Security.X509CertificateRecipientClientCredential>  
  <xref:System.ServiceModel.Security.X509CertificateRecipientClientCredential.DefaultCertificate%2A>  

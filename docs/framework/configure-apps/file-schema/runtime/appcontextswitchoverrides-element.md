@@ -1,13 +1,7 @@
 ---
 title: '&lt;AppContextSwitchOverrides&gt;項目'
-ms.custom: ''
+ms.custom: updateeachrelease
 ms.date: 04/19/2018
-ms.prod: .net-framework
-ms.technology:
-- dotnet-bcl
-- dotnet-clr
-ms.tgt_pltfrm: ''
-ms.topic: article
 helpviewer_keywords:
 - AppContextSwitchOverrides
 - compatibility switches
@@ -16,14 +10,11 @@ helpviewer_keywords:
 ms.assetid: 4ce07f47-7ddb-4d91-b067-501bd8b88752
 author: rpetrusha
 ms.author: ronpet
-manager: wpickett
-ms.workload:
-- dotnet
-ms.openlocfilehash: 146416a9872a8444316c2e4a754067b82030a81d
-ms.sourcegitcommit: 86adcc06e35390f13c1e372c36d2e044f1fc31ef
+ms.openlocfilehash: d16ce7f2744869c812b9988e91edd153d9cb4fd2
+ms.sourcegitcommit: 11f11ca6cefe555972b3a5c99729d1a7523d8f50
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/26/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="ltappcontextswitchoverridesgt-element"></a>&lt;AppContextSwitchOverrides&gt;項目
 定義一或多個由 <xref:System.AppContext> 類別所使用的參數，以提供新功能的退出機制。  
@@ -76,12 +67,15 @@ ms.lasthandoff: 04/26/2018
 |`Switch.MS.Internal.`<br/>`UseSha1AsDefaultHashAlgorithmForDigitalSignatures`|控制用來簽署封裝的組件的 PackageDigitalSignatureManager 的預設演算法是 SHA1 或 SHA256。|.NET Framework 4.7.1|
 |`Switch.System.Activities.`<br/>`UseMD5CryptoServiceProviderForWFDebugger`|當設定為`false`，允許 FIPS 已啟用時，Visual Studio 的 XAML 型工作流程專案的偵錯。 未安裝， <xref:System.NullReferenceException> System.Activities 組件中的方法的呼叫中是否擲回。|.NET Framework 4.7|
 |`Switch.System.Activities.`<br/>`UseMD5ForWFDebugger`|控制偵錯工具中的工作流程執行個體的總和檢查碼是否使用 MD5 或 SHA1。 | .NET Framework 4.7|
+|`Switch.System.Diagnostics.`<br/>`IgnorePortablePDBsInStackTraces`|控制堆疊追蹤是取得使用可攜式 Pdb 時，可以包含來源檔案與行資訊。 `false` 包含來源檔案與行資訊。否則， `true`。|.NET framework 4.7.2|
 |`Switch.System.Drawing.`<br/>`DontSupportPngFramesInIcons`|控制項是否<xref:System.Drawing.Icon.ToBitmap%2A?displayProperty=nameWithType>方法會擲回的例外狀況時<xref:System.Drawing.Icon>物件具有 PNG 畫面格。 如需詳細資訊，請參閱[風險降低：Icon 物件中的 PNG 畫面格](~/docs/framework/migration-guide/mitigation-png-frames-in-icon-objects.md)。|.NET Framework 4.6|  
+|`Switch.System.Drawing.Text.`<br/>`DoNotRemoveGdiFontsResourcesFromFontCollection`|決定是否<xref:System.Drawing.Text.PrivateFontCollection?displayProperty=nameWithType>加入至集合時，適當地處置物件<xref:System.Drawing.Text.PrivateFontCollection.AddFontFile(System.String)?displayProperty=nameWithType>方法。 `true` 若要維護舊版的行為。`false`來處置私用字型的所有物件。 |.NET framework 4.7.2|
 |`Switch.System.Drawing.Printing.`</br>`OptimizePrintPreview`|控制項是否的效能<xref:System.Windows.Forms.PrintPreviewDialog>最適合用於網路印表機。 如需詳細資訊，請參閱[PrintPreviewDialog 控制項概觀](../../../winforms/controls/printpreviewdialog-control-overview-windows-forms.md)。|.NET Framework 4.6|
 |`Switch.System.Globalization.NoAsyncCurrentCulture`|控制是否非同步作業不會流動從呼叫的執行緒內容。 如需詳細資訊，請參閱[CurrentCulture 和 CurrentUICulture 流經工作](~/docs/framework/migration-guide/retargeting/4.5.2-4.6.md#currentculture-and-currentuiculture-flow-across-tasks)。|.NET Framework 4.6|  
 |`Switch.System.IdentityModel.`<br/>`DisableMultipleDNSEntriesInSANCertificate`|控制項是否<xref:System.IdentityModel.Claims.X509CertificateClaimSet.FindClaims%2A?displayProperty=nameWithType>方法會嘗試比對的宣告類型，只能使用最後一個 DNS 項目。 如需詳細資訊，請參閱[風險降低：X509CertificateClaimSet.FindClaims 方法](~/docs/framework/migration-guide/mitigation-x509certificateclaimset-findclaims-method.md)。|.NET Framework 4.6.1|  
 |`Switch.System.IdentityModel.`<br/>`EnableCachedEmptyDefaultAuthorizationContext`|控制是否允許 AuthorizationContext.Empty 傳回可變動的物件。|.NET Framework 4.6|  
 |`Switch.System.IO.BlockLongPaths`|控制項是否路徑長度超過`MAX_PATH`（260 個字元） 會擲回<xref:System.IO.PathTooLongException>。 如需詳細資訊，請參閱[長路徑支援](~/docs/framework/migration-guide/retargeting/4.6.1-4.6.2.md#long-path-support)。|.NET Framework 4.6.2|  
+|`Switch.System.IO.Compression.`<br/>`DoNotUseNativeZipLibraryForDecompression`|控制是否將原生 OS 常式用於由解壓縮<xref:System.IO.Compression.DeflateStream>類別。 `false` 若要使用原生 Api。`true`使用<xref:System.IO.Compression.DeflateStream>實作。|.NET framework 4.7.2|
 |`Switch.System.IO.Compression.ZipFile.`<br/>`UseBackslash`|使用反斜線 ("\\") 而不是正斜線 （"/"） 為路徑分隔符號<xref:System.IO.Compression.ZipArchiveEntry.FullName%2A?displayProperty=nameWithType>屬性。 如需詳細資訊，請參閱[風險降低： ZipArchiveEntry.FullName 路徑分隔符號](~/docs/framework/migration-guide/mitigation-ziparchiveentry-fullname-path-separator.md)。|.NET Framework 4.6.1|  
 |`Switch.System.IO.Ports.`<br/>`DoNotCatchSerialStreamThreadExceptions`|控制是否運作系統例外狀況，以建立的背景執行緒上擲回的<xref:System.IO.Ports.SerialPort>資料流結束該處理序。|.NET Framework 4.7.1| 
 |`Switch.System.IO.`<br/>`UseLegacyPathHandling`|控制是否使用傳統路徑正規化和所支援的 URI 路徑<xref:System.IO.Path.GetDirectoryName%2A?displayProperty=nameWithType>和<xref:System.IO.Path.GetPathRoot%2A?displayProperty=nameWithType>方法。 如需詳細資訊，請參閱[風險降低： 路徑正規化](~/docs/framework/migration-guide/mitigation-path-normalization.md)和[風險降低： 路徑冒號會檢查](~/docs/framework/migration-guide/mitigation-path-colon-checks.md)。|.NET Framework 4.6.2|  
@@ -94,7 +88,7 @@ ms.lasthandoff: 04/26/2018
 |`Switch.System.Runtime.Serialization.`<br/>`DoNotUseECMAScriptV6EscapeControlCharacter` |控制項是否[DataContractJsonSerializer](xref:System.Runtime.Serialization.Json.DataContractJsonSerializer)序列化某些 ECMAScript V6 和 V8 標準為基礎的控制字元。 如需詳細資訊，請參閱[風險降低︰使用 DataContractJsonSerializer 控制字元的序列化](Mitigation:%20Serialization%20of%20Control%20Characters%20with%20the%20DataContractJsonSerializer.md)| .NET Framework 4.7 |
 |`Switch.System.Runtime.Serialization.`<br/>`DoNotUseTimeZoneInfo`|控制項是否<xref:System.Runtime.Serialization.Json.DataContractJsonSerializer>支援多個調整或只有單一調整時區。 如果`true`，它會使用<xref:System.TimeZoneInfo>類型來序列化和還原序列化的日期和時間資料; 否則它會使用<xref:System.TimeZone>類型，不支援多個調整規則。|.NET Framework 4.6.2|
 |`Switch.System.Security.ClaimsIdentity.`<br/>`SetActorAsReferenceWhenCopyingClaimsIdentity`|控制項是否<xref:System.Security.Claims.ClaimsIdentity.%23ctor%28System.Security.Principal.IIdentity%29?displayProperty=nameWithType>建構函式設定新的物件<xref:System.Security.Claims.ClaimsIdentity.Actor%2A?displayProperty=nameWithType>與現有的物件參考的屬性。 如需詳細資訊，請參閱[風險降低︰ClaimsIdentity 建構函式](~/docs/framework/migration-guide/mitigation-claimsidentity-constructor.md)。|.NET Framework 4.6.2|  
-|`Switch.System.Security.Cryptography.`<br/>`AesCryptoServiceProvider.DontCorrectlyResetDecryptor`|控制項是否嘗試重複使用<xref:System.Security.Cryptography.AesCryptoServiceProvider>的解密程式來擲回<xref:System.Security.Cryptography.CryptographicException>。 如需詳細資訊，請參閱 AesCryptoServiceProvider 的解密程式來提供可重複使用 transform](~/docs/framework/migration-guide/retargeting/4.6.1-4.6.2.md#aescryptoserviceprovider-decryptor-provides-a-reusable-transform)。|.NET Framework 4.6.2|
+|`Switch.System.Security.Cryptography.`<br/>`AesCryptoServiceProvider.DontCorrectlyResetDecryptor`|控制項是否嘗試重複使用<xref:System.Security.Cryptography.AesCryptoServiceProvider>的解密程式來擲回<xref:System.Security.Cryptography.CryptographicException>。 如需詳細資訊，請參閱[AesCryptoServiceProvider 的解密程式來提供可重複使用的轉換](~/docs/framework/migration-guide/retargeting/4.6.1-4.6.2.md#aescryptoserviceprovider-decryptor-provides-a-reusable-transform)。|.NET Framework 4.6.2|
 |`Switch.System.Security.Cryptography.`<br/>`DoNotAddrOfCspParentWindowHandle`|控制項是否值[CspParameters.ParentWindowHandle](xref:System.Security.Cryptography.CspParameters.ParentWindowHandle)屬性是[IntPtr](xref:System.IntPtr)代表視窗的記憶體位置處理，或它是否視窗控制代碼 (HWND)。 如需詳細資訊，請參閱[風險降低︰CspParameters.ParentWindowHandle 應該有 HWND](Mitigation:%20CspParameters.ParentWindowHandle%20Expects%20an%20HWND.md)。 |.NET Framework 4.7|   
 |`Switch.System.Security.Cryptography.Pkcs.`<br/>`UseInsecureHashAlgorithms`|判斷某些 SignedCMS 作業的預設值為 SHA1 或 SHA256。 |.NET Framework 4.7.1|
 |`Switch.System.Security.Cryptography.Xml.`<br/>`UseInsecureHashAlgorithms`|判斷某些 SignedXML 作業的預設值為 SHA1 或 SHA256。 |.NET Framework 4.7.1|
@@ -109,13 +103,20 @@ ms.lasthandoff: 04/26/2018
 |`Switch.System.ServiceModel.`<br/>`UseSha1InPipeConnectionGetHashAlgorithm`|控制是否 WCF 使用 SHA1 或 SHA256 雜湊來產生隨機的具名管道的名稱。|.NET Framework 4.7.1|
 |`Switch.System.ServiceModel.Internals`<br/>`IncludeNullExceptionMessageInETWTrace`|控制是否要擲回[NullReferenceException](xref:System.NullReferenceException)當例外狀況訊息為 null。|.NET Framework 4.7|  
 |`Switch.System.ServiceProcess.`<br/>`DontThrowExceptionsOnStart`|控制是否在服務啟動時擲回的例外狀況會傳播的呼叫端<xref:System.ServiceProcess.ServiceBase.Run%2A?displayProperty=nameWithType>方法。|.NET Framework 4.7.1|
+|`Switch.System.Uri.`<br/>`DontEnableStrictRFC3986ReservedCharacterSets`|決定是否有時已解碼的特定百分比編碼字元現在一致的方式向左編碼。 如果`true`，它們會解碼; 否則`false`。|.NET framework 4.7.2|
+|`Switch.System.Uri.`<br/>`DontKeepUnicodeBidiFormattingCharacters`|決定在 Uri 中的 Unicode 雙向字元的處理。 `true` 若要刪除從 Uri;`false`保留並百分比編碼它們。|.NET framework 4.7.2|
 |`Switch.System.Windows.Controls.Grid.`<br/>`StarDefinitionsCanExceedAvailableSpace` |決定 Windows Presentation Foundation 是否適用於舊的演算法 (`true`) 或新的演算法 (`false`) 中配置空間\*-資料行。 如需詳細資訊，請參閱[風險降低︰方格控制項對 Star-columns 的空間配置](Mitigation:%20Grid%20Control's%20Space%20Allocation%20to%20Star-columns.md)。 |.NET Framework 4.7 |
 |`Switch.System.Windows.Controls.TabControl.`<br/>`SelectionPropertiesCanLagBehindSelectionChangedEvent`|控制項選取器或索引標籤的永遠控制是否引發選取範圍之前更新其選取的值屬性的值已變更事件。|.NET Framework 4.7.1|
+|`Switch.System.Windows.Controls.Text.`<br/>`UseAdornerForTextboxSelectionRendering`|判斷是否可用於非裝飾項根據選取範圍轉譯<xref:System.Windows.Controls.TextBox>和<xref:System.Windows.Controls.PasswordBox>控制項，以防止 occluded 文字 (`false`)，或是否只能在裝飾項層為轉譯文字 (`true`)。|.NET framework 4.7.2|
 |`Switch.System.Windows.DoNotScaleForDpiChanges`|決定每個系統上是否發生 DPI 變更 (值為`false`) 或每個監視 (值為`true`)。|.NET Framework 4.6.2|
+|`Switch.System.Windows.Forms.`<br/>`DomainUpDown.UseLegacyScrolling`|判斷是否需要特別處理開發人員<xref:System.Windows.Forms.DomainUpDown.UpButton?displayProperty=nameWithType>控制項文字會出現時的動作。 `true` 若要處理<xref:System.Windows.Forms.DomainUpDown.UpButton>動作;`false`如<xref:System.Windows.Forms.DomainUpDown.UpButton?displayProperty=nameWithType>和<xref:System.Windows.Forms.DomainUpDown.DownButton?displayProperty=nameWithType>正確同步的動作。|.NET framework 4.7.2|
 |`Switch.System.Windows.Forms.`<br />`DontSupportReentrantFilterMessage`|選擇不允許自訂程式碼<xref:System.Windows.Forms.IMessageFilter.PreFilterMessage%2A?displayProperty=nameWithType>實作安全地篩選訊息，而不擲回例外狀況時<xref:System.Windows.Forms.Application.FilterMessage%2A?displayProperty=nameWithType>方法呼叫。 如需詳細資訊，請參閱[風險降低：自訂 IMessageFilter.PreFilterMessage 實作](~/docs/framework/migration-guide/mitigation-custom-imessagefilter-prefiltermessage-implementations.md)。|.NET Framework 4.6.1|  
-|`Switch.System.Windows.Input.Stylus.`<br/>`EnablePointerSupport`|決定是否選用`WM_POINTER`-根據的觸控/手寫筆的堆疊 WPF 應用程式中啟用。 如需詳細資訊，請參閱[風險降低： 指標為基礎的觸控和手寫筆支援](Mitigation:%20Pointer-based%20Touch%20and%20Stylus%20Support.md) | 
+|`Switch.System.Windows.Forms.`<br/>`UseLegacyContextMenuStripSourceControlValue`|決定是否<xref:System.Windows.Forms.ContextMenuStrip.SourceControl?displayProperty=nameWithType>屬性會傳回原始檔控制當使用者開啟功能表，從巢狀<xref:System.Windows.Forms.ToolStripMenuItem>控制項。 `true` 要傳回`null`，舊版的行為。`false`返回原始檔控制。|.NET framework 4.7.2|
+|`Switch.System.Windows.Input.Stylus.`<br/>`EnablePointerSupport`|決定是否選用`WM_POINTER`-根據的觸控/手寫筆的堆疊 WPF 應用程式中啟用。 如需詳細資訊，請參閱[風險降低： 指標為基礎的觸控和手寫筆支援](../../../migration-guide/mitigation-pointer-based-touch-and-stylus-support.md)|.NET Framework 4.7|
+|`Switch.System.Windows.Markup.`<br/>`DoNotUseSha256ForMarkupCompilerChecksumAlgorithm`|判斷是否 SHA256 總和檢查碼所用的預設雜湊演算法 (`false`) 或 SHA1 (`true`)。|.NET framework 4.7.2|
 |`Switch.System.Windows.Media.ImageSourceConverter.`<br/>`OverrideExceptionWithNullReferenceException`|控制是否舊版[NullReferenceException](xref:System.NullReferenceException)而不是更具體地來說指出例外狀況原因的例外狀況擲回 (例如[DirectoryNotFoundException](xref:System.IO.DirectoryNotFoundException)或[FileNotFoundException](xref:System.IO.FileNotFoundException)。 適用於由處理所依賴的程式碼[NullReferenceException](xref:System.NullReferenceException)。 | .NET Framework 4.7 |
 |`Switch.UseLegacyAccessibilityFeatures`|控制項以.NET Framework 4.7.1 起可用的協助工具功能是否已啟用或停用。 | .NET Framework 4.7.1 |
+|`Switch.UseLegacyAccessibilityFeatures.2`|協助工具功能可用在.NET Framework 4.7.2 是否已啟用的控制項 (`false`) 或停用 (`true`)。 如果`true`，`Switch.UseLegacyAccessibilityFeatures`也必須是`true`啟用.NET Framework 4.7.1 協助工具功能。|.NET framework 4.7.2|
 |`System.Xml.`<br /><br /> `IgnoreEmptyKeySequences`|控制是否在複合的索引鍵中的空白索引鍵序列會忽略 XSD 結構描述驗證。 如需詳細資訊，請參閱[風險降低： XML 結構描述驗證](~/docs/framework/migration-guide/mitigation-xml-schema-validation.md)。|.NET Framework 4.6|  
   
 > [!NOTE]

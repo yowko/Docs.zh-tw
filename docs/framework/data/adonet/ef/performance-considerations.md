@@ -1,24 +1,12 @@
 ---
-title: "效能考量 (Entity Framework)"
-ms.custom: 
+title: 效能考量 (Entity Framework)
 ms.date: 03/30/2017
-ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.technology: dotnet-ado
-ms.tgt_pltfrm: 
-ms.topic: article
 ms.assetid: 61913f3b-4f42-4d9b-810f-2a13c2388a4a
-caps.latest.revision: "6"
-author: douglaslMS
-ms.author: douglasl
-manager: craigg
-ms.workload: dotnet
-ms.openlocfilehash: e27d6ec040557d682082a6fb5a05677ad52afae9
-ms.sourcegitcommit: c0dd436f6f8f44dc80dc43b07f6841a00b74b23f
+ms.openlocfilehash: 581f3bc81c689909164ed3fec246371cf83245ff
+ms.sourcegitcommit: 11f11ca6cefe555972b3a5c99729d1a7523d8f50
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 01/19/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="performance-considerations-entity-framework"></a>效能考量 (Entity Framework)
 本主題說明 ADO.NET Entity Framework 的效能特性，並提供一些考量因素以協助提升 Entity Framework 應用程式的效能。  
@@ -29,13 +17,13 @@ ms.lasthandoff: 01/19/2018
 |運算|相對成本|頻率|註解|  
 |---------------|-------------------|---------------|--------------|  
 |載入中繼資料|一般|在每個應用程式定義域中執行一次。|Entity Framework 使用的模型和對應中繼資料會載入至 <xref:System.Data.Metadata.Edm.MetadataWorkspace>。 這個中繼資料會在全域中作快取，並在相同的應用程式定義域中，提供給其他 <xref:System.Data.Objects.ObjectContext> 執行個體使用。|  
-|開啟資料庫連接|Moderate<sup>1</sup>|需要時。|資料庫的開啟連接會消耗寶貴的資源，因為[!INCLUDE[adonet_ef](../../../../../includes/adonet-ef-md.md)]開啟和關閉資料庫連接，只有在必要時。 您也可以明確開啟連接。 如需詳細資訊，請參閱[管理連接與交易](http://msdn.microsoft.com/library/b6659d2a-9a45-4e98-acaa-d7a8029e5b99)。|  
+|開啟資料庫連接|中等<sup>1</sup>|需要時。|資料庫的開啟連接會消耗寶貴的資源，因為[!INCLUDE[adonet_ef](../../../../../includes/adonet-ef-md.md)]開啟和關閉資料庫連接，只有在必要時。 您也可以明確開啟連接。 如需詳細資訊，請參閱[管理連接與交易](http://msdn.microsoft.com/library/b6659d2a-9a45-4e98-acaa-d7a8029e5b99)。|  
 |產生檢視|High|在每個應用程式定義域中執行一次。 (可以預先產生。)|在 Entity Framework 可以針對概念模型執行查詢，或儲存變更至資料來源之前，Entity Framework 必須產生本地查詢檢視集，才能存取資料庫。 由於產生這些檢視的成本很高，您可以預先產生檢視，在設計階段就把這些檢視加入至專案。 如需詳細資訊，請參閱[How to: Pre-Generate 檢視，以改善查詢效能](http://msdn.microsoft.com/library/b18a9d16-e10b-4043-ba91-b632f85a2579)。|  
-|準備查詢|Moderate<sup>2</sup>|針對每個唯一查詢執行一次。|包括組成查詢命令、根據模型和對應的中繼資料產生命令樹，以及定義傳回資料的形式等成本。 由於現在會快取 Entity SQL 查詢命令和 LINQ 查詢，因此後續執行相同查詢時可減少些許時間。 之後執行時您仍可以使用已編譯的 LINQ 查詢減少這種成本，且已編譯查詢可能比自動快取的 LINQ 查詢更有效率。 如需詳細資訊，請參閱[編譯的查詢 (LINQ to Entities)](../../../../../docs/framework/data/adonet/ef/language-reference/compiled-queries-linq-to-entities.md)。 如需 LINQ 查詢執行的一般資訊，請參閱[LINQ to Entities](../../../../../docs/framework/data/adonet/ef/language-reference/linq-to-entities.md)。 **注意：** LINQ to Entities 查詢適用於`Enumerable.Contains`記憶體中集合的運算子不會自動快取。 此外也不允許在已編譯的 LINQ 查詢中參數化記憶體中的集合。|  
-|執行查詢|Low<sup>2</sup>|針對每個查詢執行一次。|使用 ADO.NET 資料提供者，針對資料來源執行命令的成本。 由於大部分的資料來源都會對查詢計畫作快取，後續執行相同查詢命令可能會減少些許時間。|  
-|載入和使用型別|Low<sup>3</sup>|針對每個 <xref:System.Data.Objects.ObjectContext> 執行個體執行一次。|載入型別，並針對概念模型定義的型別進行驗證。|  
-|追蹤|Low<sup>3</sup>|針對每個查詢傳回的物件執行一次。 <sup>4</sup>|如果查詢使用 <xref:System.Data.Objects.MergeOption.NoTracking> 合併選項，這個階段不會影響效能。<br /><br /> 如果查詢使用 <xref:System.Data.Objects.MergeOption.AppendOnly>、<xref:System.Data.Objects.MergeOption.PreserveChanges> 或 <xref:System.Data.Objects.MergeOption.OverwriteChanges> 合併選項，會在 <xref:System.Data.Objects.ObjectStateManager> 中追蹤查詢結果。 針對查詢傳回的每一個已追蹤物件產生 <xref:System.Data.EntityKey>，並用來建立 <xref:System.Data.Objects.ObjectStateEntry> 中的 <xref:System.Data.Objects.ObjectStateManager>。 如果可以針對 <xref:System.Data.Objects.ObjectStateEntry>，找到現有的 <xref:System.Data.EntityKey>，則會回傳現有的物件。 如果使用 <xref:System.Data.Objects.MergeOption.PreserveChanges> 或 <xref:System.Data.Objects.MergeOption.OverwriteChanges> 選項，傳回前會先更新物件。<br /><br /> 如需詳細資訊，請參閱[識別解析、 狀態管理和變更追蹤](http://msdn.microsoft.com/library/3bd49311-0e72-4ea4-8355-38fe57036ba0)。|  
-|具體化物件|Moderate<sup>3</sup>|針對每個查詢傳回的物件執行一次。 <sup>4</sup>|讀取傳回之 <xref:System.Data.Common.DbDataReader> 物件、建立物件和設定屬性值的程序，是根據 <xref:System.Data.Common.DbDataRecord> 類別之每一個執行個體上的值。 如果物件已於 <xref:System.Data.Objects.ObjectContext> 中存在，且查詢使用 <xref:System.Data.Objects.MergeOption.AppendOnly> 或 <xref:System.Data.Objects.MergeOption.PreserveChanges> 合併選項，則這個階段不會影響效能。 如需詳細資訊，請參閱[識別解析、 狀態管理和變更追蹤](http://msdn.microsoft.com/library/3bd49311-0e72-4ea4-8355-38fe57036ba0)。|  
+|準備查詢|中等<sup>2</sup>|針對每個唯一查詢執行一次。|包括組成查詢命令、根據模型和對應的中繼資料產生命令樹，以及定義傳回資料的形式等成本。 由於現在會快取 Entity SQL 查詢命令和 LINQ 查詢，因此後續執行相同查詢時可減少些許時間。 之後執行時您仍可以使用已編譯的 LINQ 查詢減少這種成本，且已編譯查詢可能比自動快取的 LINQ 查詢更有效率。 如需詳細資訊，請參閱[編譯的查詢 (LINQ to Entities)](../../../../../docs/framework/data/adonet/ef/language-reference/compiled-queries-linq-to-entities.md)。 如需 LINQ 查詢執行的一般資訊，請參閱[LINQ to Entities](../../../../../docs/framework/data/adonet/ef/language-reference/linq-to-entities.md)。 **注意：** LINQ to Entities 查詢適用於`Enumerable.Contains`記憶體中集合的運算子不會自動快取。 此外也不允許在已編譯的 LINQ 查詢中參數化記憶體中的集合。|  
+|執行查詢|低<sup>2</sup>|針對每個查詢執行一次。|使用 ADO.NET 資料提供者，針對資料來源執行命令的成本。 由於大部分的資料來源都會對查詢計畫作快取，後續執行相同查詢命令可能會減少些許時間。|  
+|載入和使用型別|低<sup>3</sup>|針對每個 <xref:System.Data.Objects.ObjectContext> 執行個體執行一次。|載入型別，並針對概念模型定義的型別進行驗證。|  
+|追蹤|低<sup>3</sup>|針對每個查詢傳回的物件執行一次。 <sup>4</sup>|如果查詢使用 <xref:System.Data.Objects.MergeOption.NoTracking> 合併選項，這個階段不會影響效能。<br /><br /> 如果查詢使用 <xref:System.Data.Objects.MergeOption.AppendOnly>、<xref:System.Data.Objects.MergeOption.PreserveChanges> 或 <xref:System.Data.Objects.MergeOption.OverwriteChanges> 合併選項，會在 <xref:System.Data.Objects.ObjectStateManager> 中追蹤查詢結果。 針對查詢傳回的每一個已追蹤物件產生 <xref:System.Data.EntityKey>，並用來建立 <xref:System.Data.Objects.ObjectStateEntry> 中的 <xref:System.Data.Objects.ObjectStateManager>。 如果可以針對 <xref:System.Data.Objects.ObjectStateEntry>，找到現有的 <xref:System.Data.EntityKey>，則會回傳現有的物件。 如果使用 <xref:System.Data.Objects.MergeOption.PreserveChanges> 或 <xref:System.Data.Objects.MergeOption.OverwriteChanges> 選項，傳回前會先更新物件。<br /><br /> 如需詳細資訊，請參閱[識別解析、 狀態管理和變更追蹤](http://msdn.microsoft.com/library/3bd49311-0e72-4ea4-8355-38fe57036ba0)。|  
+|具體化物件|中等<sup>3</sup>|針對每個查詢傳回的物件執行一次。 <sup>4</sup>|讀取傳回之 <xref:System.Data.Common.DbDataReader> 物件、建立物件和設定屬性值的程序，是根據 <xref:System.Data.Common.DbDataRecord> 類別之每一個執行個體上的值。 如果物件已於 <xref:System.Data.Objects.ObjectContext> 中存在，且查詢使用 <xref:System.Data.Objects.MergeOption.AppendOnly> 或 <xref:System.Data.Objects.MergeOption.PreserveChanges> 合併選項，則這個階段不會影響效能。 如需詳細資訊，請參閱[識別解析、 狀態管理和變更追蹤](http://msdn.microsoft.com/library/3bd49311-0e72-4ea4-8355-38fe57036ba0)。|  
   
  <sup>1</sup>開啟連接的成本，當資料來源提供者實作連接共用時，都會分散到集區。 SQL Server 的 .NET 提供者支援連接共用。  
   
@@ -164,5 +152,5 @@ ms.lasthandoff: 01/19/2018
   
 -   [ADO.NET Entity Framework 效能比較](http://go.microsoft.com/fwlink/?LinkID=123913)  
   
-## <a name="see-also"></a>請參閱  
+## <a name="see-also"></a>另請參閱  
  [開發和部署考量](../../../../../docs/framework/data/adonet/ef/development-and-deployment-considerations.md)

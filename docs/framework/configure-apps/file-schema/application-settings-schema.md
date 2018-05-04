@@ -1,29 +1,20 @@
 ---
-title: "應用程式設定結構描述"
-ms.custom: 
+title: 應用程式設定結構描述
 ms.date: 03/30/2017
-ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.technology: dotnet-clr
-ms.tgt_pltfrm: 
-ms.topic: article
 helpviewer_keywords:
 - schema application settings
 - application settings, schema [Windows Forms]
 - Windows Forms, application settings schema
 - configuration schema [.NET Framework], application settings
 ms.assetid: 5797fcff-6081-4e8c-bebf-63d9c70cf14b
-caps.latest.revision: "3"
 author: mcleblanc
 ms.author: markl
 manager: markl
-ms.workload: dotnet
-ms.openlocfilehash: 3581c8079132de5f1faad4a01e6b43c8e4833316
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.openlocfilehash: 7af6342e9c05fc4e6c1bf4daac59db14ccdf22c7
+ms.sourcegitcommit: 11f11ca6cefe555972b3a5c99729d1a7523d8f50
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="application-settings-schema"></a>應用程式設定結構描述
 
@@ -35,18 +26,18 @@ ms.lasthandoff: 12/22/2017
 
 | 項目                    | 描述                                                                           |
 | -------------------------- | ------------------------------------------------------------------------------------- |
-| **\<applicationSettings >** | 包含所有**\<設定 >**應用程式特定的標記。                         |
-| **\<userSettings >**        | 包含所有**\<設定 >**特定於目前的使用者標記。                        |
-| **\<設定 >**             | 定義設定。 子系 **\<applicationSettings >**或 **\<userSettings >**。 |
+| **\<applicationSettings >** | 包含所有**\<設定 >** 應用程式特定的標記。                         |
+| **\<userSettings >**        | 包含所有**\<設定 >** 特定於目前的使用者標記。                        |
+| **\<設定 >**             | 定義設定。 子系 **\<applicationSettings >** 或 **\<userSettings >**。 |
 | **\<value>**               | 定義設定的值。 子系**\<設定 >**。                                   |
 
 ## <a name="applicationsettings-element"></a>\<applicationSettings > 項目
 
-這個項目包含所有**\<設定 >**特有的用戶端電腦上的應用程式執行個體的標籤。 它不會定義任何屬性。
+這個項目包含所有**\<設定 >** 特有的用戶端電腦上的應用程式執行個體的標籤。 它不會定義任何屬性。
 
 ## <a name="usersettings-element"></a>\<userSettings > 項目
 
-這個項目包含所有**\<設定 >**專屬於目前正在使用應用程式之使用者的標記。 它不會定義任何屬性。
+這個項目包含所有**\<設定 >** 專屬於目前正在使用應用程式之使用者的標記。 它不會定義任何屬性。
 
 ## <a name="setting-element"></a>\<設定 > 項目
 

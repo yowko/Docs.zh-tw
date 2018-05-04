@@ -1,24 +1,12 @@
 ---
-title: "OLE DB、ODBC 和 Oracle 連接共用"
-ms.custom: 
+title: OLE DB、ODBC 和 Oracle 連接共用
 ms.date: 03/30/2017
-ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.technology: dotnet-ado
-ms.tgt_pltfrm: 
-ms.topic: article
 ms.assetid: 2bd83b1e-3ea9-43c4-bade-d9cdb9bbbb04
-caps.latest.revision: "3"
-author: douglaslMS
-ms.author: douglasl
-manager: craigg
-ms.workload: dotnet
-ms.openlocfilehash: d30b28e2a875e64e2c0d1cad43f101cf5fa2f489
-ms.sourcegitcommit: ed26cfef4e18f6d93ab822d8c29f902cff3519d1
+ms.openlocfilehash: 2e42b52bb75008fd34f3e4bef1788626d96368bc
+ms.sourcegitcommit: 11f11ca6cefe555972b3a5c99729d1a7523d8f50
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 01/17/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="ole-db-odbc-and-oracle-connection-pooling"></a>OLE DB、ODBC 和 Oracle 連接共用
 共用連接可顯著提高應用程式的效能及延展性。 本節說明 OLE DB、ODBC 和 Oracle 的 .NET Framework 資料提供者的連接共用 (Connection Pooling)。  
@@ -81,7 +69,7 @@ Provider=SQLOLEDB;OLE DB Services=-4;Data Source=localhost;Integrated Security=S
 |`Min Pool Size`|0|集區中保留的最小連接數。|  
 |`Pooling`|'true'|為 `true` 時，會從適當的集區描繪連接，或視需要在適當的集區中建立及加入連接。|  
   
-## <a name="see-also"></a>請參閱  
+## <a name="see-also"></a>另請參閱  
  [連接共用](../../../../docs/framework/data/adonet/connection-pooling.md)  
  [效能計數器](../../../../docs/framework/data/adonet/performance-counters.md)  
  [ADO.NET Managed 提供者和 DataSet 開發人員中心](http://go.microsoft.com/fwlink/?LinkId=217917)

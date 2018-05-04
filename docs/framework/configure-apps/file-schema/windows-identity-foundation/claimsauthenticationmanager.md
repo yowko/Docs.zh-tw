@@ -1,30 +1,20 @@
 ---
 title: '&lt;claimsAuthenticationManager&gt;'
-ms.custom: 
 ms.date: 03/30/2017
-ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.technology: dotnet-clr
-ms.tgt_pltfrm: 
-ms.topic: article
 ms.assetid: 6d30a450-6d13-4671-81a8-77e0204500c5
-caps.latest.revision: "6"
 author: BrucePerlerMS
-ms.author: bruceper
 manager: mbaldwin
-ms.workload: dotnet
-ms.openlocfilehash: b7d68c2fe89b5ca56319df2f24fadd51f329f5ab
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.openlocfilehash: 4d4a91e0ed1f437089e26e5902515f73a15d94a8
+ms.sourcegitcommit: 11f11ca6cefe555972b3a5c99729d1a7523d8f50
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="ltclaimsauthenticationmanagergt"></a>&lt;claimsAuthenticationManager&gt;
 註冊的連入宣告的宣告驗證管理員。  
   
- \<system.identityModel >  
-\<identityConfiguration >  
+ \<system.identityModel>  
+\<identityConfiguration>  
 \<claimsAuthenticationManager >  
   
 ## <a name="syntax"></a>語法  
@@ -40,7 +30,7 @@ ms.lasthandoff: 12/22/2017
 ```  
   
 ## <a name="attributes-and-elements"></a>屬性和項目  
- 下列章節說明屬性、子項目和父項目。  
+ 下列各節描述屬性、子項目和父項目。  
   
 ### <a name="attributes"></a>屬性  
   
@@ -48,7 +38,7 @@ ms.lasthandoff: 12/22/2017
 |---------------|-----------------|  
 |類型|指定自訂型別衍生自<xref:System.Security.Claims.ClaimsAuthenticationManager>類別。 如需有關如何指定`type`屬性，請參閱 [自訂型別參考]。|  
   
-### <a name="child-elements"></a>子元素  
+### <a name="child-elements"></a>子項目  
  如果沒有任何`type`屬性，或如果`type`屬性參考<xref:System.Security.Claims.ClaimsAuthenticationManager>類別`<claimsAuthenticationManager>`項目不接受子項目; 不過，類別衍生自<xref:System.Security.Claims.ClaimsAuthenticationManager>可以定義子組態項目。  
   
 ### <a name="parent-elements"></a>父項目  

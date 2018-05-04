@@ -1,14 +1,6 @@
 ---
-title: "&lt;smtp&gt;項目 （網路設定）"
-ms.custom: 
+title: '&lt;smtp&gt;項目 （網路設定）'
 ms.date: 03/30/2017
-ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.technology:
-- dotnet-clr
-ms.tgt_pltfrm: 
-ms.topic: article
 f1_keywords:
 - http://schemas.microsoft.com/.NetConfiguration/v2.0#configuration/system.net/mailSettings/smtp
 - http://schemas.microsoft.com/.NetConfiguration/v2.0#smtp
@@ -16,17 +8,14 @@ helpviewer_keywords:
 - <smtp> element
 - smtp element
 ms.assetid: 220b0329-e384-4e0c-86b4-0945ad17efd9
-caps.latest.revision: 
 author: mcleblanc
 ms.author: markl
 manager: markl
-ms.workload:
-- dotnet
-ms.openlocfilehash: f5b2a3b7eec17fbdd12181c29f610d2b2ad32bd4
-ms.sourcegitcommit: cf22b29db780e532e1090c6e755aa52d28273fa6
+ms.openlocfilehash: 56912e09d24fc83e93a91cc42b1d96dcc68210f2
+ms.sourcegitcommit: 11f11ca6cefe555972b3a5c99729d1a7523d8f50
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 02/01/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="ltsmtpgt-element-network-settings"></a>&lt;smtp&gt;項目 （網路設定）
 設定傳遞格式、 傳遞方法和來源地址傳送電子郵件。  
@@ -59,7 +48,7 @@ ms.lasthandoff: 02/01/2018
 |`deliveryMethod`|指定電子郵件的傳遞方法。 可接受的值為網路、 pickupDirectoryFromIis 和 specifiedPickupDirectory。|  
 |`from`|指定從外寄電子郵件地址。|  
   
-### <a name="child-elements"></a>子元素  
+### <a name="child-elements"></a>子項目  
   
 |屬性|描述|  
 |---------------|-----------------|  
@@ -91,7 +80,7 @@ ms.lasthandoff: 02/01/2018
 </configuration>  
 ```  
   
-## <a name="see-also"></a>請參閱  
+## <a name="see-also"></a>另請參閱  
  <xref:System.Net.Configuration.SmtpSection?displayProperty=nameWithType>  
  <xref:System.Net.Mail.SmtpClient?displayProperty=nameWithType>  
  <xref:System.Net.Mail.SmtpDeliveryFormat>  

@@ -1,24 +1,12 @@
 ---
-title: "架構與設計"
-ms.custom: 
+title: 架構與設計
 ms.date: 03/30/2017
-ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.technology: dotnet-ado
-ms.tgt_pltfrm: 
-ms.topic: article
 ms.assetid: bd738d39-00e2-4bab-b387-90aac1a014bd
-caps.latest.revision: "3"
-author: douglaslMS
-ms.author: douglasl
-manager: craigg
-ms.workload: dotnet
-ms.openlocfilehash: ce16e89e697a7865a65d86b408e49b5ad671bae1
-ms.sourcegitcommit: ed26cfef4e18f6d93ab822d8c29f902cff3519d1
+ms.openlocfilehash: c2e8ff5f21a2941d75b21915552e6935a1423978
+ms.sourcegitcommit: 11f11ca6cefe555972b3a5c99729d1a7523d8f50
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 01/17/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="architecture-and-design"></a>架構與設計
 中的 SQL 產生模組[範例提供者](http://go.microsoft.com/fwlink/?LinkId=180616)實作為上代表命令樹運算式樹狀結構的造訪者。 此產生作業是透過運算式樹狀，在單一行程中完成。  
@@ -425,5 +413,5 @@ IsEmpty(inut) = Not Exists(input)
   
  若要同時針對範圍別名與資料行產生唯一的名稱，請使用 <existing_name>_n，其中 n 是尚未使用過的最小別名。 所有別名的全域清單會增加串聯重新命名的需求。  
   
-## <a name="see-also"></a>請參閱  
+## <a name="see-also"></a>另請參閱  
  [範例提供者中的 SQL 產生](../../../../../docs/framework/data/adonet/ef/sql-generation-in-the-sample-provider.md)

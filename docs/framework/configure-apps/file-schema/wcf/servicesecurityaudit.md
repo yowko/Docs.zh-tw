@@ -1,34 +1,22 @@
 ---
 title: '&lt;serviceSecurityAudit&gt;'
-ms.custom: 
 ms.date: 03/30/2017
-ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.technology:
-- dotnet-clr
-ms.tgt_pltfrm: 
-ms.topic: article
 ms.assetid: ba517369-a034-4f8e-a2c4-66517716062b
-caps.latest.revision: 
 author: BrucePerlerMS
-ms.author: bruceper
 manager: mbaldwin
-ms.workload:
-- dotnet
-ms.openlocfilehash: 25355acfd7bc82ccff33f68a690f3f02d1235438
-ms.sourcegitcommit: d3cfda0943364aaf6ccd574f55f584576c8a4fee
+ms.openlocfilehash: 293cd3118ace2e073933e4c124664c775902e7d8
+ms.sourcegitcommit: 11f11ca6cefe555972b3a5c99729d1a7523d8f50
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 03/08/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="ltservicesecurityauditgt"></a>&lt;serviceSecurityAudit&gt;
 指定在服務作業期間啟用安全性事件稽核的設定。  
   
  \<system.ServiceModel>  
-\<behaviors>  
+\<行為 >  
 \<serviceBehaviors>  
-\<behavior>  
+\<行為 >  
 \<serviceSecurityAudit>  
   
 ## <a name="syntax"></a>語法  
@@ -53,17 +41,17 @@ ms.lasthandoff: 03/08/2018
 |serviceAuthorizationAuditLevel|指定記錄在稽核記錄檔中的授權事件類型。 有效值包括以下的值：<br /><br /> -無： 服務授權事件的稽核不會執行。<br />-Success： 只成功的服務授權稽核事件。<br />失敗： 只失敗服務授權稽核事件。<br />-SuccessOrFailure： 同時稽核成功和失敗的服務授權事件。<br /><br /> 預設值為 None。 如需詳細資訊，請參閱<xref:System.ServiceModel.AuditLevel>。|  
 |messageAuthenticationAuditLevel|指定稽核事件記錄的訊息驗證類型。 有效值包括以下的值：<br /><br /> -無： 稽核會產生任何事件。<br />-Success： 記錄成功的安全性 （完整驗證，包括訊息簽章驗證、 cipher 和權杖驗證） 事件。<br />失敗： 只失敗記錄事件。<br />-SuccessOrFailure： 同時記錄成功和失敗的事件。<br /><br /> 預設值為 None。 如需詳細資訊，請參閱<xref:System.ServiceModel.AuditLevel>。|  
   
-### <a name="child-elements"></a>子元素  
+### <a name="child-elements"></a>子項目  
  無。  
   
 ### <a name="parent-elements"></a>父項目  
   
 |項目|描述|  
 |-------------|-----------------|  
-|[\<behavior>](../../../../../docs/framework/configure-apps/file-schema/wcf/behavior-of-endpointbehaviors.md)|指定行為項目。|  
+|[\<行為 >](../../../../../docs/framework/configure-apps/file-schema/wcf/behavior-of-endpointbehaviors.md)|指定行為項目。|  
   
 ## <a name="remarks"></a>備註  
- 這個組態項目會用來稽核 [!INCLUDE[indigo1](../../../../../includes/indigo1-md.md)] 驗證事件。 啟用稽核時，可以稽核成功或失敗的驗證嘗試 (或兩者)。 事件會寫入三個事件記錄檔之一：應用程式、安全性或作業系統版本的預設記錄檔。 使用 Windows 事件檢視器，即可檢視所有的事件記錄。  
+ 這個組態項目用來稽核 Windows Communication Foundation (WCF) 驗證事件。 啟用稽核時，可以稽核成功或失敗的驗證嘗試 (或兩者)。 事件會寫入三個事件記錄檔之一：應用程式、安全性或作業系統版本的預設記錄檔。 使用 Windows 事件檢視器，即可檢視所有的事件記錄。  
   
  使用這個組態項目詳細範例，請參閱[服務稽核行為](../../../../../docs/framework/wcf/samples/service-auditing-behavior.md)。  
   
@@ -90,7 +78,7 @@ ms.lasthandoff: 03/08/2018
 </behaviors>  
 ```  
   
-## <a name="see-also"></a>請參閱  
+## <a name="see-also"></a>另請參閱  
  <xref:System.ServiceModel.Configuration.ServiceSecurityAuditElement>  
  <xref:System.ServiceModel.Description.ServiceSecurityAuditBehavior>  
  [安全性行為](../../../../../docs/framework/wcf/feature-details/security-behaviors-in-wcf.md)  

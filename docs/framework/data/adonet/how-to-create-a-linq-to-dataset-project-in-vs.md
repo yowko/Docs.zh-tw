@@ -1,24 +1,12 @@
 ---
-title: "如何：在 Visual Studio 中建立 LINQ to DataSet 專案"
-ms.custom: 
+title: 如何：在 Visual Studio 中建立 LINQ to DataSet 專案
 ms.date: 03/30/2017
-ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.technology: dotnet-ado
-ms.tgt_pltfrm: 
-ms.topic: article
 ms.assetid: 49ba6cb0-cdd2-4571-aeaa-25bf0f40e9b3
-caps.latest.revision: "2"
-author: douglaslMS
-ms.author: douglasl
-manager: craigg
-ms.workload: dotnet
-ms.openlocfilehash: c749cdd56f0c964b84788b05470406234ef3eb0a
-ms.sourcegitcommit: c0dd436f6f8f44dc80dc43b07f6841a00b74b23f
+ms.openlocfilehash: 094d766146fe55a865713a4672a2bee6a838ff55
+ms.sourcegitcommit: 11f11ca6cefe555972b3a5c99729d1a7523d8f50
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 01/19/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="how-to-create-a-linq-to-dataset-project-in-visual-studio"></a>如何：在 Visual Studio 中建立 LINQ to DataSet 專案
 不同的 [!INCLUDE[vbteclinq](../../../../includes/vbteclinq-md.md)] 專案類型需要特定匯入的命名空間 (Namespace) (Visual Basic) 或 `using` 指示詞 (C#) 和參考。 最小需求是 System.Core.dll 的參考和 `using` 的 <xref:System.Linq> 指示詞。 根據預設，如果您建立新的 [!INCLUDE[csharp_orcas_long](../../../../includes/csharp-orcas-long-md.md)] 專案，系統就會提供這些項目。 [!INCLUDE[linq_dataset](../../../../includes/linq-dataset-md.md)] 也需要 System.Data.dll 和 System.Data.DataSetExtensions.dll 的參考以及 `Imports` (Visual Basic) 或 `using` (C#) 指示詞。  
@@ -26,7 +14,7 @@ ms.lasthandoff: 01/19/2018
  如果您要從舊版 Visual Studio 升級專案，可能必須手動提供這些 LINQ 相關的參考。 此外，您可能也必須手動將專案設定為以 .NET Framework 3.5 版為目標。  
   
 > [!NOTE]
->  如果您要從命令提示字元建置，您必須手動參考中的 LINQ 相關 Dll `drive` **:**\program Assemblies\Microsoft\Framework\v3.5。  
+>  如果您要從命令提示字元建置，您必須手動參考中的 LINQ 相關 Dll `drive` **:** \program Assemblies\Microsoft\Framework\v3.5。  
   
 ### <a name="to-target-the-net-framework-35"></a>以 .NET Framework 3.5 為目標  
   
@@ -60,6 +48,6 @@ ms.lasthandoff: 01/19/2018
   
 6.  或者，根據您連接至資料庫的方式，加入 `using` 或 `System.Data.Common` 的 `System.Data.SqlClient` 指示詞或匯入的命名空間。  
   
-## <a name="see-also"></a>請參閱  
+## <a name="see-also"></a>另請參閱  
  [快速入門](../../../../docs/framework/data/adonet/getting-started-linq-to-dataset.md)  
  [LINQ 使用者入門](http://msdn.microsoft.com/library/6cc9af04-950a-4cc3-83d4-2aeb4abe4de9)

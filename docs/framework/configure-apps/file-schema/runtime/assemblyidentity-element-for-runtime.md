@@ -1,13 +1,6 @@
 ---
-title: "&lt;assemblyIdentity&gt;元素&lt;執行階段&gt;"
-ms.custom: 
+title: '&lt;assemblyIdentity&gt;元素&lt;執行階段&gt;'
 ms.date: 03/30/2017
-ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.technology: dotnet-clr
-ms.tgt_pltfrm: 
-ms.topic: article
 f1_keywords:
 - http://schemas.microsoft.com/.NetConfiguration/v2.0#configuration/runtime/assemblyBinding/dependentAssembly/assemblyIdentity
 - http://schemas.microsoft.com/.NetConfiguration/v2.0#assemblyIdentity
@@ -16,16 +9,14 @@ helpviewer_keywords:
 - container tags, <assemblyIdentity> element
 - assemblyIdentity element
 ms.assetid: cea4d187-6398-4da4-af09-c1abc6a349c1
-caps.latest.revision: "17"
 author: mcleblanc
 ms.author: markl
 manager: markl
-ms.workload: dotnet
-ms.openlocfilehash: 0dadf0e07f5e3a9f9152ae7cd57c62721402bff0
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.openlocfilehash: 5d985d1620b7dec324c0113bcd5652cede044950
+ms.sourcegitcommit: 11f11ca6cefe555972b3a5c99729d1a7523d8f50
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="ltassemblyidentitygt-element-for-ltruntimegt"></a>&lt;assemblyIdentity&gt;元素&lt;執行階段&gt;
 包含有關組件的識別資訊。  
@@ -46,7 +37,7 @@ culture="assembly culture"/>
 ```  
   
 ## <a name="attributes-and-elements"></a>屬性和項目  
- 下列章節說明屬性、子項目和父項目。  
+ 下列各節描述屬性、子項目和父項目。  
   
 ### <a name="attributes"></a>屬性  
   
@@ -66,7 +57,7 @@ culture="assembly culture"/>
 |`msil`|處理器和每個字組的位元中性|  
 |`x86`|32 位元 Intel 處理器，其中一個原生或 Windows on Windows (WOW) 的 64 位元平台上的環境中。|  
   
-### <a name="child-elements"></a>子元素  
+### <a name="child-elements"></a>子項目  
  無。  
   
 ### <a name="parent-elements"></a>父項目  
@@ -79,7 +70,7 @@ culture="assembly culture"/>
 |`runtime`|包含有關組件繫結和記憶體回收的資訊。|  
   
 ## <a name="remarks"></a>備註  
- 每個 **\<dependentAssembly >**項目必須有一個 **\<assemblyIdentity >**子項目。  
+ 每個 **\<dependentAssembly >** 項目必須有一個 **\<assemblyIdentity >** 子項目。  
   
  如果`processorArchitecture`屬性已存在，`<assemblyIdentity>`項目只適用於具有對應的處理器架構的組件。 如果`processorArchitecture`屬性不存在，`<assemblyIdentity>`項目可以套用至任何處理器架構的組件。  
   
@@ -130,7 +121,7 @@ culture="assembly culture"/>
 </configuration>  
 ```  
   
-## <a name="see-also"></a>請參閱  
+## <a name="see-also"></a>另請參閱  
  [執行階段設定結構描述](../../../../../docs/framework/configure-apps/file-schema/runtime/index.md)  
  [組態檔結構描述](../../../../../docs/framework/configure-apps/file-schema/index.md)  
  [重新導向組件版本](../../../../../docs/framework/configure-apps/redirect-assembly-versions.md)

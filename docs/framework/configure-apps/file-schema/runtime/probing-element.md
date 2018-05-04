@@ -1,13 +1,6 @@
 ---
-title: "&lt;探查&gt;項目"
-ms.custom: 
+title: '&lt;探查&gt;項目'
 ms.date: 03/30/2017
-ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.technology: dotnet-clr
-ms.tgt_pltfrm: 
-ms.topic: article
 f1_keywords:
 - http://schemas.microsoft.com/.NetConfiguration/v2.0#configuration/runtime/assemblyBinding/probing
 - http://schemas.microsoft.com/.NetConfiguration/v2.0#probing
@@ -16,16 +9,13 @@ helpviewer_keywords:
 - container tags, <probing> element
 - probing element
 ms.assetid: 09c80fc9-1ba5-4192-89f7-3a79b2e4b024
-caps.latest.revision: "13"
 author: rpetrusha
 ms.author: ronpet
-manager: wpickett
-ms.workload: dotnet
-ms.openlocfilehash: e846cb1386dc64161d91ab50b6a04e5560e9c6da
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.openlocfilehash: 8cab16e83466b5954bfebac07dd79c9a8b5e4594
+ms.sourcegitcommit: 11f11ca6cefe555972b3a5c99729d1a7523d8f50
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="ltprobinggt-element"></a>&lt;探查&gt;項目
 指定 common language runtime 載入組件時所要搜尋的應用程式基底的子目錄。  
@@ -42,7 +32,7 @@ ms.lasthandoff: 12/22/2017
 ```  
   
 ## <a name="attributes-and-elements"></a>屬性和項目  
- 下列章節說明屬性、子項目和父項目。  
+ 下列各節描述屬性、子項目和父項目。  
   
 ### <a name="attributes"></a>屬性  
   
@@ -50,7 +40,7 @@ ms.lasthandoff: 12/22/2017
 |---------------|-----------------|  
 |`privatePath`|必要屬性。<br /><br /> 指定的應用程式可能包含組件的基底目錄的子目錄。 分隔每個以分號的子目錄。|  
   
-### <a name="child-elements"></a>子元素  
+### <a name="child-elements"></a>子項目  
  無。  
   
 ### <a name="parent-elements"></a>父項目  
@@ -74,7 +64,7 @@ ms.lasthandoff: 12/22/2017
 </configuration>  
 ```  
   
-## <a name="see-also"></a>請參閱  
+## <a name="see-also"></a>另請參閱  
  [執行階段設定結構描述](../../../../../docs/framework/configure-apps/file-schema/runtime/index.md)  
  [組態檔結構描述](../../../../../docs/framework/configure-apps/file-schema/index.md)  
  [指定組件的位置](../../../../../docs/framework/configure-apps/specify-assembly-location.md)  

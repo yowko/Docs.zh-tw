@@ -1,33 +1,24 @@
 ---
-title: "&lt;新增&gt;元素&lt;namedCaches&gt;"
-ms.custom: 
+title: '&lt;新增&gt;元素&lt;namedCaches&gt;'
 ms.date: 03/30/2017
-ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.technology: dotnet-clr
-ms.tgt_pltfrm: 
-ms.topic: article
 helpviewer_keywords:
 - add element for <namedCaches>
 - <add> element for <namedCaches>
 ms.assetid: ce2a63a8-c829-4742-a6ea-72ee5d89f169
-caps.latest.revision: "11"
 author: mcleblanc
 ms.author: markl
 manager: markl
-ms.workload: dotnet
-ms.openlocfilehash: 0000e92c89920b05e0ffc93fab58fb0bd6ea6b13
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.openlocfilehash: d65dfd9a1560f2657f48b327277b64ab77014b47
+ms.sourcegitcommit: 11f11ca6cefe555972b3a5c99729d1a7523d8f50
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="ltaddgt-element-for-ltnamedcachesgt"></a>&lt;新增&gt;元素&lt;namedCaches&gt;
 新增`namedCache`進入`namedCaches`記憶體快取的集合。  
   
- \<system.runtime.caching >  
-\<memoryCache >  
+ \<system.runtime.caching>  
+\<memoryCache>  
 \<namedCaches >  
 \<add>  
   
@@ -44,7 +35,7 @@ ms.lasthandoff: 12/22/2017
  `None`  
   
 ## <a name="attributes-and-elements"></a>屬性和項目  
- 下列章節說明屬性、子項目和父項目。  
+ 下列各節描述屬性、子項目和父項目。  
   
 ### <a name="attributes"></a>屬性  
   
@@ -55,7 +46,7 @@ ms.lasthandoff: 12/22/2017
 |`PhysicalMemoryLimitPercentage`|整數值 0 和 100 之間，指定可供快取的實際安裝的電腦記憶體的最大百分比。 預設值為 0，這表示<xref:System.Runtime.Caching.MemoryCache>預設會使用類別的自動調整啟發學習法。|  
 |`PollingInterval`|表示時間間隔的值，在此時間之後，快取實作會比較目前的記憶體負載與針對快取執行個體所設定的絕對和百分比型記憶體限制。 這個值是以"Hh: mm:"格式輸入。|  
   
-### <a name="child-elements"></a>子元素  
+### <a name="child-elements"></a>子項目  
  `None`  
   
 ### <a name="parent-elements"></a>父項目  
@@ -87,5 +78,5 @@ ms.lasthandoff: 12/22/2017
 </configuration>  
 ```  
   
-## <a name="see-also"></a>請參閱  
+## <a name="see-also"></a>另請參閱  
  [\<namedCaches > 項目 （快取設定）](../../../../../docs/framework/configure-apps/file-schema/runtime/namedcaches-element-cache-settings.md)

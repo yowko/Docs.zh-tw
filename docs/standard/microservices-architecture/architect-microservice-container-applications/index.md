@@ -1,21 +1,14 @@
 ---
 title: 架構容器和微服務應用程式
 description: 容器化 .NET 應用程式的 .NET 微服務架構 | 架構容器和微服務應用程式
-keywords: Docker, 微服務, ASP.NET, 容器
 author: CESARDELATORRE
 ms.author: wiwagn
 ms.date: 05/26/2017
-ms.prod: .net-core
-ms.technology: dotnet-docker
-ms.topic: article
-ms.workload:
-- dotnet
-- dotnetcore
-ms.openlocfilehash: 9b3088d93ead589c0b295bc3d2807fc98ee8ea75
-ms.sourcegitcommit: e7f04439d78909229506b56935a1105a4149ff3d
+ms.openlocfilehash: 91f63343ba2d7458d0d3b03978ac79a3a7e8427a
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 12/23/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="architecting-container--and-microservice-based-applications"></a>架構容器和微服務應用程式
 

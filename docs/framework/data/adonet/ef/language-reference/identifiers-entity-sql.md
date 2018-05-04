@@ -1,27 +1,15 @@
 ---
-title: "識別項 (Entity SQL)"
-ms.custom: 
+title: 識別項 (Entity SQL)
 ms.date: 03/30/2017
-ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.technology: dotnet-ado
-ms.tgt_pltfrm: 
-ms.topic: article
 ms.assetid: d58a5edd-7b5c-48e1-b5d7-a326ff426aa4
-caps.latest.revision: "2"
-author: douglaslMS
-ms.author: douglasl
-manager: craigg
-ms.workload: dotnet
-ms.openlocfilehash: 18bfb654a6f116f87ae7eeb6059fe994b9084c19
-ms.sourcegitcommit: ed26cfef4e18f6d93ab822d8c29f902cff3519d1
+ms.openlocfilehash: 55b9ac101c7849c5b348ba8e48c695c0fa328105
+ms.sourcegitcommit: 11f11ca6cefe555972b3a5c99729d1a7523d8f50
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 01/17/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="identifiers-entity-sql"></a>識別項 (Entity SQL)
-[!INCLUDE[esql](../../../../../../includes/esql-md.md)] 中使用識別項表示查詢運算式別名、變數參考、物件的屬性、函式等。 [!INCLUDE[esql](../../../../../../includes/esql-md.md)]提供兩種類型的識別項： 簡單識別項和引號識別項。  
+[!INCLUDE[esql](../../../../../../includes/esql-md.md)] 中使用識別項表示查詢運算式別名、變數參考、物件的屬性、函式等。 [!INCLUDE[esql](../../../../../../includes/esql-md.md)] 提供兩種類型的識別項： 簡單識別項和引號識別項。  
   
 ## <a name="simple-identifiers"></a>簡單識別項  
  簡單識別項中的[!INCLUDE[esql](../../../../../../includes/esql-md.md)]是一連串的英數字元和底線字元。 識別項的第一個字元必須是字母字元 (a-z 或 A-Z)。  
@@ -97,7 +85,7 @@ SELECT 1 AS X, 2 AS X …
 ```  
   
 ## <a name="scoping-rules"></a>範圍規則  
- [!INCLUDE[esql](../../../../../../includes/esql-md.md)]定義範圍規則可判斷當特定變數中會顯示查詢語言。 某些運算式或陳述式會導入新的名稱。 範圍規則可判斷哪裡可以使用這些名稱，以及當新的宣告與另一個宣告同名時，要在何時及何處隱藏它的前置項目。  
+ [!INCLUDE[esql](../../../../../../includes/esql-md.md)] 定義範圍規則可判斷當特定變數中會顯示查詢語言。 某些運算式或陳述式會導入新的名稱。 範圍規則可判斷哪裡可以使用這些名稱，以及當新的宣告與另一個宣告同名時，要在何時及何處隱藏它的前置項目。  
   
  當名稱定義在[!INCLUDE[esql](../../../../../../includes/esql-md.md)]查詢，就可以說它們定義在範圍內。 範圍涵蓋查詢的整個區域。 某個範圍內的所有運算式或名稱參考都可以看到該範圍內定義的名稱。 在範圍開始前及結束後，無法參考此範圍內所定義的名稱。  
   
@@ -125,13 +113,13 @@ SELECT 1 AS X, 2 AS X …
 -   SELECT 運算式內子句的評估順序會決定名稱導入範圍中的順序。 FROM 子句會先評估，接著是 WHERE 子句、GROUP BY 子句、HAVING 子句、SELECT 子句，最後是 ORDER BY 子句。  
   
 ### <a name="aggregate-handling"></a>彙總處理  
- [!INCLUDE[esql](../../../../../../includes/esql-md.md)]支援兩種形式的彙總： 以集合為基礎的彙總以及以群組為基礎的彙總。 以集合為基礎的彙總是 [!INCLUDE[esql](../../../../../../includes/esql-md.md)] 中偏好的建構，以群組為基礎的彙總則是為了與 SQL 相容而支援。  
+ [!INCLUDE[esql](../../../../../../includes/esql-md.md)] 支援兩種形式的彙總： 以集合為基礎的彙總以及以群組為基礎的彙總。 以集合為基礎的彙總是 [!INCLUDE[esql](../../../../../../includes/esql-md.md)] 中偏好的建構，以群組為基礎的彙總則是為了與 SQL 相容而支援。  
   
  當解析彙總，[!INCLUDE[esql](../../../../../../includes/esql-md.md)]先嘗試將它視為以集合為基礎的彙總。 如果失敗，[!INCLUDE[esql](../../../../../../includes/esql-md.md)]將彙總輸入轉換成巢狀彙總的參考，並嘗試解析這個新的運算式，如下列範例所示。  
   
  `AVG(t.c) becomes AVG(group..(t.c))`  
   
-## <a name="see-also"></a>請參閱  
+## <a name="see-also"></a>另請參閱  
  [Entity SQL 參考](../../../../../../docs/framework/data/adonet/ef/language-reference/entity-sql-reference.md)  
  [Entity SQL 概觀](../../../../../../docs/framework/data/adonet/ef/language-reference/entity-sql-overview.md)  
  [輸入字元集](../../../../../../docs/framework/data/adonet/ef/language-reference/input-character-set-entity-sql.md)

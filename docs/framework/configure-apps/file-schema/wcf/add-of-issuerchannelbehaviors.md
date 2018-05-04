@@ -1,24 +1,12 @@
 ---
-title: "&lt;issuerChannelBehaviors&gt; 的 &lt;add&gt;"
-ms.custom: 
+title: '&lt;issuerChannelBehaviors&gt; 的 &lt;add&gt;'
 ms.date: 03/30/2017
-ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.technology: dotnet-clr
-ms.tgt_pltfrm: 
-ms.topic: article
 ms.assetid: 50710506-e28f-45dd-ab7e-bff6f44173db
-caps.latest.revision: "5"
-author: dotnet-bot
-ms.author: dotnetcontent
-manager: wpickett
-ms.workload: dotnet
-ms.openlocfilehash: bf66b3d3b531ae41329aade6a416c330957d83c6
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.openlocfilehash: 75531e8ed50ae89f379db23d228804612f4bfccb
+ms.sourcegitcommit: 11f11ca6cefe555972b3a5c99729d1a7523d8f50
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="ltaddgt-of-ltissuerchannelbehaviorsgt"></a>&lt;issuerChannelBehaviors&gt; 的 &lt;add&gt;
 新增與 STS 通訊時要使用的端點行為。  
@@ -26,11 +14,11 @@ ms.lasthandoff: 12/22/2017
 > [!NOTE]
 >  如果任何端點行為包含[ \<clientCredentials >](../../../../../docs/framework/configure-apps/file-schema/wcf/clientcredentials.md)項目，將會擲回例外狀況。  
   
- \<系統。ServiceModel >  
+ \<system.ServiceModel>  
 \<行為 >  
 endpointBehaviors 區段  
 \<行為 >  
-\<clientCredentials >  
+\<clientCredentials>  
 \<issuedToken >  
 \<h > 項目  
 \<add>  
@@ -52,19 +40,19 @@ endpointBehaviors 區段
 |issuerAddress|要與其進行通訊之安全性權杖簽發者的 URI。|  
 |behaviorConfiguration|相同組態檔中定義之端點行為的名稱。|  
   
-### <a name="child-elements"></a>子元素  
+### <a name="child-elements"></a>子項目  
  無。  
   
 ### <a name="parent-elements"></a>父項目  
   
 |項目|描述|  
 |-------------|-----------------|  
-|[\<h >](../../../../../docs/framework/configure-apps/file-schema/wcf/issuerchannelbehaviors-element.md)|包含要在與指定安全性權杖服務通訊時使用的 [!INCLUDE[indigo1](../../../../../includes/indigo1-md.md)] 用戶端端點行為集合。|  
+|[\<h >](../../../../../docs/framework/configure-apps/file-schema/wcf/issuerchannelbehaviors-element.md)|包含與指定的服務權杖服務通訊時所要使用的 Windows Communication Foundation (WCF) 用戶端端點行為集合。|  
   
 ## <a name="remarks"></a>備註  
- `issuerAddress` 包含用戶端想要進行通訊之 Security Token Service 的 URI。 `behaviorConfiguration` 會指向端點行為，而應用程式會在 [!INCLUDE[indigo1](../../../../../includes/indigo1-md.md)] 建立的通道中使用該行為取得 Security Token Service 發出的權杖。  
+ `issuerAddress` 包含用戶端想要進行通訊之 Security Token Service 的 URI。 `behaviorConfiguration` 指向應用程式建立 Windows Communication Foundation (WCF) 的通道中用來從安全性權杖服務取得核發的權杖端點行為。  
   
-## <a name="see-also"></a>請參閱  
+## <a name="see-also"></a>另請參閱  
  <xref:System.ServiceModel.Configuration.IssuedTokenClientElement.IssuerChannelBehaviors%2A>  
  <xref:System.ServiceModel.Configuration.IssuedTokenClientBehaviorsElement>  
  <xref:System.ServiceModel.Configuration.IssuedTokenClientBehaviorsElementCollection>  

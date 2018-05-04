@@ -1,26 +1,12 @@
 ---
 title: 從命令樹產生 SQL - 最佳作法
-ms.custom: ''
 ms.date: 03/30/2017
-ms.prod: .net-framework
-ms.reviewer: ''
-ms.suite: ''
-ms.technology:
-- dotnet-ado
-ms.tgt_pltfrm: ''
-ms.topic: article
 ms.assetid: 71ef6a24-4c4f-4254-af3a-ffc0d855b0a8
-caps.latest.revision: 3
-author: douglaslMS
-ms.author: douglasl
-manager: craigg
-ms.workload:
-- dotnet
-ms.openlocfilehash: 037d1eaa8d781d012cde7a1bd3b08aa7003edd77
-ms.sourcegitcommit: 86adcc06e35390f13c1e372c36d2e044f1fc31ef
+ms.openlocfilehash: 0087c67b12b4b6ea36cabd5800b7be0a72fc4a90
+ms.sourcegitcommit: 11f11ca6cefe555972b3a5c99729d1a7523d8f50
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/26/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="generating-sql-from-command-trees---best-practices"></a>從命令樹產生 SQL - 最佳作法
 輸出查詢命令樹會仔細地建立可用 SQL 表示之查詢的模型。 不過，從輸出命令樹產生 SQL 時，提供者寫入器會面臨某些常見的挑戰。 本主題將討論這些挑戰。 在下一個主題中，範例提供者將示範如何處理這些挑戰。  

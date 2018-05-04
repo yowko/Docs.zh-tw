@@ -1,30 +1,18 @@
 ---
 title: '&lt;userDefinedType&gt;'
-ms.custom: 
 ms.date: 03/30/2017
-ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.technology: dotnet-clr
-ms.tgt_pltfrm: 
-ms.topic: article
 ms.assetid: 0f70ec06-8249-4f0c-9f49-b4df59985fb8
-caps.latest.revision: "5"
-author: dotnet-bot
-ms.author: dotnetcontent
-manager: wpickett
-ms.workload: dotnet
-ms.openlocfilehash: 9bb67a585d7abf3e885c483145215ed4fb9f92be
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.openlocfilehash: ffa9480312c278097ae110c686fb507209c117e1
+ms.sourcegitcommit: 11f11ca6cefe555972b3a5c99729d1a7523d8f50
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="ltuserdefinedtypegt"></a>&lt;userDefinedType&gt;
 表示要包含在服務合約中的使用者定義型別 (User Defined Type，UDT)。  
   
- \<系統。ServiceModel >  
-\<comContracts >  
+ \<system.ServiceModel>  
+\<comContracts>  
 \<comContract >  
 \<userDefinedTypes >  
   
@@ -45,7 +33,7 @@ ms.lasthandoff: 12/22/2017
 ```  
   
 ## <a name="attributes-and-elements"></a>屬性和項目  
- 下列章節說明屬性、子項目和父項目。  
+ 下列各節描述屬性、子項目和父項目。  
   
 ### <a name="attributes"></a>屬性  
   
@@ -56,7 +44,7 @@ ms.lasthandoff: 12/22/2017
 |`TypeLibID`|GUID 字串，識別定義此型別的已註冊型別程式庫。|  
 |`TypeLibVersion`|字串，識別定義此型別的型別程式庫版本。|  
   
-### <a name="child-elements"></a>子元素  
+### <a name="child-elements"></a>子項目  
  無。  
   
 ### <a name="parent-elements"></a>父項目  
@@ -102,10 +90,10 @@ ms.lasthandoff: 12/22/2017
   
  當初始化服務時，整合執行階段會查詢指定的型別，並將它們加入做為指定合約的已知型別集合。  
   
-## <a name="see-also"></a>請參閱  
+## <a name="see-also"></a>另請參閱  
  <xref:System.ServiceModel.Configuration.ComContractElement.UserDefinedTypes%2A>  
  <xref:System.ServiceModel.Configuration.ComUdtElementCollection>  
  <xref:System.ServiceModel.Configuration.ComUdtElement>  
- [\<comContracts >](../../../../../docs/framework/configure-apps/file-schema/wcf/comcontracts.md)  
+ [\<comContracts>](../../../../../docs/framework/configure-apps/file-schema/wcf/comcontracts.md)  
  [整合 COM 應用程式](../../../../../docs/framework/wcf/feature-details/integrating-with-com-plus-applications.md)  
  [如何：設定 COM+ 服務設定](../../../../../docs/framework/wcf/feature-details/how-to-configure-com-service-settings.md)

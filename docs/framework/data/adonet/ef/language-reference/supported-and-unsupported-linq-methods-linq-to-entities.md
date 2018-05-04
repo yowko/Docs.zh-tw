@@ -1,24 +1,12 @@
 ---
-title: "支援與不支援的 LINQ 方法 (LINQ to Entities)"
-ms.custom: 
+title: 支援與不支援的 LINQ 方法 (LINQ to Entities)
 ms.date: 03/30/2017
-ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.technology: dotnet-ado
-ms.tgt_pltfrm: 
-ms.topic: article
 ms.assetid: 7f3ffa5f-f819-4730-bcdb-09b23de3b6d0
-caps.latest.revision: "4"
-author: douglaslMS
-ms.author: douglasl
-manager: craigg
-ms.workload: dotnet
-ms.openlocfilehash: 58fa10c62819979bfad15e4cae49118d25ed8670
-ms.sourcegitcommit: c0dd436f6f8f44dc80dc43b07f6841a00b74b23f
+ms.openlocfilehash: 6994632c88b4ac67c9340fc95f07687d99917933
+ms.sourcegitcommit: 11f11ca6cefe555972b3a5c99729d1a7523d8f50
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 01/19/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="supported-and-unsupported-linq-methods-linq-to-entities"></a>支援與不支援的 LINQ 方法 (LINQ to Entities)
 本章節提供的資訊是有關 [!INCLUDE[linq_entities](../../../../../../includes/linq-entities-md.md)] 查詢所支援或不支援的 Language-Integrated Query (LINQ) 標準查詢運算子。 許多 LINQ 標準查詢運算子都有一個可接受整數引數的多載版本。 整數引數對應到所操作，序列中以零為起始的索引<xref:System.Collections.Generic.IEqualityComparer%601>，或<xref:System.Collections.Generic.IComparer%601>。 除非另外指定，否則不支援 LINQ 標準查詢運算子的這些多載版本，而且嘗試使用它們將會擲回例外狀況。  
@@ -189,5 +177,5 @@ ms.lasthandoff: 01/19/2018
 |<xref:System.Linq.Queryable.TakeWhile%2A>|不支援|`Function TakeWhile(Of TSource) ( _ source As IQueryable(Of TSource), _ predicate As Expression(Of Func(Of TSource, Boolean)) _ ) As IQueryable(Of TSource)`|`IQueryable<TSource> TakeWhile<TSource>( this IQueryable<TSource> source, Expression<Func\<TSource, bool>> predicate )`|  
 |<xref:System.Linq.Queryable.TakeWhile%2A>|不支援|`Function TakeWhile(Of TSource) ( _ source As IQueryable(Of TSource), _ predicate As Expression(Of Func(Of TSource, Integer, Boolean)) _ ) As IQueryable(Of TSource)`|`IQueryable<TSource> TakeWhile<TSource>( this IQueryable<TSource> source, Expression<Func\<TSource, int, bool>> predicate )`|  
   
-## <a name="see-also"></a>請參閱  
+## <a name="see-also"></a>另請參閱  
  [LINQ to Entities 查詢中的標準查詢運算子](../../../../../../docs/framework/data/adonet/ef/language-reference/standard-query-operators-in-linq-to-entities-queries.md)

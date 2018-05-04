@@ -1,24 +1,12 @@
 ---
-title: "Entity SQL 概觀"
-ms.custom: 
+title: Entity SQL 概觀
 ms.date: 03/30/2017
-ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.technology: dotnet-ado
-ms.tgt_pltfrm: 
-ms.topic: article
 ms.assetid: f0bb8120-e709-40a3-ac1e-5520dc47477d
-caps.latest.revision: "2"
-author: douglaslMS
-ms.author: douglasl
-manager: craigg
-ms.workload: dotnet
-ms.openlocfilehash: 37390d97325d6532624cd6ffe14c2d6c37ba2084
-ms.sourcegitcommit: ed26cfef4e18f6d93ab822d8c29f902cff3519d1
+ms.openlocfilehash: e7cadbd357ab96d67c6d1f1e49ba0d8b3883bf3e
+ms.sourcegitcommit: 11f11ca6cefe555972b3a5c99729d1a7523d8f50
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 01/17/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="entity-sql-overview"></a>Entity SQL 概觀
 [!INCLUDE[esql](../../../../../../includes/esql-md.md)] 是類似 SQL 的語言，可讓您在 [!INCLUDE[adonet_ef](../../../../../../includes/adonet-ef-md.md)] 中查詢概念模型。 概念模型將資料表示成實體和關聯性，以及[!INCLUDE[esql](../../../../../../includes/esql-md.md)]可讓您查詢這些實體和關聯性類似使用 SQL 的格式。  
@@ -72,7 +60,7 @@ ms.lasthandoff: 01/17/2018
   
  [可為 Null 的結構類型](../../../../../../docs/framework/data/adonet/ef/language-reference/nullable-structured-types-entity-sql.md)  
   
-## <a name="see-also"></a>請參閱  
+## <a name="see-also"></a>另請參閱  
  [Entity SQL 參考](../../../../../../docs/framework/data/adonet/ef/language-reference/entity-sql-reference.md)  
  [Entity SQL 語言](../../../../../../docs/framework/data/adonet/ef/language-reference/entity-sql-language.md)  
  [CSDL、SSDL 和 MSL 規格](../../../../../../docs/framework/data/adonet/ef/language-reference/csdl-ssdl-and-msl-specifications.md)

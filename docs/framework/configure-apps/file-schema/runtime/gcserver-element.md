@@ -1,13 +1,6 @@
 ---
-title: "&lt;gcServer&gt;項目"
-ms.custom: 
+title: '&lt;gcServer&gt;項目'
 ms.date: 03/30/2017
-ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.technology: dotnet-clr
-ms.tgt_pltfrm: 
-ms.topic: article
 f1_keywords:
 - http://schemas.microsoft.com/.NetConfiguration/v2.0#configuration/runtime/gcServer
 - http://schemas.microsoft.com/.NetConfiguration/v2.0#gcServer
@@ -15,22 +8,19 @@ helpviewer_keywords:
 - gcServer element
 - <gcServer> element
 ms.assetid: 8d25b80e-2581-4803-bd87-a59528e3cb03
-caps.latest.revision: "17"
 author: rpetrusha
 ms.author: ronpet
-manager: wpickett
-ms.workload: dotnet
-ms.openlocfilehash: 46aae3ad287c2626123cf3f513fc72bc1acdd06e
-ms.sourcegitcommit: c0dd436f6f8f44dc80dc43b07f6841a00b74b23f
+ms.openlocfilehash: 027176bdff644a6ff3314df7484ed88ace93001b
+ms.sourcegitcommit: 11f11ca6cefe555972b3a5c99729d1a7523d8f50
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 01/19/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="ltgcservergt-element"></a>&lt;gcServer&gt;項目
 指定 Common Language Runtime 是否執行伺服器記憶體回收。  
   
  \<configuration>  
-\<runtime>  
+\<執行階段 >  
 \<gcServer>  
   
 ## <a name="syntax"></a>語法  
@@ -56,7 +46,7 @@ ms.lasthandoff: 01/19/2018
 |`false`|不執行伺服器記憶體回收。 這是預設值。|  
 |`true`|執行伺服器記憶體回收。|  
   
-### <a name="child-elements"></a>子元素  
+### <a name="child-elements"></a>子項目  
  無。  
   
 ### <a name="parent-elements"></a>父項目  
@@ -87,7 +77,7 @@ ms.lasthandoff: 01/19/2018
 </configuration>  
 ```  
   
-## <a name="see-also"></a>請參閱  
+## <a name="see-also"></a>另請參閱  
  <xref:System.Runtime.GCSettings.IsServerGC%2A?displayProperty=nameWithType>  
  [執行階段設定結構描述](../../../../../docs/framework/configure-apps/file-schema/runtime/index.md)  
  [組態檔結構描述](../../../../../docs/framework/configure-apps/file-schema/index.md)  

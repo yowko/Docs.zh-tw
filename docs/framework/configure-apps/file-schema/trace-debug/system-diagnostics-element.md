@@ -1,13 +1,6 @@
 ---
-title: "&lt;system.diagnostics&gt;項目"
-ms.custom: 
+title: '&lt;system.diagnostics&gt;項目'
 ms.date: 03/30/2017
-ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.technology: dotnet-clr
-ms.tgt_pltfrm: 
-ms.topic: article
 f1_keywords:
 - http://schemas.microsoft.com/.NetConfiguration/v2.0#system.diagnostics
 - http://schemas.microsoft.com/.NetConfiguration/v2.0#configuration/system.diagnostics
@@ -15,16 +8,14 @@ helpviewer_keywords:
 - <system.diagnostics> element
 - system.diagnostics element
 ms.assetid: 3f348f42-fa72-4ff2-aa1c-bb9eecad4bb2
-caps.latest.revision: "17"
 author: mcleblanc
 ms.author: markl
 manager: markl
-ms.workload: dotnet
-ms.openlocfilehash: e76f5ef38e29a1afc9f438abb37239d109876cc5
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.openlocfilehash: 090c296ba84043445364b350c8b74587c35b5940
+ms.sourcegitcommit: 11f11ca6cefe555972b3a5c99729d1a7523d8f50
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="ltsystemdiagnosticsgt-element"></a>&lt;system.diagnostics&gt;項目
 指定用於收集、儲存及路由傳送訊息的追蹤接聽項，以及設定追蹤參數的層級。  
@@ -40,12 +31,12 @@ ms.lasthandoff: 12/22/2017
 ```  
   
 ## <a name="attributes-and-elements"></a>屬性和項目  
- 下列章節說明屬性、子項目和父項目。  
+ 下列各節描述屬性、子項目和父項目。  
   
 ### <a name="attributes"></a>屬性  
  無。  
   
-### <a name="child-elements"></a>子元素  
+### <a name="child-elements"></a>子項目  
   
 |項目|描述|  
 |-------------|-----------------|  
@@ -63,7 +54,7 @@ ms.lasthandoff: 12/22/2017
 |`configuration`|通用語言執行平台和 .NET Framework 應用程式所使用之每個組態檔中的根項目。|  
   
 ## <a name="example"></a>範例  
- 下列範例示範如何內嵌追蹤參數和追蹤接聽程式 **\<system.diagnostics >**項目。 `General`追蹤參數設為<xref:System.Diagnostics.TraceLevel>層級。 追蹤接聽項`myListener`會建立名為的檔案`MyListener.log`並將輸出寫入檔案。  
+ 下列範例示範如何內嵌追蹤參數和追蹤接聽程式 **\<system.diagnostics >** 項目。 `General`追蹤參數設為<xref:System.Diagnostics.TraceLevel>層級。 追蹤接聽項`myListener`會建立名為的檔案`MyListener.log`並將輸出寫入檔案。  
   
 > [!NOTE]
 >  在 .NET Framework 2.0 版中，您可以使用文字來指定參數的值。 例如，您可以指定`true`如<xref:System.Diagnostics.BooleanSwitch>或使用這類代表列舉值的文字`Error`如<xref:System.Diagnostics.TraceSwitch>。 `<add name="myTraceSwitch" value="Error" />` 這一行相當於 `<add name="myTraceSwitch" value="1" />`。  
@@ -83,7 +74,7 @@ ms.lasthandoff: 12/22/2017
 </configuration>  
 ```  
   
-## <a name="see-also"></a>請參閱  
+## <a name="see-also"></a>另請參閱  
  <xref:System.Diagnostics.Trace>  
  <xref:System.Diagnostics.Debug>  
  [追蹤和偵錯設定結構描述](../../../../../docs/framework/configure-apps/file-schema/trace-debug/index.md)

@@ -1,9 +1,6 @@
 ---
-title: "Connection.m_WriteList 欄位"
+title: Connection.m_WriteList 欄位
 ms.date: 05/01/2017
-ms.prod: .net-framework
-ms.technology: 
-ms.topic: reference
 topic_type:
 - apiref
 api_name:
@@ -15,18 +12,15 @@ api_type:
 ms.assetid: 235503c1-1d01-4f59-895f-ae2cf15b3345
 author: guardrex
 ms.author: mairaw
-manager: wpickett
-ms.workload:
-- dotnet
-ms.openlocfilehash: e3849fdd327923e480cd88c932cfdce6580d3f09
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.openlocfilehash: d145f6fd21989ada49a581ebf2694dcd56d94351
+ms.sourcegitcommit: 11f11ca6cefe555972b3a5c99729d1a7523d8f50
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="connectionmwritelist-field"></a>Connection.m\_WriteList 欄位
 
-`Connection.m_WriteList`是<xref:System.Collections.ArrayList>的<xref:System.Net.HttpWebRequest>排透過 HTTP 傳送的物件。
+`Connection.m_WriteList` 是<xref:System.Collections.ArrayList>的<xref:System.Net.HttpWebRequest>排透過 HTTP 傳送的物件。
 
 ## <a name="syntax"></a>語法
   
@@ -41,7 +35,7 @@ private ArrayList m_WriteList
 
 ## <a name="requirements"></a>需求
 
-**命名空間：**<xref:System.Net>
+**命名空間：** <xref:System.Net>
 
 **組件：**系統 （在 System.dll)
 

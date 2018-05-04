@@ -1,9 +1,6 @@
 ---
-title: "ConnectionGroup 類別"
+title: ConnectionGroup 類別
 ms.date: 05/01/2017
-ms.prod: .net-framework
-ms.technology: 
-ms.topic: reference
 topic_type:
 - apiref
 api_name:
@@ -15,14 +12,11 @@ api_type:
 ms.assetid: 25c08217-fdeb-44b9-9cd6-1b4955d6e602
 author: guardrex
 ms.author: mairaw
-manager: wpickett
-ms.workload:
-- dotnet
-ms.openlocfilehash: d2740136d4ef7377357baa1bc30a7f1c05072c73
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.openlocfilehash: 420925f9f257bff5a788cd5af918e33c96882674
+ms.sourcegitcommit: 11f11ca6cefe555972b3a5c99729d1a7523d8f50
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="connectiongroup-class"></a>ConnectionGroup 類別
 
@@ -41,7 +35,7 @@ internal class ConnectionGroup
 
 ## <a name="requirements"></a>需求
 
-**命名空間：**<xref:System.Net>
+**命名空間：** <xref:System.Net>
 
 **組件：**系統 （在 System.dll)
 

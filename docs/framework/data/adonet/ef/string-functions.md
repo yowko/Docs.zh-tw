@@ -1,24 +1,12 @@
 ---
-title: "字串函式"
-ms.custom: 
+title: 字串函式
 ms.date: 03/30/2017
-ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.technology: dotnet-ado
-ms.tgt_pltfrm: 
-ms.topic: article
 ms.assetid: 338f0c26-8aee-43eb-bd1a-ec0849a376b9
-caps.latest.revision: "4"
-author: douglaslMS
-ms.author: douglasl
-manager: craigg
-ms.workload: dotnet
-ms.openlocfilehash: ba371840cf5c3b19ee232be0934557d87e7c343f
-ms.sourcegitcommit: ed26cfef4e18f6d93ab822d8c29f902cff3519d1
+ms.openlocfilehash: 0faac7eb37a1405c38137ce9887cf7de4c36df3a
+ms.sourcegitcommit: 11f11ca6cefe555972b3a5c99729d1a7523d8f50
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 01/17/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="string-functions"></a>字串函式
 .NET Framework Data Provider for SQL Server (SqlClient) 提供了 `String` 函式，這些函式會針對輸入 `String` 執行作業，並傳回 `String` 或數值結果。 這些函式位於您使用 SqlClient 時可以使用的 SqlServer 命名空間 (Namespace) 內。 提供者命名空間屬性可以讓 Entity Framework 了解此提供者對特定建構 (例如型別和函式) 所使用的前置詞。  
@@ -46,7 +34,7 @@ ms.lasthandoff: 01/17/2018
 |`SOUNDEX(expression)`|傳回四個字元 (SOUNDEX) 代碼，以便評估兩個字串的相似度。**引數**<br /><br /> `expression`：Unicode 或 ASCII String 型別。<br /><br /> **傳回值**<br /><br /> ASCII `String`。 四個字元的 (SOUNDEX) 代碼是用來評估兩個字串之相似度的一個字串。<br /><br /> **範例**<br /><br /> `Select SqlServer.SOUNDEX('Smith'), SqlServer.SOUNDEX('Smythe') FROM {1}`<br /><br /> **傳回**<br /><br /> `----- -----  S530  S530`|  
 |`SPACE(int_expression)`|傳回重複空格的 ASCII `String`。<br /><br /> **引數**<br /><br /> `int_expression`：指定空格數目的 `Int64` (SQL Server 2000 中不會傳回) 或 `Int32`。<br /><br /> **傳回值**<br /><br /> ASCII `String`。<br /><br /> **範例**<br /><br /> `SqlServer.SPACE(2)`|  
 |`STR(float_expression [, length [, decimal]])`|傳回從數值資料轉換而來的 ASCII `String`。<br /><br /> **引數**<br /><br /> `float _expression`：含小數點之近似數值 (`Double`) 資料型別的運算式。<br /><br /> `length`：(選擇項) 代表總長度的 `Int32`。 其中包括小數點、正負號、位數和空格。 預設值為 10。<br /><br /> `decimal`: (選擇性)`Int32`表示小數點右邊的位數。 小數位數必須小於或等於 16。 如果小數位數超過 16，結果將會被截斷成小數點右邊的 16 位數。<br /><br /> **傳回值**<br /><br /> ASCII `String`。<br /><br /> **範例**<br /><br /> `SqlServer.STR(212.0)`|  
-|`STUFF(str_expression, start, length, str_expression_to_insert)`|刪除指定長度的字元，並在字串運算式中指定的起點插入另一組字元。<br /><br /> **引數**<br /><br /> `str_expression`：Unicode 或 ASCII `String`。<br /><br /> `start:``Int64` （SQL Server 2000 中不會傳回） 或`Int32`值，指定開始刪除和插入的位置。<br /><br /> `length`：指定要刪除之字元數的 `Int64` (SQL Server 2000 中不會傳回) 或 `Int32` 值。<br /><br /> `str_expression_to_insert`：Unicode 或 ASCII `String`。<br /><br /> **傳回值**<br /><br /> Unicode 或 ASCII `String`。<br /><br /> **範例**<br /><br /> `SqlServer.STUFF('abcd', 2, 2, 'zz')`|  
+|`STUFF(str_expression, start, length, str_expression_to_insert)`|刪除指定長度的字元，並在字串運算式中指定的起點插入另一組字元。<br /><br /> **引數**<br /><br /> `str_expression`：Unicode 或 ASCII `String`。<br /><br /> `start:` `Int64` （SQL Server 2000 中不會傳回） 或`Int32`值，指定開始刪除和插入的位置。<br /><br /> `length`：指定要刪除之字元數的 `Int64` (SQL Server 2000 中不會傳回) 或 `Int32` 值。<br /><br /> `str_expression_to_insert`：Unicode 或 ASCII `String`。<br /><br /> **傳回值**<br /><br /> Unicode 或 ASCII `String`。<br /><br /> **範例**<br /><br /> `SqlServer.STUFF('abcd', 2, 2, 'zz')`|  
 |`SUBSTRING(str_expression, start, length)`|傳回 `String` 運算式的一部分。<br /><br /> **引數**<br /><br /> `str_expression`：具有 `String` (ASCII 或 Unicode) 型別或 `Binary` 型別的運算式。<br /><br /> `start`：指定子字串開始位置的 `Int64` (SQL Server 2000 中不會傳回) 或 `Int32`。 1 代表字串中的第一個字元。<br /><br /> `length`：指定傳回多少運算式字元數的 `Int64` (SQL Server 2000 中不會傳回) 或 `Int32`。<br /><br /> **傳回值**<br /><br /> `String` (ASCII 或 Unicode) 型別或 `Binary` 型別。<br /><br /> **範例**<br /><br /> `SqlServer.SUBSTRING('abcd', 2, 2)`|  
 |`UNICODE(expression)`|依照 Unicode 標準所定義，傳回輸入運算式第一個字元的整數值。<br /><br /> **引數**<br /><br /> `expression`：Unicode `String`。<br /><br /> **傳回值**<br /><br /> `Int32`。<br /><br /> **範例**<br /><br /> `SqlServer.UNICODE('a')`|  
 |`UPPER(expression)`|將小寫字元資料轉換成大寫之後，傳回 `String` 運算式。<br /><br /> **引數**<br /><br /> `expression`：具有 ASCII 或 Unicode String 型別的運算式。<br /><br /> **傳回值**<br /><br /> ASCII 或 Unicode `String` 型別。<br /><br /> **範例**<br /><br /> `SqlServer.UPPER('AbB')`|  
@@ -57,6 +45,6 @@ ms.lasthandoff: 01/17/2018
 |---------------------|---------------------|---------------------|  
 |[字串函數 (TRANSACT-SQL)](http://go.microsoft.com/fwlink/?LinkId=115915)|[字串函數 (TRANSACT-SQL)](http://go.microsoft.com/fwlink/?LinkId=115916)|[字串函數 (TRANSACT-SQL)](http://go.microsoft.com/fwlink/?LinkId=115914)|  
   
-## <a name="see-also"></a>請參閱  
+## <a name="see-also"></a>另請參閱  
  [適用於 Entity Framework 的 SqlClient 函式](../../../../../docs/framework/data/adonet/ef/sqlclient-for-ef-functions.md)  
  [適用於 Entity Framework 的 SqlClient 已知問題](../../../../../docs/framework/data/adonet/ef/known-issues-in-sqlclient-for-entity-framework.md)

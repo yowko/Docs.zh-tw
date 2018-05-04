@@ -1,31 +1,19 @@
 ---
 title: '&lt;compositeDuplex&gt;'
-ms.custom: 
 ms.date: 03/30/2017
-ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.technology: dotnet-clr
-ms.tgt_pltfrm: 
-ms.topic: article
 ms.assetid: 725004d1-ce88-4405-a220-78e89844f81f
-caps.latest.revision: "14"
-author: dotnet-bot
-ms.author: dotnetcontent
-manager: wpickett
-ms.workload: dotnet
-ms.openlocfilehash: 80c8f3954cccbce8e93ab9d8c516fdfd6c7bff10
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.openlocfilehash: ce04eb96868da9760412e37d2335d020cc768ac9
+ms.sourcegitcommit: 11f11ca6cefe555972b3a5c99729d1a7523d8f50
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="ltcompositeduplexgt"></a>&lt;compositeDuplex&gt;
 定義繫結項目，這是當用戶端必須公開 (Expose) 服務的端點才能將訊息傳回用戶端時所使用的項目。  
   
- \<system.serviceModel >  
+ \<system.serviceModel>  
 \<繫結 >  
-\<customBinding >  
+\<customBinding>  
 \<繫結 >  
 \<compositeDuplex >  
   
@@ -36,15 +24,15 @@ ms.lasthandoff: 12/22/2017
 ```  
   
 ## <a name="attributes-and-elements"></a>屬性和項目  
- 下列章節說明屬性、子項目和父項目。  
+ 下列各節描述屬性、子項目和父項目。  
   
 ### <a name="attributes"></a>屬性  
   
 |屬性|描述|  
 |---------------|-----------------|  
-|clientBaseAddress|URI，設定雙工模式中返回通道的位址。 服務會使用這個位址與用戶端接觸並建立連接。<br /><br /> 如果這個屬性未設定，預設位址"`full qualified name+default port\TemporaryIndigoAddress\guid`」 產生。 預設為 `null`。|  
+|clientBaseAddress|URI，設定雙工模式中返回通道的位址。 服務會使用這個位址與用戶端接觸並建立連接。<br /><br /> 如果這個屬性未設定，預設位址"`full qualified name+default port\TemporaryIndigoAddress\guid`」 產生。 預設值為 `null`。|  
   
-### <a name="child-elements"></a>子元素  
+### <a name="child-elements"></a>子項目  
  無  
   
 ### <a name="parent-elements"></a>父項目  
@@ -64,11 +52,11 @@ ms.lasthandoff: 12/22/2017
 <compositeDuplex clientBaseAddress="http://www.contoso.com" />  
 ```  
   
-## <a name="see-also"></a>請參閱  
+## <a name="see-also"></a>另請參閱  
  <xref:System.ServiceModel.Configuration.CompositeDuplexElement>  
  <xref:System.ServiceModel.Channels.CompositeDuplexBindingElement>  
  <xref:System.ServiceModel.Channels.CustomBinding>  
  [繫結](../../../../../docs/framework/wcf/bindings.md)  
  [擴充繫結](../../../../../docs/framework/wcf/extending/extending-bindings.md)  
  [自訂繫結](../../../../../docs/framework/wcf/extending/custom-bindings.md)  
- [\<customBinding >](../../../../../docs/framework/configure-apps/file-schema/wcf/custombinding.md)
+ [\<customBinding>](../../../../../docs/framework/configure-apps/file-schema/wcf/custombinding.md)

@@ -1,27 +1,15 @@
 ---
-title: "Connection 的事件"
-ms.custom: 
+title: Connection 的事件
 ms.date: 03/30/2017
-ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.technology: dotnet-ado
-ms.tgt_pltfrm: 
-ms.topic: article
 dev_langs:
 - csharp
 - vb
 ms.assetid: 5a29de74-acfc-4134-8616-829dd7ce0710
-caps.latest.revision: "3"
-author: douglaslMS
-ms.author: douglasl
-manager: craigg
-ms.workload: dotnet
-ms.openlocfilehash: d4d6a818f3173780cee2f8a01b9f66804cd2969b
-ms.sourcegitcommit: ed26cfef4e18f6d93ab822d8c29f902cff3519d1
+ms.openlocfilehash: 719e529c7813679f1e927b66e7db0e110714e438
+ms.sourcegitcommit: 11f11ca6cefe555972b3a5c99729d1a7523d8f50
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 01/17/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="connection-events"></a>Connection 的事件
 所有.NET Framework 資料提供者都有**連接**物件具有兩個事件可讓您擷取從資料來源的參考用訊息，或決定是否狀態**連接**具有變更。 下表描述的事件**連接**物件。  
@@ -116,6 +104,6 @@ protected static void OnStateChange(object sender,
 }  
 ```  
   
-## <a name="see-also"></a>請參閱  
+## <a name="see-also"></a>另請參閱  
  [連接至資料來源](../../../../docs/framework/data/adonet/connecting-to-a-data-source.md)  
  [ADO.NET Managed 提供者和 DataSet 開發人員中心](http://go.microsoft.com/fwlink/?LinkId=217917)

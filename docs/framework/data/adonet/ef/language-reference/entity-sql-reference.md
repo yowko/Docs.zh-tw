@@ -1,26 +1,12 @@
 ---
 title: Entity SQL 參考
-ms.custom: ''
 ms.date: 03/30/2017
-ms.prod: .net-framework
-ms.reviewer: ''
-ms.suite: ''
-ms.technology:
-- dotnet-ado
-ms.tgt_pltfrm: ''
-ms.topic: article
 ms.assetid: 61ce7ee1-ffe2-477d-8a9f-835b0a11d900
-caps.latest.revision: 4
-author: douglaslMS
-ms.author: douglasl
-manager: craigg
-ms.workload:
-- dotnet
-ms.openlocfilehash: ac05ec8a8732da383a4e33e84c669aa29660a0da
-ms.sourcegitcommit: c883637b41ee028786edceece4fa872939d2e64c
+ms.openlocfilehash: a114bf9b58da255f560564d3fedfee598adb22b2
+ms.sourcegitcommit: 11f11ca6cefe555972b3a5c99729d1a7523d8f50
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 03/23/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="entity-sql-reference"></a>Entity SQL 參考
 本節內容包括 [!INCLUDE[esql](../../../../../../includes/esql-md.md)] 參考主題。 本主題將摘要說明 [!INCLUDE[esql](../../../../../../includes/esql-md.md)] 運算子並將它們依分類群組。  
@@ -62,9 +48,9 @@ ms.lasthandoff: 03/23/2018
 |[是&AMP;#91;不&AMP;#93;NULL](../../../../../../docs/framework/data/adonet/ef/language-reference/isnull-entity-sql.md)|判斷查詢運算式是否為 null。|  
 |[< (小於)](../../../../../../docs/framework/data/adonet/ef/language-reference/less-than-entity-sql.md)|比較兩個運算式來判斷左運算式的值是否小於右運算式。|  
 |[<= (小於或等於)](../../../../../../docs/framework/data/adonet/ef/language-reference/less-than-or-equal-to-entity-sql.md)|比較兩個運算式來判斷左運算式的值是否小於或等於右運算式。|  
-|[&#91;NOT&#93; BETWEEN](../../../../../../docs/framework/data/adonet/ef/language-reference/between-entity-sql.md)|判斷運算式是否會產生所指定範圍內的值。|  
+|[&AMP;#91;不&AMP;#93;BETWEEN](../../../../../../docs/framework/data/adonet/ef/language-reference/between-entity-sql.md)|判斷運算式是否會產生所指定範圍內的值。|  
 |[\!= (不等於)](../../../../../../docs/framework/data/adonet/ef/language-reference/not-equal-to-entity-sql.md)|比較兩個運算式來判斷左運算式是否不等於右運算式。|  
-|[&#91;NOT&#93; LIKE](../../../../../../docs/framework/data/adonet/ef/language-reference/like-entity-sql.md)|判斷特定字元字串是否符合指定的模式。|  
+|[&AMP;#91;不&AMP;#93;像](../../../../../../docs/framework/data/adonet/ef/language-reference/like-entity-sql.md)|判斷特定字元字串是否符合指定的模式。|  
   
 ## <a name="logical-and-case-expression-operators"></a>邏輯和 Case 運算式運算子  
  邏輯運算子會測試某個條件是否成立。 CASE 運算式會評估一組布林運算式來得出結果。 以下資料表列出邏輯和 CASE 運算式運算子。  
@@ -72,8 +58,8 @@ ms.lasthandoff: 03/23/2018
 |運算子|描述|  
 |--------------|-----------------|  
 |[& & (邏輯 AND)](../../../../../../docs/framework/data/adonet/ef/language-reference/and-entity-sql.md)|邏輯 AND。|  
-|[\!(邏輯 NOT)](../../../../../../docs/framework/data/adonet/ef/language-reference/not-entity-sql.md)|邏輯 NOT。|  
-|[&#124;&#124; (Logical OR)](../../../../../../docs/framework/data/adonet/ef/language-reference/or-entity-sql.md)|邏輯 OR。|  
+|[!(邏輯 NOT)](../../../../../../docs/framework/data/adonet/ef/language-reference/not-entity-sql.md)|邏輯 NOT。|  
+|[&#124;&#124;(邏輯 OR)](../../../../../../docs/framework/data/adonet/ef/language-reference/or-entity-sql.md)|邏輯 OR。|  
 |[CASE](../../../../../../docs/framework/data/adonet/ef/language-reference/case-entity-sql.md)|評估一組布林運算式來得出結果。|  
 |[THEN](../../../../../../docs/framework/data/adonet/ef/language-reference/then-entity-sql.md)|結果[時](http://msdn.microsoft.com/library/6233fe9f-00b0-460e-8372-64e138a5f998)子句時評估為 true。|  
   
@@ -111,9 +97,9 @@ ms.lasthandoff: 03/23/2018
 |--------------|---------|  
 |[ANYELEMENT](../../../../../../docs/framework/data/adonet/ef/language-reference/anyelement-entity-sql.md)|從多重值集合中擷取元素。|  
 |[EXCEPT](../../../../../../docs/framework/data/adonet/ef/language-reference/except-entity-sql.md)|從 EXCEPT 運算元左側的查詢運算式傳回任何相異值集合，這些相異值是 EXCEPT 運算元右側的查詢運算式沒有傳回的。|  
-|[&#91;NOT&#93; EXISTS](../../../../../../docs/framework/data/adonet/ef/language-reference/exists-entity-sql.md)|判斷集合是否為空。|  
+|[&AMP;#91;不&AMP;#93;EXISTS](../../../../../../docs/framework/data/adonet/ef/language-reference/exists-entity-sql.md)|判斷集合是否為空。|  
 |[FLATTEN](../../../../../../docs/framework/data/adonet/ef/language-reference/flatten-entity-sql.md)|將集合轉換成扁平化集合。|  
-|[&#91;NOT&#93; IN](../../../../../../docs/framework/data/adonet/ef/language-reference/in-entity-sql.md)|判斷某個值是否與集合中的任何值相符。|  
+|[&AMP;#91;不&AMP;#93;IN](../../../../../../docs/framework/data/adonet/ef/language-reference/in-entity-sql.md)|判斷某個值是否與集合中的任何值相符。|  
 |[INTERSECT](../../../../../../docs/framework/data/adonet/ef/language-reference/intersect-entity-sql.md)|傳回 INTERSECT 運算元左右兩側之查詢運算式都會傳回的任何相異值集合。|  
 |[OVERLAPS](../../../../../../docs/framework/data/adonet/ef/language-reference/overlaps-entity-sql.md)|判斷兩個集合是否有共同項目。|  
 |[SET](../../../../../../docs/framework/data/adonet/ef/language-reference/set-entity-sql.md)|用來產生移除所有重複項目的新集合，利用這種方式將物件的集合 (collection) 轉換成集 (set)。|  
@@ -126,7 +112,7 @@ ms.lasthandoff: 03/23/2018
 |--------------|---------|  
 |[CAST](../../../../../../docs/framework/data/adonet/ef/language-reference/cast-entity-sql.md)|將一種資料類型的運算式轉換成另一種。|  
 |[COLLECTION](../../../../../../docs/framework/data/adonet/ef/language-reference/collection-entity-sql.md)|用於[函式](../../../../../../docs/framework/data/adonet/ef/language-reference/function-entity-sql.md)作業可宣告實體類型或複雜型別的集合。|  
-|[IS &#91;NOT&#93; OF](../../../../../../docs/framework/data/adonet/ef/language-reference/isof-entity-sql.md)|判斷運算式的型別是否不屬於所指定的型別或它的其中一個子型別。|  
+|[是&AMP;#91;不&AMP;#93;OF](../../../../../../docs/framework/data/adonet/ef/language-reference/isof-entity-sql.md)|判斷運算式的型別是否不屬於所指定的型別或它的其中一個子型別。|  
 |[OFTYPE](../../../../../../docs/framework/data/adonet/ef/language-reference/oftype-entity-sql.md)|從屬於特定型別的查詢運算式中傳回物件的集合。|  
 |[具名類型建構函式](../../../../../../docs/framework/data/adonet/ef/language-reference/named-type-constructor-entity-sql.md)|用來建立實體類型或複雜型別的執行個體。|  
 |[MULTISET](../../../../../../docs/framework/data/adonet/ef/language-reference/multiset-entity-sql.md)|從值清單建立多重集的執行個體。|  

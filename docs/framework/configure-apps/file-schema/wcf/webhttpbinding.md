@@ -1,32 +1,18 @@
 ---
 title: '&lt;webHttpBinding&gt;'
-ms.custom: ''
 ms.date: 03/30/2017
-ms.prod: .net-framework
-ms.reviewer: ''
-ms.suite: ''
-ms.technology:
-- dotnet-clr
-ms.tgt_pltfrm: ''
-ms.topic: article
 ms.assetid: 84179d77-825d-44b9-895a-ab08e7aa044d
-caps.latest.revision: ''
-author: dotnet-bot
-ms.author: dotnetcontent
-manager: wpickett
-ms.workload:
-- dotnet
-ms.openlocfilehash: 0eb39fe234664b5ef5ffb604090191db14e8d751
-ms.sourcegitcommit: c883637b41ee028786edceece4fa872939d2e64c
-ms.translationtype: MT
+ms.openlocfilehash: abc08f81ac05aa42ff7247edf662f8dd4482fd4a
+ms.sourcegitcommit: 11f11ca6cefe555972b3a5c99729d1a7523d8f50
+ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 03/26/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="ltwebhttpbindinggt"></a>&lt;webHttpBinding&gt;
-定義繫結項目，用於設定 [!INCLUDE[indigo1](../../../../../includes/indigo1-md.md)] Web 服務回應 HTTP 要求 (而非 SOAP 訊息) 時的端點。  
+定義用來設定 Windows Communication Foundation (WCF) Web 服務回應 HTTP 要求，而非 SOAP 訊息的端點繫結項目。  
   
 \<system.ServiceModel>  
-\<bindings>  
+\<繫結 >  
 \<webHttpBinding>  
   
 ## <a name="syntax"></a>語法  
@@ -97,7 +83,7 @@ ms.lasthandoff: 03/26/2018
   
 |項目|描述|  
 |-------------|-----------------|  
-|[\<bindings>](../../../../../docs/framework/configure-apps/file-schema/wcf/bindings.md)|這個項目會保存標準和自訂繫結的集合。|  
+|[\<繫結 >](../../../../../docs/framework/configure-apps/file-schema/wcf/bindings.md)|這個項目會保存標準和自訂繫結的集合。|  
   
 ## <a name="remarks"></a>備註  
  [!INCLUDE[indigo2](../../../../../includes/indigo2-md.md)] Web 程式設計模型可讓開發人員透過使用 "plain old XML" (POX) 樣式傳訊 (而非 SOAP 傳訊) 的 HTTP 要求公開 [!INCLUDE[indigo2](../../../../../includes/indigo2-md.md)] Web 服務。 必須使用設定的服務端點使用 HTTP 要求與服務通訊的用戶端， [ \<webHttpBinding >](../../../../../docs/framework/configure-apps/file-schema/wcf/webhttpbinding.md)具有\<WebHttpBehavior > 附加到它。  
@@ -111,4 +97,4 @@ ms.lasthandoff: 03/26/2018
  [繫結](../../../../../docs/framework/wcf/bindings.md)  
  [設定系統提供的繫結](../../../../../docs/framework/wcf/feature-details/configuring-system-provided-bindings.md)  
  [使用繫結來設定 Windows Communication Foundation 服務和用戶端](http://msdn.microsoft.com/library/bd8b277b-932f-472f-a42a-b02bb5257dfb)  
- [\<binding>](../../../../../docs/framework/misc/binding.md)
+ [\<繫結 >](../../../../../docs/framework/misc/binding.md)

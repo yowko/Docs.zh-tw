@@ -1,24 +1,12 @@
 ---
-title: "標準函式"
-ms.custom: 
+title: 標準函式
 ms.date: 03/30/2017
-ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.technology: dotnet-ado
-ms.tgt_pltfrm: 
-ms.topic: article
 ms.assetid: bbcc9928-36ea-4dff-9e31-96549ffed958
-caps.latest.revision: "3"
-author: douglaslMS
-ms.author: douglasl
-manager: craigg
-ms.workload: dotnet
-ms.openlocfilehash: 1f676c88691f0ba80ca682d720adf649ab612cfb
-ms.sourcegitcommit: ed26cfef4e18f6d93ab822d8c29f902cff3519d1
+ms.openlocfilehash: fed6e45056e318ec0bf34951097304ef3c98f629
+ms.sourcegitcommit: 11f11ca6cefe555972b3a5c99729d1a7523d8f50
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 01/17/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="canonical-functions"></a>標準函式
 本節討論所有資料提供者都支援，而且可由所有查詢技術使用的標準函式。 標準函式無法由提供者擴允。  
@@ -58,7 +46,7 @@ ms.lasthandoff: 01/17/2018
  [其他標準函式](../../../../../../docs/framework/data/adonet/ef/language-reference/other-canonical-functions.md)  
  討論未分類為位元運算、日期/時間、字串、數學或彙總的函式。  
   
-## <a name="see-also"></a>請參閱  
+## <a name="see-also"></a>另請參閱  
  [Entity SQL 概觀](../../../../../../docs/framework/data/adonet/ef/language-reference/entity-sql-overview.md)  
  [Entity SQL 參考](../../../../../../docs/framework/data/adonet/ef/language-reference/entity-sql-reference.md)  
  [概念模型標準與 SQL Server 函式的對應](../../../../../../docs/framework/data/adonet/ef/conceptual-model-canonical-to-sql-server-functions-mapping.md)  

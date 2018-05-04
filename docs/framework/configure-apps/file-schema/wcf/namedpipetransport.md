@@ -1,31 +1,19 @@
 ---
 title: '&lt;namedPipeTransport&gt;'
-ms.custom: 
 ms.date: 03/30/2017
-ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.technology: dotnet-clr
-ms.tgt_pltfrm: 
-ms.topic: article
 ms.assetid: 9fc3f42f-43e2-4ab1-8bc7-3c95a9220df1
-caps.latest.revision: "15"
-author: dotnet-bot
-ms.author: dotnetcontent
-manager: wpickett
-ms.workload: dotnet
-ms.openlocfilehash: 7802bff708cb081aa9f54f76a35ff5842ad60544
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.openlocfilehash: 652cb551fb318d43d4284dbee48aeb994f056692
+ms.sourcegitcommit: 11f11ca6cefe555972b3a5c99729d1a7523d8f50
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="ltnamedpipetransportgt"></a>&lt;namedPipeTransport&gt;
 定義傳輸，這個傳輸會使通道在包含於自訂繫結時使用具名管道來傳輸訊息。  
   
-\<system.serviceModel >  
+\<system.serviceModel>  
 \<繫結 >  
-\<customBinding >  
+\<customBinding>  
 \<繫結 >  
 \<namePipeTransport >  
   
@@ -50,12 +38,12 @@ ms.lasthandoff: 12/22/2017
 ```  
   
 ## <a name="attributes-and-elements"></a>屬性和項目  
-下列章節說明屬性、子項目和父項目。  
+下列各節描述屬性、子項目和父項目。  
   
 ### <a name="attributes"></a>屬性  
 無。  
   
-### <a name="child-elements"></a>子元素  
+### <a name="child-elements"></a>子項目  
   
 |項目|描述|  
 |-------------|-----------------|  
@@ -83,7 +71,7 @@ ms.lasthandoff: 12/22/2017
   
 `namedPipeTransport` 項目建立自訂繫結時的起點，此繫結會實作具名管道傳輸通訊協定。 這個傳輸是用於電腦的 Windows Communication Foundation (WCF) 至 WCF 通訊。  
   
-## <a name="see-also"></a>請參閱  
+## <a name="see-also"></a>另請參閱  
 <xref:System.ServiceModel.Configuration.NamedPipeTransportElement>   
 <xref:System.ServiceModel.Channels.NamedPipeTransportBindingElement>   
 <xref:System.ServiceModel.Channels.TransportBindingElement>   
@@ -93,4 +81,4 @@ ms.lasthandoff: 12/22/2017
 [繫結](../../../../../docs/framework/wcf/bindings.md)   
 [擴充繫結](../../../../../docs/framework/wcf/extending/extending-bindings.md)   
 [自訂繫結](../../../../../docs/framework/wcf/extending/custom-bindings.md)   
-[\<customBinding >](../../../../../docs/framework/configure-apps/file-schema/wcf/custombinding.md)
+[\<customBinding>](../../../../../docs/framework/configure-apps/file-schema/wcf/custombinding.md)

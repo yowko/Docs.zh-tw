@@ -1,31 +1,20 @@
 ---
-title: "&lt;移除&gt;元素&lt;接聽程式&gt;如&lt;來源&gt;"
-ms.custom: 
+title: '&lt;移除&gt;元素&lt;接聽程式&gt;如&lt;來源&gt;'
 ms.date: 03/30/2017
-ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.technology:
-- dotnet-clr
-ms.tgt_pltfrm: 
-ms.topic: article
 f1_keywords:
 - http://schemas.microsoft.com/.NetConfiguration/v2.0#configuration/system.diagnostics/sources/source/listeners/remove
 helpviewer_keywords:
 - remove element for <listeners> for <source>
 - <remove> element for <listeners> for <source>
 ms.assetid: 3ff6b578-273d-407f-b07f-8251f1f9f5d0
-caps.latest.revision: 
 author: mcleblanc
 ms.author: markl
 manager: markl
-ms.workload:
-- dotnet
-ms.openlocfilehash: b983c5eb80f958098b6991970559d077b97a0759
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.openlocfilehash: cc6772e7a9b98f09df21fd1acf24f578b66ae51e
+ms.sourcegitcommit: 11f11ca6cefe555972b3a5c99729d1a7523d8f50
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="ltremovegt-element-for-ltlistenersgt-for-ltsourcegt"></a>&lt;移除&gt;元素&lt;接聽程式&gt;如&lt;來源&gt;
 從追蹤來源的 `Listeners` 集合移除接聽項。  
@@ -35,7 +24,7 @@ ms.lasthandoff: 12/22/2017
 \<來源 >  
 \<來源 >  
 \<接聽項 >  
-\<移除 >  
+\<remove>  
   
 ## <a name="syntax"></a>語法  
   
@@ -44,7 +33,7 @@ ms.lasthandoff: 12/22/2017
 ```  
   
 ## <a name="attributes-and-elements"></a>屬性和項目  
- 下列章節說明屬性、子項目和父項目。  
+ 下列各節描述屬性、子項目和父項目。  
   
 ### <a name="attributes"></a>屬性  
   
@@ -52,7 +41,7 @@ ms.lasthandoff: 12/22/2017
 |---------------|-----------------|  
 |`name`|必要屬性。<br /><br /> 要移除的接聽程式名稱`Listeners`集合。|  
   
-### <a name="child-elements"></a>子元素  
+### <a name="child-elements"></a>子項目  
  無。  
   
 ### <a name="parent-elements"></a>父項目  
@@ -92,7 +81,7 @@ ms.lasthandoff: 12/22/2017
 </configuration>   
 ```  
   
-## <a name="see-also"></a>請參閱  
+## <a name="see-also"></a>另請參閱  
  <xref:System.Diagnostics.TraceSource.Listeners%2A>  
  <xref:System.Diagnostics.TraceSource>  
  [追蹤和偵錯設定結構描述](../../../../../docs/framework/configure-apps/file-schema/trace-debug/index.md)  

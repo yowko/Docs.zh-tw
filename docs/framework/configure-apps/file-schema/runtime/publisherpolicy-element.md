@@ -1,13 +1,6 @@
 ---
-title: "&lt;p&gt;項目"
-ms.custom: 
+title: '&lt;p&gt;項目'
 ms.date: 03/30/2017
-ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.technology: dotnet-clr
-ms.tgt_pltfrm: 
-ms.topic: article
 f1_keywords:
 - http://schemas.microsoft.com/.NetConfiguration/v2.0#configuration/runtime/assemblyBinding/publisherPolicy
 - http://schemas.microsoft.com/.NetConfiguration/v2.0#configuration/runtime/assemblyBinding/dependentAssembly/publisherPolicy
@@ -17,16 +10,13 @@ helpviewer_keywords:
 - container tags, <publisherPolicy> element
 - <publisherPolicy> element
 ms.assetid: 4613407e-d0a8-4ef2-9f81-a6acb9fdc7d4
-caps.latest.revision: "18"
 author: rpetrusha
 ms.author: ronpet
-manager: wpickett
-ms.workload: dotnet
-ms.openlocfilehash: d5f629dd347f63c8fb8e624c475bfb0ecf658f41
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.openlocfilehash: 2cc3b7220fe34f5dc049a3da71b160a88f82fdb1
+ms.sourcegitcommit: 11f11ca6cefe555972b3a5c99729d1a7523d8f50
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="ltpublisherpolicygt-element"></a>&lt;p&gt;項目
 指定執行階段是否套用發行者原則。  
@@ -44,7 +34,7 @@ ms.lasthandoff: 12/22/2017
 ```  
   
 ## <a name="attributes-and-elements"></a>屬性和項目  
- 下列章節說明屬性、子項目和父項目。  
+ 下列各節描述屬性、子項目和父項目。  
   
 ### <a name="attributes"></a>屬性  
   
@@ -59,7 +49,7 @@ ms.lasthandoff: 12/22/2017
 |`yes`|套用發行者原則。 這是預設設定。|  
 |`no`|不套用發行者原則。|  
   
-### <a name="child-elements"></a>子元素  
+### <a name="child-elements"></a>子項目  
  無。  
   
 ### <a name="parent-elements"></a>父項目  
@@ -70,7 +60,7 @@ ms.lasthandoff: 12/22/2017
 |`runtime`|包含有關組件繫結和記憶體回收的資訊。|  
   
 ## <a name="remarks"></a>備註  
- 當元件廠商發行新版的組件時，廠商可以包含發行者原則，因此現在使用舊版本的應用程式使用新的版本。 若要指定是否要針對特定的組件套用發行者原則，請將 **\<p >**中的項目 **\<dependentAssembly >**項目。  
+ 當元件廠商發行新版的組件時，廠商可以包含發行者原則，因此現在使用舊版本的應用程式使用新的版本。 若要指定是否要針對特定的組件套用發行者原則，請將 **\<p >** 中的項目 **\<dependentAssembly >** 項目。  
   
  預設設定**套用**屬性是**是**。 設定**套用**屬性**沒有**覆寫任何先前**是**組件的設定。  
   
@@ -94,7 +84,7 @@ ms.lasthandoff: 12/22/2017
 </configuration>  
 ```  
   
-## <a name="see-also"></a>請參閱  
+## <a name="see-also"></a>另請參閱  
  [執行階段設定結構描述](../../../../../docs/framework/configure-apps/file-schema/runtime/index.md)  
  [組態檔結構描述](../../../../../docs/framework/configure-apps/file-schema/index.md)  
  [執行階段如何找出組件](../../../../../docs/framework/deployment/how-the-runtime-locates-assemblies.md)  

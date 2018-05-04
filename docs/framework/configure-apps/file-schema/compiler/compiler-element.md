@@ -1,14 +1,6 @@
 ---
-title: "&lt;編譯器&gt;項目"
-ms.custom: 
+title: '&lt;編譯器&gt;項目'
 ms.date: 03/30/2017
-ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.technology:
-- dotnet-clr
-ms.tgt_pltfrm: 
-ms.topic: article
 f1_keywords:
 - http://schemas.microsoft.com/.NetConfiguration/v2.0#compiler
 - http://schemas.microsoft.com/.NetConfiguration/v2.0#configuration/system.codedom/compilers/compiler
@@ -18,23 +10,20 @@ helpviewer_keywords:
 - compiler configuration attributes
 - compiler element
 ms.assetid: 7a151659-b803-4c27-b5ce-1c4aa0d5a823
-caps.latest.revision: 
 author: mcleblanc
 ms.author: markl
 manager: markl
-ms.workload:
-- dotnet
-ms.openlocfilehash: 242a4780443026e751d76c7e80dd9a77cbbbddc7
-ms.sourcegitcommit: ba765893e3efcece67d99fd6d5ce0074b050d1d9
+ms.openlocfilehash: b033e26d64f23398a4da6842bb4688cc94627d68
+ms.sourcegitcommit: 11f11ca6cefe555972b3a5c99729d1a7523d8f50
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 03/02/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="ltcompilergt-element"></a>&lt;編譯器&gt;項目
 指定語言提供者的編譯器組態屬性。  
   
  \<組態項目 >  
-\<system.codedom Element>  
+\<system.codedom 項目 >  
 \<編譯器項目 >  
 \<編譯器 > 項目  
   
@@ -63,7 +52,7 @@ ms.lasthandoff: 03/02/2018
 |`type`|必要屬性。<br /><br /> 指定的語言提供者，包括包含的提供者實作的組件名稱的型別名稱。 型別名稱必須符合中定義的需求[指定限定的型別名稱](../../../../../docs/framework/reflection-and-codedom/specifying-fully-qualified-type-names.md)。|  
 |`warningLevel`|選擇性屬性。<br /><br /> 指定預設編譯器警告層級;決定的語言提供者會將編譯警告視為錯誤的層級。|  
   
-### <a name="child-elements"></a>子元素  
+### <a name="child-elements"></a>子項目  
   
 |項目|描述|  
 |-------------|-----------------|  
@@ -74,7 +63,7 @@ ms.lasthandoff: 03/02/2018
 |項目|描述|  
 |-------------|-----------------|  
 |[\<configuration> 項目](../../../../../docs/framework/configure-apps/file-schema/configuration-element.md)|通用語言執行平台和 .NET Framework 應用程式所使用之每個組態檔中的根項目。|  
-|[\<system.codedom> Element](../../../../../docs/framework/configure-apps/file-schema/compiler/system-codedom-element.md)|指定可用語言提供者的編譯器組態設定。|  
+|[\<system.codedom > 項目](../../../../../docs/framework/configure-apps/file-schema/compiler/system-codedom-element.md)|指定可用語言提供者的編譯器組態設定。|  
 |[\<編譯器 > 項目](../../../../../docs/framework/configure-apps/file-schema/compiler/compilers-element.md)|編譯器組態項目; 容器包含零或多個`<compiler>`項目。|  
   
 ## <a name="remarks"></a>備註  
@@ -108,7 +97,7 @@ ms.lasthandoff: 03/02/2018
 </configuration>  
 ```  
   
-## <a name="see-also"></a>請參閱  
+## <a name="see-also"></a>另請參閱  
  <xref:System.CodeDom.Compiler.CompilerInfo>  
  <xref:System.CodeDom.Compiler.CodeDomProvider>  
  [組態檔結構描述](../../../../../docs/framework/configure-apps/file-schema/index.md)  

@@ -1,14 +1,6 @@
 ---
-title: "&lt;新增&gt;元素&lt;sharedListeners&gt;"
-ms.custom: 
+title: '&lt;新增&gt;元素&lt;sharedListeners&gt;'
 ms.date: 03/30/2017
-ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.technology:
-- dotnet-clr
-ms.tgt_pltfrm: 
-ms.topic: article
 f1_keywords:
 - http://schemas.microsoft.com/.NetConfiguration/v2.0#configuration/system.diagnostics/sharedListeners/add
 helpviewer_keywords:
@@ -16,20 +8,17 @@ helpviewer_keywords:
 - <add> element for <sharedListeners>
 - add element for <sharedListeners>
 ms.assetid: 1595e1bc-2492-421f-8384-7f382eb8eb57
-caps.latest.revision: 
 author: mcleblanc
 ms.author: markl
 manager: markl
-ms.workload:
-- dotnet
-ms.openlocfilehash: 490e58d4514667c5ec781dd76644012b0c97509d
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.openlocfilehash: 27d83ba706b4d93b4ac5426bf5bae59b4bfc0d9a
+ms.sourcegitcommit: 11f11ca6cefe555972b3a5c99729d1a7523d8f50
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="ltaddgt-element-for-ltsharedlistenersgt"></a>&lt;新增&gt;元素&lt;sharedListeners&gt;
-將接聽項新增至 `sharedListeners` 集合。 `sharedListeners`是的接聽程式集合的任何[\<來源 >](../../../../../docs/framework/configure-apps/file-schema/trace-debug/source-element.md)或[\<追蹤 >](../../../../../docs/framework/configure-apps/file-schema/trace-debug/trace-element.md)可以參考。  根據預設中的接聽程式`sharedListeners`集合未放置在`Listeners`集合。 必須將它們加入使用名稱來[\<來源 >](../../../../../docs/framework/configure-apps/file-schema/trace-debug/source-element.md)或[\<追蹤 >](../../../../../docs/framework/configure-apps/file-schema/trace-debug/trace-element.md)。 不可能取得接聽程式`sharedListeners`在執行階段程式碼中的集合。  
+將接聽項新增至 `sharedListeners` 集合。 `sharedListeners` 是的接聽程式集合的任何[\<來源 >](../../../../../docs/framework/configure-apps/file-schema/trace-debug/source-element.md)或[\<追蹤 >](../../../../../docs/framework/configure-apps/file-schema/trace-debug/trace-element.md)可以參考。  根據預設中的接聽程式`sharedListeners`集合未放置在`Listeners`集合。 必須將它們加入使用名稱來[\<來源 >](../../../../../docs/framework/configure-apps/file-schema/trace-debug/source-element.md)或[\<追蹤 >](../../../../../docs/framework/configure-apps/file-schema/trace-debug/trace-element.md)。 不可能取得接聽程式`sharedListeners`在執行階段程式碼中的集合。  
   
  \<configuration>  
 \<system.diagnostics >  
@@ -45,7 +34,7 @@ ms.lasthandoff: 12/22/2017
 ```  
   
 ## <a name="attributes-and-elements"></a>屬性和項目  
- 下列章節說明屬性、子項目和父項目。  
+ 下列各節描述屬性、子項目和父項目。  
   
 ### <a name="attributes"></a>屬性  
   
@@ -55,7 +44,7 @@ ms.lasthandoff: 12/22/2017
 |`type`|必要屬性。<br /><br /> 指定接聽程式的類型。 您必須使用符合在指定之需求的字串[指定限定的型別名稱](../../../../../docs/framework/reflection-and-codedom/specifying-fully-qualified-type-names.md)。|  
 |`initializeData`|選擇性屬性。<br /><br /> 指定的類別傳遞至建構函式的字串。|  
   
-### <a name="child-elements"></a>子元素  
+### <a name="child-elements"></a>子項目  
   
 |項目|描述|  
 |-------------|-----------------|  
@@ -90,7 +79,7 @@ ms.lasthandoff: 12/22/2017
  此項目可以用於電腦組態檔 (Machine.config) 和應用程式組態檔。  
   
 ## <a name="example"></a>範例  
- 下列範例示範如何使用`<add>`項目加入<xref:System.Diagnostics.TextWriterTraceListener>`textListener`至`sharedListeners`集合。   `textListener`使用名稱來加入`Listeners`追蹤來源的集合`TraceSourceApp`。 `textListener`接聽程式會將追蹤輸出寫入檔案 myListener.log。  
+ 下列範例示範如何使用`<add>`項目加入<xref:System.Diagnostics.TextWriterTraceListener>`textListener`至`sharedListeners`集合。   `textListener` 使用名稱來加入`Listeners`追蹤來源的集合`TraceSourceApp`。 `textListener`接聽程式會將追蹤輸出寫入檔案 myListener.log。  
   
 ```xml  
 <configuration>  
@@ -118,7 +107,7 @@ ms.lasthandoff: 12/22/2017
 </configuration>   
 ```  
   
-## <a name="see-also"></a>請參閱  
+## <a name="see-also"></a>另請參閱  
  <xref:System.Diagnostics.TraceSource>  
  <xref:System.Diagnostics.TraceListener>  
  [追蹤和偵錯設定結構描述](../../../../../docs/framework/configure-apps/file-schema/trace-debug/index.md)  

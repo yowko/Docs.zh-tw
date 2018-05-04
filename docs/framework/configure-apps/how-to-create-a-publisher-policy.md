@@ -1,29 +1,20 @@
 ---
-title: "如何：建立發行者原則"
-ms.custom: 
+title: 如何：建立發行者原則
 ms.date: 03/30/2017
-ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.technology: dotnet-clr
-ms.tgt_pltfrm: 
-ms.topic: article
 helpviewer_keywords:
 - publisher policy assembly
 - publisher policy files
 - GAC (global assembly cache), publisher policy assembly
 - global assembly cache, publisher policy assembly
 ms.assetid: 8046bc5d-2fa9-4277-8a5e-6dcc96c281d9
-caps.latest.revision: "15"
 author: mcleblanc
 ms.author: markl
 manager: markl
-ms.workload: dotnet
-ms.openlocfilehash: 4ccd490f6d31ad1d20128497e5115147eddb3df4
-ms.sourcegitcommit: c0dd436f6f8f44dc80dc43b07f6841a00b74b23f
+ms.openlocfilehash: 91971e4d41c3a54fa72ae73a3655dab650019676
+ms.sourcegitcommit: 11f11ca6cefe555972b3a5c99729d1a7523d8f50
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 01/19/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="how-to-create-a-publisher-policy"></a>如何：建立發行者原則
 組件的廠商可以狀態的應用程式應該使用較新版的組件，包含與升級後的組件的發行者原則檔。 發行者原則檔會指定組件重新導向和程式碼基底的設定，並使用相同的格式為應用程式組態檔。 發行者原則檔會編譯的組件，並放置於全域組件快取。  
@@ -72,7 +63,7 @@ ms.lasthandoff: 01/19/2018
   
     -   *PublisherPolicyAssemblyFile*引數是此命令會產生發行者原則組件名稱。 組件檔案名稱必須遵循格式：  
   
-         **原則。** *majorNumber* **.** *minorNumber* **.** *mainAssemblyName* **.dll**  
+         **原則。** *majorNumber* **。** *minorNumber* **。** *mainAssemblyName* **.dll**  
   
     -   *KeyPairFile*引數是包含金鑰組的檔案名稱。 您必須簽署的組件和發行者原則組件具有相同的金鑰組。  
   
@@ -100,7 +91,7 @@ ms.lasthandoff: 01/19/2018
   
 1.  在命令提示字元中輸入下列命令：  
   
-     **gacutil /i**  *publisherPolicyAssemblyFile*  
+     **gacutil /i***publisherPolicyAssemblyFile*   
   
      下列命令會將`policy.1.0.myAssembly.dll`至全域組件快取。  
   
@@ -111,7 +102,7 @@ ms.lasthandoff: 01/19/2018
     > [!IMPORTANT]
     >  發行者原則組件無法新增至全域組件快取，除非原始發行者原則檔位於與組件相同的目錄中。  
   
-## <a name="see-also"></a>請參閱  
+## <a name="see-also"></a>另請參閱  
  [使用組件設計程式](../../../docs/framework/app-domains/programming-with-assemblies.md)  
  [執行階段如何找出組件](../../../docs/framework/deployment/how-the-runtime-locates-assemblies.md)  
  [設定應用程式](../../../docs/framework/configure-apps/index.md)  

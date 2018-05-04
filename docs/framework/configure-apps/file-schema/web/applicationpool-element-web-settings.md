@@ -1,27 +1,18 @@
 ---
-title: "&lt;應用程式集區&gt;項目 （Web 設定）"
-ms.custom: 
+title: '&lt;應用程式集區&gt;項目 （Web 設定）'
 ms.date: 03/30/2017
-ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.technology: dotnet-clr
-ms.tgt_pltfrm: 
-ms.topic: article
 helpviewer_keywords:
 - applicationPool element
 - <applicationPool> element
 ms.assetid: 46d1baaa-e343-4639-b70d-2a43a9f62b2a
-caps.latest.revision: "12"
 author: mcleblanc
 ms.author: markl
 manager: markl
-ms.workload: dotnet
-ms.openlocfilehash: d75e9eedf42523301b3c1745c05d90bcdafbdbf5
-ms.sourcegitcommit: c0dd436f6f8f44dc80dc43b07f6841a00b74b23f
+ms.openlocfilehash: a2eafc6b5ad1446fd07518f877a8ec001ad8dbd6
+ms.sourcegitcommit: 11f11ca6cefe555972b3a5c99729d1a7523d8f50
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 01/19/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="ltapplicationpoolgt-element-web-settings"></a>&lt;應用程式集區&gt;項目 （Web 設定）
 指定用來管理整個處理序的行為，以整合模式上執行 ASP.NET 應用程式時由 ASP.NET 組態設定[!INCLUDE[iisver](../../../../../includes/iisver-md.md)]或更新版本。  
@@ -53,7 +44,7 @@ ms.lasthandoff: 01/19/2018
 |`maxConcurrentThreadsPerCPU`|指定多少同時執行緒可以執行應用程式集區的每一個 CPU。 這會提供替代方法來控制 ASP.NET 的並行存取，因為您可以限制可用於每個 CPU 處理要求的 managed 執行緒的數目。 此設定預設值為 0，這表示，ASP.NET 不會限制每個 CPU，可以建立的執行緒數目雖然 CLR 執行緒集區也會限制可以建立的執行緒數目。|  
 |`requestQueueLimit`|指定可以在單一處理序中加入佇列的 ASP.NET 的要求數目上限。 當兩個或多個 ASP.NET 應用程式執行單一應用程式集區中時，應用程式集區中的任何應用程式所提出之要求的累計集受限於這項設定。|  
   
-### <a name="child-elements"></a>子元素  
+### <a name="child-elements"></a>子項目  
  無。  
   
 ### <a name="parent-elements"></a>父項目  
@@ -79,7 +70,7 @@ ms.lasthandoff: 01/19/2018
   
 -   應用程式裝載於[!INCLUDE[iisver](../../../../../includes/iisver-md.md)]應用程式集區。  
   
--   [!INCLUDE[iisver](../../../../../includes/iisver-md.md)]以整合模式執行。  
+-   [!INCLUDE[iisver](../../../../../includes/iisver-md.md)] 以整合模式執行。  
   
 -   應用程式使用[!INCLUDE[net_v35SP1_short](../../../../../includes/net-v35sp1-short-md.md)]或更新版本。  
   
@@ -105,5 +96,5 @@ ms.lasthandoff: 01/19/2018
 |驗證檔||  
 |可以是空白||  
   
-## <a name="see-also"></a>請參閱  
+## <a name="see-also"></a>另請參閱  
  [\<system.web> 項目 (Web 設定)](../../../../../docs/framework/configure-apps/file-schema/web/system-web-element-web-settings.md)

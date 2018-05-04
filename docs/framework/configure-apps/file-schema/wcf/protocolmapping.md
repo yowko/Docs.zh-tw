@@ -1,29 +1,17 @@
 ---
 title: '&lt;p&gt;'
-ms.custom: 
 ms.date: 03/30/2017
-ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.technology: dotnet-clr
-ms.tgt_pltfrm: 
-ms.topic: article
 ms.assetid: 5076644b-1f33-4f26-9488-87de9fcda04c
-caps.latest.revision: "3"
-author: dotnet-bot
-ms.author: dotnetcontent
-manager: wpickett
-ms.workload: dotnet
-ms.openlocfilehash: b2d932e8a7fbe9c1457b5cea5106b69317227a21
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.openlocfilehash: 4afdaaa62c1ac3241eb7382d0995bed51bde73e2
+ms.sourcegitcommit: 11f11ca6cefe555972b3a5c99729d1a7523d8f50
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="ltprotocolmappinggt"></a>&lt;p&gt;
-代表定義一組預設通訊協定之間的對應傳輸通訊協定配置 （例如 http、 net.tcp、 net.pipe 等） 和 WCF 繫結組態區段。 在執行階段建立預設的端點時，[!INCLUDE[indigo1](../../../../../includes/indigo1-md.md)] 會查看所設定的對應，並且決定要用於特定基礎位址的繫結。  
+代表定義一組預設通訊協定之間的對應傳輸通訊協定配置 （例如 http、 net.tcp、 net.pipe 等） 和 WCF 繫結組態區段。 在執行階段建立預設端點，Windows Communication Foundation (WCF) 會查看所設定的對應，並決定哪些繫結至用於特定基礎位址。  
   
- \<system.serviceModel >  
+ \<system.serviceModel>  
 \<p >  
   
 ## <a name="syntax"></a>語法  
@@ -33,12 +21,12 @@ ms.lasthandoff: 12/22/2017
 ```
 
 ## <a name="attributes-and-elements"></a>屬性和項目  
- 下列章節說明屬性、子項目和父項目。  
+ 下列各節描述屬性、子項目和父項目。  
   
 ### <a name="attributes"></a>屬性  
  無。  
   
-### <a name="child-elements"></a>子元素  
+### <a name="child-elements"></a>子項目  
   
 |項目|描述|  
 |-------------|-----------------|  
@@ -62,6 +50,6 @@ ms.lasthandoff: 12/22/2017
 </protocolMapping>  
 ```  
   
-## <a name="see-also"></a>請參閱  
+## <a name="see-also"></a>另請參閱  
  <xref:System.ServiceModel.Configuration.ProtocolMappingSection?displayProperty=nameWithType>       
  <xref:System.ServiceModel.Configuration.ProtocolMappingElement?displayProperty=nameWithType>    

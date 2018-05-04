@@ -1,33 +1,21 @@
 ---
-title: "&lt;netHttpBinding&gt; 的 &lt;message&gt;"
-ms.custom: 
+title: '&lt;netHttpBinding&gt; 的 &lt;message&gt;'
 ms.date: 03/30/2017
-ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.technology: dotnet-clr
-ms.tgt_pltfrm: 
-ms.topic: article
 ms.assetid: 9def5a35-475d-40d6-b716-ccdbd93863c7
-caps.latest.revision: "3"
-author: dotnet-bot
-ms.author: dotnetcontent
-manager: wpickett
-ms.workload: dotnet
-ms.openlocfilehash: 17a0043188c36a31dc4ee35e8f5889240b9b7407
-ms.sourcegitcommit: c0dd436f6f8f44dc80dc43b07f6841a00b74b23f
-ms.translationtype: MT
+ms.openlocfilehash: 6e4cd2c000d577e26b54e09f24279e0fd74afcf1
+ms.sourcegitcommit: 11f11ca6cefe555972b3a5c99729d1a7523d8f50
+ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 01/19/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="ltmessagegt-of-ltnethttpbindinggt"></a>&lt;netHttpBinding&gt; 的 &lt;message&gt;
 定義訊息層級安全性的設定[ \<basicHttpBinding >](../../../../../docs/framework/configure-apps/file-schema/wcf/basichttpbinding.md)。  
   
  \<system.ServiceModel>  
-\<bindings>  
+\<繫結 >  
 \<netHttpBinding>  
-\<binding>  
-\<security>  
+\<繫結 >  
+\<安全性 >  
 \<message>  
   
 ## <a name="syntax"></a>語法  
@@ -52,10 +40,10 @@ ms.lasthandoff: 01/19/2018
   
 |值|描述|  
 |-----------|-----------------|  
-|使用者名稱|-需要使用 UserName 認證伺服器驗證用戶端。 這個認證必須使用 <`clientCredentials`> 項目來指定。<br />-   [!INCLUDE[indigo2](../../../../../includes/indigo2-md.md)]不支援傳送密碼摘要或衍生金鑰，使用密碼，甚至對訊息安全性使用該金鑰。 因此，[!INCLUDE[indigo2](../../../../../includes/indigo2-md.md)] 會在使用 UserName 認證時強制保護傳輸。 對於 `basicHttpBinding`，這需要設定 SSL 通道。|  
+|使用者名稱|-需要使用 UserName 認證伺服器驗證用戶端。 這個認證必須使用 <`clientCredentials`> 項目來指定。<br />-   [!INCLUDE[indigo2](../../../../../includes/indigo2-md.md)] 不支援傳送密碼摘要或衍生金鑰，使用密碼，甚至對訊息安全性使用該金鑰。 因此，[!INCLUDE[indigo2](../../../../../includes/indigo2-md.md)] 會在使用 UserName 認證時強制保護傳輸。 對於 `basicHttpBinding`，這需要設定 SSL 通道。|  
 |憑證|需要使用憑證對伺服器驗證用戶端。 此案例中的用戶端認證必須使用 <`clientCredentials`> 和 <`clientCertificate`> 來指定。 此外，當使用訊息安全性模式時，必須提供服務憑證給用戶端。 在此情況下必須指定使用服務認證<xref:System.ServiceModel.Description.ClientCredentials>類別或`ClientCredentials`行為項目，並指定服務憑證使用\<serviceCertificate > serviceCredentials 的項目。|  
   
-### <a name="child-elements"></a>子元素  
+### <a name="child-elements"></a>子項目  
  無  
   
 ### <a name="parent-elements"></a>父項目  
@@ -136,9 +124,9 @@ ms.lasthandoff: 01/19/2018
 </system.serviceModel>  
 ```  
   
-## <a name="see-also"></a>請參閱  
+## <a name="see-also"></a>另請參閱  
  [保護服務和用戶端的安全](../../../../../docs/framework/wcf/feature-details/securing-services-and-clients.md)  
  [繫結](../../../../../docs/framework/wcf/bindings.md)  
  [設定系統提供的繫結](../../../../../docs/framework/wcf/feature-details/configuring-system-provided-bindings.md)  
  [使用繫結來設定 Windows Communication Foundation 服務和用戶端](http://msdn.microsoft.com/library/bd8b277b-932f-472f-a42a-b02bb5257dfb)  
- [\<binding>](../../../../../docs/framework/misc/binding.md)
+ [\<繫結 >](../../../../../docs/framework/misc/binding.md)

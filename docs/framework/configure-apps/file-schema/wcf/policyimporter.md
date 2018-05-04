@@ -1,29 +1,17 @@
 ---
 title: '&lt;policyImporter&gt;'
-ms.custom: 
 ms.date: 03/30/2017
-ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.technology: dotnet-clr
-ms.tgt_pltfrm: 
-ms.topic: article
 ms.assetid: b0d03456-546f-44bb-ab12-1b2ce7f98fca
-caps.latest.revision: "9"
-author: dotnet-bot
-ms.author: dotnetcontent
-manager: wpickett
-ms.workload: dotnet
-ms.openlocfilehash: 2226b4f55025c9dec3fdeb4f9b4f51016ffd3e8e
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.openlocfilehash: 7483a95accef0a4bc956d919087379363b4762ca
+ms.sourcegitcommit: 11f11ca6cefe555972b3a5c99729d1a7523d8f50
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="ltpolicyimportergt"></a>&lt;policyImporter&gt;
 指定原則匯入工具，此工具會控制匯入有關繫結的自訂原則判斷提示 (Assertion)。  
   
- \<系統。ServiceModel >  
+ \<system.ServiceModel>  
 \<用戶端 >  
 \<中繼資料 >  
 \<policyImporters >  
@@ -40,7 +28,7 @@ ms.lasthandoff: 12/22/2017
 ```  
   
 ## <a name="attributes-and-elements"></a>屬性和項目  
- 下列章節說明屬性、子項目和父項目。  
+ 下列各節描述屬性、子項目和父項目。  
   
 ### <a name="attributes"></a>屬性  
   
@@ -48,7 +36,7 @@ ms.lasthandoff: 12/22/2017
 |---------------|-----------------|  
 |`type`|此項目的型別。|  
   
-### <a name="child-elements"></a>子元素  
+### <a name="child-elements"></a>子項目  
  無  
   
 ### <a name="parent-elements"></a>父項目  
@@ -60,7 +48,7 @@ ms.lasthandoff: 12/22/2017
 ## <a name="remarks"></a>備註  
  原則匯入工具是用來搜尋有關繫結功能的自訂原則判斷提示，以及附加可實作判斷提示所需要功能的自訂繫結項目。  
   
-## <a name="see-also"></a>請參閱  
+## <a name="see-also"></a>另請參閱  
  <xref:System.ServiceModel.Configuration.PolicyImporterElementCollection>  
  <xref:System.ServiceModel.Configuration.PolicyImporterElement>  
  <xref:System.ServiceModel.Configuration.MetadataElement>  

@@ -1,13 +1,6 @@
 ---
-title: "&lt;bindingRedirect&gt;項目"
-ms.custom: 
+title: '&lt;bindingRedirect&gt;項目'
 ms.date: 03/30/2017
-ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.technology: dotnet-clr
-ms.tgt_pltfrm: 
-ms.topic: article
 f1_keywords:
 - http://schemas.microsoft.com/.NetConfiguration/v2.0#configuration/runtime/assemblyBinding/dependentAssembly/bindingRedirect
 - http://schemas.microsoft.com/.NetConfiguration/v2.0#bindingRedirect
@@ -16,16 +9,14 @@ helpviewer_keywords:
 - container tags, <bindingRedirect> element
 - bindingRedirect element
 ms.assetid: 67784ecd-9663-434e-bd6a-26975e447ac0
-caps.latest.revision: "12"
 author: mcleblanc
 ms.author: markl
 manager: markl
-ms.workload: dotnet
-ms.openlocfilehash: f8cd497871d8a58504cf790f84cc7e5a1d4e39b2
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.openlocfilehash: 08dc7a55b5b0c580f19d137496b9405fa4e18a5f
+ms.sourcegitcommit: 11f11ca6cefe555972b3a5c99729d1a7523d8f50
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="ltbindingredirectgt-element"></a>&lt;bindingRedirect&gt;項目
 將一個組件版本重新導向至另一個版本。  
@@ -45,7 +36,7 @@ newVersion="new assembly version"/>
 ```  
   
 ## <a name="attributes-and-elements"></a>屬性和項目  
- 下列章節說明屬性、子項目和父項目。  
+ 下列各節描述屬性、子項目和父項目。  
   
 ### <a name="attributes"></a>屬性  
   
@@ -54,7 +45,7 @@ newVersion="new assembly version"/>
 |`oldVersion`|必要屬性。<br /><br /> 指定原本要求的組件版本。 組件版本號碼的格式是*major.minor.build.revision*。 這個版本號碼每個部分的有效值為 0 至 65535。<br /><br /> 您也可以使用下列格式指定版本範圍：<br /><br /> *n.n.n.n-n.n.n.n*|  
 |`newVersion`|必要屬性。<br /><br /> 指定要使用而不是原始要求的版本格式的組件版本： *n.n.n.n*<br /><br /> 這個值可以指定 `oldVersion` 以前的版本。|  
   
-### <a name="child-elements"></a>子元素  
+### <a name="child-elements"></a>子項目  
   
 |項目|描述|  
 |-------------|-----------------|  
@@ -95,7 +86,7 @@ newVersion="new assembly version"/>
 </configuration>  
 ```  
   
-## <a name="see-also"></a>請參閱  
+## <a name="see-also"></a>另請參閱  
  [執行階段設定結構描述](../../../../../docs/framework/configure-apps/file-schema/runtime/index.md)  
  [組態檔結構描述](../../../../../docs/framework/configure-apps/file-schema/index.md)  
  [重新導向組件版本](../../../../../docs/framework/configure-apps/redirect-assembly-versions.md)

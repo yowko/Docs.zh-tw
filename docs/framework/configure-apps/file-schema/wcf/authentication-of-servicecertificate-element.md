@@ -1,33 +1,21 @@
 ---
-title: "&lt;serviceCertificate&gt; 項目的 &lt;authentication&gt;"
-ms.custom: 
+title: '&lt;serviceCertificate&gt; 項目的 &lt;authentication&gt;'
 ms.date: 03/30/2017
-ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.technology: dotnet-clr
-ms.tgt_pltfrm: 
-ms.topic: article
 ms.assetid: 733b67b4-08a1-4d25-9741-10046f9357ef
-caps.latest.revision: "13"
-author: dotnet-bot
-ms.author: dotnetcontent
-manager: wpickett
-ms.workload: dotnet
-ms.openlocfilehash: 4e8c9530097593f1694af67396773fc32d5534d8
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.openlocfilehash: 9ef17c8bedf6bcef21a7c59d98a86bb20ad2da80
+ms.sourcegitcommit: 11f11ca6cefe555972b3a5c99729d1a7523d8f50
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="ltauthenticationgt-of-ltservicecertificategt-element"></a>&lt;serviceCertificate&gt; 項目的 &lt;authentication&gt;
 指定用戶端 Proxy 用來驗證服務憑證的設定，而這份憑證是使用 SSL/TLS 交涉所取得。  
   
- \<系統。ServiceModel >  
+ \<system.ServiceModel>  
 \<行為 >  
 endpointBehaviors 區段  
 \<行為 >  
-\<clientCredentials >  
+\<clientCredentials>  
 \<serviceCertificate >  
 \<驗證 >  
   
@@ -49,7 +37,7 @@ trustedStoreLocation="LocalMachine/CurrentUser" />
 |customCertificateValidatorType|字串。 用來驗證自訂型別的型別和組件。|  
 |certificateValidationMode|指定用來驗證認證之三個模式的其中一個。 如果設定為 `Custom`，也必須提供 customCertificateValidator。 預設為 `ChainTrust`。|  
 |revocationMode|用於檢查撤銷憑證清單 (CRL) 的模式之一。 預設為 `Online`。|  
-|trustedStoreLocation|兩個系統存放位置的其中一個：`LocalMachine` 或 `CurrentUser`。 當與用戶端交涉服務憑證時，會使用這個值。 針對執行驗證**受信任的人**將儲存在指定的存放區位置。 預設為 `CurrentUser`。|  
+|trustedStoreLocation|兩個系統存放位置的其中一個：`LocalMachine` 或 `CurrentUser`。 當與用戶端交涉服務憑證時，會使用這個值。 針對執行驗證**受信任的人**將儲存在指定的存放區位置。 預設值為 `CurrentUser`。|  
   
 ## <a name="customcertificatevalidator-attribute"></a>customCertificateValidator 屬性  
   
@@ -75,7 +63,7 @@ trustedStoreLocation="LocalMachine/CurrentUser" />
 |-----------|-----------------|  
 |列舉|下列其中一個值：LocalMachine 或 CurrentUser。 預設為 CurrentUser。 如果用戶端應用程式是在系統帳戶下執行，則憑證通常位於 LocalMachine 之下。 如果用戶端應用程式是在使用者帳戶下執行，則憑證通常位於 CurrentUser 中。|  
   
-### <a name="child-elements"></a>子元素  
+### <a name="child-elements"></a>子項目  
  無。  
   
 ### <a name="parent-elements"></a>父項目  
@@ -108,7 +96,7 @@ trustedStoreLocation="LocalMachine/CurrentUser" />
 </serviceCertificate>  
 ```  
   
-## <a name="see-also"></a>請參閱  
+## <a name="see-also"></a>另請參閱  
  <xref:System.ServiceModel.Configuration.X509RecipientCertificateClientElement>  
  <xref:System.ServiceModel.Security.X509CertificateRecipientClientCredential>  
  <xref:System.ServiceModel.Security.X509CertificateRecipientClientCredential.Authentication%2A>  

@@ -1,24 +1,12 @@
 ---
 title: DataTables
-ms.custom: 
 ms.date: 03/30/2017
-ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.technology: dotnet-ado
-ms.tgt_pltfrm: 
-ms.topic: article
 ms.assetid: 52ff0e32-3e5a-41de-9a3b-7b04ea52b83e
-caps.latest.revision: "6"
-author: douglaslMS
-ms.author: douglasl
-manager: craigg
-ms.workload: dotnet
-ms.openlocfilehash: 439b951779393d6ac232e6a1a622515905e837ad
-ms.sourcegitcommit: ed26cfef4e18f6d93ab822d8c29f902cff3519d1
+ms.openlocfilehash: e148b20c7d8efdb16a897c5606535e4b0112ea29
+ms.sourcegitcommit: 11f11ca6cefe555972b3a5c99729d1a7523d8f50
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 01/17/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="datatables"></a>DataTables
 <xref:System.Data.DataSet> 是由資料表集合、關係和條件約束所組成。 在 ADO.NET 中，<xref:System.Data.DataTable>物件用來代表中的資料表**資料集**。 A **DataTable**表示一個資料表的記憶體中關聯式資料; 資料位於本機。網路架構應用程式它所在的但可以填入來自資料來源，例如 Microsoft SQL Server 使用**DataAdapter**如需詳細資訊，請參閱[填入資料集從 DataAdapter](../../../../../docs/framework/data/adonet/populating-a-dataset-from-a-dataadapter.md).  
@@ -66,5 +54,5 @@ ms.lasthandoff: 01/17/2018
  [類別庫概觀](../../../../../docs/standard/class-library-overview.md)  
  提供的.NET Framework 類別庫概觀包括**系統**命名空間以及它的第二層命名空間， **System.Data**。  
   
-## <a name="see-also"></a>請參閱  
+## <a name="see-also"></a>另請參閱  
  [ADO.NET Managed 提供者和 DataSet 開發人員中心](http://go.microsoft.com/fwlink/?LinkId=217917)

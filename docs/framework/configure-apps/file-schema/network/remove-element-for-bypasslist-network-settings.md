@@ -1,13 +1,6 @@
 ---
-title: "&lt;移除&gt;bypasslist （網路設定） 的項目"
-ms.custom: 
+title: '&lt;移除&gt;bypasslist （網路設定） 的項目'
 ms.date: 03/30/2017
-ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.technology: dotnet-clr
-ms.tgt_pltfrm: 
-ms.topic: article
 f1_keywords:
 - http://schemas.microsoft.com/.NetConfiguration/v2.0#configuration/system.net/defaultProxy/bypasslist/remove
 - http://schemas.microsoft.com/.NetConfiguration/v2.0#remove
@@ -17,25 +10,23 @@ helpviewer_keywords:
 - bypasslist, remove element
 - remove element, bypasslist
 ms.assetid: 61dcfb4a-e3d9-4abf-a2cd-7d685fe2f64b
-caps.latest.revision: "16"
 author: mcleblanc
 ms.author: markl
 manager: markl
-ms.workload: dotnet
-ms.openlocfilehash: a385401217c10a316268f48757e46e3d0cfea09c
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.openlocfilehash: 5c7918048743d53d8523ec399d1a11c67152a2bf
+ms.sourcegitcommit: 11f11ca6cefe555972b3a5c99729d1a7523d8f50
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="ltremovegt-element-for-bypasslist-network-settings"></a>&lt;移除&gt;bypasslist （網路設定） 的項目
 Proxy 略過清單移除 IP 位址或 DNS 名稱。  
   
  \<configuration>  
-\<system.net >  
+\<system.net>  
 \<defaultProxy >  
 \<bypasslist >  
-\<移除 >  
+\<remove>  
   
 ## <a name="syntax"></a>語法  
   
@@ -46,7 +37,7 @@ Proxy 略過清單移除 IP 位址或 DNS 名稱。
 ```  
   
 ## <a name="attributes-and-elements"></a>屬性和項目  
- 下列章節說明屬性、子項目和父項目。  
+ 下列各節描述屬性、子項目和父項目。  
   
 ### <a name="attributes"></a>屬性  
   
@@ -54,7 +45,7 @@ Proxy 略過清單移除 IP 位址或 DNS 名稱。
 |-------------------|---------------------|  
 |`address`|描述 IP 位址或 DNS 名稱的規則運算式。|  
   
-### <a name="child-elements"></a>子元素  
+### <a name="child-elements"></a>子項目  
  無。  
   
 ### <a name="parent-elements"></a>父項目  
@@ -89,6 +80,6 @@ Proxy 略過清單移除 IP 位址或 DNS 名稱。
 </configuration>  
 ```  
   
-## <a name="see-also"></a>請參閱  
+## <a name="see-also"></a>另請參閱  
  <xref:System.Net.WebProxy?displayProperty=nameWithType>  
  [網路設定結構描述](../../../../../docs/framework/configure-apps/file-schema/network/index.md)

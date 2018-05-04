@@ -1,21 +1,14 @@
 ---
 title: 容器和 Docker 簡介
 description: 容器化 .NET 應用程式的 .NET 微服務架構 | 容器和 Docker 簡介
-keywords: Docker, 微服務, ASP.NET, 容器
 author: CESARDELATORRE
 ms.author: wiwagn
 ms.date: 05/26/2017
-ms.prod: .net-core
-ms.technology: dotnet-docker
-ms.topic: article
-ms.workload:
-- dotnet
-- dotnetcore
-ms.openlocfilehash: 8809ae41609ff0e2d2fc969d412cb5edc8939653
-ms.sourcegitcommit: e7f04439d78909229506b56935a1105a4149ff3d
+ms.openlocfilehash: c1f78a8904270123188367a01bddbcac3f7f1b7f
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 12/23/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="introduction-to-containers-and-docker"></a>容器和 Docker 簡介
 

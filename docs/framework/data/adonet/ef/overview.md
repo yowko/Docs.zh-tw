@@ -1,24 +1,12 @@
 ---
-title: "Entity Framework 概觀"
-ms.custom: 
+title: Entity Framework 概觀
 ms.date: 03/30/2017
-ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.technology: dotnet-ado
-ms.tgt_pltfrm: 
-ms.topic: article
 ms.assetid: a2166b3d-d8ba-4a0a-8552-6ba1e3eaaee0
-caps.latest.revision: "6"
-author: douglaslMS
-ms.author: douglasl
-manager: craigg
-ms.workload: dotnet
-ms.openlocfilehash: 2bfccccbcfa41f8ed67cb309a0e4a3dd9dda6b90
-ms.sourcegitcommit: c0dd436f6f8f44dc80dc43b07f6841a00b74b23f
+ms.openlocfilehash: 8b07fb9b80d5d0d13967c807198194b3a2228202
+ms.sourcegitcommit: 11f11ca6cefe555972b3a5c99729d1a7523d8f50
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 01/19/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="entity-framework-overview"></a>Entity Framework 概觀
 [!INCLUDE[adonet_ef](../../../../../includes/adonet-ef-md.md)] 是 ADO.NET 中的一組技術，可支援資料導向軟體應用程式的開發。 資料導向應用程式的架構設計人員和開發人員經常致力於滿足達成兩個迥異目標的需求。 他們必須針對所解決之商務問題的實體、關聯性和邏輯建立模型，而且也必須使用用來儲存和擷取資料的資料引擎。 這項資料可能會跨越多個儲存系統，而且每個系統都有自己的通訊協定 (Protocol)。即使是使用單一儲存系統的應用程式都必須在儲存系統的需求與撰寫有效率和可維護應用程式程式碼的需求之間取得平衡。  
@@ -73,7 +61,7 @@ ms.lasthandoff: 01/19/2018
   
 -   [!INCLUDE[linq_entities](../../../../../includes/linq-entities-md.md)]. 查詢概念模型中定義的實體類型提供 Language-Integrated Query (LINQ) 支援。 如需詳細資訊，請參閱[LINQ to Entities](../../../../../docs/framework/data/adonet/ef/language-reference/linq-to-entities.md)。  
   
--   [!INCLUDE[esql](../../../../../includes/esql-md.md)]. 與儲存體無關的 SQL dialect，可直接與概念模型中的實體，並支援[!INCLUDE[adonet_edm](../../../../../includes/adonet-edm-md.md)]概念。 [!INCLUDE[esql](../../../../../includes/esql-md.md)]會使用與物件查詢以及使用 EntityClient 提供者執行的查詢。 如需詳細資訊，請參閱[Entity SQL 概觀](../../../../../docs/framework/data/adonet/ef/language-reference/entity-sql-overview.md)。  
+-   [!INCLUDE[esql](../../../../../includes/esql-md.md)]. 與儲存體無關的 SQL dialect，可直接與概念模型中的實體，並支援[!INCLUDE[adonet_edm](../../../../../includes/adonet-edm-md.md)]概念。 [!INCLUDE[esql](../../../../../includes/esql-md.md)] 會使用與物件查詢以及使用 EntityClient 提供者執行的查詢。 如需詳細資訊，請參閱[Entity SQL 概觀](../../../../../docs/framework/data/adonet/ef/language-reference/entity-sql-overview.md)。  
   
  [!INCLUDE[adonet_ef](../../../../../includes/adonet-ef-md.md)] 包含 EntityClient 資料提供者 (Data Provider)。 這個提供者會管理連接、將實體查詢轉譯成資料來源特有的查詢，以及傳回 [!INCLUDE[adonet_ef](../../../../../includes/adonet-ef-md.md)] 用來將實體資料具體化為物件的資料讀取器。 不需要物件具體化時，EntityClient 提供者也可以用標準[!INCLUDE[vstecado](../../../../../includes/vstecado-md.md)]資料提供者，讓應用程式執行[!INCLUDE[esql](../../../../../includes/esql-md.md)]查詢並且取用傳回的唯讀資料讀取器。 如需詳細資訊，請參閱[Entity Framework 的 EntityClient 提供者](../../../../../docs/framework/data/adonet/ef/entityclient-provider-for-the-entity-framework.md)。  
   
@@ -106,5 +94,5 @@ ms.lasthandoff: 01/19/2018
  [Entity Framework 資源](../../../../../docs/framework/data/adonet/ef/resources.md)  
  提供概念性主題的連結以及建置 (Build) [!INCLUDE[adonet_ef](../../../../../includes/adonet-ef-md.md)] 應用程式之外部主題和資源的連結。  
   
-## <a name="see-also"></a>請參閱  
+## <a name="see-also"></a>另請參閱  
  [ADO.NET Entity Framework](../../../../../docs/framework/data/adonet/ef/index.md)

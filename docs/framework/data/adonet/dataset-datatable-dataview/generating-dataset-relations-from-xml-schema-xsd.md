@@ -1,24 +1,12 @@
 ---
-title: "從 XML 結構描述 (XSD) 產生資料集關聯"
-ms.custom: 
+title: 從 XML 結構描述 (XSD) 產生資料集關聯
 ms.date: 03/30/2017
-ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.technology: dotnet-ado
-ms.tgt_pltfrm: 
-ms.topic: article
 ms.assetid: 1c9a1413-c0d2-4447-88ba-9a2b0cbc0aa8
-caps.latest.revision: "4"
-author: douglaslMS
-ms.author: douglasl
-manager: craigg
-ms.workload: dotnet
-ms.openlocfilehash: 4634e54c620fdd206582af94b825210331d11c14
-ms.sourcegitcommit: ed26cfef4e18f6d93ab822d8c29f902cff3519d1
+ms.openlocfilehash: fdf22c311ef7b4267f4a4da8566e4ea59504b103
+ms.sourcegitcommit: 11f11ca6cefe555972b3a5c99729d1a7523d8f50
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 01/17/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="generating-dataset-relations-from-xml-schema-xsd"></a>從 XML 結構描述 (XSD) 產生資料集關聯
 您可以在 <xref:System.Data.DataSet> 內建立父子關係，以建立兩個或多個資料行之間的關聯。 有三種方式來代表**資料集**XML 結構描述定義語言 (XSD) 結構描述內的關聯性：  
@@ -44,7 +32,7 @@ ms.lasthandoff: 01/17/2018
 </xs:element>  
 ```  
   
- XML 結構描述對應處理序會建立資料表中的**資料集**，對應至結構描述中的巢狀複雜類型。 它也會建立額外的資料行做為父**-**所產生之資料表的子資料行。 請注意，這些父子**-**子資料行指定關聯性，這不是指定主索引鍵/外部索引鍵條件約束相同。  
+ XML 結構描述對應處理序會建立資料表中的**資料集**，對應至結構描述中的巢狀複雜類型。 它也會建立額外的資料行做為父**-** 所產生之資料表的子資料行。 請注意，這些父子**-** 子資料行指定關聯性，這不是指定主索引鍵/外部索引鍵條件約束相同。  
   
 ## <a name="msdatarelationship-annotation"></a>msdata:Relationship 註釋  
  **Msdata: relationship**註釋可讓您明確指定結構描述中無巢狀的項目之間的父子式關聯性。 下列範例顯示的結構**關聯性**項目。  
@@ -108,5 +96,5 @@ msdata:childkey="" />
  [將 XML 結構描述 (XSD) 條件約束對應至資料集條件約束](../../../../../docs/framework/data/adonet/dataset-datatable-dataview/mapping-xml-schema-xsd-constraints-to-dataset-constraints.md)  
  說明用來建立唯一外部索引鍵條件約束中的 XML 結構描述項目**資料集**。  
   
-## <a name="see-also"></a>請參閱  
+## <a name="see-also"></a>另請參閱  
  [ADO.NET Managed 提供者和 DataSet 開發人員中心](http://go.microsoft.com/fwlink/?LinkId=217917)

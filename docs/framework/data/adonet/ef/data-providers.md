@@ -1,26 +1,12 @@
 ---
 title: Entity Framework 資料提供者
-ms.custom: ''
 ms.date: 03/30/2017
-ms.prod: .net-framework
-ms.reviewer: ''
-ms.suite: ''
-ms.technology:
-- dotnet-ado
-ms.tgt_pltfrm: ''
-ms.topic: article
 ms.assetid: 5252e639-ff11-4818-82e7-07221ed6ae23
-caps.latest.revision: 2
-author: douglaslMS
-ms.author: douglasl
-manager: craigg
-ms.workload:
-- dotnet
-ms.openlocfilehash: 2169ae35ac418b5dfe8c1a6276b36f7701460e13
-ms.sourcegitcommit: 86adcc06e35390f13c1e372c36d2e044f1fc31ef
+ms.openlocfilehash: bfb4711a7660366838cf1cd6e76fe40bc5cb4bcb
+ms.sourcegitcommit: 11f11ca6cefe555972b3a5c99729d1a7523d8f50
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/26/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="entity-framework-data-providers"></a>Entity Framework 資料提供者
 本節提供支援 [!INCLUDE[adonet_ef](../../../../../includes/adonet-ef-md.md)] 之資料提供者的資訊。  

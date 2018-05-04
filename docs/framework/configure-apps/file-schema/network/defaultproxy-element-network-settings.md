@@ -1,13 +1,6 @@
 ---
-title: "&lt;defaultProxy&gt;項目 （網路設定）"
-ms.custom: 
+title: '&lt;defaultProxy&gt;項目 （網路設定）'
 ms.date: 03/30/2017
-ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.technology: dotnet-clr
-ms.tgt_pltfrm: 
-ms.topic: article
 f1_keywords:
 - http://schemas.microsoft.com/.NetConfiguration/v2.0#defaultProxy
 - http://schemas.microsoft.com/.NetConfiguration/v2.0#configuration/system.net/defaultProxy
@@ -15,22 +8,20 @@ helpviewer_keywords:
 - defaultProxy element
 - <defaultProxy> element
 ms.assetid: 9d663c4b-07b4-4f6f-9b12-efbd3630354f
-caps.latest.revision: "21"
 author: mcleblanc
 ms.author: markl
 manager: markl
-ms.workload: dotnet
-ms.openlocfilehash: d0b09f5c845fc9a18c2a1dd919272c2924478eaf
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.openlocfilehash: a91775ff9f46eba772a959cfac3115c9720ac5ab
+ms.sourcegitcommit: 11f11ca6cefe555972b3a5c99729d1a7523d8f50
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="ltdefaultproxygt-element-network-settings"></a>&lt;defaultProxy&gt;項目 （網路設定）
 設定超文字傳輸協定 (HTTP) 的 Proxy 伺服器。  
   
  \<configuration>  
-\<system.net >  
+\<system.net>  
 \<defaultProxy >  
   
 ## <a name="syntax"></a>語法  
@@ -46,7 +37,7 @@ ms.lasthandoff: 12/22/2017
 ```  
   
 ## <a name="attributes-and-elements"></a>屬性和項目  
- 下列章節說明屬性、子項目和父項目。  
+ 下列各節描述屬性、子項目和父項目。  
   
 ### <a name="attributes"></a>屬性  
   
@@ -55,13 +46,13 @@ ms.lasthandoff: 12/22/2017
 |`enabled`|指定是否使用 Web Proxy。 預設值是 `true`。|  
 |`useDefaultCredentials`|指定此主機的預設認證是否用來存取 Web Proxy。 預設值是 `false`。|  
   
-### <a name="child-elements"></a>子元素  
+### <a name="child-elements"></a>子項目  
   
 |**目**|**描述**|  
 |-----------------|---------------------|  
 |[bypasslist](../../../../../docs/framework/configure-apps/file-schema/network/bypasslist-element-network-settings.md)|提供一組位址的規則運算式，說明不使用 Proxy。|  
 |[模組](../../../../../docs/framework/configure-apps/file-schema/network/module-element-network-settings.md)|將新的 Proxy 模組加入至應用程式。|  
-|[proxy](../../../../../docs/framework/configure-apps/file-schema/network/proxy-element-network-settings.md)|定義 Proxy 伺服器。|  
+|[Proxy](../../../../../docs/framework/configure-apps/file-schema/network/proxy-element-network-settings.md)|定義 Proxy 伺服器。|  
   
 ### <a name="parent-elements"></a>父項目  
   
@@ -97,6 +88,6 @@ ms.lasthandoff: 12/22/2017
 </configuration>  
 ```  
   
-## <a name="see-also"></a>請參閱  
+## <a name="see-also"></a>另請參閱  
  <xref:System.Net.WebProxy?displayProperty=nameWithType>  
  [網路設定結構描述](../../../../../docs/framework/configure-apps/file-schema/network/index.md)

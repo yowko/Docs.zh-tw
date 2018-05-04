@@ -1,31 +1,19 @@
 ---
-title: "&lt;serviceAuthorization&gt; 項目"
-ms.custom: 
+title: '&lt;serviceAuthorization&gt; 項目'
 ms.date: 03/30/2017
-ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.technology: dotnet-clr
-ms.tgt_pltfrm: 
-ms.topic: article
 ms.assetid: 18cddad5-ddcb-4839-a0ac-1d6f6ab783ca
-caps.latest.revision: "26"
-author: dotnet-bot
-ms.author: dotnetcontent
-manager: wpickett
-ms.workload: dotnet
-ms.openlocfilehash: 9572cea14b7c15893459133aa75e9fa62b10d4f8
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.openlocfilehash: cd5cb072f424927615b6e87d9193a9c200a8c48b
+ms.sourcegitcommit: 11f11ca6cefe555972b3a5c99729d1a7523d8f50
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="ltserviceauthorizationgt-element"></a>&lt;serviceAuthorization&gt; 項目
 指定設定，這些設定會將存取權授權給服務作業。  
   
- \<系統。ServiceModel >  
+ \<system.ServiceModel>  
 \<行為 >  
-\<serviceBehaviors >  
+\<serviceBehaviors>  
 \<行為 >  
 \<serviceAuthorization >  
   
@@ -44,7 +32,7 @@ ms.lasthandoff: 12/22/2017
 ```  
   
 ## <a name="attributes-and-elements"></a>屬性和項目  
- 下列章節說明屬性、子項目和父項目。  
+ 下列各節描述屬性、子項目和父項目。  
   
 ### <a name="attributes"></a>屬性  
   
@@ -55,7 +43,7 @@ ms.lasthandoff: 12/22/2017
 |roleProviderName|字串，指定角色提供者的名稱，它會提供 Windows Communication Foundation (WCF) 應用程式的角色資訊。 預設為空字串。|  
 |ServiceAuthorizationManagerType|字串，其中包含服務授權管理員的型別。 如需詳細資訊，請參閱<xref:System.ServiceModel.ServiceAuthorizationManager>。|  
   
-### <a name="child-elements"></a>子元素  
+### <a name="child-elements"></a>子項目  
   
 |項目|描述|  
 |-------------|-----------------|  
@@ -108,7 +96,7 @@ ms.lasthandoff: 12/22/2017
   
  使用這個組態項目詳細範例，請參閱[授權存取服務作業](../../../../../docs/framework/wcf/samples/authorizing-access-to-service-operations.md)和[授權原則](../../../../../docs/framework/wcf/samples/authorization-policy.md)。  
   
-## <a name="see-also"></a>請參閱  
+## <a name="see-also"></a>另請參閱  
  <xref:System.ServiceModel.Configuration.ServiceAuthorizationElement>  
  <xref:System.ServiceModel.Description.ServiceAuthorizationBehavior>  
  [安全性行為](../../../../../docs/framework/wcf/feature-details/security-behaviors-in-wcf.md)  

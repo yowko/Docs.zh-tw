@@ -1,13 +1,6 @@
 ---
-title: "管線開發"
-ms.custom: 
+title: 管線開發
 ms.date: 03/30/2017
-ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.technology: dotnet-clr
-ms.tgt_pltfrm: 
-ms.topic: article
 helpviewer_keywords:
 - add-in pipeline [.NET Framework], segments
 - activation path for add-ins [.NET Framework]
@@ -16,23 +9,20 @@ helpviewer_keywords:
 - add-in pipeline [.NET Framework], about
 - add-ins [.NET Framework], pipeline development
 ms.assetid: 932788f2-b87d-44cf-82f9-04492a8b2722
-caps.latest.revision: "31"
 author: rpetrusha
 ms.author: ronpet
-manager: wpickett
-ms.workload: dotnet
-ms.openlocfilehash: 33646bbd7b0043cb5fc036b9b11aa4cf37cd537f
-ms.sourcegitcommit: c0dd436f6f8f44dc80dc43b07f6841a00b74b23f
+ms.openlocfilehash: 2d889b7de4bc766deda9b91877ceefb4aebfc551
+ms.sourcegitcommit: 11f11ca6cefe555972b3a5c99729d1a7523d8f50
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 01/19/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="pipeline-development"></a>管線開發
 增益集管線是主應用程式和增益集必須用來與對方進行通訊管線區段的路徑。  
   
  下圖顯示的通訊管線及其區段。  
   
- ![新增 &#45; 管線模型中。] (../../../docs/framework/add-ins/media/addin1.png "AddIn1")  
+ ![新增&#45;管線模型中。] (../../../docs/framework/add-ins/media/addin1.png "AddIn1")  
 增益集管線  
   
  主機應用程式管線的一端與增益集的另一端。 從每一個結尾開始，而且移動中間，主應用程式和增益集已定義檢視的物件模型，它們都共用的抽象基底類別。 這些型別 （類別） 會構成檢視增益集管線區段和增益集管線區段的 [主機] 檢視。 檢視增益集管線區段通常會包含一個以上的抽象類別，但是加入在繼承自的類別就所謂的增益集基底。  
@@ -45,7 +35,7 @@ ms.lasthandoff: 01/19/2018
   
  下圖顯示管線區段所組成的類型。 在圖例中顯示的型別名稱是任意的但主機和主機以外的所有類型都檢視的增益集需要屬性，所以建構資訊存放區的方法可以找到它們。  
   
- ![新增 &#45; 所需屬性的型別與模型中。] (../../../docs/framework/add-ins/media/addin-model.png "AddIn_Model")  
+ ![新增&#45;模型所需屬性的型別中。] (../../../docs/framework/add-ins/media/addin-model.png "AddIn_Model")  
 具有類型的增益集管線  
   
  下表描述用於啟用增益集管線區段。 如需有關這些區段的詳細資訊，請參閱[合約、 檢視和配接器](http://msdn.microsoft.com/library/a6460173-9507-4b87-8c07-d4ee245d715c)。  
@@ -63,7 +53,7 @@ ms.lasthandoff: 01/19/2018
 ## <a name="pipeline-activation-path"></a>管線啟動路徑  
  下圖顯示類型的啟動時啟動增益集。 它也會顯示物件的傳遞至主機，例如計算或物件的集合的結果。 這是最常見的案例。  
   
- ![新增 &#45; 具有啟動路徑的模型中。] (../../../docs/framework/add-ins/media/addin6.png "AddIn6")  
+ ![新增&#45;具有啟動路徑的模型中。] (../../../docs/framework/add-ins/media/addin6.png "AddIn6")  
 從增益集的啟動路徑至主機  
   
  管線的啟動路徑，就會發生，如下所示：  
@@ -97,6 +87,6 @@ ms.lasthandoff: 01/19/2018
   
      描述如何通過管線使用案例的資料集合。  
   
-## <a name="see-also"></a>請參閱  
+## <a name="see-also"></a>另請參閱  
  [增益集管線案例](http://msdn.microsoft.com/library/feb70e0b-8734-494c-aeaf-b567f014043e)  
  [增益集和擴充性](../../../docs/framework/add-ins/index.md)

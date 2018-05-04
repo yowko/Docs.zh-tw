@@ -1,29 +1,17 @@
 ---
-title: "啟用的 &lt;diagnostics&gt;"
-ms.custom: 
+title: 啟用的 &lt;diagnostics&gt;
 ms.date: 03/30/2017
-ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.technology: dotnet-clr
-ms.tgt_pltfrm: 
-ms.topic: article
 ms.assetid: 1486e0eb-fe2a-46c3-b584-c924889477dd
-caps.latest.revision: "7"
-author: dotnet-bot
-ms.author: dotnetcontent
-manager: wpickett
-ms.workload: dotnet
-ms.openlocfilehash: 20b956bb58142f26fa1402f1f974b3984ed759f1
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.openlocfilehash: 4e5332eed87ded51cebcd614f45cbc8e80e570fb
+ms.sourcegitcommit: 11f11ca6cefe555972b3a5c99729d1a7523d8f50
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="ltdiagnosticsgt-for-activation"></a>啟用的 &lt;diagnostics&gt;
-設定 [!INCLUDE[indigo1](../../../../../includes/indigo1-md.md)] 接聽程式的診斷功能。  
+設定 Windows Communication Foundation (WCF) 接聽程式的診斷功能。  
   
- \<system.serviceModel.activation >  
+ \<system.serviceModel.activation>  
 \<診斷 >  
   
 ## <a name="syntax"></a>語法  
@@ -40,7 +28,7 @@ ms.lasthandoff: 12/22/2017
  `Type`  
   
 ## <a name="attributes-and-elements"></a>屬性和項目  
- 下列章節說明屬性、子項目和父項目。  
+ 下列各節描述屬性、子項目和父項目。  
   
 ### <a name="attributes"></a>屬性  
   
@@ -48,7 +36,7 @@ ms.lasthandoff: 12/22/2017
 |---------------|-----------------|  
 |`performanceCountersEnabled`|布林值，指出是否啟用效能計數器以供診斷用途。|  
   
-### <a name="child-elements"></a>子元素  
+### <a name="child-elements"></a>子項目  
  無。  
   
 ### <a name="parent-elements"></a>父項目  
@@ -57,5 +45,5 @@ ms.lasthandoff: 12/22/2017
 |-------------|-----------------|  
 |[\<system.serviceModel.activation>](../../../../../docs/framework/configure-apps/file-schema/wcf/system-servicemodel-activation.md)|包含 SMSvcHost.exe 接聽程式處理序的組態設定。|  
   
-## <a name="see-also"></a>請參閱  
+## <a name="see-also"></a>另請參閱  
  <xref:System.ServiceModel.Activation.Configuration.DiagnosticSection>

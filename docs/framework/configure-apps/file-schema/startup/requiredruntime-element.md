@@ -1,13 +1,6 @@
 ---
-title: "&lt;requiredRuntime&gt;項目"
-ms.custom: 
+title: '&lt;requiredRuntime&gt;項目'
 ms.date: 03/30/2017
-ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.technology: dotnet-clr
-ms.tgt_pltfrm: 
-ms.topic: article
 f1_keywords:
 - http://schemas.microsoft.com/.NetConfiguration/v2.0#requiredRuntime
 - http://schemas.microsoft.com/.NetConfiguration/v2.0#configuration/startup/requiredRuntime
@@ -16,22 +9,20 @@ helpviewer_keywords:
 - <requiredRuntime> element
 - container tags, <requiredRuntime> element
 ms.assetid: 9fa1639e-beb8-43be-b7a4-12f7b229c34b
-caps.latest.revision: "11"
 author: mcleblanc
 ms.author: markl
 manager: markl
-ms.workload: dotnet
-ms.openlocfilehash: 2e864eec2ddf51d5cc88110654f6c23f146938d5
-ms.sourcegitcommit: c0dd436f6f8f44dc80dc43b07f6841a00b74b23f
+ms.openlocfilehash: 184547dd47e728f17f28105e74b2ca67c1436efc
+ms.sourcegitcommit: 11f11ca6cefe555972b3a5c99729d1a7523d8f50
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 01/19/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="ltrequiredruntimegt-element"></a>&lt;requiredRuntime&gt;項目
 指定應用程式只支援 Common Language Runtime 1.0 版。 這個項目已被取代，無法再使用。 [ `supportedRuntime` ](supportedruntime-element.md)應該改為使用項目。
   
  \<configuration>  
-\<startup>  
+\<啟動 >  
 \<requiredRuntime>  
   
 ## <a name="syntax"></a>語法  
@@ -59,7 +50,7 @@ safemode="true|false"/>
 |`false`|執行階段啟始程式碼會在登錄中尋找。 這是預設值。|  
 |`true`|執行階段啟始程式碼不會看起來不在登錄中。|  
   
-### <a name="child-elements"></a>子元素  
+### <a name="child-elements"></a>子項目  
  無。  
   
 ### <a name="parent-elements"></a>父項目  
@@ -91,7 +82,7 @@ safemode="true|false"/>
 </configuration>  
 ```  
   
-## <a name="see-also"></a>請參閱  
+## <a name="see-also"></a>另請參閱  
  [啟動設定結構描述](../../../../../docs/framework/configure-apps/file-schema/startup/index.md)  
  [組態檔結構描述](../../../../../docs/framework/configure-apps/file-schema/index.md)  
  [\<PaveOver> 指定要使用哪一個執行階段版本](http://msdn.microsoft.com/library/c376208d-980d-42b4-865b-fbe0d9cc97c2)

@@ -1,33 +1,21 @@
 ---
-title: "&lt;wsDualHttpBinding&gt; 的 &lt;message&gt;"
-ms.custom: 
+title: '&lt;wsDualHttpBinding&gt; 的 &lt;message&gt;'
 ms.date: 03/30/2017
-ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.technology: dotnet-clr
-ms.tgt_pltfrm: 
-ms.topic: article
 ms.assetid: 75101744-eed8-4d61-91f4-5fc4473a21f2
-caps.latest.revision: "12"
-author: dotnet-bot
-ms.author: dotnetcontent
-manager: wpickett
-ms.workload: dotnet
-ms.openlocfilehash: 60f0b1d767cba44d1eedc4fdd37ee6b038952ef8
-ms.sourcegitcommit: c0dd436f6f8f44dc80dc43b07f6841a00b74b23f
-ms.translationtype: MT
+ms.openlocfilehash: 6881937f1bffe8fdc42c71fff8c36fccaacf0f7c
+ms.sourcegitcommit: 11f11ca6cefe555972b3a5c99729d1a7523d8f50
+ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 01/19/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="ltmessagegt-of-ltwsdualhttpbindinggt"></a>&lt;wsDualHttpBinding&gt; 的 &lt;message&gt;
 定義訊息層級安全性[ \<wsDualHttpBinding >](../../../../../docs/framework/configure-apps/file-schema/wcf/wsdualhttpbinding.md)。  
   
  \<system.ServiceModel>  
-\<bindings>  
+\<繫結 >  
 \<wsDualHttpBinding>  
-\<binding>  
-\<security>  
+\<繫結 >  
+\<安全性 >  
 \<message>  
   
 ## <a name="syntax"></a>語法  
@@ -85,7 +73,7 @@ ms.lasthandoff: 01/19/2018
 |憑證|允許服務要求用戶端使用憑證進行驗證。 如果使用訊息安全性模式且 `negotiateServiceCredential` 屬性設定為 `false`，則必須為用戶端提供服務憑證。|  
 |IssuedToken|指定通常由安全性權杖服務所發出的自訂權杖。|  
   
-### <a name="child-elements"></a>子元素  
+### <a name="child-elements"></a>子項目  
  無。  
   
 ### <a name="parent-elements"></a>父項目  
@@ -94,7 +82,7 @@ ms.lasthandoff: 01/19/2018
 |-------------|-----------------|  
 |[\<security>](../../../../../docs/framework/configure-apps/file-schema/wcf/security-of-wsdualhttpbinding.md)|定義的安全性功能[ \<wsDualHttpBinding >](../../../../../docs/framework/configure-apps/file-schema/wcf/wsdualhttpbinding.md)。|  
   
-## <a name="see-also"></a>請參閱  
+## <a name="see-also"></a>另請參閱  
  <xref:System.ServiceModel.Configuration.WSDualHttpSecurityElement.Message%2A>  
  <xref:System.ServiceModel.WSDualHttpSecurity.Message%2A>  
  <xref:System.ServiceModel.Configuration.MessageSecurityOverTcpElement>  
@@ -103,4 +91,4 @@ ms.lasthandoff: 01/19/2018
  [繫結](../../../../../docs/framework/wcf/bindings.md)  
  [設定系統提供的繫結](../../../../../docs/framework/wcf/feature-details/configuring-system-provided-bindings.md)  
  [使用繫結來設定 Windows Communication Foundation 服務和用戶端](http://msdn.microsoft.com/library/bd8b277b-932f-472f-a42a-b02bb5257dfb)  
- [\<binding>](../../../../../docs/framework/misc/binding.md)
+ [\<繫結 >](../../../../../docs/framework/misc/binding.md)

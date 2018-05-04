@@ -1,29 +1,17 @@
 ---
-title: "從 XML 結構描述 (XSD) 衍生資料集關聯式結構"
-ms.custom: 
+title: 從 XML 結構描述 (XSD) 衍生資料集關聯式結構
 ms.date: 03/30/2017
-ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.technology: dotnet-ado
-ms.tgt_pltfrm: 
-ms.topic: article
 ms.assetid: 8f6cd04d-6197-4bc4-9096-8c51c7e4acae
-caps.latest.revision: "5"
-author: douglaslMS
-ms.author: douglasl
-manager: craigg
-ms.workload: dotnet
-ms.openlocfilehash: eb4f6e3a63c901ec69ca5572a6f79d2f0ac4adfc
-ms.sourcegitcommit: ed26cfef4e18f6d93ab822d8c29f902cff3519d1
+ms.openlocfilehash: 7599577c4e0f485e336e7f79a6c3bd17f0f0c316
+ms.sourcegitcommit: 11f11ca6cefe555972b3a5c99729d1a7523d8f50
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 01/17/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="deriving-dataset-relational-structure-from-xml-schema-xsd"></a>從 XML 結構描述 (XSD) 衍生資料集關聯式結構
 這個章節提供如何從 XML 結構描述定義語言 (XSD) 結構描述文件來建置 `DataSet` 關聯式結構描述的概觀。 一般情況下，每個`complexType`結構描述元素的子元素，在中，所產生的資料表`DataSet`。 資料表結構由複雜型別的定義來決定。 資料表會建立在`DataSet`結構描述中的最上層項目。 不過，會僅針對建立資料表的最上層`complexType`項目時`complexType`內的另一個巢狀項目`complexType`中的項目大小寫的巢狀`complexType`元素會對應至`DataTable`內`DataSet`。  
   
- 如需 XSD 的詳細資訊，請參閱全球資訊網協會 (W3C) XML 結構描述第 0： 入門建議事項，XML 結構描述第 1 部分： 結構建議和 XML 結構描述第 2 部分： datatypes > 建議，位於[http://www.w3.org/](http://www.w3.org/TR/)。  
+ 如需 XSD 的詳細資訊，請參閱全球資訊網協會 (W3C) XML 結構描述第 0： 入門建議事項，XML 結構描述第 1 部分： 結構建議和 XML 結構描述第 2 部分： datatypes > 建議，位於[ http://www.w3.org/](http://www.w3.org/TR/).  
   
  下列範例會示範 XML 結構描述位置`customers`是元素的子元素`MyDataSet`項目，這是**資料集**項目。  
   
@@ -107,5 +95,5 @@ OutOfStateCustomers (CustomerID , CompanyName, Phone)
  [在 DataSet 中使用 XML](../../../../../docs/framework/data/adonet/dataset-datatable-dataview/using-xml-in-a-dataset.md)  
  描述如何載入及保存資料與關聯式結構`DataSet`為 XML 資料。  
   
-## <a name="see-also"></a>請參閱  
+## <a name="see-also"></a>另請參閱  
  [ADO.NET Managed 提供者和 DataSet 開發人員中心](http://go.microsoft.com/fwlink/?LinkId=217917)

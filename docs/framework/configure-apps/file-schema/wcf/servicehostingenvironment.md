@@ -1,29 +1,17 @@
 ---
 title: '&lt;serviceHostingEnvironment&gt;'
-ms.custom: 
 ms.date: 03/30/2017
-ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.technology: dotnet-clr
-ms.tgt_pltfrm: 
-ms.topic: article
 ms.assetid: 4f8a7c4f-e735-4987-979a-b74fcdae2652
-caps.latest.revision: "24"
-author: dotnet-bot
-ms.author: dotnetcontent
-manager: wpickett
-ms.workload: dotnet
-ms.openlocfilehash: a08df7c620065bb483d276e3ead2c179040f1c9a
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
-ms.translationtype: MT
+ms.openlocfilehash: e6c69e06b691e40b6b2c39a54be83d7bdbe3a650
+ms.sourcegitcommit: 11f11ca6cefe555972b3a5c99729d1a7523d8f50
+ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="ltservicehostingenvironmentgt"></a>&lt;serviceHostingEnvironment&gt;
 此項目定義服務裝載環境為特定傳輸產生的類型。 如果這個項目是空白的，便會使用預設的類型。 這個項目只能用於應用程式或電腦層級的組態檔。  
   
- \<系統。ServiceModel >  
+ \<system.ServiceModel>  
 \<ServiceHostingEnvironment >  
   
 ## <a name="syntax"></a>語法  
@@ -45,17 +33,17 @@ ms.lasthandoff: 12/22/2017
 ```  
   
 ## <a name="attributes-and-elements"></a>屬性和項目  
- 下列章節說明屬性、子項目和父項目。  
+ 下列各節描述屬性、子項目和父項目。  
   
 ### <a name="attributes"></a>屬性  
   
 |屬性|描述|  
 |---------------|-----------------|  
-|aspNetCompatibilityEnabled|布林值，指出是否已為目前的應用程式開啟 ASP.NET 相容性模式。 預設為 `false`。<br /><br /> 當這個屬性設定為 `true` 時，對 [!INCLUDE[indigo1](../../../../../includes/indigo1-md.md)] 服務的要求會透過 ASP.NET HTTP 管線流動，同時也不可以透過非 HTTP 通訊協定進行通訊。 如需詳細資訊，請參閱[WCF 服務與 ASP.NET](../../../../../docs/framework/wcf/feature-details/wcf-services-and-aspnet.md)。|  
+|aspNetCompatibilityEnabled|布林值，指出是否已為目前的應用程式開啟 ASP.NET 相容性模式。 預設值為 `false`。<br /><br /> 當這個屬性設定為`true`、 透過 ASP.NET HTTP 管線流動 Windows Communication Foundation (WCF) 服務的要求和禁止使用非 HTTP 通訊協定上的進行通訊。 如需詳細資訊，請參閱[WCF 服務與 ASP.NET](../../../../../docs/framework/wcf/feature-details/wcf-services-and-aspnet.md)。|  
 |minFreeMemoryPercentageToActivateService|整數，指定系統必須先取得使用才能啟動 [!INCLUDE[indigo2](../../../../../includes/indigo2-md.md)] 服務的最小可用記憶體量。 **注意：**指定這個屬性與 web 的 web.config 檔中的部分信任[!INCLUDE[indigo2](../../../../../includes/indigo2-md.md)]服務將會導致<xref:System.Security.SecurityException>服務執行時。|  
-|multipleSiteBindingsEnabled|布林值，這個值會指定是否啟用每個網站的多個 IIS 繫結。<br /><br /> IIS 包含網站，是包含虛擬目錄之虛擬應用程式的容器。 網站中的應用程式則可以透過一個或多個 IIS 繫結來存取。 IIS 繫結提供兩項資訊：繫結通訊協定和繫結資訊。 繫結通訊協定會定義產生通訊的配置，而繫結資訊則是用來存取網站的資訊。 繫結通訊協定的範例如 HTTP，其中繫結資訊可能會包含 IP 位址、連接埠、主機標題等。<br /><br /> IIS 支援為每個網站指定多個 IIS 繫結，讓每個配置能夠有多個基底位址。 但是網站所代管的 [!INCLUDE[indigo1](../../../../../includes/indigo1-md.md)] 服務僅允許每項配置繫結至一個 baseAddress。<br /><br /> 若要讓 [!INCLUDE[indigo1](../../../../../includes/indigo1-md.md)] 服務的每個網站使用多個 IIS 繫結，請將這個屬性設為 `true`。 請注意，僅有 HTTP 通訊協定支援多個網站繫結。 組態檔中的端點位址必須是完整的 URI。|  
+|multipleSiteBindingsEnabled|布林值，這個值會指定是否啟用每個網站的多個 IIS 繫結。<br /><br /> IIS 包含網站，是包含虛擬目錄之虛擬應用程式的容器。 網站中的應用程式則可以透過一個或多個 IIS 繫結來存取。 IIS 繫結提供兩項資訊：繫結通訊協定和繫結資訊。 繫結通訊協定會定義產生通訊的配置，而繫結資訊則是用來存取網站的資訊。 繫結通訊協定的範例如 HTTP，其中繫結資訊可能會包含 IP 位址、連接埠、主機標題等。<br /><br /> IIS 支援為每個網站指定多個 IIS 繫結，讓每個配置能夠有多個基底位址。 不過，在網站下裝載的 Windows Communication Foundation (WCF) 服務可讓繫結至一個 baseAddress 每個配置。<br /><br /> 若要啟用多個 IIS 繫結每個站台的 Windows Communication Foundation (WCF) 服務，請將此屬性設定為`true`。 請注意，僅有 HTTP 通訊協定支援多個網站繫結。 組態檔中的端點位址必須是完整的 URI。|  
   
-### <a name="child-elements"></a>子元素  
+### <a name="child-elements"></a>子項目  
   
 |項目|描述|  
 |-------------|-----------------|  
@@ -101,7 +89,7 @@ ms.lasthandoff: 12/22/2017
 <serviceHostingEnvironment aspNetCompatibilityEnabled="true"/>  
 ```  
   
-## <a name="see-also"></a>請參閱  
+## <a name="see-also"></a>另請參閱  
  <xref:System.ServiceModel.Configuration.ServiceHostingEnvironmentSection>  
  <xref:System.ServiceModel.ServiceHostingEnvironment>  
  [裝載](../../../../../docs/framework/wcf/feature-details/hosting.md)  

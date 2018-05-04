@@ -1,24 +1,26 @@
 ---
-title: "執行個體初始化"
-ms.custom: 
+title: 執行個體初始化
+ms.custom: ''
 ms.date: 03/30/2017
 ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.technology: dotnet-clr
-ms.tgt_pltfrm: 
+ms.reviewer: ''
+ms.suite: ''
+ms.technology:
+- dotnet-clr
+ms.tgt_pltfrm: ''
 ms.topic: article
 ms.assetid: 154d049f-2140-4696-b494-c7e53f6775ef
-caps.latest.revision: "31"
+caps.latest.revision: 31
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.workload: dotnet
-ms.openlocfilehash: 0bc034028f8dacbac638c27e6fb8f48603cdcf2c
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
-ms.translationtype: MT
+ms.workload:
+- dotnet
+ms.openlocfilehash: f32b1c7159185bb9d4ccd99c916f00c552502748
+ms.sourcegitcommit: 11f11ca6cefe555972b3a5c99729d1a7523d8f50
+ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="instancing-initialization"></a>執行個體初始化
 這個範例會延續[共用](../../../../docs/framework/wcf/samples/pooling.md)範例藉由定義介面， `IObjectControl`，其啟用及停用它的自訂初始化物件。 用戶端會叫用將物件傳回集區的方法，以及不將物件傳回集區的方法。  
@@ -27,7 +29,7 @@ ms.lasthandoff: 12/22/2017
 >  此範例的安裝程序與建置指示位於本主題的結尾。  
   
 ## <a name="extensibility-points"></a>擴充點  
- 建立 [!INCLUDE[indigo1](../../../../includes/indigo1-md.md)] 延伸項目的第一個步驟是決定要使用的擴充點。 在[!INCLUDE[indigo2](../../../../includes/indigo2-md.md)]，詞彙*EndpointDispatcher*指負責將傳入訊息轉換為使用者服務上的方法引動過程，並且將來自該方法傳回的值轉換執行階段元件外寄訊息。 [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] 服務會為每個端點建立 EndpointDispatcher。  
+ 建立 Windows Communication Foundation (WCF) 擴充功能的第一個步驟是決定要使用的擴充點。 在[!INCLUDE[indigo2](../../../../includes/indigo2-md.md)]，詞彙*EndpointDispatcher*指負責將傳入訊息轉換為使用者服務上的方法引動過程，並且將來自該方法傳回的值轉換執行階段元件外寄訊息。 [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] 服務會為每個端點建立 EndpointDispatcher。  
   
  EndpointDispatcher 會使用 <xref:System.ServiceModel.Dispatcher.EndpointDispatcher> 類別，為端點範圍 (針對服務已接收或傳送的所有訊息) 提供擴充性。 這個類別可讓您自訂各種屬性，以控制 EndpointDispatcher 的行為。 此範例著重於 <xref:System.ServiceModel.Dispatcher.DispatchRuntime.InstanceProvider%2A> 屬性，這個屬性會指向提供服務類別之執行個體的物件。  
   
@@ -272,8 +274,8 @@ else if (pool.Count < minPoolSize)
 >   
 >  `<InstallDrive>:\WF_WCF_Samples`  
 >   
->  如果此目錄不存在，請移至 [Windows Communication Foundation (WCF) and Windows Workflow Foundation (WF) Samples for .NET Framework 4  (適用於 .NET Framework 4 的 Windows Communication Foundation (WCF) 與 Windows Workflow Foundation (WF) 範例)](http://go.microsoft.com/fwlink/?LinkId=150780) ，以下載所有 [!INCLUDE[indigo1](../../../../includes/indigo1-md.md)] 和 [!INCLUDE[wf1](../../../../includes/wf1-md.md)] 範例。 此範例位於下列目錄。  
+>  如果此目錄不存在，請移至[Windows Communication Foundation (WCF) 和適用於.NET Framework 4 的 Windows Workflow Foundation (WF) 範例](http://go.microsoft.com/fwlink/?LinkId=150780)下載所有 Windows Communication Foundation (WCF) 和[!INCLUDE[wf1](../../../../includes/wf1-md.md)]範例。 此範例位於下列目錄。  
 >   
 >  `<InstallDrive>:\WF_WCF_Samples\WCF\Extensibility\Instancing\Initialization`  
   
-## <a name="see-also"></a>請參閱
+## <a name="see-also"></a>另請參閱

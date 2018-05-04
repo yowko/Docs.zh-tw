@@ -1,24 +1,12 @@
 ---
 title: LIKE (Entity SQL)
-ms.custom: 
 ms.date: 03/30/2017
-ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.technology: dotnet-ado
-ms.tgt_pltfrm: 
-ms.topic: article
 ms.assetid: 8300e6d2-875b-481e-9ef4-e1e7c12d46fa
-caps.latest.revision: "4"
-author: douglaslMS
-ms.author: douglasl
-manager: craigg
-ms.workload: dotnet
-ms.openlocfilehash: 021a999e79239e3da5c874cb459ac7f03fdb5661
-ms.sourcegitcommit: ed26cfef4e18f6d93ab822d8c29f902cff3519d1
+ms.openlocfilehash: f2d06b364c577b581bb64af0436c133ca830bb2b
+ms.sourcegitcommit: 11f11ca6cefe555972b3a5c99729d1a7523d8f50
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 01/17/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="like-entity-sql"></a>LIKE (Entity SQL)
 判斷特定字元 `String` 是否符合指定的模式。  
@@ -46,16 +34,16 @@ match [NOT] LIKE pattern [ESCAPE escape]
  如果 `true` 符合此模式則為 `string`；否則為 `false`。  
   
 ## <a name="remarks"></a>備註  
- [!INCLUDE[esql](../../../../../../includes/esql-md.md)]使用 LIKE 運算子的運算式會評估運算式做為篩選準則使用等式與相同的方式。 不過，[!INCLUDE[esql](../../../../../../includes/esql-md.md)]使用 LIKE 運算子的運算式可以包含常值和萬用字元所組成。  
+ [!INCLUDE[esql](../../../../../../includes/esql-md.md)] 使用 LIKE 運算子的運算式會評估運算式做為篩選準則使用等式與相同的方式。 不過，[!INCLUDE[esql](../../../../../../includes/esql-md.md)]使用 LIKE 運算子的運算式可以包含常值和萬用字元所組成。  
   
  下表所述為模式 `string` 的語法。  
   
 |萬用字元|描述|範例|  
 |------------------------|-----------------|-------------|  
-|%|任何包含零個或多個字元的 `string`。|`title like '%computer%'`會尋找以這個字的所有標題`"computer"`標題中任何位置。|  
-|_ (底線)|任何單一字元。|`firstname like '_ean'`尋找所有四個字母的名字結尾`"ean`，"例如 Dean 或 Sean。|  
-|[ ]|在指定範圍 ([a-f]) 或集合 ([abcdef]) 中的任何單一字元。|`lastname like '[C-P]arsen'`會尋找姓氏結尾為"arsen"且開頭為 C 和 P，例如 Carsen 或 Larsen 之間任何單一字元。|  
-|[^]|不在指定範圍 ([^a-f]) 或集合 ([^abcdef]) 中的任何單一字元。|`lastname like 'de[^l]%'`會尋找姓氏開頭為"de"且不包含"l"為下列的字母。|  
+|%|任何包含零個或多個字元的 `string`。|`title like '%computer%'` 會尋找以這個字的所有標題`"computer"`標題中任何位置。|  
+|_ (底線)|任何單一字元。|`firstname like '_ean'` 尋找所有四個字母的名字結尾`"ean`，"例如 Dean 或 Sean。|  
+|[ ]|在指定範圍 ([a-f]) 或集合 ([abcdef]) 中的任何單一字元。|`lastname like '[C-P]arsen'` 會尋找姓氏結尾為"arsen"且開頭為 C 和 P，例如 Carsen 或 Larsen 之間任何單一字元。|  
+|[^]|不在指定範圍 ([^a-f]) 或集合 ([^abcdef]) 中的任何單一字元。|`lastname like 'de[^l]%'` 會尋找姓氏開頭為"de"且不包含"l"為下列的字母。|  
   
 > [!NOTE]
 >  [!INCLUDE[esql](../../../../../../includes/esql-md.md)] LIKE 運算子和 ESCAPE 子句不可套用到 `System.DateTime` 或 `System.Guid` 值。  
@@ -85,5 +73,5 @@ match [NOT] LIKE pattern [ESCAPE escape]
   
  [!code-csharp[DP EntityServices Concepts 2#LIKE](../../../../../../samples/snippets/csharp/VS_Snippets_Data/dp entityservices concepts 2/cs/entitysql.cs#like)]  
   
-## <a name="see-also"></a>請參閱  
+## <a name="see-also"></a>另請參閱  
  [Entity SQL 參考](../../../../../../docs/framework/data/adonet/ef/language-reference/entity-sql-reference.md)

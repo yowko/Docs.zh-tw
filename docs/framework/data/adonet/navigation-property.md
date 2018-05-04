@@ -1,24 +1,12 @@
 ---
-title: "導覽屬性"
-ms.custom: 
+title: 導覽屬性
 ms.date: 03/30/2017
-ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.technology: dotnet-ado
-ms.tgt_pltfrm: 
-ms.topic: article
 ms.assetid: d0bf1a6a-1d84-484c-b7c3-b410fd8dc0b1
-caps.latest.revision: "3"
-author: douglaslMS
-ms.author: douglasl
-manager: craigg
-ms.workload: dotnet
-ms.openlocfilehash: f5af52532dc534d793e7e8ce72a08c2f7229569b
-ms.sourcegitcommit: ed26cfef4e18f6d93ab822d8c29f902cff3519d1
+ms.openlocfilehash: 149aefe84c9d04fab1786b99c2ac8c5060bccd87
+ms.sourcegitcommit: 11f11ca6cefe555972b3a5c99729d1a7523d8f50
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 01/17/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="navigation-property"></a>導覽屬性
 A*導覽屬性*上是選用屬性[實體類型](../../../../docs/framework/data/adonet/entity-type.md)，可允許從一個導覽[結束](../../../../docs/framework/data/adonet/association-end.md)的[關聯](../../../../docs/framework/data/adonet/association-type.md)至另一端。 不同於其他[屬性](../../../../docs/framework/data/adonet/property.md)，導覽屬性不會包含資料。  
@@ -46,6 +34,6 @@ A*導覽屬性*上是選用屬性[實體類型](../../../../docs/framework/data/
   
  請注意，XML 屬性用於傳達定義導覽屬性所需的資訊：`Name` 屬性 (attribute) 包含屬性 (property) 的名稱、`Relationship` 包含它所巡覽之關聯的名稱，而 `FromRole` 和 `ToRole` 則包含關聯 End。  
   
-## <a name="see-also"></a>請參閱  
+## <a name="see-also"></a>另請參閱  
  [實體資料模型索引鍵概念](../../../../docs/framework/data/adonet/entity-data-model-key-concepts.md)  
  [實體資料模型](../../../../docs/framework/data/adonet/entity-data-model.md)

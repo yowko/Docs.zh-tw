@@ -1,30 +1,18 @@
 ---
-title: "&lt;服務&gt;"
-ms.custom: 
+title: '&lt;服務&gt;'
 ms.date: 03/30/2017
-ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.technology: dotnet-clr
-ms.tgt_pltfrm: 
-ms.topic: article
 ms.assetid: 13123dd6-c4a9-4a04-a984-df184b851788
-caps.latest.revision: "27"
-author: dotnet-bot
-ms.author: dotnetcontent
-manager: wpickett
-ms.workload: dotnet
-ms.openlocfilehash: 689dfae90baffa3e9895258d1635c7840d8df6b2
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.openlocfilehash: a73e4699e0998338f09e1ed0504f5b1cfd73b225
+ms.sourcegitcommit: 11f11ca6cefe555972b3a5c99729d1a7523d8f50
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="ltservicegt"></a>&lt;服務&gt;
 `service` 項目包含 Windows Communication Foundation (WCF) 服務的設定。 它也包含公開服務的端點。  
   
- \<系統。ServiceModel >  
-\<服務 >  
+ \<system.ServiceModel>  
+\<services>  
 \<服務 >  
   
 ## <a name="syntax"></a>語法  
@@ -36,7 +24,7 @@ ms.lasthandoff: 12/22/2017
 ```  
   
 ## <a name="attributes-and-elements"></a>屬性和項目  
- 下列章節說明屬性、子項目和父項目。  
+ 下列各節描述屬性、子項目和父項目。  
   
 ### <a name="attributes"></a>屬性  
   
@@ -45,7 +33,7 @@ ms.lasthandoff: 12/22/2017
 |behaviorConfiguration|字串，其中包含要用於產生服務實體之行為的行為名稱。 行為名稱必須在定義服務之處的範圍內。 預設值為空字串。|  
 |name|必要的字串屬性，其中指定要具現化的服務型別。 這個設定必須等同於有效的型別。 格式應該為 `Namespace.Class.`。|  
   
-### <a name="child-elements"></a>子元素  
+### <a name="child-elements"></a>子項目  
   
 |項目|描述|  
 |-------------|-----------------|  
@@ -56,7 +44,7 @@ ms.lasthandoff: 12/22/2017
   
 |項目|描述|  
 |-------------|-----------------|  
-|[\<服務 >](../../../../../docs/framework/configure-apps/file-schema/wcf/services.md)|所有 WCF 組態項目的根項目。|  
+|[\<services>](../../../../../docs/framework/configure-apps/file-schema/wcf/services.md)|所有 WCF 組態項目的根項目。|  
   
 ## <a name="remarks"></a>備註  
  服務定義於組態檔的 `services` 區段中。 組件可包含任何數目的服務。 各服務都有自己的 `service` 組態區段。 這個區段及其內容會定義特定服務的服務合約、行為和端點。  
@@ -80,6 +68,6 @@ ms.lasthandoff: 12/22/2017
 </service>  
 ```  
   
-## <a name="see-also"></a>請參閱  
+## <a name="see-also"></a>另請參閱  
  <xref:System.ServiceModel.Configuration.ServiceElement>  
  [設定服務](../../../../../docs/framework/wcf/configuring-services.md)

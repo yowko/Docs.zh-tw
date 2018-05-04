@@ -1,13 +1,6 @@
 ---
-title: "&lt;defaultFtpCachePolicy&gt;項目 （網路設定）"
-ms.custom: 
+title: '&lt;defaultFtpCachePolicy&gt;項目 （網路設定）'
 ms.date: 03/30/2017
-ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.technology: dotnet-clr
-ms.tgt_pltfrm: 
-ms.topic: article
 f1_keywords:
 - http://schemas.microsoft.com/.NetConfiguration/v2.0#defaultFtpCachePolicy
 - http://schemas.microsoft.com/.NetConfiguration/v2.0#configuration/system.net/requestCaching/defaultFtpCachePolicy
@@ -15,22 +8,20 @@ helpviewer_keywords:
 - <defaultFtpCachePolicy> element
 - defaultFtpCachePolicy element
 ms.assetid: 0eb0c5cb-dd97-484d-8614-785e88877abb
-caps.latest.revision: "13"
 author: mcleblanc
 ms.author: markl
 manager: markl
-ms.workload: dotnet
-ms.openlocfilehash: 0c62be73db6d9d0b6ce67dd87021c589502d5fec
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.openlocfilehash: e4ea16c925114d4ad4054af5f340c764ed6fe4fd
+ms.sourcegitcommit: 11f11ca6cefe555972b3a5c99729d1a7523d8f50
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="ltdefaultftpcachepolicygt-element-network-settings"></a>&lt;defaultFtpCachePolicy&gt;項目 （網路設定）
 描述 FTP 快取是否作用中，並且描述預設的快取原則。  
   
  \<configuration>  
-\<system.net >  
+\<system.net>  
 \<requestCaching >  
 \<defaultFtpCachePolicy >  
   
@@ -43,7 +34,7 @@ ms.lasthandoff: 12/22/2017
 ```  
   
 ## <a name="attributes-and-elements"></a>屬性和項目  
- 下列章節說明屬性、子項目和父項目。  
+ 下列各節描述屬性、子項目和父項目。  
   
 ### <a name="attributes"></a>屬性  
   
@@ -64,7 +55,7 @@ ms.lasthandoff: 12/22/2017
 |`NoCacheNoStore`|如果快取的資源存在，會將其刪除。 資源從伺服器下載，並傳回給呼叫者。|  
 |`Revalidate`|如果時間戳記是相同的時間戳記伺服器; 上的資源使用資源的快取的副本滿足要求否則，資源會從伺服器下載，向呼叫者，並儲存在快取。|  
   
-### <a name="child-elements"></a>子元素  
+### <a name="child-elements"></a>子項目  
  無。  
   
 ### <a name="parent-elements"></a>父項目  
@@ -90,7 +81,7 @@ ms.lasthandoff: 12/22/2017
 </configuration>  
 ```  
   
-## <a name="see-also"></a>請參閱  
+## <a name="see-also"></a>另請參閱  
  <xref:System.Net.Cache>  
  <xref:System.Net.WebRequest>  
  <xref:System.Net.Cache.RequestCacheLevel>  

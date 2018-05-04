@@ -1,29 +1,17 @@
 ---
-title: "&lt;transportConfigurationType&gt; 的 &lt;add&gt;"
-ms.custom: 
+title: '&lt;transportConfigurationType&gt; 的 &lt;add&gt;'
 ms.date: 03/30/2017
-ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.technology: dotnet-clr
-ms.tgt_pltfrm: 
-ms.topic: article
 ms.assetid: 03d79db9-571d-4534-acef-d05e5467b257
-caps.latest.revision: "12"
-author: dotnet-bot
-ms.author: dotnetcontent
-manager: wpickett
-ms.workload: dotnet
-ms.openlocfilehash: 2b52345ae30ab56a6f34d2aa46f9836d67555b15
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.openlocfilehash: 5d13ef51444e1600b0cea5d55a1b5e332e440bc6
+ms.sourcegitcommit: 11f11ca6cefe555972b3a5c99729d1a7523d8f50
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="ltaddgt-of-lttransportconfigurationtypegt"></a>&lt;transportConfigurationType&gt; 的 &lt;add&gt;
 此項目是索引鍵/值組，可用來識別特定傳輸的型別。  
   
- \<系統。ServiceModel >  
+ \<system.ServiceModel>  
 \<ServiceHostingEnvironment >  
 \<transportConfigurationTypes >  
 \<add>  
@@ -40,7 +28,7 @@ ms.lasthandoff: 12/22/2017
 ```  
   
 ## <a name="attributes-and-elements"></a>屬性和項目  
- 下列章節說明屬性、子項目和父項目。  
+ 下列各節描述屬性、子項目和父項目。  
   
 ### <a name="attributes"></a>屬性  
   
@@ -49,7 +37,7 @@ ms.lasthandoff: 12/22/2017
 |name|必要的 String 屬性。<br /><br /> 包含唯一識別傳輸型別的使用者定義索引鍵。|  
 |transportConfigurationType|字串，包含可實作特定傳輸的型別。|  
   
-### <a name="child-elements"></a>子元素  
+### <a name="child-elements"></a>子項目  
  無  
   
 ### <a name="parent-elements"></a>父項目  
@@ -69,7 +57,7 @@ ms.lasthandoff: 12/22/2017
 </serviceHostingEnvironment>  
 ```  
   
-## <a name="see-also"></a>請參閱  
+## <a name="see-also"></a>另請參閱  
  <xref:System.ServiceModel.Configuration.TransportConfigurationTypeElement>  
  <xref:System.ServiceModel.Configuration.ServiceHostingEnvironmentSection>  
  <xref:System.ServiceModel.ServiceHostingEnvironment>  

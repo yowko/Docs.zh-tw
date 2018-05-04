@@ -1,13 +1,6 @@
 ---
-title: "&lt;linkedConfiguration&gt;項目"
-ms.custom: 
+title: '&lt;linkedConfiguration&gt;項目'
 ms.date: 03/30/2017
-ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.technology: dotnet-clr
-ms.tgt_pltfrm: 
-ms.topic: article
 f1_keywords:
 - http://schemas.microsoft.com/.NetConfiguration/v2.0#configuration/assemblyBinding/linkedConfiguration
 - http://schemas.microsoft.com/.NetConfiguration/v2.0#linkedConfiguration
@@ -18,16 +11,14 @@ helpviewer_keywords:
 - linked configuration files
 - linkedConfiguration Element
 ms.assetid: 8eb34f3b-427e-4288-a7ff-c73f489deb45
-caps.latest.revision: "6"
 author: mcleblanc
 ms.author: markl
 manager: markl
-ms.workload: dotnet
-ms.openlocfilehash: dffff7fefa80f420e61045b21b0e0c1a170e2911
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.openlocfilehash: 71769efa1233fc8a693219dc02ae56ea39c164e7
+ms.sourcegitcommit: 11f11ca6cefe555972b3a5c99729d1a7523d8f50
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="linkedconfiguration-element"></a>\<linkedConfiguration > 項目
 
@@ -53,7 +44,7 @@ ms.lasthandoff: 12/22/2017
 
 |     | 描述 |
 | --- | ----------- |
-| [**\<assemblyBinding >**項目](~/docs/framework/configure-apps/file-schema/assemblybinding-element-for-configuration.md) | 指定位於組態層級的組件繫結原則。 |
+| [**\<assemblyBinding >** 項目](~/docs/framework/configure-apps/file-schema/assemblybinding-element-for-configuration.md) | 指定位於組態層級的組件繫結原則。 |
 
 ## <a name="child-elements"></a>子元素
 
@@ -61,10 +52,10 @@ ms.lasthandoff: 12/22/2017
 
 ## <a name="remarks"></a>備註
 
- **\<LinkedConfiguration >**項目可簡化元件組件的服務。 如果一或多個應用程式使用具有組態檔中的已知位置的組件，可以使用使用組件的應用程式的組態檔 **\<linkedConfiguration >**包含組件組態檔中，而不是直接包含組態資訊的項目。 當已服務元件組件時，更新通用的組態檔提供使用組件的所有應用程式更新的組態資訊。
+**\<LinkedConfiguration >** 項目可簡化元件組件的服務。 如果一或多個應用程式使用具有組態檔中的已知位置的組件，可以使用使用組件的應用程式的組態檔 **\<linkedConfiguration >** 包含組件組態檔中，而不是直接包含組態資訊的項目。 當已服務元件組件時，更新通用的組態檔提供使用組件的所有應用程式更新的組態資訊。
 
 > [!NOTE]
->  **\<LinkedConfiguration >**項目不支援有 Windows-並存資訊清單的應用程式。
+> **\<LinkedConfiguration >** 項目不支援有 Windows-並存資訊清單的應用程式。
 
 下列規則可管理使用連結的組態檔：
 
@@ -76,9 +67,9 @@ ms.lasthandoff: 12/22/2017
 
 - 所有連結的組態檔會合併成一個檔案，類似的行為`#include`C/c + + 中的指示詞。
 
--  **\<LinkedConfiguration >**項目只允許在應用程式組態檔，則會忽略在*Machine.config*。
+- **\<LinkedConfiguration >** 項目只允許在應用程式組態檔，則會忽略在*Machine.config*。
 
-- 已偵測到循環參考，並終止。 也就是說，如果 **\<linkedConfiguration >**的一系列的組態檔項目形成迴圈，會偵測到迴圈，並將其停止。
+- 已偵測到循環參考，並終止。 也就是說，如果 **\<linkedConfiguration >** 的一系列的組態檔項目形成迴圈，會偵測到迴圈，並將其停止。
 
 ## <a name="example"></a>範例
 
@@ -94,5 +85,5 @@ ms.lasthandoff: 12/22/2017
 
 ## <a name="see-also"></a>另請參閱
 
-[**\<assemblyBinding >**項目](~/docs/framework/configure-apps/file-schema/assemblybinding-element-for-configuration.md)   
+[**\<assemblyBinding >** 項目](~/docs/framework/configure-apps/file-schema/assemblybinding-element-for-configuration.md)   
 [適用於.NET Framework 組態檔結構描述](~/docs/framework/configure-apps/file-schema/index.md)

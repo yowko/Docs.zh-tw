@@ -1,33 +1,21 @@
 ---
-title: "&lt;ws2007HttpBinding&gt; 的 &lt;message&gt;"
-ms.custom: 
+title: '&lt;ws2007HttpBinding&gt; 的 &lt;message&gt;'
 ms.date: 03/30/2017
-ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.technology: dotnet-clr
-ms.tgt_pltfrm: 
-ms.topic: article
 ms.assetid: 9ffd8db6-84a8-4b38-a9fe-2cb1a87a1c97
-caps.latest.revision: "9"
-author: dotnet-bot
-ms.author: dotnetcontent
-manager: wpickett
-ms.workload: dotnet
-ms.openlocfilehash: 88f9a766c85ec0fd6cb3379be239db33dc6ebb20
-ms.sourcegitcommit: c0dd436f6f8f44dc80dc43b07f6841a00b74b23f
-ms.translationtype: MT
+ms.openlocfilehash: d3449735222d02857ee11ef6d20914c1e9a018a7
+ms.sourcegitcommit: 11f11ca6cefe555972b3a5c99729d1a7523d8f50
+ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 01/19/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="ltmessagegt-of-ltws2007httpbindinggt"></a>&lt;ws2007HttpBinding&gt; 的 &lt;message&gt;
 定義的訊息層級安全性設定[ \<ws2007HttpBinding >](../../../../../docs/framework/configure-apps/file-schema/wcf/ws2007httpbinding.md)項目。  
   
  \<system.ServiceModel>  
-\<bindings>  
+\<繫結 >  
 \<ws2007HttpBinding>  
-\<binding>  
-\<security>  
+\<繫結 >  
+\<安全性 >  
 \<message>  
   
 ## <a name="syntax"></a>語法  
@@ -93,7 +81,7 @@ ms.lasthandoff: 01/19/2018
 |`UserName`|允許服務要求用戶端使用 `UserName` 認證進行驗證。 [!INCLUDE[indigo2](../../../../../includes/indigo2-md.md)] 不支援傳送密碼摘要，或是使用密碼衍生金鑰，甚至對訊息安全性使用該金鑰。 這麼一來，[!INCLUDE[indigo2](../../../../../includes/indigo2-md.md)] 會在使用 `UserName` 認證時強制保護傳輸。 這個認證模式會產生可互通交換或是無法互通的交涉 (根據 `negotiateServiceCredential` 屬性)。|  
 |`Windows`|允許 SOAP 交換在 `Windows` 認證的已驗證內容中。 如果 `negotiateServiceCredential` 屬性設定為 `true`，這會執行 SSPI 交涉或 Kerberos (互通標準)。|  
   
-### <a name="child-elements"></a>子元素  
+### <a name="child-elements"></a>子項目  
  無  
   
 ### <a name="parent-elements"></a>父項目  
@@ -102,7 +90,7 @@ ms.lasthandoff: 01/19/2018
 |-------------|-----------------|  
 |[\<security>](../../../../../docs/framework/configure-apps/file-schema/wcf/security-of-ws2007httpbinding.md)|定義安全性設定[ \<ws2007HttpBinding >](../../../../../docs/framework/configure-apps/file-schema/wcf/ws2007httpbinding.md)。|  
   
-## <a name="see-also"></a>請參閱  
+## <a name="see-also"></a>另請參閱  
  <xref:System.ServiceModel.NonDualMessageSecurityOverHttp>  
  <xref:System.ServiceModel.Configuration.WSHttpSecurityElement.Message%2A>  
  <xref:System.ServiceModel.WSHttpSecurity.Message%2A>  
@@ -111,4 +99,4 @@ ms.lasthandoff: 01/19/2018
  [繫結](../../../../../docs/framework/wcf/bindings.md)  
  [設定系統提供的繫結](../../../../../docs/framework/wcf/feature-details/configuring-system-provided-bindings.md)  
  [使用繫結來設定 Windows Communication Foundation 服務和用戶端](http://msdn.microsoft.com/library/bd8b277b-932f-472f-a42a-b02bb5257dfb)  
- [\<binding>](../../../../../docs/framework/misc/binding.md)
+ [\<繫結 >](../../../../../docs/framework/misc/binding.md)

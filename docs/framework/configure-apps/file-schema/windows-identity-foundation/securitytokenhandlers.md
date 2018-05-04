@@ -1,31 +1,21 @@
 ---
 title: '&lt;securityTokenHandlers&gt;'
-ms.custom: 
 ms.date: 03/30/2017
-ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.technology: dotnet-clr
-ms.tgt_pltfrm: 
-ms.topic: article
 ms.assetid: f11a631d-4094-4e11-bb03-4ede74b30281
-caps.latest.revision: "5"
 author: BrucePerlerMS
-ms.author: bruceper
 manager: mbaldwin
-ms.workload: dotnet
-ms.openlocfilehash: de19fffdeae801163ec991ecf08d00b1286781d8
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.openlocfilehash: 16827aa774a8a76f16106a8650423d0d7f084982
+ms.sourcegitcommit: 11f11ca6cefe555972b3a5c99729d1a7523d8f50
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="ltsecuritytokenhandlersgt"></a>&lt;securityTokenHandlers&gt;
 指定註冊的端點的安全性權杖處理常式的集合。  
   
- \<system.identityModel >  
-\<identityConfiguration >  
-\<securityTokenHandlers >  
+ \<system.identityModel>  
+\<identityConfiguration>  
+\<securityTokenHandlers>  
   
 ## <a name="syntax"></a>語法  
   
@@ -39,7 +29,7 @@ ms.lasthandoff: 12/22/2017
 ```  
   
 ## <a name="attributes-and-elements"></a>屬性和項目  
- 下列章節說明屬性、子項目和父項目。  
+ 下列各節描述屬性、子項目和父項目。  
   
 ### <a name="attributes"></a>屬性  
   
@@ -47,7 +37,7 @@ ms.lasthandoff: 12/22/2017
 |---------------|-----------------|  
 |name|指定權杖處理常式集合的名稱。 架構所辨識的值為"ActAs"和"OnBehalfOf"。 如果這些名稱的其中一種指定語彙基元處理常式的集合，集合會分別處理 ActAs 或 OnBehalfOf 權杖時使用。|  
   
-### <a name="child-elements"></a>子元素  
+### <a name="child-elements"></a>子項目  
   
 |項目|描述|  
 |-------------|-----------------|  

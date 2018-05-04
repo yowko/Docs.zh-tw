@@ -1,24 +1,12 @@
 ---
-title: "數學函式"
-ms.custom: 
+title: 數學函式
 ms.date: 03/30/2017
-ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.technology: dotnet-ado
-ms.tgt_pltfrm: 
-ms.topic: article
 ms.assetid: b040c7cb-156d-40f2-9152-61065b18148c
-caps.latest.revision: "2"
-author: douglaslMS
-ms.author: douglasl
-manager: craigg
-ms.workload: dotnet
-ms.openlocfilehash: 9b4ef03a2a517b9ce53954bc4576b655afdafc03
-ms.sourcegitcommit: ed26cfef4e18f6d93ab822d8c29f902cff3519d1
+ms.openlocfilehash: 9dfd1faf9bdab995b19c38e32f64a88ed67cb280
+ms.sourcegitcommit: 11f11ca6cefe555972b3a5c99729d1a7523d8f50
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 01/17/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="mathematical-functions"></a>數學函式
 .NET Framework Data Provider for SQL Server (SqlClient) 提供了數學函式，這些函式會在當做引數提供的輸入值上執行計算，並傳回數值結果。 這些函式位於您使用 SqlClient 時可以使用的 SqlServer 命名空間 (Namespace) 內。 提供者命名空間屬性可以讓 Entity Framework 了解此提供者對特定建構 (例如型別和函式) 所使用的前置詞。下表將描述 SqlClient 數學函式。  
@@ -57,5 +45,5 @@ ms.lasthandoff: 01/17/2018
 |---------------------|---------------------|---------------------|  
 |[數學函數 (TRANSACT-SQL)](http://go.microsoft.com/fwlink/?LinkId=115913)|[數學函數 (TRANSACT-SQL)](http://go.microsoft.com/fwlink/?LinkId=115911)|[數學函數 (TRANSACT-SQL)](http://go.microsoft.com/fwlink/?LinkId=115912)|  
   
-## <a name="see-also"></a>請參閱  
+## <a name="see-also"></a>另請參閱  
  [適用於 Entity Framework 的 SqlClient 函式](../../../../../docs/framework/data/adonet/ef/sqlclient-for-ef-functions.md)

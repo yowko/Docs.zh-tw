@@ -1,24 +1,12 @@
 ---
-title: "在 ADO.NET 中連接至資料來源"
-ms.custom: 
+title: 在 ADO.NET 中連接至資料來源
 ms.date: 03/30/2017
-ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.technology: dotnet-ado
-ms.tgt_pltfrm: 
-ms.topic: article
 ms.assetid: 9abc3f92-1be3-4e1a-b360-762dc689650e
-caps.latest.revision: "3"
-author: douglaslMS
-ms.author: douglasl
-manager: craigg
-ms.workload: dotnet
-ms.openlocfilehash: 1df18730d3a4428f245fe4222dafec0eaf6c08a5
-ms.sourcegitcommit: ed26cfef4e18f6d93ab822d8c29f902cff3519d1
+ms.openlocfilehash: 27653c3e1f14e08fc8b5e1225a441072778a0cc8
+ms.sourcegitcommit: 11f11ca6cefe555972b3a5c99729d1a7523d8f50
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 01/17/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="connecting-to-a-data-source-in-adonet"></a>在 ADO.NET 中連接至資料來源
 在 ADO.NET 中使用**連接**物件連接至特定資料來源，藉由提供連接字串中的必要的驗證資訊。 **連接**的資料來源類型取決於您使用的物件。  
@@ -32,7 +20,7 @@ ms.lasthandoff: 01/17/2018
  [Connection 事件](../../../../docs/framework/data/adonet/connection-events.md)  
  描述如何使用**InfoMessage**事件，以擷取從資料來源的參考用訊息。  
   
-## <a name="see-also"></a>請參閱  
+## <a name="see-also"></a>另請參閱  
  [連接字串](../../../../docs/framework/data/adonet/connection-strings.md)  
  [連接共用](../../../../docs/framework/data/adonet/connection-pooling.md)  
  [命令和參數](../../../../docs/framework/data/adonet/commands-and-parameters.md)  

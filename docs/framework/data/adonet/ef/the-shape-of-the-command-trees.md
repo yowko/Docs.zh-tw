@@ -1,24 +1,12 @@
 ---
-title: "命令樹的形狀"
-ms.custom: 
+title: 命令樹的形狀
 ms.date: 03/30/2017
-ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.technology: dotnet-ado
-ms.tgt_pltfrm: 
-ms.topic: article
 ms.assetid: 2215585e-ca47-45f8-98d4-8cb982f8c1d3
-caps.latest.revision: "2"
-author: douglaslMS
-ms.author: douglasl
-manager: craigg
-ms.workload: dotnet
-ms.openlocfilehash: d7e2b25788b088d9da49bad206f8f2f11d0104a2
-ms.sourcegitcommit: ed26cfef4e18f6d93ab822d8c29f902cff3519d1
+ms.openlocfilehash: 9084e2616ac4ea540bdf755afd011d67a5c991fa
+ms.sourcegitcommit: 11f11ca6cefe555972b3a5c99729d1a7523d8f50
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 01/17/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="the-shape-of-the-command-trees"></a>命令樹的形狀
 SQL 產生模組負責根據給定輸入查詢命令樹運算式，產生後端特定的 SQL 查詢。 本章節將討論查詢命令樹的特性、屬性和結構。  
@@ -82,7 +70,7 @@ SQL 產生模組負責根據給定輸入查詢命令樹運算式，產生後端�
   
  標準函式 (請參閱[標準函式](../../../../../docs/framework/data/adonet/ef/language-reference/canonical-functions.md)如需詳細資訊) 指定為一部分[!INCLUDE[adonet_ef](../../../../../includes/adonet-ef-md.md)]，並提供者應該提供這些規格為基礎的標準函式的實作。 存放區函式是根據對應之提供者資訊清單中的規格。 使用者定義函式是根據 SSDL 中的規格。  
   
- 此外，具有 NiladicFunction 屬性的函式沒有任何引數，而且轉譯時結尾不應該有括號。  也就是為 *\<functionName >*而不是 *\<functionName > （)*。  
+ 此外，具有 NiladicFunction 屬性的函式沒有任何引數，而且轉譯時結尾不應該有括號。  也就是為 *\<functionName >* 而不是 *\<functionName > （)*。  
   
 #### <a name="dbnewinstanceexpression"></a>DbNewInstanceExpression  
  DbNewInstanceExpression 只能發生在下列兩個案例中：  
@@ -116,5 +104,5 @@ SQL 產生模組負責根據給定輸入查詢命令樹運算式，產生後端�
 ### <a name="using-primitive-types"></a>使用基本型別  
  在輸出命令樹中參考基本型別時，通常會在概念模型的基本型別中參考這些型別。 但是對於某些運算式而言，提供者需要對應的存放區基本型別。 這類運算式的範例包括 DbCastExpression，也可能包括 DbNullExpression (如果提供者需要將 null 轉型為對應的型別)。 在這些情況下，提供者應該根據基本型別種類和它的 Facet，執行與提供者型別的對應。  
   
-## <a name="see-also"></a>請參閱  
+## <a name="see-also"></a>另請參閱  
  [SQL 產生](../../../../../docs/framework/data/adonet/ef/sql-generation.md)

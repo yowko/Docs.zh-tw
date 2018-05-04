@@ -1,24 +1,12 @@
 ---
-title: "修改 SQL 產生"
-ms.custom: 
+title: 修改 SQL 產生
 ms.date: 03/30/2017
-ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.technology: dotnet-ado
-ms.tgt_pltfrm: 
-ms.topic: article
 ms.assetid: 2188a39d-46ed-4a8b-906a-c9f15e6fefd1
-caps.latest.revision: "3"
-author: douglaslMS
-ms.author: douglasl
-manager: craigg
-ms.workload: dotnet
-ms.openlocfilehash: 6696d80246d61cc2eac47266837d79661141b9b0
-ms.sourcegitcommit: ed26cfef4e18f6d93ab822d8c29f902cff3519d1
+ms.openlocfilehash: b7bb390fd4e221c70d5ed8da5873c557fcde3c98
+ms.sourcegitcommit: 11f11ca6cefe555972b3a5c99729d1a7523d8f50
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 01/17/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="modification-sql-generation"></a>修改 SQL 產生
 本節將討論如何為您的 (SQL:1999 相容資料庫) 提供者開發修改 SQL 產生模組。 這個模組負責將修改命令樹轉譯為適當的 SQL INSERT、UPDATE 或 DELETE 陳述式。  
@@ -38,7 +26,7 @@ ms.lasthandoff: 01/17/2018
   
  DbModificationCommandTree 和其所產生的實作[!INCLUDE[adonet_ef](../../../../../includes/adonet-ef-md.md)]永遠代表單一資料列作業。 這一節會描述 .NET Framework 3.5 版中的這些型別以及其條件約束。  
   
- ![Diagram](../../../../../docs/framework/data/adonet/ef/media/558ba7b3-dd19-48d0-b91e-30a76415bf5f.gif "558ba7b3-dd19-48d0-b91e-30a76415bf5f")  
+ ![圖表](../../../../../docs/framework/data/adonet/ef/media/558ba7b3-dd19-48d0-b91e-30a76415bf5f.gif "558ba7b3-dd19-48d0-b91e-30a76415bf5f")  
   
  DbModificationCommandTree 有一個目標屬性，此屬性代表針對修改作業設定的目標。 定義輸入集的目標運算式屬性一定是 DbScanExpression。  DbScanExpression 可以是代表資料表或檢視，或一組資料定義查詢如果中繼資料屬性"Defining Query"其目標為非 null。  
   
@@ -115,7 +103,7 @@ The elements of the list are specified as type DbModificationClause, which speci
 ## <a name="generating-an-insert-sql-command"></a>產生插入 SQL 命令  
  如果範例提供者中有提供 DbInsertCommandTree，產生的插入命令會遵循底下的其中一個插入範本。  
   
- 第一個範本有一個命令可在提供 SetClauses 清單中的值時執行插入，也有一個 SELECT 陳述式，可在 Returning 屬性不是 null 時，傳回 Returning 屬性中針對插入的資料列所指定的屬性。 述詞的項目"@@ROWCOUNT > 0"為 true，如果已插入一個資料列。 述詞的項目"keyMemberI = keyValueI &#124;scope_identity （) 」 圖形會採用"keyMemberI = scope_identity （） 」 只有當 keyMemeberI 為存放區產生的索引鍵，，因為 scope_identity （） 傳回插入識別 （存放區產生） 資料行的最後一個識別值。  
+ 第一個範本有一個命令可在提供 SetClauses 清單中的值時執行插入，也有一個 SELECT 陳述式，可在 Returning 屬性不是 null 時，傳回 Returning 屬性中針對插入的資料列所指定的屬性。 述詞的項目"@@ROWCOUNT > 0"為 true，如果已插入一個資料列。 述詞的項目"keyMemberI = keyValueI &#124; scope_identity （) 」 圖形會採用"keyMemberI = scope_identity （） 」 只有當 keyMemeberI 為存放區產生的索引鍵，，因為 scope_identity （） 傳回插入識別 （最後一個識別值存放區產生） 資料行。  
   
 ```  
 -- first insert Template  
@@ -297,5 +285,5 @@ delete [dbo].[Categories]
 where ([CategoryID] = @p0)  
 ```  
   
-## <a name="see-also"></a>請參閱  
+## <a name="see-also"></a>另請參閱  
  [撰寫 Entity Framework 資料提供者](../../../../../docs/framework/data/adonet/ef/writing-an-ef-data-provider.md)

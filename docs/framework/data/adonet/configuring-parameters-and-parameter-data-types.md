@@ -1,29 +1,15 @@
 ---
 title: 設定參數和參數資料類型
-ms.custom: ''
 ms.date: 03/30/2017
-ms.prod: .net-framework
-ms.reviewer: ''
-ms.suite: ''
-ms.technology:
-- dotnet-ado
-ms.tgt_pltfrm: ''
-ms.topic: article
 dev_langs:
 - csharp
 - vb
 ms.assetid: 537d8a2c-d40b-4000-83eb-bc1fcc93f707
-caps.latest.revision: 6
-author: douglaslMS
-ms.author: douglasl
-manager: craigg
-ms.workload:
-- dotnet
-ms.openlocfilehash: cdb6efb428f5c096178895f95fe1256846e9c1e5
-ms.sourcegitcommit: 86adcc06e35390f13c1e372c36d2e044f1fc31ef
+ms.openlocfilehash: 320a45af1c2f3b460c23d8320c456120643902f7
+ms.sourcegitcommit: 11f11ca6cefe555972b3a5c99729d1a7523d8f50
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/26/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="configuring-parameters-and-parameter-data-types"></a>設定參數和參數資料類型
 命令物件會使用參數將值傳遞至 SQL 陳述式或預存程序 (Stored Procedure)，以提供型別檢查及驗證。 與命令文字不同的是，參數輸入會被視為常值 (Literal)，而非可執行程式碼。 這有助於防衛「SQL 插入式」攻擊，在此類攻擊中，攻擊者會將危害伺服器安全的命令插入 SQL 陳述式中。  

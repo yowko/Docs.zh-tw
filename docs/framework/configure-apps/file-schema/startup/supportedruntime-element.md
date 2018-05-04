@@ -1,9 +1,6 @@
 ---
-title: "&lt;supportedRuntime&gt;項目"
-ms.date: 10/17/2017
-ms.prod: .net-framework
-ms.technology: dotnet-clr
-ms.topic: article
+title: '&lt;supportedRuntime&gt;項目'
+ms.date: 04/10/2018
 ms.custom: updateeachrelease
 f1_keywords:
 - http://schemas.microsoft.com/.NetConfiguration/v2.0#supportedRuntime
@@ -15,12 +12,11 @@ ms.assetid: 1ae16e23-afbe-4de4-b413-bc457f37b69f
 author: mcleblanc
 ms.author: markl
 manager: markl
-ms.workload: dotnet
-ms.openlocfilehash: 4b0967790f2bbf8fa9a889c56fa9c5168f7523bd
-ms.sourcegitcommit: 8bde7a3432f30fc771079744955c75c58c4eb393
+ms.openlocfilehash: 544aaf5a58b743c437b42764bdea3c6b7eea7c74
+ms.sourcegitcommit: 11f11ca6cefe555972b3a5c99729d1a7523d8f50
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 01/20/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="ltsupportedruntimegt-element"></a>&lt;supportedRuntime&gt;項目
 
@@ -45,9 +41,9 @@ ms.lasthandoff: 01/20/2018
   
 ## <a name="remarks"></a>備註
 
-如果 **\<supportedRuntime >**項目不存在於應用程式組態檔，在使用執行階段用來建置應用程式的版本。  
+如果 **\<supportedRuntime >** 項目不存在於應用程式組態檔，在使用執行階段用來建置應用程式的版本。  
 
-**\<SupportedRuntime >**使用 1.1 版或更新版本的執行階段所建置的所有應用程式應該使用項目。 只支援 1.0 版的執行階段建置的應用程式必須使用[ \<requiredRuntime >](../../../../../docs/framework/configure-apps/file-schema/startup/requiredruntime-element.md)項目。  
+**\<SupportedRuntime >** 使用 1.1 版或更新版本的執行階段所建置的所有應用程式應該使用項目。 只支援 1.0 版的執行階段建置的應用程式必須使用[ \<requiredRuntime >](../../../../../docs/framework/configure-apps/file-schema/startup/requiredruntime-element.md)項目。  
   
 > [!NOTE]
 >  如果您使用[CorBindToRuntimeByCfg](../../../../../docs/framework/unmanaged-api/hosting/corbindtoruntimebycfg-function.md)函式指定組態檔，您必須使用`<requiredRuntime>`執行階段的所有版本的項目。 `<supportedRuntime>`使用時，便會忽略元素[CorBindToRuntimeByCfg](../../../../../docs/framework/unmanaged-api/hosting/corbindtoruntimebycfg-function.md)。  
@@ -70,7 +66,7 @@ ms.lasthandoff: 01/20/2018
 |2.0|"v2.0.50727"|  
 |3.0|"v2.0.50727"|  
 |3.5|"v2.0.50727"|  
-|4.0-4.7.1|"v4.0"|  
+|4.0 4.7.2|"v4.0"|  
 
 <a name="sku"></a>   
 ## <a name="sku-id-values"></a>「SKU 識別碼」值
@@ -95,6 +91,7 @@ ms.lasthandoff: 01/20/2018
 |4.6.2|".NETFramework,Version=v4.6.2"|  
 |4.7|".NETFramework,Version=v4.7"|
 |4.7.1|".NETFramework,Version=v4.7.1"|
+|4.7.2|".NETFramework，Version = v4.7.2"|
 
 ## <a name="example"></a>範例  
  下列範例將示範如何在設定檔中指定支援的執行階段版本。 組態檔會指出應用程式的目標.NET Framework 4.7。  

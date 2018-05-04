@@ -1,24 +1,12 @@
 ---
-title: "常值 (Entity SQL)"
-ms.custom: 
+title: 常值 (Entity SQL)
 ms.date: 03/30/2017
-ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.technology: dotnet-ado
-ms.tgt_pltfrm: 
-ms.topic: article
 ms.assetid: 092ef693-6e5f-41b4-b868-5b9e82928abf
-caps.latest.revision: "4"
-author: douglaslMS
-ms.author: douglasl
-manager: craigg
-ms.workload: dotnet
-ms.openlocfilehash: 7665d0cb2e3c0a3cff5f602e7b02c572a3dc341d
-ms.sourcegitcommit: ed26cfef4e18f6d93ab822d8c29f902cff3519d1
+ms.openlocfilehash: 90c065dff0f81a743cd66e224885de01f6129b56
+ms.sourcegitcommit: 11f11ca6cefe555972b3a5c99729d1a7523d8f50
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 01/17/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="literals-entity-sql"></a>常值 (Entity SQL)
 本主題將描述常值 (Literal) 的 [!INCLUDE[esql](../../../../../../includes/esql-md.md)] 支援。  
@@ -78,7 +66,7 @@ TIME‘01:01:00.1234567’
 ```  
   
 ## <a name="datetimeoffset"></a>DateTimeOffset  
- datetimeoffset 常值會依地區設定而異，而且是由日期部分、時間部分和時差部分組成。 所有日期、時間和時差部分都是必要項，而且沒有預設值。 日期部分必須是 YYYY-MM-DD 格式，其中 YYYY 是四位數字的年份，值介於 0001 到 9999 之間；MM 是月份，值介於 1 到 12 之間；而 DD 則是所指定月份中的有效日數。 時間部分必須是 HH:MM[:SS[.fffffff]] 格式，其中 HH 是小時，值介於 0 到 23 之間；MM 是分鐘，值介於 0 到 59 之間；SS 是秒鐘，值介於 0 到 59 之間；而 fffffff 則是秒鐘的小數部分，值介於 0 到 9999999 之間。 以上所有值的範圍都包含在內。 秒鐘的小數部分則為選擇性。 除非已指定秒鐘的小數部分，否則秒鐘亦為選擇性；但指定秒鐘的小數部分時，則必須有秒鐘。 如果未指定秒鐘或秒鐘的小數部分，則會使用預設值 0。 時差的部分的格式必須是 {+ &#124;-} hh: mm，其中 HH 和 MM 的意義與時間部分相同。 不過時差的範圍必須介於 -14:00 到 + 14:00 之間  
+ datetimeoffset 常值會依地區設定而異，而且是由日期部分、時間部分和時差部分組成。 所有日期、時間和時差部分都是必要項，而且沒有預設值。 日期部分必須是 YYYY-MM-DD 格式，其中 YYYY 是四位數字的年份，值介於 0001 到 9999 之間；MM 是月份，值介於 1 到 12 之間；而 DD 則是所指定月份中的有效日數。 時間部分必須是 HH:MM[:SS[.fffffff]] 格式，其中 HH 是小時，值介於 0 到 23 之間；MM 是分鐘，值介於 0 到 59 之間；SS 是秒鐘，值介於 0 到 59 之間；而 fffffff 則是秒鐘的小數部分，值介於 0 到 9999999 之間。 以上所有值的範圍都包含在內。 秒鐘的小數部分則為選擇性。 除非已指定秒鐘的小數部分，否則秒鐘亦為選擇性；但指定秒鐘的小數部分時，則必須有秒鐘。 如果未指定秒鐘或秒鐘的小數部分，則會使用預設值 0。 時差的部分的格式必須是 {+&#124;-} hh: mm，其中 HH 和 MM 的意義與時間部分相同。 不過時差的範圍必須介於 -14:00 到 + 14:00 之間  
   
  DATETIMEOFFSET 符號與常值裝載之間可以有任何數目的空格，但是不能有新行。  
   
@@ -112,5 +100,5 @@ Guid'1afc7f5c-ffa0-4741-81cf-f12eAAb822bf'
 GUID  '1AFC7F5C-FFA0-4741-81CF-F12EAAB822BF'  
 ```  
   
-## <a name="see-also"></a>請參閱  
+## <a name="see-also"></a>另請參閱  
  [Entity SQL 概觀](../../../../../../docs/framework/data/adonet/ef/language-reference/entity-sql-overview.md)

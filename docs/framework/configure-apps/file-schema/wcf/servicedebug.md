@@ -1,31 +1,19 @@
 ---
 title: '&lt;serviceDebug&gt;'
-ms.custom: 
 ms.date: 03/30/2017
-ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.technology: dotnet-clr
-ms.tgt_pltfrm: 
-ms.topic: article
 ms.assetid: 6d7ea986-f232-49fe-842c-f934d9966889
-caps.latest.revision: "19"
-author: dotnet-bot
-ms.author: dotnetcontent
-manager: wpickett
-ms.workload: dotnet
-ms.openlocfilehash: 8cdd5d8a05354ad6f0df8343d546fd6cd1e8eac4
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
-ms.translationtype: MT
+ms.openlocfilehash: 1e9a8a310a2b3154568b20ea225faead1c71d64f
+ms.sourcegitcommit: 11f11ca6cefe555972b3a5c99729d1a7523d8f50
+ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="ltservicedebuggt"></a>&lt;serviceDebug&gt;
-指定 [!INCLUDE[indigo1](../../../../../includes/indigo1-md.md)] 服務的偵錯和說明資訊功能。  
+指定 Windows Communication Foundation (WCF) 服務的偵錯和說明資訊的功能。  
   
- \<系統。ServiceModel >  
+ \<system.ServiceModel>  
 \<行為 >  
-\<serviceBehaviors >  
+\<serviceBehaviors>  
 \<行為 >  
 \<serviceDebug >  
   
@@ -42,7 +30,7 @@ ms.lasthandoff: 12/22/2017
 ```  
   
 ## <a name="attributes-and-elements"></a>屬性和項目  
- 下列章節說明屬性、子項目和父項目。  
+ 下列各節描述屬性、子項目和父項目。  
   
 ### <a name="attributes"></a>屬性  
   
@@ -58,7 +46,7 @@ ms.lasthandoff: 12/22/2017
 |httpsHelpPageUrl|URI，指定當使用 HTML 瀏覽器檢視端點時，使用者所看到的自訂 HTML 說明檔的相對或絕對 HTTPS URL。<br /><br /> 您可以使用這個屬性來啟用從 HTTPS/Get 要求 (例如，從 HTML 瀏覽器) 傳回的自訂 HTML 說明檔。 HTML 說明檔的位置解析如下：<br /><br /> -如果此屬性的值是相對位址，HTML 說明檔的位置就是支援 HTTPS 要求的服務基底位址的值加上這個屬性值。<br />-如果此屬性的值是絕對位址，且支援 HTTPS 要求，HTML 說明檔的位置就是這個屬性的值。<br />-如果此屬性的值是絕對位址，但不支援 HTTPS 要求，會擲回例外狀況。<br /><br /> 這個屬性是唯一時才有效`httpHelpPageEnabled`屬性是`true`。|  
 |includeExceptionDetailInFaults|值，指定是否要針對偵錯用途，在傳回給用戶端的 SOAP 錯誤詳細資料中包含 Managed 例外狀況資訊。 預設為 `false`。<br /><br /> 如果您將這個屬性設定為 `true`，就可以讓 Managed 例外狀況資訊的進入用戶端以便偵錯，以及發行可讓使用者在 Web 瀏覽器中瀏覽服務的 HTML 資訊檔案。 **注意：**傳回 managed 例外狀況資訊傳回用戶端可能會有的安全性風險。 這是因為例外狀況細節會公開內部服務實作 (Implementation) 的相關資訊，可能會被未經授權的用戶端加以利用。|  
   
-### <a name="child-elements"></a>子元素  
+### <a name="child-elements"></a>子項目  
  無。  
   
 ### <a name="parent-elements"></a>父項目  
@@ -79,7 +67,7 @@ ms.lasthandoff: 12/22/2017
   
  選用的 `httpHelpPageBinding` 和 `httpHelpPageBinding` 屬性可讓您設定用來存取服務網頁的繫結。 如果未指定這些繫結，則會依適當情形，使用預設的繫結 (使用 HTTP 時為 `HttpTransportBindingElement`，使用 HTTPS 時則為 `HttpsTransportBindingElement`) 存取服務說明頁面。 請注意，這些屬性 (Attribute) 無法搭配內建的 WCF 繫結使用。 支援 xref:System.ServiceModel.Channels.IReplyChannel 的內部繫結項目具有唯一的繫結 > 將會支援。 此外，該繫結的 <xref:System.ServiceModel.Channels.MessageVersion?displayProperty=nameWithType> 屬性 (Property) 必須是 <xref:System.ServiceModel.Channels.MessageVersion.None?displayProperty=nameWithType>。  
   
-## <a name="see-also"></a>請參閱  
+## <a name="see-also"></a>另請參閱  
  <xref:System.ServiceModel.Configuration.ServiceDebugElement>  
  <xref:System.ServiceModel.Description.ServiceDebugBehavior>  
  [指定及處理合約與服務中的錯誤](../../../../../docs/framework/wcf/specifying-and-handling-faults-in-contracts-and-services.md)  

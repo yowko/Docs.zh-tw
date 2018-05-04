@@ -1,14 +1,6 @@
 ---
-title: "&lt;providerOption&gt;項目"
-ms.custom: 
+title: '&lt;providerOption&gt;項目'
 ms.date: 03/30/2017
-ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.technology:
-- dotnet-clr
-ms.tgt_pltfrm: 
-ms.topic: article
 f1_keywords:
 - provideroption
 helpviewer_keywords:
@@ -16,23 +8,20 @@ helpviewer_keywords:
 - providerOptions
 - provideroption element
 ms.assetid: 014f2e0b-c0b5-4fc4-92d3-73f02978b2a1
-caps.latest.revision: 
 author: mcleblanc
 ms.author: markl
 manager: markl
-ms.workload:
-- dotnet
-ms.openlocfilehash: f28b7b43f2f782744a0dbc81bd0b91bbbcd8abba
-ms.sourcegitcommit: c0dd436f6f8f44dc80dc43b07f6841a00b74b23f
+ms.openlocfilehash: fa3410cc2c8812c59528676bfad6cd7e887c5f73
+ms.sourcegitcommit: 11f11ca6cefe555972b3a5c99729d1a7523d8f50
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 01/19/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="ltprovideroptiongt-element"></a>&lt;providerOption&gt;項目
 指定語言提供者的編譯器版本屬性。  
   
  \<組態項目 >  
-\<system.codedom Element>  
+\<system.codedom 項目 >  
 \<編譯器項目 >  
 \<編譯器 > 項目  
 \<providerOption > 項目  
@@ -56,7 +45,7 @@ ms.lasthandoff: 01/19/2018
 |`name`|必要屬性。<br /><br /> 指定名稱的選項。例如，"項目的 CompilerVersion"。|  
 |`value`|必要屬性。<br /><br /> 指定的值選項。例如，"v3.5。 」|  
   
-### <a name="child-elements"></a>子元素  
+### <a name="child-elements"></a>子項目  
  無。  
   
 ### <a name="parent-elements"></a>父項目  
@@ -64,7 +53,7 @@ ms.lasthandoff: 01/19/2018
 |項目|描述|  
 |-------------|-----------------|  
 |[\<configuration> 項目](../../../../../docs/framework/configure-apps/file-schema/configuration-element.md)|Common Language Runtime 與 .NET Framework 應用程式使用的所有組態檔中的根項目。|  
-|[\<system.codedom> Element](../../../../../docs/framework/configure-apps/file-schema/compiler/system-codedom-element.md)|指定可用語言提供者的編譯器組態設定。|  
+|[\<system.codedom > 項目](../../../../../docs/framework/configure-apps/file-schema/compiler/system-codedom-element.md)|指定可用語言提供者的編譯器組態設定。|  
 |[\<編譯器 > 項目](../../../../../docs/framework/configure-apps/file-schema/compiler/compilers-element.md)|編譯器組態項目; 容器包含零或多個`<compiler>`項目。|  
 |[\<編譯器> 項目](../../../../../docs/framework/configure-apps/file-schema/compiler/compiler-element.md)|指定語言提供者的編譯器組態屬性。|  
   
@@ -102,7 +91,7 @@ ms.lasthandoff: 01/19/2018
 </configuration>  
 ```  
   
-## <a name="see-also"></a>請參閱  
+## <a name="see-also"></a>另請參閱  
  <xref:System.CodeDom.Compiler.CompilerInfo>  
  <xref:System.CodeDom.Compiler.CodeDomProvider>  
  [組態檔結構描述](../../../../../docs/framework/configure-apps/file-schema/index.md)  

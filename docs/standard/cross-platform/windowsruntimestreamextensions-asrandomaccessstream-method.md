@@ -1,13 +1,7 @@
 ---
-title: "WindowsRuntimeStreamExtensions.AsRandomAccessStream(System.IO.Stream) 方法"
-ms.custom: 
+title: WindowsRuntimeStreamExtensions.AsRandomAccessStream(System.IO.Stream) 方法
 ms.date: 03/30/2017
-ms.prod: .net
-ms.reviewer: 
-ms.suite: 
 ms.technology: dotnet-standard
-ms.tgt_pltfrm: 
-ms.topic: article
 dev_langs:
 - csharp
 - vb
@@ -16,25 +10,20 @@ api_name:
 api_location:
 - System.Runtime.WindowsRuntime.dll
 ms.assetid: dcc72283-caed-49ee-b45d-ccaf94e97129
-caps.latest.revision: 
 author: mairaw
 ms.author: mairaw
-manager: wpickett
-ms.workload:
-- dotnet
-- dotnetcore
-ms.openlocfilehash: 9057eabb7e3dfdfaa872fbcf2fe1180d0bbc7920
-ms.sourcegitcommit: e7f04439d78909229506b56935a1105a4149ff3d
+ms.openlocfilehash: 16f878abc11589fe62f78d941b367d82d7b49e1c
+ms.sourcegitcommit: 11f11ca6cefe555972b3a5c99729d1a7523d8f50
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 12/23/2017
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="windowsruntimestreamextensionsasrandomaccessstreamsystemiostream-method"></a>WindowsRuntimeStreamExtensions.AsRandomAccessStream(System.IO.Stream) 方法
 [在 .NET Framework 4.5.1 及更新版本中支援]  
   
  將指定的資料流轉換為隨機存取資料流。  
   
- **命名空間：**<xref:System.IO?displayProperty=nameWithType>  
+ **命名空間：** <xref:System.IO?displayProperty=nameWithType>  
  **組件：** System.Runtime.WindowsRuntime （在 system.runtime.windowsruntime.dll 中）  
   
 ## <a name="syntax"></a>語法  
@@ -79,6 +68,6 @@ A[!INCLUDE[wrt](../../../includes/wrt-md.md)]隨機存取資料流，表示已�
   
  支援：Windows 8.1  
   
-## <a name="see-also"></a>請參閱  
+## <a name="see-also"></a>另請參閱  
  <!--zz <xref:System.IO.WindowsRuntimeStreamExtensions>--> `System.IO.WindowsRuntimeStreamExtensions`  
  [操作說明：在 .NET Framework 資料流與 Windows 執行階段資料流之間轉換](../../../docs/standard/io/how-to-convert-between-dotnet-streams-and-winrt-streams.md)

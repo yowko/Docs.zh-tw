@@ -19,24 +19,24 @@ ms.author: dotnetcontent
 manager: wpickett
 ms.workload:
 - dotnet
-ms.openlocfilehash: 9ddc1b505146e7ca31bca5acc5e9d19d258a860d
-ms.sourcegitcommit: 86adcc06e35390f13c1e372c36d2e044f1fc31ef
+ms.openlocfilehash: b166dc273eed83660565d9b3bc6a70ffc85547fa
+ms.sourcegitcommit: 2042de78fcdceebb6b8ac4b7a292b93e8782cbf5
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/26/2018
+ms.lasthandoff: 04/27/2018
 ---
 # <a name="client-application-services-overview"></a>用戶端應用程式服務概觀
 用戶端應用程式服務簡化了從 Windows Forms 和 Windows Presentation Foundation (WPF) 應用程式對 [!INCLUDE[ajax_current_short](../../../includes/ajax-current-short-md.md)] 登入、角色和設定檔服務的存取。 [!INCLUDE[ajax_current_short](../../../includes/ajax-current-short-md.md)] 應用程式服務隨附於 [!INCLUDE[vs_orcas_long](../../../includes/vs-orcas-long-md.md)] 和 [!INCLUDE[net_v35_long](../../../includes/net-v35-long-md.md)] 的 Microsoft ASP.NET 2.0 AJAX Extensions 中。 這些服務可讓多個 Web 和 Windows 應用程式從單一伺服器共用使用者資訊與使用者管理功能。  
   
  用戶端應用程式服務包含可以插入 Web 服務擴充性模型的用戶端服務提供者，讓 Windows 應用程式能夠提供下列功能：  
   
--   簡化用戶端設定。 您可以使用 [!INCLUDE[vsprvs](../../../includes/vsprvs-md.md)] 專案設計工具或在專案的 App.config 檔案中指定用戶端服務提供者，以啟用及設定登入、角色和設定檔服務。 如需詳細資訊，請參閱[如何：設定用戶端應用程式服務](../../../docs/framework/common-client-technologies/how-to-configure-client-application-services.md)。  
+-   簡化用戶端設定。 您可以使用 Visual Studio 專案設計工具或在專案的 App.config 檔案中指定用戶端服務提供者，以啟用及設定登入、角色和設定檔服務。 如需詳細資訊，請參閱[如何：設定用戶端應用程式服務](../../../docs/framework/common-client-technologies/how-to-configure-client-application-services.md)。  
   
 -   簡單的程式設計功能。 啟用及設定用戶端應用程式服務之後，您可以透過現有 [!INCLUDE[dnprdnlong](../../../includes/dnprdnlong-md.md)] 成員資格、角色和應用程式設定類別，間接地存取服務提供者。 您也可以直接存取實作用戶端應用程式服務的 [!INCLUDE[net_v35_long](../../../includes/net-v35-long-md.md)] 類別。 但在大部分情況下，直接存取並非必要。 如需用戶端應用程式服務類別的詳細資訊，請參閱本主題的＜用戶端應用程式服務類別＞一節。  
   
 -   離線支援。 Windows 應用程式經常需要在偶爾才能連線的環境中運作。 當您的應用程式在線上時，用戶端服務提供者會快取從伺服器擷取的值，供應用程式離線時使用。  
   
--   與 [!INCLUDE[vsprvs](../../../includes/vsprvs-md.md)] 應用程式設定設計工具整合。 當您將設定加入您在 [!INCLUDE[vsprvs](../../../includes/vsprvs-md.md)] 的專案中時，您可以指定哪些設定要透過用戶端設定服務提供者存取。  
+-   與 Visual Studio 應用程式設定設計工具整合。 當您將設定加入 Visual Studio 中的專案時，可以指定要透過用戶端設定服務提供者來存取的設定。  
   
  下列章節將詳述這些功能。 如需 [!INCLUDE[ajax_current_short](../../../includes/ajax-current-short-md.md)] 應用程式服務的詳細資訊，請參閱 [ASP.NET 應用程式服務概觀](http://msdn.microsoft.com/library/1162e529-0d70-44b2-b3ab-83e60c695013)。  
   
@@ -61,9 +61,9 @@ ms.lasthandoff: 04/26/2018
  如需如何設定 [!INCLUDE[ajax_current_short](../../../includes/ajax-current-short-md.md)] 角色服務的相關資訊，請參閱[透過 Microsoft Ajax 使用角色資訊](http://msdn.microsoft.com/library/280f6ad9-ba1a-4fc9-b0cc-22e39e54a82d)。  
   
 ## <a name="settings"></a>設定  
- 您可以利用用戶端服務，從現有的 [!INCLUDE[ajax_current_short](../../../includes/ajax-current-short-md.md)] 設定檔服務擷取使用者應用程式設定。 用戶端應用程式服務的 Web 設定功能，會與 [!INCLUDE[dnprdnlong](../../../includes/dnprdnlong-md.md)] 中所提供的應用程式設定功能相整合。 若要擷取 Web 設定，請先使用 [!INCLUDE[vsprvs](../../../includes/vsprvs-md.md)] 專案設計工具的 [設定] 索引標籤，為您的專案產生 `Settings` 類別 (在 C# 中以 `Properties.Settings.Default` 存取，在 Visual Basic 中以 `My.Settings` 存取)。 在 [設定] 索引標籤上，您可以使用 [載入 Web 設定] 按鈕，擷取 Web 設定並將其加入所產生的 `Settings` 類別。 您可以使用設定要供所有經過驗證的使用者或所有匿名使用者使用的 Web 設定。  
+ 您可以利用用戶端服務，從現有的 [!INCLUDE[ajax_current_short](../../../includes/ajax-current-short-md.md)] 設定檔服務擷取使用者應用程式設定。 用戶端應用程式服務的 Web 設定功能，會與 [!INCLUDE[dnprdnlong](../../../includes/dnprdnlong-md.md)] 中所提供的應用程式設定功能相整合。 若要擷取 Web 設定，請先使用 Visual Studio 專案設計工具的 [設定] 索引標籤，為您的專案產生 `Settings` 類別 (在 C# 中以 `Properties.Settings.Default` 存取，在 Visual Basic 中以 `My.Settings` 存取)。 在 [設定] 索引標籤上，您可以使用 [載入 Web 設定] 按鈕，擷取 Web 設定並將其加入所產生的 `Settings` 類別。 您可以使用設定要供所有經過驗證的使用者或所有匿名使用者使用的 Web 設定。  
   
- 如需應用程式設定的詳細資訊，請參閱[應用程式設定概觀](../../../docs/framework/winforms/advanced/application-settings-overview.md)。 如需如何實作您自己的設定類別，而不是如何在 [!INCLUDE[vsprvs](../../../includes/vsprvs-md.md)] 中產生此設定類別的相關資訊，請參閱[如何：建立應用程式設定](../../../docs/framework/winforms/advanced/how-to-create-application-settings.md)。 如需如何設定 [!INCLUDE[ajax_current_short](../../../includes/ajax-current-short-md.md)] 設定檔服務的相關資訊，請參閱[透過 Microsoft Ajax 使用設定檔資訊](http://msdn.microsoft.com/library/91239ae6-d01c-4f4e-a433-eb9040dbed61)。  
+ 如需應用程式設定的詳細資訊，請參閱[應用程式設定概觀](../../../docs/framework/winforms/advanced/application-settings-overview.md)。 如需如何實作您自己的設定類別，而不是如何在 Visual Studio 中產生此設定類別的相關資訊，請參閱[如何：建立應用程式設定](../../../docs/framework/winforms/advanced/how-to-create-application-settings.md)。 如需如何設定 [!INCLUDE[ajax_current_short](../../../includes/ajax-current-short-md.md)] 設定檔服務的相關資訊，請參閱[透過 Microsoft Ajax 使用設定檔資訊](http://msdn.microsoft.com/library/91239ae6-d01c-4f4e-a433-eb9040dbed61)。  
   
 ## <a name="client-application-services-classes"></a>用戶端應用程式服務類別  
  下列資料表描述實作用戶端應用程式服務功能的類別。  

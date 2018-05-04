@@ -1,31 +1,20 @@
 ---
-title: "&lt;接聽程式&gt;元素&lt;追蹤&gt;"
-ms.custom: 
+title: '&lt;接聽程式&gt;元素&lt;追蹤&gt;'
 ms.date: 03/30/2017
-ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.technology:
-- dotnet-clr
-ms.tgt_pltfrm: 
-ms.topic: article
 f1_keywords:
 - http://schemas.microsoft.com/.NetConfiguration/v2.0#configuration/system.diagnostics/trace/listeners
 helpviewer_keywords:
 - <listeners> element
 - listeners element
 ms.assetid: 1394c2c3-6304-46db-87c1-8e8b16f5ad5b
-caps.latest.revision: 
 author: mcleblanc
 ms.author: markl
 manager: markl
-ms.workload:
-- dotnet
-ms.openlocfilehash: b9c1f52f880a38791a9a8d5b5372b2ad53c5569f
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.openlocfilehash: 2f0d795d6a8789772ff3fd46648fbc0d683c66e5
+ms.sourcegitcommit: 11f11ca6cefe555972b3a5c99729d1a7523d8f50
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="ltlistenersgt-element-for-lttracegt"></a>&lt;接聽程式&gt;元素&lt;追蹤&gt;
 指定的接聽程式會收集，存放區，並將訊息路由。 接聽程式將追蹤輸出導向至適當的目標。  
@@ -46,12 +35,12 @@ ms.lasthandoff: 12/22/2017
 ```  
   
 ## <a name="attributes-and-elements"></a>屬性和項目  
- 下列章節說明屬性、子項目和父項目。  
+ 下列各節描述屬性、子項目和父項目。  
   
 ### <a name="attributes"></a>屬性  
  無。  
   
-### <a name="child-elements"></a>子元素  
+### <a name="child-elements"></a>子項目  
   
 |項目|描述|  
 |-------------|-----------------|  
@@ -74,7 +63,7 @@ ms.lasthandoff: 12/22/2017
  此項目可以用於電腦組態檔 (Machine.config) 和應用程式組態檔。  
   
 ## <a name="example"></a>範例  
- 下列範例示範如何使用**\<接聽程式 >**項目將接聽項`MyListener`和`MyEventListener`至**接聽程式**集合。 `MyListener`建立名為的檔案`MyListener.log`並將輸出寫入檔案。 `MyEventListener`事件記錄檔中建立項目。  
+ 下列範例示範如何使用**\<接聽程式 >** 項目將接聽項`MyListener`和`MyEventListener`至**接聽程式**集合。 `MyListener` 建立名為的檔案`MyListener.log`並將輸出寫入檔案。 `MyEventListener` 事件記錄檔中建立項目。  
   
 ```xml  
 <configuration>  
@@ -97,6 +86,6 @@ ms.lasthandoff: 12/22/2017
 </configuration>  
 ```  
   
-## <a name="see-also"></a>請參閱  
+## <a name="see-also"></a>另請參閱  
  <xref:System.Diagnostics.TraceListener>  
  [追蹤和偵錯設定結構描述](../../../../../docs/framework/configure-apps/file-schema/trace-debug/index.md)

@@ -1,27 +1,15 @@
 ---
-title: "查詢執行"
-ms.custom: 
+title: 查詢執行
 ms.date: 03/30/2017
-ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.technology: dotnet-ado
-ms.tgt_pltfrm: 
-ms.topic: article
 dev_langs:
 - csharp
 - vb
 ms.assetid: c0e6cf23-63ac-47dd-bfe9-d5bdca826fac
-caps.latest.revision: "2"
-author: douglaslMS
-ms.author: douglasl
-manager: craigg
-ms.workload: dotnet
-ms.openlocfilehash: db246037c388408e5722582049cf7a2b902caa18
-ms.sourcegitcommit: ed26cfef4e18f6d93ab822d8c29f902cff3519d1
+ms.openlocfilehash: 7be5ca95732b4ddadf851ccf839e31be3c5b47bf
+ms.sourcegitcommit: 11f11ca6cefe555972b3a5c99729d1a7523d8f50
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 01/17/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="query-execution"></a>查詢執行
 使用者建立 LINQ 查詢之後，查詢就會轉換成命令樹。 命令樹一種可與 Entity Framework 比較的查詢表示方式。 接下來命令樹會針對資料來源執行。 查詢執行期間會評估所有查詢運算式 (也就是查詢的所有元件)，包括結果具體化中使用的運算式。  

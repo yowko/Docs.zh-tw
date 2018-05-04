@@ -1,27 +1,15 @@
 ---
-title: "GetSchema 和結構描述集合"
-ms.custom: 
+title: GetSchema 和結構描述集合
 ms.date: 03/30/2017
-ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.technology: dotnet-ado
-ms.tgt_pltfrm: 
-ms.topic: article
 dev_langs:
 - csharp
 - vb
 ms.assetid: 7ab93b89-1221-427c-84ad-04803b3c64b4
-caps.latest.revision: "4"
-author: douglaslMS
-ms.author: douglasl
-manager: craigg
-ms.workload: dotnet
-ms.openlocfilehash: 5c622dde5e73c84c3b317ffc2652c79632be89e2
-ms.sourcegitcommit: ed26cfef4e18f6d93ab822d8c29f902cff3519d1
+ms.openlocfilehash: 1694a6de515e5326264f345f50d0730fe2a62e4f
+ms.sourcegitcommit: 11f11ca6cefe555972b3a5c99729d1a7523d8f50
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 01/17/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="getschema-and-schema-collections"></a>GetSchema 和結構描述集合
 **連接**中每個.NET Framework managed 提供者實作的類別**GetSchema**方法用來擷取目前連接的資料庫結構描述資訊和從傳回的結構描述資訊**GetSchema**方法的形式提供<xref:System.Data.DataTable>。 **GetSchema**方法是多載的方法，為指定要傳回結構描述集合及限制傳回的資訊量，提供選擇性參數。  
@@ -115,6 +103,6 @@ class Program
 }  
 ```  
   
-## <a name="see-also"></a>請參閱  
+## <a name="see-also"></a>另請參閱  
  [擷取資料庫結構描述資訊](../../../../docs/framework/data/adonet/retrieving-database-schema-information.md)  
  [ADO.NET Managed 提供者和 DataSet 開發人員中心](http://go.microsoft.com/fwlink/?LinkId=217917)

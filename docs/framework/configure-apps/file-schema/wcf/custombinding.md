@@ -1,30 +1,18 @@
 ---
 title: '&lt;customBinding&gt;'
-ms.custom: 
 ms.date: 03/30/2017
-ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.technology: dotnet-clr
-ms.tgt_pltfrm: 
-ms.topic: article
 ms.assetid: 9da4f960-f64e-4d8a-894d-2b09eba5ce4b
-caps.latest.revision: "24"
-author: dotnet-bot
-ms.author: dotnetcontent
-manager: wpickett
-ms.workload: dotnet
-ms.openlocfilehash: e5a95d677588beaa41e94f12550ba8647202ffe3
-ms.sourcegitcommit: c0dd436f6f8f44dc80dc43b07f6841a00b74b23f
+ms.openlocfilehash: 5d423a29430284c904bcfe8eb11ec470a62ecf57
+ms.sourcegitcommit: 11f11ca6cefe555972b3a5c99729d1a7523d8f50
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 01/19/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="ltcustombindinggt"></a>&lt;customBinding&gt;
 對使用者提供訊息堆疊的完整控制權。  
   
  \<system.serviceModel>  
-\<bindings>  
+\<繫結 >  
 \<customBinding>  
   
 ## <a name="syntax"></a>語法  
@@ -198,7 +186,7 @@ ms.lasthandoff: 01/19/2018
 |receiveTimeout|<xref:System.TimeSpan> 值，指定接收作業完成其作業之時間間隔。 這個值應該大於或等於 <xref:System.TimeSpan.Zero>。 預設為 00:01:00。|  
 |sendTimeout|<xref:System.TimeSpan> 值，指定提供用來讓傳送作業完成的時間間隔。 這個值應該大於或等於 <xref:System.TimeSpan.Zero>。 預設為 00:01:00。|  
   
-### <a name="child-elements"></a>子元素  
+### <a name="child-elements"></a>子項目  
   
 |項目|描述|  
 |-------------|-----------------|  
@@ -241,7 +229,7 @@ ms.lasthandoff: 01/19/2018
   
 -   接下來是選擇性 <xref:System.ServiceModel.Channels.ReliableSessionBindingElement>，它會提供 WS-ReliableMessaging 規格中所定義的工作階段和排序機制。 這個工作階段概念可以跨越 SOAP 和傳輸媒介。  
   
--   接下來是選擇性安全性繫結項目，它會提供類似授權、驗證 (Authentication)、保護和機密性等安全性功能。 下列安全性繫結項目是由 [!INCLUDE[indigo1](../../../../../includes/indigo1-md.md)] 所提供：  
+-   接下來是選擇性安全性繫結項目，它會提供類似授權、驗證 (Authentication)、保護和機密性等安全性功能。 Windows Communication Foundation (WCF) 提供下列安全性繫結項目：  
   
     -   <xref:System.ServiceModel.Channels.SecurityBindingElement>  
   
@@ -271,7 +259,7 @@ ms.lasthandoff: 01/19/2018
   
     -   <xref:System.ServiceModel.Channels.MtomMessageEncodingBindingElement>  
   
--   最下方是必要的傳輸項目。 您可以使用自己的傳輸或是使用 [!INCLUDE[indigo1](../../../../../includes/indigo1-md.md)] 提供的其中一個傳輸繫結項目：  
+-   最下方是必要的傳輸項目。 您可以使用自己的傳輸，或使用的其中一個傳輸繫結項目提供 Windows Communication Foundation (WCF):  
   
     -   <xref:System.ServiceModel.Channels.TcpTransportBindingElement>  
   
@@ -305,12 +293,12 @@ ms.lasthandoff: 01/19/2018
   
 1.  
   
-## <a name="see-also"></a>請參閱  
+## <a name="see-also"></a>另請參閱  
  <xref:System.ServiceModel.Channels.Binding>  
  <xref:System.ServiceModel.Channels.BindingElement>  
  <xref:System.ServiceModel.Configuration.BindingsSection>  
  <xref:System.ServiceModel.Channels.CustomBinding>  
- [\<binding>](../../../../../docs/framework/misc/binding.md)  
+ [\<繫結 >](../../../../../docs/framework/misc/binding.md)  
  [繫結](../../../../../docs/framework/wcf/bindings.md)  
  [擴充繫結](../../../../../docs/framework/wcf/extending/extending-bindings.md)  
  [自訂繫結](../../../../../docs/framework/wcf/extending/custom-bindings.md)  

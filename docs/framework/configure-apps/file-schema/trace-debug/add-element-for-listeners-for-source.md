@@ -1,14 +1,6 @@
 ---
-title: "&lt;新增&gt;元素&lt;接聽程式&gt;如&lt;來源&gt;"
-ms.custom: 
+title: '&lt;新增&gt;元素&lt;接聽程式&gt;如&lt;來源&gt;'
 ms.date: 03/30/2017
-ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.technology:
-- dotnet-clr
-ms.tgt_pltfrm: 
-ms.topic: article
 f1_keywords:
 - http://schemas.microsoft.com/.NetConfiguration/v2.0#configuration/system.diagnostics/sources/source/listeners/add
 helpviewer_keywords:
@@ -16,17 +8,14 @@ helpviewer_keywords:
 - add element for <listeners> for <source>
 - <add> element for <listeners> for <source>
 ms.assetid: 4ce36ac1-81ef-48e8-b8b2-b5a5b0e2adcb
-caps.latest.revision: 
 author: mcleblanc
 ms.author: markl
 manager: markl
-ms.workload:
-- dotnet
-ms.openlocfilehash: 86177010d8ed70302b51ec9c416a3295009e7394
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.openlocfilehash: ba8ff652003a9167ec370643797ac9300b83889a
+ms.sourcegitcommit: 11f11ca6cefe555972b3a5c99729d1a7523d8f50
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="ltaddgt-element-for-ltlistenersgt-for-ltsourcegt"></a>&lt;新增&gt;元素&lt;接聽程式&gt;如&lt;來源&gt;
 將接聽項新增至追蹤來源的 `Listeners` 集合。  
@@ -47,7 +36,7 @@ ms.lasthandoff: 12/22/2017
 ```  
   
 ## <a name="attributes-and-elements"></a>屬性和項目  
- 下列章節說明屬性、子項目和父項目。  
+ 下列各節描述屬性、子項目和父項目。  
   
 ### <a name="attributes"></a>屬性  
   
@@ -57,9 +46,9 @@ ms.lasthandoff: 12/22/2017
 |`initializeData`|選擇性屬性。<br /><br /> 指定的類別傳遞至建構函式的字串。 A<xref:System.Configuration.ConfigurationException>如果類別沒有可接受 string 建構函式會擲回。|  
 |`name`|選擇性屬性。<br /><br /> 指定的接聽程式名稱。|  
 |`traceOutputOptions`|選擇性屬性。<br /><br /> 指定<xref:System.Diagnostics.TraceListener.TraceOutputOptions%2A>追蹤接聽程式的屬性值。|  
-|[自訂屬性]|選擇性屬性。<br /><br /> 指定的值所識別的接聽程式的特定屬性<xref:System.Diagnostics.TraceListener.GetSupportedAttributes%2A>該接聽項的方法。 <xref:System.Diagnostics.DelimitedListTraceListener.Delimiter%2A>是唯一的額外屬性範例<xref:System.Diagnostics.DelimitedListTraceListener>類別。|  
+|[自訂屬性]|選擇性屬性。<br /><br /> 指定的值所識別的接聽程式的特定屬性<xref:System.Diagnostics.TraceListener.GetSupportedAttributes%2A>該接聽項的方法。 <xref:System.Diagnostics.DelimitedListTraceListener.Delimiter%2A> 是唯一的額外屬性範例<xref:System.Diagnostics.DelimitedListTraceListener>類別。|  
   
-### <a name="child-elements"></a>子元素  
+### <a name="child-elements"></a>子項目  
   
 |項目|描述|  
 |-------------|-----------------|  
@@ -131,7 +120,7 @@ ms.lasthandoff: 12/22/2017
 </configuration>   
 ```  
   
-## <a name="see-also"></a>請參閱  
+## <a name="see-also"></a>另請參閱  
  <xref:System.Diagnostics.TraceSource>  
  <xref:System.Diagnostics.TraceListener>  
  [追蹤和偵錯設定結構描述](../../../../../docs/framework/configure-apps/file-schema/trace-debug/index.md)  

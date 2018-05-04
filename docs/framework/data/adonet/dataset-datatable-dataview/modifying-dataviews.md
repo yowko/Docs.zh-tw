@@ -1,27 +1,15 @@
 ---
-title: "修改 DataView"
-ms.custom: 
+title: 修改 DataView
 ms.date: 03/30/2017
-ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.technology: dotnet-ado
-ms.tgt_pltfrm: 
-ms.topic: article
 dev_langs:
 - csharp
 - vb
 ms.assetid: 697a3991-b660-4a5a-8a54-1a2304ff158e
-caps.latest.revision: "4"
-author: douglaslMS
-ms.author: douglasl
-manager: craigg
-ms.workload: dotnet
-ms.openlocfilehash: c31f256bb86f007a9d083370d116464607cde236
-ms.sourcegitcommit: ed26cfef4e18f6d93ab822d8c29f902cff3519d1
+ms.openlocfilehash: 3663b0317176495b13b1092652bd8bf4c79f30d2
+ms.sourcegitcommit: 11f11ca6cefe555972b3a5c99729d1a7523d8f50
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 01/17/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="modifying-dataviews"></a>修改 DataView
 您可以使用 <xref:System.Data.DataView> 加入、刪除或修改基底資料表中的資料列。 能夠使用**DataView**來修改基礎資料表中的資料由設定其中的三個布林值屬性**DataView**。 這些屬性是 <xref:System.Data.DataView.AllowNew%2A>、<xref:System.Data.DataView.AllowEdit%2A> 和 <xref:System.Data.DataView.AllowDelete%2A>。 它們會設定為**true**預設。  
@@ -62,7 +50,7 @@ newDRV["CompanyName"] = "ABC Products";
 newDRV.EndEdit();  
 ```  
   
-## <a name="see-also"></a>請參閱  
+## <a name="see-also"></a>另請參閱  
  <xref:System.Data.DataTable>  
  <xref:System.Data.DataView>  
  <xref:System.Data.DataRowView>  

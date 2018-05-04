@@ -18,14 +18,14 @@ ms.author: dotnetcontent
 manager: wpickett
 ms.workload:
 - dotnet
-ms.openlocfilehash: e7c6d31293109a0d778136235ccfc894aeba8574
-ms.sourcegitcommit: 86adcc06e35390f13c1e372c36d2e044f1fc31ef
+ms.openlocfilehash: f8a6c6be6874c1a90c9e40b5b82d833aeaa9b63a
+ms.sourcegitcommit: 2042de78fcdceebb6b8ac4b7a292b93e8782cbf5
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/26/2018
+ms.lasthandoff: 04/27/2018
 ---
 # <a name="how-to-configure-client-application-services"></a>如何：設定用戶端應用程式服務
-本主題說明如何使用 [!INCLUDE[vsprvs](../../../includes/vsprvs-md.md)] [專案設計工具] 啟用及設定用戶端應用程式服務。 您可以使用用戶端應用程式服務來驗證使用者，以及從現有的 [!INCLUDE[ajax_current_short](../../../includes/ajax-current-short-md.md)] 應用程式服務擷取使用者角色和設定。 設定後，您可以依照[用戶端應用程式服務概觀](../../../docs/framework/common-client-technologies/client-application-services-overview.md)中所述，在應用程式程式碼中存取已啟用的服務。 如需 [!INCLUDE[ajax_current_short](../../../includes/ajax-current-short-md.md)] 應用程式服務的詳細資訊，請參閱 [ASP.NET 應用程式服務概觀](http://msdn.microsoft.com/library/1162e529-0d70-44b2-b3ab-83e60c695013)。  
+本主題說明如何使用 Visual Studio **專案設計工具**啟用及設定用戶端應用程式服務。 您可以使用用戶端應用程式服務來驗證使用者，以及從現有的 [!INCLUDE[ajax_current_short](../../../includes/ajax-current-short-md.md)] 應用程式服務擷取使用者角色和設定。 設定後，您可以依照[用戶端應用程式服務概觀](../../../docs/framework/common-client-technologies/client-application-services-overview.md)中所述，在應用程式程式碼中存取已啟用的服務。 如需 [!INCLUDE[ajax_current_short](../../../includes/ajax-current-short-md.md)] 應用程式服務的詳細資訊，請參閱 [ASP.NET 應用程式服務概觀](http://msdn.microsoft.com/library/1162e529-0d70-44b2-b3ab-83e60c695013)。  
   
  您可以在 [專案設計工具] 的 [服務] 頁面上，啟用及設定用戶端應用程式服務。 [服務] 頁面會更新專案之 App.config 檔中的值。 若要存取 [專案設計工具]，請使用 [專案] 功能表上的 [屬性] 命令。 如需 [服務] 頁面的詳細資訊，請參閱[專案設計工具、服務頁](https://msdn.microsoft.com/library/bb398109)。  
   
@@ -100,7 +100,7 @@ ms.lasthandoff: 04/26/2018
   
      `Data Source = |SQL/CE|` 的預設值會顯示在文字方塊中。  
   
-3.  若要產生並使用 SQL Server Compact 資料庫，請保留預設連接字串值。 [!INCLUDE[vsprvs](../../../includes/vsprvs-md.md)] 會產生資料庫檔案，並放入 <xref:System.Windows.Forms.Application.UserAppDataPath%2A?displayProperty=nameWithType> 屬性指示的目錄中。  
+3.  若要產生並使用 SQL Server Compact 資料庫，請保留預設連接字串值。 Visual Studio 會產生資料庫檔案，並放入 <xref:System.Windows.Forms.Application.UserAppDataPath%2A?displayProperty=nameWithType> 屬性指示的目錄中。  
   
 4.  若要產生並使用加密的 [!INCLUDE[ssEW](../../../includes/ssew-md.md)] 資料庫，請將 `password` 和 `encrypt database` 值加入至連接字串，如下列範例所示。  
   

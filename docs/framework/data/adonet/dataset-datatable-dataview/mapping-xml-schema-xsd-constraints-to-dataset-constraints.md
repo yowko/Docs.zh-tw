@@ -1,24 +1,12 @@
 ---
-title: "將 XML 結構描述 (XSD) 條件約束對應至資料集條件約束"
-ms.custom: 
+title: 將 XML 結構描述 (XSD) 條件約束對應至資料集條件約束
 ms.date: 03/30/2017
-ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.technology: dotnet-ado
-ms.tgt_pltfrm: 
-ms.topic: article
 ms.assetid: 3d0d1a4b-9104-434f-ac04-6c01ab5716b5
-caps.latest.revision: "4"
-author: douglaslMS
-ms.author: douglasl
-manager: craigg
-ms.workload: dotnet
-ms.openlocfilehash: f403dc974e4fe67d239688f587061cd23a8deff6
-ms.sourcegitcommit: ed26cfef4e18f6d93ab822d8c29f902cff3519d1
+ms.openlocfilehash: 0a23e7a7ab6456125559ffd8fa19ffa5eba9335d
+ms.sourcegitcommit: 11f11ca6cefe555972b3a5c99729d1a7523d8f50
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 01/17/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="mapping-xml-schema-xsd-constraints-to-dataset-constraints"></a>將 XML 結構描述 (XSD) 條件約束對應至資料集條件約束
 XML 結構描述定義語言 (XSD) 允許在其定義的項目和屬性上指定條件約束。 對應到關聯式結構描述中的 XML 結構描述時<xref:System.Data.DataSet>，XML 結構描述條件約束會對應至適當的資料表與資料行內的關聯式條件約束**資料集**。  
@@ -54,5 +42,5 @@ XML 結構描述定義語言 (XSD) 允許在其定義的項目和屬性上指定
  [從 XML 結構描述 (XSD) 產生資料集關聯](../../../../../docs/framework/data/adonet/dataset-datatable-dataview/generating-dataset-relations-from-xml-schema-xsd.md)  
  說明用來在資料表資料行間建立關聯的 XML 結構描述項目**資料集**。  
   
-## <a name="see-also"></a>請參閱  
+## <a name="see-also"></a>另請參閱  
  [ADO.NET Managed 提供者和 DataSet 開發人員中心](http://go.microsoft.com/fwlink/?LinkId=217917)

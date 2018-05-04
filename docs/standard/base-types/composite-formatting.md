@@ -26,11 +26,11 @@ manager: wpickett
 ms.workload:
 - dotnet
 - dotnetcore
-ms.openlocfilehash: 156ef0f063219f5e78084dd664b64699d33e6593
-ms.sourcegitcommit: 935d5267c44f9bce801468ef95f44572f1417e8c
+ms.openlocfilehash: 473669b4aaa0782fec32fb0e2d89875c4ab7a838
+ms.sourcegitcommit: 94d33cadc5ff81d2ac389bf5f26422c227832052
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 03/28/2018
+ms.lasthandoff: 04/30/2018
 ---
 # <a name="composite-formatting"></a>複合格式
 .NET 複合格式功能會採用物件清單和複合格式字串作為輸入。 複合格式字串是由混合索引替代符號 (Placeholder) 的固定文字所組成 (這些符號稱為對應至清單內物件的格式項目)。 格式作業產生的結果字串是由原始固定文字所組成，這些固定文字混合了清單中代表物件的字串。  
@@ -74,7 +74,7 @@ ms.lasthandoff: 03/28/2018
  [!code-csharp[Formatting.Composite#7](../../../samples/snippets/csharp/VS_Snippets_CLR/Formatting.Composite/cs/index1.cs#7)]
  [!code-vb[Formatting.Composite#7](../../../samples/snippets/visualbasic/VS_Snippets_CLR/Formatting.Composite/vb/index1.vb#7)]  
   
- 多個格式項目可以藉由指定相同參數規範來參考物件清單中的相同項目。 例如，您可以指定複合格式字串 (例如："0x{0:X} {0:E} {0:N}") 來格式化十六進位、科學格式和數字格式的相同數值，如下列範例所示。  
+ 多個格式項目可以藉由指定相同參數規範來參考物件清單中的相同項目。 例如，您可以指定複合格式字串 (例如："0x{0:X} {0:E} {0:N}") 來將同一個數值設定成十六進位、科學記號和數字格式，如下列範例所示。  
   
  [!code-csharp[Formatting.Composite#10](../../../samples/snippets/csharp/VS_Snippets_CLR/Formatting.Composite/cs/index1.cs#10)]
  [!code-vb[Formatting.Composite#10](../../../samples/snippets/visualbasic/VS_Snippets_CLR/Formatting.Composite/vb/index1.vb#10)]  
@@ -137,7 +137,7 @@ ms.lasthandoff: 03/28/2018
   
     -   對於日期和時間值，如果呼叫具有非 null <xref:System.IFormatProvider> 引數的複合格式方法，則執行階段會從其 <xref:System.Globalization.DateTimeFormatInfo> 方法要求 <xref:System.IFormatProvider.GetFormat%2A?displayProperty=nameWithType> 物件。 如果無法提供、如果引數的值為 `null`，或者如果複合格式方法沒有 <xref:System.IFormatProvider> 參數，則會使用目前執行緒文化特性的 <xref:System.Globalization.DateTimeFormatInfo> 物件。  
   
-    -   對於其他類型的物件，如果使用 <xref:System.IFormatProvider> 引數呼叫複合格式，其值 (包括未提供 `null` 物件時的 <xref:System.IFormatProvider>) 會直接傳遞至 <xref:System.IFormattable.ToString%2A?displayProperty=nameWithType> 實作。  否則，表示目前執行緒文化特性的 <xref:System.Globalization.CultureInfo> 物件會傳遞至 <xref:System.IFormattable.ToString%2A?displayProperty=nameWithType> 實作。  
+    -   對於其他類型的物件，如果呼叫複合格式時包含 <xref:System.IFormatProvider> 引數，它的值會直接傳遞至 <xref:System.IFormattable.ToString%2A?displayProperty=nameWithType> 實作。 否則會傳遞 `null` 至 <xref:System.IFormattable.ToString%2A?displayProperty=nameWithType> 實作。  
   
 4.  呼叫類型的無參數 `ToString` 方法，該方法會覆寫 <xref:System.Object.ToString?displayProperty=nameWithType> 或繼承其基底類別的行為。 在這種情況下，會忽略 *formatString* 元件在格式項目中指定的格式字串 (如果有的話)。  
   

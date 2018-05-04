@@ -1,14 +1,6 @@
 ---
-title: "&lt;新增&gt;元素&lt;接聽程式&gt;如&lt;追蹤&gt;"
-ms.custom: 
+title: '&lt;新增&gt;元素&lt;接聽程式&gt;如&lt;追蹤&gt;'
 ms.date: 03/30/2017
-ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.technology:
-- dotnet-clr
-ms.tgt_pltfrm: 
-ms.topic: article
 f1_keywords:
 - http://schemas.microsoft.com/.NetConfiguration/v2.0#configuration/system.diagnostics/trace/listeners/add
 helpviewer_keywords:
@@ -16,17 +8,14 @@ helpviewer_keywords:
 - <add> element for <listeners>
 - add element for <listeners>
 ms.assetid: 81e804a3-ef11-4d39-bbde-bfa012c179e2
-caps.latest.revision: 
 author: mcleblanc
 ms.author: markl
 manager: markl
-ms.workload:
-- dotnet
-ms.openlocfilehash: eb624052c3638cb49abe143ebd4173a5ee85a054
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.openlocfilehash: e27187c05b49b7f73ef19243a3286e8c1de71579
+ms.sourcegitcommit: 11f11ca6cefe555972b3a5c99729d1a7523d8f50
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="ltaddgt-element-for-ltlistenersgt-for-lttracegt"></a>&lt;新增&gt;元素&lt;接聽程式&gt;如&lt;追蹤&gt;
 加入至接聽程式**接聽程式**集合。  
@@ -46,7 +35,7 @@ ms.lasthandoff: 12/22/2017
 ```  
   
 ## <a name="attributes-and-elements"></a>屬性和項目  
- 下列章節說明屬性、子項目和父項目。  
+ 下列各節描述屬性、子項目和父項目。  
   
 ### <a name="attributes"></a>屬性  
   
@@ -56,7 +45,7 @@ ms.lasthandoff: 12/22/2017
 |**initializeData**|選擇性屬性。<br /><br /> 指定的類別傳遞至建構函式的字串。|  
 |**name**|選擇性屬性。<br /><br /> 指定的接聽程式名稱。|  
   
-### <a name="child-elements"></a>子元素  
+### <a name="child-elements"></a>子項目  
   
 |項目|描述|  
 |-------------|-----------------|  
@@ -96,7 +85,7 @@ ms.lasthandoff: 12/22/2017
 |<xref:System.Diagnostics.XmlWriterTraceListener?displayProperty=nameWithType>|檔案的名稱，<xref:System.Diagnostics.XmlWriterTraceListener>寫入。|  
   
 ## <a name="example"></a>範例  
- 下列範例示範如何使用**\<新增 >**項目將接聽項`MyListener`和`MyEventListener`至**接聽程式**集合。 `MyListener`建立名為的檔案`MyListener.log`並將輸出寫入檔案。 `MyEventListener`事件記錄檔中建立項目。  
+ 下列範例示範如何使用**\<新增 >** 項目將接聽項`MyListener`和`MyEventListener`至**接聽程式**集合。 `MyListener` 建立名為的檔案`MyListener.log`並將輸出寫入檔案。 `MyEventListener` 事件記錄檔中建立項目。  
   
 ```xml  
 <configuration>  
@@ -114,7 +103,7 @@ ms.lasthandoff: 12/22/2017
 </configuration>  
 ```  
   
-## <a name="see-also"></a>請參閱  
+## <a name="see-also"></a>另請參閱  
  <xref:System.Diagnostics.Trace>  
  <xref:System.Diagnostics.Debug>  
  <xref:System.Diagnostics.EventLogTraceListener>  

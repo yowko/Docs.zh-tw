@@ -16,14 +16,14 @@ ms.author: dotnetcontent
 manager: wpickett
 ms.workload:
 - dotnet
-ms.openlocfilehash: 510d523cea78aa16a16adc8572c839e95059c068
-ms.sourcegitcommit: 03ee570f6f528a7d23a4221dcb26a9498edbdf8c
-ms.translationtype: MT
+ms.openlocfilehash: 9ce948a9239e7a8171424fa9f1cf0fa8624d0156
+ms.sourcegitcommit: 11f11ca6cefe555972b3a5c99729d1a7523d8f50
+ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/28/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="transport-wse-30-tcp-interoperability"></a>傳輸：WSE 3.0 TCP 互通性
-WSE 3.0 TCP 互通性傳輸範例會示範如何實作 TCP 雙工工作階段，以做為自訂 [!INCLUDE[indigo1](../../../../includes/indigo1-md.md)] 傳輸。 也會示範如何使用通道層的擴充性，透過網路與現有的已部署系統相連結。 下列步驟會顯示如何建置此自訂 [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] 傳輸：  
+WSE 3.0 TCP 互通性傳輸範例示範如何實作 TCP 雙工工作階段做為自訂的 Windows Communication Foundation (WCF) 傳輸。 也會示範如何使用通道層的擴充性，透過網路與現有的已部署系統相連結。 下列步驟會顯示如何建置此自訂 [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] 傳輸：  
   
 1.  從 TCP 通訊端 (Socket) 開始，建立會使用 DIME 框架來描述訊息界限之 <xref:System.ServiceModel.Channels.IDuplexSessionChannel> 的用戶端和伺服器實作。  
   

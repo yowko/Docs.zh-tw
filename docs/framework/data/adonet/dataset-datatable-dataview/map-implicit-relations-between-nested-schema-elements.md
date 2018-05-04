@@ -1,24 +1,12 @@
 ---
-title: "在巢狀結構描述項目之間進行隱含關聯對應"
-ms.custom: 
+title: 在巢狀結構描述項目之間進行隱含關聯對應
 ms.date: 03/30/2017
-ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.technology: dotnet-ado
-ms.tgt_pltfrm: 
-ms.topic: article
 ms.assetid: 6b25002a-352e-4d9b-bae3-15129458a355
-caps.latest.revision: "4"
-author: douglaslMS
-ms.author: douglasl
-manager: craigg
-ms.workload: dotnet
-ms.openlocfilehash: 740d45c47f46c311ed703fa11ec86a9739930944
-ms.sourcegitcommit: ed26cfef4e18f6d93ab822d8c29f902cff3519d1
+ms.openlocfilehash: 1bce0c2815ac94787055794942807777232df295
+ms.sourcegitcommit: 11f11ca6cefe555972b3a5c99729d1a7523d8f50
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 01/17/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="map-implicit-relations-between-nested-schema-elements"></a>在巢狀結構描述項目之間進行隱含關聯對應
 XML 結構描述定義語言 (XSD) 結構描述可以是互呈巢狀的複雜型別。 在這樣的情況下，對應處理序會在 <xref:System.Data.DataSet> 內套用預設對應並建立下列各項：  
@@ -27,7 +15,7 @@ XML 結構描述定義語言 (XSD) 結構描述可以是互呈巢狀的複雜型
   
 -   如果沒有唯一的條件約束存在於父代，一個額外主索引鍵資料行每個資料表定義名為*TableName*_Id 其中*TableName*是父資料表的名稱。  
   
--   識別主索引鍵資料行在父資料表上的主索引鍵條件約束 (藉由設定**IsPrimaryKey**屬性**True**)。 條件約束命名為 Constraint *#* 其中 *#* 是 1、 2、 3，依此類推。 例如，第一個條件約束的預設名稱是 Constraint1。  
+-   識別主索引鍵資料行在父資料表上的主索引鍵條件約束 (藉由設定**IsPrimaryKey**屬性**True**)。 條件約束命名為 Constraint*#* 其中*#* 是 1、 2、 3，依此類推。 例如，第一個條件約束的預設名稱是 Constraint1。  
   
 -   子資料表中的外部索引鍵條件約束將另一個資料行識別為外部索引鍵，此外部索引鍵參考至父資料表的主索引鍵。 名為條件約束*ParentTable_ChildTable*其中*ParentTable*是父資料表的名稱和*ChildTable*是子資料表的名稱。  
   
@@ -108,7 +96,7 @@ XML 結構描述定義語言 (XSD) 結構描述可以是互呈巢狀的複雜型
     Nested: True  
     ```  
   
-## <a name="see-also"></a>請參閱  
+## <a name="see-also"></a>另請參閱  
  [從 XML 結構描述 (XSD) 產生資料集關聯](../../../../../docs/framework/data/adonet/dataset-datatable-dataview/generating-dataset-relations-from-xml-schema-xsd.md)  
  [將 XML 結構描述 (XSD) 條件約束對應至資料集條件約束](../../../../../docs/framework/data/adonet/dataset-datatable-dataview/mapping-xml-schema-xsd-constraints-to-dataset-constraints.md)  
  [ADO.NET Managed 提供者和 DataSet 開發人員中心](http://go.microsoft.com/fwlink/?LinkId=217917)

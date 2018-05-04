@@ -1,34 +1,20 @@
 ---
 title: '&lt;wsFederationHttpBinding&gt;'
-ms.custom: ''
 ms.date: 03/30/2017
-ms.prod: .net-framework
-ms.reviewer: ''
-ms.suite: ''
-ms.technology:
-- dotnet-clr
-ms.tgt_pltfrm: ''
-ms.topic: article
 helpviewer_keywords:
 - wsFederationBinding element
 ms.assetid: 9c3312b4-2137-4e71-bf3f-de1cf8e9be79
-caps.latest.revision: ''
-author: dotnet-bot
-ms.author: dotnetcontent
-manager: wpickett
-ms.workload:
-- dotnet
-ms.openlocfilehash: f5d4e55f7ad2d4a347d51c3cd79647c070c11e2d
-ms.sourcegitcommit: c883637b41ee028786edceece4fa872939d2e64c
+ms.openlocfilehash: d89d0aeb68aed91b28ca7358a6140e171d3b36b2
+ms.sourcegitcommit: 11f11ca6cefe555972b3a5c99729d1a7523d8f50
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 03/26/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="ltwsfederationhttpbindinggt"></a>&lt;wsFederationHttpBinding&gt;
 定義支援 WS-Federation 的繫結。  
   
  \<system.ServiceModel>  
-\<bindings>  
+\<繫結 >  
 wsFederationBinding 項目  
   
 ## <a name="syntax"></a>語法  
@@ -147,10 +133,10 @@ wsFederationBinding 項目
   
 |項目|描述|  
 |-------------|-----------------|  
-|[\<bindings>](../../../../../docs/framework/configure-apps/file-schema/wcf/bindings.md)|這個項目會保存標準和自訂繫結的集合。|  
+|[\<繫結 >](../../../../../docs/framework/configure-apps/file-schema/wcf/bindings.md)|這個項目會保存標準和自訂繫結的集合。|  
   
 ## <a name="remarks"></a>備註  
- 聯合是在多個系統上共用識別以便進行驗證和授權的能力。 這些識別可以指向使用者或電腦。 聯合 HTTP 支援 SOAP 安全性以及混合模式安全性，但不支援獨立使用傳輸安全性。 這個繫結提供 WS-Federation 通訊協定的 [!INCLUDE[indigo1](../../../../../includes/indigo1-md.md)] 支援。 使用這個繫結設定的服務必須使用 HTTP 傳輸。  
+ 聯合是在多個系統上共用識別以便進行驗證和授權的能力。 這些識別可以指向使用者或電腦。 聯合 HTTP 支援 SOAP 安全性以及混合模式安全性，但不支援獨立使用傳輸安全性。 這個繫結會提供 Windows Communication Foundation (WCF) 支援 WS-同盟通訊協定。 使用這個繫結設定的服務必須使用 HTTP 傳輸。  
   
  繫結是由繫結項目的堆疊組成。 位於  
   
@@ -208,4 +194,4 @@ wsFederationBinding 項目
  [繫結](../../../../../docs/framework/wcf/bindings.md)  
  [設定系統提供的繫結](../../../../../docs/framework/wcf/feature-details/configuring-system-provided-bindings.md)  
  [使用繫結來設定 Windows Communication Foundation 服務和用戶端](http://msdn.microsoft.com/library/bd8b277b-932f-472f-a42a-b02bb5257dfb)  
- [\<binding>](../../../../../docs/framework/misc/binding.md)
+ [\<繫結 >](../../../../../docs/framework/misc/binding.md)

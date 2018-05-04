@@ -1,9 +1,6 @@
 ---
-title: "HttpWebRequest._AutoRedirects 欄位"
+title: HttpWebRequest._AutoRedirects 欄位
 ms.date: 05/01/2017
-ms.prod: .net-framework
-ms.technology: 
-ms.topic: reference
 topic_type:
 - apiref
 api_name:
@@ -15,18 +12,15 @@ api_type:
 ms.assetid: bd58e91c-4e35-4866-9d55-75ff58c3ed73
 author: guardrex
 ms.author: mairaw
-manager: wpickett
-ms.workload:
-- dotnet
-ms.openlocfilehash: 56bad5b9d9a1de0001113b8c4cf8845d21582f17
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.openlocfilehash: 84a2a7f572517aec72161817cb719057618de445
+ms.sourcegitcommit: 11f11ca6cefe555972b3a5c99729d1a7523d8f50
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="httpwebrequestautoredirects-field"></a>HttpWebRequest。\_AutoRedirects 欄位
 
-`HttpWebRequest._AutoRedirects`是<xref:System.Int32>，以反映此所做的重新導向數目<xref:System.Net.HttpWebRequest>。
+`HttpWebRequest._AutoRedirects` 是<xref:System.Int32>，以反映此所做的重新導向數目<xref:System.Net.HttpWebRequest>。
 
 ## <a name="syntax"></a>語法  
   
@@ -41,7 +35,7 @@ private int _AutoRedirects
 
 ## <a name="requirements"></a>需求
 
-**命名空間：**<xref:System.Net>
+**命名空間：** <xref:System.Net>
 
 **組件：**系統 （在 System.dll)
 

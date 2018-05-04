@@ -1,14 +1,6 @@
 ---
-title: "&lt;網路&gt;項目 （網路設定）"
-ms.custom: 
+title: '&lt;網路&gt;項目 （網路設定）'
 ms.date: 03/30/2017
-ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.technology:
-- dotnet-clr
-ms.tgt_pltfrm: 
-ms.topic: article
 f1_keywords:
 - http://schemas.microsoft.com/.NetConfiguration/v2.0#network
 - http://schemas.microsoft.com/.NetConfiguration/v2.0#configuration/system.net/mailSettings/smtp/network
@@ -16,17 +8,14 @@ helpviewer_keywords:
 - <network> element
 - network element
 ms.assetid: 2c2c6ad4-ed11-48ab-b28e-2bc0ba9b42c7
-caps.latest.revision: 
 author: mcleblanc
 ms.author: markl
 manager: markl
-ms.workload:
-- dotnet
-ms.openlocfilehash: 913765a4d8ac12d25dff446439f6a7510e6067ae
-ms.sourcegitcommit: cf22b29db780e532e1090c6e755aa52d28273fa6
+ms.openlocfilehash: e53d39f15a01f751a93c5531b3079d77bf0040e4
+ms.sourcegitcommit: 11f11ca6cefe555972b3a5c99729d1a7523d8f50
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 02/01/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="ltnetworkgt-element-network-settings"></a>&lt;網路&gt;項目 （網路設定）
 設定外部簡易郵件傳輸通訊協定 (SMTP) 伺服器的網路選項。  
@@ -68,7 +57,7 @@ ms.lasthandoff: 02/01/2018
 |`targetName`|指定要用於 SMTP 交易的擴充的保護時，用於驗證服務提供者名稱 (SPN)。 這個屬性沒有預設值。|  
 |`userName`|指定要用來驗證的 SMTP 郵件伺服器的使用者名稱。 這個屬性沒有預設值。|  
   
-### <a name="child-elements"></a>子元素  
+### <a name="child-elements"></a>子項目  
  無。  
   
 ### <a name="parent-elements"></a>父項目  
@@ -122,7 +111,7 @@ ms.lasthandoff: 02/01/2018
 </configuration>  
 ```  
   
-## <a name="see-also"></a>請參閱  
+## <a name="see-also"></a>另請參閱  
  <xref:System.Net.Configuration.SmtpNetworkElement?displayProperty=nameWithType>  
  <xref:System.Net.Configuration.SmtpSection?displayProperty=nameWithType>  
  <xref:System.Net.Mail.SmtpClient?displayProperty=nameWithType>  

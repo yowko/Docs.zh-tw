@@ -1,31 +1,20 @@
 ---
-title: "&lt;移除&gt;元素&lt;接聽程式&gt;如&lt;追蹤&gt;"
-ms.custom: 
+title: '&lt;移除&gt;元素&lt;接聽程式&gt;如&lt;追蹤&gt;'
 ms.date: 03/30/2017
-ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.technology:
-- dotnet-clr
-ms.tgt_pltfrm: 
-ms.topic: article
 f1_keywords:
 - http://schemas.microsoft.com/.NetConfiguration/v2.0#configuration/system.diagnostics/trace/listeners/remove
 helpviewer_keywords:
 - remove element
 - <remove> element
 ms.assetid: 9a5cd1b5-be1a-485f-8f0c-2890ad3ef3e0
-caps.latest.revision: 
 author: mcleblanc
 ms.author: markl
 manager: markl
-ms.workload:
-- dotnet
-ms.openlocfilehash: 7bc4136fb917ee9b63b7cca26ba1834de21f542e
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.openlocfilehash: 11f4b648ac1ffc614f18a3686eb2b6508a272980
+ms.sourcegitcommit: 11f11ca6cefe555972b3a5c99729d1a7523d8f50
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="ltremovegt-element-for-ltlistenersgt-for-lttracegt"></a>&lt;移除&gt;元素&lt;接聽程式&gt;如&lt;追蹤&gt;
 移除的接聽程式從**接聽程式**集合。  
@@ -34,7 +23,7 @@ ms.lasthandoff: 12/22/2017
 \<system.diagnostics >  
 \<追蹤 >  
 \<接聽項 >  
-\<移除 >  
+\<remove>  
   
 ## <a name="syntax"></a>語法  
   
@@ -43,7 +32,7 @@ ms.lasthandoff: 12/22/2017
 ```  
   
 ## <a name="attributes-and-elements"></a>屬性和項目  
- 下列章節說明屬性、子項目和父項目。  
+ 下列各節描述屬性、子項目和父項目。  
   
 ### <a name="attributes"></a>屬性  
   
@@ -51,7 +40,7 @@ ms.lasthandoff: 12/22/2017
 |---------------|-----------------|  
 |**name**|必要屬性。<br /><br /> 要移除的接聽程式名稱**接聽程式**集合。|  
   
-### <a name="child-elements"></a>子元素  
+### <a name="child-elements"></a>子項目  
  無。  
   
 ### <a name="parent-elements"></a>父項目  
@@ -83,7 +72,7 @@ ms.lasthandoff: 12/22/2017
 </configuration>  
 ```  
   
-## <a name="see-also"></a>請參閱  
+## <a name="see-also"></a>另請參閱  
  <xref:System.Diagnostics.TraceListener>  
  <xref:System.Diagnostics.DefaultTraceListener>  
  <xref:System.Diagnostics.TextWriterTraceListener>  

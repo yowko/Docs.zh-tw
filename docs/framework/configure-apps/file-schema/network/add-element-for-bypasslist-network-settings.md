@@ -1,13 +1,6 @@
 ---
-title: "&lt;新增&gt;bypasslist （網路設定） 的項目"
-ms.custom: 
+title: '&lt;新增&gt;bypasslist （網路設定） 的項目'
 ms.date: 03/30/2017
-ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.technology: dotnet-clr
-ms.tgt_pltfrm: 
-ms.topic: article
 f1_keywords:
 - http://schemas.microsoft.com/.NetConfiguration/v2.0#configuration/system.net/defaultProxy/bypasslist/add
 - http://schemas.microsoft.com/.NetConfiguration/v2.0#add
@@ -17,22 +10,20 @@ helpviewer_keywords:
 - <add> element, bypasslist
 - add element, bypasslist
 ms.assetid: a0b86e28-86b4-4497-abe8-d5fd614c7926
-caps.latest.revision: "17"
 author: mcleblanc
 ms.author: markl
 manager: markl
-ms.workload: dotnet
-ms.openlocfilehash: bed3abd5522b748a2bd24ba03c7be5d991deae9a
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.openlocfilehash: d786d4fd7e6663649408b36fb518db06063ef916
+ms.sourcegitcommit: 11f11ca6cefe555972b3a5c99729d1a7523d8f50
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="ltaddgt-element-for-bypasslist-network-settings"></a>&lt;新增&gt;bypasslist （網路設定） 的項目
 將 proxy 略過清單中的 IP 位址或 DNS 名稱。  
   
  \<configuration>  
-\<system.net >  
+\<system.net>  
 \<defaultProxy >  
 \<bypasslist >  
 \<add>  
@@ -46,7 +37,7 @@ ms.lasthandoff: 12/22/2017
 ```  
   
 ## <a name="attributes-and-elements"></a>屬性和項目  
- 下列章節說明屬性、子項目和父項目。  
+ 下列各節描述屬性、子項目和父項目。  
   
 ### <a name="attributes"></a>屬性  
   
@@ -54,7 +45,7 @@ ms.lasthandoff: 12/22/2017
 |-------------------|---------------------|  
 |**address**|描述 IP 位址或 DNS 名稱的規則運算式。|  
   
-### <a name="child-elements"></a>子元素  
+### <a name="child-elements"></a>子項目  
  無。  
   
 ### <a name="parent-elements"></a>父項目  
@@ -91,6 +82,6 @@ ms.lasthandoff: 12/22/2017
 </configuration>  
 ```  
   
-## <a name="see-also"></a>請參閱  
+## <a name="see-also"></a>另請參閱  
  <xref:System.Net.WebProxy?displayProperty=nameWithType>  
  [網路設定結構描述](../../../../../docs/framework/configure-apps/file-schema/network/index.md)
