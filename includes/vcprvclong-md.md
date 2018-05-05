@@ -1,1 +1,0 @@
-<span data-ttu-id="7ea75-101">Visual C++ 2005</span><span class="sxs-lookup"><span data-stu-id="7ea75-101">Visual C++ 2005</span></span>

@@ -1,1 +1,0 @@
-<span data-ttu-id="df2e2-101">進階加密標準 (AES)</span><span class="sxs-lookup"><span data-stu-id="df2e2-101">Advanced Encryption Standard (AES)</span></span>

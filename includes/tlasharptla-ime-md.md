@@ -1,1 +1,0 @@
-<span data-ttu-id="6ca37-101">輸入法 (IME)</span><span class="sxs-lookup"><span data-stu-id="6ca37-101">Input Method Editor (IME)</span></span>

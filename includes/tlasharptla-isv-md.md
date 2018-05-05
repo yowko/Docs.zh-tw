@@ -1,1 +1,0 @@
-<span data-ttu-id="1a948-101">獨立軟體廠商 (ISV)</span><span class="sxs-lookup"><span data-stu-id="1a948-101">independent software vendor (ISV)</span></span>

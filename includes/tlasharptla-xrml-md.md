@@ -1,1 +1,0 @@
-<span data-ttu-id="2a5e4-101">可延伸版權標記語言 (XrML)</span><span class="sxs-lookup"><span data-stu-id="2a5e4-101">Extensible Rights Markup Language (XrML)</span></span>

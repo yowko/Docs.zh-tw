@@ -1,1 +1,0 @@
-<span data-ttu-id="e6171-101">點陣圖 (BMP)</span><span class="sxs-lookup"><span data-stu-id="e6171-101">Bitmap (BMP)</span></span>
