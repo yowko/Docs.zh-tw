@@ -1,24 +1,14 @@
 ---
-title: "ICorDebugSymbolProvider::GetAssemblyImageBytes 方法"
-ms.custom: 
+title: ICorDebugSymbolProvider::GetAssemblyImageBytes 方法
 ms.date: 03/30/2017
-ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.technology: dotnet-clr
-ms.tgt_pltfrm: 
-ms.topic: reference
 ms.assetid: 3db215aa-e180-4f70-8d23-6d5a0ffbc8e5
-caps.latest.revision: "4"
 author: rpetrusha
 ms.author: ronpet
-manager: wpickett
-ms.workload: dotnet
-ms.openlocfilehash: 23c6dc836aefe1dd89431e003058ba2056eba3ff
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.openlocfilehash: 7975ca3da16be10285e618752981249602371c43
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="icordebugsymbolprovidergetassemblyimagebytes-method"></a>ICorDebugSymbolProvider::GetAssemblyImageBytes 方法
 如果合併組件中有相對虛擬位址 (RVA)，則會從合併組件讀取資料。  
@@ -55,8 +45,8 @@ HRESULT GetAssemblyImageBytes(
   
  **程式庫：** CorGuids.lib  
   
- **.NET framework 版本：**[!INCLUDE[net_46_native](../../../../includes/net-46-native-md.md)]  
+ **.NET framework 版本：** [!INCLUDE[net_46_native](../../../../includes/net-46-native-md.md)]  
   
-## <a name="see-also"></a>請參閱  
+## <a name="see-also"></a>另請參閱  
  [ICorDebugSymbolProvider 介面](../../../../docs/framework/unmanaged-api/debugging/icordebugsymbolprovider-interface.md)  
  [偵錯介面](../../../../docs/framework/unmanaged-api/debugging/debugging-interfaces.md)

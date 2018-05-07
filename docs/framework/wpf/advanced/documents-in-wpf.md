@@ -1,12 +1,13 @@
 ---
-title: "WPF 中的文件"
-ms.custom: 
+title: WPF 中的文件
+ms.custom: ''
 ms.date: 03/30/2017
 ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.technology: dotnet-wpf
-ms.tgt_pltfrm: 
+ms.reviewer: ''
+ms.suite: ''
+ms.technology:
+- dotnet-wpf
+ms.tgt_pltfrm: ''
 ms.topic: article
 helpviewer_keywords:
 - documents [WPF], packaging
@@ -17,16 +18,17 @@ helpviewer_keywords:
 - documents [WPF], types of
 - documents [WPF], browser-viewable
 ms.assetid: 6e8db7bc-050a-4070-aa72-bb8c46e87ff8
-caps.latest.revision: "36"
+caps.latest.revision: 36
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.workload: dotnet
-ms.openlocfilehash: 02f65d68cdaad8824905c4545239f5b607c672d6
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
-ms.translationtype: MT
+ms.workload:
+- dotnet
+ms.openlocfilehash: 0fcf7281cce7e5921ad7a03011ff85c254231690
+ms.sourcegitcommit: 2042de78fcdceebb6b8ac4b7a292b93e8782cbf5
+ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 04/27/2018
 ---
 # <a name="documents-in-wpf"></a>WPF 中的文件
 [!INCLUDE[TLA#tla_winclient](../../../../includes/tlasharptla-winclient-md.md)] 所提供的各種文件功能可以建立高精確度的內容，此種內容的設計會比在舊版 [!INCLUDE[TLA#tla_mswin](../../../../includes/tlasharptla-mswin-md.md)] 中更加容易存取與閱讀。 除了增強功能和品質，[!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] 也針對文件顯示、封裝和安全性提供整合式服務。 本主題提供 [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] 文件類型和文件封裝的簡介。  
@@ -42,12 +44,12 @@ ms.lasthandoff: 12/22/2017
   
 <a name="document_viewer"></a>   
 ## <a name="document-controls-and-text-layout"></a>文件控制項和文字配置  
- [!INCLUDE[TLA2#tla_avalonwinfx](../../../../includes/tla2sharptla-avalonwinfx-md.md)] 提供一組預先建立的控制項，可簡化在應用程式中使用固定格式文件、非固定格式文件和一般文字的作業。  使用支援固定格式文件內容的顯示<xref:System.Windows.Controls.DocumentViewer>控制項。  非固定格式文件內容的顯示支援三個不同的控制項： <xref:System.Windows.Controls.FlowDocumentReader>， <xref:System.Windows.Controls.FlowDocumentPageViewer>，和<xref:System.Windows.Controls.FlowDocumentScrollViewer>其對應至不同的使用者案例 （請參閱下列各節）。  其他 [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] 控制項提供簡化的配置，以支援一般文字用途 (請參閱下方的[使用者介面中的文字](#text_in_the_user_interface))。  
+ .NET Framework 提供一組預先建立的控制項，可簡化使用固定格式文件、 固定格式文件，以及您的應用程式內的一般文字。  使用支援固定格式文件內容的顯示<xref:System.Windows.Controls.DocumentViewer>控制項。  非固定格式文件內容的顯示支援三個不同的控制項： <xref:System.Windows.Controls.FlowDocumentReader>， <xref:System.Windows.Controls.FlowDocumentPageViewer>，和<xref:System.Windows.Controls.FlowDocumentScrollViewer>其對應至不同的使用者案例 （請參閱下列各節）。  其他 [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] 控制項提供簡化的配置，以支援一般文字用途 (請參閱下方的[使用者介面中的文字](#text_in_the_user_interface))。  
   
 ### <a name="fixed-document-control---documentviewer"></a>固定格式文件控制項 - DocumentViewer  
  <xref:System.Windows.Controls.DocumentViewer>控制項用來顯示<xref:System.Windows.Documents.FixedDocument>內容。 <xref:System.Windows.Controls.DocumentViewer>控制項會提供直覺式使用者介面，支援內建的一般作業包括列印輸出中，將複製到剪貼簿、 縮放及文字搜尋功能。 此控制項可透過常見的捲動機制，來存取多頁內容。 如同所有[!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)]控制項<xref:System.Windows.Controls.DocumentViewer>支援整個或部分的右側，可讓控制項以視覺化方式整合到幾乎任何應用程式或環境。  
   
- <xref:System.Windows.Controls.DocumentViewer>被設計來顯示內容以唯讀方式;編輯或修改的內容不提供，不支援。  
+ <xref:System.Windows.Controls.DocumentViewer> 被設計來顯示內容以唯讀方式;編輯或修改的內容不提供，不支援。  
   
 <a name="flow_document"></a>   
 ### <a name="flow-document-controls"></a>非固定格式文件控制項  
@@ -56,16 +58,16 @@ ms.lasthandoff: 12/22/2017
  非固定格式文件內容的顯示支援三個控制項： <xref:System.Windows.Controls.FlowDocumentReader>， <xref:System.Windows.Controls.FlowDocumentPageViewer>，和<xref:System.Windows.Controls.FlowDocumentScrollViewer>。  
   
 #### <a name="flowdocumentreader"></a>FlowDocumentReader  
- <xref:System.Windows.Controls.FlowDocumentReader>包含可讓使用者以動態方式選擇不同的檢視模式，包括單一頁面 （頁面-一次） 檢視模式中，兩個頁面-a-次 （活頁簿讀取格式） 檢視模式，以及連續捲動 （無底邊） 的檢視模式的功能。  如需有關這些檢視模式的詳細資訊，請參閱<xref:System.Windows.Controls.FlowDocumentReaderViewingMode>。  如果您不需要不同的檢視模式之間動態切換<xref:System.Windows.Controls.FlowDocumentPageViewer>和<xref:System.Windows.Controls.FlowDocumentScrollViewer>提供輕量型流程固定的特定檢視模式的內容檢視器。  
+ <xref:System.Windows.Controls.FlowDocumentReader> 包含可讓使用者以動態方式選擇不同的檢視模式，包括單一頁面 （頁面-一次） 檢視模式中，兩個頁面-a-次 （活頁簿讀取格式） 檢視模式，以及連續捲動 （無底邊） 的檢視模式的功能。  如需有關這些檢視模式的詳細資訊，請參閱<xref:System.Windows.Controls.FlowDocumentReaderViewingMode>。  如果您不需要不同的檢視模式之間動態切換<xref:System.Windows.Controls.FlowDocumentPageViewer>和<xref:System.Windows.Controls.FlowDocumentScrollViewer>提供輕量型流程固定的特定檢視模式的內容檢視器。  
   
 #### <a name="flowdocumentpageviewer-and-flowdocumentscrollviewer"></a>FlowDocumentPageViewer 和 FlowDocumentScrollViewer  
- <xref:System.Windows.Controls.FlowDocumentPageViewer>顯示內容頁-一次檢視模式，而<xref:System.Windows.Controls.FlowDocumentScrollViewer>顯示連續捲動模式中的內容。  同時<xref:System.Windows.Controls.FlowDocumentPageViewer>和<xref:System.Windows.Controls.FlowDocumentScrollViewer>會固定為特定檢視模式。 要比較<xref:System.Windows.Controls.FlowDocumentReader>，其中包括功能，可讓使用者以動態方式選擇各種不同的檢視模式之間 (所提供<xref:System.Windows.Controls.FlowDocumentReaderViewingMode>列舉型別)，但要付出正在耗用更多資源<xref:System.Windows.Controls.FlowDocumentPageViewer>或<xref:System.Windows.Controls.FlowDocumentScrollViewer>。  
+ <xref:System.Windows.Controls.FlowDocumentPageViewer> 顯示內容頁-一次檢視模式，而<xref:System.Windows.Controls.FlowDocumentScrollViewer>顯示連續捲動模式中的內容。  同時<xref:System.Windows.Controls.FlowDocumentPageViewer>和<xref:System.Windows.Controls.FlowDocumentScrollViewer>會固定為特定檢視模式。 要比較<xref:System.Windows.Controls.FlowDocumentReader>，其中包括功能，可讓使用者以動態方式選擇各種不同的檢視模式之間 (所提供<xref:System.Windows.Controls.FlowDocumentReaderViewingMode>列舉型別)，但要付出正在耗用更多資源<xref:System.Windows.Controls.FlowDocumentPageViewer>或<xref:System.Windows.Controls.FlowDocumentScrollViewer>。  
   
  預設一定會顯示垂直捲軸，而水平捲動則會視需要顯示。 預設值[!INCLUDE[TLA2#tla_ui](../../../../includes/tla2sharptla-ui-md.md)]如<xref:System.Windows.Controls.FlowDocumentScrollViewer>不包含的工具列，但是<xref:System.Windows.Controls.FlowDocumentScrollViewer.IsToolBarVisible%2A>屬性可以用來啟用內建工具列。  
   
 <a name="text_in_the_user_interface"></a>   
 ### <a name="text-in-the-user-interface"></a>使用者介面中的文字  
- 除了將文字新增至文件，您顯然也能在表單等應用程式 UI 中使用文字。 [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] 包含多個將文字繪製到螢幕的控制項。 每個控制項都是不同案例的目標，且有自己的功能與限制清單。 一般情況下，<xref:System.Windows.Controls.TextBlock>有限的文字支援為必要項，例如簡短句子中時，就應該使用項目[!INCLUDE[TLA#tla_ui](../../../../includes/tlasharptla-ui-md.md)]。 <xref:System.Windows.Controls.Label>需要最少的文字支援時，可以使用。 如需詳細資訊，請參閱 [TextBlock 概觀](../../../../docs/framework/wpf/controls/textblock-overview.md)。  
+ 除了將文字新增至文件，您顯然也能在表單等應用程式 UI 中使用文字。 [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] 包含多個將文字繪製到螢幕的控制項。 每個控制項都是不同案例的目標，且有自己的功能與限制清單。 一般情況下，<xref:System.Windows.Controls.TextBlock>有限的文字支援為必要項，例如簡短句子中時，就應該使用項目[!INCLUDE[TLA#tla_ui](../../../../includes/tlasharptla-ui-md.md)]。 <xref:System.Windows.Controls.Label> 需要最少的文字支援時，可以使用。 如需詳細資訊，請參閱 [TextBlock 概觀](../../../../docs/framework/wpf/controls/textblock-overview.md)。  
   
 <a name="packaging"></a>   
 ## <a name="document-packaging"></a>文件封裝  
@@ -79,13 +81,13 @@ ms.lasthandoff: 12/22/2017
   
 -   適用於您自己應用程式設計的自訂儲存格式。  
   
- 根據封裝 Api，<xref:System.Windows.Xps.Packaging.XpsDocument>專為儲存[!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)]固定內容的文件。 <xref:System.Windows.Xps.Packaging.XpsDocument>是獨立的文件，可以在檢視器中顯示開啟<xref:System.Windows.Controls.DocumentViewer>控制項來列印多工緩衝處理，路由或輸出直接[!INCLUDE[TLA2#tla_xps](../../../../includes/tla2sharptla-xps-md.md)]-相容的印表機。  
+ 根據封裝 Api，<xref:System.Windows.Xps.Packaging.XpsDocument>專為儲存[!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)]固定內容的文件。 <xref:System.Windows.Xps.Packaging.XpsDocument>是獨立的文件，可以在檢視器] 中顯示開啟<xref:System.Windows.Controls.DocumentViewer>控制項來列印多工緩衝處理，路由或輸出直接[!INCLUDE[TLA2#tla_xps](../../../../includes/tla2sharptla-xps-md.md)]-相容的印表機。  
   
  下列各節提供有關的詳細資訊<xref:System.IO.Packaging.Package>和<xref:System.Windows.Xps.Packaging.XpsDocument>[!INCLUDE[TLA2#tla_api#plural](../../../../includes/tla2sharptla-apisharpplural-md.md)]隨附[!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)]。  
   
 <a name="packages"></a>   
 ### <a name="package-components"></a>封裝元件  
- [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] 封裝 API 可將應用程式資料和文件組織成單一可攜式單位。 ZIP 檔案就是其中一種最常見的封裝類型，而且是 [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] 隨附的預設封裝類型。  <xref:System.IO.Packaging.Package>本身是抽象類別從中<xref:System.IO.Packaging.ZipPackage>使用開放標準 XML 和 ZIP 檔架構實作。  <xref:System.IO.Packaging.Package.Open%2A>方法會使用<xref:System.IO.Packaging.ZipPackage>建立並使用預設的 ZIP 檔案。 一個封裝可以包含三種基本項目類型：  
+ [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] 封裝 API 可將應用程式資料和文件組織成單一可攜式單位。 ZIP 檔案就是其中一種最常見的封裝類型，而且是 [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] 隨附的預設封裝類型。  <xref:System.IO.Packaging.Package> 本身是抽象類別從中<xref:System.IO.Packaging.ZipPackage>使用開放標準 XML 和 ZIP 檔架構實作。  <xref:System.IO.Packaging.Package.Open%2A>方法會使用<xref:System.IO.Packaging.ZipPackage>建立並使用預設的 ZIP 檔案。 一個封裝可以包含三種基本項目類型：  
   
 |||  
 |-|-|  
@@ -95,7 +97,7 @@ ms.lasthandoff: 12/22/2017
   
 <a name="PackageParts"></a>   
 #### <a name="packageparts"></a>PackageParts  
- A <xref:System.IO.Packaging.PackagePart> （「 部分 」） 是抽象類別，它是指儲存在物件<xref:System.IO.Packaging.Package>。 在 ZIP 檔案中，封裝組件會對應至儲存在 ZIP 檔案中的個別檔案。  <xref:System.IO.Packaging.ZipPackagePart>提供儲存在可序列化物件的預設實作<xref:System.IO.Packaging.ZipPackage>。  就像檔案系統，封裝中包含的組件會儲存在階層式目錄或「資料夾樣式」的組織中。  使用[!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)]封裝 Api，應用程式可以撰寫、 儲存和讀取多個<xref:System.IO.Packaging.PackagePart>物件，使用單一的 ZIP 檔案容器。  
+ A <xref:System.IO.Packaging.PackagePart> （「 部分 」） 是抽象類別，它是指儲存在物件<xref:System.IO.Packaging.Package>。 在 ZIP 檔案中，封裝組件會對應至儲存在 ZIP 檔案中的個別檔案。  <xref:System.IO.Packaging.ZipPackagePart> 提供儲存在可序列化物件的預設實作<xref:System.IO.Packaging.ZipPackage>。  就像檔案系統，封裝中包含的組件會儲存在階層式目錄或「資料夾樣式」的組織中。  使用[!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)]封裝 Api，應用程式可以撰寫、 儲存和讀取多個<xref:System.IO.Packaging.PackagePart>物件，使用單一的 ZIP 檔案容器。  
   
 <a name="PackageDigitalSignatures"></a>   
 #### <a name="packagedigitalsignatures"></a>PackageDigitalSignatures  
@@ -145,7 +147,7 @@ ms.lasthandoff: 12/22/2017
   
 -   將文件直接路由傳送至 [!INCLUDE[TLA2#tla_xps](../../../../includes/tla2sharptla-xps-md.md)] 相容的印表機。  
   
-## <a name="see-also"></a>請參閱  
+## <a name="see-also"></a>另請參閱  
  <xref:System.Windows.Documents.FixedDocument>  
  <xref:System.Windows.Documents.FlowDocument>  
  <xref:System.Windows.Xps.Packaging.XpsDocument>  

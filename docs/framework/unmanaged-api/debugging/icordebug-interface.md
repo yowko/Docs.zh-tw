@@ -1,14 +1,6 @@
 ---
-title: "ICorDebug 介面"
-ms.custom: 
+title: ICorDebug 介面
 ms.date: 03/30/2017
-ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.technology:
-- dotnet-clr
-ms.tgt_pltfrm: 
-ms.topic: reference
 api_name:
 - ICorDebug
 api_location:
@@ -22,17 +14,13 @@ helpviewer_keywords:
 ms.assetid: 33f431d7-ab1a-494d-8af2-20ab15aba194
 topic_type:
 - apiref
-caps.latest.revision: 
 author: rpetrusha
 ms.author: ronpet
-manager: wpickett
-ms.workload:
-- dotnet
-ms.openlocfilehash: 0ed0b3a8b42157f6a4fcbc6b4a05a416da736147
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.openlocfilehash: 74c5036bdc8a4a75e5711c6dc1d34d8f2c21128f
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="icordebug-interface"></a>ICorDebug 介面
 提供方法，可讓開發人員偵錯在 common language runtime (CLR) 環境中的應用程式。  
@@ -55,7 +43,7 @@ ms.lasthandoff: 12/22/2017
 |[Terminate 方法](../../../../docs/framework/unmanaged-api/debugging/icordebug-terminate-method.md)|終止`ICorDebug`物件。|  
   
 ## <a name="remarks"></a>備註  
- `ICorDebug`表示在偵錯工具處理序的事件處理迴圈。 偵錯工具必須等候[icordebugmanagedcallback:: Exitprocess](../../../../docs/framework/unmanaged-api/debugging/icordebugmanagedcallback-exitprocess-method.md)從所有處理序進行偵錯之前釋出此介面的回呼。  
+ `ICorDebug` 表示在偵錯工具處理序的事件處理迴圈。 偵錯工具必須等候[icordebugmanagedcallback:: Exitprocess](../../../../docs/framework/unmanaged-api/debugging/icordebugmanagedcallback-exitprocess-method.md)從所有處理序進行偵錯之前釋出此介面的回呼。  
   
  `ICorDebug`物件是要控制所有進一步 managed 偵錯的初始物件。 在.NET framework 1.0 和 1.1 版中，這個物件是`CoClass`所建立的 COM 物件 在.NET Framework 2.0 版中，此物件已不再`CoClass`物件。 它必須先建立[CreateDebuggingInterfaceFromVersion](../../../../docs/framework/unmanaged-api/hosting/createdebugginginterfacefromversion-function.md)函式，也就是多版本感知。 這個新的建立函式可讓用戶端取得的特定實作`ICorDebug`，也是模擬偵錯 API 的特定版本。  
   
@@ -69,7 +57,7 @@ ms.lasthandoff: 12/22/2017
   
  **程式庫：** CorGuids.lib  
   
- **.NET framework 版本：**[!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
+ **.NET framework 版本：** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
   
-## <a name="see-also"></a>請參閱  
+## <a name="see-also"></a>另請參閱  
  [偵錯介面](../../../../docs/framework/unmanaged-api/debugging/debugging-interfaces.md)

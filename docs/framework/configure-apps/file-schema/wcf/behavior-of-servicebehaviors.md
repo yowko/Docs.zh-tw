@@ -2,11 +2,11 @@
 title: '&lt;serviceBehaviors&gt; 的 &lt;behavior&gt;'
 ms.date: 03/30/2017
 ms.assetid: 78fc0a08-55de-416a-ac12-a5e6ffc9a987
-ms.openlocfilehash: c8716b7de5b9901683a5c111f66f14f26f7f9923
-ms.sourcegitcommit: 11f11ca6cefe555972b3a5c99729d1a7523d8f50
-ms.translationtype: HT
+ms.openlocfilehash: 9cb5676897255d11b502080f4f7f3fb897027917
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="ltbehaviorgt-of-ltservicebehaviorsgt"></a>&lt;serviceBehaviors&gt; 的 &lt;behavior&gt;
 `behavior` 項目包含服務行為之設定的集合。 各個行為是依其 `name` 進行索引。 服務可以連結至每個行為，透過使用此名稱`behaviorConfiguration`屬性[\<端點 >](../../../../../docs/framework/configure-apps/file-schema/wcf/endpoint-element.md)項目。 如此可允許端點共用通用行為組態，而不用重新定義設定。 從 [!INCLUDE[netfx40_short](../../../../../includes/netfx40-short-md.md)] 開始，繫結和行為都不需要有名稱。 如需有關預設組態沒有名稱繫結和行為的詳細資訊，請參閱[簡化的組態](../../../../../docs/framework/wcf/simplified-configuration.md)和[簡化 WCF 服務的組態](../../../../../docs/framework/wcf/samples/simplified-configuration-for-wcf-services.md)。  
@@ -54,9 +54,9 @@ ms.lasthandoff: 05/03/2018
 |[\<serviceDiscovery >](../../../../../docs/framework/configure-apps/file-schema/wcf/servicediscovery.md)|指定服務端點的探索能力。|  
 |[\<serviceMetadata >](../../../../../docs/framework/configure-apps/file-schema/wcf/servicemetadata.md)|指定服務中繼資料和相關資訊的發行。|  
 |[\<serviceSecurityAudit >](../../../../../docs/framework/configure-apps/file-schema/wcf/servicesecurityaudit.md)|指定在服務作業期間啟用安全性事件稽核的設定。|  
-|[\<serviceThrottling >](../../../../../docs/framework/configure-apps/file-schema/wcf/servicethrottling.md)|指定 [!INCLUDE[indigo2](../../../../../includes/indigo2-md.md)] 服務的節流機制。|  
+|[\<serviceThrottling >](../../../../../docs/framework/configure-apps/file-schema/wcf/servicethrottling.md)|指定 WCF 服務的節流機制。|  
 |[\<serviceTimeouts >](../../../../../docs/framework/configure-apps/file-schema/wcf/servicetimeouts.md)|指定服務的逾時。|  
-|[\<workflowRuntime>](../../../../../docs/framework/configure-apps/file-schema/wcf/workflowruntime.md)|指定裝載工作流程架構的 [!INCLUDE[indigo2](../../../../../includes/indigo2-md.md)] 服務時 WorkflowRuntime 之執行個體的設定。|  
+|[\<workflowRuntime>](../../../../../docs/framework/configure-apps/file-schema/wcf/workflowruntime.md)|指定設定的 WorkflowRuntime 執行個體來裝載工作流程為基礎的 WCF 服務。|  
 |[\<useRequestHeadersForMetadataAddress >](../../../../../docs/framework/configure-apps/file-schema/wcf/userequestheadersformetadataaddress.md)|允許從要求訊息標題擷取中繼資料位址資訊。|  
   
 ### <a name="parent-elements"></a>父項目  

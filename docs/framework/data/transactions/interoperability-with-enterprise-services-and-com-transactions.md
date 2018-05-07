@@ -1,23 +1,12 @@
 ---
-title: "與 Enterprise Services 和 COM+ 交易的互通性"
-ms.custom: 
+title: 與 Enterprise Services 和 COM+ 交易的互通性
 ms.date: 03/30/2017
-ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.tgt_pltfrm: 
-ms.topic: article
 ms.assetid: d0fd0d26-fe86-443b-b208-4d57d39fa4aa
-caps.latest.revision: "3"
-author: dotnet-bot
-ms.author: dotnetcontent
-manager: wpickett
-ms.workload: dotnet
-ms.openlocfilehash: 246658ceb2fdbaa302753441ca5e34a1eef92b4d
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.openlocfilehash: 8b88fd60b2e70496009be2670e8e1e87f8d55201
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="interoperability-with-enterprise-services-and-com-transactions"></a>與 Enterprise Services 和 COM+ 交易的互通性
 <xref:System.Transactions> 命名空間支援以此命名空間建立的交易物件，以及透過 COM+ 建立的交易兩者之間的互通性。  

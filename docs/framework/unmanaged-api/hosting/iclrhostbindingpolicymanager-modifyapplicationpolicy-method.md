@@ -1,14 +1,6 @@
 ---
-title: "ICLRHostBindingPolicyManager::ModifyApplicationPolicy 方法"
-ms.custom: 
+title: ICLRHostBindingPolicyManager::ModifyApplicationPolicy 方法
 ms.date: 03/30/2017
-ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.technology:
-- dotnet-clr
-ms.tgt_pltfrm: 
-ms.topic: reference
 api_name:
 - ICLRHostBindingPolicyManager.ModifyApplicationPolicy
 api_location:
@@ -23,17 +15,13 @@ helpviewer_keywords:
 ms.assetid: d82d633e-cce6-427c-8b02-8227e34e12ba
 topic_type:
 - apiref
-caps.latest.revision: 
 author: rpetrusha
 ms.author: ronpet
-manager: wpickett
-ms.workload:
-- dotnet
-ms.openlocfilehash: 018dc40895a79788a9eef20082d764db0b2265c5
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.openlocfilehash: 7a221b286ada97c3c03387556cb30ee6ddd2c453
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="iclrhostbindingpolicymanagermodifyapplicationpolicy-method"></a>ICLRHostBindingPolicyManager::ModifyApplicationPolicy 方法
 修改繫結原則的指定組件，並建立新的原則版本。  
@@ -79,8 +67,8 @@ HRESULT  ModifyApplicationPolicy (
 |HRESULT|描述|  
 |-------------|-----------------|  
 |S_OK|已成功修改原則。|  
-|E_INVALIDARG|`pwzSourceAssemblyIdentity`或`pwzTargetAssemblyIdentity`是 null 參考。|  
-|ERROR_INSUFFICIENT_BUFFER|`pbNewApplicationPolicy`為太小。|  
+|E_INVALIDARG|`pwzSourceAssemblyIdentity` 或`pwzTargetAssemblyIdentity`是 null 參考。|  
+|ERROR_INSUFFICIENT_BUFFER|`pbNewApplicationPolicy` 為太小。|  
 |HOST_E_CLRNOTAVAILABLE|Common language runtime (CLR) 尚未載入到處理程序，或 CLR 正在中它無法執行 managed 程式碼，或成功地處理呼叫的狀態。|  
 |HOST_E_TIMEOUT|呼叫已逾時。|  
 |HOST_E_NOT_OWNER|呼叫端未擁有鎖定。|  
@@ -97,7 +85,7 @@ HRESULT  ModifyApplicationPolicy (
   
  **程式庫：**包含做為 MSCorEE.dll 中的資源  
   
- **.NET framework 版本：**[!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]  
+ **.NET framework 版本：** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]  
   
-## <a name="see-also"></a>請參閱  
+## <a name="see-also"></a>另請參閱  
  [ICLRHostBindingPolicyManager 介面](../../../../docs/framework/unmanaged-api/hosting/iclrhostbindingpolicymanager-interface.md)

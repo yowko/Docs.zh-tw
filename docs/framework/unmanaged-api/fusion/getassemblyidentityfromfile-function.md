@@ -1,14 +1,6 @@
 ---
-title: "GetAssemblyIdentityFromFile 函式"
-ms.custom: 
+title: GetAssemblyIdentityFromFile 函式
 ms.date: 03/30/2017
-ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.technology:
-- dotnet-clr
-ms.tgt_pltfrm: 
-ms.topic: reference
 api_name:
 - GetAssemblyIdentityFromFile
 api_location:
@@ -24,17 +16,13 @@ helpviewer_keywords:
 ms.assetid: 2c32da53-76c7-4048-84d0-d05207333004
 topic_type:
 - apiref
-caps.latest.revision: 
 author: rpetrusha
 ms.author: ronpet
-manager: wpickett
-ms.workload:
-- dotnet
-ms.openlocfilehash: 56d7fb4ee74e40ecd29ee276665ff43ab9fd56be
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.openlocfilehash: 5ea151417a1cb53104ec29fff1e76e21f82ec9bb
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="getassemblyidentityfromfile-function"></a>GetAssemblyIdentityFromFile 函式
 取得指標`IUnknown`物件具有指定`IID`中位於指定的檔案路徑的組件。  
@@ -64,8 +52,8 @@ HRESULT GetAssemblyIdentityFromFile (
   
  **標頭：** Fusion.h  
   
- **.NET framework 版本：**[!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]  
+ **.NET framework 版本：** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]  
   
-## <a name="see-also"></a>請參閱  
+## <a name="see-also"></a>另請參閱  
  <<!--zzxref:IUnknown --> `IUnknown`>  
  [融合全域靜態函式](../../../../docs/framework/unmanaged-api/fusion/fusion-global-static-functions.md)

@@ -1,28 +1,19 @@
 ---
-title: "實作 UI 自動化 Scroll 控制項模式"
-ms.custom: 
+title: 實作 UI 自動化 Scroll 控制項模式
 ms.date: 03/30/2017
-ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.technology: dotnet-bcl
-ms.tgt_pltfrm: 
-ms.topic: article
 helpviewer_keywords:
 - UI Automation, Scroll control pattern
 - control patterns, Scroll
 - Scroll control pattern
 ms.assetid: 73d64242-6cbb-424c-92dd-dc69530b7899
-caps.latest.revision: "23"
 author: Xansky
 ms.author: mhopkins
 manager: markl
-ms.workload: dotnet
-ms.openlocfilehash: 9ad069a4670cc7e4c2281109d8df6afa55ea6dea
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.openlocfilehash: 8553bbf192a619ab5877e362b1642007432c8c64
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="implementing-the-ui-automation-scroll-control-pattern"></a>實作 UI 自動化 Scroll 控制項模式
 > [!NOTE]
@@ -57,7 +48,7 @@ ms.lasthandoff: 12/22/2017
 ## <a name="required-members-for-iscrollprovider"></a>IScrollProvider 的必要成員  
  以下是實作 <xref:System.Windows.Automation.Provider.IScrollProvider>的必要屬性和方法。  
   
-|必要成員|成員類型|備註|  
+|必要成員|成員類型|注意|  
 |---------------------|-----------------|-----------|  
 |<xref:System.Windows.Automation.Provider.IScrollProvider.HorizontalScrollPercent%2A>|屬性|無|  
 |<xref:System.Windows.Automation.Provider.IScrollProvider.VerticalScrollPercent%2A>|屬性|無|  
@@ -81,7 +72,7 @@ ms.lasthandoff: 12/22/2017
 |<xref:System.ArgumentOutOfRangeException>|當傳入大於 100 或小於 0 的值 (-1 例外，因為它相當於<xref:System.Windows.Automation.Provider.IScrollProvider.SetScrollPercent%2A> ) 時， <xref:System.Windows.Automation.ScrollPatternIdentifiers.NoScroll>就會擲回這個例外狀況。|  
 |<xref:System.InvalidOperationException>|嘗試在不支援的方向捲動時， <xref:System.Windows.Automation.Provider.IScrollProvider.Scroll%2A> 和 <xref:System.Windows.Automation.Provider.IScrollProvider.SetScrollPercent%2A> 都會擲回這個例外狀況。|  
   
-## <a name="see-also"></a>請參閱  
+## <a name="see-also"></a>另請參閱  
  [UI 自動化控制項模式概觀](../../../docs/framework/ui-automation/ui-automation-control-patterns-overview.md)  
  [支援 UI 自動化提供者的控制項模式](../../../docs/framework/ui-automation/support-control-patterns-in-a-ui-automation-provider.md)  
  [用戶端的 UI 自動化控制項模式](../../../docs/framework/ui-automation/ui-automation-control-patterns-for-clients.md)  

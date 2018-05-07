@@ -1,23 +1,12 @@
 ---
-title: "診斷追蹤"
-ms.custom: 
+title: 診斷追蹤
 ms.date: 03/30/2017
-ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.tgt_pltfrm: 
-ms.topic: article
 ms.assetid: 28e77a63-d20d-4b6a-9caf-ddad86550427
-caps.latest.revision: "3"
-author: dotnet-bot
-ms.author: dotnetcontent
-manager: wpickett
-ms.workload: dotnet
-ms.openlocfilehash: 2cb16bb2d492caca7957e6d58eadddf9bf1568b3
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.openlocfilehash: 56f79fb9140785188996cc413eca4dd530037ccd
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="diagnostic-traces"></a>診斷追蹤
 追蹤就是在應用程式執行期間，所產生的特定訊息之發行動作。 使用追蹤功能時，您必須具有收集和記錄所傳送訊息的機制。 追蹤訊息由「接聽項」負責接收。 接聽項的用途是收集、儲存和傳送追蹤訊息。 接聽項會將追蹤輸出導向至適當的目標，例如記錄檔、視窗或文字檔。  

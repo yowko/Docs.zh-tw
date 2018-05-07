@@ -1,14 +1,6 @@
 ---
-title: "ICorDebugController::Continue 方法"
-ms.custom: 
+title: ICorDebugController::Continue 方法
 ms.date: 03/30/2017
-ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.technology:
-- dotnet-clr
-ms.tgt_pltfrm: 
-ms.topic: reference
 api_name:
 - ICorDebugController.Continue
 api_location:
@@ -23,17 +15,13 @@ helpviewer_keywords:
 ms.assetid: 8684cd06-ad3e-48ef-832e-15320e1f43a2
 topic_type:
 - apiref
-caps.latest.revision: 
 author: rpetrusha
 ms.author: ronpet
-manager: wpickett
-ms.workload:
-- dotnet
-ms.openlocfilehash: e6a96145801aa8ef6482e30e9c00b763d2501f36
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.openlocfilehash: 529a65285203ac831e1bcab9dc1bea69ac28a282
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="icordebugcontrollercontinue-method"></a>ICorDebugController::Continue 方法
 之後繼續執行的 managed 執行緒的呼叫[停止方法](../../../../docs/framework/unmanaged-api/debugging/icordebugcontroller-stop-method.md)。  
@@ -51,7 +39,7 @@ HRESULT Continue (
  [in]設定為`true`繼續從超出訊號範圍的事件; 否則設為`false`。  
   
 ## <a name="remarks"></a>備註  
- `Continue`若要在呼叫之後繼續進行程序`ICorDebugController::Stop`方法。  
+ `Continue` 若要在呼叫之後繼續進行程序`ICorDebugController::Stop`方法。  
   
  在執行混合模式偵錯時，請勿呼叫`Continue`上 Win32 事件執行緒除非您要繼續從超出訊號範圍的事件。  
   
@@ -66,7 +54,7 @@ HRESULT Continue (
   
  **程式庫：** CorGuids.lib  
   
- **.NET framework 版本：**[!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
+ **.NET framework 版本：** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
   
-## <a name="see-also"></a>請參閱  
+## <a name="see-also"></a>另請參閱  
  

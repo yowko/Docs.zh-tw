@@ -1,27 +1,15 @@
 ---
-title: "使用 Wait 控制代碼的 ASP.NET 應用程式"
-ms.custom: 
+title: 使用 Wait 控制代碼的 ASP.NET 應用程式
 ms.date: 03/30/2017
-ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.technology: dotnet-ado
-ms.tgt_pltfrm: 
-ms.topic: article
 dev_langs:
 - csharp
 - vb
 ms.assetid: f588597a-49de-4206-8463-4ef377e112ff
-caps.latest.revision: "3"
-author: douglaslMS
-ms.author: douglasl
-manager: craigg
-ms.workload: dotnet
-ms.openlocfilehash: 7787cfc3bdcb5f9adce7e699ff50b255c575a1ba
-ms.sourcegitcommit: ed26cfef4e18f6d93ab822d8c29f902cff3519d1
+ms.openlocfilehash: 867b225336da2188b8d1709c09d480317a6d02e4
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 01/17/2018
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="aspnet-applications-using-wait-handles"></a>使用 Wait 控制代碼的 ASP.NET 應用程式
 當應用程式一次只處理一個非同步作業時，用於處理非同步作業的回呼及輪詢模式會很有用。 等候模式可提供更靈活的方式來處理多個非同步作業。 有兩種等候模式，這兩種模式都是針對用於實作它們的 <xref:System.Threading.WaitHandle> 方法而命名：等候 (任何) 模式及等候 (所有) 模式。  
@@ -590,6 +578,6 @@ void Button1_Click(object sender, System.EventArgs e)
 }  
 ```  
   
-## <a name="see-also"></a>請參閱  
+## <a name="see-also"></a>另請參閱  
  [非同步作業](../../../../../docs/framework/data/adonet/sql/asynchronous-operations.md)  
  [ADO.NET Managed 提供者和 DataSet 開發人員中心](http://go.microsoft.com/fwlink/?LinkId=217917)

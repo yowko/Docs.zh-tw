@@ -1,13 +1,6 @@
 ---
-title: "更新資料服務 (WCF 資料服務)"
-ms.custom: 
+title: 更新資料服務 (WCF 資料服務)
 ms.date: 03/30/2017
-ms.prod: .net-framework-oob
-ms.reviewer: 
-ms.suite: 
-ms.technology: dotnet-clr
-ms.tgt_pltfrm: 
-ms.topic: article
 dev_langs:
 - csharp
 - vb
@@ -15,16 +8,11 @@ helpviewer_keywords:
 - WCF Data Services, changing data
 - WCF Data Services, client library
 ms.assetid: 00d993be-ffed-4dea-baf7-6eea982cdb54
-caps.latest.revision: "6"
-author: dotnet-bot
-ms.author: dotnetcontent
-manager: wpickett
-ms.workload: dotnet
-ms.openlocfilehash: bc8041dee12c8300e18e6321c717cbd80b93d650
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.openlocfilehash: 58bbe74fdeb0af5d7095b0b1a57fb8bd475032ad
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="updating-the-data-service-wcf-data-services"></a>更新資料服務 (WCF 資料服務)
 當您使用[!INCLUDE[ssAstoria](../../../../includes/ssastoria-md.md)]用戶端程式庫來取用[!INCLUDE[ssODataFull](../../../../includes/ssodatafull-md.md)]換行字元、 文件庫會轉譯成用戶端資料服務類別的執行個體摘要中的項目。 這些資料服務類別會使用 <xref:System.Data.Services.Client.DataServiceContext> 所屬的 <xref:System.Data.Services.Client.DataServiceQuery%601> 來追蹤。 用戶端會追蹤您使用 <xref:System.Data.Services.Client.DataServiceContext> 上的方法所報告之實體的變更。 這些方法會讓用戶端追蹤所新增及刪除的實體，以及您對屬性值所做的變更或是您對實體執行個體之間的關聯性所做的變更。 當您呼叫 <xref:System.Data.Services.Client.DataServiceContext.SaveChanges%2A> 方法時，這些追蹤的變更會當做 REST 型作業傳回資料服務。  
@@ -78,7 +66,7 @@ ms.lasthandoff: 12/22/2017
 ## <a name="creating-and-modifying-relationship-links"></a>建立和修改關聯性連結  
  當您新增新的實體使用<xref:System.Data.Services.Client.DataServiceContext.AddObject%2A>方法或適當*AddTo*方法<xref:System.Data.Services.Client.DataServiceContext>類別**加入服務參考**對話方塊會產生的任何關聯性新實體與相關的實體之間不會自動定義。  
   
- 您可以建立和變更實體執行個體之間的關聯性，而且可以讓用戶端程式庫在資料服務中反映這些變更。 實體之間的關聯性會定義為模型中的關聯，而且 <xref:System.Data.Services.Client.DataServiceContext> 會追蹤每一個關聯性，如同內容中的連結物件。 [!INCLUDE[ssAstoria](../../../../includes/ssastoria-md.md)]提供下列方法<xref:System.Data.Services.Client.DataServiceContext>類別來建立、 修改和刪除這些連結：  
+ 您可以建立和變更實體執行個體之間的關聯性，而且可以讓用戶端程式庫在資料服務中反映這些變更。 實體之間的關聯性會定義為模型中的關聯，而且 <xref:System.Data.Services.Client.DataServiceContext> 會追蹤每一個關聯性，如同內容中的連結物件。 [!INCLUDE[ssAstoria](../../../../includes/ssastoria-md.md)] 提供下列方法<xref:System.Data.Services.Client.DataServiceContext>類別來建立、 修改和刪除這些連結：  
   
 |方法|描述|  
 |------------|-----------------|  
@@ -104,7 +92,7 @@ ms.lasthandoff: 12/22/2017
 ## <a name="saving-changes"></a>儲存變更  
  變更會在 <xref:System.Data.Services.Client.DataServiceContext> 執行個體中追蹤，但是不會立即傳送至伺服器。 在針對指定的活動完成所需的變更之後，請呼叫 <xref:System.Data.Services.Client.DataServiceContext.SaveChanges%2A>，將所有變更提交至資料服務。 如需詳細資訊，請參閱[管理資料服務內容](../../../../docs/framework/data/wcf/managing-the-data-service-context-wcf-data-services.md)。 您也可以透過 <xref:System.Data.Services.Client.DataServiceContext.BeginSaveChanges%2A> 和 <xref:System.Data.Services.Client.DataServiceContext.EndSaveChanges%2A> 方法，非同步地儲存變更。 如需詳細資訊，請參閱[非同步作業](../../../../docs/framework/data/wcf/asynchronous-operations-wcf-data-services.md)。  
   
-## <a name="see-also"></a>請參閱  
+## <a name="see-also"></a>另請參閱  
  [WCF Data Services 用戶端程式庫](../../../../docs/framework/data/wcf/wcf-data-services-client-library.md)  
  [查詢資料服務](../../../../docs/framework/data/wcf/querying-the-data-service-wcf-data-services.md)  
  [非同步作業](../../../../docs/framework/data/wcf/asynchronous-operations-wcf-data-services.md)  

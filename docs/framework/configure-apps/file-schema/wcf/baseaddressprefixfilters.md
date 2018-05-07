@@ -2,11 +2,11 @@
 title: '&lt;baseAddressPrefixFilters&gt;'
 ms.date: 03/30/2017
 ms.assetid: 8cab2a9a-c51f-4283-bb60-2ad0c274fd46
-ms.openlocfilehash: 8fffcd02b1c08172b184225f13a1852414cf429a
-ms.sourcegitcommit: 11f11ca6cefe555972b3a5c99729d1a7523d8f50
-ms.translationtype: HT
+ms.openlocfilehash: 9ac0c756f611c877ca689f12e5fe365026924f1d
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="ltbaseaddressprefixfiltersgt"></a>&lt;baseAddressPrefixFilters&gt;
 表示的組態項目會指定通過篩選條件，提供一個機制，裝載在 IIS 中的 Windows Communication Foundation (WCF) 應用程式時挑選適當的網際網路資訊服務 (IIS) 繫結的集合。  
@@ -50,7 +50,7 @@ ms.lasthandoff: 05/03/2018
   
  IIS 網站是包含虛擬目錄的虛擬應用程式的容器 (Container)。 網站中的應用程式則可以透過一個或多個 IIS 繫結來存取。 IIS 繫結提供繫結通訊協定和繫結這兩項資訊。 繫結通訊協定 (例如 HTTP) 會定義產生通訊的配置，而繫結資訊 (例如 IPAddress、Port、Hostheader) 包含用來存取該網站的資料。  
   
- IIS 支援為每個網站指定多個 IIS 繫結，讓每個配置都有多個基底位址。 由於裝載在網站下的 [!INCLUDE[indigo2](../../../../../includes/indigo2-md.md)] 服務僅允許每個配置繫結至一個基底位址，因此，您可以使用前置詞篩選功能挑選所裝載服務所需的基底位址。 IIS 提供的傳入基底位址會依據選擇性的前置詞清單篩選條件進行篩選。  
+ IIS 支援為每個網站指定多個 IIS 繫結，讓每個配置都有多個基底位址。 因為在網站下裝載的 WCF 服務允許每個配置繫結至一個基底位址，所以您可以使用前置詞篩選功能挑選裝載服務所需的基底位址。 IIS 提供的傳入基底位址會依據選擇性的前置詞清單篩選條件進行篩選。  
   
  例如，您的網站可能包含下列基底位址。  
   

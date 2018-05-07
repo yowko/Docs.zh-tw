@@ -1,29 +1,15 @@
 ---
 title: 列舉 SQL Server 執行個體 (ADO.NET)
-ms.custom: ''
 ms.date: 03/30/2017
-ms.prod: .net-framework
-ms.reviewer: ''
-ms.suite: ''
-ms.technology:
-- dotnet-ado
-ms.tgt_pltfrm: ''
-ms.topic: article
 dev_langs:
 - csharp
 - vb
 ms.assetid: ddf1c83c-9d40-45e6-b04d-9828c6cbbfdc
-caps.latest.revision: 8
-author: douglaslMS
-ms.author: douglasl
-manager: craigg
-ms.workload:
-- dotnet
-ms.openlocfilehash: 7a47a3e342887a1dce3912a06ab49a88b7b9b615
-ms.sourcegitcommit: 86adcc06e35390f13c1e372c36d2e044f1fc31ef
+ms.openlocfilehash: d9456926b228fadca940f6c4698829494382e237
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/26/2018
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="enumerating-instances-of-sql-server-adonet"></a>列舉 SQL Server 執行個體 (ADO.NET)
 SQL Server 允許應用程式尋找目前的網路中的 SQL Server 執行個體。 <xref:System.Data.Sql.SqlDataSourceEnumerator> 類別會將此資訊公開至應用程式開發人員，並提供包含所有可見伺服器之相關資訊的 <xref:System.Data.DataTable>。 傳回這個資料表包含一份符合使用者嘗試建立新的連接時所提供的清單，並展開下拉式清單包含所有可用的伺服器上的網路上可用的伺服器執行個體**連線屬性** 對話方塊。 顯示的結果不一定是完整的。  

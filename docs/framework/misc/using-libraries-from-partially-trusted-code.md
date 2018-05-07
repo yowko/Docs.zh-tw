@@ -1,13 +1,6 @@
 ---
-title: "從部分受信任程式碼使用程式庫"
-ms.custom: 
+title: 從部分受信任程式碼使用程式庫
 ms.date: 03/30/2017
-ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.technology: dotnet-clr
-ms.tgt_pltfrm: 
-ms.topic: article
 helpviewer_keywords:
 - security [.NET Framework], partially trusted code
 - partially trusted code
@@ -16,16 +9,13 @@ helpviewer_keywords:
 - code access security, partially trusted code
 - APTCA
 ms.assetid: dd66cd4c-b087-415f-9c3e-94e3a1835f74
-caps.latest.revision: "25"
 author: mairaw
 ms.author: mairaw
-manager: wpickett
-ms.workload: dotnet
-ms.openlocfilehash: 00f532e4e93936dbd719f2b8a0c060e54e16425b
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.openlocfilehash: 3b2eaf6ccebed38c778e328e34cb6f53177347b2
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="using-libraries-from-partially-trusted-code"></a>從部分受信任程式碼使用程式庫
 [!INCLUDE[net_security_note](../../../includes/net-security-note-md.md)]  
@@ -60,5 +50,5 @@ ms.lasthandoff: 12/22/2017
 > [!NOTE]
 >  .NET Framework 類別庫中的某些類別沒有**AllowPartiallyTrustedCallersAttribute**屬性，而且無法由部分信任程式碼呼叫。  
   
-## <a name="see-also"></a>請參閱  
+## <a name="see-also"></a>另請參閱  
  [程式碼存取安全性](../../../docs/framework/misc/code-access-security.md)

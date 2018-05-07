@@ -1,24 +1,12 @@
 ---
-title: "如何：產生物件模型當做外部檔案"
-ms.custom: 
+title: 如何：產生物件模型當做外部檔案
 ms.date: 03/30/2017
-ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.technology: dotnet-ado
-ms.tgt_pltfrm: 
-ms.topic: article
 ms.assetid: 2496fa06-3df4-4ecb-86c4-70a49ea08565
-caps.latest.revision: "3"
-author: douglaslMS
-ms.author: douglasl
-manager: craigg
-ms.workload: dotnet
-ms.openlocfilehash: 0db1d03960c45837c75d409782fc38d3c1ffa9ca
-ms.sourcegitcommit: ed26cfef4e18f6d93ab822d8c29f902cff3519d1
+ms.openlocfilehash: 00e8563b361a36de6c31e9ff0c0fd8f3b6f46b4d
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 01/17/2018
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="how-to-generate-the-object-model-as-an-external-file"></a>如何：產生物件模型當做外部檔案
 除了使用以屬性 (Attribute) 為基礎的對應，您還可以使用 SQLMetal 命令列工具，產生自己的物件模型做為外部 XML 檔。 如需詳細資訊，請參閱 [SqlMetal.exe (程式碼產生工具)](../../../../../../docs/framework/tools/sqlmetal-exe-code-generation-tool.md)。 藉由使用外部 XML 對應檔案，您可以避免程式碼雜亂。 此外，若要變更行為，也只需要修改外部檔案，而無須重新編譯應用程式的二進位碼檔案。 如需詳細資訊，請參閱[外部對應](../../../../../../docs/framework/data/adonet/sql/linq/external-mapping.md)。  
@@ -59,7 +47,7 @@ sqlmetal /server:myserver /database:northwind /map:externalfile.xml
 </Database>  
 ```  
   
-## <a name="see-also"></a>請參閱  
+## <a name="see-also"></a>另請參閱  
  [建立物件模型](../../../../../../docs/framework/data/adonet/sql/linq/creating-the-object-model.md)  
  [外部對應](../../../../../../docs/framework/data/adonet/sql/linq/external-mapping.md)  
  [如何：以 Visual Basic 或 C# 產生物件模型](../../../../../../docs/framework/data/adonet/sql/linq/how-to-generate-the-object-model-in-visual-basic-or-csharp.md)

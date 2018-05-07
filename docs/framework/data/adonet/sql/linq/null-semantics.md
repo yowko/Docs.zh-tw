@@ -1,26 +1,12 @@
 ---
 title: Null 語意
-ms.custom: ''
 ms.date: 03/30/2017
-ms.prod: .net-framework
-ms.reviewer: ''
-ms.suite: ''
-ms.technology:
-- dotnet-ado
-ms.tgt_pltfrm: ''
-ms.topic: article
 ms.assetid: a97017ae-d634-4cf3-bbaf-054a528fd683
-caps.latest.revision: 2
-author: douglaslMS
-ms.author: douglasl
-manager: craigg
-ms.workload:
-- dotnet
-ms.openlocfilehash: 3c4daa5fd37158f1af31f33ba743a56cf76670d8
-ms.sourcegitcommit: 86adcc06e35390f13c1e372c36d2e044f1fc31ef
+ms.openlocfilehash: b80d198b81e28b0fe1d0107dd04a9694c3069868
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/26/2018
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="null-semantics"></a>Null 語意
 下表提供各個組件的連結[!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)]文件位置`null`(`Nothing`在 Visual Basic 中) 問題的討論。  
