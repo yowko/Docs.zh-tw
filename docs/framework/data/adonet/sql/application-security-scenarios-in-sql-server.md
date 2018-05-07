@@ -1,24 +1,12 @@
 ---
-title: "SQL Server 中的應用程式安全性案例"
-ms.custom: 
+title: SQL Server 中的應用程式安全性案例
 ms.date: 03/30/2017
-ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.technology: dotnet-ado
-ms.tgt_pltfrm: 
-ms.topic: article
 ms.assetid: 0164f3a4-406e-4693-bec3-03c8e18b46d7
-caps.latest.revision: "5"
-author: douglaslMS
-ms.author: douglasl
-manager: craigg
-ms.workload: dotnet
-ms.openlocfilehash: 6207bc570dd8182b351a945a36d5f80c14a8dd4c
-ms.sourcegitcommit: ed26cfef4e18f6d93ab822d8c29f902cff3519d1
+ms.openlocfilehash: 1239715678bda648bc962f9b23667b954b540e3f
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 01/17/2018
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="application-security-scenarios-in-sql-server"></a>SQL Server 中的應用程式安全性案例
 並不只有一種正確方式可以建立安全的 SQL Server 用戶端應用程式。 每個應用程式的需求、部署環境及使用者對象都有其獨特性。 初次部署時還相當安全的應用程式，隨著時間流逝，也可能變得不再那麼安全。 要精確預測未來可能發生什麼威脅是不可能的事。  
@@ -67,7 +55,7 @@ ms.lasthandoff: 01/17/2018
  [在 SQL Server 中啟用跨資料庫存取](../../../../../docs/framework/data/adonet/sql/enabling-cross-database-access-in-sql-server.md)  
  說明如何在不危及安全性的前提下啟用跨資料庫存取。  
   
-## <a name="see-also"></a>請參閱  
+## <a name="see-also"></a>另請參閱  
  [SQL Server 安全性](../../../../../docs/framework/data/adonet/sql/sql-server-security.md)  
  [SQL Server 安全性概觀](../../../../../docs/framework/data/adonet/sql/overview-of-sql-server-security.md)  
  [設定 ADO.NET 應用程式的安全性](../../../../../docs/framework/data/adonet/securing-ado-net-applications.md)  

@@ -1,27 +1,15 @@
 ---
-title: "物件狀態和變更追蹤"
-ms.custom: 
+title: 物件狀態和變更追蹤
 ms.date: 03/30/2017
-ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.technology: dotnet-ado
-ms.tgt_pltfrm: 
-ms.topic: article
 ms.assetid: 7a808b00-9c3c-479a-aa94-717280fefd71
-caps.latest.revision: "2"
-author: douglaslMS
-ms.author: douglasl
-manager: craigg
-ms.workload: dotnet
-ms.openlocfilehash: f7eb1a8afe87caece18432c66a8d8a268ce9fbd2
-ms.sourcegitcommit: ed26cfef4e18f6d93ab822d8c29f902cff3519d1
+ms.openlocfilehash: 482299f90a92acec9307649ec04a89f8ce6be414
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 01/17/2018
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="object-states-and-change-tracking"></a>物件狀態和變更追蹤
-[!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)]物件一律參與某些*狀態*。 例如，[!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)] 建立新物件時，該物件會是 `Unchanged` 狀態。 您自行建立的新物件不知道<xref:System.Data.Linq.DataContext>且處於`Untracked`狀態。 順利執行 <xref:System.Data.Linq.DataContext.SubmitChanges%2A> 之後，[!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)] 得知的所有物件都會是 `Unchanged` 狀態  (唯一的例外是已順利從資料庫中刪除的物件，這些物件是 `Deleted` 狀態，而且無法在該 <xref:System.Data.Linq.DataContext> 執行個體中使用)。  
+[!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)] 物件一律參與某些*狀態*。 例如，[!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)] 建立新物件時，該物件會是 `Unchanged` 狀態。 您自行建立的新物件不知道<xref:System.Data.Linq.DataContext>且處於`Untracked`狀態。 順利執行 <xref:System.Data.Linq.DataContext.SubmitChanges%2A> 之後，[!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)] 得知的所有物件都會是 `Unchanged` 狀態  (唯一的例外是已順利從資料庫中刪除的物件，這些物件是 `Deleted` 狀態，而且無法在該 <xref:System.Data.Linq.DataContext> 執行個體中使用)。  
   
 ## <a name="object-states"></a>物件狀態  
  下表列出 [!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)] 物件的可能狀態。  
@@ -45,9 +33,9 @@ ms.lasthandoff: 01/17/2018
 >  已加入至 `Table` 的物件不會出現在識別 (Identity) 快取中。 識別快取只會反映從資料庫擷取的物件。 呼叫 <xref:System.Data.Linq.Table%601.InsertOnSubmit%2A> 之後，除非 <xref:System.Data.Linq.DataContext.SubmitChanges%2A> 順利完成，否則加入的實體都不會出現在對資料庫的查詢中。  
   
 ## <a name="deleting-objects"></a>刪除物件  
- 您可以在適當的 `o` 上呼叫 <xref:System.Data.Linq.Table%601.DeleteOnSubmit%2A>(o)，將已追蹤的物件 <xref:System.Data.Linq.Table%601> 標記為要刪除。 [!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)]會從物件移除<xref:System.Data.Linq.EntitySet%601>當做更新作業，並對應外部索引鍵的值設定為 null。 作業的目標 (`o`) 並不會從其資料表中刪除。 例如，`cust.Orders.DeleteOnSubmit(ord)` 所表示的更新，是將外部索引鍵 `cust` 設為 null 來切斷 `ord` 和 `ord.CustomerID` 之間的關聯性 (Relationship)。 這並不會刪除 `ord` 所對應的資料列。  
+ 您可以在適當的 `o` 上呼叫 <xref:System.Data.Linq.Table%601.DeleteOnSubmit%2A>(o)，將已追蹤的物件 <xref:System.Data.Linq.Table%601> 標記為要刪除。 [!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)] 會從物件移除<xref:System.Data.Linq.EntitySet%601>當做更新作業，並對應外部索引鍵的值設定為 null。 作業的目標 (`o`) 並不會從其資料表中刪除。 例如，`cust.Orders.DeleteOnSubmit(ord)` 所表示的更新，是將外部索引鍵 `cust` 設為 null 來切斷 `ord` 和 `ord.CustomerID` 之間的關聯性 (Relationship)。 這並不會刪除 `ord` 所對應的資料列。  
   
- [!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)]執行下列的處理時刪除物件 (<xref:System.Data.Linq.Table%601.DeleteOnSubmit%2A>) 從其資料表：  
+ [!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)] 執行下列的處理時刪除物件 (<xref:System.Data.Linq.Table%601.DeleteOnSubmit%2A>) 從其資料表：  
   
 -   呼叫 <xref:System.Data.Linq.DataContext.SubmitChanges%2A> 時，會對該物件執行 `DELETE` 作業。  
   
@@ -73,6 +61,6 @@ ms.lasthandoff: 01/17/2018
   
  如果要同時更新必要的參考和對應的外部索引鍵，就必須確定兩者一致。 如果在您呼叫 <xref:System.InvalidOperationException> 時這兩者並未同步，則會擲回 <xref:System.Data.Linq.DataContext.SubmitChanges%2A> 例外狀況。 雖然只要變更外部索引鍵值就能更新基礎資料列，但您仍應該變更參考，以維護物件圖形中的連接並保持雙向關聯性的一致性。  
   
-## <a name="see-also"></a>請參閱  
+## <a name="see-also"></a>另請參閱  
  [背景資訊](../../../../../../docs/framework/data/adonet/sql/linq/background-information.md)  
  [插入、更新和刪除作業](../../../../../../docs/framework/data/adonet/sql/linq/insert-update-and-delete-operations.md)

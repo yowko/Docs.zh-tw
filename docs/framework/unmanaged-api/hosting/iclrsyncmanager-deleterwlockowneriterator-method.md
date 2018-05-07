@@ -1,14 +1,6 @@
 ---
-title: "ICLRSyncManager::DeleteRWLockOwnerIterator 方法"
-ms.custom: 
+title: ICLRSyncManager::DeleteRWLockOwnerIterator 方法
 ms.date: 03/30/2017
-ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.technology:
-- dotnet-clr
-ms.tgt_pltfrm: 
-ms.topic: reference
 api_name:
 - ICLRSyncManager.DeleteRWLockOwnerIterator
 api_location:
@@ -23,17 +15,13 @@ helpviewer_keywords:
 ms.assetid: fcfd340a-b7d6-44e4-8167-2c05b789d483
 topic_type:
 - apiref
-caps.latest.revision: 
 author: rpetrusha
 ms.author: ronpet
-manager: wpickett
-ms.workload:
-- dotnet
-ms.openlocfilehash: dce6699dc625c5c867befe1bc2e307cfaea7719a
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.openlocfilehash: 5ee4a09902be093bdbfe0b367f4add35bdda571c
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="iclrsyncmanagerdeleterwlockowneriterator-method"></a>ICLRSyncManager::DeleteRWLockOwnerIterator 方法
 要求 common language runtime (CLR) 損毀的呼叫所建立的迭代器[iclrsyncmanager:: Createrwlockowneriterator](../../../../docs/framework/unmanaged-api/hosting/iclrsyncmanager-createrwlockowneriterator-method.md)。  
@@ -54,7 +42,7 @@ HRESULT DeleteRWLockOwnerIterator (
   
 |HRESULT|描述|  
 |-------------|-----------------|  
-|S_OK|`DeleteRWLockOwnerIterator`已成功傳回。|  
+|S_OK|`DeleteRWLockOwnerIterator` 已成功傳回。|  
 |HOST_E_CLRNOTAVAILABLE|CLR 已載入處理序，或在它無法執行 managed 程式碼，或已成功處理呼叫的狀態。|  
 |HOST_E_TIMEOUT|呼叫已逾時。|  
 |HOST_E_NOT_OWNER|呼叫端未擁有鎖定。|  
@@ -71,8 +59,8 @@ HRESULT DeleteRWLockOwnerIterator (
   
  **程式庫：**包含做為 MSCorEE.dll 中的資源  
   
- **.NET framework 版本：**[!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]  
+ **.NET framework 版本：** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]  
   
-## <a name="see-also"></a>請參閱  
+## <a name="see-also"></a>另請參閱  
  [ICLRSyncManager 介面](../../../../docs/framework/unmanaged-api/hosting/iclrsyncmanager-interface.md)  
  [IHostSyncManager 介面](../../../../docs/framework/unmanaged-api/hosting/ihostsyncmanager-interface.md)

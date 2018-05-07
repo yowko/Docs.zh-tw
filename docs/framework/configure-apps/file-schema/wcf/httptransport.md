@@ -2,11 +2,11 @@
 title: '&lt;httpTransport&gt;'
 ms.date: 03/30/2017
 ms.assetid: 8b30c065-b32a-4fa3-8eb4-5537a9c6b897
-ms.openlocfilehash: cd3a17eee9d4eebbefa880e14aadbc4715a18ac1
-ms.sourcegitcommit: 11f11ca6cefe555972b3a5c99729d1a7523d8f50
-ms.translationtype: HT
+ms.openlocfilehash: 77400348e9adc31d8121fc75f46d75d757af270f
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="lthttptransportgt"></a>&lt;httpTransport&gt;
 指定 HTTP 傳輸，以傳輸自訂繫結的 SOAP 訊息。  
@@ -66,7 +66,7 @@ IntegratedWindowsAuthentication: Specifies Windows authentication"
 |[\<繫結 >](../../../../../docs/framework/misc/binding.md)|定義自訂繫結的所有繫結功能。|  
   
 ## <a name="remarks"></a>備註  
- `httpTransport` 項目是在建立自訂繫結時的起點，該繫結會實作 HTTP 傳輸通訊協定。 HTTP 是用於互通性目的的主要傳輸。 支援這個傳輸，由 Windows Communication Foundation (WCF) 以確保互通性與其他非[!INCLUDE[indigo2](../../../../../includes/indigo2-md.md)]Web 服務堆疊。  
+ `httpTransport` 項目是在建立自訂繫結時的起點，該繫結會實作 HTTP 傳輸通訊協定。 HTTP 是用於互通性目的的主要傳輸。 這個傳輸被支援的 Windows Communication Foundation (WCF) 以確保與其他非 WCF Web 服務堆疊互通。  
   
 ## <a name="see-also"></a>另請參閱  
  <xref:System.ServiceModel.Configuration.HttpTransportElement>  

@@ -1,27 +1,15 @@
 ---
-title: "尋找數值序列中的最小值"
-ms.custom: 
+title: 尋找數值序列中的最小值
 ms.date: 03/30/2017
-ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.technology: dotnet-ado
-ms.tgt_pltfrm: 
-ms.topic: article
 dev_langs:
 - csharp
 - vb
 ms.assetid: 78203093-f242-4572-9b31-9495b10926aa
-caps.latest.revision: "2"
-author: douglaslMS
-ms.author: douglasl
-manager: craigg
-ms.workload: dotnet
-ms.openlocfilehash: 9cc16b09912cb9cc695fc350d9fd4530ea99e794
-ms.sourcegitcommit: ed26cfef4e18f6d93ab822d8c29f902cff3519d1
+ms.openlocfilehash: 9b55c0a188f7e5857ddc5021c820be847ce63600
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 01/17/2018
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="find-the-minimum-value-in-a-numeric-sequence"></a>尋找數值序列中的最小值
 使用 <xref:System.Linq.Enumerable.Min%2A> 運算子可傳回數值序列中的最小值。  
@@ -82,6 +70,6 @@ ms.lasthandoff: 01/17/2018
   
  `Konbu`  
   
-## <a name="see-also"></a>請參閱  
+## <a name="see-also"></a>另請參閱  
  [彙總查詢](../../../../../../docs/framework/data/adonet/sql/linq/aggregate-queries.md)  
  [下載範例資料庫](../../../../../../docs/framework/data/adonet/sql/linq/downloading-sample-databases.md)

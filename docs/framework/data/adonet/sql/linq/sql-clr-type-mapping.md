@@ -1,24 +1,12 @@
 ---
-title: "SQL-CLR 類型對應"
-ms.custom: 
+title: SQL-CLR 類型對應
 ms.date: 03/30/2017
-ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.technology: dotnet-ado
-ms.tgt_pltfrm: 
-ms.topic: article
 ms.assetid: 4ed76327-54a7-414b-82a9-7579bfcec04b
-caps.latest.revision: "4"
-author: douglaslMS
-ms.author: douglasl
-manager: craigg
-ms.workload: dotnet
-ms.openlocfilehash: cc6a3d38b8534c9727562cb3fb82f96fa60db7ec
-ms.sourcegitcommit: ed26cfef4e18f6d93ab822d8c29f902cff3519d1
+ms.openlocfilehash: 5437529d9293951ad34abda435b538b4f404c600
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 01/17/2018
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="sql-clr-type-mapping"></a>SQL-CLR 類型對應
 在 LINQ to SQL 中，關聯式資料庫的資料模型會對應至以您選擇之程式語言表示的物件模型 (Object Model)。 執行應用程式時，LINQ to SQL 會將物件模型中的 Language Integrated Query (LINQ) 轉譯成 SQL，並將這些查詢傳送至資料庫進行執行。 當資料庫傳回結果時，LINQ to SQL 會將結果轉譯回您可以在自己的程式語言中處理的物件。  
@@ -206,7 +194,7 @@ ms.lasthandoff: 01/17/2018
 >  從 Microsoft SQL Server 2008 開始，就提供了 SQL Server 型別 `DATETIME2`、`DATETIMEOFFSET`、`DATE` 和 `TIME`。 從 .NET Framework 3.5 版 SP1 開始，LINQ to SQL 支援對應至這些新的型別。  
   
 ### <a name="systemdatetime"></a>System.Datetime  
- CLR <xref:System.DateTime?displayProperty=nameWithType> 型別的範圍和精確度大於 SQL Server `DATETIME` 型別的範圍和精確度，而這是 <xref:System.Data.Linq.DataContext.CreateDatabase%2A?displayProperty=nameWithType> 方法的預設型別對應。 若要協助避免與超出 `DATETIME` 範圍之日期相關的例外狀況，請使用 `DATETIME2` (從 Microsoft SQL Server 2008 開始提供)。 `DATETIME2`可以比對的範圍和精確度的 clr <xref:System.DateTime?displayProperty=nameWithType>。  
+ CLR <xref:System.DateTime?displayProperty=nameWithType> 型別的範圍和精確度大於 SQL Server `DATETIME` 型別的範圍和精確度，而這是 <xref:System.Data.Linq.DataContext.CreateDatabase%2A?displayProperty=nameWithType> 方法的預設型別對應。 若要協助避免與超出 `DATETIME` 範圍之日期相關的例外狀況，請使用 `DATETIME2` (從 Microsoft SQL Server 2008 開始提供)。 `DATETIME2` 可以比對的範圍和精確度的 clr <xref:System.DateTime?displayProperty=nameWithType>。  
   
  SQL Server 日期沒有 <xref:System.TimeZone> 的概念，而這是 CLR 中完全支援的功能。 不論原始 <xref:System.TimeZone> 資訊為何，<xref:System.TimeZone> 值會原樣儲存至資料庫，而不進行 <xref:System.DateTimeKind> 轉換。 從資料庫擷取 <xref:System.DateTime> 值時，這個值會原樣載入至 <xref:System.DateTime>，並將 <xref:System.DateTimeKind> 設為 <xref:System.DateTimeKind.Unspecified> 中。 如需有關支援<xref:System.DateTime?displayProperty=nameWithType>方法，請參閱[System.DateTime 方法](../../../../../../docs/framework/data/adonet/sql/linq/system-datetime-methods.md)。  
   
@@ -224,7 +212,7 @@ ms.lasthandoff: 01/17/2018
 |`BINARY(50)`|<xref:System.Data.Linq.Binary?displayProperty=nameWithType>|  
 |`VARBINARY(50)`|<xref:System.Data.Linq.Binary?displayProperty=nameWithType>|  
 |`VARBINARY(MAX)`|<xref:System.Data.Linq.Binary?displayProperty=nameWithType>|  
-|`VARBINARY(MAX)`與`FILESTREAM`屬性|<xref:System.Data.Linq.Binary?displayProperty=nameWithType>|  
+|`VARBINARY(MAX)` 與`FILESTREAM`屬性|<xref:System.Data.Linq.Binary?displayProperty=nameWithType>|  
 |`IMAGE`|<xref:System.Data.Linq.Binary?displayProperty=nameWithType>|  
 |`TIMESTAMP`|<xref:System.Data.Linq.Binary?displayProperty=nameWithType>|  
   
@@ -265,7 +253,7 @@ ms.lasthandoff: 01/17/2018
   
  LINQ to SQL 不支援這些其他型別的任何其他型別對應。  如需詳細資訊，請參閱[型別對應的執行階段行為對照表](#BehaviorMatrix)。  
   
-## <a name="see-also"></a>請參閱  
+## <a name="see-also"></a>另請參閱  
  [以屬性為基礎的對應](../../../../../../docs/framework/data/adonet/sql/linq/attribute-based-mapping.md)  
  [外部對應](../../../../../../docs/framework/data/adonet/sql/linq/external-mapping.md)  
  [資料類型和函式](../../../../../../docs/framework/data/adonet/sql/linq/data-types-and-functions.md)  

@@ -1,28 +1,14 @@
 ---
-title: "自訂資料服務提供者 (WCF Data Services)"
-ms.custom: 
+title: 自訂資料服務提供者 (WCF Data Services)
 ms.date: 03/30/2017
-ms.prod: .net-framework-oob
-ms.reviewer: 
-ms.suite: 
-ms.technology:
-- dotnet-clr
-ms.tgt_pltfrm: 
-ms.topic: article
 helpviewer_keywords:
 - WCF Data Services, providers
 ms.assetid: e702ecdb-3419-4743-92a9-c3c0e7d44082
-caps.latest.revision: 
-author: dotnet-bot
-ms.author: dotnetcontent
-manager: wpickett
-ms.workload:
-- dotnet
-ms.openlocfilehash: d7db780b97c1a7eadffbfa71f60be4afe590ccb4
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.openlocfilehash: 8a0045f0c1b2a0f405e00c6eb729c88a5e95b426
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="custom-data-service-providers-wcf-data-services"></a>自訂資料服務提供者 (WCF Data Services)
 [!INCLUDE[ssAstoria](../../../../includes/ssastoria-md.md)] 包含一組提供者，可讓您根據晚期繫結的資料型別定義資料模型。  
@@ -37,7 +23,7 @@ ms.lasthandoff: 12/22/2017
   
  如需詳細資訊，請參閱文章[自訂資料服務提供者](http://go.microsoft.com/fwlink/?LinkID=186850)和[!INCLUDE[ssODataFull](../../../../includes/ssodatafull-md.md)]提供者中的工具組[OData SDK](http://go.microsoft.com/fwlink/?LinkId=186069)。  
   
-## <a name="see-also"></a>請參閱  
+## <a name="see-also"></a>另請參閱  
  [資料服務提供者](../../../../docs/framework/data/wcf/data-services-providers-wcf-data-services.md)  
  [Entity Framework 提供者](../../../../docs/framework/data/wcf/entity-framework-provider-wcf-data-services.md)  
  [反映提供者](../../../../docs/framework/data/wcf/reflection-provider-wcf-data-services.md)

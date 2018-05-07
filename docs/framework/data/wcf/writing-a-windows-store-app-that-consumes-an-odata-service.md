@@ -1,28 +1,14 @@
 ---
-title: "撰寫使用 OData 服務的 Windows 市集應用程式"
-ms.custom: 
+title: 撰寫使用 OData 服務的 Windows 市集應用程式
 ms.date: 03/30/2017
-ms.prod: .net-framework-oob
-ms.reviewer: 
-ms.suite: 
-ms.technology:
-- dotnet-clr
-ms.tgt_pltfrm: 
-ms.topic: article
 dev_langs:
 - csharp
 ms.assetid: 9917a0e9-ec93-49e5-a366-fd39b892eb8b
-caps.latest.revision: 
-author: dotnet-bot
-ms.author: dotnetcontent
-manager: wpickett
-ms.workload:
-- dotnet
-ms.openlocfilehash: 3a2eb79e8bf8a5c683c9d48a0a69e4d7f5d270eb
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.openlocfilehash: 105e7c06c6ca5253b931c1a8e60c6eee28e92cf1
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="writing-a-windows-store-app-that-consumes-an-odata-service"></a>撰寫使用 OData 服務的 Windows 市集應用程式
 Windows 8 引入新的應用程式類型： Windows 市集應用程式。 Windows 市集應用程式具有全新的外觀及操作，可在多種裝置上執行，並透過 Windows 市集提供。 本主題說明如何撰寫使用 OData 服務 (尤其是 NetFlix Catalog OData 服務) 的 Windows 市集應用程式。 如需 Windows 市集應用程式的詳細資訊，請閱讀[Windows 市集應用程式使用者入門](http://msdn.microsoft.com/library/windows/apps/br211386.aspx)。  

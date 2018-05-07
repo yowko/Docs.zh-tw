@@ -1,24 +1,12 @@
 ---
-title: "保護用戶端應用程式的安全"
-ms.custom: 
+title: 保護用戶端應用程式的安全
 ms.date: 03/30/2017
-ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.technology: dotnet-ado
-ms.tgt_pltfrm: 
-ms.topic: article
 ms.assetid: 6239592e-fa7d-4dea-9f00-d296d0048b01
-caps.latest.revision: "4"
-author: douglaslMS
-ms.author: douglasl
-manager: craigg
-ms.workload: dotnet
-ms.openlocfilehash: 100def5fdf531527705fb0c1aebdc20674e0ce60
-ms.sourcegitcommit: c0dd436f6f8f44dc80dc43b07f6841a00b74b23f
+ms.openlocfilehash: ac4f1c3debacd89a0763aa8f30de3c5463c5d24d
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 01/19/2018
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="secure-client-applications"></a>保護用戶端應用程式的安全
 應用程式通常含有許多部分，而這所有的部分都必須受到保護，以免產生漏洞而造成資料遺失，或因其他原因而危及系統。 建立安全的使用者介面可以避免許多問題，因為可以在攻擊者存取資料或系統資源之前就加以防堵。  
@@ -76,7 +64,7 @@ ms.lasthandoff: 01/19/2018
 |[在遠端處理中的安全性](http://msdn.microsoft.com/library/9574262c-d4b1-41c5-8600-24ff147c0add)|說明驗證和加密，以及與遠端處理相關的其他安全性主題。|  
 |[安全性和遠端處理考量](../../../../docs/framework/misc/security-and-remoting-considerations.md)|說明受保護的物件和跨應用程式定義域的安全性問題。|  
   
-## <a name="see-also"></a>請參閱  
+## <a name="see-also"></a>另請參閱  
  [設定 ADO.NET 應用程式的安全性](../../../../docs/framework/data/adonet/securing-ado-net-applications.md)  
  [資料存取策略的建議](http://msdn.microsoft.com/library/72411f32-d12a-4de8-b961-e54fca7faaf5)  
  [設定應用程式的安全性](/visualstudio/ide/securing-applications)  

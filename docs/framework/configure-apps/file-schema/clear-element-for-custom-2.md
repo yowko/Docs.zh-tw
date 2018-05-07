@@ -1,10 +1,6 @@
 ---
-title: "&lt;清除&gt;NameValueSectionHandler DictionarySectionHandler 的項目"
+title: '&lt;清除&gt;NameValueSectionHandler DictionarySectionHandler 的項目'
 ms.date: 05/01/2017
-ms.prod: .net-framework
-ms.technology:
-- dotnet-clr
-ms.topic: article
 f1_keywords:
 - http://schemas.microsoft.com/.NetConfiguration/v2.0#configuration/sectionName/clear
 helpviewer_keywords:
@@ -13,14 +9,11 @@ helpviewer_keywords:
 ms.assetid: ff2294ec-fb82-4b0c-933e-ae185433fc7b
 author: guardrex
 ms.author: mairaw
-manager: wpickett
-ms.workload:
-- dotnet
-ms.openlocfilehash: 57ee634c987d344d81f1ca099fe55e633bfbf659
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.openlocfilehash: a1cbd682faa4c60e50bc3b73b58ef226dd599da2
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="clear-element-for-namevaluesectionhandler-and-dictionarysectionhandler"></a>\<清除 > NameValueSectionHandler DictionarySectionHandler 的項目
 
@@ -44,7 +37,7 @@ ms.lasthandoff: 12/22/2017
 
 |     | 描述 |
 | --- | ------------|
-| [**\<sectionName >**項目](~/docs/framework/configure-apps/file-schema/custom-element-2.md) | 定義自訂組態區段，使用設定<xref:System.Configuration.NameValueSectionHandler>和<xref:System.Configuration.DictionarySectionHandler>類別。 |
+| [**\<sectionName >** 項目](~/docs/framework/configure-apps/file-schema/custom-element-2.md) | 定義自訂組態區段，使用設定<xref:System.Configuration.NameValueSectionHandler>和<xref:System.Configuration.DictionarySectionHandler>類別。 |
 
 ## <a name="child-elements"></a>子元素
 
@@ -52,11 +45,11 @@ ms.lasthandoff: 12/22/2017
 
 ## <a name="remarks"></a>備註
 
-您可以使用**\<清除 >**項目移除您已在組態檔階層架構中較高層級定義的應用程式中的所有設定。
+您可以使用**\<清除 >** 項目移除您已在組態檔階層架構中較高層級定義的應用程式中的所有設定。
 
 ## <a name="example"></a>範例
 
-此範例中定義的機器組態檔案和應用程式組態檔，並示範如何使用**\<清除 >**應用程式組態檔中清除先前定義的區段中的項目電腦組態檔。
+此範例中定義的機器組態檔案和應用程式組態檔，並示範如何使用**\<清除 >** 應用程式組態檔中清除先前定義的區段中的項目電腦組態檔。
 
 下列的機器組態檔案程式碼會宣告區段 **\<mySection >**:
 
@@ -73,7 +66,7 @@ ms.lasthandoff: 12/22/2017
 </configuration>
 ```
 
-下列應用程式組態檔程式碼中移除的所有設定 **\<mySection >**。 應用程式無法擷取的任何設定中所宣告的中 **\<mySection >**機器組態檔區段。
+下列應用程式組態檔程式碼中移除的所有設定 **\<mySection >**。 應用程式無法擷取的任何設定中所宣告的中 **\<mySection >** 機器組態檔區段。
 
 ```xml
 <!-- Application configuration file -->

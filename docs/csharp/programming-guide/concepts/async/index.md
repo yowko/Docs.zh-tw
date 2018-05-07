@@ -1,19 +1,12 @@
 ---
 title: 使用 Async 和 Await 進行非同步程式設計 (C#)
 ms.date: 05/22/2017
-ms.prod: .net
-ms.technology:
-- devlang-csharp
-ms.topic: article
 ms.assetid: 9bcf896a-5826-4189-8c1a-3e35fa08243a
-caps.latest.revision: 5
-author: BillWagner
-ms.author: wiwagn
-ms.openlocfilehash: 70dd5606ba81619658eda24f8c4bfd4970d29308
-ms.sourcegitcommit: 86adcc06e35390f13c1e372c36d2e044f1fc31ef
+ms.openlocfilehash: b1797a6d37728021820f5dfa5c01a7ee0c972f1f
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/26/2018
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="asynchronous-programming-with-async-and-await-c"></a>使用 async 和 await 進行非同步程式設計 (C#)
 您可以使用非同步程式設計，避免發生效能瓶頸並增強應用程式的整體回應性。 不過，撰寫非同步應用程式的傳統技術可能很複雜，因而難以撰寫、偵錯和維護。  
@@ -153,7 +146,7 @@ string urlContents = await client.GetStringAsync();
   
 `async` 和 `await` 關鍵字不會導致建立其他執行緒。 由於非同步方法不會在本身的執行緒上執行，因此非同步方法不需要多執行緒。 方法會在目前的同步處理內容執行，而且只有在方法為作用中時才會在執行緒上花費時間。 您可以使用 <xref:System.Threading.Tasks.Task.Run%2A?displayProperty=nameWithType> 將受限於 CPU 的工作移到背景執行緒，但是背景執行緒無法協助處理正在等待結果產生的處理序。  
   
-非同步程式設計的非同步方法幾乎是所有案例的現有方法當中較好的方法。 特別是，這個方法比受限於 IO 作業的 <xref:System.ComponentModel.BackgroundWorker> 類別還要好，因為程式碼較簡單，而且不需要防範競爭情況。 與 <xref:System.Threading.Tasks.Task.Run%2A?displayProperty=nameWithType> 方法結合時，非同步程式設計會比受限於 CPU 作業的 <xref:System.ComponentModel.BackgroundWorker> 還要好，因為非同步程式設計會將執行程式碼的協調工作細節，從 `Task.Run` 傳輸至執行緒集區的工作中分出來。  
+非同步程式設計的非同步方法幾乎是所有案例的現有方法當中較好的方法。 特別是，這個方法比受限於 I/O 作業的 <xref:System.ComponentModel.BackgroundWorker> 類別還要好，因為程式碼較簡單，而且不需要防範競爭條件。 與 <xref:System.Threading.Tasks.Task.Run%2A?displayProperty=nameWithType> 方法結合時，非同步程式設計會比受限於 CPU 作業的 <xref:System.ComponentModel.BackgroundWorker> 還要好，因為非同步程式設計會將執行程式碼的協調工作細節，從 `Task.Run` 傳輸至執行緒集區的工作中分出來。  
   
 ##  <a name="BKMK_AsyncandAwait"></a> async 和 await  
  如果您使用 [async](../../../../csharp/language-reference/keywords/async.md) 修飾詞來將方法指定為非同步方法，就會啟用下列兩項功能。  

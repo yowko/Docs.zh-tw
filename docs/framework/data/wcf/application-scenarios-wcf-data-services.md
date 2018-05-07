@@ -1,30 +1,18 @@
 ---
-title: "應用程式案例 (WCF 資料服務)"
-ms.custom: 
+title: 應用程式案例 (WCF 資料服務)
 ms.date: 03/30/2017
-ms.prod: .net-framework-oob
-ms.reviewer: 
-ms.suite: 
-ms.technology: dotnet-clr
-ms.tgt_pltfrm: 
-ms.topic: article
 helpviewer_keywords:
 - WCF Data Services, learn more
 - WCF Data Services, scenarios
 ms.assetid: 7c82658f-e7c0-46b6-834d-6592f67ab5ea
-caps.latest.revision: "2"
-author: dotnet-bot
-ms.author: dotnetcontent
-manager: wpickett
-ms.workload: dotnet
-ms.openlocfilehash: ba83265b8bd533101fcde785566b9774df588c46
-ms.sourcegitcommit: c0dd436f6f8f44dc80dc43b07f6841a00b74b23f
+ms.openlocfilehash: 81a75007f1d4a13828867e6419412ea9f4c28906
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 01/19/2018
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="application-scenarios-wcf-data-services"></a>應用程式案例 (WCF 資料服務)
-[!INCLUDE[ssAstoria](../../../../includes/ssastoria-md.md)]支援的公開及取用資料做為一組核心案例[!INCLUDE[ssODataFull](../../../../includes/ssodatafull-md.md)]摘要。 本主題會為您指出與這些案例有關的主題。  
+[!INCLUDE[ssAstoria](../../../../includes/ssastoria-md.md)] 支援的公開及取用資料做為一組核心案例[!INCLUDE[ssODataFull](../../../../includes/ssodatafull-md.md)]摘要。 本主題會為您指出與這些案例有關的主題。  
   
  公開關聯式資料與資料庫從[!INCLUDE[ssODataShort](../../../../includes/ssodatashort-md.md)]摘要。  
  -   [快速入門](../../../../docs/framework/data/wcf/quickstart-wcf-data-services.md)  
@@ -97,6 +85,6 @@ ms.lasthandoff: 01/19/2018
   
 -   [服務作業](../../../../docs/framework/data/wcf/service-operations-wcf-data-services.md)  
   
-## <a name="see-also"></a>請參閱  
+## <a name="see-also"></a>另請參閱  
  [快速入門](../../../../docs/framework/data/wcf/quickstart-wcf-data-services.md)  
  [資源](../../../../docs/framework/data/wcf/wcf-data-services-resources.md)

@@ -8,11 +8,11 @@ helpviewer_keywords:
 - <system.serviceModel> element
 - system.serviceModel element
 ms.assetid: 78519531-ad7a-40d3-b3e7-42f1103d8854
-ms.openlocfilehash: 0ce459b5b3d739770353d9913f30c6feaceabfd8
-ms.sourcegitcommit: 11f11ca6cefe555972b3a5c99729d1a7523d8f50
-ms.translationtype: HT
+ms.openlocfilehash: ef3af4663462ff2bb93622e128e58a3ac039dcf5
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="ltsystemservicemodelgt"></a>&lt;system.serviceModel&gt;
 這個組態區段包含所有 Windows Communication Foundation (WCF) ServiceModel 組態項目。  
@@ -62,7 +62,7 @@ ms.lasthandoff: 05/03/2018
 |[\<繫結 >](../../../../../docs/framework/configure-apps/file-schema/wcf/bindings.md)|這個區段保存標準和自訂繫結的集合。 每一個項目都是由它的唯一 `name` 所識別。 服務會使用 `name` 來連結繫結，以便利用繫結。|  
 |[\<用戶端 >](../../../../../docs/framework/configure-apps/file-schema/wcf/client.md)|這個區段包含用戶端用於連接服務之端點的清單。|  
 |[\<comContracts>](../../../../../docs/framework/configure-apps/file-schema/wcf/comcontracts.md)|這個區段會定義為 WCF 與 COM interop 啟用的 COM 合約。|  
-|[\<commonBehaviors >](../../../../../docs/framework/configure-apps/file-schema/wcf/commonbehaviors.md)|這個區段只能定義在 machine.config 檔中。 它會定義兩個名為 `endpointBehaviors` 和 `serviceBehaviors` 的子集合。  每個集合會分別定義由所有 [!INCLUDE[indigo2](../../../../../includes/indigo2-md.md)] 端點和電腦上服務所使用的行為項目。  如果在定義某個行為`<commonBehaviors>`和`<behaviors>`區段中的行為\<行為 > 一節會給予喜好設定。|  
+|[\<commonBehaviors >](../../../../../docs/framework/configure-apps/file-schema/wcf/commonbehaviors.md)|這個區段只能定義在 machine.config 檔中。 它會定義兩個名為 `endpointBehaviors` 和 `serviceBehaviors` 的子集合。  每個集合會定義分別由所有 WCF 端點和電腦上的服務使用的行為項目。  如果在定義某個行為`<commonBehaviors>`和`<behaviors>`區段中的行為\<行為 > 一節會給予喜好設定。|  
 |[\<擴充功能 >](../../../../../docs/framework/configure-apps/file-schema/wcf/extensions-section.md)|這個區段包含延伸的集合，可讓使用者建立使用者定義的繫結程序、行為和其他方面的延伸。|  
 |[\<診斷 >](../../../../../docs/framework/configure-apps/file-schema/wcf/diagnostics.md)|這個區段包含 WCF 之診斷功能的設定。 使用者可以啟用/停用追蹤、效能計數器和 WMI 提供者，並且可以新增自訂訊息篩選條件。|  
 |[\<p >](../../../../../docs/framework/configure-apps/file-schema/wcf/protocolmapping.md)|這個區段會定義一組預設傳輸通訊協定配置 （例如 http、 net.tcp、 net.pipe 等） 和 WCF 繫結之間的通訊協定對應。|  
@@ -78,9 +78,9 @@ ms.lasthandoff: 05/03/2018
 |\<configuration>|.NET 組態檔中所有組態項目的根項目。|  
   
 ## <a name="remarks"></a>備註  
- [!INCLUDE[indigo2](../../../../../includes/indigo2-md.md)] 不會在其他產品的組態區段中新增項目。  
+ WCF 中不會對其他產品的組態區段的項目。  
   
- [!INCLUDE[indigo2](../../../../../includes/indigo2-md.md)]服務是在組態檔的 `services` 區段中定義。 組件可包含任何數目的服務。 各服務都有自己的 `service` 組態區段。 這個區段及其內容會定義特定服務的服務合約、行為和端點。  
+ WCF 服務中定義`services`組態檔區段。 組件可包含任何數目的服務。 各服務都有自己的 `service` 組態區段。 這個區段及其內容會定義特定服務的服務合約、行為和端點。  
   
  只有服務的 `name` 屬性才需要用到。  根據預設，服務名稱會說明用來實作服務的基礎 CLR 型別，但您可變更 <xref:System.ServiceModel.ServiceContractAttribute> 上的 ConfigurationName 屬性來覆寫 CLR 型別需求。  
   

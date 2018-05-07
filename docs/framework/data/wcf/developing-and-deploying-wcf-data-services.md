@@ -1,31 +1,17 @@
 ---
 title: 開發和部署 WCF Data Services
-ms.custom: ''
 ms.date: 03/30/2017
-ms.prod: .net-framework-oob
-ms.reviewer: ''
-ms.suite: ''
-ms.technology:
-- dotnet-clr
-ms.tgt_pltfrm: ''
-ms.topic: article
 helpviewer_keywords:
 - WCF Data Services, developing
 - WCF Data Services, deploying
 - deploying [WCF Data Services
 - developing applications [WCF Data Services]
 ms.assetid: 6557c0e3-5aea-4f6e-bc14-77ad317a168b
-caps.latest.revision: 6
-author: dotnet-bot
-ms.author: dotnetcontent
-manager: wpickett
-ms.workload:
-- dotnet
-ms.openlocfilehash: bc962b328f2321d1cfb016b78a53307b43fac30d
-ms.sourcegitcommit: 94d33cadc5ff81d2ac389bf5f26422c227832052
-ms.translationtype: MT
+ms.openlocfilehash: e02b7317eef8e7124bd5ba9ceef201cddc9bbea1
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/30/2018
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="developing-and-deploying-wcf-data-services"></a>開發和部署 WCF Data Services
 本主題提供有關開發及部署 [!INCLUDE[ssAstoria](../../../../includes/ssastoria-md.md)]的資訊。 如需更多的基本資訊[!INCLUDE[ssAstoria](../../../../includes/ssastoria-md.md)]，請參閱[入門](../../../../docs/framework/data/wcf/getting-started-with-wcf-data-services.md)和[概觀](../../../../docs/framework/data/wcf/wcf-data-services-overview.md)。  
@@ -52,7 +38,7 @@ ms.lasthandoff: 04/30/2018
   
 1.  **本機 IIS 伺服器**  
   
-     當您建立屬於 [!INCLUDE[vstecasp](../../../../includes/vstecasp-md.md)] 應用程式或在 Internet Information Services (IIS) 上執行之 [!INCLUDE[vstecasp](../../../../includes/vstecasp-md.md)] 網站的資料服務時，建議您使用本機電腦上的 IIS 對您的資料服務進行開發和測試。 在 IIS 上執行資料服務時，更容易在偵錯期間追蹤 HTTP 要求。 這也讓您預先決定 IIS 用來存取資料服務所需之檔案、資料庫和其他資源時所需的必要權限。 若要在 IIS 上執行資料服務，您必須確認 IIS 和 [!INCLUDE[indigo1](../../../../includes/indigo1-md.md)] 都已正確安裝並設定，並授予 IIS 帳戶在檔案系統和資料庫中的存取權。 如需詳細資訊，請參閱 [如何：開發在 IIS 上執行的 WCF 資料服務](../../../../docs/framework/data/wcf/how-to-develop-a-wcf-data-service-running-on-iis.md)。  
+     當您建立屬於 [!INCLUDE[vstecasp](../../../../includes/vstecasp-md.md)] 應用程式或在 Internet Information Services (IIS) 上執行之 [!INCLUDE[vstecasp](../../../../includes/vstecasp-md.md)] 網站的資料服務時，建議您使用本機電腦上的 IIS 對您的資料服務進行開發和測試。 在 IIS 上執行資料服務時，更容易在偵錯期間追蹤 HTTP 要求。 這也讓您預先決定 IIS 用來存取資料服務所需之檔案、資料庫和其他資源時所需的必要權限。 若要在 IIS 上執行您的資料服務，您必須確保 IIS 和 Windows Communication Foundation (WCF) 會安裝並正確設定並授予 IIS 帳戶在檔案系統和資料庫中。 如需詳細資訊，請參閱 [如何：開發在 IIS 上執行的 WCF 資料服務](../../../../docs/framework/data/wcf/how-to-develop-a-wcf-data-service-running-on-iis.md)。  
   
     > [!NOTE]
     >  您必須以系統管理員權限，才能讓開發環境設定本機 IIS 伺服器來執行 Visual Studio。  

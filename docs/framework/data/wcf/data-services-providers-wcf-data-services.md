@@ -1,34 +1,20 @@
 ---
-title: "資料服務提供者 (WCF 資料服務)"
-ms.custom: 
+title: 資料服務提供者 (WCF 資料服務)
 ms.date: 03/30/2017
-ms.prod: .net-framework-oob
-ms.reviewer: 
-ms.suite: 
-ms.technology:
-- dotnet-clr
-ms.tgt_pltfrm: 
-ms.topic: article
 helpviewer_keywords:
 - WCF Data Services, providers
 ms.assetid: a0160b1b-3d9c-4cc8-8391-cb0986a60a41
-caps.latest.revision: 
-author: dotnet-bot
-ms.author: dotnetcontent
-manager: wpickett
-ms.workload:
-- dotnet
-ms.openlocfilehash: 6f25f1f9137206c1adb3ab3f89b7c6a783aeccf0
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.openlocfilehash: 7be6578f0b237f986bcb68a3ace10ba04cf06474
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="data-services-providers-wcf-data-services"></a>資料服務提供者 (WCF 資料服務)
-[!INCLUDE[ssAstoria](../../../../includes/ssastoria-md.md)]將資料公開為支援多個提供者模型[!INCLUDE[ssODataFull](../../../../includes/ssodatafull-md.md)]摘要。 本主題所提供的資訊能讓您針對您的資料來源，選擇最適合的 [!INCLUDE[ssAstoria](../../../../includes/ssastoria-md.md)] 提供者。  
+[!INCLUDE[ssAstoria](../../../../includes/ssastoria-md.md)] 將資料公開為支援多個提供者模型[!INCLUDE[ssODataFull](../../../../includes/ssodatafull-md.md)]摘要。 本主題所提供的資訊能讓您針對您的資料來源，選擇最適合的 [!INCLUDE[ssAstoria](../../../../includes/ssastoria-md.md)] 提供者。  
   
 ## <a name="data-source-providers"></a>資料來源提供者  
- [!INCLUDE[ssAstoria](../../../../includes/ssastoria-md.md)]支援下列提供者來定義資料服務的資料模型。  
+ [!INCLUDE[ssAstoria](../../../../includes/ssastoria-md.md)] 支援下列提供者來定義資料服務的資料模型。  
   
 |提供者|描述|  
 |--------------|-----------------|  
@@ -37,13 +23,13 @@ ms.lasthandoff: 12/22/2017
 |自訂資料服務提供者|[!INCLUDE[ssAstoria](../../../../includes/ssastoria-md.md)] 包含一組提供者，可讓您根據晚期繫結的資料型別動態定義資料模型。 當應用程式正在設計時公開的資料未知，或是 Entity Framework 或反射提供者不夠時，您應該實作這些介面。 如需詳細資訊，請參閱[自訂資料服務提供者](../../../../docs/framework/data/wcf/custom-data-service-providers-wcf-data-services.md)。|  
   
 ## <a name="other-data-service-providers"></a>其他資料服務提供者  
- [!INCLUDE[ssAstoria](../../../../includes/ssastoria-md.md)]具有下列其他資料服務提供者，可增強使用其中一個其他提供者所定義的資料來源的效能。  
+ [!INCLUDE[ssAstoria](../../../../includes/ssastoria-md.md)] 具有下列其他資料服務提供者，可增強使用其中一個其他提供者所定義的資料來源的效能。  
   
 |提供者|描述|  
 |--------------|-----------------|  
 |資料流處理提供者|此提供者可讓您使用 [!INCLUDE[ssAstoria](../../../../includes/ssastoria-md.md)]，以公開二進位大型物件資料型別。 資料流處理提供者是透過實作 <xref:System.Data.Services.Providers.IDataServiceStreamProvider> 介面而建立的。 這個提供者可以與任何資料來源提供者一起實作。 如需詳細資訊，請參閱[資料流處理提供者](../../../../docs/framework/data/wcf/streaming-provider-wcf-data-services.md)。|  
   
-## <a name="see-also"></a>請參閱  
+## <a name="see-also"></a>另請參閱  
  [定義 WCF Data Services](../../../../docs/framework/data/wcf/defining-wcf-data-services.md)  
  [設定資料服務](../../../../docs/framework/data/wcf/configuring-the-data-service-wcf-data-services.md)  
  [裝載資料服務](../../../../docs/framework/data/wcf/hosting-the-data-service-wcf-data-services.md)

@@ -1,13 +1,6 @@
 ---
-title: "查詢投影 (WCF 資料服務)"
-ms.custom: 
+title: 查詢投影 (WCF 資料服務)
 ms.date: 03/30/2017
-ms.prod: .net-framework-oob
-ms.reviewer: 
-ms.suite: 
-ms.technology: dotnet-clr
-ms.tgt_pltfrm: 
-ms.topic: article
 dev_langs:
 - csharp
 - vb
@@ -17,16 +10,11 @@ helpviewer_keywords:
 - query projection [WCF Data Services]
 - WCF Data Services, querying
 ms.assetid: a09f4985-9f0d-48c8-b183-83d67a3dfe5f
-caps.latest.revision: "3"
-author: dotnet-bot
-ms.author: dotnetcontent
-manager: wpickett
-ms.workload: dotnet
-ms.openlocfilehash: 6cd775ed31d0457308f86b3d5b6f40092bfa9690
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.openlocfilehash: 903acaa7493dc83fd6bf50f5a578a067c15e6294
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="query-projections-wcf-data-services"></a>查詢投影 (WCF 資料服務)
 投影提供一項機制[!INCLUDE[ssODataFull](../../../../includes/ssodatafull-md.md)]若要減少實體的某些屬性會在回應中傳回藉由指定查詢所傳回之摘要中的資料。 如需詳細資訊，請參閱[OData: Select 系統查詢選項 ($select)](http://go.microsoft.com/fwlink/?LinkId=186076)。  
@@ -96,5 +84,5 @@ ms.lasthandoff: 12/22/2017
   
  如需詳細資訊，請參閱[How to： 專案查詢結果](../../../../docs/framework/data/wcf/how-to-project-query-results-wcf-data-services.md)。  
   
-## <a name="see-also"></a>請參閱  
+## <a name="see-also"></a>另請參閱  
  [查詢資料服務](../../../../docs/framework/data/wcf/querying-the-data-service-wcf-data-services.md)

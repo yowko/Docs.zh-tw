@@ -1,26 +1,12 @@
 ---
 title: SqlClient 資料流支援
-ms.custom: ''
 ms.date: 03/30/2017
-ms.prod: .net-framework
-ms.reviewer: ''
-ms.suite: ''
-ms.technology:
-- dotnet-ado
-ms.tgt_pltfrm: ''
-ms.topic: article
 ms.assetid: c449365b-470b-4edb-9d61-8353149f5531
-caps.latest.revision: 14
-author: douglaslMS
-ms.author: douglasl
-manager: craigg
-ms.workload:
-- dotnet
-ms.openlocfilehash: cfa672908248afa951ab3a429e437e0e2c0607c5
-ms.sourcegitcommit: 86adcc06e35390f13c1e372c36d2e044f1fc31ef
+ms.openlocfilehash: f881318677949f5507c3e1c4a4b5606dd880c396
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/26/2018
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="sqlclient-streaming-support"></a>SqlClient 資料流支援
 資料流支援 SQL Server 和應用程式之間 (的新[!INCLUDE[net_v45](../../../../includes/net-v45-md.md)]) 支援 （文件、 影像及媒體檔案） 的伺服器上的非結構化的資料。 SQL Server 資料庫可以儲存二進位大型物件 (Blob)，但擷取 BLOB 可能會佔用大量的記憶體。  

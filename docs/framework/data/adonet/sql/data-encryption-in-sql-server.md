@@ -1,24 +1,12 @@
 ---
-title: "在 SQL Server 中加密資料"
-ms.custom: 
+title: 在 SQL Server 中加密資料
 ms.date: 03/30/2017
-ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.technology: dotnet-ado
-ms.tgt_pltfrm: 
-ms.topic: article
 ms.assetid: 83b992f7-b351-4678-b4b9-f4ffd58134cc
-caps.latest.revision: "6"
-author: douglaslMS
-ms.author: douglasl
-manager: craigg
-ms.workload: dotnet
-ms.openlocfilehash: e7784ac319785babbc4d7715e13fb157b3b15b04
-ms.sourcegitcommit: ed26cfef4e18f6d93ab822d8c29f902cff3519d1
+ms.openlocfilehash: 9e2924dc9f2f2954f6690ad5009c4143d1b9a44f
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 01/17/2018
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="data-encryption-in-sql-server"></a>在 SQL Server 中加密資料
 SQL Server 提供使用憑證、非對稱金鑰或對稱金鑰來加密及解密資料的功能， 而且可在內部的憑證存放區內管理上述所有項目。 此存放區會使用加密階層，藉由階層中的上層層級來確保下層層級的憑證及金鑰。 SQL Server 的此功能區也稱為「秘密儲存區」(Secret Storage)。  
@@ -40,7 +28,7 @@ SQL Server 提供使用憑證、非對稱金鑰或對稱金鑰來加密及解密
 |[SQL Server 加密](http://msdn.microsoft.com/library/bb510663.aspx)SQL Server 線上叢書中|提供 SQL Server 中的加密概觀。 此主題包含其他主題和「如何」文件的連結。|  
 |[加密階層](http://msdn.microsoft.com/library/ms189586.aspx)和[加密的如何主題](http://msdn.microsoft.com/library/aa337557.aspx)SQL Server 線上叢書中|提供 SQL Server 中的加密概觀。 此主題包含其他主題和「如何」文件的連結。|  
   
-## <a name="see-also"></a>請參閱  
+## <a name="see-also"></a>另請參閱  
  [設定 ADO.NET 應用程式的安全性](../../../../../docs/framework/data/adonet/securing-ado-net-applications.md)  
  [SQL Server 中的應用程式安全性案例](../../../../../docs/framework/data/adonet/sql/application-security-scenarios-in-sql-server.md)  
  [在 SQL Server 中進行驗證](../../../../../docs/framework/data/adonet/sql/authentication-in-sql-server.md)  

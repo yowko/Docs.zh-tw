@@ -1,27 +1,15 @@
 ---
-title: "啟用 Multiple Active Result Sets"
-ms.custom: 
+title: 啟用 Multiple Active Result Sets
 ms.date: 03/30/2017
-ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.technology: dotnet-ado
-ms.tgt_pltfrm: 
-ms.topic: article
 dev_langs:
 - csharp
 - vb
 ms.assetid: 576079e4-debe-4ab5-9204-fcbe2ca7a5e2
-caps.latest.revision: "6"
-author: douglaslMS
-ms.author: douglasl
-manager: craigg
-ms.workload: dotnet
-ms.openlocfilehash: b2b1e3ccfe162b6d4903aaf162673ba476296d8b
-ms.sourcegitcommit: ed26cfef4e18f6d93ab822d8c29f902cff3519d1
+ms.openlocfilehash: ab866356e979ec6c041d12620cfb6abfc8928668
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 01/17/2018
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="enabling-multiple-active-result-sets"></a>啟用 Multiple Active Result Sets
 Multiple Active Result Set (MARS) 是與 SQL Server 搭配使用的功能，它允許在單一連接中執行多個批次作業。 啟用 MARS 以與 SQL Server 搭配使用時，使用的每個命令物件都會在連接中加入工作階段。  
@@ -79,7 +67,7 @@ string connectionString = "Data Source=MSSQL1;" +
  MARS 作業不是安全執行緒。  
   
 ### <a name="connection-pooling"></a>連接共用  
- 啟用 MARS 的連接共用方式與其他連接一樣。 如果應用程式開啟兩個連接，一個啟用 MARS，另一個停用 MARS，則兩個連接會位於不同的集區中。 如需詳細資訊，請參閱[SQL Server 連接共用 (ADO.NET)](../../../../../docs/framework/data/adonet/sql-server-connection-pooling.md)。  
+ 啟用 MARS 的連接共用方式與其他連接一樣。 如果應用程式開啟兩個連接，一個啟用 MARS，另一個停用 MARS，則兩個連接會位於不同的集區中。 如需詳細資訊，請參閱 [SQL Server 連共用ADO.NET)](../../../../../docs/framework/data/adonet/sql-server-connection-pooling.md)。  
   
 ### <a name="sql-server-batch-execution-environment"></a>SQL Server 批次執行環境  
  連接開啟時，會定義預設的環境。 然後會將此環境複製到邏輯 MARS 工作階段。  
@@ -122,6 +110,6 @@ string connectionString = "Data Source=MSSQL1;" +
 ### <a name="detecting-mars-support"></a>偵測 MARS 支援  
  應用程式可以藉由讀取 `SqlConnection.ServerVersion` 值來檢查 MARS 支援。 SQL Server 2005 和 SQL Server 2008 的主版本號碼應為分別為 9 和 10。  
   
-## <a name="see-also"></a>請參閱  
+## <a name="see-also"></a>另請參閱  
  [Multiple Active Result Set (MARS)](../../../../../docs/framework/data/adonet/sql/multiple-active-result-sets-mars.md)  
  [ADO.NET Managed 提供者和 DataSet 開發人員中心](http://go.microsoft.com/fwlink/?LinkId=217917)

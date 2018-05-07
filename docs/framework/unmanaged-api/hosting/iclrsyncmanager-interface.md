@@ -1,10 +1,6 @@
 ---
 title: ICLRSyncManager 介面
 ms.date: 03/30/2017
-ms.prod: .net-framework
-ms.technology:
-- dotnet-clr
-ms.topic: reference
 api_name:
 - ICLRSyncManager
 api_location:
@@ -20,14 +16,11 @@ topic_type:
 - apiref
 author: rpetrusha
 ms.author: ronpet
-manager: wpickett
-ms.workload:
-- dotnet
-ms.openlocfilehash: 17a1e3073713b54cb7a68e6ba3ef2562d4fbcaeb
-ms.sourcegitcommit: 9a4fe1a1c37b26532654b4bbe22d702237950009
+ms.openlocfilehash: 1b87ccc3d6c3e957d0384499048032e35247093a
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/16/2018
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="iclrsyncmanager-interface"></a>ICLRSyncManager 介面
 定義方法，讓主應用程式取得要求的工作的相關資訊，並在同步處理實作偵測死結。  

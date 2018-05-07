@@ -1,29 +1,19 @@
 ---
-title: "Windows Identity Foundation 4.5 概觀"
-ms.custom: 
+title: Windows Identity Foundation 4.5 概觀
 ms.date: 03/30/2017
-ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.technology: dotnet-clr
-ms.tgt_pltfrm: 
-ms.topic: article
 ms.assetid: 5f723345-7270-49e2-b638-b3a34bd40517
-caps.latest.revision: "11"
 author: BrucePerlerMS
-ms.author: bruceper
 manager: mbaldwin
-ms.workload: dotnet
-ms.openlocfilehash: a3b07d94804741dfbfee508dfb0ce47e2cb47c2a
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.openlocfilehash: e5d668ff2b6c79105ddb4ec3672144a188e0b78c
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="windows-identity-foundation-45-overview"></a>Windows Identity Foundation 4.5 概觀
 Windows Identity Foundation 4.5 是一組 .NET Framework 類別，可在應用程式中用來實作宣告型識別。 透過它，您可以更容易享受到宣告感知應用程式和服務的優點。 只要是使用 .NET Framework 4.5 (含) 以上版本的所有 Web 應用程式或 Web 服務，WIF 4.5 都適用。 WIF 只是 Microsoft 同盟識別身分軟體系列的一部分，可以根據開放標準達成業界共同的願景。 同盟識別身分由下列三個元件組成：[Active Directory® Federation Services](http://go.microsoft.com/fwlink/?LinkID=247516) (AD FS) 2.0、[Microsoft Azure Access Control Services](http://go.microsoft.com/fwlink/?LinkID=247517) (ACS) 和 WIF。 這三個元件同時也形成了 Microsoft 新的宣告型雲端識別和存取平台的核心。  
   
- 如需 WIF 的詳細資訊，請參閱 MSDN 上「安全性開發人員中心」的 [Windows Identity Foundation 網站](http://go.microsoft.com/fwlink/?LinkId=149009) (http://go.microsoft.com/fwlink/?LinkId=149009)。 如需使用 WIF 建立應用程式的簡介，請參閱 Vittorio Bertocci 撰寫的[Programming Windows Identity Foundation](http://go.microsoft.com/fwlink/?LinkId=210158) (進行 Windows Identity Foundation 程式設計) (http://go.microsoft.com/fwlink/?LinkId=210158) (由 Microsoft Press 發行)。  
+ 如需 WIF 的詳細資訊，請參閱[Windows Identity Foundation 網站](http://go.microsoft.com/fwlink/?LinkId=149009)(http://go.microsoft.com/fwlink/?LinkId=149009)在 MSDN 上的安全性開發人員中心。 如需建立應用程式使用 WIF 的簡介，請參閱[程式設計 Windows Identity Foundation](http://go.microsoft.com/fwlink/?LinkId=210158) (http://go.microsoft.com/fwlink/?LinkId=210158)由 Vittorio Bertocci （由 Microsoft Press 發行）。  
   
 ## <a name="wif-45-features"></a>WIF 4.5 的功能  
  WIF 4.5 是用於建置識別感知應用程式的架構。 這個架構擷取 WS-Trust 和 WS-Federation 通訊協定，方便開發人員利用 API 建置宣告感知應用程式並視需要建置 Security Token Service (STS)。 應用程式可以使用 WIF 處理 STS (例如 AD FS 2.0 和 ACS) 發行的權杖，並在 Web 應用程式或 Web 服務制定識別架構決策。  
@@ -38,7 +28,7 @@ Windows Identity Foundation 4.5 是一組 .NET Framework 類別，可在應用�
   
      此外，這個架構還可用來建置支援 WS-Federation 的 STS，讓 Web 瀏覽器用戶端也可以使用。 這類 STS 也稱為被動式 STS。  
   
--   適用於 Visual Studio 11 的新識別和存取工具可讓您透過宣告型識別確保應用程式安全無虞，並且能接受使用者來自多個識別提供者。 您可以從下列 URL 下載此 WIF 工具：[http://go.microsoft.com/fwlink/?LinkID=245849](http://go.microsoft.com/fwlink/?LinkID=245849)。或者，您也可以直接在 Visual Studio 11 的延伸模組管理員中搜尋「身分識別」以取得此工具。 如需詳細資訊，請參閱 [Visual Studio 2012 的身分識別與存取工具](../../../docs/framework/security/identity-and-access-tool-for-vs.md)。  
+-   適用於 Visual Studio 11 的新識別和存取工具可讓您透過宣告型識別確保應用程式安全無虞，並且能接受使用者來自多個識別提供者。 您可以從下列 URL 下載這個 WIF 工具： [ http://go.microsoft.com/fwlink/?LinkID=245849 ](http://go.microsoft.com/fwlink/?LinkID=245849)或直接從透過搜尋 「 識別 」 擴充功能管理員直接在 Visual Studio 11 內。 如需詳細資訊，請參閱 [Visual Studio 2012 的身分識別與存取工具](../../../docs/framework/security/identity-and-access-tool-for-vs.md)。  
   
  WIF 支援下列主要案例：  
   

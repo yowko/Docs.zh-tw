@@ -1,13 +1,6 @@
 ---
-title: "HOW TO：使用專案資料來源繫結資料 (WCF Data Services)"
-ms.custom: 
+title: HOW TO：使用專案資料來源繫結資料 (WCF Data Services)
 ms.date: 03/30/2017
-ms.prod: .net-framework-oob
-ms.reviewer: 
-ms.suite: 
-ms.technology: dotnet-clr
-ms.tgt_pltfrm: 
-ms.topic: article
 dev_langs:
 - csharp
 - vb
@@ -15,16 +8,11 @@ helpviewer_keywords:
 - data binding, WCF Data Services
 - WCF Data Services, data binding
 ms.assetid: 2477af0a-676f-44f7-b73d-e66208785509
-caps.latest.revision: "2"
-author: dotnet-bot
-ms.author: dotnetcontent
-manager: wpickett
-ms.workload: dotnet
-ms.openlocfilehash: 94ca7614e6df2d82216fa869309dff2da8eee634
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.openlocfilehash: 0807b8de6bad5e70fbf522cb1cc20872c59fe1b4
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="how-to-bind-data-using-a-project-data-source-wcf-data-services"></a>HOW TO：使用專案資料來源繫結資料 (WCF Data Services)
 您可以在 [!INCLUDE[ssAstoria](../../../../includes/ssastoria-md.md)] 用戶端應用程式中，建立以產生之資料物件為基礎的資料來源。 當您加入的參考資料服務使用**加入服務參考** 對話方塊中，以及產生的用戶端資料類別建立的專案資料來源。 每一個實體集都會建立一個資料來源，並由資料服務公開。 您可以建立表單，以顯示服務的資料，這些資料來源項目從**資料來源**視窗拖曳至設計工具。 這些項目會成為繫結至資料來源的控制項。 在執行期間，此資料來源繫結至執行個體<xref:System.Data.Services.Client.DataServiceCollection%601>類別，其中會填入到資料服務查詢所傳回的物件。 如需詳細資訊，請參閱[資料繫結至控制項](../../../../docs/framework/data/wcf/binding-data-to-controls-wcf-data-services.md)。  
@@ -127,6 +115,6 @@ ms.lasthandoff: 12/22/2017
   
 10. 這個程式碼會根據 <xref:System.Data.Services.Client.DataServiceCollection%601> 執行傳回 Northwind 資料服務之 `Customers`的 <xref:System.Data.Services.Client.DataServiceQuery%601>，建立 <xref:System.Collections.Generic.IEnumerable%601> 型別的 `Customers`，然後繫結至 `customersBindingSource`。  
   
-## <a name="see-also"></a>請參閱  
+## <a name="see-also"></a>另請參閱  
  [WCF Data Services 用戶端程式庫](../../../../docs/framework/data/wcf/wcf-data-services-client-library.md)  
  [如何：將資料繫結至 Windows Presentation Foundation 項目](../../../../docs/framework/data/wcf/bind-data-to-wpf-elements-wcf-data-services.md)

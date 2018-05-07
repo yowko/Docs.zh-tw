@@ -1,26 +1,14 @@
 ---
 title: '&lt;Assembly&gt; 項目 (.NET Native)'
-ms.custom: ''
 ms.date: 03/30/2017
-ms.prod: .net-framework
-ms.reviewer: ''
-ms.suite: ''
-ms.technology:
-- dotnet-clr
-ms.tgt_pltfrm: ''
-ms.topic: article
 ms.assetid: cfe629eb-1106-4113-86e1-052f402d8d8b
-caps.latest.revision: ''
 author: rpetrusha
 ms.author: ronpet
-manager: wpickett
-ms.workload:
-- dotnet
-ms.openlocfilehash: a34e49e4d11f442f15db2f06b330b8b84a165a08
-ms.sourcegitcommit: c883637b41ee028786edceece4fa872939d2e64c
+ms.openlocfilehash: fa78c7085c9c20e6a8a165c90ec9e3c2d8304581
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 03/26/2018
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="ltassemblygt-element-net-native"></a>&lt;Assembly&gt; 項目 (.NET Native)
 將執行階段反映原則套用至指定組件中的所有類型。  

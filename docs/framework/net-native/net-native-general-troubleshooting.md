@@ -1,24 +1,14 @@
 ---
-title: ".NET Native 一般疑難排解"
-ms.custom: 
+title: .NET Native 一般疑難排解
 ms.date: 03/30/2017
-ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.technology: dotnet-clr
-ms.tgt_pltfrm: 
-ms.topic: article
 ms.assetid: ee8c5e17-35ea-48a1-8767-83298caac1e8
-caps.latest.revision: "8"
 author: rpetrusha
 ms.author: ronpet
-manager: wpickett
-ms.workload: dotnet
-ms.openlocfilehash: 9e92e99b978d12c32cc46b9133621875f35af634
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.openlocfilehash: 0b53150c90e473e7c4ed32991c43ff0b8ca5b75b
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="net-native-general-troubleshooting"></a>.NET Native 一般疑難排解
 本主題說明如何對使用 [!INCLUDE[net_native](../../../includes/net-native-md.md)] 開發應用程式時可能遇到的問題進行疑難排解。  
@@ -51,5 +41,5 @@ ms.lasthandoff: 12/22/2017
   
      如需詳細資訊，請參閱[反映和 .NET Native](../../../docs/framework/net-native/reflection-and-net-native.md)。  
   
-## <a name="see-also"></a>請參閱  
+## <a name="see-also"></a>另請參閱  
  [將您的 Windows 市集應用程式移轉至 .NET Native](../../../docs/framework/net-native/migrating-your-windows-store-app-to-net-native.md)

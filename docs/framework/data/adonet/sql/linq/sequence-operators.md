@@ -1,24 +1,12 @@
 ---
-title: "序列運算子"
-ms.custom: 
+title: 序列運算子
 ms.date: 03/30/2017
-ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.technology: dotnet-ado
-ms.tgt_pltfrm: 
-ms.topic: article
 ms.assetid: 4d332d32-3806-4451-b7af-25af269194ae
-caps.latest.revision: "2"
-author: douglaslMS
-ms.author: douglasl
-manager: craigg
-ms.workload: dotnet
-ms.openlocfilehash: d5e18a0c0ae959f83192ca6b50c16234eccb0629
-ms.sourcegitcommit: ed26cfef4e18f6d93ab822d8c29f902cff3519d1
+ms.openlocfilehash: 01807e48c06bce1d451961bb6204d1f8e49d53f6
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 01/17/2018
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="sequence-operators"></a>序列運算子
 一般而言，[!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)] 不支援具有下列一項或多項特質的序列運算子：  
@@ -56,5 +44,5 @@ ms.lasthandoff: 01/17/2018
 ## <a name="differences-from-net"></a>與 .NET 的差異  
  除了 `Average` 以外，所有支援的序列運算子在 Common Language Runtime (CLR) 中都會如預期運作。 `Average` 會傳回與進行平均之型別相同型別的值，然而在 CLR 中 `Average` 則一律會傳回 <xref:System.Double> 或 <xref:System.Decimal>。 如果來源引數已明確地轉型為 double / decimal 或選取器轉型為 double / decimal，則結果產生的 SQL 也會有此種轉換，而且結果會如預期。  
   
-## <a name="see-also"></a>請參閱  
+## <a name="see-also"></a>另請參閱  
  [資料類型和函式](../../../../../../docs/framework/data/adonet/sql/linq/data-types-and-functions.md)

@@ -1,13 +1,6 @@
 ---
-title: "如何：建立和初始設定追蹤接聽項"
-ms.custom: 
+title: 如何：建立和初始設定追蹤接聽項
 ms.date: 03/30/2017
-ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.technology: dotnet-clr
-ms.tgt_pltfrm: 
-ms.topic: article
 dev_langs:
 - csharp
 - vb
@@ -18,16 +11,13 @@ helpviewer_keywords:
 - tracing [.NET Framework], trace listeners
 - logs, trace listeners
 ms.assetid: 21726de1-61ee-4fdc-9dd0-3be49324d066
-caps.latest.revision: "12"
 author: mairaw
 ms.author: mairaw
-manager: wpickett
-ms.workload: dotnet
-ms.openlocfilehash: 1ebc50e4075a5793c344cbc017eb60247c1c8774
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.openlocfilehash: 943621b953fbe158b3be6ae0695ba7692b7c517f
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="how-to-create-and-initialize-trace-listeners"></a>如何：建立和初始設定追蹤接聽項
 <xref:System.Diagnostics.Debug?displayProperty=nameWithType> 和 <xref:System.Diagnostics.Trace?displayProperty=nameWithType> 類別會將訊息傳送給名稱為接聽程式的物件，以接收和處理這些訊息。 <xref:System.Diagnostics.DefaultTraceListener?displayProperty=nameWithType> 就是這類接聽程式之一，其會在啟用追蹤或偵錯時自動建立與初始化。 如果您要將 <xref:System.Diagnostics.Trace> 或 <xref:System.Diagnostics.Debug> 輸出導向任何其他來源，您必須建立和初始化其他的追蹤接聽程式。  
@@ -103,7 +93,7 @@ ms.lasthandoff: 12/22/2017
     myListener.Flush();  
     ```  
   
-## <a name="see-also"></a>請參閱  
+## <a name="see-also"></a>另請參閱  
  [追蹤接聽項](../../../docs/framework/debug-trace-profile/trace-listeners.md)  
  [追蹤參數](../../../docs/framework/debug-trace-profile/trace-switches.md)  
  [如何：將追蹤陳述式新增至應用程式碼](../../../docs/framework/debug-trace-profile/how-to-add-trace-statements-to-application-code.md)  

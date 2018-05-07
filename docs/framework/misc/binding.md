@@ -1,23 +1,13 @@
 ---
-title: "&lt;繫結&gt;"
-ms.custom: 
+title: '&lt;繫結&gt;'
 ms.date: 03/30/2017
-ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.tgt_pltfrm: 
 ms.topic: reference
 ms.assetid: 666183d6-4d1f-45c7-ac64-bdf93ee8f36f
-caps.latest.revision: "13"
-author: dotnet-bot
-ms.author: dotnetcontent
-manager: wpickett
-ms.workload: dotnet
-ms.openlocfilehash: 7b9e0c7e077a9f47de6df31b00f4df320b845150
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.openlocfilehash: d72b3a34e0696df944b2338c89f167c8bfa06400
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="ltbindinggt"></a>&lt;繫結&gt;
 您可以使用 `binding` 項目來設定 Windows Communication Foundation (WCF) 所提供的各種預先定義繫結。  
@@ -46,10 +36,10 @@ ms.lasthandoff: 12/22/2017
   
  自訂繫結是由其 `name` 屬性所識別。  
   
-## <a name="see-also"></a>請參閱  
+## <a name="see-also"></a>另請參閱  
  <xref:System.ServiceModel.Configuration.BindingsSection>  
  <xref:System.ServiceModel.Channels.Binding>  
  <xref:System.ServiceModel.Channels.BindingElement>  
  [繫結](../../../docs/framework/wcf/bindings.md)  
  [自訂繫結](../../../docs/framework/wcf/extending/custom-bindings.md)  
- [\<customBinding >](../../../docs/framework/configure-apps/file-schema/wcf/custombinding.md)
+ [\<customBinding>](../../../docs/framework/configure-apps/file-schema/wcf/custombinding.md)

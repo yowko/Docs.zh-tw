@@ -1,29 +1,19 @@
 ---
-title: "使用 WIF 進行宣告式授權"
-ms.custom: 
+title: 使用 WIF 進行宣告式授權
 ms.date: 03/30/2017
-ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.technology: dotnet-clr
-ms.tgt_pltfrm: 
-ms.topic: article
 ms.assetid: e24000a3-8fd8-4c0e-bdf0-39882cc0f6d8
-caps.latest.revision: "6"
 author: BrucePerlerMS
-ms.author: bruceper
 manager: mbaldwin
-ms.workload: dotnet
-ms.openlocfilehash: bc6a9d828f1ab666ddda687931785f3853b74374
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.openlocfilehash: 1d2972ccef6829a2b7a052ba30258086443bd833
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="claims-based-authorization-using-wif"></a>使用 WIF 進行宣告式授權
 在信賴憑證者應用程式中，授權會判斷哪些是已驗證的識別可以存取的資源，以及可以針對這些資源執行哪些作業。 不適當或弱式授權會導致資訊洩露以及資料遭竄改。 本主題概述可使用 Windows Identity Foundation (WIF) 和 Security Token Service (STS) (例如 Microsoft Azure Access Control Service (ACS)) 為宣告感知 ASP.NET Web 應用程式和服務實作授權的方式。  
   
-## <a name="overview"></a>概觀  
+## <a name="overview"></a>總覽  
  從第一版 .NET Framework 開始，就提供了彈性的授權實作機制。 這項機制是以 **IPrincipal** 和 **IIdentity** 這兩個簡單的介面為基礎。 **IIdentity** 的具體實作表示已驗證的使用者。 例如，**WindowsIdentity** 實作表示經過 Active Directory 驗證的使用者，而 **GenericIdentity** 則表示身分識別經過自訂驗證程序驗證後的使用者。 **IPrincipal** 的具體實作可協助使用角色並根據角色存放區來檢查權限。 例如，**WindowsPrincipal** 會檢查 **WindowsIdentity** 是否擁有 Active Directory 中各群組的成員資格。 這項檢查是透過呼叫 **IPrincipal** 介面的 **IsInRole** 方法來執行。 根據角色來檢查存取權限的做法稱為角色型存取控制 (RBAC)。 如需詳細資訊，請參閱[角色型存取控制](../../../docs/framework/security/claims-based-authorization-using-wif.md#BKMK_1)。  宣告可用來攜帶角色相關資訊，以支援熟悉且以角色為基礎的授權機制。  
   
  此外，宣告也可以用來進行角色背後更複雜的授權決策。 宣告可以根據幾乎使用者的任何資訊：年齡、郵遞區號、鞋子尺寸等等。根據任意宣告的存取控制機制稱為宣告式授權。 如需詳細資訊，請參閱[宣告式授權](../../../docs/framework/security/claims-based-authorization-using-wif.md#BKMK_2)。  
@@ -52,7 +42,7 @@ ms.lasthandoff: 12/22/2017
   
 -   **在權杖發行期間**。 使用者通過驗證之後，身分識別提供者 STS 或同盟提供者 (例如 Microsoft Azure Access Control Service (ACS)) 就會發行角色宣告。  
   
--   **使用 ClaimsAuthenticationManager 將任意宣告轉換為宣告角色類型**。 ClaimsAuthenticationManager 是隨附於 WIF 的元件， 可允許使用者在啟動應用程式時攔截要求，並且檢查權杖以及利用新增、變更或移除宣告來轉換權杖。 如需如何使用 ClaimsAuthenticationManager 轉換宣告的詳細資訊，請參閱[作法：使用 WIF 與 ACS 在宣告感知 ASP.NET 應用程式中實作以角色為基礎的存取控制 (RBAC)](http://go.microsoft.com/fwlink/?LinkID=247445) (http://go.microsoft.com/fwlink/?LinkID=247445)。  
+-   **使用 ClaimsAuthenticationManager 將任意宣告轉換為宣告角色類型**。 ClaimsAuthenticationManager 是隨附於 WIF 的元件， 可允許使用者在啟動應用程式時攔截要求，並且檢查權杖以及利用新增、變更或移除宣告來轉換權杖。 如需如何使用 ClaimsAuthenticationManager 來轉換宣告的詳細資訊，請參閱[How To： 實作角色型存取控制 (RBAC) 中宣告感知 ASP.NET 應用程式使用 WIF 與 ACS](http://go.microsoft.com/fwlink/?LinkID=247445) (http://go.microsoft.com/fwlink/?LinkID=247444)。  
   
 -   **使用 samlSecurityTokenRequirement 組態區段將任意宣告對應至角色類型**：這是一種宣告式做法，可以僅使用組態來轉換宣告，不必撰寫任何程式碼。  
   

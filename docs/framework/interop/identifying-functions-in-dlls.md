@@ -1,13 +1,6 @@
 ---
-title: "識別 DLL 中的函式"
-ms.custom: 
+title: 識別 DLL 中的函式
 ms.date: 03/30/2017
-ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.technology: dotnet-clr
-ms.tgt_pltfrm: 
-ms.topic: article
 helpviewer_keywords:
 - platform invoke, identifying functions
 - COM interop, DLL functions
@@ -18,16 +11,13 @@ helpviewer_keywords:
 - identifying DLL functions
 - DLL functions
 ms.assetid: 3e3f6780-6d90-4413-bad7-ba641220364d
-caps.latest.revision: "9"
 author: rpetrusha
 ms.author: ronpet
-manager: wpickett
-ms.workload: dotnet
-ms.openlocfilehash: 8d182ec26d6d15ad3e4c93e9bfa8287ba028e424
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.openlocfilehash: bc160678817266dc649f60dc3f2cc77044c05691
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="identifying-functions-in-dlls"></a>識別 DLL 中的函式
 DLL 函式的身分識別是由下列項目所組成：  
@@ -54,7 +44,7 @@ DLL 函式的身分識別是由下列項目所組成：
   
  如需 Win32 API 的完整文件，請參閱 Platform SDK。 如需示範如何建構要與平台叫用搭配使用之 .NET 型宣告的範例，請參閱[使用平台叫用封送處理資料](../../../docs/framework/interop/marshaling-data-with-platform-invoke.md)。  
   
-## <a name="see-also"></a>請參閱  
+## <a name="see-also"></a>另請參閱  
  [使用 Unmanaged DLL 函式](../../../docs/framework/interop/consuming-unmanaged-dll-functions.md)  
  [指定進入點](../../../docs/framework/interop/specifying-an-entry-point.md)  
  [建立類別以包裝 DLL 函式](../../../docs/framework/interop/creating-a-class-to-hold-dll-functions.md)  

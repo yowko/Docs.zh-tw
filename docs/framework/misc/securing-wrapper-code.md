@@ -1,29 +1,19 @@
 ---
-title: "設定包裝函式程式碼的安全性"
-ms.custom: 
+title: 設定包裝函式程式碼的安全性
 ms.date: 03/30/2017
-ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.technology: dotnet-clr
-ms.tgt_pltfrm: 
-ms.topic: article
 helpviewer_keywords:
 - security [.NET Framework], wrapper code
 - wrapper code, securing
 - secure coding, wrapper code
 - code security, wrapper code
 ms.assetid: 1df6c516-5bba-48bd-b450-1070e04b7389
-caps.latest.revision: "11"
 author: mairaw
 ms.author: mairaw
-manager: wpickett
-ms.workload: dotnet
-ms.openlocfilehash: 5e29a2bdd0bfa338d0266c0841e11aa2ac366529
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.openlocfilehash: ac278a4a3b06e0611e1cf57d079516a1dccf606b
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="securing-wrapper-code"></a>設定包裝函式程式碼的安全性
 [!INCLUDE[net_security_note](../../../includes/net-security-note-md.md)]  
@@ -110,5 +100,5 @@ ms.lasthandoff: 12/22/2017
   
 -   虛擬方法所實作的類型和介面。 這些類型和介面應該一致地使用連結要求。  
   
-## <a name="see-also"></a>請參閱  
+## <a name="see-also"></a>另請參閱  
  [安全程式碼撰寫方針](../../../docs/standard/security/secure-coding-guidelines.md)

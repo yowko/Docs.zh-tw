@@ -1,14 +1,6 @@
 ---
-title: "使用 Unmanaged DLL 函式"
-ms.custom: 
+title: 使用 Unmanaged DLL 函式
 ms.date: 03/30/2017
-ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.technology:
-- dotnet-clr
-ms.tgt_pltfrm: 
-ms.topic: article
 helpviewer_keywords:
 - unmanaged functions, calling
 - COM interop, DLL functions
@@ -21,17 +13,13 @@ helpviewer_keywords:
 - platform invoke
 - DLL functions
 ms.assetid: eca7606e-ebfb-4f47-b8d9-289903fdc045
-caps.latest.revision: 
 author: rpetrusha
 ms.author: ronpet
-manager: wpickett
-ms.workload:
-- dotnet
-ms.openlocfilehash: 4133cfbdf4c9f164ae9ba42a6bbba94ce019e0be
-ms.sourcegitcommit: d2da0142247ef42a219a5d2907f153e62dc6ea0d
+ms.openlocfilehash: 3166d6c95532706781188da0c56ebf9022038a50
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 02/01/2018
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="consuming-unmanaged-dll-functions"></a>使用 Unmanaged DLL 函式
 平台叫用服務，可讓 Managed 程式碼呼叫 Unmanaged 函式在動態連結程式庫 (DLL) 中實作，例如 Win32 API 中。 它會找出並叫用匯出的函式，並且在需要的時候於交互操作界限之間封送處理其引數 (整數、 字串、 陣列、 結構和其他) 。  
@@ -83,7 +71,7 @@ ms.lasthandoff: 02/01/2018
   
  平台叫用會擲回由 Unmanaged 函式產生的例外狀況給 Managed 呼叫端。  
   
-## <a name="see-also"></a>請參閱  
+## <a name="see-also"></a>另請參閱  
  [與 Unmanaged 程式碼互通](../../../docs/framework/interop/index.md)  
  [平台叫用範例](../../../docs/framework/interop/platform-invoke-examples.md)  
  [Interop 封送處理](../../../docs/framework/interop/interop-marshaling.md)  

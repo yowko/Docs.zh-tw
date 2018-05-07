@@ -1,14 +1,6 @@
 ---
-title: "ICorDebugEval::CreateValue 方法"
-ms.custom: 
+title: ICorDebugEval::CreateValue 方法
 ms.date: 03/30/2017
-ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.technology:
-- dotnet-clr
-ms.tgt_pltfrm: 
-ms.topic: reference
 api_name:
 - ICorDebugEval.CreateValue
 api_location:
@@ -23,17 +15,13 @@ helpviewer_keywords:
 ms.assetid: 9a1c0b47-6f10-4fcb-844a-4ab2d7990140
 topic_type:
 - apiref
-caps.latest.revision: 
 author: rpetrusha
 ms.author: ronpet
-manager: wpickett
-ms.workload:
-- dotnet
-ms.openlocfilehash: 64d55a951795cc5efc1bfc624dbe07575be153aa
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.openlocfilehash: 6d67784daee055106f104d74d098b9926c6de2ec
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="icordebugevalcreatevalue-method"></a>ICorDebugEval::CreateValue 方法
 建立指定類型的值，其初始值為零或 null。  
@@ -61,7 +49,7 @@ HRESULT CreateValue (
  [out]表示值的"ICorDebugValue 」 物件的位址指標。  
   
 ## <a name="remarks"></a>備註  
- `CreateValue`建立`ICorDebugValue`只是為了在使用中函式評估的指定型別的物件。 此值的物件可以用來做為參數傳遞使用者常數。  
+ `CreateValue` 建立`ICorDebugValue`只是為了在使用中函式評估的指定型別的物件。 此值的物件可以用來做為參數傳遞使用者常數。  
   
  如果值的型別是基本型別，其初始值為零，則為 null。 使用[icordebuggenericvalue:: Setvalue](../../../../docs/framework/unmanaged-api/debugging/icordebuggenericvalue-setvalue-method.md)設定基本類型的值。  
   
@@ -76,7 +64,7 @@ HRESULT CreateValue (
   
  **.NET framework 版本：** 1.1、 1.0  
   
-## <a name="see-also"></a>請參閱  
+## <a name="see-also"></a>另請參閱  
     
  [CreateValueForType 方法](../../../../docs/framework/unmanaged-api/debugging/icordebugeval2-createvaluefortype-method.md)  
  ICorDebugValue

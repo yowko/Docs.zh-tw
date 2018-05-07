@@ -1,27 +1,17 @@
 ---
-title: "Exception Thrown_V1 ETW 事件"
-ms.custom: 
+title: Exception Thrown_V1 ETW 事件
 ms.date: 03/30/2017
-ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.technology: dotnet-clr
-ms.tgt_pltfrm: 
-ms.topic: article
 helpviewer_keywords:
 - ExceptionThrown_V1 event [.NET Framework]
 - ETW, ExceptionThrown_V1 event (CLR)
 ms.assetid: 0d3da389-6b7b-40f6-a877-fac546d6019c
-caps.latest.revision: "6"
 author: mairaw
 ms.author: mairaw
-manager: wpickett
-ms.workload: dotnet
-ms.openlocfilehash: 60013d0df8c63033f6da8d61479bacac7b944094
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.openlocfilehash: dafa5846f779276ab81e8e30e7c7a50b9fbff853
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="exception-thrownv1-etw-event"></a>Exception Thrown_V1 ETW 事件
 此事件會擷取被擲回的例外狀況相關資訊。  
@@ -34,7 +24,7 @@ ms.lasthandoff: 12/22/2017
   
  下表顯示事件資訊。  
   
-|事件|事件 ID|引發的時機|  
+|Event - 事件|事件 ID|引發的時機|  
 |-----------|--------------|-----------------|  
 |`ExceptionThrown_V1`|80|擲回 Managed 例外狀況。|  
   
@@ -49,5 +39,5 @@ ms.lasthandoff: 12/22/2017
 |ExceptionFlags|win:UInt16|0x01：HasInnerException (請參閱 Visual Basic 文件的 [CLR ETW 事件](../../../docs/framework/performance/clr-etw-events.md))。<br /><br /> 0x02：IsNestedException。<br /><br /> 0x04：IsRethrownException。<br /><br /> 0x08：IsCorruptedStateException (表示處理序狀態已損毀，請參閱 MSDN 上的[處理損毀狀態的例外狀況](http://go.microsoft.com/fwlink/?LinkId=179681))。<br /><br /> 0x10：IsCLSCompliant (衍生自 <xref:System.Exception> 的例外狀況符合 CLS 標準，否則與 CLS 不相容)。|  
 |ClrInstanceID|win:UInt16|CLR 或 CoreCLR 執行個體的唯一 ID。|  
   
-## <a name="see-also"></a>請參閱  
+## <a name="see-also"></a>另請參閱  
  [CLR ETW 事件](../../../docs/framework/performance/clr-etw-events.md)

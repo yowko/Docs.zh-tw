@@ -1,28 +1,16 @@
 ---
-title: "安全及公開唯讀陣列欄位"
-ms.custom: 
+title: 安全及公開唯讀陣列欄位
 ms.date: 03/30/2017
-ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.technology:
-- dotnet-clr
-ms.tgt_pltfrm: 
-ms.topic: article
 helpviewer_keywords:
 - security [.NET Framework], public read-only array fields
 ms.assetid: 3df28dee-2a9f-40ff-9852-bfdbe59c27f3
-caps.latest.revision: 
 author: mairaw
 ms.author: mairaw
-manager: wpickett
-ms.workload:
-- dotnet
-ms.openlocfilehash: d86d054d3a5a4e10b8efcc3292f3a18ea37f9b87
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.openlocfilehash: f0110bb42775d8a5df9ca268b35db3abaffec84f
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="security-and-public-read-only-array-fields"></a>安全及公開唯讀陣列欄位
 永遠不會使用來自 managed 程式庫公用唯讀陣列欄位來定義的邊界行為或應用程式的安全性，因為可以修改公用唯讀陣列欄位。  
@@ -36,5 +24,5 @@ ms.lasthandoff: 12/22/2017
   
  請注意，.NET Framework 型別不會在內部定義界限類型使用公用欄位。  相反地，.NET Framework 會使用不同的私用欄位。  變更這些公用欄位的值不會改變行為的.NET Framework 型別。  
   
-## <a name="see-also"></a>請參閱  
+## <a name="see-also"></a>另請參閱  
  [安全程式碼撰寫方針](../../../docs/standard/security/secure-coding-guidelines.md)

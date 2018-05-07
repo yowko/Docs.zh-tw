@@ -1,24 +1,14 @@
 ---
-title: "WIF API 參考"
-ms.custom: 
+title: WIF API 參考
 ms.date: 03/30/2017
-ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.technology: dotnet-clr
-ms.tgt_pltfrm: 
-ms.topic: article
 ms.assetid: a027d902-9314-4bfd-b172-4e81847b1d68
-caps.latest.revision: "4"
 author: BrucePerlerMS
-ms.author: bruceper
 manager: mbaldwin
-ms.workload: dotnet
-ms.openlocfilehash: e3209ac32314e2ac3f4e3e1920991ed29f956832
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.openlocfilehash: f5a38420cf5ddb0a76946d5e44e98e1f39118236
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="wif-api-reference"></a>WIF API 參考
 Windows Identity Foundation (WIF) 類別會分成下列組件：`mscorlib` (mscorlib.dll)、`System.IdentityModel` (System.IdentityModel.dll)、`System.IdentityModel.Services` (System.IdentityModel.Services.dll) 和 `System.ServiceModel` (System.ServiceModel.dll)。 本主題提供 WIF 命名空間的連結，以及每個命名空間所包含類別的簡短說明。  
@@ -56,6 +46,6 @@ Windows Identity Foundation (WIF) 類別會分成下列組件：`mscorlib` (msco
  <xref:System.ServiceModel.Security?displayProperty=nameWithType>  
  包含的類別代表 WCF 合約、通道、服務主機，以及主動 (WS-Trust) 情節中使用的其他成品。 此命名空間也包含專屬於 Windows Communication Foundation (WCF) 而不會由 WIF 使用的類別。  
   
-## <a name="see-also"></a>請參閱  
+## <a name="see-also"></a>另請參閱  
  [WIF 組態參考](../../../docs/framework/security/wif-configuration-reference.md)  
  [WIF 3.5 和 WIF 4.5 之間的命名空間對應](../../../docs/framework/security/namespace-mapping-between-wif-3-5-and-wif-4-5.md)

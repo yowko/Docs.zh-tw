@@ -1,24 +1,14 @@
 ---
-title: "如何：使用 WIF 顯示登入的狀態"
-ms.custom: 
+title: 如何：使用 WIF 顯示登入的狀態
 ms.date: 03/30/2017
-ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.technology: dotnet-clr
-ms.tgt_pltfrm: 
-ms.topic: article
 ms.assetid: 4d1174e4-5397-4962-9a5f-3b1ad7b3fc14
-caps.latest.revision: "6"
 author: BrucePerlerMS
-ms.author: bruceper
 manager: mbaldwin
-ms.workload: dotnet
-ms.openlocfilehash: f6951eb6c9df7a3fef09f5972f3cb5fcabe5496f
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.openlocfilehash: 53ef5e8b3fae976bacff3be9a50c323a22aef0e9
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="how-to-display-signed-in-status-using-wif"></a>如何：使用 WIF 顯示登入的狀態
 ## <a name="applies-to"></a>適用於  
@@ -27,12 +17,12 @@ ms.lasthandoff: 12/22/2017
   
 -   ASP.NET® Web Forms  
   
-## <a name="summary"></a>摘要  
+## <a name="summary"></a>總結  
  本主題描述如何在啟用 WIF 的 ASP.NET 應用程式中顯示登入狀態。 WIF 提供了一些機制，可讓您的應用程式成為宣告感知，以及管理應用程式資源的驗證和授權。  
   
 ## <a name="contents"></a>內容  
   
--   概觀  
+-   總覽  
   
 -   步驟摘要  
   
@@ -46,7 +36,7 @@ ms.lasthandoff: 12/22/2017
   
 -   步驟 5 – 測試 WIF 與 ASP.NET 應用程式之間的整合  
   
-## <a name="overview"></a>概觀  
+## <a name="overview"></a>總覽  
  本主題示範如何使用 WIF 建立簡單的宣告感知應用程式，以及如何輕鬆顯示使用者是否已登入。 下列步驟會使用 Visual Studio 身分識別與存取延伸模組所隨附的本機開發 STS 。 本機開發 STS 是用來測試和開發環境，可提供簡單的方法，將宣告整合到您的應用程式。 它永遠不應該用於生產環境中，因為它不會執行實際的驗證，而且不需要認證。 不過，對於使用實際的驗證準備好用於生產環境的應用程式而言，下列步驟中的命令式程式碼都相同。  
   
 ## <a name="summary-of-steps"></a>步驟摘要  

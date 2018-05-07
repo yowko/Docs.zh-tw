@@ -1,31 +1,19 @@
 ---
-title: "延遲初始設定"
-ms.custom: 
+title: 延遲初始設定
 ms.date: 03/30/2017
-ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.technology:
-- dotnet-clr
-ms.tgt_pltfrm: 
-ms.topic: article
 dev_langs:
 - csharp
 - vb
 helpviewer_keywords:
 - lazy initialization in .NET, introduction
 ms.assetid: 56b4ae5c-4745-44ff-ad78-ffe4fcde6b9b
-caps.latest.revision: 
 author: rpetrusha
 ms.author: ronpet
-manager: wpickett
-ms.workload:
-- dotnet
-ms.openlocfilehash: f4998cc0c836cf46d79d854ad9a85e7eacf70d7f
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.openlocfilehash: a826121a7f22d1db7287171c5add28e5fcd690cc
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="lazy-initialization"></a>延遲初始設定
 物件的「延遲初始設定」表示物件一直延遲到第一次使用才建立。 (在本主題中，「延遲初始設定」和「延遲具現化」二詞為同義字。)延遲初始設定主要是用來改善效能，避免不必要的計算，並減少程式記憶體需求。 以下為最常見的案例：  
@@ -112,11 +100,11 @@ ms.lasthandoff: 12/22/2017
 |建構函式|執行緒安全模式|使用初始設定方法|已快取例外狀況|  
 |-----------------|------------------------|--------------------------------|---------------------------|  
 |Lazy(T)()|(<xref:System.Threading.LazyThreadSafetyMode.ExecutionAndPublication>)|否|否|  
-|Lazy(T)(Func(T))|(<xref:System.Threading.LazyThreadSafetyMode.ExecutionAndPublication>)|是|是|  
+|Lazy(T)(Func(T))|(<xref:System.Threading.LazyThreadSafetyMode.ExecutionAndPublication>)|[是]|[是]|  
 |Lazy(T)(Boolean)|`True` (<xref:System.Threading.LazyThreadSafetyMode.ExecutionAndPublication>) 或 `false` (<xref:System.Threading.LazyThreadSafetyMode.None>)|否|否|  
-|Lazy(T)(Func(T), Boolean)|`True` (<xref:System.Threading.LazyThreadSafetyMode.ExecutionAndPublication>) 或 `false` (<xref:System.Threading.LazyThreadSafetyMode.None>)|是|是|  
+|Lazy(T)(Func(T), Boolean)|`True` (<xref:System.Threading.LazyThreadSafetyMode.ExecutionAndPublication>) 或 `false` (<xref:System.Threading.LazyThreadSafetyMode.None>)|[是]|[是]|  
 |Lazy(T)(LazyThreadSafetyMode)|使用者指定的|否|否|  
-|Lazy(T)(Func(T), LazyThreadSafetyMode)|使用者指定的|是|如果使用者指定了 <xref:System.Threading.LazyThreadSafetyMode.PublicationOnly> 則為否；否則為是。|  
+|Lazy(T)(Func(T), LazyThreadSafetyMode)|使用者指定的|[是]|如果使用者指定了 <xref:System.Threading.LazyThreadSafetyMode.PublicationOnly> 則為否；否則為是。|  
   
 ## <a name="implementing-a-lazy-initialized-property"></a>實作延遲初始化的屬性  
  若要使用延遲初始設定來實作公用屬性，請將屬性的支援欄位定義為 <xref:System.Lazy%601>，並從屬性的 `get` 存取子傳回 <xref:System.Lazy%601.Value%2A> 屬性。  
@@ -163,7 +151,7 @@ ms.lasthandoff: 12/22/2017
   
  請注意，本例是在每次反覆迴圈時叫用初始化程序。 在多執行緒案例中，第一個叫用初始化程序的執行緒，其值會被所有執行緒看到。 後續其他執行緒也會叫用初始化程序，但其結果不被採用。 如果無法接受這種潛在的競爭條件，請使用採用布林值引數和同步處理物件的 <xref:System.Threading.LazyInitializer.EnsureInitialized%2A?displayProperty=nameWithType> 多載。  
   
-## <a name="see-also"></a>請參閱  
+## <a name="see-also"></a>另請參閱  
  [Managed 執行緒處理的基本概念](../../../docs/standard/threading/managed-threading-basics.md)  
  [執行緒和執行緒處理](../../../docs/standard/threading/threads-and-threading.md)  
  [工作平行程式庫 (TPL)](../../../docs/standard/parallel-programming/task-parallel-library-tpl.md)  

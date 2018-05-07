@@ -1,13 +1,6 @@
 ---
-title: "可靠性最佳作法"
-ms.custom: 
+title: 可靠性最佳作法
 ms.date: 03/30/2017
-ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.technology: dotnet-clr
-ms.tgt_pltfrm: 
-ms.topic: article
 helpviewer_keywords:
 - marking locks
 - rebooting databases
@@ -45,16 +38,13 @@ helpviewer_keywords:
 - STA-dependent features
 - fibers
 ms.assetid: cf624c1f-c160-46a1-bb2b-213587688da7
-caps.latest.revision: "11"
 author: mairaw
 ms.author: mairaw
-manager: wpickett
-ms.workload: dotnet
-ms.openlocfilehash: ad218e8f87c2a04a9df6f67a918097de20296d0c
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.openlocfilehash: d6f29d15297fc7faff6bb3bb07ee535647c2bb7a
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="reliability-best-practices"></a>可靠性最佳作法
 下列可靠性規則會導向至 SQL Server；不過，它們也會套用至任何主機型伺服器應用程式。 SQL Server 這類伺服器絕對不能流失資源，也不能關閉。  不過，撰寫每個改變物件狀態之方法的退出程式碼，無法完成該作業。  目標不是撰寫 100% 可靠的 Managed 程式碼，來復原每個具有退出程式碼的位置中的任何錯誤。  這會是成功機率很低的煩人工作。  Common Language Runtime (CLR) 無法輕易地強烈保證 Managed 程式碼可撰寫可行的完美程式碼。  請注意，與 ASP.NET 不同，SQL Server 只會使用一個無法回收的處理序，而不需要關閉資料庫一段無法接受的時間。  
@@ -258,7 +248,7 @@ public static MyClass SingletonProperty
  請考慮變更可擷取所有例外狀況的所有位置，而這些例外狀況是在擷取您預期要擲回之特定類型的例外狀況時發生，例如字串格式化方法的 <xref:System.FormatException>。  這會防止對非預期的例外狀況執行 catch 區塊，並且有助於確保程式碼因擷取到非預期的例外狀況而未隱藏 Bug。  因為一般規則絕不會處理程式庫程式碼中的例外狀況 (需要您擷取例外狀況的程式碼，可能指出所呼叫程式碼中的設計缺陷)。  在某些情況下，您可能想要擷取例外狀況，並擲回不同的例外狀況類型來提供更多資料。  在此情況下，請使用巢狀例外狀況，並將真正失敗原因儲存至新例外狀況的 <xref:System.Exception.InnerException%2A> 屬性中。  
   
 #### <a name="code-analysis-rule"></a>程式碼分析規則  
- 檢閱所有使用 Managed 程式碼並擷取所有物件或擷取所有例外狀況的 catch 區塊。  在 C# 中，這表示標上 `catch` {} 和 `catch(Exception)` {}。  請考慮將例外狀況類型設為極為特別，或檢閱程式碼，確保它在擷取到非預期的例外狀況類型時不會以錯誤的方式操作。  
+ 檢閱所有使用 Managed 程式碼並擷取所有物件或擷取所有例外狀況的 catch 區塊。  在 C# 中，這表示同時加上旗標`catch`{}和`catch(Exception)` {}。  請考慮將例外狀況類型設為極為特別，或檢閱程式碼，確保它在擷取到非預期的例外狀況類型時不會以錯誤的方式操作。  
   
 ### <a name="do-not-assume-a-managed-thread-is-a-win32-thread--it-is-a-fiber"></a>不要假設 Managed 執行緒是 Win32 執行緒 - 它是 Fiber  
  使用 Managed 執行緒區域儲存區確實會運作，但您可能不會使用 Unmanaged 執行緒區域儲存區，或假設程式碼將再次於目前作業系統執行緒上執行。  請不要變更執行緒地區設定這類設定。  請不要透過平台叫用呼叫 `InitializeCriticalSection` 或 `CreateMutex`，因為它們需要進入鎖定的作業系統執行緒一併結束鎖定。  因為這不是使用 Fiber 的情況，所以 Win32 關鍵區段和 Mutex 不能直接用於 SQL 中。  請注意，Managed <xref:System.Threading.Mutex> 類別未處理這些執行緒親和性考量。  
@@ -287,6 +277,6 @@ public static MyClass SingletonProperty
   
  這麼做會指示 Just-In-Time 編譯器在執行 `try` 區塊之前準備 finally 區塊中的所有程式碼。 這保證會建置 finally 區塊中的程式碼，而且在所有情況下都會執行該程式碼。 CER 中通常不會有空的 `try` 區塊。 使用 CER 可防止非同步執行緒中止和記憶體不足例外狀況。 請參閱 <xref:System.Runtime.CompilerServices.RuntimeHelpers.ExecuteCodeWithGuaranteedCleanup%2A>，以了解可額外處理極深層程式碼堆疊溢位的 CER 形式。  
   
-## <a name="see-also"></a>請參閱  
+## <a name="see-also"></a>另請參閱  
  <xref:System.Runtime.ConstrainedExecution>  
  [SQL Server 程式設計和主機保護屬性](../../../docs/framework/performance/sql-server-programming-and-host-protection-attributes.md)

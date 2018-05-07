@@ -1,23 +1,12 @@
 ---
-title: "使用單一階段交易認可和可提升單一階段告知進行最佳化"
-ms.custom: 
+title: 使用單一階段交易認可和可提升單一階段告知進行最佳化
 ms.date: 03/30/2017
-ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.tgt_pltfrm: 
-ms.topic: article
 ms.assetid: 57beaf1a-fb4d-441a-ab1d-bc0c14ce7899
-caps.latest.revision: "3"
-author: dotnet-bot
-ms.author: dotnetcontent
-manager: wpickett
-ms.workload: dotnet
-ms.openlocfilehash: 6f85dabc8a447db13173a672db37b327ba4a9fe6
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.openlocfilehash: 093dfb793d5a8c8dc59eaabab09f2e5b6c81c352
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="optimization-using-single-phase-commit-and-promotable-single-phase-notification"></a>使用單一階段交易認可和可提升單一階段告知進行最佳化
 本主題將說明 <xref:System.Transactions> 基礎結構所提供，用以最佳化效能的各項機制。  
@@ -70,6 +59,6 @@ ms.lasthandoff: 12/22/2017
   
  如果只有一個的變動登記和任何的永久性登記，變動登記會接收 SPC 通知。  如果有任何 volatile 登記和只有一個的永久性登記，volatile 登記收到 2PC。 當它完成時，永久性登記會收到 SPC。  
   
-## <a name="see-also"></a>請參閱  
+## <a name="see-also"></a>另請參閱  
  [將資源登記為異動中的參與者](../../../../docs/framework/data/transactions/enlisting-resources-as-participants-in-a-transaction.md)  
  [在單一階段和多重階段中認可異動](../../../../docs/framework/data/transactions/committing-a-transaction-in-single-phase-and-multi-phase.md)

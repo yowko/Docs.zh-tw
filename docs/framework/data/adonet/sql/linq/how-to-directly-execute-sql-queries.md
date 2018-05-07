@@ -1,27 +1,15 @@
 ---
-title: "如何：直接執行 SQL 查詢"
-ms.custom: 
+title: 如何：直接執行 SQL 查詢
 ms.date: 03/30/2017
-ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.technology: dotnet-ado
-ms.tgt_pltfrm: 
-ms.topic: article
 dev_langs:
 - csharp
 - vb
 ms.assetid: e491b9bf-741a-4296-9f51-76c25ddf6a82
-caps.latest.revision: "2"
-author: douglaslMS
-ms.author: douglasl
-manager: craigg
-ms.workload: dotnet
-ms.openlocfilehash: 000a7c50edacbae09675a9f9069f56aa6cd211f6
-ms.sourcegitcommit: ed26cfef4e18f6d93ab822d8c29f902cff3519d1
+ms.openlocfilehash: b7a468ccbdf63ec5e74238ac4e59a2f385d2562b
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 01/17/2018
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="how-to-directly-execute-sql-queries"></a>如何：直接執行 SQL 查詢
 [!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)] 會將您撰寫的查詢轉譯為參數型 SQL 查詢 (文字格式)，並將它們傳送給 SQL Server 進行處理。  
@@ -46,6 +34,6 @@ ms.lasthandoff: 01/17/2018
   
  查詢文字中的參數使用與 `Console.WriteLine()` 和 `String.Format()` 所用的相同大括號標記法來表示。 事實上，`String.Format()`提供，以取代大括號的參數取代參數名稱這類產生的查詢字串上進行實際呼叫@p0， @p1 ...、 @p(n)。  
   
-## <a name="see-also"></a>請參閱  
+## <a name="see-also"></a>另請參閱  
  [背景資訊](../../../../../../docs/framework/data/adonet/sql/linq/background-information.md)  
  [查詢資料庫](../../../../../../docs/framework/data/adonet/sql/linq/querying-the-database.md)
