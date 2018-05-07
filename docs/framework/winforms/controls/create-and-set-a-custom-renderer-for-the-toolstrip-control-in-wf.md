@@ -1,13 +1,6 @@
 ---
-title: "如何：建立和設定 Windows Form 中的 ToolStrip 控制項自訂產生器"
-ms.custom: 
+title: 如何：建立和設定 Windows Form 中的 ToolStrip 控制項自訂產生器
 ms.date: 03/30/2017
-ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.technology: dotnet-winforms
-ms.tgt_pltfrm: 
-ms.topic: article
 dev_langs:
 - csharp
 - vb
@@ -17,24 +10,19 @@ helpviewer_keywords:
 - examples [Windows Forms], toolbars
 - ToolStrip control [Windows Forms], rendering
 ms.assetid: 88a804ba-679f-4ba3-938a-0dc396199c5b
-caps.latest.revision: "16"
-author: dotnet-bot
-ms.author: dotnetcontent
-manager: wpickett
-ms.workload: dotnet
-ms.openlocfilehash: ad328af3aed9a319fe80d829b9556e867533e601
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.openlocfilehash: 0b7a77a4a923065cba8c7ea366826f7b04126f11
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="how-to-create-and-set-a-custom-renderer-for-the-toolstrip-control-in-windows-forms"></a>如何：建立和設定 Windows Form 中的 ToolStrip 控制項自訂產生器
-<xref:System.Windows.Forms.ToolStrip>控制項讓您輕鬆支援佈景主題和樣式。 您可以達到完全自訂的外觀和行為 （外觀及操作） 設定<xref:System.Windows.Forms.ToolStrip.Renderer%2A?displayProperty=nameWithType>屬性或<xref:System.Windows.Forms.ToolStripManager.Renderer%2A?displayProperty=nameWithType>自訂轉譯器的屬性。  
+<xref:System.Windows.Forms.ToolStrip> 控制項讓您輕鬆支援佈景主題和樣式。 您可以達到完全自訂的外觀和行為 （外觀及操作） 設定<xref:System.Windows.Forms.ToolStrip.Renderer%2A?displayProperty=nameWithType>屬性或<xref:System.Windows.Forms.ToolStripManager.Renderer%2A?displayProperty=nameWithType>自訂轉譯器的屬性。  
   
  您可以將轉譯器指派給每個個別<xref:System.Windows.Forms.ToolStrip>， <xref:System.Windows.Forms.MenuStrip>， <xref:System.Windows.Forms.ContextMenuStrip>，或<xref:System.Windows.Forms.StatusStrip>控制項，或者您可以使用<xref:System.Windows.Forms.ToolStripManager.Renderer%2A>屬性來設定會影響所有的物件<xref:System.Windows.Forms.ToolStrip.RenderMode%2A?displayProperty=nameWithType>屬性<xref:System.Windows.Forms.ToolStripRenderMode.ManagerRenderMode?displayProperty=nameWithType>。  
   
 > [!NOTE]
->  <xref:System.Windows.Forms.ToolStrip.RenderMode%2A>傳回<xref:System.Windows.Forms.ToolStripRenderMode.Custom>才值<xref:System.Windows.Forms.ToolStrip.Renderer%2A?displayProperty=nameWithType>不`null`。  
+>  <xref:System.Windows.Forms.ToolStrip.RenderMode%2A> 傳回<xref:System.Windows.Forms.ToolStripRenderMode.Custom>才值<xref:System.Windows.Forms.ToolStrip.Renderer%2A?displayProperty=nameWithType>不`null`。  
   
 ### <a name="to-create-a-custom-renderer"></a>若要建立自訂轉譯器  
   
@@ -92,7 +80,7 @@ ms.lasthandoff: 12/22/2017
     ToolStripManager.Renderer = new RedTextRenderer();  
     ```  
   
-## <a name="see-also"></a>請參閱  
+## <a name="see-also"></a>另請參閱  
  <xref:System.Windows.Forms.ToolStripManager.Renderer%2A>  
  <xref:System.Windows.Forms.ToolStripRenderer>  
  <xref:System.Windows.Forms.ToolStrip.RenderMode%2A>  

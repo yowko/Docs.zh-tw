@@ -1,24 +1,12 @@
 ---
-title: "x:Member 指示詞"
-ms.custom: 
+title: x:Member 指示詞
 ms.date: 03/30/2017
-ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.technology: dotnet-wpf
-ms.tgt_pltfrm: 
-ms.topic: article
 ms.assetid: 4d8394ef-644c-4331-b6c5-be855d392980
-caps.latest.revision: "5"
-author: wadepickett
-ms.author: wpickett
-manager: wpickett
-ms.workload: dotnet
-ms.openlocfilehash: 4ea04dfe5f3c371acbb388256b0854b0da8f45a3
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.openlocfilehash: 55bbb4e9c9d9decb74e52cdb92d9f3d7dd48ce43
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="xmember-directive"></a>x:Member 指示詞
 在標記中宣告 XAML 成員。  

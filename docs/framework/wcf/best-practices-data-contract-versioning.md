@@ -1,37 +1,23 @@
 ---
 title: 最佳做法：資料合約版本控制
-ms.custom: ''
 ms.date: 03/30/2017
-ms.prod: .net-framework
-ms.reviewer: ''
-ms.suite: ''
-ms.technology:
-- dotnet-clr
-ms.tgt_pltfrm: ''
-ms.topic: article
 helpviewer_keywords:
 - data contracts
 - service contracts
 - best practices [WCF], data contract versioning
 - Windows Communication Foundation, data contracts
 ms.assetid: bf0ab338-4d36-4e12-8002-8ebfdeb346cb
-caps.latest.revision: 24
-author: dotnet-bot
-ms.author: dotnetcontent
-manager: wpickett
-ms.workload:
-- dotnet
-ms.openlocfilehash: 6ea139f6b854a299760df4c7cb8c315b58701ab8
-ms.sourcegitcommit: 94d33cadc5ff81d2ac389bf5f26422c227832052
-ms.translationtype: MT
+ms.openlocfilehash: a578235a0db0ba769cae0b2ade93edbfd72b5508
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/30/2018
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="best-practices-data-contract-versioning"></a>最佳做法：資料合約版本控制
 本主題會列出最佳做法以建立可隨時間輕鬆改進的資料合約。 如需資料合約的詳細資訊，請參閱[使用資料合約](../../../docs/framework/wcf/feature-details/using-data-contracts.md)。  
   
 ## <a name="note-on-schema-validation"></a>結構描述驗證注意事項  
- 在討論資料合約版本設定時，重要的是要注意，除了項目根據預設標示為選擇性以外，由 [!INCLUDE[indigo1](../../../includes/indigo1-md.md)] 匯出的資料合約結構描述沒有任何版本設定支援。  
+ 在討論資料合約版本控制，請務必注意匯出 Windows Communication Foundation (WCF) 的資料合約結構描述沒有任何版本設定的支援，依預設會標示為選擇性元素的事實以外。  
   
  這表示即使最常見的版本設定案例 (例如新增資料成員)，也無法以與指定結構描述完全整合的方式來實作。 較新版的資料合約 (例如具有新的資料成員) 不會使用舊的結構描述來驗證。  
   

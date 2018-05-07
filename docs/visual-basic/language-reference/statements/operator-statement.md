@@ -1,12 +1,6 @@
 ---
 title: Operator Statement
 ms.date: 07/20/2015
-ms.prod: .net
-ms.reviewer: ''
-ms.suite: ''
-ms.technology:
-- devlang-visual-basic
-ms.topic: article
 f1_keywords:
 - vb.operator
 helpviewer_keywords:
@@ -23,14 +17,11 @@ helpviewer_keywords:
 - Operator statement [Visual Basic]
 - CType function [Visual Basic], Operator statement
 ms.assetid: b12ec4af-1ad7-4a17-865b-c5ee96320ae5
-caps.latest.revision: 28
-author: dotnet-bot
-ms.author: dotnetcontent
-ms.openlocfilehash: 1b6be45fd0a606f43c14d57f3f8ae0955f256ba6
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.openlocfilehash: cb7fe7929e4b6e61ca3b39be5615e09182f2fe0f
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="operator-statement"></a>Operator Statement
 宣告運算子符號、 運算元與運算子程序定義類別或結構的程式碼。  
@@ -49,19 +40,19 @@ End Operator
   
 ## <a name="parts"></a>組件  
  `attrlist`  
- 選擇項。 請參閱[屬性清單](../../../visual-basic/language-reference/statements/attribute-list.md)。  
+ 選擇性。 請參閱[屬性清單](../../../visual-basic/language-reference/statements/attribute-list.md)。  
   
  `Public`  
- 必要項。 指出這個運算子程序有[公用](../../../visual-basic/language-reference/modifiers/public.md)存取。  
+ 必要。 指出這個運算子程序有[公用](../../../visual-basic/language-reference/modifiers/public.md)存取。  
   
  `Overloads`  
- 選擇項。 請參閱[多載](../../../visual-basic/language-reference/modifiers/overloads.md)。  
+ 選擇性。 請參閱[多載](../../../visual-basic/language-reference/modifiers/overloads.md)。  
   
  `Shared`  
- 必要項。 指出此運算子程序[共用](../../../visual-basic/language-reference/modifiers/shared.md)程序。  
+ 必要。 指出此運算子程序[共用](../../../visual-basic/language-reference/modifiers/shared.md)程序。  
   
  `Shadows`  
- 選擇項。 請參閱[陰影](../../../visual-basic/language-reference/modifiers/shadows.md)。  
+ 選擇性。 請參閱[陰影](../../../visual-basic/language-reference/modifiers/shadows.md)。  
   
  `Widening`  
  所需的轉換運算子，除非您指定`Narrowing`。 指出這個運算子程序定義[Widening](../../../visual-basic/language-reference/modifiers/widening.md)轉換。 這個說明網頁，請參閱 「 擴展和縮小轉換 」。  
@@ -70,35 +61,35 @@ End Operator
  所需的轉換運算子，除非您指定`Widening`。 指出這個運算子程序定義[Narrowing](../../../visual-basic/language-reference/modifiers/narrowing.md)轉換。 這個說明網頁，請參閱 「 擴展和縮小轉換 」。  
   
  `operatorsymbol`  
- 必要項。 符號或運算子，這個運算子程序定義的識別項。  
+ 必要。 符號或運算子，這個運算子程序定義的識別項。  
   
  `operand1`  
- 必要項。 名稱和單一 （包括轉換運算子） 一元運算子的運算元或二元運算子的左的運算元的類型。  
+ 必要。 名稱和單一 （包括轉換運算子） 一元運算子的運算元或二元運算子的左的運算元的類型。  
   
  `operand2`  
  二元運算子的必要項。 名稱和二元運算子的右運算元的類型。  
   
- `operand1`和`operand2`具有下列語法和組件：  
+ `operand1` 和`operand2`具有下列語法和組件：  
   
  `[ ByVal ] operandname [ As operandtype ]`  
   
-|組件|說明|  
+|組件|描述|  
 |----------|-----------------|  
 |`ByVal`|必須是選擇性，但傳遞機制[ByVal](../../../visual-basic/language-reference/modifiers/byval.md)。|  
-|`operandname`|必要項。 代表這個運算元的變數名稱。 請參閱[宣告項目名稱](../../../visual-basic/programming-guide/language-features/declared-elements/declared-element-names.md)。|  
+|`operandname`|必要。 代表這個運算元的變數名稱。 請參閱[宣告項目名稱](../../../visual-basic/programming-guide/language-features/declared-elements/declared-element-names.md)。|  
 |`operandtype`|選擇性除非`Option Strict`是`On`。 這個運算元的資料類型。|  
   
  `type`  
  選擇性除非`Option Strict`是`On`。 傳回值的運算子程序的資料類型。  
   
  `statements`  
- 選擇項。 運算子程序執行的陳述式區塊。  
+ 選擇性。 運算子程序執行的陳述式區塊。  
   
  `returnvalue`  
- 必要項。 運算子程序傳回呼叫程式碼的值。  
+ 必要。 運算子程序傳回呼叫程式碼的值。  
   
  `End` `Operator`  
- 必要項。 結束這個運算子程序的定義。  
+ 必要。 結束這個運算子程序的定義。  
   
 ## <a name="remarks"></a>備註  
  您可以使用`Operator`只能在類別或結構中。 這表示*宣告內容*運算子不能是原始程式檔、 命名空間、 模組、 介面、 程序或區塊。 如需詳細資訊，請參閱[宣告內容和預設存取層級](../../../visual-basic/language-reference/statements/declaration-contexts-and-default-access-levels.md)。  
@@ -174,7 +165,7 @@ End Operator
  如果已轉換程序可能會失敗，或是它可能會導致未處理的例外狀況，您必須將它宣告`Narrowing`。  
   
 ## <a name="example"></a>範例  
- 下列程式碼範例使用`Operator`陳述式來定義的結構，其中包含的運算子程序外框`And`， `Or`， `IsFalse`，和`IsTrue`運算子。 `And`和`Or`每個接受兩個運算元的型別`abc`和傳回型別`abc`。 `IsFalse`和`IsTrue`每個接受單一類型的運算元`abc`並傳回`Boolean`。 這些定義可讓呼叫的程式碼，以使用`And`， `AndAlso`， `Or`，和`OrElse`類型的運算元使用`abc`。  
+ 下列程式碼範例使用`Operator`陳述式來定義的結構，其中包含的運算子程序外框`And`， `Or`， `IsFalse`，和`IsTrue`運算子。 `And` 和`Or`每個接受兩個運算元的型別`abc`和傳回型別`abc`。 `IsFalse` 和`IsTrue`每個接受單一類型的運算元`abc`並傳回`Boolean`。 這些定義可讓呼叫的程式碼，以使用`And`， `AndAlso`， `Or`，和`OrElse`類型的運算元使用`abc`。  
   
  [!code-vb[VbVbalrStatements#44](../../../visual-basic/language-reference/error-messages/codesnippet/VisualBasic/operator-statement_1.vb)]  
   

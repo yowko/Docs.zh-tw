@@ -1,35 +1,21 @@
 ---
 title: 控制項
-ms.custom: ''
 ms.date: 03/30/2017
-ms.prod: .net-framework
-ms.reviewer: ''
-ms.suite: ''
-ms.technology:
-- dotnet-wpf
-ms.tgt_pltfrm: ''
-ms.topic: article
 dev_langs:
 - csharp
 - vb
 helpviewer_keywords:
 - controls [WPF], about WPF controls
 ms.assetid: 3f255a8a-35a8-4712-9065-472ff7d75599
-caps.latest.revision: 13
-author: dotnet-bot
-ms.author: dotnetcontent
-manager: wpickett
-ms.workload:
-- dotnet
-ms.openlocfilehash: 66c6cc58423a2af8d0fd6de93b8884918888fb48
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.openlocfilehash: 11c9c2cdd9e485fb87f5d8ead7790ded0428f7dd
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="controls"></a>控制項
 <a name="introduction"></a>
-[!INCLUDE[TLA#tla_winclient](../../../../includes/tlasharptla-winclient-md.md)]隨附許多常見的 UI 元件中幾乎每個 Windows 應用程式，例如使用<xref:System.Windows.Controls.Button>， <xref:System.Windows.Controls.Label>， <xref:System.Windows.Controls.TextBox>， <xref:System.Windows.Controls.Menu>，和<xref:System.Windows.Controls.ListBox>。 在過去，這些物件是稱為控制項。 而[!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)]SDK 仍持續鬆散表示任何類別，表示應用程式中，可見的物件時，用於 「 控制項 」 一詞是很重要的一點類別不需要繼承自<xref:System.Windows.Controls.Control>類別具有可見的目前狀態。 類別繼承自<xref:System.Windows.Controls.Control>類別包含<xref:System.Windows.Controls.ControlTemplate>，可讓取用者的控制項來徹底變更控制項的外觀，而不需要建立新的子類別。  本主題討論如何控制項 (不要繼承自兩個那些<xref:System.Windows.Controls.Control>類別和未) 中常用[!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)]。  
+[!INCLUDE[TLA#tla_winclient](../../../../includes/tlasharptla-winclient-md.md)] 隨附許多常見的 UI 元件中幾乎每個 Windows 應用程式，例如使用<xref:System.Windows.Controls.Button>， <xref:System.Windows.Controls.Label>， <xref:System.Windows.Controls.TextBox>， <xref:System.Windows.Controls.Menu>，和<xref:System.Windows.Controls.ListBox>。 在過去，這些物件是稱為控制項。 而[!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)]SDK 仍持續鬆散表示任何類別，表示應用程式中，可見的物件時，用於 「 控制項 」 一詞是很重要的一點類別不需要繼承自<xref:System.Windows.Controls.Control>類別具有可見的目前狀態。 類別繼承自<xref:System.Windows.Controls.Control>類別包含<xref:System.Windows.Controls.ControlTemplate>，可讓取用者的控制項來徹底變更控制項的外觀，而不需要建立新的子類別。  本主題討論如何控制項 (不要繼承自兩個那些<xref:System.Windows.Controls.Control>類別和未) 中常用[!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)]。  
 
 <a name="creating_an_instance_of_a_control"></a>   
 ## <a name="creating-an-instance-of-a-control"></a>建立控制項的執行個體  
@@ -37,7 +23,7 @@ ms.lasthandoff: 12/22/2017
   
  [!code-xaml[ControlsOverview#1](../../../../samples/snippets/csharp/VS_Snippets_Wpf/ControlsOverview/CSharp/Window1.xaml#1)]  
   
- 下列範例會以程式碼建立相同的應用程式。 為求簡潔，建立<xref:System.Windows.Controls.Grid>， `grid1`，排除範例。 `grid1`具有相同的資料行和資料列定義，如先前所示[!INCLUDE[TLA2#tla_xaml](../../../../includes/tla2sharptla-xaml-md.md)]範例。  
+ 下列範例會以程式碼建立相同的應用程式。 為求簡潔，建立<xref:System.Windows.Controls.Grid>， `grid1`，排除範例。 `grid1` 具有相同的資料行和資料列定義，如先前所示[!INCLUDE[TLA2#tla_xaml](../../../../includes/tla2sharptla-xaml-md.md)]範例。  
   
  [!code-csharp[ControlsOverview#2](../../../../samples/snippets/csharp/VS_Snippets_Wpf/ControlsOverview/CSharp/AppInCode.xaml.cs#2)]
  [!code-vb[ControlsOverview#2](../../../../samples/snippets/visualbasic/VS_Snippets_Wpf/ControlsOverview/VisualBasic/AppInCode.xaml.vb#2)]  
@@ -63,7 +49,7 @@ ms.lasthandoff: 12/22/2017
  [!code-vb[ControlsOverview#4](../../../../samples/snippets/visualbasic/VS_Snippets_Wpf/ControlsOverview/VisualBasic/AppInCode.xaml.vb#4)]  
   
 ### <a name="creating-a-style-for-a-control"></a>為控制項建立樣式  
- [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)]可讓您全面，指定控制項的外觀，而不是在應用程式，每個執行個體上設定屬性，藉由建立<xref:System.Windows.Style>。 下列範例會建立<xref:System.Windows.Style>套用至每個<xref:System.Windows.Controls.Button>應用程式中。 <xref:System.Windows.Style>定義通常定義在[!INCLUDE[TLA2#tla_xaml](../../../../includes/tla2sharptla-xaml-md.md)]中<xref:System.Windows.ResourceDictionary>，例如<xref:System.Windows.FrameworkElement.Resources%2A>屬性<xref:System.Windows.FrameworkElement>。  
+ [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] 可讓您全面，指定控制項的外觀，而不是在應用程式，每個執行個體上設定屬性，藉由建立<xref:System.Windows.Style>。 下列範例會建立<xref:System.Windows.Style>套用至每個<xref:System.Windows.Controls.Button>應用程式中。 <xref:System.Windows.Style> 定義通常定義在[!INCLUDE[TLA2#tla_xaml](../../../../includes/tla2sharptla-xaml-md.md)]中<xref:System.Windows.ResourceDictionary>，例如<xref:System.Windows.FrameworkElement.Resources%2A>屬性<xref:System.Windows.FrameworkElement>。  
   
  [!code-xaml[ControlsOverview#5](../../../../samples/snippets/csharp/VS_Snippets_Wpf/ControlsOverview/CSharp/AppInCode.xaml#5)]  
   
@@ -112,7 +98,7 @@ ms.lasthandoff: 12/22/2017
   
  如需有關這些基底類別的詳細資訊，請參閱[WPF 內容模型](../../../../docs/framework/wpf/controls/wpf-content-model.md)。  
   
-## <a name="see-also"></a>請參閱  
+## <a name="see-also"></a>另請參閱  
  [樣式設定和範本化](../../../../docs/framework/wpf/controls/styling-and-templating.md)  
  [依分類列出控制項](../../../../docs/framework/wpf/controls/controls-by-category.md)  
  [控制項程式庫](../../../../docs/framework/wpf/controls/control-library.md)  

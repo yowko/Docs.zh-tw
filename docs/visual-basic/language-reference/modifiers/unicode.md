@@ -1,11 +1,6 @@
 ---
 title: Unicode (Visual Basic)
 ms.date: 07/20/2015
-ms.prod: .net
-ms.suite: ''
-ms.technology:
-- devlang-visual-basic
-ms.topic: article
 f1_keywords:
 - vb.Unicode
 helpviewer_keywords:
@@ -14,14 +9,11 @@ helpviewer_keywords:
 - Unicode keyword [Visual Basic]
 - Unicode, marshaling strings
 ms.assetid: 0021d5ff-3209-444e-8497-420f3e6ee075
-caps.latest.revision: 14
-author: dotnet-bot
-ms.author: dotnetcontent
-ms.openlocfilehash: 042908b8427de2de0de96bbb32df7be018bb915c
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.openlocfilehash: a61fd8e10c39569d92dd84180f678a1ff05a9310
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="unicode-visual-basic"></a>Unicode (Visual Basic)
 指定 Visual Basic 應封送處理為 Unicode 值，不論所宣告外部程序名稱的所有字串。  

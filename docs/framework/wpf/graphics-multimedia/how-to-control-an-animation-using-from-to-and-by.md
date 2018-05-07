@@ -1,29 +1,17 @@
 ---
-title: "操作說明：使用 From、To 和 By 控制動畫"
-ms.custom: 
+title: 操作說明：使用 From、To 和 By 控制動畫
 ms.date: 03/30/2017
-ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.technology: dotnet-wpf
-ms.tgt_pltfrm: 
-ms.topic: article
 helpviewer_keywords:
 - animation [WPF], From/to/by
 - basic animation [WPF]
 - animation [WPF], basic animation
 - From/to/by animation
 ms.assetid: 59afba57-6fc1-44c8-987e-8a5f4142adad
-caps.latest.revision: "11"
-author: dotnet-bot
-ms.author: dotnetcontent
-manager: wpickett
-ms.workload: dotnet
-ms.openlocfilehash: 17f87c8bcf09022aa389df779e29f5e5affabc20
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.openlocfilehash: c6f2bfb207163136d79e815e7f910673e8fafade
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="how-to-control-an-animation-using-from-to-and-by"></a>操作說明：使用 From、To 和 By 控制動畫
 「 從/至/者 」 或 「 基本動畫 」 會建立兩個目標值之間的轉換 (請參閱[動畫概觀](../../../../docs/framework/wpf/graphics-multimedia/animation-overview.md)的不同類型的動畫簡介)。 若要設定的基本動畫目標值，使用其<xref:System.Windows.Media.Animation.DoubleAnimation.From%2A>， <xref:System.Windows.Media.Animation.DoubleAnimation.To%2A>，和<xref:System.Windows.Media.Animation.DoubleAnimation.By%2A>屬性。  下表摘要說明如何<xref:System.Windows.Media.Animation.DoubleAnimation.From%2A>， <xref:System.Windows.Media.Animation.DoubleAnimation.To%2A>，和<xref:System.Windows.Media.Animation.DoubleAnimation.By%2A>可能使用屬性一起或分開來判斷動畫的目標值。  
@@ -48,7 +36,7 @@ ms.lasthandoff: 12/22/2017
 ## <a name="example"></a>範例  
  [!code-xaml[BasicAnimations_snippet#AnimationTargetValuesWholePage](../../../../samples/snippets/csharp/VS_Snippets_Wpf/BasicAnimations_snippet/CS/AnimationTargetValuesExample.xaml#animationtargetvalueswholepage)]  
   
-## <a name="see-also"></a>請參閱  
+## <a name="see-also"></a>另請參閱  
  [動畫概觀](../../../../docs/framework/wpf/graphics-multimedia/animation-overview.md)  
  [主要畫面格動畫概觀](../../../../docs/framework/wpf/graphics-multimedia/key-frame-animations-overview.md)  
  [From、To 和 By 動畫目標值範例](http://go.microsoft.com/fwlink/?LinkID=159988)

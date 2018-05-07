@@ -1,22 +1,12 @@
 ---
-title: "如何： 將物件資料寫入至 XML 檔案 (Visual Basic)"
-ms.custom: 
+title: 如何： 將物件資料寫入至 XML 檔案 (Visual Basic)
 ms.date: 07/20/2015
-ms.prod: .net
-ms.reviewer: 
-ms.suite: 
-ms.technology: devlang-visual-basic
-ms.tgt_pltfrm: 
-ms.topic: article
 ms.assetid: f7966480-5ed2-43ac-9894-33427436de2a
-caps.latest.revision: "3"
-author: dotnet-bot
-ms.author: dotnetcontent
-ms.openlocfilehash: df461f9b560dac45add0d7c82ff4938b0a7b1e62
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.openlocfilehash: 434706383c50e5df8e419e3988da8dc7cce87c83
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="how-to-write-object-data-to-an-xml-file-visual-basic"></a>如何： 將物件資料寫入至 XML 檔案 (Visual Basic)
 此範例會使用 <xref:System.Xml.Serialization.XmlSerializer> 類別，將來自某個類別的物件寫入 XML 檔案。  

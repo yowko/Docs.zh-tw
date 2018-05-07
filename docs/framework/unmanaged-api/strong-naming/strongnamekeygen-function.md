@@ -1,14 +1,6 @@
 ---
-title: "StrongNameKeyGen 函式"
-ms.custom: 
+title: StrongNameKeyGen 函式
 ms.date: 03/30/2017
-ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.technology:
-- dotnet-clr
-ms.tgt_pltfrm: 
-ms.topic: reference
 api_name:
 - StrongNameKeyGen
 api_location:
@@ -22,17 +14,13 @@ helpviewer_keywords:
 ms.assetid: 883e413a-ad2f-4f7f-b1b9-aeb8fe5b65f8
 topic_type:
 - apiref
-caps.latest.revision: 
 author: rpetrusha
 ms.author: ronpet
-manager: wpickett
-ms.workload:
-- dotnet
-ms.openlocfilehash: e3bb9530884f61345d439ec8662a088e1d152de7
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.openlocfilehash: 5fce08434cb8864350fd333dcfcaa388a8031c09
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="strongnamekeygen-function"></a>StrongNameKeyGen 函式
 建立新公用/私密金鑰組的強式名稱使用。  
@@ -52,7 +40,7 @@ BOOLEAN StrongNameKeyGen (
   
 #### <a name="parameters"></a>參數  
  `wszKeyContainer`  
- [in]要求的金鑰容器名稱。 `wszKeyContainer`必須是非空白字串，或 null 以產生暫時的名稱。  
+ [in]要求的金鑰容器名稱。 `wszKeyContainer` 必須是非空白字串，或 null 以產生暫時的名稱。  
   
  `dwFlags`  
  [in]指定是否要保留已註冊的鍵。 支援下列值：  
@@ -68,7 +56,7 @@ BOOLEAN StrongNameKeyGen (
  [out]大小，以位元組為單位的`ppbKeyBlob`。  
   
 ## <a name="return-value"></a>傳回值  
- `true`如果成功地完成。否則， `false`。  
+ `true` 如果成功地完成。否則， `false`。  
   
 ## <a name="remarks"></a>備註  
  `StrongNameKeyGen`函式會建立為 1024年位元金鑰。 擷取索引鍵之後，您應該呼叫[StrongNameFreeBuffer](../../../../docs/framework/unmanaged-api/strong-naming/strongnamefreebuffer-function.md)函式釋放配置的記憶體。  
@@ -82,9 +70,9 @@ BOOLEAN StrongNameKeyGen (
   
  **程式庫：**包含做為 MsCorEE.dll 中的資源  
   
- **.NET framework 版本：**[!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
+ **.NET framework 版本：** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
   
-## <a name="see-also"></a>請參閱  
+## <a name="see-also"></a>另請參閱  
  [StrongNameKeyGen 方法](../../../../docs/framework/unmanaged-api/hosting/iclrstrongname-strongnamekeygen-method.md)  
  [StrongNameKeyGenEx 方法](../../../../docs/framework/unmanaged-api/hosting/iclrstrongname-strongnamekeygenex-method.md)  
  [ICLRStrongName 介面](../../../../docs/framework/unmanaged-api/hosting/iclrstrongname-interface.md)

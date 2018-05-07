@@ -1,13 +1,6 @@
 ---
-title: "如何： 接收通知時時鐘 &#39; s 的狀態變更"
-ms.custom: 
+title: 如何： 接收通知時時鐘&#39;s 狀態變更
 ms.date: 03/30/2017
-ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.technology: dotnet-wpf
-ms.tgt_pltfrm: 
-ms.topic: article
 dev_langs:
 - csharp
 - vb
@@ -15,18 +8,13 @@ helpviewer_keywords:
 - clocks [WPF], notification of state changes
 - notifications [WPF], clocks' state changes
 ms.assetid: ecb10fc9-d0c2-45c3-b0a1-7b11baa733da
-caps.latest.revision: "7"
-author: dotnet-bot
-ms.author: dotnetcontent
-manager: wpickett
-ms.workload: dotnet
-ms.openlocfilehash: 396e2c51894ad5ed11f8953bceb1bd36899cfc62
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.openlocfilehash: d0eaca4d2a05d01e686efc15dfceebb6de4f4b64
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 05/04/2018
 ---
-# <a name="how-to-receive-notification-when-a-clock39s-state-changes"></a>如何： 接收通知時時鐘 &#39; s 的狀態變更
+# <a name="how-to-receive-notification-when-a-clock39s-state-changes"></a>如何： 接收通知時時鐘&#39;s 狀態變更
 時鐘的<xref:System.Windows.Media.Animation.Clock.CurrentStateInvalidated>就會發生事件時其<xref:System.Windows.Media.Animation.Clock.CurrentState%2A>就變成無效，例如當時鐘啟動或停止。 您可以直接使用這個事件註冊<xref:System.Windows.Media.Animation.Clock>，也可以註冊使用<xref:System.Windows.Media.Animation.Timeline>。  
   
  在下列範例中，<xref:System.Windows.Media.Animation.Storyboard>和兩個<xref:System.Windows.Media.Animation.DoubleAnimation>物件用來繪製兩個矩形的寬度。 <xref:System.Windows.Media.Animation.Timeline.CurrentStateInvalidated> 」 事件可用來接聽的時鐘狀態變更。  

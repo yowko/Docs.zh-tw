@@ -1,13 +1,6 @@
 ---
-title: "如何：在 Windows Form 上繪製文字"
-ms.custom: 
+title: 如何：在 Windows Form 上繪製文字
 ms.date: 03/30/2017
-ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.technology: dotnet-winforms
-ms.tgt_pltfrm: 
-ms.topic: article
 dev_langs:
 - csharp
 - vb
@@ -16,16 +9,11 @@ helpviewer_keywords:
 - forms [Windows Forms], drawing text
 - text [Windows Forms], drawing
 ms.assetid: 5d2447a9-21a1-4adc-b954-5516f2bb9b2c
-caps.latest.revision: "11"
-author: dotnet-bot
-ms.author: dotnetcontent
-manager: wpickett
-ms.workload: dotnet
-ms.openlocfilehash: 03e663f455a348b2699331ec5bf1ea6df2e54493
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.openlocfilehash: 9369a4ed26107bdc395d455ba6fb8420fd895d6f
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="how-to-draw-text-on-a-windows-form"></a>如何：在 Windows Form 上繪製文字
 下列程式碼範例示範如何使用<xref:System.Drawing.Graphics.DrawString%2A>方法<xref:System.Drawing.Graphics>表單上繪製文字。 或者，您可以使用<xref:System.Windows.Forms.TextRenderer>的表單上繪製文字。 如需詳細資訊，請參閱[How to： 使用 GDI 繪製的文字](../../../../docs/framework/winforms/advanced/how-to-draw-text-with-gdi.md)。  
@@ -43,7 +31,7 @@ ms.lasthandoff: 12/22/2017
   
 -   新細明體字型未安裝。  
   
-## <a name="see-also"></a>請參閱  
+## <a name="see-also"></a>另請參閱  
  <xref:System.Drawing.Graphics.DrawString%2A>  
  <xref:System.Windows.Forms.TextRenderer.DrawText%2A>  
  <xref:System.Drawing.StringFormat.FormatFlags%2A>  

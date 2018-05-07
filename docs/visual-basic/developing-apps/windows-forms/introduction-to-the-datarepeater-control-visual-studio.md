@@ -1,28 +1,21 @@
 ---
-title: "DataRepeater 控制項簡介 (Visual Studio)"
+title: DataRepeater 控制項簡介 (Visual Studio)
 ms.date: 07/20/2015
-ms.prod: .net
-ms.suite: 
-ms.technology: devlang-visual-basic
-ms.topic: article
 helpviewer_keywords:
 - repeating data
 - DataRepeater, overview
 - DataRepeater
 ms.assetid: 78a52a1d-65f0-4ecb-97ff-53bc114300c5
-caps.latest.revision: "8"
-author: dotnet-bot
-ms.author: dotnetcontent
-ms.openlocfilehash: 699876cc568b22114e5ed8741c2fd0c053a137af
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.openlocfilehash: fc0cf9c358faf3e738eb3b24ec61577b88dbce4a
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="introduction-to-the-datarepeater-control-visual-studio"></a>DataRepeater 控制項簡介 (Visual Studio)
 Visual Basic Power Pack <xref:Microsoft.VisualBasic.PowerPacks.DataRepeater> 控制項是可捲動的容器，用於存放顯示重複資料的控制項，例如資料庫資料表中的資料列。 當您需要對資料的版面配置擁有更多控制權時，可以此取代 <xref:System.Windows.Forms.DataGridView> 控制項。 <xref:Microsoft.VisualBasic.PowerPacks.DataRepeater>藉由建立多個執行個體中的捲動檢視 「 重複 」 相關的控制項群組。 這可讓使用者同時檢視數個記錄。  
   
-## <a name="overview"></a>概觀  
+## <a name="overview"></a>總覽  
  在設計階段<xref:Microsoft.VisualBasic.PowerPacks.DataRepeater>控制項包含兩個區段。 [外部] 區段是*檢視區*，會在執行階段顯示捲動的資料。 內部 （上方） 區段，稱為*項目範本*，位置會重複，在執行階段，通常一個資料來源中的每個欄位控制項的控制項。 封裝的屬性和項目範本中的控制項在<xref:Microsoft.VisualBasic.PowerPacks.DataRepeater.ItemTemplate%2A>屬性。  
   
  在執行階段，<xref:Microsoft.VisualBasic.PowerPacks.DataRepeater.ItemTemplate%2A>複製到虛擬機器<xref:Microsoft.VisualBasic.PowerPacks.DataRepeaterItem>物件，用來顯示資料，當每個資料錄捲動到檢視。 您可以自訂此顯示器中個別記錄的<xref:Microsoft.VisualBasic.PowerPacks.DataRepeater.DrawItem>事件，例如，反白顯示的欄位，根據它所包含的值。 如需詳細資訊，請參閱[如何： 變更 DataRepeater 控制項的外觀](../../../visual-basic/developing-apps/windows-forms/how-to-change-the-appearance-of-a-datarepeater-control-visual-studio.md)。  

@@ -1,12 +1,6 @@
 ---
-title: "宣告項目特性 (Visual Basic)"
-ms.custom: 
+title: 宣告項目特性 (Visual Basic)
 ms.date: 07/20/2015
-ms.prod: .net
-ms.reviewer: 
-ms.suite: 
-ms.technology: devlang-visual-basic
-ms.topic: article
 helpviewer_keywords:
 - declared elements [Visual Basic], lifetime
 - access levels, declared elements
@@ -19,14 +13,11 @@ helpviewer_keywords:
 - data types [Visual Basic], declared elements
 - declared elements [Visual Basic], visibility
 ms.assetid: 1bc40fb8-b67c-4428-90a4-76b630ae2583
-caps.latest.revision: "16"
-author: dotnet-bot
-ms.author: dotnetcontent
-ms.openlocfilehash: 26ee27d3a1d085c6ab45ae850dbdac700aa208a9
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.openlocfilehash: 26c9ec247a0b848d46df063bc7b85ceec30d81c3
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="declared-element-characteristics-visual-basic"></a>宣告項目特性 (Visual Basic)
 A*特性*宣告的項目是會影響程式碼可以使用了該項目的外觀。 每個宣告的項目有一或多個與它相關的下列特性：  
@@ -44,20 +35,20 @@ A*特性*宣告的項目是會影響程式碼可以使用了該項目的外觀�
   
 |項目|資料類型|存留期|範圍<sup>1</sup>|存取層級|  
 |-------------|---------------|--------------|------------------------|------------------|  
-|變數|是|是|是|是|  
-|常數|是|否|是|是|  
-|列舉|是|否|是|是|  
-|結構|否|否|是|是|  
-|屬性|是|是|是|是|  
-|方法|否|是|是|是|  
-|程序 (`Sub`或`Function`)|否|是|是|是|  
-|程序參數|是|是|是|否|  
-|函式傳回|是|是|是|否|  
-|運算子|是|否|是|是|  
-|介面|否|否|是|是|  
-|類別|否|否|是|是|  
-|事件|否|否|是|是|  
-|委派|否|否|是|是|  
+|變數|[是]|是|是|[是]|  
+|常數|[是]|否|是|[是]|  
+|列舉|[是]|否|是|[是]|  
+|結構|否|否|是|[是]|  
+|屬性|[是]|是|是|[是]|  
+|方法|否|是|是|[是]|  
+|程序 (`Sub`或`Function`)|否|是|是|[是]|  
+|程序參數|[是]|是|是|否|  
+|函式傳回|[是]|是|是|否|  
+|運算子|[是]|否|是|[是]|  
+|介面|否|否|是|[是]|  
+|類別|否|否|是|[是]|  
+|Event - 事件|否|否|是|[是]|  
+|Delegate - 委派|否|否|是|[是]|  
   
  <sup>1</sup>範圍有時稱為*可視性*。  
   

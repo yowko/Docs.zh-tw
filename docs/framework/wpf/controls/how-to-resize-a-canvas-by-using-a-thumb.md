@@ -1,13 +1,6 @@
 ---
-title: "如何：使用縮圖調整畫布大小"
-ms.custom: 
+title: 如何：使用縮圖調整畫布大小
 ms.date: 03/30/2017
-ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.technology: dotnet-wpf
-ms.tgt_pltfrm: 
-ms.topic: article
 dev_langs:
 - csharp
 - vb
@@ -18,16 +11,11 @@ helpviewer_keywords:
 - Thumb control [WPF]
 - Canvas control [WPF]
 ms.assetid: 7dc9f435-726c-4d4d-be41-eb24cfe17bef
-caps.latest.revision: "14"
-author: dotnet-bot
-ms.author: dotnetcontent
-manager: wpickett
-ms.workload: dotnet
-ms.openlocfilehash: c73509d58112e47f707e82243005bfdf9edca151
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.openlocfilehash: c3e7176b0578c8fdc5f4331ad8f3b464f3a88b51
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="how-to-resize-a-canvas-by-using-a-thumb"></a>如何：使用縮圖調整畫布大小
 這個範例示範如何使用<xref:System.Windows.Controls.Primitives.Thumb>控制項調整大小<xref:System.Windows.Controls.Canvas>控制項。  
@@ -57,7 +45,7 @@ ms.lasthandoff: 12/22/2017
   
  如需完整範例，請參閱[捲動方塊的拖曳功能範例](http://go.microsoft.com/fwlink/?LinkID=160042)。  
   
-## <a name="see-also"></a>請參閱  
+## <a name="see-also"></a>另請參閱  
  <xref:System.Windows.Controls.Primitives.Thumb>  
  <xref:System.Windows.Controls.Primitives.Thumb.DragStarted>  
  <xref:System.Windows.Controls.Primitives.Thumb.DragDelta>  

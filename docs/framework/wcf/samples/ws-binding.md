@@ -1,27 +1,15 @@
 ---
-title: "WS 繫結"
-ms.custom: 
+title: WS 繫結
 ms.date: 03/30/2017
-ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.technology: dotnet-clr
-ms.tgt_pltfrm: 
-ms.topic: article
 ms.assetid: 629945b2-d771-46d7-a87b-5df3b2e460da
-caps.latest.revision: "7"
-author: dotnet-bot
-ms.author: dotnetcontent
-manager: wpickett
-ms.workload: dotnet
-ms.openlocfilehash: f733aaf62d37f9c8ca853a0958e627a4f354121d
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
-ms.translationtype: MT
+ms.openlocfilehash: 67102c7c2925c2ac032d9defccdd5e187e76d608
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="ws-binding"></a>WS 繫結
-本節包含示範 [!INCLUDE[indigo1](../../../../includes/indigo1-md.md)] 中 Windows 服務繫結的範例。  
+本節包含示範 Windows 服務繫結中 Windows Communication Foundation (WCF) 的範例。  
   
 ## <a name="in-this-section"></a>本節內容  
  [WS 異動流程](../../../../docs/framework/wcf/samples/ws-transaction-flow.md)  

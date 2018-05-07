@@ -1,17 +1,12 @@
 ---
 title: 例外狀況：try...finally 運算式 (F#)
 description: "深入了解如何 F # ' try finally' 運算式可讓您執行清除程式碼，即使一段程式碼擲回例外狀況。"
-author: cartermp
-ms.author: phcart
 ms.date: 05/16/2016
-ms.topic: language-reference
-ms.prod: dotnet-fsharp
-ms.devlang: fsharp
-ms.openlocfilehash: 588e4edb4d25c6d25ef103ba724613db997f68d7
-ms.sourcegitcommit: 03ee570f6f528a7d23a4221dcb26a9498edbdf8c
+ms.openlocfilehash: a5fdec7b3986fc9a85c34b08d20dc31947c92b2e
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/28/2018
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="exceptions-the-tryfinally-expression"></a>例外狀況：try...finally 運算式
 

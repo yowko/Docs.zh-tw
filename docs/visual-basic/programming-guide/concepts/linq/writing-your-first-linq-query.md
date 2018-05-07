@@ -1,34 +1,24 @@
 ---
-title: "撰寫第一個 LINQ 查詢 (Visual Basic)"
-ms.custom: 
+title: 撰寫第一個 LINQ 查詢 (Visual Basic)
 ms.date: 07/20/2015
-ms.prod: .net
-ms.reviewer: 
-ms.suite: 
-ms.technology: devlang-visual-basic
-ms.tgt_pltfrm: 
-ms.topic: article
 helpviewer_keywords:
 - queries [LINQ in Visual Basic], writing
 - LINQ queries [Visual Basic]
 - LINQ [Visual Basic], writing queries
 ms.assetid: 4affb732-3e9b-4479-aa31-1f9bd8183cbe
-caps.latest.revision: "56"
-author: dotnet-bot
-ms.author: dotnetcontent
-ms.openlocfilehash: c16bb28189d5525654328da2dc80d868bbe61bf5
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.openlocfilehash: f426aac5358837563081d2bf9783f6d4fe04d853
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="writing-your-first-linq-query-visual-basic"></a>撰寫第一個 LINQ 查詢 (Visual Basic)
 「查詢」是指從資料來源中擷取資料的運算式。 查詢會在專用的查詢語言來表示。 經過一段時間，不同語言所開發的不同類型的資料來源，例如 SQL 用於關聯式資料庫，而 XQuery 用於 XML。 這可讓您所需的應用程式開發人員若要了解新的查詢語言，每種類型的資料來源或資料格式的支援。  
   
- [!INCLUDE[vbteclinqext](~/includes/vbteclinqext-md.md)]藉由提供一致的模型，以處理各種資料來源和格式的資料，可簡化這種情況。 在 [!INCLUDE[vbteclinq](~/includes/vbteclinq-md.md)] 查詢中，您所處理的一定是物件。 您可以使用相同的基本程式碼撰寫模式查詢及轉換 XML 文件中的資料、 SQL 資料庫、 ADO.NET 資料集和實體、.NET Framework 集合和任何其他來源或格式為其[!INCLUDE[vbteclinq](~/includes/vbteclinq-md.md)]才有提供者。 本文件說明的三個階段的建立和使用 basic[!INCLUDE[vbteclinq](~/includes/vbteclinq-md.md)]查詢。  
+ [!INCLUDE[vbteclinqext](~/includes/vbteclinqext-md.md)] 藉由提供一致的模型，以處理各種資料來源和格式的資料，可簡化這種情況。 在 [!INCLUDE[vbteclinq](~/includes/vbteclinq-md.md)] 查詢中，您所處理的一定是物件。 您可以使用相同的基本程式碼撰寫模式查詢及轉換 XML 文件中的資料、 SQL 資料庫、 ADO.NET 資料集和實體、.NET Framework 集合和任何其他來源或格式為其[!INCLUDE[vbteclinq](~/includes/vbteclinq-md.md)]才有提供者。 本文件說明的三個階段的建立和使用 basic[!INCLUDE[vbteclinq](~/includes/vbteclinq-md.md)]查詢。  
   
 ## <a name="three-stages-of-a-query-operation"></a>查詢作業的三個階段  
- [!INCLUDE[vbteclinq](~/includes/vbteclinq-md.md)]查詢作業包含三個動作：  
+ [!INCLUDE[vbteclinq](~/includes/vbteclinq-md.md)] 查詢作業包含三個動作：  
   
 1.  取得資料來源。  
   

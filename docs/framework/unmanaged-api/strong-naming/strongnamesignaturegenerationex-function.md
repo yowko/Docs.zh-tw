@@ -1,14 +1,6 @@
 ---
-title: "StrongNameSignatureGenerationEx 函式"
-ms.custom: 
+title: StrongNameSignatureGenerationEx 函式
 ms.date: 03/30/2017
-ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.technology:
-- dotnet-clr
-ms.tgt_pltfrm: 
-ms.topic: reference
 api_name:
 - StrongNameSignatureGenerationEx
 api_location:
@@ -22,17 +14,13 @@ helpviewer_keywords:
 ms.assetid: 9a75469e-aa49-4e32-ad48-3bafd5202f09
 topic_type:
 - apiref
-caps.latest.revision: 
 author: rpetrusha
 ms.author: ronpet
-manager: wpickett
-ms.workload:
-- dotnet
-ms.openlocfilehash: 4f68befd145649e6d8921e160d302cdb81000a9a
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.openlocfilehash: 8ac2dd50b26137ee4cf06f0545f1f8cf1bfabf80
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="strongnamesignaturegenerationex-function"></a>StrongNameSignatureGenerationEx 函式
 產生強式名稱簽章的指定組件中，根據指定的旗標。  
@@ -81,12 +69,12 @@ BOOLEAN StrongNameSignatureGenerationEx (
  `dwFlags`  
  [in]一或多個下列值：  
   
--   `SN_SIGN_ALL_FILES`(0x00000001)-重新整理所有連結模組雜湊。  
+-   `SN_SIGN_ALL_FILES` (0x00000001)-重新整理所有連結模組雜湊。  
   
--   `SN_TEST_SIGN`(0x00000002)-測試簽署組件。  
+-   `SN_TEST_SIGN` (0x00000002)-測試簽署組件。  
   
 ## <a name="return-value"></a>傳回值  
- `true`如果成功地完成。否則， `false`。  
+ `true` 如果成功地完成。否則， `false`。  
   
 ## <a name="remarks"></a>備註  
  指定 null`wszFilePath`計算簽章的大小，而不需要建立簽章。  
@@ -106,9 +94,9 @@ BOOLEAN StrongNameSignatureGenerationEx (
   
  **程式庫：**包含做為 MsCorEE.dll 中的資源  
   
- **.NET framework 版本：**[!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
+ **.NET framework 版本：** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
   
-## <a name="see-also"></a>請參閱  
+## <a name="see-also"></a>另請參閱  
  [StrongNameSignatureGenerationEx 方法](../../../../docs/framework/unmanaged-api/hosting/iclrstrongname-strongnamesignaturegenerationex-method.md)  
  [StrongNameSignatureGeneration 方法](../../../../docs/framework/unmanaged-api/hosting/iclrstrongname-strongnamesignaturegeneration-method.md)  
  [ICLRStrongName 介面](../../../../docs/framework/unmanaged-api/hosting/iclrstrongname-interface.md)

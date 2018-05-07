@@ -1,13 +1,6 @@
 ---
-title: "Windows Form 支援的資料來源"
-ms.custom: 
+title: Windows Form 支援的資料來源
 ms.date: 03/30/2017
-ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.technology: dotnet-winforms
-ms.tgt_pltfrm: 
-ms.topic: article
 helpviewer_keywords:
 - collections [Windows Forms], binding to
 - OLE DB providers [Windows Forms], Windows Forms
@@ -22,16 +15,11 @@ helpviewer_keywords:
 - DataSet class [Windows Forms], binding and Windows Forms
 - data [Windows Forms], data providers
 ms.assetid: 3d2c43f6-462b-4d35-9c86-13e9afe012e1
-caps.latest.revision: "15"
-author: dotnet-bot
-ms.author: dotnetcontent
-manager: wpickett
-ms.workload: dotnet
-ms.openlocfilehash: 5a0a4c2bca136377b9c6812008189dae009e195f
-ms.sourcegitcommit: c0dd436f6f8f44dc80dc43b07f6841a00b74b23f
+ms.openlocfilehash: 4705c8a7153e94fa1cd23cf6c2f622d5cd66ec77
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 01/19/2018
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="data-sources-supported-by-windows-forms"></a>Windows Form 支援的資料來源
 傳統上，資料繫結已使用的應用程式中利用儲存在資料庫中的資料。 Windows Form 資料繫結，您可以從資料庫，以及其他結構，例如陣列和集合中的資料存取資料，只要符合特定最低需求。  
@@ -50,13 +38,13 @@ ms.lasthandoff: 01/19/2018
  陣列或集合  
  若要做為資料來源，必須實作清單<xref:System.Collections.IList>介面; 其中一個範例是陣列，其中是的執行個體<xref:System.Array>類別。 如需陣列的詳細資訊，請參閱[How to： 建立陣列的物件 (Visual Basic)](http://msdn.microsoft.com/library/6b64e069-0387-400c-9081-3bdc581020c3)。  
   
- 一般情況下，您應該使用<xref:System.ComponentModel.BindingList%601>當您建立資料繫結的物件清單。 <xref:System.ComponentModel.BindingList%601>泛型版本<xref:System.ComponentModel.IBindingList>介面。 <xref:System.ComponentModel.IBindingList>介面延伸<xref:System.Collections.IList>加屬性、 方法和所需的雙向資料繫結事件的介面。  
+ 一般情況下，您應該使用<xref:System.ComponentModel.BindingList%601>當您建立資料繫結的物件清單。 <xref:System.ComponentModel.BindingList%601> 泛型版本<xref:System.ComponentModel.IBindingList>介面。 <xref:System.ComponentModel.IBindingList>介面延伸<xref:System.Collections.IList>加屬性、 方法和所需的雙向資料繫結事件的介面。  
   
  <xref:System.Collections.IEnumerable>  
  Windows Form 控制項可以繫結至資料來源只支援<xref:System.Collections.IEnumerable>介面透過繫結<xref:System.Windows.Forms.BindingSource>元件。  
   
- [!INCLUDE[vstecado](../../../includes/vstecado-md.md)]資料物件  
- [!INCLUDE[vstecado](../../../includes/vstecado-md.md)]提供數個適用於繫結至資料結構。 在其複雜度和複雜程度上各有不同。  
+ [!INCLUDE[vstecado](../../../includes/vstecado-md.md)] 資料物件  
+ [!INCLUDE[vstecado](../../../includes/vstecado-md.md)] 提供數個適用於繫結至資料結構。 在其複雜度和複雜程度上各有不同。  
   
 -   <xref:System.Data.DataColumn>. A<xref:System.Data.DataColumn>是基本建置組塊<xref:System.Data.DataTable>，依此資料行的數字組成的資料表。 每個<xref:System.Data.DataColumn>具有<xref:System.Data.DataColumn.DataType%2A>屬性，可判斷資料行保留 （例如，請汽車描述 cars 資料表中） 的資料種類。 您可以簡單繫結控制項 (例如<xref:System.Windows.Forms.TextBox>控制項的<xref:System.Windows.Forms.Control.Text%2A>屬性) 到資料表中的資料行。  
   
@@ -68,7 +56,7 @@ ms.lasthandoff: 01/19/2018
   
 -   <xref:System.Data.DataViewManager>. A<xref:System.Data.DataViewManager>是自訂的檢視，將整個<xref:System.Data.DataSet>，類似於<xref:System.Data.DataView>，但是使用包含的關聯。 與<xref:System.Data.DataViewManager.DataViewSettings%2A>集合，則您可以設定預設篩選和排序選項的任何檢視<xref:System.Data.DataViewManager>具有指定的資料表。  
   
-## <a name="see-also"></a>請參閱  
+## <a name="see-also"></a>另請參閱  
  [Windows Forms 資料繫結中的變更告知](../../../docs/framework/winforms/change-notification-in-windows-forms-data-binding.md)  
  [資料繫結和 Windows Forms](../../../docs/framework/winforms/data-binding-and-windows-forms.md)  
  [Windows Forms 資料繫結](../../../docs/framework/winforms/windows-forms-data-binding.md)

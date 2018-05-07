@@ -1,29 +1,15 @@
 ---
 title: 裝載工作流程服務
-ms.custom: ''
 ms.date: 03/30/2017
-ms.prod: .net-framework
-ms.reviewer: ''
-ms.suite: ''
-ms.technology:
-- dotnet-clr
-ms.tgt_pltfrm: ''
-ms.topic: article
 ms.assetid: 2d55217e-8697-4113-94ce-10b60863342e
-caps.latest.revision: 12
-author: dotnet-bot
-ms.author: dotnetcontent
-manager: wpickett
-ms.workload:
-- dotnet
-ms.openlocfilehash: 21c4ba6a85c2da655b3d0988917165bf84ae64d1
-ms.sourcegitcommit: 94d33cadc5ff81d2ac389bf5f26422c227832052
+ms.openlocfilehash: 02d77b851dcd35108668ee6a42022e9721b84bd8
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/30/2018
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="hosting-workflow-services"></a>裝載工作流程服務
-您必須裝載工作流程服務，才能讓它回應傳入的訊息。 工作流程服務使用了 [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] 訊息基礎結構，因此會以類似的方式裝載。 就像 [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] 服務一樣，工作流程服務可以裝載在任何 Managed 應用程式中、裝載在 Internet Information Services (IIS) 底下，或是裝載在 Windows Process Activation Services (WAS) 底下。 此外，工作流程服務也可以裝載在 Windows Server App Fabric 底下。 如需 Windows Server App Fabric 的詳細資訊，請參閱[Windows Server App Fabric 文件](http://go.microsoft.com/fwlink/?LinkId=193037)， [AppFabric 主控功能](http://go.microsoft.com/fwlink/?LinkId=196494)，和[AppFabric 主控概念](http://go.microsoft.com/fwlink/?LinkId=196495)。 如需主機的各種方式[!INCLUDE[indigo2](../../../../includes/indigo2-md.md)]服務，請參閱[裝載服務](../../../../docs/framework/wcf/hosting-services.md)。  
+您必須裝載工作流程服務，才能讓它回應傳入的訊息。 工作流程服務使用了 WCF 訊息基礎結構，因此會以類似的方式裝載。 如同 WCF 服務，可在任何受管理的應用程式，在網際網路資訊服務 (IIS) 或在 Windows Process Activation Services (WAS) 裝載工作流程服務。 此外，工作流程服務也可以裝載在 Windows Server App Fabric 底下。 如需 Windows Server App Fabric 的詳細資訊，請參閱[Windows Server App Fabric 文件](http://go.microsoft.com/fwlink/?LinkId=193037)， [AppFabric 主控功能](http://go.microsoft.com/fwlink/?LinkId=196494)，和[AppFabric 主控概念](http://go.microsoft.com/fwlink/?LinkId=196495)。 針對服務中裝載 WCF 的各種方式的詳細資訊，請參閱[裝載服務](../../../../docs/framework/wcf/hosting-services.md)。  
   
 ## <a name="hosting-in-a-managed-application"></a>在 Managed 應用程式中裝載  
  若要在 Managed 應用程式中裝載工作流程服務，請使用 <xref:System.ServiceModel.Activities.WorkflowServiceHost> 類別。 <xref:System.ServiceModel.Activities.WorkflowServiceHost> 建構函式可讓您指定單一工作流程服務執行個體、工作流程服務定義，或是一個活動使用工作流程訊息的多個活動。 呼叫 <<!--zz xref:System.ServiceModel.Activities.WorkflowServiceHost.Open%2A--> `System.ServiceModel.Activities.WorkflowServiceHost.Open`>，會導致開始接聽傳入訊息的服務。  

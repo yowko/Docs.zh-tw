@@ -1,14 +1,6 @@
 ---
 title: HOW TO：啟用訊息重新執行偵測
-ms.custom: ''
 ms.date: 03/30/2017
-ms.prod: .net-framework
-ms.reviewer: ''
-ms.suite: ''
-ms.technology:
-- dotnet-clr
-ms.tgt_pltfrm: ''
-ms.topic: article
 dev_langs:
 - csharp
 - vb
@@ -18,24 +10,18 @@ helpviewer_keywords:
 - WCF, custom bindings
 - WCF, security
 ms.assetid: 8b847e91-69a3-49e1-9e5f-0c455e50d804
-caps.latest.revision: 10
-author: dotnet-bot
-ms.author: dotnetcontent
-manager: wpickett
-ms.workload:
-- dotnet
-ms.openlocfilehash: cada24098f5800f56d7dd50119c3fe3394ba14cd
-ms.sourcegitcommit: 94d33cadc5ff81d2ac389bf5f26422c227832052
+ms.openlocfilehash: 5c761a23d2560f40a0121d684dcb411a716de5a6
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/30/2018
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="how-to-enable-message-replay-detection"></a>HOW TO：啟用訊息重新執行偵測
 當攻擊者複製兩方之間的訊息資料流，並且對其中一方或多方重新執行資料流時，即表示發生重新執行攻擊。 除非緩解攻擊，否則受到攻擊的電腦會將資料流當成合法訊息來處理，導致發生一連串負面的影響，例如項目的重複排序。  
   
  如需訊息重新執行偵測的詳細資訊，請參閱[訊息重新執行偵測](http://go.microsoft.com/fwlink/?LinkId=88536)。  
   
- 下列程序將示範在您透過 [!INCLUDE[indigo1](../../../../includes/indigo1-md.md)] 控制重新執行偵測時所用到的各種不同屬性。  
+ 下列程序示範可用來控制重新執行偵測使用 Windows Communication Foundation (WCF) 的各種屬性。  
   
 ### <a name="to-control-replay-detection-on-the-client-using-code"></a>若要透過程式碼在用戶端上控制重新執行偵測  
   

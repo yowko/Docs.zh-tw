@@ -1,28 +1,19 @@
 ---
-title: Lambda 運算式不是有效的第一個運算式中 &#39;選取案例 &#39;陳述式
+title: Lambda 運算式不是有效的第一個運算式中&#39;Select Case&#39;陳述式
 ms.date: 07/20/2015
-ms.prod: .net
-ms.reviewer: ''
-ms.suite: ''
-ms.technology:
-- devlang-visual-basic
-ms.topic: article
 f1_keywords:
 - bc36635
 - vbc36635
 helpviewer_keywords:
 - BC36635
 ms.assetid: 74609979-9c03-4864-bbce-f588aa2e0917
-caps.latest.revision: 6
-author: dotnet-bot
-ms.author: dotnetcontent
-ms.openlocfilehash: e91401d6891d4e38014bb716a337560885cf73a2
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.openlocfilehash: c492615850ec089fe35c1ae4eaba90a741e30f42
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 05/04/2018
 ---
-# <a name="lambda-expressions-are-not-valid-in-the-first-expression-of-a-39select-case39-statement"></a>Lambda 運算式不是有效的第一個運算式中 &#39;選取案例 &#39;陳述式
+# <a name="lambda-expressions-are-not-valid-in-the-first-expression-of-a-39select-case39-statement"></a>Lambda 運算式不是有效的第一個運算式中&#39;Select Case&#39;陳述式
 您無法使用 lambda 運算式中的測試運算式`Select Case`陳述式。 Lambda 運算式定義傳回函式和測試運算式的`Select Case`陳述式必須是基本資料類型。  
   
  下列程式碼會造成這個錯誤：  

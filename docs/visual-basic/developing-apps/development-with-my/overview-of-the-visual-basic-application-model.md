@@ -1,23 +1,15 @@
 ---
 title: Visual Basic 應用程式模型概觀
 ms.date: 07/20/2015
-ms.prod: .net
-ms.suite: ''
-ms.technology:
-- devlang-visual-basic
-ms.topic: article
 helpviewer_keywords:
 - My.Application object [Visual Basic], Visual Basic application model
 - Visual Basic application model
 ms.assetid: 17538984-84fe-43c9-82c8-724c9529fe8b
-caps.latest.revision: 30
-author: dotnet-bot
-ms.author: dotnetcontent
-ms.openlocfilehash: 74a8fcfe3f49ab042b3bb4775f9f6e84374db0ae
-ms.sourcegitcommit: 86adcc06e35390f13c1e372c36d2e044f1fc31ef
+ms.openlocfilehash: 5194810574f594e2c117fef8d8998b7ecebbc981
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/26/2018
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="overview-of-the-visual-basic-application-model"></a>Visual Basic 應用程式模型概觀
 Visual Basic 提供妥善定義的模型來控制 Windows Form 應用程式的行為： Visual Basic 應用程式模型。 此模型包含處理應用程式的啟動和關機，以及攔截未處理的例外狀況事件的事件。 它也會提供開發的單一執行個體的應用程式的支援。 應用程式模型，所以需要更多控制的開發人員可以自訂的覆寫方法。  

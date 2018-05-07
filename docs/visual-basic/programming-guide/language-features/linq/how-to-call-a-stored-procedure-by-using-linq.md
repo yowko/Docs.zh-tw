@@ -1,26 +1,17 @@
 ---
-title: "如何：使用 LINQ 呼叫預存程序 (Visual Basic)"
-ms.custom: 
+title: 如何：使用 LINQ 呼叫預存程序 (Visual Basic)
 ms.date: 07/20/2015
-ms.prod: .net
-ms.reviewer: 
-ms.suite: 
-ms.technology: devlang-visual-basic
-ms.topic: article
 helpviewer_keywords:
 - queries [LINQ in Visual Basic], stored procedure calls
 - stored procedures sample [Visual Basic]
 - stored procedures [LINQ to SQL]
 - queries [LINQ in Visual Basic], how-to topics
 ms.assetid: 6436d384-d1e0-40aa-8afd-451007477260
-caps.latest.revision: "12"
-author: dotnet-bot
-ms.author: dotnetcontent
-ms.openlocfilehash: 8bb7b970d42a44ad925883b7a935aae386b1f1d5
-ms.sourcegitcommit: 34ec7753acf76f90a0fa845235ef06663dc9e36e
+ms.openlocfilehash: 47ff6b354ef10de99cb6ad821e8b67b3f4205022
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="how-to-call-a-stored-procedure-by-using-linq-visual-basic"></a>如何：使用 LINQ 呼叫預存程序 (Visual Basic)
 Language Integrated Query (LINQ) 可讓您更容易存取的資料庫資訊，包括資料庫物件，例如預存程序。  
@@ -76,7 +67,7 @@ Language Integrated Query (LINQ) 可讓您更容易存取的資料庫資訊，�
   
 4.  按 F5 執行您的專案，並檢視結果。  
   
-## <a name="see-also"></a>請參閱  
+## <a name="see-also"></a>另請參閱  
  [LINQ](../../../../visual-basic/programming-guide/language-features/linq/index.md)  
  [查詢](../../../../visual-basic/language-reference/queries/queries.md)  
  [LINQ to SQL](../../../../framework/data/adonet/sql/linq/index.md)  

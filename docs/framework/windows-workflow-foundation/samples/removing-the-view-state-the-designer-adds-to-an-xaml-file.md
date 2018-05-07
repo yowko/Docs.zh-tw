@@ -1,23 +1,12 @@
 ---
-title: "移除檢視狀態，設計工具會新增至 XAML 檔案"
-ms.custom: 
+title: 移除檢視狀態，設計工具會新增至 XAML 檔案
 ms.date: 03/30/2017
-ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.tgt_pltfrm: 
-ms.topic: article
 ms.assetid: a801ce22-8699-483c-a392-7bb3834aae4f
-caps.latest.revision: "8"
-author: dotnet-bot
-ms.author: dotnetcontent
-manager: wpickett
-ms.workload: dotnet
-ms.openlocfilehash: 5da4423b5f6106bde106de739a8a33e351d17c3d
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.openlocfilehash: f63723c29c76854602308ba3e8d7e6dd65d9fb94
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="removing-the-view-state-the-designer-adds-to-an-xaml-file"></a>移除檢視狀態，設計工具會新增至 XAML 檔案
 此範例示範如何建立衍生自 <xref:System.Windows.Markup.XamlWriter> 的類別，以及從 XAML 檔案移除檢視狀態。 [!INCLUDE[wfd1](../../../../includes/wfd1-md.md)] 會將資訊寫入到 XAML 文件中，也就是檢視狀態。 檢視狀態是指設計階段必要的資訊，例如執行階段不需要的版面配置定位。 [!INCLUDE[wfd2](../../../../includes/wfd2-md.md)] 會在編輯時將這項資訊插入到 XAML 文件中。 [!INCLUDE[wfd2](../../../../includes/wfd2-md.md)] 會將檢視狀態寫入到含 `mc:Ignorable` 屬性的 XAML 檔案中，所以當執行階段載入 XAML 檔案時並不會載入這項資訊。 這個範例示範如何在處理 XAML 節點時建立可移除檢視狀態資訊的類別。  
@@ -129,6 +118,6 @@ XamlServices.Save(new ViewStateCleaningWriter(ActivityXamlServices.CreateBuilder
 >   
 > `<InstallDrive>:\WF_WCF_Samples`  
 >   
-> 如果此目錄不存在，請移至 [Windows Communication Foundation (WCF) and Windows Workflow Foundation (WF) Samples for .NET Framework 4  (適用於 .NET Framework 4 的 Windows Communication Foundation (WCF) 與 Windows Workflow Foundation (WF) 範例)](http://go.microsoft.com/fwlink/?LinkId=150780) ，以下載所有 [!INCLUDE[indigo1](../../../../includes/indigo1-md.md)] 和 [!INCLUDE[wf1](../../../../includes/wf1-md.md)] 範例。 此範例位於下列目錄。  
+> 如果此目錄不存在，請移至[Windows Communication Foundation (WCF) 和適用於.NET Framework 4 的 Windows Workflow Foundation (WF) 範例](http://go.microsoft.com/fwlink/?LinkId=150780)下載所有 Windows Communication Foundation (WCF) 和[!INCLUDE[wf1](../../../../includes/wf1-md.md)]範例。 此範例位於下列目錄。  
 >   
 > `<InstallDrive>:\WF_WCF_Samples\WF\Basic\Designer\ViewStateCleaningWriter`

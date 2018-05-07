@@ -1,13 +1,6 @@
 ---
-title: "如何：使用 Windows Form DateTimePicker 控制項設定和傳回日期"
-ms.custom: 
+title: 如何：使用 Windows Form DateTimePicker 控制項設定和傳回日期
 ms.date: 03/30/2017
-ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.technology: dotnet-winforms
-ms.tgt_pltfrm: 
-ms.topic: article
 dev_langs:
 - csharp
 - vb
@@ -17,16 +10,11 @@ helpviewer_keywords:
 - DateTimePicker control [Windows Forms], setting and returning dates
 - examples [Windows Forms], DateTimePicker control
 ms.assetid: a8a48d68-e4b5-426e-9764-51230fc9acd2
-caps.latest.revision: "17"
-author: dotnet-bot
-ms.author: dotnetcontent
-manager: wpickett
-ms.workload: dotnet
-ms.openlocfilehash: 83a95d2c1aa9f1704f143ae9095cb38596d2c1a3
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.openlocfilehash: 017224aa493bfe0cd519df482a4d00e16f889a1a
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="how-to-set-and-return-dates-with-the-windows-forms-datetimepicker-control"></a>如何：使用 Windows Form DateTimePicker 控制項設定和傳回日期
 在 Windows Form <xref:System.Windows.Forms.DateTimePicker> 控制項中目前選取的日期或時間取決於 <xref:System.Windows.Forms.DateTimePicker.Value%2A> 屬性。 您可以在顯示控制項之前 (例如，在設計階段或在表單的 <xref:System.Windows.Forms.Form.Load> 事件) 設定 <xref:System.Windows.Forms.DateTimePicker.Value%2A> 屬性來判斷在控制項中一開始所選取的日期。 根據預設，此控制項的 <xref:System.Windows.Forms.DateTimePicker.Value%2A> 設為目前的日期。 如果您在程式碼中變更控制項的 <xref:System.Windows.Forms.DateTimePicker.Value%2A>，控制項會在表單上自動更新以反映新的設定。  
@@ -83,6 +71,6 @@ ms.lasthandoff: 12/22/2017
        dateTimePicker1->Value.Millisecond.ToString()));  
     ```  
   
-## <a name="see-also"></a>請參閱  
+## <a name="see-also"></a>另請參閱  
  [DateTimePicker 控制項](../../../../docs/framework/winforms/controls/datetimepicker-control-windows-forms.md)  
  [操作說明：使用 Windows Forms DateTimePicker 控制項顯示自訂格式的日期](../../../../docs/framework/winforms/controls/display-a-date-in-a-custom-format-with-wf-datetimepicker-control.md)

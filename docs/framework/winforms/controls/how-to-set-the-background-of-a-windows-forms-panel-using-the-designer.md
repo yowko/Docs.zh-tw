@@ -1,29 +1,17 @@
 ---
-title: "如何：使用設計工具設定 Windows Form 面板的背景"
-ms.custom: 
+title: 如何：使用設計工具設定 Windows Form 面板的背景
 ms.date: 03/30/2017
-ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.technology: dotnet-winforms
-ms.tgt_pltfrm: 
-ms.topic: article
 helpviewer_keywords:
 - background colors [Windows Forms], Windows Forms Panel controls
 - background images [Windows Forms], Windows Forms Panel controls
 - Panel control [Windows Forms], background
 - colors [Windows Forms], Windows Forms Panel controls
 ms.assetid: db83cf54-3c69-4b08-ac6c-25b9b5abb1b0
-caps.latest.revision: "8"
-author: dotnet-bot
-ms.author: dotnetcontent
-manager: wpickett
-ms.workload: dotnet
-ms.openlocfilehash: 451fa6433a53255f5fe45557c2d8b03ac319de71
-ms.sourcegitcommit: c0dd436f6f8f44dc80dc43b07f6841a00b74b23f
+ms.openlocfilehash: 896aa61f3f0900760dffd09bcab6a08bbc01628d
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 01/19/2018
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="how-to-set-the-background-of-a-windows-forms-panel-using-the-designer"></a>如何：使用設計工具設定 Windows Form 面板的背景
 Windows Form<xref:System.Windows.Forms.Panel>控制項可以顯示的背景色彩和背景影像。 <xref:System.Windows.Forms.Control.BackColor%2A>屬性會設定包含在面板中，例如標籤和選項按鈕控制項的背景色彩。 如果<xref:System.Windows.Forms.Control.BackgroundImage%2A>未設定屬性，<xref:System.Windows.Forms.Control.BackColor%2A>選取項目將會填滿所有面板。 如果<xref:System.Windows.Forms.Control.BackgroundImage%2A>屬性設定，會在 [面板] 中所包含的控制項後面顯示的影像。  
@@ -47,7 +35,7 @@ Windows Form<xref:System.Windows.Forms.Panel>控制項可以顯示的背景色�
   
 6.  在**開啟**對話方塊方塊中，選取您想要顯示的檔案。  
   
-## <a name="see-also"></a>請參閱  
+## <a name="see-also"></a>另請參閱  
  <xref:System.Windows.Forms.Control.BackColor%2A>  
  <xref:System.Windows.Forms.Control.BackgroundImage%2A>  
  [Panel 控制項](../../../../docs/framework/winforms/controls/panel-control-windows-forms.md)  

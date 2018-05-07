@@ -1,13 +1,6 @@
 ---
 title: 程式碼中的特殊字元 (Visual Basic)
-ms.custom: ''
 ms.date: 07/20/2015
-ms.prod: .net
-ms.reviewer: ''
-ms.suite: ''
-ms.technology:
-- devlang-visual-basic
-ms.topic: article
 f1_keywords:
 - vb.)
 - vb.(
@@ -37,14 +30,11 @@ helpviewer_keywords:
 - exclamation point operator (!)
 - Visual Basic code, special characters
 ms.assetid: 310dce0c-45b5-4e0d-83e9-32df258d2a3e
-caps.latest.revision: 21
-author: dotnet-bot
-ms.author: dotnetcontent
-ms.openlocfilehash: b724c48320f74045d7192be6d6e269c00511ffc9
-ms.sourcegitcommit: 86adcc06e35390f13c1e372c36d2e044f1fc31ef
+ms.openlocfilehash: 932b38d97b36292e66bfad91a9a3799459d3b73c
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/26/2018
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="special-characters-in-code-visual-basic"></a>程式碼中的特殊字元 (Visual Basic)
 有時候，您必須使用特殊字元，在程式碼中，也就是不是字母或數字的字元。 標點符號和 Visual Basic 字元集中的特殊字元有許多用途，從組織程式文字到定義由編譯器或編譯的程式執行的工作。 這些字元不指定要執行的作業。  

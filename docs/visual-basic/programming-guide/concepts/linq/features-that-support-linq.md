@@ -1,25 +1,15 @@
 ---
-title: "支援 LINQ 的 Visual Basic 功能"
-ms.custom: 
+title: 支援 LINQ 的 Visual Basic 功能
 ms.date: 07/20/2015
-ms.prod: .net
-ms.reviewer: 
-ms.suite: 
-ms.technology: devlang-visual-basic
-ms.tgt_pltfrm: 
-ms.topic: article
 helpviewer_keywords:
 - Visual Basic, LINQ features
 - LINQ [Visual Basic], features supporting LINQ
 ms.assetid: c821bb50-b6f6-4cf9-8aba-2717e465bd3a
-caps.latest.revision: "51"
-author: dotnet-bot
-ms.author: dotnetcontent
-ms.openlocfilehash: 42465dbb168b7961792aec6b3c2bb7ae8f0a3355
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.openlocfilehash: db2eff2f7c19a3c510e7b212f5bb406d7a885439
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="visual-basic-features-that-support-linq"></a>支援 LINQ 的 Visual Basic 功能
 名稱[!INCLUDE[vbteclinqext](~/includes/vbteclinqext-md.md)]指的是在 Visual Basic 中支援的查詢語法，並直接在語言中的其他語言建構的技術。 與[!INCLUDE[vbteclinq](~/includes/vbteclinq-md.md)]，您不必學習新語言對外部資料來源進行查詢。 您可以使用 Visual Basic 查詢針對關聯式資料庫、 XML 存放區或物件中的資料。 這項整合的查詢語言功能可讓編譯時間檢查語法錯誤和型別安全。 這項整合也可確保您已經知道大部分的您必須知道要在 Visual Basic 中撰寫豐富多變的查詢。  

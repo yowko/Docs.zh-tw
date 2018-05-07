@@ -1,29 +1,15 @@
 ---
 title: WCF 測試用戶端 (WcfTestClient.exe)
-ms.custom: ''
 ms.date: 03/30/2017
-ms.prod: .net-framework
-ms.reviewer: ''
-ms.suite: ''
-ms.technology:
-- dotnet-clr
-ms.tgt_pltfrm: ''
-ms.topic: article
 ms.assetid: d4302855-677f-4640-aa90-c5d785d72fb7
-caps.latest.revision: 45
-author: dotnet-bot
-ms.author: dotnetcontent
-manager: wpickett
-ms.workload:
-- dotnet
-ms.openlocfilehash: 2eb32d36b1e6710f666391f918aff68c33566ab8
-ms.sourcegitcommit: 2042de78fcdceebb6b8ac4b7a292b93e8782cbf5
-ms.translationtype: MT
+ms.openlocfilehash: fa06077cef3a53b796b85a1eb84bf0fdfba2f598
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/27/2018
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="wcf-test-client-wcftestclientexe"></a>WCF 測試用戶端 (WcfTestClient.exe)
-[!INCLUDE[indigo1](../../../includes/indigo1-md.md)] 測試用戶端 (WcfTestClient.exe) 是一種 GUI 工具，可以讓使用者用來輸入測試參數、將該輸入送出至服務，以及檢視服務傳回的回應。 與 [!INCLUDE[indigo2](../../../includes/indigo2-md.md)] 服務主機搭配時，可以提供順暢無礙的服務測試經驗。  
+Windows Communication Foundation (WCF) 測試用戶端 (WcfTestClient.exe) 是一種 GUI 工具，可讓使用者輸入測試參數，請送出該輸入至服務，並檢視服務傳回的回應。 與 [!INCLUDE[indigo2](../../../includes/indigo2-md.md)] 服務主機搭配時，可以提供順暢無礙的服務測試經驗。  
   
  您通常可以找到[!INCLUDE[indigo2](../../../includes/indigo2-md.md)]測試用戶端 (WcfTestClient.exe) 中的下列位置： C:\Program Files (x86) \Microsoft Visual Studio\2017\Community\Common7\IDE-社群可能是其中一種 「 企業 」、 「 人員 」 或 「 社群 」依據已安裝的 Visual Studio 層級。
   

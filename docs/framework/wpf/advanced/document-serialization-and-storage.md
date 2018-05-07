@@ -1,30 +1,16 @@
 ---
 title: 文件序列化與儲存
-ms.custom: ''
 ms.date: 03/30/2017
-ms.prod: .net-framework
-ms.reviewer: ''
-ms.suite: ''
-ms.technology:
-- dotnet-wpf
-ms.tgt_pltfrm: ''
-ms.topic: article
 helpviewer_keywords:
 - 'serialization of documents [WPF], , '
 - documents [WPF], storage
 - documents [WPF], serialization
 ms.assetid: 4839cd87-e206-4571-803f-0200098ad37b
-caps.latest.revision: 24
-author: dotnet-bot
-ms.author: dotnetcontent
-manager: wpickett
-ms.workload:
-- dotnet
-ms.openlocfilehash: e6b1cc63b5118280a0a06fe63961c6e54792ed09
-ms.sourcegitcommit: 03ee570f6f528a7d23a4221dcb26a9498edbdf8c
+ms.openlocfilehash: 8ee8acb95aa4a7c8dd80ea88594e582f05b71611
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/28/2018
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="document-serialization-and-storage"></a>文件序列化與儲存
 Microsoft.NET Framework 提供一種強大的環境建立及顯示高品質的文件。  增強的功能支援固定文件和非固定格式文件，進階檢視控制項，結合功能強大的 2D 和 3D 圖形的功能，可將新的層級的品質和使用者經驗的.NET Framework 應用程式。  能夠彈性地管理文件的記憶體中表示法是.NET Framework 的主要功能，能夠有效率地儲存和載入資料存放區都需要的幾乎所有應用程式。  將文件從記憶體內部表示轉換成外部資料存放區的程序，稱為序列化。  讀取資料存放區並重新建立原始記憶體內部執行個體的反向程序，則稱為還原序列化。  

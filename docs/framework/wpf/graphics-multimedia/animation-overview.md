@@ -1,13 +1,6 @@
 ---
-title: "動畫概觀"
-ms.custom: 
+title: 動畫概觀
 ms.date: 03/30/2017
-ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.technology: dotnet-wpf
-ms.tgt_pltfrm: 
-ms.topic: article
 dev_langs:
 - csharp
 - vb
@@ -15,20 +8,15 @@ helpviewer_keywords:
 - Storyboards [WPF], animations
 - animations [WPF], overview
 ms.assetid: bd9ce563-725d-4385-87c9-d7ee38cf79ea
-caps.latest.revision: "73"
-author: dotnet-bot
-ms.author: dotnetcontent
-manager: wpickett
-ms.workload: dotnet
-ms.openlocfilehash: 118d63bbbcd0cbb52d092af7002df2538df7790b
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.openlocfilehash: 5fb9550ddce4ead900206c2ece2f976ab8b42c4b
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="animation-overview"></a>動畫概觀
 <a name="introduction"></a>
-[!INCLUDE[TLA#tla_winclient](../../../../includes/tlasharptla-winclient-md.md)]提供一組強大的圖形和版面配置功能，可讓您建立吸引人的使用者介面和豐富的文件。 動畫可以讓漂亮的使用者介面更美觀而實用。 藉由只建立動畫的背景色彩，或套用動態<xref:System.Windows.Media.Transform>，您可以建立大幅畫面轉換或提供實用的視覺提示。  
+[!INCLUDE[TLA#tla_winclient](../../../../includes/tlasharptla-winclient-md.md)] 提供一組強大的圖形和版面配置功能，可讓您建立吸引人的使用者介面和豐富的文件。 動畫可以讓漂亮的使用者介面更美觀而實用。 藉由只建立動畫的背景色彩，或套用動態<xref:System.Windows.Media.Transform>，您可以建立大幅畫面轉換或提供實用的視覺提示。  
   
  本概觀介紹[!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)]動畫和計時系統。 它著重在的動畫[!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)]使用分鏡腳本的物件。  
 
@@ -46,7 +34,7 @@ ms.lasthandoff: 12/22/2017
   
 -   然後程式使用新值更新矩形，並重新繪製矩形。  
   
- 之前[!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)]，[!INCLUDE[TLA#tla_win](../../../../includes/tlasharptla-win-md.md)]開發人員就必須建立及管理自己的計時系統，或使用特殊的自訂程式庫。 [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)]包含執行 managed 程式碼公開有效率的計時系統以及[!INCLUDE[TLA#tla_xaml](../../../../includes/tlasharptla-xaml-md.md)]和已緊密整合到[!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)]架構。 [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] 動畫可讓您輕鬆以動畫顯示控制項和其他圖形物件。  
+ 之前[!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)]，[!INCLUDE[TLA#tla_win](../../../../includes/tlasharptla-win-md.md)]開發人員就必須建立及管理自己的計時系統，或使用特殊的自訂程式庫。 [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] 包含執行 managed 程式碼公開有效率的計時系統以及[!INCLUDE[TLA#tla_xaml](../../../../includes/tlasharptla-xaml-md.md)]和已緊密整合到[!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)]架構。 [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] 動畫可讓您輕鬆以動畫顯示控制項和其他圖形物件。  
   
  [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] 會有效率地處理管理計時系統以及重新繪製畫面的所有幕後工作。 它提供的計時類別，可讓您專注在您想要建立的效果，而不是達成這些效果的技術。 [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] 也公開您的類別可以繼承的動畫基底類別，方便您建立您自己的動畫，以產生自訂的動畫。 這些自訂動畫可以獲得標準動畫類別的許多效能優勢。  
   
@@ -62,7 +50,7 @@ ms.lasthandoff: 12/22/2017
   
 -   必須有相容的動畫類型。 (如果[!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)]不提供憑證，您可以自行建立。 請參閱[自訂動畫概觀](../../../../docs/framework/wpf/graphics-multimedia/custom-animations-overview.md)。)  
   
- [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)]包含許多物件具有<xref:System.Windows.Media.Animation.IAnimatable>屬性。 這類控制項<xref:System.Windows.Controls.Button>和<xref:System.Windows.Controls.TabControl>，以及<xref:System.Windows.Controls.Panel>和<xref:System.Windows.Shapes.Shape>物件繼承自<xref:System.Windows.DependencyObject>。 這些項目的大部分屬性是相依性屬性。  
+ [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] 包含許多物件具有<xref:System.Windows.Media.Animation.IAnimatable>屬性。 這類控制項<xref:System.Windows.Controls.Button>和<xref:System.Windows.Controls.TabControl>，以及<xref:System.Windows.Controls.Panel>和<xref:System.Windows.Shapes.Shape>物件繼承自<xref:System.Windows.DependencyObject>。 這些項目的大部分屬性是相依性屬性。  
   
  您幾乎可以在任何地方 (包括在樣式和控制項範本中) 使用動畫。 動畫不必是視覺物件。如果不屬於使用者介面部分的物件符合本節所描述的準則，也可以以動畫顯示這些物件。  
   
@@ -268,7 +256,7 @@ ms.lasthandoff: 12/22/2017
   
 <a name="applyanimationstoproperty"></a>   
 ## <a name="applying-an-animation-to-a-property"></a>對屬性套用動畫  
- 前幾節說明不同類型的動畫及其計時屬性。 本節說明如何對您想要以動畫顯示的屬性套用動畫。 <xref:System.Windows.Media.Animation.Storyboard>物件會提供一種方式套用至屬性的動畫。 A<xref:System.Windows.Media.Animation.Storyboard>是*容器時間表*提供它所包含的動畫目標資訊。  
+ 前幾節說明不同類型的動畫及其計時屬性。 本節說明如何對您想要以動畫顯示的屬性套用動畫。 <xref:System.Windows.Media.Animation.Storyboard> 物件會提供一種方式套用至屬性的動畫。 A<xref:System.Windows.Media.Animation.Storyboard>是*容器時間表*提供它所包含的動畫目標資訊。  
   
 ### <a name="targeting-objects-and-properties"></a>以物件和屬性為目標  
  <xref:System.Windows.Media.Animation.Storyboard>類別提供<xref:System.Windows.Media.Animation.Storyboard.TargetName%2A>和<xref:System.Windows.Media.Animation.Storyboard.TargetProperty%2A>附加屬性。 您對動畫設定這些屬性，就可以告訴動畫要以動畫顯示的內容。 不過，在以物件為目標顯示動畫之前，物件通常必須要有名稱。  

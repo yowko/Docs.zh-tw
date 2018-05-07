@@ -1,28 +1,17 @@
 ---
 title: 物件變數值 (Visual Basic)
-ms.custom: ''
 ms.date: 07/20/2015
-ms.prod: .net
-ms.reviewer: ''
-ms.suite: ''
-ms.technology:
-- devlang-visual-basic
-ms.tgt_pltfrm: ''
-ms.topic: article
 helpviewer_keywords:
 - object variables [Visual Basic], values
 - values [Visual Basic], of object variables
 - data types [Visual Basic], object variable
 - variables [Visual Basic], object
 ms.assetid: 31555704-58a3-49f1-9a0a-6421f605664f
-caps.latest.revision: 18
-author: dotnet-bot
-ms.author: dotnetcontent
-ms.openlocfilehash: 28307cc477f661c3046e125f297c1519485ad797
-ms.sourcegitcommit: 86adcc06e35390f13c1e372c36d2e044f1fc31ef
+ms.openlocfilehash: a5152ad0e5e5ac876783c2b191ee13e845593df8
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/26/2018
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="object-variable-values-visual-basic"></a>物件變數值 (Visual Basic)
 變數的[物件資料類型](../../../../visual-basic/language-reference/data-types/object-data-type.md)可以指向任何類型的資料。 您將儲存的值`Object`變數保留其他地方在記憶體中，而變數本身會保留資料指標。  

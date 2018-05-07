@@ -1,12 +1,6 @@
 ---
 title: Imports 陳述式 (XML 命名空間)
 ms.date: 07/20/2015
-ms.prod: .net
-ms.reviewer: ''
-ms.suite: ''
-ms.technology:
-- devlang-visual-basic
-ms.topic: article
 f1_keywords:
 - vb.ImportsXmlns
 helpviewer_keywords:
@@ -15,14 +9,11 @@ helpviewer_keywords:
 - Imports statement [Visual Basic]
 - namespaces [Visual Basic], importing
 ms.assetid: 1f4d50a6-08c7-4c2e-8206-ccae35fcd1b4
-caps.latest.revision: 18
-author: dotnet-bot
-ms.author: dotnetcontent
-ms.openlocfilehash: a0fe6d37c58ead94f2c03736318209abb67cd6dc
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.openlocfilehash: ba7475416d8a4e2eb3c892d457c03eeb695045eb
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="imports-statement-xml-namespace"></a>Imports 陳述式 (XML 命名空間)
 匯入 XML 命名空間前置詞，以用於 XML 常值和 XML 軸屬性。  
@@ -35,10 +26,10 @@ Imports <xmlns:xmlNamespacePrefix = "xmlNamespaceName">
   
 ## <a name="parts"></a>組件  
  `xmlNamespacePrefix`  
- 選擇項。 字串的 xml 項目和屬性可以參考`xmlNamespaceName`。 如果沒有`xmlNamespacePrefix`是提供，匯入的 XML 命名空間是預設 XML 命名空間。 必須是有效的 XML 識別碼。 如需詳細資訊，請參閱[名稱的宣告 XML 元素和屬性](../../../visual-basic/programming-guide/language-features/xml/names-of-declared-xml-elements-and-attributes.md)。  
+ 選擇性。 字串的 xml 項目和屬性可以參考`xmlNamespaceName`。 如果沒有`xmlNamespacePrefix`是提供，匯入的 XML 命名空間是預設 XML 命名空間。 必須是有效的 XML 識別碼。 如需詳細資訊，請參閱[名稱的宣告 XML 元素和屬性](../../../visual-basic/programming-guide/language-features/xml/names-of-declared-xml-elements-and-attributes.md)。  
   
  `xmlNamespaceName`  
- 必要項。 識別要匯入的 XML 命名空間的字串。  
+ 必要。 識別要匯入的 XML 命名空間的字串。  
   
 ## <a name="remarks"></a>備註  
  您可以使用`Imports`陳述式來定義全域 XML 命名空間，您可以使用 XML 常值和 XML 軸屬性，或是做為參數傳遞至`GetXmlNamespace`運算子。 (如需使用`Imports`陳述式匯入別名可以用於其中型別名稱會用於您的程式碼，請參閱[Imports 陳述式 （.NET 命名空間和類型）](../../../visual-basic/language-reference/statements/imports-statement-net-namespace-and-type.md)。)宣告 XML 命名空間所使用的語法`Imports`陳述式是用於 XML 的語法相同。 因此，您可以在 從 XML 檔案複製命名空間宣告，並使用它在`Imports`陳述式。  

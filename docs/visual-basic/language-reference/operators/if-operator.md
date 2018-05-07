@@ -1,11 +1,6 @@
 ---
-title: "If 運算子 (Visual Basic)"
+title: If 運算子 (Visual Basic)
 ms.date: 07/20/2015
-ms.prod: .net
-ms.reviewer: 
-ms.suite: 
-ms.technology: devlang-visual-basic
-ms.topic: article
 f1_keywords:
 - vb.IfOperator
 - IfOperator
@@ -16,14 +11,11 @@ helpviewer_keywords:
 - conditional operator [Visual Basic]
 - If Operator [Visual Basic]
 ms.assetid: dd56c9df-7cd4-442c-9ba6-20c70ee44c8f
-caps.latest.revision: "19"
-author: dotnet-bot
-ms.author: dotnetcontent
-ms.openlocfilehash: 2c553da5abf5453ba881671806b976125355c1e6
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.openlocfilehash: 192309a7ca728feb300e867bf2340e669e9da16c
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="if-operator-visual-basic"></a>If 運算子 (Visual Basic)
 使用最少運算評估，有條件地傳回兩個值之一。 `If`可以呼叫具有三個引數或兩個引數的運算子。  
@@ -41,9 +33,9 @@ If( [argument1,] argument2, argument3 )
   
 |詞彙|定義|  
 |---|---|  
-|`argument1`|必要項。 `Boolean`. 決定其要評估並傳回的其他引數。|  
-|`argument2`|必要項。 `Object`. 評估並傳回如果`argument1`評估為`True`。|  
-|`argument3`|必要項。 `Object`. 評估並傳回如果`argument1`評估為`False`或`argument1`是[Nullable](../../../visual-basic/programming-guide/language-features/data-types/nullable-value-types.md) `Boolean`變數評估為[Nothing](../../../visual-basic/language-reference/nothing.md)。|  
+|`argument1`|必要。 `Boolean`. 決定其要評估並傳回的其他引數。|  
+|`argument2`|必要。 `Object`. 評估並傳回如果`argument1`評估為`True`。|  
+|`argument3`|必要。 `Object`. 評估並傳回如果`argument1`評估為`False`或`argument1`是[Nullable](../../../visual-basic/programming-guide/language-features/data-types/nullable-value-types.md) `Boolean`變數評估為[Nothing](../../../visual-basic/language-reference/nothing.md)。|  
   
  `If`運算子搭配三個引數呼叫的運作方式類似`IIf`函式不同之處在於它會使用最少運算評估。 `IIf`函式一律會評估其引數，這三個，而`If`有三個引數的運算子會評估只有兩個。 第一個`If`評估引數和結果轉換為`Boolean`值`True`或`False`。 如果值為`True`，`argument2`會評估並傳回其值，但`argument3`則不會評估。 如果值`Boolean`運算式是`False`，`argument3`會評估並傳回其值，但`argument2`則不會評估。 下列範例說明使用`If`使用三個引數時：  
   
@@ -60,8 +52,8 @@ If( [argument1,] argument2, argument3 )
   
 |詞彙|定義|  
 |---|---|  
-|`argument2`|必要項。 `Object`. 必須是參考或可為 null 的類型。 評估並傳回其評估結果為任何項目以外時`Nothing`。|  
-|`argument3`|必要項。 `Object`. 評估並傳回如果`argument2`評估為`Nothing`。|  
+|`argument2`|必要。 `Object`. 必須是參考或可為 null 的類型。 評估並傳回其評估結果為任何項目以外時`Nothing`。|  
+|`argument3`|必要。 `Object`. 評估並傳回如果`argument2`評估為`Nothing`。|  
   
  當`Boolean`省略引數，第一個引數必須參考或可為 null 的類型。 如果第一個引數評估為`Nothing`，會傳回第二個引數的值。 在其他情況下，會傳回第一個引數的值。 下列範例說明這項評估的運作方式。  
   

@@ -1,25 +1,16 @@
 ---
 title: Const 陳述式 (Visual Basic)
 ms.date: 07/20/2015
-ms.prod: .net
-ms.reviewer: ''
-ms.suite: ''
-ms.technology:
-- devlang-visual-basic
-ms.topic: article
 f1_keywords:
 - vb.Const
 helpviewer_keywords:
 - Const statement [Visual Basic]
 ms.assetid: 495b318d-b7c5-4198-94f8-0790a541b07a
-caps.latest.revision: 28
-author: dotnet-bot
-ms.author: dotnetcontent
-ms.openlocfilehash: 720a465f1459b663a1fca2a48856f51762328459
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.openlocfilehash: bb4c524fa5c29efbcbe485fb5e86c8cf0fa432e8
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="const-statement-visual-basic"></a>Const 陳述式 (Visual Basic)
 宣告並定義一或多個常數。  
@@ -33,16 +24,16 @@ Const constantlist
   
 ## <a name="parts"></a>組件  
  `attributelist`  
- 選擇項。 此陳述式中宣告的屬性套用至所有常數清單。 請參閱[屬性清單](../../../visual-basic/language-reference/statements/attribute-list.md)在角括號 ("`<`"和"`>`")。  
+ 選擇性。 此陳述式中宣告的屬性套用至所有常數清單。 請參閱[屬性清單](../../../visual-basic/language-reference/statements/attribute-list.md)在角括號 ("`<`"和"`>`")。  
   
  `accessmodifier`  
- 選擇項。 使用此選項來指定哪些程式碼可以存取這些常數。 可以是[公用](../../../visual-basic/language-reference/modifiers/public.md)，[保護](../../../visual-basic/language-reference/modifiers/protected.md)， [Friend](../../../visual-basic/language-reference/modifiers/friend.md)， `Protected Friend`，或[私人](../../../visual-basic/language-reference/modifiers/private.md)。  
+ 選擇性。 使用此選項來指定哪些程式碼可以存取這些常數。 可以是[公用](../../../visual-basic/language-reference/modifiers/public.md)，[保護](../../../visual-basic/language-reference/modifiers/protected.md)， [Friend](../../../visual-basic/language-reference/modifiers/friend.md)， `Protected Friend`，或[私人](../../../visual-basic/language-reference/modifiers/private.md)。  
   
  `Shadows`  
- 選擇項。 使用此選項，重新宣告並隱藏基底類別中的程式設計項目。 請參閱[陰影](../../../visual-basic/language-reference/modifiers/shadows.md)。  
+ 選擇性。 使用此選項，重新宣告並隱藏基底類別中的程式設計項目。 請參閱[陰影](../../../visual-basic/language-reference/modifiers/shadows.md)。  
   
  `constantlist`  
- 必要項。 常數，此陳述式所宣告的清單。  
+ 必要。 常數，此陳述式所宣告的清單。  
   
  `constant` `[ ,` `constant` `... ]`  
   
@@ -50,11 +41,11 @@ Const constantlist
   
  `constantname` `[ As` `datatype` `] =` `initializer`  
   
-|組件|說明|  
+|組件|描述|  
 |----------|-----------------|  
-|`constantname`|必要項。 常數的名稱。 請參閱[宣告項目名稱](../../../visual-basic/programming-guide/language-features/declared-elements/declared-element-names.md)。|  
+|`constantname`|必要。 常數的名稱。 請參閱[宣告項目名稱](../../../visual-basic/programming-guide/language-features/declared-elements/declared-element-names.md)。|  
 |`datatype`|若`Option Strict`是`On`。 資料類型的常數。|  
-|`initializer`|必要項。 在編譯時期評估，以及指派給常數的運算式。|  
+|`initializer`|必要。 在編譯時期評估，以及指派給常數的運算式。|  
   
 ## <a name="remarks"></a>備註  
  如果您將永遠不會變更值在您的應用程式時，您可以定義的具名的常數，並使用它來取代常值的值。 名稱不容易記住的值。 您可以一次定義常數和程式碼中使用在許多地方。 如果您需要較新版本中重新定義值，`Const`陳述式是唯一您需要進行變更。  

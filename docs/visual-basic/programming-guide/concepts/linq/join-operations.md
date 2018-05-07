@@ -1,22 +1,12 @@
 ---
-title: "聯結作業 (Visual Basic)"
-ms.custom: 
+title: 聯結作業 (Visual Basic)
 ms.date: 07/20/2015
-ms.prod: .net
-ms.reviewer: 
-ms.suite: 
-ms.technology: devlang-visual-basic
-ms.tgt_pltfrm: 
-ms.topic: article
 ms.assetid: 39ab4854-ac84-4738-9d0b-3cb79be84db4
-caps.latest.revision: "3"
-author: dotnet-bot
-ms.author: dotnetcontent
-ms.openlocfilehash: 21ff2c466db223720edf00be91c3516c641762ba
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.openlocfilehash: 4f375946b69eadb885873889b28790730943a3d5
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="join-operations-visual-basic"></a>聯結作業 (Visual Basic)
 兩個資料來源的「聯結」，就是某個資料來源中的物件，和另一個資料來源中共用通用屬性的物件的關聯。  
@@ -31,7 +21,7 @@ ms.lasthandoff: 11/21/2017
   
 ## <a name="methods"></a>方法  
   
-|方法名稱|說明|Visual Basic 查詢運算式語法|更多資訊|  
+|方法名稱|描述|Visual Basic 查詢運算式語法|更多資訊|  
 |-----------------|-----------------|------------------------------------------|----------------------|  
 |Join|根據索引鍵選取器函式聯結兩個序列並擷取值組。|`From x In …, y In … Where x.a = y.a`<br /><br /> -或-<br /><br /> `Join … [As …]In … On …`|<xref:System.Linq.Enumerable.Join%2A?displayProperty=nameWithType><br /><br /> <xref:System.Linq.Queryable.Join%2A?displayProperty=nameWithType>|  
 |GroupJoin|根據索引鍵選取器函式聯結兩個序列，並為每個項目的相符結果進行分組。|`Group Join … In … On …`|<xref:System.Linq.Enumerable.GroupJoin%2A?displayProperty=nameWithType><br /><br /> <xref:System.Linq.Queryable.GroupJoin%2A?displayProperty=nameWithType>|  

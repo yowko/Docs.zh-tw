@@ -1,23 +1,15 @@
 ---
-title: "屬性清單 (Visual Basic)"
+title: 屬性清單 (Visual Basic)
 ms.date: 07/20/2015
-ms.prod: .net
-ms.reviewer: 
-ms.suite: 
-ms.technology: devlang-visual-basic
-ms.topic: article
 helpviewer_keywords:
 - attribute list
 - attributes [Visual Basic], applying
 ms.assetid: 5880073a-68a4-4b6b-8a07-ace32959a4e2
-caps.latest.revision: "18"
-author: dotnet-bot
-ms.author: dotnetcontent
-ms.openlocfilehash: adfb980380bb787280715ca0185950657e174eb1
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.openlocfilehash: 35d031722a5eddd6adce5e32df62b86c500d305b
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="attribute-list-visual-basic"></a>屬性清單 (Visual Basic)
 指定要套用至程式設計項目宣告的屬性。 以逗號分隔多個屬性。 以下是一個屬性的語法。  
@@ -33,13 +25,13 @@ ms.lasthandoff: 11/21/2017
  需要套用的原始程式檔開頭的屬性。 可以是[組件](../../../visual-basic/language-reference/modifiers/assembly.md)或[模組](../../../visual-basic/language-reference/modifiers/module-keyword.md)。  
   
  `attributename`  
- 必要項。 屬性的名稱。  
+ 必要。 屬性的名稱。  
   
  `attributearguments`  
- 選擇項。 這個屬性的位置引數的清單。 以逗號分隔多個引數。  
+ 選擇性。 這個屬性的位置引數的清單。 以逗號分隔多個引數。  
   
  `attributeinitializer`  
- 選擇項。 這個屬性的變數或屬性初始設定式清單。 以逗號分隔多個初始設定式。  
+ 選擇性。 這個屬性的變數或屬性初始設定式清單。 以逗號分隔多個初始設定式。  
   
 ## <a name="remarks"></a>備註  
  您可以將一或多個屬性套用至幾乎任何程式設計項目 （類型、 程序、 屬性和其他等等）。 屬性出現在組件的中繼資料，而且它們可以協助您標註程式碼，或指定如何使用特定的程式設計項目。 您可以套用 Visual Basic 和.NET Framework 中，所定義的屬性，而且您可以定義您自己的屬性。  
@@ -63,7 +55,7 @@ ms.lasthandoff: 11/21/2017
   
  [!code-vb[VbVbalrStatements#1](../../../visual-basic/language-reference/error-messages/codesnippet/VisualBasic/attribute-list_1.vb)]  
   
- <xref:System.Runtime.InteropServices.DllImportAttribute>表示屬性化的程序會表示 unmanaged 動態連結程式庫 (DLL) 中的進入點。 屬性會提供 DLL 名稱做為位置的引數和變數初始設定式的其他資訊。  
+ <xref:System.Runtime.InteropServices.DllImportAttribute> 表示屬性化的程序會表示 unmanaged 動態連結程式庫 (DLL) 中的進入點。 屬性會提供 DLL 名稱做為位置的引數和變數初始設定式的其他資訊。  
   
 ## <a name="see-also"></a>另請參閱  
  [Assembly](../../../visual-basic/language-reference/modifiers/assembly.md)  

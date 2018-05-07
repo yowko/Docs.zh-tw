@@ -1,11 +1,6 @@
 ---
-title: "參數清單 (Visual Basic)"
+title: 參數清單 (Visual Basic)
 ms.date: 07/20/2015
-ms.prod: .net
-ms.reviewer: 
-ms.suite: 
-ms.technology: devlang-visual-basic
-ms.topic: article
 helpviewer_keywords:
 - Visual Basic code, procedures
 - parameters [Visual Basic], Visual Basic
@@ -15,14 +10,11 @@ helpviewer_keywords:
 - arguments [Visual Basic], Visual Basic
 - procedures [Visual Basic], parameter lists
 ms.assetid: 5d737319-0c34-4df9-a23d-188fc840becd
-caps.latest.revision: "19"
-author: dotnet-bot
-ms.author: dotnetcontent
-ms.openlocfilehash: 2c7190b618aa98c91b826ca7c065660d3b19c31a
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.openlocfilehash: 147a2501219db9f1f1c10f9cf1a81aa395b5ec2b
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="parameter-list-visual-basic"></a>參數清單 (Visual Basic)
 指定呼叫時，必須要有一個程序的參數。 以逗號分隔多個參數。 以下是一個參數的語法。  
@@ -36,22 +28,22 @@ parametername[( )] [ As parametertype ] [ = defaultvalue ]
   
 ## <a name="parts"></a>組件  
  `attributelist`  
- 選擇項。 套用至這個參數的屬性清單。 您必須將[屬性清單](../../../visual-basic/language-reference/statements/attribute-list.md)在角括號 ("`<`"和"`>`")。  
+ 選擇性。 套用至這個參數的屬性清單。 您必須將[屬性清單](../../../visual-basic/language-reference/statements/attribute-list.md)在角括號 ("`<`"和"`>`")。  
   
  `Optional`  
- 選擇項。 指定在呼叫程序時不需要這個參數。  
+ 選擇性。 指定在呼叫程序時不需要這個參數。  
   
  `ByVal`  
- 選擇項。 指定程序無法取代或重新指派對應的引數呼叫的程式碼中的變數項目。  
+ 選擇性。 指定程序無法取代或重新指派對應的引數呼叫的程式碼中的變數項目。  
   
  `ByRef`  
- 選擇項。 指定程序呼叫的程式碼本身的相同方式可以修改呼叫程式碼中的基礎變數項目。  
+ 選擇性。 指定程序呼叫的程式碼本身的相同方式可以修改呼叫程式碼中的基礎變數項目。  
   
  `ParamArray`  
- 選擇項。 指定之參數清單中的最後一個參數是選擇性的項目指定的資料類型的陣列。 這可讓呼叫的程式碼將任意數目的引數傳遞至程序。  
+ 選擇性。 指定之參數清單中的最後一個參數是選擇性的項目指定的資料類型的陣列。 這可讓呼叫的程式碼將任意數目的引數傳遞至程序。  
   
  `parametername`  
- 必要項。 代表參數的本機變數的名稱。  
+ 必要。 代表參數的本機變數的名稱。  
   
  `parametertype`  
  若`Option Strict`是`On`。 本機變數代表參數的資料類型。  

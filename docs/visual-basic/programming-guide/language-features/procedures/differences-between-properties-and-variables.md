@@ -1,12 +1,6 @@
 ---
-title: "Visual Basic 中屬性和變數的差別"
-ms.custom: 
+title: Visual Basic 中屬性和變數的差別
 ms.date: 07/20/2015
-ms.prod: .net
-ms.reviewer: 
-ms.suite: 
-ms.technology: devlang-visual-basic
-ms.topic: article
 helpviewer_keywords:
 - property values [Visual Basic]
 - variables [Visual Basic]
@@ -20,14 +14,11 @@ helpviewer_keywords:
 - variables [Visual Basic], and properties
 - properties [Visual Basic], and variables
 ms.assetid: 7a03a8be-5381-431f-bd7c-16e887e4e07b
-caps.latest.revision: "14"
-author: dotnet-bot
-ms.author: dotnetcontent
-ms.openlocfilehash: cb30972e2b49a7005749f57c0223b9fa493cde52
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.openlocfilehash: 126e4baa2752ba7ccb5e8ff7b06a44839c1d0af2
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="differences-between-properties-and-variables-in-visual-basic"></a>Visual Basic 中屬性和變數的差別
 變數和屬性都代表您可以存取的值。 不過，有儲存體與實作中的差異。  
@@ -45,7 +36,7 @@ ms.lasthandoff: 11/21/2017
 |-------------------------|--------------|--------------|  
 |宣告|單一宣告陳述式|系列的程式碼區塊中的陳述式|  
 |實作|單一儲存體位置|可執行程式碼 （屬性程序）|  
-|儲存區|直接相關聯的變數值|通常會有包含屬性的類別或模組外部無法使用的內部儲存體<br /><br /> 屬性的值可能會或可能不存在的預存的項目為<sup>1</sup>|  
+|存放裝置|直接相關聯的變數值|通常會有包含屬性的類別或模組外部無法使用的內部儲存體<br /><br /> 屬性的值可能會或可能不存在的預存的項目為<sup>1</sup>|  
 |可執行程式碼|無|必須至少一個程序|  
 |讀取和寫入存取|讀/寫或唯讀|讀取/寫入，唯讀或唯寫|  
 |自訂動作 （除了接受或傳回值）|不可能|可以執行設定或擷取屬性值的一部分|  

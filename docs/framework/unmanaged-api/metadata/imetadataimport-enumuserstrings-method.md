@@ -1,14 +1,6 @@
 ---
-title: "IMetaDataImport::EnumUserStrings 方法"
-ms.custom: 
+title: IMetaDataImport::EnumUserStrings 方法
 ms.date: 03/30/2017
-ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.technology:
-- dotnet-clr
-ms.tgt_pltfrm: 
-ms.topic: reference
 api_name:
 - IMetaDataImport.EnumUserStrings
 api_location:
@@ -23,17 +15,13 @@ helpviewer_keywords:
 ms.assetid: 2b1f1418-4be8-4cdb-b418-b3abccc527a7
 topic_type:
 - apiref
-caps.latest.revision: 
 author: mairaw
 ms.author: mairaw
-manager: wpickett
-ms.workload:
-- dotnet
-ms.openlocfilehash: 3d9c802318203db2ccd6043cded3c7730b18b0cb
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.openlocfilehash: 98b99493e54b123d37eb281455180b9a25baddd4
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="imetadataimportenumuserstrings-method"></a>IMetaDataImport::EnumUserStrings 方法
 列舉字串語彙基元，其代表目前中繼資料範圍內的硬式編碼字串。  
@@ -66,7 +54,7 @@ HRESULT EnumUserStrings (
   
 |HRESULT|描述|  
 |-------------|-----------------|  
-|`S_OK`|`EnumUserStrings`已成功傳回。|  
+|`S_OK`|`EnumUserStrings` 已成功傳回。|  
 |`S_FALSE`|沒有列舉語彙基元。 在此情況下，`pcStrings`為零。|  
   
 ## <a name="remarks"></a>備註  
@@ -79,8 +67,8 @@ HRESULT EnumUserStrings (
   
  **程式庫：**包含做為 MsCorEE.dll 中的資源  
   
- **.NET framework 版本：**[!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
+ **.NET framework 版本：** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
   
-## <a name="see-also"></a>請參閱  
+## <a name="see-also"></a>另請參閱  
  [IMetaDataImport 介面](../../../../docs/framework/unmanaged-api/metadata/imetadataimport-interface.md)  
  [IMetaDataImport2 介面](../../../../docs/framework/unmanaged-api/metadata/imetadataimport2-interface.md)

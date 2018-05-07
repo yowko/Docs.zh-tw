@@ -1,13 +1,6 @@
 ---
-title: "Expander 概觀"
-ms.custom: 
+title: Expander 概觀
 ms.date: 03/30/2017
-ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.technology: dotnet-wpf
-ms.tgt_pltfrm: 
-ms.topic: article
 dev_langs:
 - csharp
 - vb
@@ -15,16 +8,11 @@ helpviewer_keywords:
 - controls [WPF], Expander
 - Expander control [WPF], about Expander control
 ms.assetid: 877bf425-0e54-49ec-8fd2-13a211377abb
-caps.latest.revision: "20"
-author: dotnet-bot
-ms.author: dotnetcontent
-manager: wpickett
-ms.workload: dotnet
-ms.openlocfilehash: 9f0623ed4c84247cc1759a203e3b95dd895cee2e
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.openlocfilehash: abcc7c48c602aee742959b39bb5244563eaf4d5d
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="expander-overview"></a>Expander 概觀
 <xref:System.Windows.Controls.Expander>控制項可用來提供可展開的區域，類似一個視窗，且包含標頭中的內容。  
@@ -70,7 +58,7 @@ ms.lasthandoff: 12/22/2017
 ## <a name="using-the-alignment-properties"></a>使用對齊屬性  
  您可以藉由設定對齊內容<xref:System.Windows.Controls.Control.HorizontalContentAlignment%2A>和<xref:System.Windows.Controls.Control.VerticalContentAlignment%2A>屬性<xref:System.Windows.Controls.Expander>控制項。 當您設定這些屬性時，對齊方式會套用到標頭，也會套用到所展開的內容。  
   
-## <a name="see-also"></a>請參閱  
+## <a name="see-also"></a>另請參閱  
  <xref:System.Windows.Controls.Expander>  
  <xref:System.Windows.Controls.ExpandDirection>  
  [HOW-TO 主題](../../../../docs/framework/wpf/controls/expander-how-to-topics.md)

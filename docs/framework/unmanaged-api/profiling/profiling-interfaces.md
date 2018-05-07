@@ -1,28 +1,18 @@
 ---
-title: "分析介面"
-ms.custom: 
-ms.date: 03/30/2017
-ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.technology: dotnet-clr
-ms.tgt_pltfrm: 
-ms.topic: reference
+title: 分析介面
+ms.date: 04/10/2018
 helpviewer_keywords:
 - unmanaged interfaces [.NET Framework], profiling
 - profiling interfaces [.NET Framework]
 - interfaces [.NET Framework profiling]
 ms.assetid: d9303db8-e881-4217-91b7-8c7573c8ef9e
-caps.latest.revision: "31"
-author: mairaw
-ms.author: mairaw
-manager: wpickett
-ms.workload: dotnet
-ms.openlocfilehash: 4f8c2a5ce5e1231c55f598e48d14bec896a4b5f4
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+author: rpetrusha
+ms.author: ronpet
+ms.openlocfilehash: 059fadc5607e76b871083682136fda542ae9bacf
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="profiling-interfaces"></a>分析介面
 本節說明 Unmanaged 介面，這類介面可讓您分析由 Common Language Runtime (CLR) 所執行的程式。  
@@ -54,7 +44,13 @@ ms.lasthandoff: 12/22/2017
   
  [ICorProfilerCallback7 介面](../../../../docs/framework/unmanaged-api/profiling/icorprofilercallback7-interface.md)  
  提供 common language runtime 用於通知分析工具會更新記憶體中模組相關聯的符號資料流的回呼方法。  
-  
+
+[ICorProfilerCallback8 介面](../../../../docs/framework/unmanaged-api/profiling/icorprofilercallback8-interface.md)  
+提供 common language runtime 用於通知的動態方法的 JIT 編譯已啟動及完成的分析工具回呼方法。
+
+[ICorProfilerCallback9 介面](../../../../docs/framework/unmanaged-api/profiling/icorprofilercallback9-interface.md)  
+提供 common language runtime 用於通知的動態方法在記憶體回收，並接著卸載分析工具回呼方法。
+
  [ICorProfilerFunctionControl 介面](../../../../docs/framework/unmanaged-api/profiling/icorprofilerfunctioncontrol-interface.md)  
  提供方法，讓程式碼分析工具能夠和 CLR 通訊，以控制 JIT 編譯器在重新編譯特定方法時，應如何產生程式碼。  
   

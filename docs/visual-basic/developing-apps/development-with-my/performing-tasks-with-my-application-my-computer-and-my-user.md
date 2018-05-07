@@ -1,10 +1,6 @@
 ---
-title: "使用 My.Application、My.Computer 和 My.User 執行工作 (Visual Basic)"
+title: 使用 My.Application、My.Computer 和 My.User 執行工作 (Visual Basic)
 ms.date: 07/20/2015
-ms.prod: .net
-ms.suite: 
-ms.technology: devlang-visual-basic
-ms.topic: article
 helpviewer_keywords:
 - My.Application object [Visual Basic], developing applications
 - rapid application development (RAD), My.Application
@@ -13,14 +9,11 @@ helpviewer_keywords:
 - My.Computer object [Visual Basic], developing applications
 - My.User object [Visual Basic], developing applications
 ms.assetid: c8af61bd-4dd3-4a0f-9af5-795b594b240b
-caps.latest.revision: "7"
-author: dotnet-bot
-ms.author: dotnetcontent
-ms.openlocfilehash: d55e0b3a126f2216d005c7bddbcaefb7d8f0a580
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.openlocfilehash: bc2b0521598c00cdb398d936d61d65874a9cf274
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="performing-tasks-with-myapplication-mycomputer-and-myuser-visual-basic"></a>使用 My.Application、My.Computer 和 My.User 執行工作 (Visual Basic)
 三個中央`My`物件提供存取資訊並經常搭配使用的功能是`My.Application`(<xref:Microsoft.VisualBasic.ApplicationServices.ApplicationBase>)， `My.Computer` (<xref:Microsoft.VisualBasic.Devices.Computer>)，和`My.User`(<xref:Microsoft.VisualBasic.ApplicationServices.User>)。 您可以使用這些物件，分別存取與目前的應用程式、，安裝應用程式的電腦或應用程式，目前使用者相關的資訊。  
@@ -38,7 +31,7 @@ ms.lasthandoff: 11/21/2017
   
  [!code-vb[VbVbalrTextFieldParser#23](../../../visual-basic/developing-apps/development-with-my/codesnippet/VisualBasic/performing-tasks-with-my-application-my-computer-and-my-user_3.vb)]  
   
- `My.Application`可讓您變更您的應用程式的文化特性。 下列範例會示範如何呼叫這個方法。  
+ `My.Application` 可讓您變更您的應用程式的文化特性。 下列範例會示範如何呼叫這個方法。  
   
  [!code-vb[VbVbcnMy#3](../../../visual-basic/developing-apps/development-with-my/codesnippet/VisualBasic/performing-tasks-with-my-application-my-computer-and-my-user_4.vb)]  
   

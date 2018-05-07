@@ -1,22 +1,12 @@
 ---
-title: "如何： 使用字典使用 LINQ to XML (Visual Basic)"
-ms.custom: 
+title: 如何： 使用字典使用 LINQ to XML (Visual Basic)
 ms.date: 07/20/2015
-ms.prod: .net
-ms.reviewer: 
-ms.suite: 
-ms.technology: devlang-visual-basic
-ms.tgt_pltfrm: 
-ms.topic: article
 ms.assetid: 6cb3f969-1986-414a-b850-87418712edea
-caps.latest.revision: "3"
-author: dotnet-bot
-ms.author: dotnetcontent
-ms.openlocfilehash: dc7290a3afca22ffc92914efacdb768a72e2aef7
-ms.sourcegitcommit: bd1ef61f4bb794b25383d3d72e71041a5ced172e
+ms.openlocfilehash: b6e41f61358563472f49b22df389df00e721503e
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/18/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="how-to-work-with-dictionaries-using-linq-to-xml-visual-basic"></a>如何： 使用字典使用 LINQ to XML (Visual Basic)
 將各種資料結構轉換為 XML，以及將 XML 轉回其他資料結構通常很方便。 這個主題藉由來回轉換 <xref:System.Collections.Generic.Dictionary%602> 和 XML 來顯示這個一般方法的特定實作。  

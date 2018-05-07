@@ -1,12 +1,6 @@
 ---
 title: Enum 陳述式 (Visual Basic)
 ms.date: 07/20/2015
-ms.prod: .net
-ms.reviewer: ''
-ms.suite: ''
-ms.technology:
-- devlang-visual-basic
-ms.topic: article
 f1_keywords:
 - vb.Enum
 helpviewer_keywords:
@@ -17,14 +11,11 @@ helpviewer_keywords:
 - variables [Visual Basic], enumeration
 - constants [Visual Basic], enumerated
 ms.assetid: a45e51f1-65ff-48e1-bf32-79130f137377
-caps.latest.revision: 44
-author: dotnet-bot
-ms.author: dotnetcontent
-ms.openlocfilehash: 7a8244318e0be8e50f3384b56cf63e59182b6cda
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.openlocfilehash: 89de51f2551437d102ccdc5a0f1ff5f23b53e47f
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="enum-statement-visual-basic"></a>Enum 陳述式 (Visual Basic)
 宣告列舉，並定義其成員的值。  
@@ -42,13 +33,13 @@ End Enum
   
 -   `attributelist`  
   
-     選擇項。 套用至此列舉的屬性清單。 您必須將[屬性清單](../../../visual-basic/language-reference/statements/attribute-list.md)在角括號 ("`<`"和"`>`")。  
+     選擇性。 套用至此列舉的屬性清單。 您必須將[屬性清單](../../../visual-basic/language-reference/statements/attribute-list.md)在角括號 ("`<`"和"`>`")。  
   
      <xref:System.FlagsAttribute>屬性表示列舉型別的執行個體的值可以包含多個列舉成員，而且每個成員代表位元欄位中的列舉值。  
   
 -   `accessmodifier`  
   
-     選擇項。 指定哪些程式碼可以存取這個列舉型別。 可以是下列其中一項：  
+     選擇性。 指定哪些程式碼可以存取這個列舉型別。 可以是下列其中一項：  
   
     -   [Public](../../../visual-basic/language-reference/modifiers/public.md)  
   
@@ -62,26 +53,26 @@ End Enum
   
 -   `Shadows`  
   
-     選擇項。 指定此列舉型別會重新宣告並隱藏相同具名的程式設計項目或基底類別中的多載項目集。 您可以指定[陰影](../../../visual-basic/language-reference/modifiers/shadows.md)只列舉型別本身，而非它的任何成員。  
+     選擇性。 指定此列舉型別會重新宣告並隱藏相同具名的程式設計項目或基底類別中的多載項目集。 您可以指定[陰影](../../../visual-basic/language-reference/modifiers/shadows.md)只列舉型別本身，而非它的任何成員。  
   
 -   `enumerationname`  
   
-     必要項。 列舉型別的名稱。 如需有效的名稱資訊，請參閱[宣告項目名稱](../../../visual-basic/programming-guide/language-features/declared-elements/declared-element-names.md)。  
+     必要。 列舉型別的名稱。 如需有效的名稱資訊，請參閱[宣告項目名稱](../../../visual-basic/programming-guide/language-features/declared-elements/declared-element-names.md)。  
   
 -   `datatype`  
   
-     選擇項。 資料類型的列舉型別及其所有成員。  
+     選擇性。 資料類型的列舉型別及其所有成員。  
   
 -   `memberlist`  
   
-     必要項。 此陳述式所宣告的成員常數的清單。 多個成員會出現在個別的原始程式碼行。  
+     必要。 此陳述式所宣告的成員常數的清單。 多個成員會出現在個別的原始程式碼行。  
   
-     每個`member`具有下列語法和組件：`[<attribute list>] member name [ = initializer ]`  
+     每個`member`具有下列語法和組件： `[<attribute list>] member name [ = initializer ]`  
   
-    |組件|說明|  
+    |組件|描述|  
     |---|---|  
-    |`membername`|必要項。 這個成員的名稱。|  
-    |`initializer`|選擇項。 在編譯時期評估，以及指派給這個成員的運算式。|  
+    |`membername`|必要。 這個成員的名稱。|  
+    |`initializer`|選擇性。 在編譯時期評估，以及指派給這個成員的運算式。|  
   
 -   `End` `Enum`  
   

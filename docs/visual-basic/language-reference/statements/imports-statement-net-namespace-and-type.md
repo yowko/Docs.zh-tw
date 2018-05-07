@@ -1,11 +1,6 @@
 ---
-title: "Imports 陳述式 (.NET 命名空間和類型)"
+title: Imports 陳述式 (.NET 命名空間和類型)
 ms.date: 07/20/2015
-ms.prod: .net
-ms.reviewer: 
-ms.suite: 
-ms.technology: devlang-visual-basic
-ms.topic: article
 f1_keywords:
 - vb.Imports
 - imports
@@ -21,14 +16,11 @@ helpviewer_keywords:
 - aliases [Visual Basic], import
 - declared elements [Visual Basic], container elements
 ms.assetid: 7062f8aa-d890-4232-9eed-92836e13fb6e
-caps.latest.revision: "40"
-author: dotnet-bot
-ms.author: dotnetcontent
-ms.openlocfilehash: 46cc78c2fd039fb56fd4d1b797f2d09cbe95d317
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.openlocfilehash: ef569b0ed6428d24d019e00c500e4d4b91c83d49
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="imports-statement-net-namespace-and-type"></a>Imports 陳述式 (.NET 命名空間和類型)
 可讓型別沒有命名空間限定性條件中參考的名稱。  
@@ -45,9 +37,9 @@ Imports [ aliasname = ] namespace.element
   
 |詞彙|定義|  
 |---|---|  
-|`aliasname`|選擇項。 *匯入別名*或名稱的程式碼可以參考`namespace`而不是完整限定性條件字串。 請參閱[宣告項目名稱](../../../visual-basic/programming-guide/language-features/declared-elements/declared-element-names.md)。|  
-|`namespace`|必要項。 正在匯入的命名空間完整限定的名稱。 可使用的命名空間字串巢狀任何層級。|  
-|`element`|選擇項。 命名空間中宣告的程式設計項目名稱。 可以是任何容器項目。|  
+|`aliasname`|選擇性。 *匯入別名*或名稱的程式碼可以參考`namespace`而不是完整限定性條件字串。 請參閱[宣告項目名稱](../../../visual-basic/programming-guide/language-features/declared-elements/declared-element-names.md)。|  
+|`namespace`|必要。 正在匯入的命名空間完整限定的名稱。 可使用的命名空間字串巢狀任何層級。|  
+|`element`|選擇性。 命名空間中宣告的程式設計項目名稱。 可以是任何容器項目。|  
   
 ## <a name="remarks"></a>備註  
  `Imports`陳述式可讓直接參考指定的命名空間中所包含的類型。  

@@ -1,22 +1,12 @@
 ---
-title: "如何： 尋找具有特定子項目 (Visual Basic) 的項目"
-ms.custom: 
+title: 如何： 尋找具有特定子項目 (Visual Basic) 的項目
 ms.date: 07/20/2015
-ms.prod: .net
-ms.reviewer: 
-ms.suite: 
-ms.technology: devlang-visual-basic
-ms.tgt_pltfrm: 
-ms.topic: article
 ms.assetid: b0d0a463-6a85-46c3-8453-ad25b0ecf93c
-caps.latest.revision: "3"
-author: dotnet-bot
-ms.author: dotnetcontent
-ms.openlocfilehash: e6ddb35e954d709548c6b32475f37454015e0a98
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.openlocfilehash: 9ebc7fd826e2245cea661b2441fa9989b0aee8b8
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="how-to-find-an-element-with-a-specific-child-element-visual-basic"></a>如何： 尋找具有特定子項目 (Visual Basic) 的項目
 本主題顯示如何利用特定的值尋找具有子項目的特定項目。  

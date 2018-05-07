@@ -1,28 +1,14 @@
 ---
-title: "定義可搭配 .NET Framework XAML 服務使用的自訂類型"
-ms.custom: 
+title: 定義可搭配 .NET Framework XAML 服務使用的自訂類型
 ms.date: 03/30/2017
-ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.technology:
-- dotnet-wpf
-ms.tgt_pltfrm: 
-ms.topic: article
 helpviewer_keywords:
 - defining custom types [XAML Services]
 ms.assetid: c2667cbd-2f46-4a7f-9dfc-53696e35e8e4
-caps.latest.revision: 
-author: wadepickett
-ms.author: wpickett
-manager: wpickett
-ms.workload:
-- dotnet
-ms.openlocfilehash: c7cce479c7c7a5f6c7112f08f1e15f3bc7e4d366
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.openlocfilehash: 9edc7baa1a540a71997cf5b1ed010ad5c7960d17
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="defining-custom-types-for-use-with-net-framework-xaml-services"></a>定義可搭配 .NET Framework XAML 服務使用的自訂類型
 當您定義了商務物件的自訂型別，或在特定架構上沒有相依性的類型時，但有特定的 XAML，您可以遵循的最佳作法。 如果您依照這些作法，可以發現 XAML 特性，您的型別.NET Framework XAML 服務和 XAML 讀取器和 XAML 寫入器，並提供適當的表示，使用 XAML 類型系統的 XAML 節點資料流。 本主題說明類型定義、 成員定義和 CLR 設定其屬性的型別或成員的最佳作法。  
@@ -103,7 +89,7 @@ ms.lasthandoff: 12/22/2017
  請記住，此方法的值是來自 XAML 用法，通常是以屬性形式的輸入。 從屬性格式必須是值轉換器支援文字語法中，而且您屬性`Get` *PropertyName*存取子。  
   
 ### <a name="attachable-member-stores"></a>可附加成員存放區  
- 存取子方法不通常不足以提供的方法將可附加成員值放置物件圖形，或擷取值，超出物件圖形，並將其正確序列化。 若要提供這項功能，`target`的上一個存取子的簽章中的物件必須能夠儲存的值。 儲存機制應該和成員是可附加至目標的可附加成員不在成員清單中的可附加成員原則一致。 .NET framework XAML 服務提供的實作方法，對於可附加成員會儲存應用程式開發介面透過<xref:System.Xaml.IAttachedPropertyStore>和<xref:System.Xaml.AttachablePropertyServices>。 <xref:System.Xaml.IAttachedPropertyStore>可由 XAML 寫入器來探索的存放區實作，並應該是型別上實作`target`存取子。 靜態<xref:System.Xaml.AttachablePropertyServices>Api 的存取子中，主體內使用，而且參考的可附加成員及其<xref:System.Xaml.AttachableMemberIdentifier>。  
+ 存取子方法不通常不足以提供的方法將可附加成員值放置物件圖形，或擷取值，超出物件圖形，並將其正確序列化。 若要提供這項功能，`target`的上一個存取子的簽章中的物件必須能夠儲存的值。 儲存機制應該和成員是可附加至目標的可附加成員不在成員清單中的可附加成員原則一致。 .NET framework XAML 服務提供的實作方法，對於可附加成員會儲存應用程式開發介面透過<xref:System.Xaml.IAttachedPropertyStore>和<xref:System.Xaml.AttachablePropertyServices>。 <xref:System.Xaml.IAttachedPropertyStore> 可由 XAML 寫入器來探索的存放區實作，並應該是型別上實作`target`存取子。 靜態<xref:System.Xaml.AttachablePropertyServices>Api 的存取子中，主體內使用，而且參考的可附加成員及其<xref:System.Xaml.AttachableMemberIdentifier>。  
   
 ## <a name="xaml-related-clr-attributes"></a>XAML 相關 CLR 屬性  
  正確地設定其屬性，您的類型、 成員和組件是很重要的報表以.NET Framework XAML 服務 XAML 類型系統資訊的順序。 這是相關，如果您想要的 XAML 系統，直接根據.NET Framework XAML 服務 XAML 讀取器和 XAML 寫入器，用於您的型別，或如果您定義，或使用 XAML 使用的架構為基礎的 XAML 讀取器和 XAML 寫入器。  
@@ -127,6 +113,6 @@ ms.lasthandoff: 12/22/2017
   
  在 WPF XAML 術語*內部型別*是由相同組件也包含參考的 XAML 定義的類型。 這種型別可以對應透過故意省略組件的 XAML 命名空間 = 部分的對應，例如`xmlns:local="clr-namespace:WPFApplication1"`。  如果 BAML 參考內部的型別和型別具有`internal`存取層級，這會產生`GeneratedInternalTypeHelper`組件的類別。 如果您想要避免`GeneratedInternalTypeHelper`，您可能必須使用`public`存取層級，或必須相關的類別，分解到不同的組件並讓這個組件相依。  
   
-## <a name="see-also"></a>請參閱  
+## <a name="see-also"></a>另請參閱  
  [自訂類型和程式庫的 XAML 相關 CLR 屬性](../../../docs/framework/xaml-services/xaml-related-clr-attributes-for-custom-types-and-libraries.md)  
  [XAML Services](../../../docs/framework/xaml-services/index.md)

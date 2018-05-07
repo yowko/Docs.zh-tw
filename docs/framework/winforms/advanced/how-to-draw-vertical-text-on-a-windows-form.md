@@ -1,13 +1,6 @@
 ---
-title: "如何：在 Windows Form 上繪製直排文字"
-ms.custom: 
+title: 如何：在 Windows Form 上繪製直排文字
 ms.date: 03/30/2017
-ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.technology: dotnet-winforms
-ms.tgt_pltfrm: 
-ms.topic: article
 dev_langs:
 - csharp
 - vb
@@ -21,16 +14,11 @@ helpviewer_keywords:
 - text [Windows Forms], drawing
 - text [Windows Forms], vertical text
 ms.assetid: 717a6131-00f6-4373-b574-9894e8317799
-caps.latest.revision: "10"
-author: dotnet-bot
-ms.author: dotnetcontent
-manager: wpickett
-ms.workload: dotnet
-ms.openlocfilehash: 56feadd3bb5300376a16cc1d06d9af73ad77b565
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.openlocfilehash: afd09a41c46049c5a963558a709b00864fa6180f
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="how-to-draw-vertical-text-on-a-windows-form"></a>如何：在 Windows Form 上繪製直排文字
 下列程式碼範例示範如何使用在表單上繪製垂直文字<xref:System.Drawing.Graphics.DrawString%2A>方法<xref:System.Drawing.Graphics>。  
@@ -48,7 +36,7 @@ ms.lasthandoff: 12/22/2017
   
 -   新細明體字型未安裝。  
   
-## <a name="see-also"></a>請參閱  
+## <a name="see-also"></a>另請參閱  
  <xref:System.Drawing.Graphics.DrawString%2A>  
  <xref:System.Drawing.StringFormat.FormatFlags%2A>  
  <xref:System.Drawing.StringFormatFlags>  

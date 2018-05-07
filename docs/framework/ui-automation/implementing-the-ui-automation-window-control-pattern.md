@@ -1,28 +1,19 @@
 ---
-title: "實作 UI 自動化 Window 控制項模式"
-ms.custom: 
+title: 實作 UI 自動化 Window 控制項模式
 ms.date: 03/30/2017
-ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.technology: dotnet-bcl
-ms.tgt_pltfrm: 
-ms.topic: article
 helpviewer_keywords:
 - control patterns, Window
 - UI Automation, Window control pattern
 - Window control pattern
 ms.assetid: a28cb286-296e-4a62-b4cb-55ad636ebccc
-caps.latest.revision: "21"
 author: Xansky
 ms.author: mhopkins
 manager: markl
-ms.workload: dotnet
-ms.openlocfilehash: 3f1b44184f1a241943d9fa9d60a62a703dbaf0d8
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.openlocfilehash: 73a484ea6165b4e38901630730c7ba985a5608ba
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="implementing-the-ui-automation-window-control-pattern"></a>實作 UI 自動化 Window 控制項模式
 > [!NOTE]
@@ -50,7 +41,7 @@ ms.lasthandoff: 12/22/2017
 ## <a name="required-members-for-iwindowprovider"></a>IWindowProvider 的必要成員  
  IWindowProvider 介面需要下列屬性、方法和事件。  
   
-|必要成員|成員類型|備註|  
+|必要成員|成員類型|注意|  
 |---------------------|-----------------|-----------|  
 |<xref:System.Windows.Automation.Provider.IWindowProvider.InteractionState%2A>|屬性|無|  
 |<xref:System.Windows.Automation.Provider.IWindowProvider.IsModal%2A>|屬性|無|  
@@ -61,8 +52,8 @@ ms.lasthandoff: 12/22/2017
 |<xref:System.Windows.Automation.Provider.IWindowProvider.Close%2A>|方法|無|  
 |<xref:System.Windows.Automation.Provider.IWindowProvider.SetVisualState%2A>|方法|無|  
 |<xref:System.Windows.Automation.Provider.IWindowProvider.WaitForInputIdle%2A>|方法|無|  
-|<xref:System.Windows.Automation.WindowPattern.WindowClosedEvent>|事件|無|  
-|<xref:System.Windows.Automation.WindowPattern.WindowOpenedEvent>|事件|無|  
+|<xref:System.Windows.Automation.WindowPattern.WindowClosedEvent>|Event - 事件|無|  
+|<xref:System.Windows.Automation.WindowPattern.WindowOpenedEvent>|Event - 事件|無|  
 |<xref:System.Windows.Automation.WindowInteractionState>|Event - 事件|不保證是 <xref:System.Windows.Automation.WindowInteractionState.ReadyForUserInteraction>|  
   
 <a name="Exceptions"></a>   
@@ -74,7 +65,7 @@ ms.lasthandoff: 12/22/2017
 |<xref:System.InvalidOperationException>|<xref:System.Windows.Automation.Provider.IWindowProvider.SetVisualState%2A><br /><br /> -當控制項不支援要求的行為。|  
 |<xref:System.ArgumentOutOfRangeException>|<xref:System.Windows.Automation.Provider.IWindowProvider.WaitForInputIdle%2A><br /><br /> -當參數不是有效的數字。|  
   
-## <a name="see-also"></a>請參閱  
+## <a name="see-also"></a>另請參閱  
  [UI 自動化控制項模式概觀](../../../docs/framework/ui-automation/ui-automation-control-patterns-overview.md)  
  [支援 UI 自動化提供者的控制項模式](../../../docs/framework/ui-automation/support-control-patterns-in-a-ui-automation-provider.md)  
  [用戶端的 UI 自動化控制項模式](../../../docs/framework/ui-automation/ui-automation-control-patterns-for-clients.md)  

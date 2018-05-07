@@ -1,13 +1,6 @@
 ---
-title: "WPF 中圖案和基本繪圖概觀"
-ms.custom: 
+title: WPF 中圖案和基本繪圖概觀
 ms.date: 03/30/2017
-ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.technology: dotnet-wpf
-ms.tgt_pltfrm: 
-ms.topic: article
 dev_langs:
 - csharp
 - vb
@@ -19,16 +12,11 @@ helpviewer_keywords:
 - vectors [WPF], drawing
 - Shape objects [WPF]
 ms.assetid: 66d7a6d6-e3b6-47bc-8dfe-8a1b26f7d901
-caps.latest.revision: "19"
-author: dotnet-bot
-ms.author: dotnetcontent
-manager: wpickett
-ms.workload: dotnet
-ms.openlocfilehash: 2912215cb8fb0090cef58e0201cc355da1f0bf19
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.openlocfilehash: adbf982da25ff445d277b7c1b5911217d9825c02
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="shapes-and-basic-drawing-in-wpf-overview"></a>WPF 中圖案和基本繪圖概觀
 本主題概要說明如何繪製具有<xref:System.Windows.Shapes.Shape>物件。 A<xref:System.Windows.Shapes.Shape>是一種<xref:System.Windows.UIElement>，可讓您繪製圖形至螢幕。 UI 項目，因為<xref:System.Windows.Shapes.Shape>物件可以用內<xref:System.Windows.Controls.Panel>項目和大部分的控制項。  
@@ -38,7 +26,7 @@ ms.lasthandoff: 12/22/2017
   
 <a name="shapes"></a>   
 ## <a name="shape-objects"></a>Shape 物件  
- [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)]提供數個已備妥要使用<xref:System.Windows.Shapes.Shape>物件。  圖形的所有物件都繼承自<xref:System.Windows.Shapes.Shape>類別。 可用的圖形物件包括<xref:System.Windows.Shapes.Ellipse>， <xref:System.Windows.Shapes.Line>， <xref:System.Windows.Shapes.Path>， <xref:System.Windows.Shapes.Polygon>， <xref:System.Windows.Shapes.Polyline>，和<xref:System.Windows.Shapes.Rectangle>。 <xref:System.Windows.Shapes.Shape>物件共用的下列通用的屬性。  
+ [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] 提供數個已備妥要使用<xref:System.Windows.Shapes.Shape>物件。  圖形的所有物件都繼承自<xref:System.Windows.Shapes.Shape>類別。 可用的圖形物件包括<xref:System.Windows.Shapes.Ellipse>， <xref:System.Windows.Shapes.Line>， <xref:System.Windows.Shapes.Path>， <xref:System.Windows.Shapes.Polygon>， <xref:System.Windows.Shapes.Polyline>，和<xref:System.Windows.Shapes.Rectangle>。 <xref:System.Windows.Shapes.Shape> 物件共用的下列通用的屬性。  
   
 -   <xref:System.Windows.Shapes.Shape.Stroke%2A>： 描述如何繪製圖形外框。  
   
@@ -83,7 +71,7 @@ ms.lasthandoff: 12/22/2017
   
 <a name="pathgeometry"></a>   
 ### <a name="pathgeometry-and-pathsegments"></a>PathGeometry 和 PathSegments  
- <xref:System.Windows.Media.PathGeometry>物件會組成一或多個<xref:System.Windows.Media.PathFigure>物件; 每一個<xref:System.Windows.Media.PathFigure>代表不同的 「 圖 」 或圖形。 每個<xref:System.Windows.Media.PathFigure>本身包含一或多個<xref:System.Windows.Media.PathSegment>物件，分別代表連接圖或形狀圖的一部分。 區段類型包括下列： <xref:System.Windows.Media.LineSegment>， <xref:System.Windows.Media.BezierSegment>，和<xref:System.Windows.Media.ArcSegment>。  
+ <xref:System.Windows.Media.PathGeometry> 物件會組成一或多個<xref:System.Windows.Media.PathFigure>物件; 每一個<xref:System.Windows.Media.PathFigure>代表不同的 「 圖 」 或圖形。 每個<xref:System.Windows.Media.PathFigure>本身包含一或多個<xref:System.Windows.Media.PathSegment>物件，分別代表連接圖或形狀圖的一部分。 區段類型包括下列： <xref:System.Windows.Media.LineSegment>， <xref:System.Windows.Media.BezierSegment>，和<xref:System.Windows.Media.ArcSegment>。  
   
  在下列範例中，<xref:System.Windows.Shapes.Path>用來繪製二次方貝茲曲線。  
   
@@ -108,7 +96,7 @@ Data="M 100,200 C 100,25 400,350 400,175 H 280" />
   
  ![路徑圖例](../../../../docs/framework/wpf/graphics-multimedia/media/shape-ovw-path.PNG "shape_ovw_path")  
   
- <xref:System.Windows.Shapes.Path.Data%2A>屬性字串開頭為"moveto"命令，以建立路徑的起點座標系統中的指示，m， <xref:System.Windows.Controls.Canvas>。 <xref:System.Windows.Shapes.Path>資料參數會區分大小寫。 大寫 M 表示新的目前端點的絕對位置。 小寫 m 則表示相對座標。 第一個線段是三次方貝茲曲線，開始於 (100,200) 並結束於 (400,175)，使用 (100,25) 和 (400,350) 這兩個控制點繪製。 此區段會以 C 命令中<xref:System.Windows.Shapes.Path.Data%2A>屬性字串。 同樣地，大寫 C 表示絕對路徑；小寫 c 表示相對路徑。  
+ <xref:System.Windows.Shapes.Path.Data%2A>屬性字串開頭為"moveto"命令，以建立路徑的起點座標系統中的指示，m， <xref:System.Windows.Controls.Canvas>。 <xref:System.Windows.Shapes.Path> 資料參數會區分大小寫。 大寫 M 表示新的目前端點的絕對位置。 小寫 m 則表示相對座標。 第一個線段是三次方貝茲曲線，開始於 (100,200) 並結束於 (400,175)，使用 (100,25) 和 (400,350) 這兩個控制點繪製。 此區段會以 C 命令中<xref:System.Windows.Shapes.Path.Data%2A>屬性字串。 同樣地，大寫 C 表示絕對路徑；小寫 c 表示相對路徑。  
   
  第二個線段的開頭為絕對水平 "lineto" 命令 H，它會指定從前面的子路徑的端點 (400,175) 到新端點 (280,175) 繪製的線段。 指定的值是水平 「 lineto"命令，因為是*x*-協調。  
   
@@ -116,7 +104,7 @@ Data="M 100,200 C 100,25 400,350 400,175 H 280" />
   
 <a name="fillpaint"></a>   
 ## <a name="painting-shapes"></a>繪製圖形  
- <xref:System.Windows.Media.Brush>物件用來繪製圖形的<xref:System.Windows.Shapes.Shape.Stroke%2A>和<xref:System.Windows.Shapes.Shape.Fill%2A>。 在下列範例，筆觸與填滿的<xref:System.Windows.Shapes.Ellipse>所指定。 請注意，筆刷屬性的有效輸入可以是關鍵字或十六進位色彩值。 如需可用的色彩關鍵字的詳細資訊，請參閱屬性<xref:System.Windows.Media.Colors>類別<xref:System.Windows.Media>命名空間。  
+ <xref:System.Windows.Media.Brush> 物件用來繪製圖形的<xref:System.Windows.Shapes.Shape.Stroke%2A>和<xref:System.Windows.Shapes.Shape.Fill%2A>。 在下列範例，筆觸與填滿的<xref:System.Windows.Shapes.Ellipse>所指定。 請注意，筆刷屬性的有效輸入可以是關鍵字或十六進位色彩值。 如需可用的色彩關鍵字的詳細資訊，請參閱屬性<xref:System.Windows.Media.Colors>類別<xref:System.Windows.Media>命名空間。  
   
 ```  
 <Canvas Background="LightGray">   
@@ -213,7 +201,7 @@ myPolygon.StrokeThickness = 2;
 ## <a name="transforming-shapes"></a>轉換圖形  
  <xref:System.Windows.Media.Transform>類別會提供方法來轉換二維平面中的圖形。  不同類型的轉換包含旋轉 (<xref:System.Windows.Media.RotateTransform>)，小數位數 (<xref:System.Windows.Media.ScaleTransform>)、 扭曲 (<xref:System.Windows.Media.SkewTransform>)，和轉譯 (<xref:System.Windows.Media.TranslateTransform>)。  
   
- 套用至圖形的一種常用轉換就是旋轉。  若要旋轉圖形，請建立<xref:System.Windows.Media.RotateTransform>並指定其<xref:System.Windows.Media.RotateTransform.Angle%2A>。 <xref:System.Windows.Media.RotateTransform.Angle%2A> 45 的項目旋轉 45 度旋轉; 角度為 90 項目方向旋轉 90 度順時針旋轉，則為，依此類推。 設定<xref:System.Windows.Media.RotateTransform.CenterX%2A>和<xref:System.Windows.Media.RotateTransform.CenterY%2A>屬性，如果您想要控制哪些項目會旋轉的點。 這些屬性值會以轉換之元素的座標空間表示。 <xref:System.Windows.Media.RotateTransform.CenterX%2A>和<xref:System.Windows.Media.RotateTransform.CenterY%2A>有預設值為零。 最後，套用<xref:System.Windows.Media.RotateTransform>的項目。 如果您不想要影響版面配置的轉換，將圖形的<xref:System.Windows.UIElement.RenderTransform%2A>屬性。  
+ 套用至圖形的一種常用轉換就是旋轉。  若要旋轉圖形，請建立<xref:System.Windows.Media.RotateTransform>並指定其<xref:System.Windows.Media.RotateTransform.Angle%2A>。 <xref:System.Windows.Media.RotateTransform.Angle%2A> 45 的項目旋轉 45 度旋轉; 角度為 90 項目方向旋轉 90 度順時針旋轉，則為，依此類推。 設定<xref:System.Windows.Media.RotateTransform.CenterX%2A>和<xref:System.Windows.Media.RotateTransform.CenterY%2A>屬性，如果您想要控制哪些項目會旋轉的點。 這些屬性值會以轉換之元素的座標空間表示。 <xref:System.Windows.Media.RotateTransform.CenterX%2A> 和<xref:System.Windows.Media.RotateTransform.CenterY%2A>有預設值為零。 最後，套用<xref:System.Windows.Media.RotateTransform>的項目。 如果您不想要影響版面配置的轉換，將圖形的<xref:System.Windows.UIElement.RenderTransform%2A>屬性。  
   
  在下列範例中，<xref:System.Windows.Media.RotateTransform>用於圖形的左上角 (0，0) 的相關圖形 45 度旋轉。  
   
@@ -229,7 +217,7 @@ myPolygon.StrokeThickness = 2;
   
  在上一個範例中，已將單一轉換套用至每個圖形物件。 若要將多個轉換套用至圖形 （或其他 UI 項目），使用<xref:System.Windows.Media.TransformGroup>。  
   
-## <a name="see-also"></a>請參閱  
+## <a name="see-also"></a>另請參閱  
  [2D 圖形和影像處理](../../../../docs/framework/wpf/advanced/optimizing-performance-2d-graphics-and-imaging.md)  
  [使用純色和漸層繪製的概觀](../../../../docs/framework/wpf/graphics-multimedia/painting-with-solid-colors-and-gradients-overview.md)  
  [幾何概觀](../../../../docs/framework/wpf/graphics-multimedia/geometry-overview.md)  

@@ -1,26 +1,15 @@
 ---
-title: "WF 中的集合活動"
-ms.custom: 
+title: WF 中的集合活動
 ms.date: 03/30/2017
-ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.tgt_pltfrm: 
-ms.topic: article
 ms.assetid: 2680c3e2-9902-4968-b98d-cab776103dbe
-caps.latest.revision: "10"
-author: dotnet-bot
-ms.author: dotnetcontent
-manager: wpickett
-ms.workload: dotnet
-ms.openlocfilehash: 52713566419eedbb5a39153541402920479eb500
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.openlocfilehash: 442da07e78ee08b49ad0e023362cace23dcd5b8d
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="collection-activities-in-wf"></a>WF 中的集合活動
-集合活動可用來處理工作流程中的集合物件。 [!INCLUDE[netfx_current_long](../../../includes/netfx-current-long-md.md)] 含有系統提供的活動，可用於加入與移除集合中的物件、測試集合中項目的存在，以及清除集合。 `ExistsInCollection`和`RemoveFromCollection`有<xref:System.Activities.OutArgument%601>型別的<xref:System.Boolean>，這會表示結果。  
+集合活動可用來處理工作流程中的集合物件。 [!INCLUDE[netfx_current_long](../../../includes/netfx-current-long-md.md)] 含有系統提供的活動，可用於加入與移除集合中的物件、測試集合中項目的存在，以及清除集合。 `ExistsInCollection` 和`RemoveFromCollection`有<xref:System.Activities.OutArgument%601>型別的<xref:System.Boolean>，這會表示結果。  
   
 > [!IMPORTANT]
 >  如果集合活動在設定基礎集合物件之前執行，便會擲回 <xref:System.InvalidOperationException> 與活動錯誤。  
@@ -435,5 +424,5 @@ Activity wf = new Sequence
 </Sequence>  
 ```  
   
-## <a name="see-also"></a>請參閱  
+## <a name="see-also"></a>另請參閱  
  [使用命令式程式碼撰寫工作流程、活動與運算式](../../../docs/framework/windows-workflow-foundation/authoring-workflows-activities-and-expressions-using-imperative-code.md)

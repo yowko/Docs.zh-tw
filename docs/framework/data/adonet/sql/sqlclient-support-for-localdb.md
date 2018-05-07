@@ -1,26 +1,12 @@
 ---
 title: LocalDB 的 SqlClient 支援
-ms.custom: ''
 ms.date: 03/30/2017
-ms.prod: .net-framework
-ms.reviewer: ''
-ms.suite: ''
-ms.technology:
-- dotnet-ado
-ms.tgt_pltfrm: ''
-ms.topic: article
 ms.assetid: cf796898-5575-46f2-ae6e-21e5aa8c4123
-caps.latest.revision: 14
-author: douglaslMS
-ms.author: douglasl
-manager: craigg
-ms.workload:
-- dotnet
-ms.openlocfilehash: e2564e49a90a1c8fd9fe2cc000ebf648cf90b4e7
-ms.sourcegitcommit: 86adcc06e35390f13c1e372c36d2e044f1fc31ef
+ms.openlocfilehash: 33368ca4b2dc5397087d29e515db6c1094e350bc
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/26/2018
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="sqlclient-support-for-localdb"></a>LocalDB 的 SqlClient 支援
 SQL Server code name Denali 中從開始，SQL Server，名為 LocalDB，輕量版可。 本主題討論如何連接到 LocalDB 資料庫。  

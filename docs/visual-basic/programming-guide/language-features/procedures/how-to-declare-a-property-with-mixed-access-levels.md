@@ -1,12 +1,6 @@
 ---
-title: "如何：宣告混合存取層級的屬性 (Visual Basic)"
-ms.custom: 
+title: 如何：宣告混合存取層級的屬性 (Visual Basic)
 ms.date: 07/20/2015
-ms.prod: .net
-ms.reviewer: 
-ms.suite: 
-ms.technology: devlang-visual-basic
-ms.topic: article
 helpviewer_keywords:
 - access levels [Visual Basic], properties
 - procedures [Visual Basic], defining
@@ -16,14 +10,11 @@ helpviewer_keywords:
 - properties [Visual Basic], access levels
 - Property statement [Visual Basic], declaring mixed access levels
 ms.assetid: fdbb2d97-279a-4956-b26c-cbdfbc34915a
-caps.latest.revision: "16"
-author: dotnet-bot
-ms.author: dotnetcontent
-ms.openlocfilehash: 90fe20303f6f2ed692e54e44ee8cc65897531543
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.openlocfilehash: 8d25086fe6f8b5f5300006466ef49782cb065edf
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="how-to-declare-a-property-with-mixed-access-levels-visual-basic"></a>如何：宣告混合存取層級的屬性 (Visual Basic)
 如果您想`Get`和`Set`屬性有不同的存取層級的程序，您可以使用中的更寬鬆的層級`Property`陳述式和更嚴格的層級，在`Get`或`Set`陳述式。 當您想要能夠取得屬性值的程式碼某些部分和其他部分的程式碼，將值變更時，您可以使用屬性上的混合的存取層級。  

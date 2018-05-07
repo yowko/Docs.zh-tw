@@ -1,11 +1,6 @@
 ---
 title: -連結 (Visual Basic)
 ms.date: 03/10/2018
-ms.prod: .net
-ms.suite: ''
-ms.technology:
-- devlang-visual-basic
-ms.topic: article
 helpviewer_keywords:
 - l compiler option [Visual Basic]
 - EmbedInteropTypes
@@ -16,13 +11,11 @@ helpviewer_keywords:
 - -l compiler option [Visual Basic]
 - /l compiler option [Visual Basic]
 ms.assetid: 1885f24a-86f5-486c-a064-9fb7e455ccec
-author: dotnet-bot
-ms.author: dotnetcontent
-ms.openlocfilehash: 4699e3adfd83a35ee81a5c8838e300adf6ecf667
-ms.sourcegitcommit: 2042de78fcdceebb6b8ac4b7a292b93e8782cbf5
+ms.openlocfilehash: 95c528c4d686c44d0d77d1f55833be75ab14f8bf
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/27/2018
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="-link-visual-basic"></a>-連結 (Visual Basic)
 讓編譯器將所指定組件的 COM 類型資訊全部提供給您目前編譯的專案。  
@@ -51,7 +44,7 @@ ms.lasthandoff: 04/27/2018
 > [!NOTE]
 >  當您在程式碼中建立內嵌 COM 類型的執行個體時，必須使用適當的介面來建立執行個體。 嘗試使用 CoClass 建立內嵌 COM 類型的執行個體將會導致錯誤。  
   
- 若要設定`-link`選項在 Visual Studio 中，加入組件參考，以及設定`Embed Interop Types`屬性**true**。 `Embed Interop Types` 屬性的預設值為 **false**。  
+ 若要在 Visual Studio 中設定 `-link` 選項，請新增組件參考，並將 `Embed Interop Types` 屬性設定為 **true**。 `Embed Interop Types` 屬性的預設值為 **false**。  
   
  如果您所連結的 COM 組件 (A) 本身參考另一個 COM 組件 (組件 B)，您也必須在發生下列任一情況時連結到 B 組件：  
   

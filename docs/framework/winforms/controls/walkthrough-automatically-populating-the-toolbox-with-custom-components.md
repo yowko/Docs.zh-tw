@@ -1,28 +1,16 @@
 ---
-title: "逐步解說：自動將自訂元件填入工具箱"
-ms.custom: 
+title: 逐步解說：自動將自訂元件填入工具箱
 ms.date: 03/30/2017
-ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.technology: dotnet-winforms
-ms.tgt_pltfrm: 
-ms.topic: article
 helpviewer_keywords:
 - IToolboxService interface
 - Toolbox [Windows Forms], populating
 - custom components [Windows Forms], adding to Toolbox
 ms.assetid: 2fa1e3e8-6b9f-42b2-97c0-2be57444dba4
-caps.latest.revision: "22"
-author: dotnet-bot
-ms.author: dotnetcontent
-manager: wpickett
-ms.workload: dotnet
-ms.openlocfilehash: 6b60d4ee7908a5ed9dcb3393132ba7d0bd0a6cb5
-ms.sourcegitcommit: c0dd436f6f8f44dc80dc43b07f6841a00b74b23f
+ms.openlocfilehash: d446ab84cfe135e56483b8b309b696f7f15044fa
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 01/19/2018
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="walkthrough-automatically-populating-the-toolbox-with-custom-components"></a>逐步解說：自動將自訂元件填入工具箱
 如果您的元件會由目前開啟的方案中的專案，會自動將會出現在**工具箱**，而不需要您所需的動作。 您也可以手動填入**工具箱**與使用自訂元件[選擇工具箱項目 對話方塊 (Visual Studio)](http://msdn.microsoft.com/library/bd07835f-18a8-433e-bccc-7141f65263bb)，但**工具箱**考慮您的方案中的項目建置輸出具有所有下列特性：  
@@ -106,7 +94,7 @@ ms.lasthandoff: 01/19/2018
 ## <a name="next-steps"></a>後續步驟  
  本逐步解說會示範**工具箱**考慮專案的元件，但**工具箱**也是會考慮控制項。 實驗您自己的自訂控制項加入和移除控制項的專案，從您的方案。  
   
-## <a name="see-also"></a>請參閱  
+## <a name="see-also"></a>另請參閱  
  [選項對話方塊、 Windows Form 設計工具，一般](http://msdn.microsoft.com/library/8dd170af-72f0-4212-b04b-034ceee92834)  
  [如何：操作工具箱索引標籤](http://msdn.microsoft.com/library/21285050-cadd-455a-b1f5-a2289a89c4db)  
  [選擇工具箱項目對話方塊 (Visual Studio)](http://msdn.microsoft.com/library/bd07835f-18a8-433e-bccc-7141f65263bb)  

@@ -1,12 +1,6 @@
 ---
 title: Array Dimensions in Visual Basic
-ms.custom: 
 ms.date: 07/20/2015
-ms.prod: .net
-ms.reviewer: 
-ms.suite: 
-ms.technology: devlang-visual-basic
-ms.topic: article
 helpviewer_keywords:
 - dimensions, arrays
 - arrays [Visual Basic], dimensions
@@ -15,14 +9,11 @@ helpviewer_keywords:
 - rectangular arrays
 - ranking, arrays
 ms.assetid: 385e911b-18c1-4e98-9924-c6d279101dd9
-caps.latest.revision: "22"
-author: dotnet-bot
-ms.author: dotnetcontent
-ms.openlocfilehash: 21e170ca5942862a26e05428fffaea7d1e875e19
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.openlocfilehash: cf295288dd034d744dceb71b5c58278be5cc2a2f
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="array-dimensions-in-visual-basic"></a>Array Dimensions in Visual Basic
 A*維度*是的方向，在其中您可以不同的陣列項目的規格。 保留每一天的月份的銷售總額陣列都有一個維度 （月份的天數）。 保留每個月份的天數部門銷售總額的陣列具有兩個維度 （的部門編號及月份天數）。 陣列的維度的數目會呼叫其*陣序規範*。  
@@ -35,13 +26,13 @@ A*維度*是的方向，在其中您可以不同的陣列項目的規格。 保�
   
  下圖顯示的不同陣序規範陣列概念的結構。 在圖例中的每個項目會顯示存取它的索引值。 例如，您可以存取二維陣列的第二個資料列的第一個項目指定的索引`(1, 0)`。  
   
- ![一個 &#45;示意圖; 二維陣列](../../../../visual-basic/programming-guide/language-features/arrays/media/arrayexdimone.gif "ArrayExDimOne")  
+ ![圖形的其中一個圖表&#45;二維陣列](../../../../visual-basic/programming-guide/language-features/arrays/media/arrayexdimone.gif "ArrayExDimOne")  
 一維陣列  
   
- ![兩個 &#45;示意圖; 二維陣列](../../../../visual-basic/programming-guide/language-features/arrays/media/arrayexdimtwo.gif "ArrayExDimTwo")  
+ ![兩個圖形圖表&#45;二維陣列](../../../../visual-basic/programming-guide/language-features/arrays/media/arrayexdimtwo.gif "ArrayExDimTwo")  
 二維陣列  
   
- ![三個 &#45;示意圖; 二維陣列](../../../../visual-basic/programming-guide/language-features/arrays/media/arrayexdimthree.gif "ArrayExDimThree")  
+ ![三個示意圖&#45;二維陣列](../../../../visual-basic/programming-guide/language-features/arrays/media/arrayexdimthree.gif "ArrayExDimThree")  
 三維陣列  
   
 ### <a name="one-dimension"></a>一個維度  

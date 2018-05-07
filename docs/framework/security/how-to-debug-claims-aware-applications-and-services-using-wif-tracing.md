@@ -1,26 +1,14 @@
 ---
 title: 操作說明：使用 WIF 追蹤對宣告感知應用程式和服務進行偵錯
-ms.custom: ''
 ms.date: 03/30/2017
-ms.prod: .net-framework
-ms.reviewer: ''
-ms.suite: ''
-ms.technology:
-- dotnet-clr
-ms.tgt_pltfrm: ''
-ms.topic: article
 ms.assetid: 3d51ba59-3adb-4ca4-bd33-5027531af687
-caps.latest.revision: ''
 author: BrucePerlerMS
-ms.author: bruceper
 manager: mbaldwin
-ms.workload:
-- dotnet
-ms.openlocfilehash: 4243313d88b22aa9f755a3586ea0c5fbe08cd891
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.openlocfilehash: 0f2126a83e6a5638eb492bb2a529dbf4cdab1714
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="how-to-debug-claims-aware-applications-and-services-using-wif-tracing"></a>操作說明：使用 WIF 追蹤對宣告感知應用程式和服務進行偵錯
 ## <a name="applies-to"></a>適用於  
@@ -116,7 +104,7 @@ ms.lasthandoff: 12/22/2017
   
 |**錯誤識別碼**|**錯誤訊息**|**修正錯誤所需的動作**|  
 |-|-|-|  
-|ID4175|IssuerNameRegistry 無法辨識安全性權杖的簽發者。  若要接受來自這個簽發者的安全性權杖，請設定 IssuerNameRegistry，以傳回此簽發者的有效名稱。|造成此錯誤的原因，可能是您從 MMC 嵌入式管理單元複製指紋，並將其貼到 *Web.config* 檔案中。 具體而言，您可以在從憑證屬性視窗複製時，在文字字串中取得額外的不可列印字元。 這個額外的字元導致指紋比對失敗。您可以在這裡找到正確複製指紋的程序：[http://msdn.microsoft.com/library/ff359102.aspx](http://msdn.microsoft.com/library/ff359102.aspx)|  
+|ID4175|IssuerNameRegistry 無法辨識安全性權杖的簽發者。  若要接受來自這個簽發者的安全性權杖，請設定 IssuerNameRegistry，以傳回此簽發者的有效名稱。|造成此錯誤的原因，可能是您從 MMC 嵌入式管理單元複製指紋，並將其貼到 *Web.config* 檔案中。 具體而言，您可以在從憑證屬性視窗複製時，在文字字串中取得額外的不可列印字元。 這個額外的字元導致憑證指紋比對會失敗。可以在這裡找到正確複製憑證指紋的程序： [http://msdn.microsoft.com/library/ff359102.aspx](http://msdn.microsoft.com/library/ff359102.aspx)|  
   
 ## <a name="related-items"></a>相關項目  
   

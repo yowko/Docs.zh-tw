@@ -1,11 +1,7 @@
 ---
-title: "WritePropertyValue 函式 （Unmanaged API 參考）"
-description: "WritePropertyValue 函式會將位元組寫入屬性。"
+title: WritePropertyValue 函式 （Unmanaged API 參考）
+description: WritePropertyValue 函式會將位元組寫入屬性。
 ms.date: 11/06/2017
-ms.prod: .net-framework
-ms.technology:
-- dotnet-clr
-ms.topic: reference
 api_name:
 - WritePropertyValue
 api_location:
@@ -20,14 +16,11 @@ topic_type:
 - Reference
 author: rpetrusha
 ms.author: ronpet
-manager: wpickett
-ms.workload:
-- dotnet
-ms.openlocfilehash: 7221c9e0f1cb49ab0e27130ce69c0527ba903148
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.openlocfilehash: 6aafb918616d27cf6289a8747f3336b2e813beb6
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="writepropertyvalue-function"></a>WritePropertyValue 函式
 寫入屬性控制代碼所識別的屬性中指定的位元組數目。
@@ -86,7 +79,7 @@ HRESULT WritePropertyValue (
   
  **標頭：** WMINet_Utils.idl  
   
- **.NET framework 版本：**[!INCLUDE[net_current_v472plus](../../../../includes/net-current-v472plus.md)]  
+ **.NET framework 版本：** [!INCLUDE[net_current_v472plus](../../../../includes/net-current-v472plus.md)]  
   
 ## <a name="see-also"></a>另請參閱  
 [WMI 和效能計數器 （Unmanaged API 參考）](index.md)

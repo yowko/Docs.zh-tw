@@ -1,28 +1,18 @@
 ---
-title: ".NET Framework 中的效能計數器"
-ms.custom: 
+title: .NET Framework 中的效能計數器
 ms.date: 03/30/2017
-ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.technology: dotnet-clr
-ms.tgt_pltfrm: 
-ms.topic: article
 helpviewer_keywords:
 - performance, .NET Framework applications
 - performance counters
 - performance monitoring, counters
 ms.assetid: 06a4ae8c-eeb2-4d5a-817e-b1b95c0653e1
-caps.latest.revision: "18"
 author: rpetrusha
 ms.author: ronpet
-manager: wpickett
-ms.workload: dotnet
-ms.openlocfilehash: 15486a55fc15ba2cc3cc64db50f317b39dfd77bb
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.openlocfilehash: bb46b6466ee0ee3d4cdc4b7c934e518fd9f7f082
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="performance-counters-in-the-net-framework"></a>.NET Framework 中的效能計數器
 本主題提供可以在[效能監視器](http://technet.microsoft.com/library/cc749249.aspx)中找到之效能計數器的清單。  
@@ -260,6 +250,6 @@ for (int i = 0; i < Array.Length; i++)
 |**Stack Walk Depth**|在最後一個執行階段程式碼存取安全性檢查期間顯示堆疊深度。 執行階段程式碼存取安全性檢查都是藉由查核堆疊來執行的。 這個計數器不是平均數；它僅顯示最後觀察到的值。|  
 |**Total Runtime Checks**|顯示自應用程式啟動後執行階段程式碼存取安全性檢查執行的總數。 當呼叫端要求特定權限時，會執行執行階段程式碼存取安全性檢查。 執行階段檢查在每次由呼叫端呼叫時進行，並且檢查目前呼叫端的執行緒堆疊。 搭配使用 **Stack Walk Depth** 計數器時，此計數器指出因安全性檢查而發生的效能降低。|  
   
-## <a name="see-also"></a>請參閱  
+## <a name="see-also"></a>另請參閱  
  [效能計數器](../../../docs/framework/debug-trace-profile/performance-counters.md)  
  [執行階段分析](../../../docs/framework/debug-trace-profile/runtime-profiling.md)

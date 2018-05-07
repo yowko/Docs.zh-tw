@@ -1,17 +1,12 @@
 ---
 title: '開始使用 F # 的命令列工具'
 description: '了解如何在 F # 在任何作業系統 （Windows、 macOs 或 Linux） 上使用.NET 核心 CLI 建置簡單的多專案方案。'
-author: cartermp
-ms.author: phcart
 ms.date: 03/26/2018
-ms.topic: conceptual
-ms.prod: dotnet-fsharp
-ms.devlang: fsharp
-ms.openlocfilehash: 767385be605d863644db563a2e86a41ca80527c4
-ms.sourcegitcommit: 03ee570f6f528a7d23a4221dcb26a9498edbdf8c
+ms.openlocfilehash: 35ec2313742a0b14c92f3de2662a16aff389b214
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/28/2018
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="get-started-with-f-with-the-net-core-cli"></a>開始使用 F # 和.NET 核心 CLI
 

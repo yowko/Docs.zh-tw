@@ -1,12 +1,6 @@
 ---
 title: XML 屬性軸屬性 (Visual Basic)
 ms.date: 07/20/2015
-ms.prod: .net
-ms.reviewer: ''
-ms.suite: ''
-ms.technology:
-- devlang-visual-basic
-ms.topic: article
 f1_keywords:
 - vb.XmlPropertyAttributeAxis
 helpviewer_keywords:
@@ -16,14 +10,11 @@ helpviewer_keywords:
 - XML axis [Visual Basic], attribute
 - XML [Visual Basic], accessing
 ms.assetid: 7a4777e1-0618-4de9-9510-fb9ace2bf4db
-caps.latest.revision: 23
-author: dotnet-bot
-ms.author: dotnetcontent
-ms.openlocfilehash: 9968e5de0f8cb45fb896ba43c80d9c9a3ab8ef08
-ms.sourcegitcommit: 86adcc06e35390f13c1e372c36d2e044f1fc31ef
+ms.openlocfilehash: 3e02fd2ddc3928bdd2e9741737fc31fb2b16901c
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/26/2018
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="xml-attribute-axis-property-visual-basic"></a>XML 屬性軸屬性 (Visual Basic)
 提供的屬性值的存取<xref:System.Xml.Linq.XElement>物件或集合中的第一個元素<xref:System.Xml.Linq.XElement>物件。  

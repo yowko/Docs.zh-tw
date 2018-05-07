@@ -1,13 +1,6 @@
 ---
-title: "應用程式啟動時間"
-ms.custom: 
+title: 應用程式啟動時間
 ms.date: 03/30/2017
-ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.technology: dotnet-wpf
-ms.tgt_pltfrm: 
-ms.topic: article
 helpviewer_keywords:
 - splash screen [WPF], startup time
 - WPF [WPF], startup time
@@ -15,16 +8,11 @@ helpviewer_keywords:
 - application startup [WPF]
 - performance [WPF], startup time
 ms.assetid: f0ec58d8-626f-4d8a-9873-c20f95e08b96
-caps.latest.revision: "11"
-author: dotnet-bot
-ms.author: dotnetcontent
-manager: wpickett
-ms.workload: dotnet
-ms.openlocfilehash: af07e1876666351d72eada56e7af3e787ccc90f6
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.openlocfilehash: 8452c41bc6d60d18fa058966299e3ca2b989604f
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="application-startup-time"></a>應用程式啟動時間
 WPF 應用程式啟動所需的時間可能有很大的差異。 本主題說明各種技術來縮短 Windows Presentation Foundation (WPF) 應用程式的認知和實際啟動時間。  
@@ -133,7 +121,7 @@ WPF 應用程式啟動所需的時間可能有很大的差異。 本主題說明
 ## <a name="set-data-binding-programmatically"></a>以程式設計的方式設定資料繫結  
  而不是使用 XAML 設定<xref:System.Windows.FrameworkElement.DataContext%2A>以宣告方式主要視窗中，請考慮將其設定以程式設計方式在<xref:System.Windows.Application.OnActivated%2A>方法。  
   
-## <a name="see-also"></a>請參閱  
+## <a name="see-also"></a>另請參閱  
  <xref:System.Windows.SplashScreen>  
  <xref:System.AppDomain>  
  <xref:System.Resources.NeutralResourcesLanguageAttribute>  

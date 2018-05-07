@@ -1,12 +1,6 @@
 ---
 title: Xor 運算子 (Visual Basic)
 ms.date: 07/20/2015
-ms.prod: .net
-ms.reviewer: ''
-ms.suite: ''
-ms.technology:
-- devlang-visual-basic
-ms.topic: article
 f1_keywords:
 - vb.Xor
 helpviewer_keywords:
@@ -20,14 +14,11 @@ helpviewer_keywords:
 - Xor keyword [Visual Basic]
 - bitwise comparison [Visual Basic]
 ms.assetid: 036000a9-3934-4e7f-a9d0-a816de3d84a6
-caps.latest.revision: 17
-author: dotnet-bot
-ms.author: dotnetcontent
-ms.openlocfilehash: b14f11f2df2df9c29e88e9188390cfe245d2cb58
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.openlocfilehash: 34d317da5d85127e371c2df7229e0f0873972f50
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="xor-operator-visual-basic"></a>Xor 運算子 (Visual Basic)
 執行邏輯排除在兩個`Boolean`運算式或兩個數值運算式的位元互斥。  
@@ -40,13 +31,13 @@ result = expression1 Xor expression2
   
 ## <a name="parts"></a>組件  
  `result`  
- 必要項。 任何`Boolean`或數值的變數。 布林比較，`result`是兩個邏輯排除 （獨佔邏輯分離）`Boolean`值。 位元運算，如`result`是數值，表示兩個數值的位元模式的位元互斥 （位元排除分離）。  
+ 必要。 任何`Boolean`或數值的變數。 布林比較，`result`是兩個邏輯排除 （獨佔邏輯分離）`Boolean`值。 位元運算，如`result`是數值，表示兩個數值的位元模式的位元互斥 （位元排除分離）。  
   
  `expression1`  
- 必要項。 任何`Boolean`或數值運算式。  
+ 必要。 任何`Boolean`或數值運算式。  
   
  `expression2`  
- 必要項。 任何`Boolean`或數值運算式。  
+ 必要。 任何`Boolean`或數值運算式。  
   
 ## <a name="remarks"></a>備註  
  布林比較，`result`是`True`如果且只有其中一個`expression1`和`expression2`評估為`True`。 也就是說，如果且只有`expression1`和`expression2`評估為相反`Boolean`值。 下表將說明如何`result`決定。  

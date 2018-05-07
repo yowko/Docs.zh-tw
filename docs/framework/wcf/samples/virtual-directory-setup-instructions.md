@@ -1,27 +1,15 @@
 ---
-title: "虛擬目錄安裝指示"
-ms.custom: 
+title: 虛擬目錄安裝指示
 ms.date: 03/30/2017
-ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.technology: dotnet-clr
-ms.tgt_pltfrm: 
-ms.topic: article
 ms.assetid: 3c62cab5-81a4-48b6-ac8c-9ce33a85a157
-caps.latest.revision: "36"
-author: dotnet-bot
-ms.author: dotnetcontent
-manager: wpickett
-ms.workload: dotnet
-ms.openlocfilehash: 2684091d15a4c0796a0b8fb85952c0f902c1f545
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
-ms.translationtype: MT
+ms.openlocfilehash: a6fc8309563e78f919fe1e2009c1f46801c32913
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="virtual-directory-setup-instructions"></a>虛擬目錄安裝指示
-[!INCLUDE[indigo1](../../../../includes/indigo1-md.md)] 範例的目的是共用名為 servicemodelsamples 的共用虛擬目錄，它會對應到 %SystemDrive%\inetpub\wwwroot\servicemodelsamples 資料夾。  
+Windows Communication Foundation (WCF) 範例所共用一個通用的虛擬目錄，名為 servicemodelsamples 的會對應到 %SystemDrive%\inetpub\wwwroot\servicemodelsamples 資料夾。  
   
 > [!NOTE]
 >  %SystemDrive% 通常是 C: 或 D:，這視安裝 Internet Information Services (IIS) 的磁碟機位置而定。  
@@ -121,7 +109,7 @@ ms.lasthandoff: 12/22/2017
   
 8.  按一下**立即尋找**。 這會將與本機電腦相關聯的物件填入到搜尋結果中。  
   
-9. 尋找**IIS_IUSRS**中的項目**名稱 (Rdn)**資料行。 選取該項目，然後按一下**確定**以關閉搜尋結果視窗。  
+9. 尋找**IIS_IUSRS**中的項目**名稱 (Rdn)** 資料行。 選取該項目，然後按一下**確定**以關閉搜尋結果視窗。  
   
 10. 按一下**確定**關閉**選取使用者或群組**視窗。  
   
@@ -201,5 +189,5 @@ ms.lasthandoff: 12/22/2017
   
     3.  在**群組**資料行，請檢查值**ASPNET**是 「 使用者 」。  
   
-## <a name="see-also"></a>請參閱  
+## <a name="see-also"></a>另請參閱  
  [Internet Information Service 裝載指示](../../../../docs/framework/wcf/samples/internet-information-service-hosting-instructions.md)

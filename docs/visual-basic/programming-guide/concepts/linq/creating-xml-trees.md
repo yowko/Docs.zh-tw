@@ -1,23 +1,12 @@
 ---
 title: 建立 XML 樹狀結構 (Visual Basic)
-ms.custom: ''
 ms.date: 07/20/2015
-ms.prod: .net
-ms.reviewer: ''
-ms.suite: ''
-ms.technology:
-- devlang-visual-basic
-ms.tgt_pltfrm: ''
-ms.topic: article
 ms.assetid: e86ba12b-17de-4579-81bb-66322b84cfbe
-caps.latest.revision: 4
-author: dotnet-bot
-ms.author: dotnetcontent
-ms.openlocfilehash: 08efc9a9b519d2b56f8503e050b9332be580d124
-ms.sourcegitcommit: 86adcc06e35390f13c1e372c36d2e044f1fc31ef
+ms.openlocfilehash: 47f74669da62997ea08404dbddd8a4deba34bee3
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/26/2018
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="creating-xml-trees-visual-basic"></a>建立 XML 樹狀結構 (Visual Basic)
 其中一個最常見的 XML 工做為建構 XML 樹狀結構。 本節描述數種建立這些樹狀結構的方式。  

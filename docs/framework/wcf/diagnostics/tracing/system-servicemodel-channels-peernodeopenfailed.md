@@ -1,24 +1,12 @@
 ---
 title: System.ServiceModel.Channels.PeerNodeOpenFailed
-ms.custom: 
 ms.date: 03/30/2017
-ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.technology: dotnet-clr
-ms.tgt_pltfrm: 
-ms.topic: article
 ms.assetid: fd908a42-30d1-4301-bc33-35b503896634
-caps.latest.revision: "7"
-author: dotnet-bot
-ms.author: dotnetcontent
-manager: wpickett
-ms.workload: dotnet
-ms.openlocfilehash: 8ad076c753ea619deee842ad1a2de27fe1b4e7cf
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.openlocfilehash: b3eb983ec59fb3efbcad5d8b985a52bb2680e2db
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="systemservicemodelchannelspeernodeopenfailed"></a>System.ServiceModel.Channels.PeerNodeOpenFailed
 嘗試開啟芳鄰連線失敗。  
@@ -29,7 +17,7 @@ ms.lasthandoff: 12/22/2017
 ## <a name="troubleshooting"></a>疑難排解  
  請確定兩個節點都具備有效的位址，並且正確設定。  
   
-## <a name="see-also"></a>請參閱  
+## <a name="see-also"></a>另請參閱  
  [追蹤](../../../../../docs/framework/wcf/diagnostics/tracing/index.md)  
  [使用追蹤為應用程式進行疑難排解](../../../../../docs/framework/wcf/diagnostics/tracing/using-tracing-to-troubleshoot-your-application.md)  
  [管理與診斷](../../../../../docs/framework/wcf/diagnostics/index.md)

@@ -1,31 +1,19 @@
 ---
 title: 用於 WCF 的安全性概念
-ms.custom: ''
 ms.date: 03/30/2017
-ms.prod: .net-framework
-ms.reviewer: ''
-ms.suite: ''
-ms.technology:
-- dotnet-clr
-ms.tgt_pltfrm: ''
-ms.topic: article
 ms.assetid: 3b9dfcf5-4bf1-4f35-9070-723171c823a1
-caps.latest.revision: 15
 author: BrucePerlerMS
-ms.author: bruceper
 manager: mbaldwin
-ms.workload:
-- dotnet
-ms.openlocfilehash: 74b16698d40747937a89f84f0d958178b42d2e44
-ms.sourcegitcommit: 94d33cadc5ff81d2ac389bf5f26422c227832052
+ms.openlocfilehash: ac76f1742ab72de9f5180d1ea2fcbc668ec2140c
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/30/2018
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="security-concepts-used-in-wcf"></a>用於 WCF 的安全性概念
-[!INCLUDE[indigo1](../../../../includes/indigo1-md.md)] 安全性是根據已經在使用中並且部署於各種安全性基礎結構的概念建置。  
+Windows Communication Foundation (WCF) 安全性是建置在使用中的概念，並部署在各種安全性基礎結構。  
   
- [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] 支援其中某些基礎結構，例如 Secure Sockets Layer (SSL) over HTTP (HTTPS)。 但是，藉由在使用 SOAP 編碼之訊息上實作更新的互通安全性標準 (例如 WS-Security)，[!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] 不僅是只能支援現有的安全性基礎結構。 不論是使用現有的機制或新的互通標準，兩者都是依據相同的安全性概念。 因此，若要實作應用程式的最佳安全性模型，最重要的是了解現有基礎結構與較新標準所依據的概念。  
+ WCF 還支援某些基礎結構，例如安全通訊端層 (SSL) over HTTP (HTTPS)。 不過，WCF 超出現有安全性基礎結構支援藉由實作較新的互通安全性標準 （例如 Ws-security) 透過 SOAP 編碼訊息。 不論是使用現有的機制或新的互通標準，兩者都是依據相同的安全性概念。 因此，若要實作應用程式的最佳安全性模型，最重要的是了解現有基礎結構與較新標準所依據的概念。  
   
 ## <a name="introduction-to-security-for-wcf-web-services"></a>WCF Web 服務安全性簡介  
  在 WCF 安全性指導方針即這裡下載 Microsoft Patterns and Practices 群組所撰寫的深入的技術白皮書： [WCF 安全性指南 》](http://go.microsoft.com/fwlink/?LinkId=210210)。 本白皮書描述基本安全性概念，因為這些概念與 Web 服務、主要 WCF 安全性概念、內部網路應用程式案例，以及網際網路應用程式案例有關。  

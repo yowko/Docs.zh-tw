@@ -1,56 +1,44 @@
 ---
-title: "WCF 服務與 ASP.NET"
-ms.custom: 
+title: WCF 服務與 ASP.NET
 ms.date: 03/30/2017
-ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.technology: dotnet-clr
-ms.tgt_pltfrm: 
-ms.topic: article
 ms.assetid: b980496a-f0b0-4319-8e55-a0f0fa32da70
-caps.latest.revision: "24"
-author: dotnet-bot
-ms.author: dotnetcontent
-manager: wpickett
-ms.workload: dotnet
-ms.openlocfilehash: be497a1b12164fcca66314921e14d22bb96c20b5
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.openlocfilehash: 6cfd4f8a5dc2a7835cba409a37b09166e49e8df3
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="wcf-services-and-aspnet"></a>WCF 服務與 ASP.NET
-本主題討論將 [!INCLUDE[indigo1](../../../../includes/indigo1-md.md)] 服務與 ASP.NET 並存裝載，並且在 ASP.NET 相容性模式中進行裝載。  
+本主題討論裝載 Windows Communication Foundation (WCF) 服務的並行與 ASP.NET 裝載，並且在 ASP.NET 相容性模式中。  
   
 ## <a name="hosting-wcf-side-by-side-with-aspnet"></a>將 WCF 與 ASP.NET 並存裝載  
- 裝載在網際網路資訊服務 (IIS) 中的 [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] 服務可以與 .ASPX 頁面和 ASMX Web 服務位於單一、共同的應用程式定義域中。 ASP.NET 可同時為 [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] 和 ASP.NET HTTP 執行階段提供通用的基礎結構服務，例如 AppDomain 管理與動態編譯。 [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] 的預設組態會與 ASP.NET 並存。  
+ 網際網路資訊服務 (IIS) 裝載的 WCF 服務可以位於與。ASPX 頁面和 ASMX Web 服務位於單一、 共同的應用程式定義域。 ASP.NET 提供通用的基礎結構服務，例如 AppDomain 管理與 WCF 和 ASP.NET HTTP 執行階段動態編譯。 WCF 的預設組態是由並行與 ASP.NET。  
   
  ![WCF 服務和 ASP.NET： 共用狀態](../../../../docs/framework/wcf/feature-details/media/hostingwcfwithaspnet.gif "HostingWCFwithASPNET")  
   
- ASP.NET HTTP 執行階段會處理 ASP.NET 要求，但不會參與處理針對 [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] 服務進行的要求，就算這些服務與 ASP.NET 內容都裝載到相同的 AppDomain 也一樣。 反之，[!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] 服務模型會攔截發給 [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] 服務的訊息，並將這些訊息透過 [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] 傳輸/通道堆疊路由出去。  
+ ASP.NET HTTP 執行階段會處理 ASP.NET 要求，但不會參與處理要求的 WCF 服務，即使這些服務裝載於相同的 AppDomain 因為 ASP.NET 內容。 相反地，WCF 服務模型會攔截訊息定址到 WCF 服務，並透過 WCF 傳輸/通道堆疊路由傳送。  
   
  並存模型的結果如下：  
   
--   ASP.NET 和 [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] 服務可以共用 AppDomain 狀態。 由於這兩個架構可以並存在相同的 AppDomain 中，[!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] 也可以和 ASP.NET 共用 AppDomain 狀態 (包括靜態變數、事件等等)。  
+-   ASP.NET 和 WCF 服務可以共用 AppDomain 狀態。 因為這兩個架構可以共存於相同的 AppDomain，WCF 也可以共用 AppDomain 狀態 （包括靜態變數、 事件等等） 的 asp.net。  
   
--   不論裝載環境和傳輸為何，[!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] 服務的行為都是一致的。 ASP.NET HTTP 執行階段主要用來與 IIS/ASP.NET 裝載環境和 HTTP 通訊搭配使用。 另一方面，[!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] 則是會在各種裝載環境 ([!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] 會在 IIS 內部與外部採取一致的行為) 與各種傳輸 (透過 IIS 7.0 以及更新版本裝載的服務會在所公開的所有端點上採取一致的行為，即使這些端點當中有一些使用了 HTTP 以外的通訊協定) 中採取一致的行為。  
+-   WCF 服務的行為一致、 獨立的裝載環境和傳輸。 ASP.NET HTTP 執行階段主要用來與 IIS/ASP.NET 裝載環境和 HTTP 通訊搭配使用。 相反地，WCF 旨在各種裝載環境有一致的行為 (WCF 行為一致兩者 IIS 內部與外部) 與各種傳輸 (裝載於 IIS 7.0 和更新版本的服務會公開時，所有端點都有一致的行為即使一部分的這些端點使用 HTTP 以外的通訊協定）。  
   
--   在 AppDomain 中，HTTP 執行階段所實作的功能會套用到 ASP.NET 內容，但不會套用到 [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)]。 在 ASP.NET 應用程式平台中，有許多 HTTP 特定的功能無法套用到裝載於 AppDomain (其中包含 ASP.NET 內容) 內部的 [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] 服務。 下列為這些功能的範例：  
+-   在 AppDomain 中，HTTP 執行階段所實作的功能會套用到 ASP.NET 內容，但不是至 WCF。 許多 HTTP 特定的 ASP.NET 應用程式平台的功能不適用於裝載於 AppDomain，其中包含 ASP.NET 內容內部的 WCF 服務。 下列為這些功能的範例：  
   
-    -   HttpContext：當從 <xref:System.Web.HttpContext.Current%2A> 服務內存取時，`null` 一律為 [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)]。 使用<!--zz <xref:System.ServiceModel.OperationContext.Current.RequestContext>-->`RequestContext`改為。  
+    -   HttpContext:<xref:System.Web.HttpContext.Current%2A>一律`null`時從 WCF 服務內存取。 使用<!--zz <xref:System.ServiceModel.OperationContext.Current.RequestContext>-->`RequestContext`改為。  
   
-    -   檔案架構授權：在決定是否要授權服務要求時，[!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] 安全性模型不允許將存取控制清單 (ACL) 套用到服務的 .svc 檔。  
+    -   檔案為基礎的授權： WCF 安全性模型不允許存取控制清單 (ACL) 套用至服務的.svc 檔案中，決定是否授權服務要求時。  
   
-    -   以組態為基礎的 URL 授權： 同樣地，[!INCLUDE[indigo2](../../../../includes/indigo2-md.md)]安全性模型不會遵守任何在 System.Web 之指定的 URL 為基礎的授權規則\<授權 > 組態項目。 如果服務駐留在受到 ASP.NET 之 URL 授權規則保護的 URL 空間，則會忽略 [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] 要求的這些設定。  
+    -   以組態為基礎的 URL 授權： 同樣地，WCF 安全性模型不會遵守任何在 System.Web 之指定的 URL 為基礎的授權規則\<授權 > 組態項目。 如果服務駐留在受到 ASP URL 空間 WCF 要求會忽略這些設定。網路的 URL 授權規則。  
   
-    -   HttpModule 擴充性：一旦引發 [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] 事件，而且無法將處理傳回至 ASP.NET HTTP 管線時，[!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] 裝載基礎結構就會攔截 <xref:System.Web.HttpApplication.PostAuthenticateRequest> 要求。 寫入程式碼中以便在管線的較後期階段攔截要求的模組，無法攔截 [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] 要求。  
+    -   HttpModule 擴充性： WCF 裝載基礎結構會攔截 WCF 要求時<xref:System.Web.HttpApplication.PostAuthenticateRequest>，就會引發事件，並不會傳回至 ASP.NET HTTP 管線處理。 會被編碼為管線的階段攔截要求的模組不會攔截 WCF 要求。  
   
-    -   ASP.NET 模擬： 根據預設，[!INCLUDE[indigo2](../../../../includes/indigo2-md.md)]要求一律執行為 IIS 處理序識別，即使 ASP.NET 設定，讓使用 System.Web 的模擬\<y impersonate ="true"/ > 組態選項。  
+    -   ASP.NET 模擬： 根據預設，WCF 要求一律執行為 IIS 處理序識別，即使 ASP.NET 設定，讓使用 System.Web 的模擬\<y impersonate ="true"/ > 組態選項。  
   
- 這些限制只會套用至裝載在 IIS 應用程式中的 [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] 服務。 ASP.NET 內容的行為不會受到 [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] 存在事實的影響。  
+ 這些限制僅適用於 IIS 應用程式中裝載的 WCF 服務。 ASP.NET 內容的行為不受 WCF 存在。  
   
- 通常需要由 HTTP 管線提供功能的 [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] 應用程式，應該考慮使用不會受到主機與傳輸影響的 [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] 對等用法：  
+ 需要傳統上由 HTTP 管線提供功能的 WCF 應用程式應該考慮使用 WCF 對等用法，會受到主機與傳輸影響：  
   
 -   以 <xref:System.ServiceModel.OperationContext> 取代 <xref:System.Web.HttpContext>。  
   
@@ -58,26 +46,26 @@ ms.lasthandoff: 12/22/2017
   
 -   <xref:System.ServiceModel.Dispatcher.IDispatchMessageInspector> 或是自訂層級的通道，以取代 HTTP 模組。  
   
--   使用 [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] 模擬每一個作業，以取代 System.Web 模擬。  
+-   每個作業取代 System.Web 模擬使用 WCF 模擬。  
   
- 或者，您可以考慮在 [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] 的 ASP.NET 相容性模式中執行服務。  
+ 或者，您可以考慮在 WCF 的 ASP.NET 相容性模式中執行您的服務。  
   
 ## <a name="hosting-wcf-services-in-aspnet-compatibility-mode"></a>在 ASP.NET 相容性模式中裝載 WCF 服務  
- 雖然 [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] 模型可以在各種裝載環境與傳輸中表現一致的行為，但是常會有一些情況是應用程式根本不需要這麼大的彈性。 [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] 的 ASP.NET 相容性模式適用於不需要在 IIS 外部裝載，或是不會透過 HTTP 以外的通訊協定來通訊，但卻使用了 ASP.NET Web 應用程式平台所有功能的情況。  
+ 雖然 WCF 模型設計成各種裝載環境與傳輸有一致的行為，經常會有應用程式不需要這麼大的彈性的案例。 WCF 的 ASP.NET 相容性模式是適用於不需要能夠裝載在 IIS 外部或透過 HTTP 以外的通訊協定進行通訊，但卻使用所有的 ASP.NET Web 應用程式平台功能的情況。  
   
- 與預設的並存組態 ([!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] 裝載基礎結構會攔截 [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] 訊息並將這些訊息路由至 HTTP 管線外) 不同的是，在 ASP.NET 相容性模式中執行的 [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] 服務會充分參與 ASP.NET HTTP 要求的生命週期。 在相容性模式中，[!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] 服務會透過 <xref:System.Web.IHttpHandler> 實作來使用 HTTP 管線，方式與 ASPX 頁面要求和 ASMX Web 服務要求的處理方式差不多。 如此一來，[!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] 行為就會在下列 ASP.NET 功能上與 ASMX 行為一致：  
+ 不同於預設的並行設定，其中 WCF 裝載基礎結構會攔截 WCF 訊息，並將其傳送至 HTTP 管線外，在 ASP.NET 相容性模式中執行的 WCF 服務充分參與 ASP.NET HTTP 要求的生命週期。 在相容性模式中，WCF 服務會使用透過 HTTP 管線<xref:System.Web.IHttpHandler>類似的方式要求的處理 ASPX 頁面和 ASMX Web 服務的實作。 如此一來，WCF 運作方式完全相同 asmx 相對於在下列 ASP.NET 功能：  
   
--   在 ASP.NET 相容性模式中執行的 <xref:System.Web.HttpContext>: [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] 服務可以存取 <xref:System.Web.HttpContext.Current%2A> 與其關聯狀態。  
+-   <xref:System.Web.HttpContext>： 在 ASP.NET 相容性模式中執行 WCF 服務可以存取<xref:System.Web.HttpContext.Current%2A>和其相關聯的狀態。  
   
--   檔案架構授權：在 ASP.NET 相容性模式中執行的 [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] 服務可以將檔案系統存取控制清單 (ACL) 附加至服務的 .svc 檔中，以保護自身的安全。  
+-   檔案為基礎的授權： 在 ASP.NET 相容性模式中執行的 WCF 服務是安全的方法藉由附加至服務的.svc 檔案的檔案系統存取控制清單 (Acl)。  
   
--   可設定的 URL 授權：在 ASP.NET 相容性模式中執行 [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] 服務時，會強制執行 [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] 要求的 ASP.NET 的 URL 授權規則。  
+-   可設定 URL 授權： ASP。在 ASP.NET 相容性模式中執行 WCF 服務時，WCF 要求會強制執行網路的 URL 授權規則。  
   
--   <xref:System.Web.HttpModuleCollection> 擴充性：由於在 ASP.NET 相容性模式中執行的 [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] 服務會充分參與 ASP.NET HTTP 要求的生命週期，任何透過 HTTP 管線設定的 HTTP 模組都能夠在叫用服務前/後在 [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] 要求上運作。  
+-   <xref:System.Web.HttpModuleCollection> 擴充性： 在 ASP.NET 相容性模式中執行的因為 WCF 服務會充分參與 ASP.NET HTTP 要求的生命週期，在 HTTP 管線中設定任何 HTTP 模組是能夠之前和之後叫用服務，WCF 要求上運作。  
   
--   ASP.NET 模擬：如果已經針對應用程式啟用了 ASP.NET 模擬，則透過 ASP.NET 模擬執行緒目前的身分識別來執行的 [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] 服務可能會與 IIS 處理序身分識別不同。 如果同時針對特定的服務作業啟用了 ASP.NET 模擬與 [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] 模擬，則服務實作最終將會透過從 [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] 取得的識別來執行。  
+-   ASP.NET 模擬： WCF 服務執行使用目前的身分識別的 ASP.NET 模擬執行緒，如果已啟用 ASP.NET 模擬應用程式可能會與 IIS 處理序身分識別不同。 如果同時針對特定服務作業啟用了 ASP.NET 模擬與 WCF 模擬，服務實作最終會執行使用 WCF 從取得的身分識別。  
   
- [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] 的 ASP.NET 相容性模式會透過下列組態 (位於應用程式的 Web.config 檔中) 於應用程式層級啟用：  
+ WCF 的 ASP.NET 相容性模式會啟用應用程式層級透過下列組態 （位於應用程式的 Web.config 檔案中）：  
   
 ```xml  
 <system.serviceModel>  
@@ -85,9 +73,9 @@ ms.lasthandoff: 12/22/2017
 </system.serviceModel>  
 ```  
   
- 這個值預設為"`true`"若未指定。 此值設定為"`false`"表示所有[!INCLUDE[indigo2](../../../../includes/indigo2-md.md)]應用程式中執行的服務不會在 ASP.NET 相容性模式執行。  
+ 這個值預設為"`true`"若未指定。 此值設定為"`false`"表示所有應用程式中執行的 WCF 服務會在 ASP.NET 相容性模式中執行。  
   
- 由於 ASP.NET 相容性模式所隱含的要求處理語意在根本上就與 [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] 預設值不同，個別的服務實作將可控制是否要在啟用了 ASP.NET 相容性模式的應用程式裡面執行。 服務可以透過 <xref:System.ServiceModel.Activation.AspNetCompatibilityRequirementsAttribute> 來指出是否支援 ASP.NET 相容性模式。 這個屬性的預設值為 <xref:System.ServiceModel.Activation.AspNetCompatibilityRequirementsMode.Allowed>。  
+ 由於 ASP.NET 相容性模式所隱含的要求處理語意在本質上不同於 WCF 預設值，個別的服務實作能夠控制是否針對 ASP.NET 應用程式裡面執行已啟用相容性模式。 服務可以透過 <xref:System.ServiceModel.Activation.AspNetCompatibilityRequirementsAttribute> 來指出是否支援 ASP.NET 相容性模式。 這個屬性的預設值為 <xref:System.ServiceModel.Activation.AspNetCompatibilityRequirementsMode.Allowed>。  
   
  `[AspNetCompatibilityRequirements(RequirementsMode = AspNetCompatibilityRequirementsMode.Allowed)]`  
   
@@ -107,10 +95,10 @@ ms.lasthandoff: 12/22/2017
 |aspNetCompatibilityEnabled ="`false`"|<xref:System.ServiceModel.Activation.AspNetCompatibilityRequirementsMode.NotAllowed>|服務成功啟動。|  
   
 > [!NOTE]
->  IIS 7.0 和 WAS 允許 [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] 服務透過 HTTP 以外的通訊協定進行通訊。 但是，在啟用了 ASP.NET 相容性模式的應用程式中執行的 [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] 服務將不被允許公開非 HTTP 端點。 此類組態會在服務接收其第一則訊息時，產生啟動例外狀況。  
+>  IIS 7.0 和 WAS 允許 WCF 服務透過 HTTP 以外的通訊協定進行通訊。 不過，在應用程式啟用 ASP.NET 相容性模式中執行的 WCF 服務不允許公開非 HTTP 端點。 此類組態會在服務接收其第一則訊息時，產生啟動例外狀況。  
   
- 如需有關啟用 ASP.NET 相容性模式的[!INCLUDE[indigo2](../../../../includes/indigo2-md.md)]服務，請參閱<xref:System.ServiceModel.Activation.AspNetCompatibilityRequirementsMode>和[ASP.NET 相容性](../../../../docs/framework/wcf/samples/aspnet-compatibility.md)範例。  
+ 如需有關如何啟用 WCF 服務的 ASP.NET 相容性模式的詳細資訊，請參閱<xref:System.ServiceModel.Activation.AspNetCompatibilityRequirementsMode>和[ASP.NET 相容性](../../../../docs/framework/wcf/samples/aspnet-compatibility.md)範例。  
   
-## <a name="see-also"></a>請參閱  
+## <a name="see-also"></a>另請參閱  
  <xref:System.ServiceModel.Activation.AspNetCompatibilityRequirementsAttribute>  
  [Windows Server App Fabric 裝載功能](http://go.microsoft.com/fwlink/?LinkId=201276)

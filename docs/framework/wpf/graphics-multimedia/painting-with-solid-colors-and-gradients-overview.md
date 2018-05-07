@@ -1,13 +1,6 @@
 ---
-title: "使用純色和漸層繪製的概觀"
-ms.custom: 
+title: 使用純色和漸層繪製的概觀
 ms.date: 03/30/2017
-ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.technology: dotnet-wpf
-ms.tgt_pltfrm: 
-ms.topic: article
 helpviewer_keywords:
 - solid colors [WPF], painting with
 - painting with gradients [WPF]
@@ -16,16 +9,11 @@ helpviewer_keywords:
 - brushes [WPF], painting with gradients
 - painting with solid colors [WPF]
 ms.assetid: f5b182f3-c5c7-4cbe-9f2f-65e690d08255
-caps.latest.revision: "21"
-author: dotnet-bot
-ms.author: dotnetcontent
-manager: wpickett
-ms.workload: dotnet
-ms.openlocfilehash: bb71a1ae52b35b421474954410869f20fa004eb7
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.openlocfilehash: cea4b2dbd17178a6943b0f4a84182e65232330fb
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="painting-with-solid-colors-and-gradients-overview"></a>使用純色和漸層繪製的概觀
 本主題描述如何使用<xref:System.Windows.Media.SolidColorBrush>， <xref:System.Windows.Media.LinearGradientBrush>，和<xref:System.Windows.Media.RadialGradientBrush>來使用純色，線性漸層和放射狀漸層繪製的物件。  
@@ -74,7 +62,7 @@ ms.lasthandoff: 12/22/2017
   
 <a name="gradient"></a>   
 ## <a name="painting-an-area-with-a-gradient"></a>使用漸層繪製區域  
- 漸層筆刷會使用多種色彩繪製區域，這些色彩會沿著某個軸逐漸相互融合。 您可以使用它們來建立光影效果，讓控制項有立體的感覺。 您也可以使用它們來模擬玻璃、金屬、水和其他平滑表面。  [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)]提供兩種漸層筆刷類型：<xref:System.Windows.Media.LinearGradientBrush>和<xref:System.Windows.Media.RadialGradientBrush>。  
+ 漸層筆刷會使用多種色彩繪製區域，這些色彩會沿著某個軸逐漸相互融合。 您可以使用它們來建立光影效果，讓控制項有立體的感覺。 您也可以使用它們來模擬玻璃、金屬、水和其他平滑表面。  [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] 提供兩種漸層筆刷類型：<xref:System.Windows.Media.LinearGradientBrush>和<xref:System.Windows.Media.RadialGradientBrush>。  
   
 <a name="lineargradientbrush"></a>   
 ## <a name="linear-gradients"></a>線形漸層  
@@ -179,7 +167,7 @@ ms.lasthandoff: 12/22/2017
 ## <a name="painting-with-images-drawings-visuals-and-patterns"></a>使用影像、繪圖、視覺效果及圖樣繪製  
  <xref:System.Windows.Media.ImageBrush><xref:System.Windows.Media.DrawingBrush>，和<xref:System.Windows.Media.VisualBrush>類別可讓您使用影像、 繪圖、 或視覺效果繪製區域。 如需使用影像、繪圖及圖樣繪製的相關資訊，請參閱[使用影像、繪圖和視覺效果繪製](../../../../docs/framework/wpf/graphics-multimedia/painting-with-images-drawings-and-visuals.md)。  
   
-## <a name="see-also"></a>請參閱  
+## <a name="see-also"></a>另請參閱  
  <xref:System.Windows.Media.Brush>  
  <xref:System.Windows.Media.SolidColorBrush>  
  <xref:System.Windows.Media.LinearGradientBrush>  

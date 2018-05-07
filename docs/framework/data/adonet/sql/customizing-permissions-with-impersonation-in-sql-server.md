@@ -1,24 +1,12 @@
 ---
-title: "在 SQL Server 中使用模擬來自訂權限"
-ms.custom: 
+title: 在 SQL Server 中使用模擬來自訂權限
 ms.date: 03/30/2017
-ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.technology: dotnet-ado
-ms.tgt_pltfrm: 
-ms.topic: article
 ms.assetid: dc733d09-1d6d-4af0-9c4b-8d24504860f1
-caps.latest.revision: "6"
-author: douglaslMS
-ms.author: douglasl
-manager: craigg
-ms.workload: dotnet
-ms.openlocfilehash: 7175542d8a9441d9f0d3eeb05acc67cf12d6a270
-ms.sourcegitcommit: ed26cfef4e18f6d93ab822d8c29f902cff3519d1
+ms.openlocfilehash: ac2c6805a9ab49d95f68e56306d7d9fb8aab2a2c
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 01/17/2018
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="customizing-permissions-with-impersonation-in-sql-server"></a>在 SQL Server 中使用模擬來自訂權限
 許多應用程式會使用預存程序 (Stored Procedure) 來存取資料，並仰賴擁有權鏈結來限制基底資料表的存取。 您可以授與預存程序的 EXECUTE 權限，並撤銷或拒絕基底資料表的權限。 如果預存程序和資料表具有相同的擁有者，SQL Server 就不會檢查呼叫端的權限。 不過，如果物件具有不同的擁有者或在動態 SQL 的情況中，擁有權鏈結便沒有作用。  
@@ -84,7 +72,7 @@ CREATE PROCEDURE [procName] WITH EXECUTE AS 'proxyUser' AS ...
 |[內容切換](http://msdn.microsoft.com/library/ms188268.aspx)SQL Server 線上叢書中|包含說明如何使用 EXECUTE AS 子句之主題的連結。|  
 |[使用 EXECUTE AS 建立自訂權限集](http://msdn.microsoft.com/library/ms190384.aspx)和[在模組中使用 EXECUTE AS](http://msdn.microsoft.com/library/ms178106.aspx) SQL Server 線上叢書中|說明如何使用 EXECUTE AS 子句的主題。|  
   
-## <a name="see-also"></a>請參閱  
+## <a name="see-also"></a>另請參閱  
  [設定 ADO.NET 應用程式的安全性](../../../../../docs/framework/data/adonet/securing-ado-net-applications.md)  
  [SQL Server 安全性概觀](../../../../../docs/framework/data/adonet/sql/overview-of-sql-server-security.md)  
  [SQL Server 中的應用程式安全性案例](../../../../../docs/framework/data/adonet/sql/application-security-scenarios-in-sql-server.md)  

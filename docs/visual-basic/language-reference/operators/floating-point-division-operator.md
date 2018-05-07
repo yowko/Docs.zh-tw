@@ -1,12 +1,6 @@
 ---
 title: / 運算子 (Visual Basic)
 ms.date: 07/20/2015
-ms.prod: .net
-ms.reviewer: ''
-ms.suite: ''
-ms.technology:
-- devlang-visual-basic
-ms.topic: article
 f1_keywords:
 - vb./
 helpviewer_keywords:
@@ -22,14 +16,11 @@ helpviewer_keywords:
 - / operator [Visual Basic]
 - math operators [Visual Basic]
 ms.assetid: 335e97f2-c434-439e-9064-76973a051101
-caps.latest.revision: 18
-author: dotnet-bot
-ms.author: dotnetcontent
-ms.openlocfilehash: 2f221e863725b9aeb0b3fa3219b3a881541e2be0
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.openlocfilehash: 17eb3eddfae3cf7c818514a2fee20f646876a6ec
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="-operator-visual-basic"></a>/ 運算子 (Visual Basic)
 兩數相除並傳回浮點結果。  
@@ -42,10 +33,10 @@ expression1 / expression2
   
 ## <a name="parts"></a>組件  
  `expression1`  
- 必要項。 任何數值運算式。  
+ 必要。 任何數值運算式。  
   
  `expression2`  
- 必要項。 任何數值運算式。  
+ 必要。 任何數值運算式。  
   
 ## <a name="supported-types"></a>支援的型別  
  所有數字類型，包括不帶正負號和浮點類型和`Decimal`。  
@@ -75,8 +66,8 @@ expression1 / expression2
 |運算元資料類型|行為如果`expression2`為零|  
 |------------------------|---------------------------------------|  
 |浮點數 (`Single`或`Double`)|傳回無限大 (<xref:System.Double.PositiveInfinity>或<xref:System.Double.NegativeInfinity>)，或<xref:System.Double.NaN>（不是數字） 如果`expression1`也是零|  
-|`Decimal`|擲回<xref:System.DivideByZeroException>|  
-|整數 （帶正負號或不帶正負號）|嘗試轉換回整數類資料類型會擲回<xref:System.OverflowException>因為整數類資料類型無法接受<xref:System.Double.PositiveInfinity>， <xref:System.Double.NegativeInfinity>，或<xref:System.Double.NaN>|  
+|`Decimal`|擲回 <xref:System.DivideByZeroException>|  
+|整數 （帶正負號或不帶正負號）|嘗試轉換回整數類資料類型會擲回<xref:System.OverflowException>因為整數類資料類型無法接受<xref:System.Double.PositiveInfinity>， <xref:System.Double.NegativeInfinity>，或 <xref:System.Double.NaN>|  
   
 > [!NOTE]
 >  `/`運算子可以是*多載*，這表示，類別或結構可以重新定義它的行為時的運算元有該類別或結構的類型。 如果您的程式碼會使用此運算子，這類類別或結構上，請確定您了解其重新定義的行為。 如需詳細資訊，請參閱[運算子程序](../../../visual-basic/programming-guide/language-features/procedures/operator-procedures.md)。  

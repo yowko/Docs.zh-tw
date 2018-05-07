@@ -1,10 +1,6 @@
 ---
 title: Object Data Type
 ms.date: 07/20/2015
-ms.prod: .net
-ms.suite: 
-ms.technology: devlang-visual-basic
-ms.topic: article
 f1_keywords:
 - vb.Object
 - vb.Variant
@@ -14,14 +10,11 @@ helpviewer_keywords:
 - Object data type
 - Object data type [Visual Basic], reference
 ms.assetid: 61ea4a7c-3b3d-48d4-adc4-eacfa91779b2
-caps.latest.revision: "19"
-author: dotnet-bot
-ms.author: dotnetcontent
-ms.openlocfilehash: 847f2b50296ad1a1ba6f0009d1d6afced27f9abe
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.openlocfilehash: e9b1da5a88c12e0d883c3afe63be98c3fa3e9173
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="object-data-type"></a>Object Data Type
 參考物件的保留位址。 您可以將任何參考類型 （字串、 陣列、 類別或介面） 指派給`Object`變數。 `Object`變數也可以指任何實值類型的資料 (數值， `Boolean`， `Char`， `Date`、 結構或列舉型別)。  
@@ -43,7 +36,7 @@ datTyp = Type.GetTypeCode(myObject.GetType())
   
  `Object`資料類型是參考類型。 不過，Visual Basic 會將`Object`變數作為時參考的是實值類型的實值類型。  
   
-## <a name="storage"></a>儲存區  
+## <a name="storage"></a>存放裝置  
  任何資料類型，則是指，`Object`本身，但而不是值的指標變數不包含資料值。 在電腦記憶體中，永遠使用四個位元組，但這不包括代表變數的值資料的儲存體。 由於使用找到的資料指標的程式碼`Object`持有實值類型的變數會稍微慢一點比明確存取具類型的變數。  
   
 ## <a name="programming-tips"></a>程式設計提示  
@@ -58,7 +51,7 @@ datTyp = Type.GetTypeCode(myObject.GetType())
   
      不過，如果您實值類型之間進行轉換和`Object`，Visual Basic 會在執行作業呼叫*boxing*和*unboxing*，剩下的執行速度變慢。  
   
--   **類型字元。** `Object`沒有任何常值類型字元或識別項類型字元。  
+-   **類型字元。** `Object` 沒有任何常值類型字元或識別項類型字元。  
   
 -   **架構類型。** .NET Framework 中對應的類型是<xref:System.Object?displayProperty=nameWithType>類別。  
   

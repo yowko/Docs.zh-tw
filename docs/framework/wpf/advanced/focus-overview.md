@@ -1,13 +1,6 @@
 ---
-title: "焦點概觀"
-ms.custom: 
+title: 焦點概觀
 ms.date: 03/30/2017
-ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.technology: dotnet-wpf
-ms.tgt_pltfrm: 
-ms.topic: article
 dev_langs:
 - csharp
 - vb
@@ -15,16 +8,11 @@ helpviewer_keywords:
 - applications [WPF], focus
 - focus in applications [WPF]
 ms.assetid: 0230c4eb-0c8a-462b-ac4b-ae3e511659f4
-caps.latest.revision: "19"
-author: dotnet-bot
-ms.author: dotnetcontent
-manager: wpickett
-ms.workload: dotnet
-ms.openlocfilehash: d35b65f88452085e601569b9dcfc62a541a1655f
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.openlocfilehash: 620839a0060469604d0affa6637c3cafac0f62c2
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="focus-overview"></a>焦點概觀
 [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] 中有兩個關於焦點的主要概念︰鍵盤焦點和邏輯焦點。  鍵盤焦點是指接收鍵盤輸入的項目，邏輯焦點是指焦點範圍中具有焦點的項目。  本概觀會詳細討論這些概念。  了解這些概念的差異對建立複雜的應用程式很重要，這些應用程式有多個可取得焦點的區域。  
@@ -69,11 +57,11 @@ ms.lasthandoff: 12/22/2017
  [!code-csharp[FocusSnippets#FocusSetIsFocusScope](../../../../samples/snippets/csharp/VS_Snippets_Wpf/FocusSnippets/CSharp/Window1.xaml.cs#focussetisfocusscope)]
  [!code-vb[FocusSnippets#FocusSetIsFocusScope](../../../../samples/snippets/visualbasic/VS_Snippets_Wpf/FocusSnippets/visualbasic/window1.xaml.vb#focussetisfocusscope)]  
   
- <xref:System.Windows.Input.FocusManager.GetFocusScope%2A>傳回指定之項目的焦點領域。  
+ <xref:System.Windows.Input.FocusManager.GetFocusScope%2A> 傳回指定之項目的焦點領域。  
   
  中的類別[!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)]這是預設的焦點領域是<xref:System.Windows.Window>， <xref:System.Windows.Controls.MenuItem>， <xref:System.Windows.Controls.ToolBar>，和<xref:System.Windows.Controls.ContextMenu>。  
   
- <xref:System.Windows.Input.FocusManager.GetFocusedElement%2A>取得焦點的項目指定的焦點領域。  <xref:System.Windows.Input.FocusManager.SetFocusedElement%2A>設定焦點的項目中指定的焦點領域。  <xref:System.Windows.Input.FocusManager.SetFocusedElement%2A>通常用來設定初始焦點的項目。  
+ <xref:System.Windows.Input.FocusManager.GetFocusedElement%2A> 取得焦點的項目指定的焦點領域。  <xref:System.Windows.Input.FocusManager.SetFocusedElement%2A> 設定焦點的項目中指定的焦點領域。  <xref:System.Windows.Input.FocusManager.SetFocusedElement%2A> 通常用來設定初始焦點的項目。  
   
  下例在焦點範圍中設定焦點項目，並取得焦點範圍的焦點項目。  
   
@@ -97,20 +85,20 @@ ms.lasthandoff: 12/22/2017
 ## <a name="navigating-focus-programmatically"></a>以程式設計方式巡覽焦點  
  其他[!INCLUDE[TLA#tla_api](../../../../includes/tlasharptla-api-md.md)]焦點會使用<xref:System.Windows.UIElement.MoveFocus%2A>和<xref:System.Windows.UIElement.PredictFocus%2A>。  
   
- <xref:System.Windows.FrameworkElement.MoveFocus%2A>將焦點變更至應用程式中的下一個項目。  A<xref:System.Windows.Input.TraversalRequest>用來指定的方向。   <xref:System.Windows.Input.FocusNavigationDirection>傳遞至<xref:System.Windows.UIElement.MoveFocus%2A>指定不同的方向焦點可以移動，例如<xref:System.Windows.Input.FocusNavigationDirection.First>， <xref:System.Windows.Input.FocusNavigationDirection.Last>，<xref:System.Windows.Input.FocusNavigationDirection.Up>和<xref:System.Windows.Input.FocusNavigationDirection.Down>。  
+ <xref:System.Windows.FrameworkElement.MoveFocus%2A> 將焦點變更至應用程式中的下一個項目。  A<xref:System.Windows.Input.TraversalRequest>用來指定的方向。   <xref:System.Windows.Input.FocusNavigationDirection>傳遞至<xref:System.Windows.UIElement.MoveFocus%2A>指定不同的方向焦點可以移動，例如<xref:System.Windows.Input.FocusNavigationDirection.First>， <xref:System.Windows.Input.FocusNavigationDirection.Last>，<xref:System.Windows.Input.FocusNavigationDirection.Up>和<xref:System.Windows.Input.FocusNavigationDirection.Down>。  
   
  下列範例會使用<xref:System.Windows.FrameworkElement.MoveFocus%2A>變更焦點的項目。  
   
  [!code-csharp[focussample#FocusSampleMoveFocus](../../../../samples/snippets/csharp/VS_Snippets_Wpf/FocusSample/CSharp/Window1.xaml.cs#focussamplemovefocus)]
  [!code-vb[focussample#FocusSampleMoveFocus](../../../../samples/snippets/visualbasic/VS_Snippets_Wpf/FocusSample/visualbasic/window1.xaml.vb#focussamplemovefocus)]  
   
- <xref:System.Windows.FrameworkElement.PredictFocus%2A>傳回變更焦點時接收焦點的物件。  目前，只有<xref:System.Windows.Input.FocusNavigationDirection.Up>， <xref:System.Windows.Input.FocusNavigationDirection.Down>， <xref:System.Windows.Input.FocusNavigationDirection.Left>，和<xref:System.Windows.Input.FocusNavigationDirection.Right>支援<xref:System.Windows.FrameworkElement.PredictFocus%2A>。  
+ <xref:System.Windows.FrameworkElement.PredictFocus%2A> 傳回變更焦點時接收焦點的物件。  目前，只有<xref:System.Windows.Input.FocusNavigationDirection.Up>， <xref:System.Windows.Input.FocusNavigationDirection.Down>， <xref:System.Windows.Input.FocusNavigationDirection.Left>，和<xref:System.Windows.Input.FocusNavigationDirection.Right>支援<xref:System.Windows.FrameworkElement.PredictFocus%2A>。  
   
 <a name="Focus_Events"></a>   
 ## <a name="focus-events"></a>焦點事件  
  與鍵盤焦點相關的事件是<xref:System.Windows.Input.Keyboard.PreviewGotKeyboardFocus>，<xref:System.Windows.Input.Keyboard.GotKeyboardFocus>和<xref:System.Windows.Input.Keyboard.PreviewLostKeyboardFocus>， <xref:System.Windows.Input.Keyboard.LostKeyboardFocus>。  為附加事件上定義之事件<xref:System.Windows.Input.Keyboard>類別，但更容易存取做為基底項目類別上的對等路由事件。  如需事件的詳細資訊，請參閱[路由事件概觀](../../../../docs/framework/wpf/advanced/routed-events-overview.md)。  
   
- <xref:System.Windows.Input.Keyboard.GotKeyboardFocus>當項目取得鍵盤焦點時引發。  <xref:System.Windows.Input.Keyboard.LostKeyboardFocus>項目失去鍵盤焦點時引發。  如果<xref:System.Windows.Input.Keyboard.PreviewGotKeyboardFocus>事件或<xref:System.Windows.Input.Keyboard.PreviewLostKeyboardFocusEvent>處理事件和<xref:System.Windows.RoutedEventArgs.Handled%2A>設`true`，則不會變更焦點。  
+ <xref:System.Windows.Input.Keyboard.GotKeyboardFocus> 當項目取得鍵盤焦點時引發。  <xref:System.Windows.Input.Keyboard.LostKeyboardFocus> 項目失去鍵盤焦點時引發。  如果<xref:System.Windows.Input.Keyboard.PreviewGotKeyboardFocus>事件或<xref:System.Windows.Input.Keyboard.PreviewLostKeyboardFocusEvent>處理事件和<xref:System.Windows.RoutedEventArgs.Handled%2A>設`true`，則不會變更焦點。  
   
  下列範例會附加<xref:System.Windows.UIElement.GotKeyboardFocus>和<xref:System.Windows.UIElement.LostKeyboardFocus>事件處理常式， <xref:System.Windows.Controls.TextBox>。  
   
@@ -126,9 +114,9 @@ ms.lasthandoff: 12/22/2017
  [!code-csharp[keyboardsample#KeyboardSampleLostFocus](../../../../samples/snippets/csharp/VS_Snippets_Wpf/KeyboardSample/CSharp/Window1.xaml.cs#keyboardsamplelostfocus)]
  [!code-vb[keyboardsample#KeyboardSampleLostFocus](../../../../samples/snippets/visualbasic/VS_Snippets_Wpf/KeyboardSample/visualbasic/window1.xaml.vb#keyboardsamplelostfocus)]  
   
- 邏輯焦點與相關的事件是<xref:System.Windows.UIElement.GotFocus>和<xref:System.Windows.UIElement.LostFocus>。  這些事件上定義<xref:System.Windows.Input.FocusManager>為附加的事件，但<xref:System.Windows.Input.FocusManager>不會公開 CLR 事件包裝函式。  <xref:System.Windows.UIElement>和<xref:System.Windows.ContentElement>更方便地公開 （expose) 這些事件。  
+ 邏輯焦點與相關的事件是<xref:System.Windows.UIElement.GotFocus>和<xref:System.Windows.UIElement.LostFocus>。  這些事件上定義<xref:System.Windows.Input.FocusManager>為附加的事件，但<xref:System.Windows.Input.FocusManager>不會公開 CLR 事件包裝函式。  <xref:System.Windows.UIElement> 和<xref:System.Windows.ContentElement>更方便地公開 （expose) 這些事件。  
   
-## <a name="see-also"></a>請參閱  
+## <a name="see-also"></a>另請參閱  
  <xref:System.Windows.Input.FocusManager>  
  <xref:System.Windows.UIElement>  
  <xref:System.Windows.ContentElement>  

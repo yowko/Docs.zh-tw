@@ -1,28 +1,16 @@
 ---
-title: "Windows Form DataGridView 和 DataGrid 控制項之間的差異"
-ms.custom: 
+title: Windows Form DataGridView 和 DataGrid 控制項之間的差異
 ms.date: 03/30/2017
-ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.technology: dotnet-winforms
-ms.tgt_pltfrm: 
-ms.topic: article
 helpviewer_keywords:
 - data grids [Windows Forms
 - DataGrid control [Windows Forms], DataGridView control compared
 - DataGridView control [Windows Forms], DataGrid control compared
 ms.assetid: d412c786-140e-4210-8a56-a68467530a55
-caps.latest.revision: "12"
-author: dotnet-bot
-ms.author: dotnetcontent
-manager: wpickett
-ms.workload: dotnet
-ms.openlocfilehash: 3bc6d1fa2450d0aba52bd6a5a030c025fede0cb2
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.openlocfilehash: d0a82d5724ebe142ae080fc930665733e701e237
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="differences-between-the-windows-forms-datagridview-and-datagrid-controls"></a>Windows Form DataGridView 和 DataGrid 控制項之間的差異
 <xref:System.Windows.Forms.DataGridView>控制項是新的控制項，以取代<xref:System.Windows.Forms.DataGrid>控制項。 <xref:System.Windows.Forms.DataGridView>控制項提供許多基本和進階功能中遺漏<xref:System.Windows.Forms.DataGrid>控制項。 此外，架構的<xref:System.Windows.Forms.DataGridView>控制項可以擴充和自訂比更容易<xref:System.Windows.Forms.DataGrid>控制項。  
@@ -43,7 +31,7 @@ ms.lasthandoff: 12/22/2017
   
  因為<xref:System.Windows.Forms.DataGridView>控制項全新的架構，可讓您使用沒有直接的轉換路徑<xref:System.Windows.Forms.DataGrid>與自訂<xref:System.Windows.Forms.DataGridView>控制項。 許多<xref:System.Windows.Forms.DataGrid>自訂化內容有不必要的<xref:System.Windows.Forms.DataGridView>控制項，不過，由於可在新控制項的內建功能。 如果您已經建立自訂的資料行類型<xref:System.Windows.Forms.DataGrid>您想要使用的控制項<xref:System.Windows.Forms.DataGridView>控制項，您必須實作一次使用新的架構。 如需詳細資訊，請參閱[自訂 Windows Form DataGridView 控制項](../../../../docs/framework/winforms/controls/customizing-the-windows-forms-datagridview-control.md)。  
   
-## <a name="see-also"></a>請參閱  
+## <a name="see-also"></a>另請參閱  
  <xref:System.Windows.Forms.DataGridView>  
  <xref:System.Windows.Forms.DataGrid>  
  <xref:System.Windows.Forms.BindingSource>  

@@ -1,17 +1,12 @@
 ---
 title: 索引屬性 (F#)
 description: '深入了解 F # 編製索引的屬性，可提供陣列存取權限已排序的資料屬性。'
-author: cartermp
-ms.author: phcart
 ms.date: 05/16/2016
-ms.topic: language-reference
-ms.prod: dotnet-fsharp
-ms.devlang: fsharp
-ms.openlocfilehash: 39396b3a5ec43f9a8ab0df96afeb69e05801c752
-ms.sourcegitcommit: 03ee570f6f528a7d23a4221dcb26a9498edbdf8c
+ms.openlocfilehash: b3945c7fc22977373b601856036178e890abc13e
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/28/2018
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="indexed-properties"></a>索引屬性
 

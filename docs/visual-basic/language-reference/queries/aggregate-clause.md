@@ -1,11 +1,6 @@
 ---
-title: "Aggregate 子句 (Visual Basic)"
+title: Aggregate 子句 (Visual Basic)
 ms.date: 07/20/2015
-ms.prod: .net
-ms.reviewer: 
-ms.suite: 
-ms.technology: devlang-visual-basic
-ms.topic: article
 f1_keywords:
 - vb.QueryAggregateIn
 - vb.QueryAggregate
@@ -15,14 +10,11 @@ helpviewer_keywords:
 - Aggregate statement [Visual Basic]
 - queries [Visual Basic], Aggregate
 ms.assetid: 1315a814-5db6-4077-b34b-b141e11cc0eb
-caps.latest.revision: "25"
-author: dotnet-bot
-ms.author: dotnetcontent
-ms.openlocfilehash: 47017414a92bfbca0df4ce6e2b70398a01762d37
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.openlocfilehash: 1db4b7fdcf9c8a38c2c49eca9d874eccea90ab1d
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="aggregate-clause-visual-basic"></a>Aggregate 子句 (Visual Basic)
 套用至集合的一個或多個彙總函式。  
@@ -40,11 +32,11 @@ Aggregate element [As type] In collection _
   
 |詞彙|定義|  
 |---|---|  
-|`element`|必要項。 變數，可用來逐一查看集合的元素。|  
-|`type`|選擇項。 `element` 的類型。 如果未不指定任何類型，類型`element`推斷從`collection`。|  
-|`collection`|必要項。 指的是集合上操作。|  
-|`clause`|選擇項。 一或多個查詢子句，例如`Where`子句，來限定要套用彙總子句或子句來查詢結果。|  
-|`expressionList`|必要項。 一或多個逗號分隔的運算式，識別要套用至集合的彙總函式。 您可以將別名套用至指定成員名稱的查詢結果的彙總函式。 如果提供了沒有別名，就會使用彙總函式的名稱。 如需範例，請參閱本主題稍後的彙總函式的相關章節。|  
+|`element`|必要。 變數，可用來逐一查看集合的元素。|  
+|`type`|選擇性。 `element` 的類型。 如果未不指定任何類型，類型`element`推斷從`collection`。|  
+|`collection`|必要。 指的是集合上操作。|  
+|`clause`|選擇性。 一或多個查詢子句，例如`Where`子句，來限定要套用彙總子句或子句來查詢結果。|  
+|`expressionList`|必要。 一或多個逗號分隔的運算式，識別要套用至集合的彙總函式。 您可以將別名套用至指定成員名稱的查詢結果的彙總函式。 如果提供了沒有別名，就會使用彙總函式的名稱。 如需範例，請參閱本主題稍後的彙總函式的相關章節。|  
   
 ## <a name="remarks"></a>備註  
  `Aggregate`子句可以用來在查詢中包含彙總函式。 彙總函式會執行檢查及計算值的集合，並傳回單一值。 您可以使用查詢結果型別的成員，以存取計算的值。 您可以使用標準彙總函式`All`， `Any`， `Average`， `Count`， `LongCount`， `Max`， `Min`，和`Sum`函式。 這些函式是很熟悉的開發人員熟悉 SQL 中的彙總的。 本主題的下一節將描述這些。  
@@ -56,7 +48,7 @@ Aggregate element [As type] In collection _
 ## <a name="aggregate-functions"></a>彙總函式  
  下列清單說明適用於標準彙總函式`Aggregate`子句。  
   
-|函式|說明|  
+|功能|描述|  
 |---|---|  
 |`All`|傳回`true`如果集合中的所有元素都符合指定的條件; 否則會傳回`false`。 以下是一個範例：<br /><br /> [!code-vb[VbSimpleQuerySamples#5](../../../visual-basic/language-reference/queries/codesnippet/VisualBasic/aggregate-clause_1.vb)]|  
 |`Any`|傳回`true`如果集合中的任何項目符合指定的條件; 否則會傳回`false`。 以下是一個範例：<br /><br /> [!code-vb[VbSimpleQuerySamples#6](../../../visual-basic/language-reference/queries/codesnippet/VisualBasic/aggregate-clause_2.vb)]|  

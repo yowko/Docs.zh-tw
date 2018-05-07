@@ -1,13 +1,6 @@
 ---
-title: "如何：取得 Windows Form DataGridView 控制項中選取的儲存格、資料列和資料行"
-ms.custom: 
+title: 如何：取得 Windows Form DataGridView 控制項中選取的儲存格、資料列和資料行
 ms.date: 03/30/2017
-ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.technology: dotnet-winforms
-ms.tgt_pltfrm: 
-ms.topic: article
 dev_langs:
 - csharp
 - vb
@@ -16,16 +9,11 @@ helpviewer_keywords:
 - DataGridView control [Windows Forms], getting selection
 - getting selection [Windows Forms], DataGridView control [Windows Forms]
 ms.assetid: d93c4b5b-498e-49bc-982a-2229d61778e4
-caps.latest.revision: "17"
-author: dotnet-bot
-ms.author: dotnetcontent
-manager: wpickett
-ms.workload: dotnet
-ms.openlocfilehash: 22b44668b403b5a991c03de661b6e680ccde0a44
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.openlocfilehash: a1d2338250abbced89ef7821d02edc654d26d7fa
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="how-to-get-the-selected-cells-rows-and-columns-in-the-windows-forms-datagridview-control"></a>如何：取得 Windows Form DataGridView 控制項中選取的儲存格、資料列和資料行
 您可以取得選取的資料格、 資料列或資料行從<xref:System.Windows.Forms.DataGridView>控制項使用對應的屬性： <xref:System.Windows.Forms.DataGridView.SelectedCells%2A>， <xref:System.Windows.Forms.DataGridView.SelectedRows%2A>，和<xref:System.Windows.Forms.DataGridView.SelectedColumns%2A>。 在下列程序中，您會取得選取的資料格，並顯示其資料列和資料行索引中的<xref:System.Windows.Forms.MessageBox>。  
@@ -57,7 +45,7 @@ ms.lasthandoff: 12/22/2017
 ## <a name="compiling-the-code"></a>編譯程式碼  
  這個範例需要：  
   
--   <xref:System.Windows.Forms.Button>控制項名為`selectedCellsButton`， `selectedRowsButton`，和`selectedColumnsButton`，每個處理常式的<xref:System.Windows.Forms.Control.Click>附加事件。  
+-   <xref:System.Windows.Forms.Button> 控制項名為`selectedCellsButton`， `selectedRowsButton`，和`selectedColumnsButton`，每個處理常式的<xref:System.Windows.Forms.Control.Click>附加事件。  
   
 -   名為 `dataGridView1` 的 <xref:System.Windows.Forms.DataGridView> 控制項。  
   
@@ -66,7 +54,7 @@ ms.lasthandoff: 12/22/2017
 ## <a name="robust-programming"></a>穩固程式設計  
  本主題中所描述的集合不會執行有效率地大量的資料格、 資料列或資料行中選取時。 如需大量的資料搭配使用這些集合的詳細資訊，請參閱[縮放 Windows Form DataGridView 控制項的最佳作法](../../../../docs/framework/winforms/controls/best-practices-for-scaling-the-windows-forms-datagridview-control.md)。  
   
-## <a name="see-also"></a>請參閱  
+## <a name="see-also"></a>另請參閱  
  <xref:System.Windows.Forms.DataGridView>  
  <xref:System.Windows.Forms.DataGridView.SelectionMode%2A>  
  <xref:System.Windows.Forms.DataGridView.AreAllCellsSelected%2A>  

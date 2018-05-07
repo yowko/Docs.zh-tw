@@ -1,26 +1,12 @@
 ---
 title: 疑難排解相互關聯
-ms.custom: ''
 ms.date: 03/30/2017
-ms.prod: .net-framework
-ms.reviewer: ''
-ms.suite: ''
-ms.technology:
-- dotnet-clr
-ms.tgt_pltfrm: ''
-ms.topic: article
 ms.assetid: 98003875-233d-4512-a688-4b2a1b0b5371
-caps.latest.revision: 11
-author: dotnet-bot
-ms.author: dotnetcontent
-manager: wpickett
-ms.workload:
-- dotnet
-ms.openlocfilehash: 2de3a8cac6e12d898173f8181b295c3e2e461cc7
-ms.sourcegitcommit: 94d33cadc5ff81d2ac389bf5f26422c227832052
+ms.openlocfilehash: c597012a5ff69ecb700c51e00ac7d1218962e9ad
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/30/2018
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="troubleshooting-correlation"></a>疑難排解相互關聯
 相互關聯用於讓工作流程服務訊息彼此之間產生關聯，以及讓工作流程服務訊息和正確的工作流程執行個體產生關聯，但是，如果設定錯誤，將不會收到訊息，而且應用程式將不會正確運作。 本主題提供數個疑難排解相互關聯問題方法的概觀，同時也列出使用相互關聯時可能發生的部分常見問題。  
@@ -146,7 +132,7 @@ supports the context protocol and has a valid context initialized.
  如需詳細資訊，請參閱[Context Exchange](../../../../docs/framework/wcf/feature-details/context-exchange-correlation.md)。  
   
 ## <a name="common-request-reply-correlation-issues"></a>常見的要求-回覆相互關聯問題  
- 要求-回覆相互關聯會搭配<xref:System.ServiceModel.Activities.Receive> / <xref:System.ServiceModel.Activities.SendReply>組用來實作雙向作業，在工作流程服務與<xref:System.ServiceModel.Activities.Send> / <xref:System.ServiceModel.Activities.ReceiveReply>叫用雙向作業中另一個 Web 組服務。 在 WCF 服務中叫用雙向作業時，服務可以是傳統的命令式程式碼架構 [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] 服務，或是工作流程服務。 若要使用要求-回覆相互關聯，則必須使用雙向繫結，例如 <xref:System.ServiceModel.BasicHttpBinding>，而且必須是雙向作業。  
+ 要求-回覆相互關聯會搭配<xref:System.ServiceModel.Activities.Receive> / <xref:System.ServiceModel.Activities.SendReply>組用來實作雙向作業，在工作流程服務與<xref:System.ServiceModel.Activities.Send> / <xref:System.ServiceModel.Activities.ReceiveReply>叫用雙向作業中另一個 Web 組服務。 當叫用雙向作業中的 WCF 服務，服務可以是任一個傳統命令式程式碼為基礎的 WCF 服務，或是可以是工作流程服務。 若要使用要求-回覆相互關聯，則必須使用雙向繫結，例如 <xref:System.ServiceModel.BasicHttpBinding>，而且必須是雙向作業。  
   
  如果工作流程服務的雙向作業在平行或重疊<xref:System.ServiceModel.Activities.Receive> / <xref:System.ServiceModel.Activities.SendReply>或<xref:System.ServiceModel.Activities.Send> / <xref:System.ServiceModel.Activities.ReceiveReply>組，則隱含的相互關聯控制代碼管理提供<xref:System.ServiceModel.Activities.WorkflowServiceHost>可能不夠，特別是在高壓力的情況下，訊息可能不會正確路由和。 若要防止發生這個問題，建議您在使用要求-回覆相互關聯時，一律明確指定 <xref:System.ServiceModel.Activities.CorrelationHandle>。 當使用**SendAndReceiveReply**和**ReceiveAndSendReply**從傳訊 區段的範本**工具箱**中工作流程設計工具中， <xref:System.ServiceModel.Activities.CorrelationHandle>明確預設設定。 使用程式碼建立工作流程時，在配對中第一個活動的 <xref:System.ServiceModel.Activities.CorrelationHandle> 內，會指定 <xref:System.ServiceModel.Activities.Receive.CorrelationInitializers%2A>。 以下範例會設定 <xref:System.ServiceModel.Activities.Receive> 活動，並在 <xref:System.ServiceModel.Activities.CorrelationInitializer.CorrelationHandle%2A> 中指定明確的 <xref:System.ServiceModel.Activities.RequestReplyCorrelationInitializer>。  
   

@@ -1,31 +1,17 @@
 ---
-title: "如何： 取得所有 Windows 應用程式中"
-ms.custom: 
+title: 如何： 取得所有 Windows 應用程式中
 ms.date: 03/30/2017
-ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.technology:
-- dotnet-wpf
-ms.tgt_pltfrm: 
-ms.topic: article
 dev_langs:
 - csharp
 - vb
 helpviewer_keywords:
 - window objects [WPF], getting
 ms.assetid: f120f06e-993b-4a97-9657-af0d1986981f
-caps.latest.revision: 
-author: dotnet-bot
-ms.author: dotnetcontent
-manager: wpickett
-ms.workload:
-- dotnet
-ms.openlocfilehash: fdb1baad8b779b6ef0443a05e5f6575b552b1c19
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.openlocfilehash: 476905899f5f7d573a16ba876c72f28ea34bbf9d
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="how-to-get-all-windows-in-an-application"></a>如何： 取得所有 Windows 應用程式中
 這個範例示範如何取得所有<xref:System.Windows.Window>應用程式中的物件。  

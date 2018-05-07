@@ -1,22 +1,12 @@
 ---
-title: "Friend 組件 (Visual Basic)"
-ms.custom: 
+title: Friend 組件 (Visual Basic)
 ms.date: 07/20/2015
-ms.prod: .net
-ms.reviewer: 
-ms.suite: 
-ms.technology: devlang-visual-basic
-ms.tgt_pltfrm: 
-ms.topic: article
 ms.assetid: 9b3d5716-e6e4-47a7-a3e9-084d7fba5c28
-caps.latest.revision: "6"
-author: dotnet-bot
-ms.author: dotnetcontent
-ms.openlocfilehash: d3a37629582e4fc2606afaf606735464c0d247a4
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.openlocfilehash: 91bc33f33c4fc34c6e0f3ae197ecd2b876161de3
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="friend-assemblies-visual-basic"></a>Friend 組件 (Visual Basic)
 A *friend 組件*是可以存取另一個組件的組件[Friend](../../../../visual-basic/language-reference/modifiers/friend.md)型別和成員。 如果將組件指定為 friend 組件，就不再需要將類型和成員標記為 public，以供其他組件存取。 這在下列情況下特別方便：  

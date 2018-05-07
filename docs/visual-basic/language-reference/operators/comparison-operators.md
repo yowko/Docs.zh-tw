@@ -1,11 +1,6 @@
 ---
-title: "比較運算子 (Visual Basic)"
+title: 比較運算子 (Visual Basic)
 ms.date: 07/20/2015
-ms.prod: .net
-ms.reviewer: 
-ms.suite: 
-ms.technology: devlang-visual-basic
-ms.topic: article
 f1_keywords:
 - vb.<>
 - vb.>=
@@ -35,29 +30,26 @@ helpviewer_keywords:
 - Is operator [Visual Basic]
 - comparison operators [Visual Basic], Visual Basicl
 ms.assetid: d6cb12a8-e52e-46a7-8aaf-f804d634a825
-caps.latest.revision: "20"
-author: dotnet-bot
-ms.author: dotnetcontent
-ms.openlocfilehash: aa450f7978f46196663c7534b31597b04d80482a
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.openlocfilehash: 4e37f55b4c873c3dbea22a8edf0e5e2b58824720
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="comparison-operators-visual-basic"></a>比較運算子 (Visual Basic)
 以下是定義在 Visual Basic 中的比較運算子。  
   
- `<`運算子  
+ `<` 運算子  
   
- `<=`運算子  
+ `<=` 運算子  
   
- `>`運算子  
+ `>` 運算子  
   
- `>=`運算子  
+ `>=` 運算子  
   
- `=`運算子  
+ `=` 運算子  
   
- `<>`運算子  
+ `<>` 運算子  
   
  [Is 運算子](../../../visual-basic/language-reference/operators/is-operator.md)  
   
@@ -77,34 +69,34 @@ result = string Like pattern
   
 ## <a name="parts"></a>組件  
  `result`  
- 必要項。 A`Boolean`值，代表比較的結果。  
+ 必要。 A`Boolean`值，代表比較的結果。  
   
  `expression`  
- 必要項。 任何運算式。  
+ 必要。 任何運算式。  
   
  `comparisonoperator`  
- 必要項。 任何關聯的比較運算子。  
+ 必要。 任何關聯的比較運算子。  
   
  `object1`, `object2`  
- 必要項。 任何參考的物件名稱。  
+ 必要。 任何參考的物件名稱。  
   
  `string`  
- 必要項。 任何 `String` 運算式。  
+ 必要。 任何 `String` 運算式。  
   
  `pattern`  
- 必要項。 任何`String`運算式或字元範圍。  
+ 必要。 任何`String`運算式或字元範圍。  
   
 ## <a name="remarks"></a>備註  
  下表包含一份關係比較運算子的條件來決定是否`result`是`True`或`False`。  
   
-|運算子|`True`如果|`False`如果|  
+|運算子|`True` 如果|`False` 如果|  
 |--------------|---------------|----------------|  
-|`<`（小於）|`expression1` < `expression2`|`expression1` >= `expression2`|  
-|`<=`（小於或等於）|`expression1` <= `expression2`|`expression1` > `expression2`|  
-|`>`（大於）|`expression1` > `expression2`|`expression1` <= `expression2`|  
-|`>=`（大於或等於）|`expression1` >= `expression2`|`expression1` < `expression2`|  
-|`=`（等於）|`expression1` = `expression2`|`expression1` <> `expression2`|  
-|`<>`（不等於）|`expression1` <> `expression2`|`expression1` = `expression2`|  
+|`<` （小於）|`expression1` < `expression2`|`expression1` >= `expression2`|  
+|`<=` （小於或等於）|`expression1` <= `expression2`|`expression1` > `expression2`|  
+|`>` （大於）|`expression1` > `expression2`|`expression1` <= `expression2`|  
+|`>=` （大於或等於）|`expression1` >= `expression2`|`expression1` < `expression2`|  
+|`=` （等於）|`expression1` = `expression2`|`expression1` <> `expression2`|  
+|`<>` （不等於）|`expression1` <> `expression2`|`expression1` = `expression2`|  
   
 > [!NOTE]
 >  [= 運算子](../../../visual-basic/language-reference/operators/assignment-operator.md)也會使用指派運算子。  
@@ -122,11 +114,11 @@ result = string Like pattern
 ## <a name="comparing-strings"></a>比較字串  
  當您比較字串時，會評估字串運算式根據字母排序次序，取決於`Option Compare`設定。  
   
- `Option Compare Binary`基底的字串比較衍生自內部的二進位表示法的字元的排序次序。 排序順序取決於字碼頁。 下列範例示範典型的二進位排序順序。  
+ `Option Compare Binary` 基底的字串比較衍生自內部的二進位表示法的字元的排序次序。 排序順序取決於字碼頁。 下列範例示範典型的二進位排序順序。  
   
  `A < B < E < Z < a < b < e < z < À < Ê < Ø < à < ê < ø`  
   
- `Option Compare Text`基底的字串比較不區分大小寫、 文字排序順序取決於您的應用程式地區設定。 當您將`Option Compare Text`和排序在上述範例中的字元，請套用下列的文字排序順序：  
+ `Option Compare Text` 基底的字串比較不區分大小寫、 文字排序順序取決於您的應用程式地區設定。 當您將`Option Compare Text`和排序在上述範例中的字元，請套用下列的文字排序順序：  
   
  `(A=a) < (À= à) < (B=b) < (E=e) < (Ê= ê) < (Ø = ø) < (Z=z)`  
   
@@ -138,10 +130,10 @@ result = string Like pattern
   
 |如果運算元都是|比較|  
 |---------------------|-------------------|  
-|兩者`String`|排序依據排序特性的字串比較。|  
+|兩者 `String`|排序依據排序特性的字串比較。|  
 |這兩個數值|物件轉換成`Double`，數值比較。|  
-|一個數值和一個`String`|`String`轉換成`Double`而且會執行數值的比較。 如果`String`無法轉換成`Double`、<xref:System.InvalidCastException>就會擲回。|  
-|或兩者皆是以外的參考型別`String`|擲回 <xref:System.InvalidCastException>。|  
+|一個數值和一個 `String`|`String`轉換成`Double`而且會執行數值的比較。 如果`String`無法轉換成`Double`、<xref:System.InvalidCastException>就會擲回。|  
+|或兩者皆是以外的參考型別 `String`|擲回 <xref:System.InvalidCastException>。|  
   
  將數字比較`Nothing`為 0。 字串比較視為`Nothing`為`""`（空字串）。  
   

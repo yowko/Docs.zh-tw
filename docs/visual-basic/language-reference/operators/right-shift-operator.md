@@ -1,12 +1,6 @@
 ---
-title: '&gt;&gt;運算子 (Visual Basic)'
+title: '&gt;&gt; 運算子 (Visual Basic)'
 ms.date: 07/20/2015
-ms.prod: .net
-ms.reviewer: ''
-ms.suite: ''
-ms.technology:
-- devlang-visual-basic
-ms.topic: article
 f1_keywords:
 - vb.>>
 helpviewer_keywords:
@@ -16,16 +10,13 @@ helpviewer_keywords:
 - operator >>
 - right shift operators [Visual Basic]
 ms.assetid: 054dc6a6-47d9-47ef-82da-cfa2b59fbf8f
-caps.latest.revision: 14
-author: dotnet-bot
-ms.author: dotnetcontent
-ms.openlocfilehash: 4eb0ed817c95905a679de5026bf6494eb72df078
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.openlocfilehash: 9bb8e82b3f5451417fe1867d08b7601ee1acb036
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 05/04/2018
 ---
-# <a name="gtgt-operator-visual-basic"></a>&gt;&gt;運算子 (Visual Basic)
+# <a name="gtgt-operator-visual-basic"></a>&gt;&gt; 運算子 (Visual Basic)
 位元模式上執行算術右移位。  
   
 ## <a name="syntax"></a>語法  
@@ -36,13 +27,13 @@ result = pattern >> amount
   
 ## <a name="parts"></a>組件  
  `result`  
- 必要項。 整數值。 移位的位元模式的結果。 資料類型是屬於相同`pattern`。  
+ 必要。 整數值。 移位的位元模式的結果。 資料類型是屬於相同`pattern`。  
   
  `pattern`  
- 必要項。 整數的數值運算式。 要移位的位元模式。 資料型別必須是整數類資料類型 (`SByte`， `Byte`， `Short`， `UShort`， `Integer`， `UInteger`， `Long`，或`ULong`)。  
+ 必要。 整數的數值運算式。 要移位的位元模式。 資料型別必須是整數類資料類型 (`SByte`， `Byte`， `Short`， `UShort`， `Integer`， `UInteger`， `Long`，或`ULong`)。  
   
  `amount`  
- 必要項。 數值運算式。 要移位的位元模式的位元數。 資料類型必須是`Integer`或擴展為`Integer`。  
+ 必要。 數值運算式。 要移位的位元模式的位元數。 資料類型必須是`Integer`或擴展為`Integer`。  
   
 ## <a name="remarks"></a>備註  
  算術排班不是循環，這表示移出結果的一個 end 的位元會重新引入的另一端。 在算術右移位，移位超過右邊的位元位置的位元會捨棄，而且最左邊 （符號） 位元會傳播到左邊空出的位元位置。 這表示如果`pattern`負值，空出的位置會設為其中一個; 否則設定為零。  
@@ -51,12 +42,12 @@ result = pattern >> amount
   
  若要避免由多於結果所能容納更多的位元移位，Visual Basic 遮罩的值`amount`大小遮罩的資料類型對應`pattern`。 這些值的二進位 AND 用於移位量。 遮罩的大小如下所示：  
   
-|資料型別`pattern`|大小遮罩 （十進位）|大小遮罩 （十六進位）|  
+|資料型別 `pattern`|大小遮罩 （十進位）|大小遮罩 （十六進位）|  
 |----------------------------|---------------------------|-------------------------------|  
-|`SByte`, `Byte`|7|（& S) H00000007|  
-|`Short`, `UShort`|15|（& S) H0000000F|  
-|`Integer`, `UInteger`|31|（& S) H0000001F|  
-|`Long`, `ULong`|63|（& S) H0000003F|  
+|`SByte`, `Byte`|7|（&AMP; S) H00000007|  
+|`Short`, `UShort`|15|（&AMP; S) H0000000F|  
+|`Integer`, `UInteger`|31|（&AMP; S) H0000001F|  
+|`Long`, `ULong`|63|（&AMP; S) H0000003F|  
   
  如果`amount`是零，值`result`等同於值`pattern`。 如果`amount`是負數，它是被視為不帶正負號的值，加上適當的大小遮罩。  
   
@@ -72,15 +63,15 @@ result = pattern >> amount
   
  前述範例中的結果如下所示：  
   
--   `result1`是 2560 (0000 1010年 0000 0000)。  
+-   `result1` 是 2560 (0000 1010年 0000 0000)。  
   
--   `result2`為 160 (0000 0000 1010年 0000)。  
+-   `result2` 為 160 (0000 0000 1010年 0000)。  
   
--   `result3`為 2 (0000 0000 0000 0010)。  
+-   `result3` 為 2 (0000 0000 0000 0010)。  
   
--   `result4`為 640 (0000 0010 1000年 0000)。  
+-   `result4` 為 640 (0000 0010 1000年 0000)。  
   
--   `result5`為 0 （右邊的移位 15 位數）。  
+-   `result5` 為 0 （右邊的移位 15 位數）。  
   
  移位量的`result4`的計算方式為 18 和 15，等於 2。  
   
@@ -90,9 +81,9 @@ result = pattern >> amount
   
  前述範例中的結果如下所示：  
   
--   `negresult1`是-512 (1111年 1110年 0000 0000)。  
+-   `negresult1` 是-512 (1111年 1110年 0000 0000)。  
   
--   `negresult2`為-1 （傳播正負號位元）。  
+-   `negresult2` 為-1 （傳播正負號位元）。  
   
 ## <a name="see-also"></a>另請參閱  
  [位元移位運算子](../../../visual-basic/language-reference/operators/bit-shift-operators.md)  

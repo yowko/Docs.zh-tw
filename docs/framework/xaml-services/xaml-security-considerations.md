@@ -1,27 +1,15 @@
 ---
-title: "XAML 安全性考量"
-ms.custom: 
+title: XAML 安全性考量
 ms.date: 03/30/2017
-ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.technology: dotnet-wpf
-ms.tgt_pltfrm: 
-ms.topic: article
 helpviewer_keywords:
 - security [XAML Services], .NET XAML services
 - XAML security [XAML Services]
 ms.assetid: 544296d4-f38e-4498-af49-c9f4dad28964
-caps.latest.revision: "7"
-author: wadepickett
-ms.author: wpickett
-manager: wpickett
-ms.workload: dotnet
-ms.openlocfilehash: b58719f36cd911497c5cd892610330688221e7ef
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.openlocfilehash: ef47e7e370082a2050406710edcb62d0967df8ef
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="xaml-security-considerations"></a>XAML 安全性考量
 本主題描述在應用程式中的安全性最佳作法，當您使用 XAML 和.NET Framework XAML 服務 API。  
@@ -29,7 +17,7 @@ ms.lasthandoff: 12/22/2017
 ## <a name="untrusted-xaml-in-applications"></a>在應用程式中不受信任的 XAML  
  最常見的意義而言，不受信任的 XAML 是未特別包含您的應用程式或發出任何 XAML 來源。  
   
- 編譯成或儲存為 XAML `resx`-類型受信任和簽署組件內的資源不是原本就是不受信任。 如往常般信任整個組件中，您可以信任的 XAML。 在大部分情況下，您才關心鬆散的 XAML，這是您從資料流或其他 IO 載入 XAML 來源的信任層面。 鬆散的 XAML 不是特定元件或功能的應用程式模型的部署與封裝基礎結構。 不過，組件可能會實作牽涉到載入鬆散 XAML 的行為。  
+ 編譯成或儲存為 XAML `resx`-類型受信任和簽署組件內的資源不是原本就是不受信任。 如往常般信任整個組件中，您可以信任的 XAML。 在大部分情況下，您才關心鬆散的 XAML，這是您從資料流或其他 I/O 載入 XAML 來源的信任層面。 鬆散的 XAML 不是特定元件或功能的應用程式模型的部署與封裝基礎結構。 不過，組件可能會實作牽涉到載入鬆散 XAML 的行為。  
   
  針對不受信任的 XAML，您應該將它視為通常相同它已不受信任的程式碼。 若要防止存取您信任的程式碼可能不受信任的 XAML 使用沙箱或其他象徵物。  
   
@@ -52,5 +40,5 @@ ms.lasthandoff: 12/22/2017
 ## <a name="xaml-type-mapping-and-type-system-access"></a>XAML 型別對應和類型系統存取  
  XAML 支援它自己的型別系統，其中有許多方式等 CLR 實作基本的 CLR 型別系統的方式。 不過，您會在此進行信任決策是根據其類型資訊的類型的類型感知的特定部分，您應該遵循在支援類型的 CLR 型別資訊。 這是因為某些特定 XAML 類型系統的報告功能會保持在開啟做為虛擬方法，因此，不完全控制原始的.NET Framework XAML 服務實作。 這些擴充點存在，因為 XAML 類型系統可延伸，以符合 XAML 本身的擴充性和其可能的替代類型對應策略和預設 CLR 為基礎的實作及預設 XAML 結構描述內容。 如需詳細資訊，請參閱特定的備忘稿幾個屬性的<xref:System.Xaml.XamlType>和<xref:System.Xaml.XamlMember>。  
   
-## <a name="see-also"></a>請參閱  
+## <a name="see-also"></a>另請參閱  
  <xref:System.Xaml.Permissions.XamlAccessLevel>

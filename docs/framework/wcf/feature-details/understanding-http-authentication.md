@@ -1,31 +1,17 @@
 ---
 title: 了解 HTTP 驗證
-ms.custom: ''
 ms.date: 03/30/2017
-ms.prod: .net-framework
-ms.reviewer: ''
-ms.suite: ''
-ms.technology:
-- dotnet-clr
-ms.tgt_pltfrm: ''
-ms.topic: article
 ms.assetid: 9376309a-39e3-4819-b47b-a73982b57620
-caps.latest.revision: 11
-author: dotnet-bot
-ms.author: dotnetcontent
-manager: wpickett
-ms.workload:
-- dotnet
-ms.openlocfilehash: 0fe72ad1aab35a8cb384248e90500cf5410c0774
-ms.sourcegitcommit: 03ee570f6f528a7d23a4221dcb26a9498edbdf8c
+ms.openlocfilehash: fa9af58f08fc54126bd055216d377a4e2b24c84c
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/28/2018
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="understanding-http-authentication"></a>了解 HTTP 驗證
 驗證是一種識別用戶端是否具備存取資源之資格的程序。 HTTP 通訊協定支援驗證作為存取安全資源的交涉方法。  
   
- 用戶端的初始要求一般為匿名要求，不包含任何驗證資訊。 HTTP 伺服器應用程式可拒絕匿名要求，同時表示驗證是必要的。 伺服器應用程式會傳送 WWW-Authentication 標頭，表示支援的驗證配置。 這份文件描述 HTTP 的數種驗證配置，並在 [!INCLUDE[indigo1](../../../../includes/indigo1-md.md)]中討論這些配置的支援。  
+ 用戶端的初始要求一般為匿名要求，不包含任何驗證資訊。 HTTP 伺服器應用程式可拒絕匿名要求，同時表示驗證是必要的。 伺服器應用程式會傳送 WWW-Authentication 標頭，表示支援的驗證配置。 本文件描述數種驗證配置為 HTTP，並討論其支援 Windows Communication Foundation (WCF)。  
   
 ## <a name="http-authentication-schemes"></a>HTTP 驗證配置  
  伺服器可以指定多個用戶端從選擇的驗證配置。 下表描述一些常見的 Windows 應用程式的驗證配置。  
@@ -37,7 +23,7 @@ ms.lasthandoff: 04/28/2018
 |摘要|摘要驗證是設計來取代基本驗證的挑戰/回應配置。 伺服器會傳送一串隨機資料稱為*nonce*至用戶端作為挑戰。 用戶端會回應包含使用者名稱、密碼與 Nonce 及其他資訊的雜湊。 使用這種驗證配置的交換所帶來的複雜性與資料雜湊，讓竊取與再利用使用者的認證更加困難。<br /><br /> 摘要驗證需要使用 Windows 網域帳號。 摘要*領域*是 Windows 網域名稱。 因此，您無法使用，不支援 Windows 網域，例如 Windows XP Home Edition、 摘要式驗證的作業系統上執行的伺服器。 相反地，當用戶端在不支援 Windows 網域的作業系統上執行，驗證期間必須特別指定網域帳號。|  
 |NTLM|NT LAN Manager (NTLM) 驗證為摘要式驗證更安全的變異，是一種挑戰/回應配置。 NTLM 使用 Windows 認證轉換挑戰資料，而非未編碼的使用者名稱與密碼。 NTLM 驗證需要在用戶端與服務器之間進行多次交換。 伺服器與任何介入的 Proxy 必須支援持續性連線以成功完成驗證。|  
 |交涉|交涉驗證會自動在 Kerberos 通訊協定與 NTLM 驗證之間選擇，依可用性而定。 如果 Kerberos 通訊協定可以使用，就選擇它；否則就會嘗試使用 NTLM。 Kerberos 驗證較 NTLM 更大幅改善。 Kerberos 驗證不僅較 NTLM 更快，而且允許使用交互驗證和對遠端機器認證的委派。|  
-|Windows Live ID|基礎的 Windows HTTP 服務包括使用聯合通訊協定的驗證。 然而，[!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] 中的標準 HTTP 傳輸不支援使用同盟驗證配置，例如 Microsoft Windows Live ID。 目前可透過訊息安全性提供對此功能的支援。 如需詳細資訊，請參閱[同盟和發出的權杖](../../../../docs/framework/wcf/feature-details/federation-and-issued-tokens.md)。|  
+|Windows Live ID|基礎的 Windows HTTP 服務包括使用聯合通訊協定的驗證。 不過，在 WCF 中的標準 HTTP 傳輸不支援使用同盟的驗證配置，例如 Microsoft Windows Live id。 目前可透過訊息安全性提供對此功能的支援。 如需詳細資訊，請參閱[同盟和發出的權杖](../../../../docs/framework/wcf/feature-details/federation-and-issued-tokens.md)。|  
   
 ## <a name="choosing-an-authentication-scheme"></a>選擇驗證配置  
  為 HTTP 伺服器選擇潛在驗證配置時，必須考量一些項目，包括：  

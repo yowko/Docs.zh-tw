@@ -1,24 +1,12 @@
 ---
 title: System.ServiceModel.ComIntegration.ComIntegrationInvokingMethodContextTransaction
-ms.custom: 
 ms.date: 03/30/2017
-ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.technology: dotnet-clr
-ms.tgt_pltfrm: 
-ms.topic: article
 ms.assetid: 1d2690ae-0afb-4cb1-ab62-a1a0ceba8521
-caps.latest.revision: "4"
-author: dotnet-bot
-ms.author: dotnetcontent
-manager: wpickett
-ms.workload: dotnet
-ms.openlocfilehash: e3c7661339a7a1645de30dcd0b1f9fad54dac5dd
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.openlocfilehash: 4721e6e23cd2ffb93ed090d85657192de319f915
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="systemservicemodelcomintegrationcomintegrationinvokingmethodcontexttransaction"></a>System.ServiceModel.ComIntegration.ComIntegrationInvokingMethodContextTransaction
 System.ServiceModel.ComIntegration.ComIntegrationInvokingMethodContextTransaction  
@@ -26,7 +14,7 @@ System.ServiceModel.ComIntegration.ComIntegrationInvokingMethodContextTransactio
 ## <a name="description"></a>描述  
  Complus：正在以 COM+ 內容中的異動叫用方法。  
   
-## <a name="see-also"></a>請參閱  
+## <a name="see-also"></a>另請參閱  
  [追蹤](../../../../../docs/framework/wcf/diagnostics/tracing/index.md)  
  [使用追蹤為應用程式進行疑難排解](../../../../../docs/framework/wcf/diagnostics/tracing/using-tracing-to-troubleshoot-your-application.md)  
  [管理與診斷](../../../../../docs/framework/wcf/diagnostics/index.md)

@@ -1,13 +1,6 @@
 ---
-title: "混合應用程式疑難排解"
-ms.custom: 
+title: 混合應用程式疑難排解
 ms.date: 03/30/2017
-ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.technology: dotnet-wpf
-ms.tgt_pltfrm: 
-ms.topic: article
 helpviewer_keywords:
 - overlapping controls [WPF]
 - Windows Forms [WPF], interoperability with
@@ -16,16 +9,11 @@ helpviewer_keywords:
 - hybrid applications [WPF interoperability]
 - message loops [WPF]
 ms.assetid: f440c23f-fa5d-4d5a-852f-ba61150e6405
-caps.latest.revision: "26"
-author: dotnet-bot
-ms.author: dotnetcontent
-manager: wpickett
-ms.workload: dotnet
-ms.openlocfilehash: 0a23f439b9b14d16a5440fa3b757b972304fdfa3
-ms.sourcegitcommit: c0dd436f6f8f44dc80dc43b07f6841a00b74b23f
+ms.openlocfilehash: 878761c030d4950e53ee24b76f7e29101584143a
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 01/19/2018
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="troubleshooting-hybrid-applications"></a>混合應用程式疑難排解
 <a name="introduction"></a> 本主題列出一些會在撰寫混合式應用程式時發生的常見問題，這類應用程式同時使用 [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] 和 [!INCLUDE[TLA#tla_winforms](../../../../includes/tlasharptla-winforms-md.md)] 技術。  
@@ -38,7 +26,7 @@ ms.lasthandoff: 01/19/2018
   
  裝載於 [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] 上的 [!INCLUDE[TLA#tla_winforms](../../../../includes/tlasharptla-winforms-md.md)] 控制項一律會顯示在 [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] 內容上方。  
   
- [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)]內容裝載在<xref:System.Windows.Forms.Integration.ElementHost>控制項就會出現在疊置順序的<xref:System.Windows.Forms.Integration.ElementHost>控制項。 很可能重疊<xref:System.Windows.Forms.Integration.ElementHost>控制項，但裝載[!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)]內容不會結合或進行互動。  
+ [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] 內容裝載在<xref:System.Windows.Forms.Integration.ElementHost>控制項就會出現在疊置順序的<xref:System.Windows.Forms.Integration.ElementHost>控制項。 很可能重疊<xref:System.Windows.Forms.Integration.ElementHost>控制項，但裝載[!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)]內容不會結合或進行互動。  
   
 <a name="child_property"></a>   
 ## <a name="child-property"></a>子屬性  
@@ -95,7 +83,7 @@ ms.lasthandoff: 01/19/2018
   
 <a name="dispose"></a>   
 ## <a name="dispose"></a>Dispose  
- 未正確處置類別可能造成流失資源。 在您的混合式應用程式，請確定<xref:System.Windows.Forms.Integration.WindowsFormsHost>和<xref:System.Windows.Forms.Integration.ElementHost>處置類別，或您可能會洩漏資源。 [!INCLUDE[TLA#tla_winforms](../../../../includes/tlasharptla-winforms-md.md)]處置<xref:System.Windows.Forms.Integration.ElementHost>控制於何時其非強制回應<xref:System.Windows.Forms.Form>父關閉。 [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)]處置<xref:System.Windows.Forms.Integration.WindowsFormsHost>項目，您的應用程式關閉時。 可顯示<xref:System.Windows.Forms.Integration.WindowsFormsHost>中的項目<xref:System.Windows.Window>中[!INCLUDE[TLA#tla_winforms](../../../../includes/tlasharptla-winforms-md.md)]訊息迴圈。 在此情況下，您的程式碼可能不會收到應用程式正在關閉的通知。  
+ 未正確處置類別可能造成流失資源。 在您的混合式應用程式，請確定<xref:System.Windows.Forms.Integration.WindowsFormsHost>和<xref:System.Windows.Forms.Integration.ElementHost>處置類別，或您可能會洩漏資源。 [!INCLUDE[TLA#tla_winforms](../../../../includes/tlasharptla-winforms-md.md)] 處置<xref:System.Windows.Forms.Integration.ElementHost>控制於何時其非強制回應<xref:System.Windows.Forms.Form>父關閉。 [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] 處置<xref:System.Windows.Forms.Integration.WindowsFormsHost>項目，您的應用程式關閉時。 可顯示<xref:System.Windows.Forms.Integration.WindowsFormsHost>中的項目<xref:System.Windows.Window>中[!INCLUDE[TLA#tla_winforms](../../../../includes/tlasharptla-winforms-md.md)]訊息迴圈。 在此情況下，您的程式碼可能不會收到應用程式正在關閉的通知。  
   
 <a name="enabling_visual_styles"></a>   
 ## <a name="enabling-visual-styles"></a>啟用視覺化樣式  
@@ -125,7 +113,7 @@ ms.lasthandoff: 01/19/2018
 ## <a name="elementhost-and-ime"></a>ElementHost 和 IME  
  WPF 控制項裝載於<xref:System.Windows.Forms.Integration.ElementHost>目前不支援<xref:System.Windows.Forms.Control.ImeMode%2A>屬性。 若要變更<xref:System.Windows.Forms.Control.ImeMode%2A>裝載的控制項將會忽略。  
   
-## <a name="see-also"></a>請參閱  
+## <a name="see-also"></a>另請參閱  
  <xref:System.Windows.Forms.Integration.ElementHost>  
  <xref:System.Windows.Forms.Integration.WindowsFormsHost>  
  [WPF 設計工具中的互通性](http://msdn.microsoft.com/library/2cb7c1ca-2a75-463b-8801-fba81e2b7042)  

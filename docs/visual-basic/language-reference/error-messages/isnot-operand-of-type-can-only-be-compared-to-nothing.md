@@ -1,28 +1,19 @@
 ---
-title: '&#39; IsNot &#39;運算元的類型 &#39; typename &#39;可以只相較於 &#39;執行任何動作 &#39;，因為 &#39; typename &#39;是可為 null 的型別'
+title: '&#39;IsNot&#39;類型的運算元&#39;typename&#39;可以只相較於&#39;Nothing&#39;，因為&#39;typename&#39;是可為 null 的型別'
 ms.date: 07/20/2015
-ms.prod: .net
-ms.reviewer: ''
-ms.suite: ''
-ms.technology:
-- devlang-visual-basic
-ms.topic: article
 f1_keywords:
 - bc32128
 - vbc32128
 helpviewer_keywords:
 - BC32128
 ms.assetid: 1155b23a-ad75-4bab-b9da-73f35c767a36
-caps.latest.revision: 5
-author: dotnet-bot
-ms.author: dotnetcontent
-ms.openlocfilehash: ec0ae1561bfbee998e7c65f6023012c0f982a8a7
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.openlocfilehash: 44cc17c73b476e5e322b9b58b021bc7bcd63167f
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 05/04/2018
 ---
-# <a name="39isnot39-operand-of-type-39typename39-can-only-be-compared-to-39nothing39-because-39typename39-is-a-nullable-type"></a>&#39; IsNot &#39;運算元的類型 &#39; typename &#39;可以只相較於 &#39;執行任何動作 &#39;，因為 &#39; typename &#39;是可為 null 的型別
+# <a name="39isnot39-operand-of-type-39typename39-can-only-be-compared-to-39nothing39-because-39typename39-is-a-nullable-type"></a>&#39;IsNot&#39;類型的運算元&#39;typename&#39;可以只相較於&#39;Nothing&#39;，因為&#39;typename&#39;是可為 null 的型別
 宣告為可為 null 的變數已被的運算式進行比較以外`Nothing`使用`IsNot`運算子。  
   
  **錯誤 ID:** BC32128  

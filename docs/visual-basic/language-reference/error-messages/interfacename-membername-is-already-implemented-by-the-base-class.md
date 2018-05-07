@@ -1,28 +1,19 @@
 ---
-title: '&#39;&lt;interfacename&gt;。&lt;membername&gt;&#39; 已實作的基底類別 &#39;&lt;基&gt;&#39;。 重新實作&lt;類型&gt;假設'
+title: '&#39;&lt;介面名稱&gt;。&lt;membername&gt; &#39;已經由基底類別實作&#39;&lt;基&gt;&#39;。 重新實作&lt;類型&gt;假設'
 ms.date: 07/20/2015
-ms.prod: .net
-ms.reviewer: ''
-ms.suite: ''
-ms.technology:
-- devlang-visual-basic
-ms.topic: article
 f1_keywords:
 - vbc42015
 - bc42015
 helpviewer_keywords:
 - BC42015
 ms.assetid: 658c070a-113e-4bd8-b294-12c243191160
-caps.latest.revision: 12
-author: dotnet-bot
-ms.author: dotnetcontent
-ms.openlocfilehash: 69884ed567e0046da5cf5c51b3e83e57e890d49f
-ms.sourcegitcommit: bd1ef61f4bb794b25383d3d72e71041a5ced172e
+ms.openlocfilehash: 9054c293ede9db4637f23579407f2f76db29f2ba
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/18/2017
+ms.lasthandoff: 05/04/2018
 ---
-# <a name="39ltinterfacenamegtltmembernamegt39-is-already-implemented-by-the-base-class-39ltbaseclassnamegt39-re-implementation-of-lttypegt-assumed"></a>&#39;&lt;interfacename&gt;。&lt;membername&gt;&#39; 已實作的基底類別 &#39;&lt;基&gt;&#39;。 重新實作&lt;類型&gt;假設
+# <a name="39ltinterfacenamegtltmembernamegt39-is-already-implemented-by-the-base-class-39ltbaseclassnamegt39-re-implementation-of-lttypegt-assumed"></a>&#39;&lt;介面名稱&gt;。&lt;membername&gt; &#39;已經由基底類別實作&#39;&lt;基&gt;&#39;。 重新實作&lt;類型&gt;假設
 屬性、 程序或在衍生類別中的事件使用`Implements`子句指定的基底類別中已實作介面成員。  
   
  衍生類別可以重新實作透過其基底類別所實作的介面成員。 這與覆寫基底類別實作不同。 如需詳細資訊，請參閱[實作](../../../visual-basic/language-reference/statements/implements-clause.md)。  

@@ -1,28 +1,16 @@
 ---
-title: "逐步解說：使用 Windows Form 控制項中的智慧標籤執行一般工作"
-ms.custom: 
+title: 逐步解說：使用 Windows Form 控制項中的智慧標籤執行一般工作
 ms.date: 03/30/2017
-ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.technology: dotnet-winforms
-ms.tgt_pltfrm: 
-ms.topic: article
 helpviewer_keywords:
 - DesignerAction object model
 - smart tags
 - designer actions
 ms.assetid: cac337e6-00f6-4584-80f4-75728f5ea113
-caps.latest.revision: "15"
-author: dotnet-bot
-ms.author: dotnetcontent
-manager: wpickett
-ms.workload: dotnet
-ms.openlocfilehash: e2fb4e8bf710e55be0a817a4154dfbce114db191
-ms.sourcegitcommit: c0dd436f6f8f44dc80dc43b07f6841a00b74b23f
+ms.openlocfilehash: a558f6d274f260fc91fd140e9dae2c740b1ae00d
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 01/19/2018
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="walkthrough-performing-common-tasks-using-smart-tags-on-windows-forms-controls"></a>逐步解說：使用 Windows Form 控制項中的智慧標籤執行一般工作
 Windows Form 應用程式中建構表單和控制項，有許多工作，您將會重複執行。 以下是一些經常執行的工作，您將會遇到的：  
@@ -76,7 +64,7 @@ Windows Form 應用程式中建構表單和控制項，有許多工作，您將�
   
 6.  按一下智慧標籤圖像 （glyph）。 在字符旁邊會出現快顯功能表中選取**水平分隔器方向**項目。 觀察<xref:System.Windows.Forms.SplitContainer>控制項的分隔列現在是水平方向。  
   
-## <a name="see-also"></a>請參閱  
+## <a name="see-also"></a>另請參閱  
  <xref:System.Windows.Forms.TextBox>  
  <xref:System.Windows.Forms.TabControl>  
  <xref:System.Windows.Forms.SplitContainer>  

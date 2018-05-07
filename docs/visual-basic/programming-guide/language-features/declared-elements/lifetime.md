@@ -1,13 +1,6 @@
 ---
 title: Visual Basic 中的存留期
-ms.custom: ''
 ms.date: 07/20/2015
-ms.prod: .net
-ms.reviewer: ''
-ms.suite: ''
-ms.technology:
-- devlang-visual-basic
-ms.topic: article
 helpviewer_keywords:
 - static variables [Visual Basic], lifetime
 - static variables [Visual Basic], Visual Basic
@@ -17,14 +10,11 @@ helpviewer_keywords:
 - lifetime [Visual Basic], Visual Basic
 - lifetime [Visual Basic]
 ms.assetid: bd91e390-690a-469a-9946-8dca70bc14e7
-caps.latest.revision: 14
-author: dotnet-bot
-ms.author: dotnetcontent
-ms.openlocfilehash: 14a75a2c3af52f63051d02df9341faf19c3b76c7
-ms.sourcegitcommit: 86adcc06e35390f13c1e372c36d2e044f1fc31ef
+ms.openlocfilehash: d32639f1c392d53a7e9f6258440b6c0925d27a5d
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/26/2018
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="lifetime-in-visual-basic"></a>Visual Basic 中的存留期
 *存留期*的宣告的項目是一段時間期間它是可供使用。 變數是唯一的項目存留期的。 基於此目的，編譯器會將程序參數和函式會傳回做為變數的特殊案例。 變數的存留期代表一段時間期間中，它能容納的值。 其值可以變更其存留期，但它永遠會保留一些值。  

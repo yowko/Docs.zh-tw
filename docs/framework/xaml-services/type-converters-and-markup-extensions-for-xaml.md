@@ -1,14 +1,6 @@
 ---
 title: XAML 的類型轉換子和標記延伸
-ms.custom: ''
 ms.date: 03/30/2017
-ms.prod: .net-framework
-ms.reviewer: ''
-ms.suite: ''
-ms.technology:
-- dotnet-wpf
-ms.tgt_pltfrm: ''
-ms.topic: article
 helpviewer_keywords:
 - XAML [XAML Services], type converter services
 - XAML [XAML Services], value converters
@@ -16,17 +8,11 @@ helpviewer_keywords:
 - value converters for XAML [XAML Services]
 - XAML [XAML Services], service context
 ms.assetid: db07a952-05ce-4aa4-b6f9-aac7397d0326
-caps.latest.revision: 13
-author: wadepickett
-ms.author: wpickett
-manager: wpickett
-ms.workload:
-- dotnet
-ms.openlocfilehash: a6ab52105785dc1efbffe093cdafb12cdf8eac4d
-ms.sourcegitcommit: 94d33cadc5ff81d2ac389bf5f26422c227832052
+ms.openlocfilehash: 0c9cb7e87416860dda98df0da967ffbc070bc270
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/30/2018
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="type-converters-and-markup-extensions-for-xaml"></a>XAML 的類型轉換子和標記延伸
 類型轉換器和標記延伸是 XAML 類型系統和 XAML 寫入器用以產生物件圖形元件的兩項技術。 雖然兩者共用某些特性，但類型轉換器和標記延伸在 XAML 節點資料流中會以不同的方式表示。 在本文件集中，有時會將類型轉換器、標記延伸和類似的建構統稱為值轉換器。  
@@ -45,7 +31,7 @@ ms.lasthandoff: 04/30/2018
   
 <a name="type_converters"></a>   
 ## <a name="type-converters"></a>類型轉換器  
- 在 .NET Framework XAML 服務定義中，類型轉換器是衍生自 CLR <xref:System.ComponentModel.TypeConverter> 類別的類別。 <xref:System.ComponentModel.TypeConverter> 類別比 XAML 還早出現在 [!INCLUDE[TLA#tla_netframewk](../../../includes/tlasharptla-netframewk-md.md)] 中。 其原始用途是為了支援 [!INCLUDE[TLA2#tla_ide](../../../includes/tla2sharptla-ide-md.md)] 屬性的屬性視窗和類似的文字編輯表示。 .NET Framework 中引進的 XAML 使用 <xref:System.ComponentModel.TypeConverter> ，將文字語法 (如屬性值或 XAML 值節點中的文字語法) 轉換成物件。 <xref:System.ComponentModel.TypeConverter> 也可用來將物件值序列化為文字語法。 <xref:System.ComponentModel.TypeConverter> 也在 Windows Presentation Foundation (WPF) 和 Windows Communication Foundation (WCF) 和先前的架構特定 XAML 實作中使用。 如需在 XAML 中 <xref:System.ComponentModel.TypeConverter> 的詳細資訊，請參閱 [Type Converters for XAML Overview](../../../docs/framework/xaml-services/type-converters-for-xaml-overview.md)。  
+ 在 .NET Framework XAML 服務定義中，類型轉換器是衍生自 CLR <xref:System.ComponentModel.TypeConverter> 類別的類別。 <xref:System.ComponentModel.TypeConverter> 是之前的 Microsoft.NET Framework XAML 才會存在的類別。 其原始用途是為了支援 [!INCLUDE[TLA2#tla_ide](../../../includes/tla2sharptla-ide-md.md)] 屬性的屬性視窗和類似的文字編輯表示。 .NET Framework 中引進的 XAML 使用 <xref:System.ComponentModel.TypeConverter> ，將文字語法 (如屬性值或 XAML 值節點中的文字語法) 轉換成物件。 <xref:System.ComponentModel.TypeConverter> 也可用來將物件值序列化為文字語法。 <xref:System.ComponentModel.TypeConverter> 也在 Windows Presentation Foundation (WPF) 和 Windows Communication Foundation (WCF) 和先前的架構特定 XAML 實作中使用。 如需在 XAML 中 <xref:System.ComponentModel.TypeConverter> 的詳細資訊，請參閱 [Type Converters for XAML Overview](../../../docs/framework/xaml-services/type-converters-for-xaml-overview.md)。  
   
 <a name="markup_extensions"></a>   
 ## <a name="markup-extensions"></a>標記延伸  

@@ -1,31 +1,21 @@
 ---
-title: "在 Visual Basic 中管理 XML"
-ms.custom: 
+title: 在 Visual Basic 中管理 XML
 ms.date: 07/20/2015
-ms.prod: .net
-ms.reviewer: 
-ms.suite: 
-ms.technology: devlang-visual-basic
-ms.tgt_pltfrm: 
-ms.topic: article
 helpviewer_keywords:
 - LINQ to XML [Visual Basic], manipulating XML
 - Visual Basic code, XML
 - XML [Visual Basic], manipulating
 ms.assetid: da32cffb-198d-41b1-9af3-260fe32e3b7d
-caps.latest.revision: "5"
-author: dotnet-bot
-ms.author: dotnetcontent
-ms.openlocfilehash: 061617524659ac2f8793e2030f26a2d6b2724a64
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.openlocfilehash: 4be24afe17e60c6c849530f1b892651a1f78399c
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="manipulating-xml-in-visual-basic"></a>在 Visual Basic 中管理 XML
 您可以使用*XML 常值*從外部來源，例如字串、 檔案或資料流載入 XML。 然後您可以使用[!INCLUDE[sqltecxlinq](~/includes/sqltecxlinq-md.md)]操作 XML，並使用[!INCLUDE[vbteclinqext](~/includes/vbteclinqext-md.md)]來查詢 XML。  
   
-## <a name="in-this-section"></a>本章節內容  
+## <a name="in-this-section"></a>本節內容  
  [如何：從檔案、字串或資料流載入 XML](../../../../visual-basic/programming-guide/language-features/xml/how-to-load-xml-from-a-file-string-or-stream.md)  
  示範如何載入到 XML<xref:System.Xml.Linq.XDocument>或<xref:System.Xml.Linq.XElement>從文字檔、 字串或資料流的物件。  
   

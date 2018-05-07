@@ -1,10 +1,7 @@
 ---
-title: "如何： 判斷是否可序列化的.NET 標準物件"
-description: "示範如何判斷在執行階段是否可序列化的.NET 標準的類型。"
-ms.custom: 
+title: 如何： 判斷是否可序列化的.NET 標準物件
+description: 示範如何判斷在執行階段是否可序列化的.NET 標準的類型。
 ms.date: 10/20/2017
-ms.prod: .net
-ms.topic: article
 dev_langs:
 - csharp
 - vb
@@ -13,15 +10,11 @@ helpviewer_keywords:
 - objects, serializing steps
 author: rpetrusha
 ms.author: ronpet
-manager: wpickett
-ms.workload:
-- dotnet
-- dotnetcore
-ms.openlocfilehash: 8246e825202b3eb02db5d11f1fe55b4a0d14a4ea
-ms.sourcegitcommit: 099aa20d9b6450d1b7452d782a55771a6ad8ff35
+ms.openlocfilehash: 247eed2e7091930c6bcfaa524296b45350dd6510
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 02/05/2018
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="how-to-determine-if-a-net-standard-object-is-serializable"></a>如何： 判斷是否可序列化的.NET 標準物件
 

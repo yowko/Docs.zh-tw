@@ -1,36 +1,22 @@
 ---
 title: 有害訊息處理
-ms.custom: ''
 ms.date: 03/30/2017
-ms.prod: .net-framework
-ms.reviewer: ''
-ms.suite: ''
-ms.technology:
-- dotnet-clr
-ms.tgt_pltfrm: ''
-ms.topic: article
 ms.assetid: 8d1c5e5a-7928-4a80-95ed-d8da211b8595
-caps.latest.revision: 29
-author: dotnet-bot
-ms.author: dotnetcontent
-manager: wpickett
-ms.workload:
-- dotnet
-ms.openlocfilehash: 6fa35209b2dafc088605848a0dc96a53a2813dfd
-ms.sourcegitcommit: 94d33cadc5ff81d2ac389bf5f26422c227832052
+ms.openlocfilehash: b860e239d001a03da191d73de2f7b53e7073c7a6
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/30/2018
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="poison-message-handling"></a>有害訊息處理
 A*有害訊息*是超過嘗試傳遞至應用程式的最大數目的訊息。 這種情形可能會在佇列架構的應用程式因為錯誤而無法處理訊息時發生。 為了符合可靠性的需求，佇列的應用程式會在交易中接收訊息。 若中止了接收佇列訊息的交易，則會讓訊息留在佇列中，而訊息將會在新的交易中重試。 如果造成交易中止的問題未予以更正，則接收的應用程式可能會卡在接收及中止相同訊息的迴圈中，直到超過傳遞嘗試次數的上限為止，因而形成有害訊息。  
   
  訊息變成有害訊息的原因有許多種。 最常見的原因是在應用程式中所發生的特定原因。 例如，如果應用程式從佇列讀取訊息，並且執行某些資料庫處理，應用程式可能因為無法在該資料庫上取得鎖定，而造成中止交易。 由於資料庫交易中止，訊息會留在佇列中，造成應用程式再次讀取該訊息，並重新嘗試取得資料庫鎖定。 如果訊息包含無效的資訊，則也可能變成有害的。 例如，採購單可能包含無效的客戶編號。 在這些情況下，應用程式可能自動中止交易，而迫使訊息成為有害訊息。  
   
- 在鮮少的情況下，訊息可能會無法分派至應用程式。 [!INCLUDE[indigo1](../../../../includes/indigo1-md.md)] 層可能會發現與訊息相關的問題，例如，訊息的框架錯誤、附加的訊息認證無效，或是無效的動作標頭。 在這些情況中，應用程式絕不會接收該訊息，不過，訊息仍然可能會變成有害訊息，並且以手動方式處理。  
+ 在鮮少的情況下，訊息可能會無法分派至應用程式。 Windows Communication Foundation (WCF) 層可能會發現問題的訊息中，例如，如果訊息有錯誤的框架，無效的訊息附加的認證，或是無效的動作標頭。 在這些情況中，應用程式絕不會接收該訊息，不過，訊息仍然可能會變成有害訊息，並且以手動方式處理。  
   
 ## <a name="handling-poison-messages"></a>處理有害訊息  
- 在 [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] 中，有害訊息處理提供了一項機制，可讓接收的應用程式處理無法分派至應用程式的訊息，或是雖分派至應用程式，卻因應用程式本身的問題而無法處理的訊息。 有害訊息處理是由每個可用佇列繫結中的以下屬性所設定：  
+ 在 WCF 中，有害訊息處理會提供機制來處理無法分派至應用程式的訊息或訊息分派至應用程式，但其無法處理因為特定的應用程式接收的應用程式原因。 有害訊息處理是由每個可用佇列繫結中的以下屬性所設定：  
   
 -   `ReceiveRetryCount`。 整數值，表示從應用程式佇列傳遞至應用程式的訊息重試次數上限。 預設值為 5。 這個值對於立即重試即可修正問題的情況來說就已足夠，例如資料庫上發生暫時死結時。  
   
@@ -46,7 +32,7 @@ A*有害訊息*是超過嘗試傳遞至應用程式的最大數目的訊息。 �
   
 -   Reject： 這個選項只在 [!INCLUDE[wv](../../../../includes/wv-md.md)] 上提供。 這個選項會指示 Message Queuing (MSMQ) 將負值通知傳回傳送的佇列管理員，說明應用程式無法接收訊息。 訊息會放在傳送的佇列管理員寄不出的信件佇列中。  
   
--   Move： 這個選項只在 [!INCLUDE[wv](../../../../includes/wv-md.md)] 上提供。 這個選項會將有害訊息移到有害訊息佇列，以便之後讓有害訊息處理應用程式進行處理。 有害訊息佇列是應用程式佇列的子佇列。 有害訊息處理應用程式可以是 [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] 服務，可從有害佇列中讀取訊息。 有害佇列是應用程式佇列的子佇列，並可以定址為 net.msmq://\<*機器名稱*>/*applicationQueue*; poison，其中*電腦名稱*是佇列所在的電腦名稱和*applicationQueue*是應用程式專屬佇列的名稱。  
+-   Move： 這個選項只在 [!INCLUDE[wv](../../../../includes/wv-md.md)] 上提供。 這個選項會將有害訊息移到有害訊息佇列，以便之後讓有害訊息處理應用程式進行處理。 有害訊息佇列是應用程式佇列的子佇列。 有害訊息處理應用程式可以是從有害佇列中讀取訊息的 WCF 服務。 有害佇列是應用程式佇列的子佇列，並可以定址為 net.msmq://\<*機器名稱*>/*applicationQueue*; poison，其中*電腦名稱*是佇列所在的電腦名稱和*applicationQueue*是應用程式專屬佇列的名稱。  
   
  以下為訊息的嘗試傳遞次數上限：  
   
@@ -57,20 +43,20 @@ A*有害訊息*是超過嘗試傳遞至應用程式的最大數目的訊息。 �
 > [!NOTE]
 >  成功傳遞的訊息不會有任何重試次數。  
   
- 為了持續追蹤嘗試讀取訊息的次數，[!INCLUDE[wv](../../../../includes/wv-md.md)] 會保留一個計算中止計數之永久訊息屬性，以及另一個移動計數屬性，此屬性會計算訊息在應用程式佇列和子佇列之間移動的次數。 [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] 通道會使用這些屬性計算接收重試次數和重試週期數。 在 [!INCLUDE[ws2003](../../../../includes/ws2003-md.md)] 和 [!INCLUDE[wxp](../../../../includes/wxp-md.md)] 上，中止計數會保留在 [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] 通道在記憶體中，並且在應用程式失敗時予以重設。 同時，[!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] 通道可隨時在記憶體中保留最多 256 個訊息的中止計數。 如果讀取第 257 個訊息，那麼最舊訊息的中止計數就會重設。  
+ 為了持續追蹤嘗試讀取訊息的次數，[!INCLUDE[wv](../../../../includes/wv-md.md)] 會保留一個計算中止計數之永久訊息屬性，以及另一個移動計數屬性，此屬性會計算訊息在應用程式佇列和子佇列之間移動的次數。 WCF 通道會使用這些屬性計算接收重試次數和重試週期數。 在[!INCLUDE[ws2003](../../../../includes/ws2003-md.md)]和[!INCLUDE[wxp](../../../../includes/wxp-md.md)]，中止計數維持在記憶體中的 WCF 通道和應用程式失敗時，會重設。 此外，WCF 通道可以保存在記憶體中的最多 256 個訊息的中止計數在任何時間。 如果讀取第 257 個訊息，那麼最舊訊息的中止計數就會重設。  
   
  中止計數和移動計數屬性可透過作業內容提供給服務作業。 以下程式碼範例將說明如何存取這兩個屬性。  
   
  [!code-csharp[S_UE_MSMQ_Poison#1](../../../../samples/snippets/csharp/VS_Snippets_CFX/s_ue_msmq_poison/cs/service.cs#1)]  
   
- [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] 提供兩個標準的佇列繫結：  
+ WCF 提供兩個標準的佇列繫結：  
   
--   <xref:System.ServiceModel.NetMsmqBinding>。 [!INCLUDE[dnprdnshort](../../../../includes/dnprdnshort-md.md)] 繫結，適合用來與其他 [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] 端點進行以佇列為主的通訊。  
+-   <xref:System.ServiceModel.NetMsmqBinding>. A[!INCLUDE[dnprdnshort](../../../../includes/dnprdnshort-md.md)]適合用來與其他 WCF 端點的佇列通訊的繫結。  
   
--   <xref:System.ServiceModel.MsmqIntegration.MsmqIntegrationBinding>。 此繫結適合用來與現有的訊息佇列應用程式進行通訊。  
+-   <xref:System.ServiceModel.MsmqIntegration.MsmqIntegrationBinding>. 此繫結適合用來與現有的訊息佇列應用程式進行通訊。  
   
 > [!NOTE]
->  您可以根據 [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] 服務的需求，在這兩個繫結中修改這些屬性。 對於接收應用程式而言，整個有害訊息處理機制是在本機上進行的。 傳送應用程式看不到這個程序，除非接收應用程式最後停止並且將負值通知傳回至傳送者。 在這種情況下，訊息會移到傳送者寄不出的信件佇列中。  
+>  您可以變更這些 WCF 服務的需求為基礎的繫結中的屬性。 對於接收應用程式而言，整個有害訊息處理機制是在本機上進行的。 傳送應用程式看不到這個程序，除非接收應用程式最後停止並且將負值通知傳回至傳送者。 在這種情況下，訊息會移到傳送者寄不出的信件佇列中。  
   
 ## <a name="best-practice-handling-msmqpoisonmessageexception"></a>最佳做法：處理 MsmqPoisonMessageException  
  當服務判定訊息是有害時，佇列的傳輸便會擲回 <xref:System.ServiceModel.MsmqPoisonMessageException>，其中包含有害訊息的 `LookupId`。  
@@ -116,7 +102,7 @@ A*有害訊息*是超過嘗試傳遞至應用程式的最大數目的訊息。 �
   
 -   [!INCLUDE[wv](../../../../includes/wv-md.md)] 中的訊息佇列支援負值通知，而 [!INCLUDE[ws2003](../../../../includes/ws2003-md.md)] 和 [!INCLUDE[wxp](../../../../includes/wxp-md.md)] 則不支援。 來自接收佇列管理員的負認可會造成傳送佇列管理員將拒絕的訊息放在寄不出的信件佇列中。 因此，`ReceiveErrorHandling.Reject` 和 [!INCLUDE[ws2003](../../../../includes/ws2003-md.md)] 不可使用 [!INCLUDE[wxp](../../../../includes/wxp-md.md)]。  
   
--   [!INCLUDE[wv](../../../../includes/wv-md.md)] 中的訊息佇列支援能夠保留嘗試傳遞訊息之計數的訊息屬性 這個中止計數屬性無法在 [!INCLUDE[ws2003](../../../../includes/ws2003-md.md)] 和 [!INCLUDE[wxp](../../../../includes/wxp-md.md)] 上使用。 由於 [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] 會在記憶體中保留中止計數，因此當伺服陣列中超過一個以上的 [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] 服務讀取相同的訊息時，這個屬性可能就無法包含精確的值。  
+-   [!INCLUDE[wv](../../../../includes/wv-md.md)] 中的訊息佇列支援能夠保留嘗試傳遞訊息之計數的訊息屬性 這個中止計數屬性無法在 [!INCLUDE[ws2003](../../../../includes/ws2003-md.md)] 和 [!INCLUDE[wxp](../../../../includes/wxp-md.md)] 上使用。 WCF 會維護記憶體中，中止計數，因此它是這個屬性可能不包含精確的值相同的訊息讀取的伺服陣列中的多個 WCF 服務時。  
   
 ## <a name="see-also"></a>另請參閱  
  [佇列概觀](../../../../docs/framework/wcf/feature-details/queues-overview.md)  

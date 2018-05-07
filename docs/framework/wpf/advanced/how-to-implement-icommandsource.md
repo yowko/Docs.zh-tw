@@ -1,39 +1,25 @@
 ---
-title: "如何：實作 ICommandSource"
-ms.custom: 
+title: 如何：實作 ICommandSource
 ms.date: 03/30/2017
-ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.technology:
-- dotnet-wpf
-ms.tgt_pltfrm: 
-ms.topic: article
 dev_langs:
 - csharp
 - vb
 helpviewer_keywords:
 - ICommandSource interfaces [WPF], implementing
 ms.assetid: 7452dd39-6e11-44bf-806a-31d87f3772ac
-caps.latest.revision: 
-author: dotnet-bot
-ms.author: dotnetcontent
-manager: wpickett
-ms.workload:
-- dotnet
-ms.openlocfilehash: d82a211f59fbdecdc932b7e57b242274e91cd5b2
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.openlocfilehash: 9308bfbbb7fff86ca5e93c1155cc29e4ee0d05f2
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="how-to-implement-icommandsource"></a>如何：實作 ICommandSource
-這個範例示範如何建立命令來源藉由實作<xref:System.Windows.Input.ICommandSource>。  命令來源是知道如何叫用命令的物件。  <xref:System.Windows.Input.ICommandSource>介面會公開三個成員： <xref:System.Windows.Input.ICommandSource.Command%2A>， <xref:System.Windows.Input.ICommandSource.CommandParameter%2A>，和<xref:System.Windows.Input.ICommandSource.CommandTarget%2A>。  <xref:System.Windows.Input.ICommandSource.Command%2A>是將會叫用的命令。 <xref:System.Windows.Input.ICommandSource.CommandParameter%2A>是從命令來源傳遞至方法，這個方法會處理命令的使用者定義資料類型。 <xref:System.Windows.Input.ICommandSource.CommandTarget%2A>是正在其執行命令的物件。  
+這個範例示範如何建立命令來源藉由實作<xref:System.Windows.Input.ICommandSource>。  命令來源是知道如何叫用命令的物件。  <xref:System.Windows.Input.ICommandSource>介面會公開三個成員： <xref:System.Windows.Input.ICommandSource.Command%2A>， <xref:System.Windows.Input.ICommandSource.CommandParameter%2A>，和<xref:System.Windows.Input.ICommandSource.CommandTarget%2A>。  <xref:System.Windows.Input.ICommandSource.Command%2A> 是將會叫用的命令。 <xref:System.Windows.Input.ICommandSource.CommandParameter%2A>是從命令來源傳遞至方法，這個方法會處理命令的使用者定義資料類型。 <xref:System.Windows.Input.ICommandSource.CommandTarget%2A>是正在其執行命令的物件。  
   
  在此範例中，建立類別的子類別<xref:System.Windows.Controls.Slider>控制項，而且會實作<xref:System.Windows.Input.ICommandSource>。  
   
 ## <a name="example"></a>範例  
- [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)]提供數個類別會實作<xref:System.Windows.Input.ICommandSource>，例如<xref:System.Windows.Controls.Button>， <xref:System.Windows.Controls.MenuItem>，和<xref:System.Windows.Controls.ListBoxItem>。  命令來源會定義如何叫用命令。   <xref:System.Windows.Controls.Button>和<xref:System.Windows.Controls.MenuItem>在按一下時叫用命令。  A <xref:System.Windows.Controls.ListBoxItem> double 按下時，會叫用命令。 這些類別才會變成命令來源時其<xref:System.Windows.Input.ICommandSource.Command%2A>屬性設定。  
+ [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] 提供數個類別會實作<xref:System.Windows.Input.ICommandSource>，例如<xref:System.Windows.Controls.Button>， <xref:System.Windows.Controls.MenuItem>，和<xref:System.Windows.Controls.ListBoxItem>。  命令來源會定義如何叫用命令。   <xref:System.Windows.Controls.Button> 和<xref:System.Windows.Controls.MenuItem>在按一下時叫用命令。  A <xref:System.Windows.Controls.ListBoxItem> double 按下時，會叫用命令。 這些類別才會變成命令來源時其<xref:System.Windows.Input.ICommandSource.Command%2A>屬性設定。  
   
  此範例中我們將會叫用命令時移動滑桿時，或更精確地說，當<xref:System.Windows.Controls.Primitives.RangeBase.Value%2A>屬性變更。  
   
@@ -71,7 +57,7 @@ ms.lasthandoff: 12/22/2017
  [!code-csharp[ImplementICommandSource#ImplementICommandExecute](../../../../samples/snippets/csharp/VS_Snippets_Wpf/ImplementICommandSource/CSharp/CommandSlider.cs#implementicommandexecute)]
  [!code-vb[ImplementICommandSource#ImplementICommandExecute](../../../../samples/snippets/visualbasic/VS_Snippets_Wpf/ImplementICommandSource/visualbasic/commandslider.vb#implementicommandexecute)]  
   
-## <a name="see-also"></a>請參閱  
+## <a name="see-also"></a>另請參閱  
  <xref:System.Windows.Input.ICommandSource>  
  <xref:System.Windows.Input.ICommand>  
  <xref:System.Windows.Input.RoutedCommand>  

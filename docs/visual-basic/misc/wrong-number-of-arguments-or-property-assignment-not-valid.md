@@ -1,21 +1,14 @@
 ---
 title: 引數數目錯誤或屬性指派無效
 ms.date: 07/20/2015
-ms.prod: .net
-ms.technology:
-- devlang-visual-basic
-ms.topic: article
 f1_keywords:
 - vbrID450
 ms.assetid: 61700dd4-ebd0-4088-b439-2cd1ef9fc8f4
-caps.latest.revision: 7
-author: dotnet-bot
-ms.author: dotnetcontent
-ms.openlocfilehash: 63c1875ac17f44ea4f277a7a0398c472be42870b
-ms.sourcegitcommit: bd1ef61f4bb794b25383d3d72e71041a5ced172e
+ms.openlocfilehash: 98c80676de2c2a63716182384777bca8e5324085
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/18/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="wrong-number-of-arguments-or-property-assignment-not-valid"></a>引數數目錯誤或屬性指派無效
 嘗試進行無效的指派。  

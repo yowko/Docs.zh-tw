@@ -1,13 +1,6 @@
 ---
-title: "HOW TO：檢查安全性內容"
-ms.custom: 
+title: HOW TO：檢查安全性內容
 ms.date: 03/30/2017
-ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.technology: dotnet-clr
-ms.tgt_pltfrm: 
-ms.topic: article
 dev_langs:
 - csharp
 - vb
@@ -16,19 +9,16 @@ helpviewer_keywords:
 - WCF, security
 - Claimset class
 ms.assetid: 389b5a57-4175-4bc0-ada0-fc750d51149f
-caps.latest.revision: "13"
 author: BrucePerlerMS
-ms.author: bruceper
 manager: mbaldwin
-ms.workload: dotnet
-ms.openlocfilehash: 4d6852a3162b3a8666c711d455e72517a91c4477
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.openlocfilehash: 8ff6969095a49dcae8b1d59b5b0ab28a8af24274
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="how-to-examine-the-security-context"></a>HOW TO：檢查安全性內容
-在進行 [!INCLUDE[indigo1](../../../includes/indigo1-md.md)] 服務的程式設計時，服務安全性內容可讓您決定用來向服務進行驗證的用戶端認證及宣告的詳細資料。 這可藉由使用 <xref:System.ServiceModel.ServiceSecurityContext> 類別的屬性達成。  
+程式設計 Windows Communication Foundation (WCF) 服務，服務安全性內容可讓您決定用戶端認證和宣告用來向服務驗證詳細資料。 這可藉由使用 <xref:System.ServiceModel.ServiceSecurityContext> 類別的屬性達成。  
   
  例如，您可以使用 <xref:System.ServiceModel.ServiceSecurityContext.PrimaryIdentity%2A> 或 <xref:System.ServiceModel.ServiceSecurityContext.WindowsIdentity%2A> 屬性擷取目前用戶端的識別。 若要判斷用戶端是否為匿名，請使用 <xref:System.ServiceModel.ServiceSecurityContext.IsAnonymous%2A> 屬性。  
   
@@ -65,6 +55,6 @@ ms.lasthandoff: 12/22/2017
   
 -   <xref:System.IdentityModel.Claims>  
   
-## <a name="see-also"></a>請參閱  
+## <a name="see-also"></a>另請參閱  
  [保護服務安全](../../../docs/framework/wcf/securing-services.md)  
  [服務身分識別和驗證](../../../docs/framework/wcf/feature-details/service-identity-and-authentication.md)

@@ -1,31 +1,17 @@
 ---
 title: 指定與處理合約和服務中的錯誤
-ms.custom: ''
 ms.date: 03/30/2017
-ms.prod: .net-framework
-ms.reviewer: ''
-ms.suite: ''
-ms.technology:
-- dotnet-clr
-ms.tgt_pltfrm: ''
-ms.topic: article
 helpviewer_keywords:
 - handling faults [WCF]
 ms.assetid: a9696563-d404-4905-942d-1e0834c26dea
-caps.latest.revision: 22
-author: dotnet-bot
-ms.author: dotnetcontent
-manager: wpickett
-ms.workload:
-- dotnet
-ms.openlocfilehash: 00b3687169aa2e5521a3e3348be2a45738e97093
-ms.sourcegitcommit: 94d33cadc5ff81d2ac389bf5f26422c227832052
-ms.translationtype: MT
+ms.openlocfilehash: fc5fa03b723a35c4748fc16db8946277266e3b0e
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/30/2018
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="specifying-and-handling-faults-in-contracts-and-services"></a>指定與處理合約和服務中的錯誤
-[!INCLUDE[indigo1](../../../includes/indigo1-md.md)] 應用程式會將 Managed 例外狀況物件對應至 SOAP 錯誤物件，並將 SOAP 錯誤物件對應至 Managed 例外狀況物件來處理錯誤情況。 本節中的主題討論如何設計合約以將錯誤條件公開為自訂 SOAP 錯誤、如何將此類錯誤當成服務實作的一部份傳回，以及用戶端如何捕捉此類錯誤。  
+Windows Communication Foundation (WCF) 應用程式會將 managed 例外狀況物件對應至 SOAP 錯誤物件，並對 managed 例外狀況物件的 SOAP 錯誤物件，以處理錯誤情況。 本節中的主題討論如何設計合約以將錯誤條件公開為自訂 SOAP 錯誤、如何將此類錯誤當成服務實作的一部份傳回，以及用戶端如何捕捉此類錯誤。  
   
 ## <a name="error-handling-overview"></a>錯誤處理概觀  
  在所有 Managed 應用程式中，處理錯誤由 <xref:System.Exception> 物件表示。 在 SOAP 應用程式中 (如 [!INCLUDE[indigo2](../../../includes/indigo2-md.md)] 應用程式)，服務方法使用 SOAP 錯誤訊息來溝通處理錯誤資訊。 SOAP 錯誤是包含在服務作業之中繼資料內的訊息類型，因此會建立錯誤合約，而用戶端可使用該合約來讓其作業更穩定或更具互動性。 此外，由於已透過 XML 格式將 SOAP 錯誤公開給用戶端，現在這個類型的系統已經具備高度互通性，可供任何 SOAP 平台使用並擴充您的 [!INCLUDE[indigo2](../../../includes/indigo2-md.md)] 應用程式應用範圍。  

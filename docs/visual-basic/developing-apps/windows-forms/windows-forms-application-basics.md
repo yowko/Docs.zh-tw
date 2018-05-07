@@ -1,23 +1,15 @@
 ---
 title: Windows Forms 應用程式基本概念 (Visual Basic)
 ms.date: 07/20/2015
-ms.prod: .net
-ms.suite: ''
-ms.technology:
-- devlang-visual-basic
-ms.topic: article
 helpviewer_keywords:
 - Windows applications
 - Windows Forms, Visual Basic
 ms.assetid: 0b919d30-7fd6-42db-85c8-543d15312441
-caps.latest.revision: 20
-author: dotnet-bot
-ms.author: dotnetcontent
-ms.openlocfilehash: 230229203029740b82e706fe2aa7ff8ee06c486a
-ms.sourcegitcommit: 2042de78fcdceebb6b8ac4b7a292b93e8782cbf5
+ms.openlocfilehash: 051c2be00ca18799eeb2f5253a9b236bbcf82d21
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/27/2018
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="windows-forms-application-basics-visual-basic"></a>Windows Forms 應用程式基本概念 (Visual Basic)
 Visual Basic 中很重要的一部分是能夠建立本機使用者的電腦執行的 Windows Form 應用程式。 您可以使用 Visual Studio 來建立使用 Windows Form 應用程式和使用者介面。 在 Windows Forms 應用程式中的類別上建立<xref:System.Windows.Forms>命名空間。  

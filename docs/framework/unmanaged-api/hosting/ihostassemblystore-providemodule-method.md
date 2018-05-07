@@ -1,14 +1,6 @@
 ---
-title: "IHostAssemblyStore::ProvideModule 方法"
-ms.custom: 
+title: IHostAssemblyStore::ProvideModule 方法
 ms.date: 03/30/2017
-ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.technology:
-- dotnet-clr
-ms.tgt_pltfrm: 
-ms.topic: reference
 api_name:
 - IHostAssemblyStore.ProvideModule
 api_location:
@@ -23,17 +15,13 @@ helpviewer_keywords:
 ms.assetid: f42e3dd0-c88e-4748-b6c0-4c515a633180
 topic_type:
 - apiref
-caps.latest.revision: 
 author: rpetrusha
 ms.author: ronpet
-manager: wpickett
-ms.workload:
-- dotnet
-ms.openlocfilehash: 8b29f19933ae985d15627d1eba2622f350a52e72
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.openlocfilehash: 8b604e1d7fc3d3c8adf7d95bd95843bc0110dbc9
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="ihostassemblystoreprovidemodule-method"></a>IHostAssemblyStore::ProvideModule 方法
 解析組件或連結 （但非內嵌） 內模組資源檔案。  
@@ -66,14 +54,14 @@ HRESULT ProvideModule (
   
 |HRESULT|描述|  
 |-------------|-----------------|  
-|S_OK|`ProvideModule`已成功傳回。|  
+|S_OK|`ProvideModule` 已成功傳回。|  
 |HOST_E_CLRNOTAVAILABLE|Common language runtime (CLR) 尚未載入到處理程序，或 CLR 正在中它無法執行 managed 程式碼，或成功地處理呼叫的狀態。|  
 |HOST_E_TIMEOUT|呼叫已逾時。|  
 |HOST_E_NOT_OWNER|呼叫端未擁有鎖定。|  
 |HOST_E_ABANDONED|事件已取消時封鎖的執行緒或 fiber 等候它。|  
 |E_FAIL|發生未知的嚴重失敗。 方法會傳回 E_FAIL CLR 已不再可用的處理序內。 裝載方法的後續呼叫會傳回 HOST_E_CLRNOTAVAILABLE。|  
 |COR_E_FILENOTFOUND (0X80070002)|已連結之資源的要求的組件找不到。|  
-|E_NOT_SUFFICIENT_BUFFER|`pdwModuleId`不大小足以包含主應用程式想要傳回的識別項。|  
+|E_NOT_SUFFICIENT_BUFFER|`pdwModuleId` 不大小足以包含主應用程式想要傳回的識別項。|  
   
 ## <a name="remarks"></a>備註  
  傳回識別值`pdwModuleId`由主應用程式所指定。 處理序的存留期內，識別項必須是唯一的。 CLR 會使用此值的唯一識別碼做為相關聯的資料流。 它會檢查每個值的值對`pAssemblyId`呼叫所傳回[ProvideAssembly](../../../../docs/framework/unmanaged-api/hosting/ihostassemblystore-provideassembly-method.md)針對值和`pdwModuleId`其他呼叫所傳回`ProvideModule`。 如果主應用程式會傳回相同的識別碼值的另一個`IStream`，CLR 會檢查是否已經對應資料流的內容。 如果是這樣，CLR 載入而不是一個新的映像的現有複本。 因此，識別項也不能重疊從傳回的組件識別項`ProvideAssembly`。  
@@ -85,9 +73,9 @@ HRESULT ProvideModule (
   
  **程式庫：**包含做為 MSCorEE.dll 中的資源  
   
- **.NET framework 版本：**[!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]  
+ **.NET framework 版本：** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]  
   
-## <a name="see-also"></a>請參閱  
+## <a name="see-also"></a>另請參閱  
  [ICLRAssemblyReferenceList 介面](../../../../docs/framework/unmanaged-api/hosting/iclrassemblyreferencelist-interface.md)  
  [IHostAssemblyManager 介面](../../../../docs/framework/unmanaged-api/hosting/ihostassemblymanager-interface.md)  
  [IHostAssemblyStore 介面](../../../../docs/framework/unmanaged-api/hosting/ihostassemblystore-interface.md)

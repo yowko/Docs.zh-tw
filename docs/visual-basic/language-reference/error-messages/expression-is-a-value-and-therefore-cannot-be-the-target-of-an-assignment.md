@@ -1,26 +1,17 @@
 ---
 title: 運算式是一個數值，不可以是指派的目標
 ms.date: 07/20/2015
-ms.prod: .net
-ms.reviewer: ''
-ms.suite: ''
-ms.technology:
-- devlang-visual-basic
-ms.topic: article
 f1_keywords:
 - bc30068
 - vbc30068
 helpviewer_keywords:
 - BC30068
 ms.assetid: d65141e1-f31e-4ac5-a3b8-0b2e02a71ebf
-caps.latest.revision: 15
-author: dotnet-bot
-ms.author: dotnetcontent
-ms.openlocfilehash: bec3e2d298160bd0b459dc3b7ef93b94648e439a
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.openlocfilehash: dd5618bd0533f885a6aef8229b2d8cb1bc34c237
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="expression-is-a-value-and-therefore-cannot-be-the-target-of-an-assignment"></a>運算式是一個數值，不可以是指派的目標
 陳述式嘗試將值指派給運算式。 您只能指派給值的可寫入變數、 屬性或陣列元素執行階段。 下列範例說明會發生此錯誤。  

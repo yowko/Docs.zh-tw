@@ -1,32 +1,18 @@
 ---
-title: "文件指南"
-ms.custom: 
+title: 文件指南
 ms.date: 03/30/2017
-ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.technology:
-- dotnet-clr
-ms.tgt_pltfrm: 
-ms.topic: article
 helpviewer_keywords:
 - WCF [WCF], documentation
 - Windows Communication Foundation [WCF], documentation
 ms.assetid: 2aa18c85-a4fd-4bb9-986a-a8249e4f8e0e
-caps.latest.revision: 
-author: dotnet-bot
-ms.author: dotnetcontent
-manager: wpickett
-ms.workload:
-- dotnet
-ms.openlocfilehash: 132cbc6c7c9ba7d8e6c29f477554fc7b3bbab469
-ms.sourcegitcommit: 08684dd61444c2f072b89b926370f750e456fca1
-ms.translationtype: MT
+ms.openlocfilehash: 79a9465c81071a77a6901f21f59036ea88b9cb53
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 02/14/2018
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="guide-to-the-documentation"></a>文件指南
-此處提供有關 [!INCLUDE[indigo1](../../../includes/indigo1-md.md)] 文件的指引。 連結文件是建議的起點，並且根據特定興趣和專業等級分群組。  
+此處提供的 Windows Communication Foundation (WCF) 文件的指引。 連結文件是建議的起點，並且根據特定興趣和專業等級分群組。  
   
  若要安裝的文件集和說明檢視器的單機版本，請下載[Microsoft Windows SDK v 7.1](http://go.microsoft.com/fwlink/?LinkID=194146&clcid=0x409)。  
   
@@ -74,7 +60,7 @@ ms.lasthandoff: 02/14/2018
 ## <a name="ws--protocols-supported-in-windows-communication-foundation"></a>Windows Communication Foundation 中支援的 WS-* 通訊協定  
  若要查看支援的系統提供繫結中的通訊協定清單，請參閱[Web 服務之互通性繫結所支援的通訊協定](../../../docs/framework/wcf/feature-details/web-services-protocols-supported-by-system-provided-interoperability-bindings.md)。 若要查看系統提供繫結的清單，請參閱[之繫結](../../../docs/framework/wcf/system-provided-bindings.md)。  
   
-## <a name="see-also"></a>請參閱  
+## <a name="see-also"></a>另請參閱  
  [Windows Communication Foundation 範例](../../../docs/framework/wcf/samples/index.md)  
  [概念性概觀](../../../docs/framework/wcf/conceptual-overview.md)  
  [方針及最佳做法](../../../docs/framework/wcf/guidelines-and-best-practices.md)  

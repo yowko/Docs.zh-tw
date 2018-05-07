@@ -1,23 +1,16 @@
 ---
-title: "封裝和部署自訂的 My 擴充 (Visual Basic)"
+title: 封裝和部署自訂的 My 擴充 (Visual Basic)
 ms.date: 07/20/2015
-ms.prod: .net
-ms.suite: 
-ms.technology: devlang-visual-basic
-ms.topic: article
 helpviewer_keywords:
 - My namespace [Visual Basic], customizing
 - My namespace
 - My namespace [Visual Basic], extending
 ms.assetid: fd89c54b-0290-4c50-95a3-ff17d4487a21
-caps.latest.revision: "10"
-author: dotnet-bot
-ms.author: dotnetcontent
-ms.openlocfilehash: 94a9ea977d0add14ae9f0c9a889b008b94610ee0
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.openlocfilehash: 901d0b80a18d2f4d262cc65eb485dcc628bc6a08
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="packaging-and-deploying-custom-my-extensions-visual-basic"></a>封裝和部署自訂的 My 擴充 (Visual Basic)
 Visual Basic 提供簡單的方法，以部署您的自訂`My`使用 Visual Studio 範本命名空間擴充功能。 如果您要建立專案範本，您`My`延伸模組是新的專案類型中不可或缺的一部分，您可以包含自訂`My`與專案中，當您將範本匯出時的延伸模組程式碼。 如需匯出專案範本的詳細資訊，請參閱[How to： 建立專案範本](/visualstudio/ide/how-to-create-project-templates)。  
@@ -61,9 +54,9 @@ Visual Basic 提供簡單的方法，以部署您的自訂`My`使用 Visual Stud
   
 |屬性|描述|  
 |---|---|  
-|`ID`|必要項。 延伸模組的唯一識別碼。 如果具有此識別碼的擴充功能已加入專案中，新增一次不會提示使用者。|  
-|`Version`|必要項。 項目範本的版本號碼。|  
-|`AssemblyFullName`|選擇項。 組件名稱。 當此組件的參考加入至專案時，會提示使用者加入`My`延伸模組，從這個項目範本。|  
+|`ID`|必要。 延伸模組的唯一識別碼。 如果具有此識別碼的擴充功能已加入專案中，新增一次不會提示使用者。|  
+|`Version`|必要。 項目範本的版本號碼。|  
+|`AssemblyFullName`|選擇性。 組件名稱。 當此組件的參考加入至專案時，會提示使用者加入`My`延伸模組，從這個項目範本。|  
   
 ### <a name="add-the-customdatasignature-element-to-the-vstemplate-file"></a>新增\<CustomDataSignature > 的.vstemplate 檔的項目  
  若要識別您的 Visual Studio 項目範本作為`My`命名空間擴充功能，您也必須修改.vstemplate 檔案的項目範本。 您必須新增`<CustomDataSignature>`元素`<TemplateData>`項目。 `<CustomDataSignature>`元素必須包含文字`Microsoft.VisualBasic.MyExtension`，如下列範例所示。  
@@ -100,7 +93,7 @@ Visual Basic 提供簡單的方法，以部署您的自訂`My`使用 Visual Stud
 ## <a name="install-the-template"></a>安裝範本  
  若要安裝的範本，您可以將壓縮的資料夾 （.zip 檔案） 複製到 Visual Basic 項目範本資料夾 （例如，My Documents\Visual Studio 2008\Templates\Item Templates\Visual 基本）。 或者，您可以為 Visual Studio 安裝程式 (.vsi) 檔案發佈的範本。  
   
-## <a name="see-also"></a>請參閱  
+## <a name="see-also"></a>另請參閱  
  [擴充 Visual Basic 中的 My 命名空間](../../../visual-basic/developing-apps/customizing-extending-my/extending-the-my-namespace.md)  
  [擴充 Visual Basic 應用程式模型](../../../visual-basic/developing-apps/customizing-extending-my/extending-the-visual-basic-application-model.md)  
  [自訂 My 中可用的物件](../../../visual-basic/developing-apps/customizing-extending-my/customizing-which-objects-are-available-in-my.md)  

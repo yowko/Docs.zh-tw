@@ -1,28 +1,14 @@
 ---
-title: "DataGridView 控制項架構 (Windows Form)"
-ms.custom: 
+title: DataGridView 控制項架構 (Windows Form)
 ms.date: 03/30/2017
-ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.technology:
-- dotnet-winforms
-ms.tgt_pltfrm: 
-ms.topic: article
 helpviewer_keywords:
 - DataGridView control [Windows Forms], architecture
 ms.assetid: 1c6cabf0-02ee-4bbc-9574-b54bb7f5b19e
-caps.latest.revision: 
-author: dotnet-bot
-ms.author: dotnetcontent
-manager: wpickett
-ms.workload:
-- dotnet
-ms.openlocfilehash: 3b3e51b87cdd766adcc10aa3f682647b28fbbe4d
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.openlocfilehash: a9fc1707b1691266d1844c411a08e7e8f35514ce
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="datagridview-control-architecture-windows-forms"></a>DataGridView 控制項架構 (Windows Form)
 <xref:System.Windows.Forms.DataGridView>控制項以及與其相關的類別都是設計成彈性、 可延伸的系統，顯示與編輯表格式資料。 這些類別包含在<xref:System.Windows.Forms?displayProperty=nameWithType>命名空間，而且它們所有名為"DataGridView"前置詞。  
@@ -67,9 +53,9 @@ DataGridViewElement 物件模型
  ![DataGridViewCell 物件模型](../../../../docs/framework/winforms/controls/media/datagridviewcell.gif "DataGridViewCell")  
 DataGridViewCell 物件模型  
   
- <xref:System.Windows.Forms.DataGridViewCell>類型是抽象的基底類別，從其中衍生的所有資料格類型。 <xref:System.Windows.Forms.DataGridViewCell>其衍生的型別不是 Windows Form 控制項，而某些主機的 Windows Form 控制項。 裝載控制項通常會處理任何支援的儲存格的編輯功能。  
+ <xref:System.Windows.Forms.DataGridViewCell>類型是抽象的基底類別，從其中衍生的所有資料格類型。 <xref:System.Windows.Forms.DataGridViewCell> 其衍生的型別不是 Windows Form 控制項，而某些主機的 Windows Form 控制項。 裝載控制項通常會處理任何支援的儲存格的編輯功能。  
   
- <xref:System.Windows.Forms.DataGridViewCell>物件並不控制它們自己的外觀和繪製功能相同的方式做為 Windows Form 控制項。 相反地，<xref:System.Windows.Forms.DataGridView>負責的外觀及其<xref:System.Windows.Forms.DataGridViewCell>物件。 您可以大幅影響的外觀和行為的資料格與互動<xref:System.Windows.Forms.DataGridView>控制項的屬性和事件。 當您有特殊需求的功能超出所自訂<xref:System.Windows.Forms.DataGridView>控制項，您可以實作您自己的類別衍生自<xref:System.Windows.Forms.DataGridViewCell>或其中一個子類別。  
+ <xref:System.Windows.Forms.DataGridViewCell> 物件並不控制它們自己的外觀和繪製功能相同的方式做為 Windows Form 控制項。 相反地，<xref:System.Windows.Forms.DataGridView>負責的外觀及其<xref:System.Windows.Forms.DataGridViewCell>物件。 您可以大幅影響的外觀和行為的資料格與互動<xref:System.Windows.Forms.DataGridView>控制項的屬性和事件。 當您有特殊需求的功能超出所自訂<xref:System.Windows.Forms.DataGridView>控制項，您可以實作您自己的類別衍生自<xref:System.Windows.Forms.DataGridViewCell>或其中一個子類別。  
   
  下表列出衍生自的類別<xref:System.Windows.Forms.DataGridViewCell>:  
   
@@ -154,7 +140,7 @@ DataGridViewRow 物件模型
   
  如果您啟用<xref:System.Windows.Forms.DataGridView>控制項的<xref:System.Windows.Forms.DataGridView.AllowUserToAddRows%2A>屬性，加入新資料列的特殊資料列會顯示為最後一個資料列。 這個資料列屬於<xref:System.Windows.Forms.DataGridView.Rows%2A>集合，但是也有可能需要您注意的特殊功能。 如需詳細資訊，請參閱[使用 Windows Form DataGridView 控制項中的新資料錄的資料列](../../../../docs/framework/winforms/controls/using-the-row-for-new-records-in-the-windows-forms-datagridview-control.md)。  
   
-## <a name="see-also"></a>請參閱  
+## <a name="see-also"></a>另請參閱  
  [DataGridView 控制項概觀](../../../../docs/framework/winforms/controls/datagridview-control-overview-windows-forms.md)  
  [自訂 Windows Forms DataGridView 控制項](../../../../docs/framework/winforms/controls/customizing-the-windows-forms-datagridview-control.md)  
  [使用 Windows Forms DataGridView 控制項中用於新增記錄的資料列](../../../../docs/framework/winforms/controls/using-the-row-for-new-records-in-the-windows-forms-datagridview-control.md)

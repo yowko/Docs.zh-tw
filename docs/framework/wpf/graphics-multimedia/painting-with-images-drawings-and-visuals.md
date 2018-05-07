@@ -1,13 +1,6 @@
 ---
-title: "使用影像、繪圖和視覺效果繪製"
-ms.custom: 
+title: 使用影像、繪圖和視覺效果繪製
 ms.date: 03/30/2017
-ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.technology: dotnet-wpf
-ms.tgt_pltfrm: 
-ms.topic: article
 dev_langs:
 - csharp
 - vb
@@ -19,16 +12,11 @@ helpviewer_keywords:
 - brushes [WPF], painting with images
 - brushes [WPF], painting with visuals
 ms.assetid: 779aac3f-8d41-49d8-8130-768244aa2240
-caps.latest.revision: "28"
-author: dotnet-bot
-ms.author: dotnetcontent
-manager: wpickett
-ms.workload: dotnet
-ms.openlocfilehash: 01939eb8735e6764e0f0cba811091c7fdbd6797f
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.openlocfilehash: abb5733ed54ea430ba161db5ea2dcb33e99298ad
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="painting-with-images-drawings-and-visuals"></a>使用影像、繪圖和視覺效果繪製
 本主題描述如何使用<xref:System.Windows.Media.ImageBrush>， <xref:System.Windows.Media.DrawingBrush>，和<xref:System.Windows.Media.VisualBrush>物件以使用影像繪製區域<xref:System.Windows.Media.Drawing>，或<xref:System.Windows.Media.Visual>。  
@@ -69,15 +57,15 @@ DrawingBrush 所繪製的物件
   
  A<xref:System.Windows.Media.DrawingBrush>使用繪製區域<xref:System.Windows.Media.Drawing>物件。 A<xref:System.Windows.Media.Drawing>物件描述可見的內容，例如圖形、 點陣圖、 視訊或一行文字。 不同類型的繪圖可描繪不同類型的內容。 以下列出不同類型的繪圖物件。  
   
--   <xref:System.Windows.Media.GeometryDrawing>– 繪製圖形。  
+-   <xref:System.Windows.Media.GeometryDrawing> – 繪製圖形。  
   
--   <xref:System.Windows.Media.ImageDrawing>– 繪製影像。  
+-   <xref:System.Windows.Media.ImageDrawing> – 繪製影像。  
   
--   <xref:System.Windows.Media.GlyphRunDrawing>– 繪製文字。  
+-   <xref:System.Windows.Media.GlyphRunDrawing> – 繪製文字。  
   
--   <xref:System.Windows.Media.VideoDrawing>– 播放音訊或視訊檔案。  
+-   <xref:System.Windows.Media.VideoDrawing> – 播放音訊或視訊檔案。  
   
--   <xref:System.Windows.Media.DrawingGroup>– 繪製其他繪圖。 您可以使用繪圖群組，來將其他繪圖結合為單一複合繪圖。  
+-   <xref:System.Windows.Media.DrawingGroup> – 繪製其他繪圖。 您可以使用繪圖群組，來將其他繪圖結合為單一複合繪圖。  
   
  如需有關<xref:System.Windows.Media.Drawing>物件，請參閱[繪圖物件概觀](../../../../docs/framework/wpf/graphics-multimedia/drawing-objects-overview.md)。  
   
@@ -133,7 +121,7 @@ DrawingBrush 所繪製的物件
   
 <a name="tilebrush"></a>   
 ## <a name="tilebrush-features"></a>TileBrush 功能  
- <xref:System.Windows.Media.ImageBrush><xref:System.Windows.Media.DrawingBrush>，和<xref:System.Windows.Media.VisualBrush>種<xref:System.Windows.Media.TileBrush>物件。 <xref:System.Windows.Media.TileBrush>物件會提供您有大量的控制能力如何繪製區域的映像、 繪圖或視覺效果。 例如，您可以用構成圖樣的一系列影像並排顯示來繪製區域，而不是只以單一自動縮放的影像來繪製區域。  
+ <xref:System.Windows.Media.ImageBrush><xref:System.Windows.Media.DrawingBrush>，和<xref:System.Windows.Media.VisualBrush>種<xref:System.Windows.Media.TileBrush>物件。 <xref:System.Windows.Media.TileBrush> 物件會提供您有大量的控制能力如何繪製區域的映像、 繪圖或視覺效果。 例如，您可以用構成圖樣的一系列影像並排顯示來繪製區域，而不是只以單一自動縮放的影像來繪製區域。  
   
  A<xref:System.Windows.Media.TileBrush>有三個主要元件： 內容、 圖格和輸出區域。  
   
@@ -145,7 +133,7 @@ DrawingBrush 所繪製的物件
   
  如需有關的並排顯示功能<xref:System.Windows.Media.TileBrush>物件，請參閱[TileBrush 概觀](../../../../docs/framework/wpf/graphics-multimedia/tilebrush-overview.md)。  
   
-## <a name="see-also"></a>請參閱  
+## <a name="see-also"></a>另請參閱  
  <xref:System.Windows.Media.ImageBrush>  
  <xref:System.Windows.Media.DrawingBrush>  
  <xref:System.Windows.Media.VisualBrush>  

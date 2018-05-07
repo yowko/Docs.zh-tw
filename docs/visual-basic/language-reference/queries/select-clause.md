@@ -1,12 +1,6 @@
 ---
 title: Select 子句 (Visual Basic)
 ms.date: 07/20/2015
-ms.prod: .net
-ms.reviewer: ''
-ms.suite: ''
-ms.technology:
-- devlang-visual-basic
-ms.topic: article
 f1_keywords:
 - vb.QuerySelect
 helpviewer_keywords:
@@ -14,14 +8,11 @@ helpviewer_keywords:
 - Select clause [Visual Basic]
 - queries [Visual Basic], Select
 ms.assetid: 27a3f61c-5960-4692-9b91-4d0c4b6178fe
-caps.latest.revision: 21
-author: dotnet-bot
-ms.author: dotnetcontent
-ms.openlocfilehash: a9d8cabcbd8554ca2aee639eaac8a52f0485a266
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.openlocfilehash: 55c1e79b9e8e26483c1b7374a755bf977129169b
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="select-clause-visual-basic"></a>Select 子句 (Visual Basic)
 定義查詢的結果。  
@@ -34,10 +25,10 @@ Select [ var1 = ] fieldName1 [, [ var2 = ] fieldName2 [...] ]
   
 ## <a name="parts"></a>組件  
  `var1`  
- 選擇項。 別名可以用來參考資料行運算式的結果。  
+ 選擇性。 別名可以用來參考資料行運算式的結果。  
   
  `fieldName1`  
- 必要項。 要傳回查詢結果中的欄位名稱。  
+ 必要。 要傳回查詢結果中的欄位名稱。  
   
 ## <a name="remarks"></a>備註  
  您可以使用`Select`子句來定義要從查詢傳回的結果。 這可讓您定義的查詢時，所建立的新匿名類型成員，或是為目標的查詢所傳回的具名類型的成員。 `Select`子句是不必要的查詢。 如果沒有`Select`子句指定，則查詢會傳回類型，以識別目前範圍的範圍變數的所有成員為基礎。 如需詳細資訊，請參閱[匿名型別](../../../visual-basic/programming-guide/language-features/objects-and-classes/anonymous-types.md)。 當查詢建立具名型別時，它會傳回類型之結果的<xref:System.Collections.Generic.IEnumerable%601>其中`T`已建立的類型。  

@@ -1,23 +1,12 @@
 ---
 title: 使用 Async 和 Await 進行非同步程式設計 (Visual Basic)
-ms.custom: ''
 ms.date: 07/20/2015
-ms.prod: .net
-ms.reviewer: ''
-ms.suite: ''
-ms.technology:
-- devlang-visual-basic
-ms.tgt_pltfrm: ''
-ms.topic: article
 ms.assetid: bd7e462b-583b-4395-9c36-45aa9e61072c
-caps.latest.revision: 4
-author: dotnet-bot
-ms.author: dotnetcontent
-ms.openlocfilehash: 18e3abb8d010d3766aa1b1239b3d22cc3cb9b47e
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.openlocfilehash: 0f30dbeafa8fcac0ebfd76496721f1455b20048b
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="asynchronous-programming-with-async-and-await-visual-basic"></a>使用 Async 和 Await 進行非同步程式設計 (Visual Basic)
 您可以使用非同步程式設計，避免發生效能瓶頸並增強應用程式的整體回應性。 不過，撰寫非同步應用程式的傳統技術可能很複雜，因而難以撰寫、偵錯和維護。  
@@ -157,7 +146,7 @@ Dim urlContents As String = Await client.GetStringAsync()
   
  `Async` 和 `Await` 關鍵字不會導致建立其他執行緒。 由於非同步方法不會在本身的執行緒上執行，因此非同步方法不需要多執行緒。 方法會在目前的同步處理內容執行，而且只有在方法為作用中時才會在執行緒上花費時間。 您可以使用 <xref:System.Threading.Tasks.Task.Run%2A?displayProperty=nameWithType> 將受限於 CPU 的工作移到背景執行緒，但是背景執行緒無法協助處理正在等待結果產生的處理序。  
   
- 非同步程式設計的非同步方法幾乎是所有案例的現有方法當中較好的方法。 特別是，這個方法比受限於 IO 之作業的 <xref:System.ComponentModel.BackgroundWorker> 還要好，因為程式碼較簡單，而且不需要防範競爭情況。 與 <xref:System.Threading.Tasks.Task.Run%2A?displayProperty=nameWithType> 結合時，非同步程式設計會比受限於 CPU 之作業的 <xref:System.ComponentModel.BackgroundWorker> 還要好，因為非同步程式設計會將執行程式碼的協調工作細節，從 `Task.Run` 傳輸至執行緒集區的工作中分出來。  
+ 非同步程式設計的非同步方法幾乎是所有案例的現有方法當中較好的方法。 特別是，這種方法是優於<xref:System.ComponentModel.BackgroundWorker>的 I/O 繫結作業因為程式碼較簡單，而且您不需要防範競爭情況。 與 <xref:System.Threading.Tasks.Task.Run%2A?displayProperty=nameWithType> 結合時，非同步程式設計會比受限於 CPU 之作業的 <xref:System.ComponentModel.BackgroundWorker> 還要好，因為非同步程式設計會將執行程式碼的協調工作細節，從 `Task.Run` 傳輸至執行緒集區的工作中分出來。  
   
 ##  <a name="BKMK_AsyncandAwait"></a> Async 和 Await  
  如果您使用 [Async](../../../../visual-basic/language-reference/modifiers/async.md) 修飾詞來將方法指定為非同步方法，就會啟用下列兩項功能。  

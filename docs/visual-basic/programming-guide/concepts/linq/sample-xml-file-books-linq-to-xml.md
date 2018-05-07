@@ -1,22 +1,12 @@
 ---
-title: "範例 XML 檔：書籍 (LINQ to XML)"
-ms.custom: 
+title: 範例 XML 檔：書籍 (LINQ to XML)
 ms.date: 07/20/2015
-ms.prod: .net
-ms.reviewer: 
-ms.suite: 
-ms.technology: devlang-visual-basic
-ms.tgt_pltfrm: 
-ms.topic: article
 ms.assetid: 27ca5847-2289-40c0-8331-ede67ec59d1c
-caps.latest.revision: "3"
-author: dotnet-bot
-ms.author: dotnetcontent
-ms.openlocfilehash: 04131afff2075043936bba97b7ce344ffeeb4300
-ms.sourcegitcommit: bd1ef61f4bb794b25383d3d72e71041a5ced172e
+ms.openlocfilehash: 5d68b7830994bdd51f59725d20ffcab9b3769b2b
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/18/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="sample-xml-file-books-linq-to-xml"></a>範例 XML 檔：書籍 (LINQ to XML)
 下列 XML 檔案用於 [!INCLUDE[sqltecxlinq](~/includes/sqltecxlinq-md.md)] 文件的各種範例中。 此檔案包含書籍的相關資訊。  

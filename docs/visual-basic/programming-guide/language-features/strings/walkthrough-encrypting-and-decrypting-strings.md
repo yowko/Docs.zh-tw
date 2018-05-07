@@ -1,27 +1,17 @@
 ---
-title: "在 Visual Basic 中的字串加密和解密"
-ms.custom: 
+title: 在 Visual Basic 中的字串加密和解密
 ms.date: 07/20/2015
-ms.prod: .net
-ms.reviewer: 
-ms.suite: 
-ms.technology: devlang-visual-basic
-ms.tgt_pltfrm: 
-ms.topic: article
 helpviewer_keywords:
 - encryption [Visual Basic], strings
 - strings [Visual Basic], encrypting
 - decryption [Visual Basic], strings
 - strings [Visual Basic], decrypting
 ms.assetid: 1f51e40a-2f88-43e2-a83e-28a0b5c0d6fd
-caps.latest.revision: "18"
-author: dotnet-bot
-ms.author: dotnetcontent
-ms.openlocfilehash: fd9ec8e7af771db3f042e08c8ab30f6ed5832c2b
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.openlocfilehash: 96e56ab315a739fef9d5499b076a077f5294f39e
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="walkthrough-encrypting-and-decrypting-strings-in-visual-basic"></a>逐步解說：在 Visual Basic 中為字串加密和解密
 本逐步解說會示範如何使用<xref:System.Security.Cryptography.DESCryptoServiceProvider>類別來加密和解密使用密碼編譯服務提供者 (CSP) 版本的三重資料加密標準字串 (<xref:System.Security.Cryptography.TripleDES>) 演算法。 第一個步驟是建立一個簡單的包裝函式類別來封裝 3DES 演算法，並將加密的資料儲存為 base 64 編碼的字串。 然後，該包裝函式用來安全地儲存在可公開存取的文字檔中的私用使用者資料。  

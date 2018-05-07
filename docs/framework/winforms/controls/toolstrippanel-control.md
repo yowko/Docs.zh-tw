@@ -1,13 +1,6 @@
 ---
-title: "ToolStripPanel 控制項"
-ms.custom: 
+title: ToolStripPanel 控制項
 ms.date: 03/30/2017
-ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.technology: dotnet-winforms
-ms.tgt_pltfrm: 
-ms.topic: article
 helpviewer_keywords:
 - ToolStripPanel control [Windows Forms]
 - horizontal space
@@ -15,16 +8,11 @@ helpviewer_keywords:
 - tool area [Windows Forms]
 - vertical space
 ms.assetid: aa47af39-1e71-40ee-bb75-2d2478f81bd0
-caps.latest.revision: "6"
-author: dotnet-bot
-ms.author: dotnetcontent
-manager: wpickett
-ms.workload: dotnet
-ms.openlocfilehash: d062e46ce0cb8d6ce6fa7189377735a4c480e030
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.openlocfilehash: 14ddd56540d8649a3705ef2d19726499fbfcaf9e
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="toolstrippanel-control"></a>ToolStripPanel 控制項
 `ToolStripPanel` 控制項可以在停駐時共用工具區域中的水平空間或垂直空間，也可以在您不需要 <xref:System.Windows.Forms.ToolStripContainer> 的四個面板和中間面板時排列 <xref:System.Windows.Forms.ToolStrip> 控制項。  
@@ -45,5 +33,5 @@ ms.lasthandoff: 12/22/2017
  <xref:System.Windows.Forms.ToolStripPanel>  
  提供 <xref:System.Windows.Forms.ToolStripPanel> 控制項的參考文件。  
   
-## <a name="see-also"></a>請參閱  
+## <a name="see-also"></a>另請參閱  
  [在 Windows Forms 上使用的控制項](../../../../docs/framework/winforms/controls/controls-to-use-on-windows-forms.md)

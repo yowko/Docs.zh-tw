@@ -1,13 +1,6 @@
 ---
-title: "使用巢狀圖形容器"
-ms.custom: 
+title: 使用巢狀圖形容器
 ms.date: 03/30/2017
-ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.technology: dotnet-winforms
-ms.tgt_pltfrm: 
-ms.topic: article
 dev_langs:
 - csharp
 - vb
@@ -16,19 +9,14 @@ helpviewer_keywords:
 - graphics [Windows Forms], clipping
 - graphics [Windows Forms], transformations in nested objects
 ms.assetid: a0d9f178-43a4-4323-bb5a-d3e3f77ae6c1
-caps.latest.revision: "13"
-author: dotnet-bot
-ms.author: dotnetcontent
-manager: wpickett
-ms.workload: dotnet
-ms.openlocfilehash: 512c8903611f025364a1af2cb6cbaaffc8d759eb
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.openlocfilehash: ba6bba84100a0ddcc87894710a6d3099ab0ccff5
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="using-nested-graphics-containers"></a>使用巢狀圖形容器
-[!INCLUDE[ndptecgdiplus](../../../../includes/ndptecgdiplus-md.md)]提供可用來暫時取代或擴充部分的狀態中的容器<xref:System.Drawing.Graphics>物件。 您可以建立一個容器呼叫<xref:System.Drawing.Graphics.BeginContainer%2A>方法<xref:System.Drawing.Graphics>物件。 您可以呼叫<xref:System.Drawing.Graphics.BeginContainer%2A>重複，以形成巢狀的容器。 每次呼叫<xref:System.Drawing.Graphics.BeginContainer%2A>必須搭配呼叫<xref:System.Drawing.Graphics.EndContainer%2A>。  
+[!INCLUDE[ndptecgdiplus](../../../../includes/ndptecgdiplus-md.md)] 提供可用來暫時取代或擴充部分的狀態中的容器<xref:System.Drawing.Graphics>物件。 您可以建立一個容器呼叫<xref:System.Drawing.Graphics.BeginContainer%2A>方法<xref:System.Drawing.Graphics>物件。 您可以呼叫<xref:System.Drawing.Graphics.BeginContainer%2A>重複，以形成巢狀的容器。 每次呼叫<xref:System.Drawing.Graphics.BeginContainer%2A>必須搭配呼叫<xref:System.Drawing.Graphics.EndContainer%2A>。  
   
 ## <a name="transformations-in-nested-containers"></a>巢狀容器中的轉換  
  下列範例會建立<xref:System.Drawing.Graphics>物件和容器內的<xref:System.Drawing.Graphics>物件。 自然變換<xref:System.Drawing.Graphics>物件是在 x 方向轉譯 100 單位而 80 y 方向的單位。 容器的自然變換是 30 度旋轉。 程式碼會呼叫`DrawRectangle(pen, -60, -30, 120, 60)`兩次。 第一次呼叫<xref:System.Drawing.Graphics.DrawRectangle%2A>位於容器; 亦即，呼叫是對呼叫之間<xref:System.Drawing.Graphics.BeginContainer%2A>和<xref:System.Drawing.Graphics.EndContainer%2A>。 第二個呼叫<xref:System.Drawing.Graphics.DrawRectangle%2A>之後呼叫<xref:System.Drawing.Graphics.EndContainer%2A>。  
@@ -67,6 +55,6 @@ ms.lasthandoff: 12/22/2017
   
  ![巢狀容器](../../../../docs/framework/winforms/advanced/media/nestedcontainers3.png "nestedcontainers3")  
   
-## <a name="see-also"></a>請參閱  
+## <a name="see-also"></a>另請參閱  
  <xref:System.Drawing.Graphics>  
  [管理圖形物件的狀態](../../../../docs/framework/winforms/advanced/managing-the-state-of-a-graphics-object.md)

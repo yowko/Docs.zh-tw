@@ -1,10 +1,6 @@
 ---
 title: Partial (Visual Basic)
 ms.date: 07/20/2015
-ms.prod: .net
-ms.suite: 
-ms.technology: devlang-visual-basic
-ms.topic: article
 f1_keywords:
 - vb.Partial
 - partial
@@ -18,14 +14,11 @@ helpviewer_keywords:
 - Partial keyword [Visual Basic]
 - type promotion
 ms.assetid: 7adaef80-f435-46e1-970a-269fff63b448
-caps.latest.revision: "36"
-author: dotnet-bot
-ms.author: dotnetcontent
-ms.openlocfilehash: 5129ef7737b1b07317d47f8d18e9aceb668bf05a
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.openlocfilehash: c94c3bf1a1e3e4c724f90690f52e97e8216cb9a7
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="partial-visual-basic"></a>Partial (Visual Basic)
 表示類別宣告為類型的部分定義。  
@@ -51,20 +44,20 @@ Partial { Class | Structure | Interface | Module } name [ (Of typelist) ]
   
 |詞彙|定義|  
 |---|---|  
-|`attrlist`|選擇項。 套用至此類型的屬性清單。 您必須將[屬性清單](../../../visual-basic/language-reference/statements/attribute-list.md)角括弧括住 (`< >`)。|  
-|`accessmodifier`|選擇項。 指定哪些程式碼可以存取此類型。 請參閱[存取 Visual Basic 中的層級](../../../visual-basic/programming-guide/language-features/declared-elements/access-levels.md)。|  
-|`Shadows`|選擇項。 請參閱[陰影](../../../visual-basic/language-reference/modifiers/shadows.md)。|  
-|`MustInherit`|選擇項。 請參閱[MustInherit](../../../visual-basic/language-reference/modifiers/mustinherit.md)。|  
-|`NotInheritable`|選擇項。 請參閱[NotInheritable](../../../visual-basic/language-reference/modifiers/notinheritable.md)。|  
-|`name`|必要項。 此類型的名稱。 必須符合相同類型的所有其他部分宣告中定義的名稱。|  
-|`Of`|選擇項。 指定這是否為泛型類型。 請參閱[Visual Basic 中的泛型類型](../../../visual-basic/programming-guide/language-features/data-types/generic-types.md)。|  
+|`attrlist`|選擇性。 套用至此類型的屬性清單。 您必須將[屬性清單](../../../visual-basic/language-reference/statements/attribute-list.md)角括弧括住 (`< >`)。|  
+|`accessmodifier`|選擇性。 指定哪些程式碼可以存取此類型。 請參閱[存取 Visual Basic 中的層級](../../../visual-basic/programming-guide/language-features/declared-elements/access-levels.md)。|  
+|`Shadows`|選擇性。 請參閱[陰影](../../../visual-basic/language-reference/modifiers/shadows.md)。|  
+|`MustInherit`|選擇性。 請參閱[MustInherit](../../../visual-basic/language-reference/modifiers/mustinherit.md)。|  
+|`NotInheritable`|選擇性。 請參閱[NotInheritable](../../../visual-basic/language-reference/modifiers/notinheritable.md)。|  
+|`name`|必要。 此類型的名稱。 必須符合相同類型的所有其他部分宣告中定義的名稱。|  
+|`Of`|選擇性。 指定這是否為泛型類型。 請參閱[Visual Basic 中的泛型類型](../../../visual-basic/programming-guide/language-features/data-types/generic-types.md)。|  
 |`typelist`|如果您使用所需[的](../../../visual-basic/language-reference/statements/of-clause.md)。 請參閱[輸入清單](../../../visual-basic/language-reference/statements/type-list.md)。|  
-|`Inherits`|選擇項。 請參閱[Inherits 陳述式](../../../visual-basic/language-reference/statements/inherits-statement.md)。|  
+|`Inherits`|選擇性。 請參閱[Inherits 陳述式](../../../visual-basic/language-reference/statements/inherits-statement.md)。|  
 |`classname`|如果您使用 `Inherits`，則此為必要項。 此類別衍生自的類別或介面名稱。|  
-|`Implements`|選擇項。 請參閱[實作陳述式](../../../visual-basic/language-reference/statements/implements-statement.md)。|  
+|`Implements`|選擇性。 請參閱[實作陳述式](../../../visual-basic/language-reference/statements/implements-statement.md)。|  
 |`interfacenames`|如果您使用 `Implements`，則此為必要項。 此類型實作的介面名稱。|  
-|`variabledeclarations`|選擇項。 宣告類型的其他變數和事件的陳述式。|  
-|`proceduredeclarations`|選擇項。 宣告和定義類型的其他程序的陳述式。|  
+|`variabledeclarations`|選擇性。 宣告類型的其他變數和事件的陳述式。|  
+|`proceduredeclarations`|選擇性。 宣告和定義類型的其他程序的陳述式。|  
 |`End Class` 或 `End Structure`|結束此部分 `Class` 或 `Structure` 定義。|  
   
 ## <a name="remarks"></a>備註  

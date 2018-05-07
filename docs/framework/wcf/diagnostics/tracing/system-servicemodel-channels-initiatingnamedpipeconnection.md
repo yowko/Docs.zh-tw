@@ -1,24 +1,12 @@
 ---
 title: System.ServiceModel.Channels.InitiatingNamedPipeConnection
-ms.custom: 
 ms.date: 03/30/2017
-ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.technology: dotnet-clr
-ms.tgt_pltfrm: 
-ms.topic: article
 ms.assetid: 23bd5f35-4a9c-4ccb-a153-f3f6f6594199
-caps.latest.revision: "4"
-author: dotnet-bot
-ms.author: dotnetcontent
-manager: wpickett
-ms.workload: dotnet
-ms.openlocfilehash: 8cc0e4c4d1a692f694097ed6f9fe97f40e0a8fbc
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.openlocfilehash: 10a2428ab8a5aff7dbf5d62cad7499ee0dac4da6
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="systemservicemodelchannelsinitiatingnamedpipeconnection"></a>System.ServiceModel.Channels.InitiatingNamedPipeConnection
 System.ServiceModel.Channels.InitiatingNamedPipeConnection  
@@ -26,7 +14,7 @@ System.ServiceModel.Channels.InitiatingNamedPipeConnection
 ## <a name="description"></a>描述  
  初始化具名管道連線。  
   
-## <a name="see-also"></a>請參閱  
+## <a name="see-also"></a>另請參閱  
  [追蹤](../../../../../docs/framework/wcf/diagnostics/tracing/index.md)  
  [使用追蹤為應用程式進行疑難排解](../../../../../docs/framework/wcf/diagnostics/tracing/using-tracing-to-troubleshoot-your-application.md)  
  [管理與診斷](../../../../../docs/framework/wcf/diagnostics/index.md)

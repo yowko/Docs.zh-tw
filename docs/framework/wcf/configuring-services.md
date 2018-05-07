@@ -1,28 +1,14 @@
 ---
-title: "設定服務"
-ms.custom: 
+title: 設定服務
 ms.date: 03/30/2017
-ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.technology:
-- dotnet-clr
-ms.tgt_pltfrm: 
-ms.topic: article
 helpviewer_keywords:
 - configuration [WCF]
 ms.assetid: beac771e-f28e-4f84-9ff1-ad9251c726d3
-caps.latest.revision: 
-author: dotnet-bot
-ms.author: dotnetcontent
-manager: wpickett
-ms.workload:
-- dotnet
-ms.openlocfilehash: 857ec77e54d6a55bde1a94fd9fd5758ef7a24309
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
-ms.translationtype: MT
+ms.openlocfilehash: dc3aeadafd54bbd8b57a3e8c781e0cced9e7e632
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="configuring-services"></a>設定服務
 在設計並實作您的服務合約之後，就可開始設定您的服務。 您可在此處定義及自訂向用戶端公開服務的方式，包括指定所在的位址、用於傳送及接收訊息的傳輸和訊息編碼，以及所需要的安全性類型。  
@@ -34,7 +20,7 @@ ms.lasthandoff: 12/22/2017
  從 [!INCLUDE[netfx40_long](../../../includes/netfx40-long-md.md)]開始， [!INCLUDE[indigo2](../../../includes/indigo2-md.md)] 隨附可簡化 [!INCLUDE[indigo2](../../../includes/indigo2-md.md)] 組態需求的新預設組態模型。 如果您沒有對特定服務提供任何 [!INCLUDE[indigo2](../../../includes/indigo2-md.md)] 組態，執行階段會以預設端點、繫結和行為自動設定服務。  
   
  [使用設定檔設定服務](../../../docs/framework/wcf/configuring-services-using-configuration-files.md)  
- [!INCLUDE[indigo1](../../../includes/indigo1-md.md)] 服務可使用 [!INCLUDE[dnprdnshort](../../../includes/dnprdnshort-md.md)] 組態技術來設定。 最常見的是，會將 XML 項目新增至裝載 [!INCLUDE[indigo2](../../../includes/indigo2-md.md)] 服務的網際網路資訊服務 (IIS) 網站的 Web.config 檔案。 這些項目允許您變更詳細資料，例如各電腦的端點位址 (用於與服務通訊的實際位址)。  
+ Windows Communication Foundation (WCF) 服務是可設定使用[!INCLUDE[dnprdnshort](../../../includes/dnprdnshort-md.md)]技術設定。 最常見的是，會將 XML 項目新增至裝載 [!INCLUDE[indigo2](../../../includes/indigo2-md.md)] 服務的網際網路資訊服務 (IIS) 網站的 Web.config 檔案。 這些項目允許您變更詳細資料，例如各電腦的端點位址 (用於與服務通訊的實際位址)。  
   
  [繫結](../../../docs/framework/wcf/bindings.md)  
  此外，[!INCLUDE[indigo2](../../../includes/indigo2-md.md)] 還包括數種系統提供的常用組態，並以繫結的形式表示，允許您快速選取用戶端和服務如何通訊的最基本功能，例如所使用的傳輸、安全性和訊息編碼。  
@@ -68,7 +54,7 @@ ms.lasthandoff: 12/22/2017
   
  [管理與診斷](../../../docs/framework/wcf/diagnostics/index.md)  
   
-## <a name="see-also"></a>請參閱  
+## <a name="see-also"></a>另請參閱  
  [基本 WCF 程式設計](../../../docs/framework/wcf/basic-wcf-programming.md)  
  [概念性概觀](../../../docs/framework/wcf/conceptual-overview.md)  
  [WCF 功能詳細資料](../../../docs/framework/wcf/feature-details/index.md)

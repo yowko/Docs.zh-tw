@@ -1,27 +1,15 @@
 ---
-title: "自訂控制項的應用程式設定"
-ms.custom: 
+title: 自訂控制項的應用程式設定
 ms.date: 03/30/2017
-ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.technology: dotnet-winforms
-ms.tgt_pltfrm: 
-ms.topic: article
 helpviewer_keywords:
 - custom controls [Windows Forms], application settings
 - application settings [Windows Forms], custom controls
 ms.assetid: f44afb74-76cc-44f2-890a-44b7cdc211a1
-caps.latest.revision: "13"
-author: dotnet-bot
-ms.author: dotnetcontent
-manager: wpickett
-ms.workload: dotnet
-ms.openlocfilehash: e21a49b26a7493aaec31d5a97e627ce7925f39b3
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.openlocfilehash: 46300f679471874ac5046d0a1077d8abca57f2c6
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="application-settings-for-custom-controls"></a>自訂控制項的應用程式設定
 您必須完成特定工作，讓您的自訂控制項能夠保存應用程式設定，在第三方應用程式中裝載控制項時。  
@@ -56,7 +44,7 @@ ms.lasthandoff: 12/22/2017
   
  未提供的值之控制項的任何執行個體<xref:System.Configuration.ApplicationSettingsBase.SettingsKey%2A>會共用相同的設定。  
   
-## <a name="see-also"></a>請參閱  
+## <a name="see-also"></a>另請參閱  
  <xref:System.Configuration.ApplicationSettingsBase>  
  <xref:System.Configuration.IPersistComponentSettings>  
  [應用程式設定架構](../../../../docs/framework/winforms/advanced/application-settings-architecture.md)

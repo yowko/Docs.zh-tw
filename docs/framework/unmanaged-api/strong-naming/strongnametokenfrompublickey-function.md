@@ -1,14 +1,6 @@
 ---
-title: "StrongNameTokenFromPublicKey 函式"
-ms.custom: 
+title: StrongNameTokenFromPublicKey 函式
 ms.date: 03/30/2017
-ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.technology:
-- dotnet-clr
-ms.tgt_pltfrm: 
-ms.topic: reference
 api_name:
 - StrongNameTokenFromPublicKey
 api_location:
@@ -26,17 +18,13 @@ helpviewer_keywords:
 ms.assetid: 997e9e57-abb2-4217-bf20-1df621a75add
 topic_type:
 - apiref
-caps.latest.revision: 
 author: rpetrusha
 ms.author: ronpet
-manager: wpickett
-ms.workload:
-- dotnet
-ms.openlocfilehash: 0cb649f43bfea2e11c986aa3fff5a702e2b58c25
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.openlocfilehash: eb8ff76da288975ef291d226bb1f205e73a64252
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="strongnametokenfrompublickey-function"></a>StrongNameTokenFromPublicKey 函式
 取得代表公開金鑰的語彙基元。 為強式名稱語彙基元是公開金鑰縮短形式。  
@@ -68,7 +56,7 @@ BOOLEANStrongNameTokenFromPublicKey (
  [out]大小，以位元組為單位傳回強式名稱語彙基元。  
   
 ## <a name="return-value"></a>傳回值  
- `true`如果成功地完成。否則， `false`。  
+ `true` 如果成功地完成。否則， `false`。  
   
 ## <a name="remarks"></a>備註  
  為強式名稱語彙基元是公開金鑰的用來將索引鍵資訊儲存在中繼資料時，儲存空間縮短形式。 具體來說，強式名稱語彙基元會在組件參考中用來參考相依組件。  
@@ -82,9 +70,9 @@ BOOLEANStrongNameTokenFromPublicKey (
   
  **程式庫：**包含做為 mscoree.dll 中的資源  
   
- **.NET framework 版本：**[!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
+ **.NET framework 版本：** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
   
-## <a name="see-also"></a>請參閱  
+## <a name="see-also"></a>另請參閱  
  [StrongNameTokenFromPublicKey 方法](../../../../docs/framework/unmanaged-api/hosting/iclrstrongname-strongnametokenfrompublickey-method.md)  
  [StrongNameGetPublicKey 方法](../../../../docs/framework/unmanaged-api/hosting/iclrstrongname-strongnamegetpublickey-method.md)  
  [PublicKeyBlob 結構](../../../../docs/framework/unmanaged-api/strong-naming/publickeyblob-structure.md)

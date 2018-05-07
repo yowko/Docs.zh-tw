@@ -1,11 +1,6 @@
 ---
 title: 模組&lt;關鍵字&gt;(Visual Basic)
 ms.date: 07/20/2015
-ms.prod: .net
-ms.suite: ''
-ms.technology:
-- devlang-visual-basic
-ms.topic: article
 f1_keywords:
 - vb.ModuleAttribute
 helpviewer_keywords:
@@ -13,14 +8,11 @@ helpviewer_keywords:
 - Module modifier
 - attribute blocks, Module keyword
 ms.assetid: d971b940-05ab-4d56-8485-e3b8a661906b
-caps.latest.revision: 13
-author: dotnet-bot
-ms.author: dotnetcontent
-ms.openlocfilehash: 1d35ad332229785f8cac76bd8099bccc85c3d3cb
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.openlocfilehash: b412655695c49d1e12a02e005fccfd37d2956787
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="module-ltkeywordgt-visual-basic"></a>模組&lt;關鍵字&gt;(Visual Basic)
 指定的原始程式檔開頭的屬性會套用到目前的組件模組。  

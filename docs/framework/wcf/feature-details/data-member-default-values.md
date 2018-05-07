@@ -1,13 +1,6 @@
 ---
-title: "資料成員預設值"
-ms.custom: 
+title: 資料成員預設值
 ms.date: 03/30/2017
-ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.technology: dotnet-clr
-ms.tgt_pltfrm: 
-ms.topic: article
 dev_langs:
 - csharp
 - vb
@@ -15,16 +8,11 @@ helpviewer_keywords:
 - data members [WCF], default values
 - data members [WCF]
 ms.assetid: 53a3b505-4b27-444b-b079-0eb84a97cfd8
-caps.latest.revision: "10"
-author: dotnet-bot
-ms.author: dotnetcontent
-manager: wpickett
-ms.workload: dotnet
-ms.openlocfilehash: 33f093beb022804bbdbccf1177404e128d198dd1
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.openlocfilehash: 477921069411bb4b7ac32a5e93cc409bc7fbdec2
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="data-member-default-values"></a>資料成員預設值
 在[!INCLUDE[dnprdnshort](../../../../includes/dnprdnshort-md.md)]，類型內含有的概念*預設值*。 例如，任何參考型別的預設值為 `null`，整數型別則為零。 有時候資料成員設為預設值時，會需要從序列化資料中省略該成員。 因為此成員為預設值，而實際值不需要序列化，因此這樣做可促進效能。  
@@ -61,12 +49,12 @@ ms.lasthandoff: 12/22/2017
 ### <a name="schema-representation"></a>結構描述表示  
  資料成員的 XML 結構描述定義語言 (XSD) 結構描述表示法的詳細資料時`EmitDefaultValue`屬性設定為`false`中會討論[資料合約結構描述參考](../../../../docs/framework/wcf/feature-details/data-contract-schema-reference.md)。 不過，以下提供簡要的概觀。  
   
--   當 <xref:System.Runtime.Serialization.DataMemberAttribute.EmitDefaultValue%2A> 設為 `false` 時，會以如同 [!INCLUDE[indigo1](../../../../includes/indigo1-md.md)] 專屬附註的結構描述表示。 目前沒有可互通的方式能表示這項資訊。 特別是結構描述中的 "default" 屬性 (Attribute) 不是用於此目的時，`minOccurs` 屬性只會受到 <xref:System.Runtime.Serialization.DataMemberAttribute.IsRequired%2A> 設定的影響，而 `nillable` 屬性只會受到資料成員的型別影響。  
+-   當<xref:System.Runtime.Serialization.DataMemberAttribute.EmitDefaultValue%2A>設`false`，結構描述中表示為特定的 Windows Communication Foundation (WCF) 附註。 目前沒有可互通的方式能表示這項資訊。 特別是結構描述中的 "default" 屬性 (Attribute) 不是用於此目的時，`minOccurs` 屬性只會受到 <xref:System.Runtime.Serialization.DataMemberAttribute.IsRequired%2A> 設定的影響，而 `nillable` 屬性只會受到資料成員的型別影響。  
   
 -   實際使用的預設值不會在結構描述中表示。 端看接收端點如何適當地解譯遺失的項目而定。  
   
- 在結構描述匯入時，無論偵測到之前提到之 <xref:System.Runtime.Serialization.DataMemberAttribute.EmitDefaultValue%2A> 專屬附註的時機為何，`false` 屬性都會自動設為 [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)]。 針對 `false` 屬性設為 `nillable` 的參考型別，此屬性也會設為 `false`，以支援常在使用 [!INCLUDE[vstecasp](../../../../includes/vstecasp-md.md)] Web 服務時發生的特定互通性案例。  
+ 結構描述匯入<xref:System.Runtime.Serialization.DataMemberAttribute.EmitDefaultValue%2A>屬性會自動設定為`false`每當所述的特定 WCF 註解先前偵測到。 針對 `false` 屬性設為 `nillable` 的參考型別，此屬性也會設為 `false`，以支援常在使用 [!INCLUDE[vstecasp](../../../../includes/vstecasp-md.md)] Web 服務時發生的特定互通性案例。  
   
-## <a name="see-also"></a>請參閱  
+## <a name="see-also"></a>另請參閱  
  <xref:System.Runtime.Serialization.DataMemberAttribute.EmitDefaultValue%2A>  
  <xref:System.Runtime.Serialization.DataMemberAttribute>

@@ -1,27 +1,17 @@
 ---
-title: "MissingInteropDataException 類別 (.NET Native)"
-ms.custom: 
+title: MissingInteropDataException 類別 (.NET Native)
 ms.date: 03/30/2017
-ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.technology: dotnet-clr
-ms.tgt_pltfrm: 
-ms.topic: article
 dev_langs:
 - csharp
 - vb
 ms.assetid: eab4bcf8-9f5f-4731-87d8-842748a6062a
-caps.latest.revision: "14"
 author: rpetrusha
 ms.author: ronpet
-manager: wpickett
-ms.workload: dotnet
-ms.openlocfilehash: caf3882b8ba9c684d4751cafb5719606125dd983
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.openlocfilehash: 189b50b4d35d061c511fbd06cc843296607062b7
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="missinginteropdataexception-class-net-native"></a>MissingInteropDataException 類別 (.NET Native)
 **僅限 Windows 10 之 Windows 應用程式的 .NET[!INCLUDE[net_native](../../../includes/net-native-md.md)]**  
@@ -88,7 +78,7 @@ ms.lasthandoff: 12/22/2017
   
  `MissingInteropDataException` 類別包含唯一的成員 `MissingType` 屬性，指出需要中繼資料才能成功呼叫方法的類型。 其餘所有成員都是繼承自基底類別 <xref:System.Exception?displayProperty=nameWithType>。  
   
-## <a name="see-also"></a>請參閱  
+## <a name="see-also"></a>另請參閱  
  <xref:System.Exception?displayProperty=nameWithType>  
  [MissingMetadataException 類別](../../../docs/framework/net-native/missingmetadataexception-class-net-native.md)  
  [執行階段指示詞 (rd.xml) 組態檔參考](../../../docs/framework/net-native/runtime-directives-rd-xml-configuration-file-reference.md)

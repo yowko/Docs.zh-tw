@@ -1,11 +1,6 @@
 ---
 title: Declare Statement
 ms.date: 07/20/2015
-ms.prod: .net
-ms.reviewer: 
-ms.suite: 
-ms.technology: devlang-visual-basic
-ms.topic: article
 f1_keywords:
 - vb.Declare
 - vb.Lib
@@ -32,14 +27,11 @@ helpviewer_keywords:
 - Visual Basic code, Sub procedures
 - Function procedures [Visual Basic], declaring
 ms.assetid: d3f21fb0-b804-4c99-97ed-583b23894cf1
-caps.latest.revision: "30"
-author: dotnet-bot
-ms.author: dotnetcontent
-ms.openlocfilehash: 2560f34a5130ef7453b50ffb4495b67bf1dfa4c8
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.openlocfilehash: bc6949c7b52e87b7b39dd2690cac915a5f0d15aa
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="declare-statement"></a>Declare Statement
 宣告實作的外部檔案中的程序的參考。  
@@ -60,16 +52,16 @@ Declare [ charsetmodifier ] [ Function ] name Lib "libname" _
   
 |詞彙|定義|  
 |---|---|  
-|`attributelist`|選擇項。 請參閱[屬性清單](../../../visual-basic/language-reference/statements/attribute-list.md)。|  
-|`accessmodifier`|選擇項。 可以是下列其中一項：<br /><br /> -   [公用](../../../visual-basic/language-reference/modifiers/public.md)<br />-   [受保護](../../../visual-basic/language-reference/modifiers/protected.md)<br />-   [Friend](../../../visual-basic/language-reference/modifiers/friend.md)<br />-   [私用](../../../visual-basic/language-reference/modifiers/private.md)<br />-   `Protected Friend`<br /><br /> 請參閱[存取 Visual Basic 中的層級](../../../visual-basic/programming-guide/language-features/declared-elements/access-levels.md)。|  
-|`Shadows`|選擇項。 請參閱[陰影](../../../visual-basic/language-reference/modifiers/shadows.md)。|  
-|`charsetmodifier`|選擇項。 指定字元集和檔案資訊中搜尋。 可以是下列其中一項：<br /><br /> -   [Ansi](../../../visual-basic/language-reference/modifiers/ansi.md) （預設值）<br />-   [Unicode](../../../visual-basic/language-reference/modifiers/unicode.md)<br />-   [自動](../../../visual-basic/language-reference/modifiers/auto.md)|  
+|`attributelist`|選擇性。 請參閱[屬性清單](../../../visual-basic/language-reference/statements/attribute-list.md)。|  
+|`accessmodifier`|選擇性。 可以是下列其中一項：<br /><br /> -   [公用](../../../visual-basic/language-reference/modifiers/public.md)<br />-   [受保護](../../../visual-basic/language-reference/modifiers/protected.md)<br />-   [Friend](../../../visual-basic/language-reference/modifiers/friend.md)<br />-   [私用](../../../visual-basic/language-reference/modifiers/private.md)<br />-   `Protected Friend`<br /><br /> 請參閱[存取 Visual Basic 中的層級](../../../visual-basic/programming-guide/language-features/declared-elements/access-levels.md)。|  
+|`Shadows`|選擇性。 請參閱[陰影](../../../visual-basic/language-reference/modifiers/shadows.md)。|  
+|`charsetmodifier`|選擇性。 指定字元集和檔案資訊中搜尋。 可以是下列其中一項：<br /><br /> -   [Ansi](../../../visual-basic/language-reference/modifiers/ansi.md) （預設值）<br />-   [Unicode](../../../visual-basic/language-reference/modifiers/unicode.md)<br />-   [自動](../../../visual-basic/language-reference/modifiers/auto.md)|  
 |`Sub`|選擇性，但請`Sub`或`Function`必須出現。 表示外部程序不會傳回值。|  
 |`Function`|選擇性，但請`Sub`或`Function`必須出現。 表示外部程序傳回值。|  
-|`name`|必要項。 這個外部參考的名稱。 如需詳細資訊，請參閱[宣告項目名稱](../../../visual-basic/programming-guide/language-features/declared-elements/declared-element-names.md)。|  
-|`Lib`|必要項。 導入了`Lib`子句，用來識別包含外部程序的外部檔案 （DLL 或程式碼資源）。|  
-|`libname`|必要項。 包含宣告的程序的檔案名稱。|  
-|`Alias`|選擇項。 指出所宣告的程序無法識別其檔案內，名稱中指定`name`。 指定在其識別`aliasname`。|  
+|`name`|必要。 這個外部參考的名稱。 如需詳細資訊，請參閱[宣告項目名稱](../../../visual-basic/programming-guide/language-features/declared-elements/declared-element-names.md)。|  
+|`Lib`|必要。 導入了`Lib`子句，用來識別包含外部程序的外部檔案 （DLL 或程式碼資源）。|  
+|`libname`|必要。 包含宣告的程序的檔案名稱。|  
+|`Alias`|選擇性。 指出所宣告的程序無法識別其檔案內，名稱中指定`name`。 指定在其識別`aliasname`。|  
 |`aliasname`|如果您使用所需`Alias`關鍵字。 識別在其中一種程序的字串：<br /><br /> 在其檔案中，括在引號內的程序的進入點名稱 (`""`)<br /><br /> -或-<br /><br /> 數字符號 (`#`) 後面接著整數，指定其檔案中的程序的進入點的序號|  
 |`parameterlist`|所需的程序如果使用參數。 請參閱[參數清單](../../../visual-basic/language-reference/statements/parameter-list.md)。|  
 |`returntype`|若`Function`指定和`Option Strict`是`On`。 此程序所傳回之值的資料類型。|  
@@ -125,7 +117,7 @@ Declare [ charsetmodifier ] [ Function ] name Lib "libname" _
   
 -   **字元集。** 您可以指定在`charsetmodifier`如何 Visual Basic 應封送處理字串時，它會呼叫外部程序。 `Ansi`修飾詞會指示 Visual Basic 來封送處理成 ANSI 值，所有字串和`Unicode`修飾詞會將其導向封送處理為 Unicode 值的所有字串。 `Auto`修飾詞會指示 Visual Basic 根據.NET Framework 的封送處理字串規則根據外部參考`name`，或`aliasname`如果指定。 預設值是 `Ansi`。  
   
-     `charsetmodifier`也會指定 Visual Basic 應如何查詢其外部檔案內的外部程序。 `Ansi`和`Unicode`兩者都直接 Visual Basic 而不需在搜尋期間修改其名稱查閱。 `Auto`會指示 Visual Basic 來判斷執行階段平台的基底字元集，並可能修改外部程序名稱，如下所示：  
+     `charsetmodifier` 也會指定 Visual Basic 應如何查詢其外部檔案內的外部程序。 `Ansi` 和`Unicode`兩者都直接 Visual Basic 而不需在搜尋期間修改其名稱查閱。 `Auto` 會指示 Visual Basic 來判斷執行階段平台的基底字元集，並可能修改外部程序名稱，如下所示：  
   
     -   ANSI 平台上，例如 Windows 95、 Windows 98 或 Windows Millennium Edition、 先尋找具有任何名稱修改的外部程序。 如果失敗，將外部程序名稱的結尾附加"A"，並再次進行查閱。  
   

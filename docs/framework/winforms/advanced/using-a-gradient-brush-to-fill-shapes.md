@@ -1,28 +1,16 @@
 ---
-title: "使用漸層筆刷填滿形狀"
-ms.custom: 
+title: 使用漸層筆刷填滿形狀
 ms.date: 03/30/2017
-ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.technology: dotnet-winforms
-ms.tgt_pltfrm: 
-ms.topic: article
 helpviewer_keywords:
 - brushes [Windows Forms], gradient brushes
 - gradient brushes
 - examples [Windows Forms], gradient brushes
 ms.assetid: 2c6037b9-05bd-44c0-a22a-19584b722524
-caps.latest.revision: "11"
-author: dotnet-bot
-ms.author: dotnetcontent
-manager: wpickett
-ms.workload: dotnet
-ms.openlocfilehash: 6a84a68f9082d00559938c2710b6574690fa6ab4
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.openlocfilehash: 857a9276a731ae5e69b3caa1a639d1315aba9901
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="using-a-gradient-brush-to-fill-shapes"></a>使用漸層筆刷填滿形狀
 您可以使用漸層筆刷填滿圖形的逐漸變更的色彩。 例如，您可以使用水平漸層來填滿色彩逐漸變更在左邊緣圖案移右邊緣的形狀。 假設有一個矩形，為黑色的左邊緣 （代表紅色、 綠色和藍色元件 0，0，0） 和右邊緣是紅色 （由 255，0，0）。 如果矩形是 256 像素寬，給定的像素的紅色元件將會大於其左側的像素的紅色元件。 資料列中最左邊的像素會有色彩元件 （0，0，0）、 第二個像素 （1，0，0），第三個像素的 （2，0，0），並依此類推，直到到達最右邊像素的色彩元件 （255，0，0）。 這些插補的色彩值便會產生之色彩漸層。  

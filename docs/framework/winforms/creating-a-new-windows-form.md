@@ -1,27 +1,15 @@
 ---
-title: "建立新的 Windows Form"
-ms.custom: 
+title: 建立新的 Windows Form
 ms.date: 03/30/2017
-ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.technology: dotnet-winforms
-ms.tgt_pltfrm: 
-ms.topic: article
 helpviewer_keywords:
 - Windows Forms, getting started
 - Windows Forms, creating a new form
 ms.assetid: c725559c-803e-4725-80fa-96aba93de29a
-caps.latest.revision: "10"
-author: dotnet-bot
-ms.author: dotnetcontent
-manager: wpickett
-ms.workload: dotnet
-ms.openlocfilehash: e5f2769921241216d60c3ed1bb25edcf238830d7
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.openlocfilehash: ddceec86938ef5f500c38eb90004dc1f9d11b122
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="creating-a-new-windows-form"></a>建立新的 Windows Form
 本主題包含主題的連結，說明如何建立第一個 Windows Forms 應用程式。 此外，本節中的主題會介紹一些在您開始建立 Windows Forms 應用程式時應該了解的基本詞彙和方針。 若要深入了解 Windows Form 應用程式，您可以使用它們、 事件和處理事件，以及如何處理來自使用者的輸入上的控制項，請參閱相關的主題清單。  

@@ -1,12 +1,6 @@
 ---
-title: "Visual Basic 中的範圍"
-ms.custom: 
+title: Visual Basic 中的範圍
 ms.date: 07/20/2015
-ms.prod: .net
-ms.reviewer: 
-ms.suite: 
-ms.technology: devlang-visual-basic
-ms.topic: article
 helpviewer_keywords:
 - module scope [Visual Basic]
 - scope [Visual Basic], levels
@@ -21,14 +15,11 @@ helpviewer_keywords:
 - scope [Visual Basic], Visual Basic
 - procedure scope [Visual Basic]
 ms.assetid: 208106fe-79c9-4eec-93c6-55f08548895f
-caps.latest.revision: "17"
-author: dotnet-bot
-ms.author: dotnetcontent
-ms.openlocfilehash: a9bfda19b9f5ee96d45a0322541b35dfab7635d7
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.openlocfilehash: d6692379626d787b728d6e92bd447c4a96e6680e
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="scope-in-visual-basic"></a>Visual Basic 中的範圍
 *範圍*的宣告的項目是 所有程式碼，而不需要限定其名稱，或透過參考一組[Imports 陳述式 （.NET 命名空間和類型）](../../../../visual-basic/language-reference/statements/imports-statement-net-namespace-and-type.md)。 元素可以有範圍，在下列層級的其中一個：  
@@ -61,7 +52,7 @@ ms.lasthandoff: 11/21/2017
   
 -   `Do` 和 `Loop`  
   
--   `For`[`Each`] 和`Next`  
+-   `For` [`Each`] 和 `Next`  
   
 -   `If` 和 `End If`  
   
@@ -127,7 +118,7 @@ Public strMsg As String
   
  命名空間範圍包括巢狀命名空間。 命名空間內可用的項目也會提供任何巢狀方式置於該命名空間的命名空間內。  
   
- 如果您的專案不包含任何[命名空間陳述式](../../../../visual-basic/language-reference/statements/namespace-statement.md)s，專案中的所有項目是在相同的命名空間中。 在此情況下，命名空間範圍可以視為專案範圍。 `Public`模組、 類別或結構中的項目也可用來參考其專案的任何專案。  
+ 如果您的專案不包含任何[命名空間陳述式](../../../../visual-basic/language-reference/statements/namespace-statement.md)s，專案中的所有項目是在相同的命名空間中。 在此情況下，命名空間範圍可以視為專案範圍。 `Public` 模組、 類別或結構中的項目也可用來參考其專案的任何專案。  
   
 ## <a name="choice-of-scope"></a>選擇範圍  
  當您宣告變數時，您應該記住下列幾點選擇其範圍時。  

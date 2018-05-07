@@ -1,24 +1,12 @@
 ---
-title: "使用 HTTP、TCP 或具名管道的同步案例"
-ms.custom: 
+title: 使用 HTTP、TCP 或具名管道的同步案例
 ms.date: 03/30/2017
-ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.technology: dotnet-clr
-ms.tgt_pltfrm: 
-ms.topic: article
 ms.assetid: 7e90af1b-f8f6-41b9-a63a-8490ada502b1
-caps.latest.revision: "9"
-author: dotnet-bot
-ms.author: dotnetcontent
-manager: wpickett
-ms.workload: dotnet
-ms.openlocfilehash: 428e8852c9b1706e88b1688b4a1f2e36c167fe28
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
-ms.translationtype: MT
+ms.openlocfilehash: 03f4fdcaa5fc59efe7e92d2cb900212ed5ebae77
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="synchronous-scenarios-using-http-tcp-or-named-pipe"></a>使用 HTTP、TCP 或具名管道的同步案例
 本主題將說明不同的同步要求/回覆案例中的各種活動與傳輸，以及使用 HTTP、TCP 或具名管道的單一執行緒用戶端。 請參閱[使用 HTTP、 TCP 或具名管道的非同步案例](../../../../../docs/framework/wcf/diagnostics/tracing/asynchronous-scenarios-using-http-tcp-or-named-pipe.md)如需詳細資訊，在多執行緒的要求。  
@@ -56,7 +44,7 @@ ms.lasthandoff: 12/22/2017
 #### <a name="closing-a-service-host"></a>關閉服務主機  
  ServiceHost 的關閉活動 (Z) 會從環境活動中建立。  
   
- ![使用 HTTP &#47; 的同步案例TCP &#47;具名管道](../../../../../docs/framework/wcf/diagnostics/tracing/media/sync.gif "同步處理")  
+ ![使用 HTTP 的同步案例&#47;TCP&#47;具名管道](../../../../../docs/framework/wcf/diagnostics/tracing/media/sync.gif "同步處理")  
   
  在\<a： 名稱 >，`A`是捷徑符號，說明上一個文字和資料表 3 中的活動。 `Name` 是活動的名稱縮寫。  
   

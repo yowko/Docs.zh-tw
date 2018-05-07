@@ -1,24 +1,12 @@
 ---
-title: "條件式 Get 和 Put"
-ms.custom: 
+title: 條件式 Get 和 Put
 ms.date: 03/30/2017
-ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.technology: dotnet-clr
-ms.tgt_pltfrm: 
-ms.topic: article
 ms.assetid: 3d22067f-57b8-4e0f-a571-a694512187ae
-caps.latest.revision: "8"
-author: dotnet-bot
-ms.author: dotnetcontent
-manager: wpickett
-ms.workload: dotnet
-ms.openlocfilehash: 08efa127ed06ffc8cff3c7bb83af7be929329794
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.openlocfilehash: f2d170da80de1186aa41b4821da52d58a0bb0e0e
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="conditional-get-and-put"></a>條件式 Get 和 Put
 此範例示範如何針對 WCF REST 程式設計模型使用新的條件式擷取和更新 API。 因為最適合的條件式擷取和更新資源導向和 REST 服務，這個範例會延續[基本資源服務](../../../../docs/framework/wcf/samples/basic-resource-service.md)範例。 此範例著重於新增的條件式擷取和更新支援[基本資源服務](../../../../docs/framework/wcf/samples/basic-resource-service.md)範例使用新的 Api 中導入[!INCLUDE[netfx40_long](../../../../includes/netfx40-long-md.md)]。  
@@ -54,6 +42,6 @@ ms.lasthandoff: 12/22/2017
 >   
 >  `<InstallDrive>:\WF_WCF_Samples`  
 >   
->  如果此目錄不存在，請移至 [Windows Communication Foundation (WCF) and Windows Workflow Foundation (WF) Samples for .NET Framework 4  (適用於 .NET Framework 4 的 Windows Communication Foundation (WCF) 與 Windows Workflow Foundation (WF) 範例)](http://go.microsoft.com/fwlink/?LinkId=150780) ，以下載所有 [!INCLUDE[indigo1](../../../../includes/indigo1-md.md)] 和 [!INCLUDE[wf1](../../../../includes/wf1-md.md)] 範例。 此範例位於下列目錄。  
+>  如果此目錄不存在，請移至[Windows Communication Foundation (WCF) 和適用於.NET Framework 4 的 Windows Workflow Foundation (WF) 範例](http://go.microsoft.com/fwlink/?LinkId=150780)下載所有 Windows Communication Foundation (WCF) 和[!INCLUDE[wf1](../../../../includes/wf1-md.md)]範例。 此範例位於下列目錄。  
 >   
 >  `<InstallDrive>:\WF_WCF_Samples\WCF\Basic\Web\ConditionalGetAndPut`

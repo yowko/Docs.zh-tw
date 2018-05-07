@@ -1,14 +1,6 @@
 ---
-title: "CLR 分析工具和 Windows 市集應用程式"
-ms.custom: 
+title: CLR 分析工具和 Windows 市集應用程式
 ms.date: 03/30/2017
-ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.technology:
-- dotnet-clr
-ms.tgt_pltfrm: 
-ms.topic: article
 dev_langs:
 - csharp
 applies_to:
@@ -20,17 +12,13 @@ helpviewer_keywords:
 - profiling managed code
 - profiling managed code [Windows Store Apps]
 ms.assetid: 1c8eb2e7-f20a-42f9-a795-71503486a0f5
-caps.latest.revision: 
 author: rpetrusha
 ms.author: ronpet
-manager: wpickett
-ms.workload:
-- dotnet
-ms.openlocfilehash: d884b80ba8ccc42d1b6acc671db408305a095a7d
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.openlocfilehash: 20a1ed9b6b613b1e4d3e5363ab9995cc81295091
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="clr-profilers-and-windows-store-apps"></a>CLR 分析工具和 Windows 市集應用程式
 本主題討論您需要考慮當寫入診斷工具分析的受管理的 Windows 市集應用程式內部執行程式碼。  它也提供指導方針來修改現有的開發工具，讓它們繼續運作，當您執行 Windows 市集應用程式。  若要了解這項資訊，最好是如果您已熟悉通用語言執行階段程式碼剖析 API，您已經使用此應用程式開發介面中執行正確地針對 Windows 桌面應用程式，而且您正在現在想要修改工具的診斷工具若要正確地執行針對 Windows 市集應用程式。  
@@ -154,7 +142,7 @@ NET Runtime version 4.0.30319.17929 - Loading profiler failed during CoCreateIns
  **選擇 Windows 市集應用程式設定檔**  
  首先，您會想詢問您的程式碼剖析工具使用者啟動的 Windows 市集應用程式。  針對桌面應用程式，可能是您將會顯示檔案瀏覽對話方塊，和使用者會尋找並選取.exe 檔案。  但 Windows 市集應用程式不同，而且使用瀏覽對話方塊沒有意義。  相反地，最好讓使用者安裝該使用者即可從選取的 Windows 市集應用程式的清單。  
   
- 您可以使用[PackageManager 類別](https://msdn.microsoft.com/library/windows/apps/windows.management.deployment.packagemanager.aspx)產生這份清單。  `PackageManager`是一個 Windows 執行階段類別，供桌面應用程式，而且事實上*只*供桌面應用程式。  
+ 您可以使用[PackageManager 類別](https://msdn.microsoft.com/library/windows/apps/windows.management.deployment.packagemanager.aspx)產生這份清單。  `PackageManager` 是一個 Windows 執行階段類別，供桌面應用程式，而且事實上*只*供桌面應用程式。  
   
  下列 beethoven 的 ode 範例從撰寫為 yses C# 中的傳統型應用程式的假設分析工具 UI`PackageManager`來產生 Windows 應用程式清單：  
   
@@ -178,9 +166,9 @@ pkgDebugSettings.EnableDebugging(packgeFullName, debuggerCommandLine,
   
  有一些您需要取得正確的項目：  
   
--   `packageFullName`反覆查看封裝及抓取時，您可以判斷`package.Id.FullName`。  
+-   `packageFullName` 反覆查看封裝及抓取時，您可以判斷`package.Id.FullName`。  
   
--   `debuggerCommandLine`是一個位元更有趣。  若要將自訂的環境區塊傳遞至 Windows 市集應用程式，您需要撰寫您自己，最簡單的 dummy 偵錯工具。  Windows 會產生 Windows 市集應用程式暫停，而且然後再透過啟動您的偵錯工具，以在此範例中類似的命令列附加偵錯工具：  
+-   `debuggerCommandLine` 是一個位元更有趣。  若要將自訂的環境區塊傳遞至 Windows 市集應用程式，您需要撰寫您自己，最簡單的 dummy 偵錯工具。  Windows 會產生 Windows 市集應用程式暫停，而且然後再透過啟動您的偵錯工具，以在此範例中類似的命令列附加偵錯工具：  
   
     ```Output  
     MyDummyDebugger.exe -p 1336 -tid 1424  
@@ -341,7 +329,7 @@ CreateEventEx(
   
  `AppContainerNamedObjects\<acSid>\MyNamedEvent`  
   
- `<acSid>`為 Windows 市集應用程式的 AppContainer SID。  本主題的前一節示範了如何逐一查看目前的使用者安裝的套件。  從該範例程式碼中，您可以取得套件識別碼。  從 packageId，您可以取得`<acSid>`與下列類似的程式碼：  
+ `<acSid>` 為 Windows 市集應用程式的 AppContainer SID。  本主題的前一節示範了如何逐一查看目前的使用者安裝的套件。  從該範例程式碼中，您可以取得套件識別碼。  從 packageId，您可以取得`<acSid>`與下列類似的程式碼：  
   
 ```csharp  
 IntPtr acPSID;  
@@ -437,5 +425,5 @@ GetAppContainerFolderPath(acSid, out acDir);
   
 -   [IPackageDebugSettings 介面](https://msdn.microsoft.com/library/hh438393\(v=vs.85\).aspx)  
   
-## <a name="see-also"></a>請參閱  
+## <a name="see-also"></a>另請參閱  
  [程式碼剖析](../../../../docs/framework/unmanaged-api/profiling/index.md)

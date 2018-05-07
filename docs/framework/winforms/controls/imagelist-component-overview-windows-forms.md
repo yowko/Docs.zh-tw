@@ -1,14 +1,6 @@
 ---
-title: "ImageList 元件概觀 (Windows Form)"
-ms.custom: 
+title: ImageList 元件概觀 (Windows Form)
 ms.date: 03/30/2017
-ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.technology:
-- dotnet-winforms
-ms.tgt_pltfrm: 
-ms.topic: article
 f1_keywords:
 - ImageList
 helpviewer_keywords:
@@ -16,17 +8,11 @@ helpviewer_keywords:
 - icon list control
 - ImageList component [Windows Forms], about ImageList component
 ms.assetid: 7e25d89b-5633-40c1-afc3-82e0e301ffa2
-caps.latest.revision: 
-author: dotnet-bot
-ms.author: dotnetcontent
-manager: wpickett
-ms.workload:
-- dotnet
-ms.openlocfilehash: a913de1a6808c7e600a4f28ed58dedf93506466b
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.openlocfilehash: bda9bb71dd2e9b6da2de2444013ed724979f61af
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="imagelist-component-overview-windows-forms"></a>ImageList 元件概觀 (Windows Form)
 Windows Form <xref:System.Windows.Forms.ImageList> 元件可用來儲存影像，然後可以用控制項來顯示這些影像。 影像清單可讓您針對單一且一致的影像目錄來撰寫程式碼。 例如，若要旋轉 <xref:System.Windows.Forms.Button> 控制項所顯示的影像，您只要變更按鈕的 <xref:System.Windows.Forms.ButtonBase.ImageIndex%2A> 或 <xref:System.Windows.Forms.ButtonBase.ImageKey%2A> 屬性即可。 您也可以將相同的影像清單與多個控制項產生關聯。 例如，如果您同時使用 <xref:System.Windows.Forms.ListView> 控制項和 <xref:System.Windows.Forms.TreeView> 控制項來顯示相同的檔案清單，在影像清單中變更檔案的圖示將會導致新的圖示同時出現在這兩個檢視中。  
@@ -39,6 +25,6 @@ Windows Form <xref:System.Windows.Forms.ImageList> 元件可用來儲存影像�
   
  如果您使用 [!INCLUDE[vsprvslong](../../../../includes/vsprvslong-md.md)]，就可以存取一個大型的標準影像程式庫，並可將其用在您的應用程式中。  
   
-## <a name="see-also"></a>請參閱  
+## <a name="see-also"></a>另請參閱  
  <xref:System.Windows.Forms.ImageList>  
  [操作說明：使用 Windows Forms ImageList 元件加入或移除影像](../../../../docs/framework/winforms/controls/how-to-add-or-remove-images-with-the-windows-forms-imagelist-component.md)

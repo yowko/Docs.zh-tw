@@ -1,30 +1,17 @@
 ---
 title: 'How to: Use the XML Schema Definition Tool to Generate Classes and XML Schema Documents'
-ms.custom: 
 ms.date: 03/30/2017
-ms.prod: .net
-ms.reviewer: 
-ms.suite: 
-ms.tgt_pltfrm: 
-ms.topic: article
 helpviewer_keywords:
 - generating XML classes using XML Schema Definition tool
 - generating XML Schema Document using XML Schema Definition tool
 - XML Schema Definition tool, using to generate classes that conform to specific schema
 - XML Schema Definition tool, using to generate XML Schema Document
 ms.assetid: 51f0edc3-993d-4051-b7f2-77753694d3d1
-caps.latest.revision: "5"
-author: dotnet-bot
-ms.author: dotnetcontent
-manager: wpickett
-ms.workload:
-- dotnet
-- dotnetcore
-ms.openlocfilehash: 0e390b808f9eaa5d6b305284e1abe28f45f4d104
-ms.sourcegitcommit: e7f04439d78909229506b56935a1105a4149ff3d
+ms.openlocfilehash: c169a3068b240e8d4d1cdb1d307938ee113066fb
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 12/23/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="how-to-use-the-xml-schema-definition-tool-to-generate-classes-and-xml-schema-documents"></a>How to: Use the XML Schema Definition Tool to Generate Classes and XML Schema Documents
 XML 結構描述定義工具 (Xsd.exe) 讓您產生說明類別的 XML 結構描述或產生由 XML 結構描述定義的類別。 下列程序將說明如何執行這些作業。  
@@ -39,7 +26,7 @@ XML 結構描述定義工具 (Xsd.exe) 讓您產生說明類別的 XML 結構描
     xsd mySchema.xsd  
     ```  
   
-     此工具只能處理參考 2001 年 3 月 16 日全球資訊網協會 XML 規格的結構描述。 換句話說，XML 結構描述的命名空間必須為 "http://www.w3.org/2001/XMLSchema"，如下列範例所示。  
+     此工具只能處理參考 2001 年 3 月 16 日全球資訊網協會 XML 規格的結構描述。 換句話說，XML 結構描述命名空間必須是"http://www.w3.org/2001/XMLSchema」 在下列範例所示。  
   
     ```xml  
     <?xml version="1.0" encoding="utf-8"?>  
@@ -64,7 +51,7 @@ XML 結構描述定義工具 (Xsd.exe) 讓您產生說明類別的 XML 結構描
   
      將寫入結構描述，以 "schema0.xsd" 名稱開始。  
   
-## <a name="see-also"></a>請參閱  
+## <a name="see-also"></a>另請參閱  
  <xref:System.Data.DataSet>  
  [XML 結構描述定義工具和 XML 序列化](../../../docs/standard/serialization/the-xml-schema-definition-tool-and-xml-serialization.md)  
  [XML 序列化簡介](../../../docs/standard/serialization/introducing-xml-serialization.md)  

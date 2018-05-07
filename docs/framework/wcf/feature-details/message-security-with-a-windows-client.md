@@ -1,37 +1,27 @@
 ---
-title: "Windows 用戶端的訊息安全性"
-ms.custom: 
+title: Windows 用戶端的訊息安全性
 ms.date: 03/30/2017
-ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.technology: dotnet-clr
-ms.tgt_pltfrm: 
-ms.topic: article
 dev_langs:
 - csharp
 - vb
 ms.assetid: 01e7d0b8-10f9-45c3-a4c5-53d44dc61eb8
-caps.latest.revision: "13"
 author: BrucePerlerMS
-ms.author: bruceper
 manager: mbaldwin
-ms.workload: dotnet
-ms.openlocfilehash: c480706fee27e7023eae5b493b0ca007b4757e97
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.openlocfilehash: 185edce5bd8a4772545ec966a6b3f74b204aa2b0
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="message-security-with-a-windows-client"></a>Windows 用戶端的訊息安全性
-這個案例會顯示以訊息安全性模式保護的 [!INCLUDE[indigo1](../../../../includes/indigo1-md.md)] 用戶端和伺服器。 此用戶端和伺服器會以 Windows 認證進行驗證。  
+這個案例示範 Windows Communication Foundation (WCF) 用戶端和伺服器保護的訊息安全性模式。 此用戶端和伺服器會以 Windows 認證進行驗證。  
   
  ![訊息安全性的 Windows 用戶端](../../../../docs/framework/wcf/feature-details/media/1c8618d4-0005-4022-beb6-32fd087a8c3c.gif "1c8618d4-0005-4022-beb6-32fd087a8c3c")  
   
 |特性|描述|  
 |--------------------|-----------------|  
 |安全性模式|訊息|  
-|互通性|僅限 [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)]|  
+|互通性|WCF 只|  
 |驗證 (伺服器)|交互驗證伺服器和用戶端|  
 |驗證 (用戶端)|交互驗證伺服器和用戶端|  
 |完整性|是，使用共用安全性內容|  
@@ -127,6 +117,6 @@ ms.lasthandoff: 12/22/2017
 </configuration>  
 ```  
   
-## <a name="see-also"></a>請參閱  
+## <a name="see-also"></a>另請參閱  
  [安全性概觀](../../../../docs/framework/wcf/feature-details/security-overview.md)  
  [Windows Server App Fabric 的安全性模型](http://go.microsoft.com/fwlink/?LinkID=201279&clcid=0x409)

@@ -1,23 +1,12 @@
 ---
-title: "HOW TO：建立自訂活動設計工具"
-ms.custom: 
+title: HOW TO：建立自訂活動設計工具
 ms.date: 03/30/2017
-ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.tgt_pltfrm: 
-ms.topic: article
 ms.assetid: 2f3aade6-facc-44ef-9657-a407ef8b9b31
-caps.latest.revision: "25"
-author: dotnet-bot
-ms.author: dotnetcontent
-manager: wpickett
-ms.workload: dotnet
-ms.openlocfilehash: 10fc7461c077d73fedb1e326f88156e4a816cdee
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.openlocfilehash: e4aab60a598be2d6df5546ab1c98a289b4aef04a
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="how-to-create-a-custom-activity-designer"></a>HOW TO：建立自訂活動設計工具
 通常實作自訂活動設計工具的方式，是讓其相關聯活動能夠透過其他活動組合，這些活動的設計工具能夠隨著活動放到設計介面上。 這項功能需要自訂活動設計工具提供 「 卸除區 」 可以放置任意活動的位置以及管理設計介面上的項目產生集合的方法。 本主題說明如何建立包含這種卸除區的自訂活動設計工具，以及如何建立能夠提供管理設計工具項目集合所需之編輯功能的自訂活動設計工具。  
@@ -58,7 +47,7 @@ ms.lasthandoff: 12/22/2017
   
 10. 以滑鼠右鍵按一下 [UsingWorkflowItemPresenter 專案中的**方案總管] 中**，選取**新增**，然後**新項目...** 啟動**加入新項目**對話方塊並選取**WPF**類別從**已安裝的範本**左側的 > 一節。  
   
-11. 選取**視窗 (WPF)**範本，其命名`RehostingWFDesigner`，然後按一下**新增**。  
+11. 選取**視窗 (WPF)** 範本，其命名`RehostingWFDesigner`，然後按一下**新增**。  
   
 12. 開啟 RehostingWFDesigner.xaml 檔案，將下面的程式碼貼入其中，以定義應用程式的 UI。  
   
@@ -165,7 +154,7 @@ ms.lasthandoff: 12/22/2017
   
 14. 以滑鼠右鍵按一下方案總管 中的 參考 目錄，然後選取**加入參考...** 若要啟動**加入參考**對話方塊。  
   
-15. 按一下**.NET**索引標籤上，尋找名為組件**System.Activities.Core.Presentation**、 選取它，然後按一下 **確定**。  
+15. 按一下 **.NET**索引標籤上，尋找名為組件**System.Activities.Core.Presentation**、 選取它，然後按一下 **確定**。  
   
 16. 使用相同的程序將參考加入至下列組件：  
   
@@ -352,7 +341,7 @@ ms.lasthandoff: 12/22/2017
     }  
     ```  
   
-## <a name="see-also"></a>請參閱  
+## <a name="see-also"></a>另請參閱  
  <xref:System.Activities.Presentation.ActivityDesigner>  
  <xref:System.Activities.Presentation.WorkflowItemPresenter>  
  <xref:System.Activities.Presentation.WorkflowItemsPresenter>  

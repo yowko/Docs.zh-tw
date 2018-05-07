@@ -1,11 +1,6 @@
 ---
-title: "Structure 陳述式"
+title: Structure 陳述式
 ms.date: 07/20/2015
-ms.prod: .net
-ms.reviewer: 
-ms.suite: 
-ms.technology: devlang-visual-basic
-ms.topic: article
 f1_keywords:
 - vb.Structure
 - Structure
@@ -17,14 +12,11 @@ helpviewer_keywords:
 - UDT (user-defined types)
 - types [Visual Basic], user-defined
 ms.assetid: 9bd1deea-2a89-4cdc-812c-6dcbb947c391
-caps.latest.revision: "28"
-author: dotnet-bot
-ms.author: dotnetcontent
-ms.openlocfilehash: 43211bb10793acf3bfe0c1d7a35791114170ee7d
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.openlocfilehash: 6a3626706b226b0be253fd35fa60b33a71b86007
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="structure-statement"></a>Structure 陳述式
 宣告結構的名稱，並導入的變數、 屬性、 事件和結構包含的程序定義。  
@@ -44,18 +36,18 @@ End Structure
   
 |詞彙|定義|  
 |---|---|  
-|`attributelist`|選擇項。 請參閱[屬性清單](../../../visual-basic/language-reference/statements/attribute-list.md)。|  
-|`accessmodifier`|選擇項。 可以是下列其中一項：<br /><br /> -   [公用](../../../visual-basic/language-reference/modifiers/public.md)<br />-   [受保護](../../../visual-basic/language-reference/modifiers/protected.md)<br />-   [Friend](../../../visual-basic/language-reference/modifiers/friend.md)<br />-   [私用](../../../visual-basic/language-reference/modifiers/private.md)<br />-   `Protected Friend`<br /><br /> 請參閱[存取 Visual Basic 中的層級](../../../visual-basic/programming-guide/language-features/declared-elements/access-levels.md)。|  
-|`Shadows`|選擇項。 請參閱[陰影](../../../visual-basic/language-reference/modifiers/shadows.md)。|  
-|`Partial`|選擇項。 指出此結構的部分定義。 請參閱[部分](../../../visual-basic/language-reference/modifiers/partial.md)。|  
-|`name`|必要項。 此結構的名稱。 請參閱[宣告項目名稱](../../../visual-basic/programming-guide/language-features/declared-elements/declared-element-names.md)。|  
-|`Of`|選擇項。 指定這為泛型結構。|  
+|`attributelist`|選擇性。 請參閱[屬性清單](../../../visual-basic/language-reference/statements/attribute-list.md)。|  
+|`accessmodifier`|選擇性。 可以是下列其中一項：<br /><br /> -   [公用](../../../visual-basic/language-reference/modifiers/public.md)<br />-   [受保護](../../../visual-basic/language-reference/modifiers/protected.md)<br />-   [Friend](../../../visual-basic/language-reference/modifiers/friend.md)<br />-   [私用](../../../visual-basic/language-reference/modifiers/private.md)<br />-   `Protected Friend`<br /><br /> 請參閱[存取 Visual Basic 中的層級](../../../visual-basic/programming-guide/language-features/declared-elements/access-levels.md)。|  
+|`Shadows`|選擇性。 請參閱[陰影](../../../visual-basic/language-reference/modifiers/shadows.md)。|  
+|`Partial`|選擇性。 指出此結構的部分定義。 請參閱[部分](../../../visual-basic/language-reference/modifiers/partial.md)。|  
+|`name`|必要。 此結構的名稱。 請參閱[宣告項目名稱](../../../visual-basic/programming-guide/language-features/declared-elements/declared-element-names.md)。|  
+|`Of`|選擇性。 指定這為泛型結構。|  
 |`typelist`|如果您使用所需[的](../../../visual-basic/language-reference/statements/of-clause.md)關鍵字。 此結構的型別參數的清單。 請參閱[輸入清單](../../../visual-basic/language-reference/statements/type-list.md)。|  
-|`Implements`|選擇項。 指出此結構實作一或多個介面的成員。 請參閱[實作陳述式](../../../visual-basic/language-reference/statements/implements-statement.md)。|  
+|`Implements`|選擇性。 指出此結構實作一或多個介面的成員。 請參閱[實作陳述式](../../../visual-basic/language-reference/statements/implements-statement.md)。|  
 |`interfacenames`|如果您使用所需`Implements`陳述式。 此結構實作的介面名稱。|  
-|`datamemberdeclarations`|必要項。 零或多個`Const`， `Dim`， `Enum`，或`Event`宣告陳述式*資料成員*的結構。|  
-|`methodmemberdeclarations`|選擇項。 零或多個宣告的`Function`， `Operator`， `Property`，或`Sub`程序，做為*方法成員*的結構。|  
-|`End Structure`|必要項。 終止`Structure`定義。|  
+|`datamemberdeclarations`|必要。 零或多個`Const`， `Dim`， `Enum`，或`Event`宣告陳述式*資料成員*的結構。|  
+|`methodmemberdeclarations`|選擇性。 零或多個宣告的`Function`， `Operator`， `Property`，或`Sub`程序，做為*方法成員*的結構。|  
+|`End Structure`|必要。 終止`Structure`定義。|  
   
 ## <a name="remarks"></a>備註  
  `Structure`陳述式會定義您可以自訂複合的實值型別。 A*結構*為一般化的使用者定義型別 (UDT) 的先前版本的 Visual Basic。 如需詳細資訊，請參閱[結構](../../../visual-basic/programming-guide/language-features/data-types/structures.md)。  

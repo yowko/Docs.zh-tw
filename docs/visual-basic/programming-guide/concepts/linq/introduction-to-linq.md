@@ -1,22 +1,12 @@
 ---
-title: "LINQ (Visual Basic) 簡介"
-ms.custom: 
+title: LINQ (Visual Basic) 簡介
 ms.date: 07/20/2015
-ms.prod: .net
-ms.reviewer: 
-ms.suite: 
-ms.technology: devlang-visual-basic
-ms.tgt_pltfrm: 
-ms.topic: article
 ms.assetid: c6339c12-9b2d-433e-961c-0d2b7f0091c2
-caps.latest.revision: "3"
-author: dotnet-bot
-ms.author: dotnetcontent
-ms.openlocfilehash: de34f27bc520c4e814738e0ba22620ed80f7f23e
-ms.sourcegitcommit: 34ec7753acf76f90a0fa845235ef06663dc9e36e
+ms.openlocfilehash: 371801e1730c578b039adb6a88bd0bcdfd186db7
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="introduction-to-linq-visual-basic"></a>LINQ (Visual Basic) 簡介
 Language-Integrated Query (LINQ) 是 .NET Framework 3.5 版中引進的創新技術，用來填補許多物件與資料之間的缺口。  
@@ -42,5 +32,5 @@ Language-Integrated Query (LINQ) 是 .NET Framework 3.5 版中引進的創新技
   
 -   .NET 集合、 檔案、 字串等： [LINQ to Objects (Visual Basic)](../../../../visual-basic/programming-guide/concepts/linq/linq-to-objects.md)  
   
-## <a name="see-also"></a>請參閱  
+## <a name="see-also"></a>另請參閱  
  [Language-Integrated Query (LINQ) (Visual Basic)](../../../../visual-basic/programming-guide/concepts/linq/index.md)

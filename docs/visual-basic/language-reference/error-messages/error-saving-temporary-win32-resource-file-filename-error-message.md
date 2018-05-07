@@ -1,26 +1,17 @@
 ---
 title: 儲存暫存 Win32 資源檔時發生錯誤&#39; &lt;filename&gt;&#39;:&lt;錯誤訊息&gt;
 ms.date: 07/20/2015
-ms.prod: .net
-ms.reviewer: ''
-ms.suite: ''
-ms.technology:
-- devlang-visual-basic
-ms.topic: article
 f1_keywords:
 - bc30137
 - vbc30137
 helpviewer_keywords:
 - BC30137
 ms.assetid: 61c23f48-0e06-42fc-be00-5598053c86dd
-caps.latest.revision: 11
-author: dotnet-bot
-ms.author: dotnetcontent
-ms.openlocfilehash: e2e4bbc095e419ae0af6eecf9ae4863d3cbd4bce
-ms.sourcegitcommit: 86adcc06e35390f13c1e372c36d2e044f1fc31ef
+ms.openlocfilehash: 20f11a2600388319ae1f476034cf046c6ecd13b4
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/26/2018
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="error-saving-temporary-win32-resource-file-39ltfilenamegt39-lterror-messagegt"></a>儲存暫存 Win32 資源檔時發生錯誤&#39; &lt;filename&gt;&#39;:&lt;錯誤訊息&gt;
 Visual Basic 編譯器呼叫組件連結器 (Al.exe，也稱為 Alink)，以產生資訊清單的組件。 連結器在取得檔案名稱以便用於寫入記憶體內資源時回報了錯誤。  

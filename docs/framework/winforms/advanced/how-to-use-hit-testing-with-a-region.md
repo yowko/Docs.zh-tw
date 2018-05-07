@@ -1,13 +1,6 @@
 ---
-title: "如何：使用區域的使用點擊測試"
-ms.custom: 
+title: 如何：使用區域的使用點擊測試
 ms.date: 03/30/2017
-ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.technology: dotnet-winforms
-ms.tgt_pltfrm: 
-ms.topic: article
 dev_langs:
 - csharp
 - vb
@@ -15,16 +8,11 @@ helpviewer_keywords:
 - hit tests [Windows Forms], using regions
 - regions [Windows Forms], hit testing
 ms.assetid: 3a4c07cb-a40a-4d14-ad35-008f531910a8
-caps.latest.revision: "14"
-author: dotnet-bot
-ms.author: dotnetcontent
-manager: wpickett
-ms.workload: dotnet
-ms.openlocfilehash: 7c0766c989df7c2329aa4d36af834378b02b1301
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.openlocfilehash: 40297fada3d042aee8c317eb787de03662f86cfc
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="how-to-use-hit-testing-with-a-region"></a>如何：使用區域的使用點擊測試
 點擊測試的目的是要判斷游標是否在指定的物件，例如圖示或按鈕。  
@@ -38,7 +26,7 @@ ms.lasthandoff: 12/22/2017
 ## <a name="compiling-the-code"></a>編譯程式碼  
  上述範例設計是為搭配 Windows Form 使用所設計，而且需要 <xref:System.Windows.Forms.PaintEventArgs> `e`，這是 <xref:System.Windows.Forms.PaintEventHandler> 的參數。  
   
-## <a name="see-also"></a>請參閱  
+## <a name="see-also"></a>另請參閱  
  <xref:System.Drawing.Region>  
  [GDI+ 中的區域](../../../../docs/framework/winforms/advanced/regions-in-gdi.md)  
  [操作說明：使用區域的裁剪](../../../../docs/framework/winforms/advanced/how-to-use-clipping-with-a-region.md)

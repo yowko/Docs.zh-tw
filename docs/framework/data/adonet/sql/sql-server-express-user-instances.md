@@ -1,27 +1,15 @@
 ---
-title: "SQL Server Express 使用者執行個體"
-ms.custom: 
+title: SQL Server Express 使用者執行個體
 ms.date: 03/30/2017
-ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.technology: dotnet-ado
-ms.tgt_pltfrm: 
-ms.topic: article
 dev_langs:
 - csharp
 - vb
 ms.assetid: 00c12376-cb26-4317-86ad-e6e9c089be57
-caps.latest.revision: "5"
-author: douglaslMS
-ms.author: douglasl
-manager: craigg
-ms.workload: dotnet
-ms.openlocfilehash: 4b8b795454ab038b9e992c5e1187a0c4dcb46c76
-ms.sourcegitcommit: c0dd436f6f8f44dc80dc43b07f6841a00b74b23f
+ms.openlocfilehash: 0af929de17a29d497ce6cf6c8cb055d416ab8761
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 01/19/2018
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="sql-server-express-user-instances"></a>SQL Server Express 使用者執行個體
 Microsoft SQL Server Express Edition (SQL Server Express) 支援使用者執行個體功能，只有在使用 .NET Framework Data Provider for SQL Server (`SqlClient`) 時才提供此功能。 使用者執行個體是 SQL Server Express Database Engine 的獨立執行個體，由父執行個體所產生。 不是系統管理員的使用者可以透過使用者執行個體，從本機電腦附加及連接至 SQL Server Express 資料庫。 每個執行個體都會依照「每個使用者一個執行個體」的基礎，在個別使用者的安全性內容下執行。  
@@ -71,7 +59,7 @@ Initial Catalog=InstanceDB;
 > [!NOTE]
 >  您也可以使用<xref:System.Data.SqlClient.SqlConnectionStringBuilder><xref:System.Data.SqlClient.SqlConnectionStringBuilder.UserInstance%2A>和<xref:System.Data.SqlClient.SqlConnectionStringBuilder.AttachDBFilename%2A>屬性，以建立連接字串，在執行階段。  
   
-### <a name="using-the-124datadirectory124-substitution-string"></a>使用 &#124; DataDirectory &#124;替代字串  
+### <a name="using-the-124datadirectory124-substitution-string"></a>使用&#124;DataDirectory&#124;替代字串  
  `AttachDbFileName` 在 ADO.NET 2.0 中已藉由引進 `|DataDirectory|` (放在垂直線符號內) 替代字串而擴充。 `DataDirectory` 可與 `AttachDbFileName` 搭配使用以表示資料檔案的相對路徑，開發人員因此能根據資料來源的相對路徑建立連接字串，而不需指定完整路徑。  
   
  `DataDirectory` 所指向的實體位置，是根據應用程式的類型而定。 在這個範例中，要附加的 Northwind.mdf 檔案是位於應用程式的 \app_data 資料夾中。  
@@ -161,7 +149,7 @@ private static void OpenSqlConnection()
   
 -   使用「Windows 驗證」的專屬 ASP . NET 裝載。 單一的 SQL Server Express 執行個體可以裝載在內部網路上。 應用程式會使用 ASPNET Windows 帳戶連接，而不是使用模擬。 使用者執行個體不該用於協力廠商或共用裝載的案例，因為在這些情況下，所有的應用程式都會共用相同的使用者執行個體，而無法彼此保持隔離。  
   
-## <a name="see-also"></a>請參閱  
+## <a name="see-also"></a>另請參閱  
  [SQL Server 和 ADO.NET](../../../../../docs/framework/data/adonet/sql/index.md)  
  [連接字串](../../../../../docs/framework/data/adonet/connection-strings.md)  
  [連接至資料來源](../../../../../docs/framework/data/adonet/connecting-to-a-data-source.md)  

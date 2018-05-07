@@ -1,20 +1,12 @@
 ---
 title: 共變數和反變數 (Visual Basic)
 ms.date: 07/20/2015
-ms.prod: .net
-ms.technology:
-- devlang-visual-basic
-ms.tgt_pltfrm: ''
-ms.topic: article
 ms.assetid: 59224c46-9931-466b-8c6e-3648c3e609c6
-caps.latest.revision: 3
-author: dotnet-bot
-ms.author: dotnetcontent
-ms.openlocfilehash: 1df3b01573ae1a9dc5c106efa5e387927c57c55f
-ms.sourcegitcommit: bd1ef61f4bb794b25383d3d72e71041a5ced172e
+ms.openlocfilehash: 322cb452e0a3391812e58b68406657651f7a430f
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/18/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="covariance-and-contravariance-visual-basic"></a>共變數和反變數 (Visual Basic)
 在 Visual Basic 中，共變數和反變數可讓您進行陣列類型、委派類型和泛型型別引數的隱含參考轉換。 共變數會保留指派相容性，而反變數則會將它反轉。  
@@ -98,7 +90,7 @@ Dim objects As IEnumerable(Of Object) = strings
   
 ## <a name="related-topics"></a>相關主題  
   
-|標題|說明|  
+|標題|描述|  
 |-----------|-----------------|  
 |[泛型介面中的變異數 (Visual Basic)](../../../../visual-basic/programming-guide/concepts/covariance-contravariance/variance-in-generic-interfaces.md)|討論泛型介面中的共變性與逆變性，並提供.NET Framework 中的 Variant 泛型介面清單。|  
 |[建立 Variant 泛型介面 (Visual Basic)](../../../../visual-basic/programming-guide/concepts/covariance-contravariance/creating-variant-generic-interfaces.md)|示範如何建立自訂 Variant 介面。|  

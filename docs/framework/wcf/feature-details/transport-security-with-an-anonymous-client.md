@@ -1,32 +1,20 @@
 ---
 title: 匿名用戶端的傳輸安全性
-ms.custom: ''
 ms.date: 03/30/2017
-ms.prod: .net-framework
-ms.reviewer: ''
-ms.suite: ''
-ms.technology:
-- dotnet-clr
-ms.tgt_pltfrm: ''
-ms.topic: article
 dev_langs:
 - csharp
 - vb
 ms.assetid: 056653a5-384e-4a02-ae3c-1b0157d2ccb4
-caps.latest.revision: 14
 author: BrucePerlerMS
-ms.author: bruceper
 manager: mbaldwin
-ms.workload:
-- dotnet
-ms.openlocfilehash: 2b52a32db1f1ac02f9204198a4cda5d4cb157486
-ms.sourcegitcommit: 94d33cadc5ff81d2ac389bf5f26422c227832052
+ms.openlocfilehash: ad22abe84289cac8f57bebb564ee129bcc2334c3
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/30/2018
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="transport-security-with-an-anonymous-client"></a>匿名用戶端的傳輸安全性
-這個 [!INCLUDE[indigo1](../../../../includes/indigo1-md.md)] 案例會使用傳輸安全性 (HTTPS) 來確保機密性和完整性。 伺服器必須使用安全通訊端層 (SSL) 憑證進行驗證，而且用戶端必須信任該伺服器的憑證。 此用戶端不會透過任何機制進行驗證，因此屬於匿名。  
+這個 Windows Communication Foundation (WCF) 案例會使用傳輸安全性 (HTTPS) 來確保機密性和完整性。 伺服器必須使用安全通訊端層 (SSL) 憑證進行驗證，而且用戶端必須信任該伺服器的憑證。 此用戶端不會透過任何機制進行驗證，因此屬於匿名。  
   
  範例應用程式，請參閱[WS 傳輸安全性](../../../../docs/framework/wcf/samples/ws-transport-security.md)。 如需有關傳輸安全性的詳細資訊，請參閱[傳輸安全性概觀](../../../../docs/framework/wcf/feature-details/transport-security-overview.md)。  
   
@@ -38,7 +26,7 @@ ms.lasthandoff: 04/30/2018
 |--------------------|-----------------|  
 |安全性模式|Transport|  
 |互通性|與現有的 Web 服務和用戶端|  
-|驗證 (伺服器)<br /><br /> 驗證 (用戶端)|[是]<br /><br /> 應用程式層 ([!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] 不支援)|  
+|驗證 (伺服器)<br /><br /> 驗證 (用戶端)|[是]<br /><br /> 應用程式層級 （沒有 WCF 支援）|  
 |完整性|是|  
 |機密性|是|  
 |Transport|HTTPS|  

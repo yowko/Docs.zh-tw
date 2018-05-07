@@ -1,13 +1,6 @@
 ---
 title: loaderLock MDA
-ms.custom: 
 ms.date: 03/30/2017
-ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.technology: dotnet-clr
-ms.tgt_pltfrm: 
-ms.topic: article
 helpviewer_keywords:
 - deadlocks [.NET Framework]
 - LoaderLock MDA
@@ -17,21 +10,18 @@ helpviewer_keywords:
 - loader locks
 - locks, threads
 ms.assetid: 8c10fa02-1b9c-4be5-ab03-451d943ac1ee
-caps.latest.revision: "13"
 author: mairaw
 ms.author: mairaw
-manager: wpickett
-ms.workload: dotnet
-ms.openlocfilehash: 2835f1fdbe2132feb929a5264d3b2772d8f66377
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.openlocfilehash: dbc6cc814d23923f01eceea70bd2fe45b9cbff8a
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="loaderlock-mda"></a>loaderLock MDA
 `loaderLock` Managed 偵錯助理 (MDA) 偵測到在保留 Microsoft Windows 作業系統載入器鎖定的執行緒上，有執行 Managed 程式碼的嘗試。  所有這樣的執行都不合法，因為它可能會產生死結，並在作業系統載入器尚未初始化 DLL 之前就先使用 DLL。  
   
-## <a name="symptoms"></a>徵兆   
+## <a name="symptoms"></a>徵兆  
  在作業系統的載入器鎖定內執行程式碼最常見的失敗，是嘗試呼叫也需要載入器鎖定的其他 Win32 函式時，執行緒會鎖死。  這類函式範例包括 `LoadLibrary`、`GetProcAddress`、`FreeLibrary` 和 `GetModuleHandle`。  應用程式可能不會直接呼叫這些函式。像 <xref:System.Reflection.Assembly.Load%2A> 或平台叫用方法的第一個呼叫等較高層級的呼叫結果，可能是 Common Language Runtime (CLR) 呼叫這些函式。  
   
  當執行緒等候另一個執行緒開始或結束時，也會發生鎖死的情況。  當執行緒開始或結束執行時，它必須取得作業系統的載入器鎖定，以將事件傳遞給受影響的 DLL。  
@@ -64,5 +54,5 @@ ms.lasthandoff: 12/22/2017
 </mdaConfig>  
 ```  
   
-## <a name="see-also"></a>請參閱  
+## <a name="see-also"></a>另請參閱  
  [診斷 Managed 偵錯助理的錯誤](../../../docs/framework/debug-trace-profile/diagnosing-errors-with-managed-debugging-assistants.md)

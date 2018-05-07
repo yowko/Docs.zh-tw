@@ -1,22 +1,12 @@
 ---
-title: "投影作業 (Visual Basic)"
-ms.custom: 
+title: 投影作業 (Visual Basic)
 ms.date: 07/20/2015
-ms.prod: .net
-ms.reviewer: 
-ms.suite: 
-ms.technology: devlang-visual-basic
-ms.tgt_pltfrm: 
-ms.topic: article
 ms.assetid: b8d38e6d-21cf-4619-8dbb-94476f4badc7
-caps.latest.revision: "3"
-author: dotnet-bot
-ms.author: dotnetcontent
-ms.openlocfilehash: 4927a27795881c34b689a2054ee8697575b53026
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.openlocfilehash: f4d1f7531ee69ebdbfb4ccd283f9f5dcb2f000af
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="projection-operations-visual-basic"></a>投影作業 (Visual Basic)
 投影是指將物件轉換成新形式的作業，而這個形式通常僅包含後續即將使用的屬性。 透過使用投影，您可以建構根據每個物件所建立的新型別。 您可以投影屬性並對其執行數學函式。 您也可以投影原始物件，而不進行任何變更。  
@@ -25,14 +15,14 @@ ms.lasthandoff: 11/21/2017
   
 ## <a name="methods"></a>方法  
   
-|方法名稱|說明|Visual Basic 查詢運算式語法|更多資訊|  
+|方法名稱|描述|Visual Basic 查詢運算式語法|更多資訊|  
 |-----------------|-----------------|------------------------------------------|----------------------|  
 |選取|投影以轉換函式為基礎的值。|`Select`|<xref:System.Linq.Enumerable.Select%2A?displayProperty=nameWithType><br /><br /> <xref:System.Linq.Queryable.Select%2A?displayProperty=nameWithType>|  
 |SelectMany|投影一連串以轉換函式為基礎的值，然後將這些值壓平合併成一個序列。|使用多個 `From` 子句|<xref:System.Linq.Enumerable.SelectMany%2A?displayProperty=nameWithType><br /><br /> <xref:System.Linq.Queryable.SelectMany%2A?displayProperty=nameWithType>|  
   
 ## <a name="query-expression-syntax-examples"></a>查詢運算式語法範例  
   
-### <a name="select"></a>選取  
+### <a name="select"></a>選用版  
  下列範例使用 `Select` 子句，來投影字串清單中每個字串的第一個字母。  
   
 ```vb  

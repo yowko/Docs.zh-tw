@@ -1,11 +1,6 @@
 ---
-title: "Resume 陳述式"
+title: Resume 陳述式
 ms.date: 07/20/2015
-ms.prod: .net
-ms.reviewer: 
-ms.suite: 
-ms.technology: devlang-visual-basic
-ms.topic: article
 f1_keywords:
 - vb.Resume
 - vb.ResumeNext
@@ -20,14 +15,11 @@ helpviewer_keywords:
 - execution
 - Resume statement [Visual Basic]
 ms.assetid: e24d058b-1a5c-4274-acb9-7d295d3ea537
-caps.latest.revision: "16"
-author: dotnet-bot
-ms.author: dotnetcontent
-ms.openlocfilehash: 3cb4334f302c07c81b6b8a7d0626be08cc69b1ed
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.openlocfilehash: 1d03f631893be51529f29af824de0d684bf43804
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="resume-statement"></a>Resume 陳述式
 在完成錯誤處理常式之後，請繼續執行。  
@@ -42,13 +34,13 @@ Resume [ Next | line ]
   
 ## <a name="parts"></a>組件  
  `Resume`  
- 必要項。 如果在相同的程序中的錯誤處理常式發生錯誤，造成錯誤的陳述式將會繼續執行。 如果呼叫的程序中發生錯誤，在最後一次從程序包含錯誤處理常式呼叫的陳述式會繼續執行。  
+ 必要。 如果在相同的程序中的錯誤處理常式發生錯誤，造成錯誤的陳述式將會繼續執行。 如果呼叫的程序中發生錯誤，在最後一次從程序包含錯誤處理常式呼叫的陳述式會繼續執行。  
   
  `Next`  
- 選擇項。 如果錯誤發生的錯誤處理常式的相同程序中，緊接造成錯誤的陳述式的陳述式將會繼續執行。 如果呼叫的程序中發生錯誤，緊跟在最後一次從程序包含錯誤處理常式呼叫的陳述式的陳述式繼續執行 (或`On Error Resume Next`陳述式)。  
+ 選擇性。 如果錯誤發生的錯誤處理常式的相同程序中，緊接造成錯誤的陳述式的陳述式將會繼續執行。 如果呼叫的程序中發生錯誤，緊跟在最後一次從程序包含錯誤處理常式呼叫的陳述式的陳述式繼續執行 (或`On Error Resume Next`陳述式)。  
   
  `line`  
- 選擇項。 指定在所需的那一行就會繼續執行`line`引數。 `line`引數是行標籤或行號，且必須位於相同的程序的錯誤處理常式。  
+ 選擇性。 指定在所需的那一行就會繼續執行`line`引數。 `line`引數是行標籤或行號，且必須位於相同的程序的錯誤處理常式。  
   
 ## <a name="remarks"></a>備註  
   

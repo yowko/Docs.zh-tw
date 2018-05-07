@@ -1,25 +1,17 @@
 ---
-title: "指派運算子 (Visual Basic)"
+title: 指派運算子 (Visual Basic)
 ms.date: 07/20/2015
-ms.prod: .net
-ms.reviewer: 
-ms.suite: 
-ms.technology: devlang-visual-basic
-ms.topic: article
 helpviewer_keywords:
 - assignment operators [Visual Basic], Visual Basic
 - operators [Visual Basic], assignment
 - = assignment statements [Visual Basic]
 - assignment operators [Visual Basic]
 ms.assetid: 43b7e40c-b7af-45f6-b100-198a90f2561e
-caps.latest.revision: "11"
-author: dotnet-bot
-ms.author: dotnetcontent
-ms.openlocfilehash: 5cc36f8c3c32241391edafcd2c7dcd8fbca97a3c
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.openlocfilehash: d86ddb9f57b30350ee962bb0c81f68884ab4d258
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="assignment-operators-visual-basic"></a>指派運算子 (Visual Basic)
 以下是在 Visual Basic 中定義的指派運算子。  

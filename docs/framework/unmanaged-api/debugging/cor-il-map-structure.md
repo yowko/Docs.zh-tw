@@ -1,14 +1,6 @@
 ---
-title: "COR_IL_MAP 結構"
-ms.custom: 
+title: COR_IL_MAP 結構
 ms.date: 03/30/2017
-ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.technology:
-- dotnet-clr
-ms.tgt_pltfrm: 
-ms.topic: reference
 api_name:
 - COR_IL_MAP
 api_location:
@@ -22,17 +14,13 @@ helpviewer_keywords:
 ms.assetid: 534ebc17-963d-4b26-8375-8cd940281db3
 topic_type:
 - apiref
-caps.latest.revision: 
 author: rpetrusha
 ms.author: ronpet
-manager: wpickett
-ms.workload:
-- dotnet
-ms.openlocfilehash: 2e2772833d75ced2209896ca37cf6cf37fb965f1
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.openlocfilehash: 9676730a4f11ed77996b7a4aab4e538aba9b53c4
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="corilmap-structure"></a>COR_IL_MAP 結構
 指定函式相關位移中的變更。  
@@ -53,7 +41,7 @@ typedef struct _COR_IL_MAP {
 |------------|-----------------|  
 |`oldOffset`|舊 Microsoft 中繼語言 (MSIL) 位移相對於函式的開頭。|  
 |`newOffset`|新的 MSIL 位移相對於函式的開頭。|  
-|`fAccurate`|`true`如果對應是否已知為精確;否則， `false`。|  
+|`fAccurate`|`true` 如果對應是否已知為精確;否則， `false`。|  
   
 ## <a name="remarks"></a>備註  
  對應的格式如下所示： 偵錯工具會假設`oldOffset`指的是在原始、 未修改 MSIL 程式碼的 MSIL 位移。 `newOffset`參數是指在新的已檢測的程式碼中對應的 MSIL 位移。  
@@ -99,8 +87,8 @@ typedef struct _COR_IL_MAP {
   
  **程式庫：** CorGuids.lib  
   
- **.NET framework 版本：**[!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
+ **.NET framework 版本：** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
   
-## <a name="see-also"></a>請參閱  
+## <a name="see-also"></a>另請參閱  
  [偵錯結構](../../../../docs/framework/unmanaged-api/debugging/debugging-structures.md)  
  [偵錯](../../../../docs/framework/unmanaged-api/debugging/index.md)

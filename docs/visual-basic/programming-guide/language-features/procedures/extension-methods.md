@@ -1,27 +1,17 @@
 ---
 title: 擴充方法 (Visual Basic)
-ms.custom: ''
 ms.date: 07/20/2015
-ms.prod: .net
-ms.reviewer: ''
-ms.suite: ''
-ms.technology:
-- devlang-visual-basic
-ms.topic: article
 f1_keywords:
 - vb.ExtensionMethods
 helpviewer_keywords:
 - extending data types [Visual Basic]
 - extension methods [Visual Basic]
 ms.assetid: b8020aae-374d-46a9-bcb7-8cc2390b93b6
-caps.latest.revision: 41
-author: dotnet-bot
-ms.author: dotnetcontent
-ms.openlocfilehash: d3db3bc2b213b78ef2dceebcf56c9d5fbfa3016e
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.openlocfilehash: 1cc2ccef09dd027c6f1e82f60ed4ac5f50db6ebe
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="extension-methods-visual-basic"></a>擴充方法 (Visual Basic)
 擴充方法可讓開發人員將自訂功能加入至已定義而不需要建立新的衍生的類型的資料類型。 擴充方法可讓撰寫方法，這個方法，就好像現有類型的執行個體方法呼叫。  
@@ -38,7 +28,7 @@ ms.lasthandoff: 11/21/2017
   
  [!code-vb[VbVbalrExtensionMethods#1](./codesnippet/VisualBasic/extension-methods_1.vb)]  
   
- 請注意，標記為使用擴充屬性的擴充方法定義`<Extension()>`。 將標示方法定義的模組是選擇性的但必須標記每個擴充方法。 <xref:System.Runtime.CompilerServices>必須先匯入，才能存取此延伸模組屬性。  
+ 請注意，標記為使用擴充屬性的擴充方法定義`<Extension()>`。 將標示方法定義的模組是選擇性的但必須標記每個擴充方法。 <xref:System.Runtime.CompilerServices> 必須先匯入，才能存取此延伸模組屬性。  
   
  擴充方法可以只在模組內宣告。 一般而言，擴充方法定義所在的模組不是相同的模組呼叫它的一個。 相反地，包含擴充方法的模組匯入時，如果它必須是，若要將它帶到範圍。 包含的模組之後`Print`是在範圍內，呼叫此方法可以如同一般的執行個體方法，不接受引數，例如`ToUpper`:  
   
@@ -48,9 +38,9 @@ ms.lasthandoff: 11/21/2017
   
  [!code-vb[VbVbalrExtensionMethods#3](./codesnippet/VisualBasic/extension-methods_3.vb)]  
   
- 傳送中的字串引數呼叫的方法`punc`:`example.PrintAndPunctuate(".")`  
+ 傳送中的字串引數呼叫的方法`punc`: `example.PrintAndPunctuate(".")`  
   
- 下列範例所示`Print`和`PrintAndPunctuate`定義和呼叫。 <xref:System.Runtime.CompilerServices>在匯入定義模組以啟用擴充功能屬性的存取權。  
+ 下列範例所示`Print`和`PrintAndPunctuate`定義和呼叫。 <xref:System.Runtime.CompilerServices> 在匯入定義模組以啟用擴充功能屬性的存取權。  
   
 ### <a name="code"></a>程式碼  
   

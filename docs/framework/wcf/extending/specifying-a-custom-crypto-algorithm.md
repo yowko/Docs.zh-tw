@@ -1,24 +1,12 @@
 ---
-title: "指定自訂的加密演算法"
-ms.custom: 
+title: 指定自訂的加密演算法
 ms.date: 03/30/2017
-ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.technology: dotnet-clr
-ms.tgt_pltfrm: 
-ms.topic: article
 ms.assetid: d662a305-8e09-451d-9a59-b0f12b012f1d
-caps.latest.revision: "2"
-author: dotnet-bot
-ms.author: dotnetcontent
-manager: wpickett
-ms.workload: dotnet
-ms.openlocfilehash: 965f121faa851722e6e2e7f92e805252f7e927c5
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.openlocfilehash: d8fb22daac66c3ef80f148db03703fc5024d3438
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="specifying-a-custom-crypto-algorithm"></a>指定自訂的加密演算法
 WCF 可讓您指定加密資料或計算數位簽章時使用的自訂密碼編譯演算法。 其步驟如下：  
@@ -116,7 +104,7 @@ public class MyCustomAlgorithmSuite : SecurityAlgorithmSuite
 </configuration>  
 ```  
   
- 在下的一節 <`cryptoClasses`> 項目會建立 SHA256CryptoServiceProvider 和別名"SHA256CSP"之間的對應。 <`nameEntry`> 項目會建立"SHA256CSP"別名和指定的 URL (http://constoso.com/CustomAlgorithms/CustomHashAlgorithm) 之間的對應。  
+ 在下的一節 <`cryptoClasses`> 項目會建立 SHA256CryptoServiceProvider 和別名"SHA256CSP"之間的對應。 <`nameEntry`> 項目會建立"SHA256CSP"別名和指定的 URL 之間的對應 (http://constoso.com/CustomAlgorithms/CustomHashAlgorithm )。  
   
  若要在程式碼中註冊自訂演算法，請使用 <xref:System.Security.Cryptography.CryptoConfig.AddAlgorithm(System.Type,System.String[])> 方法。 此方法會建立兩個對應。 下列範例會示範如何呼叫這個方法：  
   
@@ -136,7 +124,7 @@ WSHttpBinding binding = new WSHttpBinding();
   
  如需完整的程式碼範例，請參閱[WCF 安全性中的加密彈性](../../../../docs/framework/wcf/samples/cryptographic-agility-in-wcf-security.md)範例。  
   
-## <a name="see-also"></a>請參閱  
+## <a name="see-also"></a>另請參閱  
  [保護服務和用戶端的安全](../../../../docs/framework/wcf/feature-details/securing-services-and-clients.md)  
  [保護服務安全](../../../../docs/framework/wcf/securing-services.md)  
  [安全性概觀](../../../../docs/framework/wcf/feature-details/security-overview.md)  

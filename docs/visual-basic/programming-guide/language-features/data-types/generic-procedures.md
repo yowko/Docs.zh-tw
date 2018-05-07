@@ -1,12 +1,6 @@
 ---
 title: Generic Procedures in Visual Basic
-ms.custom: 
 ms.date: 07/20/2015
-ms.prod: .net
-ms.reviewer: 
-ms.suite: 
-ms.technology: devlang-visual-basic
-ms.topic: article
 helpviewer_keywords:
 - generic methods [Visual Basic], type inference
 - generics [Visual Basic], type inference
@@ -18,14 +12,11 @@ helpviewer_keywords:
 - generics [Visual Basic], procedures
 - generic procedures [Visual Basic], type inference
 ms.assetid: 95577b28-137f-4d5c-a149-919c828600e5
-caps.latest.revision: "11"
-author: dotnet-bot
-ms.author: dotnetcontent
-ms.openlocfilehash: e019ca32277f93f798e99e996a3670c8302ba9b9
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.openlocfilehash: 686087e4520ea5e6e69e5906c628af3ad54749da
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="generic-procedures-in-visual-basic"></a>Generic Procedures in Visual Basic
 A*泛型程序*，也稱為*泛型方法*，是定義了至少一個型別參數的程序。 這可讓呼叫的程式碼來調整資料類型，使其符合需求每次呼叫程序。  

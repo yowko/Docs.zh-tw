@@ -1,13 +1,7 @@
 ---
 title: 事件設計
-ms.custom: ''
 ms.date: 03/30/2017
-ms.prod: .net
-ms.reviewer: ''
-ms.suite: ''
 ms.technology: dotnet-standard
-ms.tgt_pltfrm: ''
-ms.topic: article
 helpviewer_keywords:
 - pre-events
 - events [.NET Framework], design guidelines
@@ -16,18 +10,13 @@ helpviewer_keywords:
 - post-events
 - signatures, event handling
 ms.assetid: 67b3c6e2-6a8f-480d-a78f-ebeeaca1b95a
-caps.latest.revision: 15
 author: rpetrusha
 ms.author: ronpet
-manager: wpickett
-ms.workload:
-- dotnet
-- dotnetcore
-ms.openlocfilehash: 3d66d4e137c52310710f8b178167ceb3cca042c7
-ms.sourcegitcommit: 2e8acae16ae802f2d6d04e3ce0a6dbf04e476513
+ms.openlocfilehash: 48d1ad0f02ae34675c0a910d7651d718c060db60
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/18/2018
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="event-design"></a>事件設計
 事件是最常使用的回呼 （允許呼叫使用者程式碼架構的建構） 形式。 其他的回撥機制包括委派、 虛擬成員和介面為基礎的外掛程式取得的成員。資料可用性研究表示大部分的開發人員可以更輕鬆地使用事件，比使用其他的回撥機制。 事件會正確地切割整合與 Visual Studio 和許多語言。  

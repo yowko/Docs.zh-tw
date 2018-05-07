@@ -1,24 +1,12 @@
 ---
 title: 133 - ActionItemScheduled
-ms.custom: 
 ms.date: 03/30/2017
-ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.technology: dotnet-clr
-ms.tgt_pltfrm: 
-ms.topic: article
 ms.assetid: a226aeea-69f4-438c-909b-05bd68b99220
-caps.latest.revision: "4"
-author: dotnet-bot
-ms.author: dotnetcontent
-manager: wpickett
-ms.workload: dotnet
-ms.openlocfilehash: ff2f857fe9cfe6db2d6a0af84f61852f54c0d1f8
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.openlocfilehash: 7e2a59056bdef8e4f5d2a7afeda4696f4c8762ea
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="133---actionitemscheduled"></a>133 - ActionItemScheduled
 ## <a name="properties"></a>屬性  
@@ -31,9 +19,9 @@ ms.lasthandoff: 12/22/2017
 |通道|Microsoft-Windows-Application Server-Applications/Debug|  
   
 ## <a name="description"></a>描述  
- 當 IO 執行緒排程器回呼叫用開始時，就會發出此事件。  
+ I/O 執行緒排程器回呼叫用開始時，就會發出此事件。  
   
 ## <a name="message"></a>訊息  
- IO 執行緒排程器回呼已叫用。  
+ I/O 執行緒排程器回呼已叫用。  
   
 ## <a name="details"></a>詳細資料

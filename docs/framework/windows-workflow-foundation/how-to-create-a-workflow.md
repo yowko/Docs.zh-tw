@@ -1,23 +1,12 @@
 ---
 title: 'How to: Create a Workflow'
-ms.custom: 
 ms.date: 03/30/2017
-ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.tgt_pltfrm: 
-ms.topic: article
 ms.assetid: 87234108-8e21-4cb3-9340-4a1a13f3f98c
-caps.latest.revision: "34"
-author: dotnet-bot
-ms.author: dotnetcontent
-manager: wpickett
-ms.workload: dotnet
-ms.openlocfilehash: 8e619fa7fa6437b60b1d3cd6b50a2a68229899f5
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.openlocfilehash: 98235eac9309ecb0229281160f210079e712b755
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="how-to-create-a-workflow"></a>How to: Create a Workflow
 工作流程可以從內建活動建構，也可以從自訂活動建構。 此區段步驟，完成建立這類使用這兩個內建活動的工作流程中的主題<xref:System.Activities.Statements.Flowchart>活動，並從先前的自訂活動[How to： 建立活動](../../../docs/framework/windows-workflow-foundation/how-to-create-an-activity.md)主題。 此工作流程會以數字猜測遊戲為模型。 只要閱讀本節其中一個主題即可完成教學課程；請選擇您感興趣的樣式並依照該步驟進行。 但是，您也可以完成所有的主題。  
@@ -38,5 +27,5 @@ ms.lasthandoff: 12/22/2017
  [如何：建立狀態機器工作流程](../../../docs/framework/windows-workflow-foundation/how-to-create-a-state-machine-workflow.md)  
  說明如何使用 <xref:System.Activities.Statements.StateMachine> 活動建立狀態電腦工作流程。  
   
-## <a name="see-also"></a>請參閱  
+## <a name="see-also"></a>另請參閱  
  [Windows Workflow Foundation 程式設計](../../../docs/framework/windows-workflow-foundation/programming.md)

@@ -1,13 +1,6 @@
 ---
-title: "自訂認證與認證驗證"
-ms.custom: 
+title: 自訂認證與認證驗證
 ms.date: 03/30/2017
-ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.technology: dotnet-clr
-ms.tgt_pltfrm: 
-ms.topic: article
 helpviewer_keywords:
 - credentials [WCF], custom
 - credentials [WCF]
@@ -15,19 +8,14 @@ helpviewer_keywords:
 - credential validation [WCF]
 - credentials [WCF], validation
 ms.assetid: da831bec-e281-4d44-b343-437b5eef688e
-caps.latest.revision: "8"
-author: dotnet-bot
-ms.author: dotnetcontent
-manager: wpickett
-ms.workload: dotnet
-ms.openlocfilehash: bdfd50253c71bfc9edd737964e771546cb797b9e
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
-ms.translationtype: MT
+ms.openlocfilehash: 00a49f9746c7073e3abdb353b38a76f6eea099f8
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="custom-credential-and-credential-validation"></a>自訂認證與認證驗證
-[!INCLUDE[indigo1](../../../../includes/indigo1-md.md)] 中的安全性主要是依據服務和用戶端之間的認證交換。 使用一般認證類型就可滿足大多數安全性案例，例如 Windows (Kerberos)、使用者名稱和密碼以及憑證。 不過，如果需要新的認證類型，可在本節的各主題中找到如何處理及驗證新類型的方法。  
+Windows Communication Foundation (WCF) 安全性為基礎的服務和用戶端之間的認證交換。 使用一般認證類型就可滿足大多數安全性案例，例如 Windows (Kerberos)、使用者名稱和密碼以及憑證。 不過，如果需要新的認證類型，可在本節的各主題中找到如何處理及驗證新類型的方法。  
   
 ## <a name="in-this-section"></a>本節內容  
  [如何：建立使用自訂憑證驗證程式的服務](../../../../docs/framework/wcf/extending/how-to-create-a-service-that-employs-a-custom-certificate-validator.md)  
@@ -66,5 +54,5 @@ ms.lasthandoff: 12/22/2017
   
  [授權](../../../../docs/framework/wcf/feature-details/authorization-in-wcf.md)  
   
-## <a name="see-also"></a>請參閱  
+## <a name="see-also"></a>另請參閱  
  [安全性](../../../../docs/framework/wcf/feature-details/security.md)

@@ -1,22 +1,12 @@
 ---
-title: "建立來源 Office Open XML 文件 (Visual Basic)"
-ms.custom: 
+title: 建立來源 Office Open XML 文件 (Visual Basic)
 ms.date: 07/20/2015
-ms.prod: .net
-ms.reviewer: 
-ms.suite: 
-ms.technology: devlang-visual-basic
-ms.tgt_pltfrm: 
-ms.topic: article
 ms.assetid: 61ccd6fb-0c47-4075-afdf-5b5021330f21
-caps.latest.revision: "3"
-author: dotnet-bot
-ms.author: dotnetcontent
-ms.openlocfilehash: c573f703ea3d7550dabd994f538e28e197874715
-ms.sourcegitcommit: bd1ef61f4bb794b25383d3d72e71041a5ced172e
+ms.openlocfilehash: 3db168b2c2971c3b44e54aefc24a9e08edb232d3
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/18/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="creating-the-source-office-open-xml-document-visual-basic"></a>建立來源 Office Open XML 文件 (Visual Basic)
 這個主題顯示如何建立此教學課程中其他範例所使用的 Office Open XML WordprocessingML 文件。 如果您按照這些指示進行，您的輸出將會符合每個範例中提供的輸出。  

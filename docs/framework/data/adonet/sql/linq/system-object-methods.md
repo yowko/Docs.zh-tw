@@ -1,27 +1,15 @@
 ---
-title: "System.Object 方法"
-ms.custom: 
+title: System.Object 方法
 ms.date: 03/30/2017
-ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.technology: dotnet-ado
-ms.tgt_pltfrm: 
-ms.topic: article
 ms.assetid: 5397fca0-689e-443e-802f-e1cbdc866427
-caps.latest.revision: "2"
-author: douglaslMS
-ms.author: douglasl
-manager: craigg
-ms.workload: dotnet
-ms.openlocfilehash: 319dc7ceae191de417bbdd33a5e234b42f3454de
-ms.sourcegitcommit: ed26cfef4e18f6d93ab822d8c29f902cff3519d1
+ms.openlocfilehash: bd4b30a65e7ad9391d9b867884d1c909491344bc
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 01/17/2018
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="systemobject-methods"></a>System.Object 方法
-[!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)]支援下列<xref:System.Object>方法。  
+[!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)] 支援下列<xref:System.Object>方法。  
   
 |||  
 |-|-|  
@@ -39,5 +27,5 @@ ms.lasthandoff: 01/17/2018
 ## <a name="differences-from-net"></a>與 .NET 的差異  
  輸出<xref:System.Object.ToString?displayProperty=nameWithType>雙使用 SQL `CONVERT`(nvarchar （30)， @x、 2) 在 SQL 上。 在此情況下，SQL 一律會使用 16 位數和科學記號表示法 (例如，"0.000000000000000e+000" 代表 0)。 因此，<xref:System.Object.ToString?displayProperty=nameWithType> 轉換不會產生與 .NET Framework 中 <xref:System.Convert.ToString%2A?displayProperty=nameWithType> 相同的字串。  
   
-## <a name="see-also"></a>請參閱  
+## <a name="see-also"></a>另請參閱  
  [資料類型和函式](../../../../../../docs/framework/data/adonet/sql/linq/data-types-and-functions.md)

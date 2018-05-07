@@ -1,12 +1,6 @@
 ---
-title: "Function 陳述式 (Visual Basic)"
+title: Function 陳述式 (Visual Basic)
 ms.date: 07/20/2015
-ms.prod: .net
-ms.reviewer: 
-ms.suite: 
-ms.technology:
-- devlang-visual-basic
-ms.topic: article
 f1_keywords:
 - vb.Function
 helpviewer_keywords:
@@ -34,14 +28,11 @@ helpviewer_keywords:
 - End keyword [Visual Basic], Function statements
 - Handles keyword [Visual Basic], Function statements
 ms.assetid: a4497077-0f46-4ede-a27f-9e8670df52b9
-caps.latest.revision: 
-author: dotnet-bot
-ms.author: dotnetcontent
-ms.openlocfilehash: 52e9210f9e715b6055e6ed199ef1aa4b919c6dd6
-ms.sourcegitcommit: 34ec7753acf76f90a0fa845235ef06663dc9e36e
+ms.openlocfilehash: b4a0c33d6d466975ca5dde1bd20ad2e1a9f560e4
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="function-statement-visual-basic"></a>Function 陳述式 (Visual Basic)
 名稱、 參數和定義的程式碼會宣告`Function`程序。  
@@ -183,7 +174,7 @@ End Function
 ## <a name="defining-a-function"></a>定義函式  
  您可以定義`Function`程序只能在模組層級。 因此，函式的宣告內容必須是類別、 結構、 模組或介面，而且不能在原始程式檔、 命名空間、 程序或區塊。 如需詳細資訊，請參閱[宣告內容和預設存取層級](declaration-contexts-and-default-access-levels.md)。  
   
- `Function`程序預設為公用存取。 您可以調整其存取層級，使用存取修飾詞。  
+ `Function` 程序預設為公用存取。 您可以調整其存取層級，使用存取修飾詞。  
   
  A`Function`程序可以宣告此程序傳回值的資料類型。 您可以指定任何資料類型或列舉、 結構、 類別或介面的名稱。 如果您未指定`returntype`參數，此程序傳回`Object`。  
   
@@ -260,7 +251,7 @@ End Function
   
  [!code-vb[csAsyncMethod#1](../../../csharp/programming-guide/classes-and-structs/codesnippet/VisualBasic/function-statement_5.vb)]  
   
-## <a name="see-also"></a>請參閱  
+## <a name="see-also"></a>另請參閱  
  [Sub 陳述式](sub-statement.md)  
  [函式程序](../../../visual-basic/programming-guide/language-features/procedures/function-procedures.md)  
  [參數清單](parameter-list.md)  

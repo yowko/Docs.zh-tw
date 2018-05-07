@@ -1,24 +1,12 @@
 ---
-title: "依本文路由"
-ms.custom: 
+title: 依本文路由
 ms.date: 03/30/2017
-ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.technology: dotnet-clr
-ms.tgt_pltfrm: 
-ms.topic: article
 ms.assetid: 07a6fc3b-c360-42e0-b663-3d0f22cf4502
-caps.latest.revision: "18"
-author: dotnet-bot
-ms.author: dotnetcontent
-manager: wpickett
-ms.workload: dotnet
-ms.openlocfilehash: defd3a3e9df273739aaf3440fd34fad2cad44cd4
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.openlocfilehash: e9a0c947a1dd7ac2a6c7af74baaa072aae67358c
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="route-by-body"></a>依本文路由
 這個範例會示範如何實作使用任何 SOAP 動作接受訊息物件的服務。 這個範例根據[入門](../../../../docs/framework/wcf/samples/getting-started-sample.md)，用來實作計算機服務。 此服務會實作接受 `Calculate` 要求參數並傳回 <xref:System.ServiceModel.Channels.Message> 回應的單一 <xref:System.ServiceModel.Channels.Message> 作業。  
@@ -28,7 +16,7 @@ ms.lasthandoff: 12/22/2017
 > [!NOTE]
 >  此範例的安裝程序與建置指示位於本主題的結尾。  
   
- 下列範例會示範根據本文內容的訊息分派。 內建的 [!INCLUDE[indigo1](../../../../includes/indigo1-md.md)] 服務模型訊息分派機制是以訊息「動作」為基礎。 然而，有很多現有的 Web 服務以 Action="" 定義其所有作業。 根據以 Action 資訊為基礎保留分派要求訊息的 WSDL 來建置服務，是不可能的。 這個範例會示範根據 WSDL 的服務合約 (WSDL 包含在範例隨附的 Service.wsdl 中)。 服務合約是 [小算盤]，類似於使用中的一個[入門](../../../../docs/framework/wcf/samples/getting-started-sample.md)。 不過，`[OperationContract]` 會指定所有作業的 `Action=""`。  
+ 下列範例會示範根據本文內容的訊息分派。 內建 Windows Communication Foundation (WCF) 服務模型訊息分派機制根據訊息的動作。 然而，有很多現有的 Web 服務以 Action="" 定義其所有作業。 根據以 Action 資訊為基礎保留分派要求訊息的 WSDL 來建置服務，是不可能的。 這個範例會示範根據 WSDL 的服務合約 (WSDL 包含在範例隨附的 Service.wsdl 中)。 服務合約是 [小算盤]，類似於使用中的一個[入門](../../../../docs/framework/wcf/samples/getting-started-sample.md)。 不過，`[OperationContract]` 會指定所有作業的 `Action=""`。  
   
 ```  
 [ServiceContract(Namespace = "http://Microsoft.ServiceModel.Samples"),    
@@ -80,8 +68,8 @@ Press <ENTER> to terminate client.
 >   
 >  `<InstallDrive>:\WF_WCF_Samples`  
 >   
->  如果此目錄不存在，請移至 [Windows Communication Foundation (WCF) and Windows Workflow Foundation (WF) Samples for .NET Framework 4  (適用於 .NET Framework 4 的 Windows Communication Foundation (WCF) 與 Windows Workflow Foundation (WF) 範例)](http://go.microsoft.com/fwlink/?LinkId=150780) ，以下載所有 [!INCLUDE[indigo1](../../../../includes/indigo1-md.md)] 和 [!INCLUDE[wf1](../../../../includes/wf1-md.md)] 範例。 此範例位於下列目錄。  
+>  如果此目錄不存在，請移至[Windows Communication Foundation (WCF) 和適用於.NET Framework 4 的 Windows Workflow Foundation (WF) 範例](http://go.microsoft.com/fwlink/?LinkId=150780)下載所有 Windows Communication Foundation (WCF) 和[!INCLUDE[wf1](../../../../includes/wf1-md.md)]範例。 此範例位於下列目錄。  
 >   
 >  `<InstallDrive>:\WF_WCF_Samples\WCF\Extensibility\Interop\RouteByBody`  
   
-## <a name="see-also"></a>請參閱
+## <a name="see-also"></a>另請參閱

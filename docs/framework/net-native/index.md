@@ -1,14 +1,6 @@
 ---
 title: 使用 .NET Native 編譯應用程式
-ms.custom: ''
 ms.date: 03/30/2017
-ms.prod: .net-framework
-ms.reviewer: ''
-ms.suite: ''
-ms.technology:
-- dotnet-clr
-ms.tgt_pltfrm: ''
-ms.topic: article
 helpviewer_keywords:
 - native compilation
 - .NET and native code
@@ -16,20 +8,16 @@ helpviewer_keywords:
 - .NET Native
 - C# and native compilation
 ms.assetid: 47cd5648-9469-4b1d-804c-43cc04384045
-caps.latest.revision: 27
 author: rpetrusha
 ms.author: ronpet
-manager: wpickett
-ms.workload:
-- dotnet
-ms.openlocfilehash: dec4d465b53f939f8fa711950ba6a000bd304e13
-ms.sourcegitcommit: 2142a4732bb4ff519b9817db4c24a237b9810d4b
+ms.openlocfilehash: 1ecc707bb07d6d17ae4115b483cc8f52083f3933
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 01/05/2018
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="compiling-apps-with-net-native"></a>使用 .NET Native 編譯應用程式
-[!INCLUDE[net_native](../../../includes/net-native-md.md)]是隨附於 Visual Studio 2015 和更新版本的先行編譯技術來建置和部署 Windows 應用程式。 此工具可將以 Managed 程式碼 (C# 或 Visual Basic) 撰寫且目標為 .NET Framework 和 Windows 10 的應用程式發行版本自動編譯為機器碼。  
+[!INCLUDE[net_native](../../../includes/net-native-md.md)] 是隨附於 Visual Studio 2015 和更新版本的先行編譯技術來建置和部署 Windows 應用程式。 此工具可將以 Managed 程式碼 (C# 或 Visual Basic) 撰寫且目標為 .NET Framework 和 Windows 10 的應用程式發行版本自動編譯為機器碼。  
   
  一般而言，以 .NET Framework 為目標的應用程式會編譯成中繼語言 (IL)。 在執行階段，just-in-time (JIT) 編譯器會將 IL 轉譯成機器碼。 相對地， [!INCLUDE[net_native](../../../includes/net-native-md.md)] 則會將 Windows 應用程式直接編譯成機器碼。 對開發人員而言，這表示：  
   
@@ -92,5 +80,5 @@ ms.lasthandoff: 01/05/2018
   
 -   [.NET Native 一般疑難排解](../../../docs/framework/net-native/net-native-general-troubleshooting.md)  
   
-## <a name="see-also"></a>請參閱  
+## <a name="see-also"></a>另請參閱  
  [.NET Native 常見問題集](http://msdn.microsoft.com/vstudio/dn642499.aspx)

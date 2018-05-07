@@ -1,22 +1,12 @@
 ---
-title: "如何： 尋找父代 (XPATH-LINQ to XML) 的屬性 (Visual Basic)"
-ms.custom: 
+title: 如何： 尋找父代 (XPATH-LINQ to XML) 的屬性 (Visual Basic)
 ms.date: 07/20/2015
-ms.prod: .net
-ms.reviewer: 
-ms.suite: 
-ms.technology: devlang-visual-basic
-ms.tgt_pltfrm: 
-ms.topic: article
 ms.assetid: 9d2572fd-27d4-426c-b079-16854cb9ec7d
-caps.latest.revision: "3"
-author: dotnet-bot
-ms.author: dotnetcontent
-ms.openlocfilehash: 4da7888ab838dacbdda097f24580745692d407fd
-ms.sourcegitcommit: bd1ef61f4bb794b25383d3d72e71041a5ced172e
+ms.openlocfilehash: af2b6fc3aaebe4ba45be405c587c549ea73b3289
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/18/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="how-to-find-an-attribute-of-the-parent-xpath-linq-to-xml-visual-basic"></a>如何： 尋找父代 (XPATH-LINQ to XML) 的屬性 (Visual Basic)
 這個主題顯示如何導覽到父項目並尋找其屬性。  

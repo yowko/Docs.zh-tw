@@ -1,26 +1,17 @@
 ---
-title: "如何：在 Visual Basic 中初始化陣列變數"
-ms.custom: 
+title: 如何：在 Visual Basic 中初始化陣列變數
 ms.date: 07/20/2015
-ms.prod: .net
-ms.reviewer: 
-ms.suite: 
-ms.technology: devlang-visual-basic
-ms.topic: article
 helpviewer_keywords:
 - variables [Visual Basic], initializing
 - arrays [Visual Basic], variables
 - arrays [Visual Basic], initializing
 - arrays [Visual Basic], declaring
 ms.assetid: aadd7a60-7ca4-4608-b986-091f19e7fc10
-caps.latest.revision: "42"
-author: dotnet-bot
-ms.author: dotnetcontent
-ms.openlocfilehash: 3ccdbed601d3fa87acb0833bc153c199b17a4eba
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.openlocfilehash: ee8cb91fd2fae9637a0d0e33fca63a4cdb9d2fce
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="how-to-initialize-an-array-variable-in-visual-basic"></a>如何：在 Visual Basic 中初始化陣列變數
 包括陣列常值中初始化陣列變數`New`子句，並指定陣列的初始值。 您可以指定類型，或讓它從陣列常值中的值推斷。 如需如何推斷的類型的詳細資訊，請參閱"填入陣列與初始值"[陣列](../../../../visual-basic/programming-guide/language-features/arrays/index.md)。  
@@ -41,7 +32,7 @@ ms.lasthandoff: 11/21/2017
   
      [!code-vb[VbVbalrArrays#17](../../../../visual-basic/programming-guide/language-features/arrays/codesnippet/VisualBasic/how-to-initialize-an-array-variable_2.vb)]  
   
--   明確指定陣列界限或省略它們即可讓編譯器推斷陣列常值中的值為基礎的陣列界限。 如果您提供的上限和值，您必須包含每個項目，從索引 0 到上限的值，每個維度。 下列範例示範幾種方式可以宣告、 建立和初始化變數，以包含具有類型的元素的二維陣列`Short`  
+-   明確指定陣列界限或省略它們即可讓編譯器推斷陣列常值中的值為基礎的陣列界限。 如果您提供的上限和值，您必須包含每個項目，從索引 0 到上限的值，每個維度。 下列範例示範幾種方式可以宣告、 建立和初始化變數，以包含具有類型的元素的二維陣列 `Short`  
   
      [!code-vb[VbVbalrArrays#18](../../../../visual-basic/programming-guide/language-features/arrays/codesnippet/VisualBasic/how-to-initialize-an-array-variable_3.vb)]  
   

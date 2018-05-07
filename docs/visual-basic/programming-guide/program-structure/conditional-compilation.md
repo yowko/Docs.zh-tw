@@ -1,24 +1,15 @@
 ---
-title: "Visual Basic 中的條件式編譯"
-ms.custom: 
+title: Visual Basic 中的條件式編譯
 ms.date: 07/20/2015
-ms.prod: .net
-ms.reviewer: 
-ms.suite: 
-ms.technology: devlang-visual-basic
-ms.topic: article
 helpviewer_keywords:
 - conditional compilation [Visual Basic], about conditional compilation
 - compilation [Visual Basic], conditional
 ms.assetid: 9c35e55e-7eee-44fb-a586-dad1f1884848
-caps.latest.revision: "15"
-author: dotnet-bot
-ms.author: dotnetcontent
-ms.openlocfilehash: 559380dc9baceb2fba4dca782e83f335f1bcd92d
-ms.sourcegitcommit: c2e216692ef7576a213ae16af2377cd98d1a67fa
+ms.openlocfilehash: 496df36242c6b43e7e3ec94ce675d11177e8b466
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/22/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="conditional-compilation-in-visual-basic"></a>Visual Basic 中的條件式編譯
 在*條件式編譯*，而忽略其他的特定程式中的程式碼區塊會選擇性地編譯。  
@@ -49,7 +40,7 @@ ms.lasthandoff: 10/22/2017
 |---|---|  
 |**專案設計工具**|在專案中的所有檔案公開|  
 |命令列|所有檔案公開傳遞至命令列編譯器|  
-|`#Const`在程式碼中的陳述式|私用宣告它的檔案|  
+|`#Const` 在程式碼中的陳述式|私用宣告它的檔案|  
   
 |若要設定專案設計工具中的常數|  
 |---|  
@@ -57,7 +48,7 @@ ms.lasthandoff: 10/22/2017
   
 |若要在命令列設定常數|  
 |---|  
-|-使用**/d**切換到輸入條件式編譯常數，如下列範例所示：<br />     `vbc MyProj.vb /d:conFrenchVersion=–1:conANSI=0`<br />     不不需要之間任何空間**/d**交換器與第一個常數。 如需詳細資訊，請參閱[/define (Visual Basic)](../../../visual-basic/reference/command-line-compiler/define.md)。<br />     命令列宣告覆寫中輸入宣告**專案設計工具**，但不是會清除它們。 設定的引數**專案設計工具**對後續編譯仍然有效。<br />     常數寫入時在程式碼本身，沒有嚴格規則對於它們的位置，因為其範圍是整個模組宣告它們。|  
+|-使用 **/d**切換到輸入條件式編譯常數，如下列範例所示：<br />     `vbc MyProj.vb /d:conFrenchVersion=–1:conANSI=0`<br />     不不需要之間任何空間 **/d**交換器與第一個常數。 如需詳細資訊，請參閱[/define (Visual Basic)](../../../visual-basic/reference/command-line-compiler/define.md)。<br />     命令列宣告覆寫中輸入宣告**專案設計工具**，但不是會清除它們。 設定的引數**專案設計工具**對後續編譯仍然有效。<br />     常數寫入時在程式碼本身，沒有嚴格規則對於它們的位置，因為其範圍是整個模組宣告它們。|  
   
 |若要在程式碼中設定常數|  
 |---|  
@@ -65,7 +56,7 @@ ms.lasthandoff: 10/22/2017
   
 ## <a name="related-topics"></a>相關主題  
   
-|標題|說明|  
+|標題|描述|  
 |---|---|  
 |[程式結構和程式碼慣例](../../../visual-basic/programming-guide/program-structure/program-structure-and-code-conventions.md)|提供讓您輕鬆地閱讀和維護的程式碼的建議。|  
   

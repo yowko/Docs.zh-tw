@@ -1,27 +1,15 @@
 ---
-title: "WMI 類別參考"
-ms.custom: 
+title: WMI 類別參考
 ms.date: 03/30/2017
-ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.technology: dotnet-clr
-ms.tgt_pltfrm: 
-ms.topic: article
 ms.assetid: b95a51f5-8251-4619-ae05-7de88cb90f9a
-caps.latest.revision: "6"
-author: dotnet-bot
-ms.author: dotnetcontent
-manager: wpickett
-ms.workload: dotnet
-ms.openlocfilehash: 0e221c8197b9713dd5f4e35114ada3c63f4978ef
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.openlocfilehash: 73b36bfc3df917982a2cc9071bdb31f42b3b2dff
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="wmi-class-reference"></a>WMI 類別參考
-本節將列出由 [!INCLUDE[indigo1](../../../../../includes/indigo1-md.md)] WMI 提供者公開的所有 WMI 類別。  
+此區段會列出所有的 Windows Communication Foundation (WCF) WMI 提供者所公開的 WMI 類別。  
   
 ## <a name="accessing-wmi-instances"></a>存取 WMI 執行個體  
  WMI 物件參考中列出的所有類別都無法直接產生，除了 Service、AppDomain、Contract、ServiceAppDomain、ServiceToEndpointAssociation 和 Endpoint。 如果要存取其他執行個體，您可以存取先前所述最上層類別的屬性。 例如，您可以從 [端點執行個體] -> [繫結] -> [BindingElements] 來存取 TransportBindingElement 執行個體。  

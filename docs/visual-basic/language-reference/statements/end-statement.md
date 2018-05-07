@@ -1,11 +1,6 @@
 ---
-title: "End 陳述式"
+title: End 陳述式
 ms.date: 07/20/2015
-ms.prod: .net
-ms.reviewer: 
-ms.suite: 
-ms.technology: devlang-visual-basic
-ms.topic: article
 f1_keywords:
 - vb.End
 - End
@@ -19,14 +14,11 @@ helpviewer_keywords:
 - End statement [Visual Basic]
 - execution [Visual Basic], stopping
 ms.assetid: 0e64467c-0f34-4aab-9ddd-43f8b9d55d90
-caps.latest.revision: "19"
-author: dotnet-bot
-ms.author: dotnetcontent
-ms.openlocfilehash: b692409f2895f5e9b713c57fc35ff2def40bce75
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.openlocfilehash: 864ac5ef1713f8ffa93c18accede8ecd5b3b7a8c
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="end-statement"></a>End 陳述式
 立即結束執行。  
@@ -38,7 +30,7 @@ End
 ```  
   
 ## <a name="remarks"></a>備註  
- 您可以在放置`End`陳述式，以強制整個應用程式停止執行程序中的任何位置。 `End`關閉開啟的任何檔案`Open`陳述式，並清除所有應用程式的變數。 只要不有任何其他程式，保留其物件的參考，並沒有其程式碼正在關閉應用程式。  
+ 您可以在放置`End`陳述式，以強制整個應用程式停止執行程序中的任何位置。 `End` 關閉開啟的任何檔案`Open`陳述式，並清除所有應用程式的變數。 只要不有任何其他程式，保留其物件的參考，並沒有其程式碼正在關閉應用程式。  
   
 > [!NOTE]
 >  `End`陳述式突然，停止程式碼執行，並不會呼叫`Dispose`或`Finalize`方法或任何其他的 Visual Basic 程式碼。 由其他程式的物件參考就會失效。 如果`End`陳述式中遇到`Try`或`Catch`區塊中，控制項並未通過對應`Finally`區塊。  
@@ -50,7 +42,7 @@ End
  您應該使用`End`謹慎使用，而且只有當您需要立即停止。 終止程序的一般方式 ([Return 陳述式](../../../visual-basic/language-reference/statements/return-statement.md)和[Exit 陳述式](../../../visual-basic/language-reference/statements/exit-statement.md)) 不只可以正常關閉程序，但也可讓呼叫端程式碼可以正常關閉。 主控台應用程式，例如，可能會直接`Return`從`Main`程序。  
   
 > [!IMPORTANT]
->  `End`陳述式會呼叫<xref:System.Environment.Exit%2A>方法<xref:System.Environment>類別<xref:System>命名空間。 <xref:System.Environment.Exit%2A>您必須有`UnmanagedCode`權限。 如果您不這麼做，<xref:System.Security.SecurityException>就會發生錯誤。  
+>  `End`陳述式會呼叫<xref:System.Environment.Exit%2A>方法<xref:System.Environment>類別<xref:System>命名空間。 <xref:System.Environment.Exit%2A> 您必須有`UnmanagedCode`權限。 如果您不這麼做，<xref:System.Security.SecurityException>就會發生錯誤。  
   
  其他的關鍵字，後面跟著[結束\<關鍵字 > 陳述式](../../../visual-basic/language-reference/statements/end-keyword-statement.md)敘述定義適當的程序或區塊的結尾。 例如，`End Function`結束的定義`Function`程序。  
   

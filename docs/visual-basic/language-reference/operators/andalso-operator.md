@@ -1,11 +1,6 @@
 ---
-title: "AndAlso 運算子 (Visual Basic)"
+title: AndAlso 運算子 (Visual Basic)
 ms.date: 07/20/2015
-ms.prod: .net
-ms.reviewer: 
-ms.suite: 
-ms.technology: devlang-visual-basic
-ms.topic: article
 f1_keywords:
 - vb.AndAlso
 - AndAlso
@@ -16,14 +11,11 @@ helpviewer_keywords:
 - operators [Visual Basic], conjunction
 - short-circuit evaluation
 ms.assetid: bbc15191-b374-495b-9b8f-7b8c2f4388eb
-caps.latest.revision: "19"
-author: dotnet-bot
-ms.author: dotnetcontent
-ms.openlocfilehash: 5f92f4ed226c2923c3d95a7b80db3872b7ac33dc
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.openlocfilehash: 549d14cc35d285ac2e4a02a37dd201cc669c5627
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="andalso-operator-visual-basic"></a>AndAlso 運算子 (Visual Basic)
 執行最少運算邏輯結合兩個運算式上。  
@@ -38,9 +30,9 @@ result = expression1 AndAlso expression2
   
 |詞彙|定義|  
 |---|---|  
-|`result`|必要項。 任何 `Boolean` 運算式。 結果是`Boolean`比較兩個運算式的結果。|  
-|`expression1`|必要項。 任何 `Boolean` 運算式。|  
-|`expression2`|必要項。 任何 `Boolean` 運算式。|  
+|`result`|必要。 任何 `Boolean` 運算式。 結果是`Boolean`比較兩個運算式的結果。|  
+|`expression1`|必要。 任何 `Boolean` 運算式。|  
+|`expression2`|必要。 任何 `Boolean` 運算式。|  
   
 ## <a name="remarks"></a>備註  
  邏輯作業即為*最少運算*如果已編譯的程式碼就可以略過運算式的評估，依據另一個運算式的結果。 如果評估的第一個運算式的結果判斷作業的最終結果，是不必評估第二個運算式，因為它不能變更的最終結果。 如果近端網址略過的運算式很複雜，或它所涉及的程序呼叫，最少運算可以改善效能。  

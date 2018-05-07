@@ -1,35 +1,23 @@
 ---
 title: 傳輸安全性概觀
-ms.custom: ''
 ms.date: 03/30/2017
-ms.prod: .net-framework
-ms.reviewer: ''
-ms.suite: ''
-ms.technology:
-- dotnet-clr
-ms.tgt_pltfrm: ''
-ms.topic: article
 dev_langs:
 - csharp
 - vb
 ms.assetid: 00959326-aa9d-44d0-af61-54933d4adc7f
-caps.latest.revision: 23
 author: BrucePerlerMS
-ms.author: bruceper
 manager: mbaldwin
-ms.workload:
-- dotnet
-ms.openlocfilehash: b697dc6a227c3b2a5646f4fcb11a39fd9d6339ff
-ms.sourcegitcommit: 94d33cadc5ff81d2ac389bf5f26422c227832052
+ms.openlocfilehash: 12b491971a9f3faa57edb1ccf9fb59351ed45f3b
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/30/2018
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="transport-security-overview"></a>傳輸安全性概觀
-[!INCLUDE[indigo1](../../../../includes/indigo1-md.md)] 中的傳輸安全性機制主要取決於所使用的繫結和傳輸。 例如，使用 <xref:System.ServiceModel.WSHttpBinding> 類別時，傳輸為 HTTP，而保護此傳輸的主要機制則為 Secure Sockets Layer (SSL) over HTTP，通常稱為 HTTPS。 本主題將討論 [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] 系統提供繫結中所使用的主要傳輸安全性機制。  
+傳輸安全性機制中 Windows Communication Foundation (WCF) 取決於繫結和傳輸所使用。 例如，使用 <xref:System.ServiceModel.WSHttpBinding> 類別時，傳輸為 HTTP，而保護此傳輸的主要機制則為 Secure Sockets Layer (SSL) over HTTP，通常稱為 HTTPS。 本主題討論 WCF 系統提供繫結中使用的主要傳輸安全性機制。  
   
 > [!NOTE]
->  SSL 安全性與 .NET Framework 3.5 (含) 以後版本搭配使用時，[!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] 用戶端會使用其憑證存放區中的中繼憑證以及在 SSL 交涉期間收到的中繼憑證，在服務的憑證上執行憑證鏈結驗證。 .NET Framework 3.0 只會使用安裝在本機憑證存放區中的中繼憑證。  
+>  SSL 安全性與.NET Framework 3.5 和更新版本使用 WCF 用戶端會使用中繼憑證其憑證存放區中，並在服務上執行憑證鏈結驗證的 SSL 交涉期間收到的中繼憑證憑證。 .NET Framework 3.0 只會使用安裝在本機憑證存放區中的中繼憑證。  
   
 > [!WARNING]
 >  使用傳輸安全性時， <!--zz <xref:System.Treading.Thread.CurrentPrincipal%2A> --> `CurrentPrincipal`屬性可能會被覆寫。 若要避免這種情況組<!--zz <xref:System.ServiceModel.Description.ServiceAuthorizationBehavior.PrincipalPermission%2A> -->`PrincipalPermission`為 None。 <xref:System.ServiceModel.Description.ServiceAuthorizationBehavior> 是可在服務描述上設定的服務行為。  
@@ -75,7 +63,7 @@ ms.lasthandoff: 04/30/2018
  這個類型可讓伺服器在 Kerberos 通訊協定失敗時，使用 NTLM 進行驗證。 如需有關設定 IIS 中的[!INCLUDE[iis601](../../../../includes/iis601-md.md)]，請參閱[強制 NTLM 驗證](http://go.microsoft.com/fwlink/?LinkId=88598)。 若是 [!INCLUDE[iisver](../../../../includes/iisver-md.md)]，Windows 驗證會包含 NTLM 驗證。 如需詳細資訊，請參閱[IIS 7.0 Beta： 在 IIS 7.0 中設定伺服器憑證](http://go.microsoft.com/fwlink/?LinkID=88595)。  
   
 ## <a name="wshttpbinding"></a>WsHttpBinding  
- <xref:System.ServiceModel.WSHttpBinding> 類別主要是用來與實作 WS-* 規格的服務進行交互操作。 此繫結的傳輸安全性為使用 HTTP 或 HTTPS 的安全通訊端層 (SSL)。 若要建立使用 SSL 的 [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] 應用程式，請使用 IIS 裝載應用程式。 或者，如果您要建立自我裝載的應用程式，請使用 HttpCfg.exe 工具將 X.509 憑證繫結至電腦上的特定連接埠。 連接埠號碼會指定做為 [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] 應用程式中的端點位址。 當使用傳輸模式時，端點位址必須包含 HTTPS 通訊協定，否則會在執行階段擲回例外狀況。 如需詳細資訊，請參閱[HTTP 傳輸安全性](../../../../docs/framework/wcf/feature-details/http-transport-security.md)。  
+ <xref:System.ServiceModel.WSHttpBinding> 類別主要是用來與實作 WS-* 規格的服務進行交互操作。 此繫結的傳輸安全性為使用 HTTP 或 HTTPS 的安全通訊端層 (SSL)。 若要建立使用 SSL 的 WCF 應用程式，使用 IIS 來裝載應用程式。 或者，如果您要建立自我裝載的應用程式，請使用 HttpCfg.exe 工具將 X.509 憑證繫結至電腦上的特定連接埠。 連接埠號碼被指定為 WCF 應用程式的端點位址的一部分。 當使用傳輸模式時，端點位址必須包含 HTTPS 通訊協定，否則會在執行階段擲回例外狀況。 如需詳細資訊，請參閱[HTTP 傳輸安全性](../../../../docs/framework/wcf/feature-details/http-transport-security.md)。  
   
  若是用戶端驗證，請將 <xref:System.ServiceModel.HttpTransportSecurity.ClientCredentialType%2A> 類別的 <xref:System.ServiceModel.HttpTransportSecurity> 屬性設定為其中一個 <xref:System.ServiceModel.HttpClientCredentialType> 列舉值。 這些列舉值會與 <xref:System.ServiceModel.BasicHttpBinding> 的用戶端認證類型完全相同，而且是設計成與 IIS 服務進行裝載。  
   

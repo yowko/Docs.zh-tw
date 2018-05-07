@@ -1,31 +1,20 @@
 ---
 title: 事件和回呼
-ms.custom: ''
 ms.date: 03/30/2017
-ms.prod: .net
-ms.reviewer: ''
-ms.suite: ''
 ms.technology: dotnet-standard
-ms.tgt_pltfrm: ''
-ms.topic: article
 helpviewer_keywords:
 - events [.NET Framework], extensibility
 - methods [.NET Framework], callback
 - callback methods
 - callbacks
 ms.assetid: 48b55c60-495f-4089-9396-97f9122bba7c
-caps.latest.revision: 10
 author: rpetrusha
 ms.author: ronpet
-manager: wpickett
-ms.workload:
-- dotnet
-- dotnetcore
-ms.openlocfilehash: 6a6851d1be543fe356827cad67b28cafdc9e56c2
-ms.sourcegitcommit: 2e8acae16ae802f2d6d04e3ce0a6dbf04e476513
+ms.openlocfilehash: 90cc40024de627f151a4d0df879a65e5900004b4
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/18/2018
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="events-and-callbacks"></a>事件和回呼
 回呼是延伸點，可允許呼叫委派透過使用者程式碼的架構。 這些委派通常會透過方法的參數傳遞給架構。  

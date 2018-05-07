@@ -1,28 +1,17 @@
 ---
-title: "非泛型 ForEach"
-ms.custom: 
+title: 非泛型 ForEach
 ms.date: 03/30/2017
-ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.tgt_pltfrm: 
-ms.topic: article
 ms.assetid: 576cd07a-d58d-4536-b514-77bad60bff38
-caps.latest.revision: "12"
-author: dotnet-bot
-ms.author: dotnetcontent
-manager: wpickett
-ms.workload: dotnet
-ms.openlocfilehash: 090aeda13081dc87b37cf0a18955cbd239720870
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.openlocfilehash: c67f6e3c3afb893f7bb5713d64ce2f119eebc157
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="non-generic-foreach"></a>非泛型 ForEach
-[!INCLUDE[netfx_current_long](../../../../includes/netfx-current-long-md.md)]工具箱中隨附一組控制流程活動，包括<xref:System.Activities.Statements.ForEach%601>，允許逐一<!--zz <xref:System.Collections.IEnumerable%601> -->`System.Collections.IEnumerable`集合。  
+[!INCLUDE[netfx_current_long](../../../../includes/netfx-current-long-md.md)] 工具箱中隨附一組控制流程活動，包括<xref:System.Activities.Statements.ForEach%601>，允許逐一<!--zz <xref:System.Collections.IEnumerable%601> -->`System.Collections.IEnumerable`集合。  
   
- <xref:System.Activities.Statements.ForEach%601>需要其<xref:System.Activities.Statements.ForEach%601.Values%2A>屬性型別<!--zz <xref:System.Collections.IEnumerable%601> --> `System.Collections.IEnumerable`。 這會防止使用者逐一查看實作資料結構<!--zz <xref:System.Collections.IEnumerable%601> -->`System.Collections.IEnumerable`介面 (例如， <xref:System.Collections.ArrayList>)。 非泛型 <xref:System.Activities.Statements.ForEach%601> 版本沒有這項需求，但在執行階段更複雜，以確保集合中數值型別的相容性。  
+ <xref:System.Activities.Statements.ForEach%601> 需要其<xref:System.Activities.Statements.ForEach%601.Values%2A>屬性型別<!--zz <xref:System.Collections.IEnumerable%601> --> `System.Collections.IEnumerable`。 這會防止使用者逐一查看實作資料結構<!--zz <xref:System.Collections.IEnumerable%601> -->`System.Collections.IEnumerable`介面 (例如， <xref:System.Collections.ArrayList>)。 非泛型 <xref:System.Activities.Statements.ForEach%601> 版本沒有這項需求，但在執行階段更複雜，以確保集合中數值型別的相容性。  
   
  這個範例示範如何實作非泛型 <xref:System.Activities.Statements.ForEach%601> 活動及其設計工具。 這個活動可用來逐一查看 <xref:System.Collections.ArrayList>。  
   
@@ -118,6 +107,6 @@ public sealed class ForEachWithBodyFactory : IActivityTemplateFactory
 >   
 >  `<InstallDrive>:\WF_WCF_Samples`  
 >   
->  如果此目錄不存在，請移至 [Windows Communication Foundation (WCF) and Windows Workflow Foundation (WF) Samples for .NET Framework 4  (適用於 .NET Framework 4 的 Windows Communication Foundation (WCF) 與 Windows Workflow Foundation (WF) 範例)](http://go.microsoft.com/fwlink/?LinkId=150780) ，以下載所有 [!INCLUDE[indigo1](../../../../includes/indigo1-md.md)] 和 [!INCLUDE[wf1](../../../../includes/wf1-md.md)] 範例。 此範例位於下列目錄。  
+>  如果此目錄不存在，請移至[Windows Communication Foundation (WCF) 和適用於.NET Framework 4 的 Windows Workflow Foundation (WF) 範例](http://go.microsoft.com/fwlink/?LinkId=150780)下載所有 Windows Communication Foundation (WCF) 和[!INCLUDE[wf1](../../../../includes/wf1-md.md)]範例。 此範例位於下列目錄。  
 >   
 >  `<InstallDrive>:\WF_WCF_Samples\WF\Scenario\ActivityLibrary\NonGenericForEach`

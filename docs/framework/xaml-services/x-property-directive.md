@@ -1,24 +1,12 @@
 ---
-title: "x:Property 指示詞"
-ms.custom: 
+title: x:Property 指示詞
 ms.date: 03/30/2017
-ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.technology: dotnet-wpf
-ms.tgt_pltfrm: 
-ms.topic: article
 ms.assetid: 618555a8-c893-455c-810f-ac54cd24ef10
-caps.latest.revision: "6"
-author: wadepickett
-ms.author: wpickett
-manager: wpickett
-ms.workload: dotnet
-ms.openlocfilehash: 36e464f9a45d737317192b2588473e90ae44a456
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.openlocfilehash: 0d554d8ba4d69b4c2d4cc01f3965ade7e508bb0e
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="xproperty-directive"></a>x:Property 指示詞
 在標記中宣告 XAML 屬性。  

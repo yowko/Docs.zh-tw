@@ -1,28 +1,16 @@
 ---
-title: "常見的安全性案例"
-ms.custom: 
+title: 常見的安全性案例
 ms.date: 03/30/2017
-ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.technology:
-- dotnet-clr
-ms.tgt_pltfrm: 
-ms.topic: article
 helpviewer_keywords:
 - security [WCF], scenarios
 ms.assetid: 201923b5-5162-4a8a-8d4c-e7bd242748d5
-caps.latest.revision: 
 author: BrucePerlerMS
-ms.author: bruceper
 manager: mbaldwin
-ms.workload:
-- dotnet
-ms.openlocfilehash: d8881768d66e95ce1391ce1be1663bdc3107a347
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.openlocfilehash: 0fb51ea0624c4fa686e4e99ffb9c30decedfea10
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="common-security-scenarios"></a>常見的安全性案例
 本章節中的主題列出一些可能的用戶端和服務安全性組態。 組態會視一些因素而改變。 例如，服務或用戶端是否在內部網路，或安全性是由 Windows 或傳輸 (例如 HTTPS) 所提供。  
@@ -32,7 +20,7 @@ ms.lasthandoff: 12/22/2017
  公開、不安全的用戶端與服務範例。  
   
  [沒有安全保障的內部網路用戶端與服務](../../../../docs/framework/wcf/feature-details/intranet-unsecured-client-and-service.md)  
- 一個基本的 [!INCLUDE[indigo1](../../../../includes/indigo1-md.md)] 服務，為了將安全私人網路上的資訊提供給 [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] 應用程式而開發。  
+ 基本 Windows Communication Foundation (WCF) 服務開發來提供安全的私人網路，以 WCF 應用程式的相關資訊。  
   
  [使用基本驗證的傳輸安全性](../../../../docs/framework/wcf/feature-details/transport-security-with-basic-authentication.md)  
  應用程式允許用戶端使用自訂驗證登入。  
@@ -47,7 +35,7 @@ ms.lasthandoff: 12/22/2017
  顯示由憑證保護的用戶端和服務。  
   
  [匿名用戶端的訊息安全性](../../../../docs/framework/wcf/feature-details/message-security-with-an-anonymous-client.md)  
- 顯示由 [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] 訊息安全性保護的用戶端和服務。  
+ 顯示的用戶端和服務 WCF 訊息安全性所保護。  
   
  [使用者名稱用戶端的訊息安全性](../../../../docs/framework/wcf/feature-details/message-security-with-a-user-name-client.md)  
  用戶端是 Windows Forms 應用程式，允許用戶端使用網域使用者名稱和密碼登入。  
@@ -92,6 +80,6 @@ ms.lasthandoff: 12/22/2017
   
  [稽核](../../../../docs/framework/wcf/feature-details/auditing-security-events.md)  
   
-## <a name="see-also"></a>請參閱  
+## <a name="see-also"></a>另請參閱  
  [安全性指引和最佳做法](../../../../docs/framework/wcf/feature-details/security-guidance-and-best-practices.md)  
  [Windows Server App Fabric 的安全性模型](http://go.microsoft.com/fwlink/?LinkID=201279&clcid=0x409)

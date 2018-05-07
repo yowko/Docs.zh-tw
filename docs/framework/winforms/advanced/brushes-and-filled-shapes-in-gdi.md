@@ -1,13 +1,6 @@
 ---
-title: "GDI+ 中的筆刷和填滿的形狀"
-ms.custom: 
+title: GDI+ 中的筆刷和填滿的形狀
 ms.date: 03/30/2017
-ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.technology: dotnet-winforms
-ms.tgt_pltfrm: 
-ms.topic: article
 dev_langs:
 - csharp
 - vb
@@ -20,19 +13,14 @@ helpviewer_keywords:
 - gradient brushes
 - brushes [Windows Forms], gradient
 ms.assetid: e863e2a7-0294-4130-99b6-f1ea3201e7cd
-caps.latest.revision: "15"
-author: dotnet-bot
-ms.author: dotnetcontent
-manager: wpickett
-ms.workload: dotnet
-ms.openlocfilehash: 89f0a7c86a83222030d9b50e20228f32e85ce730
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.openlocfilehash: 9475518a5f0422e0eac1ec521088071bb4d1c885
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="brushes-and-filled-shapes-in-gdi"></a>GDI+ 中的筆刷和填滿的形狀
-封閉的圖形，例如矩形或橢圓形包含大綱和內部。 繪製外框畫筆和筆刷填滿內部。 [!INCLUDE[ndptecgdiplus](../../../../includes/ndptecgdiplus-md.md)]提供填滿內部的封閉圖形筆刷的數個類別： <xref:System.Drawing.SolidBrush>， <xref:System.Drawing.Drawing2D.HatchBrush>， <xref:System.Drawing.TextureBrush>， <xref:System.Drawing.Drawing2D.LinearGradientBrush>，和<xref:System.Drawing.Drawing2D.PathGradientBrush>。 所有這些類別繼承自<xref:System.Drawing.Brush>類別。 下圖顯示與實心筆刷填滿的矩形和橢圓形填滿影線筆刷。  
+封閉的圖形，例如矩形或橢圓形包含大綱和內部。 繪製外框畫筆和筆刷填滿內部。 [!INCLUDE[ndptecgdiplus](../../../../includes/ndptecgdiplus-md.md)] 提供填滿內部的封閉圖形筆刷的數個類別： <xref:System.Drawing.SolidBrush>， <xref:System.Drawing.Drawing2D.HatchBrush>， <xref:System.Drawing.TextureBrush>， <xref:System.Drawing.Drawing2D.LinearGradientBrush>，和<xref:System.Drawing.Drawing2D.PathGradientBrush>。 所有這些類別繼承自<xref:System.Drawing.Brush>類別。 下圖顯示與實心筆刷填滿的矩形和橢圓形填滿影線筆刷。  
   
  ![填滿圖形](../../../../docs/framework/winforms/advanced/media/aboutgdip02-art17.gif "Aboutgdip02_art17")  
   
@@ -51,7 +39,7 @@ ms.lasthandoff: 12/22/2017
  [!code-csharp[LinesCurvesAndShapes#122](../../../../samples/snippets/csharp/VS_Snippets_Winforms/LinesCurvesAndShapes/CS/Class1.cs#122)]
  [!code-vb[LinesCurvesAndShapes#122](../../../../samples/snippets/visualbasic/VS_Snippets_Winforms/LinesCurvesAndShapes/VB/Class1.vb#122)]  
   
- [!INCLUDE[ndptecgdiplus](../../../../includes/ndptecgdiplus-md.md)]提供超過 50 個影線樣式。下圖所示的三種樣式<xref:System.Drawing.Drawing2D.HatchStyle.Horizontal>， <xref:System.Drawing.Drawing2D.HatchStyle.ForwardDiagonal>，和<xref:System.Drawing.Drawing2D.HatchStyle.Cross>。  
+ [!INCLUDE[ndptecgdiplus](../../../../includes/ndptecgdiplus-md.md)] 提供超過 50 個影線樣式。下圖所示的三種樣式<xref:System.Drawing.Drawing2D.HatchStyle.Horizontal>， <xref:System.Drawing.Drawing2D.HatchStyle.ForwardDiagonal>，和<xref:System.Drawing.Drawing2D.HatchStyle.Cross>。  
   
  ![填滿圖形](../../../../docs/framework/winforms/advanced/media/aboutgdip02-art18.gif "Aboutgdip02_art18")  
   
@@ -70,7 +58,7 @@ ms.lasthandoff: 12/22/2017
  ![填滿圖形](../../../../docs/framework/winforms/advanced/media/aboutgdip02-art20.gif "AboutGdip02_Art20")  
   
 ## <a name="gradient-brushes"></a>漸層筆刷  
- [!INCLUDE[ndptecgdiplus](../../../../includes/ndptecgdiplus-md.md)]提供兩種漸層筆刷： 線性和路徑。 您可以使用線性漸層筆刷填滿圖形，以變更逐漸，當您移動形狀之間水平、 垂直或對角線的色彩。 下列程式碼範例示範如何使用當您移動距離左邊緣的橢圓形的右邊緣，變更從藍綠色水平漸層筆刷填滿橢圓形。  
+ [!INCLUDE[ndptecgdiplus](../../../../includes/ndptecgdiplus-md.md)] 提供兩種漸層筆刷： 線性和路徑。 您可以使用線性漸層筆刷填滿圖形，以變更逐漸，當您移動形狀之間水平、 垂直或對角線的色彩。 下列程式碼範例示範如何使用當您移動距離左邊緣的橢圓形的右邊緣，變更從藍綠色水平漸層筆刷填滿橢圓形。  
   
  [!code-csharp[LinesCurvesAndShapes#124](../../../../samples/snippets/csharp/VS_Snippets_Winforms/LinesCurvesAndShapes/CS/Class1.cs#124)]
  [!code-vb[LinesCurvesAndShapes#124](../../../../samples/snippets/visualbasic/VS_Snippets_Winforms/LinesCurvesAndShapes/VB/Class1.vb#124)]  
@@ -87,7 +75,7 @@ ms.lasthandoff: 12/22/2017
   
  ![填滿圖形](../../../../docs/framework/winforms/advanced/media/aboutgdip02-art23.gif "AboutGdip02_Art23")  
   
-## <a name="see-also"></a>請參閱  
+## <a name="see-also"></a>另請參閱  
  <xref:System.Drawing.SolidBrush?displayProperty=nameWithType>  
  <xref:System.Drawing.Drawing2D.HatchBrush?displayProperty=nameWithType>  
  <xref:System.Drawing.TextureBrush?displayProperty=nameWithType>  

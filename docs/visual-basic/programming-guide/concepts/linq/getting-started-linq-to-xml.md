@@ -1,29 +1,19 @@
 ---
-title: "使用者入門 (LINQ to XML)"
-ms.custom: 
+title: 使用者入門 (LINQ to XML)
 ms.date: 07/20/2015
-ms.prod: .net
-ms.reviewer: 
-ms.suite: 
-ms.technology: devlang-visual-basic
-ms.tgt_pltfrm: 
-ms.topic: article
 ms.assetid: c3a9062d-9d51-4a8e-bac6-071d16a7d9ea
-caps.latest.revision: "3"
-author: dotnet-bot
-ms.author: dotnetcontent
-ms.openlocfilehash: fdded774f01d58ac1deb90094ebe3559eb80ba2e
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.openlocfilehash: 90b949a4e263cf02859af7470ca01a71a1e58d58
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="getting-started-linq-to-xml"></a>使用者入門 (LINQ to XML)
 下列主題將介紹 LINQ to XML。  
   
-## <a name="in-this-section"></a>本章節內容  
+## <a name="in-this-section"></a>本節內容  
   
-|主題|說明|  
+|主題|描述|  
 |-----------|-----------------|  
 |[LINQ to XML 概觀 (Visual Basic)](../../../../visual-basic/programming-guide/concepts/linq/linq-to-xml-overview.md)|提供 LINQ to XML 技術的概觀。|  
 |[LINQ to XML 與DOM (Visual Basic)](../../../../visual-basic/programming-guide/concepts/linq/linq-to-xml-vs-dom.md)|比較 LINQ to XML 與文件物件模型 (DOM)。|  

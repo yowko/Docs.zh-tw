@@ -1,25 +1,16 @@
 ---
-title: "Visual Basic 編碼慣例"
-ms.custom: 
+title: Visual Basic 編碼慣例
 ms.date: 07/20/2015
-ms.prod: .net
-ms.reviewer: 
-ms.suite: 
-ms.technology: devlang-visual-basic
-ms.topic: article
 helpviewer_keywords:
 - coding conventions [Visual Basic], Visual Basic
 - examples [Visual Basic], coding conventions
 - Visual Basic code, conventions
 ms.assetid: c1df130b-fec6-49a5-becf-0a7e494a1d0f
-caps.latest.revision: "48"
-author: dotnet-bot
-ms.author: dotnetcontent
-ms.openlocfilehash: afea862fb8783da3e69fd9828e0ded67fb81b00e
-ms.sourcegitcommit: c2e216692ef7576a213ae16af2377cd98d1a67fa
+ms.openlocfilehash: b686747b46529b53b0802a7deb38b5b4949f4d5e
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/22/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="visual-basic-coding-conventions"></a>Visual Basic 編碼慣例
 Microsoft 開發範例和文件，請遵循本主題中的指導方針。 如果您遵循相同的程式碼撰寫慣例，您可能會有下列好處：  
@@ -165,7 +156,7 @@ Microsoft 開發範例和文件，請遵循本主題中的指導方針。 如果
   
      [!code-vb[VbVbalrGuidelines#26](../../../visual-basic/programming-guide/program-structure/codesnippet/VisualBasic/coding-conventions_18.vb)]  
   
--   無法驗證事件是否`Nothing`(null) 才能呼叫`RaiseEvent`方法。 `RaiseEvent`檢查是否有`Nothing`引發事件之前。  
+-   無法驗證事件是否`Nothing`(null) 才能呼叫`RaiseEvent`方法。 `RaiseEvent` 檢查是否有`Nothing`引發事件之前。  
   
 ### <a name="using-shared-members"></a>使用共用的成員  
  呼叫`Shared`使用類別名稱，不是從執行個體變數成員。  

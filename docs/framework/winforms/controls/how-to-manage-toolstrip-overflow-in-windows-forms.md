@@ -1,13 +1,6 @@
 ---
-title: "如何：管理 Windows Form 中的 ToolStrip 溢位"
-ms.custom: 
+title: 如何：管理 Windows Form 中的 ToolStrip 溢位
 ms.date: 03/30/2017
-ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.technology: dotnet-winforms
-ms.tgt_pltfrm: 
-ms.topic: article
 dev_langs:
 - csharp
 - vb
@@ -17,16 +10,11 @@ helpviewer_keywords:
 - examples [Windows Forms], toolbars
 - CanOverflow property
 ms.assetid: fa10e0ad-4cbf-4c0d-9082-359c2f855d4e
-caps.latest.revision: "14"
-author: dotnet-bot
-ms.author: dotnetcontent
-manager: wpickett
-ms.workload: dotnet
-ms.openlocfilehash: 619c4832626693a56280c70af3ade5dbb9e9d4de
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.openlocfilehash: 32bbc06320f0dc7f096a4b9021bebfbefedaf8f7
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="how-to-manage-toolstrip-overflow-in-windows-forms"></a>如何：管理 Windows Form 中的 ToolStrip 溢位
 當上的所有項目<xref:System.Windows.Forms.ToolStrip>控制項無法放入配置的空間，您可以在啟用溢位功能<xref:System.Windows.Forms.ToolStrip>和決定特定的溢位行為<xref:System.Windows.Forms.ToolStripItem>s。  
@@ -53,7 +41,7 @@ ms.lasthandoff: 12/22/2017
     System.Windows.Forms.ToolStripItemOverflow.Never;  
     ```  
   
-## <a name="see-also"></a>請參閱  
+## <a name="see-also"></a>另請參閱  
  <xref:System.Windows.Forms.ToolStrip>  
  <xref:System.Windows.Forms.ToolStripOverflowButton>  
  <xref:System.Windows.Forms.ToolStripItem.Overflow%2A>  

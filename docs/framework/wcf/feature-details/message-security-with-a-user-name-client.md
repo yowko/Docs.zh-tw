@@ -1,30 +1,20 @@
 ---
-title: "使用者名稱用戶端的訊息安全性"
-ms.custom: 
+title: 使用者名稱用戶端的訊息安全性
 ms.date: 03/30/2017
-ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.technology: dotnet-clr
-ms.tgt_pltfrm: 
-ms.topic: article
 dev_langs:
 - csharp
 - vb
 ms.assetid: 36335cb9-76b8-4443-92c7-44f081eabb21
-caps.latest.revision: "15"
 author: BrucePerlerMS
-ms.author: bruceper
 manager: mbaldwin
-ms.workload: dotnet
-ms.openlocfilehash: dfda34c6bf165ebcecfd6d9a3710e785586d6cb1
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.openlocfilehash: 7bda1bc18e2b5af1365c799c6f2be9d8d220e9ed
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="message-security-with-a-user-name-client"></a>使用者名稱用戶端的訊息安全性
-下圖示範使用訊息層級安全性保護的 [!INCLUDE[indigo1](../../../../includes/indigo1-md.md)] 服務與用戶端。 服務會使用 X.509 憑證來進行驗證。 用戶端會使用使用者名稱與密碼來進行驗證。  
+下圖顯示 Windows Communication Foundation (WCF) 服務和用戶端使用訊息層級安全性保護。 服務會使用 X.509 憑證來進行驗證。 用戶端會使用使用者名稱與密碼來進行驗證。  
   
  範例應用程式，請參閱[訊息安全性使用者名稱](../../../../docs/framework/wcf/samples/message-security-user-name.md)。  
   
@@ -33,7 +23,7 @@ ms.lasthandoff: 12/22/2017
 |特性|描述|  
 |--------------------|-----------------|  
 |安全性模式|訊息|  
-|互通性|僅限 [!INCLUDE[indigo1](../../../../includes/indigo1-md.md)]|  
+|互通性|Windows Communication Foundation (WCF) 只|  
 |驗證 (伺服器)|初始交涉需要伺服器驗證|  
 |驗證 (用戶端)|使用者名稱/密碼|  
 |完整性|是，使用共用安全性內容|  
@@ -136,7 +126,7 @@ ms.lasthandoff: 12/22/2017
 </configuration>  
 ```  
   
-## <a name="see-also"></a>請參閱  
+## <a name="see-also"></a>另請參閱  
  [安全性概觀](../../../../docs/framework/wcf/feature-details/security-overview.md)  
  [訊息安全性使用者名稱](../../../../docs/framework/wcf/samples/message-security-user-name.md)  
  [服務身分識別和驗證](../../../../docs/framework/wcf/feature-details/service-identity-and-authentication.md)  

@@ -1,11 +1,7 @@
 ---
-title: "GetDemultiplexedStub 函式 （Unmanaged API 參考）"
-description: "GetDemultiplexedStub 函式會建立物件轉寄站接收可協助用戶端從 Windows 管理接收非同步呼叫。"
+title: GetDemultiplexedStub 函式 （Unmanaged API 參考）
+description: GetDemultiplexedStub 函式會建立物件轉寄站接收可協助用戶端從 Windows 管理接收非同步呼叫。
 ms.date: 11/06/2017
-ms.prod: .net-framework
-ms.technology:
-- dotnet-clr
-ms.topic: reference
 api_name:
 - GetDemultiplexedStub
 api_location:
@@ -20,16 +16,13 @@ topic_type:
 - Reference
 author: rpetrusha
 ms.author: ronpet
-manager: wpickett
-ms.workload:
-- dotnet
-ms.openlocfilehash: f53ee18345347f506a404a22bf5bfea6af037463
-ms.sourcegitcommit: c0dd436f6f8f44dc80dc43b07f6841a00b74b23f
+ms.openlocfilehash: 6b195d3a512c537ca409bd2039add9e69abaf4df
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 01/19/2018
+ms.lasthandoff: 05/04/2018
 ---
-# <a name="getdemultiplexedstub-function"></a>GetDemultiplexedStub function
+# <a name="getdemultiplexedstub-function"></a>GetDemultiplexedStub 函式
 建立物件轉寄站接收可協助用戶端從 Windows 管理接收非同步呼叫。
   
 [!INCLUDE[internalonly-unmanaged](../../../../includes/internalonly-unmanaged.md)]
@@ -66,7 +59,7 @@ HRESULT GetDemultiplexedStub (
   
  **標頭：** WMINet_Utils.idl  
   
- **.NET framework 版本：**[!INCLUDE[net_current_v472plus](../../../../includes/net-current-v472plus.md)]  
+ **.NET framework 版本：** [!INCLUDE[net_current_v472plus](../../../../includes/net-current-v472plus.md)]  
   
 ## <a name="see-also"></a>另請參閱  
 [WMI 和效能計數器 （Unmanaged API 參考）](index.md)

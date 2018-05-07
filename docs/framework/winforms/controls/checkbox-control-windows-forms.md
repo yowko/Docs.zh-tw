@@ -1,13 +1,6 @@
 ---
-title: "CheckBox 控制項 (Windows Form)"
-ms.custom: 
+title: CheckBox 控制項 (Windows Form)
 ms.date: 03/30/2017
-ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.technology: dotnet-winforms
-ms.tgt_pltfrm: 
-ms.topic: article
 helpviewer_keywords:
 - checked list items [Windows Forms], Windows Forms controls
 - CheckBox control [Windows Forms]
@@ -16,16 +9,11 @@ helpviewer_keywords:
 - checked list items
 - check boxes
 ms.assetid: 0719d798-c307-40d3-9040-72a62679c227
-caps.latest.revision: "11"
-author: dotnet-bot
-ms.author: dotnetcontent
-manager: wpickett
-ms.workload: dotnet
-ms.openlocfilehash: 7477ef53db9c2740a747c6a021a602ea32dfe3ee
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.openlocfilehash: a71fefd8d1c0edb23119cdd6b2604e274302935a
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="checkbox-control-windows-forms"></a>CheckBox 控制項 (Windows Form)
 Windows Form `CheckBox` 控制項表示特定的條件是開啟或關閉。 它通常用來呈現是/否或 True/False 選取項目給使用者。 您可以使用群組中的核取方塊控制項來顯示使用者可以從中選取一個或多個的多重選擇。 這類似於 <xref:System.Windows.Forms.RadioButton> 控制項，但可選取任何已分組的 `CheckBox` 控制項。  

@@ -1,24 +1,12 @@
 ---
-title: "SQL Server 結構描述集合"
-ms.custom: 
+title: SQL Server 結構描述集合
 ms.date: 03/30/2017
-ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.technology: dotnet-ado
-ms.tgt_pltfrm: 
-ms.topic: article
 ms.assetid: c6403cc3-d78b-4f85-bab1-ada7a3446ec5
-caps.latest.revision: "5"
-author: douglaslMS
-ms.author: douglasl
-manager: craigg
-ms.workload: dotnet
-ms.openlocfilehash: e95c6dc6bceb367000f4aa174a368bf046bc1b93
-ms.sourcegitcommit: ed26cfef4e18f6d93ab822d8c29f902cff3519d1
+ms.openlocfilehash: 248e5f4caf47f09742358240fa43f46169f0b1e5
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 01/17/2018
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="sql-server-schema-collections"></a>SQL Server 結構描述集合
 除了通用結構描述集合之外，Microsoft .NET Framework Data Provider for SQL Server 還支援其他結構描述集合。 這些結構描述集合會因您目前使用的 SQL Server 版本而稍微不同。 若要判斷支援的結構描述集合清單，請呼叫**GetSchema**方法沒有引數，或使用結構描述集合名稱"MetaDataCollections"。 這會傳回 <xref:System.Data.DataTable>，包括支援的結構描述集合清單、每個集合所支援的限制數目，以及集合所使用之識別項部分的數目。  
@@ -62,7 +50,7 @@ ms.lasthandoff: 01/17/2018
   
 |ColumnName|DataType|描述|  
 |----------------|--------------|-----------------|  
-|type_desc|String|索引的類型將屬於下列其中一種類型：<br /><br /> -   HEAP<br />叢集<br />-非叢集<br />-   XML<br />空間|  
+|type_desc|String|索引的類型將屬於下列其中一種類型：<br /><br /> -HEAP<br />叢集<br />-非叢集<br />-   XML<br />空間|  
   
 ## <a name="indexcolumns"></a>IndexColumns  
   
@@ -86,7 +74,7 @@ ms.lasthandoff: 01/17/2018
 |SPECIFIC_CATALOG|String|目錄的特定名稱。|  
 |SPECIFIC_SCHEMA|String|結構描述的特定名稱。|  
 |SPECIFIC_NAME|String|目錄的特定名稱。|  
-|ROUTINE_CATALOG|String|預存程序所屬的目錄。|  
+|U|String|預存程序所屬的目錄。|  
 |ROUTINE_SCHEMA|String|包含預存程序的結構描述。|  
 |ROUTINE_NAME|String|預存程序的名稱。|  
 |ROUTINE_TYPE|String|針對預存程序傳回 PROCEDURE，並針對函式傳回 FUNCTION。|  
@@ -266,6 +254,6 @@ ms.lasthandoff: 01/17/2018
 |Create_Date|DateTime|建立/登錄組件的日期。|  
 |Permission_set_desc|String|組件使用權限集合/安全性層級的易記名稱。|  
   
-## <a name="see-also"></a>請參閱  
+## <a name="see-also"></a>另請參閱  
  [擷取資料庫結構描述資訊](../../../../docs/framework/data/adonet/retrieving-database-schema-information.md)  
  [ADO.NET Managed 提供者和 DataSet 開發人員中心](http://go.microsoft.com/fwlink/?LinkId=217917)

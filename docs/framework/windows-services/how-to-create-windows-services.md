@@ -1,27 +1,17 @@
 ---
-title: "如何：建立 Windows 服務"
-ms.custom: 
+title: 如何：建立 Windows 服務
 ms.date: 03/30/2017
-ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.technology: dotnet-clr
-ms.tgt_pltfrm: 
-ms.topic: article
 helpviewer_keywords:
 - Windows Service applications, creating
 - templates, Windows Service
 ms.assetid: 0f5e2cbb-d95d-477c-b2b5-4b990e6b86ff
-caps.latest.revision: "18"
 author: ghogen
-ms.author: ghogen
 manager: douge
-ms.workload: dotnet
-ms.openlocfilehash: 7d93f8543b9e6e370827f5a666315d562e28ee76
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.openlocfilehash: 7719af9393bee816665040d6e4ced191419d0855
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="how-to-create-windows-services"></a>如何：建立 Windows 服務
 當您建立服務時，您可以使用 Visual Studio 專案範本，呼叫**Windows 服務**。 這個範本會透過參考適當的類別和命名空間、設定繼承自服務的基底類別，以及覆寫您可能想要覆寫的其中幾個方法，來自動為您執行大部分的工作。  
@@ -58,7 +48,7 @@ ms.lasthandoff: 12/22/2017
     |<xref:System.ServiceProcess.ServiceBase.CanStop%2A>|如果為 `True`，則表示服務會接受停止執行的要求；如果為 `false`，則不會停止服務。|  
     |<xref:System.ServiceProcess.ServiceBase.CanShutdown%2A>|如果為 `True`，則表示當服務所在的電腦關機時，服務想要收到通知，以便呼叫 <xref:System.ServiceProcess.ServiceBase.OnShutdown%2A> 程序。|  
     |<xref:System.ServiceProcess.ServiceBase.CanPauseAndContinue%2A>|如果為 `True`，則表示服務會接受暫停或繼續執行的要求；如果為 `false`，則表示不會暫停及繼續服務。|  
-    |<xref:System.ServiceProcess.ServiceBase.CanHandlePowerEvent%2A>|`True`表示服務可處理的電腦的電源狀態; 變更通知`false`這些變更的通知時，避免服務。|  
+    |<xref:System.ServiceProcess.ServiceBase.CanHandlePowerEvent%2A>|`True` 表示服務可處理的電腦的電源狀態; 變更通知`false`這些變更的通知時，避免服務。|  
     |<xref:System.ServiceProcess.ServiceBase.AutoLog%2A>|如果為 `True`，則會在服務執行動作時，將資訊項目寫入應用程式事件記錄檔；如果為 `false`，則會停用這項功能。 如需詳細資訊，請參閱[How to： 記錄資訊的相關服務](../../../docs/framework/windows-services/how-to-log-information-about-services.md)。 **注意：**根據預設，<xref:System.ServiceProcess.ServiceBase.AutoLog%2A>設`true`。|  
   
     > [!NOTE]
@@ -77,7 +67,7 @@ ms.lasthandoff: 12/22/2017
   
 8.  安裝服務。 如需詳細資訊，請參閱 [How to: Install and Uninstall Services](../../../docs/framework/windows-services/how-to-install-and-uninstall-services.md)。  
   
-## <a name="see-also"></a>請參閱  
+## <a name="see-also"></a>另請參閱  
  [Windows 服務應用程式簡介](../../../docs/framework/windows-services/introduction-to-windows-service-applications.md)  
  [如何：以程式設計方式撰寫服務](../../../docs/framework/windows-services/how-to-write-services-programmatically.md)  
  [如何：將 Installer 新增至服務應用程式](../../../docs/framework/windows-services/how-to-add-installers-to-your-service-application.md)  

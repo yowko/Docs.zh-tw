@@ -1,14 +1,6 @@
 ---
-title: "ICLRDebugManager 介面"
-ms.custom: 
+title: ICLRDebugManager 介面
 ms.date: 03/30/2017
-ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.technology:
-- dotnet-clr
-ms.tgt_pltfrm: 
-ms.topic: reference
 api_name:
 - ICLRDebugManager
 api_location:
@@ -22,17 +14,13 @@ helpviewer_keywords:
 ms.assetid: e835062c-c7d6-4945-8a44-2de7ebf3928e
 topic_type:
 - apiref
-caps.latest.revision: 
 author: rpetrusha
 ms.author: ronpet
-manager: wpickett
-ms.workload:
-- dotnet
-ms.openlocfilehash: 8e712f22156e96cfc58e9c1a835077ba21ecd184
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.openlocfilehash: d123177bf9f1b5eee1a2ba4d9b7f2042ddc07aa2
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="iclrdebugmanager-interface"></a>ICLRDebugManager 介面
 提供方法，讓主應用程式能夠與識別項和好記的名稱產生關聯的一組工作。  
@@ -50,7 +38,7 @@ ms.lasthandoff: 12/22/2017
 |[SetSymbolReadingPolicy 方法](../../../../docs/framework/unmanaged-api/hosting/iclrdebugmanager-setsymbolreadingpolicy-method.md)|設定用於讀取程式資料庫 (PDB) 檔案的原則。 原則會決定是否在呼叫堆疊中包含行號和檔案的相關資訊。|  
   
 ## <a name="remarks"></a>備註  
- 在偵錯狀況下，主機可能會想要將工作分組根據自己的程式設計邏輯。 例如，群組可讓開發人員若要查看只將所需的開發人員的 Api，而不是查看每項工作處理序中執行的工作。 `ICLRDebugManager`可讓主機實作此類型的群組。  
+ 在偵錯狀況下，主機可能會想要將工作分組根據自己的程式設計邏輯。 例如，群組可讓開發人員若要查看只將所需的開發人員的 Api，而不是查看每項工作處理序中執行的工作。 `ICLRDebugManager` 可讓主機實作此類型的群組。  
   
 > [!IMPORTANT]
 >  三個`ICLRDebugManager`方法`BeginConnection`，`SetConnectionTasks`和`EndConnection`，依存於彼此。 您必須呼叫指定的順序如預期般運作。  
@@ -64,7 +52,7 @@ ms.lasthandoff: 12/22/2017
   
  **程式庫：**包含做為 MSCorEE.dll 中的資源  
   
- **.NET framework 版本：**[!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]  
+ **.NET framework 版本：** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]  
   
-## <a name="see-also"></a>請參閱  
+## <a name="see-also"></a>另請參閱  
  [裝載介面](../../../../docs/framework/unmanaged-api/hosting/hosting-interfaces.md)

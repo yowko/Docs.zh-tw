@@ -1,14 +1,6 @@
 ---
-title: "IMetaDataImport::EnumMethodSemantics 方法"
-ms.custom: 
+title: IMetaDataImport::EnumMethodSemantics 方法
 ms.date: 03/30/2017
-ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.technology:
-- dotnet-clr
-ms.tgt_pltfrm: 
-ms.topic: reference
 api_name:
 - IMetaDataImport.EnumMethodSemantics
 api_location:
@@ -23,17 +15,13 @@ helpviewer_keywords:
 ms.assetid: e7e3c630-9691-46d6-94df-b5593a7bb08a
 topic_type:
 - apiref
-caps.latest.revision: 
 author: mairaw
 ms.author: mairaw
-manager: wpickett
-ms.workload:
-- dotnet
-ms.openlocfilehash: 883505076fa9ff4f335c08b069e801ebda1ebb2d
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.openlocfilehash: 00a28e0f7ab03af8d5f2fc0dda5274f9aaa4dca2
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="imetadataimportenummethodsemantics-method"></a>IMetaDataImport::EnumMethodSemantics 方法
 列舉和指定方法相關的屬性及屬性變更事件。  
@@ -70,7 +58,7 @@ HRESULT EnumMethodSemantics (
   
 |HRESULT|描述|  
 |-------------|-----------------|  
-|`S_OK`|`EnumMethodSemantics`已成功傳回。|  
+|`S_OK`|`EnumMethodSemantics` 已成功傳回。|  
 |`S_FALSE`|沒有事件或列舉的屬性。 在此情況下，`pcEventProp`為零。|  
   
 ## <a name="remarks"></a>備註  
@@ -83,8 +71,8 @@ HRESULT EnumMethodSemantics (
   
  **程式庫：**包含做為 MsCorEE.dll 中的資源  
   
- **.NET framework 版本：**[!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
+ **.NET framework 版本：** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
   
-## <a name="see-also"></a>請參閱  
+## <a name="see-also"></a>另請參閱  
  [IMetaDataImport 介面](../../../../docs/framework/unmanaged-api/metadata/imetadataimport-interface.md)  
  [IMetaDataImport2 介面](../../../../docs/framework/unmanaged-api/metadata/imetadataimport2-interface.md)

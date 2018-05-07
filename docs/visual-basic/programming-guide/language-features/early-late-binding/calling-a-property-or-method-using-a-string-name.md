@@ -1,12 +1,6 @@
 ---
-title: "使用字串名稱呼叫屬性或方法 (Visual Basic)"
-ms.custom: 
+title: 使用字串名稱呼叫屬性或方法 (Visual Basic)
 ms.date: 07/20/2015
-ms.prod: .net
-ms.reviewer: 
-ms.suite: 
-ms.technology: devlang-visual-basic
-ms.topic: article
 helpviewer_keywords:
 - passing operators [Visual Basic]
 - strings [Visual Basic], passing new operators as
@@ -18,14 +12,11 @@ helpviewer_keywords:
 - properties [Visual Basic], setting at run time
 - CallByName function
 ms.assetid: 79a7b8b4-b8c7-4ad8-aca8-12a9a2b32f03
-caps.latest.revision: "17"
-author: dotnet-bot
-ms.author: dotnetcontent
-ms.openlocfilehash: c5974257fb82fe83c66a480225da200c14338898
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.openlocfilehash: 76be426049489bb58e50878822c03fa5cd5cca8e
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="calling-a-property-or-method-using-a-string-name-visual-basic"></a>使用字串名稱呼叫屬性或方法 (Visual Basic)
 在大部分情況下，您可以在設計階段探索的屬性和方法的物件，並撰寫程式碼來處理它們。 不過，在某些情況下您可能不知道物件的屬性和方法的相關事先，或者您可能只想讓使用者指定的屬性，或在執行階段執行方法的彈性。  

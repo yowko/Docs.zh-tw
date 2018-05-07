@@ -1,13 +1,6 @@
 ---
-title: "筆墨執行緒模型"
-ms.custom: 
+title: 筆墨執行緒模型
 ms.date: 03/30/2017
-ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.technology: dotnet-wpf
-ms.tgt_pltfrm: 
-ms.topic: article
 helpviewer_keywords:
 - application user interface thread [WPF]
 - stylus plug-in
@@ -20,16 +13,11 @@ helpviewer_keywords:
 - ink collection plug-in
 - plug-ins [WPF], for ink
 ms.assetid: c85fcad1-cb50-4431-847c-ac4145a35c89
-caps.latest.revision: "9"
-author: dotnet-bot
-ms.author: dotnetcontent
-manager: wpickett
-ms.workload: dotnet
-ms.openlocfilehash: c8eb0cf9f1cbb1be688f228b7bbd10a3a3ca6ed0
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.openlocfilehash: cc0ff8a2345bd945dd2fffdfda80f00e1ab99c67
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="the-ink-threading-model"></a>筆墨執行緒模型
 其中一個 Tablet PC 上的優點是筆墨的，它感覺更像是撰寫使用一般紙筆。  若要達成此目的，tablet 畫筆會收集輸入的資料，以更高的速率超過沒有滑鼠，而且會筆跡轉譯成使用者寫入。  應用程式的使用者介面 (UI) 執行緒不足，無法收集畫筆資料及呈現筆墨，因為它可能會被封鎖。  若要解決此，[!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)]使用者撰寫的筆墨時，應用程式會使用兩個額外的執行緒。  
@@ -72,11 +60,11 @@ ms.lasthandoff: 12/22/2017
   
  在上圖中，會發生下列行為：  
   
-1.  `StylusPlugin1`修改的值，x 和 y。  
+1.  `StylusPlugin1` 修改的值，x 和 y。  
   
-2.  <xref:System.Windows.Input.StylusPlugIns.DynamicRenderer>接收已修改的手寫筆的點，並呈現它們的動態呈現執行緒上。  
+2.  <xref:System.Windows.Input.StylusPlugIns.DynamicRenderer> 接收已修改的手寫筆的點，並呈現它們的動態呈現執行緒上。  
   
-3.  `StylusPlugin2`接收已修改的手寫筆的點，並進一步修改的 x 值和 y。  
+3.  `StylusPlugin2` 接收已修改的手寫筆的點，並進一步修改的 x 值和 y。  
   
 4.  應用程式收集手寫筆的點，並當使用者完成筆劃，以靜態方式呈現筆觸。  
   
@@ -87,7 +75,7 @@ ms.lasthandoff: 12/22/2017
   
  下圖說明畫筆執行緒與 UI 執行緒，相對於的手寫筆事件之間的關聯性<xref:System.Windows.Input.StylusPlugIns.StylusPlugIn>。  
   
- ![筆跡執行緒模型 &#40;UI 和 Pen &#41;] (../../../../docs/framework/wpf/advanced/media/inkthreading-plugincallbacks.png "InkThreading_PluginCallbacks")  
+ ![筆跡執行緒模型&#40;UI 和 Pen&#41;](../../../../docs/framework/wpf/advanced/media/inkthreading-plugincallbacks.png "InkThreading_PluginCallbacks")  
   
 ## <a name="rendering-ink"></a>呈現筆墨  
  當使用者繪製筆觸，<xref:System.Windows.Input.StylusPlugIns.DynamicRenderer>讓筆跡出現 「 資料流程 」 畫筆從 UI 執行緒忙碌，即使呈現不同的執行緒上的筆墨。  <xref:System.Windows.Input.StylusPlugIns.DynamicRenderer>視覺化樹狀結構建置動態呈現執行緒上，因為它會收集手寫筆的點。  當使用者完成筆劃<xref:System.Windows.Input.StylusPlugIns.DynamicRenderer>詢問應用程式會在下一步的轉譯階段會收到通知。  應用程式完成下一步的呈現階段之後<xref:System.Windows.Input.StylusPlugIns.DynamicRenderer>清除其視覺化樹狀結構。  下圖說明此程序。  

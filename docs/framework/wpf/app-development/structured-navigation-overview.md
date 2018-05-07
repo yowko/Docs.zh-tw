@@ -1,31 +1,17 @@
 ---
-title: "結構化巡覽概觀"
-ms.custom: 
+title: 結構化巡覽概觀
 ms.date: 03/30/2017
-ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.technology:
-- dotnet-wpf
-ms.tgt_pltfrm: 
-ms.topic: article
 dev_langs:
 - csharp
 - vb
 helpviewer_keywords:
 - structured navigation [WPF]
 ms.assetid: 025d30ef-fec5-436d-ad7a-5d5483331c26
-caps.latest.revision: 
-author: dotnet-bot
-ms.author: dotnetcontent
-manager: wpickett
-ms.workload:
-- dotnet
-ms.openlocfilehash: f9d20fb5b16fbf44bdf8431ae32afee105af7676
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.openlocfilehash: 9be4e753a229d97f2caf1d74b3b9b8239b99c694
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="structured-navigation-overview"></a>結構化巡覽概觀
 內容可以由裝載[!INCLUDE[TLA#tla_xbap](../../../../includes/tlasharptla-xbap-md.md)]、 <xref:System.Windows.Controls.Frame>，或<xref:System.Windows.Navigation.NavigationWindow>是可以由組件的頁面組成[!INCLUDE[TLA#tla_uri#plural](../../../../includes/tlasharptla-urisharpplural-md.md)]，而且透過超連結導覽。 頁面的結構及其可被巡覽的方式，如超連結所定義，稱之為巡覽拓撲。 這種拓撲適合各種不同的應用程式類型，尤其是巡覽文件的應用程式。 針對這類應用程式，使用者可以從一頁巡覽到另一頁，頁面彼此間不需要了解。  
@@ -160,7 +146,7 @@ ms.lasthandoff: 12/22/2017
 [!code-csharp[StructuredNavigationSample#ReturnCODEBEHIND2](../../../../samples/snippets/csharp/VS_Snippets_Wpf/StructuredNavigationSample/CSharp/CalledPageFunction.xaml.cs#returncodebehind2)]
 [!code-vb[StructuredNavigationSample#ReturnCODEBEHIND2](../../../../samples/snippets/visualbasic/VS_Snippets_Wpf/StructuredNavigationSample/VisualBasic/CalledPageFunction.xaml.vb#returncodebehind2)]  
   
- 在本例中，如果使用者按下 [取消] 按鈕，`null` 值就會傳回呼叫端頁面。 如果改按下 [確定] 按鈕，則傳回使用者提供的字串值。 <xref:System.Windows.Navigation.PageFunction%601.OnReturn%2A>是`protected``virtual`方法，您可以呼叫您的資料傳回給呼叫的頁面。 您的資料需要封裝中的泛型執行個體<xref:System.Windows.Navigation.ReturnEventArgs%601>型別，其型別引數指定類型的值，<xref:System.Windows.Navigation.ReturnEventArgs%601.Result%2A>傳回。 如此一來，當您宣告<xref:System.Windows.Navigation.PageFunction%601>具有特定型別引數，您會指出<xref:System.Windows.Navigation.PageFunction%601>會傳回型別引數所指定類型的執行個體。 在此範例中，型別引數，因此，傳回的值屬於型別<xref:System.String>。  
+ 在本例中，如果使用者按下 [取消] 按鈕，`null` 值就會傳回呼叫端頁面。 如果改按下 [確定] 按鈕，則傳回使用者提供的字串值。 <xref:System.Windows.Navigation.PageFunction%601.OnReturn%2A> 是`protected``virtual`方法，您可以呼叫您的資料傳回給呼叫的頁面。 您的資料需要封裝中的泛型執行個體<xref:System.Windows.Navigation.ReturnEventArgs%601>型別，其型別引數指定類型的值，<xref:System.Windows.Navigation.ReturnEventArgs%601.Result%2A>傳回。 如此一來，當您宣告<xref:System.Windows.Navigation.PageFunction%601>具有特定型別引數，您會指出<xref:System.Windows.Navigation.PageFunction%601>會傳回型別引數所指定類型的執行個體。 在此範例中，型別引數，因此，傳回的值屬於型別<xref:System.String>。  
   
  當<xref:System.Windows.Navigation.PageFunction%601.OnReturn%2A>呼叫時，呼叫頁面需要某種方式接收的傳回值的<xref:System.Windows.Navigation.PageFunction%601>。 基於這個理由，<xref:System.Windows.Navigation.PageFunction%601>實作<xref:System.Windows.Navigation.PageFunction%601.Return>函式呼叫頁來處理事件。 當<xref:System.Windows.Navigation.PageFunction%601.OnReturn%2A>呼叫時，<xref:System.Windows.Navigation.PageFunction%601.Return>產生，因此呼叫的頁面可以向<xref:System.Windows.Navigation.PageFunction%601.Return>来接收通知。  
   
@@ -182,7 +168,7 @@ ms.lasthandoff: 12/22/2017
   
  在其他情況下，應用程式可能會令相依於結構化巡覽的複雜巡覽拓撲有效運作。 如需詳細資訊，請參閱[巡覽拓撲概觀](../../../../docs/framework/wpf/app-development/navigation-topologies-overview.md)。  
   
-## <a name="see-also"></a>請參閱  
+## <a name="see-also"></a>另請參閱  
  <xref:System.Windows.Navigation.PageFunction%601>  
  <xref:System.Windows.Navigation.NavigationService>  
  [巡覽拓撲概觀](../../../../docs/framework/wpf/app-development/navigation-topologies-overview.md)

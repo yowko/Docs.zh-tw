@@ -1,24 +1,17 @@
 ---
 title: 介面 (Visual Basic)
 ms.date: 07/20/2015
-ms.prod: .net
-ms.technology:
-- devlang-visual-basic
-ms.topic: article
 helpviewer_keywords:
 - Visual Basic code, interfaces
 - interfaces [Visual Basic], Visual Basic
 - interfaces
 - interfaces [Visual Basic]
 ms.assetid: 61b06674-12c9-430b-be68-cc67ecee1f5b
-caps.latest.revision: 11
-author: dotnet-bot
-ms.author: dotnetcontent
-ms.openlocfilehash: 558eae39b38161d01d599bba6c3121839560884b
-ms.sourcegitcommit: 86adcc06e35390f13c1e372c36d2e044f1fc31ef
+ms.openlocfilehash: 8380778398495fe9948e6a0eb19b535656a575f7
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/26/2018
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="interfaces-visual-basic"></a>介面 (Visual Basic)
 「介面」可定義類別可實作的屬性、方法和事件。 介面可讓您將功能定義為一小組緊密相關的屬性、方法和事件；這會降低相容性問題，因為您可以為您的介面開發增強的實作，而不會危及現有程式碼。 只要開發額外的介面和實作，您就可以隨時加入新功能。  

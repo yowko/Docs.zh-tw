@@ -1,30 +1,16 @@
 ---
 title: 從 WPF 移轉至 System.Xaml 的類型
-ms.custom: ''
 ms.date: 03/30/2017
-ms.prod: .net-framework
-ms.reviewer: ''
-ms.suite: ''
-ms.technology:
-- dotnet-wpf
-ms.tgt_pltfrm: ''
-ms.topic: article
 helpviewer_keywords:
 - WPF XAML [XAML Services], migration to System.Xaml
 - XAML [XAML Services], System.Xaml and WPF
 - System.Xaml [XAML Services], types migrated from WPF
 ms.assetid: d79dabf5-a2ec-4e8d-a37a-67c4ba8a2b91
-caps.latest.revision: 14
-author: wadepickett
-ms.author: wpickett
-manager: wpickett
-ms.workload:
-- dotnet
-ms.openlocfilehash: f4d4bc0b21770e5ac0c138c140334198d30a740a
-ms.sourcegitcommit: 86adcc06e35390f13c1e372c36d2e044f1fc31ef
+ms.openlocfilehash: d59ff8657f7750db8908aac15936f12838b27eaf
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/26/2018
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="types-migrated-from-wpf-to-systemxaml"></a>從 WPF 移轉至 System.Xaml 的類型
 在[!INCLUDE[net_v35_long](../../../includes/net-v35-long-md.md)]和[!INCLUDE[net_v30_long](../../../includes/net-v30-long-md.md)]，這兩個[!INCLUDE[TLA#tla_winclient](../../../includes/tlasharptla-winclient-md.md)]和 Windows Workflow Foundation 隨附 XAML 語言實作。 有許多為 WPF XAML 實作提供擴充性的公用類型，存在於 WindowsBase、PresentationCore 和 PresentationFramework 組件中。 同樣地，Windows Workflow Foundation XAML 提供擴充性的公用型別存在於 System.Workflow.ComponentModel 組件。 在 [!INCLUDE[net_v40_long](../../../includes/net-v40-long-md.md)]中，某些與 XAML 相關的類型已移轉至 System.Xaml 組件。 .NET Framework 有一項常見的 XAML 語言服務實作，可用以執行許多 XAML 擴充性情節，這些情節原先由特定架構的 XAML 實作所定義，但現在已納入整體 [!INCLUDE[net_v40_short](../../../includes/net-v40-short-md.md)] XAML 語言支援中。 本主題會列出移轉的類型，並討論與移轉相關的問題。  

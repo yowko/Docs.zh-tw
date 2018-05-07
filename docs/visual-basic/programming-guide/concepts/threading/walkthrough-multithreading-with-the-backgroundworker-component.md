@@ -1,22 +1,12 @@
 ---
-title: "多執行緒的 BackgroundWorker 元件 (Visual Basic)"
-ms.custom: 
+title: 多執行緒的 BackgroundWorker 元件 (Visual Basic)
 ms.date: 07/20/2015
-ms.prod: .net
-ms.reviewer: 
-ms.suite: 
-ms.technology: devlang-visual-basic
-ms.tgt_pltfrm: 
-ms.topic: article
 ms.assetid: e4cd9b2a-f924-470e-a16e-50274709b40e
-caps.latest.revision: "3"
-author: dotnet-bot
-ms.author: dotnetcontent
-ms.openlocfilehash: bb0734b4bbf3f8bf5b27305754829f1a9f29f42a
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.openlocfilehash: 07700aa526866729f1ba1a8d846f22ce333c356d
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="walkthrough-multithreading-with-the-backgroundworker-component-visual-basic"></a>逐步解說： 使用 BackgroundWorker 元件 (Visual Basic) 進行多執行緒處理
 本逐步解說示範如何建立多執行緒的 Windows Forms 應用程式，以搜尋文字檔案中某個文字的出現次數。 其會示範：  
@@ -48,7 +38,7 @@ ms.lasthandoff: 11/21/2017
   
 4.  將標籤新增至每個文字方塊旁。 依照下表所示的方式，設定每個標籤的 `Text` 屬性。  
   
-    |物件|屬性|設定|  
+    |Object|屬性|設定|  
     |------------|--------------|-------------|  
     |第一個標籤|`Text`|原始程式檔|  
     |第二個標籤|`Text`|比較字串|  

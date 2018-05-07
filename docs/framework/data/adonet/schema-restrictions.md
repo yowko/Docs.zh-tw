@@ -1,27 +1,15 @@
 ---
-title: "結構描述限制"
-ms.custom: 
+title: 結構描述限制
 ms.date: 03/30/2017
-ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.technology: dotnet-ado
-ms.tgt_pltfrm: 
-ms.topic: article
 dev_langs:
 - csharp
 - vb
 ms.assetid: 73d2980e-e73c-4987-913a-8ddc93d09144
-caps.latest.revision: "3"
-author: douglaslMS
-ms.author: douglasl
-manager: craigg
-ms.workload: dotnet
-ms.openlocfilehash: f5b004b70716c61af8ac37fef76f660c488e5a74
-ms.sourcegitcommit: ed26cfef4e18f6d93ab822d8c29f902cff3519d1
+ms.openlocfilehash: c62f934561fa4a6c352ff84b8c1201461c42de39
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 01/17/2018
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="schema-restrictions"></a>結構描述限制
 第二個選擇性參數**GetSchema**方法會傳回用來限制的結構描述資訊量的限制，並將它傳遞至**GetSchema**方法的字串陣列. 陣列中的位置決定您可以傳遞的值，它相當於限制號碼。  
@@ -272,5 +260,5 @@ class Program
 |資料表|@Table|TABLE_NAME|3|  
 |資料行|@Column|COLUMN_NAME|4|  
   
-## <a name="see-also"></a>請參閱  
+## <a name="see-also"></a>另請參閱  
  [ADO.NET Managed 提供者和 DataSet 開發人員中心](http://go.microsoft.com/fwlink/?LinkId=217917)

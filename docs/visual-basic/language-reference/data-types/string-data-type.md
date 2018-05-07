@@ -1,11 +1,6 @@
 ---
 title: String 資料類型 (Visual Basic)
 ms.date: 07/20/2015
-ms.prod: .net
-ms.suite: ''
-ms.technology:
-- devlang-visual-basic
-ms.topic: article
 f1_keywords:
 - vb.String
 helpviewer_keywords:
@@ -23,14 +18,11 @@ helpviewer_keywords:
 - String literals [Visual Basic]
 - identifier type characters [Visual Basic], $
 ms.assetid: 15ac03f5-cabd-42cc-a754-1df3893c25d9
-caps.latest.revision: 19
-author: dotnet-bot
-ms.author: dotnetcontent
-ms.openlocfilehash: 90f126a5cca36969617446e81a8d13434e39df75
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.openlocfilehash: 894638bbe50dad2cae1f74a2f7b7fe006f029d1b
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="string-data-type-visual-basic"></a>String 資料類型 (Visual Basic)
 保存該範圍的不帶正負號的 16 位元 （2 個位元組） 字碼指標的序列，從 0 到 65535 的值。 每個*程式碼點*，或字元碼，表示單一 Unicode 字元。 字串可包含 0 到大約二十億 (2 ^31) 的 Unicode 字元。  
@@ -81,7 +73,7 @@ S = Microsoft.VisualBasic.Left(S, 4)
   
 -   **Interop 考量。** 如果您要使用的元件不是針對.NET Framework 中，撰寫例如 Automation 或 COM 物件，請記得字串字元具有不同資料寬度 （8 位元） 在其他環境中。 如果您要將 8 位元的字元字串引數至這類元件，將它宣告為`Byte()`，陣列`Byte`項目，而不是`String`新的 Visual Basic 程式碼。  
   
--   **類型字元。** 附加識別項類型字元`$`到任何識別項會強制其成為`String`資料型別。 `String`有沒有常值類型字元。 不過，編譯器會將常值以引號括住 (`" "`) 做為`String`。  
+-   **類型字元。** 附加識別項類型字元`$`到任何識別項會強制其成為`String`資料型別。 `String` 有沒有常值類型字元。 不過，編譯器會將常值以引號括住 (`" "`) 做為`String`。  
   
 -   **架構類型。** .NET Framework 中對應的類型是<xref:System.String?displayProperty=nameWithType>類別。  
   

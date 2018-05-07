@@ -1,17 +1,12 @@
 ---
 title: 迴圈：for...to 運算式 (F#)
 description: '請參閱如何 F # for...in..運算式用來在迴圈中反覆迴圈變數的值範圍。'
-author: cartermp
-ms.author: phcart
 ms.date: 05/16/2016
-ms.topic: language-reference
-ms.prod: dotnet-fsharp
-ms.devlang: fsharp
-ms.openlocfilehash: 95a8960d71c82c01118d2e71479fc0ec5298a02b
-ms.sourcegitcommit: 03ee570f6f528a7d23a4221dcb26a9498edbdf8c
+ms.openlocfilehash: 841c7d557abc11e0253cb87ab8081cc77671b44b
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/28/2018
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="loops-forto-expression"></a>迴圈：for...to 運算式
 

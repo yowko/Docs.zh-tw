@@ -1,45 +1,33 @@
 ---
 title: 繫結和安全性
-ms.custom: ''
 ms.date: 03/30/2017
-ms.prod: .net-framework
-ms.reviewer: ''
-ms.suite: ''
-ms.technology:
-- dotnet-clr
-ms.tgt_pltfrm: ''
-ms.topic: article
 helpviewer_keywords:
 - bindings [WCF], security
 - WCF security
 - Windows Communication Foundation, security
 - bindings [WCF]
 ms.assetid: 4de03dd3-968a-4e65-af43-516e903d7f95
-caps.latest.revision: 42
 author: BrucePerlerMS
-ms.author: bruceper
 manager: mbaldwin
-ms.workload:
-- dotnet
-ms.openlocfilehash: 440bbcf03eef8f32a28073bfc9f5aeeb824a50fd
-ms.sourcegitcommit: 94d33cadc5ff81d2ac389bf5f26422c227832052
+ms.openlocfilehash: 938b04f6c612f38be41d278273aa18d41677f84c
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/30/2018
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="bindings-and-security"></a>繫結和安全性
-包含在 [!INCLUDE[indigo1](../../../../includes/indigo1-md.md)] 內之系統提供的繫結，提供了一種快速設計 [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] 應用程式的方法。 除了一個例外狀況以外，所有繫結預設都會啟用安全性配置。 本主題將根據您的安全性需求，協助您選取正確的繫結。  
+包含與 Windows Communication Foundation (WCF) 系統提供繫結提供 WCF 應用程式的快速方法。 除了一個例外狀況以外，所有繫結預設都會啟用安全性配置。 本主題將根據您的安全性需求，協助您選取正確的繫結。  
   
- 如需[!INCLUDE[indigo2](../../../../includes/indigo2-md.md)]安全性，請參閱[安全性概觀](../../../../docs/framework/wcf/feature-details/security-overview.md)。 如需有關程式設計[!INCLUDE[indigo2](../../../../includes/indigo2-md.md)]使用繫結，請參閱[程式設計 WCF 安全性](../../../../docs/framework/wcf/feature-details/programming-wcf-security.md)。  
+ 如需 WCF 安全性的概觀，請參閱[安全性概觀](../../../../docs/framework/wcf/feature-details/security-overview.md)。 如需程式設計使用繫結的 WCF 的詳細資訊，請參閱[程式設計 WCF 安全性](../../../../docs/framework/wcf/feature-details/programming-wcf-security.md)。  
   
  如果您已經選取繫結，您可以進一步了解與中安全性相關聯的執行階段行為[安全性行為](../../../../docs/framework/wcf/feature-details/security-behaviors-in-wcf.md)。  
   
  某些安全性功能無法使用系統提供的繫結進行程式設計。 如需使用自訂繫結的控制項，請參閱[自訂繫結的安全性功能](../../../../docs/framework/wcf/feature-details/security-capabilities-with-custom-bindings.md)。  
   
 ## <a name="security-functions-of-bindings"></a>繫結的安全性功能  
- [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] 包含一些系統提供的繫結，可滿足大部分的需求。 如果特定繫結不敷使用，您也可以建立自訂繫結。 如需系統提供繫結的清單，請參閱[之繫結](../../../../docs/framework/wcf/system-provided-bindings.md)。 如需有關自訂繫結的詳細資訊，請參閱[自訂繫結](../../../../docs/framework/wcf/extending/custom-bindings.md)。  
+ WCF 包含一些系統提供繫結，可滿足大部分的需求。 如果特定繫結不敷使用，您也可以建立自訂繫結。 如需系統提供繫結的清單，請參閱[之繫結](../../../../docs/framework/wcf/system-provided-bindings.md)。 如需有關自訂繫結的詳細資訊，請參閱[自訂繫結](../../../../docs/framework/wcf/extending/custom-bindings.md)。  
   
- [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] 內的每一個繫結都有兩種型式：在組態檔內當做 API 使用，以及當做 XML 項目使用。 例如， `WSHttpBinding` (API) 中有對應的[ \<wsHttpBinding >](../../../../docs/framework/configure-apps/file-schema/wcf/wshttpbinding.md)。  
+ 在 WCF 中的每一個繫結有兩種形式： 為應用程式開發介面，以及組態檔中使用的 XML 項目。 例如， `WSHttpBinding` (API) 中有對應的[ \<wsHttpBinding >](../../../../docs/framework/configure-apps/file-schema/wcf/wshttpbinding.md)。  
   
  下列章節將列出每個繫結的兩種型式，並摘要說明其安全功能。  
   
@@ -149,7 +137,7 @@ ms.lasthandoff: 04/30/2018
 ### <a name="msmqintegrationbinding"></a>MsmqIntegrationBinding  
  在程式碼，使用<xref:System.ServiceModel.MsmqIntegration.MsmqIntegrationBinding>類別; 在組態中，使用[ \<msmqIntegrationBinding >](../../../../docs/framework/configure-apps/file-schema/wcf/msmqintegrationbinding.md)。  
   
- 這個繫結已針對建立與非 [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] Microsoft Message Queuing (MSMQ) 端點相互操作的 [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] 用戶端和服務進行最佳化。  
+ 這個繫結適合使用非 WCF Microsoft 訊息佇列 MSMQ 端點建立 WCF 用戶端與服務相互操作。  
   
  根據預設，這個繫結會使用傳輸安全性，並提供下列安全性特性：  
   
@@ -162,7 +150,7 @@ ms.lasthandoff: 04/30/2018
 ### <a name="netmsmqbinding"></a>NetMsmqBinding  
  在程式碼，使用<xref:System.ServiceModel.NetMsmqBinding>類別; 在組態中，使用[ \<netMsmqBinding >](../../../../docs/framework/configure-apps/file-schema/wcf/netmsmqbinding.md)。  
   
- 在建立需要支援 MSMQ 佇列訊息的 [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] 服務時，會使用這個繫結。  
+ 這個繫結是用於建立 WCF 服務需要 MSMQ 佇列訊息支援。  
   
  根據預設，這個繫結會使用傳輸安全性，並提供下列安全性特性：  
   
@@ -232,7 +220,7 @@ ms.lasthandoff: 04/30/2018
 |----------|-----------------|  
 |無|允許服務與匿名用戶端互動。|  
 |Windows|允許在 Windows 認證的已驗證內容中進行 SOAP 訊息交換。|  
-|使用者名稱|允許服務要求用戶端必須以使用者名稱認證進行驗證。 請注意，當安全性模式設定為 `TransportWithMessageCredential` 時，[!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] 不支援傳送密碼摘要或使用密碼衍生金鑰，甚至針對訊息模式安全性使用該金鑰。 基於這個理由，[!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] 會在利用使用者名稱認證時，強制保護傳輸安全。|  
+|使用者名稱|允許服務要求用戶端必須以使用者名稱認證進行驗證。 請注意，當安全性模式設定為`TransportWithMessageCredential`，WCF 不支援傳送密碼摘要，或是衍生的金鑰使用的密碼，甚至針對訊息模式安全性使用該金鑰。 因此，WCF 會強制執行使用使用者名稱認證時，保護傳輸。|  
 |憑證|允許服務要求用戶端使用憑證進行驗證。|  
 |IssuedToken|允許服務使用安全性權杖服務提供自訂權杖。|  
   

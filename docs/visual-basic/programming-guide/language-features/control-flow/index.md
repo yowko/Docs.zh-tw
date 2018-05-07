@@ -1,13 +1,6 @@
 ---
 title: Visual Basic 中的控制流程
-ms.custom: ''
 ms.date: 07/20/2015
-ms.prod: .net
-ms.reviewer: ''
-ms.suite: ''
-ms.technology:
-- devlang-visual-basic
-ms.topic: article
 helpviewer_keywords:
 - statements [Visual Basic], control flow
 - control flow [Visual Basic]
@@ -15,14 +8,11 @@ helpviewer_keywords:
 - structures [Visual Basic], control
 - conditional statements [Visual Basic], control flow
 ms.assetid: 5623ef47-52b1-4202-befd-9af36422ec6f
-caps.latest.revision: 14
-author: dotnet-bot
-ms.author: dotnetcontent
-ms.openlocfilehash: 4ec3ab191942e47d5025a0e641085b0f507088c7
-ms.sourcegitcommit: 86adcc06e35390f13c1e372c36d2e044f1fc31ef
+ms.openlocfilehash: 14133dc764d6708d8b7a3366038bc3240e5cbc76
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/26/2018
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="control-flow-in-visual-basic"></a>Visual Basic 中的控制流程
 如果處於不受控制的狀態，則程式會從頭到尾執行其陳述式。 只要使用這種單向流程，就可以撰寫一些極簡單的程式。 不過，任何程式設計語言的大部分功能和效用都是來自於它們能夠使用控制陳述式和迴圈來變更執行順序。  

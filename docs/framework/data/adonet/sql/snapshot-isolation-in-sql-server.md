@@ -1,27 +1,15 @@
 ---
-title: "SQL Server 中的快照隔離"
-ms.custom: 
+title: SQL Server 中的快照隔離
 ms.date: 03/30/2017
-ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.technology: dotnet-ado
-ms.tgt_pltfrm: 
-ms.topic: article
 dev_langs:
 - csharp
 - vb
 ms.assetid: 43ae5dd3-50f5-43a8-8d01-e37a61664176
-caps.latest.revision: "6"
-author: douglaslMS
-ms.author: douglasl
-manager: craigg
-ms.workload: dotnet
-ms.openlocfilehash: a1d263f74f312b34c97f54cd970334017a797652
-ms.sourcegitcommit: ed26cfef4e18f6d93ab822d8c29f902cff3519d1
+ms.openlocfilehash: b9167d7a92ba1b4951d0a9e3c9eea3565bbdc196
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 01/17/2018
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="snapshot-isolation-in-sql-server"></a>SQL Server 中的快照隔離
 快照隔離可強化 OLTP 應用程式的並行功能。  
@@ -152,6 +140,6 @@ SELECT * FROM TestSnapshotUpdate WITH (UPDLOCK)
   
  如果應用程式有許多衝突，快照集隔離也許並非是最佳選擇。 僅在確實需要時才使用提示。 您的應用程式不應設計為必須依賴鎖定提示來執行作業。  
   
-## <a name="see-also"></a>請參閱  
+## <a name="see-also"></a>另請參閱  
  [SQL Server 和 ADO.NET](../../../../../docs/framework/data/adonet/sql/index.md)  
  [ADO.NET Managed 提供者和 DataSet 開發人員中心](http://go.microsoft.com/fwlink/?LinkId=217917)

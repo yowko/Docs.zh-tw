@@ -1,26 +1,12 @@
 ---
-title: "在 SQL Server 中簽署預存程序"
-ms.custom: 
+title: 在 SQL Server 中簽署預存程序
 ms.date: 01/05/2018
-ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.technology:
-- dotnet-ado
-ms.tgt_pltfrm: 
-ms.topic: article
 ms.assetid: eeed752c-0084-48e5-9dca-381353007a0d
-caps.latest.revision: 
-author: douglaslMS
-ms.author: douglasl
-manager: craigg
-ms.workload:
-- dotnet
-ms.openlocfilehash: 15771cc214ee17bc2c98bab2423013483d1355f1
-ms.sourcegitcommit: f28752eab00d2bd97e971542c0f49ce63cfbc239
+ms.openlocfilehash: 98dfaa6d5293cb1ad85f70be3388fb333daef373
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 01/29/2018
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="signing-stored-procedures-in-sql-server"></a>在 SQL Server 中簽署預存程序
  數位簽章是指使用簽署者之私密金鑰 (Private Key) 加密的資料摘要。 私密金鑰可確保數位簽章對於其 Bearer 或擁有者而言是唯一的。 您可以簽署預存程序、 函式 （除了內嵌資料表值函式）、 觸發程序，以及組件。  
@@ -67,7 +53,7 @@ ms.lasthandoff: 01/29/2018
 |[模組簽署](http://go.microsoft.com/fwlink/?LinkId=98590)SQL Server 線上叢書中|說明模組簽署，並提供範例案例以及相關 Transact-SQL 主題的連結。|  
 |[簽署憑證的預存程序](http://msdn.microsoft.com/library/bb283630.aspx)SQL Server 線上叢書中|提供使用憑證來簽署預存程序的教學課程。|  
   
-## <a name="see-also"></a>請參閱  
+## <a name="see-also"></a>另請參閱  
  [設定 ADO.NET 應用程式的安全性](../../../../../docs/framework/data/adonet/securing-ado-net-applications.md)  
  [SQL Server 安全性概觀](../../../../../docs/framework/data/adonet/sql/overview-of-sql-server-security.md)  
  [SQL Server 中的應用程式安全性案例](../../../../../docs/framework/data/adonet/sql/application-security-scenarios-in-sql-server.md)  

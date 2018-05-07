@@ -1,13 +1,6 @@
 ---
-title: "GlyphRun 物件和 Glyphs 項目簡介"
-ms.custom: 
+title: GlyphRun 物件和 Glyphs 項目簡介
 ms.date: 03/30/2017
-ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.technology: dotnet-wpf
-ms.tgt_pltfrm: 
-ms.topic: article
 helpviewer_keywords:
 - typography [WPF], Glyphs element
 - Glyphs elements [WPF]
@@ -16,16 +9,11 @@ helpviewer_keywords:
 - glyphs [WPF]
 - typography [WPF], GlyphRun object
 ms.assetid: 746ca769-a331-4435-9b95-f72a883b67c1
-caps.latest.revision: "21"
-author: dotnet-bot
-ms.author: dotnetcontent
-manager: wpickett
-ms.workload: dotnet
-ms.openlocfilehash: fa868b520224b27b3cd2b3dc99431728ad8ea527
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.openlocfilehash: 5750177c03cf859ebb884c5774b7ded03fa60628
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="introduction-to-the-glyphrun-object-and-glyphs-element"></a>GlyphRun 物件和 Glyphs 項目簡介
 本主題描述<xref:System.Windows.Media.GlyphRun>物件和<xref:System.Windows.Documents.Glyphs>項目。  
@@ -33,7 +21,7 @@ ms.lasthandoff: 12/22/2017
   
 <a name="text_glyphrunovw_intro"></a>   
 ## <a name="introduction-to-glyphrun"></a>GlyphRun 簡介  
- [!INCLUDE[TLA#tla_winclient](../../../../includes/tlasharptla-winclient-md.md)]提供進階的文字支援包括直接存取的圖像 （glyph） 層級標記<xref:System.Windows.Documents.Glyphs>的客戶想要攔截，並將保存完成格式化後的文字。 這些功能可針對下列每個案例中的不同文字轉譯需求提供重要支援。  
+ [!INCLUDE[TLA#tla_winclient](../../../../includes/tlasharptla-winclient-md.md)] 提供進階的文字支援包括直接存取的圖像 （glyph） 層級標記<xref:System.Windows.Documents.Glyphs>的客戶想要攔截，並將保存完成格式化後的文字。 這些功能可針對下列每個案例中的不同文字轉譯需求提供重要支援。  
   
 1.  固定格式文件的螢幕顯示。  
   
@@ -50,15 +38,15 @@ ms.lasthandoff: 12/22/2017
 3.  固定格式文件呈現，包括舊版 [!INCLUDE[TLA#tla_mswin](../../../../includes/tlasharptla-mswin-md.md)] 和其他電腦裝置的用戶端。  
   
 > [!NOTE]
->  <xref:System.Windows.Documents.Glyphs>和<xref:System.Windows.Media.GlyphRun>專為固定格式文件簡報和列印的案例。 [!INCLUDE[TLA#tla_winclient](../../../../includes/tlasharptla-winclient-md.md)]提供數個項目的一般版面配置和[!INCLUDE[TLA#tla_ui](../../../../includes/tlasharptla-ui-md.md)]案例，例如<xref:System.Windows.Controls.Label>和<xref:System.Windows.Controls.TextBlock>。 如需配置和 [!INCLUDE[TLA2#tla_ui](../../../../includes/tla2sharptla-ui-md.md)] 案例的詳細資訊，請參閱 [WPF 中的印刷樣式](../../../../docs/framework/wpf/advanced/typography-in-wpf.md)。  
+>  <xref:System.Windows.Documents.Glyphs> 和<xref:System.Windows.Media.GlyphRun>專為固定格式文件簡報和列印的案例。 [!INCLUDE[TLA#tla_winclient](../../../../includes/tlasharptla-winclient-md.md)] 提供數個項目的一般版面配置和[!INCLUDE[TLA#tla_ui](../../../../includes/tlasharptla-ui-md.md)]案例，例如<xref:System.Windows.Controls.Label>和<xref:System.Windows.Controls.TextBlock>。 如需配置和 [!INCLUDE[TLA2#tla_ui](../../../../includes/tla2sharptla-ui-md.md)] 案例的詳細資訊，請參閱 [WPF 中的印刷樣式](../../../../docs/framework/wpf/advanced/typography-in-wpf.md)。  
   
 <a name="text_glyphrunovw_glyphrunobject"></a>   
 ## <a name="the-glyphrun-object"></a>GlyphRun 物件  
  <xref:System.Windows.Media.GlyphRun>物件都代表單一的字型以單一轉譯樣式，在單一的大小，單一字體圖像 （glyph） 的序列。  
   
- <xref:System.Windows.Media.GlyphRun>包含這兩種字型詳細資料，例如圖像<xref:System.Windows.Documents.Glyphs.Indices%2A>和個別的字符的位置。 它也包含原始[!INCLUDE[TLA#tla_unicode](../../../../includes/tlasharptla-unicode-md.md)]字碼的指標執行所產生的字元-圖像緩衝區位移的對應資訊，以及每個字元和每個字符的旗標。  
+ <xref:System.Windows.Media.GlyphRun> 包含這兩種字型詳細資料，例如圖像<xref:System.Windows.Documents.Glyphs.Indices%2A>和個別的字符的位置。 它也包含原始[!INCLUDE[TLA#tla_unicode](../../../../includes/tlasharptla-unicode-md.md)]字碼的指標執行所產生的字元-圖像緩衝區位移的對應資訊，以及每個字元和每個字符的旗標。  
   
- <xref:System.Windows.Media.GlyphRun>都有對應的高層級<xref:System.Windows.FrameworkElement>， <xref:System.Windows.Documents.Glyphs>。 <xref:System.Windows.Documents.Glyphs>可用項目樹狀結構中以及在[!INCLUDE[TLA2#tla_xaml](../../../../includes/tla2sharptla-xaml-md.md)]表示標記<xref:System.Windows.Media.GlyphRun>輸出。  
+ <xref:System.Windows.Media.GlyphRun> 都有對應的高層級<xref:System.Windows.FrameworkElement>， <xref:System.Windows.Documents.Glyphs>。 <xref:System.Windows.Documents.Glyphs> 可用項目樹狀結構中以及在[!INCLUDE[TLA2#tla_xaml](../../../../includes/tla2sharptla-xaml-md.md)]表示標記<xref:System.Windows.Media.GlyphRun>輸出。  
   
 <a name="text_glyphrunovw_glyphselement"></a>   
 ## <a name="the-glyphs-element"></a>Glyphs 項目  
@@ -105,7 +93,7 @@ ms.lasthandoff: 12/22/2017
   
  [!code-xaml[GlyphsOvwSamp2#1](../../../../samples/snippets/csharp/VS_Snippets_Wpf/GlyphsOvwSamp2/CS/default.xaml#1)]  
   
-## <a name="see-also"></a>請參閱  
+## <a name="see-also"></a>另請參閱  
  [WPF 中的印刷樣式](../../../../docs/framework/wpf/advanced/typography-in-wpf.md)  
  [WPF 中的文件](../../../../docs/framework/wpf/advanced/documents-in-wpf.md)  
  [Text](../../../../docs/framework/wpf/advanced/optimizing-performance-text.md)

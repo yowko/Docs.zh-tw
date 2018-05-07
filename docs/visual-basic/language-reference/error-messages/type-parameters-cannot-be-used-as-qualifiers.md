@@ -1,26 +1,17 @@
 ---
 title: 型別參數不能當做限定詞使用
 ms.date: 07/20/2015
-ms.prod: .net
-ms.reviewer: ''
-ms.suite: ''
-ms.technology:
-- devlang-visual-basic
-ms.topic: article
 f1_keywords:
 - vbc32098
 - bc32098
 helpviewer_keywords:
 - BC32098
 ms.assetid: bab05325-dde8-4621-a5f6-368b5b7b2d76
-caps.latest.revision: 9
-author: dotnet-bot
-ms.author: dotnetcontent
-ms.openlocfilehash: 58be51e0c05750ee044f0287cde8db037718b4aa
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.openlocfilehash: 563010efc4f3049d330ee2b38b7f59e23292e630
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="type-parameters-cannot-be-used-as-qualifiers"></a>型別參數不能當做限定詞使用
 程式設計項目是使用限定性條件字串，其中包含的型別參數人選。  

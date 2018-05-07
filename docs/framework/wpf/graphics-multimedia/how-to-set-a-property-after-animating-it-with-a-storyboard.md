@@ -1,31 +1,17 @@
 ---
-title: "如何：使用腳本建立屬性的動畫後進行設定"
-ms.custom: 
+title: 如何：使用腳本建立屬性的動畫後進行設定
 ms.date: 03/30/2017
-ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.technology:
-- dotnet-wpf
-ms.tgt_pltfrm: 
-ms.topic: article
 dev_langs:
 - csharp
 - vb
 helpviewer_keywords:
 - animation [WPF], changing property values after
 ms.assetid: 79466556-4dbf-40bd-9c1e-a77613b07077
-caps.latest.revision: 
-author: dotnet-bot
-ms.author: dotnetcontent
-manager: wpickett
-ms.workload:
-- dotnet
-ms.openlocfilehash: 3ffc534549f5b114a07f09326be72c1968d178a8
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.openlocfilehash: b8e9c08075b13f8d6f701d5ac6ae4f8ea8949184
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="how-to-set-a-property-after-animating-it-with-a-storyboard"></a>如何：使用腳本建立屬性的動畫後進行設定
 在某些情況下，它可能會出現，動畫之後，您無法變更屬性的值。  
@@ -43,7 +29,7 @@ ms.lasthandoff: 12/22/2017
   
  先前的程式碼看起來並沒有任何項目： 所提供的筆刷會維持為黃色，也就是值<xref:System.Windows.Media.Animation.ColorAnimation>所繪製的筆刷。 基礎的屬性值 （基底值） 會實際變更為藍色。 不過，有效，或最新的該值會維持黃色因為<xref:System.Windows.Media.Animation.ColorAnimation>仍然會覆寫基底值。 如果您想要再次變成有效的值的基底值，您必須停止動畫屬性的影響。 有三種方法可以使用分鏡腳本動畫達到此目的：  
   
--   設定此動畫的<xref:System.Windows.Media.Animation.Timeline.FillBehavior%2A>屬性<xref:System.Windows.Media.Animation.FillBehavior.Stop>  
+-   設定此動畫的<xref:System.Windows.Media.Animation.Timeline.FillBehavior%2A>屬性 <xref:System.Windows.Media.Animation.FillBehavior.Stop>  
   
 -   移除整個分鏡腳本。  
   
@@ -75,7 +61,7 @@ ms.lasthandoff: 12/22/2017
   
  這項技術也適用於非分鏡腳本動畫。  
   
-## <a name="see-also"></a>請參閱  
+## <a name="see-also"></a>另請參閱  
  <xref:System.Windows.Media.Animation.Timeline.FillBehavior%2A>  
  <xref:System.Windows.Media.Animation.Storyboard.Remove%2A?displayProperty=nameWithType>  
  <xref:System.Windows.Media.Animation.RemoveStoryboard>  

@@ -1,27 +1,15 @@
 ---
-title: "PrintDocument 元件 (Windows Form)"
-ms.custom: 
+title: PrintDocument 元件 (Windows Form)
 ms.date: 03/30/2017
-ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.technology: dotnet-winforms
-ms.tgt_pltfrm: 
-ms.topic: article
 helpviewer_keywords:
 - PrintDocument component [Windows Forms]
 - printing [Windows Forms], documents
 ms.assetid: 5af6a51d-66f6-43cd-a8cd-d64eb18fe7e7
-caps.latest.revision: "13"
-author: dotnet-bot
-ms.author: dotnetcontent
-manager: wpickett
-ms.workload: dotnet
-ms.openlocfilehash: c65d90b39dde9adaae3a6711c978383eb92c4480
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.openlocfilehash: 1f3238d3afdd8485a3a04037a0fe252169acfc06
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="printdocument-component-windows-forms"></a>PrintDocument 元件 (Windows Form)
 Windows Form `PrintDocument` 元件可用來設定描述列印項目的屬性，並接著在 Windows 應用程式中列印文件。 它可以與 <xref:System.Windows.Forms.PrintDialog> 元件一起使用，以控制文件列印的各個方面。  

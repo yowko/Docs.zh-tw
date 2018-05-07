@@ -1,30 +1,18 @@
 ---
-title: "HOW TO：將合約公開給 SOAP 和 Web 用戶端"
-ms.custom: 
+title: HOW TO：將合約公開給 SOAP 和 Web 用戶端
 ms.date: 03/30/2017
-ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.technology: dotnet-clr
-ms.tgt_pltfrm: 
-ms.topic: article
 dev_langs:
 - csharp
 - vb
 ms.assetid: bb765a48-12f2-430d-a54d-6f0c20f2a23a
-caps.latest.revision: "21"
-author: dotnet-bot
-ms.author: dotnetcontent
-manager: wpickett
-ms.workload: dotnet
-ms.openlocfilehash: 0f13ba797b0c0e5c8b0d1eef271baf62f920f199
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.openlocfilehash: a9a730fe94d1df8c887a2eaf20c1e338bd056ed5
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="how-to-expose-a-contract-to-soap-and-web-clients"></a>HOW TO：將合約公開給 SOAP 和 Web 用戶端
-根據預設，[!INCLUDE[indigo1](../../../../includes/indigo1-md.md)] 只會讓 SOAP 用戶端使用端點。 在[How to： 建立基本的 WCF Web HTTP 服務](../../../../docs/framework/wcf/feature-details/how-to-create-a-basic-wcf-web-http-service.md)，端點都可以提供給非 SOAP 用戶端。 有時候您可能會想要讓兩者都有機會使用相同合約，也就是同時當做 Web 端點和 SOAP 端點。 本主題說明如何執行此操作的範例。  
+根據預設，Windows Communication Foundation (WCF) 提供端點只對 SOAP 用戶端。 在[How to： 建立基本的 WCF Web HTTP 服務](../../../../docs/framework/wcf/feature-details/how-to-create-a-basic-wcf-web-http-service.md)，端點都可以提供給非 SOAP 用戶端。 有時候您可能會想要讓兩者都有機會使用相同合約，也就是同時當做 Web 端點和 SOAP 端點。 本主題說明如何執行此操作的範例。  
   
 ### <a name="to-define-the-service-contract"></a>若要定義服務合約  
   
@@ -65,7 +53,7 @@ ms.lasthandoff: 12/22/2017
   
 ### <a name="to-call-service-operations-mapped-to-get-in-internet-explorer"></a>若要在 Internet Explorer 中呼叫對應至 GET 的服務作業  
   
-1.  開啟 Internet Explorer 並輸入"`http://localhost:8000/Web/EchoWithGet?s=Hello, world!`"然後按 ENTER。 URL 包含服務的基底位址 ("http://localhost:8000/")、端點的相對位址 ("")、要呼叫的服務作業 ("EchoWithGet")、問號，並於後面接續由連字號 (&) 分隔的具名參數清單。  
+1.  開啟 Internet Explorer 並輸入"`http://localhost:8000/Web/EchoWithGet?s=Hello, world!`"然後按 ENTER。 URL 包含服務的基底位址 ("http://localhost:8000/")，端點的相對位址 ("")，以連字號分隔的具名參數清單後面接著要呼叫 ("EchoWithGet") 和問號的服務作業 (&)。  
   
 ### <a name="to-call-service-operations-on-the-web-endpoint-in-code"></a>若要透過程式碼呼叫 Web 端點上的服務作業  
   
@@ -110,7 +98,7 @@ ms.lasthandoff: 12/22/2017
 ## <a name="compiling-the-code"></a>編譯程式碼  
  編譯 Service.cs 時，請參考 System.ServiceModel.dll 和 System.ServiceModel.Web.dll。  
   
-## <a name="see-also"></a>請參閱  
+## <a name="see-also"></a>另請參閱  
  <xref:System.ServiceModel.WebHttpBinding>  
  <xref:System.ServiceModel.Web.WebGetAttribute>  
  <xref:System.ServiceModel.Web.WebInvokeAttribute>  

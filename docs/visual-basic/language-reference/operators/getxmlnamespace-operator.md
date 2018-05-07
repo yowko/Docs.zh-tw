@@ -1,11 +1,6 @@
 ---
-title: "GetXmlNamespace 運算子 (Visual Basic)"
+title: GetXmlNamespace 運算子 (Visual Basic)
 ms.date: 07/20/2015
-ms.prod: .net
-ms.reviewer: 
-ms.suite: 
-ms.technology: devlang-visual-basic
-ms.topic: article
 f1_keywords:
 - vb.GetXmlNamespace
 - GetXmlNamespace
@@ -13,14 +8,11 @@ helpviewer_keywords:
 - GetXmlNamespace operator [Visual Basic]
 - GetXmlNamespace keyword [Visual Basic]
 ms.assetid: d0d28cfd-0755-4896-ae0b-4981aa35517c
-caps.latest.revision: "14"
-author: dotnet-bot
-ms.author: dotnetcontent
-ms.openlocfilehash: 47ba67bc58debf8f144f6468bf510932414c0698
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.openlocfilehash: e21cf160d10f308990894d1a85c4f5d05b90f68d
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="getxmlnamespace-operator-visual-basic"></a>GetXmlNamespace 運算子 (Visual Basic)
 取得<xref:System.Xml.Linq.XNamespace>對應至指定的 XML 命名空間前置詞的物件。  
@@ -33,7 +25,7 @@ GetXmlNamespace(xmlNamespacePrefix)
   
 ## <a name="parts"></a>組件  
  `xmlNamespacePrefix`  
- 選擇項。 識別 XML 命名空間前置詞的字串。 如果提供，這個字串必須是有效的 XML 識別項。 如需詳細資訊，請參閱[名稱的宣告 XML 元素和屬性](../../../visual-basic/programming-guide/language-features/xml/names-of-declared-xml-elements-and-attributes.md)。 如果指定前置詞，則會傳回預設命名空間。 如果未不指定任何預設命名空間，則會傳回空的命名空間。  
+ 選擇性。 識別 XML 命名空間前置詞的字串。 如果提供，這個字串必須是有效的 XML 識別項。 如需詳細資訊，請參閱[名稱的宣告 XML 元素和屬性](../../../visual-basic/programming-guide/language-features/xml/names-of-declared-xml-elements-and-attributes.md)。 如果指定前置詞，則會傳回預設命名空間。 如果未不指定任何預設命名空間，則會傳回空的命名空間。  
   
 ## <a name="return-value"></a>傳回值  
  <xref:System.Xml.Linq.XNamespace>對應的 XML 命名空間前置詞的物件。  

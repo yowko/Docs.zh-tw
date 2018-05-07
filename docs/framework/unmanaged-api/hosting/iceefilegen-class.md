@@ -1,14 +1,6 @@
 ---
-title: "ICeeFileGen 類別"
-ms.custom: 
+title: ICeeFileGen 類別
 ms.date: 03/30/2017
-ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.technology:
-- dotnet-clr
-ms.tgt_pltfrm: 
-ms.topic: reference
 api_name:
 - ICeeFileGen
 api_location:
@@ -22,23 +14,19 @@ helpviewer_keywords:
 ms.assetid: 90368606-506e-40df-be1f-8d595159203f
 topic_type:
 - apiref
-caps.latest.revision: 
 author: rpetrusha
 ms.author: ronpet
-manager: wpickett
-ms.workload:
-- dotnet
-ms.openlocfilehash: 04d0dc0d4ab53c17e818d17aa9c07f94bd05f703
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.openlocfilehash: 9f0ab07377b9e5db36ca9e4f1fd93aacd3464df4
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="iceefilegen-class"></a>ICeeFileGen 類別
 提供建立原生可攜式執行檔 (PE) 的功能。 介面將通常用於由編譯器所產生可執行檔將編譯的輸出。  
   
 > [!NOTE]
->  `ICeeFileGen`支援的.NET Framework 基礎結構，並不是直接從您的程式碼使用。  
+>  `ICeeFileGen` 支援的.NET Framework 基礎結構，並不是直接從您的程式碼使用。  
   
  此介面已被取代，而且將在未來版本中移除。  
   
@@ -254,5 +242,5 @@ public:
   
  **.NET framework 版本：** 1.0  
   
-## <a name="see-also"></a>請參閱  
+## <a name="see-also"></a>另請參閱  
  [裝載介面](../../../../docs/framework/unmanaged-api/hosting/hosting-interfaces.md)

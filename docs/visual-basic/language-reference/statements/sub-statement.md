@@ -1,12 +1,6 @@
 ---
 title: Sub 陳述式 (Visual Basic)
 ms.date: 07/20/2015
-ms.prod: .net
-ms.reviewer: ''
-ms.suite: ''
-ms.technology:
-- devlang-visual-basic
-ms.topic: article
 f1_keywords:
 - vb.Sub
 helpviewer_keywords:
@@ -35,14 +29,11 @@ helpviewer_keywords:
 - ByVal keyword [Visual Basic], Sub statements
 - Visual Basic code, Sub procedures
 ms.assetid: e347d700-d06c-405b-b302-e9b1edb57dfc
-caps.latest.revision: 52
-author: dotnet-bot
-ms.author: dotnetcontent
-ms.openlocfilehash: 0a2d0d5ffdca857a3a5ca58cd38b0930f254526f
-ms.sourcegitcommit: 8ed4ebc15b5ef89d06a7507dc9d5e306e30accf7
+ms.openlocfilehash: 9a806f2ec979699f7ccf4012c6477bee11301b0f
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 12/14/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="sub-statement-visual-basic"></a>Sub 陳述式 (Visual Basic)
 名稱、 參數和定義的程式碼會宣告`Sub`程序。  
@@ -62,15 +53,15 @@ End Sub
   
 -   `attributelist`  
   
-     選擇項。 請參閱[屬性清單](attribute-list.md)。  
+     選擇性。 請參閱[屬性清單](attribute-list.md)。  
   
 -   `Partial`  
   
-     選擇項。 表示定義部分方法。 請參閱[部分方法](../../../visual-basic/programming-guide/language-features/procedures/partial-methods.md)。  
+     選擇性。 表示定義部分方法。 請參閱[部分方法](../../../visual-basic/programming-guide/language-features/procedures/partial-methods.md)。  
   
 -   `accessmodifier`  
   
-     選擇項。 可以是下列其中一項：  
+     選擇性。 可以是下列其中一項：  
   
     -   [Public](../modifiers/public.md)  
   
@@ -86,7 +77,7 @@ End Sub
   
 -   `proceduremodifiers`  
   
-     選擇項。 可以是下列其中一項：  
+     選擇性。 可以是下列其中一項：  
   
     -   [多載](../modifiers/overloads.md)  
   
@@ -104,31 +95,31 @@ End Sub
   
 -   `Shared`  
   
-     選擇項。 請參閱[共用](../modifiers/shared.md)。  
+     選擇性。 請參閱[共用](../modifiers/shared.md)。  
   
 -   `Shadows`  
   
-     選擇項。 請參閱[陰影](../modifiers/shadows.md)。  
+     選擇性。 請參閱[陰影](../modifiers/shadows.md)。  
   
 -   `Async`  
   
-     選擇項。 請參閱[非同步](../modifiers/async.md)。  
+     選擇性。 請參閱[非同步](../modifiers/async.md)。  
   
 -   `name`  
   
-     必要項。 程序的名稱。 請參閱[宣告項目名稱](../../../visual-basic/programming-guide/language-features/declared-elements/declared-element-names.md)。 若要建立之類別的建構函式程序，將名稱設定`Sub`程序`New`關鍵字。 如需詳細資訊，請參閱[物件存留期： 物件的建立和終結](../../../visual-basic/programming-guide/language-features/objects-and-classes/object-lifetime-how-objects-are-created-and-destroyed.md)。  
+     必要。 程序的名稱。 請參閱[宣告項目名稱](../../../visual-basic/programming-guide/language-features/declared-elements/declared-element-names.md)。 若要建立之類別的建構函式程序，將名稱設定`Sub`程序`New`關鍵字。 如需詳細資訊，請參閱[物件存留期： 物件的建立和終結](../../../visual-basic/programming-guide/language-features/objects-and-classes/object-lifetime-how-objects-are-created-and-destroyed.md)。  
   
 -   `typeparamlist`  
   
-     選擇項。 泛型程序中的型別參數的清單。 請參閱[輸入清單](type-list.md)。  
+     選擇性。 泛型程序中的型別參數的清單。 請參閱[輸入清單](type-list.md)。  
   
 -   `parameterlist`  
   
-     選擇項。 本機變數的名稱，表示此程序的參數清單。 請參閱[參數清單](parameter-list.md)。  
+     選擇性。 本機變數的名稱，表示此程序的參數清單。 請參閱[參數清單](parameter-list.md)。  
   
 -   `Implements`  
   
-     選擇項。 表示此程序會實作一或多個`Sub`程序，每一個定義中包含這個程序的類別或結構所實作的介面。 請參閱[實作陳述式](implements-statement.md)。  
+     選擇性。 表示此程序會實作一或多個`Sub`程序，每一個定義中包含這個程序的類別或結構所實作的介面。 請參閱[實作陳述式](implements-statement.md)。  
   
 -   `implementslist`  
   
@@ -140,14 +131,14 @@ End Sub
   
      `interface.definedname`  
   
-    |組件|說明|  
+    |組件|描述|  
     |---|---|  
-    |`interface`|必要項。 這個程序所實作的介面名稱所含的類別或結構。|  
-    |`definedname`|必要項。 名稱，據以在 `interface` 中定義程序。|  
+    |`interface`|必要。 這個程序所實作的介面名稱所含的類別或結構。|  
+    |`definedname`|必要。 名稱，據以在 `interface` 中定義程序。|  
   
 -   `Handles`  
   
-     選擇項。 指出此程序可以處理一或多個特定事件。 請參閱[處理](handles-clause.md)。  
+     選擇性。 指出此程序可以處理一或多個特定事件。 請參閱[處理](handles-clause.md)。  
   
 -   `eventlist`  
   
@@ -159,14 +150,14 @@ End Sub
   
      `eventvariable.event`  
   
-    |組件|說明|  
+    |組件|描述|  
     |---|---|  
-    |`eventvariable`|必要項。 宣告的類別或結構，會引發事件的資料類型的物件變數。|  
-    |`event`|必要項。 此程序處理事件的名稱。|  
+    |`eventvariable`|必要。 宣告的類別或結構，會引發事件的資料類型的物件變數。|  
+    |`event`|必要。 此程序處理事件的名稱。|  
   
 -   `statements`  
   
-     選擇項。 若要執行此程序內的陳述式區塊。  
+     選擇性。 若要執行此程序內的陳述式區塊。  
   
 -   `End Sub`  
   
@@ -178,7 +169,7 @@ End Sub
 ## <a name="defining-a-sub-procedure"></a>定義 Sub 程序  
  您可以定義`Sub`程序只能在模組層級。 Sub 程序的宣告內容，因此，必須在類別、 結構、 模組或介面，且不能在原始程式檔、 命名空間、 程序或區塊。 如需詳細資訊，請參閱[宣告內容和預設存取層級](declaration-contexts-and-default-access-levels.md)。  
   
- `Sub`程序預設為公用存取。 您可以使用存取修飾詞來調整其存取層級。  
+ `Sub` 程序預設為公用存取。 您可以使用存取修飾詞來調整其存取層級。  
   
  如果程序使用`Implements`關鍵字、 包含的類別或結構必須`Implements`緊接在後面的陳述式其`Class`或`Structure`陳述式。 `Implements`陳述式必須包含每個介面中指定`implementslist`。 不過，用介面會定義的名稱`Sub`(在`definedname`) 沒有符合此程序的名稱 (在`name`)。  
   
@@ -214,7 +205,7 @@ End Sub
   
  您也可以將標記[Function 陳述式](function-statement.md)與`Async`修飾詞。 `Async`函式可以有傳回類型為<xref:System.Threading.Tasks.Task%601>或<xref:System.Threading.Tasks.Task>。 範例稍後在本主題說明`Async`函式的傳回型別<xref:System.Threading.Tasks.Task%601>。  
   
- `Async``Sub`程序主要用於事件處理常式，不會傳回的值。 `Async``Sub`無法等候程序，和呼叫端的`Async``Sub`程序無法攔截例外狀況，`Sub`程序會擲回。  
+ `Async` `Sub` 程序主要用於事件處理常式，不會傳回的值。 `Async``Sub`無法等候程序，和呼叫端的`Async``Sub`程序無法攔截例外狀況，`Sub`程序會擲回。  
   
  `Async`程序不可以宣告任何[ByRef](../modifiers/byref.md)參數。  
   

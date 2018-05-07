@@ -1,11 +1,6 @@
 ---
-title: "From 子句 (Visual Basic)"
+title: From 子句 (Visual Basic)
 ms.date: 07/20/2015
-ms.prod: .net
-ms.reviewer: 
-ms.suite: 
-ms.technology: devlang-visual-basic
-ms.topic: article
 f1_keywords:
 - vb.QueryFrom
 - vb.QueryFromIn
@@ -15,14 +10,11 @@ helpviewer_keywords:
 - From clause [Visual Basic]
 - From statement [Visual Basic]
 ms.assetid: 83e3665e-68a0-4540-a3a3-3d777a0f95d5
-caps.latest.revision: "19"
-author: dotnet-bot
-ms.author: dotnetcontent
-ms.openlocfilehash: 0ecdc8b70fb1ae164a6c78998ce11db9938fbb56
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.openlocfilehash: 1f113444efae83de7d299db330593937c7800bb3
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="from-clause-visual-basic"></a>From 子句 (Visual Basic)
 指定一或多個範圍變數以及要查詢的集合。  
@@ -38,9 +30,9 @@ From element [ As type ] In collection [ _ ]
   
 |詞彙|定義|  
 |---|---|  
-|`element`|必要項。 A*範圍變數*用來逐一查看集合的元素。 範圍變數用來參考的每個成員`collection`如逐一查看查詢`collection`。 必須是可列舉的類型。|  
-|`type`|選擇項。 `element` 的類型。 如果沒有`type`指定的型別`element`推斷從`collection`。|  
-|`collection`|必要項。 是指要查詢的集合。 必須是可列舉的類型。|  
+|`element`|必要。 A*範圍變數*用來逐一查看集合的元素。 範圍變數用來參考的每個成員`collection`如逐一查看查詢`collection`。 必須是可列舉的類型。|  
+|`type`|選擇性。 `element` 的類型。 如果沒有`type`指定的型別`element`推斷從`collection`。|  
+|`collection`|必要。 是指要查詢的集合。 必須是可列舉的類型。|  
   
 ## <a name="remarks"></a>備註  
  `From`子句用來識別來源資料查詢，包括用來參考項目的來源集合的變數。 這些變數稱為*範圍變數*。 `From`子句是必要的查詢，除非`Aggregate`子句用來識別傳回只會彙總結果的查詢。 如需詳細資訊，請參閱[Aggregate 子句](../../../visual-basic/language-reference/queries/aggregate-clause.md)。  

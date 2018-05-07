@@ -1,13 +1,6 @@
 ---
-title: "如何：繫結至 Web 服務"
-ms.custom: 
+title: 如何：繫結至 Web 服務
 ms.date: 03/30/2017
-ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.technology: dotnet-wpf
-ms.tgt_pltfrm: 
-ms.topic: article
 dev_langs:
 - csharp
 - vb
@@ -16,16 +9,11 @@ helpviewer_keywords:
 - Web service binding [WPF]
 - data binding [WPF], Web service
 ms.assetid: 77e2d373-69ba-4cbd-b6f5-2c83c38fc98b
-caps.latest.revision: "6"
-author: dotnet-bot
-ms.author: dotnetcontent
-manager: wpickett
-ms.workload: dotnet
-ms.openlocfilehash: 7b035f5922722a05759ff1e13514cc760a57d668
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.openlocfilehash: 75d9d5b6981f868c7a172edd7f23cf923fedd525
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="how-to-bind-to-a-web-service"></a>如何：繫結至 Web 服務
 這個範例示範如何繫結至 Web 服務方法呼叫所傳回的物件。  
@@ -39,7 +27,7 @@ ms.lasthandoff: 12/22/2017
   
 2.  從**專案**功能表上，按一下 **加入 Web 參考**。  
   
-3.  在對話方塊中，設定**URL**至[http://services.msdn.microsoft.com/contentservices/contentservice.asmx?wsdl](http://services.msdn.microsoft.com/contentservices/contentservice.asmx?wsdl)。  
+3.  在對話方塊中，設定**URL**至[ http://services.msdn.microsoft.com/contentservices/contentservice.asmx?wsdl ](http://services.msdn.microsoft.com/contentservices/contentservice.asmx?wsdl)。  
   
 4.  按**移**然後**將參考加入**。  
   
@@ -56,7 +44,7 @@ ms.lasthandoff: 12/22/2017
   
  如需結構的資訊**getContentResponse**，請參閱[內容的服務文件](http://services.msdn.microsoft.com/ContentServices/ContentService.asmx)。  
   
-## <a name="see-also"></a>請參閱  
+## <a name="see-also"></a>另請參閱  
  [資料繫結概觀](../../../../docs/framework/wpf/data/data-binding-overview.md)  
  [繫結來源概觀](../../../../docs/framework/wpf/data/binding-sources-overview.md)  
  [讓資料可於 XAML 中繫結](../../../../docs/framework/wpf/data/how-to-make-data-available-for-binding-in-xaml.md)

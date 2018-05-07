@@ -1,12 +1,6 @@
 ---
 title: Using 陳述式 (Visual Basic)
 ms.date: 07/20/2015
-ms.prod: .net
-ms.reviewer: ''
-ms.suite: ''
-ms.technology:
-- devlang-visual-basic
-ms.topic: article
 f1_keywords:
 - vb.using
 helpviewer_keywords:
@@ -15,14 +9,11 @@ helpviewer_keywords:
 - resources [Visual Basic], disposing
 - Using statement [Visual Basic]
 ms.assetid: 665d1580-dd54-4e96-a9a9-6be2a68948f1
-caps.latest.revision: 36
-author: dotnet-bot
-ms.author: dotnetcontent
-ms.openlocfilehash: ed9cc0d04c89eac1fe342a0924dd89bb1e258a11
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.openlocfilehash: 725eeb42dc5462022ac1a021c537d701929398ba
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="using-statement-visual-basic"></a>Using 陳述式 (Visual Basic)
 宣告的開頭`Using`封鎖，並選擇性地取得區塊所控制的系統資源。  
@@ -41,8 +32,8 @@ End Using
 |---|---|  
 |`resourcelist`|如果您未提供所需`resourceexpression`。 此清單的一或多個系統資源`Using`封鎖控制項，並以逗號分隔。|  
 |`resourceexpression`|如果您未提供所需`resourcelist`。 參考變數或運算式參考之系統資源，這會由`Using`區塊。|  
-|`statements`|選擇項。 陳述式區塊，`Using`封鎖執行。|  
-|`End Using`|必要項。 結束的定義`Using`區塊，並處置它所控制的所有資源。|  
+|`statements`|選擇性。 陳述式區塊，`Using`封鎖執行。|  
+|`End Using`|必要。 結束的定義`Using`區塊，並處置它所控制的所有資源。|  
   
  在每個資源`resourcelist`組件具有下列語法和組件：  
   
@@ -56,11 +47,11 @@ End Using
   
 |詞彙|定義|  
 |---|---|  
-|`resourcename`|必要項。 指的是系統資源的參考變數，`Using`封鎖控制項。|  
+|`resourcename`|必要。 指的是系統資源的參考變數，`Using`封鎖控制項。|  
 |`New`|若`Using`陳述式會取得資源。 如果您已取得資源，請使用第二個語法替代方案。|  
-|`resourcetype`|必要項。 資源的類別。 此類別必須實作<xref:System.IDisposable>介面。|  
-|`arglist`|選擇項。 您要傳遞給要建立的執行個體建構函式的引數清單`resourcetype`。 請參閱[參數清單](../../../visual-basic/language-reference/statements/parameter-list.md)。|  
-|`resourceexpression`|必要項。 變數或運算式參考到滿足需求的系統資源`resourcetype`。 如果您使用第二個語法替代方案，您必須先取得資源，控制項傳遞至`Using`陳述式。|  
+|`resourcetype`|必要。 資源的類別。 此類別必須實作<xref:System.IDisposable>介面。|  
+|`arglist`|選擇性。 您要傳遞給要建立的執行個體建構函式的引數清單`resourcetype`。 請參閱[參數清單](../../../visual-basic/language-reference/statements/parameter-list.md)。|  
+|`resourceexpression`|必要。 變數或運算式參考到滿足需求的系統資源`resourcetype`。 如果您使用第二個語法替代方案，您必須先取得資源，控制項傳遞至`Using`陳述式。|  
   
 ## <a name="remarks"></a>備註  
  有時候您的程式碼需要 unmanaged 的資源，例如檔案控制代碼、 COM 包裝函式或 SQL 連接。 A`Using`區塊保證會處置的一或多個這類資源與其完成您的程式碼時。 這可讓它們使用其他程式碼。  

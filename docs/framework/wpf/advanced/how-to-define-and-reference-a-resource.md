@@ -1,29 +1,17 @@
 ---
-title: "如何：定義和參考資源"
-ms.custom: 
+title: 如何：定義和參考資源
 ms.date: 03/30/2017
-ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.technology: dotnet-wpf
-ms.tgt_pltfrm: 
-ms.topic: article
 helpviewer_keywords:
 - resources [WPF], defining
 - defining resources [WPF]
 - resources [WPF], referencing
 - referencing resources [WPF]
 ms.assetid: b86b876b-0a10-489b-9a5d-581ea9b32406
-caps.latest.revision: "10"
-author: dotnet-bot
-ms.author: dotnetcontent
-manager: wpickett
-ms.workload: dotnet
-ms.openlocfilehash: 173be3048f7bf082db2eef2ea21eb1e0319f9a43
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.openlocfilehash: 347804f0ce6dd3b907d3ac088248a64569a63695
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="how-to-define-and-reference-a-resource"></a>如何：定義和參考資源
 這個範例示範如何定義資源，並使用中的屬性來參考該[!INCLUDE[TLA#tla_xaml](../../../../includes/tlasharptla-xaml-md.md)]。  
@@ -35,6 +23,6 @@ ms.lasthandoff: 12/22/2017
   
  [!code-xaml[FEResource#XAML](../../../../samples/snippets/csharp/VS_Snippets_Wpf/FEResource/CS/default.xaml#xaml)]  
   
-## <a name="see-also"></a>請參閱  
+## <a name="see-also"></a>另請參閱  
  [XAML 資源](../../../../docs/framework/wpf/advanced/xaml-resources.md)  
  [樣式設定和範本化](../../../../docs/framework/wpf/controls/styling-and-templating.md)

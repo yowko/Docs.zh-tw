@@ -1,13 +1,6 @@
 ---
-title: "如何：設定項目的寬度屬性"
-ms.custom: 
+title: 如何：設定項目的寬度屬性
 ms.date: 03/30/2017
-ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.technology: dotnet-wpf
-ms.tgt_pltfrm: 
-ms.topic: article
 dev_langs:
 - csharp
 - vb
@@ -15,16 +8,11 @@ helpviewer_keywords:
 - width properties [WPF]
 - Panel control [WPF], width properties of elements
 ms.assetid: 6ee04a9d-63f0-4f5b-a406-0a8cd4c35729
-caps.latest.revision: "10"
-author: dotnet-bot
-ms.author: dotnetcontent
-manager: wpickett
-ms.workload: dotnet
-ms.openlocfilehash: b27eb8f12e10f98d585f8f9bc445dba0118988fe
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.openlocfilehash: 72617744a8b2565857d19a1c6ef41bf4211c89ad
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="how-to-set-the-width-properties-of-an-element"></a>如何：設定項目的寬度屬性
 ## <a name="example"></a>範例  
@@ -44,7 +32,7 @@ ms.lasthandoff: 12/22/2017
   
  如需完整範例，請參閱[寬度屬性比較範例](http://go.microsoft.com/fwlink/?LinkID=160050)。  
   
-## <a name="see-also"></a>請參閱  
+## <a name="see-also"></a>另請參閱  
  <xref:System.Windows.Controls.ListBox>  
  <xref:System.Windows.FrameworkElement>  
  <xref:System.Windows.FrameworkElement.ActualWidth%2A>  

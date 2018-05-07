@@ -1,13 +1,6 @@
 ---
-title: "PageSetupDialog 元件 (Windows Form)"
-ms.custom: 
+title: PageSetupDialog 元件 (Windows Form)
 ms.date: 03/30/2017
-ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.technology: dotnet-winforms
-ms.tgt_pltfrm: 
-ms.topic: article
 helpviewer_keywords:
 - printing [Windows Forms], page setup
 - margins [Windows Forms], page setup options
@@ -26,16 +19,11 @@ helpviewer_keywords:
 - page header
 - printing [Windows Forms], headers and footers
 ms.assetid: 1c7ccb02-ac62-4fc8-8e4f-c67b01a86802
-caps.latest.revision: "9"
-author: dotnet-bot
-ms.author: dotnetcontent
-manager: wpickett
-ms.workload: dotnet
-ms.openlocfilehash: f8b1f61d88b5c27c2bf07ca3ac1ef81d470a3518
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.openlocfilehash: 467b93043851b512427ab93d2c8a8f8030e057ab
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="pagesetupdialog-component-windows-forms"></a>PageSetupDialog 元件 (Windows Form)
 Windows Form<xref:System.Windows.Forms.PageSetupDialog>元件是預先設定的對話方塊，用來設定 Windows 架構應用程式中列印的頁面詳細資料。 它應用程式中使用 windows 做為簡單的解決方案使用者設定 頁面就不需設定您自己的對話方塊。 您可以讓使用者設定框線和邊界調整、 頁首和頁尾和直印或橫印。 藉由標準 Windows 對話方塊，建立使用者可立即熟悉基本功能的應用程式。  

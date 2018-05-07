@@ -1,13 +1,6 @@
 ---
-title: "執行緒模型"
-ms.custom: 
+title: 執行緒模型
 ms.date: 03/30/2017
-ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.technology: dotnet-wpf
-ms.tgt_pltfrm: 
-ms.topic: article
 dev_langs:
 - csharp
 - vb
@@ -25,21 +18,16 @@ helpviewer_keywords:
 - nested message processing [WPF]
 - reentrancy [WPF]
 ms.assetid: 02d8fd00-8d7c-4604-874c-58e40786770b
-caps.latest.revision: "33"
-author: dotnet-bot
-ms.author: dotnetcontent
-manager: wpickett
-ms.workload: dotnet
-ms.openlocfilehash: f598cecef2d0994692f197df09e9befc39a58723
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.openlocfilehash: 15115cc0ed14cb5605100ebe47abd5cd4dc02ec0
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="threading-model"></a>執行緒模型
 [!INCLUDE[TLA#tla_winclient](../../../../includes/tlasharptla-winclient-md.md)] 是設計來避免開發人員遇到執行緒的難題。 如此一來，大部分的[!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)]開發人員不需要撰寫可使用多個執行緒的介面。 由於多執行緒的程式非常複雜且很難偵錯，因此，若有單一執行緒解決方案，就應避免使用多執行緒程式。  
   
- 不論如何架構，不過，沒有[!INCLUDE[TLA2#tla_ui](../../../../includes/tla2sharptla-ui-md.md)]framework 曾經可以為每個排序的問題提供單一執行緒的解決方案。 [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)]來自關閉，但仍有多個執行緒，改善的情況下[!INCLUDE[TLA#tla_ui](../../../../includes/tlasharptla-ui-md.md)]回應性或應用程式的效能。 討論一些背景資料之後，本文將說明這其中的一些情況，然後以一些較低層級詳細資訊的討論來做出結論。  
+ 不論如何架構，不過，沒有[!INCLUDE[TLA2#tla_ui](../../../../includes/tla2sharptla-ui-md.md)]framework 曾經可以為每個排序的問題提供單一執行緒的解決方案。 [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] 來自關閉，但仍有多個執行緒，改善的情況下[!INCLUDE[TLA#tla_ui](../../../../includes/tlasharptla-ui-md.md)]回應性或應用程式的效能。 討論一些背景資料之後，本文將說明這其中的一些情況，然後以一些較低層級詳細資訊的討論來做出結論。  
   
 
   
@@ -56,11 +44,11 @@ ms.lasthandoff: 12/22/2017
   
  如何便[!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)]應用程式應該要處理大的作業嗎？ 如果您的程式碼牽涉到大型計算，或需要查詢某些遠端伺服器上的資料庫，又該怎麼做？ 通常，處理不同的執行緒，保持中大的作業回應的[!INCLUDE[TLA2#tla_ui](../../../../includes/tla2sharptla-ui-md.md)]執行緒可用傾向於中的項目<xref:System.Windows.Threading.Dispatcher>佇列。 大的作業完成時，它可以報告其結果傳回給[!INCLUDE[TLA2#tla_ui](../../../../includes/tla2sharptla-ui-md.md)]顯示的執行緒。  
   
- 在過去，[!INCLUDE[TLA#tla_mswin](../../../../includes/tlasharptla-mswin-md.md)]允許[!INCLUDE[TLA2#tla_ui](../../../../includes/tla2sharptla-ui-md.md)]只能由建立它們的執行緒存取的項目。 這表示負責某些長時間執行工作的背景執行緒無法在完成時更新文字方塊。 [!INCLUDE[TLA#tla_mswin](../../../../includes/tlasharptla-mswin-md.md)]這樣可確保完整性[!INCLUDE[TLA2#tla_ui](../../../../includes/tla2sharptla-ui-md.md)]元件。 如果背景執行緒已在繪製期間更新了清單方塊的內容，則該清單方塊看起來可能很奇怪。  
+ 在過去，[!INCLUDE[TLA#tla_mswin](../../../../includes/tlasharptla-mswin-md.md)]允許[!INCLUDE[TLA2#tla_ui](../../../../includes/tla2sharptla-ui-md.md)]只能由建立它們的執行緒存取的項目。 這表示負責某些長時間執行工作的背景執行緒無法在完成時更新文字方塊。 [!INCLUDE[TLA#tla_mswin](../../../../includes/tlasharptla-mswin-md.md)] 這樣可確保完整性[!INCLUDE[TLA2#tla_ui](../../../../includes/tla2sharptla-ui-md.md)]元件。 如果背景執行緒已在繪製期間更新了清單方塊的內容，則該清單方塊看起來可能很奇怪。  
   
- [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] 有個內建的互斥機制，會強制執行這項協調。 在大部分的類別[!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)]衍生自<xref:System.Windows.Threading.DispatcherObject>。 在建構，<xref:System.Windows.Threading.DispatcherObject>儲存參考<xref:System.Windows.Threading.Dispatcher>連結至目前執行的執行緒。 實際上，<xref:System.Windows.Threading.DispatcherObject>關聯建立它的執行緒。 在程式執行期間<xref:System.Windows.Threading.DispatcherObject>可以呼叫其公用<xref:System.Windows.Threading.DispatcherObject.VerifyAccess%2A>方法。 <xref:System.Windows.Threading.DispatcherObject.VerifyAccess%2A>會檢查<xref:System.Windows.Threading.Dispatcher>與目前執行緒相關聯，並比較它<xref:System.Windows.Threading.Dispatcher>參考儲存在建構期間。 如果兩者不符，<xref:System.Windows.Threading.DispatcherObject.VerifyAccess%2A>擲回例外狀況。 <xref:System.Windows.Threading.DispatcherObject.VerifyAccess%2A>用於呼叫屬於每個方法的開頭<xref:System.Windows.Threading.DispatcherObject>。  
+ [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] 有個內建的互斥機制，會強制執行這項協調。 在大部分的類別[!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)]衍生自<xref:System.Windows.Threading.DispatcherObject>。 在建構，<xref:System.Windows.Threading.DispatcherObject>儲存參考<xref:System.Windows.Threading.Dispatcher>連結至目前執行的執行緒。 實際上，<xref:System.Windows.Threading.DispatcherObject>關聯建立它的執行緒。 在程式執行期間<xref:System.Windows.Threading.DispatcherObject>可以呼叫其公用<xref:System.Windows.Threading.DispatcherObject.VerifyAccess%2A>方法。 <xref:System.Windows.Threading.DispatcherObject.VerifyAccess%2A> 會檢查<xref:System.Windows.Threading.Dispatcher>與目前執行緒相關聯，並比較它<xref:System.Windows.Threading.Dispatcher>參考儲存在建構期間。 如果兩者不符，<xref:System.Windows.Threading.DispatcherObject.VerifyAccess%2A>擲回例外狀況。 <xref:System.Windows.Threading.DispatcherObject.VerifyAccess%2A> 用於呼叫屬於每個方法的開頭<xref:System.Windows.Threading.DispatcherObject>。  
   
- 如果只有一個執行緒可以修改[!INCLUDE[TLA2#tla_ui](../../../../includes/tla2sharptla-ui-md.md)]，如何執行背景執行緒與使用者互動？ 背景執行緒可以詢問[!INCLUDE[TLA2#tla_ui](../../../../includes/tla2sharptla-ui-md.md)]執行緒以執行其代表的作業。 其做法是註冊的工作項目<xref:System.Windows.Threading.Dispatcher>的[!INCLUDE[TLA2#tla_ui](../../../../includes/tla2sharptla-ui-md.md)]執行緒。 <xref:System.Windows.Threading.Dispatcher>類別提供兩種方法註冊的工作項目：<xref:System.Windows.Threading.Dispatcher.Invoke%2A>和<xref:System.Windows.Threading.Dispatcher.BeginInvoke%2A>。 這兩種方法都會排程要執行的委派。 <xref:System.Windows.Threading.Dispatcher.Invoke%2A>是同步的呼叫-也就是它不會傳回直到[!INCLUDE[TLA2#tla_ui](../../../../includes/tla2sharptla-ui-md.md)]執行緒實際完成執行委派。 <xref:System.Windows.Threading.Dispatcher.BeginInvoke%2A>為非同步且立即傳回。  
+ 如果只有一個執行緒可以修改[!INCLUDE[TLA2#tla_ui](../../../../includes/tla2sharptla-ui-md.md)]，如何執行背景執行緒與使用者互動？ 背景執行緒可以詢問[!INCLUDE[TLA2#tla_ui](../../../../includes/tla2sharptla-ui-md.md)]執行緒以執行其代表的作業。 其做法是註冊的工作項目<xref:System.Windows.Threading.Dispatcher>的[!INCLUDE[TLA2#tla_ui](../../../../includes/tla2sharptla-ui-md.md)]執行緒。 <xref:System.Windows.Threading.Dispatcher>類別提供兩種方法註冊的工作項目：<xref:System.Windows.Threading.Dispatcher.Invoke%2A>和<xref:System.Windows.Threading.Dispatcher.BeginInvoke%2A>。 這兩種方法都會排程要執行的委派。 <xref:System.Windows.Threading.Dispatcher.Invoke%2A> 是同步的呼叫-也就是它不會傳回直到[!INCLUDE[TLA2#tla_ui](../../../../includes/tla2sharptla-ui-md.md)]執行緒實際完成執行委派。 <xref:System.Windows.Threading.Dispatcher.BeginInvoke%2A> 為非同步且立即傳回。  
   
  <xref:System.Windows.Threading.Dispatcher>依優先順序排序其佇列中的項目。 有十個時將元素加入可能指定的層級<xref:System.Windows.Threading.Dispatcher>佇列。 這些優先順序保存在<xref:System.Windows.Threading.DispatcherPriority>列舉型別。 詳細資訊，關於<xref:System.Windows.Threading.DispatcherPriority>位於層級[!INCLUDE[TLA2#tla_winfxsdk](../../../../includes/tla2sharptla-winfxsdk-md.md)]文件。  
   
@@ -143,7 +131,7 @@ ms.lasthandoff: 12/22/2017
   
  當延遲完成後，我們會隨機選取我們氣象預報預測，就可以回報給[!INCLUDE[TLA2#tla_ui](../../../../includes/tla2sharptla-ui-md.md)]執行緒。 執行此作業，排程的呼叫`UpdateUserInterface`中[!INCLUDE[TLA2#tla_ui](../../../../includes/tla2sharptla-ui-md.md)]執行緒使用的執行緒<xref:System.Windows.Threading.Dispatcher>。 我們將描述氣象的字串傳遞到這個排程的方法呼叫。  
   
--   更新[!INCLUDE[TLA2#tla_ui](../../../../includes/tla2sharptla-ui-md.md)]  
+-   更新 [!INCLUDE[TLA2#tla_ui](../../../../includes/tla2sharptla-ui-md.md)]  
   
      [!code-csharp[ThreadingWeatherForecast#ThreadingWeatherUpdateUI](../../../../samples/snippets/csharp/VS_Snippets_Wpf/ThreadingWeatherForecast/CSharp/Window1.xaml.cs#threadingweatherupdateui)]
      [!code-vb[ThreadingWeatherForecast#ThreadingWeatherUpdateUI](../../../../samples/snippets/visualbasic/VS_Snippets_Wpf/ThreadingWeatherForecast/visualbasic/window1.xaml.vb#threadingweatherupdateui)]  
@@ -177,13 +165,13 @@ ms.lasthandoff: 12/22/2017
  [!code-csharp[ThreadingMultipleBrowsers#ThreadingMultiBrowserThreadStart](../../../../samples/snippets/csharp/VS_Snippets_Wpf/ThreadingMultipleBrowsers/CSharp/Window1.xaml.cs#threadingmultibrowserthreadstart)]
  [!code-vb[ThreadingMultipleBrowsers#ThreadingMultiBrowserThreadStart](../../../../samples/snippets/visualbasic/VS_Snippets_Wpf/ThreadingMultipleBrowsers/VisualBasic/Window1.xaml.vb#threadingmultibrowserthreadstart)]  
   
- 這個方法是新執行緒的起點。 我們在此執行緒的控制下建立新視窗。 [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)]自動建立新<xref:System.Windows.Threading.Dispatcher>管理新的執行緒。 我們需要如何做以讓視窗的功能是啟動<xref:System.Windows.Threading.Dispatcher>。  
+ 這個方法是新執行緒的起點。 我們在此執行緒的控制下建立新視窗。 [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] 自動建立新<xref:System.Windows.Threading.Dispatcher>管理新的執行緒。 我們需要如何做以讓視窗的功能是啟動<xref:System.Windows.Threading.Dispatcher>。  
   
 <a name="stumbling_points"></a>   
 ## <a name="technical-details-and-stumbling-points"></a>技術詳細資料與困難點  
   
 ### <a name="writing-components-using-threading"></a>使用執行緒撰寫元件  
- [!INCLUDE[TLA#tla_netframewk](../../../../includes/tlasharptla-netframewk-md.md)]開發人員指南描述如何元件可以公開給其用戶端的非同步行為的模式 (請參閱[事件架構非同步模式概觀](../../../../docs/standard/asynchronous-programming-patterns/event-based-asynchronous-pattern-overview.md))。 比方說，假設您想要封裝`FetchWeatherFromServer`成可重複使用、 程元件的方法。 下列標準[!INCLUDE[TLA#tla_netframewk](../../../../includes/tlasharptla-netframewk-md.md)]模式中，這看起來可能如下所示。  
+ Microsoft.NET Framework 開發人員指南說明如何元件可以公開給其用戶端的非同步行為的模式 (請參閱[事件架構非同步模式概觀](../../../../docs/standard/asynchronous-programming-patterns/event-based-asynchronous-pattern-overview.md))。 比方說，假設您想要封裝`FetchWeatherFromServer`成可重複使用、 程元件的方法。 下列標準的 Microsoft.NET Framework 模式中，這看起來會像下面這樣。  
   
  [!code-csharp[CommandingOverviewSnippets#ThreadingArticleWeatherComponent1](../../../../samples/snippets/csharp/VS_Snippets_Wpf/CommandingOverviewSnippets/CSharp/Window1.xaml.cs#threadingarticleweathercomponent1)]
  [!code-vb[CommandingOverviewSnippets#ThreadingArticleWeatherComponent1](../../../../samples/snippets/visualbasic/VS_Snippets_Wpf/CommandingOverviewSnippets/visualbasic/window1.xaml.vb#threadingarticleweathercomponent1)]  
@@ -198,7 +186,7 @@ ms.lasthandoff: 12/22/2017
  [!code-vb[CommandingOverviewSnippets#ThreadingArticleWeatherComponent2](../../../../samples/snippets/visualbasic/VS_Snippets_Wpf/CommandingOverviewSnippets/visualbasic/window1.xaml.vb#threadingarticleweathercomponent2)]  
   
 ### <a name="nested-pumping"></a>巢狀提取  
- 有時候並不可行完全鎖住[!INCLUDE[TLA2#tla_ui](../../../../includes/tla2sharptla-ui-md.md)]執行緒。 讓我們看一下<xref:System.Windows.MessageBox.Show%2A>方法<xref:System.Windows.MessageBox>類別。 <xref:System.Windows.MessageBox.Show%2A>不會傳回直到使用者按一下 [確定] 按鈕。 不過，它會建立必須有訊息迴圈才能互動的視窗。 雖然我們正在等待使用者按下 [OK (確定)]，但原始的應用程式視窗並不會回應使用者輸入。 不過，它會繼續處理繪製訊息。 原始視窗會在涵蓋並顯示時自行重新繪製。  
+ 有時候並不可行完全鎖住[!INCLUDE[TLA2#tla_ui](../../../../includes/tla2sharptla-ui-md.md)]執行緒。 讓我們看一下<xref:System.Windows.MessageBox.Show%2A>方法<xref:System.Windows.MessageBox>類別。 <xref:System.Windows.MessageBox.Show%2A> 不會傳回直到使用者按一下 [確定] 按鈕。 不過，它會建立必須有訊息迴圈才能互動的視窗。 雖然我們正在等待使用者按下 [OK (確定)]，但原始的應用程式視窗並不會回應使用者輸入。 不過，它會繼續處理繪製訊息。 原始視窗會在涵蓋並顯示時自行重新繪製。  
   
  ![包含 [OK (確定)] 按鈕的 MessageBox](../../../../docs/framework/wpf/advanced/media/threadingnestedpumping.png "ThreadingNestedPumping")  
   
@@ -213,7 +201,7 @@ ms.lasthandoff: 12/22/2017
   
  當按下滑鼠左的按鈕上，該橢圓形，`handler2`執行。 之後`handler2`完成時，事件會傳送到<xref:System.Windows.Controls.Canvas>物件使用`handler1`處理它。 才會發生這個情況`handler2`不明確標記事件物件為已處理。  
   
- 可能的`handler2`會花費很長的時間處理此事件。 `handler2`可能會使用<xref:System.Windows.Threading.Dispatcher.PushFrame%2A>開始的小時不會傳回巢狀的訊息迴圈。 如果`handler2`不的標記事件，為已處理此訊息迴圈時完成，即使它是極舊的事件傳遞在樹狀結構。  
+ 可能的`handler2`會花費很長的時間處理此事件。 `handler2` 可能會使用<xref:System.Windows.Threading.Dispatcher.PushFrame%2A>開始的小時不會傳回巢狀的訊息迴圈。 如果`handler2`不的標記事件，為已處理此訊息迴圈時完成，即使它是極舊的事件傳遞在樹狀結構。  
   
 ### <a name="reentrancy-and-locking"></a>重新進入和鎖定  
  鎖定機制[!INCLUDE[TLA#tla_clr](../../../../includes/tlasharptla-clr-md.md)]不完全相同的行為可能有人; 可能會以為執行緒要求鎖定時完全停止作業。 實際上，執行緒會繼續接收和處理高優先順序的訊息。 這有助於防止發生鎖死，並讓介面進行最低限度的回應，但它也會造成發生輕微 Bug 的可能性。  大部分的情況下您不需要知道的任何項目，這個問題，但在極少數的情況下 (通常涉及[!INCLUDE[TLA2#tla_win32](../../../../includes/tla2sharptla-win32-md.md)]視窗訊息 」 或 「 STA COM 元件) 這可以是值得一提。  
@@ -228,5 +216,5 @@ ms.lasthandoff: 12/22/2017
   
  針對工作[!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)]是為了避免非預期的重新進入，而不重新導入以記憶體流失，這就是為什麼我們不會阻擋 everywhere 重新進入。  
   
-## <a name="see-also"></a>請參閱  
+## <a name="see-also"></a>另請參閱  
  [單一執行緒應用程式與長期執行的計算範例](http://go.microsoft.com/fwlink/?LinkID=160038)

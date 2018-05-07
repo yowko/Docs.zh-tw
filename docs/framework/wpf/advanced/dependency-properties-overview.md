@@ -1,10 +1,7 @@
 ---
-title: "相依性屬性概觀"
-description: "WPF 屬性系統所支援的屬性稱為相依性屬性。 本概觀說明 WPF 屬性系統和相依性屬性的功能。"
+title: 相依性屬性概觀
+description: WPF 屬性系統所支援的屬性稱為相依性屬性。 本概觀說明 WPF 屬性系統和相依性屬性的功能。
 ms.date: 03/30/2017
-ms.prod: .net-framework
-ms.technology: dotnet-wpf
-ms.topic: article
 dev_langs:
 - csharp
 - vb
@@ -17,16 +14,11 @@ helpviewer_keywords:
 - dependency properties [WPF]
 - resources [WPF], references to
 ms.assetid: d119d00c-3afb-48d6-87a0-c4da4f83dee5
-caps.latest.revision: "30"
-author: dotnet-bot
-ms.author: dotnetcontent
-manager: wpickett
-ms.workload: dotnet
-ms.openlocfilehash: d90e47c400f24eb10f2d262f9cb0e757ff472f0a
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.openlocfilehash: 196e858c52c06c96d652209e86039bfcc81a785a
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="dependency-properties-overview"></a>相依性屬性概觀
 
@@ -43,7 +35,7 @@ ms.lasthandoff: 12/22/2017
 在 SDK 參考中，您可以在該屬性 Managed 參考頁面出現相依性屬性資訊區段時，識別哪個屬性是相依性屬性。 相依性屬性資訊區段包含的連結<xref:System.Windows.DependencyProperty>識別項欄位的相依性屬性，而且也包含設定該屬性，每個類別中覆寫資訊，以及其他詳細資料的中繼資料 選項的清單。
 
 ## <a name="dependency-properties-back-clr-properties"></a>相依性屬性回 CLR 屬性
-相依性屬性和 [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] 屬性系統透過提供支援屬性的類型來擴充屬性功能，作為支援有私用欄位屬性之標準模式的替代實作。 此類型的名稱是<xref:System.Windows.DependencyProperty>。 其他重要定義的型別[!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)]屬性系統<xref:System.Windows.DependencyObject>。 <xref:System.Windows.DependencyObject>定義可以註冊及擁有相依性屬性的基底類別。
+相依性屬性和 [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] 屬性系統透過提供支援屬性的類型來擴充屬性功能，作為支援有私用欄位屬性之標準模式的替代實作。 此類型的名稱是<xref:System.Windows.DependencyProperty>。 其他重要定義的型別[!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)]屬性系統<xref:System.Windows.DependencyObject>。 <xref:System.Windows.DependencyObject> 定義可以註冊及擁有相依性屬性的基底類別。
 
 以下是本 [!INCLUDE[TLA#tla_sdk](../../../../includes/tlasharptla-sdk-md.md)] 文件討論相依性屬性時使用的術語總結︰
 

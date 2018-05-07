@@ -1,29 +1,19 @@
 ---
-title: "剖析 XML (Visual Basic)"
-ms.custom: 
+title: 剖析 XML (Visual Basic)
 ms.date: 07/20/2015
-ms.prod: .net
-ms.reviewer: 
-ms.suite: 
-ms.technology: devlang-visual-basic
-ms.tgt_pltfrm: 
-ms.topic: article
 ms.assetid: 5bcbd7e2-d9f1-4c8f-80d6-39915fe17bd1
-caps.latest.revision: "3"
-author: dotnet-bot
-ms.author: dotnetcontent
-ms.openlocfilehash: 6eed674ff6168690e627abf8c5c13665c07c35aa
-ms.sourcegitcommit: bd1ef61f4bb794b25383d3d72e71041a5ced172e
+ms.openlocfilehash: 3701592fd6160e8f0f858aed15618a6dbcfb3c22
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/18/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="parsing-xml-visual-basic"></a>剖析 XML (Visual Basic)
 本節中的主題描述如何剖析 XML 文件。  
   
 ## <a name="in-this-section"></a>本章節內容  
   
-|主題|說明|  
+|主題|描述|  
 |-----------|-----------------|  
 |[如何： 剖析字串 (Visual Basic)](../../../../visual-basic/programming-guide/concepts/linq/how-to-parse-a-string.md)|顯示如何剖析字串以建立 XML 樹狀。|  
 |[如何： 載入 XML 檔案 (Visual Basic)](../../../../visual-basic/programming-guide/concepts/linq/how-to-load-xml-from-a-file.md)|顯示如何使用 <xref:System.Xml.Linq.XElement.Load%2A> 方法，從 URI 載入 XML。|  

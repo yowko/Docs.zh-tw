@@ -1,23 +1,12 @@
 ---
 title: LINQ to XML 比較其他 XML Technologies2
-ms.custom: ''
 ms.date: 07/20/2015
-ms.prod: .net
-ms.reviewer: ''
-ms.suite: ''
-ms.technology:
-- devlang-visual-basic
-ms.tgt_pltfrm: ''
-ms.topic: article
 ms.assetid: 72ce3a82-ffc6-488c-98e7-b9b40f3591ec
-caps.latest.revision: 3
-author: dotnet-bot
-ms.author: dotnetcontent
-ms.openlocfilehash: fdc9c950be0d0ec573b093a72b1e7f3b0da861b7
-ms.sourcegitcommit: 86adcc06e35390f13c1e372c36d2e044f1fc31ef
+ms.openlocfilehash: 926f1a1ab49a627331a614ef68790ea289b3dcff
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/26/2018
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="linq-to-xml-vs-other-xml-technologies"></a>LINQ to XML 比較其他 XML 技術之比較
 這個主題會比較 [!INCLUDE[sqltecxlinq](~/includes/sqltecxlinq-md.md)] 與下列 XML 技術：<xref:System.Xml.XmlReader>、XSLT、MSXML 和 XmlLite。 這個資訊可以協助您決定要使用的技術。  
@@ -51,7 +40,7 @@ ms.lasthandoff: 04/26/2018
 ## <a name="linq-to-xml-vs-msxml"></a>LINQ to XML 比較MSXML  
  MSXML 是 COM 架構的技術，用於處理 Microsoft Windows 隨附的 XML。 MSXML 會提供 DOM 的原始實作 (包含對於 XPath 和 XSLT 的支援)， 同時也包含 SAX2 非快取的事件型剖析器。  
   
- MSXML 運作良好、在大部分的案例中預設是安全的，而且可以在 Internet Explorer 中存取，以便在 AJAX 型的應用程式中執行用戶端的 XML 處理。 可以從任何程式設計語言的支援 COM，包括 c + +、 JavaScript 和 Visual Basic 6.0 使用 MSXML。  
+ MSXML 運作良好、在大部分的案例中預設是安全的，而且可以在 Internet Explorer 中存取，以便在 AJAX 型的應用程式中執行用戶端的 XML 處理。 從支援 COM (包括 C++、JavaScript 和 Visual Basic 6.0) 的任何程式設計語言都可以使用 MSXML。  
   
  根據 Common Language Runtime (CLR)，不建議將 MSXML 用於 Managed 程式碼中。  
   

@@ -1,45 +1,33 @@
 ---
 title: Windows Communication Foundation 安全性
-ms.custom: ''
 ms.date: 03/30/2017
-ms.prod: .net-framework
-ms.reviewer: ''
-ms.suite: ''
-ms.technology:
-- dotnet-clr
-ms.tgt_pltfrm: ''
-ms.topic: article
 helpviewer_keywords:
 - Windows Communication Foundation, programming
 - security [WCF]
 - Windows Communication Foundation, security
 ms.assetid: 7ea87fcb-dcfb-4a4a-8b03-6b954575d45b
-caps.latest.revision: 21
 author: BrucePerlerMS
-ms.author: bruceper
 manager: mbaldwin
-ms.workload:
-- dotnet
-ms.openlocfilehash: 6b93bfff2cd97e10d9c0dba4373839337f36aacb
-ms.sourcegitcommit: 94d33cadc5ff81d2ac389bf5f26422c227832052
+ms.openlocfilehash: fb48ae39d269f21a7120ecf143dc4c4680efe39d
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/30/2018
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="windows-communication-foundation-security"></a>Windows Communication Foundation 安全性
-本節中的各個主題將說明 [!INCLUDE[indigo1](../../../../includes/indigo1-md.md)] 安全性功能，以及如何使用這些功能來協助保護訊息的安全。  
+本節主題說明 Windows Communication Foundation (WCF) 安全性功能，以及如何使用它們來保護訊息。  
   
  如需有關 Windows Server AppFabric 和安全性的詳細資訊，請參閱[安全性模型的 Windows Server AppFabric](http://go.microsoft.com/fwlink/?LinkID=201279&clcid=0x409)  
   
 ## <a name="in-this-section"></a>本節內容  
  [安全性概觀](../../../../docs/framework/wcf/feature-details/security-overview.md)  
- 說明 [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] 中的安全性功能。  
+ 描述在 WCF 中的安全性功能。  
   
  [安全性概念](../../../../docs/framework/wcf/feature-details/security-concepts.md)  
- 說明 [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] 安全性中使用的基本用語與概念。  
+ 描述基本術語與使用 WCF 安全性概念。  
   
  [常見的安全性案例](../../../../docs/framework/wcf/feature-details/common-security-scenarios.md)  
- 說明您可以透過 [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] 進行設定的各種案例與拓撲。  
+ 描述各種案例與拓撲，您可以使用 WCF 設定。  
   
  [安全性行為](../../../../docs/framework/wcf/feature-details/security-behaviors-in-wcf.md)  
  提供影響安全性 (例如設定認證) 之 WCF 行為的概觀。  
@@ -48,7 +36,7 @@ ms.lasthandoff: 04/30/2018
  安全性導向的繫結檢視，包括示範如何建立自訂安全性繫結的各個主題。  
   
  [保護服務和用戶端的安全](../../../../docs/framework/wcf/feature-details/securing-services-and-clients.md)  
- 說明如何透過 [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] 安全性功能來保護訊息的安全。  
+ 描述如何保護訊息使用 WCF 安全性功能。  
   
  [驗證](../../../../docs/framework/wcf/feature-details/authentication-in-wcf.md)  
  示範一般驗證工作。  
@@ -60,13 +48,13 @@ ms.lasthandoff: 04/30/2018
  說明聯合的基本概念，以及如何建立可與聯合伺服器通訊的用戶端。  
   
  [部分信任](../../../../docs/framework/wcf/feature-details/partial-trust.md)  
- 說明如何執行部分信任的案例，以及在部分信任狀態下執行時，有哪些 [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] 限制。  
+ 描述如何執行部分信任時，執行部分信任案例和 WCF 的限制。  
   
  [稽核](../../../../docs/framework/wcf/feature-details/auditing-security-events.md)  
  說明如何稽核安全性事件。  
   
  [安全性指引和最佳做法](../../../../docs/framework/wcf/feature-details/security-guidance-and-best-practices.md)  
- 建立安全 [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] 應用程式的方針。  
+ 建立安全的 WCF 應用程式的指導方針。  
   
 ## <a name="reference"></a>參考資料  
  <xref:System.ServiceModel>  

@@ -1,22 +1,12 @@
 ---
-title: "如何： 使用 XSD (LINQ to XML) 進行驗證 (Visual Basic)"
-ms.custom: 
+title: 如何： 使用 XSD (LINQ to XML) 進行驗證 (Visual Basic)
 ms.date: 07/20/2015
-ms.prod: .net
-ms.reviewer: 
-ms.suite: 
-ms.technology: devlang-visual-basic
-ms.tgt_pltfrm: 
-ms.topic: article
 ms.assetid: a0fe88d4-4e77-49e7-90de-8953feeccc21
-caps.latest.revision: "4"
-author: dotnet-bot
-ms.author: dotnetcontent
-ms.openlocfilehash: 53b4f96e4fe31588c948d8e860be2c3bd3fa372a
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.openlocfilehash: fa607cea999ec484ccdd47829d4b96b2d73b060a
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="how-to-validate-using-xsd-linq-to-xml-visual-basic"></a>如何： 使用 XSD (LINQ to XML) 進行驗證 (Visual Basic)
 <xref:System.Xml.Schema> 命名空間包含的擴充方法可針對 XML 結構描述定義語言 (XSD) 檔，簡化 XML 樹狀結構的驗證。 如需詳細資訊，請參閱 <xref:System.Xml.Schema.Extensions.Validate%2A> 方法的文件。  

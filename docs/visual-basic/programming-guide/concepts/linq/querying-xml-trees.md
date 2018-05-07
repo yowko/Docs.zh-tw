@@ -1,22 +1,12 @@
 ---
-title: "查詢 XML 樹狀結構 (Visual Basic)"
-ms.custom: 
+title: 查詢 XML 樹狀結構 (Visual Basic)
 ms.date: 07/20/2015
-ms.prod: .net
-ms.reviewer: 
-ms.suite: 
-ms.technology: devlang-visual-basic
-ms.tgt_pltfrm: 
-ms.topic: article
 ms.assetid: 2e35c1ab-08c8-4378-9ca8-8ff344756eda
-caps.latest.revision: "3"
-author: dotnet-bot
-ms.author: dotnetcontent
-ms.openlocfilehash: 1516cdc58effaa3e738210b948b43d7ed170890a
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.openlocfilehash: e26ff23d5278bcaaeb2c8e26303c2380bbb1f1e9
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="querying-xml-trees-visual-basic"></a>查詢 XML 樹狀結構 (Visual Basic)
 本節提供 [!INCLUDE[sqltecxlinq](~/includes/sqltecxlinq-md.md)] 查詢的範例。  
@@ -27,7 +17,7 @@ ms.lasthandoff: 11/21/2017
   
 ## <a name="in-this-section"></a>本章節內容  
   
-|主題|說明|  
+|主題|描述|  
 |-----------|-----------------|  
 |[基本查詢 (LINQ to XML) (Visual Basic)](../../../../visual-basic/programming-guide/concepts/linq/basic-queries-linq-to-xml.md)|提供查詢 XML 樹狀的常見範例。|  
 |[投影和轉換 (LINQ to XML) (Visual Basic)](../../../../visual-basic/programming-guide/concepts/linq/projections-and-transformations-linq-to-xml.md)|提供從 XML 樹狀規劃與轉換 XML 樹狀的常見範例。|  

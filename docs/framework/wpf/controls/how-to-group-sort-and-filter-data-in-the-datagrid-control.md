@@ -1,13 +1,6 @@
 ---
-title: "如何：在 DataGrid 控制項中分組、排序和篩選資料"
-ms.custom: 
+title: 如何：在 DataGrid 控制項中分組、排序和篩選資料
 ms.date: 03/30/2017
-ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.technology: dotnet-wpf
-ms.tgt_pltfrm: 
-ms.topic: article
 dev_langs:
 - csharp
 - vb
@@ -16,16 +9,11 @@ helpviewer_keywords:
 - DataGrid [WPF], group
 - DataGrid [WPF], filter
 ms.assetid: 03345e85-89e3-4aec-9ed0-3b80759df770
-caps.latest.revision: "8"
-author: dotnet-bot
-ms.author: dotnetcontent
-manager: wpickett
-ms.workload: dotnet
-ms.openlocfilehash: e648b5a4a45c3583d496ac0ea6036d268d6d33a6
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.openlocfilehash: 675c1441201fa1578023d6ed758f389a38f3b79a
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="how-to-group-sort-and-filter-data-in-the-datagrid-control"></a>如何：在 DataGrid 控制項中分組、排序和篩選資料
 通常會很有用，檢視中的資料<xref:System.Windows.Controls.DataGrid>透過分組、 排序和篩選的資料不同的方式。 群組、 排序和篩選中的資料<xref:System.Windows.Controls.DataGrid>，您將它繫結<xref:System.Windows.Data.CollectionView>支援這些函式。 您可以使用中的資料<xref:System.Windows.Data.CollectionView>而不會影響基礎來源資料。 集合檢視中的變更會反映在<xref:System.Windows.Controls.DataGrid>使用者介面 (UI)。  
@@ -162,7 +150,7 @@ DataGrid 中分組的資料
   
 ## <a name="net-framework-security"></a>.NET Framework 安全性  
   
-## <a name="see-also"></a>請參閱  
+## <a name="see-also"></a>另請參閱  
  [資料繫結概觀](../../../../docs/framework/wpf/data/data-binding-overview.md)  
  [建立和繫結至 ObservableCollection](../../../../docs/framework/wpf/data/how-to-create-and-bind-to-an-observablecollection.md)  
  [篩選檢視中的資料](../../../../docs/framework/wpf/data/how-to-filter-data-in-a-view.md)  

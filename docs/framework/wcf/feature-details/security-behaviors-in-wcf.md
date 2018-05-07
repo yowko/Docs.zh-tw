@@ -1,29 +1,17 @@
 ---
 title: WCF 中的安全性行為
-ms.custom: ''
 ms.date: 03/30/2017
-ms.prod: .net-framework
-ms.reviewer: ''
-ms.suite: ''
-ms.technology:
-- dotnet-clr
-ms.tgt_pltfrm: ''
-ms.topic: article
 ms.assetid: 513232c0-39fd-4409-bda6-5ebd5e0ea7b0
-caps.latest.revision: 23
 author: BrucePerlerMS
-ms.author: bruceper
 manager: mbaldwin
-ms.workload:
-- dotnet
-ms.openlocfilehash: bb10d98eb96213029ae43533935312c6f1cf09c7
-ms.sourcegitcommit: 94d33cadc5ff81d2ac389bf5f26422c227832052
+ms.openlocfilehash: 57bd34c72e98091c4a429d683a0da4ce2d3967c0
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/30/2018
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="security-behaviors-in-wcf"></a>WCF 中的安全性行為
-在 [!INCLUDE[indigo1](../../../../includes/indigo1-md.md)] 中，行為會修改服務層級或端點層級的執行階段行為  (如需有關行為一般情況下，請參閱[指定服務執行階段行為](../../../../docs/framework/wcf/specifying-service-run-time-behavior.md)。)*安全性行為*讓您控制認證、 驗證、 授權和稽核記錄。 您可以藉由程式設計的方式或透過組態的方式使用這些行為。 本主題將著重於設定下列與安全性功能相關的行為：  
+在 Windows Communication Foundation (WCF) 中，行為會修改服務層級或端點層級的執行階段行為。 (如需有關行為一般情況下，請參閱[指定服務執行階段行為](../../../../docs/framework/wcf/specifying-service-run-time-behavior.md)。)*安全性行為*讓您控制認證、 驗證、 授權和稽核記錄。 您可以藉由程式設計的方式或透過組態的方式使用這些行為。 本主題將著重於設定下列與安全性功能相關的行為：  
   
 -   [\<serviceCredentials >](../../../../docs/framework/configure-apps/file-schema/wcf/servicecredentials.md)。  
   
@@ -140,7 +128,7 @@ ms.lasthandoff: 04/30/2018
  指定預設的安全性權杖服務位址。 這用時<xref:System.ServiceModel.WSFederationHttpBinding>並不提供的 URL 安全性權杖服務，或是聯合繫結的簽發者位址是http://schemas.microsoft.com/2005/12/ServiceModel/Addressing/Anonymous或`null`。 在這種情形下，<xref:System.ServiceModel.Description.ClientCredentials> 必須設定本機簽發者的位址，以及用於與該簽發者進行通訊的繫結。  
   
 #### <a name="issuerchannelbehaviors"></a>\<h >  
- 使用[ \<h >](../../../../docs/framework/configure-apps/file-schema/wcf/issuerchannelbehaviors-element.md)新增[!INCLUDE[indigo2](../../../../includes/indigo2-md.md)]與安全性權杖服務通訊時使用的用戶端行為。 定義中的用戶端行為[ \<endpointBehaviors >](../../../../docs/framework/configure-apps/file-schema/wcf/endpointbehaviors.md) > 一節。 若要使用定義的行為，加入 <`add`> 項目`<issuerChannelBehaviors>`具有兩個屬性的項目。 將 `issuerAddress` 設定為安全性權杖服務的 URL，並將 `behaviorConfiguration` 屬性設定為已定義之端點行為的名稱，如下列範例所示。  
+ 使用[ \<h >](../../../../docs/framework/configure-apps/file-schema/wcf/issuerchannelbehaviors-element.md)新增與安全性權杖服務通訊時使用的 WCF 用戶端行為。 定義中的用戶端行為[ \<endpointBehaviors >](../../../../docs/framework/configure-apps/file-schema/wcf/endpointbehaviors.md) > 一節。 若要使用定義的行為，加入 <`add`> 項目`<issuerChannelBehaviors>`具有兩個屬性的項目。 將 `issuerAddress` 設定為安全性權杖服務的 URL，並將 `behaviorConfiguration` 屬性設定為已定義之端點行為的名稱，如下列範例所示。  
   
 ```xml  
 <clientCredentials>  

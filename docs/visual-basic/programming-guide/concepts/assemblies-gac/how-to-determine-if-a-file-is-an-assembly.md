@@ -1,22 +1,12 @@
 ---
-title: "如何： 判斷檔案是否為組件 (Visual Basic)"
-ms.custom: 
+title: 如何： 判斷檔案是否為組件 (Visual Basic)
 ms.date: 07/20/2015
-ms.prod: .net
-ms.reviewer: 
-ms.suite: 
-ms.technology: devlang-visual-basic
-ms.tgt_pltfrm: 
-ms.topic: article
 ms.assetid: de26f410-9bd1-4b55-a343-cc82f81684be
-caps.latest.revision: "6"
-author: dotnet-bot
-ms.author: dotnetcontent
-ms.openlocfilehash: 0930b6504306efd7dfaf019e090a6d1212c65657
-ms.sourcegitcommit: 34ec7753acf76f90a0fa845235ef06663dc9e36e
+ms.openlocfilehash: 84d45cea4a2557350edacd5f05b12c8ffcac4df8
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="how-to-determine-if-a-file-is-an-assembly-visual-basic"></a>如何： 判斷檔案是否為組件 (Visual Basic)
 檔案只有受管理時才是組件，而且其中繼資料會包含組件項目。 如需組件和中繼資料的詳細資訊，請參閱[組件資訊清單](../../../../framework/app-domains/assembly-manifest.md)主題。  
@@ -61,7 +51,7 @@ End Module
   
  <xref:System.Reflection.AssemblyName.GetAssemblyName%2A> 方法會載入測試檔案，然後在讀取資訊之後釋放它。  
   
-## <a name="see-also"></a>請參閱  
+## <a name="see-also"></a>另請參閱  
  <xref:System.Reflection.AssemblyName>  
  [程式設計概念](../../../../visual-basic/programming-guide/concepts/index.md)  
  [組件和全域組件快取 (Visual Basic)](index.md)

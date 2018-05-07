@@ -1,8 +1,6 @@
 ---
 title: 版本相容序列化
 ms.date: 08/08/2017
-ms.prod: .net
-ms.topic: article
 dev_langs:
 - csharp
 - vb
@@ -15,18 +13,11 @@ helpviewer_keywords:
 - BinaryFormatter class, samples
 - serialization, attributes
 ms.assetid: bea0ffe3-2708-4a16-ac7d-e586ed6b8e8d
-caps.latest.revision: 9
-author: dotnet-bot
-ms.author: dotnetcontent
-manager: wpickett
-ms.workload:
-- dotnet
-- dotnetcore
-ms.openlocfilehash: 06df765a6b4e2d4e5450f706a5e84f5481ba039a
-ms.sourcegitcommit: 03ee570f6f528a7d23a4221dcb26a9498edbdf8c
+ms.openlocfilehash: 3be5c08ae2bffcf548fe1d635dd96ba29dcadca9
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/28/2018
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="version-tolerant-serialization"></a>版本相容序列化
 在 .NET Framework 1.0 和 1.1 版中，建立可以從應用程式的某個版本，延續到下一個版本使用的可序列化型別，有其問題存在。 如果型別因加入其他欄位而變更，將會發生下列問題：  

@@ -1,24 +1,12 @@
 ---
-title: "使用 HTTP、TCP 或具名管道的非同步案例"
-ms.custom: 
+title: 使用 HTTP、TCP 或具名管道的非同步案例
 ms.date: 03/30/2017
-ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.technology: dotnet-clr
-ms.tgt_pltfrm: 
-ms.topic: article
 ms.assetid: a4d62402-43a4-48a4-9ced-220633ebc4ce
-caps.latest.revision: "12"
-author: dotnet-bot
-ms.author: dotnetcontent
-manager: wpickett
-ms.workload: dotnet
-ms.openlocfilehash: 76c4c225b333af6d376fa409a05ea5727ede6e8f
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.openlocfilehash: d08f70186a59b8717c4441167ee720ba1c20b9dc
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="asynchronous-scenarios-using-http-tcp-or-named-pipe"></a>使用 HTTP、TCP 或具名管道的非同步案例
 本主題會說明各種非同步要求/回覆案例的活動和傳輸，以及使用 HTTP、TCP 或具名管道的執行緒要求。  
@@ -44,7 +32,7 @@ ms.lasthandoff: 12/22/2017
 #### <a name="propagation-is-disabled-on-either-sides-using-http"></a>任何一端的傳播已停用，使用 HTTP  
  如果`propagateActivity` = `false`任一邊，ProcessMessage 不會指示要傳輸哪一個 ProcessAction 活動。 因此，這時會叫用含有新識別碼的新暫存 ProcessAction 活動。 當非同步回應符合 ServiceModel 程式碼中的要求時，該活動識別碼即可從本機內容進行擷取。 實際的 ProcessAction 活動可以透過該識別碼加以傳輸。  
   
- ![使用 HTTP &#47; 的非同步情節TCP &#47;具名管道](../../../../../docs/framework/wcf/diagnostics/tracing/media/async2.gif "Async2")  
+ ![使用 HTTP 的非同步案例&#47;TCP&#47;具名管道](../../../../../docs/framework/wcf/diagnostics/tracing/media/async2.gif "Async2")  
   
  圖 2。 非同步用戶端，沒有回呼， `propagateActivity` = `false`任一端，HTTP  
   
@@ -53,7 +41,7 @@ ms.lasthandoff: 12/22/2017
  非同步用戶端上建立 「 處理動作 」 活動時`propagateActivity` = `false`呼叫端或被呼叫端，和回應訊息不包含動作標頭。  
   
 #### <a name="propagation-is-enabled-on-both-sides-using-tcp-or-named-pipe"></a>兩端皆啟用傳播，使用 TCP 或具名管道  
- ![使用 HTTP &#47; 的非同步情節TCP &#47;具名管道](../../../../../docs/framework/wcf/diagnostics/tracing/media/async3.gif "Async3")  
+ ![使用 HTTP 的非同步案例&#47;TCP&#47;具名管道](../../../../../docs/framework/wcf/diagnostics/tracing/media/async3.gif "Async3")  
   
  圖 3. 非同步用戶端，沒有回呼， `propagateActivity` = `true`雙方具名管道 /TCP  
   
@@ -66,7 +54,7 @@ ms.lasthandoff: 12/22/2017
   
  類似於 Fig.2，如果`propagateActivity` = `false`任一邊，ProcessMessage 不會指示要傳輸哪一個 ProcessAction 活動。 因此，這時會叫用含有新識別碼的新暫存 ProcessAction 活動。 當非同步回應符合 ServiceModel 程式碼中的要求時，該活動識別碼即可從本機內容進行擷取。 實際的 ProcessAction 活動可以透過該識別碼加以傳輸。  
   
- ![使用 HTTP &#47; 的非同步情節TCP &#47;具名管道](../../../../../docs/framework/wcf/diagnostics/tracing/media/async4.gif "Async4")  
+ ![使用 HTTP 的非同步案例&#47;TCP&#47;具名管道](../../../../../docs/framework/wcf/diagnostics/tracing/media/async4.gif "Async4")  
   
  圖 4。 非同步用戶端，沒有回呼， `propagateActivity` = `false`任一端、 具名管道 /TCP  
   
@@ -86,7 +74,7 @@ ms.lasthandoff: 12/22/2017
  圖 6。 具有回呼的非同步用戶端，從回呼外部呼叫 `endCall`  
   
 ### <a name="asynchronous-server-with-callback"></a>有回呼的非同步伺服器  
- ![使用 HTTP &#47; 的非同步情節TCP &#47;名為 &#45;管道](../../../../../docs/framework/wcf/diagnostics/tracing/media/aynchserver.gif "AynchServer")  
+ ![使用 HTTP 的非同步案例&#47;TCP&#47;具名&#45;管道](../../../../../docs/framework/wcf/diagnostics/tracing/media/aynchserver.gif "AynchServer")  
   
  圖 7。 有回呼的非同步伺服器  
   

@@ -1,27 +1,15 @@
 ---
-title: "使用 DataAdapter 執行批次作業"
-ms.custom: 
+title: 使用 DataAdapter 執行批次作業
 ms.date: 03/30/2017
-ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.technology: dotnet-ado
-ms.tgt_pltfrm: 
-ms.topic: article
 dev_langs:
 - csharp
 - vb
 ms.assetid: e72ed5af-b24f-486c-8429-c8fd2208f844
-caps.latest.revision: "3"
-author: douglaslMS
-ms.author: douglasl
-manager: craigg
-ms.workload: dotnet
-ms.openlocfilehash: e5c584bcd825e390b24da6c95ecb159a8280c639
-ms.sourcegitcommit: ed26cfef4e18f6d93ab822d8c29f902cff3519d1
+ms.openlocfilehash: e585d8a3c21f4a256a2e706389fc9f8adc7900da
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 01/17/2018
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="performing-batch-operations-using-dataadapters"></a>使用 DataAdapter 執行批次作業
 ADO.NET 中的批次支援可讓 <xref:System.Data.Common.DataAdapter> 針對從 <xref:System.Data.DataSet> 或 <xref:System.Data.DataTable> 至伺服器的 INSERT、UPDATE 與 DELETE 作業進行分組，而非一次傳送一個作業。 如此可降低往返於伺服器的次數，因此一般都能夠大幅提升作業效能。 SQL Server (<xref:System.Data.SqlClient>) 和 Oracle (<xref:System.Data.OracleClient>) 的 .NET 資料提供者都支援批次更新。  
@@ -152,7 +140,7 @@ public static void BatchUpdate(DataTable dataTable,Int32 batchSize)
   
  資料提供者和後端資料庫伺服器決定批次執行能使用哪些 SQL 建構。 如果要求執行不受支援的陳述式，則可能擲回例外狀況。  
   
-## <a name="see-also"></a>請參閱  
+## <a name="see-also"></a>另請參閱  
  [DataAdapter 和 DataReader](../../../../docs/framework/data/adonet/dataadapters-and-datareaders.md)  
  [使用 DataAdapter 更新資料來源](../../../../docs/framework/data/adonet/updating-data-sources-with-dataadapters.md)  
  [處理 DataAdapter 事件](../../../../docs/framework/data/adonet/handling-dataadapter-events.md)  

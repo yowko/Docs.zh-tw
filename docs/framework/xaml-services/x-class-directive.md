@@ -1,13 +1,6 @@
 ---
-title: "x:Class 指示詞"
-ms.custom: 
+title: x:Class 指示詞
 ms.date: 03/30/2017
-ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.technology: dotnet-wpf
-ms.tgt_pltfrm: 
-ms.topic: article
 f1_keywords:
 - x:Class
 - xClass
@@ -17,16 +10,11 @@ helpviewer_keywords:
 - XAML [XAML Services], x:Class attribute
 - x:Class attribute [XAML Services]
 ms.assetid: bc4a3d8e-76e2-423e-a5d1-159a023e82ec
-caps.latest.revision: "27"
-author: wadepickett
-ms.author: wpickett
-manager: wpickett
-ms.workload: dotnet
-ms.openlocfilehash: b894a56caa3644bae140e7ec37cf5b55ab093a59
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.openlocfilehash: 7e6a2379640d2556b553d14d20398a0a14931393
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="xclass-directive"></a>x:Class 指示詞
 設定要加入標記和程式碼後置的部分類別的 XAML 標記編譯。 在不同的程式碼檔案中定義的程式碼的部分類別[!INCLUDE[TLA#tla_cls](../../../includes/tlasharptla-cls-md.md)]語言，而標記的部分類別通常在 XAML 編譯期間產生的程式碼來建立。  
@@ -47,12 +35,12 @@ ms.lasthandoff: 12/22/2017
 |`classname`|必要。 指定[!INCLUDE[TLA2#tla_clr](../../../includes/tla2sharptla-clr-md.md)]的部分類別載入的 XAML 和程式碼後置該 XAML 的連接名稱。|  
   
 ## <a name="dependencies"></a>相依性  
- `x:Class`只有在 XAML 生產的根項目上指定。 `x:Class`具有父代在 XAML 生產環境中的任何物件上無效。 如需詳細資訊，請參閱[ \[MS-XAML\]區段 4.3.1.6](http://go.microsoft.com/fwlink/?LinkId=114525)。  
+ `x:Class` 只有在 XAML 生產的根項目上指定。 `x:Class` 具有父代在 XAML 生產環境中的任何物件上無效。 如需詳細資訊，請參閱[ \[MS-XAML\]區段 4.3.1.6](http://go.microsoft.com/fwlink/?LinkId=114525)。  
   
 ## <a name="remarks"></a>備註  
  `namespace`值可能包含相關的命名空間組織成名稱階層，這是在.NET Framework 程式設計中的常用技術的其他點。 只有在字串中的最後一個點`x:Class`值會被解譯為分隔`namespace`和`classname.`類別用來當做`x:Class`不可為巢狀的類別。 不允許巢狀的類別，因為判斷點的意義`x:Class`字串模稜兩可，如果允許巢狀的類別。  
   
- 以現有的程式設計模型使用`x:Class`，`x:Class`是選擇性的它是否有 XAML 頁面，其中包含任何程式碼後置完全有效。 不過，這項功能互動的建置動作由使用 XAML 的架構實作。 `x:Class`功能也會受到角色的 XAML 指定內容的各種分類應用程式模型中，並在對應的建置動作。 如果您的 XAML 宣告事件處理屬性值或定義類別所在的程式碼後置類別中的自訂項目會具現化，您必須提供`x:Class`指示詞參考 (或[X:subclass](../../../docs/framework/xaml-services/x-subclass-directive.md)) 至程式碼後置的適當類別。  
+ 以現有的程式設計模型使用`x:Class`，`x:Class`是選擇性的它是否有 XAML 頁面，其中包含任何程式碼後置完全有效。 不過，這項功能互動的建置動作由使用 XAML 的架構實作。 `x:Class` 功能也會受到角色的 XAML 指定內容的各種分類應用程式模型中，並在對應的建置動作。 如果您的 XAML 宣告事件處理屬性值或定義類別所在的程式碼後置類別中的自訂項目會具現化，您必須提供`x:Class`指示詞參考 (或[X:subclass](../../../docs/framework/xaml-services/x-subclass-directive.md)) 至程式碼後置的適當類別。  
   
  值`x:Class`指示詞必須是指定的類別，但不含任何組件資訊的完整限定的名稱的字串 (相當於<xref:System.Type.FullName%2A?displayProperty=nameWithType>)。 簡單的應用程式，您可以省略 CLR 命名空間資訊，如果程式碼後置也結構化的方式 （在類別層級程式碼定義開始）。  
   
@@ -69,9 +57,9 @@ ms.lasthandoff: 12/22/2017
  針對 Windows Workflow Foundation，`x:Class`名稱完全以 XAML 撰寫之自訂活動的類別或 XAML 頁面的部分類別名稱與程式碼後置活動設計工具。  
   
 ## <a name="silverlight-usage-notes"></a>Silverlight 的使用方式附註  
- `x:Class`silverlight 被說明文件。 如需詳細資訊，請參閱[XAML 命名空間 （x:）語言功能 (Silverlight)](http://go.microsoft.com/fwlink/?LinkId=199081)。  
+ `x:Class` silverlight 被說明文件。 如需詳細資訊，請參閱[XAML 命名空間 （x:）語言功能 (Silverlight)](http://go.microsoft.com/fwlink/?LinkId=199081)。  
   
-## <a name="see-also"></a>請參閱  
+## <a name="see-also"></a>另請參閱  
  [x:Subclass 指示詞](../../../docs/framework/xaml-services/x-subclass-directive.md)  
  [WPF 的 XAML 和自訂類別](../../../docs/framework/wpf/advanced/xaml-and-custom-classes-for-wpf.md)  
  [x:ClassModifier 指示詞](../../../docs/framework/xaml-services/x-classmodifier-directive.md)  

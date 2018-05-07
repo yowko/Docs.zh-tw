@@ -1,27 +1,15 @@
 ---
-title: "快顯功能表概觀"
-ms.custom: 
+title: 快顯功能表概觀
 ms.date: 03/30/2017
-ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.technology: dotnet-wpf
-ms.tgt_pltfrm: 
-ms.topic: article
 helpviewer_keywords:
 - controls [WPF], Popup
 - Popup control [WPF], about Popup control
 ms.assetid: 774f53ca-bff8-470e-9ce9-3928b4cf3d4c
-caps.latest.revision: "34"
-author: dotnet-bot
-ms.author: dotnetcontent
-manager: wpickett
-ms.workload: dotnet
-ms.openlocfilehash: 0cb20895b5af35fec7274ca4c747740390104355
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.openlocfilehash: c9261e2151f116b46a0c25d8dc775bf41bf932b7
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="popup-overview"></a>快顯功能表概觀
 <xref:System.Windows.Controls.Primitives.Popup>控制項可用來在漂浮在目前應用程式視窗相對於指定的項目或螢幕座標的另一個視窗中顯示內容。 本主題將介紹<xref:System.Windows.Controls.Primitives.Popup>控制項，並提供其用途的相關資訊。  
@@ -81,7 +69,7 @@ ms.lasthandoff: 12/22/2017
 ### <a name="popup-size"></a>快顯大小  
  根據預設，<xref:System.Windows.Controls.Primitives.Popup>其內容會自動調整大小。 自動調整時，某些點陣圖效果可能會因為隱藏的螢幕區域定義的預設大小<xref:System.Windows.Controls.Primitives.Popup>內容未提供足夠的空間顯示點陣圖效果。  
   
- <xref:System.Windows.Controls.Primitives.Popup>當您設定時，可能也模糊內容<xref:System.Windows.UIElement.RenderTransform%2A>的內容。 在此案例中，某些內容可能已經被隱藏如果已轉換的內容<xref:System.Windows.Controls.Primitives.Popup>超出原始區域<xref:System.Windows.Controls.Primitives.Popup>。 如果點陣圖效果或轉換需要更多空間，您可以定義周圍的邊界<xref:System.Windows.Controls.Primitives.Popup>為了提供更多區域控制項的內容。  
+ <xref:System.Windows.Controls.Primitives.Popup> 當您設定時，可能也模糊內容<xref:System.Windows.UIElement.RenderTransform%2A>的內容。 在此案例中，某些內容可能已經被隱藏如果已轉換的內容<xref:System.Windows.Controls.Primitives.Popup>超出原始區域<xref:System.Windows.Controls.Primitives.Popup>。 如果點陣圖效果或轉換需要更多空間，您可以定義周圍的邊界<xref:System.Windows.Controls.Primitives.Popup>為了提供更多區域控制項的內容。  
   
 <a name="DefiningPopupPosition"></a>   
 ## <a name="defining-the-popup-position"></a>定義快顯位置  
@@ -99,7 +87,7 @@ ms.lasthandoff: 12/22/2017
   
  <xref:System.Windows.Controls.Primitives.Popup>控制維護參考其<xref:System.Windows.Controls.Primitives.Popup.Child%2A>內容做為邏輯的子系。 當建立新的視窗，內容<xref:System.Windows.Controls.Primitives.Popup>變成視窗的視覺子項的邏輯子系，並且<xref:System.Windows.Controls.Primitives.Popup>。 相反地，<xref:System.Windows.Controls.Primitives.Popup>維持的邏輯父系其<xref:System.Windows.Controls.Primitives.Popup.Child%2A>內容。  
   
-## <a name="see-also"></a>請參閱  
+## <a name="see-also"></a>另請參閱  
  <xref:System.Windows.Controls.Primitives.Popup>  
  <xref:System.Windows.Controls.Primitives.PopupPrimaryAxis>  
  <xref:System.Windows.Controls.Primitives.PlacementMode>  

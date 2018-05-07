@@ -1,31 +1,17 @@
 ---
-title: "為何轉換順序很重要"
-ms.custom: 
+title: 為何轉換順序很重要
 ms.date: 03/30/2017
-ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.technology:
-- dotnet-winforms
-ms.tgt_pltfrm: 
-ms.topic: article
 dev_langs:
 - csharp
 - vb
 helpviewer_keywords:
 - transformations [Windows Forms], order signficance
 ms.assetid: 37d5f9dc-a5cf-4475-aa5d-34d714e808a9
-caps.latest.revision: 
-author: dotnet-bot
-ms.author: dotnetcontent
-manager: wpickett
-ms.workload:
-- dotnet
-ms.openlocfilehash: cd3363a1afb8658ed3bb27359259cb752464507d
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.openlocfilehash: 943bfa73b54a1ac5d68d21d2bb6e271133db595a
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="why-transformation-order-is-significant"></a>為何轉換順序很重要
 單一<xref:System.Drawing.Drawing2D.Matrix>物件可儲存單一轉換的序列。 後者稱為複合轉換。 取得複合的轉換矩陣乘以個別轉換的矩陣。  
@@ -35,7 +21,7 @@ ms.lasthandoff: 12/22/2017
   
  順序是很重要的其中一個原因是，完成像旋轉和縮放轉換，以根據座標系統的原點。 縮放的中心位於原點的物件產生不同的結果調整已移開原點的物件。 同樣地，旋轉的中心位於原點的物件所產生的旋轉已移開原點的物件不同的結果。  
   
- 下列範例會結合以形成複合轉換縮放、 旋轉和轉譯 （依該順序）。 引數<xref:System.Drawing.Drawing2D.MatrixOrder.Append>傳遞至<xref:System.Drawing.Graphics.RotateTransform%2A>方法表示旋轉會遵循縮放比例。 同樣地，引數<xref:System.Drawing.Drawing2D.MatrixOrder.Append>傳遞至<xref:System.Drawing.Graphics.TranslateTransform%2A>方法表示轉譯會遵循旋轉。 <xref:System.Drawing.Drawing2D.MatrixOrder.Append>和<xref:System.Drawing.Drawing2D.MatrixOrder.Prepend>屬於<xref:System.Drawing.Drawing2D.MatrixOrder>列舉型別。  
+ 下列範例會結合以形成複合轉換縮放、 旋轉和轉譯 （依該順序）。 引數<xref:System.Drawing.Drawing2D.MatrixOrder.Append>傳遞至<xref:System.Drawing.Graphics.RotateTransform%2A>方法表示旋轉會遵循縮放比例。 同樣地，引數<xref:System.Drawing.Drawing2D.MatrixOrder.Append>傳遞至<xref:System.Drawing.Graphics.TranslateTransform%2A>方法表示轉譯會遵循旋轉。 <xref:System.Drawing.Drawing2D.MatrixOrder.Append> 和<xref:System.Drawing.Drawing2D.MatrixOrder.Prepend>屬於<xref:System.Drawing.Drawing2D.MatrixOrder>列舉型別。  
   
  [!code-csharp[System.Drawing.MiscLegacyTopics#21](../../../../samples/snippets/csharp/VS_Snippets_Winforms/System.Drawing.MiscLegacyTopics/CS/Class1.cs#21)]
  [!code-vb[System.Drawing.MiscLegacyTopics#21](../../../../samples/snippets/visualbasic/VS_Snippets_Winforms/System.Drawing.MiscLegacyTopics/VB/Class1.vb#21)]  
@@ -52,7 +38,7 @@ ms.lasthandoff: 12/22/2017
   
  前一個範例的結果是相同的此主題中的第一個範例的結果。 這是因為我們反轉方法呼叫的順序和矩陣乘法的順序。  
   
-## <a name="see-also"></a>請參閱  
+## <a name="see-also"></a>另請參閱  
  <xref:System.Drawing.Drawing2D.Matrix>  
  [座標系統和轉換](../../../../docs/framework/winforms/advanced/coordinate-systems-and-transformations.md)  
  [使用 Managed GDI+ 中的轉換](../../../../docs/framework/winforms/advanced/using-transformations-in-managed-gdi.md)

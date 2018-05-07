@@ -1,11 +1,6 @@
 ---
-title: "Mid 陳述式"
+title: Mid 陳述式
 ms.date: 07/20/2015
-ms.prod: .net
-ms.reviewer: 
-ms.suite: 
-ms.technology: devlang-visual-basic
-ms.topic: article
 f1_keywords:
 - vb.MidB
 - vb.Mid
@@ -15,14 +10,11 @@ helpviewer_keywords:
 - Mid statement [Visual Basic]
 - strings [Visual Basic], replacing
 ms.assetid: 2b82d7a8-9646-4cb0-bec5-80abc98297bf
-caps.latest.revision: "20"
-author: dotnet-bot
-ms.author: dotnetcontent
-ms.openlocfilehash: 61d812ef91acc65728b04efc9aa99e3975e71d0c
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.openlocfilehash: 90b805df902dcdfebe85421583dd54e9af04bec9
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="mid-statement"></a>Mid 陳述式
 取代指定的字元數`String`變數與另一個字串的字元。  
@@ -39,22 +31,22 @@ Mid( _
   
 ## <a name="parts"></a>組件  
  `Target`  
- 必要項。 名稱`String`修改變數。  
+ 必要。 名稱`String`修改變數。  
   
  `Start`  
- 必要項。 `Integer`運算式。 字元位置`Target`開始取代文字。 `Start`會使用 1 為基底的索引。  
+ 必要。 `Integer` 運算式。 字元位置`Target`開始取代文字。 `Start` 會使用 1 為基底的索引。  
   
  `Length`  
- 選擇項。 `Integer`運算式。 要取代的字元數。 如果省略，則所有`String`用。  
+ 選擇性。 `Integer` 運算式。 要取代的字元數。 如果省略，則所有`String`用。  
   
  `StringExpression`  
- 必要項。 `String`取代部份的運算式`Target`。  
+ 必要。 `String` 取代部份的運算式`Target`。  
   
 ## <a name="exceptions"></a>例外狀況  
   
 |例外狀況類型|條件|  
 |--------------------|---------------|  
-|<xref:System.ArgumentException>|`Start`< = 0 或`Length`< 0。|  
+|<xref:System.ArgumentException>|`Start` < = 0 或`Length`< 0。|  
   
 ## <a name="remarks"></a>備註  
  被取代的字元數目一律為小於或等於中的字元數`Target`。  
@@ -72,7 +64,7 @@ Mid( _
 ## <a name="requirements"></a>需求  
  **命名空間：** [Microsoft.VisualBasic](../../../visual-basic/language-reference/runtime-library-members.md)  
   
- **模組：**`Strings`  
+ **模組：** `Strings`  
   
  **組件︰** [!INCLUDE[vbprvbruntime](~/includes/vbprvbruntime-md.md)]  
   

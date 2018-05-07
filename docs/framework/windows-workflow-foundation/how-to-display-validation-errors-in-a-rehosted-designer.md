@@ -1,23 +1,12 @@
 ---
-title: "HOW TO：在重新裝載的設計工具中顯示驗證錯誤"
-ms.custom: 
+title: HOW TO：在重新裝載的設計工具中顯示驗證錯誤
 ms.date: 03/30/2017
-ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.tgt_pltfrm: 
-ms.topic: article
 ms.assetid: 5aa8fb53-8f75-433b-bc06-7c7d33583d5d
-caps.latest.revision: "4"
-author: dotnet-bot
-ms.author: dotnetcontent
-manager: wpickett
-ms.workload: dotnet
-ms.openlocfilehash: f08d920b59d163b23aff63dfa7ced869048e73cd
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.openlocfilehash: 8f70b190042d167741bbadc4e1645756fe5b830d
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="how-to-display-validation-errors-in-a-rehosted-designer"></a>HOW TO：在重新裝載的設計工具中顯示驗證錯誤
 本主題描述如何擷取及發行 [!INCLUDE[wfd1](../../../includes/wfd1-md.md)] 中的驗證錯誤。 這提供確認重新裝載設計工具中工作流程是否有效的程序。  

@@ -1,26 +1,17 @@
 ---
 title: 用來做為選擇性參數類型的泛型參數必須受到類別條件約束
 ms.date: 07/20/2015
-ms.prod: .net
-ms.reviewer: ''
-ms.suite: ''
-ms.technology:
-- devlang-visual-basic
-ms.topic: article
 f1_keywords:
 - vbc32124
 - bc32124
 helpviewer_keywords:
 - BC32124
 ms.assetid: 55aa8b2a-9ce3-4620-a710-2f9b0feb6143
-caps.latest.revision: 8
-author: dotnet-bot
-ms.author: dotnetcontent
-ms.openlocfilehash: a13ea66f12e54db4e585577e20e1f5396669f1a8
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.openlocfilehash: 7e2b59f758ef236717a912694576b514e2ae8a60
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="generic-parameters-used-as-optional-parameter-types-must-be-class-constrained"></a>用來做為選擇性參數類型的泛型參數必須受到類別條件約束
 程序的宣告會使用不限於是參考類型的型別參數的選擇性參數。  

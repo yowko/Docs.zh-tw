@@ -1,14 +1,6 @@
 ---
 title: 自訂呈現筆墨
-ms.custom: ''
 ms.date: 03/30/2017
-ms.prod: .net-framework
-ms.reviewer: ''
-ms.suite: ''
-ms.technology:
-- dotnet-wpf
-ms.tgt_pltfrm: ''
-ms.topic: article
 dev_langs:
 - csharp
 - vb
@@ -17,17 +9,11 @@ helpviewer_keywords:
 - ink [WPF], custom-rendering
 - classes [WPF], InkCanvas
 ms.assetid: 65c978a7-0ee0-454f-ac7f-b1bd2efecac5
-caps.latest.revision: 10
-author: dotnet-bot
-ms.author: dotnetcontent
-manager: wpickett
-ms.workload:
-- dotnet
-ms.openlocfilehash: e8f7288d9d3b729ab9c38bc6b2afd603b4d6d1aa
-ms.sourcegitcommit: 94d33cadc5ff81d2ac389bf5f26422c227832052
+ms.openlocfilehash: 2c627f757c1eccc37f57aea6880ffc8a362e5ddb
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/30/2018
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="custom-rendering-ink"></a>自訂呈現筆墨
 <xref:System.Windows.Ink.Stroke.DrawingAttributes%2A>屬性為筆劃的端點可讓您指定的外觀為筆劃的端點，例如其大小、 色彩和形狀，但有時可能會想要自訂外觀以外的視野<xref:System.Windows.Ink.Stroke.DrawingAttributes%2A>允許。 您可能想要自訂筆跡外觀，轉譯具噴槍、油畫及許多其他效果的外觀。 Windows Presentation Foundation (WPF) 可讓您自訂要實作自訂轉譯筆墨<xref:System.Windows.Input.StylusPlugIns.DynamicRenderer>和<xref:System.Windows.Ink.Stroke>物件。  

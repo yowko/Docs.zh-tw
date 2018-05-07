@@ -1,13 +1,6 @@
 ---
-title: "如何：篩選檢視中的資料"
-ms.custom: 
+title: 如何：篩選檢視中的資料
 ms.date: 03/30/2017
-ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.technology: dotnet-wpf
-ms.tgt_pltfrm: 
-ms.topic: article
 dev_langs:
 - csharp
 - vb
@@ -16,16 +9,11 @@ helpviewer_keywords:
 - filtering data in views [WPF]
 - data binding [WPF], filtering data in views
 ms.assetid: c76e8606-4cc4-45a8-9110-e2ec66dc6afd
-caps.latest.revision: "16"
-author: dotnet-bot
-ms.author: dotnetcontent
-manager: wpickett
-ms.workload: dotnet
-ms.openlocfilehash: 17b7fc68319552a7b31d5eaf7826146de5c41aa5
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.openlocfilehash: 55ec68e8918c9f7fbc9d3ac0062926cc03cb5e10
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="how-to-filter-data-in-a-view"></a>如何：篩選檢視中的資料
 這個範例示範如何篩選檢視中的資料。  
@@ -58,7 +46,7 @@ ms.lasthandoff: 12/22/2017
  [!code-csharp[DataBindingLab#5](../../../../samples/snippets/csharp/VS_Snippets_Wpf/DataBindingLab/CSharp/MainWindow.xaml.cs#5)]
  [!code-vb[DataBindingLab#5](../../../../samples/snippets/visualbasic/VS_Snippets_Wpf/DataBindingLab/VisualBasic/MainWindow.xaml.vb#5)]  
   
-## <a name="see-also"></a>請參閱  
+## <a name="see-also"></a>另請參閱  
  <xref:System.Windows.Data.CollectionView.CanFilter%2A>  
  <xref:System.Windows.Data.BindingListCollectionView.CustomFilter%2A>  
  [資料繫結概觀](../../../../docs/framework/wpf/data/data-binding-overview.md)  

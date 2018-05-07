@@ -1,10 +1,6 @@
 ---
-title: "類型轉換函式 (Visual Basic)"
+title: 類型轉換函式 (Visual Basic)
 ms.date: 07/20/2015
-ms.prod: .net
-ms.suite: 
-ms.technology: devlang-visual-basic
-ms.topic: article
 f1_keywords:
 - vb.CUShort
 - vb.csng
@@ -85,14 +81,11 @@ helpviewer_keywords:
 - rounding numbers [Visual Basic], banker's rounding
 - type conversion [Visual Basic], Visual Basic vs. .NET Framework
 ms.assetid: d9d8d165-f967-44ff-a6cd-598e4740a99e
-caps.latest.revision: "22"
-author: dotnet-bot
-ms.author: dotnetcontent
-ms.openlocfilehash: 117cd4ce038a533715bbc86558545f0f223dd149
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.openlocfilehash: c9222bdb31f4fd7c792d5a50c100067e29e9d537
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="type-conversion-functions-visual-basic"></a>類型轉換函式 (Visual Basic)
 這些函式是編譯的內嵌，這表示，轉換程式碼程式碼可評估運算式的一部分。 有時候可能沒有任何呼叫程序來完成轉換，進而改善效能。 每個函式會強制特定資料型別運算式。  
@@ -120,7 +113,7 @@ CUShort(expression)
   
 ## <a name="part"></a>組件  
  `expression`  
- 必要項。 來源資料型別的任何運算式。  
+ 必要。 來源資料型別的任何運算式。  
   
 ## <a name="return-value-data-type"></a>傳回值的資料類型  
  下表所示，函式名稱會決定它所傳回的值的資料類型。  
@@ -159,9 +152,9 @@ CUShort(expression)
   
      如果小數部分正好 0.5，整數轉換函式捨入至最接近的偶數整數。 例如，0.5 捨入為 0，1.5 和 2.5 都會捨入為 2。 這有時候稱為*銀行進位*，和其目的是要彌補可能會不斷累積時將此類數字相加的偏差。  
   
-     `CInt`和`CLng`不同<xref:Microsoft.VisualBasic.Conversion.Int%2A>和<xref:Microsoft.VisualBasic.Conversion.Fix%2A>函式，它們截斷，而不是圓形，數字的小數部分。 此外，`Fix`和`Int`一律傳回相同的資料類型的值，將傳入。  
+     `CInt` 和`CLng`不同<xref:Microsoft.VisualBasic.Conversion.Int%2A>和<xref:Microsoft.VisualBasic.Conversion.Fix%2A>函式，它們截斷，而不是圓形，數字的小數部分。 此外，`Fix`和`Int`一律傳回相同的資料類型的值，將傳入。  
   
--   **日期/時間轉換。** 使用<xref:Microsoft.VisualBasic.Information.IsDate%2A>函式來判斷值是否可以轉換成日期和時間。 `CDate`可辨識的日期常值和時間常值，但不是數值。 要轉換的 Visual Basic 6.0`Date`值設定為`Date`在 Visual Basic 2005 中的值或更新版本，您可以使用<xref:System.DateTime.FromOADate%2A?displayProperty=nameWithType>方法。  
+-   **日期/時間轉換。** 使用<xref:Microsoft.VisualBasic.Information.IsDate%2A>函式來判斷值是否可以轉換成日期和時間。 `CDate` 可辨識的日期常值和時間常值，但不是數值。 要轉換的 Visual Basic 6.0`Date`值設定為`Date`在 Visual Basic 2005 中的值或更新版本，您可以使用<xref:System.DateTime.FromOADate%2A?displayProperty=nameWithType>方法。  
   
 -   **中性日期/時間值。** [日期資料型別](../../../visual-basic/language-reference/data-types/date-data-type.md)一定會包含日期和時間資訊。 類型轉換的目的而言，Visual Basic 視為 1/1/0001 (1 年的 1 年)*中性值*日期，和 00:00:00 （午夜） 是中性值的時間。 如果您要轉換`Date`值到一個字串，`CStr`中產生的字串不包含中性的值。 例如，如果您要轉換`#January 1, 0001 9:30:00#`為字串，結果會是 「 上午 9:30:00"; 隱藏日期資訊。 不過，將日期資訊是仍會出現在原始`Date`值，並可以復原與函式例如<xref:Microsoft.VisualBasic.DateAndTime.DatePart%2A>函式。  
   
@@ -194,7 +187,7 @@ CUShort(expression)
  [!code-vb[VbVbalrFunctions#4](../../../visual-basic/language-reference/functions/codesnippet/VisualBasic/type-conversion-functions_4.vb)]  
   
 ## <a name="cdate-example"></a>CDate 範例  
- 下列範例會使用`CDate`函式可將字串轉換為`Date`值。 一般情況下，不建議進行硬式編碼的日期和時間為字串 （如本範例所示）。 使用日期常值和時間常值，例如 #Feb 12，&#1969; 和 # 4:45:23 PM #，改為。  
+ 下列範例會使用`CDate`函式可將字串轉換為`Date`值。 一般情況下，不建議進行硬式編碼的日期和時間為字串 （如本範例所示）。 使用日期常值和時間常值，例如 #Feb 12，1969 # 和 # 4:45:23 PM #，改為。  
   
  [!code-vb[VbVbalrFunctions#5](../../../visual-basic/language-reference/functions/codesnippet/VisualBasic/type-conversion-functions_5.vb)]  
   
@@ -245,7 +238,7 @@ CUShort(expression)
   
  [!code-vb[VbVbalrFunctions#15](../../../visual-basic/language-reference/functions/codesnippet/VisualBasic/type-conversion-functions_15.vb)]  
   
- `CStr`一律會呈現`Date`目前地區設定，例如，標準的簡短格式的值"2003 年 6 月 15 日 4:35:47 PM"。 不過，`CStr`隱藏*中性值*的 1/1/0001 的日期和時間的 00:00:00。  
+ `CStr` 一律會呈現`Date`目前地區設定，例如，標準的簡短格式的值"2003 年 6 月 15 日 4:35:47 PM"。 不過，`CStr`隱藏*中性值*的 1/1/0001 的日期和時間的 00:00:00。  
   
  如需詳細資訊，所傳回的值上`CStr`，請參閱[CStr 函式的傳回值](../../../visual-basic/language-reference/functions/return-values-for-the-cstr-function.md)。  
   

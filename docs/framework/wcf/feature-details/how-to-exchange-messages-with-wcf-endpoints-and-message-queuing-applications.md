@@ -1,40 +1,28 @@
 ---
-title: "HOW TO：與 WCF 端點和訊息佇列應用程式交換訊息"
-ms.custom: 
+title: HOW TO：與 WCF 端點和訊息佇列應用程式交換訊息
 ms.date: 03/30/2017
-ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.technology: dotnet-clr
-ms.tgt_pltfrm: 
-ms.topic: article
 dev_langs:
 - csharp
 - vb
 ms.assetid: 62210fd8-a372-4d55-ab9b-c99827d1885e
-caps.latest.revision: "18"
-author: dotnet-bot
-ms.author: dotnetcontent
-manager: wpickett
-ms.workload: dotnet
-ms.openlocfilehash: fa6f9d0b9631420013593cb44903b5451549e8c6
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.openlocfilehash: 807a34ac50ea317ace42ec12eddcd9ec7cf3736b
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="how-to-exchange-messages-with-wcf-endpoints-and-message-queuing-applications"></a>HOW TO：與 WCF 端點和訊息佇列應用程式交換訊息
-您可以使用 MSMQ 整合繫結來轉換傳入與傳出 [!INCLUDE[indigo1](../../../../includes/indigo1-md.md)] 的 MSMQ 訊息，藉此將現有的訊息佇列 (MSMQ) 應用程式與 [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] 進行整合。 這樣一來，您就可以從 [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] 用戶端對 MSMQ 接收者應用程式進行呼叫，並從 MSMQ 傳送者應用程式對 [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] 服務進行呼叫。  
+您可以將現有訊息佇列 (MSMQ) 應用程式與 Windows Communication Foundation (WCF) 應用程式整合，使用 MSMQ 整合繫結，將 MSMQ 訊息，與 WCF 訊息。 這可讓您呼叫 MSMQ 接收者應用程式從 WCF 用戶端，以及從 MSMQ 傳送者應用程式呼叫 WCF 服務。  
   
- 在本章節中，我們將說明如何在 (1) <xref:System.ServiceModel.MsmqIntegration.MsmqIntegrationBinding> 用戶端與使用 System.Messaging 撰寫而成的 MSMQ 應用程式服務之間，以及 (2) MSMQ 應用程式用戶端與 [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] 服務之間，使用已佇列通訊的 [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)]。  
+ 在本節中，我們會說明如何使用<xref:System.ServiceModel.MsmqIntegration.MsmqIntegrationBinding>（1） 的 WCF 用戶端與使用 System.Messaging 和 （2) MSMQ 應用程式用戶端和 WCF 服務所撰寫的 MSMQ 應用程式服務之間的佇列通訊。  
   
- 如需完整範例，示範如何呼叫 MSMQ 接收者應用程式從[!INCLUDE[indigo2](../../../../includes/indigo2-md.md)]用戶端，請參閱[Windows Communication Foundation 至訊息佇列](../../../../docs/framework/wcf/samples/wcf-to-message-queuing.md)範例。  
+ 如需示範如何從 WCF 用戶端呼叫 MSMQ 接收者應用程式的完整範例，請參閱[Windows Communication Foundation 至訊息佇列](../../../../docs/framework/wcf/samples/wcf-to-message-queuing.md)範例。  
   
- 如需完整範例，示範如何呼叫[!INCLUDE[indigo2](../../../../includes/indigo2-md.md)]從 MSMQ 用戶端服務，請參閱[Message Queuing，將 Windows Communication Foundation](../../../../docs/framework/wcf/samples/message-queuing-to-wcf.md)範例。  
+ 如需示範如何從 MSMQ 用戶端呼叫 WCF 服務的完整範例，請參閱[Message Queuing，將 Windows Communication Foundation](../../../../docs/framework/wcf/samples/message-queuing-to-wcf.md)範例。  
   
 ### <a name="to-create-a-wcf-service-that-receives-messages-from-a-msmq-client"></a>若要從 MSMQ 用戶端建立可接收訊息的 WCF 服務  
   
-1.  定義可定義 [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] 服務 (用來接收來自 MSMQ 傳送者應用程式的佇列訊息) 之服務合約的介面，如下列範例程式碼所示。  
+1.  定義這個介面會定義服務合約的 WCF 服務會接收來自 MSMQ 傳送者應用程式中，佇列的訊息，如下列範例程式碼所示。  
   
      [!code-csharp[S_MsmqToWcf#1](../../../../samples/snippets/csharp/VS_Snippets_CFX/s_msmqtowcf/cs/service.cs#1)]
      [!code-vb[S_MsmqToWcf#1](../../../../samples/snippets/visualbasic/VS_Snippets_CFX/s_msmqtowcf/vb/service.vb#1)]  
@@ -54,12 +42,12 @@ ms.lasthandoff: 12/22/2017
   
 ### <a name="to-create-a-wcf-client-that-sends-messages-to-a-msmq-receiver-application"></a>若要建立可將訊息傳送至 MSMQ 接收者應用程式的 WCF 用戶端  
   
-1.  定義可定義 [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] 用戶端 (用來將佇列訊息傳送至 MSMQ 接收者) 之服務合約的介面，如下列範例程式碼所示。  
+1.  定義這個介面會定義傳送佇列訊息至 MSMQ 接收者，WCF 用戶端的服務合約，如下列範例程式碼所示。  
   
      [!code-csharp[S_WcfToMsmq#6](../../../../samples/snippets/csharp/VS_Snippets_CFX/s_wcftomsmq/cs/proxy.cs#6)]
      [!code-vb[S_WcfToMsmq#6](../../../../samples/snippets/visualbasic/VS_Snippets_CFX/s_wcftomsmq/vb/proxy.vb#6)]  
   
-2.  定義 [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] 用戶端將用來呼叫 MSMQ 接收者的用戶端類別。  
+2.  定義 WCF 用戶端用來呼叫 MSMQ 接收者的用戶端類別。  
   
      [!code-csharp[S_WcfToMsmq#2](../../../../samples/snippets/csharp/VS_Snippets_CFX/s_wcftomsmq/cs/snippets.cs#2)]
      [!code-vb[S_WcfToMsmq#2](../../../../samples/snippets/visualbasic/VS_Snippets_CFX/s_wcftomsmq/vb/snippets.vb#2)]  
@@ -73,7 +61,7 @@ ms.lasthandoff: 12/22/2017
   
      [!code-csharp[S_WcfToMsmq#4](../../../../samples/snippets/csharp/VS_Snippets_CFX/s_wcftomsmq/cs/client.cs#4)]  
   
-## <a name="see-also"></a>請參閱  
+## <a name="see-also"></a>另請參閱  
  [佇列概觀](../../../../docs/framework/wcf/feature-details/queues-overview.md)  
  [如何：與 WCF 端點交換佇列訊息](../../../../docs/framework/wcf/feature-details/how-to-exchange-queued-messages-with-wcf-endpoints.md)  
  [Windows Communication Foundation 至訊息佇列](../../../../docs/framework/wcf/samples/wcf-to-message-queuing.md)  

@@ -1,11 +1,7 @@
 ---
-title: "QualifierSet_Put 函式 （Unmanaged API 參考）"
-description: "QualifierSet_Put 函式會寫入具名的辨識符號和它的值。"
+title: QualifierSet_Put 函式 （Unmanaged API 參考）
+description: QualifierSet_Put 函式會寫入具名的辨識符號和它的值。
 ms.date: 11/06/2017
-ms.prod: .net-framework
-ms.technology:
-- dotnet-clr
-ms.topic: reference
 api_name:
 - QualifierSet_Put
 api_location:
@@ -20,14 +16,11 @@ topic_type:
 - Reference
 author: rpetrusha
 ms.author: ronpet
-manager: wpickett
-ms.workload:
-- dotnet
-ms.openlocfilehash: 1bf5c6dbf0f707942d58f4d7cf155636f0532724
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.openlocfilehash: 7ccb0aef0e998ffccd7526f9f0554bceb892001b
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="qualifiersetput-function"></a>QualifierSet_Put 函式
 寫入具名的辨識符號和值。 新限定詞會覆寫先前同名的值。 如果不存在限定詞，則會建立它。 
@@ -57,9 +50,9 @@ HRESULT QualifierSet_Put (
 `wszName`   
 [in]要寫入的限定詞的名稱。
 
-`pVal`[in]有效的指標`VARIANT`，其中包含要寫入的限定詞。 此參數不得為`null`。
+`pVal` [in]有效的指標`VARIANT`，其中包含要寫入的限定詞。 此參數不得為`null`。
 
-`lFlavor`[in]下列常數，定義所需的限定詞標註，這個辨識符號的其中一個。 預設值是`WBEM_FLAVOR_OVERRIDABLE`(0)。
+`lFlavor` [in]下列常數，定義所需的限定詞標註，這個辨識符號的其中一個。 預設值是`WBEM_FLAVOR_OVERRIDABLE`(0)。
 
 |常數  |值  |描述  |
 |---------|---------|---------|
@@ -90,7 +83,7 @@ HRESULT QualifierSet_Put (
   
  **標頭：** WMINet_Utils.idl  
   
- **.NET framework 版本：**[!INCLUDE[net_current_v472plus](../../../../includes/net-current-v472plus.md)]  
+ **.NET framework 版本：** [!INCLUDE[net_current_v472plus](../../../../includes/net-current-v472plus.md)]  
   
 ## <a name="see-also"></a>另請參閱  
 [WMI 和效能計數器 （Unmanaged API 參考）](index.md)

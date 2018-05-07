@@ -1,36 +1,22 @@
 ---
 title: ServiceDescription 與 WSDL 參考
-ms.custom: ''
 ms.date: 03/30/2017
-ms.prod: .net-framework
-ms.reviewer: ''
-ms.suite: ''
-ms.technology:
-- dotnet-clr
-ms.tgt_pltfrm: ''
-ms.topic: article
 ms.assetid: eedc025d-abd9-46b1-bf3b-61d2d5c95fd6
-caps.latest.revision: ''
-author: dotnet-bot
-ms.author: dotnetcontent
-manager: wpickett
-ms.workload:
-- dotnet
-ms.openlocfilehash: 7eadfaaae920071092f569fe2b8882875ed9497f
-ms.sourcegitcommit: c883637b41ee028786edceece4fa872939d2e64c
+ms.openlocfilehash: e70d653519c13d2f40fa2a579b674893e1b7ab02
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 03/26/2018
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="servicedescription-and-wsdl-reference"></a>ServiceDescription 與 WSDL 參考
-這個主題會描述 [!INCLUDE[indigo1](../../../../includes/indigo1-md.md)] 如何在 <xref:System.ServiceModel.Description.ServiceDescription> 執行個體之間對應 Web 服務描述語言 (WSDL) 文件。  
+本主題描述如何 Windows Communication Foundation (WCF) Web 服務描述語言 (WSDL) 將文件對應的<xref:System.ServiceModel.Description.ServiceDescription>執行個體。  
   
 ## <a name="how-servicedescription-maps-to-wsdl-11"></a>ServiceDescription 對應至 WSDL 1.1 的方法  
- 可以使用 [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)]，對您的服務從 <xref:System.ServiceModel.Description.ServiceDescription> 執行個體中匯出 WSDL 文件。 發行中繼資料端點時，會為您的服務自動產生 WSDL 文件。  
+ 您可以使用 WCF 來匯出 WSDL 文件從<xref:System.ServiceModel.Description.ServiceDescription>為您的服務執行個體。 發行中繼資料端點時，會為您的服務自動產生 WSDL 文件。  
   
  您也可以使用 <xref:System.ServiceModel.Description.ServiceEndpoint> 型別，從 WSDL 文件中匯入 <xref:System.ServiceModel.Description.ContractDescription> 執行個體、<xref:System.ServiceModel.Channels.Binding> 執行個體和 `WsdlImporter` 執行個體。  
   
- [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] 匯出的 WSDL 文件會從外部 XML 結構描述文件中匯入使用的 XML 結構描述定義。 將會對資料型別在服務中使用的每個目標命名空間，匯出不同的 XML 結構描述文件。 同樣地，將會對服務合約使用的每個目標命名空間，匯出不同的 WSDL 文件。  
+ WCF，所匯出的 WSDL 文件匯入任何使用從外部 XML 結構描述文件的 XML 結構描述定義。 將會對資料型別在服務中使用的每個目標命名空間，匯出不同的 XML 結構描述文件。 同樣地，將會對服務合約使用的每個目標命名空間，匯出不同的 WSDL 文件。  
   
 ### <a name="servicedescription"></a>ServiceDescription  
  <xref:System.ServiceModel.Description.ServiceDescription> 執行個體會對應至 `wsdl:service` 項目。 <xref:System.ServiceModel.Description.ServiceDescription> 執行個體包含 <xref:System.ServiceModel.Description.ServiceEndpoint> 執行個體集合，其中每一個都會對應至個別 `wsdl:port` 項目。  
@@ -49,13 +35,13 @@ ms.lasthandoff: 03/26/2018
 |屬性|WSDL 對應|  
 |----------------|------------------|  
 |`Name`|`wsdl:port` /@name端點的值和`wsdl:binding`/@name端點繫結的值。|  
-|`Address`|端點之 `wsdl:port` 定義的位址。<br /><br /> 端點的傳輸會決定位址的格式。 例如，針對 [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] 支援的傳輸，格式可以為 SOAP 位址或端點參考。|  
-|`Binding`|端點的 `wsdl:binding` 定義。<br /><br /> 和 `wsdl:binding` 定義不一樣，[!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] 中的繫結不會連接至任何合約。|  
+|`Address`|端點之 `wsdl:port` 定義的位址。<br /><br /> 端點的傳輸會決定位址的格式。 比方說，WCF 支援的傳輸，它可能是 SOAP 位址或端點參考。|  
+|`Binding`|端點的 `wsdl:binding` 定義。<br /><br /> 不同於`wsdl:binding`定義，在 WCF 中的繫結不會繫結至任何合約。|  
 |`Contract`|端點的 `wsdl:portType` 定義。|  
 |`Behaviors`|實作 <xref:System.ServiceModel.Description.IWsdlExportExtension> 介面的端點行為可以修改端點的 `wsdl:port`。|  
   
 ### <a name="bindings"></a>繫結  
- `ServiceEndpoint` 執行個體的繫結執行個體會對應至 `wsdl:binding` 定義。 和必須與特定 `wsdl:binding` 定義相關聯的 `wsdl:portType` 定義不同，[!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] 繫結與任何合約都不相關。  
+ `ServiceEndpoint` 執行個體的繫結執行個體會對應至 `wsdl:binding` 定義。 不同於`wsdl:binding`定義，必須具有特定相關聯`wsdl:portType`定義 WCF 繫結與任何合約都。  
   
  繫結是由繫結項目集合所組成。 每個項目負責針對端點與用戶端通訊的方式稍加描述。 此外，繫結具有的 <xref:System.ServiceModel.Channels.MessageVersion> 會指出用於端點的 <xref:System.ServiceModel.EnvelopeVersion> 和 <xref:System.ServiceModel.Channels.AddressingVersion>。  
   
@@ -72,10 +58,10 @@ ms.lasthandoff: 03/26/2018
  繫結的 <xref:System.ServiceModel.Channels.TransportBindingElement> 會判斷 SOAP 繫結的傳輸統一資源識別碼 (URI)。  
   
 #### <a name="addressingversion"></a>AddressingVersion  
- 繫結上的 `AddressingVersion` 會對應至 `wsd:port` 中使用的定址版本。 [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] 支援 SOAP 1.1 和 SOAP 1.2 位址，以及 WS-Addressing 08/2004 和 WS-Addressing 1.0 端點參考。  
+ 繫結上的 `AddressingVersion` 會對應至 `wsd:port` 中使用的定址版本。 WCF 支援 SOAP 1.1 和 SOAP 1.2 位址，以及 Ws-addressing 08/2004年和 Ws-addressing 1.0 端點參考。  
   
 #### <a name="envelopeversion"></a>EnvelopeVersion  
- 繫結上的 `EnvelopeVersion` 會對應至 `wsdl:binding` 中使用的 SOAP 版本。 [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] 支援 SOAP 1.1 和 SOAP 1.2 繫結。  
+ 繫結上的 `EnvelopeVersion` 會對應至 `wsdl:binding` 中使用的 SOAP 版本。 WCF 還支援 SOAP 1.1 和 SOAP 1.2 繫結。  
   
 ### <a name="contracts"></a>合約  
  <xref:System.ServiceModel.Description.ContractDescription> 執行個體的 `ServiceEndpoint` 執行個體會對應至 `wsdl:portType`。 `ContractDescription` 執行個體會描述所提供之合約的所有作業。  
@@ -84,7 +70,7 @@ ms.lasthandoff: 03/26/2018
 |----------------|------------------|  
 |`Name`|`wsdl:portType` /@name合約的值。|  
 |`Namespace`|`wsdl:portType` 定義的 targetNamespace。|  
-|`SessionMode`|`wsdl:portType` /@msc:usingSession合約的值。 這個屬性是 WSDL 1.1 的 [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] 延伸項目。|  
+|`SessionMode`|`wsdl:portType` /@msc:usingSession合約的值。 這個屬性是 WSDL 1.1 的 WCF 延伸模組。|  
 |`Operations`|合約的 `wsdl:operation` 定義。|  
   
 ### <a name="operations"></a>作業  
@@ -96,8 +82,8 @@ ms.lasthandoff: 03/26/2018
 |----------------|------------------|  
 |`Name`|`wsdl:portType` / `wsdl:operation` /@name該作業的值。|  
 |`ProtectionLevel`|針對此作業，附加至 `wsdl:binding/wsdl:operation` 訊息之安全性原則中的保護判斷提示。|  
-|`IsInitiating`|`wsdl:portType` / `wsdl:operation` /@msc:isInitiating該作業的值。 這個屬性是 WSDL 1.1 的 [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] 延伸項目。|  
-|`IsTerminating`|`wsdl:portType` / `wsdl:operation` /@msc:isTerminating該作業的值。 這個屬性是 WSDL 1.1 的 [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] 延伸項目。|  
+|`IsInitiating`|`wsdl:portType` / `wsdl:operation` /@msc:isInitiating該作業的值。 這個屬性是 WSDL 1.1 的 WCF 延伸模組。|  
+|`IsTerminating`|`wsdl:portType` / `wsdl:operation` /@msc:isTerminating該作業的值。 這個屬性是 WSDL 1.1 的 WCF 延伸模組。|  
 |`Messages`|`wsdl:portType` / `wsdl:operation` / `wsdl:input`和`wsdl:portType` / `wsdl:operation` / `wsdl:output`作業的訊息。|  
 |`Faults`|`wsdl:portType` / `wsdl:operation` / `wsdl:fault`作業定義。|  
 |`Behaviors`|`DataContractSerializerOperationBehavior` 和 `XmlSerializerOperationBehavior` 會處理作業繫結和作業訊息。|  

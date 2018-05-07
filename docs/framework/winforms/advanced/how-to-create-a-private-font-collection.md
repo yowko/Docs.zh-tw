@@ -1,13 +1,6 @@
 ---
-title: "如何：建立私用字型集合"
-ms.custom: 
+title: 如何：建立私用字型集合
 ms.date: 03/30/2017
-ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.technology: dotnet-winforms
-ms.tgt_pltfrm: 
-ms.topic: article
 dev_langs:
 - csharp
 - vb
@@ -15,16 +8,11 @@ helpviewer_keywords:
 - private font collections [Windows Forms], creating
 - fonts [Windows Forms], creating private collections
 ms.assetid: 6533d5e5-a8dc-4b76-9fc4-3bf75c8b9212
-caps.latest.revision: "16"
-author: dotnet-bot
-ms.author: dotnetcontent
-manager: wpickett
-ms.workload: dotnet
-ms.openlocfilehash: 8c0107b1ef1d5259835c6fb1666519d3fc06f4e5
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.openlocfilehash: 824d42c40b07e8662395e7a1286b9a5a6112c415
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="how-to-create-a-private-font-collection"></a>如何：建立私用字型集合
 <xref:System.Drawing.Text.PrivateFontCollection>類別繼承自<xref:System.Drawing.Text.FontCollection>抽象基底類別。 您可以使用<xref:System.Drawing.Text.PrivateFontCollection>来維護一組專為您的應用程式的字型的物件。 私用字型集合可以包含已安裝的系統字型，以及在電腦尚未安裝的字型。 若要將字型檔案加入至私用字型集合中，呼叫<xref:System.Drawing.Text.PrivateFontCollection.AddFontFile%2A>方法<xref:System.Drawing.Text.PrivateFontCollection>物件。  
@@ -52,7 +40,7 @@ ms.lasthandoff: 12/22/2017
   
  ![字型文字](../../../../docs/framework/winforms/advanced/media/csfontstext7.png "csfontstext7")  
   
- Arial.tff （其中已加入至下列程式碼範例的私用字型集合） 是字型檔案，新細明體標準的樣式。 不過請注意，程式輸出會顯示數個可用樣式，而不是一般的新細明體字型系列。 這是因為[!INCLUDE[ndptecgdiplus](../../../../includes/ndptecgdiplus-md.md)]可以模擬粗體、 斜體和粗體斜體樣式，從標準的樣式。 [!INCLUDE[ndptecgdiplus](../../../../includes/ndptecgdiplus-md.md)]也可產生底線與 strikeouts 從標準的樣式。  
+ Arial.tff （其中已加入至下列程式碼範例的私用字型集合） 是字型檔案，新細明體標準的樣式。 不過請注意，程式輸出會顯示數個可用樣式，而不是一般的新細明體字型系列。 這是因為[!INCLUDE[ndptecgdiplus](../../../../includes/ndptecgdiplus-md.md)]可以模擬粗體、 斜體和粗體斜體樣式，從標準的樣式。 [!INCLUDE[ndptecgdiplus](../../../../includes/ndptecgdiplus-md.md)] 也可產生底線與 strikeouts 從標準的樣式。  
   
  同樣地，[!INCLUDE[ndptecgdiplus](../../../../includes/ndptecgdiplus-md.md)]可以模擬從粗體樣式或斜體樣式的粗體斜體樣式。 程式輸出顯示在即使 TimesBd.tff （新細明體，粗體顯示） 是唯一適用於時間系列粗體斜體樣式集合中的次檔案。  
   
@@ -62,6 +50,6 @@ ms.lasthandoff: 12/22/2017
 ## <a name="compiling-the-code"></a>編譯程式碼  
  上述範例設計是為搭配 Windows Form 使用所設計，而且需要 <xref:System.Windows.Forms.PaintEventArgs> `e`，這是 <xref:System.Windows.Forms.PaintEventHandler> 的參數。  
   
-## <a name="see-also"></a>請參閱  
+## <a name="see-also"></a>另請參閱  
  <xref:System.Drawing.Text.PrivateFontCollection>  
  [使用字型和文字](../../../../docs/framework/winforms/advanced/using-fonts-and-text.md)

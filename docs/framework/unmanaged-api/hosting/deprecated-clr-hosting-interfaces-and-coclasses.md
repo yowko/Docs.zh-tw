@@ -1,29 +1,19 @@
 ---
-title: "已被取代的 CLR 裝載介面和 Coclass"
-ms.custom: 
+title: 已被取代的 CLR 裝載介面和 Coclass
 ms.date: 03/30/2017
-ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.technology: dotnet-clr
-ms.tgt_pltfrm: 
-ms.topic: reference
 helpviewer_keywords:
 - interfaces [.NET Framework hosting], version 1
 - .NET Framework 1.1, hosting interfaces
 - hosting interfaces [.NET Framework], version 1
 - .NET Framework 1.0, hosting interfaces
 ms.assetid: 7b3d2755-cbab-4160-bc69-eb85791e38c7
-caps.latest.revision: "11"
 author: rpetrusha
 ms.author: ronpet
-manager: wpickett
-ms.workload: dotnet
-ms.openlocfilehash: 0a4410814669ed329e477fbad13dac60103b1ac0
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.openlocfilehash: 1f6c20a69894c95086dbd813601ac8811ab4f337
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="deprecated-clr-hosting-interfaces-and-coclasses"></a>已被取代的 CLR 裝載介面和 Coclass
 本節描述 unmanaged 介面主機可以使用整合 common language runtime (CLR) 在.NET framework 1.0 和 1.1 版中將其應用程式。 這些介面提供主應用程式設定和執行階段載入處理序的方法。  

@@ -1,23 +1,12 @@
 ---
-title: "動態更新"
-ms.custom: 
+title: 動態更新
 ms.date: 03/30/2017
-ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.tgt_pltfrm: 
-ms.topic: article
 ms.assetid: 8b6ef19b-9691-4b4b-824c-3c651a9db96e
-caps.latest.revision: "5"
-author: dotnet-bot
-ms.author: dotnetcontent
-manager: wpickett
-ms.workload: dotnet
-ms.openlocfilehash: ee6b228d729958e9e5f14cadb1e378a2944c4f85
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.openlocfilehash: cfd10e4b93351c607ef270487a12bec19ded4ca8
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="dynamic-update"></a>動態更新
 動態更新提供的機制可讓工作流程應用程式開發人員更新持續性工作流程執行個體的工作流程定義。 這可以是實作錯誤修復、新要求，或是適應突如其來的變化。 本主題提供 [!INCLUDE[net_v45](../../../includes/net-v45-md.md)] 中引進的動態更新功能概觀。  
@@ -38,7 +27,7 @@ ms.lasthandoff: 12/22/2017
   
  本主題提供動態更新流程概觀，說明如何將新活動加入到已編譯 XAML 工作流程內持續性的執行個體中。  
   
-###  <a name="Prepare"></a>準備動態更新的工作流程定義  
+###  <a name="Prepare"></a> 準備動態更新的工作流程定義  
  動態更新程序中的第一步，是準備更新所需的工作流程定義。 呼叫 <xref:System.Activities.DynamicUpdate.DynamicUpdateServices.PrepareForUpdate%2A?displayProperty=nameWithType> 方法並傳入要修改的工作流程定義，即可準備完成。 這個方法會先驗證再一一查核工作流程樹狀結構，找出所有需要標記的物件 (例如公用活動和變數)，之後可將這些物件與修改過的工作流程定義進行比較。 完成此步驟後，會複製工作流程樹狀結構，並將其附加到原始的工作流程定義。 建立更新對應時，會比較更新版工作流程定義與原始工作流程定義，並根據差異產生更新對應。  
   
  為準備 XAML 工作流程以進行動態更新，會將其載入到 <xref:System.Activities.ActivityBuilder> 中，然後將 <xref:System.Activities.ActivityBuilder> 傳遞到 <xref:System.Activities.DynamicUpdate.DynamicUpdateServices.PrepareForUpdate%2A?displayProperty=nameWithType> 中。  
@@ -69,7 +58,7 @@ DynamicUpdateServices.PrepareForUpdate(ab);
 > [!NOTE]
 >  若要下載本主題相關的範例程式碼，請參閱[動態更新程式碼範例](http://go.microsoft.com/fwlink/?LinkId=227905)。  
   
-###  <a name="Update"></a>更新工作流程定義，以反映所需的變更  
+###  <a name="Update"></a> 更新工作流程定義，以反映所需的變更  
  準備好用於更新的工作流程定義後，即可進行所需的修改。 您可以新增或移除活動；新增、移動或刪除公用變數；新增或移除引數，也可以變更活動委派的特徵標記。 您不能移除執行中的活動，也不能變更執行中委派的特徵標記。 您可以使用程式碼進行這些變更，也可以在重新裝載的工作流程設計工具中進行。 下列範例中，會將自訂的 `VerifyAppraisal` 活動加入序列中，這個序列組成上一個範例中 `MortgageWorkflow` 的主體。  
   
 ```csharp  
@@ -87,7 +76,7 @@ Sequence s = ab.Implementation as Sequence;
 s.Activities.Insert(2, va);  
 ```  
   
-###  <a name="Create"></a>建立更新對應  
+###  <a name="Create"></a> 建立更新對應  
  準備用於更新的工作流程定義修改完畢之後，就可以建立更新對應。 為了建立動態更新對應，會叫用 <xref:System.Activities.DynamicUpdate.DynamicUpdateServices.CreateUpdateMap%2A?displayProperty=nameWithType> 方法。 這樣會傳回 <xref:System.Activities.DynamicUpdate.DynamicUpdateMap>，其中包含執行階段修改持續性的工作流程執行個體，使其能夠以新工作流程定義載入及繼續所需的資訊。 下列範例中，會以在上一個範例中修改過的 `MortgageWorkflow` 定義建立動態對應。  
   
 ```csharp  
@@ -116,7 +105,7 @@ XamlServices.Save(xw, ab);
 sw.Close();  
 ```  
   
-###  <a name="Apply"></a>將更新對應套用至所需的持續性工作流程執行個體  
+###  <a name="Apply"></a> 將更新對應套用至所需的持續性工作流程執行個體  
  建立更新對應之後，隨時可以套用。 您可以立即使用 <xref:System.Activities.DynamicUpdate.DynamicUpdateMap> 傳回的 <xref:System.Activities.DynamicUpdate.DynamicUpdateServices.CreateUpdateMap%2A?displayProperty=nameWithType> 執行個體套用更新對應，也可以之後再使用儲存的更新對應複本進行。 若要更新工作流程執行個體，請使用 <xref:System.Activities.WorkflowApplicationInstance> 將它載入至 <xref:System.Activities.WorkflowApplication.GetInstance%2A?displayProperty=nameWithType>。 接下來，請使用更新過的工作流程定義及所需的 <xref:System.Activities.WorkflowApplication>，以建立 <xref:System.Activities.WorkflowIdentity>。 這個 <xref:System.Activities.WorkflowIdentity> 可能不同於用於保存原始工作流程者，而且通常是為了反映出此持續性的個體已經過修改。 建立 <xref:System.Activities.WorkflowApplication> 之後，會使用 <xref:System.Activities.WorkflowApplication.Load%2A?displayProperty=nameWithType> 的多載 (採用 <xref:System.Activities.DynamicUpdate.DynamicUpdateMap>) 載入，然後呼叫 <xref:System.Activities.WorkflowApplication.Unload%2A?displayProperty=nameWithType> 來進行卸載。 這樣可以套用動態更新並保存更新過的工作流程執行個體。  
   
 ```csharp  

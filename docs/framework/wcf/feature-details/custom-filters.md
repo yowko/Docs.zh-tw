@@ -1,24 +1,12 @@
 ---
-title: "自訂篩選器"
-ms.custom: 
+title: 自訂篩選器
 ms.date: 03/30/2017
-ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.technology: dotnet-clr
-ms.tgt_pltfrm: 
-ms.topic: article
 ms.assetid: 97cf247d-be0a-4057-bba9-3be5c45029d5
-caps.latest.revision: "5"
-author: wadepickett
-ms.author: wpickett
-manager: wpickett
-ms.workload: dotnet
-ms.openlocfilehash: 9d24e517a8fd63a3363d080ebbabf2c1e3306b76
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.openlocfilehash: 4140a944ed195e1defc1a0677d8e26ff4ff85beb
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="custom-filters"></a>自訂篩選器
 自訂篩選可讓您定義無法使用系統所提供訊息篩選完成的比對邏輯。 例如，您可能會建立自訂篩選，此篩選會雜湊特殊訊息項目，然後檢查值，判斷篩選應傳回 true 或 false。  

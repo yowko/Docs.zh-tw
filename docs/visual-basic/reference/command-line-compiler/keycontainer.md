@@ -1,11 +1,6 @@
 ---
 title: -keycontainer
 ms.date: 03/10/2018
-ms.prod: .net
-ms.suite: ''
-ms.technology:
-- devlang-visual-basic
-ms.topic: article
 helpviewer_keywords:
 - -keycontainer compiler option [Visual Basic]
 - keycontainer compiler option [Visual Basic]
@@ -13,11 +8,11 @@ helpviewer_keywords:
 ms.assetid: 6a9bc861-1752-4db1-9f64-b5252f0482cc
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: b433182a502761fb3840ed2003cc50e053fb072a
-ms.sourcegitcommit: 498799639937c89de777361aab74261efe7b79ea
+ms.openlocfilehash: d682533f96b5fb56430a0826d37a9794dc8c5d8f
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 03/22/2018
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="-keycontainer"></a>-keycontainer
 指定金鑰組的金鑰容器名稱，為組件提供強式名稱。  

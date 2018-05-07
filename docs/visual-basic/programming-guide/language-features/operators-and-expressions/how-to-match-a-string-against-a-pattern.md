@@ -1,12 +1,6 @@
 ---
-title: "如何：比對字串和模式 (Visual Basic)"
-ms.custom: 
+title: 如何：比對字串和模式 (Visual Basic)
 ms.date: 07/20/2015
-ms.prod: .net
-ms.reviewer: 
-ms.suite: 
-ms.technology: devlang-visual-basic
-ms.topic: article
 helpviewer_keywords:
 - comparison operators [Visual Basic], comparing strings
 - pattern matching
@@ -19,19 +13,16 @@ helpviewer_keywords:
 - pattern matching, empty strings
 - operators [Visual Basic], comparison
 ms.assetid: 19a83804-b5af-4739-928b-ac93e64e457f
-caps.latest.revision: "8"
-author: dotnet-bot
-ms.author: dotnetcontent
-ms.openlocfilehash: 83433bdb41df0ce40d0979f3f44603f10ba1c7d5
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.openlocfilehash: aef378bfc32d6deff431a2caac1261a6cd7520c2
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="how-to-match-a-string-against-a-pattern-visual-basic"></a>如何：比對字串和模式 (Visual Basic)
 如果您想要找出是否有運算式[字串資料型別](../../../../visual-basic/language-reference/data-types/string-data-type.md)符合模式，則您可以使用[Like 運算子](../../../../visual-basic/language-reference/operators/like-operator.md)。  
   
- `Like`它會使用兩個運算元。 左的運算元是一個字串運算式，和右運算元是字串，包含要用來比對的模式。 `Like`傳回`Boolean`值，指出字串運算式是否符合模式。  
+ `Like` 它會使用兩個運算元。 左的運算元是一個字串運算式，和右運算元是字串，包含要用來比對的模式。 `Like` 傳回`Boolean`值，指出字串運算式是否符合模式。  
   
  您可以比對的字串運算式，針對特定的字元、 萬用字元、 字元清單或字元範圍中每個字元。 要比對字串運算式中的字元位置的對應的規格，模式字串中的位置。  
   
@@ -72,7 +63,7 @@ ms.lasthandoff: 11/21/2017
      請注意，此項比對是區分大小寫。  
   
 ## <a name="matching-empty-strings"></a>比對空字串  
- `Like`會將序列`[]`為零長度字串 (`""`)。 您可以使用`[]`來測試是否整個字串運算式是空的但您無法使用它來測試是否是空的字串運算式中的特定位置。 空位置是其中一個選項，如果您要測試，您可以使用`Like`一次以上。  
+ `Like` 會將序列`[]`為零長度字串 (`""`)。 您可以使用`[]`來測試是否整個字串運算式是空的但您無法使用它來測試是否是空的字串運算式中的特定位置。 空位置是其中一個選項，如果您要測試，您可以使用`Like`一次以上。  
   
 #### <a name="to-match-a-character-in-the-string-expression-against-a-list-of-characters-or-no-character"></a>要比對的字元或字元清單的字串運算式中的字元  
   

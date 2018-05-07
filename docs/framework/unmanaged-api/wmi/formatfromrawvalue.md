@@ -1,11 +1,7 @@
 ---
-title: "FormatFromRawValue 函式 （Unmanaged API 參考）"
-description: "FormatFromRawValue 函式會將未經處理的效能資料轉換成指定的格式。"
+title: FormatFromRawValue 函式 （Unmanaged API 參考）
+description: FormatFromRawValue 函式會將未經處理的效能資料轉換成指定的格式。
 ms.date: 11/21/2017
-ms.prod: .net-framework
-ms.technology:
-- dotnet-clr
-ms.topic: reference
 api_name:
 - FormatFromRawValue
 api_location:
@@ -20,14 +16,11 @@ topic_type:
 - Reference
 author: rpetrusha
 ms.author: ronpet
-manager: wpickett
-ms.workload:
-- dotnet
-ms.openlocfilehash: 3daa89ec0b40bb9c08898ecd682f05f0f0ce09a8
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.openlocfilehash: e0710b26237b350f1dfbc7d2464b7a131373604e
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="formatfromrawvalue-function"></a>FormatFromRawValue 函式
 將指定的格式，一個的未經處理的效能資料值或兩個原始效能資料值的轉換，如果格式轉換是以時間為基礎。   
@@ -50,7 +43,7 @@ int FormatFromRawValue (
 ## <a name="parameters"></a>參數
 
 `dwCounterType`  
-[in]計數器類型。 如需計數器類型的清單，請參閱[WMI 效能計數器型別](https://msdn.microsoft.com/library/aa394569(v=vs.85).aspx)。 `dwCounterType`可以是除了任何計數器類型`PERF_LARGE_RAW_FRACTION`和`PERF_LARGE_RAW_BASE`。 
+[in]計數器類型。 如需計數器類型的清單，請參閱[WMI 效能計數器型別](https://msdn.microsoft.com/library/aa394569(v=vs.85).aspx)。 `dwCounterType` 可以是除了任何計數器類型`PERF_LARGE_RAW_FRACTION`和`PERF_LARGE_RAW_BASE`。 
 
 `dwFormat`  
 [in]要轉換的未經處理的效能資料的格式。 它可以是下列值之一：
@@ -71,11 +64,11 @@ int FormatFromRawValue (
 `pTimeBase`  
 [in]如果所需的格式轉換的時間基底指標。 如果找不到所需的格式轉換的時間基底的資訊，則會忽略此參數的值。
 
-`pRawValue1`[in]指標[ `PDH_RAW_COUNTER` ](https://msdn.microsoft.com/library/windows/desktop/aa373060(v=vs.85).aspx)結構，表示原始效能值。
+`pRawValue1` [in]指標[ `PDH_RAW_COUNTER` ](https://msdn.microsoft.com/library/windows/desktop/aa373060(v=vs.85).aspx)結構，表示原始效能值。
 
-`pRawValue2`[in]指標[ `PDH_RAW_COUNTER` ](https://msdn.microsoft.com/library/windows/desktop/aa373060(v=vs.85).aspx)結構，表示第二個的未經處理的效能值。 如果第二個的未經處理的效能值不是必要的這個參數應該是`null`。
+`pRawValue2` [in]指標[ `PDH_RAW_COUNTER` ](https://msdn.microsoft.com/library/windows/desktop/aa373060(v=vs.85).aspx)結構，表示第二個的未經處理的效能值。 如果第二個的未經處理的效能值不是必要的這個參數應該是`null`。
 
-`pFmtValue`[out]指標[ `PDH_FMT_COUNTERVALUE` ](https://msdn.microsoft.com/library/windows/desktop/aa373050(v=vs.85).aspx)接收格式化的效能值的結構。
+`pFmtValue` [out]指標[ `PDH_FMT_COUNTERVALUE` ](https://msdn.microsoft.com/library/windows/desktop/aa373050(v=vs.85).aspx)接收格式化的效能值的結構。
 
 ## <a name="return-value"></a>傳回值
 
@@ -96,7 +89,7 @@ int FormatFromRawValue (
   
  **程式庫：** PerfCounter.dll  
   
- **.NET framework 版本：**[!INCLUDE[net_current_v472plus](../../../../includes/net-current-v472plus.md)]  
+ **.NET framework 版本：** [!INCLUDE[net_current_v472plus](../../../../includes/net-current-v472plus.md)]  
   
 ## <a name="see-also"></a>另請參閱  
 [WMI 和效能計數器 （Unmanaged API 參考）](index.md)

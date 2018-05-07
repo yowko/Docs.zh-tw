@@ -1,28 +1,14 @@
 ---
-title: "操作說明：平移元素"
-ms.custom: 
+title: 操作說明：平移元素
 ms.date: 03/30/2017
-ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.technology:
-- dotnet-wpf
-ms.tgt_pltfrm: 
-ms.topic: article
 helpviewer_keywords:
 - graphics [WPF], translations
 ms.assetid: 461c8273-15df-42f6-8672-89ba22887cc0
-caps.latest.revision: 
-author: dotnet-bot
-ms.author: dotnetcontent
-manager: wpickett
-ms.workload:
-- dotnet
-ms.openlocfilehash: 2f9b8363f0c3b9e0a9653dfc9864727c9460f695
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.openlocfilehash: 0089f294c54662d1ea4929ec25c08464072cbdde
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="how-to-translate-an-element"></a>操作說明：平移元素
 這個範例示範如何平移 （移動） 項目使用<xref:System.Windows.Media.TranslateTransform>。  
@@ -38,5 +24,5 @@ ms.lasthandoff: 12/22/2017
   
  如需完整範例，請參閱 [2D 轉換範例](http://go.microsoft.com/fwlink/?LinkID=158252)。  
   
-## <a name="see-also"></a>請參閱  
+## <a name="see-also"></a>另請參閱  
  [轉換概觀](../../../../docs/framework/wpf/graphics-multimedia/transforms-overview.md)

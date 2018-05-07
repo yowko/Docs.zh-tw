@@ -1,13 +1,7 @@
 ---
-title: "以多平台為目標之函式庫的應用程式資源"
-ms.custom: 
+title: 以多平台為目標之函式庫的應用程式資源
 ms.date: 03/30/2017
-ms.prod: .net
-ms.reviewer: 
-ms.suite: 
 ms.technology: dotnet-standard
-ms.tgt_pltfrm: 
-ms.topic: article
 dev_langs:
 - csharp
 - vb
@@ -18,18 +12,13 @@ helpviewer_keywords:
 - resources, for multiple platforms
 - targeting multiple platforms, resources for
 ms.assetid: 72c76f0b-7255-4576-9261-3587f949669c
-caps.latest.revision: "20"
 author: mairaw
 ms.author: mairaw
-manager: wpickett
-ms.workload:
-- dotnet
-- dotnetcore
-ms.openlocfilehash: 7006c07d32a9f0adbafce1c83c1b29842f634a9a
-ms.sourcegitcommit: e7f04439d78909229506b56935a1105a4149ff3d
+ms.openlocfilehash: f4682b9ffcb0edb4e54c427968c3d40c0de134d1
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 12/23/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="app-resources-for-libraries-that-target-multiple-platforms"></a>以多平台為目標之函式庫的應用程式資源
 您可以使用.NET Framework[可攜式類別庫](../../../docs/standard/cross-platform/cross-platform-development-with-the-portable-class-library.md)專案類型確保您的類別庫中的資源，可從多個平台。 這個專案類型會在 [!INCLUDE[vs_dev11_long](../../../includes/vs-dev11-long-md.md)] 中提供，並且以 .NET Framework 類別庫的可攜式子集為目標。 使用[!INCLUDE[net_portable](../../../includes/net-portable-md.md)]可確保能夠從桌面應用程式、Silverlight 應用程式、Windows Phone 應用程式和 [!INCLUDE[win8_appname_long](../../../includes/win8-appname-long-md.md)]應用程式存取您的程式庫。  
@@ -112,7 +101,7 @@ ms.lasthandoff: 12/23/2017
  [!code-csharp[Conceptual.Resources.PortableMetroLoc#1](../../../samples/snippets/csharp/VS_Snippets_CLR/conceptual.resources.portablemetroloc/cs/blankpage.xaml.cs#1)]
  [!code-vb[Conceptual.Resources.PortableMetroLoc#1](../../../samples/snippets/visualbasic/VS_Snippets_CLR/conceptual.resources.portablemetroloc/vb/blankpage.xaml.vb#1)]  
   
-## <a name="see-also"></a>請參閱  
+## <a name="see-also"></a>另請參閱  
  <xref:System.Resources.ResourceManager>  
  [桌面應用程式中的資源](../../../docs/framework/resources/index.md)  
  [封裝和部署資源](../../../docs/framework/resources/packaging-and-deploying-resources-in-desktop-apps.md)

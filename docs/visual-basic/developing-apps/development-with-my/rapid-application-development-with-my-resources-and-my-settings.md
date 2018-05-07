@@ -1,24 +1,17 @@
 ---
-title: "使用 My.Resources 和 My.Settings 進行快速應用程式開發 (Visual Basic)"
+title: 使用 My.Resources 和 My.Settings 進行快速應用程式開發 (Visual Basic)
 ms.date: 07/20/2015
-ms.prod: .net
-ms.suite: 
-ms.technology: devlang-visual-basic
-ms.topic: article
 helpviewer_keywords:
 - My.Settings object [Visual Basic], developing applications
 - rapid application development (RAD), My.Resources
 - rapid application development (RAD), My.Settings
 - My.Resources object [Visual Basic], developing applications
 ms.assetid: 68284ab1-b685-4814-a2a4-01ae40445ff8
-caps.latest.revision: "6"
-author: dotnet-bot
-ms.author: dotnetcontent
-ms.openlocfilehash: 7339afdc35341739b592b2a327094754031c346c
-ms.sourcegitcommit: 34ec7753acf76f90a0fa845235ef06663dc9e36e
+ms.openlocfilehash: 808e02510d4f0a237ad4354b2edac8fa024b5f83
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="rapid-application-development-with-myresources-and-mysettings-visual-basic"></a>使用 My.Resources 和 My.Settings 進行快速應用程式開發 (Visual Basic)
 `My.Resources`物件提供的應用程式資源的存取權，並可讓您以動態方式擷取您的應用程式的資源。  
@@ -32,7 +25,7 @@ ms.lasthandoff: 12/21/2017
   
  同樣地，`My.Settings`物件存取應用程式的設定，並可讓您動態儲存及擷取屬性設定和應用程式的其他資訊。 如需詳細資訊，請參閱[My.Resources 物件](../../../visual-basic/language-reference/objects/my-resources-object.md)和[My.Settings 物件](../../../visual-basic/language-reference/objects/my-settings-object.md)。  
   
-## <a name="see-also"></a>請參閱  
+## <a name="see-also"></a>另請參閱  
  [My.Resources 物件](../../../visual-basic/language-reference/objects/my-resources-object.md)  
  [My.Settings 物件](../../../visual-basic/language-reference/objects/my-settings-object.md)  
  [存取應用程式設定](../../../visual-basic/developing-apps/programming/app-settings/accessing-application-settings.md)

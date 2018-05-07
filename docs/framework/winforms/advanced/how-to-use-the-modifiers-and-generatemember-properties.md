@@ -1,13 +1,6 @@
 ---
-title: "如何：使用修飾詞和 GenerateMember 屬性"
-ms.custom: 
+title: 如何：使用修飾詞和 GenerateMember 屬性
 ms.date: 03/30/2017
-ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.technology: dotnet-winforms
-ms.tgt_pltfrm: 
-ms.topic: article
 dev_langs:
 - csharp
 - vb
@@ -22,16 +15,11 @@ helpviewer_keywords:
 - form inheritance
 - Windows Forms, inheritance
 ms.assetid: 3381a5e4-e1a3-44e2-a765-a0b758937b85
-caps.latest.revision: "9"
-author: dotnet-bot
-ms.author: dotnetcontent
-manager: wpickett
-ms.workload: dotnet
-ms.openlocfilehash: f11595daac74ceb76c5d017af015d5523506bdf3
-ms.sourcegitcommit: c0dd436f6f8f44dc80dc43b07f6841a00b74b23f
+ms.openlocfilehash: 451c54bf6272b4fbff46b5298ba5b6a9290656e8
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 01/19/2018
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="how-to-use-the-modifiers-and-generatemember-properties"></a>如何：使用修飾詞和 GenerateMember 屬性
 當您將元件放在 Windows Form 上時，提供兩個屬性，以在設計環境：`GenerateMember`和`Modifiers`。 `GenerateMember`屬性會指定當 Windows Form 設計工具產生元件的成員變數。 `Modifiers`屬性是指派給該成員變數的存取修飾詞。 如果值`GenerateMember`屬性是`false`，值`Modifiers`屬性沒有任何作用。  
@@ -70,7 +58,7 @@ ms.lasthandoff: 01/19/2018
 > [!NOTE]
 >  根據預設，Windows Form 設計工具會指派`private`(`Friend`在 Visual Basic 中) 類似容器控制項的修飾詞<xref:System.Windows.Forms.Panel>。 如果您的基底<xref:System.Windows.Forms.UserControl>或<xref:System.Windows.Forms.Form>有容器的控制項，就不會接受繼承的控制項和表單中的新子系。 解決方法是將基底容器控制項的修飾詞變更`protected`或`public`。  
   
-## <a name="see-also"></a>請參閱  
+## <a name="see-also"></a>另請參閱  
  <xref:System.Windows.Forms.Button>  
  [Windows Forms 視覺繼承](../../../../docs/framework/winforms/advanced/windows-forms-visual-inheritance.md)  
  [逐步解說：示範視覺化繼承](../../../../docs/framework/winforms/advanced/walkthrough-demonstrating-visual-inheritance.md)  

@@ -1,26 +1,17 @@
 ---
-title: "名稱&lt;membername&gt;不符合 CLS 標準"
+title: 名稱&lt;membername&gt;不符合 CLS 標準
 ms.date: 07/20/2015
-ms.prod: .net
-ms.reviewer: 
-ms.suite: 
-ms.technology:
-- devlang-visual-basic
-ms.topic: article
 f1_keywords:
 - bc40031
 - vbc40031
 helpviewer_keywords:
 - BC40031
 ms.assetid: e2b885dc-cbf9-49ff-bbbe-531657ea99f7
-caps.latest.revision: 
-author: dotnet-bot
-ms.author: dotnetcontent
-ms.openlocfilehash: ba0dda520e37b27f9b7ad3c214508ee370162598
-ms.sourcegitcommit: 34ec7753acf76f90a0fa845235ef06663dc9e36e
+ms.openlocfilehash: 26ff13de461d5a96724868b7928129a326cdf1d0
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="name-ltmembernamegt-is-not-cls-compliant"></a>名稱&lt;membername&gt;不符合 CLS 標準
 組件標示為`<CLSCompliant(True)>`但公開的成員名稱開頭為底線 (`_`)。  
@@ -41,7 +32,7 @@ ms.lasthandoff: 12/21/2017
   
 -   如果您需要的成員名稱維持不變，移除<xref:System.CLSCompliantAttribute>從其定義或將其標記為`<CLSCompliant(False)>`。 您仍可以標示為組件`<CLSCompliant(True)>`。  
   
-## <a name="see-also"></a>請參閱  
+## <a name="see-also"></a>另請參閱  
  [宣告項目名稱](../../../visual-basic/programming-guide/language-features/declared-elements/declared-element-names.md)  
  [Visual Basic 命名慣例](../../../visual-basic/programming-guide/program-structure/naming-conventions.md)  
 

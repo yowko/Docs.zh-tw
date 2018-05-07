@@ -1,12 +1,6 @@
 ---
 title: Where 子句 (Visual Basic)
 ms.date: 07/20/2015
-ms.prod: .net
-ms.reviewer: ''
-ms.suite: ''
-ms.technology:
-- devlang-visual-basic
-ms.topic: article
 f1_keywords:
 - vb.QueryWhere
 helpviewer_keywords:
@@ -14,14 +8,11 @@ helpviewer_keywords:
 - queries [Visual Basic], Where
 - Where clause [Visual Basic]
 ms.assetid: 48b5c2c5-3181-429c-8545-894296798c89
-caps.latest.revision: 18
-author: dotnet-bot
-ms.author: dotnetcontent
-ms.openlocfilehash: 8c2572f513d00bc72e869cf28d382be799f7a303
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.openlocfilehash: 0b61a52a366fb37a0834c9223bc8b7f099354d16
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="where-clause-visual-basic"></a>Where 子句 (Visual Basic)
 指定查詢的篩選條件。  
@@ -34,7 +25,7 @@ Where condition
   
 ## <a name="parts"></a>組件  
  `condition`  
- 必要項。 決定輸出集合中是否包含在集合中目前的項目值的運算式。 運算式必須評估為`Boolean`值或相當的`Boolean`值。 如果條件評估為`True`、 項目包含查詢結果中; 否則項目從查詢結果中排除。  
+ 必要。 決定輸出集合中是否包含在集合中目前的項目值的運算式。 運算式必須評估為`Boolean`值或相當的`Boolean`值。 如果條件評估為`True`、 項目包含查詢結果中; 否則項目從查詢結果中排除。  
   
 ## <a name="remarks"></a>備註  
  `Where`子句可讓您選取符合特定準則的項目來篩選查詢資料。 項目，其值會導致`Where`子句評估為`True`隨附在查詢結果; 會排除其他項目。 使用中的運算式`Where`子句必須評估為`Boolean`或相當的`Boolean`，例如評估為整數`False`當其值是零。 您可以結合多個運算式中的`Where`子句使用邏輯運算子，像是`And`， `Or`， `AndAlso`， `OrElse`， `Is`，和`IsNot`。  

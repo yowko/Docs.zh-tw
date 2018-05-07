@@ -1,17 +1,12 @@
 ---
-title: "Do...Loop 陳述式 (Visual Basic)"
+title: Do...Loop 陳述式 (Visual Basic)
 ms.date: 07/20/2015
-ms.prod: .net
-ms.reviewer: 
-ms.suite: 
-ms.technology: devlang-visual-basic
-ms.topic: article
 f1_keywords:
 - vb.Do
 - vb.Loop
 - vb.Until
 helpviewer_keywords:
-- "conditional statements [Visual Basic], Do�Loop"
+- conditional statements [Visual Basic], Do�Loop
 - while statement [Visual Basic], Do...Loop
 - execution [Visual Basic], conditional
 - Do loops
@@ -20,19 +15,16 @@ helpviewer_keywords:
 - instructions, repeating
 - Do statement [Visual Basic]
 - Exit statement [Visual Basic], in Do...Loop statements
-- "loop structures [Visual Basic], Do�Loop statements"
+- loop structures [Visual Basic], Do�Loop statements
 - do-while statements [Visual Basic]
 - loops, exiting
 - Loop keyword [Visual Basic], Do...Loop statement
 ms.assetid: 892f9096-b3e2-4aee-834d-83bc4e2c379d
-caps.latest.revision: "37"
-author: dotnet-bot
-ms.author: dotnetcontent
-ms.openlocfilehash: 79d25dce963f383a84b56ce2c9b600fc2d5a7937
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.openlocfilehash: e12cdc1ae405b877d4d27d1947c98dcb51938ba7
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="doloop-statement-visual-basic"></a>Do...Loop 陳述式 (Visual Basic)
 持續重複陳述式時區塊`Boolean`條件是`True`或直到條件變成`True`。  
@@ -61,14 +53,14 @@ Loop { While | Until } condition
   
 |詞彙|定義|  
 |---|---|  
-|`Do`|必要項。 定義的開頭`Do`迴圈。|  
+|`Do`|必要。 定義的開頭`Do`迴圈。|  
 |`While`|除非使用 `Until`，否則為必要參數。 重複此迴圈直到`condition`是`False`。|  
 |`Until`|除非使用 `While`，否則為必要參數。 重複此迴圈直到`condition`是`True`。|  
-|`condition`|選擇項。 `Boolean`運算式。 如果`condition`是`Nothing`，Visual Basic 會將它視為`False`。|  
-|`statements`|選擇項。 一或多個陳述式時，或直到，重複的`condition`是`True`。|  
-|`Continue Do`|選擇項。 將控制項傳送至下一個反覆運算`Do`迴圈。|  
-|`Exit Do`|選擇項。 控制權轉移出`Do`迴圈。|  
-|`Loop`|必要項。 結束的定義`Do`迴圈。|  
+|`condition`|選擇性。 `Boolean` 運算式。 如果`condition`是`Nothing`，Visual Basic 會將它視為`False`。|  
+|`statements`|選擇性。 一或多個陳述式時，或直到，重複的`condition`是`True`。|  
+|`Continue Do`|選擇性。 將控制項傳送至下一個反覆運算`Do`迴圈。|  
+|`Exit Do`|選擇性。 控制權轉移出`Do`迴圈。|  
+|`Loop`|必要。 結束的定義`Do`迴圈。|  
   
 ## <a name="remarks"></a>備註  
  使用`Do...Loop`結構時您想要重複一組不定陳述式的次數，直到滿足條件為止。 如果您想要重複陳述式的次數， [For...下一個陳述式](../../../visual-basic/language-reference/statements/for-next-statement.md)通常是比較好的選擇。  
@@ -85,9 +77,9 @@ Loop { While | Until } condition
 >  `Do...Loop`結構可讓您更大的彈性比[時...結束 While 陳述式](../../../visual-basic/language-reference/statements/while-end-while-statement.md)因為它可讓您決定是否要結束迴圈時`condition`停止`True`或當它第一次變成`True`。 它也可讓您測試`condition`開頭或結尾的迴圈。  
   
 ## <a name="exit-do"></a>結束執行  
- [結束執行](../../../visual-basic/language-reference/statements/exit-statement.md)陳述式可以提供替代方式，以結束`Do…Loop`。 `Exit Do`立即將控制權傳輸至之後的陳述式`Loop`陳述式。  
+ [結束執行](../../../visual-basic/language-reference/statements/exit-statement.md)陳述式可以提供替代方式，以結束`Do…Loop`。 `Exit Do` 立即將控制權傳輸至之後的陳述式`Loop`陳述式。  
   
- `Exit Do`通常是評估某項條件，例如在之後`If...Then...Else`結構。 您可能想要結束迴圈，若您偵測到的條件，使得不必要或不可能繼續重複執行，例如錯誤的數值或終止要求。 使用一`Exit Do`就是要測試的條件，可能會導致*無止盡迴圈*，即無法執行大型或甚至無限次數的迴圈。 您可以使用`Exit Do`來逸出迴圈。  
+ `Exit Do` 通常是評估某項條件，例如在之後`If...Then...Else`結構。 您可能想要結束迴圈，若您偵測到的條件，使得不必要或不可能繼續重複執行，例如錯誤的數值或終止要求。 使用一`Exit Do`就是要測試的條件，可能會導致*無止盡迴圈*，即無法執行大型或甚至無限次數的迴圈。 您可以使用`Exit Do`來逸出迴圈。  
   
  您可以包含任意數目的`Exit Do`隨處陳述式中的`Do…Loop`。  
   

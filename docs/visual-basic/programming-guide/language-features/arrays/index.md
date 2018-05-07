@@ -1,11 +1,6 @@
 ---
 title: Visual Basic 中的陣列
-ms.custom: ''
 ms.date: 12/06/2017
-ms.prod: .net
-ms.technology:
-- devlang-visual-basic
-ms.topic: article
 f1_keywords:
 - vb.Array
 helpviewer_keywords:
@@ -14,12 +9,11 @@ helpviewer_keywords:
 ms.assetid: dbf29737-b589-4443-bee6-a27588d9c67e
 author: rpetrusha
 ms.author: ronpet
-ms.manager: wpickett
-ms.openlocfilehash: d223ca8b0ff59a13c31fa777e5cb6a97918421c6
-ms.sourcegitcommit: 01ea3686e74ff05e4f6de3d8d46dc603d051ec00
+ms.openlocfilehash: 3b6c1db0131f2a150dc1b00dd5e6dafc3a418f05
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 12/13/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="arrays-in-visual-basic"></a>Visual Basic 中的陣列
 陣列是一組值，會稱為*元素*，邏輯上彼此相關的。 例如，陣列可能包含文法學校中; 每一年級學生數目陣列的每個項目是單一年級的學生數目。 同樣地，陣列可能包含一位學生成績類別;陣列的每個項目是單一的等級。    
@@ -165,7 +159,7 @@ Dim sales()() As Double = New Double(11)() {}
   
  [!code-vb[iterate-one-dimensional-array](../../../../../samples/snippets/visualbasic/programming-guide/language-features/arrays/iterate1d.vb)]  
   
- 下列範例逐一查看多維陣列使用[ `For...Next` ](../../../../visual-basic/language-reference/statements/for-next-statement.md)陳述式。 <xref:System.Array.GetUpperBound%2A> 方法具有可指定維度的參數。 `GetUpperBound(0)`傳回第一個維度中，最高的索引和`GetUpperBound(1)`傳回第二個維度的最高的索引。
+ 下列範例逐一查看多維陣列使用[ `For...Next` ](../../../../visual-basic/language-reference/statements/for-next-statement.md)陳述式。 <xref:System.Array.GetUpperBound%2A> 方法具有可指定維度的參數。 `GetUpperBound(0)` 傳回第一個維度中，最高的索引和`GetUpperBound(1)`傳回第二個維度的最高的索引。
   
  [!code-vb[iterate-two-dimensional-array](../../../../../samples/snippets/visualbasic/programming-guide/language-features/arrays/iterate2d.vb)]  
   
@@ -312,7 +306,7 @@ Dim arrZ(-1) As String
   
  當您使用`ReDim`重新維度化陣列，Visual Basic 建立新的陣列，並釋放前一個。 這將佔用執行時間。 因此，如果您正在經常變更，或您使用的項目數目無法預測您需要的項目數目上限，您通常會取得更佳的效能集合。  
   
- 對於某些集合，您可以將索引鍵值指派給您放入集合的任何物件，讓您可以藉由使用索引鍵快速擷取物件。  
+ 對於某些集合，您可以將鍵值指派給您放入集合的任何物件，讓您可以藉由使用鍵值快速擷取物件。  
   
  如果集合包含只有一個資料類型的項目，則可使用 <xref:System.Collections.Generic?displayProperty=nameWithType> 命名空間內的其中一個類別。 泛型集合會強制類型安全，如此就不會加入其他資料類型。  
   

@@ -1,29 +1,15 @@
 ---
 title: 動態地啟用分析的追蹤
-ms.custom: ''
 ms.date: 03/30/2017
-ms.prod: .net-framework
-ms.reviewer: ''
-ms.suite: ''
-ms.technology:
-- dotnet-clr
-ms.tgt_pltfrm: ''
-ms.topic: article
 ms.assetid: 58b63cfc-307a-427d-b69d-9917ff9f44ac
-caps.latest.revision: 12
-author: dotnet-bot
-ms.author: dotnetcontent
-manager: wpickett
-ms.workload:
-- dotnet
-ms.openlocfilehash: d070c66eebbf1a067254c38c6e5bfc7f40742863
-ms.sourcegitcommit: 03ee570f6f528a7d23a4221dcb26a9498edbdf8c
-ms.translationtype: MT
+ms.openlocfilehash: 46dfba2cb148009ddfd0bbd40e3b7202d774e0b7
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/28/2018
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="dynamically-enabling-analytic-tracing"></a>動態地啟用分析的追蹤
-使用隨附於 Windows 作業系統的工具，您可以使用 Windows 事件追蹤 (ETW) 來動態啟用或停用追蹤。 對所有的 [!INCLUDE[netfx_current_long](../../../../../includes/netfx-current-long-md.md)] [!INCLUDE[indigo1](../../../../../includes/indigo1-md.md)] 服務而言，分析追蹤可以不需要以修改應用程式的 Web.config 檔案或重新啟動服務的方式，來動態啟用或停用。 這樣可讓發出追蹤事件的應用程式維持不變。  
+使用隨附於 Windows 作業系統的工具，您可以使用 Windows 事件追蹤 (ETW) 來動態啟用或停用追蹤。 所有[!INCLUDE[netfx_current_long](../../../../../includes/netfx-current-long-md.md)]Windows Communication Foundation (WCF) 服務的分析追蹤可以啟用和停用，而不需要修改應用程式的 Web.config 檔案，或重新啟動服務。 這樣可讓發出追蹤事件的應用程式維持不變。  
   
  [!INCLUDE[indigo2](../../../../../includes/indigo2-md.md)] 追蹤選項可以使用類似的方法來設定。 例如，您可以將嚴重性層級從 **Error** 變更為 **Information** ，無須干擾應用程式。 使用下列工具即可達到這個目的：  
   

@@ -1,29 +1,15 @@
 ---
 title: 執行 Windows Communication Foundation 範例
-ms.custom: ''
 ms.date: 03/30/2017
-ms.prod: .net-framework
-ms.reviewer: ''
-ms.suite: ''
-ms.technology:
-- dotnet-clr
-ms.tgt_pltfrm: ''
-ms.topic: article
 ms.assetid: db8a83da-95c1-4a21-a9d2-48caeb6398ea
-caps.latest.revision: 26
-author: dotnet-bot
-ms.author: dotnetcontent
-manager: wpickett
-ms.workload:
-- dotnet
-ms.openlocfilehash: 2aca4555277a1b365ddee1c672a6375edfde9f34
-ms.sourcegitcommit: 94d33cadc5ff81d2ac389bf5f26422c227832052
-ms.translationtype: MT
+ms.openlocfilehash: ee02b6e737e4728a378533ebb5ba89cec9807b33
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/30/2018
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="running-the-windows-communication-foundation-samples"></a>執行 Windows Communication Foundation 範例
-此 [!INCLUDE[indigo1](../../../../includes/indigo1-md.md)] 範例可以在單一機器或跨機器組態中執行。 這些範例可依提供現狀直接執行於單一機器上。 在跨機器組態中，就需要修改範例的組態檔設定。 下列程序會說明如何在相同機器與跨機器組態中執行此範例。 請注意，透過網際網路資訊服務 (IIS) 裝載與自我裝載範例中的服務步驟會有所變化。 大部分的範例都是以 IIS 進行裝載；請參閱範例讀我資訊以決定其裝載方式。  
+可以在單一電腦或跨電腦組態中執行 Windows Communication Foundation (WCF) 範例。 這些範例可依提供現狀直接執行於單一機器上。 在跨機器組態中，就需要修改範例的組態檔設定。 下列程序會說明如何在相同機器與跨機器組態中執行此範例。 請注意，透過網際網路資訊服務 (IIS) 裝載與自我裝載範例中的服務步驟會有所變化。 大部分的範例都是以 IIS 進行裝載；請參閱範例讀我資訊以決定其裝載方式。  
   
  在 [!INCLUDE[wv](../../../../includes/wv-md.md)] 上，不是裝載在 IIS 中的範例需要更高的權限向 Http.sys 註冊接聽項。 請使用 Httpcfg.exe 以在其中執行服務的帳戶來註冊服務的接聽位址，或從使用系統管理員權限執行的命令提示字元來啟用服務。  
   

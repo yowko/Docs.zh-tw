@@ -1,14 +1,6 @@
 ---
 title: 管理與診斷
-ms.custom: ''
 ms.date: 03/30/2017
-ms.prod: .net-framework
-ms.reviewer: ''
-ms.suite: ''
-ms.technology:
-- dotnet-clr
-ms.tgt_pltfrm: ''
-ms.topic: article
 helpviewer_keywords:
 - Windows Communication Foundation, diagnostics
 - Windows Communication Foundation, administration
@@ -17,20 +9,14 @@ helpviewer_keywords:
 - administration [WCF]
 - WCF, administration
 ms.assetid: 34c81c08-0e0f-4fbc-9ae8-91948640ee43
-caps.latest.revision: 19
-author: dotnet-bot
-ms.author: dotnetcontent
-manager: wpickett
-ms.workload:
-- dotnet
-ms.openlocfilehash: fa5256f543a99618e00dc88e085dfee4ac76ebab
-ms.sourcegitcommit: 03ee570f6f528a7d23a4221dcb26a9498edbdf8c
-ms.translationtype: MT
+ms.openlocfilehash: 552ddb842e0a922493feccee1e48e7d5e74291ad
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/28/2018
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="administration-and-diagnostics"></a>管理與診斷
-[!INCLUDE[indigo1](../../../../includes/indigo1-md.md)] 提供豐富的功能，這些功能可協助您監視應用程式的各生命階段。 例如，您可以使用組態在部署時設定服務與用戶端。 [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] 包含大量的效能計數器，可協助您測量應用程式的效能。 [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] 亦會透過 [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] Windows Management Instrumentation (WMI) 提供者，在執行階段公開服務的檢查資料。 當應用程式遭遇失敗或開始發生異常行為時，您可以使用事件日誌檢查是否發生任何顯著的事件。 您也可以使用訊息記錄與追蹤檢查在應用程式中端對端之間發生的事件。 這些功能可以同時協助程式開發人員與 IT 專業人員，在 [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] 應用程式發生錯誤行為時進行疑難排解。  
+Windows Communication Foundation (WCF) 提供一組豐富的功能，可協助您監視應用程式的生命週期的不同階段。 例如，您可以使用組態在部署時設定服務與用戶端。 [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] 包含大量的效能計數器，可協助您測量應用程式的效能。 [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] 亦會透過 [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] Windows Management Instrumentation (WMI) 提供者，在執行階段公開服務的檢查資料。 當應用程式遭遇失敗或開始發生異常行為時，您可以使用事件日誌檢查是否發生任何顯著的事件。 您也可以使用訊息記錄與追蹤檢查在應用程式中端對端之間發生的事件。 這些功能可以同時協助程式開發人員與 IT 專業人員，在 [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] 應用程式發生錯誤行為時進行疑難排解。  
   
 > [!NOTE]
 >  如果您收到錯誤，而不特定的詳細資訊，您應該啟用`includeExceptionDetailInFaults`屬性[ \<serviceDebug >](../../../../docs/framework/configure-apps/file-schema/wcf/servicedebug.md)組態項目。 這會指示 [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] 將例外狀況詳細資訊傳送至用戶端，以便讓您能夠偵測許多常見問題，而不需要更進階的診斷。 如需詳細資訊，請參閱[傳送和接收錯誤](../../../../docs/framework/wcf/sending-and-receiving-faults.md)。  

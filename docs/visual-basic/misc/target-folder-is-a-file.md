@@ -1,18 +1,12 @@
 ---
-title: "目標資料夾是一個檔案"
+title: 目標資料夾是一個檔案
 ms.date: 07/20/2015
-ms.prod: .net
-ms.technology: devlang-visual-basic
-ms.topic: article
 ms.assetid: c5e40bcb-2414-4484-b2b9-a9c391ad0029
-caps.latest.revision: "11"
-author: dotnet-bot
-ms.author: dotnetcontent
-ms.openlocfilehash: fb3625c032ecb7ef440dc4b8bf0ad2a552b62943
-ms.sourcegitcommit: c0dd436f6f8f44dc80dc43b07f6841a00b74b23f
+ms.openlocfilehash: eab3cdf02493c9700f8402d138fc040553a6201d
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 01/19/2018
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="target-folder-is-a-file"></a>目標資料夾是一個檔案
 嘗試執行資料夾相關動作時，您將指定檔案。  
@@ -21,7 +15,7 @@ ms.lasthandoff: 01/19/2018
   
 -   請檢查所提供的路徑，確定您將指定資料夾，而非檔案。  
   
-## <a name="see-also"></a>請參閱  
+## <a name="see-also"></a>另請參閱  
  [如何：剖析檔案路徑](../../visual-basic/developing-apps/programming/drives-directories-files/how-to-parse-file-paths.md)  
  [My.Computer.FileSystem](xref:Microsoft.VisualBasic.FileIO.FileSystem)  
  [建立、刪除和移動檔案和目錄](../../visual-basic/developing-apps/programming/drives-directories-files/creating-deleting-and-moving-files-and-directories.md)  

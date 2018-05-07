@@ -1,12 +1,6 @@
 ---
-title: "參數陣列 (Visual Basic)"
-ms.custom: 
+title: 參數陣列 (Visual Basic)
 ms.date: 07/20/2015
-ms.prod: .net
-ms.reviewer: 
-ms.suite: 
-ms.technology: devlang-visual-basic
-ms.topic: article
 helpviewer_keywords:
 - parameter arrays [Visual Basic], about parameter arrays
 - ParamArray keyword [Visual Basic], parameter arrays
@@ -16,14 +10,11 @@ helpviewer_keywords:
 - procedures [Visual Basic], indefinite number of argument values
 - arrays [Visual Basic], parameter arrays
 ms.assetid: c43edfae-9114-4096-9ebc-8c5c957a1067
-caps.latest.revision: "26"
-author: dotnet-bot
-ms.author: dotnetcontent
-ms.openlocfilehash: 8ca2b5f02ac4fb3eb613488c8a9852eb2aa4ce5d
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.openlocfilehash: a91da0d9e16ff11fdd4980588fee64b3e4a603c1
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="parameter-arrays-visual-basic"></a>參數陣列 (Visual Basic)
 通常，您無法呼叫具有多個引數數目比程序宣告指定的程序。 當您需要了不定數量的引數時，您可以宣告*參數陣列*，可讓程序以接受的參數值陣列。 您不必知道參數陣列中的項目數，當您定義的程序。 陣列大小取決於個別的程序的每個呼叫。  

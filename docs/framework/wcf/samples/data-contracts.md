@@ -1,27 +1,15 @@
 ---
-title: "資料合約"
-ms.custom: 
+title: 資料合約
 ms.date: 03/30/2017
-ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.technology: dotnet-clr
-ms.tgt_pltfrm: 
-ms.topic: article
 ms.assetid: 941049b6-8e98-497f-ab3f-19848241699f
-caps.latest.revision: "4"
-author: dotnet-bot
-ms.author: dotnetcontent
-manager: wpickett
-ms.workload: dotnet
-ms.openlocfilehash: abc6aafc5b7676a76db3416d8c88b25a836d21ad
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.openlocfilehash: fa70a725a5e3e9acdd177dbf1816b0bdfada62ff
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="data-contracts"></a>資料合約
-本節包含示範 [!INCLUDE[indigo1](../../../../includes/indigo1-md.md)] 中資料合約的範例。  
+本節包含示範資料合約中 Windows Communication Foundation (WCF) 的範例。  
   
 ## <a name="in-this-section"></a>本節內容  
  [基本資料合約](../../../../docs/framework/wcf/samples/basic-data-contract.md)  
@@ -37,7 +25,7 @@ ms.lasthandoff: 12/22/2017
  示範如何以傳址 (By Reference) 方式在伺服器和用戶端之間傳遞物件。  
   
  [POCO 支援](../../../../docs/framework/wcf/samples/poco-support.md)  
- 示範對未標記型別的序列化支援，此種型別就是尚未套用序列化屬性的型別，有時亦稱為「單純舊 CLR 物件」(Plain Old CLR Object，POCO) 型別。  
+ 示範對未標記型別的序列化支援，此種型別就是尚未套用序列化屬性的型別，有時亦稱為「簡單的 CLR 物件」(Plain Old CLR Object，POCO) 型別。  
   
  [使用序列化繫結器](../../../../docs/framework/wcf/samples/usage-of-serialization-binder.md)  
  此範例示範如何使用 <xref:System.Runtime.Serialization.SerializationBinder> 變更序列化時一般類型的版本。

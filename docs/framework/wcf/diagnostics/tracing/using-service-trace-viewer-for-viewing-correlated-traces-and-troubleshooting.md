@@ -1,30 +1,18 @@
 ---
-title: "使用服務追蹤檢視器檢視相關追蹤並進行疑難排解"
-ms.custom: 
+title: 使用服務追蹤檢視器檢視相關追蹤並進行疑難排解
 ms.date: 03/30/2017
-ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.technology: dotnet-clr
-ms.tgt_pltfrm: 
-ms.topic: article
 ms.assetid: 05d2321c-8acb-49d7-a6cd-8ef2220c6775
-caps.latest.revision: "22"
-author: dotnet-bot
-ms.author: dotnetcontent
-manager: wpickett
-ms.workload: dotnet
-ms.openlocfilehash: 13c862c8191a9bc312de743fc3ed99396c600f8f
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
-ms.translationtype: MT
+ms.openlocfilehash: bfc0d2c10bfdca253f2ce410a4cd38218b3f5cfe
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="using-service-trace-viewer-for-viewing-correlated-traces-and-troubleshooting"></a>使用服務追蹤檢視器檢視相關追蹤並進行疑難排解
 本主題說明追蹤資料的格式、檢視方式，以及如何使用服務追蹤檢視器來排解應用程式問題的方法。  
   
 ## <a name="using-the-service-trace-viewer-tool"></a>使用服務追蹤檢視器工具  
- [!INCLUDE[indigo1](../../../../../includes/indigo1-md.md)] 服務追蹤檢視器工具能夠協助您相互關聯 [!INCLUDE[indigo2](../../../../../includes/indigo2-md.md)] 接聽項所產生的診斷追蹤，以找到問題的根本原因。 此工具可讓您輕鬆檢視、群組與篩選追蹤，方便您診斷、修復與驗證 [!INCLUDE[indigo2](../../../../../includes/indigo2-md.md)] 服務的相關問題。 如需有關使用此工具的詳細資訊，請參閱[服務追蹤檢視器工具 (SvcTraceViewer.exe)](../../../../../docs/framework/wcf/service-trace-viewer-tool-svctraceviewer-exe.md)。  
+ Windows Communication Foundation (WCF) 服務追蹤檢視器工具可協助您相互關聯所產生的診斷追蹤[!INCLUDE[indigo2](../../../../../includes/indigo2-md.md)]接聽程式，以找出根本原因的錯誤。 此工具可讓您輕鬆檢視、群組與篩選追蹤，方便您診斷、修復與驗證 [!INCLUDE[indigo2](../../../../../includes/indigo2-md.md)] 服務的相關問題。 如需有關使用此工具的詳細資訊，請參閱[服務追蹤檢視器工具 (SvcTraceViewer.exe)](../../../../../docs/framework/wcf/service-trace-viewer-tool-svctraceviewer-exe.md)。  
   
  本主題包含執行所產生的追蹤的螢幕擷取畫面[追蹤和訊息記錄](../../../../../docs/framework/wcf/samples/tracing-and-message-logging.md)取樣，請使用檢視時[服務追蹤檢視器工具 (SvcTraceViewer.exe)](../../../../../docs/framework/wcf/service-trace-viewer-tool-svctraceviewer-exe.md)。 本主題示範如何了解追蹤內容、活動與其相互關聯性，以及在排解疑難時如何分析大量的追蹤。  
   
@@ -209,7 +197,7 @@ WCF 用戶端與服務活動的圖形檢視
  ![使用追蹤檢視器](../../../../../docs/framework/wcf/diagnostics/tracing/media/e2etrace11.gif "e2eTrace11")  
 若要開始排解疑難，您也可以挑選紅色或黃色訊息追蹤，並連按兩下來追蹤根本原因。  
   
-## <a name="see-also"></a>請參閱  
+## <a name="see-also"></a>另請參閱  
  [端對端追蹤案例](../../../../../docs/framework/wcf/diagnostics/tracing/end-to-end-tracing-scenarios.md)  
  [服務追蹤檢視器工具 (SvcTraceViewer.exe)](../../../../../docs/framework/wcf/service-trace-viewer-tool-svctraceviewer-exe.md)  
  [追蹤](../../../../../docs/framework/wcf/diagnostics/tracing/index.md)

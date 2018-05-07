@@ -1,27 +1,15 @@
 ---
-title: "滑鼠輸入在 Windows Form 中的運作方式"
-ms.custom: 
+title: 滑鼠輸入在 Windows Form 中的運作方式
 ms.date: 03/30/2017
-ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.technology: dotnet-winforms
-ms.tgt_pltfrm: 
-ms.topic: article
 helpviewer_keywords:
 - Windows Forms, mouse input
 - mouse [Windows Forms], input
 ms.assetid: 48fc5240-75a6-44bf-9fce-6aa21b49705a
-caps.latest.revision: "16"
-author: dotnet-bot
-ms.author: dotnetcontent
-manager: wpickett
-ms.workload: dotnet
-ms.openlocfilehash: 388fd8d3e7f23dc55d46c5a097be99e9f1c34ab0
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.openlocfilehash: 265693eef3008362994ad04d9faaf8e20554d13e
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="how-mouse-input-works-in-windows-forms"></a>滑鼠輸入在 Windows Form 中的運作方式
 接收和處理滑鼠輸入為每個 Windows 應用程式中很重要的一部分。 您可以處理應用程式中執行動作的滑鼠事件，或使用滑鼠位置資訊來執行的點擊測試或其他動作。 此外，您可以變更您的應用程式中的控制項處理滑鼠輸入的方式。 本主題將描述這些中的滑鼠事件的詳細資料，以及如何取得及變更滑鼠的系統設定。 如需詳細資訊，使用滑鼠提供之資料的相關事件，以滑鼠按一下事件的順序引發，請參閱[Windows Form 中的滑鼠事件](../../../docs/framework/winforms/mouse-events-in-windows-forms.md)。  
@@ -63,7 +51,7 @@ ms.lasthandoff: 12/22/2017
 |<xref:System.Windows.Forms.SystemInformation.MouseWheelScrollDelta%2A>|取得單一滑鼠滾輪旋轉增量的差異值數量。|  
 |<xref:System.Windows.Forms.SystemInformation.MouseWheelScrollLines%2A>|取得轉動滑鼠滾輪時要捲動的行數。|  
   
-## <a name="see-also"></a>請參閱  
+## <a name="see-also"></a>另請參閱  
  [Windows Forms 應用程式中的滑鼠輸入](../../../docs/framework/winforms/mouse-input-in-a-windows-forms-application.md)  
  [Windows Forms 中的滑鼠捕捉](../../../docs/framework/winforms/mouse-capture-in-windows-forms.md)  
  [Windows Forms 中的滑鼠指標](../../../docs/framework/winforms/mouse-pointers-in-windows-forms.md)

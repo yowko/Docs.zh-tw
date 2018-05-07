@@ -1,28 +1,19 @@
 ---
-title: "實作 UI 自動化 Invoke 控制項模式"
-ms.custom: 
+title: 實作 UI 自動化 Invoke 控制項模式
 ms.date: 03/30/2017
-ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.technology: dotnet-bcl
-ms.tgt_pltfrm: 
-ms.topic: article
 helpviewer_keywords:
 - UI Automation, Invoke control pattern
 - control patterns, Invoke
 - Invoke control pattern
 ms.assetid: e5b1e239-49f8-468e-bfec-1fba02ec9ac4
-caps.latest.revision: "31"
 author: Xansky
 ms.author: mhopkins
 manager: markl
-ms.workload: dotnet
-ms.openlocfilehash: 1d40bc94887df604577c025181ae7f5f2776cdc1
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.openlocfilehash: 8ac28b481dc9e0749762a411502c8f9660cd0cd2
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="implementing-the-ui-automation-invoke-control-pattern"></a>實作 UI 自動化 Invoke 控制項模式
 > [!NOTE]
@@ -65,7 +56,7 @@ ms.lasthandoff: 12/22/2017
 ## <a name="required-members-for-iinvokeprovider"></a>IInvokeProvider 的必要成員  
  以下是實作 <xref:System.Windows.Automation.Provider.IInvokeProvider>的必要屬性和方法。  
   
-|必要成員|成員類型|備註|  
+|必要成員|成員類型|注意|  
 |----------------------|-----------------|-----------|  
 |<xref:System.Windows.Automation.Provider.IInvokeProvider.Invoke%2A>|方法|<xref:System.Windows.Automation.Provider.IInvokeProvider.Invoke%2A> 為非同步呼叫，且必須立即返回，不可封鎖。<br /><br /> 對於叫用時直接或間接啟動強制回應對話方塊的控制項，此行為尤其重要。 任何引發事件的使用者介面自動化用戶端都會維持封鎖的狀態，直到強制回應對話方塊關閉為止。|  
   
@@ -77,7 +68,7 @@ ms.lasthandoff: 12/22/2017
 |--------------------|---------------|  
 |<xref:System.Windows.Automation.ElementNotEnabledException>|如果未啟用此控制項。|  
   
-## <a name="see-also"></a>請參閱  
+## <a name="see-also"></a>另請參閱  
  [UI 自動化控制項模式概觀](../../../docs/framework/ui-automation/ui-automation-control-patterns-overview.md)  
  [支援 UI 自動化提供者的控制項模式](../../../docs/framework/ui-automation/support-control-patterns-in-a-ui-automation-provider.md)  
  [用戶端的 UI 自動化控制項模式](../../../docs/framework/ui-automation/ui-automation-control-patterns-for-clients.md)  

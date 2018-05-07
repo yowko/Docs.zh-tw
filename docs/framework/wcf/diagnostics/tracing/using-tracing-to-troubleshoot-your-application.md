@@ -1,24 +1,12 @@
 ---
-title: "使用追蹤來疑難排解應用程式"
-ms.custom: 
+title: 使用追蹤來疑難排解應用程式
 ms.date: 03/30/2017
-ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.technology: dotnet-clr
-ms.tgt_pltfrm: 
-ms.topic: article
 ms.assetid: 7676b9bb-cbd1-41fd-9a93-cc615af6e2d0
-caps.latest.revision: "11"
-author: dotnet-bot
-ms.author: dotnetcontent
-manager: wpickett
-ms.workload: dotnet
-ms.openlocfilehash: fb46ad5fe95405c78baf3173a982969e0e7092fd
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
-ms.translationtype: MT
+ms.openlocfilehash: 7613ff24161fd7dc159838fb232e2fc6742ab1a4
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="using-tracing-to-troubleshoot-your-application"></a>使用追蹤來疑難排解應用程式
 本節中的各個主題會說明如何使用追蹤來排解應用程式的問題。  
@@ -42,7 +30,7 @@ ms.lasthandoff: 12/22/2017
  [發出使用者程式碼追蹤](../../../../../docs/framework/wcf/diagnostics/tracing/emitting-user-code-traces.md)  
  說明如何透過使用者程式碼以程式設計方式發出追蹤，方便您主動建立檢測資料以便稍後用在診斷用途上，並與 WCF 追蹤產生關聯。  
   
-## <a name="see-also"></a>請參閱  
+## <a name="see-also"></a>另請參閱  
  [服務追蹤檢視器工具 (SvcTraceViewer.exe)](../../../../../docs/framework/wcf/service-trace-viewer-tool-svctraceviewer-exe.md)  
  [追蹤](../../../../../docs/framework/wcf/diagnostics/tracing/index.md)  
  [端對端追蹤](../../../../../docs/framework/wcf/diagnostics/tracing/end-to-end-tracing.md)

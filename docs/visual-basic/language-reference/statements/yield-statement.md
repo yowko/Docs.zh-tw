@@ -1,12 +1,6 @@
 ---
-title: "Yield 陳述式 (Visual Basic)"
+title: Yield 陳述式 (Visual Basic)
 ms.date: 07/20/2015
-ms.prod: .net
-ms.reviewer: 
-ms.suite: 
-ms.technology:
-- devlang-visual-basic
-ms.topic: article
 f1_keywords:
 - vb.Yield
 helpviewer_keywords:
@@ -14,14 +8,11 @@ helpviewer_keywords:
 - iterators [Visual Basic]
 - Yield statement [Visual Basic]
 ms.assetid: f33126c5-d7c4-43e2-8e36-4ae3f0703d97
-caps.latest.revision: 
-author: dotnet-bot
-ms.author: dotnetcontent
-ms.openlocfilehash: 0bc2f5c2dca1fbd6039f10ddd6204673f60a679d
-ms.sourcegitcommit: 34ec7753acf76f90a0fa845235ef06663dc9e36e
+ms.openlocfilehash: f938ad29df54ade6722f3de33e931c851ade8c21
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="yield-statement-visual-basic"></a>Yield 陳述式 (Visual Basic)
 傳送至集合的下一個項目`For Each...Next`陳述式。  
@@ -101,5 +92,5 @@ Next
   
  如需其他範例，請參閱[迭代器](../../programming-guide/concepts/iterators.md)。  
   
-## <a name="see-also"></a>請參閱  
+## <a name="see-also"></a>另請參閱  
  [陳述式](../../../visual-basic/language-reference/statements/index.md)

@@ -1,14 +1,6 @@
 ---
-title: "IMetaDataImport::EnumUnresolvedMethods 方法"
-ms.custom: 
+title: IMetaDataImport::EnumUnresolvedMethods 方法
 ms.date: 03/30/2017
-ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.technology:
-- dotnet-clr
-ms.tgt_pltfrm: 
-ms.topic: reference
 api_name:
 - IMetaDataImport.EnumUnresolvedMethods
 api_location:
@@ -23,17 +15,13 @@ helpviewer_keywords:
 ms.assetid: eb3187d7-74cf-44b1-aeeb-7a8d2b60e3b7
 topic_type:
 - apiref
-caps.latest.revision: 
 author: mairaw
 ms.author: mairaw
-manager: wpickett
-ms.workload:
-- dotnet
-ms.openlocfilehash: d4e77453fc11b77b602d4a89f0d90540c06b0a08
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.openlocfilehash: cfd53309b2b5e96e28e9e063a8adfda430864115
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="imetadataimportenumunresolvedmethods-method"></a>IMetaDataImport::EnumUnresolvedMethods 方法
 列舉 MemberDef 語彙基元，其代表目前中繼資料範圍內無法解析的方法。  
@@ -66,7 +54,7 @@ HRESULT EnumUnresolvedMethods (
   
 |HRESULT|描述|  
 |-------------|-----------------|  
-|`S_OK`|`EnumUnresolvedMethods`已成功傳回。|  
+|`S_OK`|`EnumUnresolvedMethods` 已成功傳回。|  
 |`S_FALSE`|沒有列舉語彙基元。 在此情況下，`pcTokens`為零。|  
   
 ## <a name="remarks"></a>備註  
@@ -81,8 +69,8 @@ HRESULT EnumUnresolvedMethods (
   
  **程式庫：**包含做為 MsCorEE.dll 中的資源  
   
- **.NET framework 版本：**[!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
+ **.NET framework 版本：** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
   
-## <a name="see-also"></a>請參閱  
+## <a name="see-also"></a>另請參閱  
  [IMetaDataImport 介面](../../../../docs/framework/unmanaged-api/metadata/imetadataimport-interface.md)  
  [IMetaDataImport2 介面](../../../../docs/framework/unmanaged-api/metadata/imetadataimport2-interface.md)

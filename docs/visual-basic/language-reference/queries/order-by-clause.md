@@ -1,11 +1,6 @@
 ---
-title: "Order By 子句 (Visual Basic)"
+title: Order By 子句 (Visual Basic)
 ms.date: 07/20/2015
-ms.prod: .net
-ms.reviewer: 
-ms.suite: 
-ms.technology: devlang-visual-basic
-ms.topic: article
 f1_keywords:
 - vb.QueryOrderBy
 - vb.QueryAscending
@@ -15,14 +10,11 @@ helpviewer_keywords:
 - Order By clause [Visual Basic]
 - Order By statement [Visual Basic]
 ms.assetid: fa911282-6b81-44c7-acfa-46b5bb93df75
-caps.latest.revision: "16"
-author: dotnet-bot
-ms.author: dotnetcontent
-ms.openlocfilehash: 21ee21942b966668a67b14aba72b8f9fc5ee903c
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.openlocfilehash: 7c60156ee81618530b42d5f61dbcac6f59c4f675
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="order-by-clause-visual-basic"></a>Order By 子句 (Visual Basic)
 指定查詢結果的排序次序。  
@@ -35,7 +27,7 @@ Order By orderExp1 [ Ascending | Descending ] [, orderExp2 [...] ]
   
 ## <a name="parts"></a>組件  
  `orderExp1`  
- 必要項。 一或多個從目前的查詢結果識別欄位如何排序傳回的值。 欄位名稱必須以逗號 （，） 分隔。 您可以識別每個欄位，為已排序，以遞增或遞減順序，使用`Ascending`或`Descending`關鍵字。 如果沒有`Ascending`或`Descending`關鍵字已指定，預設排序次序為遞增。 排序次序欄位可以從左到右的優先順序。  
+ 必要。 一或多個從目前的查詢結果識別欄位如何排序傳回的值。 欄位名稱必須以逗號 （，） 分隔。 您可以識別每個欄位，為已排序，以遞增或遞減順序，使用`Ascending`或`Descending`關鍵字。 如果沒有`Ascending`或`Descending`關鍵字已指定，預設排序次序為遞增。 排序次序欄位可以從左到右的優先順序。  
   
 ## <a name="remarks"></a>備註  
  您可以使用`Order By`子句來排序查詢的結果。 `Order By`子句只能排序結果，根據目前範圍的範圍變數。 例如，`Select`子句會導入新範圍與新的反覆項目變數的查詢運算式中針對該領域。 範圍變數之前定義`Select`在查詢中的子句之後沒有`Select`子句。 因此，如果您想要排序您的結果來依欄位中都沒有`Select`子句，您必須將`Order By`子句之前`Select`子句。 一個範例說明時，您就必須執行這項操作，當您想要排序查詢不會傳回結果的一部分的欄位。  

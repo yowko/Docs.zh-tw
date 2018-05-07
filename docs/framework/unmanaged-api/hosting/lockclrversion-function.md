@@ -1,14 +1,6 @@
 ---
-title: "LockClrVersion 函式"
-ms.custom: 
+title: LockClrVersion 函式
 ms.date: 03/30/2017
-ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.technology:
-- dotnet-clr
-ms.tgt_pltfrm: 
-ms.topic: reference
 api_name:
 - LockClrVersion
 api_location:
@@ -23,17 +15,13 @@ helpviewer_keywords:
 ms.assetid: 1318ee37-c43b-40eb-bbe8-88fc46453d74
 topic_type:
 - apiref
-caps.latest.revision: 
 author: rpetrusha
 ms.author: ronpet
-manager: wpickett
-ms.workload:
-- dotnet
-ms.openlocfilehash: a58d7e99f545026f6f133901ef35a1f9b9fabc7d
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.openlocfilehash: 6956d73be0380baef96d94584f007e0683331784
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="lockclrversion-function"></a>LockClrVersion 函式
 可讓主機判斷處理序中先明確初始化 CLR 使用的 common language runtime (CLR) 版本。  
@@ -69,7 +57,7 @@ HRESULT LockClrVersion (
 |E_INVALIDARG|一或多個引數為 null。|  
   
 ## <a name="remarks"></a>備註  
- 主機會呼叫`LockClrVersion`之前初始化 CLR。 `LockClrVersion`接受三個參數，都是類型的回呼[FLockClrVersionCallback](../../../../docs/framework/unmanaged-api/hosting/flockclrversioncallback-function-pointer.md)。 此類型定義，如下所示。  
+ 主機會呼叫`LockClrVersion`之前初始化 CLR。 `LockClrVersion` 接受三個參數，都是類型的回呼[FLockClrVersionCallback](../../../../docs/framework/unmanaged-api/hosting/flockclrversioncallback-function-pointer.md)。 此類型定義，如下所示。  
   
 ```  
 typedef HRESULT ( __stdcall *FLockClrVersionCallback ) ();  
@@ -85,7 +73,7 @@ typedef HRESULT ( __stdcall *FLockClrVersionCallback ) ();
   
     -   所指定的函數`pBeginHostSetup`參數。  
   
-    -   `CorBindToRuntimeEx`（或另一個執行階段初始化函式）。  
+    -   `CorBindToRuntimeEx` （或另一個執行階段初始化函式）。  
   
     -   [Iclrruntimehost:: Sethostcontrol](../../../../docs/framework/unmanaged-api/hosting/iclrruntimehost-sethostcontrol-method.md)。  
   
@@ -102,7 +90,7 @@ typedef HRESULT ( __stdcall *FLockClrVersionCallback ) ();
   
  **程式庫：** MSCorEE.dll  
   
- **.NET framework 版本：**[!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]  
+ **.NET framework 版本：** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]  
   
-## <a name="see-also"></a>請參閱  
+## <a name="see-also"></a>另請參閱  
  [已被取代的 CLR 裝載函式](../../../../docs/framework/unmanaged-api/hosting/deprecated-clr-hosting-functions.md)

@@ -1,17 +1,12 @@
 ---
 title: 函式 (F#)
 description: '深入了解在 F # 和 F # 支援的方式常見函式程式設計建構函式。'
-author: cartermp
-ms.author: phcart
 ms.date: 05/16/2016
-ms.topic: language-reference
-ms.prod: dotnet-fsharp
-ms.devlang: fsharp
-ms.openlocfilehash: 4cdab85dd63cc74a4c6e7abf660f8f32cc088120
-ms.sourcegitcommit: 03ee570f6f528a7d23a4221dcb26a9498edbdf8c
+ms.openlocfilehash: c96dddb07ca671a9e823fb25f6f6c3788fe32fd2
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/28/2018
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="functions"></a>函式
 

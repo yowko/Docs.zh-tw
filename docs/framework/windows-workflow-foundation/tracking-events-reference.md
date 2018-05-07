@@ -1,23 +1,12 @@
 ---
-title: "追蹤事件參考"
-ms.custom: 
+title: 追蹤事件參考
 ms.date: 03/30/2017
-ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.tgt_pltfrm: 
-ms.topic: article
 ms.assetid: c1c1ee87-f80a-449b-acd0-50d81eef116e
-caps.latest.revision: "23"
-author: dotnet-bot
-ms.author: dotnetcontent
-manager: wpickett
-ms.workload: dotnet
-ms.openlocfilehash: 5fba1e622a9be31f7db7bc0ccc05fda0997b12c2
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.openlocfilehash: 211cb1d059bbe969c4334ea995c5676b09a3846a
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="tracking-events-reference"></a>追蹤事件參考
 在 [!INCLUDE[netfx_current_short](../../../includes/netfx-current-short-md.md)] 中執行工作流程期間，會引發追蹤事件，因為工作流程會通過生命週期的各種階段。 主機可訂閱這些事件，並保持工作流程在其生命週期時的進度狀態更新。 本節中將討論引發的追蹤事件。  

@@ -1,22 +1,12 @@
 ---
-title: "如何： 比較兩個資料夾內容 (LINQ) (Visual Basic)"
-ms.custom: 
+title: 如何： 比較兩個資料夾內容 (LINQ) (Visual Basic)
 ms.date: 07/20/2015
-ms.prod: .net
-ms.reviewer: 
-ms.suite: 
-ms.technology: devlang-visual-basic
-ms.tgt_pltfrm: 
-ms.topic: article
 ms.assetid: 903c7e9a-f48d-4a07-a8a8-5450d2646efa
-caps.latest.revision: "3"
-author: dotnet-bot
-ms.author: dotnetcontent
-ms.openlocfilehash: a65b5f74e872cb4d2e459bc7ff866ca332706ef9
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.openlocfilehash: 02f05f540afb9dcb398cc63a16f0fbbb80a7f4cf
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="how-to-compare-the-contents-of-two-folders-linq-visual-basic"></a>如何： 比較兩個資料夾內容 (LINQ) (Visual Basic)
 本例示範三種比較兩個檔案清單的方式︰  

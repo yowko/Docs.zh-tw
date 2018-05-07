@@ -1,22 +1,12 @@
 ---
-title: "如何： 查詢 LINQ to XML 使用 XPath (Visual Basic)"
-ms.custom: 
+title: 如何： 查詢 LINQ to XML 使用 XPath (Visual Basic)
 ms.date: 07/20/2015
-ms.prod: .net
-ms.reviewer: 
-ms.suite: 
-ms.technology: devlang-visual-basic
-ms.tgt_pltfrm: 
-ms.topic: article
 ms.assetid: e1f69a20-1efa-452d-9089-c472fa84b3d5
-caps.latest.revision: "3"
-author: dotnet-bot
-ms.author: dotnetcontent
-ms.openlocfilehash: 97f885a76a79832b06f2f5d4a270d418bf244cb2
-ms.sourcegitcommit: bd1ef61f4bb794b25383d3d72e71041a5ced172e
+ms.openlocfilehash: d8f23bd8417c3f59377e5e677b08e403ecc1122d
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/18/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="how-to-query-linq-to-xml-using-xpath-visual-basic"></a>如何： 查詢 LINQ to XML 使用 XPath (Visual Basic)
 本主題說明可讓您使用 XPath 查詢 XML 樹狀結構的擴充方法。 如需有關使用這些擴充方法的詳細資訊，請參閱 <xref:System.Xml.XPath.Extensions?displayProperty=nameWithType>。  

@@ -1,13 +1,6 @@
 ---
-title: "在 Windows Form DataGridView 控制項中以 Just-In-Time 資料載入方式實作虛擬模式"
-ms.custom: 
+title: 在 Windows Form DataGridView 控制項中以 Just-In-Time 資料載入方式實作虛擬模式
 ms.date: 03/30/2017
-ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.technology: dotnet-winforms
-ms.tgt_pltfrm: 
-ms.topic: article
 dev_langs:
 - csharp
 - vb
@@ -19,16 +12,11 @@ helpviewer_keywords:
 - DataGridView control [Windows Forms], large data sets
 - virtual mode [Windows Forms], just-in-time data loading
 ms.assetid: c2a052b9-423c-4ff7-91dc-d8c7c79345f6
-caps.latest.revision: "13"
-author: dotnet-bot
-ms.author: dotnetcontent
-manager: wpickett
-ms.workload: dotnet
-ms.openlocfilehash: 2a830c11e8df73b71f16c1b9dfd1007461d910f5
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.openlocfilehash: ad3ec7fb2e0012459bcf597ac9abee76c20b767e
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="implementing-virtual-mode-with-just-in-time-data-loading-in-the-windows-forms-datagridview-control"></a>在 Windows Form DataGridView 控制項中以 Just-In-Time 資料載入方式實作虛擬模式
 若要實作中的虛擬模式的其中一個原因<xref:System.Windows.Forms.DataGridView>控制項是只有在需要時才擷取資料。 這稱為*以 just-in-time 資料載入*。  
@@ -81,7 +69,7 @@ ms.lasthandoff: 12/22/2017
   
  若要改善您的應用程式的捲動效能，您可以增加在本機儲存的資料量。 若要改善啟動時間，不過，您必須避免一開始載入太多資料。 您可能想要修改`Cache`類別以增加它可以儲存的資料頁數。 使用更多資料頁面，可以改善捲動效率，但是您必須判斷理想數目，視可用頻寬和伺服器延遲而定，資料頁中的資料列。 與較小的頁面，將更頻繁地存取伺服器，但需要較少的時間才能傳回要求的資料。 如果延遲過高的問題比頻寬，您可能想要使用較大的資料頁。  
   
-## <a name="see-also"></a>請參閱  
+## <a name="see-also"></a>另請參閱  
  <xref:System.Windows.Forms.DataGridView>  
  <xref:System.Windows.Forms.DataGridView.VirtualMode%2A>  
  [Windows Forms DataGridView 控制項中的效能微調](../../../../docs/framework/winforms/controls/performance-tuning-in-the-windows-forms-datagridview-control.md)  

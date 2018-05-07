@@ -1,30 +1,18 @@
 ---
-title: "使用 DataView 進行排序 (LINQ to DataSet)"
-ms.custom: 
+title: 使用 DataView 進行排序 (LINQ to DataSet)
 ms.date: 03/30/2017
-ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.technology: dotnet-ado
-ms.tgt_pltfrm: 
-ms.topic: article
 dev_langs:
 - csharp
 - vb
 ms.assetid: 885b3b7b-51c1-42b3-bb29-b925f4f69a6f
-caps.latest.revision: "2"
-author: douglaslMS
-ms.author: douglasl
-manager: craigg
-ms.workload: dotnet
-ms.openlocfilehash: e8eda365fa1970f4fa836440151cc1ba0d3ae9dd
-ms.sourcegitcommit: ed26cfef4e18f6d93ab822d8c29f902cff3519d1
+ms.openlocfilehash: 41f6f56765e1a623f8f2bdc8f2322589125d123e
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 01/17/2018
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="sorting-with-dataview-linq-to-dataset"></a>使用 DataView 進行排序 (LINQ to DataSet)
-根據特定準則來排序資料，然後透過 UI 控制項呈現資料給用戶端的功能是資料繫結的重要層面。 <xref:System.Data.DataView> 提供了許多方式來排序資料並傳回依據特定排序準則所排序的資料列。 除了以字串為基礎的排序功能以外，<xref:System.Data.DataView>也可讓您使用[!INCLUDE[vbteclinqext](../../../../includes/vbteclinqext-md.md)]排序準則的運算式。 [!INCLUDE[vbteclinq](../../../../includes/vbteclinq-md.md)]允許更複雜且功能強大的排序作業，比字串為基礎的排序運算式。 本主題將說明兩種使用 <xref:System.Data.DataView> 進行排序的方法。  
+根據特定準則來排序資料，然後透過 UI 控制項呈現資料給用戶端的功能是資料繫結的重要層面。 <xref:System.Data.DataView> 提供了許多方式來排序資料並傳回依據特定排序準則所排序的資料列。 除了以字串為基礎的排序功能以外，<xref:System.Data.DataView>也可讓您使用[!INCLUDE[vbteclinqext](../../../../includes/vbteclinqext-md.md)]排序準則的運算式。 [!INCLUDE[vbteclinq](../../../../includes/vbteclinq-md.md)] 允許更複雜且功能強大的排序作業，比字串為基礎的排序運算式。 本主題將說明兩種使用 <xref:System.Data.DataView> 進行排序的方法。  
   
 ## <a name="creating-dataview-from-a-query-with-sorting-information"></a>從含有排序資訊的查詢中建立 DataView  
  您可以從 <xref:System.Data.DataView> 查詢中建立 [!INCLUDE[linq_dataset](../../../../includes/linq-dataset-md.md)] 物件。 如果該查詢包含<xref:System.Linq.Enumerable.OrderBy%2A>， <xref:System.Linq.Enumerable.OrderByDescending%2A>， <xref:System.Linq.Enumerable.ThenBy%2A>，或<xref:System.Linq.Enumerable.ThenByDescending%2A>這些子句中的運算式排序中的資料時，可用做為基礎的子句<xref:System.Data.DataView>。 例如，如果查詢包含`Order By…`和`Then By…`子句，則產生<xref:System.Data.DataView>會指定兩個資料行來排序資料。  
@@ -92,7 +80,7 @@ ms.lasthandoff: 01/17/2018
  [!code-csharp[DP DataView Samples#LDVClearSort2](../../../../samples/snippets/csharp/VS_Snippets_ADO.NET/DP DataView Samples/CS/Form1.cs#ldvclearsort2)]
  [!code-vb[DP DataView Samples#LDVClearSort2](../../../../samples/snippets/visualbasic/VS_Snippets_ADO.NET/DP DataView Samples/VB/Form1.vb#ldvclearsort2)]  
   
-## <a name="see-also"></a>請參閱  
+## <a name="see-also"></a>另請參閱  
  [資料繫結和 LINQ to DataSet](../../../../docs/framework/data/adonet/data-binding-and-linq-to-dataset.md)  
  [使用 DataView 進行篩選](../../../../docs/framework/data/adonet/filtering-with-dataview-linq-to-dataset.md)  
  [排序資料](http://msdn.microsoft.com/library/6d76e2d7-b418-49b5-ac78-2bcd61169c48)

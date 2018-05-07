@@ -1,14 +1,6 @@
 ---
-title: "如何：編輯 TableLayoutPanel 控制項中的資料行和資料列"
-ms.custom: 
+title: 如何：編輯 TableLayoutPanel 控制項中的資料行和資料列
 ms.date: 03/30/2017
-ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.technology:
-- dotnet-winforms
-ms.tgt_pltfrm: 
-ms.topic: article
 f1_keywords:
 - net.ComponentModel.StyleCollectionEditor
 helpviewer_keywords:
@@ -16,17 +8,11 @@ helpviewer_keywords:
 - TableLayoutPanel control [Windows Forms], editing
 - rows [Windows Forms], editing
 ms.assetid: c367ed43-40dc-49eb-9e0f-ba70e83dfec0
-caps.latest.revision: 
-author: dotnet-bot
-ms.author: dotnetcontent
-manager: wpickett
-ms.workload:
-- dotnet
-ms.openlocfilehash: bf54a02a409bead598a4e98315d5709e55677f3b
-ms.sourcegitcommit: c0dd436f6f8f44dc80dc43b07f6841a00b74b23f
+ms.openlocfilehash: 763d5df6c49d45f7ee305f4a3be0a1f0a2539872
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 01/19/2018
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="how-to-edit-columns-and-rows-in-a-tablelayoutpanel-control"></a>如何：編輯 TableLayoutPanel 控制項中的資料行和資料列
 您可以使用集合編輯器 的<xref:System.Windows.Forms.TableLayoutPanel>控制項稱為**資料行和資料列樣式**對話方塊中，若要編輯的資料列和資料行的控制項。  
@@ -56,6 +42,6 @@ ms.lasthandoff: 01/19/2018
   
 8.  若要移除的資料列或資料行，請按一下**移除**按鈕來刪除目前選取的項目中**成員**清單。  
   
-## <a name="see-also"></a>請參閱  
+## <a name="see-also"></a>另請參閱  
  <xref:System.Windows.Forms.SizeType>  
  [TableLayoutPanel 控制項](../../../../docs/framework/winforms/controls/tablelayoutpanel-control-windows-forms.md)

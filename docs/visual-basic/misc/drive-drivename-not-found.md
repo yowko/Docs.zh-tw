@@ -1,23 +1,16 @@
 ---
-title: "磁碟機 &#39;&lt;drivename&gt;&#39; 找不到"
+title: 磁碟機&#39; &lt;drivename&gt; &#39;找不到
 ms.date: 07/20/2015
-ms.prod: .net
-ms.technology:
-- devlang-visual-basic
-ms.topic: article
 f1_keywords:
 - vbrFileSystem_DriveNotFound1
 ms.assetid: 0250e9f2-3470-4fe4-8fda-be4fbf2e2a30
-caps.latest.revision: 
-author: dotnet-bot
-ms.author: dotnetcontent
-ms.openlocfilehash: ea9234a11dfb1c040ef58c38d9dfc8a4f71ccb96
-ms.sourcegitcommit: 34ec7753acf76f90a0fa845235ef06663dc9e36e
+ms.openlocfilehash: a2417c8aa940034f75e37d9edfd7454b4f414199
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/04/2018
 ---
-# <a name="drive-39ltdrivenamegt39-not-found"></a>磁碟機 &#39;&lt;drivename&gt;&#39; 找不到
+# <a name="drive-39ltdrivenamegt39-not-found"></a>磁碟機&#39; &lt;drivename&gt; &#39;找不到
 找不到磁碟機。 您的網路連線已遺失，或是您嘗試存取的磁碟機離線或不存在。  
   
 ## <a name="to-correct-this-error"></a>更正這個錯誤  
@@ -30,6 +23,6 @@ ms.lasthandoff: 12/21/2017
   
 4.  重新連線到網路，然後再試一次。  
   
-## <a name="see-also"></a>請參閱  
+## <a name="see-also"></a>另請參閱  
  [錯誤類型](../../visual-basic/programming-guide/language-features/error-types.md)  
 

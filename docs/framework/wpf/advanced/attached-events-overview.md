@@ -1,13 +1,6 @@
 ---
-title: "附加事件概觀"
-ms.custom: 
+title: 附加事件概觀
 ms.date: 03/30/2017
-ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.technology: dotnet-wpf
-ms.tgt_pltfrm: 
-ms.topic: article
 dev_langs:
 - csharp
 - vb
@@ -19,16 +12,11 @@ helpviewer_keywords:
 - backing attached events with routed events [WPF]
 - attached events [WPF], definition
 ms.assetid: 2c40eae3-80e4-4a45-ae09-df6c9ab4d91e
-caps.latest.revision: "11"
-author: dotnet-bot
-ms.author: dotnetcontent
-manager: wpickett
-ms.workload: dotnet
-ms.openlocfilehash: fcfe0d97b86a27859d79685e035d8f3f765a965b
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.openlocfilehash: ae6d426d671c8bf034ebd86e768352914585d969
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="attached-events-overview"></a>附加事件概觀
 [!INCLUDE[TLA#tla_xaml](../../../../includes/tlasharptla-xaml-md.md)] 定義語言元件和稱為「附加事件」的事件類型。 附加事件的概念，讓您能新增特定事件的處理常式到任意項目，而不是實際定義或繼承事件的項目。 在此情況下，可能引發事件的物件和目的地處理執行個體都不會定義或以其他方式「擁有」事件。  
@@ -102,7 +90,7 @@ ms.lasthandoff: 12/22/2017
   
  不過，如果您要定義自訂的連接的事件，根據[!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)]模型為基礎的附加事件上<xref:System.Windows.RoutedEvent>，您可以使用<xref:System.Windows.UIElement.RaiseEvent%2A>引發任何附加的事件<xref:System.Windows.UIElement>或<xref:System.Windows.ContentElement>。 引發路由的事件 （或未附加） 需要您宣告特定的項目，在項目樹狀目錄中，做為事件來源。該來源回報為<xref:System.Windows.UIElement.RaiseEvent%2A>呼叫端。 判斷樹狀結構中的哪個項目報告為來源是服務的責任  
   
-## <a name="see-also"></a>請參閱  
+## <a name="see-also"></a>另請參閱  
  [路由事件概觀](../../../../docs/framework/wpf/advanced/routed-events-overview.md)  
  [XAML 語法詳細資料](../../../../docs/framework/wpf/advanced/xaml-syntax-in-detail.md)  
  [WPF 的 XAML 和自訂類別](../../../../docs/framework/wpf/advanced/xaml-and-custom-classes-for-wpf.md)

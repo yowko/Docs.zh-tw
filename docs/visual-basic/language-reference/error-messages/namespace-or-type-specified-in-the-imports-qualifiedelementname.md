@@ -1,28 +1,19 @@
 ---
-title: 命名空間或類型指定在匯入 &#39;&lt;完整項目名稱&gt;&#39; 沒有 &#39; t 包含任何 public 成員，或找不到
+title: 命名空間或類型指定在匯入&#39;&lt;完整項目名稱&gt;&#39;規定&#39;t 包含任何 public 成員，或找不到
 ms.date: 07/20/2015
-ms.prod: .net
-ms.reviewer: ''
-ms.suite: ''
-ms.technology:
-- devlang-visual-basic
-ms.topic: article
 f1_keywords:
 - bc40056
 - vbc40056
 helpviewer_keywords:
 - BC40056
 ms.assetid: b59f5754-444f-4378-9272-9678b437e84a
-caps.latest.revision: 8
-author: dotnet-bot
-ms.author: dotnetcontent
-ms.openlocfilehash: 49cd9fa5d5182b2cf2d7fc4623bc8e9aa02bf85e
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.openlocfilehash: 8be0df5cbe4b8d4a640c9b6c2e126b3828254fd6
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 05/04/2018
 ---
-# <a name="namespace-or-type-specified-in-the-imports-39ltqualifiedelementnamegt39-doesn39t-contain-any-public-member-or-cannot-be-found"></a>命名空間或類型指定在匯入 &#39;&lt;完整項目名稱&gt;&#39; 沒有 &#39; t 包含任何 public 成員，或找不到
+# <a name="namespace-or-type-specified-in-the-imports-39ltqualifiedelementnamegt39-doesn39t-contain-any-public-member-or-cannot-be-found"></a>命名空間或類型指定在匯入&#39;&lt;完整項目名稱&gt;&#39;規定&#39;t 包含任何 public 成員，或找不到
 中的匯入的命名空間或類型指定\<完整項目名稱 >' 不包含任何 public 成員，或是找不到。 請確定命名空間或類型已定義，而且包含至少一個 public 成員。 請確定別名名稱不包含其他別名。  
   
  `Imports`陳述式會指定包含的項目，或是無法找到未定義任何`Public`成員。  

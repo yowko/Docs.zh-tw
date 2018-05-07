@@ -1,24 +1,12 @@
 ---
-title: "網際網路資訊服務 (IIS) 伺服器憑證安裝指示"
-ms.custom: 
+title: 網際網路資訊服務 (IIS) 伺服器憑證安裝指示
 ms.date: 03/30/2017
-ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.technology: dotnet-clr
-ms.tgt_pltfrm: 
-ms.topic: article
 ms.assetid: 11281490-d2ac-4324-8f33-e7714611a34b
-caps.latest.revision: "18"
-author: dotnet-bot
-ms.author: dotnetcontent
-manager: wpickett
-ms.workload: dotnet
-ms.openlocfilehash: cfb168ae60765a57017aaec6bdedaf796491f602
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.openlocfilehash: 46d1acf758dd50b881527a16570a1e4a45933958
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="internet-information-services-iis-server-certificate-installation-instructions"></a>網際網路資訊服務 (IIS) 伺服器憑證安裝指示
 若要執行能與網際網路資訊服務 (IIS) 安全通訊的範例，您必須建立並安裝伺服器憑證。  
@@ -47,7 +35,7 @@ makecert -sr LocalMachine -ss My -n CN=ServiceModelSamples-HTTPS-Server -sky exc
   
      ![IIS 憑證精靈](../../../../docs/framework/wcf/samples/media/iiscertificate-wizard.GIF "IISCertificate_Wizard")  
   
-6.  在瀏覽器中使用 HTTPS 位址 https://localhost/servicemodelsamples/service.svc，測試對服務的存取。  
+6.  在瀏覽器中測試服務的存取權，使用 HTTPS 位址https://localhost/servicemodelsamples/service.svc。  
   
 #### <a name="if-ssl-was-previously-configured-by-using-httpcfgexe"></a>如果先前是使用 Httpcfg.exe 設定 SSL  
   
@@ -76,7 +64,7 @@ PermissiveCertificatePolicy.Enact("CN=ServiceModelSamples-HTTPS-Server");
   
 5.  選取**ServiceModelSamples HTTPS 伺服器**從**SSL 憑證**下拉式清單，然後按一下**確定**。  
   
-6.  在瀏覽器中使用 HTTPS 位址 https://localhost/servicemodelsamples/service.svc，測試對服務的存取。  
+6.  在瀏覽器中測試服務的存取權，使用 HTTPS 位址https://localhost/servicemodelsamples/service.svc。  
   
 > [!NOTE]
 >  因為您剛剛安裝的測試憑證不是受信任的憑證，您在瀏覽使用這個憑證保護的本機網址時，可能會碰到其他 Internet Explorer 安全性警告。  

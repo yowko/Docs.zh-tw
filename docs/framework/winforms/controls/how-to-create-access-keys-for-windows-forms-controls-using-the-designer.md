@@ -1,13 +1,6 @@
 ---
-title: "如何：使用設計工具建立 Windows Form 控制項的便捷鍵"
-ms.custom: 
+title: 如何：使用設計工具建立 Windows Form 控制項的便捷鍵
 ms.date: 03/30/2017
-ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.technology: dotnet-winforms
-ms.tgt_pltfrm: 
-ms.topic: article
 helpviewer_keywords:
 - controls [Windows Forms], access keys
 - Button control [Windows Forms], access keys
@@ -22,16 +15,11 @@ helpviewer_keywords:
 - access keys [Windows Forms], Windows Forms
 - ALT key
 ms.assetid: 4c374c4c-4ca9-4a68-ac96-9dc3ab0f518a
-caps.latest.revision: "5"
-author: dotnet-bot
-ms.author: dotnetcontent
-manager: wpickett
-ms.workload: dotnet
-ms.openlocfilehash: ed3bf2aa1e6081ca018f1b4dec98e6304a1aa95c
-ms.sourcegitcommit: c0dd436f6f8f44dc80dc43b07f6841a00b74b23f
+ms.openlocfilehash: 023973e7fa4ab1e8b802d8c7cd8abef8201ed720
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 01/19/2018
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="how-to-create-access-keys-for-windows-forms-controls-using-the-designer"></a>如何：使用設計工具建立 Windows Form 控制項的便捷鍵
 *便捷鍵*是功能表或功能表項目，例如按鈕控制項的標籤文字中加底線的字元。 它可讓使用者 「 按一下 」 按鈕，然後按下 ALT 鍵組合中的預先定義的存取金鑰。 例如，按鈕會執行程序來列印表單中，因此其`Text`屬性設定為"Print"，新增以連字號 (&)"P"字母"P"加上底線的按鈕文字會在執行期間造成的字母前面。 使用者可以執行命令與按鈕按下 ALT + P 關聯。 您不能有無法接收焦點的控制項的便捷鍵。  
@@ -41,9 +29,9 @@ ms.lasthandoff: 01/19/2018
   
 ### <a name="to-create-an-access-key-for-a-control"></a>若要建立控制項的便捷鍵  
   
-1.  在**屬性**視窗中，將`Text`屬性為字串，包含連字號 (&) 會成為存取索引鍵的字母前面。 例如，若要將設定字母"P"的存取金鑰，請輸入**& 列印**到方格內。  
+1.  在**屬性**視窗中，將`Text`屬性為字串，包含連字號 (&) 會成為存取索引鍵的字母前面。 例如，若要將設定字母"P"的存取金鑰，請輸入 **& 列印**到方格內。  
   
-## <a name="see-also"></a>請參閱  
+## <a name="see-also"></a>另請參閱  
  <xref:System.Windows.Forms.Button>  
  [操作說明：回應 Windows Forms Button 按一下動作](../../../../docs/framework/winforms/controls/how-to-respond-to-windows-forms-button-clicks.md)  
  [操作說明：設定由 Windows Forms 控制項所顯示的文字](../../../../docs/framework/winforms/controls/how-to-set-the-text-displayed-by-a-windows-forms-control.md)  

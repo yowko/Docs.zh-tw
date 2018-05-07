@@ -1,13 +1,6 @@
 ---
-title: "DataGrid 控制項 (Windows Form)"
-ms.custom: 
+title: DataGrid 控制項 (Windows Form)
 ms.date: 03/30/2017
-ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.technology: dotnet-winforms
-ms.tgt_pltfrm: 
-ms.topic: article
 helpviewer_keywords:
 - datasets [Windows Forms], user interface
 - DataGrid control [Windows Forms]
@@ -15,16 +8,11 @@ helpviewer_keywords:
 - displaying data [Windows Forms], on forms
 - data [Windows Forms], displaying on Windows Forms
 ms.assetid: 1d9d5683-43d2-42dd-b6c3-e43f4cf0de99
-caps.latest.revision: "20"
-author: dotnet-bot
-ms.author: dotnetcontent
-manager: wpickett
-ms.workload: dotnet
-ms.openlocfilehash: e0ad5ba4bdd283e411c746906adfed53282c55b9
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.openlocfilehash: 8618bfc691e86e8c609a6205ab44a891cc7e9f80
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="datagrid-control-windows-forms"></a>DataGrid 控制項 (Windows Form)
 > [!NOTE]
@@ -88,6 +76,6 @@ ms.lasthandoff: 12/22/2017
  [Windows Forms 資料繫結](../../../../docs/framework/winforms/windows-forms-data-binding.md)  
  提供 Windows Forms 中資料繫結主題的連結。  
   
-## <a name="see-also"></a>請參閱  
+## <a name="see-also"></a>另請參閱  
  [DataGridView 控制項](../../../../docs/framework/winforms/controls/datagridview-control-windows-forms.md)  
  [Windows Forms DataGridView 和 DataGrid 控制項之間的差異](../../../../docs/framework/winforms/controls/differences-between-the-windows-forms-datagridview-and-datagrid-controls.md)

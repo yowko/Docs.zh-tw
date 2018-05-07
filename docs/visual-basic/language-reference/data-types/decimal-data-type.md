@@ -1,11 +1,6 @@
 ---
 title: Decimal 資料類型 (Visual Basic)
 ms.date: 07/20/2015
-ms.prod: .net
-ms.suite: ''
-ms.technology:
-- devlang-visual-basic
-ms.topic: article
 f1_keywords:
 - vb.Decimal
 helpviewer_keywords:
@@ -25,14 +20,11 @@ helpviewer_keywords:
 - '@ identifier type character'
 - identifier type characters [Visual Basic], @
 ms.assetid: 1d855b45-afe2-45b0-a623-96b6f63a43d5
-caps.latest.revision: 20
-author: dotnet-bot
-ms.author: dotnetcontent
-ms.openlocfilehash: 55a9293fa680a7a04cff4099654d4d66790e8d3d
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.openlocfilehash: 9e256e93d7857c8674a1d711fa9cafd3ed9a29f5
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="decimal-data-type-visual-basic"></a>Decimal 資料類型 (Visual Basic)
 保存帶正負號的 128 位元 （16 位元） 值，表示以可變倍率 10 倍的 96 位元 （12 個位元組） 整數數字。 縮放比例指定小數點右邊位數的數目它的範圍是從 0 到 28。 小數位數為 0 （沒有小數位數），最大的可能值是 + /-79228162514264337593543950335 (+ /-7.9228162514264337593543950335E + 28)。 具有 28 的小數位數，最大值是 + /--7.9228162514264337593543950335，和最小的非零值是 + /-0.0000000000000000000000000001 （+ /-1E 28)。  
@@ -44,7 +36,7 @@ ms.lasthandoff: 11/21/2017
   
 ## <a name="programming-tips"></a>程式設計提示  
   
--   **有效位數。** `Decimal`不是浮點數資料類型。 `Decimal`結構包含二進位整數值，以及正負號位元和縮放比例，指定值的哪些部分是十進位小數的整數。 因為這個緣故，`Decimal`數字比浮點類型的記憶體中有更精確地表示法 (`Single`和`Double`)。  
+-   **有效位數。** `Decimal` 不是浮點數資料類型。 `Decimal`結構包含二進位整數值，以及正負號位元和縮放比例，指定值的哪些部分是十進位小數的整數。 因為這個緣故，`Decimal`數字比浮點類型的記憶體中有更精確地表示法 (`Single`和`Double`)。  
   
 -   **效能。** `Decimal`資料類型是最慢的所有數字的類型。 您應該衡量精確度和效能，再選擇的資料類型的重要性。  
   

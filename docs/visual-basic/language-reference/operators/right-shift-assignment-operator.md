@@ -1,12 +1,6 @@
 ---
 title: '&gt;&gt;= 運算子 (Visual Basic)'
 ms.date: 07/20/2015
-ms.prod: .net
-ms.reviewer: ''
-ms.suite: ''
-ms.technology:
-- devlang-visual-basic
-ms.topic: article
 f1_keywords:
 - vb.>>=
 helpviewer_keywords:
@@ -16,14 +10,11 @@ helpviewer_keywords:
 - compound assignment statements [Visual Basic]
 - '>>= operator [Visual Basic]'
 ms.assetid: 2bcd9abb-7a8c-4229-b75d-8816ff1dc700
-caps.latest.revision: 17
-author: dotnet-bot
-ms.author: dotnetcontent
-ms.openlocfilehash: 0e7e388471b9adf424c55b1ad1042e5aed1ea8ce
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.openlocfilehash: d0c0ea819741f80e30e55a960b1187699898a3bb
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="gtgt-operator-visual-basic"></a>&gt;&gt;= 運算子 (Visual Basic)
 執行算術右移位的變數或屬性的值，並將結果指派給變數或屬性。  
@@ -36,10 +27,10 @@ variableorproperty >>= amount
   
 ## <a name="parts"></a>組件  
  `variableorproperty`  
- 必要項。 變數或屬性的整數類型 (`SByte`， `Byte`， `Short`， `UShort`， `Integer`， `UInteger`， `Long`，或`ULong`)。  
+ 必要。 變數或屬性的整數類型 (`SByte`， `Byte`， `Short`， `UShort`， `Integer`， `UInteger`， `Long`，或`ULong`)。  
   
  `amount`  
- 必要項。 數值運算式的資料類型可擴展成`Integer`。  
+ 必要。 數值運算式的資料類型可擴展成`Integer`。  
   
 ## <a name="remarks"></a>備註  
  在左邊的項目`>>=`運算子可以是簡單的純量變數、 屬性或陣列的項目。 變數或屬性不可[ReadOnly](../../../visual-basic/language-reference/modifiers/readonly.md)。  

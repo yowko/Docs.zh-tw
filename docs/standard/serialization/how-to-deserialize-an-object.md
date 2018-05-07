@@ -1,12 +1,6 @@
 ---
-title: "HOW TO：還原序列化物件"
-ms.custom: 
+title: HOW TO：還原序列化物件
 ms.date: 03/30/2017
-ms.prod: .net
-ms.reviewer: 
-ms.suite: 
-ms.tgt_pltfrm: 
-ms.topic: article
 dev_langs:
 - csharp
 - vb
@@ -14,18 +8,11 @@ helpviewer_keywords:
 - deserializing objects
 - objects, deserializing steps
 ms.assetid: 287129c8-035a-4fea-b7b3-4790057ca076
-caps.latest.revision: "4"
-author: dotnet-bot
-ms.author: dotnetcontent
-manager: wpickett
-ms.workload:
-- dotnet
-- dotnetcore
-ms.openlocfilehash: 34f20e45c9e4c1a165c31208220e6bae9a77b7c1
-ms.sourcegitcommit: e7f04439d78909229506b56935a1105a4149ff3d
+ms.openlocfilehash: 957c332b3456e2b27aca36ef2bcabbc36b4e94e5
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 12/23/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="how-to-deserialize-an-object"></a>HOW TO：還原序列化物件
 當您還原序列化物件時，傳輸格式決定您會建立資料流或檔案物件。 決定傳輸格式後，您可視需要呼叫 <xref:System.Xml.Serialization.XmlSerializer.Serialize%2A> 或 <xref:System.Xml.Serialization.XmlSerializer.Deserialize%2A> 方法。  
@@ -63,6 +50,6 @@ ms.lasthandoff: 12/23/2017
     mySerializer.Deserialize(myFileStream)  
     ```  
   
-## <a name="see-also"></a>請參閱  
+## <a name="see-also"></a>另請參閱  
  [XML 序列化簡介](../../../docs/standard/serialization/introducing-xml-serialization.md)  
  [如何：序列化物件](../../../docs/standard/serialization/how-to-serialize-an-object.md)

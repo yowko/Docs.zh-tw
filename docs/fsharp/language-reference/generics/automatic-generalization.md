@@ -1,17 +1,12 @@
 ---
 title: 自動產生 (F#)
 description: '了解如何 F # 自動一般化的引數和類型的函式，讓它們能夠以盡可能多個類型。'
-author: cartermp
-ms.author: phcart
 ms.date: 05/16/2016
-ms.topic: language-reference
-ms.prod: dotnet-fsharp
-ms.devlang: fsharp
-ms.openlocfilehash: 9b599fd9fe1220b41987bc14a420ed5740aa05f5
-ms.sourcegitcommit: 03ee570f6f528a7d23a4221dcb26a9498edbdf8c
+ms.openlocfilehash: 858c8bab4a1a37f44a700744e70ebfa8a5abf12c
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/28/2018
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="automatic-generalization"></a>自動一般化
 

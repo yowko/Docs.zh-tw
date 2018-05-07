@@ -1,21 +1,14 @@
 ---
 title: 找不到具名引數 (Visual Basic)
 ms.date: 07/20/2015
-ms.prod: .net
-ms.technology:
-- devlang-visual-basic
-ms.topic: article
 f1_keywords:
 - vbrID448
 ms.assetid: b7d63962-9cac-466b-8bee-41debd7d79c7
-caps.latest.revision: 7
-author: dotnet-bot
-ms.author: dotnetcontent
-ms.openlocfilehash: cf3c609a2b50386497a0480b8a838bf197d7f46c
-ms.sourcegitcommit: bd1ef61f4bb794b25383d3d72e71041a5ced172e
+ms.openlocfilehash: 8516e43053cc9b6b67de763cdf775a859f33f680
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/18/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="named-argument-not-found-visual-basic"></a>找不到具名引數 (Visual Basic)
 除非具名引數出現在程序定義中，否則不能用於程序引動過程。 您已指定具名引數，但程序並未定義為接受該名稱的引數。  

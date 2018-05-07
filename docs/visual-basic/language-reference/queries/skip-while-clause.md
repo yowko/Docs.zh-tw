@@ -1,12 +1,6 @@
 ---
 title: Skip While 子句 (Visual Basic)
 ms.date: 07/20/2015
-ms.prod: .net
-ms.reviewer: ''
-ms.suite: ''
-ms.technology:
-- devlang-visual-basic
-ms.topic: article
 f1_keywords:
 - vb.QuerySkipWhile
 helpviewer_keywords:
@@ -14,14 +8,11 @@ helpviewer_keywords:
 - Skip While clause [Visual Basic]
 - queries [Visual Basic], Skip While
 ms.assetid: 5dee8350-7520-4f1a-b00d-590cacd572d6
-caps.latest.revision: 16
-author: dotnet-bot
-ms.author: dotnetcontent
-ms.openlocfilehash: f447a6d9b2eb58fa546ced6c96b987caf68fb3e5
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.openlocfilehash: 9d95dc4a9f61a9ec3a50f9d594b31d673c2d3764
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="skip-while-clause-visual-basic"></a>Skip While 子句 (Visual Basic)
 只要指定的條件為 `true`，即略過集合中的項目，然後傳回其餘項目。  
@@ -36,7 +27,7 @@ Skip While expression
   
 |詞彙|定義|  
 |---|---|  
-|`expression`|必要項。 表示要測試的項目條件的運算式。 此運算式必須傳回`Boolean`值或功能的同等權限，例如`Integer`評估成`Boolean`。|  
+|`expression`|必要。 表示要測試的項目條件的運算式。 此運算式必須傳回`Boolean`值或功能的同等權限，例如`Integer`評估成`Boolean`。|  
   
 ## <a name="remarks"></a>備註  
  `Skip While`子句會略過的項目從查詢結果的開始，直到提供`expression`傳回`false`。 之後`expression`傳回`false`，此查詢會傳回所有其餘的項目。 `expression`會忽略其餘的結果。  

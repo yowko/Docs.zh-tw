@@ -1,29 +1,17 @@
 ---
-title: "對話方塊控制項和元件 (Windows Form)"
-ms.custom: 
+title: 對話方塊控制項和元件 (Windows Form)
 ms.date: 03/30/2017
-ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.technology: dotnet-winforms
-ms.tgt_pltfrm: 
-ms.topic: article
 helpviewer_keywords:
 - CommonDialog control
 - Windows Forms dialog boxes [Windows Forms], predefined
 - dialog boxes [Windows Forms], Windows Forms
 - Windows Forms, dialog boxes
 ms.assetid: 6e5f5e9e-58d6-45f3-9df0-48b7bb6bfd5c
-caps.latest.revision: "11"
-author: dotnet-bot
-ms.author: dotnetcontent
-manager: wpickett
-ms.workload: dotnet
-ms.openlocfilehash: 3dbf95e54cbb2b6a729265ab39e99332d1cc1871
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.openlocfilehash: 351efadfa2c97e9f36610e251c1a2f935d02514b
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="dialog-box-controls-and-components-windows-forms"></a>對話方塊控制項和元件 (Windows Form)
 下列 Windows Form 控制項和元件提供標準的對話方塊。 如需每個對話方塊所提供之功能的詳細資訊，請參閱下列連結。  

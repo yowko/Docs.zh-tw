@@ -1,12 +1,6 @@
 ---
 title: Or 運算子 (Visual Basic)
 ms.date: 07/20/2015
-ms.prod: .net
-ms.reviewer: ''
-ms.suite: ''
-ms.technology:
-- devlang-visual-basic
-ms.topic: article
 f1_keywords:
 - vb.Or
 helpviewer_keywords:
@@ -21,14 +15,11 @@ helpviewer_keywords:
 - logical disjunction
 - disjunction operator [Visual Basic]
 ms.assetid: 41ed6905-bf3d-468a-9e3b-03c10d461891
-caps.latest.revision: 12
-author: dotnet-bot
-ms.author: dotnetcontent
-ms.openlocfilehash: 4c9429eb2bdeb86bfa73786433231fdc22a230d9
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.openlocfilehash: 9e02f619a81ee3c15321dfd44963c1a7d29843ab
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="or-operator-visual-basic"></a>Or 運算子 (Visual Basic)
 在兩個執行邏輯分離`Boolean`運算式或兩個數值運算式的位元分離。  
@@ -41,13 +32,13 @@ result = expression1 Or expression2
   
 ## <a name="parts"></a>組件  
  `result`  
- 必要項。 任何`Boolean`或數值運算式。 如`Boolean`比較，`result`是兩個內含邏輯分離`Boolean`值。 位元運算，如`result`是數字的值，表示兩個數值位元模式 （含） 的位元分離。  
+ 必要。 任何`Boolean`或數值運算式。 如`Boolean`比較，`result`是兩個內含邏輯分離`Boolean`值。 位元運算，如`result`是數字的值，表示兩個數值位元模式 （含） 的位元分離。  
   
  `expression1`  
- 必要項。 任何`Boolean`或數值運算式。  
+ 必要。 任何`Boolean`或數值運算式。  
   
  `expression2`  
- 必要項。 任何`Boolean`或數值運算式。  
+ 必要。 任何`Boolean`或數值運算式。  
   
 ## <a name="remarks"></a>備註  
  如`Boolean`比較，`result`是`False`並僅有兩個`expression1`和`expression2`評估為`False`。 下表將說明如何`result`決定。  

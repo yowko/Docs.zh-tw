@@ -1,11 +1,6 @@
 ---
-title: "Join 子句 (Visual Basic)"
+title: Join 子句 (Visual Basic)
 ms.date: 07/20/2015
-ms.prod: .net
-ms.reviewer: 
-ms.suite: 
-ms.technology: devlang-visual-basic
-ms.topic: article
 f1_keywords:
 - vb.QueryJoinIn
 - vb.QueryJoin
@@ -15,14 +10,11 @@ helpviewer_keywords:
 - Join statement [Visual Basic]
 - Join clause [Visual Basic]
 ms.assetid: 6dd37936-b27c-4e00-98ad-154b23f4de64
-caps.latest.revision: "19"
-author: dotnet-bot
-ms.author: dotnetcontent
-ms.openlocfilehash: 2bb25c9dac8994e7f975539c1d036f0f0d9d239e
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.openlocfilehash: 2186954ab6536988271629c4feba0a40563bfc3f
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="join-clause-visual-basic"></a>Join 子句 (Visual Basic)
 將兩個集合合併成單一集合。 根據相符索引鍵的聯結作業，並使用`Equals`運算子。  
@@ -38,19 +30,19 @@ On key1 Equals key2 [ And key3 Equals key4 [... ]
   
 ## <a name="parts"></a>組件  
  `element`  
- 必要項。 所要加入之控制項的變數。  
+ 必要。 所要加入之控制項的變數。  
   
  `collection`  
- 必要項。 結合集合所識別的左邊集合`Join`運算子。 A`Join`子句可以巢狀方式置於另一個`Join`子句，或在`Group Join`子句。  
+ 必要。 結合集合所識別的左邊集合`Join`運算子。 A`Join`子句可以巢狀方式置於另一個`Join`子句，或在`Group Join`子句。  
   
  `joinClause`  
- 選擇項。 一個以上的額外`Join`子句來進一步精簡查詢。  
+ 選擇性。 一個以上的額外`Join`子句來進一步精簡查詢。  
   
  `groupJoinClause`  
- 選擇項。 一個以上的額外`Group Join`子句來進一步精簡查詢。  
+ 選擇性。 一個以上的額外`Group Join`子句來進一步精簡查詢。  
   
  `key1` `Equals` `key2`  
- 必要項。 識別要聯結之集合的索引鍵。 您必須使用`Equals`運算子來比較所聯結之集合中的索引鍵。 您可以使用合併聯結條件`And`運算子來識別多個索引鍵。 `key1`從集合上的左側必須是`Join`運算子。 `key2`從集合中的右側必須是`Join`運算子。  
+ 必要。 識別要聯結之集合的索引鍵。 您必須使用`Equals`運算子來比較所聯結之集合中的索引鍵。 您可以使用合併聯結條件`And`運算子來識別多個索引鍵。 `key1` 從集合上的左側必須是`Join`運算子。 `key2` 從集合中的右側必須是`Join`運算子。  
   
  聯結條件中使用的索引鍵可以是包含一個以上的項目集合中的運算式。 不過，每個索引鍵的運算式可以包含從其各自集合的項目。  
   

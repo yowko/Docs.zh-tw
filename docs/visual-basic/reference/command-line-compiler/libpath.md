@@ -1,11 +1,6 @@
 ---
 title: -libpath
 ms.date: 03/10/2018
-ms.prod: .net
-ms.suite: ''
-ms.technology:
-- devlang-visual-basic
-ms.topic: article
 helpviewer_keywords:
 - libpath compiler option [Visual Basic]
 - /libpath compiler option [Visual Basic]
@@ -13,11 +8,11 @@ helpviewer_keywords:
 ms.assetid: 5f1c26c9-3455-4e89-bdf3-b12d6c2e655b
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: cff59d9b406045b4522d3a7d6e85528513214635
-ms.sourcegitcommit: 498799639937c89de777361aab74261efe7b79ea
+ms.openlocfilehash: a5044bc0093960fdf6b063450d8d3a57575ff07c
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 03/22/2018
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="-libpath"></a>-libpath
 指定的參考組件的位置。  

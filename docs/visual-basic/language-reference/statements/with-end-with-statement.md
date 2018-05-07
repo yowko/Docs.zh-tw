@@ -1,12 +1,6 @@
 ---
 title: With...End With 陳述式 (Visual Basic)
 ms.date: 07/20/2015
-ms.prod: .net
-ms.reviewer: ''
-ms.suite: ''
-ms.technology:
-- devlang-visual-basic
-ms.topic: article
 f1_keywords:
 - vb.With
 helpviewer_keywords:
@@ -21,14 +15,11 @@ helpviewer_keywords:
 - With block
 - End keyword [Visual Basic], With...End With statements
 ms.assetid: 340d5fbb-4f43-48ec-a024-80843c137817
-caps.latest.revision: 34
-author: dotnet-bot
-ms.author: dotnetcontent
-ms.openlocfilehash: aa1f416e1bfdf6cdb51b098c0e2bd5e9912cb309
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.openlocfilehash: 9c50d03454860979e3475cb381fefc2acc07cece
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="withend-with-statement-visual-basic"></a>With...End With 陳述式 (Visual Basic)
 執行一系列重複參考單一物件或結構的陳述式，使陳述式在存取物件或結構的成員時，可以使用簡化的語法。  使用結構時，您可以只讀取成員的值或叫用方法，如果嘗試指派值給 `With...End With` 陳述式中使用的結構成員，將會收到錯誤。  
@@ -45,9 +36,9 @@ End With
   
 |詞彙|定義|  
 |---|---|  
-|`objectExpression`|必要項。 判斷值為物件的運算式。 運算式可能會很複雜，而且只會評估一次。 運算式可以判斷值為任何資料類型，包括基礎類型。|  
-|`statements`|選擇項。 在 `With` 和 `End With` 之間的一個或多個陳述式，這些陳述式可能會參考由 `objectExpression` 的評估所產生之物件的成員。|  
-|`End With`|必要項。 終止 `With` 區塊的定義。|  
+|`objectExpression`|必要。 判斷值為物件的運算式。 運算式可能會很複雜，而且只會評估一次。 運算式可以判斷值為任何資料類型，包括基礎類型。|  
+|`statements`|選擇性。 在 `With` 和 `End With` 之間的一個或多個陳述式，這些陳述式可能會參考由 `objectExpression` 的評估所產生之物件的成員。|  
+|`End With`|必要。 終止 `With` 區塊的定義。|  
   
 ## <a name="remarks"></a>備註  
  您可以使用 `With...End With` 在指定的物件上執行一系列的陳述式，而不需多次指定物件的名稱。 在 `With` 陳述式區塊內，您可以指定以句號為開頭的物件成員，就如同 `With` 陳述式物件在其前方。  

@@ -1,22 +1,12 @@
 ---
-title: "程式設計手冊 (LINQ to XML) (Visual Basic)"
-ms.custom: 
+title: 程式設計手冊 (LINQ to XML) (Visual Basic)
 ms.date: 07/20/2015
-ms.prod: .net
-ms.reviewer: 
-ms.suite: 
-ms.technology: devlang-visual-basic
-ms.tgt_pltfrm: 
-ms.topic: article
 ms.assetid: f1f942bf-3404-4354-b4c5-4fe35e37a02b
-caps.latest.revision: "3"
-author: dotnet-bot
-ms.author: dotnetcontent
-ms.openlocfilehash: a68c72dd30059063c86dc79be0dfd5a470b9d72c
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.openlocfilehash: 70c169cecc8ca4ede30216bc832a8518766cd1a5
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="programming-guide-linq-to-xml-visual-basic"></a>程式設計手冊 (LINQ to XML) (Visual Basic)
 本節提供使用 [!INCLUDE[sqltecxlinq](~/includes/sqltecxlinq-md.md)] 進行程式設計的概念性和使用說明資訊。  
@@ -28,9 +18,9 @@ ms.lasthandoff: 11/21/2017
   
  [!INCLUDE[sqltecxlinq](~/includes/sqltecxlinq-md.md)] 大量依賴泛型類別。 因此，是非常重要的是了解使用泛型型別和類別。 如需詳細資訊，請參閱[Visual Basic 中的泛型類型](../../../../visual-basic/programming-guide/language-features/data-types/generic-types.md)。  
   
-## <a name="in-this-section"></a>本章節內容  
+## <a name="in-this-section"></a>本節內容  
   
-|主題|說明|  
+|主題|描述|  
 |-----------|-----------------|  
 |[LINQ to XML 程式設計概觀 (Visual Basic)](../../../../visual-basic/programming-guide/concepts/linq/linq-to-xml-programming-overview.md)|提供 [!INCLUDE[sqltecxlinq](~/includes/sqltecxlinq-md.md)] 類別的概觀，以及關於其中三個最重要類別的詳細資訊：<xref:System.Xml.Linq.XElement>、<xref:System.Xml.Linq.XAttribute> 和 <xref:System.Xml.Linq.XDocument>。|  
 |[建立 XML 樹狀結構 (Visual Basic)](../../../../visual-basic/programming-guide/concepts/linq/creating-xml-trees.md)|提供有關使用 XML 樹狀的概念性與工作型資訊。 您可以使用功能結構，或從字串或檔案剖析 XML 文字，藉以建立 XML 樹狀結構。 您也可以使用 <xref:System.Xml.XmlReader> 來填入 XML 樹狀結構。|  

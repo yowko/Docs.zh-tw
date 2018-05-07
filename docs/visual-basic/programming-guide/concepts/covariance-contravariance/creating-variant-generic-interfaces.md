@@ -1,22 +1,12 @@
 ---
-title: "建立 Variant 泛型介面 (Visual Basic)"
-ms.custom: 
+title: 建立 Variant 泛型介面 (Visual Basic)
 ms.date: 07/20/2015
-ms.prod: .net
-ms.reviewer: 
-ms.suite: 
-ms.technology: devlang-visual-basic
-ms.tgt_pltfrm: 
-ms.topic: article
 ms.assetid: d4037dd2-dfe9-4811-9150-93d4e8b20113
-caps.latest.revision: "3"
-author: dotnet-bot
-ms.author: dotnetcontent
-ms.openlocfilehash: 380af3b29172b1fa13d42d33e574201607cb804b
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.openlocfilehash: 9e79183cd75e3e222cfa82c6b8ca651eb99ffc02
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="creating-variant-generic-interfaces-visual-basic"></a>建立 Variant 泛型介面 (Visual Basic)
 您可以在介面中將泛型型別參數宣告為 Covariant 或 Contravariant。 「共變數」允許介面方法具有比泛型型別參數衍生程度更大的傳回型別。 「反變數」允許介面具有比泛型參數所指定引數型別衍生程度更小的引數類型。 具有 Covariant 或 Contravariant 泛型型別參數的泛型介面稱為「變異」。  
@@ -28,7 +18,7 @@ ms.lasthandoff: 11/21/2017
  您可以使用泛型型別參數的 `in` 和 `out` 關鍵字宣告 Variant 泛型介面。  
   
 > [!IMPORTANT]
->  `ByRef`在 Visual Basic 中的參數不可以是變數。 實值型別也不支援變異數。  
+>  `ByRef` 在 Visual Basic 中的參數不可以是變數。 實值型別也不支援變異數。  
   
  您可以使用 `out` 關鍵字將泛型型別參數宣告為 Covariant 。 Covariant 類型必須滿足下列條件︰  
   

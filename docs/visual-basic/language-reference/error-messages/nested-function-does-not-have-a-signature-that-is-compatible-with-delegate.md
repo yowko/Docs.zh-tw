@@ -1,28 +1,19 @@
 ---
-title: 巢狀函式沒有與委派 &#39; 相容的簽章&lt;delegatename&gt;&#39;
+title: 巢狀函式沒有與委派相容的簽章&#39;&lt;委派名稱&gt;&#39;
 ms.date: 07/20/2015
-ms.prod: .net
-ms.reviewer: ''
-ms.suite: ''
-ms.technology:
-- devlang-visual-basic
-ms.topic: article
 f1_keywords:
 - vbc36532
 - bc36532
 helpviewer_keywords:
 - BC36532
 ms.assetid: 493f292c-d81e-40ef-8b47-61f020571829
-caps.latest.revision: 5
-author: dotnet-bot
-ms.author: dotnetcontent
-ms.openlocfilehash: 60cf15343023110561da3e3fcf202bd00394127a
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.openlocfilehash: 94c53d30ad9aea9386fbb1be3e65fa31719f7a2f
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 05/04/2018
 ---
-# <a name="nested-function-does-not-have-a-signature-that-is-compatible-with-delegate-39ltdelegatenamegt39"></a>巢狀函式沒有與委派 &#39; 相容的簽章&lt;delegatename&gt;&#39;
+# <a name="nested-function-does-not-have-a-signature-that-is-compatible-with-delegate-39ltdelegatenamegt39"></a>巢狀函式沒有與委派相容的簽章&#39;&lt;委派名稱&gt;&#39;
 Lambda 運算式已被指派至具有相容簽章的委派。 例如，下列程式碼中，委派`Del`有兩個整數參數。  
   
 ```vb  

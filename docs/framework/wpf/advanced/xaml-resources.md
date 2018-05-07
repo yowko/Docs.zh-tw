@@ -1,29 +1,17 @@
 ---
-title: "XAML 資源"
-ms.custom: 
+title: XAML 資源
 ms.date: 03/30/2017
-ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.technology: dotnet-wpf
-ms.tgt_pltfrm: 
-ms.topic: article
 helpviewer_keywords:
 - reusing resources [WPF]
 - resources [WPF], reusing
 - reusing commonly defined objects [WPF]
 - XAML [WPF], reusing resources
 ms.assetid: 91580b89-a0a8-4889-aecb-fddf8e63175f
-caps.latest.revision: "33"
-author: dotnet-bot
-ms.author: dotnetcontent
-manager: wpickett
-ms.workload: dotnet
-ms.openlocfilehash: a2d58802bcdfa57bb7689e7406651fcc9829a7e5
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.openlocfilehash: 7b917b13909c463cd9d518d79bf8ce2683591dda
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="xaml-resources"></a>XAML 資源
 資源是可在應用程式中不同位置重複使用的物件。 資源的範例包括筆刷和樣式。 本概觀說明如何使用中的資源[!INCLUDE[TLA2#tla_xaml](../../../../includes/tla2sharptla-xaml-md.md)]。 您也可以建立及存取資源，使用程式碼，或交換使用程式碼之間和[!INCLUDE[TLA#tla_xaml](../../../../includes/tlasharptla-xaml-md.md)]。 如需詳細資訊，請參閱[資源和程式碼](../../../../docs/framework/wpf/advanced/resources-and-code.md)。  
@@ -162,9 +150,9 @@ ms.lasthandoff: 12/22/2017
   
  樣式的隱含索引鍵不會套用在控制項上如果<xref:System.Windows.FrameworkElement.OverridesDefaultStyle%2A>是`true`(也請注意，<xref:System.Windows.FrameworkElement.OverridesDefaultStyle%2A>可能設定為原生控制項類別，而不是明確的控制項執行個體上的行為的一部分)。 此外，為了支援隱含索引鍵在衍生的類別的情況下，控制項必須覆寫<xref:System.Windows.FrameworkElement.DefaultStyleKey%2A>(提供做為一部分的所有現有控制項[!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)]這麼做)。 如需有關樣式、 主題和控制項的設計的詳細資訊，請參閱[設計可設定樣式的控制項的指導方針](../../../../docs/framework/wpf/controls/guidelines-for-designing-stylable-controls.md)。  
   
- <xref:System.Windows.DataTemplate>也有隱含索引鍵。 隱含索引鍵<xref:System.Windows.DataTemplate>是<xref:System.Windows.DataTemplate.DataType%2A>屬性值。 <xref:System.Windows.DataTemplate.DataType%2A>也可以指定為型別名稱，而不是使用明確[{X:type...}](../../../../docs/framework/xaml-services/x-type-markup-extension.md). 如需詳細資訊，請參閱[資料範本化概觀](../../../../docs/framework/wpf/data/data-templating-overview.md)。  
+ <xref:System.Windows.DataTemplate> 也有隱含索引鍵。 隱含索引鍵<xref:System.Windows.DataTemplate>是<xref:System.Windows.DataTemplate.DataType%2A>屬性值。 <xref:System.Windows.DataTemplate.DataType%2A> 也可以指定為型別名稱，而不是使用明確[{X:type...}](../../../../docs/framework/xaml-services/x-type-markup-extension.md). 如需詳細資訊，請參閱[資料範本化概觀](../../../../docs/framework/wpf/data/data-templating-overview.md)。  
   
-## <a name="see-also"></a>請參閱  
+## <a name="see-also"></a>另請參閱  
  <xref:System.Windows.ResourceDictionary>  
  [應用程式資源](../../../../docs/framework/wpf/advanced/optimizing-performance-application-resources.md)  
  [資源和程式碼](../../../../docs/framework/wpf/advanced/resources-and-code.md)  

@@ -1,17 +1,12 @@
 ---
 title: 編譯器選項 (F#)
 description: '使用 F # 編譯器命令列選項來控制 F # 應用程式和程式庫編譯。'
-author: cartermp
-ms.author: phcart
 ms.date: 05/16/2016
-ms.topic: language-reference
-ms.prod: dotnet-fsharp
-ms.devlang: fsharp
-ms.openlocfilehash: 5feab5ff6d6c6179a67ba0cbc566c10475804e5f
-ms.sourcegitcommit: 03ee570f6f528a7d23a4221dcb26a9498edbdf8c
+ms.openlocfilehash: f4a596d0dede6f66faa34374f7f73a89323f1620
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/28/2018
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="compiler-options"></a>編譯器選項
 

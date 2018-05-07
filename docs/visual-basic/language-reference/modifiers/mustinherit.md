@@ -1,10 +1,6 @@
 ---
 title: MustInherit (Visual Basic)
 ms.date: 07/20/2015
-ms.prod: .net
-ms.suite: 
-ms.technology: devlang-visual-basic
-ms.topic: article
 f1_keywords:
 - MustInherit
 - vb.MustInherit
@@ -14,14 +10,11 @@ helpviewer_keywords:
 - abstract classes [Visual Basic], MustInherit class
 - MustInherit keyword [Visual Basic]
 ms.assetid: b8f05185-90e3-4dd7-adc2-90d852fab5b4
-caps.latest.revision: "15"
-author: dotnet-bot
-ms.author: dotnetcontent
-ms.openlocfilehash: 9d384986e42ee69a0f425c1590599aa2c82bc856
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.openlocfilehash: 5d622c1cff77a45c8de7772af7efbb73586f4400
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="mustinherit-visual-basic"></a>MustInherit (Visual Basic)
 指定類別可用只能當作基底類別，而且您無法直接從它建立物件。  
@@ -31,7 +24,7 @@ ms.lasthandoff: 11/21/2017
   
  另一個用途`MustInherit`類別是要限制一組相關的類別變數。 您可以定義基底類別，並從它衍生所有相關的類別。 基底類別不需要提供通用於所有的衍生類別中，任何功能，但它可以做為將值指派給變數的篩選。 如果您使用的程式碼會宣告一個變數為基底類別，Visual Basic 可讓您從一個衍生類別的物件只指派給該變數。  
   
- .NET Framework 會定義數個`MustInherit`類別，其間<xref:System.Array>， <xref:System.Enum>，和<xref:System.ValueType>。 <xref:System.ValueType>是基底類別，以限制變數的範例。 所有實值型別衍生自<xref:System.ValueType>。 如果您將變數宣告為<xref:System.ValueType>，您可以指派只有實值類型給該變數。  
+ .NET Framework 會定義數個`MustInherit`類別，其間<xref:System.Array>， <xref:System.Enum>，和<xref:System.ValueType>。 <xref:System.ValueType> 是基底類別，以限制變數的範例。 所有實值型別衍生自<xref:System.ValueType>。 如果您將變數宣告為<xref:System.ValueType>，您可以指派只有實值類型給該變數。  
   
 ## <a name="rules"></a>規則  
   
@@ -48,7 +41,7 @@ ms.lasthandoff: 11/21/2017
   
  因為它們會宣告為`shape`，變數`shape1`和`shape2`限於從衍生類別物件`circle`和`square`。 Visual Basic 不允許您將任何其他物件指派給這些變數時，它將提供高層級的型別安全。  
   
-## <a name="usage"></a>使用方式  
+## <a name="usage"></a>使用量  
  `MustInherit`修飾詞可用於此內容：  
   
  [Class 陳述式](../../../visual-basic/language-reference/statements/class-statement.md)  

@@ -1,25 +1,14 @@
 ---
 title: 以零為起始的 vs。在 Visual Basic 中的其中一個基礎字串存取
-ms.custom: ''
 ms.date: 07/20/2015
-ms.prod: .net
-ms.reviewer: ''
-ms.suite: ''
-ms.technology:
-- devlang-visual-basic
-ms.tgt_pltfrm: ''
-ms.topic: article
 helpviewer_keywords:
 - strings [Visual Basic], indexing
 ms.assetid: 0ed39f35-d68e-421d-ae14-460a5c0373b8
-caps.latest.revision: 11
-author: dotnet-bot
-ms.author: dotnetcontent
-ms.openlocfilehash: bbc418147a83b93f94449beb607d7f6bc3eff7a2
-ms.sourcegitcommit: 86adcc06e35390f13c1e372c36d2e044f1fc31ef
+ms.openlocfilehash: a0a42f72d94adf1c10865374017fa61e833df40f
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/26/2018
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="zero-based-vs-one-based-string-access-in-visual-basic"></a>以零為起始的 vs。在 Visual Basic 中的其中一個基礎字串存取
 本主題會比較方式 Visual Basic 和[!INCLUDE[dnprdnshort](~/includes/dnprdnshort-md.md)]提供字串中字元的權限。 [!INCLUDE[dnprdnshort](~/includes/dnprdnshort-md.md)]一律存取以零為起始的字元在字串中，而 Visual Basic 提供的以零為起始和一個型的存取，根據函式。  

@@ -1,11 +1,6 @@
 ---
-title: "SyncLock 陳述式"
+title: SyncLock 陳述式
 ms.date: 07/20/2015
-ms.prod: .net
-ms.reviewer: 
-ms.suite: 
-ms.technology: devlang-visual-basic
-ms.topic: article
 f1_keywords:
 - vb.SyncLock
 - SyncLock
@@ -14,14 +9,11 @@ helpviewer_keywords:
 - SyncLock statement [Visual Basic]
 - locks, threads
 ms.assetid: 14501703-298f-4d43-b139-c4b6366af176
-caps.latest.revision: "17"
-author: dotnet-bot
-ms.author: dotnetcontent
-ms.openlocfilehash: c363b41bb7a409c490a6e07d4a1a4f1bb44c1438
-ms.sourcegitcommit: 34ec7753acf76f90a0fa845235ef06663dc9e36e
+ms.openlocfilehash: cf2aad9ec2ba67200d175fbcddfcb49afeac6efc
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="synclock-statement"></a>SyncLock 陳述式
 取得陳述式區塊的獨佔鎖定之前執行的區塊。  
@@ -45,7 +37,7 @@ End SyncLock
  終止`SyncLock`區塊。  
   
 ## <a name="remarks"></a>備註  
- `SyncLock`陳述式可確保多個執行緒不會在同時執行的陳述式區塊。 `SyncLock`每個執行緒可防止輸入區塊，直到沒有其他執行緒正在執行它。  
+ `SyncLock`陳述式可確保多個執行緒不會在同時執行的陳述式區塊。 `SyncLock` 每個執行緒可防止輸入區塊，直到沒有其他執行緒正在執行它。  
   
  最常見的用法`SyncLock`是為了防止資料由多個執行緒同時更新。 如果操作資料的陳述式必須移至不受干擾完成，請將它們放在`SyncLock`區塊。  
   
@@ -98,7 +90,7 @@ End SyncLock
   
 ### <a name="comments"></a>註解  
   
-## <a name="see-also"></a>請參閱  
+## <a name="see-also"></a>另請參閱  
  <xref:System.Threading>  
  <xref:System.Threading.Monitor>  
  [執行緒同步處理](../../programming-guide/concepts/threading/thread-synchronization.md)  

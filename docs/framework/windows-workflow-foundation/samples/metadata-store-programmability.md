@@ -1,23 +1,12 @@
 ---
-title: "中繼資料存放區可程式性"
-ms.custom: 
+title: 中繼資料存放區可程式性
 ms.date: 03/30/2017
-ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.tgt_pltfrm: 
-ms.topic: article
 ms.assetid: 5b613661-f3f9-4e07-8e88-28c9ea2fd8f8
-caps.latest.revision: "15"
-author: dotnet-bot
-ms.author: dotnetcontent
-manager: wpickett
-ms.workload: dotnet
-ms.openlocfilehash: 2b8bfce17169a1095d2d2817467fcc8f3366ead3
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.openlocfilehash: 6efcb86e29f19a29d6ef382afa336d0ca2ce4306
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="metadata-store-programmability"></a>中繼資料存放區可程式性
 中繼資料存放區是讓任意中繼資料 (CLR 屬性形式) 與執行階段類型產生關聯的 [!INCLUDE[wfd1](../../../../includes/wfd1-md.md)] 功能。 這啟用執行階段元件與其設計階段對應項目之間的鬆散結合，也提供變更設計階段元件但不影響執行階段的能力。 此範例示範如何透過將屬性套用至我們沒有控制權的執行階段類型，對中繼資料存放區撰寫程式。 一般用語是主控應用程式註冊一組類型的中繼資料。  
@@ -45,6 +34,6 @@ ms.lasthandoff: 12/22/2017
 >   
 >  `<InstallDrive>:\WF_WCF_Samples`  
 >   
->  如果此目錄不存在，請移至 [Windows Communication Foundation (WCF) and Windows Workflow Foundation (WF) Samples for .NET Framework 4  (適用於 .NET Framework 4 的 Windows Communication Foundation (WCF) 與 Windows Workflow Foundation (WF) 範例)](http://go.microsoft.com/fwlink/?LinkId=150780) ，以下載所有 [!INCLUDE[indigo1](../../../../includes/indigo1-md.md)] 和 [!INCLUDE[wf1](../../../../includes/wf1-md.md)] 範例。 此範例位於下列目錄。  
+>  如果此目錄不存在，請移至[Windows Communication Foundation (WCF) 和適用於.NET Framework 4 的 Windows Workflow Foundation (WF) 範例](http://go.microsoft.com/fwlink/?LinkId=150780)下載所有 Windows Communication Foundation (WCF) 和[!INCLUDE[wf1](../../../../includes/wf1-md.md)]範例。 此範例位於下列目錄。  
 >   
 >  `<InstallDrive>:\WF_WCF_Samples\WF\Basic\CustomActivities\CustomActivityDesigners\MetadataStore`

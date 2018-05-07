@@ -1,12 +1,6 @@
 ---
-title: "程序多載化 (Visual Basic)"
-ms.custom: 
+title: 程序多載化 (Visual Basic)
 ms.date: 07/20/2015
-ms.prod: .net
-ms.reviewer: 
-ms.suite: 
-ms.technology: devlang-visual-basic
-ms.topic: article
 helpviewer_keywords:
 - signatures
 - Overloads keyword [Visual Basic]
@@ -23,14 +17,11 @@ helpviewer_keywords:
 - procedure overloading
 - procedures [Visual Basic], parameter lists
 ms.assetid: fbc7fb18-e3b2-48b6-b554-64c00ed09d2a
-caps.latest.revision: "24"
-author: dotnet-bot
-ms.author: dotnetcontent
-ms.openlocfilehash: 65fd5a6763752c616f13891bfa5acabff6115d7c
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.openlocfilehash: 0d1f2c4d8c88922659b3d91ed41d5e760e6e5233
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="procedure-overloading-visual-basic"></a>程序多載化 (Visual Basic)
 *多載*程序會表示定義在多個版本中，使用相同名稱但不同參數清單。 多載的用途是定義程序的數個密切相關的版本，而不需要加以區分名稱。 您可以不同的參數清單。  
@@ -56,13 +47,13 @@ ms.lasthandoff: 11/21/2017
   
 -   **項目不屬於簽章**。 您無法多載程序，而不改變簽章。 特別是，您無法只改變一個或多個下列項目來多載程序：  
   
-    -   程序修飾詞關鍵字，例如`Public`， `Shared`，和`Static`  
+    -   程序修飾詞關鍵字，例如`Public`， `Shared`，和 `Static`  
   
     -   參數或型別參數名稱  
   
     -   類型參數條件約束 （適用於泛型程序）  
   
-    -   參數修飾詞關鍵字，例如`ByRef`和`Optional`  
+    -   參數修飾詞關鍵字，例如`ByRef`和 `Optional`  
   
     -   傳回值  
   

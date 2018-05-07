@@ -1,22 +1,12 @@
 ---
-title: "如何： 尋找子項目 (XPATH-LINQ to XML) 的清單 (Visual Basic)"
-ms.custom: 
+title: 如何： 尋找子項目 (XPATH-LINQ to XML) 的清單 (Visual Basic)
 ms.date: 07/20/2015
-ms.prod: .net
-ms.reviewer: 
-ms.suite: 
-ms.technology: devlang-visual-basic
-ms.tgt_pltfrm: 
-ms.topic: article
 ms.assetid: 2868abfd-9f7b-412a-9cb5-f643f0fed146
-caps.latest.revision: "3"
-author: dotnet-bot
-ms.author: dotnetcontent
-ms.openlocfilehash: 110aa447a4804e5162eb45d3d59f12fb174e4473
-ms.sourcegitcommit: bd1ef61f4bb794b25383d3d72e71041a5ced172e
+ms.openlocfilehash: 9b852e2a1129dfc9c54357b6c20769e16a992d80
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/18/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="how-to-find-a-list-of-child-elements-xpath-linq-to-xml-visual-basic"></a>如何： 尋找子項目 (XPATH-LINQ to XML) 的清單 (Visual Basic)
 這個主題會比較 XPath 子項目座標軸與 [!INCLUDE[sqltecxlinq](~/includes/sqltecxlinq-md.md)] <xref:System.Xml.Linq.XContainer.Elements%2A> 座標軸。  

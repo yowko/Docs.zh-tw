@@ -1,12 +1,6 @@
 ---
-title: "XML 序列化簡介"
-ms.custom: 
+title: XML 序列化簡介
 ms.date: 03/30/2017
-ms.prod: .net
-ms.reviewer: 
-ms.suite: 
-ms.tgt_pltfrm: 
-ms.topic: article
 dev_langs:
 - csharp
 - vb
@@ -18,18 +12,11 @@ helpviewer_keywords:
 - DataSet class, serializing
 - XML Schema, serializing
 ms.assetid: 8c63200d-db63-4a03-a93d-21641623df62
-caps.latest.revision: "8"
-author: dotnet-bot
-ms.author: dotnetcontent
-manager: wpickett
-ms.workload:
-- dotnet
-- dotnetcore
-ms.openlocfilehash: 2f0e6091528987eb6798d3880bdb2190af337f8a
-ms.sourcegitcommit: e7f04439d78909229506b56935a1105a4149ff3d
+ms.openlocfilehash: 626bfa90f18bf110971d632f0a833cfa16d650a5
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 12/23/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="introducing-xml-serialization"></a>XML 序列化簡介
 序列化是將物件轉換成可輕易傳輸之形式的程序。 例如，您可序列化物件並透過網際網路以 HTTP 在用戶端與伺服器之間傳輸。 另一方面，還原序列化從資料流重建物件。  
@@ -180,7 +167,7 @@ public string MyToken;
   
 -   <xref:System.Xml.Serialization.XmlRootAttribute>  
   
-## <a name="see-also"></a>請參閱  
+## <a name="see-also"></a>另請參閱  
  <xref:System.Xml.Serialization.XmlSerializer>  
  <xref:System.Runtime.Serialization.DataContractSerializer>  
  <xref:System.IO.FileStream>  

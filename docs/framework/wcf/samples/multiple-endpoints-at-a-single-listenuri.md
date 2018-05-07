@@ -1,24 +1,12 @@
 ---
-title: "單一 ListenUri 的多個端點"
-ms.custom: 
+title: 單一 ListenUri 的多個端點
 ms.date: 03/30/2017
-ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.technology: dotnet-clr
-ms.tgt_pltfrm: 
-ms.topic: article
 ms.assetid: 911ffad4-4d47-4430-b7c2-79192ce6bcbd
-caps.latest.revision: "13"
-author: dotnet-bot
-ms.author: dotnetcontent
-manager: wpickett
-ms.workload: dotnet
-ms.openlocfilehash: 909fb35f9b8e4628df06918f207c3c86770a2d4e
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.openlocfilehash: f3eb2036ffbb7c5e8cae77ebc1a86e07d31626c9
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="multiple-endpoints-at-a-single-listenuri"></a>單一 ListenUri 的多個端點
 這個範例會示範在單一 `ListenUri` 裝載多個端點的服務。 這個範例根據[入門](../../../../docs/framework/wcf/samples/getting-started-sample.md)，用來實作計算機服務。  
@@ -50,7 +38,7 @@ ms.lasthandoff: 12/22/2017
   
  這三個端點都會裝載在相同的 `ListenUri`，並使用相同的 `binding`。相同 `ListenUri` 上的端點必須具有相同的繫結，這樣才可以共用接聽電腦上該實際位址之訊息的單一通道堆疊。 每個端點的 `address` 為 URN。雖然一般來說，位址表示實際位置，事實上位址可以是任何種類的 URI，因為位址的用途就是比對和篩選，如本範例所示。  
   
- 由於這三個端點都共用相同的 `ListenUri`，當訊息抵達該處時，[!INCLUDE[indigo1](../../../../includes/indigo1-md.md)] 必須決定訊息要傳送至的端點。 每個端點都具有由兩個部分組成的訊息篩選條件：位址篩選條件和合約篩選條件。 位址篩選條件會比對 SOAP 訊息的 `To` 和服務端點的位址。 例如，只有指定 `To "Urn:OtherEcho"` 的訊息是這個服務第三個端點的候選。 合約篩選條件會比對與特定合約作業相關聯的動作。 例如，具有 `IEcho` 動作的訊息。 `Echo` 會比對這個服務第二和第三個端點的合約篩選條件，因為這兩個端點都會裝載 `IEcho` 合約。  
+ 因為這三個端點共用相同`ListenUri`、 訊息抵達時，Windows Communication Foundation (WCF) 必須決定訊息傳送至哪一個端點。 每個端點都具有由兩個部分組成的訊息篩選條件：位址篩選條件和合約篩選條件。 位址篩選條件會比對 SOAP 訊息的 `To` 和服務端點的位址。 例如，只有指定 `To "Urn:OtherEcho"` 的訊息是這個服務第三個端點的候選。 合約篩選條件會比對與特定合約作業相關聯的動作。 例如，具有 `IEcho` 動作的訊息。 `Echo` 會比對這個服務第二和第三個端點的合約篩選條件，因為這兩個端點都會裝載 `IEcho` 合約。  
   
  因此，結合位址篩選條件和合約篩選條件之後，就可以將抵達這個服務之 `ListenUri` 的每個訊息路由至正確的端點。 第三個端點與其他兩個端點不同，它會接受從其他端點傳送至不同位址的訊息。 第一個和第二個端點可以依合約 (傳入訊息的動作) 區分。  
   
@@ -86,8 +74,8 @@ calcClient.ChannelFactory.Endpoint.Behaviors.Add(
 >   
 >  `<InstallDrive>:\WF_WCF_Samples`  
 >   
->  如果此目錄不存在，請移至 [Windows Communication Foundation (WCF) and Windows Workflow Foundation (WF) Samples for .NET Framework 4  (適用於 .NET Framework 4 的 Windows Communication Foundation (WCF) 與 Windows Workflow Foundation (WF) 範例)](http://go.microsoft.com/fwlink/?LinkId=150780) ，以下載所有 [!INCLUDE[indigo1](../../../../includes/indigo1-md.md)] 和 [!INCLUDE[wf1](../../../../includes/wf1-md.md)] 範例。 此範例位於下列目錄。  
+>  如果此目錄不存在，請移至[Windows Communication Foundation (WCF) 和適用於.NET Framework 4 的 Windows Workflow Foundation (WF) 範例](http://go.microsoft.com/fwlink/?LinkId=150780)下載所有 Windows Communication Foundation (WCF) 和[!INCLUDE[wf1](../../../../includes/wf1-md.md)]範例。 此範例位於下列目錄。  
 >   
 >  `<InstallDrive>:\WF_WCF_Samples\WCF\Basic\Services\MultipleEndpointsSingleUri`  
   
-## <a name="see-also"></a>請參閱
+## <a name="see-also"></a>另請參閱

@@ -1,24 +1,14 @@
 ---
 title: 何時使用列舉 (Visual Basic)
-ms.custom: ''
 ms.date: 07/20/2015
-ms.prod: .net
-ms.reviewer: ''
-ms.suite: ''
-ms.technology:
-- devlang-visual-basic
-ms.topic: article
 helpviewer_keywords:
 - enumerations [Visual Basic]
 ms.assetid: e6e47b5b-3ed9-452d-a481-9c3fed88519a
-caps.latest.revision: 12
-author: dotnet-bot
-ms.author: dotnetcontent
-ms.openlocfilehash: 5ab152687f4f9e4ba6bd032ae7c1352f65af715f
-ms.sourcegitcommit: 86adcc06e35390f13c1e372c36d2e044f1fc31ef
+ms.openlocfilehash: e50057e114abae9fbf05c94ef0b60cf94b033a2b
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/26/2018
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="when-to-use-an-enumeration-visual-basic"></a>何時使用列舉 (Visual Basic)
 列舉型別能夠讓您輕鬆與集合相關的常數。 列舉，或`Enum`，是一組值的符號名稱。 列舉型別會被視為資料類型，您可以使用它們來建立多組使用的常數與變數和屬性。  

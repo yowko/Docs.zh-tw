@@ -1,22 +1,12 @@
 ---
-title: "參數和傳回值的多執行緒程序 (Visual Basic)"
-ms.custom: 
+title: 參數和傳回值的多執行緒程序 (Visual Basic)
 ms.date: 07/20/2015
-ms.prod: .net
-ms.reviewer: 
-ms.suite: 
-ms.technology: devlang-visual-basic
-ms.tgt_pltfrm: 
-ms.topic: article
 ms.assetid: cbdce172-7ff6-41a9-bb21-53a7c6f538a5
-caps.latest.revision: "4"
-author: dotnet-bot
-ms.author: dotnetcontent
-ms.openlocfilehash: 071e0aa916e4b3464c7c0cbff6596cabc6b67906
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.openlocfilehash: 039e9be6f174148995a83c842a442806b9409a3f
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="parameters-and-return-values-for-multithreaded-procedures-visual-basic"></a>參數和傳回值的多執行緒程序 (Visual Basic)
 在多執行緒應用程式中提供和傳回值很複雜，因為執行緒類別的建構函式必須傳遞到不採用任何引數且不傳回任何值的程序參考。 下節會說明一些簡單的方法來提供參數，以及從不同執行緒的程序傳回值。  

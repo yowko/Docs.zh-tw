@@ -1,12 +1,6 @@
 ---
-title: "結構和其他程式設計項目 (Visual Basic)"
-ms.custom: 
+title: 結構和其他程式設計項目 (Visual Basic)
 ms.date: 07/20/2015
-ms.prod: .net
-ms.reviewer: 
-ms.suite: 
-ms.technology: devlang-visual-basic
-ms.topic: article
 helpviewer_keywords:
 - structures [Visual Basic], arrays
 - procedures [Visual Basic], structures as arguments to
@@ -14,14 +8,11 @@ helpviewer_keywords:
 - arrays [Visual Basic], structure elements
 - nested structures [Visual Basic]
 ms.assetid: 0f849313-ccd2-4c9a-acb9-69de6751c088
-caps.latest.revision: "13"
-author: dotnet-bot
-ms.author: dotnetcontent
-ms.openlocfilehash: de343c06ec255d6cb68aa25d733e85385e884769
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.openlocfilehash: 7b375c5a45998fc0bd06f7c075f23a30dd377295
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="structures-and-other-programming-elements-visual-basic"></a>結構和其他程式設計項目 (Visual Basic)
 您可以使用結構搭配陣列、 物件和程序，以及彼此搭配。 互動使用這些項目個別使用相同的語法。  

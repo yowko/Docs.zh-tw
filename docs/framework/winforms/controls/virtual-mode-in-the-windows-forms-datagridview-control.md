@@ -1,28 +1,14 @@
 ---
-title: "Windows Form DataGridView 控制項中的虛擬模式"
-ms.custom: 
+title: Windows Form DataGridView 控制項中的虛擬模式
 ms.date: 03/30/2017
-ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.technology:
-- dotnet-winforms
-ms.tgt_pltfrm: 
-ms.topic: article
 helpviewer_keywords:
 - DataGridView control [Windows Forms], virtual mode
 ms.assetid: feae5d43-2848-4b1a-8ea7-77085dc415b5
-caps.latest.revision: 
-author: dotnet-bot
-ms.author: dotnetcontent
-manager: wpickett
-ms.workload:
-- dotnet
-ms.openlocfilehash: 06c5bb1d4a36d51bb07d59b48c730f722af23f8c
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.openlocfilehash: 2e5724da4442bbfcb0928c864f78744b946acc18
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="virtual-mode-in-the-windows-forms-datagridview-control"></a>Windows Form DataGridView 控制項中的虛擬模式
 虛擬模式中，您可以管理之間的互動<xref:System.Windows.Forms.DataGridView>控制項和自訂資料快取。 若要實作虛擬模式時，設定<xref:System.Windows.Forms.DataGridView.VirtualMode%2A>屬性`true`並處理一個或多個本主題中所述的事件。 您通常會處理最少為`CellValueNeeded`事件，可讓資料快取中的值控制查閱。  
@@ -75,7 +61,7 @@ ms.lasthandoff: 12/22/2017
 ## <a name="best-practices-in-virtual-mode"></a>虛擬模式中的最佳作法  
  如果您要實作虛擬模式，才能有效地使用大量的資料，您也會想要確保您會使用有效率地<xref:System.Windows.Forms.DataGridView>控制本身。 儲存格樣式、 自動調整大小、 選取項目，和共用資料列的有效率地使用的相關資訊，請參閱[縮放 Windows Form DataGridView 控制項的最佳作法](../../../../docs/framework/winforms/controls/best-practices-for-scaling-the-windows-forms-datagridview-control.md)。  
   
-## <a name="see-also"></a>請參閱  
+## <a name="see-also"></a>另請參閱  
  <xref:System.Windows.Forms.DataGridView>  
  <xref:System.Windows.Forms.DataGridView.VirtualMode%2A>  
  [Windows Forms DataGridView 控制項中的效能微調](../../../../docs/framework/winforms/controls/performance-tuning-in-the-windows-forms-datagridview-control.md)  

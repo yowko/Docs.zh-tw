@@ -1,23 +1,12 @@
 ---
-title: "巢狀處理服務中的 TransactionScope"
-ms.custom: 
+title: 巢狀處理服務中的 TransactionScope
 ms.date: 03/30/2017
-ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.tgt_pltfrm: 
-ms.topic: article
 ms.assetid: e7e1ba64-1384-4eba-add8-415636e2d6d0
-caps.latest.revision: "7"
-author: dotnet-bot
-ms.author: dotnetcontent
-manager: wpickett
-ms.workload: dotnet
-ms.openlocfilehash: 1c4e51f65df010f466f43c2018d9b1eec6e4ca58
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.openlocfilehash: 9c556df417548ab348d1dd5bc642928ae68d8878
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="nesting-of-transactionscope-within-a-service"></a>巢狀處理服務中的 TransactionScope
 這個範例是由兩個執行的案例所組成，可示範如何在服務中處理 <xref:System.Activities.Statements.TransactionScope> 活動執行個體。 首先，交易是使用 <xref:System.Activities.Statements.TransactionScope> 活動 (可在用戶端建立新交易) 及 <xref:System.ServiceModel.Activities.TransactedReceiveScope> (可在伺服器上接收交易存留期及設定其範圍) 所起始。 服務內的第一個案例會執行次要 <xref:System.Activities.Statements.TransactionScope> 活動，以示範服務內 <xref:System.Activities.Statements.TransactionScope> 活動的巢狀結構。 第二個案例會示範如何在巢狀 <xref:System.Activities.Statements.TransactionScope> 活動內遵守逾時。  
@@ -43,6 +32,6 @@ ms.lasthandoff: 12/22/2017
 >   
 >  `<InstallDrive>:\WF_WCF_Samples`  
 >   
->  如果此目錄不存在，請移至 [Windows Communication Foundation (WCF) and Windows Workflow Foundation (WF) Samples for .NET Framework 4  (適用於 .NET Framework 4 的 Windows Communication Foundation (WCF) 與 Windows Workflow Foundation (WF) 範例)](http://go.microsoft.com/fwlink/?LinkId=150780) ，以下載所有 [!INCLUDE[indigo1](../../../../includes/indigo1-md.md)] 和 [!INCLUDE[wf1](../../../../includes/wf1-md.md)] 範例。 此範例位於下列目錄。  
+>  如果此目錄不存在，請移至[Windows Communication Foundation (WCF) 和適用於.NET Framework 4 的 Windows Workflow Foundation (WF) 範例](http://go.microsoft.com/fwlink/?LinkId=150780)下載所有 Windows Communication Foundation (WCF) 和[!INCLUDE[wf1](../../../../includes/wf1-md.md)]範例。 此範例位於下列目錄。  
 >   
 >  `<InstallDrive>:\WF_WCF_Samples\WF\Basic\Transactions\TRSComposability`

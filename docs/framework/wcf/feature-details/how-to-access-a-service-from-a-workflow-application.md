@@ -1,27 +1,15 @@
 ---
-title: "HOW TO：存取來自工作流程應用程式的服務"
-ms.custom: 
+title: HOW TO：存取來自工作流程應用程式的服務
 ms.date: 03/30/2017
-ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.technology: dotnet-clr
-ms.tgt_pltfrm: 
-ms.topic: article
 ms.assetid: 925ef8ea-5550-4c9d-bb7b-209e20c280ad
-caps.latest.revision: "8"
-author: dotnet-bot
-ms.author: dotnetcontent
-manager: wpickett
-ms.workload: dotnet
-ms.openlocfilehash: 0ffac399e3f7cb3f860128b072251131ac356a2a
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.openlocfilehash: 5f1ef07d92eea2b526259cd11caf56e45c83675d
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="how-to-access-a-service-from-a-workflow-application"></a>HOW TO：存取來自工作流程應用程式的服務
-本主題描述如何從工作流程主控台應用程式呼叫工作流程服務。 它相依於是否完成[How to： 使用訊息活動建立工作流程服務](../../../../docs/framework/wcf/feature-details/how-to-create-a-workflow-service-with-messaging-activities.md)主題。 雖然本主題描述如何從工作流程應用程式呼叫工作流程服務，但是同樣的方法也可以用來從工作流程應用程式呼叫任何 [!INCLUDE[indigo1](../../../../includes/indigo1-md.md)] 服務。  
+本主題描述如何從工作流程主控台應用程式呼叫工作流程服務。 它相依於是否完成[How to： 使用訊息活動建立工作流程服務](../../../../docs/framework/wcf/feature-details/how-to-create-a-workflow-service-with-messaging-activities.md)主題。 雖然本主題描述如何從工作流程應用程式呼叫工作流程服務，但是相同的方法可用來從工作流程應用程式呼叫的任何 Windows Communication Foundation (WCF) 服務。  
   
 ### <a name="create-a-workflow-console-application-project"></a>建立工作流程主控台應用程式專案  
   
@@ -73,7 +61,7 @@ ms.lasthandoff: 12/22/2017
   
 12. 按下 Ctrl+F5，同時啟動服務與用戶端。 ASP.NET 程式開發伺服器裝載的服務、 Internet Explorer 會顯示 WCF 說明頁面中，和用戶端工作流程應用程式會在主控台視窗中啟動，並顯示從服務 （"Hello，world"） 傳回的字串。  
   
-## <a name="see-also"></a>請參閱  
+## <a name="see-also"></a>另請參閱  
  [工作流程服務](../../../../docs/framework/wcf/feature-details/workflow-services.md)  
  [如何：使用傳訊活動建立工作流程服務](../../../../docs/framework/wcf/feature-details/how-to-create-a-workflow-service-with-messaging-activities.md)  
  [使用 WCF 服務，從工作流程中的 Web 專案](http://go.microsoft.com/fwlink/?LinkId=207725)

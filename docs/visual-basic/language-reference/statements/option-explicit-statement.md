@@ -1,11 +1,6 @@
 ---
-title: "Option Explicit 陳述式 (Visual Basic)"
+title: Option Explicit 陳述式 (Visual Basic)
 ms.date: 07/20/2015
-ms.prod: .net
-ms.reviewer: 
-ms.suite: 
-ms.technology: devlang-visual-basic
-ms.topic: article
 f1_keywords:
 - vb.Explicit
 - vb.OptionExplicit
@@ -16,14 +11,11 @@ helpviewer_keywords:
 - explicit variable declaration
 - Option Explicit statement [Visual Basic]
 ms.assetid: e82ac1ad-2cd3-49b2-b985-8bcf016f3fcc
-caps.latest.revision: "17"
-author: dotnet-bot
-ms.author: dotnetcontent
-ms.openlocfilehash: f3d4c9cd3310e0ec3943c4e2b5e28be5b9a393db
-ms.sourcegitcommit: 34ec7753acf76f90a0fa845235ef06663dc9e36e
+ms.openlocfilehash: 3a2d81b1441052c132e4739dfe6045f8c3a026d4
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="option-explicit-statement-visual-basic"></a>Option Explicit 陳述式 (Visual Basic)
 會強制明確宣告在檔案中，所有變數，或允許隱含宣告的變數。  
@@ -73,7 +65,7 @@ Option Explicit { On | Off }
   
  [!code-vb[VbVbalrStatements#48](../../../visual-basic/language-reference/error-messages/codesnippet/VisualBasic/option-explicit-statement_2.vb)]  
   
-## <a name="see-also"></a>請參閱  
+## <a name="see-also"></a>另請參閱  
  [Dim 陳述式](../../../visual-basic/language-reference/statements/dim-statement.md)  
  [ReDim 陳述式](../../../visual-basic/language-reference/statements/redim-statement.md)  
  [Option Compare 陳述式](../../../visual-basic/language-reference/statements/option-compare-statement.md)  

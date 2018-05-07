@@ -1,9 +1,6 @@
 ---
 title: Nothing (Visual Basic)
 ms.date: 07/20/2015
-ms.prod: .net
-ms.technology: devlang-visual-basic
-ms.topic: article
 f1_keywords:
 - Nothing
 - vb.Nothing
@@ -11,14 +8,11 @@ helpviewer_keywords:
 - Nothing keyword [Visual Basic]
 - Nothing keyword [Visual Basic], syntax
 ms.assetid: 06176e2d-bbf7-4a37-afaa-a86ad21ee99f
-caps.latest.revision: "31"
-author: dotnet-bot
-ms.author: dotnetcontent
-ms.openlocfilehash: 6932fee01ec6f39f67fb1a26a9a5b5cbd47d9767
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.openlocfilehash: fb1af7d748faac78b26177af453a0e858f9e97c3
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="nothing-visual-basic"></a>Nothing (Visual Basic)
 代表任何資料類型的預設值。 預設值是參考類型`null`參考。 對於實值類型的預設值取決於是否可為 null 的實值型別。  
@@ -27,7 +21,7 @@ ms.lasthandoff: 11/21/2017
 >  不可為 null 的實值型別，`Nothing`在 Visual Basic 中不同於`null`C# 中。 在 Visual Basic，如果您設定的非 null 值型別變數`Nothing`，此變數會設為其宣告類型的預設值。 在 C# 中，如果您指派的變數不可為 null 的實值型別`null`，就會發生編譯時期錯誤。  
   
 ## <a name="remarks"></a>備註  
- `Nothing`代表資料類型的預設值。 預設值取決於變數是否是實值類型或參考型別。  
+ `Nothing` 代表資料類型的預設值。 預設值取決於變數是否是實值類型或參考型別。  
   
  變數的*實值型別*直接包含其值。 實值型別包含所有的數值資料類型， `Boolean`， `Char`， `Date`，所有的結構，以及所有列舉型別。 變數的*參考型別*儲存在記憶體中物件的執行個體的參考。 參考類型包括類別、 陣列、 委派和字串。 如需詳細資訊，請參閱 [Value Types and Reference Types](../../visual-basic/programming-guide/language-features/data-types/value-types-and-reference-types.md)。  
   
@@ -53,7 +47,7 @@ ms.lasthandoff: 11/21/2017
   
  當您指派`Nothing`物件變數，即不再參考任何物件執行個體。 如果執行個體，之前已參考變數，將它設定為`Nothing`並不會終止執行個體本身。 終止執行個體，並與它相關聯的記憶體和系統資源之後才, 釋放記憶體回收行程 (GC) 偵測到沒有剩餘的作用中參考。  
   
- `Nothing`不同於<xref:System.DBNull>物件，代表未初始化的變數或不存在的資料庫資料行。  
+ `Nothing` 不同於<xref:System.DBNull>物件，代表未初始化的變數或不存在的資料庫資料行。  
   
 ## <a name="see-also"></a>另請參閱  
  [Dim 陳述式](../../visual-basic/language-reference/statements/dim-statement.md)  

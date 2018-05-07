@@ -2,14 +2,14 @@
 title: '&lt;allowAccounts&gt; 的 &lt;add&gt;'
 ms.date: 03/30/2017
 ms.assetid: 763c7b1f-e7b0-4d99-a42c-4506fcb8da00
-ms.openlocfilehash: 20e1052a0517bb170cf796dd40d58c298185a958
-ms.sourcegitcommit: 11f11ca6cefe555972b3a5c99729d1a7523d8f50
-ms.translationtype: HT
+ms.openlocfilehash: 2230b8d22a14c3df5eb3aa10872246febce015e9
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="ltaddgt-of-ltallowaccountsgt"></a>&lt;allowAccounts&gt; 的 &lt;add&gt;
-指定裝載 [!INCLUDE[indigo2](../../../../../includes/indigo2-md.md)] 服務並獲得共用服務連線存取權之處理序的使用者帳戶。  
+指定裝載 WCF 服務，且已授權可連線共用服務之處理序的使用者帳戶。  
   
  \<system.serviceModel.activation>  
   
@@ -37,7 +37,7 @@ ms.lasthandoff: 05/03/2018
   
 |項目|描述|  
 |-------------|-----------------|  
-|[\<allowAccounts>](../../../../../docs/framework/configure-apps/file-schema/wcf/allowaccounts.md)|組態項目的集合，其中包含 `securityIdentifier` 屬性，此屬性可為裝載 [!INCLUDE[indigo2](../../../../../includes/indigo2-md.md)] 服務且已授權可連線共用服務的處理序指定使用者帳戶。|  
+|[\<allowAccounts>](../../../../../docs/framework/configure-apps/file-schema/wcf/allowaccounts.md)|包含組態項目的集合`securityIdentifier`屬性來指定裝載 WCF 服務，且已授權可連線共用服務之處理序的使用者帳戶。|  
   
 ## <a name="example"></a>範例  
  下列組態範例會新增使用者帳戶的五個預設識別項到此集合中。  

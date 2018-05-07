@@ -1,29 +1,17 @@
 ---
-title: "如何：使用設計工具搭配 Windows Form TreeView 控制項加入和移除節點"
-ms.custom: 
+title: 如何：使用設計工具搭配 Windows Form TreeView 控制項加入和移除節點
 ms.date: 03/30/2017
-ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.technology: dotnet-winforms
-ms.tgt_pltfrm: 
-ms.topic: article
 helpviewer_keywords:
 - examples [Windows Forms], TreeView control
 - TreeView control [Windows Forms], removing nodes
 - tree nodes in TreeView control
 - TreeView control [Windows Forms], adding nodes
 ms.assetid: 35bf1750-045e-4ec5-97cb-b47b0dbdaa2c
-caps.latest.revision: "7"
-author: dotnet-bot
-ms.author: dotnetcontent
-manager: wpickett
-ms.workload: dotnet
-ms.openlocfilehash: 067c36daef9649ee9a5da7945aa0202fb684b830
-ms.sourcegitcommit: c0dd436f6f8f44dc80dc43b07f6841a00b74b23f
+ms.openlocfilehash: 2bf62601ae2257a098be0dc5c2cf8b5b1ba2b618
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 01/19/2018
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="how-to-add-and-remove-nodes-with-the-windows-forms-treeview-control-using-the-designer"></a>如何：使用設計工具搭配 Windows Form TreeView 控制項加入和移除節點
 因為 Windows Form<xref:System.Windows.Forms.TreeView>控制項會顯示節點階層的方式，加入節點，您必須注意到其父節點時。  
@@ -45,7 +33,7 @@ ms.lasthandoff: 01/19/2018
   
 4.  若要刪除的節點，選取要刪除，然後按一下 [節點**刪除**] 按鈕。  
   
-## <a name="see-also"></a>請參閱  
+## <a name="see-also"></a>另請參閱  
  [TreeView 控制項](../../../../docs/framework/winforms/controls/treeview-control-windows-forms.md)  
  [TreeView 控制項概觀](../../../../docs/framework/winforms/controls/treeview-control-overview-windows-forms.md)  
  [操作說明：設定 Windows Forms TreeView 控制項的圖示](../../../../docs/framework/winforms/controls/how-to-set-icons-for-the-windows-forms-treeview-control.md)  

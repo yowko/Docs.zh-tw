@@ -1,11 +1,6 @@
 ---
 title: Widening (Visual Basic)
 ms.date: 07/20/2015
-ms.prod: .net
-ms.suite: ''
-ms.technology:
-- devlang-visual-basic
-ms.topic: article
 f1_keywords:
 - vb.widening
 helpviewer_keywords:
@@ -15,14 +10,11 @@ helpviewer_keywords:
 - Widening keyword [Visual Basic]
 - data type conversion [Visual Basic]
 ms.assetid: 646ae263-94d3-40a2-b0cc-64f619292f56
-caps.latest.revision: 15
-author: dotnet-bot
-ms.author: dotnetcontent
-ms.openlocfilehash: 034099397c1d296a42712b8c202e2ac99a0fb43b
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.openlocfilehash: 2323aa38c81ce4e027f256d0e29c069f7ec77c00
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="widening-visual-basic"></a>Widening (Visual Basic)
 表示轉換運算子 (`CType`) 將類別或結構轉換成可容納原始類別或結構的所有可能值的類型。  

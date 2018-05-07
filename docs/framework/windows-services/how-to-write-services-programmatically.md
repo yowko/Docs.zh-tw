@@ -1,13 +1,6 @@
 ---
-title: "如何：以程式設計方式撰寫服務"
-ms.custom: 
+title: 如何：以程式設計方式撰寫服務
 ms.date: 03/30/2017
-ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.technology: dotnet-clr
-ms.tgt_pltfrm: 
-ms.topic: article
 dev_langs:
 - csharp
 - vb
@@ -15,16 +8,13 @@ helpviewer_keywords:
 - services, creating
 - Windows Service applications, creating
 ms.assetid: 3abbb2ec-78d2-41e6-b9f9-6662d4e2cdc7
-caps.latest.revision: "21"
 author: ghogen
-ms.author: ghogen
 manager: douge
-ms.workload: dotnet
-ms.openlocfilehash: cdb9c7bba564b71bfba86076218e48610cf73076
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.openlocfilehash: 99fd44723bba21127e2a5e0ba3e9bfc4b90b52d7
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="how-to-write-services-programmatically"></a>如何：以程式設計方式撰寫服務
 如果您選擇不使用 Windows 服務專案範本，您可以藉由建立繼承和其他基礎結構項目自行撰寫您自己的服務。 當您以程式設計方式建立服務時，您必須執行幾個範本會為您處理的步驟：  
@@ -41,7 +31,7 @@ ms.lasthandoff: 12/22/2017
   
     1.  在**方案總管 中**，以滑鼠右鍵按一下**參考**節點，然後按一下**加入參考**。  
   
-    2.  在**.NET Framework**索引標籤上，捲動到**System.dll**按一下**選取**。  
+    2.  在 **.NET Framework**索引標籤上，捲動到**System.dll**按一下**選取**。  
   
     3.  捲動到**System.ServiceProcess.dll**按一下**選取**。  
   
@@ -80,7 +70,7 @@ ms.lasthandoff: 12/22/2017
   
 10. 安裝服務。 如需詳細資訊，請參閱 [How to: Install and Uninstall Services](../../../docs/framework/windows-services/how-to-install-and-uninstall-services.md)。  
   
-## <a name="see-also"></a>請參閱  
+## <a name="see-also"></a>另請參閱  
  [Windows 服務應用程式簡介](../../../docs/framework/windows-services/introduction-to-windows-service-applications.md)  
  [如何：建立 Windows 服務](../../../docs/framework/windows-services/how-to-create-windows-services.md)  
  [如何：將 Installer 新增至服務應用程式](../../../docs/framework/windows-services/how-to-add-installers-to-your-service-application.md)  

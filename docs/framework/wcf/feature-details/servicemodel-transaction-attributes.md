@@ -1,31 +1,17 @@
 ---
-title: "ServiceModel 異動屬性"
-ms.custom: 
+title: ServiceModel 異動屬性
 ms.date: 03/30/2017
-ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.technology:
-- dotnet-clr
-ms.tgt_pltfrm: 
-ms.topic: article
 helpviewer_keywords:
 - transactions [WCF], ServiceModel attributes
 ms.assetid: 1e0d2436-6ae5-439b-9765-a448d6f60000
-caps.latest.revision: 
-author: dotnet-bot
-ms.author: dotnetcontent
-manager: wpickett
-ms.workload:
-- dotnet
-ms.openlocfilehash: aac52f3c542f88adbca40c6cbbdddc734e12903b
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.openlocfilehash: 79d97eee328d816281348b5b15cf779e1ee65893
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="servicemodel-transaction-attributes"></a>ServiceModel 異動屬性
-[!INCLUDE[indigo1](../../../../includes/indigo1-md.md)] 提供三個標準 <xref:System.ServiceModel> 屬性 (Attribute) 的屬性 (Property)，能夠讓您設定 [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] 服務的交易行為：  
+Windows Communication Foundation (WCF) 提供三個標準屬性<xref:System.ServiceModel>屬性，可讓您設定的 WCF 服務異動行為：  
   
 -   <xref:System.ServiceModel.TransactionFlowAttribute>  
   
@@ -50,9 +36,9 @@ ms.lasthandoff: 12/22/2017
 -   <xref:System.ServiceModel.ServiceBehaviorAttribute.TransactionTimeout%2A> 指定在服務所建立之新交易必須完成的時間間隔。 如果達到這個時間而交易尚未完成的話，交易就會中止。 <xref:System.TimeSpan> 會用來當做將 <xref:System.Transactions.TransactionScope> 設定為 <xref:System.ServiceModel.OperationBehaviorAttribute.TransactionScopeRequired%2A> 之任何作業，以及建立新交易的 `true` 逾時。 從建立交易到完成兩階段交易認可通訊協定中的階段 1，所允許的逾時期間上限。 所使用的逾時值永遠都是 <xref:System.ServiceModel.ServiceBehaviorAttribute.TransactionTimeout%2A> 屬性和 `transactionTimeout` 組態設定之間較低的值。  
   
 ## <a name="operationbehaviorattribute"></a>OperationBehaviorAttribute  
- <xref:System.ServiceModel.OperationBehaviorAttribute> 屬性指定服務實作中方法的行為。 您可以用來表示作業的特定執行行為。 這個屬性 (Attribute) 的屬性 (Property)，不會影響服務合約的 Web 服務描述語言 (WSDL) 描述，而且只是啟用常見功能 (否則程式設計人員必須自行實作功能) 之 [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] 程式設計模型的項目。  
+ <xref:System.ServiceModel.OperationBehaviorAttribute> 屬性指定服務實作中方法的行為。 您可以用來表示作業的特定執行行為。 這個屬性的屬性不會影響服務合約的 Web 服務描述語言 (WSDL) 描述，而且是單純的元素 WCF 程式設計模型可讓開發人員必須自行實作的通用功能。  
   
- 這個屬性 (Attribute) 有下列交易特定屬性 (Property)：  
+ 這個屬性 (Attribute) 有下列異動特定屬性 (Property)：  
   
 -   <xref:System.ServiceModel.OperationBehaviorAttribute.TransactionScopeRequired%2A> 指定方法是否必須在現用交易的範圍內執行。 預設值為 `false`。 如果沒有為方法設定 <xref:System.ServiceModel.OperationBehaviorAttribute> 屬性，這也表示該方法不會在交易中執行。 如果作業不需要交易範圍，則存在於訊息標頭中的任何交易都不會啟動，而且保持為 <xref:System.ServiceModel.OperationContext.IncomingMessageProperties%2A> 的 <xref:System.ServiceModel.OperationContext> 項目。 如果作業需要異動範圍，則異動來源會衍生自下列其中一個：  
   

@@ -1,29 +1,17 @@
 ---
-title: "Windows Form 控制項中的配置"
-ms.custom: 
+title: Windows Form 控制項中的配置
 ms.date: 03/30/2017
-ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.technology: dotnet-winforms
-ms.tgt_pltfrm: 
-ms.topic: article
 helpviewer_keywords:
 - layout [Windows Forms]
 - sizing [Windows Forms], automatic [Windows Forms]
 - Margin property [Windows Forms]
 - Padding property [Windws Forms]
 ms.assetid: 99400e3a-720e-4f56-b68f-89df911a251c
-caps.latest.revision: "7"
-author: dotnet-bot
-ms.author: dotnetcontent
-manager: wpickett
-ms.workload: dotnet
-ms.openlocfilehash: e9112269da02bd7eff9838509673db7adbc3fb53
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.openlocfilehash: 11db7b49f37b4367f31b2c27c61225f8f71bde80
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="layout-in-windows-forms-controls"></a>Windows Form 控制項中的配置
 對許多應用程式而言，控制項在表單上的精確位置是高優先順序。 <xref:System.Windows.Forms?displayProperty=nameWithType>命名空間提供您許多版面配置工具，可完成這項作業。  
@@ -51,7 +39,7 @@ ms.lasthandoff: 12/22/2017
  <xref:System.Windows.Forms.FlowLayoutPanel>  
  提供 <xref:System.Windows.Forms.FlowLayoutPanel> 控制項的參考文件。  
   
-## <a name="see-also"></a>請參閱  
+## <a name="see-also"></a>另請參閱  
  [操作說明：錨定和停駐 FlowLayoutPanel 控制項中的子控制項](../../../../docs/framework/winforms/controls/how-to-anchor-and-dock-child-controls-in-a-flowlayoutpanel-control.md)  
  [操作說明：錨定和停駐 TableLayoutPanel 控制項中的子控制項](../../../../docs/framework/winforms/controls/how-to-anchor-and-dock-child-controls-in-a-tablelayoutpanel-control.md)  
  [操作說明：設計可適當回應當地語系化的 Windows Forms 配置](../../../../docs/framework/winforms/controls/how-to-design-a-windows-forms-layout-that-responds-well-to-localization.md)  

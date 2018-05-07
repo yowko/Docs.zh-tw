@@ -1,13 +1,6 @@
 ---
 title: 屬性程序 (Visual Basic)
-ms.custom: ''
 ms.date: 07/20/2015
-ms.prod: .net
-ms.reviewer: ''
-ms.suite: ''
-ms.technology:
-- devlang-visual-basic
-ms.topic: article
 helpviewer_keywords:
 - Set statement [Visual Basic], Property procedures
 - Visual Basic code, procedures
@@ -20,14 +13,11 @@ helpviewer_keywords:
 - property procedures
 - Get statement [Visual Basic], property procedures
 ms.assetid: 46a98379-e1a2-45dd-a48c-b51213f5ab07
-caps.latest.revision: 22
-author: dotnet-bot
-ms.author: dotnetcontent
-ms.openlocfilehash: 0d9df6f381c89263aa16315fb06a2b3b0d645bbf
-ms.sourcegitcommit: 86adcc06e35390f13c1e372c36d2e044f1fc31ef
+ms.openlocfilehash: a0a73494c3573973d88823a7b5a5a83d2672e7d2
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/26/2018
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="property-procedures-visual-basic"></a>屬性程序 (Visual Basic)
 屬性程序是一系列的 Visual Basic 陳述式，以操作上模組、 類別或結構的自訂屬性。 屬性程序也稱為是*屬性存取子*。  

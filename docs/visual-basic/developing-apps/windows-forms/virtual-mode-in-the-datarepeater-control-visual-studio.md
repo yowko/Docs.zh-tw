@@ -1,10 +1,6 @@
 ---
-title: "DataRepeater 控制項中的虛擬模式 (Visual Studio)"
+title: DataRepeater 控制項中的虛擬模式 (Visual Studio)
 ms.date: 07/20/2015
-ms.prod: .net
-ms.suite: 
-ms.technology: devlang-visual-basic
-ms.topic: article
 dev_langs:
 - csharp
 - vb
@@ -13,14 +9,11 @@ helpviewer_keywords:
 - DataRepeater
 - DataRepeater, virtual mode
 ms.assetid: 5fb805dc-2d8b-4139-b1e3-86e4c2667221
-caps.latest.revision: "13"
-author: dotnet-bot
-ms.author: dotnetcontent
-ms.openlocfilehash: 4c85ce4541e32991bfa09b1436385281d27ad355
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.openlocfilehash: 7aa462f670c95f2d5996cf04b676bf09e9ec62b2
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="virtual-mode-in-the-datarepeater-control-visual-studio"></a>DataRepeater 控制項中的虛擬模式 (Visual Studio)
 當您想要顯示在表格式資料的大量<xref:Microsoft.VisualBasic.PowerPacks.DataRepeater>控制項，您可以藉由設定來改善效能<xref:Microsoft.VisualBasic.PowerPacks.DataRepeater.VirtualMode%2A>屬性`True`和明確地管理其資料來源的控制項的互動。 <xref:Microsoft.VisualBasic.PowerPacks.DataRepeater>控制項提供數個事件，您可以處理與資料來源進行互動，並視需要在執行階段顯示的資料。  

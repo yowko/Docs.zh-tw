@@ -1,10 +1,6 @@
 ---
 title: HOW TO：裝載和執行基本 Windows Communication Foundation 服務
 ms.date: 03/30/2017
-ms.prod: .net-framework
-ms.technology:
-- dotnet-clr
-ms.topic: article
 dev_langs:
 - csharp
 - vb
@@ -12,21 +8,16 @@ helpviewer_keywords:
 - WCF services [WCF]
 - WCF services [WCF], running
 ms.assetid: 31774d36-923b-4e2d-812e-aa190127266f
-author: dotnet-bot
-ms.author: dotnetcontent
-manager: wpickett
-ms.workload:
-- dotnet
-ms.openlocfilehash: d8c9fdefd286e32b169b96065e6164a236941133
-ms.sourcegitcommit: 94d33cadc5ff81d2ac389bf5f26422c227832052
+ms.openlocfilehash: 68e19d1decd4205f047c51456fe3f345e092a8ae
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/30/2018
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="how-to-host-and-run-a-basic-windows-communication-foundation-service"></a>HOW TO：裝載和執行基本 Windows Communication Foundation 服務
-這是在建立 [!INCLUDE[indigo1](../../../includes/indigo1-md.md)] 應用程式時必須進行的六個工作中的第三個。 六個工作的概觀，請參閱[入門教學課程](../../../docs/framework/wcf/getting-started-tutorial.md)主題。  
+這是建立 Windows Communication Foundation (WCF) 應用程式所需的六個工作的第三個。 六個工作的概觀，請參閱[入門教學課程](../../../docs/framework/wcf/getting-started-tutorial.md)主題。  
   
- 本主題說明如何在主控台應用程式中裝載 [!INCLUDE[indigo1](../../../includes/indigo1-md.md)] 服務。 這個程序包含下列步驟：  
+ 本主題描述如何將 Windows Communication Foundation (WCF) 服務裝載於主控台應用程式。 這個程序包含下列步驟：  
   
 -   建立主控台應用程式專案以裝載服務。  
   

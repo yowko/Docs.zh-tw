@@ -1,12 +1,6 @@
 ---
 title: And 運算子 (Visual Basic)
 ms.date: 07/20/2015
-ms.prod: .net
-ms.reviewer: ''
-ms.suite: ''
-ms.technology:
-- devlang-visual-basic
-ms.topic: article
 f1_keywords:
 - vb.And
 helpviewer_keywords:
@@ -19,14 +13,11 @@ helpviewer_keywords:
 - operators [Visual Basic], conjunction
 - bitwise comparison [Visual Basic]
 ms.assetid: 2ea711f3-439a-4c7c-9e3a-1ffe3b0d6046
-caps.latest.revision: 12
-author: dotnet-bot
-ms.author: dotnetcontent
-ms.openlocfilehash: 83e1f9df11152f88ef0db24a794026d6f5888a2e
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.openlocfilehash: e14dfd8ba200598084cad04d1faa05f3561f8dab
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="and-operator-visual-basic"></a>And 運算子 (Visual Basic)
 在兩個執行邏輯結合`Boolean`運算式或兩個數值運算式的位元結合。  
@@ -39,13 +30,13 @@ result = expression1 And expression2
   
 ## <a name="parts"></a>組件  
  `result`  
- 必要項。 任何`Boolean`或數值運算式。 布林比較，`result`是邏輯結合兩個`Boolean`值。 位元運算，如`result`是數字的值，表示兩個數值的位元模式位元結合。  
+ 必要。 任何`Boolean`或數值運算式。 布林比較，`result`是邏輯結合兩個`Boolean`值。 位元運算，如`result`是數字的值，表示兩個數值的位元模式位元結合。  
   
  `expression1`  
- 必要項。 任何`Boolean`或數值運算式。  
+ 必要。 任何`Boolean`或數值運算式。  
   
  `expression2`  
- 必要項。 任何`Boolean`或數值運算式。  
+ 必要。 任何`Boolean`或數值運算式。  
   
 ## <a name="remarks"></a>備註  
  布林比較，`result`是`True`並僅有兩個`expression1`和`expression2`評估為`True`。 下表將說明如何`result`決定。  

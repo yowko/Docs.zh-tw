@@ -1,28 +1,16 @@
 ---
-title: "如何：使用設計工具將 Windows Form 控制項和 BindingSource 元件加以繫結"
-ms.custom: 
+title: 如何：使用設計工具將 Windows Form 控制項和 BindingSource 元件加以繫結
 ms.date: 03/30/2017
-ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.technology: dotnet-winforms
-ms.tgt_pltfrm: 
-ms.topic: article
 helpviewer_keywords:
 - controls [Windows Forms], binding
 - BindingSource component [Windows Forms], binding controls
 - data binding [Windows Forms], BindingSource component
 ms.assetid: 391ae170-de5c-40f8-8233-91cb2ee4683a
-caps.latest.revision: "18"
-author: dotnet-bot
-ms.author: dotnetcontent
-manager: wpickett
-ms.workload: dotnet
-ms.openlocfilehash: 4cb803b3f08a2ac9bc2b0cb2dc6da2a72e92a0f7
-ms.sourcegitcommit: c0dd436f6f8f44dc80dc43b07f6841a00b74b23f
+ms.openlocfilehash: 3acbd17e8e969bb448e6deaf17dec23e44fa3bd4
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 01/19/2018
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="how-to-bind-windows-forms-controls-with-the-bindingsource-component-using-the-designer"></a>如何：使用設計工具將 Windows Form 控制項和 BindingSource 元件加以繫結
 您加入至您的表單控制項，並判斷您的應用程式的使用者介面之後，可以將控制項繫結至資料來源，以便在執行階段，使用者可以改變，並將儲存應用程式的相關資料。  
@@ -42,7 +30,7 @@ ms.lasthandoff: 01/19/2018
   
 2.  在**屬性**視窗：  
   
-    1.  展開**(DataBindings)**節點。  
+    1.  展開 **(DataBindings)** 節點。  
   
     2.  按一下箭號旁<xref:System.Windows.Forms.TextBox.Text%2A>屬性。  
   
@@ -70,7 +58,7 @@ ms.lasthandoff: 01/19/2018
   
      **DataSource** UI 類型編輯器關閉和資料集，<xref:System.Windows.Forms.BindingSource>和資料表配接器的特定資料連接會加入至您的表單。  
   
-## <a name="see-also"></a>請參閱  
+## <a name="see-also"></a>另請參閱  
  <xref:System.Windows.Forms.BindingSource>  
  <xref:System.Windows.Forms.BindingNavigator>  
  [新增資料來源](/visualstudio/data-tools/add-new-data-sources)  

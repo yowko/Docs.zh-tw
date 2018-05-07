@@ -1,25 +1,17 @@
 ---
-title: "My.Forms 物件"
+title: My.Forms 物件
 ms.date: 07/20/2015
-ms.prod: .net
-ms.suite: 
-ms.technology:
-- devlang-visual-basic
-ms.topic: article
 f1_keywords:
 - My.Forms
 - My.MyProject.Forms
 helpviewer_keywords:
 - My.Forms object
 ms.assetid: f6bff4e6-6769-4294-956b-037aa6106d2a
-caps.latest.revision: 
-author: dotnet-bot
-ms.author: dotnetcontent
-ms.openlocfilehash: fe548caacf2c8e7498e3b7abc814b4f89af9b3d6
-ms.sourcegitcommit: 34ec7753acf76f90a0fa845235ef06663dc9e36e
+ms.openlocfilehash: 4d6bb371b13dfb3fb735223b2a6a6a35e1416593
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="myforms-object"></a>My.Forms 物件
 提供存取目前的專案中所宣告的每個 Windows form 的執行個體的屬性。  
@@ -73,7 +65,7 @@ ms.lasthandoff: 12/21/2017
 |Windows 服務|否|  
 |網站|否|  
   
-## <a name="see-also"></a>請參閱  
+## <a name="see-also"></a>另請參閱  
  <xref:Microsoft.VisualBasic.ApplicationServices.WindowsFormsApplicationBase.OpenForms%2A>  
  <xref:System.Windows.Forms.Form>  
  <xref:System.Windows.Forms.Form.Close%2A>  

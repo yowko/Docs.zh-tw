@@ -1,24 +1,12 @@
 ---
 title: Visual 工作流程追蹤
-ms.custom: ''
 ms.date: 03/30/2017
-ms.prod: .net-framework
-ms.reviewer: ''
-ms.suite: ''
-ms.tgt_pltfrm: ''
-ms.topic: article
 ms.assetid: 0143448f-2044-40a0-8a3d-941f6d12468b
-caps.latest.revision: 10
-author: dotnet-bot
-ms.author: dotnetcontent
-manager: wpickett
-ms.workload:
-- dotnet
-ms.openlocfilehash: a185bb7a1e0d9d0d3466dc8e48cb0d0100702abe
-ms.sourcegitcommit: 11f11ca6cefe555972b3a5c99729d1a7523d8f50
-ms.translationtype: HT
+ms.openlocfilehash: f010bdcf6004e84fd346d0e8649c87c008cad122
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="visual-workflow-tracking"></a>Visual 工作流程追蹤
 這個範例示範如何使用透過 [!INCLUDE[netfx_current_short](../../../../includes/netfx-current-short-md.md)] 提供的偵錯功能，撰寫視覺化工作流程追蹤應用程式。  

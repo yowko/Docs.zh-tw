@@ -1,27 +1,15 @@
 ---
-title: "HOW TO：使用 WCF REST 程式設計模型建立接受任意資料的服務"
-ms.custom: 
+title: HOW TO：使用 WCF REST 程式設計模型建立接受任意資料的服務
 ms.date: 03/30/2017
-ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.technology: dotnet-clr
-ms.tgt_pltfrm: 
-ms.topic: article
 ms.assetid: e566c15a-b600-4e4a-be3a-4af43e767dae
-caps.latest.revision: "8"
-author: dotnet-bot
-ms.author: dotnetcontent
-manager: wpickett
-ms.workload: dotnet
-ms.openlocfilehash: 170149f5a6c495b3f22b9fd30f79ecdda87789b4
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.openlocfilehash: bc2643672743971da14c8bc4c75ac113f691bf4a
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="how-to-create-a-service-that-accepts-arbitrary-data-using-the-wcf-rest-programming-model"></a>HOW TO：使用 WCF REST 程式設計模型建立接受任意資料的服務
-有時候，開發人員必須要能夠完全控制資料從服務作業傳回的方式。 例如，服務作業必須以 [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] 不支援的格式傳回資料時。 本主題探討如何使用 [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] REST 程式設計模型建立接收任意資料的服務。  
+有時候，開發人員必須要能夠完全控制資料從服務作業傳回的方式。 服務作業必須傳回格式的資料不支援 byWCF 時，這種情況。 本主題說明如何使用 WCF REST 程式設計模型建立接收任意資料的服務。  
   
 ### <a name="to-implement-the-service-contract"></a>若要實作服務合約  
   
@@ -204,7 +192,7 @@ namespace ReceiveRawData
   
 -   編譯程式碼時，請參考 System.ServiceModel.dll 和 System.ServiceModel.Web.dll  
   
-## <a name="see-also"></a>請參閱  
+## <a name="see-also"></a>另請參閱  
  [UriTemplate 與 UriTemplateTable](../../../../docs/framework/wcf/feature-details/uritemplate-and-uritemplatetable.md)  
  [WCF Web HTTP 程式設計模型](../../../../docs/framework/wcf/feature-details/wcf-web-http-programming-model.md)  
  [WCF Web HTTP 程式設計模型概觀](../../../../docs/framework/wcf/feature-details/wcf-web-http-programming-model-overview.md)

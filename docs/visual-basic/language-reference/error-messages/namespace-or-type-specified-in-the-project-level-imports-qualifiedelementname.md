@@ -1,28 +1,19 @@
 ---
-title: 命名空間或專案層級 Imports &#39; 中指定的類型&lt;完整項目名稱&gt;&#39; 沒有 &#39; t 包含任何 public 成員，或找不到
+title: 在專案層級匯入指定的命名空間或類型&#39;&lt;完整項目名稱&gt;&#39;規定&#39;t 包含任何 public 成員，或找不到
 ms.date: 07/20/2015
-ms.prod: .net
-ms.reviewer: ''
-ms.suite: ''
-ms.technology:
-- devlang-visual-basic
-ms.topic: article
 f1_keywords:
 - vbc40057
 - bc40057
 helpviewer_keywords:
 - BC40057
 ms.assetid: 4ae3506e-2ebe-4ff3-995d-14ac60db5e9f
-caps.latest.revision: 10
-author: dotnet-bot
-ms.author: dotnetcontent
-ms.openlocfilehash: 0d0a164562524af239b3b130f681dbc6eff23814
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.openlocfilehash: d6d0c931262d892ec3e65888a76f25218b23d868
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 05/04/2018
 ---
-# <a name="namespace-or-type-specified-in-the-project-level-imports-39ltqualifiedelementnamegt39-doesn39t-contain-any-public-member-or-cannot-be-found"></a>命名空間或專案層級 Imports &#39; 中指定的類型&lt;完整項目名稱&gt;&#39; 沒有 &#39; t 包含任何 public 成員，或找不到
+# <a name="namespace-or-type-specified-in-the-project-level-imports-39ltqualifiedelementnamegt39-doesn39t-contain-any-public-member-or-cannot-be-found"></a>在專案層級匯入指定的命名空間或類型&#39;&lt;完整項目名稱&gt;&#39;規定&#39;t 包含任何 public 成員，或找不到
 在專案層級 Imports' 中指定的命名空間或類型\<完整項目名稱 >' 不包含任何 public 成員，或是找不到。 請確定命名空間或類型已定義，而且包含至少一個 public 成員。 請確定別名名稱不包含其他別名。  
   
  專案匯入屬性會指定包含的項目，或是無法找到未定義任何`Public`成員。  

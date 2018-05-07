@@ -1,12 +1,6 @@
 ---
 title: Not 運算子 (Visual Basic)
 ms.date: 07/20/2015
-ms.prod: .net
-ms.reviewer: ''
-ms.suite: ''
-ms.technology:
-- devlang-visual-basic
-ms.topic: article
 f1_keywords:
 - vb.Not
 helpviewer_keywords:
@@ -20,14 +14,11 @@ helpviewer_keywords:
 - logical negation
 - operators [Visual Basic], negation
 ms.assetid: 8f2ea83c-d2ed-480a-a474-3042a1cad9b5
-caps.latest.revision: 11
-author: dotnet-bot
-ms.author: dotnetcontent
-ms.openlocfilehash: ac160aef7b7dc8acb8bf0211b403599692f2373c
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.openlocfilehash: 332cee57c8d25d7f51737e01e70ba515d50bd6e6
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="not-operator-visual-basic"></a>Not 運算子 (Visual Basic)
 上執行邏輯否定`Boolean`運算式或數值運算式上的位元否定運算。  
@@ -40,10 +31,10 @@ result = Not expression
   
 ## <a name="parts"></a>組件  
  `result`  
- 必要項。 任何`Boolean`或數值運算式。  
+ 必要。 任何`Boolean`或數值運算式。  
   
  `expression`  
- 必要項。 任何`Boolean`或數值運算式。  
+ 必要。 任何`Boolean`或數值運算式。  
   
 ## <a name="remarks"></a>備註  
  如`Boolean`運算式下, 表將說明如何`result`決定。  

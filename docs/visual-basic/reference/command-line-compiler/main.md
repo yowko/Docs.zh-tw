@@ -1,11 +1,6 @@
 ---
 title: -主要
 ms.date: 03/13/2018
-ms.prod: .net
-ms.suite: ''
-ms.technology:
-- devlang-visual-basic
-ms.topic: article
 helpviewer_keywords:
 - main compiler option [Visual Basic]
 - /main compiler option [Visual Basic]
@@ -13,11 +8,11 @@ helpviewer_keywords:
 ms.assetid: 83fc339d-6652-415d-b205-b5133319b5b0
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: b22b4bb1b6649265eabc02beb6b0145f7c075b27
-ms.sourcegitcommit: 498799639937c89de777361aab74261efe7b79ea
+ms.openlocfilehash: 51a527dfddd2b78ac1c0559420298a66eb4b63f3
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 03/22/2018
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="-main"></a>-主要
 指定包含 `Sub Main` 程序的類別或模組。  
@@ -30,10 +25,10 @@ ms.lasthandoff: 03/22/2018
   
 ## <a name="arguments"></a>引數  
  `location`  
- 必要。 類別或包含的模組名稱`Sub Main`程式啟動時要呼叫的程序。 這可能是在表單中**-主要： module**或**-main:namespace.module**。  
+ 必要。 類別或包含的模組名稱`Sub Main`程式啟動時要呼叫的程序。 這可能是在表單中 **-主要： module**或 **-main:namespace.module**。  
   
 ## <a name="remarks"></a>備註  
- 當您建立可執行檔或 Windows 可執行程式時，請使用此選項。 如果**-主要**省略選項，編譯器就會搜尋有效的共用`Sub Main`所有公用類別和模組中。  
+ 當您建立可執行檔或 Windows 可執行程式時，請使用此選項。 如果 **-主要**省略選項，編譯器就會搜尋有效的共用`Sub Main`所有公用類別和模組中。  
   
  請參閱[Main 程序，在 Visual Basic 中](../../../visual-basic/programming-guide/program-structure/main-procedure.md)的各種形式的討論`Main`程序。  
   

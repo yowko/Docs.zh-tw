@@ -1,17 +1,12 @@
 ---
 title: 程式碼引號 (F#)
 description: '了解 F # 程式碼引號，可讓您產生並以程式設計方式使用 F # 程式碼運算式的語言功能。'
-author: cartermp
-ms.author: phcart
 ms.date: 05/16/2016
-ms.topic: language-reference
-ms.prod: dotnet-fsharp
-ms.devlang: fsharp
-ms.openlocfilehash: cfa2e4b9a4ad1776315dfa8ea82fb8fc3f13a552
-ms.sourcegitcommit: 03ee570f6f528a7d23a4221dcb26a9498edbdf8c
+ms.openlocfilehash: a6fab0364cadef1f45276267a59c694140b24a9c
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/28/2018
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="code-quotations"></a>程式碼引號
 

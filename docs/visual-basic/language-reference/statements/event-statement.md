@@ -1,11 +1,6 @@
 ---
-title: "Event 陳述式"
+title: Event 陳述式
 ms.date: 07/20/2015
-ms.prod: .net
-ms.reviewer: 
-ms.suite: 
-ms.technology: devlang-visual-basic
-ms.topic: article
 f1_keywords:
 - vb.Event
 - vb.Custom
@@ -23,14 +18,11 @@ helpviewer_keywords:
 - ByRef keyword [Visual Basic], Event statements
 - declaring user-defined events
 ms.assetid: 306ff8ed-74dd-4b6a-bd2f-e91b17474042
-caps.latest.revision: "33"
-author: dotnet-bot
-ms.author: dotnetcontent
-ms.openlocfilehash: 4ba49d6582eb2ecac4846eaee570a4d92439a5d9
-ms.sourcegitcommit: 34ec7753acf76f90a0fa845235ef06663dc9e36e
+ms.openlocfilehash: 967eedcf1f4d0c9a19775f294167b915cca25a9c
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="event-statement"></a>Event 陳述式
 宣告使用者定義的事件。  
@@ -72,7 +64,7 @@ End Event
 |`eventname`|必要。 事件的名稱；依照標準變數命名慣例。|  
 |`parameterlist`|選擇性。 本機變數清單，表示此事件的參數。 您必須將[參數清單](../../../visual-basic/language-reference/statements/parameter-list.md)括號括住。|  
 |`Implements`|選擇性。 指出此事件會實作介面的事件。|  
-|`implementslist`|如果使用 `Implements`，則為必要項。 實作之 `Sub` 程序的清單。 以逗號分隔多個程序：<br /><br /> *implementedprocedure* [， *implementedprocedure* ...]<br /><br /> 每個 `implementedprocedure` 都具有下列語法和組件：<br /><br /> `interface`.`definedname`<br /><br /> -   `interface`-必要。 介面名稱，該介面實作包含類別或結構的此程序。<br />-   `Definedname`-必要。 名稱，據以在 `interface` 中定義程序。 不一定要與 `name` 相同，這是此程序用來實作已定義程序的名稱。|  
+|`implementslist`|如果使用 `Implements`，則為必要項。 實作之 `Sub` 程序的清單。 以逗號分隔多個程序：<br /><br /> *implementedprocedure* [， *implementedprocedure* ...]<br /><br /> 每個 `implementedprocedure` 都具有下列語法和組件：<br /><br /> `interface`.`definedname`<br /><br /> -   `interface` -必要。 介面名稱，該介面實作包含類別或結構的此程序。<br />-   `Definedname` -必要。 名稱，據以在 `interface` 中定義程序。 不一定要與 `name` 相同，這是此程序用來實作已定義程序的名稱。|  
 |`Custom`|必要。 事件宣告為 `Custom` 必須定義自訂 `AddHandler`、`RemoveHandler` 和 `RaiseEvent` 存取子。|  
 |`delegatename`|選擇性。 委派的名稱，指定事件處理常式簽章。|  
 |`AddHandler`|必要。 宣告 `AddHandler` 存取子，指定加入事件處理常式時要執行的陳述式，可以明確地使用 `AddHandler` 陳述式或隱含地使用 `Handles` 子句。|  
@@ -124,7 +116,7 @@ End Event
 > [!NOTE]
 >  `My.Application.DoEvents` 方法不會以與表單相同的方式處理事件。 若要啟用表單以直接處理事件，您可以使用多執行緒。 如需詳細資訊，請參閱[執行緒](../../programming-guide/concepts/threading/index.md)。  
   
-## <a name="see-also"></a>請參閱  
+## <a name="see-also"></a>另請參閱  
  [RaiseEvent 陳述式](../../../visual-basic/language-reference/statements/raiseevent-statement.md)  
  [Implements 陳述式](../../../visual-basic/language-reference/statements/implements-statement.md)  
  [事件](../../../visual-basic/programming-guide/language-features/events/index.md)  

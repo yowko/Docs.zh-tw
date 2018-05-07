@@ -1,26 +1,12 @@
 ---
 title: MSMQ 啟用
-ms.custom: ''
 ms.date: 03/30/2017
-ms.prod: .net-framework
-ms.reviewer: ''
-ms.suite: ''
-ms.technology:
-- dotnet-clr
-ms.tgt_pltfrm: ''
-ms.topic: article
 ms.assetid: e3834149-7b8c-4a54-806b-b4296720f31d
-caps.latest.revision: 29
-author: dotnet-bot
-ms.author: dotnetcontent
-manager: wpickett
-ms.workload:
-- dotnet
-ms.openlocfilehash: e0f8077e425464d5a9f33662366377d573719659
-ms.sourcegitcommit: 2042de78fcdceebb6b8ac4b7a292b93e8782cbf5
-ms.translationtype: MT
+ms.openlocfilehash: ab414cb5535ce2b9062520c9d82e139ebdfc04c4
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/27/2018
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="msmq-activation"></a>MSMQ 啟用
 這個範例示範如何在 Windows Process Activation Service (WAS) 中裝載可從訊息佇列讀取的應用程式。 這個範例會使用`netMsmqBinding`，並且根據[雙向通訊](../../../../docs/framework/wcf/samples/two-way-communication.md)範例。 本例中的服務是 Web 裝載的應用程式，而用戶端則會自我裝載並輸出至主控台，以便觀察所送出採購單的狀態。  
@@ -33,11 +19,11 @@ ms.lasthandoff: 04/27/2018
 >   
 >  \<InstallDrive>:\WF_WCF_Samples  
 >   
->  如果此目錄不存在，請移至[!INCLUDE[indigo1](../../../../includes/indigo1-md.md)]超連結"http://go.microsoft.com/fwlink/?LinkId=150780"\t"_blank"和 Windows Workflow Foundation (WF) 範例[!INCLUDE[netfx40_long](../../../../includes/netfx40-long-md.md)]以下載所有[!INCLUDE[indigo2](../../../../includes/indigo2-md.md)]和[!INCLUDE[wf1](../../../../includes/wf1-md.md)]範例。 此範例位於下列目錄。  
+>  如果此目錄不存在，請移至 Windows Communication Foundation (WCF) 的超連結到 「http://go.microsoft.com/fwlink/?LinkId=150780"\t"_blank"和 Windows Workflow Foundation (WF) 範例[!INCLUDE[netfx40_long](../../../../includes/netfx40-long-md.md)]以下載所有[!INCLUDE[indigo2](../../../../includes/indigo2-md.md)]和[!INCLUDE[wf1](../../../../includes/wf1-md.md)]範例。 此範例位於下列目錄。  
 >   
 >  \<InstallDrive>:\Samples\WCFWFCardSpace\WCF\Basic\Services\Hosting\WASHost\MsmqActivation.  
   
- Windows Process Activation Service (WAS) 是 [!INCLUDE[lserver](../../../../includes/lserver-md.md)] 上全新的處理序啟用機制，可以為使用非 HTTP 通訊協定的應用程式提供類似 IIS 的功能，而這些功能原先只有 HTTP 應用程式才能使用。 [!INCLUDE[indigo1](../../../../includes/indigo1-md.md)] 會使用「接聽程式配接器」介面來傳達啟用要求，而這些要求是透過 [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] 支援的非 HTTP 通訊協定 (例如，TCP、具名管道和 MSMQ) 來接收。 SMSvcHost.exe 中執行的 Managed Windows 服務會裝載可透過非 HTTP 通訊協定接收要求的功能。  
+ Windows Process Activation Service (WAS) 是 [!INCLUDE[lserver](../../../../includes/lserver-md.md)] 上全新的處理序啟用機制，可以為使用非 HTTP 通訊協定的應用程式提供類似 IIS 的功能，而這些功能原先只有 HTTP 應用程式才能使用。 Windows Communication Foundation (WCF) 用來通訊透過支援的非 HTTP 通訊協定收到啟用要求的接聽程式配接器介面[!INCLUDE[indigo2](../../../../includes/indigo2-md.md)]，例如 TCP、 具名管道和 MSMQ。 SMSvcHost.exe 中執行的 Managed Windows 服務會裝載可透過非 HTTP 通訊協定接收要求的功能。  
   
  Net.Msmq 接聽程式配接器服務 (NetMsmqActivator) 會根據佇列中的訊息啟動佇列應用程式。  
   

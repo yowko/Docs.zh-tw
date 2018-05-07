@@ -1,11 +1,6 @@
 ---
-title: "ReDim 陳述式 (Visual Basic)"
+title: ReDim 陳述式 (Visual Basic)
 ms.date: 07/20/2015
-ms.prod: .net
-ms.reviewer: 
-ms.suite: 
-ms.technology: devlang-visual-basic
-ms.topic: article
 f1_keywords:
 - vb.ReDim
 - vb.Preserve
@@ -31,14 +26,11 @@ helpviewer_keywords:
 - declaration statements [Visual Basic]
 - scalar variables [Visual Basic]
 ms.assetid: ad1c5e07-dcd7-4ae1-a79e-ad3f2dcc2083
-caps.latest.revision: "25"
-author: dotnet-bot
-ms.author: dotnetcontent
-ms.openlocfilehash: 8cec66ee33bfd82b3abd623a0130f5635aa3d1d9
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.openlocfilehash: 9536ea8a6274e0b4a2589caf5aefa271a3567d32
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="redim-statement-visual-basic"></a>ReDim 陳述式 (Visual Basic)
 重新配置陣列變數的儲存空間。  
@@ -53,9 +45,9 @@ ReDim [ Preserve ] name(boundlist) [ ,  name(boundlist) [, ... ] ]
   
 |詞彙|定義|  
 |----------|----------------|  
-|`Preserve`|選擇項。 僅變更最後維度的大小時，用來保留現有陣列資料的修飾詞。|  
-|`name`|必要項。 陣列變數的名稱。 請參閱[宣告項目名稱](../../../visual-basic/programming-guide/language-features/declared-elements/declared-element-names.md)。|  
-|`boundlist`|必要項。 重新定義之陣列各維度的界限清單。|  
+|`Preserve`|選擇性。 僅變更最後維度的大小時，用來保留現有陣列資料的修飾詞。|  
+|`name`|必要。 陣列變數的名稱。 請參閱[宣告項目名稱](../../../visual-basic/programming-guide/language-features/declared-elements/declared-element-names.md)。|  
+|`boundlist`|必要。 重新定義之陣列各維度的界限清單。|  
   
 ## <a name="remarks"></a>備註  
  您可以使用 `ReDim` 陳述式變更已宣告陣列的一或多個維度的大小。 如果您有大型的陣列，而且不再需要其中某些項目，`ReDim` 可以減少陣列大小，釋出記憶體。 另一方面，如果陣列需要更多項目，`ReDim` 可以加入項目。  
@@ -86,7 +78,7 @@ ReDim [ Preserve ] name(boundlist) [ ,  name(boundlist) [, ... ] ]
   
 ## <a name="behavior"></a>行為  
   
--   **陣列取代。** `ReDim`釋放現有的陣列，並使用相同的陣序建立新的陣列。 新的陣列會取代陣列變數中已釋放的陣列。  
+-   **陣列取代。** `ReDim` 釋放現有的陣列，並使用相同的陣序建立新的陣列。 新的陣列會取代陣列變數中已釋放的陣列。  
   
 -   **不使用 Preserve 的初始化。** 如果不指定 `Preserve`，`ReDim` 會使用其資料類型的預設值，初始化新的陣列項目。  
   

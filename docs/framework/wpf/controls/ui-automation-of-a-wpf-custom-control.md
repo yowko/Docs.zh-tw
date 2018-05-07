@@ -1,13 +1,6 @@
 ---
-title: "WPF 自訂控制項的 UI 自動化"
-ms.custom: 
+title: WPF 自訂控制項的 UI 自動化
 ms.date: 03/30/2017
-ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.technology: dotnet-wpf
-ms.tgt_pltfrm: 
-ms.topic: article
 dev_langs:
 - csharp
 - vb
@@ -17,16 +10,11 @@ helpviewer_keywords:
 - custom controls [WPF], improving accessibility
 - UI Automation [WPF], using with custom controls
 ms.assetid: 47b310fc-fbd5-4ce2-a606-22d04c6d4911
-caps.latest.revision: "34"
-author: dotnet-bot
-ms.author: dotnetcontent
-manager: wpickett
-ms.workload: dotnet
-ms.openlocfilehash: 1a9d17408d6fa03b267c2a22890d2e17c0441389
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.openlocfilehash: fbd19591c260b0ad160339b45fd762e7a87bbc74
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="ui-automation-of-a-wpf-custom-control"></a>WPF 自訂控制項的 UI 自動化
 [!INCLUDE[TLA#tla_uiautomation](../../../../includes/tlasharptla-uiautomation-md.md)] 提供一個單一的通用介面，可讓自動化用戶端用來檢查或操作各種平台和架構的使用者介面。 [!INCLUDE[TLA2#tla_uiautomation](../../../../includes/tla2sharptla-uiautomation-md.md)] 可讓品質保證 (測試) 程式碼和協助工具應用程式 (例如螢幕助讀程式) 檢查使用者介面元素，並模擬從其他程式碼與它們進行的使用者互動。 如需跨所有平台之 [!INCLUDE[TLA2#tla_uiautomation](../../../../includes/tla2sharptla-uiautomation-md.md)] 的相關資訊，請參閱＜協助工具＞。  
@@ -63,7 +51,7 @@ ms.lasthandoff: 12/22/2017
  覆寫<xref:System.Windows.UIElement.OnCreateAutomationPeer%2A>您自訂控制項，讓它傳回您的提供者物件，必須直接或間接衍生自方法<xref:System.Windows.Automation.Peers.AutomationPeer>。  
   
 ### <a name="override-getpattern"></a>覆寫 GetPattern  
- 自動化對等可簡化伺服器端 [!INCLUDE[TLA2#tla_uiautomation](../../../../includes/tla2sharptla-uiautomation-md.md)] 提供者的部分實作層面，但自訂控制項自動化對等仍須處理模式介面。 非 WPF 提供者，例如對等不支援控制項模式所提供的介面中的實作<xref:System.Windows.Automation.Provider?displayProperty=nameWithType>命名空間，例如<xref:System.Windows.Automation.Provider.IInvokeProvider>。 控制項模式介面可以由對等本身實作，或是由另一個物件實作。 對等體的實作<xref:System.Windows.Automation.Peers.AutomationPeer.GetPattern%2A>傳回支援的指定的模式的物件。 [!INCLUDE[TLA2#tla_uiautomation](../../../../includes/tla2sharptla-uiautomation-md.md)]程式碼會呼叫<xref:System.Windows.Automation.Peers.UIElementAutomationPeer.GetPattern%2A>方法，並指定<xref:System.Windows.Automation.Peers.PatternInterface>列舉值。 覆寫<xref:System.Windows.Automation.Peers.UIElementAutomationPeer.GetPattern%2A>應該會傳回實作指定的模式的物件。 如果您的控制項並沒有模式的自訂實作，您可以呼叫基底型別的實作<xref:System.Windows.Automation.Peers.AutomationPeer.GetPattern%2A>來擷取它的實作或是 null，如果此控制項類型不支援此模式。 比方說，可以設定自訂數值上下按鈕控制項的值在範圍內，因此其[!INCLUDE[TLA2#tla_uiautomation](../../../../includes/tla2sharptla-uiautomation-md.md)]對等就會實作<xref:System.Windows.Automation.Provider.IRangeValueProvider>介面。 下列範例會示範如何對等體的<xref:System.Windows.Automation.Peers.UIElementAutomationPeer.GetPattern%2A>回應覆寫方法<xref:System.Windows.Automation.Peers.PatternInterface.RangeValue?displayProperty=nameWithType>值。  
+ 自動化對等可簡化伺服器端 [!INCLUDE[TLA2#tla_uiautomation](../../../../includes/tla2sharptla-uiautomation-md.md)] 提供者的部分實作層面，但自訂控制項自動化對等仍須處理模式介面。 非 WPF 提供者，例如對等不支援控制項模式所提供的介面中的實作<xref:System.Windows.Automation.Provider?displayProperty=nameWithType>命名空間，例如<xref:System.Windows.Automation.Provider.IInvokeProvider>。 控制項模式介面可以由對等本身實作，或是由另一個物件實作。 對等體的實作<xref:System.Windows.Automation.Peers.AutomationPeer.GetPattern%2A>傳回支援的指定的模式的物件。 [!INCLUDE[TLA2#tla_uiautomation](../../../../includes/tla2sharptla-uiautomation-md.md)] 程式碼會呼叫<xref:System.Windows.Automation.Peers.UIElementAutomationPeer.GetPattern%2A>方法，並指定<xref:System.Windows.Automation.Peers.PatternInterface>列舉值。 覆寫<xref:System.Windows.Automation.Peers.UIElementAutomationPeer.GetPattern%2A>應該會傳回實作指定的模式的物件。 如果您的控制項並沒有模式的自訂實作，您可以呼叫基底型別的實作<xref:System.Windows.Automation.Peers.AutomationPeer.GetPattern%2A>來擷取它的實作或是 null，如果此控制項類型不支援此模式。 比方說，可以設定自訂數值上下按鈕控制項的值在範圍內，因此其[!INCLUDE[TLA2#tla_uiautomation](../../../../includes/tla2sharptla-uiautomation-md.md)]對等就會實作<xref:System.Windows.Automation.Provider.IRangeValueProvider>介面。 下列範例會示範如何對等體的<xref:System.Windows.Automation.Peers.UIElementAutomationPeer.GetPattern%2A>回應覆寫方法<xref:System.Windows.Automation.Peers.PatternInterface.RangeValue?displayProperty=nameWithType>值。  
   
  [!code-csharp[CustomControlNumericUpDown#GetPattern](../../../../samples/snippets/csharp/VS_Snippets_Wpf/CustomControlNumericUpDown/CSharp/CustomControlLibrary/NumericUpDown.cs#getpattern)]
  [!code-vb[CustomControlNumericUpDown#GetPattern](../../../../samples/snippets/visualbasic/VS_Snippets_Wpf/CustomControlNumericUpDown/visualbasic/customcontrollibrary/numericupdown.vb#getpattern)]  
@@ -165,7 +153,7 @@ End Class
  [!code-csharp[CustomControlNumericUpDown#RaiseEventFromControl](../../../../samples/snippets/csharp/VS_Snippets_Wpf/CustomControlNumericUpDown/CSharp/CustomControlLibrary/NumericUpDown.cs#raiseeventfromcontrol)]
  [!code-vb[CustomControlNumericUpDown#RaiseEventFromControl](../../../../samples/snippets/visualbasic/VS_Snippets_Wpf/CustomControlNumericUpDown/visualbasic/customcontrollibrary/numericupdown.vb#raiseeventfromcontrol)]  
   
-## <a name="see-also"></a>請參閱  
+## <a name="see-also"></a>另請參閱  
  [UI 自動化概觀](../../../../docs/framework/ui-automation/ui-automation-overview.md)  
  [NumericUpDown 自訂控制項搭配主題和 UI 自動化支援範例](http://go.microsoft.com/fwlink/?LinkID=160025)  
  [伺服器端 UI 自動化提供者實作](../../../../docs/framework/ui-automation/server-side-ui-automation-provider-implementation.md)

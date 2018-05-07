@@ -1,32 +1,18 @@
 ---
 title: 整合 COM+ 應用程式概觀
-ms.custom: ''
 ms.date: 03/30/2017
-ms.prod: .net-framework
-ms.reviewer: ''
-ms.suite: ''
-ms.technology:
-- dotnet-clr
-ms.tgt_pltfrm: ''
-ms.topic: article
 helpviewer_keywords:
 - Windows Communication Foundation, COM+ integration
 - WCF, COM+ integration
 ms.assetid: e481e48f-7096-40eb-9f20-7f0098412941
-caps.latest.revision: 29
-author: dotnet-bot
-ms.author: dotnetcontent
-manager: wpickett
-ms.workload:
-- dotnet
-ms.openlocfilehash: 3c723bda93feac3eef18f302ab0c8ec7c702eb7a
-ms.sourcegitcommit: 94d33cadc5ff81d2ac389bf5f26422c227832052
+ms.openlocfilehash: 155365c72fd3f5915db12104f45a500f3176f67b
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/30/2018
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="integrating-with-com-applications-overview"></a>整合 COM+ 應用程式概觀
-[!INCLUDE[indigo1](../../../../includes/indigo1-md.md)] 提供用來建立分散式應用程式的豐富環境。 若您已正在使用裝載於 COM+ 之中的元件架構應用程式邏輯，可以使用 [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] 擴充現有邏輯，而不必重新撰寫程式碼。 一個常見案例就是當您要透過 Web 服務，公開現有的 COM+ 或 Enterprise Services 商務邏輯之時。  
+Windows Communication Foundation (WCF) 提供非常豐富的環境建立分散式應用程式。 如果您已經在使用裝載於 COM + 元件架構應用程式邏輯，您可以使用 WCF 擴充現有邏輯，而不是不必重新撰寫程式碼。 一個常見案例就是當您要透過 Web 服務，公開現有的 COM+ 或 Enterprise Services 商務邏輯之時。  
   
  當 COM+ 元件上的介面公開為 Web 服務時，這些服務的規格和合約就會由在應用程式初始化時所執行的自動對映來決定。 下列清單會顯示這個對應的概念模型：  
   
@@ -84,7 +70,7 @@ ms.lasthandoff: 04/30/2018
  在用戶端應用程式中，您可以使用 <xref:System.ServiceModel.ComIntegration.PersistStreamTypeWrapper> 物件上的方法，將物件傳遞至服務並以類似方法接收物件。  
   
 > [!NOTE]
->  由於自訂和平台特定的序列化方法本質，此項最適合在 [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] 用戶端和 [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] 服務之間使用。  
+>  由於自訂與平台專屬的序列化方法本質，這是最適合用來使用 WCF 用戶端和 WCF 服務之間。  
   
 ## <a name="selecting-the-hosting-mode"></a>選取主控模式  
  COM+ 會以下列其中一個主控模式公開 Web 服務：  
@@ -95,18 +81,18 @@ ms.lasthandoff: 04/30/2018
   
 -   Web 主控  
   
-     Web 服務會在 Web 伺服器工作處理序內主控。 這個模式在接收初始化要求時，不需要使用 COM+。 如果收到這個要求時應用程式不在使用中，會在處理要求之前自動啟動該應用程式。 這個模式也會對伺服器應用程式提供 Web 服務和 DCOM 存取，但會對 Web 服務要求造成處理序躍點。 通常會需要用戶端啟用模擬。 在 [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] 中，可以使用 <xref:System.ServiceModel.Security.WindowsClientCredential.AllowedImpersonationLevel%2A> 類別的 <xref:System.ServiceModel.Security.WindowsClientCredential> 屬性來啟用模擬，而這個類別會當做一般 <xref:System.ServiceModel.ChannelFactory%601> 類別的屬性和 <xref:System.Security.Principal.TokenImpersonationLevel.Impersonation> 列舉值來存取。  
+     Web 服務會在 Web 伺服器工作處理序內主控。 這個模式在接收初始化要求時，不需要使用 COM+。 如果收到這個要求時應用程式不在使用中，會在處理要求之前自動啟動該應用程式。 這個模式也會對伺服器應用程式提供 Web 服務和 DCOM 存取，但會對 Web 服務要求造成處理序躍點。 通常會需要用戶端啟用模擬。 在 WCF 中，這可以使用<xref:System.ServiceModel.Security.WindowsClientCredential.AllowedImpersonationLevel%2A>屬性<xref:System.ServiceModel.Security.WindowsClientCredential>類別，以存取做為泛型屬性<xref:System.ServiceModel.ChannelFactory%601>類別，並將<xref:System.Security.Principal.TokenImpersonationLevel.Impersonation>列舉值。  
   
 -   Web 主控同處理序  
   
      會在 Web 伺服器工作處理序內主控 Web 服務和 COM+ 應用程式邏輯。 如此可自動啟動 Web 主控模式，而不會對 Web 服務要求造成處理序躍點。 缺點則為無法透過 DCOM 存取伺服器應用程式。  
   
 ### <a name="security-considerations"></a>安全性考量  
- 和其他 [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] 服務一樣，將會藉由 [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] 通道的組態設定來管理所公開服務的安全性設定。 但不會強制執行傳統 DCOM 安全性設定，例如 DCOM 全機器的權限設定。 若要強制執行 COM+ 應用程式角色，則必須對元件啟用「元件層級存取檢查」授權。  
+ 如同其他 WCF 服務，公開服務的安全性設定是透過 WCF 通道的組態設定進行管理。 但不會強制執行傳統 DCOM 安全性設定，例如 DCOM 全機器的權限設定。 若要強制執行 COM+ 應用程式角色，則必須對元件啟用「元件層級存取檢查」授權。  
   
  使用未受保護的繫結時，通訊就會因開放而遭到竄改或導致資訊洩漏。 若要避免發生這個情況，建議您使用受到保護的繫結。  
   
- 針對 COM+ 主控和 Web 主控的模式，用戶端應用程式必須讓伺服器處理序可模擬用戶端使用者。 在 [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] 用戶端中將模擬層級設定為 <xref:System.Security.Principal.TokenImpersonationLevel.Impersonation> 就可這樣進行。  
+ 針對 COM+ 主控和 Web 主控的模式，用戶端應用程式必須讓伺服器處理序可模擬用戶端使用者。 這可以經由在 WCF 用戶端模擬層級設定為<xref:System.Security.Principal.TokenImpersonationLevel.Impersonation>。  
   
  使用 Internet Information Services (IIS) 或 Windows Process Activation Service (WAS) 搭配 HTTP 傳輸時，就可以使用 Httpcfg.exe 工具來保留傳輸端點位址。 在其他組態中，保護不受充當為預期服務之惡意服務的攻擊可說是相當重要。 若要防止在目的端點上啟動惡意服務，可以將合法的服務設定為以 NT 服務來執行。 這樣可讓合法服務在任何惡意服務之前，先宣告端點位址。  
   

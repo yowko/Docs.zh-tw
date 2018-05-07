@@ -1,27 +1,15 @@
 ---
-title: "Direct3D9 和 WPF 互通性的效能考量"
-ms.custom: 
+title: Direct3D9 和 WPF 互通性的效能考量
 ms.date: 03/30/2017
-ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.technology: dotnet-wpf
-ms.tgt_pltfrm: 
-ms.topic: article
 helpviewer_keywords:
 - WPF [WPF], Direct3D9 interop performance
 - Direct3D9 [WPF interoperability], performance
 ms.assetid: ea8baf91-12fe-4b44-ac4d-477110ab14dd
-caps.latest.revision: "19"
-author: dotnet-bot
-ms.author: dotnetcontent
-manager: wpickett
-ms.workload: dotnet
-ms.openlocfilehash: 8142125eae26b15f12652d28fdf0c34f19d49c4e
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.openlocfilehash: 52085579c2a432e7db1ebec096a931e0d51718f8
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="performance-considerations-for-direct3d9-and-wpf-interoperability"></a>Direct3D9 和 WPF 互通性的效能考量
 您可以使用主控 Direct3D9 內容<xref:System.Windows.Interop.D3DImage>類別。 裝載 Direct3D9 內容可能會影響應用程式的效能。 本主題說明裝載 Direct3D9 Windows Presentation Foundation (WPF) 應用程式中的內容時最佳化效能的最佳作法。 這些最佳作法 」 包含如何使用<xref:System.Windows.Interop.D3DImage>和最佳作法，當您使用 Windows Vista、 Windows XP 中，並多螢幕顯示。  
@@ -70,7 +58,7 @@ ms.lasthandoff: 12/22/2017
 |D3DFMT_A8R8G8B8 （不可鎖定型）|**硬體更新**|軟體更新|軟體更新|軟體更新|  
 |D3DFMT_A8R8G8B8 （可鎖定型）|**硬體更新**|軟體更新|**硬體更新**|軟體更新|  
   
-## <a name="see-also"></a>請參閱  
+## <a name="see-also"></a>另請參閱  
  <xref:System.Windows.Interop.D3DImage>  
  [WPF 和 Direct3D9 互通](../../../../docs/framework/wpf/advanced/wpf-and-direct3d9-interoperation.md)  
  [逐步解說：建立裝載於 WPF 中的 Direct3D9 內容](../../../../docs/framework/wpf/advanced/walkthrough-creating-direct3d9-content-for-hosting-in-wpf.md)  

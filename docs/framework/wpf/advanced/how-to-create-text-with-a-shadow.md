@@ -1,28 +1,16 @@
 ---
-title: "如何：建立含陰影的文字"
-ms.custom: 
+title: 如何：建立含陰影的文字
 ms.date: 03/30/2017
-ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.technology: dotnet-wpf
-ms.tgt_pltfrm: 
-ms.topic: article
 helpviewer_keywords:
 - typography [WPF], shadow effects
 - shadow effects in text [WPF]
 - text [WPF], shadowed
 ms.assetid: 6ab9c754-6001-4708-b479-5367f2fd1a35
-caps.latest.revision: "22"
-author: dotnet-bot
-ms.author: dotnetcontent
-manager: wpickett
-ms.workload: dotnet
-ms.openlocfilehash: b031b0dce8e1fd06399ded0b6d612a23323ae837
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.openlocfilehash: 1b7740284afcda6eab41fb68be3b4a2f032cc77d
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="how-to-create-text-with-a-shadow"></a>如何：建立含陰影的文字
 本節中的範例示範如何建立所顯示文字的陰影效果。  
@@ -30,7 +18,7 @@ ms.lasthandoff: 12/22/2017
 ## <a name="example"></a>範例  
  <xref:System.Windows.Media.Effects.DropShadowEffect>物件可讓您建立各種下拉式陰影效果[!INCLUDE[TLA#tla_winclient](../../../../includes/tlasharptla-winclient-md.md)]物件。 下列範例示範套用至文字的延伸陰影效果。 在此情況下，陰影是柔邊陰影，表示陰影色彩模糊。  
   
- ![文字陰影濃淡 &#61;0.25](../../../../docs/framework/wpf/advanced/media/shadowtext01.jpg "ShadowText01")  
+ ![文字陰影濃淡&#61;0.25](../../../../docs/framework/wpf/advanced/media/shadowtext01.jpg "ShadowText01")  
 含柔邊陰影的文字範例  
   
  您可以設定來控制陰影寬度<xref:System.Windows.Media.Effects.DropShadowEffect.ShadowDepth%2A>屬性。 值為`4.0`表示陰影寬度 4 像素。 您可以控制柔和度，或藉由修改陰影模糊<xref:System.Windows.Media.Effects.DropShadowEffect.BlurRadius%2A>屬性。 值為`0.0`表示沒有模糊。 下列程式碼範例示範如何建立柔邊陰影。  
@@ -42,7 +30,7 @@ ms.lasthandoff: 12/22/2017
   
  下列範例示範套用至文字的實色延伸陰影效果。 在此情況下，陰影不會模糊。  
   
- ![文字陰影濃淡 &#61;0](../../../../docs/framework/wpf/advanced/media/shadowtext02.jpg "ShadowText02")  
+ ![文字陰影濃淡&#61;0](../../../../docs/framework/wpf/advanced/media/shadowtext02.jpg "ShadowText02")  
 含強烈陰影的文字範例  
   
  您可以設定來建立硬陰影<xref:System.Windows.Media.Effects.DropShadowEffect.BlurRadius%2A>屬性`0.0`，這表示使用沒有模糊。 您可以藉由修改控制陰影方向<xref:System.Windows.Media.Effects.DropShadowEffect.Direction%2A>屬性。 這個屬性的方向的值設定到某個程度之間`0`和`360`。 下圖顯示的方向值<xref:System.Windows.Media.Effects.DropShadowEffect.Direction%2A>屬性設定。  

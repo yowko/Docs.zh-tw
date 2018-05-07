@@ -1,11 +1,6 @@
 ---
-title: "Byte 資料類型 (Visual Basic)"
+title: Byte 資料類型 (Visual Basic)
 ms.date: 01/31/2018
-ms.prod: .net
-ms.suite: 
-ms.technology:
-- devlang-visual-basic
-ms.topic: article
 f1_keywords:
 - vb.Byte
 helpviewer_keywords:
@@ -14,11 +9,11 @@ helpviewer_keywords:
 ms.assetid: eed44dff-eaee-4937-a89f-444e418e74f6
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 02234afc0dc51a2c1338cdd16d1f97765f64b45e
-ms.sourcegitcommit: d2da0142247ef42a219a5d2907f153e62dc6ea0d
+ms.openlocfilehash: 28189ab4ab1a9be9265d1cca020039b5302fb5d8
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 02/01/2018
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="byte-data-type-visual-basic"></a>Byte 資料類型 (Visual Basic)
 保留範圍從 0 到 255 的不帶正負號的 8 位元 （1 個位元組） 整數。
@@ -60,7 +55,7 @@ Dim number As Byte = &H_6A
 
 -   **擴展。** `Byte`資料類型可擴展成`Short`， `UShort`， `Integer`， `UInteger`， `Long`， `ULong`， `Decimal`， `Single`，或`Double`。 這表示您可以將轉換`Byte`而不會發生這些類型的任何<xref:System.OverflowException?displayProperty=nameWithType>錯誤。
   
--   **類型字元。** `Byte`沒有任何常值類型字元或識別項類型字元。
+-   **類型字元。** `Byte` 沒有任何常值類型字元或識別項類型字元。
 
 -   **架構類型。** 在 .NET Framework 中對應的類型為 <xref:System.Byte?displayProperty=nameWithType> 結構。
 
@@ -70,7 +65,7 @@ Dim number As Byte = &H_6A
 
 [!code-vb[VbVbalrDataTypes#16](../../../visual-basic/language-reference/data-types/codesnippet/VisualBasic/byte-data-type_1.vb)]  
 
-## <a name="see-also"></a>請參閱
+## <a name="see-also"></a>另請參閱
 
  <xref:System.Byte?displayProperty=nameWithType>  
  [資料類型](../../../visual-basic/language-reference/data-types/data-type-summary.md)  

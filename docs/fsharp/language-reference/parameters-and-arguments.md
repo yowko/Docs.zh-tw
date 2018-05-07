@@ -1,17 +1,12 @@
 ---
 title: 參數和引數 (F#)
 description: '深入了解 F # 語言定義參數及支援將引數傳遞至函式、 方法和屬性。'
-author: cartermp
-ms.author: phcart
 ms.date: 05/16/2016
-ms.topic: language-reference
-ms.prod: dotnet-fsharp
-ms.devlang: fsharp
-ms.openlocfilehash: e146ec4e877bb89f10e2f3daad2d8356c29fa81f
-ms.sourcegitcommit: 03ee570f6f528a7d23a4221dcb26a9498edbdf8c
+ms.openlocfilehash: 319cf0e7346d498ce34e41a9993fe0160038461a
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/28/2018
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="parameters-and-arguments"></a>參數和引數
 

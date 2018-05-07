@@ -1,26 +1,17 @@
 ---
 title: 必須有陳述式結尾
 ms.date: 07/20/2015
-ms.prod: .net
-ms.reviewer: ''
-ms.suite: ''
-ms.technology:
-- devlang-visual-basic
-ms.topic: article
 f1_keywords:
 - bc30205
 - vbc30205
 helpviewer_keywords:
 - BC30205
 ms.assetid: 53c7f825-a737-4b76-a1fa-f67745b8bd40
-caps.latest.revision: 12
-author: dotnet-bot
-ms.author: dotnetcontent
-ms.openlocfilehash: 4934952015cb4871bcd90cef982eab5425b1617f
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.openlocfilehash: 7b91d13cbcb9d211d4ca18c8e48c7494bf6eccc6
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="end-of-statement-expected"></a>必須有陳述式結尾
 陳述式語法完成，但其他的程式設計項目項目完成陳述式後面。 需要在每個陳述式結尾行結束字元。

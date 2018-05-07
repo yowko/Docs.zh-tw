@@ -1,13 +1,6 @@
 ---
-title: "逐步解說：使用 MaskedTextBox 控制項"
-ms.custom: 
+title: 逐步解說：使用 MaskedTextBox 控制項
 ms.date: 03/30/2017
-ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.technology: dotnet-winforms
-ms.tgt_pltfrm: 
-ms.topic: article
 dev_langs:
 - csharp
 - vb
@@ -18,16 +11,11 @@ helpviewer_keywords:
 - user input [Windows Forms], controlling
 - text [Windows Forms], controls for input
 ms.assetid: df60565e-5447-4110-92a6-be1f6ff5faa3
-caps.latest.revision: "16"
-author: dotnet-bot
-ms.author: dotnetcontent
-manager: wpickett
-ms.workload: dotnet
-ms.openlocfilehash: 006dafe88c5db7cb1499d7c1902d295841bfb5ae
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.openlocfilehash: bcca6c5f5481d351a39a4e71532cc0f006075128
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="walkthrough-working-with-the-maskedtextbox-control"></a>逐步解說：使用 MaskedTextBox 控制項
 這個逐步解說中所述的工作包括：  
@@ -46,7 +34,7 @@ ms.lasthandoff: 12/22/2017
   
 2.  拖曳<xref:System.Windows.Forms.MaskedTextBox>控制項從**工具箱**加入至表單。  
   
-3.  以滑鼠右鍵按一下控制項，然後選擇 **屬性**。 在**屬性**視窗中，選取**遮罩**屬性，然後按一下**...** （省略符號） 按鈕旁的屬性名稱。  
+3.  以滑鼠右鍵按一下控制項，然後選擇 **屬性**。 在**屬性**視窗中，選取**遮罩**屬性，然後按一下 **...** （省略符號） 按鈕旁的屬性名稱。  
   
 4.  在**輸入遮罩**對話方塊中，選取**簡短日期**遮罩，並按一下**確定**。  
   
@@ -135,6 +123,6 @@ ms.lasthandoff: 12/22/2017
     End Sub  
     ```  
   
-## <a name="see-also"></a>請參閱  
+## <a name="see-also"></a>另請參閱  
  <xref:System.Windows.Forms.MaskedTextBox>  
  [MaskedTextBox 控制項](../../../../docs/framework/winforms/controls/maskedtextbox-control-windows-forms.md)

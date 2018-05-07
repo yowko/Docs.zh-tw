@@ -1,14 +1,6 @@
 ---
-title: "ICorDebugThread3::GetActiveInternalFrames 方法"
-ms.custom: 
+title: ICorDebugThread3::GetActiveInternalFrames 方法
 ms.date: 03/30/2017
-ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.technology:
-- dotnet-clr
-ms.tgt_pltfrm: 
-ms.topic: reference
 api_name:
 - ICorDebugThread3.GetActiveInternalFrames Method
 api_location:
@@ -23,17 +15,13 @@ helpviewer_keywords:
 ms.assetid: d69796b4-5b6d-457c-85f6-2cf42e8a8773
 topic_type:
 - apiref
-caps.latest.revision: 
 author: rpetrusha
 ms.author: ronpet
-manager: wpickett
-ms.workload:
-- dotnet
-ms.openlocfilehash: 8ecfbaeff9416ee8e6541a23bac6ec76f99abd2c
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.openlocfilehash: 2ac87de35478e5eabdc8cdc3568baf2086923e38
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="icordebugthread3getactiveinternalframes-method"></a>ICorDebugThread3::GetActiveInternalFrames 方法
 傳回內部框架的陣列 ([ICorDebugInternalFrame2](../../../../docs/framework/unmanaged-api/debugging/icordebuginternalframe2-interface.md)物件) 堆疊上。  
@@ -66,8 +54,8 @@ HRESULT GetActiveInternalFrames
 |HRESULT|描述|  
 |-------------|-----------------|  
 |S_OK|[ICorDebugInternalFrame2](../../../../docs/framework/unmanaged-api/debugging/icordebuginternalframe2-interface.md)物件已建立成功。|  
-|E_INVALIDARG|`cInternalFrames`不是零和`ppInternalFrames`是`null`，或`pcInternalFrames`是`null`。|  
-|HRESULT_FROM_WIN32(ERROR_INSUFFICIENT_BUFFER)|`ppInternalFrames`小於內部框架的計數。|  
+|E_INVALIDARG|`cInternalFrames` 不是零和`ppInternalFrames`是`null`，或`pcInternalFrames`是`null`。|  
+|HRESULT_FROM_WIN32(ERROR_INSUFFICIENT_BUFFER)|`ppInternalFrames` 小於內部框架的計數。|  
   
 ## <a name="exceptions"></a>例外狀況  
   
@@ -76,7 +64,7 @@ HRESULT GetActiveInternalFrames
   
  當您第一次呼叫`GetActiveInternalFrames`，您應該設定`cInternalFrames`參數為 0 （零），而`ppInternalFrames`參數為 null。 當`GetActiveInternalFrames`會先傳回，`pcInternalFrames`包含內部堆疊上框架的計數。  
   
- `GetActiveInternalFrames`應該接著呼叫第二次。 您應該傳遞正確的計數 (`pcInternalFrames`) 中`cInternalFrames`參數，並指定適當大小的陣列中的指標`ppInternalFrames`。  
+ `GetActiveInternalFrames` 應該接著呼叫第二次。 您應該傳遞正確的計數 (`pcInternalFrames`) 中`cInternalFrames`參數，並指定適當大小的陣列中的指標`ppInternalFrames`。  
   
  使用[icordebugstackwalk:: Getframe](../../../../docs/framework/unmanaged-api/debugging/icordebugthread3-getactiveinternalframes-method.md)方法以傳回實際堆疊框架。  
   
@@ -87,8 +75,8 @@ HRESULT GetActiveInternalFrames
   
  **程式庫：** CorGuids.lib  
   
- **.NET framework 版本：**[!INCLUDE[net_current_v40plus](../../../../includes/net-current-v40plus-md.md)]  
+ **.NET framework 版本：** [!INCLUDE[net_current_v40plus](../../../../includes/net-current-v40plus-md.md)]  
   
-## <a name="see-also"></a>請參閱  
+## <a name="see-also"></a>另請參閱  
  [偵錯介面](../../../../docs/framework/unmanaged-api/debugging/debugging-interfaces.md)  
  [偵錯](../../../../docs/framework/unmanaged-api/debugging/index.md)

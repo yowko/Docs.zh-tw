@@ -1,41 +1,27 @@
 ---
 title: 使用訊息合約
-ms.custom: ''
 ms.date: 03/30/2017
-ms.prod: .net-framework
-ms.reviewer: ''
-ms.suite: ''
-ms.technology:
-- dotnet-clr
-ms.tgt_pltfrm: ''
-ms.topic: article
 dev_langs:
 - csharp
 - vb
 helpviewer_keywords:
 - message contracts [WCF]
 ms.assetid: 1e19c64a-ae84-4c2f-9155-91c54a77c249
-caps.latest.revision: 46
-author: dotnet-bot
-ms.author: dotnetcontent
-manager: wpickett
-ms.workload:
-- dotnet
-ms.openlocfilehash: 600d938b8981ddfabcb79028ae66b5b9d02107b7
-ms.sourcegitcommit: 94d33cadc5ff81d2ac389bf5f26422c227832052
+ms.openlocfilehash: ea0a107a67753e919439a6be2035ab77001641ff
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/30/2018
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="using-message-contracts"></a>使用訊息合約
-通常當建置 [!INCLUDE[indigo1](../../../../includes/indigo1-md.md)] 應用程式時，程式開發人員會特別注意資料結構與序列化的問題，並且本身不需要考慮傳送資料的訊息結構。 針對這類應用程式，建立參數的資料合約或傳回值是很明確的。 (如需詳細資訊，請參閱[在服務合約中指定資料傳輸](../../../../docs/framework/wcf/feature-details/specifying-data-transfer-in-service-contracts.md)。)  
+通常當建置 Windows Communication Foundation (WCF) 應用程式，開發人員密切注意資料結構與序列化的問題，而且不需要顧慮資料在其中執行的訊息之結構。 針對這類應用程式，建立參數的資料合約或傳回值是很明確的。 (如需詳細資訊，請參閱[在服務合約中指定資料傳輸](../../../../docs/framework/wcf/feature-details/specifying-data-transfer-in-service-contracts.md)。)  
   
  但是，有時候完整控制 SOAP 訊息的結構與控制其內容一樣重要。 當互通性很重要，或是要具體控制在訊息層級或訊息部分的安全性問題時，這就顯得特別重要。 在這些情況下，您可以建立*訊息合約*，可讓您指定所需的精確 SOAP 訊息的結構。  
   
  此主題會討論如何使用各種訊息合約屬性，以建立作業的特定訊息合約。  
   
 ## <a name="using-message-contracts-in-operations"></a>在作業中使用訊息合約  
- [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] 支援在建立模型的作業*遠端程序呼叫 (RPC) 樣式*或*傳訊樣式*。 在 RPC 樣式作業中，您可以使用任何可序列化類型，並且有存取本機呼叫的功能，例如多個參數以及 `ref` 與 `out` 參數。 在這個樣式中，選擇的序列化形式會控制基礎訊息中的資料結構，並且 [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] 執行階段會建立訊息以支援作業。 這可以讓不熟悉 SOAP 和 SOAP 訊息的程式開發人員，快速而輕鬆地建立與使用服務應用程式。  
+ WCF 還支援在建立模型的作業*遠端程序呼叫 (RPC) 樣式*或*傳訊樣式*。 在 RPC 樣式作業中，您可以使用任何可序列化類型，並且有存取本機呼叫的功能，例如多個參數以及 `ref` 與 `out` 參數。 在這個樣式中，選擇的序列化形式會控制基礎訊息中的資料結構，並 WCF 執行階段建立的訊息，以支援此作業。 這可以讓不熟悉 SOAP 和 SOAP 訊息的程式開發人員，快速而輕鬆地建立與使用服務應用程式。  
   
  下列程式碼範例顯示根據 RPC 樣式建立模型的服務作業。  
   
@@ -263,7 +249,7 @@ public class PatientRecord
   
 -   `Relay`  
   
- `Actor` 或 `Role` 屬性會定義指定標頭想要之節點的統一資源識別元 (URI)。 `MustUnderstand` 屬性會指定處理標頭的節點是否必須識別它。 `Relay` 屬性會指定標頭是否要轉送至下游節點。 除了 [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] 屬性外，`MustUnderstand` 不會對傳入訊息上的這些屬性執行任何處理，如本主題稍後＜訊息合約版本控制＞一節中所述。 但是，它允許您依需要讀取和寫入這些屬性，如同下列所描述。  
+ `Actor` 或 `Role` 屬性會定義指定標頭想要之節點的統一資源識別元 (URI)。 `MustUnderstand` 屬性會指定處理標頭的節點是否必須識別它。 `Relay` 屬性會指定標頭是否要轉送至下游節點。 WCF 不會執行任何處理內送訊息，這些屬性的除了`MustUnderstand`屬性，如本主題稍後的 「 訊息合約版本控制 」 一節中所指定。 但是，它允許您依需要讀取和寫入這些屬性，如同下列所描述。  
   
  當傳送訊息時，根據預設不會發出這些屬性。 變更這項作業的方法有兩種： 首先，您可以藉由變更 <xref:System.ServiceModel.MessageHeaderAttribute.Actor%2A?displayProperty=nameWithType>、<xref:System.ServiceModel.MessageHeaderAttribute.MustUnderstand%2A?displayProperty=nameWithType> 和 <xref:System.ServiceModel.MessageHeaderAttribute.Relay%2A?displayProperty=nameWithType> 屬性 (Property)，使用靜態方式將屬性 (Attribute) 設定為任何需要的值，如下列程式碼範例所示。 (請注意並沒有 `Role` 屬性 (Property)；如果您使用 SOAP 1.2，設定 <xref:System.ServiceModel.MessageHeaderAttribute.Actor%2A> 屬性 (Property) 會發出 `Role` 屬性 (Attribute))。  
   
@@ -336,9 +322,9 @@ public class BankingTransaction
   
  下列規則會套用至版本控制標頭：  
   
--   [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] 不會拒絕處理缺少標頭的狀況—對應的成員則會保留其預設值。  
+-   WCF 不會拒絕缺少標頭 — 對應的成員則會保留其預設值。  
   
--   [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] 也會忽略未預期的額外標頭。 這個規則的其中一個例外狀況是，如果在傳入 SOAP 訊息中的額外標頭將 `MustUnderstand` 屬性設定為 `true`，在這樣的情況下，因為無法處理必須解讀的標頭而會發生例外狀況。  
+-   此外，WCF 也會忽略未預期的額外標頭。 這個規則的其中一個例外狀況是，如果在傳入 SOAP 訊息中的額外標頭將 `MustUnderstand` 屬性設定為 `true`，在這樣的情況下，因為無法處理必須解讀的標頭而會發生例外狀況。  
   
  訊息本文有類似的版本控制規則：缺少與額外的訊息本文部分都會受到忽略。  
   
@@ -383,7 +369,7 @@ public class PatientRecord : PersonRecord
 -   當您在多個作業中使用相同的訊息合約時，在 WSDL 文件中會產生多個訊息類型。 藉由在後續使用時新增數字 "2"、"3" 等等，可以讓名稱具有唯一性。 當匯回 WSDL 時，會建立多個訊息合約類型，並且除了名稱以外都完全相同。  
   
 ## <a name="soap-encoding-considerations"></a>SOAP 編碼考量  
- [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] 可以讓您使用舊版的 XML SOAP 編碼樣式，但是不建議使用它。 當使用這個樣式時 (藉由將套用至服務合約之 `Use` 的 `Encoded` 屬性設定為 <xref:System.ServiceModel.XmlSerializerFormatAttribute?displayProperty=nameWithType>)，則適用下列其他考量：  
+ WCF 可讓您使用舊版 SOAP 編碼樣式的 xml，不過，它不是建議使用。 當使用這個樣式時 (藉由將套用至服務合約之 `Use` 的 `Encoded` 屬性設定為 <xref:System.ServiceModel.XmlSerializerFormatAttribute?displayProperty=nameWithType>)，則適用下列其他考量：  
   
 -   不支援訊息標頭，這表示屬性 <xref:System.ServiceModel.MessageHeaderAttribute> 和陣列屬性 <xref:System.ServiceModel.MessageHeaderArrayAttribute> 與 SOAP 編碼不相容。  
   

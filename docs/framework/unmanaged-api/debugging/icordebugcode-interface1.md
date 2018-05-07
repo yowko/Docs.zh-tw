@@ -1,14 +1,6 @@
 ---
 title: ICorDebugCode Interface1
-ms.custom: 
 ms.date: 03/30/2017
-ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.technology:
-- dotnet-clr
-ms.tgt_pltfrm: 
-ms.topic: reference
 api_name:
 - ICorDebugCode
 api_location:
@@ -22,17 +14,13 @@ helpviewer_keywords:
 ms.assetid: 7bd14fb6-8b54-4484-a891-e3c21859c019
 topic_type:
 - apiref
-caps.latest.revision: 
 author: rpetrusha
 ms.author: ronpet
-manager: wpickett
-ms.workload:
-- dotnet
-ms.openlocfilehash: 86659b624ef01922b6c5d1db9b3ae3697d0128b3
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.openlocfilehash: 37917577c802514fcebc3ea0792cbce9bb8a7345
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="icordebugcode-interface1"></a>ICorDebugCode Interface1
 表示 Microsoft Intermediate Language (MSIL) 程式碼或機器碼的區段。  
@@ -52,7 +40,7 @@ ms.lasthandoff: 12/22/2017
 |[IsIL 方法](../../../../docs/framework/unmanaged-api/debugging/icordebugcode-isil-method.md)|取得值，指出是否此`ICorDebugCode`在 MSIL 中編譯。|  
   
 ## <a name="remarks"></a>備註  
- `ICorDebugCode`可以表示 MSIL 或原生程式碼。 表示 MSIL 程式碼的 「 ICorDebugFunction"物件可以有零個或一個`ICorDebugCode`與其相關聯的物件。 「 ICorDebugFunction 」 物件，表示原生程式碼可以有任意數目的`ICorDebugCode`與其相關聯的物件。  
+ `ICorDebugCode` 可以表示 MSIL 或原生程式碼。 表示 MSIL 程式碼的 「 ICorDebugFunction"物件可以有零個或一個`ICorDebugCode`與其相關聯的物件。 「 ICorDebugFunction 」 物件，表示原生程式碼可以有任意數目的`ICorDebugCode`與其相關聯的物件。  
   
 > [!NOTE]
 >  這個介面不支援跨電腦或跨處理序的遠端呼叫。  
@@ -64,9 +52,9 @@ ms.lasthandoff: 12/22/2017
   
  **程式庫：** CorGuids.lib  
   
- **.NET framework 版本：**[!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
+ **.NET framework 版本：** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
   
-## <a name="see-also"></a>請參閱  
+## <a name="see-also"></a>另請參閱  
     
  [ICorDebugCode3 介面](../../../../docs/framework/unmanaged-api/debugging/icordebugcode3-interface.md)  
  [偵錯介面](../../../../docs/framework/unmanaged-api/debugging/debugging-interfaces.md)

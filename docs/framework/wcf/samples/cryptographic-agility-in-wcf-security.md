@@ -1,27 +1,17 @@
 ---
-title: "WCF 安全性中的加密彈性"
-ms.custom: 
+title: WCF 安全性中的加密彈性
 ms.date: 03/30/2017
-ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.technology: dotnet-clr
-ms.tgt_pltfrm: 
-ms.topic: article
 ms.assetid: c2c549e5-ac19-40c5-b686-8f67f52b6dbf
-caps.latest.revision: "9"
 author: BrucePerlerMS
-ms.author: bruceper
 manager: mbaldwin
-ms.workload: dotnet
-ms.openlocfilehash: 7d99ada67255d0ced8bbabc2ab6fc645e6ba9e35
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
-ms.translationtype: MT
+ms.openlocfilehash: 5fa4c3cf45eb17822effaa9284864274923b2504
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="cryptographic-agility-in-wcf-security"></a>WCF 安全性中的加密彈性
-本範例示範如何在標準/自訂演算法中指定，以便在 [!INCLUDE[indigo1](../../../../includes/indigo1-md.md)] 用戶端和服務中提供敏捷的密碼編譯實作。 此範例是由下列專案所組成：  
+這個範例示範如何在標準/自訂演算法，以提供密碼編譯的敏捷式軟體開發實作 Windows Communication Foundation (WCF) 用戶端與服務中指定。 此範例是由下列專案所組成：  
   
  服務  
  這是自我裝載[!INCLUDE[indigo2](../../../../includes/indigo2-md.md)]實作服務`ICalculator`介面，並可保護端點使用 <<!--zz xref:System.ServiceModel.WsHttpBinding --> `xref:System.ServiceModel.WsHttpBinding`> 安全工作階段與可靠工作階段停用。 這項服務會定義自訂的 `SecurityAlgorithmSuite` 類別，以指定用於訊息安全性的密碼編譯演算法。  
@@ -44,9 +34,9 @@ ms.lasthandoff: 12/22/2017
 >   
 >  `<InstallDrive>:\WF_WCF_Samples`  
 >   
->  如果此目錄不存在，請移至 [Windows Communication Foundation (WCF) and Windows Workflow Foundation (WF) Samples for .NET Framework 4  (適用於 .NET Framework 4 的 Windows Communication Foundation (WCF) 與 Windows Workflow Foundation (WF) 範例)](http://go.microsoft.com/fwlink/?LinkId=150780) ，以下載所有 [!INCLUDE[indigo1](../../../../includes/indigo1-md.md)] 和 [!INCLUDE[wf1](../../../../includes/wf1-md.md)] 範例。 此範例位於下列目錄。  
+>  如果此目錄不存在，請移至[Windows Communication Foundation (WCF) 和適用於.NET Framework 4 的 Windows Workflow Foundation (WF) 範例](http://go.microsoft.com/fwlink/?LinkId=150780)下載所有 Windows Communication Foundation (WCF) 和[!INCLUDE[wf1](../../../../includes/wf1-md.md)]範例。 此範例位於下列目錄。  
 >   
 >  `<InstallDrive>:\WF_WCF_Samples\WCF\Basic\Security\CryptoAgility`  
   
-## <a name="see-also"></a>請參閱  
+## <a name="see-also"></a>另請參閱  
  [安全性](../../../../docs/framework/wcf/feature-details/security.md)

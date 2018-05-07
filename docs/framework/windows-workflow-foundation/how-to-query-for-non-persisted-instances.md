@@ -1,23 +1,12 @@
 ---
-title: "HOW TO：非保存執行個體的查詢"
-ms.custom: 
+title: HOW TO：非保存執行個體的查詢
 ms.date: 03/30/2017
-ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.tgt_pltfrm: 
-ms.topic: article
 ms.assetid: 294019b1-c1a7-4b81-a14f-b47c106cd723
-caps.latest.revision: "5"
-author: dotnet-bot
-ms.author: dotnetcontent
-manager: wpickett
-ms.workload: dotnet
-ms.openlocfilehash: bde3ab1049edf6cb52a221225321f1e505a2491b
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.openlocfilehash: 000342013be4380e1a038fb8233050523f6bc758
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="how-to-query-for-non-persisted-instances"></a>HOW TO：非保存執行個體的查詢
 當建立服務的新執行個體且服務已定義 SQL 工作流程執行個體存放區行為時，服務主機會在執行個體存放區中為該服務執行個體建立初始項目。 接著在初次保存服務執行個體時，SQL 工作流程執行個體存放區行為會保存目前的執行個體狀態，連同啟動、復原和控制所需的其他資料。  

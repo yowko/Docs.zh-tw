@@ -1,27 +1,15 @@
 ---
-title: "作業格式器和作業選取器"
-ms.custom: 
+title: 作業格式器和作業選取器
 ms.date: 03/30/2017
-ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.technology: dotnet-clr
-ms.tgt_pltfrm: 
-ms.topic: article
 ms.assetid: 1c27e9fe-11f8-4377-8140-828207b98a0e
-caps.latest.revision: "19"
-author: dotnet-bot
-ms.author: dotnetcontent
-manager: wpickett
-ms.workload: dotnet
-ms.openlocfilehash: a10be10687f03b5de45846faa9ca832ead193e19
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
-ms.translationtype: MT
+ms.openlocfilehash: 469b7f2c99652cb6fceb2e8f12f1c74f0140b5ec
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="operation-formatter-and-operation-selector"></a>作業格式器和作業選取器
-這個範例會示範如何使用 [!INCLUDE[indigo1](../../../../includes/indigo1-md.md)] 擴充點，以允許與 [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] 所預期不同格式的訊息資料。 根據預設，[!INCLUDE[indigo2](../../../../includes/indigo2-md.md)]格式器預期要包含在方法參數`soap:body`項目。 此範例會示範如何實作自訂作業格式器，而這個作業格式器會剖析 HTTP GET 查詢字串中的參數資料，然後使用該資料叫用方法。  
+這個範例會示範如何使用 Windows Communication Foundation (WCF) 擴充性點，以允許在不同的格式項目中的訊息資料[!INCLUDE[indigo2](../../../../includes/indigo2-md.md)]預期。 根據預設，[!INCLUDE[indigo2](../../../../includes/indigo2-md.md)]格式器預期要包含在方法參數`soap:body`項目。 此範例會示範如何實作自訂作業格式器，而這個作業格式器會剖析 HTTP GET 查詢字串中的參數資料，然後使用該資料叫用方法。  
   
  範例根據[入門](../../../../docs/framework/wcf/samples/getting-started-sample.md)，它會實作`ICalculator`服務合約。 它會示範如何將 Add、Subtract、Multiply 和 Divide 訊息變更為針對用戶端對伺服器的要求使用 HTTP GET，以及針對伺服器對用戶端的回應使用具有 POX 訊息的 HTTP POST。  
   
@@ -177,7 +165,7 @@ void ReplaceFormatterBehavior(OperationDescription operationDescription, Endpoin
 >   
 >  `<InstallDrive>:\WF_WCF_Samples`  
 >   
->  如果此目錄不存在，請移至 [Windows Communication Foundation (WCF) and Windows Workflow Foundation (WF) Samples for .NET Framework 4  (適用於 .NET Framework 4 的 Windows Communication Foundation (WCF) 與 Windows Workflow Foundation (WF) 範例)](http://go.microsoft.com/fwlink/?LinkId=150780) ，以下載所有 [!INCLUDE[indigo1](../../../../includes/indigo1-md.md)] 和 [!INCLUDE[wf1](../../../../includes/wf1-md.md)] 範例。 此範例位於下列目錄。  
+>  如果此目錄不存在，請移至[Windows Communication Foundation (WCF) 和適用於.NET Framework 4 的 Windows Workflow Foundation (WF) 範例](http://go.microsoft.com/fwlink/?LinkId=150780)下載所有 Windows Communication Foundation (WCF) 和[!INCLUDE[wf1](../../../../includes/wf1-md.md)]範例。 此範例位於下列目錄。  
 >   
 >  `<InstallDrive>:\WF_WCF_Samples\WCF\Extensibility\Formatters\QuieryStringFormatter`  
   
@@ -189,4 +177,4 @@ void ReplaceFormatterBehavior(OperationDescription operationDescription, Endpoin
   
 3.  若要在單一或跨電腦組態中執行範例時，請依照中的指示[執行 Windows Communication Foundation 範例](../../../../docs/framework/wcf/samples/running-the-samples.md)。  
   
-## <a name="see-also"></a>請參閱
+## <a name="see-also"></a>另請參閱

@@ -1,24 +1,14 @@
 ---
 title: 常數的概觀 (Visual Basic)
-ms.custom: ''
 ms.date: 07/20/2015
-ms.prod: .net
-ms.reviewer: ''
-ms.suite: ''
-ms.technology:
-- devlang-visual-basic
-ms.topic: article
 helpviewer_keywords:
 - constants [Visual Basic]
 ms.assetid: 29016fe8-78b3-4dc8-90b8-1cfec2fa8ac9
-caps.latest.revision: 14
-author: dotnet-bot
-ms.author: dotnetcontent
-ms.openlocfilehash: 40330e8c2c60c866200e009a8280c7ec9c855435
-ms.sourcegitcommit: 86adcc06e35390f13c1e372c36d2e044f1fc31ef
+ms.openlocfilehash: 2ec43254013df5444048b5197489c55217d5328a
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/26/2018
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="constants-overview-visual-basic"></a>常數的概觀 (Visual Basic)
 常數是有意義的名稱來取代數字或字串，不會變更。 常數用來儲存值，正如其名，維持不變，整個應用程式執行。 您可以大幅改善您的程式碼的可讀性，並更輕鬆地維護藉由使用常數。 在包含的值會重複出現的程式碼中使用它們，或相依於某些很難記住，或沒有明顯意義的數字。  

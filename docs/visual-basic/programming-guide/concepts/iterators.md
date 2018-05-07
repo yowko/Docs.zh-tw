@@ -1,21 +1,12 @@
 ---
-title: "迭代器 (Visual Basic)"
-ms.custom: 
+title: 迭代器 (Visual Basic)
 ms.date: 07/20/2015
-ms.prod: .net
-ms.reviewer: 
-ms.suite: 
-ms.technology: devlang-visual-basic
-ms.topic: article
 ms.assetid: f26b5c1e-fe9d-4004-b287-da7919d717ae
-caps.latest.revision: "3"
-author: dotnet-bot
-ms.author: dotnetcontent
-ms.openlocfilehash: f02249f7f30d2cd6b43aa75530ace099286c7d7f
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.openlocfilehash: ecc48ad5bbddc82457a8d6cc8e60ee419fb593fa
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="iterators-visual-basic"></a>迭代器 (Visual Basic)
 「迭代器」可用來逐步執行集合，例如清單和陣列。  
@@ -221,7 +212,7 @@ Public Class Zoo
 End Class  
 ```  
   
-##  <a name="BKMK_TryBlocks"></a>Try 區塊  
+##  <a name="BKMK_TryBlocks"></a> Try 區塊  
  Visual Basic 允許`Yield`陳述式中的`Try`區塊[再試一次...Catch...Finally 陳述式](../../../visual-basic/language-reference/statements/try-catch-finally-statement.md)。 A`Try`區塊具有`Yield`陳述式可以有`Catch`封鎖了，而且可以有`Finally`區塊。  
   
  下列範例包含`Try`， `Catch`，和`Finally`區塊中的迭代器函式。 `Finally` Iterator 函式中的區塊會執行之前`For Each`反覆項目完成。  
@@ -261,7 +252,7 @@ End Function
   
  如果`For Each`（而不是迭代器的方法） 的主體就會擲回例外狀況， `Catch` iterator 函式中的區塊不會執行，但`Finally`就會執行 iterator 函式中的區塊。 A`Catch`迭代器函式內的區塊會攔截迭代器函式內發生的例外狀況。  
   
-##  <a name="BKMK_AnonymousMethods"></a>匿名方法  
+##  <a name="BKMK_AnonymousMethods"></a> 匿名方法  
  在 Visual Basic 中的匿名函式可以是 iterator 函式。 下列範例將說明這點。  
   
 ```vb  

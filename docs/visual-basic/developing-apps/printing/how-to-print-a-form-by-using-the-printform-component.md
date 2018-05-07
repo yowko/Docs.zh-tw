@@ -1,22 +1,14 @@
 ---
 title: 如何：使用 PrintForm 元件列印表單 (Visual Basic)
 ms.date: 07/20/2015
-ms.prod: .net
-ms.suite: ''
-ms.technology:
-- devlang-visual-basic
-ms.topic: article
 helpviewer_keywords:
 - Form [Visual Basic], printing
 ms.assetid: df963bf6-3ee1-49f4-8b2e-1d95d1beb0be
-caps.latest.revision: 19
-author: dotnet-bot
-ms.author: dotnetcontent
-ms.openlocfilehash: 5edad4f04b98dcf0dfa328f111db5dcb423036e5
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.openlocfilehash: 5f8e620fce2b85d3f3cdb66bf80967f8eb281361
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="how-to-print-a-form-by-using-the-printform-component-visual-basic"></a>如何：使用 PrintForm 元件列印表單 (Visual Basic)
 <xref:Microsoft.VisualBasic.PowerPacks.Printing.PrintForm> 元件可讓您完全依照螢幕所示，快速列印表單的影像，而不需要使用 <xref:System.Drawing.Printing.PrintDocument> 元件。 下列程序示範如何將表單列印至印表機、[預覽列印] 視窗及封裝式 PostScript 檔案。  
@@ -31,7 +23,7 @@ ms.lasthandoff: 11/21/2017
   
 2.  在 [屬性]  視窗中，將 <xref:Microsoft.VisualBasic.PowerPacks.Printing.PrintForm.PrintAction%2A> 屬性設定為 <xref:System.Drawing.Printing.PrintAction.PrintToPrinter>。  
   
-3.  在適當的事件處理常式 (例如 `Click` Print **的**`Button`事件處理常式) 中加入下列程式碼。  
+3.  在適當的事件處理常式 (例如 [列印] `Click`**的**`Button`事件處理常式) 中加入下列程式碼。  
   
     ```  
     PrintForm1.Print()  
@@ -45,7 +37,7 @@ ms.lasthandoff: 11/21/2017
   
 2.  在 [屬性]  視窗中，將 <xref:Microsoft.VisualBasic.PowerPacks.Printing.PrintForm.PrintAction%2A> 屬性設定為 <xref:System.Drawing.Printing.PrintAction.PrintToPreview>。  
   
-3.  在適當的事件處理常式 (例如 `Click` Print **的**`Button`事件處理常式) 中加入下列程式碼。  
+3.  在適當的事件處理常式 (例如 [列印] `Click`**的**`Button`事件處理常式) 中加入下列程式碼。  
   
     ```  
     PrintForm1.Print()  

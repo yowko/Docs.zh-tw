@@ -1,14 +1,6 @@
 ---
-title: "ICorProfilerInfo6 介面"
-ms.custom: 
+title: ICorProfilerInfo6 介面
 ms.date: 03/30/2017
-ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.technology:
-- dotnet-clr
-ms.tgt_pltfrm: 
-ms.topic: article
 api_name:
 - ICorProfilerInfo6
 api_location:
@@ -16,17 +8,13 @@ api_location:
 api_type:
 - COM
 ms.assetid: 6f2bb148-1e2b-4e45-a5a5-0ceddc40064b
-caps.latest.revision: 
 author: rpetrusha
 ms.author: ronpet
-manager: wpickett
-ms.workload:
-- dotnet
-ms.openlocfilehash: 805f1e451b2c13c356d904c42dff87304aa2093c
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.openlocfilehash: da1aab48e2eef229bb31e9443a5549c3f9fbc621
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="icorprofilerinfo6-interface"></a>ICorProfilerInfo6 介面
 [在.NET Framework 4.6 和更新版本中支援]  
@@ -44,7 +32,7 @@ ms.lasthandoff: 12/22/2017
   
  **標頭：** CorProf.idl、CorProf.h  
   
- **.NET framework 版本：**[!INCLUDE[net_current_v46plus](../../../../includes/net-current-v46plus-md.md)]  
+ **.NET framework 版本：** [!INCLUDE[net_current_v46plus](../../../../includes/net-current-v46plus-md.md)]  
   
-## <a name="see-also"></a>請參閱  
+## <a name="see-also"></a>另請參閱  
  [分析介面](../../../../docs/framework/unmanaged-api/profiling/profiling-interfaces.md)

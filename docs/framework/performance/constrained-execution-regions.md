@@ -1,27 +1,17 @@
 ---
-title: "限制的執行區域"
-ms.custom: 
+title: 限制的執行區域
 ms.date: 03/30/2017
-ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.technology: dotnet-clr
-ms.tgt_pltfrm: 
-ms.topic: article
 helpviewer_keywords:
 - constrained execution regions
 - CERs
 ms.assetid: 99354547-39c1-4b0b-8553-938e8f8d1808
-caps.latest.revision: "9"
 author: mairaw
 ms.author: mairaw
-manager: wpickett
-ms.workload: dotnet
-ms.openlocfilehash: 4f046f26391d581bc1663e9a7041225ede99bd31
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.openlocfilehash: e7e653101faf9e0664f41e031c7bad05523825f3
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="constrained-execution-regions"></a>限制的執行區域
 限制的執行區域 (CER) 是編寫可靠 Managed 程式碼的機制一部分。 CER 定義一個區域，其中限制 Common Language Runtime (CLR) 擲回頻外例外狀況，而頻外例外狀況會防止執行區域中的整個程式碼。 在該區域內，使用者程式碼無法執行導致擲回頻外例外狀況的程式碼。 <xref:System.Runtime.CompilerServices.RuntimeHelpers.PrepareConstrainedRegions%2A> 方法的前面必須緊接著 `try` 區塊，並將 `catch`、`finally` 和 `fault` 區塊標記為限制的執行區域。 標記為限制的區域之後，程式碼只能呼叫具有強式可靠性合約的其他程式碼；而且，除非程式碼已準備好處理失敗，否則程式碼不應該配置非預期或不可靠的方法，或是對其進行虛擬呼叫。 CLR 會針對在 CER 中執行的程式碼延遲執行緒中止。  
@@ -123,5 +113,5 @@ ms.lasthandoff: 12/22/2017
   
 -   函式指標和委派。  
   
-## <a name="see-also"></a>請參閱  
+## <a name="see-also"></a>另請參閱  
  [可靠性最佳做法](../../../docs/framework/performance/reliability-best-practices.md)

@@ -1,28 +1,19 @@
 ---
-title: 變數 &#39; 類型&lt;variablename&gt;&#39; 不會推斷，因為它繫結至封閉範圍中的欄位
+title: 變數的型別&#39; &lt;variablename&gt; &#39;不會推斷，因為它繫結至封閉範圍中的欄位
 ms.date: 07/20/2015
-ms.prod: .net
-ms.reviewer: ''
-ms.suite: ''
-ms.technology:
-- devlang-visual-basic
-ms.topic: article
 f1_keywords:
 - vbc42110
 - bc42110
 helpviewer_keywords:
 - BC42110
 ms.assetid: ef4442eb-08d1-434f-a03b-4aa2ed4e4414
-caps.latest.revision: 33
-author: dotnet-bot
-ms.author: dotnetcontent
-ms.openlocfilehash: 39968407f4de5436df324320c99dede4d72e2808
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.openlocfilehash: cb423e8dcced6956eb86d484607915030c91412b
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 05/04/2018
 ---
-# <a name="the-type-for-variable-39ltvariablenamegt39-will-not-be-inferred-because-it-is-bound-to-a-field-in-an-enclosing-scope"></a>變數 &#39; 類型&lt;variablename&gt;&#39; 不會推斷，因為它繫結至封閉範圍中的欄位
+# <a name="the-type-for-variable-39ltvariablenamegt39-will-not-be-inferred-because-it-is-bound-to-a-field-in-an-enclosing-scope"></a>變數的型別&#39; &lt;variablename&gt; &#39;不會推斷，因為它繫結至封閉範圍中的欄位
 變數的型別 '\<變數名稱 >' 不推斷，因為它繫結至封閉範圍中的欄位。 請變更名稱 '\<變數名稱 >'，或使用完整限定的名稱 （例如 'Me.variablename' 或 'MyBase.variablename'）。  
   
  在程式碼中的迴圈控制變數與其他封閉範圍或類別欄位具有相同的名稱。 因為使用此控制項變數，而沒有`As`子句，它繫結至封閉範圍中中的欄位和編譯器不會為其建立新的變數或推斷其類型。  

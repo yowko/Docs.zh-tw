@@ -1,40 +1,28 @@
 ---
 title: HOW TO：使用 SecurityBindingElement 建立自訂繫結
-ms.custom: ''
 ms.date: 03/30/2017
-ms.prod: .net-framework
-ms.reviewer: ''
-ms.suite: ''
-ms.technology:
-- dotnet-clr
-ms.tgt_pltfrm: ''
-ms.topic: article
 dev_langs:
 - csharp
 - vb
 helpviewer_keywords:
 - security [WCF], creating custom bindings
 ms.assetid: 203a9f9e-3a73-427c-87aa-721c56265b29
-caps.latest.revision: 19
 author: BrucePerlerMS
-ms.author: bruceper
 manager: mbaldwin
-ms.workload:
-- dotnet
-ms.openlocfilehash: 80fd6163db1b7b168be4e19b01c8eb9f15865f04
-ms.sourcegitcommit: 94d33cadc5ff81d2ac389bf5f26422c227832052
+ms.openlocfilehash: 1e288daeb717fa9fa041d552cac4ec5d0cd28808
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/30/2018
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="how-to-create-a-custom-binding-using-the-securitybindingelement"></a>HOW TO：使用 SecurityBindingElement 建立自訂繫結
-[!INCLUDE[indigo1](../../../../includes/indigo1-md.md)] 包括數個系統提供之繫結，您可以對這些繫結進行設定，但是自訂這些繫結並不具有設定所有安全性選項時 [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] 所支援的完整彈性。 本主題示範如何直接從個別的繫結元素建立自訂繫結，並強調一些可在建立這類繫結時指定的安全設定。 如需有關如何建立自訂繫結的詳細資訊，請參閱[擴充繫結](../../../../docs/framework/wcf/extending/extending-bindings.md)。  
+Windows Communication Foundation (WCF) 包含數種系統提供繫結，您可以設定，但不是會提供完整的彈性設定 WCF 支援的所有安全性選項時。 本主題示範如何直接從個別的繫結元素建立自訂繫結，並強調一些可在建立這類繫結時指定的安全設定。 如需有關如何建立自訂繫結的詳細資訊，請參閱[擴充繫結](../../../../docs/framework/wcf/extending/extending-bindings.md)。  
   
 > [!WARNING]
 >  <xref:System.ServiceModel.Channels.SecurityBindingElement> 不支援 <xref:System.ServiceModel.Channels.IDuplexSessionChannel> 通道圖案，當 <xref:System.ServiceModel.TransferMode> 設定為 <xref:System.ServiceModel.TransferMode.Buffered> 時，這是 TCP 傳輸使用的預設通道圖案。 您必須將 <xref:System.ServiceModel.TransferMode> 設定為 <xref:System.ServiceModel.TransferMode.Streamed>，才能在這個情況中使用 <xref:System.ServiceModel.Channels.SecurityBindingElement>。  
   
 ## <a name="creating-a-custom-binding"></a>建立自訂繫結  
- 在[!INCLUDE[indigo2](../../../../includes/indigo2-md.md)]所有繫結所組成*繫結項目*。 每個繫結項目均衍生自 <xref:System.ServiceModel.Channels.BindingElement> 類別。 如果是標準系統提供的繫結，雖然您可以自訂某些屬性設定，但是系統仍會為您先建立並且設定好繫結項目。  
+ 在 WCF 中的所有繫結所組成*繫結項目*。 每個繫結項目均衍生自 <xref:System.ServiceModel.Channels.BindingElement> 類別。 如果是標準系統提供的繫結，雖然您可以自訂某些屬性設定，但是系統仍會為您先建立並且設定好繫結項目。  
   
  相反的，若要建立自訂繫結，會建立並且設定繫結項目，並且從自訂項目建立一個<xref:System.ServiceModel.Channels.CustomBinding>。  
   

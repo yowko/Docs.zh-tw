@@ -1,24 +1,12 @@
 ---
-title: "核心通訊：傳輸架構"
-ms.custom: 
+title: 核心通訊：傳輸架構
 ms.date: 03/30/2017
-ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.technology: dotnet-clr
-ms.tgt_pltfrm: 
-ms.topic: article
 ms.assetid: 9fae1728-1377-4cc1-8fc3-d5d9a23546bd
-caps.latest.revision: "5"
-author: dotnet-bot
-ms.author: dotnetcontent
-manager: wpickett
-ms.workload: dotnet
-ms.openlocfilehash: 1bd5ab358c6b9cd2070b0bf00459143bad126ebd
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.openlocfilehash: abcadc5ae1314f5aa765aa3f85c28ccedc8ca3d5
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="core-communications-transport-framework"></a>核心通訊：傳輸架構
 本主題會列出由傳輸架構產生的所有例外狀況。  

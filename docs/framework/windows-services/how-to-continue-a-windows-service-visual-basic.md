@@ -1,14 +1,6 @@
 ---
-title: "如何：繼續執行 Windows 服務 (Visual Basic)"
-ms.custom: 
+title: 如何：繼續執行 Windows 服務 (Visual Basic)
 ms.date: 03/30/2017
-ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.technology:
-- dotnet-clr
-ms.tgt_pltfrm: 
-ms.topic: article
 dev_langs:
 - vb
 f1_keywords:
@@ -17,17 +9,13 @@ helpviewer_keywords:
 - Windows Service applications, pausing
 - pausing Windows Service applications
 ms.assetid: e5d13760-4c83-4b0d-abef-39852677cd7a
-caps.latest.revision: 
 author: ghogen
-ms.author: ghogen
 manager: douge
-ms.workload:
-- dotnet
-ms.openlocfilehash: 73b16a5e5834f7279ae551d4e7efd26cc86c1d07
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.openlocfilehash: 15ef15e0afe43d56db0972a686cd093e22c672dc
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="how-to-continue-a-windows-service-visual-basic"></a>如何：繼續執行 Windows 服務 (Visual Basic)
 這個範例會使用<xref:System.ServiceProcess.ServiceController>繼續在本機電腦上的 IIS 管理服務元件。  
@@ -61,7 +49,7 @@ ms.lasthandoff: 12/22/2017
   
  服務資訊的存取權可能會受到使用<xref:System.Security.Permissions.PermissionState>中設定權限的列舉<xref:System.Security.Permissions.SecurityPermission>類別。  
   
-## <a name="see-also"></a>請參閱  
+## <a name="see-also"></a>另請參閱  
  <xref:System.ServiceProcess.ServiceController>  
  <xref:System.ServiceProcess.ServiceControllerStatus>  
  [如何：暫停 Windows 服務 (Visual Basic)](../../../docs/framework/windows-services/how-to-pause-a-windows-service-visual-basic.md)

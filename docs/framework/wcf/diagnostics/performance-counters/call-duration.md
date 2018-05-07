@@ -1,24 +1,12 @@
 ---
-title: "呼叫持續時間"
-ms.custom: 
+title: 呼叫持續時間
 ms.date: 03/30/2017
-ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.technology: dotnet-clr
-ms.tgt_pltfrm: 
-ms.topic: article
 ms.assetid: e4973ec3-3c66-4c0b-b5d0-294b62c83f7d
-caps.latest.revision: "8"
-author: dotnet-bot
-ms.author: dotnetcontent
-manager: wpickett
-ms.workload: dotnet
-ms.openlocfilehash: a306be97f1fd1b630fd59c1a154c08b3f1189c8d
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.openlocfilehash: df361774373d08ad6e9e027314c0529ea97d6b12
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="call-duration"></a>呼叫持續時間
 計數器名稱：呼叫持續時間  
@@ -29,5 +17,5 @@ ms.lasthandoff: 12/22/2017
 > [!WARNING]
 >  在非同步 WCF 服務上使用時，呼叫持續時間計數器一定會傳回 -1。  
   
-## <a name="see-also"></a>請參閱  
+## <a name="see-also"></a>另請參閱  
  [PERF_AVERAGE_TIMER](http://go.microsoft.com/fwlink/?LinkId=95015)

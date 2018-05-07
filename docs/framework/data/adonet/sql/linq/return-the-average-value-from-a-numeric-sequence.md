@@ -1,27 +1,15 @@
 ---
-title: "傳回數值序列的平均值"
-ms.custom: 
+title: 傳回數值序列的平均值
 ms.date: 03/30/2017
-ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.technology: dotnet-ado
-ms.tgt_pltfrm: 
-ms.topic: article
 dev_langs:
 - csharp
 - vb
 ms.assetid: ee3b8673-a2e7-4b2d-9b5c-4972ff9e665d
-caps.latest.revision: "2"
-author: douglaslMS
-ms.author: douglasl
-manager: craigg
-ms.workload: dotnet
-ms.openlocfilehash: e7c53eafdc8805dce07ccde6b0cf01438fbd3ccf
-ms.sourcegitcommit: ed26cfef4e18f6d93ab822d8c29f902cff3519d1
+ms.openlocfilehash: 3e808b836183a23fa6bd80faeb0d3cfc5921f4cb
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 01/17/2018
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="return-the-average-value-from-a-numeric-sequence"></a>傳回數值序列的平均值
 <xref:System.Linq.Enumerable.Average%2A> 運算子會計算數值序列的平均值。  
@@ -125,5 +113,5 @@ ms.lasthandoff: 01/17/2018
   
  `Gravad lax`  
   
-## <a name="see-also"></a>請參閱  
+## <a name="see-also"></a>另請參閱  
  [彙總查詢](../../../../../../docs/framework/data/adonet/sql/linq/aggregate-queries.md)

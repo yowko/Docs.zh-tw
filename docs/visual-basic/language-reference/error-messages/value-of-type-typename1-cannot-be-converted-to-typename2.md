@@ -1,28 +1,19 @@
 ---
-title: "類型 &#39; 的值&lt;typename1&gt;&#39; 無法轉換成 &#39;&lt;2>&gt;&#39;"
+title: 型別的值&#39; &lt;typename1&gt; &#39;無法轉換成&#39; &lt;2>&gt;&#39;
 ms.date: 07/20/2015
-ms.prod: .net
-ms.reviewer: 
-ms.suite: 
-ms.technology:
-- devlang-visual-basic
-ms.topic: article
 f1_keywords:
 - vbc30955
 - bc30955
 helpviewer_keywords:
 - BC30955
 ms.assetid: 966b61eb-441e-48b0-bedf-ca95384ecb8b
-caps.latest.revision: 
-author: dotnet-bot
-ms.author: dotnetcontent
-ms.openlocfilehash: b583c4272dd6e964de99fb14d2795152c655f3aa
-ms.sourcegitcommit: 34ec7753acf76f90a0fa845235ef06663dc9e36e
+ms.openlocfilehash: 9b3c029ed7bf73ff92dba65438d797b27fa135f1
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/04/2018
 ---
-# <a name="value-of-type-39lttypename1gt39-cannot-be-converted-to-39lttypename2gt39"></a>類型 &#39; 的值&lt;typename1&gt;&#39; 無法轉換成 &#39;&lt;2>&gt;&#39;
+# <a name="value-of-type-39lttypename1gt39-cannot-be-converted-to-39lttypename2gt39"></a>型別的值&#39; &lt;typename1&gt; &#39;無法轉換成&#39; &lt;2>&gt;&#39;
 類型的值 '\<typename1 >' 無法轉換成'\<2> >'。 類型不符的情況可能是因為混用了檔案參考和組件的專案參考 '\<assemblyname >'。 請嘗試更換的檔案參考 '\<檔案路徑 >' 在專案中'\<projectname1 >' 的專案參考 '\<專案名稱 2> >'。  
   
  專案參考和檔案參考專案可讓的情況下，編譯器無法保證，可以轉換成另一種類型。  
@@ -67,7 +58,7 @@ ms.lasthandoff: 12/21/2017
   
 -   變更專案參考的檔案參考。  
   
-## <a name="see-also"></a>請參閱  
+## <a name="see-also"></a>另請參閱  
  [在 Visual Basic 中的型別轉換](../../../visual-basic/programming-guide/language-features/data-types/type-conversions.md)  
  [管理專案中的參考](/visualstudio/ide/managing-references-in-a-project)  
  

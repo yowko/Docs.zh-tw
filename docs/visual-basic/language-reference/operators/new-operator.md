@@ -1,11 +1,6 @@
 ---
-title: "New 運算子 (Visual Basic)"
+title: New 運算子 (Visual Basic)
 ms.date: 07/20/2015
-ms.prod: .net
-ms.reviewer: 
-ms.suite: 
-ms.technology: devlang-visual-basic
-ms.topic: article
 f1_keywords:
 - vb.new
 - vb.NewConstraint
@@ -16,14 +11,11 @@ helpviewer_keywords:
 - New constraint
 - New keyword [Visual Basic]
 ms.assetid: d7d566d7-fe0e-4336-91f7-641a542de4d0
-caps.latest.revision: "23"
-author: dotnet-bot
-ms.author: dotnetcontent
-ms.openlocfilehash: 74f0352379e861ad135ea23d31ea07d638f9e6c1
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.openlocfilehash: 0fe511b2c16681d7bab7eeda7c121fcbbaa2f5dd
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="new-operator-visual-basic"></a>New 運算子 (Visual Basic)
 導入了`New`子句來建立新的物件執行個體，指定型別參數的建構函式條件約束，或識別`Sub`與類別建構函式的程序。  

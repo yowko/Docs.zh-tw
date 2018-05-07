@@ -1,29 +1,17 @@
 ---
-title: "如何：使用 ScrollViewer 建立 Expander"
-ms.custom: 
+title: 如何：使用 ScrollViewer 建立 Expander
 ms.date: 03/30/2017
-ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.technology: dotnet-wpf
-ms.tgt_pltfrm: 
-ms.topic: article
 helpviewer_keywords:
 - controls [WPF], Expander
 - ScrollViewer control [WPF], with Expander control
 - Expander control [WPF], creating
 - controls [WPF], ScrollViewer
 ms.assetid: 2ad124d2-2406-4157-aaf2-64e067298f01
-caps.latest.revision: "13"
-author: dotnet-bot
-ms.author: dotnetcontent
-manager: wpickett
-ms.workload: dotnet
-ms.openlocfilehash: a2066ccce28138cfecf4e0b4574d45783a9ba4ca
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.openlocfilehash: 6c014d4f6a12bfb58c2ae68f580f632c9478c82f
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="how-to-create-an-expander-with-a-scrollviewer"></a>如何：使用 ScrollViewer 建立 Expander
 這個範例示範如何建立<xref:System.Windows.Controls.Expander>包含複雜的內容，例如影像和文字控制項。 此範例也內含的之內容<xref:System.Windows.Controls.Expander>中<xref:System.Windows.Controls.ScrollViewer>控制項。  
@@ -37,7 +25,7 @@ ms.lasthandoff: 12/22/2017
   
  [!code-csharp[ExpanderRichContent#CreateExpanderCode](../../../../samples/snippets/csharp/VS_Snippets_Wpf/ExpanderRichContent/CSharp/Window1.xaml.cs#createexpandercode)]  
   
-## <a name="see-also"></a>請參閱  
+## <a name="see-also"></a>另請參閱  
  <xref:System.Windows.Controls.Expander>  
  [Expander 概觀](../../../../docs/framework/wpf/controls/expander-overview.md)  
  [HOW-TO 主題](../../../../docs/framework/wpf/controls/expander-how-to-topics.md)

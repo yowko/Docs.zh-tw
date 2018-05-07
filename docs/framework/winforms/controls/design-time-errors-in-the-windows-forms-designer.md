@@ -1,13 +1,6 @@
 ---
-title: "Windows Form 設計工具的設計階段錯誤"
-ms.custom: 
+title: Windows Form 設計工具的設計階段錯誤
 ms.date: 03/30/2017
-ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.technology: dotnet-winforms
-ms.tgt_pltfrm: 
-ms.topic: article
 f1_keywords:
 - DTELErrorList
 - WhyDTELPage
@@ -15,16 +8,11 @@ helpviewer_keywords:
 - errors [Windows Forms Designer]
 - design-time errors [Windows Forms Designer]
 ms.assetid: ad408380-825a-46d8-9a4a-531b130b88ce
-caps.latest.revision: "16"
-author: dotnet-bot
-ms.author: dotnetcontent
-manager: wpickett
-ms.workload: dotnet
-ms.openlocfilehash: 0bb4899cbfaa5e378d58ec42c2bc8b39693c5f35
-ms.sourcegitcommit: c0dd436f6f8f44dc80dc43b07f6841a00b74b23f
+ms.openlocfilehash: 00296b51563a5f973b8e5d64c55867568ff0324e
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 01/19/2018
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="design-time-errors-in-the-windows-forms-designer"></a>Windows Form 設計工具的設計階段錯誤
 本主題說明當 Windows Forms 設計工具載入失敗時，Microsoft Visual Studio 中所出現的設計階段錯誤清單的意義與用法。 如果出現此錯誤清單，您不應該將它視為是設計工具中的錯誤，而是協助您更正程式碼中的錯誤。  
@@ -63,7 +51,7 @@ ms.lasthandoff: 01/19/2018
 ### <a name="ignore-and-continue"></a>忽略並繼續  
  您可以選擇忽略錯誤狀況並繼續載入設計工具。 選擇此動作可能會導致非預期的行為。 例如，控制項可能不會出現在設計介面上。  
   
-## <a name="see-also"></a>請參閱  
+## <a name="see-also"></a>另請參閱  
  [疑難排解設計階段開發](http://msdn.microsoft.com/library/e048d08e-fa7c-4be8-b238-4abaa199a0a6)  
  [針對控制項和元件撰寫進行疑難排解](../../../../docs/framework/winforms/controls/troubleshooting-control-and-component-authoring.md)  
  [在設計階段開發 Windows Forms 控制項](../../../../docs/framework/winforms/controls/developing-windows-forms-controls-at-design-time.md)  

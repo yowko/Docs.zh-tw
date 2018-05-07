@@ -1,28 +1,19 @@
 ---
-title: 第一個運算元的二進位檔 &#39; 如果 &#39;運算式必須是可為 null 或參考型別
+title: 二進位檔案中的第一個運算元&#39;如果&#39;運算式必須是可為 null 或參考型別
 ms.date: 07/20/2015
-ms.prod: .net
-ms.reviewer: ''
-ms.suite: ''
-ms.technology:
-- devlang-visual-basic
-ms.topic: article
 f1_keywords:
 - bc33107
 - vbc33107
 helpviewer_keywords:
 - BC33107
 ms.assetid: 493c8899-3f6b-4471-8eb6-9284e8492768
-caps.latest.revision: 5
-author: dotnet-bot
-ms.author: dotnetcontent
-ms.openlocfilehash: f66b110c02076120c55a3bff28c3d7614bf8be26
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.openlocfilehash: 76078d315b2c32a2a29aa652a65b463622afec36
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 05/04/2018
 ---
-# <a name="first-operand-in-a-binary-39if39-expression-must-be-nullable-or-a-reference-type"></a>第一個運算元的二進位檔 &#39; 如果 &#39;運算式必須是可為 null 或參考型別
+# <a name="first-operand-in-a-binary-39if39-expression-must-be-nullable-or-a-reference-type"></a>二進位檔案中的第一個運算元&#39;如果&#39;運算式必須是可為 null 或參考型別
 `If`運算式可接受兩個或三個引數。 當您傳送只有兩個引數時，第一個引數必須是參考類型或 null 的型別。 如果第一個引數評估為任何項目以外`Nothing`，其值會傳回。 如果第一個引數評估為`Nothing`，評估並傳回第二個引數。  
   
  例如，下列程式碼包含兩個`If`運算式、 一個包含三個引數和一個具有兩個引數。 運算式會計算並傳回相同的值。  

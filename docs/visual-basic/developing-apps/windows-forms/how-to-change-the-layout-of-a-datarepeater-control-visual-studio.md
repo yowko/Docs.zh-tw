@@ -1,10 +1,6 @@
 ---
-title: "如何：變更 DataRepeater 控制項的配置 (Visual Studio)"
+title: 如何：變更 DataRepeater 控制項的配置 (Visual Studio)
 ms.date: 07/20/2015
-ms.prod: .net
-ms.suite: 
-ms.technology: devlang-visual-basic
-ms.topic: article
 dev_langs:
 - csharp
 - vb
@@ -12,14 +8,11 @@ helpviewer_keywords:
 - DataRepeater, changing layout style
 - DataRepeater, changing orientation
 ms.assetid: 33aa8fd5-ac63-4bd0-ba13-8c2ab17e7824
-caps.latest.revision: "10"
-author: dotnet-bot
-ms.author: dotnetcontent
-ms.openlocfilehash: 94c5f8f5e83578ca0a82b479ef5ef359738df5f1
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.openlocfilehash: fa780ee40171143c17b5bdbda4a97179ed5f2151
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="how-to-change-the-layout-of-a-datarepeater-control-visual-studio"></a>如何：變更 DataRepeater 控制項的配置 (Visual Studio)
 <xref:Microsoft.VisualBasic.PowerPacks.DataRepeater>可以 （項目捲動垂直） 的垂直或水平 （項目捲動水平） 中顯示控制項的方向。 您可以變更方向，在設計階段或執行階段變更<xref:Microsoft.VisualBasic.PowerPacks.DataRepeater.LayoutStyle%2A>屬性。 如果您變更<xref:Microsoft.VisualBasic.PowerPacks.DataRepeater.LayoutStyle%2A>屬性在執行階段，您可能也要調整大小<xref:Microsoft.VisualBasic.PowerPacks.DataRepeater.ItemTemplate%2A>與重新定位子控制項。  

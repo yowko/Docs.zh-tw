@@ -1,14 +1,6 @@
 ---
 title: Windows Form 中的安全性概觀
-ms.custom: ''
 ms.date: 03/30/2017
-ms.prod: .net-framework
-ms.reviewer: ''
-ms.suite: ''
-ms.technology:
-- dotnet-winforms
-ms.tgt_pltfrm: ''
-ms.topic: article
 helpviewer_keywords:
 - code access security [Windows Forms], Windows Forms
 - permissions [Windows Forms], Windows Forms
@@ -16,17 +8,11 @@ helpviewer_keywords:
 - security [Windows Forms], about security
 - access control [Windows Forms], Windows Forms
 ms.assetid: 4810dc9f-ea23-4ce1-8ea1-657f0ff1d820
-caps.latest.revision: 16
-author: dotnet-bot
-ms.author: dotnetcontent
-manager: wpickett
-ms.workload:
-- dotnet
-ms.openlocfilehash: 57f46620e7b98bb1a4c120684075dbe065db9714
-ms.sourcegitcommit: 2042de78fcdceebb6b8ac4b7a292b93e8782cbf5
+ms.openlocfilehash: ef90daa9700a60e3d88f75439bf8511b67a71dda
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/27/2018
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="security-in-windows-forms-overview"></a>Windows Form 中的安全性概觀
 在 [!INCLUDE[dnprdnshort](../../../includes/dnprdnshort-md.md)] 發行之前，在使用者電腦上執行的所有程式碼，對資源的存取權限都和電腦的使用者相同。 例如，如果使用者可以存取檔案系統，程式碼就可以存取檔案系統，如果使用者可以存取某個資料庫，程式碼就可以存取該資料庫。 就使用者明確安裝在本機電腦上的可執行檔中的程式碼而言，也許這些權限是可接受的，但是就來自網際網路或近端內部網路的潛在惡意程式碼而言，可能就無法接受了。 不應該讓這個程式碼在沒有權限的情況下，存取使用者的電腦資源。  

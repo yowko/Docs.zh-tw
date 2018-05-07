@@ -1,12 +1,6 @@
 ---
 title: Class 陳述式 (Visual Basic)
 ms.date: 07/20/2015
-ms.prod: .net
-ms.reviewer: ''
-ms.suite: ''
-ms.technology:
-- devlang-visual-basic
-ms.topic: article
 f1_keywords:
 - vb.Class
 helpviewer_keywords:
@@ -19,14 +13,11 @@ helpviewer_keywords:
 - classes [Visual Basic], data members
 - data members [Visual Basic], of classes
 ms.assetid: f2664f38-eb5a-4d4b-a374-1d041521fb6c
-caps.latest.revision: 29
-author: dotnet-bot
-ms.author: dotnetcontent
-ms.openlocfilehash: df86ef0eec67d96f2f997dc5dac7ee2357c6362b
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.openlocfilehash: 2346823e7b774c21171bd81023cc5b920d34d19a
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="class-statement-visual-basic"></a>Class 陳述式 (Visual Basic)
 宣告類別的名稱，並導入的變數、 屬性、 事件和類別包含的程序定義。  
@@ -46,21 +37,21 @@ End Class
   
 |詞彙|定義|  
 |---|---|  
-|`attributelist`|選擇項。 請參閱[屬性清單](../../../visual-basic/language-reference/statements/attribute-list.md)。|  
-|`accessmodifier`|選擇項。 可以是下列其中一項：<br /><br /> -   [公用](../../../visual-basic/language-reference/modifiers/public.md)<br />-   [受保護](../../../visual-basic/language-reference/modifiers/protected.md)<br />-   [Friend](../../../visual-basic/language-reference/modifiers/friend.md)<br />-   [私用](../../../visual-basic/language-reference/modifiers/private.md)<br />-   `Protected Friend`<br /><br /> 請參閱[存取 Visual Basic 中的層級](../../../visual-basic/programming-guide/language-features/declared-elements/access-levels.md)。|  
-|`Shadows`|選擇項。 請參閱[陰影](../../../visual-basic/language-reference/modifiers/shadows.md)。|  
-|`MustInherit`|選擇項。 請參閱[MustInherit](../../../visual-basic/language-reference/modifiers/mustinherit.md)。|  
-|`NotInheritable`|選擇項。 請參閱[NotInheritable](../../../visual-basic/language-reference/modifiers/notinheritable.md)。|  
-|`Partial`|選擇項。 表示類別的部分定義。 請參閱[部分](../../../visual-basic/language-reference/modifiers/partial.md)。|  
-|`name`|必要項。 這個類別的名稱。 請參閱[宣告項目名稱](../../../visual-basic/programming-guide/language-features/declared-elements/declared-element-names.md)。|  
-|`Of`|選擇項。 指定這是泛型類別。|  
+|`attributelist`|選擇性。 請參閱[屬性清單](../../../visual-basic/language-reference/statements/attribute-list.md)。|  
+|`accessmodifier`|選擇性。 可以是下列其中一項：<br /><br /> -   [公用](../../../visual-basic/language-reference/modifiers/public.md)<br />-   [受保護](../../../visual-basic/language-reference/modifiers/protected.md)<br />-   [Friend](../../../visual-basic/language-reference/modifiers/friend.md)<br />-   [私用](../../../visual-basic/language-reference/modifiers/private.md)<br />-   `Protected Friend`<br /><br /> 請參閱[存取 Visual Basic 中的層級](../../../visual-basic/programming-guide/language-features/declared-elements/access-levels.md)。|  
+|`Shadows`|選擇性。 請參閱[陰影](../../../visual-basic/language-reference/modifiers/shadows.md)。|  
+|`MustInherit`|選擇性。 請參閱[MustInherit](../../../visual-basic/language-reference/modifiers/mustinherit.md)。|  
+|`NotInheritable`|選擇性。 請參閱[NotInheritable](../../../visual-basic/language-reference/modifiers/notinheritable.md)。|  
+|`Partial`|選擇性。 表示類別的部分定義。 請參閱[部分](../../../visual-basic/language-reference/modifiers/partial.md)。|  
+|`name`|必要。 這個類別的名稱。 請參閱[宣告項目名稱](../../../visual-basic/programming-guide/language-features/declared-elements/declared-element-names.md)。|  
+|`Of`|選擇性。 指定這是泛型類別。|  
 |`typelist`|如果您使用所需[的](../../../visual-basic/language-reference/statements/of-clause.md)關鍵字。 這個類別的型別參數的清單。 請參閱[輸入清單](../../../visual-basic/language-reference/statements/type-list.md)。|  
-|`Inherits`|選擇項。 表示這個類別會繼承另一個類別的成員。 請參閱[Inherits 陳述式](../../../visual-basic/language-reference/statements/inherits-statement.md)。|  
+|`Inherits`|選擇性。 表示這個類別會繼承另一個類別的成員。 請參閱[Inherits 陳述式](../../../visual-basic/language-reference/statements/inherits-statement.md)。|  
 |`classname`|如果您使用所需`Inherits`陳述式。 這個類別衍生自類別的名稱。|  
-|`Implements`|選擇項。 指出這個類別會實作一個或多個介面的成員。 請參閱[實作陳述式](../../../visual-basic/language-reference/statements/implements-statement.md)。|  
+|`Implements`|選擇性。 指出這個類別會實作一個或多個介面的成員。 請參閱[實作陳述式](../../../visual-basic/language-reference/statements/implements-statement.md)。|  
 |`interfacenames`|如果您使用所需`Implements`陳述式。 這個類別會實作介面的名稱。|  
-|`statements`|選擇項。 這個類別的成員定義的陳述式。|  
-|`End Class`|必要項。 終止`Class`定義。|  
+|`statements`|選擇性。 這個類別的成員定義的陳述式。|  
+|`End Class`|必要。 終止`Class`定義。|  
   
 ## <a name="remarks"></a>備註  
  A`Class`陳述式定義新的資料類型。 A*類別*是物件導向程式設計 (OOP) 的基本建置組塊。 如需詳細資訊，請參閱[物件和類別](../../../visual-basic/programming-guide/language-features/objects-and-classes/index.md)。  

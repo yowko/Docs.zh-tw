@@ -1,9 +1,6 @@
 ---
-title: "印刷樣式與程式碼慣例 (Visual Basic)"
+title: 印刷樣式與程式碼慣例 (Visual Basic)
 ms.date: 07/20/2015
-ms.prod: .net
-ms.technology: devlang-visual-basic
-ms.topic: article
 helpviewer_keywords:
 - coding conventions [Visual Basic], Visual Basic
 - best practices [Visual Basic], coding conventions
@@ -13,14 +10,11 @@ helpviewer_keywords:
 - conventions [Visual Basic], documentation
 - Visual Basic code, conventions
 ms.assetid: 1916cd81-ea9d-4faa-81f7-4a0d864b60f4
-caps.latest.revision: "17"
-author: dotnet-bot
-ms.author: dotnetcontent
-ms.openlocfilehash: 7b6db5c223b0548e308b49a686cff72eaaf8da36
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.openlocfilehash: eb7a33ef21bf6beda730dffa8eb7ff9cabe599fb
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="typographic-and-code-conventions-visual-basic"></a>印刷樣式與程式碼慣例 (Visual Basic)
 Visual Basic 文件使用下列印刷樣式與程式碼慣例。  
@@ -32,7 +26,7 @@ Visual Basic 文件使用下列印刷樣式與程式碼慣例。
 |`Sub`, `If`, `ChDir`, `Print`, `True`, `Debug`|語言特有的關鍵字和執行階段成員具有第一個字母大寫，而且會格式化為此範例所示。|  
 |**SmallProject**， **ButtonCollection**|單字和片語指示您輸入的格式，如同此範例所示。|  
 |[Module 陳述式](../../visual-basic/language-reference/statements/module-statement.md)|您可以按一下以移至另一個說明頁面的連結會格式化為此範例所示。|  
-|*物件*， *variableName*，`argumentList`|您提供的資訊的預留位置的格式，如同此範例所示。|  
+|*物件*， *variableName*， `argumentList`|您提供的資訊的預留位置的格式，如同此範例所示。|  
 |[陰影]、 [ *expressionList* ]|在語法中，選用項目會放在括號。|  
 |{ `Public` &#124; `Friend` &#124; `Private` }|在語法中，當您必須做出選擇兩個或多個項目之間的項目會括在大括弧和以分隔號分隔。<br /><br /> 您必須選取其中一個，而且只有一個，項目。|  
 |[ `Protected` &#124; `Friend` ]|在語法中，當您有兩個或多個項目之間選擇時的項目會以方括弧括住，和以分隔號分隔。<br /><br /> 您可以選取任何項目組合的或任何項目。|  
@@ -44,7 +38,7 @@ Visual Basic 文件使用下列印刷樣式與程式碼慣例。
   
 ## <a name="code-conventions"></a>程式碼慣例  
   
-|範例|說明|  
+|範例|描述|  
 |-------------|-----------------|  
 |`sampleString = "Hello, world!"`|程式碼範例會出現在固定字幅的字型，而且會格式化為此範例所示。|  
 |前一個陳述式設定的值`sampleString`以"Hello，world ！"|說明文字中的程式碼項目出現固定字幅的字型，此範例所示。|  

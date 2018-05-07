@@ -1,11 +1,6 @@
 ---
-title: "CType 函式 (Visual Basic)"
+title: CType 函式 (Visual Basic)
 ms.date: 07/20/2015
-ms.prod: .net
-ms.suite: 
-ms.technology:
-- devlang-visual-basic
-ms.topic: article
 f1_keywords:
 - vb.CType
 helpviewer_keywords:
@@ -14,14 +9,11 @@ helpviewer_keywords:
 - CType function
 - conversions [Visual Basic], expression
 ms.assetid: dd4b29e7-6fa1-428c-877e-69955420bb72
-caps.latest.revision: 
-author: dotnet-bot
-ms.author: dotnetcontent
-ms.openlocfilehash: d804ce75929592675068fdc434a1ba7429fa5373
-ms.sourcegitcommit: 34ec7753acf76f90a0fa845235ef06663dc9e36e
+ms.openlocfilehash: 7b1c7ae2a0126bf7cd487df4e9a7364c98e1c695
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="ctype-function-visual-basic"></a>CType 函式 (Visual Basic)
 傳回運算式明確轉換指定的資料類型、 物件、 結構、 類別或介面的結果。  
@@ -47,7 +39,7 @@ CType(expression, typename)
 >  -   類型轉換函式，例如`CByte`， `CDbl`，和`CInt`來執行特定資料型別轉換。 如需詳細資訊，請參閱[類型轉換函式](../../../visual-basic/language-reference/functions/type-conversion-functions.md)。  
 > -   [DirectCast 運算子](../../../visual-basic/language-reference/operators/directcast-operator.md)或[TryCast 運算子](../../../visual-basic/language-reference/operators/trycast-operator.md)。 這些運算子需要一種類型繼承自或實作其他的型別。 它們可以提供稍微較佳的效能比`CType`時的轉換`Object`資料型別。  
   
- `CType`已編譯的內嵌，這表示，轉換程式碼的程式碼可評估運算式的一部分。 在某些情況下，更快的程式碼執行因為程序不會呼叫以執行轉換。  
+ `CType` 已編譯的內嵌，這表示，轉換程式碼的程式碼可評估運算式的一部分。 在某些情況下，更快的程式碼執行因為程序不會呼叫以執行轉換。  
   
  如果沒有轉換定義從`expression`至`typename`(例如，從`Integer`至`Date`)，Visual Basic 會顯示編譯時間錯誤訊息。  
   
@@ -68,7 +60,7 @@ CType(expression, typename)
   
  如需其他範例，請參閱[隱含和明確轉換](../../../visual-basic/programming-guide/language-features/data-types/implicit-and-explicit-conversions.md)。  
   
-## <a name="see-also"></a>請參閱  
+## <a name="see-also"></a>另請參閱  
  <xref:System.OverflowException>  
  <xref:System.InvalidCastException>  
  [類型轉換函式](../../../visual-basic/language-reference/functions/type-conversion-functions.md)  

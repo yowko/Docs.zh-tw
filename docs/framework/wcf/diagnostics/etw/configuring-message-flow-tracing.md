@@ -1,27 +1,15 @@
 ---
-title: "設定訊息流程追蹤"
-ms.custom: 
+title: 設定訊息流程追蹤
 ms.date: 03/30/2017
-ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.technology: dotnet-clr
-ms.tgt_pltfrm: 
-ms.topic: article
 ms.assetid: 15571ca2-bee2-47fb-ba10-fcbc09152ad0
-caps.latest.revision: "8"
-author: dotnet-bot
-ms.author: dotnetcontent
-manager: wpickett
-ms.workload: dotnet
-ms.openlocfilehash: 8df32a64c07db8a45dfb41a46e7a65a92fbef434
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
-ms.translationtype: MT
+ms.openlocfilehash: 7bfba8ababc6ddc0b2ddd78e879058cfa9e8ebb1
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="configuring-message-flow-tracing"></a>設定訊息流程追蹤
-啟用 [!INCLUDE[indigo1](../../../../../includes/indigo1-md.md)] 活動追蹤，就會為整個 [!INCLUDE[indigo2](../../../../../includes/indigo2-md.md)] 堆疊的邏輯活動指派端對端活動識別碼。 現在，[!INCLUDE[netfx_current_short](../../../../../includes/netfx-current-short-md.md)] 針對這項功能提供了具備更高效能且可搭配 Windows 事件追蹤 (ETW) 使用的版本，也就是所謂的訊息流程追蹤。 啟用之後，就會取得傳入訊息的端對端活動識別碼 (若是空的則會指派)，並且傳播給在通道將訊息解碼之後發出的所有追蹤事件。 在解碼之後，客戶可以使用這項功能，利用來自不同服務的追蹤記錄重新建構訊息流程。  
+啟用 Windows Communication Foundation (WCF) 的活動追蹤時，整個邏輯活動指派端對端活動識別碼[!INCLUDE[indigo2](../../../../../includes/indigo2-md.md)]堆疊。 現在，[!INCLUDE[netfx_current_short](../../../../../includes/netfx-current-short-md.md)] 針對這項功能提供了具備更高效能且可搭配 Windows 事件追蹤 (ETW) 使用的版本，也就是所謂的訊息流程追蹤。 啟用之後，就會取得傳入訊息的端對端活動識別碼 (若是空的則會指派)，並且傳播給在通道將訊息解碼之後發出的所有追蹤事件。 在解碼之後，客戶可以使用這項功能，利用來自不同服務的追蹤記錄重新建構訊息流程。  
   
  偵測到應用程式的問題之後，可以啟用追蹤，等到問題解決再停用追蹤。  
   

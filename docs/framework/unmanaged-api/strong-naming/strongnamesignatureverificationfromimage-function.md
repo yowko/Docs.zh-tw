@@ -1,14 +1,6 @@
 ---
-title: "StrongNameSignatureVerificationFromImage 函式"
-ms.custom: 
+title: StrongNameSignatureVerificationFromImage 函式
 ms.date: 03/30/2017
-ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.technology:
-- dotnet-clr
-ms.tgt_pltfrm: 
-ms.topic: reference
 api_name:
 - StrongNameSignatureVerificationFromImage
 api_location:
@@ -22,17 +14,13 @@ helpviewer_keywords:
 ms.assetid: 9fb144d2-07e0-4a0e-8e05-907bbb6c9e03
 topic_type:
 - apiref
-caps.latest.revision: 
 author: rpetrusha
 ms.author: ronpet
-manager: wpickett
-ms.workload:
-- dotnet
-ms.openlocfilehash: 178dcbae4f8ec40ac9ef14fc00109c83ab87c21a
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.openlocfilehash: 919c746b738246d76e90730c42882bfdd3ac6edc
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="strongnamesignatureverificationfromimage-function"></a>StrongNameSignatureVerificationFromImage 函式
 請確認已對應到記憶體的組件適用於相關聯的公開金鑰。  
@@ -60,25 +48,25 @@ BOOLEAN StrongNameSignatureVerificationFromImage (
  `dwInFlags`  
  [in]影響驗證行為的旗標。 支援下列值：  
   
--   `SN_INFLAG_FORCE_VER`(0x00000001)-強制執行驗證，即使它是需要覆寫登錄設定。  
+-   `SN_INFLAG_FORCE_VER` (0x00000001)-強制執行驗證，即使它是需要覆寫登錄設定。  
   
--   `SN_INFLAG_INSTALL`(0x00000002)-指定此映像上執行的第一個驗證。  
+-   `SN_INFLAG_INSTALL` (0x00000002)-指定此映像上執行的第一個驗證。  
   
--   `SN_INFLAG_ADMIN_ACCESS`(0x00000004)-指定快取可讓擁有系統管理權限的使用者存取。  
+-   `SN_INFLAG_ADMIN_ACCESS` (0x00000004)-指定快取可讓擁有系統管理權限的使用者存取。  
   
--   `SN_INFLAG_USER_ACCESS`(0x00000008)-指定的組件都是只能由目前的使用者存取。  
+-   `SN_INFLAG_USER_ACCESS` (0x00000008)-指定的組件都是只能由目前的使用者存取。  
   
--   `SN_INFLAG_ALL_ACCESS`(0x00000010)-指定快取會提供任何保證的存取限制。  
+-   `SN_INFLAG_ALL_ACCESS` (0x00000010)-指定快取會提供任何保證的存取限制。  
   
--   `SN_INFLAG_RUNTIME`(0x80000000)-保留供內部偵錯。  
+-   `SN_INFLAG_RUNTIME` (0x80000000)-保留供內部偵錯。  
   
  `pdwOutFlags`  
  [out]其他輸出資訊的旗標。 支援下列值：  
   
--   `SN_OUTFLAG_WAS_VERIFIED`(0x00000001)-此值設為`false`來指定驗證成功登錄設定所造成。  
+-   `SN_OUTFLAG_WAS_VERIFIED` (0x00000001)-此值設為`false`來指定驗證成功登錄設定所造成。  
   
 ## <a name="return-value"></a>傳回值  
- `true`如果成功地完成。否則， `false`。  
+ `true` 如果成功地完成。否則， `false`。  
   
 ## <a name="remarks"></a>備註  
  如果`StrongNameSignatureVerificationFromImage`函式未順利完成，請呼叫[StrongNameErrorInfo](../../../../docs/framework/unmanaged-api/strong-naming/strongnameerrorinfo-function.md)函式可擷取的最後一個產生的錯誤。  
@@ -90,8 +78,8 @@ BOOLEAN StrongNameSignatureVerificationFromImage (
   
  **程式庫：**包含做為 mscoree.dll 中的資源  
   
- **.NET framework 版本：**[!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
+ **.NET framework 版本：** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
   
-## <a name="see-also"></a>請參閱  
+## <a name="see-also"></a>另請參閱  
  [StrongNameSignatureVerificationFromImage 方法](../../../../docs/framework/unmanaged-api/hosting/iclrstrongname-strongnamesignatureverificationfromimage-method.md)  
  [ICLRStrongName 介面](../../../../docs/framework/unmanaged-api/hosting/iclrstrongname-interface.md)

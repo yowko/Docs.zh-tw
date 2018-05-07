@@ -1,24 +1,12 @@
 ---
 title: TextMessageEncodingBindingElement
-ms.custom: 
 ms.date: 03/30/2017
-ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.technology: dotnet-clr
-ms.tgt_pltfrm: 
-ms.topic: article
 ms.assetid: 885e2d7a-3436-4093-bc5f-0a404c62acdc
-caps.latest.revision: "8"
-author: dotnet-bot
-ms.author: dotnetcontent
-manager: wpickett
-ms.workload: dotnet
-ms.openlocfilehash: 3f1e026296745f6fc40171866c81f91818789e01
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.openlocfilehash: f9b94e946413967cc14282e85743a23327683b89
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="textmessageencodingbindingelement"></a>TextMessageEncodingBindingElement
 TextMessageEncodingBindingElement  
@@ -75,5 +63,5 @@ class TextMessageEncodingBindingElement : MessageEncodingBindingElement
 |---------|-----------------------------------|  
 |命名空間|於 root\ServiceModel 中定義|  
   
-## <a name="see-also"></a>請參閱  
+## <a name="see-also"></a>另請參閱  
  <xref:System.ServiceModel.Channels.TextMessageEncodingBindingElement>

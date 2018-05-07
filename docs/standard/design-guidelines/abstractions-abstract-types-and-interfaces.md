@@ -1,31 +1,20 @@
 ---
 title: 抽象 (抽象類型和介面)
-ms.custom: ''
 ms.date: 03/30/2017
-ms.prod: .net
-ms.reviewer: ''
-ms.suite: ''
 ms.technology: dotnet-standard
-ms.tgt_pltfrm: ''
-ms.topic: article
 helpviewer_keywords:
 - interfaces [.NET Framework], abstract
 - abstract interfaces [.NET Framework]
 - abstract types [.NET Framework]
 - types [.NET Framework], abstract
 ms.assetid: 0a632bc7-9b03-44ee-8842-c82f88672a45
-caps.latest.revision: 10
 author: rpetrusha
 ms.author: ronpet
-manager: wpickett
-ms.workload:
-- dotnet
-- dotnetcore
-ms.openlocfilehash: 2628758891d629400603c51d12ece33df0e1ff1c
-ms.sourcegitcommit: 2e8acae16ae802f2d6d04e3ce0a6dbf04e476513
+ms.openlocfilehash: f5863b4ae9cad940e4dd47ef93e07763916427f7
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/18/2018
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="abstractions-abstract-types-and-interfaces"></a>抽象 (抽象類型和介面)
 抽象概念是描述合約，但不提供完整的實作的合約的型別。 抽象概念通常會實作為抽象類別或介面，和它們隨附一組妥善定義的參考文件描述的實作合約的型別所需的語意。 某些.NET Framework 中最重要的抽象概念包括<xref:System.IO.Stream>， <xref:System.Collections.Generic.IEnumerable%601>，和<xref:System.Object>。  

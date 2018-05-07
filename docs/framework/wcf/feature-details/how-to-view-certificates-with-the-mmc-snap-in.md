@@ -1,28 +1,14 @@
 ---
-title: "HOW TO：使用 MMC 嵌入式管理單元來檢視憑證"
-ms.custom: 
+title: HOW TO：使用 MMC 嵌入式管理單元來檢視憑證
 ms.date: 03/30/2017
-ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.technology:
-- dotnet-clr
-ms.tgt_pltfrm: 
-ms.topic: article
 helpviewer_keywords:
 - certificates [WCF], viewing with the MMC snap-in
 ms.assetid: 2b8782aa-ebb4-4ee7-974b-90299e356dc5
-caps.latest.revision: 
-author: dotnet-bot
-ms.author: dotnetcontent
-manager: wpickett
-ms.workload:
-- dotnet
-ms.openlocfilehash: 582eaef518e10acb4c4c356226ce0be24d1b4c35
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.openlocfilehash: d924121b9d9fa267fa7d1ada13c9dc5f5bf1523d
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="how-to-view-certificates-with-the-mmc-snap-in"></a>HOW TO：使用 MMC 嵌入式管理單元來檢視憑證
 常見的認證類型是 X.509 憑證。 當建立安全服務或用戶端時，您可以藉由使用像是 <xref:System.ServiceModel.Security.X509CertificateInitiatorClientCredential.SetCertificate%2A> 方法，指定用來當做用戶端或服務認證的憑證。 方法需要各種參數，例如儲存憑證的存放區，以及當搜尋憑證時要使用的值。 下列程序示範如何檢視電腦上的存放區，以尋找適當的憑證。 尋找憑證指紋的範例，請參閱[How to： 擷取憑證的指紋](../../../../docs/framework/wcf/feature-details/how-to-retrieve-the-thumbprint-of-a-certificate.md)。  
@@ -68,7 +54,7 @@ ms.lasthandoff: 12/22/2017
   
 4.  若要檢視任何憑證的詳細資料、 選取憑證按一下**檢視**。  
   
-## <a name="see-also"></a>請參閱  
+## <a name="see-also"></a>另請參閱  
  [使用憑證](../../../../docs/framework/wcf/feature-details/working-with-certificates.md)  
  [如何：建立開發時要使用的暫時憑證](../../../../docs/framework/wcf/feature-details/how-to-create-temporary-certificates-for-use-during-development.md)  
  [如何：擷取憑證的指紋](../../../../docs/framework/wcf/feature-details/how-to-retrieve-the-thumbprint-of-a-certificate.md)

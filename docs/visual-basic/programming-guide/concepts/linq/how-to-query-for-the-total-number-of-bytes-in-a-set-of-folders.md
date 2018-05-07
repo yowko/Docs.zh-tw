@@ -1,22 +1,12 @@
 ---
-title: "如何： 查詢一組資料夾 (LINQ) (Visual Basic) 中的位元組總數"
-ms.custom: 
+title: 如何： 查詢一組資料夾 (LINQ) (Visual Basic) 中的位元組總數
 ms.date: 07/20/2015
-ms.prod: .net
-ms.reviewer: 
-ms.suite: 
-ms.technology: devlang-visual-basic
-ms.tgt_pltfrm: 
-ms.topic: article
 ms.assetid: bfe85ed2-44dc-4ef1-aac7-241622b80a69
-caps.latest.revision: "3"
-author: dotnet-bot
-ms.author: dotnetcontent
-ms.openlocfilehash: b200581f4876400727c63e86e3ccf4a44c67914b
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.openlocfilehash: 6a6babaf019cdac2298aee6eff55581bf35b2e47
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="how-to-query-for-the-total-number-of-bytes-in-a-set-of-folders-linq-visual-basic"></a>如何： 查詢一組資料夾 (LINQ) (Visual Basic) 中的位元組總數
 此範例示範如何擷取所指定資料夾及其所有子資料夾中之所有檔案使用的位元組總數。  

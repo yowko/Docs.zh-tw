@@ -1,11 +1,6 @@
 ---
-title: "OrElse 運算子 (Visual Basic)"
+title: OrElse 運算子 (Visual Basic)
 ms.date: 07/20/2015
-ms.prod: .net
-ms.reviewer: 
-ms.suite: 
-ms.technology: devlang-visual-basic
-ms.topic: article
 f1_keywords:
 - OrElse
 - vb.OrElse
@@ -16,14 +11,11 @@ helpviewer_keywords:
 - short-circuit evaluation
 - OrElse operator [Visual Basic]
 ms.assetid: 253803d8-05b0-47d7-b213-abd222847779
-caps.latest.revision: "15"
-author: dotnet-bot
-ms.author: dotnetcontent
-ms.openlocfilehash: 47239a1d2b5b20f2b8cacc9b9185a0f95f63dc84
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.openlocfilehash: 1ee3c1a5b6089f44742281eb40e2a7e9cb3e2812
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="orelse-operator-visual-basic"></a>OrElse 運算子 (Visual Basic)
 執行最少運算的兩個運算式上的內含邏輯分離。  
@@ -36,13 +28,13 @@ result = expression1 OrElse expression2
   
 ## <a name="parts"></a>組件  
  `result`  
- 必要項。 任何 `Boolean` 運算式。  
+ 必要。 任何 `Boolean` 運算式。  
   
  `expression1`  
- 必要項。 任何 `Boolean` 運算式。  
+ 必要。 任何 `Boolean` 運算式。  
   
  `expression2`  
- 必要項。 任何 `Boolean` 運算式。  
+ 必要。 任何 `Boolean` 運算式。  
   
 ## <a name="remarks"></a>備註  
  邏輯作業即為*最少運算*如果已編譯的程式碼就可以略過運算式的評估，依據另一個運算式的結果。 如果評估的第一個運算式的結果判斷作業的最終結果，是不必評估第二個運算式，因為它不能變更的最終結果。 如果近端網址略過的運算式很複雜，或它所涉及的程序呼叫，最少運算可以改善效能。  

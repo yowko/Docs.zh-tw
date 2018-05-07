@@ -1,27 +1,15 @@
 ---
-title: "HOW TO：建立啟用 AJAX 的 WCF 服務和存取該服務的 ASP.NET 用戶端"
-ms.custom: 
+title: HOW TO：建立啟用 AJAX 的 WCF 服務和存取該服務的 ASP.NET 用戶端
 ms.date: 03/30/2017
-ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.technology: dotnet-clr
-ms.tgt_pltfrm: 
-ms.topic: article
 ms.assetid: 95012df8-2a66-420d-944a-8afab261013e
-caps.latest.revision: "9"
-author: dotnet-bot
-ms.author: dotnetcontent
-manager: wpickett
-ms.workload: dotnet
-ms.openlocfilehash: aafa15129e4a131c5f50eb3296a87fc141e1bda6
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.openlocfilehash: 58971d11ab76112627dd81d53381236932268e25
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="how-to-create-an-ajax-enabled-wcf-service-and-an-aspnet-client-that-accesses-the-service"></a>HOW TO：建立啟用 AJAX 的 WCF 服務和存取該服務的 ASP.NET 用戶端
-本主題說明如何使用 Visual Studio 2008 來建立啟用 AJAX 的 [!INCLUDE[indigo1](../../../../includes/indigo1-md.md)] 服務，以及可存取該服務的 ASP.NET 用戶端。 「程序」一節將說明服務與用戶端的程式碼建立步驟，並接著在「範例」一節提供服務與用戶端的程式碼範例。  
+本主題示範如何使用 Visual Studio 2008 建立啟用 AJAX 的 Windows Communication Foundation (WCF) 服務和存取該服務的 ASP.NET 用戶端。 「程序」一節將說明服務與用戶端的程式碼建立步驟，並接著在「範例」一節提供服務與用戶端的程式碼範例。  
   
 ### <a name="to-create-the-aspnet-client-application"></a>若要建立 ASP.NET 用戶端應用程式  
   

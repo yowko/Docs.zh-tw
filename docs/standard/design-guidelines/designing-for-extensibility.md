@@ -1,31 +1,20 @@
 ---
 title: 擴充性設計
-ms.custom: ''
 ms.date: 03/30/2017
-ms.prod: .net
-ms.reviewer: ''
-ms.suite: ''
 ms.technology: dotnet-standard
-ms.tgt_pltfrm: ''
-ms.topic: article
 helpviewer_keywords:
 - extending class libraries
 - extensibility with class libraries in .NET Framework
 - class library design guidelines [.NET Framework], extensibility
 - class library extensibility [.NET Framework]
 ms.assetid: 1cdb8740-871a-456c-9bd9-db96ca8d79b3
-caps.latest.revision: 11
 author: rpetrusha
 ms.author: ronpet
-manager: wpickett
-ms.workload:
-- dotnet
-- dotnetcore
-ms.openlocfilehash: b643c33a1418839c8aabf06d681083232e61553a
-ms.sourcegitcommit: 2e8acae16ae802f2d6d04e3ce0a6dbf04e476513
+ms.openlocfilehash: 68419fe293dd25936aa3c1e3def10bbe8852e175
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/18/2018
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="designing-for-extensibility"></a>擴充性設計
 設計一個架構的一個重要層面確保已仔細考慮架構的擴充性。 這需要您已了解的成本與利益各種擴充性機制相關聯。 本章節可協助您決定哪一個擴充性機制 — 子類別化、 事件、 虛擬成員、 回呼 (callback) 等等，可以最符合您的架構的需求。  

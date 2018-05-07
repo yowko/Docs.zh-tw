@@ -1,27 +1,15 @@
 ---
-title: "架構屬性中繼資料"
-ms.custom: 
+title: 架構屬性中繼資料
 ms.date: 03/30/2017
-ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.technology: dotnet-wpf
-ms.tgt_pltfrm: 
-ms.topic: article
 helpviewer_keywords:
 - metadata [WPF], framework properties
 - framework property metadata [WPF]
 ms.assetid: 9962f380-b885-4b61-a62e-457397083fea
-caps.latest.revision: "19"
-author: dotnet-bot
-ms.author: dotnetcontent
-manager: wpickett
-ms.workload: dotnet
-ms.openlocfilehash: 4fec11a973572dce9e8d6f77bf65ce31ee77eb41
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.openlocfilehash: d968bc7a3033bd994590520c5cd5062d3c212b4f
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="framework-property-metadata"></a>架構屬性中繼資料
 針對在 [!INCLUDE[TLA#tla_winclient](../../../../includes/tlasharptla-winclient-md.md)] 架構中視為 WPF 架構層級的物件項目屬性，報告架構屬性中繼資料選項。 WPF 架構層級指定一般會需要由 [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] 簡報 [!INCLUDE[TLA2#tla_api#plural](../../../../includes/tla2sharptla-apisharpplural-md.md)] 和可執行檔處理的轉譯、資料繫結和屬性系統調整等功能。 這些系統會查詢架構屬性中繼資料，以判斷特定項目屬性的特定功能特性。  
@@ -40,7 +28,7 @@ ms.lasthandoff: 12/22/2017
   
 -   報表配置的屬性會影響項目的父項目 (<xref:System.Windows.FrameworkPropertyMetadata.AffectsParentArrange%2A>， <xref:System.Windows.FrameworkPropertyMetadata.AffectsParentMeasure%2A>)。 預設設定這些旗標的其中一些範例像是<xref:System.Windows.Documents.FixedPage.Left%2A?displayProperty=nameWithType>和<xref:System.Windows.Documents.Paragraph.KeepWithNext%2A?displayProperty=nameWithType>。  
   
--   <xref:System.Windows.FrameworkPropertyMetadata.Inherits%2A>. 相依性屬性預設不繼承值。 <xref:System.Windows.FrameworkPropertyMetadata.OverridesInheritanceBehavior%2A>可讓繼承可以也傳送至視覺化樹狀結構進行某些控制複合案例所需的路徑。  
+-   <xref:System.Windows.FrameworkPropertyMetadata.Inherits%2A>. 相依性屬性預設不繼承值。 <xref:System.Windows.FrameworkPropertyMetadata.OverridesInheritanceBehavior%2A> 可讓繼承可以也傳送至視覺化樹狀結構進行某些控制複合案例所需的路徑。  
   
     > [!NOTE]
     >  屬性值內容中的「繼承」一詞表示相依性屬性的特定項目，它表示因為 [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] 屬性系統的 WPF 架構層級功能，子項目可以繼承父項目的實際相依性屬性值。 它和 Managed 程式碼類型及透過衍生類型的成員繼承沒有直接關係。 如需詳細資訊，請參閱[屬性值繼承](../../../../docs/framework/wpf/advanced/property-value-inheritance.md)。  
@@ -69,13 +57,13 @@ ms.lasthandoff: 12/22/2017
 ## <a name="framework-property-metadata-merge-behavior"></a>架構屬性中繼資料合併行為  
  當您覆寫架構屬性中繼資料時，不同的中繼資料特性會被合併或取代。  
   
--   <xref:System.Windows.PropertyMetadata.PropertyChangedCallback%2A>會合併。 如果您將加入新<xref:System.Windows.PropertyMetadata.PropertyChangedCallback%2A>，回撥會儲存在中繼資料。 如果您未指定<xref:System.Windows.PropertyMetadata.PropertyChangedCallback%2A>中覆寫時，值<xref:System.Windows.PropertyMetadata.PropertyChangedCallback%2A>升級為最接近的祖系所指定中繼資料中的參考。  
+-   <xref:System.Windows.PropertyMetadata.PropertyChangedCallback%2A> 會合併。 如果您將加入新<xref:System.Windows.PropertyMetadata.PropertyChangedCallback%2A>，回撥會儲存在中繼資料。 如果您未指定<xref:System.Windows.PropertyMetadata.PropertyChangedCallback%2A>中覆寫時，值<xref:System.Windows.PropertyMetadata.PropertyChangedCallback%2A>升級為最接近的祖系所指定中繼資料中的參考。  
   
 -   實際內容系統行為<xref:System.Windows.PropertyMetadata.PropertyChangedCallback%2A>是它實作的階層中的所有中繼資料擁有者會保留並新增至資料表，與正在，最深的衍生類別的回呼屬性系統的執行順序第一次叫用。 繼承的回撥只執行一次，視為將它們放在中繼資料的類別所擁有。  
   
--   <xref:System.Windows.PropertyMetadata.DefaultValue%2A>會被取代。 如果您未指定<xref:System.Windows.PropertyMetadata.PropertyChangedCallback%2A>中覆寫時，值<xref:System.Windows.PropertyMetadata.DefaultValue%2A>來自指定中繼資料中最接近上階。  
+-   <xref:System.Windows.PropertyMetadata.DefaultValue%2A> 會被取代。 如果您未指定<xref:System.Windows.PropertyMetadata.PropertyChangedCallback%2A>中覆寫時，值<xref:System.Windows.PropertyMetadata.DefaultValue%2A>來自指定中繼資料中最接近上階。  
   
--   <xref:System.Windows.PropertyMetadata.CoerceValueCallback%2A>實作會被取代。 如果您將加入新<xref:System.Windows.PropertyMetadata.CoerceValueCallback%2A>，回撥會儲存在中繼資料。 如果您未指定<xref:System.Windows.PropertyMetadata.CoerceValueCallback%2A>中覆寫時，值<xref:System.Windows.PropertyMetadata.CoerceValueCallback%2A>升級為最接近的祖系所指定中繼資料中的參考。  
+-   <xref:System.Windows.PropertyMetadata.CoerceValueCallback%2A> 實作會被取代。 如果您將加入新<xref:System.Windows.PropertyMetadata.CoerceValueCallback%2A>，回撥會儲存在中繼資料。 如果您未指定<xref:System.Windows.PropertyMetadata.CoerceValueCallback%2A>中覆寫時，值<xref:System.Windows.PropertyMetadata.CoerceValueCallback%2A>升級為最接近的祖系所指定中繼資料中的參考。  
   
 -   屬性的系統行為是只<xref:System.Windows.PropertyMetadata.CoerceValueCallback%2A>立即的中繼資料中叫用。 沒有參考至其他<xref:System.Windows.PropertyMetadata.CoerceValueCallback%2A>會保留階層中的實作。  
   
@@ -83,7 +71,7 @@ ms.lasthandoff: 12/22/2017
   
  此行為由實作<xref:System.Windows.FrameworkPropertyMetadata.Merge%2A>，而且可以加以覆寫衍生的中繼資料類別上。  
   
-## <a name="see-also"></a>請參閱  
+## <a name="see-also"></a>另請參閱  
  <xref:System.Windows.DependencyProperty.GetMetadata%2A>  
  [相依性屬性中繼資料](../../../../docs/framework/wpf/advanced/dependency-property-metadata.md)  
  [相依性屬性概觀](../../../../docs/framework/wpf/advanced/dependency-properties-overview.md)  

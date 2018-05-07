@@ -1,21 +1,14 @@
 ---
 title: 如何： 建立已簽署的 Friend 組件 (Visual Basic)
-ms.custom: ''
 ms.date: 03/14/2018
-ms.prod: .net
-ms.suite: ''
-ms.technology:
-- devlang-visual-basic
-ms.tgt_pltfrm: ''
-ms.topic: article
 ms.assetid: f2afd83d-b044-484b-a56d-56d0a8a40647
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 4fd9521a87a985cbdeff1616c3070c822892b6e5
-ms.sourcegitcommit: 498799639937c89de777361aab74261efe7b79ea
+ms.openlocfilehash: 6b31a359167307a58d8393e9c29e7dab1575cfdc
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 03/22/2018
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="how-to-create-signed-friend-assemblies-visual-basic"></a>如何： 建立已簽署的 Friend 組件 (Visual Basic)
 此範例示範如何搭配具有強式名稱的組件使用 friend 組件。 這兩個組件都必須具有強式名稱。 雖然此範例中的兩個組件使用相同的金鑰，但您可以針對這兩個組件使用不同的金鑰。  

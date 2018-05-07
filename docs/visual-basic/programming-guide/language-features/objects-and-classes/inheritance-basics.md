@@ -1,13 +1,6 @@
 ---
 title: 繼承基本概念 (Visual Basic)
-ms.custom: ''
 ms.date: 07/20/2015
-ms.prod: .net
-ms.reviewer: ''
-ms.suite: ''
-ms.technology:
-- devlang-visual-basic
-ms.topic: article
 helpviewer_keywords:
 - derived classes [Visual Basic], inheritance
 - MyClass keyword [Visual Basic], using
@@ -27,14 +20,11 @@ helpviewer_keywords:
 - abstract classes [Visual Basic], inheritance
 - overriding, Overrides keyword
 ms.assetid: dfc8deba-f5b3-4d1d-a937-7cb826446fc5
-caps.latest.revision: 23
-author: dotnet-bot
-ms.author: dotnetcontent
-ms.openlocfilehash: 4e37dabefcbda48144af910298dd4d82c13b7042
-ms.sourcegitcommit: 86adcc06e35390f13c1e372c36d2e044f1fc31ef
+ms.openlocfilehash: 9225e5fd9fa35ae06414018a109f66515f99363f
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/26/2018
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="inheritance-basics-visual-basic"></a>繼承基本概念 (Visual Basic)
 `Inherits`陳述式用來宣告新類別，稱為*衍生的類別*、 根據現有的類別，又稱為*基底類別*。 在衍生的類別繼承，並擴充屬性、 方法、 事件、 欄位和基底類別中定義的常數。 下節將說明一些繼承規則，以及變更的方式類別，您可以使用的修飾詞繼承或繼承：  

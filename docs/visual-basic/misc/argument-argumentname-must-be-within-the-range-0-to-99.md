@@ -1,23 +1,16 @@
 ---
-title: 引數 &#39;&lt;引數名稱&gt;&#39; 必須在 0 到 99 的範圍內
+title: 引數&#39;&lt;引數名稱&gt;&#39;必須在 0 到 99 的範圍內
 ms.date: 07/20/2015
-ms.prod: .net
-ms.technology:
-- devlang-visual-basic
-ms.topic: article
 f1_keywords:
 - vbrArgument_Range0to99_1
 ms.assetid: d9d9a15e-c5ee-4104-9504-b48a4a191415
-caps.latest.revision: 8
-author: dotnet-bot
-ms.author: dotnetcontent
-ms.openlocfilehash: 59b3a4cc836c355ff261affb6b96e5e0dfa46712
-ms.sourcegitcommit: bd1ef61f4bb794b25383d3d72e71041a5ced172e
+ms.openlocfilehash: 9d4c504819505df730cc7c527f8887dd6d5b7a89
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/18/2017
+ms.lasthandoff: 05/04/2018
 ---
-# <a name="argument-39ltargumentnamegt39-must-be-within-the-range-0-to-99"></a>引數 &#39;&lt;引數名稱&gt;&#39; 必須在 0 到 99 的範圍內
+# <a name="argument-39ltargumentnamegt39-must-be-within-the-range-0-to-99"></a>引數&#39;&lt;引數名稱&gt;&#39;必須在 0 到 99 的範圍內
 引數無效，因為它超出 0 到 99 的範圍。  
   
 ## <a name="to-correct-this-error"></a>更正這個錯誤  

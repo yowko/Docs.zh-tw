@@ -1,10 +1,6 @@
 ---
-title: "如何：使用 LineShape 控制項繪製線條 (Visual Studio)"
+title: 如何：使用 LineShape 控制項繪製線條 (Visual Studio)
 ms.date: 07/20/2015
-ms.prod: .net
-ms.suite: 
-ms.technology: devlang-visual-basic
-ms.topic: article
 dev_langs:
 - csharp
 - vb
@@ -12,14 +8,11 @@ helpviewer_keywords:
 - LineShape control [Visual Basic]
 - lines, drawing
 ms.assetid: 83e71b4e-aa76-4f9b-b547-8704309fd1e5
-caps.latest.revision: "14"
-author: dotnet-bot
-ms.author: dotnetcontent
-ms.openlocfilehash: 42e7f01a57a514ad1dc64e3d4451ce38ea199f93
-ms.sourcegitcommit: 34ec7753acf76f90a0fa845235ef06663dc9e36e
+ms.openlocfilehash: 5e1a837578aab4b4609a58ffee46406b022b8f97
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="how-to-draw-lines-with-the-lineshape-control-visual-studio"></a>如何：使用 LineShape 控制項繪製線條 (Visual Studio)
 您可以使用<xref:Microsoft.VisualBasic.PowerPacks.LineShape>控制項在表單或容器上繪製水平、 垂直或對角線，在設計階段和執行階段。  
@@ -57,7 +50,7 @@ using Microsoft.VisualBasic.PowerPacks;
      [!code-csharp[VbPowerPacksLine#1](../../../visual-basic/developing-apps/windows-forms/codesnippet/CSharp/how-to-draw-lines-with-the-lineshape-control-visual-studio_1.cs)]
      [!code-vb[VbPowerPacksLine#1](../../../visual-basic/developing-apps/windows-forms/codesnippet/VisualBasic/how-to-draw-lines-with-the-lineshape-control-visual-studio_1.vb)]  
   
-## <a name="see-also"></a>請參閱  
+## <a name="see-also"></a>另請參閱  
  <xref:Microsoft.VisualBasic.PowerPacks.LineShape>  
  [Line 和 Shape 控制項簡介](../../../visual-basic/developing-apps/windows-forms/introduction-to-the-line-and-shape-controls-visual-studio.md)  
  [操作說明：使用 OvalShape 和 RectangleShape 控制項繪製圖案](../../../visual-basic/developing-apps/windows-forms/how-to-draw-shapes-with-the-ovalshape-and-rectangleshape-controls.md)

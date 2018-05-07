@@ -1,31 +1,21 @@
 ---
-title: "WCF 的安全性考量"
-ms.custom: 
+title: WCF 的安全性考量
 ms.date: 03/30/2017
-ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.technology: dotnet-clr
-ms.tgt_pltfrm: 
-ms.topic: article
 helpviewer_keywords:
 - security [WCF]
 - Windows Communication Foundation, security
 - WCF, security
 ms.assetid: 42055ee0-6d0c-443d-9d89-788dfc345d6d
-caps.latest.revision: "49"
 author: BrucePerlerMS
-ms.author: bruceper
 manager: mbaldwin
-ms.workload: dotnet
-ms.openlocfilehash: f35bd56bdc69f8c57a7e46984778051b57b7a06a
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.openlocfilehash: 9d26acf8443967bff36637c482dd3270ef034f40
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="security-considerations-in-wcf"></a>WCF 的安全性考量
-本節中的主題列出在設計 [!INCLUDE[indigo1](../../../../includes/indigo1-md.md)] 應用程式時，要考量的各種安全性相關項目。  
+本節中的主題列出各種安全性相關的項目設計 Windows Communication Foundation (WCF) 應用程式時需要考量。  
   
 ## <a name="in-this-section"></a>本節內容  
  [資訊洩漏](../../../../docs/framework/wcf/feature-details/information-disclosure.md)  
@@ -61,5 +51,5 @@ ms.lasthandoff: 12/22/2017
 ## <a name="related-sections"></a>相關章節  
  [安全性指引和最佳做法](../../../../docs/framework/wcf/feature-details/security-guidance-and-best-practices.md)  
   
-## <a name="see-also"></a>請參閱  
+## <a name="see-also"></a>另請參閱  
  [安全性](../../../../docs/framework/wcf/feature-details/security.md)

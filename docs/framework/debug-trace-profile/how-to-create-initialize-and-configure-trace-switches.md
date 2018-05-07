@@ -1,13 +1,6 @@
 ---
-title: "如何：建立，初始化和設定追蹤參數"
-ms.custom: 
+title: 如何：建立，初始化和設定追蹤參數
 ms.date: 03/30/2017
-ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.technology: dotnet-clr
-ms.tgt_pltfrm: 
-ms.topic: article
 dev_langs:
 - csharp
 - vb
@@ -18,16 +11,13 @@ helpviewer_keywords:
 - tracing [.NET Framework], enabling or disabling
 - Web.config configuration file, trace switches
 ms.assetid: 5a0e41bf-f99c-4692-8799-f89617f5bcf9
-caps.latest.revision: "14"
 author: mairaw
 ms.author: mairaw
-manager: wpickett
-ms.workload: dotnet
-ms.openlocfilehash: 41e41f65b82061cebc52485ed08176633c45613d
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.openlocfilehash: 4088c74d0ea8e9f2ad70aff37d99870d34b168ba
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="how-to-create-initialize-and-configure-trace-switches"></a>如何：建立，初始化和設定追蹤參數
 追蹤參數可讓您啟用、停用和篩選追蹤輸出。  
@@ -76,7 +66,7 @@ ms.lasthandoff: 12/22/2017
 > [!NOTE]
 >  在 .NET Framework 2.0 版中，您可以使用文字來指定參數的值。 例如，<xref:System.Diagnostics.BooleanSwitch> 的 `true`，或是代表列舉值的文字 (例如 <xref:System.Diagnostics.TraceSwitch> 的 `Error`)。 `<add name="myTraceSwitch" value="Error" />` 這一行相當於 `<add name="myTraceSwitch" value="1" />`。  
   
- 為了讓使用者能夠設定應用程式的追蹤參數，您必須在應用程式中提供有關參數的詳細文件。 您應詳述參數類型及其控制項目，以及如何開啟和關閉參數。 您也應為使用者提供 .config 檔案，以在註解中提供適當的說明。  
+ 為了讓使用者能夠設定應用程式的追蹤參數，您必須在應用程式中提供有關參數的詳細文件。 您應詳述參數類型及其控制項目，以及如何開啟和關閉參數。 您也應為終端使用者提供 .config 檔案，以在註解中提供適當的說明。  
   
 #### <a name="to-configure-trace-switches"></a>設定追蹤參數  
   
@@ -134,7 +124,7 @@ ms.lasthandoff: 12/22/2017
     </system.diagnostics>  
     ```  
   
-## <a name="see-also"></a>請參閱  
+## <a name="see-also"></a>另請參閱  
  [追蹤和檢測應用程式](../../../docs/framework/debug-trace-profile/tracing-and-instrumenting-applications.md)  
  [如何：將追蹤陳述式新增至應用程式碼](../../../docs/framework/debug-trace-profile/how-to-add-trace-statements-to-application-code.md)  
  [追蹤參數](../../../docs/framework/debug-trace-profile/trace-switches.md)  

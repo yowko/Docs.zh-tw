@@ -1,13 +1,6 @@
 ---
-title: "TableLayoutPanel 控制項的最佳作法"
-ms.custom: 
+title: TableLayoutPanel 控制項的最佳作法
 ms.date: 03/30/2017
-ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.technology: dotnet-winforms
-ms.tgt_pltfrm: 
-ms.topic: article
 helpviewer_keywords:
 - layout [Windows Forms]
 - TableLayoutPanel control [Windows Forms], best practices
@@ -21,16 +14,11 @@ helpviewer_keywords:
 - sizing [Windows Forms], automatic
 - automatic sizing
 ms.assetid: b6706efb-d7a4-45ec-8cf4-08fa993e3afb
-caps.latest.revision: "11"
-author: dotnet-bot
-ms.author: dotnetcontent
-manager: wpickett
-ms.workload: dotnet
-ms.openlocfilehash: 8f2c5a16ea1f07f7688c9df14bdb6b29350f3acf
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.openlocfilehash: 40322dc6c5facd4167a4c9ac5c12fdf2a8831b7c
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="best-practices-for-the-tablelayoutpanel-control"></a>TableLayoutPanel 控制項的最佳作法
 <xref:System.Windows.Forms.TableLayoutPanel>控制項提供功能強大的配置功能，您應該先在 Windows Form 上使用仔細考慮。  
@@ -66,6 +54,6 @@ ms.lasthandoff: 12/22/2017
 ### <a name="avoid-visual-inheritance"></a>避免視覺化繼承  
  <xref:System.Windows.Forms.TableLayoutPanel>控制項不支援在 Windows Form 設計工具的視覺化繼承。 A <xref:System.Windows.Forms.TableLayoutPanel> 「 已鎖定 」 在設計階段，會出現在衍生類別中的控制項。  
   
-## <a name="see-also"></a>請參閱  
+## <a name="see-also"></a>另請參閱  
  <xref:System.Windows.Forms.TableLayoutPanel>  
  <xref:System.Windows.Forms.FlowLayoutPanel>

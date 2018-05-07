@@ -1,14 +1,6 @@
 ---
-title: "IMetaDataEmit::GetSaveSize 方法"
-ms.custom: 
+title: IMetaDataEmit::GetSaveSize 方法
 ms.date: 03/30/2017
-ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.technology:
-- dotnet-clr
-ms.tgt_pltfrm: 
-ms.topic: reference
 api_name:
 - IMetaDataEmit.GetSaveSize
 api_location:
@@ -23,17 +15,13 @@ helpviewer_keywords:
 ms.assetid: 8aea2e2c-23a3-4cda-9a06-e19f97383830
 topic_type:
 - apiref
-caps.latest.revision: 
 author: mairaw
 ms.author: mairaw
-manager: wpickett
-ms.workload:
-- dotnet
-ms.openlocfilehash: 7585f6adbca97b252fdad90276b0cd422d32c04a
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.openlocfilehash: d9a65f76aed00e2b848f8603f1fee4d6acc91f99
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="imetadataemitgetsavesize-method"></a>IMetaDataEmit::GetSaveSize 方法
 在目前範圍中取得的二進位的估計的大小，組件和它的中繼資料。  
@@ -61,7 +49,7 @@ HRESULT GetSaveSize (
  [out]指標，才能儲存檔案的大小。  
   
 ## <a name="remarks"></a>備註  
- `GetSaveSize`計算所需的空間，以位元組為單位，將組件和其所有中繼資料儲存在目前的範圍。 (呼叫[imetadataemit:: Savetostream](../../../../docs/framework/unmanaged-api/metadata/imetadataemit-savetostream-method.md)方法會發出此位元組數目。)  
+ `GetSaveSize` 計算所需的空間，以位元組為單位，將組件和其所有中繼資料儲存在目前的範圍。 (呼叫[imetadataemit:: Savetostream](../../../../docs/framework/unmanaged-api/metadata/imetadataemit-savetostream-method.md)方法會發出此位元組數目。)  
   
  如果呼叫端實作[IMapToken](../../../../docs/framework/unmanaged-api/metadata/imaptoken-interface.md)介面 (透過[imetadataemit:: Sethandler](../../../../docs/framework/unmanaged-api/metadata/imetadataemit-sethandler-method.md)或[imetadataemit:: Merge](../../../../docs/framework/unmanaged-api/metadata/imetadataemit-merge-method.md))，`GetSaveSize`將會執行兩種途徑透過以最佳化，並壓縮的中繼資料。 否則，不會執行最佳化。  
   
@@ -74,8 +62,8 @@ HRESULT GetSaveSize (
   
  **程式庫：**做為 MSCorEE.dll 中的資源  
   
- **.NET framework 版本：**[!INCLUDE[net_current_v11plus](../../../../includes/net-current-v11plus-md.md)]  
+ **.NET framework 版本：** [!INCLUDE[net_current_v11plus](../../../../includes/net-current-v11plus-md.md)]  
   
-## <a name="see-also"></a>請參閱  
+## <a name="see-also"></a>另請參閱  
  [IMetaDataEmit 介面](../../../../docs/framework/unmanaged-api/metadata/imetadataemit-interface.md)  
  [IMetaDataEmit2 介面](../../../../docs/framework/unmanaged-api/metadata/imetadataemit2-interface.md)

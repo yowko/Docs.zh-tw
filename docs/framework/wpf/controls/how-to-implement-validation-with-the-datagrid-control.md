@@ -1,13 +1,6 @@
 ---
-title: "如何：使用 DataGrid 控制項實作驗證"
-ms.custom: 
+title: 如何：使用 DataGrid 控制項實作驗證
 ms.date: 03/30/2017
-ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.technology: dotnet-wpf
-ms.tgt_pltfrm: 
-ms.topic: article
 dev_langs:
 - csharp
 - vb
@@ -15,16 +8,11 @@ helpviewer_keywords:
 - DataGrid [WPF], validation
 - validation [WPF], DataGrid
 ms.assetid: ec6078a8-1e42-4648-b414-f4348e81bda1
-caps.latest.revision: "9"
-author: dotnet-bot
-ms.author: dotnetcontent
-manager: wpickett
-ms.workload: dotnet
-ms.openlocfilehash: 78846e2b6a1d73e011441b0ccb46b8aad365d5dd
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.openlocfilehash: 20fcc8ebafb25e4e4f176447972e7637aaa5cd7d
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="how-to-implement-validation-with-the-datagrid-control"></a>如何：使用 DataGrid 控制項實作驗證
 <xref:System.Windows.Controls.DataGrid>控制項可讓您執行資料格和資料列層級的驗證。 資料格層級驗證時，您會驗證個別屬性繫結的資料物件的使用者更新值時。 資料列層級驗證時，您會驗證整個資料的物件，當使用者將變更認可至資料列。 您也可以提供自訂的視覺化回饋，對於驗證錯誤，或使用預設的視覺化回饋，<xref:System.Windows.Controls.DataGrid>控制項提供。  
@@ -101,7 +89,7 @@ ms.lasthandoff: 12/22/2017
   
  [!code-xaml[DataGrid_Validation#FullXaml](../../../../samples/snippets/csharp/VS_Snippets_Wpf/datagrid_validation/cs/mainwindow.xaml#fullxaml)]  
   
-## <a name="see-also"></a>請參閱  
+## <a name="see-also"></a>另請參閱  
  <xref:System.Windows.Controls.DataGrid>  
  [DataGrid](../../../../docs/framework/wpf/controls/datagrid.md)  
  [資料繫結](../../../../docs/framework/wpf/data/data-binding-wpf.md)  

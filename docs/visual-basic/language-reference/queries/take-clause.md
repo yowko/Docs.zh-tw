@@ -1,12 +1,6 @@
 ---
 title: Take 子句 (Visual Basic)
 ms.date: 07/20/2015
-ms.prod: .net
-ms.reviewer: ''
-ms.suite: ''
-ms.technology:
-- devlang-visual-basic
-ms.topic: article
 f1_keywords:
 - vb.QueryTake
 helpviewer_keywords:
@@ -14,14 +8,11 @@ helpviewer_keywords:
 - queries [Visual Basic], Take
 - Take clause [Visual Basic]
 ms.assetid: 77bf87b2-1476-4456-957f-fee922fbad8c
-caps.latest.revision: 15
-author: dotnet-bot
-ms.author: dotnetcontent
-ms.openlocfilehash: ee289a24c15226126a526af116ed53b4a9055b35
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.openlocfilehash: 0dddb411af1b4ee269e091c07553a94589d90b2c
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="take-clause-visual-basic"></a>Take 子句 (Visual Basic)
 從集合開頭傳回指定數目的連續項目。  
@@ -34,7 +25,7 @@ Take count
   
 ## <a name="parts"></a>組件  
  `count`  
- 必要項。 值或評估運算式傳回序列的項目數目。  
+ 必要。 值或評估運算式傳回序列的項目數目。  
   
 ## <a name="remarks"></a>備註  
  `Take`子句，會使查詢包含連續的項目，從結果清單的開頭指定的數目。 所指定要包含的項目數`count`參數。  

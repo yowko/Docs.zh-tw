@@ -1,17 +1,12 @@
 ---
 title: 陣列 (F#)
 description: '了解如何建立和使用 F # 程式語言中的陣列。'
-author: cartermp
-ms.author: phcart
 ms.date: 05/16/2016
-ms.topic: language-reference
-ms.prod: dotnet-fsharp
-ms.devlang: fsharp
-ms.openlocfilehash: 650321e864556ff0ba8591e09ffa34877c8a39b7
-ms.sourcegitcommit: 03ee570f6f528a7d23a4221dcb26a9498edbdf8c
+ms.openlocfilehash: 2cd887b8385235185afb9099c3142a572efe3f41
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/28/2018
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="arrays"></a>陣列
 

@@ -1,18 +1,12 @@
 ---
-title: "來源資料夾和目標資料夾相同"
+title: 來源資料夾和目標資料夾相同
 ms.date: 07/20/2015
-ms.prod: .net
-ms.technology: devlang-visual-basic
-ms.topic: article
 ms.assetid: d4e6f996-8bbe-45f2-b662-f26b4474f44d
-caps.latest.revision: "9"
-author: dotnet-bot
-ms.author: dotnetcontent
-ms.openlocfilehash: ed003377c7de585d4929f9c7671972ae9a2b278a
-ms.sourcegitcommit: 34ec7753acf76f90a0fa845235ef06663dc9e36e
+ms.openlocfilehash: 74456ed852c0fb26b01eac0f1a7b0d6352d3c395
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="source-folder-and-target-folder-are-the-same"></a>來源資料夾和目標資料夾相同
 嘗試複製或移動檔案，但指定的來源目錄和目標目錄相同。 這可能是檔案路徑剖析不正確的結果。  
@@ -21,7 +15,7 @@ ms.lasthandoff: 12/21/2017
   
 -   請確定您提供正確的來源和目標目錄。  
   
-## <a name="see-also"></a>請參閱  
+## <a name="see-also"></a>另請參閱  
  [My.Computer.FileSystem.MoveFile](xref:Microsoft.VisualBasic.FileIO.FileSystem.MoveFile%2A)  
  [My.Computer.FileSystem.CopyFile](xref:Microsoft.VisualBasic.FileIO.FileSystem.CopyFile%2A)  
  [如何：剖析檔案路徑](../../visual-basic/developing-apps/programming/drives-directories-files/how-to-parse-file-paths.md)  

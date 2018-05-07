@@ -1,13 +1,6 @@
 ---
-title: "如何：在 StackPanel 和 DockPanel 之間選擇"
-ms.custom: 
+title: 如何：在 StackPanel 和 DockPanel 之間選擇
 ms.date: 03/30/2017
-ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.technology: dotnet-wpf
-ms.tgt_pltfrm: 
-ms.topic: article
 dev_langs:
 - csharp
 - vb
@@ -18,16 +11,11 @@ helpviewer_keywords:
 - StackPanel control [WPF], DockPanel control compared to
 - controls [WPF], StackPanel
 ms.assetid: f9239086-451f-42e6-81f7-ef89ef349742
-caps.latest.revision: "9"
-author: dotnet-bot
-ms.author: dotnetcontent
-manager: wpickett
-ms.workload: dotnet
-ms.openlocfilehash: 0274a0f078c378a101bdf4a4ae456fd2ce9f4185
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.openlocfilehash: c9bfb8d29051a9cfa61d3fcb93b8bb9a68d14e00
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="how-to-choose-between-stackpanel-and-dockpanel"></a>如何：在 StackPanel 和 DockPanel 之間選擇
 這個範例示範如何使用之間選擇<xref:System.Windows.Controls.StackPanel>或<xref:System.Windows.Controls.DockPanel>您堆疊內容中的，當<xref:System.Windows.Controls.Panel>。  
@@ -42,7 +30,7 @@ ms.lasthandoff: 12/22/2017
  [!code-vb[StackPanelOvw4#1](../../../../samples/snippets/visualbasic/VS_Snippets_Wpf/StackPanelOvw4/VisualBasic/StackPanelSamp.vb#1)]
  [!code-xaml[StackPanelOvw4#1](../../../../samples/snippets/xaml/VS_Snippets_Wpf/StackPanelOvw4/XAML/default.xaml#1)]  
   
-## <a name="see-also"></a>請參閱  
+## <a name="see-also"></a>另請參閱  
  <xref:System.Windows.Controls.StackPanel>  
  <xref:System.Windows.Controls.DockPanel>  
  [面板概觀](../../../../docs/framework/wpf/controls/panels-overview.md)

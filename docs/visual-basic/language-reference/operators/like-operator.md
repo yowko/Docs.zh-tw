@@ -1,11 +1,6 @@
 ---
-title: "Like 運算子 (Visual Basic)"
+title: Like 運算子 (Visual Basic)
 ms.date: 07/20/2015
-ms.prod: .net
-ms.reviewer: 
-ms.suite: 
-ms.technology: devlang-visual-basic
-ms.topic: article
 f1_keywords:
 - Like
 - vb.Like
@@ -27,14 +22,11 @@ helpviewer_keywords:
 - data [Visual Basic], string comparisons
 - string comparison [Visual Basic], Like operators
 ms.assetid: 966283ec-80e2-4294-baa8-c75baff804f9
-caps.latest.revision: "18"
-author: dotnet-bot
-ms.author: dotnetcontent
-ms.openlocfilehash: ad5729515362bfd52b0c3b401f218a49f569726e
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.openlocfilehash: a9c672a397510c69c9ee67358689feff80d8831a
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="like-operator-visual-basic"></a>Like 運算子 (Visual Basic)
 比較字串和模式。  
@@ -47,13 +39,13 @@ result = string Like pattern
   
 ## <a name="parts"></a>組件  
  `result`  
- 必要項。 任何`Boolean`變數。 結果是`Boolean`值，指出是否`string`滿足`pattern`。  
+ 必要。 任何`Boolean`變數。 結果是`Boolean`值，指出是否`string`滿足`pattern`。  
   
  `string`  
- 必要項。 任何 `String` 運算式。  
+ 必要。 任何 `String` 運算式。  
   
  `pattern`  
- 必要項。 任何`String`運算式符合的模式比對的慣例所述在 < 備註 >。  
+ 必要。 任何`String`運算式符合的模式比對的慣例所述在 < 備註 >。  
   
 ## <a name="remarks"></a>備註  
  如果中的值`string`滿足模式中包含`pattern`，`result`是`True`。 如果字串不符合該模式，`result`是`False`。 如果兩個`string`和`pattern`則為空字串，結果是`True`。  
@@ -64,13 +56,13 @@ result = string Like pattern
 ## <a name="pattern-options"></a>模式選項  
  內建的模式比對的字串比較提供的多功能工具。 模式比對功能可讓您比對中的每個字元`string`針對特定的字元、 萬用字元、 字元清單或字元範圍。 下表顯示允許的字元`pattern`和它們的相符。  
   
-|中的字元`pattern`|中的相符項目`string`|  
+|中的字元 `pattern`|中的相符項目 `string`|  
 |-----------------------------|-------------------------|  
 |`?`|任何單一字元|  
 |`*`|零個或多個字元|  
 |`#`|任何單一數字 (0 – 9)|  
-|`[charlist]`|中的任何單一字元`charlist`|  
-|`[!charlist]`|不能在任何單一字元`charlist`|  
+|`[charlist]`|中的任何單一字元 `charlist`|  
+|`[!charlist]`|不能在任何單一字元 `charlist`|  
   
 ## <a name="character-lists"></a>字元清單  
  一或多個字元群組 (`charlist`) 括在括號 (`[ ]`) 可用來比對中的任何單一字元`string`而且可以包含任何字元碼，包括數字。  

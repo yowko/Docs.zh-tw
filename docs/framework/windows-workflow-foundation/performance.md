@@ -1,24 +1,12 @@
 ---
 title: Windows Workflow Foundation 4 效能
-ms.custom: ''
 ms.date: 03/30/2017
-ms.prod: .net-framework
-ms.reviewer: ''
-ms.suite: ''
-ms.tgt_pltfrm: ''
-ms.topic: article
 ms.assetid: 67d2b3e8-3777-49f8-9084-abbb33b5a766
-caps.latest.revision: 9
-author: dotnet-bot
-ms.author: dotnetcontent
-manager: wpickett
-ms.workload:
-- dotnet
-ms.openlocfilehash: 4db761d2e6ba0231cb83d4ef5d1ee663c99178c5
-ms.sourcegitcommit: 94d33cadc5ff81d2ac389bf5f26422c227832052
-ms.translationtype: MT
+ms.openlocfilehash: 793645c442e960c43f00c3ea3c9b636a4c539706
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/30/2018
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="windows-workflow-foundation-4-performance"></a>Windows Workflow Foundation 4 效能
 Dustin Metzgar  
@@ -29,12 +17,12 @@ Dustin Metzgar
   
  Microsoft[!INCLUDE[netfx40_long](../../../includes/netfx40-long-md.md)]效能中包含的重大修訂的 Windows Workflow Foundation (WF) 進行了大量投資。  這個新修訂在設計方面做了改變，與 .NET Framework 3.0 和 [!INCLUDE[wf1](../../../includes/wf1-md.md)] 隨附的舊版 [!INCLUDE[netfx35_short](../../../includes/netfx35-short-md.md)] 有明顯的不同。 在此版本中，程式設計模型、執行階段及工具的核心已重新架構，以大幅改善效能和可用性。 本主題說明這些修訂的重要效能特性，並且與其舊版進行比較。  
   
- WF3 與 WF4 之間個別工作流程元件效能提升的速度很快。  如此一來，手動編碼的 [!INCLUDE[indigo1](../../../includes/indigo1-md.md)] 服務和 [!INCLUDE[indigo2](../../../includes/indigo2-md.md)] 工作流程服務之間的差距就變得很小。  在 WF4 中，工作流程延遲已大幅降低。  持續性效能已提升 2.5 至 3.0 倍。  透過工作流程追蹤進行健康監視的負荷已明顯減少。  這些都是移轉至 WF4 或在應用程式中採用 WF4 的絕佳理由。  
+ WF3 與 WF4 之間個別工作流程元件效能提升的速度很快。  如此一手動編碼 Windows Communication Foundation (WCF) 服務之間的間距和[!INCLUDE[indigo2](../../../includes/indigo2-md.md)]要變得很小的工作流程服務。  在 WF4 中，工作流程延遲已大幅降低。  持續性效能已提升 2.5 至 3.0 倍。  透過工作流程追蹤進行健康監視的負荷已明顯減少。  這些都是移轉至 WF4 或在應用程式中採用 WF4 的絕佳理由。  
   
 ## <a name="terminology"></a>用語  
  本主題後續內容皆以 WF4 代表 [!INCLUDE[wf1](../../../includes/wf1-md.md)] 中引進的 [!INCLUDE[netfx40_short](../../../includes/netfx40-short-md.md)] 版本。  [!INCLUDE[wf1](../../../includes/wf1-md.md)] 是在 .Net 3.0 中引進的，並且透過 [!INCLUDE[netfx35_short](../../../includes/netfx35-short-md.md)] SP1 進行了幾項小幅修訂。 本主題中一律將 [!INCLUDE[netfx35_short](../../../includes/netfx35-short-md.md)] 版的 Workflow Foundation 稱為 WF3。 WF3 與 WF4 一同隨附於 [!INCLUDE[netfx40_short](../../../includes/netfx40-short-md.md)]。 將 WF3 成品移轉至 WF4 的詳細資訊請參閱： [Windows Workflow Foundation 4 移轉指南](http://go.microsoft.com/fwlink/?LinkID=153313)  
   
- [!INCLUDE[indigo1](../../../includes/indigo1-md.md)] 是 Microsoft 的統一程式設計模型，用於建置服務導向的應用程式。 它一開始是做為 .NET 3.0 的一部分與 WF3 一併導入，而現在已成為 [!INCLUDE[dnprdnshort](../../../includes/dnprdnshort-md.md)] 的其中一個重要元件。  
+ Windows Communication Foundation (WCF) 是 Microsoft 的統一程式設計模型，用於建置服務導向應用程式。 它一開始是做為 .NET 3.0 的一部分與 WF3 一併導入，而現在已成為 [!INCLUDE[dnprdnshort](../../../includes/dnprdnshort-md.md)] 的其中一個重要元件。  
   
  Windows Server AppFabric 是一組整合式技術，可讓您更輕鬆地建置、調整及管理 IIS 上執行的 Web 與複合應用程式。 它提供了監視及管理服務和工作流程的工具。 如需詳細資訊，請參閱[Windows Server AppFabric](http://msdn.microsoft.com/windowsserver/ee695849.aspx)  
   

@@ -1,27 +1,15 @@
 ---
-title: "在 IIS 與 WAS 中以組態為基礎的啟動"
-ms.custom: 
+title: 在 IIS 與 WAS 中以組態為基礎的啟動
 ms.date: 03/30/2017
-ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.technology: dotnet-clr
-ms.tgt_pltfrm: 
-ms.topic: article
 ms.assetid: 6a927e1f-b905-4ee5-ad0f-78265da38238
-caps.latest.revision: "13"
-author: dotnet-bot
-ms.author: dotnetcontent
-manager: wpickett
-ms.workload: dotnet
-ms.openlocfilehash: fc0e954ae5cadbe7e70cd8a83d3d5841f4e0d142
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.openlocfilehash: aa4a3c682ab1d5d7ca0869fee588934b9ed2bf75
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="configuration-based-activation-in-iis-and-was"></a>在 IIS 與 WAS 中以組態為基礎的啟動
-一般來說，在 Internet Information Services (IIS) 或 Windows Process Activation Service (WAS) 底下裝載 [!INCLUDE[indigo1](../../../../includes/indigo1-md.md)] 服務時，您必須提供 .svc 檔案。 .svc 檔案包含服務名稱和選擇性自訂服務主機處理站。 此額外的檔案會增加管理能力的負荷。 以組態為基礎的啟動功能可免除 .svc 檔案的需求以及關聯的負荷。  
+通常當裝載 Windows Communication Foundation (WCF) 服務在 Internet Information Services (IIS) 或 Windows Process Activation Service (WAS) 下的，您必須提供.svc 檔案。 .svc 檔案包含服務名稱和選擇性自訂服務主機處理站。 此額外的檔案會增加管理能力的負荷。 以組態為基礎的啟動功能可免除 .svc 檔案的需求以及關聯的負荷。  
   
 ## <a name="configuration-based-activation"></a>以組態為基礎的啟用  
  以組態為基礎的啟動會使用放置於 .svc 檔案中的中繼資料，並將中繼資料放置於 Web.config 檔案中。 在 <`serviceHostingEnvironment`> 元素沒有 <`serviceActivations`> 項目。 在 <`serviceActivations`> 項目是一或多個 <`add`> 項目、 一個用於每個託管服務。 <`add`> 元素包含可讓您設定服務和服務類型或服務主機處理站的相對位址的屬性。 下列組態範例程式碼會示範此區段的使用方式。  
@@ -48,7 +36,7 @@ ms.lasthandoff: 12/22/2017
 > -   在組態檔中的註冊優先權高於 .svc、.xamlx、.xoml 或其他檔案中的設定。  
 > -   任何在 URI 中傳送至 IIS/WAS 的 ‘\’ (反斜線) 會自動轉換為 ‘/’ (正斜線)。 如果新增包含 ‘\’ 的相對位址且您傳送使用相對位址的 URI 至 IIS，反斜線會轉換為正斜線，而 IIS 無法將其與相對位址比對。 IIS 會送出追蹤資訊，表示找不到相符的項目。  
   
-## <a name="see-also"></a>請參閱  
+## <a name="see-also"></a>另請參閱  
  <xref:System.ServiceModel.Configuration.ServiceHostingEnvironmentSection.ServiceActivations%2A>  
  [裝載服務](../../../../docs/framework/wcf/hosting-services.md)  
  [裝載工作流程服務概觀](../../../../docs/framework/wcf/feature-details/hosting-workflow-services-overview.md)  

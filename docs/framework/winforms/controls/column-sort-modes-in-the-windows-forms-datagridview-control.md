@@ -1,30 +1,18 @@
 ---
-title: "Windows Form DataGridView 控制項中的資料行排序模式"
-ms.custom: 
+title: Windows Form DataGridView 控制項中的資料行排序模式
 ms.date: 03/30/2017
-ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.technology: dotnet-winforms
-ms.tgt_pltfrm: 
-ms.topic: article
 helpviewer_keywords:
 - data grids [Windows Forms], sort modes
 - DataGridView control [Windows Forms], sort mode
 ms.assetid: 43715887-2df9-4da7-bcf1-b9c7c842b2bf
-caps.latest.revision: "18"
-author: dotnet-bot
-ms.author: dotnetcontent
-manager: wpickett
-ms.workload: dotnet
-ms.openlocfilehash: 088d9f1f76e88d8be838cbf7050601835eff216a
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.openlocfilehash: 9ebcfc435fcc7d2b0dfbfe3004d958c73dd1347c
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="column-sort-modes-in-the-windows-forms-datagridview-control"></a>Windows Form DataGridView 控制項中的資料行排序模式
-<xref:System.Windows.Forms.DataGridView>資料行有三種排序模式。 每個資料行的排序模式透過指定<xref:System.Windows.Forms.DataGridViewColumn.SortMode%2A>資料行，可以設定為下列其中一種屬性<xref:System.Windows.Forms.DataGridViewColumnSortMode>列舉值。  
+<xref:System.Windows.Forms.DataGridView> 資料行有三種排序模式。 每個資料行的排序模式透過指定<xref:System.Windows.Forms.DataGridViewColumn.SortMode%2A>資料行，可以設定為下列其中一種屬性<xref:System.Windows.Forms.DataGridViewColumnSortMode>列舉值。  
   
 |`DataGridViewColumnSortMode` 值|描述|  
 |----------------------------------------|-----------------|  
@@ -69,7 +57,7 @@ ms.lasthandoff: 12/22/2017
 > [!NOTE]
 >  <xref:System.Windows.Forms.DataGridView.SortCompare>不會發生事件時<xref:System.Windows.Forms.DataGridView.DataSource%2A>屬性設定或當<xref:System.Windows.Forms.DataGridView.VirtualMode%2A>屬性值是`true`。  
   
-## <a name="see-also"></a>請參閱  
+## <a name="see-also"></a>另請參閱  
  <xref:System.Windows.Forms.DataGridView>  
  <xref:System.Windows.Forms.DataGridView.Sort%2A?displayProperty=nameWithType>  
  <xref:System.Windows.Forms.DataGridView.SortedColumn%2A?displayProperty=nameWithType>  

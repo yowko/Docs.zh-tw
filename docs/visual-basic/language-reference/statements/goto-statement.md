@@ -1,12 +1,6 @@
 ---
 title: GoTo 陳述式
 ms.date: 07/20/2015
-ms.prod: .net
-ms.reviewer: ''
-ms.suite: ''
-ms.technology:
-- devlang-visual-basic
-ms.topic: article
 f1_keywords:
 - vb.GoTo
 helpviewer_keywords:
@@ -19,14 +13,11 @@ helpviewer_keywords:
 - conditional statements [Visual Basic], GoTo statement
 - GoTo statement [Visual Basic], syntax
 ms.assetid: 313274c2-8ab3-4b9c-9ba3-0fd6798e4f6d
-caps.latest.revision: 19
-author: dotnet-bot
-ms.author: dotnetcontent
-ms.openlocfilehash: 22a6315e69cd6c797d462d0835e85bb1dde67dcc
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.openlocfilehash: 27ebc677bab8b7f61a02408fddb30a6ec21c43cc
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="goto-statement"></a>GoTo 陳述式
 無條件分支的程序中指定的行。  
@@ -39,13 +30,13 @@ GoTo line
   
 ## <a name="part"></a>組件  
  `line`  
- 必要項。 任何行標籤。  
+ 必要。 任何行標籤。  
   
 ## <a name="remarks"></a>備註  
  `GoTo`陳述式只能將程式分支中的程序中的行。 行必須擁有行加上標籤的`GoTo`可以參考。 如需詳細資訊，請參閱[How to： 標籤陳述式](../../../visual-basic/programming-guide/program-structure/how-to-label-statements.md)。  
   
 > [!NOTE]
->  `GoTo`陳述式會讓程式碼難以讀取和維護。 您應該盡可能改用控制結構。 如需詳細資訊，請參閱[控制流程](../../../visual-basic/programming-guide/language-features/control-flow/index.md)。  
+>  `GoTo` 陳述式會讓程式碼難以讀取和維護。 您應該盡可能改用控制結構。 如需詳細資訊，請參閱[控制流程](../../../visual-basic/programming-guide/language-features/control-flow/index.md)。  
   
  您無法使用`GoTo`陳述式來從外部的分支`For`...`Next`, `For Each`...`Next`, `SyncLock`...`End SyncLock`, `Try`...`Catch`...`Finally`, `With`...`End With`，或`Using`...`End Using`建構內的標籤。  
   
@@ -54,9 +45,9 @@ GoTo line
   
 |區塊或地區|分支中從外部|從內部往外分支|  
 |---------------------|-------------------------------|-------------------------------|  
-|`Try`區塊|只能從`Catch`相同建構區塊<sup>1</sup>|只在整個建構之外|  
-|`Catch`區塊|不允許|僅外部整個建構，或為`Try`相同建構區塊<sup>1</sup>|  
-|`Finally`區塊|不允許|不允許|  
+|`Try` 區塊|只能從`Catch`相同建構區塊<sup>1</sup>|只在整個建構之外|  
+|`Catch` 區塊|不允許|僅外部整個建構，或為`Try`相同建構區塊<sup>1</sup>|  
+|`Finally` 區塊|不允許|不允許|  
   
  <sup>1</sup>如果一個`Try`...`Catch`...`Finally`建構，巢狀`Catch`區塊可以分支到`Try`區塊在它自己的巢狀層級，而不用到任何其他`Try`區塊。 巢狀`Try`...`Catch`...`Finally`建構必須完全在包含`Try`或`Catch`建構巢狀所在的區塊。  
   

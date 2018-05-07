@@ -1,30 +1,18 @@
 ---
-title: "WCF 新聞訂閱物件模型對應到 Atom 和 RSS 的方式"
-ms.custom: 
+title: WCF 新聞訂閱物件模型對應到 Atom 和 RSS 的方式
 ms.date: 03/30/2017
-ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.technology: dotnet-clr
-ms.tgt_pltfrm: 
-ms.topic: article
 dev_langs:
 - csharp
 - vb
 ms.assetid: 0365eb37-98cc-4b13-80fb-f1e78847a748
-caps.latest.revision: "18"
-author: dotnet-bot
-ms.author: dotnetcontent
-manager: wpickett
-ms.workload: dotnet
-ms.openlocfilehash: 01030ed226a5cdc384db56933325d7c4eeade989
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.openlocfilehash: 7baf77b4923cff4320d657b3024ab2a286e40c2b
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="how-the-wcf-syndication-object-model-maps-to-atom-and-rss"></a>WCF 新聞訂閱物件模型對應到 Atom 和 RSS 的方式
-在您開發 [!INCLUDE[indigo1](../../../../includes/indigo1-md.md)] 新聞訂閱服務時，會使用下列類別來建立摘要與項目：  
+開發 Windows Communication Foundation (WCF) 新聞訂閱服務時，您可以建立摘要與項目使用下列類別：  
   
 -   <xref:System.ServiceModel.Syndication.SyndicationFeed>  
   
@@ -42,9 +30,9 @@ ms.lasthandoff: 12/22/2017
   
 -   <xref:System.ServiceModel.Syndication.XmlSyndicationContent>  
   
- <xref:System.ServiceModel.Syndication.SyndicationFeed> 可以序列化為任何一種用來定義格式器的同步發佈格式。 [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] 會隨附兩個格式器：<xref:System.ServiceModel.Syndication.Atom10FeedFormatter> 和 <xref:System.ServiceModel.Syndication.Rss20FeedFormatter>。  
+ <xref:System.ServiceModel.Syndication.SyndicationFeed> 可以序列化為任何一種用來定義格式器的同步發佈格式。 WCF 隨附兩個格式器：<xref:System.ServiceModel.Syndication.Atom10FeedFormatter>和<xref:System.ServiceModel.Syndication.Rss20FeedFormatter>。  
   
- 在 <xref:System.ServiceModel.Syndication.SyndicationFeed> 和 <xref:System.ServiceModel.Syndication.SyndicationItem> 周圍的物件模型會與 Atom 1.0 規格 (而不是 RSS 2.0 規格) 較為符合。 這是因為 Atom 1.0 是比較實質上的規格，可用來定義不明確或是從 RSS 2.0 規格中省略的項目。 由於這個原因，[!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] 新聞訂閱物件模型中的許多項目並未在 RSS 2.0 規格中具有直接代表項。 當您將 <xref:System.ServiceModel.Syndication.SyndicationFeed> 和 <xref:System.ServiceModel.Syndication.SyndicationItem> 物件序列化為 RSS 2.0 時，[!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] 可讓您將 Atom 特定的資料項目序列化為符合命名空間延伸項目以符合 Atom 規格。 您可以將參數傳遞至 <xref:System.ServiceModel.Syndication.Rss20FeedFormatter> 建構函式來控制這個項目。  
+ 在 <xref:System.ServiceModel.Syndication.SyndicationFeed> 和 <xref:System.ServiceModel.Syndication.SyndicationItem> 周圍的物件模型會與 Atom 1.0 規格 (而不是 RSS 2.0 規格) 較為符合。 這是因為 Atom 1.0 是比較實質上的規格，可用來定義不明確或是從 RSS 2.0 規格中省略的項目。 因為這個緣故，在 WCF 新聞訂閱物件模型中的多個項目都具有 RSS 2.0 規格中沒有直接的表示。 當序列化<xref:System.ServiceModel.Syndication.SyndicationFeed>和<xref:System.ServiceModel.Syndication.SyndicationItem>物件至 RSS 2.0 時，WCF 可讓您將 Atom 特定的資料項目序列化為命名空間延伸項目以符合 Atom 規格。 您可以將參數傳遞至 <xref:System.ServiceModel.Syndication.Rss20FeedFormatter> 建構函式來控制這個項目。  
   
  本主題中的程式碼範例將使用此處所定義的兩種方法之一來實際執行序列化作業。  
   
@@ -408,7 +396,7 @@ ms.lasthandoff: 12/22/2017
   
  `</content>`  
   
-## <a name="see-also"></a>請參閱  
+## <a name="see-also"></a>另請參閱  
  [WCF 摘要整合概觀](../../../../docs/framework/wcf/feature-details/wcf-syndication-overview.md)  
  [摘要整合架構](../../../../docs/framework/wcf/feature-details/architecture-of-syndication.md)  
  [如何：建立基本 RSS 摘要](../../../../docs/framework/wcf/feature-details/how-to-create-a-basic-rss-feed.md)  

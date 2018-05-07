@@ -1,10 +1,6 @@
 ---
-title: "資料類型摘要 (Visual Basic)"
+title: 資料類型摘要 (Visual Basic)
 ms.date: 07/20/2015
-ms.prod: .net
-ms.suite: 
-ms.technology: devlang-visual-basic
-ms.topic: article
 helpviewer_keywords:
 - Boolean data type [Visual Basic], supported types in Visual Basic
 - storage [Visual Basic], order of storage
@@ -41,14 +37,11 @@ helpviewer_keywords:
 - storage order, controlling in Visual Basic
 - data types [Visual Basic], memory requirements
 ms.assetid: e975cdb6-64d8-4a4a-ae27-f3b3ed198ae0
-caps.latest.revision: "22"
-author: dotnet-bot
-ms.author: dotnetcontent
-ms.openlocfilehash: f69a112718eed7bb7baaff9bdffd110865c21081
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.openlocfilehash: 8afeba3f88c4bfe6e1c9777f950c3b458665e340
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="data-type-summary-visual-basic"></a>資料類型摘要 (Visual Basic)
 下表顯示 Visual Basic 資料類型、 其支援的 common language runtime 類型、 其表面的存放裝置配置和其值的範圍。  
@@ -63,11 +56,11 @@ ms.lasthandoff: 11/21/2017
 |[Double](../../../visual-basic/language-reference/data-types/double-data-type.md) （雙精度浮點數）|<xref:System.Double>|8 個位元組|-1.79769313486231570 e + 308 到-4.94065645841246544 e-324 <sup>†</sup>負數的值;<br /><br /> 4.94065645841246544 e-324 1.79769313486231570 e + 308 到<sup>†</sup>的正數值|  
 |[Integer](../../../visual-basic/language-reference/data-types/integer-data-type.md)|<xref:System.Int32>|4 個位元組|-2147483648 到 2147483647 （帶正負號）|  
 |[長](../../../visual-basic/language-reference/data-types/long-data-type.md)（長整數）|<xref:System.Int64>|8 個位元組|-9223372036854775808 到 9,223,372,036,854,775,807 (9.2 … E + 18 <sup>†</sup>) （帶正負號）|  
-|[物件](../../../visual-basic/language-reference/data-types/object-data-type.md)|<xref:System.Object>（類別）|在 32 位元平台上的 4 個位元組<br /><br /> 在 64 位元平台上為 8 個位元組|任何類型可以儲存在類型的變數`Object`|  
+|[物件](../../../visual-basic/language-reference/data-types/object-data-type.md)|<xref:System.Object> （類別）|在 32 位元平台上的 4 個位元組<br /><br /> 在 64 位元平台上為 8 個位元組|任何類型可以儲存在類型的變數 `Object`|  
 |[SByte](../../../visual-basic/language-reference/data-types/sbyte-data-type.md)|<xref:System.SByte>|1 個位元組|-128 到 127 （帶正負號）|  
 |[簡短](../../../visual-basic/language-reference/data-types/short-data-type.md)（短整數）|<xref:System.Int16>|2 個位元組|-32,768 到 32,767 （帶正負號）|  
 |[單一](../../../visual-basic/language-reference/data-types/single-data-type.md)（單精確度浮點數）|<xref:System.Single>|4 個位元組|-3.4028235 e + 38 到-1.401298-45 <sup>†</sup>負數的值;<br /><br /> 1.401298-45 3.4028235 e + 38 到<sup>†</sup>的正數值|  
-|[字串](../../../visual-basic/language-reference/data-types/string-data-type.md)（可變長度）|<xref:System.String>（類別）|作業取決於平台|0 到大約 2 10 億個 Unicode 字元|  
+|[字串](../../../visual-basic/language-reference/data-types/string-data-type.md)（可變長度）|<xref:System.String> （類別）|作業取決於平台|0 到大約 2 10 億個 Unicode 字元|  
 |[UInteger](../../../visual-basic/language-reference/data-types/uinteger-data-type.md)|<xref:System.UInt32>|4 個位元組|0 到 4294967295 （不帶正負號）|  
 |[ULong](../../../visual-basic/language-reference/data-types/ulong-data-type.md)|<xref:System.UInt64>|8 個位元組|0 到 18446744073709551615 (1.8 … E + 19 <sup>†</sup>) （不帶正負號）|  
 |[使用者定義](../../../visual-basic/language-reference/data-types/user-defined-data-type.md)（結構）|(繼承自<xref:System.ValueType>)|作業取決於平台|結構的每一個成員具有決定透過其資料類型且獨立於其他成員的範圍的範圍|  

@@ -1,13 +1,6 @@
 ---
-title: "如何：建立自訂路由事件"
-ms.custom: 
+title: 如何：建立自訂路由事件
 ms.date: 03/30/2017
-ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.technology: dotnet-wpf
-ms.tgt_pltfrm: 
-ms.topic: article
 dev_langs:
 - csharp
 - vb
@@ -15,16 +8,11 @@ helpviewer_keywords:
 - routed events [WPF], creating
 - events [WPF], routing
 ms.assetid: b79f459a-1c3f-4045-b2d4-1659cc8eaa3c
-caps.latest.revision: "13"
-author: dotnet-bot
-ms.author: dotnetcontent
-manager: wpickett
-ms.workload: dotnet
-ms.openlocfilehash: ecd335cb08056cb8b7c696555d666f54cad81b87
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.openlocfilehash: a8aa038008ed93cedfe49fde4e0269712b4fb19a
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="how-to-create-a-custom-routed-event"></a>如何：建立自訂路由事件
 針對您為支援路由事件的自訂事件，您需要註冊<xref:System.Windows.RoutedEvent>使用<xref:System.Windows.EventManager.RegisterRoutedEvent%2A>方法。 此範例示範建立自訂路由事件的基本概念。  
@@ -45,7 +33,7 @@ ms.lasthandoff: 12/22/2017
   
  若要查看事件反昇事件運作方式的範例，請參閱[處理路由事件](../../../../docs/framework/wpf/advanced/how-to-handle-a-routed-event.md)。  
   
-## <a name="see-also"></a>請參閱  
+## <a name="see-also"></a>另請參閱  
  [路由事件概觀](../../../../docs/framework/wpf/advanced/routed-events-overview.md)  
  [輸入概觀](../../../../docs/framework/wpf/advanced/input-overview.md)  
  [控制項撰寫概觀](../../../../docs/framework/wpf/controls/control-authoring-overview.md)

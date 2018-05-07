@@ -1,28 +1,14 @@
 ---
 title: 系統提供的繫結
-ms.custom: ''
 ms.date: 03/30/2017
-ms.prod: .net-framework
-ms.reviewer: ''
-ms.suite: ''
-ms.technology:
-- dotnet-clr
-ms.tgt_pltfrm: ''
-ms.topic: article
 helpviewer_keywords:
 - bindings [WCF], system-provided
 ms.assetid: 2c243746-45ce-4588-995e-c17126a579a6
-caps.latest.revision: 60
-author: dotnet-bot
-ms.author: dotnetcontent
-manager: wpickett
-ms.workload:
-- dotnet
-ms.openlocfilehash: 4ccdab56a90f4114836dd9f0a56cc495657ee9c8
-ms.sourcegitcommit: 94d33cadc5ff81d2ac389bf5f26422c227832052
-ms.translationtype: MT
+ms.openlocfilehash: 12382b0886970bc48345107008ee449d9653ec4f
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/30/2018
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="system-provided-bindings"></a>系統提供的繫結
 在與端點對話時，繫結會指定要使用的通訊機制，並指出如何連接至端點。 繫結包含下列項目：  
@@ -33,7 +19,7 @@ ms.lasthandoff: 04/30/2018
   
 -   對於傳送至端點的訊息來說，編碼決定了要使用的 Wire 編碼，例如，文字/XML、二進位，或是訊息傳輸最佳化機制 (MTOM)。  
   
- 本主題將提供所有系統提供的 [!INCLUDE[indigo1](../../../includes/indigo1-md.md)] 繫結。 如果這些都無法完全符合您的應用程式準則，您可以建立自訂繫結。 如需有關如何建立自訂繫結的詳細資訊，請參閱[自訂繫結](../../../docs/framework/wcf/extending/custom-bindings.md)。  
+ 本主題將提供所有系統提供的 Windows Communication Foundation (WCF) 繫結。 如果這些都無法完全符合您的應用程式準則，您可以建立自訂繫結。 如需有關如何建立自訂繫結的詳細資訊，請參閱[自訂繫結](../../../docs/framework/wcf/extending/custom-bindings.md)。  
   
  一個安全、互通，且可支援 WS-Federation 通訊協定的繫結，此繫結可讓聯合組織有效率地驗證並授權使用者。  
   

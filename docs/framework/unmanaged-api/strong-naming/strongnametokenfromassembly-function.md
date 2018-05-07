@@ -1,14 +1,6 @@
 ---
-title: "StrongNameTokenFromAssembly 函式"
-ms.custom: 
+title: StrongNameTokenFromAssembly 函式
 ms.date: 03/30/2017
-ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.technology:
-- dotnet-clr
-ms.tgt_pltfrm: 
-ms.topic: reference
 api_name:
 - StrongNameTokenFromAssembly
 api_location:
@@ -22,17 +14,13 @@ helpviewer_keywords:
 ms.assetid: 0a4b47ee-02f6-4a98-864e-a6f11ca3f2d9
 topic_type:
 - apiref
-caps.latest.revision: 
 author: rpetrusha
 ms.author: ronpet
-manager: wpickett
-ms.workload:
-- dotnet
-ms.openlocfilehash: 29414522eb2586b00ba3158d79155675cb468815
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.openlocfilehash: 5f04d71e1709eed6c3a9f1af400f79b4722f4433
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="strongnametokenfromassembly-function"></a>StrongNameTokenFromAssembly 函式
 從指定的組件檔案中建立強式名稱語彙基元。  
@@ -60,7 +48,7 @@ BOOLEAN StrongNameTokenFromAssembly (
  [out]大小，以位元組為單位的強式名稱語彙基元。  
   
 ## <a name="return-value"></a>傳回值  
- `true`如果成功地完成。否則， `false`。  
+ `true` 如果成功地完成。否則， `false`。  
   
 ## <a name="remarks"></a>備註  
  為強式名稱語彙基元是公開金鑰縮短形式。 此權杖是從用來簽署組件的公開金鑰建立 64 位元雜湊。 此權杖屬於強式名稱組件，而且可以讀取組件中繼資料。  
@@ -76,9 +64,9 @@ BOOLEAN StrongNameTokenFromAssembly (
   
  **程式庫：**包含做為 mscoree.dll 中的資源  
   
- **.NET framework 版本：**[!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
+ **.NET framework 版本：** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
   
-## <a name="see-also"></a>請參閱  
+## <a name="see-also"></a>另請參閱  
  [StrongNameTokenFromAssembly 方法](../../../../docs/framework/unmanaged-api/hosting/iclrstrongname-strongnametokenfromassembly-method.md)  
  [StrongNameTokenFromAssemblyEx 方法](../../../../docs/framework/unmanaged-api/hosting/iclrstrongname-strongnametokenfromassemblyex-method.md)  
  [ICLRStrongName 介面](../../../../docs/framework/unmanaged-api/hosting/iclrstrongname-interface.md)

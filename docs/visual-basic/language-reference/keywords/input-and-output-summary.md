@@ -1,23 +1,16 @@
 ---
-title: "輸入和輸出摘要 (Visual Basic)"
+title: 輸入和輸出摘要 (Visual Basic)
 ms.date: 07/20/2015
-ms.prod: .net
-ms.suite: 
-ms.technology: devlang-visual-basic
-ms.topic: article
 helpviewer_keywords:
 - input, Visual Basic functions
 - output, Visual Basic functions
 - I/O [Visual Basic], functions
 ms.assetid: 6b0cbb88-6593-43b8-8a40-a61563bc0ce9
-caps.latest.revision: "14"
-author: dotnet-bot
-ms.author: dotnetcontent
-ms.openlocfilehash: 51b7676bbe85655799280d5bad7f41241920f570
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.openlocfilehash: 50664c271e4d6e1f13d7705299e2ba756b2d242f
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="input-and-output-summary-visual-basic"></a>輸入和輸出摘要 (Visual Basic)
 Visual Basic 語言關鍵字和執行階段程式庫成員會依用途組織和使用。  
@@ -30,7 +23,7 @@ Visual Basic 語言關鍵字和執行階段程式庫成員會依用途組織和�
 |將檔案複製。|<xref:Microsoft.VisualBasic.FileSystem.FileCopy%2A>|  
 |取得檔案的相關資訊。|<xref:Microsoft.VisualBasic.FileSystem.EOF%2A>, <xref:Microsoft.VisualBasic.FileSystem.FileAttr%2A>, <xref:Microsoft.VisualBasic.FileSystem.FileDateTime%2A>, <xref:Microsoft.VisualBasic.FileSystem.FileLen%2A>, <xref:Microsoft.VisualBasic.FileSystem.FreeFile%2A>, <xref:Microsoft.VisualBasic.FileSystem.GetAttr%2A>, <xref:Microsoft.VisualBasic.FileSystem.Loc%2A>, <xref:Microsoft.VisualBasic.FileSystem.LOF%2A>, <xref:Microsoft.VisualBasic.FileSystem.Seek%2A>|  
 |取得或透過控制對話方塊中提供自/至使用者的資訊。|<xref:Microsoft.VisualBasic.Interaction.InputBox%2A>, <xref:Microsoft.VisualBasic.Interaction.MsgBox%2A>|  
-|管理檔案。|<xref:Microsoft.VisualBasic.FileSystem.Dir%2A>, <xref:Microsoft.VisualBasic.FileSystem.Kill%2A>, <xref:Microsoft.VisualBasic.FileSystem.Lock%2A>, <xref:Microsoft.VisualBasic.FileSystem.Unlock%2A>|  
+|管理檔案。|<xref:Microsoft.VisualBasic.FileSystem.Dir%2A>、<xref:Microsoft.VisualBasic.FileSystem.Kill%2A>、<xref:Microsoft.VisualBasic.FileSystem.Lock%2A><xref:Microsoft.VisualBasic.FileSystem.Unlock%2A>|  
 |從檔案讀取。|<xref:Microsoft.VisualBasic.FileSystem.FileGet%2A>, <xref:Microsoft.VisualBasic.FileSystem.FileGetObject%2A>, <xref:Microsoft.VisualBasic.FileSystem.Input%2A>, <xref:Microsoft.VisualBasic.FileSystem.InputString%2A>, <xref:Microsoft.VisualBasic.FileSystem.LineInput%2A>|  
 |傳回檔案的長度。|<xref:Microsoft.VisualBasic.FileSystem.FileLen%2A>|  
 |設定或取得檔案屬性。|<xref:Microsoft.VisualBasic.FileSystem.FileAttr%2A>, <xref:Microsoft.VisualBasic.FileSystem.GetAttr%2A>, <xref:Microsoft.VisualBasic.FileSystem.SetAttr%2A>|  

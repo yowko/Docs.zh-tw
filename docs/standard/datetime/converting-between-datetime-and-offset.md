@@ -1,13 +1,7 @@
 ---
-title: "在 DateTime 與 DateTimeOffset 之間轉換"
-ms.custom: 
+title: 在 DateTime 與 DateTimeOffset 之間轉換
 ms.date: 04/10/2017
-ms.prod: .net
-ms.reviewer: 
-ms.suite: 
 ms.technology: dotnet-standard
-ms.tgt_pltfrm: 
-ms.topic: article
 dev_langs:
 - csharp
 - vb
@@ -22,25 +16,20 @@ helpviewer_keywords:
 - Date data type, converting
 - local time conversions
 ms.assetid: b605ff97-0c45-4c24-833f-4c6a3e8be64c
-caps.latest.revision: "8"
 author: rpetrusha
 ms.author: ronpet
-manager: wpickett
-ms.workload:
-- dotnet
-- dotnetcore
-ms.openlocfilehash: 2055df26618664ee130be417599f4ec46e439444
-ms.sourcegitcommit: e7f04439d78909229506b56935a1105a4149ff3d
+ms.openlocfilehash: dec0e5138ecf08783f11d21cd28d7291d27ea68d
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 12/23/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="converting-between-datetime-and-datetimeoffset"></a>在 DateTime 與 DateTimeOffset 之間轉換
 
 雖然<xref:System.DateTimeOffset>結構提供更大的時區感知比<xref:System.DateTime>結構<xref:System.DateTime>方法呼叫中會更常使用參數。 因為這個緣故，可以轉換<xref:System.DateTimeOffset>值<xref:System.DateTime>值，並且 （反之亦然） 則特別重要。 本主題說明如何執行這些轉換會保留最多越好的時區資訊的方式。
 
 > [!NOTE]
-> 同時<xref:System.DateTime>和<xref:System.DateTimeOffset>類型代表時區時間時，有一些限制。 使用其<xref:System.DateTime.Kind%2A>屬性，<xref:System.DateTime>能夠反映只有 Coordinated Universal Time (UTC) 和系統的當地時區。 <xref:System.DateTimeOffset>與 UTC 的時差，一次，但它並不會反映實際時區的時差所屬反映。 如需時間值以及支援的時區的詳細資訊，請參閱[選擇之間 DateTime、 DateTimeOffset、 TimeSpan 和 TimeZoneInfo](../../../docs/standard/datetime/choosing-between-datetime.md)。
+> 同時<xref:System.DateTime>和<xref:System.DateTimeOffset>類型代表時區時間時，有一些限制。 使用其<xref:System.DateTime.Kind%2A>屬性，<xref:System.DateTime>能夠反映只有 Coordinated Universal Time (UTC) 和系統的當地時區。 <xref:System.DateTimeOffset> 與 UTC 的時差，一次，但它並不會反映實際時區的時差所屬反映。 如需時間值以及支援的時區的詳細資訊，請參閱[選擇之間 DateTime、 DateTimeOffset、 TimeSpan 和 TimeZoneInfo](../../../docs/standard/datetime/choosing-between-datetime.md)。
 
 ## <a name="conversions-from-datetime-to-datetimeoffset"></a>從 DateTime 到 DateTimeOffset 的轉換
 

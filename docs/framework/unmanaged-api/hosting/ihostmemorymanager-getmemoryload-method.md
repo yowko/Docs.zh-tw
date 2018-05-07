@@ -1,14 +1,6 @@
 ---
-title: "IHostMemoryManager::GetMemoryLoad 方法"
-ms.custom: 
+title: IHostMemoryManager::GetMemoryLoad 方法
 ms.date: 03/30/2017
-ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.technology:
-- dotnet-clr
-ms.tgt_pltfrm: 
-ms.topic: reference
 api_name:
 - IHostMemoryManager.GetMemoryLoad
 api_location:
@@ -23,17 +15,13 @@ helpviewer_keywords:
 ms.assetid: e8138f6e-a0a4-48d4-8dae-9466b4dc6180
 topic_type:
 - apiref
-caps.latest.revision: 
 author: rpetrusha
 ms.author: ronpet
-manager: wpickett
-ms.workload:
-- dotnet
-ms.openlocfilehash: 320881447eed00bf0dfeada0f5fbd224c32dfe96
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.openlocfilehash: b92ef3a6d7eb45a3b978c916c406bfa6199f17d4
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="ihostmemorymanagergetmemoryload-method"></a>IHostMemoryManager::GetMemoryLoad 方法
 取得目前在使用中，且因此無法使用，與主應用程式所報告的實體記憶體量。  
@@ -58,7 +46,7 @@ HRESULT GetMemoryLoad (
   
 |HRESULT|描述|  
 |-------------|-----------------|  
-|S_OK|`GetMemoryLoad`已成功傳回。|  
+|S_OK|`GetMemoryLoad` 已成功傳回。|  
 |HOST_E_CLRNOTAVAILABLE|CLR 尚未載入到處理程序，或 CLR 正在中它無法執行 managed 程式碼，或成功地處理呼叫的狀態。|  
 |HOST_E_TIMEOUT|呼叫已逾時。|  
 |HOST_E_NOT_OWNER|呼叫端未擁有鎖定。|  
@@ -66,7 +54,7 @@ HRESULT GetMemoryLoad (
 |E_FAIL|發生未知的嚴重失敗。 方法會傳回 E_FAIL CLR 已不再可用的處理序內。 裝載方法的後續呼叫會傳回 HOST_E_CLRNOTAVAILABLE。|  
   
 ## <a name="remarks"></a>備註  
- `GetMemoryLoad`包裝 Win32`GlobalMemoryStatus`函式。 值`pMemoryLoad`就相當於`dwMemoryLoad`欄位`MEMORYSTATUS`從傳回的結構`GlobalMemoryStatus`。  
+ `GetMemoryLoad` 包裝 Win32`GlobalMemoryStatus`函式。 值`pMemoryLoad`就相當於`dwMemoryLoad`欄位`MEMORYSTATUS`從傳回的結構`GlobalMemoryStatus`。  
   
  Runtime 會使用啟發學習法為傳回值，記憶體回收行程。 比方說，如果主應用程式會報告使用中大部分的記憶體，記憶體回收行程可能會選擇收集多個層代增加可能變成可用的記憶體數量。  
   
@@ -77,8 +65,8 @@ HRESULT GetMemoryLoad (
   
  **程式庫：**包含做為 MSCorEE.dll 中的資源  
   
- **.NET framework 版本：**[!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]  
+ **.NET framework 版本：** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]  
   
-## <a name="see-also"></a>請參閱  
+## <a name="see-also"></a>另請參閱  
  <xref:System.GC?displayProperty=nameWithType>  
  [IHostMemoryManager 介面](../../../../docs/framework/unmanaged-api/hosting/ihostmemorymanager-interface.md)

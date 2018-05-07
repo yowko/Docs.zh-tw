@@ -1,13 +1,6 @@
 ---
-title: "可靠工作階段"
-ms.custom: 
+title: 可靠工作階段
 ms.date: 03/30/2017
-ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.technology: dotnet-clr
-ms.tgt_pltfrm: 
-ms.topic: article
 f1_keywords:
 - Windows Communication Foundation, sessions and instances
 - WCF, sessions and instances
@@ -16,24 +9,19 @@ helpviewer_keywords:
 - instances [WCF]
 - sessions [WCF]
 ms.assetid: 143951b3-3aa0-4540-b4b7-d33e77e874a1
-caps.latest.revision: "15"
-author: dotnet-bot
-ms.author: dotnetcontent
-manager: wpickett
-ms.workload: dotnet
-ms.openlocfilehash: 16480996b96145873b1d1f84d56af6d1aa863710
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.openlocfilehash: 396c76cbdb8eada881a5c87edfc2500dcdab3ad4
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="reliable-sessions"></a>可靠工作階段
 
-本節說明該怎麼辦[!INCLUDE[indigo1](../../../../includes/indigo1-md.md)]可靠工作階段有用途，如何及何時使用其中一個，哪些繫結組態支援它，以及最佳做法的指標。 下表將針對本節重點與相關主題的詳細資料提供摘要說明。
+本章節說明哪些 Windows Communication Foundation (WCF) 可靠的工作階段、 用途，如何以及何時使用其中一個，哪些繫結組態支援它，以及最佳做法的指標。 下表將針對本節重點與相關主題的詳細資料提供摘要說明。
 
-可靠工作階段[!INCLUDE[indigo2](../../../../includes/indigo2-md.md)]提供 featrues 確保端點之間傳送的訊息會透過 SOAP 或傳輸媒介傳輸和傳遞一次，並選擇性地被傳送的順序相同。
+可靠工作階段 WCF 提供 featrues 確保端點之間傳送的訊息會透過 SOAP 或傳輸媒介傳輸和傳遞一次，並選擇性地被傳送的順序相同。
 
-若要配合 [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] 應用程式使用可靠工作階段，請使用 [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] 中預設或選擇性支援可靠工作階段的其中一個系統提供繫結，或是自行建立支援工作階段的自訂繫結。
+若要使用的 WCF 應用程式中的可靠工作階段，請使用其中一個系統提供繫結在 WCF 中的預設或選擇性支援可靠工作階段，或是建立您自己自訂的繫結支援工作階段。
 
 ## <a name="in-this-section"></a>本節內容
 
@@ -56,7 +44,7 @@ ms.lasthandoff: 12/22/2017
 
 <xref:System.ServiceModel.ReliableSession>
 
-## <a name="see-also"></a>請參閱
+## <a name="see-also"></a>另請參閱
 
 [佇列和可靠工作階段](../../../../docs/framework/wcf/feature-details/queues-and-reliable-sessions.md)   
 [工作階段、執行個體與並行](../../../../docs/framework/wcf/feature-details/sessions-instancing-and-concurrency.md)

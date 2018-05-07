@@ -1,13 +1,6 @@
 ---
-title: "操作說明：沿著路徑建立物件的動畫 (具有位移累加的矩陣動畫)"
-ms.custom: 
+title: 操作說明：沿著路徑建立物件的動畫 (具有位移累加的矩陣動畫)
 ms.date: 03/30/2017
-ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.technology: dotnet-wpf
-ms.tgt_pltfrm: 
-ms.topic: article
 dev_langs:
 - csharp
 - vb
@@ -16,16 +9,11 @@ helpviewer_keywords:
 - animation [WPF], objects along paths (matrix animation with offset accumulation)
 - matrix animation with offset accumulation [WPF]
 ms.assetid: 1bca90ef-9832-4128-8ed6-62908e7ec146
-caps.latest.revision: "13"
-author: dotnet-bot
-ms.author: dotnetcontent
-manager: wpickett
-ms.workload: dotnet
-ms.openlocfilehash: 5259e930060a8ac6118d232f08d02193a6a1b300
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.openlocfilehash: 77daf4efb913f2bc2606247178b6a6c4add29bd4
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="how-to-animate-an-object-along-a-path-matrix-animation-with-offset-accumulation"></a>操作說明：沿著路徑建立物件的動畫 (具有位移累加的矩陣動畫)
 這個範例示範如何使用<xref:System.Windows.Media.Animation.MatrixAnimationUsingPath>類別建立動畫物件沿著路徑，然後讓動畫累積它的位移值的重複。  
@@ -44,6 +32,6 @@ ms.lasthandoff: 12/22/2017
   
  如需完整範例，請參閱[路徑動畫範例](http://go.microsoft.com/fwlink/?LinkID=160028)。 如需範例示範如何建立動畫<xref:System.Windows.Media.Matrix>沿著不含時差的累積的路徑值，請參閱[動畫物件沿著路徑 （矩陣動畫）](../../../../docs/framework/wpf/graphics-multimedia/how-to-animate-an-object-along-a-path-matrix-animation.md)。  
   
-## <a name="see-also"></a>請參閱  
+## <a name="see-also"></a>另請參閱  
  [動畫概觀](../../../../docs/framework/wpf/graphics-multimedia/animation-overview.md)  
  [路徑動畫操作說明主題](../../../../docs/framework/wpf/graphics-multimedia/path-animation-how-to-topics.md)

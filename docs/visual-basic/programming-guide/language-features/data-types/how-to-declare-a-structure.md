@@ -1,26 +1,17 @@
 ---
-title: "如何：宣告結構 (Visual Basic)"
-ms.custom: 
+title: 如何：宣告結構 (Visual Basic)
 ms.date: 07/20/2015
-ms.prod: .net
-ms.reviewer: 
-ms.suite: 
-ms.technology: devlang-visual-basic
-ms.topic: article
 helpviewer_keywords:
 - declarations [Visual Basic], structures
 - structure statements [Visual Basic]
 - statements [Visual Basic], structure
 - structures [Visual Basic], declaring
 ms.assetid: d5e98381-eb81-47d4-af83-48cc534a2572
-caps.latest.revision: "15"
-author: dotnet-bot
-ms.author: dotnetcontent
-ms.openlocfilehash: 8203327e189d095c9f7ceeb3b68ea24efe9ba882
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.openlocfilehash: 6128addd60609bfc88a1409648fb320bc7089974
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="how-to-declare-a-structure-visual-basic"></a>如何：宣告結構 (Visual Basic)
 開始使用在 structure 宣告[Structure 陳述式](../../../../visual-basic/language-reference/statements/structure-statement.md)，和您結束該處理序與`End``Structure`陳述式。 這兩個陳述式之間必須宣告至少一個*元素*。 項目可以是任何資料類型，但至少一個必須非共用的變數或共用的非自訂的事件。  

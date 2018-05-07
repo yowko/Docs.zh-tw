@@ -1,26 +1,17 @@
 ---
 title: '&#39;&lt;名稱&gt;&#39;模稜兩可的命名空間中&#39;&lt;命名空間名稱&gt;&#39;'
 ms.date: 07/20/2015
-ms.prod: .net
-ms.reviewer: ''
-ms.suite: ''
-ms.technology:
-- devlang-visual-basic
-ms.topic: article
 f1_keywords:
 - bc30560
 - vbc30560
 helpviewer_keywords:
 - BC30560
 ms.assetid: 7f032293-054b-4eae-8d97-3db8e7ddde3b
-caps.latest.revision: 8
-author: dotnet-bot
-ms.author: dotnetcontent
-ms.openlocfilehash: fa3f1a16af1675fbb6cd7f1fdfe8dbe1ab68ca6d
-ms.sourcegitcommit: 86adcc06e35390f13c1e372c36d2e044f1fc31ef
+ms.openlocfilehash: d0250c9c64215ce16bb0304096119f93db6fed7c
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/26/2018
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="39ltnamegt39-is-ambiguous-in-the-namespace-39ltnamespacenamegt39"></a>&#39;&lt;名稱&gt;&#39;模稜兩可的命名空間中&#39;&lt;命名空間名稱&gt;&#39;
 您提供的名稱模稜兩可，因此與另一個名稱發生衝突。 Visual Basic 編譯器並沒有任何衝突解決規則中。您必須自行區分名稱。  

@@ -1,28 +1,19 @@
 ---
-title: 預設屬性的存取權是繼承的介面成員 &#39; 中模稜兩可&lt;defaultpropertyname&gt;&#39; 介面 &#39;&lt;介面名稱 1>.<&gt;&#39; 和 &#39;&lt;defaultpropertyname&gt;&#39; 介面 &#39;&lt;介面名稱 2>&gt;&#39;
+title: 預設屬性存取是模稜兩可繼承的介面成員之間&#39; &lt;defaultpropertyname&gt; &#39;介面的&#39;&lt;介面名稱 1>.<&gt; &#39;和&#39; &lt;defaultpropertyname&gt; &#39;介面的&#39;&lt;介面名稱 2>&gt;&#39;
 ms.date: 07/20/2015
-ms.prod: .net
-ms.reviewer: ''
-ms.suite: ''
-ms.technology:
-- devlang-visual-basic
-ms.topic: article
 f1_keywords:
 - vbc30686
 - bc30686
 helpviewer_keywords:
 - BC30686
 ms.assetid: 784fefec-ef57-48cf-b960-957df419b439
-caps.latest.revision: 13
-author: dotnet-bot
-ms.author: dotnetcontent
-ms.openlocfilehash: 23d613668ee2d92484117759dd614ed2cad4bcb2
-ms.sourcegitcommit: bd1ef61f4bb794b25383d3d72e71041a5ced172e
+ms.openlocfilehash: 65a10067284cad3bf56ecdc441ebefa0a740ef53
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/18/2017
+ms.lasthandoff: 05/04/2018
 ---
-# <a name="default-property-access-is-ambiguous-between-the-inherited-interface-members-39ltdefaultpropertynamegt39-of-interface-39ltinterfacename1gt39-and-39ltdefaultpropertynamegt39-of-interface-39ltinterfacename2gt39"></a>預設屬性的存取權是繼承的介面成員 &#39; 中模稜兩可&lt;defaultpropertyname&gt;&#39; 介面 &#39;&lt;介面名稱 1>.<&gt;&#39; 和 &#39;&lt;defaultpropertyname&gt;&#39; 介面 &#39;&lt;介面名稱 2>&gt;&#39;
+# <a name="default-property-access-is-ambiguous-between-the-inherited-interface-members-39ltdefaultpropertynamegt39-of-interface-39ltinterfacename1gt39-and-39ltdefaultpropertynamegt39-of-interface-39ltinterfacename2gt39"></a>預設屬性存取是模稜兩可繼承的介面成員之間&#39; &lt;defaultpropertyname&gt; &#39;介面的&#39;&lt;介面名稱 1>.<&gt; &#39;和&#39; &lt;defaultpropertyname&gt; &#39;介面的&#39;&lt;介面名稱 2>&gt;&#39;
 介面繼承自兩個介面，其中每個宣告預設屬性具有相同名稱。 編譯器無法解析存取無限制的這個預設屬性。 下列範例將說明這點。  
   
 ```  

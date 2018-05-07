@@ -1,29 +1,17 @@
 ---
-title: "Windows Form 中的使用者輸入"
-ms.custom: 
+title: Windows Form 中的使用者輸入
 ms.date: 03/30/2017
-ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.technology: dotnet-winforms
-ms.tgt_pltfrm: 
-ms.topic: article
 helpviewer_keywords:
 - keyboard input [Windows Forms], using in Windows Forms
 - Windows Forms, user input
 - mouse input [Windows Forms], using in Windows Forms
 - keyboards [Windows Forms], keyboard input
 ms.assetid: 1486075f-1e06-4c9e-82c6-f948331db6d6
-caps.latest.revision: "16"
-author: dotnet-bot
-ms.author: dotnetcontent
-manager: wpickett
-ms.workload: dotnet
-ms.openlocfilehash: 7a9face3d38f7f64e3bda9d5dbe9ecfb7f730ee8
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.openlocfilehash: 2a618dae8d5f2f5ea6a6581fff2758fe8419f511
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="user-input-in-windows-forms"></a>Windows Form 中的使用者輸入
 Windows Form 包含一種使用者輸入模型，這種模型是以在處理相關 Windows 訊息時所引發的事件為基礎。 本節中的主題提供滑鼠和鍵盤使用者輸入的相關資訊，包括示範如何執行特定工作的程式碼範例。  

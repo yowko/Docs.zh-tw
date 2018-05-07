@@ -1,13 +1,6 @@
 ---
-title: "GDI+ 中的橢圓形和弧形"
-ms.custom: 
+title: GDI+ 中的橢圓形和弧形
 ms.date: 03/30/2017
-ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.technology: dotnet-winforms
-ms.tgt_pltfrm: 
-ms.topic: article
 dev_langs:
 - csharp
 - vb
@@ -19,16 +12,11 @@ helpviewer_keywords:
 - ellipses
 - drawing [Windows Forms], arcs
 ms.assetid: 34f35133-a835-4ca4-81f6-0dfedee8b683
-caps.latest.revision: "17"
-author: dotnet-bot
-ms.author: dotnetcontent
-manager: wpickett
-ms.workload: dotnet
-ms.openlocfilehash: 71126942f4cde37cc5d26bfba029c5f50f1065a3
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.openlocfilehash: 6835127d03f984bda8a95cf5b9ca9798122de804
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="ellipses-and-arcs-in-gdi"></a>GDI+ 中的橢圓形和弧形
 您可以輕鬆地繪製橢圓形和弧形使用<xref:System.Drawing.Graphics.DrawEllipse%2A>和<xref:System.Drawing.Graphics.DrawArc%2A>方法<xref:System.Drawing.Graphics>類別。  
@@ -43,7 +31,7 @@ ms.lasthandoff: 12/22/2017
  [!code-csharp[LinesCurvesAndShapes#51](../../../../samples/snippets/csharp/VS_Snippets_Winforms/LinesCurvesAndShapes/CS/Class1.cs#51)]
  [!code-vb[LinesCurvesAndShapes#51](../../../../samples/snippets/visualbasic/VS_Snippets_Winforms/LinesCurvesAndShapes/VB/Class1.vb#51)]  
   
- <xref:System.Drawing.Graphics.DrawEllipse%2A>是一種多載的方法<xref:System.Drawing.Graphics>類別中，因此您可以提供引數的數種方式。 例如，您可以建構<xref:System.Drawing.Rectangle>並傳遞<xref:System.Drawing.Rectangle>至<xref:System.Drawing.Graphics.DrawEllipse%2A>做為引數的方法：  
+ <xref:System.Drawing.Graphics.DrawEllipse%2A> 是一種多載的方法<xref:System.Drawing.Graphics>類別中，因此您可以提供引數的數種方式。 例如，您可以建構<xref:System.Drawing.Rectangle>並傳遞<xref:System.Drawing.Rectangle>至<xref:System.Drawing.Graphics.DrawEllipse%2A>做為引數的方法：  
   
  [!code-csharp[LinesCurvesAndShapes#52](../../../../samples/snippets/csharp/VS_Snippets_Winforms/LinesCurvesAndShapes/CS/Class1.cs#52)]
  [!code-vb[LinesCurvesAndShapes#52](../../../../samples/snippets/visualbasic/VS_Snippets_Winforms/LinesCurvesAndShapes/VB/Class1.vb#52)]  
@@ -58,7 +46,7 @@ ms.lasthandoff: 12/22/2017
   
  ![橢圓形和弧形](../../../../docs/framework/winforms/advanced/media/aboutgdip02-art06.gif "Aboutgdip02_art06")  
   
-## <a name="see-also"></a>請參閱  
+## <a name="see-also"></a>另請參閱  
  <xref:System.Drawing.Graphics?displayProperty=nameWithType>  
  <xref:System.Drawing.Pen?displayProperty=nameWithType>  
  [線條、曲線和形狀](../../../../docs/framework/winforms/advanced/lines-curves-and-shapes.md)  

@@ -1,12 +1,6 @@
 ---
 title: '&amp;= 運算子 (Visual Basic)'
 ms.date: 07/20/2015
-ms.prod: .net
-ms.reviewer: ''
-ms.suite: ''
-ms.technology:
-- devlang-visual-basic
-ms.topic: article
 f1_keywords:
 - vb.&=
 helpviewer_keywords:
@@ -16,14 +10,11 @@ helpviewer_keywords:
 - '&= operator [Visual Basic]'
 - compound assignment statements [Visual Basic]
 ms.assetid: 0cf262fc-1a05-419a-a503-60013f111c8a
-caps.latest.revision: 15
-author: dotnet-bot
-ms.author: dotnetcontent
-ms.openlocfilehash: 929a9e8c3384451679fc52ad478eb03219d67192
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.openlocfilehash: c3db2d4095600f32af92d1a4ce1f806a3f032af0
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="amp-operator-visual-basic"></a>&amp;= 運算子 (Visual Basic)
 串連`String`運算式`String`變數或屬性，並將結果指派給變數或屬性。  
@@ -36,10 +27,10 @@ variableorproperty &= expression
   
 ## <a name="parts"></a>組件  
  `variableorproperty`  
- 必要項。 任何`String`變數或屬性。  
+ 必要。 任何`String`變數或屬性。  
   
  `expression`  
- 必要項。 任何 `String` 運算式。  
+ 必要。 任何 `String` 運算式。  
   
 ## <a name="remarks"></a>備註  
  在左邊的項目`&=`運算子可以是簡單的純量變數、 屬性或陣列的項目。 變數或屬性不可[ReadOnly](../../../visual-basic/language-reference/modifiers/readonly.md)。 `&=`運算子串連`String`運算式右邊`String`變數或屬性與其左邊，並將結果指派給變數或屬性與其左邊。  

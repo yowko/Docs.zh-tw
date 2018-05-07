@@ -1,24 +1,12 @@
 ---
-title: "HOW TO：使用 MetadataResolver 來動態取得繫結中繼資料"
-ms.custom: 
+title: HOW TO：使用 MetadataResolver 來動態取得繫結中繼資料
 ms.date: 03/30/2017
-ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.technology: dotnet-clr
-ms.tgt_pltfrm: 
-ms.topic: article
 ms.assetid: 56ffcb99-fff0-4479-aca0-e3909009f605
-caps.latest.revision: "12"
-author: dotnet-bot
-ms.author: dotnetcontent
-manager: wpickett
-ms.workload: dotnet
-ms.openlocfilehash: 640d053e0186766e5acdbef692f4e7fae59337b0
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.openlocfilehash: cffe47f301c1943a0d97e3a95a5b7c24979b4f69
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="how-to-use-metadataresolver-to-obtain-binding-metadata-dynamically"></a>HOW TO：使用 MetadataResolver 來動態取得繫結中繼資料
 本主題示範如何使用 <xref:System.ServiceModel.Description.MetadataResolver> 類別來動態取得繫結中繼資料。  
@@ -56,5 +44,5 @@ ms.lasthandoff: 12/22/2017
     }  
     ```  
   
-## <a name="see-also"></a>請參閱  
+## <a name="see-also"></a>另請參閱  
  [中繼資料](../../../../docs/framework/wcf/feature-details/metadata.md)

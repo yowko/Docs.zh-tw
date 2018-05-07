@@ -1,21 +1,12 @@
 ---
-title: "物件導向程式設計 (Visual Basic)"
-ms.custom: 
+title: 物件導向程式設計 (Visual Basic)
 ms.date: 07/20/2015
-ms.prod: .net
-ms.reviewer: 
-ms.suite: 
-ms.technology: devlang-visual-basic
-ms.topic: article
 ms.assetid: 49794de4-64c3-473c-b8ed-fe98835df69c
-caps.latest.revision: "4"
-author: dotnet-bot
-ms.author: dotnetcontent
-ms.openlocfilehash: 950f080949dce0fc1a2834825d2f7c945007fb7b
-ms.sourcegitcommit: bd1ef61f4bb794b25383d3d72e71041a5ced172e
+ms.openlocfilehash: e8936eb9031ef68ea333835d8433e1ba1a45990f
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/18/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="object-oriented-programming-visual-basic"></a>物件導向程式設計 (Visual Basic)
 Visual Basic 提供完整的支援包括封裝、 繼承和多型物件導向程式設計。  
@@ -278,7 +269,7 @@ Dim sampleObject = New SampleClass With
 
 - [物件初始設定式：具名和匿名類型](../../../visual-basic/programming-guide/language-features/objects-and-classes/object-initializers-named-and-anonymous-types.md)
 
-###  <a name="Static"></a>共用的類別和成員  
+###  <a name="Static"></a> 共用的類別和成員  
  共用的類別的成員為屬性、 程序或共用的所有類別執行個體的欄位。  
   
  若要定義共用的成員：  
@@ -457,5 +448,5 @@ End Class
 
 - [AddressOf 運算子](../../../visual-basic/language-reference/operators/addressof-operator.md)
 
-## <a name="see-also"></a>請參閱
+## <a name="see-also"></a>另請參閱
  [Visual Basic 程式設計手冊](../../../visual-basic/programming-guide/index.md)

@@ -1,13 +1,6 @@
 ---
-title: "攔截器 (WCF 資料服務)"
-ms.custom: 
+title: 攔截器 (WCF 資料服務)
 ms.date: 03/30/2017
-ms.prod: .net-framework-oob
-ms.reviewer: 
-ms.suite: 
-ms.technology: dotnet-clr
-ms.tgt_pltfrm: 
-ms.topic: article
 dev_langs:
 - csharp
 - vb
@@ -15,19 +8,14 @@ helpviewer_keywords:
 - WCF Data Services, customizing
 - query interceptors [WCF Data Services]
 ms.assetid: e33ae8dc-8069-41d0-99a0-75ff28db7050
-caps.latest.revision: "2"
-author: dotnet-bot
-ms.author: dotnetcontent
-manager: wpickett
-ms.workload: dotnet
-ms.openlocfilehash: 8c72d4ba56859e0afec4b26d7ce81668b443a4ba
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.openlocfilehash: f3ff08dd4cd20e7ce226750a386cfddb27731923
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="interceptors-wcf-data-services"></a>攔截器 (WCF 資料服務)
-[!INCLUDE[ssAstoria](../../../../includes/ssastoria-md.md)]讓應用程式攔截要求訊息，您可以將自訂邏輯加入作業。 您可以使用這個自訂邏輯驗證傳入訊息中的資料。 您還可以使用它進一步限制查詢要求的範圍，例如，以根據要求來插入自訂授權原則。  
+[!INCLUDE[ssAstoria](../../../../includes/ssastoria-md.md)] 讓應用程式攔截要求訊息，您可以將自訂邏輯加入作業。 您可以使用這個自訂邏輯驗證傳入訊息中的資料。 您還可以使用它進一步限制查詢要求的範圍，例如，以根據要求來插入自訂授權原則。  
   
  攔截由資料服務中特別屬性化的方法執行。 在訊息處理期間的適當時間點，[!INCLUDE[ssAstoria](../../../../includes/ssastoria-md.md)] 會呼叫這些方法。 攔截器會定義以每個實體集為基礎，並像服務作業可以攔截器方法無法接受要求的參數。 查詢攔截器方法會處理 HTTP GET 要求時呼叫，必須傳回 lambda 運算式，決定是否要設定攔截器實體的執行個體應該傳回查詢結果。 資料服務會使用此運算式進一步精簡所要求的作業。 以下是查詢攔截器的定義範例。  
   
@@ -59,5 +47,5 @@ ms.lasthandoff: 12/22/2017
   
  如需詳細資訊，請參閱[如何： 攔截資料服務訊息](../../../../docs/framework/data/wcf/how-to-intercept-data-service-messages-wcf-data-services.md)。  
   
-## <a name="see-also"></a>請參閱  
+## <a name="see-also"></a>另請參閱  
  [服務作業](../../../../docs/framework/data/wcf/service-operations-wcf-data-services.md)

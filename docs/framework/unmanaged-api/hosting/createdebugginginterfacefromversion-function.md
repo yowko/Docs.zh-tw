@@ -1,14 +1,6 @@
 ---
-title: "CreateDebuggingInterfaceFromVersion 函式"
-ms.custom: 
+title: CreateDebuggingInterfaceFromVersion 函式
 ms.date: 03/30/2017
-ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.technology:
-- dotnet-clr
-ms.tgt_pltfrm: 
-ms.topic: reference
 api_name:
 - CreateDebuggingInterfaceFromVersion
 api_location:
@@ -23,17 +15,13 @@ helpviewer_keywords:
 ms.assetid: a746a849-463c-44f5-a2f0-9e812ed8bcc3
 topic_type:
 - apiref
-caps.latest.revision: 
 author: rpetrusha
 ms.author: ronpet
-manager: wpickett
-ms.workload:
-- dotnet
-ms.openlocfilehash: b3f269f5b1758481995d6064e7137e62bff4a868
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.openlocfilehash: 1b51b924652019cf05401e1972797c18e74b82d3
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="createdebugginginterfacefromversion-function"></a>CreateDebuggingInterfaceFromVersion 函式
 建立[ICorDebug](../../../../docs/framework/unmanaged-api/debugging/icordebug-interface.md)物件會根據指定的版本資訊。  
@@ -66,7 +54,7 @@ HRESULT CreateDebuggingInterfaceFromVersion (
 |傳回碼|描述|  
 |-----------------|-----------------|  
 |S_OK|已成功完成命令。|  
-|E_INVALIDARG|`szDebuggeeVersion`或`ppCordb`是 null 或版本字串不正確。|  
+|E_INVALIDARG|`szDebuggeeVersion` 或`ppCordb`是 null 或版本字串不正確。|  
   
 ## <a name="remarks"></a>備註  
  `szDebuggeeVersion`參數對應至對應的 MSCorDbi.dll 版本。  
@@ -78,7 +66,7 @@ HRESULT CreateDebuggingInterfaceFromVersion (
   
  **程式庫：** MSCorEE.dll  
   
- **.NET framework 版本：**[!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]  
+ **.NET framework 版本：** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]  
   
-## <a name="see-also"></a>請參閱  
+## <a name="see-also"></a>另請參閱  
  [已被取代的 CLR 裝載函式](../../../../docs/framework/unmanaged-api/hosting/deprecated-clr-hosting-functions.md)

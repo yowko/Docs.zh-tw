@@ -1,12 +1,6 @@
 ---
-title: "如何：多載使用選擇性參數的程序 (Visual Basic)"
-ms.custom: 
+title: 如何：多載使用選擇性參數的程序 (Visual Basic)
 ms.date: 07/20/2015
-ms.prod: .net
-ms.reviewer: 
-ms.suite: 
-ms.technology: devlang-visual-basic
-ms.topic: article
 helpviewer_keywords:
 - procedures [Visual Basic], parameters
 - procedure overloading [Visual Basic], optional parameters
@@ -16,14 +10,11 @@ helpviewer_keywords:
 - procedures [Visual Basic], overloading
 - procedures [Visual Basic], multiple versions
 ms.assetid: 825f9d56-4cde-43fd-993a-b9171717e2eb
-caps.latest.revision: "17"
-author: dotnet-bot
-ms.author: dotnetcontent
-ms.openlocfilehash: b4a863944d4f9ab265aab52578fbb704ca376de5
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.openlocfilehash: 1da1d67726a9669477721aabc0aace0119aa7e56
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="how-to-overload-a-procedure-that-takes-optional-parameters-visual-basic"></a>如何：多載使用選擇性參數的程序 (Visual Basic)
 如果程序有一或多個[選擇性](../../../../visual-basic/language-reference/modifiers/optional.md)參數，您不能定義比對任何隱含的多載的多載的版本。 如需詳細資訊，請參閱 < 隱含多載的選擇性參數 」[中多載化程序的考量](./considerations-in-overloading-procedures.md)。  

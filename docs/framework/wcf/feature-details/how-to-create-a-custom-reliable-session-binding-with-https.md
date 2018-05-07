@@ -1,30 +1,18 @@
 ---
-title: "HOW TO：使用 HTTPS 建立自訂可靠工作階段繫結"
-ms.custom: 
+title: HOW TO：使用 HTTPS 建立自訂可靠工作階段繫結
 ms.date: 03/30/2017
-ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.technology: dotnet-clr
-ms.tgt_pltfrm: 
-ms.topic: article
 ms.assetid: fa772232-da1f-4c66-8c94-e36c0584b549
-caps.latest.revision: "9"
-author: dotnet-bot
-ms.author: dotnetcontent
-manager: wpickett
-ms.workload: dotnet
-ms.openlocfilehash: e56b54b5d49fcd307821211e7db858299f9f446d
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.openlocfilehash: b3699593f783fff1227ec51194956e0cc8577dd8
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="how-to-create-a-custom-reliable-session-binding-with-https"></a>HOW TO：使用 HTTPS 建立自訂可靠工作階段繫結
 
 本主題示範使用 Secure Sockets Layer (SSL) 傳輸安全性來搭配可靠工作階段。 若要透過 HTTPS 使用可靠工作階段，您必須建立使用可靠工作階段與 HTTPS 傳輸的自訂繫結。 透過命令式程式碼或是宣告式組態檔中，您就會啟用可靠工作階段。 此程序會使用用戶端和服務組態檔來啟用可靠工作階段和[  **\<httpsTransport >** ](../../../../docs/framework/configure-apps/file-schema/wcf/httpstransport.md)項目。
 
-此程序的重要部分在於**\<端點 >**組態項目包含`bindingConfiguration`屬性必須參考名為自訂繫結組態`reliableSessionOverHttps`。 [ **\<繫結 >** ](../../../../docs/framework/misc/binding.md)組態項目會參考此名稱來指定使用可靠工作階段與 HTTPS 傳輸，藉由 **\<reliableSession >**和 **\<httpsTransport >**項目。
+此程序的重要部分在於**\<端點 >** 組態項目包含`bindingConfiguration`屬性必須參考名為自訂繫結組態`reliableSessionOverHttps`。 [ **\<繫結 >** ](../../../../docs/framework/misc/binding.md)組態項目會參考此名稱來指定使用可靠工作階段與 HTTPS 傳輸，藉由 **\<reliableSession >** 和 **\<httpsTransport >** 項目。
 
 此範例的來源副本，請參閱[自訂繫結可靠工作階段透過 HTTPS](../../../../docs/framework/wcf/samples/custom-binding-reliable-session-over-https.md)。
 

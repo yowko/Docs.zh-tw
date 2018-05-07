@@ -1,26 +1,12 @@
 ---
 title: 內容交換相互關聯
-ms.custom: ''
 ms.date: 03/30/2017
-ms.prod: .net-framework
-ms.reviewer: ''
-ms.suite: ''
-ms.technology:
-- dotnet-clr
-ms.tgt_pltfrm: ''
-ms.topic: article
 ms.assetid: 1e2852be-3601-45ae-b507-ccc465d45c60
-caps.latest.revision: 18
-author: dotnet-bot
-ms.author: dotnetcontent
-manager: wpickett
-ms.workload:
-- dotnet
-ms.openlocfilehash: bf84dfce2b2164d78bf07f840d66d6089a16ff23
-ms.sourcegitcommit: 94d33cadc5ff81d2ac389bf5f26422c227832052
+ms.openlocfilehash: da5ab2c89e4e2011c38f5fca99aeb5c2c73801a9
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/30/2018
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="context-exchange-correlation"></a>內容交換相互關聯
 內容相互關聯根據所述的內容交換機制[.NET 內容交換通訊協定規格](http://go.microsoft.com/fwlink/?LinkId=166059)。 內容相互關聯使用一般熟知的內容標頭或 Cookie，將訊息關聯至正確的執行個體。 若要使用內容相互關聯，您必須在提供給 <xref:System.ServiceModel.BasicHttpContextBinding> 的端點上使用以內容為基礎的繫結，例如 <xref:System.ServiceModel.WSHttpContextBinding>、<xref:System.ServiceModel.NetTcpContextBinding> 或 <xref:System.ServiceModel.Activities.WorkflowServiceHost>。 本主題說明如何在工作流程服務中使用內容相互關聯搭配訊息活動。  

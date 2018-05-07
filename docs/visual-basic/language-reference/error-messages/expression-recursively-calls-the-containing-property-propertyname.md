@@ -1,28 +1,19 @@
 ---
-title: 運算式遞迴呼叫包含屬性 &#39;&lt;propertyname&gt;&#39;
+title: 運算式遞迴呼叫包含屬性&#39; &lt;propertyname&gt;&#39;
 ms.date: 07/20/2015
-ms.prod: .net
-ms.reviewer: ''
-ms.suite: ''
-ms.technology:
-- devlang-visual-basic
-ms.topic: article
 f1_keywords:
 - vbc42026
 - BC42026
 helpviewer_keywords:
 - BC42026
 ms.assetid: 4fde9db6-3bf3-48dc-8e05-981bf08969da
-caps.latest.revision: 10
-author: dotnet-bot
-ms.author: dotnetcontent
-ms.openlocfilehash: 47de3c2d25336962168f01a4c8717274de7c9aad
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.openlocfilehash: f14e2645772b22a8f6ff2385dcd316a42d1d5cf0
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 05/04/2018
 ---
-# <a name="expression-recursively-calls-the-containing-property-39ltpropertynamegt39"></a>運算式遞迴呼叫包含屬性 &#39;&lt;propertyname&gt;&#39;
+# <a name="expression-recursively-calls-the-containing-property-39ltpropertynamegt39"></a>運算式遞迴呼叫包含屬性&#39; &lt;propertyname&gt;&#39;
 中的陳述式`Set`屬性定義的程序會將值儲存至屬性的名稱。  
   
  保留的屬性值的建議的方法是定義`Private`屬性的容器中的變數並將它用於兩者`Get`和`Set`程序。 `Set`程序應該然後儲存輸入的值，在這個`Private`變數。  

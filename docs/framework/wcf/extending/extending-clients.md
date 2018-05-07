@@ -1,33 +1,19 @@
 ---
-title: "擴充用戶端"
-ms.custom: 
+title: 擴充用戶端
 ms.date: 03/30/2017
-ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.technology:
-- dotnet-clr
-ms.tgt_pltfrm: 
-ms.topic: article
 helpviewer_keywords:
 - proxy extensions [WCF]
 ms.assetid: 1328c61c-06e5-455f-9ebd-ceefb59d3867
-caps.latest.revision: 
-author: dotnet-bot
-ms.author: dotnetcontent
-manager: wpickett
-ms.workload:
-- dotnet
-ms.openlocfilehash: 2444488418b7647111cf4b89db0c41a8e66470d4
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
-ms.translationtype: MT
+ms.openlocfilehash: 7eea247602d24c545e0de5fa9df50e83aae8ed7f
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="extending-clients"></a>擴充用戶端
 在呼叫應用程式中，服務模型層會負責使用應用程式程式碼將方法引動過程轉譯到傳出訊息中、將這些訊息推送到基礎通道、將結果轉譯回應用程式程式碼中的傳回值與 out 參數，並將結果傳回到呼叫端。 服務模型延伸會修改或實作涉及用戶端或發送器功能、自訂行為、訊息與參數攔截以及其他擴充性功能的執行或通訊行為與功能。  
   
- 本主題會說明如何在 <xref:System.ServiceModel.Dispatcher.ClientRuntime> 用戶端應用程式中使用 <xref:System.ServiceModel.Dispatcher.ClientOperation> 和 [!INCLUDE[indigo1](../../../../includes/indigo1-md.md)] 類別來修改 [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] 用戶端的預設執行行為，或者攔截或修改在從通道層為它們進行傳送或擷取之前或之後的訊息、參數或傳回值。 如需延伸服務執行階段的詳細資訊，請參閱[擴充發送器](../../../../docs/framework/wcf/extending/extending-dispatchers.md)。 如需修改的自訂物件插入到用戶端執行階段行為的詳細資訊，請參閱[設定與擴充執行階段行為](../../../../docs/framework/wcf/extending/configuring-and-extending-the-runtime-with-behaviors.md)。  
+ 本主題描述如何使用<xref:System.ServiceModel.Dispatcher.ClientRuntime>和<xref:System.ServiceModel.Dispatcher.ClientOperation>類別在 Windows Communication Foundation (WCF) 用戶端應用程式中修改的預設執行行為[!INCLUDE[indigo2](../../../../includes/indigo2-md.md)]用戶端攔截或修改訊息、 參數或傳回值之前或之後傳送或擷取它們在通道層中。 如需延伸服務執行階段的詳細資訊，請參閱[擴充發送器](../../../../docs/framework/wcf/extending/extending-dispatchers.md)。 如需修改的自訂物件插入到用戶端執行階段行為的詳細資訊，請參閱[設定與擴充執行階段行為](../../../../docs/framework/wcf/extending/configuring-and-extending-the-runtime-with-behaviors.md)。  
   
 ## <a name="clients"></a>用戶端  
  在用戶端上，[!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] 用戶端物件或用戶端通道會將方法引動過程轉換成傳出訊息與傳入訊息中的作業結果，而該結果會傳回到呼叫應用程式。 (如需用戶端類型的詳細資訊，請參閱[WCF 用戶端架構](../../../../docs/framework/wcf/feature-details/client-architecture.md)。)  
@@ -127,7 +113,7 @@ ms.lasthandoff: 12/22/2017
   
  如需範例，示範如何攔截跨[!INCLUDE[indigo2](../../../../includes/indigo2-md.md)]用戶端，請參閱[How to： 檢查或修改參數](../../../../docs/framework/wcf/extending/how-to-inspect-or-modify-parameters.md)。  
   
-## <a name="see-also"></a>請參閱  
+## <a name="see-also"></a>另請參閱  
  <xref:System.ServiceModel.Dispatcher.ClientRuntime>  
  <xref:System.ServiceModel.Dispatcher.ClientOperation>  
  [如何：檢查或修改用戶端上的訊息](../../../../docs/framework/wcf/extending/how-to-inspect-or-modify-messages-on-the-client.md)  

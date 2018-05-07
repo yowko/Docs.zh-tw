@@ -1,29 +1,15 @@
 ---
 title: AspNetRouteIntegration
-ms.custom: ''
 ms.date: 03/30/2017
-ms.prod: .net-framework
-ms.reviewer: ''
-ms.suite: ''
-ms.technology:
-- dotnet-clr
-ms.tgt_pltfrm: ''
-ms.topic: article
 ms.assetid: 0638ce0e-d053-47df-a447-688e447a03fb
-caps.latest.revision: 8
-author: dotnet-bot
-ms.author: dotnetcontent
-manager: wpickett
-ms.workload:
-- dotnet
-ms.openlocfilehash: 93d248030c4b32bd7725cf9c6fbbb829a19f7845
-ms.sourcegitcommit: 94d33cadc5ff81d2ac389bf5f26422c227832052
-ms.translationtype: MT
+ms.openlocfilehash: c2b2a47a0c817e23a06c39d622bca9c649cbadb4
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/30/2018
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="aspnetrouteintegration"></a>AspNetRouteIntegration
-此範例示範如何使用 ASP.NET 路由裝載 [!INCLUDE[indigo1](../../../../includes/indigo1-md.md)] REST 服務。 [基本資源服務](../../../../docs/framework/wcf/samples/basic-resource-service.md)範例示範此案例中的自我裝載的版本，並討論深度的服務實作。 本主題著重在 ASP.NET 整合功能。 如需 ASP.NET 路由的詳細資訊，請參閱<xref:System.Web.Routing>。  
+這個範例示範如何將服務裝載於 Windows Communication Foundation (WCF) 的其餘部分使用 ASP.NET 路由。 [基本資源服務](../../../../docs/framework/wcf/samples/basic-resource-service.md)範例示範此案例中的自我裝載的版本，並討論深度的服務實作。 本主題著重在 ASP.NET 整合功能。 如需 ASP.NET 路由的詳細資訊，請參閱<xref:System.Web.Routing>。  
   
 ## <a name="sample-details"></a>範例詳細資料  
  [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] 服務會以資源導向/REST 的方式公開客戶的集合。 此服務就像以 SOAP 為基礎的 [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] 服務，可以使用 .svc 檔案在 ASP.NET 中裝載。 不過，這通常不適用於 HTTP 情況，因為它必須在服務的 URL 中擁有 .svc。 此外，它需要部署 .svc 檔案以及服務程式庫。 您可以如本範例中所示範的方式，使用 ASP.NET 路由裝載服務來避免這些限制。  
@@ -70,7 +56,7 @@ ms.lasthandoff: 04/30/2018
 >   
 >  `<InstallDrive>:\WF_WCF_Samples`  
 >   
->  如果此目錄不存在，請移至 [Windows Communication Foundation (WCF) and Windows Workflow Foundation (WF) Samples for .NET Framework 4  (適用於 .NET Framework 4 的 Windows Communication Foundation (WCF) 與 Windows Workflow Foundation (WF) 範例)](http://go.microsoft.com/fwlink/?LinkId=150780) ，以下載所有 [!INCLUDE[indigo1](../../../../includes/indigo1-md.md)] 和 [!INCLUDE[wf1](../../../../includes/wf1-md.md)] 範例。 此範例位於下列目錄。  
+>  如果此目錄不存在，請移至[Windows Communication Foundation (WCF) 和適用於.NET Framework 4 的 Windows Workflow Foundation (WF) 範例](http://go.microsoft.com/fwlink/?LinkId=150780)下載所有 Windows Communication Foundation (WCF) 和[!INCLUDE[wf1](../../../../includes/wf1-md.md)]範例。 此範例位於下列目錄。  
 >   
 >  `<InstallDrive>:\WF_WCF_Samples\WCF\Basic\Web\AspNetRouteIntegration`  
   

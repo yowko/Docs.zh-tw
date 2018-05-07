@@ -1,14 +1,6 @@
 ---
 title: HOW TO：設定 ProtectionLevel 屬性
-ms.custom: ''
 ms.date: 03/30/2017
-ms.prod: .net-framework
-ms.reviewer: ''
-ms.suite: ''
-ms.technology:
-- dotnet-clr
-ms.tgt_pltfrm: ''
-ms.topic: article
 dev_langs:
 - csharp
 - vb
@@ -16,17 +8,11 @@ helpviewer_keywords:
 - WCF, security
 - ProtectionLevel property
 ms.assetid: 3d4e8f80-0f9e-4a26-9899-beb6584e78df
-caps.latest.revision: 10
-author: dotnet-bot
-ms.author: dotnetcontent
-manager: wpickett
-ms.workload:
-- dotnet
-ms.openlocfilehash: abb1d3cc64b7992b9983e81c5f8a5c30c2343f30
-ms.sourcegitcommit: 94d33cadc5ff81d2ac389bf5f26422c227832052
+ms.openlocfilehash: 50e14e1250055efcbc48597be3dcfac2e56371ca
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/30/2018
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="how-to-set-the-protectionlevel-property"></a>HOW TO：設定 ProtectionLevel 屬性
 您可以套用適當的屬性 (Attribute) 並設定屬性 (Property)，藉此設定保護層級。 您可以設定服務層級的保護，以影響每一個訊息的所有部分，或是從方法到訊息部分，設定越發細微的保護層級。 如需有關`ProtectionLevel`屬性，請參閱[了解保護層級](../../../docs/framework/wcf/understanding-protection-level.md)。  

@@ -2,10 +2,6 @@
 title: Get 函式 （Unmanaged API 參考）
 description: Get 函式，擷取指定的屬性值。
 ms.date: 11/06/2017
-ms.prod: .net-framework
-ms.technology:
-- dotnet-clr
-ms.topic: reference
 api_name:
 - Get
 api_location:
@@ -20,14 +16,11 @@ topic_type:
 - Reference
 author: rpetrusha
 ms.author: ronpet
-manager: wpickett
-ms.workload:
-- dotnet
-ms.openlocfilehash: 69312030689ab1b87e3aadd040395f06e1c94ac8
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.openlocfilehash: 2f837a526879f80177bc9979e1d7671edfcd8d4f
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="get-function"></a>Get 函式
 如果存在的話，擷取指定的屬性值。
@@ -59,13 +52,13 @@ HRESULT Get (
 `wszName`  
 [in]屬性的名稱。
 
-`lFlags`[in]保留。 這個參數必須是 0。
+`lFlags` [in]保留。 這個參數必須是 0。
 
-`pVal`[out]如果此函數會傳回成功，則包含值的`wszName`屬性。 `pval`引數指派正確的型別和辨識符號值。
+`pVal` [out]如果此函數會傳回成功，則包含值的`wszName`屬性。 `pval`引數指派正確的型別和辨識符號值。
 
-`pvtType`[out]如果此函數會傳回成功，就會包含[CIM 類型常數](https://msdn.microsoft.com/library/aa386309(v=vs.85).aspx)，指出此屬性型別。 其值也可以是`null`。 
+`pvtType` [out]如果此函數會傳回成功，就會包含[CIM 類型常數](https://msdn.microsoft.com/library/aa386309(v=vs.85).aspx)，指出此屬性型別。 其值也可以是`null`。 
 
-`plFlavor`[out]如果此函數會傳回成功，接收有關的資訊來源的屬性。 其值可以是`null`，或其中一個定義中的下列 WBEM_FLAVOR_TYPE 常數*WbemCli.h*標頭檔： 
+`plFlavor` [out]如果此函數會傳回成功，接收有關的資訊來源的屬性。 其值可以是`null`，或其中一個定義中的下列 WBEM_FLAVOR_TYPE 常數*WbemCli.h*標頭檔： 
 
 |常數  |值  |描述  |
 |---------|---------|---------|
@@ -98,7 +91,7 @@ HRESULT Get (
   
  **標頭：** WMINet_Utils.idl  
   
- **.NET framework 版本：**[!INCLUDE[net_current_v472plus](../../../../includes/net-current-v472plus.md)]  
+ **.NET framework 版本：** [!INCLUDE[net_current_v472plus](../../../../includes/net-current-v472plus.md)]  
   
 ## <a name="see-also"></a>另請參閱  
 [WMI 和效能計數器 （Unmanaged API 參考）](index.md)

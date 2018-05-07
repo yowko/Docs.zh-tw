@@ -1,12 +1,6 @@
 ---
 title: += 運算子 (Visual Basic)
 ms.date: 07/20/2015
-ms.prod: .net
-ms.reviewer: ''
-ms.suite: ''
-ms.technology:
-- devlang-visual-basic
-ms.topic: article
 f1_keywords:
 - vb.+=
 helpviewer_keywords:
@@ -16,14 +10,11 @@ helpviewer_keywords:
 - += operator [Visual Basic], appending strings
 - compound assignment statements [Visual Basic]
 ms.assetid: d3e959f4-85d4-4e47-87c4-77b62335a5b3
-caps.latest.revision: 16
-author: dotnet-bot
-ms.author: dotnetcontent
-ms.openlocfilehash: 4ac8f5679aa90c50c15c33a957cfc75d9ccecde6
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.openlocfilehash: f12a0560d984f871110c02f1df2c2ec42b68809b
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="-operator-visual-basic"></a>+= 運算子 (Visual Basic)
 將數值變數或屬性的值加上數值運算式的值，並將結果指派給變數或屬性。 也可用來串連`String`運算式`String`變數或屬性並指派結果給變數或屬性。  
@@ -36,10 +27,10 @@ variableorproperty += expression
   
 ## <a name="parts"></a>組件  
  `variableorproperty`  
- 必要項。 任何數值或`String`變數或屬性。  
+ 必要。 任何數值或`String`變數或屬性。  
   
  `expression`  
- 必要項。 任何數值或`String`運算式。  
+ 必要。 任何數值或`String`運算式。  
   
 ## <a name="remarks"></a>備註  
  在左邊的項目`+=`運算子可以是簡單的純量變數、 屬性或陣列的項目。 變數或屬性不可[ReadOnly](../../../visual-basic/language-reference/modifiers/readonly.md)。  

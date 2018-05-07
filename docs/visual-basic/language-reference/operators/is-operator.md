@@ -1,12 +1,6 @@
 ---
 title: Is 運算子 (Visual Basic)
 ms.date: 07/20/2015
-ms.prod: .net
-ms.reviewer: ''
-ms.suite: ''
-ms.technology:
-- devlang-visual-basic
-ms.topic: article
 f1_keywords:
 - vb.is
 helpviewer_keywords:
@@ -15,14 +9,11 @@ helpviewer_keywords:
 - TypeOf...Is expression
 - Is operator [Visual Basic]
 ms.assetid: 8045a6c8-2a83-45b6-ad47-d09a704c656d
-caps.latest.revision: 12
-author: dotnet-bot
-ms.author: dotnetcontent
-ms.openlocfilehash: 4b1f3f0fa1fd782550c08c816f47b7541399198e
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.openlocfilehash: 8beca1dc8788514224f70cacc5b8ede0974f5230
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="is-operator-visual-basic"></a>Is 運算子 (Visual Basic)
 比較兩個物件參考變數。  
@@ -35,18 +26,18 @@ result = object1 Is object2
   
 ## <a name="parts"></a>組件  
  `result`  
- 必要項。 任何`Boolean`值。  
+ 必要。 任何`Boolean`值。  
   
  `object1`  
- 必要項。 任何`Object`名稱。  
+ 必要。 任何`Object`名稱。  
   
  `object2`  
- 必要項。 任何`Object`名稱。  
+ 必要。 任何`Object`名稱。  
   
 ## <a name="remarks"></a>備註  
  `Is`運算子會判斷是否兩個物件參考會參考相同的物件。 不過，它不會執行值比較。 如果`object1`和`object2`完全相同的物件執行個體都會參考`result`是`True`; 如果沒有的話，`result`是`False`。  
   
- `Is`也可與`TypeOf`關鍵字進行`TypeOf`...`Is`測試是否與資料類型相容的物件變數的運算式。  
+ `Is` 也可與`TypeOf`關鍵字進行`TypeOf`...`Is`測試是否與資料類型相容的物件變數的運算式。  
   
 > [!NOTE]
 >  `Is`關鍵字也用於[選取...陳述式的大小寫](../../../visual-basic/language-reference/statements/select-case-statement.md)。  

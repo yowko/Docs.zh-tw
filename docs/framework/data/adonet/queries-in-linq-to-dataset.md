@@ -1,27 +1,15 @@
 ---
-title: "LINQ to DataSet 中的查詢"
-ms.custom: 
+title: LINQ to DataSet 中的查詢
 ms.date: 03/30/2017
-ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.technology: dotnet-ado
-ms.tgt_pltfrm: 
-ms.topic: article
 dev_langs:
 - csharp
 - vb
 ms.assetid: c1a78fa8-9f0c-40bc-a372-5575a48708fe
-caps.latest.revision: "3"
-author: douglaslMS
-ms.author: douglasl
-manager: craigg
-ms.workload: dotnet
-ms.openlocfilehash: 7e07da38f7a75226d48ef84cc8d2dafd48f6e795
-ms.sourcegitcommit: c0dd436f6f8f44dc80dc43b07f6841a00b74b23f
+ms.openlocfilehash: ef9334eec92ef06e5be07dae4391cdac43fed778
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 01/19/2018
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="queries-in-linq-to-dataset"></a>LINQ to DataSet 中的查詢
 查詢是指從資料來源中擷取資料的運算式。 查詢通常會以特定的查詢語言來表示，例如 SQL 用於關聯式資料庫，而 XQuery 用於 XML。 因此，開發人員必須針對他們所查詢的每種資料來源或資料格式，學習新的查詢語言。 [!INCLUDE[vbteclinqext](../../../../includes/vbteclinqext-md.md)] 提供了一種較簡單且一致的模型，可處理各種資料來源和格式的資料。 在 [!INCLUDE[vbteclinq](../../../../includes/vbteclinq-md.md)] 查詢中，您一定會使用程式設計物件。  
@@ -37,7 +25,7 @@ ms.lasthandoff: 01/19/2018
  相較於傳回值序列的延後查詢，傳回單一子句值的查詢會立即執行。 單一子句查詢的某些範例包括 <xref:System.Linq.Enumerable.Count%2A>、<xref:System.Linq.Enumerable.Max%2A>、<xref:System.Linq.Enumerable.Average%2A> 和 <xref:System.Linq.Enumerable.First%2A>。 這些查詢會立即執行，因為系統需要查詢結果來計算單一子句結果。 例如，若要尋找查詢結果的平均值，您必須執行查詢，如此平均函式才有輸入資料可處理。 此外，您也可以針對查詢使用 <xref:System.Linq.Enumerable.ToList%2A> 或 <xref:System.Linq.Enumerable.ToArray%2A> 方法，強制立即執行不會產生單一子句值的查詢。 當您想要快取查詢的結果時，這些強制立即執行的技巧就很有用。 如需延期與立即執行查詢的詳細資訊，請參閱[撰寫 LINQ 入門](http://msdn.microsoft.com/library/6cc9af04-950a-4cc3-83d4-2aeb4abe4de9)。  
   
 ## <a name="queries"></a>查詢  
- [!INCLUDE[linq_dataset](../../../../includes/linq-dataset-md.md)]查詢可以使用兩個不同的語法： 查詢運算式語法和以方法為基礎的查詢語法。  
+ [!INCLUDE[linq_dataset](../../../../includes/linq-dataset-md.md)] 查詢可以使用兩個不同的語法： 查詢運算式語法和以方法為基礎的查詢語法。  
   
 ### <a name="query-expression-syntax"></a>查詢運算式語法  
  查詢運算式是宣告式查詢語法。 這種語法可讓開發人員使用類似 SQL 的格式，在 C# 或 Visual Basic 中撰寫查詢。 透過使用查詢運算式語法，您就可以利用最少的程式碼，針對資料來源執行同樣複雜的篩選、排序和分組作業。 如需詳細資訊，請參閱[LINQ 查詢運算式](http://msdn.microsoft.com/library/40638f19-fb46-4d26-a2d9-a383b48f5ed4)和[基本查詢作業 (Visual Basic)](~/docs/visual-basic/programming-guide/concepts/linq/basic-query-operations.md)。  
@@ -70,7 +58,7 @@ ms.lasthandoff: 01/19/2018
  [!code-csharp[DP LINQ to DataSet Examples#ToArray2](../../../../samples/snippets/csharp/VS_Snippets_ADO.NET/DP LINQ to DataSet Examples/CS/Program.cs#toarray2)]
  [!code-vb[DP LINQ to DataSet Examples#ToArray2](../../../../samples/snippets/visualbasic/VS_Snippets_ADO.NET/DP LINQ to DataSet Examples/VB/Module1.vb#toarray2)]  
   
-## <a name="see-also"></a>請參閱  
+## <a name="see-also"></a>另請參閱  
  [程式設計手冊](../../../../docs/framework/data/adonet/programming-guide-linq-to-dataset.md)  
  [查詢資料集](../../../../docs/framework/data/adonet/querying-datasets-linq-to-dataset.md)  
  [開始使用 C# 中的 LINQ](~/docs/csharp/programming-guide/concepts/linq/getting-started-with-linq.md)  

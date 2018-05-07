@@ -1,13 +1,6 @@
 ---
-title: "如何：將 Windows Form ComboBox 或 ListBox 控制項繫結至資料"
-ms.custom: 
+title: 如何：將 Windows Form ComboBox 或 ListBox 控制項繫結至資料
 ms.date: 03/30/2017
-ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.technology: dotnet-winforms
-ms.tgt_pltfrm: 
-ms.topic: article
 dev_langs:
 - csharp
 - vb
@@ -22,16 +15,11 @@ helpviewer_keywords:
 - Windows Forms controls, data binding
 - data-bound controls [Windows Forms], Windows Forms
 ms.assetid: dfd7f081-8bea-4a41-86a3-86a1934828ef
-caps.latest.revision: "15"
-author: dotnet-bot
-ms.author: dotnetcontent
-manager: wpickett
-ms.workload: dotnet
-ms.openlocfilehash: b671910ac77b7456492cab871ace3abb61ac7fd7
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.openlocfilehash: 270ed1c9fab4013df72b715ce8b074d287616713
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="how-to-bind-a-windows-forms-combobox-or-listbox-control-to-data"></a>如何：將 Windows Form ComboBox 或 ListBox 控制項繫結至資料
 您可以繫結<xref:System.Windows.Forms.ComboBox>和<xref:System.Windows.Forms.ListBox>執行工作，例如瀏覽資料在資料庫中的資料，請輸入新的資料，或編輯現有的資料。  
@@ -64,7 +52,7 @@ ms.lasthandoff: 12/22/2017
     > [!NOTE]
     >  如果您繫結至資料來源不會實作<xref:System.ComponentModel.IBindingList>介面，例如<xref:System.Collections.ArrayList>，更新資料來源時，將不會更新繫結的控制項的資料。 例如，如果您有下拉式方塊繫結至<xref:System.Collections.ArrayList>和資料加入至<xref:System.Collections.ArrayList>，這些新的項目不會出現在下拉式方塊。 不過，您可以強制下拉式方塊，以藉由呼叫更新<xref:System.Windows.Forms.BindingManagerBase.SuspendBinding%2A>和<xref:System.Windows.Forms.BindingManagerBase.ResumeBinding%2A>方法的執行個體上<xref:System.Windows.Forms.BindingContext>控制項所繫結類別。  
   
-## <a name="see-also"></a>請參閱  
+## <a name="see-also"></a>另請參閱  
  <xref:System.Windows.Forms.ComboBox>  
  <xref:System.Windows.Forms.ListBox>  
  [Windows Forms 資料繫結](../../../../docs/framework/winforms/windows-forms-data-binding.md)  

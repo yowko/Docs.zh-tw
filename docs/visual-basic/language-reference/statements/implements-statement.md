@@ -1,11 +1,6 @@
 ---
-title: "Implements 陳述式"
+title: Implements 陳述式
 ms.date: 07/20/2015
-ms.prod: .net
-ms.reviewer: 
-ms.suite: 
-ms.technology: devlang-visual-basic
-ms.topic: article
 f1_keywords:
 - vb.Implements
 - Implements
@@ -14,14 +9,11 @@ helpviewer_keywords:
 - Implements statement [Visual Basic]
 - interface implementation [Visual Basic], Implements statement
 ms.assetid: 1fafb83f-f55a-4215-8ea9-681e8622613d
-caps.latest.revision: "17"
-author: dotnet-bot
-ms.author: dotnetcontent
-ms.openlocfilehash: 1103305ffbf5425d9a6a6a09695437968642710d
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.openlocfilehash: 5afc7e4e3a03dfab1288e50e65e5076bdd438f7a
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="implements-statement"></a>Implements 陳述式
 指定一或多個介面，或必須在類別中實作的介面成員或結構定義中的出現。  
@@ -36,10 +28,10 @@ Implements interfacename.interfacemember [, ...]
   
 ## <a name="parts"></a>組件  
  `interfacename`  
- 必要項。 其屬性、 程序和事件會由對應的成員類別或結構中實作介面。  
+ 必要。 其屬性、 程序和事件會由對應的成員類別或結構中實作介面。  
   
  `interfacemember`  
- 必要項。 所實作之介面的成員。  
+ 必要。 所實作之介面的成員。  
   
 ## <a name="remarks"></a>備註  
  介面是集合的原型代表成員 （屬性、 程序和事件） 封裝的介面。 介面包含宣告的成員;類別和結構實作這些成員。 如需詳細資訊，請參閱[介面](../../../visual-basic/programming-guide/language-features/interfaces/index.md)。  

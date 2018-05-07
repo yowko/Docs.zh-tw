@@ -1,14 +1,6 @@
 ---
 title: SAML 權杖與宣告
-ms.custom: ''
 ms.date: 03/30/2017
-ms.prod: .net-framework
-ms.reviewer: ''
-ms.suite: ''
-ms.technology:
-- dotnet-clr
-ms.tgt_pltfrm: ''
-ms.topic: article
 dev_langs:
 - csharp
 - vb
@@ -18,20 +10,14 @@ helpviewer_keywords:
 - issued tokens
 - SAML token
 ms.assetid: 930b6e34-9eab-4e95-826c-4e06659bb977
-caps.latest.revision: 10
-author: dotnet-bot
-ms.author: dotnetcontent
-manager: wpickett
-ms.workload:
-- dotnet
-ms.openlocfilehash: 9bd10fe663ccb4c78af775baf3e76663ef9a91bd
-ms.sourcegitcommit: 03ee570f6f528a7d23a4221dcb26a9498edbdf8c
+ms.openlocfilehash: 374fde23a1bf8df704f76500b4808c16d142ddd9
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/28/2018
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="saml-tokens-and-claims"></a>SAML 權杖與宣告
-安全性判斷提示標記語言 (SAML)*語彙基元*宣告的 XML 表示。 根據預設，SAML 權杖[!INCLUDE[indigo1](../../../../includes/indigo1-md.md)]聯合的安全性案例中的用法是*發行的權杖*。  
+安全性判斷提示標記語言 (SAML)*語彙基元*宣告的 XML 表示。 根據預設，會在聯合的安全性案例中使用 Windows Communication Foundation (WCF) 的 SAML 權杖*發行的權杖*。  
   
  SAML 權杖包含一實體對另一實體所做出之宣告集合的陳述式。 例如，在聯合安全性案例中，陳述式是由系統中關於使用者的安全性權杖服務所表示。 安全性權杖服務會簽署 SAML 權杖，以表示權杖中所含陳述式的真實性。 除此之外，SAML 權杖會與 SAML 權杖使用者證實知悉的密碼編譯金鑰內容產生關聯。 這項證明能滿足信賴憑證者，證實該 SAML 權杖確實簽發至該使用者。 例如，在典型的案例中：  
   
@@ -44,7 +30,7 @@ ms.lasthandoff: 04/28/2018
 4.  SAML 權杖上的簽章會告訴信賴憑證者，這是由安全性權杖服務所簽發的權杖。 使用證明金鑰所建立的訊息簽章會告訴信賴憑證者，該權杖曾簽發至用戶端。  
   
 ## <a name="from-claims-to-samlattributes"></a>從宣告到 SamlAttributes  
- 在 [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)]<xref:System.IdentityModel.Tokens.SamlAttribute>中，SAML 權杖中的陳述式會以 <xref:System.IdentityModel.Claims.Claim> 物件做為模型，可從 <xref:System.IdentityModel.Claims.Claim> 物件直接填入，前提是 <xref:System.IdentityModel.Claims.Claim.Right%2A> 物件擁有 <xref:System.IdentityModel.Claims.Rights.PossessProperty%2A><xref:System.IdentityModel.Claims.Claim.Resource%2A>的 <xref:System.String> 屬性，且  屬性為 型別。 例如:   
+ 在 WCF 中，在 SAML 權杖中的陳述式會模型化為<xref:System.IdentityModel.Tokens.SamlAttribute>物件，可以直接從填入<xref:System.IdentityModel.Claims.Claim>所提供的物件<xref:System.IdentityModel.Claims.Claim>物件具有<xref:System.IdentityModel.Claims.Claim.Right%2A>屬性<xref:System.IdentityModel.Claims.Rights.PossessProperty%2A>和<xref:System.IdentityModel.Claims.Claim.Resource%2A>屬性是型別<xref:System.String>。 例如:   
   
  [!code-csharp[c_CreateSTS#8](../../../../samples/snippets/csharp/VS_Snippets_CFX/c_creatests/cs/source.cs#8)]
  [!code-vb[c_CreateSTS#8](../../../../samples/snippets/visualbasic/VS_Snippets_CFX/c_creatests/vb/source.vb#8)]  

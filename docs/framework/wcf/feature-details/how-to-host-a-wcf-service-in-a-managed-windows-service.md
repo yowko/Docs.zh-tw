@@ -1,36 +1,22 @@
 ---
 title: HOW TO：在 Managed Windows 服務中裝載 WCF 服務
-ms.custom: ''
 ms.date: 03/30/2017
-ms.prod: .net-framework
-ms.reviewer: ''
-ms.suite: ''
-ms.technology:
-- dotnet-clr
-ms.tgt_pltfrm: ''
-ms.topic: article
 dev_langs:
 - csharp
 - vb
 ms.assetid: 8e37363b-4dad-4fb6-907f-73c30fac1d9a
-caps.latest.revision: 21
-author: dotnet-bot
-ms.author: dotnetcontent
-manager: wpickett
-ms.workload:
-- dotnet
-ms.openlocfilehash: aab9780a0d40ab71710d454deb3144219557450f
-ms.sourcegitcommit: 94d33cadc5ff81d2ac389bf5f26422c227832052
+ms.openlocfilehash: c6c3e057fd07569d462f1bf25d1c283e42024a8b
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/30/2018
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="how-to-host-a-wcf-service-in-a-managed-windows-service"></a>HOW TO：在 Managed Windows 服務中裝載 WCF 服務
-本主題概要說明建立可由 Windows 服務裝載的 [!INCLUDE[indigo1](../../../../includes/indigo1-md.md)] 服務時，必要的基本步驟。 此案例是由 Managed Windows 服務裝載選項所啟用，就是在非訊息啟動的安全環境中由網際網路資訊服務 (IIS) 外部所裝載的長期執行之 [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] 服務。 服務的存留期會改由作業系統來控制。 所有 Windows 版本都提供這個裝載選項。  
+本主題概要說明建立 Windows 服務裝載 Windows Communication Foundation (WCF) 服務所需的基本步驟。 此案例會啟用受管理的 Windows 服務裝載是長時間執行的 WCF 服務裝載網際網路資訊服務 (IIS) 之外，不是啟動訊息的安全環境中的選項。 服務的存留期會改由作業系統來控制。 所有 Windows 版本都提供這個裝載選項。  
   
- Windows 服務可以透過 Microsoft Management Console (MMC) 中的 Microsoft.ManagementConsole.SnapIn 嵌入式管理單元進行管理，並設定成系統啟動時自動啟動。 這個裝載選項包含可將 [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] 服務裝載為 Managed Windows 服務的註冊應用程式定義域 (AppDomain)，如此一來便可透過 Windows 服務的服務控制管理員 (SCM) 來控制服務的處理序存留期。  
+ Windows 服務可以透過 Microsoft Management Console (MMC) 中的 Microsoft.ManagementConsole.SnapIn 嵌入式管理單元進行管理，並設定成系統啟動時自動啟動。 這個裝載選項包含註冊為受管理的 Windows 服務裝載 WCF 服務，如此一來服務處理序存留期會控制由服務控制管理員 (SCM) 為 Windows 服務應用程式定義域 (AppDomain)。  
   
- 服務程式碼包含服務合約的服務實作、Windows 服務類別以及安裝程式類別。 服務實作類別 `CalculatorService` 是一項 [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] 服務。 `CalculatorWindowsService` 是一項 Windows 服務。 為了限定為 Windows 服務，此類別會繼承自 `ServiceBase`，並且實作 `OnStart` 和 `OnStop` 方法。 在 `OnStart` 中，會為 <xref:System.ServiceModel.ServiceHost> 型別建立並開啟 `CalculatorService`。 使用 `OnStop` 時，則會停止與處置服務。 主機也會負責提供服務主機的基底位址，該位址必須設定在應用程式設定中。 繼承自 <xref:System.Configuration.Install.Installer> 的安裝程式類別，會允許 Installutil.exe 工具將程式當做 Windows 服務進行安裝。  
+ 服務程式碼包含服務合約的服務實作、Windows 服務類別以及安裝程式類別。 服務實作類別`CalculatorService`，是 WCF 服務。 `CalculatorWindowsService` 是一項 Windows 服務。 為了限定為 Windows 服務，此類別會繼承自 `ServiceBase`，並且實作 `OnStart` 和 `OnStop` 方法。 在 `OnStart` 中，會為 <xref:System.ServiceModel.ServiceHost> 型別建立並開啟 `CalculatorService`。 使用 `OnStop` 時，則會停止與處置服務。 主機也會負責提供服務主機的基底位址，該位址必須設定在應用程式設定中。 繼承自 <xref:System.Configuration.Install.Installer> 的安裝程式類別，會允許 Installutil.exe 工具將程式當做 Windows 服務進行安裝。  
   
 ### <a name="construct-the-service-and-provide-the-hosting-code"></a>建構服務並提供裝載程式碼  
   
@@ -135,7 +121,7 @@ ms.lasthandoff: 04/30/2018
     > [!NOTE]
     >  如果您不是使用 [!INCLUDE[vs_current_long](../../../../includes/vs-current-long-md.md)] 命令提示字元，請確認 `%WinDir%\Microsoft.NET\Framework\v4.0.<current version>` 目錄位於系統路徑。  
   
-     在命令提示字元中輸入 `services.msc` 以存取服務控制管理員 (SCM)。 Windows 服務應該會在 [服務] 中顯示為 "WCFWindowsServiceSample"。 只有當 Windows 服務正在執行的情況下，[!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] 服務才會回應用戶端。 若要啟動服務，以滑鼠右鍵按一下它的 SCM 和 [啟動]，選取或類型**net 啟動 WCFWindowsServiceSample**在命令提示字元。  
+     在命令提示字元中輸入 `services.msc` 以存取服務控制管理員 (SCM)。 Windows 服務應該會在 [服務] 中顯示為 "WCFWindowsServiceSample"。 如果 Windows 服務執行用戶端只可以回應的 WCF 服務。 若要啟動服務，以滑鼠右鍵按一下它的 SCM 和 [啟動]，選取或類型**net 啟動 WCFWindowsServiceSample**在命令提示字元。  
   
 3.  若要變更服務，必須先加以停止並解除安裝。 若要停止服務，以滑鼠右鍵按一下 SCM 中的服務並選取 [停止] 或**輸入 net stop WCFWindowsServiceSample**在命令提示字元。 請注意，如果您在停止 Windows 服務後執行用戶端，則當用戶端嘗試存取此服務時將會發生 <xref:System.ServiceModel.EndpointNotFoundException> 例外狀況。 若要解除安裝 Windows 服務類型**installutil /u bin\service.exe**在命令提示字元。  
   

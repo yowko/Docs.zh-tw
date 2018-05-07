@@ -1,11 +1,6 @@
 ---
-title: "Of 子句 (Visual Basic)"
+title: Of 子句 (Visual Basic)
 ms.date: 07/20/2015
-ms.prod: .net
-ms.reviewer: 
-ms.suite: 
-ms.technology: devlang-visual-basic
-ms.topic: article
 f1_keywords:
 - Of
 - vb.Of
@@ -22,14 +17,11 @@ helpviewer_keywords:
 - type parameters
 - data type arguments
 ms.assetid: 0db8f65c-65af-4089-ab7f-6fcfecb60444
-caps.latest.revision: "17"
-author: dotnet-bot
-ms.author: dotnetcontent
-ms.openlocfilehash: 5ef3ac4ac88727b1dcae50fa14abde03f29a16fb
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.openlocfilehash: 9ace0ad55d9eb1618dbdafb0d49d1ff4b169a877
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="of-clause-visual-basic"></a>Of 子句 (Visual Basic)
 導入了`Of`子句，用來識別*型別參數*上*泛型*類別、 結構、 介面、 委派或程序。 在泛型類型上的資訊，請參閱[Visual Basic 中的泛型類型](../../../visual-basic/programming-guide/language-features/data-types/generic-types.md)。  
@@ -51,7 +43,7 @@ End Class
   
  如果您完成上述類別定義，您可以建構各種`dictionary`從它的類別。 您提供給型別`entryType`和`keyType`判斷何種類型的項目類別保存，而且它將與每個項目索引鍵的類型。 由於條件約束，您必須提供給`keyType`實作的型別<xref:System.IComparable>。  
   
- 下列程式碼範例會建立物件以保留`String`項目並將相關聯`Integer`每個索引鍵。 `Integer`實作<xref:System.IComparable>並因此滿足條件約束上`keyType`。  
+ 下列程式碼範例會建立物件以保留`String`項目並將相關聯`Integer`每個索引鍵。 `Integer` 實作<xref:System.IComparable>並因此滿足條件約束上`keyType`。  
   
 ```  
 Dim d As New dictionary(Of String, Integer)  

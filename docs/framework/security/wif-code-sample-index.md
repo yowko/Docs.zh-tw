@@ -1,24 +1,14 @@
 ---
-title: "WIF 程式碼範例索引"
-ms.custom: 
+title: WIF 程式碼範例索引
 ms.date: 03/30/2017
-ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.technology: dotnet-clr
-ms.tgt_pltfrm: 
-ms.topic: article
 ms.assetid: 6711f01a-4743-43ce-95ab-5e2302a363ea
-caps.latest.revision: "3"
 author: BrucePerlerMS
-ms.author: bruceper
 manager: mbaldwin
-ms.workload: dotnet
-ms.openlocfilehash: 6fc9a9b9e5eb739f50c8835a84c7514cf2c5038b
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.openlocfilehash: c369be1dd9cdc529b180bc798c0e3b0291bc382a
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="wif-code-sample-index"></a>WIF 程式碼範例索引
 Windows Identity Foundation 4.5 的程式碼範例如下：  
@@ -39,5 +29,5 @@ Windows Identity Foundation 4.5 的程式碼範例如下：
   
 -   [CustomToken](http://go.microsoft.com/fwlink/?LinkID=248412) – 此範例示範如何建置自訂的簡單 Web 權杖 (SWT) 權杖類型。  
   
-## <a name="see-also"></a>請參閱  
+## <a name="see-also"></a>另請參閱  
  [Windows Identity Foundation](../../../docs/framework/security/index.md)

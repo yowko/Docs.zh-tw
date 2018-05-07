@@ -1,25 +1,16 @@
 ---
 title: 結束&lt;關鍵字&gt;陳述式 (Visual Basic)
 ms.date: 07/20/2015
-ms.prod: .net
-ms.reviewer: ''
-ms.suite: ''
-ms.technology:
-- devlang-visual-basic
-ms.topic: article
 f1_keywords:
 - vb.EndDefinition
 helpviewer_keywords:
 - End keyword [Visual Basic]
 ms.assetid: 42d6e088-ab0f-4cda-88e8-fdce3e5fcf4f
-caps.latest.revision: 17
-author: dotnet-bot
-ms.author: dotnetcontent
-ms.openlocfilehash: cf0ac1221f8a85a8a43599d9c5ec210884205e5e
-ms.sourcegitcommit: c2e216692ef7576a213ae16af2377cd98d1a67fa
+ms.openlocfilehash: 8137434bfd8c26144d78b1761b784cdba4894eaf
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/22/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="end-ltkeywordgt-statement-visual-basic"></a>結束&lt;關鍵字&gt;陳述式 (Visual Basic)
 其他關鍵字後面跟著，結束該關鍵字所導入的陳述式區塊的定義。  
@@ -53,7 +44,7 @@ End With
   
 ## <a name="parts"></a>組件  
  `End`  
- 必要項。 結束程式設計項目的定義。  
+ 必要。 結束程式設計項目的定義。  
   
  `AddHandler`  
  必要`AddHandler`開始比對的存取子`AddHandler`陳述式中自訂[Event 陳述式](../../../visual-basic/language-reference/statements/event-statement.md)。  
@@ -127,7 +118,7 @@ End With
  當前面加上數字符號 (`#`)、`End`關鍵字終止所對應的指示詞引入的前置處理區塊。  
   
  `#End`  
- 必要項。 結束前置處理的區塊的定義。  
+ 必要。 結束前置處理的區塊的定義。  
   
  `#ExternalSource`  
  必要的外部來源區塊，藉由比對開始[#ExternalSource 指示詞](../../../visual-basic/language-reference/directives/externalsource-directive.md)。  

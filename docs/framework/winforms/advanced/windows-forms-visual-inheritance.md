@@ -1,13 +1,6 @@
 ---
-title: "Windows Form 視覺繼承"
-ms.custom: 
+title: Windows Form 視覺繼承
 ms.date: 03/30/2017
-ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.technology: dotnet-winforms
-ms.tgt_pltfrm: 
-ms.topic: article
 helpviewer_keywords:
 - base forms
 - inheritance [Windows Forms], forms
@@ -17,16 +10,11 @@ helpviewer_keywords:
 - form inheritance
 - Windows Forms, inheritance
 ms.assetid: 857eb737-3602-4d49-bd8b-f70d33ace345
-caps.latest.revision: "9"
-author: dotnet-bot
-ms.author: dotnetcontent
-manager: wpickett
-ms.workload: dotnet
-ms.openlocfilehash: 177b3034e9afc71a8ecc899364cc4911ef42a1a9
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.openlocfilehash: 6cf2a7d95f7f6b015c785859b646a5d42f907127
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="windows-forms-visual-inheritance"></a>Windows Form 視覺繼承
 有時候，您可能會決定讓專案呼叫類似您在前一個專案中建立的表單。 或者，您可能想要建立基本表單，具有例如浮水印或特定控制項版面配置的設定，您稍後會在專案中再次使用，具有包含對原始表單範本修改的每個反覆項目。 表單繼承可讓您建立基底表單，然後從它繼承並進行修改，同時保留您需要的任何原始設定。  

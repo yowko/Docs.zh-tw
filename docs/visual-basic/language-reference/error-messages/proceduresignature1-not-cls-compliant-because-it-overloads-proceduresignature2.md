@@ -1,26 +1,17 @@
 ---
-title: "&lt;proceduresignature1&gt;不符合 CLS 標準，因為它多載&lt;proceduresignature2&gt;的差別只在於陣列參數類型的陣列，或是陣列參數類型的陣序規範"
+title: '&lt;proceduresignature1&gt;不符合 CLS 標準，因為它多載&lt;proceduresignature2&gt;的差別只在於陣列參數類型的陣列，或是陣列參數類型的陣序規範'
 ms.date: 07/20/2015
-ms.prod: .net
-ms.reviewer: 
-ms.suite: 
-ms.technology:
-- devlang-visual-basic
-ms.topic: article
 f1_keywords:
 - vbc40035
 - bc40035
 helpviewer_keywords:
 - BC40035
 ms.assetid: 50a66dbe-2c1e-41bf-96bc-369301c891ac
-caps.latest.revision: 
-author: dotnet-bot
-ms.author: dotnetcontent
-ms.openlocfilehash: d361759471a8edfa97437bd2503cfaa661fb9678
-ms.sourcegitcommit: 34ec7753acf76f90a0fa845235ef06663dc9e36e
+ms.openlocfilehash: 0d150dad8d32b4bfa2b9e549e068ef24382d0eba
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="ltproceduresignature1gt-is-not-cls-compliant-because-it-overloads-ltproceduresignature2gt-which-differs-from-it-only-by-array-of-array-parameter-types-or-by-the-rank-of-the-array-parameter-types"></a>&lt;proceduresignature1&gt;不符合 CLS 標準，因為它多載&lt;proceduresignature2&gt;的差別只在於陣列參數類型的陣列，或是陣列參數類型的陣序規範
 程序或屬性標示為`<CLSCompliant(True)>`時它會覆寫另一個程序或屬性和其參數清單中唯一的差別是巢狀的層級的不規則陣列陣序。  
@@ -49,7 +40,7 @@ ms.lasthandoff: 12/21/2017
   
 -   如果您需要的多載的差別，只要在此說明所提到的變更頁面中，移除<xref:System.CLSCompliantAttribute>從其定義或將它們標記為`<CLSCompliant(False)>`。  
   
-## <a name="see-also"></a>請參閱  
+## <a name="see-also"></a>另請參閱  
    
  [程序多載化](../../../visual-basic/programming-guide/language-features/procedures/procedure-overloading.md)  
  [多載](../../../visual-basic/language-reference/modifiers/overloads.md)

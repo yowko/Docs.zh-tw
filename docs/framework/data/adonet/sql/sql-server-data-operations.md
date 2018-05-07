@@ -1,24 +1,12 @@
 ---
-title: "ADO.NET 中的 SQL Server 資料作業"
-ms.custom: 
+title: ADO.NET 中的 SQL Server 資料作業
 ms.date: 03/30/2017
-ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.technology: dotnet-ado
-ms.tgt_pltfrm: 
-ms.topic: article
 ms.assetid: b864ebc9-ed8e-4059-85fd-36d9198f5521
-caps.latest.revision: "6"
-author: douglaslMS
-ms.author: douglasl
-manager: craigg
-ms.workload: dotnet
-ms.openlocfilehash: ba8a81c4506d3dfa06d749859246d41fc726e5ed
-ms.sourcegitcommit: ed26cfef4e18f6d93ab822d8c29f902cff3519d1
+ms.openlocfilehash: 45b0e92619732ddaa8c4cc5df163f251c50bcba8
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 01/17/2018
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="sql-server-data-operations-in-adonet"></a>ADO.NET 中的 SQL Server 資料作業
 本節說明 .NET Framework Data Provider for SQL Server (<xref:System.Data.SqlClient>) 特有的 SQL Server 特性和功能。  
@@ -36,7 +24,7 @@ ms.lasthandoff: 01/17/2018
  [資料表值參數](../../../../../docs/framework/data/adonet/sql/table-valued-parameters.md)  
  說明如何使用 SQL Server 2008 所導入的資料表值參數。  
   
-## <a name="see-also"></a>請參閱  
+## <a name="see-also"></a>另請參閱  
  [在 ADO.NET 中擷取和修改資料](../../../../../docs/framework/data/adonet/retrieving-and-modifying-data.md)  
  [SQL Server 和 ADO.NET](../../../../../docs/framework/data/adonet/sql/index.md)  
  [ADO.NET Managed 提供者和 DataSet 開發人員中心](http://go.microsoft.com/fwlink/?LinkId=217917)

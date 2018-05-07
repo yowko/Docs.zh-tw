@@ -1,23 +1,12 @@
 ---
-title: "使用流程追蹤判斷工作流程的執行"
-ms.custom: 
+title: 使用流程追蹤判斷工作流程的執行
 ms.date: 03/30/2017
-ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.tgt_pltfrm: 
-ms.topic: article
 ms.assetid: f04ad0fd-edc7-4cbc-8979-356f2a1131c4
-caps.latest.revision: "9"
-author: dotnet-bot
-ms.author: dotnetcontent
-manager: wpickett
-ms.workload: dotnet
-ms.openlocfilehash: f2687d045db28974e99b2f2b6a3222924a520720
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.openlocfilehash: 9f9c65f2c873d54da443db14e7f5797ef1e14174
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="determining-workflow-execution-duration-using-tracing"></a>使用流程追蹤判斷工作流程的執行
 本主題示範如何判斷成功完成的自行裝載工作流程使用工作流程追蹤來執行所需的時間。  
@@ -42,7 +31,7 @@ ms.lasthandoff: 12/22/2017
   
  **WorkflowInstance Id: ' 1bbac57b-3322-498e-9e27-8833fda3a5bf' 已在 Closed 狀態中完成。**  
   
-## <a name="see-also"></a>請參閱  
+## <a name="see-also"></a>另請參閱  
  [工作流程追蹤](../../../docs/framework/windows-workflow-foundation/workflow-tracing.md)  
  [Windows Server App Fabric 監控](http://go.microsoft.com/fwlink/?LinkId=201273)  
  [使用 App Fabric 監控應用程式](http://go.microsoft.com/fwlink/?LinkId=201275)

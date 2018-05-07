@@ -1,11 +1,6 @@
 ---
 title: Inherits Statement
 ms.date: 07/20/2015
-ms.prod: .net
-ms.reviewer: 
-ms.suite: 
-ms.technology: devlang-visual-basic
-ms.topic: article
 f1_keywords:
 - vb.Inherits
 - Inherits
@@ -13,14 +8,11 @@ helpviewer_keywords:
 - Inherits statement [Visual Basic]
 - Inherits statement [Visual Basic], syntax
 ms.assetid: 9e6fe042-9af3-4341-8093-fc3537770cf2
-caps.latest.revision: "16"
-author: dotnet-bot
-ms.author: dotnetcontent
-ms.openlocfilehash: ae9ba54c3fd1ec3332c9f6260bc19a1293270ad8
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.openlocfilehash: 43a8aa4e9e04ee035cb52e9f829de13e5c022217
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="inherits-statement"></a>Inherits Statement
 會導致目前的類別或介面繼承自另一個類別或介面的集合的屬性、 變數、 屬性、 程序和事件。  
@@ -35,7 +27,7 @@ Inherits basetypenames
   
 |詞彙|定義|  
 |---|---|  
-|`basetypenames`|必要項。 這個類別衍生自類別的名稱。<br /><br /> -或-<br /><br /> 此介面衍生自介面的名稱。 使用逗號來分隔多個名稱。|  
+|`basetypenames`|必要。 這個類別衍生自類別的名稱。<br /><br /> -或-<br /><br /> 此介面衍生自介面的名稱。 使用逗號來分隔多個名稱。|  
   
 ## <a name="remarks"></a>備註  
  如果單獨使用，`Inherits`陳述式必須是類別或介面定義中的第一個非空白且非註解一行。 應該緊接`Class`或`Interface`陳述式。  

@@ -1,13 +1,6 @@
 ---
-title: "圖形轉譯層"
-ms.custom: 
+title: 圖形轉譯層
 ms.date: 03/30/2017
-ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.technology: dotnet-wpf
-ms.tgt_pltfrm: 
-ms.topic: article
 helpviewer_keywords:
 - graphics [WPF], performance
 - rendering graphics [WPF]
@@ -15,16 +8,11 @@ helpviewer_keywords:
 - graphics rendering tiers [WPF]
 - graphics [WPF], rendering tiers
 ms.assetid: 08dd1606-02a2-4122-9351-c0afd2ec3a70
-caps.latest.revision: "44"
-author: dotnet-bot
-ms.author: dotnetcontent
-manager: wpickett
-ms.workload: dotnet
-ms.openlocfilehash: 457b7e76b16e42c71d1e2d1986d58b2708396e22
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.openlocfilehash: 4f9de7736851027c9f6b851984953e37b96d456a
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="graphics-rendering-tiers"></a>圖形轉譯層
 轉譯層定義執行 [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] 應用程式之裝置的圖形硬體及效能層級。  
@@ -98,8 +86,8 @@ ms.lasthandoff: 12/22/2017
 |功能|注意|  
 |-------------|-----------|  
 |列印的內容|所有列印的內容都是使用 [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] 軟體管線所轉譯。|  
-|使用點陣化內容<xref:System.Windows.Media.Imaging.RenderTargetBitmap>|使用呈現任何內容<xref:System.Windows.Media.Imaging.RenderTargetBitmap.Render%2A>方法<xref:System.Windows.Media.Imaging.RenderTargetBitmap>。|  
-|使用的並排顯示的內容<xref:System.Windows.Media.TileBrush>|任何並排顯示內容所在<xref:System.Windows.Media.TileBrush.TileMode%2A>屬性<xref:System.Windows.Media.TileBrush>設<xref:System.Windows.Media.TileMode.Tile>。|  
+|使用點陣化內容 <xref:System.Windows.Media.Imaging.RenderTargetBitmap>|使用呈現任何內容<xref:System.Windows.Media.Imaging.RenderTargetBitmap.Render%2A>方法<xref:System.Windows.Media.Imaging.RenderTargetBitmap>。|  
+|使用的並排顯示的內容 <xref:System.Windows.Media.TileBrush>|任何並排顯示內容所在<xref:System.Windows.Media.TileBrush.TileMode%2A>屬性<xref:System.Windows.Media.TileBrush>設<xref:System.Windows.Media.TileMode.Tile>。|  
 |超過圖形硬體之最大紋理大小的介面|針對大部分圖形硬體，大型表面的大小是 2048x2048 或 4096x4096 像素。|  
 |視訊 RAM 需求超出圖形硬體記憶體的任何作業|您可以使用 Windows SDK 之 [WPF 效能套件](http://msdn.microsoft.com/library/67cafaad-57ad-4ecb-9c08-57fac144393e)中所含的 Perforator 工具，來監視應用程式視訊 RAM 使用方式。|  
 |多層式視窗|多層式視窗允許 [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] 應用程式轉譯非矩形視窗中的畫面內容。 在支援 Windows 顯示驅動程式模型 (WDDM) 的 [!INCLUDE[TLA2#tla_winvista](../../../../includes/tla2sharptla-winvista-md.md)] 和 [!INCLUDE[win7](../../../../includes/win7-md.md)] 這類作業系統上，多層式視窗會進行硬體加速。 在 [!INCLUDE[winxp](../../../../includes/winxp-md.md)] 這類其他系統上，沒有硬體加速的軟體會轉譯多層式視窗。<br /><br /> 您可以啟用在層疊的視窗[!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)]藉由設定下列<xref:System.Windows.Window>屬性：<br /><br /> -   <xref:System.Windows.Window.WindowStyle%2A> = <xref:System.Windows.WindowStyle.None><br />-   <xref:System.Windows.Window.AllowsTransparency%2A> = `true`<br />-   <xref:System.Windows.Controls.Control.Background%2A> = <xref:System.Windows.Media.Brushes.Transparent%2A>|  
@@ -140,7 +128,7 @@ ms.lasthandoff: 12/22/2017
  ![螢幕擷取畫面： DirectX 診斷工具](../../../../docs/framework/wpf/advanced/media/directxdiagnostictool-01.png "DirectXDiagnosticTool_01")  
 DirectX 診斷工具主要視窗  
   
-## <a name="see-also"></a>請參閱  
+## <a name="see-also"></a>另請參閱  
  <xref:System.Windows.Media.RenderCapability>  
  <xref:System.Windows.Media.RenderOptions>  
  [最佳化 WPF 應用程式效能](../../../../docs/framework/wpf/advanced/optimizing-wpf-application-performance.md)  

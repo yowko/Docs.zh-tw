@@ -1,26 +1,12 @@
 ---
 title: 工作階段、執行個體與並行
-ms.custom: ''
 ms.date: 03/30/2017
-ms.prod: .net-framework
-ms.reviewer: ''
-ms.suite: ''
-ms.technology:
-- dotnet-clr
-ms.tgt_pltfrm: ''
-ms.topic: article
 ms.assetid: 50797a3b-7678-44ed-8138-49ac1602f35b
-caps.latest.revision: 16
-author: dotnet-bot
-ms.author: dotnetcontent
-manager: wpickett
-ms.workload:
-- dotnet
-ms.openlocfilehash: 6dd96ea552bb92dd90c1c47abac744c55e2e67e5
-ms.sourcegitcommit: 03ee570f6f528a7d23a4221dcb26a9498edbdf8c
+ms.openlocfilehash: a3f56a08c695b4d92529d2c1bec625e9e8c6b6ec
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/28/2018
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="sessions-instancing-and-concurrency"></a>工作階段、執行個體與並行
 「 *工作階段* 」(Session) 是兩個端點之間所傳送之所有訊息的相互關聯。 「*執行個體* 」(Instancing) 是指控制使用者定義之服務物件的存留時間，以及其相關的 <xref:System.ServiceModel.InstanceContext> 物件。 「*並行* 」(Concurrency) 是指控制在 <xref:System.ServiceModel.InstanceContext> 中同時執行的執行緒數目。  
@@ -30,7 +16,7 @@ ms.lasthandoff: 04/28/2018
 ## <a name="sessions"></a>工作階段  
  當服務合約將 <xref:System.ServiceModel.ServiceContractAttribute.SessionMode%2A?displayProperty=nameWithType> 屬性設定為 <xref:System.ServiceModel.SessionMode.Required?displayProperty=nameWithType> 時，該合約會指出所有的呼叫 (即支援呼叫的基礎訊息交換模式) 必須是同一個對話的一部分。 如果合約指定其允許工作階段，但不需要工作階段，則用戶端可以連線，並選擇是否要建立工作階段。 如果工作階段終止並透過相同之工作階段型的通道傳送訊息，就會擲回例外狀況。  
   
- [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] 工作階段在概念上有下列主要特色：  
+ WCF 工作階段具有下列主要特色：  
   
 -   工作階段是由呼叫的應用程式明確地初始化及終止。  
   
@@ -38,9 +24,9 @@ ms.lasthandoff: 04/28/2018
   
 -   工作階段會將一群訊息互相關聯為對話。 此相互關聯的意義是一種抽象概念。 例如，某個工作階段架構通道可能會根據共用的網路連線將訊息相互關聯，而另一個工作階段架構通道可能會根據訊息本文內的共用標記將訊息相互關聯。 這些可以衍生自工作階段的功能視相互關聯的本質而定。  
   
--   沒有與 [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] 工作階段關聯的一般資料存放區。  
+-   沒有與 WCF 工作階段相關聯的一般資料存放區。  
   
- 如果您很熟悉 <xref:System.Web.SessionState.HttpSessionState?displayProperty=nameWithType> 應用程式內的 [!INCLUDE[vstecasp](../../../../includes/vstecasp-md.md)] 類別及其所提供的功能，則您可能會注意到這類工作階段和 [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] 工作階段之間有下列不同之處：  
+ 如果您已熟悉<xref:System.Web.SessionState.HttpSessionState?displayProperty=nameWithType>類別[!INCLUDE[vstecasp](../../../../includes/vstecasp-md.md)]應用程式和功能提供，則您可能會注意到該類型的工作階段和 WCF 的工作階段之間的下列差異：  
   
 -   [!INCLUDE[vstecasp](../../../../includes/vstecasp-md.md)] 工作階段一律由伺服器啟動。  
   
@@ -78,7 +64,7 @@ public class CalculatorService : ICalculatorInstance
   
  請使用 <xref:System.ServiceModel.ServiceHost.%23ctor%28System.Object%2CSystem.Uri%5B%5D%29?displayProperty=nameWithType> 建構函式建立此類服務。 當您想要將特定物件執行個體提供給單一服務使用時，它提供了另一種實作自訂 <xref:System.ServiceModel.Dispatcher.IInstanceContextInitializer?displayProperty=nameWithType> 的方式。 當服務實作類型很難建構時 (例如，無法實作沒有參數的預設公用建構函式時)，您可以使用這個多載。  
   
- 請注意，提供物件給這個建構函式時，某些與 [!INCLUDE[indigo1](../../../../includes/indigo1-md.md)] 執行個體行為相關的功能會以不同的方式運作。 例如，提供單一物件執行個體時，呼叫 <xref:System.ServiceModel.InstanceContext.ReleaseServiceInstance%2A?displayProperty=nameWithType> 將沒有任何作用。 同樣的，也會忽略任何其他執行個體的釋放機制。 <xref:System.ServiceModel.ServiceHost> 的行為就像是所有作業都已將 <xref:System.ServiceModel.OperationBehaviorAttribute.ReleaseInstanceMode%2A?displayProperty=nameWithType> 屬性設定為 <xref:System.ServiceModel.ReleaseInstanceMode.None?displayProperty=nameWithType>。  
+ 請注意，當提供給這個建構函式的物件時，相關以 Windows Communication Foundation (WCF) 執行個體行為的某些功能的運作方式不同。 例如，提供單一物件執行個體時，呼叫 <xref:System.ServiceModel.InstanceContext.ReleaseServiceInstance%2A?displayProperty=nameWithType> 將沒有任何作用。 同樣的，也會忽略任何其他執行個體的釋放機制。 <xref:System.ServiceModel.ServiceHost> 的行為就像是所有作業都已將 <xref:System.ServiceModel.OperationBehaviorAttribute.ReleaseInstanceMode%2A?displayProperty=nameWithType> 屬性設定為 <xref:System.ServiceModel.ReleaseInstanceMode.None?displayProperty=nameWithType>。  
   
 ### <a name="sharing-instancecontext-objects"></a>共用 InstanceContext 物件  
  您也可以自行執行該關聯，以控制哪個工作階段通道或呼叫應與哪個 <xref:System.ServiceModel.InstanceContext> 物件產生關聯。  
@@ -92,7 +78,7 @@ public class CalculatorService : ICalculatorInstance
   
 -   <xref:System.ServiceModel.ConcurrencyMode.Multiple>：每一個服務執行個體都可以同時擁有多個處理訊息的執行緒。 此服務實作必須是安全執行緒，才能使用這種並行模式。  
   
--   <xref:System.ServiceModel.ConcurrencyMode.Reentrant>：每一個服務執行個體在同一時間內會處理一個訊息，但接受可重新進入 (Re-entrant) 的作業呼叫。 此服務只在其透過 [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] 用戶端物件向外呼叫時，才會接受這些呼叫。  
+-   <xref:System.ServiceModel.ConcurrencyMode.Reentrant>：每一個服務執行個體在同一時間內會處理一個訊息，但接受可重新進入 (Re-entrant) 的作業呼叫。 服務會在向外呼叫透過 WCF 用戶端物件時，只接受這些呼叫。  
   
 > [!NOTE]
 >  您應該了解，開發能夠安全地使用一個以上之執行緒的程式碼，可能會很難順利地撰寫。 在使用 <xref:System.ServiceModel.ConcurrencyMode.Multiple> 或 <xref:System.ServiceModel.ConcurrencyMode.Reentrant> 值之前，請確定已適當地設計您的服務以使用這些模式 如需詳細資訊，請參閱<xref:System.ServiceModel.ServiceBehaviorAttribute.ConcurrencyMode%2A>。  

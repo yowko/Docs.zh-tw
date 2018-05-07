@@ -1,14 +1,6 @@
 ---
-title: "IMetaDataAssemblyImport::FindAssembliesByName 方法"
-ms.custom: 
+title: IMetaDataAssemblyImport::FindAssembliesByName 方法
 ms.date: 03/30/2017
-ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.technology:
-- dotnet-clr
-ms.tgt_pltfrm: 
-ms.topic: reference
 api_name:
 - IMetaDataAssemblyImport.FindAssembliesByName
 api_location:
@@ -23,17 +15,13 @@ helpviewer_keywords:
 ms.assetid: 4db97cf9-e4c1-4233-8efa-cbdc0e14a8e4
 topic_type:
 - apiref
-caps.latest.revision: 
 author: mairaw
 ms.author: mairaw
-manager: wpickett
-ms.workload:
-- dotnet
-ms.openlocfilehash: 4d6518fdcf1bef8eaea74818f69f46bb6df26e31
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.openlocfilehash: a6c7bf332d829a440fe216756f7a23ec1277e6c6
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="imetadataassemblyimportfindassembliesbyname-method"></a>IMetaDataAssemblyImport::FindAssembliesByName 方法
 取得具有指定的組件的陣列`szAssemblyName`使用標準的規則，用來解析參考 common language runtime (CLR) 的參數。  
@@ -74,7 +62,7 @@ HRESULT FindAssembliesByName (
   
 |HRESULT|描述|  
 |-------------|-----------------|  
-|`S_OK`|`FindAssembliesByName`已成功傳回。|  
+|`S_OK`|`FindAssembliesByName` 已成功傳回。|  
 |`S_FALSE`|沒有組件。|  
   
 ## <a name="remarks"></a>備註  
@@ -82,9 +70,9 @@ HRESULT FindAssembliesByName (
   
  `FindAssembliesByName`方法需要 CLR 初始化程序中，才能叫用的組件解析邏輯。 因此，您必須呼叫[CoInitializeEE](../../../../docs/framework/unmanaged-api/hosting/coinitializeee-function.md) （傳遞 COINITEE_DEFAULT） 然後再呼叫`FindAssembliesByName`，然後依照呼叫[CoUninitializeCor](../../../../docs/framework/unmanaged-api/hosting/couninitializecor-function.md)。  
   
- `FindAssembliesByName`傳回[IMetaDataImport](../../../../docs/framework/unmanaged-api/metadata/imetadataimport-interface.md)傳入的檔案包含組件名稱的組件資訊清單的指標。 如果指定的組件名稱並未完整指定 （例如，如果它不包含版本），可能會傳回多個組件。  
+ `FindAssembliesByName` 傳回[IMetaDataImport](../../../../docs/framework/unmanaged-api/metadata/imetadataimport-interface.md)傳入的檔案包含組件名稱的組件資訊清單的指標。 如果指定的組件名稱並未完整指定 （例如，如果它不包含版本），可能會傳回多個組件。  
   
- `FindAssembliesByName`通常會嘗試尋找參考的組件，在編譯時期編譯器使用。  
+ `FindAssembliesByName` 通常會嘗試尋找參考的組件，在編譯時期編譯器使用。  
   
 ## <a name="requirements"></a>需求  
  **平台：**看到[系統需求](../../../../docs/framework/get-started/system-requirements.md)。  
@@ -93,8 +81,8 @@ HRESULT FindAssembliesByName (
   
  **程式庫：**做為 MsCorEE.dll 中的資源  
   
- **.NET framework 版本：**[!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
+ **.NET framework 版本：** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
   
-## <a name="see-also"></a>請參閱  
+## <a name="see-also"></a>另請參閱  
  [執行階段如何找出組件](../../../../docs/framework/deployment/how-the-runtime-locates-assemblies.md)  
  [IMetaDataAssemblyImport 介面](../../../../docs/framework/unmanaged-api/metadata/imetadataassemblyimport-interface.md)

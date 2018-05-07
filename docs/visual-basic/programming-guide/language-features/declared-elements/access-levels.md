@@ -1,12 +1,6 @@
 ---
-title: "Visual Basic 中的存取層級"
-ms.custom: 
+title: Visual Basic 中的存取層級
 ms.date: 07/20/2015
-ms.prod: .net
-ms.reviewer: 
-ms.suite: 
-ms.technology: devlang-visual-basic
-ms.topic: article
 helpviewer_keywords:
 - members [Visual Basic], accessing in Visual Basic
 - Friend access modifier
@@ -19,14 +13,11 @@ helpviewer_keywords:
 - Private access modifier
 - declared elements [Visual Basic], access level
 ms.assetid: 6e06c1ab-fd78-47f0-83a8-1152780b5e1a
-caps.latest.revision: "16"
-author: dotnet-bot
-ms.author: dotnetcontent
-ms.openlocfilehash: 87e43ac7e813cece1179bdaf24c86fa62adcb438
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.openlocfilehash: 6f8fda62e468e3735e3ae36afdebe440a8e4bc04
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="access-levels-in-visual-basic"></a>Visual Basic 中的存取層級
 *存取層級*的宣告的項目存取它的範圍，也就是何種程式碼具有讀取或寫入其中的權限。 這決定您如何宣告項目本身，不僅可以也的項目容器的存取層級。 無法存取包含的項目中的程式碼無法存取任何其包含的項目，即使這些宣告為`Public`。 例如，`Public`變數中`Private`結構從存取類別的一部分，其中包含結構，而不是從該類別之外。  
@@ -83,11 +74,11 @@ Private numberForMeOnly As Integer
   
 |存取修飾詞|授與存取層級|您可以宣告具有此存取層級項目|宣告內容中，您可以使用此修飾詞|  
 |---------------------|--------------------------|-----------------------------------------------------|----------------------------------------------------------------|  
-|`Public`|不受限制的：<br /><br /> 可以看到公用項目中的任何程式碼可以存取它|介面<br /><br /> 模組<br /><br /> 類別<br /><br /> 結構<br /><br /> 結構成員<br /><br /> 程序<br /><br /> 屬性<br /><br /> 成員變數<br /><br /> 常數<br /><br /> 列舉<br /><br /> 事件<br /><br /> 外部宣告<br /><br /> 委派|原始程式檔<br /><br /> 命名空間<br /><br /> 介面<br /><br /> 模組<br /><br /> 類別<br /><br /> 結構|  
+|`Public`|不受限制的：<br /><br /> 可以看到公用項目中的任何程式碼可以存取它|介面<br /><br /> 模組<br /><br /> 類別<br /><br /> 結構<br /><br /> 結構成員<br /><br /> 程序<br /><br /> 屬性<br /><br /> 成員變數<br /><br /> 常數<br /><br /> 列舉<br /><br /> 事件<br /><br /> 外部宣告<br /><br /> 委派|原始程式檔<br /><br /> 命名空間<br /><br /> 介面<br /><br /> Module<br /><br /> 類別<br /><br /> 結構|  
 |`Protected`|衍生：<br /><br /> 在類別宣告為受保護的項目或從其衍生的類別可以存取之項目的程式碼|介面<br /><br /> 類別<br /><br /> 結構<br /><br /> 程序<br /><br /> 屬性<br /><br /> 成員變數<br /><br /> 常數<br /><br /> 列舉<br /><br /> 事件<br /><br /> 外部宣告<br /><br /> 委派|類別|  
-|`Friend`|組件︰<br /><br /> 宣告 friend 項目可以存取它的組件中的程式碼|介面<br /><br /> 模組<br /><br /> 類別<br /><br /> 結構<br /><br /> 結構成員<br /><br /> 程序<br /><br /> 屬性<br /><br /> 成員變數<br /><br /> 常數<br /><br /> 列舉<br /><br /> 事件<br /><br /> 外部宣告<br /><br /> 委派|原始程式檔<br /><br /> 命名空間<br /><br /> 介面<br /><br /> 模組<br /><br /> 類別<br /><br /> 結構|  
+|`Friend`|組件︰<br /><br /> 宣告 friend 項目可以存取它的組件中的程式碼|介面<br /><br /> 模組<br /><br /> 類別<br /><br /> 結構<br /><br /> 結構成員<br /><br /> 程序<br /><br /> 屬性<br /><br /> 成員變數<br /><br /> 常數<br /><br /> 列舉<br /><br /> 事件<br /><br /> 外部宣告<br /><br /> 委派|原始程式檔<br /><br /> 命名空間<br /><br /> 介面<br /><br /> Module<br /><br /> 類別<br /><br /> 結構|  
 |`Protected` `Friend`|等位的`Protected`和`Friend`:<br /><br /> 在相同類別或為受保護的 friend 項目，或在任何衍生自的項目類別的類別中的相同組件中的程式碼後，即可存取|介面<br /><br /> 類別<br /><br /> 結構<br /><br /> 程序<br /><br /> 屬性<br /><br /> 成員變數<br /><br /> 常數<br /><br /> 列舉<br /><br /> 事件<br /><br /> 外部宣告<br /><br /> 委派|類別|  
-|`Private`|宣告內容：<br /><br /> 宣告私用的項目，包括所包含的型別內的程式碼可以存取之項目的型別中的程式碼|介面<br /><br /> 類別<br /><br /> 結構<br /><br /> 結構成員<br /><br /> 程序<br /><br /> 屬性<br /><br /> 成員變數<br /><br /> 常數<br /><br /> 列舉<br /><br /> 事件<br /><br /> 外部宣告<br /><br /> 委派|模組<br /><br /> 類別<br /><br /> 結構|  
+|`Private`|宣告內容：<br /><br /> 宣告私用的項目，包括所包含的型別內的程式碼可以存取之項目的型別中的程式碼|介面<br /><br /> 類別<br /><br /> 結構<br /><br /> 結構成員<br /><br /> 程序<br /><br /> 屬性<br /><br /> 成員變數<br /><br /> 常數<br /><br /> 列舉<br /><br /> 事件<br /><br /> 外部宣告<br /><br /> 委派|Module<br /><br /> 類別<br /><br /> 結構|  
   
 ## <a name="see-also"></a>另請參閱  
  [Dim 陳述式](../../../../visual-basic/language-reference/statements/dim-statement.md)  

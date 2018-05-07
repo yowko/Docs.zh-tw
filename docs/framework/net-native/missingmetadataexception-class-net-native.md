@@ -1,24 +1,14 @@
 ---
-title: "MissingMetadataException 類別 (.NET Native)"
-ms.custom: 
+title: MissingMetadataException 類別 (.NET Native)
 ms.date: 03/30/2017
-ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.technology: dotnet-clr
-ms.tgt_pltfrm: 
-ms.topic: article
 ms.assetid: 408f25c4-6d60-475c-92b1-7b52b777c6db
-caps.latest.revision: "18"
 author: rpetrusha
 ms.author: ronpet
-manager: wpickett
-ms.workload: dotnet
-ms.openlocfilehash: 168ff7743aa33ac05309e55b0284c23c8bd087a3
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.openlocfilehash: 3955329903af0d4c27bc7228c7c9025cb03e00f8
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="missingmetadataexception-class-net-native"></a>MissingMetadataException 類別 (.NET Native)
 **僅限 Windows 10 之 Windows 應用程式的 .NET[!INCLUDE[net_native](../../../includes/net-native-md.md)]**  
@@ -90,7 +80,7 @@ ms.lasthandoff: 12/22/2017
   
  `MissingMetadataException` 類別沒有包含唯一成員；其所有成員都是繼承自其基底類別 <xref:System.TypeAccessException>。  
   
-## <a name="see-also"></a>請參閱  
+## <a name="see-also"></a>另請參閱  
  <xref:System.Exception?displayProperty=nameWithType>  
  <xref:System.TypeAccessException>  
  [MissingInteropDataException 類別](../../../docs/framework/net-native/missinginteropdataexception-class-net-native.md)  

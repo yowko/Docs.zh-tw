@@ -1,14 +1,6 @@
 ---
 title: WPF 架構
-ms.custom: ''
 ms.date: 03/30/2017
-ms.prod: .net-framework
-ms.reviewer: ''
-ms.suite: ''
-ms.technology:
-- dotnet-wpf
-ms.tgt_pltfrm: ''
-ms.topic: article
 helpviewer_keywords:
 - properties [WPF], attached
 - attached properties [WPF]
@@ -24,17 +16,11 @@ helpviewer_keywords:
 - data templates [WPF]
 - thread [WPF], affinity
 ms.assetid: 8579c10b-76ab-4c52-9691-195ce02333c8
-caps.latest.revision: 17
-author: dotnet-bot
-ms.author: dotnetcontent
-manager: wpickett
-ms.workload:
-- dotnet
-ms.openlocfilehash: 29c8e2d632c37a299389b1bdc7f3f19f7df2f7e7
-ms.sourcegitcommit: 94d33cadc5ff81d2ac389bf5f26422c227832052
+ms.openlocfilehash: 70afa7e193832837650d72837b25e26e3b64c180
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/30/2018
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="wpf-architecture"></a>WPF 架構
 本主題提供 Windows Presentation Foundation (WPF) 的類別階層架構的導覽。 它涵蓋大部分的 [!INCLUDE[TLA2#tla_wpf](../../../../includes/tla2sharptla-wpf-md.md)] 主要子系統，並描述其互動方式。 它也會詳述 [!INCLUDE[TLA2#tla_wpf](../../../../includes/tla2sharptla-wpf-md.md)] 架構設計人員所進行的一些選擇。  
@@ -64,7 +50,7 @@ ms.lasthandoff: 04/30/2018
 ## <a name="systemwindowsdependencyobject"></a>System.Windows.DependencyObject  
  建置 [!INCLUDE[TLA2#tla_wpf](../../../../includes/tla2sharptla-wpf-md.md)] 時所使用的其中一個主要架構原理是方法或事件的屬性喜好設定。 屬性是宣告式，可讓您更輕鬆地指定意圖，而不是動作。 這也支援用於顯示使用者介面內容的模型驅動或資料驅動系統。 此原理的預期效果是建立多個可繫結的屬性，以進一步控制應用程式的行為。  
   
- 若要讓屬性驅動多個系統，則需要比 [!INCLUDE[TLA2#tla_clr](../../../../includes/tla2sharptla-clr-md.md)] 所提供的屬性系統更豐富的屬性系統。 這項豐富性的簡單範例是變更通知。 若要啟用雙向繫結，您需要繫結兩端都支援變更通知。 若要讓行為繫結至屬性值，您需要在屬性值變更時收到通知。 [!INCLUDE[TLA#tla_netframewk](../../../../includes/tlasharptla-netframewk-md.md)] 的 **INotifyPropertyChange** 介面可讓物件發行變更通知，不過它是選擇性的。  
+ 若要讓屬性驅動多個系統，則需要比 [!INCLUDE[TLA2#tla_clr](../../../../includes/tla2sharptla-clr-md.md)] 所提供的屬性系統更豐富的屬性系統。 這項豐富性的簡單範例是變更通知。 若要啟用雙向繫結，您需要繫結兩端都支援變更通知。 若要讓行為繫結至屬性值，您需要在屬性值變更時收到通知。 Microsoft.NET Framework 使用的介面， **INotifyPropertyChange**，可讓發行變更通知的物件，不過它是選擇性。  
   
  [!INCLUDE[TLA2#tla_wpf](../../../../includes/tla2sharptla-wpf-md.md)] 提供更豐富的屬性系統，衍生自<xref:System.Windows.DependencyObject>型別。 屬性系統實際上是「相依性」屬性系統，因此它會追蹤屬性運算式之間的相依性，並在相依性變更時自動重新驗證屬性值。 例如，如果您有繼承的屬性 (例如<xref:System.Windows.Controls.Control.FontSize%2A>)，如果在屬性上父項目繼承的值變更，系統就會自動更新。  
   

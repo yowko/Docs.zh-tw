@@ -1,19 +1,14 @@
 ---
 title: 監視進行容器化應用程式服務
 description: Microsoft 平台和工具的容器化 Docker 應用程式生命週期
-ms.prod: .net
 author: CESARDELATORRE
 ms.author: wiwagn
 ms.date: 09/22/2017
-ms.topic: article
-ms.workload:
-- dotnet
-- dotnetcore
-ms.openlocfilehash: 26854e9efc4d7e43d5896c30a1c5ce0801045f45
-ms.sourcegitcommit: 2e8acae16ae802f2d6d04e3ce0a6dbf04e476513
+ms.openlocfilehash: 3877767117d8292644782fc07df6667931688be2
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/18/2018
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="monitor-containerized-application-services"></a>監視進行容器化應用程式服務
 

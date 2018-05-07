@@ -1,29 +1,15 @@
 ---
 title: 權限提高
-ms.custom: ''
 ms.date: 03/30/2017
-ms.prod: .net-framework
-ms.reviewer: ''
-ms.suite: ''
-ms.technology:
-- dotnet-clr
-ms.tgt_pltfrm: ''
-ms.topic: article
 helpviewer_keywords:
 - elevation of privilege [WCF]
 - security [WCF], elevation of privilege
 ms.assetid: 146e1c66-2a76-4ed3-98a5-fd77851a06d9
-caps.latest.revision: 16
-author: dotnet-bot
-ms.author: dotnetcontent
-manager: wpickett
-ms.workload:
-- dotnet
-ms.openlocfilehash: 6d93a8ae074e4016d7d8ec4b8734f0d14ead938f
-ms.sourcegitcommit: 03ee570f6f528a7d23a4221dcb26a9498edbdf8c
+ms.openlocfilehash: c71936d087ef046848c75d1fa0638aaafbe43c9a
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/28/2018
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="elevation-of-privilege"></a>權限提高
 *提高權限*得到的權限高於原先賦予攻擊者的授權。 例如，具有「唯讀」權限的攻擊者以不明方式將權限提高為「讀取和寫入」。  
@@ -36,7 +22,7 @@ ms.lasthandoff: 04/28/2018
 ## <a name="switching-identity-without-a-security-context"></a>切換不含安全性內容的身分識別  
  下列僅適用於 [!INCLUDE[vstecwinfx](../../../../includes/vstecwinfx-md.md)]。  
   
- 當用戶端與伺服器之間建立連線後，除了以下情況以外，用戶端身分識別不會變更：在開啟了 [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] 用戶端之後，如果下列所有條件都成立：  
+ 當建立用戶端和伺服器，用戶端的身分識別之間的連線不會變更，除非在一種情況： 開啟 WCF 用戶端時，如果所有下列條件成立後：  
   
 -   若要建立安全性內容 （使用傳輸安全性工作階段或訊息安全性工作階段） 的程序已關閉 (<xref:System.ServiceModel.NonDualMessageSecurityOverHttp.EstablishSecurityContext%2A>屬性設定為`false`發生訊息安全性或傳輸無法建立安全性工作階段會使用傳輸安全性情況中。 HTTPS 即是此類傳輸的範例之一)。  
   
@@ -46,7 +32,7 @@ ms.lasthandoff: 04/28/2018
   
 -   您在模擬的安全性內容中呼叫服務。  
   
- 如果這些條件都成立，則用來向服務驗證用戶端的身分識別可能會在開啟 [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] 用戶端之後改變 (可能不是模擬的身分識別，而是處理序識別)。 這是因為用來向服務驗證用戶端的 Windows 認證會隨著每個訊息一併傳輸，而用來驗證的認證則是從目前執行緒的 Windows 識別取得。 如果目前執行緒的 Windows 識別變更 (例如，藉由模擬不同的呼叫者)，則附加至訊息並用來向服務驗證用戶端的認證可能會一併變更。  
+ 如果這些條件都成立，可能會變更用來驗證服務的用戶端的識別 （它可能不是模擬身分識別，而處理序身分識別而） 開啟 WCF 用戶端後。 這是因為用來向服務驗證用戶端的 Windows 認證會隨著每個訊息一併傳輸，而用來驗證的認證則是從目前執行緒的 Windows 識別取得。 如果目前執行緒的 Windows 識別變更 (例如，藉由模擬不同的呼叫者)，則附加至訊息並用來向服務驗證用戶端的認證可能會一併變更。  
   
  如果您希望在合併使用 Windows 驗證與模擬機制時擁有決定性行為，則您需要明確地設定 Windows 認證，或是需要建立服務的安全性內容。 若要這麼做，請使用訊息安全性工作階段或傳輸安全性工作階段。 例如，net.tcp 傳輸可以提供傳輸安全性工作階段。 此外，在呼叫服務時，只能使用同步版本的用戶端作業。 如果您建立訊息安全性內容，那麼與服務保持連線的時間不應該比設定的工作階段更新期間還長，因為身分識別也會在工作階段更新處理期間變更。  
   
@@ -59,9 +45,9 @@ ms.lasthandoff: 04/28/2018
 >  使用 `BeginOpen` 方法時，所擷取的認證無法保證一定是呼叫該方法的處理序認證。  
   
 ## <a name="token-caches-allow-replay-using-obsolete-data"></a>權杖快取允許重新執行使用已過時資料  
- [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] 會使用本機安全性授權 (LSA) `LogonUser` 函式，以使用者名稱和密碼來驗證使用者。 由於登入函式是很耗時的作業，[!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] 可讓您快取用來代表已驗證使用者的權杖來提升效能。 快取機制可儲存 `LogonUser` 的結果以供後續使用。 預設值則會停用這項機制若要啟用它，請設定<xref:System.ServiceModel.Security.UserNamePasswordServiceCredential.CacheLogonTokens%2A>屬性`true`，或使用`cacheLogonTokens`屬性[ \<userNameAuthentication >](../../../../docs/framework/configure-apps/file-schema/wcf/usernameauthentication.md)。  
+ WCF 使用本機安全性授權 (LSA)`LogonUser`函式來驗證使用者的使用者名稱和密碼。 因為登入函式是昂貴的作業，WCF 可讓您快取權杖，代表已驗證的使用者以提高效能。 快取機制可儲存 `LogonUser` 的結果以供後續使用。 預設值則會停用這項機制若要啟用它，請設定<xref:System.ServiceModel.Security.UserNamePasswordServiceCredential.CacheLogonTokens%2A>屬性`true`，或使用`cacheLogonTokens`屬性[ \<userNameAuthentication >](../../../../docs/framework/configure-apps/file-schema/wcf/usernameauthentication.md)。  
   
- 您可以將 <xref:System.ServiceModel.Security.UserNamePasswordServiceCredential.CachedLogonTokenLifetime%2A> 屬性 (Property) 設為 <xref:System.TimeSpan>，或是使用 `cachedLogonTokenLifetime` 項目的 `userNameAuthentication` 屬性 (Attribute) 為快取權杖設定存留時間 (TTL)；預設時間為 15 分鐘。 請注意，一旦快取了權杖，任何使用相同使用者名稱與密碼的用戶端都可以使用該權杖，就算使用者帳戶已從 Windows 中刪除，或當其密碼已經變更也是一樣。 除非 TTL 到期，並從快取中移除了權杖，否則 [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] 會持續允許 (可能會是惡意的) 使用者進行驗證。  
+ 您可以將 <xref:System.ServiceModel.Security.UserNamePasswordServiceCredential.CachedLogonTokenLifetime%2A> 屬性 (Property) 設為 <xref:System.TimeSpan>，或是使用 `cachedLogonTokenLifetime` 項目的 `userNameAuthentication` 屬性 (Attribute) 為快取權杖設定存留時間 (TTL)；預設時間為 15 分鐘。 請注意，一旦快取了權杖，任何使用相同使用者名稱與密碼的用戶端都可以使用該權杖，就算使用者帳戶已從 Windows 中刪除，或當其密碼已經變更也是一樣。 除非 TTL 到期，並從快取中移除了權杖，WCF 可讓 （可能是惡意的） 使用者驗證。  
   
  若要緩解這個情況：請將 `cachedLogonTokenLifetime` 值設為使用者所需的最短時間範圍來減少可能遭受攻擊的時間範圍。  
   
@@ -91,7 +77,7 @@ ms.lasthandoff: 04/28/2018
   
 -   服務的電腦包含兩個以上的憑證具有相同的公開金鑰，但是憑證中包含不同的資訊。  
   
--   服務擷取的憑證符合主體主鑰識別碼，但不是用戶端原先想要使用的那組憑證。 當 [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] 收到訊息並驗證簽章之後，[!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] 會將非預期的 X.509 憑證中資訊對應至可能是從用戶端預期的權限提升的不同宣告集。  
+-   服務擷取的憑證符合主體主鑰識別碼，但不是用戶端原先想要使用的那組憑證。 當 WCF 接收訊息並驗證簽章時，WCF 會對應至一組宣告的不同可能提高權限從用戶端預期的非預期的 X.509 憑證中的資訊。  
   
  若要緩解這個情況，請以另一種方式來參照 X.509 憑證，例如使用 <xref:System.ServiceModel.Security.Tokens.X509KeyIdentifierClauseType.IssuerSerial>。  
   

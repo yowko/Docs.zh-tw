@@ -1,25 +1,17 @@
 ---
 title: 修飾詞 (Visual Basic)
 ms.date: 07/20/2015
-ms.prod: .net
-ms.suite: ''
-ms.technology:
-- devlang-visual-basic
-ms.topic: article
 ms.assetid: a49a0e51-d700-4705-9196-3e0eb582dda6
-caps.latest.revision: 12
-author: dotnet-bot
-ms.author: dotnetcontent
-ms.openlocfilehash: 1564ccf2d8f0fc2f787a19feec17ad5a0badc7db
-ms.sourcegitcommit: bd1ef61f4bb794b25383d3d72e71041a5ced172e
+ms.openlocfilehash: 5e4a37a53d04174c53fdbdc30139d61ecd9998cc
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/18/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="modifiers-visual-basic"></a>修飾詞 (Visual Basic)
 本節中的主題將說明 Visual Basic 執行階段修飾詞。  
   
-## <a name="in-this-section"></a>本章節內容  
+## <a name="in-this-section"></a>本節內容  
  [Ansi](../../../visual-basic/language-reference/modifiers/ansi.md)  
   
  [Assembly](../../../visual-basic/language-reference/modifiers/assembly.md)  

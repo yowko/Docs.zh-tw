@@ -1,13 +1,7 @@
 ---
 title: 例外狀況和效能
-ms.custom: ''
 ms.date: 03/30/2017
-ms.prod: .net
-ms.reviewer: ''
-ms.suite: ''
 ms.technology: dotnet-standard
-ms.tgt_pltfrm: ''
-ms.topic: article
 helpviewer_keywords:
 - tester-doer pattern
 - TryParse pattern
@@ -15,18 +9,13 @@ helpviewer_keywords:
 - exceptions, performance
 - throwing exceptions, performance
 ms.assetid: 3ad6aad9-08e6-4232-b336-0e301f2493e6
-caps.latest.revision: 12
 author: rpetrusha
 ms.author: ronpet
-manager: wpickett
-ms.workload:
-- dotnet
-- dotnetcore
-ms.openlocfilehash: 7972cf7d63ee22e791d46046f30c9be467cc758e
-ms.sourcegitcommit: 2e8acae16ae802f2d6d04e3ce0a6dbf04e476513
+ms.openlocfilehash: dfffc2a1c0f607541194a7f51717d5bf8a8537f1
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/18/2018
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="exceptions-and-performance"></a>例外狀況和效能
 一個常見的問題相關的例外狀況是針對經常失敗的程式碼使用例外狀況，如果實作的效能將會無法接受。 這是有效的問題。 當成員擲回例外狀況時，其效能可能會大幅度速度較慢。 不過，它是達成目標時不允許使用錯誤碼的例外狀況指導方針嚴格遵守良好的效能。 本節中所述的兩種模式提供的建議執行這項操作。  

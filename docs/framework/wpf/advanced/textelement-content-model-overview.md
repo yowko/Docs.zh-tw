@@ -1,13 +1,6 @@
 ---
-title: "TextElement 內容模型概觀"
-ms.custom: 
+title: TextElement 內容模型概觀
 ms.date: 03/30/2017
-ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.technology: dotnet-wpf
-ms.tgt_pltfrm: 
-ms.topic: article
 dev_langs:
 - csharp
 - vb
@@ -16,16 +9,11 @@ helpviewer_keywords:
 - TextElement content model [WPF]
 - flow content elements [WPF], TextElement content model
 ms.assetid: d0a7791c-b090-438c-812f-b9d009d83ee9
-caps.latest.revision: "11"
-author: dotnet-bot
-ms.author: dotnetcontent
-manager: wpickett
-ms.workload: dotnet
-ms.openlocfilehash: 95d25ff6819ba913b7e9270bc2d87dd77032c5c6
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.openlocfilehash: 4a50e8a10563fdc5e16ee2e2a46389e13b51e447
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="textelement-content-model-overview"></a>TextElement 內容模型概觀
 本內容模型的概觀說明支援的內容<xref:System.Windows.Documents.TextElement>。 <xref:System.Windows.Documents.Paragraph>類別是一種<xref:System.Windows.Documents.TextElement>。 內容模型描述哪些物件/元素可包含於其他物件/元素內。 本概觀摘要說明用於衍生自物件的內容模型<xref:System.Windows.Documents.TextElement>。 如需詳細資訊，請參閱[非固定格式文件概觀](../../../../docs/framework/wpf/advanced/flow-document-overview.md)。  
@@ -69,9 +57,9 @@ ms.lasthandoff: 12/22/2017
 ## <a name="working-with-textelement-content-programmatically"></a>以程式設計方式使用 TextElement 內容  
  內容<xref:System.Windows.Documents.TextElement>所組成的集合，因此以程式設計方式管理的內容<xref:System.Windows.Documents.TextElement>物件由使用這些集合。 有三個不同的集合所使用<xref:System.Windows.Documents.TextElement>-衍生的類別：  
   
--   <xref:System.Windows.Documents.InlineCollection>： 表示的集合<xref:System.Windows.Documents.Inline>項目。 <xref:System.Windows.Documents.InlineCollection>定義可允許子內容的<xref:System.Windows.Documents.Paragraph>， <xref:System.Windows.Documents.Span>，和<xref:System.Windows.Controls.TextBlock>項目。  
+-   <xref:System.Windows.Documents.InlineCollection>： 表示的集合<xref:System.Windows.Documents.Inline>項目。 <xref:System.Windows.Documents.InlineCollection> 定義可允許子內容的<xref:System.Windows.Documents.Paragraph>， <xref:System.Windows.Documents.Span>，和<xref:System.Windows.Controls.TextBlock>項目。  
   
--   <xref:System.Windows.Documents.BlockCollection>： 表示的集合<xref:System.Windows.Documents.Block>項目。 <xref:System.Windows.Documents.BlockCollection>定義可允許子內容的<xref:System.Windows.Documents.FlowDocument>， <xref:System.Windows.Documents.Section>， <xref:System.Windows.Documents.ListItem>， <xref:System.Windows.Documents.TableCell>， <xref:System.Windows.Documents.Floater>，和<xref:System.Windows.Documents.Figure>項目。  
+-   <xref:System.Windows.Documents.BlockCollection>： 表示的集合<xref:System.Windows.Documents.Block>項目。 <xref:System.Windows.Documents.BlockCollection> 定義可允許子內容的<xref:System.Windows.Documents.FlowDocument>， <xref:System.Windows.Documents.Section>， <xref:System.Windows.Documents.ListItem>， <xref:System.Windows.Documents.TableCell>， <xref:System.Windows.Documents.Floater>，和<xref:System.Windows.Documents.Figure>項目。  
   
 -   <xref:System.Windows.Documents.ListItemCollection>： 代表特定的內容項目已排序流動內容項目或未排序<xref:System.Windows.Documents.List>。  
   
@@ -112,7 +100,7 @@ ms.lasthandoff: 12/22/2017
 ## <a name="types-that-can-contain-textelement-objects"></a>可包含 TextElement 物件的類型  
  請參閱[WPF 內容模型](../../../../docs/framework/wpf/controls/wpf-content-model.md)。  
   
-## <a name="see-also"></a>請參閱  
+## <a name="see-also"></a>另請參閱  
  [透過 Blocks 屬性管理 FlowDocument](../../../../docs/framework/wpf/advanced/how-to-manipulate-a-flowdocument-through-the-blocks-property.md)  
  [透過 Blocks 屬性管理非固定格式內容元素](../../../../docs/framework/wpf/advanced/how-to-manipulate-flow-content-elements-through-the-blocks-property.md)  
  [透過 Blocks 屬性管理 FlowDocument](../../../../docs/framework/wpf/advanced/how-to-manipulate-a-flowdocument-through-the-blocks-property.md)  

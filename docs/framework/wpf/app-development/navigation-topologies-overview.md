@@ -1,13 +1,6 @@
 ---
-title: "巡覽拓撲概觀"
-ms.custom: 
+title: 巡覽拓撲概觀
 ms.date: 03/30/2017
-ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.technology: dotnet-wpf
-ms.tgt_pltfrm: 
-ms.topic: article
 helpviewer_keywords:
 - linear topology [WPF]
 - fixed hierarchical topology [WPF]
@@ -16,19 +9,14 @@ helpviewer_keywords:
 - navigation topologies [WPF]
 - dynamically-generated topology
 ms.assetid: 5d5ee837-629a-4933-869a-186dc22ac43d
-caps.latest.revision: "20"
-author: dotnet-bot
-ms.author: dotnetcontent
-manager: wpickett
-ms.workload: dotnet
-ms.openlocfilehash: dbe7fe80639537293413d8fb923033909a2451e9
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.openlocfilehash: 8976ba7973e4f53022846b98c47d5613fd6ba158
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="navigation-topologies-overview"></a>巡覽拓撲概觀
-<a name="introduction"></a>本概觀介紹中瀏覽拓撲[!INCLUDE[TLA2#tla_wpf](../../../../includes/tla2sharptla-wpf-md.md)]。 並接著說明三種常見的巡覽拓撲及其範例。  
+<a name="introduction"></a> 本概觀介紹中瀏覽拓撲[!INCLUDE[TLA2#tla_wpf](../../../../includes/tla2sharptla-wpf-md.md)]。 並接著說明三種常見的巡覽拓撲及其範例。  
   
 > [!NOTE]
 >  閱讀本主題之前，您應該熟悉在結構化之導覽的概念[!INCLUDE[TLA2#tla_wpf](../../../../includes/tla2sharptla-wpf-md.md)]頁面函式的使用。 如需這兩個主題的詳細資訊，請參閱[結構化的巡覽概觀](../../../../docs/framework/wpf/app-development/structured-navigation-overview.md)。  
@@ -151,7 +139,7 @@ ms.lasthandoff: 12/22/2017
   
 -   完成精靈時 (已接受或取消)，即會從日誌中移除精靈所含的頁面。 這可將精靈的每個執行個體隔離，以避免潛在的資料或狀態異常。  
   
-## <a name="see-also"></a>請參閱  
+## <a name="see-also"></a>另請參閱  
  <xref:System.Windows.Controls.Page>  
  <xref:System.Windows.Navigation.PageFunction%601>  
  <xref:System.Windows.Navigation.NavigationService>  

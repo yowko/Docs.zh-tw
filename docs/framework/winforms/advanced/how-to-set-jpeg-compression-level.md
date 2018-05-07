@@ -1,13 +1,6 @@
 ---
-title: "如何：設定 JPEG 壓縮層級"
-ms.custom: 
+title: 如何：設定 JPEG 壓縮層級
 ms.date: 03/30/2017
-ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.technology: dotnet-winforms
-ms.tgt_pltfrm: 
-ms.topic: article
 dev_langs:
 - csharp
 - vb
@@ -15,16 +8,11 @@ helpviewer_keywords:
 - images [Windows Forms], changing encoder parameters
 - JPEG images [Windows Forms], setting quality level
 ms.assetid: 4b9a74e3-9504-43c1-9f28-ace651d0772e
-caps.latest.revision: "11"
-author: dotnet-bot
-ms.author: dotnetcontent
-manager: wpickett
-ms.workload: dotnet
-ms.openlocfilehash: 02e417fbcdb68e114ea0fc7afad7c22f6b2fdae9
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.openlocfilehash: 5f12f0ed8bae7b6cfb6f3162848e3c3761f7dbbd
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="how-to-set-jpeg-compression-level"></a>如何：設定 JPEG 壓縮層級
 當您將影像儲存至磁碟以減少檔案大小或改善其品質時，可能會想要修改影像的參數。 您可以修改其壓縮層級來調整 JPEG 影像的品質。 若要儲存為 JPEG 影像時，請指定壓縮層級，您必須建立<xref:System.Drawing.Imaging.EncoderParameters>物件，並將它傳遞給<xref:System.Drawing.Image.Save%2A>方法<xref:System.Drawing.Image>類別。 初始化<xref:System.Drawing.Imaging.EncoderParameters>物件，所以它沒有陣列，其中包含一<xref:System.Drawing.Imaging.EncoderParameter>。 當您建立<xref:System.Drawing.Imaging.EncoderParameter>，指定<xref:System.Drawing.Imaging.Encoder.Quality>編碼器，以及所要的壓縮層級。  
@@ -140,7 +128,7 @@ End Function
   
 -   名為 `TestPhoto.jpg` 且位在 **c:\\** 的影像檔。  
   
-## <a name="see-also"></a>請參閱  
+## <a name="see-also"></a>另請參閱  
  [操作說明：判斷編碼器所支援的參數](../../../../docs/framework/winforms/advanced/how-to-determine-the-parameters-supported-by-an-encoder.md)  
  [點陣圖類型](../../../../docs/framework/winforms/advanced/types-of-bitmaps.md)  
  [使用 Managed GDI+ 中的影像編碼器和解碼器](../../../../docs/framework/winforms/advanced/using-image-encoders-and-decoders-in-managed-gdi.md)

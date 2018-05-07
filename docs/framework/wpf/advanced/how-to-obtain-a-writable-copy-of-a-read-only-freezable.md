@@ -1,13 +1,6 @@
 ---
-title: "如何：取得唯讀 Freezable 的可寫入複本"
-ms.custom: 
+title: 如何：取得唯讀 Freezable 的可寫入複本
 ms.date: 03/30/2017
-ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.technology: dotnet-wpf
-ms.tgt_pltfrm: 
-ms.topic: article
 dev_langs:
 - csharp
 - vb
@@ -15,16 +8,11 @@ helpviewer_keywords:
 - cloning Freezable objects [WPF]
 - Freezable objects [WPF], modifiable clones
 ms.assetid: d028de61-bbe9-4d62-b656-8fe3b1b2ca24
-caps.latest.revision: "5"
-author: dotnet-bot
-ms.author: dotnetcontent
-manager: wpickett
-ms.workload: dotnet
-ms.openlocfilehash: 9fe22e49ee28de60bc76d7a4f543462bbcfac48c
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.openlocfilehash: 894a2e42ca3f5cbb159c3129227f4b03e71fc4ee
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="how-to-obtain-a-writable-copy-of-a-read-only-freezable"></a>如何：取得唯讀 Freezable 的可寫入複本
 這個範例示範如何使用<xref:System.Windows.Freezable.Clone%2A>方法來建立唯讀的可寫入副本<xref:System.Windows.Freezable>。  
@@ -39,7 +27,7 @@ ms.lasthandoff: 12/22/2017
   
  如需有關<xref:System.Windows.Freezable>物件，請參閱[Freezable 物件概觀](../../../../docs/framework/wpf/advanced/freezable-objects-overview.md)。  
   
-## <a name="see-also"></a>請參閱  
+## <a name="see-also"></a>另請參閱  
  <xref:System.Windows.Freezable>  
  <xref:System.Windows.Freezable.CloneCurrentValue%2A>  
  [Freezable 物件概觀](../../../../docs/framework/wpf/advanced/freezable-objects-overview.md)  

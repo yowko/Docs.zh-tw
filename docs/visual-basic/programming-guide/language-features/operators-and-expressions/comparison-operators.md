@@ -1,13 +1,6 @@
 ---
 title: Comparison Operators in Visual Basic
-ms.custom: ''
 ms.date: 07/20/2015
-ms.prod: .net
-ms.reviewer: ''
-ms.suite: ''
-ms.technology:
-- devlang-visual-basic
-ms.topic: article
 helpviewer_keywords:
 - comparison operators [Visual Basic], comparing strings
 - comparison operators [Visual Basic], comparing objects
@@ -22,14 +15,11 @@ helpviewer_keywords:
 - comparison operators [Visual Basic], comparing numeric values
 - operators [Visual Basic], comparison
 ms.assetid: 0b570339-5407-474f-8421-e183a8b303ee
-caps.latest.revision: 13
-author: dotnet-bot
-ms.author: dotnetcontent
-ms.openlocfilehash: 77c5520be63d6d05cc4b895b99b466cd8e486f6a
-ms.sourcegitcommit: 86adcc06e35390f13c1e372c36d2e044f1fc31ef
+ms.openlocfilehash: 873ee31bf9c2ab195d66337d52e4a1bb7075ac76
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/26/2018
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="comparison-operators-in-visual-basic"></a>Comparison Operators in Visual Basic
 比較運算子比較兩個運算式，並傳回`Boolean`值，表示其值的關聯性。 比較數值、 運算子、 用於比較字串和運算子比較物件有運算子。 本文件討論所有的三種類型的運算子。  

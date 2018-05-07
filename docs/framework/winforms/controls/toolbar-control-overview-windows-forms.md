@@ -1,31 +1,17 @@
 ---
-title: "ToolBar 控制項概觀 (Windows Form)"
-ms.custom: 
+title: ToolBar 控制項概觀 (Windows Form)
 ms.date: 03/30/2017
-ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.technology:
-- dotnet-winforms
-ms.tgt_pltfrm: 
-ms.topic: article
 f1_keywords:
 - ToolBar
 helpviewer_keywords:
 - toolbars [Windows Forms], about toolbars
 - ToolBar control [Windows Forms], about ToolBar controls
 ms.assetid: d426b203-0216-4dbe-b834-1641e50a9c29
-caps.latest.revision: 
-author: dotnet-bot
-ms.author: dotnetcontent
-manager: wpickett
-ms.workload:
-- dotnet
-ms.openlocfilehash: eac54e18f397cf455ffd5fa33c2e000d87b917a0
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.openlocfilehash: f94ac009081ca4b0c1c462f6413b711a6e64edfc
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="toolbar-control-overview-windows-forms"></a>ToolBar 控制項概觀 (Windows Form)
 > [!NOTE]
@@ -43,7 +29,7 @@ ms.lasthandoff: 12/22/2017
   
  <xref:System.Windows.Forms.ToolBar>控制項可讓您建立工具列加入<xref:System.Windows.Forms.Button>物件加入至<xref:System.Windows.Forms.ToolBar.Buttons%2A>集合。 您可以使用 集合編輯器加入至按鈕<xref:System.Windows.Forms.ToolBar>控制項; 每一個<xref:System.Windows.Forms.Button>物件應該具有文字或指派，映像，雖然您可以指派兩者。 相關聯 [ImageList](../../../../docs/framework/winforms/controls/imagelist-component-windows-forms.md) 元件所提供的影像。 在執行階段，您可以新增或移除按鈕從<xref:System.Windows.Forms.ToolBar.ToolBarButtonCollection>使用<xref:System.Windows.Forms.ToolBar.ToolBarButtonCollection.Add%2A>和<xref:System.Windows.Forms.ToolBar.ToolBarButtonCollection.Remove%2A>方法。 若要程式設計的按鈕<xref:System.Windows.Forms.ToolBar>，將程式碼加入<xref:System.Windows.Forms.ToolBar.ButtonClick>事件<xref:System.Windows.Forms.ToolBar>，並使用<xref:System.Windows.Forms.ToolBarButtonClickEventArgs.Button%2A>屬性<xref:System.Windows.Forms.ToolBarButtonClickEventArgs>類別以決定哪一個按鈕已按下。  
   
-## <a name="see-also"></a>請參閱  
+## <a name="see-also"></a>另請參閱  
  <xref:System.Windows.Forms.ToolBar>  
  [ToolBar 控制項](../../../../docs/framework/winforms/controls/toolbar-control-windows-forms.md)  
  [操作說明：將按鈕新增至工具列控制項](../../../../docs/framework/winforms/controls/how-to-add-buttons-to-a-toolbar-control.md)  

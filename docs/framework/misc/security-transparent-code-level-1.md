@@ -1,13 +1,6 @@
 ---
-title: "安全性透明的程式碼，層級 1"
-ms.custom: 
+title: 安全性透明的程式碼，層級 1
 ms.date: 03/30/2017
-ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.technology: dotnet-clr
-ms.tgt_pltfrm: 
-ms.topic: article
 helpviewer_keywords:
 - transparent
 - SecurityTreatAsSafeAttribute
@@ -16,16 +9,13 @@ helpviewer_keywords:
 - security-transparent code
 - security [.NET Framework], security-transparent code
 ms.assetid: 5fd8f46d-3961-46a7-84af-2eb1f48e75cf
-caps.latest.revision: "32"
 author: mairaw
 ms.author: mairaw
-manager: wpickett
-ms.workload: dotnet
-ms.openlocfilehash: bd4655524c74175d03191cbf7065177c10e3ddda
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.openlocfilehash: 252611f3aab138ab7344f1afe6eefb0fe2f5ea24
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="security-transparent-code-level-1"></a>安全性透明的程式碼，層級 1
 [!INCLUDE[net_security_note](../../../includes/net-security-note-md.md)]  
@@ -139,6 +129,6 @@ public class B
   
  除了 `Critical` 方法 (明確標記為安全性關鍵) 之外，前述程式碼是透明程式碼。 即使有組件層級 <xref:System.Security.SecurityCriticalAttribute> 屬性，透明度仍是預設的設定。  
   
-## <a name="see-also"></a>請參閱  
+## <a name="see-also"></a>另請參閱  
  [安全性透明的程式碼，層級 2](../../../docs/framework/misc/security-transparent-code-level-2.md)  
  [安全性變更](../../../docs/framework/security/security-changes.md)

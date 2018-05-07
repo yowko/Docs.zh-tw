@@ -1,28 +1,16 @@
 ---
-title: "認識 XAML 節點資料流結構和概念"
-ms.custom: 
+title: 認識 XAML 節點資料流結構和概念
 ms.date: 03/30/2017
-ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.technology: dotnet-wpf
-ms.tgt_pltfrm: 
-ms.topic: article
 helpviewer_keywords:
 - XAML node streams [XAML Services]
 - nodes [XAML Services], XAML node stream
 - XAML [XAML Services], XAML node streams
 ms.assetid: 7c11abec-1075-474c-9d9b-778e5dab21c3
-caps.latest.revision: "14"
-author: wadepickett
-ms.author: wpickett
-manager: wpickett
-ms.workload: dotnet
-ms.openlocfilehash: b5bce62b03b97f182d314a379c9532fc05148050
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.openlocfilehash: fc27426e4d48ae519fc743c8a4f7eb3d1e6a4e81
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="understanding-xaml-node-stream-structures-and-concepts"></a>認識 XAML 節點資料流結構和概念
 XAML 讀取器和 XAML 寫入器在 .NET Framework XAML 服務中實作，根據 XAML 節點資料流的設計概念。 XAML 節點資料流是一組 XAML 節點的概念化。 在此概念化中，XAML 處理器會逐步查核 XAML 中的節點關聯性結構，一次一個 XAML。 在任何時候，只能有一個目前的記錄或目前的位置存在於開啟的 XAML 節點資料流中，而應用程式開發介面的許多層面只會報告從該位置取得的資訊。 XAML 節點資料流中的目前節點可以描述成物件、成員或值。 若將 XAML 視為 XAML 節點資料流，XAML 讀取器可以與 XAML 寫入器進行通訊，並可讓程式在有關 XAML 的載入路徑或儲存路徑作業期間，檢視、變更 XAML 節點資料流的內容，或與其互動。 XAML 讀取器和寫入器應用程式開發介面的設計和 XAML 節點資料流概念，類似先前相關讀取器和寫入器的設計和概念，例如 [!INCLUDE[TLA#tla_xmldom](../../../includes/tlasharptla-xmldom-md.md)] ，以及 <xref:System.Xml.XmlReader> 和 <xref:System.Xml.XmlWriter> 類別。 本主題討論 XAML 節點資料流概念，並說明如何撰寫在 XAML 節點層級與 XAML 表示法互動的常式。  
@@ -228,7 +216,7 @@ public class GameBoard {
 ### <a name="getobject"></a>GetObject  
  `GetObject` 表示 XAML 節點，其中，XAML 物件寫入器並不是要建構新的物件，而是應該要取得物件的包含屬性值。 在支援類型的物件模型中，當包含屬性是刻意唯讀時，在 XAML 節點資料流中遇到 `GetObject` 節點這種一般情況，會發生於集合物件或字典物件。 在此情節中，通常會由擁有者類型的初始化邏輯來建立及初始化集合或字典 (通常是空的)。  
   
-## <a name="see-also"></a>請參閱  
+## <a name="see-also"></a>另請參閱  
  <xref:System.Xaml.XamlObjectReader>  
  [XAML Services](../../../docs/framework/xaml-services/index.md)  
  [XAML 命名空間](../../../docs/framework/xaml-services/xaml-namespaces-for-net-framework-xaml-services.md)

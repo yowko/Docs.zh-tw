@@ -1,24 +1,12 @@
 ---
-title: "進出工作流程服務的異動流動"
-ms.custom: 
+title: 進出工作流程服務的異動流動
 ms.date: 03/30/2017
-ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.technology: dotnet-clr
-ms.tgt_pltfrm: 
-ms.topic: article
 ms.assetid: 03ced70e-b540-4dd9-86c8-87f7bd61f609
-caps.latest.revision: "11"
-author: dotnet-bot
-ms.author: dotnetcontent
-manager: wpickett
-ms.workload: dotnet
-ms.openlocfilehash: a38c0c224c93941efa767d142aa7738296a62f15
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.openlocfilehash: 8b3d3e85b626d033c9ab50e93e3ceb3b86058a2f
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="flowing-transactions-into-and-out-of-workflow-services"></a>進出工作流程服務的異動流動
 工作流程服務與用戶端都可以參與異動。  若要讓服務作業變成環境交易的一部分，請將 <xref:System.ServiceModel.Activities.Receive> 活動放在 <xref:System.ServiceModel.Activities.TransactedReceiveScope> 活動內。 <xref:System.ServiceModel.Activities.Send> 或 <xref:System.ServiceModel.Activities.SendReply> 活動在 <xref:System.ServiceModel.Activities.TransactedReceiveScope> 內所進行的任何呼叫也會在環境交易中進行。 工作流程用戶端應用程式可以使用 <xref:System.Activities.Statements.TransactionScope> 活動建立環境交易，然後使用環境交易呼叫服務作業。 本主題逐步帶領您建立參與交易的工作流程服務和工作流程用戶端。  
@@ -87,7 +75,7 @@ ms.lasthandoff: 12/22/2017
   
 ### <a name="implement-the-workflow-service"></a>實作工作流程服務  
   
-1.  加入新[!INCLUDE[indigo2](../../../../includes/indigo2-md.md)]工作流程服務，稱為`WorkflowService`至`Common`專案。 若要這樣做，右邊按一下`Common`專案，然後選取**新增**，**新項目...**，選取**工作流程**下**已安裝的範本**選取**WCF Workflow Service**。  
+1.  加入新的 WCF Workflow Service，稱為`WorkflowService`至`Common`專案。 若要這樣做，右邊按一下`Common`專案，然後選取**新增**，**新項目...**，選取**工作流程**下**已安裝的範本**選取**WCF Workflow Service**。  
   
      ![加入工作流程服務](../../../../docs/framework/wcf/feature-details/media/addwfservice.JPG "AddWFService")  
   
@@ -120,7 +108,7 @@ ms.lasthandoff: 12/22/2017
   
      ![加入 Receive 活動](../../../../docs/framework/wcf/feature-details/media/serviceaddreceive.JPG "ServiceAddReceive")  
   
-7.  按一下**定義...**中連結<xref:System.ServiceModel.Activities.Receive>活動，然後進行下列設定：  
+7.  按一下**定義...** 中連結<xref:System.ServiceModel.Activities.Receive>活動，然後進行下列設定：  
   
      ![設定 Recieve 活動訊息設定](../../../../docs/framework/wcf/feature-details/media/receivemessagesettings.JPG "ReceiveMessageSettings")  
   
@@ -152,7 +140,7 @@ ms.lasthandoff: 12/22/2017
   
      ![加入 Assign 及 WriteLine 之後](../../../../docs/framework/wcf/feature-details/media/afteraddingsbrwriteline.JPG "AfterAddingSBRWriteLine")  
   
-12. 以滑鼠右鍵按一下<xref:System.ServiceModel.Activities.Receive>活動，然後選取**建立 SendReply**並將它貼在最後一個之後<xref:System.Activities.Statements.WriteLine>活動。 按一下**定義...**中連結`SendReplyToReceive`活動，然後進行下列設定。  
+12. 以滑鼠右鍵按一下<xref:System.ServiceModel.Activities.Receive>活動，然後選取**建立 SendReply**並將它貼在最後一個之後<xref:System.Activities.Statements.WriteLine>活動。 按一下**定義...** 中連結`SendReplyToReceive`活動，然後進行下列設定。  
   
      ![回覆訊息設定](../../../../docs/framework/wcf/feature-details/media/replymessagesettings.JPG "ReplyMessageSettings")  
   
@@ -200,7 +188,7 @@ ms.lasthandoff: 12/22/2017
   
      ![設定 Send 活動屬性](../../../../docs/framework/wcf/feature-details/media/clientsendsettings.JPG "ClientSendSettings")  
   
-9. 按一下**定義...**連結，然後進行下列設定：  
+9. 按一下**定義...** 連結，然後進行下列設定：  
   
      ![傳送活動訊息設定](../../../../docs/framework/wcf/feature-details/media/sendmessagesettings.JPG "SendMessageSettings")  
   
@@ -323,7 +311,7 @@ ms.lasthandoff: 12/22/2017
         }  
     ```  
   
-## <a name="see-also"></a>請參閱  
+## <a name="see-also"></a>另請參閱  
  [工作流程服務](../../../../docs/framework/wcf/feature-details/workflow-services.md)  
  [Windows Communication Foundation 異動概觀](../../../../docs/framework/wcf/feature-details/transactions-overview.md)  
  [TransactedReceiveScope 的使用](../../../../docs/framework/windows-workflow-foundation/samples/use-of-transactedreceivescope.md)

@@ -1,24 +1,12 @@
 ---
-title: "可靠的工作階段最佳做法"
-ms.custom: 
+title: 可靠的工作階段最佳做法
 ms.date: 03/30/2017
-ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.technology: dotnet-clr
-ms.tgt_pltfrm: 
-ms.topic: article
 ms.assetid: b94f6e01-8070-40b6-aac7-a2cb7b4cb4f2
-caps.latest.revision: "6"
-author: dotnet-bot
-ms.author: dotnetcontent
-manager: wpickett
-ms.workload: dotnet
-ms.openlocfilehash: c022db62103826aa89e9035fd36c050d1f7c0f84
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.openlocfilehash: 1d9671e7e3124d535b66de8cd8468f76dcb32b10
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="best-practices-for-reliable-sessions"></a>可靠的工作階段最佳做法
 
@@ -26,7 +14,7 @@ ms.lasthandoff: 12/22/2017
 
 ## <a name="setting-maxtransferwindowsize"></a>設定 MaxTransferWindowSize
 
-[!INCLUDE[indigo1](../../../../includes/indigo1-md.md)] 中的可靠工作階段使用傳輸窗口將訊息保留在用戶端與服務上。 可設定的屬性 <xref:System.ServiceModel.Channels.ReliableSessionBindingElement.MaxTransferWindowSize%2A> 代表傳輸窗口可保留的訊息數量。
+可靠工作階段中 Windows Communication Foundation (WCF) 會使用傳輸窗口，來保留用戶端和服務上的訊息。 可設定的屬性 <xref:System.ServiceModel.Channels.ReliableSessionBindingElement.MaxTransferWindowSize%2A> 代表傳輸窗口可保留的訊息數量。
 
 在傳送端，這表示傳輸窗口可以保存等候認可; 期間的訊息數目在收件者，它會指出服務緩衝處理的訊息數目。
 
@@ -56,7 +44,7 @@ ms.lasthandoff: 12/22/2017
 
 *流量控制*是一種機制可確保寄件者與接收者跟彼此，也就是取用與處理訊息，它們所產生的一樣快。 用戶端與服務上的傳輸窗口大小可確保傳送端與接收端都有同樣合理的同步處理時間。
 
-我們強烈建議您將屬性<xref:System.ServiceModel.Channels.ReliableSessionBindingElement.FlowControlEnabled%2A>至`true`之間之可靠工作階段使用時[!INCLUDE[indigo2](../../../../includes/indigo2-md.md)]用戶端和[!INCLUDE[indigo2](../../../../includes/indigo2-md.md)]服務。
+我們強烈建議您將屬性<xref:System.ServiceModel.Channels.ReliableSessionBindingElement.FlowControlEnabled%2A>至`true`當您使用 WCF 用戶端和 WCF 服務之間可靠工作階段。
 
 ## <a name="setting-maxpendingchannels"></a>設定 MaxPendingChannels
 

@@ -1,13 +1,6 @@
 ---
-title: "x:Code 內建 XAML 類型"
-ms.custom: 
+title: x:Code 內建 XAML 類型
 ms.date: 03/30/2017
-ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.technology: dotnet-wpf
-ms.tgt_pltfrm: 
-ms.topic: article
 f1_keywords:
 - Code
 - x:Code
@@ -17,16 +10,11 @@ helpviewer_keywords:
 - x:Code XAML directive element [XAML Services]
 - XAML [XAML Services], x:Code directive element
 ms.assetid: 87986b13-1a2e-4830-ae36-15f9dc5629e8
-caps.latest.revision: "19"
-author: wadepickett
-ms.author: wpickett
-manager: wpickett
-ms.workload: dotnet
-ms.openlocfilehash: d39249a5d1c0e230d21e6d889b92d0b57c98e2ad
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.openlocfilehash: 92be0b3b0fd1212c4254a449f902b85e998aa148
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="xcode-intrinsic-xaml-type"></a>x:Code 內建 XAML 類型
 允許在 XAML 生產的程式碼的位置。 這類程式碼可以編譯任何 XAML 處理器實作編譯 XAML 或由執行階段在 XAML 生產的更新版本使用，如解譯左邊。  
@@ -42,7 +30,7 @@ ms.lasthandoff: 12/22/2017
 ## <a name="remarks"></a>備註  
  中的程式碼`x:Code`XAML 指示詞項目，而且仍然解譯一般的 XML 命名空間中提供的 XAML 命名空間。 因此，它是通常會需要使用程式碼括`x:Code`內`CDATA`區段。  
   
- `x:Code`不允許用於 XAML 生產的所有可能的部署機制。 必須編譯程式碼中特定架構 (例如 WPF)。 用於其他架構，`x:Code`可能通常不允許使用方式。  
+ `x:Code` 不允許用於 XAML 生產的所有可能的部署機制。 必須編譯程式碼中特定架構 (例如 WPF)。 用於其他架構，`x:Code`可能通常不允許使用方式。  
   
  允許受管理的介面架構`x:Code`內容，正確的語言編譯器使用`x:Code`內容取決於設定和用來編譯應用程式包含專案的目標。  
   
@@ -59,7 +47,7 @@ ms.lasthandoff: 12/22/2017
   
 -   部分類別的 CLR 命名空間外部的程式碼實體的參考都必須完全符合規定。 如果宣告的成員會覆寫部分的類別可覆寫的成員，這必須指定以特定語言覆寫的關鍵字。 如果成員宣告中`x:Code`與從 XAML 建立部分類別的成員衝突的範圍、 的方式，編譯器會回報衝突，XAML 檔案無法編譯或載入。  
   
-## <a name="see-also"></a>請參閱  
+## <a name="see-also"></a>另請參閱  
  [x:Class 指示詞](../../../docs/framework/xaml-services/x-class-directive.md)  
  [WPF 中的程式碼後置和 XAML](../../../docs/framework/wpf/advanced/code-behind-and-xaml-in-wpf.md)  
  [XAML 概觀 (WPF)](../../../docs/framework/wpf/advanced/xaml-overview-wpf.md)

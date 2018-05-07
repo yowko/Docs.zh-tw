@@ -1,13 +1,6 @@
 ---
-title: "如何：使用內容功能表的拼字檢查"
-ms.custom: 
+title: 如何：使用內容功能表的拼字檢查
 ms.date: 03/30/2017
-ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.technology: dotnet-wpf
-ms.tgt_pltfrm: 
-ms.topic: article
 dev_langs:
 - csharp
 - vb
@@ -16,16 +9,11 @@ helpviewer_keywords:
 - reenabling spell checking in a text box [WPF]
 - spell checking with a context menu [WPF]
 ms.assetid: 61f69a20-2ff3-4056-9060-e32f4483ec5e
-caps.latest.revision: "4"
-author: dotnet-bot
-ms.author: dotnetcontent
-manager: wpickett
-ms.workload: dotnet
-ms.openlocfilehash: 8a85426dc526e1e8560f494bcde5247fc394f7bc
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.openlocfilehash: 966e3adbcb57c30a55d606f6d6b8b51523ee30ed
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="how-to-use-spell-checking-with-a-context-menu"></a>如何：使用內容功能表的拼字檢查
 根據預設，當您啟用編輯控制項中的拼字檢查就像<xref:System.Windows.Controls.TextBox>或<xref:System.Windows.Controls.RichTextBox>，您取得內容功能表中的拼字檢查的選項。 例如，當使用者以滑鼠右鍵按一下拼錯的字，他們會取得一組選項或拼字建議**全部忽略**。 不過，當您覆寫預設內容功能表，以您自己的自訂內容功能表，這項功能將會遺失，而且您需要撰寫程式碼以重新啟用拼字檢查功能的內容功能表。 下列範例示範如何啟用此<xref:System.Windows.Controls.TextBox>。  
@@ -49,7 +37,7 @@ ms.lasthandoff: 12/22/2017
   
  `spellingError = myRichTextBox.GetSpellingError(myRichTextBox.CaretPosition);`  
   
-## <a name="see-also"></a>請參閱  
+## <a name="see-also"></a>另請參閱  
  [TextBox 概觀](../../../../docs/framework/wpf/controls/textbox-overview.md)  
  [RichTextBox 概觀](../../../../docs/framework/wpf/controls/richtextbox-overview.md)  
  [在文字編輯控制項中啟用拼字檢查](../../../../docs/framework/wpf/controls/how-to-enable-spell-checking-in-a-text-editing-control.md)  

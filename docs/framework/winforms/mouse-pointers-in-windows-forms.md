@@ -1,13 +1,6 @@
 ---
-title: "Windows Form 中的滑鼠指標"
-ms.custom: 
+title: Windows Form 中的滑鼠指標
 ms.date: 03/30/2017
-ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.technology: dotnet-winforms
-ms.tgt_pltfrm: 
-ms.topic: article
 helpviewer_keywords:
 - pointers [Windows Forms], setting
 - mouse pointers
@@ -16,16 +9,11 @@ helpviewer_keywords:
 - cursors [Windows Forms], setting
 - mouse [Windows Forms], cursors
 ms.assetid: c3400d85-de5b-42e8-abc3-d6088d69ee53
-caps.latest.revision: "12"
-author: dotnet-bot
-ms.author: dotnetcontent
-manager: wpickett
-ms.workload: dotnet
-ms.openlocfilehash: aaca18bff265fafbb5bad26adfe2a8c490d85132
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.openlocfilehash: ed6312cb386d1557d4217a330318664b4e87c330
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="mouse-pointers-in-windows-forms"></a>Windows Form 中的滑鼠指標
 滑鼠*指標*，這有時也稱為資料指標，是指定婧鎏鶗懘為使用者輸入，使用滑鼠在螢幕的點陣圖。 本主題提供滑鼠指標在 Windows Form 中的概觀，並描述的數種方式來修改和控制滑鼠指標。  
@@ -41,7 +29,7 @@ ms.lasthandoff: 12/22/2017
   
  若要變更滑鼠指標的主要方式是藉由設定<xref:System.Windows.Forms.Control.Cursor%2A?displayProperty=nameWithType>或<xref:System.Windows.Forms.Control.DefaultCursor%2A>至新的控制項屬性<xref:System.Windows.Forms.Cursor>。 範例變更滑鼠指標，請參閱中的程式碼範例<xref:System.Windows.Forms.Cursor>類別。 此外，<xref:System.Windows.Forms.Cursors>類別會公開一組<xref:System.Windows.Forms.Cursor>許多不同類型的指標，例如類似手形指標的物件。 若要顯示等待指標，這類似於以沙漏來表示，，每當滑鼠指標位於控制項上時，使用<xref:System.Windows.Forms.Control.UseWaitCursor%2A>屬性<xref:System.Windows.Forms.Control>類別。  
   
-## <a name="see-also"></a>請參閱  
+## <a name="see-also"></a>另請參閱  
  <xref:System.Windows.Forms.Cursor>  
  [Windows Forms 應用程式中的滑鼠輸入](../../../docs/framework/winforms/mouse-input-in-a-windows-forms-application.md)  
  [Windows Forms 中的拖放功能](../../../docs/framework/winforms/drag-and-drop-functionality-in-windows-forms.md)

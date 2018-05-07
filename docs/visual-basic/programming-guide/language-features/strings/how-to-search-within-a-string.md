@@ -1,25 +1,16 @@
 ---
-title: "如何：在字串內搜尋 (Visual Basic)"
-ms.custom: 
+title: 如何：在字串內搜尋 (Visual Basic)
 ms.date: 07/20/2015
-ms.prod: .net
-ms.reviewer: 
-ms.suite: 
-ms.technology: devlang-visual-basic
-ms.topic: article
 helpviewer_keywords:
 - strings [Visual Basic], finding
 - strings [Visual Basic], searching
 - examples [Visual Basic], strings
 ms.assetid: ae4c79e0-08ea-489f-bdb2-5eb6d355f284
-caps.latest.revision: "16"
-author: dotnet-bot
-ms.author: dotnetcontent
-ms.openlocfilehash: 2c828d0b32fdf90e121e9d5da0bb60ab11c212f4
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.openlocfilehash: 08a005f2927a76c9b29c1ff0092ea8282188b2b2
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="how-to-search-within-a-string-visual-basic"></a>如何：在字串內搜尋 (Visual Basic)
 這個範例會呼叫<xref:System.String.IndexOf%2A>方法<xref:System.String>来報告的第一個子字串索引的物件。  

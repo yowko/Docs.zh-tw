@@ -1,12 +1,6 @@
 ---
-title: "列舉和名稱限定 (Visual Basic)"
-ms.custom: 
+title: 列舉和名稱限定 (Visual Basic)
 ms.date: 07/20/2015
-ms.prod: .net
-ms.reviewer: 
-ms.suite: 
-ms.technology: devlang-visual-basic
-ms.topic: article
 helpviewer_keywords:
 - declarations [Visual Basic], enumerations
 - Imports statement [Visual Basic], namespace declarations
@@ -23,14 +17,11 @@ helpviewer_keywords:
 - naming conventions [Visual Basic], naming conflicts
 - declarations [Visual Basic], namespaces
 ms.assetid: 08ba2738-df52-4140-bc55-f57c871c9b73
-caps.latest.revision: "20"
-author: dotnet-bot
-ms.author: dotnetcontent
-ms.openlocfilehash: 3cb97d6a8f4b7e81f2b759010214e200ec63ff21
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.openlocfilehash: eb1f5653d968e81168833cd57813219e8f049b70
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="enumerations-and-name-qualification-visual-basic"></a>列舉和名稱限定 (Visual Basic)
 一般來說，當參考的列舉成員，您必須限定成員名稱與列舉型別名稱。 例如，若要參考`Sunday`隸屬您`Days`列舉型別，您可以使用下列語法：  

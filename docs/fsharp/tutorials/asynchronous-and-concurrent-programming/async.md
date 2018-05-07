@@ -1,17 +1,12 @@
 ---
 title: 'F # 中的非同步程式設計'
 description: '了解如何完成 F # 非同步程式設計的語言層級的程式設計模型是易於使用和自然語言，透過。'
-author: cartermp
-ms.author: phcart
 ms.date: 06/20/2016
-ms.topic: conceptual
-ms.prod: dotnet-fsharp
-ms.devlang: fsharp
-ms.openlocfilehash: a3047b98637cb4b142f374a2a2b5e7270e850fd6
-ms.sourcegitcommit: 03ee570f6f528a7d23a4221dcb26a9498edbdf8c
+ms.openlocfilehash: 93ecd05efc493489435214dcd7ae78fffcccec1f
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/28/2018
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="async-programming-in-f"></a>F # 中的非同步程式設計 #
 

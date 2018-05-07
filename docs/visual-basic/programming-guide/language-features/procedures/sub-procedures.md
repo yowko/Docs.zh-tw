@@ -1,13 +1,6 @@
 ---
 title: Sub 程序 (Visual Basic)
-ms.custom: ''
 ms.date: 07/20/2015
-ms.prod: .net
-ms.reviewer: ''
-ms.suite: ''
-ms.technology:
-- devlang-visual-basic
-ms.topic: article
 helpviewer_keywords:
 - Sub procedures [Visual Basic], about Sub procedures
 - statement blocks
@@ -18,14 +11,11 @@ helpviewer_keywords:
 - procedures [Visual Basic], Sub
 - syntax [Visual Basic], Sub procedures
 ms.assetid: 6a0a4958-ed0a-4d3d-8d31-0772c82bda58
-caps.latest.revision: 21
-author: dotnet-bot
-ms.author: dotnetcontent
-ms.openlocfilehash: 7258d57d2677042a2020097893a4f7a0adb35508
-ms.sourcegitcommit: 86adcc06e35390f13c1e372c36d2e044f1fc31ef
+ms.openlocfilehash: 3286df1a5babfcf7d6b759ff5c9a920bb44f51ab
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/26/2018
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="sub-procedures-visual-basic"></a>Sub 程序 (Visual Basic)
 A`Sub`程序是一系列的 Visual Basic 陳述式加上`Sub`和`End Sub`陳述式。 `Sub`程序執行的工作，並再將控制權傳回給呼叫的程式碼，但不會傳回值，呼叫程式碼。  
@@ -39,7 +29,7 @@ A`Sub`程序是一系列的 Visual Basic 陳述式加上`Sub`和`End Sub`陳述�
 ## <a name="declaration-syntax"></a>宣告語法  
  宣告的語法`Sub`程序如下所示：  
   
- `[` *修飾詞* `] Sub` *subname* `[(` *parameterlist*  `)]`  
+ `[` *修飾詞* `] Sub` *subname* `[(` *parameterlist* `)]`  
   
  `' Statements of the Sub procedure.`  
   
@@ -52,11 +42,11 @@ A`Sub`程序是一系列的 Visual Basic 陳述式加上`Sub`和`End Sub`陳述�
   
  參數清單中的每個參數的語法如下所示：  
   
- `[Optional] [ByVal | ByRef] [ParamArray]`  *參數名稱*`As`*資料類型*   
+ `[Optional] [ByVal | ByRef] [ParamArray]`  *參數名稱*`As`*資料類型*  
   
  如果參數是選擇性的您也必須提供預設值做為其宣告的一部分。 指定預設值的語法如下所示：  
   
- `Optional [ByVal | ByRef]`  *參數名稱*`As`*datatype*`=`*defaultvalue*   
+ `Optional [ByVal | ByRef]`  *參數名稱*`As`*datatype*`=`*defaultvalue*  
   
 ### <a name="parameters-as-local-variables"></a>本機變數與參數  
  當控制權會傳遞至程序中時，每個參數會被視為本機變數中。 這表示，其存留期相同的程序，且其範圍是整個程序。  

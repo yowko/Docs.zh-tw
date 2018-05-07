@@ -1,31 +1,17 @@
 ---
 title: 路由服務
-ms.custom: ''
 ms.date: 03/30/2017
-ms.prod: .net-framework
-ms.reviewer: ''
-ms.suite: ''
-ms.technology:
-- dotnet-clr
-ms.tgt_pltfrm: ''
-ms.topic: article
 ms.assetid: ca7c216a-5141-4132-8193-102c181d2eba
-caps.latest.revision: 13
-author: wadepickett
-ms.author: wpickett
-manager: wpickett
-ms.workload:
-- dotnet
-ms.openlocfilehash: 8ff2a99bc06ab0de2aedce98ea029f484e47053f
-ms.sourcegitcommit: 94d33cadc5ff81d2ac389bf5f26422c227832052
+ms.openlocfilehash: e3170108ae190c08a42cc7d80d66576a7b4f8a8e
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/30/2018
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="routing-service"></a>路由服務
 「路由服務」是一種泛型 SOAP 媒介，可做為訊息路由器。 路由服務的核心功能是可根據訊息內容傳送訊息的能力，這可讓訊息根據訊息 (不論是標頭或訊息本文) 內部本身的值轉送至用戶端端點。  
   
- <xref:System.ServiceModel.Routing.RoutingService> 會在 [!INCLUDE[indigo1](../../../../includes/indigo1-md.md)] 命名空間中實作為 <xref:System.ServiceModel.Routing> 服務。 路由服務會公開一個或多個接收訊息的服務端點，然後將每則訊息根據訊息內容傳送至一個或多個用戶端端點。 服務提供下列功能：  
+ <xref:System.ServiceModel.Routing.RoutingService>實作為 Windows Communication Foundation (WCF) 服務中<xref:System.ServiceModel.Routing>命名空間。 路由服務會公開一個或多個接收訊息的服務端點，然後將每則訊息根據訊息內容傳送至一個或多個用戶端端點。 服務提供下列功能：  
   
 -   以內容為基礎的路由  
   
@@ -47,10 +33,10 @@ ms.lasthandoff: 04/30/2018
   
  雖然您可以建立媒介服務來完成一或多項上述目標，但是這類實作經常與特定案例或方案關係密切，而且無法輕易套用至新應用程式。  
   
- 路由服務提供了可動態設定、可外掛式的泛型 SOAP 媒介，此媒介與 [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] 服務和通道模型相容，而且可讓您針對 SOAP 架構訊息執行以內容為基礎的路由。  
+ 路由服務提供的泛型、 可動態設定、 可外掛式 SOAP 媒介與 WCF 服務和通道模型相容，並可讓您執行以內容為基礎 SOAP 訊息的路由。  
   
 > [!NOTE]
->  路由服務目前不支援 [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] REST 服務的路由。  若要路由傳送 REST 呼叫，請考慮使用<xref:System.Web.Routing>或[應用程式要求路由](http://go.microsoft.com/fwlink/?LinkId=164589)(http://go.microsoft.com/fwlink/?LinkId=164589)。  
+>  路由服務目前不支援 WCF REST 服務的路由。  若要路由傳送 REST 呼叫，請考慮使用<xref:System.Web.Routing>或[應用程式要求路由](http://go.microsoft.com/fwlink/?LinkId=164589)(http://go.microsoft.com/fwlink/?LinkId=164589)。  
   
 ## <a name="content-based-routing"></a>內容架構路由  
  內容架構路由是根據訊息內包含的一個或多個值路由傳送訊息的能力。 路由服務會檢查每一個訊息，並且根據訊息內容和您建立的路由邏輯，將訊息路由傳送至目的端點。 以內容為基礎的路由會提供服務彙總、服務版本控制和優先權路由的基礎。  

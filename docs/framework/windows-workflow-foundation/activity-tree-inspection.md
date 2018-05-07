@@ -1,23 +1,12 @@
 ---
-title: "活動樹狀結構檢查"
-ms.custom: 
+title: 活動樹狀結構檢查
 ms.date: 03/30/2017
-ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.tgt_pltfrm: 
-ms.topic: article
 ms.assetid: 100d00e4-8c1d-4233-8fbb-dd443a01155d
-caps.latest.revision: "10"
-author: dotnet-bot
-ms.author: dotnetcontent
-manager: wpickett
-ms.workload: dotnet
-ms.openlocfilehash: efb7f8f1603de67f21aee7e1746670e324d5e238
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.openlocfilehash: 4f2ca6bff27cfe0e3362e2a3b95cd08a0f8d5297
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="activity-tree-inspection"></a>活動樹狀結構檢查
 活動樹狀檢查可供工作流程應用程式作者用於檢查應用程式所裝載的工作流程。 使用 <xref:System.Activities.WorkflowInspectionServices>，即可針對特定子活動搜尋工作流程、列舉個別活動及其屬性，以及在特定時間快取活動的執行階段中繼資料。 本主題提供 <xref:System.Activities.WorkflowInspectionServices> 的概觀，並且說明如何利用它來檢查活動樹狀結構。  
@@ -54,7 +43,7 @@ ms.lasthandoff: 12/22/2017
  **DelegateArgumentValue\<字串 >**  
  **順序**  
  **WriteLine**  
- **常值\<字串 >**擷取特定的活動，而非列舉所有活動，<xref:System.Activities.WorkflowInspectionServices.Resolve%2A>用。 如果先前尚未呼叫過 <xref:System.Activities.WorkflowInspectionServices.Resolve%2A>，<xref:System.Activities.WorkflowInspectionServices.GetActivities%2A> 和 `WorkflowInspectionServices.CacheMetadata` 都會執行中繼資料快取。 如果已經呼叫過 <xref:System.Activities.WorkflowInspectionServices.CacheMetadata%2A>，則 <xref:System.Activities.WorkflowInspectionServices.GetActivities%2A> 會以現有的中繼資料為基礎。 因此，自上次呼叫 <xref:System.Activities.WorkflowInspectionServices.CacheMetadata%2A> 以來，如果樹狀結構進行過變更，<xref:System.Activities.WorkflowInspectionServices.GetActivities%2A> 可能會產生非預期的結果。 如果工作流程已變更之後呼叫<xref:System.Activities.WorkflowInspectionServices.GetActivities%2A>，中繼資料可以重新快取藉由呼叫<xref:System.Activities.Validation.ActivityValidationServices><xref:System.Activities.Validation.ActivityValidationServices.Validate%2A>方法。 下一節將討論快取中繼資料。  
+ **常值\<字串 >** 擷取特定的活動，而非列舉所有活動，<xref:System.Activities.WorkflowInspectionServices.Resolve%2A>用。 如果先前尚未呼叫過 <xref:System.Activities.WorkflowInspectionServices.Resolve%2A>，<xref:System.Activities.WorkflowInspectionServices.GetActivities%2A> 和 `WorkflowInspectionServices.CacheMetadata` 都會執行中繼資料快取。 如果已經呼叫過 <xref:System.Activities.WorkflowInspectionServices.CacheMetadata%2A>，則 <xref:System.Activities.WorkflowInspectionServices.GetActivities%2A> 會以現有的中繼資料為基礎。 因此，自上次呼叫 <xref:System.Activities.WorkflowInspectionServices.CacheMetadata%2A> 以來，如果樹狀結構進行過變更，<xref:System.Activities.WorkflowInspectionServices.GetActivities%2A> 可能會產生非預期的結果。 如果工作流程已變更之後呼叫<xref:System.Activities.WorkflowInspectionServices.GetActivities%2A>，中繼資料可以重新快取藉由呼叫<xref:System.Activities.Validation.ActivityValidationServices><xref:System.Activities.Validation.ActivityValidationServices.Validate%2A>方法。 下一節將討論快取中繼資料。  
   
 ### <a name="caching-metadata"></a>快取中繼資料  
  快取活動的中繼資料會建置並驗證活動之引數、變數、子活動和活動委派的描述。 根據預設，中繼資料會在預備執行活動時由執行階段快取。 如果工作流程主機作者想要在此之前快取活動或活動樹狀結構的中繼資料，例如要預先取得成本，可以使用 <xref:System.Activities.WorkflowInspectionServices.CacheMetadata%2A>，在任何時間快取中繼資料。

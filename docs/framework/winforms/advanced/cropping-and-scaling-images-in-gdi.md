@@ -1,13 +1,6 @@
 ---
-title: "在 GDI+ 中裁剪和縮放影像"
-ms.custom: 
+title: 在 GDI+ 中裁剪和縮放影像
 ms.date: 03/30/2017
-ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.technology: dotnet-winforms
-ms.tgt_pltfrm: 
-ms.topic: article
 dev_langs:
 - csharp
 - vb
@@ -22,19 +15,14 @@ helpviewer_keywords:
 - rectangles [Windows Forms], destination
 - images [Windows Forms], compression
 ms.assetid: ad5daf26-005f-45bc-a2af-e0e97777a21a
-caps.latest.revision: "13"
-author: dotnet-bot
-ms.author: dotnetcontent
-manager: wpickett
-ms.workload: dotnet
-ms.openlocfilehash: 0bbe7ac4b8c541ea76392f94f538e41816cf5c3f
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.openlocfilehash: 84e2e74e71c13593cb013849c07a6e904a4d2c14
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="cropping-and-scaling-images-in-gdi"></a>在 GDI+ 中裁剪和縮放影像
-您可以使用<xref:System.Drawing.Graphics.DrawImage%2A>方法<xref:System.Drawing.Graphics>繪製及定位向量影像和點陣影像的類別。 <xref:System.Drawing.Graphics.DrawImage%2A>是多載的方法，因此沒有提供引數的數種方式。  
+您可以使用<xref:System.Drawing.Graphics.DrawImage%2A>方法<xref:System.Drawing.Graphics>繪製及定位向量影像和點陣影像的類別。 <xref:System.Drawing.Graphics.DrawImage%2A> 是多載的方法，因此沒有提供引數的數種方式。  
   
 ## <a name="drawimage-variations"></a>DrawImage 變化  
  其中一個變化<xref:System.Drawing.Graphics.DrawImage%2A>方法會接收<xref:System.Drawing.Bitmap>和<xref:System.Drawing.Rectangle>。 矩形指定的目的地繪圖作業。也就是說，它會指定要在其中繪製影像的矩形。 如果目的矩形的大小不同於原始的映像的大小，以符合目的地矩形縮放影像。 下列程式碼範例示範如何繪製相同的映像三次： 一次沒有縮放、 另一次使用的擴充和另一次使用的壓縮：  
@@ -57,6 +45,6 @@ ms.lasthandoff: 12/22/2017
   
  ![裁剪和縮放](../../../../docs/framework/winforms/advanced/media/aboutgdip03-art07.gif "AboutGdip03_Art07")  
   
-## <a name="see-also"></a>請參閱  
+## <a name="see-also"></a>另請參閱  
  [影像、點陣圖和中繼檔](../../../../docs/framework/winforms/advanced/images-bitmaps-and-metafiles.md)  
  [使用影像、點陣圖、圖示和中繼檔](../../../../docs/framework/winforms/advanced/working-with-images-bitmaps-icons-and-metafiles.md)

@@ -1,14 +1,6 @@
 ---
-title: "IHostIoCompletionManager 介面"
-ms.custom: 
+title: IHostIoCompletionManager 介面
 ms.date: 03/30/2017
-ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.technology:
-- dotnet-clr
-ms.tgt_pltfrm: 
-ms.topic: reference
 api_name:
 - IHostIoCompletionManager
 api_location:
@@ -22,17 +14,13 @@ helpviewer_keywords:
 ms.assetid: c28d1983-83f7-46e2-990f-dbb9dc07c818
 topic_type:
 - apiref
-caps.latest.revision: 
 author: rpetrusha
 ms.author: ronpet
-manager: wpickett
-ms.workload:
-- dotnet
-ms.openlocfilehash: cbb4b87b57d4f5e11a9dab04d20dfb73170bb4a5
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.openlocfilehash: 194dcec6ea484e9cd2d3a17093c1eceb16c8f6c9
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="ihostiocompletionmanager-interface"></a>IHostIoCompletionManager 介面
 提供方法讓 common language runtime (CLR) 與 I/O 完成通訊埠提供主機互動。  
@@ -54,7 +42,7 @@ ms.lasthandoff: 12/22/2017
 |[SetMinThreads 方法](../../../../docs/framework/unmanaged-api/hosting/ihostiocompletionmanager-setminthreads-method.md)|將主應用程式應該配置的執行緒的最小數目設定為 I/O 完成。|  
   
 ## <a name="remarks"></a>備註  
- `IHostIoCompletionManager`對應至`ICLRIoCompletionManager`CLR 所實作的介面。 CLR 會呼叫的方法`IHostIoCompletionManager`來將控制代碼繫結至主應用程式提供，且主應用程式呼叫的方法的連接埠`ICLRIoCompletionManager`報告完成的 I/O 要求。  
+ `IHostIoCompletionManager` 對應至`ICLRIoCompletionManager`CLR 所實作的介面。 CLR 會呼叫的方法`IHostIoCompletionManager`來將控制代碼繫結至主應用程式提供，且主應用程式呼叫的方法的連接埠`ICLRIoCompletionManager`報告完成的 I/O 要求。  
   
 ## <a name="requirements"></a>需求  
  **平台：**看到[系統需求](../../../../docs/framework/get-started/system-requirements.md)。  
@@ -63,7 +51,7 @@ ms.lasthandoff: 12/22/2017
   
  **程式庫：**包含做為 MSCorEE.dll 中的資源  
   
- **.NET framework 版本：**[!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]  
+ **.NET framework 版本：** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]  
   
-## <a name="see-also"></a>請參閱  
+## <a name="see-also"></a>另請參閱  
  [裝載介面](../../../../docs/framework/unmanaged-api/hosting/hosting-interfaces.md)

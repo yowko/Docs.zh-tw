@@ -1,13 +1,6 @@
 ---
-title: "Windows Form 和 WPF 互通性輸入架構"
-ms.custom: 
+title: Windows Form 和 WPF 互通性輸入架構
 ms.date: 03/30/2017
-ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.technology: dotnet-wpf
-ms.tgt_pltfrm: 
-ms.topic: article
 helpviewer_keywords:
 - input architecture [WPF interoperability]
 - messages [WPF]
@@ -20,16 +13,11 @@ helpviewer_keywords:
 - WindowsFormsHost keyboard and messages [WPF]
 - modeless dialog boxes [WPF]
 ms.assetid: 0eb6f137-f088-4c5e-9e37-f96afd28f235
-caps.latest.revision: "20"
-author: dotnet-bot
-ms.author: dotnetcontent
-manager: wpickett
-ms.workload: dotnet
-ms.openlocfilehash: a246a3297d212eabc31bf2ac9d000aeb56329d09
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.openlocfilehash: 250f34e3e5420a613bc7b1035c62af90665e71ee
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="windows-forms-and-wpf-interoperability-input-architecture"></a>Windows Form 和 WPF 互通性輸入架構
 互通性之間[!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)]和[!INCLUDE[TLA#tla_winforms](../../../../includes/tlasharptla-winforms-md.md)]需要這兩種技術有適當的鍵盤輸入的處理。 本主題會說明這些技術的實作方式鍵盤和訊息處理，以達到混合式應用程式中的平順互通性。  
@@ -105,7 +93,7 @@ ms.lasthandoff: 12/22/2017
   
 -   命令的索引鍵與對話方塊按鍵。  
   
--   [!INCLUDE[TLA#tla_winforms](../../../../includes/tlasharptla-winforms-md.md)]對應處理程序。  
+-   [!INCLUDE[TLA#tla_winforms](../../../../includes/tlasharptla-winforms-md.md)] 對應處理程序。  
   
  下列章節將更多詳細資料中的這些組件。  
   
@@ -131,7 +119,7 @@ ms.lasthandoff: 12/22/2017
   
 -   <xref:System.Windows.Forms.Control.IsInputChar%2A?displayProperty=nameWithType>以確保所有的 WM_CHAR 訊息會轉寄至裝載的項目會覆寫方法。  
   
--   如果按下 ALT 鍵時，訊息就會 WM_SYSCHAR。 [!INCLUDE[TLA#tla_winforms](../../../../includes/tlasharptla-winforms-md.md)]不會透過此訊息前置處理<xref:System.Windows.Forms.Control.IsInputChar%2A>方法。 因此，<xref:System.Windows.Forms.Control.ProcessMnemonic%2A>會覆寫方法來查詢[!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)]<xref:System.Windows.Input.AccessKeyManager>的已註冊的快速鍵。 如果找到已註冊的 accelerator，<xref:System.Windows.Input.AccessKeyManager>加以處理。  
+-   如果按下 ALT 鍵時，訊息就會 WM_SYSCHAR。 [!INCLUDE[TLA#tla_winforms](../../../../includes/tlasharptla-winforms-md.md)] 不會透過此訊息前置處理<xref:System.Windows.Forms.Control.IsInputChar%2A>方法。 因此，<xref:System.Windows.Forms.Control.ProcessMnemonic%2A>會覆寫方法來查詢[!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)]<xref:System.Windows.Input.AccessKeyManager>的已註冊的快速鍵。 如果找到已註冊的 accelerator，<xref:System.Windows.Input.AccessKeyManager>加以處理。  
   
 -   如果未按下 ALT 鍵， [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] <xref:System.Windows.Input.InputManager>類別處理未處理的輸入。 如果輸入是快速鍵，<xref:System.Windows.Input.AccessKeyManager>加以處理。 <xref:System.Windows.Input.InputManager.PostProcessInput>未處理的 WM_CHAR 訊息處理事件。  
   
@@ -139,7 +127,7 @@ ms.lasthandoff: 12/22/2017
   
  訊息傳送至<xref:System.Windows.Forms.Integration.ElementHost>現用表單中的控制項。  
   
-## <a name="see-also"></a>請參閱  
+## <a name="see-also"></a>另請參閱  
  <xref:System.Windows.Forms.Integration.WindowsFormsHost.EnableWindowsFormsInterop%2A>  
  <xref:System.Windows.Forms.Integration.ElementHost.EnableModelessKeyboardInterop%2A>  
  <xref:System.Windows.Forms.Integration.ElementHost>  

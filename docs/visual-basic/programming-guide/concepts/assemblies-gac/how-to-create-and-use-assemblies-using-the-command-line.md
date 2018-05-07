@@ -1,21 +1,14 @@
 ---
 title: 如何： 建立和使用組件使用命令列 (Visual Basic)
-ms.custom: ''
 ms.date: 03/14/2018
-ms.prod: .net
-ms.suite: ''
-ms.technology:
-- devlang-visual-basic
-ms.tgt_pltfrm: ''
-ms.topic: article
 ms.assetid: 229ff9fb-1bd1-403b-946b-526104864c60
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: b39648107697cdbaa8856705f44df605efda11fa
-ms.sourcegitcommit: 498799639937c89de777361aab74261efe7b79ea
+ms.openlocfilehash: c02f694da4e03b666fa88ea6db8ddb2db4c9637d
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 03/22/2018
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="how-to-create-and-use-assemblies-using-the-command-line-visual-basic"></a>如何： 建立和使用組件使用命令列 (Visual Basic)
 組件又稱為動態連結程式庫 (DLL)，會在執行階段連結到您的程式。 為了示範如何建立和使用 DLL，請考慮下列案例：  

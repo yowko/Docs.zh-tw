@@ -1,12 +1,6 @@
 ---
 title: -optionstrict
 ms.date: 07/20/2015
-ms.prod: .net
-ms.reviewer: ''
-ms.suite: ''
-ms.technology:
-- devlang-visual-basic
-ms.topic: article
 f1_keywords:
 - -optionstrict
 helpviewer_keywords:
@@ -14,14 +8,11 @@ helpviewer_keywords:
 - optionstrict compiler option [Visual Basic]
 - /optionstrict compiler option [Visual Basic]
 ms.assetid: c7b10086-0fa4-49db-b3c8-4ae0db5957da
-caps.latest.revision: ''
-author: dotnet-bot
-ms.author: dotnetcontent
-ms.openlocfilehash: 2ff7d13fcb3e224ee76cdb42f3974a4eddb042f5
-ms.sourcegitcommit: 498799639937c89de777361aab74261efe7b79ea
+ms.openlocfilehash: da1bd6d3b6746561655a82cd49aa0014563a1d40
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 03/22/2018
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="-optionstrict"></a>-optionstrict
 強制執行嚴格的類型語意來限制隱含類型轉換。  

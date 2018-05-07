@@ -1,17 +1,12 @@
 ---
 title: F# 語言參考
 description: '找到 F # 語言功能的資訊從這個語言的語彙基元、 概念、 類型、 運算式和編譯器支援建構主題參考。'
-author: cartermp
-ms.author: phcart
 ms.date: 05/16/2016
-ms.topic: language-reference
-ms.prod: dotnet-fsharp
-ms.devlang: fsharp
-ms.openlocfilehash: 5ab0ef364696e92064209118920dff0def21e0c8
-ms.sourcegitcommit: 03ee570f6f528a7d23a4221dcb26a9498edbdf8c
+ms.openlocfilehash: 1c25ab4a4936b532a21aed8b2b0202fec1dd7133
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/28/2018
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="f-language-reference"></a>F# 語言參考
 

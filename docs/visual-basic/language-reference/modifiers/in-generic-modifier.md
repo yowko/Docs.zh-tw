@@ -1,24 +1,17 @@
 ---
 title: In (泛型修飾詞) (Visual Basic)
 ms.date: 07/20/2015
-ms.prod: .net
-ms.technology:
-- devlang-visual-basic
-ms.topic: article
 f1_keywords:
 - vb.VarianceIn
 helpviewer_keywords:
 - contravariance, In keyword [Visual Basic]
 - In keyword [Visual Basic]
 ms.assetid: 59bb13c5-fe96-42b8-8286-86293d1661c5
-caps.latest.revision: 19
-author: dotnet-bot
-ms.author: dotnetcontent
-ms.openlocfilehash: 83e9aab4fc361754cfd750ae68f04b36dce13d0a
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.openlocfilehash: d1d9209cd583ac96ece59660ad29c76a66d3395a
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="in-generic-modifier-visual-basic"></a>In (泛型修飾詞) (Visual Basic)
 若為泛型型別參數，`In` 關鍵字會指定型別參數是 Contravariant。  
@@ -31,7 +24,7 @@ ms.lasthandoff: 11/21/2017
 ## <a name="rules"></a>規則  
  您可以在泛型介面及委派中使用 `In` 關鍵字。  
   
- 如果它是只當做方法引數的型別，而且並未當做方法的傳回型別，型別參數可以宣告 contravariant 的泛型介面或委派中。 `ByRef`參數不能為 covariant 或 contravariant。  
+ 如果它是只當做方法引數的型別，而且並未當做方法的傳回型別，型別參數可以宣告 contravariant 的泛型介面或委派中。 `ByRef` 參數不能為 covariant 或 contravariant。  
   
  共變數和反變數參考類型和支援值型別不支援。  
   

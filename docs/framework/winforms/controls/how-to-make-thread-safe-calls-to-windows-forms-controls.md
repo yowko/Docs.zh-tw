@@ -1,14 +1,6 @@
 ---
-title: "如何：進行對 Windows Form 控制項的安全執行緒呼叫"
-ms.custom: 
+title: 如何：進行對 Windows Form 控制項的安全執行緒呼叫
 ms.date: 03/30/2017
-ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.technology:
-- dotnet-winforms
-ms.tgt_pltfrm: 
-ms.topic: article
 dev_langs:
 - csharp
 - vb
@@ -24,17 +16,11 @@ helpviewer_keywords:
 - threading [Windows Forms], cross-thread calls
 - controls [Windows Forms], multithreading
 ms.assetid: 138f38b6-1099-4fd5-910c-390b41cbad35
-caps.latest.revision: 
-author: dotnet-bot
-ms.author: dotnetcontent
-manager: wpickett
-ms.workload:
-- dotnet
-ms.openlocfilehash: 7cca363be57e5c5022c70c62d876f62cebc6e9c0
-ms.sourcegitcommit: c0dd436f6f8f44dc80dc43b07f6841a00b74b23f
+ms.openlocfilehash: 1a726dd3c6ff5e36190f6260a9644d9f69b87933
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 01/19/2018
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="how-to-make-thread-safe-calls-to-windows-forms-controls"></a>如何：進行對 Windows Form 控制項的安全執行緒呼叫
 如果您使用多執行緒處理來改善 Windows Forms 應用程式的效能，您必須確定以安全執行緒的方式呼叫控制項。  
@@ -1060,7 +1046,7 @@ int main()
 > [!CAUTION]
 >  當您使用任何類型的多執行緒處理時，您的程式碼很有可能會暴露在非常嚴重且複雜的錯誤下。 如需詳細資訊，請在實作使用多執行緒處理的任何方案之前參閱 [Managed 執行緒處理的最佳做法](../../../../docs/standard/threading/managed-threading-best-practices.md)。  
   
-## <a name="see-also"></a>請參閱  
+## <a name="see-also"></a>另請參閱  
  <xref:System.ComponentModel.BackgroundWorker>  
  [操作說明：在背景執行作業](../../../../docs/framework/winforms/controls/how-to-run-an-operation-in-the-background.md)  
  [操作說明：實作使用背景作業的表單](../../../../docs/framework/winforms/controls/how-to-implement-a-form-that-uses-a-background-operation.md)  

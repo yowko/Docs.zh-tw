@@ -1,11 +1,6 @@
 ---
-title: "For...Next 陳述式 (Visual Basic)"
+title: For...Next 陳述式 (Visual Basic)
 ms.date: 07/20/2015
-ms.prod: .net
-ms.reviewer: 
-ms.suite: 
-ms.technology: devlang-visual-basic
-ms.topic: article
 f1_keywords:
 - vb.Step
 - vb.Next
@@ -28,14 +23,11 @@ helpviewer_keywords:
 - Exit statement [Visual Basic], For...Next statements
 - For statement [Visual Basic]
 ms.assetid: f5fc0d51-67ce-4c36-9f09-31c9a91c94e9
-caps.latest.revision: "64"
-author: dotnet-bot
-ms.author: dotnetcontent
-ms.openlocfilehash: 8a50f44a167952c735c6ed2830ca87105413401b
-ms.sourcegitcommit: 34ec7753acf76f90a0fa845235ef06663dc9e36e
+ms.openlocfilehash: 8c54189499b7d5b52cf93b4a0ae6cc47356bf57e
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="fornext-statement-visual-basic"></a>For...Next 陳述式 (Visual Basic)
 重複指定的次數的陳述式群組。  
@@ -103,7 +95,7 @@ Next [ counter ]
   
  您可以將任意數目的`Exit For`中的陳述式`For`...`Next` 迴圈。 當用在巢狀`For`...`Next` 迴圈，`Exit For`結束最內層的迴圈，並將控制權傳輸至下一個高的層級的巢狀結構。  
   
- `Exit For`通常是在您評估某些條件後 (例如，在`If`...`Then`...`Else`結構)。 您可能想要使用`Exit For`以下情況：  
+ `Exit For` 通常是在您評估某些條件後 (例如，在`If`...`Then`...`Else`結構)。 您可能想要使用`Exit For`以下情況：  
   
 -   繼續以逐一查看是不必要或不可能。 錯誤的數值或終止要求可能會建立此條件。  
   
@@ -132,15 +124,15 @@ Next [ counter ]
   
  預設值`step`為 1。  
   
-###  <a name="BKMK_Counter"></a>計數器引數  
+###  <a name="BKMK_Counter"></a> 計數器引數  
  下表指出是否`counter`定義新的本機變數的範圍是整個`For…Next`迴圈。 這項判斷取決於是否`datatype`存在以及是否`counter`已經定義過了。  
   
 |是`datatype`存在嗎？|是`counter`已經定義過了嗎？|結果 (是否`counter`定義新的本機變數的範圍是整個`For...Next`迴圈)|  
 |----------------------------|-----------------------------------|-------------------------------------------------------------------------------------------------------------|  
-|否|是|否，因為`counter`已經定義過了。 如果範圍`counter`不是本機程序，就會發生編譯時期警告。|  
+|否|[是]|否，因為`counter`已經定義過了。 如果範圍`counter`不是本機程序，就會發生編譯時期警告。|  
 |否|否|可以。 資料型別，會從推斷`start`， `end`，和`step`運算式。 類型推斷的相關資訊，請參閱[Option Infer 陳述式](../../../visual-basic/language-reference/statements/option-infer-statement.md)和[區域類型推斷](../../../visual-basic/programming-guide/language-features/variables/local-type-inference.md)。|  
-|[是]|是|是，但只有當現有`counter`程序之外定義變數。 該變數會維持獨立的。 如果現有的範圍`counter`變數是本機程序，就會發生編譯時期錯誤。|  
-|是|否|可以。|  
+|[是]|[是]|是，但只有當現有`counter`程序之外定義變數。 該變數會維持獨立的。 如果現有的範圍`counter`變數是本機程序，就會發生編譯時期錯誤。|  
+|[是]|否|可以。|  
   
  資料型別`counter`決定反覆項目，必須是下列類型的其中一種：  
   
@@ -179,7 +171,7 @@ Next [ counter ]
   
  [!code-vb[VbVbalrStatements#117](../../../visual-basic/language-reference/error-messages/codesnippet/VisualBasic/for-next-statement_7.vb)]  
   
-## <a name="see-also"></a>請參閱  
+## <a name="see-also"></a>另請參閱  
  <xref:System.Collections.Generic.List%601>  
  [迴圈結構](../../../visual-basic/programming-guide/language-features/control-flow/loop-structures.md)  
  [While...End While 陳述式](../../../visual-basic/language-reference/statements/while-end-while-statement.md)  

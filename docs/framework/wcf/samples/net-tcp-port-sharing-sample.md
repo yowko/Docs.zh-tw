@@ -1,26 +1,12 @@
 ---
 title: Net.TCP Port Sharing 範例
-ms.custom: ''
 ms.date: 03/30/2017
-ms.prod: .net-framework
-ms.reviewer: ''
-ms.suite: ''
-ms.technology:
-- dotnet-clr
-ms.tgt_pltfrm: ''
-ms.topic: article
 ms.assetid: 03da5959-0574-4e91-8a53-05854b6c55dc
-caps.latest.revision: 18
-author: dotnet-bot
-ms.author: dotnetcontent
-manager: wpickett
-ms.workload:
-- dotnet
-ms.openlocfilehash: 0db4148f9be6db97dec2b8b680dad56171106b2c
-ms.sourcegitcommit: 2042de78fcdceebb6b8ac4b7a292b93e8782cbf5
+ms.openlocfilehash: cfd87868a5ecc557ccca1003f54f3a896b2f9fcc
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/27/2018
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="nettcp-port-sharing-sample"></a>Net.TCP Port Sharing 範例
 TCP/IP 通訊協定使用一個 16 位元的數字 (稱為連接埠) 來區分在同一部電腦上執行的多個網路應用程式連線。 如果應用程式正在接聽某個連接埠，則該連接埠的所有 TCP 流量就會流向該應用程式。 其他應用程式將無法同時接聽該連接埠。  
@@ -30,13 +16,13 @@ TCP/IP 通訊協定使用一個 16 位元的數字 (稱為連接埠) 來區分�
 >   
 >  `<InstallDrive>:\WF_WCF_Samples`  
 >   
->  如果此目錄不存在，請移至 [Windows Communication Foundation (WCF) and Windows Workflow Foundation (WF) Samples for .NET Framework 4  (適用於 .NET Framework 4 的 Windows Communication Foundation (WCF) 與 Windows Workflow Foundation (WF) 範例)](http://go.microsoft.com/fwlink/?LinkId=150780) ，以下載所有 [!INCLUDE[indigo1](../../../../includes/indigo1-md.md)] 和 [!INCLUDE[wf1](../../../../includes/wf1-md.md)] 範例。 此範例位於下列目錄。  
+>  如果此目錄不存在，請移至[Windows Communication Foundation (WCF) 和適用於.NET Framework 4 的 Windows Workflow Foundation (WF) 範例](http://go.microsoft.com/fwlink/?LinkId=150780)下載所有 Windows Communication Foundation (WCF) 和[!INCLUDE[wf1](../../../../includes/wf1-md.md)]範例。 此範例位於下列目錄。  
 >   
 >  `<InstallDrive>:\WF_WCF_Samples\WCF\Basic\Binding\Net\TCP\PortSharing`  
   
  許多通訊協定都使用一個標準或預設的連接埠號碼。 例如，HTTP 通訊協定通常使用 TCP 通訊埠 80。 Internet Information Services (IIS) 有一個可在多個 HTTP 應用程式之間共用通訊埠的接聽項。 IIS 會直接接聽連接埠，並依照訊息資料流內的資訊將訊息轉送至適當的應用程式。 這樣一來，多個 HTTP 應用程式就可以使用相同的連接埠號碼，而不用競相保留該連接埠以接收訊息。  
   
- NetTcp Port Sharing 是[!INCLUDE[indigo1](../../../../includes/indigo1-md.md)]功能，同樣可以讓多個網路應用程式共用單一通訊埠。 NetTcp Port Sharing Service 會透過 net.tcp 通訊協定來接受連線，並依據該連線的目的地位址來轉送訊息。  
+ NetTcp Port Sharing 是一種 Windows Communication Foundation (WCF) 功能，同樣可以讓多個網路應用程式共用單一通訊埠。 NetTcp Port Sharing Service 會透過 net.tcp 通訊協定來接受連線，並依據該連線的目的地位址來轉送訊息。  
   
  NetTcp Port Sharing Service 預設並未啟用。 在執行此範例之前，您必須手動啟用服務。 如需詳細資訊，請參閱[How to： 啟用 Net.TCP Port Sharing Service](../../../../docs/framework/wcf/feature-details/how-to-enable-the-net-tcp-port-sharing-service.md)。 如果服務已停用，則當啟動伺服器應用程式時，會擲回例外狀況。  
   

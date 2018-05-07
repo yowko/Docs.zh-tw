@@ -1,13 +1,6 @@
 ---
-title: "最佳化效能：物件行為"
-ms.custom: 
+title: 最佳化效能：物件行為
 ms.date: 03/30/2017
-ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.technology: dotnet-wpf
-ms.tgt_pltfrm: 
-ms.topic: article
 dev_langs:
 - csharp
 - vb
@@ -18,16 +11,11 @@ helpviewer_keywords:
 - object performance considerations [WPF]
 - Freezable objects [WPF], performance
 ms.assetid: 73aa2f47-1d73-439a-be1f-78dc4ba2b5bd
-caps.latest.revision: "12"
-author: dotnet-bot
-ms.author: dotnetcontent
-manager: wpickett
-ms.workload: dotnet
-ms.openlocfilehash: 12c4dc202ac4db2c21b0a45b61608f5c03c24ac9
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.openlocfilehash: 2e1f56dec87de7a22aa8a0bfefe84222d74ba085
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="optimizing-performance-object-behavior"></a>最佳化效能：物件行為
 了解 [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] 物件的內建行為有助您做出功能和效能之間的正確取捨。  
@@ -80,8 +68,8 @@ ms.lasthandoff: 12/22/2017
   
 |**狀態**|**Size**|  
 |---------------|--------------|  
-|凍結<xref:System.Windows.Media.SolidColorBrush>|212 個位元組|  
-|非凍結<xref:System.Windows.Media.SolidColorBrush>|972 個位元組|  
+|凍結 <xref:System.Windows.Media.SolidColorBrush>|212 個位元組|  
+|非凍結 <xref:System.Windows.Media.SolidColorBrush>|972 個位元組|  
   
  下列程式碼範例說明此概念：  
   
@@ -91,7 +79,7 @@ ms.lasthandoff: 12/22/2017
 ### <a name="changed-handlers-on-unfrozen-freezables-may-keep-objects-alive"></a>未凍結的 Freezable 上的已變更處理常式可能會保持物件運作  
  物件會傳遞至委派<xref:System.Windows.Freezable>物件的<xref:System.Windows.Freezable.Changed>事件實際上就是該物件的參考。 因此，<xref:System.Windows.Freezable.Changed>事件處理常式可以讓物件保持運作時間超出預期。 執行清除時之物件的已註冊至接聽<xref:System.Windows.Freezable>物件的<xref:System.Windows.Freezable.Changed>事件時，務必要釋放物件之前，先移除該委派。  
   
- [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)]連結也<xref:System.Windows.Freezable.Changed>事件在內部。 例如，所有相依性屬性需要<xref:System.Windows.Freezable>為值，將接聽<xref:System.Windows.Freezable.Changed>事件自動。 <xref:System.Windows.Shapes.Shape.Fill%2A>屬性，其中需要<xref:System.Windows.Media.Brush>，說明這個概念。  
+ [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] 連結也<xref:System.Windows.Freezable.Changed>事件在內部。 例如，所有相依性屬性需要<xref:System.Windows.Freezable>為值，將接聽<xref:System.Windows.Freezable.Changed>事件自動。 <xref:System.Windows.Shapes.Shape.Fill%2A>屬性，其中需要<xref:System.Windows.Media.Brush>，說明這個概念。  
   
  [!code-csharp[Performance#PerformanceSnippet4](../../../../samples/snippets/csharp/VS_Snippets_Wpf/Performance/CSharp/Window1.xaml.cs#performancesnippet4)]
  [!code-vb[Performance#PerformanceSnippet4](../../../../samples/snippets/visualbasic/VS_Snippets_Wpf/Performance/visualbasic/window1.xaml.vb#performancesnippet4)]  
@@ -110,7 +98,7 @@ ms.lasthandoff: 12/22/2017
   
 <a name="User_Interface_Virtualization"></a>   
 ## <a name="user-interface-virtualization"></a>使用者介面虛擬化  
- [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)]也會提供一種<xref:System.Windows.Controls.StackPanel>自動 「 虛擬化 」 資料繫結子內容的項目。 在此內容中，「虛擬化」一字係指一種技術，藉由這種技術，將可從較大量的資料項目，根據畫面上可見的項目來產生物件子集。 當在指定的時間內畫面上只能有幾個 UI 項目時，不論是就記憶體還是處理器而言，產生大量 UI 項目都會相當耗費資源。 <xref:System.Windows.Controls.VirtualizingStackPanel>(透過所提供的功能<xref:System.Windows.Controls.VirtualizingPanel>) 計算的可見項目，並搭配<xref:System.Windows.Controls.ItemContainerGenerator>從<xref:System.Windows.Controls.ItemsControl>(例如<xref:System.Windows.Controls.ListBox>或<xref:System.Windows.Controls.ListView>) 只建立可見的項目項目。  
+ [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] 也會提供一種<xref:System.Windows.Controls.StackPanel>自動 「 虛擬化 」 資料繫結子內容的項目。 在此內容中，「虛擬化」一字係指一種技術，藉由這種技術，將可從較大量的資料項目，根據畫面上可見的項目來產生物件子集。 當在指定的時間內畫面上只能有幾個 UI 項目時，不論是就記憶體還是處理器而言，產生大量 UI 項目都會相當耗費資源。 <xref:System.Windows.Controls.VirtualizingStackPanel> (透過所提供的功能<xref:System.Windows.Controls.VirtualizingPanel>) 計算的可見項目，並搭配<xref:System.Windows.Controls.ItemContainerGenerator>從<xref:System.Windows.Controls.ItemsControl>(例如<xref:System.Windows.Controls.ListBox>或<xref:System.Windows.Controls.ListView>) 只建立可見的項目項目。  
   
  作為效能最佳化，只有在這些項目的視覺物件顯示在螢幕上時才會產生或保持這些項目的視覺物件運作。 如果視覺物件不再位於控制項的可檢視區域中，可能會移除視覺物件。 這並不會與資料虛擬化混淆，在資料虛擬化中，資料物件不會全都在本機集合，而是視需要進行資料流處理。  
   
@@ -121,7 +109,7 @@ ms.lasthandoff: 12/22/2017
 |<xref:System.Windows.Controls.StackPanel>|3210|  
 |<xref:System.Windows.Controls.VirtualizingStackPanel>|46|  
   
-## <a name="see-also"></a>請參閱  
+## <a name="see-also"></a>另請參閱  
  [最佳化 WPF 應用程式效能](../../../../docs/framework/wpf/advanced/optimizing-wpf-application-performance.md)  
  [應用程式效能規劃](../../../../docs/framework/wpf/advanced/planning-for-application-performance.md)  
  [運用硬體](../../../../docs/framework/wpf/advanced/optimizing-performance-taking-advantage-of-hardware.md)  

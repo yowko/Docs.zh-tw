@@ -1,28 +1,16 @@
 ---
-title: "關於 GDI+ Managed 程式碼"
-ms.custom: 
+title: 關於 GDI+ Managed 程式碼
 ms.date: 03/30/2017
-ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.technology: dotnet-winforms
-ms.tgt_pltfrm: 
-ms.topic: article
 helpviewer_keywords:
 - GDI+, about GDI+
 - GDI+
 - graphics [Windows Forms], GDI+
 ms.assetid: a98a76ab-e455-49c9-891c-0491ac932f2c
-caps.latest.revision: "21"
-author: dotnet-bot
-ms.author: dotnetcontent
-manager: wpickett
-ms.workload: dotnet
-ms.openlocfilehash: 817f90194d73bf6608cccde0ce3917717d0b4878
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.openlocfilehash: 913654b98eb8bf72fe43b744886a28e0f675a5c4
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="about-gdi-managed-code"></a>關於 GDI+ Managed 程式碼
 [!INCLUDE[ndptecgdiplus](../../../../includes/ndptecgdiplus-md.md)] 是 Windows 作業系統提供二維向量圖形、影像處理和印刷樣式的部分。 藉由加入新功能，以及最佳化現有的功能，[!INCLUDE[ndptecgdiplus](../../../../includes/ndptecgdiplus-md.md)] 改善了 [!INCLUDE[ndptecgdi](../../../../includes/ndptecgdi-md.md)] (包含在較早版本 Windows 的圖形裝置介面)。  

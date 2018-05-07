@@ -1,42 +1,30 @@
 ---
 title: 稽核安全性事件
-ms.custom: ''
 ms.date: 03/30/2017
-ms.prod: .net-framework
-ms.reviewer: ''
-ms.suite: ''
-ms.technology:
-- dotnet-clr
-ms.tgt_pltfrm: ''
-ms.topic: article
 helpviewer_keywords:
 - auditing security events [WCF]
 ms.assetid: 5633f61c-a3c9-40dd-8070-1c373b66a716
-caps.latest.revision: 27
 author: BrucePerlerMS
-ms.author: bruceper
 manager: mbaldwin
-ms.workload:
-- dotnet
-ms.openlocfilehash: 69b013389511ac2cfb31e22f7a39e98eb22fb977
-ms.sourcegitcommit: 94d33cadc5ff81d2ac389bf5f26422c227832052
+ms.openlocfilehash: e4219553f97f272577e8efdeb106b43e5f76ee59
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/30/2018
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="auditing-security-events"></a>稽核安全性事件
-以 [!INCLUDE[indigo1](../../../../includes/indigo1-md.md)] 建立的應用程式可以使用稽核功能記錄安全性事件 (可能為成功、失敗或兩者並存)。 事件會寫入至 Windows 系統事件記錄檔，並且可以使用 [事件檢視器] 加以檢查。  
+建立與 Windows Communication Foundation (WCF) 應用程式可以使用稽核功能記錄安全性事件 （成功、 失敗，或兩者）。 事件會寫入至 Windows 系統事件記錄檔，並且可以使用 [事件檢視器] 加以檢查。  
   
  稽核為系統管理員提供了一種方法，可偵測已發生或正在進行的攻擊。 此外，稽核可以協助開發人員偵錯安全性相關的問題。 例如，若授權的組態中出現錯誤，或是在檢查原則時不小心拒絕了某個授權使用者的存取，則開發人員可以藉由檢查事件日誌，快速地探索及隔離導致這個錯誤的原因。  
   
- 如需有關[!INCLUDE[indigo2](../../../../includes/indigo2-md.md)]安全性，請參閱[安全性概觀](../../../../docs/framework/wcf/feature-details/security-overview.md)。 如需有關程式設計[!INCLUDE[indigo2](../../../../includes/indigo2-md.md)]，請參閱[基本 WCF 程式設計](../../../../docs/framework/wcf/basic-wcf-programming.md)。  
+ 如需有關 WCF 安全性的詳細資訊，請參閱[安全性概觀](../../../../docs/framework/wcf/feature-details/security-overview.md)。 如需 WCF 程式設計的詳細資訊，請參閱[基本 WCF 程式設計](../../../../docs/framework/wcf/basic-wcf-programming.md)。  
   
 ## <a name="audit-level-and-behavior"></a>稽核層級和行為  
  安全性稽核目前有兩種層級：  
   
 -   服務授權層級，其中呼叫者已獲得授權。  
   
--   訊息層級，其中 [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] 會檢查訊息的有效性，並驗證呼叫者。  
+-   訊息層級，WCF 會檢查訊息的有效性和驗證呼叫者。  
   
  您可以檢查兩種稽核層級為成功或失敗，也就是*稽核行為*。  
   

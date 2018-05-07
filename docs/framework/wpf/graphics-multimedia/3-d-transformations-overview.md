@@ -1,13 +1,6 @@
 ---
-title: "立體轉換概觀"
-ms.custom: 
+title: 立體轉換概觀
 ms.date: 03/30/2017
-ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.technology: dotnet-wpf
-ms.tgt_pltfrm: 
-ms.topic: article
 dev_langs:
 - csharp
 - vb
@@ -15,16 +8,11 @@ helpviewer_keywords:
 - 3-D transformations
 - transformations [WPF], 3-D
 ms.assetid: e45e555d-ac1e-4b36-aced-e433afe7f27f
-caps.latest.revision: "18"
-author: dotnet-bot
-ms.author: dotnetcontent
-manager: wpickett
-ms.workload: dotnet
-ms.openlocfilehash: 7b45c2c12393f296f916eaf8ea3f912958b54b09
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.openlocfilehash: f0fb859905327b30c0ea509e5d07072b81dcf30e
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="3-d-transformations-overview"></a>立體轉換概觀
 本主題說明如何對 [!INCLUDE[TLA#tla_winclient](../../../../includes/tlasharptla-winclient-md.md)] 圖形系統中的 3D 模型套用轉換。 轉換可讓開發人員重新置放模型、調整模型大小，以及調整模型方向，而不需要變更定義模型的基底值。  
@@ -49,7 +37,7 @@ ms.lasthandoff: 12/22/2017
 ## <a name="translation-transformations"></a>平移轉換  
  繼承自抽象基底類別的 3d 轉換<xref:System.Windows.Media.Media3D.Transform3D>; 其中包括仿射轉換類別<xref:System.Windows.Media.Media3D.TranslateTransform3D>， <xref:System.Windows.Media.Media3D.ScaleTransform3D>，和<xref:System.Windows.Media.Media3D.RotateTransform3D>。 [!INCLUDE[TLA#tla_winclient](../../../../includes/tlasharptla-winclient-md.md)] 3d 系統也提供<xref:System.Windows.Media.Media3D.MatrixTransform3D>類別，可讓您更精確矩陣作業中指定相同的轉換。  
   
- <xref:System.Windows.Media.Media3D.TranslateTransform3D>在您使用指定的位移向量的方向的 model3d，已移動的所有點<xref:System.Windows.Media.Media3D.TranslateTransform3D.OffsetX%2A>， <xref:System.Windows.Media.Media3D.TranslateTransform3D.OffsetY%2A>，和<xref:System.Windows.Media.Media3D.TranslateTransform3D.OffsetZ%2A>屬性。 例如，(2,2,2) 有一個立方體的頂點，(0,1.6,1) 的位移向量會將該頂點 (2,2,2) 移動到 (2,3.6,3)。 立方體的頂點還是在模型空間中的 (2,2,2)，但現在該模型空間已變更它與世界空間的關聯性，因此模型空間中的 (2,2,2) 就是世界空間中的 (2,3.6,3)。  
+ <xref:System.Windows.Media.Media3D.TranslateTransform3D> 在您使用指定的位移向量的方向的 model3d，已移動的所有點<xref:System.Windows.Media.Media3D.TranslateTransform3D.OffsetX%2A>， <xref:System.Windows.Media.Media3D.TranslateTransform3D.OffsetY%2A>，和<xref:System.Windows.Media.Media3D.TranslateTransform3D.OffsetZ%2A>屬性。 例如，(2,2,2) 有一個立方體的頂點，(0,1.6,1) 的位移向量會將該頂點 (2,2,2) 移動到 (2,3.6,3)。 立方體的頂點還是在模型空間中的 (2,2,2)，但現在該模型空間已變更它與世界空間的關聯性，因此模型空間中的 (2,2,2) 就是世界空間中的 (2,3.6,3)。  
   
  ![轉譯圖](../../../../docs/framework/wpf/graphics-multimedia/media/transforms-translate.png "轉換翻譯")  
 使用位移的平移  
@@ -59,7 +47,7 @@ ms.lasthandoff: 12/22/2017
  [!code-xaml[animation3dgallery_snip#Translation3DAnimationExampleWholePage](../../../../samples/snippets/csharp/VS_Snippets_Wpf/Animation3DGallery_snip/CS/Translation3DAnimationExample.xaml#translation3danimationexamplewholepage)]  
   
 ## <a name="scale-transformations"></a>縮放轉換  
- <xref:System.Windows.Media.Media3D.ScaleTransform3D>變更模型的小數位數以指定的縮放向量參考中心點。 指定統一的縮放比例，會將模型沿著 X、Y 和 Z 軸縮放相同的值，以便依比例變更模型的大小。 例如，設定轉換<xref:System.Windows.Media.ScaleTransform.ScaleX%2A>， <xref:System.Windows.Media.ScaleTransform.ScaleY%2A>，和<xref:System.Windows.Media.Media3D.ScaleTransform3D.ScaleZ%2A>屬性為 0.5 分母模型的大小，將相同的屬性設定為 2 會加倍在所有的三個軸的刻度。  
+ <xref:System.Windows.Media.Media3D.ScaleTransform3D> 變更模型的小數位數以指定的縮放向量參考中心點。 指定統一的縮放比例，會將模型沿著 X、Y 和 Z 軸縮放相同的值，以便依比例變更模型的大小。 例如，設定轉換<xref:System.Windows.Media.ScaleTransform.ScaleX%2A>， <xref:System.Windows.Media.ScaleTransform.ScaleY%2A>，和<xref:System.Windows.Media.Media3D.ScaleTransform3D.ScaleZ%2A>屬性為 0.5 分母模型的大小，將相同的屬性設定為 2 會加倍在所有的三個軸的刻度。  
   
  ![統一 ScaleTransform3D](../../../../docs/framework/wpf/graphics-multimedia/media/threecubes-uniformscale-1.png "threecubes_uniformscale_1")  
 ScaleVector 範例  
@@ -87,7 +75,7 @@ ScaleVector 範例
   
  若要「就地」旋轉模型，請指定模型真正的中心做為旋轉的中心。 因為幾何通常是以原點開始建立，所以您可以先調整模型的大小 (縮放模型)，然後設定模型的方向 (旋轉模型)，最後將模型移到想要的位置 (平移模型)，通常都能在一組轉換之後得到預期的結果。  
   
- ![旋轉 60 度 x &#45;和 y &#45; 座標軸](../../../../docs/framework/wpf/graphics-multimedia/media/twocubes-rotation2axes-1.png "twocubes_rotation2axes_1")  
+ ![在 x 60 度旋轉&#45;和 y&#45;座標軸](../../../../docs/framework/wpf/graphics-multimedia/media/twocubes-rotation2axes-1.png "twocubes_rotation2axes_1")  
 旋轉範例  
   
  軸角度旋轉適用於靜態轉換和一些動畫。 不過，如果考慮讓立方體模型繞著 X 軸旋轉 60 度，然後繞著 Z 軸旋轉 45 度。 您可以將這個轉換描述為兩個不連續的仿射轉換，或描述為矩陣。 不過，要順利以動畫顯示此種方式定義的旋轉很困難。 雖然以兩種方法計算的模型開始位置和結束位置都相同，但是模型所採取的中間位置則是具有計算不確定性。 四元數是一種用來計算旋轉開始和結束之間插補的替代方法。  
@@ -116,7 +104,7 @@ ScaleVector 範例
   
  因為觀景窗也是模型，所以同樣可以轉換觀景窗屬性。  雖然您可以轉換觀景窗位置或平面距離來變更場景的外觀 (實際上是轉換整個場景投影)，但請注意，以這種方式達成的許多效果就觀者的「視覺感受」來說，會比對場景中的模型位置套用轉換來得少。  
   
-## <a name="see-also"></a>請參閱  
+## <a name="see-also"></a>另請參閱  
  [立體圖形概觀](../../../../docs/framework/wpf/graphics-multimedia/3-d-graphics-overview.md)  
  [轉換概觀](../../../../docs/framework/wpf/graphics-multimedia/transforms-overview.md)  
  [2D 轉換範例](http://go.microsoft.com/fwlink/?LinkID=158252)

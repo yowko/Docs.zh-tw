@@ -1,13 +1,6 @@
 ---
 title: 如何：定義程序的參數 (Visual Basic)
-ms.custom: ''
 ms.date: 07/20/2015
-ms.prod: .net
-ms.reviewer: ''
-ms.suite: ''
-ms.technology:
-- devlang-visual-basic
-ms.topic: article
 helpviewer_keywords:
 - procedure parameters [Visual Basic], defining data types for
 - procedures [Visual Basic], parameters
@@ -15,14 +8,11 @@ helpviewer_keywords:
 - Visual Basic code, procedures
 - procedure parameters [Visual Basic], defining
 ms.assetid: 7962808d-407e-4e84-984e-43e9857c53c9
-caps.latest.revision: 15
-author: dotnet-bot
-ms.author: dotnetcontent
-ms.openlocfilehash: eb4bac9208c03fd18e1904f58b247824d2c215da
-ms.sourcegitcommit: 86adcc06e35390f13c1e372c36d2e044f1fc31ef
+ms.openlocfilehash: b058f593b8672da449dac250947563c75c8386bf
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/26/2018
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="how-to-define-a-parameter-for-a-procedure-visual-basic"></a>如何：定義程序的參數 (Visual Basic)
 A*參數*允許將值傳遞至程序呼叫它時，如果呼叫的程式碼。 您宣告一個變數，指定其名稱和資料類型的相同方式宣告的程序的每個參數。 您也可以指定傳遞機制，以及參數是否為選擇性。  

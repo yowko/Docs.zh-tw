@@ -1,29 +1,15 @@
 ---
-title: "日期和時間資料"
-ms.custom: 
+title: 日期和時間資料
 ms.date: 03/30/2017
-ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.technology:
-- dotnet-ado
-ms.tgt_pltfrm: 
-ms.topic: article
 dev_langs:
 - csharp
 - vb
 ms.assetid: 6f5ff56a-a57e-49d7-8ae9-bbed697e42e3
-caps.latest.revision: 
-author: douglaslMS
-ms.author: douglasl
-manager: craigg
-ms.workload:
-- dotnet
-ms.openlocfilehash: 904b941a274cdd31485d35cf2d025f869638d448
-ms.sourcegitcommit: c3957fdb990060559d73cca44ab3e2c7b4d049c0
+ms.openlocfilehash: 2130c79ba79ce7e327a2a1b3adccd92e52153d85
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 03/05/2018
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="date-and-time-data"></a>日期和時間資料
 SQL Server 2008 導入了處理日期和時間資訊的新資料型別。 這些新資料型別包括日期和時間的個別型別，以及具有較大範圍、精確度和時區感知的擴充資料型別。 從 .NET Framework 3.5 版 Service Pack (SP) 1 開始，.NET Framework Data Provider for SQL Server (<xref:System.Data.SqlClient>) 就會針對 SQL Server 2008 Database Engine 的所有新功能提供完整支援。 您必須安裝 .NET Framework 3.5 SP1 (或更新版本) 才能使用這些新功能搭配 SqlClient。  
@@ -44,7 +30,7 @@ SQL Server 2008 導入了處理日期和時間資訊的新資料型別。 這些
 |`date`|`date` 資料型別的範圍從 01 年 1 月 1 日到 9999 年 12 月 31 日，精確度為 1 日。 預設值為 1900 年 1 月 1 日。 儲存大小是 3 個位元組。|  
 |`time`|`time` 資料型別只會根據 24 小時制來儲存時間值。 `time` 資料型別的範圍從 00:00:00.0000000 到 23:59:59.9999999，精確度為 100 奈秒。 預設值是 00:00:00.0000000 (午夜)。 `time` 資料型別支援使用者定義的小數點後第二位的精確度，儲存大小則從 3 到 6 位元組不等，依指定的精確度而定。|  
 |`datetime2`|`datetime2` 資料型別將 `date` 和 `time` 資料型別的範圍及精確度組合成單一的資料型別。<br /><br /> 預設值及字串常值格式與 `date` 和 `time` 資料型別中定義的相同。|  
-|`datetimeoffset`|`datetimeoffset` 資料型別具有 `datetime2` 的所有功能，且具有額外的時區位移 (Offset)。 時區位移以 [+ &#124;-] hh: mm。 HH 是代表時區位移中時數的 2 位數，範圍介於 00 至 14 之間。 MM 是代表時區位移中額外分鐘數的 2 位數，範圍介於 00 至 59 之間。 時間格式可支援到 100 奈秒。 強制的 + 或 - 號則代表在取得當地時間時，是在 UTC (世界標準時間或格林威治標準時間) 中加入或減去時區位移數。|  
+|`datetimeoffset`|`datetimeoffset` 資料型別具有 `datetime2` 的所有功能，且具有額外的時區位移 (Offset)。 時區位移以 [+&#124;-] hh: mm。 HH 是代表時區位移中時數的 2 位數，範圍介於 00 至 14 之間。 MM 是代表時區位移中額外分鐘數的 2 位數，範圍介於 00 至 59 之間。 時間格式可支援到 100 奈秒。 強制的 + 或 - 號則代表在取得當地時間時，是在 UTC (世界標準時間或格林威治標準時間) 中加入或減去時區位移數。|  
   
 > [!NOTE]
 >  如需使用 `Type System Version` 關鍵字的詳細資訊，請參閱 <xref:System.Data.SqlClient.SqlConnection.ConnectionString%2A>。  
@@ -250,9 +236,9 @@ command.Parameters.AddWithValue( _
 |-----------|-----------------|  
 |[日期和時間資料類型與函數 (TRANSACT-SQL)](http://go.microsoft.com/fwlink/?LinkId=98360)|提供所有 Transact-SQL 日期及時間資料型別與函式的概觀。|  
 |[使用日期和時間資料](http://go.microsoft.com/fwlink/?LinkId=98361)|提供有關日期和時間資料型別與函式的詳細資訊，以及使用這些項目的範例。|  
-|[Data Types (Transact-SQL)](http://go.microsoft.com/fwlink/?LinkId=98362)|說明 SQL Server 2008 中的系統資料型別。|  
+|[資料類型 (TRANSACT-SQL)](http://go.microsoft.com/fwlink/?LinkId=98362)|說明 SQL Server 2008 中的系統資料型別。|  
   
-## <a name="see-also"></a>請參閱  
+## <a name="see-also"></a>另請參閱  
  [SQL Server 資料類型對應](../../../../../docs/framework/data/adonet/sql-server-data-type-mappings.md)  
  [設定參數和參數資料類型](../../../../../docs/framework/data/adonet/configuring-parameters-and-parameter-data-types.md)  
  [SQL Server 資料類型和 ADO.NET](../../../../../docs/framework/data/adonet/sql/sql-server-data-types.md)  

@@ -1,12 +1,6 @@
 ---
-title: "Visual Basic 命名慣例"
-ms.custom: 
+title: Visual Basic 命名慣例
 ms.date: 07/20/2015
-ms.prod: .net
-ms.reviewer: 
-ms.suite: 
-ms.technology: devlang-visual-basic
-ms.topic: article
 helpviewer_keywords:
 - names [Visual Basic], Visual Basic rules
 - naming conventions
@@ -16,14 +10,11 @@ helpviewer_keywords:
 - names [Visual Basic], naming conventions
 - naming conventions [Visual Basic], classes
 ms.assetid: 164949a4-2a7c-4736-9d82-9c3078e2e56c
-caps.latest.revision: "10"
-author: dotnet-bot
-ms.author: dotnetcontent
-ms.openlocfilehash: 97f02fd85d4796d6799a8a5b40a9137eeb79a93f
-ms.sourcegitcommit: 34ec7753acf76f90a0fa845235ef06663dc9e36e
+ms.openlocfilehash: cb7e9f2a577e95e09fde885df1a78aea4e7fa466
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="visual-basic-naming-conventions"></a>Visual Basic 命名慣例
 當您在 Visual Basic 應用程式命名項目時，該名稱的第一個字元必須是英數字元或底線。 不過請注意，以底線開頭的名稱不符合[語言獨立性以及與語言無關的元件](../../../standard/language-independence-and-language-independent-components.md)（cls） 標準。  
@@ -48,7 +39,7 @@ ms.lasthandoff: 12/21/2017
   
 -   避免使用內部範圍內外部範圍中的名稱相同的名稱。 如果存取錯誤的變數，可能會造成錯誤。 如果之變數與相同名稱的關鍵字之間發生衝突，您必須識別關鍵字前面使用適當的型別程式庫。 例如，如果您擁有名為`Date`，您可以使用內建`Date`函式，只是藉由呼叫<xref:System.DateTime.Date%2A?displayProperty=nameWithType>。  
   
-## <a name="see-also"></a>請參閱  
+## <a name="see-also"></a>另請參閱  
  [程式碼中以關鍵字做為項目名稱](../../../visual-basic/programming-guide/program-structure/keywords-as-element-names-in-code.md)  
  [Me、My、MyBase 和 MyClass](../../../visual-basic/programming-guide/program-structure/me-my-mybase-and-myclass.md)  
  [宣告項目名稱](../../../visual-basic/programming-guide/language-features/declared-elements/declared-element-names.md)  

@@ -1,14 +1,6 @@
 ---
 title: 如何：以程式碼模擬滑鼠和鍵盤事件
-ms.custom: ''
 ms.date: 03/30/2017
-ms.prod: .net-framework
-ms.reviewer: ''
-ms.suite: ''
-ms.technology:
-- dotnet-winforms
-ms.tgt_pltfrm: ''
-ms.topic: article
 dev_langs:
 - csharp
 - vb
@@ -20,17 +12,11 @@ helpviewer_keywords:
 - mouse clicks [Windows Forms], simulating
 - mouse [Windows Forms], event simulation
 ms.assetid: 6abcb67e-3766-4af2-9590-bf5dabd17e41
-caps.latest.revision: 14
-author: dotnet-bot
-ms.author: dotnetcontent
-manager: wpickett
-ms.workload:
-- dotnet
-ms.openlocfilehash: 387b73d4e1820d71d163fddebe8fe9f24e4ff56e
-ms.sourcegitcommit: 2042de78fcdceebb6b8ac4b7a292b93e8782cbf5
+ms.openlocfilehash: cdb37fe549ebfbcdb5a0c5b6008a1922fdbf471b
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/27/2018
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="how-to-simulate-mouse-and-keyboard-events-in-code"></a>如何：以程式碼模擬滑鼠和鍵盤事件
 Windows Form 提供以程式設計方式模擬滑鼠和鍵盤輸入的數個選項。 本主題提供這些選項的概觀。  

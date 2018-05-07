@@ -1,31 +1,19 @@
 ---
-title: "Windows Communication Foundation 架構"
-ms.custom: 
+title: Windows Communication Foundation 架構
 ms.date: 03/30/2017
-ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.technology: dotnet-clr
-ms.tgt_pltfrm: 
-ms.topic: article
 helpviewer_keywords:
 - Windows Communication Foundation [WCF], architecture
 - WCF [WCF], architecture
 - architecture [WCF]
 ms.assetid: a3bcb0a1-56ea-4ba6-9736-d260d90dade5
-caps.latest.revision: "7"
-author: dotnet-bot
-ms.author: dotnetcontent
-manager: wpickett
-ms.workload: dotnet
-ms.openlocfilehash: 1bc7383c5b93203b144c965f06fa7365c864de27
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
-ms.translationtype: MT
+ms.openlocfilehash: b54c9cd7f4e6bc33dac07d30a86df81668ae13e5
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="windows-communication-foundation-architecture"></a>Windows Communication Foundation 架構
-下圖說明 [!INCLUDE[indigo1](../../../includes/indigo1-md.md)] 架構的各主要層。  
+下圖說明主要的層級的 Windows Communication Foundation (WCF) 架構。  
   
 ## <a name="wcf-architecture"></a>WCF 架構  
  ![WCF 架構](../../../docs/framework/wcf/media/wcf-architecture.gif "WCF_Architecture")  
@@ -56,6 +44,6 @@ ms.lasthandoff: 12/22/2017
   
  服務也可以是*裝載*，或是執行受外部代理程式，例如 IIS 或 Windows Activation Service (WAS) 的可執行檔中。 WAS 讓 [!INCLUDE[indigo2](../../../includes/indigo2-md.md)] 應用程式能在部署到執行 WAS 的電腦上時自動啟動。 服務也可以透過手動方式來當做可執行檔 (.exe 檔) 執行。 服務也可以自動當做 Windows 服務執行。 COM+ 元件也可以裝載為 [!INCLUDE[indigo2](../../../includes/indigo2-md.md)] 服務。  
   
-## <a name="see-also"></a>請參閱  
+## <a name="see-also"></a>另請參閱  
  [什麼是 Windows Communication Foundation](../../../docs/framework/wcf/whats-wcf.md)  
  [Windows Communication Foundation 的基本概念](../../../docs/framework/wcf/fundamental-concepts.md)

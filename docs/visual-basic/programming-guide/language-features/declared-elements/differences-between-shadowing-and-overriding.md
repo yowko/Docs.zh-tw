@@ -1,24 +1,15 @@
 ---
-title: "遮蔽和覆寫的差異 (Visual Basic)"
-ms.custom: 
+title: 遮蔽和覆寫的差異 (Visual Basic)
 ms.date: 07/20/2015
-ms.prod: .net
-ms.reviewer: 
-ms.suite: 
-ms.technology: devlang-visual-basic
-ms.topic: article
 helpviewer_keywords:
 - shadowing, vs. overriding
 - overriding, vs. shadowing
 ms.assetid: 2d014a0b-7630-407d-8f4e-24bd87987923
-caps.latest.revision: "24"
-author: dotnet-bot
-ms.author: dotnetcontent
-ms.openlocfilehash: 2d67486d9c6af96d314abad7142ba86779d74f5d
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.openlocfilehash: 94ce3e7fe25b7942730e6e89a53654b03d91c42b
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="differences-between-shadowing-and-overriding-visual-basic"></a>遮蔽和覆寫的差異 (Visual Basic)
 當您定義類別繼承自基底類別時，您有時會想要重新定義一或多個衍生類別中的基底類別項目。 遮蔽和覆寫都可供此目的。  
@@ -36,8 +27,8 @@ ms.lasthandoff: 11/21/2017
 |重新定義項目|任何宣告項目類型|只有程序或屬性具有相同的呼叫順序<sup>1</sup>|  
 |存取層級的重新定義項目|任何存取層級|無法變更存取層級覆寫的元素|  
 |閱讀，並重新定義項目的可寫性|任何組合|無法變更可讀性或可寫性的覆寫屬性|  
-|重新定義的控制|無法在強制執行或禁止遮蔽基底類別項目|可以指定基底類別項目`MustOverride`， `NotOverridable`，或`Overridable`|  
-|關鍵字的使用方式|`Shadows`衍生類別中的建議`Shadows`假設如果兩者皆非`Shadows`也`Overrides`指定<sup>2</sup>|`Overridable`或`MustOverride`所需要的基底類別; 事件類別`Overrides`衍生類別中所需|  
+|重新定義的控制|無法在強制執行或禁止遮蔽基底類別項目|可以指定基底類別項目`MustOverride`， `NotOverridable`，或 `Overridable`|  
+|關鍵字的使用方式|`Shadows` 衍生類別中的建議`Shadows`假設如果兩者皆非`Shadows`也`Overrides`指定<sup>2</sup>|`Overridable` 或`MustOverride`所需要的基底類別; 事件類別`Overrides`衍生類別中所需|  
 |繼承的類別衍生自您的衍生類別重新定義項目|遮蔽項目繼承進一步衍生的類別。遮蔽的項目仍然隱藏<sup>3</sup>|覆寫項目所繼承的進一步衍生的類別。覆寫的元素，還是覆寫|  
   
  <sup>1</sup> *呼叫順序*組成的項目類型 (`Function`， `Sub`， `Operator`，或`Property`)、 名稱、 參數清單和傳回型別。 您無法覆寫屬性或利用其他方式的程序。 您無法覆寫程序的一種 (`Function`， `Sub`，或`Operator`) 與另一種。  

@@ -1,28 +1,16 @@
 ---
-title: "如何：設定動畫的持續時間"
-ms.custom: 
+title: 如何：設定動畫的持續時間
 ms.date: 03/30/2017
-ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.technology: dotnet-wpf
-ms.tgt_pltfrm: 
-ms.topic: article
 helpviewer_keywords:
 - animation [WPF], duration
 - Timelines [WPF], description
 - duration of animations [WPF]
 ms.assetid: 155034ef-7d00-4416-a73c-b1713992d2eb
-caps.latest.revision: "8"
-author: dotnet-bot
-ms.author: dotnetcontent
-manager: wpickett
-ms.workload: dotnet
-ms.openlocfilehash: 6e8d15a1b8432b3dae5bee73396bdec9fc9d50f0
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.openlocfilehash: df9e12e1bd3a365c3013d0f75df663bd46186ee2
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="how-to-set-a-duration-for-an-animation"></a>如何：設定動畫的持續時間
 A<xref:System.Windows.Media.Animation.Timeline>代表一段時間和區段長度由時間軸的<xref:System.Windows.Duration>。 當<xref:System.Windows.Media.Animation.Timeline>結束其持續時間，它就會停止播放。 如果<xref:System.Windows.Media.Animation.Timeline>具有子時刻表它們停止以及播放。 在動畫，<xref:System.Windows.Duration>指定動畫時間轉換從其起始值至它的結束值。  
@@ -34,6 +22,6 @@ A<xref:System.Windows.Media.Animation.Timeline>代表一段時間和區段長度
 ## <a name="example"></a>範例  
  [!code-xaml[timingbehaviors_snip#DurationExampleWholePage](../../../../samples/snippets/csharp/VS_Snippets_Wpf/timingbehaviors_snip/CSharp/DurationExample.xaml#durationexamplewholepage)]  
   
-## <a name="see-also"></a>請參閱  
+## <a name="see-also"></a>另請參閱  
  <xref:System.Windows.Duration>  
  [動畫概觀](../../../../docs/framework/wpf/graphics-multimedia/animation-overview.md)

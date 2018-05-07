@@ -1,11 +1,6 @@
 ---
 title: -win32manifest (Visual Basic)
 ms.date: 03/13/2018
-ms.prod: .net
-ms.suite: ''
-ms.technology:
-- devlang-visual-basic
-ms.topic: article
 helpviewer_keywords:
 - /win32manifest compiler option [Visual Basic]
 - win32manifest compiler option [Visual Basic]
@@ -13,11 +8,11 @@ helpviewer_keywords:
 ms.assetid: 9e3191b4-90db-41c8-966a-28036fd20005
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 901ea984a8e8e90329953a8936e68f2fc07f8847
-ms.sourcegitcommit: 2042de78fcdceebb6b8ac4b7a292b93e8782cbf5
+ms.openlocfilehash: f81b578c5ee3ffd830cef237fba2272eecd07642
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/27/2018
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="-win32manifest-visual-basic"></a>-win32manifest (Visual Basic)
 識別要內嵌到專案的可攜式執行檔 (PE) 中的使用者定義 Win32 應用程式資訊清單檔。  
@@ -48,7 +43,7 @@ ms.lasthandoff: 04/27/2018
   
 2.  您可以提供未指定所要求執行層級的自訂資訊清單。  
   
- Visual Studio 會建立預設.manifest 檔案，並將它儲存在與可執行檔在一起的偵錯和發行目錄。 您可以檢視，或按一下 編輯預設 app.manifest 檔案**檢視 UAC 設定**上**應用程式**專案設計工具中的索引標籤。 如需詳細資訊，請參閱[專案設計工具、應用程式頁 (Visual Basic)](/visualstudio/ide/reference/application-page-project-designer-visual-basic)。  
+ Visual Studio 會建立預設.manifest 檔案，並將它與可執行檔一起儲存在偵錯和發行目錄中。 您可以檢視，或按一下 編輯預設 app.manifest 檔案**檢視 UAC 設定**上**應用程式**專案設計工具中的索引標籤。 如需詳細資訊，請參閱[專案設計工具、應用程式頁 (Visual Basic)](/visualstudio/ide/reference/application-page-project-designer-visual-basic)。  
   
  您可以使用提供的應用程式資訊清單做為自訂建置後步驟，或做為 Win32 資源檔的一部分`-nowin32manifest`選項。 如果您想要應用程式受制於 Windows Vista 上的檔案或登錄虛擬化，請使用這個相同的選項。 如此可防止編譯器建立和內嵌 PE 檔中的預設資訊清單。  
   

@@ -1,13 +1,6 @@
 ---
-title: "區域類型推斷 (Visual Basic)"
-ms.custom: 
+title: 區域類型推斷 (Visual Basic)
 ms.date: 07/20/2015
-ms.prod: .net
-ms.reviewer: 
-ms.suite: 
-ms.technology: devlang-visual-basic
-ms.tgt_pltfrm: 
-ms.topic: article
 f1_keywords:
 - local type inference
 - vb.TypeInfer
@@ -19,14 +12,11 @@ helpviewer_keywords:
 - inference [Visual Basic]
 - type inference [Visual Basic]
 ms.assetid: b8307f18-2e56-4ab3-a45a-826873f400f6
-caps.latest.revision: "43"
-author: dotnet-bot
-ms.author: dotnetcontent
-ms.openlocfilehash: d753d1fbdc60f70dcf0513d809f28a112243c111
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.openlocfilehash: b33b8b2d17c240e380377528d4f5d2f511381a7d
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="local-type-inference-visual-basic"></a>區域類型推斷 (Visual Basic)
 Visual Basic 編譯器使用*型別推斷*來判斷資料類型的本機變數宣告為不具有`As`子句。 編譯器會推斷變數的初始化運算式的型別類型。 這可讓您宣告變數而不用明確陳述的型別，如下列範例所示。 宣告，因為兩者`num1`和`num2`強型別為整數。  
@@ -68,7 +58,7 @@ Visual Basic 編譯器使用*型別推斷*來判斷資料類型的本機變數�
  [!code-vb[VbVbalrTypeInference#5](../../../../visual-basic/language-reference/statements/codesnippet/VisualBasic/local-type-inference_6.vb)]  
   
 ## <a name="option-infer"></a>Option Infer  
- `Option Infer`可讓您指定特定的檔案中是否允許區域類型推斷。 若要啟用或區塊的選項，請輸入下列陳述式的其中一個檔案的開頭。  
+ `Option Infer` 可讓您指定特定的檔案中是否允許區域類型推斷。 若要啟用或區塊的選項，請輸入下列陳述式的其中一個檔案的開頭。  
   
  `Option Infer On`  
   
