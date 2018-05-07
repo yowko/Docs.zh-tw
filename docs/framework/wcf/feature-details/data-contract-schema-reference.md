@@ -1,34 +1,20 @@
 ---
 title: 資料合約結構描述參考
-ms.custom: ''
 ms.date: 03/30/2017
-ms.prod: .net-framework
-ms.reviewer: ''
-ms.suite: ''
-ms.technology:
-- dotnet-clr
-ms.tgt_pltfrm: ''
-ms.topic: article
 helpviewer_keywords:
 - data contracts [WCF], schema reference
 ms.assetid: 9ebb0ebe-8166-4c93-980a-7c8f1f38f7c0
-caps.latest.revision: 24
-author: dotnet-bot
-ms.author: dotnetcontent
-manager: wpickett
-ms.workload:
-- dotnet
-ms.openlocfilehash: 075f8d89caccd7723f3a1dc54fde695a8fb624ab
-ms.sourcegitcommit: 94d33cadc5ff81d2ac389bf5f26422c227832052
+ms.openlocfilehash: 06bc79e059300d448ababa87974b590f54f7984c
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/30/2018
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="data-contract-schema-reference"></a>資料合約結構描述參考
 本主題說明 <xref:System.Runtime.Serialization.DataContractSerializer> 用來描述 XML 序列化之 Common Language Runtime (CLR) 型別的 XML 結構描述 (XSD) 子集。  
   
 ## <a name="datacontractserializer-mappings"></a>DataContractSerializer 對應  
- 當您使用中繼資料端點或 `DataContractSerializer` ，從 [!INCLUDE[indigo1](../../../../includes/indigo1-md.md)] 服務匯出中繼資料時， [DataContractSerializer](../../../../docs/framework/wcf/servicemodel-metadata-utility-tool-svcutil-exe.md)就會將 CLR 型別對應至 XSD。 如需詳細資訊，請參閱[資料合約序列化程式](../../../../docs/framework/wcf/feature-details/data-contract-serializer.md)。  
+ `DataContractSerializer`將 CLR 類型對應至 XSD 中，從 Windows Communication Foundation (WCF) 服務使用中繼資料端點匯出中繼資料時或[ServiceModel Metadata Utility Tool (Svcutil.exe)](../../../../docs/framework/wcf/servicemodel-metadata-utility-tool-svcutil-exe.md)。 如需詳細資訊，請參閱[資料合約序列化程式](../../../../docs/framework/wcf/feature-details/data-contract-serializer.md)。  
   
  當您使用 Svcutil.exe 來存取 Web 服務描述語言 (WSDL) 或 XSD 文件並產生服務或用戶端的資料合約時， `DataContractSerializer` 也會將 XSD 對應至 CLR 型別。  
   
@@ -105,7 +91,7 @@ ms.lasthandoff: 04/30/2018
 |`choice`|禁止|  
 |`sequence`|支援，且對應至資料合約的資料成員。|  
 |`attribute`|已禁止，即使 use="prohibited" (有一個例外狀況) 亦然。 僅支援來自標準序列化結構描述命名空間的選用屬性。 它們無法對應至資料合約程式設計模型中的資料成員。 目前，只有此類屬性具有意義，而且會在「ISerializable」一節中討論。 其他所有項目都會被忽略。|  
-|`attributeGroup`|禁止。 在 [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] v1 版中， `DataContractSerializer` 會忽略 `attributeGroup` 中 `xs:complexType`的存在。|  
+|`attributeGroup`|禁止。 在 WCF v1 版中，`DataContractSerializer`忽略與否`attributeGroup`內`xs:complexType`。|  
 |`anyAttribute`|禁止。|  
 |(空白)|對應至不包含資料成員的資料合約。|  
   
@@ -215,7 +201,7 @@ ms.lasthandoff: 04/30/2018
   
  \* 當使用`simpleType`和`complexType,`匿名型別對應是與非匿名型別相同，不同之處在於沒有任何匿名資料合約，會建立具名的資料合約，以產生的名稱衍生自項目名稱。 下表為匿名型別的規則：  
   
--   [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] 實作詳細資料：如果 `xs:element` 名稱不包含句點，則匿名型別會對應至外部資料合約型別的內部型別。 如果名稱包含句點，則結果的資料合約型別是獨立的 (不是內部型別)。  
+-   WCF 實作詳細資料： 如果`xs:element`名稱不包含句點，匿名型別會對應至外部資料合約型別的內部型別。 如果名稱包含句點，則結果的資料合約型別是獨立的 (不是內部型別)。  
   
 -   產生之內部型別的資料合約名稱為外部型別的資料合約名稱，後面並跟著句點、項目名稱，以及字串 "Type"。  
   

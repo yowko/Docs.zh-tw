@@ -1,13 +1,6 @@
 ---
-title: "套用 Interop 屬性"
-ms.custom: 
+title: 套用 Interop 屬性
 ms.date: 03/30/2017
-ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.technology: dotnet-clr
-ms.tgt_pltfrm: 
-ms.topic: article
 helpviewer_keywords:
 - design-time attributes
 - .NET Framework, exposing components to COM
@@ -20,16 +13,13 @@ helpviewer_keywords:
 - COM interop, exposing COM components
 - COM interop, applying attributes
 ms.assetid: b6014613-641c-4912-9e2f-83a99210a037
-caps.latest.revision: "10"
 author: rpetrusha
 ms.author: ronpet
-manager: wpickett
-ms.workload: dotnet
-ms.openlocfilehash: ea9e12140e351bb5cc2b51ac2efca8a24e94bf2b
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.openlocfilehash: 554ea7c54973852510e539000baf03bdce8e7bcf
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="applying-interop-attributes"></a>套用 Interop 屬性
 <xref:System.Runtime.InteropServices> 命名空間提供了三種類別的 Interop 專屬屬性：一種是您在設計階段套用的屬性、一種是 COM Interop 工具和 API 在轉換過程中套用的屬性，還有一種是您或 COM Interop 套用的屬性。  
@@ -76,7 +66,7 @@ ms.lasthandoff: 12/22/2017
 |<xref:System.Runtime.InteropServices.TypeLibTypeAttribute>|含有原來針對這個類型從 COM 型別程式庫匯入的 **TYPEFLAGS**。|  
 |<xref:System.Runtime.InteropServices.TypeLibVarAttribute>|含有原來針對這個變數從 COM 類型程式庫匯入的 **VARFLAGS**。|  
   
-## <a name="see-also"></a>請參閱  
+## <a name="see-also"></a>另請參閱  
  <xref:System.Runtime.InteropServices>  
  [將 .NET Framework 元件公開給 COM](../../../docs/framework/interop/exposing-dotnet-components-to-com.md)  
  [屬性](../../../docs/standard/attributes/index.md)  

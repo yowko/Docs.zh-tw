@@ -1,13 +1,6 @@
 ---
-title: "資料與資料物件"
-ms.custom: 
+title: 資料與資料物件
 ms.date: 03/30/2017
-ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.technology: dotnet-wpf
-ms.tgt_pltfrm: 
-ms.topic: article
 dev_langs:
 - csharp
 - vb
@@ -16,16 +9,11 @@ helpviewer_keywords:
 - DataFormats class [WPF]
 - DataObject class [WPF]
 ms.assetid: 5967d557-1867-420f-a524-ae3af78402da
-caps.latest.revision: "5"
-author: dotnet-bot
-ms.author: dotnetcontent
-manager: wpickett
-ms.workload: dotnet
-ms.openlocfilehash: cb2354b61a0433981675ba55978f31937212cabc
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.openlocfilehash: ff596dc7428c9d105a27999f216d33e735e35a22
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="data-and-data-objects"></a>資料與資料物件
 拖放作業期間傳輸的資料會儲存在資料物件。  就概念而言，資料物件包含一或多個下列配對：  
@@ -47,7 +35,7 @@ ms.lasthandoff: 12/22/2017
 |<xref:System.Windows.IDataObject.GetFormats%2A>|傳回這個資料物件中的資料會儲存在中，或可以轉換成的格式清單。|  
 |<xref:System.Windows.IDataObject.SetData%2A>|指定的資料儲存於這個資料物件。|  
   
- [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)]提供的基本實作<xref:System.Windows.IDataObject>中<xref:System.Windows.DataObject>類別。 股票<xref:System.Windows.DataObject>類別已足以應付許多常見的資料傳輸案例。  
+ [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] 提供的基本實作<xref:System.Windows.IDataObject>中<xref:System.Windows.DataObject>類別。 股票<xref:System.Windows.DataObject>類別已足以應付許多常見的資料傳輸案例。  
   
  有數個預先定義的格式，例如點陣圖、 CSV、 檔案、 HTML、 RTF、 字串、 文字和音訊。 如需隨附的預先定義的資料格式資訊[!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)]，請參閱<xref:System.Windows.DataFormats>類別參考主題。  
   
@@ -86,7 +74,7 @@ ms.lasthandoff: 12/22/2017
  查詢可用的資料格式的資料物件的程式碼的其他範例，請參閱[清單資料物件中的資料格式](../../../../docs/framework/wpf/advanced/how-to-list-the-data-formats-in-a-data-object.md)。  如需更多的查詢是否存在特定的資料格式的資料物件的範例，請參閱[判斷是否存在的資料格式資料物件中](../../../../docs/framework/wpf/advanced/how-to-determine-if-a-data-format-is-present-in-a-data-object.md)。  
   
 ### <a name="retrieving-data-from-a-data-object"></a>從資料物件擷取資料  
- 從特定格式的資料物件擷取資料，只涉及呼叫其中一個<xref:System.Windows.DataObject.GetData%2A>方法並指定所需的資料格式。  其中一個<xref:System.Windows.DataObject.GetDataPresent%2A>方法可以用來檢查是否有特定的資料格式。  <xref:System.Windows.DataObject.GetData%2A>會將資料<xref:System.Object>; 視資料格式，這個物件可以轉換成特定類型的容器。  
+ 從特定格式的資料物件擷取資料，只涉及呼叫其中一個<xref:System.Windows.DataObject.GetData%2A>方法並指定所需的資料格式。  其中一個<xref:System.Windows.DataObject.GetDataPresent%2A>方法可以用來檢查是否有特定的資料格式。  <xref:System.Windows.DataObject.GetData%2A> 會將資料<xref:System.Object>; 視資料格式，這個物件可以轉換成特定類型的容器。  
   
  下列範例程式碼使用<xref:System.Windows.DataObject.GetDataPresent%28System.String%29>多載，以檢查是否可以使用指定的資料格式 （原生或自動轉換）。 如果指定的格式使用時，此範例會擷取資料使用<xref:System.Windows.DataObject.GetData%28System.String%29>方法。  
   

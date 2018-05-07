@@ -1,27 +1,15 @@
 ---
-title: "從 DataAdapter 填入資料集"
-ms.custom: 
+title: 從 DataAdapter 填入資料集
 ms.date: 03/30/2017
-ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.technology: dotnet-ado
-ms.tgt_pltfrm: 
-ms.topic: article
 dev_langs:
 - csharp
 - vb
 ms.assetid: 3fa0ac7d-e266-4954-bfac-3fbe2f913153
-caps.latest.revision: "6"
-author: douglaslMS
-ms.author: douglasl
-manager: craigg
-ms.workload: dotnet
-ms.openlocfilehash: c0991398a28e491d381d10dea8a14ed463c67c89
-ms.sourcegitcommit: ed26cfef4e18f6d93ab822d8c29f902cff3519d1
+ms.openlocfilehash: ced280be0fa14077be893c59596ed65b424172c3
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 01/17/2018
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="populating-a-dataset-from-a-dataadapter"></a>從 DataAdapter 填入資料集
 [!INCLUDE[vstecado](../../../../includes/vstecado-md.md)]<xref:System.Data.DataSet> 是常駐記憶體的資料表示，可提供與資料來源無關的一致性關聯式程式設計模型。 `DataSet` 表示一組完整的資料，包括資料表、條件約束和資料表間的關係。 因為 `DataSet` 與資料來源無關，所以 `DataSet` 可包含應用程式的本機資料，以及來自多個資料來源的資料。 而您與現有資料來源的互動則是透過 `DataAdapter`。  
@@ -33,7 +21,7 @@ ms.lasthandoff: 01/17/2018
 > [!NOTE]
 >  使用 `DataAdapter` 擷取所有的資料表要花很多時間，特別是資料表包含許多資料列時。 這是因為存取資料庫，尋找和處理資料，然後再將資料傳輸至用戶端的過程非常耗時。 在將所有資料表提取到用戶端時，所有在伺服器上的資料列都會鎖定。 若要提升效能，您可以使用 `WHERE` 子句大幅減少傳回用戶端的資料列數目。 您也可以藉由在 `SELECT` 陳述式中明確列出所需的資料行，以減少傳回用戶端的資料數量。 另一個不錯的解決方法就是以批次方式擷取資料列 (例如一次擷取數百個資料列)，同時僅在用戶端完成目前的批次作業後，才擷取下一批次。  
   
- `Fill` 方法會隱含地使用 `DataReader` 物件傳回用於在 `DataSet`內建立資料表的資料行名稱和型別，以及用於填入 `DataSet`內資料表資料列的資料。 資料表和資料行只有在不存在時才會建立；否則 `Fill` 會使用現有的 `DataSet` 結構描述。 資料行類型會建立為[!INCLUDE[dnprdnshort](../../../../includes/dnprdnshort-md.md)]根據中的資料表類型[在 ADO.NET 中的資料類型對應](../../../../docs/framework/data/adonet/data-type-mappings-in-ado-net.md)。 除非主索引鍵已存在資料來源中而且 `DataAdapter`**。**`MissingSchemaAction` 設定為 `MissingSchemaAction``AddWithKey`。 如果 `Fill` 發現主索引鍵已在資料表中，它就會以資料列 (其主索引鍵的資料行值，符合從資料來源傳回的資料列對應值) 的資料來源資料，覆寫 `DataSet` 中的資料。 如果沒發現主索引鍵，則資料會附加在 `DataSet`的資料表內。 `Fill`使用您填入時可能會存在任何對應`DataSet`(請參閱[DataAdapter DataTable 和 DataColumn 對應](../../../../docs/framework/data/adonet/dataadapter-datatable-and-datacolumn-mappings.md))。  
+ `Fill` 方法會隱含地使用 `DataReader` 物件傳回用於在 `DataSet`內建立資料表的資料行名稱和型別，以及用於填入 `DataSet`內資料表資料列的資料。 資料表和資料行只有在不存在時才會建立；否則 `Fill` 會使用現有的 `DataSet` 結構描述。 資料行類型會建立為[!INCLUDE[dnprdnshort](../../../../includes/dnprdnshort-md.md)]根據中的資料表類型[在 ADO.NET 中的資料類型對應](../../../../docs/framework/data/adonet/data-type-mappings-in-ado-net.md)。 除非主索引鍵已存在資料來源中而且 `DataAdapter`**。**`MissingSchemaAction` 設定為 `MissingSchemaAction`**.**`AddWithKey`。 如果 `Fill` 發現主索引鍵已在資料表中，它就會以資料列 (其主索引鍵的資料行值，符合從資料來源傳回的資料列對應值) 的資料來源資料，覆寫 `DataSet` 中的資料。 如果沒發現主索引鍵，則資料會附加在 `DataSet`的資料表內。 `Fill` 使用您填入時可能會存在任何對應`DataSet`(請參閱[DataAdapter DataTable 和 DataColumn 對應](../../../../docs/framework/data/adonet/dataadapter-datatable-and-datacolumn-mappings.md))。  
   
 > [!NOTE]
 >  如果 `SelectCommand` 傳回 OUTER JOIN 的結果，則 `DataAdapter` 便不會為產生的 `PrimaryKey` 設定 `DataTable`值。 您必須自己定義 `PrimaryKey` ，確保正確解析重複的資料列。 如需詳細資訊，請參閱[定義主索引鍵](../../../../docs/framework/data/adonet/dataset-datatable-dataview/defining-primary-keys.md)。  
@@ -192,7 +180,7 @@ adapter.Fill(customers, "Customers");
 |ANATR|10308|1|  
 |ANATR|10625|1|  
   
-## <a name="see-also"></a>請參閱  
+## <a name="see-also"></a>另請參閱  
  [DataAdapter 和 DataReader](../../../../docs/framework/data/adonet/dataadapters-and-datareaders.md)  
  [ADO.NET 中的資料類型對應](../../../../docs/framework/data/adonet/data-type-mappings-in-ado-net.md)  
  [使用 DbDataAdapter 修改資料](../../../../docs/framework/data/adonet/modifying-data-with-a-dbdataadapter.md)  

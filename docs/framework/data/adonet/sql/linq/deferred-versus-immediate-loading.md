@@ -1,29 +1,15 @@
 ---
-title: "延後和立即載入的比較"
-ms.custom: 
+title: 延後和立即載入的比較
 ms.date: 03/30/2017
-ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.technology:
-- dotnet-ado
-ms.tgt_pltfrm: 
-ms.topic: article
 dev_langs:
 - csharp
 - vb
 ms.assetid: d1d7247f-a3b7-460b-b342-5c1a2365aa1a
-caps.latest.revision: 
-author: douglaslMS
-ms.author: douglasl
-manager: craigg
-ms.workload:
-- dotnet
-ms.openlocfilehash: 8a4fa1574b8e25a5d98f9547ad916a3c84f10b01
-ms.sourcegitcommit: cf22b29db780e532e1090c6e755aa52d28273fa6
+ms.openlocfilehash: 5955d7361658c825c120e62e531b72d402a12650
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 02/01/2018
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="deferred-versus-immediate-loading"></a>延後和立即載入的比較
 當您查詢物件時，實際上只擷取了所要求的物件。 *相關*物件無法自動擷取一次。 (如需詳細資訊，請參閱[跨關聯性查詢](../../../../../../docs/framework/data/adonet/sql/linq/querying-across-relationships.md)。)因為嘗試存取相關物件會產生對相關物件進行擷取的要求，所以您看不到相關物件尚未載入的事實。  
@@ -46,5 +32,5 @@ ms.lasthandoff: 02/01/2018
   
 -   <xref:System.Data.Linq.DataLoadOptions.AssociateWith%2A> 方法，可以篩選針對特定關聯性 (Relationship) 所擷取的物件。  
   
-## <a name="see-also"></a>請參閱  
+## <a name="see-also"></a>另請參閱  
  [查詢概念](../../../../../../docs/framework/data/adonet/sql/linq/query-concepts.md)

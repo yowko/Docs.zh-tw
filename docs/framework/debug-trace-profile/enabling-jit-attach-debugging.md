@@ -1,27 +1,17 @@
 ---
-title: "啟用 JIT 附加偵錯"
-ms.custom: 
+title: 啟用 JIT 附加偵錯
 ms.date: 03/30/2017
-ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.technology: dotnet-clr
-ms.tgt_pltfrm: 
-ms.topic: article
 helpviewer_keywords:
 - JIT-attach debugging
 - debugging [.NET Framework], JIT-attach debugging
 ms.assetid: f91fc5f7-de5a-4f23-b6ac-f450e63c662e
-caps.latest.revision: "17"
 author: mairaw
 ms.author: mairaw
-manager: wpickett
-ms.workload: dotnet
-ms.openlocfilehash: 71b2e95076edbda3a67a84c9185d8b689c158e12
-ms.sourcegitcommit: c0dd436f6f8f44dc80dc43b07f6841a00b74b23f
+ms.openlocfilehash: 67db256f4c328b12d6cc30abfbe5d5ccc12e8b0a
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 01/19/2018
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="enabling-jit-attach-debugging"></a>啟用 JIT 附加偵錯
 JIT 附加偵錯是當您將偵錯工具附加至處理序發生錯誤時，所使用的描述語句，或者可為特定的方法或函式所觸發。  
@@ -44,7 +34,7 @@ JIT 附加偵錯是當您將偵錯工具附加至處理序發生錯誤時，所�
   
  在 [!INCLUDE[net_v40_long](../../../includes/net-v40-long-md.md)] 之前，.NET Framework 會提供不同的登錄機碼控制原生和 Managed 偵錯工具的行為。 從 [!INCLUDE[net_v40_short](../../../includes/net-v40-short-md.md)] 開始，控制會彙總在單一登錄機碼下：HKEY_LOCAL_MACHINE\SOFTWARE\Microsoft\Windows NT\Current Version\AeDebug。 您可為該機碼設定的值，會決定是否叫用偵錯工具；而如果決定叫用，是否使用需要使用者互動的對話方塊叫用。 如需設定此登錄機碼的資訊，請參閱[設定自動偵錯](http://go.microsoft.com/fwlink/?LinkId=181767)。  
   
-## <a name="see-also"></a>請參閱  
+## <a name="see-also"></a>另請參閱  
  [偵錯、追蹤和程式碼剖析](../../../docs/framework/debug-trace-profile/index.md)  
  [使映像偵錯更容易](../../../docs/framework/debug-trace-profile/making-an-image-easier-to-debug.md)  
  [啟用分析](http://msdn.microsoft.com/library/3b669676-f0e0-4ebf-8674-68986dd2020d)

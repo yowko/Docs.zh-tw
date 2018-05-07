@@ -1,24 +1,12 @@
 ---
 title: 工作流程裝載選項
-ms.custom: ''
 ms.date: 03/30/2017
-ms.prod: .net-framework
-ms.reviewer: ''
-ms.suite: ''
-ms.tgt_pltfrm: ''
-ms.topic: article
 ms.assetid: 37bcd668-9c5c-4e7c-81da-a1f1b3a16514
-caps.latest.revision: 3
-author: dotnet-bot
-ms.author: dotnetcontent
-manager: wpickett
-ms.workload:
-- dotnet
-ms.openlocfilehash: 3f022a5162ab8624d0c696efde6416484e77e874
-ms.sourcegitcommit: 2042de78fcdceebb6b8ac4b7a292b93e8782cbf5
+ms.openlocfilehash: 7713044e40532c431d090b1cb1795876ead2a899
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/27/2018
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="workflow-hosting-options"></a>工作流程裝載選項
 大部分的 Windows Workflow Foundation (WF) 範例使用主控台應用程式中裝載的工作流程，但這不是實際案例中的實際工作流程。 實際商務應用程式中的工作流程會裝載在持續性程序中，可能是開發人員撰寫的 Windows 服務，或是像 [!INCLUDE[iisver](../../../includes/iisver-md.md)] 或 AppFabric 之類的伺服器應用程式。 這些方法之間差異如下。  

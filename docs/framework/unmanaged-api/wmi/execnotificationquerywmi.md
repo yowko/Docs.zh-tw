@@ -1,11 +1,7 @@
 ---
-title: "ExecNotificationQueryWmi 函式 （Unmanaged API 參考）"
-description: "ExecNotificationQueryWmi 函式會執行查詢，以便接收事件。"
+title: ExecNotificationQueryWmi 函式 （Unmanaged API 參考）
+description: ExecNotificationQueryWmi 函式會執行查詢，以便接收事件。
 ms.date: 11/06/2017
-ms.prod: .net-framework
-ms.technology:
-- dotnet-clr
-ms.topic: reference
 api_name:
 - ExecNotificationQueryWmi
 api_location:
@@ -20,14 +16,11 @@ topic_type:
 - Reference
 author: rpetrusha
 ms.author: ronpet
-manager: wpickett
-ms.workload:
-- dotnet
-ms.openlocfilehash: d6dd0926d2262f8d0aa125b86755017a65a95a7f
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.openlocfilehash: 4b5c26ab9c273b134915eea39078a83f569bcd32
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="execnotificationquerywmi-function"></a>ExecNotificationQueryWmi 函式
 執行查詢，以接收事件。 呼叫會立即傳回，且呼叫端可以輪詢事件傳回的列舉值到達時。 釋出傳回的列舉值會取消查詢。  
@@ -77,7 +70,7 @@ HRESULT ExecNotificationQueryWmi (
 `authLevel`  
 [in]授權層級。
 
-`impLevel`[in]模擬等級。
+`impLevel` [in]模擬等級。
 
 `pCurrentNamespace`   
 [in]指標[IWbemServices](https://msdn.microsoft.com/library/aa392093(v=vs.85).aspx)物件，代表目前的命名空間。
@@ -127,7 +120,7 @@ HRESULT ExecNotificationQueryWmi (
   
  **標頭：** WMINet_Utils.idl  
   
- **.NET framework 版本：**[!INCLUDE[net_current_v472plus](../../../../includes/net-current-v472plus.md)]  
+ **.NET framework 版本：** [!INCLUDE[net_current_v472plus](../../../../includes/net-current-v472plus.md)]  
   
 ## <a name="see-also"></a>另請參閱  
 [WMI 和效能計數器 （Unmanaged API 參考）](index.md)

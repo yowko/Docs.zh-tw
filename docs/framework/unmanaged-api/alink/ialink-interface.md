@@ -1,30 +1,18 @@
 ---
-title: "IALink 介面"
-ms.custom: 
+title: IALink 介面
 ms.date: 03/30/2017
-ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.technology:
-- dotnet-clr
-ms.tgt_pltfrm: 
-ms.topic: reference
 f1_keywords:
 - IALink
 helpviewer_keywords:
 - IALink interface
 ms.assetid: 50abd02d-6488-4815-999b-4fb89af4d568
-caps.latest.revision: 
 author: mairaw
 ms.author: mairaw
-manager: wpickett
-ms.workload:
-- dotnet
-ms.openlocfilehash: 4c58c3aa5ca1ec2d8b3bc820b2b7a500604b4b7d
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.openlocfilehash: 1eae19d592dcf5243139e11bb6662953436e45a8
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="ialink-interface"></a>IALink 介面
 可協助建構.NET Framework 組件。 在其他方面，介面包含協助您撰寫多模組組件的組件資訊清單、 簽署組件具有強式名稱，以及建立的 netmodule 中的方法。  
@@ -86,7 +74,7 @@ ms.lasthandoff: 12/22/2017
   
  [SetNonAssemblyFlags 方法](../../../../docs/framework/unmanaged-api/alink/setnonassemblyflags-method.md)  
   
-## <a name="see-also"></a>請參閱  
+## <a name="see-also"></a>另請參閱  
  [ALink API](../../../../docs/framework/unmanaged-api/alink/index.md)  
  [IALink2 介面](../../../../docs/framework/unmanaged-api/alink/ialink2-interface.md)  
  [Al.exe (組件連結器)](../../../../docs/framework/tools/al-exe-assembly-linker.md)

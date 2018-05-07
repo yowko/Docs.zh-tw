@@ -1,28 +1,16 @@
 ---
-title: "ToolStripContainer 控制項"
-ms.custom: 
+title: ToolStripContainer 控制項
 ms.date: 03/30/2017
-ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.technology: dotnet-winforms
-ms.tgt_pltfrm: 
-ms.topic: article
 helpviewer_keywords:
 - toolbars [Windows Forms], built-in rafting
 - ToolStripContainer control [Windows Forms]
 - ToolStrip control [Windows Forms], ToolStripContainer
 ms.assetid: 378fa5b4-38e1-46f4-8e5c-d0c19dcd0200
-caps.latest.revision: "8"
-author: dotnet-bot
-ms.author: dotnetcontent
-manager: wpickett
-ms.workload: dotnet
-ms.openlocfilehash: 68335627f18a65cb7922170dda6584eb383a0e66
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.openlocfilehash: d969e456c16f344e9f301511a89615b3c741151b
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="toolstripcontainer-control"></a>ToolStripContainer 控制項
 <xref:System.Windows.Forms.ToolStrip> 控制項使用 <xref:System.Windows.Forms.ToolStripContainer> 來進行內建浮動定位 (共用停駐時工具區域內的水平或垂直空間)。  
@@ -52,5 +40,5 @@ ms.lasthandoff: 12/22/2017
  <xref:System.Windows.Forms.ToolStripPanel>  
  提供 <xref:System.Windows.Forms.ToolStripPanel> 控制項的參考文件。  
   
-## <a name="see-also"></a>請參閱  
+## <a name="see-also"></a>另請參閱  
  [在 Windows Forms 上使用的控制項](../../../../docs/framework/winforms/controls/controls-to-use-on-windows-forms.md)

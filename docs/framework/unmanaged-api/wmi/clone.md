@@ -1,11 +1,7 @@
 ---
-title: "複製函式 （Unmanaged API 參考）"
-description: "複製函數會傳回目前的完整複本的新物件。"
+title: 複製函式 （Unmanaged API 參考）
+description: 複製函數會傳回目前的完整複本的新物件。
 ms.date: 11/06/2017
-ms.prod: .net-framework
-ms.technology:
-- dotnet-clr
-ms.topic: reference
 api_name:
 - Clone
 api_location:
@@ -20,14 +16,11 @@ topic_type:
 - Reference
 author: rpetrusha
 ms.author: ronpet
-manager: wpickett
-ms.workload:
-- dotnet
-ms.openlocfilehash: 270150bb674ee7f9a71cf28008c663e3b833600d
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.openlocfilehash: c5841c89cf394502f68381dfed42593c9debdcb1
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="clone-function"></a>複製函式
 傳回目前物件的完整複本的新物件。   
@@ -62,7 +55,7 @@ HRESULT Clone (
 |常數  |值  |描述  |
 |---------|---------|---------|
 | `WBEM_E_FAILED` | 0x80041001 | 發生一般失敗。 |
-| `WBEM_E_INVALID_PARAMETER` | 0x80041008 | `null`已指定為參數，而且不合法，在這種用法。 |
+| `WBEM_E_INVALID_PARAMETER` | 0x80041008 | `null` 已指定為參數，而且不合法，在這種用法。 |
 | `WBEM_E_OUT_OF_MEMORY` | 0x80041006 | 沒有足夠的記憶體可供複製物件。 |
 | `WBEM_S_NO_ERROR` | 0 | 函式呼叫成功。  |
   
@@ -77,7 +70,7 @@ HRESULT Clone (
   
  **標頭：** WMINet_Utils.idl  
   
- **.NET framework 版本：**[!INCLUDE[net_current_v472plus](../../../../includes/net-current-v472plus.md)]  
+ **.NET framework 版本：** [!INCLUDE[net_current_v472plus](../../../../includes/net-current-v472plus.md)]  
   
 ## <a name="see-also"></a>另請參閱  
 [WMI 和效能計數器 （Unmanaged API 參考）](index.md)

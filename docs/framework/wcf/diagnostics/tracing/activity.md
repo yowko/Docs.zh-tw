@@ -1,30 +1,18 @@
 ---
-title: "活動"
-ms.custom: 
+title: 活動
 ms.date: 03/30/2017
-ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.technology: dotnet-clr
-ms.tgt_pltfrm: 
-ms.topic: article
 ms.assetid: 70471705-f55f-4da1-919f-4b580f172665
-caps.latest.revision: "10"
-author: dotnet-bot
-ms.author: dotnetcontent
-manager: wpickett
-ms.workload: dotnet
-ms.openlocfilehash: cbcf33aa734cde1d2458e46cd161f9ea5197a827
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
-ms.translationtype: MT
+ms.openlocfilehash: 34281647f65157484c1e732bc67a6a4b2cf58db6
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="activity"></a>活動
-本主題描述 [!INCLUDE[indigo1](../../../../../includes/indigo1-md.md)] 追蹤模型中的活動追蹤。 活動指的是協助使用者縮小失敗範圍的處理單位。 發生在同一個活動中的錯誤都是直接相關的。 例如，因為訊息解密失敗而導致作業失敗。 作業與訊息解密失敗的追蹤會同時出現在同一個活動中，顯示解密錯誤與要求錯誤之間直接的相互關聯性。  
+本主題說明 Windows Communication Foundation (WCF) 追蹤模型中的活動追蹤。 活動指的是協助使用者縮小失敗範圍的處理單位。 發生在同一個活動中的錯誤都是直接相關的。 例如，因為訊息解密失敗而導致作業失敗。 作業與訊息解密失敗的追蹤會同時出現在同一個活動中，顯示解密錯誤與要求錯誤之間直接的相互關聯性。  
   
 ## <a name="configuring-activity-tracing"></a>設定活動追蹤  
- [!INCLUDE[indigo2](../../../../../includes/indigo2-md.md)]提供預先定義的活動以處理應用程式 (請參閱[活動清單](../../../../../docs/framework/wcf/diagnostics/tracing/activity-list.md))。 您也可以使用程式設計方式來定義活動，以便將使用者追蹤加以群組。 如需詳細資訊，請參閱[發出使用者程式碼追蹤](../../../../../docs/framework/wcf/diagnostics/tracing/emitting-user-code-traces.md)。  
+ [!INCLUDE[indigo2](../../../../../includes/indigo2-md.md)] 提供預先定義的活動以處理應用程式 (請參閱[活動清單](../../../../../docs/framework/wcf/diagnostics/tracing/activity-list.md))。 您也可以使用程式設計方式來定義活動，以便將使用者追蹤加以群組。 如需詳細資訊，請參閱[發出使用者程式碼追蹤](../../../../../docs/framework/wcf/diagnostics/tracing/emitting-user-code-traces.md)。  
   
  若要在執行階段發出活動追蹤，則針對 `ActivityTracing` 追蹤來源，或其他 `System.ServiceModel` 或自訂追蹤來源，請使用 [!INCLUDE[indigo2](../../../../../includes/indigo2-md.md)] 設定，如下列組態程式碼所示。  
   
@@ -108,7 +96,7 @@ traceSource.TraceEvent(TraceEventType.Warning, eventId, "Information");
   
 -   活動就是代表活動，但不一定代表物件。 活動應該解譯為 「 它的發生時。 。 。 (已發出有意義的追蹤)」。  
   
-## <a name="see-also"></a>請參閱  
+## <a name="see-also"></a>另請參閱  
  [設定追蹤](../../../../../docs/framework/wcf/diagnostics/tracing/configuring-tracing.md)  
  [使用服務追蹤檢視器檢視相關追蹤並進行疑難排解](../../../../../docs/framework/wcf/diagnostics/tracing/using-service-trace-viewer-for-viewing-correlated-traces-and-troubleshooting.md)  
  [端對端追蹤案例](../../../../../docs/framework/wcf/diagnostics/tracing/end-to-end-tracing-scenarios.md)  

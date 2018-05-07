@@ -2,11 +2,11 @@
 title: '&lt;net.tcp&gt;'
 ms.date: 03/30/2017
 ms.assetid: 8bc2f2be-11c1-4bab-9018-1d21ae568d94
-ms.openlocfilehash: 9312d5f7544a794f036f0a623df0d537eb96d145
-ms.sourcegitcommit: 11f11ca6cefe555972b3a5c99729d1a7523d8f50
-ms.translationtype: HT
+ms.openlocfilehash: 9e44ddcc3a3e983abe6e36d4b6095c5c4a67529f
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="ltnettcpgt"></a>&lt;net.tcp&gt;
 指定 NET.TCP Port Sharing Service 的組態設定，此服務允許多個處理序共用相同的 TCP 連接埠。  
@@ -55,13 +55,13 @@ ms.lasthandoff: 05/03/2018
 |`maxPendingAccepts`|整數，指定共用服務之接聽端點上、未完成之並行接收執行緒的數目上限。 預設值為 2。|  
 |`MaxPendingConnections`|接聽項上等待應用程式接受連線的最大數目。 當超過這個配額值時，新的傳入連線會被捨棄，而不是等待被接受。 如訊息安全性等連線功能，可能會導致用戶端開啟一個以上的連線。 在設定這個配額值時，服務系統管理員應該考量到其他連線。 預設值為 10。|  
 |`receiveTimeout`|`TimeSpan`，指定讀取框架資料以及從基礎連線執行連線分派的逾時。 預設為 "00:00:10"。|  
-|`teredoEnabled`|布林值，指出此連接埠共用服務是否使用 Microsoft Teredo 服務代表 [!INCLUDE[indigo2](../../../../../includes/indigo2-md.md)] 服務來接聽 TCP 連接埠。 預設值為 `false`。|  
+|`teredoEnabled`|布林值，指出連接埠共用服務使用 Microsoft Teredo 服務代表 WCF 服務的 TCP 連接埠上接聽。 預設值為 `false`。|  
   
 ### <a name="child-elements"></a>子項目  
   
 |項目|描述|  
 |-------------|-----------------|  
-|[\<allowAccounts>](../../../../../docs/framework/configure-apps/file-schema/wcf/allowaccounts.md)|組態項目的集合，其中包含 `securityIdentifier` 屬性，此屬性可為裝載 [!INCLUDE[indigo2](../../../../../includes/indigo2-md.md)] 服務且已授權可連線共用服務的處理序指定使用者帳戶。|  
+|[\<allowAccounts>](../../../../../docs/framework/configure-apps/file-schema/wcf/allowaccounts.md)|包含組態項目的集合`securityIdentifier`屬性來指定裝載 WCF 服務，且已授權可連線共用服務之處理序的使用者帳戶。|  
   
 ### <a name="parent-elements"></a>父項目  
   

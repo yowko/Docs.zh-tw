@@ -1,14 +1,6 @@
 ---
-title: "AssemblyOptions 列舉"
-ms.custom: 
+title: AssemblyOptions 列舉
 ms.date: 03/30/2017
-ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.technology:
-- dotnet-clr
-ms.tgt_pltfrm: 
-ms.topic: reference
 api_name:
 - AssemblyOptions
 api_location:
@@ -23,17 +15,13 @@ helpviewer_keywords:
 ms.assetid: 84f83921-64cb-49e3-ac8b-22a0b77b18a8
 topic_type:
 - apiref
-caps.latest.revision: 
 author: mairaw
 ms.author: mairaw
-manager: wpickett
-ms.workload:
-- dotnet
-ms.openlocfilehash: 6ad4f9e02ed0d22009fcb8a5ac078231f2cb22e3
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.openlocfilehash: e3926a0d49b2db02cf52a3cc943b05edc4cc36a8
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="assemblyoptions-enumeration"></a>AssemblyOptions 列舉
 列舉組件的選項。  
@@ -95,5 +83,5 @@ typedef enum _AssemblyOptions {
   
  **程式庫**: alink.dll  
   
-## <a name="see-also"></a>請參閱  
+## <a name="see-also"></a>另請參閱  
  [Al.exe (組件連結器)](../../../../docs/framework/tools/al-exe-assembly-linker.md)

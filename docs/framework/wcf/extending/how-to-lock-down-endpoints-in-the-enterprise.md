@@ -1,29 +1,15 @@
 ---
 title: HOW TO：鎖定企業的端點
-ms.custom: ''
 ms.date: 03/30/2017
-ms.prod: .net-framework
-ms.reviewer: ''
-ms.suite: ''
-ms.technology:
-- dotnet-clr
-ms.tgt_pltfrm: ''
-ms.topic: article
 ms.assetid: 1b7eaab7-da60-4cf7-9d6a-ec02709cf75d
-caps.latest.revision: 21
-author: dotnet-bot
-ms.author: dotnetcontent
-manager: wpickett
-ms.workload:
-- dotnet
-ms.openlocfilehash: e5b10665e9a820c7057231c684769bddf9cb0c79
-ms.sourcegitcommit: 03ee570f6f528a7d23a4221dcb26a9498edbdf8c
-ms.translationtype: MT
+ms.openlocfilehash: c91faf201c9a7cb0e5dd810059dbaa39b1e8eb05
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/28/2018
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="how-to-lock-down-endpoints-in-the-enterprise"></a>HOW TO：鎖定企業的端點
-大型企業通常需要在遵循企業安全性原則的環境中開發應用程式。 下列主題討論如何開發與安裝用戶端端點驗證器，以用於驗證所有安裝在電腦上的 [!INCLUDE[indigo1](../../../../includes/indigo1-md.md)] 用戶端應用程式。  
+大型企業通常需要在遵循企業安全性原則的環境中開發應用程式。 下列主題討論如何開發與安裝用戶端端點驗證器，可以用來驗證所有安裝在電腦上的 Windows Communication Foundation (WCF) 用戶端應用程式。  
   
  驗證程式在此情況下，是用戶端驗證程式，因為此端點行為會加入至用戶端[ \<commonBehaviors >](../../../../docs/framework/configure-apps/file-schema/wcf/commonbehaviors.md) machine.config 檔案中的區段。 [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] 只會為用戶端應用程式載入通用端點行為，並且只會為服務應用程式載入通用服務行為。 若要為服務應用程式安裝這個相同的驗證器，驗證器必須是服務行為。 如需詳細資訊，請參閱[ \<commonBehaviors >](../../../../docs/framework/configure-apps/file-schema/wcf/commonbehaviors.md) > 一節。  
   

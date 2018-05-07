@@ -1,11 +1,7 @@
 ---
-title: "SpawnDerivedClass 函式 （Unmanaged API 參考）"
-description: "SpawnDerivedClass 函式會建立新的物件，衍生自物件。"
+title: SpawnDerivedClass 函式 （Unmanaged API 參考）
+description: SpawnDerivedClass 函式會建立新的物件，衍生自物件。
 ms.date: 11/06/2017
-ms.prod: .net-framework
-ms.technology:
-- dotnet-clr
-ms.topic: reference
 api_name:
 - SpawnDerivedClass
 api_location:
@@ -20,14 +16,11 @@ topic_type:
 - Reference
 author: rpetrusha
 ms.author: ronpet
-manager: wpickett
-ms.workload:
-- dotnet
-ms.openlocfilehash: 51a0dd0013b1bb3898bcc81ee2d64be20a5b6ecc
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.openlocfilehash: fe93b7ee28db8151345871b0dd716d41227ed565
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="spawnderivedclass-function"></a>SpawnDerivedClass 函式
 從指定的物件建立新的衍生類別物件。    
@@ -75,7 +68,7 @@ HRESULT SpawnDerivedClass (
 
 此函式會包裝呼叫[IWbemClassObject::SpawnDerivedClass](https://msdn.microsoft.com/library/aa391436(v=vs.85).aspx)方法。
 
-`ptr`必須是類別定義，並會繁衍 （spawn） 物件的父類別。 傳回的物件會變成目前物件的子類別。
+`ptr` 必須是類別定義，並會繁衍 （spawn） 物件的父類別。 傳回的物件會變成目前物件的子類別。
 
 新的物件中傳回`ppNewClass`會自動變成目前物件的子類別。 無法覆寫這個行為。 沒有任何子類別 （衍生的類別） 可以建立的方法。
 
@@ -84,7 +77,7 @@ HRESULT SpawnDerivedClass (
   
  **標頭：** WMINet_Utils.idl  
   
- **.NET framework 版本：**[!INCLUDE[net_current_v472plus](../../../../includes/net-current-v472plus.md)]  
+ **.NET framework 版本：** [!INCLUDE[net_current_v472plus](../../../../includes/net-current-v472plus.md)]  
   
 ## <a name="see-also"></a>另請參閱  
 [WMI 和效能計數器 （Unmanaged API 參考）](index.md)

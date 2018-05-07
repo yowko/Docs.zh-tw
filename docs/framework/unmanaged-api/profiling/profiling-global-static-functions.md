@@ -1,28 +1,18 @@
 ---
-title: "分析全域靜態函式"
-ms.custom: 
+title: 分析全域靜態函式
 ms.date: 03/30/2017
-ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.technology: dotnet-clr
-ms.tgt_pltfrm: 
-ms.topic: reference
 helpviewer_keywords:
 - global static functions [.NET Framework profiling]
 - profiling global static functions [.NET Framework]
 - unmanaged global static functions [.NET Framework], profiling
 ms.assetid: 08a13a57-dc49-488d-b937-31e3051fda97
-caps.latest.revision: "14"
 author: mairaw
 ms.author: mairaw
-manager: wpickett
-ms.workload: dotnet
-ms.openlocfilehash: 66f22557dd6020ff5040d5aaf76cb12e9ae9965c
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.openlocfilehash: 8bb5d93c91de857ebbee63009cad73fba7e1d284
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="profiling-global-static-functions"></a>分析全域靜態函式
 本節說明分析 API 所使用的 unmanaged 應用程式開發介面函式。  
@@ -59,7 +49,7 @@ ms.lasthandoff: 12/22/2017
  [FunctionIDMapper2 函式](../../../../docs/framework/unmanaged-api/profiling/functionidmapper2-function.md)  
  通知分析工具函式的指定的識別碼可能會重新對應至替代識別碼，以用於[FunctionEnter3](../../../../docs/framework/unmanaged-api/profiling/functionenter3-function.md)， [FunctionLeave3](../../../../docs/framework/unmanaged-api/profiling/functionleave3-function.md)，和[FunctionTailcall3](../../../../docs/framework/unmanaged-api/profiling/functiontailcall3-function.md)，或[FunctionEnter3WithInfo](../../../../docs/framework/unmanaged-api/profiling/functionenter3withinfo-function.md)， [FunctionLeave3WithInfo](../../../../docs/framework/unmanaged-api/profiling/functionleave3withinfo-function.md)，和[FunctionTailcall3WithInfo](../../../../docs/framework/unmanaged-api/profiling/functiontailcall3withinfo-function.md)該函式的回呼。 也可讓分析工具指出它是否要接收該函式的回呼。  
   
- `FunctionIDMapper2`擴充[FunctionIDMapper](../../../../docs/framework/unmanaged-api/profiling/functionidmapper-function.md)函式與`clientData`用分析工具可能用來區分執行階段的參數。  
+ `FunctionIDMapper2` 擴充[FunctionIDMapper](../../../../docs/framework/unmanaged-api/profiling/functionidmapper-function.md)函式與`clientData`用分析工具可能用來區分執行階段的參數。  
   
  [FunctionEnter3 函式](../../../../docs/framework/unmanaged-api/profiling/functionenter3-function.md)  
  通知分析工具控制會傳遞至函數。  

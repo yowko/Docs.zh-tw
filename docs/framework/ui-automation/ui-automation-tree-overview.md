@@ -1,27 +1,18 @@
 ---
-title: "UI 自動化樹狀目錄概觀"
-ms.custom: 
+title: UI 自動化樹狀目錄概觀
 ms.date: 03/30/2017
-ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.technology: dotnet-bcl
-ms.tgt_pltfrm: 
-ms.topic: article
 helpviewer_keywords:
 - automation tree
 - UI Automation, tree
 ms.assetid: 03b98058-bdb3-47a0-8ff7-45e6cdf67166
-caps.latest.revision: "25"
 author: Xansky
 ms.author: mhopkins
 manager: markl
-ms.workload: dotnet
-ms.openlocfilehash: 25a1ddb113916563c234eefb8cdc0746b04f3e66
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.openlocfilehash: 0823a569b19d46f32c1cb780470a935f20429c11
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="ui-automation-tree-overview"></a>UI 自動化樹狀目錄概觀
 > [!NOTE]
@@ -43,7 +34,7 @@ ms.lasthandoff: 12/22/2017
   
  使用者介面自動化提供者支援藉由在項目，包括定義屬性篩選<xref:System.Windows.Automation.AutomationElementIdentifiers.IsControlElementProperty>和<xref:System.Windows.Automation.AutomationElementIdentifiers.IsContentElementProperty>屬性。  
   
- [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)]提供三個預設檢視。 這些檢視是由執行的篩選類型所定義；任何檢視的範圍是由應用程式定義。 此外，應用程式可以在屬性套用其他篩選；例如，只在控制項檢視中包含啟用的控制項。  
+ [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)] 提供三個預設檢視。 這些檢視是由執行的篩選類型所定義；任何檢視的範圍是由應用程式定義。 此外，應用程式可以在屬性套用其他篩選；例如，只在控制項檢視中包含啟用的控制項。  
   
 <a name="uiautomation_raw_view"></a>   
 ### <a name="raw-view"></a>未經處理的檢視  
@@ -65,6 +56,6 @@ ms.lasthandoff: 12/22/2017
   
  內容檢視藉由搜尋有的項目取得<xref:System.Windows.Automation.AutomationElement.AutomationElementInformation.IsContentElement%2A>屬性設定為`true`，或使用<xref:System.Windows.Automation.TreeWalker.ContentViewWalker>來導覽樹狀。  
   
-## <a name="see-also"></a>請參閱  
+## <a name="see-also"></a>另請參閱  
  <xref:System.Windows.Automation.AutomationElement>  
  [UI 自動化概觀](../../../docs/framework/ui-automation/ui-automation-overview.md)

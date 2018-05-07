@@ -1,35 +1,21 @@
 ---
 title: 工作流程服務概觀
-ms.custom: ''
 ms.date: 03/30/2017
-ms.prod: .net-framework
-ms.reviewer: ''
-ms.suite: ''
-ms.technology:
-- dotnet-clr
-ms.tgt_pltfrm: ''
-ms.topic: article
 ms.assetid: e536dda3-e286-441e-99a7-49ddc004b646
-caps.latest.revision: 30
-author: dotnet-bot
-ms.author: dotnetcontent
-manager: wpickett
-ms.workload:
-- dotnet
-ms.openlocfilehash: 6eb5381438aa082eae8b4252bbd1cf343ba0ebf7
-ms.sourcegitcommit: 94d33cadc5ff81d2ac389bf5f26422c227832052
+ms.openlocfilehash: eaf5fb4b20aca0983dcbe00724ab81803834940a
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/30/2018
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="workflow-services-overview"></a>工作流程服務概觀
-工作流程服務是以 [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] 為主的服務，這些服務是使用工作流程實作的。 工作流程服務是使用傳訊活動傳送及接收 [!INCLUDE[indigo1](../../../../includes/indigo1-md.md)] 訊息的工作流程。 .NET Framework 4.5 引入了許多傳訊活動，可讓您從工作流程內傳送及接收訊息。 如需傳訊活動，以及如何使用它們來實作不同訊息交換模式的詳細資訊，請參閱[傳訊活動](../../../../docs/framework/wcf/feature-details/messaging-activities.md)。  
+工作流程服務是使用工作流程實作的 wcf 服務。 工作流程服務是使用訊息活動來傳送和接收 Windows Communication Foundation (WCF) 訊息的工作流程。 .NET Framework 4.5 引入了許多傳訊活動，可讓您從工作流程內傳送及接收訊息。 如需傳訊活動，以及如何使用它們來實作不同訊息交換模式的詳細資訊，請參閱[傳訊活動](../../../../docs/framework/wcf/feature-details/messaging-activities.md)。  
   
 ## <a name="benefits-of-using-workflow-services"></a>使用工作流程服務的好處  
  當應用程式的散發範圍越來越廣時，就必須由個別服務負責呼叫其他服務來卸載部分工作。 實作這些呼叫做為非同步作業會為程式碼增添少許複雜性。 錯誤處理會增加額外的複雜性，因為它需要處理例外狀況及提供詳細的追蹤資訊。 部分服務經常需要長時間執行，等待輸入時可能會佔用重要的系統資源。 由於這些問題，分散式應用程式通常非常複雜，而且難以撰寫及維護。 工作流程是表達非同步工作 (特別是呼叫外部服務) 協調性的自然方式。 工作流程也能有效地表示長期執行的商務程序。 這些特質使得工作流程成為在分散式環境中建置服務的重要資產。  
   
 ## <a name="implementing-a-workflow-service"></a>實作工作流程服務  
- 實作 [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] 服務時，您會定義許多合約，這些合約會描述服務及服務傳送與接收的資料。 資料會以資料合約及訊息合約表示。 WCF 和工作流程服務都使用資料合約和訊息合約定義做為部分服務描述。 服務本身會公開中繼資料 (以 WSDL 的形式) 來描述服務的作業。 在 WCF 中，服務合約和作業合約會定義所支援的服務及作業。 不過，在工作流程服務中，這些合約是商務程序的一部分。 它們會藉由名為合約推斷的程序在中繼資料中公布。 使用 <xref:System.ServiceModel.Activities.WorkflowServiceHost> 裝載工作流程服務時，會檢查該工作流程定義，並根據在工作流程中找到的傳訊活動集產生合約。 特別是，下列活動和屬性會用來產生合約：  
+ 實作 WCF 服務時，您會定義許多合約，以描述服務及服務傳送與接收的資料。 資料會以資料合約及訊息合約表示。 WCF 和工作流程服務都使用資料合約和訊息合約定義做為部分服務描述。 服務本身會公開中繼資料 (以 WSDL 的形式) 來描述服務的作業。 在 WCF 中，服務合約和作業合約會定義所支援的服務及作業。 不過，在工作流程服務中，這些合約是商務程序的一部分。 它們會藉由名為合約推斷的程序在中繼資料中公布。 使用 <xref:System.ServiceModel.Activities.WorkflowServiceHost> 裝載工作流程服務時，會檢查該工作流程定義，並根據在工作流程中找到的傳訊活動集產生合約。 特別是，下列活動和屬性會用來產生合約：  
   
  <xref:System.ServiceModel.Activities.Receive> 活動  
   
@@ -50,7 +36,7 @@ ms.lasthandoff: 04/30/2018
   
  <xref:System.ServiceModel.Activities.TransactedReceiveScope> 活動  
   
- 合約推斷的最終結果是與 [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] 服務和作業合約使用相同資料結構的服務描述。 接著，這項資訊會用來公開工作流程服務的 WSDL。  
+ 合約推斷的最終結果是使用相同的資料結構做為 WCF 服務和作業合約的服務描述。 接著，這項資訊會用來公開工作流程服務的 WSDL。  
   
 > [!NOTE]
 >  [!INCLUDE[netfx_current_short](../../../../includes/netfx-current-short-md.md)] 不允許您使用現有的合約定義而不使用其他工具撰寫工作流程服務。 工作流程服務合約是由上述合約推斷程序所建立的， 但可以完全支援訊息合約和資料合約。  
@@ -59,7 +45,7 @@ ms.lasthandoff: 04/30/2018
  WCF 定義兩種以 MSMQ 為主的繫結：<xref:System.ServiceModel.NetMsmqBinding> 與 <xref:System.ServiceModel.MsmqIntegration.MsmqIntegrationBinding>。  由於工作流程服務的長期執行特性，以 MSMQ 為主的繫結通常會與此類服務搭配使用。 以 MSMQ 為主的繫結具有 `ValidityDuration` 屬性，該屬性會指定可以假設 MSMQ 訊息有效的時間長短。 由於工作流程服務的長期執行特性，因此 MSMQ 訊息的有效性持續時間可能會在工作流程服務能夠處理該訊息之前結束。 因此，將 MSMQ 繫結的有效性持續時間設定為適當的值相當重要。 您必須根據工作流程和工作流程處理訊息的方式選擇這個值。 例如，如果您的工作流程含有 <xref:System.ServiceModel.Activities.Receive> 活動加上需要執行 10 分鐘的自訂活動，接著是另一個 <xref:System.ServiceModel.Activities.Receive> 活動，正確的 `ValidityDuration` 值便會大於 10 分鐘。  
   
 ## <a name="hosting-a-workflow-service"></a>裝載工作流程服務  
- 如同 [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] 服務，工作流程服務必須經過裝載。 [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] 服務會使用 <xref:System.ServiceModel.ServiceHost> 類別來裝載服務，而工作流程服務則會使用 <xref:System.ServiceModel.Activities.WorkflowServiceHost> 來裝載服務。 如同 [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] 服務，工作流程服務可透過許多不同的方式進行裝載，例如：  
+ 如同 WCF 服務，就必須裝載工作流程服務。 WCF 服務使用<xref:System.ServiceModel.ServiceHost>類別來裝載服務和工作流程服務會使用<xref:System.ServiceModel.Activities.WorkflowServiceHost>裝載服務。 WCF 服務，例如工作流程服務可以裝載於各種不同的方式，例如：  
   
 -   在 Managed [!INCLUDE[dnprdnshort](../../../../includes/dnprdnshort-md.md)] 應用程式中。  
   

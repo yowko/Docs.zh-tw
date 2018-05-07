@@ -1,30 +1,18 @@
 ---
-title: "HOW TO：建立自訂宣告"
-ms.custom: 
+title: HOW TO：建立自訂宣告
 ms.date: 03/30/2017
-ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.technology: dotnet-clr
-ms.tgt_pltfrm: 
-ms.topic: article
 dev_langs:
 - csharp
 - vb
 ms.assetid: d619976b-eda3-475e-ac23-c7988a2dceb0
-caps.latest.revision: "8"
-author: dotnet-bot
-ms.author: dotnetcontent
-manager: wpickett
-ms.workload: dotnet
-ms.openlocfilehash: 92420b993a1959b03090181944a34a32ab500733
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
-ms.translationtype: MT
+ms.openlocfilehash: c1e8886ab3d9d90b217ce79078633433458bbe4b
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="how-to-create-a-custom-claim"></a>HOW TO：建立自訂宣告
-[!INCLUDE[indigo1](../../../../includes/indigo1-md.md)] 中的身分識別模型基礎結構會提供一組具有 Helper 函式的內建宣告類型和權限，可讓您透過這些類型和權限建立 <xref:System.IdentityModel.Claims.Claim> 執行個體。 這些內建宣告是專門用來模擬在 [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] 預設支援的用戶端認證類型中找到的資訊。 在許多情況下，內建宣告就已足夠；不過有些應用程式可能需要自訂宣告。 宣告中包含了宣告類型、宣告適用的資源，以及擁有該資源所需的權限。 這個主題會描述如何建立自訂宣告。  
+識別模型基礎結構中 Windows Communication Foundation (WCF) 提供一組內建宣告類型和權限與協助程式函式建立<xref:System.IdentityModel.Claims.Claim>具有這些類型和權限的執行個體。 這些內建宣告是專門用來模擬在 [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] 預設支援的用戶端認證類型中找到的資訊。 在許多情況下，內建宣告就已足夠；不過有些應用程式可能需要自訂宣告。 宣告中包含了宣告類型、宣告適用的資源，以及擁有該資源所需的權限。 這個主題會描述如何建立自訂宣告。  
   
 ### <a name="to-create-a-custom-claim-that-is-based-on-a-primitive-data-type"></a>依據基本資料型別建立自訂宣告  
   
@@ -85,7 +73,7 @@ ms.lasthandoff: 12/22/2017
  [!code-csharp[c_CustomClaim#0](../../../../samples/snippets/csharp/VS_Snippets_CFX/c_customclaim/cs/c_customclaim.cs#0)]
  [!code-vb[c_CustomClaim#0](../../../../samples/snippets/visualbasic/VS_Snippets_CFX/c_customclaim/vb/c_customclaim.vb#0)]  
   
-## <a name="see-also"></a>請參閱  
+## <a name="see-also"></a>另請參閱  
  <xref:System.IdentityModel.Claims.Claim>  
  <xref:System.IdentityModel.Claims.Rights>  
  <xref:System.IdentityModel.Claims.ClaimTypes>  

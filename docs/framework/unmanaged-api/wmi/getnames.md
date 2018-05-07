@@ -1,11 +1,7 @@
 ---
-title: "GetNames 函式 （Unmanaged API 參考）"
-description: "GetNames 函式會擷取物件的屬性名稱。"
+title: GetNames 函式 （Unmanaged API 參考）
+description: GetNames 函式會擷取物件的屬性名稱。
 ms.date: 11/06/2017
-ms.prod: .net-framework
-ms.technology:
-- dotnet-clr
-ms.topic: reference
 api_name:
 - GetNames
 api_location:
@@ -20,14 +16,11 @@ topic_type:
 - Reference
 author: rpetrusha
 ms.author: ronpet
-manager: wpickett
-ms.workload:
-- dotnet
-ms.openlocfilehash: 80284900c318a3776168b781ce2e0e5e4a68f96d
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.openlocfilehash: 108946428cdfadcfb9c653b7e444bf278dfa2782
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="getnames-function"></a>GetNames 函式
 擷取部分或所有物件的屬性名稱。 
@@ -91,7 +84,7 @@ HRESULT GetNames (
 
 | 群組 1 旗標 |值  |描述  |
 |---------|---------|---------|
-| `WBEM_FLAG_ALWAYS` | 0 | 傳回所有屬性名稱。 `strQualifierName`和`pQualifierVal`未使用。 |
+| `WBEM_FLAG_ALWAYS` | 0 | 傳回所有屬性名稱。 `strQualifierName` 和`pQualifierVal`未使用。 |
 | `WBEM_FLAG_ONLY_IF_TRUE` | 1 | 傳回具有所指定之名稱的限定詞的唯一屬性`strQualifierName`參數。 如果使用這個旗標，您必須指定`strQualifierName`。 |
 |`WBEM_FLAG_ONLY_IF_FALSE` | 2 |  傳回唯一的屬性所指定之名稱的限定詞沒有`strQualifierName`參數。 如果使用這個旗標，您必須指定`strQualifierName`。 |
 |`WBEM_FLAG_ONLY_IF_IDENTICAL` | 3 | 傳回具有所指定之名稱的辨識符號的屬性`wszQualifierName`參數，而且也有等於指定的值`pQualifierVal`結構。 如果使用這個旗標時，您必須同時指定`wszQualifierName`和`pQualifierValue`。 |
@@ -115,7 +108,7 @@ HRESULT GetNames (
   
  **標頭：** WMINet_Utils.idl  
   
- **.NET framework 版本：**[!INCLUDE[net_current_v472plus](../../../../includes/net-current-v472plus.md)]  
+ **.NET framework 版本：** [!INCLUDE[net_current_v472plus](../../../../includes/net-current-v472plus.md)]  
   
 ## <a name="see-also"></a>另請參閱  
 [WMI 和效能計數器 （Unmanaged API 參考）](index.md)

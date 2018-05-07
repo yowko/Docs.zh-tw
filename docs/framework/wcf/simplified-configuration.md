@@ -1,27 +1,15 @@
 ---
-title: "簡化的組態"
-ms.custom: 
+title: 簡化的組態
 ms.date: 03/30/2017
-ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.technology: dotnet-clr
-ms.tgt_pltfrm: 
-ms.topic: article
 ms.assetid: dcbe1f84-437c-495f-9324-2bc09fd79ea9
-caps.latest.revision: "10"
-author: dotnet-bot
-ms.author: dotnetcontent
-manager: wpickett
-ms.workload: dotnet
-ms.openlocfilehash: 334dfce44b1f0a7b6b38f509f2f0a346ef90630f
-ms.sourcegitcommit: c0dd436f6f8f44dc80dc43b07f6841a00b74b23f
-ms.translationtype: MT
+ms.openlocfilehash: a07ab26b19004df97f4ac65f711b03fc6a6ba445
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 01/19/2018
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="simplified-configuration"></a>簡化的組態
-設定 [!INCLUDE[indigo1](../../../includes/indigo1-md.md)] 服務可能是一個複雜的工作。 這項工作不但包含許多不同的選項，而且判斷需要哪些設定往往絕非易事。 雖然組態檔能夠增加 [!INCLUDE[indigo2](../../../includes/indigo2-md.md)] 服務的靈活度，但是也會造成許多不易發現的問題。 [!INCLUDE[netfx_current_long](../../../includes/netfx-current-long-md.md)] 能夠解決這些問題，並且提供可讓使用者降低服務組態大小與複雜度的方式。  
+設定 Windows Communication Foundation (WCF) 服務，可以是一個複雜的工作。 這項工作不但包含許多不同的選項，而且判斷需要哪些設定往往絕非易事。 雖然組態檔能夠增加 [!INCLUDE[indigo2](../../../includes/indigo2-md.md)] 服務的靈活度，但是也會造成許多不易發現的問題。 [!INCLUDE[netfx_current_long](../../../includes/netfx-current-long-md.md)] 能夠解決這些問題，並且提供可讓使用者降低服務組態大小與複雜度的方式。  
   
 ## <a name="simplified-configuration"></a>簡化的組態  
  在 [!INCLUDE[indigo2](../../../includes/indigo2-md.md)] 服務組態檔中，<`system.serviceModel`> 區段會針對每一項裝載的服務包含一個 <`service`> 項目。 <`service`> 項目包含 <`endpoint`> 項目的集合，這些項目可指定對每一項服務公開的端點，以及一組選擇性的服務行為。 <`endpoint`> 項目會指定端點公開的位址、繫結和合約，以及選擇性的繫結組態和端點行為。 <`system.serviceModel`> 區段還包含 <`behaviors`> 項目，可讓您指定服務或端點行為。 下列範例顯示組態檔的 <`system.serviceModel`> 區段。  
@@ -121,7 +109,7 @@ ms.lasthandoff: 01/19/2018
 > [!IMPORTANT]
 >  此功能只涉及 WCF 服務組態，不是用戶端組態。 大多數時候，WCF 用戶端組態會以 svcutil.exe 之類的工具產生，或從 Visual Studio 新增服務參考。 如果您要手動設定 WCF 用戶端必須新增\<用戶端 > 組態項目，並指定您想要呼叫的任何端點。  
   
-## <a name="see-also"></a>請參閱  
+## <a name="see-also"></a>另請參閱  
  [使用設定檔設定服務](../../../docs/framework/wcf/configuring-services-using-configuration-files.md)  
  [設定服務的繫結](../../../docs/framework/wcf/configuring-bindings-for-wcf-services.md)  
  [設定系統提供的繫結](../../../docs/framework/wcf/feature-details/configuring-system-provided-bindings.md)  

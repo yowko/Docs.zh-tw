@@ -1,14 +1,6 @@
 ---
-title: "ICorDebugClass2::SetJMCStatus 方法"
-ms.custom: 
+title: ICorDebugClass2::SetJMCStatus 方法
 ms.date: 03/30/2017
-ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.technology:
-- dotnet-clr
-ms.tgt_pltfrm: 
-ms.topic: reference
 api_name:
 - ICorDebugClass2.SetJMCStatus
 api_location:
@@ -23,17 +15,13 @@ helpviewer_keywords:
 ms.assetid: 077e6c7f-f857-480c-bebb-76ee1de4e8fc
 topic_type:
 - apiref
-caps.latest.revision: 
 author: rpetrusha
 ms.author: ronpet
-manager: wpickett
-ms.workload:
-- dotnet
-ms.openlocfilehash: 5fa9de4482b674173dba6a8316491507330f6376
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.openlocfilehash: d234e01e3d47a64b9a001591ee2b61074eea8afb
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="icordebugclass2setjmcstatus-method"></a>ICorDebugClass2::SetJMCStatus 方法
 每個類別的方法設定值，指出方法是否為使用者定義的程式碼。  
@@ -53,7 +41,7 @@ HRESULT SetJMCStatus (
 ## <a name="remarks"></a>備註  
  剛-我的程式碼 (JMC) stepper 將略過的非使用者定義的程式碼。 使用者定義的程式碼必須是可偵錯的程式碼的子集。  
   
- `SetJMCStatus`如果無法設定的值對於任何方法，即使它已成功設定的值為所有其他方法會傳回 S_FALSE 的 HRESULT 值。  
+ `SetJMCStatus` 如果無法設定的值對於任何方法，即使它已成功設定的值為所有其他方法會傳回 S_FALSE 的 HRESULT 值。  
   
 ## <a name="requirements"></a>需求  
  **平台：**看到[系統需求](../../../../docs/framework/get-started/system-requirements.md)。  
@@ -62,4 +50,4 @@ HRESULT SetJMCStatus (
   
  **程式庫：** CorGuids.lib  
   
- **.NET framework 版本：**[!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]
+ **.NET framework 版本：** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]

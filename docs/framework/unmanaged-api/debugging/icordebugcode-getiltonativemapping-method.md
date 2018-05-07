@@ -1,14 +1,6 @@
 ---
-title: "ICorDebugCode::GetILToNativeMapping 方法"
-ms.custom: 
+title: ICorDebugCode::GetILToNativeMapping 方法
 ms.date: 03/30/2017
-ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.technology:
-- dotnet-clr
-ms.tgt_pltfrm: 
-ms.topic: reference
 api_name:
 - ICorDebugCode.GetILToNativeMapping
 api_location:
@@ -23,17 +15,13 @@ helpviewer_keywords:
 ms.assetid: a8ecd8c8-9627-4356-9c6f-bd05e24637c0
 topic_type:
 - apiref
-caps.latest.revision: 
 author: rpetrusha
 ms.author: ronpet
-manager: wpickett
-ms.workload:
-- dotnet
-ms.openlocfilehash: f4477ff22d08d5f7ef291c27c00b8985f89ebebd
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.openlocfilehash: 13ec60999db88b9d7191a3866fcebe8098b4edee
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="icordebugcodegetiltonativemapping-method"></a>ICorDebugCode::GetILToNativeMapping 方法
 取得"COR_DEBUG_IL_TO_NATIVE_MAP 」 執行個體表示的對應從 Microsoft intermediate language (MSIL) 位移到原生位移的陣列。  
@@ -71,7 +59,7 @@ HRESULT GetILToNativeMapping (
   
  **程式庫：** CorGuids.lib  
   
- **.NET framework 版本：**[!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
+ **.NET framework 版本：** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
   
-## <a name="see-also"></a>請參閱  
+## <a name="see-also"></a>另請參閱  
  [ICorDebugCode 介面 1](../../../../docs/framework/unmanaged-api/debugging/icordebugcode-interface1.md)

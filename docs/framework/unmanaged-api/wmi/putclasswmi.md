@@ -1,11 +1,7 @@
 ---
-title: "PutClassWmi 函式 （Unmanaged API 參考）"
-description: "PutClassWmi 函式會建立新的類別或更新現有。"
+title: PutClassWmi 函式 （Unmanaged API 參考）
+description: PutClassWmi 函式會建立新的類別或更新現有。
 ms.date: 11/06/2017
-ms.prod: .net-framework
-ms.technology:
-- dotnet-clr
-ms.topic: reference
 api_name:
 - PutClassWmi
 api_location:
@@ -20,14 +16,11 @@ topic_type:
 - Reference
 author: rpetrusha
 ms.author: ronpet
-manager: wpickett
-ms.workload:
-- dotnet
-ms.openlocfilehash: 219cec2096cd3d1dfe1e0d3c0903b62692e444e6
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.openlocfilehash: 3ce887d59d02cfc2e4d8c183aa495dcc1535853c
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="putclasswmi-function"></a>PutClassWmi 函式
 建立新的類別或更新現有。  
@@ -84,7 +77,7 @@ HRESULT PutClassWmi (
 | `WBEM_E_INVALID OPERATION` | 0x80041016 | 指定的類別名稱無效。 |
 | `WBEM_E_CLASS_HAS_CHILDREN` | 0x80041025 | 您嘗試進行的變更，可能會導致子類別失效。 |
 | `WBEM_E_ALREADY_EXISTS` | 0x80041019 | `WBEM_FLAG_CREATE_ONLY`指定旗標，但類別已存在。 |
-| `WBEM_E_NOT_FOUND` | 而會收到 0x80041002 | `WBEM_FLAG_UPDATE_ONLY`中指定了`lFlags`，而且找不到類別。 |
+| `WBEM_E_NOT_FOUND` | 而會收到 0x80041002 | `WBEM_FLAG_UPDATE_ONLY` 中指定了`lFlags`，而且找不到類別。 |
 | `WBEM_E_INCOMPLETE_CLASS` | 0x80041020 | 類別所需的屬性不是所有尚未設定。 |
 | `WBEM_E_OUT_OF_MEMORY` | 0x80041006 | 沒有足夠的記憶體可完成作業。 |
 | `WBEM_E_SHUTTING_DOWN` | 0x80041033 | WMI 是可能已停止和重新啟動。 呼叫[ConnectServerWmi](connectserverwmi.md)一次。 |
@@ -104,7 +97,7 @@ HRESULT PutClassWmi (
   
  **標頭：** WMINet_Utils.idl  
   
- **.NET framework 版本：**[!INCLUDE[net_current_v472plus](../../../../includes/net-current-v472plus.md)]  
+ **.NET framework 版本：** [!INCLUDE[net_current_v472plus](../../../../includes/net-current-v472plus.md)]  
   
 ## <a name="see-also"></a>另請參閱  
 [WMI 和效能計數器 （Unmanaged API 參考）](index.md)

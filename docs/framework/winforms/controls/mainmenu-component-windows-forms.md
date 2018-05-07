@@ -1,28 +1,14 @@
 ---
-title: "MainMenu 元件 (Windows Form)"
-ms.custom: 
+title: MainMenu 元件 (Windows Form)
 ms.date: 03/30/2017
-ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.technology:
-- dotnet-winforms
-ms.tgt_pltfrm: 
-ms.topic: article
 helpviewer_keywords:
 - MainMenu control [Windows Forms]
 ms.assetid: 7cd22f29-828b-42e8-9c88-f08aa4533850
-caps.latest.revision: 
-author: dotnet-bot
-ms.author: dotnetcontent
-manager: wpickett
-ms.workload:
-- dotnet
-ms.openlocfilehash: 72b026e06fde1b7acebf1e069f4386377236e02b
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.openlocfilehash: 241980c2f63a89a1a649bdbd852ea0fbbb0d28a7
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="mainmenu-component-windows-forms"></a>MainMenu 元件 (Windows Form)
 > [!NOTE]
@@ -38,6 +24,6 @@ ms.lasthandoff: 12/22/2017
  <xref:System.Windows.Forms.MainMenu>  
  描述這個類別，並且提供其所有成員的連結。  
   
-## <a name="see-also"></a>請參閱  
+## <a name="see-also"></a>另請參閱  
  <xref:System.Windows.Forms.MenuStrip>  
  <xref:System.Windows.Forms.ContextMenuStrip>

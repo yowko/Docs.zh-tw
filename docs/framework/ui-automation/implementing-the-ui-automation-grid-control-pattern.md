@@ -1,28 +1,19 @@
 ---
-title: "實作 UI 自動化 Grid 控制項模式"
-ms.custom: 
+title: 實作 UI 自動化 Grid 控制項模式
 ms.date: 03/30/2017
-ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.technology: dotnet-bcl
-ms.tgt_pltfrm: 
-ms.topic: article
 helpviewer_keywords:
 - control patterns, grid
 - grid control pattern
 - UI Automation, grid control pattern
 ms.assetid: 234d11a0-7ce7-4309-8989-2f4720e02f78
-caps.latest.revision: "27"
 author: Xansky
 ms.author: mhopkins
 manager: markl
-ms.workload: dotnet
-ms.openlocfilehash: 4667cd149940310e2422686b9e9fdf6e7e99ca9e
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.openlocfilehash: 0038202fb7c7f1a6e0b4f21592d7a1056c4dfa2b
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="implementing-the-ui-automation-grid-control-pattern"></a>實作 UI 自動化 Grid 控制項模式
 > [!NOTE]
@@ -57,7 +48,7 @@ ms.lasthandoff: 12/22/2017
 ## <a name="required-members-for-igridprovider"></a>IGridProvider 的必要成員  
  以下是實作 IGridProvider 介面的必要屬性和方法。  
   
-|必要成員|類型|備註|  
+|必要成員|類型|注意|  
 |----------------------|----------|-----------|  
 |<xref:System.Windows.Automation.Provider.IGridProvider.RowCount%2A>|屬性|無|  
 |<xref:System.Windows.Automation.Provider.IGridProvider.ColumnCount%2A>|屬性|無|  
@@ -74,7 +65,7 @@ ms.lasthandoff: 12/22/2017
 |<xref:System.ArgumentOutOfRangeException>|<xref:System.Windows.Automation.Provider.IGridProvider.GetItem%2A><br /><br /> -如果要求的資料列座標大於<xref:System.Windows.Automation.Provider.IGridProvider.RowCount%2A>或資料行座標大於<xref:System.Windows.Automation.Provider.IGridProvider.ColumnCount%2A>。|  
 |<xref:System.ArgumentOutOfRangeException>|<xref:System.Windows.Automation.Provider.IGridProvider.GetItem%2A><br /><br /> -如果要求的資料列或資料行座標小於零。|  
   
-## <a name="see-also"></a>請參閱  
+## <a name="see-also"></a>另請參閱  
  [UI 自動化控制項模式概觀](../../../docs/framework/ui-automation/ui-automation-control-patterns-overview.md)  
  [支援 UI 自動化提供者的控制項模式](../../../docs/framework/ui-automation/support-control-patterns-in-a-ui-automation-provider.md)  
  [用戶端的 UI 自動化控制項模式](../../../docs/framework/ui-automation/ui-automation-control-patterns-for-clients.md)  

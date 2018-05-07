@@ -1,23 +1,12 @@
 ---
-title: "NativeActivity 基底類別"
-ms.custom: 
+title: NativeActivity 基底類別
 ms.date: 03/30/2017
-ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.tgt_pltfrm: 
-ms.topic: article
 ms.assetid: 254a4c50-425b-426d-a32f-0f7234925bac
-caps.latest.revision: "8"
-author: dotnet-bot
-ms.author: dotnetcontent
-manager: wpickett
-ms.workload: dotnet
-ms.openlocfilehash: e53471a2d0245b1547ae5ee3c3a147e024aedefb
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.openlocfilehash: ca4a497f1e78989f9488507015526214ead6cae7
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="nativeactivity-base-class"></a>NativeActivity 基底類別
 <xref:System.Activities.NativeActivity> 是具有受保護建構函式的抽象類別。 如同 <xref:System.Activities.CodeActivity>，<xref:System.Activities.NativeActivity> 會用於透過實作 <xref:System.Activities.NativeActivity.Execute%2A> 方法的方式寫入命令式行為。 不同於 <xref:System.Activities.CodeActivity> 的是，<xref:System.Activities.NativeActivity> 可透過傳遞至 <xref:System.Activities.NativeActivityContext> 方法的 <xref:System.Activities.NativeActivity.Execute%2A> 物件，存取工作流程執行階段的所有公開功能。  
@@ -45,7 +34,7 @@ ms.lasthandoff: 12/22/2017
   
 1.  開啟 [!INCLUDE[vs2010](../../../includes/vs2010-md.md)]。  
   
-2.  選取**檔案**，**新**，然後**專案**。 選取**Workflow 4.0**下**Visual C#**中**專案類型**視窗，並選取**v2010**節點。 選取**活動程式庫**中**範本**視窗。 將新專案命名為 HelloActivity。  
+2.  選取**檔案**，**新**，然後**專案**。 選取**Workflow 4.0**下**Visual C#** 中**專案類型**視窗，並選取**v2010**節點。 選取**活動程式庫**中**範本**視窗。 將新專案命名為 HelloActivity。  
   
 3.  以滑鼠右鍵按一下 HelloActivity 專案中的 Activity1.xaml，然後選取**刪除**。  
   

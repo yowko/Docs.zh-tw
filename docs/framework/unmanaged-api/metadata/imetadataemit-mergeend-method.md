@@ -1,14 +1,6 @@
 ---
-title: "IMetaDataEmit::MergeEnd 方法"
-ms.custom: 
+title: IMetaDataEmit::MergeEnd 方法
 ms.date: 03/30/2017
-ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.technology:
-- dotnet-clr
-ms.tgt_pltfrm: 
-ms.topic: reference
 api_name:
 - IMetaDataEmit.MergeEnd
 api_location:
@@ -23,17 +15,13 @@ helpviewer_keywords:
 ms.assetid: 2d64315a-1af1-4c60-aedf-f8a781914aea
 topic_type:
 - apiref
-caps.latest.revision: 
 author: mairaw
 ms.author: mairaw
-manager: wpickett
-ms.workload:
-- dotnet
-ms.openlocfilehash: 265fc007b5817e8dffd5846738a7a0003bbddf9d
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.openlocfilehash: b794a62a0ac0d253f1431be29b43101816dc7233
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="imetadataemitmergeend-method"></a>IMetaDataEmit::MergeEnd 方法
 合併到目前範圍的一個或多個先前呼叫所指定的所有中繼資料範圍[imetadataemit:: Merge](../../../../docs/framework/unmanaged-api/metadata/imetadataemit-merge-method.md)。  
@@ -58,7 +46,7 @@ HRESULT MergeEnd ();
   
      如果模組屬性已設定為目前的範圍，會匯不入任何模組的屬性。 不過，如果模組屬性尚未設定在目前範圍中，它們會匯入一次，當第一次遇到。 如果這些模組內容發生一次，它們是重複的項目。 如果 （MVID 除外） 的所有模組屬性的值進行比較並發現沒有重複項目，則會引發錯誤。  
   
--   類型定義 (`TypeDef`)，沒有重複項目會合併到目前的範圍。 `TypeDef`物件會檢查是否有重複項目針對每個*完整物件名稱* + *GUID* + *版本號碼*。 如果沒有符合項目名稱或 GUID，且任何其他兩個項目不同，則會引發錯誤。 否則，如果所有的三個項目相符，`MergeEnd`未執行快速檢查，以確保項目確實是重複項目; 如果沒有，則會引發錯誤。 這項快速檢查會尋找：  
+-   類型定義 (`TypeDef`)，沒有重複項目會合併到目前的範圍。 `TypeDef` 物件會檢查是否有重複項目針對每個*完整物件名稱* + *GUID* + *版本號碼*。 如果沒有符合項目名稱或 GUID，且任何其他兩個項目不同，則會引發錯誤。 否則，如果所有的三個項目相符，`MergeEnd`未執行快速檢查，以確保項目確實是重複項目; 如果沒有，則會引發錯誤。 這項快速檢查會尋找：  
   
     -   相同成員宣告中的相同順序發生。 成員標示為`mdPrivateScope`(請參閱[CorMethodAttr](../../../../docs/framework/unmanaged-api/metadata/cormethodattr-enumeration.md)列舉型別) 中這項檢查; 不包含特殊合併。  
   
@@ -79,8 +67,8 @@ HRESULT MergeEnd ();
   
  **程式庫：**做為 MSCorEE.dll 中的資源  
   
- **.NET framework 版本：**[!INCLUDE[net_current_v11plus](../../../../includes/net-current-v11plus-md.md)]  
+ **.NET framework 版本：** [!INCLUDE[net_current_v11plus](../../../../includes/net-current-v11plus-md.md)]  
   
-## <a name="see-also"></a>請參閱  
+## <a name="see-also"></a>另請參閱  
  [IMetaDataEmit 介面](../../../../docs/framework/unmanaged-api/metadata/imetadataemit-interface.md)  
  [IMetaDataEmit2 介面](../../../../docs/framework/unmanaged-api/metadata/imetadataemit2-interface.md)

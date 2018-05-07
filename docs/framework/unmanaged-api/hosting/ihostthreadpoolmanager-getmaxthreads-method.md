@@ -1,14 +1,6 @@
 ---
-title: "IHostThreadPoolManager::GetMaxThreads 方法"
-ms.custom: 
+title: IHostThreadPoolManager::GetMaxThreads 方法
 ms.date: 03/30/2017
-ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.technology:
-- dotnet-clr
-ms.tgt_pltfrm: 
-ms.topic: reference
 api_name:
 - IHostThreadPoolManager.GetMaxThreads
 api_location:
@@ -23,17 +15,13 @@ helpviewer_keywords:
 ms.assetid: db268876-6178-4a81-aca3-318ee7f96001
 topic_type:
 - apiref
-caps.latest.revision: 
 author: rpetrusha
 ms.author: ronpet
-manager: wpickett
-ms.workload:
-- dotnet
-ms.openlocfilehash: 84867f1b5dfdcfd7a50d01c9e51cb0c42da62f0e
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.openlocfilehash: fa6e0e2447cc3ff6766bb33bb603388f37ec3ce0
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="ihostthreadpoolmanagergetmaxthreads-method"></a>IHostThreadPoolManager::GetMaxThreads 方法
 執行緒集區中，同時取得主機維護執行緒的數目上限。  
@@ -54,7 +42,7 @@ HRESULT GetMaxThreads (
   
 |HRESULT|描述|  
 |-------------|-----------------|  
-|S_OK|`GetMaxThreads`已成功傳回。|  
+|S_OK|`GetMaxThreads` 已成功傳回。|  
 |HOST_E_CLRNOTAVAILABLE|Common language runtime (CLR (尚未載入處理序，或 CLR 處於狀態中能執行以 managed 程式碼或程序呼叫成功。|  
 |HOST_E_TIMEOUT|呼叫已逾時。|  
 |HOST_E_NOT_OWNER|呼叫端未擁有鎖定。|  
@@ -74,9 +62,9 @@ HRESULT GetMaxThreads (
   
  **程式庫：**包含做為 MSCorEE.dll 中的資源  
   
- **.NET framework 版本：**[!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]  
+ **.NET framework 版本：** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]  
   
-## <a name="see-also"></a>請參閱  
+## <a name="see-also"></a>另請參閱  
  <xref:System.Threading.ThreadPool.GetMaxThreads%2A>  
  <xref:System.Threading.ThreadPool>  
  [GetMinThreads 方法](../../../../docs/framework/unmanaged-api/hosting/ihostthreadpoolmanager-getminthreads-method.md)  

@@ -1,27 +1,15 @@
 ---
-title: "HOW TO：實作以探索 Proxy 註冊的可探索服務"
-ms.custom: 
+title: HOW TO：實作以探索 Proxy 註冊的可探索服務
 ms.date: 03/30/2017
-ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.technology: dotnet-clr
-ms.tgt_pltfrm: 
-ms.topic: article
 ms.assetid: eb275bc1-535b-44c8-b9f3-0b75e9aa473b
-caps.latest.revision: "14"
-author: dotnet-bot
-ms.author: dotnetcontent
-manager: wpickett
-ms.workload: dotnet
-ms.openlocfilehash: ee99c7c74f0e1e2d287802d46cf4b716cfa3b76d
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.openlocfilehash: e0ceada8f65b98676d160ba096c63bf946a178cf
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="how-to-implement-a-discoverable-service-that-registers-with-the-discovery-proxy"></a>HOW TO：實作以探索 Proxy 註冊的可探索服務
-本主題是四個主題中的第二個，討論如何實作探索 Proxy。 在先前的主題， [How to： 實作探索 Proxy](../../../../docs/framework/wcf/feature-details/how-to-implement-a-discovery-proxy.md)，實作探索 proxy。 在這個主題中，您會建立一個 [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] 服務，這個服務會傳送公告訊息 (`Hello` 和 `Bye`) 至探索 Proxy，使其向探索 Proxy 註冊和取消註冊其本身。  
+本主題是四個主題中的第二個，討論如何實作探索 Proxy。 在先前的主題， [How to： 實作探索 Proxy](../../../../docs/framework/wcf/feature-details/how-to-implement-a-discovery-proxy.md)，實作探索 proxy。 本主題中，您可以建立 WCF 服務會傳送公告訊息 (`Hello`和`Bye`) 到探索 proxy，使其註冊及取消註冊其本身向探索 proxy。  
   
 ### <a name="to-define-the-service-contract"></a>若要定義服務合約  
   
@@ -295,7 +283,7 @@ namespace Microsoft.Samples.Discovery
 }  
 ```  
 
-## <a name="see-also"></a>請參閱  
+## <a name="see-also"></a>另請參閱  
  [WCF 探索](../../../../docs/framework/wcf/feature-details/wcf-discovery.md)  
  [如何：實作探索 Proxy](../../../../docs/framework/wcf/feature-details/how-to-implement-a-discovery-proxy.md)  
  [如何：實作使用探索 Proxy 搜尋服務的用戶端應用程式來尋找服務](../../../../docs/framework/wcf/feature-details/client-app-discovery-proxy-to-find-a-service.md)

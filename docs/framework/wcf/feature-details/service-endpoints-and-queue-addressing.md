@@ -1,33 +1,19 @@
 ---
 title: 服務端點與佇列定址
-ms.custom: ''
 ms.date: 03/30/2017
-ms.prod: .net-framework
-ms.reviewer: ''
-ms.suite: ''
-ms.technology:
-- dotnet-clr
-ms.tgt_pltfrm: ''
-ms.topic: article
 ms.assetid: 7d2d59d7-f08b-44ed-bd31-913908b83d97
-caps.latest.revision: 18
-author: dotnet-bot
-ms.author: dotnetcontent
-manager: wpickett
-ms.workload:
-- dotnet
-ms.openlocfilehash: f2244ccb1637f944f9e3349cf0d94caa2f6676bf
-ms.sourcegitcommit: 94d33cadc5ff81d2ac389bf5f26422c227832052
+ms.openlocfilehash: a2f4807e447482ee790f2ca9a2ab4dbde531b1c8
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/30/2018
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="service-endpoints-and-queue-addressing"></a>服務端點與佇列定址
-本主題將討論用戶端如何針對從佇列讀取的服務進行定址，以及服務端點如何對應至佇列。 提醒您，下列圖例將顯示典型的 [!INCLUDE[indigo1](../../../../includes/indigo1-md.md)] 佇列應用程式部署。  
+本主題將討論用戶端如何針對從佇列讀取的服務進行定址，以及服務端點如何對應至佇列。 提醒您下, 圖顯示傳統的 Windows Communication Foundation (WCF) 佇列應用程式部署。  
   
  ![排入佇列的應用程式圖表](../../../../docs/framework/wcf/feature-details/media/distributed-queue-figure.jpg "分散式佇列圖")  
   
- 當用戶端需要將訊息傳送到服務時，它會針對傳送到目標佇列的訊息加以定址。 為了讓服務讀取來自佇列的訊息，服務會將其接聽位址設為目標佇列。 [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] 使用統一資源識別元 (URI) 基礎的定址方式，而訊息佇列 (MSMQ) 佇列名稱則不是以 URI 為基礎。 因此，您必須了解如何運用 [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)]，針對 MSMQ 中建立的佇列加以定址。  
+ 當用戶端需要將訊息傳送到服務時，它會針對傳送到目標佇列的訊息加以定址。 為了讓服務讀取來自佇列的訊息，服務會將其接聽位址設為目標佇列。 在 WCF 中定址是統一資源識別碼 URI 為基礎而訊息佇列 (MSMQ) 佇列名稱不是以 URI 為基礎。 因此務必了解如何解決使用 WCF MSMQ 中建立的佇列。  
   
 ## <a name="msmq-addressing"></a>MSMQ 定址  
  MSMQ 使用路徑與格式名稱來識別佇列。 路徑會指定主機名稱與 `QueueName`。 或者，您可以在主機名稱與 `Private$` 之間包含 `QueueName`，來表示尚未於 Active Directory 目錄服務中發行的私用佇列。  
@@ -37,11 +23,11 @@ ms.lasthandoff: 04/30/2018
  如需 MSMQ 路徑與格式名稱的詳細資訊，請參閱[有關訊息佇列](http://go.microsoft.com/fwlink/?LinkId=94837)。  
   
 ## <a name="netmsmqbinding-and-service-addressing"></a>NetMsmqBinding 與服務定址  
- 針對傳送給服務的訊息進行定址時，URI 裡的配置是依據通訊時使用的傳輸所選定的。 [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] 中的每個傳輸都有自己的配置。 配置必須反映通訊時使用的傳輸本質。 例如，net.tcp、net.pipe、HTTP 等等。  
+ 針對傳送給服務的訊息進行定址時，URI 裡的配置是依據通訊時使用的傳輸所選定的。 在 WCF 中的每個傳輸都有自己的配置。 配置必須反映通訊時使用的傳輸本質。 例如，net.tcp、net.pipe、HTTP 等等。  
   
- [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] 中的 MSMQ 佇列傳輸會公開 net.msmq 配置。 任何使用 net.msmq 配置來定址的訊息，將透過使用 MSMQ 佇列傳輸通道的 `NetMsmqBinding` 來傳送。  
+ MSMQ 佇列傳輸 WCF 會公開 net.msmq 配置。 任何使用 net.msmq 配置來定址的訊息，將透過使用 MSMQ 佇列傳輸通道的 `NetMsmqBinding` 來傳送。  
   
- [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] 中的佇列將依據下列模式來定址：  
+ WCF 中的佇列定址，根據下列模式：  
   
  net.msmq: / / \<*主機名稱*> / [私用 /] \<*佇列名稱*>  
   
@@ -49,7 +35,7 @@ ms.lasthandoff: 04/30/2018
   
 -   \<*主機名稱*> 是裝載目標佇列的電腦名稱。  
   
--   [private] 為選擇性項目。 在您針對屬於私用佇列的目標佇列進行定址時，才會用到它。 若要針對公用佇列進行定址，您不可指定私用佇列。 請注意，與 MSMQ 路徑不同的是，[!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] URI 格式中不包含 "$"。  
+-   [private] 為選擇性項目。 在您針對屬於私用佇列的目標佇列進行定址時，才會用到它。 若要針對公用佇列進行定址，您不可指定私用佇列。 請注意，與 MSMQ 路徑不同的是不包含"$"WCF URI 形式。  
   
 -   \<*佇列名稱*> 是佇列的名稱。 佇列名稱同時也參照到子佇列。 因此， \<*佇列名稱*> = \<*名稱的佇列*> [;*子 queue 名稱*]。  
   
@@ -102,10 +88,10 @@ ms.lasthandoff: 04/30/2018
   
  net.msmq: //localhost/ [private /] \<*自訂的寄不出信件-佇列-名稱*>。  
   
- [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] 服務會負責確認所有收到的訊息已針對正在接聽的特定佇列完成定址。 如果訊息的目的地佇列不符合找到的佇列，則服務將無法處理訊息。 這是負責接聽寄不出的信件佇列的服務必須解決的問題，因為寄不出的信件佇列中任何訊息都是要傳送到其他地方的。 若要從寄不出的信件佇列或有害佇列中讀取訊息，必須使用包含 `ServiceBehavior` 參數的 <xref:System.ServiceModel.AddressFilterMode.Any>。 如需範例，請參閱[寄不出信件佇列](../../../../docs/framework/wcf/samples/dead-letter-queues.md)。  
+ WCF 服務會先確認所有收到的訊息已獲得解決它正在接聽的特定佇列。 如果訊息的目的地佇列不符合找到的佇列，則服務將無法處理訊息。 這是負責接聽寄不出的信件佇列的服務必須解決的問題，因為寄不出的信件佇列中任何訊息都是要傳送到其他地方的。 若要從寄不出的信件佇列或有害佇列中讀取訊息，必須使用包含 `ServiceBehavior` 參數的 <xref:System.ServiceModel.AddressFilterMode.Any>。 如需範例，請參閱[寄不出信件佇列](../../../../docs/framework/wcf/samples/dead-letter-queues.md)。  
   
 ## <a name="msmqintegrationbinding-and-service-addressing"></a>MsmqIntegrationBinding 與服務定址  
- `MsmqIntegrationBinding` 是用來與傳統 MSMQ 應用程式進行通訊的。 為了簡化與現有 MSMQ 應用程式的互通性，[!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] 僅支援格式名稱定址。 因此，使用此繫結來傳送的訊息必須符合下列 URI 配置：  
+ `MsmqIntegrationBinding` 是用來與傳統 MSMQ 應用程式進行通訊的。 為了簡化與現有 MSMQ 應用程式的互通，WCF 會支援僅格式名稱定址。 因此，使用此繫結來傳送的訊息必須符合下列 URI 配置：  
   
  msmq.formatname:\<*MSMQ-format-name*>>  
   
@@ -115,7 +101,7 @@ ms.lasthandoff: 04/30/2018
   
  當您使用 `MsmqIntegrationBinding` 為 SRMP 定址時，不需要在直接格式名稱中新增 /msmq/ 以協助網際網路資訊服務 (IIS) 進行分派作業。 例如： abc 使用 SRMP 通訊協定，而不是 DIRECT 佇列進行定址時 =http://adatum.com/msmq/private$/abc，您應該使用 DIRECT =http://adatum.com/private$/abc。  
   
- 請注意，您無法使用包含 `MsmqIntegrationBinding` 的 net.msmq:// 定址。 由於 `MsmqIntegrationBinding` 支援自由格式的 MSMQ 格式名稱定址，您可以透過使用此繫結的 [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] 服務來使用 MSMQ 中的多點傳送與通訊群組清單功能。 當您使用 `CustomDeadLetterQueue` 時，需指定 `MsmqIntegrationBinding` 則是一個例外。 它必須是 net.msmq:// 的格式，與使用 `NetMsmqBinding` 來指定的方式很類似。  
+ 請注意，您無法使用包含 `MsmqIntegrationBinding` 的 net.msmq:// 定址。 因為`MsmqIntegrationBinding`支援自由格式的 MSMQ 格式名稱定址，您可以使用 WCF 服務使用這個繫結來使用 MSMQ 中的多點傳送與通訊群組清單功能。 當您使用 `CustomDeadLetterQueue` 時，需指定 `MsmqIntegrationBinding` 則是一個例外。 它必須是 net.msmq:// 的格式，與使用 `NetMsmqBinding` 來指定的方式很類似。  
   
 ## <a name="see-also"></a>另請參閱  
  [以 Web 裝載佇列應用程式](../../../../docs/framework/wcf/feature-details/web-hosting-a-queued-application.md)

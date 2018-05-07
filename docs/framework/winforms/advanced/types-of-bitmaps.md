@@ -1,13 +1,6 @@
 ---
-title: "點陣圖類型"
-ms.custom: 
+title: 點陣圖類型
 ms.date: 03/30/2017
-ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.technology: dotnet-winforms
-ms.tgt_pltfrm: 
-ms.topic: article
 helpviewer_keywords:
 - jpeg files
 - TIFF files
@@ -27,16 +20,11 @@ helpviewer_keywords:
 - bitmaps [Windows Forms], file format
 - Exchangeable Image File
 ms.assetid: 6be085a2-2c13-47c8-b80a-c18b32777d8d
-caps.latest.revision: "14"
-author: dotnet-bot
-ms.author: dotnetcontent
-manager: wpickett
-ms.workload: dotnet
-ms.openlocfilehash: 6af28e7b50cb7e4a2a90153a053a83931c738214
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.openlocfilehash: 1a79f34daac4238093693947f5fb5e73bb56213d
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="types-of-bitmaps"></a>點陣圖類型
 點陣圖是指定的每個像素色彩的像素矩形陣列中的位元陣列。 組成個別像素的位元數目會決定可以指派給該像素的色彩數目。 比方說，如果以 4 位元表示每個像素，然後指定像素可以指派其中 16 個不同的色彩 (2 ^4 = 16)。 下表顯示的一些範例可以指派給像素，以表示所指定的位元數的色彩數目。  
@@ -64,7 +52,7 @@ ms.lasthandoff: 12/22/2017
  ![點陣圖範例](../../../../docs/framework/winforms/advanced/media/aboutgdip03-art02.gif "AboutGdip03_Art02")  
   
 ## <a name="graphics-file-formats"></a>圖形檔格式  
- 有許多標準格式將點陣圖儲存在磁碟檔案。 [!INCLUDE[ndptecgdiplus](../../../../includes/ndptecgdiplus-md.md)]支援的圖形檔案下列段落中所述的格式。  
+ 有許多標準格式將點陣圖儲存在磁碟檔案。 [!INCLUDE[ndptecgdiplus](../../../../includes/ndptecgdiplus-md.md)] 支援的圖形檔案下列段落中所述的格式。  
   
 ### <a name="bmp"></a>BMP  
  BMP 是 Windows 用來儲存與裝置無關和與應用程式無關的映像以標準格式。 檔案標頭中指定的每個像素 （1、 4、 8、 15、 24、 32 或 64） 指定的 BMP 檔案的位元數。 每個像素的 24 位元的 BMP 檔案通。 BMP 檔案通常未壓縮，而且，因此不適合傳輸在網際網路上。  
@@ -96,7 +84,7 @@ ms.lasthandoff: 12/22/2017
 ### <a name="tag-image-file-format-tiff"></a>Tif 檔案格式 (TIFF)  
  TIFF 是具彈性而且可擴充的格式支援的各種不同的平台和映像處理應用程式。 TIFF 檔案可以儲存包含任意數目的每個像素的位元的映像，並可採用各種不同的壓縮演算法。 數個映像可以儲存在單一的多頁 TIFF 檔案中。 掃描器製作、 主機電腦 （型別壓縮、 方向、 每個像素和等等的範例） 的映像的相關資訊可以儲存在檔案中，且透過標記使用方式排列。 可以擴充 TIFF 格式，視需要進行核准和加入的新標記。  
   
-## <a name="see-also"></a>請參閱  
+## <a name="see-also"></a>另請參閱  
  <xref:System.Drawing.Image?displayProperty=nameWithType>  
  <xref:System.Drawing.Bitmap?displayProperty=nameWithType>  
  <xref:System.Drawing.Imaging.PixelFormat?displayProperty=nameWithType>  

@@ -1,13 +1,6 @@
 ---
-title: "如何：使用 Visual 繪製區域"
-ms.custom: 
+title: 如何：使用 Visual 繪製區域
 ms.date: 03/30/2017
-ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.technology: dotnet-wpf
-ms.tgt_pltfrm: 
-ms.topic: article
 dev_langs:
 - csharp
 - vb
@@ -16,16 +9,11 @@ helpviewer_keywords:
 - visuals [WPF], painting with
 - brushes [WPF], painting with visuals
 ms.assetid: 35f92996-1d03-4542-acc4-3469dcf09492
-caps.latest.revision: "9"
-author: dotnet-bot
-ms.author: dotnetcontent
-manager: wpickett
-ms.workload: dotnet
-ms.openlocfilehash: 183117472cc74c958bdd7f807236eded97610b1c
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.openlocfilehash: ef6774f669e3fc0694ac743bf2b76d78adcf37a9
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="how-to-paint-an-area-with-a-visual"></a>如何：使用 Visual 繪製區域
 這個範例示範如何使用<xref:System.Windows.Media.VisualBrush>類別來使用繪製區域<xref:System.Windows.Media.Visual>。  
@@ -42,5 +30,5 @@ ms.lasthandoff: 12/22/2017
   
  這個程式碼範例是針對所提供之較大範例的一部分<xref:System.Windows.Media.VisualBrush>類別。 如需完整範例，請參閱[VisualBrush 範例](http://go.microsoft.com/fwlink/?LinkID=160049)。  
   
-## <a name="see-also"></a>請參閱  
+## <a name="see-also"></a>另請參閱  
  [使用影像、繪圖和視覺效果繪製](../../../../docs/framework/wpf/graphics-multimedia/painting-with-images-drawings-and-visuals.md)

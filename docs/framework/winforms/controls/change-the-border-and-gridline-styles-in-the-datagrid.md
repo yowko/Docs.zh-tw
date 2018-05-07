@@ -1,13 +1,6 @@
 ---
-title: "如何：變更 Windows Form DataGridView 控制項中的框線和格線樣式"
-ms.custom: 
+title: 如何：變更 Windows Form DataGridView 控制項中的框線和格線樣式
 ms.date: 03/30/2017
-ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.technology: dotnet-winforms
-ms.tgt_pltfrm: 
-ms.topic: article
 dev_langs:
 - csharp
 - vb
@@ -18,16 +11,11 @@ helpviewer_keywords:
 - data grids [Windows Forms], changing border styles
 - DataGridView control [Windows Forms], gridline styles
 ms.assetid: 2f413c7a-4025-4171-8e3a-66ef908ea583
-caps.latest.revision: "15"
-author: dotnet-bot
-ms.author: dotnetcontent
-manager: wpickett
-ms.workload: dotnet
-ms.openlocfilehash: a31bfc6fb3fa8a3c549a10fd0db017abde66539f
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.openlocfilehash: 94e5ae11d7fb2b67e028f368183246f8d8543a08
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="how-to-change-the-border-and-gridline-styles-in-the-windows-forms-datagridview-control"></a>如何：變更 Windows Form DataGridView 控制項中的框線和格線樣式
 與<xref:System.Windows.Forms.DataGridView>控制項，您可以自訂控制項的框線和格線，以改善使用者體驗的外觀。 您可以修改格線的色彩和控制項的框線樣式，除了在控制項中的資料格的框線樣式。 您也可以套用不同的儲存格一般儲存格、 資料列標題儲存格和資料行首儲存格的框線樣式。  
@@ -67,7 +55,7 @@ ms.lasthandoff: 12/22/2017
   
 -   <xref:System?displayProperty=nameWithType>、<xref:System.Windows.Forms?displayProperty=nameWithType> 和 <xref:System.Drawing?displayProperty=nameWithType> 組件的參考。  
   
-## <a name="see-also"></a>請參閱  
+## <a name="see-also"></a>另請參閱  
  <xref:System.Windows.Forms.BorderStyle>  
  <xref:System.Windows.Forms.DataGridView.BorderStyle%2A?displayProperty=nameWithType>  
  <xref:System.Windows.Forms.DataGridView.CellBorderStyle%2A?displayProperty=nameWithType>  

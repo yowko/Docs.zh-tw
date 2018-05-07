@@ -1,13 +1,6 @@
 ---
-title: "何時使用 Windows Form ComboBox 取代 ListBox"
-ms.custom: 
+title: 何時使用 Windows Form ComboBox 取代 ListBox
 ms.date: 03/30/2017
-ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.technology: dotnet-winforms
-ms.tgt_pltfrm: 
-ms.topic: article
 helpviewer_keywords:
 - ListBox control [Windows Forms], adding and removing items
 - ListBox control [Windows Forms], vs. ComboBox
@@ -18,16 +11,11 @@ helpviewer_keywords:
 - ListBox control [Windows Forms], accessing items
 - ListCount property
 ms.assetid: 7bcaea58-1cfa-46db-9baf-b75a69d8f9ec
-caps.latest.revision: "8"
-author: dotnet-bot
-ms.author: dotnetcontent
-manager: wpickett
-ms.workload: dotnet
-ms.openlocfilehash: 8c4a2886dae3aee147d80957874d0d98714c0ca5
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.openlocfilehash: 88b6a6023fbfdd8fa315fcd434357626ea69a9ae
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="when-to-use-a-windows-forms-combobox-instead-of-a-listbox"></a>何時使用 Windows Form ComboBox 取代 ListBox
 <xref:System.Windows.Forms.ComboBox>和<xref:System.Windows.Forms.ListBox>控制項具有類似的行為，並在某些情況下可能會互換。 但有些的時候，不過，當其中一個是更適合工作。  
@@ -36,7 +24,7 @@ ms.lasthandoff: 12/22/2017
   
  此外，下拉式方塊會節省表單空間。 未顯示的完整清單，直到使用者按一下向下箭號，因為下拉式方塊可以輕易地容納小的空間，其中不會放在清單方塊中。 例外狀況時，<xref:System.Windows.Forms.ComboBox.DropDownStyle%2A>屬性設定為<xref:System.Windows.Forms.ComboBoxStyle.Simple>： 完整的清單隨即顯示，且會佔用更多空間，而不是清單方塊的下拉式方塊。  
   
-## <a name="see-also"></a>請參閱  
+## <a name="see-also"></a>另請參閱  
  <xref:System.Windows.Forms.ComboBox>  
  <xref:System.Windows.Forms.ListBox>  
  [操作說明：從 Windows Forms 的 ComboBox、ListBox 或 CheckedListBox 控制項加入或移除項目](../../../../docs/framework/winforms/controls/add-and-remove-items-from-a-wf-combobox.md)  

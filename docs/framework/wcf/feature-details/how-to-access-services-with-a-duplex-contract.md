@@ -1,38 +1,24 @@
 ---
 title: HOW TO：使用雙工合約存取服務
-ms.custom: ''
 ms.date: 03/30/2017
-ms.prod: .net-framework
-ms.reviewer: ''
-ms.suite: ''
-ms.technology:
-- dotnet-clr
-ms.tgt_pltfrm: ''
-ms.topic: article
 dev_langs:
 - csharp
 - vb
 helpviewer_keywords:
 - duplex contracts [WCF]
 ms.assetid: 746a9d64-f21c-426c-b85d-972e916ec6c5
-caps.latest.revision: 18
-author: dotnet-bot
-ms.author: dotnetcontent
-manager: wpickett
-ms.workload:
-- dotnet
-ms.openlocfilehash: c80980ff5a5b1011c021bcaf0688747178ec5b9b
-ms.sourcegitcommit: 94d33cadc5ff81d2ac389bf5f26422c227832052
+ms.openlocfilehash: c0022e6ce3a63c1f497eeee82ca959cec1046cec
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/30/2018
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="how-to-access-services-with-a-duplex-contract"></a>HOW TO：使用雙工合約存取服務
-[!INCLUDE[indigo1](../../../../includes/indigo1-md.md)] 其中一項功能，就是建立使用雙工訊息模式的服務。 這個模式可讓服務透過回呼與用戶端通訊。 本主題將說明在會實作回呼介面的用戶端類別中，建立 [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] 用戶端的步驟。  
+其中一項功能的 Windows Communication Foundation (WCF) 是建立使用雙工訊息模式的服務的能力。 這個模式可讓服務透過回呼與用戶端通訊。 本主題說明在實作回呼介面的用戶端類別中建立 WCF 用戶端的步驟。  
   
  雙重繫結會向服務公開用戶端的 IP 位址， 用戶端應該利用安全性來確保它只與信任的服務連接。  
   
- 如需建立基本的教學課程[!INCLUDE[indigo2](../../../../includes/indigo2-md.md)]服務與用戶端，請參閱[入門教學課程](../../../../docs/framework/wcf/getting-started-tutorial.md)。  
+ 如需建立基本的 WCF 服務和用戶端的教學課程，請參閱[入門教學課程](../../../../docs/framework/wcf/getting-started-tutorial.md)。  
   
 ### <a name="to-access-a-duplex-service"></a>若要存取雙工服務  
   
@@ -80,7 +66,7 @@ ms.lasthandoff: 04/30/2018
     Dim site As InstanceContext = New InstanceContext(new CallbackHandler())  
     ```  
   
-6.  使用需要 [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] 物件的建構函式來建立 <xref:System.ServiceModel.InstanceContext> 用戶端的執行個體。 建構函式的第二個參數就是組態檔中找到的端點名稱。  
+6.  建立 WCF 用戶端會使用需要的建構函式的執行個體<xref:System.ServiceModel.InstanceContext>物件。 建構函式的第二個參數就是組態檔中找到的端點名稱。  
   
     ```csharp  
     CalculatorDuplexClient wcfClient =   
@@ -91,7 +77,7 @@ ms.lasthandoff: 04/30/2018
     Dim wcfClient As New CalculatorDuplexClient(site, "default")  
     ```  
   
-7.  視需要呼叫 [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] 用戶端的方法。  
+7.  呼叫的 WCF 用戶端所需的方法。  
   
 ## <a name="example"></a>範例  
  下列程式碼範例會示範如何建立會存取雙工合約的用戶端類別。  

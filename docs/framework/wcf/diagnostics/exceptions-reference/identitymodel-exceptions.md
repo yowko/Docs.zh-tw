@@ -1,24 +1,12 @@
 ---
-title: "IdentityModel 例外狀況"
-ms.custom: 
+title: IdentityModel 例外狀況
 ms.date: 03/30/2017
-ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.technology: dotnet-clr
-ms.tgt_pltfrm: 
-ms.topic: article
 ms.assetid: 4ef34497-8ff5-4621-b773-7731cc721231
-caps.latest.revision: "7"
-author: dotnet-bot
-ms.author: dotnetcontent
-manager: wpickett
-ms.workload: dotnet
-ms.openlocfilehash: 26bf6cb88d77fc9890a23c482913514f1dc856aa
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.openlocfilehash: ee0b5537a415e1ea53c653ae8e8485e94cc713fd
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="identitymodel-exceptions"></a>IdentityModel 例外狀況
 本主題會列出由 IdentityModel 產生的所有例外狀況。  
@@ -91,8 +79,8 @@ ms.lasthandoff: 12/22/2017
 |SAMLSignatureAlreadyRead|已經在 SAML 判斷提示中讀取簽章。|  
 |AlgorithmAndPrivateKeyMisMatch|指定的演算法與私密金鑰不相符。|  
 |EmptyTransformChainNotSupported|不支援空白轉換鏈結。|  
-|SspiWrapperEncryptDecryptAssert1|Sspiwrapper:: Encryptdecrypthelper &#124;'offset' 超出範圍。|  
-|SspiWrapperEncryptDecryptAssert2|Sspiwrapper:: Encryptdecrypthelper &#124;'大小 ' 超出範圍。 SecurityTokenManagerCannotCreateAuthenticatorForRequirement=安全性權杖管理員無法針對特定需求建立權杖驗證器。|  
+|SspiWrapperEncryptDecryptAssert1|Sspiwrapper:: Encryptdecrypthelper&#124;'offset' 超出範圍。|  
+|SspiWrapperEncryptDecryptAssert2|Sspiwrapper:: Encryptdecrypthelper&#124;'size' 超出範圍。 SecurityTokenManagerCannotCreateAuthenticatorForRequirement=安全性權杖管理員無法針對特定需求建立權杖驗證器。|  
 |UnableToCreateKeyedHashAlgorithm|無法從特定的值針對特定的簽章演算法建立 KeyedHashAlgorithm。|  
 |SAMLUnableToLoadAssertion|\<Saml:assertion > 無法載入項目。|  
 |X509FindValueMismatchMulti|特定的 X509FindType 要求 findValue 引數型別必須是兩個值的其中一個值。 引數 findValue 是另一個類型。|  

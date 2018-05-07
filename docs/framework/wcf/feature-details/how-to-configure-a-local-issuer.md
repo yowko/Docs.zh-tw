@@ -1,13 +1,6 @@
 ---
-title: "HOW TO：設定本機簽發者"
-ms.custom: 
+title: HOW TO：設定本機簽發者
 ms.date: 03/30/2017
-ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.technology: dotnet-clr
-ms.tgt_pltfrm: 
-ms.topic: article
 dev_langs:
 - csharp
 - vb
@@ -15,26 +8,21 @@ helpviewer_keywords:
 - WCF, federation
 - federation
 ms.assetid: 15263371-514e-4ea6-90fb-14b4939154cd
-caps.latest.revision: "11"
-author: dotnet-bot
-ms.author: dotnetcontent
-manager: wpickett
-ms.workload: dotnet
-ms.openlocfilehash: c24b039709a013f210a42d67c744c03489e4cf73
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.openlocfilehash: 2b227398af3ea0dfd7cd866f1110ccc1737553c3
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="how-to-configure-a-local-issuer"></a>HOW TO：設定本機簽發者
 本主題會說明如何將用戶端設定成使用已發行權杖的本機簽發者。  
   
  通常，當用戶端與聯合服務進行通訊時，服務都會指定特定安全性權杖服務的位址，該服務預期會發出用戶端要用來向聯合服務驗證自己的權杖。 在某些情況下，用戶端可能會設定為使用*本機簽發者*。  
   
- 在聯合繫結的簽發者位址是 http://schemas.microsoft.com/2005/12/ServiceModel/Addressing/Anonymous 或 [!INCLUDE[indigo1](../../../../includes/indigo1-md.md)] 的情況下，`null` 就會使用本機簽發者。 在這種情況下，您必須設定包含本機簽發者位址的 <xref:System.ServiceModel.Description.ClientCredentials>，以及用來與該簽發者進行通訊的繫結。  
+ Windows Communication Foundation (WCF) 的聯合繫結的簽發者位址的情況下使用本機簽發者http://schemas.microsoft.com/2005/12/ServiceModel/Addressing/Anonymous或`null`。 在這種情況下，您必須設定包含本機簽發者位址的 <xref:System.ServiceModel.Description.ClientCredentials>，以及用來與該簽發者進行通訊的繫結。  
   
 > [!NOTE]
->  如果<xref:System.ServiceModel.Description.ClientCredentials.SupportInteractive%2A>屬性`ClientCredentials`類別設定為`true`、 未指定本機簽發者位址，及所指定的簽發者位址[ \<wsFederationHttpBinding >](../../../../docs/framework/configure-apps/file-schema/wcf/wsfederationhttpbinding.md)或其他聯合繫結是 http://schemas.xmlsoap.org/ws/2005/05/identity/issuer/self，http://schemas.microsoft.com/2005/12/ServiceModel/Addressing/Anonymous，或者是`null`，然後 Windows[!INCLUDE[infocard](../../../../includes/infocard-md.md)]就使用簽發者。  
+>  如果<xref:System.ServiceModel.Description.ClientCredentials.SupportInteractive%2A>屬性`ClientCredentials`類別設定為`true`、 未指定本機簽發者位址，及所指定的簽發者位址[ \<wsFederationHttpBinding >](../../../../docs/framework/configure-apps/file-schema/wcf/wsfederationhttpbinding.md)或其他聯合繫結是http://schemas.xmlsoap.org/ws/2005/05/identity/issuer/self， http://schemas.microsoft.com/2005/12/ServiceModel/Addressing/Anonymous，或者是`null`，然後 Windows[!INCLUDE[infocard](../../../../includes/infocard-md.md)]就使用簽發者。  
   
 ### <a name="to-configure-the-local-issuer-in-code"></a>透過程式碼來設定本機簽發者  
   
@@ -85,7 +73,7 @@ ms.lasthandoff: 12/22/2017
 ## <a name="net-framework-security"></a>.NET Framework 安全性  
  請注意，如果已指定特定繫結的簽發者位址和繫結，這時使用該繫結的端點就不會使用該本機簽發者。 預期一定要使用該本機簽發者的用戶端應該要確定自己沒有使用這類繫結，否則它們就會修改繫結，進而使得簽發者位址成為 `null`。  
   
-## <a name="see-also"></a>請參閱  
+## <a name="see-also"></a>另請參閱  
  [如何：設定同盟服務的認證](../../../../docs/framework/wcf/feature-details/how-to-configure-credentials-on-a-federation-service.md)  
  [如何：建立同盟用戶端](../../../../docs/framework/wcf/feature-details/how-to-create-a-federated-client.md)  
  [如何：建立 WSFederationHttpBinding](../../../../docs/framework/wcf/feature-details/how-to-create-a-wsfederationhttpbinding.md)

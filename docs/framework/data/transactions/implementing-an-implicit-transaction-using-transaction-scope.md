@@ -1,26 +1,15 @@
 ---
-title: "使用交易範圍實作隱含交易"
-ms.custom: 
+title: 使用交易範圍實作隱含交易
 ms.date: 03/30/2017
-ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.tgt_pltfrm: 
-ms.topic: article
 dev_langs:
 - csharp
 - vb
 ms.assetid: 49d1706a-1e0c-4c85-9704-75c908372eb9
-caps.latest.revision: "4"
-author: dotnet-bot
-ms.author: dotnetcontent
-manager: wpickett
-ms.workload: dotnet
-ms.openlocfilehash: 0b75091739b0ea97b63b35830f4946a78e49ff8f
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.openlocfilehash: f3184801ed6a81d65727c638ef733bc93a87c1e8
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="implementing-an-implicit-transaction-using-transaction-scope"></a>使用交易範圍實作隱含交易
 <xref:System.Transactions.TransactionScope> 類別提供一個簡單的方式，讓您不用與交易互動，即可將一段程式碼標記為參與交易。 交易範圍可以自動選取並管理環境交易。 由於 <xref:System.Transactions.TransactionScope> 類別非常容易使用且很有效率，在您開發交易應用程式時，建議您善加利用。  
@@ -51,7 +40,7 @@ ms.lasthandoff: 12/22/2017
 ## <a name="rolling-back-a-transaction"></a>復原交易  
  如果您想復原交易，就不應該呼叫交易範圍內的 <xref:System.Transactions.TransactionScope.Complete%2A> 方法。 例如，您可以擲回範圍內的例外狀況。 這樣可復原在範圍內參與的交易。  
   
-##  <a name="ManageTxFlow"></a>管理使用 TransactionScopeOption 交易流程  
+##  <a name="ManageTxFlow"></a> 管理使用 TransactionScopeOption 交易流程  
  您可以從使用本身範圍的方法中，呼叫使用 <xref:System.Transactions.TransactionScope> 的方法來巢狀化交易範圍，如下列範例中的 `RootMethod` 方法所示：  
   
 ```csharp  
@@ -178,6 +167,6 @@ using(TransactionScope scope1 = new TransactionScope())
 ## <a name="interop-with-com"></a>和 COM+ 互通  
  當您建立新的 <xref:System.Transactions.TransactionScope> 執行個體時，可以使用其中一個建構函式中的 <xref:System.Transactions.EnterpriseServicesInteropOption> 列舉型別來指定與 COM+ 的互動方式。 如需詳細資訊，請參閱[互通性與 Enterprise Services 和 COM + 交易](../../../../docs/framework/data/transactions/interoperability-with-enterprise-services-and-com-transactions.md)。  
   
-## <a name="see-also"></a>請參閱  
+## <a name="see-also"></a>另請參閱  
  <xref:System.Transactions.Transaction.Clone%2A>  
  <xref:System.Transactions.TransactionScope>

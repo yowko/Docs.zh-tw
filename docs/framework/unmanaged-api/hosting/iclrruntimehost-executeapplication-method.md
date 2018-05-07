@@ -1,14 +1,6 @@
 ---
-title: "ICLRRuntimeHost::ExecuteApplication 方法"
-ms.custom: 
+title: ICLRRuntimeHost::ExecuteApplication 方法
 ms.date: 03/30/2017
-ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.technology:
-- dotnet-clr
-ms.tgt_pltfrm: 
-ms.topic: reference
 api_name:
 - ICLRRuntimeHost.ExecuteApplication
 api_location:
@@ -23,17 +15,13 @@ helpviewer_keywords:
 ms.assetid: 5f28cc4e-7176-4e00-aa1f-58ae6ee52fe4
 topic_type:
 - apiref
-caps.latest.revision: 
 author: rpetrusha
 ms.author: ronpet
-manager: wpickett
-ms.workload:
-- dotnet
-ms.openlocfilehash: 7b765f020bd15fa94fb18a6fd7d81cf66c534639
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.openlocfilehash: 56a49b3d08b58da109924267e6c23c188efefe29
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="iclrruntimehostexecuteapplication-method"></a>ICLRRuntimeHost::ExecuteApplication 方法
 在資訊清單為主的 ClickOnce 部署案例中用來指定要啟動新的網域中的應用程式。 如需有關這些案例的詳細資訊，請參閱[ClickOnce 安全性和部署](/visualstudio/deployment/clickonce-security-and-deployment)。  
@@ -74,7 +62,7 @@ HRESULT ExecuteApplication(
   
 |HRESULT|描述|  
 |-------------|-----------------|  
-|S_OK|`ExecuteApplication`已成功傳回。|  
+|S_OK|`ExecuteApplication` 已成功傳回。|  
 |HOST_E_CLRNOTAVAILABLE|Common language runtime (CLR) 尚未載入到處理程序，或 CLR 正在中它無法執行 managed 程式碼，或成功地處理呼叫的狀態。|  
 |HOST_E_TIMEOUT|呼叫已逾時。|  
 |HOST_E_NOT_OWNER|呼叫端未擁有鎖定。|  
@@ -82,7 +70,7 @@ HRESULT ExecuteApplication(
 |E_FAIL|發生未知的嚴重失敗。 若方法會傳回 E_FAIL，CLR 就不會再處理序內。 裝載方法的後續呼叫會傳回 HOST_E_CLRNOTAVAILABLE。|  
   
 ## <a name="remarks"></a>備註  
- `ExecuteApplication`用來啟動新建立的應用程式定義域中的 ClickOnce 應用程式。  
+ `ExecuteApplication` 用來啟動新建立的應用程式定義域中的 ClickOnce 應用程式。  
   
  `pReturnValue`輸出參數設定為應用程式所傳回的值。 如果您提供的 null 值`pReturnValue`，`ExecuteApplication`不會失敗，但不會傳回值。  
   
@@ -96,9 +84,9 @@ HRESULT ExecuteApplication(
   
  **程式庫：**包含做為 MSCorEE.dll 中的資源  
   
- **.NET framework 版本：**[!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]  
+ **.NET framework 版本：** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]  
   
-## <a name="see-also"></a>請參閱  
+## <a name="see-also"></a>另請參閱  
  <xref:System.ActivationContext>  
  <xref:System.AppDomainManager>  
  <xref:System.ApplicationIdentity>  

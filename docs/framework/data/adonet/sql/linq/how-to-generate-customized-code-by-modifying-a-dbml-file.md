@@ -1,26 +1,12 @@
 ---
 title: 如何：藉由修改 DBML 檔案產生自訂程式碼
-ms.custom: ''
 ms.date: 03/30/2017
-ms.prod: .net-framework
-ms.reviewer: ''
-ms.suite: ''
-ms.technology:
-- dotnet-ado
-ms.tgt_pltfrm: ''
-ms.topic: article
 ms.assetid: 50ad597a-8598-42d3-82dd-fc7d702ebc37
-caps.latest.revision: 2
-author: douglaslMS
-ms.author: douglasl
-manager: craigg
-ms.workload:
-- dotnet
-ms.openlocfilehash: dccef2af3d13099b71d3ea8418242e5a5cc16ae5
-ms.sourcegitcommit: 86adcc06e35390f13c1e372c36d2e044f1fc31ef
+ms.openlocfilehash: 806d0ebc0e9ce970e144d80dbbd4910f9d271e56
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/26/2018
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="how-to-generate-customized-code-by-modifying-a-dbml-file"></a>如何：藉由修改 DBML 檔案產生自訂程式碼
 您可以從資料庫標記語言 (.dbml) 中繼資料檔產生 Visual Basic 或 C# 原始程式碼。 這種方法讓您有機會在產生應用程式對應程式碼之前，先自訂預設 .dbml 檔。 這是一項進階功能。  

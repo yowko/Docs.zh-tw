@@ -1,14 +1,6 @@
 ---
-title: "ICorDebugDataTarget 介面"
-ms.custom: 
+title: ICorDebugDataTarget 介面
 ms.date: 03/30/2017
-ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.technology:
-- dotnet-clr
-ms.tgt_pltfrm: 
-ms.topic: reference
 api_name:
 - ICorDebugDataTarget
 api_location:
@@ -22,17 +14,13 @@ helpviewer_keywords:
 ms.assetid: df5f05be-bed7-4f3c-bc89-dbb435d79a0b
 topic_type:
 - apiref
-caps.latest.revision: 
 author: rpetrusha
 ms.author: ronpet
-manager: wpickett
-ms.workload:
-- dotnet
-ms.openlocfilehash: b5d3a3b190cfa606bd4239e24c5defdaff9f4257
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.openlocfilehash: 972c650e0fb3b42e943838b72faf2658f65543ae
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="icordebugdatatarget-interface"></a>ICorDebugDataTarget 介面
 提供回呼介面，該介面可供存取特定的目標處理序。  
@@ -46,7 +34,7 @@ ms.lasthandoff: 12/22/2017
 |[GetThreadContext 方法](../../../../docs/framework/unmanaged-api/debugging/icordebugdatatarget-getthreadcontext-method.md)|要求指定的執行緒目前的執行緒內容。|  
   
 ## <a name="remarks"></a>備註  
- `ICorDebugDataTarget`其方法具有下列特性：  
+ `ICorDebugDataTarget` 其方法具有下列特性：  
   
 -   偵錯服務會呼叫這個介面來存取記憶體和目標處理序中的其他資料上的方法。  
   
@@ -68,8 +56,8 @@ ms.lasthandoff: 12/22/2017
   
  **程式庫：** CorGuids.lib  
   
- **.NET framework 版本：**[!INCLUDE[net_current_v40plus](../../../../includes/net-current-v40plus-md.md)]  
+ **.NET framework 版本：** [!INCLUDE[net_current_v40plus](../../../../includes/net-current-v40plus-md.md)]  
   
-## <a name="see-also"></a>請參閱  
+## <a name="see-also"></a>另請參閱  
  [偵錯介面](../../../../docs/framework/unmanaged-api/debugging/debugging-interfaces.md)  
  [偵錯](../../../../docs/framework/unmanaged-api/debugging/index.md)

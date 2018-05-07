@@ -1,28 +1,16 @@
 ---
-title: "鍵盤輸入的運作方式"
-ms.custom: 
+title: 鍵盤輸入的運作方式
 ms.date: 03/30/2017
-ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.technology: dotnet-winforms
-ms.tgt_pltfrm: 
-ms.topic: article
 helpviewer_keywords:
 - keyboard input [Windows Forms], about keyboard input
 - keyboards [Windows Forms], keyboard input
 - Windows Forms, keyboard input
 ms.assetid: 9a29433c-a180-49bb-b74c-d187786584c8
-caps.latest.revision: "20"
-author: dotnet-bot
-ms.author: dotnetcontent
-manager: wpickett
-ms.workload: dotnet
-ms.openlocfilehash: 43b92051b6524a730735fea98d64ee64578b4e06
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.openlocfilehash: a0b814a18f4a8b25fba9fa0b36da44954590f056
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="how-keyboard-input-works"></a>鍵盤輸入的運作方式
 Windows Forms 會引發鍵盤事件以回應 Windows 訊息，進而處理鍵盤輸入。 大部分的 Windows Forms 應用程式會藉由處理鍵盤事件來處理鍵盤輸入。 不過，您需要了解鍵盤訊息的運作方式，以便實作更進階的鍵盤輸入案例，例如在按鍵觸達控制項之前先行攔截。 本主題說明 Windows Forms 可辨識的按鍵資料類型，並提供鍵盤訊息的路由方式概觀。 如需鍵盤事件的相關資訊，請參閱[使用鍵盤事件](../../../docs/framework/winforms/using-keyboard-events.md)。  
@@ -79,7 +67,7 @@ Windows Forms 會引發鍵盤事件以回應 Windows 訊息，進而處理鍵盤
 |執行特殊處理的輸入或瀏覽期間<xref:System.Windows.Forms.Control.KeyPress>事件。 例如，在清單控制項中按住 "r" 按鍵，可略過以字母 r 開頭的項目。|覆寫 <xref:System.Windows.Forms.Control.ProcessDialogChar%2A>|  
 |執行自訂助憶鍵處理；例如，您想要處理工具列內含主控描繪按鈕上的助憶鍵。|覆寫 <xref:System.Windows.Forms.Control.ProcessMnemonic%2A>。|  
   
-## <a name="see-also"></a>請參閱  
+## <a name="see-also"></a>另請參閱  
  <xref:System.Windows.Forms.Keys>  
  <xref:System.Windows.Forms.Control.WndProc%2A>  
  <xref:System.Windows.Forms.Control.PreProcessMessage%2A>  

@@ -1,29 +1,15 @@
 ---
 title: SQL-CLR 類型不符
-ms.custom: ''
 ms.date: 03/30/2017
-ms.prod: .net-framework
-ms.reviewer: ''
-ms.suite: ''
-ms.technology:
-- dotnet-ado
-ms.tgt_pltfrm: ''
-ms.topic: article
 dev_langs:
 - csharp
 - vb
 ms.assetid: 0a90c33f-7ed7-4501-ad5f-6224c5da8e9b
-caps.latest.revision: 2
-author: douglaslMS
-ms.author: douglasl
-manager: craigg
-ms.workload:
-- dotnet
-ms.openlocfilehash: 6006bb8fd1f6b49382c89acc2b55efcb035ffbf5
-ms.sourcegitcommit: 86adcc06e35390f13c1e372c36d2e044f1fc31ef
+ms.openlocfilehash: 8b072c739b56d191e79b4cc2eff195adfe9da2eb
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/26/2018
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="sql-clr-type-mismatches"></a>SQL-CLR 類型不符
 [!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)] 會自動執行物件模型 (Object Model) 與 SQL Server 之間大部分的轉譯作業。 不過，在某些情況下，還是無法進行精確的轉譯。 下列各節將摘要列出 Common Language Runtime (CLR) 型別與 SQL Server 資料庫型別之間的這些主要不符。 您可以找到更多特定的型別對應和在函式轉譯詳細[SQL CLR 類型對應](../../../../../../docs/framework/data/adonet/sql/linq/sql-clr-type-mapping.md)和[Data Types and Functions](../../../../../../docs/framework/data/adonet/sql/linq/data-types-and-functions.md)。  

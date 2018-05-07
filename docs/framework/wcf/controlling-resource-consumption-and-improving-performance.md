@@ -1,32 +1,18 @@
 ---
 title: 控制資源使用並改善效能
-ms.custom: ''
 ms.date: 03/30/2017
-ms.prod: .net-framework
-ms.reviewer: ''
-ms.suite: ''
-ms.technology:
-- dotnet-clr
-ms.tgt_pltfrm: ''
-ms.topic: article
 ms.assetid: 9a829669-5f76-4c88-80ec-92d0c62c0660
-caps.latest.revision: 18
-author: dotnet-bot
-ms.author: dotnetcontent
-manager: wpickett
-ms.workload:
-- dotnet
-ms.openlocfilehash: 6e864e0a90dbb46f440e2eba2b676413c72e0da9
-ms.sourcegitcommit: 94d33cadc5ff81d2ac389bf5f26422c227832052
-ms.translationtype: MT
+ms.openlocfilehash: 031261f50a0615efa7227d3655c90c3423e77796
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/30/2018
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="controlling-resource-consumption-and-improving-performance"></a>控制資源使用並改善效能
-此主題描述 [!INCLUDE[indigo1](../../../includes/indigo1-md.md)] 架構的不同領域中，用於控制資源消耗並影響效能度量資訊的各種屬性。  
+本主題說明中的 Windows Communication Foundation (WCF) 架構的不同區域，用於控制資源消耗並影響效能度量資訊的各種屬性。  
   
 ## <a name="properties-that-constrain-resource-consumption-in-wcf"></a>WCF 中限制資源消耗的屬性  
- [!INCLUDE[indigo1](../../../includes/indigo1-md.md)] 因安全或效能的考量，對特定型別的程序加以限制。 這些限制主要有兩種形式，可能是配額與節流閥。 *配額*當達到或超過觸發立即例外狀況在某個時間點，系統中的限制。 *會先調節*都不會立即造成擲回例外狀況的限制。 相反地，當達到節流閥限制時，仍將持續處理，但會在節流閥的值所設定的限制範圍內。 此限制處理可能在其他地方觸發例外狀況，不過需視應用程式而定。  
+ Windows Communication Foundation (WCF) 適用於特定類型的處理程序，基於安全性或效能條件約束。 這些限制主要有兩種形式，可能是配額與節流閥。 *配額*當達到或超過觸發立即例外狀況在某個時間點，系統中的限制。 *會先調節*都不會立即造成擲回例外狀況的限制。 相反地，當達到節流閥限制時，仍將持續處理，但會在節流閥的值所設定的限制範圍內。 此限制處理可能在其他地方觸發例外狀況，不過需視應用程式而定。  
   
  除了配額與節流閥之間的差異外，有些限制屬性位於序列化層級，有些位於傳輸層級，有些則在應用程式層級。 例如，全由系統提供的傳輸繫結項目實作之 <xref:System.ServiceModel.Channels.TransportBindingElement.MaxReceivedMessageSize%2A?displayProperty=nameWithType> 配額，預設為 65,536 位元組，防止惡意用戶端利用消耗過多記憶體的方式，對服務發動阻絕服務攻擊  (一般而言，您可調低此值以增進效能)。  
   

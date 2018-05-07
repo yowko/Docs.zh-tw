@@ -1,24 +1,14 @@
 ---
-title: "如何：使用 Windows 驗證建置宣告感知 ASP.NET 應用程式"
-ms.custom: 
+title: 如何：使用 Windows 驗證建置宣告感知 ASP.NET 應用程式
 ms.date: 03/30/2017
-ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.technology: dotnet-clr
-ms.tgt_pltfrm: 
-ms.topic: article
 ms.assetid: 11c53d9d-d34a-44b4-8b5e-22e3eaeaee93
-caps.latest.revision: "5"
 author: BrucePerlerMS
-ms.author: bruceper
 manager: mbaldwin
-ms.workload: dotnet
-ms.openlocfilehash: 1f623cceec04e45d168269379e1af6bdeb573af0
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.openlocfilehash: 2a5dbec2e92d32e45bc0271de04f8c6403f67f90
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="how-to-build-claims-aware-aspnet-application-using-windows-authentication"></a>如何：使用 Windows 驗證建置宣告感知 ASP.NET 應用程式
 ## <a name="applies-to"></a>適用於  
@@ -27,14 +17,14 @@ ms.lasthandoff: 12/22/2017
   
 -   ASP.NET® Web Forms  
   
-## <a name="summary"></a>摘要  
+## <a name="summary"></a>總結  
  此操作說明提供詳細逐步程序，以建立使用 Windows 驗證的簡單宣告感知 ASP.NET Web Forms 應用程式。 還提供了一些指示，說明如何測試應用程式，以確認在使用者使用 Windows 驗證登入時會呈現宣告。  
   
 ## <a name="contents"></a>內容  
   
 -   目標  
   
--   概觀  
+-   總覽  
   
 -   步驟摘要  
   
@@ -50,7 +40,7 @@ ms.lasthandoff: 12/22/2017
   
 -   測試 ASP.NET Web Forms 應用程式以查看它是否正常運作  
   
-## <a name="overview"></a>概觀  
+## <a name="overview"></a>總覽  
  在 .NET 4.5 中，WIF 和其宣告型授權已包含為 Framework 的不可或缺部分。 以前，如果您想要來自 ASP.NET 使用者的宣告，需要安裝 WIF，然後將介面轉換為主體物件，例如 `Thread.CurrentPrincipal` 或 `HttpContext.Current.User`。 現在，這些主體物件會自動提供宣告。  
   
  Windows 驗證受益於 .NET 4.5 中包含 WIF，因為 Windows 認證所驗證的所有使用者都會自動具有與其建立關聯的宣告。 如這個使用方法所示範，您可以在使用 Windows 驗證的 ASP.NET 應用程式中立即開始使用這些宣告。  

@@ -1,31 +1,17 @@
 ---
 title: 資料合約序列化程式支援的型別
-ms.custom: ''
 ms.date: 03/30/2017
-ms.prod: .net-framework
-ms.reviewer: ''
-ms.suite: ''
-ms.technology:
-- dotnet-clr
-ms.tgt_pltfrm: ''
-ms.topic: article
 helpviewer_keywords:
 - serialization [WCF], supported types
 ms.assetid: 7381b200-437a-4506-9556-d77bf1bc3f34
-caps.latest.revision: 24
-author: dotnet-bot
-ms.author: dotnetcontent
-manager: wpickett
-ms.workload:
-- dotnet
-ms.openlocfilehash: c53a11408254dc3c5f2abfb7d5d45305d3429280
-ms.sourcegitcommit: 03ee570f6f528a7d23a4221dcb26a9498edbdf8c
+ms.openlocfilehash: 9a6279b9850ce5cd3d23cffeaf233dec1b360deb
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/28/2018
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="types-supported-by-the-data-contract-serializer"></a>資料合約序列化程式支援的型別
-[!INCLUDE[indigo1](../../../../includes/indigo1-md.md)] 使用 <xref:System.Runtime.Serialization.DataContractSerializer> 做為預設的序列化引擎，以將資料轉換為 XML 並將 XML 轉換回資料。 <xref:System.Runtime.Serialization.DataContractSerializer> 主要是用來序列化「 *資料合約* 」(Data Contract) 型別。 但是，它支援其他許多型別，而您可將這些視為擁有隱含資料合約。 下列是可以序列化的完整型別清單：  
+Windows Communication Foundation (WCF) 會使用<xref:System.Runtime.Serialization.DataContractSerializer>做為預設的序列化引擎，將資料轉換為 XML 並將 XML 轉換回資料。 <xref:System.Runtime.Serialization.DataContractSerializer> 主要是用來序列化「 *資料合約* 」(Data Contract) 型別。 但是，它支援其他許多型別，而您可將這些視為擁有隱含資料合約。 下列是可以序列化的完整型別清單：  
   
 -   所有具有不含任何參數之建構函式的公開可見型別。  
   
@@ -51,13 +37,13 @@ ms.lasthandoff: 04/28/2018
   
 -   若要在部分信任程式碼中，透過 <xref:System.Runtime.Serialization.ISerializable> 序列化或還原序列化可實作 <xref:System.Runtime.Serialization.DataContractSerializer> 的型別需要 <xref:System.Security.Permissions.SecurityPermissionAttribute.SerializationFormatter%2A> 和 <xref:System.Security.Permissions.SecurityPermissionAttribute.UnmanagedCode%2A> 權限。  
   
--   在 [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] 模式中執行 [indigo2](../../../../docs/framework/wcf/feature-details/partial-trust.md) 程式碼時，將不支援 `readonly` 欄位的序列化與還原序列化 ( `public` 和 `private`兩者)。 這是因為產生的 IL 無法加以驗證，因此需要較高的權限。  
+-   在執行 WCF 程式碼時[部分信任](../../../../docs/framework/wcf/feature-details/partial-trust.md)模式、 序列化和還原序列化`readonly`欄位 (兩者`public`和`private`) 不支援。 這是因為產生的 IL 無法加以驗證，因此需要較高的權限。  
   
 -   部分信任環境同時支援 <xref:System.Runtime.Serialization.DataContractSerializer> 和 <xref:System.Xml.Serialization.XmlSerializer> 。 然而， <xref:System.Runtime.Serialization.DataContractSerializer> 的使用需視下列情況而定：  
   
     -   所有可序列化的 `[DataContract]` 型別必須是公用的。  
   
-    -   `[DataMember]` 型別中所有可序列化的 `[DataContract]` 欄位或屬性必須具有公用和讀/寫性質。 在部分信任應用程式中執行 `readonly` 時，不支援 [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] 欄位的序列化與還原序列化。  
+    -   `[DataMember]` 型別中所有可序列化的 `[DataContract]` 欄位或屬性必須具有公用和讀/寫性質。 序列化和還原序列化`readonly`WCF 執行在部分信任的應用程式時，不支援欄位。  
   
     -   支援 `[Serializable]`/`ISerializable]` 程式設計模型。  
   
@@ -76,7 +62,7 @@ ms.lasthandoff: 04/28/2018
   
 -   同時支援結構與類別。  
   
--   <xref:System.Runtime.Serialization.DataContractSerializer> 不支援 <xref:System.Xml.Serialization.XmlSerializer> 和 [!INCLUDE[vstecasp](../../../../includes/vstecasp-md.md)] Web 服務所使用的程式設計模型。 特別是，它不支援 <xref:System.Xml.Serialization.XmlElementAttribute> 和 <xref:System.Xml.Serialization.XmlAttributeAttribute>之類的屬性。 若要啟用對此程式設計模型的支援， [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] 必須切換為使用 <xref:System.Xml.Serialization.XmlSerializer> ，而不是 <xref:System.Runtime.Serialization.DataContractSerializer>。  
+-   <xref:System.Runtime.Serialization.DataContractSerializer> 不支援 <xref:System.Xml.Serialization.XmlSerializer> 和 [!INCLUDE[vstecasp](../../../../includes/vstecasp-md.md)] Web 服務所使用的程式設計模型。 特別是，它不支援 <xref:System.Xml.Serialization.XmlElementAttribute> 和 <xref:System.Xml.Serialization.XmlAttributeAttribute>之類的屬性。 若要啟用對此程式設計模型的支援，WCF 必須切換為使用<xref:System.Xml.Serialization.XmlSerializer>而不是<xref:System.Runtime.Serialization.DataContractSerializer>。  
   
 -   <xref:System.DBNull> 型別會被特別處理。 它是一種單一型別，且在還原序列化時，還原序列化程式會尊重單一限制並將所有 `DBNull` 參考指向單一執行個體。 由於 `DBNull` 是一種可序列化型別，它需要 <xref:System.Security.Permissions.SecurityPermissionAttribute.SerializationFormatter%2A> 權限。  
   

@@ -1,38 +1,26 @@
 ---
-title: "WCF Web HTTP 程式設計模型"
-ms.custom: 
+title: WCF Web HTTP 程式設計模型
 ms.date: 03/30/2017
-ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.technology: dotnet-clr
-ms.tgt_pltfrm: 
-ms.topic: article
 helpviewer_keywords:
 - web services programming model [WCF]
 - POX
 - REST
 ms.assetid: 2312a8d3-b66e-4623-ba42-978434300c7f
-caps.latest.revision: "17"
-author: dotnet-bot
-ms.author: dotnetcontent
-manager: wpickett
-ms.workload: dotnet
-ms.openlocfilehash: f008cfe874ae9e38a71eb3cf5d6b2ed4e6cbdf7c
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.openlocfilehash: e063cdba74af9ee90b41d829a2a8b251a5cc96e7
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="wcf-web-http-programming-model"></a>WCF Web HTTP 程式設計模型
-開發人員可以使用 [!INCLUDE[indigo1](../../../../includes/indigo1-md.md)] Web HTTP 程式設計模型，公開 [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] 服務作業給非 SOAP 的端點。 本章節中的主題會詳細檢查這項功能。  
+Windows Communication Foundation (WCF) Web HTTP 程式設計模型可讓開發人員公開非 SOAP 端點的 WCF 服務作業。 本章節中的主題會詳細檢查這項功能。  
   
 ## <a name="in-this-section"></a>本節內容  
  [WCF Web HTTP 程式設計模型概觀](../../../../docs/framework/wcf/feature-details/wcf-web-http-programming-model-overview.md)  
- 提供 [!INCLUDE[indigo1](../../../../includes/indigo1-md.md)] Web HTTP 程式設計模型的概觀。  
+ 提供 Windows Communication Foundation (WCF) Web HTTP 程式設計模型概觀。  
   
  [WCF Web HTTP 程式設計物件模型](../../../../docs/framework/wcf/feature-details/wcf-web-http-programming-object-model.md)  
- 討論 [!INCLUDE[indigo1](../../../../includes/indigo1-md.md)] Web HTTP 程式設計模型及其運作方式。  
+ 討論 Windows Communication Foundation (WCF) Web HTTP 程式設計模型，以及它的運作方式。  
   
  [如何：建立基本 WCF Web HTTP 服務](../../../../docs/framework/wcf/feature-details/how-to-create-a-basic-wcf-web-http-service.md)  
  描述如何撰寫公開非 SOAP 端點的基本服務。  

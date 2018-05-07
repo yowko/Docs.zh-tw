@@ -1,29 +1,19 @@
 ---
-title: "Unmanaged 程式碼的安全編碼指南"
-ms.custom: 
+title: Unmanaged 程式碼的安全編碼指南
 ms.date: 03/30/2017
-ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.technology: dotnet-clr
-ms.tgt_pltfrm: 
-ms.topic: article
 helpviewer_keywords:
 - code security, unmanaged code
 - unmanaged code, securing
 - security [.NET Framework], unmanaged code
 - secure coding, unmanaged code
 ms.assetid: a8d15139-d368-4c9c-a747-ba757781117c
-caps.latest.revision: "13"
 author: mairaw
 ms.author: mairaw
-manager: wpickett
-ms.workload: dotnet
-ms.openlocfilehash: adbdd005bba9e7276a77f2e78c53be43fdceffae
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.openlocfilehash: 60e293ac8c9100876aa5a524bb5dda04e9f4183f
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="secure-coding-guidelines-for-unmanaged-code"></a>Unmanaged 程式碼的安全編碼指南
 某些程式庫程式碼需要呼叫 Unmanaged 程式碼 (例如原生程式碼 API，像是 Win32)。 由於這表示要越過 Managed 程式碼的安全性範疇，所以充分的警告是必要的。 若您的程式碼是安全性中性的，則您的程式碼以及它所呼叫的任何程式碼，都必須具備 Unmanaged 程式碼權限 (指定了具有<xref:System.Security.Permissions.SecurityPermission> 旗標的 <xref:System.Security.Permissions.SecurityPermissionFlag.UnmanagedCode> )。  
@@ -60,5 +50,5 @@ ms.lasthandoff: 12/22/2017
 |**Native.Xyz**|安全性中性；也就是 Unmanaged 程式碼需要 Unmanaged 程式碼權限來呼叫。 會檢查安全性，這會停止未經授權的呼叫端。|  
 |**Unsafe.DangerousAPI**|已隱藏安全性、有潛在危險的 Unmanaged 程式碼進入點。 當使用這類 Unmanaged 程式碼時，開發人員應高度警覺，確定其他保護已就位，以避免安全性弱點。 開發人員必須要負責，因為這個關鍵字會覆寫安全性系統。|  
   
-## <a name="see-also"></a>請參閱  
+## <a name="see-also"></a>另請參閱  
  [安全程式碼撰寫方針](../../../docs/standard/security/secure-coding-guidelines.md)

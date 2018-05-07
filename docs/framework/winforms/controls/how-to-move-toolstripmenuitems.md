@@ -1,13 +1,6 @@
 ---
-title: "如何：移動 ToolStripMenuItems"
-ms.custom: 
+title: 如何：移動 ToolStripMenuItems
 ms.date: 03/30/2017
-ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.technology: dotnet-winforms
-ms.tgt_pltfrm: 
-ms.topic: article
 helpviewer_keywords:
 - ToolStripMenuItems [Windows Forms], moving
 - menus [Windows Forms], arranging items
@@ -18,16 +11,11 @@ helpviewer_keywords:
 - MenuStrip control [Windows Forms], arranging items
 - ToolStripMenuItems [Windows Forms], cutting and pasting
 ms.assetid: cab9e03e-4edd-4c25-b3e3-bd1edc602bd9
-caps.latest.revision: "12"
-author: dotnet-bot
-ms.author: dotnetcontent
-manager: wpickett
-ms.workload: dotnet
-ms.openlocfilehash: 6ffef860118ba20508bba037910d85866055c898
-ms.sourcegitcommit: c0dd436f6f8f44dc80dc43b07f6841a00b74b23f
+ms.openlocfilehash: 5cfaf87a59d27678cfb786633ed4c9a9f66bac76
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 01/19/2018
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="how-to-move-toolstripmenuitems"></a>如何：移動 ToolStripMenuItems
 在設計階段，您可以移動整個最上層功能表和其功能表項目不同的位置<xref:System.Windows.Forms.MenuStrip>。 您也可以移動個別的功能表項目之間的最上層功能表，或變更功能表中功能表項目的位置。  
@@ -81,7 +69,7 @@ ms.lasthandoff: 01/19/2018
   
      選取的功能表項目之後插入您剪下的功能表項目。  
   
-## <a name="see-also"></a>請參閱  
+## <a name="see-also"></a>另請參閱  
  <xref:System.Windows.Forms.MenuStrip>  
  <xref:System.Windows.Forms.ToolStripMenuItem>  
  [MenuStrip 控制項概觀](../../../../docs/framework/winforms/controls/menustrip-control-overview-windows-forms.md)

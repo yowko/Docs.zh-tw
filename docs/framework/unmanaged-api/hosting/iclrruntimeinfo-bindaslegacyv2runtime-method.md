@@ -1,14 +1,6 @@
 ---
-title: "ICLRRuntimeInfo::BindAsLegacyV2Runtime 方法"
-ms.custom: 
+title: ICLRRuntimeInfo::BindAsLegacyV2Runtime 方法
 ms.date: 03/30/2017
-ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.technology:
-- dotnet-clr
-ms.tgt_pltfrm: 
-ms.topic: reference
 api_name:
 - ICLRRuntimeInfo.BindAsLegacyV2Runtime
 api_location:
@@ -23,17 +15,13 @@ helpviewer_keywords:
 ms.assetid: 65fd55ac-4a24-4479-9384-a2e8013bfb2b
 topic_type:
 - apiref
-caps.latest.revision: 
 author: rpetrusha
 ms.author: ronpet
-manager: wpickett
-ms.workload:
-- dotnet
-ms.openlocfilehash: 5552214f722cd7f9a56c2fce1e7c67de41d5bb1f
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.openlocfilehash: 690287bf54f98c19298504ee3058a59ef88a87f9
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="iclrruntimeinfobindaslegacyv2runtime-method"></a>ICLRRuntimeInfo::BindAsLegacyV2Runtime 方法
 將所有舊版 common language runtime (CLR) 第 2 版啟用原則決策的目前執行階段的繫結。  
@@ -62,10 +50,10 @@ HRESULT BindAsLegacyV2Runtime ();
   
  **程式庫：**包含做為 MSCorEE.dll 中的資源  
   
- **.NET framework 版本：**[!INCLUDE[net_current_v40plus](../../../../includes/net-current-v40plus-md.md)]  
+ **.NET framework 版本：** [!INCLUDE[net_current_v40plus](../../../../includes/net-current-v40plus-md.md)]  
   
-## <a name="see-also"></a>請參閱  
+## <a name="see-also"></a>另請參閱  
  [ICLRRuntimeInfo 介面](../../../../docs/framework/unmanaged-api/hosting/iclrruntimeinfo-interface.md)  
  [裝載介面](../../../../docs/framework/unmanaged-api/hosting/hosting-interfaces.md)  
  [裝載](../../../../docs/framework/unmanaged-api/hosting/index.md)  
- [\<啟動 > 項目](../../../../docs/framework/configure-apps/file-schema/startup/startup-element.md)
+ [\<startup> 項目](../../../../docs/framework/configure-apps/file-schema/startup/startup-element.md)

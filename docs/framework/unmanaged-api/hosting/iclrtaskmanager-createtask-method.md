@@ -1,14 +1,6 @@
 ---
-title: "ICLRTaskManager::CreateTask 方法"
-ms.custom: 
+title: ICLRTaskManager::CreateTask 方法
 ms.date: 03/30/2017
-ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.technology:
-- dotnet-clr
-ms.tgt_pltfrm: 
-ms.topic: reference
 api_name:
 - ICLRTaskManager.CreateTask
 api_location:
@@ -23,17 +15,13 @@ helpviewer_keywords:
 ms.assetid: eea570d9-2e53-4320-9ea0-eb777bf9dcf3
 topic_type:
 - apiref
-caps.latest.revision: 
 author: rpetrusha
 ms.author: ronpet
-manager: wpickett
-ms.workload:
-- dotnet
-ms.openlocfilehash: e9e78db6e43397709f913f8f79a617221f98db87
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.openlocfilehash: f731e121324793a027c5977a02e1973b0d6fff20
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="iclrtaskmanagercreatetask-method"></a>ICLRTaskManager::CreateTask 方法
 明確要求的 common language runtime (CLR) 建立新的工作。  
@@ -65,7 +53,7 @@ HRESULT CreateTask (
 ## <a name="remarks"></a>備註  
  當使用者程式碼會建立一個執行緒使用中的型別時，CLR 會建立新的工作，自動啟動時，<xref:System.Threading>命名空間，或當執行緒集區的大小會增加。 Unmanaged 程式碼會呼叫 managed 函式時，它也會建立工作。  
   
- `CreateTask`可讓主應用程式發出明確的要求 CLR 建立新的工作。 例如，主機可以叫用這個方法，以將其預先初始化資料結構。  
+ `CreateTask` 可讓主應用程式發出明確的要求 CLR 建立新的工作。 例如，主機可以叫用這個方法，以將其預先初始化資料結構。  
   
 > [!IMPORTANT]
 >  新的工作會傳回處於暫停狀態，並保持暫停狀態，直到主機明確呼叫[ihosttask:: Start](../../../../docs/framework/unmanaged-api/hosting/ihosttask-start-method.md)。  
@@ -77,9 +65,9 @@ HRESULT CreateTask (
   
  **程式庫：**包含做為 MSCorEE.dll 中的資源  
   
- **.NET framework 版本：**[!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]  
+ **.NET framework 版本：** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]  
   
-## <a name="see-also"></a>請參閱  
+## <a name="see-also"></a>另請參閱  
  [ICLRTask 介面](../../../../docs/framework/unmanaged-api/hosting/iclrtask-interface.md)  
  [ICLRTaskManager 介面](../../../../docs/framework/unmanaged-api/hosting/iclrtaskmanager-interface.md)  
  [IHostTask 介面](../../../../docs/framework/unmanaged-api/hosting/ihosttask-interface.md)  

@@ -1,27 +1,15 @@
 ---
-title: "部署 WCF 程式庫專案"
-ms.custom: 
+title: 部署 WCF 程式庫專案
 ms.date: 03/30/2017
-ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.technology: dotnet-clr
-ms.tgt_pltfrm: 
-ms.topic: article
 ms.assetid: 9f9222fe-d358-443c-9a49-12c5498e35e7
-caps.latest.revision: "4"
-author: dotnet-bot
-ms.author: dotnetcontent
-manager: wpickett
-ms.workload: dotnet
-ms.openlocfilehash: bbbbff1d88559f8ab35caa48fcb04ff1cd7bf015
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
-ms.translationtype: MT
+ms.openlocfilehash: 08a1d794aeeea1a41cd1eb3abf298f3f4a0f6d15
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="deploying-a-wcf-library-project"></a>部署 WCF 程式庫專案
-本主題說明如何部署 [!INCLUDE[indigo1](../../../includes/indigo1-md.md)] 服務程式庫專案。  
+本主題描述如何部署 Windows Communication Foundation (WCF) 服務程式庫專案。  
   
 ## <a name="deploying-a-wcf-service-library"></a>部署 WCF 服務程式庫  
  [!INCLUDE[indigo2](../../../includes/indigo2-md.md)] 服務程式庫是一種動態連結程式庫 (DLL)。 因此，它無法自行執行， 而必須部署在裝載環境中。 如需此程序的詳細資訊，請參閱[主控和取用 WCF 服務](http://go.microsoft.com/fwlink/?LinkId=99932)。  

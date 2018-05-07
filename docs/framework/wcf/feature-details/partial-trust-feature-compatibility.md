@@ -1,38 +1,24 @@
 ---
 title: 部分信任功能相容性
-ms.custom: ''
 ms.date: 03/30/2017
-ms.prod: .net-framework
-ms.reviewer: ''
-ms.suite: ''
-ms.technology:
-- dotnet-clr
-ms.tgt_pltfrm: ''
-ms.topic: article
 ms.assetid: a36a540b-1606-4e63-88e0-b7c59e0e6ab7
-caps.latest.revision: 75
-author: dotnet-bot
-ms.author: dotnetcontent
-manager: wpickett
-ms.workload:
-- dotnet
-ms.openlocfilehash: 20cb6c1cd7a3b06b57bce02d5c3caacc7e2e42b7
-ms.sourcegitcommit: 2042de78fcdceebb6b8ac4b7a292b93e8782cbf5
+ms.openlocfilehash: f8c63079161e6be16e2d36f721aeb98937f72097
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/27/2018
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="partial-trust-feature-compatibility"></a>部分信任功能相容性
-當[!INCLUDE[indigo1](../../../../includes/indigo1-md.md)] 在部分信任的環境中執行時，僅支援有限的功能子集。 部分信任環境所支援的功能，主要是用在如 [Supported Deployment Scenarios](../../../../docs/framework/wcf/feature-details/supported-deployment-scenarios.md) 主題所述的特定案例中。  
+在部分信任環境中執行時，Windows Communication Foundation (WCF) 支援有限的功能子集。 部分信任環境所支援的功能，主要是用在如 [Supported Deployment Scenarios](../../../../docs/framework/wcf/feature-details/supported-deployment-scenarios.md) 主題所述的特定案例中。  
   
 ## <a name="minimum-permission-requirements"></a>基本權限需求  
- 對於在下列標準具名權限集合中執行的應用程式，[!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] 支援其中的功能子集：  
+ WCF 在執行下的下列標準具名權限集的應用程式中支援功能的子集：  
   
 -   中度信任權限  
   
 -   網際網路區域權限  
   
- 嘗試在部分信任且包含更多限制性權限的應用程式中使用 [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] ，可能會在執行階段導致安全性例外狀況。  
+ 嘗試在具有更嚴格的權限的部分信任應用程式中使用 WCF，可能會導致在執行階段的安全性例外狀況。  
   
 ## <a name="contracts"></a>合約  
  在部分信任環境中執行時，合約有下列限制：  
@@ -66,7 +52,7 @@ ms.lasthandoff: 04/27/2018
  不支援訊息傳輸最佳化機制 (MTOM) 編碼器。  
   
 ### <a name="security"></a>安全性  
- 部分信任的應用程式可以透過 [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)]的傳輸層級安全性功能來保護自身通訊安全。 不支援訊息層級安全性。 設定繫結來使用訊息層級安全性會導致執行階段出現例外狀況。  
+ 部分信任應用程式可以使用 WCF 的傳輸層級安全性功能保護自身通訊安全。 不支援訊息層級安全性。 設定繫結來使用訊息層級安全性會導致執行階段出現例外狀況。  
   
 ### <a name="unsupported-bindings"></a>不支援的繫結  
  不支援使用可信賴傳訊、交易，或訊息層級安全性的繫結。  
@@ -76,7 +62,7 @@ ms.lasthandoff: 04/27/2018
   
 -   所有可序列化的 `[DataContract]` 型別必須是 `public`。  
   
--   `[DataMember]` 型別中所有可序列化的 `[DataContract]` 欄位或屬性必須具有公用和讀/寫性質。 在部分信任的應用程式中執行 [時，不支援](http://go.microsoft.com/fwlink/?LinkID=98854) readonly [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] (唯讀) 欄位的序列化與還原序列化。  
+-   `[DataMember]` 型別中所有可序列化的 `[DataContract]` 欄位或屬性必須具有公用和讀/寫性質。 序列化和還原序列化[readonly](http://go.microsoft.com/fwlink/?LinkID=98854) WCF 執行在部分信任的應用程式時，不支援欄位。  
   
 -   部分信任的環境不支援 `[Serializable]`/ISerializable 程式撰寫模型 (Programming Model)。  
   
@@ -89,7 +75,7 @@ ms.lasthandoff: 04/27/2018
 ### <a name="collection-types"></a>集合型別  
  有些集合型別會同時實作 <xref:System.Collections.Generic.IEnumerable%601> 和 <xref:System.Collections.IEnumerable>。 例如，可實作 <xref:System.Collections.Generic.ICollection%601>的型別。 此類型別可實作 `public` 的 `GetEnumerator()`實作，以及 `GetEnumerator()`的明確實作。 在此情況下， <xref:System.Runtime.Serialization.DataContractSerializer> 會叫用 `public` 的 `GetEnumerator()`實作，而不是叫用 `GetEnumerator()`的明確實作。 如果所有 `GetEnumerator()` 實作都不是 `public` ，且都是明確的實作，則 <xref:System.Runtime.Serialization.DataContractSerializer> 會叫用 `IEnumerable.GetEnumerator()`。  
   
- 當 [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] 在部分信任環境中執行時，對於集合型別來說，如果所有的 `GetEnumerator()` 實作都不是 `public`，或者全都不是明確的介面實作，則會擲回安全性例外狀況。  
+ 當 WCF 執行在部分信任環境中，如果所有的集合型別的`GetEnumerator()`實作`public`，或都不是明確介面實作，則擲回安全性例外狀況。  
   
 ### <a name="netdatacontractserializer"></a>NetDataContractSerializer  
  在部分信任中， <xref:System.Collections.Generic.List%601>不支援許多 .NET Framework 集合型別，例如 <xref:System.Collections.ArrayList>、 <xref:System.Collections.Generic.Dictionary%602> 、 <xref:System.Collections.Hashtable> 和 <xref:System.Runtime.Serialization.NetDataContractSerializer> 。 這些型別的 `[Serializable]` 屬性都已經過設定，如前面「序列化」一節所述，部分信任的環境不支援這個屬性。 <xref:System.Runtime.Serialization.DataContractSerializer> 會以特殊方式處理集合，因此能夠解決這個限制，但 <xref:System.Runtime.Serialization.NetDataContractSerializer> 沒有這類機制來避免這個限制。  
@@ -108,7 +94,7 @@ ms.lasthandoff: 04/27/2018
  如需通用行為的範例，請參閱[How to： 鎖定向企業的端點](../../../../docs/framework/wcf/extending/how-to-lock-down-endpoints-in-the-enterprise.md)。  
   
 ## <a name="configuration"></a>組態  
- 部分信任程式碼只能載入本機 [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] 檔案中的 `app.config` 組態區段，但有一個例外。 若要載入參考 machine.config 或根 web.config 檔案中 [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] 區段的 [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] 區段，將需要 ConfigurationPermission(Unrestricted)。 少了這個權限，本機組態檔以外的 [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] 組態區段 (行為、繫結) 參考會在載入組態時導致例外狀況。  
+ 有一個例外狀況，部分信任的程式碼只能載入本機 WCF 組態區段`app.config`檔案。 若要載入參考 machine.config 或根 WCF 區段的 WCF 組態區段 web.config 檔案，需要 configurationpermission （unrestricted）。 沒有這個權限，則 WCF 組態區段 （行為、 繫結） 之外的本機組態檔案會導致例外狀況參考，在載入組態時。  
   
  唯一的例外是序列化的已知型別組態，如本主題的「序列化」一節所述。  
   
@@ -121,7 +107,7 @@ ms.lasthandoff: 04/27/2018
  在部分信任下，只支援有限的事件記錄。 只有服務啟動錯誤以及追蹤/訊息記錄失敗，才會記錄至事件記錄檔中。 處理序最多可以記錄 5 個事件數目，以避免事件記錄檔中寫入過多訊息。  
   
 ### <a name="message-logging"></a>訊息記錄  
- 當 [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] 在部分信任環境中執行時，訊息記錄將無法運作。 如果在部分信任情況下啟用的話，儘管不會導致服務啟動失敗，但也無法記錄訊息。  
+ 當在部分信任環境中執行 WCF 訊息記錄將無法運作。 如果在部分信任情況下啟用的話，儘管不會導致服務啟動失敗，但也無法記錄訊息。  
   
 ### <a name="tracing"></a>追蹤  
  在部分信任環境中執行時，可使用受限制的追蹤功能。 在組態檔的 <`listeners`> 項目中，您可以新增的唯一類型就是 <xref:System.Diagnostics.TextWriterTraceListener> 和新的 <xref:System.Diagnostics.EventSchemaTraceListener>。 使用標準 <xref:System.Diagnostics.XmlWriterTraceListener> 可能導致不完整或不正確的記錄。  
@@ -151,13 +137,13 @@ ms.lasthandoff: 04/27/2018
  在部分信任環境中使用追蹤時，請確定應用程式擁有足夠的權限來儲存追蹤接聽項的輸出。 例如，使用 <xref:System.Diagnostics.TextWriterTraceListener> 將追蹤輸出寫入至文字檔時，請確定應用程式具有必要的 FileIOPermission 來順利寫入追蹤檔。  
   
 > [!NOTE]
->  為了避免在追蹤檔中大量出現重複錯誤， [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] 會在第一次安全性失敗之後停用資源或動作的追蹤。 第一次嘗試存取資源或執行動作時，會針對每個失敗的資源存取產生一個例外狀況追蹤。  
+>  為了避免大量出現重複錯誤的追蹤檔案，WCF 會停用資源或動作之後第一次安全性失敗的追蹤。 第一次嘗試存取資源或執行動作時，會針對每個失敗的資源存取產生一個例外狀況追蹤。  
   
 ## <a name="wcf-service-host"></a>WCF 服務主機  
- [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] 服務主機不支援部分信任。 如果您想要使用[!INCLUDE[indigo2](../../../../includes/indigo2-md.md)]服務在部分信任中，請勿使用[!INCLUDE[indigo2](../../../../includes/indigo2-md.md)]服務程式庫專案範本在 Visual Studio 中建置您的服務。 相反地，在選擇的 Visual Studio 中建立新的網站[!INCLUDE[indigo2](../../../../includes/indigo2-md.md)]服務網站範本，其可裝載在所在的網頁伺服器服務[!INCLUDE[indigo2](../../../../includes/indigo2-md.md)]支援部分信任。  
+ WCF 服務主機不支援部分信任。 如果您想要在部分信任中使用 WCF 服務，請勿 WCF 服務程式庫專案範本在 Visual Studio 中建置您的服務。 選擇可以裝載在網頁伺服器支援部分信任的 WCF 服務 WCF 服務的網站範本，而是 Visual Studio 中建立新的網站。  
   
 ## <a name="other-limitations"></a>其他限制  
- [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] 一般來說會受到裝載應用程式加諸其上的安全性考量限制。 例如，如果 [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] 是裝載於 XAML 瀏覽器應用程式 (XBAP)，則會受限於各種 XBAP 限制，如 [Windows Presentation Foundation Partial Trust Security](http://go.microsoft.com/fwlink/?LinkId=89138)(Windows Presentation Foundation 部分信任安全性) 一文中所述。  
+ WCF 是通常限制為裝載應用程式加諸其上的安全性考量。 例如，如果 WCF 裝載在 XAML 瀏覽器應用程式 (XBAP)，所以受限於 XBAP 限制中所述[Windows Presentation Foundation 部分信任安全性](http://go.microsoft.com/fwlink/?LinkId=89138)。  
   
  在部分信任環境中執行 indigo2 時，不會啟用下列額外的功能：  
   
@@ -167,10 +153,10 @@ ms.lasthandoff: 04/27/2018
   
 -   效能計數器  
   
- 在部分信任環境中使用不支援的 [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] 功能可能會導致執行階段出現例外狀況。  
+ 不支援部分信任環境中的 WCF 功能可能會導致在執行階段的例外狀況。  
   
 ## <a name="unlisted-features"></a>未列出的功能  
- 在部分信任環境中執行時，要找到不可用的資訊片段或動作的最好方式，就是嘗試在 `try` 區塊內部存取資源或執行動作，然後捕捉 ( `catch` ) 失敗。 為了避免在追蹤檔中大量出現重複錯誤， [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] 會在第一次安全性失敗之後停用資源或動作的追蹤。 第一次嘗試存取資源或執行動作時，會針對每個失敗的資源存取產生一個例外狀況追蹤。  
+ 在部分信任環境中執行時，要找到不可用的資訊片段或動作的最好方式，就是嘗試在 `try` 區塊內部存取資源或執行動作，然後捕捉 ( `catch` ) 失敗。 為了避免大量出現重複錯誤的追蹤檔案，WCF 會停用資源或動作之後第一次安全性失敗的追蹤。 第一次嘗試存取資源或執行動作時，會針對每個失敗的資源存取產生一個例外狀況追蹤。  
   
 ## <a name="see-also"></a>另請參閱  
  <xref:System.ServiceModel.Channels.HttpTransportBindingElement>  

@@ -1,40 +1,28 @@
 ---
-title: "WCF 資料服務概觀"
-ms.custom: 
+title: WCF 資料服務概觀
 ms.date: 03/30/2017
-ms.prod: .net-framework-oob
-ms.reviewer: 
-ms.suite: 
-ms.technology: dotnet-clr
-ms.tgt_pltfrm: 
-ms.topic: article
 helpviewer_keywords:
 - WCF Data Services
 - WCF Data Services, about
 ms.assetid: 7924cf94-c9a6-4015-afc9-f5d22b1743bb
-caps.latest.revision: "5"
-author: dotnet-bot
-ms.author: dotnetcontent
-manager: wpickett
-ms.workload: dotnet
-ms.openlocfilehash: 36abf79ec34b2fff8a3bfa46f2f62e5a787bbfe8
-ms.sourcegitcommit: c0dd436f6f8f44dc80dc43b07f6841a00b74b23f
+ms.openlocfilehash: f74d9ad955078ce40a7ac7dfac649c38aeb45e99
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 01/19/2018
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="wcf-data-services-overview"></a>WCF 資料服務概觀
-[!INCLUDE[ssAstoria](../../../../includes/ssastoria-md.md)]建立及取用 Web 或內部的資料服務會使用啟用[!INCLUDE[ssODataFull](../../../../includes/ssodatafull-md.md)]。 [!INCLUDE[ssODataShort](../../../../includes/ssodatashort-md.md)]可讓您將資料公開為可由 Uri 定址的資源。 這可讓您使用具像狀態傳輸 (REST) 的語意存取及變更資料，尤其是標準 HTTP 動作，例如 GET、PUT、POST 和 DELETE。 本主題提供 [!INCLUDE[ssODataShort](../../../../includes/ssodatashort-md.md)] 所定義的模式和作法概觀以及 [!INCLUDE[ssAstoria](../../../../includes/ssastoria-md.md)] 所提供的功能，以便在 .NET Framework 應用程式中充分利用 [!INCLUDE[ssODataShort](../../../../includes/ssodatashort-md.md)]。  
+[!INCLUDE[ssAstoria](../../../../includes/ssastoria-md.md)] 建立及取用 Web 或內部的資料服務會使用啟用[!INCLUDE[ssODataFull](../../../../includes/ssodatafull-md.md)]。 [!INCLUDE[ssODataShort](../../../../includes/ssodatashort-md.md)] 可讓您將資料公開為可由 Uri 定址的資源。 這可讓您使用具像狀態傳輸 (REST) 的語意存取及變更資料，尤其是標準 HTTP 動作，例如 GET、PUT、POST 和 DELETE。 本主題提供 [!INCLUDE[ssODataShort](../../../../includes/ssodatashort-md.md)] 所定義的模式和作法概觀以及 [!INCLUDE[ssAstoria](../../../../includes/ssastoria-md.md)] 所提供的功能，以便在 .NET Framework 應用程式中充分利用 [!INCLUDE[ssODataShort](../../../../includes/ssodatashort-md.md)]。  
   
 ## <a name="address-data-as-resources"></a>將資料定址為資源  
  [!INCLUDE[ssODataShort](../../../../includes/ssodatashort-md.md)] 會將資料公開為可由 URI 定址的資源。 資源路徑會根據實體資料模型的實體-關聯性慣例來建構。 在此模型中，實體代表應用程式定義域，例如客戶、 訂單、 項目，以及產品中的資料運算單位。 如需詳細資訊，請參閱[實體資料模型](../../../../docs/framework/data/adonet/entity-data-model.md)。  
   
- 在 [!INCLUDE[ssODataShort](../../../../includes/ssodatashort-md.md)] 中，您將實體資源定址為包含實體型別執行個體的實體集。 例如，URI`http://services.odata.org/Northwind/Northwind.svc/Customers('ALFKI')/Orders`傳回所有訂單`Northwind`與客戶相關的資料服務`CustomerID`值`ALFKI.`  
+ 在 [!INCLUDE[ssODataShort](../../../../includes/ssodatashort-md.md)] 中，您將實體資源定址為包含實體型別執行個體的實體集。 例如，URI`http://services.odata.org/Northwind/Northwind.svc/Customers('ALFKI')/Orders`傳回所有訂單`Northwind`與客戶相關的資料服務`CustomerID`值 `ALFKI.`  
   
  查詢運算式可讓您針對資源執行傳統查詢運算，例如篩選、排序和分頁。 例如，URI `http://services.odata.org/Northwind/Northwind.svc/Customers('ALFKI')/Orders?$filter=Freight gt 50` 會篩選資源，只傳回運費超過 $50 美元的訂單。 如需詳細資訊，請參閱[存取資料服務資源](../../../../docs/framework/data/wcf/accessing-data-service-resources-wcf-data-services.md)。  
   
 ## <a name="interoperable-data-access"></a>可互通的資料存取  
- [!INCLUDE[ssODataShort](../../../../includes/ssodatashort-md.md)]若要使資料服務可與不使用.NET Framework 的應用程式的互通標準網際網路通訊協定為基礎。 您可以使用標準 Uri 來定址資料，因為您的應用程式可以存取和變更資料，以利用具像狀態傳輸 (REST)，特別是標準 HTTP 動詞命令的 GET、 PUT、 POST 和刪除。 這樣能讓您從任何用戶端存取這些服務 (這些用戶端需可剖析及存取透過標準 HTTP 通訊協定傳輸的資料)。  
+ [!INCLUDE[ssODataShort](../../../../includes/ssodatashort-md.md)] 若要使資料服務可與不使用.NET Framework 的應用程式的互通標準網際網路通訊協定為基礎。 您可以使用標準 Uri 來定址資料，因為您的應用程式可以存取和變更資料，以利用具像狀態傳輸 (REST)，特別是標準 HTTP 動詞命令的 GET、 PUT、 POST 和刪除。 這樣能讓您從任何用戶端存取這些服務 (這些用戶端需可剖析及存取透過標準 HTTP 通訊協定傳輸的資料)。  
   
  [!INCLUDE[ssODataShort](../../../../includes/ssodatashort-md.md)] 會定義 Atom 發行通訊協定 (AtomPub) 的一組延伸。 它可支援採用多種資料格式的 HTTP 要求和回應，配合各種用戶端應用程式和平台。 [!INCLUDE[ssODataShort](../../../../includes/ssodatashort-md.md)] 摘要可以表示 Atom、JavaScript 物件標記法 (JSON) 和單純 XML 格式的資料。 雖然 Atom 是預設格式，但是摘要的格式會在 HTTP 要求的標頭中指定。 如需詳細資訊，請參閱[OData: Atom 格式](http://go.microsoft.com/fwlink/?LinkID=185794)和[OData: JSON 格式](http://go.microsoft.com/fwlink/?LinkID=185795)。  
   
@@ -45,17 +33,17 @@ ms.lasthandoff: 01/19/2018
   
  [!INCLUDE[ssAstoria](../../../../includes/ssastoria-md.md)] 整合 ADO.NET Entity Framework，可讓您建立公開關聯式資料的資料服務。 您可以使用實體資料模型工具建立以實體形式包含可定址資源的資料模型，同時定義此模型和基礎資料庫中資料表的對應。 如需詳細資訊，請參閱[Entity Framework 提供者](../../../../docs/framework/data/wcf/entity-framework-provider-wcf-data-services.md)。  
   
- [!INCLUDE[ssAstoria](../../../../includes/ssastoria-md.md)]也可讓您建立資料服務公開 （expose） 的實作會傳回任何資料結構<xref:System.Linq.IQueryable%601>介面。 這可讓您建立公開 .NET Framework 型別資料的資料服務。 若您同時實作 <xref:System.Data.Services.IUpdatable> 介面，則亦支援建立、更新及刪除作業。 如需詳細資訊，請參閱[反映提供者](../../../../docs/framework/data/wcf/reflection-provider-wcf-data-services.md)。  
+ [!INCLUDE[ssAstoria](../../../../includes/ssastoria-md.md)] 也可讓您建立資料服務公開 （expose） 的實作會傳回任何資料結構<xref:System.Linq.IQueryable%601>介面。 這可讓您建立公開 .NET Framework 型別資料的資料服務。 若您同時實作 <xref:System.Data.Services.IUpdatable> 介面，則亦支援建立、更新及刪除作業。 如需詳細資訊，請參閱[反映提供者](../../../../docs/framework/data/wcf/reflection-provider-wcf-data-services.md)。  
   
  如需如何的圖例[!INCLUDE[ssAstoria](../../../../includes/ssastoria-md.md)]整合這些資料提供者，請參閱本主題稍後的架構的圖表。  
   
 ## <a name="custom-business-logic"></a>自訂商務邏輯  
- [!INCLUDE[ssAstoria](../../../../includes/ssastoria-md.md)]可讓您輕鬆地將自訂商務邏輯加入至服務作業和攔截器透過資料服務。 服務作業是在伺服器上定義的方法，而 URI 可透過與資料資源相同的格式來定址這些方法。 服務作業也使用查詢運算式語法來篩選、排序及分頁作業所傳回的資料。 例如，URI `http://localhost:12345/Northwind.svc/GetOrdersByCity?city='London'&$orderby=OrderDate&$top=10&$skip=10` 代表呼叫 Northwind 資料服務中名為 `GetOrdersByCity` 的服務作業，該服務會傳回來自 London 客戶的訂單，同時傳回按 `OrderDate` 排序的分頁結果。 如需詳細資訊，請參閱[服務作業](../../../../docs/framework/data/wcf/service-operations-wcf-data-services.md)。  
+ [!INCLUDE[ssAstoria](../../../../includes/ssastoria-md.md)] 可讓您輕鬆地將自訂商務邏輯加入至服務作業和攔截器透過資料服務。 服務作業是在伺服器上定義的方法，而 URI 可透過與資料資源相同的格式來定址這些方法。 服務作業也使用查詢運算式語法來篩選、排序及分頁作業所傳回的資料。 例如，URI `http://localhost:12345/Northwind.svc/GetOrdersByCity?city='London'&$orderby=OrderDate&$top=10&$skip=10` 代表呼叫 Northwind 資料服務中名為 `GetOrdersByCity` 的服務作業，該服務會傳回來自 London 客戶的訂單，同時傳回按 `OrderDate` 排序的分頁結果。 如需詳細資訊，請參閱[服務作業](../../../../docs/framework/data/wcf/service-operations-wcf-data-services.md)。  
   
  攔截器可讓您依照資料服務將自訂應用程式邏輯整合至要求或回應訊息的處理。 在指定的實體集上進行查詢、插入、更新或刪除動作時，系統就會呼叫攔截器。 然後，攔截器可能會更改資料、強制執行授權原則，甚至結束作業。 您必須針對資料服務所公開的特定實體集，明確地註冊攔截器方法。 如需詳細資訊，請參閱[攔截器](../../../../docs/framework/data/wcf/interceptors-wcf-data-services.md)。  
   
 ## <a name="client-libraries"></a>用戶端程式庫  
- [!INCLUDE[ssODataShort](../../../../includes/ssodatashort-md.md)]定義一組用於與資料服務互動的統一模式。 這會提供機會建立可重複使用這些服務，例如更輕鬆地使用資料服務的用戶端程式庫為基礎的元件。  
+ [!INCLUDE[ssODataShort](../../../../includes/ssodatashort-md.md)] 定義一組用於與資料服務互動的統一模式。 這會提供機會建立可重複使用這些服務，例如更輕鬆地使用資料服務的用戶端程式庫為基礎的元件。  
   
  [!INCLUDE[ssAstoria](../../../../includes/ssastoria-md.md)] 所包含的用戶端程式庫，適用於以 .NET Framework 和 Silverlight 為基礎的用戶端應用程式。 這些用戶端程式庫可讓您利用 .NET Framework 物件與資料服務互動。 它們也支援以物件為基礎的查詢和 LINQ 查詢、載入相關物件、變更追蹤以及識別解析。 如需詳細資訊，請參閱[WCF Data Services 用戶端程式庫](../../../../docs/framework/data/wcf/wcf-data-services-client-library.md)。  
   
@@ -66,7 +54,7 @@ ms.lasthandoff: 01/19/2018
   
  ![WCF 資料服務架構圖表](../../../../docs/framework/data/wcf/media/astoriaservicearch.gif "AstoriaServiceArch")  
   
-## <a name="see-also"></a>請參閱  
+## <a name="see-also"></a>另請參閱  
  [WCF Data Services 4.5](../../../../docs/framework/data/wcf/index.md)  
  [快速入門](../../../../docs/framework/data/wcf/getting-started-with-wcf-data-services.md)  
  [定義 WCF Data Services](../../../../docs/framework/data/wcf/defining-wcf-data-services.md)  

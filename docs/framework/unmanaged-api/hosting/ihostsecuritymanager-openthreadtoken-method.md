@@ -1,14 +1,6 @@
 ---
-title: "IHostSecurityManager::OpenThreadToken 方法"
-ms.custom: 
+title: IHostSecurityManager::OpenThreadToken 方法
 ms.date: 03/30/2017
-ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.technology:
-- dotnet-clr
-ms.tgt_pltfrm: 
-ms.topic: reference
 api_name:
 - IHostSecurityManager.OpenThreadToken
 api_location:
@@ -23,17 +15,13 @@ helpviewer_keywords:
 ms.assetid: d5999052-8bf0-4a9e-8621-da6284406b18
 topic_type:
 - apiref
-caps.latest.revision: 
 author: rpetrusha
 ms.author: ronpet
-manager: wpickett
-ms.workload:
-- dotnet
-ms.openlocfilehash: 9b5c39632d7628d30149a0a0278f9bf6c865bc29
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.openlocfilehash: 35a41badd7ade016619d940880a3ace80ccf5693
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="ihostsecuritymanageropenthreadtoken-method"></a>IHostSecurityManager::OpenThreadToken 方法
 會開啟與目前執行中執行緒相關聯的判別存取語彙基元。  
@@ -62,7 +50,7 @@ HRESULT OpenThreadToken (
   
 |HRESULT|描述|  
 |-------------|-----------------|  
-|S_OK|`OpenThreadToken`已成功傳回。|  
+|S_OK|`OpenThreadToken` 已成功傳回。|  
 |HOST_E_CLRNOTAVAILABLE|Common language runtime (CLR) 尚未載入到處理程序，或 CLR 正在中它無法執行 managed 程式碼，或成功地處理呼叫的狀態。|  
 |HOST_E_TIMEOUT|呼叫已逾時。|  
 |HOST_E_NOT_OWNER|呼叫端未擁有鎖定。|  
@@ -70,7 +58,7 @@ HRESULT OpenThreadToken (
 |E_FAIL|發生未知的嚴重失敗。 方法會傳回 E_FAIL CLR 已不再可用的處理序內。 裝載方法的後續呼叫會傳回 HOST_E_CLRNOTAVAILABLE。|  
   
 ## <a name="remarks"></a>備註  
- `IHostSecurityManager::OpenThreadToken`行為類似對應的 Win32 函式的名稱相同，不同之處在於 Win32 函式可讓呼叫端来傳入任意的執行緒控制代碼，而`IHostSecurityManager::OpenThreadToken`開啟與呼叫執行緒相關聯的語彙基元。  
+ `IHostSecurityManager::OpenThreadToken` 行為類似對應的 Win32 函式的名稱相同，不同之處在於 Win32 函式可讓呼叫端来傳入任意的執行緒控制代碼，而`IHostSecurityManager::OpenThreadToken`開啟與呼叫執行緒相關聯的語彙基元。  
   
  `HANDLE`類型不是 COM 相容，也就是它的大小是特定的作業系統，且其需要自訂封送處理。 因此，這個語彙基元是僅供處理程序，則 CLR 與主機之間。  
   
@@ -81,8 +69,8 @@ HRESULT OpenThreadToken (
   
  **程式庫：**包含做為 MSCorEE.dll 中的資源  
   
- **.NET framework 版本：**[!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]  
+ **.NET framework 版本：** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]  
   
-## <a name="see-also"></a>請參閱  
+## <a name="see-also"></a>另請參閱  
  [IHostSecurityContext 介面](../../../../docs/framework/unmanaged-api/hosting/ihostsecuritycontext-interface.md)  
  [IHostSecurityManager 介面](../../../../docs/framework/unmanaged-api/hosting/ihostsecuritymanager-interface.md)

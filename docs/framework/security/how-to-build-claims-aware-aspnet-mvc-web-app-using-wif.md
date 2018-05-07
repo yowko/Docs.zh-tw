@@ -1,24 +1,14 @@
 ---
-title: "如何：使用 WIF 建置宣告感知 ASP.NET MVC Web 應用程式"
-ms.custom: 
+title: 如何：使用 WIF 建置宣告感知 ASP.NET MVC Web 應用程式
 ms.date: 03/30/2017
-ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.technology: dotnet-clr
-ms.tgt_pltfrm: 
-ms.topic: article
 ms.assetid: 0efb76bc-9f7b-4afe-be1c-2a57c917010b
-caps.latest.revision: "6"
 author: BrucePerlerMS
-ms.author: bruceper
 manager: mbaldwin
-ms.workload: dotnet
-ms.openlocfilehash: 39364f06cec35b1a5417540dfa29b0cac24fbdb6
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.openlocfilehash: 146724f31e1d09f09f94d102366539dc79ddfe02
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="how-to-build-claims-aware-aspnet-mvc-web-application-using-wif"></a>如何：使用 WIF 建置宣告感知 ASP.NET MVC Web 應用程式
 ## <a name="applies-to"></a>適用於  
@@ -27,7 +17,7 @@ ms.lasthandoff: 12/22/2017
   
 -   ASP.NET® MVC  
   
-## <a name="summary"></a>摘要  
+## <a name="summary"></a>總結  
  此操作說明提供詳細逐步程序，以建立簡單宣告感知 ASP.NET MVC 應用程式。 還提供了一些指示，說明如何測試簡單宣告感知 ASP.NET MVC Web 應用程式成功實作宣告型驗證。 此操作說明沒有提供建立安全性權杖服務 (STS) 的詳細指示，並假設您已設定 STS。  
   
 ## <a name="contents"></a>內容  

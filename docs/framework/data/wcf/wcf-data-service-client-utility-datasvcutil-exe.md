@@ -1,28 +1,16 @@
 ---
-title: "WCF 資料服務用戶端公用程式 (DataSvcUtil.exe)"
-ms.custom: 
+title: WCF 資料服務用戶端公用程式 (DataSvcUtil.exe)
 ms.date: 03/30/2017
-ms.prod: .net-framework-oob
-ms.reviewer: 
-ms.suite: 
-ms.technology: dotnet-clr
-ms.tgt_pltfrm: 
-ms.topic: article
 helpviewer_keywords:
 - WCF Data Services, generating client data classes
 - WCF Data Services, client library
 - WCF Data Services, consuming
 ms.assetid: 9d0af606-929b-4c03-b307-3ef5f705afce
-caps.latest.revision: "2"
-author: dotnet-bot
-ms.author: dotnetcontent
-manager: wpickett
-ms.workload: dotnet
-ms.openlocfilehash: fcbbbe5180acaf943956310d4837a105d8d049d7
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.openlocfilehash: 3206947d06a1736116674b70e469c20f8f4fca86
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="wcf-data-service-client-utility-datasvcutilexe"></a>WCF 資料服務用戶端公用程式 (DataSvcUtil.exe)
 DataSvcUtil.exe 是所提供的命令列工具[!INCLUDE[ssAstoria](../../../../includes/ssastoria-md.md)]會取用[!INCLUDE[ssODataFull](../../../../includes/ssodatafull-md.md)]摘要，並產生從.NET Framework 用戶端應用程式存取資料服務所需的用戶端資料服務類別。 此公用程式可以透過使用下列中繼資料來源產生資料類別：  
@@ -49,13 +37,13 @@ datasvcutil /out:file [/in:file | /uri:serviceuri] [/dataservicecollection] [/la
 |------------|-----------------|  
 |`/dataservicecollection`|指定同時產生將物件繫結至控制項所需的程式碼。|  
 |`/help`<br /><br /> -或-<br /><br /> `/?`|顯示工具的命令語法和選項。|  
-|`/in:`*\<檔案 >*|指定 .csdl 或 .edmx 檔案，或是檔案所在的目錄。|  
-|`/language:`[VB &#124;CSharp]|指定所產生之原始程式碼檔案的語言。 預設語言為 C#。|  
+|`/in:` *\<檔案 >*|指定 .csdl 或 .edmx 檔案，或是檔案所在的目錄。|  
+|`/language:`[VB&#124;CSharp]|指定所產生之原始程式碼檔案的語言。 預設語言為 C#。|  
 |`/nologo`|隱藏著作權訊息。|  
-|`/out:`*\<檔案 >*|指定原始程式碼檔案的名稱，該檔案包含已產生的用戶端資料服務類別。|  
-|`/uri:`*\<字串 >*|URI[!INCLUDE[ssODataShort](../../../../includes/ssodatashort-md.md)]摘要。|  
+|`/out:` *\<檔案 >*|指定原始程式碼檔案的名稱，該檔案包含已產生的用戶端資料服務類別。|  
+|`/uri:` *\<字串 >*|URI[!INCLUDE[ssODataShort](../../../../includes/ssodatashort-md.md)]摘要。|  
 |`/version:`[1.0&#124;2.0]|指定 [!INCLUDE[ssODataShort](../../../../includes/ssodatashort-md.md)] 的最高接受版本。 決定版本是根據`DataServiceVersion`DataService 中項目的屬性傳回的資料服務中繼資料。 如需詳細資訊，請參閱[資料服務版本控制](../../../../docs/framework/data/wcf/data-service-versioning-wcf-data-services.md)。 當您指定`/dataservicecollection`參數，您也必須指定`/version:2.0`以啟用資料繫結。|  
   
-## <a name="see-also"></a>請參閱  
+## <a name="see-also"></a>另請參閱  
  [產生資料服務用戶端程式庫](../../../../docs/framework/data/wcf/generating-the-data-service-client-library-wcf-data-services.md)  
  [如何：新增資料服務參考](../../../../docs/framework/data/wcf/how-to-add-a-data-service-reference-wcf-data-services.md)

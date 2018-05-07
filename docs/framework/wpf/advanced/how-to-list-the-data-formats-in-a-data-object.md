@@ -1,13 +1,6 @@
 ---
-title: "如何：列出資料物件中的資料格式"
-ms.custom: 
+title: 如何：列出資料物件中的資料格式
 ms.date: 03/30/2017
-ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.technology: dotnet-wpf
-ms.tgt_pltfrm: 
-ms.topic: article
 dev_langs:
 - csharp
 - vb
@@ -16,16 +9,11 @@ helpviewer_keywords:
 - DataFormats class [WPF]
 - data formats [WPF], listing
 ms.assetid: 18e7ba4b-ccef-4815-ae2d-3a32891010c0
-caps.latest.revision: "5"
-author: dotnet-bot
-ms.author: dotnetcontent
-manager: wpickett
-ms.workload: dotnet
-ms.openlocfilehash: cb27928031b551da2957aab0696646e8adc3f803
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.openlocfilehash: c0e5917d52d9253737a56307beed69bc0255807c
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="how-to-list-the-data-formats-in-a-data-object"></a>如何：列出資料物件中的資料格式
 下列範例顯示如何使用<xref:System.Windows.DataObject.GetFormats%2A>方法多載取得此項表示應使用資料物件中每一種資料格式的字串陣列。  
@@ -48,6 +36,6 @@ ms.lasthandoff: 12/22/2017
  [!code-csharp[DragDrop_DragDropMiscCode#_DragDrop_GetAllDataFormats_NativeOnly](../../../../samples/snippets/csharp/VS_Snippets_Wpf/DragDrop_DragDropMiscCode/CSharp/Window1.xaml.cs#_dragdrop_getalldataformats_nativeonly)]
  [!code-vb[DragDrop_DragDropMiscCode#_DragDrop_GetAllDataFormats_NativeOnly](../../../../samples/snippets/visualbasic/VS_Snippets_Wpf/DragDrop_DragDropMiscCode/visualbasic/window1.xaml.vb#_dragdrop_getalldataformats_nativeonly)]  
   
-## <a name="see-also"></a>請參閱  
+## <a name="see-also"></a>另請參閱  
  <xref:System.Windows.IDataObject>  
  [拖放概觀](../../../../docs/framework/wpf/advanced/drag-and-drop-overview.md)

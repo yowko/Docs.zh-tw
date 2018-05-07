@@ -1,24 +1,12 @@
 ---
-title: "核心通訊：TCP 傳輸通道"
-ms.custom: 
+title: 核心通訊：TCP 傳輸通道
 ms.date: 03/30/2017
-ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.technology: dotnet-clr
-ms.tgt_pltfrm: 
-ms.topic: article
 ms.assetid: d5cd057f-faec-4e21-ae0e-18bbc22bcfb1
-caps.latest.revision: "5"
-author: dotnet-bot
-ms.author: dotnetcontent
-manager: wpickett
-ms.workload: dotnet
-ms.openlocfilehash: 8c00c32ff93fd06250127f88ff5317c6daed18c4
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.openlocfilehash: 0dfbf939b39d53f104d749e0c0d24e04a05185e5
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="core-communications-tcp-transport-channels"></a>核心通訊：TCP 傳輸通道
 這個主題會列出 TCP 傳輸通道產生的所有例外狀況。  

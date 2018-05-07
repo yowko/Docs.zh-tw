@@ -1,30 +1,18 @@
 ---
-title: "HOW TO：在服務合約中宣告錯誤"
-ms.custom: 
+title: HOW TO：在服務合約中宣告錯誤
 ms.date: 03/30/2017
-ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.technology: dotnet-clr
-ms.tgt_pltfrm: 
-ms.topic: article
 dev_langs:
 - csharp
 - vb
 ms.assetid: e8da98e7-d22f-4f60-ac82-3fb0928a353f
-caps.latest.revision: "5"
-author: dotnet-bot
-ms.author: dotnetcontent
-manager: wpickett
-ms.workload: dotnet
-ms.openlocfilehash: bcf707e58586673097c89e0e0f4d72ea68ef7247
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.openlocfilehash: 142ad26702f0732bc5103e29d5a44bc57ab37625
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="how-to-declare-faults-in-service-contracts"></a>HOW TO：在服務合約中宣告錯誤
-在 Managed 程式碼中，發生錯誤狀況時會擲回例外狀況。 不過在 [!INCLUDE[indigo1](../../../includes/indigo1-md.md)] 應用程式中，藉由在服務合約中宣告 SOAP 錯誤，服務合約便可指定傳回用戶端的錯誤資訊。 如需例外狀況和錯誤之間的關聯性的概觀，請參閱[指定與處理合約和服務中的錯誤](../../../docs/framework/wcf/specifying-and-handling-faults-in-contracts-and-services.md)。  
+在 Managed 程式碼中，發生錯誤狀況時會擲回例外狀況。 在 Windows Communication Foundation (WCF) 應用程式，不過，服務合約會指定哪些資訊時發生錯誤，會藉由宣告服務合約中的 SOAP 錯誤傳回至用戶端。 如需例外狀況和錯誤之間的關聯性的概觀，請參閱[指定與處理合約和服務中的錯誤](../../../docs/framework/wcf/specifying-and-handling-faults-in-contracts-and-services.md)。  
   
 ### <a name="create-a-service-contract-that-specifies-a-soap-fault"></a>建立會指定 SOAP 錯誤的服務合約  
   
@@ -55,6 +43,6 @@ ms.lasthandoff: 12/22/2017
  [!code-csharp[FaultContractAttribute#1](../../../samples/snippets/csharp/VS_Snippets_CFX/faultcontractattribute/cs/services.cs#1)]
  [!code-vb[FaultContractAttribute#1](../../../samples/snippets/visualbasic/VS_Snippets_CFX/faultcontractattribute/vb/services.vb#1)]  
   
-## <a name="see-also"></a>請參閱  
+## <a name="see-also"></a>另請參閱  
  <xref:System.ServiceModel.FaultContractAttribute?displayProperty=nameWithType>  
  <xref:System.ServiceModel.FaultException%601?displayProperty=nameWithType>

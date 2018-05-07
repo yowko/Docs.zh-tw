@@ -1,13 +1,6 @@
 ---
-title: "命令概觀"
-ms.custom: 
+title: 命令概觀
 ms.date: 03/30/2017
-ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.technology: dotnet-wpf
-ms.tgt_pltfrm: 
-ms.topic: article
 dev_langs:
 - csharp
 - vb
@@ -20,16 +13,11 @@ helpviewer_keywords:
 - commanding [WPF]
 - CommandManager [WPF]
 ms.assetid: bc208dfe-367d-426a-99de-52b7e7511e81
-caps.latest.revision: "35"
-author: dotnet-bot
-ms.author: dotnetcontent
-manager: wpickett
-ms.workload: dotnet
-ms.openlocfilehash: 3eb7d05cdf5f6a80a0a247a5f429052cc9a8368b
-ms.sourcegitcommit: c0dd436f6f8f44dc80dc43b07f6841a00b74b23f
+ms.openlocfilehash: 0d426d8cf174a61c724e97b5e7af5c1428679716
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 01/19/2018
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="commanding-overview"></a>命令概觀
 <a name="introduction"></a> 命令是處理比裝置輸入更接近語意層級的 [!INCLUDE[TLA#tla_winclient](../../../../includes/tlasharptla-winclient-md.md)] 中的輸入機制。 命令範例包含許多應用程式中都有的 [複製]、[剪下] 和 [貼上] 作業。  
@@ -83,13 +71,13 @@ ms.lasthandoff: 01/19/2018
   
 <a name="Commands"></a>   
 ### <a name="commands"></a>命令  
- 中的命令[!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)]由實作<xref:System.Windows.Input.ICommand>介面。  <xref:System.Windows.Input.ICommand>公開兩個方法， <xref:System.Windows.Input.ICommand.Execute%2A>，和<xref:System.Windows.Input.ICommand.CanExecute%2A>，和事件， <xref:System.Windows.Input.ICommand.CanExecuteChanged>。 <xref:System.Windows.Input.ICommand.Execute%2A>執行與命令相關聯的動作。 <xref:System.Windows.Input.ICommand.CanExecute%2A>判斷命令是否可以在目前命令目標上執行。 <xref:System.Windows.Input.ICommand.CanExecuteChanged>如果命令來源可能會使引發但尚未執行的命令繫結的命令中集中管理命令的作業的命令管理員偵測到的變更會引發。  [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)]實作<xref:System.Windows.Input.ICommand>是<xref:System.Windows.Input.RoutedCommand>類別和此概觀單元焦點所在。  
+ 中的命令[!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)]由實作<xref:System.Windows.Input.ICommand>介面。  <xref:System.Windows.Input.ICommand> 公開兩個方法， <xref:System.Windows.Input.ICommand.Execute%2A>，和<xref:System.Windows.Input.ICommand.CanExecute%2A>，和事件， <xref:System.Windows.Input.ICommand.CanExecuteChanged>。 <xref:System.Windows.Input.ICommand.Execute%2A> 執行與命令相關聯的動作。 <xref:System.Windows.Input.ICommand.CanExecute%2A> 判斷命令是否可以在目前命令目標上執行。 <xref:System.Windows.Input.ICommand.CanExecuteChanged> 如果命令來源可能會使引發但尚未執行的命令繫結的命令中集中管理命令的作業的命令管理員偵測到的變更會引發。  [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)]實作<xref:System.Windows.Input.ICommand>是<xref:System.Windows.Input.RoutedCommand>類別和此概觀單元焦點所在。  
   
  [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] 中的輸入主要來源是滑鼠、鍵盤、筆跡和路由的命令。  使用更多裝置導向輸入<xref:System.Windows.RoutedEvent>通知已發生輸入的事件的應用程式頁面中的物件。  A<xref:System.Windows.Input.RoutedCommand>並無不同。  <xref:System.Windows.Input.RoutedCommand.Execute%2A>和<xref:System.Windows.Input.RoutedCommand.CanExecute%2A>方法<xref:System.Windows.Input.RoutedCommand>不包含命令中，應用程式邏輯，但而引發該通道的路由的事件並且傳遞項目樹狀結構，直到遇到具有<xref:System.Windows.Input.CommandBinding>。  <xref:System.Windows.Input.CommandBinding>包含這些事件處理常式，而且執行此命令的處理常式。  如需事件在 [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] 中路由的詳細資訊，請參閱[路由事件概觀](../../../../docs/framework/wpf/advanced/routed-events-overview.md)。  
   
  <xref:System.Windows.Input.RoutedCommand.Execute%2A>方法<xref:System.Windows.Input.RoutedCommand>引發<xref:System.Windows.Input.CommandManager.PreviewExecuted>和<xref:System.Windows.Input.CommandManager.Executed>命令目標上的事件。  <xref:System.Windows.Input.RoutedCommand.CanExecute%2A>方法<xref:System.Windows.Input.RoutedCommand>引發<xref:System.Windows.Input.CommandManager.CanExecute>和<xref:System.Windows.Input.CommandManager.PreviewCanExecute>命令目標上的事件。  這些事件通道和透過項目樹狀結構，直到遇到含有物件的泡泡<xref:System.Windows.Input.CommandBinding>針對該特定命令。  
   
- [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)]提供一組常見的路由命令分散到數個類別： <xref:System.Windows.Input.MediaCommands>， <xref:System.Windows.Input.ApplicationCommands>， <xref:System.Windows.Input.NavigationCommands>， <xref:System.Windows.Input.ComponentCommands>，和<xref:System.Windows.Documents.EditingCommands>。  這些類別只包含<xref:System.Windows.Input.RoutedCommand>物件與未命令的實作邏輯。  實作邏輯是於其上執行命令之物件的責任。  
+ [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] 提供一組常見的路由命令分散到數個類別： <xref:System.Windows.Input.MediaCommands>， <xref:System.Windows.Input.ApplicationCommands>， <xref:System.Windows.Input.NavigationCommands>， <xref:System.Windows.Input.ComponentCommands>，和<xref:System.Windows.Documents.EditingCommands>。  這些類別只包含<xref:System.Windows.Input.RoutedCommand>物件與未命令的實作邏輯。  實作邏輯是於其上執行命令之物件的責任。  
   
 <a name="Command_Sources"></a>   
 ### <a name="command-sources"></a>命令來源  
@@ -97,13 +85,13 @@ ms.lasthandoff: 01/19/2018
   
  命令中的來源[!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)]通常實作<xref:System.Windows.Input.ICommandSource>介面。  
   
- <xref:System.Windows.Input.ICommandSource>會公開三個屬性： <xref:System.Windows.Input.ICommandSource.Command%2A>， <xref:System.Windows.Input.ICommandSource.CommandTarget%2A>，和<xref:System.Windows.Input.ICommandSource.CommandParameter%2A>:  
+ <xref:System.Windows.Input.ICommandSource> 會公開三個屬性： <xref:System.Windows.Input.ICommandSource.Command%2A>， <xref:System.Windows.Input.ICommandSource.CommandTarget%2A>，和<xref:System.Windows.Input.ICommandSource.CommandParameter%2A>:  
   
--   <xref:System.Windows.Input.ICommandSource.Command%2A>是叫用命令來源時要執行的命令。  
+-   <xref:System.Windows.Input.ICommandSource.Command%2A> 是叫用命令來源時要執行的命令。  
   
--   <xref:System.Windows.Input.ICommandSource.CommandTarget%2A>是用來執行命令的物件。  值得注意的是，在[!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)]<xref:System.Windows.Input.ICommandSource.CommandTarget%2A>屬性<xref:System.Windows.Input.ICommandSource>時，才適用<xref:System.Windows.Input.ICommand>是<xref:System.Windows.Input.RoutedCommand>。  如果<xref:System.Windows.Input.ICommandSource.CommandTarget%2A>上設定<xref:System.Windows.Input.ICommandSource>和對應的命令不是<xref:System.Windows.Input.RoutedCommand>，則會忽略命令目標。 如果<xref:System.Windows.Input.ICommandSource.CommandTarget%2A>未設定，具有鍵盤焦點的項目將會在命令目標。  
+-   <xref:System.Windows.Input.ICommandSource.CommandTarget%2A> 是用來執行命令的物件。  值得注意的是，在[!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)]<xref:System.Windows.Input.ICommandSource.CommandTarget%2A>屬性<xref:System.Windows.Input.ICommandSource>時，才適用<xref:System.Windows.Input.ICommand>是<xref:System.Windows.Input.RoutedCommand>。  如果<xref:System.Windows.Input.ICommandSource.CommandTarget%2A>上設定<xref:System.Windows.Input.ICommandSource>和對應的命令不是<xref:System.Windows.Input.RoutedCommand>，則會忽略命令目標。 如果<xref:System.Windows.Input.ICommandSource.CommandTarget%2A>未設定，具有鍵盤焦點的項目將會在命令目標。  
   
--   <xref:System.Windows.Input.ICommandSource.CommandParameter%2A>用來將資訊傳遞給處理常式的使用者定義資料類型實作命令。  
+-   <xref:System.Windows.Input.ICommandSource.CommandParameter%2A> 用來將資訊傳遞給處理常式的使用者定義資料類型實作命令。  
   
  [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)]類別可實作<xref:System.Windows.Input.ICommandSource>是<xref:System.Windows.Controls.Primitives.ButtonBase>， <xref:System.Windows.Controls.MenuItem>， <xref:System.Windows.Documents.Hyperlink>，和<xref:System.Windows.Input.InputBinding>。  <xref:System.Windows.Controls.Primitives.ButtonBase><xref:System.Windows.Controls.MenuItem>，和<xref:System.Windows.Documents.Hyperlink>時按一下，而叫用命令<xref:System.Windows.Input.InputBinding>叫用命令時<xref:System.Windows.Input.InputGesture>相關聯的方式執行。  
   
@@ -140,7 +128,7 @@ ms.lasthandoff: 01/19/2018
   
  <xref:System.Windows.Input.CommandBinding>類別包含<xref:System.Windows.Input.CommandBinding.Command%2A>屬性，以及<xref:System.Windows.Input.CommandBinding.PreviewExecuted>， <xref:System.Windows.Input.CommandBinding.Executed>， <xref:System.Windows.Input.CommandBinding.PreviewCanExecute>，和<xref:System.Windows.Input.CommandBinding.CanExecute>事件。  
   
- <xref:System.Windows.Input.CommandBinding.Command%2A>是的命令，<xref:System.Windows.Input.CommandBinding>相關聯。  事件處理常式附加到<xref:System.Windows.Input.CommandBinding.PreviewExecuted>和<xref:System.Windows.Input.CommandBinding.Executed>事件實作命令邏輯。  事件處理常式附加至<xref:System.Windows.Input.CommandBinding.PreviewCanExecute>和<xref:System.Windows.Input.CommandBinding.CanExecute>事件判斷是否命令可以在目前命令目標上執行。  
+ <xref:System.Windows.Input.CommandBinding.Command%2A> 是的命令，<xref:System.Windows.Input.CommandBinding>相關聯。  事件處理常式附加到<xref:System.Windows.Input.CommandBinding.PreviewExecuted>和<xref:System.Windows.Input.CommandBinding.Executed>事件實作命令邏輯。  事件處理常式附加至<xref:System.Windows.Input.CommandBinding.PreviewCanExecute>和<xref:System.Windows.Input.CommandBinding.CanExecute>事件判斷是否命令可以在目前命令目標上執行。  
   
  下列範例示範如何建立<xref:System.Windows.Input.CommandBinding>根目錄上<xref:System.Windows.Window>應用程式。  <xref:System.Windows.Input.CommandBinding>關聯<xref:System.Windows.Input.ApplicationCommands.Open%2A>命令搭配<xref:System.Windows.Input.CommandManager.Executed>和<xref:System.Windows.Input.CommandBinding.CanExecute>處理常式。  
   
@@ -194,7 +182,7 @@ ms.lasthandoff: 01/19/2018
   
  如需建立自訂的範例<xref:System.Windows.Input.RoutedCommand>，請參閱[建立自訂的 RoutedCommand 範例](http://go.microsoft.com/fwlink/?LinkID=159980)。  
   
-## <a name="see-also"></a>請參閱  
+## <a name="see-also"></a>另請參閱  
  <xref:System.Windows.Input.RoutedCommand>  
  <xref:System.Windows.Input.CommandBinding>  
  <xref:System.Windows.Input.InputBinding>  

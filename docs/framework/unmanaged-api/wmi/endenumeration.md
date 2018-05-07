@@ -1,11 +1,7 @@
 ---
-title: "EndEnumeration 函式 （Unmanaged API 參考）"
-description: "EndEnumeration 函式會終止列舉型別。"
+title: EndEnumeration 函式 （Unmanaged API 參考）
+description: EndEnumeration 函式會終止列舉型別。
 ms.date: 11/06/2017
-ms.prod: .net-framework
-ms.technology:
-- dotnet-clr
-ms.topic: reference
 api_name:
 - EndEnumeration
 api_location:
@@ -20,14 +16,11 @@ topic_type:
 - Reference
 author: rpetrusha
 ms.author: ronpet
-manager: wpickett
-ms.workload:
-- dotnet
-ms.openlocfilehash: fee3137dad3f89fa8849b28e9ca38b40040f916e
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.openlocfilehash: d77497beb122bef580d6eb142fede33b8cf220e3
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="endenumeration-function"></a>EndEnumeration 函式
 結束呼叫啟動列舉順序[BeginEnumeration 函式](beginenumeration.md)。  
@@ -72,7 +65,7 @@ HRESULT EndEnumeration (
   
  **標頭：** WMINet_Utils.idl  
   
- **.NET framework 版本：**[!INCLUDE[net_current_v472plus](../../../../includes/net-current-v472plus.md)]  
+ **.NET framework 版本：** [!INCLUDE[net_current_v472plus](../../../../includes/net-current-v472plus.md)]  
   
 ## <a name="see-also"></a>另請參閱  
 [WMI 和效能計數器 （Unmanaged API 參考）](index.md)

@@ -1,24 +1,14 @@
 ---
-title: "如何：轉換傳入宣告"
-ms.custom: 
+title: 如何：轉換傳入宣告
 ms.date: 03/30/2017
-ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.technology: dotnet-clr
-ms.tgt_pltfrm: 
-ms.topic: article
 ms.assetid: 2831d514-d9d8-4200-9192-954bb6da1126
-caps.latest.revision: "4"
 author: BrucePerlerMS
-ms.author: bruceper
 manager: mbaldwin
-ms.workload: dotnet
-ms.openlocfilehash: 1f736554cd50a5ca2bd45dfab2f41ba672601f29
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.openlocfilehash: cb71e320116c3af73139f1a8083fa62e8a7e21a7
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="how-to-transform-incoming-claims"></a>如何：轉換傳入宣告
 ## <a name="applies-to"></a>適用於  
@@ -27,14 +17,14 @@ ms.lasthandoff: 12/22/2017
   
 -   ASP.NET® Web Forms  
   
-## <a name="summary"></a>摘要  
+## <a name="summary"></a>總結  
  此操作說明提供詳細逐步程序，以建立簡單宣告感知 ASP.NET Web Forms 應用程式和轉換傳入宣告。 此外，還提供一些指示，說明如何測試應用程式，以確認應用程式執行時會呈現宣告。  
   
 ## <a name="contents"></a>內容  
   
 -   目標  
   
--   概觀  
+-   總覽  
   
 -   步驟摘要  
   
@@ -52,7 +42,7 @@ ms.lasthandoff: 12/22/2017
   
 -   測試 ASP.NET Web Forms 應用程式以查看它是否正常運作  
   
-## <a name="overview"></a>概觀  
+## <a name="overview"></a>總覽  
  WIF 會公開一個名為 <xref:System.Security.Claims.ClaimsAuthenticationManager> 類別，其可讓使用者在向信賴憑證者 (RP) 應用程式呈現宣告之前，修改這些宣告。 <xref:System.Security.Claims.ClaimsAuthenticationManager> 可用來分隔驗證與基礎應用程式程式碼之間的問題。 下列範例示範如何在 RP 可能需要的傳入 <xref:System.Security.Claims.ClaimsPrincipal> 宣告中加入角色。  
   
 ## <a name="summary-of-steps"></a>步驟摘要  

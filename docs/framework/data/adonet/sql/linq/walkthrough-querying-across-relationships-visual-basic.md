@@ -1,28 +1,14 @@
 ---
-title: "逐步解說：跨關聯性查詢 (Visual Basic)"
-ms.custom: 
+title: 逐步解說：跨關聯性查詢 (Visual Basic)
 ms.date: 03/30/2017
-ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.technology:
-- dotnet-ado
-ms.tgt_pltfrm: 
-ms.topic: article
 dev_langs:
 - vb
 ms.assetid: a7da43e3-769f-4e07-bcd6-552b8bde66f4
-caps.latest.revision: 
-author: douglaslMS
-ms.author: douglasl
-manager: craigg
-ms.workload:
-- dotnet
-ms.openlocfilehash: fef9880d5f9fa652eab2eb0d17bbf782dc64773d
-ms.sourcegitcommit: ed26cfef4e18f6d93ab822d8c29f902cff3519d1
+ms.openlocfilehash: aa98a823a5d97d86144ea2f76953e990cde8edec
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 01/17/2018
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="walkthrough-querying-across-relationships-visual-basic"></a>逐步解說：跨關聯性查詢 (Visual Basic)
 本逐步解說示範如何使用[!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)]*關聯*表示在資料庫中的外部索引鍵關聯性。  
@@ -104,5 +90,5 @@ ms.lasthandoff: 01/17/2018
 ## <a name="next-steps"></a>後續步驟  
  下一個逐步解說 ([逐步解說： 操作資料 (Visual Basic)](../../../../../../docs/framework/data/adonet/sql/linq/walkthrough-manipulating-data-visual-basic.md)) 示範如何處理資料。 該逐步解說並不要求您儲存這系列中已完成的兩個逐步解說。  
   
-## <a name="see-also"></a>請參閱  
+## <a name="see-also"></a>另請參閱  
  [依逐步解說學習](../../../../../../docs/framework/data/adonet/sql/linq/learning-by-walkthroughs.md)

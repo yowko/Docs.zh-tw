@@ -1,35 +1,21 @@
 ---
 title: 工具
-ms.custom: ''
 ms.date: 03/30/2017
-ms.prod: .net-framework
-ms.reviewer: ''
-ms.suite: ''
-ms.technology:
-- dotnet-clr
-ms.tgt_pltfrm: ''
-ms.topic: article
 ms.assetid: 89c907f9-313f-408c-992a-631f1eadf1da
-caps.latest.revision: ''
-author: dotnet-bot
-ms.author: dotnetcontent
-manager: wpickett
-ms.workload:
-- dotnet
-ms.openlocfilehash: 5badbb9142261fc1dc6c2b2d5af3c89c7af776b6
-ms.sourcegitcommit: c883637b41ee028786edceece4fa872939d2e64c
+ms.openlocfilehash: 6c4ada74c2fc6aba84eb1fe46f4d7cdee9978d13
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 03/26/2018
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="tools"></a>工具
-本主題將列出由 [!INCLUDE[indigo1](../../../../../includes/indigo1-md.md)] 工具所產生的所有例外狀況。  
+本主題列出 Windows Communication Foundation (WCF) 工具所產生的所有例外狀況。  
   
 ## <a name="exception-list"></a>例外狀況清單  
   
 |資源程式碼|資源字串|  
 |-------------------|---------------------|  
-|ParametersTarget|\<enum>|  
+|ParametersTarget|\<列舉 >|  
 |ParametersToolConfig|\<configFile>|  
 |ErrInvalidPath|指定的路徑無效。 請檢查指定的引數。|  
 |ParametersReference|\<檔案路徑 >|  
@@ -88,7 +74,7 @@ ms.lasthandoff: 03/26/2018
 |ErrInputConflictsWithMode|從指定項目讀取的輸入與其他選項不一致。|  
 |ErrDuplicateValuePassedToTypeArg|指定值已經多次傳送至指定選項。 每種型別只能指定一次。|  
 |ErrInputEPRFileParseError|無法從指定項目讀取端點參照。 請驗證 XML 格式正確而且有效。|  
-|ErrCouldNotCreateCodeProvider|您無法針對已經傳送至 /{1} 引數的指定值建立程式碼提供者。 請驗證程式碼提供者已安裝且設定妥當。|  
+|ErrCouldNotCreateCodeProvider|程式碼提供者無法建立與指定的值，傳遞給 /{1}引數。 請驗證程式碼提供者已安裝且設定妥當。|  
 |ErrPathTooLongDirOnly|結果指定路徑太長。 請檢閱指定引數。|  
 |HelpDataContractSerializer|產生使用 DataContract 序列化程式以進行序列化與還原序列化的資料型別。|  
 |ErrUnableToExportEndpoint|匯出指定命名空間之指定端點名稱時發生錯誤，此命名空間可在組件所載入的組態檔之指定服務型別中找到。|  
@@ -127,7 +113,7 @@ ms.lasthandoff: 03/26/2018
 |HelpCommonOptionsCategory|-= 常見問題 =-|  
 |ParametersServiceName|\<serviceConfigName>|  
 |ErrNoValidInputFilesSpecified|未指定有效的輸入檔。 請指定中繼資料文件或組件檔。|  
-|ParametersLanguage|\<language>|  
+|ParametersLanguage|\<語言 >|  
 |ErrUnableToLoadMetadataDocument|從其中一個載入的文件讀取中繼資料時發生錯誤。 已指定文件識別項。|  
 |ErrConflictingInputs|指定的輸入引數與指定項目衝突，因為它們意指不同的工具作業模式。|  
 |WrnUnableToLoadContractForValidation|載入合約類型時發生錯誤。 指定了型別和詳細資料。|  
@@ -155,7 +141,7 @@ ms.lasthandoff: 03/26/2018
 |ErrCodegenError|以指定語言產生程式碼時發生錯誤。<br /><br /> 該語言不支援所有正在產生的程式碼項目。 您應該使用其他語言。|  
 |ErrInputWsdlParseError|讀取指定項目時發生 WSDL 剖析錯誤。 請驗證 XML 格式正確而且有效。|  
 |ErrCouldNotCreateInstance|無法針對已傳送至指定引數的指定型別建立其執行個體。|  
-|ParametersNamespace|\<string,string>|  
+|ParametersNamespace|\<字串、 字串 >|  
 |HelpNostdlib|請勿參照標準程式庫 (根據預設會參照 mscorlib.dll 與 system.servicemodel.dll)。|  
 |WrnCannotLoadConfigFileForExport|在處理從指定位置載入的組態檔時發生錯誤。 無法載入在此組態檔中定義的服務。|  
 |WrnUnableToLoadContractForExport|載入合約類型時發生錯誤。 無法匯出這個指定型別。|

@@ -1,14 +1,6 @@
 ---
-title: "ICLRDebugging::OpenVirtualProcess 方法"
-ms.custom: 
+title: ICLRDebugging::OpenVirtualProcess 方法
 ms.date: 03/30/2017
-ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.technology:
-- dotnet-clr
-ms.tgt_pltfrm: 
-ms.topic: reference
 api_name:
 - ICLRDebugging.OpenVirtualProcess
 api_location:
@@ -23,17 +15,13 @@ helpviewer_keywords:
 ms.assetid: e8ab7c41-d508-4ed9-8a31-ead072b5a314
 topic_type:
 - apiref
-caps.latest.revision: 
 author: rpetrusha
 ms.author: ronpet
-manager: wpickett
-ms.workload:
-- dotnet
-ms.openlocfilehash: f1f71f42f10c3d25714998d1697b20a5ee13e055
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.openlocfilehash: 51b5a9ecd85f0d40ac2fe2826cbbe7a56a6228d1
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="iclrdebuggingopenvirtualprocess-method"></a>ICLRDebugging::OpenVirtualProcess 方法
 取得對應至 common language runtime (CLR) 模組載入處理序中的 ICorDebugProcess 介面。  
@@ -87,7 +75,7 @@ HRESULT OpenVirtualProcess(
 |S_OK|已成功完成命令。|  
 |E_POINTER|`pDataTarget` 為 `null`。|  
 |CORDBG_E_LIBRARY_PROVIDER_ERROR|[ICLRDebuggingLibraryProvider](../../../../docs/framework/unmanaged-api/debugging/iclrdebugginglibraryprovider-interface.md)回呼傳回錯誤，或未提供有效的控制代碼。|  
-|CORDBG_E_MISSING_DATA_TARGET_INTERFACE|`pDataTarget`未實作必要的資料目標介面，這個版本的執行階段。|  
+|CORDBG_E_MISSING_DATA_TARGET_INTERFACE|`pDataTarget` 未實作必要的資料目標介面，這個版本的執行階段。|  
 |CORDBG_E_NOT_CLR|指定的模組不是 CLR 模組。 無法偵測到 CLR 模組，因為記憶體已損毀、 模組就無法使用，或是 CLR 版本晚於填充碼版本時，也會傳回這個 HRESULT。|  
 |CORDBG_E_UNSUPPORTED_DEBUGGING_MODEL|這個執行階段版本不支援這個偵錯模型。 目前的偵錯模型不支援的 CLR 版本之前[!INCLUDE[net_v40_long](../../../../includes/net-v40-long-md.md)]。 `pwszVersion`輸出參數仍然設定為正確的值之後這個錯誤。|  
 |CORDBG_E_UNSUPPORTED_FORWARD_COMPAT|CLR 版本大於這個偵錯工具會宣告為支援的版本。 `pwszVersion`輸出參數仍然設定為正確的值之後這個錯誤。|  
@@ -105,8 +93,8 @@ HRESULT OpenVirtualProcess(
   
  **程式庫：** CorGuids.lib  
   
- **.NET framework 版本：**[!INCLUDE[net_current_v40plus](../../../../includes/net-current-v40plus-md.md)]  
+ **.NET framework 版本：** [!INCLUDE[net_current_v40plus](../../../../includes/net-current-v40plus-md.md)]  
   
-## <a name="see-also"></a>請參閱  
+## <a name="see-also"></a>另請參閱  
  [偵錯介面](../../../../docs/framework/unmanaged-api/debugging/debugging-interfaces.md)  
  [偵錯](../../../../docs/framework/unmanaged-api/debugging/index.md)

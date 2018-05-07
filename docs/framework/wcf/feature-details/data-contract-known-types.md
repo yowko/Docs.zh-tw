@@ -1,14 +1,6 @@
 ---
 title: 資料合約已知型別
-ms.custom: ''
 ms.date: 03/30/2017
-ms.prod: .net-framework
-ms.reviewer: ''
-ms.suite: ''
-ms.technology:
-- dotnet-clr
-ms.tgt_pltfrm: ''
-ms.topic: article
 dev_langs:
 - csharp
 - vb
@@ -17,17 +9,11 @@ helpviewer_keywords:
 - KnownTypeAttribute [WCF]
 - KnownTypes [WCF]
 ms.assetid: 1a0baea1-27b7-470d-9136-5bbad86c4337
-caps.latest.revision: 42
-author: dotnet-bot
-ms.author: dotnetcontent
-manager: wpickett
-ms.workload:
-- dotnet
-ms.openlocfilehash: c9c180a0f1544fa187ddb53ec79a47f908c298d7
-ms.sourcegitcommit: 03ee570f6f528a7d23a4221dcb26a9498edbdf8c
+ms.openlocfilehash: 00ae32ff394b1ce2acb38fb237527e934934b935
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/28/2018
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="data-contract-known-types"></a>資料合約已知型別
 <xref:System.Runtime.Serialization.KnownTypeAttribute> 類別可讓您預先指定在還原序列化期間應該納入考量的型別。 如需實用範例，請參閱 [Known Types](../../../../docs/framework/wcf/samples/known-types.md) 範例。  
@@ -43,7 +29,7 @@ ms.lasthandoff: 04/28/2018
 -   有些型別 (包括 [!INCLUDE[dnprdnshort](../../../../includes/dnprdnshort-md.md)] 型別) 的成員隸屬於先前三大類別的其中一個類別。 例如， <xref:System.Collections.Hashtable> 會透過 <xref:System.Object> 將實際物件儲存到雜湊資料表中。 在序列化這些型別時，接收的一方無法預先判斷這些成員的資料合約。  
   
 ## <a name="the-knowntypeattribute-class"></a>KnownTypeAttribute 類別  
- 當資料抵達接收的端點時， [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] 執行階段會嘗試將資料還原序列化為 Common Language Runtime (CLR) 型別的執行個體。 還原系列化作業所產生的型別，首先會經由檢查傳入訊息來判斷訊息內容所符合的資料合約來加以選定。 接著，還原序列化引擎會嘗試尋找可實作資料合約 (相容於訊息內容) 的 CLR 型別。 在此處理序中，我們會將還原序列化引擎所允許的候選型別集合稱為還原序列化程式的「已知型別」集合。  
+ 當資料抵達接收的端點時，WCF 執行階段會嘗試將資料還原序列化為 common language runtime (CLR) 型別的執行個體。 還原系列化作業所產生的型別，首先會經由檢查傳入訊息來判斷訊息內容所符合的資料合約來加以選定。 接著，還原序列化引擎會嘗試尋找可實作資料合約 (相容於訊息內容) 的 CLR 型別。 在此處理序中，我們會將還原序列化引擎所允許的候選型別集合稱為還原序列化程式的「已知型別」集合。  
   
  讓還原序列化引擎識別型別的一種方式，就是使用 <xref:System.Runtime.Serialization.KnownTypeAttribute>。 屬性無法套用至個別資料成員，只能套用至整個資料合約型別。 屬性會套用至可以是類別或結構的「 *外部型別* 」(Outer Type)。 在屬性最基本的用途當中，套用屬性會將型別指定為「已知型別」。 這樣一來，每當外部型別的物件或是透過其成員參照的任何物件進行還原序列化，已知型別就會變成已知型別集合的一部分。 超過一個以上的 <xref:System.Runtime.Serialization.KnownTypeAttribute> 屬性可以套用至相同型別中。  
   
@@ -144,7 +130,7 @@ ms.lasthandoff: 04/28/2018
  [!code-vb[C_KnownTypeAttribute#10](../../../../samples/snippets/visualbasic/VS_Snippets_CFX/c_knowntypeattribute/vb/source.vb#10)]  
   
 ## <a name="additional-ways-to-add-known-types"></a>新增已知型別的其他方式  
- 另外，您可以透過組態檔來新增已知型別。 當您並未控制進行適當還原序列化作業時需要已知型別的型別時，這個方法就會很有用，例如當您使用協力廠商的型別程式庫來搭配 [!INCLUDE[indigo1](../../../../includes/indigo1-md.md)]時。  
+ 另外，您可以透過組態檔來新增已知型別。 當您並未控制進行適當還原序列化作業，例如當使用協力廠商架構型別程式庫與 Windows Communication Foundation (WCF) 需要已知型別的型別時，這非常有用。  
   
  下列組態檔示範如何在組態檔中指定已知的型別。  
   

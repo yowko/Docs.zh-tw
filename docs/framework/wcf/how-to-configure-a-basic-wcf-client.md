@@ -1,33 +1,19 @@
 ---
 title: HOW TO：設定基本 Windows Communication Foundation 用戶端
-ms.custom: ''
 ms.date: 03/30/2017
-ms.prod: .net-framework
-ms.reviewer: ''
-ms.suite: ''
-ms.technology:
-- dotnet-clr
-ms.tgt_pltfrm: ''
-ms.topic: article
 helpviewer_keywords:
 - WCF clients [WCF], configuring
 ms.assetid: d067b86d-afb0-47bf-94f6-45180a3d8d78
-caps.latest.revision: 47
-author: dotnet-bot
-ms.author: dotnetcontent
-manager: wpickett
-ms.workload:
-- dotnet
-ms.openlocfilehash: 4bde13abeac782da1c553afa290943eeff925fa4
-ms.sourcegitcommit: 94d33cadc5ff81d2ac389bf5f26422c227832052
+ms.openlocfilehash: c03bf37c737a19b0a90f12e7ad5db78b75323f5e
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/30/2018
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="how-to-configure-a-basic-windows-communication-foundation-client"></a>HOW TO：設定基本 Windows Communication Foundation 用戶端
-這是在建立基本 [!INCLUDE[indigo1](../../../includes/indigo1-md.md)] 應用程式時必須進行的六項工作中的第五項。 六個工作的概觀，請參閱[入門教學課程](../../../docs/framework/wcf/getting-started-tutorial.md)主題。  
+這是建立基本的 Windows Communication Foundation (WCF) 應用程式所需的六個工作的第五個。 六個工作的概觀，請參閱[入門教學課程](../../../docs/framework/wcf/getting-started-tutorial.md)主題。  
   
- 此主題 disuccess 使用的 [加入服務參考] 功能產生的用戶端組態檔[!INCLUDE[vs_current_long](../../../includes/vs-current-long-md.md)]或[ServiceModel Metadata Utility Tool (Svcutil.exe)](../../../docs/framework/wcf/servicemodel-metadata-utility-tool-svcutil-exe.md)。 設定用戶端包含指定用戶端用來存取服務的端點。 端點內含位址、繫結和合約，每一項都必須在設定用戶端的過程中加以指定。  
+ 本主題將討論使用的 [加入服務參考] 功能產生用戶端組態檔[!INCLUDE[vs_current_long](../../../includes/vs-current-long-md.md)]或[ServiceModel Metadata Utility Tool (Svcutil.exe)](../../../docs/framework/wcf/servicemodel-metadata-utility-tool-svcutil-exe.md)。 設定用戶端包含指定用戶端用來存取服務的端點。 端點內含位址、繫結和合約，每一項都必須在設定用戶端的過程中加以指定。  
   
 ### <a name="to-configure-a-windows-communication-foundation-client"></a>若要設定 Windows Communication Foundation 用戶端  
   

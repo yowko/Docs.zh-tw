@@ -1,28 +1,14 @@
 ---
-title: "服務異動行為"
-ms.custom: 
+title: 服務異動行為
 ms.date: 03/30/2017
-ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.technology:
-- dotnet-clr
-ms.tgt_pltfrm: 
-ms.topic: article
 helpviewer_keywords:
 - Service Transaction Behavior Sample [Windows Communication Foundation]
 ms.assetid: 1a9842a3-e84d-427c-b6ac-6999cbbc2612
-caps.latest.revision: 
-author: dotnet-bot
-ms.author: dotnetcontent
-manager: wpickett
-ms.workload:
-- dotnet
-ms.openlocfilehash: a4c7c9c78b821f7457f193d24bae031d49b301ec
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.openlocfilehash: e49404626f6de1bfe260f0abb692d68ad779a7ab
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="service-transaction-behavior"></a>服務異動行為
 這個範例會示範如何使用用戶端協調的異動，以及設定 ServiceBehaviorAttribute 和 OperationBehaviorAttribute，以控制服務異動行為。 這個範例根據[入門](../../../../docs/framework/wcf/samples/getting-started-sample.md)實作的計算器服務，但會擴充以維護伺服器記錄檔中的資料庫資料表和累計總數的計算機作業可設定狀態的執行作業。 對伺服器記錄資料表的持續性寫入會依用戶端協調的交易結果而定，如果用戶端交易沒有完成，Web 服務交易就會確保資料庫的更新並未經過認可。  
@@ -225,7 +211,7 @@ Creating new service instance...
   
 3.  若要在單一或跨電腦組態中執行範例時，請依照中的指示[執行 Windows Communication Foundation 範例](../../../../docs/framework/wcf/samples/running-the-samples.md)。  
   
- 如果要跨電腦執行範例，您必須設定 Microsoft Distributed Transaction Coordinator (MSDTC) 以啟用網路交易流程，並使用 WsatConfig.exe 工具來啟用 [!INCLUDE[indigo1](../../../../includes/indigo1-md.md)] 交易網路支援。  
+ 如果要跨電腦執行範例，您必須設定 Microsoft Distributed Transaction Coordinator (MSDTC) 以啟用網路交易流程，並使用 WsatConfig.exe 工具來啟用 Windows Communication Foundation (WCF) 交易網路支援。  
   
 ### <a name="to-configure-the-microsoft-distributed-transaction-coordinator-msdtc-to-support-running-the-sample-across-machines"></a>若要設定 Microsoft Distributed Transaction Coordinator (MSDTC) 以支援跨電腦執行範例  
   
@@ -253,7 +239,7 @@ Creating new service instance...
   
     4.  選取 Msdtc.exe，然後按一下 **開啟**。  
   
-    5.  按一下**[確定]**關閉**新增程式**對話方塊中，然後按一下**確定**] 以關閉 [Windows 防火牆 applet。  
+    5.  按一下 **[確定]** 關閉**新增程式**對話方塊中，然後按一下**確定**] 以關閉 [Windows 防火牆 applet。  
   
 3.  在用戶端電腦上，設定 MSDTC 以允許傳出網路異動：  
   
@@ -274,8 +260,8 @@ Creating new service instance...
 >   
 >  `<InstallDrive>:\WF_WCF_Samples`  
 >   
->  如果此目錄不存在，請移至 [Windows Communication Foundation (WCF) and Windows Workflow Foundation (WF) Samples for .NET Framework 4  (適用於 .NET Framework 4 的 Windows Communication Foundation (WCF) 與 Windows Workflow Foundation (WF) 範例)](http://go.microsoft.com/fwlink/?LinkId=150780) ，以下載所有 [!INCLUDE[indigo1](../../../../includes/indigo1-md.md)] 和 [!INCLUDE[wf1](../../../../includes/wf1-md.md)] 範例。 此範例位於下列目錄。  
+>  如果此目錄不存在，請移至[Windows Communication Foundation (WCF) 和適用於.NET Framework 4 的 Windows Workflow Foundation (WF) 範例](http://go.microsoft.com/fwlink/?LinkId=150780)下載所有 Windows Communication Foundation (WCF) 和[!INCLUDE[wf1](../../../../includes/wf1-md.md)]範例。 此範例位於下列目錄。  
 >   
 >  `<InstallDrive>:\WF_WCF_Samples\WCF\Basic\Services\Behaviors\Transactions`  
   
-## <a name="see-also"></a>請參閱
+## <a name="see-also"></a>另請參閱

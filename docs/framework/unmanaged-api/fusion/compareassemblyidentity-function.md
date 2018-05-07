@@ -1,14 +1,6 @@
 ---
-title: "CompareAssemblyIdentity 函式"
-ms.custom: 
+title: CompareAssemblyIdentity 函式
 ms.date: 03/30/2017
-ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.technology:
-- dotnet-clr
-ms.tgt_pltfrm: 
-ms.topic: reference
 api_name:
 - CompareAssemblyIdentity
 api_location:
@@ -23,17 +15,13 @@ helpviewer_keywords:
 ms.assetid: 8b364ae1-8efa-4744-a7da-81fd093d84d6
 topic_type:
 - apiref
-caps.latest.revision: 
 author: rpetrusha
 ms.author: ronpet
-manager: wpickett
-ms.workload:
-- dotnet
-ms.openlocfilehash: 266868a65a0db75b57d46d92a469b4b6ceaa88e9
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.openlocfilehash: 1b48adcb8e9de49a312af77c8a9b80a07455ebfe
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="compareassemblyidentity-function"></a>CompareAssemblyIdentity 函式
 比較兩個組件識別，以判斷它們是否相等。  
@@ -71,10 +59,10 @@ STDAPI CompareAssemblyIdentity (
  [out][AssemblyComparisonResult](../../../../docs/framework/unmanaged-api/fusion/assemblycomparisonresult-enumeration.md)列舉，其中包含比較的詳細的資訊。  
   
 ## <a name="return-value"></a>傳回值  
- `pfEquivalent`傳回布林值，指出兩個組件是否相等。 `pResult`傳回的其中一個`AssemblyComparisonResult`值，來提供深度的值的詳細的原因`pfEquivalent`。  
+ `pfEquivalent` 傳回布林值，指出兩個組件是否相等。 `pResult` 傳回的其中一個`AssemblyComparisonResult`值，來提供深度的值的詳細的原因`pfEquivalent`。  
   
 ## <a name="remarks"></a>備註  
- `CompareAssemblyIdentity`檢查是否`pwzAssemblyIdentity1`和`pwzAssemblyIdentity2`相等。 `pfEquivalent`設定為`true`在一或多個下列條件：  
+ `CompareAssemblyIdentity` 檢查是否`pwzAssemblyIdentity1`和`pwzAssemblyIdentity2`相等。 `pfEquivalent` 設定為`true`在一或多個下列條件：  
   
 -   兩個組件識別是相等的。 強式名稱組件，相等的條件組件名稱、 版本、 公開金鑰語彙基元和文化特性相同。 簡單名稱的組件為相等的條件相符的組件名稱和文化特性。  
   
@@ -93,8 +81,8 @@ STDAPI CompareAssemblyIdentity (
   
  **程式庫：**包含做為 MsCorEE.dll 中的資源  
   
- **.NET framework 版本：**[!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]  
+ **.NET framework 版本：** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]  
   
-## <a name="see-also"></a>請參閱  
+## <a name="see-also"></a>另請參閱  
  [融合全域靜態函式](../../../../docs/framework/unmanaged-api/fusion/fusion-global-static-functions.md)  
  [AssemblyComparisonResult 列舉](../../../../docs/framework/unmanaged-api/fusion/assemblycomparisonresult-enumeration.md)

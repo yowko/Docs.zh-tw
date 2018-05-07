@@ -1,13 +1,6 @@
 ---
-title: "分析概觀"
-ms.custom: 
+title: 分析概觀
 ms.date: 03/30/2017
-ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.technology: dotnet-clr
-ms.tgt_pltfrm: 
-ms.topic: reference
 helpviewer_keywords:
 - managed code, profiling API support
 - unmanaged code, combining with managed code in profiling
@@ -34,19 +27,16 @@ helpviewer_keywords:
 - security, profiling API considerations
 - stack depth [.NET Framework profiling]
 ms.assetid: 864c2344-71dc-46f9-96b2-ed59fb6427a8
-caps.latest.revision: "27"
 author: mairaw
 ms.author: mairaw
-manager: wpickett
-ms.workload: dotnet
-ms.openlocfilehash: 84688ed80d0cb1b802290176400eb45998052a34
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.openlocfilehash: b38b64e1c86174bea11086e722ed86b0a0046e2c
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="profiling-overview"></a>分析概觀
-<a name="top"></a>分析工具是一種工具，監視執行的另一個應用程式。 Common Language Runtime (CLR) 分析工具是動態連結程式庫 (DLL) 由數個函式所組成，可使用分析 API，從 CLR 接收訊息，以及傳送訊息至 CLR。 CLR 會在執行階段載入分析工具 DLL。  
+<a name="top"></a> 分析工具是一種工具，監視執行的另一個應用程式。 Common Language Runtime (CLR) 分析工具是動態連結程式庫 (DLL) 由數個函式所組成，可使用分析 API，從 CLR 接收訊息，以及傳送訊息至 CLR。 CLR 會在執行階段載入分析工具 DLL。  
   
  傳統的分析工具著重在測量應用程式的執行。 也就是說，它們會測量花費在每個函式的時間，或是應用程式經過一段時間的記憶體使用量。 分析 API 的目標是更廣泛的診斷工具類別，例如程式碼涵蓋範圍公用程式，甚至進階偵錯輔助工具。 這些用途在本質上都是診斷。 分析 API 不僅會測量，也會監視應用程式的執行。 基於這個理由，應用程式本身應該永遠都不要使用分析 API，而且應用程式的執行不應該依賴分析工具 (或受其影響)。  
   

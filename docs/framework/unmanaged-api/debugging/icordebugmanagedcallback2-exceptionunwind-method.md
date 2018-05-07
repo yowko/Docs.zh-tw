@@ -1,14 +1,6 @@
 ---
-title: "ICorDebugManagedCallback2::ExceptionUnwind 方法"
-ms.custom: 
+title: ICorDebugManagedCallback2::ExceptionUnwind 方法
 ms.date: 03/30/2017
-ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.technology:
-- dotnet-clr
-ms.tgt_pltfrm: 
-ms.topic: reference
 api_name:
 - ICorDebugManagedCallback2.ExceptionUnwind
 api_location:
@@ -23,17 +15,13 @@ helpviewer_keywords:
 ms.assetid: aaf5938d-179c-4eaa-8d35-8523a4fadded
 topic_type:
 - apiref
-caps.latest.revision: 
 author: rpetrusha
 ms.author: ronpet
-manager: wpickett
-ms.workload:
-- dotnet
-ms.openlocfilehash: 64b85311f625e39dd25c48a60dde2fbaf66a957f
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.openlocfilehash: 92c4f488dcdc5712dcd2632f489fb0cd65d05ee6
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="icordebugmanagedcallback2exceptionunwind-method"></a>ICorDebugManagedCallback2::ExceptionUnwind 方法
 提供例外狀況回溯程序期間的狀態通知。  
@@ -63,7 +51,7 @@ HRESULT ExceptionUnwind (
  [in]值為[CorDebugExceptionFlags](../../../../docs/framework/unmanaged-api/debugging/cordebugexceptionflags-enumeration.md)列舉，指定例外狀況的其他資訊。  
   
 ## <a name="remarks"></a>備註  
- `ExceptionUnwind`會在回溯階段的例外狀況處理程序期間呼叫的各個點上。 `ExceptionUnwind`可以被呼叫一次以上時回溯單一例外狀況。  
+ `ExceptionUnwind` 會在回溯階段的例外狀況處理程序期間呼叫的各個點上。 `ExceptionUnwind` 可以被呼叫一次以上時回溯單一例外狀況。  
   
  如果`dwEventType`= DEBUG_EXCEPTION_INTERCEPTED，指令指標會在執行緒，在之前的序列點的分葉框架 （這可能是之前的幾個指令） 造成例外狀況的指示。  
   
@@ -74,8 +62,8 @@ HRESULT ExceptionUnwind (
   
  **程式庫：** CorGuids.lib  
   
- **.NET framework 版本：**[!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]  
+ **.NET framework 版本：** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]  
   
-## <a name="see-also"></a>請參閱  
+## <a name="see-also"></a>另請參閱  
  [ICorDebugManagedCallback2 介面](../../../../docs/framework/unmanaged-api/debugging/icordebugmanagedcallback2-interface.md)  
  [ICorDebugManagedCallback 介面](../../../../docs/framework/unmanaged-api/debugging/icordebugmanagedcallback-interface.md)

@@ -1,24 +1,12 @@
 ---
-title: "查詢資料集 (LINQ to DataSet)"
-ms.custom: 
+title: 查詢資料集 (LINQ to DataSet)
 ms.date: 03/30/2017
-ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.technology: dotnet-ado
-ms.tgt_pltfrm: 
-ms.topic: article
 ms.assetid: bb68d2e4-623d-4d60-85e3-965254f6fee7
-caps.latest.revision: "2"
-author: douglaslMS
-ms.author: douglasl
-manager: craigg
-ms.workload: dotnet
-ms.openlocfilehash: 21c4b2a37dfc9a7c570b39fa164267f90fa7055d
-ms.sourcegitcommit: c0dd436f6f8f44dc80dc43b07f6841a00b74b23f
+ms.openlocfilehash: 18daed2ee4196a03af818dfbd0e65153ae43a840
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 01/19/2018
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="querying-datasets-linq-to-dataset"></a>查詢資料集 (LINQ to DataSet)
 當 <xref:System.Data.DataSet> 物件已經填入 (Populate) 資料之後，您就可以開始查詢它。 使用 [!INCLUDE[linq_dataset](../../../../includes/linq-dataset-md.md)] 來編寫查詢與針對其他啟用 [!INCLUDE[vbteclinqext](../../../../includes/vbteclinqext-md.md)] 的資料來源使用 [!INCLUDE[vbteclinq](../../../../includes/vbteclinq-md.md)] 很相似。 請記住，但是，當您使用[!INCLUDE[vbteclinq](../../../../includes/vbteclinq-md.md)]查詢經過一段<xref:System.Data.DataSet>您要查詢的列舉物件<xref:System.Data.DataRow>物件，而不是自訂類型的列舉。 這表示您可以使用任何成員的<xref:System.Data.DataRow>類別中您[!INCLUDE[vbteclinq](../../../../includes/vbteclinq-md.md)]查詢。 這可讓您建立內容豐富且複雜的查詢。  
@@ -35,6 +23,6 @@ ms.lasthandoff: 01/19/2018
  [查詢具類型資料集](../../../../docs/framework/data/adonet/querying-typed-datasets.md)  
  說明如何查詢具型別 <xref:System.Data.DataSet> 物件。  
   
-## <a name="see-also"></a>請參閱  
+## <a name="see-also"></a>另請參閱  
  [LINQ to DataSet 範例](../../../../docs/framework/data/adonet/linq-to-dataset-examples.md)  
  [將資料載入至資料集](../../../../docs/framework/data/adonet/loading-data-into-a-dataset.md)

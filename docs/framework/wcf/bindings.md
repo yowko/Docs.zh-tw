@@ -1,31 +1,17 @@
 ---
-title: "Windows Communication Foundation 繫結"
-ms.custom: 
+title: Windows Communication Foundation 繫結
 ms.date: 03/30/2017
-ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.technology:
-- dotnet-clr
-ms.tgt_pltfrm: 
-ms.topic: article
 helpviewer_keywords:
 - bindings [WCF]
 ms.assetid: 845df323-be53-4848-92ef-ba67a406484d
-caps.latest.revision: 
-author: dotnet-bot
-ms.author: dotnetcontent
-manager: wpickett
-ms.workload:
-- dotnet
-ms.openlocfilehash: e878aadf1c7df6042323c008ff52a4be8a9d817f
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
-ms.translationtype: MT
+ms.openlocfilehash: d40faff2734095af42f94c60c630dde8494e5975
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="windows-communication-foundation-bindings"></a>Windows Communication Foundation 繫結
-繫結會指定 [!INCLUDE[indigo1](../../../includes/indigo1-md.md)] 服務端點與其他端點通訊的方式。 繫結的最基本功能，就是必須指定要使用的傳輸 (例如，HTTP 或 TCP)。 此外，您也可以透過繫結程序來設定其他特性，例如安全性與異動支援。  
+繫結會指定 Windows Communication Foundation (WCF) 服務端點如何與其他端點通訊。 繫結的最基本功能，就是必須指定要使用的傳輸 (例如，HTTP 或 TCP)。 此外，您也可以透過繫結程序來設定其他特性，例如安全性與異動支援。  
   
 ## <a name="in-this-section"></a>本節內容  
  [WCF 繫結概觀](../../../docs/framework/wcf/bindings-overview.md)  
@@ -48,5 +34,5 @@ ms.lasthandoff: 12/22/2017
   
  [繫結](../../../docs/framework/wcf/feature-details/bindings.md)  
   
-## <a name="see-also"></a>請參閱  
+## <a name="see-also"></a>另請參閱  
  [自訂繫結](../../../docs/framework/wcf/extending/custom-bindings.md)

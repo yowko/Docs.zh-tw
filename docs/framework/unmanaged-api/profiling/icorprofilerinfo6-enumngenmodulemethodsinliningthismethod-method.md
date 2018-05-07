@@ -1,24 +1,14 @@
 ---
-title: "ICorProfilerInfo6::EnumNgenModuleMethodsInliningThisMethod 方法"
-ms.custom: 
+title: ICorProfilerInfo6::EnumNgenModuleMethodsInliningThisMethod 方法
 ms.date: 03/30/2017
-ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.technology: dotnet-clr
-ms.tgt_pltfrm: 
-ms.topic: article
 ms.assetid: b933dfe6-7833-40cb-aad8-40842dc3034f
-caps.latest.revision: "6"
 author: rpetrusha
 ms.author: ronpet
-manager: wpickett
-ms.workload: dotnet
-ms.openlocfilehash: 8e11dd1c24001c764c82ed3f11336873ee57b2e9
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.openlocfilehash: 564f3b1cdfab2a3020b6bb5ac8d9af03c6532c8b
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="icorprofilerinfo6enumngenmodulemethodsinliningthismethod-method"></a>ICorProfilerInfo6::EnumNgenModuleMethodsInliningThisMethod 方法
 [在.NET Framework 4.6 和更新版本中支援]  
@@ -54,7 +44,7 @@ HRESULT EnumNgenModuleMethodsInliningThisMethod(
  [out]列舉值的位址指標  
   
 ## <a name="remarks"></a>備註  
- `inlineeModuleId`和`inlineeMethodId`結合在一起形成完整的識別項可能是內嵌的方法。 例如，假設模組`A`定義的方法`Simple.Add`:  
+ `inlineeModuleId` 和`inlineeMethodId`結合在一起形成完整的識別項可能是內嵌的方法。 例如，假設模組`A`定義的方法`Simple.Add`:  
   
 ```csharp  
 Simple.Add(int a, int b)   
@@ -68,7 +58,7 @@ Fancy.AddTwice(int a, int b)
 { return Simple.Add(a,b) + Simple.Add(a,b); }  
 ```  
   
- 我們也假設，`Fancy.AddTwice`內嵌呼叫至`SimpleAdd`。 分析工具可以使用這個列舉值，來尋找模組 B 中定義的所有方法的內嵌`Simple.Add`，並會列舉結果`AddTwice`。  `inlineeModuleId`為模組的識別碼`A`，和`inlineeeMethodId`識別`Simple.Add(int a, int b)`。  
+ 我們也假設，`Fancy.AddTwice`內嵌呼叫至`SimpleAdd`。 分析工具可以使用這個列舉值，來尋找模組 B 中定義的所有方法的內嵌`Simple.Add`，並會列舉結果`AddTwice`。  `inlineeModuleId` 為模組的識別碼`A`，和`inlineeeMethodId`識別`Simple.Add(int a, int b)`。  
   
  如果`incompleteData`成立的函式之後傳回列舉值不包含內嵌的所有方法指定的方法。 這種情形時，或尚未尚未載入的模組 inliners 更直接或間接的相依性。 如果分析工具需要正確資料時，它應該稍後重試多個模組載入時，最好是在每個模組載入。  
   
@@ -88,7 +78,7 @@ Simple.Add(int a, int b)
   
  **程式庫：** CorGuids.lib  
   
- **.NET framework 版本：**[!INCLUDE[net_current_v46plus](../../../../includes/net-current-v46plus-md.md)]  
+ **.NET framework 版本：** [!INCLUDE[net_current_v46plus](../../../../includes/net-current-v46plus-md.md)]  
   
-## <a name="see-also"></a>請參閱  
+## <a name="see-also"></a>另請參閱  
  [ICorProfilerInfo6 介面](../../../../docs/framework/unmanaged-api/profiling/icorprofilerinfo6-interface.md)

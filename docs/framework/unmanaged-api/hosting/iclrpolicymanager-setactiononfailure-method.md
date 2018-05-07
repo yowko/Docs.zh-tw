@@ -1,14 +1,6 @@
 ---
-title: "ICLRPolicyManager::SetActionOnFailure 方法"
-ms.custom: 
+title: ICLRPolicyManager::SetActionOnFailure 方法
 ms.date: 03/30/2017
-ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.technology:
-- dotnet-clr
-ms.tgt_pltfrm: 
-ms.topic: reference
 api_name:
 - ICLRPolicyManager.SetActionOnFailure
 api_location:
@@ -23,17 +15,13 @@ helpviewer_keywords:
 ms.assetid: 4664033f-db97-4388-b988-2ec470796e58
 topic_type:
 - apiref
-caps.latest.revision: 
 author: rpetrusha
 ms.author: ronpet
-manager: wpickett
-ms.workload:
-- dotnet
-ms.openlocfilehash: 4440b36485ed900b5e64adcead2525dbb7d5206e
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.openlocfilehash: bc3616b2cec0fa951df745e3c5f0468f74ab82bb
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="iclrpolicymanagersetactiononfailure-method"></a>ICLRPolicyManager::SetActionOnFailure 方法
 指定發生指定的失敗時，應該採取 common language runtime (CLR) 的原則動作。  
@@ -58,7 +46,7 @@ HRESULT SetActionOnFailure (
   
 |HRESULT|描述|  
 |-------------|-----------------|  
-|S_OK|`SetActionOnFailure`已成功傳回。|  
+|S_OK|`SetActionOnFailure` 已成功傳回。|  
 |HOST_E_CLRNOTAVAILABLE|CLR 尚未載入到處理程序，或 CLR 正在中它無法執行 managed 程式碼，或成功地處理呼叫的狀態。|  
 |HOST_E_TIMEOUT|呼叫已逾時。|  
 |HOST_E_NOT_OWNER|呼叫端未擁有鎖定。|  
@@ -67,7 +55,7 @@ HRESULT SetActionOnFailure (
 |E_INVALIDARG|無法為指定的作業，設定原則動作或作業指定了無效的原則。|  
   
 ## <a name="remarks"></a>備註  
- 根據預設，CLR 會在無法配置資源，例如記憶體時擲回例外狀況。 `SetActionOnFailure`可讓主應用程式藉由指定原則来採取的動作失敗時覆寫這個行為。 下表顯示的組合[EClrFailure](../../../../docs/framework/unmanaged-api/hosting/eclrfailure-enumeration.md)和[EPolicyAction](../../../../docs/framework/unmanaged-api/hosting/epolicyaction-enumeration.md)支援的值。 (FAIL_ 前置詞會省略[EClrFailure](../../../../docs/framework/unmanaged-api/hosting/eclrfailure-enumeration.md)值。)  
+ 根據預設，CLR 會在無法配置資源，例如記憶體時擲回例外狀況。 `SetActionOnFailure` 可讓主應用程式藉由指定原則来採取的動作失敗時覆寫這個行為。 下表顯示的組合[EClrFailure](../../../../docs/framework/unmanaged-api/hosting/eclrfailure-enumeration.md)和[EPolicyAction](../../../../docs/framework/unmanaged-api/hosting/epolicyaction-enumeration.md)支援的值。 (FAIL_ 前置詞會省略[EClrFailure](../../../../docs/framework/unmanaged-api/hosting/eclrfailure-enumeration.md)值。)  
   
 ||NonCriticalResource|CriticalResource|FatalRuntime|OrphanedLock|StackOverflow|AccessViolation|CodeContract|  
 |-|-------------------------|----------------------|------------------|------------------|-------------------|---------------------|------------------|  
@@ -89,9 +77,9 @@ HRESULT SetActionOnFailure (
   
  **程式庫：**包含做為 MSCorEE.dll 中的資源  
   
- **.NET framework 版本：**[!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]  
+ **.NET framework 版本：** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]  
   
-## <a name="see-also"></a>請參閱  
+## <a name="see-also"></a>另請參閱  
  [EClrFailure 列舉](../../../../docs/framework/unmanaged-api/hosting/eclrfailure-enumeration.md)  
  [EPolicyAction 列舉](../../../../docs/framework/unmanaged-api/hosting/epolicyaction-enumeration.md)  
  [ICLRControl 介面](../../../../docs/framework/unmanaged-api/hosting/iclrcontrol-interface.md)  

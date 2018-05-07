@@ -1,34 +1,22 @@
 ---
-title: "多層式架構應用程式中的資料擷取和 CUD 作業 (LINQ to SQL)"
-ms.custom: 
+title: 多層式架構應用程式中的資料擷取和 CUD 作業 (LINQ to SQL)
 ms.date: 03/30/2017
-ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.technology: dotnet-ado
-ms.tgt_pltfrm: 
-ms.topic: article
 dev_langs:
 - csharp
 - vb
 ms.assetid: c3133d53-83ed-4a4d-af8b-82edcf3831db
-caps.latest.revision: "2"
-author: douglaslMS
-ms.author: douglasl
-manager: craigg
-ms.workload: dotnet
-ms.openlocfilehash: 6cdf1a859595c82b8eea60311c3c96353849e3dc
-ms.sourcegitcommit: ed26cfef4e18f6d93ab822d8c29f902cff3519d1
+ms.openlocfilehash: ea27d6406ed588f2046dc938f5167a6c0200329e
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 01/17/2018
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="data-retrieval-and-cud-operations-in-n-tier-applications-linq-to-sql"></a>多層式架構應用程式中的資料擷取和 CUD 作業 (LINQ to SQL)
 當您將像是 Customers 或 Orders 等實體物件透過網路序列化到用戶端時，這些實體會與其資料內容中斷連結。 資料內容不會再追蹤它們的變更或它們與其他物件的關聯。 如果用戶端只讀取資料，這就不成問題。 此外，要讓用戶端加入資料列到資料庫，也相對來說簡單。 不過，如果您的應用程式要讓用戶端能夠更新或刪除資料，就必須將實體附加到新的資料內容，才能呼叫 <xref:System.Data.Linq.DataContext.SubmitChanges%2A?displayProperty=nameWithType>。 此外，如果您使用開放式並行存取 (Optimistic Concurrency) 來檢查原始值，那麼也需要想辦法將原始實體和修改過的實體提供給資料庫。 `Attach` 方法即是提供來讓您將中斷連結的實體放入新的資料內容。  
   
  即使您所序列化的 proxy 物件來取代[!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)]實體，您仍必須建構資料存取層 (DAL) 上的實體，並將它附加至新<xref:System.Data.Linq.DataContext?displayProperty=nameWithType>，以便將資料送到資料庫。  
   
- [!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)]是完全不管實體如何序列化。 如需有關如何使用[!INCLUDE[vs_ordesigner_long](../../../../../../includes/vs-ordesigner-long-md.md)]和 SQLMetal 工具來產生使用 Windows Communication Foundation (WCF) 都是可序列化的類別查看[如何： 讓實體可序列化](../../../../../../docs/framework/data/adonet/sql/linq/how-to-make-entities-serializable.md)。  
+ [!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)] 是完全不管實體如何序列化。 如需有關如何使用[!INCLUDE[vs_ordesigner_long](../../../../../../includes/vs-ordesigner-long-md.md)]和 SQLMetal 工具來產生使用 Windows Communication Foundation (WCF) 都是可序列化的類別查看[如何： 讓實體可序列化](../../../../../../docs/framework/data/adonet/sql/linq/how-to-make-entities-serializable.md)。  
   
 > [!NOTE]
 >  請只在新的或還原序列化的實體上呼叫 `Attach` 方法。 要將實體與其原始資料內容中斷連結的唯一方式就是使其序列化。 如果您嘗試將未中斷連結的實體附加到新的資料內容，而該實體仍擁有先前資料內容的延遲載入器，[!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)] 就會擲回例外狀況。 若實體擁有來自兩個不同資料內容的延遲載入器，當您在該實體上執行插入、更新和刪除作業時，可能會導致不想要的結果。 如需延遲載入器的詳細資訊，請參閱[延後執行與立即載入](../../../../../../docs/framework/data/adonet/sql/linq/deferred-versus-immediate-loading.md)。  
@@ -417,6 +405,6 @@ public void UpdateProductInfo(Product newProd, Product originalProd)
   
  當您使用一組 `IEnumerable` 物件附加時，若有已經存在的索引鍵出現時，會擲回 <xref:System.Data.Linq.DuplicateKeyException>。 其餘的物件將不會附加。  
   
-## <a name="see-also"></a>請參閱  
+## <a name="see-also"></a>另請參閱  
  [使用 LINQ to SQL 的多層式架構和遠端應用程式](../../../../../../docs/framework/data/adonet/sql/linq/n-tier-and-remote-applications-with-linq-to-sql.md)  
  [背景資訊](../../../../../../docs/framework/data/adonet/sql/linq/background-information.md)

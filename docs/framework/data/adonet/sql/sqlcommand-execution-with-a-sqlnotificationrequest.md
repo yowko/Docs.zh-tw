@@ -1,27 +1,15 @@
 ---
-title: "使用 SqlNotificationRequest 執行 SqlCommand"
-ms.custom: 
+title: 使用 SqlNotificationRequest 執行 SqlCommand
 ms.date: 03/30/2017
-ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.technology: dotnet-ado
-ms.tgt_pltfrm: 
-ms.topic: article
 dev_langs:
 - csharp
 - vb
 ms.assetid: 1776f48f-9bea-41f6-83a4-c990c7a2c991
-caps.latest.revision: "3"
-author: douglaslMS
-ms.author: douglasl
-manager: craigg
-ms.workload: dotnet
-ms.openlocfilehash: fee008d0b1f278a48eacd8eae70d75bbbfd93691
-ms.sourcegitcommit: ed26cfef4e18f6d93ab822d8c29f902cff3519d1
+ms.openlocfilehash: 2f705df810e7f3653589ca776a69bbe592458833
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 01/17/2018
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="sqlcommand-execution-with-a-sqlnotificationrequest"></a>使用 SqlNotificationRequest 執行 SqlCommand
 您可以將 <xref:System.Data.SqlClient.SqlCommand> 設定為在從伺服器擷取的資料變更時產生通知，如果再次執行查詢，結果集就會不同。 這對於想要在伺服器上使用自訂通知佇列，或者不想維護使用中物件的情況都很有用。  
@@ -81,6 +69,6 @@ command.ExecuteReader();
 // SQL Server queue to see if you have a new message.  
 ```  
   
-## <a name="see-also"></a>請參閱  
+## <a name="see-also"></a>另請參閱  
  [SQL Server 中的查詢通知](../../../../../docs/framework/data/adonet/sql/query-notifications-in-sql-server.md)  
  [ADO.NET Managed 提供者和 DataSet 開發人員中心](http://go.microsoft.com/fwlink/?LinkId=217917)

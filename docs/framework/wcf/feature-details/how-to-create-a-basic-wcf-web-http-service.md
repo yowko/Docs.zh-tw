@@ -1,30 +1,18 @@
 ---
-title: "HOW TO：建立基本 WCF Web HTTP 服務"
-ms.custom: 
+title: HOW TO：建立基本 WCF Web HTTP 服務
 ms.date: 03/30/2017
-ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.technology: dotnet-clr
-ms.tgt_pltfrm: 
-ms.topic: article
 dev_langs:
 - csharp
 - vb
 ms.assetid: 877662d3-d372-4e08-b417-51f66a0095cd
-caps.latest.revision: "26"
-author: dotnet-bot
-ms.author: dotnetcontent
-manager: wpickett
-ms.workload: dotnet
-ms.openlocfilehash: 4dc60bbb51bc573840d0d45356f0cd84fd32db2a
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.openlocfilehash: d147286fd2f8fe3f4f5e822598a07b51ae6d9791
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="how-to-create-a-basic-wcf-web-http-service"></a>HOW TO：建立基本 WCF Web HTTP 服務
-[!INCLUDE[indigo1](../../../../includes/indigo1-md.md)] 可以讓您建立公開 Web 端點的服務。 Web 端點會透過 XML 或 JSON 來傳送資料，而且不使用任何 SOAP 封套。 本主題示範如何公開這類端點。  
+Windows Communication Foundation (WCF) 可讓您建立公開 Web 端點的服務。 Web 端點會透過 XML 或 JSON 來傳送資料，而且不使用任何 SOAP 封套。 本主題示範如何公開這類端點。  
   
 > [!NOTE]
 >  保護 Web 端點的唯一方式，就是透過 HTTPS 運用傳輸安全性來加以公開。 使用訊息安全性時，安全性資訊通常會放在 SOAP 標頭中，而傳送至非 SOAP 端點的訊息不包含任何 SOAP 封套，也就沒地方可以放置安全性資訊，因此您必須仰賴傳輸安全性。  
@@ -59,7 +47,7 @@ ms.lasthandoff: 12/22/2017
     > [!NOTE]
     >  如果您沒有加入端點，<xref:System.ServiceModel.Web.WebServiceHost> 會自動建立預設端點。 <xref:System.ServiceModel.Web.WebServiceHost> 也會加入 <xref:System.ServiceModel.Description.WebHttpBehavior>，並停用 HTTP 說明網頁和 Web 服務描述語言 (WSDL) 的 GET 功能，使中繼資料端點不會干擾預設 HTTP 端點。  
     >   
-    >  如果新增包含 "" 的 URL 非 SOAP 端點，會在嘗試呼叫端點上的作業時導致未預期的行為。 發生原因是因為端點的接聽 URI 與說明頁面 (當您瀏覽至 [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] 服務的基底位址時所顯示的頁面) 的 URI 相同。  
+    >  如果新增包含 "" 的 URL 非 SOAP 端點，會在嘗試呼叫端點上的作業時導致未預期的行為。 這是端點的 URI 等同於說明頁面 （頁面會顯示當您瀏覽至 WCF 服務的基底位址） URI 接聽。  
   
      您可以執行下列其中一項動作來預防發生這種情況：  
   
@@ -87,7 +75,7 @@ ms.lasthandoff: 12/22/2017
   
 ### <a name="to-call-service-operations-mapped-to-get-in-internet-explorer"></a>若要在 Internet Explorer 中呼叫對應至 GET 的服務作業  
   
-1.  開啟 Internet Explorer 並輸入"`http://localhost:8000/EchoWithGet?s=Hello, world!`"然後按 ENTER。 URL 包含服務的基底位址 ("http://localhost:8000/")、端點的相對位址 ("")、要呼叫的服務作業 ("EchoWithGet")、問號，並於後面接續由連字號 (&) 分隔的具名參數清單。  
+1.  開啟 Internet Explorer 並輸入"`http://localhost:8000/EchoWithGet?s=Hello, world!`"然後按 ENTER。 URL 包含服務的基底位址 ("http://localhost:8000/")，端點的相對位址 ("")，以連字號分隔的具名參數清單後面接著要呼叫 ("EchoWithGet") 和問號的服務作業 (&)。  
   
 ### <a name="to-call-service-operations-in-code"></a>若要透過程式碼呼叫服務作業  
   
@@ -120,7 +108,7 @@ ms.lasthandoff: 12/22/2017
 ## <a name="compiling-the-code"></a>編譯程式碼  
  編譯 Service.cs 時，請參考 System.ServiceModel.dll 和 System.ServiceModel.Web.dll。  
   
-## <a name="see-also"></a>請參閱  
+## <a name="see-also"></a>另請參閱  
  <xref:System.ServiceModel.WebHttpBinding>  
  <xref:System.ServiceModel.Web.WebGetAttribute>  
  <xref:System.ServiceModel.Web.WebInvokeAttribute>  

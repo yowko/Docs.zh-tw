@@ -1,13 +1,6 @@
 ---
-title: "將路由事件標記為已處理以及類別處理"
-ms.custom: 
+title: 將路由事件標記為已處理以及類別處理
 ms.date: 03/30/2017
-ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.technology: dotnet-wpf
-ms.tgt_pltfrm: 
-ms.topic: article
 helpviewer_keywords:
 - tunneling events [WPF]
 - class listeners [WPF]
@@ -24,16 +17,11 @@ helpviewer_keywords:
 - events [WPF], suppressing
 - bubbling events [WPF]
 ms.assetid: 5e745508-4861-4b48-b5f6-5fc7ce5289d2
-caps.latest.revision: "19"
-author: dotnet-bot
-ms.author: dotnetcontent
-manager: wpickett
-ms.workload: dotnet
-ms.openlocfilehash: b2c9a550e1423acb37da9645d09cdb4ccefcea66
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.openlocfilehash: 2d696c85be0f46c5f08e1770f0d695dbb4d50cb9
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="marking-routed-events-as-handled-and-class-handling"></a>將路由事件標記為已處理以及類別處理
 路由事件的處理常式可以將事件資料內的事件標記為已處理。 處理事件時，即可有效地縮短路由。 類別處理是一種程式設計概念，此概念與路由事件相輔相成。 類別處理常式有機會在類別層級上使用處理常式來處理特定的路由事件 (此處理常式會優先叫用，之後才輪到在該類別任何執行個體上的任何執行個體處理常式)。  
@@ -62,7 +50,7 @@ ms.lasthandoff: 12/22/2017
   
 <a name="Class_Handlers_and_Instance_Handlers"></a>   
 ## <a name="class-handlers-and-instance-handlers"></a>類別處理常式和執行個體處理常式  
- 路由事件可使用兩種不同的事件接聽程式：類別接聽程式和執行個體接聽程式。 類別的接聽程式存在，因為型別呼叫特定<xref:System.Windows.EventManager> [!INCLUDE[TLA2#tla_api](../../../../includes/tla2sharptla-api-md.md)] ，<xref:System.Windows.EventManager.RegisterClassHandler%2A>，其靜態建構函式中或已覆寫中的項目基底類別的類別處理常式虛擬方法。 執行個體接聽程式是特定類別執行個體項目的其中一個或多個處理常式已經附加的路由事件的呼叫所<xref:System.Windows.UIElement.AddHandler%2A>。 現有[!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)]路由的事件進行呼叫<xref:System.Windows.UIElement.AddHandler%2A>一部分[!INCLUDE[TLA#tla_clr](../../../../includes/tlasharptla-clr-md.md)]將事件的包裝函式，並移除 {} 實作的事件，這也是如何簡單[!INCLUDE[TLA2#tla_xaml](../../../../includes/tla2sharptla-xaml-md.md)]機制的附加事件處理常式透過屬性語法會啟用。 因此即使簡單[!INCLUDE[TLA2#tla_xaml](../../../../includes/tla2sharptla-xaml-md.md)]使用量最終等同於<xref:System.Windows.UIElement.AddHandler%2A>呼叫。  
+ 路由事件可使用兩種不同的事件接聽程式：類別接聽程式和執行個體接聽程式。 類別的接聽程式存在，因為型別呼叫特定<xref:System.Windows.EventManager> [!INCLUDE[TLA2#tla_api](../../../../includes/tla2sharptla-api-md.md)] ，<xref:System.Windows.EventManager.RegisterClassHandler%2A>，其靜態建構函式中或已覆寫中的項目基底類別的類別處理常式虛擬方法。 執行個體接聽程式是特定類別執行個體項目的其中一個或多個處理常式已經附加的路由事件的呼叫所<xref:System.Windows.UIElement.AddHandler%2A>。 現有[!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)]路由的事件進行呼叫<xref:System.Windows.UIElement.AddHandler%2A>一部分[!INCLUDE[TLA#tla_clr](../../../../includes/tlasharptla-clr-md.md)]事件包裝函式加入{}並移除{}的事件，這也是如何實作簡單[!INCLUDE[TLA2#tla_xaml](../../../../includes/tla2sharptla-xaml-md.md)]附加的機制會啟用透過屬性語法的事件處理常式。 因此即使簡單[!INCLUDE[TLA2#tla_xaml](../../../../includes/tla2sharptla-xaml-md.md)]使用量最終等同於<xref:System.Windows.UIElement.AddHandler%2A>呼叫。  
   
  系統會檢查視覺化樹狀結構中的項目是否有登錄處理常式實作。 在整個路由中，可能會依據相關路由事件之路由策略型別中既有的順序，來叫用處理常式。 比方說，如果處理常式是附加至引發路由事件的相同元素，則事件反昇路由事件會先叫用這些處理常式。 然後，路由事件即會「事件反昇」至下一個父項目，依此類推，直到抵達應用程式的根項目為止。  
   
@@ -99,7 +87,7 @@ ms.lasthandoff: 12/22/2017
 ## <a name="deliberately-suppressing-input-events-for-control-compositing"></a>刻意隱藏複合控制項的輸入事件  
  路由事件類別處理的主要使用案例多是針對輸入事件和複合控制項。 從定義上來看，複合控制項是由多個實用的控制項或控制項基底類別組成。 通常，控制項作者希望能合併每個子元件可能引發之所有可能的輸入事件，以將整個控制項回報為單一的事件來源。 而在某些情況下，控制項作者可能會想要完全隱藏元件的事件，或是換成元件定義的事件，以提供詳細資訊或表示更具體的行為。 是任何元件作者可以立即看到標準範例是如何[!INCLUDE[TLA#tla_winclient](../../../../includes/tlasharptla-winclient-md.md)]<xref:System.Windows.Controls.Button>處理會將最終解析直覺式的事件的所有按鈕都有任何滑鼠事件：<xref:System.Windows.Controls.Primitives.ButtonBase.Click>事件。  
   
- <xref:System.Windows.Controls.Button>基底類別 (<xref:System.Windows.Controls.Primitives.ButtonBase>) 衍生自<xref:System.Windows.Controls.Control>而後者又衍生自<xref:System.Windows.FrameworkElement>和<xref:System.Windows.UIElement>，而且還提供了控制輸入的處理所需的事件基礎結構<xref:System.Windows.UIElement>層級。 特別是，<xref:System.Windows.UIElement>處理一般<xref:System.Windows.Input.Mouse>處理它的範圍內的滑鼠游標的點擊測試，並提供最常見的相異事件的事件按鈕的動作，例如<xref:System.Windows.UIElement.MouseLeftButtonDown>。 <xref:System.Windows.UIElement>也提供空虛擬<xref:System.Windows.UIElement.OnMouseLeftButtonDown%2A>做為預先登錄的類別處理常式<xref:System.Windows.UIElement.MouseLeftButtonDown>，和<xref:System.Windows.Controls.Primitives.ButtonBase>會覆寫它。 同樣地，<xref:System.Windows.Controls.Primitives.ButtonBase>使用類別的處理常式<xref:System.Windows.UIElement.MouseLeftButtonUp>。 覆寫，這會被傳遞事件資料，在實作標示，<xref:System.Windows.RoutedEventArgs>執行個體，以設定處理<xref:System.Windows.RoutedEventArgs.Handled%2A>至`true`，和相同的事件資料是什麼沿著給其他類別處理常式之路由的其餘部分會繼續和也可以執行個體處理常式或事件 setter。 此外，<xref:System.Windows.Controls.Primitives.ButtonBase.OnMouseLeftButtonUp%2A>覆寫接下來將會引發<xref:System.Windows.Controls.Primitives.ButtonBase.Click>事件。 大部分的接聽程式的最終結果會是<xref:System.Windows.UIElement.MouseLeftButtonDown>和<xref:System.Windows.UIElement.MouseLeftButtonUp>事件 」 會消失"，且會改為以取代<xref:System.Windows.Controls.Primitives.ButtonBase.Click>，多個意義，因為已知會在此事件來源，則為 true 的按鈕和一些不會保存事件複合完全片段的按鈕，或從其他項目。  
+ <xref:System.Windows.Controls.Button>基底類別 (<xref:System.Windows.Controls.Primitives.ButtonBase>) 衍生自<xref:System.Windows.Controls.Control>而後者又衍生自<xref:System.Windows.FrameworkElement>和<xref:System.Windows.UIElement>，而且還提供了控制輸入的處理所需的事件基礎結構<xref:System.Windows.UIElement>層級。 特別是，<xref:System.Windows.UIElement>處理一般<xref:System.Windows.Input.Mouse>處理它的範圍內的滑鼠游標的點擊測試，並提供最常見的相異事件的事件按鈕的動作，例如<xref:System.Windows.UIElement.MouseLeftButtonDown>。 <xref:System.Windows.UIElement> 也提供空虛擬<xref:System.Windows.UIElement.OnMouseLeftButtonDown%2A>做為預先登錄的類別處理常式<xref:System.Windows.UIElement.MouseLeftButtonDown>，和<xref:System.Windows.Controls.Primitives.ButtonBase>會覆寫它。 同樣地，<xref:System.Windows.Controls.Primitives.ButtonBase>使用類別的處理常式<xref:System.Windows.UIElement.MouseLeftButtonUp>。 覆寫，這會被傳遞事件資料，在實作標示，<xref:System.Windows.RoutedEventArgs>執行個體，以設定處理<xref:System.Windows.RoutedEventArgs.Handled%2A>至`true`，和相同的事件資料是什麼沿著給其他類別處理常式之路由的其餘部分會繼續和也可以執行個體處理常式或事件 setter。 此外，<xref:System.Windows.Controls.Primitives.ButtonBase.OnMouseLeftButtonUp%2A>覆寫接下來將會引發<xref:System.Windows.Controls.Primitives.ButtonBase.Click>事件。 大部分的接聽程式的最終結果會是<xref:System.Windows.UIElement.MouseLeftButtonDown>和<xref:System.Windows.UIElement.MouseLeftButtonUp>事件 」 會消失"，且會改為以取代<xref:System.Windows.Controls.Primitives.ButtonBase.Click>，多個意義，因為已知會在此事件來源，則為 true 的按鈕和一些不會保存事件複合完全片段的按鈕，或從其他項目。  
   
 <a name="WorkingAroundEventSuppressionByControls"></a>   
 ### <a name="working-around-event-suppression-by-controls"></a>處理控制項的事件隱藏項目  
@@ -109,7 +97,7 @@ ms.lasthandoff: 12/22/2017
   
  第二個技術只適用於輸入事件，其中路由事件的通道和事件反昇版本是成對的。 針對這些路由事件，您可以改為將處理常式新增至預覽/通道對等路由事件。 假設您在應用程式項目樹狀結構中的某些祖系項目層級附加預覽處理常式，該路由事件會從根目錄開始通過路由，因此按鈕類別處理程式碼不會攔截此事件。 如果您使用這種方式，在將任何預覽事件標示為已處理時，請務必小心。 指定的檔名例如<xref:System.Windows.UIElement.PreviewMouseLeftButtonDown>處理的根項目，如果您已將做為事件<xref:System.Windows.RoutedEventArgs.Handled%2A>在處理常式實作中，您會實際隱藏<xref:System.Windows.Controls.Primitives.ButtonBase.Click>事件。 這通常是不合理的行為。  
   
-## <a name="see-also"></a>請參閱  
+## <a name="see-also"></a>另請參閱  
  <xref:System.Windows.EventManager>  
  [預覽事件](../../../../docs/framework/wpf/advanced/preview-events.md)  
  [建立自訂路由事件](../../../../docs/framework/wpf/advanced/how-to-create-a-custom-routed-event.md)  

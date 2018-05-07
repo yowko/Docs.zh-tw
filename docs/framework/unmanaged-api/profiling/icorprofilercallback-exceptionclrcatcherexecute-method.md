@@ -1,14 +1,6 @@
 ---
-title: "ICorProfilerCallback::ExceptionCLRCatcherExecute 方法"
-ms.custom: 
+title: ICorProfilerCallback::ExceptionCLRCatcherExecute 方法
 ms.date: 03/30/2017
-ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.technology:
-- dotnet-clr
-ms.tgt_pltfrm: 
-ms.topic: reference
 api_name:
 - ICorProfilerCallback.ExceptionCLRCatcherExecute
 api_location:
@@ -23,17 +15,13 @@ helpviewer_keywords:
 ms.assetid: aaac8f98-5cf4-42c7-b04b-556cce367e36
 topic_type:
 - apiref
-caps.latest.revision: 
 author: mairaw
 ms.author: mairaw
-manager: wpickett
-ms.workload:
-- dotnet
-ms.openlocfilehash: c5d278fa196836d18b8515bee5af1946b2ca4d74
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.openlocfilehash: 6057593362e75044a9b2db32ad5dafe439a551d2
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="icorprofilercallbackexceptionclrcatcherexecute-method"></a>ICorProfilerCallback::ExceptionCLRCatcherExecute 方法
 時呼叫`catch`封鎖在 common language runtime (CLR) 本身內執行例外狀況。 這個方法是.NET Framework 2.0 版中已過時。  
@@ -53,6 +41,6 @@ HRESULT ExceptionCLRCatcherExecute();
   
  **.NET framework 版本：** 1.1、 1.0  
   
-## <a name="see-also"></a>請參閱  
+## <a name="see-also"></a>另請參閱  
  [ICorProfilerCallback 介面](../../../../docs/framework/unmanaged-api/profiling/icorprofilercallback-interface.md)  
  [ExceptionCLRCatcherFound 方法](../../../../docs/framework/unmanaged-api/profiling/icorprofilercallback-exceptionclrcatcherfound-method.md)

@@ -1,24 +1,12 @@
 ---
 title: 303 - UserDefinedInformationEventOccured
-ms.custom: 
 ms.date: 03/30/2017
-ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.technology: dotnet-clr
-ms.tgt_pltfrm: 
-ms.topic: article
 ms.assetid: 5ed5acaf-3755-4417-92c4-4ebc8e854ca1
-caps.latest.revision: "5"
-author: dotnet-bot
-ms.author: dotnetcontent
-manager: wpickett
-ms.workload: dotnet
-ms.openlocfilehash: 3bd4d94d457793eb036f037cc6dc22bff6d26ee2
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.openlocfilehash: 0b782b5ac0527b5acb3ebf0bf11c117563042495
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="303---userdefinedinformationeventoccured"></a>303 - UserDefinedInformationEventOccured
 ## <a name="properties"></a>屬性  
@@ -41,5 +29,5 @@ ms.lasthandoff: 12/22/2017
 |資料項目名稱|資料項目型別|描述|  
 |--------------------|--------------------|-----------------|  
 |名稱|`xs:string`|使用者定義的事件名稱|  
-|HostReference|`xs:string`|若是 Web 裝載的服務，此欄位會唯一識別 Web 階層架構中的服務。 其格式定義為 ' Web Site Name Application Virtual Path &#124;服務的虛擬路徑 &#124;ServiceName'。 範例: ' Default Web Site/CalculatorApplication #124;/CalculatorService.svc &#124;CalculatorService'。|  
+|HostReference|`xs:string`|若是 Web 裝載的服務，此欄位會唯一識別 Web 階層架構中的服務。 其格式定義為 ' Web Site Name Application Virtual Path&#124;Service Virtual Path&#124;ServiceName'。 範例: ' Default Web Site/CalculatorApplication&#124;/CalculatorService.svc&#124;CalculatorService'。|  
 |承載|`xs:string`|使用者定義的事件裝載。|

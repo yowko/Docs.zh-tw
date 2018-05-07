@@ -1,34 +1,20 @@
 ---
-title: "使用行為來設定與擴充執行階段"
-ms.custom: 
+title: 使用行為來設定與擴充執行階段
 ms.date: 03/30/2017
-ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.technology:
-- dotnet-clr
-ms.tgt_pltfrm: 
-ms.topic: article
 helpviewer_keywords:
 - attaching extensions using behaviors [WCF]
 ms.assetid: 149b99b6-6eb6-4f45-be22-c967279677d9
-caps.latest.revision: 
-author: dotnet-bot
-ms.author: dotnetcontent
-manager: wpickett
-ms.workload:
-- dotnet
-ms.openlocfilehash: 2ea157ea1ac73a287ba39c1468e7e9a5781d40a0
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
-ms.translationtype: MT
+ms.openlocfilehash: 05fd96574f072f8e349f83d11aca20bc5269dfc7
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="configuring-and-extending-the-runtime-with-behaviors"></a>使用行為來設定與擴充執行階段
-行為讓您能在 [!INCLUDE[indigo1](../../../../includes/indigo1-md.md)] 用戶端和服務應用程式中修改預設行為，並且新增可檢查與驗證服務組態的自訂延伸，或是修改執行階段行為。 本主題會說明行為介面、如何實作這些介面，以及如何透過程式設計方式或組態檔來將它們新增到服務描述 (在服務應用程式中) 或端點 (在用戶端應用程式中)。 如需有關如何使用系統提供行為的詳細資訊，請參閱[指定服務執行階段行為](../../../../docs/framework/wcf/specifying-service-run-time-behavior.md)和[指定用戶端執行階段行為](../../../../docs/framework/wcf/specifying-client-run-time-behavior.md)。  
+行為讓您修改預設行為，並加入 檢查並驗證服務組態或修改 Windows Communication Foundation (WCF) 用戶端和服務應用程式在執行階段行為的自訂延伸模組。 本主題會說明行為介面、如何實作這些介面，以及如何透過程式設計方式或組態檔來將它們新增到服務描述 (在服務應用程式中) 或端點 (在用戶端應用程式中)。 如需有關如何使用系統提供行為的詳細資訊，請參閱[指定服務執行階段行為](../../../../docs/framework/wcf/specifying-service-run-time-behavior.md)和[指定用戶端執行階段行為](../../../../docs/framework/wcf/specifying-client-run-time-behavior.md)。  
   
 ## <a name="behaviors"></a>「行為」  
- 行為類型會先新增到服務或服務端點描述物件 (分別在服務或用戶端上)，[!INCLUDE[indigo1](../../../../includes/indigo1-md.md)] 才能使用這些物件來建立執行 [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] 服務或 [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] 用戶端的執行階段。 當在執行階段建構程序期間呼叫這些行為之後，這些行為即可存取可修改由合約、繫結及位址所構成之執行階段的執行階段屬性和方法。  
+ 行為型別會加入至服務或服務端點描述物件 (在服務或用戶端，分別) 之前，這些物件會使用 Windows Communication Foundation (WCF) 來建立執行執行階段[!INCLUDE[indigo2](../../../../includes/indigo2-md.md)]服務或[!INCLUDE[indigo2](../../../../includes/indigo2-md.md)]用戶端。 當在執行階段建構程序期間呼叫這些行為之後，這些行為即可存取可修改由合約、繫結及位址所構成之執行階段的執行階段屬性和方法。  
   
 ### <a name="behavior-methods"></a>行為方法  
  所有的行為方法都有 `AddBindingParameters` 方法、`ApplyDispatchBehavior` 方法、`Validate` 方法，以及例外的 `ApplyClientBehavior` 方法：因為 <xref:System.ServiceModel.Description.IServiceBehavior> 無法在用戶端中執行，因此它不會實作 `ApplyClientBehavior`。  

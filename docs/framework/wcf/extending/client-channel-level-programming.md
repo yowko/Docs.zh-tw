@@ -1,30 +1,18 @@
 ---
-title: "用戶端通道層級的程式設計"
-ms.custom: 
+title: 用戶端通道層級的程式設計
 ms.date: 03/30/2017
-ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.technology: dotnet-clr
-ms.tgt_pltfrm: 
-ms.topic: article
 dev_langs:
 - csharp
 - vb
 ms.assetid: 3b787719-4e77-4e77-96a6-5b15a11b995a
-caps.latest.revision: "6"
-author: dotnet-bot
-ms.author: dotnetcontent
-manager: wpickett
-ms.workload: dotnet
-ms.openlocfilehash: 4c3d9bc1819045c8261f003cbab52dd71c4da408
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.openlocfilehash: ff399a2f3a4b86404695502fb002ee6920bea758
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="client-channel-level-programming"></a>用戶端通道層級的程式設計
-本主題說明如何撰寫 [!INCLUDE[indigo1](../../../../includes/indigo1-md.md)] 用戶端應用程式，而不使用 <xref:System.ServiceModel.ClientBase%601?displayProperty=nameWithType> 類別及其相關的物件模型。  
+本主題說明如何撰寫 Windows Communication Foundation (WCF) 用戶端應用程式，而不使用<xref:System.ServiceModel.ClientBase%601?displayProperty=nameWithType>類別和其相關聯的物件模型。  
   
 ## <a name="sending-messages"></a>傳送訊息  
  以下為準備傳送訊息及接收和處理回覆所需的步驟：  

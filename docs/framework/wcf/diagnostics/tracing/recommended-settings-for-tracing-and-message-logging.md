@@ -1,24 +1,12 @@
 ---
-title: "追蹤與訊息記錄的建議設定"
-ms.custom: 
+title: 追蹤與訊息記錄的建議設定
 ms.date: 03/30/2017
-ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.technology: dotnet-clr
-ms.tgt_pltfrm: 
-ms.topic: article
 ms.assetid: c6aca6e8-704e-4779-a9ef-50c46850249e
-caps.latest.revision: "11"
-author: dotnet-bot
-ms.author: dotnetcontent
-manager: wpickett
-ms.workload: dotnet
-ms.openlocfilehash: bca09510a73a74b039ec18934c0be39629c4ce39
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.openlocfilehash: 44cdf90572cc52d5daf95368a644759be0ad1ee0
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="recommended-settings-for-tracing-and-message-logging"></a>追蹤與訊息記錄的建議設定
 本主題將說明不同作業環境中，建議的追蹤和訊息記錄設定。  
@@ -123,5 +111,5 @@ logman start mytrace -pf logman.providers -o test.etl –ets
 logman stop mytrace -ets  
 ```  
   
-## <a name="see-also"></a>請參閱  
+## <a name="see-also"></a>另請參閱  
  [使用 Windows Management Instrumentation 進行診斷](../../../../../docs/framework/wcf/diagnostics/wmi/index.md)

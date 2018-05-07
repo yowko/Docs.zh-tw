@@ -1,28 +1,14 @@
 ---
-title: "WCF 資料服務資源"
-ms.custom: 
+title: WCF 資料服務資源
 ms.date: 03/30/2017
-ms.prod: .net-framework-oob
-ms.reviewer: 
-ms.suite: 
-ms.technology:
-- dotnet-clr
-ms.tgt_pltfrm: 
-ms.topic: article
 helpviewer_keywords:
 - WCF Data Services, learn more
 ms.assetid: e63a9baf-699c-42e2-b11f-fba57bcc14df
-caps.latest.revision: 
-author: dotnet-bot
-ms.author: dotnetcontent
-manager: wpickett
-ms.workload:
-- dotnet
-ms.openlocfilehash: 5c43c195411b07467f1041ecc5ed55239a1327dc
-ms.sourcegitcommit: c0dd436f6f8f44dc80dc43b07f6841a00b74b23f
+ms.openlocfilehash: 9efb8c54af40d135203868d93079d15dd7878cd5
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 01/19/2018
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="wcf-data-services-resources"></a>WCF 資料服務資源
 下列位置可以找到 [!INCLUDE[ssAstoria](../../../../includes/ssastoria-md.md)] 的簡介主題。 這些主題中有許多也包含其中含有詳細資訊的相關主題連結。  
@@ -72,5 +58,5 @@ ms.lasthandoff: 01/19/2018
  [實體-關聯性模型： 朝統一的資料檢視](http://go.microsoft.com/fwlink/?LinkId=91909)由 Peter Pin Shan Chen、 Massachusetts Institute 的技術  
  描述 [!INCLUDE[ssAstoria](../../../../includes/ssastoria-md.md)] 實作之實體關聯式模型的基本資訊。 完稿於 1976 年，這是電腦界最常引用的文件。  
   
-## <a name="see-also"></a>請參閱  
+## <a name="see-also"></a>另請參閱  
  [快速入門](../../../../docs/framework/data/wcf/getting-started-with-wcf-data-services.md)

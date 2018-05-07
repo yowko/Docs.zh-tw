@@ -1,14 +1,6 @@
 ---
-title: "ICorDebugObjectValue::GetVirtualMethod 方法"
-ms.custom: 
+title: ICorDebugObjectValue::GetVirtualMethod 方法
 ms.date: 03/30/2017
-ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.technology:
-- dotnet-clr
-ms.tgt_pltfrm: 
-ms.topic: reference
 api_name:
 - ICorDebugObjectValue.GetVirtualMethod
 api_location:
@@ -23,20 +15,16 @@ helpviewer_keywords:
 ms.assetid: f783ebc3-e952-46e6-9325-14dd2c666f21
 topic_type:
 - apiref
-caps.latest.revision: 
 author: rpetrusha
 ms.author: ronpet
-manager: wpickett
-ms.workload:
-- dotnet
-ms.openlocfilehash: 893c21e024d5888467ee25bc32cdb27d7e980d99
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.openlocfilehash: 09db41c71ef21ed6422785d3127c11af08420110
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="icordebugobjectvaluegetvirtualmethod-method"></a>ICorDebugObjectValue::GetVirtualMethod 方法
-`GetVirtualMethod`未在此版本的.NET Framework 中實作。  
+`GetVirtualMethod` 未在此版本的.NET Framework 中實作。  
   
 ## <a name="syntax"></a>語法  
   
@@ -50,6 +38,6 @@ HRESULT GetVirtualMethod (
 ## <a name="requirements"></a>需求  
  **標頭：** CorDebug.idl、 CorDebug.h  
   
-## <a name="see-also"></a>請參閱  
+## <a name="see-also"></a>另請參閱  
     
  

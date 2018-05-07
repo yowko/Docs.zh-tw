@@ -1,14 +1,6 @@
 ---
 title: HOW TO：讓 WCF 能夠存取 X.509 憑證
-ms.custom: ''
 ms.date: 03/30/2017
-ms.prod: .net-framework
-ms.reviewer: ''
-ms.suite: ''
-ms.technology:
-- dotnet-clr
-ms.tgt_pltfrm: ''
-ms.topic: article
 dev_langs:
 - csharp
 - vb
@@ -17,26 +9,20 @@ helpviewer_keywords:
 - certificates [WCF], making X.509 certificates accessible to WCF
 - X.509 certificates [WCF], making accessible to WCF
 ms.assetid: a54e407c-c2b5-4319-a648-60e43413664b
-caps.latest.revision: 7
-author: dotnet-bot
-ms.author: dotnetcontent
-manager: wpickett
-ms.workload:
-- dotnet
-ms.openlocfilehash: 77ee21074b6f1bb5a2f5bd4ee653100d3534075d
-ms.sourcegitcommit: 94d33cadc5ff81d2ac389bf5f26422c227832052
+ms.openlocfilehash: cd13eae0a72ceaf5abfb93dfe84a53cfc3c8dec4
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/30/2018
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="how-to-make-x509-certificates-accessible-to-wcf"></a>HOW TO：讓 WCF 能夠存取 X.509 憑證
-若要讓 [!INCLUDE[indigo1](../../../../includes/indigo1-md.md)] 能夠存取 X.509 憑證，應用程式程式碼必須指定憑證存放區名稱及位置。 在某些狀況下，處理序身分識別必須能夠存取包含與 X.509 憑證相關聯之私密金鑰的檔案。 若要取得與憑證存放區中 X.509 憑證相關聯的私密金鑰，[!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] 必須有進行這項作業的權限。 根據預設，只有擁有人和系統帳戶能夠存取憑證的私密金鑰。  
+若要讓 Windows Communication Foundation (WCF) 存取 X.509 憑證，應用程式程式碼必須指定憑證存放區名稱和位置。 在某些狀況下，處理序身分識別必須能夠存取包含與 X.509 憑證相關聯之私密金鑰的檔案。 若要取得相關聯的憑證存放區中 X.509 憑證的私密金鑰，WCF 必須有權限，若要這樣做。 根據預設，只有擁有人和系統帳戶能夠存取憑證的私密金鑰。  
   
 ### <a name="to-make-x509-certificates-accessible-to-wcf"></a>讓 WCF 能夠存取 X.509 憑證  
   
-1.  對於用以執行 [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] 的帳戶，授與含有與 X.509 憑證相關聯之私密金鑰之檔案的讀取權限。  
+1.  授與 WCF 執行讀取權限，其中包含與 X.509 憑證相關聯的私密金鑰檔案的帳戶。  
   
-    1.  判斷 [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] 是否需要 X.509 憑證之私密金鑰的讀取權限。  
+    1.  判斷 WCF 是否需要 X.509 憑證之私密金鑰的讀取權限。  
   
          下表詳細列出在使用 X.509 憑證時是否必須要提供私密金鑰。  
   
@@ -64,9 +50,9 @@ ms.lasthandoff: 04/30/2018
         findprivatekey.exe My CurrentUser -t "46 dd 0e 7a ed 0b 7a 31 9b 02 a3 a0 43 7a d8 3f 60 40 92 9d" -a  
         ```  
   
-    4.  判斷 [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] 在其下執行的帳戶。  
+    4.  判斷 WCF 下執行的帳戶。  
   
-         下表詳細列出在特定案例中用以執行 [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] 的帳戶。  
+         下表詳細說明 WCF 正在執行指定之案例的帳戶。  
   
         |情節|處理序身分識別|  
         |--------------|----------------------|  
@@ -75,7 +61,7 @@ ms.lasthandoff: 04/30/2018
         |裝載於 IIS 6.0 ([!INCLUDE[ws2003](../../../../includes/ws2003-md.md)]) 或 IIS 7.0 ([!INCLUDE[wv](../../../../includes/wv-md.md)]) 中的服務。|網路服務|  
         |裝載於 IIS 5.X ([!INCLUDE[wxp](../../../../includes/wxp-md.md)]) 中的服務。|由 Machine.config 檔中的 `<processModel>` 項目控制。 預設帳戶是 ASPNET。|  
   
-    5.  使用類似 cacls.exe 的工具，對用以執行 [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] 的帳戶授與包含該私密金鑰之檔案的讀取權限。  
+    5.  授與讀取權限到檔案，其中包含私密金鑰，以 WCF 下執行，使用 cacls.exe 等工具的帳戶。  
   
          下列程式碼範例會編輯 (/E) 已指定檔案的存取控制清單 (ACL)，以便對網路服務帳戶授與 (/G) 該檔案的讀取權限 (:R)。  
   

@@ -1,11 +1,7 @@
 ---
-title: "Put 函式 （Unmanaged API 參考）"
-description: "Put 函式會將新值指派給具名屬性。"
+title: Put 函式 （Unmanaged API 參考）
+description: Put 函式會將新值指派給具名屬性。
 ms.date: 11/06/2017
-ms.prod: .net-framework
-ms.technology:
-- dotnet-clr
-ms.topic: reference
 api_name:
 - Put
 api_location:
@@ -20,14 +16,11 @@ topic_type:
 - Reference
 author: rpetrusha
 ms.author: ronpet
-manager: wpickett
-ms.workload:
-- dotnet
-ms.openlocfilehash: 09d3edc74b34688d5cc36e688f634850cfb60910
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.openlocfilehash: 9f3ffe27bef6583b733fc04f2f25903d545daa74
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="put-function"></a>Put 函式
 將具名的屬性設定為新值。
@@ -93,7 +86,7 @@ HRESULT Put (
 
 如果設定的屬性`Put`函式中的父類別，除非屬性類型不符合父類別型別變更屬性的預設值。 如果屬性不存在，而且它不是型別不相符，則屬性會是 ceated。
 
-使用`vtType`參數 CIM 類別定義中建立新屬性時，才與`pVal`是`null`或指向`VARIANT`型別的`VT_NULL`。 在此情況下，`vType`參數會指定屬性的 CIM 類型。 在每個其他情況下，`vtType`必須是 0。 `vtType`如果基礎物件執行個體，則也必須是 0 (即使`Val`是`null`) 因為屬性類型固定的無法變更。   
+使用`vtType`參數 CIM 類別定義中建立新屬性時，才與`pVal`是`null`或指向`VARIANT`型別的`VT_NULL`。 在此情況下，`vType`參數會指定屬性的 CIM 類型。 在每個其他情況下，`vtType`必須是 0。 `vtType` 如果基礎物件執行個體，則也必須是 0 (即使`Val`是`null`) 因為屬性類型固定的無法變更。   
 
 ## <a name="example"></a>範例
 
@@ -104,7 +97,7 @@ HRESULT Put (
   
  **標頭：** WMINet_Utils.idl  
   
- **.NET framework 版本：**[!INCLUDE[net_current_v472plus](../../../../includes/net-current-v472plus.md)]  
+ **.NET framework 版本：** [!INCLUDE[net_current_v472plus](../../../../includes/net-current-v472plus.md)]  
   
 ## <a name="see-also"></a>另請參閱  
 [WMI 和效能計數器 （Unmanaged API 參考）](index.md)

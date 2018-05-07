@@ -1,13 +1,6 @@
 ---
-title: "如何：測試 UserControl 的執行階段行為"
-ms.custom: 
+title: 如何：測試 UserControl 的執行階段行為
 ms.date: 03/30/2017
-ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.technology: dotnet-winforms
-ms.tgt_pltfrm: 
-ms.topic: article
 helpviewer_keywords:
 - UserControl class [Windows Forms], testing
 - user controls [Windows Forms], testing
@@ -15,16 +8,11 @@ helpviewer_keywords:
 - UserControl Test Container
 - UserControl class [Windows Forms], run-time behavior
 ms.assetid: 4e4d5c49-1346-40ac-9d96-40211b573583
-caps.latest.revision: "12"
-author: dotnet-bot
-ms.author: dotnetcontent
-manager: wpickett
-ms.workload: dotnet
-ms.openlocfilehash: 48b7c47a14f27439c60280a5c4202e9f4af76397
-ms.sourcegitcommit: c0dd436f6f8f44dc80dc43b07f6841a00b74b23f
+ms.openlocfilehash: ac846840f7d420da63f6bfe3db3772d7bf6cc730
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 01/19/2018
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="how-to-test-the-run-time-behavior-of-a-usercontrol"></a>如何：測試 UserControl 的執行階段行為
 當您開發<xref:System.Windows.Forms.UserControl>，您要測試其執行階段行為。 您可以建立個別的 Windows 架構應用程式專案，並將您的控制項上測試表單，但此程序，是很方便。 更快且更容易的方式是使用**UserControl Test Container** Visual Studio 所提供。 這個測試容器啟動直接從您的 Windows 控制項程式庫專案。  
@@ -77,7 +65,7 @@ ms.lasthandoff: 01/19/2018
   
 6.  使用**選取的使用者控制項**<xref:System.Windows.Forms.ComboBox>切換兩個使用者控制項，從**TestContainerExample**專案。  
   
-## <a name="see-also"></a>請參閱  
+## <a name="see-also"></a>另請參閱  
  <xref:System.Windows.Forms.UserControl>  
  [操作說明：撰寫複合控制項](../../../../docs/framework/winforms/controls/how-to-author-composite-controls.md)  
  [逐步解說：使用 Visual Basic 撰寫複合控制項](../../../../docs/framework/winforms/controls/walkthrough-authoring-a-composite-control-with-visual-basic.md)  

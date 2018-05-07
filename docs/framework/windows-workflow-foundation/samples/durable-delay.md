@@ -1,23 +1,12 @@
 ---
-title: "永久性延遲"
-ms.custom: 
+title: 永久性延遲
 ms.date: 03/30/2017
-ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.tgt_pltfrm: 
-ms.topic: article
 ms.assetid: 220ec240-b958-430c-81ff-b734a6aa97ae
-caps.latest.revision: "11"
-author: dotnet-bot
-ms.author: dotnetcontent
-manager: wpickett
-ms.workload: dotnet
-ms.openlocfilehash: f8313bfafa66e012eea65f1c4d9b50a9ce37908f
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.openlocfilehash: 5307b8144e17f91cd3ba8c2e385492f86c167820
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="durable-delay"></a>永久性延遲
 這個範例示範如何使用永久性延遲，此延遲會在延遲期間將工作流程保存至永久性裝置。 範例工作流程包含兩個主控台訊息，兩者之間會以延遲區隔。 當延遲觸發時，工作流程便會卸載，並且在工作流程執行個體存放區中等待 5 秒鐘，再重新載入記憶體中。  
@@ -27,7 +16,7 @@ ms.lasthandoff: 12/22/2017
   
  下列清單詳細描述工作流程服務主機在初始化期間的設定內容。  
   
-1.  建立具有位址的服務主機 (http://localhost:8080/Client)。  
+1.  建立服務主機的位址 (http://localhost:8080/Client)。  
   
 2.  在服務主機中建立端點，以便在工作流程內與 <xref:System.ServiceModel.Activities.Receive> 活動進行通訊。  
   
@@ -76,6 +65,6 @@ ms.lasthandoff: 12/22/2017
 >   
 >  `<InstallDrive>:\WF_WCF_Samples`  
 >   
->  如果此目錄不存在，請移至 [Windows Communication Foundation (WCF) and Windows Workflow Foundation (WF) Samples for .NET Framework 4  (適用於 .NET Framework 4 的 Windows Communication Foundation (WCF) 與 Windows Workflow Foundation (WF) 範例)](http://go.microsoft.com/fwlink/?LinkId=150780) ，以下載所有 [!INCLUDE[indigo1](../../../../includes/indigo1-md.md)] 和 [!INCLUDE[wf1](../../../../includes/wf1-md.md)] 範例。 此範例位於下列目錄。  
+>  如果此目錄不存在，請移至[Windows Communication Foundation (WCF) 和適用於.NET Framework 4 的 Windows Workflow Foundation (WF) 範例](http://go.microsoft.com/fwlink/?LinkId=150780)下載所有 Windows Communication Foundation (WCF) 和[!INCLUDE[wf1](../../../../includes/wf1-md.md)]範例。 此範例位於下列目錄。  
 >   
 >  `<InstallDrive>:\WF_WCF_Samples\WF\Basic\Services\DurableDelay`

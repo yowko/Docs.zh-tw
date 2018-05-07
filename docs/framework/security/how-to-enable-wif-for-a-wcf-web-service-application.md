@@ -1,24 +1,14 @@
 ---
-title: "如何：啟用 WCF Web 服務應用程式的 WIF"
-ms.custom: 
+title: 如何：啟用 WCF Web 服務應用程式的 WIF
 ms.date: 03/30/2017
-ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.technology: dotnet-clr
-ms.tgt_pltfrm: 
-ms.topic: article
 ms.assetid: bfc64b3d-64e9-4093-a6a4-72e933917af7
-caps.latest.revision: "6"
 author: BrucePerlerMS
-ms.author: bruceper
 manager: mbaldwin
-ms.workload: dotnet
-ms.openlocfilehash: 1af6fc1b7802fe69f0585011322e2485695a030c
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.openlocfilehash: bd0ad5392010772c3205d8f148c985de2706de01
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="how-to-enable-wif-for-a-wcf-web-service-application"></a>如何：啟用 WCF Web 服務應用程式的 WIF
 ## <a name="applies-to"></a>適用於  
@@ -27,14 +17,14 @@ ms.lasthandoff: 12/22/2017
   
 -   Microsoft® Windows® Communication Foundation (WCF)  
   
-## <a name="summary"></a>摘要  
+## <a name="summary"></a>總結  
  這篇使用方法文章提供了在 WCF Web 服務中啟用 WIF 的詳細逐步程序。 此外，它還提供如何測試應用程式以確認應用程式執行時 Web 服務可正確提出宣告的指示。 這篇使用方法文章並沒有提供建立 Security Token Service (STS) 的詳細指示，而是使用識別和存取工具隨附的「開發 STS」。 「開發 STS」並不會執行實際的驗證，而只是用於測試用途。 您必須安裝識別和存取工具才能完成這篇使用方法文章。 您可以從下列位置下載：[Identity and Access Tool](http://go.microsoft.com/fwlink/?LinkID=245849) (身分識別與存取工具)  
   
 ## <a name="contents"></a>內容  
   
 -   目標  
   
--   概觀  
+-   總覽  
   
 -   步驟摘要  
   
@@ -50,7 +40,7 @@ ms.lasthandoff: 12/22/2017
   
 -   建立會從 STS 要求權杖並將它傳遞至 WCF 服務的 WCF 用戶端  
   
-## <a name="overview"></a>概觀  
+## <a name="overview"></a>總覽  
  這篇使用方法文章的目的是要示範開發人員如何在開發 WCF 服務時使用同盟驗證。 在 WCF 服務中使用同盟的其中一些優點包括：  
   
 1.  將驗證邏輯排除在 WCF 服務程式碼外  

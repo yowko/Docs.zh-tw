@@ -1,11 +1,7 @@
 ---
-title: "GetObjectText 函式 （Unmanaged API 參考）"
-description: "GetObjectText 函式會傳回物件的文字呈現以 MOF 語法。"
+title: GetObjectText 函式 （Unmanaged API 參考）
+description: GetObjectText 函式會傳回物件的文字呈現以 MOF 語法。
 ms.date: 11/06/2017
-ms.prod: .net-framework
-ms.technology:
-- dotnet-clr
-ms.topic: reference
 api_name:
 - GetObjectText
 api_location:
@@ -20,14 +16,11 @@ topic_type:
 - Reference
 author: rpetrusha
 ms.author: ronpet
-manager: wpickett
-ms.workload:
-- dotnet
-ms.openlocfilehash: 0b47dc73bb9da71b0c8593aa5758179327d7572d
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.openlocfilehash: d2f0e766a3a310bdb58f7cbffd8d49404eb5e0b0
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="getobjecttext-function"></a>GetObjectText 函式
 傳回物件的文字呈現在受管理物件格式 (MOF) 語法。
@@ -81,14 +74,14 @@ HRESULT GetObjectText (
 1. 參數會以其識別項值順序 resequenced。
 1. 參數指定為`[in]`和`[out]`會結合成單一參數。
  
-`pstrObjectText`必須是指向`null`時呼叫的函式; 它必須指向在方法呼叫之前，因為無效的指標將不會重新配置的字串。
+`pstrObjectText` 必須是指向`null`時呼叫的函式; 它必須指向在方法呼叫之前，因為無效的指標將不會重新配置的字串。
 
 ## <a name="requirements"></a>需求  
 **平台：**看到[系統需求](../../../../docs/framework/get-started/system-requirements.md)。  
   
  **標頭：** WMINet_Utils.idl  
   
- **.NET framework 版本：**[!INCLUDE[net_current_v472plus](../../../../includes/net-current-v472plus.md)]  
+ **.NET framework 版本：** [!INCLUDE[net_current_v472plus](../../../../includes/net-current-v472plus.md)]  
   
 ## <a name="see-also"></a>另請參閱  
 [WMI 和效能計數器 （Unmanaged API 參考）](index.md)

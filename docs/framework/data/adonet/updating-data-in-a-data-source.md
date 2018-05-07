@@ -1,27 +1,15 @@
 ---
-title: "更新資料來源中的資料"
-ms.custom: 
+title: 更新資料來源中的資料
 ms.date: 03/30/2017
-ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.technology: dotnet-ado
-ms.tgt_pltfrm: 
-ms.topic: article
 dev_langs:
 - csharp
 - vb
 ms.assetid: 55c545e5-dcd5-4323-a5b9-3825c2157462
-caps.latest.revision: "4"
-author: douglaslMS
-ms.author: douglasl
-manager: craigg
-ms.workload: dotnet
-ms.openlocfilehash: 3c611e2d7c4c1de17588ba5220124db55bca2764
-ms.sourcegitcommit: ed26cfef4e18f6d93ab822d8c29f902cff3519d1
+ms.openlocfilehash: 11c3faa85d6d0b77c4e606815aa8252188b6f67d
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 01/17/2018
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="updating-data-in-a-data-source"></a>更新資料來源中的資料
 會修改資料的 SQL 陳述式 (例如 INSERT、UPDATE 或 DELETE) 不會傳回資料列。 同樣地，許多預存程序會執行動作但不傳回資料列。 若要執行不傳回資料列的命令，建立**命令**物件使用適當的 SQL 命令和**連接**，包括任何必要**參數**。 執行命令並搭配**ExecuteNonQuery**方法**命令**物件。  
@@ -102,7 +90,7 @@ Int32 categoryID = (Int32) command.Parameters["@Identity"].Value;
 Int32 rowCount = (Int32) command.Parameters["@RowCount"].Value;  
 ```  
   
-## <a name="see-also"></a>請參閱  
+## <a name="see-also"></a>另請參閱  
  [使用命令修改資料](../../../../docs/framework/data/adonet/using-commands-to-modify-data.md)  
  [使用 DataAdapter 更新資料來源](../../../../docs/framework/data/adonet/updating-data-sources-with-dataadapters.md)  
  [命令和參數](../../../../docs/framework/data/adonet/commands-and-parameters.md)  

@@ -1,14 +1,6 @@
 ---
 title: ICorDebugGenericValue Interface1
-ms.custom: 
 ms.date: 03/30/2017
-ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.technology:
-- dotnet-clr
-ms.tgt_pltfrm: 
-ms.topic: reference
 api_name:
 - ICorDebugGenericValue
 api_location:
@@ -22,17 +14,13 @@ helpviewer_keywords:
 ms.assetid: bc14f408-b359-4c8c-ade2-888ccdf7261b
 topic_type:
 - apiref
-caps.latest.revision: 
 author: rpetrusha
 ms.author: ronpet
-manager: wpickett
-ms.workload:
-- dotnet
-ms.openlocfilehash: d6c6fb4893edf0bcda9d6f7ddbeea7054f5b4fd5
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.openlocfilehash: 0081f020da673023e2c35f9599e9682215e2c9d4
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="icordebuggenericvalue-interface1"></a>ICorDebugGenericValue Interface1
 「 ICorDebugValue"套用至所有值的子類別。 這個介面提供值的 Get 和 Set 方法。  
@@ -45,7 +33,7 @@ ms.lasthandoff: 12/22/2017
 |[SetValue 方法](../../../../docs/framework/unmanaged-api/debugging/icordebuggenericvalue-setvalue-method.md)|從指定的緩衝區複製的新值。|  
   
 ## <a name="remarks"></a>備註  
- `ICorDebugGenericValue`因為它是不可遠端是子介面。  
+ `ICorDebugGenericValue` 因為它是不可遠端是子介面。  
   
  對於參考型別，這個值會是參考，而不是參考的內容。  
   
@@ -61,8 +49,8 @@ ms.lasthandoff: 12/22/2017
   
  **程式庫：** CorGuids.lib  
   
- **.NET framework 版本：**[!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
+ **.NET framework 版本：** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
   
-## <a name="see-also"></a>請參閱  
+## <a name="see-also"></a>另請參閱  
     
  [偵錯介面](../../../../docs/framework/unmanaged-api/debugging/debugging-interfaces.md)

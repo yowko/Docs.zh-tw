@@ -1,24 +1,14 @@
 ---
-title: "WSTrustChannelFactory 和 WSTrustChannel"
-ms.custom: 
+title: WSTrustChannelFactory 和 WSTrustChannel
 ms.date: 03/30/2017
-ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.technology: dotnet-clr
-ms.tgt_pltfrm: 
-ms.topic: article
 ms.assetid: 96cec467-e963-4132-b18b-7d0b3a2e979f
-caps.latest.revision: "9"
 author: BrucePerlerMS
-ms.author: bruceper
 manager: mbaldwin
-ms.workload: dotnet
-ms.openlocfilehash: 35f4449f7a826ea49be750cd750cb989c8c455fb
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.openlocfilehash: 3fabd7e3cad76e17061751d0fe0bb4ae06bf6fb6
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="wstrustchannelfactory-and-wstrustchannel"></a>WSTrustChannelFactory 和 WSTrustChannel
 如果您已熟悉 Windows Communication Foundation (WCF)，則應該知道 WCF 已是同盟感知用戶端。 若以 <xref:System.ServiceModel.WSFederationHttpBinding> 或類似的自訂繫結設定 WCF 用戶端，您就可以啟用對服務的同盟驗證。  
@@ -109,5 +99,5 @@ IHelloService serviceChannel = channelFactory.CreateChannelWithIssuedToken<IHell
   
 -   <xref:System.ServiceModel.Security.WSTrustChannelFactory> 和 <xref:System.ServiceModel.Security.WSTrustChannel> 允許您根據 WCF 的最佳做法控制通道快取、錯誤和復原語意。  
   
-## <a name="see-also"></a>請參閱  
+## <a name="see-also"></a>另請參閱  
  [WIF 功能](../../../docs/framework/security/wif-features.md)

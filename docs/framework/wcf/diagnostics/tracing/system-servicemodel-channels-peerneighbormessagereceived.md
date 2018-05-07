@@ -1,24 +1,12 @@
 ---
 title: System.ServiceModel.Channels.PeerNeighborMessageReceived
-ms.custom: 
 ms.date: 03/30/2017
-ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.technology: dotnet-clr
-ms.tgt_pltfrm: 
-ms.topic: article
 ms.assetid: c787b86c-08c9-4d44-80ce-a6d189deb732
-caps.latest.revision: "6"
-author: dotnet-bot
-ms.author: dotnetcontent
-manager: wpickett
-ms.workload: dotnet
-ms.openlocfilehash: 5f01fec9a1387edc52ecd6b055caeeec99b67cd1
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.openlocfilehash: 2b5cf77ac689d178d5468781cfcb3f3c94747548
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="systemservicemodelchannelspeerneighbormessagereceived"></a>System.ServiceModel.Channels.PeerNeighborMessageReceived
 已從對等芳鄰收到訊息。  
@@ -26,7 +14,7 @@ ms.lasthandoff: 12/22/2017
 ## <a name="description"></a>描述  
  這個追蹤會在處理來自芳鄰清單中節點的傳入訊息期間發生。  
   
-## <a name="see-also"></a>請參閱  
+## <a name="see-also"></a>另請參閱  
  [追蹤](../../../../../docs/framework/wcf/diagnostics/tracing/index.md)  
  [使用追蹤為應用程式進行疑難排解](../../../../../docs/framework/wcf/diagnostics/tracing/using-tracing-to-troubleshoot-your-application.md)  
  [管理與診斷](../../../../../docs/framework/wcf/diagnostics/index.md)

@@ -1,14 +1,6 @@
 ---
-title: "ICorDebugNativeFrame2::IsMatchingParentFrame 方法"
-ms.custom: 
+title: ICorDebugNativeFrame2::IsMatchingParentFrame 方法
 ms.date: 03/30/2017
-ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.technology:
-- dotnet-clr
-ms.tgt_pltfrm: 
-ms.topic: reference
 api_name:
 - ICorDebugNativeFrame2.IsMatchingParentFrame Method
 api_location:
@@ -23,17 +15,13 @@ helpviewer_keywords:
 ms.assetid: d2ca20db-df22-4528-a0dd-a09ea62c8998
 topic_type:
 - apiref
-caps.latest.revision: 
 author: rpetrusha
 ms.author: ronpet
-manager: wpickett
-ms.workload:
-- dotnet
-ms.openlocfilehash: fc2d8eacb05e861290ad19a34c261943dc2959a1
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.openlocfilehash: 39c0ea69a0922f5e0d25c98c21ec17a872b2f421
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="icordebugnativeframe2ismatchingparentframe-method"></a>ICorDebugNativeFrame2::IsMatchingParentFrame 方法
 判斷指定的範圍是否為目前的畫面格的父代。  
@@ -65,7 +53,7 @@ HRESULT IsMatchingParentFrame([in] ICorDebugNativeFrame2
 ## <a name="exceptions"></a>例外狀況  
   
 ## <a name="remarks"></a>備註  
- `IsMatchingParentFrame`傳回`true`框架物件傳遞至該方法是否呼叫此方法的框架物件的父系。 如果您不是子系為指定框架的框架上呼叫方法，它會傳回錯誤。  
+ `IsMatchingParentFrame` 傳回`true`框架物件傳遞至該方法是否呼叫此方法的框架物件的父系。 如果您不是子系為指定框架的框架上呼叫方法，它會傳回錯誤。  
   
 ## <a name="requirements"></a>需求  
  **平台：**看到[系統需求](../../../../docs/framework/get-started/system-requirements.md)。  
@@ -74,9 +62,9 @@ HRESULT IsMatchingParentFrame([in] ICorDebugNativeFrame2
   
  **程式庫：** CorGuids.lib  
   
- **.NET framework 版本：**[!INCLUDE[net_current_v40plus](../../../../includes/net-current-v40plus-md.md)]  
+ **.NET framework 版本：** [!INCLUDE[net_current_v40plus](../../../../includes/net-current-v40plus-md.md)]  
   
-## <a name="see-also"></a>請參閱  
+## <a name="see-also"></a>另請參閱  
  [ICorDebugNativeFrame2 介面](../../../../docs/framework/unmanaged-api/debugging/icordebugnativeframe2-interface.md)  
  [偵錯介面](../../../../docs/framework/unmanaged-api/debugging/debugging-interfaces.md)  
  [偵錯](../../../../docs/framework/unmanaged-api/debugging/index.md)

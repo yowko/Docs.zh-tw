@@ -1,28 +1,14 @@
 ---
 title: 設定 HTTP 和 HTTPS
-ms.custom: ''
 ms.date: 03/30/2017
-ms.prod: .net-framework
-ms.reviewer: ''
-ms.suite: ''
-ms.technology:
-- dotnet-clr
-ms.tgt_pltfrm: ''
-ms.topic: article
 helpviewer_keywords:
 - configuring HTTP [WCF]
 ms.assetid: b0c29a86-bc0c-41b3-bc1e-4eb5bb5714d4
-caps.latest.revision: 17
-author: dotnet-bot
-ms.author: dotnetcontent
-manager: wpickett
-ms.workload:
-- dotnet
-ms.openlocfilehash: 8d3317cd4bba7c9935bd7555f16599dc94725fbd
-ms.sourcegitcommit: 03ee570f6f528a7d23a4221dcb26a9498edbdf8c
+ms.openlocfilehash: 70c947724abf8da68ec8f7e6d858e26fec62dce5
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/28/2018
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="configuring-http-and-https"></a>設定 HTTP 和 HTTPS
 WCF 服務與用戶端可以透過 HTTP 和 HTTPS 進行通訊。 HTTP/HTTPS 設定是使用 Internet Information Services (IIS)，或使用命令列工具設定。 在 IIS HTTP 或 HTTPS 之下裝載 WCF 服務時，設定可以在 IIS (使用 inetmgr.exe 工具) 內進行。 如果是自我裝載的 WCF 服務，可以使用命令列工具設定 HTTP 或 HTTPS 設定。  
@@ -79,7 +65,7 @@ netsh http add urlacl url=http://+:80/MyUri user=DOMAIN\user
  如需逐步指示，請參閱[How to： 使用 SSL 憑證設定連接埠](../../../../docs/framework/wcf/feature-details/how-to-configure-a-port-with-an-ssl-certificate.md)。  
   
 ## <a name="configuring-the-ip-listen-list"></a>設定 IP 接聽清單  
- 一旦使用者註冊了 URL，HTTP 伺服器 API 只會繫結至 IP 位址與連接埠。 根據預設，HTTP 伺服器 API 會針對電腦中的所有 IP 位址繫結至其 URL 中的連接埠。 如果不使用 HTTP 伺服器 API 的應用程式先前已經繫結至該 IP 位址與連接埠的組合，就會產生衝突情況。 IP 接聽清單可允許所有 [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] 服務和使用某些電腦 IP 位址之連接埠的應用程式共存在一起。 如果 IP 接聽清單包含任何項目，則 HTTP 伺服器 API 只會繫結至清單所指定的特定 IP 位址。 您需要系統管理員權限才能修改 IP 接聽清單。  
+ 一旦使用者註冊了 URL，HTTP 伺服器 API 只會繫結至 IP 位址與連接埠。 根據預設，HTTP 伺服器 API 會針對電腦中的所有 IP 位址繫結至其 URL 中的連接埠。 如果不使用 HTTP 伺服器 API 的應用程式先前已經繫結至該 IP 位址與連接埠的組合，就會產生衝突情況。 IP 接聽清單可讓 WCF 服務與某些電腦的 IP 位址使用的通訊埠的應用程式並存。 如果 IP 接聽清單包含任何項目，則 HTTP 伺服器 API 只會繫結至清單所指定的特定 IP 位址。 您需要系統管理員權限才能修改 IP 接聽清單。  
   
 ### <a name="running-windows-xp-or-server-2003"></a>執行 Windows XP 或 Server 2003  
  請使用 httpcfg 工具來修改 IP 接聽清單，如下列範例所示。 [Windows 支援工具文件](http://go.microsoft.com/fwlink/?LinkId=94840)說明 httpcfg.exe 工具的語法。  
@@ -101,7 +87,7 @@ netsh http add iplisten ipaddress=0.0.0.0:8000
  HTTP 伺服器 API 內含的一些進階組態設定無法透過 HttpCfg 取得。 這些設定會維護在登錄中，並套用至所有在系統中使用 HTTP 伺服器 API 的應用程式。 這些設定的相關資訊，請參閱[IIS 的 Http.sys 登錄設定](http://go.microsoft.com/fwlink/?LinkId=94843)。 大部分的使用者應該都不需要變更這些設定值。  
   
 ## <a name="issues-specific-to-windows-xp"></a>Windows XP 的特定問題  
- IIS 不支援在 [!INCLUDE[wxp](../../../../includes/wxp-md.md)] 上共用連接埠。 如果 IIS 正在執行，而且 [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] 服務嘗試使用帶有相同連接埠的命名空間，則 [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] 服務會無法啟動。 IIS 和 [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] 都預設為使用連接埠 80。 請針對其中一項服務變更其連接埠指派，或是使用 IP 接聽清單將 [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] 服務指派給 IIS 不使用的網路介面卡。 IIS 6.0 (含) 以後版本已經重新設計，可以使用 HTTP 伺服器 API。  
+ IIS 不支援在 [!INCLUDE[wxp](../../../../includes/wxp-md.md)] 上共用連接埠。 如果 IIS 正在執行的 WCF 服務會嘗試使用相同的連接埠的命名空間，WCF 服務無法啟動。 兩者都預設為使用通訊埠 80 的 IIS 和 WCF。 請變更其中一個服務的通訊埠指派，或使用 IP 接聽清單將 WCF 服務指派給 IIS 不使用的網路介面卡。 IIS 6.0 (含) 以後版本已經重新設計，可以使用 HTTP 伺服器 API。  
   
 ## <a name="see-also"></a>另請參閱  
  <xref:System.ServiceModel.WSDualHttpBinding>  

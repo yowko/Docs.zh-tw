@@ -1,31 +1,17 @@
 ---
 title: Windows Communication Foundation 繫結概觀
-ms.custom: ''
 ms.date: 03/30/2017
-ms.prod: .net-framework
-ms.reviewer: ''
-ms.suite: ''
-ms.technology:
-- dotnet-clr
-ms.tgt_pltfrm: ''
-ms.topic: article
 helpviewer_keywords:
 - bindings [WCF], overview
 ms.assetid: cfb5842f-e0f9-4c56-a015-f2b33f258232
-caps.latest.revision: 16
-author: dotnet-bot
-ms.author: dotnetcontent
-manager: wpickett
-ms.workload:
-- dotnet
-ms.openlocfilehash: 58b3691c186dc6a33c94d9f8a1af96be488d67df
-ms.sourcegitcommit: 94d33cadc5ff81d2ac389bf5f26422c227832052
-ms.translationtype: MT
+ms.openlocfilehash: 38661c2ca0e3329f508e2740dfcdf69c0d5e4105
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/30/2018
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="windows-communication-foundation-bindings-overview"></a>Windows Communication Foundation 繫結概觀
-繫結是一種物件，可用來指定連線至 [!INCLUDE[indigo1](../../../includes/indigo1-md.md)] 服務端點時所需的通訊詳細資料。 [!INCLUDE[indigo2](../../../includes/indigo2-md.md)] 服務中的每個端點都需要繫結才能正確地指定。 這個主題會概述繫結所定義的通訊詳細資料類型、繫結項目、[!INCLUDE[indigo2](../../../includes/indigo2-md.md)] 中所含的繫結以及對端點指定繫結的方式。  
+繫結是用來指定連接到 Windows Communication Foundation (WCF) 服務的端點所需之通訊詳細資料的物件。 [!INCLUDE[indigo2](../../../includes/indigo2-md.md)] 服務中的每個端點都需要繫結才能正確地指定。 這個主題會概述繫結所定義的通訊詳細資料類型、繫結項目、[!INCLUDE[indigo2](../../../includes/indigo2-md.md)] 中所含的繫結以及對端點指定繫結的方式。  
   
 ## <a name="what-a-binding-defines"></a>繫結所定義的內容  
  繫結中的資訊可能很基本，也可能很複雜。 最基本的繫結只會指定連線至端點時必須使用的傳輸通訊協定 (例如 HTTP)。 更一般來說，繫結中所含與如何連線至端點有關的資訊，與下列其中一種類別息息相關。  

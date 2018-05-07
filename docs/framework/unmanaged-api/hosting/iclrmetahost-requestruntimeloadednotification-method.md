@@ -1,14 +1,6 @@
 ---
-title: "ICLRMetaHost::RequestRuntimeLoadedNotification 方法"
-ms.custom: 
+title: ICLRMetaHost::RequestRuntimeLoadedNotification 方法
 ms.date: 03/30/2017
-ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.technology:
-- dotnet-clr
-ms.tgt_pltfrm: 
-ms.topic: reference
 api_name:
 - ICLRMetaHost.RequestRuntimeLoadedNotification
 api_location:
@@ -23,17 +15,13 @@ helpviewer_keywords:
 ms.assetid: 0d5ccc4d-0193-41f5-af54-45d7b70d5321
 topic_type:
 - apiref
-caps.latest.revision: 
 author: rpetrusha
 ms.author: ronpet
-manager: wpickett
-ms.workload:
-- dotnet
-ms.openlocfilehash: b7866270d8c9234a375401dfd05b504a06ddbf4b
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.openlocfilehash: 9ac041db64a874cc143657c601f30e4482dd2462
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="iclrmetahostrequestruntimeloadednotification-method"></a>ICLRMetaHost::RequestRuntimeLoadedNotification 方法
 提供保證的 common language runtime (CLR) 版本是第一次載入，但尚未啟動時要呼叫的回呼函式。 這個方法會取代[LockClrVersion](../../../../docs/framework/unmanaged-api/hosting/lockclrversion-function.md)函式。  
@@ -91,11 +79,11 @@ typedef void (__stdcall *RuntimeLoadedCallbackFnPtr)(
   
  如果主應用程式所要載入，或導致另一個執行階段要載入的方式可重新進入，`pfnCallbackThreadSet`和`pfnCallbackThreadUnset`會提供在回呼函式必須以下列方式使用的參數：  
   
--   `pfnCallbackThreadSet`必須先嘗試這類載入可能會導致執行階段載入的執行緒所呼叫。  
+-   `pfnCallbackThreadSet` 必須先嘗試這類載入可能會導致執行階段載入的執行緒所呼叫。  
   
--   `pfnCallbackThreadUnset`必須先呼叫時，執行緒將不會再造成執行階段負載 （和從初始回呼傳回之前）。  
+-   `pfnCallbackThreadUnset` 必須先呼叫時，執行緒將不會再造成執行階段負載 （和從初始回呼傳回之前）。  
   
--   `pfnCallbackThreadSet`和`pfnCallbackThreadUnset`兩者都不可重新進入。  
+-   `pfnCallbackThreadSet` 和`pfnCallbackThreadUnset`兩者都不可重新進入。  
   
 > [!NOTE]
 >  裝載應用程式不能呼叫`pfnCallbackThreadSet`和`pfnCallbackThreadUnset`範圍以外的`pCallbackFunction`參數。  
@@ -107,8 +95,8 @@ typedef void (__stdcall *RuntimeLoadedCallbackFnPtr)(
   
  **程式庫：**包含做為 MSCorEE.dll 中的資源  
   
- **.NET framework 版本：**[!INCLUDE[net_current_v40plus](../../../../includes/net-current-v40plus-md.md)]  
+ **.NET framework 版本：** [!INCLUDE[net_current_v40plus](../../../../includes/net-current-v40plus-md.md)]  
   
-## <a name="see-also"></a>請參閱  
+## <a name="see-also"></a>另請參閱  
  [ICLRMetaHost 介面](../../../../docs/framework/unmanaged-api/hosting/iclrmetahost-interface.md)  
  [裝載](../../../../docs/framework/unmanaged-api/hosting/index.md)

@@ -1,29 +1,19 @@
 ---
-title: "&lt;Directives&gt; 項目 (.NET Native)"
-ms.custom: 
+title: '&lt;Directives&gt; 項目 (.NET Native)'
 ms.date: 03/30/2017
-ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.technology: dotnet-clr
-ms.tgt_pltfrm: 
-ms.topic: article
 ms.assetid: 444846f3-48d5-4341-a43e-69f7221389eb
-caps.latest.revision: "9"
 author: rpetrusha
 ms.author: ronpet
-manager: wpickett
-ms.workload: dotnet
-ms.openlocfilehash: 4ca27422889fd33071a02c3a4b6fea0a6ba7eb0b
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.openlocfilehash: bd571255f924c9f3878c00a2bc01397d63e6d777
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="ltdirectivesgt-element-net-native"></a>&lt;Directives&gt; 項目 (.NET Native)
 [!INCLUDE[net_native](../../../includes/net-native-md.md)] 每個執行階段指示詞檔案中的根元素。  
   
- **\<Directives xmlns="http://schemas.microsoft.com/netfx/2013/01/metadata">**  
+ **\<指示詞 xmlns ="http://schemas.microsoft.com/netfx/2013/01/metadata">**  
   
 ## <a name="syntax"></a>語法  
   
@@ -37,7 +27,7 @@ ms.lasthandoff: 12/22/2017
   
 |屬性|描述|  
 |---------------|-----------------|  
-|`xmlns`|XML 命名空間。 其值一律為 **"http://schemas.microsoft.com/netfx/2013/01/metadata"**。|  
+|`xmlns`|XML 命名空間。 其值永遠為 **"http://schemas.microsoft.com/netfx/2013/01/metadata"**。|  
   
 ## <a name="child-elements"></a>子元素  
   
@@ -51,6 +41,6 @@ ms.lasthandoff: 12/22/2017
   
  `<Directives>` 項目可以包含零或一個 [\<Application>](../../../docs/framework/net-native/application-element-net-native.md) 項目，以及零、一或多個 [\<Library>](../../../docs/framework/net-native/library-element-net-native.md) 項目。  
   
-## <a name="see-also"></a>請參閱  
+## <a name="see-also"></a>另請參閱  
  [執行階段指示詞 (rd.xml) 組態檔參考](../../../docs/framework/net-native/runtime-directives-rd-xml-configuration-file-reference.md)  
  [執行階段指示詞項目](../../../docs/framework/net-native/runtime-directive-elements.md)

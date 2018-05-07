@@ -1,27 +1,15 @@
 ---
-title: "活動清單"
-ms.custom: 
+title: 活動清單
 ms.date: 03/30/2017
-ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.technology: dotnet-clr
-ms.tgt_pltfrm: 
-ms.topic: article
 ms.assetid: 5540e185-ce8e-4db3-83b0-2b9f5bf71829
-caps.latest.revision: "6"
-author: dotnet-bot
-ms.author: dotnetcontent
-manager: wpickett
-ms.workload: dotnet
-ms.openlocfilehash: 5e7a371d43237b795536711cf1745030e14d6eca
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
-ms.translationtype: MT
+ms.openlocfilehash: dc504c37b21a2d457f270331ab917747bafbb022
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="activity-list"></a>活動清單
-本主題將列出所有由 [!INCLUDE[indigo1](../../../../../includes/indigo1-md.md)] 定義的活動。  
+本主題列出 Windows Communication Foundation (WCF) 所定義的所有活動。  
   
 > [!NOTE]
 >  您也可以使用程式設計方式來定義活動，以便將使用者追蹤加以群組。 如需詳細資訊，請參閱[發出使用者程式碼追蹤](../../../../../docs/framework/wcf/diagnostics/tracing/emitting-user-code-traces.md)。  
@@ -33,8 +21,8 @@ ms.lasthandoff: 12/22/2017
 |-----------|-------------------|-------------------|-----------------|  
 |A、M|環境活動|N/A (此活動非由 ServiceModel 控制)|在任何 ServiceModel 程式碼的呼叫 (用戶端或伺服器端) 之前，於 TLS 內設定其識別碼的活動。<br /><br /> 範例：在 [!INCLUDE[indigo2](../../../../../includes/indigo2-md.md)] 用戶端上呼叫而開啟，或呼叫 serviceHost.open 而開啟的活動。|  
 |B|建構<br /><br /> ChannelFactory。 ContractType：‘[Type]’。|建構||  
-|C|開啟<br /><br /> [ClientBase &#124;ChannelFactory]。 ContractType：‘[Type]’。|開啟||  
-|I|關閉 [ClientBase &#124;ChannelFactory]。 ContractType：‘[Type]’。|關閉||  
+|C|開啟<br /><br /> [ClientBase&#124;ChannelFactory]。 ContractType：‘[Type]’。|開啟||  
+|I|關閉 [ClientBase&#124;ChannelFactory]。 ContractType：‘[Type]’。|關閉||  
 |M|建構 ServiceHost。 ServiceType：‘[Type]’。|建構||  
 |N|開啟 ServiceHost。 ServiceType：‘[Type]’。|開啟||  
 |Z|關閉 ServiceHost。 ServiceType：‘[Type]’。|關閉||  

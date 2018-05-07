@@ -1,14 +1,6 @@
 ---
 title: 匯入結構描述以產生類別
-ms.custom: ''
 ms.date: 03/30/2017
-ms.prod: .net-framework
-ms.reviewer: ''
-ms.suite: ''
-ms.technology:
-- dotnet-clr
-ms.tgt_pltfrm: ''
-ms.topic: article
 dev_langs:
 - csharp
 - vb
@@ -16,20 +8,14 @@ helpviewer_keywords:
 - WCF, schema import and export
 - XsdDataContractImporter class
 ms.assetid: b9170583-8c34-43bd-97bb-6c0c8dddeee0
-caps.latest.revision: 15
-author: dotnet-bot
-ms.author: dotnetcontent
-manager: wpickett
-ms.workload:
-- dotnet
-ms.openlocfilehash: 4d7988630e2eba3e6d5ebdc8b15b23aeb280a66f
-ms.sourcegitcommit: 03ee570f6f528a7d23a4221dcb26a9498edbdf8c
+ms.openlocfilehash: 338daa031ac2c1b31a121908643a15449c5401a1
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/28/2018
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="importing-schema-to-generate-classes"></a>匯入結構描述以產生類別
-如果要從可在 [!INCLUDE[indigo1](../../../../includes/indigo1-md.md)] 中使用的結構描述產生類別，請使用 <xref:System.Runtime.Serialization.XsdDataContractImporter> 類別。 這個主題將說明處理程序和變化。  
+若要從可與 Windows Communication Foundation (WCF) 的結構描述產生類別，請使用<xref:System.Runtime.Serialization.XsdDataContractImporter>類別。 這個主題將說明處理程序和變化。  
   
 ## <a name="the-import-process"></a>匯入程序  
  結構描述匯入程序是從 <xref:System.Xml.Schema.XmlSchemaSet> 開始，並產生 <xref:System.CodeDom.CodeCompileUnit>。  
@@ -114,7 +100,7 @@ ms.lasthandoff: 04/28/2018
  [!code-xml[C_SchemaImportExport#12](../../../../samples/snippets/csharp/VS_Snippets_CFX/c_schemaimportexport/common/source.config#12)]  
   
 > [!NOTE]
->  任何關聯也都可以視為是清單。 例如，您可以將前述關聯視為是剛好有兩個欄位 (字串欄位和整數欄位) 之複雜 `city` 物件的清單。 這兩種模式在 XSD 結構描述中都有表示法。 由於並沒有方法可以區分清單和關聯，因此這類模式永遠會被視為是清單，除非結構描述中有 [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] 特定的特別附註。 附註會指出指定的模式表示關聯。 如需詳細資訊，請參閱[資料合約結構描述參考](../../../../docs/framework/wcf/feature-details/data-contract-schema-reference.md)。  
+>  任何關聯也都可以視為是清單。 例如，您可以將前述關聯視為是剛好有兩個欄位 (字串欄位和整數欄位) 之複雜 `city` 物件的清單。 這兩種模式在 XSD 結構描述中都有表示法。 沒有任何方法可以區分清單和關聯，因此這類模式永遠視為清單除非特定至 WCF 的特殊註釋是出現在結構描述。 附註會指出指定的模式表示關聯。 如需詳細資訊，請參閱[資料合約結構描述參考](../../../../docs/framework/wcf/feature-details/data-contract-schema-reference.md)。  
   
  一般來說，會匯入清單做為衍生自泛型清單的集合資料合約或做為 [!INCLUDE[dnprdnshort](../../../../includes/dnprdnshort-md.md)] 陣列，視結構描述是否遵循集合的標準命名樣式而定。 這更詳細地描述[集合資料合約中的型別](../../../../docs/framework/wcf/feature-details/collection-types-in-data-contracts.md)。 關聯通常會被匯入做為 <xref:System.Collections.Generic.Dictionary%602> 或衍生自目錄物件的集合資料合約。 例如，請試想下列結構描述。  
   

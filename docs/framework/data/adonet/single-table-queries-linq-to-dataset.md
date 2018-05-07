@@ -1,30 +1,18 @@
 ---
-title: "單一資料表查詢 (LINQ to DataSet)"
-ms.custom: 
+title: 單一資料表查詢 (LINQ to DataSet)
 ms.date: 03/30/2017
-ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.technology: dotnet-ado
-ms.tgt_pltfrm: 
-ms.topic: article
 dev_langs:
 - csharp
 - vb
 ms.assetid: 0b74bcf8-3f87-449f-bff7-6bcb0d69d212
-caps.latest.revision: "3"
-author: douglaslMS
-ms.author: douglasl
-manager: craigg
-ms.workload: dotnet
-ms.openlocfilehash: 5ac58f5e98113150123b152dad8d2cc25c61cf97
-ms.sourcegitcommit: ed26cfef4e18f6d93ab822d8c29f902cff3519d1
+ms.openlocfilehash: 5a128349ea81cda7397b2dadbc2ce4096f692744
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 01/17/2018
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="single-table-queries-linq-to-dataset"></a>單一資料表查詢 (LINQ to DataSet)
-[!INCLUDE[vbteclinqext](../../../../includes/vbteclinqext-md.md)]實作的資料來源上的查詢運作<xref:System.Collections.Generic.IEnumerable%601>介面或<xref:System.Linq.IQueryable%601>介面。 <xref:System.Data.DataTable>類別未實作任何一種介面，因此您必須呼叫<xref:System.Data.DataTableExtensions.AsEnumerable%2A>方法，如果您想要使用<xref:System.Data.DataTable>中作為來源`From`子句[!INCLUDE[vbteclinq](../../../../includes/vbteclinq-md.md)]查詢。  
+[!INCLUDE[vbteclinqext](../../../../includes/vbteclinqext-md.md)] 實作的資料來源上的查詢運作<xref:System.Collections.Generic.IEnumerable%601>介面或<xref:System.Linq.IQueryable%601>介面。 <xref:System.Data.DataTable>類別未實作任何一種介面，因此您必須呼叫<xref:System.Data.DataTableExtensions.AsEnumerable%2A>方法，如果您想要使用<xref:System.Data.DataTable>中作為來源`From`子句[!INCLUDE[vbteclinq](../../../../includes/vbteclinq-md.md)]查詢。  
   
  下列範例會從 SalesOrderHeader 資料表中取得所有線上訂單，並將訂單識別碼、訂單日期和訂單號碼輸出至主控台。  
   
@@ -41,7 +29,7 @@ ms.lasthandoff: 01/17/2018
   
  請注意，`T` 方法和 <xref:System.Data.DataRowExtensions.Field%2A> 方法之泛型參數 <xref:System.Data.DataRowExtensions.SetField%2A> 中指定的資料型別必須與基礎值的型別相符，否則系統將擲回 <xref:System.InvalidCastException>。 此外，指定的資料行名稱也必須與 <xref:System.Data.DataSet> 中的資料行名稱相符，否則系統將擲回 <xref:System.ArgumentException>。 在這兩種情況中，其例外狀況 (Exception) 是在執行查詢的資料列舉執行階段中擲回。  
   
-## <a name="see-also"></a>請參閱  
+## <a name="see-also"></a>另請參閱  
  [跨資料表查詢](../../../../docs/framework/data/adonet/cross-table-queries-linq-to-dataset.md)  
  [查詢具類型資料集](../../../../docs/framework/data/adonet/querying-typed-datasets.md)  
  [泛型 Field 和 SetField 方法](../../../../docs/framework/data/adonet/generic-field-and-setfield-methods-linq-to-dataset.md)

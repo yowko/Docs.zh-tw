@@ -1,33 +1,19 @@
 ---
 title: 何謂 Windows Communication Foundation
-ms.custom: ''
 ms.date: 03/30/2017
-ms.prod: .net-framework
-ms.reviewer: ''
-ms.suite: ''
-ms.technology:
-- dotnet-clr
-ms.tgt_pltfrm: ''
-ms.topic: article
 helpviewer_keywords:
 - Windows Communication Foundation [WCF], technology overview
 - technology overview [WCF]
 - WCF [WCF], technology overview
 ms.assetid: 40e1009d-ef15-450b-9848-62eabe5e5738
-caps.latest.revision: 51
-author: dotnet-bot
-ms.author: dotnetcontent
-manager: wpickett
-ms.workload:
-- dotnet
-ms.openlocfilehash: c182cf5e5cc9346645f15293060671a0a0ce1caf
-ms.sourcegitcommit: 94d33cadc5ff81d2ac389bf5f26422c227832052
-ms.translationtype: MT
+ms.openlocfilehash: e7786b6a59b139233f10f6fef8493c299c51b54e
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/30/2018
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="what-is-windows-communication-foundation"></a>何謂 Windows Communication Foundation
-[!INCLUDE[indigo1](../../../includes/indigo1-md.md)] 是用於建置服務導向應用程式的架構。 使用 [!INCLUDE[indigo2](../../../includes/indigo2-md.md)]，您可以在各個服務端點之間傳送非同步訊息形式的資料。 服務端點可能是由 IIS 裝載之持續上線服務的一部分，或為應用程式中裝載的服務。 端點則大致是某項服務的用戶端，會向該服務端點要求資料。 訊息可為簡單的單一字元或以 XML 傳送的字組，乃至如二進位資料的資料流這般複雜的形式都沒問題。 其中幾個範例案例包括：  
+Windows Communication Foundation (WCF) 是用於建置服務導向應用程式的架構。 使用 [!INCLUDE[indigo2](../../../includes/indigo2-md.md)]，您可以在各個服務端點之間傳送非同步訊息形式的資料。 服務端點可能是由 IIS 裝載之持續上線服務的一部分，或為應用程式中裝載的服務。 端點則大致是某項服務的用戶端，會向該服務端點要求資料。 訊息可為簡單的單一字元或以 XML 傳送的字組，乃至如二進位資料的資料流這般複雜的形式都沒問題。 其中幾個範例案例包括：  
   
 -   處理商務交易的安全服務。  
   

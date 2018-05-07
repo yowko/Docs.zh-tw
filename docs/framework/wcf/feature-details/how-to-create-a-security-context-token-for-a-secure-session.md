@@ -1,32 +1,20 @@
 ---
 title: HOW TO：為安全工作階段建立安全性內容權杖
-ms.custom: ''
 ms.date: 03/30/2017
-ms.prod: .net-framework
-ms.reviewer: ''
-ms.suite: ''
-ms.technology:
-- dotnet-clr
-ms.tgt_pltfrm: ''
-ms.topic: article
 dev_langs:
 - csharp
 - vb
 ms.assetid: 640676b6-c75a-4ff7-aea4-b1a1524d71b2
-caps.latest.revision: 14
 author: BrucePerlerMS
-ms.author: bruceper
 manager: mbaldwin
-ms.workload:
-- dotnet
-ms.openlocfilehash: 579a980d8d71b5fe3e21e49e84a602b3be37eff1
-ms.sourcegitcommit: 03ee570f6f528a7d23a4221dcb26a9498edbdf8c
+ms.openlocfilehash: ef2f02bb5ad6e7458ae11e7880fe403f3a6e9916
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/28/2018
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="how-to-create-a-security-context-token-for-a-secure-session"></a>HOW TO：為安全工作階段建立安全性內容權杖
-在安全工作階段中使用具狀態的安全性內容權杖時，工作階段可以承受正在回收的服務。 例如，當安全工作階段使用無狀態的 SCT 而且重設了網際網路資訊服務 (IIS)，則與該服務相關聯的工作階段資料就會遺失。 這個工作階段資料包含 SCT 權杖快取。 因此，下一次當用戶端傳送的服務是無狀態的 SCT 時，便會傳回錯誤，因為無法擷取與 SCT 相關聯的金鑰。 但是，如果使用具狀態的 SCT，則與 SCT 相關聯的金鑰就會包含在 SCT 中。 由於金鑰是包含在 SCT (因此也包含在訊息中)，安全工作階段就不會受到正在回收的服務所影響。 根據預設，[!INCLUDE[indigo1](../../../../includes/indigo1-md.md)] 會在安全工作階段中使用沒有狀態的 SCT。 此主題將詳細說明如何在安全工作階段中使用具狀態的 SCT。  
+在安全工作階段中使用具狀態的安全性內容權杖時，工作階段可以承受正在回收的服務。 例如，當安全工作階段使用無狀態的 SCT 而且重設了網際網路資訊服務 (IIS)，則與該服務相關聯的工作階段資料就會遺失。 這個工作階段資料包含 SCT 權杖快取。 因此，下一次當用戶端傳送的服務是無狀態的 SCT 時，便會傳回錯誤，因為無法擷取與 SCT 相關聯的金鑰。 但是，如果使用具狀態的 SCT，則與 SCT 相關聯的金鑰就會包含在 SCT 中。 由於金鑰是包含在 SCT (因此也包含在訊息中)，安全工作階段就不會受到正在回收的服務所影響。 根據預設，Windows Communication Foundation (WCF) 會使用無狀態的 Sct 的安全工作階段中。 此主題將詳細說明如何在安全工作階段中使用具狀態的 SCT。  
   
 > [!NOTE]
 >  您無法在安全工作階段 (與衍生自 <xref:System.ServiceModel.Channels.IDuplexChannel> 的合約相關) 中使用可設定狀態的 SCT。  
@@ -105,7 +93,7 @@ ms.lasthandoff: 04/28/2018
  [!code-csharp[c_CreateStatefulSCT#2](../../../../samples/snippets/csharp/VS_Snippets_CFX/c_createstatefulsct/cs/secureservice.cs#2)]
  [!code-vb[c_CreateStatefulSCT#2](../../../../samples/snippets/visualbasic/VS_Snippets_CFX/c_createstatefulsct/vb/secureservice.vb#2)]  
   
- 當 Windows 驗證與可設定狀態的 SCT 一起使用時，[!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] 不會使用實際呼叫者的身分識別來填入 <xref:System.ServiceModel.ServiceSecurityContext.WindowsIdentity%2A> 屬性，而是將屬性設為匿名。 由於 [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] 安全性必須為每個來自傳入 SCT 的要求重新建立服務安全性內容 (context) 的內容 (content)，因此伺服器不會追蹤記憶體中的安全性工作階段。 由於您不可能將 <xref:System.Security.Principal.WindowsIdentity> 執行個體序列化為 SCT，<xref:System.ServiceModel.ServiceSecurityContext.WindowsIdentity%2A> 屬性將傳回匿名身分識別。  
+ Windows 驗證與具狀態的 SCT 一起使用時，WCF 不會填入<xref:System.ServiceModel.ServiceSecurityContext.WindowsIdentity%2A>屬性使用實際呼叫者的身分識別，但改為將屬性設定為匿名。 WCF 安全性必須重新建立每個來自傳入 SCT 要求的服務安全性內容的內容，因為伺服器不會不追蹤的安全性工作階段，在記憶體中。 由於您不可能將 <xref:System.Security.Principal.WindowsIdentity> 執行個體序列化為 SCT，<xref:System.ServiceModel.ServiceSecurityContext.WindowsIdentity%2A> 屬性將傳回匿名身分識別。  
   
  下列組態將示範此行為。  
   

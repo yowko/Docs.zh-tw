@@ -1,24 +1,14 @@
 ---
 title: System.ServiceModel.Security.SecurityBindingIncomingMessageVerified
-ms.custom: 
 ms.date: 03/30/2017
-ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.technology: dotnet-clr
-ms.tgt_pltfrm: 
-ms.topic: article
 ms.assetid: 40fc744e-8d6f-49e0-a5fd-4f9a31cc0ed7
-caps.latest.revision: "4"
 author: BrucePerlerMS
-ms.author: bruceper
 manager: mbaldwin
-ms.workload: dotnet
-ms.openlocfilehash: 5b9fd62955bfd3f34d1600167ee2e94adc446245
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.openlocfilehash: ec3a06fefc28414b0d482fcd0827f19cf93e4de1
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="systemservicemodelsecuritysecuritybindingincomingmessageverified"></a>System.ServiceModel.Security.SecurityBindingIncomingMessageVerified
 System.ServiceModel.Security.SecurityBindingIncomingMessageVerified  
@@ -26,7 +16,7 @@ System.ServiceModel.Security.SecurityBindingIncomingMessageVerified
 ## <a name="description"></a>描述  
  安全性通訊協定已驗證傳入訊息。  
   
-## <a name="see-also"></a>請參閱  
+## <a name="see-also"></a>另請參閱  
  [追蹤](../../../../../docs/framework/wcf/diagnostics/tracing/index.md)  
  [使用追蹤為應用程式進行疑難排解](../../../../../docs/framework/wcf/diagnostics/tracing/using-tracing-to-troubleshoot-your-application.md)  
  [管理與診斷](../../../../../docs/framework/wcf/diagnostics/index.md)

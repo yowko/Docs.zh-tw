@@ -1,34 +1,20 @@
 ---
 title: 使用工作階段
-ms.custom: ''
 ms.date: 03/30/2017
-ms.prod: .net-framework
-ms.reviewer: ''
-ms.suite: ''
-ms.technology:
-- dotnet-clr
-ms.tgt_pltfrm: ''
-ms.topic: article
 dev_langs:
 - csharp
 - vb
 helpviewer_keywords:
 - sessions [WCF]
 ms.assetid: 864ba12f-3331-4359-a359-6d6d387f1035
-caps.latest.revision: 32
-author: dotnet-bot
-ms.author: dotnetcontent
-manager: wpickett
-ms.workload:
-- dotnet
-ms.openlocfilehash: 172ef71bd3ae09e3c9f15cb0bdb48728a587605e
-ms.sourcegitcommit: 94d33cadc5ff81d2ac389bf5f26422c227832052
-ms.translationtype: MT
+ms.openlocfilehash: e826e0952f95608fd8d85a5b1fad6b17d3fdacb3
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/30/2018
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="using-sessions"></a>使用工作階段
-在 [!INCLUDE[indigo1](../../../includes/indigo1-md.md)] 應用程式中，「 *工作階段* 」(Session) 會使一組訊息相互關連至對話。 [!INCLUDE[indigo2](../../../includes/indigo2-md.md)] 工作階段不同於 [!INCLUDE[vstecasp](../../../includes/vstecasp-md.md)] 應用程式中可用的工作階段物件，而且支援不同的行為，控制的方式也不一樣。 本主題說明工作階段在 [!INCLUDE[indigo2](../../../includes/indigo2-md.md)] 應用程式中啟用的功能及其用法。  
+Windows Communication Foundation (WCF) 應用程式中，*工作階段*將一組訊息相互關聯為對話。 [!INCLUDE[indigo2](../../../includes/indigo2-md.md)] 工作階段不同於 [!INCLUDE[vstecasp](../../../includes/vstecasp-md.md)] 應用程式中可用的工作階段物件，而且支援不同的行為，控制的方式也不一樣。 本主題說明工作階段在 [!INCLUDE[indigo2](../../../includes/indigo2-md.md)] 應用程式中啟用的功能及其用法。  
   
 ## <a name="sessions-in-windows-communication-foundation-applications"></a>Windows Communication Foundation 應用程式中的工作階段  
  當服務合約指定其需要工作階段時，該合約會指定所有的呼叫 (即支援呼叫的基礎訊息交換) 必須是同一個對話的一部分。 如果合約指定其允許使用工作階段，但不需要工作階段，則用戶端可以連線，並選擇是否要建立工作階段。 如果工作階段結束，而且某個訊息已透過相同的通道傳送，就會擲回例外狀況。  

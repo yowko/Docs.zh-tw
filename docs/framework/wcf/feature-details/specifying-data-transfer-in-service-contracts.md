@@ -1,34 +1,20 @@
 ---
 title: 指定服務合約中的資料傳輸
-ms.custom: ''
 ms.date: 03/30/2017
-ms.prod: .net-framework
-ms.reviewer: ''
-ms.suite: ''
-ms.technology:
-- dotnet-clr
-ms.tgt_pltfrm: ''
-ms.topic: article
 dev_langs:
 - csharp
 - vb
 helpviewer_keywords:
 - service contracts [WCF], data transfer
 ms.assetid: 7c5a26c8-89c9-4bcb-a4bc-7131e6d01f0c
-caps.latest.revision: 38
-author: dotnet-bot
-ms.author: dotnetcontent
-manager: wpickett
-ms.workload:
-- dotnet
-ms.openlocfilehash: 852519dc1edc499511652f4027f4cd4eed6eef98
-ms.sourcegitcommit: 94d33cadc5ff81d2ac389bf5f26422c227832052
+ms.openlocfilehash: 7423a44f7779c8e4ef75fc68e33eeb4ac48a660a
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/30/2018
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="specifying-data-transfer-in-service-contracts"></a>指定服務合約中的資料傳輸
-[!INCLUDE[indigo1](../../../../includes/indigo1-md.md)] 可以想成是訊息基礎結構。 服務作業可以接收訊息、處理訊息，並傳送訊息。 訊息會透過作業合約來加以描述。 例如，請參考下列合約。  
+Windows Communication Foundation (WCF) 可以視為傳訊基礎結構。 服務作業可以接收訊息、處理訊息，並傳送訊息。 訊息會透過作業合約來加以描述。 例如，請參考下列合約。  
   
 ```csharp  
 [ServiceContract]  
@@ -65,7 +51,7 @@ float GetAirfare(string fromCity, string toCity, out string currency);
     Function GetAirfare(fromCity As String, toCity As String) As Double  
 ```  
   
- 此外，您可以使用參考參數，讓參數同時成為要求與回覆訊息的一部分。 參數必須是可以序列化 (轉換為 XML) 的型別。 根據預設，[!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] 會使用稱為 <xref:System.Runtime.Serialization.DataContractSerializer> 類別的元件執行此轉換。 支援大多數的基本型別 (例如 `int`、`string`、`float` 和 `DateTime`)。 使用者定義型別通常必須具有資料合約。 如需詳細資訊，請參閱[使用資料合約](../../../../docs/framework/wcf/feature-details/using-data-contracts.md)。  
+ 此外，您可以使用參考參數，讓參數同時成為要求與回覆訊息的一部分。 參數必須是可以序列化 (轉換為 XML) 的型別。 根據預設，WCF 會使用名為的元件<xref:System.Runtime.Serialization.DataContractSerializer>類別來執行這項轉換。 支援大多數的基本型別 (例如 `int`、`string`、`float` 和 `DateTime`)。 使用者定義型別通常必須具有資料合約。 如需詳細資訊，請參閱[使用資料合約](../../../../docs/framework/wcf/feature-details/using-data-contracts.md)。  
   
 ```csharp
 public interface IAirfareQuoteService  
@@ -100,7 +86,7 @@ Public Interface IAirfareQuoteService
 End Interface  
 ```  
   
- 有時候，`DataContractSerializer` 並不足以序列化您的型別。 [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] 支援替代的序列化引擎 <xref:System.Xml.Serialization.XmlSerializer> (您也可以使用此引擎來序列化參數)。 <xref:System.Xml.Serialization.XmlSerializer> 可讓您透過諸如 `XmlAttributeAttribute` 的屬性，針對最後的 XML 格式進行更複雜的控制。 若要切換為針對特定作業或整個服務使用 <xref:System.Xml.Serialization.XmlSerializer>，請將 <xref:System.ServiceModel.XmlSerializerFormatAttribute> 屬性套用到作業或服務。 例如:   
+ 有時候，`DataContractSerializer` 並不足以序列化您的型別。 WCF 支援替代的序列化引擎， <xref:System.Xml.Serialization.XmlSerializer>，您也可以用來序列化參數。 <xref:System.Xml.Serialization.XmlSerializer> 可讓您透過諸如 `XmlAttributeAttribute` 的屬性，針對最後的 XML 格式進行更複雜的控制。 若要切換為針對特定作業或整個服務使用 <xref:System.Xml.Serialization.XmlSerializer>，請將 <xref:System.ServiceModel.XmlSerializerFormatAttribute> 屬性套用到作業或服務。 例如:   
   
 ```csharp  
 [ServiceContract]  
@@ -261,7 +247,7 @@ End Class
 ## <a name="describing-messages-by-using-streams"></a>使用資料流來描述訊息  
  另一種用來描述作業中訊息的方法，就是使用作業合約中的 <xref:System.IO.Stream> 類別或是由此類別衍生的類別之一，或將這些類別當成訊息合約本文成員來使用 (在此情況下，此成員必須是唯一的成員)。 如果是傳入的訊息，必須是 `Stream` 型別 (您無法使用衍生的類別)。  
   
- [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] 不但不叫用序列化程式，還從資料流直接擷取資料並將其放到傳出的訊息中，或從傳入訊息中擷取資料並將其直接放到資料流中。 下列範例說明資料流的使用方式。  
+ 不但不叫用序列化程式，WCF 會從資料流擷取資料並將它放到傳出的訊息，直接或從內送訊息中擷取資料並將它放直接將資料流。 下列範例說明資料流的使用方式。  
   
 ```csharp  
 [OperationContract]  
@@ -477,7 +463,7 @@ End Interface
 ```  
   
 ### <a name="serialization-behaviors"></a>序列化行為  
- [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] 提供兩個可用的行為，分別是 <xref:System.ServiceModel.Description.DataContractSerializerOperationBehavior> 和 <xref:System.ServiceModel.Description.XmlSerializerOperationBehavior>，而這兩個行為會根據特定作業所使用的序列化程式自動插入。 由於這些行為是自動套用的，一般來說您不需要知道它們的存在。  
+ 在 WCF 中，有兩種行為<xref:System.ServiceModel.Description.DataContractSerializerOperationBehavior>和<xref:System.ServiceModel.Description.XmlSerializerOperationBehavior>，自動插入取決於哪一個序列化程式會針對特定作業的使用中。 由於這些行為是自動套用的，一般來說您不需要知道它們的存在。  
   
  然而，`DataContractSerializerOperationBehavior` 具有 `MaxItemsInObjectGraph`、`IgnoreExtensionDataObject`，和 `DataContractSurrogate` 屬性，可供您用來自訂序列化處理序。 開頭的兩個屬性具有如上一節所述相同的意義。 您可以使用 `DataContractSurrogate` 屬性來啟用資料合約替代，這是一項功能強大的機制，可供您用來自訂與延伸序列化處理序。 如需詳細資訊，請參閱[資料合約 Surrogate](../../../../docs/framework/wcf/extending/data-contract-surrogates.md)。  
   
@@ -571,7 +557,7 @@ Dim serviceHost As ServiceHost = New ServiceHost(GetType(IDataService))
 ```  
   
 ### <a name="shared-type-serialization-object-graph-preservation-and-custom-serializers"></a>共用型別序列化、物件圖形保留，與自訂序列化程式  
- <xref:System.Runtime.Serialization.DataContractSerializer> 使用資料合約名稱，而不是 .NET 型別名稱來序列化。 這個做法與服務導向的架構原則相符，而且具有相當大的彈性—.NET 型別可以在不影響 Wire 合約的前提下進行變更。 在很罕見的情況下，您會想要序列化實際的 .NET 型別名稱，以便讓用戶端與伺服器緊密結合在一起 (與 .NET Framework 遠端處理技術類似)。 除了當您需要從 .NET Framework 遠端處理移轉至 [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] 時以外 (這種情況非常罕見)，我們不建議您這麼做。 在此情況中，您必須使用 <xref:System.Runtime.Serialization.NetDataContractSerializer> 類別，而不是使用 <xref:System.Runtime.Serialization.DataContractSerializer> 類別。  
+ <xref:System.Runtime.Serialization.DataContractSerializer> 使用資料合約名稱，而不是 .NET 型別名稱來序列化。 這個做法與服務導向的架構原則相符，而且具有相當大的彈性—.NET 型別可以在不影響 Wire 合約的前提下進行變更。 在很罕見的情況下，您會想要序列化實際的 .NET 型別名稱，以便讓用戶端與伺服器緊密結合在一起 (與 .NET Framework 遠端處理技術類似)。 這不是建議的作法，除了在少數情況下，通常發生於時從.NET Framework 遠端處理移轉至 WCF。 在此情況中，您必須使用 <xref:System.Runtime.Serialization.NetDataContractSerializer> 類別，而不是使用 <xref:System.Runtime.Serialization.DataContractSerializer> 類別。  
   
  一般來說，<xref:System.Runtime.Serialization.DataContractSerializer> 會將物件圖形序列化為物件樹。 亦即，如果相同的物件被參照一次以上，就會不只一次被序列化。 例如，某個 `PurchaseOrder` 執行個體具有兩個稱為 `billTo` 和 `shipTo` 的 Address 型別欄位。 如果兩個欄位同時設定為相同的 Address 執行個體，就會在序列化與還原序列化之後出現兩個一模一樣的 Address 執行個體。 這是因為 XML 中沒有可表示物件圖形的標準互通方式 (除了 <xref:System.Xml.Serialization.XmlSerializer> 所提供的舊版 SOAP 編碼標準以外，如先前有關`Style`與`Use`的小節說明所示)。 將物件圖形序列化為物件樹會產生特定的缺點，例如，您無法序列化帶有循環參照的圖形。 有時候您還得切換到真實物件圖形序列化，就算此作業無法互通也得照辦。 您可以使用 <xref:System.Runtime.Serialization.DataContractSerializer> (透過將 `preserveObjectReferences` 參數設為 `true` 來加以建構) 來完成。  
   

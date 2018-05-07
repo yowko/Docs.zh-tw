@@ -1,14 +1,6 @@
 ---
-title: "IHostTaskManager::EnterRuntime 方法"
-ms.custom: 
+title: IHostTaskManager::EnterRuntime 方法
 ms.date: 03/30/2017
-ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.technology:
-- dotnet-clr
-ms.tgt_pltfrm: 
-ms.topic: reference
 api_name:
 - IHostTaskManager.EnterRuntime
 api_location:
@@ -23,17 +15,13 @@ helpviewer_keywords:
 ms.assetid: 1aa7a4b1-636a-4f5e-b834-b406d72f7120
 topic_type:
 - apiref
-caps.latest.revision: 
 author: rpetrusha
 ms.author: ronpet
-manager: wpickett
-ms.workload:
-- dotnet
-ms.openlocfilehash: 70c9e83311fd7427895e1957d3511a45c47434e6
-ms.sourcegitcommit: c0dd436f6f8f44dc80dc43b07f6841a00b74b23f
+ms.openlocfilehash: a47f51ba32a9dfc16300a8de7c2d4b380a8ba988
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 01/19/2018
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="ihosttaskmanagerenterruntime-method"></a>IHostTaskManager::EnterRuntime 方法
 通知主機的呼叫未受管理的方法，例如平台叫用方法時，會執行將控制權傳回給 common language runtime (CLR)。  
@@ -48,7 +36,7 @@ HRESULT EnterRuntime ();
   
 |HRESULT|描述|  
 |-------------|-----------------|  
-|S_OK|`EnterRuntime`已成功傳回。|  
+|S_OK|`EnterRuntime` 已成功傳回。|  
 |HOST_E_CLRNOTAVAILABLE|CLR 尚未載入到處理程序，或 CLR 正在中它無法執行 managed 程式碼，或成功地處理呼叫的狀態。|  
 |HOST_E_TIMEOUT|呼叫已逾時。|  
 |HOST_E_NOT_OWNER|呼叫端未擁有鎖定。|  
@@ -57,7 +45,7 @@ HRESULT EnterRuntime ();
 |E_OUTOFMEMORY|記憶體不足，無法完成要求的配置。|  
   
 ## <a name="remarks"></a>備註  
- `EnterRuntime`呼叫以通知主機的 unmanaged 函式，其之前呼叫[LeaveRuntime](../../../../docs/framework/unmanaged-api/hosting/ihosttaskmanager-leaveruntime-method.md)方法進行、 已完成執行，並會將執行控制權傳回給執行階段。  
+ `EnterRuntime` 呼叫以通知主機的 unmanaged 函式，其之前呼叫[LeaveRuntime](../../../../docs/framework/unmanaged-api/hosting/ihosttaskmanager-leaveruntime-method.md)方法進行、 已完成執行，並會將執行控制權傳回給執行階段。  
   
 > [!NOTE]
 >  [ReverseEnterRuntime](../../../../docs/framework/unmanaged-api/hosting/ihosttaskmanager-reverseenterruntime-method.md)呼叫以通知主機的 unmanaged 函式，其之前呼叫`LeaveRuntime`提出、 正在進行的呼叫至 managed 程式碼。  
@@ -69,9 +57,9 @@ HRESULT EnterRuntime ();
   
  **程式庫：**包含做為 MSCorEE.dll 中的資源  
   
- **.NET framework 版本：**[!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]  
+ **.NET framework 版本：** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]  
   
-## <a name="see-also"></a>請參閱  
+## <a name="see-also"></a>另請參閱  
  [進階 COM 互通性](http://msdn.microsoft.com/library/3ada36e5-2390-4d70-b490-6ad8de92f2fb)  
  [如何：使用 PInvoke 從 Managed 程式碼呼叫原生 DLL](/cpp/dotnet/how-to-call-native-dlls-from-managed-code-using-pinvoke)  
  [ICLRTask 介面](../../../../docs/framework/unmanaged-api/hosting/iclrtask-interface.md)  

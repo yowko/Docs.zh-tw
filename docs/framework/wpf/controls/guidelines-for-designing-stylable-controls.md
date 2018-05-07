@@ -1,27 +1,15 @@
 ---
-title: "設計可設定樣式控制項的方針"
-ms.custom: 
+title: 設計可設定樣式控制項的方針
 ms.date: 03/30/2017
-ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.technology: dotnet-wpf
-ms.tgt_pltfrm: 
-ms.topic: article
 helpviewer_keywords:
 - style design for controls [WPF]
 - controls [WPF], style design
 ms.assetid: c52dde45-a311-4531-af4c-853371c4d5f4
-caps.latest.revision: "18"
-author: dotnet-bot
-ms.author: dotnetcontent
-manager: wpickett
-ms.workload: dotnet
-ms.openlocfilehash: 6707a434f64838467033966c9093e1e415b1fb31
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.openlocfilehash: 4e807a323f6b454b1f07c8e0a9f99b17c9723df7
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="guidelines-for-designing-stylable-controls"></a>設計可設定樣式控制項的方針
 本文摘要說明當設計要能夠容易設定樣式及範本化的控制項時，可考量的一組最佳做法。 我們是在研究內建之 [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] 控制項集的佈景主題控制項樣式時，經過許多嘗試和錯誤，才得出這組最佳做法。 我們了解到成功的樣式設定對設計良好的物件模型來說，不僅是樣式本身，也是一項功能。 本文件的適用對象是控制項作者，而不是樣式作者。  
@@ -67,7 +55,7 @@ ms.lasthandoff: 12/22/2017
   
      下表說明現今控制項樣式所採用的協助程式元素 (本清單並不完全)：  
   
-    |元素|類型|使用對象|  
+    |項目|類型|使用對象|  
     |-------------|----------|-------------|  
     |<xref:System.Windows.Controls.ContentPresenter>|型別型|<xref:System.Windows.Controls.Button><xref:System.Windows.Controls.CheckBox>， <xref:System.Windows.Controls.RadioButton>，<xref:System.Windows.Controls.Frame>等等 (所有<xref:System.Windows.Controls.ContentControl>類型)|  
     |<xref:System.Windows.Controls.ItemsPresenter>|型別型|<xref:System.Windows.Controls.ListBox><xref:System.Windows.Controls.ComboBox>，<xref:System.Windows.Controls.Menu>等等 (所有<xref:System.Windows.Controls.ItemsControl>類型)|  
@@ -129,6 +117,6 @@ ms.lasthandoff: 12/22/2017
   
 -   **佈景主題樣式不需要在所有佈景主題都具有一致的「版面配置」語意**。 例如，預設樣式不需要保證控制項在所有佈景主題中都佔據相同的大小，或是保證控制項在所有佈景主題中都具有相同的內容邊界/邊框間距。  
   
-## <a name="see-also"></a>請參閱  
+## <a name="see-also"></a>另請參閱  
  [樣式設定和範本化](../../../../docs/framework/wpf/controls/styling-and-templating.md)  
  [控制項撰寫概觀](../../../../docs/framework/wpf/controls/control-authoring-overview.md)

@@ -1,27 +1,15 @@
 ---
-title: "重大追蹤"
-ms.custom: 
+title: 重大追蹤
 ms.date: 03/30/2017
-ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.technology: dotnet-clr
-ms.tgt_pltfrm: 
-ms.topic: article
 ms.assetid: 40a1770e-3b09-4142-b0dd-f9ef73642074
-caps.latest.revision: "4"
-author: dotnet-bot
-ms.author: dotnetcontent
-manager: wpickett
-ms.workload: dotnet
-ms.openlocfilehash: 6641fe633585caf6cbf068a804430f9171e5ece0
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
-ms.translationtype: MT
+ms.openlocfilehash: 2dc5010874285ba14dae625fcbf92740eb1707b0
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="significant-traces"></a>重大追蹤
-此主題會列出 [!INCLUDE[indigo1](../../../../../includes/indigo1-md.md)] 發出的其中一些主要追蹤。  
+本主題列出了一些主要 Windows Communication Foundation (WCF)，就發出的追蹤。  
   
 ## <a name="significant-traces"></a>重大追蹤  
   

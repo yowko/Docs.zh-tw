@@ -1,23 +1,12 @@
 ---
-title: "存放區擴充性"
-ms.custom: 
+title: 存放區擴充性
 ms.date: 03/30/2017
-ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.tgt_pltfrm: 
-ms.topic: article
 ms.assetid: 7c3f4a46-4bac-4138-ae6a-a7c7ee0d28f5
-caps.latest.revision: "15"
-author: dotnet-bot
-ms.author: dotnetcontent
-manager: wpickett
-ms.workload: dotnet
-ms.openlocfilehash: e269f485da16bcf3669bb8cb32396fad2875ca89
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.openlocfilehash: 8cfbf96256d4b8416beb526875a1e9ac09c3bfbb
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="store-extensibility"></a>存放區擴充性
 <xref:System.Activities.DurableInstancing.SqlWorkflowInstanceStore> 可讓使用者提升應用程式專屬的自訂屬性，用來查詢持續性資料庫中的執行個體。 提升屬性的動作會讓值用於資料庫中的特殊檢視表。 這些提升屬性 (可用於使用者查詢中的屬性) 可以屬於簡單型別 (例如 Int64、GUID、String 及 DateTime)，也可以屬於序列化的二進位型別 (byte[])。  
@@ -118,7 +107,7 @@ ms.lasthandoff: 12/22/2017
     go  
     ```  
   
-##  <a name="InstancePromotedProperties"></a>[System.Activities.DurableInstancing.InstancePromotedProperties] 檢視  
+##  <a name="InstancePromotedProperties"></a> [System.Activities.DurableInstancing.InstancePromotedProperties] 檢視  
   
 |資料行名稱|資料行型別|描述|  
 |-----------------|-----------------|-----------------|  

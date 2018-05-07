@@ -1,27 +1,15 @@
 ---
-title: "匯出 WCF 擴充的自訂中繼資料"
-ms.custom: 
+title: 匯出 WCF 擴充的自訂中繼資料
 ms.date: 03/30/2017
-ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.technology: dotnet-clr
-ms.tgt_pltfrm: 
-ms.topic: article
 ms.assetid: 53c93882-f8ba-4192-965b-787b5e3f09c0
-caps.latest.revision: "7"
-author: dotnet-bot
-ms.author: dotnetcontent
-manager: wpickett
-ms.workload: dotnet
-ms.openlocfilehash: dbdbef495232fb1ffaeb8d1dc739c2db1355556d
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
-ms.translationtype: MT
+ms.openlocfilehash: 8d9f5e223bb47fc8997f6509ec882b282e1ee8b5
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="exporting-custom-metadata-for-a-wcf-extension"></a>匯出 WCF 擴充的自訂中繼資料
-在 [!INCLUDE[indigo1](../../../../includes/indigo1-md.md)] 中，中繼資料匯出是一項程序，描述服務端點並將其投射至並行標準化表示法，使得用戶端了解如何使用服務。 自訂中繼資料包含系統提供之中繼資料匯出工具所無法匯出的 XML 項目。 通常這包括使用者定義行為的自訂 WSDL 項目和繫結項目，以及有關繫結與合約功能和需求的原則判斷提示。  
+在 Windows Communication Foundation (WCF) 中，中繼資料匯出是描述服務端點，並將其投射至並行標準化表示法，用戶端可用來了解如何使用服務的程序。 自訂中繼資料包含系統提供之中繼資料匯出工具所無法匯出的 XML 項目。 通常這包括使用者定義行為的自訂 WSDL 項目和繫結項目，以及有關繫結與合約功能和需求的原則判斷提示。  
   
  本章節將說明匯出自訂 WSDL 或原則判斷提示，但重點不會放在匯出程序本身。 如需如何使用匯出和匯入中繼資料，不論中繼資料是自訂或系統建構的類型的詳細資訊，請參閱[匯出和匯入中繼資料](../../../../docs/framework/wcf/feature-details/exporting-and-importing-metadata.md)。  
   
@@ -52,7 +40,7 @@ ms.lasthandoff: 12/22/2017
   
  如需詳細資訊，請參閱[How to： 匯出自訂原則判斷提示](../../../../docs/framework/wcf/extending/how-to-export-custom-policy-assertions.md)。  
   
-## <a name="see-also"></a>請參閱  
+## <a name="see-also"></a>另請參閱  
  [如何：匯出自訂 WSDL](../../../../docs/framework/wcf/extending/how-to-export-custom-wsdl.md)  
  [如何：匯出自訂原則判斷提示](../../../../docs/framework/wcf/extending/how-to-export-custom-policy-assertions.md)  
  [匯入 WCF 延伸模組的自訂中繼資料](../../../../docs/framework/wcf/extending/importing-custom-metadata-for-a-wcf-extension.md)

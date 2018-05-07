@@ -1,13 +1,6 @@
 ---
-title: "如何：對文字套用轉換"
-ms.custom: 
+title: 如何：對文字套用轉換
 ms.date: 03/30/2017
-ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.technology: dotnet-wpf
-ms.tgt_pltfrm: 
-ms.topic: article
 helpviewer_keywords:
 - typography [WPF], rotated text
 - typography [WPF], scaled text
@@ -22,16 +15,11 @@ helpviewer_keywords:
 - scaled text [WPF]
 - typography [WPF], skewed text
 ms.assetid: 0d61678a-4185-4f2a-85c6-c1d020f96fa0
-caps.latest.revision: "7"
-author: dotnet-bot
-ms.author: dotnetcontent
-manager: wpickett
-ms.workload: dotnet
-ms.openlocfilehash: 9c1e26b31907e7794492b88ea3a696d3db4d37d7
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.openlocfilehash: 531537013ab3bbfba278ca63e14155341eefc826
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="how-to-apply-transforms-to-text"></a>如何：對文字套用轉換
 轉換可以變更應用程式中文字的顯示。 下列範例會使用不同類型的呈現轉換來影響的文字顯示<xref:System.Windows.Controls.TextBlock>控制項。  
@@ -79,5 +67,5 @@ ms.lasthandoff: 12/22/2017
 > [!NOTE]
 >  <xref:System.Windows.Media.Effects.DropShadowBitmapEffect>提供一組豐富的功能提供陰影效果。 如需詳細資訊，請參閱[建立文字陰影](../../../../docs/framework/wpf/advanced/how-to-create-text-with-a-shadow.md)。  
   
-## <a name="see-also"></a>請參閱  
+## <a name="see-also"></a>另請參閱  
  [對文字套用動畫](../../../../docs/framework/wpf/advanced/how-to-apply-animations-to-text.md)

@@ -1,27 +1,15 @@
 ---
-title: "如何：使用 GridViewRowPresenter 顯示資料"
-ms.custom: 
+title: 如何：使用 GridViewRowPresenter 顯示資料
 ms.date: 03/30/2017
-ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.technology: dotnet-wpf
-ms.tgt_pltfrm: 
-ms.topic: article
 helpviewer_keywords:
 - displaying data with GridViewRowPresenter [WPF]
 - GridViewRowPresenter [WPF]
 ms.assetid: bdb785a5-a262-44d5-a517-ea14383e5f70
-caps.latest.revision: "9"
-author: dotnet-bot
-ms.author: dotnetcontent
-manager: wpickett
-ms.workload: dotnet
-ms.openlocfilehash: f540ad92c69219a2c22763403ce4ecc734c8e5cb
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.openlocfilehash: f68bc3a4ffff268138721a6750a0eb50c825377e
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="how-to-display-data-by-using-gridviewrowpresenter"></a>如何：使用 GridViewRowPresenter 顯示資料
 這個範例示範如何使用<xref:System.Windows.Controls.GridViewRowPresenter>和<xref:System.Windows.Controls.GridViewHeaderRowPresenter>來顯示資料行中資料的物件。  
@@ -31,7 +19,7 @@ ms.lasthandoff: 12/22/2017
   
  [!code-xaml[GridViewRowPresenterSample#GridViewRowPresenter](../../../../samples/snippets/csharp/VS_Snippets_Wpf/GridViewRowPresenterSample/CS/Window1.xaml#gridviewrowpresenter)]  
   
-## <a name="see-also"></a>請參閱  
+## <a name="see-also"></a>另請參閱  
  <xref:System.Windows.Controls.GridViewHeaderRowPresenter>  
  <xref:System.Windows.Controls.GridViewRowPresenter>  
  <xref:System.Windows.Controls.GridViewColumnCollection>  

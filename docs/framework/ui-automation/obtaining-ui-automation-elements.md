@@ -1,27 +1,18 @@
 ---
-title: "取得 UI 自動化項目"
-ms.custom: 
+title: 取得 UI 自動化項目
 ms.date: 03/30/2017
-ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.technology: dotnet-bcl
-ms.tgt_pltfrm: 
-ms.topic: article
 helpviewer_keywords:
 - UI Automation, obtaining elements
 - elements, UI Automation, obtaining
 ms.assetid: c2caaf45-e59c-42a1-bc9b-77a6de520171
-caps.latest.revision: "23"
 author: Xansky
 ms.author: mhopkins
 manager: markl
-ms.workload: dotnet
-ms.openlocfilehash: 1e3f4b1583942b4dd29ca603bd880ba2acdcfd3c
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.openlocfilehash: 3e700e7e726b5cb71d3b7d863bdb31951aacd885
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="obtaining-ui-automation-elements"></a>取得 UI 自動化項目
 > [!NOTE]
@@ -107,7 +98,7 @@ ms.lasthandoff: 12/22/2017
 ### <a name="from-the-focused-control"></a>從取得焦點的控制項擷取  
  您可以從靜態 <xref:System.Windows.Automation.AutomationElement> 屬性擷取 <xref:System.Windows.Automation.AutomationElement.FocusedElement%2A> ，其代表取得焦點的控制項。  
   
-## <a name="see-also"></a>請參閱  
+## <a name="see-also"></a>另請參閱  
  [根據屬性條件尋找 UI 自動化項目](../../../docs/framework/ui-automation/find-a-ui-automation-element-based-on-a-property-condition.md)  
  [使用 TreeWalker 導覽 UI 自動化項目](../../../docs/framework/ui-automation/navigate-among-ui-automation-elements-with-treewalker.md)  
  [UI 自動化樹狀目錄概觀](../../../docs/framework/ui-automation/ui-automation-tree-overview.md)

@@ -1,31 +1,17 @@
 ---
-title: "WCF 系統需求"
-ms.custom: 
+title: WCF 系統需求
 ms.date: 03/30/2017
-ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.technology:
-- dotnet-clr
-ms.tgt_pltfrm: 
-ms.topic: article
 helpviewer_keywords:
 - Windows Communication Foundation, requirements
 ms.assetid: c43918db-9a36-426c-9e8a-e1bd6688a5b7
-caps.latest.revision: 
-author: dotnet-bot
-ms.author: dotnetcontent
-manager: wpickett
-ms.workload:
-- dotnet
-ms.openlocfilehash: 81f79691424bb48679605e385785bd7bf11b4db5
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
-ms.translationtype: MT
+ms.openlocfilehash: 7edb8de2bc7ce315336270b560bce5ec2153f239
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="wcf-system-requirements"></a>WCF 系統需求
-[!INCLUDE[indigo1](../../../includes/indigo1-md.md)] 是用於建立分散式應用程式的通訊基礎結構。 下面列出可讓 [!INCLUDE[indigo2](../../../includes/indigo2-md.md)] 執行的需求。  
+Windows Communication Foundation (WCF) 是用來建立分散式應用程式的通訊基礎結構。 下面列出可讓 [!INCLUDE[indigo2](../../../includes/indigo2-md.md)] 執行的需求。  
   
 ## <a name="system-requirements"></a>系統需求  
  [!INCLUDE[indigo2](../../../includes/indigo2-md.md)] 是預設為安裝在 [!INCLUDE[wv](../../../includes/wv-md.md)] 上。  
@@ -34,7 +20,7 @@ ms.lasthandoff: 12/22/2017
   
  **請注意**Message Queuing (MSMQ) 功能[!INCLUDE[indigo2](../../../includes/indigo2-md.md)]僅支援[!INCLUDE[wv](../../../includes/wv-md.md)]， [!INCLUDE[ws2003r2](../../../includes/ws2003r2-md.md)]， [!INCLUDE[ws2003sp1](../../../includes/ws2003sp1-md.md)]，和[!INCLUDE[wxppro](../../../includes/wxppro-md.md)]。  
   
-## <a name="see-also"></a>請參閱  
+## <a name="see-also"></a>另請參閱  
  [概念性概觀](../../../docs/framework/wcf/conceptual-overview.md)  
  [基本 WCF 程式設計](../../../docs/framework/wcf/basic-wcf-programming.md)  
  [WCF 功能詳細資料](../../../docs/framework/wcf/feature-details/index.md)  

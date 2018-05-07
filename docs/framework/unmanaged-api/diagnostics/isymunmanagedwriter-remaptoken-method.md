@@ -1,14 +1,6 @@
 ---
-title: "ISymUnmanagedWriter::RemapToken 方法"
-ms.custom: 
+title: ISymUnmanagedWriter::RemapToken 方法
 ms.date: 03/30/2017
-ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.technology:
-- dotnet-clr
-ms.tgt_pltfrm: 
-ms.topic: reference
 api_name:
 - ISymUnmanagedWriter.RemapToken
 api_location:
@@ -23,17 +15,13 @@ helpviewer_keywords:
 ms.assetid: bca92682-ee1e-467f-8fb0-d8d4617f82fe
 topic_type:
 - apiref
-caps.latest.revision: 
 author: mairaw
 ms.author: mairaw
-manager: wpickett
-ms.workload:
-- dotnet
-ms.openlocfilehash: 86d6c78a49c55bdc9093241952bee00ee331696e
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.openlocfilehash: f37630c9631e2e76d9b98730b84086b8b86ec55d
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="isymunmanagedwriterremaptoken-method"></a>ISymUnmanagedWriter::RemapToken 方法
 通知中繼資料語彙基元已重新對應，因為中繼資料已發出符號寫入器。 如果符號寫入器已存放在符號存放區中舊的語彙基元，則它必須的更新與新的值，或者預存的語彙基元必須儲存對應的符號讀取器讀取階段期間重新對應的對應。  
@@ -59,5 +47,5 @@ HRESULT RemapToken(
 ## <a name="requirements"></a>需求  
  **標頭：**於 CorSym.idl、 CorSym.h  
   
-## <a name="see-also"></a>請參閱  
+## <a name="see-also"></a>另請參閱  
  [ISymUnmanagedWriter 介面](../../../../docs/framework/unmanaged-api/diagnostics/isymunmanagedwriter-interface.md)

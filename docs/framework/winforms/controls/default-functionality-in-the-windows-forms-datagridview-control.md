@@ -1,27 +1,15 @@
 ---
-title: "Windows Form DataGridView 控制項的預設功能"
-ms.custom: 
+title: Windows Form DataGridView 控制項的預設功能
 ms.date: 03/30/2017
-ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.technology: dotnet-winforms
-ms.tgt_pltfrm: 
-ms.topic: article
 helpviewer_keywords:
 - data grids [Windows Forms], default functionality in DataGridView control
 - DataGridView control [Windows Forms], default functionality
 ms.assetid: 4405f697-cad1-4839-9bcd-8ddb09d9f00e
-caps.latest.revision: "10"
-author: dotnet-bot
-ms.author: dotnetcontent
-manager: wpickett
-ms.workload: dotnet
-ms.openlocfilehash: ecb8cdaa4e8eb0498259c597e0de3f80c3106549
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.openlocfilehash: a475d8bce388860c88571fbf638d206bfe01223d
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="default-functionality-in-the-windows-forms-datagridview-control"></a>Windows Form DataGridView 控制項的預設功能
 Windows Form<xref:System.Windows.Forms.DataGridView>控制為使用者提供相當大的預設功能。  
@@ -51,12 +39,12 @@ Windows Form<xref:System.Windows.Forms.DataGridView>控制為使用者提供相�
   
 -   會自動使用資料來源的資料行名稱做為資料行標頭文字。  
   
--   填入資料來源的內容。 <xref:System.Windows.Forms.DataGridView>每個資料行的資料來源中，會自動建立資料行。  
+-   填入資料來源的內容。 <xref:System.Windows.Forms.DataGridView> 每個資料行的資料來源中，會自動建立資料行。  
   
 -   在資料表中建立每個可見資料列的資料列。  
   
 -   自動排序依據基礎資料，當使用者按一下資料行標頭的資料列。  
   
-## <a name="see-also"></a>請參閱  
+## <a name="see-also"></a>另請參閱  
  <xref:System.Windows.Forms.DataGridView>  
  [DataGridView 控制項](../../../../docs/framework/winforms/controls/datagridview-control-windows-forms.md)

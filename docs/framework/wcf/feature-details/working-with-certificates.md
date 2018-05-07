@@ -1,36 +1,22 @@
 ---
 title: 使用憑證
-ms.custom: ''
 ms.date: 03/30/2017
-ms.prod: .net-framework
-ms.reviewer: ''
-ms.suite: ''
-ms.technology:
-- dotnet-clr
-ms.tgt_pltfrm: ''
-ms.topic: article
 dev_langs:
 - csharp
 - vb
 helpviewer_keywords:
 - certificates [WCF]
 ms.assetid: 6ffb8682-8f07-4a45-afbb-8d2487e9dbc3
-caps.latest.revision: 26
-author: dotnet-bot
-ms.author: dotnetcontent
-manager: wpickett
-ms.workload:
-- dotnet
-ms.openlocfilehash: 3c023b27ace10919c51aa13e2635040d9d5b812b
-ms.sourcegitcommit: 94d33cadc5ff81d2ac389bf5f26422c227832052
+ms.openlocfilehash: f5566eacaabb5d3eb5579d015fad8149a2ed4f3c
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/30/2018
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="working-with-certificates"></a>使用憑證
-在針對 [!INCLUDE[indigo1](../../../../includes/indigo1-md.md)] 安全性設計程式時，通常會採用 X.509 數位憑證來驗證用戶端與伺服器、加密，以及數位簽署訊息。 本主題將扼要說明 X.509 數位憑證功能及如何在 [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] 中使用這些憑證，同時針對這些概念的進一步說明以及如何運用 [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] 與憑證來完成一般工作的方法說明提供連結。  
+若要程式設計 Windows Communication Foundation (WCF) 安全性 X.509 數位憑證通常可用來驗證用戶端與伺服器、 加密和數位簽章訊息。 本主題簡要說明 X.509 數位憑證功能及如何在 WCF 中，使用它們，並包含連結，說明這些概念的進一步示範如何完成使用 WCF 和憑證的一般工作。  
   
- 簡單地說，數位憑證是屬於*公開金鑰基礎結構*(PKI)，這是數位憑證、 憑證授權單位，與其他註冊授權單位，並驗證有效性的系統每個參與電子異動使用公開金鑰加密的合作對象。 憑證授權單位發出憑證，而每個憑證具有一組欄位，其中包含資料，例如*主旨*（發行憑證的實體），有效日期 （當憑證是有效的），(的簽發者實體發出憑證），與公開金鑰。 在 [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] 中，每一個屬性都會被當成 <xref:System.IdentityModel.Claims.Claim> 處理，而且每個宣告還會進一步分成兩種型別：身分識別與權限。 如需 X.509 憑證，請參閱[X.509 公用金鑰憑證](http://go.microsoft.com/fwlink/?LinkId=209952)如需有關宣告和授權中，請參閱 WCF[管理宣告和授權的方式識別模型](../../../../docs/framework/wcf/feature-details/managing-claims-and-authorization-with-the-identity-model.md). 如需實作 PKI 的詳細資訊，請參閱[Windows Server 2008 R2 憑證服務](http://go.microsoft.com/fwlink/?LinkId=209949)。  
+ 簡單地說，數位憑證是屬於*公開金鑰基礎結構*(PKI)，這是數位憑證、 憑證授權單位，與其他註冊授權單位，並驗證有效性的系統每個參與電子異動使用公開金鑰加密的合作對象。 憑證授權單位發出憑證，而每個憑證具有一組欄位，其中包含資料，例如*主旨*（發行憑證的實體），有效日期 （當憑證是有效的），(的簽發者實體發出憑證），與公開金鑰。 在 WCF 中，每一個屬性以處理<xref:System.IdentityModel.Claims.Claim>，而每個宣告進一步分成兩種類型： 身分識別和權限。 如需 X.509 憑證，請參閱[X.509 公用金鑰憑證](http://go.microsoft.com/fwlink/?LinkId=209952)如需有關宣告和授權中，請參閱 WCF[管理宣告和授權的方式識別模型](../../../../docs/framework/wcf/feature-details/managing-claims-and-authorization-with-the-identity-model.md). 如需實作 PKI 的詳細資訊，請參閱[Windows Server 2008 R2 憑證服務](http://go.microsoft.com/fwlink/?LinkId=209949)。  
   
  憑證的主要功能就是向其他人驗證憑證擁有者的身分識別。 憑證包含*公開金鑰*的擁有者，而擁有者本身則保留私密金鑰。 公開金鑰可以用來加密傳送給憑證擁有者的訊息。 只有擁有者才能存取私密金鑰，因此只有擁有者可以解密這些訊息。  
   
@@ -46,7 +32,7 @@ ms.lasthandoff: 04/30/2018
   
 -   **目前使用者存放區**。 一般來說，互動性應用程式會將電腦目前使用者的憑證放在此處。 如果您正在建立用戶端應用程式，通常會將用來向服務驗證使用者的憑證放在此處。  
   
- 這兩個存放區還可進一步細分為子存放區。 使用 [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] 來設計程式時，其中最重要的存放區為：  
+ 這兩個存放區還可進一步細分為子存放區。 其中最重要的使用 WCF 進行程式設計時包括：  
   
 -   **受信任的根憑證授權單位**。 您可以使用此存放區中的憑證來建立憑證鏈結，並藉由這些憑證回溯追蹤到此存放區中某個憑證授權單位的憑證。  
   
@@ -99,7 +85,7 @@ ms.lasthandoff: 04/30/2018
  在建立自訂的驗證器時，要覆寫之最重要的方法是 <xref:System.IdentityModel.Selectors.X509CertificateValidator.Validate%2A> 方法。 如需自訂驗證的範例，請參閱[X.509 憑證驗證程式](../../../../docs/framework/wcf/samples/x-509-certificate-validator.md)範例。 如需詳細資訊，請參閱[自訂認證與認證驗證](../../../../docs/framework/wcf/extending/custom-credential-and-credential-validation.md)。  
   
 ## <a name="using-makecertexe-to-build-a-certificate-chain"></a>使用 Makecert.exe 來建置憑證鏈結  
- 憑證建立工具 (Makecert.exe) 可建立 X.509 憑證與私密金鑰/公開金鑰組。 您可以將私密金鑰儲存到磁碟，然後用它來發行並簽署新的憑證，藉此模擬鏈結憑證的階層架構。 此工具主要當作開發服務時的輔助工具用途，請勿用來建立實際部署所需的憑證。 在開發 [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] 服務時，請透過下列步驟並使用 Makecert.exe 來建置信任鏈結。  
+ 憑證建立工具 (Makecert.exe) 可建立 X.509 憑證與私密金鑰/公開金鑰組。 您可以將私密金鑰儲存到磁碟，然後用它來發行並簽署新的憑證，藉此模擬鏈結憑證的階層架構。 此工具主要當作開發服務時的輔助工具用途，請勿用來建立實際部署所需的憑證。 在開發 WCF 服務時，請使用下列步驟來建置使用 Makecert.exe 信任鏈結。  
   
 #### <a name="to-build-a-chain-of-trust-with-makecertexe"></a>若要使用 Makecert.exe 來建置信任鏈結  
   
@@ -137,7 +123,7 @@ ms.lasthandoff: 04/30/2018
  您也可以使用組態中設定模式`revocationMode`屬性兩者的[\<驗證 >](../../../../docs/framework/configure-apps/file-schema/wcf/authentication-of-clientcertificate-element.md) (的[ \<serviceBehaviors >](../../../../docs/framework/configure-apps/file-schema/wcf/servicebehaviors.md)) 和[\<驗證 >](../../../../docs/framework/configure-apps/file-schema/wcf/authentication-of-clientcertificate-element.md) (的[ \<endpointBehaviors >](../../../../docs/framework/configure-apps/file-schema/wcf/endpointbehaviors.md))。  
   
 ## <a name="the-setcertificate-method"></a>SetCertificate 方法  
- 在 [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] 中，您必須經常指定服務或用戶端用來驗證、加密或數位簽署訊息的憑證或憑證集。 您也可以使用代表 X.509 憑證之各種類別的 `SetCertificate` 方法，以程式設計方式來執行這項工作。 下列類別會使用 `SetCertificate` 方法來指定憑證。  
+ 在 WCF 中，您通常必須指定憑證，或將服務設定的憑證或用戶端是使用來進行驗證、 加密或數位簽署訊息。 您也可以使用代表 X.509 憑證之各種類別的 `SetCertificate` 方法，以程式設計方式來執行這項工作。 下列類別會使用 `SetCertificate` 方法來指定憑證。  
   
 |類別|方法|  
 |-----------|------------|  
@@ -179,9 +165,9 @@ ms.lasthandoff: 04/30/2018
   
  將 X.509 憑證對應至代表 Windows 使用者帳戶的權杖可視為權限的提升，因為一旦對應之後，就可以使用 Windows 權杖針對受保護的資源取得其存取權限。 因此，網域原則要求 X.509 憑證在執行對應之前必須先符合此原則規定。 *SChannel*安全性封裝會強制執行這項需求。  
   
- 當使用 [!INCLUDE[netfx35_long](../../../../includes/netfx35-long-md.md)] (含) 以後版本時，[!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] 會確保憑證符合網域原則，然後才將憑證對應至 Windows 帳戶。  
+ 當使用[!INCLUDE[netfx35_long](../../../../includes/netfx35-long-md.md)]或更新版本中，WCF 可確保憑證符合網域原則之前它會對應至 Windows 帳戶。  
   
- 在第一版的 [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] 中，您不需要諮詢網域原則便可進行對應。 因此，當啟用對應功能且 X.509 憑證無法滿足網域原則要求時，以往在第一版中能夠順利執行的舊版應用程式可能會無法執行。  
+ 在 WCF 的第一個版本中，不需要諮詢網域原則已完成的對應。 因此，當啟用對應功能且 X.509 憑證無法滿足網域原則要求時，以往在第一版中能夠順利執行的舊版應用程式可能會無法執行。  
   
 ## <a name="see-also"></a>另請參閱  
  <xref:System.ServiceModel.Channels>  

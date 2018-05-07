@@ -1,27 +1,15 @@
 ---
-title: "傳播"
-ms.custom: 
+title: 傳播
 ms.date: 03/30/2017
-ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.technology: dotnet-clr
-ms.tgt_pltfrm: 
-ms.topic: article
 ms.assetid: f8181e75-d693-48d1-b333-a776ad3b382a
-caps.latest.revision: "8"
-author: dotnet-bot
-ms.author: dotnetcontent
-manager: wpickett
-ms.workload: dotnet
-ms.openlocfilehash: 17b20b76d4932272c8e2a9e26603dc8483505242
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
-ms.translationtype: MT
+ms.openlocfilehash: 5d848a2b74402d0adf125488481f5b82e0b09781
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="propagation"></a>傳播
-本主題描述 [!INCLUDE[indigo1](../../../../../includes/indigo1-md.md)] 追蹤模型中的活動傳播。  
+本主題說明 Windows Communication Foundation (WCF) 追蹤模型中的活動傳播。  
   
 ## <a name="using-propagation-to-correlate-activities-across-endpoints"></a>使用傳播將端點上的活動相互關聯  
  傳播會針對應用程式端點間的相同處理單位 (例如，要求)，將錯誤追蹤的直接相互關聯提供給使用者。 在不同端點針對相同處理單位發出的錯誤會組成相同的活動群組，即使是跨應用程式定義域亦然。 這項工作是藉由傳播訊息標頭中的活動識別碼來達成。 因此，如果用戶端因為伺服器發生內部錯誤而逾時，則基於直接的相互關聯，這兩個錯誤都會出現在相同的活動中。  
@@ -89,7 +77,7 @@ ms.lasthandoff: 12/22/2017
 ## <a name="synchronization"></a>同步處理  
  若要在執行於不同電腦的端點之間同步處理事件，請將 CorrelationId 新增至訊息中所傳播的 ActivityId 標頭。 工具可以使用這個識別碼，在時鐘不一致的電腦之間同步處理事件。 具體來說，「服務追蹤檢視器」工具會使用這個識別碼來顯示端點之間的訊息流動。  
   
-## <a name="see-also"></a>請參閱  
+## <a name="see-also"></a>另請參閱  
  [設定追蹤](../../../../../docs/framework/wcf/diagnostics/tracing/configuring-tracing.md)  
  [使用服務追蹤檢視器檢視相關追蹤並進行疑難排解](../../../../../docs/framework/wcf/diagnostics/tracing/using-service-trace-viewer-for-viewing-correlated-traces-and-troubleshooting.md)  
  [端對端追蹤案例](../../../../../docs/framework/wcf/diagnostics/tracing/end-to-end-tracing-scenarios.md)  

@@ -1,27 +1,15 @@
 ---
-title: "如何：使用應用程式資源"
-ms.custom: 
+title: 如何：使用應用程式資源
 ms.date: 03/30/2017
-ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.technology: dotnet-wpf
-ms.tgt_pltfrm: 
-ms.topic: article
 helpviewer_keywords:
 - application resources [WPF]
 - resources [WPF], application resources
 ms.assetid: 507ea937-5191-406b-8797-0a3d9f94156d
-caps.latest.revision: "16"
-author: dotnet-bot
-ms.author: dotnetcontent
-manager: wpickett
-ms.workload: dotnet
-ms.openlocfilehash: bac1fa1576e684a4b10f00310c08e4e7101a5df0
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.openlocfilehash: 4305c49c4322d164e2481c1508dda7c038c14694
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="how-to-use-application-resources"></a>如何：使用應用程式資源
 這個範例示範如何使用應用程式資源。  
@@ -36,7 +24,7 @@ ms.lasthandoff: 12/22/2017
   
  [!code-xaml[ResourcesApplication#ConsumingPage](../../../../samples/snippets/csharp/VS_Snippets_Wpf/ResourcesApplication/CS/page1.xaml#consumingpage)]  
   
-## <a name="see-also"></a>請參閱  
+## <a name="see-also"></a>另請參閱  
  [XAML 資源](../../../../docs/framework/wpf/advanced/xaml-resources.md)  
  [應用程式管理概觀](../../../../docs/framework/wpf/app-development/application-management-overview.md)  
  [HOW-TO 主題](../../../../docs/framework/wpf/advanced/resources-how-to-topics.md)

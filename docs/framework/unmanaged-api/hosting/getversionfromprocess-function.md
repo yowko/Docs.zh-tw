@@ -1,14 +1,6 @@
 ---
-title: "GetVersionFromProcess 函式"
-ms.custom: 
+title: GetVersionFromProcess 函式
 ms.date: 03/30/2017
-ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.technology:
-- dotnet-clr
-ms.tgt_pltfrm: 
-ms.topic: reference
 api_name:
 - GetVersionFromProcess
 api_location:
@@ -23,17 +15,13 @@ helpviewer_keywords:
 ms.assetid: a9f7f824-64a1-408d-8607-91c7f19d21fe
 topic_type:
 - apiref
-caps.latest.revision: 
 author: rpetrusha
 ms.author: ronpet
-manager: wpickett
-ms.workload:
-- dotnet
-ms.openlocfilehash: db5054ab9b71eb93005fc0315acba82d807487ec
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.openlocfilehash: 0b57d04a8a49371872c679a331b5ae9c45dce797
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="getversionfromprocess-function"></a>GetVersionFromProcess 函式
 取得 common language runtime (CLR) 與指定的處理序控制代碼相關聯的版本號碼。  
@@ -70,8 +58,8 @@ HRESULT GetVersionFromProcess (
 |傳回碼|描述|  
 |-----------------|-----------------|  
 |S_OK|已成功完成命令。|  
-|E_INVALIDARG|`pVersion`為 null 和`cchBuffer`不是 null，反之亦然。<br /><br /> -或-<br /><br /> `hProcess`不是有效的處理常式至處理序。<br /><br /> -或-<br /><br /> 未載入 CLR。|  
-|ERROR_INSUFFICIENT_BUFFER|`cchBuffer`為 null 或小於版本字串的長度。|  
+|E_INVALIDARG|`pVersion` 為 null 和`cchBuffer`不是 null，反之亦然。<br /><br /> -或-<br /><br /> `hProcess` 不是有效的處理常式至處理序。<br /><br /> -或-<br /><br /> 未載入 CLR。|  
+|ERROR_INSUFFICIENT_BUFFER|`cchBuffer` 為 null 或小於版本字串的長度。|  
 |E_NOTIMPL|無法在 Microsoft Windows 95、 Microsoft Windows 98、 或 Microsoft Windows Me 作業系統上使用這個方法。|  
   
 ## <a name="requirements"></a>需求  
@@ -81,9 +69,9 @@ HRESULT GetVersionFromProcess (
   
  **程式庫：** MSCorEE.dll  
   
- **.NET framework 版本：**[!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]  
+ **.NET framework 版本：** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]  
   
-## <a name="see-also"></a>請參閱  
+## <a name="see-also"></a>另請參閱  
  [GetRequestedRuntimeInfo 函式](../../../../docs/framework/unmanaged-api/hosting/getrequestedruntimeinfo-function.md)  
  [GetRequestedRuntimeVersion 函式](../../../../docs/framework/unmanaged-api/hosting/getrequestedruntimeversion-function.md)  
  [已被取代的 CLR 裝載函式](../../../../docs/framework/unmanaged-api/hosting/deprecated-clr-hosting-functions.md)

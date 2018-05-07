@@ -1,24 +1,14 @@
 ---
-title: "操作說明︰啟用權杖重新執行偵測"
-ms.custom: 
+title: 操作說明︰啟用權杖重新執行偵測
 ms.date: 03/30/2017
-ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.technology: dotnet-clr
-ms.tgt_pltfrm: 
-ms.topic: article
 ms.assetid: 5a9f5771-f5f6-4100-8501-406aa20d731a
-caps.latest.revision: "4"
 author: BrucePerlerMS
-ms.author: bruceper
 manager: mbaldwin
-ms.workload: dotnet
-ms.openlocfilehash: a7c72d77b4894376fb6cb8aed2d1c6641a3977da
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.openlocfilehash: b9c187998b4af41e1a56ed9a64625da7e4f95d5e
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="how-to-enable-token-replay-detection"></a>操作說明︰啟用權杖重新執行偵測
 ## <a name="applies-to"></a>適用於  
@@ -27,14 +17,14 @@ ms.lasthandoff: 12/22/2017
   
 -   ASP.NET® Web Forms  
   
-## <a name="summary"></a>摘要  
+## <a name="summary"></a>總結  
  此操作說明提供了在使用 WIF 的 ASP.NET 應用程式中啟用權杖重新執行偵測的詳細逐步程序。 還提供了一些指示，說明如何測試應用程式來確認已啟用權杖重新執行偵測。 這篇使用方法文章並沒有提供建立 Security Token Service (STS) 的詳細指示，而是使用識別和存取工具隨附的「開發 STS」。 「開發 STS」並不會執行實際的驗證，而只是用於測試用途。 您必須安裝識別和存取工具才能完成這篇使用方法文章。 您可以從下列位置下載：[Identity and Access Tool](http://go.microsoft.com/fwlink/?LinkID=245849) (身分識別與存取工具)  
   
 ## <a name="contents"></a>內容  
   
 -   目標  
   
--   概觀  
+-   總覽  
   
 -   步驟摘要  
   
@@ -48,7 +38,7 @@ ms.lasthandoff: 12/22/2017
   
 -   啟用權杖重新執行偵測，並確認它能夠正常運作  
   
-## <a name="overview"></a>概觀  
+## <a name="overview"></a>總覽  
  當用戶端嘗試以用戶端已使用之 STS 權杖向信賴憑證者進行驗證時，就會發生重新執行攻擊。 為了協助避免這種攻擊，WIF 會包含先前所使用之 STS 權杖的重新執行偵測快取。 啟用時，重新執行偵測會檢查傳入要求的權杖，並確認先前是否已使用該權杖。 如果已使用該權杖，就會拒絕要求並擲回 <xref:System.IdentityModel.Tokens.SecurityTokenReplayDetectedException> 例外狀況。  
   
  下列步驟示範啟用重新執行偵測所需的組態變更。  

@@ -1,24 +1,14 @@
 ---
-title: "如何：使用 WIF 建置宣告感知 ASP.NET Web Form 應用程式"
-ms.custom: 
+title: 如何：使用 WIF 建置宣告感知 ASP.NET Web Form 應用程式
 ms.date: 03/30/2017
-ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.technology: dotnet-clr
-ms.tgt_pltfrm: 
-ms.topic: article
 ms.assetid: efb264dd-f47b-49a9-85ee-9f45d4425765
-caps.latest.revision: "7"
 author: BrucePerlerMS
-ms.author: bruceper
 manager: mbaldwin
-ms.workload: dotnet
-ms.openlocfilehash: 70d503448946b60f1d6b63bf850d8d62fb63acc2
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.openlocfilehash: e8dc6b1c5073ac55be224eb0d410ad7f87d135d2
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="how-to-build-claims-aware-aspnet-web-forms-application-using-wif"></a>如何：使用 WIF 建置宣告感知 ASP.NET Web Form 應用程式
 ## <a name="applies-to"></a>適用於  
@@ -27,7 +17,7 @@ ms.lasthandoff: 12/22/2017
   
 -   ASP.NET® Web Forms  
   
-## <a name="summary"></a>摘要  
+## <a name="summary"></a>總結  
  此操作說明提供詳細逐步程序，以建立簡單宣告感知 ASP.NET Web Forms 應用程式。 還提供了一些指示，說明如何測試簡單宣告感知 ASP.NET Web Forms 應用程式成功實作同盟驗證。 此操作說明沒有提供建立安全性權杖服務 (STS) 的詳細指示，並假設您已設定 STS。  
   
 ## <a name="contents"></a>內容  

@@ -1,14 +1,6 @@
 ---
-title: "IHostAssemblyManager::GetAssemblyStore 方法"
-ms.custom: 
+title: IHostAssemblyManager::GetAssemblyStore 方法
 ms.date: 03/30/2017
-ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.technology:
-- dotnet-clr
-ms.tgt_pltfrm: 
-ms.topic: reference
 api_name:
 - IHostAssemblyManager.GetAssemblyStore
 api_location:
@@ -23,17 +15,13 @@ helpviewer_keywords:
 ms.assetid: d0f74593-9bb1-4a11-8096-e29734b20698
 topic_type:
 - apiref
-caps.latest.revision: 
 author: rpetrusha
 ms.author: ronpet
-manager: wpickett
-ms.workload:
-- dotnet
-ms.openlocfilehash: 347947622601475147663b8838bef5f36a1f7e32
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.openlocfilehash: efad3c6e566ab35a8ba4fbbacf09931e844ce8ef
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="ihostassemblymanagergetassemblystore-method"></a>IHostAssemblyManager::GetAssemblyStore 方法
 取得的介面指標[IHostAssemblyStore](../../../../docs/framework/unmanaged-api/hosting/ihostassemblystore-interface.md)代表主應用程式載入的組件的清單。  
@@ -54,7 +42,7 @@ HRESULT GetAssemblyStore (
   
 |HRESULT|描述|  
 |-------------|-----------------|  
-|S_OK|`GetAssemblyStore`已成功傳回。|  
+|S_OK|`GetAssemblyStore` 已成功傳回。|  
 |HOST_E_CLRNOTAVAILABLE|Common language runtime (CLR) 尚未載入到處理程序，或 CLR 正在中它無法執行 managed 程式碼，或成功地處理呼叫的狀態。|  
 |HOST_E_TIMEOUT|呼叫已逾時。|  
 |HOST_E_NOT_OWNER|呼叫端未擁有鎖定。|  
@@ -63,7 +51,7 @@ HRESULT GetAssemblyStore (
 |E_NOINTERFACE|主機並未提供的實作`IHostAssemblyStore`。|  
   
 ## <a name="remarks"></a>備註  
- `IHostAssemblyStore`提供方法，讓主應用程式繫結至組件和模組與 CLR 無關。 主機通常會提供以允許從檔案系統以外的格式中載入的組件的組件存放區。  
+ `IHostAssemblyStore` 提供方法，讓主應用程式繫結至組件和模組與 CLR 無關。 主機通常會提供以允許從檔案系統以外的格式中載入的組件的組件存放區。  
   
 > [!NOTE]
 >  如果主機未實作`IHostAssemblyStore`，`GetAssemblyStore`應該會傳回 E_NOINTERFACE，HRESULT 值，來設定`ppAssemblyStore`為 null。  
@@ -75,8 +63,8 @@ HRESULT GetAssemblyStore (
   
  **程式庫：**包含做為 MSCorEE.dll 中的資源  
   
- **.NET framework 版本：**[!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]  
+ **.NET framework 版本：** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]  
   
-## <a name="see-also"></a>請參閱  
+## <a name="see-also"></a>另請參閱  
  [IHostAssemblyManager 介面](../../../../docs/framework/unmanaged-api/hosting/ihostassemblymanager-interface.md)  
  [IHostAssemblyStore 介面](../../../../docs/framework/unmanaged-api/hosting/ihostassemblystore-interface.md)

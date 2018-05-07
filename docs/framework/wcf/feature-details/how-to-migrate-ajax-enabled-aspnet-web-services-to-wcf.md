@@ -1,41 +1,27 @@
 ---
 title: HOW TO：將啟用 AJAX 的 ASP.NET Web 服務移轉至 WCF
-ms.custom: ''
 ms.date: 03/30/2017
-ms.prod: .net-framework
-ms.reviewer: ''
-ms.suite: ''
-ms.technology:
-- dotnet-clr
-ms.tgt_pltfrm: ''
-ms.topic: article
 ms.assetid: 1428df4d-b18f-4e6d-bd4d-79ab3dd5147c
-caps.latest.revision: 17
-author: dotnet-bot
-ms.author: dotnetcontent
-manager: wpickett
-ms.workload:
-- dotnet
-ms.openlocfilehash: 2b728e6283a2f038b7e5ef4c535da41f4eb8ebef
-ms.sourcegitcommit: 94d33cadc5ff81d2ac389bf5f26422c227832052
+ms.openlocfilehash: 048408adf8678c243a225a233cb1173c9b7f869f
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/30/2018
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="how-to-migrate-ajax-enabled-aspnet-web-services-to-wcf"></a>HOW TO：將啟用 AJAX 的 ASP.NET Web 服務移轉至 WCF
-本主題將概述用來將基本 ASP.NET AJAX 服務移轉至相等之啟用 AJAX 的 [!INCLUDE[indigo1](../../../../includes/indigo1-md.md)] 服務的程序。 其中將示範如何建立功能相等的 [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] 版本的 ASP.NET AJAX 服務。 然後這兩項服務可以並存使用，或是 [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] 服務可以用於取代 ASP.NET AJAX 服務。  
+本主題概要說明基本的 ASP.NET AJAX 服務移轉至對等的 ajax 能力的 Windows Communication Foundation (WCF) 服務的程序。 它示範如何建立功能上相當 WCF 版本的 ASP.NET AJAX 服務。 這兩項服務則可並存，或 WCF 服務可以用來取代 ASP.NET AJAX 服務。  
   
- 將現有的 ASP.NET AJAX 服務移轉至 [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] AJAX 服務可為您提供下列優點：  
+ 移轉現有的 ASP.NET AJAX 的 WCF AJAX 服務的服務提供下列優點：  
   
 -   您可以使用最少的額外組態，將您的 AJAX 服務公開為 SOAP 服務。  
   
--   您可以從 [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] 功能獲益，例如追蹤等等。  
+-   您可以受益於 WCF 功能，例如追蹤等等。  
   
  下列程序假設使用的是 [!INCLUDE[vs_current_long](../../../../includes/vs-current-long-md.md)]。  
   
  在程序之後的範例中，會提供來自本主題中所述程序的程式碼。  
   
- 如需有關公開[!INCLUDE[indigo2](../../../../includes/indigo2-md.md)]服務透過啟用 AJAX 的端點，請參閱[How to： 使用組態新增 ASP.NET AJAX 端點](../../../../docs/framework/wcf/feature-details/how-to-use-configuration-to-add-an-aspnet-ajax-endpoint.md)主題。  
+ 如需公開 WCF 服務，透過啟用 AJAX 的端點的詳細資訊，請參閱[How to： 使用組態新增 ASP.NET AJAX 端點](../../../../docs/framework/wcf/feature-details/how-to-use-configuration-to-add-an-aspnet-ajax-endpoint.md)主題。  
   
 ### <a name="to-create-and-test-the-aspnet-web-service-application"></a>若要建立並測試 ASP.NET Web 服務應用程式  
   
@@ -62,7 +48,7 @@ ms.lasthandoff: 04/30/2018
   
 9. 這個回應會確認您現在有正在運作的 ASP.NET AJAX 服務，而且特別的是，服務現在已在回應 HTTP POST 要求並傳回 XML 的 Service1.asmx/HelloWorld 公開端點。  
   
-     現在您已準備好要轉換這個服務，以使用 [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] AJAX 服務了。  
+     現在您已準備好要轉換為使用 WCF AJAX 服務此服務。  
   
 ### <a name="to-create-an-equivalent-wcf-ajax-service-application"></a>建立相等的 WCF AJAX 服務應用程式  
   
@@ -190,11 +176,11 @@ namespace ASPHello
   
  <xref:System.Xml.XmlDocument> 不支援 <xref:System.Runtime.Serialization.Json.DataContractJsonSerializer> 型別，因為它無法由 <xref:System.Xml.Serialization.XmlSerializer> 來序列化。 您可以使用 <xref:System.Xml.Linq.XDocument> 型別，或是改為序列化 <xref:System.Xml.XmlDocument.DocumentElement%2A>。  
   
- 如果 ASMX Web 服務正並存升級及移轉至 [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] 服務，請避免將兩種型別對應至用戶端上相同的名稱。 如果在 <xref:System.Web.Services.WebMethodAttribute> 和 <xref:System.ServiceModel.ServiceContractAttribute> 中使用相同的型別，會造成序列化程式中的例外狀況：  
+ 如果 ASMX Web 服務正在升級和移轉至 WCF 服務的-並存，避免兩個型別對應至用戶端上相同的名稱。 如果在 <xref:System.Web.Services.WebMethodAttribute> 和 <xref:System.ServiceModel.ServiceContractAttribute> 中使用相同的型別，會造成序列化程式中的例外狀況：  
   
--   如果先新增 [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] 服務，則叫用 ASMX Web 服務上的方法會造成 <xref:System.Web.UI.ObjectConverter.ConvertValue%28System.Object%2CSystem.Type%2CSystem.String%29> 中的例外狀況，因為在 Proxy 中順序的 [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] 樣式定義會取得優先權。  
+-   第一次加入 WCF 服務時，叫用 ASMX Web 服務上的方法會導致例外狀況中的<xref:System.Web.UI.ObjectConverter.ConvertValue%28System.Object%2CSystem.Type%2CSystem.String%29>因為在 proxy 中順序 WCF 樣式定義會取得優先權。  
   
--   如果先新增 ASMX Web 服務，則叫用 [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] 服務上的方法會造成 <xref:System.Runtime.Serialization.Json.DataContractJsonSerializer> 中的例外狀況，因為在 Proxy 中順序的 Web 服務樣式定義會取得優先權。  
+-   如果第一個先新增 ASMX Web 服務，叫用 WCF 服務上的方法會導致例外狀況中的<xref:System.Runtime.Serialization.Json.DataContractJsonSerializer>因為在 proxy 中順序的 Web 服務樣式定義的優先順序。  
   
  <xref:System.Runtime.Serialization.Json.DataContractJsonSerializer> 和 ASP.NET AJAX <xref:System.Web.Script.Serialization.JavaScriptSerializer> 之間在行為上有許多不同之處。 例如，<xref:System.Runtime.Serialization.Json.DataContractJsonSerializer> 會將字典表示為索引鍵/值配對的陣列，而 ASP.NET AJAX <xref:System.Web.Script.Serialization.JavaScriptSerializer> 會將字典表示為實際的 JSON 物件。 因此下面是在 ASP.NET AJAX 中表示的字典。  
   

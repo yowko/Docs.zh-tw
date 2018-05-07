@@ -1,31 +1,17 @@
 ---
 title: WCF 的事件記錄
-ms.custom: ''
 ms.date: 03/30/2017
-ms.prod: .net-framework
-ms.reviewer: ''
-ms.suite: ''
-ms.technology:
-- dotnet-clr
-ms.tgt_pltfrm: ''
-ms.topic: article
 helpviewer_keywords:
 - event logging [WCF]
 ms.assetid: aac0530d-f44c-45a1-bada-e30e0677b41f
-caps.latest.revision: 22
-author: dotnet-bot
-ms.author: dotnetcontent
-manager: wpickett
-ms.workload:
-- dotnet
-ms.openlocfilehash: 4028772caef8e5c0301ab3a6a0bde2f180d821ca
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
-ms.translationtype: MT
+ms.openlocfilehash: 78ad80188b8428bb718251045ef04ab803862a0f
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="event-logging-in-wcf"></a>WCF 的事件記錄
-[!INCLUDE[indigo1](../../../../../includes/indigo1-md.md)] 會追蹤 Windows 事件記錄檔中的內部事件。  
+Windows Communication Foundation (WCF) 會追蹤 Windows 事件記錄檔中的內部事件。  
   
 ## <a name="viewing-event-logs"></a>檢視事件記錄檔  
  根據預設會自動啟用事件記錄，且沒有機制可停用它。 由 [!INCLUDE[indigo2](../../../../../includes/indigo2-md.md)] 所記錄的事件可以使用事件檢視器來檢視。 若要啟動此工具，請按一下**啟動**，按一下**控制台**，連按兩下**系統管理工具**，然後按兩下**事件檢視器**.  
@@ -60,6 +46,6 @@ ms.lasthandoff: 12/22/2017
   
  當您按一下 [詳細資訊] 時使用事件檢視器中檢視事件，事件檢視器可能會透過網際網路傳送資訊。 如需詳細資訊，請參閱「事件檢視器」的說明。  
   
-## <a name="see-also"></a>請參閱  
+## <a name="see-also"></a>另請參閱  
  [管理與診斷](../../../../../docs/framework/wcf/diagnostics/index.md)  
  [事件一般參考](../../../../../docs/framework/wcf/diagnostics/event-logging/events-general-reference.md)

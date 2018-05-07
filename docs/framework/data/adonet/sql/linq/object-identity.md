@@ -1,27 +1,15 @@
 ---
-title: "物件識別"
-ms.custom: 
+title: 物件識別
 ms.date: 03/30/2017
-ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.technology: dotnet-ado
-ms.tgt_pltfrm: 
-ms.topic: article
 dev_langs:
 - csharp
 - vb
 ms.assetid: c788f2f9-65cc-4455-9907-e8388a268e00
-caps.latest.revision: "2"
-author: douglaslMS
-ms.author: douglasl
-manager: craigg
-ms.workload: dotnet
-ms.openlocfilehash: 21b8dbb934b778d792ff55d54f60fca92cac8e88
-ms.sourcegitcommit: ed26cfef4e18f6d93ab822d8c29f902cff3519d1
+ms.openlocfilehash: 930295073f9f75cf4101bf6fa3834561a4db8f58
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 01/17/2018
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="object-identity"></a>物件識別
 執行階段中的物件具有唯一的識別 (Identity)。 兩個參考相同物件的變數實際上是參考相同的物件執行個體。 因此，透過經過其中一個變數的路徑進行的變更，可以透過另一個變數立即看到。  
@@ -34,7 +22,7 @@ ms.lasthandoff: 01/17/2018
   
  在 [!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)] 中，<xref:System.Data.Linq.DataContext> 會管理物件識別。 只要從資料庫擷取新的資料列，就會根據該資料列的主索引鍵將該資料列記錄到識別表中，而且會建立新的物件。 每次擷取那個相同的資料列時，就會將原始物件執行個體交還給應用程式。 利用這種方式，<xref:System.Data.Linq.DataContext> 會將資料庫看到的識別概念 (即主索引鍵) 轉譯為語言看到的識別概念 (即執行個體)。 而應用程式只會看到物件在它第一次擷取物件時的狀態。 如果新資料的狀態不同則會予以捨棄。 如需詳細資訊，請參閱[擷取物件從識別快取](../../../../../../docs/framework/data/adonet/sql/linq/retrieving-objects-from-the-identity-cache.md)。  
   
- [!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)]您可以使用此方式來管理本機物件的完整性，以便支援開放式的更新。 因為只有在第一次建立物件之後發生的變更才是應用程式進行的變更，所以應用程式的意圖十分清楚。 如果外部群體在其間也進行了變更，則會在呼叫 `SubmitChanges()` 時識別這些變更。  
+ [!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)] 您可以使用此方式來管理本機物件的完整性，以便支援開放式的更新。 因為只有在第一次建立物件之後發生的變更才是應用程式進行的變更，所以應用程式的意圖十分清楚。 如果外部群體在其間也進行了變更，則會在呼叫 `SubmitChanges()` 時識別這些變更。  
   
 > [!NOTE]
 >  如果查詢要求的物件可以輕易識別為已擷取的物件，則不會執行查詢。 識別表是當成所有先前擷取過物件的快取。  
@@ -53,5 +41,5 @@ ms.lasthandoff: 01/17/2018
  [!code-csharp[DLinqObjectIdentity#2](../../../../../../samples/snippets/csharp/VS_Snippets_Data/DLinqObjectIdentity/cs/Program.cs#2)]
  [!code-vb[DLinqObjectIdentity#2](../../../../../../samples/snippets/visualbasic/VS_Snippets_Data/DLinqObjectIdentity/vb/Module1.vb#2)]  
   
-## <a name="see-also"></a>請參閱  
+## <a name="see-also"></a>另請參閱  
  [背景資訊](../../../../../../docs/framework/data/adonet/sql/linq/background-information.md)

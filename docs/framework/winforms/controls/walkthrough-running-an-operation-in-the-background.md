@@ -1,13 +1,6 @@
 ---
-title: "逐步解說：在背景執行作業"
-ms.custom: 
+title: 逐步解說：在背景執行作業
 ms.date: 03/30/2017
-ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.technology: dotnet-winforms
-ms.tgt_pltfrm: 
-ms.topic: article
 dev_langs:
 - csharp
 - vb
@@ -20,16 +13,11 @@ helpviewer_keywords:
 - threading [Windows Forms], background operations
 - background operations
 ms.assetid: 1b9a4e0a-f134-48ff-a1be-c461446a31ba
-caps.latest.revision: "11"
-author: dotnet-bot
-ms.author: dotnetcontent
-manager: wpickett
-ms.workload: dotnet
-ms.openlocfilehash: ca0892e9d384eefb0fec87a7717222fefb779d12
-ms.sourcegitcommit: c0dd436f6f8f44dc80dc43b07f6841a00b74b23f
+ms.openlocfilehash: 59447bb589eb019f81beb1db2ea254a9fe3a889e
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 01/19/2018
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="walkthrough-running-an-operation-in-the-background"></a>逐步解說：在背景執行作業
 如果您有要花費較長時間才能完成的作業，但您不想導致使用者介面發生延遲，就可以使用 <xref:System.ComponentModel.BackgroundWorker> 類別在另一個執行緒上執行該作業。  
@@ -46,7 +34,7 @@ ms.lasthandoff: 01/19/2018
     |按鈕|名稱|Text|  
     |------------|----------|----------|  
     |`button1`|`startBtn`|**Start**|  
-    |`button2`|`cancelBtn`|**[取消]**|  
+    |`button2`|`cancelBtn`|**取消**|  
   
 2.  開啟**工具箱**，按一下 **元件**索引標籤，然後拖曳<xref:System.ComponentModel.BackgroundWorker>元件拖曳至表單。  
   
@@ -111,7 +99,7 @@ ms.lasthandoff: 01/19/2018
   
 -   實作元件支援非同步模式的類別。 如需詳細資訊，請參閱[實作事件架構非同步模式](../../../../docs/standard/asynchronous-programming-patterns/implementing-the-event-based-asynchronous-pattern.md)。  
   
-## <a name="see-also"></a>請參閱  
+## <a name="see-also"></a>另請參閱  
  <xref:System.ComponentModel.BackgroundWorker>  
  <xref:System.ComponentModel.DoWorkEventArgs>  
  [操作說明：實作使用背景作業的表單](../../../../docs/framework/winforms/controls/how-to-implement-a-form-that-uses-a-background-operation.md)  

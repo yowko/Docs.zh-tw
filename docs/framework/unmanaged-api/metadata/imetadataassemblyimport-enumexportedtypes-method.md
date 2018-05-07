@@ -1,14 +1,6 @@
 ---
-title: "IMetaDataAssemblyImport::EnumExportedTypes 方法"
-ms.custom: 
+title: IMetaDataAssemblyImport::EnumExportedTypes 方法
 ms.date: 03/30/2017
-ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.technology:
-- dotnet-clr
-ms.tgt_pltfrm: 
-ms.topic: reference
 api_name:
 - IMetaDataAssemblyImport.EnumExportedTypes
 api_location:
@@ -23,17 +15,13 @@ helpviewer_keywords:
 ms.assetid: e5912ed8-e4ce-438b-8ea3-d9e4c288d109
 topic_type:
 - apiref
-caps.latest.revision: 
 author: mairaw
 ms.author: mairaw
-manager: wpickett
-ms.workload:
-- dotnet
-ms.openlocfilehash: 54b5a51dc0a12bb4c159b61252c9db0a82f03518
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.openlocfilehash: 9aef8c40be2456532bd6df6feb8d286cdaeefa7f
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="imetadataassemblyimportenumexportedtypes-method"></a>IMetaDataAssemblyImport::EnumExportedTypes 方法
 列舉中目前的中繼資料範圍內組件資訊清單所參考的匯出的類型。  
@@ -66,7 +54,7 @@ HRESULT EnumExportedTypes (
   
 |HRESULT|描述|  
 |-------------|-----------------|  
-|`S_OK`|`EnumExportedTypes`已成功傳回。|  
+|`S_OK`|`EnumExportedTypes` 已成功傳回。|  
 |`S_FALSE`|沒有列舉語彙基元。 在此情況下，`pcTokens`設為零。|  
   
 ## <a name="requirements"></a>需求  
@@ -76,7 +64,7 @@ HRESULT EnumExportedTypes (
   
  **程式庫：**做為 MsCorEE.dll 中的資源  
   
- **.NET framework 版本：**[!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
+ **.NET framework 版本：** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
   
-## <a name="see-also"></a>請參閱  
+## <a name="see-also"></a>另請參閱  
  [IMetaDataAssemblyImport 介面](../../../../docs/framework/unmanaged-api/metadata/imetadataassemblyimport-interface.md)

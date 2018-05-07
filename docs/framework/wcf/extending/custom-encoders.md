@@ -1,31 +1,17 @@
 ---
 title: 自訂編碼器
-ms.custom: ''
 ms.date: 03/30/2017
-ms.prod: .net-framework
-ms.reviewer: ''
-ms.suite: ''
-ms.technology:
-- dotnet-clr
-ms.tgt_pltfrm: ''
-ms.topic: article
 ms.assetid: fa0e1d7f-af36-4bf4-aac9-cd4eab95bc4f
-caps.latest.revision: 15
-author: dotnet-bot
-ms.author: dotnetcontent
-manager: wpickett
-ms.workload:
-- dotnet
-ms.openlocfilehash: 90926fd334eb5ccef3a63f637d5273c408c0c13e
-ms.sourcegitcommit: 94d33cadc5ff81d2ac389bf5f26422c227832052
-ms.translationtype: MT
+ms.openlocfilehash: 4f7b011b038714ee8349e74f6be270c85aed0a7b
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/30/2018
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="custom-encoders"></a>自訂編碼器
 本主題討論如何建立自訂編碼器。  
   
- 在[!INCLUDE[indigo1](../../../../includes/indigo1-md.md)]，您使用*繫結*來指定如何跨網路在端點之間傳輸資料。 繫結由一系列所組成*繫結項目*。 繫結包含選擇性通訊協定繫結項目，例如安全性、 必要*訊息編碼器*繫結項目和必要的傳輸繫結項目。 訊息編碼器是由訊息編碼繫結項目表示。 [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] 中包含三種訊息編碼器：二進位、訊息傳輸最佳化機制 (MTOM) 和文字。  
+ 在 Windows Communication Foundation (WCF) 中，使用*繫結*來指定如何跨網路在端點之間傳輸資料。 繫結由一系列所組成*繫結項目*。 繫結包含選擇性通訊協定繫結項目，例如安全性、 必要*訊息編碼器*繫結項目和必要的傳輸繫結項目。 訊息編碼器是由訊息編碼繫結項目表示。 [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] 中包含三種訊息編碼器：二進位、訊息傳輸最佳化機制 (MTOM) 和文字。  
   
  訊息編碼繫結項目會序列化傳出的 <xref:System.ServiceModel.Channels.Message> 並將它傳遞至傳輸，或者從傳輸接收序列化形式的訊息，如果有通訊協定層，就將訊息傳遞給它，如果不存在，則傳遞給應用程式。  
   

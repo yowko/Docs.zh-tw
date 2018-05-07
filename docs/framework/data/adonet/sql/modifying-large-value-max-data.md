@@ -1,27 +1,15 @@
 ---
-title: "在 ADO.NET 中修改大量數值 (max) 資料"
-ms.custom: 
+title: 在 ADO.NET 中修改大量數值 (max) 資料
 ms.date: 03/30/2017
-ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.technology: dotnet-ado
-ms.tgt_pltfrm: 
-ms.topic: article
 dev_langs:
 - csharp
 - vb
 ms.assetid: 8aca5f00-d80e-4320-81b3-016d0466f7ee
-caps.latest.revision: "6"
-author: douglaslMS
-ms.author: douglasl
-manager: craigg
-ms.workload: dotnet
-ms.openlocfilehash: e42ff73cda8fc63d9b8ae6061cfbdb9749a0a864
-ms.sourcegitcommit: ed26cfef4e18f6d93ab822d8c29f902cff3519d1
+ms.openlocfilehash: 285803d92474efd3268816d1af06eb3ff4abbc79
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 01/17/2018
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="modifying-large-value-max-data-in-adonet"></a>在 ADO.NET 中修改大量數值 (max) 資料
 大型物件 (LOB) 資料型別是指資料列大小上限超過 8 KB 的資料型別。 SQL Server 可提供 `max`、`varchar` 和 `nvarchar` 資料型別的 `varbinary` 規範，允許儲存最大達 2^32 位元組的值。 資料表資料行及 Transact-SQL 變數可指定 `varchar(max)`、`nvarchar(max)` 或 `varbinary(max)` 資料型別。 在 ADO.NET 中，`max` 資料型別可透過 `DataReader` 來擷取，也可指定為輸入及輸出參數值，並且不需要任何特殊處理。 對於大型 `varchar` 資料型別，可透過遞增方式擷取及更新資料。  
@@ -72,13 +60,13 @@ FROM OPENROWSET
   
  SET  
   
- { *column_name* = { .WRITE ( *expression* , @Offset , @Length ) }  
+ { *column_name* = {。寫入 (*運算式*， @Offset ， @Length )}  
   
  WRITE 方法指定值的區段*column_name*將予修改。 運算式是將複製到的值*column_name*、`@Offset`是起始點速率將寫入運算式，而`@Length`引數是資料行中區段的長度。  
   
 |如果|然後|  
 |--------|----------|  
-|運算式設為 NULL|`@Length`會忽略中的值和*column_name*會截斷在指定`@Offset`。|  
+|運算式設為 NULL|`@Length` 會忽略中的值和*column_name*會截斷在指定`@Offset`。|  
 |`@Offset` 為 NULL|更新作業處附加運算式結尾現有*column_name*值和`@Length`會被忽略。|  
 |`@Offset` 大於 column_name 值的長度|SQL Server 會傳回錯誤。|  
 |`@Length` 為 NULL|更新作業會移除從 `@Offset` 到 `column_name` 值結尾的所有資料。|  
@@ -260,7 +248,7 @@ WHERE   DocumentID=@DocumentID
  [!code-csharp[DataWorks LargeValueType.Param#1](../../../../../samples/snippets/csharp/VS_Snippets_ADO.NET/DataWorks LargeValueType.Param/CS/source.cs#1)]
  [!code-vb[DataWorks LargeValueType.Param#1](../../../../../samples/snippets/visualbasic/VS_Snippets_ADO.NET/DataWorks LargeValueType.Param/VB/source.vb#1)]  
   
-## <a name="see-also"></a>請參閱  
+## <a name="see-also"></a>另請參閱  
  [SQL Server 二進位和大量數值資料](../../../../../docs/framework/data/adonet/sql/sql-server-binary-and-large-value-data.md)  
  [SQL Server 資料類型對應](../../../../../docs/framework/data/adonet/sql-server-data-type-mappings.md)  
  [ADO.NET 中的 SQL Server 資料作業](../../../../../docs/framework/data/adonet/sql/sql-server-data-operations.md)  

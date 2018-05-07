@@ -1,31 +1,17 @@
 ---
 title: WSDL 與原則
-ms.custom: ''
 ms.date: 03/30/2017
-ms.prod: .net-framework
-ms.reviewer: ''
-ms.suite: ''
-ms.technology:
-- dotnet-clr
-ms.tgt_pltfrm: ''
-ms.topic: article
 ms.assetid: cea87440-3519-4640-8494-b8a2b0e88c84
-caps.latest.revision: ''
-author: dotnet-bot
-ms.author: dotnetcontent
-manager: wpickett
-ms.workload:
-- dotnet
-ms.openlocfilehash: dd52e36199fc2412abb003d530dd5614cda8049b
-ms.sourcegitcommit: c883637b41ee028786edceece4fa872939d2e64c
+ms.openlocfilehash: 330a48989e9d6ca3cee0d11bf4b3fce38a25fa3d
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 03/26/2018
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="wsdl-and-policy"></a>WSDL 與原則
-這個主題中涵蓋了 [!INCLUDE[indigo1](../../../../includes/indigo1-md.md)] WSDL 1.1、WS-Policy 和 WS-PolicyAttachment 實作詳細資料，以及 [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] 所引入的其他 WS-Policy 判斷提示和 WSDL 1.1 延伸項目。  
+本主題涵蓋 Windows Communication Foundation (WCF) WSDL 1.1、 Ws-policy 和 Ws-policyattachment 實作詳細資料，以及其他 Ws-policy 判斷提示和 WSDL 1.1 延伸 WCF 所導入。  
   
- [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] 會利用本文件所述的限制和說明，實作提交至 W3C 的 WS-Policy 和 WS-PolicyAttachment 規格。  
+ WCF 實作條件約束及說明本文中提交至 W3C 的 Ws-policy 和 Ws-policyattachment 規格。  
   
  本文件會使用下表所示的前置詞和命名空間。  
   
@@ -41,19 +27,19 @@ ms.lasthandoff: 03/26/2018
 |cdp|http://schemas.microsoft.com/net/2006/06/duplex|  
   
 ## <a name="wcf-wsdl11-extensions"></a>WCF WSDL1.1 延伸項目  
- [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] 會使用下列 WSDL1.1 延伸項目來描述合約工作階段的需求。  
+ WCF 會使用下列 WSDL1.1 延伸項目來描述合約工作階段需求。  
   
  wsdl:portType/wsdl:operation/@msc:isInitiating  
- xs:boolean，指出此作業會初始化 [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] 工作階段；預設值為 `false`。  
+ xs: boolean，指出此作業會起始 WCF 工作階段中。預設值是`false`。  
   
  wsdl:portType/wsdl:operation/@msc:isTerminating  
- xs:boolean，指出此作業會終止 [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] 工作階段；預設值為 `false`。  
+ xs: boolean，指出此作業會終止 WCF 工作階段中。預設值是`false`。  
   
  wsdl:portType/wsdl:operation/@msc:usingSession  
  xs:boolean，指出此合約需要建立工作階段。  
   
 ### <a name="soap-1x-http-binding-transport-uris"></a>SOAP 1.x HTTP 繫結傳輸 URI  
- [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] 會使用下列 URI 指出要用於 WSDL 1.1、SOAP 1.1 和 SOAP 1.2 繫結延伸項目的傳輸。  
+ WCF 會使用下列 Uri 指出要用於 WSDL 1.1、 SOAP 1.1 和 SOAP 1.2 繫結延伸項目的傳輸。  
   
 |Transport|URI|  
 |---------------|---------|  
@@ -63,7 +49,7 @@ ms.lasthandoff: 03/26/2018
 |具名管道|http://schemas.microsoft.com/soap/named-pipe|  
   
 ## <a name="policy-assertions-implemented-by-wcf"></a>WCF 實作的原則判斷提示  
- 除了在 Web 服務規格 (WS-*) 中引入以及在本文件其他章節所提及的原則判斷提示以外，[!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] 也會實作下列原則判斷提示。  
+ 除了在 Web 服務規格中導入的原則判斷提示 (WS-*) 和本文件的其他章節中所述，WCF 會實作下列原則判斷提示。  
   
 |原則判斷提示|原則主體|描述|  
 |----------------------|--------------------|-----------------|  

@@ -1,24 +1,12 @@
 ---
-title: "如何：將資料行表示為可存放 Null 值的資料行"
-ms.custom: 
+title: 如何：將資料行表示為可存放 Null 值的資料行
 ms.date: 03/30/2017
-ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.technology: dotnet-ado
-ms.tgt_pltfrm: 
-ms.topic: article
 ms.assetid: ebb71a37-1f4c-4fa7-b2d2-d903f13c4af1
-caps.latest.revision: "2"
-author: douglaslMS
-ms.author: douglasl
-manager: craigg
-ms.workload: dotnet
-ms.openlocfilehash: 509c0554c6ce2bd02f1294fe19b1138241864ca9
-ms.sourcegitcommit: ed26cfef4e18f6d93ab822d8c29f902cff3519d1
+ms.openlocfilehash: 6700ee5d4de53dd82da29d48ca7c42785d52afc1
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 01/17/2018
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="how-to-represent-columns-as-allowing-null-values"></a>如何：將資料行表示為可存放 Null 值的資料行
 使用[!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)]<xref:System.Data.Linq.Mapping.ColumnAttribute.CanBeNull%2A>屬性<xref:System.Data.Linq.Mapping.ColumnAttribute>屬性，以便指定相關聯的資料庫資料行可以保存 null 值。  
@@ -31,6 +19,6 @@ ms.lasthandoff: 01/17/2018
   
 2.  將 <xref:System.Data.Linq.Mapping.ColumnAttribute.CanBeNull%2A> 屬性 (Property) 值設定為 `true`。  
   
-## <a name="see-also"></a>請參閱  
+## <a name="see-also"></a>另請參閱  
  [LINQ to SQL 物件模型](../../../../../../docs/framework/data/adonet/sql/linq/the-linq-to-sql-object-model.md)  
  [如何：使用程式碼編輯器自訂實體類別](../../../../../../docs/framework/data/adonet/sql/linq/how-to-customize-entity-classes-by-using-the-code-editor.md)

@@ -1,31 +1,17 @@
 ---
 title: WCF 效能計數器
-ms.custom: ''
 ms.date: 03/30/2017
-ms.prod: .net-framework
-ms.reviewer: ''
-ms.suite: ''
-ms.technology:
-- dotnet-clr
-ms.tgt_pltfrm: ''
-ms.topic: article
 helpviewer_keywords:
 - performance counters [WCF]
 ms.assetid: f559b2bd-ed83-4988-97a1-e88f06646609
-caps.latest.revision: 37
-author: dotnet-bot
-ms.author: dotnetcontent
-manager: wpickett
-ms.workload:
-- dotnet
-ms.openlocfilehash: be4ffac8444f6365dacb2b20db6abbb6792c2239
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
-ms.translationtype: MT
+ms.openlocfilehash: 74bf11779e6ccf032f2c8c920b62b2f0e5d0625d
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="wcf-performance-counters"></a>WCF 效能計數器
-[!INCLUDE[indigo1](../../../../../includes/indigo1-md.md)] 包含大量的效能計數器，可協助您測量應用程式的效能。  
+Windows Communication Foundation (WCF) 包含大量的效能計數器，可協助您測量應用程式的效能。  
   
 ## <a name="enabling-performance-counters"></a>啟用效能計數器  
  您可以透過 [!INCLUDE[indigo2](../../../../../includes/indigo2-md.md)] 服務的 app.config 組態檔，啟用 [!INCLUDE[indigo2](../../../../../includes/indigo2-md.md)] 服務的效能計數器，如下所示：  
@@ -151,5 +137,5 @@ ServiceName@ServiceBaseAddress
   
  如需有關如何以程式設計方式存取計數器的詳細資訊，請參閱[效能計數器程式設計架構](http://go.microsoft.com/fwlink/?LinkId=95179)。  
   
-## <a name="see-also"></a>請參閱  
+## <a name="see-also"></a>另請參閱  
  [管理與診斷](../../../../../docs/framework/wcf/diagnostics/index.md)

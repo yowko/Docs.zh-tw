@@ -1,28 +1,19 @@
 ---
-title: "實作 UI 自動化 GridItem 控制項模式"
-ms.custom: 
+title: 實作 UI 自動化 GridItem 控制項模式
 ms.date: 03/30/2017
-ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.technology: dotnet-bcl
-ms.tgt_pltfrm: 
-ms.topic: article
 helpviewer_keywords:
 - control patterns, GridItem
 - UI Automation GridItem control pattern
 - GridItem control pattern
 ms.assetid: bffbae08-fe2a-42fd-ab84-f37187518916
-caps.latest.revision: "15"
 author: Xansky
 ms.author: mhopkins
 manager: markl
-ms.workload: dotnet
-ms.openlocfilehash: d234ea6f15706a47f6a758528dbe4eda0f3b778a
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.openlocfilehash: bfe7fb8ab64f148d8ca5af0e419ca60690a1acce
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="implementing-the-ui-automation-griditem-control-pattern"></a>實作 UI 自動化 GridItem 控制項模式
 > [!NOTE]
@@ -40,7 +31,7 @@ ms.lasthandoff: 12/22/2017
   
 -   合併資料格將會回報其<xref:System.Windows.Automation.Provider.IGridItemProvider.Row%2A>和<xref:System.Windows.Automation.Provider.IGridItemProvider.Column%2A>屬性根據其基礎的錨定儲存格的使用者介面自動化提供者所定義。 通常，它會是最上層或最左邊的資料列或資料行。  
   
--   <xref:System.Windows.Automation.Provider.IGridItemProvider>不提供例如合併或分割資料格方格的主動操作。  
+-   <xref:System.Windows.Automation.Provider.IGridItemProvider> 不提供例如合併或分割資料格方格的主動操作。  
   
 -   控制可實作<xref:System.Windows.Automation.Provider.IGridItemProvider>通常可周遊 （也就是使用者介面自動化用戶端可以移至相鄰的控制項） 使用鍵盤。  
   
@@ -48,7 +39,7 @@ ms.lasthandoff: 12/22/2017
 ## <a name="required-members-for-igriditemprovider"></a>IGridItemProvider 的必要成員  
  以下是實作 <xref:System.Windows.Automation.Provider.IGridItemProvider> 的必要屬性和方法。  
   
-|必要成員|成員類型|備註|  
+|必要成員|成員類型|注意|  
 |----------------------|-----------------|-----------|  
 |<xref:System.Windows.Automation.Provider.IGridItemProvider.Row%2A>|屬性|無|  
 |<xref:System.Windows.Automation.Provider.IGridItemProvider.Column%2A>|屬性|無|  
@@ -62,7 +53,7 @@ ms.lasthandoff: 12/22/2017
 ## <a name="exceptions"></a>例外狀況  
  此控制項模式沒有任何相關聯的例外狀況。  
   
-## <a name="see-also"></a>請參閱  
+## <a name="see-also"></a>另請參閱  
  [UI 自動化控制項模式概觀](../../../docs/framework/ui-automation/ui-automation-control-patterns-overview.md)  
  [支援 UI 自動化提供者的控制項模式](../../../docs/framework/ui-automation/support-control-patterns-in-a-ui-automation-provider.md)  
  [用戶端的 UI 自動化控制項模式](../../../docs/framework/ui-automation/ui-automation-control-patterns-for-clients.md)  

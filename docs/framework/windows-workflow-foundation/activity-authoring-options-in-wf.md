@@ -1,23 +1,12 @@
 ---
-title: "WF 中的活動撰寫選項"
-ms.custom: 
+title: WF 中的活動撰寫選項
 ms.date: 03/30/2017
-ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.tgt_pltfrm: 
-ms.topic: article
 ms.assetid: b9061f5f-12c3-47f0-adbe-1330e2714c94
-caps.latest.revision: "20"
-author: dotnet-bot
-ms.author: dotnetcontent
-manager: wpickett
-ms.workload: dotnet
-ms.openlocfilehash: 0422b7b433c8c2a6889e00d559207d25ed42eff1
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.openlocfilehash: f91c74b4e3dc002ed2abf979619b84a81db65e78
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="activity-authoring-options-in-wf"></a>WF 中的活動撰寫選項
 [!INCLUDE[netfx_current_long](../../../includes/netfx-current-long-md.md)] 提供了幾個建立自訂活動的選項。 用於撰寫指定活動的正確方法，要視所需的執行階段功能而定。  

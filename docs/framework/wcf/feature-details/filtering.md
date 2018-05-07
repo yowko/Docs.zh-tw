@@ -1,36 +1,24 @@
 ---
-title: "篩選"
-ms.custom: 
+title: 篩選
 ms.date: 03/30/2017
-ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.technology: dotnet-clr
-ms.tgt_pltfrm: 
-ms.topic: article
 ms.assetid: 4002946c-e34a-4356-8cfb-e25912a4be63
-caps.latest.revision: "9"
-author: dotnet-bot
-ms.author: dotnetcontent
-manager: wpickett
-ms.workload: dotnet
-ms.openlocfilehash: 6f67a7f6ac423bd66d9d25b834edc9cf55a5d6a8
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.openlocfilehash: 5f599ac74aa63951f59c5e5c79d3fe37b2ab5100
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="filtering"></a>篩選
-[!INCLUDE[indigo1](../../../../includes/indigo1-md.md)] 篩選系統可以使用宣告式篩選條件比對訊息，並做出作業決策。 您可以使用篩選條件檢查訊息的部分，以判斷如何處理訊息。 例如，佇列處理序可以使用 XPath 1.0 查詢檢查已知標頭的優先順序項目，以便決定是否要將訊息移到佇列前頭。  
+Windows Communication Foundation (WCF) 篩選系統可以使用宣告式篩選條件要比對訊息，並做出作業決策。 您可以使用篩選條件檢查訊息的部分，以判斷如何處理訊息。 例如，佇列處理序可以使用 XPath 1.0 查詢檢查已知標頭的優先順序項目，以便決定是否要將訊息移到佇列前頭。  
   
- 篩選系統由一組類別所組成，這組類別會有效地判斷哪一組篩選條件是針對特定 `true` 訊息而設定為 [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)]。  
+ 篩選系統組成一組類別會有效地判斷出一組篩選`true`特定的 WCF 訊息。  
   
- 篩選系統是 [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] 傳訊的核心元件，依極為快速的執行速度目標而設計。 每個篩選條件實作都已針對對 [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] 訊息進行的特定比對種類而最佳化。  
+ 篩選系統是 WCF 傳訊; 的核心元件它被設計為非常快速。 每個篩選器的實作已經過最佳化，針對特定種類的比對針對 WCF 訊息。  
   
  篩選系統不具備執行緒安全。 應用程式必須處理任何鎖定語意。 不過，它確實支援多種讀取器和單一寫入器。  
   
 ## <a name="where-filtering-fits"></a>篩選的用途  
- 接收到訊息之後，就會執行篩選，篩選是分派訊息至適當應用程式元件的程序一部分。 篩選系統的設計能夠滿足數個 [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] 子系統的需求，包括傳訊、路由、安全性、事件處理和系統管理。  
+ 接收到訊息之後，就會執行篩選，篩選是分派訊息至適當應用程式元件的程序一部分。 篩選系統的設計可解決幾個 WCF 子系統，包括傳訊、 路由、 安全性、 事件處理和系統管理的需求。  
   
 ## <a name="filters"></a>篩選條件  
  篩選引擎有兩個主要元件：篩選條件和篩選資料表。 篩選條件會根據使用者指定的邏輯條件，做出有關訊息的布林值決策。 篩選條件會實作 <xref:System.ServiceModel.Dispatcher.MessageFilter> 類別。  
@@ -53,7 +41,7 @@ ms.lasthandoff: 12/22/2017
   
 ### <a name="prefix-endpoint-address-filters"></a>前置詞端點位址篩選條件  
   
-1.  <xref:System.ServiceModel.Dispatcher.PrefixEndpointAddressMessageFilter> 的作用就像 <xref:System.ServiceModel.Dispatcher.EndpointAddressMessageFilter> 篩選條件，只除了符合項目可以在訊息 URI 的前置詞上之外。 例如，指定 http://www.adatum.com 位址的篩選條件符合 http://www.adatum.com/userA 位址的訊息。  
+1.  <xref:System.ServiceModel.Dispatcher.PrefixEndpointAddressMessageFilter> 的作用就像 <xref:System.ServiceModel.Dispatcher.EndpointAddressMessageFilter> 篩選條件，只除了符合項目可以在訊息 URI 的前置詞上之外。 例如，將指定的位址篩選http://www.adatum.com比對訊息定址到http://www.adatum.com/userA。  
   
 ### <a name="xpath-message-filters"></a>XPath 訊息篩選條件  
  <xref:System.ServiceModel.Dispatcher.XPathMessageFilter> 會使用 XPath 運算式來判斷 XML 文件是否包含特定項目、屬性、文字或其他 XML 語法結構。 篩選條件經過最佳化，用於 XPath 的精簡子集時能夠發揮極佳的效率。 XML 路徑語言所述[W3C XML 路徑語言 1.0 規格](http://go.microsoft.com/fwlink/?LinkId=94779)。  
@@ -79,7 +67,7 @@ ms.lasthandoff: 12/22/2017
   
  <xref:System.ServiceModel.Dispatcher.XPathMessageFilterTable%601> 類別會最佳化適用於大部分傳訊案例的 XPath 子集的比對，並且支援完整的 XPath 1.0 文法。 它具有最佳化的演算法，能夠有效地進行平行比對。  
   
- 這個資料表有數個經過特製化的 `Match` 方法，這些方法可以在 <xref:System.Xml.XPath.XPathNavigator> 和 <xref:System.ServiceModel.Dispatcher.SeekableXPathNavigator> 上操作。 <xref:System.ServiceModel.Dispatcher.SeekableXPathNavigator> 透過新增 <xref:System.Xml.XPath.XPathNavigator> 屬性來擴充 <xref:System.ServiceModel.Dispatcher.SeekableXPathNavigator.CurrentPosition%2A> 類別。 這個屬性允許儲存 XML 文件中的位置並迅速將其載入，而不需要複製 (Clone) 導覽；此類作業對 <xref:System.Xml.XPath.XPathNavigator> 而言，是非常耗費資源的記憶體配置。 為了讓 [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] 針對訊息處理提供重要的最佳化效果，<xref:System.ServiceModel.Dispatcher.SeekableXPathNavigator> XPath 引擎必須經常記錄游標在 XML 文件查詢執行過程中的位置。  
+ 這個資料表有數個經過特製化的 `Match` 方法，這些方法可以在 <xref:System.Xml.XPath.XPathNavigator> 和 <xref:System.ServiceModel.Dispatcher.SeekableXPathNavigator> 上操作。 <xref:System.ServiceModel.Dispatcher.SeekableXPathNavigator> 透過新增 <xref:System.Xml.XPath.XPathNavigator> 屬性來擴充 <xref:System.ServiceModel.Dispatcher.SeekableXPathNavigator.CurrentPosition%2A> 類別。 這個屬性允許儲存 XML 文件中的位置並迅速將其載入，而不需要複製 (Clone) 導覽；此類作業對 <xref:System.Xml.XPath.XPathNavigator> 而言，是非常耗費資源的記憶體配置。 WCF XPath 引擎必須經常記錄游標在 XML 文件的查詢執行過程中的位置而<xref:System.ServiceModel.Dispatcher.SeekableXPathNavigator>提供重要的最佳化處理訊息。  
   
 ## <a name="customer-scenarios"></a>客戶案例  
  您可以視訊息中包含的資料而定，隨時使用篩選將訊息傳送到不同的處理模組。 根據訊息的動作程式碼路由訊息，以及根據訊息的端點位址分離訊息資料流的信號，即為兩個典型的案例。  
@@ -94,5 +82,5 @@ ms.lasthandoff: 12/22/2017
   
 -   如 `EndpointAddress` 所指定，<xref:System.ServiceModel.Dispatcher.EndpointAddressMessageFilter> 中的其餘端點參數。  
   
-## <a name="see-also"></a>請參閱  
+## <a name="see-also"></a>另請參閱  
  [資料傳輸與序列化](../../../../docs/framework/wcf/feature-details/data-transfer-and-serialization.md)

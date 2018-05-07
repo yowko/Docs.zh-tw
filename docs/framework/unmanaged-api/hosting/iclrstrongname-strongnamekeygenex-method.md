@@ -1,14 +1,6 @@
 ---
-title: "ICLRStrongName::StrongNameKeyGenEx 方法"
-ms.custom: 
+title: ICLRStrongName::StrongNameKeyGenEx 方法
 ms.date: 03/30/2017
-ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.technology:
-- dotnet-clr
-ms.tgt_pltfrm: 
-ms.topic: reference
 api_name:
 - ICLRStrongName.StrongNameKeyGenEx
 api_location:
@@ -23,17 +15,13 @@ helpviewer_keywords:
 ms.assetid: 1f8b59d0-5b72-45b8-ab74-c2b43ffc806e
 topic_type:
 - apiref
-caps.latest.revision: 
 author: rpetrusha
 ms.author: ronpet
-manager: wpickett
-ms.workload:
-- dotnet
-ms.openlocfilehash: 581f486a2def90f44c0fb3f1bcf9d3bbcc1fc317
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.openlocfilehash: b213285b3c533488cfa48198951275925c0e37ae
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="iclrstrongnamestrongnamekeygenex-method"></a>ICLRStrongName::StrongNameKeyGenEx 方法
 會產生新的公用/私用金鑰組與指定的金鑰大小，強式名稱使用。  
@@ -52,7 +40,7 @@ HRESULT StrongNameKeyGenEx (
   
 #### <a name="parameters"></a>參數  
  `wszKeyContainer`  
- [in]要求的金鑰容器名稱。 `wszKeyContainer`必須是非空白字串或 null 以產生暫時的名稱。  
+ [in]要求的金鑰容器名稱。 `wszKeyContainer` 必須是非空白字串或 null 以產生暫時的名稱。  
   
  `dwFlags`  
  [in]值，指定是否要保留已註冊的鍵。 支援下列值：  
@@ -71,7 +59,7 @@ HRESULT StrongNameKeyGenEx (
  [out]大小，以位元組為單位的`ppbKeyBlob`。  
   
 ## <a name="return-value"></a>傳回值  
- `S_OK`如果方法成功。否則，表示失敗的 HRESULT 值 (請參閱[常見的 HRESULT 值](http://go.microsoft.com/fwlink/?LinkId=213878)清單)。  
+ `S_OK` 如果方法成功。否則，表示失敗的 HRESULT 值 (請參閱[常見的 HRESULT 值](http://go.microsoft.com/fwlink/?LinkId=213878)清單)。  
   
 ## <a name="remarks"></a>備註  
  需要.NET framework 1.0 和 1.1 版`dwKeySize`1024 個位元簽署為強式名稱; 組件版本 2.0 加入 2048年位元金鑰的支援。  
@@ -85,8 +73,8 @@ HRESULT StrongNameKeyGenEx (
   
  **程式庫：**包含做為 MSCorEE.dll 中的資源  
   
- **.NET framework 版本：**[!INCLUDE[net_current_v40plus](../../../../includes/net-current-v40plus-md.md)]  
+ **.NET framework 版本：** [!INCLUDE[net_current_v40plus](../../../../includes/net-current-v40plus-md.md)]  
   
-## <a name="see-also"></a>請參閱  
+## <a name="see-also"></a>另請參閱  
  [StrongNameKeyGen 方法](../../../../docs/framework/unmanaged-api/hosting/iclrstrongname-strongnamekeygen-method.md)  
  [ICLRStrongName 介面](../../../../docs/framework/unmanaged-api/hosting/iclrstrongname-interface.md)

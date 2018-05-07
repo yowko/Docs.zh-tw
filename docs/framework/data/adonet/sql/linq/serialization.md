@@ -1,27 +1,15 @@
 ---
 title: Serialization2
-ms.custom: 
 ms.date: 03/30/2017
-ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.technology: dotnet-ado
-ms.tgt_pltfrm: 
-ms.topic: article
 dev_langs:
 - csharp
 - vb
 ms.assetid: a15ae411-8dc2-4ca3-84d2-01c9d5f1972a
-caps.latest.revision: "3"
-author: douglaslMS
-ms.author: douglasl
-manager: craigg
-ms.workload: dotnet
-ms.openlocfilehash: 02a8b9bf587f19fec25e629e11c0108e5994e3ba
-ms.sourcegitcommit: ed26cfef4e18f6d93ab822d8c29f902cff3519d1
+ms.openlocfilehash: cc299e26316b1a3a6fd9b475dcdb8e3911bcf2e9
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 01/17/2018
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="serialization"></a>序列化
 本主題描述[!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)]序列化功能。 後續段落會提供有關如何在設計階段的程式碼產生期間加入序列化以及 [!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)] 類別 (Class) 的執行階段序列化行為。  
@@ -30,7 +18,7 @@ ms.lasthandoff: 01/17/2018
   
 -   在[!INCLUDE[vs_ordesigner_long](../../../../../../includes/vs-ordesigner-long-md.md)]，變更**序列化模式**屬性**單向**。  
   
--   SQLMetal 命令列新增**/serialization**選項。 如需詳細資訊，請參閱 [SqlMetal.exe (程式碼產生工具)](../../../../../../docs/framework/tools/sqlmetal-exe-code-generation-tool.md)。  
+-   SQLMetal 命令列新增 **/serialization**選項。 如需詳細資訊，請參閱 [SqlMetal.exe (程式碼產生工具)](../../../../../../docs/framework/tools/sqlmetal-exe-code-generation-tool.md)。  
   
 ## <a name="overview"></a>總覽  
  產生的程式碼[!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)]根據預設會提供延後的載入功能。 在視需要透明載入資料的中介層中，延後載入非常方便。 但是，由於不論是否需要延後載入，序列化程式都會觸發延後載入，所以序列化會有問題。 事實上，序列化物件後，在所有傳出延後載入的參考之下的遞移封閉 (Transitive Closure) 也已序列化。  
@@ -83,7 +71,7 @@ ms.lasthandoff: 01/17/2018
  [!code-csharp[DLinqSerialization#7](../../../../../../samples/snippets/csharp/VS_Snippets_Data/DLinqSerialization/cs/northwind-ser.cs#7)]
  [!code-vb[DLinqSerialization#7](../../../../../../samples/snippets/visualbasic/VS_Snippets_Data/DLinqSerialization/vb/northwind-ser.vb#7)]  
   
-## <a name="see-also"></a>請參閱  
+## <a name="see-also"></a>另請參閱  
  [背景資訊](../../../../../../docs/framework/data/adonet/sql/linq/background-information.md)  
  [SqlMetal.exe (程式碼產生工具)](../../../../../../docs/framework/tools/sqlmetal-exe-code-generation-tool.md)  
  [如何：讓實體可序列化](../../../../../../docs/framework/data/adonet/sql/linq/how-to-make-entities-serializable.md)

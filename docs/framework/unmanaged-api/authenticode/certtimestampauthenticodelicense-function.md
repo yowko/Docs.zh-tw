@@ -1,14 +1,6 @@
 ---
-title: "CertTimestampAuthenticodeLicense 函式"
-ms.custom: 
+title: CertTimestampAuthenticodeLicense 函式
 ms.date: 03/30/2017
-ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.technology:
-- dotnet-clr
-ms.tgt_pltfrm: 
-ms.topic: reference
 api_name:
 - CertTimestampAuthenticodeLicense
 api_location:
@@ -16,17 +8,13 @@ api_location:
 api_type:
 - DLLExport
 ms.assetid: d468325a-21c5-43ce-8567-84e342b22308
-caps.latest.revision: 
 author: rpetrusha
 ms.author: ronpet
-manager: wpickett
-ms.workload:
-- dotnet
-ms.openlocfilehash: 53241a459f561bdfd8fc5cb077cb8384f1d906b9
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.openlocfilehash: b110adac8c1ae68a3918a9e0fdf3f3eb4d017f0f
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="certtimestampauthenticodelicense-function"></a>CertTimestampAuthenticodeLicense 函式
 為 Authenticode XrML 授權加上時間戳記。  
@@ -57,5 +45,5 @@ HRESULT CertTimestampAuthenticodeLicense (
 ## <a name="return-value"></a>傳回值  
  若函式成功則傳回 `S_OK`。 反之則傳回錯誤碼。  
   
-## <a name="see-also"></a>請參閱  
+## <a name="see-also"></a>另請參閱  
  [Authenticode](../../../../docs/framework/unmanaged-api/authenticode/index.md)

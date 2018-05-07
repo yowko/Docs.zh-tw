@@ -1,14 +1,6 @@
 ---
-title: "ISymUnmanagedWriter::DefineSequencePoints 方法"
-ms.custom: 
+title: ISymUnmanagedWriter::DefineSequencePoints 方法
 ms.date: 03/30/2017
-ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.technology:
-- dotnet-clr
-ms.tgt_pltfrm: 
-ms.topic: reference
 api_name:
 - ISymUnmanagedWriter.DefineSequencePoints
 api_location:
@@ -23,17 +15,13 @@ helpviewer_keywords:
 ms.assetid: 64202baf-be6b-40ba-8162-8cc6c0c9b8e1
 topic_type:
 - apiref
-caps.latest.revision: 
 author: mairaw
 ms.author: mairaw
-manager: wpickett
-ms.workload:
-- dotnet
-ms.openlocfilehash: 2e1dcc427a6d034ce108ca66f71cc24b1050a72f
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.openlocfilehash: 1dc87b201638bab974c59722a69300977b14cf08
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="isymunmanagedwriterdefinesequencepoints-method"></a>ISymUnmanagedWriter::DefineSequencePoints 方法
 在目前的方法內定義一組序列點。 每個起始行和起始資料行定義方法內的陳述式的開始。 每個結束行和結束資料行定義方法內的陳述式的結尾。 陣列的位移遞增順序排序。 永遠從開頭的方法，以位元組為單位測量位移。  
@@ -79,5 +67,5 @@ HRESULT DefineSequencePoints(
 ## <a name="requirements"></a>需求  
  **標頭：**於 CorSym.idl、 CorSym.h  
   
-## <a name="see-also"></a>請參閱  
+## <a name="see-also"></a>另請參閱  
  [ISymUnmanagedWriter 介面](../../../../docs/framework/unmanaged-api/diagnostics/isymunmanagedwriter-interface.md)

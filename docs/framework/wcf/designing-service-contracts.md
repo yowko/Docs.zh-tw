@@ -1,37 +1,23 @@
 ---
 title: 設計服務合約
-ms.custom: ''
 ms.date: 03/30/2017
-ms.prod: .net-framework
-ms.reviewer: ''
-ms.suite: ''
-ms.technology:
-- dotnet-clr
-ms.tgt_pltfrm: ''
-ms.topic: article
 dev_langs:
 - csharp
 - vb
 helpviewer_keywords:
 - service contracts [WCF]
 ms.assetid: 8e89cbb9-ac84-4f0d-85ef-0eb6be0022fd
-caps.latest.revision: 34
-author: dotnet-bot
-ms.author: dotnetcontent
-manager: wpickett
-ms.workload:
-- dotnet
-ms.openlocfilehash: 14973d3612eb5739e0dfcd7b50409904ab5d6844
-ms.sourcegitcommit: 94d33cadc5ff81d2ac389bf5f26422c227832052
-ms.translationtype: MT
+ms.openlocfilehash: 6d1e9ba7f5546923b222f2d495aacdb2c1caaf96
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/30/2018
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="designing-service-contracts"></a>設計服務合約
 本主題說明何謂服務合約、如何定義服務合約、能夠進行哪些作業 (以及對基礎訊息交換的影響)、使用哪些資料型別以及其他問題，協助您設計能夠適當滿足情況需求的作業。  
   
 ## <a name="creating-a-service-contract"></a>建立服務合約  
- 服務會公開作業的數量。 在 [!INCLUDE[indigo1](../../../includes/indigo1-md.md)] 應用程式中，建立方法並使用 <xref:System.ServiceModel.OperationContractAttribute> 屬性來標記方法，藉此定義作業。 接著，若要建立服務合約，請在以 <xref:System.ServiceModel.ServiceContractAttribute> 屬性標記的介面內宣告作業，或是在以相同屬性標記的類別中定義作業，藉此將作業分組。 (如基本範例，請參閱[如何： 定義服務合約](../../../docs/framework/wcf/how-to-define-a-wcf-service-contract.md)。)  
+ 服務會公開作業的數量。 在 Windows Communication Foundation (WCF) 應用程式定義的作業所建立的方法，並將其與標示<xref:System.ServiceModel.OperationContractAttribute>屬性。 接著，若要建立服務合約，請在以 <xref:System.ServiceModel.ServiceContractAttribute> 屬性標記的介面內宣告作業，或是在以相同屬性標記的類別中定義作業，藉此將作業分組。 (如基本範例，請參閱[如何： 定義服務合約](../../../docs/framework/wcf/how-to-define-a-wcf-service-contract.md)。)  
   
  任何不具有 <xref:System.ServiceModel.OperationContractAttribute> 屬性的方法都不是服務作業，[!INCLUDE[indigo2](../../../includes/indigo2-md.md)] 服務不會將其公開。  
   
@@ -82,7 +68,7 @@ ms.lasthandoff: 04/30/2018
 >  作業簽章中參數名稱的值是合約的一部分，而且必須區分大小寫。 如果您要在本機上使用相同的參數名稱，但是要修改已發行中繼資料的名稱，請參閱 <xref:System.ServiceModel.MessageParameterAttribute?displayProperty=nameWithType>。  
   
 #### <a name="data-contracts"></a>資料合約  
- 服務導向的應用程式 (如 [!INCLUDE[indigo1](../../../includes/indigo1-md.md)] 應用程式) 其設計在於，盡量增加 Microsoft 和非 Microsoft 平台上互通的用戶端應用程式數目。 為了盡可能提供最廣泛的互通性，建議您以 <xref:System.Runtime.Serialization.DataContractAttribute> 和 <xref:System.Runtime.Serialization.DataMemberAttribute> 屬性標記型別來建立資料合約，這是服務合約中描述服務作業所交換資料的部分。  
+ 服務導向應用程式，例如 Windows Communication Foundation (WCF) 應用程式被設計來與最寬的可能值的 Microsoft 和非 Microsoft 平台上的用戶端應用程式交互操作。 為了盡可能提供最廣泛的互通性，建議您以 <xref:System.Runtime.Serialization.DataContractAttribute> 和 <xref:System.Runtime.Serialization.DataMemberAttribute> 屬性標記型別來建立資料合約，這是服務合約中描述服務作業所交換資料的部分。  
   
  資料合約為 Opt-in 式的合約：除非您明確套用資料合約屬性，否則不會序列化任何型別或資料成員。 資料合約與 Managed 程式碼的存取範圍無關：私用資料成員可以序列化，並且傳送至其他地方提供公開存取。 (如基本資料合約的範例，請參閱[How to： 建立基本的資料合約的類別或結構](../../../docs/framework/wcf/feature-details/how-to-create-a-basic-data-contract-for-a-class-or-structure.md)。)[!INCLUDE[indigo2](../../../includes/indigo2-md.md)]處理啟用的作業功能的基礎 SOAP 訊息的定義，以及您的資料類型的序列化，進出的訊息內文。 只要資料型別可以序列化，在設計您的作業時，就不需要考慮基礎訊息交換的基礎結構。  
   

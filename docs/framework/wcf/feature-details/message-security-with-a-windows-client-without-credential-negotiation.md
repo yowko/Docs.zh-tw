@@ -1,32 +1,20 @@
 ---
 title: 未使用認證交涉的 Windows 用戶端訊息安全性
-ms.custom: ''
 ms.date: 03/30/2017
-ms.prod: .net-framework
-ms.reviewer: ''
-ms.suite: ''
-ms.technology:
-- dotnet-clr
-ms.tgt_pltfrm: ''
-ms.topic: article
 dev_langs:
 - csharp
 - vb
 ms.assetid: fc07a26c-cbee-41c5-8fb0-329085fef749
-caps.latest.revision: 18
 author: BrucePerlerMS
-ms.author: bruceper
 manager: mbaldwin
-ms.workload:
-- dotnet
-ms.openlocfilehash: 056e743ff1849457f8a0e8ee509a56475f09435c
-ms.sourcegitcommit: 94d33cadc5ff81d2ac389bf5f26422c227832052
+ms.openlocfilehash: 05ffe731a578f8b8d2cdbdf5e3c9229e2b03821c
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/30/2018
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="message-security-with-a-windows-client-without-credential-negotiation"></a>未使用認證交涉的 Windows 用戶端訊息安全性
-下列案例會顯示 Kerberos 通訊協定所保護的 [!INCLUDE[indigo1](../../../../includes/indigo1-md.md)] 用戶端和服務。  
+下列案例會顯示 Windows Communication Foundation (WCF) 用戶端與服務保護的 Kerberos 通訊協定。  
   
  服務和用戶端都是在相同的網域或受信任網域中。  
   
@@ -59,9 +47,9 @@ ms.lasthandoff: 04/30/2018
 > [!NOTE]
 >  若要在沒有交涉的情況下使用 Windows 認證類型，服務的使用者帳戶必須可以存取已在 Active Directory 網域中註冊的服務主要名稱 (SPN)。 執行這項作業的方法有兩種：  
   
-1.  使用 `NetworkService` 或 `LocalSystem` 帳戶來執行服務。 因為這些帳戶可以存取電腦加入 Active Directory 網域時所建立的電腦 SPN，[!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] 會自動在服務中繼資料 (Web 服務描述語言或 WSDL) 的服務端點內產生適當的 SPN 項目。  
+1.  使用 `NetworkService` 或 `LocalSystem` 帳戶來執行服務。 WCF 因為那些帳戶存取的電腦會在電腦加入 Active Directory 網域時所建立的 SPN，會自動產生服務的中繼資料 （Web 服務描述中適當的 SPN 項目內的服務端點語言或 WSDL）。  
   
-2.  使用任意的 Active Directory 網域帳戶來執行服務。 在這種情況下，您必須建立該網域帳戶的 SPN。 使用 Setspn.exe 公用程式工具來建立，是其中一種方法。 一旦建立了服務帳戶的 SPN，請設定 [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] 以透過它的中繼資料 (WSDL) 將該 SPN 發行至服務的用戶端。 不論是透過應用程式組態檔或程式碼，都可以設定公開端點的端點身分識別來完成此作業。 下列範例會以程式設計方式發行身分識別。  
+2.  使用任意的 Active Directory 網域帳戶來執行服務。 在這種情況下，您必須建立該網域帳戶的 SPN。 使用 Setspn.exe 公用程式工具來建立，是其中一種方法。 一旦建立 SPN 的服務帳戶，設定以將該 SPN 發行至服務的用戶端，透過它的中繼資料 (WSDL) 的 WCF。 不論是透過應用程式組態檔或程式碼，都可以設定公開端點的端點身分識別來完成此作業。 下列範例會以程式設計方式發行身分識別。  
   
  Spn 的詳細資訊、 Kerberos 通訊協定和 Active Directory 的內容，請參閱[補充 Windows 的 Kerberos 技術](http://go.microsoft.com/fwlink/?LinkId=88330)。 如需端點的身分識別的詳細資訊，請參閱[SecurityBindingElement 驗證模式](../../../../docs/framework/wcf/feature-details/securitybindingelement-authentication-modes.md)。  
   

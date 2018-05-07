@@ -1,11 +1,7 @@
 ---
-title: "刪除函式 （Unmanaged API 參考）"
-description: "Delete 函式會刪除指定的屬性和所有其限定詞的 CIM 類別定義中。"
+title: 刪除函式 （Unmanaged API 參考）
+description: Delete 函式會刪除指定的屬性和所有其限定詞的 CIM 類別定義中。
 ms.date: 11/06/2017
-ms.prod: .net-framework
-ms.technology:
-- dotnet-clr
-ms.topic: reference
 api_name:
 - Delete
 api_location:
@@ -20,14 +16,11 @@ topic_type:
 - Reference
 author: rpetrusha
 ms.author: ronpet
-manager: wpickett
-ms.workload:
-- dotnet
-ms.openlocfilehash: 30f5bf651990cafe06811019cf2b3d92f866f646
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.openlocfilehash: e7fcf5cff9f95b06a834d73df4090bd1edfca61b
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="delete-function"></a>刪除函式
 刪除指定的屬性和所有其限定詞的 CIM 類別定義中。
@@ -53,7 +46,7 @@ HRESULT Delete (
 [in]指標[IWbemClassObject](https://msdn.microsoft.com/library/aa391433%28v=vs.85%29.aspx)執行個體。
 
 `wszName`  
-[in]要刪除之屬性的名稱。 `wszName`必須是有效的指標`LPCWSTR`。
+[in]要刪除之屬性的名稱。 `wszName` 必須是有效的指標`LPCWSTR`。
 
 ## <a name="return-value"></a>傳回值
 
@@ -80,7 +73,7 @@ HRESULT Delete (
   
  **標頭：** WMINet_Utils.idl  
   
- **.NET framework 版本：**[!INCLUDE[net_current_v472plus](../../../../includes/net-current-v472plus.md)]  
+ **.NET framework 版本：** [!INCLUDE[net_current_v472plus](../../../../includes/net-current-v472plus.md)]  
   
 ## <a name="see-also"></a>另請參閱  
 [WMI 和效能計數器 （Unmanaged API 參考）](index.md)

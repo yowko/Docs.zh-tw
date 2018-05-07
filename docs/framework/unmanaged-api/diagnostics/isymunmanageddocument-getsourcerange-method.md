@@ -1,14 +1,6 @@
 ---
-title: "ISymUnmanagedDocument::GetSourceRange 方法"
-ms.custom: 
+title: ISymUnmanagedDocument::GetSourceRange 方法
 ms.date: 03/30/2017
-ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.technology:
-- dotnet-clr
-ms.tgt_pltfrm: 
-ms.topic: reference
 api_name:
 - ISymUnmanagedDocument.GetSourceRange
 api_location:
@@ -23,17 +15,13 @@ helpviewer_keywords:
 ms.assetid: 20fefee7-1040-41ba-93dc-bd42f68b90c2
 topic_type:
 - apiref
-caps.latest.revision: 
 author: mairaw
 ms.author: mairaw
-manager: wpickett
-ms.workload:
-- dotnet
-ms.openlocfilehash: dcddebbca74bb94bd2411038a02b900b2f64f2d5
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.openlocfilehash: 00baed93bd9ab48c92de83dac76931c3149afc2b
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="isymunmanageddocumentgetsourcerange-method"></a>ISymUnmanagedDocument::GetSourceRange 方法
 傳回指定的範圍的內嵌的來源到指定的緩衝區。 緩衝區必須夠大，無法容納來源。  
@@ -77,5 +65,5 @@ HRESULT GetSourceRange(
 ## <a name="return-value"></a>傳回值  
  如果此方法成功為 S_OK。  
   
-## <a name="see-also"></a>請參閱  
+## <a name="see-also"></a>另請參閱  
  [ISymUnmanagedDocument 介面](../../../../docs/framework/unmanaged-api/diagnostics/isymunmanageddocument-interface.md)

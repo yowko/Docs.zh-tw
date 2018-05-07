@@ -1,28 +1,14 @@
 ---
-title: "繫結和繫結項目"
-ms.custom: 
+title: 繫結和繫結項目
 ms.date: 03/30/2017
-ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.technology:
-- dotnet-clr
-ms.tgt_pltfrm: 
-ms.topic: article
 helpviewer_keywords:
 - binding elements [WCF]
 ms.assetid: 765ff77b-7682-4ea3-90eb-e4d751e37379
-caps.latest.revision: 
-author: dotnet-bot
-ms.author: dotnetcontent
-manager: wpickett
-ms.workload:
-- dotnet
-ms.openlocfilehash: 232d2d23ea88c834d2e28bae99cd2e001f6efac6
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
-ms.translationtype: MT
+ms.openlocfilehash: 32b8b9e1fbb3ae16f4dd81620658569a9408057b
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="bindings-and-binding-elements"></a>繫結和繫結項目
 繫結是一種特殊的組態項目，稱為集合*繫結項目*、 其所評估的服務執行階段時用戶端或服務端點會在建構。 繫結項目在繫結內的型別與順序會決定端點通道堆疊中通訊協定與傳輸通道的選擇與堆疊順序。  
@@ -32,7 +18,7 @@ ms.lasthandoff: 12/22/2017
  一個繫結必須剛好包含一個傳輸繫結項目。 每個傳輸繫結項目都意指預設的訊息編碼繫結項目，此項目可透過將最多一個訊息編碼繫結項目新增至繫結的方式來加以覆寫。 除了傳輸與編碼器繫結項目之外，繫結還可包含任何數量的通訊協定繫結項目，這些項目可一併實作服務所需的功能，並在各個端點之間傳送 SOAP 訊息。 如需詳細資訊，請參閱[使用繫結來設定服務和用戶端](../../../../docs/framework/wcf/using-bindings-to-configure-services-and-clients.md)。  
   
 ## <a name="extending-bindings-and-binding-elements"></a>延伸繫結與繫結項目  
- [!INCLUDE[indigo1](../../../../includes/indigo1-md.md)] 包含某些系統提供的繫結，這些繫結適用的案例很廣泛  (如需詳細資訊，請參閱[之繫結](../../../../docs/framework/wcf/system-provided-bindings.md)。)然而，有時候您也需要建立並使用 [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] 未包含的繫結。 下列案例需要建立新的繫結。  
+ Windows Communication Foundation (WCF) 包含系統提供繫結，其中涵蓋廣泛的案例。 (如需詳細資訊，請參閱[之繫結](../../../../docs/framework/wcf/system-provided-bindings.md)。)然而，有時候您也需要建立並使用 [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] 未包含的繫結。 下列案例需要建立新的繫結。  
   
 -   若要使用新的繫結項目 (例如新的傳輸、編碼或通訊協定繫結項目)，您必須建立包含該繫結項目的新繫結。 例如，如果您為 UDP 傳輸新增自訂的 `UdpTransportBindingElement`，則需要建立新繫結才能使用它。 如需有關執行此行為的使用資訊<xref:System.ServiceModel.Channels.CustomBinding?displayProperty=nameWithType>類型，請參閱[自訂繫結](../../../../docs/framework/wcf/extending/custom-bindings.md)。  
   

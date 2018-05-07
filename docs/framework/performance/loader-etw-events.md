@@ -1,27 +1,17 @@
 ---
-title: "載入器 ETW 事件"
-ms.custom: 
+title: 載入器 ETW 事件
 ms.date: 03/30/2017
-ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.technology: dotnet-clr
-ms.tgt_pltfrm: 
-ms.topic: article
 helpviewer_keywords:
 - loader events [.NET Framework]
 - ETW, loader events (CLR)
 ms.assetid: cb403cc6-56f8-4609-b467-cdfa09f07909
-caps.latest.revision: "18"
 author: mairaw
 ms.author: mairaw
-manager: wpickett
-ms.workload: dotnet
-ms.openlocfilehash: ebdee4427bd0848e75e58443fefd439acaa27f64
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.openlocfilehash: d4746e9e7c8c83caf09ccf51749e9e3cbe69ec52
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="loader-etw-events"></a>載入器 ETW 事件
 <a name="top"></a> 這些事件收集載入及卸載應用程式定義域、組件和模組的相關資訊。  
@@ -44,7 +34,7 @@ ms.lasthandoff: 12/22/2017
 ## <a name="application-domain-events"></a>應用程式定義域事件  
  下表說明關鍵字和層級。  
   
-|引發事件的關鍵字|事件|層級|  
+|引發事件的關鍵字|Event - 事件|層級|  
 |-----------------------------------|-----------|-----------|  
 |`LoaderKeyword` (0x8)|`AppDomainLoad_V1` 和 `AppDomainUnLoad_V1`|告知性 (4)|  
 |`LoaderRundownKeyword` (0x8) +<br /><br /> `StartRundownKeyword`|`AppDomainDCStart_V1`|告知性 (4)|  
@@ -75,7 +65,7 @@ ms.lasthandoff: 12/22/2017
 ## <a name="clr-loader-assembly-events"></a>CLR 載入器組件事件  
  下表說明關鍵字和層級。  
   
-|引發事件的關鍵字|事件|層級|  
+|引發事件的關鍵字|Event - 事件|層級|  
 |-----------------------------------|-----------|-----------|  
 |`LoaderKeyword` (0x8)|`AssemblyLoad` 和 `AssemblyUnload`|告知性 (4)|  
 |`LoaderRundownKeyword` (0x8) +<br /><br /> `StartRundownKeyword`|`AssemblyDCStart`|告知性 (4)|  
@@ -107,7 +97,7 @@ ms.lasthandoff: 12/22/2017
 ## <a name="module-events"></a>模組事件  
  下表說明關鍵字和層級。  
   
-|引發事件的關鍵字|事件|層級|  
+|引發事件的關鍵字|Event - 事件|層級|  
 |-----------------------------------|-----------|-----------|  
 |`LoaderKeyword` (0x8)|`ModuleLoad_V2` 和 `ModuleUnload_V2`|告知性 (4)|  
 |`LoaderRundownKeyword` (0x8) +<br /><br /> `StartRundownKeyword`|`ModuleDCStart_V2`|告知性 (4)|  
@@ -155,7 +145,7 @@ ms.lasthandoff: 12/22/2017
 ## <a name="clr-domain-module-events"></a>CLR 定義域模組事件  
  下表說明關鍵字和層級。  
   
-|引發事件的關鍵字|事件|層級|  
+|引發事件的關鍵字|Event - 事件|層級|  
 |-----------------------------------|-----------|-----------|  
 |`LoaderKeyword` (0x8)|`DomainModuleLoad_V1`|告知性 (4)|  
 |`LoaderRundownKeyword` (0x8) +<br /><br /> `StartRundownKeyword`|`DomainModuleDCStart_V1`|告知性 (4)|  
@@ -188,7 +178,7 @@ ms.lasthandoff: 12/22/2017
 ## <a name="module-range-events"></a>模組範圍事件  
  下表說明關鍵字和層級。  
   
-|引發事件的關鍵字|事件|層級|  
+|引發事件的關鍵字|Event - 事件|層級|  
 |-----------------------------------|-----------|-----------|  
 |`PerfTrackKeyWord`)|`ModuleRange`|告知性 (4)|  
 |`PerfTrackKeyWord`|`ModuleRangeDCStart`|告知性 (4)|  
@@ -221,5 +211,5 @@ ms.lasthandoff: 12/22/2017
   
  模組範圍事件會在任何 ETW 層級大於或等於 4 且分類為告知性事件時引發。  
   
-## <a name="see-also"></a>請參閱  
+## <a name="see-also"></a>另請參閱  
  [CLR ETW 事件](../../../docs/framework/performance/clr-etw-events.md)

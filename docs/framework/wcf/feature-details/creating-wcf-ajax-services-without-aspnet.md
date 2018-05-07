@@ -1,33 +1,19 @@
 ---
 title: 建立不含 ASP.NET 的 WCF AJAX 服務
-ms.custom: ''
 ms.date: 03/30/2017
-ms.prod: .net-framework
-ms.reviewer: ''
-ms.suite: ''
-ms.technology:
-- dotnet-clr
-ms.tgt_pltfrm: ''
-ms.topic: article
 ms.assetid: ba4a7d1b-e277-4978-9f62-37684e6dc934
-caps.latest.revision: 7
-author: dotnet-bot
-ms.author: dotnetcontent
-manager: wpickett
-ms.workload:
-- dotnet
-ms.openlocfilehash: b652bcd522a8eea81b3d1218fbd054ee0b2caea8
-ms.sourcegitcommit: 03ee570f6f528a7d23a4221dcb26a9498edbdf8c
+ms.openlocfilehash: 77a850408c3d952dbd4f682ea704d3248ae17c3e
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/28/2018
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="creating-wcf-ajax-services-without-aspnet"></a>建立不含 ASP.NET 的 WCF AJAX 服務
-[!INCLUDE[indigo1](../../../../includes/indigo1-md.md)] AJAX 服務可以從任何已啟用 JavaScript 的網頁存取，不需要 ASP.NET AJAX。 本主題會說明如何建立此類 [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] 服務。  
+Windows Communication Foundation (WCF) AJAX 服務可以存取從任何已啟用 JavaScript 的網頁，而不需要 ASP.NET AJAX。 本主題描述如何建立 WCF 服務。  
   
- 如需使用指示[!INCLUDE[indigo2](../../../../includes/indigo2-md.md)]與 ASP.NET AJAX，請參閱[建立 ASP.NET AJAX 的 WCF 服務](../../../../docs/framework/wcf/feature-details/creating-wcf-services-for-aspnet-ajax.md)。  
+ 如需使用 WCF 與 ASP.NET AJAX 的指示，請參閱[建立 ASP.NET AJAX 的 WCF 服務](../../../../docs/framework/wcf/feature-details/creating-wcf-services-for-aspnet-ajax.md)。  
   
- 建立 [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] AJAX 服務有三個部分：  
+ 有三個部分建立的 WCF AJAX 服務：  
   
 -   建立可以從瀏覽器存取的 AJAX 端點。  
   
@@ -36,7 +22,7 @@ ms.lasthandoff: 04/28/2018
 -   存取 WCF AJAX 服務。  
   
 ## <a name="creating-an-ajax-endpoint"></a>建立 AJAX 端點  
- 如果要在 [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] 服務中啟用 AJAX 支援，最基本的方法就是在與服務有關聯的 .svc 檔案中使用 <xref:System.ServiceModel.Activation.WebServiceHostFactory>，如下列範例中所示。  
+ 若要啟用 WCF 服務中的 AJAX 支援的最基本方式是使用<xref:System.ServiceModel.Activation.WebServiceHostFactory>相關聯的服務，如下列範例所示的.svc 檔案中。  
   
 ```  
 <%ServiceHost   
@@ -115,7 +101,7 @@ string[] GetCities(string firstLetters, int maxNumber);
 ```  
   
 ## <a name="accessing-ajax-services"></a>存取 AJAX 服務  
- [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] AJAX 端點永遠接受 JSON 和 XML 要求。  
+ WCF AJAX 端點永遠接受 JSON 和 XML 要求。  
   
  HTTP POST 要求，以將內容類型為 「 應用程式/json"會被視為 JSON，並具有內容類型，以指出 XML (例如，"text/xml") 會被視為 XML。  
   

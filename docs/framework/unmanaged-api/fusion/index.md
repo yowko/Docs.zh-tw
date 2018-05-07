@@ -1,30 +1,18 @@
 ---
 title: 融合 (Unmanaged API 參考)
-ms.custom: ''
 ms.date: 03/30/2017
-ms.prod: .net-framework
-ms.reviewer: ''
-ms.suite: ''
-ms.technology:
-- dotnet-clr
-ms.tgt_pltfrm: ''
-ms.topic: reference
 helpviewer_keywords:
 - unmanaged API reference [.NET Framework], fusion
 - native API reference [.NET Framework], fusion
 - fusion [.NET Framework], using the unmanaged API
 ms.assetid: f8f20967-ea17-4900-bf05-87a078095fe6
-caps.latest.revision: 8
 author: rpetrusha
 ms.author: ronpet
-manager: wpickett
-ms.workload:
-- dotnet
-ms.openlocfilehash: 9860b90ad61dcd53a990235acb3924c08168782b
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.openlocfilehash: 7bc6c9079b6f233946fa38979800e28097e849f8
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="fusion-unmanaged-api-reference"></a>融合 (Unmanaged API 參考)
 融合 API 可讓執行階段主應用程式會存取應用程式的資源的內容，以便找出這些資源的應用程式的正確版本。  

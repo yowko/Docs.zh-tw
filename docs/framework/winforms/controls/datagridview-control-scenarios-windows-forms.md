@@ -1,28 +1,16 @@
 ---
-title: "DataGridView 控制項案例 (Windows Form)"
-ms.custom: 
+title: DataGridView 控制項案例 (Windows Form)
 ms.date: 03/30/2017
-ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.technology: dotnet-winforms
-ms.tgt_pltfrm: 
-ms.topic: article
 helpviewer_keywords:
 - data [Windows Forms], displaying in tabular format
 - data grids [Windows Forms], about data grids
 - DataGridView control [Windows Forms], scenarios
 ms.assetid: 09a5fd05-3447-47ec-a4ec-6082a2b7f0dd
-caps.latest.revision: "9"
-author: dotnet-bot
-ms.author: dotnetcontent
-manager: wpickett
-ms.workload: dotnet
-ms.openlocfilehash: 38e5337f775d98f8729c62b3481c3e839bff2252
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.openlocfilehash: a320b40664e4fe2254109183731db346a5d7d0b7
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="datagridview-control-scenarios-windows-forms"></a>DataGridView 控制項案例 (Windows Form)
 與<xref:System.Windows.Forms.DataGridView>控制項，您可以顯示各種資料來源的表格式資料。 簡單的用途，您可以手動填入<xref:System.Windows.Forms.DataGridView>和操作直接透過控制項的資料。 一般而言，不過，會將資料儲存在外部資料來源，然後將控制項繫結，透過<xref:System.Windows.Forms.BindingSource>元件。  
@@ -80,7 +68,7 @@ ms.lasthandoff: 12/22/2017
   
 ### <a name="scenario-key-points"></a>案例重點  
   
--   <xref:System.Windows.Forms.DataGridViewCellStyle>物件可讓您提供色彩、 字型格式及多個層級和個別的項目控制項的位置資訊。  
+-   <xref:System.Windows.Forms.DataGridViewCellStyle> 物件可讓您提供色彩、 字型格式及多個層級和個別的項目控制項的位置資訊。  
   
 -   儲存格樣式可以分層和多個項目，讓您重複使用程式碼共用。  
   
@@ -97,6 +85,6 @@ ms.lasthandoff: 12/22/2017
   
 -   您可以實作您自己的儲存格和資料行的類別，以提供的內建的資料行類型以外的主控制項。 如需詳細資訊，請參閱[How to： 在 Windows Form DataGridView 儲存格的主控制項](../../../../docs/framework/winforms/controls/how-to-host-controls-in-windows-forms-datagridview-cells.md)。  
   
-## <a name="see-also"></a>請參閱  
+## <a name="see-also"></a>另請參閱  
  <xref:System.Windows.Forms.DataGridView>  
  [DataGridView 控制項概觀](../../../../docs/framework/winforms/controls/datagridview-control-overview-windows-forms.md)

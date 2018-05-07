@@ -1,14 +1,6 @@
 ---
-title: "ICLRDebuggingLibraryProvider::ProvideLibrary 方法"
-ms.custom: 
+title: ICLRDebuggingLibraryProvider::ProvideLibrary 方法
 ms.date: 03/30/2017
-ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.technology:
-- dotnet-clr
-ms.tgt_pltfrm: 
-ms.topic: reference
 api_name:
 - ICLRDebuggingLibraryProvider.ProvideLibrary Method
 api_location:
@@ -23,17 +15,13 @@ helpviewer_keywords:
 ms.assetid: 86f06245-9517-49be-8d8c-ca5deaf34c02
 topic_type:
 - apiref
-caps.latest.revision: 
 author: rpetrusha
 ms.author: ronpet
-manager: wpickett
-ms.workload:
-- dotnet
-ms.openlocfilehash: cf6860a616312504e3d23177734cb532405bd714
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.openlocfilehash: b0644258eb1622f388f55d0657c8922079fe4dc1
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="iclrdebugginglibraryproviderprovidelibrary-method"></a>ICLRDebuggingLibraryProvider::ProvideLibrary 方法
 取得程式庫提供者回呼介面，common language runtime (CLR) 版本特定偵錯程式庫找到並載入需求。  
@@ -62,7 +50,7 @@ HRESULT ProvideLibrary(
  [out]要求的模組控制代碼。  
   
 ## <a name="return-value"></a>傳回值  
- 這個方法會傳回下列特定的 HRESULT 以及 HRESULT 錯誤，以指出方法失敗。  
+ 這個方法會傳回下列特定的 HRESULT 以及表示方法失敗的 HRESULT 錯誤。  
   
 |HRESULT|描述|  
 |-------------|-----------------|  
@@ -71,7 +59,7 @@ HRESULT ProvideLibrary(
 ## <a name="exceptions"></a>例外狀況  
   
 ## <a name="remarks"></a>備註  
- `ProvideLibrary`可讓偵錯工具，以提供所需的偵錯特定的 CLR 檔案，例如 mscordbi.dll 與 mscordacwks.dll 的模組。 模組控制代碼必須維持有效，直到呼叫[iclrdebugging:: Canunloadnow](../../../../docs/framework/unmanaged-api/debugging/iclrdebugging-canunloadnow-method.md)方法表示可能會釋放，此時必須負責呼叫者釋放控制代碼。  
+ `ProvideLibrary` 可讓偵錯工具，以提供所需的偵錯特定的 CLR 檔案，例如 mscordbi.dll 與 mscordacwks.dll 的模組。 模組控制代碼必須維持有效，直到呼叫[iclrdebugging:: Canunloadnow](../../../../docs/framework/unmanaged-api/debugging/iclrdebugging-canunloadnow-method.md)方法表示可能會釋放，此時必須負責呼叫者釋放控制代碼。  
   
  偵錯工具可以使用任何可用的方法來找出或採購偵錯模組。  
   
@@ -87,8 +75,8 @@ HRESULT ProvideLibrary(
   
  **程式庫：** CorGuids.lib  
   
- **.NET framework 版本：**[!INCLUDE[net_current_v40plus](../../../../includes/net-current-v40plus-md.md)]  
+ **.NET framework 版本：** [!INCLUDE[net_current_v40plus](../../../../includes/net-current-v40plus-md.md)]  
   
-## <a name="see-also"></a>請參閱  
+## <a name="see-also"></a>另請參閱  
  [偵錯介面](../../../../docs/framework/unmanaged-api/debugging/debugging-interfaces.md)  
  [偵錯](../../../../docs/framework/unmanaged-api/debugging/index.md)

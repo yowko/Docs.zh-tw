@@ -1,26 +1,12 @@
 ---
 title: HOW TO：建立要求-回覆合約
-ms.custom: ''
 ms.date: 03/30/2017
-ms.prod: .net-framework
-ms.reviewer: ''
-ms.suite: ''
-ms.technology:
-- dotnet-clr
-ms.tgt_pltfrm: ''
-ms.topic: article
 ms.assetid: 801d90da-3d45-4284-9c9f-56c8aadb4060
-caps.latest.revision: 19
-author: dotnet-bot
-ms.author: dotnetcontent
-manager: wpickett
-ms.workload:
-- dotnet
-ms.openlocfilehash: 2a272eaa88a53814daea9d515550a37f7991ecb8
-ms.sourcegitcommit: 94d33cadc5ff81d2ac389bf5f26422c227832052
+ms.openlocfilehash: 76a3bbb9415a34218896bc561066c7ac4a30e6b9
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/30/2018
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="how-to-create-a-request-reply-contract"></a>HOW TO：建立要求-回覆合約
 要求-回覆合約會指定一個方法以傳回回覆。 回覆必須在此合約條件下進行傳送並與要求相互關聯。 即便該方法未傳回任何回覆 (在 C# 為 `void`，在 Visual Basic 為 `Sub`)，基礎結構還是會建立空訊息並傳送給呼叫者。 若要避免傳送空的回覆訊息，請使用單向作業合約。  

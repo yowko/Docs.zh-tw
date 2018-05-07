@@ -1,14 +1,6 @@
 ---
-title: "IDebugAutoAttach::AutoAttach 方法"
-ms.custom: 
+title: IDebugAutoAttach::AutoAttach 方法
 ms.date: 03/30/2017
-ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.technology:
-- dotnet-clr
-ms.tgt_pltfrm: 
-ms.topic: reference
 api_name:
 - IDebugAutoAttach.AutoAttach
 api_location:
@@ -23,17 +15,13 @@ helpviewer_keywords:
 ms.assetid: 3cf3bd9c-7d88-4afa-a476-94cdc7609aa6
 topic_type:
 - apiref
-caps.latest.revision: 
 author: mairaw
 ms.author: mairaw
-manager: wpickett
-ms.workload:
-- dotnet
-ms.openlocfilehash: 3b875fec2fdb6ecaeaccf8e58030b2fccbb8653b
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.openlocfilehash: e5c95423a6918da7cc043f8d46de13d166b8d895
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="idebugautoattachautoattach-method"></a>IDebugAutoAttach::AutoAttach 方法
 執行伺服器叫用偵錯工具自動附加。  
@@ -73,5 +61,5 @@ HRESULT AutoAttach
 ## <a name="requirements"></a>需求  
  **標頭：** DbgAutoAttach.h  
   
-## <a name="see-also"></a>請參閱  
+## <a name="see-also"></a>另請參閱  
  [IDebugAutoAttach 介面](../../../../docs/framework/unmanaged-api/diagnostics/idebugautoattach-interface.md)

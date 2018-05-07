@@ -1,13 +1,6 @@
 ---
-title: "如何：變更 Windows Form LinkLabel 控制項的外觀"
-ms.custom: 
+title: 如何：變更 Windows Form LinkLabel 控制項的外觀
 ms.date: 03/30/2017
-ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.technology: dotnet-winforms
-ms.tgt_pltfrm: 
-ms.topic: article
 dev_langs:
 - csharp
 - vb
@@ -19,16 +12,11 @@ helpviewer_keywords:
 - examples [Windows Forms], LinkLabel control
 - LinkLabel control [Windows Forms], examples
 ms.assetid: fdc5854f-5162-4457-8cbe-1042feb2d132
-caps.latest.revision: "11"
-author: dotnet-bot
-ms.author: dotnetcontent
-manager: wpickett
-ms.workload: dotnet
-ms.openlocfilehash: 7dc3963ab1b242ce8dce53d9bba996f52347679b
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.openlocfilehash: e1bb0ecba6fd8ddf66c6debb90ef4dd94641a97e
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="how-to-change-the-appearance-of-the-windows-forms-linklabel-control"></a>如何：變更 Windows Form LinkLabel 控制項的外觀
 您可以變更所顯示的文字<xref:System.Windows.Forms.LinkLabel>控制項，以符合各種用途。 比方說，是常見的作法是藉由設定才會出現在特定的色彩與底線的文字，可以按一下文字向使用者指示。 在使用者按一下文字之後，色彩變更為不同的色彩。 若要控制此行為，您可以設定五個不同的屬性： <xref:System.Windows.Forms.LinkLabel.LinkBehavior%2A>， <xref:System.Windows.Forms.LinkLabel.LinkArea%2A>， <xref:System.Windows.Forms.LinkLabel.LinkColor%2A>， <xref:System.Windows.Forms.LinkLabel.VisitedLinkColor%2A>，和<xref:System.Windows.Forms.LinkLabel.LinkVisited%2A>屬性。  
@@ -132,7 +120,7 @@ ms.lasthandoff: 12/22/2017
        }  
     ```  
   
-## <a name="see-also"></a>請參閱  
+## <a name="see-also"></a>另請參閱  
  <xref:System.Windows.Forms.LinkLabel.LinkArea%2A>  
  <xref:System.Windows.Forms.LinkLabel.LinkColor%2A>  
  <xref:System.Windows.Forms.LinkLabel.VisitedLinkColor%2A>  

@@ -1,26 +1,15 @@
 ---
-title: "在單一階段和多重階段中認可交易"
-ms.custom: 
+title: 在單一階段和多重階段中認可交易
 ms.date: 03/30/2017
-ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.tgt_pltfrm: 
-ms.topic: article
 dev_langs:
 - csharp
 - vb
 ms.assetid: 694ea153-e4db-41ae-96ac-9ac66dcb69a9
-caps.latest.revision: "3"
-author: dotnet-bot
-ms.author: dotnetcontent
-manager: wpickett
-ms.workload: dotnet
-ms.openlocfilehash: 2891313c15b4003db5d50f2e9f2d461de9397dfc
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.openlocfilehash: 0647f5aa4dd5bac054ed424780aa9fbe1c4bfa69
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="committing-a-transaction-in-single-phase-and-multi-phase"></a>在單一階段和多重階段中認可交易
 交易所使用的每項資源都會受到資源管理員 (RM) 的管理，而這些資源管理員在採取行動時必須經過交易管理員 (TM) 的協調。 [編列的資源，以在交易中的參與者身分](../../../../docs/framework/data/transactions/enlisting-resources-as-participants-in-a-transaction.md)主題討論如何在交易中編列的資源 （或多個資源）。 本主題討論如何在眾多登記的資源中協調要認可的交易。  
@@ -119,6 +108,6 @@ public void InDoubt (Enlistment enlistment)
 ## <a name="single-phase-commit-optimization"></a>單一階段交易認可最佳化  
  在執行階段使用單一階段交易認可通訊協定會比較有效率，因為所有的更新不需要任何個別的協調作業就可完成。 如需有關這個通訊協定的詳細資訊，請參閱[最佳化使用單一階段認可和可提升單一階段通知](../../../../docs/framework/data/transactions/optimization-spc-and-promotable-spn.md)。  
   
-## <a name="see-also"></a>請參閱  
+## <a name="see-also"></a>另請參閱  
  [使用單一階段認可和可提升單一階段通知進行最佳化](../../../../docs/framework/data/transactions/optimization-spc-and-promotable-spn.md)  
  [將資源登記為異動中的參與者](../../../../docs/framework/data/transactions/enlisting-resources-as-participants-in-a-transaction.md)

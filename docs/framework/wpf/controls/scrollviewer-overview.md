@@ -1,13 +1,6 @@
 ---
-title: "ScrollViewer 概觀"
-ms.custom: 
+title: ScrollViewer 概觀
 ms.date: 03/30/2017
-ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.technology: dotnet-wpf
-ms.tgt_pltfrm: 
-ms.topic: article
 dev_langs:
 - csharp
 - vb
@@ -16,16 +9,11 @@ helpviewer_keywords:
 - controls [WPF], ScrollViewer
 - ScrollViewer control [WPF], about ScrollViewer control
 ms.assetid: 94a13b94-cfdf-4b12-a1aa-90cb50c6e9b9
-caps.latest.revision: "19"
-author: dotnet-bot
-ms.author: dotnetcontent
-manager: wpickett
-ms.workload: dotnet
-ms.openlocfilehash: 7317bade85641d7d055facabcf7103b945609583
-ms.sourcegitcommit: c0dd436f6f8f44dc80dc43b07f6841a00b74b23f
+ms.openlocfilehash: 1797f956ec41ba085dee7e1cb11a3129004552b1
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 01/19/2018
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="scrollviewer-overview"></a>ScrollViewer 概觀
 使用者介面內的內容常常會大於電腦螢幕的顯示區域。 <xref:System.Windows.Controls.ScrollViewer>控制項提供便利的方式，若要啟用的內容中捲動[!INCLUDE[TLA#tla_winclient](../../../../includes/tlasharptla-winclient-md.md)]應用程式。 本主題將介紹<xref:System.Windows.Controls.ScrollViewer>項目，並提供數種使用方式範例。  
@@ -45,7 +33,7 @@ ms.lasthandoff: 01/19/2018
 #### <a name="the-iscrollinfo-interface"></a>IScrollInfo 介面  
  <xref:System.Windows.Controls.Primitives.IScrollInfo>介面代表主要捲動區域內<xref:System.Windows.Controls.ScrollViewer>或衍生的控制項。 介面會定義捲動屬性和方法，可由實作<xref:System.Windows.Controls.Panel>需要捲動邏輯單元，而非實體的遞增值的項目。 轉型的執行個體<xref:System.Windows.Controls.Primitives.IScrollInfo>來衍生<xref:System.Windows.Controls.Panel>，然後使用它的捲動方法提供實用的方式，捲動至下一個邏輯單元中子集合，而不是像素。 根據預設，<xref:System.Windows.Controls.ScrollViewer>控制項支援捲動實體單位。  
   
- <xref:System.Windows.Controls.StackPanel>和<xref:System.Windows.Controls.VirtualizingStackPanel>兩者實作<xref:System.Windows.Controls.Primitives.IScrollInfo>和原生方式支援邏輯捲動。 針對版面配置控制項的原生支援邏輯捲動，您仍然可以達到包裝主機的實體捲動<xref:System.Windows.Controls.Panel>中的項目<xref:System.Windows.Controls.ScrollViewer>和設定<xref:System.Windows.Controls.ScrollViewer.CanContentScroll%2A>屬性`false`。  
+ <xref:System.Windows.Controls.StackPanel> 和<xref:System.Windows.Controls.VirtualizingStackPanel>兩者實作<xref:System.Windows.Controls.Primitives.IScrollInfo>和原生方式支援邏輯捲動。 針對版面配置控制項的原生支援邏輯捲動，您仍然可以達到包裝主機的實體捲動<xref:System.Windows.Controls.Panel>中的項目<xref:System.Windows.Controls.ScrollViewer>和設定<xref:System.Windows.Controls.ScrollViewer.CanContentScroll%2A>屬性`false`。  
   
  下列程式碼範例示範如何轉型的執行個體<xref:System.Windows.Controls.Primitives.IScrollInfo>至<xref:System.Windows.Controls.StackPanel>並使用內容捲動方法 (<xref:System.Windows.Controls.Primitives.IScrollInfo.LineUp%2A>和<xref:System.Windows.Controls.Primitives.IScrollInfo.LineDown%2A>) 介面所定義。  
   
@@ -54,7 +42,7 @@ ms.lasthandoff: 01/19/2018
   
 <a name="scrollviewer_markup_syntax_and_sample"></a>   
 ## <a name="defining-and-using-a-scrollviewer-element"></a>定義和使用 ScrollViewer 元素  
- 下列範例會建立<xref:System.Windows.Controls.ScrollViewer>視窗，其中包含一些文字和矩形中。 <xref:System.Windows.Controls.Primitives.ScrollBar>元素會顯示只有當他們有必要。 當您調整視窗<xref:System.Windows.Controls.Primitives.ScrollBar>項目出現，而且會消失，因為已更新的值，所以<xref:System.Windows.Controls.ScrollViewer.ComputedHorizontalScrollBarVisibility%2A>和<xref:System.Windows.Controls.ScrollViewer.ComputedVerticalScrollBarVisibility%2A>屬性。  
+ 下列範例會建立<xref:System.Windows.Controls.ScrollViewer>視窗，其中包含一些文字和矩形中。 <xref:System.Windows.Controls.Primitives.ScrollBar> 元素會顯示只有當他們有必要。 當您調整視窗<xref:System.Windows.Controls.Primitives.ScrollBar>項目出現，而且會消失，因為已更新的值，所以<xref:System.Windows.Controls.ScrollViewer.ComputedHorizontalScrollBarVisibility%2A>和<xref:System.Windows.Controls.ScrollViewer.ComputedVerticalScrollBarVisibility%2A>屬性。  
   
  [!code-cpp[ScrollViewer#1](../../../../samples/snippets/cpp/VS_Snippets_Wpf/ScrollViewer/CPP/ScrollViewer_wcp.cpp#1)]
  [!code-csharp[ScrollViewer#1](../../../../samples/snippets/csharp/VS_Snippets_Wpf/ScrollViewer/CSharp/ScrollViewer_wcp.cs#1)]
@@ -67,11 +55,11 @@ ms.lasthandoff: 01/19/2018
   
 <a name="scrollviewer_scroll_vs_paginate"></a>   
 ## <a name="paginating-documents"></a>文件分頁  
- 就文件內容而言，捲動的替代方案是選擇一個支援分頁的文件容器。 <xref:System.Windows.Documents.FlowDocument>適用於文件，專為將服務裝載在檢視控制項，例如<xref:System.Windows.Controls.FlowDocumentPageViewer>，跨多個頁面，這樣就不需要捲動支援分頁的內容。 <xref:System.Windows.Controls.DocumentViewer>提供的檢視解決方案<xref:System.Windows.Documents.FixedDocument>使用傳統捲動顯示內容以外的領域的顯示區域的內容。  
+ 就文件內容而言，捲動的替代方案是選擇一個支援分頁的文件容器。 <xref:System.Windows.Documents.FlowDocument> 適用於文件，專為將服務裝載在檢視控制項，例如<xref:System.Windows.Controls.FlowDocumentPageViewer>，跨多個頁面，這樣就不需要捲動支援分頁的內容。 <xref:System.Windows.Controls.DocumentViewer> 提供的檢視解決方案<xref:System.Windows.Documents.FixedDocument>使用傳統捲動顯示內容以外的領域的顯示區域的內容。  
   
  如需有關文件格式和呈現方式選項的其他資訊，請參閱 [WPF 中的文件](../../../../docs/framework/wpf/advanced/documents-in-wpf.md)。  
   
-## <a name="see-also"></a>請參閱  
+## <a name="see-also"></a>另請參閱  
  <xref:System.Windows.Controls.ScrollViewer>  
  <xref:System.Windows.Controls.Primitives.ScrollBar>  
  <xref:System.Windows.Controls.Primitives.IScrollInfo>  

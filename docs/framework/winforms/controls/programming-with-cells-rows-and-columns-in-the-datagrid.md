@@ -1,13 +1,6 @@
 ---
-title: "在 Windows Form DataGridView 控制項中利用儲存格、資料列和資料行進行程式設計"
-ms.custom: 
+title: 在 Windows Form DataGridView 控制項中利用儲存格、資料列和資料行進行程式設計
 ms.date: 03/30/2017
-ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.technology: dotnet-winforms
-ms.tgt_pltfrm: 
-ms.topic: article
 helpviewer_keywords:
 - data grids [Windows Forms], elements
 - columns [Windows Forms], data grids
@@ -15,16 +8,11 @@ helpviewer_keywords:
 - DataGridView control [Windows Forms], programming with grid elements
 - rows [Windows Forms], data grids
 ms.assetid: 0d76f7e4-4149-42c6-9118-bb37d6669dc5
-caps.latest.revision: "8"
-author: dotnet-bot
-ms.author: dotnetcontent
-manager: wpickett
-ms.workload: dotnet
-ms.openlocfilehash: 443611afa2fd2deafb3268a1bcd15a55c36fffe9
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.openlocfilehash: f87d1e2744ffcd81f5711991880deb1fe5edd2a6
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="programming-with-cells-rows-and-columns-in-the-windows-forms-datagridview-control"></a>在 Windows Form DataGridView 控制項中利用儲存格、資料列和資料行進行程式設計
 本節提供示範各種牽涉到儲存格、 列和資料行物件的程式設計工作的主題。  
@@ -65,6 +53,6 @@ ms.lasthandoff: 12/22/2017
  [Windows Forms DataGridView 控制項中的基本資料行、資料列和儲存格功能](../../../../docs/framework/winforms/controls/basic-column-row-and-cell-features-wf-datagridview-control.md)  
  提供主題描述常用的資料格、 列和資料行的屬性。  
   
-## <a name="see-also"></a>請參閱  
+## <a name="see-also"></a>另請參閱  
  [DataGridView 控制項](../../../../docs/framework/winforms/controls/datagridview-control-windows-forms.md)  
  [Windows Forms DataGridView 控制項中的資料行類型](../../../../docs/framework/winforms/controls/column-types-in-the-windows-forms-datagridview-control.md)

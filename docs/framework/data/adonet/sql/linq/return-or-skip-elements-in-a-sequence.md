@@ -1,27 +1,15 @@
 ---
-title: "傳回或略過序列中的項目"
-ms.custom: 
+title: 傳回或略過序列中的項目
 ms.date: 03/30/2017
-ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.technology: dotnet-ado
-ms.tgt_pltfrm: 
-ms.topic: article
 dev_langs:
 - csharp
 - vb
 ms.assetid: 81a31acd-e0f1-4bca-9a12-fa1ad5752374
-caps.latest.revision: "2"
-author: douglaslMS
-ms.author: douglasl
-manager: craigg
-ms.workload: dotnet
-ms.openlocfilehash: b5d52fd3326448c428dac16c210321889f83ea23
-ms.sourcegitcommit: ed26cfef4e18f6d93ab822d8c29f902cff3519d1
+ms.openlocfilehash: 228de9f3b92d45866c98976be08b84988a2db8d7
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 01/17/2018
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="return-or-skip-elements-in-a-sequence"></a>傳回或略過序列中的項目
 使用 <xref:System.Linq.Queryable.Take%2A> 運算子傳回序列中指定數目的項目，然後略過其餘的項目。  
@@ -31,7 +19,7 @@ ms.lasthandoff: 01/17/2018
 > [!NOTE]
 >  <xref:System.Linq.Enumerable.Take%2A> 和 <xref:System.Linq.Enumerable.Skip%2A> 在用於對 SQL Server 2000 進行的查詢中時會有一些限制。 如需詳細資訊，請參閱中的"Skip 和 Take 例外狀況在 SQL Server 2000"項目[疑難排解](../../../../../../docs/framework/data/adonet/sql/linq/troubleshooting.md)。  
   
- [!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)]將轉譯<xref:System.Linq.Queryable.Skip%2A>藉由在子查詢中使用 SQL`NOT EXISTS`子句。 這項轉譯具有下列限制：  
+ [!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)] 將轉譯<xref:System.Linq.Queryable.Skip%2A>藉由在子查詢中使用 SQL`NOT EXISTS`子句。 這項轉譯具有下列限制：  
   
 -   引數必須為集合。 即使多重集 (Multiset) 已排序，仍不支援多重集。  
   
@@ -89,6 +77,6 @@ ORDER BY [t0].[CustomerID]
   
  至於以 SQL 規格為基礎的非負數、常數整數引數，<xref:System.Linq.Queryable.Take%2A> 和 <xref:System.Linq.Queryable.Skip%2A> 都已定義妥善。  
   
-## <a name="see-also"></a>請參閱  
+## <a name="see-also"></a>另請參閱  
  [查詢範例](../../../../../../docs/framework/data/adonet/sql/linq/query-examples.md)  
  [標準查詢運算子轉譯](../../../../../../docs/framework/data/adonet/sql/linq/standard-query-operator-translation.md)

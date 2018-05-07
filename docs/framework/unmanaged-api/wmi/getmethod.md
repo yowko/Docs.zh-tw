@@ -1,11 +1,7 @@
 ---
-title: "GetMethod 函式 （Unmanaged API 參考）"
-description: "GetMethod 函式會擷取方法的相關資訊。"
+title: GetMethod 函式 （Unmanaged API 參考）
+description: GetMethod 函式會擷取方法的相關資訊。
 ms.date: 11/06/2017
-ms.prod: .net-framework
-ms.technology:
-- dotnet-clr
-ms.topic: reference
 api_name:
 - GetMethod
 api_location:
@@ -20,14 +16,11 @@ topic_type:
 - Reference
 author: rpetrusha
 ms.author: ronpet
-manager: wpickett
-ms.workload:
-- dotnet
-ms.openlocfilehash: f22a2dfa7aae411cac960cbad2017718df8057e1
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.openlocfilehash: 65b8cb74a028892a3494e818f2b523f75e8766a1
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="getmethod-function"></a>GetMethod 函式
 擷取指定之方法的相關資訊。
@@ -83,14 +76,14 @@ HRESULT GetMethod (
 
 可以設定 Windows 管理[IWbemClassObject](https://msdn.microsoft.com/library/aa391433%28v=vs.85%29.aspx)指標`null`如果方法沒有任何 in 參數。
 
-在`ppInSignature`和`ppOutSignature`分別中的屬性描述輸入和輸出參數，`IWbemClassObject`系統類別的執行個體[_Parameters](https://msdn.microsoft.com/library/aa394667(v=vs.85).aspx)。 中的屬性`ppInsignature`命名**Param***n*，其中 *n* 時 （例如方法簽章中參數的位置做為`Param1`，`Param2`等。)。 中的屬性`ppOutSignature`也稱為**Param***n*，傳回的值稱為**ReturnValue**。 如需詳細資訊和範例，請參閱[IWbemClassObject::GetMethod 方法](https://msdn.microsoft.com/library/aa391443(v=vs.85).aspx)。
+在`ppInSignature`和`ppOutSignature`分別中的屬性描述輸入和輸出參數，`IWbemClassObject`系統類別的執行個體[_Parameters](https://msdn.microsoft.com/library/aa394667(v=vs.85).aspx)。 中的屬性`ppInsignature`會命名為 **Param * * * n*，其中*n*是方法簽章中參數的位置 (例如`Param1`，`Param2`等。)。 中的屬性`ppOutSignature`也稱為 **Param * * * n*，傳回的值稱為**ReturnValue**。 如需詳細資訊和範例，請參閱[IWbemClassObject::GetMethod 方法](https://msdn.microsoft.com/library/aa391443(v=vs.85).aspx)。
 
 ## <a name="requirements"></a>需求  
 **平台：**看到[系統需求](../../../../docs/framework/get-started/system-requirements.md)。  
   
  **標頭：** WMINet_Utils.idl  
   
- **.NET framework 版本：**[!INCLUDE[net_current_v472plus](../../../../includes/net-current-v472plus.md)]  
+ **.NET framework 版本：** [!INCLUDE[net_current_v472plus](../../../../includes/net-current-v472plus.md)]  
   
 ## <a name="see-also"></a>另請參閱  
 [WMI 和效能計數器 （Unmanaged API 參考）](index.md)

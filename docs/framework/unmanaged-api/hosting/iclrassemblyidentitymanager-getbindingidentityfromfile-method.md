@@ -1,14 +1,6 @@
 ---
-title: "ICLRAssemblyIdentityManager::GetBindingIdentityFromFile 方法"
-ms.custom: 
+title: ICLRAssemblyIdentityManager::GetBindingIdentityFromFile 方法
 ms.date: 03/30/2017
-ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.technology:
-- dotnet-clr
-ms.tgt_pltfrm: 
-ms.topic: reference
 api_name:
 - ICLRAssemblyIdentityManager.GetBindingIdentityFromFile
 api_location:
@@ -23,17 +15,13 @@ helpviewer_keywords:
 ms.assetid: 7797562d-7b4c-4bd9-8b93-f35e0e2869e4
 topic_type:
 - apiref
-caps.latest.revision: 
 author: rpetrusha
 ms.author: ronpet
-manager: wpickett
-ms.workload:
-- dotnet
-ms.openlocfilehash: 5456d2747bb9c55d73fcc377036f5df1e8b10db0
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.openlocfilehash: 28e97289eda5949e6d124426eb58105e2e3ad33e
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="iclrassemblyidentitymanagergetbindingidentityfromfile-method"></a>ICLRAssemblyIdentityManager::GetBindingIdentityFromFile 方法
 取得位於指定的檔案路徑的組件的繫結資料的組件識別。  
@@ -76,7 +64,7 @@ HRESULT GetBindingIdentityFromFile(
 |E_FAIL|發生未知的嚴重失敗。 若方法會傳回 E_FAIL，CLR 就不會再處理序內。 裝載方法的後續呼叫會傳回 HOST_E_CLRNOTAVAILABLE。|  
   
 ## <a name="remarks"></a>備註  
- `GetBindingIdentityFromFile`通常會呼叫兩次。 第一次呼叫所提供的 null 值`pwzBuffer`，而且方法會傳回適當的大小，以`pcchBufferSize`。 第二個呼叫可提供適當配置的緩衝區，而且方法會傳回實際緩衝處理資料，在完成時使用。  
+ `GetBindingIdentityFromFile` 通常會呼叫兩次。 第一次呼叫所提供的 null 值`pwzBuffer`，而且方法會傳回適當的大小，以`pcchBufferSize`。 第二個呼叫可提供適當配置的緩衝區，而且方法會傳回實際緩衝處理資料，在完成時使用。  
   
 ## <a name="requirements"></a>需求  
  **平台：**看到[系統需求](../../../../docs/framework/get-started/system-requirements.md)。  
@@ -85,9 +73,9 @@ HRESULT GetBindingIdentityFromFile(
   
  **程式庫：**包含做為 MSCorEE.dll 中的資源  
   
- **.NET framework 版本：**[!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]  
+ **.NET framework 版本：** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]  
   
-## <a name="see-also"></a>請參閱  
+## <a name="see-also"></a>另請參閱  
  [ICLRAssemblyIdentityManager 介面](../../../../docs/framework/unmanaged-api/hosting/iclrassemblyidentitymanager-interface.md)  
  [ICLRAssemblyReferenceList 介面](../../../../docs/framework/unmanaged-api/hosting/iclrassemblyreferencelist-interface.md)  
  [ICLRHostBindingPolicyManager 介面](../../../../docs/framework/unmanaged-api/hosting/iclrhostbindingpolicymanager-interface.md)

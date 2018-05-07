@@ -1,28 +1,16 @@
 ---
-title: "繫結擴充性"
-ms.custom: 
+title: 繫結擴充性
 ms.date: 03/30/2017
-ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.technology: dotnet-clr
-ms.tgt_pltfrm: 
-ms.topic: article
 ms.assetid: cabdd583-ddf5-493e-9dba-c6c31cde8f65
-caps.latest.revision: "4"
-author: dotnet-bot
-ms.author: dotnetcontent
-manager: wpickett
-ms.workload: dotnet
-ms.openlocfilehash: 13f17264aa1c82f882d799e6b69a974e8abdb133
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.openlocfilehash: af9736a1011c3de6e1add51e8a913745cfd6756d
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="binding-extensibility"></a>繫結擴充性
 
-本節包含示範 [!INCLUDE[indigo1](../../../../includes/indigo1-md.md)] 中自訂繫結的範例。  
+本節包含示範自訂繫結中 Windows Communication Foundation (WCF) 的範例。  
   
 ## <a name="in-this-section"></a>本節內容  
  <xref:System.ServiceModel.NetHttpBinding>  

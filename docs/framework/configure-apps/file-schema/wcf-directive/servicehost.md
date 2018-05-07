@@ -2,11 +2,11 @@
 title: '@ServiceHost'
 ms.date: 03/30/2017
 ms.assetid: 96ba6967-00f2-422f-9aa7-15de4d33ebf3
-ms.openlocfilehash: f81c71746b6b59a51ee825b44c9e6d9f93eb5fbd
-ms.sourcegitcommit: 11f11ca6cefe555972b3a5c99729d1a7523d8f50
-ms.translationtype: HT
+ms.openlocfilehash: 5498c300ab126bbc4e08cd228e3e7b48e905932e
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="servicehost"></a>@ServiceHost
 將用來產生服務主機的處理站，與要裝載的服務和存取或編譯 .svc 檔案中提供的程式碼所需的其他程式設計方面加以關聯。  
@@ -31,7 +31,7 @@ CodeBehind = "CodeBehind"%>
  用來具現化服務主機的服務主機處理站之 CLR 型別名稱。 這是一個選擇性的屬性。 如果沒有指定，則使用預設的 <xref:System.ServiceModel.Activation.ServiceHostFactory>，它會傳回 <xref:System.ServiceModel.ServiceHost> 的執行個體。  
   
 #### <a name="debug"></a>偵錯  
- 表示 Windows Communication Foundation (WCF) 服務是否應該使用偵錯符號進行編譯。 如果 `true` 服務應以偵錯符號編譯，則為 [!INCLUDE[indigo2](../../../../../includes/indigo2-md.md)]，否則為 `false`。  
+ 表示 Windows Communication Foundation (WCF) 服務是否應該使用偵錯符號進行編譯。 `true` 如果 WCF 服務應該使用偵錯符號; 進行編譯否則， `false`。  
   
 #### <a name="language"></a>語言  
  指定編譯檔案內 (.svc) 所有內嵌程式碼時使用的語言。 這些值可以表示任何 .NET 支援的語言，包括 C#、VB 和 JS (分別指 C#、Visual Basic .NET 和 JScript .NET)。 這是一個選擇性的屬性。  

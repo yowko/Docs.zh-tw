@@ -1,14 +1,6 @@
 ---
-title: "IMetaDataImport::FindField 方法"
-ms.custom: 
+title: IMetaDataImport::FindField 方法
 ms.date: 03/30/2017
-ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.technology:
-- dotnet-clr
-ms.tgt_pltfrm: 
-ms.topic: reference
 api_name:
 - IMetaDataImport.FindField
 api_location:
@@ -23,17 +15,13 @@ helpviewer_keywords:
 ms.assetid: 38cd4e16-fbb2-471c-aa73-ac51a1931ad2
 topic_type:
 - apiref
-caps.latest.revision: 
 author: mairaw
 ms.author: mairaw
-manager: wpickett
-ms.workload:
-- dotnet
-ms.openlocfilehash: 3178d3ff3c64de5390e1150445f0c49c560aa32a
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.openlocfilehash: ac69bab45ccd39b6a055fe4d2f74950ab47da779
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="imetadataimportfindfield-method"></a>IMetaDataImport::FindField 方法
 取得 FieldDef 語彙基元指標，會包含該欄位指定<xref:System.Type>且具有指定的名稱和中繼資料簽章。  
@@ -71,7 +59,7 @@ HRESULT FindField (
   
  簽章傳遞至`FindField`必須已產生中目前的範圍，因為簽章會繫結至特定範圍內。 簽章可以內嵌識別封入類別或實值類型的語彙基元。 （語彙基元是本機的 TypeDef 資料表的索引）。 您無法建立在目前範圍的內容以外的執行階段簽章，並使用該簽章，做為輸入`FindField`。  
   
- `FindField`尋找已直接在類別或介面中定義的欄位找不到繼承的欄位。  
+ `FindField` 尋找已直接在類別或介面中定義的欄位找不到繼承的欄位。  
   
 ## <a name="requirements"></a>需求  
  **平台：**看到[系統需求](../../../../docs/framework/get-started/system-requirements.md)。  
@@ -80,8 +68,8 @@ HRESULT FindField (
   
  **程式庫：**包含做為 MsCorEE.dll 中的資源  
   
- **.NET framework 版本：**[!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
+ **.NET framework 版本：** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
   
-## <a name="see-also"></a>請參閱  
+## <a name="see-also"></a>另請參閱  
  [IMetaDataImport 介面](../../../../docs/framework/unmanaged-api/metadata/imetadataimport-interface.md)  
  [IMetaDataImport2 介面](../../../../docs/framework/unmanaged-api/metadata/imetadataimport2-interface.md)

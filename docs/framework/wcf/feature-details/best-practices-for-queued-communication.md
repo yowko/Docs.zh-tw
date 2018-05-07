@@ -1,32 +1,18 @@
 ---
 title: 佇列通訊的最佳做法
-ms.custom: ''
 ms.date: 03/30/2017
-ms.prod: .net-framework
-ms.reviewer: ''
-ms.suite: ''
-ms.technology:
-- dotnet-clr
-ms.tgt_pltfrm: ''
-ms.topic: article
 helpviewer_keywords:
 - queues [WCF], best practices
 - best practices [WCF], queued communication
 ms.assetid: 446a6383-cae3-4338-b193-a33c14a49948
-caps.latest.revision: 14
-author: dotnet-bot
-ms.author: dotnetcontent
-manager: wpickett
-ms.workload:
-- dotnet
-ms.openlocfilehash: 082fa083dbba601cefc00e40bad7b91e14a45d44
-ms.sourcegitcommit: 03ee570f6f528a7d23a4221dcb26a9498edbdf8c
+ms.openlocfilehash: b54569ad3d11c3b9b1b96e2738bdf0582b63b0b7
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/28/2018
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="best-practices-for-queued-communication"></a>佇列通訊的最佳做法
-此主題為 [!INCLUDE[indigo1](../../../../includes/indigo1-md.md)] 中的佇列通訊提供建議的做法。 下列各節由案例的觀點來討論建議的做法。  
+本主題的佇列通訊中 Windows Communication Foundation (WCF) 提供建議的做法。 下列各節由案例的觀點來討論建議的做法。  
   
 ## <a name="fast-best-effort-queued-messaging"></a>快速、最佳的佇列傳訊  
  在需要佇列傳訊提供分離、且以最佳保證提供快速、高效能的傳訊案例中，使用非交易式佇列並且將 <xref:System.ServiceModel.MsmqBindingBase.ExactlyOnce%2A> 屬性設定為 `false`。  
@@ -69,7 +55,7 @@ ms.lasthandoff: 04/28/2018
   
  使用批次處理時，注意轉換為並行批次的並行與節流。  
   
- 若要達到更高的輸送量和可用性，可以使用自佇列讀取的 [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] 服務陣列。 這樣做需要所有這些服務在相同的端點上公開相同的合約。 陣列方法最適合有高訊息產生速率的應用程式，因為它對所有來自相同佇列的讀取啟用多種服務。  
+ 若要達到更高的輸送量和可用性，使用從佇列讀取的 WCF 服務的伺服陣列。 這樣做需要所有這些服務在相同的端點上公開相同的合約。 陣列方法最適合有高訊息產生速率的應用程式，因為它對所有來自相同佇列的讀取啟用多種服務。  
   
  使用陣列時，注意 MSMQ 3.0 不支援遠端交易的讀取。 MSMQ 4.0 不支援遠端交易的讀取。  
   
@@ -84,11 +70,11 @@ ms.lasthandoff: 04/28/2018
  雖然佇列都是單向的，在有些案例中，您可能想要將收到的回覆與之前傳送的要求相互關聯。 如果您需要這類關聯，建議您套用自己的 SOA 訊息標頭，此標題包含與訊息關聯的資訊。 一般來說，寄件者將此標頭附加在訊息中，而處理訊息並以回覆佇列上的新訊息回覆的接收者附加包含關聯資訊的傳送者訊息標頭，因此傳送者可以透過要求訊息來識別回覆訊息。  
   
 ## <a name="integrating-with-non-wcf-applications"></a>整合非 WCF 應用程式  
- 使用 `MsmqIntegrationBinding` 整合 [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] 服務或用戶端與非 [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] 服務或用戶端時。 非[!INCLUDE[indigo2](../../../../includes/indigo2-md.md)]應用程式可以使用 System.Messaging、 COM +、 Visual Basic 或 c + + 撰寫的 MSMQ 應用程式。  
+ 使用`MsmqIntegrationBinding`整合與非 WCF 服務或用戶端的 WCF 服務或用戶端時。 非 WCF 應用程式可以是使用 System.Messaging、 COM +、 Visual Basic 或 c + + 撰寫的 MSMQ 應用程式。  
   
  使用 `MsmqIntegrationBinding` 時，請注意下列各點：  
   
--   [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] 訊息本文和 MSMQ 訊息本文不相同。 使用佇列繫結傳送 [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] 訊息時，[!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] 訊息本文放置在 MSMQ 訊息內。 MSMQ 基礎結構未注意到此額外資訊，它只看到 MSMQ 訊息。  
+-   WCF 訊息本文不是 MSMQ 訊息內文相同。 當傳送 WCF 訊息使用的佇列繫結，WCF 訊息內文會放置在 MSMQ 訊息內。 MSMQ 基礎結構未注意到此額外資訊，它只看到 MSMQ 訊息。  
   
 -   `MsmqIntegrationBinding` 支援常見的序列化類型。 根據序列化類型、泛型訊息的本文類型、<xref:System.ServiceModel.MsmqIntegration.MsmqMessage%601>，採用不同類型的參數。 例如，<xref:System.ServiceModel.MsmqIntegration.MsmqMessageSerializationFormat.ByteArray> 需要 `MsmqMessage\<byte[]>`，而 <xref:System.ServiceModel.MsmqIntegration.MsmqMessageSerializationFormat.Stream> 需要 `MsmqMessage<Stream>`。  
   
