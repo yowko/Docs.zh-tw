@@ -1,13 +1,6 @@
 ---
-title: "如何：將控制項加入至 Windows Form"
-ms.custom: 
+title: 如何：將控制項加入至 Windows Form
 ms.date: 03/30/2017
-ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.technology: dotnet-winforms
-ms.tgt_pltfrm: 
-ms.topic: article
 dev_langs:
 - csharp
 - vb
@@ -16,16 +9,11 @@ helpviewer_keywords:
 - Windows Forms controls, adding to form
 - controls [Windows Forms], adding
 ms.assetid: 2af86001-9d62-4154-87fb-66db2c3cd9fd
-caps.latest.revision: "15"
-author: dotnet-bot
-ms.author: dotnetcontent
-manager: wpickett
-ms.workload: dotnet
-ms.openlocfilehash: ab92f7a56173ec71642d0cc09f3f81e9859533b4
-ms.sourcegitcommit: c0dd436f6f8f44dc80dc43b07f6841a00b74b23f
+ms.openlocfilehash: 2dd048fb074d1ec5bb7bc0a67f196d5d51281545
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 01/19/2018
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="how-to-add-controls-to-windows-forms"></a>如何：將控制項加入至 Windows Form
 大部分表單都設計成將控制項加入至表單的表面，以定義使用者介面 (UI)。 A*控制項*是用來顯示資訊或可接受使用者輸入表單上的元件。 如需將控制項的詳細資訊，請參閱[Windows Form 控制項](../../../../docs/framework/winforms/controls/index.md)。  
@@ -100,7 +88,7 @@ ms.lasthandoff: 01/19/2018
     > [!IMPORTANT]
     >  您可能會藉由參考惡意公開本機電腦透過網路的安全性風險`UserControl`。 這只會考量使用者惡意破壞性的自訂控制項，且您不小心將其加入您專案的建立。  
   
-## <a name="see-also"></a>請參閱  
+## <a name="see-also"></a>另請參閱  
  [Windows Forms 控制項](../../../../docs/framework/winforms/controls/index.md)  
  [排列 Windows Forms 上的控制項](../../../../docs/framework/winforms/controls/arranging-controls-on-windows-forms.md)  
  [操作說明：重新調整 Windows Forms 上控制項的大小](../../../../docs/framework/winforms/controls/how-to-resize-controls-on-windows-forms.md)  

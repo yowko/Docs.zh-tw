@@ -1,13 +1,7 @@
 ---
 title: 密碼編譯簽章
-ms.custom: ''
 ms.date: 03/30/2017
-ms.prod: .net
-ms.reviewer: ''
-ms.suite: ''
 ms.technology: dotnet-standard
-ms.tgt_pltfrm: ''
-ms.topic: article
 dev_langs:
 - csharp
 - vb
@@ -26,18 +20,13 @@ helpviewer_keywords:
 - digital signatures, verifying
 - signing XML
 ms.assetid: aa87cb7f-e608-4a81-948b-c9b8a1225783
-caps.latest.revision: 17
 author: mairaw
 ms.author: mairaw
-manager: wpickett
-ms.workload:
-- dotnet
-- dotnetcore
-ms.openlocfilehash: 596625f229c4031b681755d538bf0a3d7b6674c8
-ms.sourcegitcommit: 2e8acae16ae802f2d6d04e3ce0a6dbf04e476513
+ms.openlocfilehash: 656b34a828ef6acd488cc84ca98d5a4bbaaa2cdf
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/18/2018
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="cryptographic-signatures"></a>密碼編譯簽章
 <a name="top"></a> 密碼編譯數位簽章會使用公開金鑰演算法來提供資料完整性。 當您使用數位簽章簽署資料時，其他人可以確認簽章，並可以證明資料是來自您，而且在您簽署它之後沒有遭到竄改。 如需有關數位簽章的詳細資訊，請參閱 [The signature is valid](../../../docs/standard/security/cryptographic-services.md)。  

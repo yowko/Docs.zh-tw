@@ -1,14 +1,6 @@
 ---
-title: "ICorRuntimeHost::SwitchOutLogicalThreadState 方法"
-ms.custom: 
+title: ICorRuntimeHost::SwitchOutLogicalThreadState 方法
 ms.date: 03/30/2017
-ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.technology:
-- dotnet-clr
-ms.tgt_pltfrm: 
-ms.topic: reference
 api_name:
 - ICorRuntimeHost.SwitchOutLogicalThreadState
 api_location:
@@ -23,17 +15,13 @@ helpviewer_keywords:
 ms.assetid: e1968f0b-2675-4dc2-8507-46164e1df154
 topic_type:
 - apiref
-caps.latest.revision: 
 author: rpetrusha
 ms.author: ronpet
-manager: wpickett
-ms.workload:
-- dotnet
-ms.openlocfilehash: 6302a836168f38991c7c371789d4913a3c95c16d
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.openlocfilehash: ff3bd9345825b5e7a4ccb41cd260b447b74cede3
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="icorruntimehostswitchoutlogicalthreadstate-method"></a>ICorRuntimeHost::SwitchOutLogicalThreadState 方法
 此方法支援 .NET Framework 結構而且並非設計直接從程式碼使用。  
@@ -59,5 +47,5 @@ HRESULT SwitchOutLogicalThreadState(
   
  **.NET framework 版本：** 1.0、 1.1  
   
-## <a name="see-also"></a>請參閱  
+## <a name="see-also"></a>另請參閱  
  [ICorRuntimeHost 介面](../../../../docs/framework/unmanaged-api/hosting/icorruntimehost-interface.md)

@@ -1,14 +1,6 @@
 ---
-title: "IHostAssemblyStore::ProvideAssembly 方法"
-ms.custom: 
+title: IHostAssemblyStore::ProvideAssembly 方法
 ms.date: 03/30/2017
-ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.technology:
-- dotnet-clr
-ms.tgt_pltfrm: 
-ms.topic: reference
 api_name:
 - IHostAssemblyStore.ProvideAssembly
 api_location:
@@ -23,17 +15,13 @@ helpviewer_keywords:
 ms.assetid: 625c3dd5-a3f0-442c-adde-310dadbb5054
 topic_type:
 - apiref
-caps.latest.revision: 
 author: rpetrusha
 ms.author: ronpet
-manager: wpickett
-ms.workload:
-- dotnet
-ms.openlocfilehash: 2097c1ea64e5e9a2a09e0ec57243624b05eeea65
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.openlocfilehash: e32d48931177a42dd14092b4052370764a217abe
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="ihostassemblystoreprovideassembly-method"></a>IHostAssemblyStore::ProvideAssembly 方法
 取得未被參考的組件的參考[ICLRAssemblyReferenceList](../../../../docs/framework/unmanaged-api/hosting/iclrassemblyreferencelist-interface.md)從傳回[ihostassemblymanager:: Getnonhoststoreassemblies](../../../../docs/framework/unmanaged-api/hosting/ihostassemblymanager-getnonhoststoreassemblies-method.md)。 Common language runtime (CLR) 呼叫`ProvideAssembly`不會出現在清單中每一個組件。  
@@ -58,7 +46,7 @@ HRESULT ProvideAssembly (
  [out]這個要求的組件的唯一識別碼的指標`IStream`。  
   
  `pHostContext`  
- [out]用來判斷要求的組件，而不需要為平台的辨識項的主應用程式特定資料的指標叫用呼叫。 `pHostContext`對應至<xref:System.Reflection.Assembly.HostContext%2A>managed 屬性<xref:System.Reflection.Assembly>類別。  
+ [out]用來判斷要求的組件，而不需要為平台的辨識項的主應用程式特定資料的指標叫用呼叫。 `pHostContext` 對應至<xref:System.Reflection.Assembly.HostContext%2A>managed 屬性<xref:System.Reflection.Assembly>類別。  
   
  `ppStmAssemblyImage`  
  [out]位址指標`IStream`其中包含要載入，或者如果找不到組件，則為 null 的可攜式執行檔 (PE) 映像。  
@@ -70,7 +58,7 @@ HRESULT ProvideAssembly (
   
 |HRESULT|描述|  
 |-------------|-----------------|  
-|S_OK|`ProvideAssembly`已成功傳回。|  
+|S_OK|`ProvideAssembly` 已成功傳回。|  
 |HOST_E_CLRNOTAVAILABLE|CLR 尚未載入到處理程序，或 CLR 正在中它無法執行 managed 程式碼，或成功地處理呼叫的狀態。|  
 |HOST_E_TIMEOUT|呼叫已逾時。|  
 |HOST_E_NOT_OWNER|呼叫端未擁有鎖定。|  
@@ -89,9 +77,9 @@ HRESULT ProvideAssembly (
   
  **程式庫：**包含做為 MSCorEE.dll 中的資源  
   
- **.NET framework 版本：**[!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]  
+ **.NET framework 版本：** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]  
   
-## <a name="see-also"></a>請參閱  
+## <a name="see-also"></a>另請參閱  
  [ICLRAssemblyReferenceList 介面](../../../../docs/framework/unmanaged-api/hosting/iclrassemblyreferencelist-interface.md)  
  [IHostAssemblyManager 介面](../../../../docs/framework/unmanaged-api/hosting/ihostassemblymanager-interface.md)  
  [IHostAssemblyStore 介面](../../../../docs/framework/unmanaged-api/hosting/ihostassemblystore-interface.md)

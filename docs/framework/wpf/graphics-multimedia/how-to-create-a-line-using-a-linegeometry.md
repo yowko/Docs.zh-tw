@@ -1,31 +1,17 @@
 ---
-title: "如何：使用 LineGeometry 建立線條"
-ms.custom: 
+title: 如何：使用 LineGeometry 建立線條
 ms.date: 03/30/2017
-ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.technology:
-- dotnet-wpf
-ms.tgt_pltfrm: 
-ms.topic: article
 dev_langs:
 - csharp
 - vb
 helpviewer_keywords:
 - graphics [WPF], lines
 ms.assetid: 41231b22-1f74-4c26-a8e7-a55b29f8f6bd
-caps.latest.revision: 
-author: dotnet-bot
-ms.author: dotnetcontent
-manager: wpickett
-ms.workload:
-- dotnet
-ms.openlocfilehash: 487a5ffaf952450c6196f5fe0d00fd249177b054
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.openlocfilehash: 8db33fc5c611dcbcae50c71ada1c6b6f9fd9bd29
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="how-to-create-a-line-using-a-linegeometry"></a>如何：使用 LineGeometry 建立線條
 這個範例示範如何使用<xref:System.Windows.Media.LineGeometry>類別來說明一條線。 A<xref:System.Windows.Media.LineGeometry>由其開始和結束點定義。  
@@ -43,7 +29,7 @@ ms.lasthandoff: 12/22/2017
   
  其他簡單的幾何類別包含<xref:System.Windows.Media.LineGeometry>和<xref:System.Windows.Media.EllipseGeometry>。 這些幾何，以及更複雜的也可以建立使用<xref:System.Windows.Media.PathGeometry>或<xref:System.Windows.Media.StreamGeometry>。 如需詳細資訊，請參閱[幾何概觀](../../../../docs/framework/wpf/graphics-multimedia/geometry-overview.md)。  
   
-## <a name="see-also"></a>請參閱  
+## <a name="see-also"></a>另請參閱  
  [幾何概觀](../../../../docs/framework/wpf/graphics-multimedia/geometry-overview.md)  
  [建立複合圖案](../../../../docs/framework/wpf/graphics-multimedia/how-to-create-a-composite-shape.md)  
  [使用 PathGeometry 建立圖案](../../../../docs/framework/wpf/graphics-multimedia/how-to-create-a-shape-by-using-a-pathgeometry.md)

@@ -1,33 +1,19 @@
 ---
-title: "端點位址"
-ms.custom: 
+title: 端點位址
 ms.date: 03/30/2017
-ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.technology:
-- dotnet-clr
-ms.tgt_pltfrm: 
-ms.topic: article
 helpviewer_keywords:
 - addresses [WCF]
 - Windows Communication Foundation [WCF], addresses
 - WCF [WCF], addresses
 ms.assetid: 13f269e3-ebb1-433c-86cf-54fbd866a627
-caps.latest.revision: 
-author: dotnet-bot
-ms.author: dotnetcontent
-manager: wpickett
-ms.workload:
-- dotnet
-ms.openlocfilehash: 58e6d383856d57e95a1ea5bd2658af2ec0b22ed5
-ms.sourcegitcommit: 15316053918995cc1380163a7d7e7edd5c44e6d7
+ms.openlocfilehash: 46278e35c6966e473f5a800f7e99814efd7b943c
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 03/19/2018
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="endpoint-addresses"></a>端點位址
-每個端點都有與其相關聯的位址，以便用來找出並識別端點。 這個位址主要包含一個可指定端點位置的統一資源識別元 (URI)。 端點位址是由 [!INCLUDE[indigo1](../../../../includes/indigo1-md.md)] 類別在 <xref:System.ServiceModel.EndpointAddress> 程式設計模型中表示，這個類別包含選擇性的 <xref:System.ServiceModel.EndpointAddress.Identity%2A> 屬性，而這個屬性可讓與某個端點交換訊息的其他端點驗證該端點；此外，這個類別也包含一組選擇性的 <xref:System.ServiceModel.EndpointAddress.Headers%2A> 屬性，這些屬性則會定義取用服務時所需的其他任何 SOAP 標頭。 選擇性標頭會提供額外與更詳細的定址資訊，以便識別端點或與服務端點互動。 端點位址會在網路上表示為 WS-Addressing 端點參考 (EPR)。  
+每個端點都有與其相關聯的位址，以便用來找出並識別端點。 這個位址主要包含一個可指定端點位置的統一資源識別元 (URI)。 端點位址以 Windows Communication Foundation (WCF) 程式設計模型，由<xref:System.ServiceModel.EndpointAddress>類別，其中包含選擇性<xref:System.ServiceModel.EndpointAddress.Identity%2A>屬性可讓其他端點的端點驗證，交換訊息，以及一組選擇性的<xref:System.ServiceModel.EndpointAddress.Headers%2A>屬性，定義取用服務時所需任何其他 SOAP 標頭。 選擇性標頭會提供額外與更詳細的定址資訊，以便識別端點或與服務端點互動。 端點位址會在網路上表示為 WS-Addressing 端點參考 (EPR)。  
   
 ## <a name="uri-structure-of-an-address"></a>位址的 URI 結構  
  大部分傳輸的位址 URI 具有四個部分。 例如，URI 的四個部分http://www.fabrikam.com:322/mathservice.svc/secureEndpoint可以分項，如下所示：  
@@ -63,7 +49,7 @@ ms.lasthandoff: 03/19/2018
   
 -   繫結資訊：IP 位址、連接埠、主機標頭  
   
- IIS 可以為每個網站指定多個繫結，讓每個配置都有多個基底位址。 在 [!INCLUDE[netfx35_short](../../../../includes/netfx35-short-md.md)] 問世之前，[!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] 並不支援單一配置包含多個位址，而且如果您指定這些位址，就會在啟動期間擲回 <xref:System.ArgumentException>。  
+ IIS 可以為每個網站指定多個繫結，讓每個配置都有多個基底位址。 之前[!INCLUDE[netfx35_short](../../../../includes/netfx35-short-md.md)]，WCF 結構描述不支援多個地址和，如果他們未指定，則擲回<xref:System.ArgumentException>在啟用期間。  
   
  [!INCLUDE[netfx35_short](../../../../includes/netfx35-short-md.md)] 可讓網際網路服務提供者在同一個網站上裝載多個應用程式，而且同一個配置中可以有不同的基底位址。  
   
@@ -111,7 +97,7 @@ ms.lasthandoff: 03/19/2018
  如需詳細資訊和範例，請參閱[支援多重 IIS 網站繫結](../../../../docs/framework/wcf/feature-details/supporting-multiple-iis-site-bindings.md)和<xref:System.ServiceModel.ServiceHostingEnvironment.MultipleSiteBindingsEnabled%2A>。  
   
 ## <a name="extending-addressing-in-wcf-services"></a>擴充 WCF 服務中的定址  
- [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] 服務的預設定址模型會將端點位址 URI 用於下列用途：  
+ 預設定址模型之 WCF 服務使用的端點位址 URI 用於下列用途：  
   
 -   指定服務接聽位址，亦即端點接聽訊息時的位置。  
   

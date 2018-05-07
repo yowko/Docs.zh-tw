@@ -1,14 +1,6 @@
 ---
 title: 如何：管理 Windows Form DataGridView 控制項中的資料列
-ms.custom: ''
 ms.date: 03/30/2017
-ms.prod: .net-framework
-ms.reviewer: ''
-ms.suite: ''
-ms.technology:
-- dotnet-winforms
-ms.tgt_pltfrm: ''
-ms.topic: article
 dev_langs:
 - csharp
 - vb
@@ -18,17 +10,11 @@ helpviewer_keywords:
 - data grids [Windows Forms], manipulating rows
 - rows [Windows Forms], manipulating on Windows Forms
 ms.assetid: 522d8944-e073-4488-9673-923f0a8d7214
-caps.latest.revision: 9
-author: dotnet-bot
-ms.author: dotnetcontent
-manager: wpickett
-ms.workload:
-- dotnet
-ms.openlocfilehash: 37926d0b048282a23f830d8f51d30fd86b77c980
-ms.sourcegitcommit: 2042de78fcdceebb6b8ac4b7a292b93e8782cbf5
+ms.openlocfilehash: 0f6e1cadbc52a4e85db87f25b97d23c6a6fc05c0
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/27/2018
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="how-to-manipulate-rows-in-the-windows-forms-datagridview-control"></a>如何：管理 Windows Form DataGridView 控制項中的資料列
 下列程式碼範例顯示使用 <xref:System.Windows.Forms.DataGridViewRow> 類別屬性操作 <xref:System.Windows.Forms.DataGridView> 資料列的各種方式。  

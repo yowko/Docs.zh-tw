@@ -1,27 +1,15 @@
 ---
 title: ConcurrencyMode Reentrant
-ms.custom: 
 ms.date: 03/30/2017
-ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.technology: dotnet-clr
-ms.tgt_pltfrm: 
-ms.topic: article
 ms.assetid: b2046c38-53d8-4a6c-a084-d6c7091d92b1
-caps.latest.revision: "12"
-author: dotnet-bot
-ms.author: dotnetcontent
-manager: wpickett
-ms.workload: dotnet
-ms.openlocfilehash: 450d47a9cdff709657458ed3fcc4b5948ccb960c
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.openlocfilehash: d0ecd4b0c39c6a736a176a61490f454c2bab2e20
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="concurrencymode-reentrant"></a>ConcurrencyMode Reentrant
-這個範例示範在服務實作上使用 ConcurrencyMode.Reentrant 的必要性與隱含意義。 ConcurrencyMode.Reentrant 意指在指定的時間裡，服務 (或回呼) 只會處理一則訊息 (類似於 `ConcurencyMode.Single`)。 為確保執行緒安全，[!INCLUDE[indigo1](../../../../includes/indigo1-md.md)] 會鎖定處理訊息的 `InstanceContext`，使它無法處理任何其他訊息。 在 Reentrant 模式的情況下，會在服務即將進行傳出呼叫之前解除鎖定 `InstanceContext` (因此允許進行後續呼叫，而這個呼叫可能是可重新進入 (Reentrant) 的，如範例中所示)，以便在下次進入服務時取得鎖定。 為方便示範行為，範例會顯示用戶端與服務如何使用雙工合約相互傳送訊息。  
+這個範例示範在服務實作上使用 ConcurrencyMode.Reentrant 的必要性與隱含意義。 ConcurrencyMode.Reentrant 意指在指定的時間裡，服務 (或回呼) 只會處理一則訊息 (類似於 `ConcurencyMode.Single`)。 為確保執行緒安全，Windows Communication Foundation (WCF) 鎖定`InstanceContext`處理訊息，因此可以處理任何其他訊息。 在 Reentrant 模式的情況下，會在服務即將進行傳出呼叫之前解除鎖定 `InstanceContext` (因此允許進行後續呼叫，而這個呼叫可能是可重新進入 (Reentrant) 的，如範例中所示)，以便在下次進入服務時取得鎖定。 為方便示範行為，範例會顯示用戶端與服務如何使用雙工合約相互傳送訊息。  
   
  所定義的合約是一份雙工合約，其中包含服務所實作的 `Ping` 方法，以及用戶端所實作的 `Pong` 回呼方法。 用戶端會使用滴答計數來叫用伺服器的 `Ping` 方法，從而啟始呼叫。 服務則會確認滴答計數不等於 0，再叫用回呼方法 `Pong`，並同時遞減滴答計數。 其做法如下列範例程式碼所示。  
   
@@ -89,8 +77,8 @@ Pong: Ticks = 1
 >   
 >  `<InstallDrive>:\WF_WCF_Samples`  
 >   
->  如果此目錄不存在，請移至 [Windows Communication Foundation (WCF) and Windows Workflow Foundation (WF) Samples for .NET Framework 4  (適用於 .NET Framework 4 的 Windows Communication Foundation (WCF) 與 Windows Workflow Foundation (WF) 範例)](http://go.microsoft.com/fwlink/?LinkId=150780) ，以下載所有 [!INCLUDE[indigo1](../../../../includes/indigo1-md.md)] 和 [!INCLUDE[wf1](../../../../includes/wf1-md.md)] 範例。 此範例位於下列目錄。  
+>  如果此目錄不存在，請移至[Windows Communication Foundation (WCF) 和適用於.NET Framework 4 的 Windows Workflow Foundation (WF) 範例](http://go.microsoft.com/fwlink/?LinkId=150780)下載所有 Windows Communication Foundation (WCF) 和[!INCLUDE[wf1](../../../../includes/wf1-md.md)]範例。 此範例位於下列目錄。  
 >   
 >  `<InstallDrive>:\WF_WCF_Samples\WCF\Basic\Services\Reentrant`  
   
-## <a name="see-also"></a>請參閱
+## <a name="see-also"></a>另請參閱

@@ -1,24 +1,12 @@
 ---
-title: "自訂 WSDL 發行物"
-ms.custom: 
+title: 自訂 WSDL 發行物
 ms.date: 03/30/2017
-ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.technology: dotnet-clr
-ms.tgt_pltfrm: 
-ms.topic: article
 ms.assetid: 3b3e8103-2c95-4db3-a05b-46aa8e9d4d29
-caps.latest.revision: "21"
-author: dotnet-bot
-ms.author: dotnetcontent
-manager: wpickett
-ms.workload: dotnet
-ms.openlocfilehash: ba62c44ecf72df7faaed77f54f07ecd88157c6d8
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
-ms.translationtype: MT
+ms.openlocfilehash: e475a37b5c8e868cf06d7764d561755112ed943e
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="custom-wsdl-publication"></a>自訂 WSDL 發行物
 這個範例會示範如何：  
@@ -29,7 +17,7 @@ ms.lasthandoff: 12/22/2017
   
 -   在自訂合約行為和自訂作業行為上分別實作 <xref:System.ServiceModel.Description.IServiceContractGenerationExtension?displayProperty=nameWithType> 和 <xref:System.ServiceModel.Description.IOperationContractGenerationExtension?displayProperty=nameWithType>，將匯入的附註寫入為 CodeDOM 中的註解，以用於匯入的合約和作業。  
   
--   使用 <xref:System.ServiceModel.Description.MetadataExchangeClient?displayProperty=nameWithType> 下載 WSDL、使用 <xref:System.ServiceModel.Description.WsdlImporter?displayProperty=nameWithType> 匯入使用自訂 WSDL 匯入工具的 WSDL，以及使用 <xref:System.ServiceModel.Description.ServiceContractGenerator?displayProperty=nameWithType> 產生具有 WSDL 附註的 [!INCLUDE[indigo1](../../../../includes/indigo1-md.md)] 用戶端程式碼做為 C# 和 Visual Basic 中的 /// 和 ''' 註解。  
+-   使用<xref:System.ServiceModel.Description.MetadataExchangeClient?displayProperty=nameWithType>下載 WSDL，<xref:System.ServiceModel.Description.WsdlImporter?displayProperty=nameWithType>匯入使用自訂的 WSDL 匯入工具，而<xref:System.ServiceModel.Description.ServiceContractGenerator?displayProperty=nameWithType>來產生 Windows Communication Foundation (WCF) 用戶端程式碼具有 WSDL 附註做 / / 和 '' 註解，在 C# 和 Visual基本。  
   
 > [!NOTE]
 >  此範例的安裝程序與建置指示位於本主題的結尾。  
@@ -311,8 +299,8 @@ public interface ICalculator
 >   
 >  `<InstallDrive>:\WF_WCF_Samples`  
 >   
->  如果此目錄不存在，請移至 [Windows Communication Foundation (WCF) and Windows Workflow Foundation (WF) Samples for .NET Framework 4  (適用於 .NET Framework 4 的 Windows Communication Foundation (WCF) 與 Windows Workflow Foundation (WF) 範例)](http://go.microsoft.com/fwlink/?LinkId=150780) ，以下載所有 [!INCLUDE[indigo1](../../../../includes/indigo1-md.md)] 和 [!INCLUDE[wf1](../../../../includes/wf1-md.md)] 範例。 此範例位於下列目錄。  
+>  如果此目錄不存在，請移至[Windows Communication Foundation (WCF) 和適用於.NET Framework 4 的 Windows Workflow Foundation (WF) 範例](http://go.microsoft.com/fwlink/?LinkId=150780)下載所有 Windows Communication Foundation (WCF) 和[!INCLUDE[wf1](../../../../includes/wf1-md.md)]範例。 此範例位於下列目錄。  
 >   
 >  `<InstallDrive>:\WF_WCF_Samples\WCF\Extensibility\Metadata\WsdlDocumentation`  
   
-## <a name="see-also"></a>請參閱
+## <a name="see-also"></a>另請參閱

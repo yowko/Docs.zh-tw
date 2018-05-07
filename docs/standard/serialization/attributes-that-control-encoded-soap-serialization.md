@@ -1,12 +1,6 @@
 ---
-title: "控制編碼 SOAP 序列化的屬性"
-ms.custom: 
+title: 控制編碼 SOAP 序列化的屬性
 ms.date: 03/30/2017
-ms.prod: .net
-ms.reviewer: 
-ms.suite: 
-ms.tgt_pltfrm: 
-ms.topic: article
 helpviewer_keywords:
 - SOAP, XML serialization
 - XML serialization, SOAP
@@ -14,18 +8,11 @@ helpviewer_keywords:
 - attributes [.NET Framework], XML serialization
 - serialization, attributes
 ms.assetid: 93ee258c-9c0f-4a08-897c-c10db7a00f91
-caps.latest.revision: "8"
-author: dotnet-bot
-ms.author: dotnetcontent
-manager: wpickett
-ms.workload:
-- dotnet
-- dotnetcore
-ms.openlocfilehash: ae3193a2f9ef01f8e7f71235f15ed070e84ec11c
-ms.sourcegitcommit: e7f04439d78909229506b56935a1105a4149ff3d
+ms.openlocfilehash: b7f0d8bf7c7c1013937f7ce0a87c326b707fbc6f
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 12/23/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="attributes-that-control-encoded-soap-serialization"></a>控制編碼 SOAP 序列化的屬性 
 全球資訊網協會 (www.w3.org) 的文件《Simple Object Access Protocol (SOAP) 1.1》，其中包含描述 SOAP 參數如何編碼的選擇性章節 (第 5 節)。 若要遵循第 5 節的規格，您必須使用在 <xref:System.Xml.Serialization> 命名空間中的特殊屬性集。 套用適合類別與類別成員的那些屬性，然後使用 <xref:System.Xml.Serialization.XmlSerializer> 序列化類別的執行個體。  
@@ -43,7 +30,7 @@ ms.lasthandoff: 12/23/2017
 |<xref:System.Xml.Serialization.SoapIncludeAttribute>|公用衍生類別宣告以及 Web 服務描述語言 (WSDL) 文件的公用方法。|當產生結構描述時應包含型別 (在序列化時辨認)。|  
 |<xref:System.Xml.Serialization.SoapTypeAttribute>|公用類別宣告|類別應序列化成 XML 型別。|  
   
-## <a name="see-also"></a>請參閱  
+## <a name="see-also"></a>另請參閱  
  [XML 和 SOAP 序列化](../../../docs/standard/serialization/xml-and-soap-serialization.md)  
  [如何：將物件序列化為 SOAP 編碼的 XML 資料流](../../../docs/standard/serialization/how-to-serialize-an-object-as-a-soap-encoded-xml-stream.md)  
  [如何：覆寫已編碼的 SOAP XML 序列化](../../../docs/standard/serialization/how-to-override-encoded-soap-xml-serialization.md)  

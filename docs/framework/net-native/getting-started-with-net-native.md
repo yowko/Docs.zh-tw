@@ -1,26 +1,14 @@
 ---
 title: .NET Native 使用者入門
-ms.custom: ''
 ms.date: 03/30/2017
-ms.prod: .net-framework
-ms.reviewer: ''
-ms.suite: ''
-ms.technology:
-- dotnet-clr
-ms.tgt_pltfrm: ''
-ms.topic: article
 ms.assetid: fc9e04e8-2d05-4870-8cd6-5bd276814afc
-caps.latest.revision: ''
 author: rpetrusha
 ms.author: ronpet
-manager: wpickett
-ms.workload:
-- dotnet
-ms.openlocfilehash: 56ff06c17eda8483c7d067af9fb39a402d2f6ea5
-ms.sourcegitcommit: c0dd436f6f8f44dc80dc43b07f6841a00b74b23f
+ms.openlocfilehash: 90469469c864e235ff96e7dd2f0f3ebfcef9d7b6
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 01/19/2018
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="getting-started-with-net-native"></a>.NET Native 使用者入門
 不論是為了 Windows 10 撰寫新的 Windows 應用程式，或是移轉現有的 Windows 市集應用程式，都可遵循一組相同的程序進行。 若要建立 [!INCLUDE[net_native](../../../includes/net-native-md.md)] 應用程式，請遵循下列步驟：  
@@ -123,7 +111,7 @@ ms.lasthandoff: 01/19/2018
   
 -   [.NET Native 應用程式中的執行階段例外狀況](../../../docs/framework/net-native/runtime-exceptions-in-net-native-apps.md)  
   
-## <a name="see-also"></a>請參閱  
+## <a name="see-also"></a>另請參閱  
  [執行階段指示詞 (rd.xml) 組態檔參考](../../../docs/framework/net-native/runtime-directives-rd-xml-configuration-file-reference.md)  
  [NIB:.NET Native 安裝與設定](http://msdn.microsoft.com/library/7c9bc375-8b87-4c33-bede-72d513e362ec)  
  [.NET Native 和編譯](../../../docs/framework/net-native/net-native-and-compilation.md)  

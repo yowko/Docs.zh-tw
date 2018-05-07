@@ -1,13 +1,6 @@
 ---
-title: "如何：在 Windows Form 控制項中套用屬性"
-ms.custom: 
+title: 如何：在 Windows Form 控制項中套用屬性
 ms.date: 03/30/2017
-ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.technology: dotnet-winforms
-ms.tgt_pltfrm: 
-ms.topic: article
 dev_langs:
 - csharp
 - vb
@@ -16,16 +9,11 @@ helpviewer_keywords:
 - attributes [Windows Forms], applying
 - Windows Forms controls, applying attributes
 ms.assetid: af0a3f7f-155b-4ba1-83c4-9cf721331a06
-caps.latest.revision: "10"
-author: dotnet-bot
-ms.author: dotnetcontent
-manager: wpickett
-ms.workload: dotnet
-ms.openlocfilehash: 9e4d5bfb445ce6ed37ad1dc63d92fde833ac9870
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.openlocfilehash: 49c2aaa48a48e33a71b5112db31991975011551d
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="how-to-apply-attributes-in-windows-forms-controls"></a>如何：在 Windows Form 控制項中套用屬性
 若要開發元件和控制項的設計環境中正確地互動，並且在執行階段正確地執行，您需要正確地將屬性套用至類別和成員。  
@@ -58,7 +46,7 @@ ms.lasthandoff: 12/22/2017
  [!code-vb[System.ComponentModel.AttributesDemoControl#20](../../../../samples/snippets/visualbasic/VS_Snippets_Winforms/System.ComponentModel.AttributesDemoControl/VB/attributesdemocontrol.vb#20)]  
   
 ### <a name="typeconverter-attribute"></a>TypeConverter 屬性  
- <xref:System.ComponentModel.TypeConverterAttribute>是另一個常用的類別層級屬性。 下列程式碼範例示範使用`LogEntry`類別。 此範例也會示範實作<xref:System.ComponentModel.TypeConverter>如`LogEntry`類型稱為`LogEntryTypeConverter`。  
+ <xref:System.ComponentModel.TypeConverterAttribute> 是另一個常用的類別層級屬性。 下列程式碼範例示範使用`LogEntry`類別。 此範例也會示範實作<xref:System.ComponentModel.TypeConverter>如`LogEntry`類型稱為`LogEntryTypeConverter`。  
   
  [!code-csharp[System.ComponentModel.AttributesDemoControl#5](../../../../samples/snippets/csharp/VS_Snippets_Winforms/System.ComponentModel.AttributesDemoControl/CS/attributesdemocontrol.cs#5)]
  [!code-vb[System.ComponentModel.AttributesDemoControl#5](../../../../samples/snippets/visualbasic/VS_Snippets_Winforms/System.ComponentModel.AttributesDemoControl/VB/attributesdemocontrol.vb#5)]  
@@ -88,7 +76,7 @@ ms.lasthandoff: 12/22/2017
   
 -   表單裝載`AttributesDemoControl`需要參考`AttributesDemoControl`才能建置的組件。  
   
-## <a name="see-also"></a>請參閱  
+## <a name="see-also"></a>另請參閱  
  <xref:System.IComparable>  
  <xref:System.Windows.Forms.DataGridView>  
  [使用 .NET Framework 開發自訂的 Windows Forms 控制項](../../../../docs/framework/winforms/controls/developing-custom-windows-forms-controls.md)  

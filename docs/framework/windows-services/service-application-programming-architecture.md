@@ -1,13 +1,6 @@
 ---
-title: "服務應用程式的程式設計架構"
-ms.custom: 
+title: 服務應用程式的程式設計架構
 ms.date: 03/30/2017
-ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.technology: dotnet-clr
-ms.tgt_pltfrm: 
-ms.topic: article
 dev_langs:
 - csharp
 - vb
@@ -21,25 +14,22 @@ helpviewer_keywords:
 - ServiceProcessInstaller class, service application code model
 - Windows Service applications, states
 ms.assetid: 83230026-d068-4174-97ff-e264c896eb2f
-caps.latest.revision: "15"
 author: ghogen
-ms.author: ghogen
 manager: douge
-ms.workload: dotnet
-ms.openlocfilehash: 2d44ee323040346437261b51fddb707a30d1de6c
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.openlocfilehash: f0c760d0f9b65fc9b612a8bee8abb68fa5b4ecae
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="service-application-programming-architecture"></a>服務應用程式的程式設計架構
 Windows 服務應用程式為基礎的類別，繼承自<xref:System.ServiceProcess.ServiceBase?displayProperty=nameWithType>類別。 您覆寫這個類別的方法，並定義它們，以判斷您的服務行為的功能。  
   
  涉及服務建立的的主要類別如下：  
   
--   <xref:System.ServiceProcess.ServiceBase?displayProperty=nameWithType>— 您覆寫方法<xref:System.ServiceProcess.ServiceBase>類別建立服務時，並定義程式碼以判斷如何在此服務函式繼承類別。  
+-   <xref:System.ServiceProcess.ServiceBase?displayProperty=nameWithType> — 您覆寫方法<xref:System.ServiceProcess.ServiceBase>類別建立服務時，並定義程式碼以判斷如何在此服務函式繼承類別。  
   
--   <xref:System.ServiceProcess.ServiceProcessInstaller?displayProperty=nameWithType>和<xref:System.ServiceProcess.ServiceInstaller?displayProperty=nameWithType>— 您可以使用這些類別來安裝和解除安裝您的服務。  
+-   <xref:System.ServiceProcess.ServiceProcessInstaller?displayProperty=nameWithType> 和<xref:System.ServiceProcess.ServiceInstaller?displayProperty=nameWithType>— 您可以使用這些類別來安裝和解除安裝您的服務。  
   
  此外，類別命名為<xref:System.ServiceProcess.ServiceController>可用來管理此服務本身。 這個類別並不會涉及建立服務，但可用來啟動及停止服務，傳遞命令，以及傳回一連串的列舉型別。  
   
@@ -76,6 +66,6 @@ Windows 服務應用程式為基礎的類別，繼承自<xref:System.ServiceProc
   
  您也可以使用名為的元件<xref:System.ServiceProcess.ServiceController>進行通訊，並控制現有服務的行為。  
   
-## <a name="see-also"></a>請參閱  
+## <a name="see-also"></a>另請參閱  
  [Windows 服務應用程式簡介](../../../docs/framework/windows-services/introduction-to-windows-service-applications.md)  
  [如何：建立 Windows 服務](../../../docs/framework/windows-services/how-to-create-windows-services.md)

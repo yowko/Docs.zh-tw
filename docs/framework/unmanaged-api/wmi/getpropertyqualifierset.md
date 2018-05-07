@@ -1,11 +1,7 @@
 ---
-title: "GetPropertyQualifierSet 函式 （Unmanaged API 參考）"
-description: "GetPropertyQualifierSet 函式會擷取針對屬性設定的限定詞。"
+title: GetPropertyQualifierSet 函式 （Unmanaged API 參考）
+description: GetPropertyQualifierSet 函式會擷取針對屬性設定的限定詞。
 ms.date: 11/06/2017
-ms.prod: .net-framework
-ms.technology:
-- dotnet-clr
-ms.topic: reference
 api_name:
 - GetPropertyQualifierSet
 api_location:
@@ -20,14 +16,11 @@ topic_type:
 - Reference
 author: rpetrusha
 ms.author: ronpet
-manager: wpickett
-ms.workload:
-- dotnet
-ms.openlocfilehash: 7ca2981c8833abaafd5d206b66d6e91f34e2c91d
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.openlocfilehash: d2951733211737f06cd737b20bd1537277be1be1
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="getpropertyqualifierset-function"></a>GetPropertyQualifierSet 函式
 擷取特定的屬性設定的限定詞。
@@ -54,7 +47,7 @@ HRESULT GetPropertyQualifierSet (
 [in]指標[IWbemClassObject](https://msdn.microsoft.com/library/aa391433%28v=vs.85%29.aspx)執行個體。
 
 `wszMethod`  
-[in]屬性名稱。 `wszProperty`必須指向有效`LPCWSTR`。 
+[in]屬性名稱。 `wszProperty` 必須指向有效`LPCWSTR`。 
 
 `ppQualSet`  
 [out]接收介面指標，可讓您存取屬性的識別項。 `ppQualSet` 不可以是 `null`。 如果發生錯誤、 沒有傳回新的物件，並將指標設定為指向`null`。 
@@ -87,7 +80,7 @@ HRESULT GetPropertyQualifierSet (
   
  **標頭：** WMINet_Utils.idl  
   
- **.NET framework 版本：**[!INCLUDE[net_current_v472plus](../../../../includes/net-current-v472plus.md)]  
+ **.NET framework 版本：** [!INCLUDE[net_current_v472plus](../../../../includes/net-current-v472plus.md)]  
   
 ## <a name="see-also"></a>另請參閱  
 [WMI 和效能計數器 （Unmanaged API 參考）](index.md)

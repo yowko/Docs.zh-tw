@@ -1,31 +1,20 @@
 ---
 title: 例外狀況的設計方針
-ms.custom: ''
 ms.date: 03/30/2017
-ms.prod: .net
-ms.reviewer: ''
-ms.suite: ''
 ms.technology: dotnet-standard
-ms.tgt_pltfrm: ''
-ms.topic: article
 helpviewer_keywords:
 - exceptions [.NET Framework], design guidelines
 - class library design guidelines [.NET Framework], exceptions
 - errors [.NET Framework], exceptions
 - reporting errors
 ms.assetid: bc177b2f-7528-4ae4-83db-aacfb04b86d0
-caps.latest.revision: 11
 author: rpetrusha
 ms.author: ronpet
-manager: wpickett
-ms.workload:
-- dotnet
-- dotnetcore
-ms.openlocfilehash: 6dcd29f96ce32f1b2602af5d844339fe33c0ed7b
-ms.sourcegitcommit: 2e8acae16ae802f2d6d04e3ce0a6dbf04e476513
+ms.openlocfilehash: 99b27615ef16aa69e18d82cb97f4751dc92d2ec4
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/18/2018
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="design-guidelines-for-exceptions"></a>例外狀況的設計方針
 例外狀況處理有許多優於傳回值為基礎的錯誤報告。 良好的架構設計，可協助應用程式開發人員了解例外狀況的優點。 本節討論例外狀況的優點，並提供有效地使用這些指導方針。  

@@ -1,34 +1,20 @@
 ---
 title: 用戶端組態
-ms.custom: ''
 ms.date: 03/30/2017
-ms.prod: .net-framework
-ms.reviewer: ''
-ms.suite: ''
-ms.technology:
-- dotnet-clr
-ms.tgt_pltfrm: ''
-ms.topic: article
 ms.assetid: 5da5bd3b-65d9-43b7-91b9-cc9e989b1350
-caps.latest.revision: 8
-author: dotnet-bot
-ms.author: dotnetcontent
-manager: wpickett
-ms.workload:
-- dotnet
-ms.openlocfilehash: c2c0d17c7274cc9fdaf1b5080950ddb4f69f539a
-ms.sourcegitcommit: 94d33cadc5ff81d2ac389bf5f26422c227832052
+ms.openlocfilehash: 0fd3d1a15164447275ef488ac91b9a8bd240032d
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/30/2018
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="client-configuration"></a>用戶端組態
-您可以使用 [!INCLUDE[indigo1](../../../../includes/indigo1-md.md)] 用戶端組態來指定位址、繫結、行為以及合約 (亦即用戶端端點的 "ABC" 屬性，用戶端會使用此屬性來連接至服務端點)。 [\<用戶端 >](../../../../docs/framework/configure-apps/file-schema/wcf/client.md)項目具有[\<端點 >](http://msdn.microsoft.com/library/13aa23b7-2f08-4add-8dbf-a99f8127c017)其屬性用來設定端點 Abc 的項目。 本主題的「設定端點」一節將討論這些屬性。  
+您可以使用 Windows Communication Foundation (WCF) 用戶端設定來指定位址、 繫結、 行為以及合約，用戶端端點，用戶端用以連接至服務端點的"ABC"屬性。 [\<用戶端 >](../../../../docs/framework/configure-apps/file-schema/wcf/client.md)項目具有[\<端點 >](http://msdn.microsoft.com/library/13aa23b7-2f08-4add-8dbf-a99f8127c017)其屬性用來設定端點 Abc 的項目。 本主題的「設定端點」一節將討論這些屬性。  
   
  [\<端點 >](http://msdn.microsoft.com/library/13aa23b7-2f08-4add-8dbf-a99f8127c017)項目也包含[\<中繼資料 >](../../../../docs/framework/configure-apps/file-schema/wcf/metadata.md)用來匯入和匯出中繼資料，為指定的設定項目[ \<標頭 >](../../../../docs/framework/configure-apps/file-schema/wcf/headers.md)包含自訂位址標頭集合的項目和[\<識別 >](../../../../docs/framework/configure-apps/file-schema/wcf/identity.md)項目，讓其他端點端點的驗證交換訊息。 [\<標頭 >](../../../../docs/framework/configure-apps/file-schema/wcf/headers.md)和[\<識別 >](../../../../docs/framework/configure-apps/file-schema/wcf/identity.md)元素都屬於<xref:System.ServiceModel.EndpointAddress>中討論[位址](../../../../docs/framework/wcf/feature-details/endpoint-addresses.md)主題。 本主題的「設定中繼資料」小節提供中繼資料擴充使用方式的說明主題連結。  
   
 ## <a name="configuring-endpoints"></a>設定端點  
- 用戶端組態的設計可讓用戶端指定其中一個或多個端點，各有自己的名稱、 位址、 和合約，與每個參照[\<繫結 >](../../../../docs/framework/configure-apps/file-schema/wcf/bindings.md)和[ \<行為 >](../../../../docs/framework/configure-apps/file-schema/wcf/behaviors.md)来用來設定該端點的用戶端組態中的項目。 用戶端組態檔應該命名為 "App.config"，因為這是 [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] 執行階段所預期的名稱。 下列範例示範用戶端組態檔。  
+ 用戶端組態的設計可讓用戶端指定其中一個或多個端點，各有自己的名稱、 位址、 和合約，與每個參照[\<繫結 >](../../../../docs/framework/configure-apps/file-schema/wcf/bindings.md)和[ \<行為 >](../../../../docs/framework/configure-apps/file-schema/wcf/behaviors.md)来用來設定該端點的用戶端組態中的項目。 用戶端組態檔應該命名為"App.config"，因為這是 WCF 執行階段所預期的名稱。 下列範例示範用戶端組態檔。  
   
 ```xml  
 <?xml version="1.0" encoding="utf-8"?>  

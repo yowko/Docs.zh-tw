@@ -1,13 +1,6 @@
 ---
-title: "如何：啟用命令"
-ms.custom: 
+title: 如何：啟用命令
 ms.date: 03/30/2017
-ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.technology: dotnet-wpf
-ms.tgt_pltfrm: 
-ms.topic: article
 dev_langs:
 - csharp
 - vb
@@ -15,16 +8,11 @@ helpviewer_keywords:
 - CommandBindings [WPF]
 - commanding [WPF]
 ms.assetid: d8016266-58d9-48f7-8298-a86b7ed49fbd
-caps.latest.revision: "14"
-author: dotnet-bot
-ms.author: dotnetcontent
-manager: wpickett
-ms.workload: dotnet
-ms.openlocfilehash: b27f8544a44a252eb1a1afd6e096f303360c14e5
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.openlocfilehash: 81ae2e46c4fdd8b46e2b72b9a1430437ebfe97b2
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="how-to-enable-a-command"></a>如何：啟用命令
 下列範例示範如何使用命令中[!INCLUDE[TLA#tla_winclient](../../../../includes/tlasharptla-winclient-md.md)]。  此範例示範如何將<xref:System.Windows.Input.RoutedCommand>至<xref:System.Windows.Controls.Button>，建立<xref:System.Windows.Input.CommandBinding>，並建立事件處理常式實作<xref:System.Windows.Input.RoutedCommand>。  如需命令的詳細資訊，請參閱[指揮概觀](../../../../docs/framework/wpf/advanced/commanding-overview.md)。  
@@ -50,5 +38,5 @@ ms.lasthandoff: 12/22/2017
  [!code-csharp[EnableCloseCommand#CloseCommandHandler](../../../../samples/snippets/csharp/VS_Snippets_Wpf/EnableCloseCommand/CSharp/Window1.xaml.cs#closecommandhandler)]
  [!code-vb[EnableCloseCommand#CloseCommandHandler](../../../../samples/snippets/visualbasic/VS_Snippets_Wpf/EnableCloseCommand/VisualBasic/Window1.xaml.vb#closecommandhandler)]  
   
-## <a name="see-also"></a>請參閱  
+## <a name="see-also"></a>另請參閱  
  [命令概觀](../../../../docs/framework/wpf/advanced/commanding-overview.md)

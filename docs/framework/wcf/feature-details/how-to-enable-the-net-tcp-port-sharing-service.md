@@ -1,30 +1,18 @@
 ---
-title: "HOW TO：啟用 Net.TCP 連接埠共用服務"
-ms.custom: 
+title: HOW TO：啟用 Net.TCP 連接埠共用服務
 ms.date: 03/30/2017
-ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.technology: dotnet-clr
-ms.tgt_pltfrm: 
-ms.topic: article
 helpviewer_keywords:
 - port sharing [WCF]
 - activation services [WCF]
 ms.assetid: c9175af4-c27c-4765-bf45-b8f7528a7282
-caps.latest.revision: "12"
-author: dotnet-bot
-ms.author: dotnetcontent
-manager: wpickett
-ms.workload: dotnet
-ms.openlocfilehash: b9f1c57f067fa7c8bece3acaf0d51303b31d13bf
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.openlocfilehash: 4b5a18e11d9fc15f23b5353883a63d838face58a
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="how-to-enable-the-nettcp-port-sharing-service"></a>HOW TO：啟用 Net.TCP 連接埠共用服務
-[!INCLUDE[indigo1](../../../../includes/indigo1-md.md)] 使用名為 Net.TCP 連接埠共用服務的 Windows 服務來協助多個處理序共用 TCP 連接埠。 這項服務會安裝為 [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] 的一部份，但是為了安全起見預設不會啟用此服務，因此您必須在第一次使用時手動加以啟用。 本主題說明如何使用 Microsoft Management Console (MMC) 嵌入式管理單元，來設定 Net TCP Port Sharing Service。  
+Windows Communication Foundation (WCF) 會使用稱為 Net.TCP Port Sharing Service 的 Windows 服務來促進 TCP 連接埠共用多個處理序。 此服務已安裝一部分 WCF，但為了安全起見預設不會啟用服務，並因此必須手動啟用第一次使用之前。 本主題說明如何使用 Microsoft Management Console (MMC) 嵌入式管理單元，來設定 Net TCP Port Sharing Service。  
   
  在啟用 Net.TCP Port Sharing Service，並手動啟動之後，請參閱[How to： 將 WCF 服務設定為使用連接埠共用](../../../../docs/framework/wcf/feature-details/how-to-configure-a-wcf-service-to-use-port-sharing.md)如需有關如何將服務設定為使用此服務資訊。  
   
@@ -44,6 +32,6 @@ ms.lasthandoff: 12/22/2017
   
 ## <a name="example"></a>範例  
   
-## <a name="see-also"></a>請參閱  
+## <a name="see-also"></a>另請參閱  
  [Net.TCP 連接埠共用](../../../../docs/framework/wcf/feature-details/net-tcp-port-sharing.md)  
  [設定 Net.TCP 連接埠共用服務](../../../../docs/framework/wcf/feature-details/configuring-the-net-tcp-port-sharing-service.md)

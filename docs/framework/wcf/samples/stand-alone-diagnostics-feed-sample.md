@@ -1,27 +1,15 @@
 ---
-title: "獨立診斷摘要範例"
-ms.custom: 
+title: 獨立診斷摘要範例
 ms.date: 03/30/2017
-ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.technology: dotnet-clr
-ms.tgt_pltfrm: 
-ms.topic: article
 ms.assetid: d31c6c1f-292c-4d95-8e23-ed8565970ea5
-caps.latest.revision: "26"
-author: dotnet-bot
-ms.author: dotnetcontent
-manager: wpickett
-ms.workload: dotnet
-ms.openlocfilehash: 7cf6bb08dc6607bf6c5b9e283ce449b603cb38d3
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
-ms.translationtype: MT
+ms.openlocfilehash: 1edd1c2184dde368fbd16299a836f1811dd24ba6
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="stand-alone-diagnostics-feed-sample"></a>獨立診斷摘要範例
-這個範例示範如何使用 [!INCLUDE[indigo1](../../../../includes/indigo1-md.md)] 建立新聞訂閱的 RSS/Atom 摘要。 它是基本的 "Hello World" 程式，可顯示物件模型的基礎，以及在 [!INCLUDE[indigo1](../../../../includes/indigo1-md.md)] 服務上的設定方式。  
+這個範例示範如何建立的 RSS/Atom 摘要的新聞訂閱與 Windows Communication Foundation (WCF)。 它是基本的"Hello World"程式，其中顯示物件模型的基本概念和如何設定 Windows Communication Foundation (WCF) 服務。  
   
  [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] 會將新聞訂閱摘要製作為可傳回特殊資料型別 <xref:System.ServiceModel.Syndication.SyndicationFeedFormatter> 的服務作業。 <xref:System.ServiceModel.Syndication.SyndicationFeedFormatter> 的執行個體可將摘要序列化至 RSS 2.0 和 Atom 1.0 格式。 下列範例程式碼會顯示使用的合約。  
   
@@ -60,7 +48,7 @@ WebServiceHost host = new WebServiceHost(typeof(ProcessService), new Uri("http:/
 <%@ ServiceHost Language="C#|VB" Debug="true" Service="ProcessService" %>  
 ```  
   
- 因為這個服務使用標準 HTTP GET 接收要求，所以您可以使用任何 RSS 或 ATOM 感知用戶端來存取服務。 例如，您可以透過使用 RSS 感知瀏覽器 (如 Internet Explorer 7) 巡覽至 http://localhost:8000/diagnostics/feed/?format=atom 或 http://localhost:8000/diagnostics/feed/?format=rss，來檢視這個服務的輸出。  
+ 因為這個服務使用標準 HTTP GET 接收要求，所以您可以使用任何 RSS 或 ATOM 感知用戶端來存取服務。 比方說，您可以檢視此服務的輸出，依序巡覽至http://localhost:8000/diagnostics/feed/?format=atom或http://localhost:8000/diagnostics/feed/?format=rssRSS 感知瀏覽器，例如 Internet Explorer 7 中。  
   
  您也可以使用[如何 WCF 新聞訂閱物件模型對應到 Atom 和 RSS](../../../../docs/framework/wcf/feature-details/how-the-wcf-syndication-object-model-maps-to-atom-and-rss.md)讀取新聞訂閱方式的資料，並使用命令式程式碼進行處理。  
   
@@ -93,17 +81,17 @@ foreach (SyndicationItem i in feed.Items)
   
 3.  執行主控台應用程式 (Console Application)。  
   
-4.  執行主控台應用程式時，使用 RSS 感知瀏覽器巡覽至 http://localhost:8000/diagnostics/feed/?format=atom 或 http://localhost:8000/diagnostics/feed/?format=rss。  
+4.  執行主控台應用程式時，瀏覽至http://localhost:8000/diagnostics/feed/?format=atom或http://localhost:8000/diagnostics/feed/?format=rss使用 RSS 感知瀏覽器。  
   
 > [!IMPORTANT]
 >  這些範例可能已安裝在您的電腦上。 請先檢查下列 (預設) 目錄，然後再繼續。  
 >   
 >  `<InstallDrive>:\WF_WCF_Samples`  
 >   
->  如果此目錄不存在，請移至 [Windows Communication Foundation (WCF) and Windows Workflow Foundation (WF) Samples for .NET Framework 4  (適用於 .NET Framework 4 的 Windows Communication Foundation (WCF) 與 Windows Workflow Foundation (WF) 範例)](http://go.microsoft.com/fwlink/?LinkId=150780) ，以下載所有 [!INCLUDE[indigo1](../../../../includes/indigo1-md.md)] 和 [!INCLUDE[wf1](../../../../includes/wf1-md.md)] 範例。 此範例位於下列目錄。  
+>  如果此目錄不存在，請移至[Windows Communication Foundation (WCF) 和適用於.NET Framework 4 的 Windows Workflow Foundation (WF) 範例](http://go.microsoft.com/fwlink/?LinkId=150780)下載所有 Windows Communication Foundation (WCF) 和[!INCLUDE[wf1](../../../../includes/wf1-md.md)]範例。 此範例位於下列目錄。  
 >   
 >  `<InstallDrive>:\WF_WCF_Samples\WCF\Basic\Syndication\DiagnosticsFeed`  
   
-## <a name="see-also"></a>請參閱  
+## <a name="see-also"></a>另請參閱  
  [WCF Web HTTP 程式設計模型](../../../../docs/framework/wcf/feature-details/wcf-web-http-programming-model.md)  
  [WCF 摘要整合](../../../../docs/framework/wcf/feature-details/wcf-syndication.md)

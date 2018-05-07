@@ -1,27 +1,15 @@
 ---
-title: "HOW TO：將 ASP.NET Web 服務程式碼移轉至 Windows Communication Foundation"
-ms.custom: 
+title: HOW TO：將 ASP.NET Web 服務程式碼移轉至 Windows Communication Foundation
 ms.date: 03/30/2017
-ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.technology: dotnet-clr
-ms.tgt_pltfrm: 
-ms.topic: article
 ms.assetid: e528c64f-c027-4f2e-ada6-d8f3994cf8d6
-caps.latest.revision: "8"
-author: dotnet-bot
-ms.author: dotnetcontent
-manager: wpickett
-ms.workload: dotnet
-ms.openlocfilehash: e56d2481785a9a8486174e611001b9d800c7c869
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.openlocfilehash: 90a6109a56299ec1bcaff4a35141abc194484772
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="how-to-migrate-aspnet-web-service-code-to-the-windows-communication-foundation"></a>HOW TO：將 ASP.NET Web 服務程式碼移轉至 Windows Communication Foundation
-下列程序會描述如何將 ASP.NET Web 服務移轉至 [!INCLUDE[indigo1](../../../../includes/indigo1-md.md)]。  
+下列程序說明如何將 ASP.NET Web 服務移轉到 Windows Communication Foundation (WCF)。  
   
 ## <a name="procedure"></a>程序  
   
@@ -85,9 +73,9 @@ ms.lasthandoff: 12/22/2017
   
 7.  測試變更。  
   
-8.  將參考新增至 [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] 組件 System.ServiceModel，並將 System.Runtime.Serialization 新增至 ASP.NET Web 服務專案。  
+8.  將 WCF 組件 System.ServiceModel，並將 System.Runtime.Serialization 參考加入至 ASP.NET Web 服務專案中。  
   
-9. 執行[ServiceModel Metadata Utility Tool (Svcutil.exe)](../../../../docs/framework/wcf/servicemodel-metadata-utility-tool-svcutil-exe.md)產生[!INCLUDE[indigo2](../../../../includes/indigo2-md.md)]從 WSDL 的用戶端類別。 將產生的類別模組新增至解決方案。  
+9. 執行[ServiceModel Metadata Utility Tool (Svcutil.exe)](../../../../docs/framework/wcf/servicemodel-metadata-utility-tool-svcutil-exe.md)從 WSDL 產生 WCF 用戶端類別。 將產生的類別模組新增至解決方案。  
   
 10. 前一個步驟所產生的類別模組會包含介面定義。  
   
@@ -145,7 +133,7 @@ ms.lasthandoff: 12/22/2017
     }  
     ```  
   
-13. 如果 ASP.NET Web 服務依賴下列任一項，那麼請將類別 (目前為 [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] 服務類型) 設定為需要 [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] ASP.NET 相容模式：  
+13. 設定的類別，現在是 WCF 服務類型，需要 WCF ASP.NET 相容性模式，如果 ASP.NET Web 服務依賴下列任一項：  
   
     -   <xref:System.Web.HttpContext> 類別。  
   
@@ -167,14 +155,14 @@ ms.lasthandoff: 12/22/2017
   
 14. 將原始 .asmx 檔案重新命名為 .asmx.old。  
   
-15. 對服務建立 [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] 服務檔，將副檔名設為 .asmx，然後儲存至 IIS 的應用程式根目錄中。  
+15. 建立服務的 WCF 服務檔案，請將副檔名，.asmx，並將它儲存至 IIS 中的應用程式根目錄。  
   
     ```xml  
     <%@Service Class="MyOrganization.Adder" %>  
     <%@Assembly Name="MyServiceAssembly" %>   
     ```  
   
-16. 將服務的 [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] 組態新增至其 Web.config 檔。 將服務設定為使用[ \<basicHttpBinding >](../../../../docs/framework/configure-apps/file-schema/wcf/basichttpbinding.md)、 使用在前述步驟中，建立副檔名為.asmx 服務檔和 WSDL 不會產生其本身，但若要使用從第二個步驟的 WSDL。 必要時，也設定為使用 ASP.NET 相容模式。  
+16. 將服務的 WCF 組態加入至其 Web.config 檔案。 將服務設定為使用[ \<basicHttpBinding >](../../../../docs/framework/configure-apps/file-schema/wcf/basichttpbinding.md)、 使用在前述步驟中，建立副檔名為.asmx 服務檔和 WSDL 不會產生其本身，但若要使用從第二個步驟的 WSDL。 必要時，也設定為使用 ASP.NET 相容模式。  
   
     ```xml  
     <?xml version="1.0" encoding="utf-8" ?>  
@@ -224,5 +212,5 @@ ms.lasthandoff: 12/22/2017
   
 19. 執行一組測試，以確定所有變更都已生效。  
   
-## <a name="see-also"></a>請參閱  
+## <a name="see-also"></a>另請參閱  
  [如何：將 ASP.NET Web 服務用戶端程式碼移轉至 Windows Communication Foundation](../../../../docs/framework/wcf/feature-details/migrate-asp-net-web-service-client-to-wcf.md)

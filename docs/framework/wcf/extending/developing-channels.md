@@ -1,27 +1,15 @@
 ---
-title: "開發通道"
-ms.custom: 
+title: 開發通道
 ms.date: 03/30/2017
-ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.technology: dotnet-clr
-ms.tgt_pltfrm: 
-ms.topic: article
 ms.assetid: 0513af9f-a0c2-457b-9a50-5b6bfee48513
-caps.latest.revision: "17"
-author: dotnet-bot
-ms.author: dotnetcontent
-manager: wpickett
-ms.workload: dotnet
-ms.openlocfilehash: 42c89ae71078a3ddfbe7e85273a6f62879781c80
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.openlocfilehash: def60ec0cce8da71e7e2d98ff456420949360aed
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="developing-channels"></a>開發通道
-若要開發出可以搭配 [!INCLUDE[indigo1](../../../../includes/indigo1-md.md)] 使用的通訊協定和傳輸通道，應用程式層需要經過幾個步驟。 本主題將說明這些步驟，並指引您前往特定主題以取得詳細資訊。 若要了解通道模型和本主題所述的各種類型，請參閱[通道模型概觀](../../../../docs/framework/wcf/extending/channel-model-overview.md)。 如需完成的傳輸通道範例中，請參閱[傳輸： UDP](../../../../docs/framework/wcf/samples/transport-udp.md)。  
+若要開發通訊協定和傳輸通道，可與 Windows Communication Foundation (WCF) 應用程式層會需要幾個步驟。 本主題將說明這些步驟，並指引您前往特定主題以取得詳細資訊。 若要了解通道模型和本主題所述的各種類型，請參閱[通道模型概觀](../../../../docs/framework/wcf/extending/channel-model-overview.md)。 如需完成的傳輸通道範例中，請參閱[傳輸： UDP](../../../../docs/framework/wcf/samples/transport-udp.md)。  
   
 ## <a name="the-channel-development-task-list"></a>通道開發工作單位清單  
  建立使用者定義通道的步驟如下： 所有的通道都必須：  
@@ -44,5 +32,5 @@ ms.lasthandoff: 12/22/2017
   
 4.  新增繫結區段和繫結組態項目，即可將繫結公開至組態系統。 如需詳細資訊，請參閱[組態與中繼資料支援](../../../../docs/framework/wcf/extending/configuration-and-metadata-support.md)。  
   
-## <a name="see-also"></a>請參閱  
+## <a name="see-also"></a>另請參閱  
  [擴充繫結](../../../../docs/framework/wcf/extending/extending-bindings.md)

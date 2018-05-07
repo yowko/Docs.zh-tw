@@ -1,29 +1,15 @@
 ---
 title: HOW TO：在組態中建立服務端點
-ms.custom: ''
 ms.date: 06/16/2016
-ms.prod: .net-framework
-ms.reviewer: ''
-ms.suite: ''
-ms.technology:
-- dotnet-clr
-ms.tgt_pltfrm: ''
-ms.topic: article
 ms.assetid: f474e25d-2a27-4f31-84c5-395c442b8e70
-caps.latest.revision: 14
-author: dotnet-bot
-ms.author: dotnetcontent
-manager: wpickett
-ms.workload:
-- dotnet
-ms.openlocfilehash: ecb7345dbbff04388edb39dae9e5c05f2c40fd75
-ms.sourcegitcommit: 94d33cadc5ff81d2ac389bf5f26422c227832052
+ms.openlocfilehash: f1a2696e2aeb8d0c704d008b064a8f8c8b0745d5
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/30/2018
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="how-to-create-a-service-endpoint-in-configuration"></a>HOW TO：在組態中建立服務端點
-端點可讓用戶端存取 [!INCLUDE[indigo1](../../../../includes/indigo1-md.md)] 服務提供的功能。 您可以使用相對與絕對端點位址的組合，定義一個或多個端點，如果您沒有定義任何服務端點，執行階段預設會提供一些服務端點。 本主題說明如何使用包含相對與絕對位址的組態檔來加入端點。  
+端點可讓用戶端存取的 Windows Communication Foundation (WCF) 服務提供的功能。 您可以使用相對與絕對端點位址的組合，定義一個或多個端點，如果您沒有定義任何服務端點，執行階段預設會提供一些服務端點。 本主題說明如何使用包含相對與絕對位址的組態檔來加入端點。  
   
 ## <a name="example"></a>範例  
  下列服務組態會指定一個基底位址與五個端點。  

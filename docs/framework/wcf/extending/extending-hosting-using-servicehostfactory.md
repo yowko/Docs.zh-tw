@@ -1,27 +1,15 @@
 ---
-title: "使用 ServiceHostFactory 擴充裝載"
-ms.custom: 
+title: 使用 ServiceHostFactory 擴充裝載
 ms.date: 03/30/2017
-ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.technology: dotnet-clr
-ms.tgt_pltfrm: 
-ms.topic: article
 ms.assetid: bcc5ae1b-21ce-4e0e-a184-17fad74a441e
-caps.latest.revision: "12"
-author: dotnet-bot
-ms.author: dotnetcontent
-manager: wpickett
-ms.workload: dotnet
-ms.openlocfilehash: 4a7bcd2e0ba68499cad63ec47918fd2bd6bd80d7
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
-ms.translationtype: MT
+ms.openlocfilehash: 3773ca50111f609489b95145f1005cd005922b9b
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="extending-hosting-using-servicehostfactory"></a>使用 ServiceHostFactory 擴充裝載
-用於將服務裝載到 <xref:System.ServiceModel.ServiceHost> 的標準 [!INCLUDE[indigo1](../../../../includes/indigo1-md.md)] API 是 [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] 架構中的擴充點。 使用者可以從 <xref:System.ServiceModel.ServiceHost> 衍生自己的主機類別，通常要覆寫 <xref:System.ServiceModel.Channels.CommunicationObject.OnOpening> 以使用 <xref:System.ServiceModel.Description.ServiceDescription> 以便在開啟服務之前以命令方式新增預設端點或修改行為。  
+標準<xref:System.ServiceModel.ServiceHost>應用程式開發介面，用於裝載 Windows Communication Foundation (WCF) 服務是中的擴充點[!INCLUDE[indigo2](../../../../includes/indigo2-md.md)]架構。 使用者可以從 <xref:System.ServiceModel.ServiceHost> 衍生自己的主機類別，通常要覆寫 <xref:System.ServiceModel.Channels.CommunicationObject.OnOpening> 以使用 <xref:System.ServiceModel.Description.ServiceDescription> 以便在開啟服務之前以命令方式新增預設端點或修改行為。  
   
  在自我裝載的環境中，您不需要建立自訂 <xref:System.ServiceModel.ServiceHost>，因為您會撰寫可具現化主機的程式碼，然後在產生的主機上呼叫 <xref:System.ServiceModel.ICommunicationObject.Open>。 您可以在這兩個步驟之間隨心所欲地執行所需的工作。 例如，您可以新增一個 <xref:System.ServiceModel.Description.IServiceBehavior>：  
   

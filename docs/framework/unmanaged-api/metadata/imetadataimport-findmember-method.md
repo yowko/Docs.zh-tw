@@ -1,14 +1,6 @@
 ---
-title: "IMetaDataImport::FindMember 方法"
-ms.custom: 
+title: IMetaDataImport::FindMember 方法
 ms.date: 03/30/2017
-ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.technology:
-- dotnet-clr
-ms.tgt_pltfrm: 
-ms.topic: reference
 api_name:
 - IMetaDataImport.FindMember
 api_location:
@@ -23,17 +15,13 @@ helpviewer_keywords:
 ms.assetid: ad32fb84-c2b6-41cd-888d-787ff3a90449
 topic_type:
 - apiref
-caps.latest.revision: 
 author: mairaw
 ms.author: mairaw
-manager: wpickett
-ms.workload:
-- dotnet
-ms.openlocfilehash: a20930688aed210309a719de2c7187f1f5fd1f24
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.openlocfilehash: 79c9a54a44ae1751cb8b1b57379ccfd6485f6e6b
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="imetadataimportfindmember-method"></a>IMetaDataImport::FindMember 方法
 取得指標的 memberdef 語彙基元欄位或方法是包含所指定<xref:System.Type>且具有指定的名稱和中繼資料簽章。  
@@ -71,10 +59,10 @@ HRESULT FindMember (
   
  簽章傳遞至`FindMember`必須已產生中目前的範圍，因為簽章會繫結至特定範圍內。 簽章可以內嵌識別封入類別或實值類型的語彙基元。 語彙基元為區域 TypeDef 資料表的索引。 您無法建立在目前範圍的內容以外的執行階段簽章，並使用該簽章為輸入到輸入`FindMember`。  
   
- `FindMember`尋找已直接在類別或介面中定義的成員找不到繼承的成員。  
+ `FindMember` 尋找已直接在類別或介面中定義的成員找不到繼承的成員。  
   
 > [!NOTE]
->  `FindMember`是 helper 方法。 它會呼叫[imetadataimport:: Findmethod](../../../../docs/framework/unmanaged-api/metadata/imetadataimport-findmethod-method.md); 如果該呼叫找不到相符項目，`FindMember`然後呼叫[imetadataimport:: Findfield](../../../../docs/framework/unmanaged-api/metadata/imetadataimport-findfield-method.md)。  
+>  `FindMember` 是 helper 方法。 它會呼叫[imetadataimport:: Findmethod](../../../../docs/framework/unmanaged-api/metadata/imetadataimport-findmethod-method.md); 如果該呼叫找不到相符項目，`FindMember`然後呼叫[imetadataimport:: Findfield](../../../../docs/framework/unmanaged-api/metadata/imetadataimport-findfield-method.md)。  
   
 ## <a name="requirements"></a>需求  
  **平台：**看到[系統需求](../../../../docs/framework/get-started/system-requirements.md)。  
@@ -83,8 +71,8 @@ HRESULT FindMember (
   
  **程式庫：**包含做為 MsCorEE.dll 中的資源  
   
- **.NET framework 版本：**[!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
+ **.NET framework 版本：** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
   
-## <a name="see-also"></a>請參閱  
+## <a name="see-also"></a>另請參閱  
  [IMetaDataImport 介面](../../../../docs/framework/unmanaged-api/metadata/imetadataimport-interface.md)  
  [IMetaDataImport2 介面](../../../../docs/framework/unmanaged-api/metadata/imetadataimport2-interface.md)

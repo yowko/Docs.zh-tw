@@ -1,13 +1,6 @@
 ---
-title: "x:XData 內建 XAML 類型"
-ms.custom: 
+title: x:XData 內建 XAML 類型
 ms.date: 03/30/2017
-ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.technology: dotnet-wpf
-ms.tgt_pltfrm: 
-ms.topic: article
 f1_keywords:
 - x:XData
 - XData
@@ -17,19 +10,14 @@ helpviewer_keywords:
 - XData in XAML [XAML Services]
 - x:XData XAML directive element [XAML Services]
 ms.assetid: 7ce209c2-621b-4977-b643-565f7e663534
-caps.latest.revision: "17"
-author: wadepickett
-ms.author: wpickett
-manager: wpickett
-ms.workload: dotnet
-ms.openlocfilehash: ec46d0363e5b10d3bd3bd3f9c8f4d3694abc1c8d
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.openlocfilehash: 3a16379fd6104342529723bf6d0bc9fb4762cf92
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="xxdata-intrinsic-xaml-type"></a>x:XData 內建 XAML 類型
-可讓在 XAML 生產的 XML 資料島的放置。 XML 項目內`x:XData`應該不會視為 XAML 處理器來做預設 XAML 命名空間的一部分或任何其他的 XAML 命名空間。 `x:XData`可以包含任意格式正確的 XML。  
+可讓在 XAML 生產的 XML 資料島的放置。 XML 項目內`x:XData`應該不會視為 XAML 處理器來做預設 XAML 命名空間的一部分或任何其他的 XAML 命名空間。 `x:XData` 可以包含任意格式正確的 XML。  
   
 ## <a name="xaml-object-element-usage"></a>XAML 物件項目用法  
   
@@ -60,7 +48,7 @@ ms.lasthandoff: 12/22/2017
   
  技術上來說，`x:XData`可用來當做類型的任何屬性的內容<xref:System.Xml.Serialization.IXmlSerializable>。 不過，<xref:System.Windows.Data.XmlDataProvider.XmlSerializer%2A?displayProperty=nameWithType>是僅提供顯著的實作。  
   
-## <a name="see-also"></a>請參閱  
+## <a name="see-also"></a>另請參閱  
  <xref:System.Windows.Data.XmlDataProvider>  
  [資料繫結概觀](../../../docs/framework/wpf/data/data-binding-overview.md)  
  [Binding 標記延伸](../../../docs/framework/wpf/advanced/binding-markup-extension.md)

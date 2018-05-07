@@ -1,27 +1,15 @@
 ---
-title: "傳輸通訊協定"
-ms.custom: 
+title: 傳輸通訊協定
 ms.date: 03/30/2017
-ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.technology: dotnet-clr
-ms.tgt_pltfrm: 
-ms.topic: article
 ms.assetid: 2820b0ec-2f32-430c-b299-1f0e95e1f2dc
-caps.latest.revision: "14"
-author: dotnet-bot
-ms.author: dotnetcontent
-manager: wpickett
-ms.workload: dotnet
-ms.openlocfilehash: 13784a3a5062705abba1b3bbb33a04e66bd22072
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.openlocfilehash: 8841a9cf414ae94da7e63bd7312a3c541ab6de1b
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="transaction-protocols"></a>傳輸通訊協定
-[!INCLUDE[indigo1](../../../../includes/indigo1-md.md)] 會實作 WS-Atomic Transaction 和 WS-Coordination 通訊協定。  
+Windows Communication Foundation (WCF) 會實作 Ws-atomic Transaction 和 Ws-coordination 通訊協定。  
   
 |規格/文件|版本|連結|  
 |-----------------------------|-------------|----------|  
@@ -64,7 +52,7 @@ ms.lasthandoff: 12/22/2017
   
 -   應用程式訊息  
   
- 前三個訊息類別會視為交易管理員訊息，並且在此主題稍後的「應用程式訊息交換」中會描述其繫結組態。 第四個訊息類別是應用程式對應用程式訊息，並且在此主題稍後的「訊息範例」一節中會描述。 此章節描述 [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] 針對每個類別使用的通訊協定繫結。  
+ 前三個訊息類別會視為交易管理員訊息，並且在此主題稍後的「應用程式訊息交換」中會描述其繫結組態。 第四個訊息類別是應用程式對應用程式訊息，並且在此主題稍後的「訊息範例」一節中會描述。 本章節描述使用這些類別的每個 WCF 的通訊協定繫結。  
   
  下列 XML 命名空間與關聯的前置詞會使用在整份文件中。  
   
@@ -96,12 +84,12 @@ ms.lasthandoff: 12/22/2017
 -   B1112：在系統中每個傳送者與接收者組之間的 DNS 都必須正常運作，X.509 主體名稱檢查才會成功。  
   
 #### <a name="activation-and-registration-binding-configuration"></a>啟動和登錄繫結組態  
- [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] 需要要求/回覆在 HTTPS 上有相互關聯的雙向繫結  (如需有關相互關聯與要求/回覆訊息交換模式描述的詳細資訊，請參閱第 8 節的「WS-Atomic 交易」)。  
+ WCF 會透過 HTTPS 需要要求/回覆相互關聯的雙工繫結。 (如需有關相互關聯與要求/回覆訊息交換模式描述的詳細資訊，請參閱第 8 節的「WS-Atomic 異動」)。  
   
 #### <a name="2pc-protocol-binding-configuration"></a>2PC 通訊協定繫結組態  
- [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] 支援 HTTPS 上的單向 (資料包) 訊息。 訊息間的相互關聯則留待實作詳細資料中說明。  
+ WCF 還支援單向 （資料包） 訊息透過 HTTPS。 訊息間的相互關聯則留待實作詳細資料中說明。  
   
- B1131: 實作必須支援`wsa:ReferenceParameters`如所述以達到相互關聯的 WS 定址[!INCLUDE[indigo2](../../../../includes/indigo2-md.md)]的 2PC 訊息。  
+ B1131: 實作必須支援`wsa:ReferenceParameters`Ws-addressing 來達成的 WCF 的 2PC 訊息相互關聯中所述。  
   
 ### <a name="transaction-manager-mixed-security-binding"></a>交易管理員混合安全性繫結  
  這是個替代 (混合模式) 繫結，會針對識別建立目的同時使用傳輸安全性和 WS-Coordination 發行權杖模型。 啟動與登錄是兩個繫結之間唯一不同的項目。  
@@ -112,7 +100,7 @@ ms.lasthandoff: 12/22/2017
 #### <a name="activation-message-binding-configuration"></a>啟動訊息繫結組態  
  啟動訊息通常不會參與互通性，因為啟動訊息一般會發生在應用程式與其本機異動管理員之間。  
   
- B1221:[!INCLUDE[indigo2](../../../../includes/indigo2-md.md)]使用雙工的 HTTPS 繫結 (述[傳訊通訊協定](../../../../docs/framework/wcf/feature-details/messaging-protocols.md)) 的啟動訊息。 要求與回覆訊息使用 WS-AT 1.0 的 WS-Addressing 2004/08 以及 WS-AT 1.1 的 WS-Addressing 2005/08 產生相互關聯。  
+ B1221: WCF 使用雙工的 HTTPS 繫結 (述[傳訊通訊協定](../../../../docs/framework/wcf/feature-details/messaging-protocols.md)) 的啟動訊息。 要求與回覆訊息使用 WS-AT 1.0 的 WS-Addressing 2004/08 以及 WS-AT 1.1 的 WS-Addressing 2005/08 產生相互關聯。  
   
  第 8 節的 WS-Atomic 交易規格進一步描述有關相互關聯與訊息交換模式的詳細資料。  
   
@@ -123,7 +111,7 @@ ms.lasthandoff: 12/22/2017
  新`t:IssuedTokens`應產生標頭附加至傳出`wscoor:CreateCoordinationContextResponse`訊息。  
   
 #### <a name="registration-message-binding-configuration"></a>登錄訊息繫結組態  
- B1231:[!INCLUDE[indigo2](../../../../includes/indigo2-md.md)]使用雙工的 HTTPS 繫結 (述[傳訊通訊協定](../../../../docs/framework/wcf/feature-details/messaging-protocols.md))。 要求與回覆訊息使用 WS-AT 1.0 的 WS-Addressing 2004/08 以及 WS-AT 1.1 的 WS-Addressing 2005/08 產生相互關聯。  
+ B1231: WCF 使用雙工的 HTTPS 繫結 (述[傳訊通訊協定](../../../../docs/framework/wcf/feature-details/messaging-protocols.md))。 要求與回覆訊息使用 WS-AT 1.0 的 WS-Addressing 2004/08 以及 WS-AT 1.1 的 WS-Addressing 2005/08 產生相互關聯。  
   
  第 8 節的 WS-AtomicTransaction 進一步描述有關相互關聯與訊息交換模式描述的詳細資料。  
   
@@ -132,9 +120,9 @@ ms.lasthandoff: 12/22/2017
  `wsse:Timestamp`項目必須使用簽署`SecurityContextToken``STx`發出。 這個簽章是證明與特定異動關聯之權杖的所有權，並且用來驗證異動中登錄的參與者。 RegistrationResponse 訊息會透過 HTTPS 傳回。  
   
 #### <a name="2pc-protocol-binding-configuration"></a>2PC 通訊協定繫結組態  
- [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] 支援 HTTPS 上的單向 (資料包) 訊息。 訊息間的相互關聯則留待實作詳細資料中說明。  
+ WCF 還支援單向 （資料包） 訊息透過 HTTPS。 訊息間的相互關聯則留待實作詳細資料中說明。  
   
- B1241：實作必須支援 `wsa:ReferenceParameters`，如同 WS-Addressing 中所述以達到 [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] 的 2PC 訊息相互關聯。  
+ B1241： 實作必須支援`wsa:ReferenceParameters`Ws-addressing 來達成的 WCF 的 2PC 訊息相互關聯中所述。  
   
 ## <a name="application-message-exchange"></a>應用程式訊息交換  
  應用程式可以隨意使用應用程式之間訊息的任何特定繫結程序，只要繫結程序符合下列安全性需求：  
@@ -143,9 +131,9 @@ ms.lasthandoff: 12/22/2017
   
 -   R2002：必須提供 `t:IssuedToken` 的完整性與機密性。  
   
- `CoordinationContext` 標頭包含 `wscoor:Identifier`。 當 `xsd:AnyURI` 的定義允許同時使用絕對與相對 URI 時，[!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] 只支援絕對 URI 的 `wscoor:Identifiers`。  
+ `CoordinationContext` 標頭包含 `wscoor:Identifier`。 雖然定義`xsd:AnyURI`允許絕對和相對 Uri，使用 WCF 只支援`wscoor:Identifiers`，絕對 uri。  
   
- B2003：如果 `wscoor:Identifier` 的 `wscoor:CoordinationContext` 是相對 URI，交易 [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] 服務將傳回錯誤。  
+ B2003： 如果`wscoor:Identifier`的`wscoor:CoordinationContext`是相對 URI，交易式 WCF 服務會傳回錯誤。  
   
 ## <a name="message-examples"></a>訊息範例  
   

@@ -1,14 +1,6 @@
 ---
-title: "ISymUnmanagedReader::GetDocuments 方法"
-ms.custom: 
+title: ISymUnmanagedReader::GetDocuments 方法
 ms.date: 03/30/2017
-ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.technology:
-- dotnet-clr
-ms.tgt_pltfrm: 
-ms.topic: reference
 api_name:
 - ISymUnmanagedReader.GetDocuments
 api_location:
@@ -23,17 +15,13 @@ helpviewer_keywords:
 ms.assetid: e3b73a3f-d089-4101-a9a9-5e0765d05b61
 topic_type:
 - apiref
-caps.latest.revision: 
 author: mairaw
 ms.author: mairaw
-manager: wpickett
-ms.workload:
-- dotnet
-ms.openlocfilehash: 423267f30459c409cc1bba6e0dee53b31a2783cc
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.openlocfilehash: 0bcb0efab3b61f55bd5fdd3405799c7ac78ee521
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="isymunmanagedreadergetdocuments-method"></a>ISymUnmanagedReader::GetDocuments 方法
 傳回定義在符號存放區中的所有文件的陣列。  
@@ -64,5 +52,5 @@ HRESULT GetDocuments (
 ## <a name="requirements"></a>需求  
  **標頭：**於 CorSym.idl、 CorSym.h  
   
-## <a name="see-also"></a>請參閱  
+## <a name="see-also"></a>另請參閱  
  [ISymUnmanagedReader 介面](../../../../docs/framework/unmanaged-api/diagnostics/isymunmanagedreader-interface.md)

@@ -1,14 +1,6 @@
 ---
-title: "ICorDebugFunction::GetCurrentVersionNumber 方法"
-ms.custom: 
+title: ICorDebugFunction::GetCurrentVersionNumber 方法
 ms.date: 03/30/2017
-ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.technology:
-- dotnet-clr
-ms.tgt_pltfrm: 
-ms.topic: reference
 api_name:
 - ICorDebugFunction.GetCurrentVersionNumber
 api_location:
@@ -23,17 +15,13 @@ helpviewer_keywords:
 ms.assetid: c3af1575-cbe6-457a-bc08-c53460edcbc8
 topic_type:
 - apiref
-caps.latest.revision: 
 author: rpetrusha
 ms.author: ronpet
-manager: wpickett
-ms.workload:
-- dotnet
-ms.openlocfilehash: 0c230c8ca6da69b45d05b3319220eacfa6c1f212
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.openlocfilehash: 61b2de0595ac9330d9bb4e8e2dcbe4591928eb91
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="icordebugfunctiongetcurrentversionnumber-method"></a>ICorDebugFunction::GetCurrentVersionNumber 方法
 取得最新的編輯此 ICorDebugFunction 物件所代表的函式的版本號碼。  
@@ -60,4 +48,4 @@ HRESULT GetCurrentVersionNumber (
   
  **程式庫：** CorGuids.lib  
   
- **.NET framework 版本：**[!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]
+ **.NET framework 版本：** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]

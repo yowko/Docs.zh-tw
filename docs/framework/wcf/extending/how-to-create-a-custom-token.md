@@ -1,14 +1,6 @@
 ---
 title: HOW TO：建立自訂權杖
-ms.custom: ''
 ms.date: 03/30/2017
-ms.prod: .net-framework
-ms.reviewer: ''
-ms.suite: ''
-ms.technology:
-- dotnet-clr
-ms.tgt_pltfrm: ''
-ms.topic: article
 dev_langs:
 - csharp
 - vb
@@ -18,22 +10,16 @@ helpviewer_keywords:
 - WSSecurityTokenSerializer class
 - SecurityToken class
 ms.assetid: 6d892973-1558-4115-a9e1-696777776125
-caps.latest.revision: 14
-author: dotnet-bot
-ms.author: dotnetcontent
-manager: wpickett
-ms.workload:
-- dotnet
-ms.openlocfilehash: c270b63586809044f1bb3e56841ae8cf590e7bb1
-ms.sourcegitcommit: 94d33cadc5ff81d2ac389bf5f26422c227832052
-ms.translationtype: MT
+ms.openlocfilehash: eb227075b1a696216e62e851aa8b10c7511ac93f
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/30/2018
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="how-to-create-a-custom-token"></a>HOW TO：建立自訂權杖
 本主題說明如何使用 <xref:System.IdentityModel.Tokens.SecurityToken> 類別來建立自訂安全性權杖，以及如何將它與自訂安全性權杖提供者和驗證器整合。 如需完整的程式碼範例，請參閱[自訂語彙基元](../../../../docs/framework/wcf/samples/custom-token.md)範例。  
   
- A*安全性權杖*是基本上由 XML 項目[!INCLUDE[indigo1](../../../../includes/indigo1-md.md)]安全性架構用來表示 SOAP 訊息內的寄件者有關的宣告。 [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] 安全性會為系統提供的驗證模式提供各種權杖。 範例包括 <xref:System.IdentityModel.Tokens.X509SecurityToken> 類別所代表的 X.509 憑證安全性權杖，或是 <xref:System.IdentityModel.Tokens.UserNameSecurityToken> 類別所代表的使用者名稱安全性權杖。  
+ A*安全性權杖*是基本上是由 Windows Communication Foundation (WCF) 安全性架構用來表示 SOAP 訊息內的寄件者的相關宣告的 XML 項目。 [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] 安全性會為系統提供的驗證模式提供各種權杖。 範例包括 <xref:System.IdentityModel.Tokens.X509SecurityToken> 類別所代表的 X.509 憑證安全性權杖，或是 <xref:System.IdentityModel.Tokens.UserNameSecurityToken> 類別所代表的使用者名稱安全性權杖。  
   
  有時候提供的類型並不支援驗證模式或認證。 在此情況下，您就需要建立自訂安全性權杖，以便在 SOAP 訊息內部提供自訂認證的 XML 表示法。  
   

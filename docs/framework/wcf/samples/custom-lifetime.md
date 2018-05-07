@@ -1,27 +1,15 @@
 ---
-title: "自訂存留期"
-ms.custom: 
+title: 自訂存留期
 ms.date: 03/30/2017
-ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.technology: dotnet-clr
-ms.tgt_pltfrm: 
-ms.topic: article
 ms.assetid: 52806c07-b91c-48fe-b992-88a41924f51f
-caps.latest.revision: "5"
-author: dotnet-bot
-ms.author: dotnetcontent
-manager: wpickett
-ms.workload: dotnet
-ms.openlocfilehash: 1cbe73468e2ce1c8a4fe81a676c819b04d2ef760
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
-ms.translationtype: MT
+ms.openlocfilehash: 1d9baa2d6eab476d5c8428208576f341e71fef2f
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="custom-lifetime"></a>自訂存留期
-此範例示範如何撰寫 [!INCLUDE[indigo1](../../../../includes/indigo1-md.md)] 延伸模組以便針對共用的 [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] 服務執行個體提供自訂存留時間服務。  
+這個範例會示範如何撰寫 Windows Communication Foundation (WCF) 擴充程式以提供自訂存留時間服務共用[!INCLUDE[indigo2](../../../../includes/indigo2-md.md)]服務執行個體。  
   
 > [!NOTE]
 >  此範例的安裝程序與建置指示位於本主題的結尾。  
@@ -229,8 +217,8 @@ public class EchoService : IEchoService
 >   
 >  `<InstallDrive>:\WF_WCF_Samples`  
 >   
->  如果此目錄不存在，請移至 [Windows Communication Foundation (WCF) and Windows Workflow Foundation (WF) Samples for .NET Framework 4  (適用於 .NET Framework 4 的 Windows Communication Foundation (WCF) 與 Windows Workflow Foundation (WF) 範例)](http://go.microsoft.com/fwlink/?LinkId=150780) ，以下載所有 [!INCLUDE[indigo1](../../../../includes/indigo1-md.md)] 和 [!INCLUDE[wf1](../../../../includes/wf1-md.md)] 範例。 此範例位於下列目錄。  
+>  如果此目錄不存在，請移至[Windows Communication Foundation (WCF) 和適用於.NET Framework 4 的 Windows Workflow Foundation (WF) 範例](http://go.microsoft.com/fwlink/?LinkId=150780)下載所有 Windows Communication Foundation (WCF) 和[!INCLUDE[wf1](../../../../includes/wf1-md.md)]範例。 此範例位於下列目錄。  
 >   
 >  `<InstallDrive>:\WF_WCF_Samples\WCF\Extensibility\Instancing\Lifetime`  
   
-## <a name="see-also"></a>請參閱
+## <a name="see-also"></a>另請參閱

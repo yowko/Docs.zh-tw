@@ -1,14 +1,6 @@
 ---
-title: "LinkResource 方法"
-ms.custom: 
+title: LinkResource 方法
 ms.date: 03/30/2017
-ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.technology:
-- dotnet-clr
-ms.tgt_pltfrm: 
-ms.topic: reference
 api_name:
 - IALink.LinkResource
 api_location:
@@ -22,17 +14,13 @@ helpviewer_keywords:
 ms.assetid: c404acb3-4c59-4100-9a4c-483cbdb1d736
 topic_type:
 - apiref
-caps.latest.revision: 
 author: mairaw
 ms.author: mairaw
-manager: wpickett
-ms.workload:
-- dotnet
-ms.openlocfilehash: b1ff38bf0017cf400d8f35f0ddf265f8628c82d1
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.openlocfilehash: 4f75ebc3a40bddbaf2347b9ef559139888f83900
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="linkresource-method"></a>LinkResource 方法
 在資源中的連結。  
@@ -71,7 +59,7 @@ HRESULT LinkResource(
 ## <a name="requirements"></a>需求  
  需要 alink.h。  
   
-## <a name="see-also"></a>請參閱  
+## <a name="see-also"></a>另請參閱  
  [IALink 介面](../../../../docs/framework/unmanaged-api/alink/ialink-interface.md)  
  [IALink2 介面](../../../../docs/framework/unmanaged-api/alink/ialink2-interface.md)  
  [ALink API](../../../../docs/framework/unmanaged-api/alink/index.md)

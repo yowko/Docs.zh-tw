@@ -1,27 +1,15 @@
 ---
-title: "自訂權杖"
-ms.custom: 
+title: 自訂權杖
 ms.date: 03/30/2017
-ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.technology: dotnet-clr
-ms.tgt_pltfrm: 
-ms.topic: article
 ms.assetid: e7fd8b38-c370-454f-ba3e-19759019f03d
-caps.latest.revision: "28"
-author: dotnet-bot
-ms.author: dotnetcontent
-manager: wpickett
-ms.workload: dotnet
-ms.openlocfilehash: 53242a7411d261a6f2860fcf319725e40cfb6dcf
-ms.sourcegitcommit: c0dd436f6f8f44dc80dc43b07f6841a00b74b23f
-ms.translationtype: MT
+ms.openlocfilehash: 5850f97d6d3a66aacf82ab1cb2338240a75a00fb
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 01/19/2018
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="custom-token"></a>自訂權杖
-這個範例示範如何將自訂權杖實作新增至 [!INCLUDE[indigo1](../../../../includes/indigo1-md.md)] 應用程式中。 範例會使用 `CreditCardToken`，將用戶端的信用卡資訊安全地傳遞至服務。 權杖會在 WS-Security 訊息標頭中傳遞，並且是使用對稱安全性繫結項目，與訊息本文及其他訊息標頭一起經過簽署和加密。 當內建權杖的安全性不足時，這會十分有幫助。 這個範例將示範如何提供自訂安全性權杖給服務，而不使用其中一個內建權杖。 服務會實作定義要求-回覆通訊模式的合約。  
+這個範例示範如何新增自訂權杖實作 Windows Communication Foundation (WCF) 應用程式。 範例會使用 `CreditCardToken`，將用戶端的信用卡資訊安全地傳遞至服務。 權杖會在 WS-Security 訊息標頭中傳遞，並且是使用對稱安全性繫結項目，與訊息本文及其他訊息標頭一起經過簽署和加密。 當內建權杖的安全性不足時，這會十分有幫助。 這個範例將示範如何提供自訂安全性權杖給服務，而不使用其中一個內建權杖。 服務會實作定義要求-回覆通訊模式的合約。  
   
 > [!NOTE]
 >  此範例的安裝程序與建置指示位於本主題的結尾。  
@@ -645,4 +633,4 @@ string GetCallerCreditCardNumber()
   
 1.  當您完成執行範例後，請執行範例資料夾中的 Cleanup.bat。  
   
-## <a name="see-also"></a>請參閱
+## <a name="see-also"></a>另請參閱

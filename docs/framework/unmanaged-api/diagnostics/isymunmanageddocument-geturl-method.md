@@ -1,14 +1,6 @@
 ---
-title: "ISymUnmanagedDocument::GetURL 方法"
-ms.custom: 
+title: ISymUnmanagedDocument::GetURL 方法
 ms.date: 03/30/2017
-ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.technology:
-- dotnet-clr
-ms.tgt_pltfrm: 
-ms.topic: reference
 api_name:
 - ISymUnmanagedDocument.GetURL
 api_location:
@@ -23,17 +15,13 @@ helpviewer_keywords:
 ms.assetid: 60600178-c2b5-4cab-b3a5-f0f61acebaf1
 topic_type:
 - apiref
-caps.latest.revision: 
 author: mairaw
 ms.author: mairaw
-manager: wpickett
-ms.workload:
-- dotnet
-ms.openlocfilehash: 2688c2c50181c7bac7b7ee869b4e1fa5094d0ea9
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.openlocfilehash: 5a447de2bb01e7bbf838ef5443e3ae7951bf8226
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="isymunmanageddocumentgeturl-method"></a>ISymUnmanagedDocument::GetURL 方法
 傳回這份文件的統一資源定位器 (URL)。  
@@ -60,5 +48,5 @@ HRESULT GetURL(
 ## <a name="return-value"></a>傳回值  
  如果方法成功則為 S_OK否則，錯誤代碼。  
   
-## <a name="see-also"></a>請參閱  
+## <a name="see-also"></a>另請參閱  
  [ISymUnmanagedDocument 介面](../../../../docs/framework/unmanaged-api/diagnostics/isymunmanageddocument-interface.md)

@@ -1,30 +1,19 @@
 ---
-title: "使用活動延伸模組"
-ms.custom: 
+title: 使用活動延伸模組
 ms.date: 03/30/2017
-ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.tgt_pltfrm: 
-ms.topic: article
 ms.assetid: 500eb96a-c009-4247-b6b5-b36faffdf715
-caps.latest.revision: "5"
-author: dotnet-bot
-ms.author: dotnetcontent
-manager: wpickett
-ms.workload: dotnet
-ms.openlocfilehash: 6bc2e498a4073f6f0881e011b00de6ac89f4f2fe
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.openlocfilehash: 32c465ae42a1f0238fab7bba5ea795486db3b562
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="using-activity-extensions"></a>使用活動延伸模組
 活動可以與工作流程應用程式延伸模組互動，好讓主機提供未明確在工作流程中模組化的其他功能。  本主題將說明如何建立及使用延伸模組來計算此活動所執行的次數。  
   
 ### <a name="to-use-an-activity-extension-to-count-executions"></a>若要使用活動延伸模組來計算執行次數  
   
-1.  開啟 [!INCLUDE[vs2010](../../../includes/vs2010-md.md)]。 選取**新**，**專案**。 在下**Visual C#**節點中，選取**工作流程**。  選取**工作流程主控台應用程式**從範本清單。 將專案命名為 `Extensions`。 按一下**確定**建立專案。  
+1.  開啟 [!INCLUDE[vs2010](../../../includes/vs2010-md.md)]。 選取**新**，**專案**。 在下**Visual C#** 節點中，選取**工作流程**。  選取**工作流程主控台應用程式**從範本清單。 將專案命名為 `Extensions`。 按一下 [確定] 建立專案。  
   
 2.  新增`using`Program.cs 檔案中的陳述式**System.Collections.Generic**命名空間。  
   

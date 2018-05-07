@@ -1,26 +1,12 @@
 ---
 title: 服務架構
-ms.custom: ''
 ms.date: 03/30/2017
-ms.prod: .net-framework
-ms.reviewer: ''
-ms.suite: ''
-ms.technology:
-- dotnet-clr
-ms.tgt_pltfrm: ''
-ms.topic: article
 ms.assetid: 75f60b87-f80e-4377-ba7c-8e6becaa2b28
-caps.latest.revision: ''
-author: dotnet-bot
-ms.author: dotnetcontent
-manager: wpickett
-ms.workload:
-- dotnet
-ms.openlocfilehash: 67e856aff583513fa8a16d289cf5190a9698c52c
-ms.sourcegitcommit: c883637b41ee028786edceece4fa872939d2e64c
+ms.openlocfilehash: 859e718a56ab63c8e012e1851c0730f53cb707be
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 03/26/2018
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="service-framework"></a>服務架構
 此主題會列出服務架構資料產生的所有例外狀況。  
@@ -49,8 +35,8 @@ ms.lasthandoff: 03/26/2018
 |channelDoesNotHaveADuplexSession0|目前通道不支援關閉輸出工作階段。 此通道未實作 ISessionChannel\<IDuplexSession >。|  
 |ClientRuntimeRequiresFormatter0|指定的 ClientOperation 需要格式器，因為 SerializeRequest 與 DeserializeReply 並非同為 false。|  
 |CommunicationObjectAborted1|由於指定的通訊物件已停止，因此無法用來通訊。|  
-|CommunicationObjectAbortedStack2|由於指定的通訊物件已停止，因此無法用來通訊：{1}|  
-|CommunicationObjectBaseClassMethodNotCalled|指定的通訊物件已經覆寫虛擬函式 {1}，但未呼叫基底類別中定義的版本。|  
+|CommunicationObjectAbortedStack2|指定的通訊物件無法用於通訊，因為它已停止： {1}|  
+|CommunicationObjectBaseClassMethodNotCalled|指定的通訊物件已覆寫虛擬函式{1}但未呼叫基底類別中定義的版本。|  
 |ContractIsNotSelfConsistentItHasOneOrMore2|指定的合約具有一或多個 IsTerminating 或 non-IsInitiating 作業。 它並未將 SessionMode 屬性設為 SessionMode.Required。 IsInitiating 和 IsTerminating 屬性只能用在工作階段內容中。|  
 |CouldnTCreateChannelForChannelType2|已要求指定的通道類型，但是指定的繫結不支援它或是未正確設定來支援它。|  
 |DispatchRuntimeRequiresFormatter0|指定的 DispatchOperation 需要格式器，因為 DeserializeRequest 和 SerializeReply 並非同為 false。|  

@@ -1,14 +1,6 @@
 ---
-title: "ICLRAppDomainResourceMonitor 介面"
-ms.custom: 
+title: ICLRAppDomainResourceMonitor 介面
 ms.date: 03/30/2017
-ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.technology:
-- dotnet-clr
-ms.tgt_pltfrm: 
-ms.topic: reference
 api_name:
 - ICLRAppDomainResourceMonitor
 api_location:
@@ -22,17 +14,13 @@ helpviewer_keywords:
 ms.assetid: 72fa83a1-8997-41d7-b355-ab177a24a303
 topic_type:
 - apiref
-caps.latest.revision: 
 author: rpetrusha
 ms.author: ronpet
-manager: wpickett
-ms.workload:
-- dotnet
-ms.openlocfilehash: 1bebd39fce4f6aa6f570b3af348332bf7bcc87ad
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.openlocfilehash: dc2326c72c9a1c63c4740608e120ace5dc83ebee
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="iclrappdomainresourcemonitor-interface"></a>ICLRAppDomainResourceMonitor 介面
 提供方法，檢查應用程式定義域的記憶體和 CPU 使用量。  
@@ -65,9 +53,9 @@ ms.lasthandoff: 12/22/2017
   
  **程式庫：**包含做為 MSCorEE.dll 中的資源  
   
- **.NET framework 版本：**[!INCLUDE[net_current_v40plus](../../../../includes/net-current-v40plus-md.md)]  
+ **.NET framework 版本：** [!INCLUDE[net_current_v40plus](../../../../includes/net-current-v40plus-md.md)]  
   
-## <a name="see-also"></a>請參閱  
+## <a name="see-also"></a>另請參閱  
  [\<appDomainResourceMonitoring > 項目](../../../../docs/framework/configure-apps/file-schema/runtime/appdomainresourcemonitoring-element.md)  
  [應用程式定義域資源監視](../../../../docs/standard/garbage-collection/app-domain-resource-monitoring.md)  
  [裝載介面](../../../../docs/framework/unmanaged-api/hosting/hosting-interfaces.md)  

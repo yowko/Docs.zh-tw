@@ -1,13 +1,6 @@
 ---
-title: "相依性屬性回呼和驗證"
-ms.custom: 
+title: 相依性屬性回呼和驗證
 ms.date: 03/30/2017
-ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.technology: dotnet-wpf
-ms.tgt_pltfrm: 
-ms.topic: article
 dev_langs:
 - csharp
 - vb
@@ -18,16 +11,11 @@ helpviewer_keywords:
 - dependency properties [WPF], callbacks
 - validation of dependency properties [WPF]
 ms.assetid: 48db5fb2-da7f-49a6-8e81-3540e7b25825
-caps.latest.revision: "17"
-author: dotnet-bot
-ms.author: dotnetcontent
-manager: wpickett
-ms.workload: dotnet
-ms.openlocfilehash: 15ba7f3315b2ce71357bd4735e2dfca1b3de616d
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.openlocfilehash: e181c2d9610619587642f982959f809b96b011dc
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="dependency-property-callbacks-and-validation"></a>相依性屬性回呼和驗證
 本主題說明如何針對屬性相關的功能建立使用替代自訂實作的相依性屬性，例如：驗證判斷、每當屬性有效值變更時叫用的回撥，以及覆寫值決策的可能外在影響。 本主題也會討論適合使用這些技術在展開預設屬性系統行為的案例。  
@@ -91,7 +79,7 @@ ms.lasthandoff: 12/22/2017
 ### <a name="using-coercevalue-to-cancel-value-changes"></a>使用 CoerceValue 取消值變更  
  對屬性系統會將任何<xref:System.Windows.CoerceValueCallback>可傳回值<xref:System.Windows.DependencyProperty.UnsetValue>做為特殊案例。 表示屬性變更，導致這種特殊案例<xref:System.Windows.CoerceValueCallback>呼叫應拒絕屬性系統，且對屬性系統應該改為報告屬性中有任何先前的值。 這項機制很有用，可用來檢查過去以非同步方式初始化的屬性變更，現在是否對目前的物件狀態仍然有效，如果無效，則隱藏這些變更。 另一個可能的情況是，您可以看哪一個屬性值決定元件負責要回報的值，選擇性地隱藏值。 若要這樣做，您可以使用<xref:System.Windows.DependencyProperty>回呼和屬性的識別項中傳遞做為輸入<xref:System.Windows.DependencyPropertyHelper.GetValueSource%2A>，然後再處理<xref:System.Windows.ValueSource>。  
   
-## <a name="see-also"></a>請參閱  
+## <a name="see-also"></a>另請參閱  
  [相依性屬性概觀](../../../../docs/framework/wpf/advanced/dependency-properties-overview.md)  
  [相依性屬性中繼資料](../../../../docs/framework/wpf/advanced/dependency-property-metadata.md)  
  [自訂相依性屬性](../../../../docs/framework/wpf/advanced/custom-dependency-properties.md)

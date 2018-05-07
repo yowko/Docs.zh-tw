@@ -1,14 +1,6 @@
 ---
-title: "ICLRRuntimeHost::GetCurrentAppDomainId 方法"
-ms.custom: 
+title: ICLRRuntimeHost::GetCurrentAppDomainId 方法
 ms.date: 03/30/2017
-ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.technology:
-- dotnet-clr
-ms.tgt_pltfrm: 
-ms.topic: reference
 api_name:
 - ICLRRuntimeHost.GetCurrentAppDomainId
 api_location:
@@ -23,17 +15,13 @@ helpviewer_keywords:
 ms.assetid: 33800475-7815-4976-8aca-a1038761a2ef
 topic_type:
 - apiref
-caps.latest.revision: 
 author: rpetrusha
 ms.author: ronpet
-manager: wpickett
-ms.workload:
-- dotnet
-ms.openlocfilehash: 5e4e682ae71512e24d91ea7e4e12a8a2dd70f1de
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.openlocfilehash: cbe6ac3c9f03de2224f933a7e44325f578ded48b
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="iclrruntimehostgetcurrentappdomainid-method"></a>ICLRRuntimeHost::GetCurrentAppDomainId 方法
 取得的數值識別碼<xref:System.AppDomain>，目前正在執行。  
@@ -54,7 +42,7 @@ HRESULT GetCurrentAppDomainId(
   
 |HRESULT|描述|  
 |-------------|-----------------|  
-|S_OK|`GetCurrentAppDomainId`已成功傳回。|  
+|S_OK|`GetCurrentAppDomainId` 已成功傳回。|  
 |HOST_E_CLRNOTAVAILABLE|Common language runtime (CLR) 尚未載入到處理程序，或 CLR 正在中它無法執行 managed 程式碼，或成功地處理呼叫的狀態。|  
 |HOST_E_TIMEOUT|呼叫已逾時。|  
 |HOST_E_NOT_OWNER|呼叫端未擁有鎖定。|  
@@ -71,9 +59,9 @@ HRESULT GetCurrentAppDomainId(
   
  **程式庫：**包含做為 MSCorEE.dll 中的資源  
   
- **.NET framework 版本：**[!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]  
+ **.NET framework 版本：** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]  
   
-## <a name="see-also"></a>請參閱  
+## <a name="see-also"></a>另請參閱  
  <xref:System.AppDomain>  
  <xref:System.AppDomainManager>  
  [ICLRRuntimeHost 介面](../../../../docs/framework/unmanaged-api/hosting/iclrruntimehost-interface.md)

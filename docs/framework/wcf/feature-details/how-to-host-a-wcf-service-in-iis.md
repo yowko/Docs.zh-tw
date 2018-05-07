@@ -1,34 +1,20 @@
 ---
 title: HOW TO：在 IIS 中裝載 WCF 服務
-ms.custom: ''
 ms.date: 03/30/2017
-ms.prod: .net-framework
-ms.reviewer: ''
-ms.suite: ''
-ms.technology:
-- dotnet-clr
-ms.tgt_pltfrm: ''
-ms.topic: article
 dev_langs:
 - csharp
 - vb
 ms.assetid: b044b1c9-c1e5-4c9f-84d8-0f02f4537f8b
-caps.latest.revision: 28
-author: dotnet-bot
-ms.author: dotnetcontent
-manager: wpickett
-ms.workload:
-- dotnet
-ms.openlocfilehash: 4699475db18ac84c4379c7bc102d93648060ed3d
-ms.sourcegitcommit: 94d33cadc5ff81d2ac389bf5f26422c227832052
+ms.openlocfilehash: a1759434d259cdffe1dac6b19a6582bfb83784bb
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/30/2018
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="how-to-host-a-wcf-service-in-iis"></a>HOW TO：在 IIS 中裝載 WCF 服務
-本主題概要說明建立裝載在網際網路資訊服務 (IIS) 中的 [!INCLUDE[indigo1](../../../../includes/indigo1-md.md)] 服務時所需的基本步驟。 本主題假設您熟悉 IIS，而且了解如何使用 IIS 管理工具建立與管理 IIS 應用程式。 如需 IIS 的詳細資訊，請參閱[Internet Information Services](http://go.microsoft.com/fwlink/?LinkId=132449)。 在 IIS 環境中執行的 [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] 服務能夠充分善用 IIS 功能，例如處理序回收、閒置關機、處理序健康狀態監控，以及訊息啟動。 這個裝載選項要求必須正確設定 IIS，但不要求您將任何裝載程式碼撰寫為應用程式的一部分。 IIS 裝載只能和 HTTP 傳輸一起使用。  
+本主題概要說明建立 Windows Communication Foundation (WCF) 服務裝載在網際網路資訊服務 (IIS) 所需的基本步驟。 本主題假設您熟悉 IIS，而且了解如何使用 IIS 管理工具建立與管理 IIS 應用程式。 如需 IIS 的詳細資訊，請參閱[Internet Information Services](http://go.microsoft.com/fwlink/?LinkId=132449)。 WCF 服務的 IIS 環境中的執行可充分利用 IIS 功能，例如處理序回收、 閒置關機、 處理序健康狀態監控，以及訊息啟動。 這個裝載選項要求必須正確設定 IIS，但不要求您將任何裝載程式碼撰寫為應用程式的一部分。 IIS 裝載只能和 HTTP 傳輸一起使用。  
   
- 如需有關如何[!INCLUDE[indigo2](../../../../includes/indigo2-md.md)]和[!INCLUDE[vstecasp](../../../../includes/vstecasp-md.md)]互動，請參閱[WCF 服務與 ASP.NET](../../../../docs/framework/wcf/feature-details/wcf-services-and-aspnet.md)。 如需有關如何設定安全性的詳細資訊，請參閱[安全性](../../../../docs/framework/wcf/feature-details/security.md)。  
+ 如需有關如何 WCF 和[!INCLUDE[vstecasp](../../../../includes/vstecasp-md.md)]互動，請參閱[WCF 服務與 ASP.NET](../../../../docs/framework/wcf/feature-details/wcf-services-and-aspnet.md)。 如需有關如何設定安全性的詳細資訊，請參閱[安全性](../../../../docs/framework/wcf/feature-details/security.md)。  
   
  此範例的來源副本，請參閱[IIS 裝載使用內嵌程式碼](../../../../docs/framework/wcf/samples/iis-hosting-using-inline-code.md)。  
   
@@ -73,7 +59,7 @@ ms.lasthandoff: 04/30/2018
      [!code-csharp[c_HowTo_HostInIIS#12](../../../../samples/snippets/csharp/VS_Snippets_CFX/c_howto_hostiniis/cs/source.cs#12)]
      [!code-vb[c_HowTo_HostInIIS#12](../../../../samples/snippets/visualbasic/VS_Snippets_CFX/c_howto_hostiniis/vb/source.vb#12)]  
   
-10. 在應用程式目錄中建立名為 "Web.config" 的檔案，並將下列組態程式碼加入至該檔案中。 在執行階段，[!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] 基礎結構會使用這項資訊以建構用戶端應用程式可通訊的端點。  
+10. 在應用程式目錄中建立名為 "Web.config" 的檔案，並將下列組態程式碼加入至該檔案中。 在執行階段，WCF 基礎結構使用的資訊來建構用戶端應用程式可以與通訊的端點。  
   
      [!code-xml[c_HowTo_HostInIIS#100](../../../../samples/snippets/csharp/VS_Snippets_CFX/c_howto_hostiniis/common/web.config#100)]      
   

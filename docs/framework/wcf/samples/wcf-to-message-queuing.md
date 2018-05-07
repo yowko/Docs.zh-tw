@@ -1,29 +1,15 @@
 ---
 title: Windows Communication Foundation 至訊息佇列
-ms.custom: ''
 ms.date: 03/30/2017
-ms.prod: .net-framework
-ms.reviewer: ''
-ms.suite: ''
-ms.technology:
-- dotnet-clr
-ms.tgt_pltfrm: ''
-ms.topic: article
 ms.assetid: 78d0d0c9-648e-4d4a-8f0a-14d9cafeead9
-caps.latest.revision: 32
-author: dotnet-bot
-ms.author: dotnetcontent
-manager: wpickett
-ms.workload:
-- dotnet
-ms.openlocfilehash: f2ea59c7f1ef2ac6f22500a13eb9bb4456149b7c
-ms.sourcegitcommit: 2042de78fcdceebb6b8ac4b7a292b93e8782cbf5
-ms.translationtype: MT
+ms.openlocfilehash: 83c16fc097cc6eca76578730bcad0491b648c5c8
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/27/2018
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="windows-communication-foundation-to-message-queuing"></a>Windows Communication Foundation 至訊息佇列
-這個範例會示範 [!INCLUDE[indigo1](../../../../includes/indigo1-md.md)] 應用程式如何將訊息傳送至訊息佇列 (MSMQ) 應用程式。 這個服務是自我裝載的主控台應用程式，可讓您觀察接收佇列訊息的服務。 服務與用戶端不需要在相同時間執行。  
+這個範例會示範 Windows Communication Foundation (WCF) 應用程式如何傳送訊息至訊息佇列 (MSMQ) 應用程式。 這個服務是自我裝載的主控台應用程式，可讓您觀察接收佇列訊息的服務。 服務與用戶端不需要在相同時間執行。  
   
  服務會接收佇列訊息，然後處理訂單。 服務會建立交易式佇列，然後設定已接收訊息的訊息處理常式，如下列範例程式碼所示。  
 
@@ -182,7 +168,7 @@ public partial class OrderProcessorClient : System.ServiceModel.ClientBase<IOrde
 >   
 >  `<InstallDrive>:\WF_WCF_Samples`  
 >   
->  如果此目錄不存在，請移至 [Windows Communication Foundation (WCF) and Windows Workflow Foundation (WF) Samples for .NET Framework 4  (適用於 .NET Framework 4 的 Windows Communication Foundation (WCF) 與 Windows Workflow Foundation (WF) 範例)](http://go.microsoft.com/fwlink/?LinkId=150780) ，以下載所有 [!INCLUDE[indigo1](../../../../includes/indigo1-md.md)] 和 [!INCLUDE[wf1](../../../../includes/wf1-md.md)] 範例。 此範例位於下列目錄。  
+>  如果此目錄不存在，請移至[Windows Communication Foundation (WCF) 和適用於.NET Framework 4 的 Windows Workflow Foundation (WF) 範例](http://go.microsoft.com/fwlink/?LinkId=150780)下載所有 Windows Communication Foundation (WCF) 和[!INCLUDE[wf1](../../../../includes/wf1-md.md)]範例。 此範例位於下列目錄。  
 >   
 >  `<InstallDrive>:\WF_WCF_Samples\WCF\Basic\Binding\MSMQIntegration\WcfToMsmq`  
   

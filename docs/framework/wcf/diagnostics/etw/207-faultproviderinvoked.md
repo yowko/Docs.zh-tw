@@ -1,24 +1,12 @@
 ---
 title: 207 - FaultProviderInvoked
-ms.custom: 
 ms.date: 03/30/2017
-ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.technology: dotnet-clr
-ms.tgt_pltfrm: 
-ms.topic: article
 ms.assetid: b730d903-01c2-4deb-85a4-da12f8a21fe4
-caps.latest.revision: "6"
-author: dotnet-bot
-ms.author: dotnetcontent
-manager: wpickett
-ms.workload: dotnet
-ms.openlocfilehash: 9035739f8625a07e8bf2b9bce2fe109880676405
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.openlocfilehash: 9f97e74e7685d57b487f456625826ee9cd8e1760
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="207---faultproviderinvoked"></a>207 - FaultProviderInvoked
 ## <a name="properties"></a>屬性  
@@ -42,5 +30,5 @@ ms.lasthandoff: 12/22/2017
 |--------------------|--------------------|-----------------|  
 |TypeName|`xs:string`|已叫用 `FaultProvider` 之類型的 CLR FullName。|  
 |ExceptionTypeName|`xs:string`|`FaultProvider` 已處理之例外狀況的 CLR FullName。|  
-|HostReference|`xs:string`|若為 Web 託管服務，此欄位會唯一識別 Web 階層架構中的服務。 其格式定義為 ' Web Site Name Application Virtual Path &#124;服務的虛擬路徑 &#124;ServiceName'。 範例: ' Default Web Site/CalculatorApplication #124;/CalculatorService.svc &#124;CalculatorService'。|  
+|HostReference|`xs:string`|若為 Web 託管服務，此欄位會唯一識別 Web 階層架構中的服務。 其格式定義為 ' Web Site Name Application Virtual Path&#124;Service Virtual Path&#124;ServiceName'。 範例: ' Default Web Site/CalculatorApplication&#124;/CalculatorService.svc&#124;CalculatorService'。|  
 |AppDomain|`xs:string`|由 AppDomain.CurrentDomain.FriendlyName 傳回的字串。|

@@ -1,23 +1,12 @@
 ---
-title: "XAML 啟用"
-ms.custom: 
+title: XAML 啟用
 ms.date: 03/30/2017
-ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.tgt_pltfrm: 
-ms.topic: article
 ms.assetid: 486760e2-bb10-4ed5-8c02-fe7472498d2d
-caps.latest.revision: "11"
-author: dotnet-bot
-ms.author: dotnetcontent
-manager: wpickett
-ms.workload: dotnet
-ms.openlocfilehash: 53665f39c6c0c7e5c7956912b05e3fd80659ddcb
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.openlocfilehash: 8621b0ea7b390c81e76ac7eeedb0b547b44320d7
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="xaml-activation"></a>XAML 啟用
 這個範例示範如何在 IIS 中裝載宣告式工作流程。 此範例是有一個作業的基本工作流程，名為 `EchoService`。  
@@ -27,7 +16,7 @@ ms.lasthandoff: 12/22/2017
 >   
 >  `<InstallDrive>:\WF_WCF_Samples`  
 >   
->  如果此目錄不存在，請移至 (下載頁面) 以下載所有 [!INCLUDE[indigo1](../../../../includes/indigo1-md.md)] 和 [!INCLUDE[wf1](../../../../includes/wf1-md.md)] 範例。 此範例位於下列目錄。  
+>  如果此目錄不存在，請移至 （下載頁面） 以下載所有 Windows Communication Foundation (WCF) 和[!INCLUDE[wf1](../../../../includes/wf1-md.md)]範例。 此範例位於下列目錄。  
 >   
 >  `<InstallDrive>:\WF_WCF_Samples\WF\Basic\Services\XAMLActivation`  
   
@@ -43,10 +32,10 @@ ms.lasthandoff: 12/22/2017
   
     2.  執行 WcfTestClient.exe。  
   
-4.  在 WcfTestClient.exe 設定服務位址，方式是按 CTRL+SHIFT+A，將服務位址設為 http://localhost:56133/Service.xamlx。  
+4.  在 WcfTestClient.exe 設定服務的位址，按下 CTRL + SHIFT + A，並設定服務位址為http://localhost:56133/Service.xamlx。  
   
 5.  執行 Echo 作業以測試服務。  
   
 6.  在命令提示字元中，以系統管理員權限使用 DeployToIIS.Bat，以在 IIS 中部署服務。  
   
-7.  將用戶端上的服務位址更新為 http://localhost/XAMLActivation/Service.xamlx，並且使用 WcfTestClient.exe 再次測試服務。
+7.  在用戶端的服務位址更新http://localhost/XAMLActivation/Service.xamlx和測試使用 WcfTestClient.exe 再次服務。

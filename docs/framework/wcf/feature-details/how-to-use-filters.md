@@ -1,26 +1,12 @@
 ---
-title: "HOW TO：使用篩選"
-ms.custom: 
+title: HOW TO：使用篩選
 ms.date: 03/30/2017
-ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.technology:
-- dotnet-clr
-ms.tgt_pltfrm: 
-ms.topic: article
 ms.assetid: f2c7255f-c376-460e-aa20-14071f1666e5
-caps.latest.revision: 
-author: wadepickett
-ms.author: wpickett
-manager: wpickett
-ms.workload:
-- dotnet
-ms.openlocfilehash: 94d45537ca3edd5f31f1ed31898857f002312a0b
-ms.sourcegitcommit: 15316053918995cc1380163a7d7e7edd5c44e6d7
+ms.openlocfilehash: 2c8c5519d31d1d57c1c568599964b97043f806a9
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 03/19/2018
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="how-to-use-filters"></a>HOW TO：使用篩選
 本主題概要說明建立使用多個篩選條件之路由組態所需的基本步驟。 在此範例中，會將訊息路由至計算機服務的兩種實作 (regularCalc 與 roundingCalc)。 兩項實作都支援相同的作業，不過其中一個服務會在傳回之前將所有的計算結果四捨五入至最接近的整數值。 用戶端應用程式必須能夠指出是否要使用四捨五入後的服務版本，如果未指定任何服務偏好設定，則會在兩項服務之間平衡訊息負載。 由這兩項服務公開的作業為：  
@@ -145,7 +131,7 @@ ms.lasthandoff: 03/19/2018
             filterData="http://localhost/routingservice/router/rounding/"/>  
     ```  
   
-     如果以"http://localhost/routingservice/router/rounding/"開頭的位址在收到訊息，則此篩選條件評估為**true**。 由於此組態使用的基底位址就是 「 http://localhost/routingservice/router"而 roundingEndpoint 的指定的位址是"rounding/calculator"，用來與此端點通訊的完整位址是"http://localhost/routingservice/路由器/rounding/calculator"，符合此篩選條件。  
+     如果在開頭的位址上收到的訊息 」http://localhost/routingservice/router/rounding/」 則此篩選條件評估為**true**。 此組態使用的基底位址，所以 「http://localhost/routingservice/router"和"rounding/calculator"roundingEndpoint 的指定的位址，用來與此端點通訊的完整位址是"http://localhost/routingservice/router/rounding/calculator"，其符合此篩選。  
   
     > [!NOTE]
     >  PrefixEndpointAddress 篩選條件執行比對時不會評估主機名稱，因為可以使用多種主機名稱 (均為從用戶端應用程式參考主機的有效方式) 參考單一主機。 例如，下列所有名稱皆可參考同一個主機：  

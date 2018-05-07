@@ -1,26 +1,14 @@
 ---
 title: 將您的 Windows 市集應用程式移轉至 .NET Native
-ms.custom: ''
 ms.date: 03/30/2017
-ms.prod: .net-framework
-ms.reviewer: ''
-ms.suite: ''
-ms.technology:
-- dotnet-clr
-ms.tgt_pltfrm: ''
-ms.topic: article
 ms.assetid: 4153aa18-6f56-4a0a-865b-d3da743a1d05
-caps.latest.revision: ''
 author: rpetrusha
 ms.author: ronpet
-manager: wpickett
-ms.workload:
-- dotnet
-ms.openlocfilehash: ce23d66f79f94af74250cff137499f6c8b1582ac
-ms.sourcegitcommit: c883637b41ee028786edceece4fa872939d2e64c
+ms.openlocfilehash: a316cd8ed82f9833b23fe313b8f4c4903bd0a433
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 03/26/2018
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="migrating-your-windows-store-app-to-net-native"></a>將您的 Windows 市集應用程式移轉至 .NET Native
 [!INCLUDE[net_native](../../../includes/net-native-md.md)] 在 Windows 市集或開發人員的電腦上提供應用程式的靜態編譯。 這不同於 just-in-time (JIT) 編譯器或裝置上的 [原生映像產生器 (Ngen.exe)](../../../docs/framework/tools/ngen-exe-native-image-generator.md) 為 Windows 市集應用程式執行的動態編譯。 儘管有所差異， [!INCLUDE[net_native](../../../includes/net-native-md.md)] 還是會嘗試維持與 [適用於 Windows 市集應用程式的 .NET](http://msdn.microsoft.com/library/windows/apps/br230302.aspx)的相容性。 大多數的情況下，在適用於 Windows 市集應用程式的 .NET 上運作的項目也會使用 [!INCLUDE[net_native](../../../includes/net-native-md.md)]。  不過，在某些情況下，您可能會遇到行為上的變更。 本文件將在下列區域討論適用於 Windows 市集應用程式的標準 .NET 與 [!INCLUDE[net_native](../../../includes/net-native-md.md)] 之間的這些差異：  
@@ -653,7 +641,7 @@ ms.lasthandoff: 03/26/2018
   
     -   <xref:System.Runtime.Serialization.OnDeserializedAttribute>  
   
--   <xref:System.Xml.Serialization.XmlSerializer> 不接受 <xref:System.Xml.Serialization.IXmlSerializable> 自訂序列化介面。 如果您有實作這個介面的類別， <xref:System.Xml.Serialization.XmlSerializer> 會將該類型視為純舊 CLR 物件 (POCO) 類型，並且只將其公開屬性序列化。  
+-   <xref:System.Xml.Serialization.XmlSerializer> 不接受 <xref:System.Xml.Serialization.IXmlSerializable> 自訂序列化介面。 如果您有實作這個介面的類別， <xref:System.Xml.Serialization.XmlSerializer> 會將該類型視為簡單的 CLR 物件 (POCO) 類型，並且只將其公開屬性序列化。  
   
 -   使用 <xref:System.Exception> 和 <xref:System.Runtime.Serialization.DataContractSerializer> 來將純 <xref:System.Runtime.Serialization.Json.DataContractJsonSerializer>物件 (例如下列物件) 序列化的效果不佳：  
   

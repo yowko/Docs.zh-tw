@@ -1,29 +1,17 @@
 ---
-title: "如何：使用設計工具設定 Windows Form DataGridView 控制項的預設儲存格樣式和資料格式"
-ms.custom: 
+title: 如何：使用設計工具設定 Windows Form DataGridView 控制項的預設儲存格樣式和資料格式
 ms.date: 03/30/2017
-ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.technology: dotnet-winforms
-ms.tgt_pltfrm: 
-ms.topic: article
 helpviewer_keywords:
 - DataGridView control [Windows Forms], cell styles
 - cells [Windows Forms], setting styles
 - data formats
 - data [Windows Forms], setting formats
 ms.assetid: fc6da49f-8942-41da-b49f-b2afc38cc656
-caps.latest.revision: "19"
-author: dotnet-bot
-ms.author: dotnetcontent
-manager: wpickett
-ms.workload: dotnet
-ms.openlocfilehash: 65f876742526d13093a852e99f4e6a069c3fba47
-ms.sourcegitcommit: c0dd436f6f8f44dc80dc43b07f6841a00b74b23f
+ms.openlocfilehash: 47e15afe71ed3497b634e965c96badcee2fe3ed4
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 01/19/2018
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="how-to-set-default-cell-styles-and-data-formats-for-the-windows-forms-datagridview-control-using-the-designer"></a>如何：使用設計工具設定 Windows Form DataGridView 控制項的預設儲存格樣式和資料格式
 <xref:System.Windows.Forms.DataGridView>控制項可讓您指定預設儲存格樣式和儲存格整個控制項、 特定的資料行、 資料列和資料行標頭，以及替代建立分類帳效果的資料列的資料格式。 設定整個控制項的預設樣式會覆寫預設值設為資料行和替代的資料列的樣式。 此外，您在個別的資料列和資料格的程式碼中設定的樣式會覆寫預設樣式。  
@@ -70,7 +58,7 @@ ms.lasthandoff: 01/19/2018
   
 4.  如果您要繫結<xref:System.Windows.Forms.DataGridView>控制項至資料來源可能包含 null 值，填寫**Null 值**文字方塊。 這個值會顯示當儲存格的值等於 null 參考 (`Nothing`在 Visual Basic 中) 或<xref:System.DBNull.Value?displayProperty=nameWithType>。  
   
-## <a name="see-also"></a>請參閱  
+## <a name="see-also"></a>另請參閱  
  <xref:System.Windows.Forms.DataGridView>  
  <xref:System.Windows.Forms.DataGridViewCellStyle>  
  <xref:System.Windows.Forms.DataGridView.DefaultCellStyle%2A?displayProperty=nameWithType>  

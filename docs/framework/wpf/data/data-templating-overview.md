@@ -1,13 +1,6 @@
 ---
-title: "資料範本化概觀"
-ms.custom: 
+title: 資料範本化概觀
 ms.date: 03/30/2017
-ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.technology: dotnet-wpf
-ms.tgt_pltfrm: 
-ms.topic: article
 dev_langs:
 - csharp
 - vb
@@ -17,16 +10,11 @@ helpviewer_keywords:
 - templates [WPF], data
 - data templates [WPF]
 ms.assetid: 0f4d9f8c-0230-4013-bd7b-e8e7fed01b4a
-caps.latest.revision: "25"
-author: dotnet-bot
-ms.author: dotnetcontent
-manager: wpickett
-ms.workload: dotnet
-ms.openlocfilehash: b3f1efefa4d32e3512b0dda6eca237a5e4938bf7
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.openlocfilehash: feed791ac876c13dbd637f0455d3cfdd83a86e05
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="data-templating-overview"></a>資料範本化概觀
 WPF 資料範本化模型對於資料呈現方式的定義，具有相當大的彈性。 WPF 控制項的內建功能支援自訂資料呈現方式。 本主題首先會示範如何定義<xref:System.Windows.DataTemplate>和再導入了其他的資料範本化功能，例如根據自訂邏輯以及支援的階層式資料的顯示範本選擇。  
@@ -35,7 +23,7 @@ WPF 資料範本化模型對於資料呈現方式的定義，具有相當大的�
 ## <a name="prerequisites"></a>必要條件  
  本主題著重資料範本化功能，而不是資料繫結概念簡介。 如需基本資料繫結概念的資訊，請參閱[資料繫結概觀](../../../../docs/framework/wpf/data/data-binding-overview.md)。  
   
- <xref:System.Windows.DataTemplate>關於資料簡報，一個 WPF 樣式和樣板化模型所提供的許多功能。 如需簡介的 WPF 樣式和樣板化模型，例如，如何使用<xref:System.Windows.Style>若要在控制項上設定屬性，請參閱[設定樣式和範本](../../../../docs/framework/wpf/controls/styling-and-templating.md)主題。  
+ <xref:System.Windows.DataTemplate> 關於資料簡報，一個 WPF 樣式和樣板化模型所提供的許多功能。 如需簡介的 WPF 樣式和樣板化模型，例如，如何使用<xref:System.Windows.Style>若要在控制項上設定屬性，請參閱[設定樣式和範本](../../../../docs/framework/wpf/controls/styling-and-templating.md)主題。  
   
  此外，務必了解`Resources`，這基本上是什麼啟用物件，例如<xref:System.Windows.Style>和<xref:System.Windows.DataTemplate>為可重複使用。 如需詳細資訊，請參閱 [XAML 資源](../../../../docs/framework/wpf/advanced/xaml-resources.md)。  
   
@@ -144,7 +132,7 @@ WPF 資料範本化模型對於資料呈現方式的定義，具有相當大的�
   
 <a name="what_belongs_in_datatemplate"></a>   
 ### <a name="what-belongs-in-a-datatemplate"></a>哪些內容屬於 DataTemplate 的範圍  
- 在上述範例中，我們放在觸發程序<xref:System.Windows.DataTemplate>使用<xref:System.Windows.DataTemplate>。<xref:System.Windows.DataTemplate.Triggers%2A>屬性。 <xref:System.Windows.Setter>觸發程序的設定項目屬性的值 (<xref:System.Windows.Controls.Border>項目) 裡<xref:System.Windows.DataTemplate>。 不過，如果屬性，您`Setters`注重不會在目前的項目屬性<xref:System.Windows.DataTemplate>，可能是更適合用來設定屬性使用<xref:System.Windows.Style>這適用於<xref:System.Windows.Controls.ListBoxItem>類別 (如果您要繫結的控制項是<xref:System.Windows.Controls.ListBox>)。 例如，如果您想要您<xref:System.Windows.Trigger>以動畫方式顯示<xref:System.Windows.UIElement.Opacity%2A>值的項目時滑鼠指向某個項目，您會定義觸發程序內<xref:System.Windows.Controls.ListBoxItem>樣式。 如需範例，請參閱[樣式設定和範本化範例的簡介](http://go.microsoft.com/fwlink/?LinkID=160010)。  
+ 在上述範例中，我們放在觸發程序<xref:System.Windows.DataTemplate>使用<xref:System.Windows.DataTemplate>。<xref:System.Windows.DataTemplate.Triggers%2A> 屬性。 <xref:System.Windows.Setter>觸發程序的設定項目屬性的值 (<xref:System.Windows.Controls.Border>項目) 裡<xref:System.Windows.DataTemplate>。 不過，如果屬性，您`Setters`注重不會在目前的項目屬性<xref:System.Windows.DataTemplate>，可能是更適合用來設定屬性使用<xref:System.Windows.Style>這適用於<xref:System.Windows.Controls.ListBoxItem>類別 (如果您要繫結的控制項是<xref:System.Windows.Controls.ListBox>)。 例如，如果您想要您<xref:System.Windows.Trigger>以動畫方式顯示<xref:System.Windows.UIElement.Opacity%2A>值的項目時滑鼠指向某個項目，您會定義觸發程序內<xref:System.Windows.Controls.ListBoxItem>樣式。 如需範例，請參閱[樣式設定和範本化範例的簡介](http://go.microsoft.com/fwlink/?LinkID=160010)。  
   
  一般情況下，請注意，<xref:System.Windows.DataTemplate>套用至每個產生<xref:System.Windows.Controls.ListBoxItem>(如需如何及在何處實際套用的詳細資訊，請參閱<xref:System.Windows.Controls.ItemsControl.ItemTemplate%2A>頁面。)。 您<xref:System.Windows.DataTemplate>擔心只有簡報和資料物件的外觀。 在大部分情況下，所有其他層面簡報，例如何種項目時看起來像加以選取或如何<xref:System.Windows.Controls.ListBox>奠定出的項目，定義中不屬於<xref:System.Windows.DataTemplate>。 如需範例，請參閱 [ItemsControl 的樣式設定和範本化](#DataTemplating_ItemsControl)一節。  
   
@@ -156,7 +144,7 @@ WPF 資料範本化模型對於資料呈現方式的定義，具有相當大的�
   
  [!code-xaml[DataTemplatingIntro_snip#ImportantTemplate](../../../../samples/snippets/csharp/VS_Snippets_Wpf/DataTemplatingIntro_snip/CSharp/Window1.xaml#importanttemplate)]  
   
- 請注意此範例會使用<xref:System.Windows.DataTemplate>。<xref:System.Windows.FrameworkTemplate.Resources%2A>屬性。 中所定義區段內的項目所共用的資源<xref:System.Windows.DataTemplate>。  
+ 請注意此範例會使用<xref:System.Windows.DataTemplate>。<xref:System.Windows.FrameworkTemplate.Resources%2A> 屬性。 中所定義區段內的項目所共用的資源<xref:System.Windows.DataTemplate>。  
   
  要提供邏輯來選擇<xref:System.Windows.DataTemplate>使用基於`Priority`值的資料物件，建立的子類別<xref:System.Windows.Controls.DataTemplateSelector>並覆寫<xref:System.Windows.Controls.DataTemplateSelector.SelectTemplate%2A>方法。 在下列範例中，<xref:System.Windows.Controls.DataTemplateSelector.SelectTemplate%2A>方法提供邏輯，以傳回適當的值為基礎的範本`Priority`屬性。 傳回範本的資源封套中找到<xref:System.Windows.Window>項目。  
   
@@ -203,7 +191,7 @@ WPF 資料範本化模型對於資料呈現方式的定義，具有相當大的�
   
  ![HierarchicalDataTemplate 範例螢幕擷取畫面](../../../../docs/framework/wpf/data/media/databinding-hierarchicaldatatemplate.png "DataBinding_HierarchicalDataTemplate")  
   
-## <a name="see-also"></a>請參閱  
+## <a name="see-also"></a>另請參閱  
  [資料繫結](../../../../docs/framework/wpf/advanced/optimizing-performance-data-binding.md)  
  [尋找 DataTemplate 產生的元素](../../../../docs/framework/wpf/data/how-to-find-datatemplate-generated-elements.md)  
  [樣式設定和範本化](../../../../docs/framework/wpf/controls/styling-and-templating.md)  

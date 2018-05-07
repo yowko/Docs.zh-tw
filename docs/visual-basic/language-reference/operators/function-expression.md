@@ -1,24 +1,16 @@
 ---
-title: "函式運算式 (Visual Basic)"
+title: 函式運算式 (Visual Basic)
 ms.date: 07/20/2015
-ms.prod: .net
-ms.reviewer: 
-ms.suite: 
-ms.technology: devlang-visual-basic
-ms.topic: article
 helpviewer_keywords:
 - Function expression [Visual Basic]
 - functions [Visual Basic], function expressions
 - lambda expressions [Visual Basic], function expression
 ms.assetid: e8a47a45-4b8a-4f45-a623-7653625dffbc
-caps.latest.revision: "18"
-author: dotnet-bot
-ms.author: dotnetcontent
-ms.openlocfilehash: cb1790d363755fe9b8bd711409734f7c3a405f3e
-ms.sourcegitcommit: 34ec7753acf76f90a0fa845235ef06663dc9e36e
+ms.openlocfilehash: 29bf95a336b6f6ed5c9c310c9ea7575a91089361
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="function-expression-visual-basic"></a>函式運算式 (Visual Basic)
 宣告參數與函式的 lambda 運算式定義的程式碼。  
@@ -94,7 +86,7 @@ Dim londonCusts = db.Customers.
   
  如需有關查詢方法的詳細資訊，請參閱[查詢](../../../visual-basic/language-reference/queries/queries.md)。 如需標準查詢運算子的詳細資訊，請參閱[標準查詢運算子概觀](../../programming-guide/concepts/linq/standard-query-operators-overview.md)。  
   
-## <a name="see-also"></a>請參閱  
+## <a name="see-also"></a>另請參閱  
  [Function 陳述式](../../../visual-basic/language-reference/statements/function-statement.md)  
  [Lambda 運算式](../../../visual-basic/programming-guide/language-features/procedures/lambda-expressions.md)  
  [運算子和運算式](../../../visual-basic/programming-guide/language-features/operators-and-expressions/index.md)  

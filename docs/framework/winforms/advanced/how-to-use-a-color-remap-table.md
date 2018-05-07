@@ -1,13 +1,6 @@
 ---
-title: "如何：使用色彩重新對應表"
-ms.custom: 
+title: 如何：使用色彩重新對應表
 ms.date: 03/30/2017
-ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.technology: dotnet-winforms
-ms.tgt_pltfrm: 
-ms.topic: article
 dev_langs:
 - csharp
 - vb
@@ -16,16 +9,11 @@ helpviewer_keywords:
 - custom colors [Windows Forms], creating with color remap table
 - color remap tables [Windows Forms], using
 ms.assetid: 977df1ce-8665-42d4-9fb1-ef7f0ff63419
-caps.latest.revision: "14"
-author: dotnet-bot
-ms.author: dotnetcontent
-manager: wpickett
-ms.workload: dotnet
-ms.openlocfilehash: 6e208aa9c98c1ca19baee83760cfd0f75972ecfa
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.openlocfilehash: ba763cc7960e71c6fc705d40eefdbde163d06181
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="how-to-use-a-color-remap-table"></a>如何：使用色彩重新對應表
 重新對應是轉換的色彩，色彩重新對應表根據映像中的程序。 色彩重新對應表是陣列<xref:System.Drawing.Imaging.ColorMap>物件。 每個<xref:System.Drawing.Imaging.ColorMap>陣列中的物件具有<xref:System.Drawing.Imaging.ColorMap.OldColor%2A>屬性和<xref:System.Drawing.Imaging.ColorMap.NewColor%2A>屬性。  
@@ -47,6 +35,6 @@ ms.lasthandoff: 12/22/2017
 ## <a name="compiling-the-code"></a>編譯程式碼  
  上述範例設計用於搭配 Windows Form，且其需要<xref:System.Windows.Forms.PaintEventArgs> `e`，這是參數的<xref:System.Windows.Forms.Control.Paint>事件處理常式。  
   
-## <a name="see-also"></a>請參閱  
+## <a name="see-also"></a>另請參閱  
  [為影像重新著色](../../../../docs/framework/winforms/advanced/recoloring-images.md)  
  [影像、點陣圖和中繼檔](../../../../docs/framework/winforms/advanced/images-bitmaps-and-metafiles.md)

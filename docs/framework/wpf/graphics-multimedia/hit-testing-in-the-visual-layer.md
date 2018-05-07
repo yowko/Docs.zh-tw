@@ -1,13 +1,6 @@
 ---
-title: "視覺分層中的點擊測試"
-ms.custom: 
+title: 視覺分層中的點擊測試
 ms.date: 03/30/2017
-ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.technology: dotnet-wpf
-ms.tgt_pltfrm: 
-ms.topic: article
 dev_langs:
 - csharp
 - vb
@@ -15,16 +8,11 @@ helpviewer_keywords:
 - hit testing functionality [WPF]
 - visual layer [WPF], hit testing functionality
 ms.assetid: b1a64b61-14be-4d75-b89a-5c67bebb2c7b
-caps.latest.revision: "42"
-author: dotnet-bot
-ms.author: dotnetcontent
-manager: wpickett
-ms.workload: dotnet
-ms.openlocfilehash: f1bdecedece4581eaf8a010eddc0974e44fe88ab
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.openlocfilehash: 60da11af51722e86a61c5e3298fafba2221f000b
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="hit-testing-in-the-visual-layer"></a>視覺分層中的點擊測試
 本主題提供視覺分層所提供點擊測試功能的概觀。 點擊測試的支援可讓您判斷幾何或點的值是否落目的呈現內容<xref:System.Windows.Media.Visual>，讓您實作使用者介面的行為，例如選取矩形來選取多個物件。  
@@ -61,7 +49,7 @@ ms.lasthandoff: 12/22/2017
   
  在下圖中，圓形物件位於正方形和三角形物件上方。 如果您只想要在點擊測試的疊置順序值是最上層的視覺物件，您可以設定視覺點擊的測試列舉型別傳回<xref:System.Windows.Media.HitTestResultBehavior.Stop>從<xref:System.Windows.Media.HitTestResultCallback>在第一個項目後停止點擊的測試周遊。  
   
- ![圖表的 z &#45; 視覺化樹狀結構的順序](../../../../docs/framework/wpf/graphics-multimedia/media/wcpsdk-mmgraphics-visuals-hittest-2.png "wcpsdk_mmgraphics_visuals_hittest_2")  
+ ![圖表的 z&#45;視覺化樹狀結構的順序](../../../../docs/framework/wpf/graphics-multimedia/media/wcpsdk-mmgraphics-visuals-hittest-2.png "wcpsdk_mmgraphics_visuals_hittest_2")  
 視覺化樹狀之疊置順序的圖表  
   
  如果您想要列舉所有的視覺物件下的特定點或幾何，傳回<xref:System.Windows.Media.HitTestResultBehavior.Continue>從<xref:System.Windows.Media.HitTestResultCallback>。 這表示您可以對其他物件底下的視覺物件進行點擊測試，即使它們完全遭到遮蔽。 如需詳細資訊，請參閱「使用點擊測試結果回呼 」一節中的範例程式碼。  
@@ -149,7 +137,7 @@ ms.lasthandoff: 12/22/2017
  [!code-csharp[HitTestingOverview#108](../../../../samples/snippets/csharp/VS_Snippets_Wpf/HitTestingOverview/CSharp/Window1.xaml.cs#108)]
  [!code-vb[HitTestingOverview#108](../../../../samples/snippets/visualbasic/VS_Snippets_Wpf/HitTestingOverview/visualbasic/window1.xaml.vb#108)]  
   
-## <a name="see-also"></a>請參閱  
+## <a name="see-also"></a>另請參閱  
  <xref:System.Windows.Media.VisualTreeHelper.HitTest%2A>  
  <xref:System.Windows.Media.HitTestResult>  
  <xref:System.Windows.Media.HitTestResultCallback>  

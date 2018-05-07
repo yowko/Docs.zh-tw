@@ -1,27 +1,15 @@
 ---
-title: "服務合約"
-ms.custom: 
+title: 服務合約
 ms.date: 03/30/2017
-ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.technology: dotnet-clr
-ms.tgt_pltfrm: 
-ms.topic: article
 ms.assetid: 9e34b694-aa56-45b3-8dd1-2616705b4fc5
-caps.latest.revision: "5"
-author: dotnet-bot
-ms.author: dotnetcontent
-manager: wpickett
-ms.workload: dotnet
-ms.openlocfilehash: d3ed2fa4439edd157fa7f009b63f20b21e2bb6fc
-ms.sourcegitcommit: c0dd436f6f8f44dc80dc43b07f6841a00b74b23f
+ms.openlocfilehash: 3d6172b4f7976a93898a29058ba0445616dbd8f5
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 01/19/2018
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="service-contracts"></a>服務合約
-本節包含示範 [!INCLUDE[indigo1](../../../../includes/indigo1-md.md)] 中服務合約的範例。  
+本節包含示範服務合約中 Windows Communication Foundation (WCF) 的範例。  
   
 ## <a name="in-this-section"></a>本節內容  
  [雙面](../../../../docs/framework/wcf/samples/duplex.md)  

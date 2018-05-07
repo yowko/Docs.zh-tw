@@ -1,32 +1,18 @@
 ---
 title: 聯合範例
-ms.custom: ''
 ms.date: 03/30/2017
-ms.prod: .net-framework
-ms.reviewer: ''
-ms.suite: ''
-ms.technology:
-- dotnet-clr
-ms.tgt_pltfrm: ''
-ms.topic: article
 ms.assetid: 7e9da0ca-e925-4644-aa96-8bfaf649d4bb
-caps.latest.revision: 26
-author: dotnet-bot
-ms.author: dotnetcontent
-manager: wpickett
-ms.workload:
-- dotnet
-ms.openlocfilehash: 58a8ab012682d5acb04b201c36d931276426ffe8
-ms.sourcegitcommit: 94d33cadc5ff81d2ac389bf5f26422c227832052
-ms.translationtype: MT
+ms.openlocfilehash: 38581c7003c30038ee1a3438caa96b7f2782a23e
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/30/2018
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="federation-sample"></a>聯合範例
 這個範例將示範聯合安全性。  
   
 ## <a name="sample-details"></a>範例詳細資料  
- [!INCLUDE[indigo1](../../../../includes/indigo1-md.md)] 透過 `wsFederationHttpBinding` 提供部署聯合安全性架構的支援。 `wsFederationHttpBinding` 提供安全、可靠以及可互通的繫結，其中包括使用 HTTP 做為要求/回覆通訊的基礎傳輸機制，以及採用文字/XML 做為編碼的 Wire 格式。 如需有關中同盟[!INCLUDE[indigo2](../../../../includes/indigo2-md.md)]，請參閱[同盟](../../../../docs/framework/wcf/feature-details/federation.md)。  
+ Windows Communication Foundation (WCF) 提供支援部署聯合的安全性架構透過`wsFederationHttpBinding`。 `wsFederationHttpBinding` 提供安全、可靠以及可互通的繫結，其中包括使用 HTTP 做為要求/回覆通訊的基礎傳輸機制，以及採用文字/XML 做為編碼的 Wire 格式。 如需有關中同盟[!INCLUDE[indigo2](../../../../includes/indigo2-md.md)]，請參閱[同盟](../../../../docs/framework/wcf/feature-details/federation.md)。  
   
  本案例由 4 個部分組成：  
   
@@ -126,7 +112,7 @@ ms.lasthandoff: 04/30/2018
 >   
 >  `<InstallDrive>:\WF_WCF_Samples`  
 >   
->  如果此目錄不存在，請移至 [Windows Communication Foundation (WCF) and Windows Workflow Foundation (WF) Samples for .NET Framework 4  (適用於 .NET Framework 4 的 Windows Communication Foundation (WCF) 與 Windows Workflow Foundation (WF) 範例)](http://go.microsoft.com/fwlink/?LinkId=150780) ，以下載所有 [!INCLUDE[indigo1](../../../../includes/indigo1-md.md)] 和 [!INCLUDE[wf1](../../../../includes/wf1-md.md)] 範例。 此範例位於下列目錄。  
+>  如果此目錄不存在，請移至[Windows Communication Foundation (WCF) 和適用於.NET Framework 4 的 Windows Workflow Foundation (WF) 範例](http://go.microsoft.com/fwlink/?LinkId=150780)下載所有 Windows Communication Foundation (WCF) 和[!INCLUDE[wf1](../../../../includes/wf1-md.md)]範例。 此範例位於下列目錄。  
 >   
 >  `<InstallDrive>:\WF_WCF_Samples\WCF\Scenario\Federation`  
   

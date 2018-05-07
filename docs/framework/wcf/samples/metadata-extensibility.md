@@ -1,24 +1,12 @@
 ---
-title: "中繼資料擴充性"
-ms.custom: 
+title: 中繼資料擴充性
 ms.date: 03/30/2017
-ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.technology: dotnet-clr
-ms.tgt_pltfrm: 
-ms.topic: article
 ms.assetid: f92fcc76-0806-4c84-9d63-7aae0d3899de
-caps.latest.revision: "3"
-author: dotnet-bot
-ms.author: dotnetcontent
-manager: wpickett
-ms.workload: dotnet
-ms.openlocfilehash: eb1ee59e2feca3344aabc4be81ae1d5637b3d545
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.openlocfilehash: d139e169aa9bd45f5a7ef848acc12aaa35043432
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="metadata-extensibility"></a>中繼資料擴充性
 本節包含示範自訂中繼資料的範例。  

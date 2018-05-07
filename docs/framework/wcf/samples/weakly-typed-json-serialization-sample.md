@@ -1,31 +1,17 @@
 ---
 title: 弱型別 JSON 序列化範例
-ms.custom: ''
 ms.date: 03/30/2017
-ms.prod: .net-framework
-ms.reviewer: ''
-ms.suite: ''
-ms.technology:
-- dotnet-clr
-ms.tgt_pltfrm: ''
-ms.topic: article
 ms.assetid: 0b30e501-4ef5-474d-9fad-a9d559cf9c52
-caps.latest.revision: 13
-author: dotnet-bot
-ms.author: dotnetcontent
-manager: wpickett
-ms.workload:
-- dotnet
-ms.openlocfilehash: 4cc75ff1078c35c177f0809d25cd32ca3b2b8e16
-ms.sourcegitcommit: 03ee570f6f528a7d23a4221dcb26a9498edbdf8c
-ms.translationtype: MT
+ms.openlocfilehash: 66e68985da94df11a81ba6d387438fe29dd96d56
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/28/2018
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="weakly-typed-json-serialization-sample"></a>弱型別 JSON 序列化範例
 當將使用者定義的型別序列化為指定的 Wire 格式，或是將 Wire 格式還原序列化為使用者定義的型別時，服務和用戶端都必須提供指定的使用者定義型別，以供使用。 一般而言，若要完成這項操作， <xref:System.Runtime.Serialization.DataContractAttribute> 屬性會套用至這些使用者定義的型別，而 <xref:System.Runtime.Serialization.DataMemberAttribute> 屬性會套用至其成員。 這個機制也適用於使用 JavaScript Object Notation (JSON) 物件的情況，如主題 [How to: Serialize and Deserialize JSON Data](../../../../docs/framework/wcf/feature-details/how-to-serialize-and-deserialize-json-data.md)中所述。  
   
- 在某些案例中， [!INCLUDE[indigo1](../../../../includes/indigo1-md.md)] 服務或用戶端必須存取不受開發人員控制的服務或用戶端所產生的 JSON 物件。 隨著更多的 Web 服務公開 JSON API， [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] 開發人員建構本機使用者定義的型別以在其中還原序列化任意 JSON 物件，會變得不切實際。 這個範例會提供機制，讓 [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] 開發人員可使用已還原序列化的任意 JSON 物件，而不需建立使用者定義的型別。 這稱為 JSON 物件的「 *弱型別序列化* 」(Weakly-Typed Serialization)，因為在編譯時期尚不知 JSON 物件要還原序列化成何種型別。  
+ 在某些情況下，Windows Communication Foundation (WCF) 服務或用戶端必須存取服務或不受開發人員控制的用戶端所產生的 JSON 物件。 隨著更多的 Web 服務公開 JSON API， [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] 開發人員建構本機使用者定義的型別以在其中還原序列化任意 JSON 物件，會變得不切實際。 這個範例會提供機制，讓 [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] 開發人員可使用已還原序列化的任意 JSON 物件，而不需建立使用者定義的型別。 這稱為 JSON 物件的「 *弱型別序列化* 」(Weakly-Typed Serialization)，因為在編譯時期尚不知 JSON 物件要還原序列化成何種型別。  
   
 > [!NOTE]
 >  此範例的安裝程序與建置指示位於本主題的結尾。  
@@ -149,7 +135,7 @@ My favorite bands are Band ABC and Band XYZ.
 >   
 >  `<InstallDrive>:\WF_WCF_Samples`  
 >   
->  如果此目錄不存在，請移至 [Windows Communication Foundation (WCF) and Windows Workflow Foundation (WF) Samples for .NET Framework 4  (適用於 .NET Framework 4 的 Windows Communication Foundation (WCF) 與 Windows Workflow Foundation (WF) 範例)](http://go.microsoft.com/fwlink/?LinkId=150780) ，以下載所有 [!INCLUDE[indigo1](../../../../includes/indigo1-md.md)] 和 [!INCLUDE[wf1](../../../../includes/wf1-md.md)] 範例。 此範例位於下列目錄。  
+>  如果此目錄不存在，請移至[Windows Communication Foundation (WCF) 和適用於.NET Framework 4 的 Windows Workflow Foundation (WF) 範例](http://go.microsoft.com/fwlink/?LinkId=150780)下載所有 Windows Communication Foundation (WCF) 和[!INCLUDE[wf1](../../../../includes/wf1-md.md)]範例。 此範例位於下列目錄。  
 >   
 >  `<InstallDrive>:\WF_WCF_Samples\WCF\Scenario\Ajax\WeaklyTypedJson`  
   

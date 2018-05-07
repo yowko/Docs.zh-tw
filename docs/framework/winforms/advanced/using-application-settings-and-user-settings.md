@@ -1,27 +1,15 @@
 ---
-title: "使用應用程式設定和使用者設定"
-ms.custom: 
+title: 使用應用程式設定和使用者設定
 ms.date: 03/30/2017
-ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.technology: dotnet-winforms
-ms.tgt_pltfrm: 
-ms.topic: article
 helpviewer_keywords:
 - user settings [Windows Forms]
 - application settings [Windows Forms], how-to topics
 ms.assetid: 54682d3b-1cbf-4683-9351-012b8b4286b5
-caps.latest.revision: "8"
-author: dotnet-bot
-ms.author: dotnetcontent
-manager: wpickett
-ms.workload: dotnet
-ms.openlocfilehash: 310fcad07ce7cf541312ff83e41d7e5fc2643898
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.openlocfilehash: f5231ecc9fb3898d60241ea8a53b509daced8a0f
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="using-application-settings-and-user-settings"></a>使用應用程式設定和使用者設定
 從.NET Framework 2.0 開始，您可以建立並存取應用程式執行的工作階段之間保存的值。 這些值稱為*設定*。 設定可以代表使用者喜好設定，或需要使用應用程式的重要資訊。 例如，您可能會建立一系列的應用程式的色彩配置的使用者喜好設定儲存的設定。 或者，您可能會儲存連接字串，指定您的應用程式使用的資料庫。 設定可讓您保留很重要的應用程式外部程式碼，以及建立儲存個別使用者的喜好設定的設定檔的資訊。  
@@ -53,5 +41,5 @@ ms.lasthandoff: 12/22/2017
   
  詳細說明如何使用 C# 應用程式中加入多組設定。  
   
-## <a name="see-also"></a>請參閱  
+## <a name="see-also"></a>另請參閱  
  [Windows Forms 的應用程式設定](../../../../docs/framework/winforms/advanced/application-settings-for-windows-forms.md)

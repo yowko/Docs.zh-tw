@@ -1,24 +1,12 @@
 ---
-title: "定址"
-ms.custom: 
+title: 定址
 ms.date: 03/30/2017
-ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.technology: dotnet-clr
-ms.tgt_pltfrm: 
-ms.topic: article
 ms.assetid: d438e6f2-d0f3-43aa-b259-b51b5bda2e64
-caps.latest.revision: "21"
-author: dotnet-bot
-ms.author: dotnetcontent
-manager: wpickett
-ms.workload: dotnet
-ms.openlocfilehash: 21339d071ac26f073d0495814744535bd84f3a22
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.openlocfilehash: 94ac903afb27f1b87f0ca8bf05cb891d0d9ee34c
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="addressing"></a>定址
 此定址範例會示範端點位址的各方面與功能。 範例根據[入門](../../../../docs/framework/wcf/samples/getting-started-sample.md)。 在此範例中的服務會自動裝載。 服務和用戶端都是主控台應用程式。 服務會定義使用相對與絕對端點位址組合的多個端點。  
@@ -51,7 +39,7 @@ ms.lasthandoff: 12/22/2017
           contract="Microsoft.ServiceModel.Samples.ICalculator" />  
 ```  
   
- 在此範例中，相對位址是空白的 ("")，因此端點位址會與基底位址相同。 實際的端點位址是 http://localhost:8000/servicemodelsamples/service。  
+ 在此範例中，相對位址是空白的 ("")，因此端點位址會與基底位址相同。 實際的端點位址是http://localhost:8000/servicemodelsamples/service。  
   
  第二個端點定義也是指定相對位址，如下列範例組態所示。  
   
@@ -64,7 +52,7 @@ ms.lasthandoff: 12/22/2017
           contract="Microsoft.ServiceModel.Samples.ICalculator" />  
 ```  
   
- 此相對位址 "test" 會附加在基底位址。 實際的端點位址是 http://localhost:8000/servicemodelsamples/service/test。  
+ 此相對位址 "test" 會附加在基底位址。 實際的端點位址是http://localhost:8000/servicemodelsamples/service/test。  
   
  第三個端點定義是指定絕對位址，如下列範例組態所示。  
   
@@ -74,7 +62,7 @@ ms.lasthandoff: 12/22/2017
           contract="Microsoft.ServiceModel.Samples.ICalculator" />  
 ```  
   
- 位址中不需要基底位址。 實際的端點位址是 http://localhost:8001/hello/servicemodelsamples。  
+ 位址中不需要基底位址。 實際的端點位址是http://localhost:8001/hello/servicemodelsamples。  
   
  第四個端點位址是指定絕對位址以及不同的傳輸 (TCP)。 位址中不需要基底位址。 實際的端點位址是 net.tcp://localhost:9000/servicemodelsamples/service。  
   
@@ -143,8 +131,8 @@ Press <ENTER> to terminate client.
 >   
 >  `<InstallDrive>:\WF_WCF_Samples`  
 >   
->  如果此目錄不存在，請移至 [Windows Communication Foundation (WCF) and Windows Workflow Foundation (WF) Samples for .NET Framework 4  (適用於 .NET Framework 4 的 Windows Communication Foundation (WCF) 與 Windows Workflow Foundation (WF) 範例)](http://go.microsoft.com/fwlink/?LinkId=150780) ，以下載所有 [!INCLUDE[indigo1](../../../../includes/indigo1-md.md)] 和 [!INCLUDE[wf1](../../../../includes/wf1-md.md)] 範例。 此範例位於下列目錄。  
+>  如果此目錄不存在，請移至[Windows Communication Foundation (WCF) 和適用於.NET Framework 4 的 Windows Workflow Foundation (WF) 範例](http://go.microsoft.com/fwlink/?LinkId=150780)下載所有 Windows Communication Foundation (WCF) 和[!INCLUDE[wf1](../../../../includes/wf1-md.md)]範例。 此範例位於下列目錄。  
 >   
 >  `<InstallDrive>:\WF_WCF_Samples\WCF\Basic\Services\Addressing`  
   
-## <a name="see-also"></a>請參閱
+## <a name="see-also"></a>另請參閱

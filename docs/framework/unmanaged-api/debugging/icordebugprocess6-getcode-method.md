@@ -1,24 +1,14 @@
 ---
-title: "ICorDebugProcess6::GetCode 方法"
-ms.custom: 
+title: ICorDebugProcess6::GetCode 方法
 ms.date: 03/30/2017
-ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.technology: dotnet-clr
-ms.tgt_pltfrm: 
-ms.topic: reference
 ms.assetid: faa538c2-60c9-4064-b996-1b4c24ebd751
-caps.latest.revision: "5"
 author: rpetrusha
 ms.author: ronpet
-manager: wpickett
-ms.workload: dotnet
-ms.openlocfilehash: f532c52ac487915b76d624e62886a93db6d1eae4
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.openlocfilehash: 572b279ddfdb1fb0eb9da4b0d1f8c2cb12c8a46b
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="icordebugprocess6getcode-method"></a>ICorDebugProcess6::GetCode 方法
 取得特定程式碼位址之 Managed 程式碼的相關資訊。  
@@ -50,8 +40,8 @@ HRESULT GetCode(
   
  **程式庫：** CorGuids.lib  
   
- **.NET framework 版本：**[!INCLUDE[net_46_native](../../../../includes/net-46-native-md.md)]  
+ **.NET framework 版本：** [!INCLUDE[net_46_native](../../../../includes/net-46-native-md.md)]  
   
-## <a name="see-also"></a>請參閱  
+## <a name="see-also"></a>另請參閱  
  [ICorDebugProcess6 介面](../../../../docs/framework/unmanaged-api/debugging/icordebugprocess6-interface.md)  
  [偵錯介面](../../../../docs/framework/unmanaged-api/debugging/debugging-interfaces.md)

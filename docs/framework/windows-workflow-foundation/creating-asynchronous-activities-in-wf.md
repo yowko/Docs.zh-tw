@@ -1,23 +1,12 @@
 ---
-title: "在 WF 中建立非同步活動"
-ms.custom: 
+title: 在 WF 中建立非同步活動
 ms.date: 03/30/2017
-ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.tgt_pltfrm: 
-ms.topic: article
 ms.assetid: 497e81ed-5eef-460c-ba55-fae73c05824f
-caps.latest.revision: "9"
-author: dotnet-bot
-ms.author: dotnetcontent
-manager: wpickett
-ms.workload: dotnet
-ms.openlocfilehash: 1d06f825b96f66e35bdd30db272b99bb4e2e3e1e
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.openlocfilehash: 8df876c9be020ece29683d1c101a4045b1c76322
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="creating-asynchronous-activities-in-wf"></a>在 WF 中建立非同步活動
 <xref:System.Activities.AsyncCodeActivity> 會提供活動作者可用的基底類別，此類別可讓衍生活動實作非同步執行邏輯。 若自訂活動必須執行非同步工作而不保存工作流程排程器執行緒，並且封鎖任何能夠平行執行的活動，則此功能非常實用。 本主題提供如何使用 <xref:System.Activities.AsyncCodeActivity> 建立自訂非同步活動的概觀。  
@@ -26,7 +15,7 @@ ms.lasthandoff: 12/22/2017
  <xref:System.Activities?displayProperty=nameWithType> 會提供自訂活動作者不同的基底類別，用於不同的活動撰寫需求。 每個基底類別具有一種特定的語意，並且提供工作流程作者 (及活動執行階段) 對應的合約。 以 <xref:System.Activities.AsyncCodeActivity> 為主的活動會採用非同步方式來對排程器執行緒執行相對工作，且以 Managed 程式碼表示其執行邏輯的活動。 因為非同步的緣故，<xref:System.Activities.AsyncCodeActivity> 可能會在執行期間造成閒置點。 由於非同步工作的變動特性，<xref:System.Activities.AsyncCodeActivity> 一定會在活動執行期間建立不保存的區塊。 這樣可以避免工作流程執行階段在非同步工作當中保存工作流程執行個體，同時也避免工作流程執行個體在非同步程式碼執行期間卸載。  
   
 ### <a name="asynccodeactivity-methods"></a>AsyncCodeActivity 方法  
- 衍生自 <xref:System.Activities.AsyncCodeActivity> 的活動可以透過以自訂程式碼覆寫 <xref:System.Activities.AsyncCodeActivity.BeginExecute%2A> 和 <xref:System.Activities.AsyncCodeActivity.EndExecute%2A> 方法來建立非同步執行邏輯。 執行階段呼叫這些方法時，會將這些方法傳遞到 <xref:System.Activities.AsyncCodeActivityContext>。 <xref:System.Activities.AsyncCodeActivityContext>可讓活動作者，以提供跨共用的狀態<xref:System.Activities.AsyncCodeActivity.BeginExecute%2A> /  <xref:System.Activities.AsyncCodeActivity.EndExecute%2A>的內容中<xref:System.Activities.AsyncCodeActivityContext.UserState%2A>屬性。 在下列範例中，`GenerateRandom` 活動會以非同步的方式產生隨機數字。  
+ 衍生自 <xref:System.Activities.AsyncCodeActivity> 的活動可以透過以自訂程式碼覆寫 <xref:System.Activities.AsyncCodeActivity.BeginExecute%2A> 和 <xref:System.Activities.AsyncCodeActivity.EndExecute%2A> 方法來建立非同步執行邏輯。 執行階段呼叫這些方法時，會將這些方法傳遞到 <xref:System.Activities.AsyncCodeActivityContext>。 <xref:System.Activities.AsyncCodeActivityContext> 可讓活動作者，以提供跨共用的狀態<xref:System.Activities.AsyncCodeActivity.BeginExecute%2A> /  <xref:System.Activities.AsyncCodeActivity.EndExecute%2A>的內容中<xref:System.Activities.AsyncCodeActivityContext.UserState%2A>屬性。 在下列範例中，`GenerateRandom` 活動會以非同步的方式產生隨機數字。  
   
  [!code-csharp[CFX_ActivityExample#8](../../../samples/snippets/csharp/VS_Snippets_CFX/CFX_ActivityExample/cs/Program.cs#8)]  
   
@@ -56,7 +45,7 @@ ms.lasthandoff: 12/22/2017
 ### <a name="scheduling-actions-or-child-activities-using-asynccodeactivity"></a>使用 AsyncCodeActivity 排定動作或子活動  
  <xref:System.Activities.AsyncCodeActivity> 衍生的自訂活動提供根據工作流程執行緒非同步執行工作的方法，但不提供排定子活動或動作的功能。 但是，可以透過撰寫方式將非同步行為納入子活動排程。 您可以建立非同步活動，然後以 <xref:System.Activities.Activity> 或 <xref:System.Activities.NativeActivity> 衍生活動來撰寫該活動，以提供非同步行為，並排定子活動或動作。 例如，您可以建立衍生自 <xref:System.Activities.Activity> 的活動，並且實作包含該非同步活動及其他實作活動邏輯之活動的 <xref:System.Activities.Statements.Sequence>。 如需其他範例，撰寫使用活動的<xref:System.Activities.Activity>和<xref:System.Activities.NativeActivity>，請參閱[How to： 建立活動](../../../docs/framework/windows-workflow-foundation/how-to-create-an-activity.md)，[活動撰寫選項](../../../docs/framework/windows-workflow-foundation/activity-authoring-options-in-wf.md)，而[複合](../../../docs/framework/windows-workflow-foundation/samples/composite.md)活動範例。  
   
-## <a name="see-also"></a>請參閱  
+## <a name="see-also"></a>另請參閱  
  <xref:System.Action>  
  <xref:System.Func%602>  
  [在活動中使用 AsyncOperationContext](../../../docs/framework/windows-workflow-foundation/samples/using-asyncoperationcontext-in-an-activity-sample.md)

@@ -1,28 +1,18 @@
 ---
-title: "常數 (Unmanaged API 參考)"
-ms.custom: 
+title: 常數 (Unmanaged API 參考)
 ms.date: 03/30/2017
-ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.technology: dotnet-clr
-ms.tgt_pltfrm: 
-ms.topic: reference
 helpviewer_keywords:
 - constants for unmanaged API [.NET Framework]
 - native API reference [.NET Framework], constants
 - unmanaged API reference [.NET Framework], constants
 ms.assetid: 77526f65-b71c-4483-9d19-3a3751fd8a45
-caps.latest.revision: "8"
 author: rpetrusha
 ms.author: ronpet
-manager: wpickett
-ms.workload: dotnet
-ms.openlocfilehash: e086e856bb7a872b14815825f78d208ff5296899
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.openlocfilehash: 65925b7dafb9e89433253d68327c488365674963
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="constants-unmanaged-api-reference"></a>常數 (Unmanaged API 參考)
 本主題描述的語言類型、 語言廠商和定義於 CorSym.idl 中的文件類型常數。  
@@ -59,5 +49,5 @@ ms.lasthandoff: 12/22/2017
 |CorSym_DocumentType_Text|表示文字文件。|  
 |CorSym_DocumentType_MC|表示非文字文件。|  
   
-## <a name="see-also"></a>請參閱  
+## <a name="see-also"></a>另請參閱  
  [Unmanaged API 參考](../../../docs/framework/unmanaged-api/index.md)

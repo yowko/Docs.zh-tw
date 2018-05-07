@@ -1,26 +1,12 @@
 ---
 title: 選擇篩選
-ms.custom: ''
 ms.date: 03/30/2017
-ms.prod: .net-framework
-ms.reviewer: ''
-ms.suite: ''
-ms.technology:
-- dotnet-clr
-ms.tgt_pltfrm: ''
-ms.topic: article
 ms.assetid: 67ab5af9-b9d9-4300-b3b1-41abb5a1fd10
-caps.latest.revision: 8
-author: wadepickett
-ms.author: wpickett
-manager: wpickett
-ms.workload:
-- dotnet
-ms.openlocfilehash: 653013de37278f051f37fdda52e68fc3d84c2cbb
-ms.sourcegitcommit: 94d33cadc5ff81d2ac389bf5f26422c227832052
+ms.openlocfilehash: 91b3802217a920ef3eeeccb5c4f85c66afee2430
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/30/2018
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="choosing-a-filter"></a>選擇篩選
 設定路由服務時，務必選取正確的訊息篩選條件，並將它們設定為可針對您所接收的訊息進行正確的比對。 如果您選取的篩選條件在比對中過度廣泛，或設定不正確，則無法正確傳送訊息。 如果篩選條件過於嚴格，則部分訊息可能會沒有可用的有效路由。  

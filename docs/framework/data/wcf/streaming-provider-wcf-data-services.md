@@ -1,14 +1,6 @@
 ---
 title: 資料流處理提供者 (WCF Data Services)
-ms.custom: ''
 ms.date: 03/30/2017
-ms.prod: .net-framework-oob
-ms.reviewer: ''
-ms.suite: ''
-ms.technology:
-- dotnet-clr
-ms.tgt_pltfrm: ''
-ms.topic: article
 dev_langs:
 - csharp
 - vb
@@ -18,17 +10,11 @@ helpviewer_keywords:
 - streaming data provider [WCF Data Services]
 - WCF Data Services, streams
 ms.assetid: f0978fe4-5f9f-42aa-a5c2-df395d7c9495
-caps.latest.revision: 8
-author: dotnet-bot
-ms.author: dotnetcontent
-manager: wpickett
-ms.workload:
-- dotnet
-ms.openlocfilehash: bc66d4154f60e46e53de8ca72596e133dc84eb97
-ms.sourcegitcommit: 86adcc06e35390f13c1e372c36d2e044f1fc31ef
-ms.translationtype: MT
+ms.openlocfilehash: 119877802bc6d685cd5b440cedb6ab71b20abf45
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/26/2018
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="streaming-provider-wcf-data-services"></a>資料流處理提供者 (WCF Data Services)
 資料服務可以公開大型物件二進位資料。 這項二進位資料可能代表視訊和音訊資料流、影像、文件檔案，或其他類型的二進位媒體。 當資料模型中的實體包含一個或多個二進位屬性時，資料服務會在回應摘要的項目內，傳回這個 base-64 編碼形式的二進位資料。 載入及序列化大型二進位資料，以這種方式可能會影響效能，因為[!INCLUDE[ssODataFull](../../../../includes/ssodatafull-md.md)]定義一個機制來擷取二進位資料所屬的實體無關。 只要將實體中的二進位資料分成一個或多個資料流就可以完成這項處理。  
@@ -93,7 +79,7 @@ ms.lasthandoff: 04/26/2018
  如需如何建立資料服務的一般資訊，請參閱[設定資料服務](../../../../docs/framework/data/wcf/configuring-the-data-service-wcf-data-services.md)。  
   
 ## <a name="enabling-large-binary-streams-in-the-hosting-environment"></a>在裝載環境中啟用大型二進位資料流  
- 當您建立資料服務中的[!INCLUDE[vstecasp](../../../../includes/vstecasp-md.md)]Web 應用程式，[!INCLUDE[indigo1](../../../../includes/indigo1-md.md)]用來提供 HTTP 通訊協定的實作。 根據預設，[!INCLUDE[indigo2](../../../../includes/indigo2-md.md)]限制只有 65k 位元組的 HTTP 訊息的大小。 為了要能夠與資料服務之間來回進行大型二進位資料的資料流處理，您也必須設定 Web 應用程式啟用大型二進位檔案及使用資料流進行傳輸。 若要這樣做，請在應用程式 Web.config 檔案的 `<configuration />` 項目中加入下列程式碼：  
+ 當您在 [!INCLUDE[vstecasp](../../../../includes/vstecasp-md.md)] Web 應用程式中建立資料服務時，便會使用 Windows Communication Foundation (WCF) 來提供 HTTP 通訊協定實作。 根據預設，[!INCLUDE[indigo2](../../../../includes/indigo2-md.md)]限制只有 65k 位元組的 HTTP 訊息的大小。 為了要能夠與資料服務之間來回進行大型二進位資料的資料流處理，您也必須設定 Web 應用程式啟用大型二進位檔案及使用資料流進行傳輸。 若要這樣做，請在應用程式 Web.config 檔案的 `<configuration />` 項目中加入下列程式碼：  
   
   
   

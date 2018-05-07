@@ -1,37 +1,23 @@
 ---
-title: "HOW TO：安裝和設定 WCF 啟用元件"
-ms.custom: 
+title: HOW TO：安裝和設定 WCF 啟用元件
 ms.date: 03/30/2017
-ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.technology:
-- dotnet-clr
-ms.tgt_pltfrm: 
-ms.topic: article
 helpviewer_keywords:
 - HTTP activation [WCF]
 ms.assetid: 33a7054a-73ec-464d-83e5-b203aeded658
-caps.latest.revision: 
-author: dotnet-bot
-ms.author: dotnetcontent
-manager: wpickett
-ms.workload:
-- dotnet
-ms.openlocfilehash: 78c63fe58872097058292a8b100b376959a2a0b2
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.openlocfilehash: f362bd1e4a644488e85cdeca674d46ca340bde05
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="how-to-install-and-configure-wcf-activation-components"></a>HOW TO：安裝和設定 WCF 啟用元件
-本主題說明設定 [!INCLUDE[wv](../../../../includes/wv-md.md)] 中 Windows Process Activation Service (亦稱為 WAS) 來裝載無法透過 HTTP 網路通訊協定進行通訊的 [!INCLUDE[indigo1](../../../../includes/indigo1-md.md)] 服務時所需的步驟。 下列各節將概述此組態的各項步驟：  
+本主題說明設定 Windows Process Activation Service (亦稱為 WAS) 所需的步驟上[!INCLUDE[wv](../../../../includes/wv-md.md)]來裝載 Windows Communication Foundation (WCF) 服務不會透過 HTTP 通訊的網路通訊協定。 下列各節將概述此組態的各項步驟：  
   
--   安裝 (或確認安裝) [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] 啟動元件。  
+-   安裝 （或確認安裝） WCF 啟用元件。  
   
 -   設定 WAS 支援非 HTTP 通訊協定。 下列程序將設定 [!INCLUDE[wv](../../../../includes/wv-md.md)] 以啟動 TCP。  
   
- 安裝和設定 WAS，請參閱之後[如何： 將 WCF 服務裝載於 WAS](../../../../docs/framework/wcf/feature-details/how-to-host-a-wcf-service-in-was.md)程序來建立[!INCLUDE[indigo2](../../../../includes/indigo2-md.md)]公開非 HTTP 端點採用 WAS 的服務。  
+ 安裝和設定 WAS，請參閱之後[如何： 將 WCF 服務裝載於 WAS](../../../../docs/framework/wcf/feature-details/how-to-host-a-wcf-service-in-was.md)程序來建立會公開非 HTTP 端點採用 WAS 的 WCF 服務。  
   
 ### <a name="to-install-the-wcf-non-http-activation-components"></a>若要安裝 WCF 非 HTTP 啟動元件  
   
@@ -64,7 +50,7 @@ ms.lasthandoff: 12/22/2017
     ```  
   
     > [!NOTE]
-    >  這個命令是單行文字。 此命令會啟用 /\<*WCF 應用程式*> 應用程式使用這兩個 http://localhost 存取*/\<WCF 應用程式 >*和 net.tcp://localhost /*\<WCF 應用程式 >*。  
+    >  這個命令是單行文字。 此命令會啟用 /\<*WCF 應用程式*> 應用程式来使用這兩個存取http://localhost  */ \<WCF 應用程式 >* 和 net.tcp://localhost /*\<WCF 應用程式 >*。  
   
      移除您為此範例新增的 net.tcp 網站繫結。  
   
@@ -113,7 +99,7 @@ ms.lasthandoff: 12/22/2017
     > [!NOTE]
     >  這個命令是單行文字。  
   
-## <a name="see-also"></a>請參閱  
+## <a name="see-also"></a>另請參閱  
  [TCP 啟用](../../../../docs/framework/wcf/samples/tcp-activation.md)  
  [MSMQ 啟用](../../../../docs/framework/wcf/samples/msmq-activation.md)  
  [NamedPipe 啟用](../../../../docs/framework/wcf/samples/namedpipe-activation.md)  

@@ -1,14 +1,6 @@
 ---
-title: "IHostMemoryManager::RegisterMemoryNotificationCallback 方法"
-ms.custom: 
+title: IHostMemoryManager::RegisterMemoryNotificationCallback 方法
 ms.date: 03/30/2017
-ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.technology:
-- dotnet-clr
-ms.tgt_pltfrm: 
-ms.topic: reference
 api_name:
 - IHostMemoryManager.RegisterMemoryNotificationCallback
 api_location:
@@ -23,17 +15,13 @@ helpviewer_keywords:
 ms.assetid: 65d301f6-4dbb-4b5f-8eff-82540e2b6465
 topic_type:
 - apiref
-caps.latest.revision: 
 author: rpetrusha
 ms.author: ronpet
-manager: wpickett
-ms.workload:
-- dotnet
-ms.openlocfilehash: a59de95ea671b6f568ade81005c718cac00350e8
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.openlocfilehash: d68790cdb671efdd0761ceef59196e8646654d5f
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="ihostmemorymanagerregistermemorynotificationcallback-method"></a>IHostMemoryManager::RegisterMemoryNotificationCallback 方法
 目前的記憶體負載，在電腦上的註冊以通知 common language runtime (CLR) 的主機會叫用的回呼函式的指標。  
@@ -54,7 +42,7 @@ HRESULT RegisterMemoryNotificationCallback (
   
 |HRESULT|描述|  
 |-------------|-----------------|  
-|S_OK|`RegisterMemoryNotificationCallback`已成功傳回。|  
+|S_OK|`RegisterMemoryNotificationCallback` 已成功傳回。|  
 |HOST_E_CLRNOTAVAILABLE|CLR 尚未載入到處理程序，或 CLR 正在中它無法執行 managed 程式碼，或成功地處理呼叫的狀態。|  
 |HOST_E_TIMEOUT|呼叫已逾時。|  
 |HOST_E_NOT_OWNER|呼叫端未擁有鎖定。|  
@@ -74,8 +62,8 @@ HRESULT RegisterMemoryNotificationCallback (
   
  **程式庫：**包含做為 MSCorEE.dll 中的資源  
   
- **.NET framework 版本：**[!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]  
+ **.NET framework 版本：** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]  
   
-## <a name="see-also"></a>請參閱  
+## <a name="see-also"></a>另請參閱  
  [ICLRMemoryNotificationCallback 介面](../../../../docs/framework/unmanaged-api/hosting/iclrmemorynotificationcallback-interface.md)  
  [IHostMemoryManager 介面](../../../../docs/framework/unmanaged-api/hosting/ihostmemorymanager-interface.md)

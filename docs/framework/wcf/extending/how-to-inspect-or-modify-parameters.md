@@ -1,30 +1,18 @@
 ---
-title: "HOW TO：檢查或修改參數"
-ms.custom: 
+title: HOW TO：檢查或修改參數
 ms.date: 03/30/2017
-ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.technology: dotnet-clr
-ms.tgt_pltfrm: 
-ms.topic: article
 dev_langs:
 - csharp
 - vb
 ms.assetid: ab6c0ac7-aac4-45ba-93d6-a0e9afd1756f
-caps.latest.revision: "8"
-author: dotnet-bot
-ms.author: dotnetcontent
-manager: wpickett
-ms.workload: dotnet
-ms.openlocfilehash: 5f1a0ef31ba074082e4c3aa8a26e6a59502a7566
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
-ms.translationtype: MT
+ms.openlocfilehash: ddf6ad667eb131ec6fa4f12ed112c57368c43d9c
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="how-to-inspect-or-modify-parameters"></a>HOW TO：檢查或修改參數
-您可以實作 [!INCLUDE[indigo1](../../../../includes/indigo1-md.md)] 介面並將它插入用戶端或服務執行階段中，以檢查或修改 [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] 用戶端物件或 <xref:System.ServiceModel.Dispatcher.IParameterInspector?displayProperty=nameWithType> 服務上單一作業的傳入或傳出訊息。 一般來說，作業行為是用於新增單一作業的參數偵測器；其他行為可用於提供範圍更大之執行階段的簡易存取。 如需詳細資訊，請參閱[擴充用戶端](../../../../docs/framework/wcf/extending/extending-clients.md)和[擴充發送器](../../../../docs/framework/wcf/extending/extending-dispatchers.md)。  
+您可以檢查或修改傳入或傳出的訊息上的 Windows Communication Foundation (WCF) 用戶端物件的單一作業或[!INCLUDE[indigo2](../../../../includes/indigo2-md.md)]服務藉由實作<xref:System.ServiceModel.Dispatcher.IParameterInspector?displayProperty=nameWithType>介面並將它插入用戶端或服務執行階段。 一般來說，作業行為是用於新增單一作業的參數偵測器；其他行為可用於提供範圍更大之執行階段的簡易存取。 如需詳細資訊，請參閱[擴充用戶端](../../../../docs/framework/wcf/extending/extending-clients.md)和[擴充發送器](../../../../docs/framework/wcf/extending/extending-dispatchers.md)。  
   
 ### <a name="inspecting-or-modifying-parameters"></a>檢查或修改參數  
   
@@ -51,5 +39,5 @@ ms.lasthandoff: 12/22/2017
   
  [!code-xml[Interceptors#3](../../../../samples/snippets/csharp/VS_Snippets_CFX/interceptors/cs/client.exe.config#3)]  
   
-## <a name="see-also"></a>請參閱  
+## <a name="see-also"></a>另請參閱  
  [使用行為來設定與擴充執行階段](../../../../docs/framework/wcf/extending/configuring-and-extending-the-runtime-with-behaviors.md)

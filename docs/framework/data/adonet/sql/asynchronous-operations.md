@@ -1,24 +1,12 @@
 ---
-title: "非同步作業"
-ms.custom: 
+title: 非同步作業
 ms.date: 03/30/2017
-ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.technology: dotnet-ado
-ms.tgt_pltfrm: 
-ms.topic: article
 ms.assetid: e7d32c3c-bf78-4bfc-a357-c9e82e4a4b3c
-caps.latest.revision: "5"
-author: douglaslMS
-ms.author: douglasl
-manager: craigg
-ms.workload: dotnet
-ms.openlocfilehash: 293f1ff1fad193c019a42372a30ae6466c074515
-ms.sourcegitcommit: ed26cfef4e18f6d93ab822d8c29f902cff3519d1
+ms.openlocfilehash: 97564600f6f4fb9d4990398527dd2e45fcb9f015
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 01/17/2018
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="asynchronous-operations"></a>非同步作業
 某些資料庫作業 (如命令執行) 要花費相當長的時間才能完成。 在此情況下，單一執行緒應用程式必須封鎖其他作業並等待命令完成後，才能繼續它們自己的作業。 相反的，將長期執行作業指派給背景執行緒，可讓前景執行緒在作業過程中保持作用中狀態。 例如，若在 Windows 應用程式中將長期執行作業委派給背景執行緒，可讓使用者介面執行緒在作業執行時保持回應狀態。  
@@ -40,7 +28,7 @@ ms.lasthandoff: 01/17/2018
  [在主控台應用程式中輪詢](../../../../../docs/framework/data/adonet/sql/polling-in-console-applications.md)  
  提供範例，示範如何使用輪詢等待從主控台應用程式執行的非同步命令完成。 此技術在類別庫或不具使用者介面的其他應用程式中也有效。  
   
-## <a name="see-also"></a>請參閱  
+## <a name="see-also"></a>另請參閱  
  [SQL Server 和 ADO.NET](../../../../../docs/framework/data/adonet/sql/index.md)  
  [非同步呼叫同步方法](../../../../../docs/standard/asynchronous-programming-patterns/calling-synchronous-methods-asynchronously.md)  
  [ADO.NET Managed 提供者和 DataSet 開發人員中心](http://go.microsoft.com/fwlink/?LinkId=217917)

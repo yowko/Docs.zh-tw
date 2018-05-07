@@ -1,27 +1,15 @@
 ---
-title: "判斷服務作業持續時間"
-ms.custom: 
+title: 判斷服務作業持續時間
 ms.date: 03/30/2017
-ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.technology: dotnet-clr
-ms.tgt_pltfrm: 
-ms.topic: article
 ms.assetid: e8a93a2c-2c20-48b3-8986-57e90e9aa908
-caps.latest.revision: "5"
-author: dotnet-bot
-ms.author: dotnetcontent
-manager: wpickett
-ms.workload: dotnet
-ms.openlocfilehash: 2c96aa6752feca637f89ed309d1a5c87cea4a3a9
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
-ms.translationtype: MT
+ms.openlocfilehash: a7615a4574210ad6e9b5eee2e5d5855365768854
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="determining-service-operation-duration"></a>判斷服務作業持續時間
-如果已啟用 [!INCLUDE[indigo1](../../../../../includes/indigo1-md.md)] 應用程式中的分析追蹤，則透過檢查事件記錄檔就能輕鬆判斷出服務作業的執行持續時間。  本主題示範如何判斷服務作業完成所需的時間。  
+如果分析追蹤已啟用 Windows Communication Foundation (WCF) 應用程式中，服務作業執行期間可以輕鬆地檢查事件記錄檔來判斷。  本主題示範如何判斷服務作業完成所需的時間。  
   
 ### <a name="determining-service-operation-execution-duration"></a>判斷服務作業執行持續時間  
   

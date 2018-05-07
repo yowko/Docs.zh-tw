@@ -1,30 +1,18 @@
 ---
-title: "處理例外狀況和錯誤"
-ms.custom: 
+title: 處理例外狀況和錯誤
 ms.date: 03/30/2017
-ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.technology: dotnet-clr
-ms.tgt_pltfrm: 
-ms.topic: article
 ms.assetid: a64d01c6-f221-4f58-93e5-da4e87a5682e
-caps.latest.revision: "12"
-author: dotnet-bot
-ms.author: dotnetcontent
-manager: wpickett
-ms.workload: dotnet
-ms.openlocfilehash: ae8d16db6fefccf01692088e29676f6bfeace0e3
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
-ms.translationtype: MT
+ms.openlocfilehash: a7fb7b5dd5755b9d534d9a96af3db598a44b42b0
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="handling-exceptions-and-faults"></a>處理例外狀況和錯誤
 例外狀況是用來在本機上傳送服務或用戶端實作內發生的錯誤。 另一方面，錯誤 (Fault) 是用來傳送跨越服務界限 (例如從伺服器到用戶端，反之亦然) 發生的錯誤 (Error)。 除了錯誤 (Fault) 以外，傳輸通道也經常會使用傳輸特定的機制來傳送傳輸層級的錯誤 (Error)。 例如，HTTP 傳輸會使用 404 等狀態碼來傳送不存在的端點 URL (表示沒有端點可傳回錯誤)。 本文件包含的三個章節都提供指引給自訂通道作者。 第一個章節會提供關於何時與如何定義及擲回例外狀況的指引， 而第二個章節會提供關於產生和使用錯誤的指引， 第三個章節則會說明如何提供追蹤資訊，以協助自訂通道的使用者針對執行中的應用程式進行疑難排解。  
   
 ## <a name="exceptions"></a>例外狀況  
- 在擲回例外狀況時必須記住兩件事。首先，例外狀況的類型必須可讓使用者撰寫可適當回應此例外狀況的正確程式碼。 其次，例外狀況必須提供足夠的資訊，讓使用者瞭解何處出錯、失敗的影響以及如何進行修正。 下列章節會提供關於 [!INCLUDE[indigo1](../../../../includes/indigo1-md.md)] 通道之例外狀況類型與訊息的指引。 在＜例外狀況的設計方針＞文件中，也有關於 .NET 例外狀況的一般指引。  
+ 在擲回例外狀況時必須記住兩件事。首先，例外狀況的類型必須可讓使用者撰寫可適當回應此例外狀況的正確程式碼。 其次，例外狀況必須提供足夠的資訊，讓使用者瞭解何處出錯、失敗的影響以及如何進行修正。 下列章節會提供有關例外狀況類型和 Windows Communication Foundation (WCF) 通道訊息的指引。 在＜例外狀況的設計方針＞文件中，也有關於 .NET 例外狀況的一般指引。  
   
 ### <a name="exception-types"></a>例外狀況類型  
  由通道擲回的所有例外狀況都必須是 <xref:System.TimeoutException?displayProperty=nameWithType>、<xref:System.ServiceModel.CommunicationException?displayProperty=nameWithType>，或是從 <xref:System.ServiceModel.CommunicationException> 衍生的類型。 系統可能也會擲回 <xref:System.ObjectDisposedException> 等例外狀況，不過這只是用來表示呼叫的程式碼誤用通道。 如果正確使用通道，它一定只會擲回指定的例外狀況。) [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] 提供的七個例外狀況型別是衍生自 <xref:System.ServiceModel.CommunicationException>，而且是設計給通道使用。 還有其他 <xref:System.ServiceModel.CommunicationException>衍生的例外狀況是設計用來讓系統的其他部分使用。 這些例外狀況類型包括：  

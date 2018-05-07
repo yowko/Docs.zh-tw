@@ -1,13 +1,6 @@
 ---
-title: "如何：變更 Windows Form 中 ToolStrip 文字和影像的外觀"
-ms.custom: 
+title: 如何：變更 Windows Form 中 ToolStrip 文字和影像的外觀
 ms.date: 03/30/2017
-ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.technology: dotnet-winforms
-ms.tgt_pltfrm: 
-ms.topic: article
 dev_langs:
 - csharp
 - vb
@@ -20,16 +13,11 @@ helpviewer_keywords:
 - ToolStrip control [Windows Forms], text
 - toolbars [Windows Forms], text
 ms.assetid: d62dc9d1-2edd-4dfa-aed7-1335d6e13d86
-caps.latest.revision: "11"
-author: dotnet-bot
-ms.author: dotnetcontent
-manager: wpickett
-ms.workload: dotnet
-ms.openlocfilehash: fe88ff8d31a83b8516b11cd9aadd4bc2d4bf99a9
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.openlocfilehash: d3f53291e24d6a57e798725b716a7fd56eb661b4
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="how-to-change-the-appearance-of-toolstrip-text-and-images-in-windows-forms"></a>如何：變更 Windows Form 中 ToolStrip 文字和影像的外觀
 您可以控制是否顯示文字和影像上<xref:System.Windows.Forms.ToolStripItem>和與彼此相對的對齊方式和<xref:System.Windows.Forms.ToolStrip>。  
@@ -86,7 +74,7 @@ ms.lasthandoff: 12/22/2017
     toolStripButton1.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageAboveText;  
     ```  
   
-## <a name="see-also"></a>請參閱  
+## <a name="see-also"></a>另請參閱  
  <xref:System.Windows.Forms.ToolStrip>  
  [ToolStrip 控制項概觀](../../../../docs/framework/winforms/controls/toolstrip-control-overview-windows-forms.md)  
  [ToolStrip 控制項架構](../../../../docs/framework/winforms/controls/toolstrip-control-architecture.md)  

@@ -1,13 +1,6 @@
 ---
-title: "ToolTip 概觀"
-ms.custom: 
+title: ToolTip 概觀
 ms.date: 03/30/2017
-ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.technology: dotnet-wpf
-ms.tgt_pltfrm: 
-ms.topic: article
 dev_langs:
 - csharp
 - vb
@@ -15,16 +8,11 @@ helpviewer_keywords:
 - ToolTip control [WPF], about ToolTip control
 - controls [WPF], ToolTip
 ms.assetid: f06c1603-e9cb-4809-8a62-234607fc52f7
-caps.latest.revision: "22"
-author: dotnet-bot
-ms.author: dotnetcontent
-manager: wpickett
-ms.workload: dotnet
-ms.openlocfilehash: 7c945d23def3bbf6284e7e0db95d391066256df6
-ms.sourcegitcommit: c0dd436f6f8f44dc80dc43b07f6841a00b74b23f
+ms.openlocfilehash: b70387e604b0917d154fc056b904e9ee05f6fbbe
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 01/19/2018
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="tooltip-overview"></a>ToolTip 概觀
 工具提示是小型的快顯視窗出現時，使用者將滑鼠指標停留在項目，例如為 [過度] <xref:System.Windows.Controls.Button>。 本主題將介紹工具提示，並說明如何建立及自訂工具提示內容。  
@@ -86,7 +74,7 @@ ms.lasthandoff: 01/19/2018
   
  [!code-xaml[ToolTipService#ToolTip](../../../../samples/snippets/csharp/VS_Snippets_Wpf/ToolTipService/CSharp/Pane1.xaml#tooltip)]  
   
-## <a name="see-also"></a>請參閱  
+## <a name="see-also"></a>另請參閱  
  <xref:System.Windows.Controls.ToolTipService>  
  <xref:System.Windows.Controls.ToolTip>  
  <xref:System.Windows.Controls.ToolTipEventArgs>  

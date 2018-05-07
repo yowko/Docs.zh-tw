@@ -1,30 +1,18 @@
 ---
-title: "概觀說明"
-ms.custom: 
+title: 概觀說明
 ms.date: 03/30/2017
-ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.technology: dotnet-clr
-ms.tgt_pltfrm: 
-ms.topic: article
 helpviewer_keywords:
 - WCF [WCF], concepts
 - Windows Communication Foundation [WCF], concepts
 ms.assetid: 503fae4b-014c-44df-a9c7-c76ec4ed4229
-caps.latest.revision: "24"
-author: dotnet-bot
-ms.author: dotnetcontent
-manager: wpickett
-ms.workload: dotnet
-ms.openlocfilehash: 837ba9cbc5885c5d586ee1d65627b2d1424b4924
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
-ms.translationtype: MT
+ms.openlocfilehash: 93c0411c8d261e40bd4e8f1cd11d8a51d4f0edb4
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="conceptual-overview"></a>概觀說明
-此主題摘要了 [!INCLUDE[indigo1](../../../includes/indigo1-md.md)] 訊息系統及支援該訊息系統用法之類別的相關資訊。  
+本主題摘要說明資訊的相關 Windows Communication Foundation (WCF) 訊息系統及支援其使用的類別。  
   
 ## <a name="in-this-section"></a>本節內容  
  [什麼是 Windows Communication Foundation](../../../docs/framework/wcf/whats-wcf.md)  

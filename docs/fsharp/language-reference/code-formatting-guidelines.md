@@ -1,17 +1,12 @@
 ---
 title: 程式碼格式化方針 (F#)
 description: 'F # 程式語言的可讀性、 美學、 標準化及編譯，了解程式碼縮排格式的指導方針。'
-author: cartermp
-ms.author: phcart
 ms.date: 05/16/2016
-ms.topic: language-reference
-ms.prod: dotnet-fsharp
-ms.devlang: fsharp
-ms.openlocfilehash: a16378b42e7d2acd44dcfe0af7c68a55e4be41d1
-ms.sourcegitcommit: 03ee570f6f528a7d23a4221dcb26a9498edbdf8c
+ms.openlocfilehash: 5bb1f9958a21beb795f9174e44f24c7194453fc3
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/28/2018
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="code-formatting-guidelines"></a>程式碼格式化方針
 

@@ -1,27 +1,15 @@
 ---
-title: "建立 BindingElement"
-ms.custom: 
+title: 建立 BindingElement
 ms.date: 03/30/2017
-ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.technology: dotnet-clr
-ms.tgt_pltfrm: 
-ms.topic: article
 ms.assetid: 01a35307-a41f-4ef6-a3db-322af40afc99
-caps.latest.revision: "12"
-author: dotnet-bot
-ms.author: dotnetcontent
-manager: wpickett
-ms.workload: dotnet
-ms.openlocfilehash: 0184d07210322e6ed04441f7190857cf07205b15
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
-ms.translationtype: MT
+ms.openlocfilehash: fdc3ec1fef86ad31434ea372740497969c7ae6a7
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="creating-a-bindingelement"></a>建立 BindingElement
-繫結和繫結項目 (分別延伸 <xref:System.ServiceModel.Channels.Binding?displayProperty=nameWithType> 和 <xref:System.ServiceModel.Channels.BindingElement?displayProperty=nameWithType> 的物件) 就是 [!INCLUDE[indigo1](../../../../includes/indigo1-md.md)] 應用程式模型與通道處理站和通道接聽程式建立關聯的位置。 不繫結，使用自訂通道，需要在通道層級的程式設計中所述[服務通道層級程式設計](../../../../docs/framework/wcf/extending/service-channel-level-programming.md)和[用戶端通道層級程式設計](../../../../docs/framework/wcf/extending/client-channel-level-programming.md)。 本主題討論的最低需求，以便使用您的通道中[!INCLUDE[indigo2](../../../../includes/indigo2-md.md)]，開發<xref:System.ServiceModel.Channels.BindingElement>為您的通道，並從應用程式的步驟 4 中所述的啟用使用[開發通道](../../../../docs/framework/wcf/extending/developing-channels.md)。  
+繫結和繫結項目 (延伸的物件<xref:System.ServiceModel.Channels.Binding?displayProperty=nameWithType>和<xref:System.ServiceModel.Channels.BindingElement?displayProperty=nameWithType>分別) 是 Windows Communication Foundation (WCF) 應用程式模型所在的通道處理站和通道接聽程式相關聯的位置。 不繫結，使用自訂通道，需要在通道層級的程式設計中所述[服務通道層級程式設計](../../../../docs/framework/wcf/extending/service-channel-level-programming.md)和[用戶端通道層級程式設計](../../../../docs/framework/wcf/extending/client-channel-level-programming.md)。 本主題討論的最低需求，以便使用您的通道中[!INCLUDE[indigo2](../../../../includes/indigo2-md.md)]，開發<xref:System.ServiceModel.Channels.BindingElement>為您的通道，並從應用程式的步驟 4 中所述的啟用使用[開發通道](../../../../docs/framework/wcf/extending/developing-channels.md)。  
   
 ## <a name="overview"></a>總覽  
  為您的通道建立 <xref:System.ServiceModel.Channels.BindingElement>，便可讓開發人員在 [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] 應用程式中使用您的通道。 <xref:System.ServiceModel.Channels.BindingElement> 物件可從 <xref:System.ServiceModel.ServiceHost?displayProperty=nameWithType> 類別用來將 [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] 應用程式連接至您的通道，而不需要精確輸入您的通道資訊。  
@@ -82,7 +70,7 @@ public IChannelListener<TChannel> BuildChannelListener<TChannel>(BindingContext 
   
  一旦您已經建立您的通道繫結項目，返回到[開發通道](../../../../docs/framework/wcf/extending/developing-channels.md)主題，查看是否要將組態檔支援新增至您的繫結項目，如果以及如何新增發行集支援中繼資料，以及是否及如何使用您的繫結項目來建構使用者定義的繫結。  
   
-## <a name="see-also"></a>請參閱  
+## <a name="see-also"></a>另請參閱  
  <xref:System.ServiceModel.Channels.BindingElement>  
  [開發通道](../../../../docs/framework/wcf/extending/developing-channels.md)  
  [傳輸：UDP](../../../../docs/framework/wcf/samples/transport-udp.md)

@@ -1,27 +1,15 @@
 ---
-title: "WebContentTypeMapper 範例"
-ms.custom: 
+title: WebContentTypeMapper 範例
 ms.date: 03/30/2017
-ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.technology: dotnet-clr
-ms.tgt_pltfrm: 
-ms.topic: article
 ms.assetid: a4fe59e7-44d8-43c6-a1f8-40c45223adca
-caps.latest.revision: "15"
-author: dotnet-bot
-ms.author: dotnetcontent
-manager: wpickett
-ms.workload: dotnet
-ms.openlocfilehash: 34adf191d3edbff33fe989cf036c32104a6754ae
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
-ms.translationtype: MT
+ms.openlocfilehash: 3b3d53b0fe619c74c5e7f3533194f4b5e7c18a16
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="webcontenttypemapper-sample"></a>WebContentTypeMapper 範例
-這個範例會示範如何將新內容型別對應至 [!INCLUDE[indigo1](../../../../includes/indigo1-md.md)] 訊息本文格式。  
+這個範例示範如何將新內容型別對應至 Windows Communication Foundation (WCF) 訊息本文格式。  
   
  <xref:System.ServiceModel.Description.WebHttpEndpoint> 項目會插入 Web 訊息編碼器，這個編碼器可以讓 [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] 在相同的端點上接收 JSON、XML 或原始二進位訊息。 此編碼器會藉由尋找要求的 HTTP 內容型別來判定訊息的本文格式。 這個範例會介紹 <xref:System.ServiceModel.Channels.WebContentTypeMapper> 類別，以允許使用者控制內容型別與本文格式之間的對應。  
   
@@ -69,15 +57,15 @@ public class JsonContentTypeMapper : WebContentTypeMapper
   
 2.  中所述，建置此方案 WebContentTypeMapperSample.sln[建置 Windows Communication Foundation 範例](../../../../docs/framework/wcf/samples/building-the-samples.md)。  
   
-3.  瀏覽到 http://localhost/ServiceModelSamples/JCTMClientPage.htm (不要使用瀏覽器從專案目錄開啟 JCTMClientPage.htm)。  
+3.  瀏覽至http://localhost/ServiceModelSamples/JCTMClientPage.htm（不要在瀏覽器從專案目錄開啟 JCTMClientPage.htm）。  
   
 > [!IMPORTANT]
 >  這些範例可能已安裝在您的電腦上。 請先檢查下列 (預設) 目錄，然後再繼續。  
 >   
 >  `<InstallDrive>:\WF_WCF_Samples`  
 >   
->  如果此目錄不存在，請移至 [Windows Communication Foundation (WCF) and Windows Workflow Foundation (WF) Samples for .NET Framework 4  (適用於 .NET Framework 4 的 Windows Communication Foundation (WCF) 與 Windows Workflow Foundation (WF) 範例)](http://go.microsoft.com/fwlink/?LinkId=150780) ，以下載所有 [!INCLUDE[indigo1](../../../../includes/indigo1-md.md)] 和 [!INCLUDE[wf1](../../../../includes/wf1-md.md)] 範例。 此範例位於下列目錄。  
+>  如果此目錄不存在，請移至[Windows Communication Foundation (WCF) 和適用於.NET Framework 4 的 Windows Workflow Foundation (WF) 範例](http://go.microsoft.com/fwlink/?LinkId=150780)下載所有 Windows Communication Foundation (WCF) 和[!INCLUDE[wf1](../../../../includes/wf1-md.md)]範例。 此範例位於下列目錄。  
 >   
 >  `<InstallDrive>:\WF_WCF_Samples\WCF\Extensibility\Ajax\WebContentTypeMapper`  
   
-## <a name="see-also"></a>請參閱
+## <a name="see-also"></a>另請參閱

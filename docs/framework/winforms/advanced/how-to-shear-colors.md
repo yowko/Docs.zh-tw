@@ -1,13 +1,6 @@
 ---
-title: "如何：切變色彩"
-ms.custom: 
+title: 如何：切變色彩
 ms.date: 03/30/2017
-ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.technology: dotnet-winforms
-ms.tgt_pltfrm: 
-ms.topic: article
 dev_langs:
 - csharp
 - vb
@@ -15,16 +8,11 @@ helpviewer_keywords:
 - colors [Windows Forms], transforming with color matrices
 - colors [Windows Forms], shearing
 ms.assetid: 0a424171-5b8b-45c4-afef-e9720a6c3e22
-caps.latest.revision: "13"
-author: dotnet-bot
-ms.author: dotnetcontent
-manager: wpickett
-ms.workload: dotnet
-ms.openlocfilehash: 0a32e6c1901f84c276c071402dac641d45566717
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.openlocfilehash: 204f15ce44d5ad688be0ea9ac0fa4a90781b25dd
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="how-to-shear-colors"></a>如何：切變色彩
 切變增加，或另一個色彩元件等比例的量減少色彩元件。 例如，請考慮的轉換一半的值的藍色元件其中增加的紅色元件。 在這類轉換 （0.7，0.5，1），就會變成 （0.2，0.5，1） 的色彩。 新的紅色元件為 0.2 + (1/2)(1) = 0.7。  
@@ -51,7 +39,7 @@ ms.lasthandoff: 12/22/2017
 ## <a name="compiling-the-code"></a>編譯程式碼  
  上述範例設計用於搭配 Windows Form，且其需要<xref:System.Windows.Forms.PaintEventArgs> `e`，這是參數的<xref:System.Windows.Forms.Control.Paint>事件處理常式。 取代`ColorBars.bmp`映像名稱與您系統上有效的路徑。  
   
-## <a name="see-also"></a>請參閱  
+## <a name="see-also"></a>另請參閱  
  <xref:System.Drawing.Imaging.ColorMatrix>  
  <xref:System.Drawing.Imaging.ImageAttributes>  
  [Windows Forms 中的圖形和繪圖](../../../../docs/framework/winforms/advanced/graphics-and-drawing-in-windows-forms.md)  

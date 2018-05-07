@@ -1,24 +1,12 @@
 ---
-title: "資料流"
-ms.custom: 
+title: 資料流
 ms.date: 03/30/2017
-ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.technology: dotnet-clr
-ms.tgt_pltfrm: 
-ms.topic: article
 ms.assetid: 58a3db81-20ab-4627-bf31-39d30b70b4fe
-caps.latest.revision: "22"
-author: dotnet-bot
-ms.author: dotnetcontent
-manager: wpickett
-ms.workload: dotnet
-ms.openlocfilehash: ab56dd7938f2c7594627b54b4cb61b4e0f6b28fe
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.openlocfilehash: 96b77d0135a4dac1dcb8406a1b9a1372d0c4a35d
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="stream"></a>資料流
 這個資料流範例將示範資料流傳輸模式通訊的使用。 服務會公開數個傳送和接收資料流的作業。 這個範例會自我裝載。 用戶端和服務都是主控台程式。  
@@ -26,7 +14,7 @@ ms.lasthandoff: 12/22/2017
 > [!NOTE]
 >  此範例的安裝程序與建置指示位於本主題的結尾。  
   
- [!INCLUDE[indigo1](../../../../includes/indigo1-md.md)] 可以使用兩種傳輸模式進行通訊：緩衝或資料流。 在預設的緩衝傳輸模式中，必須完整傳遞訊息，接收者才能讀取。 在資料流傳輸模式中，接收者不需等到訊息完全送達，就可以開始處理訊息。 當資訊的傳遞很漫長，但是可依序列處理時，使用資料流模式將十分有幫助。 當訊息太龐大而無法完整加以緩衝時，資料流模式也很有用處。  
+ Windows Communication Foundation (WCF) 可以在兩種傳輸模式通訊： 緩衝或資料流。 在預設的緩衝傳輸模式中，必須完整傳遞訊息，接收者才能讀取。 在資料流傳輸模式中，接收者不需等到訊息完全送達，就可以開始處理訊息。 當資訊的傳遞很漫長，但是可依序列處理時，使用資料流模式將十分有幫助。 當訊息太龐大而無法完整加以緩衝時，資料流模式也很有用處。  
   
 ## <a name="streaming-and-service-contracts"></a>資料流和服務合約  
  設計服務合約時，資料流是一項需要考慮的重點。 如果作業會接收或傳回大量的資料，您應該考慮透過資料流處理這筆資料，以避免因為要緩衝輸入或輸出訊息而佔用太多記憶體。 若要以資料流方式處理資料，存放該資料的參數必須是訊息中的唯一參數。 例如，如果輸入訊息是要處理成資料流的訊息，這項處理作業就必須剛好只有一個輸入參數。 同樣地，如果要將輸出訊息處理成資料流，這項作業也必須剛好只有一個輸出參數或傳回值。 不論是何種情況，參數或傳回值型別都必須是 `Stream`、`Message` 或 `IXmlSerializable`。 下列是這個資料流範例中使用的服務合約。  
@@ -192,8 +180,8 @@ Press <ENTER> to terminate client.
 >   
 >  `<InstallDrive>:\WF_WCF_Samples`  
 >   
->  如果此目錄不存在，請移至 [Windows Communication Foundation (WCF) and Windows Workflow Foundation (WF) Samples for .NET Framework 4  (適用於 .NET Framework 4 的 Windows Communication Foundation (WCF) 與 Windows Workflow Foundation (WF) 範例)](http://go.microsoft.com/fwlink/?LinkId=150780) ，以下載所有 [!INCLUDE[indigo1](../../../../includes/indigo1-md.md)] 和 [!INCLUDE[wf1](../../../../includes/wf1-md.md)] 範例。 此範例位於下列目錄。  
+>  如果此目錄不存在，請移至[Windows Communication Foundation (WCF) 和適用於.NET Framework 4 的 Windows Workflow Foundation (WF) 範例](http://go.microsoft.com/fwlink/?LinkId=150780)下載所有 Windows Communication Foundation (WCF) 和[!INCLUDE[wf1](../../../../includes/wf1-md.md)]範例。 此範例位於下列目錄。  
 >   
 >  `<InstallDrive>:\WF_WCF_Samples\WCF\Basic\Contract\Service\Stream`  
   
-## <a name="see-also"></a>請參閱
+## <a name="see-also"></a>另請參閱

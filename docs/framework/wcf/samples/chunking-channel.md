@@ -1,27 +1,15 @@
 ---
-title: "區塊處理通道"
-ms.custom: 
+title: 區塊處理通道
 ms.date: 03/30/2017
-ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.technology: dotnet-clr
-ms.tgt_pltfrm: 
-ms.topic: article
 ms.assetid: e4d53379-b37c-4b19-8726-9cc914d5d39f
-caps.latest.revision: "14"
-author: dotnet-bot
-ms.author: dotnetcontent
-manager: wpickett
-ms.workload: dotnet
-ms.openlocfilehash: d55b0085552f0baf826380340aaf9f1117ab3307
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.openlocfilehash: 1acb635be23b9a838abee714156d818abee6bcd5
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="chunking-channel"></a>區塊處理通道
-使用 [!INCLUDE[indigo1](../../../../includes/indigo1-md.md)] 傳送較大訊息時，通常需要限制使用的記憶體數量，以緩衝處理這些訊息。 一個可能的方案為以資料流處理訊息本文 (假設本文中有大量資料)。 然而，有些通訊協定需要緩衝處理整個訊息。 例如，可靠的傳訊和安全性。 另一個可能的方案為將較大訊息分成較小的訊息 (稱為區塊 (Chunk))，一次以單一區塊傳送這些區塊，然後在接收端重新構成較大訊息。 應用程式本身便可執行此區塊處理和取消區塊處理，或可以使用自訂通道來進行此作業。 區塊處理通道範例會顯示如何使用自訂通訊協定或層次通道，以便區塊處理和取消區塊處理任意較大訊息。  
+傳送大型訊息使用 Windows Communication Foundation (WCF) 時，通常會限制用來緩衝處理這些訊息的記憶體數量。 一個可能的方案為以資料流處理訊息本文 (假設本文中有大量資料)。 然而，有些通訊協定需要緩衝處理整個訊息。 例如，可靠的傳訊和安全性。 另一個可能的方案為將較大訊息分成較小的訊息 (稱為區塊 (Chunk))，一次以單一區塊傳送這些區塊，然後在接收端重新構成較大訊息。 應用程式本身便可執行此區塊處理和取消區塊處理，或可以使用自訂通道來進行此作業。 區塊處理通道範例會顯示如何使用自訂通訊協定或層次通道，以便區塊處理和取消區塊處理任意較大訊息。  
   
  區塊處理應該只能在要傳送的整個訊息已建構完成之後運用。 區塊處理通道應該只能是安全性通道和可靠工作階段通道下的一層。  
   
@@ -33,7 +21,7 @@ ms.lasthandoff: 12/22/2017
 >   
 >  `<InstallDrive>:\WF_WCF_Samples`  
 >   
->  如果此目錄不存在，請移至 [Windows Communication Foundation (WCF) and Windows Workflow Foundation (WF) Samples for .NET Framework 4  (適用於 .NET Framework 4 的 Windows Communication Foundation (WCF) 與 Windows Workflow Foundation (WF) 範例)](http://go.microsoft.com/fwlink/?LinkId=150780) ，以下載所有 [!INCLUDE[indigo1](../../../../includes/indigo1-md.md)] 和 [!INCLUDE[wf1](../../../../includes/wf1-md.md)] 範例。 此範例位於下列目錄。  
+>  如果此目錄不存在，請移至[Windows Communication Foundation (WCF) 和適用於.NET Framework 4 的 Windows Workflow Foundation (WF) 範例](http://go.microsoft.com/fwlink/?LinkId=150780)下載所有 Windows Communication Foundation (WCF) 和[!INCLUDE[wf1](../../../../includes/wf1-md.md)]範例。 此範例位於下列目錄。  
 >   
 >  `<InstallDrive>:\WF_WCF_Samples\WCF\Extensibility\Channels\ChunkingChannel`  
   
@@ -389,4 +377,4 @@ Service started, press enter to exit
  > Sent chunk 10 of message 5b226ad5-c088-4988-b737-6a565e0563dd  
 ```  
   
-## <a name="see-also"></a>請參閱
+## <a name="see-also"></a>另請參閱

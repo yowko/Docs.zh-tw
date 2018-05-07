@@ -1,27 +1,15 @@
 ---
-title: "如何：在 ControlTemplate 中建立動畫"
-ms.custom: 
+title: 如何：在 ControlTemplate 中建立動畫
 ms.date: 03/30/2017
-ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.technology: dotnet-wpf
-ms.tgt_pltfrm: 
-ms.topic: article
 helpviewer_keywords:
 - animation [WPF], ControlTemplates
 - ControlTemplates [WPF], animating within
 ms.assetid: 97abb5d9-4dc7-4085-a011-54bd8bcb497b
-caps.latest.revision: "6"
-author: dotnet-bot
-ms.author: dotnetcontent
-manager: wpickett
-ms.workload: dotnet
-ms.openlocfilehash: 2a47a1ccf80d692966ffd42c1894905d3bf2366a
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.openlocfilehash: 606b78837616f9fa862a0c95381a99f76e3a1c82
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="how-to-animate-in-a-controltemplate"></a>如何：在 ControlTemplate 中建立動畫
 這個範例示範如何使用<xref:System.Windows.Media.Animation.Storyboard>， <xref:System.Windows.EventTrigger>，和<xref:System.Windows.Trigger>物件以動畫方式顯示內<xref:System.Windows.Controls.ControlTemplate>。  
@@ -31,5 +19,5 @@ ms.lasthandoff: 12/22/2017
   
  如需建立屬性的分鏡腳本動畫的詳細資訊，請參閱[概觀腳本](../../../../docs/framework/wpf/graphics-multimedia/storyboards-overview.md)。  
   
-## <a name="see-also"></a>請參閱  
+## <a name="see-also"></a>另請參閱  
  <xref:System.Windows.Controls.ControlTemplate>

@@ -1,37 +1,23 @@
 ---
 title: 使用 XmlSerializer 類別
-ms.custom: ''
 ms.date: 03/30/2017
-ms.prod: .net-framework
-ms.reviewer: ''
-ms.suite: ''
-ms.technology:
-- dotnet-clr
-ms.tgt_pltfrm: ''
-ms.topic: article
 dev_langs:
 - csharp
 - vb
 helpviewer_keywords:
 - XmlSerializer [WCF], using
 ms.assetid: c680602d-39d3-44f1-bf22-8e6654ad5069
-caps.latest.revision: 26
-author: dotnet-bot
-ms.author: dotnetcontent
-manager: wpickett
-ms.workload:
-- dotnet
-ms.openlocfilehash: 5a628215848d46ec3fe24030dfb1dd55fc3383bf
-ms.sourcegitcommit: 94d33cadc5ff81d2ac389bf5f26422c227832052
+ms.openlocfilehash: 72b08a58b8ed62a5db2bb210e73357cb3b5dab8e
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/30/2018
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="using-the-xmlserializer-class"></a>使用 XmlSerializer 類別
-[!INCLUDE[indigo1](../../../../includes/indigo1-md.md)] 可以使用兩種不同的序列化技術，將您應用程式中的資料轉換成 XML，在用戶端和服務之間傳輸，這種處理稱為序列化。  
+Windows Communication Foundation (WCF) 可以使用兩個不同的序列化技術，將資料轉換成 XML，在用戶端和服務，這種處理稱為序列化之間所傳輸的應用程式中。  
   
 ## <a name="datacontractserializer-as-the-default"></a>DataContractSerializer 為預設值  
- 根據預設，[!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] 會使用 <xref:System.Runtime.Serialization.DataContractSerializer> 類別來序列化資料型別。 這個序列化程式支援下列型別：  
+ 根據預設使用 WCF<xref:System.Runtime.Serialization.DataContractSerializer>類別來序列化資料型別。 這個序列化程式支援下列型別：  
   
 -   基本型別 (例如，整數、字串和位元組陣列) 以及一些特殊型別，例如 <xref:System.Xml.XmlElement> 和 <xref:System.DateTime>，它們被視為基本型別。  
   
@@ -45,17 +31,17 @@ ms.lasthandoff: 04/30/2018
   
  許多 [!INCLUDE[dnprdnshort](../../../../includes/dnprdnshort-md.md)] 型別屬於後兩種類別，因此是可序列化的。 可序列化型別的陣列也是可序列化的。 如需完整清單，請參閱[在服務合約中指定資料傳輸](../../../../docs/framework/wcf/feature-details/specifying-data-transfer-in-service-contracts.md)。  
   
- 搭配資料合約類型使用的 <xref:System.Runtime.Serialization.DataContractSerializer> 是寫入新 [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] 服務的建議方式。 如需詳細資訊，請參閱[使用資料合約](../../../../docs/framework/wcf/feature-details/using-data-contracts.md)。  
+ <xref:System.Runtime.Serialization.DataContractSerializer>搭配資料合約類型使用，是撰寫新的 WCF 服務的建議的方式。 如需詳細資訊，請參閱[使用資料合約](../../../../docs/framework/wcf/feature-details/using-data-contracts.md)。  
   
 ## <a name="when-to-use-the-xmlserializer-class"></a>何時使用 XmlSerializer 類別  
- [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] 也支援 <xref:System.Xml.Serialization.XmlSerializer> 類別。 <xref:System.Xml.Serialization.XmlSerializer> 不是 [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] 特有的類別， 它是 [!INCLUDE[vstecasp](../../../../includes/vstecasp-md.md)] Web 服務使用的同一個序列化引擎。 <xref:System.Xml.Serialization.XmlSerializer> 類別支援的型別集範圍比 <xref:System.Runtime.Serialization.DataContractSerializer> 類別小多了，但允許對於結果 XML 有更多的控制權，並支援更多的 XML 結構描述定義語言 (XSD) 標準。 它在可序列化型別上也不需要任何宣告式屬性。 如需詳細資訊，請參閱中的 XML 序列化 」 主題[!INCLUDE[dnprdnshort](../../../../includes/dnprdnshort-md.md)]文件。 <xref:System.Xml.Serialization.XmlSerializer> 類別不支援資料合約類型。  
+ WCF 還支援<xref:System.Xml.Serialization.XmlSerializer>類別。 <xref:System.Xml.Serialization.XmlSerializer>類別不是唯一至 WCF。 它是 [!INCLUDE[vstecasp](../../../../includes/vstecasp-md.md)] Web 服務使用的同一個序列化引擎。 <xref:System.Xml.Serialization.XmlSerializer> 類別支援的型別集範圍比 <xref:System.Runtime.Serialization.DataContractSerializer> 類別小多了，但允許對於結果 XML 有更多的控制權，並支援更多的 XML 結構描述定義語言 (XSD) 標準。 它在可序列化型別上也不需要任何宣告式屬性。 如需詳細資訊，請參閱中的 XML 序列化 」 主題[!INCLUDE[dnprdnshort](../../../../includes/dnprdnshort-md.md)]文件。 <xref:System.Xml.Serialization.XmlSerializer> 類別不支援資料合約類型。  
   
  當使用 Svcutil.exe 或**加入服務參考**來產生協力廠商服務的用戶端程式碼，或存取協力廠商結構描述，適當的序列化程式的 Visual Studio 中的功能會自動為您選擇。 如果結構描述與 <xref:System.Runtime.Serialization.DataContractSerializer> 不相容，便會選擇 <xref:System.Xml.Serialization.XmlSerializer>。  
   
 ## <a name="manually-switching-to-the-xmlserializer"></a>手動切換至 XmlSerializer  
  有時候，您可能必須手動切換至 <xref:System.Xml.Serialization.XmlSerializer>。 例如，這會發生在下列案例中：  
   
--   將應用程式從 [!INCLUDE[vstecasp](../../../../includes/vstecasp-md.md)] Web 服務移轉到 [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] 時，您可能會想要重複使用現有的、與 <xref:System.Xml.Serialization.XmlSerializer> 相容的型別，來取代建立新的資料合約類型。  
+-   當移轉從應用程式[!INCLUDE[vstecasp](../../../../includes/vstecasp-md.md)]wcf Web 服務，您可能想要重複使用現有的、 <xref:System.Xml.Serialization.XmlSerializer>-相容的型別，而不是建立新的資料合約類型。  
   
 -   當出現在訊息中 XML 的精確控制權很重要，但 Web 服務描述語言 (WSDL) 文件無法使用時，例如，當使用必須符合與 DataContractSerializer 不相容的特定標準化、已發行的結構描述來建立服務時。  
   
@@ -82,7 +68,7 @@ ms.lasthandoff: 04/30/2018
   
  用於此服務的序列化程式是合約的重要部分，且無法藉由選擇不同的繫結或變更其他組態設定來改變。  
   
- 其他重要的安全性考量適用於 <xref:System.Xml.Serialization.XmlSerializer> 類別。 第一，強烈建議任何使用 [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] 類別的 <xref:System.Xml.Serialization.XmlSerializer> 應用程式都要使用受保護不會洩漏的金鑰來簽章。 這個建議適用於執行手動切換至 <xref:System.Xml.Serialization.XmlSerializer> 時，以及 (由 Svcutil.exe、「加入服務參考」或類似工具) 執行自動切換時。 這是因為<xref:System.Xml.Serialization.XmlSerializer>序列化引擎支援的載入*預先產生序列化組件*，只要使用與應用程式相同的金鑰簽署。 未簽章的應用程式完全不受保護，如果惡意組件符合放在應用程式資料夾或全域組件快取中預先產生之序列化組件的預期名稱，便可能會受到攻擊。 當然，攻擊者必須先取得這兩個位置其中之一的寫入存取權，才能嘗試這個動作。  
+ 其他重要的安全性考量適用於 <xref:System.Xml.Serialization.XmlSerializer> 類別。 第一，強烈建議，使用任何 WCF 應用程式<xref:System.Xml.Serialization.XmlSerializer>類別以受洩漏的金鑰來簽署。 這個建議適用於執行手動切換至 <xref:System.Xml.Serialization.XmlSerializer> 時，以及 (由 Svcutil.exe、「加入服務參考」或類似工具) 執行自動切換時。 這是因為<xref:System.Xml.Serialization.XmlSerializer>序列化引擎支援的載入*預先產生序列化組件*，只要使用與應用程式相同的金鑰簽署。 未簽章的應用程式完全不受保護，如果惡意組件符合放在應用程式資料夾或全域組件快取中預先產生之序列化組件的預期名稱，便可能會受到攻擊。 當然，攻擊者必須先取得這兩個位置其中之一的寫入存取權，才能嘗試這個動作。  
   
  另一個每當您使用 <xref:System.Xml.Serialization.XmlSerializer> 時都會存在的威脅，是與系統暫存資料夾有關的寫入存取權。 <xref:System.Xml.Serialization.XmlSerializer>序列化引擎會建立並使用暫存*序列化組件*此資料夾中。 您應該知道，暫存資料夾的任何寫入存取處理都可能會使用惡意程式碼來覆寫這些序列化組件。  
   
@@ -100,11 +86,11 @@ ms.lasthandoff: 04/30/2018
  當使用 <xref:System.ServiceModel.MessageHeaderArrayAttribute> 時，不支援 <xref:System.Xml.Serialization.XmlSerializer> 屬性。  
   
 > [!NOTE]
->  在這個案例中，<xref:System.Xml.Serialization.XmlSerializer> 會擲回下列例外狀況，它是在 [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] 之前釋出的：「在結構描述最上層宣告的項目不可以擁有 `maxOccurs` > 1。 經由使用 `XmlArray` 或 `XmlArrayItem`，而不使用 `XmlElementAttribute`，或使用 Wrapped 參數樣式，來提供 "more" 的包裝函式項目」。  
+>  在此情況下，<xref:System.Xml.Serialization.XmlSerializer>擲回下列例外狀況，釋放之前 WCF: 「 在結構描述最上層宣告的項目不能有`maxOccurs`> 1。 經由使用 `XmlArray` 或 `XmlArrayItem`，而不使用 `XmlElementAttribute`，或使用 Wrapped 參數樣式，來提供 "more" 的包裝函式項目」。  
 >   
 >  如果您收到此類例外狀況，請查看這種情況是否適用。  
   
- [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] 不支援訊息合約和作業合約中的 <xref:System.Xml.Serialization.SoapIncludeAttribute> 和 <xref:System.Xml.Serialization.XmlIncludeAttribute> 屬性；請改用 <xref:System.Runtime.Serialization.KnownTypeAttribute> 屬性。  
+ WCF 不支援<xref:System.Xml.Serialization.SoapIncludeAttribute>和<xref:System.Xml.Serialization.XmlIncludeAttribute>屬性在訊息合約和作業合約，請使用<xref:System.Runtime.Serialization.KnownTypeAttribute>屬性，屬性。  
   
 ## <a name="types-that-implement-the-ixmlserializable-interface"></a>實作 IXmlSerializable 介面的型別  
  實作 `IXmlSerializable` 介面的型別完全受到 `DataContractSerializer` 的支援。 <xref:System.Xml.Serialization.XmlSchemaProviderAttribute> 屬性應永遠套用至這些型別，以控制其結構描述。  
@@ -125,7 +111,7 @@ ms.lasthandoff: 04/30/2018
   
  當還原序列化實作 `IXmlSerializable` 且為上述定義的內容型別之型別的資料成員時，還原序列化程式會將 XML 讀取器放在資料成員的包裝函式項目上，並將控制權傳遞至 <xref:System.Xml.Serialization.IXmlSerializable.ReadXml%2A> 方法。 此方法必須讀取整個項目，包括開始和結束標記。 請確定您的 `ReadXml` 程式碼會處理項目是空白的案例。 此外，您的 `ReadXml` 實作不應依賴以特定的方式為包裝函式項目命名。 由序列化程式所選擇的名稱可能會有所不同。  
   
- 允許將 `IXmlSerializable` 內容型別多型指派為如型別 <xref:System.Object> 的資料成員。 也允許型別執行個體為 null。 最後，可以使用 `IXmlSerializable` 型別並啟用物件圖形保留，以及搭配 <xref:System.Runtime.Serialization.NetDataContractSerializer>。 所有這些功能都需要 [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] 序列化程式將特定屬性附加至包裝函式項目中 ("nil" 和 "type" 是在 XML Schema Instance 命名空間中，而 "Id"、"Ref"、"Type" 和 "Assembly" 是在 [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] 特定的命名空間中)。  
+ 允許將 `IXmlSerializable` 內容型別多型指派為如型別 <xref:System.Object> 的資料成員。 也允許型別執行個體為 null。 最後，可以使用 `IXmlSerializable` 型別並啟用物件圖形保留，以及搭配 <xref:System.Runtime.Serialization.NetDataContractSerializer>。 所有這些功能都需要 WCF 序列化程式將特定屬性附加至包裝函式項目 ("nil"和"type"是在 XML Schema Instance 命名空間和"Id"、"Ref"、"Type"和"Assembly 是"WCF 特定命名空間中的)。  
   
 #### <a name="attributes-to-ignore-when-implementing-readxml"></a>實作 ReadXml 時要忽略的屬性  
  在將控制項傳遞至您的 `ReadXml` 程式碼之前，還原序列化程式會檢查 XML 項目、偵測這些特殊的 XML 屬性並進行動作。 例如，如果 "nil" 為 `true`，便會還原序列化 null 值並且不會呼叫 `ReadXml`。 如果偵測到多型，則會還原序列化項目的內容，就如同它是不同的型別一樣。 會呼叫 `ReadXml` 的多型指派型別的實作。 在任何情況下，`ReadXml` 實作都應忽略這些特殊屬性，因為它們是由還原序列化程式所處理的。  

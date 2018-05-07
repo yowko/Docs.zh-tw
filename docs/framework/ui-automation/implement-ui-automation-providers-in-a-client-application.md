@@ -1,13 +1,6 @@
 ---
-title: "在用戶端應用程式中實作 UI 自動化提供者"
-ms.custom: 
+title: 在用戶端應用程式中實作 UI 自動化提供者
 ms.date: 03/30/2017
-ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.technology: dotnet-bcl
-ms.tgt_pltfrm: 
-ms.topic: article
 dev_langs:
 - csharp
 - vb
@@ -15,16 +8,14 @@ helpviewer_keywords:
 - client-side UI Automation provider, implementation within applications
 - UI Automation, implementing client-side provider within application
 ms.assetid: f325f0d8-1715-41ea-85ca-45b82ffea8bc
-caps.latest.revision: "6"
 author: Xansky
 ms.author: mhopkins
 manager: markl
-ms.workload: dotnet
-ms.openlocfilehash: c099cd74b14160ca69bda5b353c7bbd7e3327cd8
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.openlocfilehash: 29ff34c715315e60875384e4deba440e00098ba9
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="implement-ui-automation-providers-in-a-client-application"></a>在用戶端應用程式中實作 UI 自動化提供者
 > [!NOTE]
@@ -40,7 +31,7 @@ ms.lasthandoff: 12/22/2017
  [!code-csharp[UIAClientSideProvider_snip#201](../../../samples/snippets/csharp/VS_Snippets_Wpf/UIAClientSideProvider_snip/CSharp/ClientImplementationProgram.cs#201)]
  [!code-vb[UIAClientSideProvider_snip#201](../../../samples/snippets/visualbasic/VS_Snippets_Wpf/UIAClientSideProvider_snip/visualbasic/clientimplementationprogram.vb#201)]  
   
-## <a name="see-also"></a>請參閱  
+## <a name="see-also"></a>另請參閱  
  [UI 自動化提供者概觀](../../../docs/framework/ui-automation/ui-automation-providers-overview.md)  
  [註冊用戶端提供者組件](../../../docs/framework/ui-automation/register-a-client-side-provider-assembly.md)  
  [建立用戶端 UI 自動化提供者](../../../docs/framework/ui-automation/create-a-client-side-ui-automation-provider.md)  

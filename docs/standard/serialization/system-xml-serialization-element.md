@@ -1,29 +1,16 @@
 ---
-title: "&lt;system.xml.serialization&gt; 元素"
-ms.custom: 
+title: '&lt;system.xml.serialization&gt; 元素'
 ms.date: 03/30/2017
-ms.prod: .net
-ms.reviewer: 
-ms.suite: 
-ms.tgt_pltfrm: 
-ms.topic: article
 helpviewer_keywords:
 - system.xml.serialization element
 - XML serialization, configuration
 - <system.xml.serialization> element
 ms.assetid: 3ce45919-388a-418c-8968-6df0372c73ec
-caps.latest.revision: "5"
-author: dotnet-bot
-ms.author: dotnetcontent
-manager: wpickett
-ms.workload:
-- dotnet
-- dotnetcore
-ms.openlocfilehash: d673c76e57ffb8315e97b1695dbcbc1f4fe0aab9
-ms.sourcegitcommit: e7f04439d78909229506b56935a1105a4149ff3d
+ms.openlocfilehash: e26a12facb92147d7660ae266ea5e1b090d7e198
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 12/23/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="ltsystemxmlserializationgt-element"></a>&lt;system.xml.serialization&gt; 元素
 用來控制 XML 序列化的最上層項目。 如需組態檔的詳細資訊，請參閱[組態檔結構描述](../../../docs/framework/configure-apps/file-schema/index.md)。  
@@ -44,7 +31,7 @@ ms.lasthandoff: 12/23/2017
 ### <a name="attributes"></a>屬性  
  無。  
   
-### <a name="child-elements"></a>子元素  
+### <a name="child-elements"></a>子項目  
   
 |項目|描述|  
 |-------------|-----------------|  
@@ -74,7 +61,7 @@ ms.lasthandoff: 12/23/2017
 </system.sxml.serialization>  
 ```  
   
-## <a name="see-also"></a>請參閱  
+## <a name="see-also"></a>另請參閱  
  <xref:System.Xml.Serialization.XmlSchemaImporter>  
  <xref:System.Xml.Serialization.Configuration.DateTimeSerializationSection.DateTimeSerializationMode>  
  [組態檔結構描述](../../../docs/framework/configure-apps/file-schema/index.md)  

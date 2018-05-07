@@ -1,14 +1,6 @@
 ---
 title: ICorDebugArrayValue Interface1
-ms.custom: 
 ms.date: 03/30/2017
-ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.technology:
-- dotnet-clr
-ms.tgt_pltfrm: 
-ms.topic: reference
 api_name:
 - ICorDebugArrayValue
 api_location:
@@ -22,17 +14,13 @@ helpviewer_keywords:
 ms.assetid: dc437751-7093-44e2-bfdc-191d9ce3c192
 topic_type:
 - apiref
-caps.latest.revision: 
 author: rpetrusha
 ms.author: ronpet
-manager: wpickett
-ms.workload:
-- dotnet
-ms.openlocfilehash: 35169f0dd2ca71400d3aebddf9d5e2ae6b72be07
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.openlocfilehash: a96f2b21e524f03ea3290be268244eaceeb5c7f7
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="icordebugarrayvalue-interface1"></a>ICorDebugArrayValue Interface1
 表示一維或多維陣列的 ICorDebugHeapValue 的子類別。  
@@ -51,7 +39,7 @@ ms.lasthandoff: 12/22/2017
 |[HasBaseIndicies 方法](../../../../docs/framework/unmanaged-api/debugging/icordebugarrayvalue-hasbaseindicies-method.md)|判斷陣列是否有基底的索引。|  
   
 ## <a name="remarks"></a>備註  
- `ICorDebugArrayValue`支援的一維和多維度陣列。  
+ `ICorDebugArrayValue` 支援的一維和多維度陣列。  
   
 > [!NOTE]
 >  這個介面不支援跨電腦或跨處理序的遠端呼叫。  
@@ -63,7 +51,7 @@ ms.lasthandoff: 12/22/2017
   
  **程式庫：** CorGuids.lib  
   
- **.NET framework 版本：**[!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
+ **.NET framework 版本：** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
   
-## <a name="see-also"></a>請參閱  
+## <a name="see-also"></a>另請參閱  
  [偵錯介面](../../../../docs/framework/unmanaged-api/debugging/debugging-interfaces.md)

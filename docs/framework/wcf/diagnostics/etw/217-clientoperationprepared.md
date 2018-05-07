@@ -1,24 +1,12 @@
 ---
 title: 217 - ClientOperationPrepared
-ms.custom: 
 ms.date: 03/30/2017
-ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.technology: dotnet-clr
-ms.tgt_pltfrm: 
-ms.topic: article
 ms.assetid: ad207f04-b038-4f33-95e9-27a361df8ecd
-caps.latest.revision: "5"
-author: dotnet-bot
-ms.author: dotnetcontent
-manager: wpickett
-ms.workload: dotnet
-ms.openlocfilehash: 3e1b4e3aab6a6a7f94bfb3783c9e32f83557db19
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.openlocfilehash: 5979cd8ffe0e05b61af01d2aa98c4a2c63fd432c
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="217---clientoperationprepared"></a>217 - ClientOperationPrepared
 ## <a name="properties"></a>屬性  
@@ -43,5 +31,5 @@ ms.lasthandoff: 12/22/2017
 |動作|`xs:string`|傳出訊息的 SOAP 動作標頭。|  
 |合約名稱|`xs:string`|合約的名稱。 範例：ICalculator。|  
 |目的地|`xs:string`|訊息將傳送至該處的服務端點位址。|  
-|HostReference|`xs:string`|若為 Web 託管服務，此欄位會唯一識別 Web 階層架構中的服務。 其格式定義為 ' Web Site Name Application Virtual Path &#124;服務的虛擬路徑 &#124;ServiceName'。 範例: ' Default Web Site/CalculatorApplication #124;/CalculatorService.svc &#124;CalculatorService'。|  
+|HostReference|`xs:string`|若為 Web 託管服務，此欄位會唯一識別 Web 階層架構中的服務。 其格式定義為 ' Web Site Name Application Virtual Path&#124;Service Virtual Path&#124;ServiceName'。 範例: ' Default Web Site/CalculatorApplication&#124;/CalculatorService.svc&#124;CalculatorService'。|  
 |AppDomain|`xs:string`|由 AppDomain.CurrentDomain.FriendlyName 傳回的字串。|

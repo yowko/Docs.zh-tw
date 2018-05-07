@@ -1,28 +1,16 @@
 ---
-title: "依功能區分 Windows Form 控制項"
-ms.custom: 
+title: 依功能區分 Windows Form 控制項
 ms.date: 03/30/2017
-ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.technology: dotnet-winforms
-ms.tgt_pltfrm: 
-ms.topic: article
 helpviewer_keywords:
 - controls [Windows Forms], by function
 - Windows Forms, controls by function
 - Windows Forms controls, list of
 ms.assetid: 5e65a6c3-5d6f-480d-beb8-b28f865f07e3
-caps.latest.revision: "15"
-author: dotnet-bot
-ms.author: dotnetcontent
-manager: wpickett
-ms.workload: dotnet
-ms.openlocfilehash: a48e1e728e3ded58b0045554a81588933027074c
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.openlocfilehash: 058a18878b89991bd8124bd69e18476d4f1479d6
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="windows-forms-controls-by-function"></a>依功能區分 Windows Form 控制項
 Windows Form 提供控制項和元件執行的函式數目。 下表列出 Windows Form 控制項和元件，依據一般函式。 此外，其中有多個控制項提供相同的功能，建議使用的控制項都會列出其所取代的控制項的相關附註。 在後續另一個表格中，已被取代的控制項會列出與其建議的取代項目。  
@@ -35,7 +23,7 @@ Windows Form 提供控制項和元件執行的函式數目。 下表列出 Windo
 |功能|控制項|描述|  
 |--------------|-------------|-----------------|  
 |顯示資料|<xref:System.Windows.Forms.DataGridView> 控制項|<xref:System.Windows.Forms.DataGridView>控制項提供可自訂的資料表，以顯示資料。 <xref:System.Windows.Forms.DataGridView>類別可讓您自訂的資料格、 資料列、 資料行和框線。 **注意：** <xref:System.Windows.Forms.DataGridView>控制項提供許多基本和進階功能中遺漏<xref:System.Windows.Forms.DataGrid>控制項。 如需詳細資訊，請參閱[差異之間 Windows Form DataGridView 和 DataGrid 控制項](../../../../docs/framework/winforms/controls/differences-between-the-windows-forms-datagridview-and-datagrid-controls.md)|  
-|資料繫結和瀏覽|<xref:System.Windows.Forms.BindingSource>元件|藉由提供貨幣管理、 變更通知，以及其他服務，可簡化將控制項繫結至資料的表單上。|  
+|資料繫結和瀏覽|<xref:System.Windows.Forms.BindingSource> 元件|藉由提供貨幣管理、 變更通知，以及其他服務，可簡化將控制項繫結至資料的表單上。|  
 ||<xref:System.Windows.Forms.BindingNavigator> 控制項|提供工具列類型的介面，以巡覽和操作表單上的資料。|  
 |編輯文字|<xref:System.Windows.Forms.TextBox> 控制項|顯示在設計階段可由使用者在執行階段、 編輯或以程式設計方式變更輸入的文字。|  
 ||<xref:System.Windows.Forms.RichTextBox> 控制項|可讓具有純文字或 rtf 格式 (RTF) 格式顯示的文字。|  
@@ -53,7 +41,7 @@ Windows Form 提供控制項和元件執行的函式數目。 下表列出 Windo
 ||<xref:System.Windows.Forms.NumericUpDown> 控制項|顯示數字，使用者可以使用向上和向下按鈕來捲動清單。|  
 ||<xref:System.Windows.Forms.TreeView> 控制項|顯示可以包含文字與選擇性核取方塊或圖示的節點物件的階層式實體集合。|  
 |顯示圖形|<xref:System.Windows.Forms.PictureBox> 控制項|顯示圖形化的檔案，例如點陣圖與圖示，在框架中。|  
-|圖形的儲存體|<xref:System.Windows.Forms.ImageList> 控制項|做為映像儲存機制。 <xref:System.Windows.Forms.ImageList>從應用程式的下一個可重複使用控制項和它們所包含的映像。|  
+|圖形的儲存體|<xref:System.Windows.Forms.ImageList> 控制項|做為映像儲存機制。 <xref:System.Windows.Forms.ImageList> 從應用程式的下一個可重複使用控制項和它們所包含的映像。|  
 |設定值|<xref:System.Windows.Forms.CheckBox> 控制項|顯示核取方塊和標籤的文字。 通常用來設定選項。|  
 ||<xref:System.Windows.Forms.CheckedListBox> 控制項|顯示的項目，每個旁的核取方塊都可捲動的清單。|  
 ||<xref:System.Windows.Forms.RadioButton> 控制項|顯示可以開啟或關閉的按鈕。|  
@@ -73,8 +61,8 @@ Windows Form 提供控制項和元件執行的函式數目。 下表列出 Windo
 ||<xref:System.Windows.Forms.LinkLabel> 控制項|為 Web 樣式連結顯示的文字，並觸發事件，當使用者按一下特殊文字。 文字通常是另一個視窗或網站的連結。|  
 ||<xref:System.Windows.Forms.NotifyIcon> 控制項|代表在背景中執行的應用程式在工作列的狀態通知區域中顯示的圖示。|  
 ||<xref:System.Windows.Forms.ToolStrip> 控制項|建立包含 Microsoft Windows XP、 Microsoft Office、 Microsoft Internet Explorer 中或自訂外觀及操作，或沒有、 佈景主題與支援溢位和執行階段項目重新排列工具列。 **注意：** <xref:System.Windows.Forms.ToolStrip>控制項用來取代<xref:System.Windows.Forms.ToolBar>控制項。|  
-|使用者說明|<xref:System.Windows.Forms.HelpProvider>元件|提供控制項的快顯或線上說明。|  
-||<xref:System.Windows.Forms.ToolTip>元件|提供的快顯視窗，使用者將指標停留在控制項上時，顯示控制項用途的簡短描述。|  
+|使用者說明|<xref:System.Windows.Forms.HelpProvider> 元件|提供控制項的快顯或線上說明。|  
+||<xref:System.Windows.Forms.ToolTip> 元件|提供的快顯視窗，使用者將指標停留在控制項上時，顯示控制項用途的簡短描述。|  
 |群組其他控制項|<xref:System.Windows.Forms.Panel> 控制項|群組一組未加上標籤，可捲動的框架上的控制項。|  
 ||<xref:System.Windows.Forms.GroupBox> 控制項|群組加上標籤，不可捲動的框架上的一組控制項 （例如選項按鈕）。|  
 ||<xref:System.Windows.Forms.TabControl> 控制項|提供索引標籤式的頁面來組織及存取有效率地群組物件。|  
@@ -95,6 +83,6 @@ Windows Form 提供控制項和元件執行的函式數目。 下表列出 Windo
 ||<xref:System.Windows.Forms.StatusBar>|<xref:System.Windows.Forms.StatusStrip>|  
 |表單配置|<xref:System.Windows.Forms.Splitter>|<xref:System.Windows.Forms.SplitContainer>|  
   
-## <a name="see-also"></a>請參閱  
+## <a name="see-also"></a>另請參閱  
  [在 Windows Forms 上使用的控制項](../../../../docs/framework/winforms/controls/controls-to-use-on-windows-forms.md)  
  [使用 .NET Framework 開發自訂的 Windows Forms 控制項](../../../../docs/framework/winforms/controls/developing-custom-windows-forms-controls.md)

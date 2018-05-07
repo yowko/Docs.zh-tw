@@ -1,14 +1,6 @@
 ---
-title: "COR_FIELD 結構"
-ms.custom: 
+title: COR_FIELD 結構
 ms.date: 03/30/2017
-ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.technology:
-- dotnet-clr
-ms.tgt_pltfrm: 
-ms.topic: reference
 api_name:
 - COR_FIELD
 api_location:
@@ -22,17 +14,13 @@ helpviewer_keywords:
 ms.assetid: c0822423-a9df-4961-950d-50dcc152f863
 topic_type:
 - apiref
-caps.latest.revision: 
 author: rpetrusha
 ms.author: ronpet
-manager: wpickett
-ms.workload:
-- dotnet
-ms.openlocfilehash: 09a96a22a653688540bcc2ea3a03d86e242c10f5
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.openlocfilehash: 0898936665b3b337f2fd4e4d53bcc9f6071469b2
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="corfield-structure"></a>COR_FIELD 結構
 提供物件中欄位的相關資訊。  
@@ -66,8 +54,8 @@ typedef struct COR_FIELD{
   
  **程式庫：** CorGuids.lib  
   
- **.NET framework 版本：**[!INCLUDE[net_current_v45plus](../../../../includes/net-current-v45plus-md.md)]  
+ **.NET framework 版本：** [!INCLUDE[net_current_v45plus](../../../../includes/net-current-v45plus-md.md)]  
   
-## <a name="see-also"></a>請參閱  
+## <a name="see-also"></a>另請參閱  
  [偵錯結構](../../../../docs/framework/unmanaged-api/debugging/debugging-structures.md)  
  [偵錯](../../../../docs/framework/unmanaged-api/debugging/index.md)

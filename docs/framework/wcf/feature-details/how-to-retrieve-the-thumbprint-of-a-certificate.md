@@ -1,31 +1,17 @@
 ---
 title: HOW TO：擷取憑證的指紋
-ms.custom: ''
 ms.date: 03/30/2017
-ms.prod: .net-framework
-ms.reviewer: ''
-ms.suite: ''
-ms.technology:
-- dotnet-clr
-ms.tgt_pltfrm: ''
-ms.topic: article
 helpviewer_keywords:
 - certificates [WCF], retrieving thumbprint
 ms.assetid: da3101aa-78cd-4c34-9652-d1f24777eeab
-caps.latest.revision: 15
-author: dotnet-bot
-ms.author: dotnetcontent
-manager: wpickett
-ms.workload:
-- dotnet
-ms.openlocfilehash: 0fe3635b73e17123e410f43efc8d382e0df85641
-ms.sourcegitcommit: 03ee570f6f528a7d23a4221dcb26a9498edbdf8c
+ms.openlocfilehash: d827c2c5f407c3041a31efbc06fcfed205bef458
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/28/2018
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="how-to-retrieve-the-thumbprint-of-a-certificate"></a>HOW TO：擷取憑證的指紋
-撰寫使用 X.509 憑證進行驗證的 [!INCLUDE[indigo1](../../../../includes/indigo1-md.md)] 應用程式時，通常需要指定在憑證中找到的宣告。 例如，當您在 <xref:System.Security.Cryptography.X509Certificates.X509FindType.FindByThumbprint> 方法中使用 <xref:System.ServiceModel.Security.X509CertificateInitiatorClientCredential.SetCertificate%2A> 列舉時，就必須提供指紋宣告。 尋找宣告值時，需要兩個步驟。 首先，開啟憑證的 Microsoft Management Console (MMC) 嵌入式管理單元 (請參閱 [How to: View Certificates with the MMC Snap-in](../../../../docs/framework/wcf/feature-details/how-to-view-certificates-with-the-mmc-snap-in.md))。接著，如此處所描述，尋找適當的憑證並複製其指紋 (或其他宣告值)。  
+撰寫使用 X.509 憑證進行驗證的 Windows Communication Foundation (WCF) 應用程式，它時通常需要指定在憑證中找到的宣告。 例如，當您在 <xref:System.Security.Cryptography.X509Certificates.X509FindType.FindByThumbprint> 方法中使用 <xref:System.ServiceModel.Security.X509CertificateInitiatorClientCredential.SetCertificate%2A> 列舉時，就必須提供指紋宣告。 尋找宣告值時，需要兩個步驟。 首先，開啟憑證的 Microsoft Management Console (MMC) 嵌入式管理單元 (請參閱 [How to: View Certificates with the MMC Snap-in](../../../../docs/framework/wcf/feature-details/how-to-view-certificates-with-the-mmc-snap-in.md))。接著，如此處所描述，尋找適當的憑證並複製其指紋 (或其他宣告值)。  
   
  如果您在服務驗證中使用憑證，則記下 [ **核發給** ] 欄位 (主控台中的第一欄) 之值是相當重要的。 使用 Secure Sockets Layer (SSL) 做為傳輸安全性時，前幾項檢查其中完成的一項，就是比較服務之統一資源識別元 (URI) 的基底位址和 [ **核發給** ] 的值。 這些值必須相符，否則會中止驗證程序。  
   

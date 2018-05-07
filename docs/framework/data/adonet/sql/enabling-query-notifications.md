@@ -1,27 +1,15 @@
 ---
-title: "啟用查詢通知"
-ms.custom: 
+title: 啟用查詢通知
 ms.date: 03/30/2017
-ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.technology: dotnet-ado
-ms.tgt_pltfrm: 
-ms.topic: article
 dev_langs:
 - csharp
 - vb
 ms.assetid: a5333e19-8e55-4aa9-82dc-ca8745e516ed
-caps.latest.revision: "6"
-author: douglaslMS
-ms.author: douglasl
-manager: craigg
-ms.workload: dotnet
-ms.openlocfilehash: c7b02ba7959a5cfc2205222655460026847c3098
-ms.sourcegitcommit: ed26cfef4e18f6d93ab822d8c29f902cff3519d1
+ms.openlocfilehash: 4cda3ce3bcae7741df66496c87ba6654e0bbfe6e
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 01/17/2018
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="enabling-query-notifications"></a>啟用查詢通知
 使用查詢通知的應用程式具有通用要求集。 您必須正確設定資料來源才能支援 SQL 查詢通知，而且使用者必須具有正確的用戶端及伺服器端權限。  
@@ -95,6 +83,6 @@ CREATE SERVICE ContactChangeNotifications
 ### <a name="using-sqlnotificationrequest"></a>使用 SqlNotificationRequest  
  相反，<xref:System.Data.Sql.SqlNotificationRequest> 要求您自己實作整個接聽基礎結構。 此外，必須定義所有支援的 Service Broker 物件，如佇列、服務及佇列所支援的訊息類型。 如果應用程式要求特別通知訊息或通知行為，或者應用程式為較大 Service Broker 應用程式的一部分，則此手動方法非常有用。  
   
-## <a name="see-also"></a>請參閱  
+## <a name="see-also"></a>另請參閱  
  [SQL Server 中的查詢通知](../../../../../docs/framework/data/adonet/sql/query-notifications-in-sql-server.md)  
  [ADO.NET Managed 提供者和 DataSet 開發人員中心](http://go.microsoft.com/fwlink/?LinkId=217917)

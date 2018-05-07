@@ -1,26 +1,12 @@
 ---
 title: 相互關聯概觀
-ms.custom: ''
 ms.date: 03/30/2017
-ms.prod: .net-framework
-ms.reviewer: ''
-ms.suite: ''
-ms.technology:
-- dotnet-clr
-ms.tgt_pltfrm: ''
-ms.topic: article
 ms.assetid: edcc0315-5d26-44d6-a36d-ea554c418e9f
-caps.latest.revision: 12
-author: dotnet-bot
-ms.author: dotnetcontent
-manager: wpickett
-ms.workload:
-- dotnet
-ms.openlocfilehash: 6b5c5a1f59bd112c3edc52190b9243831d84feaf
-ms.sourcegitcommit: 94d33cadc5ff81d2ac389bf5f26422c227832052
+ms.openlocfilehash: bea561cdaecce028011803f2f4392d788dbe0002
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/30/2018
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="correlation-overview"></a>相互關聯概觀
 相互關聯是一種機制，可將工作流程服務訊息彼此產生關聯性、將工作流程服務訊息與應用程式執行個體狀態 (例如針對初始要求的回覆) 產生關聯性，或者是將特定的訂單 ID 與訂單處理工作流程的保存狀態產生關聯性。 本主題提供相互關聯的概觀。 本節的其他主題則會提供各種相互關聯類型的其他資訊。  

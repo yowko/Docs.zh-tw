@@ -1,14 +1,6 @@
 ---
-title: "ICorDebugEval::CallFunction 方法"
-ms.custom: 
+title: ICorDebugEval::CallFunction 方法
 ms.date: 03/30/2017
-ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.technology:
-- dotnet-clr
-ms.tgt_pltfrm: 
-ms.topic: reference
 api_name:
 - ICorDebugEval.CallFunction
 api_location:
@@ -23,17 +15,13 @@ helpviewer_keywords:
 ms.assetid: 7f470c5c-e1c0-4d8d-aad8-830f113ae751
 topic_type:
 - apiref
-caps.latest.revision: 
 author: rpetrusha
 ms.author: ronpet
-manager: wpickett
-ms.workload:
-- dotnet
-ms.openlocfilehash: 3c2d5582c9ac69692546e9a2310c4d0c9cdde83e
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.openlocfilehash: 86d48461c601b53d4461331a11a0e0ac7ddc6e7c
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="icordebugevalcallfunction-method"></a>ICorDebugEval::CallFunction 方法
 設定指定函式的呼叫。  
@@ -72,5 +60,5 @@ HRESULT CallFunction (
   
  **.NET framework 版本：** 1.1、 1.0  
   
-## <a name="see-also"></a>請參閱  
+## <a name="see-also"></a>另請參閱  
  [CallParameterizedFunction 方法](../../../../docs/framework/unmanaged-api/debugging/icordebugeval2-callparameterizedfunction-method.md)

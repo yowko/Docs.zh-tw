@@ -1,24 +1,14 @@
 ---
-title: "如何：啟用 WIF 追蹤"
-ms.custom: 
+title: 如何：啟用 WIF 追蹤
 ms.date: 03/30/2017
-ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.technology: dotnet-clr
-ms.tgt_pltfrm: 
-ms.topic: article
 ms.assetid: 271b6889-3454-46ff-96ab-9feb15e742ee
-caps.latest.revision: "3"
 author: BrucePerlerMS
-ms.author: bruceper
 manager: mbaldwin
-ms.workload: dotnet
-ms.openlocfilehash: c9c3bc67d7ce59d259fec06377c5de1768a130ee
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.openlocfilehash: 459d74f3faf9fab4cba047a87ccff77d193e9026
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="how-to-enable-wif-tracing"></a>如何：啟用 WIF 追蹤
 ## <a name="applies-to"></a>適用於  
@@ -27,7 +17,7 @@ ms.lasthandoff: 12/22/2017
   
 -   ASP.NET® Web Forms  
   
-## <a name="summary"></a>摘要  
+## <a name="summary"></a>總結  
  這個操作說明提供了在 ASP.NET 應用程式中啟用 WIF 追蹤的詳細逐步程序。 還提供了一些指示，說明如何測試應用程式以確認追蹤接聽項和記錄檔正常運作。 這篇使用方法文章並沒有提供建立 Security Token Service (STS) 的詳細指示，而是使用識別和存取工具隨附的「開發 STS」。 「開發 STS」並不會執行實際的驗證，而只是用於測試用途。 您必須安裝識別和存取工具才能完成這篇使用方法文章。 您可以從下列位置下載：[Identity and Access Tool](http://go.microsoft.com/fwlink/?LinkID=245849) (身分識別與存取工具)  
   
 > [!IMPORTANT]
@@ -37,7 +27,7 @@ ms.lasthandoff: 12/22/2017
   
 -   目標  
   
--   概觀  
+-   總覽  
   
 -   步驟摘要  
   
@@ -51,7 +41,7 @@ ms.lasthandoff: 12/22/2017
   
 -   啟用追蹤，並確認它能夠正常運作  
   
-## <a name="overview"></a>概觀  
+## <a name="overview"></a>總覽  
  追蹤可讓您對 WIF 的許多類型問題進行偵錯和疑難排解，包括權杖、Cookie、宣告、通訊協定訊息等等。 WIF 追蹤類似於 WCF 追蹤；例如，您可以選擇追蹤的詳細資訊來顯示從重大訊息到所有訊息的一切項目。 WIF 追蹤是在 **.xml** 檔案或 **.svclog** 檔案中產生，而您可以使用服務追蹤檢視器工具來檢視這些檔案。 此工具位於電腦上 Windows SDK 安裝路徑的 **bin** 目錄中，例如：**C:\Program Files\Microsoft SDKs\Windows\v7.1\Bin\SvcTraceViewer.exe**。  
   
 ## <a name="summary-of-steps"></a>步驟摘要  

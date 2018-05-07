@@ -1,26 +1,15 @@
 ---
-title: "HOW TO：建立自訂活動範本"
-ms.custom: 
+title: HOW TO：建立自訂活動範本
 ms.date: 03/30/2017
-ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.tgt_pltfrm: 
-ms.topic: article
 ms.assetid: 6760a5cc-6eb8-465f-b4fa-f89b39539429
-caps.latest.revision: "4"
-author: dotnet-bot
-ms.author: dotnetcontent
-manager: wpickett
-ms.workload: dotnet
-ms.openlocfilehash: 772ad2a7ea56001bf3ecba089e62d6bc0f59e5ba
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.openlocfilehash: b455f8a763859d31405380e25cd7516856e8da2e
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="how-to-create-a-custom-activity-template"></a>HOW TO：建立自訂活動範本
-自訂活動範本是用來自訂活動的組態，包括自訂複合活動，因此使用者不需要個別建立每個活動以及手動設定其所有屬性和其他設定。 這些自訂範本可供在**工具箱**上[!INCLUDE[wfd1](../../../includes/wfd1-md.md)]或重新裝載設計工具，從中使用者可以將它們拖曳到預先設定的設計介面上。 [!INCLUDE[wfd2](../../../includes/wfd2-md.md)]隨附的這類樣板好例子： [SendAndReceiveReply 範本設計工具](/visualstudio/workflow-designer/sendandreceivereply-template-designer)和[ReceiveAndSendReply 範本設計工具](/visualstudio/workflow-designer/receiveandsendreply-template-designer)中[傳訊活動設計工具](/visualstudio/workflow-designer/messaging-activity-designers)類別目錄。  
+自訂活動範本是用來自訂活動的組態，包括自訂複合活動，因此使用者不需要個別建立每個活動以及手動設定其所有屬性和其他設定。 這些自訂範本可供在**工具箱**上[!INCLUDE[wfd1](../../../includes/wfd1-md.md)]或重新裝載設計工具，從中使用者可以將它們拖曳到預先設定的設計介面上。 [!INCLUDE[wfd2](../../../includes/wfd2-md.md)] 隨附的這類樣板好例子： [SendAndReceiveReply 範本設計工具](/visualstudio/workflow-designer/sendandreceivereply-template-designer)和[ReceiveAndSendReply 範本設計工具](/visualstudio/workflow-designer/receiveandsendreply-template-designer)中[傳訊活動設計工具](/visualstudio/workflow-designer/messaging-activity-designers)類別目錄。  
   
  本主題中的第一個程序描述如何建立自訂活動範本**延遲**活動，而第二個程序簡短描述如何使其可用於[!INCLUDE[wfd2](../../../includes/wfd2-md.md)]驗證的自訂範本的運作。  
   
@@ -30,11 +19,11 @@ ms.lasthandoff: 12/22/2017
   
 1.  啟動 [!INCLUDE[vs2010](../../../includes/vs2010-md.md)]。  
   
-2.  在**檔案**功能表上，指向**新增**，然後選取**專案**。  
+2.  在 [檔案] 功能表上，指向 [新增]，然後選取 [專案]。  
   
      [ **新增專案** ] 對話方塊隨即開啟。  
   
-3.  在**專案類型**窗格中，選取**工作流程**從其中**Visual C#**專案或**Visual Basic**群組取決於您語言喜好設定。  
+3.  在**專案類型**窗格中，選取**工作流程**從其中**Visual C#** 專案或**Visual Basic**群組取決於您語言喜好設定。  
   
 4.  在**範本**窗格中，選取**活動程式庫**。  
   
@@ -44,7 +33,7 @@ ms.lasthandoff: 12/22/2017
   
 7.  以滑鼠右鍵按一下 DelayActivityTemplate 專案中的 參考 目錄**方案總管 中**選擇**加入參考**開啟**加入參考** 對話方塊。  
   
-8.  移至**.NET**索引標籤並選取**PresentationFramework**從**元件名稱**] 左側，按一下 [資料行**確定**加入的參考PresentationFramework.dll 檔案。  
+8.  移至 **.NET**索引標籤並選取**PresentationFramework**從**元件名稱**] 左側，按一下 [資料行**確定**加入的參考PresentationFramework.dll 檔案。  
   
 9. 重複此程序，加入 System.Activities.Presentation.dll 和 WindowsBase.dll 檔案的參考。  
   
@@ -133,6 +122,6 @@ namespace DelayActivityTemplate
 }  
 ```  
   
-## <a name="see-also"></a>請參閱  
+## <a name="see-also"></a>另請參閱  
  <xref:System.Activities.Presentation.IActivityTemplateFactory>  
  [自訂工作流程設計體驗](../../../docs/framework/windows-workflow-foundation/customizing-the-workflow-design-experience.md)

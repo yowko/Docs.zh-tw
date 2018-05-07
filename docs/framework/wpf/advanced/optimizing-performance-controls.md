@@ -1,28 +1,16 @@
 ---
-title: "最佳化效能：控制項"
-ms.custom: 
+title: 最佳化效能：控制項
 ms.date: 03/30/2017
-ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.technology: dotnet-wpf
-ms.tgt_pltfrm: 
-ms.topic: article
 helpviewer_keywords:
 - controls [WPF], improving performance
 - container recycling [WPF]
 - user interface virtualization [WPF]
 ms.assetid: 45a31c43-ea8a-4546-96c8-0631b9934179
-caps.latest.revision: "22"
-author: dotnet-bot
-ms.author: dotnetcontent
-manager: wpickett
-ms.workload: dotnet
-ms.openlocfilehash: 1b8008d104437454f36f6f425634c40968d5481a
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.openlocfilehash: 9e4ceee26263a1d047aeda0881b955070de4326d
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="optimizing-performance-controls"></a>最佳化效能：控制項
 [!INCLUDE[TLA#tla_winclient](../../../../includes/tlasharptla-winclient-md.md)] 包含許多可用於大多數 Windows 應用程式的通用使用者介面 (UI) 元件。 本主題包含提升 UI 效能的技巧。  
@@ -35,7 +23,7 @@ ms.lasthandoff: 12/22/2017
   
  UI 虛擬化是清單控制項的重要層面。 請不要將 UI 虛擬化和資料虛擬化混淆。 UI 虛擬化只會在記憶體中存放可見的項目；若為資料繫結案例，則會在記憶體中存放整個資料結構。 相反地，資料虛擬化只會在記憶體中存放螢幕上顯示的資料項目。  
   
- 根據預設，啟用 UI 虛擬化的<xref:System.Windows.Controls.ListView>和<xref:System.Windows.Controls.ListBox>控制其清單項目資料繫結。 <xref:System.Windows.Controls.TreeView>您可以啟用虛擬化設定<!--zz <xref:System.Windows.Controls.VirtualizingStackPanel.IsVirtualizing%2A?displayProperty=nameWithType> -->`IsVirtualizing`附加屬性`true`。 如果您想要啟用自訂控制項衍生自 UI 虛擬化<xref:System.Windows.Controls.ItemsControl>或現有的項目控制項使用<xref:System.Windows.Controls.StackPanel>類別，例如<xref:System.Windows.Controls.ComboBox>，您可以設定<xref:System.Windows.Controls.ItemsControl.ItemsPanel%2A>至<xref:System.Windows.Controls.VirtualizingStackPanel>並設定<xref:System.Windows.Controls.VirtualizingPanel.IsVirtualizing%2A>至`true`. 不過，您可能會停用這些控制項的 UI 虛擬化而不自知。 以下是停用 UI 虛擬化的條件清單。  
+ 根據預設，啟用 UI 虛擬化的<xref:System.Windows.Controls.ListView>和<xref:System.Windows.Controls.ListBox>控制其清單項目資料繫結。 <xref:System.Windows.Controls.TreeView> 您可以啟用虛擬化設定<!--zz <xref:System.Windows.Controls.VirtualizingStackPanel.IsVirtualizing%2A?displayProperty=nameWithType> -->`IsVirtualizing`附加屬性`true`。 如果您想要啟用自訂控制項衍生自 UI 虛擬化<xref:System.Windows.Controls.ItemsControl>或現有的項目控制項使用<xref:System.Windows.Controls.StackPanel>類別，例如<xref:System.Windows.Controls.ComboBox>，您可以設定<xref:System.Windows.Controls.ItemsControl.ItemsPanel%2A>至<xref:System.Windows.Controls.VirtualizingStackPanel>並設定<xref:System.Windows.Controls.VirtualizingPanel.IsVirtualizing%2A>至`true`. 不過，您可能會停用這些控制項的 UI 虛擬化而不自知。 以下是停用 UI 虛擬化的條件清單。  
   
 -   項目容器會直接加入<xref:System.Windows.Controls.ItemsControl>。 例如，如果應用程式明確地加入<xref:System.Windows.Controls.ListBoxItem>物件加入至<xref:System.Windows.Controls.ListBox>、<xref:System.Windows.Controls.ListBox>未虛擬化<xref:System.Windows.Controls.ListBoxItem>物件。  
   
@@ -57,7 +45,7 @@ ms.lasthandoff: 12/22/2017
   
 <a name="Supporting"></a>   
 ## <a name="supporting-bidirectional-virtualization"></a>支援雙向虛擬化  
- <xref:System.Windows.Controls.VirtualizingStackPanel>提供內建支援一個方向的 UI 虛擬化，水平或垂直。 如果您想要使用雙向虛擬化您的控制項，您必須實作自訂的面板擴充<xref:System.Windows.Controls.VirtualizingStackPanel>類別。 <xref:System.Windows.Controls.VirtualizingStackPanel>類別會公開虛擬方法例如<xref:System.Windows.Controls.VirtualizingStackPanel.OnViewportSizeChanged%2A>， <xref:System.Windows.Controls.VirtualizingStackPanel.LineUp%2A>， <xref:System.Windows.Controls.VirtualizingStackPanel.PageUp%2A>，和<xref:System.Windows.Controls.VirtualizingStackPanel.MouseWheelUp%2A>。這些虛擬方法可讓您在清單的可見部分中偵測到變更，並據以處理。  
+ <xref:System.Windows.Controls.VirtualizingStackPanel> 提供內建支援一個方向的 UI 虛擬化，水平或垂直。 如果您想要使用雙向虛擬化您的控制項，您必須實作自訂的面板擴充<xref:System.Windows.Controls.VirtualizingStackPanel>類別。 <xref:System.Windows.Controls.VirtualizingStackPanel>類別會公開虛擬方法例如<xref:System.Windows.Controls.VirtualizingStackPanel.OnViewportSizeChanged%2A>， <xref:System.Windows.Controls.VirtualizingStackPanel.LineUp%2A>， <xref:System.Windows.Controls.VirtualizingStackPanel.PageUp%2A>，和<xref:System.Windows.Controls.VirtualizingStackPanel.MouseWheelUp%2A>。這些虛擬方法可讓您在清單的可見部分中偵測到變更，並據以處理。  
   
 <a name="Optimizing"></a>   
 ## <a name="optimizing-templates"></a>最佳化範本  
@@ -67,7 +55,7 @@ ms.lasthandoff: 12/22/2017
 ## <a name="deferred-scrolling"></a>延後捲動  
  根據預設，當使用者拖曳捲軸上的捲動方塊時，內容檢視就會不斷更新。  如果控制項中的捲動變慢，請考慮使用延後捲動。  延後捲動時，只有當使用者放開捲動方塊之後，才會更新內容。  
   
- 若要實作延後捲動功能，設定<xref:System.Windows.Controls.ScrollViewer.IsDeferredScrollingEnabled%2A>屬性`true`。  <xref:System.Windows.Controls.ScrollViewer.IsDeferredScrollingEnabled%2A>是附加的屬性，而且可以設定上<xref:System.Windows.Controls.ScrollViewer>和具有任何控制項<xref:System.Windows.Controls.ScrollViewer>控制項範本中。  
+ 若要實作延後捲動功能，設定<xref:System.Windows.Controls.ScrollViewer.IsDeferredScrollingEnabled%2A>屬性`true`。  <xref:System.Windows.Controls.ScrollViewer.IsDeferredScrollingEnabled%2A> 是附加的屬性，而且可以設定上<xref:System.Windows.Controls.ScrollViewer>和具有任何控制項<xref:System.Windows.Controls.ScrollViewer>控制項範本中。  
   
 <a name="Controls"></a>   
 ## <a name="controls-that-implement-performance-features"></a>實作效能功能的控制項  
@@ -86,7 +74,7 @@ ms.lasthandoff: 12/22/2017
 > [!NOTE]
 >  如需如何啟用虛擬化和容器上回收<xref:System.Windows.Controls.TreeView>，請參閱[改善效能的 treeview](../../../../docs/framework/wpf/controls/how-to-improve-the-performance-of-a-treeview.md)。  
   
-## <a name="see-also"></a>請參閱  
+## <a name="see-also"></a>另請參閱  
  [版面配置](../../../../docs/framework/wpf/advanced/layout.md)  
  [版面配置與設計](../../../../docs/framework/wpf/advanced/optimizing-performance-layout-and-design.md)  
  [資料繫結](../../../../docs/framework/wpf/advanced/optimizing-performance-data-binding.md)  

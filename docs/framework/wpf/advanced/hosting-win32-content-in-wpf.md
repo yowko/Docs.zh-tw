@@ -1,28 +1,16 @@
 ---
-title: "在 WPF 中裝載 Win32 內容"
-ms.custom: 
+title: 在 WPF 中裝載 Win32 內容
 ms.date: 03/30/2017
-ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.technology: dotnet-wpf
-ms.tgt_pltfrm: 
-ms.topic: article
 helpviewer_keywords:
 - interoperability [WPF], tutorials
 - Win32 code [WPF], WPF interoperation
 - interoperability [WPF], Win32
 ms.assetid: 3cc8644a-34f3-4082-9ddc-77623e4df2d8
-caps.latest.revision: "7"
-author: dotnet-bot
-ms.author: dotnetcontent
-manager: wpickett
-ms.workload: dotnet
-ms.openlocfilehash: 7c92e5b045b248337f1cb96c333ac38f1228dd90
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.openlocfilehash: beb7d5e6e1f934b89bb7516eb7e9bbbaad696238
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="hosting-win32-content-in-wpf"></a>在 WPF 中裝載 Win32 內容
 ## <a name="prerequisites"></a>必要條件  
@@ -370,5 +358,5 @@ public partial class Window1 : Window {
   
  ![WPF 應用程式螢幕擷取畫面](../../../../docs/framework/wpf/advanced/media/interoparch09.PNG "InteropArch09")  
   
-## <a name="see-also"></a>請參閱  
+## <a name="see-also"></a>另請參閱  
  [WPF 和 Win32 交互操作](../../../../docs/framework/wpf/advanced/wpf-and-win32-interoperation.md)

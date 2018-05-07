@@ -1,29 +1,15 @@
 ---
 title: 佇列和可靠的工作階段
-ms.custom: ''
 ms.date: 03/30/2017
-ms.prod: .net-framework
-ms.reviewer: ''
-ms.suite: ''
-ms.technology:
-- dotnet-clr
-ms.tgt_pltfrm: ''
-ms.topic: article
 ms.assetid: 7e794d03-141c-45ed-b6b1-6c0e104c1464
-caps.latest.revision: 10
-author: dotnet-bot
-ms.author: dotnetcontent
-manager: wpickett
-ms.workload:
-- dotnet
-ms.openlocfilehash: dbbaa432f7f1e137fc6cbd47ecd8e24d9eab97c3
-ms.sourcegitcommit: 94d33cadc5ff81d2ac389bf5f26422c227832052
+ms.openlocfilehash: a60f409a0f5c237c372fe3303d67ef979950eab4
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/30/2018
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="queues-and-reliable-sessions"></a>佇列和可靠的工作階段
-佇列和可靠工作階段是實作可信賴傳訊的 [!INCLUDE[indigo1](../../../../includes/indigo1-md.md)] 的功能。 本章節中的主題將討論 [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] 可信賴傳訊功能。  
+佇列和可靠工作階段是實作可信賴傳訊的 Windows Communication Foundation (WCF) 功能。 本節包含的主題將討論 WCF 可信賴傳訊功能。  
   
  「可信賴傳訊」為可信賴傳訊來源 (稱為來源) 將訊息可靠地傳輸到可信賴傳訊目的地 (稱為目的地) 的方式。  
   
@@ -33,7 +19,7 @@ ms.lasthandoff: 04/30/2018
   
 -   將來源和目的地彼此分開，如此可對來源與目的地提供獨立的失敗與復原作業，以及可靠訊息傳輸與傳遞，就算來源或目的地無法使用也是一樣。  
   
- 可信賴傳訊通常會伴隨長延遲時間的發生。 「延遲時間」為訊息從來源到達目的地所需要的時間。 因此，[!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] 提供了下列幾種類型的可信賴傳訊：  
+ 可信賴傳訊通常會伴隨長延遲時間的發生。 「延遲時間」為訊息從來源到達目的地所需要的時間。 WCF，因此，提供下列類型的可信賴傳訊：  
   
 -   [可靠工作階段](../../../../docs/framework/wcf/feature-details/reliable-sessions.md)，提供可靠的傳輸，而不是高延遲時間的成本  
   
@@ -45,7 +31,7 @@ ms.lasthandoff: 04/30/2018
  可靠工作階段會提供短延遲時間的可信賴訊息傳輸。 它們可透過任何的 Proxy 或媒介提供 SOAP 訊息，而這相當於 TCP 透過 IP 橋接器為封包提供的內容。 如需可靠工作階段的詳細資訊，請參閱[可靠工作階段](../../../../docs/framework/wcf/feature-details/reliable-sessions.md)。  
   
 ### <a name="queues"></a>佇列  
- [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] 中的佇列會在高延遲的情況下，提供可信賴傳訊以及來源和目的地的區隔性。 [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] 佇列通訊是建置在訊息佇列 (也稱為 MSMQ) 之上。  
+ 在 WCF 中的佇列會提供可信賴傳訊訊息及區隔來源和目的地高延遲的情況下之間。 WCF 排入佇列通訊建置在 Message Queuing (也稱為 MSMQ) 之上。  
   
  MSMQ 是 Windows 隨附的選用元件，而且會以 NT 服務的身分執行。 它會代表來源擷取傳輸佇列中要進行傳輸的訊息，並將該訊息傳遞至目標佇列。 目標佇列會代表目的地接受訊息，以便隨時因應目的地要求訊息而進行傳遞。 MSMQ 佇列管理員會實作可靠訊息傳輸通訊協定，使訊息不會在傳輸期間遺失。 此通訊協定可以是原生或以 SOAP 為基礎的 SOAP Reliable Messaging Protocol (SRMP)。  
   

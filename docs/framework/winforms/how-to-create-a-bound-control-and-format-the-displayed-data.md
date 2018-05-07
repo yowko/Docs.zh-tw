@@ -1,28 +1,16 @@
 ---
-title: "如何：建立繫結控制項並格式化顯示的資料"
-ms.custom: 
+title: 如何：建立繫結控制項並格式化顯示的資料
 ms.date: 03/30/2017
-ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.technology: dotnet-winforms
-ms.tgt_pltfrm: 
-ms.topic: article
 helpviewer_keywords:
 - data [Windows Forms], formatting
 - bound controls [Windows Forms], creating
 - bound controls [Windows Forms], formatting data
 ms.assetid: d5a56228-899d-41d9-8af8-87b3f4ec2f94
-caps.latest.revision: "10"
-author: dotnet-bot
-ms.author: dotnetcontent
-manager: wpickett
-ms.workload: dotnet
-ms.openlocfilehash: 6088048ed27b2021e297494275f4e80f7c0cb681
-ms.sourcegitcommit: c0dd436f6f8f44dc80dc43b07f6841a00b74b23f
+ms.openlocfilehash: 9055ec9c4b646e0c86819e4e72db8ce20086bace
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 01/19/2018
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="how-to-create-a-bound-control-and-format-the-displayed-data"></a>如何：建立繫結控制項並格式化顯示的資料
 Windows Form 資料繫結，您可以將資料格式化顯示的資料繫結控制項中使用**格式化和進階繫結** 對話方塊。  
@@ -38,7 +26,7 @@ Windows Form 資料繫結，您可以將資料格式化顯示的資料繫結控�
   
 2.  在表單中選取控制項，然後開啟屬性視窗。  
   
-3.  展開**(DataBindings)**屬性，然後在**（進階）**方塊中，按一下省略符號按鈕 (![VisualStudioEllipsesButton 螢幕擷取畫面](../../../docs/framework/winforms/media/vbellipsesbutton.png "vbEllipsesButton")) 以顯示**格式化與進階繫結**對話方塊中，具有該控制項屬性的完整清單。  
+3.  展開 **(DataBindings)** 屬性，然後在**（進階）**方塊中，按一下省略符號按鈕 (![VisualStudioEllipsesButton 螢幕擷取畫面](../../../docs/framework/winforms/media/vbellipsesbutton.png "vbEllipsesButton")) 以顯示**格式化與進階繫結**對話方塊中，具有該控制項屬性的完整清單。  
   
 4.  選取您想要繫結，然後按一下的屬性**繫結**箭號。  
   
@@ -61,11 +49,11 @@ Windows Form 資料繫結，您可以將資料格式化顯示的資料繫結控�
     |貨幣|使用指定的小數位數**小數位數**上下按鈕控制項。|  
     |日期時間|選取如何藉由選取其中一個項目中顯示的日期和時間**類型**選取方塊。|  
     |科學記號|使用指定的小數位數**小數位數**上下按鈕控制項。|  
-    |自訂|指定使用自訂格式字串。<br /><br /> 如需詳細資訊，請參閱[格式化型別](../../../docs/standard/base-types/formatting-types.md)。 **注意：**自訂格式字串來成功反覆存取資料來源和繫結的控制項之間不保證。 改為處理 <xref:System.Windows.Forms.Binding.Parse> 或 <xref:System.Windows.Forms.Binding.Format> 繫結的事件，以及在事件處理程式碼中套用自訂格式。|  
+    |自訂|指定使用自訂格式字串。<br /><br /> 如需詳細資訊，請參閱[格式類型](../../../docs/standard/base-types/formatting-types.md)。 **注意：**自訂格式字串來成功反覆存取資料來源和繫結的控制項之間不保證。 改為處理 <xref:System.Windows.Forms.Binding.Parse> 或 <xref:System.Windows.Forms.Binding.Format> 繫結的事件，以及在事件處理程式碼中套用自訂格式。|  
   
 8.  按一下**確定**關閉**格式化與進階繫結**對話方塊並返回 [屬性] 視窗。  
   
-## <a name="see-also"></a>請參閱  
+## <a name="see-also"></a>另請參閱  
  [操作說明：在 Windows Forms 上建立簡單繫結控制項](../../../docs/framework/winforms/how-to-create-a-simple-bound-control-on-a-windows-form.md)  
  [Windows Forms 中的使用者輸入驗證](../../../docs/framework/winforms/user-input-validation-in-windows-forms.md)  
  [Windows Forms 資料繫結](../../../docs/framework/winforms/windows-forms-data-binding.md)

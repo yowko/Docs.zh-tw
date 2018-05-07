@@ -1,13 +1,6 @@
 ---
-title: "如何：將載入、儲存和取消按鈕加入至 Windows Form BindingNavigator 控制項"
-ms.custom: 
+title: 如何：將載入、儲存和取消按鈕加入至 Windows Form BindingNavigator 控制項
 ms.date: 03/30/2017
-ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.technology: dotnet-winforms
-ms.tgt_pltfrm: 
-ms.topic: article
 dev_langs:
 - csharp
 - vb
@@ -15,16 +8,11 @@ helpviewer_keywords:
 - controls [Windows Forms], manipulating
 - BindingNavigator control [Windows Forms], adding buttons
 ms.assetid: faa33042-186e-4bb2-8798-17ceb987ec62
-caps.latest.revision: "17"
-author: dotnet-bot
-ms.author: dotnetcontent
-manager: wpickett
-ms.workload: dotnet
-ms.openlocfilehash: 2dd45b33fb1f99c280e126b9e601692a85da5dba
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.openlocfilehash: 8f331c67dd22a6a9e2382ecc11d23c67cd2a5cbc
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="how-to-add-load-save-and-cancel-buttons-to-the-windows-forms-bindingnavigator-control"></a>如何：將載入、儲存和取消按鈕加入至 Windows Form BindingNavigator 控制項
 <xref:System.Windows.Forms.BindingNavigator>控制項是特殊用途<xref:System.Windows.Forms.ToolStrip>適用於巡覽及操作控制項在表單上的繫結至資料的控制項。  
@@ -120,7 +108,7 @@ ms.lasthandoff: 12/22/2017
     > [!NOTE]
     >  <xref:System.Windows.Forms.BindingSource.CancelEdit%2A>方法的範圍為資料列。 儲存您在檢視該個別記錄之前瀏覽至下一筆記錄時所做的變更。  
   
-## <a name="see-also"></a>請參閱  
+## <a name="see-also"></a>另請參閱  
  <xref:System.Windows.Forms.BindingNavigator>  
  <xref:System.Windows.Forms.BindingSource>  
  <xref:System.Windows.Forms.ToolStrip>  

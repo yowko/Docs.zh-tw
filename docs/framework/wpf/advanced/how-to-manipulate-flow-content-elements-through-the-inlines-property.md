@@ -1,13 +1,6 @@
 ---
-title: "如何：透過 Inlines 屬性管理非固定格式內容項目"
-ms.custom: 
+title: 如何：透過 Inlines 屬性管理非固定格式內容項目
 ms.date: 03/30/2017
-ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.technology: dotnet-wpf
-ms.tgt_pltfrm: 
-ms.topic: article
 dev_langs:
 - csharp
 - vb
@@ -17,16 +10,11 @@ helpviewer_keywords:
 - Inlines property [WPF], manipulating flow Content elements
 - properties [WPF], Inlines [WPF], manipulating flow Content elements
 ms.assetid: 510780d2-3da1-4360-8763-7054bda22ea3
-caps.latest.revision: "13"
-author: dotnet-bot
-ms.author: dotnetcontent
-manager: wpickett
-ms.workload: dotnet
-ms.openlocfilehash: c5d90756ee200ba091f2f9e15e9e7d5632984ba9
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.openlocfilehash: 3bbeac2eda8811939be3c710a8ce28349e7f0759
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="how-to-manipulate-flow-content-elements-through-the-inlines-property"></a>如何：透過 Inlines 屬性管理非固定格式內容項目
 這些範例會示範一些較常見可以內嵌動態內容項目執行的作業 (和容器的這類項目，例如<xref:System.Windows.Controls.TextBlock>) 透過**內嵌**屬性。 這個屬性用來加入和移除項目從<xref:System.Windows.Documents.InlineCollection>。 非固定格式內容項目該功能**內嵌**屬性包括：  
@@ -75,7 +63,7 @@ ms.lasthandoff: 12/22/2017
  [!code-csharp[SpanSnippets#_SpanInlinesClear](../../../../samples/snippets/csharp/VS_Snippets_Wpf/SpanSnippets/CSharp/Window1.xaml.cs#_spaninlinesclear)]
  [!code-vb[SpanSnippets#_SpanInlinesClear](../../../../samples/snippets/visualbasic/VS_Snippets_Wpf/SpanSnippets/visualbasic/window1.xaml.vb#_spaninlinesclear)]  
   
-## <a name="see-also"></a>請參閱  
+## <a name="see-also"></a>另請參閱  
  <xref:System.Windows.Documents.BlockCollection>  
  <xref:System.Windows.Documents.InlineCollection>  
  <xref:System.Windows.Documents.ListItemCollection>  

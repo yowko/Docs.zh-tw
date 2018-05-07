@@ -1,13 +1,6 @@
 ---
-title: "操作說明：建立和繫結至 ObservableCollection"
-ms.custom: 
+title: 操作說明：建立和繫結至 ObservableCollection
 ms.date: 03/30/2017
-ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.technology: dotnet-wpf
-ms.tgt_pltfrm: 
-ms.topic: article
 dev_langs:
 - csharp
 - vb
@@ -15,16 +8,11 @@ helpviewer_keywords:
 - data binding [WPF], ObservableCollection class
 - notifications [WPF]
 ms.assetid: 6cf7e275-df76-41c6-a611-53b889b8fd5a
-caps.latest.revision: "13"
-author: dotnet-bot
-ms.author: dotnetcontent
-manager: wpickett
-ms.workload: dotnet
-ms.openlocfilehash: cc99b09edbc16403e2c0fc4d948a39811801c64b
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.openlocfilehash: 5e04aa1a1d209074dbdadcb1df089e31efa84ded
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="how-to-create-and-bind-to-an-observablecollection"></a>操作說明：建立和繫結至 ObservableCollection
 此範例示範如何建立並繫結至集合，其中衍生自<xref:System.Collections.ObjectModel.ObservableCollection%601>類別，即會加入或移除項目時提供通知的集合類別。  
@@ -151,7 +139,7 @@ End Class
   
  如需詳細資訊，請參閱[資料繫結概觀](../../../../docs/framework/wpf/data/data-binding-overview.md)中的＜繫結至集合＞一節。  
   
-## <a name="see-also"></a>請參閱  
+## <a name="see-also"></a>另請參閱  
  [排序檢視中的資料](../../../../docs/framework/wpf/data/how-to-sort-data-in-a-view.md)  
  [篩選檢視中的資料](../../../../docs/framework/wpf/data/how-to-filter-data-in-a-view.md)  
  [使用 XAML 中的檢視排序和群組資料](../../../../docs/framework/wpf/data/how-to-sort-and-group-data-using-a-view-in-xaml.md)  

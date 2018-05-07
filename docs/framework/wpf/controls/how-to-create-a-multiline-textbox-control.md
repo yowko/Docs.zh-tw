@@ -1,28 +1,14 @@
 ---
-title: "如何：建立多行 TextBox 控制項"
-ms.custom: 
+title: 如何：建立多行 TextBox 控制項
 ms.date: 03/30/2017
-ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.technology:
-- dotnet-wpf
-ms.tgt_pltfrm: 
-ms.topic: article
 helpviewer_keywords:
 - TextBox control [WPF], multiple lines of text
 ms.assetid: 05914a93-d0ea-4a9a-b693-09df7d4e2ac2
-caps.latest.revision: 
-author: dotnet-bot
-ms.author: dotnetcontent
-manager: wpickett
-ms.workload:
-- dotnet
-ms.openlocfilehash: 2a6885a594e5fcd747f85dedf1afbd39ec644717
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.openlocfilehash: 9f4c9e637b686c82b4ec8a4a5d6d3a78d46f97c1
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="how-to-create-a-multiline-textbox-control"></a>如何：建立多行 TextBox 控制項
 這個範例示範如何使用[!INCLUDE[TLA#tla_xaml](../../../../includes/tlasharptla-xaml-md.md)]定義<xref:System.Windows.Controls.TextBox>會自動擴展以容納多行文字的控制項。  
@@ -36,7 +22,7 @@ ms.lasthandoff: 12/22/2017
   
  [!code-xaml[TextBox_MiscCode#_MultilineTextBoxXAML](../../../../samples/snippets/csharp/VS_Snippets_Wpf/TextBox_MiscCode/CSharp/Window1.xaml#_multilinetextboxxaml)]  
   
-## <a name="see-also"></a>請參閱  
+## <a name="see-also"></a>另請參閱  
  <xref:System.Windows.TextWrapping>  
  [TextBox 概觀](../../../../docs/framework/wpf/controls/textbox-overview.md)  
  [RichTextBox 概觀](../../../../docs/framework/wpf/controls/richtextbox-overview.md)

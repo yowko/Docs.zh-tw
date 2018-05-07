@@ -1,28 +1,16 @@
 ---
-title: "模擬用戶端"
-ms.custom: 
+title: 模擬用戶端
 ms.date: 03/30/2017
-ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.technology: dotnet-clr
-ms.tgt_pltfrm: 
-ms.topic: article
 helpviewer_keywords:
 - service behaviors, impersonation sample
 - Impersonating the Client Sample [Windows Communication Foundation]
 - impersonation, Windows Communication Foundation sample
 ms.assetid: 8bd974e1-90db-4152-95a3-1d4b1a7734f8
-caps.latest.revision: "25"
-author: dotnet-bot
-ms.author: dotnetcontent
-manager: wpickett
-ms.workload: dotnet
-ms.openlocfilehash: a17a3631b781e6a96eb8aec17b20e8ddca52890d
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.openlocfilehash: 4c5d911bfbfcd33248e15b9fc822abdc9cf4046c
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="impersonating-the-client"></a>模擬用戶端
 此模擬範例會示範如何在服務端模擬呼叫者應用程式，以便讓服務能夠代表該呼叫者存取系統資源。  
@@ -113,7 +101,7 @@ client.ClientCredentials.Windows.AllowedImpersonationLevel = TokenImpersonationL
  當您執行範例時，作業要求和回應會顯示在服務與用戶端主控台視窗中。 在每個主控台視窗中按下 ENTER 鍵，即可關閉服務與用戶端。  
   
 > [!NOTE]
->  此服務必須使用系統管理帳戶執行，或是用來執行此服務的帳戶必須獲得可向 HTTP 層註冊 http://localhost:8000/ServiceModelSamples URI 的權限。 這類權限可以授與設定[命名空間保留](http://go.microsoft.com/fwlink/?LinkId=95012)使用[Httpcfg.exe 工具](http://go.microsoft.com/fwlink/?LinkId=95010)。  
+>  服務必須使用系統管理帳戶執行，或是它執行的帳戶必須被授與註冊權限http://localhost:8000/ServiceModelSamples向 HTTP 層的 URI。 這類權限可以授與設定[命名空間保留](http://go.microsoft.com/fwlink/?LinkId=95012)使用[Httpcfg.exe 工具](http://go.microsoft.com/fwlink/?LinkId=95010)。  
   
 > [!NOTE]
 >  在執行 [!INCLUDE[ws2003](../../../../includes/ws2003-md.md)] 的電腦上，只有在 Host.exe 應用程式擁有「模擬」權限的情況下才支援模擬  (根據預設，只有系統管理員具有此權限)。若要將此權限加入至服務執行帳戶，請前往**系統管理工具**，開啟**本機安全性原則**，開啟**本機原則**，按一下**使用者權限指派**，然後選取**驗證後模擬用戶端**按兩下**屬性**新增使用者或群組。  
@@ -136,4 +124,4 @@ client.ClientCredentials.Windows.AllowedImpersonationLevel = TokenImpersonationL
   
 5.  當您執行用戶端時，請注意用戶端在使用不同認證執行前後所具有的身分識別。  
   
-## <a name="see-also"></a>請參閱
+## <a name="see-also"></a>另請參閱

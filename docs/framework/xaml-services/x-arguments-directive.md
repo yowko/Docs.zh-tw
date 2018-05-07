@@ -1,28 +1,16 @@
 ---
-title: "x:Arguments 指示詞"
-ms.custom: 
+title: x:Arguments 指示詞
 ms.date: 03/30/2017
-ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.technology: dotnet-wpf
-ms.tgt_pltfrm: 
-ms.topic: article
 helpviewer_keywords:
 - x:Arguments directive [XAML Services]
 - Arguments directive in XAML [XAML Services]
 - XAML [XAML Services], x:Arguments directive
 ms.assetid: 87cc10b0-b610-4025-b6b0-ab27ca27c92e
-caps.latest.revision: "12"
-author: wadepickett
-ms.author: wpickett
-manager: wpickett
-ms.workload: dotnet
-ms.openlocfilehash: bb1f5986a0d9f9eb69ade0228925ec06164cee4d
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.openlocfilehash: e0e7f380ec176e80d2422878a2e676d64985d660
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="xarguments-directive"></a>x:Arguments 指示詞
 在 XAML 中、 非預設建構函式物件項目宣告或 factory 方法物件宣告，封裝建構引數。  
@@ -55,7 +43,7 @@ ms.lasthandoff: 12/22/2017
 |`methodName`|應該處理任何的 factory 方法的名稱`x:Arguments`引數。|  
   
 ## <a name="dependencies"></a>相依性  
- `x:FactoryMethod`範圍和行為可以修改其中`x:Arguments`套用。  
+ `x:FactoryMethod` 範圍和行為可以修改其中`x:Arguments`套用。  
   
  如果沒有`x:FactoryMethod`指定，則`x:Arguments`適用於支援建構函式的替代 （非預設值） 簽章。  
   
@@ -66,7 +54,7 @@ ms.lasthandoff: 12/22/2017
   
  `x:Arguments` XAML 用法不是屬性項目用法中的一般意義，因為指示詞標記未參考包含物件項目類型。 例如，它是比較類似於其他指示詞`x:Code`其中的項目 demarks 所在標記應該解譯為以外子內容的預設值的範圍。 在此情況下，XAML 類型的每個物件項目傳達資訊引數類型的 XAML 剖析器用來判斷哪一個特定的建構函式的 factory 方法簽章`x:Arguments`使用量嘗試參考。  
   
- `x:Arguments`物件項目所建構應優先於其他任何屬性項目、 內容、 內部文字或初始化字串的物件項目。 中的物件項目`x:Arguments`可以包括屬性和初始化字串所允許的該 XAML 類型和其支援的建構函式或 factory 方法。 物件或引數，您可以指定自訂的 XAML 型別或 XAML 類型，否則預設 XAML 命名空間外部參考已建立的前置詞對應。  
+ `x:Arguments` 物件項目所建構應優先於其他任何屬性項目、 內容、 內部文字或初始化字串的物件項目。 中的物件項目`x:Arguments`可以包括屬性和初始化字串所允許的該 XAML 類型和其支援的建構函式或 factory 方法。 物件或引數，您可以指定自訂的 XAML 型別或 XAML 類型，否則預設 XAML 命名空間外部參考已建立的前置詞對應。  
   
  XAML 處理器會使用下列指導方針來判斷如何在中指定的引數`x:Arguments`應該用來建構物件。 如果`x:FactoryMethod`指定，則資訊進行比較的指定`x:FactoryMethod`(請注意，值`x:FactoryMethod`是方法名稱，而具名的方法的多載。 如果`x:FactoryMethod`未指定，資訊進行比較的物件的所有公用建構函式多載的集合。 然後，XAML 處理邏輯會比較的參數數目，並選取具有相符引數數目的多載。 如果有多個相符項目，XAML 處理器應該比較根據提供的物件項目的 XAML 型別參數的類型。 如果沒有仍然超過一個符合項目，XAML 處理器的行為未定義。 如果`x:FactoryMethod`指定，但此方法無法解決，XAML 處理器應該擲回例外狀況。  
   
@@ -117,6 +105,6 @@ public Food TryLookupFood(string name)
 </my:Food>  
 ```  
   
-## <a name="see-also"></a>請參閱  
+## <a name="see-also"></a>另請參閱  
  [定義可搭配 .NET Framework XAML 服務使用的自訂類型](../../../docs/framework/xaml-services/defining-custom-types-for-use-with-net-framework-xaml-services.md)  
  [XAML 概觀 (WPF)](../../../docs/framework/wpf/advanced/xaml-overview-wpf.md)

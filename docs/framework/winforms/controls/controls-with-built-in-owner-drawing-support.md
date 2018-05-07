@@ -1,13 +1,6 @@
 ---
-title: "使用內建主控描繪支援的控制項"
-ms.custom: 
+title: 使用內建主控描繪支援的控制項
 ms.date: 03/30/2017
-ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.technology: dotnet-winforms
-ms.tgt_pltfrm: 
-ms.topic: article
 helpviewer_keywords:
 - drawing [Windows Forms], owner
 - drawing [Windows Forms], custom
@@ -15,16 +8,11 @@ helpviewer_keywords:
 - custom drawing
 - owner drawing
 ms.assetid: 3823d01e-9610-43e6-864d-99f9b7c2b351
-caps.latest.revision: "15"
-author: dotnet-bot
-ms.author: dotnetcontent
-manager: wpickett
-ms.workload: dotnet
-ms.openlocfilehash: efd297dcc11005d6b6d47bb9ce3853a757046e8f
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.openlocfilehash: a5cbdc733a2f1cda3e708ceaae8604297f8da58a
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="controls-with-built-in-owner-drawing-support"></a>使用內建主控描繪支援的控制項
 Windows Forms 中的主控描繪也稱為自訂繪圖，是變更特定控制項的視覺外觀的技術。  
@@ -53,7 +41,7 @@ Windows Forms 中的主控描繪也稱為自訂繪圖，是變更特定控制項
   
 -   <xref:System.Windows.Forms.ComboBox>  
   
--   <xref:System.Windows.Forms.MenuItem>(使用<xref:System.Windows.Forms.MainMenu>和<xref:System.Windows.Forms.ContextMenu>)  
+-   <xref:System.Windows.Forms.MenuItem> (使用<xref:System.Windows.Forms.MainMenu>和<xref:System.Windows.Forms.ContextMenu>)  
   
 -   <xref:System.Windows.Forms.TabControl>  
   
@@ -188,7 +176,7 @@ Windows Forms 中的主控描繪也稱為自訂繪圖，是變更特定控制項
 -   [如何：在 Windows Forms DataGridView 控制項中自訂資料列的外觀](../../../../docs/framework/winforms/controls/customize-the-appearance-of-rows-in-the-datagrid.md)  
   
 ### <a name="toolstrip-control"></a>ToolStrip 控制項  
- <xref:System.Windows.Forms.ToolStrip>衍生的控制項可讓您自訂其外觀的任何層面。  
+ <xref:System.Windows.Forms.ToolStrip> 衍生的控制項可讓您自訂其外觀的任何層面。  
   
  若要提供的自訂轉譯<xref:System.Windows.Forms.ToolStrip>控制項設定`Renderer`屬性<xref:System.Windows.Forms.ToolStrip>， <xref:System.Windows.Forms.ToolStripManager>， <xref:System.Windows.Forms.ToolStripPanel>，或<xref:System.Windows.Forms.ToolStripContentPanel>至`ToolStripRenderer`物件，並處理一個或多個所提供的許多繪製事件`ToolStripRenderer`類別。 或者，設定`Renderer`您自己的類別執行個體的屬性衍生自`ToolStripRenderer`， <xref:System.Windows.Forms.ToolStripProfessionalRenderer>，或<xref:System.Windows.Forms.ToolStripSystemRenderer>所實作或覆寫特定`On` *EventName*方法。  
   
@@ -200,5 +188,5 @@ Windows Forms 中的主控描繪也稱為自訂繪圖，是變更特定控制項
   
 -   [如何：自訂繪製 ToolStrip 控制項](../../../../docs/framework/winforms/controls/how-to-custom-draw-a-toolstrip-control.md)  
   
-## <a name="see-also"></a>請參閱  
+## <a name="see-also"></a>另請參閱  
  [在 Windows Forms 上使用的控制項](../../../../docs/framework/winforms/controls/controls-to-use-on-windows-forms.md)

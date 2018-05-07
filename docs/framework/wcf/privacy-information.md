@@ -1,31 +1,19 @@
 ---
-title: "Windows Communication Foundation 隱私權資訊"
-ms.custom: 
+title: Windows Communication Foundation 隱私權資訊
 ms.date: 03/30/2017
-ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.technology: dotnet-clr
-ms.tgt_pltfrm: 
-ms.topic: article
 helpviewer_keywords:
 - Windows Communication Foundation, privacy information
 - WCF, privacy information
 - privacy information [WCF]
 ms.assetid: c9553724-f3e7-45cb-9ea5-450a22d309d9
-caps.latest.revision: "34"
-author: dotnet-bot
-ms.author: dotnetcontent
-manager: wpickett
-ms.workload: dotnet
-ms.openlocfilehash: 2d0172b91393e4e9e373a247c33be938a3160e14
-ms.sourcegitcommit: c0dd436f6f8f44dc80dc43b07f6841a00b74b23f
-ms.translationtype: MT
+ms.openlocfilehash: e9c4130cd4680d4cd68ca8c6ba36c38b5d065f58
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 01/19/2018
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="windows-communication-foundation-privacy-information"></a>Windows Communication Foundation 隱私權資訊
-Microsoft 一向致力於保護終端使用者的隱私權。 使用 [!INCLUDE[indigo1](../../../includes/indigo1-md.md)] 3.0 版建置應用程式時，該應用程式可能會影響到使用者的隱私權。 例如，應用程式可能會明確收集使用者的連絡資訊，或者透過網際網路向您的網站要求資訊或傳送資訊至網站。 如果您在應用程式中內嵌 Microsoft 技術，則該技術可能帶有會影響隱私權的行為。 [!INCLUDE[indigo2](../../../includes/indigo2-md.md)] 不會從您的應用程式將任何資訊傳送至 Microsoft，除非您本人或使用者選擇將資訊傳送給我們。  
+Microsoft 一向致力於保護終端使用者的隱私權。 當您建置應用程式使用 Windows Communication Foundation (WCF)，版本 3.0 中，您的應用程式可能會影響到使用者的隱私權。 例如，應用程式可能會明確收集使用者的連絡資訊，或者透過網際網路向您的網站要求資訊或傳送資訊至網站。 如果您在應用程式中內嵌 Microsoft 技術，則該技術可能帶有會影響隱私權的行為。 [!INCLUDE[indigo2](../../../includes/indigo2-md.md)] 不會從您的應用程式將任何資訊傳送至 Microsoft，除非您本人或使用者選擇將資訊傳送給我們。  
   
 ## <a name="wcf-in-brief"></a>WCF 簡介  
  [!INCLUDE[indigo2](../../../includes/indigo2-md.md)] 是一種使用 Microsoft .NET Framework 的分散式訊息架構，可用來讓開發人員建置分散式應用程式。 而在兩個應用程式之間通訊的訊息則包含標頭和本文資訊。  
@@ -138,13 +126,13 @@ Microsoft 一向致力於保護終端使用者的隱私權。 使用 [!INCLUDE[i
   
  移除的金鑰：  
   
- \- For xmlns:wst="http://schemas.xmlsoap.org/ws/2004/04/trust" and xmlns:wst="http://schemas.xmlsoap.org/ws/2005/02/trust"  
+ \- 為 xmlns: wst ="http://schemas.xmlsoap.org/ws/2004/04/trust"和 xmlns: wst ="http://schemas.xmlsoap.org/ws/2005/02/trust"  
   
  wst:BinarySecret  
   
  wst:Entropy  
   
- \-Xmlns:wsse ="http://docs.oasis-open.org/wss/2004/01/oasis-200401-wss-wssecurity-secext-1.1.xsd 」 和 xmlns:wsse ="http://docs.oasis-open.org/wss/2005/xx/oasis-2005xx-wss-wssecurity-secext-1.1.xsd"  
+ \- Xmlns:wsse ="http://docs.oasis-open.org/wss/2004/01/oasis-200401-wss-wssecurity-secext-1.1.xsd"和 xmlns:wsse ="http://docs.oasis-open.org/wss/2005/xx/oasis-2005xx-wss-wssecurity-secext-1.1.xsd"  
   
  wsse:Password  
   
@@ -152,13 +140,13 @@ Microsoft 一向致力於保護終端使用者的隱私權。 使用 [!INCLUDE[i
   
  移除的可能個人資訊：  
   
- \-Xmlns:wsse ="http://docs.oasis-open.org/wss/2004/01/oasis-200401-wss-wssecurity-secext-1.1.xsd 」 和 xmlns:wsse ="http://docs.oasis-open.org/wss/2005/xx/oasis-2005xx-wss-wssecurity-secext-1.1.xsd"  
+ \- Xmlns:wsse ="http://docs.oasis-open.org/wss/2004/01/oasis-200401-wss-wssecurity-secext-1.1.xsd"和 xmlns:wsse ="http://docs.oasis-open.org/wss/2005/xx/oasis-2005xx-wss-wssecurity-secext-1.1.xsd"  
   
  wsse:Username  
   
  wsse:BinarySecurityToken  
   
- \-為 xmlns: saml ="urn: oasis： 名稱： tc: SAML:1.0:assertion 」 移除的項目以粗體顯示 （下方）：  
+ \- 為 xmlns: saml ="urn: oasis： 名稱： tc: SAML:1.0:assertion 」 移除的項目以粗體顯示 （下方）：  
   
  \<判斷提示  
   
@@ -178,7 +166,7 @@ Microsoft 一向致力於保護終端使用者的隱私權。 使用 [!INCLUDE[i
   
  \<AudienceRestrictionCondition>  
   
- \<Audience>[uri]\</Audience>+  
+ \<對象 > [uri]\</Audience > +  
   
  \</AudienceRestrictionCondition>*  
   
@@ -196,7 +184,7 @@ Microsoft 一向致力於保護終端使用者的隱私權。 使用 [!INCLUDE[i
   
  \<AssertionIDReference>[ID]\</AssertionIDReference>*  
   
- \<Assertion>[assertion]\</Assertion>*  
+ \<判斷提示 > [判斷提示]\</Assertion > *  
   
  [any]*  
   
@@ -206,9 +194,9 @@ Microsoft 一向致力於保護終端使用者的隱私權。 使用 [!INCLUDE[i
   
  \<陳述式 / > *  
   
- \<SubjectStatement>  
+ \<SubjectStatement >  
   
- \<Subject>  
+ \<主題 >  
   
  `<NameIdentifier`  
   
@@ -224,17 +212,17 @@ Microsoft 一向致力於保護終端使用者的隱私權。 使用 [!INCLUDE[i
   
  \<SubjectConfirmation>  
   
- \<ConfirmationMethod>[anyUri]\</ConfirmationMethod>+  
+ \<ConfirmationMethod > [anyUri]\</ConfirmationMethod > +  
   
  \<SubjectConfirmationData>[any]\</SubjectConfirmationData>?  
   
- \<ds:KeyInfo>...\</ds:KeyInfo>?  
+ \<ds:KeyInfo >...\</ds:KeyInfo > 嗎？  
   
- \</SubjectConfirmation>?  
+ \</ SubjectConfirmation > 嗎？  
   
  \</Subject>  
   
- \</SubjectStatement>*  
+ \</ SubjectStatement > *  
   
  -->  
   
@@ -266,9 +254,9 @@ Microsoft 一向致力於保護終端使用者的隱私權。 使用 [!INCLUDE[i
   
  />*  
   
- \</AuthenticationStatement>*  
+ \</ AuthenticationStatement > *  
   
- \<AttributeStatement>  
+ \<AttributeStatement >  
   
  [主旨]  
   
@@ -282,9 +270,9 @@ Microsoft 一向致力於保護終端使用者的隱私權。 使用 [!INCLUDE[i
   
  `<AttributeValue>[any]</AttributeValue>+`  
   
- \</Attribute>+  
+ \</ 屬性 > +  
   
- \</AttributeStatement>*  
+ \</ AttributeStatement > *  
   
  \<AuthorizationDecisionStatement  
   
@@ -296,13 +284,13 @@ Microsoft 一向致力於保護終端使用者的隱私權。 使用 [!INCLUDE[i
   
  [主旨]  
   
- \<Action Namespace="[uri]">[string]\</Action>+  
+ \<動作命名空間 ="[uri]"> [字串]\</Action > +  
   
  \<辨識項 >  
   
  \<AssertionIDReference>[ID]\</AssertionIDReference>+  
   
- \<Assertion>[assertion]\</Assertion>+  
+ \<判斷提示 > [判斷提示]\</Assertion > +  
   
  \</ 證據 > 嗎？  
   
@@ -315,7 +303,7 @@ Microsoft 一向致力於保護終端使用者的隱私權。 使用 [!INCLUDE[i
   
  若為下列命名空間：  
   
- xmlns:wst="http://schemas.xmlsoap.org/ws/2004/04/trust" 和 xmlns:wst="http://schemas.xmlsoap.org/ws/2005/02/trust" (例如，如果沒有可用的動作)  
+ xmlns: wst ="http://schemas.xmlsoap.org/ws/2004/04/trust"和 xmlns: wst ="http://schemas.xmlsoap.org/ws/2005/02/trust"（例如，如果沒有可用的動作）  
   
  將移除這些本文項目的資訊，而這些本文項目牽涉到金鑰交換：  
   
@@ -412,6 +400,6 @@ Microsoft 一向致力於保護終端使用者的隱私權。 使用 [!INCLUDE[i
   
  Web 服務描述語言 (WSDL) 中包含了連接埠定義。 每個連接埠都有端點位址，以及表示應用程式所使用服務的繫結。 您可以透過組態決定是否公開 WSDL。 在電腦上不會保留任何資訊。  
   
-## <a name="see-also"></a>請參閱  
+## <a name="see-also"></a>另請參閱  
  [Windows Communication Foundation](http://msdn.microsoft.com/library/fd327ade-0260-4c40-adbe-b74645ba3277)  
  [安全性](../../../docs/framework/wcf/feature-details/security.md)

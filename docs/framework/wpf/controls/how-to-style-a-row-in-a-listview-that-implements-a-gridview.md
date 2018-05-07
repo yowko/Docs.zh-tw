@@ -1,28 +1,16 @@
 ---
-title: "操作說明：為實作 GridView 之 ListView 中的資料列設定樣式"
-ms.custom: 
+title: 操作說明：為實作 GridView 之 ListView 中的資料列設定樣式
 ms.date: 03/30/2017
-ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.technology: dotnet-wpf
-ms.tgt_pltfrm: 
-ms.topic: article
 helpviewer_keywords:
 - GridView controls [WPF], styling rows
 - styling rows in ListViews implementing GridViews [WPF]
 - ListView controls [WPF], styling rows with GridViews
 ms.assetid: 2e406ba2-70a0-4e62-841f-0934859de76e
-caps.latest.revision: "12"
-author: dotnet-bot
-ms.author: dotnetcontent
-manager: wpickett
-ms.workload: dotnet
-ms.openlocfilehash: 1e37d70fe1cb6aefb1404424c1a8f5339e0badf7
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.openlocfilehash: 313ead6de45f2a137775adb0ad9aad8bd061c066
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="how-to-style-a-row-in-a-listview-that-implements-a-gridview"></a>操作說明：為實作 GridView 之 ListView 中的資料列設定樣式
 這個範例示範如何設定樣式中的資料列<xref:System.Windows.Controls.ListView>實作控制項<xref:System.Windows.Controls.GridView><xref:System.Windows.Controls.ListView.View%2A>模式。  
@@ -44,7 +32,7 @@ ms.lasthandoff: 12/22/2017
   
  [!code-xaml[ListViewItemStyleSnippet#GridView](../../../../samples/snippets/csharp/VS_Snippets_Wpf/ListViewItemStyleSnippet/CS/Window1.xaml#gridview)]  
   
-## <a name="see-also"></a>請參閱  
+## <a name="see-also"></a>另請參閱  
  <xref:System.Windows.Controls.ListView>  
  <xref:System.Windows.Controls.GridView>  
  [HOW-TO 主題](../../../../docs/framework/wpf/controls/listview-how-to-topics.md)  

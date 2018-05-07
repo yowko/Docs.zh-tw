@@ -1,27 +1,18 @@
 ---
-title: "利用 UI 自動化取得混合文字屬性的詳細資料"
-ms.custom: 
+title: 利用 UI 自動化取得混合文字屬性的詳細資料
 ms.date: 03/30/2017
-ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.technology: dotnet-bcl
-ms.tgt_pltfrm: 
-ms.topic: article
 dev_langs:
 - csharp
 - vb
 ms.assetid: d0e4c005-abd1-42bb-92a4-5faf87097311
-caps.latest.revision: "11"
 author: Xansky
 ms.author: mhopkins
 manager: markl
-ms.workload: dotnet
-ms.openlocfilehash: 9dc823103d062d8165f3aae3f8cd49ad350cc2ac
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.openlocfilehash: 6216c8daa183db28cf5f127fddac0e8f4583d370
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="obtain-mixed-text-attribute-details-using-ui-automation"></a>利用 UI 自動化取得混合文字屬性的詳細資料
 > [!NOTE]
@@ -37,7 +28,7 @@ ms.lasthandoff: 12/22/2017
   
  <xref:System.Windows.Automation.TextPattern> 控制項模式 (結合 <xref:System.Windows.Automation.Text.TextPatternRange> 類別) 可支援基本文字屬性 (Attribute)、屬性 (Property) 及方法。 如果是 <xref:System.Windows.Automation.TextPattern> 或 <xref:System.Windows.Automation.Text.TextPatternRange>不支援的控制項特定功能， <xref:System.Windows.Automation.AutomationElement> 類別會提供使用者介面自動化用戶端方法，以存取對應的原生物件模型。  
   
-## <a name="see-also"></a>請參閱  
+## <a name="see-also"></a>另請參閱  
  [UI 自動化 TextPattern 概觀](../../../docs/framework/ui-automation/ui-automation-textpattern-overview.md)  
  [使用 UI 自動化將內容新增至文字方塊](../../../docs/framework/ui-automation/add-content-to-a-text-box-using-ui-automation.md)  
  [使用 UI 自動化尋找和反白顯示文字](../../../docs/framework/ui-automation/find-and-highlight-text-using-ui-automation.md)  

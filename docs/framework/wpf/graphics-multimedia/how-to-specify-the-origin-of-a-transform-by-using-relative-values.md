@@ -1,28 +1,16 @@
 ---
-title: "操作說明：使用相對值指定轉換的原點"
-ms.custom: 
+title: 操作說明：使用相對值指定轉換的原點
 ms.date: 03/30/2017
-ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.technology: dotnet-wpf
-ms.tgt_pltfrm: 
-ms.topic: article
 helpviewer_keywords:
 - origins of Transforms [WPF]
 - Transforms [WPF], origins of
 - graphics [WPF], origins of Transforms
 ms.assetid: f4dbc29d-93c7-41cd-96d8-5cfd8624b470
-caps.latest.revision: "8"
-author: dotnet-bot
-ms.author: dotnetcontent
-manager: wpickett
-ms.workload: dotnet
-ms.openlocfilehash: d29a572e2989ffb800434fdaab9756cb651c0816
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.openlocfilehash: ff263af8fbedeec483eee213c07dd4ec169805de
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="how-to-specify-the-origin-of-a-transform-by-using-relative-values"></a>操作說明：使用相對值指定轉換的原點
 此範例示範如何使用相對的值來指定來源的<xref:System.Windows.UIElement.RenderTransform%2A>套用至<xref:System.Windows.FrameworkElement>。  
@@ -50,7 +38,7 @@ ms.lasthandoff: 12/22/2017
   
  如需有關轉換<xref:System.Windows.FrameworkElement>物件，請參閱[轉換概觀](../../../../docs/framework/wpf/graphics-multimedia/transforms-overview.md)。  
   
-## <a name="see-also"></a>請參閱  
+## <a name="see-also"></a>另請參閱  
  <xref:System.Windows.Media.Transform>  
  [轉換概觀](../../../../docs/framework/wpf/graphics-multimedia/transforms-overview.md)  
  [HOW-TO 主題](../../../../docs/framework/wpf/graphics-multimedia/transformations-how-to-topics.md)

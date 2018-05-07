@@ -1,29 +1,17 @@
 ---
-title: "快顯功能表放置行為"
-ms.custom: 
+title: 快顯功能表放置行為
 ms.date: 03/30/2017
-ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.technology: dotnet-wpf
-ms.tgt_pltfrm: 
-ms.topic: article
 helpviewer_keywords:
 - popups [WPF]
 - Popup control [WPF], placing
 - placing popups [WPF]
 - positioning popups [WPF]
 ms.assetid: fbf642e9-f670-4efd-a7af-a67468a1c8e1
-caps.latest.revision: "14"
-author: dotnet-bot
-ms.author: dotnetcontent
-manager: wpickett
-ms.workload: dotnet
-ms.openlocfilehash: d991895b7c10ee5c210b252855e5affcfcb22a9c
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.openlocfilehash: 3aef3d7863bc02aa4164b1fc9ef4464fbe799cb8
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="popup-placement-behavior"></a>快顯功能表放置行為
 A<xref:System.Windows.Controls.Primitives.Popup>控制會漂浮在應用程式的另一個視窗，顯示內容。 您可以指定的位置<xref:System.Windows.Controls.Primitives.Popup>相對於控制項、 滑鼠或使用螢幕<xref:System.Windows.Controls.Primitives.Popup.PlacementTarget%2A>， <xref:System.Windows.Controls.Primitives.Popup.Placement%2A>， <xref:System.Windows.Controls.Primitives.Popup.PlacementRectangle%2A>， <xref:System.Windows.Controls.Primitives.Popup.HorizontalOffset%2A>，和<xref:System.Windows.Controls.Primitives.Popup.VerticalOffset%2A>屬性。  這些屬性搭配使用可讓您在指定位置的彈性<xref:System.Windows.Controls.Primitives.Popup>。  
@@ -116,18 +104,18 @@ A<xref:System.Windows.Controls.Primitives.Popup>控制會漂浮在應用程式�
   
 |PlacementMode|目標物件|目標區域|目標原點|快顯對齊點|  
 |-------------------|-------------------|-----------------|-------------------|---------------------------|  
-|<xref:System.Windows.Controls.Primitives.PlacementMode.Absolute>|不適用。 <xref:System.Windows.Controls.Primitives.Popup.PlacementTarget%2A>已忽略。|畫面上，或<xref:System.Windows.Controls.Primitives.Popup.PlacementRectangle%2A>如果設定。  <xref:System.Windows.Controls.Primitives.Popup.PlacementRectangle%2A>相對於螢幕。|目標區域的左上角。|左上角<xref:System.Windows.Controls.Primitives.Popup>。|  
-|<xref:System.Windows.Controls.Primitives.PlacementMode.AbsolutePoint>|不適用。 <xref:System.Windows.Controls.Primitives.Popup.PlacementTarget%2A>已忽略。|畫面上，或<xref:System.Windows.Controls.Primitives.Popup.PlacementRectangle%2A>如果設定。  <xref:System.Windows.Controls.Primitives.Popup.PlacementRectangle%2A>相對於螢幕。|目標區域的左上角。|左上角<xref:System.Windows.Controls.Primitives.Popup>。|  
-|<xref:System.Windows.Controls.Primitives.PlacementMode.Bottom>|<xref:System.Windows.Controls.Primitives.Popup.PlacementTarget%2A>或父代。|目標物件，或<xref:System.Windows.Controls.Primitives.Popup.PlacementRectangle%2A>如果設定。  <xref:System.Windows.Controls.Primitives.Popup.PlacementRectangle%2A>相對於目標物件。|目標區域的左下角。|左上角<xref:System.Windows.Controls.Primitives.Popup>。|  
-|<xref:System.Windows.Controls.Primitives.PlacementMode.Center>|<xref:System.Windows.Controls.Primitives.Popup.PlacementTarget%2A>或父代。|目標物件，或<xref:System.Windows.Controls.Primitives.Popup.PlacementRectangle%2A>如果設定。  <xref:System.Windows.Controls.Primitives.Popup.PlacementRectangle%2A>相對於目標物件。|目標區域的中央。|中央<xref:System.Windows.Controls.Primitives.Popup>。|  
-|<xref:System.Windows.Controls.Primitives.PlacementMode.Custom>|<xref:System.Windows.Controls.Primitives.Popup.PlacementTarget%2A>或父代。|目標物件，或<xref:System.Windows.Controls.Primitives.Popup.PlacementRectangle%2A>如果設定。  <xref:System.Windows.Controls.Primitives.Popup.PlacementRectangle%2A>相對於目標物件。|它是由定義<xref:System.Windows.Controls.Primitives.CustomPopupPlacementCallback>。|它是由定義<xref:System.Windows.Controls.Primitives.CustomPopupPlacementCallback>。|  
-|<xref:System.Windows.Controls.Primitives.PlacementMode.Left>|<xref:System.Windows.Controls.Primitives.Popup.PlacementTarget%2A>或父代。|目標物件，或<xref:System.Windows.Controls.Primitives.Popup.PlacementRectangle%2A>如果設定。  <xref:System.Windows.Controls.Primitives.Popup.PlacementRectangle%2A>相對於目標物件。|目標區域的左上角。|右上角<xref:System.Windows.Controls.Primitives.Popup>。|  
-|<xref:System.Windows.Controls.Primitives.PlacementMode.Mouse>|不適用。 <xref:System.Windows.Controls.Primitives.Popup.PlacementTarget%2A>已忽略。|滑鼠指標的範圍。 <xref:System.Windows.Controls.Primitives.Popup.PlacementRectangle%2A>已忽略。|目標區域的左下角。|左上角<xref:System.Windows.Controls.Primitives.Popup>。|  
-|<xref:System.Windows.Controls.Primitives.PlacementMode.MousePoint>|不適用。 <xref:System.Windows.Controls.Primitives.Popup.PlacementTarget%2A>已忽略。|滑鼠指標的範圍。 <xref:System.Windows.Controls.Primitives.Popup.PlacementRectangle%2A>已忽略。|目標區域的左上角。|左上角<xref:System.Windows.Controls.Primitives.Popup>。|  
-|<xref:System.Windows.Controls.Primitives.PlacementMode.Relative>|<xref:System.Windows.Controls.Primitives.Popup.PlacementTarget%2A>或父代。|目標物件，或<xref:System.Windows.Controls.Primitives.Popup.PlacementRectangle%2A>如果設定。  <xref:System.Windows.Controls.Primitives.Popup.PlacementRectangle%2A>相對於目標物件。|目標區域的左上角。|左上角<xref:System.Windows.Controls.Primitives.Popup>。|  
-|<xref:System.Windows.Controls.Primitives.PlacementMode.RelativePoint>|<xref:System.Windows.Controls.Primitives.Popup.PlacementTarget%2A>或父代。|目標物件，或<xref:System.Windows.Controls.Primitives.Popup.PlacementRectangle%2A>如果設定。  <xref:System.Windows.Controls.Primitives.Popup.PlacementRectangle%2A>相對於目標物件。|目標區域的左上角。|左上角<xref:System.Windows.Controls.Primitives.Popup>。|  
-|<xref:System.Windows.Controls.Primitives.PlacementMode.Right>|<xref:System.Windows.Controls.Primitives.Popup.PlacementTarget%2A>或父代。|目標物件，或<xref:System.Windows.Controls.Primitives.Popup.PlacementRectangle%2A>如果設定。  <xref:System.Windows.Controls.Primitives.Popup.PlacementRectangle%2A>相對於目標物件。|目標區域的右上角。|左上角<xref:System.Windows.Controls.Primitives.Popup>。|  
-|<xref:System.Windows.Controls.Primitives.PlacementMode.Top>|<xref:System.Windows.Controls.Primitives.Popup.PlacementTarget%2A>或父代。|目標物件，或<xref:System.Windows.Controls.Primitives.Popup.PlacementRectangle%2A>如果設定。  <xref:System.Windows.Controls.Primitives.Popup.PlacementRectangle%2A>相對於目標物件。|目標區域的左上角。|左下角<xref:System.Windows.Controls.Primitives.Popup>。|  
+|<xref:System.Windows.Controls.Primitives.PlacementMode.Absolute>|不適用。 <xref:System.Windows.Controls.Primitives.Popup.PlacementTarget%2A> 已忽略。|畫面上，或<xref:System.Windows.Controls.Primitives.Popup.PlacementRectangle%2A>如果設定。  <xref:System.Windows.Controls.Primitives.Popup.PlacementRectangle%2A>相對於螢幕。|目標區域的左上角。|左上角<xref:System.Windows.Controls.Primitives.Popup>。|  
+|<xref:System.Windows.Controls.Primitives.PlacementMode.AbsolutePoint>|不適用。 <xref:System.Windows.Controls.Primitives.Popup.PlacementTarget%2A> 已忽略。|畫面上，或<xref:System.Windows.Controls.Primitives.Popup.PlacementRectangle%2A>如果設定。  <xref:System.Windows.Controls.Primitives.Popup.PlacementRectangle%2A>相對於螢幕。|目標區域的左上角。|左上角<xref:System.Windows.Controls.Primitives.Popup>。|  
+|<xref:System.Windows.Controls.Primitives.PlacementMode.Bottom>|<xref:System.Windows.Controls.Primitives.Popup.PlacementTarget%2A> 或父代。|目標物件，或<xref:System.Windows.Controls.Primitives.Popup.PlacementRectangle%2A>如果設定。  <xref:System.Windows.Controls.Primitives.Popup.PlacementRectangle%2A>相對於目標物件。|目標區域的左下角。|左上角<xref:System.Windows.Controls.Primitives.Popup>。|  
+|<xref:System.Windows.Controls.Primitives.PlacementMode.Center>|<xref:System.Windows.Controls.Primitives.Popup.PlacementTarget%2A> 或父代。|目標物件，或<xref:System.Windows.Controls.Primitives.Popup.PlacementRectangle%2A>如果設定。  <xref:System.Windows.Controls.Primitives.Popup.PlacementRectangle%2A>相對於目標物件。|目標區域的中央。|中央<xref:System.Windows.Controls.Primitives.Popup>。|  
+|<xref:System.Windows.Controls.Primitives.PlacementMode.Custom>|<xref:System.Windows.Controls.Primitives.Popup.PlacementTarget%2A> 或父代。|目標物件，或<xref:System.Windows.Controls.Primitives.Popup.PlacementRectangle%2A>如果設定。  <xref:System.Windows.Controls.Primitives.Popup.PlacementRectangle%2A>相對於目標物件。|它是由定義<xref:System.Windows.Controls.Primitives.CustomPopupPlacementCallback>。|它是由定義<xref:System.Windows.Controls.Primitives.CustomPopupPlacementCallback>。|  
+|<xref:System.Windows.Controls.Primitives.PlacementMode.Left>|<xref:System.Windows.Controls.Primitives.Popup.PlacementTarget%2A> 或父代。|目標物件，或<xref:System.Windows.Controls.Primitives.Popup.PlacementRectangle%2A>如果設定。  <xref:System.Windows.Controls.Primitives.Popup.PlacementRectangle%2A>相對於目標物件。|目標區域的左上角。|右上角<xref:System.Windows.Controls.Primitives.Popup>。|  
+|<xref:System.Windows.Controls.Primitives.PlacementMode.Mouse>|不適用。 <xref:System.Windows.Controls.Primitives.Popup.PlacementTarget%2A> 已忽略。|滑鼠指標的範圍。 <xref:System.Windows.Controls.Primitives.Popup.PlacementRectangle%2A> 已忽略。|目標區域的左下角。|左上角<xref:System.Windows.Controls.Primitives.Popup>。|  
+|<xref:System.Windows.Controls.Primitives.PlacementMode.MousePoint>|不適用。 <xref:System.Windows.Controls.Primitives.Popup.PlacementTarget%2A> 已忽略。|滑鼠指標的範圍。 <xref:System.Windows.Controls.Primitives.Popup.PlacementRectangle%2A> 已忽略。|目標區域的左上角。|左上角<xref:System.Windows.Controls.Primitives.Popup>。|  
+|<xref:System.Windows.Controls.Primitives.PlacementMode.Relative>|<xref:System.Windows.Controls.Primitives.Popup.PlacementTarget%2A> 或父代。|目標物件，或<xref:System.Windows.Controls.Primitives.Popup.PlacementRectangle%2A>如果設定。  <xref:System.Windows.Controls.Primitives.Popup.PlacementRectangle%2A>相對於目標物件。|目標區域的左上角。|左上角<xref:System.Windows.Controls.Primitives.Popup>。|  
+|<xref:System.Windows.Controls.Primitives.PlacementMode.RelativePoint>|<xref:System.Windows.Controls.Primitives.Popup.PlacementTarget%2A> 或父代。|目標物件，或<xref:System.Windows.Controls.Primitives.Popup.PlacementRectangle%2A>如果設定。  <xref:System.Windows.Controls.Primitives.Popup.PlacementRectangle%2A>相對於目標物件。|目標區域的左上角。|左上角<xref:System.Windows.Controls.Primitives.Popup>。|  
+|<xref:System.Windows.Controls.Primitives.PlacementMode.Right>|<xref:System.Windows.Controls.Primitives.Popup.PlacementTarget%2A> 或父代。|目標物件，或<xref:System.Windows.Controls.Primitives.Popup.PlacementRectangle%2A>如果設定。  <xref:System.Windows.Controls.Primitives.Popup.PlacementRectangle%2A>相對於目標物件。|目標區域的右上角。|左上角<xref:System.Windows.Controls.Primitives.Popup>。|  
+|<xref:System.Windows.Controls.Primitives.PlacementMode.Top>|<xref:System.Windows.Controls.Primitives.Popup.PlacementTarget%2A> 或父代。|目標物件，或<xref:System.Windows.Controls.Primitives.Popup.PlacementRectangle%2A>如果設定。  <xref:System.Windows.Controls.Primitives.Popup.PlacementRectangle%2A>相對於目標物件。|目標區域的左上角。|左下角<xref:System.Windows.Controls.Primitives.Popup>。|  
   
  下列圖例顯示<xref:System.Windows.Controls.Primitives.Popup>，每個點的目標區域、 目標原點和快顯功能表對齊<xref:System.Windows.Controls.Primitives.PlacementMode>值。 在每個圖中，目標區域為黃色，而<xref:System.Windows.Controls.Primitives.Popup>是藍色。  
   
@@ -238,5 +226,5 @@ Placement 為 Mouse 且快顯遇到畫面下邊緣
 ### <a name="customizing-popup-placement"></a>自訂快顯位置  
  您可以設定連線，來自訂目標原點，並且快顯對齊點<xref:System.Windows.Controls.Primitives.Popup.Placement%2A>屬性<xref:System.Windows.Controls.Primitives.PlacementMode.Custom>。 然後定義<xref:System.Windows.Controls.Primitives.CustomPopupPlacementCallback>委派，會傳回一組可能的定位點和 （依喜好設定順序） 的主座標軸的<xref:System.Windows.Controls.Primitives.Popup>。 顯示的最大一部分的點<xref:System.Windows.Controls.Primitives.Popup>已選取。  位置<xref:System.Windows.Controls.Primitives.Popup>會自動調整大小，如果<xref:System.Windows.Controls.Primitives.Popup>隱藏螢幕的邊緣。 如需範例，請參閱[指定自訂快顯位置](../../../../docs/framework/wpf/controls/how-to-specify-a-custom-popup-position.md)。  
   
-## <a name="see-also"></a>請參閱  
+## <a name="see-also"></a>另請參閱  
  [快顯位置範例](http://go.microsoft.com/fwlink/?LinkID=160032)

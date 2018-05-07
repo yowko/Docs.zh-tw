@@ -1,28 +1,16 @@
 ---
-title: "x:FactoryMethod 指示詞"
-ms.custom: 
+title: x:FactoryMethod 指示詞
 ms.date: 03/30/2017
-ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.technology: dotnet-wpf
-ms.tgt_pltfrm: 
-ms.topic: article
 helpviewer_keywords:
 - XAML. x:FactoryMethod directive [XAML Services]
 - FactoryMethod directive in XAML [XAML Services]
 - x:FactoryMethod directive [XAML Services]
 ms.assetid: 829bcbdf-5318-4afb-9a03-c310e0d2f23d
-caps.latest.revision: "8"
-author: wadepickett
-ms.author: wpickett
-manager: wpickett
-ms.workload: dotnet
-ms.openlocfilehash: 58349c5440d0062c64346933e48b64de6c4c7b60
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.openlocfilehash: 75225e624abdd3dc0862a04fae409da48b3f0d1e
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="xfactorymethod-directive"></a>x:FactoryMethod 指示詞
 指定 XAML 處理器必須用來解決它支援的型別之後初始化物件的建構函式以外的方法。  
@@ -61,11 +49,11 @@ ms.lasthandoff: 12/22/2017
   
  處理站方法必須傳回可指派至相關物件執行個體。 Factory 方法，應該永遠不會傳回 null。  
   
- `x:Arguments`最符合的 factory 方法的簽章的原則上運作。 比對參數計數會先評估。 如果有多個可能的相符項目參數計數的參數類型為則取決於評估及最佳的相符項目。 如果此評估階段之後仍有模稜兩可，XAML 處理器的行為是未定義的。  
+ `x:Arguments` 最符合的 factory 方法的簽章的原則上運作。 比對參數計數會先評估。 如果有多個可能的相符項目參數計數的參數類型為則取決於評估及最佳的相符項目。 如果此評估階段之後仍有模稜兩可，XAML 處理器的行為是未定義的。  
   
- `x:FactoryMethod`項目使用方式不是屬性項目用法中的一般意義，因為指示詞標記未參考包含物件項目類型。 預期的項目用法是較不常見，比屬性使用方式。 `x:Arguments`可以使用 （屬性或項目使用方式），連同`x:FactoryMethod`項目使用方式，但這不特別會顯示在使用方式區段。  
+ `x:FactoryMethod`項目使用方式不是屬性項目用法中的一般意義，因為指示詞標記未參考包含物件項目類型。 預期的項目用法是較不常見，比屬性使用方式。 `x:Arguments` 可以使用 （屬性或項目使用方式），連同`x:FactoryMethod`項目使用方式，但這不特別會顯示在使用方式區段。  
   
- `x:FactoryMethod`當項目必須在任何其他屬性項目之前，必須優先於任何`x:Arguments`也提供做為項目，而且必須在前面的任何內容/內部文字/初始化文字。  
+ `x:FactoryMethod` 當項目必須在任何其他屬性項目之前，必須優先於任何`x:Arguments`也提供做為項目，而且必須在前面的任何內容/內部文字/初始化文字。  
   
-## <a name="see-also"></a>請參閱  
+## <a name="see-also"></a>另請參閱  
  [x:Arguments 指示詞](../../../docs/framework/xaml-services/x-arguments-directive.md)

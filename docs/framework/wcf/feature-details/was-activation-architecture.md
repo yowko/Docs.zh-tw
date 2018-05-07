@@ -1,24 +1,12 @@
 ---
-title: "WAS 啟動架構"
-ms.custom: 
+title: WAS 啟動架構
 ms.date: 03/30/2017
-ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.technology: dotnet-clr
-ms.tgt_pltfrm: 
-ms.topic: article
 ms.assetid: 58aeffb0-8f3f-4b40-80c8-15f3f1652fd3
-caps.latest.revision: "16"
-author: dotnet-bot
-ms.author: dotnetcontent
-manager: wpickett
-ms.workload: dotnet
-ms.openlocfilehash: 7563510fdd44336cb5f8c50705edefd732082347
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.openlocfilehash: 0c91ebd605fbe503dd11da7167512648afd86449
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="was-activation-architecture"></a>WAS 啟動架構
 本主題將條列說明並討論 Windows Process Activation Service (亦稱為 WAS) 的元件。  
@@ -41,14 +29,14 @@ ms.lasthandoff: 12/22/2017
  ![WAS 架構](../../../../docs/framework/wcf/feature-details/media/wasarchitecture.gif "WASArchitecture")  
   
 ### <a name="listener-adapters"></a>接聽項配接器  
- 接聽項配接器是個別的 Windows 服務，可實作網路通訊邏輯以透過所接聽的網路通訊協定來接收訊息。 下表列出 [!INCLUDE[indigo1](../../../../includes/indigo1-md.md)] 通訊協定的接聽項配接器。  
+ 接聽項配接器是個別的 Windows 服務，可實作網路通訊邏輯以透過所接聽的網路通訊協定來接收訊息。 下表列出 Windows Communication Foundation (WCF) 通訊協定的接聽程式介面卡。  
   
 |接聽項配接器服務名稱|通訊協定|注意|  
 |-----------------------------------|--------------|-----------|  
-|W3SVC|http|同時為 IIS 7.0 和 [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] 提供 HTTP 啟動的通用元件。|  
+|W3SVC|http|提供 HTTP 啟動的 IIS 7.0 和 WCF 的一般元件。|  
 |NetTcpActivator|net.tcp|取決於 NetTcpPortSharing 服務。|  
 |NetPipeActivator|net.pipe||  
-|NetMsmqActivator|net.msmq|搭配使用以 [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] 為基礎的訊息佇列應用程式。|  
+|NetMsmqActivator|net.msmq|WCF 架構的訊息佇列應用程式搭配使用。|  
 |NetMsmqActivator|msmq.formatname|提供與現有的訊息佇列應用程式的回溯相容性 (Backward Compatibility)。|  
   
  特定通訊協定的接聽項配接器會在安裝期間於 applicationHost.config 檔案中註冊，如下列 XML 範例所示。  
@@ -96,6 +84,6 @@ ms.lasthandoff: 12/22/2017
 </system.web>  
 ```  
   
-## <a name="see-also"></a>請參閱  
+## <a name="see-also"></a>另請參閱  
  [設定用於 WCF 的 WAS](../../../../docs/framework/wcf/feature-details/configuring-the-wpa--service-for-use-with-wcf.md)  
  [Windows Server App Fabric 裝載功能](http://go.microsoft.com/fwlink/?LinkId=201276)

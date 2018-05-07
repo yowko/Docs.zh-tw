@@ -1,30 +1,18 @@
 ---
-title: "永久性發行權杖提供者"
-ms.custom: 
+title: 永久性發行權杖提供者
 ms.date: 03/30/2017
-ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.technology: dotnet-clr
-ms.tgt_pltfrm: 
-ms.topic: article
 ms.assetid: 76fb27f5-8787-4b6a-bf4c-99b4be1d2e8b
-caps.latest.revision: "17"
-author: dotnet-bot
-ms.author: dotnetcontent
-manager: wpickett
-ms.workload: dotnet
-ms.openlocfilehash: fc92bd92f688ae2b12889779083142e6ddd481d9
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
-ms.translationtype: MT
+ms.openlocfilehash: 20006f87f7ecba9c09f6c957f8b6355dec7fbd32
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="durable-issued-token-provider"></a>永久性發行權杖提供者
 這個範例示範如何實作自訂用戶端發行的權杖提供者。  
   
 ## <a name="discussion"></a>討論  
- [!INCLUDE[indigo1](../../../../includes/indigo1-md.md)] 中的權杖提供者是用來提供認證給安全性基礎結構。 一般而言，權杖提供者會檢查目標並發行適當的認證，讓安全性基礎結構能夠保護訊息的安全。 [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] 發行時會隨附 [!INCLUDE[infocard](../../../../includes/infocard-md.md)] 權杖提供者。 自訂權杖提供者適用於下列情況：  
+ Windows Communication Foundation (WCF) 的權杖提供者用來提供認證給安全性基礎結構。 一般而言，權杖提供者會檢查目標並發行適當的認證，讓安全性基礎結構能夠保護訊息的安全。 [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] 發行時會隨附 [!INCLUDE[infocard](../../../../includes/infocard-md.md)] 權杖提供者。 自訂權杖提供者適用於下列情況：  
   
 -   如果您有內建權杖提供者無法使用的認證存放區。  
   
@@ -261,8 +249,8 @@ ms.lasthandoff: 12/22/2017
 >   
 >  `<InstallDrive>:\WF_WCF_Samples`  
 >   
->  如果此目錄不存在，請移至 [Windows Communication Foundation (WCF) and Windows Workflow Foundation (WF) Samples for .NET Framework 4  (適用於 .NET Framework 4 的 Windows Communication Foundation (WCF) 與 Windows Workflow Foundation (WF) 範例)](http://go.microsoft.com/fwlink/?LinkId=150780) ，以下載所有 [!INCLUDE[indigo1](../../../../includes/indigo1-md.md)] 和 [!INCLUDE[wf1](../../../../includes/wf1-md.md)] 範例。 此範例位於下列目錄。  
+>  如果此目錄不存在，請移至[Windows Communication Foundation (WCF) 和適用於.NET Framework 4 的 Windows Workflow Foundation (WF) 範例](http://go.microsoft.com/fwlink/?LinkId=150780)下載所有 Windows Communication Foundation (WCF) 和[!INCLUDE[wf1](../../../../includes/wf1-md.md)]範例。 此範例位於下列目錄。  
 >   
 >  `<InstallDrive>:\WF_WCF_Samples\WCF\Extensibility\Security\DurableIssuedTokenProvider`  
   
-## <a name="see-also"></a>請參閱
+## <a name="see-also"></a>另請參閱

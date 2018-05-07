@@ -1,28 +1,14 @@
 ---
 title: 設定 Windows Communication Foundation 服務的繫結
-ms.custom: ''
 ms.date: 03/30/2017
-ms.prod: .net-framework
-ms.reviewer: ''
-ms.suite: ''
-ms.technology:
-- dotnet-clr
-ms.tgt_pltfrm: ''
-ms.topic: article
 helpviewer_keywords:
 - binding configuration [WCF]
 ms.assetid: 99a85fd8-f7eb-4a84-a93e-7721b37d415c
-caps.latest.revision: 36
-author: dotnet-bot
-ms.author: dotnetcontent
-manager: wpickett
-ms.workload:
-- dotnet
-ms.openlocfilehash: f98d7c7b7d816687487a652f0527886300f0ee86
-ms.sourcegitcommit: 94d33cadc5ff81d2ac389bf5f26422c227832052
-ms.translationtype: MT
+ms.openlocfilehash: 8fcb2fbf49984ce2b6aaf1f112575d05a3d7d038
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/30/2018
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="configuring-bindings-for-windows-communication-foundation-services"></a>設定 Windows Communication Foundation 服務的繫結
 建立應用程式時，您經常會需要在應用程式部署後，延後系統管理員的決定。 例如，我們很多時都無法預知服務位址，或統一資源識別元 (URI)。 這時候，為位址進行硬式編碼並不是理想的作法，較好的作法是讓系統管理員在建立服務後再處理。 這樣的靈活性是透過組態達成。  
@@ -31,7 +17,7 @@ ms.lasthandoff: 04/30/2018
 >  使用[ServiceModel Metadata Utility Tool (Svcutil.exe)](../../../docs/framework/wcf/servicemodel-metadata-utility-tool-svcutil-exe.md)與`/config`切換至快速建立組態檔。  
   
 ## <a name="major-sections"></a>主要區段  
- [!INCLUDE[indigo1](../../../includes/indigo1-md.md)] 組態配置包括下列三個主要區段 (`serviceModel`、`bindings`以及 `services`)。  
+ Windows Communication Foundation (WCF) 組態配置包括下列三個主要區段 (`serviceModel`， `bindings`，和`services`):  
   
 ```xml  
 <configuration>  

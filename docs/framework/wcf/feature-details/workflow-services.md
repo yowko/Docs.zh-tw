@@ -1,24 +1,12 @@
 ---
-title: "工作流程服務"
-ms.custom: 
+title: 工作流程服務
 ms.date: 03/30/2017
-ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.technology: dotnet-clr
-ms.tgt_pltfrm: 
-ms.topic: article
 ms.assetid: 7b05c766-f181-425d-9a3d-2a5e150c85f7
-caps.latest.revision: "20"
-author: dotnet-bot
-ms.author: dotnetcontent
-manager: wpickett
-ms.workload: dotnet
-ms.openlocfilehash: 0e33915105ca9ff095f09bcd52431212e7c8e927
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.openlocfilehash: a8871685007cdb81848848da5c6b3483d014bb20
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="workflow-services"></a>工作流程服務
 [!INCLUDE[netfx_current_long](../../../../includes/netfx-current-long-md.md)] 可讓您在 XAML 中以宣告方式完整描述以工作流程為基礎的服務。 您可以定義實作服務的工作流程並且描述服務所公開的端點，這些作業都可在 XAML 中完成。 本節中的主題會詳細說明，可支援以宣告方式撰寫服務的程式設計模型。  

@@ -1,13 +1,6 @@
 ---
-title: "逐步解說：使用設計工具以 ListView 和 TreeView 控制項建立檔案總管風格的介面"
-ms.custom: 
+title: 逐步解說：使用設計工具以 ListView 和 TreeView 控制項建立檔案總管風格的介面
 ms.date: 03/30/2017
-ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.technology: dotnet-winforms
-ms.tgt_pltfrm: 
-ms.topic: article
 dev_langs:
 - csharp
 - vb
@@ -20,16 +13,11 @@ helpviewer_keywords:
 - ListView control [Windows Forms], explorer style interface
 - ListView control [Windows Forms], explorer-style interface
 ms.assetid: 9e5e7721-19e2-4890-b273-a43589fe99ff
-caps.latest.revision: "19"
-author: dotnet-bot
-ms.author: dotnetcontent
-manager: wpickett
-ms.workload: dotnet
-ms.openlocfilehash: 1d8d7991f706f8098e4ac475ae057771de200197
-ms.sourcegitcommit: c0dd436f6f8f44dc80dc43b07f6841a00b74b23f
+ms.openlocfilehash: 0a0208194bd6cf24f61c58ece88e41b674e924fc
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 01/19/2018
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="walkthrough-creating-an-explorer-style-interface-with-the-listview-and-treeview-controls-using-the-designer"></a>逐步解說：使用設計工具以 ListView 和 TreeView 控制項建立檔案總管風格的介面
 其中一個 Visual Studio 的優點是時間的能夠建立專業的 Windows Form 應用程式在短量。 透過常見的案例所建立的使用者介面 (UI)<xref:System.Windows.Forms.ListView>和<xref:System.Windows.Forms.TreeView>類似於 Windows 作業系統的 Windows 檔案總管 功能的控制項。 Windows 檔案總管 會顯示使用者的電腦上的檔案和資料夾的階層式結構。  
@@ -111,7 +99,7 @@ ms.lasthandoff: 01/19/2018
   
 -   [操作說明：將捷徑功能表附加至 TreeView 節點](../../../../docs/framework/winforms/controls/how-to-attach-a-shortcut-menu-to-a-treeview-node.md)  
   
-## <a name="see-also"></a>請參閱  
+## <a name="see-also"></a>另請參閱  
  <xref:System.Windows.Forms.ListView>  
  <xref:System.Windows.Forms.TreeView>  
  [ListView 控制項](../../../../docs/framework/winforms/controls/listview-control-windows-forms.md)  

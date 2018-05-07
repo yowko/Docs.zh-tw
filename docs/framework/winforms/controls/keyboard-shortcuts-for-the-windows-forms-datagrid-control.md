@@ -1,27 +1,15 @@
 ---
-title: "Windows Form DataGrid 控制項的鍵盤快速鍵"
-ms.custom: 
+title: Windows Form DataGrid 控制項的鍵盤快速鍵
 ms.date: 03/30/2017
-ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.technology: dotnet-winforms
-ms.tgt_pltfrm: 
-ms.topic: article
 helpviewer_keywords:
 - keyboard shortcuts [Windows Forms], DataGrid control
 - DataGrid control [Windows Forms], navigation keys
 ms.assetid: a01780f9-20d5-4f5f-808f-c790c9a007a5
-caps.latest.revision: "9"
-author: dotnet-bot
-ms.author: dotnetcontent
-manager: wpickett
-ms.workload: dotnet
-ms.openlocfilehash: 3e80281f3a89737f060804aa5237705386232763
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.openlocfilehash: c05ddd68beeffe70e048a439929fb31454812612
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="keyboard-shortcuts-for-the-windows-forms-datagrid-control"></a>Windows Form DataGrid 控制項的鍵盤快速鍵
 > [!NOTE]
@@ -61,6 +49,6 @@ ms.lasthandoff: 12/22/2017
 |呼叫<xref:System.Windows.Forms.DataGrid.EndEdit%2A>目前資料列的方法。|CTRL+ENTER|  
 |輸入<xref:System.DBNull.Value?displayProperty=nameWithType>處於編輯模式時在儲存格中的值。|CTRL+0|  
   
-## <a name="see-also"></a>請參閱  
+## <a name="see-also"></a>另請參閱  
  [DataGrid 控制項概觀](../../../../docs/framework/winforms/controls/datagrid-control-overview-windows-forms.md)  
  [DataGrid 控制項](../../../../docs/framework/winforms/controls/datagrid-control-windows-forms.md)

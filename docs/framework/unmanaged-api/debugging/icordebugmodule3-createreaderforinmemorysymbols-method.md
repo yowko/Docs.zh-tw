@@ -1,14 +1,6 @@
 ---
-title: "ICorDebugModule3::CreateReaderForInMemorySymbols 方法"
-ms.custom: 
+title: ICorDebugModule3::CreateReaderForInMemorySymbols 方法
 ms.date: 03/30/2017
-ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.technology:
-- dotnet-clr
-ms.tgt_pltfrm: 
-ms.topic: reference
 api_name:
 - ICorDebugModule3.CreateReaderForInMemorySymbols
 api_location:
@@ -23,17 +15,13 @@ helpviewer_keywords:
 ms.assetid: af317171-d66d-4114-89eb-063554c74940
 topic_type:
 - apiref
-caps.latest.revision: 
 author: rpetrusha
 ms.author: ronpet
-manager: wpickett
-ms.workload:
-- dotnet
-ms.openlocfilehash: 2838c6c1fe8641e343fac1a3efa82a39ee177abc
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.openlocfilehash: 76f7b53f800bc8c5c23f49a0781287a38bf8c959
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="icordebugmodule3createreaderforinmemorysymbols-method"></a>ICorDebugModule3::CreateReaderForInMemorySymbols 方法
 建立動態模組的偵錯符號讀取器。  
@@ -82,7 +70,7 @@ HRESULT CreateReaderForInMemorySymbols (
   
  **.NET framework 版本：** 4.5、 4、 3.5 SP1  
   
-## <a name="see-also"></a>請參閱  
+## <a name="see-also"></a>另請參閱  
  [ICorDebugRemoteTarget 介面](../../../../docs/framework/unmanaged-api/debugging/icordebugremotetarget-interface.md)  
  [ICorDebug 介面](../../../../docs/framework/unmanaged-api/debugging/icordebug-interface.md)  
     

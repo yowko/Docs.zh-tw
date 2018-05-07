@@ -1,14 +1,6 @@
 ---
-title: "ICorDebugInternalFrame2::IsCloserToLeaf 方法"
-ms.custom: 
+title: ICorDebugInternalFrame2::IsCloserToLeaf 方法
 ms.date: 03/30/2017
-ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.technology:
-- dotnet-clr
-ms.tgt_pltfrm: 
-ms.topic: reference
 api_name:
 - ICorDebugInternalFrame2.IsCloserToLeaf Method
 api_location:
@@ -23,17 +15,13 @@ helpviewer_keywords:
 ms.assetid: c1d3d1eb-8370-4f25-8297-3bd262b4740a
 topic_type:
 - apiref
-caps.latest.revision: 
 author: rpetrusha
 ms.author: ronpet
-manager: wpickett
-ms.workload:
-- dotnet
-ms.openlocfilehash: 7b6b769c25e0cd706eb57965b73d0fcfdcf9b9ea
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.openlocfilehash: 6d26d4dc046841a891c8a36530bd579d100b8f5b
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="icordebuginternalframe2isclosertoleaf-method"></a>ICorDebugInternalFrame2::IsCloserToLeaf 方法
 檢查是否`this`內部框架為愈接近分葉與指定的 ICorDebugFrame 物件。  
@@ -62,7 +50,7 @@ HRESULT IsCloserToLeaf([in] ICorDebugFrame * pFrameToCompare,
 |E_INVALIDARG|`pFrameToCompare` 或 `pIsCloser` 為 null。|  
   
 ## <a name="remarks"></a>備註  
- `IsCloserToLeaf`可用來實作交錯內部與其他框架的堆疊上框架的原則。  
+ `IsCloserToLeaf` 可用來實作交錯內部與其他框架的堆疊上框架的原則。  
   
 ## <a name="requirements"></a>需求  
  **平台：**看到[系統需求](../../../../docs/framework/get-started/system-requirements.md)。  
@@ -71,9 +59,9 @@ HRESULT IsCloserToLeaf([in] ICorDebugFrame * pFrameToCompare,
   
  **程式庫：** CorGuids.lib  
   
- **.NET framework 版本：**[!INCLUDE[net_current_v40plus](../../../../includes/net-current-v40plus-md.md)]  
+ **.NET framework 版本：** [!INCLUDE[net_current_v40plus](../../../../includes/net-current-v40plus-md.md)]  
   
-## <a name="see-also"></a>請參閱  
+## <a name="see-also"></a>另請參閱  
  [ICorDebugInternalFrame2 介面](../../../../docs/framework/unmanaged-api/debugging/icordebuginternalframe2-interface.md)  
  [偵錯介面](../../../../docs/framework/unmanaged-api/debugging/debugging-interfaces.md)  
  [偵錯](../../../../docs/framework/unmanaged-api/debugging/index.md)

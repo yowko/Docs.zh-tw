@@ -1,29 +1,17 @@
 ---
-title: "探索 Proxy 範例"
-ms.custom: 
+title: 探索 Proxy 範例
 ms.date: 03/30/2017
-ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.technology: dotnet-clr
-ms.tgt_pltfrm: 
-ms.topic: article
 ms.assetid: 1dfa02df-15b1-4e97-9c8e-f5f2772711b0
-caps.latest.revision: "14"
-author: dotnet-bot
-ms.author: dotnetcontent
-manager: wpickett
-ms.workload: dotnet
-ms.openlocfilehash: 4b6e24c72002c7eef0e03af18f43992cc93b1d5c
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.openlocfilehash: e9cbfcb717f502a849d4d508d13df6c00b95db58
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="discovery-proxy-sample"></a>探索 Proxy 範例
 此範例示範如何建立探索 Proxy 的實作以儲存現有服務的相關資訊，以及用戶端如何查詢該 Proxy 的資訊。 此範例包含三個專案：  
   
--   **服務**： 簡單[!INCLUDE[indigo1](../../../../includes/indigo1-md.md)]向探索 proxy 註冊其本身的計算機服務。  
+-   **服務**： 向探索 proxy 註冊其本身的簡單 Windows Communication Foundation (WCF) 計算機服務。  
   
 -   **探索 Proxy**： 探索 proxy 服務的實作。  
   
@@ -37,7 +25,7 @@ ms.lasthandoff: 12/22/2017
 >   
 >  `<InstallDrive>:\WF_WCF_Samples`  
 >   
->  如果此目錄不存在，請移至 [Windows Communication Foundation (WCF) and Windows Workflow Foundation (WF) Samples for .NET Framework 4  (適用於 .NET Framework 4 的 Windows Communication Foundation (WCF) 與 Windows Workflow Foundation (WF) 範例)](http://go.microsoft.com/fwlink/?LinkId=150780) ，以下載所有 [!INCLUDE[indigo1](../../../../includes/indigo1-md.md)] 和 [!INCLUDE[wf1](../../../../includes/wf1-md.md)] 範例。 此範例位於下列目錄。  
+>  如果此目錄不存在，請移至[Windows Communication Foundation (WCF) 和適用於.NET Framework 4 的 Windows Workflow Foundation (WF) 範例](http://go.microsoft.com/fwlink/?LinkId=150780)下載所有 Windows Communication Foundation (WCF) 和[!INCLUDE[wf1](../../../../includes/wf1-md.md)]範例。 此範例位於下列目錄。  
 >   
 >  `<InstallDrive>:\WF_WCF_Samples\WCF\Basic\Discovery\DiscoveryProxy`  
   
@@ -66,4 +54,4 @@ ms.lasthandoff: 12/22/2017
   
 5.  最後，終止用戶端、服務，以及 Proxy。 Proxy 必須一直執行，才能接收服務的離線公告。  
   
-## <a name="see-also"></a>請參閱
+## <a name="see-also"></a>另請參閱

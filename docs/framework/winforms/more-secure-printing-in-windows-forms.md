@@ -1,29 +1,17 @@
 ---
-title: "Windows Form 中更安全的列印"
-ms.custom: 
+title: Windows Form 中更安全的列印
 ms.date: 03/30/2017
-ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.technology: dotnet-winforms
-ms.tgt_pltfrm: 
-ms.topic: article
 helpviewer_keywords:
 - Windows Forms, printing
 - PrintingPermission class [Windows Forms], Windows Forms security
 - printing [Windows Forms], security
 - security [Windows Forms], printing
 ms.assetid: 48fd36ac-872f-4de0-902a-e52969cd4367
-caps.latest.revision: "9"
-author: dotnet-bot
-ms.author: dotnetcontent
-manager: wpickett
-ms.workload: dotnet
-ms.openlocfilehash: 1f36ee150e4dcca74141b644a55451abd4a4fd21
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.openlocfilehash: 976079f39e13186014b77e85c092c37be11238b7
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="more-secure-printing-in-windows-forms"></a>Windows Form 中更安全的列印
 Windows Form 應用程式經常會包括列印的能力。 [!INCLUDE[dnprdnshort](../../../includes/dnprdnshort-md.md)]使用<xref:System.Drawing.Printing.PrintingPermission>類別來控制存取列印功能，並關聯<xref:System.Drawing.Printing.PrintingPermissionLevel>列舉值，指出的存取層級。 根據預設，預設會在 近端內部網路和網際網路區域; 啟用列印不過，這兩個區域中限制的存取層級。 是否可以列印您的應用程式，需要使用者互動，或無法列印取決於應用程式授與的權限值。 根據預設，近端內部網路區域會接收<xref:System.Drawing.Printing.PrintingPermissionLevel.DefaultPrinting>存取和內部網路區域接收<xref:System.Drawing.Printing.PrintingPermissionLevel.SafePrinting>存取。  
@@ -37,7 +25,7 @@ Windows Form 應用程式經常會包括列印的能力。 [!INCLUDE[dnprdnshort
 |<xref:System.Drawing.Printing.PrintingPermissionLevel.SafePrinting>|提供列印只能從限制更嚴格的對話方塊。 <xref:System.Drawing.Printing.PrintingPermissionLevel.SafePrinting> 是 <xref:System.Drawing.Printing.PrintingPermissionLevel.DefaultPrinting> 的子集。|  
 |<xref:System.Drawing.Printing.PrintingPermissionLevel.NoPrinting>|無法存取印表機。 <xref:System.Drawing.Printing.PrintingPermissionLevel.NoPrinting> 是 <xref:System.Drawing.Printing.PrintingPermissionLevel.SafePrinting> 的子集。|  
   
-## <a name="see-also"></a>請參閱  
+## <a name="see-also"></a>另請參閱  
  [Windows Forms 中更安全的檔案和資料存取](../../../docs/framework/winforms/more-secure-file-and-data-access-in-windows-forms.md)  
  [Windows Forms 中的其他安全性考量](../../../docs/framework/winforms/additional-security-considerations-in-windows-forms.md)  
  [Windows Forms 中的安全性概觀](../../../docs/framework/winforms/security-in-windows-forms-overview.md)  

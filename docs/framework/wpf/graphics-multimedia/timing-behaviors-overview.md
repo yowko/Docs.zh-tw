@@ -1,27 +1,15 @@
 ---
-title: "計時行為概觀"
-ms.custom: 
+title: 計時行為概觀
 ms.date: 03/30/2017
-ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.technology: dotnet-wpf
-ms.tgt_pltfrm: 
-ms.topic: article
 helpviewer_keywords:
 - timing behaviors [WPF]
 - behaviors [WPF], timing
 ms.assetid: 5b714d46-bd46-48b8-b467-b4be89ba3091
-caps.latest.revision: "20"
-author: dotnet-bot
-ms.author: dotnetcontent
-manager: wpickett
-ms.workload: dotnet
-ms.openlocfilehash: 9305b69927a1ed0ad4f154ab972316f3dee951e9
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.openlocfilehash: 31a6b7d3b92e886d9c90fc39d69f31cf72b99666
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="timing-behaviors-overview"></a>計時行為概觀
 本主題描述的執行時間行為的動畫和其他<xref:System.Windows.Media.Animation.Timeline>物件。  
@@ -34,7 +22,7 @@ ms.lasthandoff: 12/22/2017
 ## <a name="timeline-types"></a>時間軸型別  
  A<xref:System.Windows.Media.Animation.Timeline>代表一段時間。 它提供的屬性可讓您指定時間片段長度、應開始的時間、重複次數、時間在該片段中的播放速度等等。  
   
- 從時間軸類別繼承的類別提供額外功能，例如，動畫和媒體播放。 [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)]提供下列<xref:System.Windows.Media.Animation.Timeline>型別。  
+ 從時間軸類別繼承的類別提供額外功能，例如，動畫和媒體播放。 [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] 提供下列<xref:System.Windows.Media.Animation.Timeline>型別。  
   
 |時間軸型別|描述|  
 |-------------------|-----------------|  
@@ -127,13 +115,13 @@ ms.lasthandoff: 12/22/2017
 ## <a name="properties-that-control-the-speed-of-a-timeline"></a>控制時間軸速度的屬性  
  <xref:System.Windows.Media.Animation.Timeline>類別提供三個屬性來指定它的速度：  
   
--   <xref:System.Windows.Media.Animation.Timeline.SpeedRatio%2A>– 指定該比率，相對於其父代，時間的進行<xref:System.Windows.Media.Animation.Timeline>。 大於 1 的值增加的速度<xref:System.Windows.Media.Animation.Timeline>及其子<xref:System.Windows.Media.Animation.Timeline>物件中，值介於 0 與速度變慢。 其中一個值，指出<xref:System.Windows.Media.Animation.Timeline>做為其父系的相同速度的進展。 <xref:System.Windows.Media.Animation.Timeline.SpeedRatio%2A>容器時間軸的設定會影響它的所有子<xref:System.Windows.Media.Animation.Timeline>物件。  
+-   <xref:System.Windows.Media.Animation.Timeline.SpeedRatio%2A> – 指定該比率，相對於其父代，時間的進行<xref:System.Windows.Media.Animation.Timeline>。 大於 1 的值增加的速度<xref:System.Windows.Media.Animation.Timeline>及其子<xref:System.Windows.Media.Animation.Timeline>物件中，值介於 0 與速度變慢。 其中一個值，指出<xref:System.Windows.Media.Animation.Timeline>做為其父系的相同速度的進展。 <xref:System.Windows.Media.Animation.Timeline.SpeedRatio%2A>容器時間軸的設定會影響它的所有子<xref:System.Windows.Media.Animation.Timeline>物件。  
   
--   <xref:System.Windows.Media.Animation.Timeline.AccelerationRatio%2A>– 指定的百分比<xref:System.Windows.Media.Animation.Timeline.Duration%2A>的時間軸在加速。 如需範例，請參閱[如何： 加速或減速動畫](../../../../docs/framework/wpf/graphics-multimedia/how-to-accelerate-or-decelerate-an-animation.md)。 
+-   <xref:System.Windows.Media.Animation.Timeline.AccelerationRatio%2A> – 指定的百分比<xref:System.Windows.Media.Animation.Timeline.Duration%2A>的時間軸在加速。 如需範例，請參閱[如何： 加速或減速動畫](../../../../docs/framework/wpf/graphics-multimedia/how-to-accelerate-or-decelerate-an-animation.md)。 
   
--   <xref:System.Windows.Media.Animation.Timeline.DecelerationRatio%2A>-指定的百分比<xref:System.Windows.Media.Animation.Timeline.Duration%2A>的時間軸在減速。 如需範例，請參閱[如何： 加速或減速動畫](../../../../docs/framework/wpf/graphics-multimedia/how-to-accelerate-or-decelerate-an-animation.md)。  
+-   <xref:System.Windows.Media.Animation.Timeline.DecelerationRatio%2A> -指定的百分比<xref:System.Windows.Media.Animation.Timeline.Duration%2A>的時間軸在減速。 如需範例，請參閱[如何： 加速或減速動畫](../../../../docs/framework/wpf/graphics-multimedia/how-to-accelerate-or-decelerate-an-animation.md)。  
   
-## <a name="see-also"></a>請參閱  
+## <a name="see-also"></a>另請參閱  
  [動畫概觀](../../../../docs/framework/wpf/graphics-multimedia/animation-overview.md)  
  [動畫和計時系統概觀](../../../../docs/framework/wpf/graphics-multimedia/animation-and-timing-system-overview.md)  
  [計時事件概觀](../../../../docs/framework/wpf/graphics-multimedia/timing-events-overview.md)  

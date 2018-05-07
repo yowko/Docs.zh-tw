@@ -1,14 +1,6 @@
 ---
-title: "ICorDebugRemoteTarget::GetHostName 方法"
-ms.custom: 
+title: ICorDebugRemoteTarget::GetHostName 方法
 ms.date: 03/30/2017
-ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.technology:
-- dotnet-clr
-ms.tgt_pltfrm: 
-ms.topic: reference
 api_name:
 - ICorDebugRemoteTarget.GetHostName
 api_location:
@@ -23,17 +15,13 @@ helpviewer_keywords:
 ms.assetid: 1c7276f7-7e54-470c-808c-e13745ac07a1
 topic_type:
 - apiref
-caps.latest.revision: 
 author: rpetrusha
 ms.author: ronpet
-manager: wpickett
-ms.workload:
-- dotnet
-ms.openlocfilehash: 45fa4afebda00cb2549a5c18ba81c6bb4e8210e0
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.openlocfilehash: 1536a89d0e85480d3829939c40cd986fe65883df
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="icordebugremotetargetgethostname-method"></a>ICorDebugRemoteTarget::GetHostName 方法
 傳回遠端偵錯目標電腦的完整網域名稱或 IPv4 位址。 目前不支援 IPV6。  
@@ -77,6 +65,6 @@ HRESULT GetHostName (
   
  **.NET framework 版本：** 3.5 SP1  
   
-## <a name="see-also"></a>請參閱  
+## <a name="see-also"></a>另請參閱  
  [ICorDebugRemoteTarget 介面](../../../../docs/framework/unmanaged-api/debugging/icordebugremotetarget-interface.md)  
  [ICorDebug 介面](../../../../docs/framework/unmanaged-api/debugging/icordebug-interface.md)

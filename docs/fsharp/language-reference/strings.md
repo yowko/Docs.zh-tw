@@ -1,17 +1,12 @@
 ---
 title: 字串 (F#)
 description: "了解 F # 'string' 類型為 Unicode 字元序列所代表的不可變的文字。"
-author: cartermp
-ms.author: phcart
 ms.date: 05/16/2016
-ms.topic: language-reference
-ms.prod: dotnet-fsharp
-ms.devlang: fsharp
-ms.openlocfilehash: bf3c15db43c6419222dc3e5b32ac8947a53982f0
-ms.sourcegitcommit: 03ee570f6f528a7d23a4221dcb26a9498edbdf8c
+ms.openlocfilehash: bdd1d1a542e70bcd95fce51e75d0c1ddffceb008
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/28/2018
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="strings"></a>字串
 

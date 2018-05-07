@@ -1,31 +1,17 @@
 ---
-title: "StatusStrip 控制項概觀"
-ms.custom: 
+title: StatusStrip 控制項概觀
 ms.date: 03/30/2017
-ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.technology:
-- dotnet-winforms
-ms.tgt_pltfrm: 
-ms.topic: article
 f1_keywords:
 - StatusStrip
 helpviewer_keywords:
 - StatusStrip control [Windows Forms], about StatusStrip control
 - status bars [Windows Forms], about status bars
 ms.assetid: c0d9bcbb-f8b8-46ef-bae2-4146b8c8ce99
-caps.latest.revision: 
-author: dotnet-bot
-ms.author: dotnetcontent
-manager: wpickett
-ms.workload:
-- dotnet
-ms.openlocfilehash: f6d1eb698dbb9168bf5de6d3982e19e69d170ac0
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.openlocfilehash: b915be2db6865a95d2d37afda58983dbb2edca27
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="statusstrip-control-overview"></a>StatusStrip 控制項概觀
 <xref:System.Windows.Forms.StatusStrip> 控制項會顯示 <xref:System.Windows.Forms.Form> 上正在檢視之物件或該物件之元件的相關資訊，或顯示與該物件在您的應用程式中作業相關的內容資訊。 一般而言，<xref:System.Windows.Forms.StatusStrip> 控制項是由 <xref:System.Windows.Forms.ToolStripStatusLabel> 物件所組成，其中每個物件會顯示文字和 (或) 圖示。 <xref:System.Windows.Forms.StatusStrip> 也可以包含 <xref:System.Windows.Forms.ToolStripDropDownButton>、<xref:System.Windows.Forms.ToolStripSplitButton> 和 <xref:System.Windows.Forms.ToolStripProgressBar> 控制項。  
@@ -54,7 +40,7 @@ ms.lasthandoff: 12/22/2017
 |<xref:System.Windows.Forms.ToolStripSplitButton>|代表由兩個部分組成的控制項，其中一部分是標準按鈕，另一部分是下拉式功能表。|  
 |<xref:System.Windows.Forms.ToolStripProgressBar>|顯示處理序的完成狀態。|  
   
-## <a name="see-also"></a>請參閱  
+## <a name="see-also"></a>另請參閱  
  <xref:System.Windows.Forms.StatusStrip>  
  <xref:System.Windows.Forms.ToolStripStatusLabel>  
  <xref:System.Windows.Forms.ToolStripStatusLabel.Spring%2A>

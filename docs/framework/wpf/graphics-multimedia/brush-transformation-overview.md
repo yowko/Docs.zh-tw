@@ -1,13 +1,6 @@
 ---
-title: "筆刷轉換概觀"
-ms.custom: 
+title: 筆刷轉換概觀
 ms.date: 03/30/2017
-ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.technology: dotnet-wpf
-ms.tgt_pltfrm: 
-ms.topic: article
 dev_langs:
 - csharp
 - vb
@@ -16,16 +9,11 @@ helpviewer_keywords:
 - properties [WPF], transformation
 - transformation properties of brushes [WPF]
 ms.assetid: 8b9bfc09-12fd-4cd5-b445-99949f27bc39
-caps.latest.revision: "12"
-author: dotnet-bot
-ms.author: dotnetcontent
-manager: wpickett
-ms.workload: dotnet
-ms.openlocfilehash: aa4a533594c1e89942406e7df0a49215e3885418
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.openlocfilehash: 84a92ef8cab58f6362668cef3274edffa044e1b3
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="brush-transformation-overview"></a>筆刷轉換概觀
 這個筆刷類別會提供兩個轉換屬性：<xref:System.Windows.Media.Brush.Transform%2A>和<xref:System.Windows.Media.Brush.RelativeTransform%2A>。 上述屬性可讓您旋轉、縮放、扭曲及平移筆刷的內容。 本主題說明這兩種屬性之間的差異並提供使用方式範例。  
@@ -108,7 +96,7 @@ ms.lasthandoff: 12/22/2017
   
  這個範例是某完整範例的一部分。 如需完整的範例，請參閱 [Brush 範例](http://go.microsoft.com/fwlink/?LinkID=159973)。 如需筆刷的詳細資訊，請參閱 [WPF 筆刷概觀](../../../../docs/framework/wpf/graphics-multimedia/wpf-brushes-overview.md)。  
   
-## <a name="see-also"></a>請參閱  
+## <a name="see-also"></a>另請參閱  
  <xref:System.Windows.Media.Brush.Transform%2A>  
  <xref:System.Windows.Media.Brush.RelativeTransform%2A>  
  <xref:System.Windows.Media.Transform>  

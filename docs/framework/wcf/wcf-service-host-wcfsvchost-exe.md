@@ -1,29 +1,15 @@
 ---
 title: WCF 服務主機 (WcfSvcHost.exe)
-ms.custom: ''
 ms.date: 03/30/2017
-ms.prod: .net-framework
-ms.reviewer: ''
-ms.suite: ''
-ms.technology:
-- dotnet-clr
-ms.tgt_pltfrm: ''
-ms.topic: article
 ms.assetid: 8643a63d-a357-4c39-bd6c-cdfdf71e370e
-caps.latest.revision: 27
-author: dotnet-bot
-ms.author: dotnetcontent
-manager: wpickett
-ms.workload:
-- dotnet
-ms.openlocfilehash: 1da8d7a08e7887e8ba3fd50a8f809e2ff551a7fd
-ms.sourcegitcommit: 2042de78fcdceebb6b8ac4b7a292b93e8782cbf5
-ms.translationtype: MT
+ms.openlocfilehash: c000ad3ba53f103cb1a24a9a7fbc71049ba707c7
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/27/2018
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="wcf-service-host-wcfsvchostexe"></a>WCF 服務主機 (WcfSvcHost.exe)
-[!INCLUDE[indigo1](../../../includes/indigo1-md.md)] 服務主機 (WcfSvcHost.exe) 可讓您啟動 Visual Studio 偵錯工具 (F5) 來自動裝載並測試您已實作的服務。 然後，您可以使用 [!INCLUDE[indigo2](../../../includes/indigo2-md.md)] 測試用戶端 (WcfTestClient.exe) 或自己的用戶端來測試服務，以尋找並修正任何可能的錯誤。  
+Windows Communication Foundation (WCF) 服務主機 (WcfSvcHost.exe) 可讓您啟動 Visual Studio 偵錯工具 (F5) 來自動裝載並測試您已實作的服務。 然後，您可以使用 [!INCLUDE[indigo2](../../../includes/indigo2-md.md)] 測試用戶端 (WcfTestClient.exe) 或自己的用戶端來測試服務，以尋找並修正任何可能的錯誤。  
   
 ## <a name="wcf-service-host"></a>WCF 服務主機  
  [!INCLUDE[indigo2](../../../includes/indigo2-md.md)] 服務主機會列舉 [!INCLUDE[indigo2](../../../includes/indigo2-md.md)] 服務專案中的服務、載入專案的組態，以及為它找到的每一個服務產生主機的實體。 工具已整合至 Visual Studio 透過[!INCLUDE[indigo2](../../../includes/indigo2-md.md)]服務範本，並在開始偵錯您的專案時叫用。  

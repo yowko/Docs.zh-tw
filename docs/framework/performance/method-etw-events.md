@@ -1,27 +1,17 @@
 ---
-title: "方法 ETW 事件"
-ms.custom: 
+title: 方法 ETW 事件
 ms.date: 03/30/2017
-ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.technology: dotnet-clr
-ms.tgt_pltfrm: 
-ms.topic: article
 helpviewer_keywords:
 - ETW, method events (CLR)
 - method events [.NET Framework]
 ms.assetid: 167a4459-bb6e-476c-9046-7920880f2bb5
-caps.latest.revision: "9"
 author: mairaw
 ms.author: mairaw
-manager: wpickett
-ms.workload: dotnet
-ms.openlocfilehash: ea7214e284754b1a2f5c8a7a68f19b1b94e02a13
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.openlocfilehash: 578aed02d5d44ae94763b6a254420a4976320f13
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="method-etw-events"></a>方法 ETW 事件
 <a name="top"></a> 這些事件會收集方法的特定資訊。 若要進行符號解析，需使用這些事件的承載。 此外，這些事件會提供實用資訊，例如呼叫方法的次數。  
@@ -170,5 +160,5 @@ ms.lasthandoff: 12/22/2017
 |MethodSignature|win:UnicodeString|方法的簽章 (以逗號分隔的類型名稱清單)。|  
 |ClrInstanceID|win:UInt16|CLR 或 CoreCLR 執行個體的唯一 ID。|  
   
-## <a name="see-also"></a>請參閱  
+## <a name="see-also"></a>另請參閱  
  [CLR ETW 事件](../../../docs/framework/performance/clr-etw-events.md)

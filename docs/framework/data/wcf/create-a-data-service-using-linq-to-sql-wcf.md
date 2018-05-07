@@ -1,13 +1,6 @@
 ---
-title: "如何：使用 LINQ to SQL 資料來源建立資料服務 (WCF 資料服務)"
-ms.custom: 
+title: 如何：使用 LINQ to SQL 資料來源建立資料服務 (WCF 資料服務)
 ms.date: 03/30/2017
-ms.prod: .net-framework-oob
-ms.reviewer: 
-ms.suite: 
-ms.technology: dotnet-clr
-ms.tgt_pltfrm: 
-ms.topic: article
 dev_langs:
 - csharp
 - vb
@@ -15,16 +8,11 @@ helpviewer_keywords:
 - WCF Data Services, LINQ to SQL
 - WCF Data Services, providers
 ms.assetid: 3b01c2fd-8c6e-4bf5-b38f-9e61bdc3c328
-caps.latest.revision: "2"
-author: dotnet-bot
-ms.author: dotnetcontent
-manager: wpickett
-ms.workload: dotnet
-ms.openlocfilehash: 755df7c86d80214ded4e8c9534f88910a171c7a5
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.openlocfilehash: 5769ff5296d096df41b59104ad0581f0e816c648
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="how-to-create-a-data-service-using-a-linq-to-sql-data-source-wcf-data-services"></a>如何：使用 LINQ to SQL 資料來源建立資料服務 (WCF 資料服務)
 [!INCLUDE[ssAstoria](../../../../includes/ssastoria-md.md)] 會將實體資料公開為資料服務。 反映提供者可讓您定義資料模型為基礎的任何類別所公開的成員，會傳回<xref:System.Linq.IQueryable%601>實作。 若要可以更新資料來源的資料，這些類別也必須實作 <xref:System.Data.Services.IUpdatable> 介面。 如需詳細資訊，請參閱[資料服務提供者](../../../../docs/framework/data/wcf/data-services-providers-wcf-data-services.md)。 本主題說明如何使用反映提供者，建立存取 Northwind 範例資料庫的 LINQ to SQL 類別以及如何根據這些資料類別，建立資料服務。  
@@ -77,7 +65,7 @@ ms.lasthandoff: 12/22/2017
   
 6.  若要使用網頁瀏覽器測試 Northwind.svc 資料服務，請遵循本主題中的指示[從網頁瀏覽器存取服務](../../../../docs/framework/data/wcf/accessing-the-service-from-a-web-browser-wcf-data-services-quickstart.md)。  
   
-## <a name="see-also"></a>請參閱  
+## <a name="see-also"></a>另請參閱  
  [如何：使用 ADO.NET Entity Framework 資料來源建立資料服務](../../../../docs/framework/data/wcf/create-a-data-service-using-an-adonet-ef-data-wcf.md)  
  [如何：使用反映提供者建立資料服務](../../../../docs/framework/data/wcf/create-a-data-service-using-rp-wcf-data-services.md)  
  [資料服務提供者](../../../../docs/framework/data/wcf/data-services-providers-wcf-data-services.md)

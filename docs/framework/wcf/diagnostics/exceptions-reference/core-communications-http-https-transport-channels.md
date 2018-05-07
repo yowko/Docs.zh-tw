@@ -1,27 +1,15 @@
 ---
-title: "核心通訊： HTTP HTTPS 傳輸通道"
-ms.custom: 
+title: 核心通訊： HTTP HTTPS 傳輸通道
 ms.date: 03/30/2017
-ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.technology: dotnet-clr
-ms.tgt_pltfrm: 
-ms.topic: article
 ms.assetid: 6c0a23c9-a663-461c-bdab-58b4d3e23642
-caps.latest.revision: "6"
-author: dotnet-bot
-ms.author: dotnetcontent
-manager: wpickett
-ms.workload: dotnet
-ms.openlocfilehash: 7d67bb810ced381749dca0dc698ca405bb59cfb0
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.openlocfilehash: fbdb5b350425aad7108402dec939f036e971d053
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="core-communications-httphttps-transport-channels"></a>核心通訊：HTTP/HTTPS 傳輸通道
-此主題會列出所有由 [!INCLUDE[indigo1](../../../../../includes/indigo1-md.md)] Transport HTTP/HTTPS 通道所產生的例外狀況。  
+本主題列出 Windows Communication Foundation (WCF) 傳輸的 HTTP/HTTPS 通道所產生的所有例外狀況。  
   
 ## <a name="exception-list"></a>例外狀況清單  
   
@@ -32,7 +20,7 @@ ms.lasthandoff: 12/22/2017
 |Hosting_SslSettingsMisconfigured|指定之服務的安全通訊端層設定與網際網路資訊服務的安全通訊端層設定不相符。|  
 |HttpAuthSchemeAndClientCert|HTTPS 接聽項處理站已設定為需要用戶端憑證與指定的驗證配置。 然而，一次只需要一種用戶端驗證格式。|  
 |HttpReceiveFailure|對指定項目接收 HTTP 回應時發生錯誤。 服務端點繫結可能並未使用 HTTP 通訊協定。 另一種可能則是因為服務關閉，所以伺服器終止 HTTP 要求內容。 如需詳細資訊，請參閱伺服器記錄。|  
-|HttpRegistrationAccessDenied|HTTP 無法註冊指定的 URL。 您的處理序並未具有這個命名空間的存取權 (如需詳細資訊，請參閱 http://msdn.microsoft.com/library/default.asp?url=/library/http/http/namespace_reservations_registrations_and_routing.asp)。|  
+|HttpRegistrationAccessDenied|HTTP 無法註冊指定的 URL。 您的程序並沒有此命名空間的存取權限 (請參閱http://msdn.microsoft.com/library/default.asp?url=/library/http/http/namespace_reservations_registrations_and_routing.asp如需詳細資訊)。|  
 |HttpRegistrationAlreadyExists|HTTP 無法註冊指定的 URL。 已有另一個應用程式使用 HTTP.SYS 註冊此 URL。|  
 |HttpRegistrationPortInUse|HTTP 無法註冊指定的 URL，因為另一個應用程式正在使用指定的 TCP 連接埠。|  
 |HttpSendFailure|向指定項目提出 HTTP 要求時發生錯誤。 請確定原因不是出在安全性繫結不符。 同時也請確定服務尚未針對安全通訊端層進行設定。|  

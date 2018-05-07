@@ -1,26 +1,12 @@
 ---
 title: 什麼&#39;s ADO.NET 的新功能
-ms.custom: ''
 ms.date: 03/30/2017
-ms.prod: .net-framework
-ms.reviewer: ''
-ms.suite: ''
-ms.technology:
-- dotnet-ado
-ms.tgt_pltfrm: ''
-ms.topic: article
 ms.assetid: 3bb65d38-cce2-46f5-b979-e5c505e95e10
-caps.latest.revision: 25
-author: douglaslMS
-ms.author: douglasl
-manager: craigg
-ms.workload:
-- dotnet
-ms.openlocfilehash: a636734958cd73a2f158d3f25cbbe448ff703612
-ms.sourcegitcommit: 86adcc06e35390f13c1e372c36d2e044f1fc31ef
+ms.openlocfilehash: eb06681a55f1bd2abffb2e7169fa3bf892cd7313
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/26/2018
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="what39s-new-in-adonet"></a>什麼&#39;s ADO.NET 的新功能
 下列功能是 [!INCLUDE[vstecado](../../../../includes/vstecado-md.md)] 中 [!INCLUDE[net_v45](../../../../includes/net-v45-md.md)] 的新功能。  

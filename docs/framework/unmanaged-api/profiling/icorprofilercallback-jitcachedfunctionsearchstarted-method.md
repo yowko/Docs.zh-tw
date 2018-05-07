@@ -1,14 +1,6 @@
 ---
-title: "ICorProfilerCallback::JITCachedFunctionSearchStarted 方法"
-ms.custom: 
+title: ICorProfilerCallback::JITCachedFunctionSearchStarted 方法
 ms.date: 03/30/2017
-ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.technology:
-- dotnet-clr
-ms.tgt_pltfrm: 
-ms.topic: reference
 api_name:
 - ICorProfilerCallback.JITCachedFunctionSearchStarted
 api_location:
@@ -23,17 +15,13 @@ helpviewer_keywords:
 ms.assetid: 5cba642c-0d80-48ee-889d-198c5044d821
 topic_type:
 - apiref
-caps.latest.revision: 
 author: mairaw
 ms.author: mairaw
-manager: wpickett
-ms.workload:
-- dotnet
-ms.openlocfilehash: d2208a1a1637b3bb8dd7d7963ab806aeae7921dd
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.openlocfilehash: 6d97b40412b6999000a601b72904a03edf2acd08
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="icorprofilercallbackjitcachedfunctionsearchstarted-method"></a>ICorProfilerCallback::JITCachedFunctionSearchStarted 方法
 通知分析工具已用於先前使用原生映像產生器 (NGen.exe) 所編譯的函式中開始搜尋。  
@@ -69,7 +57,7 @@ HRESULT JITCachedFunctionSearchStarted(
   
  **程式庫：** CorGuids.lib  
   
- **.NET framework 版本：**[!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]  
+ **.NET framework 版本：** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]  
   
-## <a name="see-also"></a>請參閱  
+## <a name="see-also"></a>另請參閱  
  [ICorProfilerCallback 介面](../../../../docs/framework/unmanaged-api/profiling/icorprofilercallback-interface.md)

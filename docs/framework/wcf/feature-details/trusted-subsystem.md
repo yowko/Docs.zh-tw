@@ -1,27 +1,15 @@
 ---
-title: "受信任的子系統"
-ms.custom: 
+title: 受信任的子系統
 ms.date: 03/30/2017
-ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.technology: dotnet-clr
-ms.tgt_pltfrm: 
-ms.topic: article
 dev_langs:
 - csharp
 - vb
 ms.assetid: 1f5ce46b-e259-4bc9-a0b9-89d06fc9341c
-caps.latest.revision: "10"
-author: dotnet-bot
-ms.author: dotnetcontent
-manager: wpickett
-ms.workload: dotnet
-ms.openlocfilehash: ca07db06d4bff9660760c5abf8c9bc2f1f9f2944
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.openlocfilehash: 59c44609017ab18a176624b7ef6d409005151c3f
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="trusted-subsystem"></a>受信任的子系統
 用戶端會存取分散在網路上的一或多個 Web 服務。 Web 服務的設計會將對其他資源 (例如資料庫或其他 Web 服務) 的存取封裝在 Web 服務的商務邏輯中。 這些資源必須受到保護，以避免未經授權的存取。 下圖說明受信任的子系統處理序。  
@@ -43,13 +31,13 @@ ms.lasthandoff: 12/22/2017
 |特性|描述|  
 |--------------------|-----------------|  
 |安全性模式|訊息|  
-|互通性|僅限 [!INCLUDE[indigo1](../../../../includes/indigo1-md.md)]。|  
+|互通性|Windows Communication Foundation (WCF) 只。|  
 |驗證 (服務)|安全性權杖服務會驗證並授權用戶端。|  
 |驗證 (用戶端)|受信任的子系統會驗證用戶端，而資源會驗證受信任的子系統服務。|  
 |完整性|是|  
 |機密性|是|  
 |Transport|用戶端與受信任子系統服務之間的 HTTP。<br /><br /> 受信任子系統服務與資源 (後端服務) 之間的 NET.TCP。|  
-|繫結|<xref:System.ServiceModel.WSHttpBinding>和<xref:System.ServiceModel.NetTcpBinding> [ \<wsFederationHttpBinding >](../../../../docs/framework/configure-apps/file-schema/wcf/wsfederationhttpbinding.md)|  
+|繫結|<xref:System.ServiceModel.WSHttpBinding> 和<xref:System.ServiceModel.NetTcpBinding> [ \<wsFederationHttpBinding >](../../../../docs/framework/configure-apps/file-schema/wcf/wsfederationhttpbinding.md)|  
   
 ## <a name="resource-back-end-service"></a>資源 (後端服務)  
   
@@ -221,6 +209,6 @@ ms.lasthandoff: 12/22/2017
 </configuration>  
 ```  
   
-## <a name="see-also"></a>請參閱  
+## <a name="see-also"></a>另請參閱  
  [安全性概觀](../../../../docs/framework/wcf/feature-details/security-overview.md)  
  [Windows Server App Fabric 的安全性模型](http://go.microsoft.com/fwlink/?LinkID=201279&clcid=0x409)

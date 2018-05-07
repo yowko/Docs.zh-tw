@@ -1,24 +1,12 @@
 ---
-title: "HOW TO：建立會呼叫其他工作流程服務的工作流程服務"
-ms.custom: 
+title: HOW TO：建立會呼叫其他工作流程服務的工作流程服務
 ms.date: 03/30/2017
-ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.technology: dotnet-clr
-ms.tgt_pltfrm: 
-ms.topic: article
 ms.assetid: 99b3ee3e-aeb7-4e6f-8321-60fe6140eb67
-caps.latest.revision: "7"
-author: dotnet-bot
-ms.author: dotnetcontent
-manager: wpickett
-ms.workload: dotnet
-ms.openlocfilehash: c99748e77f1fccd9512c8915d0f4068d0da51a41
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.openlocfilehash: fda5a7286c3d20c7cdc2093e58bfe3fbdcf1d1c1
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="how-to-create-a-workflow-service-that-calls-another-workflow-service"></a>HOW TO：建立會呼叫其他工作流程服務的工作流程服務
 有時工作流程服務需要從另一個工作流程服務取得資訊。  本主題示範如何從另一個工作流程服務呼叫某個工作流程服務。 在本主題中，我們會建立兩個工作流程服務，其中一個服務的方法會反轉輸入字串，而另一個服務則會在反轉使用第一個服務的字串之後，將輸入字串轉換成大寫。  
@@ -113,7 +101,7 @@ ms.lasthandoff: 12/22/2017
   
     4.  **TargetType**: NestedServices.StringLibrary  
   
-8.  現在我們要針對修改的字串呼叫第一個服務。 以滑鼠右鍵按一下專案，然後選取**加入服務參考**。 加入位於 http://localhost/NestedServices/StringReverserService.xamlx 之服務的服務參考，並建置專案來建立自訂活動，以便存取第一個 Web 服務。  
+8.  現在我們要針對修改的字串呼叫第一個服務。 以滑鼠右鍵按一下專案，然後選取**加入服務參考**。 加入在服務的服務參考http://localhost/NestedServices/StringReverserService.xamlx和建置專案來建立自訂的活動，以便存取第一個 Web 服務。  
   
 9. 之間拖曳到工作流程的新活動的執行個體**InvokeMethod**活動和**SendReplyToReceive**活動。 將 StringToReverse 變數指派給新活動的 InputString 屬性，並將 StringToReturn 變數指派給 StringToReturn 屬性。  
   

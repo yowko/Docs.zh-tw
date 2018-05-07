@@ -1,35 +1,21 @@
 ---
 title: 逐步解說：建立自訂用戶端與服務認證
-ms.custom: ''
 ms.date: 03/30/2017
-ms.prod: .net-framework
-ms.reviewer: ''
-ms.suite: ''
-ms.technology:
-- dotnet-clr
-ms.tgt_pltfrm: ''
-ms.topic: article
 dev_langs:
 - csharp
 - vb
 ms.assetid: 2b5ba5c3-0c6c-48e9-9e46-54acaec443ba
-caps.latest.revision: 13
-author: dotnet-bot
-ms.author: dotnetcontent
-manager: wpickett
-ms.workload:
-- dotnet
-ms.openlocfilehash: cf9f6c1ad5be3a2d63140f03f74713809624e277
-ms.sourcegitcommit: 94d33cadc5ff81d2ac389bf5f26422c227832052
-ms.translationtype: MT
+ms.openlocfilehash: 8c5608276de935f07dca88e343143112b8fdcc20
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/30/2018
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="walkthrough-creating-custom-client-and-service-credentials"></a>逐步解說：建立自訂用戶端與服務認證
 此主題顯示如何實作自訂用戶端和服務認證，以及如何使用來自應用程式碼的自訂認證。  
   
 ## <a name="credentials-extensibility-classes"></a>認證擴充性類別  
- <xref:System.ServiceModel.Description.ClientCredentials> 和 <xref:System.ServiceModel.Description.ServiceCredentials> 類別是 [!INCLUDE[indigo1](../../../../includes/indigo1-md.md)] 安全性擴充性的主要進入點。 這些認證類別提供能夠讓應用程式碼設定認證資訊，以及將認證類型轉換為安全性權杖的 API  (*安全性語彙基元*是用來傳送 SOAP 訊息內的認證資訊的形式。)這些認證類別的責任可以分為兩部分：  
+ <xref:System.ServiceModel.Description.ClientCredentials>和<xref:System.ServiceModel.Description.ServiceCredentials>類別是 Windows Communication Foundation (WCF) 安全性擴充性的主要進入點。 這些認證類別提供能夠讓應用程式碼設定認證資訊，以及將認證類型轉換為安全性權杖的 API  (*安全性語彙基元*是用來傳送 SOAP 訊息內的認證資訊的形式。)這些認證類別的責任可以分為兩部分：  
   
 -   提供 API 讓應用程式設定認證資訊。  
   

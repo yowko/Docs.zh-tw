@@ -1,30 +1,16 @@
 ---
 title: 單向服務
-ms.custom: ''
 ms.date: 03/30/2017
-ms.prod: .net-framework
-ms.reviewer: ''
-ms.suite: ''
-ms.technology:
-- dotnet-clr
-ms.tgt_pltfrm: ''
-ms.topic: article
 helpviewer_keywords:
 - Windows Communication Foundation [WCF], one-way service contracts
 - WCF [WCF], one-way service contracts
 - service contracts [WCF], defining one-way
 ms.assetid: 19053a36-4492-45a3-bfe6-0365ee0205a3
-caps.latest.revision: 18
-author: dotnet-bot
-ms.author: dotnetcontent
-manager: wpickett
-ms.workload:
-- dotnet
-ms.openlocfilehash: 380f6a10994c7eb69f4a59b222aa2d422151f247
-ms.sourcegitcommit: 94d33cadc5ff81d2ac389bf5f26422c227832052
+ms.openlocfilehash: 03efc27f2ba54ca22f03e3ece84770fe0dcadbb3
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/30/2018
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="one-way-services"></a>單向服務
 服務作業的預設行為是要求-回覆模式。 在要求-回覆模式中，用戶端也都會等候回覆訊息，即使該服務作業已透過程式碼表示為 `void` 方法也是如此。 在單向作業中，只會傳輸一則訊息。 接收者不會傳送回覆訊息，傳送者也不會期待回覆訊息。  
@@ -57,7 +43,7 @@ public interface IOneWayCalculator
  如需完整範例，請參閱[單向](../../../../docs/framework/wcf/samples/one-way.md)範例。  
   
 ## <a name="clients-blocking-with-one-way-operations"></a>用戶端封鎖使用單向作業  
- 您必須瞭解，儘管有些單向應用程式會在傳出資料寫入至網路連線時立即傳回，但在許多狀況下，繫結或服務的實作可能會導致 [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] 用戶端封鎖使用單向作業。 在 [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] 用戶端應用程式中，[!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] 用戶端物件必須等到傳出資料已經寫入網路連線之後才會傳回。 包括單向作業的所有訊息交換模式都是如此；這表示在將資料寫入至傳輸時所發生的任何問題，都會導致用戶端無法傳回。 根據不同的問題，此結果可能會是在傳送訊息至服務時發生例外狀況或延遲。  
+ 請務必瞭解，儘管有些單向應用程式會傳回為輸出資料寫入網路連線，在許多狀況下的繫結或服務的實作可能會導致 WCF 用戶端封鎖使用單向作業。 在 WCF 用戶端應用程式中，WCF 用戶端物件前不會傳回輸出的資料已寫入至網路連線。 包括單向作業的所有訊息交換模式都是如此；這表示在將資料寫入至傳輸時所發生的任何問題，都會導致用戶端無法傳回。 根據不同的問題，此結果可能會是在傳送訊息至服務時發生例外狀況或延遲。  
   
  例如，如果傳輸找不到該端點，便會擲回 <xref:System.ServiceModel.EndpointNotFoundException?displayProperty=nameWithType> 例外狀況而不會發生什麼延遲。 然而，服務也可能因為某些原因而無法從線上讀取資料，進而導致用戶端傳輸傳送作業無法傳回。 在這些情況下，如果超過用戶端傳輸繫結上的 <xref:System.ServiceModel.Channels.Binding.SendTimeout%2A?displayProperty=nameWithType> 期限，便會擲回 <xref:System.TimeoutException?displayProperty=nameWithType>，但是必須等到已經超過逾時期限才會發生這種情況。 另外一種可能情形，則是出現在服務位置上的訊息多到服務無法將其處理成通過特定點。 在此情況下，單向用戶端會進行封鎖，直到服務能夠處理訊息，或是擲回例外狀況為止。  
   

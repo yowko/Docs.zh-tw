@@ -1,29 +1,15 @@
 ---
 title: 進階格式選取
-ms.custom: ''
 ms.date: 03/30/2017
-ms.prod: .net-framework
-ms.reviewer: ''
-ms.suite: ''
-ms.technology:
-- dotnet-clr
-ms.tgt_pltfrm: ''
-ms.topic: article
 ms.assetid: e02d9082-4d55-41d8-9329-98f6d1c77f06
-caps.latest.revision: 9
-author: dotnet-bot
-ms.author: dotnetcontent
-manager: wpickett
-ms.workload:
-- dotnet
-ms.openlocfilehash: 93d7fe0742e16abd92682094ca20d51488516e6e
-ms.sourcegitcommit: 94d33cadc5ff81d2ac389bf5f26422c227832052
-ms.translationtype: MT
+ms.openlocfilehash: 2d0e78bc1ec1dcd7e4a22b246f5cc35356f5f986
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/30/2018
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="advanced-format-selection"></a>進階格式選取
-這個範例示範如何擴充 [!INCLUDE[indigo1](../../../../includes/indigo1-md.md)] REST 程式設計模型，以支援新的傳出回應格式。 此外，這個範例使用 T4 範本將回應當做 XHTML 頁面傳回，示範如何實作檢視樣式程式設計模型。  
+這個範例示範如何擴充以支援新的傳出回應格式的 Windows Communication Foundation (WCF) REST 程式設計模型。 此外，這個範例使用 T4 範本將回應當做 XHTML 頁面傳回，示範如何實作檢視樣式程式設計模型。  
   
 ## <a name="sample-details"></a>範例詳細資料  
  這個範例包含一項簡單的服務，以及可對服務發出要求的用戶端程式碼。  服務支援單一 [WebGet] 作業，這項作業擁有下面這個方法簽章：`Message EchoListWithGet(string list);`  
@@ -55,7 +41,7 @@ ms.lasthandoff: 04/30/2018
 >   
 >  `<InstallDrive>:\WF_WCF_Samples`  
 >   
->  如果此目錄不存在，請移至 [Windows Communication Foundation (WCF) and Windows Workflow Foundation (WF) Samples for .NET Framework 4  (適用於 .NET Framework 4 的 Windows Communication Foundation (WCF) 與 Windows Workflow Foundation (WF) 範例)](http://go.microsoft.com/fwlink/?LinkId=150780) ，以下載所有 [!INCLUDE[indigo1](../../../../includes/indigo1-md.md)] 和 [!INCLUDE[wf1](../../../../includes/wf1-md.md)] 範例。 此範例位於下列目錄。  
+>  如果此目錄不存在，請移至[Windows Communication Foundation (WCF) 和適用於.NET Framework 4 的 Windows Workflow Foundation (WF) 範例](http://go.microsoft.com/fwlink/?LinkId=150780)下載所有 Windows Communication Foundation (WCF) 和[!INCLUDE[wf1](../../../../includes/wf1-md.md)]範例。 此範例位於下列目錄。  
 >   
 >  `<InstallDrive>:\WF_WCF_Samples\WCF\Basic\Web\AdvancedFormatSelection`  
   

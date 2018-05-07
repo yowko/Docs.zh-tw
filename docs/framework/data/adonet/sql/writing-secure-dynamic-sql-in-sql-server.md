@@ -1,26 +1,12 @@
 ---
 title: 在 SQL Server 中撰寫安全的動態 SQL
-ms.custom: ''
 ms.date: 03/30/2017
-ms.prod: .net-framework
-ms.reviewer: ''
-ms.suite: ''
-ms.technology:
-- dotnet-ado
-ms.tgt_pltfrm: ''
-ms.topic: article
 ms.assetid: df5512b0-c249-40d2-82f9-f9a2ce6665bc
-caps.latest.revision: 9
-author: douglaslMS
-ms.author: douglasl
-manager: craigg
-ms.workload:
-- dotnet
-ms.openlocfilehash: 5fdf41353e1772eab46e2e6b8f16ad7bfdf7a72f
-ms.sourcegitcommit: 86adcc06e35390f13c1e372c36d2e044f1fc31ef
+ms.openlocfilehash: 0dc372b4e5554623d51a4add9a43f33d4a320f18
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/26/2018
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="writing-secure-dynamic-sql-in-sql-server"></a>在 SQL Server 中撰寫安全的動態 SQL
 「SQL 插入」(SQL Injection) 是指惡意的使用者用來輸入 Transact-SQL 陳述式 (而非有效輸入) 的流程。 如果該輸入未經驗證而直接傳遞至伺服器，而且應用程式不慎執行了插入的程式碼，則攻擊就可能會危及或損毀資料。  

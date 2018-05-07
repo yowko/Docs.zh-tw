@@ -2,11 +2,11 @@
 title: '&lt;netMsmqBinding&gt; 的 &lt;message&gt;'
 ms.date: 03/30/2017
 ms.assetid: 6ebf0240-d7be-4493-b0fe-f00fd5989d77
-ms.openlocfilehash: a552b0f22a79b30dcbbe1951906b121d4c5e8cf8
-ms.sourcegitcommit: 11f11ca6cefe555972b3a5c99729d1a7523d8f50
-ms.translationtype: HT
+ms.openlocfilehash: 0e947667c414079f24398b401456efd56bf9922c
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="ltmessagegt-of-ltnetmsmqbindinggt"></a>&lt;netMsmqBinding&gt; 的 &lt;message&gt;
 定義此 `netMsmqBinding` 繫結上的 SOAP 訊息安全性設定。  
@@ -39,7 +39,7 @@ ms.lasthandoff: 05/03/2018
 |屬性|描述|  
 |---------------|-----------------|  
 |algorithmSuite|設定訊息加密和金鑰包裝演算法，用來針對 MSMQ 傳輸上傳送的訊息實現訊息安全性。<br /><br /> 預設值是 `Aes256`。 此屬性的型別為 <xref:System.ServiceModel.Security.SecurityAlgorithmSuite>。|  
-|clientCredentialType|指定在為 MSMQ 傳輸上傳送的訊息執行用戶端驗證時，要使用的認證類型。 有效值包括以下的值：<br /><br /> -None： 這會允許服務與匿名用戶端互動。 服務和用戶端都不需要認證。<br />Windows： 這可讓 SOAP 交換加入 Windows 認證的已驗證的內容。 如此一定會執行 Kerberos 驗證。<br />-UserName： 這會讓服務要求用戶端會使用 UserName 認證進行驗證。 認證必須在此情況下使用指定`clientCredentials`行為**警告：** Windows Communication Foundation (WCF) 不支援傳送密碼摘要，或是衍生的金鑰使用密碼，並使用這類金鑰訊息安全性。 因此，[!INCLUDE[indigo2](../../../../../includes/indigo2-md.md)] 會在使用 UserName 認證時強制保護交換。 這個模式需要使用 `clientCredential` 行為和 `serviceCertificate` 在用戶端上指定服務憑證。 <br /><br /> -Certificate： 這會讓服務要求用戶端使用憑證來驗證。 此案例中的用戶端認證必須使用 `clientCredentials` 行為來指定。 此案例中的服務認證需要藉由指定 `clientCredentials`，以使用 `serviceCertificate` 行為來指定。<br />-CardSpace： 這可讓服務要求用戶端使用 CardSpace 來驗證。 `serviceCertiifcate` 行為中必須提供 `clientCredential`。<br /><br /> 預設值是 `Windows`。 此屬性的型別為 <xref:System.ServiceModel.MessageCredentialType>。|  
+|clientCredentialType|指定在為 MSMQ 傳輸上傳送的訊息執行用戶端驗證時，要使用的認證類型。 有效值包括以下的值：<br /><br /> -None： 這會允許服務與匿名用戶端互動。 服務和用戶端都不需要認證。<br />Windows： 這可讓 SOAP 交換加入 Windows 認證的已驗證的內容。 如此一定會執行 Kerberos 驗證。<br />-UserName： 這會讓服務要求用戶端會使用 UserName 認證進行驗證。 認證必須在此情況下使用指定`clientCredentials`行為**警告：** Windows Communication Foundation (WCF) 不支援傳送密碼摘要，或是衍生的金鑰使用密碼，並使用這類金鑰訊息安全性。 因此，WCF 會強制使用 UserName 認證時，保護交換。 這個模式需要使用 `clientCredential` 行為和 `serviceCertificate` 在用戶端上指定服務憑證。 <br /><br /> -Certificate： 這會讓服務要求用戶端使用憑證來驗證。 此案例中的用戶端認證必須使用 `clientCredentials` 行為來指定。 此案例中的服務認證需要藉由指定 `clientCredentials`，以使用 `serviceCertificate` 行為來指定。<br />-CardSpace： 這可讓服務要求用戶端使用 CardSpace 來驗證。 `serviceCertiifcate` 行為中必須提供 `clientCredential`。<br /><br /> 預設值是 `Windows`。 此屬性的型別為 <xref:System.ServiceModel.MessageCredentialType>。|  
   
 ### <a name="child-elements"></a>子項目  
  無  

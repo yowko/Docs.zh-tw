@@ -1,27 +1,15 @@
 ---
-title: "PropertyPath XAML 語法"
-ms.custom: 
+title: PropertyPath XAML 語法
 ms.date: 03/30/2017
-ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.technology: dotnet-wpf
-ms.tgt_pltfrm: 
-ms.topic: article
 helpviewer_keywords:
 - PropertyPath object [WPF]
 - XAML [WPF], PropertyPath object
 ms.assetid: 0e3cdf07-abe6-460a-a9af-3764b4fd707f
-caps.latest.revision: "24"
-author: dotnet-bot
-ms.author: dotnetcontent
-manager: wpickett
-ms.workload: dotnet
-ms.openlocfilehash: 9778094eb098d1e119ef4ef0c25dd022130a11ae
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.openlocfilehash: 547c7d009d2fecf863284324c7ea45006d20d20c
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="propertypath-xaml-syntax"></a>PropertyPath XAML 語法
 <xref:System.Windows.PropertyPath>物件支援複雜的內嵌[!INCLUDE[TLA2#tla_xaml](../../../../includes/tla2sharptla-xaml-md.md)]設定需要的各種屬性語法<xref:System.Windows.PropertyPath>其值的型別。 此主題記載<xref:System.Windows.PropertyPath>套用至繫結和動畫語法的語法。  
@@ -29,7 +17,7 @@ ms.lasthandoff: 12/22/2017
   
 <a name="where"></a>   
 ## <a name="where-propertypath-is-used"></a>PropertyPath 的用途  
- <xref:System.Windows.PropertyPath>是一個常見的物件，可用於數種[!INCLUDE[TLA#tla_winclient](../../../../includes/tlasharptla-winclient-md.md)]功能。 即使使用一般<xref:System.Windows.PropertyPath>傳達屬性路徑資訊，每個使用方式功能區域其中<xref:System.Windows.PropertyPath>當做型別而改變。 因此，依功能來說明語法會比較實際。  
+ <xref:System.Windows.PropertyPath> 是一個常見的物件，可用於數種[!INCLUDE[TLA#tla_winclient](../../../../includes/tlasharptla-winclient-md.md)]功能。 即使使用一般<xref:System.Windows.PropertyPath>傳達屬性路徑資訊，每個使用方式功能區域其中<xref:System.Windows.PropertyPath>當做型別而改變。 因此，依功能來說明語法會比較實際。  
   
  主要[!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)]使用<xref:System.Windows.PropertyPath>來描述物件模型的路徑周遊物件資料來源的屬性，並描述的目標動畫目標路徑。  
   
@@ -39,7 +27,7 @@ ms.lasthandoff: 12/22/2017
 ## <a name="propertypath-for-objects-in-data-binding"></a>資料繫結中物件的 PropertyPath  
  資料繫結是一個 [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] 功能，您可藉以繫結至任何相依性屬性的目標值。 不過，這類資料繫結的來源不需要是相依性屬性；它可以是適用的資料提供者所能辨識的任何屬性類型。 屬性路徑特別用於<xref:System.Windows.Data.ObjectDataProvider>，它用來取得繫結來源從[!INCLUDE[TLA#tla_clr](../../../../includes/tlasharptla-clr-md.md)]物件和其屬性。  
   
- 請注意，資料繫結至[!INCLUDE[TLA#tla_xml](../../../../includes/tlasharptla-xml-md.md)]不會使用<xref:System.Windows.PropertyPath>，因為它不會使用<xref:System.Windows.Data.Binding.Path%2A>中<xref:System.Windows.Data.Binding>。 相反地，您使用<xref:System.Windows.Data.Binding.XPath%2A>並指定有效的 XPath 語法，到[!INCLUDE[TLA#tla_xmldom](../../../../includes/tlasharptla-xmldom-md.md)]的資料。 <xref:System.Windows.Data.Binding.XPath%2A>也會指定為字串，但未受記載。請參閱[XMLDataProvider 和 XPath 查詢來使用 XML 資料繫結](../../../../docs/framework/wpf/data/how-to-bind-to-xml-data-using-an-xmldataprovider-and-xpath-queries.md)。  
+ 請注意，資料繫結至[!INCLUDE[TLA#tla_xml](../../../../includes/tlasharptla-xml-md.md)]不會使用<xref:System.Windows.PropertyPath>，因為它不會使用<xref:System.Windows.Data.Binding.Path%2A>中<xref:System.Windows.Data.Binding>。 相反地，您使用<xref:System.Windows.Data.Binding.XPath%2A>並指定有效的 XPath 語法，到[!INCLUDE[TLA#tla_xmldom](../../../../includes/tlasharptla-xmldom-md.md)]的資料。 <xref:System.Windows.Data.Binding.XPath%2A> 也會指定為字串，但未受記載。請參閱[XMLDataProvider 和 XPath 查詢來使用 XML 資料繫結](../../../../docs/framework/wpf/data/how-to-bind-to-xml-data-using-an-xmldataprovider-and-xpath-queries.md)。  
   
  若要了解資料繫結中的屬性路徑，關鍵在於您可以將繫結的目標設為個別的屬性值，也可以改為繫結至要取得清單或集合的目標屬性。 如果您要繫結集合，例如繫結<xref:System.Windows.Controls.ListBox>可根據多少資料項目位於集合中，展開，則屬性路徑應該參考的集合物件、 不是個別的收集項。 資料繫結引擎會比對集合的資料來源繫結目標的類型，自動產生的行為，例如填入做<xref:System.Windows.Controls.ListBox>的項目陣列。  
   
@@ -70,7 +58,7 @@ ms.lasthandoff: 12/22/2017
 <Binding Path="propertyName.propertyName2" .../>  
 ```  
   
- `propertyName`必須是目前屬性的名稱解析<xref:System.Windows.FrameworkElement.DataContext%2A>。 路徑屬性 `propertyName` 和 `propertyName2` 可以是存在於關聯性中的任何屬性，其中 `propertyName2` 是存在於值為 `propertyName` 之類型中的屬性。  
+ `propertyName` 必須是目前屬性的名稱解析<xref:System.Windows.FrameworkElement.DataContext%2A>。 路徑屬性 `propertyName` 和 `propertyName2` 可以是存在於關聯性中的任何屬性，其中 `propertyName2` 是存在於值為 `propertyName` 之類型中的屬性。  
   
 <a name="singleattached"></a>   
 ### <a name="single-property-attached-or-otherwise-type-qualified"></a>單一屬性 (附加或類型限定)  
@@ -166,7 +154,7 @@ or
 <animation Storyboard.TargetProperty="propertyName" .../>  
 ```  
   
- `propertyName`必須存在於指定的相依性屬性的名稱解析<xref:System.Windows.Media.Animation.Storyboard.TargetName%2A>型別。  
+ `propertyName` 必須存在於指定的相依性屬性的名稱解析<xref:System.Windows.Media.Animation.Storyboard.TargetName%2A>型別。  
   
 <a name="indirectanim"></a>   
 ### <a name="indirect-property-targeting"></a>間接屬性目標  
@@ -175,7 +163,7 @@ or
 <animation Storyboard.TargetProperty="propertyName.propertyName2" .../>  
 ```  
   
- `propertyName`必須是屬性<xref:System.Windows.Freezable>實值型別或基本型別，這存在於指定<xref:System.Windows.Media.Animation.Storyboard.TargetName%2A>型別。  
+ `propertyName` 必須是屬性<xref:System.Windows.Freezable>實值型別或基本型別，這存在於指定<xref:System.Windows.Media.Animation.Storyboard.TargetName%2A>型別。  
   
  `propertyName2` 必須是存在於值為 `propertyName` 之物件上的相依性屬性名稱。 換句話說，`propertyName2`為相依性屬性的型別上必須存在`propertyName` <xref:System.Windows.DependencyProperty.PropertyType%2A>。  
   
@@ -207,7 +195,7 @@ or
   
  一般情況下，<xref:System.Windows.PropertyPath>設計為使用兩個不同的建構函式，一種用於繫結使用方式和最簡單的動畫用法，一個用於複雜的動畫使用方式。 使用<xref:System.Windows.PropertyPath.%23ctor%28System.Object%29>簽章的繫結使用方式，其中的物件字串。 使用<xref:System.Windows.PropertyPath.%23ctor%28System.Object%29>單一步驟動畫的路徑，且物件的簽章<xref:System.Windows.DependencyProperty>。 使用<xref:System.Windows.PropertyPath.%23ctor%28System.String%2CSystem.Object%5B%5D%29>簽章的複雜的動畫。 後面這個建構函式會針對第一個參數使用語彙基元字串，並使用物件陣列來填滿語彙基元字串中的位置，以定義屬性路徑關聯性。  
   
-## <a name="see-also"></a>請參閱  
+## <a name="see-also"></a>另請參閱  
  <xref:System.Windows.PropertyPath>  
  [資料繫結概觀](../../../../docs/framework/wpf/data/data-binding-overview.md)  
  [分鏡腳本概觀](../../../../docs/framework/wpf/graphics-multimedia/storyboards-overview.md)

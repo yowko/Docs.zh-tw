@@ -1,13 +1,6 @@
 ---
-title: "Window 樣式和範本"
-ms.custom: 
+title: Window 樣式和範本
 ms.date: 03/30/2017
-ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.technology: dotnet-wpf
-ms.tgt_pltfrm: 
-ms.topic: article
 helpviewer_keywords:
 - parts [WPF], Window
 - templates [WPF], Window
@@ -16,16 +9,11 @@ helpviewer_keywords:
 - Window [WPF], styles and templates
 - states [WPF], Window
 ms.assetid: 2dfdf025-347b-4342-bf28-95206c273f35
-caps.latest.revision: "13"
-author: dotnet-bot
-ms.author: dotnetcontent
-manager: wpickett
-ms.workload: dotnet
-ms.openlocfilehash: e1e623d9150f4848127cf662f583873e8e85f022
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.openlocfilehash: e30347393fe8b2593ce4941f4c396de25d1b7320
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="window-styles-and-templates"></a>Window 樣式和範本
 本主題描述樣式和範本<xref:System.Windows.Window>控制項。 您可以修改預設<xref:System.Windows.Controls.ControlTemplate>來提供獨特的外觀的控制項。 如需詳細資訊，請參閱[透過建立 ControlTemplate 自訂現有控制項的外觀](../../../../docs/framework/wpf/controls/customizing-the-appearance-of-an-existing-control.md)。  
@@ -54,7 +42,7 @@ ms.lasthandoff: 12/22/2017
   
  如需完整的範例，請參閱[使用 ControlTemplate 設定樣式範例](http://go.microsoft.com/fwlink/?LinkID=160041)。  
   
-## <a name="see-also"></a>請參閱  
+## <a name="see-also"></a>另請參閱  
  <xref:System.Windows.FrameworkElement.Style%2A>  
  <xref:System.Windows.Controls.ControlTemplate>  
  [控制項的樣式和範本](../../../../docs/framework/wpf/controls/control-styles-and-templates.md)  

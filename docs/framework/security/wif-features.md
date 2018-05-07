@@ -1,24 +1,14 @@
 ---
-title: "WIF 功能"
-ms.custom: 
+title: WIF 功能
 ms.date: 03/30/2017
-ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.technology: dotnet-clr
-ms.tgt_pltfrm: 
-ms.topic: article
 ms.assetid: 7e13cae9-7cd1-491f-aa75-0735320a7be6
-caps.latest.revision: "5"
 author: BrucePerlerMS
-ms.author: bruceper
 manager: mbaldwin
-ms.workload: dotnet
-ms.openlocfilehash: 386e6951c22f2bb54702e7eaabdde13e54ca74db
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.openlocfilehash: a4c1f4b454b52168935e63e763f331ea04f0dc2f
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="wif-features"></a>WIF 功能
 -   [Visual Studio 2012 的身分識別與存取工具](../../../docs/framework/security/identity-and-access-tool-for-vs.md)  
@@ -31,5 +21,5 @@ ms.lasthandoff: 12/22/2017
   
 -   [WSTrustChannelFactory 和 WSTrustChannel](../../../docs/framework/security/wstrustchannelfactory-and-wstrustchannel.md)  
   
-## <a name="see-also"></a>請參閱  
+## <a name="see-also"></a>另請參閱  
  [Windows Identity Foundation](../../../docs/framework/security/index.md)

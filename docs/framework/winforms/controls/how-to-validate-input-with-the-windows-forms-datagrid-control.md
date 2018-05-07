@@ -1,13 +1,6 @@
 ---
-title: "如何：使用 Windows Form DataGrid 控制項驗證輸入"
-ms.custom: 
+title: 如何：使用 Windows Form DataGrid 控制項驗證輸入
 ms.date: 03/30/2017
-ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.technology: dotnet-winforms
-ms.tgt_pltfrm: 
-ms.topic: article
 dev_langs:
 - csharp
 - vb
@@ -18,16 +11,11 @@ helpviewer_keywords:
 - DataGrid control [Windows Forms], validating input
 - validation [Windows Forms], user input
 ms.assetid: f1e9c3a0-d0a1-4893-a615-b4b0db046c63
-caps.latest.revision: "14"
-author: dotnet-bot
-ms.author: dotnetcontent
-manager: wpickett
-ms.workload: dotnet
-ms.openlocfilehash: 88cdc7914c301af0f0f244f935b986fb78ec775e
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.openlocfilehash: a01cb90b7cba596dafa56963dcf9c489deb3e21a
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="how-to-validate-input-with-the-windows-forms-datagrid-control"></a>如何：使用 Windows Form DataGrid 控制項驗證輸入
 > [!NOTE]
@@ -94,7 +82,7 @@ ms.lasthandoff: 12/22/2017
     customersDataSet1.Tables["Customers"].ColumnChanging += new DataColumnChangeEventHandler(this.Customers_ColumnChanging);  
     ```  
   
-## <a name="see-also"></a>請參閱  
+## <a name="see-also"></a>另請參閱  
  <xref:System.Windows.Forms.DataGrid>  
  <xref:System.Data.DataTable.ColumnChanging>  
  <xref:System.Data.DataRow.SetColumnError%2A>  

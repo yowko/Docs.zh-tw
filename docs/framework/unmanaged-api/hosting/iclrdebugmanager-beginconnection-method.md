@@ -1,14 +1,6 @@
 ---
-title: "ICLRDebugManager::BeginConnection 方法"
-ms.custom: 
+title: ICLRDebugManager::BeginConnection 方法
 ms.date: 03/30/2017
-ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.technology:
-- dotnet-clr
-ms.tgt_pltfrm: 
-ms.topic: reference
 api_name:
 - ICLRDebugManager.BeginConnection
 api_location:
@@ -23,17 +15,13 @@ helpviewer_keywords:
 ms.assetid: bdd98146-ff4d-4150-a264-a4c1a32d31f3
 topic_type:
 - apiref
-caps.latest.revision: 
 author: rpetrusha
 ms.author: ronpet
-manager: wpickett
-ms.workload:
-- dotnet
-ms.openlocfilehash: a637ba71dc966cf311526f468393ef4207e10460
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.openlocfilehash: 3c1a285fca381195191def7612aef41c4bf72f83
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="iclrdebugmanagerbeginconnection-method"></a>ICLRDebugManager::BeginConnection 方法
 建立主應用程式與偵錯工具與識別項和好記的名稱產生關聯的工作清單之間的新連接。  
@@ -58,20 +46,20 @@ HRESULT BeginConnection (
   
 |HRESULT|描述|  
 |-------------|-----------------|  
-|S_OK|`BeginConnection`已成功傳回。|  
+|S_OK|`BeginConnection` 已成功傳回。|  
 |HOST_E_CLRNOTAVAILABLE|CLR 尚未載入到處理程序，或 CLR 正在中它無法執行 managed 程式碼，或成功地處理呼叫的狀態。|  
 |HOST_E_TIMEOUT|呼叫已逾時。|  
 |HOST_E_NOT_OWNER|呼叫端未擁有鎖定。|  
 |HOST_E_ABANDONED|事件已取消時封鎖的執行緒或 fiber 等候它。|  
 |E_FAIL|發生未知的嚴重失敗。 方法會傳回 E_FAIL 之後，CLR 就不再可用的處理序內。 裝載方法的後續呼叫會傳回 HOST_E_CLRNOTAVAILABLE。|  
-|E_INVALIDARG|`dwConnectionId`是零，或`BeginConnection`已經使用這項功能稱為`dwConnectionId`值，或`szConnectionName`為 null。|  
+|E_INVALIDARG|`dwConnectionId` 是零，或`BeginConnection`已經使用這項功能稱為`dwConnectionId`值，或`szConnectionName`為 null。|  
 |E_OUTOFMEMORY|記憶體不足，無法配置來保存與此連線相關聯的工作清單。|  
   
 ## <a name="remarks"></a>備註  
  [ICLRDebugManager](../../../../docs/framework/unmanaged-api/hosting/iclrdebugmanager-interface.md)提供三種方法， `BeginConnection`， [SetConnectionTasks](../../../../docs/framework/unmanaged-api/hosting/iclrdebugmanager-setconnectiontasks-method.md)，和[EndConnection](../../../../docs/framework/unmanaged-api/hosting/iclrdebugmanager-endconnection-method.md)，將工作清單與識別項和好記的名稱產生關聯。  
   
 > [!IMPORTANT]
->  這三種方法必須針對每個工作集的特定順序呼叫。 `BeginConnection`會先呼叫來建立新的連線。 `SetConnectionTasks`呼叫下一個提供與該連接相關聯的工作集合。 `EndConnection`最後會呼叫以移除工作清單的識別碼和易記名稱之間的關聯。不過，可以是巢狀呼叫不同的連接。  
+>  這三種方法必須針對每個工作集的特定順序呼叫。 `BeginConnection` 會先呼叫來建立新的連線。 `SetConnectionTasks` 呼叫下一個提供與該連接相關聯的工作集合。 `EndConnection` 最後會呼叫以移除工作清單的識別碼和易記名稱之間的關聯。不過，可以是巢狀呼叫不同的連接。  
   
 ## <a name="requirements"></a>需求  
  **平台：**看到[系統需求](../../../../docs/framework/get-started/system-requirements.md)。  
@@ -80,9 +68,9 @@ HRESULT BeginConnection (
   
  **程式庫：**包含做為 MSCorEE.dll 中的資源  
   
- **.NET framework 版本：**[!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]  
+ **.NET framework 版本：** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]  
   
-## <a name="see-also"></a>請參閱  
+## <a name="see-also"></a>另請參閱  
  [ICLRControl 介面](../../../../docs/framework/unmanaged-api/hosting/iclrcontrol-interface.md)  
  [ICLRDebugManager 介面](../../../../docs/framework/unmanaged-api/hosting/iclrdebugmanager-interface.md)  
  [EndConnection 方法](../../../../docs/framework/unmanaged-api/hosting/iclrdebugmanager-endconnection-method.md)  

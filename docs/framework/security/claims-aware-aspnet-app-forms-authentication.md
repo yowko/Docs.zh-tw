@@ -1,26 +1,14 @@
 ---
 title: 如何：使用表單型驗證建置宣告感知的 ASP.NET 應用程式
-ms.custom: ''
 ms.date: 03/30/2017
-ms.prod: .net-framework
-ms.reviewer: ''
-ms.suite: ''
-ms.technology:
-- dotnet-clr
-ms.tgt_pltfrm: ''
-ms.topic: article
 ms.assetid: 98a3e029-1a9b-4e0c-b5d0-29d3f23f5b15
-caps.latest.revision: ''
 author: BrucePerlerMS
-ms.author: bruceper
 manager: mbaldwin
-ms.workload:
-- dotnet
-ms.openlocfilehash: f4977a40d440ca45a3130fb1b06e0b286a2ab2f6
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.openlocfilehash: 851a856d291da78265e9eac73e9e06028e24ef2e
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="how-to-build-claims-aware-aspnet-application-using-forms-based-authentication"></a>如何：使用表單型驗證建置宣告感知的 ASP.NET 應用程式
 ## <a name="applies-to"></a>適用於  
@@ -36,7 +24,7 @@ ms.lasthandoff: 12/22/2017
   
 -   目標  
   
--   概觀  
+-   總覽  
   
 -   步驟摘要  
   
@@ -52,7 +40,7 @@ ms.lasthandoff: 12/22/2017
   
 -   測試 ASP.NET Web Forms 應用程式以查看它是否正常運作  
   
-## <a name="overview"></a>概觀  
+## <a name="overview"></a>總覽  
  在 .NET 4.5 中，WIF 和其宣告型授權已包含為 Framework 的不可或缺部分。 以前，如果您想要來自 ASP.NET 使用者的宣告，需要安裝 WIF，然後將介面轉換為主體物件，例如 `Thread.CurrentPrincipal` 或 `HttpContext.Current.User`。 現在，這些主體物件會自動提供宣告。  
   
  表單驗證受益於 .NET 4.5 中包含 WIF，因為表單驗證的所有使用者都會自動具有與其建立關聯的宣告。 如這個使用方法所示範，您可以在使用表單驗證的 ASP.NET 應用程式中立即開始使用這些宣告。  

@@ -1,11 +1,7 @@
 ---
-title: "CloneEnumWbemClassObject 函式 （Unmanaged API 參考）"
-description: "CloneEnumWbemClassObject 函式可讓列舉值的邏輯副本。"
+title: CloneEnumWbemClassObject 函式 （Unmanaged API 參考）
+description: CloneEnumWbemClassObject 函式可讓列舉值的邏輯副本。
 ms.date: 11/06/2017
-ms.prod: .net-framework
-ms.technology:
-- dotnet-clr
-ms.topic: reference
 api_name:
 - CloneEnumWbemClassObject
 api_location:
@@ -20,14 +16,11 @@ topic_type:
 - Reference
 author: rpetrusha
 ms.author: ronpet
-manager: wpickett
-ms.workload:
-- dotnet
-ms.openlocfilehash: 22bcf2731ff682bf538858fc66a7a94be7f5d7df
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.openlocfilehash: 71e881eca541d6a987fa7d27e1d73903f843e26a
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="cloneenumwbemclassobject-function"></a>CloneEnumWbemClassObject 函式
 讓列舉值，並保留其目前位置列舉中的邏輯副本。  
@@ -56,7 +49,7 @@ HRESULT CloneEnumWbemClassObject (
 `authLevel`  
 [in]授權層級。
 
-`impLevel`[in]模擬等級。
+`impLevel` [in]模擬等級。
 
 `pCurrentEnumWbemClassObject`  
 [out]指標[IEnumWbemClassObject](https://msdn.microsoft.com/library/aa390857(v=vs.85).aspx)可以被複製的執行個體。
@@ -99,7 +92,7 @@ HRESULT CloneEnumWbemClassObject (
   
  **標頭：** WMINet_Utils.idl  
   
- **.NET framework 版本：**[!INCLUDE[net_current_v472plus](../../../../includes/net-current-v472plus.md)]  
+ **.NET framework 版本：** [!INCLUDE[net_current_v472plus](../../../../includes/net-current-v472plus.md)]  
   
 ## <a name="see-also"></a>另請參閱  
 [WMI 和效能計數器 （Unmanaged API 參考）](index.md)

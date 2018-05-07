@@ -1,13 +1,6 @@
 ---
-title: "如何：格式化 Windows Form DataGrid 控制項"
-ms.custom: 
+title: 如何：格式化 Windows Form DataGrid 控制項
 ms.date: 03/30/2017
-ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.technology: dotnet-winforms
-ms.tgt_pltfrm: 
-ms.topic: article
 dev_langs:
 - csharp
 - vb
@@ -21,16 +14,11 @@ helpviewer_keywords:
 - tables [Windows Forms], formatting in DataGrid control
 - formatting [Windows Forms]
 ms.assetid: a50fcc3b-8abf-47ec-9029-7f268af4ddb1
-caps.latest.revision: "14"
-author: dotnet-bot
-ms.author: dotnetcontent
-manager: wpickett
-ms.workload: dotnet
-ms.openlocfilehash: 6f03f65c878e72a8ec4b7f8bb447a1d6cf820690
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.openlocfilehash: ffcb84059dfceb85cdb347c3ddf1b80ab96c2aac
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="how-to-format-the-windows-forms-datagrid-control"></a>如何：格式化 Windows Form DataGrid 控制項
 > [!NOTE]
@@ -164,7 +152,7 @@ ms.lasthandoff: 12/22/2017
        }  
     ```  
   
-## <a name="see-also"></a>請參閱  
+## <a name="see-also"></a>另請參閱  
  <xref:System.Windows.Forms.GridTableStylesCollection>  
  <xref:System.Windows.Forms.GridColumnStylesCollection>  
  <xref:System.Windows.Forms.DataGrid>  

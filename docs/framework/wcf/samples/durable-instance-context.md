@@ -1,29 +1,15 @@
 ---
 title: 永久性執行個體內容
-ms.custom: ''
 ms.date: 03/30/2017
-ms.prod: .net-framework
-ms.reviewer: ''
-ms.suite: ''
-ms.technology:
-- dotnet-clr
-ms.tgt_pltfrm: ''
-ms.topic: article
 ms.assetid: 97bc2994-5a2c-47c7-927a-c4cd273153df
-caps.latest.revision: ''
-author: dotnet-bot
-ms.author: dotnetcontent
-manager: wpickett
-ms.workload:
-- dotnet
-ms.openlocfilehash: e4f1f3f9e840ba422e327792ec2b0554fad45902
-ms.sourcegitcommit: c883637b41ee028786edceece4fa872939d2e64c
-ms.translationtype: MT
+ms.openlocfilehash: 75516bfa0cf5ac7bfb27eb5ee2c51d04c30bc9a5
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 03/23/2018
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="durable-instance-context"></a>永久性執行個體內容
-這個範例會示範如何自訂 [!INCLUDE[indigo1](../../../../includes/indigo1-md.md)] 執行階段以啟用永久性執行個體內容。 它會使用 SQL Server 2005 做為備份存放區 (在此例中為 SQL Server 2005 Express)。 不過，也會提供存取自訂儲存機制的方法。  
+這個範例示範如何自訂 Windows Communication Foundation (WCF) 執行階段，以啟用永久性執行個體內容。 它會使用 SQL Server 2005 做為備份存放區 (在此例中為 SQL Server 2005 Express)。 不過，也會提供存取自訂儲存機制的方法。  
   
 > [!NOTE]
 >  此範例的安裝程序與建置指示位於本主題的結尾。  
@@ -469,7 +455,7 @@ Press ENTER to shut down client
 >   
 >  `<InstallDrive>:\WF_WCF_Samples`  
 >   
->  如果此目錄不存在，請移至 [Windows Communication Foundation (WCF) and Windows Workflow Foundation (WF) Samples for .NET Framework 4  (適用於 .NET Framework 4 的 Windows Communication Foundation (WCF) 與 Windows Workflow Foundation (WF) 範例)](http://go.microsoft.com/fwlink/?LinkId=150780) ，以下載所有 [!INCLUDE[indigo1](../../../../includes/indigo1-md.md)] 和 [!INCLUDE[wf1](../../../../includes/wf1-md.md)] 範例。 此範例位於下列目錄。  
+>  如果此目錄不存在，請移至[Windows Communication Foundation (WCF) 和適用於.NET Framework 4 的 Windows Workflow Foundation (WF) 範例](http://go.microsoft.com/fwlink/?LinkId=150780)下載所有 Windows Communication Foundation (WCF) 和[!INCLUDE[wf1](../../../../includes/wf1-md.md)]範例。 此範例位於下列目錄。  
 >   
 >  `<InstallDrive>:\WF_WCF_Samples\WCF\Extensibility\Instancing\Durable`  
   

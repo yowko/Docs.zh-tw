@@ -1,23 +1,14 @@
 ---
 title: 載入 DLL 時發生錯誤 (Visual Basic)
 ms.date: 07/20/2015
-ms.prod: .net
-ms.reviewer: ''
-ms.suite: ''
-ms.technology:
-- devlang-visual-basic
-ms.topic: article
 f1_keywords:
 - vbrID48
 ms.assetid: 4226cd1f-028c-477d-88a5-cb57f7e0cdc8
-caps.latest.revision: 8
-author: dotnet-bot
-ms.author: dotnetcontent
-ms.openlocfilehash: cc557dcc6709178b6519adb56f31debcbd1d1c39
-ms.sourcegitcommit: bd1ef61f4bb794b25383d3d72e71041a5ced172e
+ms.openlocfilehash: ac21c4d52b248025ee26bac3e511bb5b0a0b668e
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/18/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="error-in-loading-dll-visual-basic"></a>載入 DLL 時發生錯誤 (Visual Basic)
 動態連結程式庫 (DLL) 是程式庫中指定`Lib`子句`Declare`陳述式。 這項錯誤的可能原因包括：  

@@ -1,24 +1,12 @@
 ---
-title: "CLR 使用者定義類型"
-ms.custom: 
+title: CLR 使用者定義類型
 ms.date: 03/30/2017
-ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.technology: dotnet-ado
-ms.tgt_pltfrm: 
-ms.topic: article
 ms.assetid: 9f70e0b0-3a0d-4eb1-b914-07a5d0c167c2
-caps.latest.revision: "6"
-author: douglaslMS
-ms.author: douglasl
-manager: craigg
-ms.workload: dotnet
-ms.openlocfilehash: ed299dd91b16815cbbb50cd51602bb0161ec6939
-ms.sourcegitcommit: c0dd436f6f8f44dc80dc43b07f6841a00b74b23f
+ms.openlocfilehash: 344245ea7c67d7b5363c17bb42e2606ca11142bf
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 01/19/2018
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="clr-user-defined-types"></a>CLR 使用者定義類型
 Microsoft SQL Server 可支援以 Microsoft .NET Framework Common Language Runtime (CLR) 實作的使用者定義型別 (UDT)。 這項將 CLR 整合進 SQL Server 的機制可讓您擴充資料庫的型別系統。 UDT 可讓使用者擴充 SQL Server 資料型別系統，以及定義複雜的結構化型別。  
@@ -35,6 +23,6 @@ Microsoft SQL Server 可支援以 Microsoft .NET Framework Common Language Runti
   
 1.  [CLR 使用者定義類型](http://go.microsoft.com/fwlink/?LinkId=98366)  
   
-## <a name="see-also"></a>請參閱  
+## <a name="see-also"></a>另請參閱  
  [在 Managed 程式碼中建立 SQL Server 2005 物件](http://msdn.microsoft.com/library/5358a825-e19b-49aa-8214-674ce5fed1da)  
  [ADO.NET Managed 提供者和 DataSet 開發人員中心](http://go.microsoft.com/fwlink/?LinkId=217917)

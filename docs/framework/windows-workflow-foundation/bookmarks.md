@@ -1,23 +1,12 @@
 ---
 title: Bookmarks1
-ms.custom: 
 ms.date: 03/30/2017
-ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.tgt_pltfrm: 
-ms.topic: article
 ms.assetid: 9b51a346-09ae-455c-a70a-e2264ddeb9e2
-caps.latest.revision: "8"
-author: dotnet-bot
-ms.author: dotnetcontent
-manager: wpickett
-ms.workload: dotnet
-ms.openlocfilehash: bd30abdb158f07724e7acdf172546111e3330713
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.openlocfilehash: 8b7ca9549327087e30d6c72a8b784aa37ad09f3c
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="bookmarks"></a>書籤
 書籤是一種可讓活動被動等候輸入而不需保存工作流程執行緒的機制。 活動發出等候刺激的訊號時，就可以建立書籤。 此動作可讓執行階段知道，即使目前執行中的方法 (此方法建立了 <xref:System.Activities.Bookmark>) 傳回，也不應將活動的執行視為已完成。  

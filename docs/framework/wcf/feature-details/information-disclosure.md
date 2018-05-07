@@ -1,26 +1,12 @@
 ---
 title: 資訊洩露
-ms.custom: ''
 ms.date: 03/30/2017
-ms.prod: .net-framework
-ms.reviewer: ''
-ms.suite: ''
-ms.technology:
-- dotnet-clr
-ms.tgt_pltfrm: ''
-ms.topic: article
 ms.assetid: 4064c89f-afa6-444a-aa7e-807ef072131c
-caps.latest.revision: 11
-author: dotnet-bot
-ms.author: dotnetcontent
-manager: wpickett
-ms.workload:
-- dotnet
-ms.openlocfilehash: 1b3da2dc36dca913c638ce269213903c2a024a04
-ms.sourcegitcommit: 94d33cadc5ff81d2ac389bf5f26422c227832052
+ms.openlocfilehash: 1f6c33787f920fbe7e795e27ff10d7a0c83db21e
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/30/2018
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="information-disclosure"></a>資訊洩露
 資訊洩漏讓攻擊者可以取得與系統有關的寶貴資訊。 因此，公開資訊時，請務必考慮您要公開的是哪些資訊，以及是否會遭到惡意使用者的使用。 下列列出可能的資訊洩漏攻擊，並針對各種攻擊提供減少受到攻擊的方法。  
@@ -47,7 +33,7 @@ ms.lasthandoff: 04/30/2018
   
 -   服務參考假設為可以信任。 每次傳送服務參考執行個體時，小心確保它們不會遭到竄改。  
   
--   有些應用程式會提供使用者體驗，可根據服務參考中的資料以及經由遠端主機證實的信任資料，互相建立信任。 [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] 有提供這類機能的擴充點，但是使用者必須加以實作。  
+-   有些應用程式會提供使用者體驗，可根據服務參考中的資料以及經由遠端主機證實的信任資料，互相建立信任。 WCF 有提供這類機能的擴充點，但使用者必須實作它們。  
   
 ## <a name="ntlm"></a>NTLM  
  在預設情況下，Windows 網域環境中的 Windows 驗證會使用 Kerberos 通訊協定來驗證和授權使用者。 如果基於某個原因而無法使用 Kerberos 通訊協定，請使用 NT LAN Manager (NTLM) 做為後援。 透過將 <xref:System.ServiceModel.Security.WindowsClientCredential.AllowNtlm%2A> 屬性設定為 `false`，即可停用此行為。 允許 NTLM 時要注意的問題包括：  

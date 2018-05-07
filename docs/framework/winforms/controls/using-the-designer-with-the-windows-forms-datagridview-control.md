@@ -1,28 +1,16 @@
 ---
-title: "使用設計工具搭配 Windows Form DataGridView 控制項"
-ms.custom: 
+title: 使用設計工具搭配 Windows Form DataGridView 控制項
 ms.date: 03/30/2017
-ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.technology: dotnet-winforms
-ms.tgt_pltfrm: 
-ms.topic: article
 helpviewer_keywords:
 - tables [Windows Forms]
 - DataGridView control [Windows Forms], designer support
 - formatting [Windows Forms]
 ms.assetid: b66057a6-5983-4864-b4e7-8cbc88a7010c
-caps.latest.revision: "9"
-author: dotnet-bot
-ms.author: dotnetcontent
-manager: wpickett
-ms.workload: dotnet
-ms.openlocfilehash: 9df10ecabc8f61c3ef984adb6466f195395fd181
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.openlocfilehash: 618e422c893d0f0c1870d5b9bf2360eb946dd3c8
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="using-the-designer-with-the-windows-forms-datagridview-control"></a>使用設計工具搭配 Windows Form DataGridView 控制項
 Visual Studio 提供的設計工具支援`DataGridView`控制項，可讓您無須撰寫程式碼執行安裝程式工作。 這些工作包括繫結控制項至資料來源，修改的資料行用來顯示資料，以及調整的外觀和基本行為的控制項。  
@@ -65,5 +53,5 @@ Visual Studio 提供的設計工具支援`DataGridView`控制項，可讓您無�
  <xref:System.Windows.Forms.DataGridView>  
  提供 <xref:System.Windows.Forms.DataGridView> 控制項的參考文件。  
   
-## <a name="see-also"></a>請參閱  
+## <a name="see-also"></a>另請參閱  
  [DataGridView 控制項](../../../../docs/framework/winforms/controls/datagridview-control-windows-forms.md)

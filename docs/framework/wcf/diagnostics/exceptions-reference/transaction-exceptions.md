@@ -1,27 +1,15 @@
 ---
-title: "異動例外狀況"
-ms.custom: 
+title: 異動例外狀況
 ms.date: 03/30/2017
-ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.technology: dotnet-clr
-ms.tgt_pltfrm: 
-ms.topic: article
 ms.assetid: 1d27ed51-7eda-477f-9eca-94fa129f3e07
-caps.latest.revision: "5"
-author: dotnet-bot
-ms.author: dotnetcontent
-manager: wpickett
-ms.workload: dotnet
-ms.openlocfilehash: 4f13a39c251afd55dbb1f0d2dde4fc66fe38d30a
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.openlocfilehash: 85d8d043a5610743d6cbad4d950330ed4bedb502
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="transaction-exceptions"></a>異動例外狀況
-本主題會列出 [!INCLUDE[indigo1](../../../../../includes/indigo1-md.md)] 交易所產生的所有例外狀況。  
+本主題列出 Windows Communication Foundation (WCF) 交易所產生的所有例外狀況。  
   
 ## <a name="exception-list"></a>例外狀況清單  
   

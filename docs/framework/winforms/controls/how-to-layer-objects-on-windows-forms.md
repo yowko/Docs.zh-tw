@@ -1,13 +1,6 @@
 ---
-title: "如何：將 Windows Form 上的物件分層"
-ms.custom: 
+title: 如何：將 Windows Form 上的物件分層
 ms.date: 03/30/2017
-ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.technology: dotnet-winforms
-ms.tgt_pltfrm: 
-ms.topic: article
 dev_langs:
 - csharp
 - vb
@@ -19,16 +12,11 @@ helpviewer_keywords:
 - controls [Windows Forms], positioning
 - z-order
 ms.assetid: 1acc4281-2976-4715-86f4-bda68134baaf
-caps.latest.revision: "14"
-author: dotnet-bot
-ms.author: dotnetcontent
-manager: wpickett
-ms.workload: dotnet
-ms.openlocfilehash: d956ae8fb643d616bc0e5dc514f21ca95fa50a48
-ms.sourcegitcommit: c0dd436f6f8f44dc80dc43b07f6841a00b74b23f
+ms.openlocfilehash: 1a2a25f2e7eaa6618c0bf535a34f7dc6a28d51fa
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 01/19/2018
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="how-to-layer-objects-on-windows-forms"></a>如何：將 Windows Form 上的物件分層
 當您建立複雜的使用者介面，或使用多個文件介面 (MDI) 表單時，您通常要控制項和子表單，以建立更複雜的使用者介面 (UI) 層級。 若要移動並追蹤的控制項和 windows 群組的內容中，您管理他們的疊置順序。 *疊置順序*會沿著表單 z （深度） 的表單上控制項的視覺化圖層。 視窗頂端的疊置順序，與所有其他 windows 重疊。 所有其他視窗重疊視窗底部的疊置順序。  
@@ -63,7 +51,7 @@ ms.lasthandoff: 01/19/2018
 > [!NOTE]
 >  Windows Form 支援*控制項內含項目*。 控制項內含項目都放多個控制項中包含的控制項，例如數目<xref:System.Windows.Forms.RadioButton>內控制<xref:System.Windows.Forms.GroupBox>控制項。 您可以再圖層內包含的控制項的控制項。 移動群組方塊移動了控制項，因為它們包含在它之內。  
   
-## <a name="see-also"></a>請參閱  
+## <a name="see-also"></a>另請參閱  
  [Windows Forms 控制項](../../../../docs/framework/winforms/controls/index.md)  
  [排列 Windows Forms 上的控制項](../../../../docs/framework/winforms/controls/arranging-controls-on-windows-forms.md)  
  [標記個別 Windows Forms 控制項並提供其捷徑](../../../../docs/framework/winforms/controls/labeling-individual-windows-forms-controls-and-providing-shortcuts-to-them.md)  

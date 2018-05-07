@@ -1,14 +1,6 @@
 ---
-title: "ICorProfilerCallback7 介面"
-ms.custom: 
+title: ICorProfilerCallback7 介面
 ms.date: 03/30/2017
-ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.technology:
-- dotnet-clr
-ms.tgt_pltfrm: 
-ms.topic: article
 api_name:
 - ICorProfilerCallback7
 api_location:
@@ -17,17 +9,13 @@ api_location:
 api_type:
 - COM
 ms.assetid: a0be019e-aaa1-4036-990f-565f114d4b5c
-caps.latest.revision: 
 author: rpetrusha
 ms.author: ronpet
-manager: wpickett
-ms.workload:
-- dotnet
-ms.openlocfilehash: 09de947b3f965f25942bd3e3081d91d3028532f1
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.openlocfilehash: f681001b610f42fef28181ffe3b47d702aabdf6e
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="icorprofilercallback7-interface"></a>ICorProfilerCallback7 介面
 [在 .NET Framework 4.6.1 及更新版本中支援]  
@@ -45,7 +33,7 @@ ms.lasthandoff: 12/22/2017
   
  **標頭：** CorProf.idl、CorProf.h  
   
- **.NET framework 版本：**[!INCLUDE[net_current_v461plus](../../../../includes/net-current-v461plus-md.md)]  
+ **.NET framework 版本：** [!INCLUDE[net_current_v461plus](../../../../includes/net-current-v461plus-md.md)]  
   
-## <a name="see-also"></a>請參閱  
+## <a name="see-also"></a>另請參閱  
  [分析介面](../../../../docs/framework/unmanaged-api/profiling/profiling-interfaces.md)

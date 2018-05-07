@@ -1,13 +1,6 @@
 ---
-title: "裝載資料服務 (WCF 資料服務)"
-ms.custom: 
+title: 裝載資料服務 (WCF 資料服務)
 ms.date: 03/30/2017
-ms.prod: .net-framework-oob
-ms.reviewer: 
-ms.suite: 
-ms.technology: dotnet-clr
-ms.tgt_pltfrm: 
-ms.topic: article
 dev_langs:
 - csharp
 - vb
@@ -15,16 +8,11 @@ helpviewer_keywords:
 - WCF Data Services, configuring
 - WCF Data Services, Windows Communication Foundation
 ms.assetid: b48f42ce-22ce-4f8d-8f0d-f7ddac9125ee
-caps.latest.revision: "3"
-author: dotnet-bot
-ms.author: dotnetcontent
-manager: wpickett
-ms.workload: dotnet
-ms.openlocfilehash: e8819e8127d16b83d531dc6bdcd3af88245c695e
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.openlocfilehash: d3adf45e0876ae63b111a53461eee9aeee519b5b
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="hosting-the-data-service-wcf-data-services"></a>裝載資料服務 (WCF 資料服務)
 使用[!INCLUDE[ssAstoria](../../../../includes/ssastoria-md.md)]，您可以建立將資料公開為服務[!INCLUDE[ssODataFull](../../../../includes/ssodatafull-md.md)]摘要。 這個資料服務會定義為繼承自 <xref:System.Data.Services.DataService%601> 的類別。 這個類別會提供處理要求訊息、 執行更新對資料來源，以及產生所需的回應訊息所需的功能[!INCLUDE[ssODataShort](../../../../includes/ssodatashort-md.md)]。 不過，無法繫結至資料服務，而且網路通訊端上接聽內送 HTTP 要求。 對於這個必要的功能而言，資料服務會依賴裝載的元件。  
@@ -83,7 +71,7 @@ ms.lasthandoff: 12/22/2017
   
 -   驗證查詢字串中的參數。  
   
-## <a name="see-also"></a>請參閱  
+## <a name="see-also"></a>另請參閱  
  [定義 WCF Data Services](../../../../docs/framework/data/wcf/defining-wcf-data-services.md)  
  [將資料當作服務公開](../../../../docs/framework/data/wcf/exposing-your-data-as-a-service-wcf-data-services.md)  
  [設定資料服務](../../../../docs/framework/data/wcf/configuring-the-data-service-wcf-data-services.md)

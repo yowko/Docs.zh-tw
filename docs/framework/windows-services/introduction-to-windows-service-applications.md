@@ -1,14 +1,6 @@
 ---
-title: "Windows 服務應用程式簡介"
-ms.custom: 
+title: Windows 服務應用程式簡介
 ms.date: 03/30/2017
-ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.technology:
-- dotnet-clr
-ms.tgt_pltfrm: 
-ms.topic: article
 f1_keywords:
 - ServiceController
 helpviewer_keywords:
@@ -29,17 +21,13 @@ helpviewer_keywords:
 - Win32ShareProcess service type
 - Windows Service applications, lifetime
 ms.assetid: 1b1b5e67-3ff3-40c0-8154-322cfd6ef0ae
-caps.latest.revision: 
 author: ghogen
-ms.author: ghogen
 manager: douge
-ms.workload:
-- dotnet
-ms.openlocfilehash: 613107a13820ad71b854dcba93f21c41f2a5fa5f
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.openlocfilehash: e0720b90d89e5117cbac15ce7e38a41071f1c13e
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="introduction-to-windows-service-applications"></a>Windows 服務應用程式簡介
 Microsoft Windows 服務，之前稱為 NT 服務可讓您建立自己的 Windows 工作階段中執行的長時間執行可執行應用程式。 當電腦開機時，自動啟動這些服務也可以暫停或重新啟動，且並未顯示任何使用者介面。 這些功能可讓服務特別適用於在伺服器上，或者每當您需要長時間執行的功能，不會干擾正在同一部電腦的其他使用者。 您也可以在不同於登入使用者的特定使用者帳戶或預設電腦帳戶的安全性內容中執行服務。 如需有關服務和 Windows 工作階段的詳細資訊，請參閱 Windows SDK 的文件。  
@@ -92,7 +80,7 @@ Microsoft Windows 服務，之前稱為 NT 服務可讓您建立自己的 Window
   
 -   專案包含 Windows 服務必須有專案和其服務的安裝元件。 這可以輕鬆地完成從**屬性**視窗。 如需詳細資訊，請參閱[如何： 加入至您的服務應用程式的安裝程式](../../../docs/framework/windows-services/how-to-add-installers-to-your-service-application.md)。  
   
-## <a name="see-also"></a>請參閱  
+## <a name="see-also"></a>另請參閱  
  [Windows 服務應用程式](../../../docs/framework/windows-services/index.md)  
  [服務應用程式的程式設計架構](../../../docs/framework/windows-services/service-application-programming-architecture.md)  
  [如何：建立 Windows 服務](../../../docs/framework/windows-services/how-to-create-windows-services.md)  

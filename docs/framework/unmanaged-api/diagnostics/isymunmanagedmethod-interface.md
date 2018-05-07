@@ -1,14 +1,6 @@
 ---
-title: "ISymUnmanagedMethod 介面"
-ms.custom: 
+title: ISymUnmanagedMethod 介面
 ms.date: 03/30/2017
-ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.technology:
-- dotnet-clr
-ms.tgt_pltfrm: 
-ms.topic: reference
 api_name:
 - ISymUnmanagedMethod
 api_location:
@@ -22,17 +14,13 @@ helpviewer_keywords:
 ms.assetid: f204d74c-cc79-4092-83bb-60654be95649
 topic_type:
 - apiref
-caps.latest.revision: 
 author: mairaw
 ms.author: mairaw
-manager: wpickett
-ms.workload:
-- dotnet
-ms.openlocfilehash: b6305625c3d02dbd126a284287e19b319e21eeba
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.openlocfilehash: 728acc09f739fe567fca4a2571cbabf1ba8838a2
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="isymunmanagedmethod-interface"></a>ISymUnmanagedMethod 介面
 代表符號存放區內的方法。 這個介面提供存取只與符號相關屬性的方法，而非類型相關的屬性。  
@@ -55,5 +43,5 @@ ms.lasthandoff: 12/22/2017
 ## <a name="requirements"></a>需求  
  **標頭：**於 CorSym.idl、 CorSym.h  
   
-## <a name="see-also"></a>請參閱  
+## <a name="see-also"></a>另請參閱  
  [診斷符號存放區介面](../../../../docs/framework/unmanaged-api/diagnostics/diagnostics-symbol-store-interfaces.md)

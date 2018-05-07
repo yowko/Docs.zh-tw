@@ -1,27 +1,15 @@
 ---
 title: Pooling
-ms.custom: 
 ms.date: 03/30/2017
-ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.technology: dotnet-clr
-ms.tgt_pltfrm: 
-ms.topic: article
 ms.assetid: 688dfb30-b79a-4cad-a687-8302f8a9ad6a
-caps.latest.revision: "29"
-author: dotnet-bot
-ms.author: dotnetcontent
-manager: wpickett
-ms.workload: dotnet
-ms.openlocfilehash: 0bdd1874004af1ebbde69c622853d5fdcd982005
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
-ms.translationtype: MT
+ms.openlocfilehash: 2c864bd0c1d27e9c771a1b97e756c04b107ac2b8
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="pooling"></a>Pooling
-這個範例會示範如何延伸 [!INCLUDE[indigo1](../../../../includes/indigo1-md.md)] 以支援物件共用 (Object Pooling)。 此範例會示範如何建立語法上及語意上與 Enterprise Services 的 `ObjectPoolingAttribute` 屬性功能相似的屬性。 物件共用可以大幅提升應用程式的效能。 不過，如果不當使用，可能會產生反效果。 物件共用有助於避免重複建立常用物件的煩瑣工作，這些物件往往需要大量的初始設定。 不過，如果呼叫共用物件上的方法要花費相當長的時間才能完成，而一旦到達集區的大小上限，物件共用就得將多出的要求加入佇列中。 它可能因此無法受理某個建立物件的要求，而擲回逾時例外狀況。  
+這個範例示範如何擴充 Windows Communication Foundation (WCF) 支援物件共用。 此範例會示範如何建立語法上及語意上與 Enterprise Services 的 `ObjectPoolingAttribute` 屬性功能相似的屬性。 物件共用可以大幅提升應用程式的效能。 不過，如果不當使用，可能會產生反效果。 物件共用有助於避免重複建立常用物件的煩瑣工作，這些物件往往需要大量的初始設定。 不過，如果呼叫共用物件上的方法要花費相當長的時間才能完成，而一旦到達集區的大小上限，物件共用就得將多出的要求加入佇列中。 它可能因此無法受理某個建立物件的要求，而擲回逾時例外狀況。  
   
 > [!NOTE]
 >  此範例的安裝程序與建置指示位於本主題的結尾。  
@@ -262,8 +250,8 @@ Press <ENTER> to exit.
 >   
 >  `<InstallDrive>:\WF_WCF_Samples`  
 >   
->  如果此目錄不存在，請移至 [Windows Communication Foundation (WCF) and Windows Workflow Foundation (WF) Samples for .NET Framework 4  (適用於 .NET Framework 4 的 Windows Communication Foundation (WCF) 與 Windows Workflow Foundation (WF) 範例)](http://go.microsoft.com/fwlink/?LinkId=150780) ，以下載所有 [!INCLUDE[indigo1](../../../../includes/indigo1-md.md)] 和 [!INCLUDE[wf1](../../../../includes/wf1-md.md)] 範例。 此範例位於下列目錄。  
+>  如果此目錄不存在，請移至[Windows Communication Foundation (WCF) 和適用於.NET Framework 4 的 Windows Workflow Foundation (WF) 範例](http://go.microsoft.com/fwlink/?LinkId=150780)下載所有 Windows Communication Foundation (WCF) 和[!INCLUDE[wf1](../../../../includes/wf1-md.md)]範例。 此範例位於下列目錄。  
 >   
 >  `<InstallDrive>:\WF_WCF_Samples\WCF\Extensibility\Instancing\Pooling`  
   
-## <a name="see-also"></a>請參閱
+## <a name="see-also"></a>另請參閱

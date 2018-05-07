@@ -1,13 +1,6 @@
 ---
-title: "如何：指定服務的安全性內容"
-ms.custom: 
+title: 如何：指定服務的安全性內容
 ms.date: 03/30/2017
-ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.technology: dotnet-clr
-ms.tgt_pltfrm: 
-ms.topic: article
 helpviewer_keywords:
 - Windows Service applications, security
 - security [Visual Studio], contexts
@@ -17,16 +10,13 @@ helpviewer_keywords:
 - services, security
 - ServiceInstaller class, security context
 ms.assetid: 02187c7b-dbf2-45f2-96c2-e11010225a22
-caps.latest.revision: "10"
 author: ghogen
-ms.author: ghogen
 manager: douge
-ms.workload: dotnet
-ms.openlocfilehash: 9ce65358f6d63414dbe6798d3cc2464ee2741980
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.openlocfilehash: e3e5ad7dd44dcaf1593ac80bbe6d0a367964e4e4
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="how-to-specify-the-security-context-for-services"></a>如何：指定服務的安全性內容
 根據預設，服務會在不同的安全性內容以外的登入的使用者中執行。 預設的系統帳戶內容中執行的服務呼叫`LocalSystem`，讓他們擁有不同的存取權限與使用者的系統資源。 您可以變更此行為，以指定不同的使用者帳戶，您的服務應在其下執行。  
@@ -54,7 +44,7 @@ ms.lasthandoff: 12/22/2017
   
 3.  在**屬性**視窗中，將<xref:System.ServiceProcess.ServiceProcessInstaller.Account%2A>適當的值。  
   
-## <a name="see-also"></a>請參閱  
+## <a name="see-also"></a>另請參閱  
  [Windows 服務應用程式簡介](../../../docs/framework/windows-services/introduction-to-windows-service-applications.md)  
  [如何：將 Installer 新增至服務應用程式](../../../docs/framework/windows-services/how-to-add-installers-to-your-service-application.md)  
  [如何：建立 Windows 服務](../../../docs/framework/windows-services/how-to-create-windows-services.md)

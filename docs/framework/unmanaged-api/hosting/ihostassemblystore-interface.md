@@ -1,14 +1,6 @@
 ---
-title: "IHostAssemblyStore 介面"
-ms.custom: 
+title: IHostAssemblyStore 介面
 ms.date: 03/30/2017
-ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.technology:
-- dotnet-clr
-ms.tgt_pltfrm: 
-ms.topic: reference
 api_name:
 - IHostAssemblyStore
 api_location:
@@ -22,17 +14,13 @@ helpviewer_keywords:
 ms.assetid: cccb650f-abe0-41e2-9fd1-b383788eb1f6
 topic_type:
 - apiref
-caps.latest.revision: 
 author: rpetrusha
 ms.author: ronpet
-manager: wpickett
-ms.workload:
-- dotnet
-ms.openlocfilehash: c795d4baa3030817299f23c3dadf4caf7a5edc5a
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.openlocfilehash: 5620df2ab2b2530332df02cf3f11a00d6b6c8fb4
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="ihostassemblystore-interface"></a>IHostAssemblyStore 介面
 提供方法，讓主應用程式載入組件和模組與 common language runtime (CLR) 無關。  
@@ -45,7 +33,7 @@ ms.lasthandoff: 12/22/2017
 |[ProvideModule 方法](../../../../docs/framework/unmanaged-api/hosting/ihostassemblystore-providemodule-method.md)|解析組件或連結 （不使用內嵌） 的資源檔內的模組。|  
   
 ## <a name="remarks"></a>備註  
- `IHostAssemblyStore`提供方法，讓主應用程式能夠有效率地根據組件識別的組件載入。 主控件載入的組件藉由傳回`IStream`直接指向位元組的執行個體。  
+ `IHostAssemblyStore` 提供方法，讓主應用程式能夠有效率地根據組件識別的組件載入。 主控件載入的組件藉由傳回`IStream`直接指向位元組的執行個體。  
   
  CLR 會判斷主機是否已實作`IHostAssemblyStore`藉由呼叫`IHostAssemblyManager::GetNonHostAssemblyStores`在初始化時。 這可讓主應用程式，例如，控制使用者組件，繫結，但依賴.NET Framework 組件繫結的執行階段。  
   
@@ -62,9 +50,9 @@ ms.lasthandoff: 12/22/2017
   
  **程式庫：**包含做為 MSCorEE.dll 中的資源  
   
- **.NET framework 版本：**[!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]  
+ **.NET framework 版本：** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]  
   
-## <a name="see-also"></a>請參閱  
+## <a name="see-also"></a>另請參閱  
  [ICLRAssemblyReferenceList 介面](../../../../docs/framework/unmanaged-api/hosting/iclrassemblyreferencelist-interface.md)  
  [IHostAssemblyManager 介面](../../../../docs/framework/unmanaged-api/hosting/ihostassemblymanager-interface.md)  
  [裝載介面](../../../../docs/framework/unmanaged-api/hosting/hosting-interfaces.md)

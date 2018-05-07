@@ -1,27 +1,15 @@
 ---
-title: "防火牆指示"
-ms.custom: 
+title: 防火牆指示
 ms.date: 03/30/2017
-ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.technology: dotnet-clr
-ms.tgt_pltfrm: 
-ms.topic: article
 ms.assetid: a7dc429f-65ac-4faf-974a-77d5fb977fe1
-caps.latest.revision: "32"
-author: dotnet-bot
-ms.author: dotnetcontent
-manager: wpickett
-ms.workload: dotnet
-ms.openlocfilehash: 270df09f709dfdfeb78b9bd72bc3744c6614bc5e
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.openlocfilehash: 7ae7adcb773167a6af190355dd595f0f063fedc8
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="firewall-instructions"></a>防火牆指示
-您必須啟用防火牆中的數個連接埠或程式，[!INCLUDE[indigo1](../../../../includes/indigo1-md.md)] 範例才能運作。 許多範例都使用範圍 8000-8003 中的連接埠以及連接埠 9000 進行通訊。 防火牆預設為開啟狀態，可防止對這些連接埠的存取。 若要為範例啟用防火牆，請視您的需求和安全性環境，完成下列其中一個程序：  
+您必須啟用數個連接埠或在防火牆中的程式，讓 Windows Communication Foundation (WCF) 範例才能運作。 許多範例都使用範圍 8000-8003 中的連接埠以及連接埠 9000 進行通訊。 防火牆預設為開啟狀態，可防止對這些連接埠的存取。 若要為範例啟用防火牆，請視您的需求和安全性環境，完成下列其中一個程序：  
   
 -   選項 1：執行時以互動方式啟用範例。 不要對您的防火牆組態進行任何進階變更，並開始建置與執行範例。 執行範例時， **Windows 安全性警訊** 對話方塊隨即出現。 接著，您就可以互動方式將範例新增至解除封鎖清單中。 使用這個程序時，您可能必須重新啟動範例。  
   

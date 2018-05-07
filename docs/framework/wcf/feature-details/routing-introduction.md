@@ -1,26 +1,12 @@
 ---
 title: 路由簡介
-ms.custom: ''
 ms.date: 03/30/2017
-ms.prod: .net-framework
-ms.reviewer: ''
-ms.suite: ''
-ms.technology:
-- dotnet-clr
-ms.tgt_pltfrm: ''
-ms.topic: article
 ms.assetid: bf6ceb38-6622-433b-9ee7-f79bc93497a1
-caps.latest.revision: ''
-author: wadepickett
-ms.author: wpickett
-manager: wpickett
-ms.workload:
-- dotnet
-ms.openlocfilehash: e0fe14f096ae0914235ea1d23b874f0aea906d9d
-ms.sourcegitcommit: 15316053918995cc1380163a7d7e7edd5c44e6d7
+ms.openlocfilehash: 3ee7ea8271df47354a0897434bf8f203eaf09a51
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 03/19/2018
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="routing-introduction"></a>路由簡介
 路由服務提供了泛型的可外掛式 SOAP 媒介，此媒介能夠根據訊息內容路由傳送訊息。 透過路由服務，您就可以建立複雜路由邏輯，以便實作服務彙總、服務版本控制、優先權路由和多點傳送路由等案例。 路由服務還提供錯誤處理，可讓您設定備份端點清單，當傳送至主要目的端點期間發生錯誤時，訊息就會傳送至此清單中的端點。  
@@ -111,7 +97,7 @@ serviceHost.Description.Behaviors.Add(
      new RoutingBehavior(rc));  
 ```  
   
- 這個範例會設定讓路由服務公開 （expose） 單一的端點位址為 "http://localhost:8000/routingservice/router“，用來接收要路由傳送訊息。 由於訊息會路由傳送至要求-回覆端點，因此服務端點會使用 <xref:System.ServiceModel.Routing.IRequestReplyRouter> 合約。 這項設定也會定義 “http://localhost:8000/servicemodelsample/service" 訊息會路由傳送至單一用戶端端點。 名為"routingTable1"篩選資料表 （未顯示） 包含用來路由傳送訊息的路由邏輯且與相關聯的服務端點使用**RoutingBehavior** （適用於組態檔） 或**RoutingConfiguration** （適用於以程式設計方式設定）。  
+ 這個範例會設定讓路由服務公開 （expose） 單一的端點位址為"http://localhost:8000/routingservice/router」，用來接收要路由傳送訊息。 由於訊息會路由傳送至要求-回覆端點，因此服務端點會使用 <xref:System.ServiceModel.Routing.IRequestReplyRouter> 合約。 這項設定也會定義單一用戶端端點的 「http://localhost:8000/servicemodelsample/service」 訊息會路由傳送至。 名為"routingTable1"篩選資料表 （未顯示） 包含用來路由傳送訊息的路由邏輯且與相關聯的服務端點使用**RoutingBehavior** （適用於組態檔） 或**RoutingConfiguration** （適用於以程式設計方式設定）。  
   
 ### <a name="routing-logic"></a>路由邏輯  
  若要定義用來路由傳送訊息的路由邏輯，您必須判斷傳入訊息內包含的哪些資訊可以單獨處理。 例如，如果要路由傳送的所有目的端點共用相同的 SOAP 動作，則訊息內所包含動作的值就不適合做為指標，且訊息不應該路由傳送至該值所指的特定端點。 如果您必須以唯一的方式將訊息路由傳送至某一個特定端點，則應該對唯一識別路由傳送訊息至其中之目的端點的資料進行篩選。  
@@ -173,7 +159,7 @@ rc.FilterTable.Add(new MatchAllMessageFilter(), endpointList);
   
 -   評估訊息時，必須有多個篩選傳回 `true`。  
   
- 如果這些條件都符合，則訊息會路由傳送至所有評估為 `true` 之篩選的所有端點。 下列範例會定義路由組態，如果訊息中的端點位址為 http://localhost:8000/routingservice/router/rounding，則會將訊息同時路由傳送至兩個端點。  
+ 如果這些條件都符合，則訊息會路由傳送至所有評估為 `true` 之篩選的所有端點。 下列範例會定義路由組態，如果訊息中的端點位址是路由傳送至這兩個端點會導致http://localhost:8000/routingservice/router/rounding。  
   
 ```xml  
 <!--ROUTING SECTION -->  

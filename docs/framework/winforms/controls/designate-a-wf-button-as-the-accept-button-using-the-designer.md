@@ -1,29 +1,17 @@
 ---
-title: "如何：使用設計工具將 Windows Form 按鈕指定為接受按鈕"
-ms.custom: 
+title: 如何：使用設計工具將 Windows Form 按鈕指定為接受按鈕
 ms.date: 03/30/2017
-ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.technology: dotnet-winforms
-ms.tgt_pltfrm: 
-ms.topic: article
 helpviewer_keywords:
 - buttons [Windows Forms], default on Windows Forms
 - Accept button on Windows Forms
 - Button control [Windows Forms], designating as default
 - Windows Forms controls, default button on form
 ms.assetid: a1da0590-755f-49f2-aca7-609fac6351bf
-caps.latest.revision: "13"
-author: dotnet-bot
-ms.author: dotnetcontent
-manager: wpickett
-ms.workload: dotnet
-ms.openlocfilehash: be2fe788be4aeaa2e8eccaaf539a08b076f2da01
-ms.sourcegitcommit: c0dd436f6f8f44dc80dc43b07f6841a00b74b23f
+ms.openlocfilehash: aade1b6e988fc4b43f7ad9cfb58382302c875d37
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 01/19/2018
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="how-to-designate-a-windows-forms-button-as-the-accept-button-using-the-designer"></a>如何：使用設計工具將 Windows Form 按鈕指定為接受按鈕
 您可以在任何 Windows 表單上，指定<xref:System.Windows.Forms.Button>控制項為接受按鈕，也稱為預設按鈕。 每當使用者按下 ENTER 鍵，是按下無論哪個表單上的其他控制項具有焦點的預設按鈕。 例外狀況是另一個按鈕具有焦點的控制項時，會在此情況下，按一下具有焦點按鈕，或多行文字方塊中或自訂控制項的 ENTER 鍵。  
@@ -37,7 +25,7 @@ ms.lasthandoff: 01/19/2018
   
 2.  在**屬性**視窗中，將表單的<xref:System.Windows.Forms.Form.AcceptButton%2A>屬性<xref:System.Windows.Forms.Button>控制項的名稱。  
   
-## <a name="see-also"></a>請參閱  
+## <a name="see-also"></a>另請參閱  
  <xref:System.Windows.Forms.Form.AcceptButton%2A>  
  [Button 控制項概觀](../../../../docs/framework/winforms/controls/button-control-overview-windows-forms.md)  
  [選取 Windows Forms Button 控制項的方法](../../../../docs/framework/winforms/controls/ways-to-select-a-windows-forms-button-control.md)  

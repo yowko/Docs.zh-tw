@@ -1,13 +1,6 @@
 ---
-title: "使用身分識別模型來管理宣告與授權"
-ms.custom: 
+title: 使用身分識別模型來管理宣告與授權
 ms.date: 03/30/2017
-ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.technology: dotnet-clr
-ms.tgt_pltfrm: 
-ms.topic: article
 helpviewer_keywords:
 - authorization [WCF]
 - WCF security
@@ -15,19 +8,14 @@ helpviewer_keywords:
 - claims [WCF]
 - authorization [WCF], managing with the Identity Model
 ms.assetid: 099defbb-5d35-434e-9336-1a49b9ec7663
-caps.latest.revision: "20"
-author: dotnet-bot
-ms.author: dotnetcontent
-manager: wpickett
-ms.workload: dotnet
-ms.openlocfilehash: db0a304a908e906b635672eed1a84f0277284ad7
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.openlocfilehash: 84f4485a85f83e910cc75b04282e1ad04aee72c1
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="managing-claims-and-authorization-with-the-identity-model"></a>使用身分識別模型來管理宣告與授權
-授權就是決定哪些實體可以擁有變更、檢視或另外存取電腦資源等權限的程序。 例如，在公司裡只有經理可以存取這家公司員工的檔案。 [!INCLUDE[indigo1](../../../../includes/indigo1-md.md)] 支援兩種執行授權程序的機制。 第一種機制可讓您使用現有的 Common Language Runtime (CLR) 建構來控制授權。 第二個是宣告為基礎的模型，又稱為*身分識別模型*。 [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] 使用「識別模型」從傳入訊息中建立宣告；「識別模型」類別可加以擴充，以便支援用於自訂授權配置的新宣告類型。 本主題將顯示識別模型功能的主要程式設計概念概觀，以及此功能使用之最重要類別的清單。  
+授權就是決定哪些實體可以擁有變更、檢視或另外存取電腦資源等權限的程序。 例如，在公司裡只有經理可以存取這家公司員工的檔案。 Windows Communication Foundation (WCF) 支援兩種機制執行授權程序。 第一種機制可讓您使用現有的 Common Language Runtime (CLR) 建構來控制授權。 第二個是宣告為基礎的模型，又稱為*身分識別模型*。 WCF 使用身分識別模型來建立宣告，從內送訊息。身分識別模型類別可以擴充成支援用於自訂授權配置新的宣告類型。 本主題將顯示識別模型功能的主要程式設計概念概觀，以及此功能使用之最重要類別的清單。  
   
 ## <a name="identity-model-scenarios"></a>識別模型案例  
  下列案例會顯示使用識別模型。  
@@ -136,7 +124,7 @@ ms.lasthandoff: 12/22/2017
  ![管理宣告和授權](../../../../docs/framework/wcf/feature-details/media/xsi-recap.gif "xsi_recap")  
   
 ## <a name="wcf-and-identity-model"></a>WCF 和識別模型  
- [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] 會使用識別模型基礎結構做為執行授權的基礎。 在[!INCLUDE[indigo2](../../../../includes/indigo2-md.md)]、<xref:System.ServiceModel.Description.ServiceAuthorizationBehavior>類別可讓您指定*授權*原則做為服務的一部分。 此類授權原則稱為*外部授權原則*，而且它們可以執行宣告處理根據本機原則或與遠端服務的互動。 授權管理員中，由<xref:System.ServiceModel.ServiceAuthorizationManager>類別評估外部授權原則以及辨識各種認證類型 （語彙基元） 的授權原則，並填入所謂*授權內容*內送訊息到適當的宣告。 授權內容會以 <xref:System.IdentityModel.Policy.AuthorizationContext> 類別表示。  
+ WCF 使用識別模型基礎結構做為基礎執行授權。 在 WCF 中，<xref:System.ServiceModel.Description.ServiceAuthorizationBehavior>類別可讓您指定*授權*原則做為服務的一部分。 此類授權原則稱為*外部授權原則*，而且它們可以執行宣告處理根據本機原則或與遠端服務的互動。 授權管理員中，由<xref:System.ServiceModel.ServiceAuthorizationManager>類別評估外部授權原則以及辨識各種認證類型 （語彙基元） 的授權原則，並填入所謂*授權內容*內送訊息到適當的宣告。 授權內容會以 <xref:System.IdentityModel.Policy.AuthorizationContext> 類別表示。  
   
 ## <a name="identity-model-programming"></a>識別模型程式設計  
  下表描述可用來程式設計識別模型延伸的物件模型。 這些類別全部都存在於 <xref:System.IdentityModel.Policy> 或 <xref:System.IdentityModel.Claims> 命名空間 (Namespace) 中。  
@@ -170,7 +158,7 @@ ms.lasthandoff: 12/22/2017
 |<xref:System.ServiceModel.Description.ServiceAuthorizationBehavior.ServiceAuthorizationManager%2A>|傳回服務的 <xref:System.ServiceModel.ServiceAuthorizationManager>。 <xref:System.ServiceModel.ServiceAuthorizationManager> 負責做出授權決策。|  
 |<xref:System.ServiceModel.Description.ServiceAuthorizationBehavior.ExternalAuthorizationPolicies%2A>|對此服務所指定的自訂授權原則集合。 除了與傳入訊息中之認證關聯的原則以外，這些原則也會加以評估。|  
   
-## <a name="see-also"></a>請參閱  
+## <a name="see-also"></a>另請參閱  
  <xref:System.IdentityModel.Policy.AuthorizationContext>  
  <xref:System.IdentityModel.Claims.Claim>  
  <xref:System.IdentityModel.Policy.EvaluationContext>  

@@ -1,13 +1,6 @@
 ---
-title: "執行階段分析"
-ms.custom: 
+title: 執行階段分析
 ms.date: 03/30/2017
-ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.technology: dotnet-clr
-ms.tgt_pltfrm: 
-ms.topic: article
 helpviewer_keywords:
 - performance counters
 - common language runtime, profiling
@@ -18,16 +11,13 @@ helpviewer_keywords:
 - profiling applications
 - Performance Console
 ms.assetid: ccd68284-f3a8-47b8-bc3f-92e5fe3a1640
-caps.latest.revision: "22"
 author: rpetrusha
 ms.author: ronpet
-manager: wpickett
-ms.workload: dotnet
-ms.openlocfilehash: 4a8f3af4878e0f6911fcc55ec76b26649d517b3b
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.openlocfilehash: fec1fb5a2dc3d6589f49d4a5864dabfb03a5477c
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="runtime-profiling"></a>執行階段分析
 分析是在任何開發或部署案例中蒐集效能資料的一種方法。 本節適用對象為想要蒐集應用程式效能資訊的開發人員和系統管理員。  
@@ -75,5 +65,5 @@ ms.lasthandoff: 12/22/2017
 |<xref:System.Diagnostics.PerformanceCounterInstaller?displayProperty=nameWithType>|指定 `PerformanceCounter` 元件的安裝程式。|  
 |<xref:System.Diagnostics.PerformanceCounterType?displayProperty=nameWithType>|指定用以計算 `NextValue` 之 `PerformanceCounter`方法的公式。|  
   
-## <a name="see-also"></a>請參閱  
+## <a name="see-also"></a>另請參閱  
  [效能計數器](../../../docs/framework/debug-trace-profile/performance-counters.md)

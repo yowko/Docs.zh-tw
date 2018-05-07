@@ -1,26 +1,12 @@
 ---
 title: 按本文項目分派
-ms.custom: ''
 ms.date: 03/30/2017
-ms.prod: .net-framework
-ms.reviewer: ''
-ms.suite: ''
-ms.technology:
-- dotnet-clr
-ms.tgt_pltfrm: ''
-ms.topic: article
 ms.assetid: f64a3c04-62b4-47b2-91d9-747a3af1659f
-caps.latest.revision: ''
-author: dotnet-bot
-ms.author: dotnetcontent
-manager: wpickett
-ms.workload:
-- dotnet
-ms.openlocfilehash: 4ab8ddccafa8dbf1ecde8afbb07f0a61faa62be5
-ms.sourcegitcommit: c883637b41ee028786edceece4fa872939d2e64c
+ms.openlocfilehash: a59f639fc0f1adad48bfda5fd8105340ac004cef
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 03/26/2018
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="dispatch-by-body-element"></a>按本文項目分派
 這個範例會示範如何實作將傳入訊息指派至作業的替代演算法。  
@@ -82,7 +68,7 @@ private Message CreateMessageCopy(Message message,
 ```  
   
 ## <a name="adding-an-operation-selector-to-a-service"></a>將作業選取器新增至服務  
- 服務分派作業選取器是 [!INCLUDE[indigo1](../../../../includes/indigo1-md.md)] 發送器的延伸項目。 若要選取雙工合約之回呼通道上的方法，也會使用用戶端作業選取器，其運作相當類似於此處描述的分派作業選取器，不過並沒有明確涵蓋在本範例中。  
+ 服務分派作業選取器是以 Windows Communication Foundation (WCF) 發送器的延伸模組。 若要選取雙工合約之回呼通道上的方法，也會使用用戶端作業選取器，其運作相當類似於此處描述的分派作業選取器，不過並沒有明確涵蓋在本範例中。  
   
  和大多數服務模型延伸項目一樣，分派作業選取器也會使用行為新增至發送器。 A*行為*是組態物件，可將一或多個擴充功能加入至分派執行階段 （或用戶端執行階段），或者變更其設定。  
   
@@ -187,7 +173,7 @@ public interface IDispatchedByBody
 >   
 >  `<InstallDrive>:\WF_WCF_Samples`  
 >   
->  如果此目錄不存在，請移至 [Windows Communication Foundation (WCF) and Windows Workflow Foundation (WF) Samples for .NET Framework 4  (適用於 .NET Framework 4 的 Windows Communication Foundation (WCF) 與 Windows Workflow Foundation (WF) 範例)](http://go.microsoft.com/fwlink/?LinkId=150780) ，以下載所有 [!INCLUDE[indigo1](../../../../includes/indigo1-md.md)] 和 [!INCLUDE[wf1](../../../../includes/wf1-md.md)] 範例。 此範例位於下列目錄。  
+>  如果此目錄不存在，請移至[Windows Communication Foundation (WCF) 和適用於.NET Framework 4 的 Windows Workflow Foundation (WF) 範例](http://go.microsoft.com/fwlink/?LinkId=150780)下載所有 Windows Communication Foundation (WCF) 和[!INCLUDE[wf1](../../../../includes/wf1-md.md)]範例。 此範例位於下列目錄。  
 >   
 >  `<InstallDrive>:\WF_WCF_Samples\WCF\Extensibility\Interop\AdvancedDispatchByBody`  
   

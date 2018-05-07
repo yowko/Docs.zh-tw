@@ -1,27 +1,15 @@
 ---
-title: "如何：建立項目或筆刷不透明效果的動畫"
-ms.custom: 
+title: 如何：建立項目或筆刷不透明效果的動畫
 ms.date: 03/30/2017
-ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.technology: dotnet-wpf
-ms.tgt_pltfrm: 
-ms.topic: article
 helpviewer_keywords:
 - opacity [WPF], animating
 - animation [WPF], Opacity property
 ms.assetid: 572af23b-39dd-48d1-9db5-4bca56a4b3d3
-caps.latest.revision: "8"
-author: dotnet-bot
-ms.author: dotnetcontent
-manager: wpickett
-ms.workload: dotnet
-ms.openlocfilehash: c3b750e6ee21c8347d3896ec290f0ff564cc0a2c
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.openlocfilehash: a45bf0344c10e1214aa5218e25e9bd9a87d5ea60
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="how-to-animate-the-opacity-of-an-element-or-brush"></a>如何：建立項目或筆刷不透明效果的動畫
 若要讓架構項目的淡入和移出檢視，您可以動畫顯示其<xref:System.Windows.UIElement.Opacity%2A>屬性，或可以動畫顯示<xref:System.Windows.Media.Brush.Opacity%2A>屬性<xref:System.Windows.Media.Brush>（或筆刷） 用來繪製它。 建立動畫項目的不透明度和其子系淡入和移出檢視，但是建立動畫的筆刷用來繪製項目可讓您更具選擇性的相關項目的部份淡出。 例如，您可以動畫顯示用來繪製按鈕的背景筆刷的不透明度。 這會導致按鈕的背景，淡入和移出檢視，同時保留它的文字完全不透明。  

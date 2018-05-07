@@ -1,24 +1,12 @@
 ---
-title: "自訂資料流升級"
-ms.custom: 
+title: 自訂資料流升級
 ms.date: 03/30/2017
-ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.technology: dotnet-clr
-ms.tgt_pltfrm: 
-ms.topic: article
 ms.assetid: e3da85c8-57f3-4e32-a4cb-50123f30fea6
-caps.latest.revision: "10"
-author: dotnet-bot
-ms.author: dotnetcontent
-manager: wpickett
-ms.workload: dotnet
-ms.openlocfilehash: 73359c293f7d29c16702e826ed6caa61149935bd
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
-ms.translationtype: MT
+ms.openlocfilehash: 4bcd59cb5e420c551c611c8e676289f20d4354d0
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="custom-stream-upgrades"></a>自訂資料流升級
 以資料流為導向的傳輸 (例如 TCP 和具名管道) 會在用戶端和伺服器之間的連續位元組資料流上進行作業。 透過 <xref:System.IO.Stream> 物件即可實現此資料流。 在資料流升級中，用戶端會想將選用通訊協定層新增至通道堆疊，並也要求其他通訊通道端也這樣執行。 資料流升級包含使用升級的物件取代原始的 <xref:System.IO.Stream> 物件。  
@@ -32,16 +20,16 @@ ms.lasthandoff: 12/22/2017
   
 1.  升級資料流*啟動器*開始的程序： 在執行階段會初始化其連線之另一端的要求，以升級通道傳輸層。  
   
-2.  升級資料流*」 （acceptor)*升級： 在執行階段方法，它可以接收來自其他電腦的升級要求，並可能的話會接受升級。  
+2.  升級資料流*」 （acceptor)* 升級： 在執行階段方法，它可以接收來自其他電腦的升級要求，並可能的話會接受升級。  
   
-3.  升級*提供者*建立*啟動器*在用戶端和*」 （acceptor)*在伺服器上。  
+3.  升級*提供者*建立*啟動器*在用戶端和*」 （acceptor)* 在伺服器上。  
   
 4.  資料流升級*繫結項目*加入至服務和用戶端上的繫結，並在執行階段建立提供者。  
   
  在多重升級的狀況中請特別注意，啟動器和接受器會封裝狀態機器，以強制執行可用於每次初始化的升級轉換。  
   
 ## <a name="how-to-implement-a-stream-upgrade"></a>如何實作資料流升級  
- [!INCLUDE[indigo1](../../../../includes/indigo1-md.md)] 提供四個可讓您實作的 `abstract` 類別：  
+ Windows Communication Foundation (WCF) 提供四個`abstract`可以實作的類別：  
   
 -   <xref:System.ServiceModel.Channels.StreamUpgradeInitiator?displayProperty=nameWithType>  
   
@@ -103,7 +91,7 @@ ms.lasthandoff: 12/22/2017
   
 4.  每次呼叫 <xref:System.ServiceModel.Channels.StreamUpgradeInitiator.GetNextUpgrade%2A> 和 <xref:System.ServiceModel.Channels.StreamUpgradeAcceptor.CanUpgrade%2A> 之後，就會升級資料流。  
   
-## <a name="see-also"></a>請參閱  
+## <a name="see-also"></a>另請參閱  
  <xref:System.ServiceModel.Channels.StreamUpgradeInitiator>  
  <xref:System.ServiceModel.Channels.StreamSecurityUpgradeInitiator>  
  <xref:System.ServiceModel.Channels.StreamUpgradeAcceptor>  

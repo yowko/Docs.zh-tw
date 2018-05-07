@@ -1,13 +1,6 @@
 ---
-title: "如何：讀取影像中繼資料"
-ms.custom: 
+title: 如何：讀取影像中繼資料
 ms.date: 03/30/2017
-ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.technology: dotnet-winforms
-ms.tgt_pltfrm: 
-ms.topic: article
 dev_langs:
 - csharp
 - vb
@@ -15,21 +8,16 @@ helpviewer_keywords:
 - metadata [Windows Forms], property item
 - metadata [Windows Forms], reading image
 ms.assetid: 72ec0b31-0be7-444a-9575-1dbcb864e0be
-caps.latest.revision: "15"
-author: dotnet-bot
-ms.author: dotnetcontent
-manager: wpickett
-ms.workload: dotnet
-ms.openlocfilehash: b610e499ff980d2e705ad855ae98c1d54ff412e7
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.openlocfilehash: 92ce4eb8d51fbd25f9a129a629dc47bfb9941f34
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="how-to-read-image-metadata"></a>如何：讀取影像中繼資料
 部分映像檔案包含以判斷影像的功能，您可以讀取的中繼資料。 例如，數位相片可能包含您可以讀取，判斷製造商和型號的相機，用來擷取映像的中繼資料。 與[!INCLUDE[ndptecgdiplus](../../../../includes/ndptecgdiplus-md.md)]，您可以讀取現有的中繼資料，您也可以撰寫新的中繼資料映像檔案。  
   
- [!INCLUDE[ndptecgdiplus](../../../../includes/ndptecgdiplus-md.md)]儲存中繼資料中的一份<xref:System.Drawing.Imaging.PropertyItem>物件。 您可以閱讀<xref:System.Drawing.Image.PropertyItems%2A>屬性<xref:System.Drawing.Image>要從檔案擷取的所有中繼資料物件。 <xref:System.Drawing.Image.PropertyItems%2A>屬性傳回的陣列<xref:System.Drawing.Imaging.PropertyItem>物件。  
+ [!INCLUDE[ndptecgdiplus](../../../../includes/ndptecgdiplus-md.md)] 儲存中繼資料中的一份<xref:System.Drawing.Imaging.PropertyItem>物件。 您可以閱讀<xref:System.Drawing.Image.PropertyItems%2A>屬性<xref:System.Drawing.Image>要從檔案擷取的所有中繼資料物件。 <xref:System.Drawing.Image.PropertyItems%2A>屬性傳回的陣列<xref:System.Drawing.Imaging.PropertyItem>物件。  
   
  A<xref:System.Drawing.Imaging.PropertyItem>物件具有下列四個屬性： `Id`， `Value`， `Len`，和`Type`。  
   
@@ -134,6 +122,6 @@ ms.lasthandoff: 12/22/2017
 ## <a name="compiling-the-code"></a>編譯程式碼  
  上述範例是為了搭配 Windows Form 使用而設計，且其需要 <xref:System.Windows.Forms.PaintEventArgs> `e`，這是 <xref:System.Windows.Forms.Control.Paint> 事件處理常式的參數。 處理表單的<xref:System.Windows.Forms.Control.Paint>事件並將此程式碼貼到 [小畫家] 事件處理常式。 您必須取代`FakePhoto.jpg`映像名稱與路徑上您的系統並匯入有效`System.Drawing.Imaging`命名空間。  
   
-## <a name="see-also"></a>請參閱  
+## <a name="see-also"></a>另請參閱  
  [影像、點陣圖和中繼檔](../../../../docs/framework/winforms/advanced/images-bitmaps-and-metafiles.md)  
  [使用影像、點陣圖、圖示和中繼檔](../../../../docs/framework/winforms/advanced/working-with-images-bitmaps-icons-and-metafiles.md)

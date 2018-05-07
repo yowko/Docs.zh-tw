@@ -1,27 +1,15 @@
 ---
-title: "如何：在 Windows Form 上建立簡單繫結控制項"
-ms.custom: 
+title: 如何：在 Windows Form 上建立簡單繫結控制項
 ms.date: 03/30/2017
-ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.technology: dotnet-winforms
-ms.tgt_pltfrm: 
-ms.topic: article
 helpviewer_keywords:
 - data binding [Windows Forms], simple data binding
 - Windows Forms controls, data binding
 ms.assetid: 3bcaded8-0f1a-4cc0-8830-f59be253bf4e
-caps.latest.revision: "9"
-author: dotnet-bot
-ms.author: dotnetcontent
-manager: wpickett
-ms.workload: dotnet
-ms.openlocfilehash: 887f5cd89e52cf91c4e18fab5c97f82cba9a5b85
-ms.sourcegitcommit: c0dd436f6f8f44dc80dc43b07f6841a00b74b23f
+ms.openlocfilehash: ce4585a1c5c2b9acbdb7ec33c62a1e91851b720e
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 01/19/2018
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="how-to-create-a-simple-bound-control-on-a-windows-form"></a>如何：在 Windows Form 上建立簡單繫結控制項
 與*簡單繫結*，您可以在控制項中顯示單一資料元素，例如資料集資料表中的資料行值。 您可以簡單繫結控制項的任何屬性的資料值。  
@@ -35,9 +23,9 @@ ms.lasthandoff: 01/19/2018
   
 2.  在表單中，選取控制項，並顯示**屬性**視窗。  
   
-3.  展開**(DataBindings)**屬性。  
+3.  展開 **(DataBindings)** 屬性。  
   
-     最常繫結的屬性會顯示下面**(DataBindings)**屬性。 例如，在大多數的控制項，**文字**屬性最常繫結。  
+     最常繫結的屬性會顯示下面 **(DataBindings)** 屬性。 例如，在大多數的控制項，**文字**屬性最常繫結。  
   
 4.  如果您想要將屬性繫結不是其中一個常見的繫結的屬性，請按一下**省略**按鈕 (![VisualStudioEllipsesButton 螢幕擷取畫面](../../../docs/framework/winforms/media/vbellipsesbutton.png "vbEllipsesButton")) 在**（進階）**方塊，即可顯示**格式化與進階繫結**該控制項屬性 對話方塊的完整清單。  
   
@@ -56,7 +44,7 @@ ms.lasthandoff: 01/19/2018
     > [!NOTE]
     >  因為簡單繫結控制項顯示單一資料元素，所以經常包含在 Windows Form 和簡單繫結控制項中的巡覽邏輯。  
   
-## <a name="see-also"></a>請參閱  
+## <a name="see-also"></a>另請參閱  
  <xref:System.Windows.Forms.Binding>  
  [Windows Forms 資料繫結](../../../docs/framework/winforms/windows-forms-data-binding.md)  
  [資料繫結和 Windows Forms](../../../docs/framework/winforms/data-binding-and-windows-forms.md)

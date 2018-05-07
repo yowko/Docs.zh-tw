@@ -1,29 +1,17 @@
 ---
-title: "逐步解說：使用 FlowLayoutPanel 排列 Windows Forms上的控制項"
-ms.custom: 
+title: 逐步解說：使用 FlowLayoutPanel 排列 Windows Forms上的控制項
 ms.date: 03/30/2017
-ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.technology: dotnet-winforms
-ms.tgt_pltfrm: 
-ms.topic: article
 helpviewer_keywords:
 - FlowLayoutPanel control [Windows Forms], walkthroughs
 - Windows Forms controls, arranging
 - controls [Windows Forms], arranging with FlowLayoutPanel
 - layout [Windows Forms], walkthroughs
 ms.assetid: a1744323-0316-49c2-992e-ebfc0a976b85
-caps.latest.revision: "22"
-author: dotnet-bot
-ms.author: dotnetcontent
-manager: wpickett
-ms.workload: dotnet
-ms.openlocfilehash: bb24e6479d60148f21da24ba9f53b6c3a4054e1e
-ms.sourcegitcommit: c0dd436f6f8f44dc80dc43b07f6841a00b74b23f
+ms.openlocfilehash: 573a0b8ee8e3fafea15b1fd111334da773beef11
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 01/19/2018
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="walkthrough-arranging-controls-on-windows-forms-using-a-flowlayoutpanel"></a>逐步解說：使用 FlowLayoutPanel 排列 Windows Forms上的控制項
 有些應用程式需要表單能在調整表單大小或變更內容大小時，自行適當排列配置。 當需要動態配置但不想用程式碼明確處理 <xref:System.Windows.Forms.Control.Layout> 事件時，請考慮使用配置面板。  
@@ -198,7 +186,7 @@ ms.lasthandoff: 01/19/2018
   
 -   將其中一個控制項的 <xref:System.Windows.Forms.Control.Visible%2A> 屬性設為 `false` ，注意 <xref:System.Windows.Forms.FlowLayoutPanel> 如何回應重訂方向。  
   
-## <a name="see-also"></a>請參閱  
+## <a name="see-also"></a>另請參閱  
  <xref:System.Windows.Forms.FlowLayoutPanel>  
  <xref:System.Windows.Forms.TableLayoutPanel>  
  [逐步解說：使用 TableLayoutPanel 排列 Windows Forms 上的控制項](../../../../docs/framework/winforms/controls/walkthrough-arranging-controls-on-windows-forms-using-a-tablelayoutpanel.md)  

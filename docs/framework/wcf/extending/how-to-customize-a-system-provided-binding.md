@@ -1,32 +1,18 @@
 ---
 title: HOW TO：自訂系統提供的繫結
-ms.custom: ''
 ms.date: 03/30/2017
-ms.prod: .net-framework
-ms.reviewer: ''
-ms.suite: ''
-ms.technology:
-- dotnet-clr
-ms.tgt_pltfrm: ''
-ms.topic: article
 dev_langs:
 - csharp
 - vb
 ms.assetid: f8b97862-e8bb-470d-8b96-07733c21fe26
-caps.latest.revision: 10
-author: dotnet-bot
-ms.author: dotnetcontent
-manager: wpickett
-ms.workload:
-- dotnet
-ms.openlocfilehash: 1d70a4c4234047e7410ae4f631e48595a0859f37
-ms.sourcegitcommit: 94d33cadc5ff81d2ac389bf5f26422c227832052
-ms.translationtype: MT
+ms.openlocfilehash: 40efa49836561351dc14c2cb49d906a6d344a5bc
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/30/2018
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="how-to-customize-a-system-provided-binding"></a>HOW TO：自訂系統提供的繫結
-[!INCLUDE[indigo1](../../../../includes/indigo1-md.md)] 所包含的數種系統提供繫結可讓您設定一些基礎繫結項目的屬性，但不包含所有屬性。 本主題示範如何設定繫結項目上的屬性來建立自訂繫結。  
+Windows Communication Foundation (WCF) 包含數種系統提供繫結可讓您設定一些屬性的基礎繫結項目，但不是所有的屬性。 本主題示範如何設定繫結項目上的屬性來建立自訂繫結。  
   
  如需如何直接建立並設定繫結項目，而不使用系統提供的繫結的詳細資訊，請參閱[自訂繫結](../../../../docs/framework/wcf/extending/custom-bindings.md)。  
   

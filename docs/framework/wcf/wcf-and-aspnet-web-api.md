@@ -1,26 +1,12 @@
 ---
 title: WCF 和 ASP.NET Web 應用程式開發介面
-ms.custom: ''
 ms.date: 03/30/2017
-ms.prod: .net-framework
-ms.reviewer: ''
-ms.suite: ''
-ms.technology:
-- dotnet-clr
-ms.tgt_pltfrm: ''
-ms.topic: article
 ms.assetid: 08ceded3-fd9a-4467-9715-c4cbd9c7228e
-caps.latest.revision: ''
-author: dotnet-bot
-ms.author: dotnetcontent
-manager: wpickett
-ms.workload:
-- dotnet
-ms.openlocfilehash: 1270eb202a1e8cbf1a297a13593dd0aa6046cb6c
-ms.sourcegitcommit: c883637b41ee028786edceece4fa872939d2e64c
+ms.openlocfilehash: c8bc8d3483d2f6c85ff14073f34caaf75d639bdf
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 03/26/2018
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="wcf-and-aspnet-web-api"></a>WCF 和 ASP.NET Web 應用程式開發介面
 WCF 是 Microsoft 的統一程式設計模型，用於建置服務導向的應用程式。 開發人員可運用它來建置安全、可靠與可交易性的方案，且這些方案會跨平台進行整合，並與現有投資交互操作。 [ASP.NET Web API](http://www.asp.net/web-api)是一種架構，可讓您更輕鬆地建立連線的用戶端，包括瀏覽器和行動裝置的較大範圍的 HTTP 服務。 ASP.NET Web 應用程式開發介面是在 .NET Framework 上建置 RESTful 應用程式的理想平台。 本主題提供部分指引，協助您決定最符合需求的技術。  

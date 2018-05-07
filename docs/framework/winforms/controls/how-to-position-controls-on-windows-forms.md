@@ -1,13 +1,6 @@
 ---
-title: "如何：將控制項定位在 Windows Form 上"
-ms.custom: 
+title: 如何：將控制項定位在 Windows Form 上
 ms.date: 03/30/2017
-ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.technology: dotnet-winforms
-ms.tgt_pltfrm: 
-ms.topic: article
 dev_langs:
 - csharp
 - vb
@@ -22,16 +15,11 @@ helpviewer_keywords:
 - snaplines
 - controls [Windows Forms], positioning
 ms.assetid: 4693977e-34a4-4f19-8221-68c3120c2b2b
-caps.latest.revision: "18"
-author: dotnet-bot
-ms.author: dotnetcontent
-manager: wpickett
-ms.workload: dotnet
-ms.openlocfilehash: 4519be86d83fce5afc7410c9f76591158ed71cb6
-ms.sourcegitcommit: c0dd436f6f8f44dc80dc43b07f6841a00b74b23f
+ms.openlocfilehash: 6db021f2b1a29c3ef52a182c45bbc7878feebb97
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 01/19/2018
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="how-to-position-controls-on-windows-forms"></a>如何：將控制項定位在 Windows Form 上
 若要定位控制項、 使用 Windows Form 設計工具，或指定<xref:System.Windows.Forms.Control.Location%2A>屬性。  
@@ -106,7 +94,7 @@ ms.lasthandoff: 01/19/2018
     > [!NOTE]
     >  使用<xref:System.Windows.Forms.Control.Location%2A>同時將屬性設定控制項的 X 和 Y。 若要個別設定的位置，使用控制項的<xref:System.Windows.Forms.Control.Left%2A>(**X**) 或<xref:System.Windows.Forms.Control.Top%2A>(**Y**) 子屬性。 不會嘗試隱含地設定的 X 和 Y 座標<xref:System.Drawing.Point>結構，表示按鈕的位置，因為此結構包含一份按鈕的座標。  
   
-## <a name="see-also"></a>請參閱  
+## <a name="see-also"></a>另請參閱  
  [Windows Forms 控制項](../../../../docs/framework/winforms/controls/index.md)  
  [逐步解說：使用對齊線排列 Windows Forms 上的控制項](../../../../docs/framework/winforms/controls/walkthrough-arranging-controls-on-windows-forms-using-snaplines.md)  
  [逐步解說：使用 TableLayoutPanel 排列 Windows Forms 上的控制項](../../../../docs/framework/winforms/controls/walkthrough-arranging-controls-on-windows-forms-using-a-tablelayoutpanel.md)  

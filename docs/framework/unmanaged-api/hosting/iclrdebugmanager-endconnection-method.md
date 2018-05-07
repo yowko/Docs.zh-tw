@@ -1,14 +1,6 @@
 ---
-title: "ICLRDebugManager::EndConnection 方法"
-ms.custom: 
+title: ICLRDebugManager::EndConnection 方法
 ms.date: 03/30/2017
-ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.technology:
-- dotnet-clr
-ms.tgt_pltfrm: 
-ms.topic: reference
 api_name:
 - ICLRDebugManager.EndConnection
 api_location:
@@ -23,17 +15,13 @@ helpviewer_keywords:
 ms.assetid: 89dc7363-2f29-4eb2-8f23-fccdda6a76a6
 topic_type:
 - apiref
-caps.latest.revision: 
 author: rpetrusha
 ms.author: ronpet
-manager: wpickett
-ms.workload:
-- dotnet
-ms.openlocfilehash: 210226b697eb3dffe574bd842ca31e83948891a4
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.openlocfilehash: c58ce0389c77b6534cbbf37fe985f89c187065df
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="iclrdebugmanagerendconnection-method"></a>ICLRDebugManager::EndConnection 方法
 移除關聯的工作清單和識別項和好記的名稱。  
@@ -54,7 +42,7 @@ HRESULT EndConnection (
   
 |HRESULT|描述|  
 |-------------|-----------------|  
-|S_OK|`EndConnection`已成功傳回。|  
+|S_OK|`EndConnection` 已成功傳回。|  
 |HOST_E_CLRNOTAVAILABLE|CLR 尚未載入到處理程序，或 CLR 正在中它無法執行 managed 程式碼，或成功地處理呼叫的狀態。|  
 |HOST_E_TIMEOUT|呼叫已逾時。|  
 |HOST_E_NOT_OWNER|呼叫端未擁有鎖定。|  
@@ -66,7 +54,7 @@ HRESULT EndConnection (
  [ICLRDebugManager](../../../../docs/framework/unmanaged-api/hosting/iclrdebugmanager-interface.md)提供三種方法， `BeginConnection`， [SetConnectionTasks](../../../../docs/framework/unmanaged-api/hosting/iclrdebugmanager-setconnectiontasks-method.md)，和`EndConnection`，將工作清單與識別項和好記的名稱產生關聯。  
   
 > [!IMPORTANT]
->  這三種方法必須針對每個工作集的特定順序呼叫。 `BeginConnection`會先呼叫來建立新的連線。 `SetConnectionTasks`呼叫下一個提供與該連接相關聯的工作集合。 `EndConnection`最後會呼叫以移除工作清單的識別碼和易記名稱之間的關聯。不過，可以是巢狀呼叫不同的連接。  
+>  這三種方法必須針對每個工作集的特定順序呼叫。 `BeginConnection` 會先呼叫來建立新的連線。 `SetConnectionTasks` 呼叫下一個提供與該連接相關聯的工作集合。 `EndConnection` 最後會呼叫以移除工作清單的識別碼和易記名稱之間的關聯。不過，可以是巢狀呼叫不同的連接。  
   
 ## <a name="requirements"></a>需求  
  **平台：**看到[系統需求](../../../../docs/framework/get-started/system-requirements.md)。  
@@ -75,9 +63,9 @@ HRESULT EndConnection (
   
  **程式庫：**包含做為 MSCorEE.dll 中的資源  
   
- **.NET framework 版本：**[!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]  
+ **.NET framework 版本：** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]  
   
-## <a name="see-also"></a>請參閱  
+## <a name="see-also"></a>另請參閱  
  [ICLRControl 介面](../../../../docs/framework/unmanaged-api/hosting/iclrcontrol-interface.md)  
  [ICLRDebugManager 介面](../../../../docs/framework/unmanaged-api/hosting/iclrdebugmanager-interface.md)  
  [BeginConnection 方法](../../../../docs/framework/unmanaged-api/hosting/iclrdebugmanager-beginconnection-method.md)  

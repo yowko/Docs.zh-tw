@@ -1,23 +1,12 @@
 ---
-title: "SQL Server 持續性資料庫"
-ms.custom: 
+title: SQL Server 持續性資料庫
 ms.date: 03/30/2017
-ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.tgt_pltfrm: 
-ms.topic: article
 ms.assetid: 4e594eec-2a31-4d49-ad31-aca2ecbb1f69
-caps.latest.revision: "4"
-author: dotnet-bot
-ms.author: dotnetcontent
-manager: wpickett
-ms.workload: dotnet
-ms.openlocfilehash: b66783ae09e15d324cc1b6ff2aa8db90e052dddf
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.openlocfilehash: 407b3657a6fd6dbdc876425c813a42ecf73c769e
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="sql-server-persistence-database"></a>SQL Server 持續性資料庫
 本節提供有關 SQL 工作流程執行個體存放區所支援之公用資料庫檢視表的詳細資料，並示範如何還原序列化基本執行個體資料屬性以及如何查詢非保存的執行個體。  
@@ -30,5 +19,5 @@ ms.lasthandoff: 12/22/2017
   
 -   [如何：非保存執行個體的查詢](../../../docs/framework/windows-workflow-foundation/how-to-query-for-non-persisted-instances.md)  
   
-## <a name="see-also"></a>請參閱  
+## <a name="see-also"></a>另請參閱  
  [App Fabric SQL Server 持續性資料庫](http://go.microsoft.com/fwlink/?LinkID=201202&clcid=0x409)

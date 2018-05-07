@@ -1,11 +1,6 @@
 ---
-title: "宣告內容和預設存取層級 (Visual Basic)"
+title: 宣告內容和預設存取層級 (Visual Basic)
 ms.date: 07/20/2015
-ms.prod: .net
-ms.reviewer: 
-ms.suite: 
-ms.technology: devlang-visual-basic
-ms.topic: article
 helpviewer_keywords:
 - module level, defined
 - declaration contexts, Visual Basic
@@ -14,14 +9,11 @@ helpviewer_keywords:
 - access levels, Visual Basic
 - access levels, default levels
 ms.assetid: bf63b96e-e825-4745-88c8-5dae222728db
-caps.latest.revision: "8"
-author: dotnet-bot
-ms.author: dotnetcontent
-ms.openlocfilehash: b89b74a6c0393f6a52a0b5c1ddf6f66c505564ba
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.openlocfilehash: b30b1068fe662d5f0318a1712dc4690b79bd739d
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="declaration-contexts-and-default-access-levels-visual-basic"></a>宣告內容和預設存取層級 (Visual Basic)
 本主題說明 Visual Basic 類型可以宣告內的其他類型，以及什麼其存取層級預設為，如果未指定。  
@@ -41,18 +33,18 @@ ms.lasthandoff: 11/21/2017
   
 |宣告項目|命名空間層級|模組層級|程序層級|  
 |----------------------|---------------------|------------------|---------------------|  
-|變數 ([Dim 陳述式](../../../visual-basic/language-reference/statements/dim-statement.md))|不允許|`Private`(`Public`中`Structure`、 不允許在`Interface`)|`Public`|  
-|常數 ([Const 陳述式](../../../visual-basic/language-reference/statements/const-statement.md))|不允許|`Private`(`Public`中`Structure`、 不允許在`Interface`)|`Public`|  
+|變數 ([Dim 陳述式](../../../visual-basic/language-reference/statements/dim-statement.md))|不允許|`Private` (`Public`中`Structure`、 不允許在`Interface`)|`Public`|  
+|常數 ([Const 陳述式](../../../visual-basic/language-reference/statements/const-statement.md))|不允許|`Private` (`Public`中`Structure`、 不允許在`Interface`)|`Public`|  
 |列舉型別 ([Enum 陳述式](../../../visual-basic/language-reference/statements/enum-statement.md))|`Friend`|`Public`|不允許|  
 |類別 ([Class 陳述式](../../../visual-basic/language-reference/statements/class-statement.md))|`Friend`|`Public`|不允許|  
 |結構 ([結構陳述式](../../../visual-basic/language-reference/statements/structure-statement.md))|`Friend`|`Public`|不允許|  
 |模組 ([Module 陳述式](../../../visual-basic/language-reference/statements/module-statement.md))|`Friend`|不允許|不允許|  
 |介面 ([Interface 陳述式](../../../visual-basic/language-reference/statements/interface-statement.md))|`Friend`|`Public`|不允許|  
 |程序 ([函式陳述式](../../../visual-basic/language-reference/statements/function-statement.md)， [Sub 陳述式](../../../visual-basic/language-reference/statements/sub-statement.md))|不允許|`Public`|不允許|  
-|外部參考 ([Declare 陳述式](../../../visual-basic/language-reference/statements/declare-statement.md))|不允許|`Public`(不允許在`Interface`)|不允許|  
-|運算子 ([Operator 陳述式](../../../visual-basic/language-reference/statements/operator-statement.md))|不允許|`Public`(不允許在`Interface`或`Module`)|不允許|  
+|外部參考 ([Declare 陳述式](../../../visual-basic/language-reference/statements/declare-statement.md))|不允許|`Public` (不允許在`Interface`)|不允許|  
+|運算子 ([Operator 陳述式](../../../visual-basic/language-reference/statements/operator-statement.md))|不允許|`Public` (不允許在`Interface`或`Module`)|不允許|  
 |屬性 ([Property 陳述式](../../../visual-basic/language-reference/statements/property-statement.md))|不允許|`Public`|不允許|  
-|預設屬性 ([預設](../../../visual-basic/language-reference/modifiers/default.md))|不允許|`Public`(不允許在`Module`)|不允許|  
+|預設屬性 ([預設](../../../visual-basic/language-reference/modifiers/default.md))|不允許|`Public` (不允許在`Module`)|不允許|  
 |事件 ([Event 陳述式](../../../visual-basic/language-reference/statements/event-statement.md))|不允許|`Public`|不允許|  
 |委派 ([Delegate 陳述式](../../../visual-basic/language-reference/statements/delegate-statement.md))|`Friend`|`Public`|不允許|  
   

@@ -1,29 +1,17 @@
 ---
 title: HTTP 傳輸安全性
-ms.custom: ''
 ms.date: 03/30/2017
-ms.prod: .net-framework
-ms.reviewer: ''
-ms.suite: ''
-ms.technology:
-- dotnet-clr
-ms.tgt_pltfrm: ''
-ms.topic: article
 ms.assetid: d3439262-c58e-4d30-9f2b-a160170582bb
-caps.latest.revision: 14
 author: BrucePerlerMS
-ms.author: bruceper
 manager: mbaldwin
-ms.workload:
-- dotnet
-ms.openlocfilehash: 2787c38603fd0f88878596a809d7e3c5cfdfb350
-ms.sourcegitcommit: 94d33cadc5ff81d2ac389bf5f26422c227832052
+ms.openlocfilehash: cc284f82f974d9b34ff1cf6732d2ee7b95528c44
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/30/2018
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="http-transport-security"></a>HTTP 傳輸安全性
-使用 HTTP 來傳輸時，會由安全通訊端層 (SSL) 實作提供安全性。 在網際網路上會廣泛使用 SSL 以對用戶端驗證服務，進而對通道提供機密性 (加密)。 這個主題會說明 SSL 的運作方式，以及如何在 [!INCLUDE[indigo1](../../../../includes/indigo1-md.md)] 中實作 SSL。  
+使用 HTTP 來傳輸時，會由安全通訊端層 (SSL) 實作提供安全性。 在網際網路上會廣泛使用 SSL 以對用戶端驗證服務，進而對通道提供機密性 (加密)。 本主題會說明 SSL 的運作方式以及如何實作 Windows Communication Foundation (WCF)。  
   
 ## <a name="basic-ssl"></a>基本 SSL  
  利用銀行網站這個典型案例，就可以明白解釋 SSL 的運作方式。 這些銀行網站可讓客戶透過使用者名稱和密碼進行登入。 在通過驗證之後，使用者就可以開始執行異動，例如檢閱帳戶結餘、付款以及將存款從某個帳戶移到其他帳戶等。  
@@ -42,11 +30,11 @@ ms.lasthandoff: 04/30/2018
  每個憑證有兩個索引鍵、 私密金鑰與公開金鑰，而且兩個稱為*交換金鑰組*。 簡而言之，只有憑證擁有者才知道私密金鑰，而公開金鑰則可以從憑證中讀取。 您可以使用任一金鑰來加密或解密摘要、雜湊或其他金鑰，不過前提是這兩個金鑰的作業必須為相反。 舉例來說，如果用戶端使用公開金鑰進行加密，則只有網站可以使用私密金鑰來解密訊息。 同樣地，如果網站使用私密金鑰進行加密，則用戶端可以透過公開金鑰來解密。 如此一來，用戶端便可確定只有私密金鑰的處理者可以交換訊息，因為只有以私密金鑰加密的訊息可以透過公開金鑰來解密。 網站會確定是與使用公開金鑰進行加密的用戶端來交換訊息。 這樣的交換只對初始信號交換來說是安全的，這也說明了何以我們較常透過建立實際的對稱金鑰來執行。 無論如何，所有通訊都會依據具有有效 SSL 憑證的服務。  
   
 ## <a name="implementing-ssl-with-wcf"></a>以 WCF 實作 SSL  
- 將在外部對 [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] 提供 HTTP 傳輸安全性 (或 SSL)。 您可以使用這兩種方法實作 SSL；決定的因素則視裝載您應用程式的方式而定：  
+ HTTP 傳輸安全性 （SSL） 所提供或外部至 WCF。 您可以使用這兩種方法實作 SSL；決定的因素則視裝載您應用程式的方式而定：  
   
--   如果正在使用 Internet Information Services (IIS) 做為 [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] 主機，請使用 IIS 基礎結構來設定 SSL 服務。  
+-   如果您使用網際網路資訊服務 (IIS) 為 WCF 主機，使用 IIS 基礎結構來設定 SSL 服務。  
   
--   如果正在建立自我裝載的 [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] 應用程式，則可以使用 HttpCfg.exe 工具將 SSL 憑證繫結至位址。  
+-   如果您要建立自我裝載的 WCF 應用程式，您可以使用 HttpCfg.exe 工具的位址來繫結 SSL 憑證。  
   
 ### <a name="using-iis-for-transport-security"></a>在傳輸安全性中使用 IIS  
   
@@ -61,7 +49,7 @@ ms.lasthandoff: 04/30/2018
  若要設定用於憑證[!INCLUDE[iis601](../../../../includes/iis601-md.md)]，請參閱[Certificates_IIS_SP1_Ops](http://go.microsoft.com/fwlink/?LinkId=88602)。  
   
 ### <a name="using-httpcfg-for-ssl"></a>對 SSL 使用 HttpCfg  
- 如果您要建立自我裝載[!INCLUDE[indigo2](../../../../includes/indigo2-md.md)]應用程式，下載 HttpCfg.exe 工具，可在[Windows XP Service Pack 2 支援工具網站](http://go.microsoft.com/fwlink/?LinkId=29002)。  
+ 如果您要建立自我裝載的 WCF 應用程式，下載 HttpCfg.exe 工具，可在[Windows XP Service Pack 2 支援工具網站](http://go.microsoft.com/fwlink/?LinkId=29002)。  
   
  如需有關使用 HttpCfg.exe 工具來設定連接埠使用 X.509 憑證的詳細資訊，請參閱[How to： 使用 SSL 憑證設定連接埠](../../../../docs/framework/wcf/feature-details/how-to-configure-a-port-with-an-ssl-certificate.md)。  
   

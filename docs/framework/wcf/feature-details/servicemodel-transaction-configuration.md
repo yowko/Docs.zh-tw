@@ -1,34 +1,20 @@
 ---
 title: ServiceModel 異動組態
-ms.custom: ''
 ms.date: 03/30/2017
-ms.prod: .net-framework
-ms.reviewer: ''
-ms.suite: ''
-ms.technology:
-- dotnet-clr
-ms.tgt_pltfrm: ''
-ms.topic: article
 helpviewer_keywords:
 - transactions [WCF], ServiceModel configuration
 ms.assetid: 5636067a-7fbd-4485-aaa2-8141c502acf3
-caps.latest.revision: 8
-author: dotnet-bot
-ms.author: dotnetcontent
-manager: wpickett
-ms.workload:
-- dotnet
-ms.openlocfilehash: 96cf83be06949160cf3efa73344e4a7680d24e09
-ms.sourcegitcommit: 94d33cadc5ff81d2ac389bf5f26422c227832052
+ms.openlocfilehash: 2c724e3f67bbf6554abffb44f101d2f28f748023
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/30/2018
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="servicemodel-transaction-configuration"></a>ServiceModel 異動組態
-[!INCLUDE[indigo1](../../../../includes/indigo1-md.md)] 提供了三個屬性，可用於設定服務的交易：`transactionFlow`、`transactionProtocol` 和 `transactionTimeout`。  
+Windows Communication Foundation (WCF) 提供三個屬性來設定服務的交易： `transactionFlow`， `transactionProtocol`，和`transactionTimeout`。  
   
 ## <a name="configuring-transactionflow"></a>設定 transactionFlow  
- 大部分所提供預先定義的繫結 [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] 會包含 `transactionFlow` 和 `transactionProtocol` 屬性，因此您可以將繫結設定為接受使用特定交易流程通訊協定之特定端點的傳入交易。 此外，您可以使用 `transactionFlow` 元素及其 `transactionProtocol` 屬性來建置您自訂的繫結。 如需有關設定組態項目，請參閱[\<繫結 >](../../../../docs/framework/misc/binding.md)和[WCF 組態結構描述](../../../../docs/framework/configure-apps/file-schema/wcf/index.md)。  
+ WCF 會提供包含預先定義的繫結，大部分`transactionFlow`和`transactionProtocol`屬性，因此您可以設定為接受使用特定交易流程通訊協定之特定端點的傳入交易的繫結。 此外，您可以使用 `transactionFlow` 元素及其 `transactionProtocol` 屬性來建置您自訂的繫結。 如需有關設定組態項目，請參閱[\<繫結 >](../../../../docs/framework/misc/binding.md)和[WCF 組態結構描述](../../../../docs/framework/configure-apps/file-schema/wcf/index.md)。  
   
  `transactionFlow` 屬性會指定是否要為使用繫結的服務端點啟用交易流程。  
   
@@ -55,7 +41,7 @@ ms.lasthandoff: 04/30/2018
 ```  
   
 ## <a name="configuring-transactiontimeout"></a>設定 transactionTimeout  
- 您可以在組態檔的 `transactionTimeout` 項目內為您的 [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] 服務設定 `behavior` 屬性。 下列程式碼會示範如何執行此項作業。  
+ 您可以設定`transactionTimeout`的 WCF 服務屬性`behavior`組態檔元素。 下列程式碼會示範如何執行此項作業。  
   
 ```xml  
 <configuration>  

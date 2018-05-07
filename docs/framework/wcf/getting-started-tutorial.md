@@ -1,33 +1,19 @@
 ---
 title: 使用者入門 Tutorial1
-ms.custom: ''
 ms.date: 03/30/2017
-ms.prod: .net-framework
-ms.reviewer: ''
-ms.suite: ''
-ms.technology:
-- dotnet-clr
-ms.tgt_pltfrm: ''
-ms.topic: article
 helpviewer_keywords:
 - WCF [WCF], getting started
 - Windows Communication Foundation [WCF], getting started
 - getting started [WCF]
 ms.assetid: df939177-73cb-4440-bd95-092a421516a1
-caps.latest.revision: 47
-author: dotnet-bot
-ms.author: dotnetcontent
-manager: wpickett
-ms.workload:
-- dotnet
-ms.openlocfilehash: 2dbf3ddb903600df6094c8486fda7183eac2abe7
-ms.sourcegitcommit: 94d33cadc5ff81d2ac389bf5f26422c227832052
-ms.translationtype: MT
+ms.openlocfilehash: 4a095e5391f3b532211b82a190c7010f41283e31
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/30/2018
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="getting-started-tutorial"></a>快速入門教學課程
-本節所包含的主題主要是讓您快速獲得 [!INCLUDE[indigo1](../../../includes/indigo1-md.md)] 程式設計經驗。 每個主題已設計成依本主題結尾的清單順序完成。 完成這個入門課程之後，您將對建立 [!INCLUDE[indigo2](../../../includes/indigo2-md.md)] 服務與用戶端應用程式所需的步驟有初步的了解。 服務會公開一個或多個端點，而其中每個端點都會公開一項或多項服務作業。 *端點*服務的指定位置可以找到服務，位址的繫結，其中包含說明定義功能的合約與服務，用戶端必須之間的通訊資訊提供服務給其用戶端。  
+本節包含的主題被為了讓您快速獲得至 Windows Communication Foundation (WCF) 程式設計經驗。 每個主題已設計成依本主題結尾的清單順序完成。 完成這個入門課程之後，您將對建立 [!INCLUDE[indigo2](../../../includes/indigo2-md.md)] 服務與用戶端應用程式所需的步驟有初步的了解。 服務會公開一個或多個端點，而其中每個端點都會公開一項或多項服務作業。 *端點*服務的指定位置可以找到服務，位址的繫結，其中包含說明定義功能的合約與服務，用戶端必須之間的通訊資訊提供服務給其用戶端。  
   
  在您逐步執行本教學課程中各主題的程序之後，您將會有執行中的服務和呼叫服務的用戶端。 前面三個主題說明如何定義服務合約、如何實作服務合約以及如何裝載服務。 建立的這個服務是在主控台應用程式中自我裝載的服務。 服務也可以在網際網路資訊服務 (IIS) 之下進行裝載。 如需如何執行這項操作的詳細資訊，請參閱[How to： 將 WCF 服務裝載於 IIS](../../../docs/framework/wcf/feature-details/how-to-host-a-wcf-service-in-iis.md)。 服務是在程式碼中進行設定的，但是也可以在組態檔中設定。 如需有關使用組態檔，請參閱[設定服務使用組態檔](../../../docs/framework/wcf/configuring-services-using-configuration-files.md)。  
   

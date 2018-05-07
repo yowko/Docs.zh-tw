@@ -1,24 +1,12 @@
 ---
 title: ServiceAuthorizationFailure
-ms.custom: 
 ms.date: 03/30/2017
-ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.technology: dotnet-clr
-ms.tgt_pltfrm: 
-ms.topic: article
 ms.assetid: a6a57896-41d5-4c05-a2fb-184d828e20c1
-caps.latest.revision: "6"
-author: dotnet-bot
-ms.author: dotnetcontent
-manager: wpickett
-ms.workload: dotnet
-ms.openlocfilehash: 691bba01e8763a6a98bbd57c0ca54af64d124f2d
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.openlocfilehash: 5756e166041920cbf66cd1fd9e9d826f85dc5c07
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="serviceauthorizationfailure"></a>ServiceAuthorizationFailure
 Id: 168  
@@ -30,6 +18,6 @@ Id: 168
 ## <a name="description"></a>描述  
  這個事件表示服務授權失敗。 此事件會列出服務、動作、用戶端身分識別、AuthorizationContext、活動識別碼及 ServiceAuthorizationManager。  
   
-## <a name="see-also"></a>請參閱  
+## <a name="see-also"></a>另請參閱  
  [事件記錄](../../../../../docs/framework/wcf/diagnostics/event-logging/index.md)  
  [事件一般參考](../../../../../docs/framework/wcf/diagnostics/event-logging/events-general-reference.md)

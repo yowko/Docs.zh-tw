@@ -1,27 +1,15 @@
 ---
-title: "自動格式選取"
-ms.custom: 
+title: 自動格式選取
 ms.date: 03/30/2017
-ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.technology: dotnet-clr
-ms.tgt_pltfrm: 
-ms.topic: article
 ms.assetid: dab51e56-8517-4a6a-bb54-b55b15ab37bb
-caps.latest.revision: "8"
-author: dotnet-bot
-ms.author: dotnetcontent
-manager: wpickett
-ms.workload: dotnet
-ms.openlocfilehash: da09df968bffee9a07f1c03d5b771271a9d44129
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
-ms.translationtype: MT
+ms.openlocfilehash: 9b9b4da4d5d3bdb3892feb49c033fbe4fc640cb0
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="automatic-format-selection"></a>自動格式選取
-這個範例示範如何使用 [!INCLUDE[indigo1](../../../../includes/indigo1-md.md)] REST 程式設計模型啟用自動格式選取 (XML 或 JSON)，以及如何明確設定作業碼中的格式。  
+這個範例會示範如何啟用自動格式選取 （XML 或 JSON），使用 Windows Communication Foundation (WCF) REST 程式設計模型，以及如何明確設定作業碼中的格式。  
   
 ## <a name="sample-details"></a>範例詳細資料  
  這個範例包含服務，以及可對服務發出要求的用戶端程式碼。 服務支援單一 HTTP `GET` 作業 (`EchoWithGet`) 以及單一 HTTP `POST` 作業 (`EchoWithPost`)。 這兩種作業都需要字串，然後會在回應中傳回字串。 在 `GET` 作業中，字串會在 URI 查詢字串參數中提供。 而在 `POST` 作業中，字串會在以 XML 序列化的要求主體中提供。 服務能夠以 XML 或 JSON 傳回回應，並且利用 [!INCLUDE[netfx40_long](../../../../includes/netfx40-long-md.md)] 中新的自動格式選取和命令式格式選取功能。  
@@ -47,8 +35,8 @@ ms.lasthandoff: 12/22/2017
 >   
 >  `<InstallDrive>:\WF_WCF_Samples`  
 >   
->  如果此目錄不存在，請移至 [Windows Communication Foundation (WCF) and Windows Workflow Foundation (WF) Samples for .NET Framework 4  (適用於 .NET Framework 4 的 Windows Communication Foundation (WCF) 與 Windows Workflow Foundation (WF) 範例)](http://go.microsoft.com/fwlink/?LinkId=150780) ，以下載所有 [!INCLUDE[indigo1](../../../../includes/indigo1-md.md)] 和 [!INCLUDE[wf1](../../../../includes/wf1-md.md)] 範例。 此範例位於下列目錄。  
+>  如果此目錄不存在，請移至[Windows Communication Foundation (WCF) 和適用於.NET Framework 4 的 Windows Workflow Foundation (WF) 範例](http://go.microsoft.com/fwlink/?LinkId=150780)下載所有 Windows Communication Foundation (WCF) 和[!INCLUDE[wf1](../../../../includes/wf1-md.md)]範例。 此範例位於下列目錄。  
 >   
 >  `<InstallDrive>:\WF_WCF_Samples\WCF\Basic\Web\AutomaticFormatSelection`  
   
-## <a name="see-also"></a>請參閱
+## <a name="see-also"></a>另請參閱

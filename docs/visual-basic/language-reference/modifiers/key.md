@@ -1,11 +1,6 @@
 ---
 title: Key (Visual Basic)
 ms.date: 07/20/2015
-ms.prod: .net
-ms.suite: ''
-ms.technology:
-- devlang-visual-basic
-ms.topic: article
 f1_keywords:
 - vb.AnonymousKey
 helpviewer_keywords:
@@ -13,14 +8,11 @@ helpviewer_keywords:
 - Key [Visual Basic]
 - Key keyword [Visual Basic]
 ms.assetid: 7697a928-7d14-4430-a72a-c9e96e8d6c11
-caps.latest.revision: 22
-author: dotnet-bot
-ms.author: dotnetcontent
-ms.openlocfilehash: 20dbe4e67fb3e415ba0202555ace7fd5afed68d2
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.openlocfilehash: 92d54e3135142bc02a17f3ce5ac078a356c139be
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="key-visual-basic"></a>Key (Visual Basic)
 `Key`關鍵字可讓您指定之屬性的匿名型別行為。 只有屬性指定為索引鍵屬性中的匿名型別執行個體或計算的雜湊程式碼的值之間的等號比較測試。 無法變更索引鍵屬性的值。  

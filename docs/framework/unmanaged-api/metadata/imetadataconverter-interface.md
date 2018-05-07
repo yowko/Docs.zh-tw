@@ -1,14 +1,6 @@
 ---
-title: "IMetaDataConverter 介面"
-ms.custom: 
+title: IMetaDataConverter 介面
 ms.date: 03/30/2017
-ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.technology:
-- dotnet-clr
-ms.tgt_pltfrm: 
-ms.topic: reference
 api_name:
 - IMetaDataConverter
 api_location:
@@ -22,17 +14,13 @@ helpviewer_keywords:
 ms.assetid: 9caea662-0167-4267-b14a-2fa42c3be4ea
 topic_type:
 - apiref
-caps.latest.revision: 
 author: mairaw
 ms.author: mairaw
-manager: wpickett
-ms.workload:
-- dotnet
-ms.openlocfilehash: 758ea4261b859773c600ca91d52e3a9053776136
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.openlocfilehash: 29709a4297d53cc5e40daf732ac89751ead95152
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="imetadataconverter-interface"></a>IMetaDataConverter 介面
 提供將類型程式庫對應至它們的中繼資料簽章，以及從一個轉換到另一個的方法。  
@@ -52,8 +40,8 @@ ms.lasthandoff: 12/22/2017
   
  **程式庫：**做為 MsCorEE.dll 中的資源  
   
- **.NET framework 版本：**[!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
+ **.NET framework 版本：** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
   
-## <a name="see-also"></a>請參閱  
+## <a name="see-also"></a>另請參閱  
  [中繼資料介面](../../../../docs/framework/unmanaged-api/metadata/metadata-interfaces.md)  
  [IMetaDataImport 介面](../../../../docs/framework/unmanaged-api/metadata/imetadataimport-interface.md)

@@ -1,28 +1,16 @@
 ---
-title: "如何：使用設計工具將 Windows Forms 控制項繫結至型別"
-ms.custom: 
+title: 如何：使用設計工具將 Windows Forms 控制項繫結至型別
 ms.date: 03/30/2017
-ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.technology: dotnet-winforms
-ms.tgt_pltfrm: 
-ms.topic: article
 helpviewer_keywords:
 - controls [Windows Forms], binding to a type
 - BindingSource component [Windows Forms], binding to a type
 - types [Windows Forms], binding controls to
 ms.assetid: 5ab984b5-c2d0-4638-a572-1c84013e8746
-caps.latest.revision: "13"
-author: dotnet-bot
-ms.author: dotnetcontent
-manager: wpickett
-ms.workload: dotnet
-ms.openlocfilehash: ee932e7cb4a3333ac56242e281ec64d3016746f9
-ms.sourcegitcommit: c0dd436f6f8f44dc80dc43b07f6841a00b74b23f
+ms.openlocfilehash: a58a528cd1a2246ddfdff7997b7c7cb0d8dcc6a6
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 01/19/2018
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="how-to-bind-a-windows-forms-control-to-a-type-using-the-designer"></a>如何：使用設計工具將 Windows Forms 控制項繫結至型別
 當您在建立與資料互動的控制項時，有時需要將控制項繫結至類型，而非物件。 您在設計階段通常需要將控制項繫結至類型，當時資料可能無法使用，但您仍希望資料繫結的控制項顯示類型公用介面中的資料。 下列程序示範如何建立新<xref:System.Windows.Forms.BindingSource>也就是繫結型別，以及如何將繫結至型別之屬性的其中一個<xref:System.Windows.Forms.TextBox.Text%2A>屬性<xref:System.Windows.Forms.TextBox>。  
@@ -64,7 +52,7 @@ ms.lasthandoff: 01/19/2018
   
 4.  在**DataSource UI 類型編輯器**，展開的節點<xref:System.Windows.Forms.BindingSource>之前，加入和選取您想要繫結至繫結類型的屬性<xref:System.Windows.Forms.TextBox.Text%2A>屬性<xref:System.Windows.Forms.TextBox>。  
   
-## <a name="see-also"></a>請參閱  
+## <a name="see-also"></a>另請參閱  
  [BindingSource 元件](../../../../docs/framework/winforms/controls/bindingsource-component.md)  
  [操作說明：將 Windows Forms 控制項繫結至型別](../../../../docs/framework/winforms/controls/how-to-bind-a-windows-forms-control-to-a-type.md)  
  [將控制項繫結至 Visual Studio 中的資料](/visualstudio/data-tools/bind-controls-to-data-in-visual-studio)

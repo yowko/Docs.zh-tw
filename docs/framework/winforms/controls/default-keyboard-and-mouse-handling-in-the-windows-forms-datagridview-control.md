@@ -1,10 +1,6 @@
 ---
-title: "預設鍵盤和滑鼠處理 Windows Form DataGridView 控制項中"
+title: 預設鍵盤和滑鼠處理 Windows Form DataGridView 控制項中
 ms.date: 02/13/2018
-ms.prod: .net-framework
-ms.technology:
-- dotnet-winforms
-ms.topic: article
 helpviewer_keywords:
 - data grids [Windows Forms], mouse handling
 - DataGridView control [Windows Forms], navigation keys
@@ -14,16 +10,11 @@ helpviewer_keywords:
 - DataGridView control [Windows Forms], mouse handling
 - navigation keys [Windows Forms], DataGridView control
 ms.assetid: 4519b928-bfc8-4e8b-bb9c-b1e76a0ca552
-author: dotnet-bot
-ms.author: dotnetcontent
-manager: wpickett
-ms.workload:
-- dotnet
-ms.openlocfilehash: 29e8afaefd35951288a4d8f5e5df2e3b5fbc4356
-ms.sourcegitcommit: 973a12d1e6962cd9a9c263fbfaad040ec8267fe9
+ms.openlocfilehash: b0ed468fe7d38fbeda90d5347338bce14059b730
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 02/22/2018
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="default-keyboard-and-mouse-handling-in-the-windows-forms-datagridview-control"></a>預設鍵盤和滑鼠處理 Windows Form DataGridView 控制項中
 
@@ -53,7 +44,7 @@ ms.lasthandoff: 02/22/2018
 |CTRL + 方向鍵|將焦點移至箭頭的方向遠的儲存格。|  
 |CTRL + HOME|將焦點移至控制項中的第一個資料格。|  
 |CTRL + END|將焦點移至控制項中的最後一個資料格。|  
-|CTRL+PAGE DOWN/UP|與 PAGE down 鍵或 PAGE UP 鍵相同。|  
+|CTRL + PAGE DOWN/總|與 PAGE down 鍵或 PAGE UP 鍵相同。|  
 |F2|如果目前儲存格進入儲存格的編輯模式<xref:System.Windows.Forms.DataGridView.EditMode%2A>屬性值是<xref:System.Windows.Forms.DataGridViewEditMode.EditOnF2>或<xref:System.Windows.Forms.DataGridViewEditMode.EditOnKeystrokeOrF2>。|
 |F3|如果排序目前的資料行<xref:System.Windows.Forms.DataGridViewColumn.SortMode%2A?displayProperty=nameWithType>屬性值是<xref:System.Windows.Forms.DataGridViewColumnSortMode.Automatic>。 它是不同於按一下目前的資料行標頭。 自.NET Framework 4.7.2 可用。 若要啟用這項功能，應用程式必須以.NET Framework 4.7.2 或更新版本為目標，或明確選擇進入使用 AppContext 參數的協助工具增強功能。|  
 |F4|如果目前儲存格是<xref:System.Windows.Forms.DataGridViewComboBoxCell>，將儲存格進入編輯模式，並顯示下拉式清單。|  
@@ -74,7 +65,7 @@ ms.lasthandoff: 02/22/2018
   
 |按鍵或按鍵組合|描述|  
 |----------------------------|-----------------|  
-|SHIFT+SPACEBAR|選取整個資料列或資料行 （不同於按一下資料列或資料行的標頭）。|  
+|SHIFT + 空格鍵|選取整個資料列或資料行 （不同於按一下資料列或資料行的標頭）。|  
 |瀏覽金鑰 （箭號，PAGE up/down，首頁，結束）|如果選取整個資料列或資料行，將目前的儲存格變更為新的資料列或資料行選擇移至全新的資料列或資料行 （取決於選取的模式）。|  
   
  如果<xref:System.Windows.Forms.DataGridView.MultiSelect%2A>設`false`和<xref:System.Windows.Forms.DataGridView.SelectionMode%2A>設<xref:System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect>或<xref:System.Windows.Forms.DataGridViewSelectionMode.FullColumnSelect>，變更為新的資料列或資料行的目前儲存格，使用鍵盤將選取範圍移至全新的資料列或資料行。 SHIFT、 CTRL 和 ALT 鍵並不會影響這個行為。  

@@ -1,29 +1,15 @@
 ---
 title: WCF Web HTTP 錯誤處理
-ms.custom: ''
 ms.date: 03/30/2017
-ms.prod: .net-framework
-ms.reviewer: ''
-ms.suite: ''
-ms.technology:
-- dotnet-clr
-ms.tgt_pltfrm: ''
-ms.topic: article
 ms.assetid: 02891563-0fce-4c32-84dc-d794b1a5c040
-caps.latest.revision: 8
-author: dotnet-bot
-ms.author: dotnetcontent
-manager: wpickett
-ms.workload:
-- dotnet
-ms.openlocfilehash: bcd0e6d1e6318404eb47741dc61ccf2ff9358b47
-ms.sourcegitcommit: 94d33cadc5ff81d2ac389bf5f26422c227832052
+ms.openlocfilehash: 228f8cdbe5ddde63f2b6afd82a27055f2241e058
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/30/2018
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="wcf-web-http-error-handling"></a>WCF Web HTTP 錯誤處理
-[!INCLUDE[indigo1](../../../../includes/indigo1-md.md)] Web HTTP 錯誤處理可以傳回 [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] Web HTTP 服務產生的錯誤，除了明確指定 HTTP 狀態碼之外，也會使用與作業相同的格式 (例如 XML 或 JSON) 傳回錯誤詳細資料。  
+Windows Communication Foundation (WCF) Web HTTP 錯誤處理可讓您從指定 HTTP 狀態碼，並傳回錯誤詳細資料會使用相同的格式與作業 （例如，XML 或 JSON） 的 WCF Web HTTP 服務傳回錯誤。  
   
 ## <a name="wcf-web-http-error-handling"></a>WCF Web HTTP 錯誤處理  
  <xref:System.ServiceModel.Web.WebFaultException> 類別會定義一個建構函式，供您指定 HTTP 狀態碼。 然後，這個狀態碼會傳回用戶端。 <xref:System.ServiceModel.Web.WebFaultException> 類別的泛型版本 <xref:System.ServiceModel.Web.WebFaultException%601> 可讓您傳回使用者定義的型別，其中包含已發生錯誤的相關資訊。 此自訂物件會使用作業指定的格式序列化，然後傳回用戶端。 下列範例示範如何傳回 HTTP 狀態碼。  

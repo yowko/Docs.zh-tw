@@ -1,28 +1,16 @@
 ---
-title: "操作說明：使用 XMLDataProvider 和 XPath 查詢繫結至 XML 資料"
-ms.custom: 
+title: 操作說明：使用 XMLDataProvider 和 XPath 查詢繫結至 XML 資料
 ms.date: 03/30/2017
-ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.technology: dotnet-wpf
-ms.tgt_pltfrm: 
-ms.topic: article
 helpviewer_keywords:
 - XmlDataProvider [WPF], binding to XML data
 - data binding [WPF], binding to XML data using XmlDataProvider queries
 - binding [WPF], to XML data using XmlDataProvider queries
 ms.assetid: 7dcd018f-16aa-4870-8e47-c1b4ea31e574
-caps.latest.revision: "22"
-author: dotnet-bot
-ms.author: dotnetcontent
-manager: wpickett
-ms.workload: dotnet
-ms.openlocfilehash: 92037be2280eaa248951ff9bad82b7a1581a4fd9
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.openlocfilehash: bb8eb727fb6614440721c4d34a7d1828182d2f14
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="how-to-bind-to-xml-data-using-an-xmldataprovider-and-xpath-queries"></a>操作說明：使用 XMLDataProvider 和 XPath 查詢繫結至 XML 資料
 這個範例示範如何將繫結至[!INCLUDE[TLA#tla_xml](../../../../includes/tlasharptla-xml-md.md)]資料使用<xref:System.Windows.Data.XmlDataProvider>。  
@@ -55,7 +43,7 @@ ms.lasthandoff: 12/22/2017
   
 -   `XPath="*[position()>3]"` 會傳回除前 3 個以外的所有書籍元素。  
   
- 當您執行**XPath**查詢，它會傳回<xref:System.Xml.XmlNode>或 XmlNodes 的清單。 <xref:System.Xml.XmlNode>是[!INCLUDE[TLA#tla_clr](../../../../includes/tlasharptla-clr-md.md)]物件，這表示您可以使用<xref:System.Windows.Data.Binding.Path%2A>屬性要繫結至[!INCLUDE[TLA#tla_clr](../../../../includes/tlasharptla-clr-md.md)]屬性。 再看一次上一個範例。 如果此範例的其餘部分維持不變，而且您變更<xref:System.Windows.Controls.TextBlock>下列繫結，您會看到的名稱中傳回的 XmlNodes <xref:System.Windows.Controls.ListBox>。 在這個案例中，所有傳回的節點名稱都將為 *Book*。  
+ 當您執行**XPath**查詢，它會傳回<xref:System.Xml.XmlNode>或 XmlNodes 的清單。 <xref:System.Xml.XmlNode> 是[!INCLUDE[TLA#tla_clr](../../../../includes/tlasharptla-clr-md.md)]物件，這表示您可以使用<xref:System.Windows.Data.Binding.Path%2A>屬性要繫結至[!INCLUDE[TLA#tla_clr](../../../../includes/tlasharptla-clr-md.md)]屬性。 再看一次上一個範例。 如果此範例的其餘部分維持不變，而且您變更<xref:System.Windows.Controls.TextBlock>下列繫結，您會看到的名稱中傳回的 XmlNodes <xref:System.Windows.Controls.ListBox>。 在這個案例中，所有傳回的節點名稱都將為 *Book*。  
   
  [!code-xaml[XmlDataSourceVariation#XmlNodePath](../../../../samples/snippets/csharp/VS_Snippets_Wpf/XmlDataSourceVariation/CS/Page1.xaml#xmlnodepath)]  
   
@@ -69,7 +57,7 @@ ms.lasthandoff: 12/22/2017
 <XmlDataProvider x:Key="BookData" Source="http://MyUrl" XPath="Books"/>  
 ```  
   
-## <a name="see-also"></a>請參閱  
+## <a name="see-also"></a>另請參閱  
  <xref:System.Windows.Data.ObjectDataProvider>  
  [繫結至 XML 查詢結果的 XDocument、XElement 或 LINQ](../../../../docs/framework/wpf/data/how-to-bind-to-xdocument-xelement-or-linq-for-xml-query-results.md)  
  [使用含階層式 XML 資料的主從式模式](../../../../docs/framework/wpf/data/how-to-use-the-master-detail-pattern-with-hierarchical-xml-data.md)  

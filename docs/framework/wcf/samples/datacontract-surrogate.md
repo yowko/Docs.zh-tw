@@ -1,27 +1,15 @@
 ---
 title: DataContract Surrogate
-ms.custom: 
 ms.date: 03/30/2017
-ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.technology: dotnet-clr
-ms.tgt_pltfrm: 
-ms.topic: article
 ms.assetid: b0188f3c-00a9-4cf0-a887-a2284c8fb014
-caps.latest.revision: "21"
-author: dotnet-bot
-ms.author: dotnetcontent
-manager: wpickett
-ms.workload: dotnet
-ms.openlocfilehash: f14b69cba50839f3c4105b286af4de0523385b38
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.openlocfilehash: 3fd2bf028ccb2f75210d5e3fc039bdad7e1e065a
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="datacontract-surrogate"></a>DataContract Surrogate
-這個範例示範如何使用資料合約 Surrogate 類別來自訂像是序列化 (Serialization)、還原序列化 (Deserialization)、結構描述匯出以及結構描述匯入等程序。 這個範例會示範於資料會在 [!INCLUDE[indigo1](../../../../includes/indigo1-md.md)] 用戶端與服務之間進行序列化以及傳輸的用戶端與伺服器案例中，使用 Surrogate 的方式。  
+這個範例示範如何使用資料合約 Surrogate 類別來自訂像是序列化 (Serialization)、還原序列化 (Deserialization)、結構描述匯出以及結構描述匯入等程序。 這個範例示範如何序列化和 Windows Communication Foundation (WCF) 用戶端與服務之間傳輸資料的位置的用戶端和伺服器案例中，使用 surrogate。  
   
 > [!NOTE]
 >  此範例的安裝程序與建置指示位於本主題的結尾。  
@@ -276,8 +264,8 @@ public void ExportContract(WsdlExporter exporter, WsdlContractConversionContext 
 >   
 >  `<InstallDrive>:\WF_WCF_Samples`  
 >   
->  如果此目錄不存在，請移至 [Windows Communication Foundation (WCF) and Windows Workflow Foundation (WF) Samples for .NET Framework 4  (適用於 .NET Framework 4 的 Windows Communication Foundation (WCF) 與 Windows Workflow Foundation (WF) 範例)](http://go.microsoft.com/fwlink/?LinkId=150780) ，以下載所有 [!INCLUDE[indigo1](../../../../includes/indigo1-md.md)] 和 [!INCLUDE[wf1](../../../../includes/wf1-md.md)] 範例。 此範例位於下列目錄。  
+>  如果此目錄不存在，請移至[Windows Communication Foundation (WCF) 和適用於.NET Framework 4 的 Windows Workflow Foundation (WF) 範例](http://go.microsoft.com/fwlink/?LinkId=150780)下載所有 Windows Communication Foundation (WCF) 和[!INCLUDE[wf1](../../../../includes/wf1-md.md)]範例。 此範例位於下列目錄。  
 >   
 >  `<InstallDrive>:\WF_WCF_Samples\WCF\Extensibility\DataContract`  
   
-## <a name="see-also"></a>請參閱
+## <a name="see-also"></a>另請參閱

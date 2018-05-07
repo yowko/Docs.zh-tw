@@ -1,13 +1,6 @@
 ---
-title: "系統資訊和 Windows Form"
-ms.custom: 
+title: 系統資訊和 Windows Form
 ms.date: 03/30/2017
-ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.technology: dotnet-winforms
-ms.tgt_pltfrm: 
-ms.topic: article
 dev_langs:
 - csharp
 - vb
@@ -17,16 +10,11 @@ helpviewer_keywords:
 - user names [Windows Forms], retrieving
 - system information [Windows Forms]
 ms.assetid: 30cf43a3-8cb2-4ff3-862b-6c34576616a8
-caps.latest.revision: "7"
-author: dotnet-bot
-ms.author: dotnetcontent
-manager: wpickett
-ms.workload: dotnet
-ms.openlocfilehash: 685a62b885469a9cac8884cc045b67bac02bea80
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.openlocfilehash: 727bcc53750081ae2d957527332ed3199c7d8e8b
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="system-information-and-windows-forms"></a>系統資訊和 Windows Form
 有時則需要收集您的應用程式執行才能做出的決策，在程式碼中的電腦的相關資訊。 例如，您可能只是適用於連線到特定的網路網域; 函式在此情況下，您必須能夠判斷的網域，並停用此函式，如果網域不存在。  
@@ -53,6 +41,6 @@ MessageBox.Show("Good morning " + User + ". You are connected to " _
   
  一些更實用的成員<xref:System.Windows.Forms.SystemInformation>類別包含<xref:System.Windows.Forms.SystemInformation.ComputerName%2A>， <xref:System.Windows.Forms.SystemInformation.DbcsEnabled%2A>， <xref:System.Windows.Forms.SystemInformation.PowerStatus%2A>，和<xref:System.Windows.Forms.SystemInformation.TerminalServerSession%2A>。  
   
-## <a name="see-also"></a>請參閱  
+## <a name="see-also"></a>另請參閱  
  <xref:System.Windows.Forms.SystemInformation>  
  [Windows Forms 中的電源管理](../../../../docs/framework/winforms/advanced/power-management-in-windows-forms.md)

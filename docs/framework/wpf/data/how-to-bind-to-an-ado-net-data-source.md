@@ -1,13 +1,6 @@
 ---
-title: "操作說明：繫結至 ADO.NET 資料來源"
-ms.custom: 
+title: 操作說明：繫結至 ADO.NET 資料來源
 ms.date: 03/30/2017
-ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.technology: dotnet-wpf
-ms.tgt_pltfrm: 
-ms.topic: article
 dev_langs:
 - csharp
 - vb
@@ -16,16 +9,11 @@ helpviewer_keywords:
 - ADO.NET data sources [WPF], binding to
 - binding [WPF], to ADO.NET data sources
 ms.assetid: a70c6d7b-7b38-4fdf-b655-4804db7c8315
-caps.latest.revision: "15"
-author: dotnet-bot
-ms.author: dotnetcontent
-manager: wpickett
-ms.workload: dotnet
-ms.openlocfilehash: 760b59bfa0d556974109ccc0211c021ee76df5dc
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.openlocfilehash: c9e16b9fd100eb9aec7bee2f94307aa80371d5ec
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="how-to-bind-to-an-adonet-data-source"></a>操作說明：繫結至 ADO.NET 資料來源
 這個範例示範如何將繫結[!INCLUDE[TLA#tla_winclient](../../../../includes/tlasharptla-winclient-md.md)]<xref:System.Windows.Controls.ListBox>控制權傳輸至[!INCLUDE[TLA#tla_adonet](../../../../includes/tlasharptla-adonet-md.md)] `DataSet`。  
@@ -40,13 +28,13 @@ ms.lasthandoff: 12/22/2017
   
  [!code-xaml[ADODataSet#2](../../../../samples/snippets/csharp/VS_Snippets_Wpf/ADODataSet/CSharp/Window1.xaml#2)]  
   
- `BookItemTemplate`是<xref:System.Windows.DataTemplate>，定義資料的顯示方式：  
+ `BookItemTemplate` 是<xref:System.Windows.DataTemplate>，定義資料的顯示方式：  
   
  [!code-xaml[ADODataSet#3](../../../../samples/snippets/csharp/VS_Snippets_Wpf/ADODataSet/CSharp/Window1.xaml#3)]  
   
  `IntColorConverter` 會將 `int` 轉換成色彩。 這個轉換子中，使用<xref:System.Windows.Controls.TextBlock.Background%2A>色彩的第三個<xref:System.Windows.Controls.TextBlock>會出現綠色如果的值`NumPages`因小於 350 和紅色。 這裡不顯示轉換器的實作。  
   
-## <a name="see-also"></a>請參閱  
+## <a name="see-also"></a>另請參閱  
  <xref:System.Windows.Data.BindingListCollectionView>  
  [資料繫結概觀](../../../../docs/framework/wpf/data/data-binding-overview.md)  
  [HOW-TO 主題](../../../../docs/framework/wpf/data/data-binding-how-to-topics.md)

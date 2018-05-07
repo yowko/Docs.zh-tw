@@ -1,23 +1,12 @@
 ---
-title: "實作資源管理員"
-ms.custom: 
+title: 實作資源管理員
 ms.date: 03/30/2017
-ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.tgt_pltfrm: 
-ms.topic: article
 ms.assetid: d5c153f6-4419-49e3-a5f1-a50ae4c81bf3
-caps.latest.revision: "3"
-author: dotnet-bot
-ms.author: dotnetcontent
-manager: wpickett
-ms.workload: dotnet
-ms.openlocfilehash: 25a45626564bb58950b251ae5e9041609d96a207
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.openlocfilehash: f3e29dae095fbe56181cf7b67787c1044efa07ae
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="implementing-a-resource-manager"></a>實作資源管理員
 交易所使用的每項資源都會受到資源管理員的管理，而這些資源管理員在採取行動時必須經過交易管理員的協調。 資源管理員會和交易管理員一起合作以提供應用程式單元性 (Atomicity) 和隔離性 (Isolation) 的保證。 Microsoft SQL Server、永久性訊息佇列、記憶體中的雜湊資料表，通通都是資源管理員的範例。  

@@ -1,32 +1,20 @@
 ---
-title: "Windows Communication Foundation 的主要概念"
-ms.custom: 
+title: Windows Communication Foundation 的主要概念
 ms.date: 03/30/2017
-ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.technology: dotnet-clr
-ms.tgt_pltfrm: 
-ms.topic: article
 helpviewer_keywords:
 - WCF [WCF], concepts
 - concepts [WCF]
 - fundamentals [WCF]
 - Windows Communication Foundation [WCF], concepts
 ms.assetid: 3e7e0afd-7913-499d-bafb-eac7caacbc7a
-caps.latest.revision: "39"
-author: dotnet-bot
-ms.author: dotnetcontent
-manager: wpickett
-ms.workload: dotnet
-ms.openlocfilehash: 651515095a0c9f9e970fff2d77421cfa804fa701
-ms.sourcegitcommit: c0dd436f6f8f44dc80dc43b07f6841a00b74b23f
-ms.translationtype: MT
+ms.openlocfilehash: 44b36fc917ceb30141d7d2235b8bb364d3b998c9
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 01/19/2018
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="fundamental-windows-communication-foundation-concepts"></a>Windows Communication Foundation 的主要概念
-本文件提供 [!INCLUDE[indigo1](../../../includes/indigo1-md.md)] 架構的高階檢視， 以說明重要概念，以及如何搭配運用這些概念。 如需教學課程建立的簡單版本[!INCLUDE[indigo2](../../../includes/indigo2-md.md)]服務與用戶端，請參閱[入門教學課程](../../../docs/framework/wcf/getting-started-tutorial.md)。 若要了解[!INCLUDE[indigo2](../../../includes/indigo2-md.md)]程式設計，請參閱[基本 WCF 程式設計](../../../docs/framework/wcf/basic-wcf-programming.md)。  
+本文件提供 Windows Communication Foundation (WCF) 架構的高階檢視。 以說明重要概念，以及如何搭配運用這些概念。 如需教學課程建立的簡單版本[!INCLUDE[indigo2](../../../includes/indigo2-md.md)]服務與用戶端，請參閱[入門教學課程](../../../docs/framework/wcf/getting-started-tutorial.md)。 若要了解[!INCLUDE[indigo2](../../../includes/indigo2-md.md)]程式設計，請參閱[基本 WCF 程式設計](../../../docs/framework/wcf/basic-wcf-programming.md)。  
   
 ## <a name="wcf-fundamentals"></a>WCF 基本概念  
  [!INCLUDE[indigo2](../../../includes/indigo2-md.md)] 為執行階段及一組 API，用來建立在服務和用戶端間傳送訊息的系統。 相同的基礎結構和 API 可用來在同一個電腦系統或位於其他電腦且透過網際網路存取的系統上，建立與其他應用程式通訊的應用程式。  
@@ -163,7 +151,7 @@ HTTPS://cohowinery:8005/ServiceModelSamples/CalculatorService
  WS-*  
  一組發展中 Web 服務 (WS) 規格的縮寫，例如 [!INCLUDE[indigo2](../../../includes/indigo2-md.md)] 中所實作的 WS-Security 與 WS-ReliableMessaging 等等。  
   
-## <a name="see-also"></a>請參閱  
+## <a name="see-also"></a>另請參閱  
  [什麼是 Windows Communication Foundation](../../../docs/framework/wcf/whats-wcf.md)  
  [Windows Communication Foundation 架構](../../../docs/framework/wcf/architecture.md)  
  [安全性架構](http://msdn.microsoft.com/library/16593476-d36a-408d-808c-ae6fd483e28f)

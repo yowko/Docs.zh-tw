@@ -1,34 +1,22 @@
 ---
-title: "橋接及錯誤處理"
-ms.custom: 
+title: 橋接及錯誤處理
 ms.date: 03/30/2017
-ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.technology: dotnet-clr
-ms.tgt_pltfrm: 
-ms.topic: article
 ms.assetid: 4ae87d1a-b615-4014-a494-a53f63ff0137
-caps.latest.revision: "21"
-author: dotnet-bot
-ms.author: dotnetcontent
-manager: wpickett
-ms.workload: dotnet
-ms.openlocfilehash: 84a7d3385d89d4308e6a75d303a567fb4d7b22d3
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
-ms.translationtype: MT
+ms.openlocfilehash: f13a55704422e8a958e55c489f6db11108b03c90
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="bridging-and-error-handling"></a>橋接及錯誤處理
-此範例示範如何將 [!INCLUDE[indigo1](../../../../includes/indigo1-md.md)] 路由服務用於使用不同繫結之用戶端和服務間的橋接通訊。 此範例也會示範如何針對容錯移轉情況使用備份服務。 路由服務是一個 [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] 元件，該元件可讓它在應用程式中輕鬆加入內容架構的路由器。 此範例會調整標準 [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] 計算機範例，以便使用路由服務進行通訊。  
+這個範例會示範 Windows Communication Foundation (WCF) 路由服務如何用於通訊的用戶端和服務使用不同繫結之間的橋接。 此範例也會示範如何針對容錯移轉情況使用備份服務。 路由服務是一個 [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] 元件，該元件可讓它在應用程式中輕鬆加入內容架構的路由器。 此範例會調整標準 [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] 計算機範例，以便使用路由服務進行通訊。  
   
 > [!IMPORTANT]
 >  這些範例可能已安裝在您的電腦上。 請先檢查下列 (預設) 目錄，然後再繼續。  
 >   
 >  `<InstallDrive>:\WF_WCF_Samples`  
 >   
->  如果此目錄不存在，請移至 [Windows Communication Foundation (WCF) and Windows Workflow Foundation (WF) Samples for .NET Framework 4  (適用於 .NET Framework 4 的 Windows Communication Foundation (WCF) 與 Windows Workflow Foundation (WF) 範例)](http://go.microsoft.com/fwlink/?LinkId=150780) ，以下載所有 [!INCLUDE[indigo1](../../../../includes/indigo1-md.md)] 和 [!INCLUDE[wf1](../../../../includes/wf1-md.md)] 範例。 此範例位於下列目錄。  
+>  如果此目錄不存在，請移至[Windows Communication Foundation (WCF) 和適用於.NET Framework 4 的 Windows Workflow Foundation (WF) 範例](http://go.microsoft.com/fwlink/?LinkId=150780)下載所有 Windows Communication Foundation (WCF) 和[!INCLUDE[wf1](../../../../includes/wf1-md.md)]範例。 此範例位於下列目錄。  
 >   
 >  `<InstallDrive>:\WF_WCF_Samples\WCF\Basic\RoutingServices\ErrorHandlingAndBridging`  
   
@@ -80,5 +68,5 @@ ms.lasthandoff: 12/22/2017
 ### <a name="real-world-scenario"></a>真實情節  
  Contoso 想要在內部最佳化效能時，提供互通的服務端點給外界。 因此，它會在內部使用路由服務將該連線橋接到使用其服務所使用之 NetTcpBinding 的端點時，透過端點使用 BasicHttpBinding，向外界公開其服務。 此外，Contoso 希望提供服務時能夠容許其中任何一個實際執行服務暫時中斷，然後使用錯誤處理功能視覺化路由器服務背後的多個端點，以便在需要時，自動容錯移轉到備份端點。  
   
-## <a name="see-also"></a>請參閱  
+## <a name="see-also"></a>另請參閱  
  [AppFabric 主控與持續性範例](http://go.microsoft.com/fwlink/?LinkId=193961)

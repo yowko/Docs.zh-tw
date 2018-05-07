@@ -1,34 +1,20 @@
 ---
 title: HOW TO：建立雙工合約
-ms.custom: ''
 ms.date: 03/30/2017
-ms.prod: .net-framework
-ms.reviewer: ''
-ms.suite: ''
-ms.technology:
-- dotnet-clr
-ms.tgt_pltfrm: ''
-ms.topic: article
 dev_langs:
 - csharp
 - vb
 helpviewer_keywords:
 - duplex contracts [WCF]
 ms.assetid: 500a75b6-998a-47d5-8e3b-24e3aba2a434
-caps.latest.revision: 28
-author: dotnet-bot
-ms.author: dotnetcontent
-manager: wpickett
-ms.workload:
-- dotnet
-ms.openlocfilehash: c06bd4f050eda3c3374684b5401b8c85fb9e1df9
-ms.sourcegitcommit: 94d33cadc5ff81d2ac389bf5f26422c227832052
+ms.openlocfilehash: 39aea526992c503943c3f458854d09677e1b5717
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/30/2018
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="how-to-create-a-duplex-contract"></a>HOW TO：建立雙工合約
-本主題說明的基本步驟可用來建立使用雙工 (雙向) 合約的方法。 雙工合約可供用戶端與伺服器彼此各自進行通訊，方便任何一方初始化對另一方的呼叫。 雙工合約是 [!INCLUDE[indigo1](../../../../includes/indigo1-md.md)] 服務可用的三種訊息模式之一。 其他兩種訊息模式分別是單向和要求-回覆。 雙工合約是由用戶端和伺服器之間的兩個單向合約組成，而且不需要相互關聯方法呼叫。 當您的服務必須查詢用戶端以獲得更多資訊，或是明確地在用戶端上引發事件時，請使用這種合約。 如需建立雙工合約的用戶端應用程式的詳細資訊，請參閱[How to: Access Services 搭配雙工合約](../../../../docs/framework/wcf/feature-details/how-to-access-services-with-a-duplex-contract.md)。 如需實用範例，請參閱[雙工](../../../../docs/framework/wcf/samples/duplex.md)範例。  
+本主題說明的基本步驟可用來建立使用雙工 (雙向) 合約的方法。 雙工合約可供用戶端與伺服器彼此各自進行通訊，方便任何一方初始化對另一方的呼叫。 雙工合約是 Windows Communication Foundation (WCF) 服務可用的三種訊息模式的其中一個。 其他兩種訊息模式分別是單向和要求-回覆。 雙工合約是由用戶端和伺服器之間的兩個單向合約組成，而且不需要相互關聯方法呼叫。 當您的服務必須查詢用戶端以獲得更多資訊，或是明確地在用戶端上引發事件時，請使用這種合約。 如需建立雙工合約的用戶端應用程式的詳細資訊，請參閱[How to: Access Services 搭配雙工合約](../../../../docs/framework/wcf/feature-details/how-to-access-services-with-a-duplex-contract.md)。 如需實用範例，請參閱[雙工](../../../../docs/framework/wcf/samples/duplex.md)範例。  
   
 ### <a name="to-create-a-duplex-contract"></a>若要建立雙工合約  
   

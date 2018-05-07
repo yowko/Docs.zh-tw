@@ -1,33 +1,21 @@
 ---
-title: "Windows Communication Foundation 中的傳輸"
-ms.custom: 
+title: Windows Communication Foundation 中的傳輸
 ms.date: 03/30/2017
-ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.technology: dotnet-clr
-ms.tgt_pltfrm: 
-ms.topic: article
 helpviewer_keywords:
 - transports [WCF]
 - WCF, transports
 - Windows Communication Foundation, transports
 ms.assetid: 005c894b-af70-48aa-a1c1-c99338083c27
-caps.latest.revision: "18"
-author: dotnet-bot
-ms.author: dotnetcontent
-manager: wpickett
-ms.workload: dotnet
-ms.openlocfilehash: 62eb27919e762004667b3d5179c35cb04d9a9422
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.openlocfilehash: 6bb8e8b90c26533661684bd403b9ec439f1bb37e
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="transports-in-windows-communication-foundation"></a>Windows Communication Foundation 中的傳輸
-傳輸層 (Transport Layer) 屬於通道堆疊中的最底層。 [!INCLUDE[indigo1](../../../../includes/indigo1-md.md)] 中所使用的主要傳輸有 HTTP、HTTPS、TCP 和具名管道。 本節中的主題將討論如何在這些傳輸之間進行選擇、設定傳輸，以及設定調整屬性。  
+傳輸層 (Transport Layer) 屬於通道堆疊中的最底層。 使用 Windows Communication Foundation (WCF) 的主要傳輸是 HTTP、 HTTPS、 TCP 及具名的管道。 本節中的主題將討論如何在這些傳輸之間進行選擇、設定傳輸，以及設定調整屬性。  
   
- [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] 包含額外的傳輸。 如需訊息佇列 (也稱為 MSMQ) 傳輸的資訊，請參閱[佇列和可靠工作階段](../../../../docs/framework/wcf/feature-details/queues-and-reliable-sessions.md)。 如需端對端傳輸的資訊，請參閱[對等網路](../../../../docs/framework/wcf/feature-details/peer-to-peer-networking.md)。  
+ WCF 包含額外的傳輸。 如需訊息佇列 (也稱為 MSMQ) 傳輸的資訊，請參閱[佇列和可靠工作階段](../../../../docs/framework/wcf/feature-details/queues-and-reliable-sessions.md)。 如需端對端傳輸的資訊，請參閱[對等網路](../../../../docs/framework/wcf/feature-details/peer-to-peer-networking.md)。  
   
 ## <a name="in-this-section"></a>本節內容  
  [選擇傳輸](../../../../docs/framework/wcf/feature-details/choosing-a-transport.md)  
@@ -43,7 +31,7 @@ ms.lasthandoff: 12/22/2017
  說明如何設定 HTTP 和 HTTPS 傳輸繫結項目。  
   
  [如何：將 WCF URL 保留項目取代為受限保留項目](../../../../docs/framework/wcf/feature-details/how-to-replace-the-wcf-url-reservation-with-a-restricted-reservation.md)  
- 說明如何使用 [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)]URL 限制的保留區。  
+ 描述如何使用受限制的 WCFURL 保留項目。  
   
  [傳輸配額](../../../../docs/framework/wcf/feature-details/transport-quotas.md)  
  說明在設定傳輸層之可用配額時的考量因素。  
@@ -52,7 +40,7 @@ ms.lasthandoff: 12/22/2017
  說明當訊息是在防火牆後方進行傳送或接收、或是當網路位址轉譯 (NAT) 存在時的傳輸層設定方式。  
   
  [Net.TCP 連接埠共用](../../../../docs/framework/wcf/feature-details/net-tcp-port-sharing.md)  
- 說明如何使用 [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] 的 Net.TCP 連接埠共用服務元件。  
+ 描述如何使用 WCF 的 Net.TCP 連接埠共用元件。  
   
 ## <a name="reference"></a>參考資料  
  <xref:System.ServiceModel.Channels.HttpTransportBindingElement>  

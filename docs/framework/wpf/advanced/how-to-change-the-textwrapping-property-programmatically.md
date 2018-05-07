@@ -1,13 +1,6 @@
 ---
-title: "如何：以程式設計方式變更 TextWrapping 屬性"
-ms.custom: 
+title: 如何：以程式設計方式變更 TextWrapping 屬性
 ms.date: 03/30/2017
-ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.technology: dotnet-wpf
-ms.tgt_pltfrm: 
-ms.topic: article
 dev_langs:
 - csharp
 - vb
@@ -15,16 +8,11 @@ helpviewer_keywords:
 - documents [WPF], changing TextWrapping property programmatically
 - TextWrapping property [WPF], changing programmatically
 ms.assetid: 30d25554-4c82-4df9-a8d6-35683a4a13bb
-caps.latest.revision: "10"
-author: dotnet-bot
-ms.author: dotnetcontent
-manager: wpickett
-ms.workload: dotnet
-ms.openlocfilehash: ca87d651f66edba00280a57ca1468af33657a329
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.openlocfilehash: 1b0f039f0484d1d1e73c3c12af06e0faffbce1cb
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="how-to-change-the-textwrapping-property-programmatically"></a>如何：以程式設計方式變更 TextWrapping 屬性
 ## <a name="example"></a>範例  
@@ -37,6 +25,6 @@ ms.lasthandoff: 12/22/2017
  [!code-csharp[TextWrapProperty#2](../../../../samples/snippets/csharp/VS_Snippets_Wpf/TextWrapProperty/CSharp/Window1.xaml.cs#2)]
  [!code-vb[TextWrapProperty#2](../../../../samples/snippets/visualbasic/VS_Snippets_Wpf/TextWrapProperty/VisualBasic/Pane1.xaml.vb#2)]  
   
-## <a name="see-also"></a>請參閱  
+## <a name="see-also"></a>另請參閱  
  <xref:System.Windows.Controls.TextBlock.TextWrapping%2A>  
  <xref:System.Windows.TextWrapping>

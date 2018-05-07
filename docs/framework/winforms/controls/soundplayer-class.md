@@ -1,30 +1,16 @@
 ---
-title: "SoundPlayer 類別"
-ms.custom: 
+title: SoundPlayer 類別
 ms.date: 03/30/2017
-ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.technology:
-- dotnet-winforms
-ms.tgt_pltfrm: 
-ms.topic: article
 f1_keywords:
 - SoundPlayer
 helpviewer_keywords:
 - sounds [Windows Forms], playing
 ms.assetid: f3945af9-045c-4e2d-b251-377c37ca2d77
-caps.latest.revision: 
-author: dotnet-bot
-ms.author: dotnetcontent
-manager: wpickett
-ms.workload:
-- dotnet
-ms.openlocfilehash: 5379da3361a8a4b2115f46d0d2db80a565f6bfc9
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.openlocfilehash: 39d3c9d54eb61c0220a13870d5bd2ff69f8dfc38
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="soundplayer-class"></a>SoundPlayer 類別
 `SoundPlayer` 類別可讓您輕鬆地在應用程式中包含音效。  
@@ -64,4 +50,4 @@ ms.lasthandoff: 12/22/2017
  [在 Windows Forms 上使用的控制項](../../../../docs/framework/winforms/controls/controls-to-use-on-windows-forms.md)  
  提供 Windows Form 控制項的完整清單，以及其用法的資訊連結。  
   
- 另請參閱[超連結"http://msdn.microsoft.com/library/11bxex12 (v = vs.110) 」 My.Computer 物件](http://msdn.microsoft.com/library/11bxex12\(v=vs.110\))或[My.Computer 物件](http://msdn.microsoft.com/library/11bxex12\(v=vs.120\))。
+ 另請參閱[超連結"http://msdn.microsoft.com/library/11bxex12(v=vs.110)"My.Computer 物件](http://msdn.microsoft.com/library/11bxex12\(v=vs.110\))或[My.Computer 物件](http://msdn.microsoft.com/library/11bxex12\(v=vs.120\))。

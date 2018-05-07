@@ -1,13 +1,6 @@
 ---
-title: "如何：從 Windows Form 的 ComboBox、ListBox 或 CheckedListBox 控制項加入或移除項目"
-ms.custom: 
+title: 如何：從 Windows Form 的 ComboBox、ListBox 或 CheckedListBox 控制項加入或移除項目
 ms.date: 03/30/2017
-ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.technology: dotnet-winforms
-ms.tgt_pltfrm: 
-ms.topic: article
 dev_langs:
 - csharp
 - vb
@@ -21,16 +14,11 @@ helpviewer_keywords:
 - combo boxes [Windows Forms], removing items
 - CheckedListBox control [Windows Forms], adding and removing items
 ms.assetid: 7224c8d2-4118-443e-ae1e-d7c17d1e69ee
-caps.latest.revision: "19"
-author: dotnet-bot
-ms.author: dotnetcontent
-manager: wpickett
-ms.workload: dotnet
-ms.openlocfilehash: faf0422db9915806442ab96759d63e15ff98b813
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.openlocfilehash: f9319ffe5e9c4f06565648565ce21dec6fc672f9
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="how-to-add-and-remove-items-from-a-windows-forms-combobox-listbox-or-checkedlistbox-control"></a>如何：從 Windows Form 的 ComboBox、ListBox 或 CheckedListBox 控制項加入或移除項目
 可以加入至 Windows Form 下拉式方塊、 清單方塊中，或檢查清單方塊中的各種不同的方式，因為這些控制項可以繫結至各種資料來源項目。 不過，本主題會示範最簡單的方法，並需要沒有資料繫結。 顯示的項目通常是字串。不過，您可以使用任何物件。 顯示在控制項中的文字是由物件所傳回的值`ToString`方法。  
@@ -102,7 +90,7 @@ ms.lasthandoff: 12/22/2017
   
 1.  呼叫`Remove`或`RemoveAt`方法，以刪除項目。  
   
-     `Remove`有一個引數，指定要移除的項目。`RemoveAt` 移除具有指定的索引編號的項目。  
+     `Remove` 有一個引數，指定要移除的項目。`RemoveAt` 移除具有指定的索引編號的項目。  
   
     ```vb  
     ' To remove item with index 0:  
@@ -147,7 +135,7 @@ ms.lasthandoff: 12/22/2017
     listBox1->Items->Clear();  
     ```  
   
-## <a name="see-also"></a>請參閱  
+## <a name="see-also"></a>另請參閱  
  <xref:System.Windows.Forms.ComboBox>  
  <xref:System.Windows.Forms.ListBox>  
  <xref:System.Windows.Forms.CheckedListBox>  

@@ -1,24 +1,12 @@
 ---
 title: System.ServiceModel.ManualFlowThrottleLimitReached
-ms.custom: 
 ms.date: 03/30/2017
-ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.technology: dotnet-clr
-ms.tgt_pltfrm: 
-ms.topic: article
 ms.assetid: 9aba851f-1830-493b-8e3e-60f454eb923e
-caps.latest.revision: "5"
-author: dotnet-bot
-ms.author: dotnetcontent
-manager: wpickett
-ms.workload: dotnet
-ms.openlocfilehash: 35f149423fc8c0cd2a25834742d7c8b79ad8d8c6
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.openlocfilehash: a6b4e369d2d22d2441b3896321b7c152e21d967b
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="systemservicemodelmanualflowthrottlelimitreached"></a>System.ServiceModel.ManualFlowThrottleLimitReached
 System.ServiceModel.ManualFlowThrottleLimitReached  
@@ -28,7 +16,7 @@ System.ServiceModel.ManualFlowThrottleLimitReached
   
  當手動流量控制限制一開始降低到 0 時，就會發出此追蹤。 以後再變更為 0 時將不會被追蹤。 執行個體內容上的流量控制限制只會針對每個內容追蹤一次。  
   
-## <a name="see-also"></a>請參閱  
+## <a name="see-also"></a>另請參閱  
  [追蹤](../../../../../docs/framework/wcf/diagnostics/tracing/index.md)  
  [使用追蹤為應用程式進行疑難排解](../../../../../docs/framework/wcf/diagnostics/tracing/using-tracing-to-troubleshoot-your-application.md)  
  [管理與診斷](../../../../../docs/framework/wcf/diagnostics/index.md)

@@ -1,13 +1,6 @@
 ---
-title: "如何：使用畫筆繪製矩形"
-ms.custom: 
+title: 如何：使用畫筆繪製矩形
 ms.date: 03/30/2017
-ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.technology: dotnet-winforms
-ms.tgt_pltfrm: 
-ms.topic: article
 dev_langs:
 - csharp
 - vb
@@ -15,16 +8,11 @@ helpviewer_keywords:
 - rectangles [Windows Forms], drawing
 - pens [Windows Forms], drawing rectangles
 ms.assetid: 54a7fa14-3ad8-4d64-b424-2a12005b250c
-caps.latest.revision: "13"
-author: dotnet-bot
-ms.author: dotnetcontent
-manager: wpickett
-ms.workload: dotnet
-ms.openlocfilehash: 7257fa21432ec5d849a257f4a5e412515f474363
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.openlocfilehash: ad5b436f7162c282198c7a9d3cce4d3ce3fd3c6f
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="how-to-use-a-pen-to-draw-rectangles"></a>如何：使用畫筆繪製矩形
 若要繪製的矩形，您需要<xref:System.Drawing.Graphics>物件和<xref:System.Drawing.Pen>物件。 <xref:System.Drawing.Graphics>物件提供<xref:System.Drawing.Graphics.DrawRectangle%2A>方法，而<xref:System.Drawing.Pen>物件儲存的行，例如色彩和寬度的功能。  
@@ -44,5 +32,5 @@ ms.lasthandoff: 12/22/2017
 ## <a name="compiling-the-code"></a>編譯程式碼  
  上述範例設計用於搭配 Windows Form，且其需要<xref:System.Windows.Forms.PaintEventArgs> `e`，這是參數的<xref:System.Windows.Forms.Control.Paint>事件處理常式。  
   
-## <a name="see-also"></a>請參閱  
+## <a name="see-also"></a>另請參閱  
  [使用畫筆繪製線條和形狀](../../../../docs/framework/winforms/advanced/using-a-pen-to-draw-lines-and-shapes.md)

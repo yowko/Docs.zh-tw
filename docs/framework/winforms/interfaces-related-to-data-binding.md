@@ -1,14 +1,6 @@
 ---
 title: 與資料繫結相關的介面
-ms.custom: ''
 ms.date: 03/30/2017
-ms.prod: .net-framework
-ms.reviewer: ''
-ms.suite: ''
-ms.technology:
-- dotnet-winforms
-ms.tgt_pltfrm: ''
-ms.topic: article
 helpviewer_keywords:
 - data [Windows Forms], data-binding interfaces
 - INotifyPropertyChanged interface
@@ -20,17 +12,11 @@ helpviewer_keywords:
 - data binding [Windows Forms], interfaces
 - IDataErrorInfo interface [Windows Forms], Windows Forms data binding
 ms.assetid: 14e49a2e-3e46-47ca-b491-70d546333277
-caps.latest.revision: 23
-author: dotnet-bot
-ms.author: dotnetcontent
-manager: wpickett
-ms.workload:
-- dotnet
-ms.openlocfilehash: 5278ccd34e556c33e4bc5c9f460573b399f265be
-ms.sourcegitcommit: 2042de78fcdceebb6b8ac4b7a292b93e8782cbf5
+ms.openlocfilehash: 6c4470b33977408fa4429d187dafd76241d0d9d9
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/27/2018
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="interfaces-related-to-data-binding"></a>與資料繫結相關的介面
 透過 [!INCLUDE[vstecado](../../../includes/vstecado-md.md)]，您可以建立許多不同的資料結構，以滿足您正在使用之應用程式和資料的繫結需求。 您或許會想要建立自有類別以在 Windows Forms 中提供或取用資料。 這些物件可以提供不同程度的功能和複雜度，從基本的資料繫結，到提供設計階段支援、錯誤檢查、變更通知，或甚至對資料本身所做變更的結構化回復支援。  

@@ -1,35 +1,23 @@
 ---
 title: WCF 安全性用語
-ms.custom: ''
 ms.date: 03/30/2017
-ms.prod: .net-framework
-ms.reviewer: ''
-ms.suite: ''
-ms.technology:
-- dotnet-clr
-ms.tgt_pltfrm: ''
-ms.topic: article
 helpviewer_keywords:
 - security [WCF], terminology
 - security glossary [WCF]
 - security terms [WCF]
 ms.assetid: 68dde024-8e51-40ba-804f-ec52d85e9ca9
-caps.latest.revision: 14
 author: BrucePerlerMS
-ms.author: bruceper
 manager: mbaldwin
-ms.workload:
-- dotnet
-ms.openlocfilehash: 46f70ad623d852e051ff69fb68690114f8c39381
-ms.sourcegitcommit: 94d33cadc5ff81d2ac389bf5f26422c227832052
+ms.openlocfilehash: 8024abdab01b2df151a6c0c2f5760e85ae119fd4
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/30/2018
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="wcf-security-terminology"></a>WCF 安全性用語
 您可能會對討論安全性時使用的一些用語感到陌生。 本主題僅針對一些安全性名詞提供簡短說明，而不會針對每個項目逐一提供完整的文件說明。  
   
- 如需有關使用的字彙[!INCLUDE[indigo1](../../../../includes/indigo1-md.md)]文件，請參閱[基本 Windows Communication Foundation 概念](../../../../docs/framework/wcf/fundamental-concepts.md)。  
+ 如需使用 Windows Communication Foundation (WCF) 文件中的詞彙的詳細資訊，請參閱[基本 Windows Communication Foundation 概念](../../../../docs/framework/wcf/fundamental-concepts.md)。  
   
  Access Control List (ACL) - 存取控制清單 (ACL)  
  套用到物件的安全性保護清單  (物件可以是檔案、處理序、事件或具有安全性描述元的任何其他項目)。ACL 中的項目稱為存取控制項目 (ACE)。 ACL 有兩種：Discretionary 存取控制清單和系統存取控制清單。  
@@ -189,7 +177,7 @@ ms.lasthandoff: 04/30/2018
  使用者帳戶名稱 (有時稱為*使用者登入名稱*) 和識別使用者帳戶所在之網域的網域名稱。 這是登入 Windows 網域時的標準用法。 格式為： someone@example.com （如同電子郵件地址）。  
   
 > [!NOTE]
->  除了標準 UPN 格式之外，[!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] 還接受低階格式的 UPN，例如，cohowinery.com\someone。  
+>  除了標準 UPN 格式，WCF 接受低階格式，例如，cohowinery.com\someone。  
   
  X.509  
  國際認可的標準，適用於定義其所需部分的憑證。  

@@ -1,26 +1,14 @@
 ---
 title: WS 傳輸安全性
-ms.custom: ''
 ms.date: 03/30/2017
-ms.prod: .net-framework
-ms.reviewer: ''
-ms.suite: ''
-ms.technology:
-- dotnet-clr
-ms.tgt_pltfrm: ''
-ms.topic: article
 ms.assetid: 33a20358-5e1b-458a-a6a9-15753bc7b99b
-caps.latest.revision: 22
 author: BrucePerlerMS
-ms.author: bruceper
 manager: mbaldwin
-ms.workload:
-- dotnet
-ms.openlocfilehash: 4a332394877e33f6ab97b4be77da6c3267d85401
-ms.sourcegitcommit: 2042de78fcdceebb6b8ac4b7a292b93e8782cbf5
+ms.openlocfilehash: 66834a8bd8e783c0795cc65b3b197056b7c8da33
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/27/2018
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="ws-transport-security"></a>WS 傳輸安全性
 這個範例會示範搭配 <xref:System.ServiceModel.WSHttpBinding> 繫結來使用 SSL 傳輸安全性。 根據預設，`wsHttpBinding` 繫結會提供 HTTP 通訊。 當針對傳輸安全性設定時，此繫結會支援 HTTPS 通訊。 這個範例根據[入門](../../../../docs/framework/wcf/samples/getting-started-sample.md)，用來實作計算機服務。 `wsHttpBinding` 會指定並設定在用戶端和服務的應用程式組態檔中。  
@@ -33,7 +21,7 @@ ms.lasthandoff: 04/27/2018
 >   
 >  `<InstallDrive>:\WF_WCF_Samples`  
 >   
->  如果此目錄不存在，請移至 [Windows Communication Foundation (WCF) and Windows Workflow Foundation (WF) Samples for .NET Framework 4  (適用於 .NET Framework 4 的 Windows Communication Foundation (WCF) 與 Windows Workflow Foundation (WF) 範例)](http://go.microsoft.com/fwlink/?LinkId=150780) ，以下載所有 [!INCLUDE[indigo1](../../../../includes/indigo1-md.md)] 和 [!INCLUDE[wf1](../../../../includes/wf1-md.md)] 範例。 此範例位於下列目錄。  
+>  如果此目錄不存在，請移至[Windows Communication Foundation (WCF) 和適用於.NET Framework 4 的 Windows Workflow Foundation (WF) 範例](http://go.microsoft.com/fwlink/?LinkId=150780)下載所有 Windows Communication Foundation (WCF) 和[!INCLUDE[wf1](../../../../includes/wf1-md.md)]範例。 此範例位於下列目錄。  
 >   
 >  `<InstallDrive>:\WF_WCF_Samples\WCF\Basic\Binding\WS\wsTransportSecurity`  
   
@@ -64,7 +52,7 @@ ms.lasthandoff: 04/27/2018
   
  指定的位址會使用 https:// 配置。 繫結組態會將安全性模式設定為 `Transport`。 相同的安全性模式必須指定在服務的 Web.config 檔中。  
   
- 當您嘗試存取 https 時，因為此範例中使用的憑證是使用 Makecert.exe 所建立的測試憑證，會顯示安全性警示： 位址，例如https://localhost/servicemodelsamples/service.svc，從您的瀏覽器。 若要允許 [!INCLUDE[indigo1](../../../../includes/indigo1-md.md)] 用戶端適當地使用測試憑證，就必須在用戶端新增某些其他程式碼以便隱藏安全性警示。 使用實際執行憑證時，不需要這個程式碼及伴隨的類別。  
+ 當您嘗試存取 https 時，因為此範例中使用的憑證是使用 Makecert.exe 所建立的測試憑證，會顯示安全性警示： 位址，例如https://localhost/servicemodelsamples/service.svc，從您的瀏覽器。 若要讓 Windows Communication Foundation (WCF) 用戶端使用測試憑證中的位置，具有以便隱藏安全性警示用戶端新增某些其他程式碼。 使用實際執行憑證時，不需要這個程式碼及伴隨的類別。  
 
 ```csharp
 // This code is required only for test certificates like those created by Makecert.exe.  

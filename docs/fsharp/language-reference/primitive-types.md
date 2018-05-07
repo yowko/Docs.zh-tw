@@ -1,17 +1,12 @@
 ---
 title: 基本類型 (F#)
 description: '探索用於 F # 語言的基本基本類型。'
-author: cartermp
-ms.author: phcart
 ms.date: 05/16/2016
-ms.topic: language-reference
-ms.prod: dotnet-fsharp
-ms.devlang: fsharp
-ms.openlocfilehash: 7832151ee211f56547ecad98fc31f1454cb18870
-ms.sourcegitcommit: 03ee570f6f528a7d23a4221dcb26a9498edbdf8c
+ms.openlocfilehash: efe419e5ebf2e49be9433bbd3025ff290d648296
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/28/2018
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="primitive-types"></a>基本類型
 

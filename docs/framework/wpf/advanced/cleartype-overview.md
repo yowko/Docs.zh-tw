@@ -1,27 +1,15 @@
 ---
-title: "ClearType 概觀"
-ms.custom: 
+title: ClearType 概觀
 ms.date: 03/30/2017
-ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.technology: dotnet-wpf
-ms.tgt_pltfrm: 
-ms.topic: article
 helpviewer_keywords:
 - typography [WPF], ClearType technology
 - ClearType [WPF], technology
 ms.assetid: 7e2392e0-75dc-463d-a716-908772782431
-caps.latest.revision: "13"
-author: dotnet-bot
-ms.author: dotnetcontent
-manager: wpickett
-ms.workload: dotnet
-ms.openlocfilehash: eaeeeee921ac5cda3a4ce09dd3ebaeeb11aea3f4
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.openlocfilehash: 1d434fa913d077d72f0f889dc69eccc8a9ed0e9b
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="cleartype-overview"></a>ClearType 概觀
 本主題提供於 [!INCLUDE[TLA#tla_winclient](../../../../includes/tlasharptla-winclient-md.md)] 中找到之 [!INCLUDE[TLA#tla_ct](../../../../includes/tlasharptla-ct-md.md)] 技術的概觀。  
@@ -60,7 +48,7 @@ ms.lasthandoff: 12/22/2017
   
  下例顯示使用 Y 方向消除鋸齒的效果。 在此情況下，字母的上方與下方會顯示平滑的曲線。  
   
- ![使用 ClearType y &#45; 反方向 &#45;文字; 別名](../../../../docs/framework/wpf/advanced/media/wcpsdk-mmgraphics-text-cleartype-overview-04.png "wcpsdk_mmgraphics_text_cleartype_overview_04")  
+ ![使用 ClearType y 文字&#45;反方向&#45;別名](../../../../docs/framework/wpf/advanced/media/wcpsdk-mmgraphics-text-cleartype-overview-04.png "wcpsdk_mmgraphics_text_cleartype_overview_04")  
 以 ClearType Y 方向消除鋸齒功能顯示的文字  
   
 <a name="hardware_acceleration"></a>   
@@ -77,5 +65,5 @@ ms.lasthandoff: 12/22/2017
   
  [ClearType Tuner PowerToy](http://www.microsoft.com/typography/ClearTypePowerToy.mspx)  
   
-## <a name="see-also"></a>請參閱  
+## <a name="see-also"></a>另請參閱  
  [ClearType 登錄設定](../../../../docs/framework/wpf/advanced/cleartype-registry-settings.md)

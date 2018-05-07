@@ -1,13 +1,6 @@
 ---
 title: invalidCERCall MDA
-ms.custom: 
 ms.date: 03/30/2017
-ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.technology: dotnet-clr
-ms.tgt_pltfrm: 
-ms.topic: article
 helpviewer_keywords:
 - invalid CER calls
 - InvalidCERCall MDA
@@ -16,21 +9,18 @@ helpviewer_keywords:
 - CER calls
 - managed debugging assistants (MDAs), CER calls
 ms.assetid: c4577410-602e-44e5-9dab-fea7c55bcdfe
-caps.latest.revision: "14"
 author: mairaw
 ms.author: mairaw
-manager: wpickett
-ms.workload: dotnet
-ms.openlocfilehash: c77c49fef5657d5f69538285149e458209ee9b7c
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.openlocfilehash: 15f41ebd961f25979fe569fd89dd2135a0a6cd41
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="invalidcercall-mda"></a>invalidCERCall MDA
 當方法的限制執行區域 (CER) 圖形內的呼叫沒有可靠性合約或過度弱式合約時，就會啟動 `invalidCERCall` Managed 偵錯助理 (MDA)。 弱式合約是宣告最差狀態損毀範圍超過執行個體傳遞至呼叫的範圍，也就是 <xref:System.AppDomain> 或處理序狀態可能會損毀，或在 CER 內呼叫時，其結果不一定是決定性可計算結果。  
   
-## <a name="symptoms"></a>徵兆   
+## <a name="symptoms"></a>徵兆  
  在 CER 中執行程式碼時出現非預期的結果。 沒有特定的徵兆。 它們可能是未預期的 <xref:System.OutOfMemoryException>、<xref:System.Threading.ThreadAbortException> 或在呼叫不可靠的方法時發生的其他例外狀況，因為執行階段未事先準備或保護它免於執行階段的 <xref:System.Threading.ThreadAbortException> 例外狀況。 更大的威脅就是，在執行階段因方法造成的任何例外狀況，都可能讓 <xref:System.AppDomain> 或處理序處於不穩定的狀態，違反 CER 目標。 建立 CER 的原因是為了避免這類的狀態損毀。 損毀狀態的徵兆隨應用程式而異，因為應用程式之間的一致狀態定義各不相同。  
   
 ## <a name="cause"></a>原因  
@@ -63,7 +53,7 @@ ms.lasthandoff: 12/22/2017
 </mdaConfig>  
 ```  
   
-## <a name="see-also"></a>請參閱  
+## <a name="see-also"></a>另請參閱  
  <xref:System.Runtime.CompilerServices.RuntimeHelpers.PrepareMethod%2A>  
  <xref:System.Runtime.ConstrainedExecution>  
  [診斷 Managed 偵錯助理的錯誤](../../../docs/framework/debug-trace-profile/diagnosing-errors-with-managed-debugging-assistants.md)

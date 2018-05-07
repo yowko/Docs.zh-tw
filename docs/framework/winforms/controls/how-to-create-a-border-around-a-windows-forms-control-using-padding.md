@@ -1,13 +1,6 @@
 ---
-title: "如何：使用邊框距離在 Windows Form 控制項周圍建立框線"
-ms.custom: 
+title: 如何：使用邊框距離在 Windows Form 控制項周圍建立框線
 ms.date: 03/30/2017
-ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.technology: dotnet-winforms
-ms.tgt_pltfrm: 
-ms.topic: article
 dev_langs:
 - csharp
 - vb
@@ -21,16 +14,11 @@ helpviewer_keywords:
 - margins [Windows Forms], Windows Forms
 - Margin property [Windows Forms]
 ms.assetid: bac7ed4d-a163-4259-98bd-155a36345890
-caps.latest.revision: "5"
-author: dotnet-bot
-ms.author: dotnetcontent
-manager: wpickett
-ms.workload: dotnet
-ms.openlocfilehash: 7b8fc8774e1f861db989b05678235ea34e38318c
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.openlocfilehash: 7866b78afd768fa99ceacfdee13c086a9ac00e0a
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="how-to-create-a-border-around-a-windows-forms-control-using-padding"></a>如何：使用邊框距離在 Windows Form 控制項周圍建立框線
 下列程式碼範例示範如何建立框線或外框<xref:System.Windows.Forms.RichTextBox>控制項。 此範例設定的值<xref:System.Windows.Forms.Panel>控制項的<xref:System.Windows.Forms.Padding>5 和集合的屬性<xref:System.Windows.Forms.Control.Dock%2A>屬性的子系<xref:System.Windows.Forms.RichTextBox>控制權傳輸至<xref:System.Windows.Forms.DockStyle.Fill>。 <xref:System.Windows.Forms.Control.BackColor%2A>的<xref:System.Windows.Forms.Panel>控制設為  <xref:System.Drawing.Color.Blue%2A>，它會建立周圍的藍色框線<xref:System.Windows.Forms.RichTextBox>控制項。  
@@ -39,6 +27,6 @@ ms.lasthandoff: 12/22/2017
  [!code-csharp[System.Windows.Forms.Padding#1](../../../../samples/snippets/csharp/VS_Snippets_Winforms/System.Windows.Forms.Padding/CS/Form1.cs#1)]
  [!code-vb[System.Windows.Forms.Padding#1](../../../../samples/snippets/visualbasic/VS_Snippets_Winforms/System.Windows.Forms.Padding/VB/Form1.vb#1)]  
   
-## <a name="see-also"></a>請參閱  
+## <a name="see-also"></a>另請參閱  
  <xref:System.Windows.Forms.Padding>  
  [Windows Forms 控制項的邊界和邊框距離](../../../../docs/framework/winforms/controls/margin-and-padding-in-windows-forms-controls.md)

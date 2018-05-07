@@ -1,14 +1,6 @@
 ---
-title: "ICorProfilerInfo::SetILInstrumentedCodeMap 方法"
-ms.custom: 
+title: ICorProfilerInfo::SetILInstrumentedCodeMap 方法
 ms.date: 03/30/2017
-ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.technology:
-- dotnet-clr
-ms.tgt_pltfrm: 
-ms.topic: reference
 api_name:
 - ICorProfilerInfo.SetILInstrumentedCodeMap
 api_location:
@@ -23,17 +15,13 @@ helpviewer_keywords:
 ms.assetid: bce1dcf8-b4ec-4e73-a917-f2df1ad49c8a
 topic_type:
 - apiref
-caps.latest.revision: 
 author: mairaw
 ms.author: mairaw
-manager: wpickett
-ms.workload:
-- dotnet
-ms.openlocfilehash: 127f6d76e85ed30f1407d16f8d81c93dd2941960
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.openlocfilehash: 8ecb80de1ae46b072df4bab8357e78e7a22ae298
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="icorprofilerinfosetilinstrumentedcodemap-method"></a>ICorProfilerInfo::SetILInstrumentedCodeMap 方法
 設定使用指定的 Microsoft intermediate language (MSIL) 對應項目指定的函式的程式碼對應。  
@@ -65,7 +53,7 @@ HRESULT SetILInstrumentedCodeMap(
  [in]COR_IL_MAP 結構陣列，其中每個指定的 MSIL 位移。  
   
 ## <a name="remarks"></a>備註  
- 分析工具通常會以檢測方法 （例如，當到達指定的原始程式行時，通知） 插入陳述式的原始程式碼內的方法。 `SetILInstrumentedCodeMap`可讓分析工具將原始的 MSIL 指示對應至其新位置。 分析工具可以使用[icorprofilerinfo:: Getiltonativemapping](../../../../docs/framework/unmanaged-api/profiling/icorprofilerinfo-getiltonativemapping-method.md)方法來取得原始的 MSIL 位移指定的原生位移。  
+ 分析工具通常會以檢測方法 （例如，當到達指定的原始程式行時，通知） 插入陳述式的原始程式碼內的方法。 `SetILInstrumentedCodeMap` 可讓分析工具將原始的 MSIL 指示對應至其新位置。 分析工具可以使用[icorprofilerinfo:: Getiltonativemapping](../../../../docs/framework/unmanaged-api/profiling/icorprofilerinfo-getiltonativemapping-method.md)方法來取得原始的 MSIL 位移指定的原生位移。  
   
  偵錯工具會假設每個舊的位移，是指原始、 未修改的 MSIL 程式碼中的 MSIL 位移，並且每個新的位移，是指在新的已檢測的程式碼的 MSIL 位移。 此對應應該是以遞增順序排序。 逐步執行才能正常運作，請遵循這些指導方針：  
   
@@ -100,7 +88,7 @@ HRESULT SetILInstrumentedCodeMap(
   
  **程式庫：** CorGuids.lib  
   
- **.NET framework 版本：**[!INCLUDE[net_current_v11plus](../../../../includes/net-current-v11plus-md.md)]  
+ **.NET framework 版本：** [!INCLUDE[net_current_v11plus](../../../../includes/net-current-v11plus-md.md)]  
   
-## <a name="see-also"></a>請參閱  
+## <a name="see-also"></a>另請參閱  
  [ICorProfilerInfo 介面](../../../../docs/framework/unmanaged-api/profiling/icorprofilerinfo-interface.md)

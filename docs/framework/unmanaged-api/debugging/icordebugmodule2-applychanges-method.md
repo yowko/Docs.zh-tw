@@ -1,14 +1,6 @@
 ---
-title: "ICorDebugModule2::ApplyChanges 方法"
-ms.custom: 
+title: ICorDebugModule2::ApplyChanges 方法
 ms.date: 03/30/2017
-ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.technology:
-- dotnet-clr
-ms.tgt_pltfrm: 
-ms.topic: reference
 api_name:
 - ICorDebugModule2.ApplyChanges
 api_location:
@@ -23,17 +15,13 @@ helpviewer_keywords:
 ms.assetid: 96fa3406-6a6f-41a1-88c6-d9bc5d1a16d1
 topic_type:
 - apiref
-caps.latest.revision: 
 author: rpetrusha
 ms.author: ronpet
-manager: wpickett
-ms.workload:
-- dotnet
-ms.openlocfilehash: 4855b7a42d471304d000465a0437f29bdff05494
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.openlocfilehash: 5a406e945a67352bc7f126b40bd56f4a11dd693b
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="icordebugmodule2applychanges-method"></a>ICorDebugModule2::ApplyChanges 方法
 適用於執行的處理序的中繼資料中的變更和 Microsoft intermediate language (MSIL) 程式碼中的變更。  
@@ -65,7 +53,7 @@ HRESULT ApplyChanges (
  [in]包含更新的 MSIL 程式碼的緩衝區。  
   
 ## <a name="remarks"></a>備註  
- `pbMetadata`參數的特殊差異中繼資料格式 (如輸出所[imetadataemit2:: Savedeltatomemory](../../../../docs/framework/unmanaged-api/metadata/imetadataemit2-savedeltatomemory-method.md))。 `pbMetadata`接受做為基底的上一個中繼資料，並描述要套用至該基底的個別變更。  
+ `pbMetadata`參數的特殊差異中繼資料格式 (如輸出所[imetadataemit2:: Savedeltatomemory](../../../../docs/framework/unmanaged-api/metadata/imetadataemit2-savedeltatomemory-method.md))。 `pbMetadata` 接受做為基底的上一個中繼資料，並描述要套用至該基底的個別變更。  
   
  相反地， `pbIL[`] 參數包含更新的方法，新的 MSIL，而且完全取代先前的 MSIL 方法  
   
@@ -82,4 +70,4 @@ HRESULT ApplyChanges (
   
  **程式庫：** CorGuids.lib  
   
- **.NET framework 版本：**[!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]
+ **.NET framework 版本：** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]

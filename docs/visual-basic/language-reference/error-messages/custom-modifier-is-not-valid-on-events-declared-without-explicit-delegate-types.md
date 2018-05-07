@@ -1,28 +1,19 @@
 ---
-title: '&#39;自訂 &#39;修飾詞宣告沒有以明確委派類型的事件中無效'
+title: '&#39;自訂&#39;修飾詞宣告沒有以明確委派類型的事件中無效'
 ms.date: 07/20/2015
-ms.prod: .net
-ms.reviewer: ''
-ms.suite: ''
-ms.technology:
-- devlang-visual-basic
-ms.topic: article
 f1_keywords:
 - vbc31122
 - bc31122
 helpviewer_keywords:
 - BC31122
 ms.assetid: 6911f0d1-641a-473b-906d-8ee5681194be
-caps.latest.revision: 9
-author: dotnet-bot
-ms.author: dotnetcontent
-ms.openlocfilehash: 844bd033ea05e373b04a04f80777af77179c1263
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.openlocfilehash: 3f08bbbbbac4a01dfbac8d15cf9285c01262618a
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 05/04/2018
 ---
-# <a name="39custom39-modifier-is-not-valid-on-events-declared-without-explicit-delegate-types"></a>&#39;自訂 &#39;修飾詞宣告沒有以明確委派類型的事件中無效
+# <a name="39custom39-modifier-is-not-valid-on-events-declared-without-explicit-delegate-types"></a>&#39;自訂&#39;修飾詞宣告沒有以明確委派類型的事件中無效
 不同於非自訂事件`Custom Event`宣告需要`As`子句之後明確地指定事件的委派類型的事件名稱。  
   
  非自訂的事件可能會定義與`As`子句和明確委派類型，或立即使用參數清單之後的事件名稱。  

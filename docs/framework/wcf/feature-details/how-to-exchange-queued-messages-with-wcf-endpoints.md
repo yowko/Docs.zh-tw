@@ -1,34 +1,20 @@
 ---
 title: HOW TO：與 WCF 端點交換佇列訊息
-ms.custom: ''
 ms.date: 03/30/2017
-ms.prod: .net-framework
-ms.reviewer: ''
-ms.suite: ''
-ms.technology:
-- dotnet-clr
-ms.tgt_pltfrm: ''
-ms.topic: article
 dev_langs:
 - csharp
 - vb
 ms.assetid: 938e7825-f63a-4c3d-b603-63772fabfdb3
-caps.latest.revision: 18
-author: dotnet-bot
-ms.author: dotnetcontent
-manager: wpickett
-ms.workload:
-- dotnet
-ms.openlocfilehash: 2f44f3a58e0a8283753cb682f25cf2f167450724
-ms.sourcegitcommit: 94d33cadc5ff81d2ac389bf5f26422c227832052
+ms.openlocfilehash: ab6ca46fad8ee1ededef5cc14a9654b79b2e6a8e
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/30/2018
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="how-to-exchange-queued-messages-with-wcf-endpoints"></a>HOW TO：與 WCF 端點交換佇列訊息
-佇列可確保用戶端與 [!INCLUDE[indigo1](../../../../includes/indigo1-md.md)] 服務之間發生可靠的傳訊，即使服務在通訊時無法使用也一樣。 下列程序顯示如何在實作 [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] 服務時，使用標準佇列繫結確保在用戶端與服務間建立永久性通訊。  
+佇列確保即使服務目前無法在通訊時，可信賴傳訊不會發生在用戶端和 Windows Communication Foundation (WCF) 服務，之間。 下列程序示範如何實作 WCF 服務時，持久的用戶端與服務之間通訊使用標準佇列繫結確保。  
   
- 此章節解釋如何在 <xref:System.ServiceModel.NetMsmqBinding> 用戶端與 [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] 服務之間使用 [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] 處理佇列通訊。  
+ 本節說明如何使用<xref:System.ServiceModel.NetMsmqBinding>WCF 用戶端與 WCF 服務之間的佇列通訊。  
   
 ### <a name="to-use-queuing-in-a-wcf-service"></a>若要在 WCF 服務中使用佇列  
   
@@ -54,7 +40,7 @@ ms.lasthandoff: 04/30/2018
      [!code-csharp[S_Msmq_Transacted#4](../../../../samples/snippets/csharp/VS_Snippets_CFX/s_msmq_transacted/cs/hostapp.cs#4)]
      [!code-vb[S_Msmq_Transacted#4](../../../../samples/snippets/visualbasic/VS_Snippets_CFX/s_msmq_transacted/vb/hostapp.vb#4)]  
   
-5.  在組態中定義 <xref:System.ServiceModel.Description.ServiceEndpoint>，以指定服務位址，並使用標準 <xref:System.ServiceModel.NetMsmqBinding> 繫結。 如需有關使用[!INCLUDE[indigo2](../../../../includes/indigo2-md.md)]組態，請參閱[設定的 Windows Communication Foundation 應用程式](http://msdn.microsoft.com/library/13cb368e-88d4-4c61-8eed-2af0361c6d7a)。  
+5.  在組態中定義 <xref:System.ServiceModel.Description.ServiceEndpoint>，以指定服務位址，並使用標準 <xref:System.ServiceModel.NetMsmqBinding> 繫結。 如需有關如何使用 WCF 組態的詳細資訊，請參閱[設定的 Windows Communication Foundation 應用程式](http://msdn.microsoft.com/library/13cb368e-88d4-4c61-8eed-2af0361c6d7a)。  
   
   
   
@@ -65,7 +51,7 @@ ms.lasthandoff: 04/30/2018
   
 ### <a name="to-create-a-client-for-the-queued-service"></a>若要建立佇列服務的用戶端  
   
-1.  下列範例示範如何執行裝載應用程式，以及使用 Svcutil.exe 工具建立 [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] 用戶端。  
+1.  下列範例會示範如何執行裝載應用程式，並使用 Svcutil.exe 工具來建立 WCF 用戶端。  
   
     ```  
     svcutil http://localhost:8000/ServiceModelSamples/service  
@@ -75,7 +61,7 @@ ms.lasthandoff: 04/30/2018
   
   
   
-3.  建立交易範圍以寫入交易式佇列、呼叫 `SubmitPurchaseOrder` 作業和關閉 [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] 用戶端，如下列範例所示。  
+3.  建立交易範圍以寫入異動式佇列，也就是呼叫`SubmitPurchaseOrder`作業和關閉 WCF 用戶端，如下列範例所示。  
   
      [!code-csharp[S_Msmq_Transacted#8](../../../../samples/snippets/csharp/VS_Snippets_CFX/s_msmq_transacted/cs/client.cs#8)]
      [!code-vb[S_Msmq_Transacted#8](../../../../samples/snippets/visualbasic/VS_Snippets_CFX/s_msmq_transacted/vb/client.vb#8)]  

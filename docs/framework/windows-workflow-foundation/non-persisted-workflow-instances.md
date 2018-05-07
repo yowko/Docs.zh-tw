@@ -1,23 +1,12 @@
 ---
-title: "非持續性的工作流程執行個體"
-ms.custom: 
+title: 非持續性的工作流程執行個體
 ms.date: 03/30/2017
-ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.tgt_pltfrm: 
-ms.topic: article
 ms.assetid: 5e01af77-6b14-4964-91a5-7dfd143449c0
-caps.latest.revision: "5"
-author: dotnet-bot
-ms.author: dotnetcontent
-manager: wpickett
-ms.workload: dotnet
-ms.openlocfilehash: 54ed92ee666a55b52db22abbbe46922189b3f8fb
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.openlocfilehash: 410451f0dfeb91111e77634245aa786c4afc5b04
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="non-persisted-workflow-instances"></a>非持續性的工作流程執行個體
 當建立工作流程的新執行個體，將其狀態保存在 <xref:System.Activities.DurableInstancing.SqlWorkflowInstanceStore> 中時，服務主機會在執行個體存放區中為該服務建立項目。 接下來，當第一次保存工作流程執行個體時，<xref:System.Activities.DurableInstancing.SqlWorkflowInstanceStore> 會儲存目前的執行個體狀態。 如果此工作流程裝載於 Windows 處理序啟用服務中，當初次保存執行個體時，服務部署資料也會寫入執行個體存放區。  

@@ -1,28 +1,16 @@
 ---
-title: "x:Shared 屬性"
-ms.custom: 
+title: x:Shared 屬性
 ms.date: 03/30/2017
-ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.technology: dotnet-wpf
-ms.tgt_pltfrm: 
-ms.topic: article
 helpviewer_keywords:
 - XAML [XAML Services], x:Shared attribute
 - x:Shared attribute [XAML Services]
 - Shared attribute in XAML [XAML Services]
 ms.assetid: c8cff434-2785-405f-9f95-16deb34c9e64
-caps.latest.revision: "16"
-author: wadepickett
-ms.author: wpickett
-manager: wpickett
-ms.workload: dotnet
-ms.openlocfilehash: c9cc5e2bff9cc2591c7a12630da5422dbf73713a
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.openlocfilehash: bee37735382249d2919ef870ca495e6096532352
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="xshared-attribute"></a>x:Shared 屬性
 當設定為`false`，修改 WPF 擷取資源的行為，讓屬性化的資源的要求建立每個要求而不是共用相同的執行個體的所有要求的新執行個體。  
@@ -36,7 +24,7 @@ ms.lasthandoff: 12/22/2017
 ```  
   
 ## <a name="remarks"></a>備註  
- `x:Shared`對應至 XAML 語言 XAML 命名空間和.NET Framework XAML 服務和其 XAML 讀取器辨識為有效的 XAML 語言項目。 不過，所述的功能`x:Shared`才相關 WPF 應用程式和 WPF XAML 剖析器。 在 WPF 中，`x:Shared`時，只做為屬性套用至存在於 WPF 物件<xref:System.Windows.ResourceDictionary>。 其他使用方式剖析例外狀況或其他錯誤，不擲回，但是它們沒有任何作用。  
+ `x:Shared` 對應至 XAML 語言 XAML 命名空間和.NET Framework XAML 服務和其 XAML 讀取器辨識為有效的 XAML 語言項目。 不過，所述的功能`x:Shared`才相關 WPF 應用程式和 WPF XAML 剖析器。 在 WPF 中，`x:Shared`時，只做為屬性套用至存在於 WPF 物件<xref:System.Windows.ResourceDictionary>。 其他使用方式剖析例外狀況或其他錯誤，不擲回，但是它們沒有任何作用。  
   
  意義`x:Shared`XAML 語言規格中未指定。 其他 XAML 實作中的，例如建置在.NET Framework XAML 服務 中，不一定會提供資源共用的支援。 這類的 XAML 實作提供支援也可用的 framework 中的類似行為`x:Shared`值。  
   
@@ -48,7 +36,7 @@ ms.lasthandoff: 12/22/2017
   
  明確指定`x:Shared="true"`很罕見，因為已預設值。 沒有對等的程式碼直接`x:Shared`WPF 中物件模型; 它只能指定在 XAML 使用，必須處理預設 WPF 行為或在載入路徑上的中繼 XAML 節點資料流中，如果使用.NET Framework XAML Se 處理rvices 和其 XAML 讀取器。  
   
- 案例`x:Shared="false"`是如果您定義<xref:System.Windows.FrameworkElement>或<xref:System.Windows.FrameworkContentElement>衍生類別做為資源，然後您引入的項目資源內容的模型。 `x:Shared="false"`可讓在相同集合中多次推出的項目資源 (例如<xref:System.Windows.Controls.UIElementCollection>)。 不含`x:Shared="false"`這是無效的因為集合會強制執行唯一性的內容。 不過，`x:Shared="false"`行為會建立另一個資源，而不是傳回相同的執行個體的相同執行個體。  
+ 案例`x:Shared="false"`是如果您定義<xref:System.Windows.FrameworkElement>或<xref:System.Windows.FrameworkContentElement>衍生類別做為資源，然後您引入的項目資源內容的模型。 `x:Shared="false"` 可讓在相同集合中多次推出的項目資源 (例如<xref:System.Windows.Controls.UIElementCollection>)。 不含`x:Shared="false"`這是無效的因為集合會強制執行唯一性的內容。 不過，`x:Shared="false"`行為會建立另一個資源，而不是傳回相同的執行個體的相同執行個體。  
   
  另一個案例`x:Shared="false"`是如果您使用<xref:System.Windows.Freezable>動畫值，但想来修改每個動畫基礎資源的資源。  
   
@@ -60,7 +48,7 @@ ms.lasthandoff: 12/22/2017
   
 -   <xref:System.Windows.ResourceDictionary>所包含的項目必須不在另一個巢狀<xref:System.Windows.ResourceDictionary>。 例如，您不能使用`x:Shared`中項目的<xref:System.Windows.ResourceDictionary>裡<xref:System.Windows.Style>已經<xref:System.Windows.ResourceDictionary>項目。  
   
-## <a name="see-also"></a>請參閱  
+## <a name="see-also"></a>另請參閱  
  <xref:System.Windows.ResourceDictionary>  
  [XAML 資源](../../../docs/framework/wpf/advanced/xaml-resources.md)  
  [基底項目](../../../docs/framework/wpf/advanced/base-elements.md)

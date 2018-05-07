@@ -1,13 +1,6 @@
 ---
-title: "GDI+ 中的開放型和封閉型曲線"
-ms.custom: 
+title: GDI+ 中的開放型和封閉型曲線
 ms.date: 03/30/2017
-ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.technology: dotnet-winforms
-ms.tgt_pltfrm: 
-ms.topic: article
 dev_langs:
 - csharp
 - vb
@@ -17,16 +10,11 @@ helpviewer_keywords:
 - curves [Windows Forms], drawing
 - curves
 ms.assetid: 08d2cc9a-dc9d-4eed-bcbb-2c8e2ca5d3ae
-caps.latest.revision: "15"
-author: dotnet-bot
-ms.author: dotnetcontent
-manager: wpickett
-ms.workload: dotnet
-ms.openlocfilehash: cde1aae6196ef8b773b8c072a42c700924f9c8cc
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.openlocfilehash: 47f420184ac384ab11054d1cc3e767ab7f618234
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="open-and-closed-curves-in-gdi"></a>GDI+ 中的開放型和封閉型曲線
 下圖顯示兩個曲線： 開啟單一，另一個已關閉。  
@@ -59,7 +47,7 @@ ms.lasthandoff: 12/22/2017
   
  ![字串之路徑中的](../../../../docs/framework/winforms/advanced/media/aboutgdip02-art26.gif "Aboutgdip02_art26")  
   
-## <a name="see-also"></a>請參閱  
+## <a name="see-also"></a>另請參閱  
  <xref:System.Drawing.Drawing2D.GraphicsPath?displayProperty=nameWithType>  
  <xref:System.Drawing.Pen?displayProperty=nameWithType>  
  <xref:System.Drawing.Point?displayProperty=nameWithType>  

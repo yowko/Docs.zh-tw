@@ -1,17 +1,12 @@
 ---
 title: 延遲運算 (F#)
 description: '了解 F # 延遲運算如何改善您的應用程式和程式庫的效能。'
-author: cartermp
-ms.author: phcart
 ms.date: 05/16/2016
-ms.topic: language-reference
-ms.prod: dotnet-fsharp
-ms.devlang: fsharp
-ms.openlocfilehash: 72dc5a14a845b52ae2512314d730516ca0cf4b9d
-ms.sourcegitcommit: 03ee570f6f528a7d23a4221dcb26a9498edbdf8c
+ms.openlocfilehash: 1c4eb6ab247c44a04a9d145185e2de7ec01b8e0a
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/28/2018
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="lazy-computations"></a>延遲運算
 

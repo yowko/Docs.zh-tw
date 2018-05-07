@@ -1,14 +1,6 @@
 ---
-title: "ICorRuntimeHost::CreateDomain 方法"
-ms.custom: 
+title: ICorRuntimeHost::CreateDomain 方法
 ms.date: 03/30/2017
-ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.technology:
-- dotnet-clr
-ms.tgt_pltfrm: 
-ms.topic: reference
 api_name:
 - ICorRuntimeHost.CreateDomain
 api_location:
@@ -23,17 +15,13 @@ helpviewer_keywords:
 ms.assetid: b96c5ef3-a9df-4c7c-9952-432d3272cb5c
 topic_type:
 - apiref
-caps.latest.revision: 
 author: rpetrusha
 ms.author: ronpet
-manager: wpickett
-ms.workload:
-- dotnet
-ms.openlocfilehash: fe0adad8397f42716368691abbb1d1c303fced97
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.openlocfilehash: ea2353f1375667619db47ac5e1f037ce68dbded5
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="icorruntimehostcreatedomain-method"></a>ICorRuntimeHost::CreateDomain 方法
 建立應用程式定義域。 呼叫端會收到類型的介面指標<xref:System._AppDomain>型別的執行個體<xref:System.AppDomain?displayProperty=nameWithType>。  
@@ -76,7 +64,7 @@ HRESULT CreateDomain (
   
  **.NET framework 版本：** 1.0、 1.1  
   
-## <a name="see-also"></a>請參閱  
+## <a name="see-also"></a>另請參閱  
  <xref:System._AppDomain>  
  <xref:System.AppDomain>  
  [ICorRuntimeHost 介面](../../../../docs/framework/unmanaged-api/hosting/icorruntimehost-interface.md)

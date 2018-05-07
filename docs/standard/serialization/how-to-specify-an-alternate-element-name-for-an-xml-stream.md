@@ -1,12 +1,6 @@
 ---
-title: "HOW TO：指定 XML 資料流的替代元素名稱"
-ms.custom: 
+title: HOW TO：指定 XML 資料流的替代元素名稱
 ms.date: 03/30/2017
-ms.prod: .net
-ms.reviewer: 
-ms.suite: 
-ms.tgt_pltfrm: 
-ms.topic: article
 dev_langs:
 - csharp
 - vb
@@ -18,18 +12,11 @@ helpviewer_keywords:
 - classes, overriding
 - overriding classes
 ms.assetid: 5cc1c0b0-f94b-4525-9a41-88a582cd6668
-caps.latest.revision: "7"
-author: dotnet-bot
-ms.author: dotnetcontent
-manager: wpickett
-ms.workload:
-- dotnet
-- dotnetcore
-ms.openlocfilehash: a41dbd6dd145e0dcd90ffb67106be9902ebc1721
-ms.sourcegitcommit: e7f04439d78909229506b56935a1105a4149ff3d
+ms.openlocfilehash: d0e48c9c28c8d9447b22fa5ea7a8024442e09295
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 12/23/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="how-to-specify-an-alternate-element-name-for-an-xml-stream"></a>HOW TO：指定 XML 資料流的替代元素名稱
 [程式碼範例](#cpconoverridingserializationofclasseswithxmlattributeoverridesclassanchor1)  
@@ -104,7 +91,7 @@ public class SerializeOverride()
 </Book>  
 ```  
   
-## <a name="see-also"></a>請參閱  
+## <a name="see-also"></a>另請參閱  
  <xref:System.Xml.Serialization.XmlElementAttribute>  
  <xref:System.Xml.Serialization.XmlAttributes>  
  <xref:System.Xml.Serialization.XmlAttributeOverrides>  

@@ -1,28 +1,16 @@
 ---
-title: "如何：使用設計工具群組 Windows Form ListView 控制項中的項目"
-ms.custom: 
+title: 如何：使用設計工具群組 Windows Form ListView 控制項中的項目
 ms.date: 03/30/2017
-ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.technology: dotnet-winforms
-ms.tgt_pltfrm: 
-ms.topic: article
 helpviewer_keywords:
 - ListView control [Windows Forms], grouping items
 - grouping
 - groups [Windows Forms], in Windows Forms controls
 ms.assetid: 8b615000-69d9-4c64-acaf-b54fa09b69e3
-caps.latest.revision: "8"
-author: dotnet-bot
-ms.author: dotnetcontent
-manager: wpickett
-ms.workload: dotnet
-ms.openlocfilehash: f5e86ecdad66c9e58d691b18126c1fbf782e3130
-ms.sourcegitcommit: c0dd436f6f8f44dc80dc43b07f6841a00b74b23f
+ms.openlocfilehash: c532cadc5b42c26f1598c4e7586309cf690456bb
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 01/19/2018
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="how-to-group-items-in-a-windows-forms-listview-control-using-the-designer"></a>如何：使用設計工具群組 Windows Form ListView 控制項中的項目
 分組功能<xref:System.Windows.Forms.ListView>控制項可讓您以顯示群組中的項目相關的設定。 這些群組是在螢幕上分隔包含群組標題的水平群組標頭。 您可以使用<xref:System.Windows.Forms.ListView>群組，使導覽更容易的大型清單分組為項目依字母順序，依日期，或任何其他邏輯群組。 下圖顯示一些群組項目。  
@@ -34,7 +22,7 @@ ms.lasthandoff: 01/19/2018
  若要啟用群組，您必須先建立一或多個<xref:System.Windows.Forms.ListViewGroup>物件在設計工具或以程式設計的方式。 一旦已定義群組，您可以指定項目。  
   
 > [!NOTE]
->  <xref:System.Windows.Forms.ListView>群組是僅適用於[!INCLUDE[WinXpFamily](../../../../includes/winxpfamily-md.md)]當您的應用程式呼叫<xref:System.Windows.Forms.Application.EnableVisualStyles%2A?displayProperty=nameWithType>方法。 在舊版作業系統，與群組相關的任何程式碼都無效，不會出現群組。 如需詳細資訊，請參閱<xref:System.Windows.Forms.ListView.Groups%2A?displayProperty=nameWithType>。  
+>  <xref:System.Windows.Forms.ListView> 群組是僅適用於[!INCLUDE[WinXpFamily](../../../../includes/winxpfamily-md.md)]當您的應用程式呼叫<xref:System.Windows.Forms.Application.EnableVisualStyles%2A?displayProperty=nameWithType>方法。 在舊版作業系統，與群組相關的任何程式碼都無效，不會出現群組。 如需詳細資訊，請參閱<xref:System.Windows.Forms.ListView.Groups%2A?displayProperty=nameWithType>。  
 >   
 >  根據您目前使用的設定或版本，您所看到的對話方塊與功能表命令可能會與 [說明] 中描述的不同。 若要變更設定，請從 [ **工具** ] 功能表中選取 [ **匯入和匯出設定** ]。 如需詳細資訊，請參閱 [在 Visual Studio 中自訂開發設定](http://msdn.microsoft.com/library/22c4debb-4e31-47a8-8f19-16f328d7dcd3)  
   
@@ -56,7 +44,7 @@ ms.lasthandoff: 01/19/2018
   
 3.  選取<xref:System.Windows.Forms.ListViewItem.Group%2A>屬性，並從下拉式清單中選擇群組。  
   
-## <a name="see-also"></a>請參閱  
+## <a name="see-also"></a>另請參閱  
  <xref:System.Windows.Forms.ListView>  
  <xref:System.Windows.Forms.ListView.Groups%2A>  
  <xref:System.Windows.Forms.ListViewGroup>  

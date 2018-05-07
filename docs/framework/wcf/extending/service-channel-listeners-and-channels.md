@@ -1,24 +1,12 @@
 ---
-title: "服務：通道接聽程式與通道"
-ms.custom: 
+title: 服務：通道接聽程式與通道
 ms.date: 03/30/2017
-ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.technology: dotnet-clr
-ms.tgt_pltfrm: 
-ms.topic: article
 ms.assetid: 8ccbe0e8-7e55-441d-80de-5765f67542fa
-caps.latest.revision: "8"
-author: dotnet-bot
-ms.author: dotnetcontent
-manager: wpickett
-ms.workload: dotnet
-ms.openlocfilehash: b6f0eeb0d859f6fe508019085709464fab806ea2
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
-ms.translationtype: MT
+ms.openlocfilehash: 5f5acff6ca933006707a863ea5ba04cd01cfb93e
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="service-channel-listeners-and-channels"></a>服務：通道接聽程式與通道
 通道物件共有下列三種類別：通道、通道接聽程式和通道處理站。 通道是介於應用程式與通道堆疊之間的介面。 通道接聽程式負責建立接收 (或接聽) 端的通道，一般用來回應新傳入的訊息或連線。 通道處理站負責建立傳送端的通道，以初始化與端點的通訊。  

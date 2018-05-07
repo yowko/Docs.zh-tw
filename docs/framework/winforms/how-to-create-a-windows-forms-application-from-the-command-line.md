@@ -1,10 +1,6 @@
 ---
 title: 如何： 從命令列建立 Windows Forms 應用程式
 ms.date: 03/14/2018
-ms.prod: .net-framework
-ms.technology:
-- dotnet-winforms
-ms.topic: article
 dev_langs:
 - csharp
 - vb
@@ -15,13 +11,11 @@ helpviewer_keywords:
 ms.assetid: 45ad3f8b-1c26-4c9f-91a9-3bb0759a47a4
 author: rpetrusha
 ms.author: ronpet
-ms.workload:
-- dotnet
-ms.openlocfilehash: 79fda0f5f455cbac50c0c1b51f0cd3bef4c5bfbc
-ms.sourcegitcommit: 498799639937c89de777361aab74261efe7b79ea
+ms.openlocfilehash: fe7c1eddd67e678e7086d948efb854a6b4b52f6e
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 03/22/2018
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="how-to-create-a-windows-forms-application-from-the-command-line"></a>如何： 從命令列建立 Windows Forms 應用程式
 下列程序說明若要從命令列建立及執行 Windows Forms 應用程式，所必須完成的基本步驟。 在 Visual Studio 中，對這些程序有廣泛的支援。  另請參閱[逐步解說： 建立簡單的 Windows Form](http://msdn.microsoft.com/library/z9w2f38k\(v=vs.100\))。  

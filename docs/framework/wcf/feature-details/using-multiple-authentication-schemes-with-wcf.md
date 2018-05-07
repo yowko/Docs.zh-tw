@@ -1,24 +1,12 @@
 ---
-title: "搭配 WCF 使用多個驗證配置"
-ms.custom: 
+title: 搭配 WCF 使用多個驗證配置
 ms.date: 03/30/2017
-ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.technology: dotnet-clr
-ms.tgt_pltfrm: 
-ms.topic: article
 ms.assetid: f32a56a0-e2b2-46bf-a302-29e1275917f9
-caps.latest.revision: "4"
-author: dotnet-bot
-ms.author: dotnetcontent
-manager: wpickett
-ms.workload: dotnet
-ms.openlocfilehash: e570185b7df06a47e8c7fb3319328e760079415d
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.openlocfilehash: 140211f10f7cdc88a3df8eb8ea1c30df73b0c4c7
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="using-multiple-authentication-schemes-with-wcf"></a>搭配 WCF 使用多個驗證配置
 WCF 現在允許您在單一端點上指定多個驗證配置。 此外，Web 裝載服務可以直接從 IIS 繼承驗證設定。 自我裝載服務可以指定可使用的驗證配置。 如需有關如何在 IIS 中設定驗證設定的詳細資訊，請參閱[IIS 驗證](http://go.microsoft.com/fwlink/?LinkId=232458)  
@@ -130,7 +118,7 @@ else
     </binding>  
 ```  
   
-## <a name="see-also"></a>請參閱  
+## <a name="see-also"></a>另請參閱  
  [繫結和安全性](../../../../docs/framework/wcf/feature-details/bindings-and-security.md)  
  [端點：位址、繫結和合約](../../../../docs/framework/wcf/feature-details/endpoints-addresses-bindings-and-contracts.md)  
  [設定系統提供的繫結](../../../../docs/framework/wcf/feature-details/configuring-system-provided-bindings.md)  

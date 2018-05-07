@@ -1,34 +1,20 @@
 ---
 title: HOW TO：使用組態檔發行服務的中繼資料
-ms.custom: ''
 ms.date: 03/30/2017
-ms.prod: .net-framework
-ms.reviewer: ''
-ms.suite: ''
-ms.technology:
-- dotnet-clr
-ms.tgt_pltfrm: ''
-ms.topic: article
 ms.assetid: f061443f-92df-4824-b36a-609c4cd14a17
-caps.latest.revision: 24
-author: dotnet-bot
-ms.author: dotnetcontent
-manager: wpickett
-ms.workload:
-- dotnet
-ms.openlocfilehash: d30031db590b424688cc0af6a573c1042099e64e
-ms.sourcegitcommit: 94d33cadc5ff81d2ac389bf5f26422c227832052
+ms.openlocfilehash: 94013c69bec0ea37c9260567437aeada3ebe2ae4
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/30/2018
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="how-to-publish-metadata-for-a-service-using-a-configuration-file"></a>HOW TO：使用組態檔發行服務的中繼資料
-在兩個示範如何發行 [!INCLUDE[indigo1](../../../../includes/indigo1-md.md)] 服務中繼資料的 HOW TO 主題中，這是其中一個。 有兩種方法可以指定服務發行中繼資料的方式，分別是使用組態檔和使用程式碼。 本主題說明如何使用組態檔發行服務的中繼資料。  
+這是兩個示範 Windows Communication Foundation (WCF) 服務發行中繼資料的使用說明主題。 有兩種方法可以指定服務發行中繼資料的方式，分別是使用組態檔和使用程式碼。 本主題說明如何使用組態檔發行服務的中繼資料。  
   
 > [!CAUTION]
 >  本主題將示範以不安全的方法發行中繼資料。 任何用戶端都能從服務擷取中繼資料。 如果您需要您的服務發行中繼資料以安全的方式，請參閱[自訂安全中繼資料端點](../../../../docs/framework/wcf/samples/custom-secure-metadata-endpoint.md)。  
   
- 如需程式碼中發行中繼資料的詳細資訊，請參閱[How to： 服務使用程式碼發行中繼資料](../../../../docs/framework/wcf/feature-details/how-to-publish-metadata-for-a-service-using-code.md)。 發行中繼資料可讓用戶端透過 WS-Transfer GET 要求，或是透過使用 `?wsdl` 查詢字串的 HTTP/GET 要求來擷取中繼資料。 若要確定程式碼可以正常運作，請建立基本的 [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] 服務。 為了方便使用，下列程式碼提供基本的自我裝載服務。  
+ 如需程式碼中發行中繼資料的詳細資訊，請參閱[How to： 服務使用程式碼發行中繼資料](../../../../docs/framework/wcf/feature-details/how-to-publish-metadata-for-a-service-using-code.md)。 發行中繼資料可讓用戶端透過 WS-Transfer GET 要求，或是透過使用 `?wsdl` 查詢字串的 HTTP/GET 要求來擷取中繼資料。 若要確定程式碼可以正常運作，建立基本的 WCF 服務。 為了方便使用，下列程式碼提供基本的自我裝載服務。  
   
 ```csharp  
 using System;  
@@ -203,7 +189,7 @@ namespace Metadata.Samples
      因為服務有 <xref:System.ServiceModel.Description.ServiceMetadataBehavior> 且 `httpGetEnabled` 設為 `true`，服務已經啟用發行中繼資料，但是因為沒有明確加入端點，所以執行階段加入預設端點。 如需有關預設端點、 繫結和行為的詳細資訊，請參閱[簡化的組態](../../../../docs/framework/wcf/simplified-configuration.md)和[簡化 WCF 服務的組態](../../../../docs/framework/wcf/samples/simplified-configuration-for-wcf-services.md)。  
   
 ## <a name="example"></a>範例  
- 下列程式碼範例顯示基本 [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] 服務的實作，以及發行服務中繼資料的組態檔。  
+ 下列程式碼範例示範基本的 WCF 服務和組態檔發行服務中繼資料的實作。  
   
 ```csharp  
 using System;  

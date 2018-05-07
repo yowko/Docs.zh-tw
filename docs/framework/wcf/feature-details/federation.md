@@ -1,14 +1,6 @@
 ---
 title: 同盟
-ms.custom: ''
 ms.date: 03/30/2017
-ms.prod: .net-framework
-ms.reviewer: ''
-ms.suite: ''
-ms.technology:
-- dotnet-clr
-ms.tgt_pltfrm: ''
-ms.topic: article
 dev_langs:
 - csharp
 - vb
@@ -16,25 +8,19 @@ helpviewer_keywords:
 - WCF, federation
 - federation [WCF]
 ms.assetid: 2f1e646f-8361-48d4-9d5d-1b961f31ede4
-caps.latest.revision: 26
-author: dotnet-bot
-ms.author: dotnetcontent
-manager: wpickett
-ms.workload:
-- dotnet
-ms.openlocfilehash: 0e7aef1f53675089ee311aa79a54abf60441b728
-ms.sourcegitcommit: 03ee570f6f528a7d23a4221dcb26a9498edbdf8c
+ms.openlocfilehash: d69de8c01a23eff5314220a10a51f6487080df41
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/28/2018
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="federation"></a>同盟
-此主題提供聯合安全性概念的簡短概觀。 同時描述 [!INCLUDE[indigo1](../../../../includes/indigo1-md.md)] 對部署聯合安全性架構的支援。 示範同盟的範例應用程式，請參閱[聯合範例](../../../../docs/framework/wcf/samples/federation-sample.md)。  
+此主題提供聯合安全性概念的簡短概觀。 它也會描述 Windows Communication Foundation (WCF) 支援部署聯合的安全性架構。 示範同盟的範例應用程式，請參閱[聯合範例](../../../../docs/framework/wcf/samples/federation-sample.md)。  
   
 ## <a name="definition-of-federated-security"></a>聯合安全性定義  
  聯合安全性可以清楚地分隔用戶端正在存取的服務，以及關聯的驗證與授權程序。 聯合安全性也能夠讓多個系統、網路和組織在不同的信任領域中共同作業。  
   
- [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] 支援建置與部署採用聯合安全性的分散式系統。  
+ WCF 提供建置與部署採用聯合的安全性的分散式的系統的支援。  
   
 ### <a name="elements-of-a-federated-security-architecture"></a>聯合安全性架構的項目  
  聯合安全性架構有三個索引鍵項目，如下表所示。  
@@ -80,7 +66,7 @@ ms.lasthandoff: 04/28/2018
  使用者一旦取得來自 STS A 的安全性權杖，就會將權杖提交給 STS B。組織 B 就會開始執行使用者要求的授權，並且從自己的安全性權杖集合將安全性權杖發行給使用者。 然後使用者可以將其權杖提交給組織 B 的資源以存取服務。  
   
 ## <a name="support-for-federated-security-in-wcf"></a>在 WCF 中支援聯合安全性  
- [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] 提供部署聯合的安全性架構，透過的通行支援[ \<wsFederationHttpBinding >](../../../../docs/framework/configure-apps/file-schema/wcf/wsfederationhttpbinding.md)。  
+ WCF 有提供周全的支援的部署聯合的安全性架構透過[ \<wsFederationHttpBinding >](../../../../docs/framework/configure-apps/file-schema/wcf/wsfederationhttpbinding.md)。  
   
  [ \<WsFederationHttpBinding >](../../../../docs/framework/configure-apps/file-schema/wcf/wsfederationhttpbinding.md)項目會提供安全、 可靠且互通的繫結牽涉到使用 HTTP 做為要求-回覆通訊樣式，基礎傳輸機制，做為編碼的 wire 格式採用文字和 XML。  
   
@@ -98,10 +84,10 @@ ms.lasthandoff: 04/28/2018
 -   將權杖提交給服務以存取服務。  
   
 ### <a name="phase-2-run-time-phase"></a>階段 2：執行階段  
- 在執行階段期間，用戶端會產生 [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] 用戶端類別的物件，並使用 [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] 用戶端進行呼叫。 [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] 的基礎架構會處理之前在聯合安全性通訊模式中提到的步驟，並且讓用戶端能夠順利地取用服務。  
+ 在執行階段階段中，用戶端會具現化 WCF 用戶端類別的物件，並會使用 WCF 用戶端呼叫。 WCF 的基礎架構會處理之前提到的步驟在聯合的安全性通訊模式中，並可讓用戶端能夠順利地取用服務。  
   
 ## <a name="sample-implementation-using-wcf"></a>使用 WCF 的範例實作  
- 下圖顯示使用 [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] 原生支援的聯合安全性架構範例實作。  
+ 下圖顯示使用 WCF 的原生支援聯合的安全性架構範例實作。  
   
  ![在 WCF 中的同盟安全性](../../../../docs/framework/wcf/feature-details/media/federatedsecurityinwcf.gif "FederatedSecurityInWCF")  
   
@@ -300,7 +286,7 @@ operationRequirementType="FederationSample.MyServiceOperationRequirement, MyServ
  ![同盟](../../../../docs/framework/wcf/feature-details/media/federationclienta.gif "FederationClientA")  
   
 ## <a name="summary"></a>總結  
- 聯合安全性清楚地分隔責任，並協助建置安全且可擴充的服務架構。 做為建置與部署分散式應用程式的平台，[!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] 提供實作聯合安全性的原生支援。  
+ 聯合安全性清楚地分隔責任，並協助建置安全且可擴充的服務架構。 為建置和部署分散式應用程式的平台，WCF 會提供實作聯合的安全性的原生支援。  
   
 ## <a name="see-also"></a>另請參閱  
  [安全性](../../../../docs/framework/wcf/feature-details/security.md)

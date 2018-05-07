@@ -1,31 +1,19 @@
 ---
-title: "HOW TO：使用 MetadataExchangeClient 來擷取中繼資料"
-ms.custom: 
+title: HOW TO：使用 MetadataExchangeClient 來擷取中繼資料
 ms.date: 03/30/2017
-ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.technology: dotnet-clr
-ms.tgt_pltfrm: 
-ms.topic: article
 ms.assetid: 0754e9dc-13c5-45c2-81b5-f3da466e5a87
-caps.latest.revision: "10"
-author: dotnet-bot
-ms.author: dotnetcontent
-manager: wpickett
-ms.workload: dotnet
-ms.openlocfilehash: 119e23c5834fdc646a793a4e84f191a37bca2f63
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.openlocfilehash: 1df4bc156485108dc0c11d597b268864c9656b1b
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="how-to-use-metadataexchangeclient-to-retrieve-metadata"></a>HOW TO：使用 MetadataExchangeClient 來擷取中繼資料
 使用 <xref:System.ServiceModel.Description.MetadataExchangeClient> 類別，即可使用 WS-MetadataExchange (MEX) 通訊協定來下載中繼資料。 所擷取的中繼資料檔案會當做 <xref:System.ServiceModel.Description.MetadataSet> 物件傳回。 傳回的 <xref:System.ServiceModel.Description.MetadataSet> 物件包含 <xref:System.ServiceModel.Description.MetadataSection> 物件的集合，其中每一個都會包含特定的中繼資料方言和識別項。 您可以將傳回的中繼資料寫入至檔案，或者當傳回的中繼資料含有 Web 服務描述語言 (WSDL) 文件時，您便可以使用 <xref:System.ServiceModel.Description.WsdlImporter> 來匯入中繼資料。  
   
  接受位址的 <xref:System.ServiceModel.Description.MetadataExchangeClient> 建構函式 (Constructor)，而這種建構函式會使用符合該位址之統一資源識別項 (URI) 配置之 <xref:System.ServiceModel.Description.MetadataExchangeBindings> 靜態類別上的繫結。 或者，您也可以使用允許明確指定要使用之繫結的 <xref:System.ServiceModel.Description.MetadataExchangeClient> 建構函式。 指定的繫結可用來解析所有的中繼資料參考。  
   
- 跟其他的 [!INCLUDE[indigo1](../../../../includes/indigo1-md.md)] 用戶端一樣，<xref:System.ServiceModel.Description.MetadataExchangeClient> 類型提供的建構函式可使用端點組態名稱來載入用戶端端點組態。 指定的端點組態必須指定 <xref:System.ServiceModel.Description.IMetadataExchange> 合約。 在端點組態中的位址並不會載入，因此您必須使用會接收位址的其中一個 <xref:System.ServiceModel.Description.MetadataExchangeClient.GetMetadata%2A> 多載。 當您使用 <xref:System.ServiceModel.EndpointAddress> 執行個體指定中繼資料位址時，<xref:System.ServiceModel.Description.MetadataExchangeClient> 會假設該位址指向 MEX 端點。 如果指定中繼資料位址做為 URL，您就必須同時指定要使用的 <xref:System.ServiceModel.Description.MetadataExchangeClientMode> 為 MEX 或 HTTP GET。  
+ 就像任何其他 Windows Communication Foundation (WCF) 用戶端<xref:System.ServiceModel.Description.MetadataExchangeClient>類型提供的建構函式來載入用戶端端點組態使用的端點組態名稱。 指定的端點組態必須指定 <xref:System.ServiceModel.Description.IMetadataExchange> 合約。 在端點組態中的位址並不會載入，因此您必須使用會接收位址的其中一個 <xref:System.ServiceModel.Description.MetadataExchangeClient.GetMetadata%2A> 多載。 當您使用 <xref:System.ServiceModel.EndpointAddress> 執行個體指定中繼資料位址時，<xref:System.ServiceModel.Description.MetadataExchangeClient> 會假設該位址指向 MEX 端點。 如果指定中繼資料位址做為 URL，您就必須同時指定要使用的 <xref:System.ServiceModel.Description.MetadataExchangeClientMode> 為 MEX 或 HTTP GET。  
   
 > [!IMPORTANT]
 >  根據預設，<xref:System.ServiceModel.Description.MetadataExchangeClient> 會解析您所有的參考，包括 WSDL 和 XML 結構描述 Import 和 Include。 您可以透過將 <xref:System.ServiceModel.Description.MetadataExchangeClient.ResolveMetadataReferences%2A> 屬性設定為 `false`，停用這項功能。 您可以使用 <xref:System.ServiceModel.Description.MetadataExchangeClient.MaximumResolvedReferences%2A> 屬性來控制要解析之參考的最大數目。 您可以使用此屬性配合繫結上的 `MaxReceivedMessageSize` 屬性來控制要擷取的中繼資料數目。  
@@ -46,7 +34,7 @@ ms.lasthandoff: 12/22/2017
 ## <a name="compiling-the-code"></a>編譯程式碼  
  若要編譯這個程式碼範例，您必須參考 System.ServiceModel.dll 組件並匯入 <xref:System.ServiceModel.Description> 命名空間 (Namespace)。  
   
-## <a name="see-also"></a>請參閱  
+## <a name="see-also"></a>另請參閱  
  <xref:System.ServiceModel.Description.MetadataResolver>  
  <xref:System.ServiceModel.Description.MetadataExchangeClient>  
  <xref:System.ServiceModel.Description.WsdlImporter>

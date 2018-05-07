@@ -1,13 +1,6 @@
 ---
-title: "如何：設定 Windows Form DataGridView 控制項的選取模式"
-ms.custom: 
+title: 如何：設定 Windows Form DataGridView 控制項的選取模式
 ms.date: 03/30/2017
-ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.technology: dotnet-winforms
-ms.tgt_pltfrm: 
-ms.topic: article
 dev_langs:
 - csharp
 - vb
@@ -16,16 +9,11 @@ helpviewer_keywords:
 - DataGridView control [Windows Forms], selection mode
 - data grids [Windows Forms], selection mode
 ms.assetid: 2f241643-7f82-4583-8757-03494f63b465
-caps.latest.revision: "12"
-author: dotnet-bot
-ms.author: dotnetcontent
-manager: wpickett
-ms.workload: dotnet
-ms.openlocfilehash: ee6ef4454dc1c6728dc9ce416c03abdb7346089e
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.openlocfilehash: d064dee497f1e5b07e74c5cd4e1d322ac0ff344e
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="how-to-set-the-selection-mode-of-the-windows-forms-datagridview-control"></a>如何：設定 Windows Form DataGridView 控制項的選取模式
 下列程式碼範例示範如何設定<xref:System.Windows.Forms.DataGridView>控制項，以便自動任意處按一下資料列內選取整個資料列，並因此選取一次該只有一個資料列。  
@@ -41,7 +29,7 @@ ms.lasthandoff: 12/22/2017
   
 -   <xref:System?displayProperty=nameWithType> 和 <xref:System.Windows.Forms?displayProperty=nameWithType> 組件的參考。  
   
-## <a name="see-also"></a>請參閱  
+## <a name="see-also"></a>另請參閱  
  <xref:System.Windows.Forms.DataGridView>  
  <xref:System.Windows.Forms.DataGridView.MultiSelect%2A>  
  <xref:System.Windows.Forms.DataGridView.SelectionMode%2A>  

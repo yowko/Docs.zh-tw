@@ -1,27 +1,15 @@
 ---
-title: "如何：在重複循環期間累加動畫值"
-ms.custom: 
+title: 如何：在重複循環期間累加動畫值
 ms.date: 03/30/2017
-ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.technology: dotnet-wpf
-ms.tgt_pltfrm: 
-ms.topic: article
 helpviewer_keywords:
 - accumulating animation values across repeating cycles [WPF]
 - animation [WPF], accumulating values across repeating cycles
 ms.assetid: 548df369-c7cc-4dab-b569-08b95ced2e7e
-caps.latest.revision: "15"
-author: dotnet-bot
-ms.author: dotnetcontent
-manager: wpickett
-ms.workload: dotnet
-ms.openlocfilehash: 96a91856cdfcf1ca7ae87e8e571306170feecb7c
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.openlocfilehash: 7b954a388549f1bc6f3fa6ec1bcb2df61cc4e045
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="how-to-accumulate-animation-values-during-repeat-cycles"></a>如何：在重複循環期間累加動畫值
 這個範例示範如何使用<xref:System.Windows.Media.Animation.DoubleAnimation.IsCumulative%2A>屬性重複循環累加動畫值。  
@@ -43,7 +31,7 @@ ms.lasthandoff: 12/22/2017
   
  [!code-xaml[timingbehaviors_snip#IsCumulativeWholePage](../../../../samples/snippets/csharp/VS_Snippets_Wpf/timingbehaviors_snip/CSharp/IsCumulativeExample.xaml#iscumulativewholepage)]  
   
-## <a name="see-also"></a>請參閱  
+## <a name="see-also"></a>另請參閱  
  [將動畫輸出值加入至動畫啟動值](../../../../docs/framework/wpf/graphics-multimedia/how-to-add-an-animation-output-value-to-an-animation-starting-value.md)  
  [重複動畫](../../../../docs/framework/wpf/graphics-multimedia/how-to-repeat-an-animation.md)  
  [動畫概觀](../../../../docs/framework/wpf/graphics-multimedia/animation-overview.md)  

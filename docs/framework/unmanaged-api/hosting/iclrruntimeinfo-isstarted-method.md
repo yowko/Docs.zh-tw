@@ -1,14 +1,6 @@
 ---
-title: "ICLRRuntimeInfo::IsStarted 方法"
-ms.custom: 
+title: ICLRRuntimeInfo::IsStarted 方法
 ms.date: 03/30/2017
-ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.technology:
-- dotnet-clr
-ms.tgt_pltfrm: 
-ms.topic: reference
 api_name:
 - ICLRRuntimeInfo.IsStarted
 api_location:
@@ -21,17 +13,13 @@ helpviewer_keywords:
 - IsStarted method [.NET Framework hosting]
 - ICLRRuntimeInfo::IsStarted method [.NET Framework hosting]
 ms.assetid: ef6f2662-323b-4534-aa82-6d1afb7b9309
-caps.latest.revision: 
 author: rpetrusha
 ms.author: ronpet
-manager: wpickett
-ms.workload:
-- dotnet
-ms.openlocfilehash: 991470ca0df3e0cf0470a8c40d3e8e4c40d96026
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.openlocfilehash: 8934a2a51ea4bc86166bf99a6087124d03ab11d9
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="iclrruntimeinfoisstarted-method"></a>ICLRRuntimeInfo::IsStarted 方法
 指出是否已啟動執行階段 (亦即是否[iclrruntimehost:: Start 方法](../../../../docs/framework/unmanaged-api/hosting/iclrruntimehost-start-method.md)被呼叫，且已成功)。  
@@ -69,9 +57,9 @@ HRESULT IsStarted(
   
  **程式庫：**包含做為 MSCorEE.dll 中的資源  
   
- **.NET framework 版本：**[!INCLUDE[net_current_v40plus](../../../../includes/net-current-v40plus-md.md)]  
+ **.NET framework 版本：** [!INCLUDE[net_current_v40plus](../../../../includes/net-current-v40plus-md.md)]  
   
-## <a name="see-also"></a>請參閱  
+## <a name="see-also"></a>另請參閱  
  [ICLRRuntimeInfo 介面](../../../../docs/framework/unmanaged-api/hosting/iclrruntimeinfo-interface.md)  
  [裝載介面](../../../../docs/framework/unmanaged-api/hosting/hosting-interfaces.md)  
  [裝載](../../../../docs/framework/unmanaged-api/hosting/index.md)

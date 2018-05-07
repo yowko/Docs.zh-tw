@@ -1,29 +1,17 @@
 ---
-title: "相依性屬性中繼資料"
-ms.custom: 
+title: 相依性屬性中繼資料
 ms.date: 03/30/2017
-ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.technology: dotnet-wpf
-ms.tgt_pltfrm: 
-ms.topic: article
 helpviewer_keywords:
 - APIs [WPF], metadata
 - dependency properties [WPF], metadata
 - metadata [WPF], for dependency properties
 - overriding metadata [WPF]
 ms.assetid: d01ed009-b722-41bf-b82f-fe1a8cdc50dd
-caps.latest.revision: "24"
-author: dotnet-bot
-ms.author: dotnetcontent
-manager: wpickett
-ms.workload: dotnet
-ms.openlocfilehash: 5b5c4ee554e8a0148c7d8d8044735f66778e7117
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.openlocfilehash: f0aa1d2962b0bccea7a0901877b29550319aaa3f
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="dependency-property-metadata"></a>相依性屬性中繼資料
 [!INCLUDE[TLA#tla_winclient](../../../../includes/tlasharptla-winclient-md.md)] 屬性系統包含中繼資料報告系統，其針對屬性所報告的內容比透過反映或一般[!INCLUDE[TLA#tla_clr](../../../../includes/tlasharptla-clr-md.md)] 特性報告的內容還多。 相依性屬性的中繼資料也可由定義相依性屬性的類別唯一指派、在相依性屬性新增至不同類別時變更，以及由從定義的基底類別繼承相依性屬性的所有衍生類別明確覆寫。  
@@ -48,7 +36,7 @@ ms.lasthandoff: 12/22/2017
 ## <a name="metadata-apis"></a>中繼資料 API  
  報告的大部分屬性系統所使用的中繼資料資訊的類型是<xref:System.Windows.PropertyMetadata>類別。 當相依性屬性向屬性系統註冊時，會選擇性指定中繼資料執行個體，而且若有其他類型將自身作為擁有者新增或覆寫從基底類別相依性屬性定義繼承的中繼資料，則可再次指定中繼資料執行個體 (如屬性註冊未指定中繼資料，預設值的情況下<xref:System.Windows.PropertyMetadata>建立與該類別的預設值。)已註冊的中繼資料會當做傳回<xref:System.Windows.PropertyMetadata>呼叫各種<xref:System.Windows.DependencyProperty.GetMetadata%2A>取得相依性屬性中繼資料的多載<xref:System.Windows.DependencyObject>執行個體。  
   
- <xref:System.Windows.PropertyMetadata>類別會衍生自以提供更特定的中繼資料架構的部門，例如 WPF 架構層級類別。 <xref:System.Windows.UIPropertyMetadata>將動畫報告和<xref:System.Windows.FrameworkPropertyMetadata>提供上一節中所述的 WPF 架構層級屬性。 相依性屬性會註冊時，也可以註冊使用這類<xref:System.Windows.PropertyMetadata>衍生的類別。 檢查中繼資料的時，基底<xref:System.Windows.PropertyMetadata>類型可能可轉換成衍生類別，以便您可以檢查更特定的屬性。  
+ <xref:System.Windows.PropertyMetadata>類別會衍生自以提供更特定的中繼資料架構的部門，例如 WPF 架構層級類別。 <xref:System.Windows.UIPropertyMetadata> 將動畫報告和<xref:System.Windows.FrameworkPropertyMetadata>提供上一節中所述的 WPF 架構層級屬性。 相依性屬性會註冊時，也可以註冊使用這類<xref:System.Windows.PropertyMetadata>衍生的類別。 檢查中繼資料的時，基底<xref:System.Windows.PropertyMetadata>類型可能可轉換成衍生類別，以便您可以檢查更特定的屬性。  
   
 > [!NOTE]
 >  可以在指定的屬性特性<xref:System.Windows.FrameworkPropertyMetadata>，有時也稱為 [旗標] 為此文件中。 當您使用新的中繼資料執行個體中建立相依性屬性註冊或中繼資料會覆寫時，您會指定這些值使用旗列舉<xref:System.Windows.FrameworkPropertyMetadataOptions>，然後將您提供可能是串連將列舉值<xref:System.Windows.FrameworkPropertyMetadata>建構函式。 不過，一旦建構，這些選項特性會顯示內<xref:System.Windows.FrameworkPropertyMetadata>為一系列的布林值屬性，而不是建構的列舉值。 布林值屬性可讓您查看每個條件，而不需要將遮罩套用到旗標型列舉值以取得所需的資訊。 建構函式會使用串連之<xref:System.Windows.FrameworkPropertyMetadataOptions>為了讓建構函式簽章的長度很合理，因為，而實際建構中繼資料會公開讓查詢更具直覺性的中繼資料的離散屬性。  
@@ -75,13 +63,13 @@ ms.lasthandoff: 12/22/2017
   
  當您覆寫中繼資料時，不同的中繼資料特性會被合併或取代。  
   
--   <xref:System.Windows.PropertyMetadata.PropertyChangedCallback%2A>會合併。 如果您將加入新<xref:System.Windows.PropertyMetadata.PropertyChangedCallback%2A>，回撥會儲存在中繼資料。 如果您未指定<xref:System.Windows.PropertyMetadata.PropertyChangedCallback%2A>中覆寫時，值<xref:System.Windows.PropertyMetadata.PropertyChangedCallback%2A>升級為最接近的祖系所指定中繼資料中的參考。  
+-   <xref:System.Windows.PropertyMetadata.PropertyChangedCallback%2A> 會合併。 如果您將加入新<xref:System.Windows.PropertyMetadata.PropertyChangedCallback%2A>，回撥會儲存在中繼資料。 如果您未指定<xref:System.Windows.PropertyMetadata.PropertyChangedCallback%2A>中覆寫時，值<xref:System.Windows.PropertyMetadata.PropertyChangedCallback%2A>升級為最接近的祖系所指定中繼資料中的參考。  
   
 -   實際內容系統行為<xref:System.Windows.PropertyMetadata.PropertyChangedCallback%2A>是保留在階層中的所有中繼資料擁有者的實作，而加入至資料表，與屬性系統的執行順序的第一次叫用回呼最常衍生的類別。  
   
--   <xref:System.Windows.PropertyMetadata.DefaultValue%2A>會被取代。 如果您未指定<xref:System.Windows.PropertyMetadata.DefaultValue%2A>中覆寫時，值<xref:System.Windows.PropertyMetadata.DefaultValue%2A>來自指定中繼資料中最接近上階。  
+-   <xref:System.Windows.PropertyMetadata.DefaultValue%2A> 會被取代。 如果您未指定<xref:System.Windows.PropertyMetadata.DefaultValue%2A>中覆寫時，值<xref:System.Windows.PropertyMetadata.DefaultValue%2A>來自指定中繼資料中最接近上階。  
   
--   <xref:System.Windows.PropertyMetadata.CoerceValueCallback%2A>實作會被取代。 如果您將加入新<xref:System.Windows.PropertyMetadata.CoerceValueCallback%2A>，回撥會儲存在中繼資料。 如果您未指定<xref:System.Windows.PropertyMetadata.CoerceValueCallback%2A>中覆寫時，值<xref:System.Windows.PropertyMetadata.CoerceValueCallback%2A>升級為最接近的祖系所指定中繼資料中的參考。  
+-   <xref:System.Windows.PropertyMetadata.CoerceValueCallback%2A> 實作會被取代。 如果您將加入新<xref:System.Windows.PropertyMetadata.CoerceValueCallback%2A>，回撥會儲存在中繼資料。 如果您未指定<xref:System.Windows.PropertyMetadata.CoerceValueCallback%2A>中覆寫時，值<xref:System.Windows.PropertyMetadata.CoerceValueCallback%2A>升級為最接近的祖系所指定中繼資料中的參考。  
   
 -   屬性的系統行為是只<xref:System.Windows.PropertyMetadata.CoerceValueCallback%2A>立即的中繼資料中叫用。 沒有參考至其他<xref:System.Windows.PropertyMetadata.CoerceValueCallback%2A>會保留階層中的實作。  
   
@@ -102,7 +90,7 @@ ms.lasthandoff: 12/22/2017
 #### <a name="addowner-and-attached-properties"></a>AddOwner 和附加屬性  
  您可以呼叫<xref:System.Windows.DependencyProperty.AddOwner%2A>相依性屬性為附加屬性的擁有者類別所定義。 一般這麼做的原因是要將先前的附加屬性公開為非附加相依性屬性。 然後會公開<xref:System.Windows.DependencyProperty.AddOwner%2A>傳回值為`public static readonly`欄位作為相依性屬性的識別項，並將定義適當 「 包裝函式 」 屬性，使屬性成員資料表中隨即出現，並支援非附加的屬性在您類別中的使用方式。  
   
-## <a name="see-also"></a>請參閱  
+## <a name="see-also"></a>另請參閱  
  <xref:System.Windows.PropertyMetadata>  
  <xref:System.Windows.DependencyObject>  
  <xref:System.Windows.DependencyProperty>  

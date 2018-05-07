@@ -1,28 +1,16 @@
 ---
-title: "如何：在 Windows Form 建立 Windows 檔案總管樣式的介面"
-ms.custom: 
+title: 如何：在 Windows Form 建立 Windows 檔案總管樣式的介面
 ms.date: 03/30/2017
-ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.technology: dotnet-winforms
-ms.tgt_pltfrm: 
-ms.topic: article
 helpviewer_keywords:
 - Windows Explorer [Windows Forms], creating with Windows Forms
 - SplitContainer control [Windows Forms], Explorer-style interface
 - forms [Windows Forms], Windows Explorer type
 ms.assetid: 9a3d5f4f-5dda-4350-9ad5-57ce5976dc47
-caps.latest.revision: "15"
-author: dotnet-bot
-ms.author: dotnetcontent
-manager: wpickett
-ms.workload: dotnet
-ms.openlocfilehash: 26a91052586843f87c04adf1a31025991d9973db
-ms.sourcegitcommit: c0dd436f6f8f44dc80dc43b07f6841a00b74b23f
+ms.openlocfilehash: 2d5b79244d867ea4b6134413d42710b2eadc871e
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 01/19/2018
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="how-to-create-a-windows-explorerstyle-interface-on-a-windows-form"></a>如何：在 Windows Form 建立 Windows 檔案總管樣式的介面
 Windows 檔案總管 是常見的使用者介面方式的應用程式，因為其程度。  
@@ -60,7 +48,7 @@ Windows 檔案總管 是常見的使用者介面方式的應用程式，因為�
     > [!NOTE]
     >  當您拖曳分隔器時，面板自動調整。  
   
-## <a name="see-also"></a>請參閱  
+## <a name="see-also"></a>另請參閱  
  <xref:System.Windows.Forms.SplitContainer>  
  [逐步解說：利用 Windows Forms 建立多窗格使用者介面](../../../../docs/framework/winforms/controls/how-to-create-a-multipane-user-interface-with-windows-forms.md)  
  [操作說明：定義分隔視窗的調整大小和位置行為](../../../../docs/framework/winforms/controls/how-to-define-resize-and-positioning-behavior-in-a-split-window.md)  

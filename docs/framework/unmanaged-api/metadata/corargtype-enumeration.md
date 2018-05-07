@@ -1,14 +1,6 @@
 ---
-title: "CorArgType 列舉"
-ms.custom: 
+title: CorArgType 列舉
 ms.date: 03/30/2017
-ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.technology:
-- dotnet-clr
-ms.tgt_pltfrm: 
-ms.topic: reference
 api_name:
 - CorArgType
 api_location:
@@ -22,17 +14,13 @@ helpviewer_keywords:
 ms.assetid: 3c1cb268-57a0-4664-91c7-f6908ff29e32
 topic_type:
 - apiref
-caps.latest.revision: 
 author: mairaw
 ms.author: mairaw
-manager: wpickett
-ms.workload:
-- dotnet
-ms.openlocfilehash: dfc632849249c437769ce547b2b7facfd97333e5
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.openlocfilehash: 5803f958c9340c068d6ce6e7fc0b1d6846d67876
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="corargtype-enumeration"></a>CorArgType 列舉
 包含值，這些值描述執行階段控制代碼的原生類型。  
@@ -62,7 +50,7 @@ typedef enum CorArgType {
   
  **標頭：** CorHdr.h  
   
- **.NET framework 版本：**[!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
+ **.NET framework 版本：** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
   
-## <a name="see-also"></a>請參閱  
+## <a name="see-also"></a>另請參閱  
  [中繼資料列舉](../../../../docs/framework/unmanaged-api/metadata/metadata-enumerations.md)

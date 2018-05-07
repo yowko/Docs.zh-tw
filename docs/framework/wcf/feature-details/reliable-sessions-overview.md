@@ -1,36 +1,24 @@
 ---
-title: "可靠的工作階段概觀"
-ms.custom: 
+title: 可靠的工作階段概觀
 ms.date: 03/30/2017
-ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.technology: dotnet-clr
-ms.tgt_pltfrm: 
-ms.topic: article
 ms.assetid: a7fc4146-ee2c-444c-82d4-ef6faffccc2d
-caps.latest.revision: "30"
-author: dotnet-bot
-ms.author: dotnetcontent
-manager: wpickett
-ms.workload: dotnet
-ms.openlocfilehash: 1d2749188214f3f68ee3ed5df87fc0aa7cac604d
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.openlocfilehash: 1c5344c2804cf4c17fdc46a7fea5a4a360122b6e
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="reliable-sessions-overview"></a>可靠的工作階段概觀
 
-[!INCLUDE[indigo1](../../../../includes/indigo1-md.md)] SOAP 可信賴傳訊會在 SOAP 端點之間提供端對端訊息傳輸可靠性。 它會克服不可靠網路上的傳輸失敗與 SOAP 訊息層級失敗來達到這個目的。 尤其，傳遞透過 SOAP 或傳輸媒介傳送的訊息時，它可讓您採用工作階段架構的方式單次並選擇是否依序進行。 提供在含有選擇性排序訊息的工作階段中群組訊息工作階段為基礎的傳遞。
+Windows Communication Foundation (WCF) SOAP 可信賴傳訊提供 SOAP 端點之間的端對端訊息傳輸可靠性。 它會克服不可靠網路上的傳輸失敗與 SOAP 訊息層級失敗來達到這個目的。 尤其，傳遞透過 SOAP 或傳輸媒介傳送的訊息時，它可讓您採用工作階段架構的方式單次並選擇是否依序進行。 提供在含有選擇性排序訊息的工作階段中群組訊息工作階段為基礎的傳遞。
 
 本主題描述如何可靠工作階段，和使用時機，以及如何保護它們。
 
 ## <a name="wcf-reliable-sessions"></a>WCF 可靠工作階段
 
-[!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] 可靠工作階段會依據 WS-ReliableMessaging 通訊協定定義來實作 SOAP 可信賴傳訊。
+WCF 可靠工作階段是實作 soap 可信賴傳訊的 WS-SECURITY 與 Ws-reliablemessaging 通訊協定所定義。
 
-[!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] SOAP 可信賴傳訊會在兩個端點之間提供端對端可靠工作階段，而不管用來分隔傳訊端點的媒介數量或型別為何。 這包括任何傳輸不使用 SOAP 的媒介 (例如，HTTP proxy) 或使用 SOAP 的媒介 （例如，SOAP 架構的路由器或橋接器） 所需的訊息在端點之間流動。 可靠工作階段通道支援*互動式*通訊，而這類通道連接的服務同時執行的低延遲，也就是狀況下的交換與處理訊息在相對較短時間間隔。 這種結合方式這些元件同時進行或失敗，因此沒有提供兩者之間的隔離。
+WCF SOAP 可信賴傳訊提供兩個端點，不論個別傳訊端點的媒介的類型或數目之間的端對端可靠工作階段。 這包括任何傳輸不使用 SOAP 的媒介 (例如，HTTP proxy) 或使用 SOAP 的媒介 （例如，SOAP 架構的路由器或橋接器） 所需的訊息在端點之間流動。 可靠工作階段通道支援*互動式*通訊，而這類通道連接的服務同時執行的低延遲，也就是狀況下的交換與處理訊息在相對較短時間間隔。 這種結合方式這些元件同時進行或失敗，因此沒有提供兩者之間的隔離。
 
 可靠工作階段會針對兩種失敗情況進行遮罩處理：
 
@@ -52,7 +40,7 @@ TCP 提供給 IP 封包的功能，可靠工作階段也會提供給 SOAP 訊息
 
 ## <a name="reliable-sessions-and-bindings"></a>可靠工作階段與繫結
 
-如先前所述，可靠工作階段是傳輸中性的特質。 此外，您可以透過許多訊息交換模式，例如要求-回覆或雙工建立可靠工作階段。 A[!INCLUDE[indigo2](../../../../includes/indigo2-md.md)]可靠工作階段會公開為一組繫結的屬性。
+如先前所述，可靠工作階段是傳輸中性的特質。 此外，您可以透過許多訊息交換模式，例如要求-回覆或雙工建立可靠工作階段。 WCF 可靠工作階段會公開為一組繫結的屬性。
 
 使用端點上使用可靠工作階段：
 
@@ -74,7 +62,7 @@ TCP 提供給 IP 封包的功能，可靠工作階段也會提供給 SOAP 訊息
 
 您可以堆疊可靠工作階段上不同基礎通道型別，並產生的可靠工作階段通道形狀而有所不同。 用戶端和伺服器所支援的可靠工作階段通道型別取決於所使用的基礎通道型別。 下表列出用戶端上支援做為基礎通道型別功能的工作階段通道型別。
 
-| 支援的可靠工作階段通道型別 &#8224; | `IRequestChannel` | `IRequestSessionChannel` | `IDuplexChannel` | `IDuplexSessionChannel` |
+| 支援可靠工作階段通道型別&#8224; | `IRequestChannel` | `IRequestSessionChannel` | `IDuplexChannel` | `IDuplexSessionChannel` |
 | ----------------------------------------------- | :---------------: | :----------------------: | :--------------: | :---------------------: |
 | `IOutputSessionChannel`                         | [是]               | 是                      | 是              | 是                     |
 | `IRequestSessionChannel`                        | 是               | 是                      | 否               | 否                      |
@@ -84,7 +72,7 @@ TCP 提供給 IP 封包的功能，可靠工作階段也會提供給 SOAP 訊息
 
 下表列出伺服器上支援做為基礎通道型別功能的工作階段通道型別。
 
-| 支援的可靠工作階段通道型別 &#8225; | `IReplyChannel` | `IReplySessionChannel` | `IDuplexChannel` | `IDuplexSessionChannel` |
+| 支援可靠工作階段通道型別&#8225; | `IReplyChannel` | `IReplySessionChannel` | `IDuplexChannel` | `IDuplexSessionChannel` |
 | ----------------------------------------------- | :-------------: | :--------------------: | :--------------: | :---------------------: |
 | `IInputSessionChannel`                          | [是]             | 是                    | 是              | 是                     |
 | `IReplySessionChannel`                          | 是             | 是                    | 否               | 否                      |
@@ -102,7 +90,7 @@ TCP 提供給 IP 封包的功能，可靠工作階段也會提供給 SOAP 訊息
 
 ## <a name="using-reliable-sessions"></a>使用可靠工作階段
 
-若要使用 [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] 可靠工作階段，請使用支援可靠工作階段的繫結來建立端點。 使用其中一個系統提供的繫結的[!INCLUDE[indigo2](../../../../includes/indigo2-md.md)]提供啟用可靠工作階段，或建立自己的自訂繫結此。
+若要使用 WCF 可靠工作階段，建立支援可靠工作階段的繫結的端點。 使用 WCF 提供可靠工作階段的系統提供繫結的其中一個已啟用，或建立您自己自訂的繫結此。
 
 根據預設，支援且啟用可靠工作階段的系統定義繫結包括：
 
@@ -118,11 +106,11 @@ TCP 提供給 IP 封包的功能，可靠工作階段也會提供給 SOAP 訊息
 
 如需如何建立自訂繫結的範例，請參閱[How to： 使用 HTTPS 建立自訂可靠工作階段繫結](../../../../docs/framework/wcf/feature-details/how-to-create-a-custom-reliable-session-binding-with-https.md)。
 
-如需討論[!INCLUDE[indigo2](../../../../includes/indigo2-md.md)]支援可靠工作階段，繫結，請參閱[之繫結](../../../../docs/framework/wcf/system-provided-bindings.md)。
+如需支援可靠工作階段的 WCF 繫結的討論，請參閱[之繫結](../../../../docs/framework/wcf/system-provided-bindings.md)。
 
 ## <a name="when-to-use-reliable-sessions"></a>使用可靠工作階段的時機
 
-請務必了解您的應用程式中使用可靠工作階段。 [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] 支援同時為作用中和執行中之端點間的可靠工作階段。 如果您的應用程式需要下列其中一個端點無法使用的一段時間，然後使用佇列來達到可靠性。
+請務必了解您的應用程式中使用可靠工作階段。 WCF 還支援在相同的時間是作用中和執行的端點之間的可靠工作階段。 如果您的應用程式需要下列其中一個端點無法使用的一段時間，然後使用佇列來達到可靠性。
 
 如果情況需要透過 TCP 連接的兩個端點，則 TCP 可能足以提供可靠的訊息交換。 雖然不需要使用可靠工作階段，因為 TCP 時，可確保在封包到達的順序和只能出現一次。
 

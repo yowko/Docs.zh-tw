@@ -1,29 +1,17 @@
 ---
 title: 工作流程安全性
-ms.custom: ''
 ms.date: 03/30/2017
-ms.prod: .net-framework
-ms.reviewer: ''
-ms.suite: ''
-ms.tgt_pltfrm: ''
-ms.topic: article
 helpviewer_keywords:
 - programming [WF], workflow security
 ms.assetid: d712a566-f435-44c0-b8c0-49298e84b114
-caps.latest.revision: 13
-author: dotnet-bot
-ms.author: dotnetcontent
-manager: wpickett
-ms.workload:
-- dotnet
-ms.openlocfilehash: bfd7c3e36bf28c364adf3cd230522cfc40a9503b
-ms.sourcegitcommit: 03ee570f6f528a7d23a4221dcb26a9498edbdf8c
+ms.openlocfilehash: 8acfd0640478cf67309fe53a99707c7d96c5a635
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/28/2018
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="workflow-security"></a>工作流程安全性
-Windows Workflow Foundation (WF) 已與幾種不同技術的詳細資訊，例如 Microsoft SQL Server 整合和[!INCLUDE[indigo1](../../../includes/indigo1-md.md)]。 如果與這些技術互動的方式不適當，可能會造成工作流程上的安全性問題。  
+Windows Workflow Foundation (WF) 已與幾種不同技術的詳細資訊，例如 Microsoft SQL Server 和 Windows Communication Foundation (WCF) 整合。 如果與這些技術互動的方式不適當，可能會造成工作流程上的安全性問題。  
   
 ## <a name="persistence-security-concerns"></a>持續性安全性考量  
   
@@ -49,7 +37,7 @@ Windows Workflow Foundation (WF) 已與幾種不同技術的詳細資訊，例�
   
 ## <a name="considerations-for-workflowservicehost"></a>WorkflowServiceHost 的考量  
   
--   您應該保護在工作流程中使用的 [!INCLUDE[indigo1](../../../includes/indigo1-md.md)] 端點。 如需詳細資訊，請參閱[WCF 安全性概觀](http://go.microsoft.com/fwlink/?LinkID=164975)。  
+-   應該保護在工作流程中所用的 Windows Communication Foundation (WCF) 端點。 如需詳細資訊，請參閱[WCF 安全性概觀](http://go.microsoft.com/fwlink/?LinkID=164975)。  
   
 -   可使用 <xref:System.ServiceModel.ServiceAuthorizationManager> 實作主機層級授權。 請參閱[How To： 建立自訂授權管理員服務](http://go.microsoft.com/fwlink/?LinkId=192228)如需詳細資訊。 這也會在下列範例示範：[保護工作流程服務](../../../docs/framework/windows-workflow-foundation/samples/securing-workflow-services.md)。  
   

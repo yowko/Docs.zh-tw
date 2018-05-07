@@ -1,13 +1,6 @@
 ---
-title: "將字型與應用程式一起封裝"
-ms.custom: 
+title: 將字型與應用程式一起封裝
 ms.date: 03/30/2017
-ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.technology: dotnet-wpf
-ms.tgt_pltfrm: 
-ms.topic: article
 dev_langs:
 - csharp
 - vb
@@ -17,16 +10,11 @@ helpviewer_keywords:
 - typography [WPF], packaging fonts with applications
 - packaging fonts with applications [WPF]
 ms.assetid: db15ee48-4d24-49f5-8b9d-a64460865286
-caps.latest.revision: "29"
-author: dotnet-bot
-ms.author: dotnetcontent
-manager: wpickett
-ms.workload: dotnet
-ms.openlocfilehash: d3860aff69b0e4e7a3dc624898cc6b1daa0dd092
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.openlocfilehash: 068a85a5fffd9b7463875695a4b494340ef66cd9
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="packaging-fonts-with-applications"></a>將字型與應用程式一起封裝
 本主題提供的概觀與封裝字型與您[!INCLUDE[TLA#tla_winclient](../../../../includes/tlasharptla-winclient-md.md)]應用程式。  
@@ -40,7 +28,7 @@ ms.lasthandoff: 12/22/2017
 ## <a name="introduction-to-packaging-fonts"></a>封裝字型簡介  
  您可以輕鬆地將字型封裝做為資源內程式[!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)]應用程式顯示使用者介面文字與其他類型的文字基礎內容。 字型可以從應用程式的組件檔中分離出來或內嵌於其中。 您也可以建立僅含資源的字型庫，以供應用程式參考。  
   
- [!INCLUDE[TLA#tla_opentype](../../../../includes/tlasharptla-opentype-md.md)]和[!INCLUDE[TLA#tla_truetype](../../../../includes/tlasharptla-truetype-md.md)]字型中包含的型別旗標，fsType，表示字型的字型內嵌授權權限。 不過，此類型旗標只會參考儲存於文件中的內嵌字型，而不會參考內嵌於應用程式中的字型。 您可以擷取內嵌字型的權限藉由建立字型<xref:System.Windows.Media.GlyphTypeface>物件，並參考其<xref:System.Windows.Media.GlyphTypeface.EmbeddingRights%2A>屬性。 請參閱 「 OS/2 和 Windows 度量 」 一節[OpenType 規格](http://www.microsoft.com/typography/otspec/os2.htm)如 fsType 旗標的詳細資訊。  
+ [!INCLUDE[TLA#tla_opentype](../../../../includes/tlasharptla-opentype-md.md)] 和[!INCLUDE[TLA#tla_truetype](../../../../includes/tlasharptla-truetype-md.md)]字型中包含的型別旗標，fsType，表示字型的字型內嵌授權權限。 不過，此類型旗標只會參考儲存於文件中的內嵌字型，而不會參考內嵌於應用程式中的字型。 您可以擷取內嵌字型的權限藉由建立字型<xref:System.Windows.Media.GlyphTypeface>物件，並參考其<xref:System.Windows.Media.GlyphTypeface.EmbeddingRights%2A>屬性。 請參閱 「 OS/2 和 Windows 度量 」 一節[OpenType 規格](http://www.microsoft.com/typography/otspec/os2.htm)如 fsType 旗標的詳細資訊。  
   
  [Microsoft 印刷](http://www.microsoft.com/typography/links/)網站包含可協助您找出特定字型廠商或自訂的工作尋找字型供應商的連絡資訊。  
   
@@ -183,7 +171,7 @@ ms.lasthandoff: 12/22/2017
   
 -   萬一其中含有不正確的參考，應用程式就會回復以使用可用字型。  
   
-## <a name="see-also"></a>請參閱  
+## <a name="see-also"></a>另請參閱  
  <xref:System.Windows.Documents.Typography>  
  <xref:System.Windows.Media.FontFamily>  
  [Microsoft 印刷樣式： 連結、 新聞和連絡人](http://www.microsoft.com/typography/links/)  

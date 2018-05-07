@@ -1,13 +1,6 @@
 ---
-title: "操作說明：不使用分鏡腳本而建立屬性的動畫"
-ms.custom: 
+title: 操作說明：不使用分鏡腳本而建立屬性的動畫
 ms.date: 03/30/2017
-ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.technology: dotnet-wpf
-ms.tgt_pltfrm: 
-ms.topic: article
 dev_langs:
 - csharp
 - vb
@@ -17,16 +10,11 @@ helpviewer_keywords:
 - local animation [WPF]
 - animation [WPF], non-Storyboard (local)
 ms.assetid: d411db70-4df7-487d-82bc-95a7c1b2e7f8
-caps.latest.revision: "14"
-author: dotnet-bot
-ms.author: dotnetcontent
-manager: wpickett
-ms.workload: dotnet
-ms.openlocfilehash: 4a1292dae3a6fc7e86387ecbe3bf2b1da6912cc0
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.openlocfilehash: 18f8fb4edf5f71904335180e43dd65bd9910bdef
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="how-to-animate-a-property-without-using-a-storyboard"></a>操作說明：不使用分鏡腳本而建立屬性的動畫
 這個範例示範一種方式套用至屬性的動畫，而不使用<xref:System.Windows.Media.Animation.Storyboard>。  
@@ -47,7 +35,7 @@ ms.lasthandoff: 12/22/2017
   
  還有其他方式，以動畫方式顯示，而不使用<xref:System.Windows.Media.Animation.Storyboard>物件; 如需詳細資訊，請參閱[屬性動畫技術概觀](../../../../docs/framework/wpf/graphics-multimedia/property-animation-techniques-overview.md)。  
   
-## <a name="see-also"></a>請參閱  
+## <a name="see-also"></a>另請參閱  
  <xref:System.Windows.Media.Animation.AnimationTimeline>  
  <xref:System.Windows.Media.Animation.Animatable.BeginAnimation%2A>  
  <xref:System.Windows.Media.Animation>  

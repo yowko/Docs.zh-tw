@@ -1,34 +1,20 @@
 ---
 title: 重新執行攻擊
-ms.custom: ''
 ms.date: 03/30/2017
-ms.prod: .net-framework
-ms.reviewer: ''
-ms.suite: ''
-ms.technology:
-- dotnet-clr
-ms.tgt_pltfrm: ''
-ms.topic: article
 ms.assetid: 7a17e040-93cd-4432-81b9-9f62fec78c8f
-caps.latest.revision: 10
-author: dotnet-bot
-ms.author: dotnetcontent
-manager: wpickett
-ms.workload:
-- dotnet
-ms.openlocfilehash: 4e827c51378b9f75835b9b98280b4995d2cae2fc
-ms.sourcegitcommit: 03ee570f6f528a7d23a4221dcb26a9498edbdf8c
+ms.openlocfilehash: 3139e0ea094f1f7483261ffd10026815e5d12f31
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/28/2018
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="replay-attacks"></a>重新執行攻擊
 A*重新執行攻擊*攻擊者複製兩方之間的訊息資料流，並重新執行一個或多個合作對象的資料流時發生。 除非緩解攻擊，否則受到攻擊的電腦會將資料流當成合法訊息來處理，導致發生一連串負面的影響，例如項目的重複排序。  
   
 ## <a name="bindings-may-be-subject-to-reflection-attacks"></a>繫結可能受制於反映攻擊  
- *反映攻擊*會重新執行的訊息傳回給傳送者，如同它們是來自接收者的回覆一樣。 標準*重新執行偵測*中[!INCLUDE[indigo1](../../../../includes/indigo1-md.md)]機制不會自動處理此。  
+ *反映攻擊*會重新執行的訊息傳回給傳送者，如同它們是來自接收者的回覆一樣。 標準*重新執行偵測*中 Windows Communication Foundation (WCF) 機制不會自動處理此。  
   
- 反映攻擊預設會自行緩解，因為 [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] 服務模型會將已簽署的訊息識別碼新增至要求訊息，並預期在回覆的訊息上收到簽署的 `relates-to` 標頭。 如此一來，要求訊息便無法當成回應來重新執行。 在安全訊息 (RM) 案例中，反映攻擊的緩解原因為：  
+ 反映攻擊預設會自行緩解，因為 WCF 服務模型會將已簽署的訊息識別碼加入至要求訊息，並且預期會帶正負號`relates-to`回應訊息標頭。 如此一來，要求訊息便無法當成回應來重新執行。 在安全訊息 (RM) 案例中，反映攻擊的緩解原因為：  
   
 -   建立順序與建立順序回應訊息結構描述是不一樣的。  
   

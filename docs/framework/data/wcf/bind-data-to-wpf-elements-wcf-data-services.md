@@ -1,13 +1,6 @@
 ---
-title: "如何：將資料繫結至 Windows Presentation Foundation 項目 (WCF 資料服務)"
-ms.custom: 
+title: 如何：將資料繫結至 Windows Presentation Foundation 項目 (WCF 資料服務)
 ms.date: 03/30/2017
-ms.prod: .net-framework-oob
-ms.reviewer: 
-ms.suite: 
-ms.technology: dotnet-clr
-ms.tgt_pltfrm: 
-ms.topic: article
 dev_langs:
 - csharp
 - vb
@@ -15,16 +8,11 @@ helpviewer_keywords:
 - data binding, WCF Data Services
 - WCF Data Services, data binding
 ms.assetid: d6538ab0-0abe-426a-b9d9-e6f3a5ca2016
-caps.latest.revision: "2"
-author: dotnet-bot
-ms.author: dotnetcontent
-manager: wpickett
-ms.workload: dotnet
-ms.openlocfilehash: b5d8fbd1b6502bc011f78e17a3e9d1c112be73d5
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.openlocfilehash: da89eebb366cebca9933a30b4753e1fbbe2707c0
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="how-to-bind-data-to-windows-presentation-foundation-elements-wcf-data-services"></a>如何：將資料繫結至 Windows Presentation Foundation 項目 (WCF 資料服務)
 與[!INCLUDE[ssAstoria](../../../../includes/ssastoria-md.md)]，您可以將繫結 Windows Presentation Foundation (WPF) 項目這類<xref:System.Windows.Controls.ListBox>' 或<xref:System.Windows.Controls.ComboBox>的執行個體<xref:System.Data.Services.Client.DataServiceCollection%601>，保留控制項所引發的事件處理<xref:System.Data.Services.Client.DataServiceContext>與變更同步處理對控制項中的資料。 如需詳細資訊，請參閱[資料繫結至控制項](../../../../docs/framework/data/wcf/binding-data-to-controls-wcf-data-services.md)。  

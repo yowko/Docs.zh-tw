@@ -1,29 +1,15 @@
 ---
 title: WPF 中的雙向功能概觀
-ms.custom: ''
 ms.date: 03/30/2017
-ms.prod: .net-framework
-ms.reviewer: ''
-ms.suite: ''
-ms.technology:
-- dotnet-wpf
-ms.tgt_pltfrm: ''
-ms.topic: article
 helpviewer_keywords:
 - Span elements [WPF]
 - bidirectional features [WPF]
 ms.assetid: fd850e25-7dba-408c-b521-8873e51dc968
-caps.latest.revision: 22
-author: dotnet-bot
-ms.author: dotnetcontent
-manager: wpickett
-ms.workload:
-- dotnet
-ms.openlocfilehash: fa2349bca86676f4dc3e1703216a2b0dc50ccd59
-ms.sourcegitcommit: 86adcc06e35390f13c1e372c36d2e044f1fc31ef
+ms.openlocfilehash: 7a2af8d7589ed1f0fceea1ba07d6802ffae1bdee
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/26/2018
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="bidirectional-features-in-wpf-overview"></a>WPF 中的雙向功能概觀
 不同於其他任何開發平台，[!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)]有許多功能可支援快速開發雙向內容，以滑鼠右鍵，並以滑鼠右鍵來混合的左比方說，資料處於相同文件。 同時，[!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)]建立需要雙向功能，如阿拉伯文與希伯來文讀出使用者之使用者的絕佳的體驗。  

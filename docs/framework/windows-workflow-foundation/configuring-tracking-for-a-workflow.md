@@ -1,23 +1,12 @@
 ---
-title: "設定工作流程的追蹤"
-ms.custom: 
+title: 設定工作流程的追蹤
 ms.date: 03/30/2017
-ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.tgt_pltfrm: 
-ms.topic: article
 ms.assetid: 905adcc9-30a0-4918-acd6-563f86db988a
-caps.latest.revision: "24"
-author: dotnet-bot
-ms.author: dotnetcontent
-manager: wpickett
-ms.workload: dotnet
-ms.openlocfilehash: bb64569984d71e35ef9f502c79d3a0bb8b4b8988
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
-ms.translationtype: MT
+ms.openlocfilehash: 70697d82242ab0704dd67129940a6660d300bef9
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="configuring-tracking-for-a-workflow"></a>設定工作流程的追蹤
 工作流程可透過三種方法執行：  
@@ -156,7 +145,7 @@ invoker.Invoke();
 ```  
   
 ### <a name="viewing-tracking-records-in-event-viewer"></a>在事件檢視器中檢視追蹤記錄  
- 追蹤 WF 執行時，可以檢視兩個相關性特別大的事件檢視器記錄：分析記錄和偵錯記錄。 都是位在 Microsoft &#124;Windows &#124;應用程式伺服器-應用程式節點。  這個區段中的記錄包含單一應用程式的事件，而不包含對整個系統有影響的事件。  
+ 追蹤 WF 執行時，可以檢視兩個相關性特別大的事件檢視器記錄：分析記錄和偵錯記錄。 都是位在 Microsoft&#124;Windows&#124;應用程式伺服器-應用程式節點。  這個區段中的記錄包含單一應用程式的事件，而不包含對整個系統有影響的事件。  
   
  偵錯追蹤事件會寫入到偵錯記錄中。 若要收集事件檢視器中的 WF 偵錯追蹤事件，請啟用偵錯記錄。  
   
@@ -263,6 +252,6 @@ invoker.Invoke();
         wevtutil im Microsoft.Windows.ApplicationServer.Applications_Provider1.man  
         ```  
   
-## <a name="see-also"></a>請參閱  
+## <a name="see-also"></a>另請參閱  
  [Windows Server App Fabric 監控](http://go.microsoft.com/fwlink/?LinkId=201273)  
  [使用 App Fabric 監控應用程式](http://go.microsoft.com/fwlink/?LinkId=201275)

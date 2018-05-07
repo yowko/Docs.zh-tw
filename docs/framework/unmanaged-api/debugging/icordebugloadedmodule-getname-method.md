@@ -1,24 +1,14 @@
 ---
-title: "ICorDebugLoadedModule::GetName 方法"
-ms.custom: 
+title: ICorDebugLoadedModule::GetName 方法
 ms.date: 03/30/2017
-ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.technology: dotnet-clr
-ms.tgt_pltfrm: 
-ms.topic: reference
 ms.assetid: 88c304d5-edaa-4c0e-a8e1-144e8a76877e
-caps.latest.revision: "4"
 author: rpetrusha
 ms.author: ronpet
-manager: wpickett
-ms.workload: dotnet
-ms.openlocfilehash: 605bbaf1e98983af222a99bada1ca9451fe9337e
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.openlocfilehash: 8bfdf8e43258d14e7298119ce4d7136ea5de54c1
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="icordebugloadedmodulegetname-method"></a>ICorDebugLoadedModule::GetName 方法
 取得載入模組的名稱。  
@@ -56,8 +46,8 @@ HRESULT GetName(
   
  **程式庫：** CorGuids.lib  
   
- **.NET framework 版本：**[!INCLUDE[net_46_native](../../../../includes/net-46-native-md.md)]  
+ **.NET framework 版本：** [!INCLUDE[net_46_native](../../../../includes/net-46-native-md.md)]  
   
-## <a name="see-also"></a>請參閱  
+## <a name="see-also"></a>另請參閱  
  [ICorDebugLoadedModule 介面](../../../../docs/framework/unmanaged-api/debugging/icordebugloadedmodule-interface.md)  
  [偵錯介面](../../../../docs/framework/unmanaged-api/debugging/debugging-interfaces.md)

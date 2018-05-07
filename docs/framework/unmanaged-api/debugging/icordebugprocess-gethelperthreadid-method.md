@@ -1,14 +1,6 @@
 ---
-title: "ICorDebugProcess::GetHelperThreadID 方法"
-ms.custom: 
+title: ICorDebugProcess::GetHelperThreadID 方法
 ms.date: 03/30/2017
-ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.technology:
-- dotnet-clr
-ms.tgt_pltfrm: 
-ms.topic: reference
 api_name:
 - ICorDebugProcess.GetHelperThreadID
 api_location:
@@ -23,17 +15,13 @@ helpviewer_keywords:
 ms.assetid: 84e1e605-37c1-49a5-8e12-35db85654622
 topic_type:
 - apiref
-caps.latest.revision: 
 author: rpetrusha
 ms.author: ronpet
-manager: wpickett
-ms.workload:
-- dotnet
-ms.openlocfilehash: 03e801cb58b8f5c3f658085fcee4288278e545c5
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.openlocfilehash: 1c3f879e04a710d65f812a5165c3edbfa31f8542
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="icordebugprocessgethelperthreadid-method"></a>ICorDebugProcess::GetHelperThreadID 方法
 取得偵錯工具的內部協助程式執行緒的作業系統 (OS) 執行緒識別碼。  
@@ -64,4 +52,4 @@ HRESULT GetHelperThreadID (
   
  **程式庫：** CorGuids.lib  
   
- **.NET framework 版本：**[!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]
+ **.NET framework 版本：** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]

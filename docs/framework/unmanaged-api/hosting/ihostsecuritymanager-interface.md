@@ -1,14 +1,6 @@
 ---
-title: "IHostSecurityManager 介面"
-ms.custom: 
+title: IHostSecurityManager 介面
 ms.date: 03/30/2017
-ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.technology:
-- dotnet-clr
-ms.tgt_pltfrm: 
-ms.topic: reference
 api_name:
 - IHostSecurityManager
 api_location:
@@ -22,17 +14,13 @@ helpviewer_keywords:
 ms.assetid: c3be2cbd-2d93-438b-9888-9a0251b63c03
 topic_type:
 - apiref
-caps.latest.revision: 
 author: rpetrusha
 ms.author: ronpet
-manager: wpickett
-ms.workload:
-- dotnet
-ms.openlocfilehash: 44f2272c0f4e1423c222a004559d7bbd58237d82
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.openlocfilehash: 13f60730fedef4876f81f078f811104777050175
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="ihostsecuritymanager-interface"></a>IHostSecurityManager 介面
 提供方法，讓存取與目前執行中執行緒的安全性內容的控制。  
@@ -49,7 +37,7 @@ ms.lasthandoff: 12/22/2017
 |[SetThreadToken 方法](../../../../docs/framework/unmanaged-api/hosting/ihostsecuritymanager-setthreadtoken-method.md)|設定目前執行中執行緒的控制代碼。|  
   
 ## <a name="remarks"></a>備註  
- 主機可控制由 common language runtime (CLR) 和使用者程式碼的執行緒語彙基元的所有程式碼存取。 它也可以確保完整的安全性內容資訊傳遞到非同步作業或字碼指標，具有受限制的程式碼存取權。 `IHostSecurityContext`封裝這個資訊安全內容資訊，也就是不透明 CLR。  
+ 主機可控制由 common language runtime (CLR) 和使用者程式碼的執行緒語彙基元的所有程式碼存取。 它也可以確保完整的安全性內容資訊傳遞到非同步作業或字碼指標，具有受限制的程式碼存取權。 `IHostSecurityContext` 封裝這個資訊安全內容資訊，也就是不透明 CLR。  
   
  CLR 會在內部處理 managed 的執行緒內容。 它會查詢處理序專屬`IHostSecurityManager`在下列情況：  
   
@@ -68,8 +56,8 @@ ms.lasthandoff: 12/22/2017
   
  **程式庫：**包含做為 MSCorEE.dll 中的資源  
   
- **.NET framework 版本：**[!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]  
+ **.NET framework 版本：** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]  
   
-## <a name="see-also"></a>請參閱  
+## <a name="see-also"></a>另請參閱  
  [IHostSecurityContext 介面](../../../../docs/framework/unmanaged-api/hosting/ihostsecuritycontext-interface.md)  
  [裝載介面](../../../../docs/framework/unmanaged-api/hosting/hosting-interfaces.md)

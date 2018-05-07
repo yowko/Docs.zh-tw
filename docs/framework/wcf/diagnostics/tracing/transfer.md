@@ -1,27 +1,15 @@
 ---
-title: "傳輸"
-ms.custom: 
+title: 傳輸
 ms.date: 03/30/2017
-ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.technology: dotnet-clr
-ms.tgt_pltfrm: 
-ms.topic: article
 ms.assetid: dfcfa36c-d3bb-44b4-aa15-1c922c6f73e6
-caps.latest.revision: "7"
-author: dotnet-bot
-ms.author: dotnetcontent
-manager: wpickett
-ms.workload: dotnet
-ms.openlocfilehash: 83bb76cc46d72f3d368de20669391c3e7f24a0f2
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
-ms.translationtype: MT
+ms.openlocfilehash: 7daa486286e022b24be32df7335ddbd5db7233f0
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="transfer"></a>傳輸
-這個主題會描述 [!INCLUDE[indigo1](../../../../../includes/indigo1-md.md)] 活動追蹤模型中的傳輸。  
+本主題說明 Windows Communication Foundation (WCF) 的活動追蹤模型中的傳輸。  
   
 ## <a name="transfer-definition"></a>傳輸定義  
  活動之間的傳輸表示在端點內相關活動中事件之間的因果關係。 當控制在這些活動之間流動時 (例如跨活動界限的方法呼叫)，有兩個活動會與傳輸相關。 在 [!INCLUDE[indigo2](../../../../../includes/indigo2-md.md)] 中，當位元組傳入服務時，接聽活動就會傳輸至建立訊息物件之接收位元組活動。 如需端對端追蹤案例，以及其個別活動和追蹤設計的清單，請參閱[端對端追蹤案例](../../../../../docs/framework/wcf/diagnostics/tracing/end-to-end-tracing-scenarios.md)。  
@@ -102,7 +90,7 @@ Trace.CorrelationManager.ActivityId = oldGuid;
 ts.TraceEvent(TraceEventType.Resume, 667, "Resume: Activity " + i-1);  
 ```  
   
-## <a name="see-also"></a>請參閱  
+## <a name="see-also"></a>另請參閱  
  [設定追蹤](../../../../../docs/framework/wcf/diagnostics/tracing/configuring-tracing.md)  
  [使用服務追蹤檢視器檢視相關追蹤並進行疑難排解](../../../../../docs/framework/wcf/diagnostics/tracing/using-service-trace-viewer-for-viewing-correlated-traces-and-troubleshooting.md)  
  [端對端追蹤案例](../../../../../docs/framework/wcf/diagnostics/tracing/end-to-end-tracing-scenarios.md)  

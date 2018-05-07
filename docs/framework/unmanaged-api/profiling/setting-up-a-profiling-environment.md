@@ -1,13 +1,6 @@
 ---
-title: "設定程式碼剖析環境"
-ms.custom: 
+title: 設定程式碼剖析環境
 ms.date: 03/30/2017
-ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.technology: dotnet-clr
-ms.tgt_pltfrm: 
-ms.topic: reference
 helpviewer_keywords:
 - environment variables, profiling API
 - profiling API [.NET Framework], setting up environment
@@ -17,16 +10,13 @@ helpviewer_keywords:
 - COR_ENABLE_PROFILING environment variable
 - profiling API [.NET Framework], enabling
 ms.assetid: fefca07f-7555-4e77-be86-3c542e928312
-caps.latest.revision: "29"
 author: mairaw
 ms.author: mairaw
-manager: wpickett
-ms.workload: dotnet
-ms.openlocfilehash: dc3d490284e371aefb2de712cb5721b0246caa6a
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.openlocfilehash: 9cc1fb16800fcf58770def23dae6b0fd0fbdd043
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="setting-up-a-profiling-environment"></a>設定程式碼剖析環境
 > [!NOTE]
@@ -104,5 +94,5 @@ pInfo->SetEventMask(COR_PRF_MONITOR_ENTERLEAVE | COR_PRF_MONITOR_GC)
   
  這項技術也會使每個 CLR 程序進行程式碼剖析。 程式碼剖析工具應將邏輯加入其[icorprofilercallback:: Initialize](../../../../docs/framework/unmanaged-api/profiling/icorprofilercallback-initialize-method.md)回呼以偵測目前的處理序是否為感興趣。 如果不是，程式碼剖析工具可以使回呼失敗，而不需執行初始化。  
   
-## <a name="see-also"></a>請參閱  
+## <a name="see-also"></a>另請參閱  
  [分析概觀](../../../../docs/framework/unmanaged-api/profiling/profiling-overview.md)

@@ -1,13 +1,6 @@
 ---
-title: "GDI+ 中的多邊形"
-ms.custom: 
+title: GDI+ 中的多邊形
 ms.date: 03/30/2017
-ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.technology: dotnet-winforms
-ms.tgt_pltfrm: 
-ms.topic: article
 dev_langs:
 - csharp
 - vb
@@ -16,16 +9,11 @@ helpviewer_keywords:
 - drawing [Windows Forms], polygons
 - GDI+, polygons
 ms.assetid: a72213d2-d69a-4c2b-a75c-be7b20390c13
-caps.latest.revision: "13"
-author: dotnet-bot
-ms.author: dotnetcontent
-manager: wpickett
-ms.workload: dotnet
-ms.openlocfilehash: 26068ab72473a541b1f16aeb2a1f0d43ec7a7313
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.openlocfilehash: 3ac6b9b651e65a45612cf2bd8ff17990c5cfba0f
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="polygons-in-gdi"></a>GDI+ 中的多邊形
 多邊形是具有三個或多個直線邊封閉的圖形。 例如，三角形是具有三個邊的多邊形、 矩形是具有四個邊的多邊形和五邊形是具有五個邊的多邊形。 下圖顯示幾個多邊形。  
@@ -42,7 +30,7 @@ ms.lasthandoff: 12/22/2017
   
  ![多邊形](../../../../docs/framework/winforms/advanced/media/aboutgdip02-art08.gif "Aboutgdip02_art08")  
   
-## <a name="see-also"></a>請參閱  
+## <a name="see-also"></a>另請參閱  
  <xref:System.Drawing.Graphics?displayProperty=nameWithType>  
  <xref:System.Drawing.Pen?displayProperty=nameWithType>  
  [線條、曲線和形狀](../../../../docs/framework/winforms/advanced/lines-curves-and-shapes.md)  

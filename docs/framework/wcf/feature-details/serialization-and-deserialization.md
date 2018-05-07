@@ -1,38 +1,24 @@
 ---
 title: 序列化和還原序列化
-ms.custom: ''
 ms.date: 03/30/2017
-ms.prod: .net-framework
-ms.reviewer: ''
-ms.suite: ''
-ms.technology:
-- dotnet-clr
-ms.tgt_pltfrm: ''
-ms.topic: article
 dev_langs:
 - csharp
 - vb
 ms.assetid: 3d71814c-bda7-424b-85b7-15084ff9377a
-caps.latest.revision: 13
-author: dotnet-bot
-ms.author: dotnetcontent
-manager: wpickett
-ms.workload:
-- dotnet
-ms.openlocfilehash: 2343ebe5a2a029ddb40da98d28f5c442aa7b6962
-ms.sourcegitcommit: 94d33cadc5ff81d2ac389bf5f26422c227832052
+ms.openlocfilehash: 754b09b3b90399c242ddbaf968242f969cb27b8b
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/30/2018
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="serialization-and-deserialization"></a>序列化和還原序列化
-[!INCLUDE[indigo1](../../../../includes/indigo1-md.md)] 包含新的序列化 (Serialization) 引擎， <xref:System.Runtime.Serialization.DataContractSerializer>。 <xref:System.Runtime.Serialization.DataContractSerializer> 會在 [!INCLUDE[dnprdnshort](../../../../includes/dnprdnshort-md.md)] 物件與 XML 之間轉譯 (雙向)。 本主題會說明序列化程式的運作方式。  
+Windows Communication Foundation (WCF) 包含新的序列化引擎， <xref:System.Runtime.Serialization.DataContractSerializer>。 <xref:System.Runtime.Serialization.DataContractSerializer> 會在 [!INCLUDE[dnprdnshort](../../../../includes/dnprdnshort-md.md)] 物件與 XML 之間轉譯 (雙向)。 本主題會說明序列化程式的運作方式。  
   
  序列化 [!INCLUDE[dnprdnshort](../../../../includes/dnprdnshort-md.md)] 物件時，序列化程式了解各種不同的序列化程式設計模型，包括新的「 *資料合約* 」(Data Contract) 模型。 如需完整的支援型別清單，請參閱 [Types Supported by the Data Contract Serializer](../../../../docs/framework/wcf/feature-details/types-supported-by-the-data-contract-serializer.md)。 如需資料合約的簡介，請參閱 [Using Data Contracts](../../../../docs/framework/wcf/feature-details/using-data-contracts.md)。  
   
- 還原序列化 XML 時，序列化程式會使用 <xref:System.Xml.XmlReader> 和 <xref:System.Xml.XmlWriter> 類別。 它同時支援 <xref:System.Xml.XmlDictionaryReader> 和 <xref:System.Xml.XmlDictionaryWriter> 類別，以便讓它在某些情況下產生最佳化 XML，例如當使用 [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] 二進位 XML 格式時。  
+ 還原序列化 XML 時，序列化程式會使用 <xref:System.Xml.XmlReader> 和 <xref:System.Xml.XmlWriter> 類別。 它也支援<xref:System.Xml.XmlDictionaryReader>和<xref:System.Xml.XmlDictionaryWriter>類別，以便讓它產生最佳化 XML，在某些情況下，例如當使用 WCF 二進位 XML 格式。  
   
- [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] 同時包含搭配的序列化程式， <xref:System.Runtime.Serialization.NetDataContractSerializer>。 <xref:System.Runtime.Serialization.NetDataContractSerializer> 與 <xref:System.Runtime.Serialization.Formatters.Binary.BinaryFormatter> 和 <xref:System.Runtime.Serialization.Formatters.Soap.SoapFormatter> 序列化程式很類似，因為它同時會發出 [!INCLUDE[dnprdnshort](../../../../includes/dnprdnshort-md.md)] 型別名稱做為序列化資料的一部分。 當序列化和還原序列化兩端共用相同的型別時，就會使用它。 <xref:System.Runtime.Serialization.DataContractSerializer> 和 <xref:System.Runtime.Serialization.NetDataContractSerializer> 兩者同時衍生自一般基底類別， <xref:System.Runtime.Serialization.XmlObjectSerializer>。  
+ WCF 還包含搭配的序列化程式， <xref:System.Runtime.Serialization.NetDataContractSerializer>。 <xref:System.Runtime.Serialization.NetDataContractSerializer> 與 <xref:System.Runtime.Serialization.Formatters.Binary.BinaryFormatter> 和 <xref:System.Runtime.Serialization.Formatters.Soap.SoapFormatter> 序列化程式很類似，因為它同時會發出 [!INCLUDE[dnprdnshort](../../../../includes/dnprdnshort-md.md)] 型別名稱做為序列化資料的一部分。 當序列化和還原序列化兩端共用相同的型別時，就會使用它。 <xref:System.Runtime.Serialization.DataContractSerializer> 和 <xref:System.Runtime.Serialization.NetDataContractSerializer> 兩者同時衍生自一般基底類別， <xref:System.Runtime.Serialization.XmlObjectSerializer>。  
   
 > [!WARNING]
 >  <xref:System.Runtime.Serialization.DataContractSerializer> 會將包含十六進位值低於 20 之控制字元的字串序列化成 XML 實體。 這類資料傳送至 WCF 服務時，這可能會造成非 WCF 用戶端的問題。  
@@ -128,7 +114,7 @@ ms.lasthandoff: 04/30/2018
   
 -   語意。 有時候兩個參照是針對同一個物件，而不是針對兩個一樣的物件，這點要特別注意。  
   
- 因此，某些 `DataContractSerializer` 建構函式多載包含有 `preserveObjectReferences` 參數 (預設為 `false`)。 當此參數設定為 `true`，就會採用只有 [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] 才了解的特殊編碼物件參照方法。 設定為 `true`時，XML 程式碼範例就會類似如下所示。  
+ 因此，某些 `DataContractSerializer` 建構函式多載包含有 `preserveObjectReferences` 參數 (預設為 `false`)。 當此參數設為`true`，並使用編碼物件參考，了解只有 WCF，特殊方法。 設定為 `true`時，XML 程式碼範例就會類似如下所示。  
   
 ```xml  
 <PurchaseOrder ser:id="1">  

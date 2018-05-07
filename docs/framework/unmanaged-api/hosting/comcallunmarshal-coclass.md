@@ -1,14 +1,6 @@
 ---
 title: ComCallUnmarshal Coclass
-ms.custom: 
 ms.date: 03/30/2017
-ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.technology:
-- dotnet-clr
-ms.tgt_pltfrm: 
-ms.topic: reference
 api_name:
 - ComCallUnmarshal Coclass
 api_location:
@@ -22,17 +14,13 @@ helpviewer_keywords:
 ms.assetid: 2adb5827-2268-4914-a1c6-f62b61880a45
 topic_type:
 - apiref
-caps.latest.revision: 
 author: rpetrusha
 ms.author: ronpet
-manager: wpickett
-ms.workload:
-- dotnet
-ms.openlocfilehash: 2cbaefd2b2c3b79a97107f4aaa394a3db2c68b33
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.openlocfilehash: 7884d53630ca13a30d7b4efd55d46684a9dd7d30
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="comcallunmarshal-coclass"></a>ComCallUnmarshal Coclass
 提供介面來管理的介面指標封送處理。  
@@ -58,7 +46,7 @@ coclass ComCallUnmarshal {
   
  **程式庫：**包含做為 MSCorEE.dll 中的資源  
   
- **.NET framework 版本：**[!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
+ **.NET framework 版本：** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
   
-## <a name="see-also"></a>請參閱  
+## <a name="see-also"></a>另請參閱  
  [裝載 Coclass](../../../../docs/framework/unmanaged-api/hosting/hosting-coclasses.md)

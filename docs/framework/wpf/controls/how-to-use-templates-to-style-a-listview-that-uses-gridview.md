@@ -1,28 +1,14 @@
 ---
-title: "如何：使用範本為使用 GridView 的 ListView 設定樣式"
-ms.custom: 
+title: 如何：使用範本為使用 GridView 的 ListView 設定樣式
 ms.date: 03/30/2017
-ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.technology:
-- dotnet-wpf
-ms.tgt_pltfrm: 
-ms.topic: article
 helpviewer_keywords:
 - ListView controls [WPF], styling
 ms.assetid: 94bf964b-96c8-4bdf-a0c3-f5271b7cb565
-caps.latest.revision: 
-author: dotnet-bot
-ms.author: dotnetcontent
-manager: wpickett
-ms.workload:
-- dotnet
-ms.openlocfilehash: 9abc19ca14cf512deff898f5f20d23870b8b7847
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.openlocfilehash: 481d92d4301401f8ba87c4912cd44b17c5104b1b
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="how-to-use-templates-to-style-a-listview-that-uses-gridview"></a>如何：使用範本為使用 GridView 的 ListView 設定樣式
 這個範例示範如何使用<xref:System.Windows.DataTemplate>和<xref:System.Windows.Style>物件，指定的外觀<xref:System.Windows.Controls.ListView>使用控制項<xref:System.Windows.Controls.GridView>檢視模式。  
@@ -48,7 +34,7 @@ ms.lasthandoff: 12/22/2017
   
  [!code-xaml[ListViewTemplate#CellTemplateProperty](../../../../samples/snippets/csharp/VS_Snippets_Wpf/ListViewTemplate/CS/window1.xaml#celltemplateproperty)]  
   
-## <a name="see-also"></a>請參閱  
+## <a name="see-also"></a>另請參閱  
  <xref:System.Windows.Controls.ListView>  
  <xref:System.Windows.Controls.GridView>  
  [GridView 概觀](../../../../docs/framework/wpf/controls/gridview-overview.md)  

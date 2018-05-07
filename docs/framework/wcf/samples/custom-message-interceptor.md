@@ -1,24 +1,12 @@
 ---
-title: "自訂訊息攔截器"
-ms.custom: 
+title: 自訂訊息攔截器
 ms.date: 03/30/2017
-ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.technology: dotnet-clr
-ms.tgt_pltfrm: 
-ms.topic: article
 ms.assetid: 73f20972-53f8-475a-8bfe-c133bfa225b0
-caps.latest.revision: "24"
-author: dotnet-bot
-ms.author: dotnetcontent
-manager: wpickett
-ms.workload: dotnet
-ms.openlocfilehash: acac4baa5be68d042dd1b0a11d7acfe609169e10
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
-ms.translationtype: MT
+ms.openlocfilehash: 0ed34823251dcc010fc438bda1e746549b97f0f3
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="custom-message-interceptor"></a>自訂訊息攔截器
 這個範例示範通道擴充性模型的使用方式。 尤其，這個範例會示範如何實作建立通道處理站和通道接聽程式的自訂繫結項目，以攔截執行階段堆疊中特定點的所有傳入與傳出訊息。 範例也包含用戶端和伺服器，以示範這些自訂處理站的使用方式。  
@@ -33,11 +21,11 @@ ms.lasthandoff: 12/22/2017
 >   
 >  `<InstallDrive>:\WF_WCF_Samples`  
 >   
->  如果此目錄不存在，請移至 [Windows Communication Foundation (WCF) and Windows Workflow Foundation (WF) Samples for .NET Framework 4  (適用於 .NET Framework 4 的 Windows Communication Foundation (WCF) 與 Windows Workflow Foundation (WF) 範例)](http://go.microsoft.com/fwlink/?LinkId=150780) ，以下載所有 [!INCLUDE[indigo1](../../../../includes/indigo1-md.md)] 和 [!INCLUDE[wf1](../../../../includes/wf1-md.md)] 範例。 此範例位於下列目錄。  
+>  如果此目錄不存在，請移至[Windows Communication Foundation (WCF) 和適用於.NET Framework 4 的 Windows Workflow Foundation (WF) 範例](http://go.microsoft.com/fwlink/?LinkId=150780)下載所有 Windows Communication Foundation (WCF) 和[!INCLUDE[wf1](../../../../includes/wf1-md.md)]範例。 此範例位於下列目錄。  
 >   
 >  `<InstallDrive>:\WF_WCF_Samples\WCF\Extensibility\Channels\MessageInterceptor`  
   
- 範例會使用通道架構並遵循 [!INCLUDE[indigo1](../../../../includes/indigo1-md.md)] 最佳做法，以說明在 [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] 建立自訂層次通道的建議程序。 建立自訂層次通道的步驟如下：  
+ 此範例說明建議的程序來建立自訂層次的通道中 Windows Communication Foundation (WCF) 中，使用通道架構並遵循[!INCLUDE[indigo2](../../../../includes/indigo2-md.md)]最佳做法。 建立自訂層次通道的步驟如下：  
   
 1.  決定通道處理站和通道接聽項所要支援的通道類型。  
   
@@ -63,7 +51,7 @@ class InterceptingChannelListener<TChannel> : ListenerFactoryBase<TChannel>
 ```  
   
 ## <a name="adding-a-binding-element"></a>新增繫結項目  
- 範例會定義自訂繫結項目：`InterceptingBindingElement`。 `InterceptingBindingElement`會採用`ChannelMessageInterceptor`做為輸入，並使用這個`ChannelMessageInterceptor`來操作通過它的訊息。 這是唯一必須為公用的類別。 處理站、接聽項和通道全部都可以是公用執行階段介面的內部實作。  
+ 範例會定義自訂繫結項目：`InterceptingBindingElement`。 `InterceptingBindingElement` 會採用`ChannelMessageInterceptor`做為輸入，並使用這個`ChannelMessageInterceptor`來操作通過它的訊息。 這是唯一必須為公用的類別。 處理站、接聽項和通道全部都可以是公用執行階段介面的內部實作。  
   
 ```  
 public class InterceptingBindingElement : BindingElement  
@@ -172,4 +160,4 @@ Dangerous wind detected! Reported speed (70) is greater than 64 kph.
   
 5.  先執行 Service.exe，然後執行 Client.exe，再查看兩個主控台視窗上的輸出。  
   
-## <a name="see-also"></a>請參閱
+## <a name="see-also"></a>另請參閱

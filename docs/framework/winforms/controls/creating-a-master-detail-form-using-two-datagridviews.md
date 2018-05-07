@@ -1,14 +1,6 @@
 ---
 title: 逐步解說： 建立主從式表單使用兩個 Windows Form DataGridView 控制項
-ms.custom: ''
 ms.date: 03/30/2017
-ms.prod: .net-framework
-ms.reviewer: ''
-ms.suite: ''
-ms.technology:
-- dotnet-winforms
-ms.tgt_pltfrm: ''
-ms.topic: article
 dev_langs:
 - csharp
 - vb
@@ -18,17 +10,11 @@ helpviewer_keywords:
 - master-details lists [Windows Forms], displaying on Windows Forms
 - walkthroughs [Windows Forms], DataGridView control
 ms.assetid: c5fa29e8-47f7-4691-829b-0e697a691f36
-caps.latest.revision: 19
-author: dotnet-bot
-ms.author: dotnetcontent
-manager: wpickett
-ms.workload:
-- dotnet
-ms.openlocfilehash: e5c3dfc547fe775b38ad4c2e658755268f791502
-ms.sourcegitcommit: 2042de78fcdceebb6b8ac4b7a292b93e8782cbf5
+ms.openlocfilehash: 38f7c6197fb3ee79119e41ab9620bc3aa2b21900
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/27/2018
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="walkthrough-creating-a-masterdetail-form-using-two-windows-forms-datagridview-controls"></a>逐步解說：使用兩個 Windows Form DataGridView 控制項建立主要/詳細表單
 其中一個最常見的案例使用<xref:System.Windows.Forms.DataGridView>控制項是*主從式*表單，其中會顯示兩個資料庫資料表之間的父子式關聯性。 主要資料表中選取資料列會讓使用對應的子資料來更新詳細資料資料表。  

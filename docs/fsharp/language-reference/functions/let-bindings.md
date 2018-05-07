@@ -1,17 +1,12 @@
 ---
 title: let 繫結 (F#)
 description: "了解如何使用 F # 'let' 繫結，其值或函式使用關聯識別項。"
-author: cartermp
-ms.author: phcart
 ms.date: 05/16/2016
-ms.topic: language-reference
-ms.prod: dotnet-fsharp
-ms.devlang: fsharp
-ms.openlocfilehash: 2abc4e05f9f2977501f01f745062e2e7cd611f68
-ms.sourcegitcommit: 03ee570f6f528a7d23a4221dcb26a9498edbdf8c
+ms.openlocfilehash: bcdf01747c2a1d0ba9a894188dae1d42acdf9104
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/28/2018
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="let-bindings"></a>let 繫結
 

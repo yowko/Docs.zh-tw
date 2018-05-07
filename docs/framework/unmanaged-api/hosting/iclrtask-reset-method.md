@@ -1,14 +1,6 @@
 ---
-title: "ICLRTask::Reset 方法"
-ms.custom: 
+title: ICLRTask::Reset 方法
 ms.date: 03/30/2017
-ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.technology:
-- dotnet-clr
-ms.tgt_pltfrm: 
-ms.topic: reference
 api_name:
 - ICLRTask.Reset
 api_location:
@@ -23,17 +15,13 @@ helpviewer_keywords:
 ms.assetid: 1bfb5d3a-0ffd-4bb4-9bf6-aec00cb675b7
 topic_type:
 - apiref
-caps.latest.revision: 
 author: rpetrusha
 ms.author: ronpet
-manager: wpickett
-ms.workload:
-- dotnet
-ms.openlocfilehash: 8dc37f47fc01d73ff499ef974a2e11345a95286a
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.openlocfilehash: 29267d032f5e38e352592edc50dbded68aaa9f61
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="iclrtaskreset-method"></a>ICLRTask::Reset 方法
 通知主機已完成工作，並啟用 CLR，若要重複使用目前的 common language runtime (CLR) [ICLRTask](../../../../docs/framework/unmanaged-api/hosting/iclrtask-interface.md)來代表另一項工作的執行個體。  
@@ -56,7 +44,7 @@ HRESULT Reset (
   
 |HRESULT|描述|  
 |-------------|-----------------|  
-|S_OK|`Reset`已成功傳回。|  
+|S_OK|`Reset` 已成功傳回。|  
 |HOST_E_CLRNOTAVAILABLE|CLR 尚未載入到處理程序，或 CLR 正在中它無法執行 managed 程式碼，或處理呼叫的狀態。 已成功|  
 |HOST_E_TIMEOUT|呼叫已逾時。|  
 |HOST_E_NOT_OWNER|呼叫端未擁有鎖定。|  
@@ -76,7 +64,7 @@ HRESULT Reset (
   
 5.  藉由呼叫主機會終結的工作`ICLRTask::ExitTask`。  
   
- `Reset`改變此案例有兩種。 在步驟 5，主機會呼叫上述`Reset`重設為初始狀態的工作，然後以減少`ICLRTask`從及其相關聯的執行個體[IHostTask](../../../../docs/framework/unmanaged-api/hosting/ihosttask-interface.md)執行個體。 如有需要，主應用程式也可以快取`IHostTask`供重複使用的執行個體。 步驟 1 上述，以執行階段會提取回收`ICLRTask`從快取，而不是建立的新執行個體。  
+ `Reset` 改變此案例有兩種。 在步驟 5，主機會呼叫上述`Reset`重設為初始狀態的工作，然後以減少`ICLRTask`從及其相關聯的執行個體[IHostTask](../../../../docs/framework/unmanaged-api/hosting/ihosttask-interface.md)執行個體。 如有需要，主應用程式也可以快取`IHostTask`供重複使用的執行個體。 步驟 1 上述，以執行階段會提取回收`ICLRTask`從快取，而不是建立的新執行個體。  
   
  這個方法適用於主機也有可重複使用的工作者工作的集區時。 當主機的其中一個終結其`IHostTask`執行個體，它會終結對應`ICLRTask`藉由呼叫`ExitTask`。  
   
@@ -87,9 +75,9 @@ HRESULT Reset (
   
  **程式庫：**包含做為 MSCorEE.dll 中的資源  
   
- **.NET framework 版本：**[!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]  
+ **.NET framework 版本：** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]  
   
-## <a name="see-also"></a>請參閱  
+## <a name="see-also"></a>另請參閱  
  [ICLRTask 介面](../../../../docs/framework/unmanaged-api/hosting/iclrtask-interface.md)  
  [ICLRTaskManager 介面](../../../../docs/framework/unmanaged-api/hosting/iclrtaskmanager-interface.md)  
  [IHostTask 介面](../../../../docs/framework/unmanaged-api/hosting/ihosttask-interface.md)  

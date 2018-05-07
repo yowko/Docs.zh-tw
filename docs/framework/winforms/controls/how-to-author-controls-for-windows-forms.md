@@ -1,28 +1,16 @@
 ---
-title: "如何：撰寫 Windows Forms 的控制項"
-ms.custom: 
+title: 如何：撰寫 Windows Forms 的控制項
 ms.date: 03/30/2017
-ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.technology: dotnet-winforms
-ms.tgt_pltfrm: 
-ms.topic: article
 helpviewer_keywords:
 - controls [Windows Forms], creating
 - UserControl class [Windows Forms], Windows Forms
 - custom controls [Windows Forms], creating
 ms.assetid: 7570e982-545b-4c3a-a7c7-55581d313400
-caps.latest.revision: "14"
-author: dotnet-bot
-ms.author: dotnetcontent
-manager: wpickett
-ms.workload: dotnet
-ms.openlocfilehash: 125e3f1c32c5186cce0b28aa3f8d1eff1ef95a09
-ms.sourcegitcommit: c0dd436f6f8f44dc80dc43b07f6841a00b74b23f
+ms.openlocfilehash: 0793193060bb3a21753b98d4772b53d347f567bb
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 01/19/2018
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="how-to-author-controls-for-windows-forms"></a>如何：撰寫 Windows Forms 的控制項
 控制項所代表使用者與程式之間的圖形化連結。 控制項可以提供或處理資料、接受使用者輸入、回應事件，或執行任意數目的其他功能來連接使用者與應用程式。 因為控制項本質上是具有圖形化介面的元件，所以可以提供元件所執行的任何功能，以及提供使用者互動。 建立控制項以提供特定用途，而編寫控制項只是另一個程式設計工作。 記住這點，下列步驟代表控制項撰寫處理序的概觀。 連結可提供各個步驟的其他資訊。  
@@ -62,7 +50,7 @@ ms.lasthandoff: 01/19/2018
   
 10. 封裝並部署您的控制項。 如需詳細資訊，請參閱[部署應用程式、服務和元件](https://msdn.microsoft.com/library/wtzawcsz)。  
   
-## <a name="see-also"></a>請參閱  
+## <a name="see-also"></a>另請參閱  
  [逐步解說：使用 Visual Basic 撰寫複合控制項](../../../../docs/framework/winforms/controls/walkthrough-authoring-a-composite-control-with-visual-basic.md)  
  [逐步解說：使用 Visual Basic 繼承自 Windows Forms 控制項](../../../../docs/framework/winforms/controls/walkthrough-inheriting-from-a-windows-forms-control-with-visual-basic.md)  
  [操作說明：繼承自 UserControl 類別](../../../../docs/framework/winforms/controls/how-to-inherit-from-the-usercontrol-class.md)  

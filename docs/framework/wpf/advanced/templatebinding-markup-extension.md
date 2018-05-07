@@ -1,13 +1,6 @@
 ---
-title: "TemplateBinding 標記延伸"
-ms.custom: 
+title: TemplateBinding 標記延伸
 ms.date: 03/30/2017
-ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.technology: dotnet-wpf
-ms.tgt_pltfrm: 
-ms.topic: article
 f1_keywords:
 - TemplateBinding
 - TemplateBindingExtension
@@ -15,16 +8,11 @@ helpviewer_keywords:
 - XAML [WPF], TemplateBinding markup extension
 - TemplateBinding markup extensions [WPF]
 ms.assetid: 1d25bbfc-dbc2-499d-9f12-419d23d4ac6a
-caps.latest.revision: "18"
-author: dotnet-bot
-ms.author: dotnetcontent
-manager: wpickett
-ms.workload: dotnet
-ms.openlocfilehash: 959cad0d53b12c3093b95b19ff56ed55eec7eb4f
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.openlocfilehash: d425d17405bc8241c3fd85c77c6672265a060900
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="templatebinding-markup-extension"></a>TemplateBinding 標記延伸
 將控制項樣板中的屬性值連結成為樣板化控制項上另一個屬性的值。  
@@ -71,7 +59,7 @@ ms.lasthandoff: 12/22/2017
   
  `TemplateBinding` 是一種標記延伸。 如果必須將屬性 (Attribute) 值加上逸出符號，以免成為常值或處理常式名稱，而且這個動作必須更全面地實施 (而不是只對特定類型或屬性 (Property) 設定類型轉換子 (Type Converter))，則通常會實作標記延伸。 所有標記延伸在 XAML 使用`{`和`}`其屬性的語法，這是的慣例，XAML 處理器會辨識的標記延伸必須處理屬性中的字元。 如需詳細資訊，請參閱[標記延伸和 WPF XAML](../../../../docs/framework/wpf/advanced/markup-extensions-and-wpf-xaml.md)。  
   
-## <a name="see-also"></a>請參閱  
+## <a name="see-also"></a>另請參閱  
  <xref:System.Windows.Style>  
  <xref:System.Windows.Controls.ControlTemplate>  
  [樣式設定和範本化](../../../../docs/framework/wpf/controls/styling-and-templating.md)  

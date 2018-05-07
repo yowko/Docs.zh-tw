@@ -1,13 +1,6 @@
 ---
-title: "XAML 語法詳細資料"
-ms.custom: 
+title: XAML 語法詳細資料
 ms.date: 03/30/2017
-ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.technology: dotnet-wpf
-ms.tgt_pltfrm: 
-ms.topic: article
 helpviewer_keywords:
 - XML [WPF], namespaces
 - XAML [WPF], parsing of attributes
@@ -36,16 +29,11 @@ helpviewer_keywords:
 - attribute syntax [XAML]
 - XAML [WPF], property element syntax
 ms.assetid: 67cce290-ca26-4c41-a797-b68aabc45479
-caps.latest.revision: "26"
-author: dotnet-bot
-ms.author: dotnetcontent
-manager: wpickett
-ms.workload: dotnet
-ms.openlocfilehash: 88e66210fd8066e82a11d07ea0cfeb83808d646c
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.openlocfilehash: d98141c0ad96ef1bd3958ae8d3166aedde76f535
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="xaml-syntax-in-detail"></a>XAML 語法詳細資料
 本主題中定義的詞彙用於描述 XAML 語法的項目。 這些條款常用的這份文件，WPF 文件的其餘具體而言，適用於其他使用 XAML 或啟用 System.Xaml 層級的 XAML 語言支援的基本 XAML 概念的架構。 本主題詳述主題所介紹的基本術語[XAML 概觀 (WPF)](../../../../docs/framework/wpf/advanced/xaml-overview-wpf.md)。  
@@ -134,7 +122,7 @@ ms.lasthandoff: 12/22/2017
 ...  
 ```  
   
- 在 WPF 中於旗列舉型別支援可在 XAML 中設定的屬性。 不過，這類列舉是<xref:System.Windows.Media.StyleSimulations>。 您執行個體，可以使用逗點分隔旗屬性語法來修改的 「 備註 」 中所提供的範例<xref:System.Windows.Documents.Glyphs>類別;`StyleSimulations = "BoldSimulation"`可能會變得`StyleSimulations = "BoldSimulation,ItalicSimulation"`。 <xref:System.Windows.Input.KeyBinding.Modifiers%2A?displayProperty=nameWithType>是另一個屬性可在其中指定一個以上的列舉值。 不過，這個屬性剛好是特殊案例中，因為<xref:System.Windows.Input.ModifierKeys>列舉型別支援它自己的型別轉換子。 修飾詞的類型轉換器會使用加號 （+），做為分隔符號，而不是逗號 （，）。 此轉換支援更傳統的語法，以代表索引鍵的組合，在 Microsoft Windows 程式設計中，例如 「 Ctrl + Alt。  
+ 在 WPF 中於旗列舉型別支援可在 XAML 中設定的屬性。 不過，這類列舉是<xref:System.Windows.Media.StyleSimulations>。 您執行個體，可以使用逗點分隔旗屬性語法來修改的 「 備註 」 中所提供的範例<xref:System.Windows.Documents.Glyphs>類別;`StyleSimulations = "BoldSimulation"`可能會變得`StyleSimulations = "BoldSimulation,ItalicSimulation"`。 <xref:System.Windows.Input.KeyBinding.Modifiers%2A?displayProperty=nameWithType> 是另一個屬性可在其中指定一個以上的列舉值。 不過，這個屬性剛好是特殊案例中，因為<xref:System.Windows.Input.ModifierKeys>列舉型別支援它自己的型別轉換子。 修飾詞的類型轉換器會使用加號 （+），做為分隔符號，而不是逗號 （，）。 此轉換支援更傳統的語法，以代表索引鍵的組合，在 Microsoft Windows 程式設計中，例如 「 Ctrl + Alt。  
   
 ### <a name="properties-and-event-member-name-references"></a>屬性和事件成員名稱參考  
  在指定屬性時，您可以參考任何屬性或您所包含的物件項目針對具現化的 CLR 型別成員的事件。  
@@ -267,7 +255,7 @@ ms.lasthandoff: 12/22/2017
   
  `<Button Style="{StaticResource MyStyle}">My button</Button>`  
   
- 在這裡，`StaticResource`識別<xref:System.Windows.StaticResourceExtension>提供標記延伸實作類別。 下一個字串`MyStyle`做為非預設的輸入<xref:System.Windows.StaticResourceExtension>建構函式，從擴充字串的參數會要求宣告<xref:System.Windows.ResourceKey>。 `MyStyle`必須是[X:key](../../../../docs/framework/xaml-services/x-key-directive.md)值<xref:System.Windows.Style>定義為資源。 [StaticResource 標記延伸](../../../../docs/framework/wpf/advanced/staticresource-markup-extension.md)使用量要求資源用來提供<xref:System.Windows.Style>透過靜態資源查閱邏輯，在載入時間屬性值。  
+ 在這裡，`StaticResource`識別<xref:System.Windows.StaticResourceExtension>提供標記延伸實作類別。 下一個字串`MyStyle`做為非預設的輸入<xref:System.Windows.StaticResourceExtension>建構函式，從擴充字串的參數會要求宣告<xref:System.Windows.ResourceKey>。 `MyStyle` 必須是[X:key](../../../../docs/framework/xaml-services/x-key-directive.md)值<xref:System.Windows.Style>定義為資源。 [StaticResource 標記延伸](../../../../docs/framework/wpf/advanced/staticresource-markup-extension.md)使用量要求資源用來提供<xref:System.Windows.Style>透過靜態資源查閱邏輯，在載入時間屬性值。  
   
  如需標記延伸的詳細資訊，請參閱[標記延伸和 WPF XAML](../../../../docs/framework/wpf/advanced/markup-extensions-and-wpf-xaml.md)。 如需參考的標記延伸和其他 XAML 程式設計的一般的.NET XAML 實作中啟用的功能，請參閱[XAML 命名空間 （x:）語言功能](../../../../docs/framework/xaml-services/xaml-namespace-x-language-features.md)。 WPF 專屬標記延伸，請參閱[WPF XAML 延伸](../../../../docs/framework/wpf/advanced/wpf-xaml-extensions.md)。  
   
@@ -309,13 +297,13 @@ ms.lasthandoff: 12/22/2017
   
  [!code-xaml[XAMLOvwSupport#TypeNameProp](../../../../samples/snippets/csharp/VS_Snippets_Wpf/XAMLOvwSupport/CSharp/page8.xaml#typenameprop)]  
   
- `Button.Background`可以運作，因為該屬性的限定的查閱<xref:System.Windows.Controls.Button>成功 (<xref:System.Windows.Controls.Control.Background%2A>繼承自控制項) 和<xref:System.Windows.Controls.Button>物件項目之類別或基底類別。 `Control.Background`因為<xref:System.Windows.Controls.Control>類別實際定義<xref:System.Windows.Controls.Control.Background%2A>和<xref:System.Windows.Controls.Control>是<xref:System.Windows.Controls.Button>基底類別。  
+ `Button.Background` 可以運作，因為該屬性的限定的查閱<xref:System.Windows.Controls.Button>成功 (<xref:System.Windows.Controls.Control.Background%2A>繼承自控制項) 和<xref:System.Windows.Controls.Button>物件項目之類別或基底類別。 `Control.Background` 因為<xref:System.Windows.Controls.Control>類別實際定義<xref:System.Windows.Controls.Control.Background%2A>和<xref:System.Windows.Controls.Control>是<xref:System.Windows.Controls.Button>基底類別。  
   
  不過，下列*typeName*。*memberName*表單範例中無法運作，而且會因此顯示加上註解：  
   
  [!code-xaml[XAMLOvwSupport#TypeNameBadProp](../../../../samples/snippets/csharp/VS_Snippets_Wpf/XAMLOvwSupport/CSharp/page8.xaml#typenamebadprop)]  
   
- <xref:System.Windows.Controls.Label>是另一個衍生的類別<xref:System.Windows.Controls.Control>，而且如果已指定`Label.Background`內<xref:System.Windows.Controls.Label>物件項目，會處理這種使用方式。 不過，因為<xref:System.Windows.Controls.Label>不是類別或基底類別<xref:System.Windows.Controls.Button>，在 XAML 處理器的行為是再處理`Label.Background`為附加屬性。 `Label.Background`不是可用的附加的屬性，而且這種用法會失敗。  
+ <xref:System.Windows.Controls.Label> 是另一個衍生的類別<xref:System.Windows.Controls.Control>，而且如果已指定`Label.Background`內<xref:System.Windows.Controls.Label>物件項目，會處理這種使用方式。 不過，因為<xref:System.Windows.Controls.Label>不是類別或基底類別<xref:System.Windows.Controls.Button>，在 XAML 處理器的行為是再處理`Label.Background`為附加屬性。 `Label.Background` 不是可用的附加的屬性，而且這種用法會失敗。  
   
 ### <a name="basetypenamemembername-property-elements"></a>baseTypeName.memberName 屬性項目  
  如何以類似方式*typeName*。*memberName*形式的運作方式的屬性語法*產生*。*memberName*語法適用於屬性項目語法。 例如，下列語法運作方式：  
@@ -326,7 +314,7 @@ ms.lasthandoff: 12/22/2017
   
  但就像*typeName*。*memberName*表單的屬性，*產生*。*memberName*是不佳的樣式，在標記中，而且您應該避免這樣。  
   
-## <a name="see-also"></a>請參閱  
+## <a name="see-also"></a>另請參閱  
  [XAML 概觀 (WPF)](../../../../docs/framework/wpf/advanced/xaml-overview-wpf.md)  
  [XAML 命名空間 (x:) 語言功能](../../../../docs/framework/xaml-services/xaml-namespace-x-language-features.md)  
  [WPF XAML 延伸](../../../../docs/framework/wpf/advanced/wpf-xaml-extensions.md)  

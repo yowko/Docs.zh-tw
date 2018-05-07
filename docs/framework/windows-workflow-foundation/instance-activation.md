@@ -1,28 +1,17 @@
 ---
-title: "執行個體啟動"
-ms.custom: 
+title: 執行個體啟動
 ms.date: 03/30/2017
-ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.tgt_pltfrm: 
-ms.topic: article
 ms.assetid: 134c3f70-5d4e-46d0-9d49-469a6643edd8
-caps.latest.revision: "6"
-author: dotnet-bot
-ms.author: dotnetcontent
-manager: wpickett
-ms.workload: dotnet
-ms.openlocfilehash: 41615618857c804c37f00e9d20a031a6d17bcab3
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.openlocfilehash: a1b78dc62fbdc6e5551addf400ceb14dc9e822f5
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="instance-activation"></a>執行個體啟動
 SQL 工作流程執行個體存放區會執行內部工作，定期喚醒及偵測持續性資料庫中可執行或可啟動的工作流程執行個體。 如果找到可執行的工作流程執行個體，就會通知工作流程主機，表示主機可以啟動該執行個體。 如果執行個體存放區找到可啟動的工作流程執行個體，則會通知啟動工作流程主機的泛型主機，再由該主機執行工作流程執行個體。 本主題中的下列章節詳細說明執行個體啟動處理序。  
   
-##  <a name="RunnableSection"></a>偵測與啟動可執行工作流程執行個體  
+##  <a name="RunnableSection"></a> 偵測與啟動可執行工作流程執行個體  
  SQL 工作流程執行個體存放區會考慮的工作流程執行個體*runnable*如果執行個體不是暫停的狀態或已完成的狀態，並且滿足以下條件：  
   
 -   執行個體已解除鎖定，並具有已過期的暫止計時器。  

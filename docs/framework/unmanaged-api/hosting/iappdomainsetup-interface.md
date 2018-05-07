@@ -1,14 +1,6 @@
 ---
-title: "IAppDomainSetup 介面"
-ms.custom: 
+title: IAppDomainSetup 介面
 ms.date: 03/30/2017
-ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.technology:
-- dotnet-clr
-ms.tgt_pltfrm: 
-ms.topic: reference
 api_name:
 - IAppDomainSetup
 api_location:
@@ -22,17 +14,13 @@ helpviewer_keywords:
 ms.assetid: 1844da85-c031-40bf-bea4-1a3d12a36c8c
 topic_type:
 - apiref
-caps.latest.revision: 
 author: rpetrusha
 ms.author: ronpet
-manager: wpickett
-ms.workload:
-- dotnet
-ms.openlocfilehash: 9db1b787015231b3d9053d4ed316cb70c5db96ec
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.openlocfilehash: cbcbc446eabcfcbc28c830f8860bde726c8eb6e3
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="iappdomainsetup-interface"></a>IAppDomainSetup 介面
 提供可讓主應用程式設定的屬性<xref:System.AppDomain?displayProperty=nameWithType>型別之前呼叫[icorruntimehost:: Createdomainex](../../../../docs/framework/unmanaged-api/hosting/icorruntimehost-createdomainex-method.md)方法來建立它。  
@@ -55,7 +43,7 @@ ms.lasthandoff: 12/22/2017
 ## <a name="remarks"></a>備註  
  `IAppDomainSetup`介面對應至 managed<xref:System.IAppDomainSetup>介面，其中<xref:System.AppDomainSetup>型別會實作。 請參閱<xref:System.IAppDomainSetup?displayProperty=nameWithType>如其屬性的詳細描述。  
   
- `IAppDomainSetup`表示可以加入的組件繫結資訊<xref:System.AppDomain>之前建立的執行個體。 例如，主機可以設定<xref:System.AppDomainSetup.ApplicationBase%2A>屬性，以建立根目錄，探查 common language runtime (CLR) managed 組件。  
+ `IAppDomainSetup` 表示可以加入的組件繫結資訊<xref:System.AppDomain>之前建立的執行個體。 例如，主機可以設定<xref:System.AppDomainSetup.ApplicationBase%2A>屬性，以建立根目錄，探查 common language runtime (CLR) managed 組件。  
   
 ## <a name="requirements"></a>需求  
  **平台：**看到[系統需求](../../../../docs/framework/get-started/system-requirements.md)。  
@@ -64,9 +52,9 @@ ms.lasthandoff: 12/22/2017
   
  **程式庫：**包含做為 MSCorEE.dll 中的資源  
   
- **.NET framework 版本：**[!INCLUDE[net_current_v11plus](../../../../includes/net-current-v11plus-md.md)]  
+ **.NET framework 版本：** [!INCLUDE[net_current_v11plus](../../../../includes/net-current-v11plus-md.md)]  
   
-## <a name="see-also"></a>請參閱  
+## <a name="see-also"></a>另請參閱  
  <xref:System.AppDomain>  
  <xref:System.AppDomainSetup>  
  <xref:System.IAppDomainSetup>  

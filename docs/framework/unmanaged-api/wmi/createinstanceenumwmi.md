@@ -1,11 +1,7 @@
 ---
-title: "CreateInstanceEnumWmi 函式 （Unmanaged API 參考）"
-description: "CreateInstanceEnumWmi 函式會傳回包含指定的類別符合選取準則的執行個體的列舉值。"
+title: CreateInstanceEnumWmi 函式 （Unmanaged API 參考）
+description: CreateInstanceEnumWmi 函式會傳回包含指定的類別符合選取準則的執行個體的列舉值。
 ms.date: 11/06/2017
-ms.prod: .net-framework
-ms.technology:
-- dotnet-clr
-ms.topic: reference
 api_name:
 - CreateInstanceEnumWmi
 api_location:
@@ -20,14 +16,11 @@ topic_type:
 - Reference
 author: rpetrusha
 ms.author: ronpet
-manager: wpickett
-ms.workload:
-- dotnet
-ms.openlocfilehash: b796771b07dee28470d37ca3e4292c0a244e056b
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.openlocfilehash: 1f9297d34b01c03075db67bd904a81e589bfcc10
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="createinstanceenumwmi-function"></a>CreateInstanceEnumWmi 函式
 傳回列舉值，會傳回符合指定的選取準則指定類別的執行個體。 
@@ -79,7 +72,7 @@ HRESULT CreateInstanceEnumWmi (
 `authLevel`  
 [in]授權層級。
 
-`impLevel`[in]模擬等級。
+`impLevel` [in]模擬等級。
 
 `pCurrentNamespace`   
 [in]指標[IWbemServices](https://msdn.microsoft.com/library/aa392093(v=vs.85).aspx)物件，代表目前的命名空間。
@@ -121,7 +114,7 @@ HRESULT CreateInstanceEnumWmi (
   
  **標頭：** WMINet_Utils.idl  
   
- **.NET framework 版本：**[!INCLUDE[net_current_v472plus](../../../../includes/net-current-v472plus.md)]  
+ **.NET framework 版本：** [!INCLUDE[net_current_v472plus](../../../../includes/net-current-v472plus.md)]  
   
 ## <a name="see-also"></a>另請參閱  
 [WMI 和效能計數器 （Unmanaged API 參考）](index.md)

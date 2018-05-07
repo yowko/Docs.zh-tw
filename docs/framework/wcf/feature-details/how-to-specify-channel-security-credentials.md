@@ -1,34 +1,22 @@
 ---
 title: HOW TO：指定通道安全性認證
-ms.custom: ''
 ms.date: 03/30/2017
-ms.prod: .net-framework
-ms.reviewer: ''
-ms.suite: ''
-ms.technology:
-- dotnet-clr
-ms.tgt_pltfrm: ''
-ms.topic: article
 ms.assetid: f8e03f47-9c4f-4dd5-8f85-429e6d876119
-caps.latest.revision: ''
 author: BrucePerlerMS
-ms.author: bruceper
 manager: mbaldwin
-ms.workload:
-- dotnet
-ms.openlocfilehash: e2aedb06ec694f6c7dfb12b70ab919ae23eed17e
-ms.sourcegitcommit: c883637b41ee028786edceece4fa872939d2e64c
+ms.openlocfilehash: f25089f7f5ffa16bb46e0833b15b4cbc4a7735ac
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 03/23/2018
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="how-to-specify-channel-security-credentials"></a>HOW TO：指定通道安全性認證
-[!INCLUDE[indigo1](../../../../includes/indigo1-md.md)] 服務 Moniker 允許 COM 應用程式呼叫 [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] 服務。 大部分 [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] 服務都會要求用戶端必須指定驗證和授權的認證。 從 [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] 用戶端呼叫 [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] 服務時，您可以在 Managed 程式碼或應用程式組態檔中指定這些認證。 如果是從 COM 應用程式呼叫 [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] 服務，則可以使用 <xref:System.ServiceModel.ComIntegration.IChannelCredentials> 介面來指定認證。 本主題將說明各種使用 <xref:System.ServiceModel.ComIntegration.IChannelCredentials> 介面指定認證的方式。  
+Windows Communication Foundation (WCF) 服務 Moniker 允許 COM 應用程式呼叫 WCF 服務。 大部分的 WCF 服務要求用戶端指定用於驗證和授權的認證。 在 WCF 服務呼叫從 WCF 用戶端時，您可以在 managed 程式碼或應用程式組態檔中指定這些認證。 在 COM 應用程式呼叫 WCF 服務時，您可以使用<xref:System.ServiceModel.ComIntegration.IChannelCredentials>介面來指定認證。 本主題將說明各種使用 <xref:System.ServiceModel.ComIntegration.IChannelCredentials> 介面指定認證的方式。  
   
 > [!NOTE]
 >  <xref:System.ServiceModel.ComIntegration.IChannelCredentials> 是以 IDispatch 為基礎的介面，因此您無法在 Visual Studio 環境中使用 IntelliSense 功能。  
   
- 此發行項將會使用[!INCLUDE[indigo2](../../../../includes/indigo2-md.md)]中定義的服務[訊息安全性範例](../../../../docs/framework/wcf/samples/message-security-sample.md)。  
+ 這篇文章會使用 WCF 服務中定義[訊息安全性範例](../../../../docs/framework/wcf/samples/message-security-sample.md)。  
   
 ### <a name="to-specify-a-client-certificate"></a>若要指定用戶端憑證  
   
@@ -40,7 +28,7 @@ ms.lasthandoff: 03/23/2018
   
 4.  新增`bindingNamespace=``http://Microsoft.ServiceModel.Samples`至服務的 App.config 中的端點標記。  
   
-5.  建置「訊息安全性範例」並執行 Service.exe。 使用 Internet Explorer 並瀏覽至服務的 URI (http://localhost:8000/ServiceModelSamples/Service)，以確定該服務正在運作。  
+5.  建置「訊息安全性範例」並執行 Service.exe。 使用 Internet Explorer 並瀏覽至服務的 URI (http://localhost:8000/ServiceModelSamples/Service)以確保服務正在運作。  
   
 6.  開啟 Visual Basic 6.0，並建立新的標準 .exe 檔案。 將按鈕加入至表單中，然後按兩下這個按鈕，將下列程式碼加入至 Click 處理常式：  
   

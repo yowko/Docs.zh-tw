@@ -1,14 +1,6 @@
 ---
-title: "IMetaDataImport2::EnumGenericParamConstraints 方法"
-ms.custom: 
+title: IMetaDataImport2::EnumGenericParamConstraints 方法
 ms.date: 03/30/2017
-ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.technology:
-- dotnet-clr
-ms.tgt_pltfrm: 
-ms.topic: reference
 api_name:
 - IMetaDataImport2.EnumGenericParamConstraints
 api_location:
@@ -23,17 +15,13 @@ helpviewer_keywords:
 ms.assetid: 8a7d4e40-28fe-4e14-b801-4049880130e7
 topic_type:
 - apiref
-caps.latest.revision: 
 author: mairaw
 ms.author: mairaw
-manager: wpickett
-ms.workload:
-- dotnet
-ms.openlocfilehash: 72f863205c0fa7f4c6b4477c9d9143d1923a5d4c
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.openlocfilehash: fd5d35cb13bb55fc73e160089cbc1050cb3d5c0e
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="imetadataimport2enumgenericparamconstraints-method"></a>IMetaDataImport2::EnumGenericParamConstraints 方法
 取得與指定語彙基元所代表的泛型參數相關聯的泛型參數條件約束的陣列的列舉值。  
@@ -70,8 +58,8 @@ HRESULT EnumGenericParamConstraints (
   
 |HRESULT|描述|  
 |-------------|-----------------|  
-|`S_OK`|`EnumGenericParameterConstraints`已成功傳回。|  
-|`S_FALSE`|`phEnum`不含任何成員的元素。 在此情況下，`pcGenericParameterConstraints`設為 0 （零）。|  
+|`S_OK`|`EnumGenericParameterConstraints` 已成功傳回。|  
+|`S_FALSE`|`phEnum` 不含任何成員的元素。 在此情況下，`pcGenericParameterConstraints`設為 0 （零）。|  
   
 ## <a name="requirements"></a>需求  
  **平台：**看到[系統需求](../../../../docs/framework/get-started/system-requirements.md)。  
@@ -80,8 +68,8 @@ HRESULT EnumGenericParamConstraints (
   
  **程式庫：**做為 MsCorEE.dll 中的資源  
   
- **.NET framework 版本：**[!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]  
+ **.NET framework 版本：** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]  
   
-## <a name="see-also"></a>請參閱  
+## <a name="see-also"></a>另請參閱  
  [IMetaDataImport2 介面](../../../../docs/framework/unmanaged-api/metadata/imetadataimport2-interface.md)  
  [IMetaDataImport 介面](../../../../docs/framework/unmanaged-api/metadata/imetadataimport-interface.md)

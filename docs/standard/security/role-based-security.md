@@ -1,13 +1,7 @@
 ---
-title: "以角色為基礎的安全性"
-ms.custom: 
+title: 以角色為基礎的安全性
 ms.date: 03/30/2017
-ms.prod: .net
-ms.reviewer: 
-ms.suite: 
 ms.technology: dotnet-standard
-ms.tgt_pltfrm: 
-ms.topic: article
 helpviewer_keywords:
 - role-based security, about role-based security
 - user authentication, principals
@@ -17,18 +11,13 @@ helpviewer_keywords:
 - authentication [.NET Framework], principals
 - role-based security, principals
 ms.assetid: 578cc32b-5654-4d8b-9d8c-ebcbc5c75390
-caps.latest.revision: "13"
 author: mairaw
 ms.author: mairaw
-manager: wpickett
-ms.workload:
-- dotnet
-- dotnetcore
-ms.openlocfilehash: 18b2883fd69f5cadf2fce3dc677e5d2b79806d0b
-ms.sourcegitcommit: e7f04439d78909229506b56935a1105a4149ff3d
+ms.openlocfilehash: 596165bfac9c65898448714a4477b7f045bd87d7
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 12/23/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="role-based-security"></a>以角色為基礎的安全性
 角色通常用在財務和商務應用程式中以強制執行原則。 例如，應用程式可能會根據提出要求的使用者是否為指定角色的成員，而限制正在處理之交易的大小。 職員可能具有授權，可以處理小於指定臨界值的交易，監督員可能有更高的限制，而副總裁可能有再更高的限制 (或根本沒有限制)。 以角色為基礎的安全性也可用於應用程式需要多重許可才能完成動作之時。 這樣的情況可能是採購系統，任何員工可以產生採購要求，但只有採購人員可以將該要求轉換成可以傳送給供應商的訂單。  

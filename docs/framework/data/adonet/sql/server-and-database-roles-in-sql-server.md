@@ -1,26 +1,12 @@
 ---
 title: SQL Server 中的伺服器和資料庫角色
-ms.custom: ''
 ms.date: 03/30/2017
-ms.prod: .net-framework
-ms.reviewer: ''
-ms.suite: ''
-ms.technology:
-- dotnet-ado
-ms.tgt_pltfrm: ''
-ms.topic: article
 ms.assetid: 5482dfdb-e498-4614-8652-b174829eed13
-caps.latest.revision: 9
-author: douglaslMS
-ms.author: douglasl
-manager: craigg
-ms.workload:
-- dotnet
-ms.openlocfilehash: b650c61a8d3d0b457bc9d5232c613d47f36ccbfc
-ms.sourcegitcommit: 86adcc06e35390f13c1e372c36d2e044f1fc31ef
+ms.openlocfilehash: 9a563c2b448b07dc6536ff42a21c256195ba52fa
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/26/2018
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="server-and-database-roles-in-sql-server"></a>SQL Server 中的伺服器和資料庫角色
 所有的 SQL Server 版本都會使用角色架構的安全性，讓您可以將權限指派給角色或使用者群組，而不是個別的使用者。 固定伺服器角色和固定資料庫角色都指派有固定的權限組。  

@@ -1,28 +1,16 @@
 ---
-title: "操作說明：使用主要畫面格建立框線粗細的動畫"
-ms.custom: 
+title: 操作說明：使用主要畫面格建立框線粗細的動畫
 ms.date: 03/30/2017
-ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.technology: dotnet-wpf
-ms.tgt_pltfrm: 
-ms.topic: article
 helpviewer_keywords:
 - animation [WPF], border thickness with key frames
 - key frames [WPF], animating border thickness with
 - border thickness [WPF], animating with key frames
 ms.assetid: 3a9cb463-0a63-407d-aae7-3fbb1a559947
-caps.latest.revision: "12"
-author: dotnet-bot
-ms.author: dotnetcontent
-manager: wpickett
-ms.workload: dotnet
-ms.openlocfilehash: 0f255ff38ec7ee79f02a0cd40a3f0143c36e1c58
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.openlocfilehash: 3081bff4cc3f05593d644121fbaff58bb652151b
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="how-to-animate-the-thickness-of-a-border-by-using-key-frames"></a>操作說明：使用主要畫面格建立框線粗細的動畫
 此範例示範如何以動畫方式顯示<xref:System.Windows.Controls.Control.BorderThickness%2A>屬性<xref:System.Windows.Controls.Border>。  
@@ -40,7 +28,7 @@ ms.lasthandoff: 12/22/2017
   
  如需完整的範例，請參閱[主要畫面格動畫範例](http://go.microsoft.com/fwlink/?LinkID=160012)。  
   
-## <a name="see-also"></a>請參閱  
+## <a name="see-also"></a>另請參閱  
  <xref:System.Windows.Media.Animation.LinearThicknessKeyFrame>  
  <xref:System.Windows.Media.Animation.DiscreteThicknessKeyFrame>  
  <xref:System.Windows.Media.Animation.SplineThicknessKeyFrame>  

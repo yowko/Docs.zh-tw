@@ -1,23 +1,15 @@
 ---
-title: "Windows Form 中的自動縮放比例"
+title: Windows Form 中的自動縮放比例
 ms.date: 06/15/2017
-ms.prod: .net-framework
-ms.technology: dotnet-winforms
-ms.topic: article
 helpviewer_keywords:
 - scalability [Windows Forms], automatic in Windows Forms
 - Windows Forms, automatic scaling
 ms.assetid: 68fad25b-afbc-44bd-8e1b-966fc43507a4
-caps.latest.revision: "9"
-author: dotnet-bot
-ms.author: dotnetcontent
-manager: wpickett
-ms.workload: dotnet
-ms.openlocfilehash: 519053576aac0f55dfbfa4c87dbed6096f45abca
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.openlocfilehash: e27c56d9a6d745c7d1ff83986e7996aa1bebc879
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="automatic-scaling-in-windows-forms"></a>自動縮放 Windows Form
 自動縮放功能允許某部電腦上以特定顯示解析度或系統字型所設計的表單和其控制項，可以在另一部電腦上以不同的顯示解析度或系統字型正確地顯示。 如此可確保表單和其控制項利用智慧方式調整大小，以便與使用者和其他開發人員電腦上的原生視窗和其他應用程式保持一致。 [!INCLUDE[dnprdnshort](../../../includes/dnprdnshort-md.md)] 對自動縮放和視覺化樣式的支援，可以讓 [!INCLUDE[dnprdnshort](../../../includes/dnprdnshort-md.md)] 應用程式在與每個使用者電腦上的原生 Windows 應用程式相較下，都能保有一致的外觀和風格。

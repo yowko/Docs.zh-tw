@@ -1,24 +1,12 @@
 ---
-title: "成員資格和角色提供者"
-ms.custom: 
+title: 成員資格和角色提供者
 ms.date: 03/30/2017
-ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.technology: dotnet-clr
-ms.tgt_pltfrm: 
-ms.topic: article
 ms.assetid: 0d11a31c-e75f-4fcf-9cf4-b7f26e056bcd
-caps.latest.revision: "16"
-author: dotnet-bot
-ms.author: dotnetcontent
-manager: wpickett
-ms.workload: dotnet
-ms.openlocfilehash: 4479b10b3e6e4b3c63ac40474fb9ec7cda66e22d
-ms.sourcegitcommit: c0dd436f6f8f44dc80dc43b07f6841a00b74b23f
+ms.openlocfilehash: 94808fbb3fae1714f63a4682dfe1096ca314985c
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 01/19/2018
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="membership-and-role-provider"></a>成員資格和角色提供者
 「成員資格和角色提供者」範例會示範服務如何使用 [!INCLUDE[vstecasp](../../../../includes/vstecasp-md.md)] 成員資格和角色提供者來驗證及授權用戶端。  
@@ -178,7 +166,7 @@ ms.lasthandoff: 01/19/2018
 -   當您完成執行範例後，請執行範例資料夾中的 Cleanup.bat。  
   
 > [!NOTE]
->  跨電腦執行此範例時，這個指令碼不會移除用戶端上的服務憑證。 如果您已執行跨電腦使用憑證的 [!INCLUDE[indigo1](../../../../includes/indigo1-md.md)] 範例，請確定清除安裝在 CurrentUser - TrustedPeople 存放區中的服務憑證。 若要這麼做，請使用下列命令：`certmgr -del -r CurrentUser -s TrustedPeople -c -n <Fully Qualified Server Machine Name>`，例如：`certmgr -del -r CurrentUser -s TrustedPeople -c -n server1.contoso.com`。  
+>  跨電腦執行此範例時，這個指令碼不會移除用戶端上的服務憑證。 如果您已執行跨電腦使用憑證的 Windows Communication Foundation (WCF) 範例，請務必清除安裝在 CurrentUser-TrustedPeople 存放區的服務憑證。 若要這麼做，請使用下列命令：`certmgr -del -r CurrentUser -s TrustedPeople -c -n <Fully Qualified Server Machine Name>`，例如：`certmgr -del -r CurrentUser -s TrustedPeople -c -n server1.contoso.com`。  
   
 ## <a name="the-setup-batch-file"></a>設定批次檔  
  本範例中所包含的 Setup.bat 批次檔可讓您使用相關的憑證設定伺服器，以執行需要伺服器憑證安全性的自我裝載應用程式。 這個批次檔必須經過修改才能跨電腦運作，或在非裝載的情況下運作。  
@@ -209,4 +197,4 @@ ms.lasthandoff: 01/19/2018
     certmgr.exe -add -r LocalMachine -s My -c -n %SERVER_NAME% -r CurrentUser -s TrustedPeople  
     ```  
   
-## <a name="see-also"></a>請參閱
+## <a name="see-also"></a>另請參閱

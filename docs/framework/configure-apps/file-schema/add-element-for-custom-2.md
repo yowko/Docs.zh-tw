@@ -1,10 +1,6 @@
 ---
-title: "&lt;新增&gt;NameValueSectionHandler DictionarySectionHandler 的項目"
+title: '&lt;新增&gt;NameValueSectionHandler DictionarySectionHandler 的項目'
 ms.date: 05/01/2017
-ms.prod: .net-framework
-ms.technology:
-- dotnet-clr
-ms.topic: article
 f1_keywords:
 - http://schemas.microsoft.com/.NetConfiguration/v2.0#configuration/sectionName/add
 helpviewer_keywords:
@@ -13,18 +9,15 @@ helpviewer_keywords:
 ms.assetid: 0d4ddb53-eb2b-49c0-9c33-a8dec5c39b46
 author: guardrex
 ms.author: mairaw
-manager: wpickett
-ms.workload:
-- dotnet
-ms.openlocfilehash: e29d0007820bb0218338394fe199e7acfd66344e
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.openlocfilehash: aeb3e3a4be201369ca2df8d231498dd2400d3c07
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="add-element-for-namevaluesectionhandler-and-dictionarysectionhandler"></a>\<新增 > NameValueSectionHandler DictionarySectionHandler 的項目
 
-加入自訂應用程式設定。 每個**\<新增 >**標記包含的索引鍵/值組。
+加入自訂應用程式設定。 每個**\<新增 >** 標記包含的索引鍵/值組。
 
 [**\<configuration>**](~/docs/framework/configure-apps/file-schema/configuration-element.md)   
 &nbsp;&nbsp;[**\<sectionName >**](~/docs/framework/configure-apps/file-schema/custom-element-2.md)   
@@ -45,9 +38,9 @@ ms.lasthandoff: 12/22/2017
 
 ## <a name="parent-element"></a>父項目
 
-| 元素 | 描述 |
+| 項目 | 描述 |
 | ------- | ------------|
-| [**\<sectionName >**項目](~/docs/framework/configure-apps/file-schema/custom-element-2.md) | 定義自訂組態區段，使用設定<xref:System.Configuration.NameValueSectionHandler>和<xref:System.Configuration.DictionarySectionHandler>類別。 |
+| [**\<sectionName >** 項目](~/docs/framework/configure-apps/file-schema/custom-element-2.md) | 定義自訂組態區段，使用設定<xref:System.Configuration.NameValueSectionHandler>和<xref:System.Configuration.DictionarySectionHandler>類別。 |
 
 ## <a name="child-elements"></a>子元素
 
@@ -55,7 +48,7 @@ ms.lasthandoff: 12/22/2017
 
 ## <a name="example"></a>範例
 
-下列範例示範如何定義自訂組態區段，然後使用**\<新增 >**放一節中的設定項目：
+下列範例示範如何定義自訂組態區段，然後使用**\<新增 >** 放一節中的設定項目：
 
 ```xml
 <configuration>

@@ -1,13 +1,6 @@
 ---
-title: "最佳化效能：文字"
-ms.custom: 
+title: 最佳化效能：文字
 ms.date: 03/30/2017
-ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.technology: dotnet-wpf
-ms.tgt_pltfrm: 
-ms.topic: article
 dev_langs:
 - csharp
 - vb
@@ -18,16 +11,11 @@ helpviewer_keywords:
 - text [WPF], performance
 - glyphs [WPF]
 ms.assetid: 66b1b9a7-8618-48db-b616-c57ea4327b98
-caps.latest.revision: "10"
-author: dotnet-bot
-ms.author: dotnetcontent
-manager: wpickett
-ms.workload: dotnet
-ms.openlocfilehash: f345893ca79d820ebb066d920cb49c6c46c47297
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.openlocfilehash: 177f42dfa1c1be2b12d7e9e5283cf57f14c0880c
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="optimizing-performance-text"></a>最佳化效能：文字
 [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] 支援透過使用功能豐富的 [!INCLUDE[TLA#tla_ui](../../../../includes/tlasharptla-ui-md.md)] 控制項來呈現文字內容。 一般而言，您可以將文字轉譯劃分為三個層級：  
@@ -43,7 +31,7 @@ ms.lasthandoff: 12/22/2017
   
 <a name="Glyph_Level"></a>   
 ## <a name="rendering-text-at-the-glyph-level"></a>在圖像層級轉譯文字  
- [!INCLUDE[TLA#tla_winclient](../../../../includes/tlasharptla-winclient-md.md)]提供進階的文字支援包括直接存取的圖像 （glyph） 層級標記<xref:System.Windows.Documents.Glyphs>的客戶想要攔截，並將保存完成格式化後的文字。 這些功能可針對下列每個案例中的不同文字轉譯需求提供重要支援。  
+ [!INCLUDE[TLA#tla_winclient](../../../../includes/tlasharptla-winclient-md.md)] 提供進階的文字支援包括直接存取的圖像 （glyph） 層級標記<xref:System.Windows.Documents.Glyphs>的客戶想要攔截，並將保存完成格式化後的文字。 這些功能可針對下列每個案例中的不同文字轉譯需求提供重要支援。  
   
 -   固定格式文件的螢幕顯示。  
   
@@ -60,7 +48,7 @@ ms.lasthandoff: 12/22/2017
 -   固定格式文件呈現，包括舊版 [!INCLUDE[TLA#tla_mswin](../../../../includes/tlasharptla-mswin-md.md)] 和其他電腦裝置的用戶端。  
   
 > [!NOTE]
->  <xref:System.Windows.Documents.Glyphs>和<xref:System.Windows.Media.GlyphRun>專為固定格式文件簡報和列印的案例。 [!INCLUDE[TLA#tla_winclient](../../../../includes/tlasharptla-winclient-md.md)]提供數個項目的一般版面配置和[!INCLUDE[TLA#tla_ui](../../../../includes/tlasharptla-ui-md.md)]案例，例如<xref:System.Windows.Controls.Label>和<xref:System.Windows.Controls.TextBlock>。 如需配置和 [!INCLUDE[TLA2#tla_ui](../../../../includes/tla2sharptla-ui-md.md)] 案例的詳細資訊，請參閱 [WPF 中的印刷樣式](../../../../docs/framework/wpf/advanced/typography-in-wpf.md)。  
+>  <xref:System.Windows.Documents.Glyphs> 和<xref:System.Windows.Media.GlyphRun>專為固定格式文件簡報和列印的案例。 [!INCLUDE[TLA#tla_winclient](../../../../includes/tlasharptla-winclient-md.md)] 提供數個項目的一般版面配置和[!INCLUDE[TLA#tla_ui](../../../../includes/tlasharptla-ui-md.md)]案例，例如<xref:System.Windows.Controls.Label>和<xref:System.Windows.Controls.TextBlock>。 如需配置和 [!INCLUDE[TLA2#tla_ui](../../../../includes/tla2sharptla-ui-md.md)] 案例的詳細資訊，請參閱 [WPF 中的印刷樣式](../../../../docs/framework/wpf/advanced/typography-in-wpf.md)。  
   
  下列範例顯示如何定義屬性<xref:System.Windows.Documents.Glyphs>物件存放至[!INCLUDE[TLA#tla_xaml](../../../../includes/tlasharptla-xaml-md.md)]。 <xref:System.Windows.Documents.Glyphs>物件代表的輸出<xref:System.Windows.Media.GlyphRun>中[!INCLUDE[TLA2#tla_xaml](../../../../includes/tla2sharptla-xaml-md.md)]。 此範例假設 Arial、Courier New 和 Times New Roman 字型會安裝在本機電腦的 **C:\WINDOWS\Fonts** 資料夾。  
   
@@ -69,7 +57,7 @@ ms.lasthandoff: 12/22/2017
 ### <a name="using-drawglyphrun"></a>使用 DrawGlyphRun  
  如果您有自訂控制項，而且您想要呈現圖像 （glyph），請使用<xref:System.Windows.Media.DrawingContext.DrawGlyphRun%2A>方法。  
   
- [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)]也提供自訂文字，透過使用的格式設定的較低層級服務<xref:System.Windows.Media.FormattedText>物件。 最有效率的方式轉譯中的文字[!INCLUDE[TLA#tla_winclient](../../../../includes/tlasharptla-winclient-md.md)]所產生的文字內容，在字符層級使用<xref:System.Windows.Documents.Glyphs>和<xref:System.Windows.Media.GlyphRun>。 不過，這種效率的成本，會更容易使用 rtf 格式，也就是內建功能遺失的[!INCLUDE[TLA#tla_winclient](../../../../includes/tlasharptla-winclient-md.md)]控制項，例如<xref:System.Windows.Controls.TextBlock>和<xref:System.Windows.Documents.FlowDocument>。  
+ [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] 也提供自訂文字，透過使用的格式設定的較低層級服務<xref:System.Windows.Media.FormattedText>物件。 最有效率的方式轉譯中的文字[!INCLUDE[TLA#tla_winclient](../../../../includes/tlasharptla-winclient-md.md)]所產生的文字內容，在字符層級使用<xref:System.Windows.Documents.Glyphs>和<xref:System.Windows.Media.GlyphRun>。 不過，這種效率的成本，會更容易使用 rtf 格式，也就是內建功能遺失的[!INCLUDE[TLA#tla_winclient](../../../../includes/tlasharptla-winclient-md.md)]控制項，例如<xref:System.Windows.Controls.TextBlock>和<xref:System.Windows.Documents.FlowDocument>。  
   
 <a name="FormattedText_Object"></a>   
 ## <a name="formattedtext-object"></a>FormattedText 物件  
@@ -89,7 +77,7 @@ ms.lasthandoff: 12/22/2017
  [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] 包含多個將文字繪製到螢幕的控制項。 每個控制項都是針對不同案例，而且有自己的功能與限制清單。  
   
 ### <a name="flowdocument-impacts-performance-more-than-textblock-or-label"></a>FlowDocument 對效能的影響超過 TextBlock 或 Label  
- 一般情況下，<xref:System.Windows.Controls.TextBlock>有限的文字支援為必要項，例如簡短句子中時，就應該使用項目[!INCLUDE[TLA#tla_ui](../../../../includes/tlasharptla-ui-md.md)]。 <xref:System.Windows.Controls.Label>需要最少的文字支援時，可以使用。 <xref:System.Windows.Documents.FlowDocument>項目是容器，支援豐富的內容，重新 flowable 文件，因此，會有更大的效能影響，比使用<xref:System.Windows.Controls.TextBlock>或<xref:System.Windows.Controls.Label>控制項。  
+ 一般情況下，<xref:System.Windows.Controls.TextBlock>有限的文字支援為必要項，例如簡短句子中時，就應該使用項目[!INCLUDE[TLA#tla_ui](../../../../includes/tlasharptla-ui-md.md)]。 <xref:System.Windows.Controls.Label> 需要最少的文字支援時，可以使用。 <xref:System.Windows.Documents.FlowDocument>項目是容器，支援豐富的內容，重新 flowable 文件，因此，會有更大的效能影響，比使用<xref:System.Windows.Controls.TextBlock>或<xref:System.Windows.Controls.Label>控制項。  
   
  如需有關<xref:System.Windows.Documents.FlowDocument>，請參閱[非固定格式文件概觀](../../../../docs/framework/wpf/advanced/flow-document-overview.md)。  
   
@@ -171,7 +159,7 @@ MouseEnter 上顯示的超連結
 ### <a name="optimal-paragraph"></a>最佳段落  
  最佳段落功能<xref:System.Windows.Documents.FlowDocument>物件配置的段落，以便盡量平均散發泛空白字元。 依預設已停用最佳段落功能。 您可以啟用這項功能將物件的<xref:System.Windows.Documents.FlowDocument.IsOptimalParagraphEnabled%2A>屬性`true`。 不過，啟用此功能會影響應用程式效能。 若非必要，建議您不要使用最佳段落功能。  
   
-## <a name="see-also"></a>請參閱  
+## <a name="see-also"></a>另請參閱  
  [最佳化 WPF 應用程式效能](../../../../docs/framework/wpf/advanced/optimizing-wpf-application-performance.md)  
  [應用程式效能規劃](../../../../docs/framework/wpf/advanced/planning-for-application-performance.md)  
  [運用硬體](../../../../docs/framework/wpf/advanced/optimizing-performance-taking-advantage-of-hardware.md)  

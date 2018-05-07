@@ -1,28 +1,16 @@
 ---
-title: "如何：使用設計工具，以 Windows Form 建立多窗格使用者介面"
-ms.custom: 
+title: 如何：使用設計工具，以 Windows Form 建立多窗格使用者介面
 ms.date: 03/30/2017
-ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.technology: dotnet-winforms
-ms.tgt_pltfrm: 
-ms.topic: article
 helpviewer_keywords:
 - user interface [Windows Forms], multipane
 - SplitContainer control [Windows Forms], using the designer
 - multipane user interface
 ms.assetid: c3f9294d-a26c-4198-9242-f237f55f7573
-caps.latest.revision: "6"
-author: dotnet-bot
-ms.author: dotnetcontent
-manager: wpickett
-ms.workload: dotnet
-ms.openlocfilehash: 1752691b3cc6809f1a5da54a01e81de2d4037d19
-ms.sourcegitcommit: c0dd436f6f8f44dc80dc43b07f6841a00b74b23f
+ms.openlocfilehash: d0faf86ce31dad6bc053b5af8902e500d2b1c75b
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 01/19/2018
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="how-to-create-a-multipane-user-interface-with-windows-forms-using-the-designer"></a>如何：使用設計工具，以 Windows Form 建立多窗格使用者介面
 在下列程序中，您將建立類似搭配使用 Microsoft Outlook 中的多窗格使用者介面**資料夾** 清單中，**訊息** 窗格中，與**預覽**窗格。 這種排列方式被達成透過停駐控制項的表單來達成。  
@@ -57,6 +45,6 @@ ms.lasthandoff: 01/19/2018
   
      此時您已經在應用程式開發中，製作複雜的使用者介面。 下一個步驟是進行程式設計的應用程式本身，可能是藉由連接<xref:System.Windows.Forms.TreeView>控制項和<xref:System.Windows.Forms.ListView>某種資料來源的控制項。 如需控制項連接到資料的詳細資訊，請參閱[資料繫結和 Windows Form](../../../../docs/framework/winforms/data-binding-and-windows-forms.md)。  
   
-## <a name="see-also"></a>請參閱  
+## <a name="see-also"></a>另請參閱  
  <xref:System.Windows.Forms.SplitContainer>  
  [SplitContainer 控制項](../../../../docs/framework/winforms/controls/splitcontainer-control-windows-forms.md)

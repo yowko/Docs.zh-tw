@@ -1,28 +1,14 @@
 ---
-title: "如何：為已拖曳的 GridView 資料行行首建立樣式"
-ms.custom: 
+title: 如何：為已拖曳的 GridView 資料行行首建立樣式
 ms.date: 03/30/2017
-ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.technology:
-- dotnet-wpf
-ms.tgt_pltfrm: 
-ms.topic: article
 helpviewer_keywords:
 - ListView controls [WPF], styling
 ms.assetid: 0b999645-0313-4b33-80b9-19ece08b5459
-caps.latest.revision: 
-author: dotnet-bot
-ms.author: dotnetcontent
-manager: wpickett
-ms.workload:
-- dotnet
-ms.openlocfilehash: 001d0ec45ad990ef366e7fc1216a7370aade9cb7
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.openlocfilehash: 2e57b4cb1b8ddb90e8e6e0abc6db3e7f0b864cfa
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="how-to-create-a-style-for-a-dragged-gridview-column-header"></a>如何：為已拖曳的 GridView 資料行行首建立樣式
 這個範例示範如何變更外觀拖曳的<xref:System.Windows.Controls.GridViewColumnHeader>當使用者變更資料行的位置。  
@@ -43,7 +29,7 @@ ms.lasthandoff: 12/22/2017
 [!code-xaml[ListViewHeaderRoleStyle#ControlTemplateTriggersEnd](../../../../samples/snippets/csharp/VS_Snippets_Wpf/ListViewHeaderRoleStyle/CS/Window1.xaml#controltemplatetriggersend)]  
 [!code-xaml[ListViewHeaderRoleStyle#GVCHControlTemplateEnd](../../../../samples/snippets/csharp/VS_Snippets_Wpf/ListViewHeaderRoleStyle/CS/Window1.xaml#gvchcontroltemplateend)]  
   
-## <a name="see-also"></a>請參閱  
+## <a name="see-also"></a>另請參閱  
  <xref:System.Windows.Controls.GridViewColumnHeader>  
  <xref:System.Windows.Controls.GridViewColumnHeaderRole>  
  <xref:System.Windows.Controls.ListView>  

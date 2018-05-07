@@ -1,27 +1,15 @@
 ---
-title: "基本 HTTP 服務"
-ms.custom: 
+title: 基本 HTTP 服務
 ms.date: 03/30/2017
-ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.technology: dotnet-clr
-ms.tgt_pltfrm: 
-ms.topic: article
 ms.assetid: 27048b43-8a54-4f2a-9952-594bbfab10ad
-caps.latest.revision: "9"
-author: dotnet-bot
-ms.author: dotnetcontent
-manager: wpickett
-ms.workload: dotnet
-ms.openlocfilehash: 687eba2a346b3f554c8a7618bebe2e9c04f4d5b5
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
-ms.translationtype: MT
+ms.openlocfilehash: 0d00ee21fa328c32549f89d8d5fc4c767f64582c
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="basic-http-service"></a>基本 HTTP 服務
-這個範例會示範如何實作 HTTP、 RPC 服務，也就是一般所謂的"Pox"(Plain Old XML) 服務使用[!INCLUDE[indigo1](../../../../includes/indigo1-md.md)]REST 程式設計模型。 此範例由兩個元件所組成：自我裝載的 [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] HTTP 服務 (Service.cs)，以及建立服務並呼叫該服務的主控台應用程式 (Program.cs)。  
+這個範例示範如何實作 HTTP、 RPC 服務，也就是一般稱為"POX"(Plain Old XML) 服務 – 使用 Windows Communication Foundation (WCF) REST 程式設計模型。 此範例由兩個元件所組成：自我裝載的 [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] HTTP 服務 (Service.cs)，以及建立服務並呼叫該服務的主控台應用程式 (Program.cs)。  
   
 ## <a name="sample-details"></a>範例詳細資料  
  [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] 服務會公開兩個作業：`EchoWithGet` 和 `EchoWithPost`，以傳回當做輸入傳遞的字串。  
@@ -49,10 +37,10 @@ ms.lasthandoff: 12/22/2017
 >   
 >  `<InstallDrive>:\WF_WCF_Samples`  
 >   
->  如果此目錄不存在，請移至 [Windows Communication Foundation (WCF) and Windows Workflow Foundation (WF) Samples for .NET Framework 4  (適用於 .NET Framework 4 的 Windows Communication Foundation (WCF) 與 Windows Workflow Foundation (WF) 範例)](http://go.microsoft.com/fwlink/?LinkId=150780) ，以下載所有 [!INCLUDE[indigo1](../../../../includes/indigo1-md.md)] 和 [!INCLUDE[wf1](../../../../includes/wf1-md.md)] 範例。 此範例位於下列目錄。  
+>  如果此目錄不存在，請移至[Windows Communication Foundation (WCF) 和適用於.NET Framework 4 的 Windows Workflow Foundation (WF) 範例](http://go.microsoft.com/fwlink/?LinkId=150780)下載所有 Windows Communication Foundation (WCF) 和[!INCLUDE[wf1](../../../../includes/wf1-md.md)]範例。 此範例位於下列目錄。  
 >   
 >  `<InstallDrive>:\WF_WCF_Samples\WCF\Basic\Web\BasicHttpService`  
   
-## <a name="see-also"></a>請參閱  
+## <a name="see-also"></a>另請參閱  
  [自動格式選取](../../../../docs/framework/wcf/samples/automatic-format-selection.md)  
  [基本資源服務](../../../../docs/framework/wcf/samples/basic-resource-service.md)

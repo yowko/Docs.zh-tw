@@ -1,31 +1,17 @@
 ---
-title: "RichTextBox 控制項概觀 (Windows Form)"
-ms.custom: 
+title: RichTextBox 控制項概觀 (Windows Form)
 ms.date: 03/30/2017
-ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.technology:
-- dotnet-winforms
-ms.tgt_pltfrm: 
-ms.topic: article
 f1_keywords:
 - RichTextBox
 helpviewer_keywords:
 - RichTextBox control [Windows Forms], about RichTextBox control
 - text boxes [Windows Forms], about text boxes
 ms.assetid: 95081194-3dd4-4b84-9545-dd373e491eca
-caps.latest.revision: 
-author: dotnet-bot
-ms.author: dotnetcontent
-manager: wpickett
-ms.workload:
-- dotnet
-ms.openlocfilehash: d6ed04ab478cc6c20d88ec97934f5e45528558c8
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.openlocfilehash: 53c4cd41cf203886c93291debc7bca4f395f9698
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="richtextbox-control-overview-windows-forms"></a>RichTextBox 控制項概觀 (Windows Form)
 Windows Form<xref:System.Windows.Forms.RichTextBox>控制項用來顯示、 輸入及管理具有格式的文字。 <xref:System.Windows.Forms.RichTextBox>控制項執行的所有項目<xref:System.Windows.Forms.TextBox>控制項，但它可以也顯示字型、 色彩和連結; 文字和內嵌的影像從載入檔案，並尋找指定的字元。 <xref:System.Windows.Forms.RichTextBox>控制項通常用來提供操作文字，並顯示類似於文書處理應用程式，例如 Microsoft Word 的功能。 像<xref:System.Windows.Forms.TextBox>控制項，<xref:System.Windows.Forms.RichTextBox>控制項可以顯示捲軸，但不同的是<xref:System.Windows.Forms.TextBox>控制它的預設值是要顯示水平與垂直捲軸，如有需要以及它還有其他捲軸設定。  
@@ -37,7 +23,7 @@ Windows Form<xref:System.Windows.Forms.RichTextBox>控制項用來顯示、 輸�
   
  您可以復原和取消復原中大部分的編輯作業<xref:System.Windows.Forms.RichTextBox>藉由呼叫控制項<xref:System.Windows.Forms.TextBoxBase.Undo%2A>和<xref:System.Windows.Forms.RichTextBox.Redo%2A>方法。 <xref:System.Windows.Forms.RichTextBox.CanRedo%2A>方法可讓您判斷是否已在復原使用者最後一項作業可以重新套用到控制項。  
   
-## <a name="see-also"></a>請參閱  
+## <a name="see-also"></a>另請參閱  
  <xref:System.Windows.Forms.RichTextBox>  
  [RichTextBox 控制項](../../../../docs/framework/winforms/controls/richtextbox-control-windows-forms.md)  
  [TextBox 控制項概觀](../../../../docs/framework/winforms/controls/textbox-control-overview-windows-forms.md)

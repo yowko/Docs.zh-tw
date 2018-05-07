@@ -1,27 +1,17 @@
 ---
-title: "安全性擴充"
-ms.custom: 
+title: 安全性擴充
 ms.date: 03/30/2017
-ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.technology: dotnet-clr
-ms.tgt_pltfrm: 
-ms.topic: article
 ms.assetid: 2afe044d-df4a-49a4-9865-38700474c3dd
-caps.latest.revision: "7"
 author: BrucePerlerMS
-ms.author: bruceper
 manager: mbaldwin
-ms.workload: dotnet
-ms.openlocfilehash: eb9038ee6e28cdb5fbf213d56542419e7cdf36c6
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.openlocfilehash: 8f68d842b305c37a9e23bf23429c0bfb66a8eae4
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="security-extensibility"></a>安全性擴充
-本節包含示範 [!INCLUDE[indigo1](../../../../includes/indigo1-md.md)] 中自訂安全性的範例。  
+本節包含示範自訂安全性的 Windows Communication Foundation (WCF) 的範例。  
   
 ## <a name="in-this-section"></a>本節內容  
  [永久性發行權杖提供者](../../../../docs/framework/wcf/samples/durable-issued-token-provider.md)  
@@ -49,7 +39,7 @@ ms.lasthandoff: 12/22/2017
  示範如何實作自訂宣告授權原則以及相關聯的自訂服務授權管理員。  
   
  [自訂權杖](../../../../docs/framework/wcf/samples/custom-token.md)  
- 示範如何將自訂權杖實作加入至 [!INCLUDE[indigo1](../../../../includes/indigo1-md.md)] 應用程式中。  
+ 示範如何將自訂權杖實作 Windows Communication Foundation (WCF) 應用程式。  
   
  [用戶端驗證](../../../../docs/framework/wcf/samples/client-validation.md)  
  示範如何撰寫用戶端端點行為，此行為會驗證服務端點以確定能夠安全地使用服務端點。

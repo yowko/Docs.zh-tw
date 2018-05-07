@@ -1,27 +1,15 @@
 ---
-title: "使用自動配置概觀"
-ms.custom: 
+title: 使用自動配置概觀
 ms.date: 03/30/2017
-ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.technology: dotnet-wpf
-ms.tgt_pltfrm: 
-ms.topic: article
 helpviewer_keywords:
 - layout [WPF], automatic
 - automatic layout [WPF]
 ms.assetid: 6fed9264-18bb-4d05-8867-1fe356c6f687
-caps.latest.revision: "22"
-author: dotnet-bot
-ms.author: dotnetcontent
-manager: wpickett
-ms.workload: dotnet
-ms.openlocfilehash: 75066b59d0f3a686c66fdbdd187ba4c18e786e6d
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.openlocfilehash: 8693150099559ca09541eb790c134ca3d5277e78
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="use-automatic-layout-overview"></a>使用自動配置概觀
 本主題將介紹如何撰寫的開發人員的指導方針[!INCLUDE[TLA#tla_winclient](../../../../includes/tlasharptla-winclient-md.md)]可當地語系化的應用程式[!INCLUDE[TLA#tla_ui#plural](../../../../includes/tlasharptla-uisharpplural-md.md)]。 在過去，當地語系化的[!INCLUDE[TLA2#tla_ui](../../../../includes/tla2sharptla-ui-md.md)]耗時的程序。 每一種語言，[!INCLUDE[TLA2#tla_ui](../../../../includes/tla2sharptla-ui-md.md)]是改為所需的像素的像素調整。 使用正確的設計和編碼標準，右邊今日[!INCLUDE[TLA2#tla_ui#plural](../../../../includes/tla2sharptla-uisharpplural-md.md)]可用於建構，所以當地語系化人員需要小於調整大小和執行重新調整位置。 撰寫應用程式都可以更輕鬆地調整大小和重新定位的方法在呼叫自動配置，而且可藉由使用[!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)]應用程式的設計。  
@@ -63,7 +51,7 @@ ms.lasthandoff: 12/22/2017
 |----------------------|-----------------|  
 |請勿使用絕對位置。|-請勿使用<xref:System.Windows.Controls.Canvas>因為它絕對定位項目。<br />-使用<xref:System.Windows.Controls.DockPanel>， <xref:System.Windows.Controls.StackPanel>，和<xref:System.Windows.Controls.Grid>來定位控制項。<br />-如需有關各種類型的面板的討論，請參閱[面板概觀](../../../../docs/framework/wpf/controls/panels-overview.md)。|  
 |請勿為視窗設定固定大小。|-使用<xref:System.Windows.Window.SizeToContent%2A>。<br />-   例如：<br /><br /> [!code-xaml[LocalizationGrid#2](../../../../samples/snippets/csharp/VS_Snippets_Wpf/LocalizationGrid/CS/Pane1.xaml#2)]|  
-|新增 <xref:System.Windows.FrameworkElement.FlowDirection%2A>。|<ul><li>新增<xref:System.Windows.FrameworkElement.FlowDirection%2A>至您的應用程式的根項目。</li><li>[!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] 提供一種便利的方式來支援水平、雙向和垂直版面配置。 在簡報 framework<xref:System.Windows.FrameworkElement.FlowDirection%2A>屬性可以用來定義配置。 書寫方向模式如下：<br /><br /> <ul><li><xref:System.Windows.FlowDirection.LeftToRight>(LrTb) — 拉丁、 東亞、 等等的水平配置。</li><li><xref:System.Windows.FlowDirection.RightToLeft>(RlTb) — 雙向阿拉伯文或希伯來文等等。</li></ul></li></ul>|  
+|新增 <xref:System.Windows.FrameworkElement.FlowDirection%2A>。|<ul><li>新增<xref:System.Windows.FrameworkElement.FlowDirection%2A>至您的應用程式的根項目。</li><li>[!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] 提供一種便利的方式來支援水平、雙向和垂直版面配置。 在簡報 framework<xref:System.Windows.FrameworkElement.FlowDirection%2A>屬性可以用來定義配置。 書寫方向模式如下：<br /><br /> <ul><li><xref:System.Windows.FlowDirection.LeftToRight> (LrTb) — 拉丁、 東亞、 等等的水平配置。</li><li><xref:System.Windows.FlowDirection.RightToLeft> (RlTb) — 雙向阿拉伯文或希伯來文等等。</li></ul></li></ul>|  
 |使用複合字型，而不是實體字型。|<ul><li>複合字型，<xref:System.Windows.Controls.Control.FontFamily%2A>屬性不需要當地語系化。</li><li>開發人員可以使用下列其中一個字型，或自行建立。<br /><br /> <ul><li>Global User Interface</li><li>全域新細明體</li><li>全域有襯線字型</li></ul></li></ul>|  
 |加入 xml:lang。|新增`xml:lang`屬性中的根項目您[!INCLUDE[TLA2#tla_ui](../../../../includes/tla2sharptla-ui-md.md)]，例如`xml:lang="en-US"`英文版的應用程式。<br />-因為複合字型使用`xml:lang`來判斷要使用的字型，請設定這個屬性，以支援多國語言的案例。|  
   
@@ -86,7 +74,7 @@ Grid
   
  **請注意**完整的程式碼範例，請參閱[共用大小屬性之間格線](../../../../docs/framework/wpf/controls/how-to-share-sizing-properties-between-grids.md)  
   
-## <a name="see-also"></a>請參閱  
+## <a name="see-also"></a>另請參閱  
  [WPF 的全球化](../../../../docs/framework/wpf/advanced/globalization-for-wpf.md)  
  [使用自動版面配置建立按鈕](../../../../docs/framework/wpf/advanced/how-to-use-automatic-layout-to-create-a-button.md)  
  [針對自動版面配置使用方格](../../../../docs/framework/wpf/advanced/how-to-use-a-grid-for-automatic-layout.md)

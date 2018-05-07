@@ -1,38 +1,24 @@
 ---
-title: "整合 COM 應用程式概觀"
-ms.custom: 
+title: 整合 COM 應用程式概觀
 ms.date: 03/30/2017
-ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.technology:
-- dotnet-clr
-ms.tgt_pltfrm: 
-ms.topic: article
 helpviewer_keywords:
 - COM [WCF], integration overview
 ms.assetid: 02c5697f-6e2e-47d6-b715-f3a28aebfbd5
-caps.latest.revision: 
-author: dotnet-bot
-ms.author: dotnetcontent
-manager: wpickett
-ms.workload:
-- dotnet
-ms.openlocfilehash: 5b20ae5329f08e9391fd7b93218c44c3c1978a48
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.openlocfilehash: c789d4a52da9b2785fb5919a674bf19f23d23509
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="integrating-with-com-applications-overview"></a>整合 COM 應用程式概觀
-[!INCLUDE[indigo1](../../../../includes/indigo1-md.md)] 為 Managed 程式碼開發人員提供了一個資源豐富的作業環境，讓他們可以建立相關應用程式。 不過，如果您對 Unmanaged COM 架構程式碼做了大筆投資，而且不想進行移轉，則仍舊可以使用 [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] 服務 Moniker 將 [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] Web 服務直接移轉至現有的程式碼。 服務 Moniker 可以從多種 COM 架構開發環境中使用，例如 Office VBA、Visual Basic 6.0 或 Visual C++ 6.0。  
+Windows Communication Foundation (WCF) 提供豐富的環境，以建立連接的應用程式的 managed 程式碼開發人員。 不過，如果您在 unmanaged COM 架構程式碼中有了大筆投資，而且不想要移轉，您可以仍然整合 WCF Web 服務直接在現有的程式碼使用 WCF 服務 moniker。 服務 Moniker 可以從多種 COM 架構開發環境中使用，例如 Office VBA、Visual Basic 6.0 或 Visual C++ 6.0。  
   
 > [!NOTE]
->  服務 Moniker 會在所有的通訊中使用 [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] 通訊通道。 該通道的安全性和識別機制不同於標準 COM 和 DCOM Proxy 所使用的機制。 此外，服務 Moniker 會使用 [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] 通訊通道，所以任何呼叫的預設逾時期間都是一分鐘。  
+>  服務 moniker 會使用 WCF 通訊通道，所有的通訊。 該通道的安全性和識別機制不同於標準 COM 和 DCOM Proxy 所使用的機制。 此外，因為服務 moniker 會使用 WCF 通訊通道的預設逾時期限為一分鐘的所有呼叫。  
   
- 服務 Moniker 會搭配 `GetObject` 函式使用，提供 Unmanaged 開發人員強型別且專屬於 COM 的方法來呼叫 [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] Web 服務。 這個動作需要有 [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] Web 服務合約的本機 COM 可見定義，以及要使用的繫結。 正如其他 [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] 用戶端一樣，雖然在第一次呼叫方法時，COM 程式設計人員看得見這個通道建構過程，但服務 Moniker 仍必須建構服務的型別通道。  
+ 服務 moniker 搭配`GetObject`函式，以提供 unmanaged 開發人員使用強型別、 特定的 COM 方法呼叫 WCF Web 服務。 這需要本機、 COM 可見定義 WCF Web 服務合約和要使用的繫結。 像其他 WCF 用戶端，服務 moniker 仍必須建構服務的型別的通道雖然第一次的方法呼叫，COM 程式設計人員見這個通道建構過程。  
   
- 與其他 [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] 用戶端共通的是，當使用 Moniker 時，應用程式會將位址、繫結及合約指定為與服務通訊。 可以使用下列其中一種方法指定合約：  
+ 與其他 WCF 用戶端，當使用 moniker 時，應用程式指定位址、 繫結和合約與服務進行通訊。 可以使用下列其中一種方法指定合約：  
   
 -   型別合約：合約會在用戶端電腦上註冊為 COM 可見型別。  
   
@@ -64,7 +50,7 @@ ms.lasthandoff: 12/22/2017
 |`serializer`|指定要使用 "xml" 或 "datacontract" 序列化程式。|  
   
 > [!NOTE]
->  即使搭配整個 COM 架構用戶端使用，服務 Moniker 仍需要用戶端電腦上安裝 [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] 和支援的 .NET Framework 2.0。 此外，使用服務 Moniker 的用戶端應用程式也一定要載入適當版本的 .NET Framework 執行階段。 在 Office 應用程式中使用 Moniker 時，可能需要有組態檔來確認是否載入了正確的 Framework 版本。 例如，在 Excel 中應將下列文字放入與 Excel.exe 檔案位在相同的目錄下，而且名為 Excel.exe.config 的檔案中：  
+>  即使搭配整個 COM 架構的用戶端，服務 moniker 仍需要 WCF 和支援的.NET Framework 2.0 安裝在用戶端電腦上。 此外，使用服務 Moniker 的用戶端應用程式也一定要載入適當版本的 .NET Framework 執行階段。 在 Office 應用程式中使用 Moniker 時，可能需要有組態檔來確認是否載入了正確的 Framework 版本。 例如，在 Excel 中應將下列文字放入與 Excel.exe 檔案位在相同的目錄下，而且名為 Excel.exe.config 的檔案中：  
 >   
 >  `<?xml version="1.0" encoding="utf-8"?>`  
 >   
@@ -78,5 +64,5 @@ ms.lasthandoff: 12/22/2017
 >   
 >  `</configuration>`  
   
-## <a name="see-also"></a>請參閱  
+## <a name="see-also"></a>另請參閱  
  [如何：註冊和設定服務 Moniker](../../../../docs/framework/wcf/feature-details/how-to-register-and-configure-a-service-moniker.md)

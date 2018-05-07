@@ -1,13 +1,6 @@
 ---
-title: "基本 WCF 程式設計"
-ms.custom: 
+title: 基本 WCF 程式設計
 ms.date: 03/30/2017
-ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.technology: dotnet-clr
-ms.tgt_pltfrm: 
-ms.topic: article
 helpviewer_keywords:
 - basic programming [WCF]
 - WCF [WCF], basic programming
@@ -15,19 +8,14 @@ helpviewer_keywords:
 - Windows Communication Foundation [WCF], basic programming
 - Windows Communication Foundation [WCF], programming
 ms.assetid: 3ae3d498-f43c-4ecc-8cc0-6cbe36b62593
-caps.latest.revision: "31"
-author: dotnet-bot
-ms.author: dotnetcontent
-manager: wpickett
-ms.workload: dotnet
-ms.openlocfilehash: a0635ff85c89f2e2758dc156bcb31e4cfeaf2466
-ms.sourcegitcommit: c0dd436f6f8f44dc80dc43b07f6841a00b74b23f
-ms.translationtype: MT
+ms.openlocfilehash: de56725f926ec9f6d4cc39c8160fa7af0f3ab80a
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 01/19/2018
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="basic-wcf-programming"></a>基本 WCF 程式設計
-本章節將說明建立 [!INCLUDE[indigo1](../../../includes/indigo1-md.md)] 應用程式的基礎概念。  
+本節提供建立 Windows Communication Foundation (WCF) 應用程式的基本概念。  
   
 ## <a name="in-this-section"></a>本節內容  
  [基本程式設計週期](../../../docs/framework/wcf/basic-programming-lifecycle.md)  

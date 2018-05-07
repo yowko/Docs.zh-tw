@@ -1,33 +1,21 @@
 ---
-title: "StatusBar 控制項 (Windows Form)"
-ms.custom: 
+title: StatusBar 控制項 (Windows Form)
 ms.date: 03/30/2017
-ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.technology: dotnet-winforms
-ms.tgt_pltfrm: 
-ms.topic: article
 helpviewer_keywords:
 - StatusBar control [Windows Forms]
 - status bars [Windows Forms], creating
 ms.assetid: 6f543e27-cf78-4b7f-b4d0-6a8030155d48
-caps.latest.revision: "9"
-author: dotnet-bot
-ms.author: dotnetcontent
-manager: wpickett
-ms.workload: dotnet
-ms.openlocfilehash: 945d9a658dd3d75dd0edb9f4eaca78334ee4d652
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.openlocfilehash: 66ec834778bd0eeacea642250c5430be8929b732
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="statusbar-control-windows-forms"></a>StatusBar 控制項 (Windows Form)
 > [!NOTE]
 >  <xref:System.Windows.Forms.ToolStripStatusLabel> 控制項會取代 <xref:System.Windows.Forms.StatusBar> 控制項並加入其他功能，不過您也可以選擇保留 <xref:System.Windows.Forms.StatusBar> 控制項，以提供回溯相容性及未來使用。  
   
- Windows Form <xref:System.Windows.Forms.StatusBar> 控制項在表單裡被當做區域來使用，通常會顯示在視窗底部，在其中應用程式可以顯示各種狀態資訊。 <xref:System.Windows.Forms.StatusBar>控制項可以有顯示圖示，表示狀態或一系列的動畫圖示，以指出程序運作; 的狀態列面板上例如，指出此問題的 Microsoft Word 文件正在儲存。  
+ Windows Form <xref:System.Windows.Forms.StatusBar> 控制項在表單裡被當做區域來使用，通常會顯示在視窗底部，在其中應用程式可以顯示各種狀態資訊。 <xref:System.Windows.Forms.StatusBar> 控制項可以有顯示圖示，表示狀態或一系列的動畫圖示，以指出程序運作; 的狀態列面板上例如，指出此問題的 Microsoft Word 文件正在儲存。  
   
 ## <a name="in-this-section"></a>本節內容  
  [StatusBar 控制項概觀](../../../../docs/framework/winforms/controls/statusbar-control-overview-windows-forms.md)  

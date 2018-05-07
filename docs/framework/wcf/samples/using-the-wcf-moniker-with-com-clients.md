@@ -1,29 +1,15 @@
 ---
 title: 利用 COM 用戶端使用 WCF Moniker
-ms.custom: ''
 ms.date: 03/30/2017
-ms.prod: .net-framework
-ms.reviewer: ''
-ms.suite: ''
-ms.technology:
-- dotnet-clr
-ms.tgt_pltfrm: ''
-ms.topic: article
 ms.assetid: e2799bfe-88bd-49d7-9d6d-ac16a9b16b04
-caps.latest.revision: 34
-author: dotnet-bot
-ms.author: dotnetcontent
-manager: wpickett
-ms.workload:
-- dotnet
-ms.openlocfilehash: 322467510d499040c07d6e5e84842542aa325737
-ms.sourcegitcommit: 2042de78fcdceebb6b8ac4b7a292b93e8782cbf5
-ms.translationtype: MT
+ms.openlocfilehash: 79040cd267d354d32b3e957dc70fcc65b09b0fc8
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/27/2018
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="using-the-wcf-moniker-with-com-clients"></a>利用 COM 用戶端使用 WCF Moniker
-這個範例會示範如何使用 [!INCLUDE[indigo1](../../../../includes/indigo1-md.md)] 服務 Moniker，以將 Web 服務整合至 COM 開發環境，例如 Microsoft Office Visual Basic for Applications (Office VBA) 或 Visual Basic 6.0。 這個範例由 Windows Script Host 用戶端 (.vbs)、支援的用戶端程式庫 (.dll) 和網際網路資訊服務 (IIS) 裝載的服務程式庫 (.dll) 所組成。 服務為計算機服務，而 COM 用戶端會呼叫服務上的數學作業：加法、減法、乘法和除法。 您可以在訊息方塊視窗中看到用戶端活動。  
+這個範例示範如何使用 Windows Communication Foundation (WCF) 服務 moniker，將 Web 服務整合到以 COM 為基礎的開發環境，例如 Microsoft Office Visual Basic for Applications (Office VBA) 或 Visual Basic 6.0。 這個範例由 Windows Script Host 用戶端 (.vbs)、支援的用戶端程式庫 (.dll) 和網際網路資訊服務 (IIS) 裝載的服務程式庫 (.dll) 所組成。 服務為計算機服務，而 COM 用戶端會呼叫服務上的數學作業：加法、減法、乘法和除法。 您可以在訊息方塊視窗中看到用戶端活動。  
   
 > [!NOTE]
 >  此範例的安裝程序與建置指示位於本主題的結尾。  
@@ -33,7 +19,7 @@ ms.lasthandoff: 04/27/2018
 >   
 >  `<InstallDrive>:\WF_WCF_Samples`  
 >   
->  如果此目錄不存在，請移至 [Windows Communication Foundation (WCF) and Windows Workflow Foundation (WF) Samples for .NET Framework 4  (適用於 .NET Framework 4 的 Windows Communication Foundation (WCF) 與 Windows Workflow Foundation (WF) 範例)](http://go.microsoft.com/fwlink/?LinkId=150780) ，以下載所有 [!INCLUDE[indigo1](../../../../includes/indigo1-md.md)] 和 [!INCLUDE[wf1](../../../../includes/wf1-md.md)] 範例。 此範例位於下列目錄。  
+>  如果此目錄不存在，請移至[Windows Communication Foundation (WCF) 和適用於.NET Framework 4 的 Windows Workflow Foundation (WF) 範例](http://go.microsoft.com/fwlink/?LinkId=150780)下載所有 Windows Communication Foundation (WCF) 和[!INCLUDE[wf1](../../../../includes/wf1-md.md)]範例。 此範例位於下列目錄。  
 >   
 >  `<InstallDrive>:\WF_WCF_Samples\WCF\Basic\Services\Interop\COM`  
   

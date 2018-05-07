@@ -1,13 +1,6 @@
 ---
-title: "如何：使用 Grid 建置標準 UI 對話方塊"
-ms.custom: 
+title: 如何：使用 Grid 建置標準 UI 對話方塊
 ms.date: 03/30/2017
-ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.technology: dotnet-wpf
-ms.tgt_pltfrm: 
-ms.topic: article
 dev_langs:
 - csharp
 - vb
@@ -15,16 +8,11 @@ helpviewer_keywords:
 - dialog boxes [WPF], creating
 - Grid control [WPF], creating [WPF], dialog box
 ms.assetid: d6ac3d51-844b-4d29-96d8-81a696a7b960
-caps.latest.revision: "14"
-author: dotnet-bot
-ms.author: dotnetcontent
-manager: wpickett
-ms.workload: dotnet
-ms.openlocfilehash: 69dba9b76f823e1779c4555521552b4a423c844c
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.openlocfilehash: d0b24e320c2a341b069e1c9c3e8b6d5e93076733
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="how-to-build-a-standard-ui-dialog-box-by-using-grid"></a>如何：使用 Grid 建置標準 UI 對話方塊
 這個範例示範如何建立標準[!INCLUDE[TLA#tla_ui](../../../../includes/tlasharptla-ui-md.md)]對話方塊使用<xref:System.Windows.Controls.Grid>項目。  
@@ -43,7 +31,7 @@ ms.lasthandoff: 12/22/2017
  [!code-csharp[GridRunDialog#1](../../../../samples/snippets/csharp/VS_Snippets_Wpf/GridRunDialog/CSharp/window1.xaml.cs#1)]
  [!code-vb[GridRunDialog#1](../../../../samples/snippets/visualbasic/VS_Snippets_Wpf/GridRunDialog/VisualBasic/grid_vb.vb#1)]  
   
-## <a name="see-also"></a>請參閱  
+## <a name="see-also"></a>另請參閱  
  <xref:System.Windows.Controls.Grid>  
  <xref:System.Windows.GridUnitType>  
  [面板概觀](../../../../docs/framework/wpf/controls/panels-overview.md)  

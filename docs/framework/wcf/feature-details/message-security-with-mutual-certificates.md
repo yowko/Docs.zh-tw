@@ -1,30 +1,20 @@
 ---
-title: "相互憑證的訊息安全性"
-ms.custom: 
+title: 相互憑證的訊息安全性
 ms.date: 03/30/2017
-ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.technology: dotnet-clr
-ms.tgt_pltfrm: 
-ms.topic: article
 dev_langs:
 - csharp
 - vb
 ms.assetid: 99d7a528-7ae4-4d39-a0f9-3066ea237de0
-caps.latest.revision: "18"
 author: BrucePerlerMS
-ms.author: bruceper
 manager: mbaldwin
-ms.workload: dotnet
-ms.openlocfilehash: a60af220bf962e523a35bc5b8d8abca041a9fd46
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.openlocfilehash: 1407593bf90b28a1890a8c18564b31d0aa67e0cd
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="message-security-with-mutual-certificates"></a>相互憑證的訊息安全性
-下列案例顯示使用訊息安全性模式加以保護的 [!INCLUDE[indigo1](../../../../includes/indigo1-md.md)] 服務和用戶端。 用戶端與服務以憑證加以驗證。  
+下列案例會顯示 Windows Communication Foundation (WCF) 服務和用戶端使用訊息安全性模式保護。 用戶端與服務以憑證加以驗證。  
   
  因為案例使用具有 X.509 憑證權杖設定檔的 WS-Security，所以這個案例是互通的。  
   
@@ -169,7 +159,7 @@ ms.lasthandoff: 12/22/2017
 </configuration>  
 ```  
   
-## <a name="see-also"></a>請參閱  
+## <a name="see-also"></a>另請參閱  
  [安全性概觀](../../../../docs/framework/wcf/feature-details/security-overview.md)  
  [Windows Server App Fabric 的安全性模型](http://go.microsoft.com/fwlink/?LinkID=201279&clcid=0x409)  
  [如何： 建立並在開發期間針對傳輸安全性安裝暫時憑證在 WCF 中](http://go.microsoft.com/fwlink/?LinkId=244264)

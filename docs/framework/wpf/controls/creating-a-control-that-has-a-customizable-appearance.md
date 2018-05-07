@@ -1,13 +1,6 @@
 ---
-title: "建立外觀可自訂的控制項"
-ms.custom: 
+title: 建立外觀可自訂的控制項
 ms.date: 03/30/2017
-ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.technology: dotnet-wpf
-ms.tgt_pltfrm: 
-ms.topic: article
 dev_langs:
 - csharp
 - vb
@@ -20,20 +13,15 @@ helpviewer_keywords:
 - managing control states [WPF], VisualStateManager
 - VisualStateManager [WPF], best practice
 ms.assetid: 9e356d3d-a3d0-4b01-a25f-2d43e4d53fe5
-caps.latest.revision: "10"
-author: dotnet-bot
-ms.author: dotnetcontent
-manager: wpickett
-ms.workload: dotnet
-ms.openlocfilehash: 4da96c3e33c6f7827619b408568fbbfe96c50a11
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.openlocfilehash: 9f539e7dbb105591375857122d738fddd87f6776
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="creating-a-control-that-has-a-customizable-appearance"></a>建立外觀可自訂的控制項
 <a name="introduction"></a>
-[!INCLUDE[TLA#tla_winclient](../../../../includes/tlasharptla-winclient-md.md)]可讓您建立控制項，您可以自訂其外觀。 例如，您可以變更的外觀<xref:System.Windows.Controls.CheckBox>超出什麼設定屬性會藉由建立新的執行<xref:System.Windows.Controls.ControlTemplate>。 下圖顯示<xref:System.Windows.Controls.CheckBox>，會使用預設<xref:System.Windows.Controls.ControlTemplate>和<xref:System.Windows.Controls.CheckBox>使用自訂<xref:System.Windows.Controls.ControlTemplate>。  
+[!INCLUDE[TLA#tla_winclient](../../../../includes/tlasharptla-winclient-md.md)] 可讓您建立控制項，您可以自訂其外觀。 例如，您可以變更的外觀<xref:System.Windows.Controls.CheckBox>超出什麼設定屬性會藉由建立新的執行<xref:System.Windows.Controls.ControlTemplate>。 下圖顯示<xref:System.Windows.Controls.CheckBox>，會使用預設<xref:System.Windows.Controls.ControlTemplate>和<xref:System.Windows.Controls.CheckBox>使用自訂<xref:System.Windows.Controls.ControlTemplate>。  
   
  ![核取方塊具有預設控制項範本。] (../../../../docs/framework/wpf/controls/media/ndp-checkboxdefault.png "NDP_CheckBoxDefault")  
 使用預設控制項範本的 CheckBox  
@@ -89,7 +77,7 @@ ms.lasthandoff: 12/22/2017
   
  [!code-xaml[VSMCustomControl#VisualStructure](../../../../samples/snippets/csharp/VS_Snippets_Wpf/vsmcustomcontrol/csharp/window1.xaml#visualstructure)]  
   
- 視覺化行為`NumericUpDown`控制項是負數時，值是紅色字型。  如果您變更<xref:System.Windows.Controls.TextBlock.Foreground%2A>的<xref:System.Windows.Controls.TextBlock>在程式碼時`Value`是負數，`NumericUpDown`永遠會顯示為紅色的負值。 指定控制項的視覺行為<xref:System.Windows.Controls.ControlTemplate>加<xref:System.Windows.VisualState>物件加入至<xref:System.Windows.Controls.ControlTemplate>。  下列範例所示<xref:System.Windows.VisualState>物件`Positive`和`Negative`狀態。  `Positive`和`Negative`是互為獨佔模式 （控制項永遠是在兩個的其中一個），因此範例將<xref:System.Windows.VisualState>物件到單一<xref:System.Windows.VisualStateGroup>。  當控制項進入`Negative`狀態，<xref:System.Windows.Controls.TextBlock.Foreground%2A>的<xref:System.Windows.Controls.TextBlock>會變成紅色。  當控制項處於`Positive`狀態，<xref:System.Windows.Controls.TextBlock.Foreground%2A>回到其原始值。  定義<xref:System.Windows.VisualState>中的物件<xref:System.Windows.Controls.ControlTemplate>中進一步討論[自訂現有控制項的外觀，藉由建立 ControlTemplate](../../../../docs/framework/wpf/controls/customizing-the-appearance-of-an-existing-control.md)。  
+ 視覺化行為`NumericUpDown`控制項是負數時，值是紅色字型。  如果您變更<xref:System.Windows.Controls.TextBlock.Foreground%2A>的<xref:System.Windows.Controls.TextBlock>在程式碼時`Value`是負數，`NumericUpDown`永遠會顯示為紅色的負值。 指定控制項的視覺行為<xref:System.Windows.Controls.ControlTemplate>加<xref:System.Windows.VisualState>物件加入至<xref:System.Windows.Controls.ControlTemplate>。  下列範例所示<xref:System.Windows.VisualState>物件`Positive`和`Negative`狀態。  `Positive` 和`Negative`是互為獨佔模式 （控制項永遠是在兩個的其中一個），因此範例將<xref:System.Windows.VisualState>物件到單一<xref:System.Windows.VisualStateGroup>。  當控制項進入`Negative`狀態，<xref:System.Windows.Controls.TextBlock.Foreground%2A>的<xref:System.Windows.Controls.TextBlock>會變成紅色。  當控制項處於`Positive`狀態，<xref:System.Windows.Controls.TextBlock.Foreground%2A>回到其原始值。  定義<xref:System.Windows.VisualState>中的物件<xref:System.Windows.Controls.ControlTemplate>中進一步討論[自訂現有控制項的外觀，藉由建立 ControlTemplate](../../../../docs/framework/wpf/controls/customizing-the-appearance-of-an-existing-control.md)。  
   
 > [!NOTE]
 >  請務必設定<xref:System.Windows.VisualStateManager.VisualStateGroups%2A?displayProperty=nameWithType>附加屬性的根<xref:System.Windows.FrameworkElement>的<xref:System.Windows.Controls.ControlTemplate>。  
@@ -212,17 +200,17 @@ ms.lasthandoff: 12/22/2017
   
 -   A<xref:System.Windows.Controls.Primitives.RepeatButton>呼叫`UpButton`。  
   
--   A<xref:System.Windows.Controls.Primitives.RepeatButton>呼叫`DownButton.`  
+-   A<xref:System.Windows.Controls.Primitives.RepeatButton>呼叫 `DownButton.`  
   
  控制項可以處於下列狀態：  
   
--   在`ValueStates`<xref:System.Windows.VisualStateGroup>  
+-   在 `ValueStates`<xref:System.Windows.VisualStateGroup>  
   
     -   `Positive`  
   
     -   `Negative`  
   
--   在`FocusStates`<xref:System.Windows.VisualStateGroup>  
+-   在 `FocusStates`<xref:System.Windows.VisualStateGroup>  
   
     -   `Focused`  
   
@@ -248,6 +236,6 @@ ms.lasthandoff: 12/22/2017
  [!code-csharp[VSMCustomControl#ControlLogic](../../../../samples/snippets/csharp/VS_Snippets_Wpf/vsmcustomcontrol/csharp/numericupdown.cs#controllogic)]
  [!code-vb[VSMCustomControl#ControlLogic](../../../../samples/snippets/visualbasic/VS_Snippets_Wpf/vsmcustomcontrol/visualbasic/numericupdown.vb#controllogic)]  
   
-## <a name="see-also"></a>請參閱  
+## <a name="see-also"></a>另請參閱  
  [透過建立 ControlTemplate 自訂現有控制項的外觀](../../../../docs/framework/wpf/controls/customizing-the-appearance-of-an-existing-control.md)  
  [控制項自訂](../../../../docs/framework/wpf/controls/control-customization.md)

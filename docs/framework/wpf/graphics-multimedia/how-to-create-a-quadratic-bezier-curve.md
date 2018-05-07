@@ -1,28 +1,16 @@
 ---
-title: "如何：建立二次方貝茲曲線"
-ms.custom: 
+title: 如何：建立二次方貝茲曲線
 ms.date: 03/30/2017
-ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.technology: dotnet-wpf
-ms.tgt_pltfrm: 
-ms.topic: article
 helpviewer_keywords:
 - Bezier curves [WPF], creating
 - quadratic Bezier curves [WPF], creating
 - graphics [WPF], quadratic Bezier curves
 ms.assetid: cd8fca4a-504e-4fd8-92ea-2969065a6e02
-caps.latest.revision: "8"
-author: dotnet-bot
-ms.author: dotnetcontent
-manager: wpickett
-ms.workload: dotnet
-ms.openlocfilehash: 3cd349ae11a76acda81e44652ca5463b18e1dda8
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.openlocfilehash: 9d389125b6ad09833a16b64cb8f498cc20d4e79c
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="how-to-create-a-quadratic-bezier-curve"></a>如何：建立二次方貝茲曲線
 這個範例示範如何建立二次方貝茲曲線。  若要建立二次方貝茲曲線，使用<xref:System.Windows.Media.PathGeometry>， <xref:System.Windows.Media.PathFigure>，和<xref:System.Windows.Media.QuadraticBezierSegment>類別。  
@@ -46,6 +34,6 @@ ms.lasthandoff: 12/22/2017
   
  這個範例屬於較大型的範例；如需完整範例，請參閱[幾何範例](http://go.microsoft.com/fwlink/?LinkID=159989)。  
   
-## <a name="see-also"></a>請參閱  
+## <a name="see-also"></a>另請參閱  
  [建立橢圓形弧線](../../../../docs/framework/wpf/graphics-multimedia/how-to-create-an-elliptical-arc.md)  
  [建立三次方貝茲曲線](../../../../docs/framework/wpf/graphics-multimedia/how-to-create-a-cubic-bezier-curve.md)

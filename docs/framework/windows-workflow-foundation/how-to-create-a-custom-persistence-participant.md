@@ -1,28 +1,17 @@
 ---
-title: "HOW TO：建立自訂非持續性參與者"
-ms.custom: 
+title: HOW TO：建立自訂非持續性參與者
 ms.date: 03/30/2017
-ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.tgt_pltfrm: 
-ms.topic: article
 ms.assetid: 1d9cc47a-8966-4286-94d5-4221403d9c06
-caps.latest.revision: "6"
-author: dotnet-bot
-ms.author: dotnetcontent
-manager: wpickett
-ms.workload: dotnet
-ms.openlocfilehash: ebc83f100b4303b73ba2e6d3dc41d0f82e8f2c22
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.openlocfilehash: fcd96e41d8fc7b36f9dff5f10e9bc2d9034d79b2
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="how-to-create-a-custom-persistence-participant"></a>HOW TO：建立自訂非持續性參與者
 下列程序包含建立持續性參與者的步驟。 請參閱[參與持續性](http://go.microsoft.com/fwlink/?LinkID=177735)範例和[存放區擴充性](../../../docs/framework/windows-workflow-foundation/store-extensibility.md)的持續性參與者的範例實作的主題。  
   
-1.  建立從 <xref:System.Activities.Persistence.PersistenceParticipant> 或 <xref:System.Activities.Persistence.PersistenceIOParticipant> 類別衍生的類別。 除了能夠參與 IO 作業外，PersistenceIOParticipant 類別與 PersistenceParticipant 類別提供相同的擴充點。 請依照下列其中一個或多個步驟進行。  
+1.  建立從 <xref:System.Activities.Persistence.PersistenceParticipant> 或 <xref:System.Activities.Persistence.PersistenceIOParticipant> 類別衍生的類別。 PersistenceIOParticipant 類別會提供相同的擴充點，與 PersistenceParticipant 類別除了能夠參與中 I/O 作業。 請依照下列其中一個或多個步驟進行。  
   
 2.  實作 <xref:System.Activities.Persistence.PersistenceParticipant.CollectValues%2A> 方法。 **CollectValues**方法有兩個字典參數，一個用於儲存讀取/寫入值，另一個則用於儲存唯寫值 （稍後用於查詢中）。 在這個方法中，您應在這些字典內填入持續性參與者專屬的資料。 每個字典均包含值的名稱做為索引鍵，而值的本身則做為 <xref:System.Runtime.DurableInstancing.InstanceValue> 物件。  
   
@@ -46,13 +35,13 @@ ms.lasthandoff: 12/22/2017
     protected virtual void PublishValues (IDictionary<XName,Object> readWriteValues)  
     ```  
   
-5.  實作**BeginOnSave**方法如果參與者是持續性 IO 參與者。 系統會在儲存作業期間呼叫這個方法。 在這個方法中，您應執行附屬於持續性 (儲存中) 工作流程執行個體的 IO。  如果主機使用對應持續性命令的交易，則同樣的交易會在 Transaction.Current 中提供。  此外，PersistenceIOParticipants 可能會通告異動一致性需求，此時，主機會為持續性時段建立異動 (如果未使用任何異動)。  
+5.  實作**BeginOnSave**方法如果參與者是持續性 I/O 參與者。 系統會在儲存作業期間呼叫這個方法。 在這種方法，您應執行 I/O 輔助持續性 （儲存） 工作流程執行個體。  如果主機使用對應持續性命令的異動，則同樣的異動會在 Transaction.Current 中提供。  此外，PersistenceIOParticipants 可能會通告異動一致性需求，此時，主機會為持續性時段建立異動 (如果未使用任何異動)。  
   
     ```  
     protected virtual IAsyncResult BeginOnSave (IDictionary<XName,Object> readWriteValues, IDictionary<XName,Object> writeOnlyValues, TimeSpan timeout, AsyncCallback callback, Object state)  
     ```  
   
-6.  實作**BeginOnLoad**方法如果參與者是持續性 IO 參與者。 系統會在載入作業期間呼叫這個方法。 在這個方法中，您應執行附屬於工作流程執行個體載入作業的 IO。 如果主機使用對應持續性命令的交易，則同樣的交易會在 Transaction.Current 中提供。 此外，PersistenceIO 參與者可能會通告交易一致性需求，此時，主機會為持續性時段建立交易 (如果未使用任何交易)。  
+6.  實作**BeginOnLoad**方法如果參與者是持續性 I/O 參與者。 系統會在載入作業期間呼叫這個方法。 在這種方法，您應執行 I/O 輔助載入作業的工作流程執行個體。 如果主機使用對應持續性命令的異動，則同樣的異動會在 Transaction.Current 中提供。 此外，持續性 I/O 參與者可能會通告異動一致性需求，如果其中一個會無法使用建立的交易持續性的時段的此時，主機。  
   
     ```  
     protected virtual IAsyncResult BeginOnLoad (IDictionary<XName,Object> readWriteValues, TimeSpan timeout, AsyncCallback callback, Object state)  

@@ -1,26 +1,12 @@
 ---
 title: 傳輸：WSE 3.0 TCP 互通性
-ms.custom: ''
 ms.date: 03/30/2017
-ms.prod: .net-framework
-ms.reviewer: ''
-ms.suite: ''
-ms.technology:
-- dotnet-clr
-ms.tgt_pltfrm: ''
-ms.topic: article
 ms.assetid: 5f7c3708-acad-4eb3-acb9-d232c77d1486
-caps.latest.revision: 18
-author: dotnet-bot
-ms.author: dotnetcontent
-manager: wpickett
-ms.workload:
-- dotnet
-ms.openlocfilehash: 9ce948a9239e7a8171424fa9f1cf0fa8624d0156
-ms.sourcegitcommit: 11f11ca6cefe555972b3a5c99729d1a7523d8f50
+ms.openlocfilehash: fb877e6d55214e9a268a88b33a4613ca8df0eb8f
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="transport-wse-30-tcp-interoperability"></a>傳輸：WSE 3.0 TCP 互通性
 WSE 3.0 TCP 互通性傳輸範例示範如何實作 TCP 雙工工作階段做為自訂的 Windows Communication Foundation (WCF) 傳輸。 也會示範如何使用通道層的擴充性，透過網路與現有的已部署系統相連結。 下列步驟會顯示如何建置此自訂 [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] 傳輸：  

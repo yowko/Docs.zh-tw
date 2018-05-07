@@ -1,13 +1,6 @@
 ---
-title: "使用視覺化樣式呈現控制項"
-ms.custom: 
+title: 使用視覺化樣式呈現控制項
 ms.date: 03/30/2017
-ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.technology: dotnet-winforms
-ms.tgt_pltfrm: 
-ms.topic: article
 helpviewer_keywords:
 - professional appearance [Windows Forms], rendering Windows Forms controls
 - themes [Windows Forms], XP visual styles in Window Forms
@@ -17,16 +10,11 @@ helpviewer_keywords:
 - user controls [Windows Forms], painting
 - visual styles [Windows Forms], rendering Windows Forms controls
 ms.assetid: a5b178ba-610e-46c4-a6c0-509c0886a744
-caps.latest.revision: "19"
-author: dotnet-bot
-ms.author: dotnetcontent
-manager: wpickett
-ms.workload: dotnet
-ms.openlocfilehash: 127e3c411b4c75e5a2bd9f133defc447992b95f6
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.openlocfilehash: a7f2d810567d37021d5d4473204d9950d6834b9a
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="rendering-controls-with-visual-styles"></a>使用視覺化樣式呈現控制項
 [!INCLUDE[dnprdnshort](../../../../includes/dnprdnshort-md.md)] 會使用作業系統支援的視覺化樣式，來支援控制項和其他 Windows 使用者介面 (UI) 項目的呈現。 本主題說明在 [!INCLUDE[dnprdnshort](../../../../includes/dnprdnshort-md.md)] 中使用作業系統目前的視覺化樣式，來呈現控制項和其他 UI 項目的數種支援層級。  
@@ -89,5 +77,5 @@ ms.lasthandoff: 12/22/2017
 > [!IMPORTANT]
 >  如果您想在使用者啟用或切換視覺化樣式時使用 <xref:System.Windows.Forms.VisualStyles.VisualStyleRenderer> 呈現控制項或 UI 項目，請務必在處理 <xref:Microsoft.Win32.SystemEvents.UserPreferenceChanged> 事件時進行此作業，而不是在處理 <xref:Microsoft.Win32.SystemEvents.UserPreferenceChanging> 事件時這麼做。 如果您在處理 <xref:System.Windows.Forms.VisualStyles.VisualStyleRenderer> 時使用 <xref:Microsoft.Win32.SystemEvents.UserPreferenceChanging>類別，便會擲回例外狀況。  
   
-## <a name="see-also"></a>請參閱  
+## <a name="see-also"></a>另請參閱  
  [自訂控制項繪製和轉譯 ](../../../../docs/framework/winforms/controls/custom-control-painting-and-rendering.md)

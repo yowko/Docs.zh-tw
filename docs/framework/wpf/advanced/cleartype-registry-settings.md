@@ -1,27 +1,15 @@
 ---
-title: "ClearType 登錄設定"
-ms.custom: 
+title: ClearType 登錄設定
 ms.date: 03/30/2017
-ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.technology: dotnet-wpf
-ms.tgt_pltfrm: 
-ms.topic: article
 helpviewer_keywords:
 - ClearType [WPF], registry settings
 - typography [WPF], ClearType registry settings
 ms.assetid: 56f314bb-b30b-4f67-8492-8b8a9fa432ae
-caps.latest.revision: "18"
-author: dotnet-bot
-ms.author: dotnetcontent
-manager: wpickett
-ms.workload: dotnet
-ms.openlocfilehash: d915af4ee436bb6c661a7b412b0e36702191339a
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.openlocfilehash: cacdc47a35bfd197bcac29edc6f7c780d3b8578f
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="cleartype-registry-settings"></a>ClearType 登錄設定
 本主題提供概觀[!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)][!INCLUDE[TLA#tla_ct](../../../../includes/tlasharptla-ct-md.md)]所使用的登錄設定[!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)]應用程式。  
@@ -29,7 +17,7 @@ ms.lasthandoff: 12/22/2017
   
 <a name="overview"></a>   
 ## <a name="technology-overview"></a>技術概觀  
- [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)]顯示裝置使用的文字呈現的應用程式[!INCLUDE[TLA2#tla_ct](../../../../includes/tla2sharptla-ct-md.md)]功能提供增強的閱讀經驗。 [!INCLUDE[TLA2#tla_ct](../../../../includes/tla2sharptla-ct-md.md)] 軟體技術是由 [!INCLUDE[TLA#tla_ms](../../../../includes/tlasharptla-ms-md.md)] 所開發，此技術改善了現有 LCD (液晶顯示器) 上的文字可讀性，例如膝上型電腦螢幕、Pocket PC 螢幕和平面監視器。 [!INCLUDE[TLA2#tla_ct](../../../../includes/tla2sharptla-ct-md.md)] 的運作方式是存取 LCD 螢幕中每個像素的個別垂直色帶項目。 如需有關[!INCLUDE[TLA2#tla_ct](../../../../includes/tla2sharptla-ct-md.md)]，請參閱[ClearType 概觀](../../../../docs/framework/wpf/advanced/cleartype-overview.md)。  
+ [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] 顯示裝置使用的文字呈現的應用程式[!INCLUDE[TLA2#tla_ct](../../../../includes/tla2sharptla-ct-md.md)]功能提供增強的閱讀經驗。 [!INCLUDE[TLA2#tla_ct](../../../../includes/tla2sharptla-ct-md.md)] 軟體技術是由 [!INCLUDE[TLA#tla_ms](../../../../includes/tlasharptla-ms-md.md)] 所開發，此技術改善了現有 LCD (液晶顯示器) 上的文字可讀性，例如膝上型電腦螢幕、Pocket PC 螢幕和平面監視器。 [!INCLUDE[TLA2#tla_ct](../../../../includes/tla2sharptla-ct-md.md)] 的運作方式是存取 LCD 螢幕中每個像素的個別垂直色帶項目。 如需有關[!INCLUDE[TLA2#tla_ct](../../../../includes/tla2sharptla-ct-md.md)]，請參閱[ClearType 概觀](../../../../docs/framework/wpf/advanced/cleartype-overview.md)。  
   
  與呈現的文字[!INCLUDE[TLA2#tla_ct](../../../../includes/tla2sharptla-ct-md.md)]可以出現在不同顯示裝置上檢視時，明顯不同。 例如，少量監視器實作在藍色、 綠色、 紅色順序中的色彩等量磁碟區的項目，而不是較常見的紅色、 綠色、 藍色 ( [!INCLUDE[TLA#tla_rgb](../../../../includes/tlasharptla-rgb-md.md)]) 順序。  
   
@@ -39,7 +27,7 @@ ms.lasthandoff: 12/22/2017
   
 <a name="registry_settings"></a>   
 ## <a name="registry-settings"></a>登錄設定  
- [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)]指定四個登錄設定來控制[!INCLUDE[TLA2#tla_ct](../../../../includes/tla2sharptla-ct-md.md)]功能：  
+ [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] 指定四個登錄設定來控制[!INCLUDE[TLA2#tla_ct](../../../../includes/tla2sharptla-ct-md.md)]功能：  
   
 |設定|描述|  
 |-------------|-----------------|  
@@ -71,7 +59,7 @@ ms.lasthandoff: 12/22/2017
  ![登錄編輯程式中的 ClearType 設定](../../../../docs/framework/wpf/advanced/media/cleartyperegistry01.png "ClearTypeRegistry01")  
   
 > [!NOTE]
->  [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)]應用程式以呈現文字與不是兩種模式的其中一個[!INCLUDE[TLA2#tla_ct](../../../../includes/tla2sharptla-ct-md.md)]。 當不會呈現文字[!INCLUDE[TLA2#tla_ct](../../../../includes/tla2sharptla-ct-md.md)]，它指灰階呈現。  
+>  [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] 應用程式以呈現文字與不是兩種模式的其中一個[!INCLUDE[TLA2#tla_ct](../../../../includes/tla2sharptla-ct-md.md)]。 當不會呈現文字[!INCLUDE[TLA2#tla_ct](../../../../includes/tla2sharptla-ct-md.md)]，它指灰階呈現。  
   
 <a name="gamma_level"></a>   
 ## <a name="gamma-level"></a>Gamma 層級  
@@ -125,6 +113,6 @@ ms.lasthandoff: 12/22/2017
   
  ![登錄編輯程式中的 ClearType 設定](../../../../docs/framework/wpf/advanced/media/cleartyperegistry01.png "ClearTypeRegistry01")  
   
-## <a name="see-also"></a>請參閱  
+## <a name="see-also"></a>另請參閱  
  [ClearType 概觀](../../../../docs/framework/wpf/advanced/cleartype-overview.md)  
  [ClearType 消除鋸齒功能](https://msdn.microsoft.com/library/dd183433(v=vs.85).aspx)

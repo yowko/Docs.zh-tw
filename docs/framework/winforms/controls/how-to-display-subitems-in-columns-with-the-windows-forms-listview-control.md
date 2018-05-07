@@ -1,13 +1,6 @@
 ---
-title: "如何：使用 Windows Form ListView 控制項以資料行顯示子項目"
-ms.custom: 
+title: 如何：使用 Windows Form ListView 控制項以資料行顯示子項目
 ms.date: 03/30/2017
-ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.technology: dotnet-winforms
-ms.tgt_pltfrm: 
-ms.topic: article
 dev_langs:
 - csharp
 - vb
@@ -17,16 +10,11 @@ helpviewer_keywords:
 - ListView control [Windows Forms], adding ListSubItems
 - subitems
 ms.assetid: e465f044-cde7-4fd9-a687-788a73a0f554
-caps.latest.revision: "12"
-author: dotnet-bot
-ms.author: dotnetcontent
-manager: wpickett
-ms.workload: dotnet
-ms.openlocfilehash: 3a9da292b5f65ea9dc44b47a8c3bc13cf43e83b7
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.openlocfilehash: efee926301bc358bb7645ba67826f412c0d0dbbe
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="how-to-display-subitems-in-columns-with-the-windows-forms-listview-control"></a>如何：使用 Windows Form ListView 控制項以資料行顯示子項目
 Windows Form<xref:System.Windows.Forms.ListView>控制項可以顯示其他的文字或詳細資料檢視中的每個項目的子項目。 第一個資料行顯示的項目文字，例如員工編號。 第二、 第三和後續的資料行中顯示第一、 第二，以及後續的相關聯的子項目。  
@@ -40,7 +28,7 @@ Windows Form<xref:System.Windows.Forms.ListView>控制項可以顯示其他的�
      [!code-csharp[System.Windows.Forms.ListViewLegacyTopics#61](../../../../samples/snippets/csharp/VS_Snippets_Winforms/System.Windows.Forms.ListViewLegacyTopics/CS/Class1.cs#61)]
      [!code-vb[System.Windows.Forms.ListViewLegacyTopics#61](../../../../samples/snippets/visualbasic/VS_Snippets_Winforms/System.Windows.Forms.ListViewLegacyTopics/VB/Class1.vb#61)]  
   
-## <a name="see-also"></a>請參閱  
+## <a name="see-also"></a>另請參閱  
  [ListView 控制項概觀](../../../../docs/framework/winforms/controls/listview-control-overview-windows-forms.md)  
  [操作說明：使用 Windows Forms ListView 控制項加入和移除項目](../../../../docs/framework/winforms/controls/how-to-add-and-remove-items-with-the-windows-forms-listview-control.md)  
  [操作說明：將資料行加入至 Windows Forms ListView 控制項](../../../../docs/framework/winforms/controls/how-to-add-columns-to-the-windows-forms-listview-control.md)  

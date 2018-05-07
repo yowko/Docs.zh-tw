@@ -1,24 +1,12 @@
 ---
-title: "HOW TO：說明如何使用訊息活動建立工作流程服務。"
-ms.custom: 
+title: HOW TO：說明如何使用訊息活動建立工作流程服務。
 ms.date: 03/30/2017
-ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.technology: dotnet-clr
-ms.tgt_pltfrm: 
-ms.topic: article
 ms.assetid: 53d094e2-6901-4aa1-88b8-024b27ccf78b
-caps.latest.revision: "11"
-author: dotnet-bot
-ms.author: dotnetcontent
-manager: wpickett
-ms.workload: dotnet
-ms.openlocfilehash: 24456bbbefe305a3e9620e5396c8d300163e00d4
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.openlocfilehash: b646d1e242d570ec758865b48ab3720033ea9302
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="how-to-create-a-workflow-service-with-messaging-activities"></a>HOW TO：說明如何使用訊息活動建立工作流程服務。
 本主題描述如何使用訊息活動建立簡單的工作流程服務。 本主題的重點在於建立工作流程服務的機制，而該服務主要包含的便是訊息活動。 在真實世界的服務中，工作流程包含許多其他活動。 服務會實作一項稱為 Echo 的作業，該作業會使用字串並將字串傳回呼叫端。 本主題即為兩個主題的第一個。 下一個主題[How To: 服務從工作流程應用程式存取](../../../../docs/framework/wcf/feature-details/how-to-access-a-service-from-a-workflow-application.md)討論如何建立可呼叫服務，本主題中建立工作流程應用程式。  
@@ -69,7 +57,7 @@ ms.lasthandoff: 12/22/2017
   
      這樣會指定 [接收] 活動接收字串參數，且該資料繫結至 `msg` 變數。 按一下**確定**關閉**內容定義**對話方塊。  
   
-7.  按一下**定義...**中連結**內容**方塊中<xref:System.ServiceModel.Activities.SendReply>活動顯示**內容定義**對話方塊。 選取**參數**選項按鈕，按一下**加入新的參數**連結，輸入`outMsg`中**名稱**文字方塊中，選取**字串**中**類型**下拉式清單方塊中，和`msg`中**值**文字方塊中，在下圖所示。  
+7.  按一下**定義...** 中連結**內容**方塊中<xref:System.ServiceModel.Activities.SendReply>活動顯示**內容定義**對話方塊。 選取**參數**選項按鈕，按一下**加入新的參數**連結，輸入`outMsg`中**名稱**文字方塊中，選取**字串**中**類型**下拉式清單方塊中，和`msg`中**值**文字方塊中，在下圖所示。  
   
      ![加入參數內容](../../../../docs/framework/wcf/feature-details/media/parameterscontent2.jpg "ParametersContent2")  
   
@@ -100,7 +88,7 @@ ms.lasthandoff: 12/22/2017
   
 4.  繼續前往[How To: 服務從工作流程應用程式存取](../../../../docs/framework/wcf/feature-details/how-to-access-a-service-from-a-workflow-application.md)主題以建立工作流程用戶端會呼叫此服務。  
   
-## <a name="see-also"></a>請參閱  
+## <a name="see-also"></a>另請參閱  
  [工作流程服務](../../../../docs/framework/wcf/feature-details/workflow-services.md)  
  [裝載工作流程服務概觀](../../../../docs/framework/wcf/feature-details/hosting-workflow-services-overview.md)  
  [傳訊活動](../../../../docs/framework/wcf/feature-details/messaging-activities.md)

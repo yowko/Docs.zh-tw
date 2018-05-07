@@ -1,14 +1,6 @@
 ---
 title: HOW TO：指定用戶端認證類型
-ms.custom: ''
 ms.date: 03/30/2017
-ms.prod: .net-framework
-ms.reviewer: ''
-ms.suite: ''
-ms.technology:
-- dotnet-clr
-ms.tgt_pltfrm: ''
-ms.topic: article
 dev_langs:
 - csharp
 - vb
@@ -16,17 +8,11 @@ helpviewer_keywords:
 - security credentials, adding to SOAP messages
 - WCF, security
 ms.assetid: 10f51bee-5f92-4c1a-9126-fa5418535d8f
-caps.latest.revision: 8
-author: dotnet-bot
-ms.author: dotnetcontent
-manager: wpickett
-ms.workload:
-- dotnet
-ms.openlocfilehash: 50455770f0e94df5994d0a7ecbe2bf13bc43cf38
-ms.sourcegitcommit: 94d33cadc5ff81d2ac389bf5f26422c227832052
+ms.openlocfilehash: 5e1ff85d8a0bd45c87786f98c2cafe06472052b0
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/30/2018
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="how-to-specify-the-client-credential-type"></a>HOW TO：指定用戶端認證類型
 在設定過安全性模式 (傳輸或訊息) 後，您就會擁有設定用戶端認證類型的選項。 這個屬性會指定用戶端必須提供給服務以進行驗證的認證類型。 如需有關如何設定安全性模式 （之前設定用戶端認證類型的必要步驟） 的詳細資訊，請參閱[How to： 設定安全性模式](../../../docs/framework/wcf/how-to-set-the-security-mode.md)。  

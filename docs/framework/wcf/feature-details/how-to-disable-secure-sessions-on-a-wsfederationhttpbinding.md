@@ -1,13 +1,6 @@
 ---
-title: "HOW TO：在 WSFederationHttpBinding 上停用安全工作階段"
-ms.custom: 
+title: HOW TO：在 WSFederationHttpBinding 上停用安全工作階段
 ms.date: 03/30/2017
-ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.technology: dotnet-clr
-ms.tgt_pltfrm: 
-ms.topic: article
 dev_langs:
 - csharp
 - vb
@@ -15,16 +8,13 @@ helpviewer_keywords:
 - WCF, federation
 - federation
 ms.assetid: 675fa143-6a4e-4be3-8afc-673334ab55ec
-caps.latest.revision: "16"
 author: BrucePerlerMS
-ms.author: bruceper
 manager: mbaldwin
-ms.workload: dotnet
-ms.openlocfilehash: 5fc5ddd1b84bf723901e449bf1bfda6a31ad1cea
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.openlocfilehash: 97fc358ac66bb92ccc40c92207bf6561f61b84f6
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="how-to-disable-secure-sessions-on-a-wsfederationhttpbinding"></a>HOW TO：在 WSFederationHttpBinding 上停用安全工作階段
 某些服務可能會要求聯合認證，但卻不支援安全工作階段。 在此情況下，您必須停用安全工作階段功能。 不同於 <<!--zz xref:System.ServiceModel.WsHttpBinding --> `xref:System.ServiceModel.WsHttpBinding`>，則<xref:System.ServiceModel.WSFederationHttpBinding>類別並未提供停用安全工作階段的方式與服務通訊時。 反之，您必須建立自訂繫結，以便使用啟動安裝程式繫結來取代安全工作階段。  
@@ -53,5 +43,5 @@ ms.lasthandoff: 12/22/2017
   
 -   若要編譯此程式碼範例，請建立一個可參考 System.ServiceModel.dll 組件的專案。  
   
-## <a name="see-also"></a>請參閱  
+## <a name="see-also"></a>另請參閱  
  [繫結和安全性](../../../../docs/framework/wcf/feature-details/bindings-and-security.md)

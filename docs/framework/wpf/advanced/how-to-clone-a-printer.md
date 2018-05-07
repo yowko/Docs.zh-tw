@@ -1,14 +1,6 @@
 ---
 title: 如何：複製印表機
-ms.custom: ''
 ms.date: 03/30/2017
-ms.prod: .net-framework
-ms.reviewer: ''
-ms.suite: ''
-ms.technology:
-- dotnet-wpf
-ms.tgt_pltfrm: ''
-ms.topic: article
 dev_langs:
 - csharp
 - vb
@@ -19,17 +11,11 @@ helpviewer_keywords:
 - print queues [WPF], cloning
 - cloning print queues [WPF]
 ms.assetid: dd6997c9-fe04-40f8-88a6-92e3ac0889eb
-caps.latest.revision: 8
-author: dotnet-bot
-ms.author: dotnetcontent
-manager: wpickett
-ms.workload:
-- dotnet
-ms.openlocfilehash: 9ffb9f5ab8e7b768d888f5f2800fae668e47bfc3
-ms.sourcegitcommit: 2042de78fcdceebb6b8ac4b7a292b93e8782cbf5
+ms.openlocfilehash: 8f3a9c3b4d9f4bcbe3a6ffcff9868aa7b19b8f28
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/27/2018
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="how-to-clone-a-printer"></a>如何：複製印表機
 大部分的企業，在某個時間點，購買多台印表機的相同模型。 一般而言，這些所有在安裝有幾乎相同的組態設定。 安裝每一部印表機可能會很費時而且容易產生錯誤。 <xref:System.Printing.IndexedProperties?displayProperty=nameWithType>命名空間和<xref:System.Printing.PrintServer.InstallPrintQueue%2A>都會以 Microsoft.NET Framework 公開的類別會讓您能夠立即安裝任何數目的其他列印佇列，就會遭到複製，從現有的列印佇列。  

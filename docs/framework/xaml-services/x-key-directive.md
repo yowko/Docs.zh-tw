@@ -1,14 +1,6 @@
 ---
 title: x:Key 指示詞
-ms.custom: ''
 ms.date: 03/30/2017
-ms.prod: .net-framework
-ms.reviewer: ''
-ms.suite: ''
-ms.technology:
-- dotnet-wpf
-ms.tgt_pltfrm: ''
-ms.topic: article
 f1_keywords:
 - xKey
 - Key
@@ -18,17 +10,11 @@ helpviewer_keywords:
 - Key attribute in XAML [XAML Services]
 - XAML [XAML Services], x:Key attribute
 ms.assetid: 1985cd45-f197-42d5-b75e-886add64b248
-caps.latest.revision: 25
-author: wadepickett
-ms.author: wpickett
-manager: wpickett
-ms.workload:
-- dotnet
-ms.openlocfilehash: f28ed1e4077a48016ddd8d9b5eeb45d6ba25d8e5
-ms.sourcegitcommit: 86adcc06e35390f13c1e372c36d2e044f1fc31ef
+ms.openlocfilehash: 511721c3ffffb3b80b339c4671ad99e16bafda93
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/26/2018
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="xkey-directive"></a>x:Key 指示詞
 可唯一識別所建立和定義 XAML 的字典中所參考的項目。 加入`x:Key`XAML 物件項目值是最常見的方式來識別資源字典，例如在 WPF 中的資源<xref:System.Windows.ResourceDictionary>。  

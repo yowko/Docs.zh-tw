@@ -1,24 +1,12 @@
 ---
-title: "從工作流程服務存取 OperationContext"
-ms.custom: 
+title: 從工作流程服務存取 OperationContext
 ms.date: 03/30/2017
-ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.technology: dotnet-clr
-ms.tgt_pltfrm: 
-ms.topic: article
 ms.assetid: b1dafe55-a20e-4db0-9ac8-90c315883cdd
-caps.latest.revision: "9"
-author: dotnet-bot
-ms.author: dotnetcontent
-manager: wpickett
-ms.workload: dotnet
-ms.openlocfilehash: f63c2e2305eab5a97cf547bf607fbe97bb573376
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.openlocfilehash: 11c10e83c02ec0e2e74462e84c68fd2fcd3ff761
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="accessing-operationcontext-from-a-workflow-service"></a>從工作流程服務存取 OperationContext
 若要在工作流程服務內部存取 <xref:System.ServiceModel.OperationContext>，您必須在自訂執行屬性中實作 <xref:System.ServiceModel.Activities.IReceiveMessageCallback> 介面。 請覆寫會收到 <xref:System.ServiceModel.Activities.IReceiveMessageCallback.OnReceiveMessage(System.ServiceModel.OperationContext,System.Activities.ExecutionProperties)> 之參考的 <xref:System.ServiceModel.OperationContext> 方法。 本主題將逐步引導您實作這個執行屬性來擷取自訂標頭，以及將在執行階段呈現此屬性給 <xref:System.ServiceModel.Activities.Receive> 的自訂活動。  自訂活動會實作相同的行為<!--zz <xref:System.ServiceModel.Activities.Sequence>-->`System.ServiceModel.Activities.Sequence`活動，不過在該<xref:System.ServiceModel.Activities.Receive>放置內，<xref:System.ServiceModel.Activities.IReceiveMessageCallback>將呼叫和<xref:System.ServiceModel.OperationContext>會擷取資訊。  此外，本主題也將示範如何透過 <xref:System.ServiceModel.OperationContext> 介面存取用戶端 <xref:System.ServiceModel.Activities.ISendMessageCallback> 來加入傳出標頭。  
@@ -850,7 +838,7 @@ namespace Microsoft.Samples.AccessingOperationContext.Client
   
  選擇性註解。  
   
-## <a name="see-also"></a>請參閱  
+## <a name="see-also"></a>另請參閱  
  [工作流程服務](../../../../docs/framework/wcf/feature-details/workflow-services.md)  
  [存取 OperationContext](../../../../docs/framework/windows-workflow-foundation/samples/accessing-operationcontext.md)  
  [使用命令式程式碼撰寫工作流程、活動與運算式](../../../../docs/framework/windows-workflow-foundation/authoring-workflows-activities-and-expressions-using-imperative-code.md)

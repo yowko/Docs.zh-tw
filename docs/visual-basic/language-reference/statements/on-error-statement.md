@@ -1,12 +1,6 @@
 ---
-title: "On Error 陳述式 (Visual Basic)"
+title: On Error 陳述式 (Visual Basic)
 ms.date: 07/20/2015
-ms.prod: .net
-ms.reviewer: 
-ms.suite: 
-ms.technology:
-- devlang-visual-basic
-ms.topic: article
 f1_keywords:
 - vb.OnError
 helpviewer_keywords:
@@ -28,14 +22,11 @@ helpviewer_keywords:
 - run-time errors [Visual Basic], handling
 - On Error statement [Visual Basic]
 ms.assetid: ff947930-fb84-40cf-bd66-1ea219561d5c
-caps.latest.revision: 
-author: dotnet-bot
-ms.author: dotnetcontent
-ms.openlocfilehash: 96baa5d91d0a600b84ed832fb1e3b1ed71a9d89d
-ms.sourcegitcommit: 2142a4732bb4ff519b9817db4c24a237b9810d4b
+ms.openlocfilehash: b2e32dcca2e29a178af6dc985da536b47f0ebae6
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 01/05/2018
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="on-error-statement-visual-basic"></a>On Error 陳述式 (Visual Basic)
 啟用錯誤處理常式，並指定位置的程序; 內的常式也可以用來停用錯誤處理常式。  
@@ -89,16 +80,16 @@ On Error { GoTo [ line | 0 | -1 ] | Resume Next }
  請注意，`On Error GoTo`陳述式的設陷不論例外狀況類別的所有錯誤。  
   
 ## <a name="on-error-resume-next"></a>On Error Resume Next  
- `On Error Resume Next`導致執行動作繼續緊接造成執行階段錯誤的陳述式的陳述式，或緊接的最新的陳述式呼叫從程序包含`On Error Resume Next`陳述式。 這個陳述式可讓您忽略執行階段錯誤繼續執行。 您可以將錯誤處理常式就會發生錯誤，而不會將控制權傳輸至另一個程序內的位置。 `On Error Resume Next`陳述式變成非作用中呼叫另一個程序時，因此，您應該執行`On Error Resume Next`中每個陳述式呼叫常式，如果您想要內嵌錯誤處理該常式內。  
+ `On Error Resume Next` 導致執行動作繼續緊接造成執行階段錯誤的陳述式的陳述式，或緊接的最新的陳述式呼叫從程序包含`On Error Resume Next`陳述式。 這個陳述式可讓您忽略執行階段錯誤繼續執行。 您可以將錯誤處理常式就會發生錯誤，而不會將控制權傳輸至另一個程序內的位置。 `On Error Resume Next`陳述式變成非作用中呼叫另一個程序時，因此，您應該執行`On Error Resume Next`中每個陳述式呼叫常式，如果您想要內嵌錯誤處理該常式內。  
   
 > [!NOTE]
 >  `On Error Resume Next`建構可能會比`On Error GoTo`處理其他物件的存取權期間所產生的錯誤時。 檢查`Err`之後每個互動的物件移除的物件存取的程式碼的模稜兩可。 您可以確定哪一個物件放在錯誤碼`Err.Number`，以及哪些物件最初產生的錯誤 (中指定的物件`Err.Source`)。  
   
 ## <a name="on-error-goto-0"></a>On Error GoTo 0  
- `On Error GoTo 0`停用目前的程序中的錯誤處理。 它不會作為的錯誤處理程式碼中，指定第 0 行，即使程序包含行號 0。 不含`On Error GoTo 0`陳述式中，錯誤處理常式會自動停用程序結束時。  
+ `On Error GoTo 0` 停用目前的程序中的錯誤處理。 它不會作為的錯誤處理程式碼中，指定第 0 行，即使程序包含行號 0。 不含`On Error GoTo 0`陳述式中，錯誤處理常式會自動停用程序結束時。  
   
 ## <a name="on-error-goto--1"></a>On Error GoTo-1  
- `On Error GoTo -1`停用目前的程序中的例外狀況。 它未指定行-1 開始的錯誤處理程式碼，即使此程序包含行號-1。 不含`On Error GoTo -1`陳述式中，例外狀況會自動停用程序結束時。  
+ `On Error GoTo -1` 停用目前的程序中的例外狀況。 它未指定行-1 開始的錯誤處理程式碼，即使此程序包含行號-1。 不含`On Error GoTo -1`陳述式中，例外狀況會自動停用程序結束時。  
   
  若要防止錯誤處理程式碼執行時沒有發生任何錯誤，加上`Exit Sub`， `Exit Function`，或`Exit Property`陳述式之前的錯誤處理常式，如下列片段所示：  
   
@@ -126,7 +117,7 @@ On Error { GoTo [ line | 0 | -1 ] | Resume Next }
   
  **組件：** Visual Basic Runtime Library （位於 Microsoft.VisualBasic.dll)  
   
-## <a name="see-also"></a>請參閱  
+## <a name="see-also"></a>另請參閱  
  <xref:Microsoft.VisualBasic.Information.Err%2A>  
  <xref:Microsoft.VisualBasic.ErrObject.Number%2A>  
  <xref:Microsoft.VisualBasic.ErrObject.Description%2A>  

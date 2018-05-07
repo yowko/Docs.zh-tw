@@ -1,14 +1,6 @@
 ---
-title: "如何：在 Windows Form 上繪製實心橢圓形"
-ms.custom: 
+title: 如何：在 Windows Form 上繪製實心橢圓形
 ms.date: 03/30/2017
-ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.technology:
-- dotnet-winforms
-ms.tgt_pltfrm: 
-ms.topic: article
 dev_langs:
 - csharp
 - vb
@@ -23,17 +15,11 @@ helpviewer_keywords:
 - shapes [Windows Forms], drawing
 - forms [Windows Forms], drawing ellipses
 ms.assetid: 781db806-950d-4c5b-b022-493f7fd0c4a8
-caps.latest.revision: 
-author: dotnet-bot
-ms.author: dotnetcontent
-manager: wpickett
-ms.workload:
-- dotnet
-ms.openlocfilehash: 12b17f92fc90cde1e0c1841fc7f9d63728d50294
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.openlocfilehash: b892670031e795ecd27b194cdf2cf818f4af6254
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="how-to-draw-a-filled-ellipse-on-a-windows-form"></a>如何：在 Windows Form 上繪製實心橢圓形
 這個範例會在表單上繪製實心的橢圓形。  
@@ -49,7 +35,7 @@ ms.lasthandoff: 12/22/2017
 ## <a name="robust-programming"></a>穩固程式設計  
  您應該一律呼叫<xref:System.IDisposable.Dispose%2A>耗用系統資源，例如任何物件上<xref:System.Drawing.Brush>和<xref:System.Drawing.Graphics>物件。  
   
-## <a name="see-also"></a>請參閱  
+## <a name="see-also"></a>另請參閱  
  [Windows Forms 中的圖形和繪圖](../../../../docs/framework/winforms/advanced/graphics-and-drawing-in-windows-forms.md)  
  [圖形程式設計入門](../../../../docs/framework/winforms/advanced/getting-started-with-graphics-programming.md)  
  [Alpha 混色線條和填色](../../../../docs/framework/winforms/advanced/alpha-blending-lines-and-fills.md)  

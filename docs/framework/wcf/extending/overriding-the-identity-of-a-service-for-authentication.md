@@ -1,29 +1,15 @@
 ---
 title: 覆寫服務的身分識別以進行驗證
-ms.custom: ''
 ms.date: 03/30/2017
-ms.prod: .net-framework
-ms.reviewer: ''
-ms.suite: ''
-ms.technology:
-- dotnet-clr
-ms.tgt_pltfrm: ''
-ms.topic: article
 dev_langs:
 - csharp
 - vb
 ms.assetid: d613a22b-07d7-41a4-bada-1adc653b9b5d
-caps.latest.revision: 9
-author: dotnet-bot
-ms.author: dotnetcontent
-manager: wpickett
-ms.workload:
-- dotnet
-ms.openlocfilehash: f5383a1d241134318ce48c8c0c9f39f831396730
-ms.sourcegitcommit: 94d33cadc5ff81d2ac389bf5f26422c227832052
-ms.translationtype: MT
+ms.openlocfilehash: 6fbdd7f09c7ae15368972afbce896c5ecb39ccbe
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/30/2018
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="overriding-the-identity-of-a-service-for-authentication"></a>覆寫服務的身分識別以進行驗證
 一般來說，您不需要在服務上設定身分識別，因為選擇用戶端認證類型，即表示服務中繼資料中公開的身分識別類型。 例如，下列組態程式碼會使用[ \<wsHttpBinding >](../../../../docs/framework/configure-apps/file-schema/wcf/wshttpbinding.md)項目和設定`clientCredentialType`屬性設定為 Windows。  
@@ -37,7 +23,7 @@ ms.lasthandoff: 04/30/2018
  範例應用程式，示範身分識別設定，請參閱[服務身分識別範例](../../../../docs/framework/wcf/samples/service-identity-sample.md)。 如需服務身分識別的詳細資訊，請參閱[服務識別和驗證](../../../../docs/framework/wcf/feature-details/service-identity-and-authentication.md)。  
   
 ## <a name="kerberos-authentication-and-identity"></a>Kerberos 驗證和身分識別  
- 根據預設，當服務設定為使用 Windows 認證， [\<識別 >](../../../../docs/framework/configure-apps/file-schema/wcf/identity.md)包含項目[ \<userPrincipalName >](../../../../docs/framework/configure-apps/file-schema/wcf/userprincipalname.md)或[ \<servicePrincipalName >](../../../../docs/framework/configure-apps/file-schema/wcf/serviceprincipalname.md) WSDL 中不會產生元素。 如果服務在執行`LocalSystem`， `LocalService`，或`NetworkService`帳戶、 服務主要名稱 (SPN) 產生的表單中的預設`host/` \< *hostname*> 因為這些帳戶可以存取電腦的 SPN 資料。 如果服務正在執行不同的帳戶，[!INCLUDE[indigo1](../../../../includes/indigo1-md.md)]格式產生 UPN \< *username*>@<*domainName*`>`。 這種情況發生的原因是 Kerberos 驗證需要對用戶端提供 UPN 或 SPN，才能驗證服務。  
+ 根據預設，當服務設定為使用 Windows 認證， [\<識別 >](../../../../docs/framework/configure-apps/file-schema/wcf/identity.md)包含項目[ \<userPrincipalName >](../../../../docs/framework/configure-apps/file-schema/wcf/userprincipalname.md)或[ \<servicePrincipalName >](../../../../docs/framework/configure-apps/file-schema/wcf/serviceprincipalname.md) WSDL 中不會產生元素。 如果服務在執行`LocalSystem`， `LocalService`，或`NetworkService`帳戶、 服務主要名稱 (SPN) 產生的表單中的預設`host/` \< *hostname*> 因為這些帳戶可以存取電腦的 SPN 資料。 如果服務正在執行不同的帳戶，Windows Communication Foundation (WCF) 格式產生 UPN 的\< *username*>@<*domainName* `>`. 這種情況發生的原因是 Kerberos 驗證需要對用戶端提供 UPN 或 SPN，才能驗證服務。  
   
  您也可以使用 Setspn.exe 工具，以服務的帳戶在網域中登錄其他 SPN。 您接著就可以使用 SPN 做為服務的身分識別。 若要下載此工具，請參閱[Windows 2000 Resource Kit Tool: Setspn.exe](http://go.microsoft.com/fwlink/?LinkId=91752)。 如需此工具的詳細資訊，請參閱[Setspn 概觀](http://go.microsoft.com/fwlink/?LinkId=61374)。  
   

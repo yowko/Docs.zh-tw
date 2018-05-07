@@ -1,30 +1,18 @@
 ---
 title: 強式命名 (Unmanaged API 參考)
-ms.custom: ''
 ms.date: 03/30/2017
-ms.prod: .net-framework
-ms.reviewer: ''
-ms.suite: ''
-ms.technology:
-- dotnet-clr
-ms.tgt_pltfrm: ''
-ms.topic: reference
 helpviewer_keywords:
 - strong naming [.NET Framework], using the unmanaged API
 - native API reference [.NET Framework], strong naming
 - unmanaged API reference [.NET Framework], strong naming
 ms.assetid: 428c68b6-a7b4-44be-b280-75905f46612c
-caps.latest.revision: 9
 author: rpetrusha
 ms.author: ronpet
-manager: wpickett
-ms.workload:
-- dotnet
-ms.openlocfilehash: ce89e27089ea2f0c918d0fe37c4eea141698f9be
-ms.sourcegitcommit: c0dd436f6f8f44dc80dc43b07f6841a00b74b23f
+ms.openlocfilehash: 6c397a325edb49e3f10a46b242888b8d138957af
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 01/19/2018
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="strong-naming-unmanaged-api-reference"></a>強式命名 (Unmanaged API 參考)
 強式命名 API 可讓用戶端管理強式名稱簽署組件。  
@@ -122,6 +110,6 @@ ms.lasthandoff: 01/19/2018
  [PublicKeyBlob 結構](../../../../docs/framework/unmanaged-api/strong-naming/publickeyblob-structure.md)  
  表示以二進位格式公開/私密金鑰組的公開金鑰。  
   
-## <a name="see-also"></a>請參閱  
+## <a name="see-also"></a>另請參閱  
  [ICLRStrongName 介面](../../../../docs/framework/unmanaged-api/hosting/iclrstrongname-interface.md)  
  [Unmanaged API 參考](../../../../docs/framework/unmanaged-api/index.md)

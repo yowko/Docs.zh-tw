@@ -1,27 +1,15 @@
 ---
-title: "權杖驗證器"
-ms.custom: 
+title: 權杖驗證器
 ms.date: 03/30/2017
-ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.technology: dotnet-clr
-ms.tgt_pltfrm: 
-ms.topic: article
 ms.assetid: 84382f2c-f6b1-4c32-82fa-aebc8f6064db
-caps.latest.revision: "22"
-author: dotnet-bot
-ms.author: dotnetcontent
-manager: wpickett
-ms.workload: dotnet
-ms.openlocfilehash: 76f3913f5cf6166793cb6f95ef3658c24e2453b4
-ms.sourcegitcommit: c0dd436f6f8f44dc80dc43b07f6841a00b74b23f
-ms.translationtype: MT
+ms.openlocfilehash: 35bba0b6a81ff11164636e906440db7e9b2ca25b
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 01/19/2018
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="token-authenticator"></a>權杖驗證器
-這個範例示範如何實作自訂權杖驗證器。 [!INCLUDE[indigo1](../../../../includes/indigo1-md.md)] 的權杖驗證器用於驗證搭配訊息使用的權杖、確認其前後一致，以及驗證與權杖關聯的身分識別。  
+這個範例示範如何實作自訂權杖驗證器。 Windows Communication Foundation (WCF) 的權杖驗證器用來驗證郵件時，所使用的權杖驗證前後一致，以及驗證身分識別相關聯的語彙基元。  
   
  自訂權杖驗證器適用於各種情況，例如：  
   
@@ -378,4 +366,4 @@ static void DisplayIdentityInformation()
   
 1.  當您完成執行範例後，請執行範例資料夾中的 Cleanup.bat。  
   
-## <a name="see-also"></a>請參閱
+## <a name="see-also"></a>另請參閱

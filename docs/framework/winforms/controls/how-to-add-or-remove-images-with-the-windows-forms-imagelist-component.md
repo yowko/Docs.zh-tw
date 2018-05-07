@@ -1,13 +1,6 @@
 ---
-title: "如何：使用 Windows Form ImageList 元件加入或移除影像"
-ms.custom: 
+title: 如何：使用 Windows Form ImageList 元件加入或移除影像
 ms.date: 03/30/2017
-ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.technology: dotnet-winforms
-ms.tgt_pltfrm: 
-ms.topic: article
 dev_langs:
 - csharp
 - vb
@@ -20,16 +13,11 @@ helpviewer_keywords:
 - images [Windows Forms], adding to ImageList component
 - images [Windows Forms], displaying with controls
 ms.assetid: c5eacc56-f769-4e2e-bfb7-f756620913db
-caps.latest.revision: "15"
-author: dotnet-bot
-ms.author: dotnetcontent
-manager: wpickett
-ms.workload: dotnet
-ms.openlocfilehash: 4e09448cb834453a4c8fce4494ab9fbb53eb0dc3
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.openlocfilehash: e5c563c4f46924a95936bc5a51862230f2cbdb99
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="how-to-add-or-remove-images-with-the-windows-forms-imagelist-component"></a>如何：使用 Windows Form ImageList 元件加入或移除影像
 Windows Form<xref:System.Windows.Forms.ImageList>元件通常填入映像相關聯的控制項之前。 不過，新增和移除後將影像清單與控制項產生關聯的映像。  
@@ -154,7 +142,7 @@ imageList1.Images.Clear();
 imageList1.Images.RemoveByKey("myPhoto");  
 ```  
   
-## <a name="see-also"></a>請參閱  
+## <a name="see-also"></a>另請參閱  
  [ImageList 元件](../../../../docs/framework/winforms/controls/imagelist-component-windows-forms.md)  
  [ImageList 元件概觀](../../../../docs/framework/winforms/controls/imagelist-component-overview-windows-forms.md)  
  [影像、點陣圖和中繼檔](../../../../docs/framework/winforms/advanced/images-bitmaps-and-metafiles.md)

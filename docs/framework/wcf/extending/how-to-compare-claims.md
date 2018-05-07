@@ -1,14 +1,6 @@
 ---
 title: HOW TO：比較宣告
-ms.custom: ''
 ms.date: 03/30/2017
-ms.prod: .net-framework
-ms.reviewer: ''
-ms.suite: ''
-ms.technology:
-- dotnet-clr
-ms.tgt_pltfrm: ''
-ms.topic: article
 dev_langs:
 - csharp
 - vb
@@ -16,20 +8,14 @@ helpviewer_keywords:
 - claims [WCF], comparing
 - claims [WCF]
 ms.assetid: 0c4ec84d-53df-408f-8953-9bc437f56c28
-caps.latest.revision: 13
-author: dotnet-bot
-ms.author: dotnetcontent
-manager: wpickett
-ms.workload:
-- dotnet
-ms.openlocfilehash: 5188ed17e3a10bfd93b885fcdd93e01391dd8256
-ms.sourcegitcommit: 94d33cadc5ff81d2ac389bf5f26422c227832052
+ms.openlocfilehash: 1ef957efcb4cc9330c1c273a1c953afc5b7dd240
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/30/2018
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="how-to-compare-claims"></a>HOW TO：比較宣告
-[!INCLUDE[indigo1](../../../../includes/indigo1-md.md)] 中的識別模型基礎結構可用來執行授權檢查。 因此，比較授權內容中的宣告與執行所要求動作或存取所要求資源所需要的宣告，屬於常見的工作。 本主題將描述如何比較宣告，包括內建和自訂的宣告類型。 如需身分識別模型基礎結構的詳細資訊，請參閱[管理宣告和授權的方式識別模型](../../../../docs/framework/wcf/feature-details/managing-claims-and-authorization-with-the-identity-model.md)。  
+識別模型基礎結構中 Windows Communication Foundation (WCF) 用來執行授權檢查。 因此，比較授權內容中的宣告與執行所要求動作或存取所要求資源所需要的宣告，屬於常見的工作。 本主題將描述如何比較宣告，包括內建和自訂的宣告類型。 如需身分識別模型基礎結構的詳細資訊，請參閱[管理宣告和授權的方式識別模型](../../../../docs/framework/wcf/feature-details/managing-claims-and-authorization-with-the-identity-model.md)。  
   
  宣告比較需要將宣告中的三個部分 (類型、權限和資源) 與其他宣告的相同部分進行比較，以便判斷兩種宣告是否相等。 請參閱下列範例。  
   

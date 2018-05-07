@@ -1,23 +1,12 @@
 ---
 title: 105 - FaultPropagationRecord
-ms.custom: 
 ms.date: 03/30/2017
-ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.tgt_pltfrm: 
-ms.topic: article
 ms.assetid: 168473b1-b1e5-4e9f-8a2a-35bbdb2ef531
-caps.latest.revision: "6"
-author: dotnet-bot
-ms.author: dotnetcontent
-manager: wpickett
-ms.workload: dotnet
-ms.openlocfilehash: ec9de51055812083430d9bcee780818187be04da
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.openlocfilehash: c48f42a91ad9a15b49aad8c1ab684f2348954174
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="105---faultpropagationrecord"></a>105 - FaultPropagationRecord
 ## <a name="properties"></a>屬性  
@@ -54,5 +43,5 @@ ms.lasthandoff: 12/22/2017
 |IsFaultSource|xs:unsignedByte|指出事件是否由錯誤來源發出|  
 |標註|xs:string|加入至此事件中的附註。  值會儲存在 xml 中的項目格式\<項目 >\<項目名稱 ="annotationName"type ="> annotationValue\</項目 > \< /i >。  如果沒有指定的註釋的字串，包含\<項目 / >。 ETW 事件大小會受到 ETW 緩衝區大小或 ETW 事件的最大承載所限制。 如果事件大小超過 ETW 限制，則事件會捨棄註釋，並取代具有註釋值截斷\<項目 >... \< /i >。|  
 |ProfileName|xs:string|造成發送這個事件的名稱或追蹤設定檔。|  
-|HostReference|xs:string|若為 Web 主控服務，此欄位會唯一識別 Web 階層架構中的服務。  其格式定義為 ' Web Site Name Application Virtual Path &#124;服務的虛擬路徑 &#124;ServiceName' 範例: ' Default Web Site/CalculatorApplication #124;/CalculatorService.svc &#124;CalculatorService'|  
+|HostReference|xs:string|若為 Web 主控服務，此欄位會唯一識別 Web 階層架構中的服務。  其格式定義為 'Web Site Name Application Virtual Path&#124;Service Virtual Path&#124;ServiceName' 範例:' Default Web Site/CalculatorApplication&#124;/CalculatorService.svc&#124;CalculatorService'|  
 |AppDomain|xs:string|由 AppDomain.CurrentDomain.FriendlyName 傳回的字串。|

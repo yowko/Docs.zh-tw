@@ -1,24 +1,12 @@
 ---
-title: "檢視訊息記錄"
-ms.custom: 
+title: 檢視訊息記錄
 ms.date: 03/30/2017
-ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.technology: dotnet-clr
-ms.tgt_pltfrm: 
-ms.topic: article
 ms.assetid: 3012fa13-f650-45fb-aaea-c5cca8c7d372
-caps.latest.revision: "22"
-author: dotnet-bot
-ms.author: dotnetcontent
-manager: wpickett
-ms.workload: dotnet
-ms.openlocfilehash: 09a26d3580b37ea92bf4ef5708a238396f22eb4b
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
-ms.translationtype: MT
+ms.openlocfilehash: 56e4fb1ea8c67c35df440a2088034327788f6f15
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="viewing-message-logs"></a>檢視訊息記錄
 此主題描述如何檢視訊息記錄。  
@@ -71,7 +59,7 @@ incomingMessage.Headers[i].Name.Equals("Action", StringComparison.InvariantCultu
   
 -   啟用編碼以轉換至 UTF-8。  
   
-## <a name="see-also"></a>請參閱  
+## <a name="see-also"></a>另請參閱  
  [服務追蹤檢視器工具 (SvcTraceViewer.exe)](../../../../docs/framework/wcf/service-trace-viewer-tool-svctraceviewer-exe.md)  
  [使用服務追蹤檢視器檢視相關追蹤並進行疑難排解](../../../../docs/framework/wcf/diagnostics/tracing/using-service-trace-viewer-for-viewing-correlated-traces-and-troubleshooting.md)  
  [訊息記錄](../../../../docs/framework/wcf/diagnostics/message-logging.md)

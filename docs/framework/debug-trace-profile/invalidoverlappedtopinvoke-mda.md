@@ -1,13 +1,6 @@
 ---
 title: invalidOverlappedToPinvoke MDA
-ms.custom: 
 ms.date: 03/30/2017
-ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.technology: dotnet-clr
-ms.tgt_pltfrm: 
-ms.topic: article
 helpviewer_keywords:
 - overlapped pointers
 - managed debugging assistants (MDAs), overlapped pointers
@@ -16,16 +9,13 @@ helpviewer_keywords:
 - MDAs (managed debugging assistants), overlapped pointers
 - pointers, overlapped
 ms.assetid: 28876047-58bd-4fed-9452-c7da346d67c0
-caps.latest.revision: "14"
 author: mairaw
 ms.author: mairaw
-manager: wpickett
-ms.workload: dotnet
-ms.openlocfilehash: 395601c6aaff39bf2acb01ae36d306e57566aa4f
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.openlocfilehash: 7240692e35c97f3efbc33ca27a0221da1d250149
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="invalidoverlappedtopinvoke-mda"></a>invalidOverlappedToPinvoke MDA
 當不是在記憶體回收堆積上建立的重疊指標傳遞至特定的 Win32 函式時，就會啟動 `invalidOverlappedToPinvoke` Managed 偵錯助理 (MDA)。  
@@ -33,7 +23,7 @@ ms.lasthandoff: 12/22/2017
 > [!NOTE]
 >  根據預設，只有在程式碼中定義了平台叫用呼叫，而且偵錯工具報告每一個方法的 JustMyCode 狀態時，才會啟用這個 MDA。 不了解 JustMyCode (例如 MDbg.exe 沒有副檔名) 的偵錯工具，不會啟動此 MDA。 使用組態檔和在 .mda.config 檔案 `(<invalidOverlappedToPinvoke enable="true" justMyCode="false"/>`) 中明確設定 `justMyCode="false"`，可針對這些偵錯工具啟用此 MDA。  
   
-## <a name="symptoms"></a>徵兆   
+## <a name="symptoms"></a>徵兆  
  當機或無法解釋的堆積損毀。  
   
 ## <a name="cause"></a>原因  
@@ -41,7 +31,7 @@ ms.lasthandoff: 12/22/2017
   
  下表會顯示這個 MDA 追蹤的函式。  
   
-|模組|函式|  
+|Module|功能|  
 |------------|--------------|  
 |HttpApi.dll|`HttpReceiveHttpRequest`|  
 |IpHlpApi.dll|`NotifyAddrChange`|  
@@ -81,7 +71,7 @@ ms.lasthandoff: 12/22/2017
 </mdaConfig>  
 ```  
   
-## <a name="see-also"></a>請參閱  
+## <a name="see-also"></a>另請參閱  
  <xref:System.Runtime.InteropServices.MarshalAsAttribute>  
  [診斷 Managed 偵錯助理的錯誤](../../../docs/framework/debug-trace-profile/diagnosing-errors-with-managed-debugging-assistants.md)  
  [Interop 封送處理](../../../docs/framework/interop/interop-marshaling.md)

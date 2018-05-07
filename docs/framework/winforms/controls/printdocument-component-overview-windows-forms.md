@@ -1,31 +1,17 @@
 ---
-title: "PrintDocument 元件概觀 (Windows Form)"
-ms.custom: 
+title: PrintDocument 元件概觀 (Windows Form)
 ms.date: 03/30/2017
-ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.technology:
-- dotnet-winforms
-ms.tgt_pltfrm: 
-ms.topic: article
 f1_keywords:
 - PrintDocument
 helpviewer_keywords:
 - PrintDocument component [Windows Forms], about PrintDocument component
 - printing [Windows Forms], PrintDocument component
 ms.assetid: b59b4b60-dce5-42ca-8421-3a54a2f7bab0
-caps.latest.revision: 
-author: dotnet-bot
-ms.author: dotnetcontent
-manager: wpickett
-ms.workload:
-- dotnet
-ms.openlocfilehash: 414a7972550558b40403b7f4cbfd9a49194666be
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.openlocfilehash: b02133321624d27b9c1e8faae9cac1b4fe8f76c3
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="printdocument-component-overview-windows-forms"></a>PrintDocument 元件概觀 (Windows Form)
 Windows Forms [PrintDocument](../../../../docs/framework/winforms/controls/printdocument-component-windows-forms.md) 元件可用來設定描述列印項目的屬性，以及在 Windows 應用程式中列印文件的能力。 它可以與 [PrintDialog](../../../../docs/framework/winforms/controls/printdialog-component-windows-forms.md) 元件一起使用，以控制文件列印的各個方面。  
@@ -39,7 +25,7 @@ Windows Forms [PrintDocument](../../../../docs/framework/winforms/controls/print
   
  當加入至表單，<xref:System.Drawing.Printing.PrintDocument>元件會出現在 Windows Form 設計工具底部的紙匣。  
   
-## <a name="see-also"></a>請參閱  
+## <a name="see-also"></a>另請參閱  
  <xref:System.Drawing.Graphics>  
  <xref:System.Drawing.Printing.PrintDocument>  
  [Windows Forms 列印支援](../../../../docs/framework/winforms/advanced/windows-forms-print-support.md)  

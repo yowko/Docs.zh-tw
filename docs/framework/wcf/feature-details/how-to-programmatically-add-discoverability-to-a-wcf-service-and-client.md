@@ -1,29 +1,15 @@
 ---
 title: HOW TO：以程式設計方式將探索能力加入 WCF 服務與用戶端
-ms.custom: ''
 ms.date: 03/30/2017
-ms.prod: .net-framework
-ms.reviewer: ''
-ms.suite: ''
-ms.technology:
-- dotnet-clr
-ms.tgt_pltfrm: ''
-ms.topic: article
 ms.assetid: 4f7ae7ab-6fc8-4769-9730-c14d43f7b9b1
-caps.latest.revision: 13
-author: dotnet-bot
-ms.author: dotnetcontent
-manager: wpickett
-ms.workload:
-- dotnet
-ms.openlocfilehash: 3c0da3598b115df4f135ac3fab516447df85e258
-ms.sourcegitcommit: 94d33cadc5ff81d2ac389bf5f26422c227832052
+ms.openlocfilehash: 0685694db8f67ed690cf2a8002bf70a05695a192
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/30/2018
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="how-to-programmatically-add-discoverability-to-a-wcf-service-and-client"></a>HOW TO：以程式設計方式將探索能力加入 WCF 服務與用戶端
-本主題將說明如何讓 [!INCLUDE[indigo1](../../../../includes/indigo1-md.md)] 服務成為可探索狀態。 它基礎[自我裝載](http://go.microsoft.com/fwlink/?LinkId=145523)範例。  
+本主題說明如何讓 Windows Communication Foundation (WCF) 服務可以探索。 它基礎[自我裝載](http://go.microsoft.com/fwlink/?LinkId=145523)範例。  
   
 ### <a name="to-configure-the-existing-self-host-service-sample-for-discovery"></a>若要為探索設定現有的自我裝載服務範例  
   
@@ -105,7 +91,7 @@ ms.lasthandoff: 04/30/2018
     }  
     ```  
   
-     這樣做可告知 [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)]，<xref:System.ServiceModel.Discovery.DiscoveryClient> 類別應使用標準 UDP 探索端點來傳送和接收探索訊息。  
+     這會告知 WCF，<xref:System.ServiceModel.Discovery.DiscoveryClient>類別應該用來傳送和接收探索訊息的標準 UDP 探索端點。  
   
 8.  在下一行，呼叫 <xref:System.ServiceModel.Discovery.DiscoveryClient.Find%2A> 方法並指定包含要搜尋之服務合約的 <xref:System.ServiceModel.Discovery.FindCriteria> 執行個體。 在此情況下，指定 `ICalculator`。  
   

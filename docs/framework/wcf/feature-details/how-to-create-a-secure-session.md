@@ -1,34 +1,22 @@
 ---
 title: HOW TO：建立安全工作階段
-ms.custom: ''
 ms.date: 03/30/2017
-ms.prod: .net-framework
-ms.reviewer: ''
-ms.suite: ''
-ms.technology:
-- dotnet-clr
-ms.tgt_pltfrm: ''
-ms.topic: article
 dev_langs:
 - csharp
 - vb
 helpviewer_keywords:
 - security [WCF], creating a session
 ms.assetid: b6f42b5a-bbf7-45cf-b917-7ec9fa7ae110
-caps.latest.revision: 10
 author: BrucePerlerMS
-ms.author: bruceper
 manager: mbaldwin
-ms.workload:
-- dotnet
-ms.openlocfilehash: 0316d1120fe5f5b596374594de66e4f48dae84e8
-ms.sourcegitcommit: 94d33cadc5ff81d2ac389bf5f26422c227832052
+ms.openlocfilehash: ce351a87e70b09a2f68654af817e28fa3145d79d
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/30/2018
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="how-to-create-a-secure-session"></a>HOW TO：建立安全工作階段
-除了[ \<basicHttpBinding >](../../../../docs/framework/configure-apps/file-schema/wcf/basichttpbinding.md)繫結中的系統提供繫結[!INCLUDE[indigo1](../../../../includes/indigo1-md.md)]自動使用訊息安全性啟用時的安全工作階段。  
+除了[ \<basicHttpBinding >](../../../../docs/framework/configure-apps/file-schema/wcf/basichttpbinding.md)繫結時，系統提供繫結中 Windows Communication Foundation (WCF) 會自動使用訊息安全性啟用時的安全工作階段。  
   
  根據預設，安全工作階段不會存留回收的 Web 伺服器。 當建立安全工作階段時，用戶端和服務會快取與安全工作階段有關聯的索引鍵。 當交換訊息時，只會交換快取索引鍵的識別碼。 如果回收 Web 伺服器，也會回收快取，讓 Web 伺服器無法為識別碼擷取快取索引鍵。 如果發生這種情況，便會將例外狀況擲回用戶端。 使用具狀態之安全性內容權杖 (SCT) 的安全工作階段可以存留已回收的 Web 伺服器。 如需有關在安全工作階段中使用具狀態之 SCT 的詳細資訊，請參閱[How to： 建立安全工作階段的安全性內容權杖](../../../../docs/framework/wcf/feature-details/how-to-create-a-security-context-token-for-a-secure-session.md)。  
   
@@ -36,7 +24,7 @@ ms.lasthandoff: 04/30/2018
   
 -   請將服務設定為使用支援訊息安全性之系統提供的繫結。  
   
-     除了[ \<basicHttpBinding >](../../../../docs/framework/configure-apps/file-schema/wcf/basichttpbinding.md)繫結，當系統提供的繫結會設定為使用訊息安全性，[!INCLUDE[indigo2](../../../../includes/indigo2-md.md)]會自動使用安全工作階段。 下表列出了支援訊息安全性之系統提供的繫結，以及訊息安全性是否為預設的安全性機制。  
+     除了[ \<basicHttpBinding >](../../../../docs/framework/configure-apps/file-schema/wcf/basichttpbinding.md)繫結，當系統提供的繫結設定為使用訊息安全性，WCF 會自動使用安全工作階段。 下表列出了支援訊息安全性之系統提供的繫結，以及訊息安全性是否為預設的安全性機制。  
   
     |系統提供的繫結|組態項目|訊息安全性預設為開啟|  
     |------------------------------|---------------------------|------------------------------------|  

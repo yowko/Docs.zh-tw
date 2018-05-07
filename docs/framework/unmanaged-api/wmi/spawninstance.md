@@ -1,11 +1,7 @@
 ---
-title: "SpawnInstance 函式 （Unmanaged API 參考）"
-description: "SpawnInstance 函式會建立類別的新執行個體。"
+title: SpawnInstance 函式 （Unmanaged API 參考）
+description: SpawnInstance 函式會建立類別的新執行個體。
 ms.date: 11/06/2017
-ms.prod: .net-framework
-ms.technology:
-- dotnet-clr
-ms.topic: reference
 api_name:
 - SpawnInstance
 api_location:
@@ -20,14 +16,11 @@ topic_type:
 - Reference
 author: rpetrusha
 ms.author: ronpet
-manager: wpickett
-ms.workload:
-- dotnet
-ms.openlocfilehash: 68508f3000e7f4ac481f940ef4c715366c37125c
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.openlocfilehash: 3f8189f0adb62aa32cd0b85ca5a653aa466c7032
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="spawninstance-function"></a>SpawnInstance 函式
 建立類別的新執行個體。    
@@ -64,7 +57,7 @@ HRESULT SpawnInstance (
 
 |常數  |值  |描述  |
 |---------|---------|---------|
-| `WBEM_E_INCOMPLETE_CLASS` | 0x80041020 | `ptr`不是有效的類別定義，並無法繁衍 （spawn） 的新執行個體。 可能是不完整，或是它尚未註冊使用 Windows Management 藉由呼叫[PutClassWmi](putclasswmi.md)。 |
+| `WBEM_E_INCOMPLETE_CLASS` | 0x80041020 | `ptr` 不是有效的類別定義，並無法繁衍 （spawn） 的新執行個體。 可能是不完整，或是它尚未註冊使用 Windows Management 藉由呼叫[PutClassWmi](putclasswmi.md)。 |
 | `WBEM_E_OUT_OF_MEMORY` | 0x80041006 | 沒有足夠的記憶體可完成作業。 |
 | `WBEM_E_INVALID_PARAMETER` | 0x80041008 | `ppNewClass` 為 `null`。 |
 | `WBEM_S_NO_ERROR` | 0 | 函式呼叫成功。  |
@@ -73,7 +66,7 @@ HRESULT SpawnInstance (
 
 此函式會包裝呼叫[IWbemClassObject::SpawnInstance](https://msdn.microsoft.com/library/aa391458(v=vs.85).aspx)方法。
 
-`ptr`必須是類別定義取自 Windows 管理。 （請注意，支援繁衍 （spawn） 從執行個體的執行個體，但傳回的執行個體是空的）。然後，您會使用此類別定義來建立新的執行個體。 呼叫[PutInstanceWmi](putinstancewmi.md)功能是必要的如果您想要寫入 Windows 管理中的執行個體。
+`ptr` 必須是類別定義取自 Windows 管理。 （請注意，支援繁衍 （spawn） 從執行個體的執行個體，但傳回的執行個體是空的）。然後，您會使用此類別定義來建立新的執行個體。 呼叫[PutInstanceWmi](putinstancewmi.md)功能是必要的如果您想要寫入 Windows 管理中的執行個體。
 
 
 
@@ -85,7 +78,7 @@ HRESULT SpawnInstance (
   
  **標頭：** WMINet_Utils.idl  
   
- **.NET framework 版本：**[!INCLUDE[net_current_v472plus](../../../../includes/net-current-v472plus.md)]  
+ **.NET framework 版本：** [!INCLUDE[net_current_v472plus](../../../../includes/net-current-v472plus.md)]  
   
 ## <a name="see-also"></a>另請參閱  
 [WMI 和效能計數器 （Unmanaged API 參考）](index.md)

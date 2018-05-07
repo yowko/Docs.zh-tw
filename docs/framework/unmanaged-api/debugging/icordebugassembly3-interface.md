@@ -1,24 +1,14 @@
 ---
-title: "ICorDebugAssembly3 介面"
-ms.custom: 
+title: ICorDebugAssembly3 介面
 ms.date: 03/30/2017
-ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.technology: dotnet-clr
-ms.tgt_pltfrm: 
-ms.topic: reference
 ms.assetid: 17fc5d76-75a9-4933-83f0-594de7f973f3
-caps.latest.revision: "5"
 author: rpetrusha
 ms.author: ronpet
-manager: wpickett
-ms.workload: dotnet
-ms.openlocfilehash: e581b4256da2ecc19a8b97520e0e70fef972b549
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.openlocfilehash: 5042f59b3716d077cc441585004e075b765c0cfb
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="icordebugassembly3-interface"></a>ICorDebugAssembly3 介面
 以邏輯方式擴充 ICorDebugAssembly 介面，以提供支援給容器組件及其所包含的組件。  
@@ -42,8 +32,8 @@ ms.lasthandoff: 12/22/2017
   
  **程式庫：** CorGuids.lib  
   
- **.NET framework 版本：**[!INCLUDE[net_46_native](../../../../includes/net-46-native-md.md)]  
+ **.NET framework 版本：** [!INCLUDE[net_46_native](../../../../includes/net-46-native-md.md)]  
   
-## <a name="see-also"></a>請參閱  
+## <a name="see-also"></a>另請參閱  
  [偵錯介面](../../../../docs/framework/unmanaged-api/debugging/debugging-interfaces.md)  
  [偵錯](../../../../docs/framework/unmanaged-api/debugging/index.md)

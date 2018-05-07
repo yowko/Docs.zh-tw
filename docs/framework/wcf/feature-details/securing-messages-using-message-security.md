@@ -1,44 +1,32 @@
 ---
 title: 使用訊息安全性來保護訊息的安全
-ms.custom: ''
 ms.date: 03/30/2017
-ms.prod: .net-framework
-ms.reviewer: ''
-ms.suite: ''
-ms.technology:
-- dotnet-clr
-ms.tgt_pltfrm: ''
-ms.topic: article
 ms.assetid: a17ebe67-836b-4c52-9a81-2c3d58e225ee
-caps.latest.revision: 16
 author: BrucePerlerMS
-ms.author: bruceper
 manager: mbaldwin
-ms.workload:
-- dotnet
-ms.openlocfilehash: 088b01151d0471527bbfc2ffa04b5b5064700081
-ms.sourcegitcommit: 94d33cadc5ff81d2ac389bf5f26422c227832052
+ms.openlocfilehash: 1ebe2526e564ef24d20f1602fd5824b44e2e2bbd
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/30/2018
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="securing-messages-using-message-security"></a>使用訊息安全性來保護訊息的安全
-本章節會討論使用 [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)]<xref:System.ServiceModel.NetMsmqBinding>時的  訊息安全性。  
+本章節將討論 WCF 訊息安全性時使用<xref:System.ServiceModel.NetMsmqBinding>。  
   
 > [!NOTE]
 >  先閱讀本主題，建議您先閱讀[安全性概念](../../../../docs/framework/wcf/feature-details/security-concepts.md)。  
   
- 下圖提供使用 [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)]之佇列通訊的概念模型。 此圖例和術語是要用來說明  
+ 下圖提供使用 WCF 的佇列通訊概念模型。 此圖例和術語是要用來說明  
   
  傳輸安全性概念。  
   
  ![排入佇列的應用程式圖表](../../../../docs/framework/wcf/feature-details/media/distributed-queue-figure.jpg "分散式佇列圖")  
   
- 當使用 [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] 傳送佇列訊息時，[!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] 訊息會附加成為訊息佇列 (MSMQ) 的訊息本文。 傳輸安全性會保護整個 MSMQ 訊息的安全，而訊息 (或 SOAP) 安全性只能保護 MSMQ 訊息本文的安全。  
+ 當傳送佇列使用 WCF 訊息時，會將 WCF 訊息附加為 Message Queuing (MSMQ) 訊息本文。 傳輸安全性會保護整個 MSMQ 訊息的安全，而訊息 (或 SOAP) 安全性只能保護 MSMQ 訊息本文的安全。  
   
- 訊息安全性的重要概念是用戶端必須保護接收應用程式 (服務) 之訊息安全，這點不同於用戶端要保護目標佇列之訊息安全的傳輸安全性。 因此，在使用訊息安全性保護 [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] 訊息安全時，MSMQ 並無任何作用。  
+ 訊息安全性的重要概念是用戶端必須保護接收應用程式 (服務) 之訊息安全，這點不同於用戶端要保護目標佇列之訊息安全的傳輸安全性。 因此，MSMQ 並無任何作用，確保使用訊息安全性的 WCF 訊息時。  
   
- [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] 訊息安全性會將安全性標頭新增到 [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] 訊息，此標頭會整合現有的安全性基礎結構，例如，憑證或 Kerberos 通訊協定。  
+ WCF 訊息安全性會將安全性標頭加入至 WCF 訊息與現有安全性基礎結構，例如憑證或 Kerberos 通訊協定整合。  
   
 ## <a name="message-credential-type"></a>訊息認證類型  
  使用訊息安全性時，服務和用戶端可提供認證來彼此驗證。 您可以將 <xref:System.ServiceModel.NetMsmqBinding.Security%2A> 模式設定為 `Message` 或 `Both` (也就是同時使用傳輸安全性與訊息安全性) 來選取訊息安全性。  

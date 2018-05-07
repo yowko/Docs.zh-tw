@@ -1,27 +1,15 @@
 ---
-title: "部分信任最佳做法"
-ms.custom: 
+title: 部分信任最佳做法
 ms.date: 03/30/2017
-ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.technology: dotnet-clr
-ms.tgt_pltfrm: 
-ms.topic: article
 ms.assetid: 0d052bc0-5b98-4c50-8bb5-270cc8a8b145
-caps.latest.revision: "17"
-author: dotnet-bot
-ms.author: dotnetcontent
-manager: wpickett
-ms.workload: dotnet
-ms.openlocfilehash: 817f7aeeb7adece1c375bb8b0cc455a17fb54185
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.openlocfilehash: fca975ff4216384b970535273511eb07cd6ded68
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="partial-trust-best-practices"></a>部分信任最佳做法
-本主題說明在部分信任環境中執行 [!INCLUDE[indigo1](../../../../includes/indigo1-md.md)] 時的最佳做法。  
+在部分信任環境中執行 Windows Communication Foundation (WCF) 時，本主題會描述最佳作法。  
   
 ## <a name="serialization"></a>序列化  
  在部分信任的應用程式中使用 <xref:System.Runtime.Serialization.DataContractSerializer> 時，請套用下列做法。  
@@ -56,26 +44,26 @@ ms.lasthandoff: 12/22/2017
 -   實作 <xref:System.Xml.Serialization.IXmlSerializable> 介面的執行個體方法必須是 `public`。  
   
 ## <a name="using-wcf-from-fully-trusted-platform-code-that-allows-calls-from-partially-trusted-callers"></a>使用來自充分信任平台程式碼 (允許部分信任呼叫端的呼叫) 的 WCF  
- [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] 部分信任安全性模型假設 [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] 公用方法或屬性的所有呼叫端目前都在裝載應用程式的程式碼存取安全性 (CAS) 內容中執行。 [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] 同時假設每個 <xref:System.AppDomain> 都只有一個對應的應用程式安全性內容，而且這個內容是在 <xref:System.AppDomain> 建立期間由受信任的主機 (例如，透過呼叫 <xref:System.AppDomain.CreateDomain%2A> 或透過 ASP.NET 應用程式管理員) 所建立。  
+ WCF 部分信任安全性模型假設 WCF 公用方法或屬性的任何呼叫端在裝載應用程式的程式碼存取安全性 (CAS) 內容中執行。 WCF 也會假設每個都有該只有一個應用程式的安全性內容<xref:System.AppDomain>，且此內容建立在<xref:System.AppDomain>所信任的主控件的建立時間 (例如，藉由呼叫<xref:System.AppDomain.CreateDomain%2A>或 ASP.NET 應用程式管理員)。  
   
- 這個安全性模型適用於由使用者撰寫且無法判斷提示其他 CAS 權限的應用程式，例如在中度信任 ASP.NET 應用程式中執行的使用者程式碼。 然而，充分信任的平台程式碼 (例如，安裝在全域組件快取中且接受來自部分信任程式碼的呼叫的協力廠商組件) 在代表部分信任應用程式呼叫 [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] 時必須特別小心，避免帶入應用程式層級的安全性弱點。  
+ 這個安全性模型適用於由使用者撰寫且無法判斷提示其他 CAS 權限的應用程式，例如在中度信任 ASP.NET 應用程式中執行的使用者程式碼。 不過，完全受信任的平台程式碼 （例如，協力廠商組件安裝在全域組件快取中且接受來自部分信任的程式碼呼叫） 必須特別小心 WCF 呼叫代表部分信任應用程式避免帶入應用程式層級的安全性弱點。  
   
- 完全信任程式碼應該避免在呼叫代表部分信任程式碼的 <xref:System.Security.PermissionSet.Assert%2A> API 之前，更改目前執行緒的 CAS 權限集 (透過呼叫 <xref:System.Security.PermissionSet.PermitOnly%2A>、<xref:System.Security.PermissionSet.Deny%2A> 或 [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)])。 判斷提示、拒絕或以其他方式建立無關應用程式層級安全性內容的執行緒特定權限內容可能會導致未預期的行為。 根據所使用的應用程式，這項行為可能會導致應用程式層級的安全性弱點。  
+ 完全信任程式碼應該避免更改目前執行緒的 CAS 權限集 (藉由呼叫<xref:System.Security.PermissionSet.Assert%2A>， <xref:System.Security.PermissionSet.PermitOnly%2A>，或<xref:System.Security.PermissionSet.Deny%2A>) 在 WCF 應用程式開發介面呼叫代表部分信任程式碼之前。 判斷提示、拒絕或以其他方式建立無關應用程式層級安全性內容的執行緒特定權限內容可能會導致未預期的行為。 根據所使用的應用程式，這項行為可能會導致應用程式層級的安全性弱點。  
   
- 使用執行緒特定權限內容來呼叫 [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] 的程式碼必須準備好處理下列可能發生的情況：  
+ WCF 使用執行緒特定權限內容的呼叫必須準備好處理下列可能發生的情況的程式碼：  
   
 -   作業期間可能無法維護執行緒特定的安全性內容，進而導致可能發生的安全性例外狀況。  
   
--   內部 [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] 程式碼以及任何使用者提供的回呼可能會在原始啟始呼叫之安全性內容以外的其他安全性內容中執行。 這些內容包括：  
+-   內部 WCF 程式碼，以及任何使用者提供的回呼可能會執行不同的安全性內容以外的呼叫已原始啟始。 這些內容包括：  
   
     -   應用程式權限內容。  
   
-    -   先前由其他使用者執行緒建立的執行緒特定權限內容，用於在目前執行中 [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] 的存留期間呼叫 <xref:System.AppDomain>。  
+    -   先前由目前執行的存留期間呼叫 WCF 應用程式使用其他使用者執行緒建立任何執行緒特定權限內容<xref:System.AppDomain>。  
   
- [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] 會保證部分信任的程式碼無法取得完全信任權限，除非此類權限在呼叫 [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] 公用 API 之前已由完全信任的元件加以判斷提示。 但是，它不保證將完全信任的判斷提示影響隔離在特定執行緒、作業或使用者動作之外。  
+ WCF 會保證部分信任的程式碼無法取得完全信任權限，除非這類權限會由完全信任的元件呼叫 WCF 公用 Api 之前判斷提示。 但是，它不保證將完全信任的判斷提示影響隔離在特定執行緒、作業或使用者動作之外。  
   
  最佳做法是，避免呼叫 <xref:System.Security.PermissionSet.Assert%2A>、<xref:System.Security.PermissionSet.PermitOnly%2A> 或 <xref:System.Security.PermissionSet.Deny%2A> 來建立執行緒特定權限內容。 反之，應該針對應用程式本身授與或拒絕權限，這樣就不會需要 <xref:System.Security.PermissionSet.Assert%2A>、<xref:System.Security.PermissionSet.Deny%2A> 或 <xref:System.Security.PermissionSet.PermitOnly%2A>。  
   
-## <a name="see-also"></a>請參閱  
+## <a name="see-also"></a>另請參閱  
  <xref:System.Runtime.Serialization.DataContractSerializer>  
  <xref:System.Xml.Serialization.IXmlSerializable>

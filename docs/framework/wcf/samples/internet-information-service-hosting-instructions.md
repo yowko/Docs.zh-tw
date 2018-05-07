@@ -1,24 +1,12 @@
 ---
-title: "Internet Information Service 裝載指示"
-ms.custom: 
+title: Internet Information Service 裝載指示
 ms.date: 03/30/2017
-ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.technology: dotnet-clr
-ms.tgt_pltfrm: 
-ms.topic: article
 ms.assetid: 959a21c8-9d9d-4757-b255-4e57793ae9d6
-caps.latest.revision: "30"
-author: dotnet-bot
-ms.author: dotnetcontent
-manager: wpickett
-ms.workload: dotnet
-ms.openlocfilehash: de7dc897aa435d62c04c2e6a3ca82adf3a637a2a
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.openlocfilehash: 5d315fa482e423461eab171a19746b6ea792aac5
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="internet-information-service-hosting-instructions"></a>Internet Information Service 裝載指示
 若要執行由網際網路資訊服務 (IIS) 裝載的範例，您必須確定 IIS 已正確安裝並正在執行中。  
@@ -31,7 +19,7 @@ ms.lasthandoff: 12/22/2017
   
 3.  選取**應用程式伺服器**從**角色**清單，然後再按**下一步**兩次，顯示**選取角色服務**對話方塊應用程式伺服器角色。  
   
-4.  選取**網頁伺服器 (IIS)**核取方塊。 如果提示您安裝其他角色服務和功能時，請按一下**新增所需的功能**。 按一下**下一步**兩次，顯示**選取角色服務**的網頁伺服器 (IIS) 角色 對話方塊。  
+4.  選取**網頁伺服器 (IIS)** 核取方塊。 如果提示您安裝其他角色服務和功能時，請按一下**新增所需的功能**。 按一下**下一步**兩次，顯示**選取角色服務**的網頁伺服器 (IIS) 角色 對話方塊。  
   
 5.  展開**管理工具**，然後展開**IIS 6 管理相容性**。 選取**IIS 6 指令碼工具**。 如果提示您安裝其他角色服務和功能時，請按一下**新增所需的角色服務**。 按 [ **下一步**]。  
   
@@ -89,7 +77,7 @@ ms.lasthandoff: 12/22/2017
   
 3.  選取**應用程式伺服器**從**角色**清單，然後再按**下一步**兩次，顯示**選取角色服務**對話方塊應用程式伺服器角色。  
   
-4.  選取**網頁伺服器 (IIS)**核取方塊。 如果提示您安裝其他角色服務和功能時，請按一下**新增所需的功能**。 按一下**下一步**兩次，顯示**選取角色服務**的網頁伺服器 (IIS) 角色 對話方塊。  
+4.  選取**網頁伺服器 (IIS)** 核取方塊。 如果提示您安裝其他角色服務和功能時，請按一下**新增所需的功能**。 按一下**下一步**兩次，顯示**選取角色服務**的網頁伺服器 (IIS) 角色 對話方塊。  
   
 5.  展開**管理工具**，然後展開**IIS 6 管理相容性**。 選取**IIS 6 指令碼工具**。 如果提示您安裝其他角色服務和功能時，請按一下**新增所需的角色服務**。 按 [ **下一步**]。  
   
@@ -155,7 +143,7 @@ ms.lasthandoff: 12/22/2017
   
 2.  在**新增或移除程式**對話方塊中，按一下 **新增/移除 Windows 元件**。  
   
-3.  在**Windows 元件精靈**，選取**網際網路資訊服務 (IIS)**核取方塊，然後**下一步**。  
+3.  在**Windows 元件精靈**，選取**網際網路資訊服務 (IIS)** 核取方塊，然後**下一步**。  
   
 4.  如果**所需的檔案**對話方塊隨即出現，插入作業系統安裝光碟中，瀏覽至 i386 資料夾，，然後按一下**確定**。  
   

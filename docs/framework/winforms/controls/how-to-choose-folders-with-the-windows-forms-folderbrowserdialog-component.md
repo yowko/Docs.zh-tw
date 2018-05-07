@@ -1,13 +1,6 @@
 ---
-title: "如何：使用 Windows Form FolderBrowserDialog 元件選擇資料夾"
-ms.custom: 
+title: 如何：使用 Windows Form FolderBrowserDialog 元件選擇資料夾
 ms.date: 03/30/2017
-ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.technology: dotnet-winforms
-ms.tgt_pltfrm: 
-ms.topic: article
 dev_langs:
 - csharp
 - vb
@@ -19,16 +12,11 @@ helpviewer_keywords:
 - folders [Windows Forms], choosing
 - directories [Windows Forms], selecting
 ms.assetid: 4593670e-7c7d-4661-b46b-4ffb63258adb
-caps.latest.revision: "12"
-author: dotnet-bot
-ms.author: dotnetcontent
-manager: wpickett
-ms.workload: dotnet
-ms.openlocfilehash: de41d5664c2481032dffe213a52779834338ca2c
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.openlocfilehash: 657aad6efa195ec3d9741f4f91d4e01af4a54a19
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="how-to-choose-folders-with-the-windows-forms-folderbrowserdialog-component"></a>如何：使用 Windows Form FolderBrowserDialog 元件選擇資料夾
 通常，在您建立的 Windows 應用程式內，必須提示使用者選取資料夾時，最常是在儲存一組檔案時。 Windows Form<xref:System.Windows.Forms.FolderBrowserDialog>元件可讓您輕鬆地完成這項工作。  
@@ -77,7 +65,7 @@ ms.lasthandoff: 12/22/2017
   
  如需如何儲存檔案的資訊，請參閱[如何：使用 SaveFileDialog 元件儲存檔案](../../../../docs/framework/winforms/controls/how-to-save-files-using-the-savefiledialog-component.md)。  
   
-## <a name="see-also"></a>請參閱  
+## <a name="see-also"></a>另請參閱  
  <xref:System.Windows.Forms.FolderBrowserDialog>  
  [FolderBrowserDialog 元件概觀 (Windows Forms)](../../../../docs/framework/winforms/controls/folderbrowserdialog-component-overview-windows-forms.md)  
  [FolderBrowserDialog 元件](../../../../docs/framework/winforms/controls/folderbrowserdialog-component-windows-forms.md)

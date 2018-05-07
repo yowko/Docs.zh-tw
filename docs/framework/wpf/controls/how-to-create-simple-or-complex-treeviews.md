@@ -1,27 +1,15 @@
 ---
-title: "如何：建立簡單或複雜的 TreeView"
-ms.custom: 
+title: 如何：建立簡單或複雜的 TreeView
 ms.date: 03/30/2017
-ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.technology: dotnet-wpf
-ms.tgt_pltfrm: 
-ms.topic: article
 helpviewer_keywords:
 - TreeView control [WPF], creating
 - Control class [WPF], TreeView [WPF], creating
 ms.assetid: 1defbb78-b8e7-4c0e-b650-576453ac828d
-caps.latest.revision: "16"
-author: dotnet-bot
-ms.author: dotnetcontent
-manager: wpickett
-ms.workload: dotnet
-ms.openlocfilehash: 3a7e87295a50f901be0c7028bb2d6025b51c248c
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.openlocfilehash: 54e9218ea1460a0c29d8b9d7b9c740c18ac7ab24
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="how-to-create-simple-or-complex-treeviews"></a>如何：建立簡單或複雜的 TreeView
 這個範例示範如何建立簡單或複雜<xref:System.Windows.Controls.TreeView>控制項。  
@@ -51,7 +39,7 @@ ms.lasthandoff: 12/22/2017
   
  [!code-xaml[TreeViewSimple#9](../../../../samples/snippets/csharp/VS_Snippets_Wpf/TreeViewSimple/CS/Window1.xaml#9)]  
   
-## <a name="see-also"></a>請參閱  
+## <a name="see-also"></a>另請參閱  
  <xref:System.Windows.Controls.TreeView>  
  <xref:System.Windows.Controls.TreeViewItem>  
  [TreeView 概觀](../../../../docs/framework/wpf/controls/treeview-overview.md)  

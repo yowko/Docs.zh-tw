@@ -1,24 +1,14 @@
 ---
-title: "執行階段指示詞項目"
-ms.custom: 
+title: 執行階段指示詞項目
 ms.date: 03/30/2017
-ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.technology: dotnet-clr
-ms.tgt_pltfrm: 
-ms.topic: article
 ms.assetid: 3fe5848c-ecd7-4136-970b-8e48d250bde6
-caps.latest.revision: "12"
 author: rpetrusha
 ms.author: ronpet
-manager: wpickett
-ms.workload: dotnet
-ms.openlocfilehash: e2566c5ebe8c94610c8f7e258da7c77adb86a49f
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.openlocfilehash: 2b4e8f0902e0d3ebd010ff639b329707881c29fd
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="runtime-directive-elements"></a>執行階段指示詞項目
 執行階段指示詞 (rd.xml) 檔案格式支援下列執行階段指示詞元素。 如需階層表示法，請參閱[執行階段指示詞 (rd.xml) 組態檔參考](../../../docs/framework/net-native/runtime-directives-rd-xml-configuration-file-reference.md)。  
@@ -77,5 +67,5 @@ ms.lasthandoff: 12/22/2017
  [\<TypeParameter>](../../../docs/framework/net-native/typeparameter-element-net-native.md)  
  將執行階段原則套用至傳遞給方法之 <xref:System.Type> 引數所表示的類型。  
   
-## <a name="see-also"></a>請參閱  
+## <a name="see-also"></a>另請參閱  
  [rd.xml 組態檔參考](../../../docs/framework/net-native/runtime-directives-rd-xml-configuration-file-reference.md)

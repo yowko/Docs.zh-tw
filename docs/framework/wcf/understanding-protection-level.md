@@ -1,14 +1,6 @@
 ---
 title: 了解保護層級
-ms.custom: ''
 ms.date: 03/30/2017
-ms.prod: .net-framework
-ms.reviewer: ''
-ms.suite: ''
-ms.technology:
-- dotnet-clr
-ms.tgt_pltfrm: ''
-ms.topic: article
 dev_langs:
 - csharp
 - vb
@@ -16,20 +8,14 @@ helpviewer_keywords:
 - WCF, security
 - ProtectionLevel property
 ms.assetid: 0c034608-a1ac-4007-8287-b1382eaa8bf2
-caps.latest.revision: 22
-author: dotnet-bot
-ms.author: dotnetcontent
-manager: wpickett
-ms.workload:
-- dotnet
-ms.openlocfilehash: 4b079d7f6e22f0c1904433c2822b92da91923ef2
-ms.sourcegitcommit: 03ee570f6f528a7d23a4221dcb26a9498edbdf8c
-ms.translationtype: MT
+ms.openlocfilehash: 0f17d6e787a48edd562559f52ac015edf7bc702c
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/28/2018
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="understanding-protection-level"></a>了解保護層級
-在許多不同的類別上都可找到 `ProtectionLevel` 屬性，例如 <xref:System.ServiceModel.ServiceContractAttribute> 和 <xref:System.ServiceModel.OperationContractAttribute> 類別。 此屬性會控制如何保護訊息的部分 (或全部) 內容。 本主題會說明 [!INCLUDE[indigo1](../../../includes/indigo1-md.md)] 功能及其運作方式。  
+在許多不同的類別上都可找到 `ProtectionLevel` 屬性，例如 <xref:System.ServiceModel.ServiceContractAttribute> 和 <xref:System.ServiceModel.OperationContractAttribute> 類別。 此屬性會控制如何保護訊息的部分 (或全部) 內容。 本主題說明 Windows Communication Foundation (WCF) 功能及其運作方式。  
   
  如需設定保護層級的指示，請參閱[How to： 設定 ProtectionLevel 屬性](../../../docs/framework/wcf/how-to-set-the-protectionlevel-property.md)。  
   

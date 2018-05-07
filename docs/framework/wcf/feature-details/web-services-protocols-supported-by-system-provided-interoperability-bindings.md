@@ -1,33 +1,19 @@
 ---
 title: 系統提供的互通性繫結所支援的 Web 服務通訊協定
-ms.custom: ''
 ms.date: 03/30/2017
-ms.prod: .net-framework
-ms.reviewer: ''
-ms.suite: ''
-ms.technology:
-- dotnet-clr
-ms.tgt_pltfrm: ''
-ms.topic: article
 helpviewer_keywords:
 - WS-protocols
 - Web services protocols
 - Windows Communication Foundation, Web service protocols
 ms.assetid: 1f7fc4ff-30fe-4e46-adda-91caad3b06c6
-caps.latest.revision: 39
-author: dotnet-bot
-ms.author: dotnetcontent
-manager: wpickett
-ms.workload:
-- dotnet
-ms.openlocfilehash: 998920e4c1d7e0524da1c9843378e92517f4ee96
-ms.sourcegitcommit: 94d33cadc5ff81d2ac389bf5f26422c227832052
+ms.openlocfilehash: 728dba65a99d71a52551b16e5f1822104ed40ea7
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/30/2018
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="web-services-protocols-supported-by-system-provided-interoperability-bindings"></a>系統提供的互通性繫結所支援的 Web 服務通訊協定
-[!INCLUDE[indigo1](../../../../includes/indigo1-md.md)] 已建置成可與支援一組規格 (即所謂的 Web 服務規格) 的 Web 服務相互操作。 為了簡化服務組態以獲得互通性最佳做法，[!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] 引進三種互通的系統提供之繫結：<xref:System.ServiceModel.BasicHttpBinding?displayProperty=nameWithType>、<xref:System.ServiceModel.WSHttpBinding?displayProperty=nameWithType> 和 <xref:System.ServiceModel.WSDualHttpBinding?displayProperty=nameWithType>。 為了與美國先進結構化資訊標準組織 (OASIS) 標準互通，[!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] 包含一種互通的系統提供之繫結：<xref:System.ServiceModel.WS2007HttpBinding?displayProperty=nameWithType>。 中繼資料發行集，[!INCLUDE[indigo2](../../../../includes/indigo2-md.md)]包含兩個系統提供繫結： [ \<mexHttpBinding >](../../../../docs/framework/configure-apps/file-schema/wcf/mexhttpbinding.md)和[ \<mexHttpsBinding >](../../../../docs/framework/configure-apps/file-schema/wcf/mexhttpsbinding.md)。 本主題列出系統提供之繫結支援的規格。  
+Windows Communication Foundation (WCF) 是建置與支援一組稱為 Web 服務規格的規格的 Web 服務交互操作。 為了簡化服務組態以獲得互通性最佳做法，WCF 會引進三種互通系統提供繫結： <xref:System.ServiceModel.BasicHttpBinding?displayProperty=nameWithType>， <xref:System.ServiceModel.WSHttpBinding?displayProperty=nameWithType>，和<xref:System.ServiceModel.WSDualHttpBinding?displayProperty=nameWithType>。 WCF 的互通性與組織先進的結構化 Information Standards (OASIS) 標準，包含一個互通系統提供繫結： <xref:System.ServiceModel.WS2007HttpBinding?displayProperty=nameWithType>。 中繼資料發行集，WCF 會包含兩個系統提供繫結： [ \<mexHttpBinding >](../../../../docs/framework/configure-apps/file-schema/wcf/mexhttpbinding.md)和[ \<mexHttpsBinding >](../../../../docs/framework/configure-apps/file-schema/wcf/mexhttpsbinding.md)。 本主題列出系統提供之繫結支援的規格。  
   
 ## <a name="web-services-protocols-supported-by-basichttpbinding-wshttpbinding-ws2007httpbinding-and-wsdualhttpbinding-bindings"></a>basicHttpBinding、wsHttpBinding、ws2007HttpBinding 和 wsDualHttpBinding 繫結支援的 Web 服務通訊協定  
   
@@ -41,11 +27,11 @@ ms.lasthandoff: 04/30/2018
 |--------------|--------------|-----------------------------|  
 |Transport|HTTP 1.1|[HTTP 1.1](http://go.microsoft.com/fwlink/?LinkId=84048)<br /><br /> `BasicHttpBinding`、`WSHttpBinding` 和 `WS2007HttpBinding` 使用 HTTP 和 HTTPS 傳輸。|  
 |訊息|MTOM|[MTOM](http://go.microsoft.com/fwlink/?LinkId=95326)<br /><br /> `basicHttpBinding`、`wsHttpBinding` 和 `ws2007HttpBinding` 支援訊息傳輸最佳化機制 (MTOM)。 預設不使用。 若要使用 MTOM，請將 `messageEncoding` 屬性設為 `"Mtom"`。<br /><br /> 範例：<br /><br /> `<wsHttpBinding> <binding messageEncoding="Mtom"/> </wsHttpBinding>`|  
-|中繼資料|WSDL 1.1|[WSDL 1.1](http://go.microsoft.com/fwlink/?LinkId=94859)<br /><br /> [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] 使用 Web 服務描述語言 (WSDL) 來描述服務。|  
-|中繼資料|WS-Policy|[WS-Policy](http://go.microsoft.com/fwlink/?LinkId=94864)<br /><br /> [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] 將 WS-Policy 規格與定義域特定的判斷提示一起使用，以描述服務需求和功能。|  
-|中繼資料|WS-Policy 1.5|[Ws-policy 1.5](http://go.microsoft.com/fwlink/?LinkId=95327)<br /><br /> [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] 將 WS-Policy 規格與定義域特定的判斷提示一起使用，以描述服務需求和功能。|  
-|中繼資料|WS-PolicyAttachment|[WS-PolicyAttachment](http://go.microsoft.com/fwlink/?LinkId=95328)<br /><br /> [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] 實作 WS-PolicyAttachment 以附加 Web 服務描述語言 (WSDL) 中各種範圍的原則運算式。|  
-|中繼資料|WS-MetadataExchange|[WS-MetadataExchange](http://go.microsoft.com/fwlink/?LinkId=94868)<br /><br /> [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] 實作 WS-MetadataExchange 以擷取 XML 結構描述、WSDL 和 WS-Policy。|  
+|中繼資料|WSDL 1.1|[WSDL 1.1](http://go.microsoft.com/fwlink/?LinkId=94859)<br /><br /> WCF 會使用 Web 服務描述語言 (WSDL) 來描述服務。|  
+|中繼資料|WS-Policy|[WS-Policy](http://go.microsoft.com/fwlink/?LinkId=94864)<br /><br /> WCF 會使用 Ws-policy 規格與定義域特定的判斷提示來描述服務需求和功能。|  
+|中繼資料|WS-Policy 1.5|[Ws-policy 1.5](http://go.microsoft.com/fwlink/?LinkId=95327)<br /><br /> WCF 會使用 Ws-policy 規格與定義域特定的判斷提示來描述服務需求和功能。|  
+|中繼資料|WS-PolicyAttachment|[WS-PolicyAttachment](http://go.microsoft.com/fwlink/?LinkId=95328)<br /><br /> WCF 實作 Ws-policyattachment 以附加原則運算式，在各種範圍中 Web 服務描述語言 (WSDL)。|  
+|中繼資料|WS-MetadataExchange|[WS-MetadataExchange](http://go.microsoft.com/fwlink/?LinkId=94868)<br /><br /> WCF 實作 Ws-metadataexchange 以擷取 XML 結構描述、 WSDL 和 Ws-policy。|  
   
 ### <a name="basichttpbinding"></a>basicHttpBinding  
   
@@ -70,7 +56,7 @@ ms.lasthandoff: 04/30/2018
 |安全性|WS-SecureConversation|[WS-SecureConversation](http://go.microsoft.com/fwlink/?LinkId=95317)<br /><br /> 用於當 `security/@mode` 屬性設為 "Message"，且 `message/@establishSecurityContext` 屬性設為 "true" (預設值) 時提供安全的工作階段。|  
 |安全性|WS-Trust|[WS-Trust](http://go.microsoft.com/fwlink/?LinkId=95318)<br /><br /> WS-SecureConversation (請參閱前述) 所使用。|  
 |可信賴傳訊|WS-ReliableMessaging|[WS-ReliableMessaging](http://go.microsoft.com/fwlink/?LinkId=95322)<br /><br /> 當繫結設定為使用 `reliableSession` 時使用。<br /><br /> `<wsHttpBinding>  <binding name="myBinding">    <reliableSession/>   </binding> </wsHttpBinding>`|  
-|異動|WS-AtomicTransaction|[WS-AtomicTransaction](http://go.microsoft.com/fwlink/?LinkId=95323)<br /><br /> 用於異動管理員之間的通訊。 [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] 用戶端和服務永遠使用本機交易管理員。|  
+|異動|WS-AtomicTransaction|[WS-AtomicTransaction](http://go.microsoft.com/fwlink/?LinkId=95323)<br /><br /> 用於異動管理員之間的通訊。 WCF 用戶端和服務永遠使用本機交易管理員。|  
 |異動|WS-Coordination|[WS-Coordination](http://go.microsoft.com/fwlink/?LinkId=95324)<br /><br /> 用於當 `flowTransactions` 屬性設為 "Allowed" 或 "Required" 時流動交易內容。<br /><br /> `<wsHttpBinding>   <binding transactionFlow="true"/> </wsHttpBinding>`|  
   
 ## <a name="wsfederationhttpbinding-and-ws2007federationhttpbinding"></a>wsFederationHttpBinding 和 ws2007FederationHttpBinding  
@@ -109,7 +95,7 @@ ms.lasthandoff: 04/30/2018
 |Transport|HTTP 1.1|[HTTP 1.1](http://go.microsoft.com/fwlink/?LinkId=84048)|  
 |訊息|SOAP 1.2|[入門](http://go.microsoft.com/fwlink/?LinkId=48282)<br /><br /> [訊息架構](http://go.microsoft.com/fwlink/?LinkId=94664)<br /><br /> [附加 （包括 HTTP 繫結）](http://go.microsoft.com/fwlink/?LinkId=95329)|  
 |訊息|Ws-addressing 2005/08|[Web 服務定址 1.0-核心](http://go.microsoft.com/fwlink/?LinkId=90574)<br /><br /> [Web 服務定址 1.0-SOAP](http://go.microsoft.com/fwlink/?LinkId=95330)|  
-|中繼資料|WS-MetadataExchange|[WS-MetadataExchange](http://go.microsoft.com/fwlink/?LinkId=94868)<br /><br /> [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] 實作 WS-MetadataExchange 以擷取 XML 結構描述、WSDL 和 WS-Policy。|  
+|中繼資料|WS-MetadataExchange|[WS-MetadataExchange](http://go.microsoft.com/fwlink/?LinkId=94868)<br /><br /> WCF 實作 Ws-metadataexchange 以擷取 XML 結構描述、 WSDL 和 Ws-policy。|  
   
 ### <a name="mexhttpsbinding"></a>mexHttpsBinding  
  [\<mexHttpsBinding >](../../../../docs/framework/configure-apps/file-schema/wcf/mexhttpsbinding.md)支援下列通訊協定。 如需有關如何使用這個繫結的詳細資訊，請參閱[發行中繼資料](../../../../docs/framework/wcf/feature-details/publishing-metadata.md)。  
@@ -119,7 +105,7 @@ ms.lasthandoff: 04/30/2018
 |Transport|HTTP 1.1|[HTTP 1.1](http://go.microsoft.com/fwlink/?LinkId=84048)<br /><br /> 已啟用傳輸安全性。|  
 |訊息|SOAP 1.2|[入門](http://go.microsoft.com/fwlink/?LinkId=48282)<br /><br /> [訊息架構](http://go.microsoft.com/fwlink/?LinkId=94664)<br /><br /> [附加 （包括 HTTP 繫結）](http://go.microsoft.com/fwlink/?LinkId=95329)|  
 |訊息|Ws-addressing 2005/08|[Web 服務定址 1.0-核心](http://go.microsoft.com/fwlink/?LinkId=90574)<br /><br /> [Web 服務定址 1.0-SOAP](http://go.microsoft.com/fwlink/?LinkId=95330)|  
-|中繼資料|WS-MetadataExchange|[WS-MetadataExchange](http://go.microsoft.com/fwlink/?LinkId=94868)<br /><br /> [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] 實作 WS-MetadataExchange 以擷取 XML 結構描述、WSDL 和 WS-Policy。|  
+|中繼資料|WS-MetadataExchange|[WS-MetadataExchange](http://go.microsoft.com/fwlink/?LinkId=94868)<br /><br /> WCF 實作 Ws-metadataexchange 以擷取 XML 結構描述、 WSDL 和 Ws-policy。|  
   
 ## <a name="see-also"></a>另請參閱  
  [系統提供的繫結](../../../../docs/framework/wcf/system-provided-bindings.md)  

@@ -1,24 +1,12 @@
 ---
-title: "支援權杖"
-ms.custom: 
+title: 支援權杖
 ms.date: 03/30/2017
-ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.technology: dotnet-clr
-ms.tgt_pltfrm: 
-ms.topic: article
 ms.assetid: 65a8905d-92cc-4ab0-b6ed-1f710e40784e
-caps.latest.revision: "29"
-author: dotnet-bot
-ms.author: dotnetcontent
-manager: wpickett
-ms.workload: dotnet
-ms.openlocfilehash: 8b6838f6914ed7430fc420705af2ff461ccde8e4
-ms.sourcegitcommit: c0dd436f6f8f44dc80dc43b07f6841a00b74b23f
-ms.translationtype: MT
+ms.openlocfilehash: 4f8cf62220955bef3f341c43b3c615f873387b2e
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 01/19/2018
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="supporting-tokens"></a>支援權杖
 這個支援權杖範例會示範如何將其他權杖加入至使用 WS-Security 的訊息。 範例除了使用者名稱安全性權杖之外，還會新增 X.509 二進位安全性權杖。 權杖會在 WS-Security 訊息標頭中從用戶端傳遞至服務，而且使用與 X.509 安全性權杖相關聯的私密金鑰簽署該訊息的一部分，以便向接收者證明持有 X.509 憑證。 在必須有多個宣告與訊息產生關聯才能驗證或授權傳送者的情況下，這將十分有幫助。 服務會實作定義要求-回覆通訊模式的合約。  
@@ -294,7 +282,7 @@ public class EchoService : IEchoService
 ```  
   
 ## <a name="displaying-callers-information"></a>顯示呼叫端的資訊  
- 若要顯示呼叫者的資訊，您可以使用 `ServiceSecurityContext.Current.AuthorizationContext.ClaimSets`，如下列程式碼所示。 `ServiceSecurityContext.Current.AuthorizationContext.ClaimSets` 包含與目前呼叫者關聯的授權宣告。 [!INCLUDE[indigo1](../../../../includes/indigo1-md.md)] 會自動為訊息中所收到的每個權杖提供這些宣告。  
+ 若要顯示呼叫者的資訊，您可以使用 `ServiceSecurityContext.Current.AuthorizationContext.ClaimSets`，如下列程式碼所示。 `ServiceSecurityContext.Current.AuthorizationContext.ClaimSets` 包含與目前呼叫者關聯的授權宣告。 這些宣告會提供自動的 Windows Communication Foundation (WCF) 的每個訊息中收到的權杖。  
   
 ```  
 bool TryGetClaimValue<TClaimResource>(ClaimSet claimSet, string   
@@ -478,4 +466,4 @@ iisreset
 > [!NOTE]
 >  跨機器執行此範例時，這個指令碼不會移除用戶端上的服務憑證。 如果您已執行跨機器使用憑證的 [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] 範例，請確定清除安裝在 CurrentUser - TrustedPeople 存放區中的服務憑證。 若要這麼做，請使用下列命令：`certmgr -del -r CurrentUser -s TrustedPeople -c -n <Fully Qualified Server Machine Name>`，例如：`certmgr -del -r CurrentUser -s TrustedPeople -c -n server1.contoso.com`。  
   
-## <a name="see-also"></a>請參閱
+## <a name="see-also"></a>另請參閱

@@ -1,27 +1,15 @@
 ---
-title: "如何：使用設計工具在 Windows Form ListView 控制項中加入資料行"
-ms.custom: 
+title: 如何：使用設計工具在 Windows Form ListView 控制項中加入資料行
 ms.date: 03/30/2017
-ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.technology: dotnet-winforms
-ms.tgt_pltfrm: 
-ms.topic: article
 helpviewer_keywords:
 - ListView control [Windows Forms], adding column headers
 - columns [Windows Forms], adding to ListView controls
 ms.assetid: 5b1a8b4d-587e-479a-95c1-f9b90884f13a
-caps.latest.revision: "6"
-author: dotnet-bot
-ms.author: dotnetcontent
-manager: wpickett
-ms.workload: dotnet
-ms.openlocfilehash: 971d3918fd6085bea85e43183ea67745d40e51b8
-ms.sourcegitcommit: c0dd436f6f8f44dc80dc43b07f6841a00b74b23f
+ms.openlocfilehash: 83ea97b0961d158a1f3ab7a77ad2aa93732c17b9
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 01/19/2018
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="how-to-add-columns-to-the-windows-forms-listview-control-using-the-designer"></a>如何：使用設計工具在 Windows Form ListView 控制項中加入資料行
 Windows Form<xref:System.Windows.Forms.ListView>控制項可以顯示多個資料行，為每個清單項目在**詳細資料**檢視。 您可以使用資料行，以顯示數種類型的每個清單項目的相關資訊。 例如，檔案名稱、 檔案類型、 大小和檔案上次修改的日期，可以顯示的檔案清單。 如需建立之後，擴展資料行資訊，請參閱[How to： 使用 Windows Form ListView 控制項的資料行顯示子項目](../../../../docs/framework/winforms/controls/how-to-display-subitems-in-columns-with-the-windows-forms-listview-control.md)。  
@@ -41,7 +29,7 @@ Windows Form<xref:System.Windows.Forms.ListView>控制項可以顯示多個資�
   
 3.  使用**新增**按鈕即可加入新的資料行。 然後，您可以選取資料行標頭，並設定其文字 （資料行標題）、 文字對齊方式，與寬度。  
   
-## <a name="see-also"></a>請參閱  
+## <a name="see-also"></a>另請參閱  
  [ListView 控制項概觀](../../../../docs/framework/winforms/controls/listview-control-overview-windows-forms.md)  
  [操作說明：使用 Windows Forms ListView 控制項加入和移除項目](../../../../docs/framework/winforms/controls/how-to-add-and-remove-items-with-the-windows-forms-listview-control.md)  
  [操作說明：使用 Windows Forms ListView 控制項以資料行顯示子項目](../../../../docs/framework/winforms/controls/how-to-display-subitems-in-columns-with-the-windows-forms-listview-control.md)  

@@ -1,11 +1,7 @@
 ---
-title: "QualifierSet_Next 函式 （Unmanaged API 參考）"
-description: "QualifierSet_Next 函式會擷取下一步的限定詞列舉型別。"
+title: QualifierSet_Next 函式 （Unmanaged API 參考）
+description: QualifierSet_Next 函式會擷取下一步的限定詞列舉型別。
 ms.date: 11/06/2017
-ms.prod: .net-framework
-ms.technology:
-- dotnet-clr
-ms.topic: reference
 api_name:
 - QualifierSet_Next
 api_location:
@@ -20,14 +16,11 @@ topic_type:
 - Reference
 author: rpetrusha
 ms.author: ronpet
-manager: wpickett
-ms.workload:
-- dotnet
-ms.openlocfilehash: 01a9c9d162039547849597aaa9c8a6fa38a31455
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.openlocfilehash: a8232691c697c51b5a480a68c6d952f294a63460
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="qualifiersetnext-function"></a>QualifierSet_Next 函式
 擷取列舉型別呼叫啟動下一步的限定詞[QualifierSet_BeginEnumeration](qualifierset-beginenumeration.md)函式。   
@@ -92,7 +85,7 @@ HRESULT QualifierSet_Next (
   
  **標頭：** WMINet_Utils.idl  
   
- **.NET framework 版本：**[!INCLUDE[net_current_v472plus](../../../../includes/net-current-v472plus.md)]  
+ **.NET framework 版本：** [!INCLUDE[net_current_v472plus](../../../../includes/net-current-v472plus.md)]  
   
 ## <a name="see-also"></a>另請參閱  
 [WMI 和效能計數器 （Unmanaged API 參考）](index.md)

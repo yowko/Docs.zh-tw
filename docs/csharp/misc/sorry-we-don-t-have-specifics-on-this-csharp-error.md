@@ -1,10 +1,6 @@
 ---
 title: 很抱歉，我們不&#39;t 這個 C# 錯誤的詳細資訊
 ms.date: 07/20/2015
-ms.prod: .net
-ms.technology:
-- devlang-csharp
-ms.topic: article
 f1_keywords:
 - CS1583
 - CS0821
@@ -886,14 +882,11 @@ f1_keywords:
 helpviewer_keywords:
 - errors [C#], additional information
 ms.assetid: 48320e4a-6e17-45a6-9966-88c6ec89bd2f
-caps.latest.revision: 15
-author: BillWagner
-ms.author: wiwagn
-ms.openlocfilehash: c6cabc4c619e6ace4c376fd125e7531f10bf9b88
-ms.sourcegitcommit: 2042de78fcdceebb6b8ac4b7a292b93e8782cbf5
+ms.openlocfilehash: 5e9c0aff2df5c46e707fa9f85506758327b58d80
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/27/2018
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="sorry-we-don39t-have-specifics-on-this-c-error"></a>很抱歉，我們不&#39;t 這個 C# 錯誤的詳細資訊
 很抱歉，我們沒有任何有關此錯誤的特定資訊。 您可以搜尋錯誤號碼與訊息文字，以在網路上尋找資訊。 或者，您可以詢問其他開發人員使用其中一個論壇：  

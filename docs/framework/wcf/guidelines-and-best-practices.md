@@ -1,13 +1,6 @@
 ---
-title: "方針及最佳作法"
-ms.custom: 
+title: 方針及最佳作法
 ms.date: 03/30/2017
-ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.technology: dotnet-clr
-ms.tgt_pltfrm: 
-ms.topic: article
 helpviewer_keywords:
 - WCF, guidelines
 - best practices [WCF], application design
@@ -15,19 +8,14 @@ helpviewer_keywords:
 - WCF, best practices
 - Windows Communication Foundation, guidelines
 ms.assetid: 5098ba46-6e8d-4e02-b0c5-d737f9fdad84
-caps.latest.revision: "18"
-author: dotnet-bot
-ms.author: dotnetcontent
-manager: wpickett
-ms.workload: dotnet
-ms.openlocfilehash: 6dc6ad423010cf881c62e2c22570c080cad6a1e0
-ms.sourcegitcommit: c0dd436f6f8f44dc80dc43b07f6841a00b74b23f
-ms.translationtype: MT
+ms.openlocfilehash: 09996681b17d324d53c74b727b183f3a457cc664
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 01/19/2018
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="guidelines-and-best-practices"></a>方針及最佳作法
-本章節所包含的主題，提供建立 [!INCLUDE[indigo1](../../../includes/indigo1-md.md)] 應用程式的方針。  
+本節將提供指導方針建立 Windows Communication Foundation (WCF) 應用程式的主題。  
   
 ## <a name="in-this-section"></a>本節內容  
  [最佳做法：資料合約版本設定](../../../docs/framework/wcf/best-practices-data-contract-versioning.md)  
@@ -55,7 +43,7 @@ ms.lasthandoff: 01/19/2018
   
  [基本 WCF 程式設計](../../../docs/framework/wcf/basic-wcf-programming.md)  
   
-## <a name="see-also"></a>請參閱  
+## <a name="see-also"></a>另請參閱  
  [什麼是 Windows Communication Foundation](../../../docs/framework/wcf/whats-wcf.md)  
  [Windows Communication Foundation 範例](http://msdn.microsoft.com/library/8ec9d192-5d81-4f64-bfd3-90c5e5858c91)  
  [概念性概觀](../../../docs/framework/wcf/conceptual-overview.md)  

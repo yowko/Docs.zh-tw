@@ -1,23 +1,12 @@
 ---
-title: "追蹤記錄"
-ms.custom: 
+title: 追蹤記錄
 ms.date: 03/30/2017
-ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.tgt_pltfrm: 
-ms.topic: article
 ms.assetid: 51adbda3-bd8b-4892-a8ea-d343186472d2
-caps.latest.revision: "20"
-author: dotnet-bot
-ms.author: dotnetcontent
-manager: wpickett
-ms.workload: dotnet
-ms.openlocfilehash: 6c871f019179c091fc022be0bf03ad84fbe66dc1
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.openlocfilehash: b07175943f85b61024030c1e0251e24d1eb35c86
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="tracking-records"></a>追蹤記錄
 工作流程執行階段經檢測會發出追蹤記錄，以追蹤工作流程執行個體的執行。  
@@ -70,6 +59,6 @@ ms.lasthandoff: 12/22/2017
   
 5.  <xref:System.Activities.Tracking.WorkflowInstanceRecord> 表示工作流程正在完成。  
   
-## <a name="see-also"></a>請參閱  
+## <a name="see-also"></a>另請參閱  
  [Windows Server App Fabric 監控](http://go.microsoft.com/fwlink/?LinkId=201273)  
  [使用 App Fabric 監控應用程式](http://go.microsoft.com/fwlink/?LinkId=201275)

@@ -1,13 +1,6 @@
 ---
-title: "如何：尋找 DataTemplate 產生的項目"
-ms.custom: 
+title: 如何：尋找 DataTemplate 產生的項目
 ms.date: 03/30/2017
-ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.technology: dotnet-wpf
-ms.tgt_pltfrm: 
-ms.topic: article
 dev_langs:
 - csharp
 - vb
@@ -15,16 +8,11 @@ helpviewer_keywords:
 - finding DataTemplate elements [WPF]
 - DataTemplate [WPF]
 ms.assetid: bfcd564e-5e9e-451e-8641-a9b5c3cfac90
-caps.latest.revision: "6"
-author: dotnet-bot
-ms.author: dotnetcontent
-manager: wpickett
-ms.workload: dotnet
-ms.openlocfilehash: 481a22cfd9419d36473c77b5d2282a711259e031
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.openlocfilehash: d46a408bc1b5fc512905aa5bf176b13bd1511865
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="how-to-find-datatemplate-generated-elements"></a>如何：尋找 DataTemplate 產生的項目
 這個範例示範如何尋找所產生的項目<xref:System.Windows.DataTemplate>。  
@@ -48,7 +36,7 @@ ms.lasthandoff: 12/22/2017
  [!code-csharp[FindGeneratedItems#FVC](../../../../samples/snippets/csharp/VS_Snippets_Wpf/FindGeneratedItems/CSharp/Window1.xaml.cs#fvc)]
  [!code-vb[FindGeneratedItems#FVC](../../../../samples/snippets/visualbasic/VS_Snippets_Wpf/FindGeneratedItems/VisualBasic/Window1.xaml.vb#fvc)]  
   
-## <a name="see-also"></a>請參閱  
+## <a name="see-also"></a>另請參閱  
  [操作說明：尋找 ControlTemplate 產生的元素](../../../../docs/framework/wpf/controls/how-to-find-controltemplate-generated-elements.md)  
  [資料繫結概觀](../../../../docs/framework/wpf/data/data-binding-overview.md)  
  [HOW-TO 主題](../../../../docs/framework/wpf/data/data-binding-how-to-topics.md)  

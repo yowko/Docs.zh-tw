@@ -1,14 +1,6 @@
 ---
-title: "IMetaDataDispenserEx::SetOption 方法"
-ms.custom: 
+title: IMetaDataDispenserEx::SetOption 方法
 ms.date: 03/30/2017
-ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.technology:
-- dotnet-clr
-ms.tgt_pltfrm: 
-ms.topic: reference
 api_name:
 - IMetaDataDispenserEx.SetOption
 api_location:
@@ -23,17 +15,13 @@ helpviewer_keywords:
 ms.assetid: 9f1c7ccd-7fb2-41d8-aa00-24b823376527
 topic_type:
 - apiref
-caps.latest.revision: 
 author: mairaw
 ms.author: mairaw
-manager: wpickett
-ms.workload:
-- dotnet
-ms.openlocfilehash: 96810ba0eab99d1df58f0b68b85ef4da8ce7084e
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.openlocfilehash: cfe600b54eb03a07ea01375355c5ff94190e5d9d
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="imetadatadispenserexsetoption-method"></a>IMetaDataDispenserEx::SetOption 方法
 將指定的選項設定為目前中繼資料範圍的指定值。 此選項會控制如何處理目前的中繼資料範圍的呼叫。  
@@ -57,7 +45,7 @@ HRESULT SetOption (
 ## <a name="remarks"></a>備註  
  下表列出可用的 Guid，`optionId`參數可以指向和對應的有效值為`pValue`參數。  
   
-|GUID|描述|`pValue`參數|  
+|GUID|描述|`pValue` 參數|  
 |----------|-----------------|------------------------|  
 |MetaDataCheckDuplicatesFor|控制哪些項目會檢查有重複的項目。 每次呼叫[IMetaDataEmit](../../../../docs/framework/unmanaged-api/metadata/imetadataemit-interface.md)方法會建立新的項目，您可以詢問要檢查的項目是否已存在於目前的範圍中的方法。 例如，您可以檢查是否存在`mdMethodDef`項目; 在此情況下，當您呼叫[imetadataemit:: Definemethod](../../../../docs/framework/unmanaged-api/metadata/imetadataemit-definemethod-method.md)，它會檢查的方法已經不存在目前的範圍中。 這項檢查會使用索引鍵可唯一識別指定的方法： 父類型、 名稱和簽章。|必須是變數類型 UI4，而且必須包含值的組合[CorCheckDuplicatesFor](../../../../docs/framework/unmanaged-api/metadata/corcheckduplicatesfor-enumeration.md)列舉型別。|  
 |MetaDataRefToDefCheck|控制哪些參考的項目已轉換成定義。 根據預設，中繼資料引擎會最佳化的程式碼所參考的項目轉換為其定義，如果參考的項目實際上定義在目前範圍中。|必須是變數類型 UI4，而且必須包含值的組合[CorRefToDefCheck](../../../../docs/framework/unmanaged-api/metadata/correftodefcheck-enumeration.md)列舉型別。|  
@@ -80,8 +68,8 @@ HRESULT SetOption (
   
  **程式庫：**做為 MsCorEE.dll 中的資源  
   
- **.NET framework 版本：**[!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
+ **.NET framework 版本：** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
   
-## <a name="see-also"></a>請參閱  
+## <a name="see-also"></a>另請參閱  
  [IMetaDataDispenserEx 介面](../../../../docs/framework/unmanaged-api/metadata/imetadatadispenserex-interface.md)  
  [IMetaDataDispenser 介面](../../../../docs/framework/unmanaged-api/metadata/imetadatadispenser-interface.md)

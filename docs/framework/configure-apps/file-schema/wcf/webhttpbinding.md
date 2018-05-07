@@ -2,11 +2,11 @@
 title: '&lt;webHttpBinding&gt;'
 ms.date: 03/30/2017
 ms.assetid: 84179d77-825d-44b9-895a-ab08e7aa044d
-ms.openlocfilehash: abc08f81ac05aa42ff7247edf662f8dd4482fd4a
-ms.sourcegitcommit: 11f11ca6cefe555972b3a5c99729d1a7523d8f50
-ms.translationtype: HT
+ms.openlocfilehash: 3a5a0844da401607b2049069e7195fa996c62fba
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="ltwebhttpbindinggt"></a>&lt;webHttpBinding&gt;
 定義用來設定 Windows Communication Foundation (WCF) Web 服務回應 HTTP 要求，而非 SOAP 訊息的端點繫結項目。  
@@ -86,9 +86,9 @@ ms.lasthandoff: 05/03/2018
 |[\<繫結 >](../../../../../docs/framework/configure-apps/file-schema/wcf/bindings.md)|這個項目會保存標準和自訂繫結的集合。|  
   
 ## <a name="remarks"></a>備註  
- [!INCLUDE[indigo2](../../../../../includes/indigo2-md.md)] Web 程式設計模型可讓開發人員透過使用 "plain old XML" (POX) 樣式傳訊 (而非 SOAP 傳訊) 的 HTTP 要求公開 [!INCLUDE[indigo2](../../../../../includes/indigo2-md.md)] Web 服務。 必須使用設定的服務端點使用 HTTP 要求與服務通訊的用戶端， [ \<webHttpBinding >](../../../../../docs/framework/configure-apps/file-schema/wcf/webhttpbinding.md)具有\<WebHttpBehavior > 附加到它。  
+ WCF Web 程式設計模型可讓開發人員公開 WCF Web 服務透過 HTTP 要求，使用"plain old XML"(POX) 樣式傳訊而非 SOAP 為基礎的傳訊。 必須使用設定的服務端點使用 HTTP 要求與服務通訊的用戶端， [ \<webHttpBinding >](../../../../../docs/framework/configure-apps/file-schema/wcf/webhttpbinding.md)具有\<WebHttpBehavior > 附加到它。  
   
- [!INCLUDE[indigo2](../../../../../includes/indigo2-md.md)] 中對於新聞訂閱和 ASP.AJAX 整合的支援都是建置於 Web 程式設計模型的頂端。 如需有關模型的詳細資訊，請參閱[WCF Web HTTP 程式設計模型](../../../../../docs/framework/wcf/feature-details/wcf-web-http-programming-model.md)。  
+ 支援在 WCF 中對於新聞訂閱和 ASP。同時建置在 Web 程式撰寫模型之上 AJAX 整合。 如需有關模型的詳細資訊，請參閱[WCF Web HTTP 程式設計模型](../../../../../docs/framework/wcf/feature-details/wcf-web-http-programming-model.md)。  
   
 ## <a name="see-also"></a>另請參閱  
  <xref:System.ServiceModel.WebHttpBinding>  

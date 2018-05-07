@@ -1,28 +1,16 @@
 ---
-title: "應用程式設定屬性"
-ms.custom: 
+title: 應用程式設定屬性
 ms.date: 03/30/2017
-ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.technology: dotnet-winforms
-ms.tgt_pltfrm: 
-ms.topic: article
 helpviewer_keywords:
 - application settings [Windows Forms], attributes
 - attributes [Windows Forms], application settings
 - wrapper classes [Windows Forms], application settings
 ms.assetid: 53caa66c-a9fb-43a5-953c-ad092590098d
-caps.latest.revision: "7"
-author: dotnet-bot
-ms.author: dotnetcontent
-manager: wpickett
-ms.workload: dotnet
-ms.openlocfilehash: b2ed0a0393f505d0126508e574b1cd9abe138866
-ms.sourcegitcommit: c0dd436f6f8f44dc80dc43b07f6841a00b74b23f
+ms.openlocfilehash: d52549546bc838d8d38da33b9bb9931488795064
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 01/19/2018
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="application-settings-attributes"></a>應用程式設定屬性
 應用程式設定架構提供許多可套用至應用程式設定包裝函式類別或其個別屬性的屬性。 這些屬性會檢查在執行階段應用程式設定基礎結構，通常會特別設定提供者，才能調整其運作所述需求的自訂包裝函式。  
@@ -48,7 +36,7 @@ ms.lasthandoff: 01/19/2018
   
  *類別*表示屬性可以套用至應用程式設定包裝函式類別只。 *屬性*指出屬性可以套用的設定內容。 *同時*表示可以在其中一個層級套用屬性。  
   
-## <a name="see-also"></a>請參閱  
+## <a name="see-also"></a>另請參閱  
  <xref:System.Configuration.ApplicationSettingsBase>  
  <xref:System.Configuration.SettingsProvider>  
  [應用程式設定架構](../../../../docs/framework/winforms/advanced/application-settings-architecture.md)  

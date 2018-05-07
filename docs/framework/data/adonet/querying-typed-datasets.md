@@ -1,32 +1,20 @@
 ---
-title: "查詢具類型資料集"
-ms.custom: 
+title: 查詢具類型資料集
 ms.date: 03/30/2017
-ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.technology: dotnet-ado
-ms.tgt_pltfrm: 
-ms.topic: article
 dev_langs:
 - csharp
 - vb
 ms.assetid: ad712fa1-2baf-462a-b163-574cce6d376a
-caps.latest.revision: "2"
-author: douglaslMS
-ms.author: douglasl
-manager: craigg
-ms.workload: dotnet
-ms.openlocfilehash: fff678a54416e72f4be8c3fdfdcacec5a7d90af7
-ms.sourcegitcommit: ed26cfef4e18f6d93ab822d8c29f902cff3519d1
+ms.openlocfilehash: 30a6512202615590a4b399b8ce7173b213a8873c
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 01/17/2018
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="querying-typed-datasets"></a>查詢具類型資料集
 如果在應用程式設計階段中便已知 <xref:System.Data.DataSet> 的結構描述，我們建議您在使用 <xref:System.Data.DataSet> 時使用具型別 [!INCLUDE[linq_dataset](../../../../includes/linq-dataset-md.md)]。 具型別的<xref:System.Data.DataSet>是衍生自類別<xref:System.Data.DataSet>。 因此，它繼承了 <xref:System.Data.DataSet> 所有的方法、事件和屬性。 此外，具類型<xref:System.Data.DataSet>提供強型別的方法、 事件和屬性。 這表示，您可以依照名稱存取資料表和資料行，而不需要使用以集合為基礎的方法。 這讓查詢更簡單且更方便讀取。 如需詳細資訊，請參閱[型別資料集](../../../../docs/framework/data/adonet/dataset-datatable-dataview/typed-datasets.md)。  
   
- [!INCLUDE[linq_dataset](../../../../includes/linq-dataset-md.md)]也支援查詢具<xref:System.Data.DataSet>。 使用具型別的<xref:System.Data.DataSet>，您不必使用泛型<xref:System.Data.DataRowExtensions.Field%2A>方法或<xref:System.Data.DataRowExtensions.SetField%2A>方法來存取資料行的資料。  系統會在編譯時期提供屬性名稱，因為型別資訊包含在 <xref:System.Data.DataSet> 中。 [!INCLUDE[linq_dataset](../../../../includes/linq-dataset-md.md)] 可讓您存取資料行值當做正確的型別，如此一來您就能在編譯程式碼時攔截型別不符的錯誤，而不必等到執行階段。  
+ [!INCLUDE[linq_dataset](../../../../includes/linq-dataset-md.md)] 也支援查詢具<xref:System.Data.DataSet>。 使用具型別的<xref:System.Data.DataSet>，您不必使用泛型<xref:System.Data.DataRowExtensions.Field%2A>方法或<xref:System.Data.DataRowExtensions.SetField%2A>方法來存取資料行的資料。  系統會在編譯時期提供屬性名稱，因為型別資訊包含在 <xref:System.Data.DataSet> 中。 [!INCLUDE[linq_dataset](../../../../includes/linq-dataset-md.md)] 可讓您存取資料行值當做正確的型別，如此一來您就能在編譯程式碼時攔截型別不符的錯誤，而不必等到執行階段。  
   
  開始查詢具型別 <xref:System.Data.DataSet> 之前，您必須使用 [!INCLUDE[vs_orcas_long](../../../../includes/vs-orcas-long-md.md)] 中的 DataSet 設計工具來產生此類別。  如需詳細資訊，請參閱[建立和設定資料集](/visualstudio/data-tools/create-and-configure-datasets-in-visual-studio)。  
   
@@ -67,7 +55,7 @@ For Each Dim onlineOrder In query
 Next  
 ```  
   
-## <a name="see-also"></a>請參閱  
+## <a name="see-also"></a>另請參閱  
  [查詢資料集](../../../../docs/framework/data/adonet/querying-datasets-linq-to-dataset.md)  
  [跨資料表查詢](../../../../docs/framework/data/adonet/cross-table-queries-linq-to-dataset.md)  
  [單一資料表查詢](../../../../docs/framework/data/adonet/single-table-queries-linq-to-dataset.md)

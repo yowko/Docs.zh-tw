@@ -1,24 +1,12 @@
 ---
-title: "HOW TO：檢查或修改用戶端上的訊息"
-ms.custom: 
+title: HOW TO：檢查或修改用戶端上的訊息
 ms.date: 03/30/2017
-ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.technology: dotnet-clr
-ms.tgt_pltfrm: 
-ms.topic: article
 ms.assetid: b8256335-f1c2-419f-b862-9f220ccad84c
-caps.latest.revision: "6"
-author: dotnet-bot
-ms.author: dotnetcontent
-manager: wpickett
-ms.workload: dotnet
-ms.openlocfilehash: 06f4feaa5b0b44a26e3d31b65dc465b67544482f
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
-ms.translationtype: MT
+ms.openlocfilehash: 3cd0cf9dd772cad5e1dc16f61ef55eb3b314858d
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="how-to-inspect-or-modify-messages-on-the-client"></a>HOW TO：檢查或修改用戶端上的訊息
 您可以實作 [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] 並將它插入用戶端執行階段，以檢查或修改 <xref:System.ServiceModel.Dispatcher.IClientMessageInspector?displayProperty=nameWithType> 用戶端內傳入或傳出的訊息。 如需詳細資訊，請參閱[擴充用戶端](../../../../docs/framework/wcf/extending/extending-clients.md)。 服務上對等的功能為 <xref:System.ServiceModel.Dispatcher.IDispatchMessageInspector?displayProperty=nameWithType>。 如需完整的程式碼範例，請參閱[訊息偵測器](../../../../docs/framework/wcf/samples/message-inspectors.md)範例。  
@@ -27,7 +15,7 @@ ms.lasthandoff: 12/22/2017
   
 1.  實作 <xref:System.ServiceModel.Dispatcher.IClientMessageInspector?displayProperty=nameWithType> 介面。  
   
-2.  根據您要插入用戶端訊息偵測器的範圍，實作 <xref:System.ServiceModel.Description.IEndpointBehavior?displayProperty=nameWithType> 或 <xref:System.ServiceModel.Description.IContractBehavior?displayProperty=nameWithType>。 <xref:System.ServiceModel.Description.IEndpointBehavior?displayProperty=nameWithType>可讓您變更端點層級的行為。 <xref:System.ServiceModel.Description.IContractBehavior?displayProperty=nameWithType>可讓您變更合約層級的行為。  
+2.  根據您要插入用戶端訊息偵測器的範圍，實作 <xref:System.ServiceModel.Description.IEndpointBehavior?displayProperty=nameWithType> 或 <xref:System.ServiceModel.Description.IContractBehavior?displayProperty=nameWithType>。 <xref:System.ServiceModel.Description.IEndpointBehavior?displayProperty=nameWithType> 可讓您變更端點層級的行為。 <xref:System.ServiceModel.Description.IContractBehavior?displayProperty=nameWithType> 可讓您變更合約層級的行為。  
   
 3.  在 <xref:System.ServiceModel.ClientBase%601.Open%2A?displayProperty=nameWithType> 上呼叫 <xref:System.ServiceModel.ICommunicationObject.Open%2A?displayProperty=nameWithType> 或 <xref:System.ServiceModel.ChannelFactory%601?displayProperty=nameWithType> 方法前，請先插入行為。 如需詳細資訊，請參閱[設定與擴充執行階段行為](../../../../docs/framework/wcf/extending/configuring-and-extending-the-runtime-with-behaviors.md)。  
   
@@ -136,7 +124,7 @@ public class SimpleBehaviorExtensionElement : BehaviorExtensionElement
 </configuration>  
 ```  
   
-## <a name="see-also"></a>請參閱  
+## <a name="see-also"></a>另請參閱  
  <xref:System.ServiceModel.Dispatcher.IClientMessageInspector?displayProperty=nameWithType>  
  <xref:System.ServiceModel.Dispatcher.IDispatchMessageInspector?displayProperty=nameWithType>  
  [使用行為來設定與擴充執行階段](../../../../docs/framework/wcf/extending/configuring-and-extending-the-runtime-with-behaviors.md)

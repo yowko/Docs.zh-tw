@@ -1,27 +1,15 @@
 ---
-title: "XAMLServices 類別和基本 XAML 的讀取或寫入"
-ms.custom: 
+title: XAMLServices 類別和基本 XAML 的讀取或寫入
 ms.date: 03/30/2017
-ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.technology: dotnet-wpf
-ms.tgt_pltfrm: 
-ms.topic: article
 helpviewer_keywords:
 - XAML [XAML Services], XamlServices class
 - XamlServices class [XAML Services], how to use
 ms.assetid: 6ac27fad-3687-4d7a-add1-3e90675fdfde
-caps.latest.revision: "11"
-author: wadepickett
-ms.author: wpickett
-manager: wpickett
-ms.workload: dotnet
-ms.openlocfilehash: 30d94534f0da0e3946d036fd8e0db59971615c0f
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.openlocfilehash: 27c7a45a45e8bbe3594813b29344d1548eecda5e
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="xamlservices-class-and-basic-xaml-reading-or-writing"></a>XAMLServices 類別和基本 XAML 的讀取或寫入
 <xref:System.Xaml.XamlServices> 是 .NET Framework XAML 服務所提供的類別，可用來解決不需要特別存取 XAML 節點資料流，或取自這些節點之 XAML 類型系統資訊的 XAML 情節。 <xref:System.Xaml.XamlServices> API 可摘述如下： `Load` 或 `Parse` 支援 XAML 載入路徑、 `Save` 支援 XAML 儲存路徑，而 `Transform` 則提供結合載入路徑和儲存路徑的技術。 `Transform` 可從某個 XAML 結構描述變更為另一個 XAML 結構描述。 本主題摘要說明這些 API 分類，並說明特定方法多載之間的差異。  
@@ -72,7 +60,7 @@ ms.lasthandoff: 12/22/2017
   
  如果作業需要檢查 XAML 節點資料流中的每個節點，您通常不會使用 <xref:System.Xaml.XamlServices.Transform%2A>。 相反地，您需要定義自己的載入路徑-儲存路徑作業序列，並插入自己的邏輯。 請在其中一個路徑中，在您自己的節點迴圈周圍使用 XAML 讀取器/XAML 寫入器配對。 例如，使用 <xref:System.Xaml.XamlXmlReader> 載入初始 XAML，再以後續的 <xref:System.Xaml.XamlXmlReader.Read%2A> 呼叫逐步執行至各節點。 在 XAML 節點資料流層級上運作時，您現在可以調整個別節點 (類型、成員、其他節點) 以套用轉換，或讓節點保持原狀。 接著，您可以將節點繼續傳送至 `Write` 的相關 <xref:System.Xaml.XamlObjectWriter> API 並寫出物件。 如需詳細資訊，請參閱 [Understanding XAML Node Stream Structures and Concepts](../../../docs/framework/xaml-services/understanding-xaml-node-stream-structures-and-concepts.md)。  
   
-## <a name="see-also"></a>請參閱  
+## <a name="see-also"></a>另請參閱  
  <xref:System.Xaml.XamlObjectWriter>  
  <xref:System.Xaml.XamlServices>  
  [XAML Services](../../../docs/framework/xaml-services/index.md)

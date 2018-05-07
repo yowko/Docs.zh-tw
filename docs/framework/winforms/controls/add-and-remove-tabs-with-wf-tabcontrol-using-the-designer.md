@@ -1,13 +1,6 @@
 ---
-title: "如何：使用設計工具搭配 Windows Form TabControl 控制項加入和移除索引標籤"
-ms.custom: 
+title: 如何：使用設計工具搭配 Windows Form TabControl 控制項加入和移除索引標籤
 ms.date: 03/30/2017
-ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.technology: dotnet-winforms
-ms.tgt_pltfrm: 
-ms.topic: article
 helpviewer_keywords:
 - tabs [Windows Forms], removing from pages
 - TabPage control
@@ -15,16 +8,11 @@ helpviewer_keywords:
 - tabs [Windows Forms], adding to pages
 - tab pages
 ms.assetid: 480633db-413a-45d2-9c8f-0427cc13adbe
-caps.latest.revision: "7"
-author: dotnet-bot
-ms.author: dotnetcontent
-manager: wpickett
-ms.workload: dotnet
-ms.openlocfilehash: 8e603e420be2c5be6174fab3876008fdf73c8459
-ms.sourcegitcommit: c0dd436f6f8f44dc80dc43b07f6841a00b74b23f
+ms.openlocfilehash: 89440b083aa6b2dc3f95e0878075a20aeac65b32
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 01/19/2018
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="how-to-add-and-remove-tabs-with-the-windows-forms-tabcontrol-using-the-designer"></a>如何：使用設計工具搭配 Windows Form TabControl 控制項加入和移除索引標籤
 當您將<xref:System.Windows.Forms.TabControl>控制項在表單中，它必須包含兩個索引標籤預設。 您可以新增或移除使用設計工具索引標籤。  
@@ -42,7 +30,7 @@ ms.lasthandoff: 01/19/2018
   
      在**屬性**視窗中，按一下 **省略**按鈕 (![VisualStudioEllipsesButton 螢幕擷取畫面](../../../../docs/framework/winforms/media/vbellipsesbutton.png "vbEllipsesButton")) 旁邊<xref:System.Windows.Forms.TabControl.TabPages%2A>屬性可開啟**TabPage 集合編輯器**。 按一下**新增**或**移除** 按鈕。  
   
-## <a name="see-also"></a>請參閱  
+## <a name="see-also"></a>另請參閱  
  [TabControl 控制項](../../../../docs/framework/winforms/controls/tabcontrol-control-windows-forms.md)  
  [TabControl 控制項概觀](../../../../docs/framework/winforms/controls/tabcontrol-control-overview-windows-forms.md)  
  [操作說明：將控制項加入至索引標籤頁](../../../../docs/framework/winforms/controls/how-to-add-a-control-to-a-tab-page.md)  

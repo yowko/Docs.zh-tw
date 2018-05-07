@@ -1,26 +1,12 @@
 ---
 title: 發行與擷取自訂繫結上的中繼資料
-ms.custom: ''
 ms.date: 03/30/2017
-ms.prod: .net-framework
-ms.reviewer: ''
-ms.suite: ''
-ms.technology:
-- dotnet-clr
-ms.tgt_pltfrm: ''
-ms.topic: article
 ms.assetid: 904e11b4-d90e-45c6-9ee5-c3472c90008c
-caps.latest.revision: 7
-author: dotnet-bot
-ms.author: dotnetcontent
-manager: wpickett
-ms.workload:
-- dotnet
-ms.openlocfilehash: f6226f01a284a9a24593c1be4fed2f96f3eae730
-ms.sourcegitcommit: 03ee570f6f528a7d23a4221dcb26a9498edbdf8c
-ms.translationtype: MT
+ms.openlocfilehash: 607cf70e8e226e6c97a785f2478ad3a655b21a7c
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/28/2018
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="publishing-and-retrieving-metadata-over-a-custom-binding"></a>發行與擷取自訂繫結上的中繼資料
 <xref:System.ServiceModel.Description.ServiceMetadataBehavior?displayProperty=nameWithType> 提供新增中繼資料端點到服務的支援。 這些中繼資料端點可以回應 HTTP GET 要求 URL，其中具有`?wsdl`querystring 和 Ws-transfer GET 要求 Ws-metadataexchange (MEX) 規格中所定義。 MEX 端點會實作 <xref:System.ServiceModel.Description.IMetadataExchange?displayProperty=nameWithType> 合約。  
@@ -28,7 +14,7 @@ ms.lasthandoff: 04/28/2018
 ## <a name="publishing-metadata-over-a-custom-binding"></a>發行自訂繫結上的中繼資料  
  只要將 <xref:System.ServiceModel.Description.ServiceMetadataBehavior.HttpGetEnabled%2A?displayProperty=nameWithType> 或 <xref:System.ServiceModel.Description.ServiceMetadataBehavior.HttpsGetEnabled%2A?displayProperty=nameWithType> 屬性設定為 `true`，便可啟用 HTTP GET 中繼資料端點和 HTTPS GET 中繼資料端點。 這些端點的繫結無法設定。  
   
- 不過，<xref:System.ServiceModel.Description.IMetadataExchange> 合約可搭配任何端點使用，包括那些使用自訂繫結的端點，因為 <xref:System.ServiceModel.Description.IMetadataExchange> 端點與任何其他 [!INCLUDE[indigo1](../../../../includes/indigo1-md.md)] 服務端點相同。 如果您知道如何修改系統提供之繫結的組態，或者知道如何設定 <xref:System.ServiceModel.Channels.CustomBinding?displayProperty=nameWithType>，則可設定繫結以搭配 <xref:System.ServiceModel.Description.IMetadataExchange> 端點使用。  
+ <xref:System.ServiceModel.Description.IMetadataExchange>合約，不過，可以搭配任何端點使用，包括那些使用自訂繫結，因為<xref:System.ServiceModel.Description.IMetadataExchange>端點會與任何其他的 Windows Communication Foundation (WCF) 服務端點相同。 如果您知道如何修改系統提供之繫結的組態，或者知道如何設定 <xref:System.ServiceModel.Channels.CustomBinding?displayProperty=nameWithType>，則可設定繫結以搭配 <xref:System.ServiceModel.Description.IMetadataExchange> 端點使用。  
   
 ## <a name="retrieving-metadata-over-a-custom-binding"></a>擷取自訂繫結上的中繼資料  
  您可以使用標準 HTTP 或 HTTPS GET 要求，從 HTTP Get 與 HTTPS Get 中繼資料端點擷取中繼資料。  

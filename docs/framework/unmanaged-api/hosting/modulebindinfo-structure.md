@@ -1,14 +1,6 @@
 ---
-title: "ModuleBindInfo 結構"
-ms.custom: 
+title: ModuleBindInfo 結構
 ms.date: 03/30/2017
-ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.technology:
-- dotnet-clr
-ms.tgt_pltfrm: 
-ms.topic: reference
 api_name:
 - ModuleBindInfo
 api_location:
@@ -22,17 +14,13 @@ helpviewer_keywords:
 ms.assetid: 632d4adc-dbc9-4ce8-9397-abc3285c1c69
 topic_type:
 - apiref
-caps.latest.revision: 
 author: rpetrusha
 ms.author: ronpet
-manager: wpickett
-ms.workload:
-- dotnet
-ms.openlocfilehash: 399ba2471b4dc7c5e372a56a9dcab8117068a693
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.openlocfilehash: dbaba00e029729fff5ad478a50134ff1e1858c0c
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="modulebindinfo-structure"></a>ModuleBindInfo 結構
 提供參考的模組和包含它的組件的詳細的資訊。  
@@ -56,7 +44,7 @@ typedef struct _ModuleBindInfo {
 |`lpModuleName`|參照的模組名稱。|  
   
 ## <a name="remarks"></a>備註  
- `ModuleBindInfo`會當做參數傳遞`IHostAssemblyStore::ProvideModule`。 主機提供的唯一識別碼`dwAppDomainId`common language runtime (CLR)。 若要在呼叫之後[ihostassemblystore:: Provideassembly](../../../../docs/framework/unmanaged-api/hosting/ihostassemblystore-provideassembly-method.md)方法傳回時，執行階段使用的識別項來決定是否的內容`IStream`已經對應。 如果是這樣，執行階段會載入現有的複本，而非重新對應資料流。 執行階段也使用此識別碼做為查閱索引鍵，會從呼叫傳回的資料流的`IHostAssemblyStore::ProvideAssembly`方法。 因此，識別碼必須是唯一的模組要求和與組件的要求。  
+ `ModuleBindInfo` 會當做參數傳遞`IHostAssemblyStore::ProvideModule`。 主機提供的唯一識別碼`dwAppDomainId`common language runtime (CLR)。 若要在呼叫之後[ihostassemblystore:: Provideassembly](../../../../docs/framework/unmanaged-api/hosting/ihostassemblystore-provideassembly-method.md)方法傳回時，執行階段使用的識別項來決定是否的內容`IStream`已經對應。 如果是這樣，執行階段會載入現有的複本，而非重新對應資料流。 執行階段也使用此識別碼做為查閱索引鍵，會從呼叫傳回的資料流的`IHostAssemblyStore::ProvideAssembly`方法。 因此，識別碼必須是唯一的模組要求和與組件的要求。  
   
 ## <a name="requirements"></a>需求  
  **平台：**看到[系統需求](../../../../docs/framework/get-started/system-requirements.md)。  
@@ -65,9 +53,9 @@ typedef struct _ModuleBindInfo {
   
  **程式庫：**包含做為 MSCorEE.dll 中的資源  
   
- **.NET framework 版本：**[!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]  
+ **.NET framework 版本：** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]  
   
-## <a name="see-also"></a>請參閱  
+## <a name="see-also"></a>另請參閱  
  [裝載結構](../../../../docs/framework/unmanaged-api/hosting/hosting-structures.md)  
  [AssemblyBindInfo 結構](../../../../docs/framework/unmanaged-api/hosting/assemblybindinfo-structure.md)  
  [ICLRAssemblyIdentityManager 介面](../../../../docs/framework/unmanaged-api/hosting/iclrassemblyidentitymanager-interface.md)  

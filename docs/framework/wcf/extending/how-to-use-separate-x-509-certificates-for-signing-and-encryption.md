@@ -1,14 +1,6 @@
 ---
 title: HOW TO：使用個別 X.509 憑證簽署與加密
-ms.custom: ''
 ms.date: 03/30/2017
-ms.prod: .net-framework
-ms.reviewer: ''
-ms.suite: ''
-ms.technology:
-- dotnet-clr
-ms.tgt_pltfrm: ''
-ms.topic: article
 dev_langs:
 - csharp
 - vb
@@ -17,20 +9,14 @@ helpviewer_keywords:
 - ClientCredentials class
 - ClientCredentialsSecurityTokenManager class
 ms.assetid: 0b06ce4e-7835-4d82-8baf-d525c71a0e49
-caps.latest.revision: 11
-author: dotnet-bot
-ms.author: dotnetcontent
-manager: wpickett
-ms.workload:
-- dotnet
-ms.openlocfilehash: f6103dd8f680752581a51cba7ba61c83522decc2
-ms.sourcegitcommit: 94d33cadc5ff81d2ac389bf5f26422c227832052
-ms.translationtype: MT
+ms.openlocfilehash: d171af8dbcbbdd51cc015986a2c69e0393fe56dc
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/30/2018
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="how-to-use-separate-x509-certificates-for-signing-and-encryption"></a>HOW TO：使用個別 X.509 憑證簽署與加密
-本主題顯示如何設定 [!INCLUDE[indigo1](../../../../includes/indigo1-md.md)]，以在用戶端和服務上的訊息簽章和加密中使用各種憑證。  
+本主題說明如何設定 Windows Communication Foundation (WCF) 訊息簽署和加密用戶端和服務上的使用不同的憑證。  
   
  若要使用個別的憑證來進行簽章和加密，此時必須建立自訂的用戶端或服務憑證 (或兩者皆建立)，這是因為 [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] 並未提供可以設定多個用戶端或服務憑證的 API。 此外，必須提供安全性權杖管理員才能運用多份憑證的資訊，以及建立可用於特定金鑰使用方式和訊息方向的適當安全性權杖提供者。  
   

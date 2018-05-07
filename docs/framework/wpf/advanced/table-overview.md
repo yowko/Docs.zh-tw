@@ -1,13 +1,6 @@
 ---
-title: "資料表概觀"
-ms.custom: 
+title: 資料表概觀
 ms.date: 03/30/2017
-ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.technology: dotnet-wpf
-ms.tgt_pltfrm: 
-ms.topic: article
 dev_langs:
 - csharp
 - vb
@@ -16,19 +9,14 @@ helpviewer_keywords:
 - documents [WPF], tables
 - tables [WPF]
 ms.assetid: 5e1105f4-8fc4-473a-ba55-88c8e71386e6
-caps.latest.revision: "21"
-author: dotnet-bot
-ms.author: dotnetcontent
-manager: wpickett
-ms.workload: dotnet
-ms.openlocfilehash: 922faa06456a1aa86ffd0c805ab33577280ccf4f
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.openlocfilehash: 631a14ae8eb17713186f7db66700026cc476024e
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="table-overview"></a>資料表概觀
-<xref:System.Windows.Documents.Table>是支援的非固定格式文件內容的方格呈現的區塊層級項目。 此元素的彈性讓它更為實用，但也讓您更難了解並正確使用。  
+<xref:System.Windows.Documents.Table> 是支援的非固定格式文件內容的方格呈現的區塊層級項目。 此元素的彈性讓它更為實用，但也讓您更難了解並正確使用。  
   
  此主題包括下列各節。  
   
@@ -55,11 +43,11 @@ ms.lasthandoff: 12/22/2017
   
 <a name="table_vs_Grid"></a>   
 ### <a name="how-is-table-different-then-grid"></a>表格與方格之間的差異  
- <xref:System.Windows.Documents.Table>和<xref:System.Windows.Controls.Grid>共用某些常見的功能，但每個最適合用於不同的案例。 A<xref:System.Windows.Documents.Table>適用於非固定格式內容中 (請參閱[非固定格式文件概觀](../../../../docs/framework/wpf/advanced/flow-document-overview.md)如需有關非固定格式內容)。 方格最適合在表單內部使用 (基本上，是在非固定格式內容以外的任何地方)。 內<xref:System.Windows.Documents.FlowDocument>，<xref:System.Windows.Documents.Table>支援非固定格式內容的行為，例如分頁、 資料行重新排列，以及內容的選取範圍時<xref:System.Windows.Controls.Grid>則否。 A<xref:System.Windows.Controls.Grid>另一方面最適合用外部<xref:System.Windows.Documents.FlowDocument>有許多原因包括<xref:System.Windows.Controls.Grid>將根據資料列和資料行的索引，項目加入<xref:System.Windows.Documents.Table>則否。 <xref:System.Windows.Controls.Grid>項目可以讓圖層的子內容，讓一個以上的項目存在於單一 「 資料格 」。 <xref:System.Windows.Documents.Table>不支援的圖層。 子項目的<xref:System.Windows.Controls.Grid>可以相對於其 「 資料格 」 界限的區域絕對定位。 <xref:System.Windows.Documents.Table>不支援這項功能。 最後，<xref:System.Windows.Controls.Grid>需要較少的資源則<xref:System.Windows.Documents.Table>因此請考慮使用<xref:System.Windows.Controls.Grid>來改善效能。  
+ <xref:System.Windows.Documents.Table> 和<xref:System.Windows.Controls.Grid>共用某些常見的功能，但每個最適合用於不同的案例。 A<xref:System.Windows.Documents.Table>適用於非固定格式內容中 (請參閱[非固定格式文件概觀](../../../../docs/framework/wpf/advanced/flow-document-overview.md)如需有關非固定格式內容)。 方格最適合在表單內部使用 (基本上，是在非固定格式內容以外的任何地方)。 內<xref:System.Windows.Documents.FlowDocument>，<xref:System.Windows.Documents.Table>支援非固定格式內容的行為，例如分頁、 資料行重新排列，以及內容的選取範圍時<xref:System.Windows.Controls.Grid>則否。 A<xref:System.Windows.Controls.Grid>另一方面最適合用外部<xref:System.Windows.Documents.FlowDocument>有許多原因包括<xref:System.Windows.Controls.Grid>將根據資料列和資料行的索引，項目加入<xref:System.Windows.Documents.Table>則否。 <xref:System.Windows.Controls.Grid>項目可以讓圖層的子內容，讓一個以上的項目存在於單一 「 資料格 」。 <xref:System.Windows.Documents.Table> 不支援的圖層。 子項目的<xref:System.Windows.Controls.Grid>可以相對於其 「 資料格 」 界限的區域絕對定位。 <xref:System.Windows.Documents.Table> 不支援這項功能。 最後，<xref:System.Windows.Controls.Grid>需要較少的資源則<xref:System.Windows.Documents.Table>因此請考慮使用<xref:System.Windows.Controls.Grid>來改善效能。  
   
 <a name="basic_table_structure"></a>   
 ### <a name="basic-table-structure"></a>基本的表格結構  
- <xref:System.Windows.Documents.Table>提供格線為基礎的簡報，資料行所組成 (由<xref:System.Windows.Documents.TableColumn>項目) 和資料列 (由<xref:System.Windows.Documents.TableRow>項目)。 <xref:System.Windows.Documents.TableColumn>項目未裝載的內容。此外，它們只會定義資料行和資料行的特性。 <xref:System.Windows.Documents.TableRow>項目必須裝載在<xref:System.Windows.Documents.TableRowGroup>元素，其定義的資料表資料列群組。 <xref:System.Windows.Documents.TableCell>項目，其中包含資料表所呈現的實際內容，必須裝載在<xref:System.Windows.Documents.TableRow>項目。 <xref:System.Windows.Documents.TableCell>只能包含元素衍生自<xref:System.Windows.Documents.Block>。  有效的子項目<xref:System.Windows.Documents.TableCell>包含。  
+ <xref:System.Windows.Documents.Table> 提供格線為基礎的簡報，資料行所組成 (由<xref:System.Windows.Documents.TableColumn>項目) 和資料列 (由<xref:System.Windows.Documents.TableRow>項目)。 <xref:System.Windows.Documents.TableColumn> 項目未裝載的內容。此外，它們只會定義資料行和資料行的特性。 <xref:System.Windows.Documents.TableRow> 項目必須裝載在<xref:System.Windows.Documents.TableRowGroup>元素，其定義的資料表資料列群組。 <xref:System.Windows.Documents.TableCell> 項目，其中包含資料表所呈現的實際內容，必須裝載在<xref:System.Windows.Documents.TableRow>項目。 <xref:System.Windows.Documents.TableCell> 只能包含元素衍生自<xref:System.Windows.Documents.Block>。  有效的子項目<xref:System.Windows.Documents.TableCell>包含。  
   
 -   <xref:System.Windows.Documents.BlockUIContainer>  
   
@@ -72,10 +60,10 @@ ms.lasthandoff: 12/22/2017
 -   <xref:System.Windows.Documents.Table>  
   
 > [!NOTE]
->  <xref:System.Windows.Documents.TableCell>項目可能不會直接裝載文字內容。 如需有關資料流程的內含項目規則內容項目要<xref:System.Windows.Documents.TableCell>，請參閱[非固定格式文件概觀](../../../../docs/framework/wpf/advanced/flow-document-overview.md)。  
+>  <xref:System.Windows.Documents.TableCell> 項目可能不會直接裝載文字內容。 如需有關資料流程的內含項目規則內容項目要<xref:System.Windows.Documents.TableCell>，請參閱[非固定格式文件概觀](../../../../docs/framework/wpf/advanced/flow-document-overview.md)。  
   
 > [!NOTE]
->  <xref:System.Windows.Documents.Table>類似於<xref:System.Windows.Controls.Grid>項目但了更多的功能，因此，您需要更高的資源負擔。  
+>  <xref:System.Windows.Documents.Table> 類似於<xref:System.Windows.Controls.Grid>項目但了更多的功能，因此，您需要更高的資源負擔。  
   
  下列範例會定義簡單的 2 x 3 資料表與[!INCLUDE[TLA#tla_titlexaml](../../../../includes/tlasharptla-titlexaml-md.md)]。  
   
@@ -87,7 +75,7 @@ ms.lasthandoff: 12/22/2017
   
 <a name="table_containment"></a>   
 ### <a name="table-containment"></a>表格內含項目  
- <xref:System.Windows.Documents.Table>衍生自<xref:System.Windows.Documents.Block>項目，並遵循的一般規則<xref:System.Windows.Documents.Block>層級項目。  A<xref:System.Windows.Documents.Table>項目可能包含任何下列項目：  
+ <xref:System.Windows.Documents.Table> 衍生自<xref:System.Windows.Documents.Block>項目，並遵循的一般規則<xref:System.Windows.Documents.Block>層級項目。  A<xref:System.Windows.Documents.Table>項目可能包含任何下列項目：  
   
 -   <xref:System.Windows.Documents.FlowDocument>  
   
@@ -186,7 +174,7 @@ ms.lasthandoff: 12/22/2017
  [!code-csharp[TableSnippets#_TableAddFooterRow](../../../../samples/snippets/csharp/VS_Snippets_Wpf/TableSnippets/CSharp/Table.cs#_tableaddfooterrow)]
  [!code-vb[TableSnippets#_TableAddFooterRow](../../../../samples/snippets/visualbasic/VS_Snippets_Wpf/TableSnippets/VisualBasic/Table.vb#_tableaddfooterrow)]  
   
-## <a name="see-also"></a>請參閱  
+## <a name="see-also"></a>另請參閱  
  [非固定格式文件概觀](../../../../docs/framework/wpf/advanced/flow-document-overview.md)  
  [使用 XAML 定義表格](../../../../docs/framework/wpf/advanced/how-to-define-a-table-with-xaml.md)  
  [WPF 中的文件](../../../../docs/framework/wpf/advanced/documents-in-wpf.md)  

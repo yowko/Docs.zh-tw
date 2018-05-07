@@ -1,29 +1,17 @@
 ---
-title: "BindingSource 元件架構"
-ms.custom: 
+title: BindingSource 元件架構
 ms.date: 03/30/2017
-ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.technology: dotnet-winforms
-ms.tgt_pltfrm: 
-ms.topic: article
 helpviewer_keywords:
 - BindingSource component [Windows Forms], architecture
 - Windows Forms, data binding
 - BindingSource component [Windows Forms], about BindingSource component
 - data binding [Windows Forms], BindingSource component
 ms.assetid: 7bc69c90-8a11-48b1-9336-3adab5b41591
-caps.latest.revision: "23"
-author: dotnet-bot
-ms.author: dotnetcontent
-manager: wpickett
-ms.workload: dotnet
-ms.openlocfilehash: 25a69f31d8da8638cfc92ff94d8f90dbcb327158
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.openlocfilehash: b0334bd7a0bc5ff46c43fd7ee549422d98c35efe
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="bindingsource-component-architecture"></a>BindingSource 元件架構
 與<xref:System.Windows.Forms.BindingSource>元件，都將資料來源所有 Windows Form 控制項繫都結。  
@@ -57,13 +45,13 @@ ms.lasthandoff: 12/22/2017
   
 -   資料來源做為清單。  
   
--   <xref:System.Windows.Forms.BindingSource>做為<xref:System.ComponentModel.IBindingList>。  
+-   <xref:System.Windows.Forms.BindingSource> 做為<xref:System.ComponentModel.IBindingList>。  
   
 -   建立自訂的項目。  
   
 -   建立交易式的項目。  
   
--   <xref:System.Collections.IEnumerable>支援。  
+-   <xref:System.Collections.IEnumerable> 支援。  
   
 -   設計階段支援。  
   
@@ -120,7 +108,7 @@ ms.lasthandoff: 12/22/2017
 |Null 參考 (`Nothing`在 Visual Basic 中) 與<xref:System.Windows.Forms.BindingSource.DataMember%2A>設定|不支援;引發<xref:System.ArgumentException>。|  
 |非清單型別或型別"T"的物件|空白<xref:System.ComponentModel.IBindingList>的型別"T"。|  
 |陣列執行個體|<xref:System.ComponentModel.IBindingList>包含陣列項目。|  
-|<xref:System.Collections.IEnumerable>執行個體|<xref:System.ComponentModel.IBindingList>包含<xref:System.Collections.IEnumerable>項目|  
+|<xref:System.Collections.IEnumerable> 執行個體|<xref:System.ComponentModel.IBindingList>包含<xref:System.Collections.IEnumerable>項目|  
 |包含清單執行個體型別"T"|<xref:System.ComponentModel.IBindingList>包含型別"T"的執行個體。|  
   
  此外，<xref:System.Windows.Forms.BindingSource.DataSource%2A>可以設定為其他清單類型，例如<xref:System.ComponentModel.IListSource>和<xref:System.ComponentModel.ITypedList>，而<xref:System.Windows.Forms.BindingSource>會適當地處理它們。 在此情況下，包含在清單中的類型應該有預設建構函式。  
@@ -179,7 +167,7 @@ ms.lasthandoff: 12/22/2017
 ### <a name="integration-with-bindingnavigator"></a>BindingNavigator 與整合  
  您可以使用<xref:System.Windows.Forms.BindingSource>元件任何 Windows Form 控制項繫結到資料來源，但<xref:System.Windows.Forms.BindingNavigator>控制項特別設計來搭配<xref:System.Windows.Forms.BindingSource>元件。 <xref:System.Windows.Forms.BindingNavigator>控制項提供使用者介面控制<xref:System.Windows.Forms.BindingSource>元件的目前項目。 根據預設，<xref:System.Windows.Forms.BindingNavigator>控制項提供對應的巡覽方法的按鈕<xref:System.Windows.Forms.BindingSource>元件。 如需詳細資訊，請參閱[How to： 使用 Windows Form BindingNavigator 控制項的瀏覽資料](../../../../docs/framework/winforms/controls/how-to-navigate-data-with-the-windows-forms-bindingnavigator-control.md)。  
   
-## <a name="see-also"></a>請參閱  
+## <a name="see-also"></a>另請參閱  
  <xref:System.Windows.Forms.BindingSource>  
  <xref:System.Windows.Forms.BindingNavigator>  
  [BindingSource 元件概觀](../../../../docs/framework/winforms/controls/bindingsource-component-overview.md)  

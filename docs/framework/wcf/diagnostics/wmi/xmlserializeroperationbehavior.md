@@ -1,24 +1,12 @@
 ---
 title: XmlSerializerOperationBehavior
-ms.custom: 
 ms.date: 03/30/2017
-ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.technology: dotnet-clr
-ms.tgt_pltfrm: 
-ms.topic: article
 ms.assetid: 8911aa1b-e34b-4161-a3ae-7468d89a6861
-caps.latest.revision: "8"
-author: dotnet-bot
-ms.author: dotnetcontent
-manager: wpickett
-ms.workload: dotnet
-ms.openlocfilehash: 91aac8cddf799d4025f901d7979b5028995742f4
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.openlocfilehash: a4c46543ff5bfa562a05f157d826d84c4589da28
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="xmlserializeroperationbehavior"></a>XmlSerializerOperationBehavior
 XmlSerializerOperationBehavior  
@@ -59,5 +47,5 @@ class XmlSerializerOperationBehavior : Behavior
 |---------|-----------------------------------|  
 |命名空間|於 root\ServiceModel 中定義|  
   
-## <a name="see-also"></a>請參閱  
+## <a name="see-also"></a>另請參閱  
  <xref:System.ServiceModel.Description.XmlSerializerOperationBehavior>

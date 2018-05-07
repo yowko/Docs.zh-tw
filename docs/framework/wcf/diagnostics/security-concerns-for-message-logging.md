@@ -1,24 +1,14 @@
 ---
-title: "訊息記錄的安全性考量"
-ms.custom: 
+title: 訊息記錄的安全性考量
 ms.date: 03/30/2017
-ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.technology: dotnet-clr
-ms.tgt_pltfrm: 
-ms.topic: article
 ms.assetid: 21f513f2-815b-47f3-85a6-03c008510038
-caps.latest.revision: "17"
 author: BrucePerlerMS
-ms.author: bruceper
 manager: mbaldwin
-ms.workload: dotnet
-ms.openlocfilehash: 87815be1f0951d54a8d9eedbfdcaca038fa6fe09
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
-ms.translationtype: MT
+ms.openlocfilehash: c8b2fe3300bacc76e63f9d533c613171d03600d7
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="security-concerns-for-message-logging"></a>訊息記錄的安全性考量
 此主題描述如何保護訊息記錄以及記錄訊息時所產生之事件中的敏感性資料，使其不會被公開。  
@@ -26,7 +16,7 @@ ms.lasthandoff: 12/22/2017
 ## <a name="security-concerns"></a>安全性考量  
   
 ### <a name="logging-sensitive-information"></a>記錄敏感資訊  
- [!INCLUDE[indigo1](../../../../includes/indigo1-md.md)] 不會修改應用程式特定標頭和本文中的任何資料。 [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] 也不會追蹤應用程式特定標頭或本文資料中的個人資訊。  
+ Windows Communication Foundation (WCF) 不會修改應用程式特定標頭和本文中的任何資料。 [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] 也不會追蹤應用程式特定標頭或本文資料中的個人資訊。  
   
  啟用訊息記錄時，應用程式特定標頭中的個人資訊 (例如查詢字串) 和本文資訊 (例如信用卡號碼) 會在記錄檔中變得可見。 應用程式部署者負責強制針對組態和記錄檔採取存取控制。 如果不要讓這類資訊變得可見，您應該停用記錄，如果要共用記錄檔，則應該篩選掉部分資料。  
   
@@ -120,6 +110,6 @@ ms.lasthandoff: 12/22/2017
   
  您可以在 Windows 的 [事件檢視器] 工具中檢視這些事件。 如需詳細資訊，請參閱[事件記錄](../../../../docs/framework/wcf/diagnostics/event-logging/index.md)。  
   
-## <a name="see-also"></a>請參閱  
+## <a name="see-also"></a>另請參閱  
  [訊息記錄](../../../../docs/framework/wcf/diagnostics/message-logging.md)  
  [追蹤的安全性考量及實用秘訣](../../../../docs/framework/wcf/diagnostics/tracing/security-concerns-and-useful-tips-for-tracing.md)

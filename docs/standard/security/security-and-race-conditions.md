@@ -1,13 +1,7 @@
 ---
-title: "安全性和競爭情形"
-ms.custom: 
+title: 安全性和競爭情形
 ms.date: 03/30/2017
-ms.prod: .net
-ms.reviewer: 
-ms.suite: 
 ms.technology: dotnet-standard
-ms.tgt_pltfrm: 
-ms.topic: article
 dev_langs:
 - csharp
 - vb
@@ -17,18 +11,13 @@ helpviewer_keywords:
 - secure coding, race conditions
 - code security, race conditions
 ms.assetid: ea3edb80-b2e8-4e85-bfed-311b20cb59b6
-caps.latest.revision: "9"
 author: mairaw
 ms.author: mairaw
-manager: wpickett
-ms.workload:
-- dotnet
-- dotnetcore
-ms.openlocfilehash: 73664df9c072189f11d451da46bc3019c8593ec9
-ms.sourcegitcommit: e7f04439d78909229506b56935a1105a4149ff3d
+ms.openlocfilehash: fdfc4d9e9ba3653bd1a762767e3c39a4f62e587a
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 12/23/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="security-and-race-conditions"></a>安全性和競爭情形
 值得注意的另一個部分是利用競爭情形的安全性漏洞的可能性。 有幾種的方式可能造成此。 請依照下列子主題簡述一些主要開發人員必須避免的陷阱。  
@@ -114,5 +103,5 @@ void DoOtherWork()
 ## <a name="race-conditions-in-finalizers"></a>完成項中的競爭情形  
  物件，參考的靜態或未受管理的資源，然後釋放其完成項中也可能會發生競爭情形。 如果多個物件共用資源的操作中類別的完成項，則物件必須同步處理所有對該資源的存取。  
   
-## <a name="see-also"></a>請參閱  
+## <a name="see-also"></a>另請參閱  
  [安全程式碼撰寫方針](../../../docs/standard/security/secure-coding-guidelines.md)

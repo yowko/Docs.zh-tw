@@ -1,13 +1,6 @@
 ---
-title: "繪製格式化的文字"
-ms.custom: 
+title: 繪製格式化的文字
 ms.date: 03/30/2017
-ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.technology: dotnet-wpf
-ms.tgt_pltfrm: 
-ms.topic: article
 dev_langs:
 - csharp
 - vb
@@ -17,16 +10,11 @@ helpviewer_keywords:
 - formatted text [WPF]
 - drawing [WPF], formatted text
 ms.assetid: b1d851c1-331c-4814-9964-6fe769db6f1f
-caps.latest.revision: "14"
-author: dotnet-bot
-ms.author: dotnetcontent
-manager: wpickett
-ms.workload: dotnet
-ms.openlocfilehash: 364362e8377f02b5d6518e6ae4d71b6dd1eafc02
-ms.sourcegitcommit: c0dd436f6f8f44dc80dc43b07f6841a00b74b23f
+ms.openlocfilehash: 978c97b8cae24bff4ebdea8f4e56a940e5907fa6
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 01/19/2018
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="drawing-formatted-text"></a>繪製格式化的文字
 本主題提供的功能概觀<xref:System.Windows.Media.FormattedText>物件。 這個物件提供在 [!INCLUDE[TLA#tla_winclient](../../../../includes/tlasharptla-winclient-md.md)] 應用程式中繪製文字的低階控制項。  
@@ -42,11 +30,11 @@ ms.lasthandoff: 01/19/2018
 >  針對從 [!INCLUDE[TLA#tla_win32](../../../../includes/tlasharptla-win32-md.md)] API 移轉的開發人員，[Win32 移轉](#win32_migration)一節中的資料表會列出 [!INCLUDE[TLA#tla_win32](../../../../includes/tlasharptla-win32-md.md)] DrawText 旗標和 [!INCLUDE[TLA#tla_winclient](../../../../includes/tlasharptla-winclient-md.md)] 中的大概對等項目。  
   
 ### <a name="reasons-for-using-formatted-text"></a>使用格式化文字的原因  
- [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] 包含多個將文字繪製到螢幕的控制項。 每個控制項都是不同案例的目標，且有自己的功能與限制清單。 一般情況下，<xref:System.Windows.Controls.TextBlock>有限的文字支援為必要項，例如簡短句子中時，就應該使用項目[!INCLUDE[TLA#tla_ui](../../../../includes/tlasharptla-ui-md.md)]。 <xref:System.Windows.Controls.Label>需要最少的文字支援時，可以使用。 如需詳細資訊，請參閱 [WPF 中的文件](../../../../docs/framework/wpf/advanced/documents-in-wpf.md)。  
+ [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] 包含多個將文字繪製到螢幕的控制項。 每個控制項都是不同案例的目標，且有自己的功能與限制清單。 一般情況下，<xref:System.Windows.Controls.TextBlock>有限的文字支援為必要項，例如簡短句子中時，就應該使用項目[!INCLUDE[TLA#tla_ui](../../../../includes/tlasharptla-ui-md.md)]。 <xref:System.Windows.Controls.Label> 需要最少的文字支援時，可以使用。 如需詳細資訊，請參閱 [WPF 中的文件](../../../../docs/framework/wpf/advanced/documents-in-wpf.md)。  
   
  <xref:System.Windows.Media.FormattedText>物件提供更高的文字格式設定功能少於[!INCLUDE[TLA#tla_winclient](../../../../includes/tlasharptla-winclient-md.md)]文字控制項，而且可以是在您要使用與裝飾項目文字的情況下很有用。 如需詳細資訊，請參閱[將格式化文字轉換成幾何](#converting_formatted_text)一節。  
   
- 此外，<xref:System.Windows.Media.FormattedText>物件可用於建立文字導向<xref:System.Windows.Media.DrawingVisual>-衍生物件。 <xref:System.Windows.Media.DrawingVisual>是輕量型的繪圖類別，用來呈現圖形、 影像或文字。 如需詳細資訊，請參閱[使用 DrawingVisuals 範例的點擊測試](http://go.microsoft.com/fwlink/?LinkID=159994)。  
+ 此外，<xref:System.Windows.Media.FormattedText>物件可用於建立文字導向<xref:System.Windows.Media.DrawingVisual>-衍生物件。 <xref:System.Windows.Media.DrawingVisual> 是輕量型的繪圖類別，用來呈現圖形、 影像或文字。 如需詳細資訊，請參閱[使用 DrawingVisuals 範例的點擊測試](http://go.microsoft.com/fwlink/?LinkID=159994)。  
   
 ## <a name="using-the-formattedtext-object"></a>使用 FormattedText 物件  
  若要建立格式化的文字，請呼叫<xref:System.Windows.Media.FormattedText.%23ctor%2A>建構函式建立<xref:System.Windows.Media.FormattedText>物件。 建立初始的格式化文字字串之後，您就可以套用一系列的格式化樣式。  
@@ -127,14 +115,14 @@ ms.lasthandoff: 01/19/2018
 |DT_PREFIXONLY|無|不支援。|  
 |DT_RIGHT|<xref:System.Windows.Media.FormattedText.TextAlignment%2A>|使用<xref:System.Windows.Media.FormattedText.TextAlignment%2A>屬性值設為<xref:System.Windows.TextAlignment.Right>。 (僅限 WPF)|  
 |DT_RTLREADING|<xref:System.Windows.Media.FormattedText.FlowDirection%2A>|將 <xref:System.Windows.Media.FormattedText.FlowDirection%2A> 屬性設定為 <xref:System.Windows.FlowDirection.RightToLeft>。|  
-|DT_SINGLELINE|無|不需要。 <xref:System.Windows.Media.FormattedText>物件的行為會做為單行控制項，除非其中一個<xref:System.Windows.Media.FormattedText.MaxTextWidth%2A>屬性設定，或文字包含歸位字元/換 (CR/LF)。|  
+|DT_SINGLELINE|無|不需要。 <xref:System.Windows.Media.FormattedText> 物件的行為會做為單行控制項，除非其中一個<xref:System.Windows.Media.FormattedText.MaxTextWidth%2A>屬性設定，或文字包含歸位字元/換 (CR/LF)。|  
 |DT_TABSTOP|無|不支援使用者定義的定位停駐點位置。|  
 |DT_TOP|<xref:System.Windows.Media.FormattedText.Height%2A>|不需要。 預設值為靠上對齊。 可以使用來定義其他的垂直定位值<xref:System.Windows.Media.FormattedText.Height%2A>屬性來計算適當[!INCLUDE[TLA#tla_win32](../../../../includes/tlasharptla-win32-md.md)]DrawText 'y' 位置。|  
 |DT_VCENTER|<xref:System.Windows.Media.FormattedText.Height%2A>|使用<xref:System.Windows.Media.FormattedText.Height%2A>屬性來計算適當[!INCLUDE[TLA#tla_win32](../../../../includes/tlasharptla-win32-md.md)]DrawText 'y' 位置。|  
 |DT_WORDBREAK|無|不需要。 斷詞發生，則會自動<xref:System.Windows.Media.FormattedText>物件。 您無法停用它。|  
 |DT_WORD_ELLIPSIS|<xref:System.Windows.Media.FormattedText.Trimming%2A>|使用<xref:System.Windows.Media.FormattedText.Trimming%2A>屬性，其值<xref:System.Windows.TextTrimming.WordEllipsis>。|  
   
-## <a name="see-also"></a>請參閱  
+## <a name="see-also"></a>另請參閱  
  <xref:System.Windows.Media.FormattedText>  
  [WPF 中的文件](../../../../docs/framework/wpf/advanced/documents-in-wpf.md)  
  [WPF 中的印刷樣式](../../../../docs/framework/wpf/advanced/typography-in-wpf.md)  

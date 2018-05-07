@@ -1,27 +1,18 @@
 ---
-title: "HOW TO：使用使用者名稱與密碼來驗證"
+title: HOW TO：使用使用者名稱與密碼來驗證
 ms.date: 03/30/2017
-ms.prod: .net-framework
-ms.technology:
-- dotnet-clr
-ms.topic: article
 helpviewer_keywords:
 - authentication [WCF], user name and password
 ms.assetid: a5415be2-0ef3-464c-9f76-c255cb8165a4
-author: dotnet-bot
-ms.author: dotnetcontent
-manager: wpickett
-ms.workload:
-- dotnet
-ms.openlocfilehash: 194a84ef7c2af3bfce6af3625eabf07d4d0b06fb
-ms.sourcegitcommit: 15316053918995cc1380163a7d7e7edd5c44e6d7
+ms.openlocfilehash: b37d296312be4c7694a2db55d85dd618e3252f14
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 03/19/2018
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="how-to-authenticate-with-a-user-name-and-password"></a>HOW TO：使用使用者名稱與密碼來驗證
 
-本主題示範如何讓 [!INCLUDE[indigo1](../../../../includes/indigo1-md.md)] 服務使用 Windows 網域使用者名稱與密碼來驗證用戶端。 這裡假設您有運作中的自我裝載 WCF 服務。 如需範例，建立基本自我裝載的 WCF 服務，請參閱[入門教學課程](../../../../docs/framework/wcf/getting-started-tutorial.md)。 本主題假設服務是在程式碼中進行設定。 如果您想要看到的設定類似的服務，使用組態檔範例請參閱[訊息安全性使用者名稱](../../../../docs/framework/wcf/samples/message-security-user-name.md)  
+本主題示範如何啟用 Windows Communication Foundation (WCF) 服務驗證用戶端使用 Windows 網域使用者名稱和密碼。 這裡假設您有運作中的自我裝載 WCF 服務。 如需範例，建立基本自我裝載的 WCF 服務，請參閱[入門教學課程](../../../../docs/framework/wcf/getting-started-tutorial.md)。 本主題假設服務是在程式碼中進行設定。 如果您想要看到的設定類似的服務，使用組態檔範例請參閱[訊息安全性使用者名稱](../../../../docs/framework/wcf/samples/message-security-user-name.md)  
   
  若要設定服務使用 Windows 網域使用者名和密碼驗證其用戶端，請使用 <xref:System.ServiceModel.WSHttpBinding>，並將其 `Security.Mode` 屬性設定為 `Message`。 此外，將使用者名稱和密碼從用戶端傳送至服務時，您必須指定要用來加密使用者名稱和密碼的 X 509 憑證。  
   
@@ -48,7 +39,7 @@ ms.lasthandoff: 03/19/2018
     // ...  
     ```  
   
-     您可以使用自己的憑證，只需將程式碼修改成參考您的憑證。 如需有關建立及使用憑證，請參閱[使用憑證](../../../../docs/framework/wcf/feature-details/working-with-certificates.md)。 確認憑證是在本機電腦的 [受信任的人] 憑證存放區中。 您可以執行 mmc.exe，然後選取**檔案**，**新增/移除嵌入式管理單元...**功能表項目。 在**新增或移除嵌入式管理單元**對話方塊中，選取**憑證嵌入式管理單元**按一下**新增**。 在 [憑證嵌入式管理單元] 對話方塊中選取**電腦帳戶**。 根據預設，從訊息安全性使用者名稱範例所產生的憑證位於 [個別/憑證] 資料夾中。  將為"localhost"下的 發行至資料行在 MMC 視窗中列出。 將拖放到憑證**受信任的人**資料夾。 這樣可讓 WCF 在執行驗證時，將憑證視為受信任的憑證。  
+     您可以使用自己的憑證，只需將程式碼修改成參考您的憑證。 如需有關建立及使用憑證，請參閱[使用憑證](../../../../docs/framework/wcf/feature-details/working-with-certificates.md)。 確認憑證是在本機電腦的 [受信任的人] 憑證存放區中。 您可以執行 mmc.exe，然後選取**檔案**，**新增/移除嵌入式管理單元...** 功能表項目。 在**新增或移除嵌入式管理單元**對話方塊中，選取**憑證嵌入式管理單元**按一下**新增**。 在 [憑證嵌入式管理單元] 對話方塊中選取**電腦帳戶**。 根據預設，從訊息安全性使用者名稱範例所產生的憑證位於 [個別/憑證] 資料夾中。  將為"localhost"下的 發行至資料行在 MMC 視窗中列出。 將拖放到憑證**受信任的人**資料夾。 這樣可讓 WCF 在執行驗證時，將憑證視為受信任的憑證。  
   
 ## <a name="to-call-the-service-passing-username-and-password"></a>若要呼叫服務傳遞使用者名稱和密碼  
   

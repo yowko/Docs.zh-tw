@@ -1,32 +1,20 @@
 ---
 title: SecurityBindingElement 驗證模式
-ms.custom: ''
 ms.date: 03/30/2017
-ms.prod: .net-framework
-ms.reviewer: ''
-ms.suite: ''
-ms.technology:
-- dotnet-clr
-ms.tgt_pltfrm: ''
-ms.topic: article
 dev_langs:
 - csharp
 - vb
 ms.assetid: 12300bf4-c730-4405-9f65-d286f68b5a43
-caps.latest.revision: 13
 author: BrucePerlerMS
-ms.author: bruceper
 manager: mbaldwin
-ms.workload:
-- dotnet
-ms.openlocfilehash: 8ca854d6b0431b5fe4972972d9d39de934f64b4d
-ms.sourcegitcommit: 03ee570f6f528a7d23a4221dcb26a9498edbdf8c
+ms.openlocfilehash: 715c813015fdb4b52444efca0bdcfc99acc92c21
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/28/2018
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="securitybindingelement-authentication-modes"></a>SecurityBindingElement 驗證模式
-[!INCLUDE[indigo1](../../../../includes/indigo1-md.md)] 提供數個模式，可讓用戶端和服務用來相互驗證。 您可以在 <xref:System.ServiceModel.Channels.SecurityBindingElement> 類別上使用靜態方法或透過組態，建立這些驗證模式的安全性繫結項目。 本主題會簡短說明這 18 種驗證模式。  
+Windows Communication Foundation (WCF) 提供數個用戶端和服務驗證彼此的模式。 您可以在 <xref:System.ServiceModel.Channels.SecurityBindingElement> 類別上使用靜態方法或透過組態，建立這些驗證模式的安全性繫結項目。 本主題會簡短說明這 18 種驗證模式。  
   
  使用的驗證模式的其中一個元素的範例，請參閱[How to： 指定的驗證模式建立 SecurityBindingElement](../../../../docs/framework/wcf/feature-details/how-to-create-a-securitybindingelement-for-a-specified-authentication-mode.md)。  
   

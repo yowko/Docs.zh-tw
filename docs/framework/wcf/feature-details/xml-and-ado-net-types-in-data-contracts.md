@@ -1,32 +1,18 @@
 ---
 title: 資料合約中的 XML 與 ADO.NET 型別
-ms.custom: ''
 ms.date: 03/30/2017
-ms.prod: .net-framework
-ms.reviewer: ''
-ms.suite: ''
-ms.technology:
-- dotnet-clr
-ms.tgt_pltfrm: ''
-ms.topic: article
 dev_langs:
 - csharp
 - vb
 ms.assetid: c2ce8461-3c15-4c41-8c81-1cb78f5b59a6
-caps.latest.revision: 7
-author: dotnet-bot
-ms.author: dotnetcontent
-manager: wpickett
-ms.workload:
-- dotnet
-ms.openlocfilehash: 7efef63668bb78bdc9a7d66654c9e33ef6c0138c
-ms.sourcegitcommit: 94d33cadc5ff81d2ac389bf5f26422c227832052
+ms.openlocfilehash: ae21174d19ad69f87165427cf5a0bfd29ac872db
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/30/2018
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="xml-and-adonet-types-in-data-contracts"></a>資料合約中的 XML 與 ADO.NET 型別
-[!INCLUDE[indigo1](../../../../includes/indigo1-md.md)] 資料合約模型支援直接代表 XML 的特定型別。 當這些型別序列化為 XML 時，序列化程式會寫出這些型別的 XML 內容，而不做更進一步的處理。 支援的型別為 <xref:System.Xml.XmlElement>、<xref:System.Xml.XmlNode> 的陣列 (但不是 `XmlNode` 型別本身) 以及實作 <xref:System.Xml.Serialization.IXmlSerializable> 的型別。 <xref:System.Data.DataSet> 和 <xref:System.Data.DataTable> 型別以及具型別資料集都常用於資料庫程式撰寫中。 這些型別會實作 `IXmlSerializable` 介面，因此在資料合約模型中是可序列化的。 在本主題最後，會列出這些型別的一些特別考量。  
+Windows Communication Foundation (WCF) 的資料合約模型支援直接代表 XML 的特定型別。 當這些型別序列化為 XML 時，序列化程式會寫出這些型別的 XML 內容，而不做更進一步的處理。 支援的型別為 <xref:System.Xml.XmlElement>、<xref:System.Xml.XmlNode> 的陣列 (但不是 `XmlNode` 型別本身) 以及實作 <xref:System.Xml.Serialization.IXmlSerializable> 的型別。 <xref:System.Data.DataSet> 和 <xref:System.Data.DataTable> 型別以及具型別資料集都常用於資料庫程式撰寫中。 這些型別會實作 `IXmlSerializable` 介面，因此在資料合約模型中是可序列化的。 在本主題最後，會列出這些型別的一些特別考量。  
   
 ## <a name="xml-types"></a>XML 型別  
   
@@ -48,7 +34,7 @@ ms.lasthandoff: 04/30/2018
 </MyDataContract>  
 ```  
   
- 請注意，包裝函式資料成員項目 `<myDataMember>` 仍然存在。 不能在資料合約模型中移除這個項目。 處理這個模型 (<xref:System.Runtime.Serialization.DataContractSerializer> 和 <xref:System.Runtime.Serialization.NetDataContractSerializer>) 的序列化程式可能會發出特別的屬性到這個包裝函式項目內。 這些屬性包括標準的 XML Schema Instance "nil" 屬性 (允許 `XmlElement` 成為 `null`) 和 "type" 屬性 (允許多型使用 `XmlElement`)。 另外，下列 XML 屬性是 [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] 特定的："Id"、"Ref"、"Type" 和 "Assembly"。 這些屬性可發出以支援使用 `XmlElement` 搭配已啟用的物件圖形保留模式，或使用 <xref:System.Runtime.Serialization.NetDataContractSerializer>  (如需物件圖形保留模式的詳細資訊，請參閱[序列化和還原序列化](../../../../docs/framework/wcf/feature-details/serialization-and-deserialization.md)。)  
+ 請注意，包裝函式資料成員項目 `<myDataMember>` 仍然存在。 不能在資料合約模型中移除這個項目。 處理這個模型 (<xref:System.Runtime.Serialization.DataContractSerializer> 和 <xref:System.Runtime.Serialization.NetDataContractSerializer>) 的序列化程式可能會發出特別的屬性到這個包裝函式項目內。 這些屬性包括標準的 XML Schema Instance "nil" 屬性 (允許 `XmlElement` 成為 `null`) 和 "type" 屬性 (允許多型使用 `XmlElement`)。 此外，下列的 XML 屬性專屬於 WCF:"Id"、"Ref"、"Type"和"Assembly"。 這些屬性可發出以支援使用 `XmlElement` 搭配已啟用的物件圖形保留模式，或使用 <xref:System.Runtime.Serialization.NetDataContractSerializer>  (如需物件圖形保留模式的詳細資訊，請參閱[序列化和還原序列化](../../../../docs/framework/wcf/feature-details/serialization-and-deserialization.md)。)  
   
  `XmlElement` 的陣列或集合是被允許的，且處理方式和其他任何的陣列或集合相同。 也就是說，整個集合將會有包裝函式項目，而陣列中的各個 `<myDataMember>` 則會有不同的包裝函式項目 (與上例中的 `XmlElement` 類似)。  
   
@@ -88,7 +74,7 @@ ms.lasthandoff: 04/30/2018
   
  無法序列化會造成無效 XML 的 `XmlNode` 陣列。 例如，兩個 `XmlNode` 執行個體的陣列 (其中第一個是 `XmlElement` 而第二個是 <xref:System.Xml.XmlAttribute>) 是無效的，因為這個序列沒有對應至任何有效的 XML 執行個體 (沒有位置可附加此屬性)。  
   
- 在還原序列化 `XmlNode` 的陣列時，會建立節點並填入來自傳入的 XML 的資訊。 還原序列化程式會提供有效的父 <xref:System.Xml.XmlDocument>。 所有節點都會還原序列化，包括包裝函式資料成員項目上的屬性，但不包括 [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] 序列化程式所放置的屬性 (例如用於指出多型指派的屬性)。 有關定義 XML 片段中所有命名空間前置詞的警告適用於 `XmlNode` 陣列的還原序列化，就像還原序列化 `XmlElement` 一樣。  
+ 在還原序列化 `XmlNode` 的陣列時，會建立節點並填入來自傳入的 XML 的資訊。 還原序列化程式會提供有效的父 <xref:System.Xml.XmlDocument>。 所有節點都會還原都序列化，包括包裝函式資料成員項目上的屬性，但不包括放那里 WCF 序列化的屬性 （例如用於指出多型指派）。 有關定義 XML 片段中所有命名空間前置詞的警告適用於 `XmlNode` 陣列的還原序列化，就像還原序列化 `XmlElement` 一樣。  
   
  當使用序列化程式並開啟物件圖形保留時，物件相等性只會保留在 `XmlNode` 陣列的層級，而不是個別 `XmlNode` 執行個體的層級。  
   
@@ -142,7 +128,7 @@ ms.lasthandoff: 04/30/2018
   
  當還原序列化實作 `IXmlSerializable` 且為上述定義的內容型別之型別的資料成員時，還原序列化程式會將 XML 讀取器放在資料成員的包裝函式項目上，並將控制項傳遞至 <xref:System.Xml.Serialization.IXmlSerializable.ReadXml%2A> 方法。 此方法必須讀取整個項目，包括開始和結束標記。 請確定您的 `ReadXml` 程式碼會處理項目是空白的案例。 此外，您的 `ReadXml` 實作不應依賴以特定的方式為包裝函式項目命名。 由序列化程式所選擇的名稱可能會有所不同。  
   
- 允許將 `IXmlSerializable` 內容型別多型指派為如型別 <xref:System.Object> 的資料成員。 也允許型別執行個體為 null。 最後，可以使用 `IXmlSerializable` 型別並啟用物件圖形保留，以及搭配 <xref:System.Runtime.Serialization.NetDataContractSerializer>。 所有這些功能都需要 [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] 序列化程式將特定屬性附加至包裝函式項目中 ("nil" 和 "type" 是在 XML Schema Instance 命名空間中，而 "Id"、"Ref"、"Type" 和 "Assembly" 是在 [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] 特定的命名空間中)。  
+ 允許將 `IXmlSerializable` 內容型別多型指派為如型別 <xref:System.Object> 的資料成員。 也允許型別執行個體為 null。 最後，可以使用 `IXmlSerializable` 型別並啟用物件圖形保留，以及搭配 <xref:System.Runtime.Serialization.NetDataContractSerializer>。 所有這些功能都需要 WCF 序列化程式將特定屬性附加至包裝函式項目 ("nil"和"type"是在 XML Schema Instance 命名空間和"Id"、"Ref"、"Type"和"Assembly 是"WCF 特定命名空間中的)。  
   
 #### <a name="attributes-to-ignore-when-implementing-readxml"></a>實作 ReadXml 時要忽略的屬性  
  在將控制項傳遞至您的 `ReadXml` 程式碼之前，還原序列化程式會檢查 XML 項目、偵測這些特殊的 XML 屬性並進行動作。 例如，如果 "nil" 為 `true`，便會還原序列化 null 值並且不會呼叫 `ReadXml`。 如果偵測到多型，則會還原序列化項目的內容，就如同它是不同的型別一樣。 會呼叫 `ReadXml` 的多型指派型別的實作。 在任何情況下，`ReadXml` 實作都應忽略這些特殊屬性，因為它們是由還原序列化程式所處理的。  
@@ -200,16 +186,16 @@ ms.lasthandoff: 04/30/2018
   
 -   XML 寫入器通常不允許 XML 文件宣告 (例如， \<？ xml 版本 ='1.0 '？ >) 撰寫另一個文件。 您無法採用完整的 XML 文件並序列化為 `Array` 資料成員的 `XmlNode`。 如果要執行這項操作，您必須刪除文件宣告或使用您自己的編碼配置來表示它。  
   
--   XML 寫入器所提供的所有[!INCLUDE[indigo2](../../../../includes/indigo2-md.md)]拒絕 XML 處理指示 (\<嗎？ … ？ >) 和文件類型定義 (\<！ … >)，因為它們在 SOAP 訊息中是不被允許的。 同樣地，您可以使用您自己的編碼機制來解決這個限制。 如果您必須在結果 XML 中包含它們，可以撰寫自訂編碼器，使用支援它們的 XML 寫入器。  
+-   所有 WCF 所提供的 XML 寫入器拒絕 XML 處理指示 (\<嗎？ … ？ >) 和文件類型定義 (\<！ … >)，因為它們在 SOAP 訊息中是不被允許的。 同樣地，您可以使用您自己的編碼機制來解決這個限制。 如果您必須在結果 XML 中包含它們，可以撰寫自訂編碼器，使用支援它們的 XML 寫入器。  
   
--   當實作 `WriteXml` 時，請避免在 XML 寫入器上呼叫 <xref:System.Xml.XmlWriter.WriteRaw%2A> 方法。 [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] 會使用各種不同的 XML 編碼 (包括二進位)，很難或根本不可能使用 `WriteRaw` 讓結果可用於任何編碼中。  
+-   當實作 `WriteXml` 時，請避免在 XML 寫入器上呼叫 <xref:System.Xml.XmlWriter.WriteRaw%2A> 方法。 WCF 使用各種不同的 XML 編碼 （包括二進位），很難或根本不可能使用`WriteRaw`結果是可用於任何編碼。  
   
--   當實作 `WriteXml` 時，請避免使用在 <xref:System.Xml.XmlWriter.WriteEntityRef%2A> 隨附的 XML 寫入器上不支援的 <xref:System.Xml.XmlWriter.WriteNmToken%2A> 和 [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] 方法。  
+-   當實作`WriteXml`，避免使用<xref:System.Xml.XmlWriter.WriteEntityRef%2A>和<xref:System.Xml.XmlWriter.WriteNmToken%2A>WCF 所提供的 XML 寫入器不支援的方法。  
   
 ## <a name="using-dataset-typed-dataset-and-datatable"></a>使用 DataSet、Typed DataSet 和 DataTable  
  使用這些型別在資料合約模型中是受到完整支援的。 當使用這些型別時，請考慮下列各點：  
   
--   這些型別的結構描述 (特別是 <xref:System.Data.DataSet> 和其具型別的衍生類別) 可能無法與一些非 [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] 平台互通，或在與這些平台使用時可能會造成可用性不佳。 此外，使用 `DataSet` 型別可能會對效能有影響。 最後，它可能會讓您將來更難處理應用程式的版本。 請考慮使用明確定義的資料合約類型來取代您合約中的 `DataSet` 型別。  
+-   這些類型的結構描述 (尤其是<xref:System.Data.DataSet>和其具型別的衍生類別) 可能無法與某些非 WCF 平台互通，或可能造成與這些平台搭配使用時的可用性不佳。 此外，使用 `DataSet` 型別可能會對效能有影響。 最後，它可能會讓您將來更難處理應用程式的版本。 請考慮使用明確定義的資料合約類型來取代您合約中的 `DataSet` 型別。  
   
 -   當匯入 `DataSet` 或 `DataTable` 結構描述時，參照這些型別是很重要的。 使用 Svcutil.exe 命令列工具，這可藉由將 System.Data.dll 組件名稱使`/reference`切換。 如果匯入具型別資料集結構描述，您必須參照具型別資料集的型別。 使用 Svcutil.exe，傳遞的具類型資料集的組件位置`/reference`切換。 如需參考類型的詳細資訊，請參閱[匯入的結構描述產生類別](../../../../docs/framework/wcf/feature-details/importing-schema-to-generate-classes.md)。  
   

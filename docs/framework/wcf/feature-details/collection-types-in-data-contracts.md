@@ -1,14 +1,6 @@
 ---
 title: 資料合約中的集合型別
-ms.custom: ''
 ms.date: 03/30/2017
-ms.prod: .net-framework
-ms.reviewer: ''
-ms.suite: ''
-ms.technology:
-- dotnet-clr
-ms.tgt_pltfrm: ''
-ms.topic: article
 dev_langs:
 - csharp
 - vb
@@ -17,17 +9,11 @@ helpviewer_keywords:
 - data contracts [WCF], collection types
 - collection types [WCF]
 ms.assetid: 9b45b28e-0a82-4ea3-8c33-ec0094aff9d5
-caps.latest.revision: 19
-author: dotnet-bot
-ms.author: dotnetcontent
-manager: wpickett
-ms.workload:
-- dotnet
-ms.openlocfilehash: c771d78c5e78feabcfe883934ed7ea3589c938d2
-ms.sourcegitcommit: 94d33cadc5ff81d2ac389bf5f26422c227832052
+ms.openlocfilehash: dccc53f13889e2073579af19e86459fe56b069e7
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/30/2018
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="collection-types-in-data-contracts"></a>資料合約中的集合型別
 「 *集合* 」(Collection) 是特定型別之項目的清單。 在 [!INCLUDE[dnprdnshort](../../../../includes/dnprdnshort-md.md)]中，可以使用陣列或其他多種型別 (泛型清單、泛型 <xref:System.ComponentModel.BindingList%601>, <xref:System.Collections.Specialized.StringCollection>或 <xref:System.Collections.ArrayList>) 來表示這類清單。 例如，集合可能含有特定「客戶」的地址清單。 不論實際型別為何，這些集合統稱為「 *清單集合*」(List Collection)。  
@@ -86,7 +72,7 @@ ms.lasthandoff: 04/30/2018
   
  在進行序列化期間，當宣告的型別為介面時，使用的實際執行個體型別就可以是實作該介面的任何型別。 先前所討論的限制 (包含預設建構函式和 `Add` 方法) 並不適用。 例如，您可以將 Customer2 中的地址設定為地址之泛用 <xref:System.Collections.ObjectModel.ReadOnlyCollection%601> 的執行個體，即使無法直接宣告泛用 <xref:System.Collections.ObjectModel.ReadOnlyCollection%601>型別的資料成員也是如此。  
   
- 在進行還原序列化期間，如果宣告的型別為介面，序列化引擎便會選擇實作宣告之介面的型別，而且該型別會具現化。 在此，已知的型別機制 (在 [Data Contract Known Types](../../../../docs/framework/wcf/feature-details/data-contract-known-types.md)中有所描述) 不會有任何效果；型別的選項已建置於 [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)].  
+ 在進行還原序列化期間，如果宣告的型別為介面，序列化引擎便會選擇實作宣告之介面的型別，而且該型別會具現化。 已知型別機制 (述[資料合約已知型別](../../../../docs/framework/wcf/feature-details/data-contract-known-types.md)) 沒有任何作用。 WCF 內建類型的選擇。  
   
 ## <a name="customizing-collection-types"></a>自訂集合型別  
  您可以使用 <xref:System.Runtime.Serialization.CollectionDataContractAttribute> 屬性來自訂集合型別，此屬性有數種用法。  
@@ -235,7 +221,7 @@ ms.lasthandoff: 04/30/2018
 ## <a name="collections-and-schema"></a>集合與結構描述  
  所有相等的集合都具有相同的 XML 結構描述定義語言 (XSD) 結構描述表示方式。 基於這點，通常您由所產生用戶端程式碼所取得的集合型別，並不相同於伺服器上的集合型別。 例如，伺服器可能會搭配使用資料合約與整數資料成員的泛型 <xref:System.Collections.Generic.List%601> ，但是在產生的用戶端程式碼中，該相同資料成員可能會成為整數陣列。  
   
- 字典集合都會以 [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)]特定結構描述附註標示，以表示這些集合是字典。否則，將無法區別這些集合與包含有索引鍵與值之項目的簡單清單。 如需集合透過資料合約結構描述之表示方式的詳細描述，請參閱 [Data Contract Schema Reference](../../../../docs/framework/wcf/feature-details/data-contract-schema-reference.md)。  
+ 字典集合會標記為 WCF 特定結構描述附註，表示它們是字典。否則，它們是簡單的清單包含具有索引鍵和值的項目可以區別。 如需集合透過資料合約結構描述之表示方式的詳細描述，請參閱 [Data Contract Schema Reference](../../../../docs/framework/wcf/feature-details/data-contract-schema-reference.md)。  
   
  根據預設，不會針對已匯入程式碼中的非自訂集合產生型別。 清單集合型別的資料成員都會當做陣列匯入，而字典集合型別的資料成員會當做泛型字典匯入。  
   

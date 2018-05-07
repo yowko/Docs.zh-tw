@@ -1,31 +1,17 @@
 ---
-title: "佇列概觀"
-ms.custom: 
+title: 佇列概觀
 ms.date: 03/30/2017
-ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.technology:
-- dotnet-clr
-ms.tgt_pltfrm: 
-ms.topic: article
 helpviewer_keywords:
 - queues [WCF], MSMQ integration
 ms.assetid: b8757992-ffce-40ad-9e9b-3243f6d0fce1
-caps.latest.revision: 
-author: dotnet-bot
-ms.author: dotnetcontent
-manager: wpickett
-ms.workload:
-- dotnet
-ms.openlocfilehash: eb5d0f51fbbb6c8bad9bfbbfd9977368fdbd0666
-ms.sourcegitcommit: c0dd436f6f8f44dc80dc43b07f6841a00b74b23f
+ms.openlocfilehash: 85c8cb1fbbda9be14754174c7cb7c76513bd94c7
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 01/19/2018
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="queues-overview"></a>佇列概觀
-本節將介紹已佇列通訊背後的一般和核心概念。 後續各節將詳細說明有關此處所述的佇列概念如何顯露在 [!INCLUDE[indigo1](../../../../includes/indigo1-md.md)] 中。  
+本節將介紹已佇列通訊背後的一般和核心概念。 後續各節移到此處所述的佇列概念會列印文件的顯示，請在 Windows Communication Foundation (WCF) 的相關詳細資料。  
   
 ## <a name="basic-queuing-concepts"></a>基本佇列概念  
  當設計分散式應用程式時，為服務和用戶端之間的通訊選擇正確的傳輸是很重要的。 有數個因素會影響所使用的傳輸種類。 服務、用戶端和傳輸之間的隔離是一個重要的因素，它會決定要使用佇列傳輸或直接傳輸，例如 TCP 或 HTTP。 由於直接傳輸 (例如 TCP 和 HTTP) 的性質之故，如果服務或用戶端停止運作或網路失敗，通訊也會一起停止。 服務、用戶端和網路必須同時執行，應用程式才能運作。 已佇列之傳輸提供隔離，意指如果服務或用戶端失敗或它們之間的通訊連結失敗，用戶端和服務可以繼續運作。  
@@ -86,7 +72,7 @@ ms.lasthandoff: 01/19/2018
 ## <a name="poison-message-queue-programming"></a>有害訊息佇列程式設計  
  在訊息到達目標佇列之後，服務可能會重複失敗而無法處理訊息。 例如，在交易下從佇列讀取訊息並更新資料庫的應用程式可能會發現資料庫暫時斷線。 在這種情況下，交易會復原，建立新的交易，然後從佇列重新讀取訊息。 第二次嘗試可能會成功或失敗。 在某些情況中，訊息可能會重複失敗而無法傳遞至應用程式，這要視錯誤的原因而定。 在這種情況下，會將訊息視為「有害」。 此類訊息會移到有害佇列中，可由有害處理的應用程式讀取。  
   
-## <a name="see-also"></a>請參閱  
+## <a name="see-also"></a>另請參閱  
  [WCF 中的佇列](../../../../docs/framework/wcf/feature-details/queuing-in-wcf.md)  
  [WCF 中的佇列](../../../../docs/framework/wcf/feature-details/queuing-in-wcf.md)  
  [工作階段和佇列](../../../../docs/framework/wcf/samples/sessions-and-queues.md)  

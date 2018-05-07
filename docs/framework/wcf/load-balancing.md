@@ -1,31 +1,17 @@
 ---
 title: 負載平衡
-ms.custom: ''
 ms.date: 03/30/2017
-ms.prod: .net-framework
-ms.reviewer: ''
-ms.suite: ''
-ms.technology:
-- dotnet-clr
-ms.tgt_pltfrm: ''
-ms.topic: article
 helpviewer_keywords:
 - load balancing [WCF]
 ms.assetid: 148e0168-c08d-4886-8769-776d0953b80f
-caps.latest.revision: 7
-author: dotnet-bot
-ms.author: dotnetcontent
-manager: wpickett
-ms.workload:
-- dotnet
-ms.openlocfilehash: fe13c4aee41cd7af188ccaea77b3c0af07603e2c
-ms.sourcegitcommit: 94d33cadc5ff81d2ac389bf5f26422c227832052
-ms.translationtype: MT
+ms.openlocfilehash: 9ad9c9c569137534addfa3b91f412fb0c0a4b808
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/30/2018
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="load-balancing"></a>負載平衡
-將 [!INCLUDE[indigo1](../../../includes/indigo1-md.md)] 應用程式部署到負載平衡的伺服器陣列來加以放大，就是一種擴大應用程式容量的方法。 [!INCLUDE[indigo2](../../../includes/indigo2-md.md)] 應用程式可以透過標準負載平衡技術來達到負載平衡，這類技術包括 Windows 網路負載平衡等軟體負載平衡器，以及硬體架構的負載平衡裝置。  
+以增加容量的 Windows Communication Foundation (WCF) 應用程式的方法之一是調整排除這些程式部署到負載平衡的伺服器陣列。 [!INCLUDE[indigo2](../../../includes/indigo2-md.md)] 應用程式可以透過標準負載平衡技術來達到負載平衡，這類技術包括 Windows 網路負載平衡等軟體負載平衡器，以及硬體架構的負載平衡裝置。  
   
  下列各節會討論在針對使用各種系統提供繫結所建置 [!INCLUDE[indigo2](../../../includes/indigo2-md.md)] 應用程式進行負載平衡時的考量。  
   

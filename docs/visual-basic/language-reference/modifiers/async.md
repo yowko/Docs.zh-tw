@@ -1,25 +1,17 @@
 ---
 title: Async (Visual Basic)
 ms.date: 07/20/2015
-ms.prod: .net
-ms.suite: ''
-ms.technology:
-- devlang-visual-basic
-ms.topic: article
 f1_keywords:
 - vb.Async
 helpviewer_keywords:
 - Async [Visual Basic]
 - Async keyword [Visual Basic]
 ms.assetid: 1be8b4b5-9689-41b5-bd33-b906bfd53bc5
-caps.latest.revision: 37
-author: dotnet-bot
-ms.author: dotnetcontent
-ms.openlocfilehash: e11bb7eb29cefa627543e8ad0a9b061d5ad1e95c
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.openlocfilehash: 829128ff39c0c5e4f6cb140852228a028e39e69c
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="async-visual-basic"></a>Async (Visual Basic)
 `Async`修飾詞表示方法或[lambda 運算式](../../../visual-basic/programming-guide/language-features/procedures/lambda-expressions.md)它修改為非同步。 這類方法稱為*非同步方法*。  

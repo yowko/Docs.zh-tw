@@ -1,34 +1,20 @@
 ---
 title: 向前相容資料合約
-ms.custom: ''
 ms.date: 03/30/2017
-ms.prod: .net-framework
-ms.reviewer: ''
-ms.suite: ''
-ms.technology:
-- dotnet-clr
-ms.tgt_pltfrm: ''
-ms.topic: article
 dev_langs:
 - csharp
 - vb
 helpviewer_keywords:
 - data contracts [WCF], forward compatibility
 ms.assetid: 413c9044-26f8-4ecb-968c-18495ea52cd9
-caps.latest.revision: 21
-author: dotnet-bot
-ms.author: dotnetcontent
-manager: wpickett
-ms.workload:
-- dotnet
-ms.openlocfilehash: 554176d2b6ac0c1d5cbe817721c55d06f88457cc
-ms.sourcegitcommit: 03ee570f6f528a7d23a4221dcb26a9498edbdf8c
+ms.openlocfilehash: 95a72d5d09538bc6f663f2376c7f8f928909cd57
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/28/2018
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="forward-compatible-data-contracts"></a>向前相容資料合約
-[!INCLUDE[indigo1](../../../../includes/indigo1-md.md)] 資料合約系統的其中一個特點是合約可以隨著時間持續發展。 也就是說，有舊版資料合約的用戶端可以與有新版相同資料合約的服務通訊，或是有新版資料合約的用戶端可以與有舊版相同資料合約通訊。 如需詳細資訊，請參閱[最佳做法： 資料合約版本控制](../../../../docs/framework/wcf/best-practices-data-contract-versioning.md)。  
+一項功能的 Windows Communication Foundation (WCF) 是資料合約系統的合約可以隨著時間持續發展，特點。 也就是說，有舊版資料合約的用戶端可以與有新版相同資料合約的服務通訊，或是有新版資料合約的用戶端可以與有舊版相同資料合約通訊。 如需詳細資訊，請參閱[最佳做法： 資料合約版本控制](../../../../docs/framework/wcf/best-practices-data-contract-versioning.md)。  
   
  建立新版的現有資料合約時，您可以根據需要套用大部分的版本控制功能。 不過，一個版本控制功能，*往返*，必須內建的第一個版本中的型別才能正常運作。  
   
@@ -48,7 +34,7 @@ ms.lasthandoff: 04/28/2018
  [!code-csharp[C_DataContract#8](../../../../samples/snippets/csharp/VS_Snippets_CFX/c_datacontract/cs/source.cs#8)]
  [!code-vb[C_DataContract#8](../../../../samples/snippets/visualbasic/VS_Snippets_CFX/c_datacontract/vb/source.vb#8)]  
   
- 當 [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] 基礎結構遇到的資料不屬於原始資料合約的一部分時，資料會儲存在屬性中，並且加以保留。 這個資料只會以暫時儲存的方式處理。 如果物件傳回到其產生位置，原始 (未知的) 資料也會傳回。 因此，這代表資料往返於原始端點之間，而且沒有遺失。 不過請注意，如果產生物件的端點要求處理資料，上述情況便不成立，端點也就必須偵測與配合變更。  
+ 當 WCF 基礎結構遇到不是原始的資料合約的一部分的資料時，資料是儲存在屬性，並保留。 這個資料只會以暫時儲存的方式處理。 如果物件傳回到其產生位置，原始 (未知的) 資料也會傳回。 因此，這代表資料往返於原始端點之間，而且沒有遺失。 不過請注意，如果產生物件的端點要求處理資料，上述情況便不成立，端點也就必須偵測與配合變更。  
   
  <xref:System.Runtime.Serialization.ExtensionDataObject> 型別不包含公用方法或屬性， 因此無法直接存取儲存在 <xref:System.Runtime.Serialization.IExtensibleDataObject.ExtensionData%2A> 屬性中的資料。  
   

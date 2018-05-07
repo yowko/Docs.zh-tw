@@ -1,36 +1,22 @@
 ---
-title: "傳輸配額"
-ms.custom: 
+title: 傳輸配額
 ms.date: 03/30/2017
-ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.technology:
-- dotnet-clr
-ms.tgt_pltfrm: 
-ms.topic: article
 helpviewer_keywords:
 - transport quotas [WCF]
 ms.assetid: 3e71dd3d-f981-4d9c-9c06-ff8abb61b717
-caps.latest.revision: 
-author: dotnet-bot
-ms.author: dotnetcontent
-manager: wpickett
-ms.workload:
-- dotnet
-ms.openlocfilehash: 5e9d7fbf42f2ed9b8f68b1faf2e2425050b62eaa
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.openlocfilehash: b6322bada88c6aef65b609f43fe92dda8dbab206
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="transport-quotas"></a>傳輸配額
 傳輸配額是用來判斷連線何時過度使用資源的原則機制。 配額是硬性限制，一旦超出配額值，就會無法使用其他資源。 傳輸配額能夠防範惡意或無意間發生的阻絕服務攻擊。  
   
- [!INCLUDE[indigo1](../../../../includes/indigo1-md.md)] 的預設傳輸配額值是依據保守的資源配置。 這些預設值適用於開發環境和小規模的安裝情況。 如果安裝時資源不足，或者不論是否有額外的資源，連線都會受到限制時，服務系統管理員就應該檢查傳輸配額，並且調整個別的配額值。  
+ Windows Communication Foundation (WCF) 傳輸有預設值依據保守的資源配置的配額值。 這些預設值適用於開發環境和小規模的安裝情況。 如果安裝時資源不足，或者不論是否有額外的資源，連線都會受到限制時，服務系統管理員就應該檢查傳輸配額，並且調整個別的配額值。  
   
 ## <a name="types-of-transport-quotas"></a>傳輸配額的類型  
- [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] 傳輸有三種配額：  
+ WCF 傳輸有三種配額：  
   
 -   *逾時*減少阻絕服務攻擊，依賴佔用資源一段時間。  
   
@@ -39,7 +25,7 @@ ms.lasthandoff: 12/22/2017
 -   *收集大小限制*繫結間接配置記憶體或有限供應之資源的耗用量。  
   
 ## <a name="transport-quota-descriptions"></a>傳輸配額描述  
- 本章節說明標準 [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] 傳輸 HTTP(S)、TCP/IP 和具名管道適用的傳輸配額。 自訂傳輸會公開未包含在下列清單的可設定配額。 如需自訂傳輸配額的詳細資訊，請參閱自訂傳輸的相關文件。  
+ 本章節描述適用於標準 WCF 傳輸的傳輸配額： HTTP (S)、 TCP/IP 和具名的管道。 自訂傳輸會公開未包含在下列清單的可設定配額。 如需自訂傳輸配額的詳細資訊，請參閱自訂傳輸的相關文件。  
   
  每個配額設定都各有型別、最小值和預設值。 配額的最大值受到其型別限制。 由於機器限制，不一定都能將配額設定為最大值。  
   
@@ -120,7 +106,7 @@ ms.lasthandoff: 12/22/2017
 ### <a name="controlling-transport-quotas-from-configuration"></a>從組態控制傳輸配額  
  應用程式組態可以像直接存取繫結上的屬性一樣，設定相同的傳輸配額。 在組態檔中，傳輸配額的名稱一律以小寫字母為開頭。 例如，繫結上的 `CloseTimeout` 屬性會對應至組態中的 `closeTimeout` 設定，而繫結上的 `MaxConnections` 屬性則會對應至組態中的 `maxConnections` 設定。  
   
-## <a name="see-also"></a>請參閱  
+## <a name="see-also"></a>另請參閱  
  <xref:System.ServiceModel.Channels.HttpsTransportBindingElement>  
  <xref:System.ServiceModel.Channels.HttpTransportBindingElement>  
  <xref:System.ServiceModel.Channels.TcpTransportBindingElement>  

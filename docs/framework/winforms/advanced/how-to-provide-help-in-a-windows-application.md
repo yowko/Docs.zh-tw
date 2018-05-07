@@ -1,13 +1,6 @@
 ---
-title: "如何：在 Windows 應用程式中提供說明"
-ms.custom: 
+title: 如何：在 Windows 應用程式中提供說明
 ms.date: 03/30/2017
-ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.technology: dotnet-winforms
-ms.tgt_pltfrm: 
-ms.topic: article
 helpviewer_keywords:
 - Help [Windows Forms], Windows applications
 - HTML Help [Windows Forms], Windows Forms
@@ -15,16 +8,11 @@ helpviewer_keywords:
 - HelpProvider component [Windows Forms]
 - forms [Windows Forms], providing Help
 ms.assetid: 7c4e5cec-2bd2-4f0b-8d75-c2b88929bd61
-caps.latest.revision: "10"
-author: dotnet-bot
-ms.author: dotnetcontent
-manager: wpickett
-ms.workload: dotnet
-ms.openlocfilehash: d23e5d5d19e17aedd37d4d5f6cbc41429463ddfb
-ms.sourcegitcommit: c0dd436f6f8f44dc80dc43b07f6841a00b74b23f
+ms.openlocfilehash: 3df8f6eaee72ebdd6cbd03d0bdfde5a7d2270129
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 01/19/2018
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="how-to-provide-help-in-a-windows-application"></a>如何：在 Windows 應用程式中提供說明
 您可以使用的<xref:System.Windows.Forms.HelpProvider>附加至 Windows Form 上的特定控制項的說明檔內的 [說明] 主題的元件。 說明檔可以是 HTML 或 HTMLHelp 1.x 或更高的格式。  
@@ -66,7 +54,7 @@ ms.lasthandoff: 01/19/2018
   
  您也可以使用<xref:System.Windows.Forms.HelpProvider>顯示快顯的說明，即使您已經設定要顯示在 Windows Form 上控制項的說明檔案的元件。 如需詳細資訊，請參閱[如何：顯示快顯說明](../../../../docs/framework/winforms/advanced/how-to-display-pop-up-help.md)。  
   
-## <a name="see-also"></a>請參閱  
+## <a name="see-also"></a>另請參閱  
  [操作說明：顯示快顯說明](../../../../docs/framework/winforms/advanced/how-to-display-pop-up-help.md)  
  [使用工具提示來顯示控制項說明](../../../../docs/framework/winforms/advanced/control-help-using-tooltips.md)  
  [整合 Windows Forms 中的使用者說明](../../../../docs/framework/winforms/advanced/integrating-user-help-in-windows-forms.md)  

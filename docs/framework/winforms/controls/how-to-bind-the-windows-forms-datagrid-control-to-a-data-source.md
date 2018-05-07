@@ -1,13 +1,6 @@
 ---
-title: "如何：將 Windows Form DataGrid 控制項繫結至資料來源"
-ms.custom: 
+title: 如何：將 Windows Form DataGrid 控制項繫結至資料來源
 ms.date: 03/30/2017
-ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.technology: dotnet-winforms
-ms.tgt_pltfrm: 
-ms.topic: article
 dev_langs:
 - csharp
 - vb
@@ -21,16 +14,11 @@ helpviewer_keywords:
 - bound controls [Windows Forms]
 - data-bound controls [Windows Forms], DataGrid
 ms.assetid: 128cdb07-dfd3-4d60-9d6a-902847667c36
-caps.latest.revision: "17"
-author: dotnet-bot
-ms.author: dotnetcontent
-manager: wpickett
-ms.workload: dotnet
-ms.openlocfilehash: c136aca0eda9ea906ad8bf6853a263adf6130609
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.openlocfilehash: 62f61eb2d294baf007b0b3f749f3cf6b7f4857c1
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="how-to-bind-the-windows-forms-datagrid-control-to-a-data-source"></a>如何：將 Windows Form DataGrid 控制項繫結至資料來源
 > [!NOTE]
@@ -114,7 +102,7 @@ ms.lasthandoff: 12/22/2017
   
 3.  （選擇性）將適當的資料表樣式和資料行樣式加入至方格中。 如果有任何資料表樣式，您會看到資料表，但最少的格式和可見的所有資料行。  
   
-## <a name="see-also"></a>請參閱  
+## <a name="see-also"></a>另請參閱  
  [DataGrid 控制項概觀](../../../../docs/framework/winforms/controls/datagrid-control-overview-windows-forms.md)  
  [操作說明：將資料表和資料行新增至 Windows Forms DataGrid 控制項](../../../../docs/framework/winforms/controls/how-to-add-tables-and-columns-to-the-windows-forms-datagrid-control.md)  
  [DataGrid 控制項](../../../../docs/framework/winforms/controls/datagrid-control-windows-forms.md)  

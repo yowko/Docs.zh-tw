@@ -1,26 +1,12 @@
 ---
 title: 預期的例外狀況
-ms.custom: ''
 ms.date: 03/30/2017
-ms.prod: .net-framework
-ms.reviewer: ''
-ms.suite: ''
-ms.technology:
-- dotnet-clr
-ms.tgt_pltfrm: ''
-ms.topic: article
 ms.assetid: 299a6987-ae6b-43c6-987f-12b034b583ae
-caps.latest.revision: 7
-author: dotnet-bot
-ms.author: dotnetcontent
-manager: wpickett
-ms.workload:
-- dotnet
-ms.openlocfilehash: 28af4a374d7ff474cf313aad711a3062f56263c9
-ms.sourcegitcommit: 2042de78fcdceebb6b8ac4b7a292b93e8782cbf5
-ms.translationtype: MT
+ms.openlocfilehash: 9552bf5178e3309d46e0f9220311c9e1a811c4b9
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/27/2018
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="expected-exceptions"></a>預期的例外狀況
 此範例示範如何在使用型別用戶端時，攔截預期的例外狀況。 這個範例根據[入門](../../../../docs/framework/wcf/samples/getting-started-sample.md)，用來實作計算機服務。 在這個範例中，用戶端是主控台應用程式 (.exe)，而服務則是由網際網路資訊服務 (IIS) 所裝載。  
@@ -30,7 +16,7 @@ ms.lasthandoff: 04/27/2018
   
  此範例示範正確的程式必須處理的兩個預期例外狀況類型之捕捉與處理方式：`TimeoutException` 和 `CommunicationException`。  
   
- 在 [!INCLUDE[indigo1](../../../../includes/indigo1-md.md)] 用戶端上，由通訊方法所擲回的例外狀況有可能是預期或未預期。 未預期的例外狀況包含 `OutOfMemoryException` 之類的災難性失敗，以及像 `ArgumentNullException` 或 `InvalidOperationException` 之類的程式設計錯誤。 一般來說，您無法有效處理未預期錯誤，因此在呼叫 [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] 用戶端通訊方法時，通常您不應該捕捉這些錯誤。  
+ 從 Windows Communication Foundation (WCF) 用戶端上的通訊方法就會擲回的例外狀況會預期或未預期的。 未預期的例外狀況包含 `OutOfMemoryException` 之類的災難性失敗，以及像 `ArgumentNullException` 或 `InvalidOperationException` 之類的程式設計錯誤。 一般來說，您無法有效處理未預期錯誤，因此在呼叫 [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] 用戶端通訊方法時，通常您不應該捕捉這些錯誤。  
   
  [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] 用戶端上，來自通訊方法的預期例外狀況包含 `TimeoutException`、`CommunicationException` 和任何衍生的 `CommunicationException` 類別。 這些都代表在通訊期間發生的問題，而您可以藉由中止 [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] 用戶端並報告通訊失敗來妥善處理這些狀況。 因為外部因素可能導致在任何應用程式中發生這些錯誤，正確的應用程式必須捕捉這些例外狀況，並在發生時加以復原。  
   
@@ -89,7 +75,7 @@ Got System.TimeoutException
 >   
 >  `<InstallDrive>:\WF_WCF_Samples`  
 >   
->  如果此目錄不存在，請移至 [Windows Communication Foundation (WCF) and Windows Workflow Foundation (WF) Samples for .NET Framework 4  (適用於 .NET Framework 4 的 Windows Communication Foundation (WCF) 與 Windows Workflow Foundation (WF) 範例)](http://go.microsoft.com/fwlink/?LinkId=150780) ，以下載所有 [!INCLUDE[indigo1](../../../../includes/indigo1-md.md)] 和 [!INCLUDE[wf1](../../../../includes/wf1-md.md)] 範例。 此範例位於下列目錄。  
+>  如果此目錄不存在，請移至[Windows Communication Foundation (WCF) 和適用於.NET Framework 4 的 Windows Workflow Foundation (WF) 範例](http://go.microsoft.com/fwlink/?LinkId=150780)下載所有 Windows Communication Foundation (WCF) 和[!INCLUDE[wf1](../../../../includes/wf1-md.md)]範例。 此範例位於下列目錄。  
 >   
 >  `<InstallDrive>:\WF_WCF_Samples\WCF\Basic\Client\ExpectedExceptions`  
   

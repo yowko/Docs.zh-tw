@@ -1,27 +1,15 @@
 ---
-title: "服務追蹤檢視器工具 (SvcTraceViewer.exe)"
-ms.custom: 
+title: 服務追蹤檢視器工具 (SvcTraceViewer.exe)
 ms.date: 03/30/2017
-ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.technology: dotnet-clr
-ms.tgt_pltfrm: 
-ms.topic: article
 ms.assetid: 9027efd3-df8d-47ed-8bcd-f53d55ed803c
-caps.latest.revision: "55"
-author: dotnet-bot
-ms.author: dotnetcontent
-manager: wpickett
-ms.workload: dotnet
-ms.openlocfilehash: 7526f5cda302618b2f240e5ae1c126e60b9ab5e6
-ms.sourcegitcommit: c0dd436f6f8f44dc80dc43b07f6841a00b74b23f
-ms.translationtype: MT
+ms.openlocfilehash: d9cd87bba52297d37683127ece3dd9c31e9a9a70
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 01/19/2018
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="service-trace-viewer-tool-svctraceviewerexe"></a>服務追蹤檢視器工具 (SvcTraceViewer.exe)
-[!INCLUDE[indigo1](../../../includes/indigo1-md.md)] 服務追蹤檢視器工具可協助您分析由 [!INCLUDE[indigo2](../../../includes/indigo2-md.md)] 產生的診斷追蹤。 服務追蹤檢視器提供一種輕鬆合併、檢視和篩選記錄內追蹤訊息的方式，方便您診斷、修復以及驗證 [!INCLUDE[indigo2](../../../includes/indigo2-md.md)] 服務的問題。  
+Windows Communication Foundation (WCF) 服務追蹤檢視器工具可協助您分析所產生的診斷追蹤[!INCLUDE[indigo2](../../../includes/indigo2-md.md)]。 服務追蹤檢視器提供一種輕鬆合併、檢視和篩選記錄內追蹤訊息的方式，方便您診斷、修復以及驗證 [!INCLUDE[indigo2](../../../includes/indigo2-md.md)] 服務的問題。  
   
 ## <a name="configuring-tracing"></a>設定追蹤  
  診斷追蹤可提供您資訊，顯示整個應用程式的作業期間所發生之事件。 顧名思義，您可以從作業的來源開始追蹤，一直追蹤到作業的目的端，也可以透過中繼點追蹤。  
@@ -272,7 +260,7 @@ ms.lasthandoff: 01/19/2018
   
 4.  左側的樹狀檢視顯示了您在步驟 1 所選取的追蹤記錄的結構。 請瀏覽至您要建立相關條件的項目。 在此範例中，瀏覽至位於 XPath 中的 ThreadID:/E2ETraceEvent/System/Execution/@ThreadID節點。 按兩下樹狀檢閱中的 [ThreadID] 屬性。 這樣可在對話方塊右側建立屬性的運算式。  
   
-5.  將 [ThreadID] 條件的參數欄位從 [無] 變更為 ‘{0}’。 此步驟會在套用篩選器時，讓您設定 [ThreadID] 值  (請參閱「如何套用篩選器」一節)。您最多可以定義四個參數。 所有條件將由 OR 運算子結合在一起。  
+5.  變更 [ThreadID] 條件的參數欄位從無 '{0}'。 此步驟會在套用篩選器時，讓您設定 [ThreadID] 值  (請參閱「如何套用篩選器」一節)。您最多可以定義四個參數。 所有條件將由 OR 運算子結合在一起。  
   
 6.  按一下**確定**建立篩選器。  
   
@@ -297,7 +285,7 @@ ms.lasthandoff: 01/19/2018
   
 2.  按一下**立即篩選**，並觀察運算的結果。  
   
- 如果您的篩選條件使用多個參數，請輸入這些使用 ';' 中的分隔符號為**尋找**欄位。 例如，下列字串定義了 3 個參數：‘1;findValue;text’。 檢視器會將 ‘1’ 套用至篩選器的 {0} 參數。 ‘findValue’ 與 ‘text’ 則是分別套用至 {1} 與 {2}。  
+ 如果您的篩選條件使用多個參數，請輸入這些使用 ';' 中的分隔符號為**尋找**欄位。 例如，下列字串定義了 3 個參數：‘1;findValue;text’。 檢視器套用至 '1'{0}篩選器的參數。 'findValue' 與 'text' 套用至{1}和{2}分別。  
   
 ###### <a name="sharing-custom-filters"></a>共用自訂篩選器  
  您可以在不同的工作階段和不同的使用者之間共用自訂篩選器。 您可以將篩選器匯出到定義檔中，然後將此檔案匯入到其他位置。  
@@ -460,7 +448,7 @@ ms.lasthandoff: 01/19/2018
   
  如果您開啟的是使用阿拉伯文作業系統建立的追蹤記錄，可能會發現時間篩選器無法運作。 例如，2005 年對應到阿拉伯曆的 1427 年。 但是，服務追蹤檢視器工具篩選器所支援的時間範圍並不支援 1752 年之前的日期。 這就表示您無法在該篩選器中選取正確的日期。 若要解決這個問題，您可以建立自訂篩選器 (**檢視/自訂篩選**) 使用 XPath 運算式來包含特定時間範圍。  
   
-## <a name="see-also"></a>請參閱  
+## <a name="see-also"></a>另請參閱  
  [使用服務追蹤檢視器檢視相關追蹤並進行疑難排解](../../../docs/framework/wcf/diagnostics/tracing/using-service-trace-viewer-for-viewing-correlated-traces-and-troubleshooting.md)  
  [設定追蹤](../../../docs/framework/wcf/diagnostics/tracing/configuring-tracing.md)  
  [活動追蹤和散佈用於端對端追蹤相互關聯](http://msdn.microsoft.com/library/2c11a905-64f8-47b5-bae5-a74fc666137e)

@@ -1,13 +1,6 @@
 ---
-title: "定義 Windows Form 控制項中的屬性"
-ms.custom: 
+title: 定義 Windows Form 控制項中的屬性
 ms.date: 03/30/2017
-ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.technology: dotnet-winforms
-ms.tgt_pltfrm: 
-ms.topic: article
 dev_langs:
 - csharp
 - vb
@@ -15,23 +8,18 @@ helpviewer_keywords:
 - properties [Windows Forms], defining in code
 - custom controls [Windows Forms], defining properties in code
 ms.assetid: c2eb8277-a842-4d99-89a9-647b901a0434
-caps.latest.revision: "13"
-author: dotnet-bot
-ms.author: dotnetcontent
-manager: wpickett
-ms.workload: dotnet
-ms.openlocfilehash: 47b56a4112dc39adb12bb8f7c6db7656352ae930
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.openlocfilehash: dc47d7152419d55b3e52aec70257e2b39e9aaca0
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="defining-a-property-in-windows-forms-controls"></a>定義 Windows Form 控制項中的屬性
 如需屬性的概觀，請參閱[屬性概觀](http://msdn.microsoft.com/library/8f1a1ff1-0f05-40e0-bfdf-80de8fff7d52)。 定義屬性時，有一些重要的考量︰  
   
 -   您必須將屬性 (Attribute) 套用至您所定義的屬性 (Property)。 屬性 (Attribute) 指定設計工具如何顯示屬性 (Property)。 如需詳細資料，請參閱[元件的設計階段屬性](http://msdn.microsoft.com/library/12050fe3-9327-4509-9e21-4ee2494b95c3)。  
   
--   屬性變更會影響控制項的視覺顯示，如果呼叫<xref:System.Windows.Forms.Control.Invalidate%2A>方法 (控制項繼承自<xref:System.Windows.Forms.Control>) 從`set`存取子。 <xref:System.Windows.Forms.Control.Invalidate%2A>依序呼叫<xref:System.Windows.Forms.Control.OnPaint%2A>方法，這個方法會重新繪製控制項。 多個呼叫<xref:System.Windows.Forms.Control.Invalidate%2A>導致呼叫一次<xref:System.Windows.Forms.Control.OnPaint%2A>為了提高效率。  
+-   屬性變更會影響控制項的視覺顯示，如果呼叫<xref:System.Windows.Forms.Control.Invalidate%2A>方法 (控制項繼承自<xref:System.Windows.Forms.Control>) 從`set`存取子。 <xref:System.Windows.Forms.Control.Invalidate%2A> 依序呼叫<xref:System.Windows.Forms.Control.OnPaint%2A>方法，這個方法會重新繪製控制項。 多個呼叫<xref:System.Windows.Forms.Control.Invalidate%2A>導致呼叫一次<xref:System.Windows.Forms.Control.OnPaint%2A>為了提高效率。  
   
 -   .NET Framework Class Library 提供一般資料型別的轉換器，例如整數、十進位數字、布林值和其他型別。 型別轉換器的用途通常是將字串轉換成值 (從字串資料至其他資料型別)。 一般資料型別與預設型別轉換器相關聯，可將值轉換成字串，也可將字串轉換成適當的資料型別。 如果您定義的屬性 (Property) 是自訂 (亦即非標準) 資料型別，您必須套用屬性 (Attribute)，指定要與該屬性 (Property) 相關聯的型別轉換器。 您也可以使用屬性 (Attribute)，將自訂 UI 類型編輯器與屬性 (Property) 相關聯。 UI 類型編輯器提供使用者介面來編輯屬性或資料型別。 色彩選擇器是 UI 類型編輯器的一個例子。 本主題最後會提供屬性的範例。  
   
@@ -131,7 +119,7 @@ public int Value {
 }  
 ```  
   
-## <a name="see-also"></a>請參閱  
+## <a name="see-also"></a>另請參閱  
  [Windows Forms 控制項中的屬性](../../../../docs/framework/winforms/controls/properties-in-windows-forms-controls.md)  
  [使用 ShouldSerialize 和 Reset 方法定義預設值](../../../../docs/framework/winforms/controls/defining-default-values-with-the-shouldserialize-and-reset-methods.md)  
  [屬性變更事件](../../../../docs/framework/winforms/controls/property-changed-events.md)  

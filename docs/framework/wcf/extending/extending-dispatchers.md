@@ -1,33 +1,19 @@
 ---
-title: "擴充發送器"
-ms.custom: 
+title: 擴充發送器
 ms.date: 03/30/2017
-ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.technology:
-- dotnet-clr
-ms.tgt_pltfrm: 
-ms.topic: article
 helpviewer_keywords:
 - dispatcher extensions [WCF]
 ms.assetid: d0ad15ac-fa12-4f27-80e8-7ac2271e5985
-caps.latest.revision: 
-author: dotnet-bot
-ms.author: dotnetcontent
-manager: wpickett
-ms.workload:
-- dotnet
-ms.openlocfilehash: 4240a19401d97cd0636d13a94fd07ad4ef753388
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
-ms.translationtype: MT
+ms.openlocfilehash: bc700aefc3b50102dc0a3faabbbcd09c1c8fc4bc
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="extending-dispatchers"></a>擴充發送器
 發送器負責從基礎通道提取傳入訊息，將訊息轉譯成應用程式程式碼中的方法叫用，然後將結果傳回給呼叫者。 發送器擴充可讓您修改這個處理。  您可以實作可檢查或修改訊息或參數之內容的訊息或參數偵測器。  您可以變更訊息路由傳送到作業的方式，或提供其他特定功能。  
   
- 本主題會說明如何在 <xref:System.ServiceModel.Dispatcher.DispatchRuntime> 服務應用程式中使用 <xref:System.ServiceModel.Dispatcher.DispatchOperation> 和 [!INCLUDE[indigo1](../../../../includes/indigo1-md.md)] 類別來修改發送器的預設執行行為，或者在從通道層傳送或擷取訊息、參數或傳回值之前或之後加以攔截或修改。 如需對等用戶端執行階段訊息處理的詳細資訊，請參閱[擴充用戶端](../../../../docs/framework/wcf/extending/extending-clients.md)。 若要了解角色的<xref:System.ServiceModel.IExtensibleObject%601>類型播放中的 存取不同執行階段的自訂物件之間共用的狀態，請參閱[延伸的物件](../../../../docs/framework/wcf/extending/extensible-objects.md)。  
+ 本主題描述如何使用<xref:System.ServiceModel.Dispatcher.DispatchRuntime>和<xref:System.ServiceModel.Dispatcher.DispatchOperation>類別中的 Windows Communication Foundation (WCF) 服務來修改發送器的預設執行行為，或攔截或修改訊息、 參數或傳回的應用程式之前或之後傳送或擷取它們在通道層中的值。 如需對等用戶端執行階段訊息處理的詳細資訊，請參閱[擴充用戶端](../../../../docs/framework/wcf/extending/extending-clients.md)。 若要了解角色的<xref:System.ServiceModel.IExtensibleObject%601>類型播放中的 存取不同執行階段的自訂物件之間共用的狀態，請參閱[延伸的物件](../../../../docs/framework/wcf/extending/extensible-objects.md)。  
   
 ## <a name="dispatchers"></a>發送器  
  服務模型層會在開發人員的程式設計模型與一般稱為通道層的基礎訊息交換之間執行轉換。 在 [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] 中，通道發送器和端點發送器 (分別為 <xref:System.ServiceModel.Dispatcher.ChannelDispatcher> 和 <xref:System.ServiceModel.Dispatcher.EndpointDispatcher>) 是負責接受新通道、接收訊息、作業分派和叫用以及回應處理的服務元件。 發送器物件是指接收物件，但是雙工服務中的回呼合約實作也會公開其發送器物件，以進行檢查、修改或擴充。  
@@ -140,7 +126,7 @@ ms.lasthandoff: 12/22/2017
   
 -   <xref:System.ServiceModel.Dispatcher.DispatchOperation.ParameterInspectors%2A> 屬性可以讓您插入可用來檢查或修改參數和傳回值的自訂參數偵測器。  
   
-## <a name="see-also"></a>請參閱  
+## <a name="see-also"></a>另請參閱  
  <xref:System.ServiceModel.Dispatcher.DispatchRuntime>  
  <xref:System.ServiceModel.Dispatcher.DispatchOperation>  
  [如何：檢查及修改服務中的訊息](../../../../docs/framework/wcf/extending/how-to-inspect-and-modify-messages-on-the-service.md)  

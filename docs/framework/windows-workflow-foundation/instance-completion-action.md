@@ -1,23 +1,12 @@
 ---
-title: "執行個體完成動作"
-ms.custom: 
+title: 執行個體完成動作
 ms.date: 03/30/2017
-ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.tgt_pltfrm: 
-ms.topic: article
 ms.assetid: 90cc99d2-9fef-42fd-bcbf-a56917993721
-caps.latest.revision: "8"
-author: dotnet-bot
-ms.author: dotnetcontent
-manager: wpickett
-ms.workload: dotnet
-ms.openlocfilehash: 3fa2eb347bc69a89545e6145154306f012e23490
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.openlocfilehash: 646015fbcdb7c734ae8584c7ca3979d64b81339f
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="instance-completion-action"></a>執行個體完成動作
 **執行個體完成動作**SQL 工作流程執行個體存放區的屬性可讓您指定是否資料和中繼資料的工作流程執行個體從持續性資料庫完成後，刪除執行個體。 這個屬性允許的值包括**DeleteAll**和**DeleteNothing**。 下列清單描述這些選項：  

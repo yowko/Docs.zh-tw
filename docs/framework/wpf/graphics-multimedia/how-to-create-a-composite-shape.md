@@ -1,13 +1,6 @@
 ---
-title: "如何：建立複合圖案"
-ms.custom: 
+title: 如何：建立複合圖案
 ms.date: 03/30/2017
-ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.technology: dotnet-wpf
-ms.tgt_pltfrm: 
-ms.topic: article
 dev_langs:
 - csharp
 - vb
@@ -16,16 +9,11 @@ helpviewer_keywords:
 - composite shapes [WPF]
 - graphics [WPF], composite shapes
 ms.assetid: 8e5c7ef4-d7ed-4c43-afc9-ca01325c300b
-caps.latest.revision: "10"
-author: dotnet-bot
-ms.author: dotnetcontent
-manager: wpickett
-ms.workload: dotnet
-ms.openlocfilehash: 2ecb4ecdc5c83cbb6f2b4faee9cb3654939bd346
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.openlocfilehash: 6bb2a8a32938682af52343b971b840dbed16bcef
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="how-to-create-a-composite-shape"></a>如何：建立複合圖案
 這個範例示範如何建立使用複合圖形<xref:System.Windows.Media.Geometry>物件，並顯示它們使用<xref:System.Windows.Shapes.Path>項目。 在下列範例中， <xref:System.Windows.Media.LineGeometry>， <xref:System.Windows.Media.EllipseGeometry>，和<xref:System.Windows.Media.RectangleGeometry>搭配<xref:System.Windows.Media.GeometryGroup>建立複合的圖形。 使用再繪製幾何<xref:System.Windows.Shapes.Path>項目。  

@@ -1,11 +1,7 @@
 ---
-title: "ExecQueryWmi 函式 （Unmanaged API 參考）"
-description: "ExecQueryWmi 函式會執行查詢以擷取物件。"
+title: ExecQueryWmi 函式 （Unmanaged API 參考）
+description: ExecQueryWmi 函式會執行查詢以擷取物件。
 ms.date: 11/06/2017
-ms.prod: .net-framework
-ms.technology:
-- dotnet-clr
-ms.topic: reference
 api_name:
 - ExecQueryWmi
 api_location:
@@ -20,14 +16,11 @@ topic_type:
 - Reference
 author: rpetrusha
 ms.author: ronpet
-manager: wpickett
-ms.workload:
-- dotnet
-ms.openlocfilehash: 872109cb0472a8404c492c2867429fe783f898eb
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.openlocfilehash: b482f2ca2e2d5c06e69945adb71aa6c0f5d26465
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="execquerywmi-function"></a>ExecQueryWmi 函式
 執行查詢以擷取物件。  
@@ -69,7 +62,7 @@ HRESULT ExecQueryWmi (
 | `WBEM_FLAG_RETURN_IMMEDIATELY` | 0x10 | 旗標會造成半同步呼叫。 |
 | `WBEM_FLAG_FORWARD_ONLY` | 0x20 | 函數會傳回順向的列舉值。 一般而言，順向的列舉程式會更快，並使用較少的記憶體比傳統的列舉值，但不是允許呼叫[複製](clone.md)。 |
 | `WBEM_FLAG_BIDIRECTIONAL` | 0 | WMI 會保留 enumration 中物件的指標，直到釋放為止。 | 
-| `WBEM_FLAG_ENSURE_LOCATABLE` | 0x100 | 任何傳回的物件會有足夠的資訊在其中因此可確保該系統屬性，例如**__PATH**， **__RELPATH**，和**GET-WMIOBJECT**，不是`null`。 |
+| `WBEM_FLAG_ENSURE_LOCATABLE` | 0x100 | 任何傳回的物件會有足夠的資訊在其中因此可確保該系統屬性，例如 **__PATH**， **__RELPATH**，和**GET-WMIOBJECT**，不是`null`。 |
 | `WBEM_FLAG_PROTOTYPE` | 2 | 這個旗標用於建立原型。 它不會執行查詢，並改為傳回看起來像一般的結果物件的物件。 |
 | `WBEM_FLAG_DIRECT_READ` | 0x200 | 原因直接存取提供者的指定，而不考慮其父類別或任何子類別的類別。 |
 
@@ -84,7 +77,7 @@ HRESULT ExecQueryWmi (
 `authLevel`  
 [in]授權層級。
 
-`impLevel`[in]模擬等級。
+`impLevel` [in]模擬等級。
 
 `pCurrentNamespace`   
 [in]指標[IWbemServices](https://msdn.microsoft.com/library/aa392093(v=vs.85).aspx)物件，代表目前的命名空間。
@@ -131,7 +124,7 @@ HRESULT ExecQueryWmi (
   
  **標頭：** WMINet_Utils.idl  
   
- **.NET framework 版本：**[!INCLUDE[net_current_v472plus](../../../../includes/net-current-v472plus.md)]  
+ **.NET framework 版本：** [!INCLUDE[net_current_v472plus](../../../../includes/net-current-v472plus.md)]  
   
 ## <a name="see-also"></a>另請參閱  
 [WMI 和效能計數器 （Unmanaged API 參考）](index.md)

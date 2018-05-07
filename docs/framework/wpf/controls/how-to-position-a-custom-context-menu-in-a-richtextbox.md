@@ -1,13 +1,6 @@
 ---
-title: "操作說明：在 RichTextBox 中放置自訂操作功能表"
-ms.custom: 
+title: 操作說明：在 RichTextBox 中放置自訂操作功能表
 ms.date: 03/30/2017
-ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.technology: dotnet-wpf
-ms.tgt_pltfrm: 
-ms.topic: article
 dev_langs:
 - csharp
 - vb
@@ -17,16 +10,11 @@ helpviewer_keywords:
 - RichTextBox control [WPF], positioning custom context menus
 - context menus [WPF], positioning
 ms.assetid: bf77c930-a546-4573-9a56-9af345ba189a
-caps.latest.revision: "7"
-author: dotnet-bot
-ms.author: dotnetcontent
-manager: wpickett
-ms.workload: dotnet
-ms.openlocfilehash: 4651953ec8ae6373b9a6946b31f96213bec570cc
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.openlocfilehash: bde28cdb87bdaef3198d1efd3059fed3d0ae0ce2
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="how-to-position-a-custom-context-menu-in-a-richtextbox"></a>操作說明：在 RichTextBox 中放置自訂操作功能表
 這個範例示範如何將自訂內容功能表<xref:System.Windows.Controls.RichTextBox>。  
@@ -45,6 +33,6 @@ ms.lasthandoff: 12/22/2017
  [!code-csharp[RichTextBox_ContextMenu#_ListenerBody](../../../../samples/snippets/csharp/VS_Snippets_Wpf/RichTextBox_ContextMenu/CSharp/app.xaml.cs#_listenerbody)]
  [!code-vb[RichTextBox_ContextMenu#_ListenerBody](../../../../samples/snippets/visualbasic/VS_Snippets_Wpf/RichTextBox_ContextMenu/VisualBasic/app.xaml.vb#_listenerbody)]  
   
-## <a name="see-also"></a>請參閱  
+## <a name="see-also"></a>另請參閱  
  [RichTextBox 概觀](../../../../docs/framework/wpf/controls/richtextbox-overview.md)  
  [TextBox 概觀](../../../../docs/framework/wpf/controls/textbox-overview.md)

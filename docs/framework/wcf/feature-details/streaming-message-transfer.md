@@ -1,29 +1,15 @@
 ---
 title: 資料流訊息傳輸
-ms.custom: ''
 ms.date: 03/30/2017
-ms.prod: .net-framework
-ms.reviewer: ''
-ms.suite: ''
-ms.technology:
-- dotnet-clr
-ms.tgt_pltfrm: ''
-ms.topic: article
 ms.assetid: 72a47a51-e5e7-4b76-b24a-299d51e0ae5a
-caps.latest.revision: 13
-author: dotnet-bot
-ms.author: dotnetcontent
-manager: wpickett
-ms.workload:
-- dotnet
-ms.openlocfilehash: ed2aa57e044910ab9fd9c60dfd47eb7aaa0ce75e
-ms.sourcegitcommit: 94d33cadc5ff81d2ac389bf5f26422c227832052
+ms.openlocfilehash: 340c903e2cb34373514ea2f739cab57dc620df5d
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/30/2018
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="streaming-message-transfer"></a>資料流訊息傳輸
-[!INCLUDE[indigo1](../../../../includes/indigo1-md.md)] 傳輸支援兩種傳輸訊息的模式：  
+Windows Communication Foundation (WCF) 傳輸的傳輸訊息支援兩種模式：  
   
 -   緩衝處理的傳輸會將整個訊息保留在記憶體緩衝區中，直到完成傳輸作業為止。 必須等到緩衝處理的訊息完全傳送出去後，接收者才能開始讀取。  
   
@@ -52,7 +38,7 @@ ms.lasthandoff: 04/30/2018
   
  在資料流處理的傳輸中發生的作業，會與最多一個輸入或輸出參數簽訂合約。 此參數會對應至整個訊息本文，而且必須是一個 <xref:System.ServiceModel.Channels.Message>、<xref:System.IO.Stream> 的衍生型別，或是 <xref:System.Xml.Serialization.IXmlSerializable> 實作。 擁有作業的傳回值，相當於擁有輸出參數。  
   
- 某些 [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] 功能，例如可靠的訊息傳送、交易，與 SOAP 訊息層級安全性，都需仰賴緩衝處理的訊息來進行傳輸。 使用這些功能可能減少或消除使用資料流處理模式而獲得的效能優勢。 若要保護資料流處理傳輸的安全，請單純使用傳輸層級安全性，或是使用傳輸層級安全性加上僅限於驗證的訊息安全性。  
+ 某些 WCF 功能，例如可信賴傳訊、 交易和 SOAP 訊息層級安全性，需仰賴緩衝處理訊息來進行傳輸。 使用這些功能可能減少或消除使用資料流處理模式而獲得的效能優勢。 若要保護資料流處理傳輸的安全，請單純使用傳輸層級安全性，或是使用傳輸層級安全性加上僅限於驗證的訊息安全性。  
   
  SOAP 標頭一律經過緩衝處理，就算將傳輸模式設為資料流處理也是一樣。 訊息的標頭不得超出 `MaxBufferSize` 傳輸配額的大小。 如需有關這項設定的詳細資訊，請參閱[傳輸配額](../../../../docs/framework/wcf/feature-details/transport-quotas.md)。  
   

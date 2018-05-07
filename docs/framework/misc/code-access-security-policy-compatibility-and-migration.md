@@ -1,23 +1,17 @@
 ---
-title: "程式碼存取安全性原則相容性和移轉"
+title: 程式碼存取安全性原則相容性和移轉
 ms.date: 03/30/2017
-ms.prod: .net-framework
-ms.technology: dotnet-clr
-ms.topic: article
 helpviewer_keywords:
 - policy migration, compatibility
 - CLR poliicy migration
 ms.assetid: 19cb4d39-e38a-4262-b507-458915303115
-caps.latest.revision: "15"
 author: mairaw
 ms.author: mairaw
-manager: wpickett
-ms.workload: dotnet
-ms.openlocfilehash: 9feb4553b1b9e013c5c299d867d74499a09e1434
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.openlocfilehash: a5007e07340621fa76dc37a48eaf8c17bc048339
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="code-access-security-policy-compatibility-and-migration"></a>程式碼存取安全性原則相容性和移轉
 [!INCLUDE[net_security_note](../../../includes/net-security-note-md.md)]  
@@ -146,6 +140,6 @@ ms.lasthandoff: 12/22/2017
 </configuration>  
 ```  
   
-## <a name="see-also"></a>請參閱  
+## <a name="see-also"></a>另請參閱  
  [如何：在沙箱中執行部分信任的程式碼](../../../docs/framework/misc/how-to-run-partially-trusted-code-in-a-sandbox.md)  
  [安全程式碼撰寫方針](../../standard/security/secure-coding-guidelines.md)

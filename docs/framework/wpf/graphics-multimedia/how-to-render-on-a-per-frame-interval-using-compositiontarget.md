@@ -1,13 +1,6 @@
 ---
-title: "操作說明：使用 CompositionTarget 在單格間隔轉譯"
-ms.custom: 
+title: 操作說明：使用 CompositionTarget 在單格間隔轉譯
 ms.date: 03/30/2017
-ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.technology: dotnet-wpf
-ms.tgt_pltfrm: 
-ms.topic: article
 dev_langs:
 - csharp
 - vb
@@ -15,21 +8,16 @@ helpviewer_keywords:
 - CompositionTarget objects [WPF], rendering per frame
 - rendering per frame using CompositionTarget objects [WPF]
 ms.assetid: 701246cd-66b7-4d69-ada9-17b3b433d95d
-caps.latest.revision: "12"
-author: dotnet-bot
-ms.author: dotnetcontent
-manager: wpickett
-ms.workload: dotnet
-ms.openlocfilehash: eb7e917c59f11ed78f8d44fa4b674d8d572f3623
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.openlocfilehash: 7c080c6deca63eacdf0e1123f4ca8bbb495ed9ca
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="how-to-render-on-a-per-frame-interval-using-compositiontarget"></a>操作說明：使用 CompositionTarget 在單格間隔轉譯
 [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] 動畫引擎提供許多建立畫面型動畫的功能。 不過，有些應用程式案例需要依據每個畫面進行更細微的控制。 <xref:System.Windows.Media.CompositionTarget>物件可讓您建立自訂個別畫面格回呼為基礎的動畫。  
   
- <xref:System.Windows.Media.CompositionTarget>是代表繪製您的應用程式的顯示介面的靜態類別。 <xref:System.Windows.Media.CompositionTarget.Rendering>應用程式的場景會繪製每次引發事件。 轉譯畫面播放速率是每秒繪製場景的次數。  
+ <xref:System.Windows.Media.CompositionTarget> 是代表繪製您的應用程式的顯示介面的靜態類別。 <xref:System.Windows.Media.CompositionTarget.Rendering>應用程式的場景會繪製每次引發事件。 轉譯畫面播放速率是每秒繪製場景的次數。  
   
 > [!NOTE]
 >  完整的程式碼範例使用<xref:System.Windows.Media.CompositionTarget>，請參閱[使用 CompositionTarget 範例](http://go.microsoft.com/fwlink/?LinkID=160045)。  
@@ -51,6 +39,6 @@ ms.lasthandoff: 12/22/2017
   
  新增或移除轉譯<xref:System.EventHandler>時引發事件的委派會延遲到事件完成後引發。 這是的方式一致<xref:System.MulticastDelegate>-已處理 Common Language Runtime (CLR) 型的事件。 另請注意，不保證會以特定的順序呼叫轉譯事件。 如果您有多個<xref:System.EventHandler>委派依賴以特定順序，您應該註冊單一<xref:System.Windows.Media.CompositionTarget.Rendering>事件和多工處理的委派中的正確順序自己。  
   
-## <a name="see-also"></a>請參閱  
+## <a name="see-also"></a>另請參閱  
  <xref:System.Windows.Media.CompositionTarget>  
  [WPF 圖形轉譯概觀](../../../../docs/framework/wpf/graphics-multimedia/wpf-graphics-rendering-overview.md)

@@ -1,13 +1,6 @@
 ---
-title: "如何：使用 Windows Form Label 控制項建立便捷鍵"
-ms.custom: 
+title: 如何：使用 Windows Form Label 控制項建立便捷鍵
 ms.date: 03/30/2017
-ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.technology: dotnet-winforms
-ms.tgt_pltfrm: 
-ms.topic: article
 dev_langs:
 - csharp
 - vb
@@ -24,16 +17,11 @@ helpviewer_keywords:
 - keyboard shortcuts [Windows Forms], creating for controls
 - access keys [Windows Forms], Windows Forms
 ms.assetid: 5ee8f823-80be-4a4f-96a4-412671e2e306
-caps.latest.revision: "11"
-author: dotnet-bot
-ms.author: dotnetcontent
-manager: wpickett
-ms.workload: dotnet
-ms.openlocfilehash: 6a856090a76f484c21c1d9982d67e9fdf21e8451
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.openlocfilehash: fc9592981f3d926b2b5b85b6869da13dc644e7a0
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="how-to-create-access-keys-with-windows-forms-label-controls"></a>如何：使用 Windows Form Label 控制項建立便捷鍵
 Windows Form<xref:System.Windows.Forms.Label>控制項可以用來定義其他控制項的便捷鍵。 當您定義便捷鍵的標籤控制項中時，使用者可以按 ALT 鍵加上您將焦點移至定位順序中在它後面的控制項，將指定的字元。 因為標籤不會收到焦點，焦點會自動移到定位順序中的下一個控制項。 使用這項技術，將文字方塊、 下拉式方塊、 清單方塊和資料格的存取金鑰。  
@@ -74,7 +62,7 @@ Windows Form<xref:System.Windows.Forms.Label>控制項可以用來定義其他�
     label2->Text = "&Copy && Paste";  
     ```  
   
-## <a name="see-also"></a>請參閱  
+## <a name="see-also"></a>另請參閱  
  [操作說明：調整 Windows Forms Label 控制項大小以適合其內容](../../../../docs/framework/winforms/controls/how-to-size-a-windows-forms-label-control-to-fit-its-contents.md)  
  [Label 控制項概觀](../../../../docs/framework/winforms/controls/label-control-overview-windows-forms.md)  
  [Label 控制項](../../../../docs/framework/winforms/controls/label-control-windows-forms.md)

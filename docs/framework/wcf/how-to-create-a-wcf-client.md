@@ -1,32 +1,18 @@
 ---
 title: HOW TO：建立 Windows Communication Foundation 用戶端
-ms.custom: ''
 ms.date: 03/30/2017
-ms.prod: .net-framework
-ms.reviewer: ''
-ms.suite: ''
-ms.technology:
-- dotnet-clr
-ms.tgt_pltfrm: ''
-ms.topic: article
 helpviewer_keywords:
 - clients [WCF], running
 - WCF clients [WCF], running
 ms.assetid: a67884cc-1c4b-416b-8c96-5c954099f19f
-caps.latest.revision: ''
-author: dotnet-bot
-ms.author: dotnetcontent
-manager: wpickett
-ms.workload:
-- dotnet
-ms.openlocfilehash: 2591cad6354ec40f1fb6ead265c84a67adf3eec8
-ms.sourcegitcommit: 15316053918995cc1380163a7d7e7edd5c44e6d7
-ms.translationtype: MT
+ms.openlocfilehash: 962f1255f3c759d623850678005eff138353cc80
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 03/19/2018
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="how-to-create-a-windows-communication-foundation-client"></a>HOW TO：建立 Windows Communication Foundation 用戶端
-這是在建立 [!INCLUDE[indigo1](../../../includes/indigo1-md.md)] 應用程式時，必須進行的六個工作中的第四個。 六個工作的概觀，請參閱[入門教學課程](../../../docs/framework/wcf/getting-started-tutorial.md)主題。  
+這是建立 Windows Communication Foundation (WCF) 應用程式所需的六個工作的第四個。 六個工作的概觀，請參閱[入門教學課程](../../../docs/framework/wcf/getting-started-tutorial.md)主題。  
   
  本主題會說明如何從 [!INCLUDE[indigo2](../../../includes/indigo2-md.md)] 服務擷取中繼資料，以建立可以存取服務的 [!INCLUDE[indigo2](../../../includes/indigo2-md.md)] Proxy。 這個工作是使用 Visual Studio 提供的 [加入服務參考] 功能來完成。 這個工具會從服務的 MEX 端點取得中繼資料，並以您所選擇的語言 (預設為 C#) 產生用戶端 Proxy 的 Managed 原始程式碼檔。 除了建立用戶端 Proxy，此工具也會建立或更新用戶端的組態檔，讓用戶端應用程式在其中一個端點與服務連線。  
   
@@ -40,15 +26,15 @@ ms.lasthandoff: 03/19/2018
   
 ### <a name="to-create-a-windows-communication-foundation-client"></a>若要建立 Windows Communication Foundation 用戶端  
   
-1.  以滑鼠右鍵按一下 開始使用的方案，選取 建立新的主控台應用程式專案**新增**，**新專案**。 在**加入新的專案**對話方塊左側的對話方塊中，選取**Windows**下**C#**或**VB**。 在對話方塊中間區段選取**主控台應用程式**。 將專案命名為 `GettingStartedClient`。  
+1.  以滑鼠右鍵按一下 開始使用的方案，選取 建立新的主控台應用程式專案**新增**，**新專案**。 在**加入新的專案**對話方塊左側的對話方塊中，選取**Windows**下**C#** 或**VB**。 在對話方塊中間區段選取**主控台應用程式**。 將專案命名為 `GettingStartedClient`。  
   
-2.  上按一下滑鼠右鍵，將 [gettingstartedclient] 專案的目標 framework 設定為.NET Framework 4.5 **GettingStartedClient**在 [方案總管] 中，然後選取**屬性**。 下拉式方塊中標示為**目標 Framework**選取**.NET Framework 4.5**。 設定目標 framework VB 專案的方式稍有不同，請在 GettingStartedClient 專案屬性對話方塊，按一下**編譯**畫面中，左側索引標籤，然後按一下 **進階編譯選項**位於對話方塊左下角的按鈕。 然後選取**.NET Framework 4.5**下拉式方塊中標示為**目標 Framework**。  
+2.  上按一下滑鼠右鍵，將 [gettingstartedclient] 專案的目標 framework 設定為.NET Framework 4.5 **GettingStartedClient**在 [方案總管] 中，然後選取**屬性**。 下拉式方塊中標示為**目標 Framework**選取 **.NET Framework 4.5**。 設定目標 framework VB 專案的方式稍有不同，請在 GettingStartedClient 專案屬性對話方塊，按一下**編譯**畫面中，左側索引標籤，然後按一下 **進階編譯選項**位於對話方塊左下角的按鈕。 然後選取 **.NET Framework 4.5**下拉式方塊中標示為**目標 Framework**。  
   
      設定目標 framework 會導致 Visual Studio 2011 重新載入該方案，請按**確定**出現提示時。  
   
 3.  將 System.ServiceModel 的參考加入至 gettingstartedclient 專案，以滑鼠右鍵按一下**參考**在方案總管，然後選取 gettingstartedclient 專案下的資料夾**新增**參考。 在**加入參考**對話方塊中，選取**Framework**對話方塊的左側。 在 [搜尋組件] 文字方塊中輸入 `System.ServiceModel`。 在對話方塊中間區段選取**System.ServiceModel**，按一下 [**新增**按鈕，然後按一下**關閉**] 按鈕。 按一下以儲存方案**全部儲存**主功能表下的按鈕。  
   
-4.  接著您要將服務參考加入至計算機服務。 您必須先啟動 GettingStartedHost 主控台應用程式，才能執行此作業。 一旦主機在執行您可以以滑鼠右鍵按一下方案總管 中 gettingstartedclient 專案底下的 參考 資料夾，並選取加入服務參考，然後輸入下列 URL 中的 加入服務參考 對話方塊的 位址 方塊中： 超連結 "http://localhost:8000/ServiceModelSamples/Service" http://localhost:8000/ServiceModelSamples/Service，然後按一下**移** 按鈕。 CalculatorService 接著應該會顯示在 [服務] 清單方塊中，請按兩下 [CalculatorService]，其將展開並顯示服務所實作的服務合約。 保留預設命名空間，並按一下**確定** 按鈕。  
+4.  接著您要將服務參考加入至計算機服務。 您必須先啟動 GettingStartedHost 主控台應用程式，才能執行此作業。 一旦主機在執行您可以以滑鼠右鍵按一下方案總管 中 gettingstartedclient 專案底下的 參考 資料夾，並選取加入服務參考，然後輸入下列 URL 中的 加入服務參考 對話方塊的 位址 方塊中： 超連結"http://localhost:8000/ServiceModelSamples/Service"http://localhost:8000/ServiceModelSamples/Service按一下**移** 按鈕。 CalculatorService 接著應該會顯示在 [服務] 清單方塊中，請按兩下 [CalculatorService]，其將展開並顯示服務所實作的服務合約。 保留預設命名空間，並按一下**確定** 按鈕。  
   
      當您使用 Visual Studio 加入服務的參考時，新項目將會在 [方案總管] 中 [GettingStartedClient] 專案底下的 [服務參考] 資料夾下方出現。  如果您使用[ServiceModel Metadata Utility Tool (Svcutil.exe)](../../../docs/framework/wcf/servicemodel-metadata-utility-tool-svcutil-exe.md)將產生的原始程式碼檔和 app.config 檔案的工具。  
   

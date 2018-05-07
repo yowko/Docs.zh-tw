@@ -1,24 +1,12 @@
 ---
-title: "ADO.NET 中的並存執行"
-ms.custom: 
+title: ADO.NET 中的並存執行
 ms.date: 03/30/2017
-ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.technology: dotnet-ado
-ms.tgt_pltfrm: 
-ms.topic: article
 ms.assetid: 9f9ba96d-9f89-4f65-bb2f-6860879f4393
-caps.latest.revision: "6"
-author: douglaslMS
-ms.author: douglasl
-manager: craigg
-ms.workload: dotnet
-ms.openlocfilehash: bdb12ce6f697bbc42052e35c252c9cad6a5e962e
-ms.sourcegitcommit: ed26cfef4e18f6d93ab822d8c29f902cff3519d1
+ms.openlocfilehash: 793a48966192326e2a1273c6ea4b9c9eddda76fa
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 01/17/2018
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="side-by-side-execution-in-adonet"></a>ADO.NET 中的並存執行
 在 [!INCLUDE[dnprdnshort](../../../../includes/dnprdnshort-md.md)] 中，並存執行是指在安裝多個 [!INCLUDE[dnprdnshort](../../../../includes/dnprdnshort-md.md)] 版本的電腦上執行應用程式 (單獨使用針對編譯該應用程式所用的版本) 的能力。 如需設定來並行執行的詳細資訊，請參閱[-並存執行](../../../../docs/framework/deployment/side-by-side-execution.md)。  
@@ -75,7 +63,7 @@ SELECT * FROM dbo.Customers;
 SET NOCOUNT OFF;  
 ```  
   
-## <a name="see-also"></a>請參閱  
+## <a name="see-also"></a>另請參閱  
  [ADO.NET 概觀](../../../../docs/framework/data/adonet/ado-net-overview.md)  
  [在 ADO.NET 中擷取和修改資料](../../../../docs/framework/data/adonet/retrieving-and-modifying-data.md)  
  [ADO.NET Managed 提供者和 DataSet 開發人員中心](http://go.microsoft.com/fwlink/?LinkId=217917)

@@ -1,26 +1,12 @@
 ---
 title: 寄不出的信件佇列
-ms.custom: ''
 ms.date: 03/30/2017
-ms.prod: .net-framework
-ms.reviewer: ''
-ms.suite: ''
-ms.technology:
-- dotnet-clr
-ms.tgt_pltfrm: ''
-ms.topic: article
 ms.assetid: ff664f33-ad02-422c-9041-bab6d993f9cc
-caps.latest.revision: 35
-author: dotnet-bot
-ms.author: dotnetcontent
-manager: wpickett
-ms.workload:
-- dotnet
-ms.openlocfilehash: 9892579633103f1e7a6612c09865c91c559df34c
-ms.sourcegitcommit: 2042de78fcdceebb6b8ac4b7a292b93e8782cbf5
+ms.openlocfilehash: 9f92aeb02d997820fa2955419a3cdcf1c4369b45
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/27/2018
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="dead-letter-queues"></a>寄不出的信件佇列
 這個範例示範如何處理已傳遞失敗的訊息。 它基礎[交易 MSMQ 繫結](../../../../docs/framework/wcf/samples/transacted-msmq-binding.md)範例。 這個範例會使用 `netMsmqBinding` 繫結。 這個服務是自我裝載的主控台應用程式，可讓您觀察接收佇列訊息的服務。  
@@ -182,7 +168,7 @@ public void SubmitPurchaseOrder(PurchaseOrder po)
 }
 ```
 
- 寄不出的信件佇列中的訊息是針對處理訊息之服務所發出的訊息。 因此，當寄不出的信件訊息服務從佇列讀取訊息時，[!INCLUDE[indigo1](../../../../includes/indigo1-md.md)] 通道層會發覺端點中有不相符的情況，從而不分派訊息。 在本例中，訊息是針對訂單處理服務發出的，但是會由寄不出的信件訊息服務接收。 為了接收針對不同端點發出的訊息，在 `ServiceBehavior` 中會指定用來比對所有位址的位址篩選條件。 若要順利處理從寄不出的信件佇列中讀取的訊息，就必須這麼做。  
+ 寄不出的信件佇列中的訊息是針對處理訊息之服務所發出的訊息。 因此，當寄不出的信件訊息服務從佇列讀取訊息，Windows Communication Foundation (WCF) 通道層會發覺端點中，而且不會分派訊息。 在本例中，訊息是針對訂單處理服務發出的，但是會由寄不出的信件訊息服務接收。 為了接收針對不同端點發出的訊息，在 `ServiceBehavior` 中會指定用來比對所有位址的位址篩選條件。 若要順利處理從寄不出的信件佇列中讀取的訊息，就必須這麼做。  
   
  在這個範例中，如果失敗的原因是訊息逾時，寄不出的信件訊息服務將會重新傳送訊息。對於其他所有原因，則顯示傳遞失敗，如下列範例程式碼所示：  
 
@@ -370,7 +356,7 @@ Processing Purchase Order: 97897eff-f926-4057-a32b-af8fb11b9bf9
 >   
 >  `<InstallDrive>:\WF_WCF_Samples`  
 >   
->  如果此目錄不存在，請移至 [Windows Communication Foundation (WCF) and Windows Workflow Foundation (WF) Samples for .NET Framework 4  (適用於 .NET Framework 4 的 Windows Communication Foundation (WCF) 與 Windows Workflow Foundation (WF) 範例)](http://go.microsoft.com/fwlink/?LinkId=150780) ，以下載所有 [!INCLUDE[indigo1](../../../../includes/indigo1-md.md)] 和 [!INCLUDE[wf1](../../../../includes/wf1-md.md)] 範例。 此範例位於下列目錄。  
+>  如果此目錄不存在，請移至[Windows Communication Foundation (WCF) 和適用於.NET Framework 4 的 Windows Workflow Foundation (WF) 範例](http://go.microsoft.com/fwlink/?LinkId=150780)下載所有 Windows Communication Foundation (WCF) 和[!INCLUDE[wf1](../../../../includes/wf1-md.md)]範例。 此範例位於下列目錄。  
 >   
 >  `<InstallDrive>:\WF_WCF_Samples\WCF\Basic\Binding\Net\MSMQ\DeadLetter`  
   

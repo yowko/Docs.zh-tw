@@ -1,30 +1,18 @@
 ---
-title: "HOW TO：建立自訂授權原則"
-ms.custom: 
+title: HOW TO：建立自訂授權原則
 ms.date: 03/30/2017
-ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.technology: dotnet-clr
-ms.tgt_pltfrm: 
-ms.topic: article
 dev_langs:
 - csharp
 - vb
 ms.assetid: 05b0549b-882d-4660-b6f0-5678543e5475
-caps.latest.revision: "9"
-author: dotnet-bot
-ms.author: dotnetcontent
-manager: wpickett
-ms.workload: dotnet
-ms.openlocfilehash: 1af5e2cbf7c124e490fea04deadd1afffcde5cbb
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
-ms.translationtype: MT
+ms.openlocfilehash: 83b796c76887c6ba30ddb3c985ee43ab8dce2ec9
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="how-to-create-a-custom-authorization-policy"></a>HOW TO：建立自訂授權原則
-[!INCLUDE[indigo1](../../../../includes/indigo1-md.md)] 中的識別模型基礎結構支援宣告架構的授權模型。 宣告會從權杖擷取出來 (可以選擇性地由自訂授權原則進行處理)，接著會放置到可隨後進行檢查以做出授權決策的 <xref:System.IdentityModel.Policy.AuthorizationContext>。 自訂原則可用於將來自傳入權杖的宣告轉換為應用程式所需要的宣告。 如此一來，應用程式層就可以和受 [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] 支援之不同權杖類型所服務之不同宣告的詳細資料達成隔離。 本主題會說明如何實作自訂授權原則，以及如何將該原則新增至服務所使用的原則集合。  
+識別模型基礎結構中 Windows Communication Foundation (WCF) 支援宣告型授權模型。 宣告會從權杖擷取出來 (可以選擇性地由自訂授權原則進行處理)，接著會放置到可隨後進行檢查以做出授權決策的 <xref:System.IdentityModel.Policy.AuthorizationContext>。 自訂原則可用於將來自傳入權杖的宣告轉換為應用程式所需要的宣告。 如此一來，應用程式層就可以和受 [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] 支援之不同權杖類型所服務之不同宣告的詳細資料達成隔離。 本主題會說明如何實作自訂授權原則，以及如何將該原則新增至服務所使用的原則集合。  
   
 ### <a name="to-implement-a-custom-authorization-policy"></a>實作自訂授權原則  
   
@@ -86,7 +74,7 @@ ms.lasthandoff: 12/22/2017
  [!code-csharp[c_CustomAuthPol#5](../../../../samples/snippets/csharp/VS_Snippets_CFX/c_customauthpol/cs/c_customauthpol.cs#5)]
  [!code-vb[c_CustomAuthPol#5](../../../../samples/snippets/visualbasic/VS_Snippets_CFX/c_customauthpol/vb/source.vb#5)]  
   
-## <a name="see-also"></a>請參閱  
+## <a name="see-also"></a>另請參閱  
  <xref:System.ServiceModel.ServiceAuthorizationManager>  
  [如何：比較宣告](../../../../docs/framework/wcf/extending/how-to-compare-claims.md)  
  [如何：為服務建立自訂授權管理員](../../../../docs/framework/wcf/extending/how-to-create-a-custom-authorization-manager-for-a-service.md)  

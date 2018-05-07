@@ -1,34 +1,22 @@
 ---
-title: "以組態為基礎的啟用"
-ms.custom: 
+title: 以組態為基礎的啟用
 ms.date: 03/30/2017
-ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.technology: dotnet-clr
-ms.tgt_pltfrm: 
-ms.topic: article
 ms.assetid: 21bb762e-c43e-4b0c-887b-5e434d665838
-caps.latest.revision: "26"
-author: dotnet-bot
-ms.author: dotnetcontent
-manager: wpickett
-ms.workload: dotnet
-ms.openlocfilehash: d520a46bc3380fc5dff76f5df866ae3411d5a6a7
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
-ms.translationtype: MT
+ms.openlocfilehash: 2829458d40e3efb180699122570b2775a90be9e6
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="configuration-based-activation"></a>以組態為基礎的啟用
-此範例示範如何在不需要 .svc 檔案的情況下啟動 [!INCLUDE[indigo1](../../../../includes/indigo1-md.md)] 服務。  
+這個範例示範如何啟用 Windows Communication Foundation (WCF) 服務，而不需要.svc 檔案。  
   
 > [!IMPORTANT]
 >  這些範例可能已安裝在您的電腦上。 請先檢查下列 (預設) 目錄，然後再繼續。  
 >   
 >  `<InstallDrive>:\WF_WCF_Samples`  
 >   
->  如果此目錄不存在，請移至 [Windows Communication Foundation (WCF) and Windows Workflow Foundation (WF) Samples for .NET Framework 4  (適用於 .NET Framework 4 的 Windows Communication Foundation (WCF) 與 Windows Workflow Foundation (WF) 範例)](http://go.microsoft.com/fwlink/?LinkId=150780) ，以下載所有 [!INCLUDE[indigo1](../../../../includes/indigo1-md.md)] 和 [!INCLUDE[wf1](../../../../includes/wf1-md.md)] 範例。 此範例位於下列目錄。  
+>  如果此目錄不存在，請移至[Windows Communication Foundation (WCF) 和適用於.NET Framework 4 的 Windows Workflow Foundation (WF) 範例](http://go.microsoft.com/fwlink/?LinkId=150780)下載所有 Windows Communication Foundation (WCF) 和[!INCLUDE[wf1](../../../../includes/wf1-md.md)]範例。 此範例位於下列目錄。  
 >   
 >  `<InstallDrive>:\WF_WCF_Samples\WCF\Basic\Services\Hosting\ConfigBasedActivation`  
   
@@ -71,7 +59,7 @@ ms.lasthandoff: 12/22/2017
   
 7.  按下 CTRL+SHIFT+A 來設定服務位址。  
   
-8.  將位址設定為 http://localhost/ServiceModelSamples/Calculator.svc。  
+8.  將位址設http://localhost/ServiceModelSamples/Calculator.svc。  
   
 9. 執行 `Add` 作業。 將 `n1` 參數的值設定為 10，並將 `n2` 參數的值設定為 15。  
   
@@ -89,5 +77,5 @@ ms.lasthandoff: 12/22/2017
   
 4.  若要在單一或跨電腦組態中執行範例時，請依照中的指示[執行 Windows Communication Foundation 範例](../../../../docs/framework/wcf/samples/running-the-samples.md)。  
   
-## <a name="see-also"></a>請參閱  
+## <a name="see-also"></a>另請參閱  
  [AppFabric 主控與持續性範例](http://go.microsoft.com/fwlink/?LinkId=193961)

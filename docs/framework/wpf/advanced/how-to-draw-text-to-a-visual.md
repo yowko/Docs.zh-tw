@@ -1,13 +1,6 @@
 ---
-title: "如何：繪製文字至視覺效果"
-ms.custom: 
+title: 如何：繪製文字至視覺效果
 ms.date: 03/30/2017
-ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.technology: dotnet-wpf
-ms.tgt_pltfrm: 
-ms.topic: article
 dev_langs:
 - csharp
 - vb
@@ -17,16 +10,11 @@ helpviewer_keywords:
 - text [WPF], drawing to visuals
 - drawing [WPF], text to visuals
 ms.assetid: fee4003c-e8a6-46ec-babd-2c7f4231a101
-caps.latest.revision: "11"
-author: dotnet-bot
-ms.author: dotnetcontent
-manager: wpickett
-ms.workload: dotnet
-ms.openlocfilehash: 765d2102bc4466c2b194e03c9688212e04005ca2
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.openlocfilehash: 4fbb0931ee7d17d4b3264de512353dc75caf070d
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="how-to-draw-text-to-a-visual"></a>如何：繪製文字至視覺效果
 下列範例顯示如何畫文字<xref:System.Windows.Media.DrawingVisual>使用<xref:System.Windows.Media.DrawingContext>物件。 繪製內容由呼叫<xref:System.Windows.Media.DrawingVisual.RenderOpen%2A>方法<xref:System.Windows.Media.DrawingVisual>物件。 您可以放入繪圖內容中繪製的圖形和文字。  

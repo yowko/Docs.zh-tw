@@ -1,14 +1,6 @@
 ---
-title: "ICorProfilerInfo4::InitializeCurrentThread 方法"
-ms.custom: 
+title: ICorProfilerInfo4::InitializeCurrentThread 方法
 ms.date: 03/30/2017
-ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.technology:
-- dotnet-clr
-ms.tgt_pltfrm: 
-ms.topic: reference
 api_name:
 - ICorProfilerInfo4::InitializeCurrentThread
 api_location:
@@ -23,17 +15,13 @@ helpviewer_keywords:
 ms.assetid: 18a3335c-8c75-476c-b6de-72c0bfedae5d
 topic_type:
 - apiref
-caps.latest.revision: 
 author: mairaw
 ms.author: mairaw
-manager: wpickett
-ms.workload:
-- dotnet
-ms.openlocfilehash: 4f3c261068b38861dca2633a490e46d9f44371d7
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.openlocfilehash: f5a4a6bc7b1e79068b11b099352cec64dd09f301
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="icorprofilerinfo4initializecurrentthread-method"></a>ICorProfilerInfo4::InitializeCurrentThread 方法
 初始化目前的執行緒之前後續程式碼剖析工具應用程式開發介面呼叫，在相同執行緒，因此可以避免發生死結。  
@@ -48,7 +36,7 @@ HRESULT InitializeCurrentThread ();
  我們建議您呼叫`InitializeCurrentThread`會呼叫程式碼剖析工具的任何執行緒上應用程式開發介面有暫止的執行緒。 這個方法通常由取樣分析工具，建立自己的執行緒來呼叫[icorprofilerinfo2:: Dostacksnapshot](../../../../docs/framework/unmanaged-api/profiling/icorprofilerinfo2-dostacksnapshot-method.md)方法，以執行堆疊會引導目標執行緒暫停。 藉由呼叫`InitializeCurrentThread`之後當分析工具會先建立取樣執行緒，分析工具可確保每個執行緒延遲初始設定，另外執行 CLR 的第一個呼叫期間`DoStackSnapshot`現在可能安全地當沒有其他執行緒都在暫止。  
   
 > [!NOTE]
->  `InitializeCurrentThread`未初始化事先完成的工作取得鎖定，鎖定，而且可能會發生死結。 呼叫`InitializeCurrentThread`時，才有任何暫止的執行緒。  
+>  `InitializeCurrentThread` 未初始化事先完成的工作取得鎖定，鎖定，而且可能會發生死結。 呼叫`InitializeCurrentThread`時，才有任何暫止的執行緒。  
   
 ## <a name="requirements"></a>需求  
  **平台：**看到[系統需求](../../../../docs/framework/get-started/system-requirements.md)。  
@@ -57,9 +45,9 @@ HRESULT InitializeCurrentThread ();
   
  **程式庫：** CorGuids.lib  
   
- **.NET framework 版本：**[!INCLUDE[net_current_v45plus](../../../../includes/net-current-v45plus-md.md)]  
+ **.NET framework 版本：** [!INCLUDE[net_current_v45plus](../../../../includes/net-current-v45plus-md.md)]  
   
-## <a name="see-also"></a>請參閱  
+## <a name="see-also"></a>另請參閱  
  [ICorProfilerInfo4 介面](../../../../docs/framework/unmanaged-api/profiling/icorprofilerinfo4-interface.md)  
  [分析介面](../../../../docs/framework/unmanaged-api/profiling/profiling-interfaces.md)  
  [程式碼剖析](../../../../docs/framework/unmanaged-api/profiling/index.md)

@@ -1,17 +1,12 @@
 ---
 title: 簽章 (F#)
 description: '了解如何使用 F # 簽章檔案，以容納 F # 程式元素，例如類型、 命名空間和模組的一組公開金鑰的簽章資訊。'
-author: cartermp
-ms.author: phcart
 ms.date: 05/16/2016
-ms.topic: language-reference
-ms.prod: dotnet-fsharp
-ms.devlang: fsharp
-ms.openlocfilehash: c98ac6c62fdcee51532a162596e99309a31802ec
-ms.sourcegitcommit: 03ee570f6f528a7d23a4221dcb26a9498edbdf8c
+ms.openlocfilehash: 04539a871dda9eedd1495e0e5b1f3f5026bae037
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/28/2018
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="signatures"></a>簽章
 

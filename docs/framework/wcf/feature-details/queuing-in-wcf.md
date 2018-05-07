@@ -1,49 +1,35 @@
 ---
 title: WCF 中的佇列
-ms.custom: ''
 ms.date: 03/30/2017
-ms.prod: .net-framework
-ms.reviewer: ''
-ms.suite: ''
-ms.technology:
-- dotnet-clr
-ms.tgt_pltfrm: ''
-ms.topic: article
 ms.assetid: e98d76ba-1acf-42cd-b137-0f8214661112
-caps.latest.revision: 21
-author: dotnet-bot
-ms.author: dotnetcontent
-manager: wpickett
-ms.workload:
-- dotnet
-ms.openlocfilehash: 8bf4a668fe882212da1c6626b66a4f55390a562f
-ms.sourcegitcommit: 94d33cadc5ff81d2ac389bf5f26422c227832052
+ms.openlocfilehash: 7f0a6700dba8eb844cc471704095b29c2a2c7937
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/30/2018
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="queuing-in-wcf"></a>WCF 中的佇列
-本節說明如何在 [!INCLUDE[indigo1](../../../../includes/indigo1-md.md)] 中使用佇列通訊。  
+本章節描述如何使用佇列的通訊中 Windows Communication Foundation (WCF)。  
   
 ## <a name="queues-as-a-wcf-transport-binding"></a>當做 WCF 傳輸繫結排入佇列  
- 在 [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] 中，合約會指定要交換的項目。 合約是一種與企業相關或應用程式特定的訊息交換。 繫結中會指定用來交換訊息 (或「如何交換」) 的機制。 [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] 中的繫結會封裝訊息交換的詳細資料。 這些繫結會公開組態旋鈕，讓使用者控制繫結所表示之傳輸或通訊協定的各個層面。 [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] 中的佇列會視為其他傳輸繫結處理，這對於許多佇列應用程式來說十分有利。 目前許多佇列應用程式都是透過其他遠端程序呼叫 (RPC) 型的分散式應用程式來撰寫，導致在遵循上和維護上都有難度。 有了 [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)]，撰寫分散式應用程式的樣式就會一致許多，遵循和維護時也更為容易。 另外，藉由根據商務邏輯獨立析出交換機制，您可以更輕鬆地設定傳輸或進行變更，而不會影響應用程式特定的程式碼。 下圖會說明使用 MSMQ 做為傳輸之 WCF 服務和用戶端的結構。  
+ 在 WCF 中，合約會指定交換的功能。 合約是一種與企業相關或應用程式特定的訊息交換。 繫結中會指定用來交換訊息 (或「如何交換」) 的機制。 在 WCF 中的繫結會封裝訊息交換的詳細資料。 這些繫結會公開組態旋鈕，讓使用者控制繫結所表示之傳輸或通訊協定的各個層面。 WCF 中的佇列會被視為其他傳輸繫結，這是一大優點對於許多佇列應用程式。 目前許多佇列應用程式都是透過其他遠端程序呼叫 (RPC) 型的分散式應用程式來撰寫，導致在遵循上和維護上都有難度。 使用 WCF，撰寫分散式應用程式的樣式是大致相同，以便更容易遵循上和維護。 另外，藉由根據商務邏輯獨立析出交換機制，您可以更輕鬆地設定傳輸或進行變更，而不會影響應用程式特定的程式碼。 下圖會說明使用 MSMQ 做為傳輸之 WCF 服務和用戶端的結構。  
   
  ![排入佇列的應用程式圖表](../../../../docs/framework/wcf/feature-details/media/distributed-queue-figure.jpg "分散式佇列圖")  
   
- 如上圖所示，用戶端和服務只能定義應用程式語意 (Semantics)，也就是合約和實作。 服務會使用偏好的設定來設定佇列繫結， 用戶端使用[ServiceModel Metadata Utility Tool (Svcutil.exe)](../../../../docs/framework/wcf/servicemodel-metadata-utility-tool-svcutil-exe.md)產生[!INCLUDE[indigo2](../../../../includes/indigo2-md.md)]用戶端到服務，然後產生描述要用於傳送訊息至服務的繫結的組態檔。 因此，為了傳送佇列訊息，用戶端會具現化 [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] 用戶端並對其叫用作業， 使訊息傳送至傳輸佇列並傳輸至目標佇列。 如此一來，傳送和接收訊息的應用程式就可以避開佇列通訊的所有複雜操作。  
+ 如上圖所示，用戶端和服務只能定義應用程式語意 (Semantics)，也就是合約和實作。 服務會使用偏好的設定來設定佇列繫結， 用戶端使用[ServiceModel Metadata Utility Tool (Svcutil.exe)](../../../../docs/framework/wcf/servicemodel-metadata-utility-tool-svcutil-exe.md)來產生 WCF 用戶端服務並將產生描述要用於傳送訊息至服務的繫結的組態檔。 因此，若要傳送佇列的訊息，用戶端會具現化 WCF 用戶端，並叫用作業。 使訊息傳送至傳輸佇列並傳輸至目標佇列。 如此一來，傳送和接收訊息的應用程式就可以避開佇列通訊的所有複雜操作。  
   
- [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] 中佇列繫結的注意事項如下：  
+ 在 WCF 中的佇列繫結相關的警告包括：  
   
--   所有服務作業必須為單向，因為 [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] 中的預設佇列繫結不支援使用佇列的雙工通訊。 雙向通訊範例 ([雙向通訊](../../../../docs/framework/wcf/samples/two-way-communication.md)) 說明如何實作使用佇列的雙工通訊中使用兩個單向合約。  
+-   所有服務作業必須為單向，因為預設佇列繫結在 WCF 中不支援使用佇列的雙工通訊。 雙向通訊範例 ([雙向通訊](../../../../docs/framework/wcf/samples/two-way-communication.md)) 說明如何實作使用佇列的雙工通訊中使用兩個單向合約。  
   
--   為了產生 [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] 用戶端，使用中繼資料交換就必須要在服務上有額外的 HTTP 端點，讓中繼資料可以直接經過查詢，以便產生 [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] 用戶端，並且取得繫結資訊以適當地設定佇列通訊。  
+-   若要產生 WCF 用戶端會使用中繼資料交換都需要額外的 HTTP 端點在服務上，以便可供查詢直接產生 WCF 用戶端，並取得以適當地設定佇列的通訊的繫結資訊。  
   
--   按照這個佇列繫結，一定要有 [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] 外部的額外組態。 例如，使用 <xref:System.ServiceModel.NetMsmqBinding> 隨附的 [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] 類別時，您需要設定繫結，而且至少要設定訊息佇列 (MSMQ)。  
+-   根據佇列繫結，WCF 之外的額外組態需要。 例如，<xref:System.ServiceModel.NetMsmqBinding>隨附在 WCF 的類別會要求您設定的繫結，以及至少要設定訊息佇列 (MSMQ)。  
   
- 下列章節會根據 MSMQ 說明 [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] 隨附的特定佇列繫結。  
+ 下列章節說明的特定佇列繫結隨附於 WCF 中，這會根據 MSMQ。  
   
 ### <a name="msmq"></a>MSMQ  
- [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] 中的佇列傳輸會對其佇列通訊使用 MSMQ。  
+ 在 WCF 中的佇列的傳輸會對其佇列通訊使用 MSMQ。  
   
  MSMQ 是 Windows 隨附的選用元件，而且會以 NT 服務的身分執行。 MSMQ 會擷取傳輸佇列中要進行傳輸的訊息，以及要傳遞至目標佇列的訊息。 MSMQ 佇列管理員會實作可靠訊息傳輸通訊協定，使訊息不會在傳輸期間遺失。 此通訊協定可以是原生通訊協定，或是 SOAP Reliable Message Protocol (SRMP) 這類 SOAP 架構的通訊協定。  
   
@@ -54,7 +40,7 @@ ms.lasthandoff: 04/30/2018
  如需 MSMQ 的詳細資訊，請參閱[安裝訊息佇列 (MSMQ)](../../../../docs/framework/wcf/samples/installing-message-queuing-msmq.md)。  
   
 ### <a name="netmsmqbinding"></a>NetMsmqBinding  
- [ \<NetMsmqBinding >](../../../../docs/framework/configure-apps/file-schema/wcf/netmsmqbinding.md)的佇列繫結[!INCLUDE[indigo2](../../../../includes/indigo2-md.md)]提供兩個[!INCLUDE[indigo2](../../../../includes/indigo2-md.md)]通訊使用 MSMQ 的端點。 因此，繫結會公開特定用於 MSMQ 的屬性。 不過，在 `NetMsmqBinding` 中不會公開所有 MSMQ 功能和屬性。 精簡型 `NetMsmqBinding` 是使用大多數客戶都認為足夠的最佳功能組來設計。  
+ [ \<NetMsmqBinding >](../../../../docs/framework/configure-apps/file-schema/wcf/netmsmqbinding.md) WCF 有提供的兩個 WCF 端點進行通訊使用 MSMQ 的佇列繫結。 因此，繫結會公開特定用於 MSMQ 的屬性。 不過，在 `NetMsmqBinding` 中不會公開所有 MSMQ 功能和屬性。 精簡型 `NetMsmqBinding` 是使用大多數客戶都認為足夠的最佳功能組來設計。  
   
  `NetMsmqBinding` 闡述了到目前為止以繫結屬性為形式討論的核心佇列概念。 這些屬性接著會向 MSMQ 傳達傳輸及傳送訊息的方式。 下列章節討論屬性分類。 如需詳細資訊，請參閱概念性主題的更完整地描述特定的屬性。  
   
@@ -75,7 +61,7 @@ ms.lasthandoff: 04/30/2018
   
  許多佇列系統都會提供全系統範圍之寄不出的信件佇列。 MSMQ 會對無法傳遞至非交易式佇列的訊息提供全系統範圍的非交易式寄不出的信件佇列，並對無法傳遞至交易式佇列的訊息提供全系統範圍的交易式寄不出的信件佇列。  
   
- 如果將訊息傳送至不同目標佇列的用戶端共用 MSMQ 服務，則用戶端傳送的所有訊息都會移至同一個寄不出的信件佇列。 您不一定都要這麼做， 為了加強隔離效果，[!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] 和 [!INCLUDE[wv](../../../../includes/wv-md.md)] 中的 MSMQ 提供了自訂寄不出的信件佇列 (或是應用程式特定之寄不出的信件佇列)，讓使用者可以指定這個佇列儲存無法傳遞的訊息。 因此，不同的用戶端就不會共用同一個寄不出的信件佇列。  
+ 如果將訊息傳送至不同目標佇列的用戶端共用 MSMQ 服務，則用戶端傳送的所有訊息都會移至同一個寄不出的信件佇列。 您不一定都要這麼做， 為了加強隔離效果，WCF 和中的 MSMQ[!INCLUDE[wv](../../../../includes/wv-md.md)]提供自訂的寄不出的信件佇列 （或應用程式特定之寄不出信件佇列），使用者可以指定要儲存無法傳遞的訊息。 因此，不同的用戶端就不會共用同一個寄不出的信件佇列。  
   
  繫結中有兩個重要的屬性：  
   
@@ -105,7 +91,7 @@ ms.lasthandoff: 04/30/2018
 -   `UseActiveDirectory`：布林值，指出是否必須使用 Active Directory 解析佇列位址。 根據預設，這個屬性為關閉狀態。 如需詳細資訊，請參閱[服務端點與佇列定址](../../../../docs/framework/wcf/feature-details/service-endpoints-and-queue-addressing.md)。  
   
 ### <a name="msmqintegrationbinding"></a>MsmqIntegrationBinding  
- 若要讓 `MsmqIntegrationBinding` 端點與使用 C、C++、COM 或 System.Messaging API 所撰寫的現有 MSMQ 應用程式進行通訊，則會用到 [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)]。  
+ `MsmqIntegrationBinding`您想在 C、 c + +、 COM 或 System.Messaging Api 所撰寫的現有 MSMQ 應用程式與通訊的 WCF 端點時使用。  
   
  其繫結屬性與 `NetMsmqBinding` 一樣， 但是會有下列差異：  
   

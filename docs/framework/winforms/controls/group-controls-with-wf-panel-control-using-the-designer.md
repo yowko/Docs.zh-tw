@@ -1,28 +1,16 @@
 ---
-title: "如何：搭配 Windows Form Panel 控制項使用設計工具群組控制項"
-ms.custom: 
+title: 如何：搭配 Windows Form Panel 控制項使用設計工具群組控制項
 ms.date: 03/30/2017
-ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.technology: dotnet-winforms
-ms.tgt_pltfrm: 
-ms.topic: article
 helpviewer_keywords:
 - Panel control [Windows Forms], grouping controls
 - controls [Windows Forms], grouping
 - Windows Forms controls, grouping
 ms.assetid: 7e1cd708-fdb1-49d8-9ca2-5640b276bf2e
-caps.latest.revision: "9"
-author: dotnet-bot
-ms.author: dotnetcontent
-manager: wpickett
-ms.workload: dotnet
-ms.openlocfilehash: c1c6dd45d2070c77b34c66388b397bb784215654
-ms.sourcegitcommit: c0dd436f6f8f44dc80dc43b07f6841a00b74b23f
+ms.openlocfilehash: 1cf4519a9aaaa1c4f0df321ab38c3f543c87b2a2
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 01/19/2018
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="how-to-group-controls-with-the-windows-forms-panel-control-using-the-designer"></a>如何：搭配 Windows Form Panel 控制項使用設計工具群組控制項
 Windows Form<xref:System.Windows.Forms.Panel>控制項可用來將其他控制項組成群組。 有群組控制項的三個原因。 其中一個是視覺化群組相關的表單項目，清楚的使用者介面。另一個是以程式設計方式分組，選項按鈕： 例如，上次是在設計階段將控制項移做為一個單位。  
@@ -40,7 +28,7 @@ Windows Form<xref:System.Windows.Forms.Panel>控制項可用來將其他控制�
   
 3.  （選擇性）如果您想要將框線加入至面板，設定其<xref:System.Windows.Forms.BorderStyle>屬性。 有三個選擇： <xref:System.Windows.Forms.BorderStyle.Fixed3D>， <xref:System.Windows.Forms.BorderStyle.FixedSingle>，和<xref:System.Windows.Forms.BorderStyle.None>。  
   
-## <a name="see-also"></a>請參閱  
+## <a name="see-also"></a>另請參閱  
  [Panel 控制項](../../../../docs/framework/winforms/controls/panel-control-windows-forms.md)  
  [Panel 控制項概觀](../../../../docs/framework/winforms/controls/panel-control-overview-windows-forms.md)  
  [操作說明：設定面板背景](../../../../docs/framework/winforms/controls/how-to-set-the-background-of-a-windows-forms-panel.md)

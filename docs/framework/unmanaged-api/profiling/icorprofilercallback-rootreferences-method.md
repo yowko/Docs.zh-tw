@@ -1,14 +1,6 @@
 ---
-title: "ICorProfilerCallback::RootReferences 方法"
-ms.custom: 
+title: ICorProfilerCallback::RootReferences 方法
 ms.date: 03/30/2017
-ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.technology:
-- dotnet-clr
-ms.tgt_pltfrm: 
-ms.topic: reference
 api_name:
 - ICorProfilerCallback.RootReferences
 api_location:
@@ -23,17 +15,13 @@ helpviewer_keywords:
 ms.assetid: dbdf853b-d1a4-4828-8ef7-53d121d8e6ae
 topic_type:
 - apiref
-caps.latest.revision: 
 author: mairaw
 ms.author: mairaw
-manager: wpickett
-ms.workload:
-- dotnet
-ms.openlocfilehash: dd057538450deeb46a72178c725103e04a8dd126
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.openlocfilehash: 467d065ab4d47e698c7043697ebe2ccf5f98a3cf
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="icorprofilercallbackrootreferences-method"></a>ICorProfilerCallback::RootReferences 方法
 通知分析工具的記憶體回收之後根參考的相關資訊。  
@@ -67,7 +55,7 @@ HRESULT RootReferences(
   
  **程式庫：** CorGuids.lib  
   
- **.NET framework 版本：**[!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]  
+ **.NET framework 版本：** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]  
   
-## <a name="see-also"></a>請參閱  
+## <a name="see-also"></a>另請參閱  
  [ICorProfilerCallback 介面](../../../../docs/framework/unmanaged-api/profiling/icorprofilercallback-interface.md)

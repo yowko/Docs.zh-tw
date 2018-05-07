@@ -1,28 +1,16 @@
 ---
-title: "Windows Form DataGridView 控制項中的儲存格樣式"
-ms.custom: 
+title: Windows Form DataGridView 控制項中的儲存格樣式
 ms.date: 03/30/2017
-ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.technology: dotnet-winforms
-ms.tgt_pltfrm: 
-ms.topic: article
 helpviewer_keywords:
 - DataGridView control [Windows Forms], cell styles
 - cells [Windows Forms], styles
 - data grids [Windows Forms], cell styles
 ms.assetid: dbb75ed6-8804-4232-8382-f9920c2e380c
-caps.latest.revision: "33"
-author: dotnet-bot
-ms.author: dotnetcontent
-manager: wpickett
-ms.workload: dotnet
-ms.openlocfilehash: 915aba380b6fe35299de94720f216cda5ab66721
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.openlocfilehash: 463fbbffe1e88991934f08fbe7e7445b2e233081
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="cell-styles-in-the-windows-forms-datagridview-control"></a>Windows Form DataGridView 控制項中的儲存格樣式
 每個資料格內<xref:System.Windows.Forms.DataGridView>控制項可以有它自己的樣式，例如，文字格式、 背景色彩、 前景色彩和字型。 通常，不過，多個資料格會共用特定的樣式特性。  
@@ -66,7 +54,7 @@ ms.lasthandoff: 12/22/2017
 |<xref:System.Windows.Forms.DataGridView.AlternatingRowsDefaultCellStyle%2A>|<xref:System.Windows.Forms.DataGridView>|取得或設定使用的替代控制項中的資料列的預設儲存格樣式。 用來建立類似 ledger 的效果。|  
 |<xref:System.Windows.Forms.DataGridView.RowHeadersDefaultCellStyle%2A>|<xref:System.Windows.Forms.DataGridView>|取得或設定控制項的資料列標頭所使用的預設儲存格樣式。 如果已啟用視覺化樣式會覆寫目前的佈景主題。|  
 |<xref:System.Windows.Forms.DataGridView.ColumnHeadersDefaultCellStyle%2A>|<xref:System.Windows.Forms.DataGridView>|取得或設定控制項的資料行標頭所使用的預設儲存格樣式。 如果已啟用視覺化樣式會覆寫目前的佈景主題。|  
-|<xref:System.Windows.Forms.DataGridViewCell.Style%2A>|<xref:System.Windows.Forms.DataGridViewCell>類別和衍生的類別|取得或設定指定資料格層級的樣式。 這些樣式會覆寫繼承自較高的層級。|  
+|<xref:System.Windows.Forms.DataGridViewCell.Style%2A>|<xref:System.Windows.Forms.DataGridViewCell> 類別和衍生的類別|取得或設定指定資料格層級的樣式。 這些樣式會覆寫繼承自較高的層級。|  
 |`InheritedStyle`|<xref:System.Windows.Forms.DataGridViewCell><xref:System.Windows.Forms.DataGridViewRow>， <xref:System.Windows.Forms.DataGridViewColumn>，和衍生類別|取得所有目前套用至資料格、 資料列或資料行，包括繼承自較高的層級的樣式的樣式。|  
   
  如上面所述，自動取得樣式屬性的值會具現化新<xref:System.Windows.Forms.DataGridViewCellStyle>如果屬性尚未先前設定的物件。 若要避免不必要地建立這些物件，資料列和資料類別都具有<xref:System.Windows.Forms.DataGridViewBand.HasDefaultCellStyle%2A>屬性，您可以檢查以判斷是否<xref:System.Windows.Forms.DataGridViewBand.DefaultCellStyle%2A>屬性已設定。 同樣地，資料格具有<xref:System.Windows.Forms.DataGridViewCell.HasStyle%2A>屬性，指出是否<xref:System.Windows.Forms.DataGridViewCell.Style%2A>屬性已設定。  
@@ -80,7 +68,7 @@ ms.lasthandoff: 12/22/2017
   
 2.  <xref:System.Windows.Forms.DataGridViewRow.DefaultCellStyle%2A?displayProperty=nameWithType>  
   
-3.  <xref:System.Windows.Forms.DataGridView.AlternatingRowsDefaultCellStyle%2A?displayProperty=nameWithType>（僅適用於在奇數索引資料列中的資料格）  
+3.  <xref:System.Windows.Forms.DataGridView.AlternatingRowsDefaultCellStyle%2A?displayProperty=nameWithType> （僅適用於在奇數索引資料列中的資料格）  
   
 4.  <xref:System.Windows.Forms.DataGridView.RowsDefaultCellStyle%2A?displayProperty=nameWithType>  
   
@@ -110,7 +98,7 @@ ms.lasthandoff: 12/22/2017
   
 1.  <xref:System.Windows.Forms.DataGridViewRow.DefaultCellStyle%2A?displayProperty=nameWithType>  
   
-2.  <xref:System.Windows.Forms.DataGridView.AlternatingRowsDefaultCellStyle%2A?displayProperty=nameWithType>（僅適用於在奇數索引資料列中的資料格）  
+2.  <xref:System.Windows.Forms.DataGridView.AlternatingRowsDefaultCellStyle%2A?displayProperty=nameWithType> （僅適用於在奇數索引資料列中的資料格）  
   
 3.  <xref:System.Windows.Forms.DataGridView.RowsDefaultCellStyle%2A?displayProperty=nameWithType>  
   
@@ -120,7 +108,7 @@ ms.lasthandoff: 12/22/2017
   
  下表將說明如何<xref:System.Windows.Forms.DataGridViewCellStyle.ForeColor%2A>範例資料格的屬性值都繼承自其包含的資料行。  
   
-|類型的屬性`DataGridViewCellStyle`|範例`ForeColor`擷取物件的值|  
+|類型的屬性 `DataGridViewCellStyle`|範例`ForeColor`擷取物件的值|  
 |----------------------------------------------|----------------------------------------------------|  
 |<xref:System.Windows.Forms.DataGridViewCell.Style%2A?displayProperty=nameWithType>|<xref:System.Drawing.Color.Empty?displayProperty=nameWithType>|  
 |<xref:System.Windows.Forms.DataGridViewRow.DefaultCellStyle%2A?displayProperty=nameWithType>|<xref:System.Drawing.Color.Red%2A?displayProperty=nameWithType>|  
@@ -133,7 +121,7 @@ ms.lasthandoff: 12/22/2017
   
  下圖說明不同<xref:System.Windows.Forms.DataGridViewCellStyle>屬性可以繼承其值的不同位置。  
   
- ![DataGridView 屬性 &#45; 值繼承](../../../../docs/framework/winforms/controls/media/datagridviewcells2.gif "DataGridViewCells2")  
+ ![DataGridView 屬性&#45;值繼承](../../../../docs/framework/winforms/controls/media/datagridviewcells2.gif "DataGridViewCells2")  
   
  利用樣式繼承，您可以提供適當的樣式整個控制項而不需要在多個位置指定相同的資訊。  
   
@@ -155,7 +143,7 @@ ms.lasthandoff: 12/22/2017
 > [!NOTE]
 >  快取儲存在儲存格的值<xref:System.Windows.Forms.DataGridViewCell.Style%2A>屬性是非常重要，不論設定特定的樣式值。 如果您暫時取代樣式設定，將其還原至其原始的 「 未設定 」 狀態可確保，資料格會回到繼承較高層級的樣式設定。 如果您需要決定作用中的儲存格值，不管是否繼承樣式的實際樣式，請使用儲存格的<xref:System.Windows.Forms.DataGridViewCell.InheritedStyle%2A>屬性。  
   
-## <a name="see-also"></a>請參閱  
+## <a name="see-also"></a>另請參閱  
  <xref:System.Windows.Forms.DataGridView>  
  <xref:System.Windows.Forms.DataGridViewCellStyle>  
  <xref:System.Windows.Forms.DataGridView.AlternatingRowsDefaultCellStyle%2A?displayProperty=nameWithType>  

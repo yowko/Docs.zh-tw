@@ -1,27 +1,15 @@
 ---
-title: "使用效能計數器"
-ms.custom: 
+title: 使用效能計數器
 ms.date: 03/30/2017
-ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.technology: dotnet-clr
-ms.tgt_pltfrm: 
-ms.topic: article
 ms.assetid: 00a787af-1876-473c-a48d-f52b51e28a3f
-caps.latest.revision: "31"
-author: dotnet-bot
-ms.author: dotnetcontent
-manager: wpickett
-ms.workload: dotnet
-ms.openlocfilehash: ef5a499e6d940e45e0c9aab093b0a1c00bb6cc32
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
-ms.translationtype: MT
+ms.openlocfilehash: 2e25551494a433c53832127fdb0a32cb4eccac47
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="using-performance-counters"></a>使用效能計數器
-這個範例會示範如何存取 [!INCLUDE[indigo1](../../../../includes/indigo1-md.md)] 效能計數器，以及如何建立使用者定義的效能計數器。 這個範例根據[入門](../../../../docs/framework/wcf/samples/getting-started-sample.md)。  
+這個範例會示範如何存取 Windows Communication Foundation (WCF) 的效能計數器，以及如何建立使用者定義的效能計數器。 這個範例根據[入門](../../../../docs/framework/wcf/samples/getting-started-sample.md)。  
   
 > [!NOTE]
 >  此範例的安裝程序與建置指示位於本主題的結尾。  
@@ -52,7 +40,7 @@ ms.lasthandoff: 12/22/2017
   
 ### <a name="to-view-performance-data"></a>若要檢視效能資料  
   
-1.  按一下啟動效能監視器] 工具**啟動**，**執行...**，輸入`perfmon`按一下**[確定]，**或從 [控制台]，選取 [**系統管理工具**按兩下**效能**。  
+1.  按一下啟動效能監視器] 工具**啟動**，**執行...**，輸入`perfmon`按一下 **[確定]，**或從 [控制台]，選取 [**系統管理工具**按兩下**效能**。  
   
     > [!NOTE]
     >  在範例程式碼執行後才能新增計數器。  
@@ -83,9 +71,9 @@ ms.lasthandoff: 12/22/2017
 >   
 >  `<InstallDrive>:\WF_WCF_Samples`  
 >   
->  如果此目錄不存在，請移至 [Windows Communication Foundation (WCF) and Windows Workflow Foundation (WF) Samples for .NET Framework 4  (適用於 .NET Framework 4 的 Windows Communication Foundation (WCF) 與 Windows Workflow Foundation (WF) 範例)](http://go.microsoft.com/fwlink/?LinkId=150780) ，以下載所有 [!INCLUDE[indigo1](../../../../includes/indigo1-md.md)] 和 [!INCLUDE[wf1](../../../../includes/wf1-md.md)] 範例。 此範例位於下列目錄。  
+>  如果此目錄不存在，請移至[Windows Communication Foundation (WCF) 和適用於.NET Framework 4 的 Windows Workflow Foundation (WF) 範例](http://go.microsoft.com/fwlink/?LinkId=150780)下載所有 Windows Communication Foundation (WCF) 和[!INCLUDE[wf1](../../../../includes/wf1-md.md)]範例。 此範例位於下列目錄。  
 >   
 >  `<InstallDrive>:\WF_WCF_Samples\WCF\Basic\Management\PerfCounters`  
   
-## <a name="see-also"></a>請參閱  
+## <a name="see-also"></a>另請參閱  
  [AppFabric 監控範例](http://go.microsoft.com/fwlink/?LinkId=193959)

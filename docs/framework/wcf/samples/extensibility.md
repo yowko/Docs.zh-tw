@@ -1,27 +1,15 @@
 ---
-title: "擴充性"
-ms.custom: 
+title: 擴充性
 ms.date: 03/30/2017
-ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.technology: dotnet-clr
-ms.tgt_pltfrm: 
-ms.topic: article
 ms.assetid: cd7ddffc-a261-44aa-bd50-33c1c74f0df0
-caps.latest.revision: "6"
-author: dotnet-bot
-ms.author: dotnetcontent
-manager: wpickett
-ms.workload: dotnet
-ms.openlocfilehash: d1d8ea4987d918da79dcf1f69b842f19901e63a5
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
-ms.translationtype: MT
+ms.openlocfilehash: 7cba21715a6a0347e910300de46c1e47fd6e30bf
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="extensibility"></a>擴充性
-本節包含的範例將處理 [!INCLUDE[indigo1](../../../../includes/indigo1-md.md)] 的自訂擴充性和其他功能。  
+本節範例將自訂擴充性和其他功能的 Windows Communication Foundation (WCF) 處理。  
   
 ## <a name="in-this-section"></a>本節內容  
  [通道擴充性](../../../../docs/framework/wcf/samples/channels-extensibility.md)  
@@ -58,7 +46,7 @@ ms.lasthandoff: 12/22/2017
  示範擴充點如何使用自訂訊息資料格式。  
   
  [自訂訊息篩選](../../../../docs/framework/wcf/samples/custom-message-filter.md)  
- 示範如何取代 [!INCLUDE[indigo1](../../../../includes/indigo1-md.md)] 用來將訊息分派至端點的訊息篩選器。  
+ 示範如何取代 Windows Communication Foundation (WCF) 用來分派訊息至端點的訊息篩選。  
   
  [自訂服務主機](../../../../docs/framework/wcf/samples/custom-service-host.md)  
  示範如何使用 <xref:System.ServiceModel.ServiceHost> 類別的自訂衍生，以變更服務的執行階段行為。  

@@ -1,26 +1,12 @@
 ---
 title: 探索尋找與尋找準則
-ms.custom: ''
 ms.date: 03/30/2017
-ms.prod: .net-framework
-ms.reviewer: ''
-ms.suite: ''
-ms.technology:
-- dotnet-clr
-ms.tgt_pltfrm: ''
-ms.topic: article
 ms.assetid: 99016fa4-1778-495b-b4cc-0e22fbec42c6
-caps.latest.revision: 6
-author: dotnet-bot
-ms.author: dotnetcontent
-manager: wpickett
-ms.workload:
-- dotnet
-ms.openlocfilehash: 17ca5e12390e33525f0223917e4c72556a2a2ec7
-ms.sourcegitcommit: 94d33cadc5ff81d2ac389bf5f26422c227832052
+ms.openlocfilehash: 70739647ac5904159b71121e86aa98e92981d4ab
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/30/2018
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="discovery-find-and-findcriteria"></a>探索尋找與尋找準則
 探索尋找作業是由用戶端初始化，用於探索一項或多項服務，並且為探索中的其中一個主要動作。 執行尋找會透過網路傳送 WS-Discovery Probe 訊息。 符合指定準則的服務會以 WS-Discovery ProbeMatch 訊息回覆。 如需探索訊息的詳細資訊，請參閱[Ws-discovery 規格](http://go.microsoft.com/fwlink/?LinkID=122347)。  
@@ -33,7 +19,7 @@ ms.lasthandoff: 04/30/2018
   
  搜尋準則包括：  
   
--   <xref:System.ServiceModel.Discovery.Configuration.ContractTypeNameElement>：選擇項。 要搜尋的服務合約名稱，以及搜尋服務時常用的準則。 如果指定多個合約名稱，則只會回覆符合「所有」合約的服務端點。 請注意，在 [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] 中，一個端點僅支援一個合約。  
+-   <xref:System.ServiceModel.Discovery.Configuration.ContractTypeNameElement>：選擇項。 要搜尋的服務合約名稱，以及搜尋服務時常用的準則。 如果指定多個合約名稱，則只會回覆符合「所有」合約的服務端點。 請注意，在 WCF 端點只能支援一個合約。  
   
 -   <xref:System.ServiceModel.Discovery.Configuration.ScopeElement>：選擇項。 範圍是絕對 URI，可用來分類個別服務端點。 在多個端點公開相同合約，而您希望能夠搜尋端點子集的情況下，可能會想要使用這種方式。 如果指定多個範圍，則只會回覆符合「所有」範圍的服務端點。  
   

@@ -1,30 +1,18 @@
 ---
-title: "HOW TO：建立自訂用戶端身分識別驗證器"
-ms.custom: 
+title: HOW TO：建立自訂用戶端身分識別驗證器
 ms.date: 03/30/2017
-ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.technology: dotnet-clr
-ms.tgt_pltfrm: 
-ms.topic: article
 dev_langs:
 - csharp
 - vb
 ms.assetid: f2d34e43-fa8b-46d2-91cf-d2960e13e16b
-caps.latest.revision: "15"
-author: dotnet-bot
-ms.author: dotnetcontent
-manager: wpickett
-ms.workload: dotnet
-ms.openlocfilehash: b10dd9be996369385ca323b0409145a9cde46a1e
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
-ms.translationtype: MT
+ms.openlocfilehash: 99d46b19e744190c50a2ba316fe0f59a8f6cf07b
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="how-to-create-a-custom-client-identity-verifier"></a>HOW TO：建立自訂用戶端身分識別驗證器
-*識別*功能[!INCLUDE[indigo1](../../../../includes/indigo1-md.md)]可讓用戶端預先指定預期的服務身分識別。 每當伺服器向用戶端驗證自身時，就會比對預期身分識別來檢查身分識別  (如身分識別，以及它的運作方式的說明，請參閱[服務識別和驗證](../../../../docs/framework/wcf/feature-details/service-identity-and-authentication.md)。)  
+*識別*功能的 Windows Communication Foundation (WCF) 可讓用戶端預先指定預期的服務身分識別。 每當伺服器向用戶端驗證自身時，就會比對預期身分識別來檢查身分識別  (如身分識別，以及它的運作方式的說明，請參閱[服務識別和驗證](../../../../docs/framework/wcf/feature-details/service-identity-and-authentication.md)。)  
   
  必要時，可使用自訂身分識別驗證器來自訂驗證。 例如，您可以執行其他服務身分識別驗證檢查。 在這個範例中，自訂身分識別驗證器會檢查從伺服器所傳回的 X.509 憑證中的其他宣告。 範例應用程式，請參閱[服務身分識別範例](../../../../docs/framework/wcf/samples/service-identity-sample.md)。  
   
@@ -92,7 +80,7 @@ ms.lasthandoff: 12/22/2017
  [!code-csharp[c_HowToSetCustomClientIdentity#6](../../../../samples/snippets/csharp/VS_Snippets_CFX/c_howtosetcustomclientidentity/cs/source.cs#6)]
  [!code-vb[c_HowToSetCustomClientIdentity#6](../../../../samples/snippets/visualbasic/VS_Snippets_CFX/c_howtosetcustomclientidentity/vb/source.vb#6)]  
   
-## <a name="see-also"></a>請參閱  
+## <a name="see-also"></a>另請參閱  
  <xref:System.ServiceModel.ServiceAuthorizationManager>  
  <xref:System.ServiceModel.EndpointIdentity>  
  <xref:System.ServiceModel.Security.IdentityVerifier>  

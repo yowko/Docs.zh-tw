@@ -1,29 +1,15 @@
 ---
 title: UriTemplate 與 UriTemplateTable
-ms.custom: ''
 ms.date: 03/30/2017
-ms.prod: .net-framework
-ms.reviewer: ''
-ms.suite: ''
-ms.technology:
-- dotnet-clr
-ms.tgt_pltfrm: ''
-ms.topic: article
 ms.assetid: 5cbbe03f-4a9e-4d44-9e02-c5773239cf52
-caps.latest.revision: 24
-author: dotnet-bot
-ms.author: dotnetcontent
-manager: wpickett
-ms.workload:
-- dotnet
-ms.openlocfilehash: b0fedb812cee5cfa1e4c2ff921a78beb2a6c1beb
-ms.sourcegitcommit: 03ee570f6f528a7d23a4221dcb26a9498edbdf8c
+ms.openlocfilehash: 09726af0a124723de025f29927954a2100aebcb4
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/28/2018
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="uritemplate-and-uritemplatetable"></a>UriTemplate 與 UriTemplateTable
-Web 開發人員需要能夠描述其服務所回應的 URI 形式與配置。 [!INCLUDE[indigo1](../../../../includes/indigo1-md.md)] 新增了兩個類別，讓開發人員可以更充分的掌控其 URI。 <xref:System.UriTemplate> 和 <xref:System.UriTemplateTable> 在 [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] 中構成 URI 分派引擎的基礎。 這些類別可以自行利用，讓開發人員充分運用範本與 URI 對應機制，而無須實作 [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] 服務。  
+Web 開發人員需要能夠描述其服務所回應的 URI 形式與配置。 Windows Communication Foundation (WCF) 會加入兩個新的類別，讓開發人員掌控其 Uri。 <xref:System.UriTemplate> 和<xref:System.UriTemplateTable>WCF 中會形成 URI 為基礎的分派引擎的基礎。 這些類別也能在他們自己，可讓開發人員充分運用範本與 URI 對應機制而不需要實作 WCF 服務。  
   
 ## <a name="templates"></a>範本  
  範本提供了一種用來描述相對 URI 集合的方式。 下表中的 URI 範本集將說明如何定義負責擷取各種氣象資訊型別的系統。  
@@ -35,7 +21,7 @@ Web 開發人員需要能夠描述其服務所回應的 URI 形式與配置。 [
 |城市趨勢預測|weather/{state}/{city}|  
 |活動趨勢預測|weather/{state}/{city}/{activity}|  
   
- 這份表格說明結構上類似的 URI 集合。 每個項目都是 URI 範本。 大括號內的片段描述變數， 大括號外的片段則描述常值字串。 [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] 範本類別可讓開發人員包含傳入的 URI，例如，"/weather/wa/seattle/cycling"，並將其對應至說明該類別的範本 "/weather/{state}/{city}/{activity}"。  
+ 這份表格說明結構上類似的 URI 集合。 每個項目都是 URI 範本。 大括號內的片段描述變數， 大括號外的片段則描述常值字串。 WCF 範本類別可讓開發人員以取得傳入的 URI，例如，"weather/wa/seattle/循環 」，並使其符合範本，描述，"/weather/wa/seattle/cycling {state} / {city} / {活動}"。  
   
 ## <a name="uritemplate"></a>UriTemplate  
  <xref:System.UriTemplate> 是一個會封裝 URI 範本的類別。 建構函式會包含用來定義範本的字串參數。 此字串會將範本包含在下一節中說明的格式裡。 <xref:System.UriTemplate> 類別所提供的方法可讓您將傳入的 URI 與範本進行比對、從範本產生 URI、擷取範本中使用的變數名稱集合，並判斷這兩個範本是否相等，然後傳回範本的字串。  

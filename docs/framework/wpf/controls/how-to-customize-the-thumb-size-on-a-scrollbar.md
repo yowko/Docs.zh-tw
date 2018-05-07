@@ -1,28 +1,16 @@
 ---
-title: "如何：自訂 ScrollBar 上捲動方塊的大小"
-ms.custom: 
+title: 如何：自訂 ScrollBar 上捲動方塊的大小
 ms.date: 03/30/2017
-ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.technology: dotnet-wpf
-ms.tgt_pltfrm: 
-ms.topic: article
 helpviewer_keywords:
 - ScrollBar control [WPF]
 - customizing thumb size [WPF]
 - thumb size [WPF]
 ms.assetid: fa32b866-5ca1-4e73-85e7-2ac64b80d194
-caps.latest.revision: "5"
-author: dotnet-bot
-ms.author: dotnetcontent
-manager: wpickett
-ms.workload: dotnet
-ms.openlocfilehash: e88a7afb9c98179fbcb4a67217edd411d4fe9567
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.openlocfilehash: 689b73eb58cdfceb2ce5d4e76cbbc3d6c5af8967
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="how-to-customize-the-thumb-size-on-a-scrollbar"></a>如何：自訂 ScrollBar 上捲動方塊的大小
 本主題說明如何設定<xref:System.Windows.Controls.Primitives.Thumb>的<xref:System.Windows.Controls.Primitives.ScrollBar>固定的大小，以及如何指定的最小大小<xref:System.Windows.Controls.Primitives.Thumb>的<xref:System.Windows.Controls.Primitives.ScrollBar>。  
@@ -41,5 +29,5 @@ ms.lasthandoff: 12/22/2017
 ## <a name="code"></a>程式碼  
  [!code-xaml[ScrollBarCustomThumbSize#2](../../../../samples/snippets/csharp/VS_Snippets_Wpf/ScrollBarCustomThumbSize/CS/Window1.xaml#2)]  
   
-## <a name="see-also"></a>請參閱  
+## <a name="see-also"></a>另請參閱  
  [ScrollBar 樣式和範本](../../../../docs/framework/wpf/controls/scrollbar-styles-and-templates.md)

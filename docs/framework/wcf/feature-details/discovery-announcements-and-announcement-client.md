@@ -1,27 +1,15 @@
 ---
-title: "探索公告與公告用戶端"
-ms.custom: 
+title: 探索公告與公告用戶端
 ms.date: 03/30/2017
-ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.technology: dotnet-clr
-ms.tgt_pltfrm: 
-ms.topic: article
 ms.assetid: 426c6437-f8d2-4968-b23a-18afd671aa4b
-caps.latest.revision: "6"
-author: dotnet-bot
-ms.author: dotnetcontent
-manager: wpickett
-ms.workload: dotnet
-ms.openlocfilehash: 67eab6a5b35e29fe3df09ab286090433d25e8ca3
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.openlocfilehash: c32aca5e6deab01423d61c516ee924d00bc041ee
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="discovery-announcements-and-announcement-client"></a>探索公告與公告用戶端
-[!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] 探索功能可讓元件公告其可用性。 如果進行此設定，服務會傳送 Hello 和 Bye 公告。 用戶端或其他元件可以接聽此類公告訊息，然後採取行動。 此方法是讓用戶端注意服務存在的替代方法。 公告功能具有多種用途，例如，如果服務頻繁進出網路，公告便可能會是較搜尋服務更好的方法。 透過此方法，除了可降低網路流量之外，用戶端也會在收到公告的同時得知服務的出現或離開。  
+WCF 探索功能可讓元件公告其可用性。 如果進行此設定，服務會傳送 Hello 和 Bye 公告。 用戶端或其他元件可以接聽此類公告訊息，然後採取行動。 此方法是讓用戶端注意服務存在的替代方法。 公告功能具有多種用途，例如，如果服務頻繁進出網路，公告便可能會是較搜尋服務更好的方法。 透過此方法，除了可降低網路流量之外，用戶端也會在收到公告的同時得知服務的出現或離開。  
   
 ## <a name="discovery-announcements"></a>探索公告  
  當設定為公告的服務加入網路且變成可探索時，公告將會傳送 Hello 訊息，向接聽的用戶端告知其可用性。 訊息會包含與服務有關的探索相關資訊，例如合約、端點位址和關聯範圍。 您可以指定與 <xref:System.ServiceModel.Discovery.AnnouncementEndpoint> 類別一同傳送的公告訊息位置。 如果公告端點為 <xref:System.ServiceModel.Discovery.UdpAnnouncementEndpoint>，則會視情形多點傳送 Hello 和 Bye，或者如果公告端點為單點傳送，則會將訊息直接傳送至指定的端點。  

@@ -1,14 +1,6 @@
 ---
 title: 如何：擷取文字選取項目
-ms.custom: ''
 ms.date: 03/30/2017
-ms.prod: .net-framework
-ms.reviewer: ''
-ms.suite: ''
-ms.technology:
-- dotnet-wpf
-ms.tgt_pltfrm: ''
-ms.topic: article
 dev_langs:
 - csharp
 - vb
@@ -17,17 +9,11 @@ helpviewer_keywords:
 - TextBox control [WPF], retrieving text
 - retrieving text [WPF]
 ms.assetid: d5793172-1e11-4a39-9be0-73f336ed858d
-caps.latest.revision: 10
-author: dotnet-bot
-ms.author: dotnetcontent
-manager: wpickett
-ms.workload:
-- dotnet
-ms.openlocfilehash: d010d0c5bbe5ba3cad826df74d054af4c9b8f452
-ms.sourcegitcommit: 86adcc06e35390f13c1e372c36d2e044f1fc31ef
+ms.openlocfilehash: 6b25c555d5e6cac93b2e1518b25e7880ab77c866
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/26/2018
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="how-to-retrieve-a-text-selection"></a>如何：擷取文字選取項目
 這個範例會示範一個方式來使用<xref:System.Windows.Controls.TextBox.SelectedText%2A>屬性，以擷取使用者在選取的文字<xref:System.Windows.Controls.TextBox>控制項。  

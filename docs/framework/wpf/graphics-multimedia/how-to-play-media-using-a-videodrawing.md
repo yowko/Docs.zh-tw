@@ -1,27 +1,15 @@
 ---
-title: "如何：使用 VideoDrawing 播放媒體"
-ms.custom: 
+title: 如何：使用 VideoDrawing 播放媒體
 ms.date: 03/30/2017
-ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.technology: dotnet-wpf
-ms.tgt_pltfrm: 
-ms.topic: article
 helpviewer_keywords:
 - playback of media [WPF]
 - classes [WPF], MediaPlayer
 ms.assetid: 165d47ed-22ce-4ded-aa6a-aa9b7467de87
-caps.latest.revision: "6"
-author: dotnet-bot
-ms.author: dotnetcontent
-manager: wpickett
-ms.workload: dotnet
-ms.openlocfilehash: 773a0a1e2252b3f7154ef218f887be6f56e9995f
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.openlocfilehash: 27959cc967eac0a0f642da079f8758b0f756800e
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="how-to-play-media-using-a-videodrawing"></a>如何：使用 VideoDrawing 播放媒體
 若要播放的音訊或視訊檔案，您使用<xref:System.Windows.Media.VideoDrawing>和<xref:System.Windows.Media.MediaPlayer>。 有兩種方法可以載入及播放媒體。 第一個方法是使用<xref:System.Windows.Media.MediaPlayer>和<xref:System.Windows.Media.VideoDrawing>本身，和第二個方法是建立您自己<xref:System.Windows.Media.MediaTimeline>搭配<xref:System.Windows.Media.MediaPlayer>和<xref:System.Windows.Media.VideoDrawing>。  
@@ -43,6 +31,6 @@ ms.lasthandoff: 12/22/2017
   
  請注意，當您使用<xref:System.Windows.Media.MediaTimeline>，您會使用互動式<xref:System.Windows.Media.Animation.ClockController>從傳回<xref:System.Windows.Media.Animation.Clock.Controller%2A>屬性<xref:System.Windows.Media.MediaClock>控制媒體播放，而不是互動式方法<xref:System.Windows.Media.MediaPlayer>。  
   
-## <a name="see-also"></a>請參閱  
+## <a name="see-also"></a>另請參閱  
  <xref:System.Windows.Media.VideoDrawing>  
  [繪圖物件概觀](../../../../docs/framework/wpf/graphics-multimedia/drawing-objects-overview.md)

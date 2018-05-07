@@ -1,27 +1,15 @@
 ---
-title: "操作說明：設定 TileBrush 的並排顯示大小"
-ms.custom: 
+title: 操作說明：設定 TileBrush 的並排顯示大小
 ms.date: 03/30/2017
-ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.technology: dotnet-wpf
-ms.tgt_pltfrm: 
-ms.topic: article
 helpviewer_keywords:
 - TileBrush [WPF], size of tilepropertys
 - Viewport property of TileBrush [WPF]
 ms.assetid: 04f41090-1b46-4e36-832f-d27d28708b8c
-caps.latest.revision: "15"
-author: dotnet-bot
-ms.author: dotnetcontent
-manager: wpickett
-ms.workload: dotnet
-ms.openlocfilehash: 1e9b746fe66635054dbd35463f727d28a8abd3d0
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.openlocfilehash: 16f0a4b3a5c9b9075126ba6d8f19d65169f70921
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="how-to-set-the-tile-size-for-a-tilebrush"></a>操作說明：設定 TileBrush 的並排顯示大小
 這個範例示範如何設定的磚大小<xref:System.Windows.Media.TileBrush>。 根據預設，<xref:System.Windows.Media.TileBrush>會產生單一的磚，完全填滿您所繪製的區域。 您可以藉由設定覆寫這個行為<xref:System.Windows.Media.TileBrush.Viewport%2A>和<xref:System.Windows.Media.TileBrush.ViewportUnits%2A>屬性。  
@@ -49,7 +37,7 @@ ms.lasthandoff: 12/22/2017
   
  雖然這個範例會使用<xref:System.Windows.Media.ImageBrush>類別，<xref:System.Windows.Media.TileBrush.Viewport%2A>和<xref:System.Windows.Media.TileBrush.ViewportUnits%2A>屬性的行為即會相同其他<xref:System.Windows.Media.TileBrush>物件，也就是針對<xref:System.Windows.Media.DrawingBrush>和<xref:System.Windows.Media.VisualBrush>。 如需有關<xref:System.Windows.Media.ImageBrush>和其他<xref:System.Windows.Media.TileBrush>物件，請參閱[使用映像、 繪圖和視覺效果繪製](../../../../docs/framework/wpf/graphics-multimedia/painting-with-images-drawings-and-visuals.md)。  
   
-## <a name="see-also"></a>請參閱  
+## <a name="see-also"></a>另請參閱  
  <xref:System.Windows.Media.TileBrush>  
  [使用影像、繪圖和視覺效果繪製](../../../../docs/framework/wpf/graphics-multimedia/painting-with-images-drawings-and-visuals.md)  
  [使用 TileBrush 建立不同的並排顯示模式](../../../../docs/framework/wpf/graphics-multimedia/how-to-create-different-tile-patterns-with-a-tilebrush.md)

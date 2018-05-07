@@ -1,14 +1,6 @@
 ---
 title: 偵錯 Windows 驗證錯誤
-ms.custom: ''
 ms.date: 03/30/2017
-ms.prod: .net-framework
-ms.reviewer: ''
-ms.suite: ''
-ms.technology:
-- dotnet-clr
-ms.tgt_pltfrm: ''
-ms.topic: article
 dev_langs:
 - csharp
 - vb
@@ -16,31 +8,25 @@ helpviewer_keywords:
 - WCF, authentication
 - WCF, Windows authentication
 ms.assetid: 181be4bd-79b1-4a66-aee2-931887a6d7cc
-caps.latest.revision: 21
-author: dotnet-bot
-ms.author: dotnetcontent
-manager: wpickett
-ms.workload:
-- dotnet
-ms.openlocfilehash: 39c033d45488b827a4aee7439904db8094795db4
-ms.sourcegitcommit: 94d33cadc5ff81d2ac389bf5f26422c227832052
+ms.openlocfilehash: d9226324b69e5c27738abb35bb155a43964b9127
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/30/2018
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="debugging-windows-authentication-errors"></a>偵錯 Windows 驗證錯誤
-當使用 Windows 驗證做為安全性機制時，安全性支援提供者介面 (SSPI) 便會處理安全性程序。 當安全性錯誤發生在 SSPI 層時，這些錯誤會由 [!INCLUDE[indigo1](../../../../includes/indigo1-md.md)] 提出。 本主題會提供可協助診斷這些錯誤的架構與問題集。  
+當使用 Windows 驗證做為安全性機制時，安全性支援提供者介面 (SSPI) 便會處理安全性程序。 當安全性錯誤發生在 SSPI 層時，它們便會顯示由 Windows Communication Foundation (WCF)。 本主題會提供可協助診斷這些錯誤的架構與問題集。  
   
  如需 Kerberos 通訊協定的概觀，請參閱[Kerberos 說明 >](http://go.microsoft.com/fwlink/?LinkID=86946); 如需 SSPI 的概觀，請參閱[SSPI](http://go.microsoft.com/fwlink/?LinkId=88941)。  
   
- 對於 Windows 驗證，[!INCLUDE[indigo2](../../../../includes/indigo2-md.md)]通常會使用*交涉*安全性支援提供者 (SSP)，這會執行用戶端和服務之間進行 Kerberos 相互驗證。 如果無法使用 Kerberos 通訊協定，根據預設，[!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] 會退而使用 NT LAN Manager (NTLM)。 不過，您可以將 [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)]設定為只使用 Kerberos 通訊協定，而在 Kerberos 無法使用時，會擲回例外狀況。 您也可以將 [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] 設定成使用限制型態的 Kerberos 通訊協定。  
+ 對於 Windows 驗證，WCF 通常使用*交涉*安全性支援提供者 (SSP)，這會執行用戶端和服務之間進行 Kerberos 相互驗證。 如果無法使用 Kerberos 通訊協定，則預設 WCF 會回復 NT LAN Manager (NTLM)。 不過，您可以設定 WCF 使用 Kerberos 通訊協定 （並擲回例外狀況，如果 Kerberos 無法使用）。 您也可以設定成使用限制的型態的 Kerberos 通訊協定的 WCF。  
   
 ## <a name="debugging-methodology"></a>偵錯方法  
  下面列出基本的方法：  
   
 1.  判斷您是否在使用 Windows 驗證。 如果您是使用其他任何配置，這個主題就不適用。  
   
-2.  如果您確定自己是在使用 Windows 驗證，請判斷您的 [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] 組態是使用 Kerberos direct 或「交涉」(Negotiate)。  
+2.  如果您不確定您使用 Windows 驗證，判斷 WCF 組態是否使用 Kerberos direct 或 Negotiate。  
   
 3.  判斷出您的組態是使用 Kerberos 通訊協定或 NTLM 之後，您就能夠了解在正確環境中的錯誤訊息。  
   
@@ -75,7 +61,7 @@ ms.lasthandoff: 04/30/2018
 ### <a name="kerberos-protocol"></a>Kerberos 通訊協定  
   
 #### <a name="spnupn-problems-with-the-kerberos-protocol"></a>Kerberos 通訊協定的 SPN/UPN 問題  
- 當使用 Windows 驗證，而且 SSPI 有使用或交涉 Kerberos 通訊協定時，用戶端端點所使用的 URL 就必須包含在服務 URL 內之服務主機的完整網域名稱。 這是假設執行服務的帳戶具有存取權的電腦新增到 Active Directory 網域，這最常由執行此服務時，會建立此電腦 （預設值） 服務主要名稱 (SPN) 金鑰網路服務帳戶。 如果服務無法存取電腦 SPN 金鑰，您就必須在用戶端端點身分識別中，提供用來執行服務之帳戶的正確 SPN 或使用者主要名稱 (UPN)。 如需有關如何[!INCLUDE[indigo2](../../../../includes/indigo2-md.md)]搭配 SPN 和 UPN，請參閱[服務識別和驗證](../../../../docs/framework/wcf/feature-details/service-identity-and-authentication.md)。  
+ 當使用 Windows 驗證，而且 SSPI 有使用或交涉 Kerberos 通訊協定時，用戶端端點所使用的 URL 就必須包含在服務 URL 內之服務主機的完整網域名稱。 這是假設執行服務的帳戶具有存取權的電腦新增到 Active Directory 網域，這最常由執行此服務時，會建立此電腦 （預設值） 服務主要名稱 (SPN) 金鑰網路服務帳戶。 如果服務無法存取電腦 SPN 金鑰，您就必須在用戶端端點身分識別中，提供用來執行服務之帳戶的正確 SPN 或使用者主要名稱 (UPN)。 如需有關 SPN 和 UPN 與 WCF 的運作方式的詳細資訊，請參閱[服務識別和驗證](../../../../docs/framework/wcf/feature-details/service-identity-and-authentication.md)。  
   
  在負載平衡的使用案例 (例如 Web 伺服陣列與 Web 處理序區) 中，常見的作法是為每一個應用程式定義一個唯一的帳戶、指派一個 SPN 給該帳戶，並且確保應用程式的所有服務都以該帳戶執行。  
   
@@ -111,7 +97,7 @@ ms.lasthandoff: 04/30/2018
 ### <a name="ntlm-protocol"></a>NTLM 通訊協定  
   
 #### <a name="negotiate-ssp-falls-back-to-ntlm-but-ntlm-is-disabled"></a>交涉 SSP 退而使用 NTLM，但是 NTLM 已停用  
- <xref:System.ServiceModel.Security.WindowsClientCredential.AllowNtlm%2A> 屬性設為 `false`，可以讓 [!INCLUDE[indigo1](../../../../includes/indigo1-md.md)] 在 NTLM 時能夠盡力擲回例外狀況。 請注意，將此屬性設為 `false`，不一定能夠禁止 NTLM 認證透過網路傳送。  
+ <xref:System.ServiceModel.Security.WindowsClientCredential.AllowNtlm%2A>屬性設定為`false`，因而導致 Windows Communication Foundation (WCF) 進行盡力擲回例外狀況，如果使用 NTLM。 請注意，將此屬性設為 `false`，不一定能夠禁止 NTLM 認證透過網路傳送。  
   
  下列程式碼示範如何停用退回使用 NTLM。  
   

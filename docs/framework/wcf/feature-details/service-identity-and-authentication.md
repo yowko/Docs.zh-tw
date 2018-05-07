@@ -1,31 +1,17 @@
 ---
 title: 服務身分識別和驗證
-ms.custom: ''
 ms.date: 03/30/2017
-ms.prod: .net-framework
-ms.reviewer: ''
-ms.suite: ''
-ms.technology:
-- dotnet-clr
-ms.tgt_pltfrm: ''
-ms.topic: article
 dev_langs:
 - csharp
 - vb
 helpviewer_keywords:
 - authentication [WCF], specifying the identity of a service
 ms.assetid: a4c8f52c-5b30-45c4-a545-63244aba82be
-caps.latest.revision: 32
-author: dotnet-bot
-ms.author: dotnetcontent
-manager: wpickett
-ms.workload:
-- dotnet
-ms.openlocfilehash: 5bd550b7408e9db00daf7793cd0a7f1261e21ccf
-ms.sourcegitcommit: 94d33cadc5ff81d2ac389bf5f26422c227832052
+ms.openlocfilehash: 21184098f90be3b64cfccd5ab98a1824cee50e48
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/30/2018
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="service-identity-and-authentication"></a>服務身分識別和驗證
 服務的*端點身分識別*是從服務 Web 服務描述語言 (WSDL) 產生的值。 這個值會傳播至任何用戶端上，用來驗證服務。 在用戶端初始化對某個端點的通訊，且服務也向用戶端進行自我驗證之後，用戶端就會比較端點身分識別值與端點驗證處理序傳回的實際值。 如果兩者相符，則可確定用戶端已聯繫所需的服務端點。 這項功能可以防範*網路釣魚*藉由防止用戶端重新導向至惡意服務所裝載的端點。  
@@ -35,7 +21,7 @@ ms.lasthandoff: 04/30/2018
 > [!NOTE]
 >  當您使用 NT LanMan (NTLM) 進行驗證時，因為用戶端在 NTLM 協定下無法驗證伺服器，所以不會檢查服務身分識別。 當電腦是 Windows 工作群組的一部分，或者執行的是不支援 Kerberos 驗證的舊版 Windows 時，就會使用 NTLM。  
   
- 當用戶端初始化安全通道以透過其傳送訊息至服務時，[!INCLUDE[indigo1](../../../../includes/indigo1-md.md)] 基礎結構會驗證服務，而且如果服務身分識別符合用戶端所使用之端點位址中指定的身分識別時，這個基礎結構只會傳送訊息。  
+ 當用戶端初始化安全通道傳送訊息至服務，透過它時，Windows Communication Foundation (WCF) 基礎結構會驗證服務，並只會傳送訊息的服務身分識別符合的端點中所指定的識別用戶端所使用的位址。  
   
  身分識別處理包含下列階段：  
   
@@ -45,7 +31,7 @@ ms.lasthandoff: 04/30/2018
   
  用戶端上的身分識別處理與服務上的用戶端驗證很類似。 安全服務會等到用戶端認證經過驗證之後，才會執行程式碼。 同理，用戶端會等到服務認證根據事先從服務中繼資料得知的內容經過驗證之後，才會將訊息傳送至服務。  
   
- <xref:System.ServiceModel.EndpointAddress.Identity%2A> 類別的 <xref:System.ServiceModel.EndpointAddress> 屬性代表用戶端所呼叫之服務的身分識別。 服務會在其中繼資料內發行 <xref:System.ServiceModel.EndpointAddress.Identity%2A>。 當用戶端開發人員執行[ServiceModel Metadata Utility Tool (Svcutil.exe)](../../../../docs/framework/wcf/servicemodel-metadata-utility-tool-svcutil-exe.md)對服務端點，則產生的組態會包含值的服務的<xref:System.ServiceModel.EndpointAddress.Identity%2A>屬性。 [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] 基礎結構 (如果使用安全性來設定) 會確認服務是否具有指定的身分識別。  
+ <xref:System.ServiceModel.EndpointAddress.Identity%2A> 類別的 <xref:System.ServiceModel.EndpointAddress> 屬性代表用戶端所呼叫之服務的身分識別。 服務會在其中繼資料內發行 <xref:System.ServiceModel.EndpointAddress.Identity%2A>。 當用戶端開發人員執行[ServiceModel Metadata Utility Tool (Svcutil.exe)](../../../../docs/framework/wcf/servicemodel-metadata-utility-tool-svcutil-exe.md)對服務端點，則產生的組態會包含值的服務的<xref:System.ServiceModel.EndpointAddress.Identity%2A>屬性。 WCF 基礎結構 （是否使用安全性設定） 會驗證服務具有指定的身分識別。  
   
 > [!IMPORTANT]
 >  中繼資料包含所需的服務身分識別，因此建議您透過安全方式來公開服務中繼資料，例如為服務建立 HTTPS 端點。 如需詳細資訊，請參閱[How to： 安全中繼資料端點](../../../../docs/framework/wcf/feature-details/how-to-secure-metadata-endpoints.md)。  
@@ -75,7 +61,7 @@ ms.lasthandoff: 04/30/2018
   
   
 ## <a name="setting-identity-programmatically"></a>以程式設計方式設定身分識別  
- 您的服務不需要明確指定身分識別，因為 [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] 會自動決定。 不過，如果有需要，[!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] 可讓您指定端點上的身分識別。 下列程式碼會新增具有特定 DNS 身分識別的新服務端點。  
+ 您的服務並沒有明確指定身分識別，因為 WCF 自動決定。 不過，WCF 可讓您識別端點上指定，如果所需。 下列程式碼會新增具有特定 DNS 身分識別的新服務端點。  
   
  [!code-csharp[C_Identity#5](../../../../samples/snippets/csharp/VS_Snippets_CFX/c_identity/cs/source.cs#5)]
  [!code-vb[C_Identity#5](../../../../samples/snippets/visualbasic/VS_Snippets_CFX/c_identity/vb/source.vb#5)]  
@@ -99,13 +85,13 @@ ms.lasthandoff: 04/30/2018
   
  如果通道已設為使用具有 X.509 憑證的訊息層級或傳輸層級 Secure Sockets Layer (SSL) 來進行驗證，則下列身分識別值有效：  
   
--   DNS： [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] 可確保在 SSL 交換期間提供的憑證包含 DNS，或者 `CommonName` (CN) 屬性，而此屬性等於在用戶端之 DNS 身分識別中指定的值。 請注意，除了判斷伺服器憑證是否有效，系統也會進行這些檢查。 根據預設，[!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] 會驗證伺服器憑證是由受信任的根授權所發行。  
+-   DNS： WCF 可確保在 SSL 交握期間提供的憑證包含 DNS 或`CommonName`(CN) 屬性等於在用戶端上的 DNS 身分識別中指定的值。 請注意，除了判斷伺服器憑證是否有效，系統也會進行這些檢查。 根據預設，WCF 會驗證伺服器憑證由受信任的根授權單位發出。  
   
--   憑證。 在 SSL 交換期間，[!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] 可確保遠端端點根據身分識別的指定提供正確的憑證值。  
+-   憑證。 SSL 交換期間，WCF 可確保遠端端點提供身分識別中指定的確切憑證值。  
   
 -   憑證參考： 與「憑證」相同。  
   
--   RSA： 在 SSL 交換期間，[!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] 可確保遠端端點根據身分識別的指定提供正確的 RSA 金鑰。  
+-   RSA： SSL 交換期間，WCF 可確保遠端端點提供身分識別中指定正確的 RSA 金鑰。  
   
  如果服務使用具有 Windows 認證的訊息層級或傳輸層級 SSL 來進行驗證並交涉認證，則下列身分識別值有效：  
   

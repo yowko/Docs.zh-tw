@@ -1,24 +1,12 @@
 ---
-title: "相互關聯"
-ms.custom: 
+title: 相互關聯
 ms.date: 03/30/2017
-ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.technology: dotnet-clr
-ms.tgt_pltfrm: 
-ms.topic: article
 ms.assetid: 60151f6c-19b7-47af-9cdc-76c2ac95f301
-caps.latest.revision: "26"
-author: dotnet-bot
-ms.author: dotnetcontent
-manager: wpickett
-ms.workload: dotnet
-ms.openlocfilehash: 0a0be008eae45ca5bbe6ca77383bde433931b72e
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.openlocfilehash: 9dbebf6d497a5cc109400d04206d39ad76321ba3
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="correlation"></a>相互關聯
 當工作流程服務應用程式與其他服務通訊時，將其中的訊息分派至正確的工作流程執行個體是相當重要的。 相互關聯可提供此操作的機制。 本節中的主題提供相互關聯的概要以及說明如何在不同的工作流程服務案例中加以使用。  
@@ -42,7 +30,7 @@ ms.lasthandoff: 12/22/2017
  [為相互關聯進行疑難排解](../../../../docs/framework/wcf/feature-details/troubleshooting-correlation.md)  
  提供疑難排解相互關聯的方法。  
   
-## <a name="see-also"></a>請參閱  
+## <a name="see-also"></a>另請參閱  
  <xref:System.ServiceModel.Activities.CorrelationHandle>  
  <xref:System.ServiceModel.Activities.Send>  
  <xref:System.ServiceModel.Activities.Receive>  

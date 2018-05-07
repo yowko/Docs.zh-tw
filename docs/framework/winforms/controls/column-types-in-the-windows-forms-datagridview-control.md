@@ -1,28 +1,16 @@
 ---
-title: "Windows Form DataGridView 控制項中的資料行類型"
-ms.custom: 
+title: Windows Form DataGridView 控制項中的資料行類型
 ms.date: 03/30/2017
-ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.technology: dotnet-winforms
-ms.tgt_pltfrm: 
-ms.topic: article
 helpviewer_keywords:
 - columns [Windows Forms], types
 - DataGridView control [Windows Forms], column types
 - data grids [Windows Forms], columns
 ms.assetid: f0a0a9f1-8757-4bfd-891f-d7d12870dbed
-caps.latest.revision: "17"
-author: dotnet-bot
-ms.author: dotnetcontent
-manager: wpickett
-ms.workload: dotnet
-ms.openlocfilehash: 92c6881fe876bba3fe0224a358a9b12767d53f0b
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.openlocfilehash: 6630323b66265f478151ec80ab8b225c0b653917
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="column-types-in-the-windows-forms-datagridview-control"></a>Windows Form DataGridView 控制項中的資料行類型
 <xref:System.Windows.Forms.DataGridView>控制項使用數個資料行類型來顯示它的資訊，並讓使用者修改或新增資訊。  
@@ -53,7 +41,7 @@ ms.lasthandoff: 12/22/2017
  資料格的值資料類型資料行中指定<xref:System.Windows.Forms.DataGridViewColumn.ValueType%2A>資料行屬性。  
   
 ## <a name="datagridviewcheckboxcolumn"></a>DataGridViewCheckBoxColumn  
- <xref:System.Windows.Forms.DataGridViewCheckBoxColumn>搭配<xref:System.Boolean>和<xref:System.Windows.Forms.CheckState>值。 <xref:System.Boolean>值會顯示兩個狀態或三種狀態核取方塊，根據的值為<xref:System.Windows.Forms.DataGridViewCheckBoxColumn.ThreeState%2A>屬性。 當資料行繫結至<xref:System.Windows.Forms.CheckState>值<xref:System.Windows.Forms.DataGridViewCheckBoxColumn.ThreeState%2A>屬性值是`true`預設。  
+ <xref:System.Windows.Forms.DataGridViewCheckBoxColumn>搭配<xref:System.Boolean>和<xref:System.Windows.Forms.CheckState>值。 <xref:System.Boolean> 值會顯示兩個狀態或三種狀態核取方塊，根據的值為<xref:System.Windows.Forms.DataGridViewCheckBoxColumn.ThreeState%2A>屬性。 當資料行繫結至<xref:System.Windows.Forms.CheckState>值<xref:System.Windows.Forms.DataGridViewCheckBoxColumn.ThreeState%2A>屬性值是`true`預設。  
   
  一般而言，核取方塊儲存格的值是用於存放裝置，例如任何其他資料，或執行大量作業。 如果您想要立即當使用者按一下核取方塊儲存格，您可以處理回應<xref:System.Windows.Forms.DataGridView.CellClick>事件，但是此事件發生於儲存格的值會更新之前。 如果您在按一下時需要新的值，其中一個選項是計算預期的值將會根據目前的值。 另一個方法是立即認可變更，並處理<xref:System.Windows.Forms.DataGridView.CellValueChanged>回應它的事件。 若要在按下儲存格時，請認可變更，您必須處理<xref:System.Windows.Forms.DataGridView.CurrentCellDirtyStateChanged>事件。 在處理常式中，核取方塊儲存格的目前儲存格時，呼叫<xref:System.Windows.Forms.DataGridView.CommitEdit%2A>方法並傳入<xref:System.Windows.Forms.DataGridViewDataErrorContexts.Commit>值。  
   
@@ -91,7 +79,7 @@ ms.lasthandoff: 12/22/2017
   
  <xref:System.Windows.Forms.DataGridViewLinkColumn>類別提供數個屬性，修改連結的外觀之前,、 期間和之後按一下。  
   
-## <a name="see-also"></a>請參閱  
+## <a name="see-also"></a>另請參閱  
  <xref:System.Windows.Forms.DataGridView>  
  <xref:System.Windows.Forms.DataGridViewColumn>  
  <xref:System.Windows.Forms.DataGridViewButtonColumn>  

@@ -1,14 +1,6 @@
 ---
 title: WPF 安全性策略 – 安全性工程
-ms.custom: ''
 ms.date: 03/30/2017
-ms.prod: .net-framework
-ms.reviewer: ''
-ms.suite: ''
-ms.technology:
-- dotnet-wpf
-ms.tgt_pltfrm: ''
-ms.topic: article
 helpviewer_keywords:
 - security [WPF], testing techniques
 - Security Development Lifecycle (SDL), security analysis [WPF]
@@ -18,17 +10,11 @@ helpviewer_keywords:
 - Security Development Lifecycle (SDL), critical code management
 - threat modeling [WPF]
 ms.assetid: 0fc04394-4e47-49ca-b0cf-8cd1161d95b9
-caps.latest.revision: 11
-author: dotnet-bot
-ms.author: dotnetcontent
-manager: wpickett
-ms.workload:
-- dotnet
-ms.openlocfilehash: 79ab5b1a86ad94913750cfb3ec4fdc765db40282
-ms.sourcegitcommit: 03ee570f6f528a7d23a4221dcb26a9498edbdf8c
+ms.openlocfilehash: 48748267981e10be2a460f93b6f0d645951c09cb
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/28/2018
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="wpf-security-strategy---security-engineering"></a>WPF 安全性策略 – 安全性工程
 高可信度電腦運算是一項 Microsoft 開發案，用於確保生產安全的程式碼。 高可信度電腦運算開發案的一個重要項目是 [!INCLUDE[TLA#tla_sdl](../../../includes/tlasharptla-sdl-md.md)]。 

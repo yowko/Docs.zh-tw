@@ -1,23 +1,12 @@
 ---
-title: "工作流程追蹤"
-ms.custom: 
+title: 工作流程追蹤
 ms.date: 03/30/2017
-ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.tgt_pltfrm: 
-ms.topic: article
 ms.assetid: 18737989-0502-4367-b5f6-617ebfb77c96
-caps.latest.revision: "12"
-author: dotnet-bot
-ms.author: dotnetcontent
-manager: wpickett
-ms.workload: dotnet
-ms.openlocfilehash: b07dda940e35746a4d57c0cd300375692c6ab2f1
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.openlocfilehash: f4ce25efae0e42fa7c95ce5dffe8da8e31db05a6
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="workflow-tracing"></a>工作流程追蹤
 工作流程追蹤提供使用 .NET Framework 追蹤接聽程式擷取診斷資訊的方式。 如果偵測到應用程式的問題，可以啟用追蹤，等到問題解決再停用追蹤。 您可以運用兩種方式啟用工作流程的偵錯追蹤。 您可以使用事件追蹤檢視器加以設定，也可以使用 <xref:System.Diagnostics>，將追蹤事件傳送至檔案。  
@@ -48,7 +37,7 @@ ms.lasthandoff: 12/22/2017
     3.  在目前的 Framework 目錄 (例如 C:\Windows\Microsoft.NET\Framework\v4.0.21203) 中執行下列命令：`wevtutil im Microsoft.Windows.ApplicationServer.Applications.man`  
   
 > [!NOTE]
->  如果您使用.NET Framework 4 Client Profile，您必須先從.NET Framework 4 目錄執行下列命令註冊 ETW 資訊清單：`ServiceModelReg.exe –i –c:etw`  
+>  如果您使用.NET Framework 4 Client Profile，您必須先從.NET Framework 4 目錄執行下列命令註冊 ETW 資訊清單： `ServiceModelReg.exe –i –c:etw`  
   
 ## <a name="enabling-debug-tracing-using-systemdiagnostics"></a>啟用以 System.Diagnostics 進行偵錯追蹤  
  這些接聽程式可在工作流程應用程式的 App.config 檔案或工作流程服務的 Web.config 檔案中設定。 在此範例中， [TextWriterTraceListener](http://go.microsoft.com/fwlink/?LinkId=165424)設定成將追蹤資訊儲存在目前的目錄中的 MyTraceLog.txt 檔案。  
@@ -79,6 +68,6 @@ ms.lasthandoff: 12/22/2017
 </configuration>  
 ```  
   
-## <a name="see-also"></a>請參閱  
+## <a name="see-also"></a>另請參閱  
  [Windows Server App Fabric 監控](http://go.microsoft.com/fwlink/?LinkId=201273)  
  [使用 App Fabric 監控應用程式](http://go.microsoft.com/fwlink/?LinkId=201275)

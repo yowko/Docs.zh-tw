@@ -1,42 +1,30 @@
 ---
 title: WCF 安全性程式設計
-ms.custom: ''
 ms.date: 03/30/2017
-ms.prod: .net-framework
-ms.reviewer: ''
-ms.suite: ''
-ms.technology:
-- dotnet-clr
-ms.tgt_pltfrm: ''
-ms.topic: article
 dev_langs:
 - csharp
 - vb
 helpviewer_keywords:
 - message security [WCF], programming overview
 ms.assetid: 739ec222-4eda-4cc9-a470-67e64a7a3f10
-caps.latest.revision: 25
 author: BrucePerlerMS
-ms.author: bruceper
 manager: mbaldwin
-ms.workload:
-- dotnet
-ms.openlocfilehash: 63f5c2c61a374b92b018419c83c9429e6ad796d8
-ms.sourcegitcommit: 94d33cadc5ff81d2ac389bf5f26422c227832052
+ms.openlocfilehash: 3eb645dcc5b8cc1c52818e290699ebadcd0943c6
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/30/2018
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="programming-wcf-security"></a>WCF 安全性程式設計
-本主題說明用來建立安全的 [!INCLUDE[indigo1](../../../../includes/indigo1-md.md)] 應用程式的基本程式設計工作。 本主題涵蓋驗證、 機密性和完整性，統稱為*傳輸安全性*。 本主題並未涵蓋授權 （控制存取資源或服務）;如需授權資訊，請參閱[授權](../../../../docs/framework/wcf/feature-details/authorization-in-wcf.md)。  
+本主題描述用來建立安全的 Windows Communication Foundation (WCF) 應用程式的基本程式設計工作。 本主題涵蓋驗證、 機密性和完整性，統稱為*傳輸安全性*。 本主題並未涵蓋授權 （控制存取資源或服務）;如需授權資訊，請參閱[授權](../../../../docs/framework/wcf/feature-details/authorization-in-wcf.md)。  
   
 > [!NOTE]
->  如需安全性概念，尤其是在考慮寶貴簡介[!INCLUDE[indigo2](../../../../includes/indigo2-md.md)]，查看在 MSDN 上的模式和實務教學課程組[案例、 模式和實作指引 Web Services Enhancements (WSE) 3.0](http://go.microsoft.com/fwlink/?LinkID=88250).  
+>  重要簡介安全性概念，尤其是對 WCF，請參閱典範與實例的教學課程的設定，在 MSDN 上[案例、 模式和實作指引 Web Services Enhancements (WSE) 3.0](http://go.microsoft.com/fwlink/?LinkID=88250)。  
   
- [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] 安全性的程式設計是以設定下列項目的三個步驟為基礎：安全性模式、用戶端認證類型，以及認證值。 您可以透過程式碼或組態執行這些步驟。  
+ 程式設計 WCF 安全性根據三個步驟，將下列設定： 安全性模式，用戶端認證類型，以及認證值。 您可以透過程式碼或組態執行這些步驟。  
   
 ## <a name="setting-the-security-mode"></a>設定安全性模式  
- 下列說明在 [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] 中使用安全性模式來進行設計程式的一般步驟：  
+ 以下說明 WCF 的安全性模式使用程式設計的一般步驟：  
   
 1.  針對應用程式需求選取一項適合的預先定義繫結程序。 如需繫結選項的清單，請參閱[之繫結](../../../../docs/framework/wcf/system-provided-bindings.md)。 根據預設，幾乎所有的繫結都會啟用安全性。 其中一個例外是<xref:System.ServiceModel.BasicHttpBinding>類別 (使用組態則[ \<basicHttpBinding >](../../../../docs/framework/configure-apps/file-schema/wcf/basichttpbinding.md))。  
   

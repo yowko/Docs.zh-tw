@@ -1,32 +1,20 @@
 ---
 title: 匿名用戶端的訊息安全性
-ms.custom: ''
 ms.date: 03/30/2017
-ms.prod: .net-framework
-ms.reviewer: ''
-ms.suite: ''
-ms.technology:
-- dotnet-clr
-ms.tgt_pltfrm: ''
-ms.topic: article
 dev_langs:
 - csharp
 - vb
 ms.assetid: cad53e1a-b7c9-4064-bc87-508c3d1dce49
-caps.latest.revision: 15
 author: BrucePerlerMS
-ms.author: bruceper
 manager: mbaldwin
-ms.workload:
-- dotnet
-ms.openlocfilehash: 25c184d32c6cedf893c79f15d77ba93ec5e9461e
-ms.sourcegitcommit: 94d33cadc5ff81d2ac389bf5f26422c227832052
+ms.openlocfilehash: b8cab1762a8c8c672d557c7bcccc2f339cbaefe9
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/30/2018
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="message-security-with-an-anonymous-client"></a>匿名用戶端的訊息安全性
-下列案例會顯示 [!INCLUDE[indigo1](../../../../includes/indigo1-md.md)] 訊息安全性所保護的用戶端和服務。 這樣的設計目的是使用訊息安全性而非傳輸安全性，如此未來可以支援更豐富的宣告型模型。 如需使用豐富的宣告進行授權的詳細資訊，請參閱[管理宣告和授權的方式識別模型](../../../../docs/framework/wcf/feature-details/managing-claims-and-authorization-with-the-identity-model.md)。  
+下列案例會顯示用戶端與服務保護的 Windows Communication Foundation (WCF) 訊息安全性。 這樣的設計目的是使用訊息安全性而非傳輸安全性，如此未來可以支援更豐富的宣告型模型。 如需使用豐富的宣告進行授權的詳細資訊，請參閱[管理宣告和授權的方式識別模型](../../../../docs/framework/wcf/feature-details/managing-claims-and-authorization-with-the-identity-model.md)。  
   
  範例應用程式，請參閱[訊息安全性匿名](../../../../docs/framework/wcf/samples/message-security-anonymous.md)。  
   
@@ -35,7 +23,7 @@ ms.lasthandoff: 04/30/2018
 |特性|描述|  
 |--------------------|-----------------|  
 |安全性模式|訊息|  
-|互通性|僅限 [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)]|  
+|互通性|WCF 只|  
 |驗證 (伺服器)|初始交涉需要伺服器驗證，而不需要用戶端驗證|  
 |驗證 (用戶端)|無|  
 |完整性|是，使用共用安全性內容|  

@@ -1,14 +1,6 @@
 ---
-title: "MonthCalendar 控制項概觀 (Windows Form)"
-ms.custom: 
+title: MonthCalendar 控制項概觀 (Windows Form)
 ms.date: 03/30/2017
-ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.technology:
-- dotnet-winforms
-ms.tgt_pltfrm: 
-ms.topic: article
 f1_keywords:
 - MonthCalendar
 helpviewer_keywords:
@@ -16,17 +8,11 @@ helpviewer_keywords:
 - calendar controls [Windows Forms], Windows Forms
 - MonthCalendar control [Windows Forms], setting the first day of the week
 ms.assetid: 788c5325-b721-44ec-95bf-9b680ba0f6a2
-caps.latest.revision: 
-author: dotnet-bot
-ms.author: dotnetcontent
-manager: wpickett
-ms.workload:
-- dotnet
-ms.openlocfilehash: a22667e4227067dfbf0baaad1838ab520e0ac7e4
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.openlocfilehash: 7ed917afe2640fe2ffef4904a3795c5f0e84ded9
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="monthcalendar-control-overview-windows-forms"></a>MonthCalendar 控制項概觀 (Windows Form)
 Windows Form<xref:System.Windows.Forms.MonthCalendar>控制項提供直覺式的圖形化介面，以便讓使用者檢視並設定日期資訊。 控制項會顯示行事曆： 包含編號的日期的月份，在底下的反白顯示的日期選取範圍的每週天數的資料行中排列方格。 您可以透過按一下月份標題的任一邊的箭號按鈕選取不同的月份。 不同於類似<xref:System.Windows.Forms.DateTimePicker>控制項，您可以選取多個與這個控制項的日期。 如需有關<xref:System.Windows.Forms.DateTimePicker>控制，請參閱[DateTimePicker 控制項](../../../../docs/framework/winforms/controls/datetimepicker-control-windows-forms.md)。  
@@ -38,6 +24,6 @@ Windows Form<xref:System.Windows.Forms.MonthCalendar>控制項提供直覺式的
   
  索引鍵內容<xref:System.Windows.Forms.MonthCalendar>控制項是<xref:System.Windows.Forms.MonthCalendar.SelectionRange%2A>，控制項中選取日期範圍。 <xref:System.Windows.Forms.MonthCalendar.SelectionRange%2A>值不能超過可選取、 在 設定最大天數<xref:System.Windows.Forms.MonthCalendar.MaxSelectionCount%2A>屬性。 使用者可以選取的最早和最新日期由<xref:System.Windows.Forms.MonthCalendar.MaxDate%2A>和<xref:System.Windows.Forms.MonthCalendar.MinDate%2A>屬性。  
   
-## <a name="see-also"></a>請參閱  
+## <a name="see-also"></a>另請參閱  
  <xref:System.Windows.Forms.MonthCalendar>  
  [MonthCalendar 控制項](../../../../docs/framework/winforms/controls/monthcalendar-control-windows-forms.md)

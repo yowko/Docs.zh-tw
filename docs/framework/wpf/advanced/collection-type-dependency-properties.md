@@ -1,13 +1,6 @@
 ---
-title: "集合類型相依性屬性"
-ms.custom: 
+title: 集合類型相依性屬性
 ms.date: 03/30/2017
-ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.technology: dotnet-wpf
-ms.tgt_pltfrm: 
-ms.topic: article
 dev_langs:
 - csharp
 - vb
@@ -17,16 +10,11 @@ helpviewer_keywords:
 - dependency properties [WPF]
 - collection-type properties [WPF]
 ms.assetid: 99f96a42-3ab7-4f64-a16b-2e10d654e97c
-caps.latest.revision: "10"
-author: dotnet-bot
-ms.author: dotnetcontent
-manager: wpickett
-ms.workload: dotnet
-ms.openlocfilehash: e572bf7d404d0d824d3127789190ce81d4c98998
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.openlocfilehash: 71c29cc6d1c7955b889a56b0a6629690a2947c78
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="collection-type-dependency-properties"></a>集合類型相依性屬性
 本主題提供如何實作屬性類型為集合類型之相依性屬性的指引和建議模式。  
@@ -67,7 +55,7 @@ ms.lasthandoff: 12/22/2017
   
  若要啟用相依性物件的集合中的子屬性繫結，建立做為類型的集合屬性<xref:System.Windows.FreezableCollection%601>，使用任何該集合的類型條件約束<xref:System.Windows.DependencyObject>衍生的類別。  
   
-## <a name="see-also"></a>請參閱  
+## <a name="see-also"></a>另請參閱  
  <xref:System.Windows.FreezableCollection%601>  
  [WPF 的 XAML 和自訂類別](../../../../docs/framework/wpf/advanced/xaml-and-custom-classes-for-wpf.md)  
  [資料繫結概觀](../../../../docs/framework/wpf/data/data-binding-overview.md)  

@@ -1,13 +1,6 @@
 ---
-title: "控制項撰寫概觀"
-ms.custom: 
+title: 控制項撰寫概觀
 ms.date: 03/30/2017
-ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.technology: dotnet-wpf
-ms.tgt_pltfrm: 
-ms.topic: article
 dev_langs:
 - csharp
 - vb
@@ -15,16 +8,11 @@ helpviewer_keywords:
 - controls [WPF], authoring overview
 - authoring overview for controls [WPF]
 ms.assetid: 3d864748-cff0-4e63-9b23-d8e5a635b28f
-caps.latest.revision: "32"
-author: dotnet-bot
-ms.author: dotnetcontent
-manager: wpickett
-ms.workload: dotnet
-ms.openlocfilehash: f9290c249ed85ffc1fe98878daf2c2f0777786f5
-ms.sourcegitcommit: c0dd436f6f8f44dc80dc43b07f6841a00b74b23f
+ms.openlocfilehash: a6c2c796819924cdbd15d6eefffe10a607bad9bc
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 01/19/2018
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="control-authoring-overview"></a>控制項撰寫概觀
 [!INCLUDE[TLA#tla_winclient](../../../../includes/tlasharptla-winclient-md.md)] 控制項模型由於具有擴充性，因此大幅減少了建立新控制項的需求。 不過，在某些情況下，您可能還是需要建立自訂控制項。 本主題將討論可讓您建立自訂控制項的需求降到最低的一些功能，以及 [!INCLUDE[TLA#tla_winclient](../../../../includes/tlasharptla-winclient-md.md)] 中的不同控制項撰寫模型。 本主題也將示範如何建立新的控制項。  
@@ -83,7 +71,7 @@ ms.lasthandoff: 01/19/2018
 ### <a name="deriving-from-frameworkelement"></a>衍生自 FrameworkElement  
  衍生自的<xref:System.Windows.Controls.UserControl>或<xref:System.Windows.Controls.Control>依賴撰寫現有項目。 對於許多案例中，這是可以接受的解決方案，因為任何物件繼承自<xref:System.Windows.FrameworkElement>可以位於<xref:System.Windows.Controls.ControlTemplate>。 然而，有時候控制項外觀需要的不僅止於簡單項目組合的功能。 針對這些案例，以元件為基礎<xref:System.Windows.FrameworkElement>是適當的選擇。  
   
- 有兩種標準方法，用於建置<xref:System.Windows.FrameworkElement>-基礎元件： 直接轉譯和自訂項目組合。 直接轉譯牽涉到覆寫<xref:System.Windows.UIElement.OnRender%2A>方法<xref:System.Windows.FrameworkElement>並提供<xref:System.Windows.Media.DrawingContext>明確定義元件的視覺效果的作業。 這是所使用的方法<xref:System.Windows.Controls.Image>和<xref:System.Windows.Controls.Border>。 自訂項目組合牽涉到使用型別的物件<xref:System.Windows.Media.Visual>來撰寫您的元件的外觀。 如需範例，請參閱[使用 DrawingVisual 物件](../../../../docs/framework/wpf/graphics-multimedia/using-drawingvisual-objects.md)。 <xref:System.Windows.Controls.Primitives.Track>是中的控制項範例[!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)]使用自訂項目組合。 您也可以在同一個控制項中混合使用直接轉譯和自訂項目組合。  
+ 有兩種標準方法，用於建置<xref:System.Windows.FrameworkElement>-基礎元件： 直接轉譯和自訂項目組合。 直接轉譯牽涉到覆寫<xref:System.Windows.UIElement.OnRender%2A>方法<xref:System.Windows.FrameworkElement>並提供<xref:System.Windows.Media.DrawingContext>明確定義元件的視覺效果的作業。 這是所使用的方法<xref:System.Windows.Controls.Image>和<xref:System.Windows.Controls.Border>。 自訂項目組合牽涉到使用型別的物件<xref:System.Windows.Media.Visual>來撰寫您的元件的外觀。 如需範例，請參閱[使用 DrawingVisual 物件](../../../../docs/framework/wpf/graphics-multimedia/using-drawingvisual-objects.md)。 <xref:System.Windows.Controls.Primitives.Track> 是中的控制項範例[!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)]使用自訂項目組合。 您也可以在同一個控制項中混合使用直接轉譯和自訂項目組合。  
   
 #### <a name="benefits-of-deriving-from-frameworkelement"></a>從 FrameworkElement 衍生的優點  
  請考慮衍生自<xref:System.Windows.FrameworkElement>如果有則適用下列步驟：  
@@ -127,7 +115,7 @@ ms.lasthandoff: 01/19/2018
   
 -   定義方法<xref:System.Windows.CoerceValueCallback>名為`CoerceValue`。 `CoerceValue` 可以確保 `Value` 大於或等於 `MinValue`，且小於或等於 `MaxValue`。  
   
--   定義方法<xref:System.Windows.PropertyChangedCallback>具名`OnValueChanged`。 `OnValueChanged`建立<xref:System.Windows.RoutedPropertyChangedEventArgs%601>物件，並準備以引發`ValueChanged`路由的事件。 下一節中將討論路由事件。  
+-   定義方法<xref:System.Windows.PropertyChangedCallback>具名`OnValueChanged`。 `OnValueChanged` 建立<xref:System.Windows.RoutedPropertyChangedEventArgs%601>物件，並準備以引發`ValueChanged`路由的事件。 下一節中將討論路由事件。  
   
  [!code-csharp[UserControlNumericUpDown#DependencyProperty](../../../../samples/snippets/csharp/VS_Snippets_Wpf/UserControlNumericUpDown/CSharp/NumericUpDown.xaml.cs#dependencyproperty)]
  [!code-vb[UserControlNumericUpDown#DependencyProperty](../../../../samples/snippets/visualbasic/VS_Snippets_Wpf/UserControlNumericUpDown/visualbasic/numericupdown.xaml.vb#dependencyproperty)]  
@@ -195,7 +183,7 @@ ms.lasthandoff: 01/19/2018
   
 -   實作一組 `public` `static` CLR 方法，分別名為 `Set`<屬性名稱> 和 `Get`<屬性名稱>。 這兩種方法應該接受衍生自類別<xref:System.Windows.DependencyProperty>做為其第一個引數。 `Set`*PropertyName* 方法也接受其型別與屬性之已註冊資料型別相符的引數。 <屬性名稱>`Get` 方法應傳回相同類型的值。 若遺漏 <屬性名稱>`Set` 方法，屬性就會標示為唯讀。  
   
--   `Set`*PropertyName*和`Get` *PropertyName*必須直接路由傳送<xref:System.Windows.DependencyObject.GetValue%2A>和<xref:System.Windows.DependencyObject.SetValue%2A>分別方法上的目標相依性物件。 藉由呼叫方法包裝函式，或直接呼叫目標相依性物件，設計工具可以存取附加屬性。  
+-   `Set` *PropertyName*和`Get` *PropertyName*必須直接路由傳送<xref:System.Windows.DependencyObject.GetValue%2A>和<xref:System.Windows.DependencyObject.SetValue%2A>分別方法上的目標相依性物件。 藉由呼叫方法包裝函式，或直接呼叫目標相依性物件，設計工具可以存取附加屬性。  
   
  如需附加屬性的詳細資訊，請參閱[附加屬性概觀](../../../../docs/framework/wpf/advanced/attached-properties-overview.md)。  
   
@@ -279,7 +267,7 @@ ms.lasthandoff: 01/19/2018
  [!code-csharp[CustomControlNumericUpDown#ThemesSection](../../../../samples/snippets/csharp/VS_Snippets_Wpf/CustomControlNumericUpDown/CSharp/CustomControlLibrary/Properties/AssemblyInfo.cs#themessection)]
  [!code-vb[CustomControlNumericUpDown#ThemesSection](../../../../samples/snippets/visualbasic/VS_Snippets_Wpf/CustomControlNumericUpDown/visualbasic/customcontrollibrary/my project/assemblyinfo.vb#themessection)]  
   
-## <a name="see-also"></a>請參閱  
+## <a name="see-also"></a>另請參閱  
  [WPF 設計工具](http://msdn.microsoft.com/library/c6c65214-8411-4e16-b254-163ed4099c26)  
  [WPF 中的 Pack URI](../../../../docs/framework/wpf/app-development/pack-uris-in-wpf.md)  
  [控制項自訂](../../../../docs/framework/wpf/controls/control-customization.md)

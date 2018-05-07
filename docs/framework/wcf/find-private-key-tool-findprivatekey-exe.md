@@ -1,20 +1,12 @@
 ---
-title: "尋找私密金鑰工具 (FindPrivateKey.exe)"
+title: 尋找私密金鑰工具 (FindPrivateKey.exe)
 ms.date: 09/11/2017
-ms.prod: .net-framework
-ms.technology: dotnet-clr
-ms.topic: article
 ms.assetid: b8846a95-3fcc-4e8c-b9c0-128d975a6307
-caps.latest.revision: "13"
-author: dotnet-bot
-ms.author: dotnetcontent
-manager: wpickett
-ms.workload: dotnet
-ms.openlocfilehash: 4bdfa1a9e45332e8c2acbbc8cd8a09bd2f927fbc
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.openlocfilehash: 8f156cbb2f4fad8d51e356bd4dee2d72d9397ffb
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="find-private-key-tool-findprivatekeyexe"></a>尋找私密金鑰工具 (FindPrivateKey.exe)
 
@@ -40,8 +32,8 @@ FindPrivateKey<storeName> <storeLocation> [{ {-n <subjectName>} | {-t <thumbprin
 
 |選項|描述|
 |------------|-----------------|
-|`/n <`*subjectName*`>`|指定憑證的主體名稱。|
-|`/t <`*指紋*`>`|指定憑證的指紋。 您可以使用 Certmgr.exe 擷取憑證的指紋。|
+|`/n <` *subjectName* `>`|指定憑證的主體名稱。|
+|`/t <` *憑證指紋* `>`|指定憑證的指紋。 您可以使用 Certmgr.exe 擷取憑證的指紋。|
 |`/f`|僅輸出檔案名稱。|
 |`/d`|僅輸出目錄。|
 |`/a`|輸出絕對檔案名稱。|

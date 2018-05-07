@@ -1,14 +1,6 @@
 ---
-title: "IMetaDataImport::EnumCustomAttributes 方法"
-ms.custom: 
+title: IMetaDataImport::EnumCustomAttributes 方法
 ms.date: 03/30/2017
-ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.technology:
-- dotnet-clr
-ms.tgt_pltfrm: 
-ms.topic: reference
 api_name:
 - IMetaDataImport.EnumCustomAttributes
 api_location:
@@ -23,17 +15,13 @@ helpviewer_keywords:
 ms.assetid: 798513a0-68b1-4d04-bc5b-782a4445ea68
 topic_type:
 - apiref
-caps.latest.revision: 
 author: mairaw
 ms.author: mairaw
-manager: wpickett
-ms.workload:
-- dotnet
-ms.openlocfilehash: 4e45c15f3d09972d1c83c9b330965c4e8afd21b7
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.openlocfilehash: b549c6eacad63b165d26c203817f1a2adac57bca
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="imetadataimportenumcustomattributes-method"></a>IMetaDataImport::EnumCustomAttributes 方法
 列舉與指定的型別或成員相關聯的自訂屬性定義語彙基元。  
@@ -74,7 +62,7 @@ HRESULT EnumCustomAttributes (
   
 |HRESULT|描述|  
 |-------------|-----------------|  
-|`S_OK`|`EnumCustomAttributes`已成功傳回。|  
+|`S_OK`|`EnumCustomAttributes` 已成功傳回。|  
 |`S_FALSE`|沒有自訂屬性列舉。 在此情況下，`pcCustomAttributes`為零。|  
   
 ## <a name="requirements"></a>需求  
@@ -84,8 +72,8 @@ HRESULT EnumCustomAttributes (
   
  **程式庫：**包含做為 MsCorEE.dll 中的資源  
   
- **.NET framework 版本：**[!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
+ **.NET framework 版本：** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
   
-## <a name="see-also"></a>請參閱  
+## <a name="see-also"></a>另請參閱  
  [IMetaDataImport 介面](../../../../docs/framework/unmanaged-api/metadata/imetadataimport-interface.md)  
  [IMetaDataImport2 介面](../../../../docs/framework/unmanaged-api/metadata/imetadataimport2-interface.md)

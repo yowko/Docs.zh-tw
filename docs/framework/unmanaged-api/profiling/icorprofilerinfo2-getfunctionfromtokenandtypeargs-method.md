@@ -1,14 +1,6 @@
 ---
-title: "ICorProfilerInfo2::GetFunctionFromTokenAndTypeArgs 方法"
-ms.custom: 
+title: ICorProfilerInfo2::GetFunctionFromTokenAndTypeArgs 方法
 ms.date: 03/30/2017
-ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.technology:
-- dotnet-clr
-ms.tgt_pltfrm: 
-ms.topic: reference
 api_name:
 - ICorProfilerInfo2.GetFunctionFromTokenAndTypeArgs
 api_location:
@@ -23,17 +15,13 @@ helpviewer_keywords:
 ms.assetid: ce8f6aa6-4ebf-4a86-b429-4bbc8af41a8f
 topic_type:
 - apiref
-caps.latest.revision: 
 author: mairaw
 ms.author: mairaw
-manager: wpickett
-ms.workload:
-- dotnet
-ms.openlocfilehash: b225b87eab6e65055618c8b6659459637e8a01be
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.openlocfilehash: 343cedcf26112f0f2bcc7943ea5ee9f302329a15
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="icorprofilerinfo2getfunctionfromtokenandtypeargs-method"></a>ICorProfilerInfo2::GetFunctionFromTokenAndTypeArgs 方法
 取得`FunctionID`函式，使用指定的中繼資料語彙基元，包含類別，來和`ClassID`值的任何型別引數。  
@@ -83,8 +71,8 @@ HRESULT GetFunctionFromTokenAndTypeArgs(
   
  **程式庫：** CorGuids.lib  
   
- **.NET framework 版本：**[!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]  
+ **.NET framework 版本：** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]  
   
-## <a name="see-also"></a>請參閱  
+## <a name="see-also"></a>另請參閱  
  [ICorProfilerInfo 介面](../../../../docs/framework/unmanaged-api/profiling/icorprofilerinfo-interface.md)  
  [ICorProfilerInfo2 介面](../../../../docs/framework/unmanaged-api/profiling/icorprofilerinfo2-interface.md)

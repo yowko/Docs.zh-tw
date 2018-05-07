@@ -1,36 +1,22 @@
 ---
-title: "HOW TO：建立使用自訂憑證驗證程式的服務"
-ms.custom: 
+title: HOW TO：建立使用自訂憑證驗證程式的服務
 ms.date: 03/30/2017
-ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.technology:
-- dotnet-clr
-ms.tgt_pltfrm: 
-ms.topic: article
 dev_langs:
 - csharp
 - vb
 helpviewer_keywords:
 - WCF, authentication
 ms.assetid: bb0190ff-0738-4e54-8d22-c97d343708bf
-caps.latest.revision: 
-author: dotnet-bot
-ms.author: dotnetcontent
-manager: wpickett
-ms.workload:
-- dotnet
-ms.openlocfilehash: e0a48801b1d4674b81a0e4b54a80b69d026ce2af
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
-ms.translationtype: MT
+ms.openlocfilehash: d4a1532ed91b17cf5bed909026ace695aeba8cd9
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="how-to-create-a-service-that-employs-a-custom-certificate-validator"></a>HOW TO：建立使用自訂憑證驗證程式的服務
 這個主題將示範如何實作自訂憑證驗證程式，以及如何設定用戶端或服務認證，以使用自訂憑證驗證程式來取代預設的憑證驗證邏輯。  
   
- 如果使用 X.509 憑證來驗證用戶端或服務，根據預設，[!INCLUDE[indigo1](../../../../includes/indigo1-md.md)] 會使用 Windows 憑證存放區和 Crypto API 來驗證憑證及確保它是受信任的。 有時內建的憑證驗證功能不足，必須變更。 [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] 提供簡單的方法，可讓使用者新增憑證驗證程式以變更驗證邏輯。 如果指定了自訂憑證驗證程式，[!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] 便不會使用內建的憑證驗證邏輯，而會改用自訂驗證程式。  
+ 如果 X.509 憑證用來驗證用戶端或服務，Windows Communication Foundation (WCF) 預設會使用 Windows 憑證存放區和 Crypto API 來驗證憑證，並確保它是受信任。 有時內建的憑證驗證功能不足，必須變更。 [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] 提供簡單的方法，可讓使用者新增憑證驗證程式以變更驗證邏輯。 如果指定了自訂憑證驗證程式，[!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] 便不會使用內建的憑證驗證邏輯，而會改用自訂驗證程式。  
   
 ## <a name="procedures"></a>程序  
   
@@ -142,5 +128,5 @@ ms.lasthandoff: 12/22/2017
  [!code-csharp[c_CustomCertificateValidator#3](../../../../samples/snippets/csharp/VS_Snippets_CFX/c_customcertificatevalidator/cs/source.cs#3)]
  [!code-vb[c_CustomCertificateValidator#3](../../../../samples/snippets/visualbasic/VS_Snippets_CFX/c_customcertificatevalidator/vb/source.vb#3)]  
   
-## <a name="see-also"></a>請參閱  
+## <a name="see-also"></a>另請參閱  
  <xref:System.IdentityModel.Selectors.X509CertificateValidator>

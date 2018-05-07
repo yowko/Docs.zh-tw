@@ -1,14 +1,6 @@
 ---
 title: 如何：從遠端調查印表機的狀態
-ms.custom: ''
 ms.date: 03/30/2017
-ms.prod: .net-framework
-ms.reviewer: ''
-ms.suite: ''
-ms.technology:
-- dotnet-wpf
-ms.tgt_pltfrm: ''
-ms.topic: article
 dev_langs:
 - csharp
 - vb
@@ -19,17 +11,11 @@ helpviewer_keywords:
 - remotely surveying printer status [WPF]
 - status [WPF], printers [WPF], surveying remotely
 ms.assetid: d6324759-8292-4c23-9584-9c708887dc94
-caps.latest.revision: 9
-author: dotnet-bot
-ms.author: dotnetcontent
-manager: wpickett
-ms.workload:
-- dotnet
-ms.openlocfilehash: 3d0faedbe8ce3394fb888a6509ece1441f0a353a
-ms.sourcegitcommit: 86adcc06e35390f13c1e372c36d2e044f1fc31ef
+ms.openlocfilehash: eca1720aea1620683ebc9ed08b47a0f5625da9d9
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/26/2018
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="how-to-remotely-survey-the-status-of-printers"></a>如何：從遠端調查印表機的狀態
 在任何時候，中型和大型公司都可能有多部印表機因為夾紙或紙張用完或一些其他問題狀況而無法運作。 一組豐富的印表機內容中公開[!INCLUDE[TLA#tla_api#plural](../../../../includes/tlasharptla-apisharpplural-md.md)]Microsoft.NET framework 提供一種方法執行快速問卷印表機的狀態。  

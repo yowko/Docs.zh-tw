@@ -1,31 +1,17 @@
 ---
-title: "Windows Form 的應用程式設定"
-ms.custom: 
+title: Windows Form 的應用程式設定
 ms.date: 04/07/2017
-ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.technology:
-- dotnet-winforms
-ms.tgt_pltfrm: 
-ms.topic: article
 f1_keywords:
 - ClientApplicationSettings
 helpviewer_keywords:
 - application settings [Windows Forms]
 - Windows Forms, application settings
 ms.assetid: 64090a34-8556-4904-8ea0-20efe9f8c886
-caps.latest.revision: 
-author: dotnet-bot
-ms.author: dotnetcontent
-manager: wpickett
-ms.workload:
-- dotnet
-ms.openlocfilehash: 63248009497152a41a6313a50ed6e7544ac62cbe
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.openlocfilehash: 2c707d9ab2fd2be611fe0872501b45665d0a349e
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="application-settings-for-windows-forms"></a>Windows Form 的應用程式設定
 Windows Form 的應用程式設定功能可讓您輕鬆地在用戶端上建立、儲存及維護自訂應用程式和使用者偏好設定。 利用應用程式設定，您不只可以儲存應用程式資料 (例如資料庫連接字串)，也可以儲存使用者專屬資料 (例如工具列位置和最近使用的清單)。  

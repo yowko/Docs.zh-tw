@@ -1,28 +1,16 @@
 ---
-title: "主要畫面格動畫概觀"
-ms.custom: 
+title: 主要畫面格動畫概觀
 ms.date: 03/30/2017
-ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.technology: dotnet-wpf
-ms.tgt_pltfrm: 
-ms.topic: article
 helpviewer_keywords:
 - animation [WPF], key-frame
 - key frames [WPF], about key-frame animations
 - multiple animation target values [WPF]
 ms.assetid: 10028f97-bb63-41fc-b8ad-663dac7ea203
-caps.latest.revision: "29"
-author: dotnet-bot
-ms.author: dotnetcontent
-manager: wpickett
-ms.workload: dotnet
-ms.openlocfilehash: 38f0f6ac030af08039438b7e766c3f0f5bed7534
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.openlocfilehash: 8a18e0637b0fea7a1a960b157123da10819b4687
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="key-frame-animations-overview"></a>主要畫面格動畫概觀
 本主題介紹主要畫面格動畫。 主要畫面格動畫可讓您使用兩個以上的目標值來建立動畫，並且控制動畫的插補方法。  
@@ -290,11 +278,11 @@ ms.lasthandoff: 12/22/2017
   
 6.  解決<xref:System.Windows.Media.Animation.KeyTime>與主要畫面格的值未指定使用的主要畫面格最接近它們的宣告，表示已解決的關鍵時間<xref:System.Windows.Media.Animation.KeyTime>值。  
   
-7.  解決剩餘<xref:System.Windows.Media.Animation.KeyTime.Paced%2A><xref:System.Windows.Media.Animation.KeyTime>值。 <xref:System.Windows.Media.Animation.KeyTime.Paced%2A><xref:System.Windows.Media.Animation.KeyTime>使用<xref:System.Windows.Media.Animation.KeyTime>鄰近的值索引鍵以判斷其解決的時間的畫面格。  這是為了確保動畫的速度維持在此主要畫面格的解析時間。  
+7.  解決剩餘<xref:System.Windows.Media.Animation.KeyTime.Paced%2A><xref:System.Windows.Media.Animation.KeyTime>值。 <xref:System.Windows.Media.Animation.KeyTime.Paced%2A> <xref:System.Windows.Media.Animation.KeyTime> 使用<xref:System.Windows.Media.Animation.KeyTime>鄰近的值索引鍵以判斷其解決的時間的畫面格。  這是為了確保動畫的速度維持在此主要畫面格的解析時間。  
   
 8.  也就是排序順序的解決時間 （主索引鍵） 和宣告 （次要索引鍵） 的順序中的主要畫面格，請使用穩定的排序是根據已解決的主要畫面格<xref:System.Windows.Media.Animation.KeyTime>值。  
   
-## <a name="see-also"></a>請參閱  
+## <a name="see-also"></a>另請參閱  
  <xref:System.Windows.Media.Animation.KeyTime>  
  <xref:System.Windows.Media.Animation.KeySpline>  
  <xref:System.Windows.Media.Animation.Timeline>  

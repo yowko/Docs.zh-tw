@@ -1,24 +1,14 @@
 ---
-title: "ICorDebugProcess6::GetExportStepInfo 方法"
-ms.custom: 
+title: ICorDebugProcess6::GetExportStepInfo 方法
 ms.date: 03/30/2017
-ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.technology: dotnet-clr
-ms.tgt_pltfrm: 
-ms.topic: reference
 ms.assetid: a927e0ac-f110-426d-bbec-9377a29c8f17
-caps.latest.revision: "4"
 author: rpetrusha
 ms.author: ronpet
-manager: wpickett
-ms.workload: dotnet
-ms.openlocfilehash: d3c69bbc904f54636e56be6d235d1070b9fecf1c
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.openlocfilehash: 4d0758a8603b7c31844b39c9f3beefea04e0a029
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="icordebugprocess6getexportstepinfo-method"></a>ICorDebugProcess6::GetExportStepInfo 方法
 提供執行階段匯出函式的相關資訊，以協助逐步執行 Managed 程式碼。  
@@ -48,7 +38,7 @@ HRESULT GetExportStepInfo(
 |傳回值|描述|  
 |------------------|-----------------|  
 |`S_OK`|方法呼叫成功。|  
-|`E_POINTER`|`pInvokeKind`或`pInvokePurpose`是**null**。|  
+|`E_POINTER`|`pInvokeKind` 或`pInvokePurpose`是**null**。|  
 |其他失敗的 `HRESULT` 值。|視需要。|  
   
 ## <a name="remarks"></a>備註  
@@ -63,8 +53,8 @@ HRESULT GetExportStepInfo(
   
  **程式庫：** CorGuids.lib  
   
- **.NET framework 版本：**[!INCLUDE[net_46_native](../../../../includes/net-46-native-md.md)]  
+ **.NET framework 版本：** [!INCLUDE[net_46_native](../../../../includes/net-46-native-md.md)]  
   
-## <a name="see-also"></a>請參閱  
+## <a name="see-also"></a>另請參閱  
  [ICorDebugProcess6 介面](../../../../docs/framework/unmanaged-api/debugging/icordebugprocess6-interface.md)  
  [偵錯介面](../../../../docs/framework/unmanaged-api/debugging/debugging-interfaces.md)

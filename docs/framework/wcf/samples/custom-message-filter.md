@@ -1,27 +1,15 @@
 ---
-title: "自訂訊息篩選條件"
-ms.custom: 
+title: 自訂訊息篩選條件
 ms.date: 03/30/2017
-ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.technology: dotnet-clr
-ms.tgt_pltfrm: 
-ms.topic: article
 ms.assetid: 98dd0af8-fce6-4255-ac32-42eb547eea67
-caps.latest.revision: "14"
-author: dotnet-bot
-ms.author: dotnetcontent
-manager: wpickett
-ms.workload: dotnet
-ms.openlocfilehash: 37b8721fe1e56bda400f3254fd5d19f828df523e
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.openlocfilehash: d01fd0d08a7f5d9b12007bc22a26e6f08e006b64
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="custom-message-filter"></a>自訂訊息篩選條件
-這個範例會示範如何取代 [!INCLUDE[indigo1](../../../../includes/indigo1-md.md)] 用來將訊息分派至端點的訊息篩選條件。  
+這個範例示範如何取代 Windows Communication Foundation (WCF) 用來分派訊息至端點的訊息篩選。  
   
 > [!NOTE]
 >  此範例的安裝程序與建置指示位於本主題的結尾。  
@@ -124,7 +112,7 @@ Hello
 >   
 >  `<InstallDrive>:\WF_WCF_Samples`  
 >   
->  如果此目錄不存在，請移至 [Windows Communication Foundation (WCF) and Windows Workflow Foundation (WF) Samples for .NET Framework 4  (適用於 .NET Framework 4 的 Windows Communication Foundation (WCF) 與 Windows Workflow Foundation (WF) 範例)](http://go.microsoft.com/fwlink/?LinkId=150780) ，以下載所有 [!INCLUDE[indigo1](../../../../includes/indigo1-md.md)] 和 [!INCLUDE[wf1](../../../../includes/wf1-md.md)] 範例。 此範例位於下列目錄。  
+>  如果此目錄不存在，請移至[Windows Communication Foundation (WCF) 和適用於.NET Framework 4 的 Windows Workflow Foundation (WF) 範例](http://go.microsoft.com/fwlink/?LinkId=150780)下載所有 Windows Communication Foundation (WCF) 和[!INCLUDE[wf1](../../../../includes/wf1-md.md)]範例。 此範例位於下列目錄。  
 >   
 >  `<InstallDrive>:\WF_WCF_Samples\WCF\Extensibility\MessageFilter`  
   
@@ -146,4 +134,4 @@ Hello
     Uri serviceVia = new Uri("http://servermachinename/ServiceModelSamples/service.svc");  
     ```  
   
-## <a name="see-also"></a>請參閱
+## <a name="see-also"></a>另請參閱

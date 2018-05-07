@@ -1,14 +1,6 @@
 ---
-title: "COR_PRF_FUNCTION_ARGUMENT_INFO 結構"
-ms.custom: 
+title: COR_PRF_FUNCTION_ARGUMENT_INFO 結構
 ms.date: 03/30/2017
-ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.technology:
-- dotnet-clr
-ms.tgt_pltfrm: 
-ms.topic: reference
 api_name:
 - COR_PRF_FUNCTION_ARGUMENT_INFO
 api_location:
@@ -22,17 +14,13 @@ helpviewer_keywords:
 ms.assetid: 07cf3bab-e193-4991-8205-3f41cf2d67b3
 topic_type:
 - apiref
-caps.latest.revision: 
 author: mairaw
 ms.author: mairaw
-manager: wpickett
-ms.workload:
-- dotnet
-ms.openlocfilehash: e26377fe3c5cfbae68f90087e3fb624ae4db0dc8
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.openlocfilehash: 1fbc41ca1366b412c37d6af09e90e3f1b042ba21
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="corprffunctionargumentinfo-structure"></a>COR_PRF_FUNCTION_ARGUMENT_INFO 結構
 代表函式的引數，順序由左至右。  
@@ -69,7 +57,7 @@ typedef struct _COR_PRF_FUNCTION_ARGUMENT_INFO {
   
  **程式庫：** CorGuids.lib  
   
- **.NET framework 版本：**[!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]  
+ **.NET framework 版本：** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]  
   
-## <a name="see-also"></a>請參閱  
+## <a name="see-also"></a>另請參閱  
  [分析結構](../../../../docs/framework/unmanaged-api/profiling/profiling-structures.md)

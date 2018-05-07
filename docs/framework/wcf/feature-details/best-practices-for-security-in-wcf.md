@@ -1,43 +1,31 @@
 ---
 title: WCF 中安全性的最佳做法
-ms.custom: ''
 ms.date: 03/30/2017
-ms.prod: .net-framework
-ms.reviewer: ''
-ms.suite: ''
-ms.technology:
-- dotnet-clr
-ms.tgt_pltfrm: ''
-ms.topic: article
 dev_langs:
 - csharp
 - vb
 helpviewer_keywords:
 - best practices [WCF], security
 ms.assetid: 3639de41-1fa7-4875-a1d7-f393e4c8bd69
-caps.latest.revision: 19
 author: BrucePerlerMS
-ms.author: bruceper
 manager: mbaldwin
-ms.workload:
-- dotnet
-ms.openlocfilehash: 0545ff40247b7ff86cb6227fa8cf4af8666c3629
-ms.sourcegitcommit: 94d33cadc5ff81d2ac389bf5f26422c227832052
+ms.openlocfilehash: 62675bc5cca2eccfcd4f210f96e5eeec93341399
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/30/2018
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="best-practices-for-security-in-wcf"></a>WCF 中安全性的最佳做法
-下列各節將列出在使用 [!INCLUDE[indigo1](../../../../includes/indigo1-md.md)] 建立安全應用程式時，應該考慮採用的最佳做法。 如需有關安全性的詳細資訊，請參閱[安全性考量](../../../../docs/framework/wcf/feature-details/security-considerations-in-wcf.md)，[資料的安全性考量](../../../../docs/framework/wcf/feature-details/security-considerations-for-data.md)，和[與中繼資料的安全性考量](../../../../docs/framework/wcf/feature-details/security-considerations-with-metadata.md)。  
+下列章節會列出建立安全的應用程式使用 Windows Communication Foundation (WCF) 時要考量的最佳作法。 如需有關安全性的詳細資訊，請參閱[安全性考量](../../../../docs/framework/wcf/feature-details/security-considerations-in-wcf.md)，[資料的安全性考量](../../../../docs/framework/wcf/feature-details/security-considerations-for-data.md)，和[與中繼資料的安全性考量](../../../../docs/framework/wcf/feature-details/security-considerations-with-metadata.md)。  
   
 ## <a name="identify-services-performing-windows-authentication-with-spns"></a>利用 SPN 識別執行 Windows 驗證的服務  
  服務可以透過使用者主要名稱 (UPN) 或服務主要名稱 (SPN) 進行識別。 以如網路服務的電腦帳戶來執行的服務，都有一個對應於所執行電腦的 SPN 身分識別。 雖然 `setspn` 工具可用於指派 SPN 給使用者帳戶，但是以使用者帳戶執行的服務都有一個對應於所執行之使用者身分的 UPN 身分識別。 對服務進行設定，讓服務可以透過 SPN 識別，並且設定用戶端要連結到該服務，以使用該 SPN，才能確保服務不容易受到特定攻擊。 這個方法也適用於使用 Kerberos 或 SSPI 交涉的繫結。  在 SSPI 又改回使用 NTLM 的情況下，用戶端應該仍然能夠指定 SPN。  
   
 ## <a name="verify-service-identities-in-wsdl"></a>利用 WSDL 驗證服務身分識別  
- WS-SecurityPolicy 允許服務以中繼資料發佈關於本身身分識別的資訊。 透過 `svcutil` 或如 <xref:System.ServiceModel.Description.WsdlImporter>[!INCLUDE[indigo2](../../../../includes/indigo2-md.md)]的其他方法擷取時，身分識別資訊會轉譯為  服務端點位址的身分識別屬性。 沒有驗證這些服務的用戶端屬於正確且有效的略過服務驗證。 但是，惡意的服務會利用這類用戶端，變更 WSDL 中聲稱的身分，執行認證轉送或其他的中間人攻擊。  
+ WS-SecurityPolicy 允許服務以中繼資料發佈關於本身身分識別的資訊。 透過擷取時`svcutil`或其他方法，例如<xref:System.ServiceModel.Description.WsdlImporter>，此身分識別資訊就會轉譯成 WCF 服務端點位址的識別屬性。 沒有驗證這些服務的用戶端屬於正確且有效的略過服務驗證。 但是，惡意的服務會利用這類用戶端，變更 WSDL 中聲稱的身分，執行認證轉送或其他的中間人攻擊。  
   
 ## <a name="use-x509-certificates-instead-of-ntlm"></a>使用 X509 憑證取代 NTLM  
- [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)]提供兩種對等驗證機制，分別是 X509 憑證 (用於對等通道) 以及 Windows 驗證，後者的使用案例中，SSPI 交涉會從 Kerberos 降級為 NTLM。  相較於 NTLM，使用 1024 位元以上的金鑰進行的憑證式驗證較為理想，因為：  
+ WCF 提供的對等驗證兩種機制： X509 憑證 （對等通道所使用） 和 Windows 驗證的 Kerberos SSPI 交涉降級為 NTLM 位置。  相較於 NTLM，使用 1024 位元以上的金鑰進行的憑證式驗證較為理想，因為：  
   
 -   雙向驗證的可用性  
   

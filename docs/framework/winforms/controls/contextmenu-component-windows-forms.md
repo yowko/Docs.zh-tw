@@ -1,13 +1,6 @@
 ---
-title: "ContextMenu 元件 (Windows Form)"
-ms.custom: 
+title: ContextMenu 元件 (Windows Form)
 ms.date: 03/30/2017
-ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.technology: dotnet-winforms
-ms.tgt_pltfrm: 
-ms.topic: article
 helpviewer_keywords:
 - menus [Windows Forms], shortcut menus
 - Windows Forms, menus
@@ -17,16 +10,11 @@ helpviewer_keywords:
 - context menus [Windows Forms], for Windows Forms
 - shortcut menus [Windows Forms], ContextMenu component
 ms.assetid: 9b93ccbc-c0fe-44a2-968e-faac25971831
-caps.latest.revision: "13"
-author: dotnet-bot
-ms.author: dotnetcontent
-manager: wpickett
-ms.workload: dotnet
-ms.openlocfilehash: 56e87d6d873ba69e3ee9fe788025d66f4a55a4ee
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.openlocfilehash: 35806d14701169206b1ce29ea8b0b6e5993ba3c8
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="contextmenu-component-windows-forms"></a>ContextMenu 元件 (Windows Form)
 > [!NOTE]
@@ -49,6 +37,6 @@ ms.lasthandoff: 12/22/2017
  [在 Windows Forms 上使用的控制項](../../../../docs/framework/winforms/controls/controls-to-use-on-windows-forms.md)  
  提供 Windows Form 控制項的完整清單，以及其用法的資訊連結。  
   
-## <a name="see-also"></a>請參閱  
+## <a name="see-also"></a>另請參閱  
  <xref:System.Windows.Forms.MenuStrip>  
  <xref:System.Windows.Forms.ContextMenuStrip>

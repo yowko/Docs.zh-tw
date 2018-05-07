@@ -1,13 +1,7 @@
 ---
-title: "如何：驗證 XML 文件的數位簽章"
-ms.custom: 
+title: 如何：驗證 XML 文件的數位簽章
 ms.date: 03/30/2017
-ms.prod: .net
-ms.reviewer: 
-ms.suite: 
 ms.technology: dotnet-standard
-ms.tgt_pltfrm: 
-ms.topic: article
 dev_langs:
 - csharp
 - vb
@@ -20,21 +14,16 @@ helpviewer_keywords:
 - XML digital signatures
 - digital signatures, verifying
 ms.assetid: a4d5ceb1-b9f5-47e8-9e4a-a2b39110002f
-caps.latest.revision: "8"
 author: mairaw
 ms.author: mairaw
-manager: wpickett
-ms.workload:
-- dotnet
-- dotnetcore
-ms.openlocfilehash: c45ffbffd5eae812dbd9703ffde4423c94581234
-ms.sourcegitcommit: e7f04439d78909229506b56935a1105a4149ff3d
+ms.openlocfilehash: 6b2cb61f2cc7129153a71398c6fb219c4e3990a8
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 12/23/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="how-to-verify-the-digital-signatures-of-xml-documents"></a>如何：驗證 XML 文件的數位簽章
-您可以使用 <xref:System.Security.Cryptography.Xml> 命名空間中的類別，驗證使用數位簽章簽署的 XML 資料。  XML 數位簽章 (XMLDSIG) 可讓您驗證在簽署資料後，資料未經過變更。  如需 XMLDSIG 標準的詳細資訊，請參閱全球資訊網協會 (W3C) 規格，位於 http://www.w3.org/TR/xmldsig-core/。  
+您可以使用 <xref:System.Security.Cryptography.Xml> 命名空間中的類別，驗證使用數位簽章簽署的 XML 資料。  XML 數位簽章 (XMLDSIG) 可讓您驗證在簽署資料後，資料未經過變更。  如需 XMLDSIG 標準的詳細資訊，請參閱全球資訊網協會 (W3C) 規格在http://www.w3.org/TR/xmldsig-core/。  
   
  這個程序中的程式碼範例會示範如何驗證 <`Signature`> 項目所包含的 XML 數位簽章。  範例會從金鑰容器擷取 RSA 公開金鑰，然後使用金鑰來驗證簽章。  
   
@@ -94,6 +83,6 @@ ms.lasthandoff: 12/23/2017
   
  絕對不要直接將私密金鑰內嵌在您的原始程式碼。  內嵌的金鑰可以輕鬆地從組件使用讀取[Ildasm.exe （IL 解譯器）](../../../docs/framework/tools/ildasm-exe-il-disassembler.md)或藉由在文字編輯器例如記事本中開啟組件。  
   
-## <a name="see-also"></a>請參閱  
+## <a name="see-also"></a>另請參閱  
  <xref:System.Security.Cryptography.Xml>  
  [操作說明：使用數位簽章簽署 XML 文件](../../../docs/standard/security/how-to-sign-xml-documents-with-digital-signatures.md)

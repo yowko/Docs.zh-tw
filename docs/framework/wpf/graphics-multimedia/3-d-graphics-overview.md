@@ -1,13 +1,6 @@
 ---
-title: "立體圖形概觀"
-ms.custom: 
+title: 立體圖形概觀
 ms.date: 03/30/2017
-ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.technology: dotnet-wpf
-ms.tgt_pltfrm: 
-ms.topic: article
 dev_langs:
 - csharp
 - vb
@@ -15,16 +8,11 @@ helpviewer_keywords:
 - 3-D graphics [WPF]
 - graphics [WPF], 3-D
 ms.assetid: 67f31ed4-e36b-4b02-9889-dcce245d7afc
-caps.latest.revision: "21"
-author: dotnet-bot
-ms.author: dotnetcontent
-manager: wpickett
-ms.workload: dotnet
-ms.openlocfilehash: 58b756c24c1ca7e3f5b6b3f13c314363daf35443
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.openlocfilehash: 6d44f27ccd82d535436be03092c3864e3155d1d8
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="3-d-graphics-overview"></a>立體圖形概觀
 <a name="introduction"></a>[!INCLUDE[TLA#tla_winclient](../../../../includes/tlasharptla-winclient-md.md)] 中的 [!INCLUDE[TLA2#tla_3d](../../../../includes/tla2sharptla-3d-md.md)] 功能可讓開發人員以標記和程序性程式碼繪製、轉換 3D 圖形，以及以動畫顯示 3D 圖形。 開發人員可以結合 [!INCLUDE[TLA#tla_2d](../../../../includes/tlasharptla-2d-md.md)] 和 [!INCLUDE[TLA2#tla_3d](../../../../includes/tla2sharptla-3d-md.md)] 圖形來建立豐富的控制項、提供複雜的資料說明，或者加強應用程式介面的使用者體驗。 [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] 中的 [!INCLUDE[TLA2#tla_3d](../../../../includes/tla2sharptla-3d-md.md)] 支援不適用於提供完整功能的遊戲開發平台。 本主題將提供 [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] 圖形系統中 [!INCLUDE[TLA#tla_3d](../../../../includes/tlasharptla-3d-md.md)] 功能的概觀。  
@@ -32,7 +20,7 @@ ms.lasthandoff: 12/22/2017
   
 <a name="threed_in_2d"></a>   
 ## <a name="3-d-in-a-2-d-container"></a>2D 容器中的 3D  
- [!INCLUDE[TLA2#tla_3d](../../../../includes/tla2sharptla-3d-md.md)]圖形中的內容[!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)]封裝在新項目， <xref:System.Windows.Controls.Viewport3D>，可以參與二維的元素結構。 圖形系統會將<xref:System.Windows.Controls.Viewport3D>二維的視覺項目，例如許多其他的為[!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)]。 <xref:System.Windows.Controls.Viewport3D>為視窗函式 — 檢視區 — 成 3d 場景。 更精確來說，是一種 [!INCLUDE[TLA2#tla_3d](../../../../includes/tla2sharptla-3d-md.md)] 場景投射到的表面。  
+ [!INCLUDE[TLA2#tla_3d](../../../../includes/tla2sharptla-3d-md.md)] 圖形中的內容[!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)]封裝在新項目， <xref:System.Windows.Controls.Viewport3D>，可以參與二維的元素結構。 圖形系統會將<xref:System.Windows.Controls.Viewport3D>二維的視覺項目，例如許多其他的為[!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)]。 <xref:System.Windows.Controls.Viewport3D> 為視窗函式 — 檢視區 — 成 3d 場景。 更精確來說，是一種 [!INCLUDE[TLA2#tla_3d](../../../../includes/tla2sharptla-3d-md.md)] 場景投射到的表面。  
   
  在傳統[!INCLUDE[TLA2#tla_2d](../../../../includes/tla2sharptla-2d-md.md)]應用程式中，使用<xref:System.Windows.Controls.Viewport3D>如同像方格或畫布的另一個容器項目。  雖然您可以使用<xref:System.Windows.Controls.Viewport3D>與其他[!INCLUDE[TLA2#tla_2d](../../../../includes/tla2sharptla-2d-md.md)]繪圖物件相同的場景圖形中，您無法 interpenetrate[!INCLUDE[TLA2#tla_2d](../../../../includes/tla2sharptla-2d-md.md)]和[!INCLUDE[TLA2#tla_3d](../../../../includes/tla2sharptla-3d-md.md)]物件內<xref:System.Windows.Controls.Viewport3D>。  本主題將著重在如何繪製[!INCLUDE[TLA2#tla_3d](../../../../includes/tla2sharptla-3d-md.md)]圖形內<xref:System.Windows.Controls.Viewport3D>。  
   
@@ -51,12 +39,12 @@ ms.lasthandoff: 12/22/2017
   
  另一種了解如何在 [!INCLUDE[TLA2#tla_2d](../../../../includes/tla2sharptla-2d-md.md)] 表面上表示 [!INCLUDE[TLA2#tla_3d](../../../../includes/tla2sharptla-3d-md.md)] 場景的方式是將場景描述為在檢視表面上的投影。 <xref:System.Windows.Media.Media3D.ProjectionCamera>可讓您指定不同的投影和其屬性，以變更視景的會看到[!INCLUDE[TLA2#tla_3d](../../../../includes/tla2sharptla-3d-md.md)]模型。 A<xref:System.Windows.Media.Media3D.PerspectiveCamera>指定 foreshortens 場景的投影。  換句話說，<xref:System.Windows.Media.Media3D.PerspectiveCamera>提供梅格點觀點。  您可以指定觀景窗在場景座標空間中的位置、觀景窗的方向和視野，以及定義場景中「向上」方向的向量。 下圖說明<xref:System.Windows.Media.Media3D.PerspectiveCamera>的投影。  
   
- <xref:System.Windows.Media.Media3D.ProjectionCamera.NearPlaneDistance%2A>和<xref:System.Windows.Media.Media3D.ProjectionCamera.FarPlaneDistance%2A>屬性<xref:System.Windows.Media.Media3D.ProjectionCamera>限制相機的投影的範圍。 由於觀景窗可能會位在場景中的任何地方，觀景窗有可能實際上就位在模型內部或非常靠近模型，因此更難正確區分物件。  <xref:System.Windows.Media.Media3D.ProjectionCamera.NearPlaneDistance%2A>可讓您指定從相機超出該物件將不會繪製的最小距離。  相反地，<xref:System.Windows.Media.Media3D.ProjectionCamera.FarPlaneDistance%2A>可讓您指定從相機之外不會繪製物件，可確保太遠可辨識的物件將不會包含在場景中的距離。  
+ <xref:System.Windows.Media.Media3D.ProjectionCamera.NearPlaneDistance%2A>和<xref:System.Windows.Media.Media3D.ProjectionCamera.FarPlaneDistance%2A>屬性<xref:System.Windows.Media.Media3D.ProjectionCamera>限制相機的投影的範圍。 由於觀景窗可能會位在場景中的任何地方，觀景窗有可能實際上就位在模型內部或非常靠近模型，因此更難正確區分物件。  <xref:System.Windows.Media.Media3D.ProjectionCamera.NearPlaneDistance%2A> 可讓您指定從相機超出該物件將不會繪製的最小距離。  相反地，<xref:System.Windows.Media.Media3D.ProjectionCamera.FarPlaneDistance%2A>可讓您指定從相機之外不會繪製物件，可確保太遠可辨識的物件將不會包含在場景中的距離。  
   
  ![相機設定](../../../../docs/framework/wpf/graphics-multimedia/media/coordsystem-6.png "CoordSystem 6")  
 觀景窗位置  
   
- <xref:System.Windows.Media.Media3D.OrthographicCamera>指定的正交投影[!INCLUDE[TLA2#tla_3d](../../../../includes/tla2sharptla-3d-md.md)]模型到[!INCLUDE[TLA2#tla_2d](../../../../includes/tla2sharptla-2d-md.md)]視覺化介面。 與其他觀景窗相同，它會指定位置、檢視方向和「向上」方向。 不同於<xref:System.Windows.Media.Media3D.PerspectiveCamera>，不過<xref:System.Windows.Media.Media3D.OrthographicCamera>描述不包含透視圖投影。 換句話說，<xref:System.Windows.Media.Media3D.OrthographicCamera>描述其兩邊都是平行，而不是其中一個在相機上的點符合其邊緣的檢視方塊。 下圖顯示相同的模型，因為檢視使用<xref:System.Windows.Media.Media3D.PerspectiveCamera>和<xref:System.Windows.Media.Media3D.OrthographicCamera>。  
+ <xref:System.Windows.Media.Media3D.OrthographicCamera> 指定的正交投影[!INCLUDE[TLA2#tla_3d](../../../../includes/tla2sharptla-3d-md.md)]模型到[!INCLUDE[TLA2#tla_2d](../../../../includes/tla2sharptla-2d-md.md)]視覺化介面。 與其他觀景窗相同，它會指定位置、檢視方向和「向上」方向。 不同於<xref:System.Windows.Media.Media3D.PerspectiveCamera>，不過<xref:System.Windows.Media.Media3D.OrthographicCamera>描述不包含透視圖投影。 換句話說，<xref:System.Windows.Media.Media3D.OrthographicCamera>描述其兩邊都是平行，而不是其中一個在相機上的點符合其邊緣的檢視方塊。 下圖顯示相同的模型，因為檢視使用<xref:System.Windows.Media.Media3D.PerspectiveCamera>和<xref:System.Windows.Media.Media3D.OrthographicCamera>。  
   
  ![正視圖和遠近景深投射](../../../../docs/framework/wpf/graphics-multimedia/media/camera-projections4.png "Camera_projections4")  
 透視投影和正視投影  
@@ -69,7 +57,7 @@ ms.lasthandoff: 12/22/2017
 <a name="models_meshes"></a>   
 ## <a name="model-and-mesh-primitives"></a>模型和網格基元  
   
- <xref:System.Windows.Media.Media3D.Model3D>是抽象的基底類別，代表泛型[!INCLUDE[TLA2#tla_3d](../../../../includes/tla2sharptla-3d-md.md)]物件。 若要建置[!INCLUDE[TLA2#tla_3d](../../../../includes/tla2sharptla-3d-md.md)]場景，需要一些物件，若要檢視，以及構成場景圖形物件衍生自<xref:System.Windows.Media.Media3D.Model3D>。 目前，[!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)]支援模型與幾何<xref:System.Windows.Media.Media3D.GeometryModel3D>。 <xref:System.Windows.Media.Media3D.GeometryModel3D.Geometry%2A>此模型的屬性會取得網狀結構基本。  
+ <xref:System.Windows.Media.Media3D.Model3D> 是抽象的基底類別，代表泛型[!INCLUDE[TLA2#tla_3d](../../../../includes/tla2sharptla-3d-md.md)]物件。 若要建置[!INCLUDE[TLA2#tla_3d](../../../../includes/tla2sharptla-3d-md.md)]場景，需要一些物件，若要檢視，以及構成場景圖形物件衍生自<xref:System.Windows.Media.Media3D.Model3D>。 目前，[!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)]支援模型與幾何<xref:System.Windows.Media.Media3D.GeometryModel3D>。 <xref:System.Windows.Media.Media3D.GeometryModel3D.Geometry%2A>此模型的屬性會取得網狀結構基本。  
   
  若要建立模型，請先建立基元 (也就是網格)。 [!INCLUDE[TLA2#tla_3d](../../../../includes/tla2sharptla-3d-md.md)] 基元是形成單一 [!INCLUDE[TLA2#tla_3d](../../../../includes/tla2sharptla-3d-md.md)] 實體的頂點集合。 大部分 [!INCLUDE[TLA2#tla_3d](../../../../includes/tla2sharptla-3d-md.md)] 系統都提供以最簡單的封閉圖形 (由三個頂點定義的三角形) 塑造而成的基元。  因為三角形的三個點共面，所以您可以持續加入三角形，以塑造出更複雜的圖形 (稱為網格)。  
   
@@ -81,7 +69,7 @@ ms.lasthandoff: 12/22/2017
   
  您可以繼續指定的值來定義模型<xref:System.Windows.Media.Media3D.MeshGeometry3D.Normals%2A>和<xref:System.Windows.Media.Media3D.MeshGeometry3D.TextureCoordinates%2A>屬性。  若要轉譯模型的表面，圖形系統需要表面在任意指定的三角形處面對哪個方向的資訊。 系統會使用此資訊來進行模型的光線計算︰直接面向光源的表面看起來就會比偏離光線一些角度的表面還亮。 雖然 [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] 可以使用位置座標決定預設的法向向量，但是您也可以指定不同的法向向量以模擬曲面的外觀。  
   
- <xref:System.Windows.Media.Media3D.MeshGeometry3D.TextureCoordinates%2A>屬性指定的集合<xref:System.Windows.Point>s 告知圖形系統如何對應，以決定如何紋理會繪製到網狀結構的頂點的座標。 <xref:System.Windows.Media.Media3D.MeshGeometry3D.TextureCoordinates%2A>已指定為介於 0 和 1 (含) 之間的值。  如同<xref:System.Windows.Media.Media3D.MeshGeometry3D.Normals%2A>屬性，圖形系統可以計算預設材質座標，但是您可以選擇設定不同的紋理座標來控制包含重複的模式，例如對紋理的對應。 您可以在後續的主題或 Managed Direct3D SDK 中找到有關紋理座標的詳細資訊。  
+ <xref:System.Windows.Media.Media3D.MeshGeometry3D.TextureCoordinates%2A>屬性指定的集合<xref:System.Windows.Point>s 告知圖形系統如何對應，以決定如何紋理會繪製到網狀結構的頂點的座標。 <xref:System.Windows.Media.Media3D.MeshGeometry3D.TextureCoordinates%2A> 已指定為介於 0 和 1 (含) 之間的值。  如同<xref:System.Windows.Media.Media3D.MeshGeometry3D.Normals%2A>屬性，圖形系統可以計算預設材質座標，但是您可以選擇設定不同的紋理座標來控制包含重複的模式，例如對紋理的對應。 您可以在後續的主題或 Managed Direct3D SDK 中找到有關紋理座標的詳細資訊。  
   
  下列範例示範如何以程序性程式碼建立立方體模型的一個面。 請注意，您可以將整個立方體繪製為單一一個 GeometryModel3D；此範例會將立方體的面繪製為不同的模型以便稍後對每個面套用不同的紋理。  
   
@@ -98,11 +86,11 @@ ms.lasthandoff: 12/22/2017
   
  若要定義模型的介面的特性[!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)]使用<xref:System.Windows.Media.Media3D.Material>抽象類別。 Material 的具體子類別會決定模型表面的一些外觀特性，每個特性也提供您可以傳遞 SolidColorBrush、TileBrush 或 VisualBrush 的 Brush 屬性。  
   
--   <xref:System.Windows.Media.Media3D.DiffuseMaterial>指定模型將套用的筆刷，如同該模型已擴散光源。 使用 DiffuseMaterial 非常類似直接對 [!INCLUDE[TLA2#tla_2d](../../../../includes/tla2sharptla-2d-md.md)] 模型使用筆刷；模型表面不會反射光線但看起來閃亮。  
+-   <xref:System.Windows.Media.Media3D.DiffuseMaterial> 指定模型將套用的筆刷，如同該模型已擴散光源。 使用 DiffuseMaterial 非常類似直接對 [!INCLUDE[TLA2#tla_2d](../../../../includes/tla2sharptla-2d-md.md)] 模型使用筆刷；模型表面不會反射光線但看起來閃亮。  
   
--   <xref:System.Windows.Media.Media3D.SpecularMaterial>指定的筆刷將會套用至模型好像模型的介面是硬式或閃亮、 能夠反映會反白顯示。 您可以藉由指定的值設定這個反光的品質或 「 下雨，"，紋理會提供建議的程度<xref:System.Windows.Media.Media3D.SpecularMaterial.SpecularPower%2A>屬性。  
+-   <xref:System.Windows.Media.Media3D.SpecularMaterial> 指定的筆刷將會套用至模型好像模型的介面是硬式或閃亮、 能夠反映會反白顯示。 您可以藉由指定的值設定這個反光的品質或 「 下雨，"，紋理會提供建議的程度<xref:System.Windows.Media.Media3D.SpecularMaterial.SpecularPower%2A>屬性。  
   
--   <xref:System.Windows.Media.Media3D.EmissiveMaterial>可讓您指定將套用紋理，如同模型已發出等於的筆刷色彩。 這不會讓模型變成光源。不過，這會影響陰影處理的方式，與透過 DiffuseMaterial 或 SpecularMaterial 加上紋理的方式不同。  
+-   <xref:System.Windows.Media.Media3D.EmissiveMaterial> 可讓您指定將套用紋理，如同模型已發出等於的筆刷色彩。 這不會讓模型變成光源。不過，這會影響陰影處理的方式，與透過 DiffuseMaterial 或 SpecularMaterial 加上紋理的方式不同。  
   
  為提升效能的 backfaces <xref:System.Windows.Media.Media3D.GeometryModel3D> （這些超出檢視的因為它們是從相機模型的另一端的表面） 下列來自窗定位在場景。  若要指定<xref:System.Windows.Media.Media3D.Material>要套用至平面像模型的 backface，設定模型的<xref:System.Windows.Media.Media3D.GeometryModel3D.BackMaterial%2A>屬性。  
   
@@ -127,7 +115,7 @@ ms.lasthandoff: 12/22/2017
   
 -   <xref:System.Windows.Media.Media3D.DirectionalLight>： 光線照亮遠的光線來源類似。  具有方向性的燈號<xref:System.Windows.Media.Media3D.DirectionalLight.Direction%2A>指定為 Vector3D，但沒有指定的位置。  
   
--   <xref:System.Windows.Media.Media3D.PointLight>： 光線照亮像附近的光源。 PointLights 有一個位置，並從該位置投射光線。 場景中的物件會根據其相對於光線的位置和距離來照明。 <xref:System.Windows.Media.Media3D.PointLightBase>公開<xref:System.Windows.Media.Media3D.PointLightBase.Range%2A>屬性，決定超過此模型將不會以醒目顯示光線所的距離。 PointLight 也公開衰減屬性，決定光線強度如何隨距離而降低。 您可以為光線衰減指定常數、線性插補或二次插補。  
+-   <xref:System.Windows.Media.Media3D.PointLight>： 光線照亮像附近的光源。 PointLights 有一個位置，並從該位置投射光線。 場景中的物件會根據其相對於光線的位置和距離來照明。 <xref:System.Windows.Media.Media3D.PointLightBase> 公開<xref:System.Windows.Media.Media3D.PointLightBase.Range%2A>屬性，決定超過此模型將不會以醒目顯示光線所的距離。 PointLight 也公開衰減屬性，決定光線強度如何隨距離而降低。 您可以為光線衰減指定常數、線性插補或二次插補。  
   
 -   <xref:System.Windows.Media.Media3D.SpotLight>： 繼承自<xref:System.Windows.Media.Media3D.PointLight>。 Spotlight 照明的方式類似 PointLight，而且有位置和方向兩者。 在專案中所設定的圓錐形區域 light<xref:System.Windows.Media.Media3D.SpotLight.InnerConeAngle%2A>和<xref:System.Windows.Media.Media3D.SpotLight.OuterConeAngle%2A>以度為單位指定的屬性。  
   
@@ -180,7 +168,7 @@ ms.lasthandoff: 12/22/2017
   
  [!code-xaml[hostingwpfusercontrolinwf#1](../../../../samples/snippets/csharp/VS_Snippets_Wpf/HostingWpfUserControlInWf/CSharp/HostingWpfUserControlInWf/ConeControl.xaml#1)]  
   
-## <a name="see-also"></a>請參閱  
+## <a name="see-also"></a>另請參閱  
  <xref:System.Windows.Controls.Viewport3D>  
  <xref:System.Windows.Media.Media3D.PerspectiveCamera>  
  <xref:System.Windows.Media.Media3D.DirectionalLight>  

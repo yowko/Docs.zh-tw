@@ -1,14 +1,6 @@
 ---
 title: HOW TO：建立類別或結構的基本資料合約
-ms.custom: ''
 ms.date: 03/30/2017
-ms.prod: .net-framework
-ms.reviewer: ''
-ms.suite: ''
-ms.technology:
-- dotnet-clr
-ms.tgt_pltfrm: ''
-ms.topic: article
 dev_langs:
 - csharp
 - vb
@@ -17,22 +9,16 @@ helpviewer_keywords:
 - DataContractAttribute class
 - data contracts [WCF], creating for a class or structure
 ms.assetid: bc464889-3070-4a2f-91d2-e788a0f686a7
-caps.latest.revision: 25
-author: dotnet-bot
-ms.author: dotnetcontent
-manager: wpickett
-ms.workload:
-- dotnet
-ms.openlocfilehash: 43fa318d2910fcd8b1d9ce75fc02d75bb39d4079
-ms.sourcegitcommit: 94d33cadc5ff81d2ac389bf5f26422c227832052
+ms.openlocfilehash: bb2cebabc8e51870398689ea032d27c72f0503b5
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/30/2018
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="how-to-create-a-basic-data-contract-for-a-class-or-structure"></a>HOW TO：建立類別或結構的基本資料合約
 本主題將示範使用類別或結構來建立資料合約的基本步驟。 如需資料合約和使用方式的詳細資訊，請參閱[使用資料合約](../../../../docs/framework/wcf/feature-details/using-data-contracts.md)。  
   
- 如需逐步解說的步驟建立基本的教學課程[!INCLUDE[indigo1](../../../../includes/indigo1-md.md)]服務與用戶端，請參閱[入門教學課程](../../../../docs/framework/wcf/getting-started-tutorial.md)。 基本服務和用戶端所組成的工作範例應用程式，請參閱[基本資料合約](../../../../docs/framework/wcf/samples/basic-data-contract.md)。  
+ 逐步解說的步驟建立基本的 Windows Communication Foundation (WCF) 服務和用戶端的教學課程中，請參閱[入門教學課程](../../../../docs/framework/wcf/getting-started-tutorial.md)。 基本服務和用戶端所組成的工作範例應用程式，請參閱[基本資料合約](../../../../docs/framework/wcf/samples/basic-data-contract.md)。  
   
 ### <a name="to-create-a-basic-data-contract-for-a-class-or-structure"></a>建立類別或結構的基本資料合約  
   

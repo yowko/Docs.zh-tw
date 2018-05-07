@@ -1,23 +1,12 @@
 ---
-title: "持續性資料庫結構描述"
-ms.custom: 
+title: 持續性資料庫結構描述
 ms.date: 03/30/2017
-ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.tgt_pltfrm: 
-ms.topic: article
 ms.assetid: 34f69f4c-df81-4da7-b281-a525a9397a5c
-caps.latest.revision: "7"
-author: dotnet-bot
-ms.author: dotnetcontent
-manager: wpickett
-ms.workload: dotnet
-ms.openlocfilehash: dc758f85b4f8b0bec5c00979f42d3f7b2ea7b182
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.openlocfilehash: 4dd49d08e522c842d0f21f176b4d77ac0adb4b47
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="persistence-database-schema"></a>持續性資料庫結構描述
 本主題描述 SQL 工作流程執行個體存放區所支援的公用檢視表。  
@@ -64,7 +53,7 @@ ms.lasthandoff: 12/22/2017
 |ServiceDeploymentId|BigInt|此檢視表的主索引鍵。|  
 |SiteName|Nvarchar(max)|表示包含工作流程服務的網站名稱 (例如**Default Web Site**)。|  
 |RelativeServicePath|Nvarchar(max)|代表相對於指向工作流程服務之網站的虛擬路徑  （例如： **/app1/PurchaseOrderService.svc**)。|  
-|RelativeApplicationPath|Nvarchar(max)|代表相對於指向包含工作流程服務之應用程式的網站的虛擬路徑  (例如**/app1**)。|  
+|RelativeApplicationPath|Nvarchar(max)|代表相對於指向包含工作流程服務之應用程式的網站的虛擬路徑  (例如 **/app1**)。|  
 |ServiceName|Nvarchar(max)|代表工作流程服務的名稱  (例如**PurchaseOrderService**)。|  
 |ServiceNamespace|Nvarchar(max)|代表工作流程服務的命名空間  (例如**MyCompany**)。|  
   

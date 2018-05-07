@@ -1,29 +1,17 @@
 ---
-title: "對等網路"
-ms.custom: 
+title: 對等網路
 ms.date: 03/30/2017
-ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.technology: dotnet-clr
-ms.tgt_pltfrm: 
-ms.topic: article
 ms.assetid: ad6cb67b-fd1c-4ca1-a767-b410da2e16ca
-caps.latest.revision: "17"
-author: dotnet-bot
-ms.author: dotnetcontent
-manager: wpickett
-ms.workload: dotnet
-ms.openlocfilehash: a26f10a323b44e7954245ab90a02f62745e84e87
-ms.sourcegitcommit: c0dd436f6f8f44dc80dc43b07f6841a00b74b23f
+ms.openlocfilehash: fe3fe122e758d8460d98793cb8028ad696cb5302
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 01/19/2018
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="peer-to-peer-networking"></a>對等網路
-對等通道為 [!INCLUDE[indigo1](../../../../includes/indigo1-md.md)] 中的多方對等 (P2P) 通訊技術。 它為應用程式開發人員提供了安全、可擴充的訊息 P2P 通訊通道。 像「交談」這樣的共同作業應用程式，即是受惠於對等通道多方應用程式的其中一個例子；一群人可以在這裡透過對等方式彼此交談，而不需要伺服器。 對等通道能夠進行 P2P 共同作業、內容散發、負載平衡，以及消費者和企業案例的分散式處理。  
+對等通道是多方對等 (P2P) 通訊技術在 Windows Communication Foundation (WCF)。 它為應用程式開發人員提供了安全、可擴充的訊息 P2P 通訊通道。 像「交談」這樣的共同作業應用程式，即是受惠於對等通道多方應用程式的其中一個例子；一群人可以在這裡透過對等方式彼此交談，而不需要伺服器。 對等通道能夠進行 P2P 共同作業、內容散發、負載平衡，以及消費者和企業案例的分散式處理。  
   
- 在 [!INCLUDE[wv](../../../../includes/wv-md.md)] 中預設會啟用對等通道，如同 [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] 也是全面啟用。 若要存取對等通道類別，請將 System.ServiceModel.dll 的參考加入至專案。  
+ 預設會啟用對等通道上[!INCLUDE[wv](../../../../includes/wv-md.md)]，因為所有的 WCF。 若要存取對等通道類別，請將 System.ServiceModel.dll 的參考加入至專案。  
   
  下列各節包含有關對等網路的資訊，並且說明如何使用對等通道類別，建立已啟用對等之網路應用程式。  
   

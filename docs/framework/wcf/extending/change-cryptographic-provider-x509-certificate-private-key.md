@@ -1,14 +1,6 @@
 ---
 title: 如何： 變更 X.509 憑證的密碼編譯提供者&#39;s 私密金鑰
-ms.custom: ''
 ms.date: 03/30/2017
-ms.prod: .net-framework
-ms.reviewer: ''
-ms.suite: ''
-ms.technology:
-- dotnet-clr
-ms.tgt_pltfrm: ''
-ms.topic: article
 dev_langs:
 - csharp
 - vb
@@ -16,20 +8,14 @@ helpviewer_keywords:
 - cryptographic provider [WCF], changing
 - cryptographic provider [WCF]
 ms.assetid: b4254406-272e-4774-bd61-27e39bbb6c12
-caps.latest.revision: ''
-author: dotnet-bot
-ms.author: dotnetcontent
-manager: wpickett
-ms.workload:
-- dotnet
-ms.openlocfilehash: e7dea9834b654be0b86155e18524053efa4b778b
-ms.sourcegitcommit: c883637b41ee028786edceece4fa872939d2e64c
-ms.translationtype: MT
+ms.openlocfilehash: be6033efc03e25967af8bbb3266b0f60df02eaba
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 03/23/2018
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="how-to-change-the-cryptographic-provider-for-an-x509-certificate39s-private-key"></a>如何： 變更 X.509 憑證的密碼編譯提供者&#39;s 私密金鑰
-本主題將說明如何變更用於提供 X.509 憑證之私密金鑰的密碼編譯提供者，以及如何將提供者整合至 [!INCLUDE[indigo1](../../../../includes/indigo1-md.md)] 安全性架構中。 如需有關如何使用憑證的詳細資訊，請參閱[使用憑證](../../../../docs/framework/wcf/feature-details/working-with-certificates.md)。  
+本主題說明如何變更用來提供 X.509 憑證之私密金鑰的密碼編譯提供者，以及如何將提供者整合到 Windows Communication Foundation (WCF) 安全性架構。 如需有關如何使用憑證的詳細資訊，請參閱[使用憑證](../../../../docs/framework/wcf/feature-details/working-with-certificates.md)。  
   
  [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)]安全性架構會提供導入新的安全性權杖類型中所述的方式[How to： 建立自訂權杖](../../../../docs/framework/wcf/extending/how-to-create-a-custom-token.md)。 也可以使用自訂權杖來取代現有由系統提供的權杖型別。  
   

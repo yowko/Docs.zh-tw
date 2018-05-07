@@ -1,35 +1,23 @@
 ---
-title: "JSON 和 XML 之間的對應"
-ms.custom: 
+title: JSON 和 XML 之間的對應
 ms.date: 03/30/2017
-ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.technology: dotnet-clr
-ms.tgt_pltfrm: 
-ms.topic: article
 ms.assetid: 22ee1f52-c708-4024-bbf0-572e0dae64af
-caps.latest.revision: "10"
-author: dotnet-bot
-ms.author: dotnetcontent
-manager: wpickett
-ms.workload: dotnet
-ms.openlocfilehash: 770be9ea5327b32286de64207a3cf07bca7449c6
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.openlocfilehash: db34161ad3e2f7d2c9737e6a456b27bd70c5ebfb
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="mapping-between-json-and-xml"></a>JSON 和 XML 之間的對應
-<xref:System.Runtime.Serialization.Json.JsonReaderWriterFactory> 所產生的讀取器與寫入器會透過 JavaScript 物件標記法 (JSON) 內容來提供 XML API。 JSON 使用 JavaScript 物件常值的子集對資料進行編碼。 當您使用 [!INCLUDE[indigo1](../../../../includes/indigo1-md.md)] 應用程式並透過 <xref:System.ServiceModel.Channels.WebMessageEncodingBindingElement> 或 <xref:System.ServiceModel.WebHttpBinding> 來傳送或接收 JSON 內容時，也可以使用此處理站所產生的讀取器與寫入器。  
+<xref:System.Runtime.Serialization.Json.JsonReaderWriterFactory> 所產生的讀取器與寫入器會透過 JavaScript 物件標記法 (JSON) 內容來提供 XML API。 JSON 使用 JavaScript 物件常值的子集對資料進行編碼。 讀取器和此處理站所產生的寫入器也會使用 JSON 內容時所使用的 Windows Communication Foundation (WCF) 應用程式傳送或接收<xref:System.ServiceModel.Channels.WebMessageEncodingBindingElement>或<xref:System.ServiceModel.WebHttpBinding>。  
   
  使用 JSON 內容進行初始化時，JSON 讀取器行為將與 XML 文字讀取器對 XML 執行個體所執行的動作相同。 當您針對 JSON 讀取器進行一系列的呼叫，進而在 XML 文字讀取器產生特定 XML 執行個體時，就會寫出 JSON 內容。 本主題將說明此 XML 執行個體與 JSON 內容之間的對應，以供進階案例使用。  
   
- JSON 在經由 [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] 處理之後，會在內部以 XML InfoSet 來表示。 一般來說，您不需要關心這個內部表示法，因為對應只是一個邏輯概念：通常，JSON 不會在記憶體中實際轉換為 XML，或是從 XML 轉換為 JSON。 對應代表 XML API 可用來存取 JSON 內容。  
+ 就內部而言，JSON 被以 XML infoset 時由 WCF 所處理。 一般來說，您不需要關心這個內部表示法，因為對應只是一個邏輯概念：通常，JSON 不會在記憶體中實際轉換為 XML，或是從 XML 轉換為 JSON。 對應代表 XML API 可用來存取 JSON 內容。  
   
- 當 [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] 使用 JSON，常見的情況為：<xref:System.Runtime.Serialization.Json.DataContractJsonSerializer> 會自動透過 <xref:System.ServiceModel.Description.WebScriptEnablingBehavior> 行為，或是在必要時透過 <xref:System.ServiceModel.Description.WebHttpBehavior> 行為來外掛。 <xref:System.Runtime.Serialization.Json.DataContractJsonSerializer> 了解 JSON 和 XML InfoSet 之間的對應關係，其運作方式就好像是直接處理 JSON 一樣  (您可以使用 <xref:System.Runtime.Serialization.Json.DataContractJsonSerializer> 來搭配任何的 XML 讀取器或寫入器，前提是您必須了解 XML 需符合下列對應關係)。  
+ 當 WCF 使用 JSON 時，常見的情況是<xref:System.Runtime.Serialization.Json.DataContractJsonSerializer>已自動插入由<xref:System.ServiceModel.Description.WebScriptEnablingBehavior>行為，或由<xref:System.ServiceModel.Description.WebHttpBehavior>時適當的行為。 <xref:System.Runtime.Serialization.Json.DataContractJsonSerializer> 了解 JSON 和 XML InfoSet 之間的對應關係，其運作方式就好像是直接處理 JSON 一樣  (您可以使用 <xref:System.Runtime.Serialization.Json.DataContractJsonSerializer> 來搭配任何的 XML 讀取器或寫入器，前提是您必須了解 XML 需符合下列對應關係)。  
   
- 在進階案例中，您可能需要直接存取下列對應。 這些情況通常會在您想要以自訂方式來序列化或還原序列化 JSON，而且不想仰賴 <xref:System.Runtime.Serialization.Json.DataContractJsonSerializer>，或是當您針對包含 JSON 的訊息直接處理 <xref:System.ServiceModel.Channels.Message> 型別時才會發生。 JSON-XML 對應同時可適用於訊息記錄。 在使用 [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] 中的訊息記錄功能時，JSON 訊息會根據下一節所述的對應記錄為 XML。  
+ 在進階案例中，您可能需要直接存取下列對應。 這些情況通常會在您想要以自訂方式來序列化或還原序列化 JSON，而且不想仰賴 <xref:System.Runtime.Serialization.Json.DataContractJsonSerializer>，或是當您針對包含 JSON 的訊息直接處理 <xref:System.ServiceModel.Channels.Message> 型別時才會發生。 JSON-XML 對應同時可適用於訊息記錄。 使用訊息記錄功能時在 WCF 中，JSON 訊息會記錄為 XML，根據下一節中所述的對應。  
   
  若要釐清對應的概念，請參閱下列 JSON 文件範例。  
   
@@ -46,7 +34,7 @@ ms.lasthandoff: 12/22/2017
 </root>  
 ```  
   
- 此外，如果範例中的 JSON 訊息是由 [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] 接收並記錄，您將會在前一個記錄中看到 XML 片段。  
+ 此外，如果在範例中之 JSON 訊息是由 WCF 接收，且記錄，您會看到在前一個記錄中的 XML 片段。  
   
 ## <a name="mapping-between-json-and-the-xml-infoset"></a>JSON 和 XML InfoSet 之間的對應  
  正式地說，對應是之間 JSON 中所述[RFC 4627](http://go.microsoft.com/fwlink/?LinkId=98808) （除非寬鬆的方式及某些特定限制加入其他限制） 和 XML infoset （以及不文字 XML） 中所述[XML 資訊設定](http://go.microsoft.com/fwlink/?LinkId=98809)。 請參閱本主題適用於定義*資訊項目*和 [方括弧] 中的欄位。  
@@ -105,7 +93,7 @@ ms.lasthandoff: 12/22/2017
   
 -   如進一步介紹的資料合約名稱屬性 ("__type")。 如果 JSON 型別屬性同時存在，且其 [normalized value] 為 "object" 的話，才會存在此屬性。 `DataContractJsonSerializer` 可使用此屬性來保存資料合約型別資訊，例如，一個衍生型別已序列化且預期基底型別的多型案例。 如果您不是使用 `DataContractJsonSerializer`，在大部分情況下會忽略此屬性。  
   
--   如 InfoSet 規格要求，[in-scope namespaces] 包含 "xml" 至 "http://www.w3.org/XML/1998/namespace" 的繫結。  
+-   [namespaces] 包含"xml"的繫結到 「http://www.w3.org/XML/1998/namespace"如 infoset 規格所託管。  
   
 -   [children]、[attributes] 和 [in-scope namespaces] 只能包含先前指定的項目，而 [namespace attributes] 不得包含任何成員，但是在讀取從 JSON 對應過來的 XML 時，不能以這些事實為基礎。  
   
@@ -209,7 +197,7 @@ ms.lasthandoff: 12/22/2017
  `{"myLocalName1":"myValue1","myLocalName2":2,"myLocalName3":{"myNestedName1":true,"myNestedName2":null}}`  
   
 > [!NOTE]
->  在先前的對應中，沒有 XML 編碼步驟。 因此，[!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] 只支援 JSON 文件，其中索引鍵名稱的所有字元在 XML 項目名稱中都是有效字元。 例如，由於 < 不是有效的 XML 項目名稱，因此不支援 JSON 文件 {"<":"a"}。  
+>  在先前的對應中，沒有 XML 編碼步驟。 因此，WCF 只支援 JSON 文件索引鍵名稱中的所有字元都的有效 XML 項目名稱中的字元。 例如，由於 < 不是有效的 XML 項目名稱，因此不支援 JSON 文件 {"<":"a"}。  
   
  相反的情況 (在 XML 中為有效字元，但是在 JSON 中卻為無效) 並不會導致任何問題，因為先前的對應已經包含了 JSON 逸出/未逸出步驟。  
   
@@ -241,7 +229,7 @@ ms.lasthandoff: 12/22/2017
   
  `["myValue1",2,[true,null]]`  
   
-## <a name="see-also"></a>請參閱  
+## <a name="see-also"></a>另請參閱  
  <xref:System.Runtime.Serialization.Json.JsonReaderWriterFactory>  
  <xref:System.Runtime.Serialization.Json.DataContractJsonSerializer>  
  [獨立 JSON 序列化](../../../../docs/framework/wcf/feature-details/stand-alone-json-serialization.md)

@@ -1,26 +1,14 @@
 ---
 title: 延伸保護驗證之範例的讀我檔案
-ms.custom: ''
 ms.date: 03/30/2017
-ms.prod: .net-framework
-ms.reviewer: ''
-ms.suite: ''
-ms.technology:
-- dotnet-clr
-ms.tgt_pltfrm: ''
-ms.topic: article
 ms.assetid: 80bf2e97-398d-4db5-9040-d96478a2ccab
-caps.latest.revision: ''
 author: BrucePerlerMS
-ms.author: bruceper
 manager: mbaldwin
-ms.workload:
-- dotnet
-ms.openlocfilehash: 78e787c129c0161e8730472124ee4162e2d1ba9d
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.openlocfilehash: d45271180b7f00ba78d106f2a93d5860375da5f1
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="readme-for-extended-protection-authentication-sample"></a>延伸保護驗證之範例的讀我檔案
 延伸的保護是一項安全性方案來抵禦攔截 (MITM) 攻擊，攻擊者 （"--攔截 」） 攔截用戶端認證並使用它們來存取用戶端想要的伺服器上的安全資源保護。  

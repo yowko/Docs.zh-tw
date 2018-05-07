@@ -1,31 +1,19 @@
 ---
-title: "安全性通訊協定"
-ms.custom: 
+title: 安全性通訊協定
 ms.date: 03/30/2017
-ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.technology:
-- dotnet-clr
-ms.tgt_pltfrm: 
-ms.topic: article
 helpviewer_keywords:
 - security [WCF], protocols
 ms.assetid: 57ffcbea-807c-4e43-a41c-44b3db8ed2af
-caps.latest.revision: 
 author: BrucePerlerMS
-ms.author: bruceper
 manager: mbaldwin
-ms.workload:
-- dotnet
-ms.openlocfilehash: b7f5d064f49553ca64b72bec0e7c0dd4dc74d13b
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.openlocfilehash: 6160f3be39bc7317b57f8f1d85bda8e61dbd80fb
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="security-protocols"></a>安全性通訊協定
-Web 服務安全性通訊協定提供 Web 服務安全性機制，涵蓋所有現有的企業訊息安全性需求。 本章節描述下列 Web 服務安全性通訊協定的 [!INCLUDE[indigo1](../../../../includes/indigo1-md.md)] 詳細資料 (在 <xref:System.ServiceModel.Channels.SecurityBindingElement> 中實作)。  
+Web 服務安全性通訊協定提供 Web 服務安全性機制，涵蓋所有現有的企業訊息安全性需求。 本節描述 Windows Communication Foundation (WCF) 的詳細資料 (中實作<xref:System.ServiceModel.Channels.SecurityBindingElement>) 下列 Web 服務安全性通訊協定。  
   
 |規格/文件|連結|  
 |-|-|  
@@ -45,7 +33,7 @@ Web 服務安全性通訊協定提供 Web 服務安全性機制，涵蓋所有�
 |應用程式注意事項：<br /><br /> Web 服務定址端點參考和識別|即將發行|  
 |WS-SecurityPolicy 1.2 (2007/04)|http://www.oasis-open.org/committees/download.php/23821/ws-securitypolicy-1.2-spec-cs.pdf|  
   
- [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] 第 1 版提供了 17 個可做為 Web 服務安全性組態基礎的驗證模式。 每個模式都已針對一組通用的部署需求最佳化，例如：  
+ WCF，第 1 版提供了 17 個可做為 Web 服務安全性組態基礎的驗證模式。 每個模式都已針對一組通用的部署需求最佳化，例如：  
   
 -   用來驗證用戶端和服務的認證。  
   
@@ -75,15 +63,15 @@ Web 服務安全性通訊協定提供 Web 服務安全性機制，涵蓋所有�
   
  使用這類驗證模式的端點可以使用 WS-SecurityPolicy (WS-SP) 來表示安全性需求。 本文件針對每個驗證模式描述安全性標頭和基礎結構訊息的結構，並提供原則和訊息的範例。  
   
- [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] 運用 WS-SecureConversation 提供安全工作階段支援，以保護應用程式間的多訊息交換。  如需實作的詳細資訊，請參閱下面的「安全工作階段」。  
+ WCF 會運用 Ws-secureconversation 提供安全工作階段支援，以保護應用程式之間的多訊息交換。  如需實作的詳細資訊，請參閱下面的「安全工作階段」。  
   
- 除了驗證模式之外，[!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] 還提供設定來控制可套用至大部分訊息安全性驗證模式的通用保護機制，例如簽章和加密作業順序、演算法組合、金鑰衍生和簽章確認。  
+ 除了驗證模式中，WCF 會提供設定來控制可套用至大部分訊息安全性驗證模式，例如通用保護機制： 章和加密作業、 演算法組合、 金鑰衍生順序與簽章確認。  
   
  下列是本文件中使用的前置詞和命名空間。  
   
 |前置詞|命名空間|  
 |------------|---------------|  
-|s|http://www.w3.org/2003/05/soap-envelope|  
+|秒|http://www.w3.org/2003/05/soap-envelope|  
 |sp|http://docs.oasis-open.org/ws-sx/ws-securitypolicy/200702|  
 |一個|http://www.w3.org/2005/08/addressing|  
 |wsse|TBD – OASIS WSS 1.0 URI|  
@@ -97,18 +85,18 @@ Web 服務安全性通訊協定提供 Web 服務安全性機制，涵蓋所有�
 |mssp|http://schemas.microsoft.com/ws/2005/07/securitypolicy|  
   
 ## <a name="1-token-profiles"></a>1.權杖設定檔  
- Web 服務安全性規格會以安全性權杖來表示認證。 [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] 支援下列權杖型別：  
+ Web 服務安全性規格會以安全性權杖來表示認證。 WCF 支援下列權杖型別：  
   
 ### <a name="11-usernametoken"></a>1.1 UsernameToken  
- [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] 遵循 UsernameToken10 和 UsernameToken11 設定檔，但受下列條件約束：  
+ WCF 會遵循 UsernameToken10 和 UsernameToken11 設定檔具有下列限制：  
   
  R1101 UsernameToken\Password 項目上的 PasswordType 屬性必須被省略，或者必須具有值 #PasswordText (預設)。  
   
- 使用擴充性，便可以實作 #PasswordDigest。 據觀察，#PasswordDigest 通常會被誤認是具備足夠安全性的密碼保護機制。 但是 #PasswordDigest 無法取代 UsernameToken 加密。 #PasswordDigest 的主要目標是防禦重新執行攻擊。 在 [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] 驗證模式中，重新執行攻擊威脅會透過使用訊息簽章來降低風險。  
+ 使用擴充性，便可以實作 #PasswordDigest。 據觀察，#PasswordDigest 通常會被誤認是具備足夠安全性的密碼保護機制。 但是 #PasswordDigest 無法取代 UsernameToken 加密。 #PasswordDigest 的主要目標是防禦重新執行攻擊。 在 WCF 驗證模式中，重新執行攻擊威脅會降低藉由訊息簽章。  
   
- B1102 [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] 絕不會發出 UsernameToken 的 Nonce 和 Created 子項目。  
+ B1102 WCF 絕不會發出 UsernameToken 的 Nonce 和 Created 子項目。  
   
- 這些子元素是為了協助進行重新執行偵測。 [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] 會改用訊息簽章。  
+ 這些子元素是為了協助進行重新執行偵測。 WCF 會改用訊息簽章。  
   
  OASIS WSS SOAP 訊息安全性 UsernameToken 設定檔 1.1 (UsernameToken11) 從密碼功能引入金鑰衍生。  
   
@@ -117,11 +105,11 @@ Web 服務安全性通訊協定提供 Web 服務安全性機制，涵蓋所有�
  基本原理：密碼通常被視為太弱，無法用於密碼編譯作業。  
   
 ### <a name="12-x509-token"></a>1.2 X509 權杖  
- [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] 支援 X509v3 憑證做為認證類型，且遵循 X509TokenProfile1.0 和 X509TokenProfile1.1，但受下列條件約束：  
+ WCF 支援 X509v3 憑證做為認證類型，並遵循 X509TokenProfile1.0 和 X509TokenProfile1.1 具有下列限制：  
   
  R1201 當包含 X509v3 憑證時，BinarySecurityToken 項目上的 ValueType 屬性必須具有值 #X509v3。  
   
- WSS X509 權杖設定檔 1.0 和 1.1 也會將 #X509PKIPathv1 和 #PKCS7 定義為實值型別。 [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] 不支援這些型別。  
+ WSS X509 權杖設定檔 1.0 和 1.1 也會將 #X509PKIPathv1 和 #PKCS7 定義為實值型別。 WCF 不支援這些型別。  
   
  R1202 如果 SubjectKeyIdentifier (SKI) 延伸出現在 X509 憑證中，則 wsse:KeyIdentifier 應該當做權杖的外部參考，並且使用 ValueType 屬性做為 #X509SubjectKeyIdentifier，而它的內容做為憑證 SKI 延伸 base64 編碼值。  
   
@@ -131,37 +119,37 @@ Web 服務安全性通訊協定提供 Web 服務安全性機制，涵蓋所有�
   
  R1204 如果 X509TokenProfile1.1 正在使用中，則 X509 安全性權杖的外部參考應使用 WS-Security 1.1 所引入的指紋。  
   
- [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] 支援 X509IssuerSerial。 不過，X509IssuerSerial 會有互通性問題：[!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] 會使用字串來比較 X509IssuerSerial 的兩個值。 因此，如果將主體名稱的元件重新排序，並將憑證的參考傳送至 [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] 服務，可能會找不到此憑證參考。  
+ WCF 支援 X509IssuerSerial。 不過，還有 x509issuerserial 的互通性問題： WCF 使用字串來比較 X509IssuerSerial 的兩個值。 因此如果主體名稱的元件重新排序，並將傳送至 WCF 服務憑證的參考，它可能不到。  
   
 ### <a name="13-kerberos-token"></a>1.3 Kerberos 權杖  
- [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] 為了 Windows 驗證而支援 KerberosTokenProfile1.1，但受下列條件約束：  
+ WCF 支援 kerberostokenprofile1.1，但受為了 Windows 驗證，具有下列限制：  
   
  R1301 依照 GSS_API 和 Kerberos 規格定義，Kerberos 權杖必須具有 GSS 包裝的 Kerberos v4 AP_REQ 值，而且必須具有值為 #GSS_Kerberosv5_AP_REQ 的 ValueType 屬性。  
   
- [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] 使用 GSS 包裝的 Kerberos AP-REQ，而非不包裝的 AP-REQ。 這是安全性的最佳做法。  
+ WCF 使用 GSS 包裝的 Kerberos AP-REQ，不 AP-REQ 這是安全性的最佳做法。  
   
 ### <a name="14-saml-v11-token"></a>1.4 SAML v1.1 權杖  
- [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] 支援 SAML v1.1 權杖使用 WSS SAML 權杖設定檔 1.0 和 1.1。 它也可以實作其他版本的 SAML 權杖格式。  
+ WCF 還支援 SAML v1.1 權杖 WSS SAML 權杖設定檔 1.0 和 1.1 版。 它也可以實作其他版本的 SAML 權杖格式。  
   
 ### <a name="15-security-context-token"></a>1.5 安全性內容權杖  
- [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] 支援 WS-SecureCoversation 中引入的安全性內容權杖 (SCT)。 SCT 是用來表示 SecureConversation 和二進位交涉通訊協定 TLS 和 SSPI 中所建立的安全性內容，說明如下。  
+ WCF 還支援安全性內容權杖 (SCT) Ws-securecoversation 中引入。 SCT 是用來表示 SecureConversation 和二進位交涉通訊協定 TLS 和 SSPI 中所建立的安全性內容，說明如下。  
   
 ## <a name="2-common-message-security-parameters"></a>2.通用訊息安全性參數  
   
 ### <a name="21-timestamp"></a>2.1 TimeStamp  
- 時間戳記存在是使用 <xref:System.ServiceModel.Channels.SecurityBindingElement.IncludeTimestamp%2A> 類別的 <xref:System.ServiceModel.Channels.SecurityBindingElement> 屬性加以控制。 [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] 永遠使用 wsse:Created 和 wsse:Expires 欄位以序列化 wsse:TimeStamp。 使用簽章時，一定會簽署 wsse:TimeStamp。  
+ 時間戳記存在是使用 <xref:System.ServiceModel.Channels.SecurityBindingElement.IncludeTimestamp%2A> 類別的 <xref:System.ServiceModel.Channels.SecurityBindingElement> 屬性加以控制。 WCF 一律會序列化使用 wsse： 建立和 wsse: Expires 欄位。 使用簽章時，一定會簽署 wsse:TimeStamp。  
   
 ### <a name="22-protection-order"></a>2.2 保護順序  
- [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)]支援的訊息保護順序 「 符號之前加密 」 和 「 加密後簽署 」 (安全性原則 1.2)。 基於下列理由，建議使用「簽署後加密」：除非使用 WS-Security 1.1 SignatureConfirmation 機制，否則使用「加密後簽署」保護的訊息容易遭受簽章替換攻擊，而且加密內容上的簽章會造成稽核困難。  
+ WCF 還支援訊息保護順序 「 符號之前加密 」 和 「 加密後簽署 」 (安全性原則 1.2)。 基於下列理由，建議使用「簽署後加密」：除非使用 WS-Security 1.1 SignatureConfirmation 機制，否則使用「加密後簽署」保護的訊息容易遭受簽章替換攻擊，而且加密內容上的簽章會造成稽核困難。  
   
 ### <a name="23-signature-protection"></a>2.3 簽章保護  
  使用「加密後簽署」時，建議保護簽章，以防止暴力密碼破解攻擊猜測加密內容或簽署金鑰 (特別是在自訂權杖與弱式金鑰內容搭配使用時)。  
   
 ### <a name="24-algorithm-suite"></a>2.4 演算法組合  
- [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)]支援安全性原則 1.2 中列出的所有演算法組合。  
+ WCF 還支援安全性原則 1.2 中列出的所有演算法組合。  
   
 ### <a name="25-key-derivation"></a>2.5 金鑰衍生  
- [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] 使用「對稱式金鑰的金鑰衍生」，如 WS-SecureConversation 中所述。  
+ WCF 使用 」 的對稱金鑰的金鑰衍生 」，如 Ws-secureconversation 中所述。  
   
 ### <a name="26-signature-confirmation"></a>2.6 簽章確認  
  簽章確認可以防禦攔截式攻擊，以保護簽章組。  
@@ -176,13 +164,13 @@ Web 服務安全性通訊協定提供 Web 服務安全性機制，涵蓋所有�
 |LaxTimestampFirst|與 Lax 相同，除了安全性標頭中的第一個項目必須是 wsse:Timestamp|  
 |LaxTimestampLast|與 Lax 相同，除了安全性標頭中的最後一個項目必須是 wsse:Timestamp|  
   
- [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] 支援安全性標頭配置的所有四個模式。 下列驗證模式的安全性標頭結構和訊息範例都遵循 "Strict" 模式。  
+ WCF 支援所有四個模式的安全性標頭配置。 下列驗證模式的安全性標頭結構和訊息範例都遵循 "Strict" 模式。  
   
 ## <a name="3-common-message-security-parameters"></a>3.通用訊息安全性參數  
  本章節提供每個驗證模式的範例原則，並提供範例來示範用戶端和服務交換訊息中的安全性標頭結構。  
   
 ### <a name="31-transport-protection"></a>3.1 傳輸保護  
- [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] 提供五個使用安全傳輸來保護訊息的驗證模式：UserNameOverTransport、CertificateOverTransport、KerberosOverTransport、IssuedTokenOverTransport 和 SspiNegotiatedOverTransport。  
+ WCF 有提供五個使用安全傳輸來保護訊息的驗證模式: UserNameOverTransport、 CertificateOverTransport、 KerberosOverTransport、 IssuedTokenOverTransport 和 SspiNegotiatedOverTransport。  
   
  這些驗證模式使用 SecurityPolicy 中所述的傳輸繫結加以建構。 對於 UserNameOverTransport 驗證模式，UsernameToken 是已簽署的支援權杖。 對於其他驗證模式，此權杖會顯示為已簽署 (Signed) 的簽署 (Endorsing) 權杖。 SecurityPolicy 的附錄 C.1.2 和 C.1.3 詳細描述了安全性標頭配置。 下列範例安全性標頭示範指定之驗證模式的 Strict 配置。  
   
@@ -289,7 +277,7 @@ Web 服務安全性通訊協定提供 Web 服務安全性機制，涵蓋所有�
 ```  
   
 #### <a name="315-sspinegotiatedovertransport"></a>3.1.5 SspiNegotiatedOverTransport  
- 在這個模式中，交涉通訊協定是用來執行用戶端和伺服器驗證。 如果可能則會使用 Kerberos，否則會使用 NTLM。 產生的 SCT 出現在 SOAP 層中做為簽署支援權杖，且一定會從啟動器傳送至收件者。 此外，服務也會在傳輸層上使用 X.509 憑證來進行驗證。 使用的繫結為傳輸繫結。 "SPNEGO" (交涉) 描述 [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] 如何將 SSPI 二進位交涉通訊協定與 WS-Trust 搭配使用。 本章節中的安全性標頭範例是在透過 SPNEGO 信號交換建立了 SCT 之後。  
+ 在這個模式中，交涉通訊協定是用來執行用戶端和伺服器驗證。 如果可能則會使用 Kerberos，否則會使用 NTLM。 產生的 SCT 出現在 SOAP 層中做為簽署支援權杖，且一定會從啟動器傳送至收件者。 此外，服務也會在傳輸層上使用 X.509 憑證來進行驗證。 使用的繫結為傳輸繫結。 「 SPNEGO"（交涉） 描述 WCF 使用 SSPI 二進位交涉通訊協定與 Ws-trust 搭配的方式。 本章節中的安全性標頭範例是在透過 SPNEGO 信號交換建立了 SCT 之後。  
   
  原則  
   

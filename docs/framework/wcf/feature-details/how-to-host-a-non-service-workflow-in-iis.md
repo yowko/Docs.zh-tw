@@ -1,24 +1,12 @@
 ---
-title: "HOW TO：在 IIS 中裝載非服務工作流程"
-ms.custom: 
+title: HOW TO：在 IIS 中裝載非服務工作流程
 ms.date: 03/30/2017
-ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.technology: dotnet-clr
-ms.tgt_pltfrm: 
-ms.topic: article
 ms.assetid: f362562c-767d-401b-8257-916616568fd4
-caps.latest.revision: "7"
-author: dotnet-bot
-ms.author: dotnetcontent
-manager: wpickett
-ms.workload: dotnet
-ms.openlocfilehash: 4b7ffdc00a7723fd6b514fbb5577c48da15d719c
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.openlocfilehash: 70fd6aca94f2addd7ee568e897171ae1da86db67
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="how-to-host-a-non-service-workflow-in-iis"></a>HOW TO：在 IIS 中裝載非服務工作流程
 您可以在 IIS/WAS 底下裝載非工作流程服務的工作流程。 當您需要裝載其他人所撰寫的工作流程時，這樣做就很有用。 例如，如果您重新裝載工作流程設計工具並允許使用者建立自己的工作流程。  在 IIS 中裝載非服務工作流程可支援許多功能，例如處理序回收、閒置關機、處理序健康狀態監控，以及訊息啟動。 在 IIS 中裝載的工作流程服務包含 <xref:System.ServiceModel.Activities.Receive> 活動，而且這些服務會在 IIS 收到訊息時啟動。 非服務工作流程不包含訊息活動，而且預設無法透過傳送訊息來啟動。  您必須從 <xref:System.ServiceModel.Activities.WorkflowHostingEndpoint> 衍生類別，並且定義包含作業的服務合約來建立工作流程執行個體。 本主題將逐步引導您逐步建立簡單的工作流程、 定義服務合約的用戶端可以使用啟動工作流程，以及衍生自<xref:System.ServiceModel.Activities.WorkflowHostingEndpoint>這用來接聽之工作流程建立要求的服務合約。  
@@ -332,7 +320,7 @@ ms.lasthandoff: 12/22/2017
   
 8.  將 web.config 複製到您的 IIS 應用程式目錄。  
   
-9. 測試以確認建立端點是否正常運作，方法是啟動 Internet Explorer 並瀏覽至 http://localhost/MyCreationEndpoint/Workflow1.xamlx。 Internet Explorer 應該會顯示下列畫面：  
+9. 測試以查看建立端點，是否要處理的啟動 Internet Explorer 並瀏覽至http://localhost/MyCreationEndpoint/Workflow1.xamlx。 Internet Explorer 應該會顯示下列畫面：  
   
      ![測試服務](../../../../docs/framework/wcf/feature-details/media/testservice.gif "TestService")  
   
@@ -683,7 +671,7 @@ namespace CreationClient
   
  此範例可能會產生混淆，因為您從未實作可實作 `IWorkflowCreation` 的服務。 這是因為 `CreationEndpoint` 為您實作了此服務。  
   
-## <a name="see-also"></a>請參閱  
+## <a name="see-also"></a>另請參閱  
  [工作流程服務](../../../../docs/framework/wcf/feature-details/workflow-services.md)  
  [在 Internet Information Services 中裝載](../../../../docs/framework/wcf/feature-details/hosting-in-internet-information-services.md)  
  [Internet Information Services 裝載最佳做法](../../../../docs/framework/wcf/feature-details/internet-information-services-hosting-best-practices.md)  

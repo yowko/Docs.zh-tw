@@ -1,34 +1,22 @@
 ---
-title: "WCF 的驗證"
-ms.custom: 
+title: WCF 的驗證
 ms.date: 03/30/2017
-ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.technology: dotnet-clr
-ms.tgt_pltfrm: 
-ms.topic: article
 helpviewer_keywords:
 - authentication [WCF]
 - security [WCF], authentication
 ms.assetid: 9254d873-843d-4c6e-bea4-8184ac3e44f4
-caps.latest.revision: "15"
-author: dotnet-bot
-ms.author: dotnetcontent
-manager: wpickett
-ms.workload: dotnet
-ms.openlocfilehash: 432ed9debeffad82125b567508ed46b46d4b8821
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.openlocfilehash: a4f9b719024db1334b599f0f02fe01bc083bf3c8
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="authentication-in-wcf"></a>WCF 的驗證
-下列主題說明 [!INCLUDE[indigo1](../../../../includes/indigo1-md.md)] 中提供驗證的各種不同機制，例如，Windows 驗證、X.509 憑證以及使用者名稱與密碼。  
+下列主題會顯示多個不同的機制，在 Windows Communication Foundation (WCF) 提供驗證，例如，Windows 驗證、 X.509 憑證和使用者名稱和密碼。  
   
 ## <a name="in-this-section"></a>本節內容  
  [如何：使用 ASP.NET 成員資格提供者](../../../../docs/framework/wcf/feature-details/how-to-use-the-aspnet-membership-provider.md)  
- ASP.NET 功能包括成員資格及角色提供者、用來儲存驗證時比對的使用者名稱/密碼組合之資料庫，以及供授權的使用者角色。 這個主題會說明 [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] 服務如何能使用相同的資料庫對使用者驗證與授權。  
+ ASP.NET 功能包括成員資格及角色提供者、用來儲存驗證時比對的使用者名稱/密碼組合之資料庫，以及供授權的使用者角色。 本主題說明如何 WCF 服務時，可以驗證並授權使用者使用相同的資料庫。  
   
  [如何：使用自訂使用者名稱與密碼驗證程式](../../../../docs/framework/wcf/feature-details/how-to-use-a-custom-user-name-and-password-validator.md)  
  示範如何整合自訂使用者名稱與密碼驗證程式。  
@@ -48,6 +36,6 @@ ms.lasthandoff: 12/22/2017
 ## <a name="related-sections"></a>相關章節  
  [常見的安全性案例](../../../../docs/framework/wcf/feature-details/common-security-scenarios.md)  
   
-## <a name="see-also"></a>請參閱  
+## <a name="see-also"></a>另請參閱  
  [安全性概觀](../../../../docs/framework/wcf/feature-details/security-overview.md)  
  [Windows Server App Fabric 的安全性模型](http://go.microsoft.com/fwlink/?LinkID=201279&clcid=0x409)

@@ -1,13 +1,6 @@
 ---
-title: "相依性屬性的安全性"
-ms.custom: 
+title: 相依性屬性的安全性
 ms.date: 03/30/2017
-ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.technology: dotnet-wpf
-ms.tgt_pltfrm: 
-ms.topic: article
 helpviewer_keywords:
 - wrappers [WPF], access
 - wrappers [WPF], security
@@ -17,16 +10,11 @@ helpviewer_keywords:
 - dependency properties [WPF], access
 - security [WPF], dependency properties
 ms.assetid: d10150ec-90c5-4571-8d35-84bafa2429a4
-caps.latest.revision: "8"
-author: dotnet-bot
-ms.author: dotnetcontent
-manager: wpickett
-ms.workload: dotnet
-ms.openlocfilehash: 9cd6f9d7025de9f5deb836d48a8ce9c7134973d6
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.openlocfilehash: 825b2a3dc79300f0cc26514398b8de0abee64fd4
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="dependency-property-security"></a>相依性屬性的安全性
 相依性屬性通常應該視為公用屬性。 [!INCLUDE[TLA#tla_winclient](../../../../includes/tlasharptla-winclient-md.md)] 屬性系統在本質上會防止進行相依性屬性值的安全性保證。  
@@ -50,5 +38,5 @@ ms.lasthandoff: 12/22/2017
 ### <a name="validation-and-security"></a>驗證和安全性  
  套用要求<xref:System.Windows.DependencyProperty.ValidateValueCallback%2A>和預期要求失敗，以防止屬性所設定的驗證失敗不是適當的安全性機制。 透過強制執行設定值失效<xref:System.Windows.DependencyProperty.ValidateValueCallback%2A>可能也會歸併被惡意呼叫端，如果應用程式定義域內操作這些呼叫端。  
   
-## <a name="see-also"></a>請參閱  
+## <a name="see-also"></a>另請參閱  
  [自訂相依性屬性](../../../../docs/framework/wpf/advanced/custom-dependency-properties.md)

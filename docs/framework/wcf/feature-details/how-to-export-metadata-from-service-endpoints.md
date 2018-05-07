@@ -1,27 +1,15 @@
 ---
-title: "HOW TO：從服務端點匯出中繼資料"
-ms.custom: 
+title: HOW TO：從服務端點匯出中繼資料
 ms.date: 03/30/2017
-ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.technology: dotnet-clr
-ms.tgt_pltfrm: 
-ms.topic: article
 dev_langs:
 - csharp
 - vb
 ms.assetid: b6c4dfd0-f270-43ec-961a-e16eb6af2f2c
-caps.latest.revision: "14"
-author: dotnet-bot
-ms.author: dotnetcontent
-manager: wpickett
-ms.workload: dotnet
-ms.openlocfilehash: 14b045ef55ac0b6d76bb06e711b4134d54b3d61f
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.openlocfilehash: 9235498956f53d69b3024d1db023f3eb0908d2aa
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="how-to-export-metadata-from-service-endpoints"></a>HOW TO：從服務端點匯出中繼資料
 本主題說明如何從服務端點匯出中繼資料。  
@@ -66,7 +54,7 @@ ms.lasthandoff: 12/22/2017
 ## <a name="compiling-the-code"></a>編譯程式碼  
  編譯 Program.cs 時，請參考 System.ServiceModel.dll。  
   
-## <a name="see-also"></a>請參閱  
+## <a name="see-also"></a>另請參閱  
  [中繼資料架構概觀](../../../../docs/framework/wcf/feature-details/metadata-architecture-overview.md)  
  [使用中繼資料](../../../../docs/framework/wcf/feature-details/using-metadata.md)  
  [端點：位址、繫結和合約](../../../../docs/framework/wcf/feature-details/endpoints-addresses-bindings-and-contracts.md)

@@ -1,14 +1,6 @@
 ---
-title: "IMetaDataImport::EnumTypeSpecs 方法"
-ms.custom: 
+title: IMetaDataImport::EnumTypeSpecs 方法
 ms.date: 03/30/2017
-ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.technology:
-- dotnet-clr
-ms.tgt_pltfrm: 
-ms.topic: reference
 api_name:
 - IMetaDataImport.EnumTypeSpecs
 api_location:
@@ -23,17 +15,13 @@ helpviewer_keywords:
 ms.assetid: 75331c7b-988b-436c-9eb9-a270d37b4f06
 topic_type:
 - apiref
-caps.latest.revision: 
 author: mairaw
 ms.author: mairaw
-manager: wpickett
-ms.workload:
-- dotnet
-ms.openlocfilehash: 9e34a3086474918c913a366c02bbf9eadf313b43
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.openlocfilehash: e9b9bc8e364342a601c0738d5a64c5eac3cb7e7e
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="imetadataimportenumtypespecs-method"></a>IMetaDataImport::EnumTypeSpecs 方法
 列舉在目前中繼資料範圍中定義的 TypeSpec 語彙基元。  
@@ -66,7 +54,7 @@ HRESULT EnumTypeSpecs (
   
 |HRESULT|描述|  
 |-------------|-----------------|  
-|`S_OK`|`EnumTypeSpecs`已成功傳回。|  
+|`S_OK`|`EnumTypeSpecs` 已成功傳回。|  
 |`S_FALSE`|沒有列舉語彙基元。 在此情況下，`pcTypeSpecs`為零。|  
   
 ## <a name="remarks"></a>備註  
@@ -79,8 +67,8 @@ HRESULT EnumTypeSpecs (
   
  **程式庫：**包含做為 MsCorEE.dll 中的資源  
   
- **.NET framework 版本：**[!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]  
+ **.NET framework 版本：** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]  
   
-## <a name="see-also"></a>請參閱  
+## <a name="see-also"></a>另請參閱  
  [IMetaDataImport 介面](../../../../docs/framework/unmanaged-api/metadata/imetadataimport-interface.md)  
  [IMetaDataImport2 介面](../../../../docs/framework/unmanaged-api/metadata/imetadataimport2-interface.md)

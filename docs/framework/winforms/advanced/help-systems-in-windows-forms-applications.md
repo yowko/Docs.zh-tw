@@ -1,13 +1,6 @@
 ---
-title: "Windows Forms 應用程式中的說明系統"
-ms.custom: 
+title: Windows Forms 應用程式中的說明系統
 ms.date: 03/30/2017
-ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.technology: dotnet-winforms
-ms.tgt_pltfrm: 
-ms.topic: article
 helpviewer_keywords:
 - Help [Windows Forms], adding to Windows applications
 - Windows applications [Windows Forms], providing Help systems
@@ -15,16 +8,11 @@ helpviewer_keywords:
 - Help [Windows Forms], Windows Forms
 - HelpProvider component [Windows Forms], providing Help in Windows applications
 ms.assetid: 2a96a278-432c-41fc-9e3c-5bfedf5e1267
-caps.latest.revision: "9"
-author: dotnet-bot
-ms.author: dotnetcontent
-manager: wpickett
-ms.workload: dotnet
-ms.openlocfilehash: 1b2f5d067d487bbd5b91576927aee21a9a44fde0
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.openlocfilehash: 293e6ecda3d763a4526349ee164d87da62f5e36d
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="help-systems-in-windows-forms-applications"></a>Windows Forms 應用程式中的說明系統
 其中一個最重要的優待的就如的應用程式，開發人員可以提供您的使用者，是一流的說明系統。 這是他們將會開啟時產生混淆或求助對象。 提供說明系統的 Windows 型應用程式中輕鬆方式是使用[HelpProvider 元件](../../../../docs/framework/winforms/controls/helpprovider-component-windows-forms.md)。  
@@ -34,7 +22,7 @@ ms.lasthandoff: 12/22/2017
   
  您可以產生以 HTML Help Workshop HTML 說明 1.x 檔。 如需有關 HTML 說明的詳細資訊，請參閱 「 HTML Help Workshop"或 MSDN 中的其他 「 HTML 說明 」 主題。  
   
-## <a name="see-also"></a>請參閱  
+## <a name="see-also"></a>另請參閱  
  [整合 Windows Forms 中的使用者說明](../../../../docs/framework/winforms/advanced/integrating-user-help-in-windows-forms.md)  
  [HelpProvider 元件](../../../../docs/framework/winforms/controls/helpprovider-component-windows-forms.md)  
  [ToolTip 元件](../../../../docs/framework/winforms/controls/tooltip-component-windows-forms.md)  

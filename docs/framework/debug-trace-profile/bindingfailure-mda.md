@@ -1,13 +1,6 @@
 ---
 title: bindingFailure MDA
-ms.custom: 
 ms.date: 03/30/2017
-ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.technology: dotnet-clr
-ms.tgt_pltfrm: 
-ms.topic: article
 helpviewer_keywords:
 - binding failure
 - binding, failures
@@ -16,21 +9,18 @@ helpviewer_keywords:
 - managed debugging assistants (MDAs), binding failures
 - BindingFailure MDA
 ms.assetid: 26ada5af-175c-4576-931a-9f07fa1723e9
-caps.latest.revision: "13"
 author: mairaw
 ms.author: mairaw
-manager: wpickett
-ms.workload: dotnet
-ms.openlocfilehash: fc87000e5b3f3a0f464929764eaeafaab4c3089a
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.openlocfilehash: 1a75efaf6703858fdb48a3f09635da1be4463d34
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="bindingfailure-mda"></a>bindingFailure MDA
 無法載入組件時，會啟用 `bindingFailure` Managed 偵錯助理 (MDA)。  
   
-## <a name="symptoms"></a>徵兆   
+## <a name="symptoms"></a>徵兆  
  程式碼已嘗試使用靜態參考或其中一個載入器方法 (例如 <xref:System.Reflection.Assembly.Load%2A?displayProperty=nameWithType> 或 <xref:System.Reflection.Assembly.LoadFrom%2A?displayProperty=nameWithType>) 載入組件。 未載入組件，並擲回 <xref:System.IO.FileNotFoundException> 或 <xref:System.IO.FileLoadException> 例外狀況。  
   
 ## <a name="cause"></a>原因  
@@ -107,5 +97,5 @@ namespace ConsoleApplication1
 }  
 ```  
   
-## <a name="see-also"></a>請參閱  
+## <a name="see-also"></a>另請參閱  
  [診斷 Managed 偵錯助理的錯誤](../../../docs/framework/debug-trace-profile/diagnosing-errors-with-managed-debugging-assistants.md)

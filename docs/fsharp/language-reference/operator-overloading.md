@@ -1,17 +1,12 @@
 ---
 title: 運算子多載 (F#)
 description: '了解如何在類別或記錄類型，F # 中的全域層級的算術運算子多載。'
-author: cartermp
-ms.author: phcart
 ms.date: 05/16/2016
-ms.topic: language-reference
-ms.prod: dotnet-fsharp
-ms.devlang: fsharp
-ms.openlocfilehash: 45fcb4d2acce29caa6b38d08ae4f166884f20147
-ms.sourcegitcommit: 03ee570f6f528a7d23a4221dcb26a9498edbdf8c
+ms.openlocfilehash: fc9b7311aa746fd758930365972a187ffdfff0d5
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/28/2018
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="operator-overloading"></a>運算子多載
 

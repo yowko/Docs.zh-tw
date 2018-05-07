@@ -1,28 +1,16 @@
 ---
-title: "Windows Form DataGridView 控制項的資料顯示模式"
-ms.custom: 
+title: Windows Form DataGridView 控制項的資料顯示模式
 ms.date: 03/30/2017
-ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.technology: dotnet-winforms
-ms.tgt_pltfrm: 
-ms.topic: article
 helpviewer_keywords:
 - data [Windows Forms], display modes
 - data grids [Windows Forms], display modes
 - DataGridView control [Windows Forms], display modes
 ms.assetid: 9755a030-3f3f-4705-a661-ba5a48a81875
-caps.latest.revision: "13"
-author: dotnet-bot
-ms.author: dotnetcontent
-manager: wpickett
-ms.workload: dotnet
-ms.openlocfilehash: 92b66d27683fad4adf0ed2179a5bb29ef6220e3e
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.openlocfilehash: f97576218df651553ed1ac5f681d1ec0b4ab5ef3
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="data-display-modes-in-the-windows-forms-datagridview-control"></a>Windows Form DataGridView 控制項的資料顯示模式
 <xref:System.Windows.Forms.DataGridView>控制項可以顯示三種不同模式中的資料： 繫結、 繫結，與虛擬。 選擇最適合您的需求為基礎的模式。  
@@ -52,7 +40,7 @@ ms.lasthandoff: 12/22/2017
   
  如需虛擬模式的詳細資訊，請參閱[Windows Form DataGridView 控制項中的虛擬模式](../../../../docs/framework/winforms/controls/virtual-mode-in-the-windows-forms-datagridview-control.md)。 如需示範如何使用虛擬模式事件的範例，請參閱[逐步解說： 在 Windows Form DataGridView 控制項中實作虛擬模式](../../../../docs/framework/winforms/controls/implementing-virtual-mode-wf-datagridview-control.md)。  
   
-## <a name="see-also"></a>請參閱  
+## <a name="see-also"></a>另請參閱  
  <xref:System.Windows.Forms.DataGridView>  
  <xref:System.Windows.Forms.DataGridView.DataSource%2A?displayProperty=nameWithType>  
  <xref:System.Windows.Forms.DataGridView.VirtualMode%2A?displayProperty=nameWithType>  

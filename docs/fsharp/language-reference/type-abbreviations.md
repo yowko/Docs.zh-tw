@@ -1,17 +1,12 @@
 ---
 title: 類型縮寫 (F#)
 description: '深入了解 F # 類型縮寫來提供型別更有意義的名稱以使程式碼更容易讀取。'
-author: cartermp
-ms.author: phcart
 ms.date: 05/16/2016
-ms.topic: language-reference
-ms.prod: dotnet-fsharp
-ms.devlang: fsharp
-ms.openlocfilehash: bf17ee9795947fdc11fe958f09d52f5730b95bf8
-ms.sourcegitcommit: 03ee570f6f528a7d23a4221dcb26a9498edbdf8c
+ms.openlocfilehash: cd0b2365aecc5d5b73df95a4b94ae4dd8327446d
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/28/2018
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="type-abbreviations"></a>類型縮寫
 

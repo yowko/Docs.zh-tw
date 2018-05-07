@@ -1,34 +1,20 @@
 ---
-title: "資料合約名稱"
-ms.custom: 
+title: 資料合約名稱
 ms.date: 03/30/2017
-ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.technology:
-- dotnet-clr
-ms.tgt_pltfrm: 
-ms.topic: article
 dev_langs:
 - csharp
 - vb
 helpviewer_keywords:
 - data contracts [WCF], naming
 ms.assetid: 31f87e6c-247b-48f5-8e94-b9e1e33d8d09
-caps.latest.revision: 
-author: dotnet-bot
-ms.author: dotnetcontent
-manager: wpickett
-ms.workload:
-- dotnet
-ms.openlocfilehash: 56744318e6ea29350fd02d1cb35e49e566894a23
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.openlocfilehash: 18ba9aa1f7af3733acd60924d0aa24ceb1b5126c
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="data-contract-names"></a>資料合約名稱
-有時候用戶端和服務不會共用相同的類型。 只要兩邊的資料合約都相同，仍然可以相互傳遞資料。 [資料合約等價](../../../../docs/framework/wcf/feature-details/data-contract-equivalence.md)根據資料合約與資料成員名稱，並因此提供的機制是將對應的類型和成員到這些名稱。 此主題說明資料合約的命名規則，以及當建立名稱時 [!INCLUDE[indigo1](../../../../includes/indigo1-md.md)] 基礎結構的預設行為。  
+有時候用戶端和服務不會共用相同的類型。 只要兩邊的資料合約都相同，仍然可以相互傳遞資料。 [資料合約等價](../../../../docs/framework/wcf/feature-details/data-contract-equivalence.md)根據資料合約與資料成員名稱，並因此提供的機制是將對應的類型和成員到這些名稱。 本主題說明的規則時建立名稱命名的資料合約，以及 Windows Communication Foundation (WCF) 基礎結構的預設行為。  
   
 ## <a name="basic-rules"></a>基本規則  
  有關命名資料合約的基本規則包括：  
@@ -37,15 +23,15 @@ ms.lasthandoff: 12/22/2017
   
 -   資料成員只有名稱但是沒有命名空間。  
   
--   當處理資料合約時，[!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] 基礎結構對命名空間和資料合約與資料成員的名稱都會區分大小寫。  
+-   當處理資料合約，WCF 基礎結構是區分大小寫的命名空間和資料合約與資料成員的名稱。  
   
 ## <a name="data-contract-namespaces"></a>資料合約命名空間  
  資料合約命名空間使用的格式為統一資源識別元 (URI)。 這個 URI 可為絕對或相對的。 根據預設，特定類型的資料合約會指派來自該類型之 Common Language Runtime (CLR) 命名空間的命名空間。  
   
- 根據預設，任何指定的 CLR 命名空間 (以格式*Clr.Namespace*) 會對應至命名空間"http://schemas.datacontract.org/2004/07/Clr.Namespace"。 若要覆寫這個預設值，請將 <xref:System.Runtime.Serialization.ContractNamespaceAttribute> 屬性套用至整個模組或組件。 或是控制每個類型的資料合約命名空間，設定 <xref:System.Runtime.Serialization.DataContractAttribute.Namespace%2A> 的 <xref:System.Runtime.Serialization.DataContractAttribute> 屬性。  
+ 根據預設，任何指定的 CLR 命名空間 (以格式*Clr.Namespace*) 對應至命名空間"http://schemas.datacontract.org/2004/07/Clr.Namespace"。 若要覆寫這個預設值，請將 <xref:System.Runtime.Serialization.ContractNamespaceAttribute> 屬性套用至整個模組或組件。 或是控制每個類型的資料合約命名空間，設定 <xref:System.Runtime.Serialization.DataContractAttribute.Namespace%2A> 的 <xref:System.Runtime.Serialization.DataContractAttribute> 屬性。  
   
 > [!NOTE]
->  "http://schemas.microsoft.com/2003/10/Serialization" 命名空間會被保留，並且不能用來當做資料合約命名空間。  
+>  「http://schemas.microsoft.com/2003/10/Serialization"命名空間已保留，不能當做資料合約命名空間。  
   
 > [!NOTE]
 >  您無法覆寫其中包含 `delegate` 宣告之資料合約類型中的預設命名空間。  
@@ -84,7 +70,7 @@ ms.lasthandoff: 12/22/2017
   
  在此例中，型別 `Drawing<Square,RegularRedBrush>` 的資料合約名稱為 "Drawing_using_RedBrush_brush_and_Square_shape"。 請注意，因為在 <xref:System.Runtime.Serialization.DataContractAttribute.Name%2A> 屬性中有一個 "{#}"，而雜湊不是名稱的一部分，所以型別就容易發生命名衝突；例如型別 `Drawing<Square,SpecialRedBrush>` 可能會擁有完全相同的資料合約名稱。  
   
-## <a name="see-also"></a>請參閱  
+## <a name="see-also"></a>另請參閱  
  <xref:System.Runtime.Serialization.DataContractAttribute>  
  <xref:System.Runtime.Serialization.DataMemberAttribute>  
  <xref:System.Runtime.Serialization.ContractNamespaceAttribute>  

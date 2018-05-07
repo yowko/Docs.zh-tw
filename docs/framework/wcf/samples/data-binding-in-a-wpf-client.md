@@ -1,29 +1,15 @@
 ---
 title: Windows Presentation Foundation 用戶端中的資料繫結
-ms.custom: ''
 ms.date: 03/30/2017
-ms.prod: .net-framework
-ms.reviewer: ''
-ms.suite: ''
-ms.technology:
-- dotnet-clr
-ms.tgt_pltfrm: ''
-ms.topic: article
 ms.assetid: bb8c8293-5973-4aef-9b07-afeff5d3293c
-caps.latest.revision: 21
-author: dotnet-bot
-ms.author: dotnetcontent
-manager: wpickett
-ms.workload:
-- dotnet
-ms.openlocfilehash: d10591866e11bd9e5ae707a0c17c3e293d7f4f71
-ms.sourcegitcommit: 86adcc06e35390f13c1e372c36d2e044f1fc31ef
+ms.openlocfilehash: 225bdedb67e218092ff3369d4fe742c4fc897fc6
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/26/2018
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="data-binding-in-a-windows-presentation-foundation-client"></a>Windows Presentation Foundation 用戶端中的資料繫結
-這個範例示範使用 Windows Presentation Foundation (WPF) 用戶端中的資料繫結。 範例會使用 [!INCLUDE[indigo1](../../../../includes/indigo1-md.md)] 服務，隨機產生要傳回至用戶端的專輯陣列。 每張專輯各有名稱、價格和曲目表。 曲目有名稱和時間長度。 Windows Presentation Foundation (WPF) 用戶端所提供的使用者介面 (UI) 時，會自動繫結的服務所傳回的資訊。  
+這個範例示範使用 Windows Presentation Foundation (WPF) 用戶端中的資料繫結。 此範例會使用隨機產生的傳回給用戶端的專輯陣列的 Windows Communication Foundation (WCF) 服務。 每張專輯各有名稱、價格和曲目表。 曲目有名稱和時間長度。 Windows Presentation Foundation (WPF) 用戶端所提供的使用者介面 (UI) 時，會自動繫結的服務所傳回的資訊。  
   
 > [!NOTE]
 >  此範例的安裝程序與建置指示位於本主題的結尾。  
@@ -91,7 +77,7 @@ void client_GetAlbumListCompleted(object sender, GetAlbumListCompletedEventArgs 
 >   
 >  `<InstallDrive>:\WF_WCF_Samples`  
 >   
->  如果此目錄不存在，請移至 [Windows Communication Foundation (WCF) and Windows Workflow Foundation (WF) Samples for .NET Framework 4  (適用於 .NET Framework 4 的 Windows Communication Foundation (WCF) 與 Windows Workflow Foundation (WF) 範例)](http://go.microsoft.com/fwlink/?LinkId=150780) ，以下載所有 [!INCLUDE[indigo1](../../../../includes/indigo1-md.md)] 和 [!INCLUDE[wf1](../../../../includes/wf1-md.md)] 範例。 此範例位於下列目錄。  
+>  如果此目錄不存在，請移至[Windows Communication Foundation (WCF) 和適用於.NET Framework 4 的 Windows Workflow Foundation (WF) 範例](http://go.microsoft.com/fwlink/?LinkId=150780)下載所有 Windows Communication Foundation (WCF) 和[!INCLUDE[wf1](../../../../includes/wf1-md.md)]範例。 此範例位於下列目錄。  
 >   
 >  `<InstallDrive>:\WF_WCF_Samples\WCF\Scenario\DataBinding\WPFDataBinding`  
   

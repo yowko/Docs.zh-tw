@@ -1,24 +1,12 @@
 ---
 title: 自訂補償範例
-ms.custom: ''
 ms.date: 03/30/2017
-ms.prod: .net-framework
-ms.reviewer: ''
-ms.suite: ''
-ms.tgt_pltfrm: ''
-ms.topic: article
 ms.assetid: 385920da-9284-44bf-9fe9-0d87c7478ec5
-caps.latest.revision: 13
-author: dotnet-bot
-ms.author: dotnetcontent
-manager: wpickett
-ms.workload:
-- dotnet
-ms.openlocfilehash: c4d7219a2f16091d1997de6186312cce5ece0bd1
-ms.sourcegitcommit: 11f11ca6cefe555972b3a5c99729d1a7523d8f50
-ms.translationtype: HT
+ms.openlocfilehash: 55161a46bebca2cce41803ca405cb2b1df57b3fb
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="custom-compensation-sample"></a>自訂補償範例
 這個範例示範如何使用 <xref:System.Activities.Statements.CompensableActivity> 及其補償處理常式，定義自訂的補償邏輯。 這個範例中的模型案例為卡車租賃業者。  

@@ -1,27 +1,15 @@
 ---
-title: "唯讀相依性屬性"
-ms.custom: 
+title: 唯讀相依性屬性
 ms.date: 03/30/2017
-ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.technology: dotnet-wpf
-ms.tgt_pltfrm: 
-ms.topic: article
 helpviewer_keywords:
 - dependency properties [WPF], read-only
 - read-only dependency properties [WPF]
 ms.assetid: f23d6ec9-3780-4c09-a2ff-b2f0a2deddf1
-caps.latest.revision: "8"
-author: dotnet-bot
-ms.author: dotnetcontent
-manager: wpickett
-ms.workload: dotnet
-ms.openlocfilehash: 31e4080416d5eb4fdfe5c33ec2b65e1dced6d012
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.openlocfilehash: 2850dd86ffbe2c6698821218dee5d870fc58e89b
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="read-only-dependency-properties"></a>唯讀相依性屬性
 本主題說明唯讀相依性屬性，包括現有的唯讀相依性屬性，以及用於建立自訂唯讀相依性屬性的案例和技術。  
@@ -54,7 +42,7 @@ ms.lasthandoff: 12/22/2017
   
  因為<xref:System.Windows.DependencyPropertyKey>是私人的而且不會傳播屬性系統，您的程式碼之外，唯讀相依性屬性沒有進一步設定安全性比讀寫相依性屬性。 針對讀寫相依性屬性，識別欄位是明確或隱含公開的，因此該屬性是可廣泛設定的。 如需詳細資訊，請參閱[相依性屬性的安全性](../../../../docs/framework/wpf/advanced/dependency-property-security.md)。  
   
-## <a name="see-also"></a>請參閱  
+## <a name="see-also"></a>另請參閱  
  [相依性屬性概觀](../../../../docs/framework/wpf/advanced/dependency-properties-overview.md)  
  [自訂相依性屬性](../../../../docs/framework/wpf/advanced/custom-dependency-properties.md)  
  [樣式設定和範本化](../../../../docs/framework/wpf/controls/styling-and-templating.md)

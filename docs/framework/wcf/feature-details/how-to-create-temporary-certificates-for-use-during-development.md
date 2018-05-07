@@ -1,32 +1,18 @@
 ---
 title: HOW TO：建立開發時要使用的暫時憑證
-ms.custom: ''
 ms.date: 03/30/2017
-ms.prod: .net-framework
-ms.reviewer: ''
-ms.suite: ''
-ms.technology:
-- dotnet-clr
-ms.tgt_pltfrm: ''
-ms.topic: article
 helpviewer_keywords:
 - certificates [WCF], creating temporary certificates
 - temporary certificates [WCF]
 ms.assetid: bc5f6637-5513-4d27-99bb-51aad7741e4a
-caps.latest.revision: 14
-author: dotnet-bot
-ms.author: dotnetcontent
-manager: wpickett
-ms.workload:
-- dotnet
-ms.openlocfilehash: f5a096fd6e052fc744af5cee1ab0d322e1daafe6
-ms.sourcegitcommit: 94d33cadc5ff81d2ac389bf5f26422c227832052
+ms.openlocfilehash: 8310e7c465d0e3494482b6a38a7b2a67b67ae842
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/30/2018
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="how-to-create-temporary-certificates-for-use-during-development"></a>HOW TO：建立開發時要使用的暫時憑證
-當使用 [!INCLUDE[indigo1](../../../../includes/indigo1-md.md)]開發安全的服務或用戶端時，常常必須提供要用來做為認證的 X.509 憑證。 憑證通常是憑證鏈結的一部分，在電腦的 [受信任的根憑證授權單位] 存放區中有根授權。 具有憑證鏈結可讓您設定一組憑證的範圍，其中根授權通常來自您的組織或企業單位。 如果要在開發期間進行模擬，您可以建立兩種憑證以滿足安全性需求。 第一種是放在 [受信任的根憑證授權單位] 存放區中的自我簽署憑證，而第二種憑證是從第一種建立的，並放在個人存放區或本機位置，或目前使用者位置的個人存放區。 本主題將逐步帶領您使用由 [SDK 所提供的](http://go.microsoft.com/fwlink/?LinkId=248185)憑證建立工具 (MakeCert.exe) [!INCLUDE[dnprdnshort](../../../../includes/dnprdnshort-md.md)] 來建立這兩種憑證。  
+在開發安全的服務或用戶端會使用 Windows Communication Foundation (WCF) 時，則通常需要提供來做為認證的 X.509 憑證。 憑證通常是憑證鏈結的一部分，在電腦的 [受信任的根憑證授權單位] 存放區中有根授權。 具有憑證鏈結可讓您設定一組憑證的範圍，其中根授權通常來自您的組織或企業單位。 如果要在開發期間進行模擬，您可以建立兩種憑證以滿足安全性需求。 第一種是放在 [受信任的根憑證授權單位] 存放區中的自我簽署憑證，而第二種憑證是從第一種建立的，並放在個人存放區或本機位置，或目前使用者位置的個人存放區。 本主題將逐步帶領您使用由 [SDK 所提供的](http://go.microsoft.com/fwlink/?LinkId=248185)憑證建立工具 (MakeCert.exe) [!INCLUDE[dnprdnshort](../../../../includes/dnprdnshort-md.md)] 來建立這兩種憑證。  
   
 > [!IMPORTANT]
 >  憑證建立工具所產生的憑證僅針對測試用途提供。 當部署服務或用戶端時，請確定使用由憑證授權單位所提供的適當憑證。 這可能是來自您組織中的 [!INCLUDE[ws2003](../../../../includes/ws2003-md.md)] 憑證伺服器或協力廠商。  

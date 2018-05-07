@@ -1,13 +1,6 @@
 ---
-title: "如何：設定項目的高度屬性"
-ms.custom: 
+title: 如何：設定項目的高度屬性
 ms.date: 03/30/2017
-ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.technology: dotnet-wpf
-ms.tgt_pltfrm: 
-ms.topic: article
 dev_langs:
 - csharp
 - vb
@@ -15,16 +8,11 @@ helpviewer_keywords:
 - height properties [WPF]
 - Panel control [WPF], height properties of elements
 ms.assetid: 5ab9e781-dbb8-469a-a3c8-cf38ce312647
-caps.latest.revision: "11"
-author: dotnet-bot
-ms.author: dotnetcontent
-manager: wpickett
-ms.workload: dotnet
-ms.openlocfilehash: fc06eea281f7761abfae74edf1547fc914b5655a
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.openlocfilehash: 467cd57c728be015fb9eb9b974ca6e81e4fd7754
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="how-to-set-the-height-properties-of-an-element"></a>如何：設定項目的高度屬性
 ## <a name="example"></a>範例  
@@ -44,7 +32,7 @@ ms.lasthandoff: 12/22/2017
   
  如需完整範例，請參閱[高度屬性範例](http://go.microsoft.com/fwlink/?LinkID=159993)。  
   
-## <a name="see-also"></a>請參閱  
+## <a name="see-also"></a>另請參閱  
  <xref:System.Windows.FrameworkElement>  
  <xref:System.Windows.Controls.ListBox>  
  <xref:System.Windows.FrameworkElement.ActualHeight%2A>  

@@ -1,24 +1,12 @@
 ---
 title: WSStreamedHttpBinding
-ms.custom: 
 ms.date: 03/30/2017
-ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.technology: dotnet-clr
-ms.tgt_pltfrm: 
-ms.topic: article
 ms.assetid: 97ce4d3d-ca6f-45fa-b33b-2429bb84e65b
-caps.latest.revision: "27"
-author: dotnet-bot
-ms.author: dotnetcontent
-manager: wpickett
-ms.workload: dotnet
-ms.openlocfilehash: 7d6259640bae2b4be4fac73883df8945bf1db7ff
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
-ms.translationtype: MT
+ms.openlocfilehash: f146e469a323dffa2cdb9b76b6956be97747b2de
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="wsstreamedhttpbinding"></a>WSStreamedHttpBinding
 本範例會示範如何建立可在使用 HTTP 傳輸時支援資料流案例的繫結。  
@@ -31,7 +19,7 @@ ms.lasthandoff: 12/22/2017
 >   
 >  `<InstallDrive>:\WF_WCF_Samples`  
 >   
->  如果此目錄不存在，請移至 [Windows Communication Foundation (WCF) and Windows Workflow Foundation (WF) Samples for .NET Framework 4  (適用於 .NET Framework 4 的 Windows Communication Foundation (WCF) 與 Windows Workflow Foundation (WF) 範例)](http://go.microsoft.com/fwlink/?LinkId=150780) ，以下載所有 [!INCLUDE[indigo1](../../../../includes/indigo1-md.md)] 和 [!INCLUDE[wf1](../../../../includes/wf1-md.md)] 範例。 此範例位於下列目錄。  
+>  如果此目錄不存在，請移至[Windows Communication Foundation (WCF) 和適用於.NET Framework 4 的 Windows Workflow Foundation (WF) 範例](http://go.microsoft.com/fwlink/?LinkId=150780)下載所有 Windows Communication Foundation (WCF) 和[!INCLUDE[wf1](../../../../includes/wf1-md.md)]範例。 此範例位於下列目錄。  
 >   
 >  `<InstallDrive>:\WF_WCF_Samples\WCF\Extensibility\Binding\WSStreamedHttpBinding`  
   
@@ -39,7 +27,7 @@ ms.lasthandoff: 12/22/2017
   
 1.  建立新標準繫結  
   
-     [!INCLUDE[indigo1](../../../../includes/indigo1-md.md)] 中的標準繫結 (例如 basicHttpBinding 以及 netTcpBinding 等) 會設定特定需求的基礎傳輸與通道堆疊。 在這個範例中，`WSStreamedHttpBinding` 會將通道堆疊設定成支援資料流。 根據預設，WS-Security 和可信賴傳訊不會新增至通道堆疊中，因為資料流並不支援這兩項功能。 新繫結是透過衍生自 `WSStreamedHttpBinding` 的 <xref:System.ServiceModel.Channels.Binding> 類別所實作的。 `WSStreamedHttpBinding` 包含下列繫結項目：<xref:System.ServiceModel.Channels.HttpTransportBindingElement>、<xref:System.ServiceModel.Channels.HttpsTransportBindingElement>、<xref:System.ServiceModel.Channels.TransactionFlowBindingElement> 和 <xref:System.ServiceModel.Channels.TextMessageEncodingBindingElement>。 類別會提供 `CreateBindingElements()` 方法以設定結果繫結堆疊，如下列範例程式碼所示。  
+     例如 basicHttpBinding 以及 netTcpBinding 的標準繫結 Windows Communication Foundation (WCF) 中設定的基礎傳輸與通道堆疊的特定需求。 在這個範例中，`WSStreamedHttpBinding` 會將通道堆疊設定成支援資料流。 根據預設，WS-Security 和可信賴傳訊不會新增至通道堆疊中，因為資料流並不支援這兩項功能。 新繫結是透過衍生自 `WSStreamedHttpBinding` 的 <xref:System.ServiceModel.Channels.Binding> 類別所實作的。 `WSStreamedHttpBinding` 包含下列繫結項目：<xref:System.ServiceModel.Channels.HttpTransportBindingElement>、<xref:System.ServiceModel.Channels.HttpsTransportBindingElement>、<xref:System.ServiceModel.Channels.TransactionFlowBindingElement> 和 <xref:System.ServiceModel.Channels.TextMessageEncodingBindingElement>。 類別會提供 `CreateBindingElements()` 方法以設定結果繫結堆疊，如下列範例程式碼所示。  
   
     ```  
     public override BindingElementCollection CreateBindingElements()  
@@ -145,7 +133,7 @@ public class StreamedEchoService : IStreamedEchoService
 ```  
   
 ## <a name="the-wsstreamedhttpbinding-sample-client"></a>WSStreamedHttpBinding 範例用戶端  
- 透過 `WSStreamedHttpBinding` 與服務互動時所使用的用戶端位於用戶端子目錄中。 因為本範例中所使用的憑證是使用 Makecert.exe 所建立的測試憑證，所以當您嘗試從瀏覽器存取 HTTPS 位址時 (例如 https://localhost/servicemodelsamples/service.svc)，會顯示安全性警示。 若要允許 [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] 用戶端適當地使用測試憑證，就必須在用戶端新增某些其他程式碼以便隱藏安全性警示。 使用實際執行憑證時，不需要這個程式碼及伴隨的類別。  
+ 透過 `WSStreamedHttpBinding` 與服務互動時所使用的用戶端位於用戶端子目錄中。 當您嘗試存取 HTTPS 位址瀏覽器中的，例如，因為此範例中使用的憑證是使用 Makecert.exe 所建立的測試憑證，會顯示安全性警示https://localhost/servicemodelsamples/service.svc。 若要允許 [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] 用戶端適當地使用測試憑證，就必須在用戶端新增某些其他程式碼以便隱藏安全性警示。 使用實際執行憑證時，不需要這個程式碼及伴隨的類別。  
   
 ```  
 // WARNING: This code is only required for test certificates such as those created by makecert. It is   
@@ -153,4 +141,4 @@ public class StreamedEchoService : IStreamedEchoService
 PermissiveCertificatePolicy.Enact("CN=ServiceModelSamples-HTTPS-Server");  
 ```  
   
-## <a name="see-also"></a>請參閱
+## <a name="see-also"></a>另請參閱

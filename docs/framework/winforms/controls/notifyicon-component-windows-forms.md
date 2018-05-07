@@ -1,13 +1,6 @@
 ---
-title: "NotifyIcon 元件 (Windows Form)"
-ms.custom: 
+title: NotifyIcon 元件 (Windows Form)
 ms.date: 03/30/2017
-ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.technology: dotnet-winforms
-ms.tgt_pltfrm: 
-ms.topic: article
 helpviewer_keywords:
 - application icons [Windows Forms], background processes
 - context menus [Windows Forms], for background processes
@@ -18,16 +11,11 @@ helpviewer_keywords:
 - NotifyIcon component
 - SysTray icons
 ms.assetid: 20312268-1d67-494a-8601-5c43b7f1b513
-caps.latest.revision: "9"
-author: dotnet-bot
-ms.author: dotnetcontent
-manager: wpickett
-ms.workload: dotnet
-ms.openlocfilehash: eef312d7e7883e86bcbaa4dfb9733d567139fad9
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.openlocfilehash: 3bf55c4a48b5b12347f951b99c0c00450cd9e5f7
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="notifyicon-component-windows-forms"></a>NotifyIcon 元件 (Windows Form)
 Windows Form`NotifyIcon`元件會顯示圖示在工作列的狀態通知區域中的處理程序在背景中執行，否則不會擁有使用者介面。 防毒保護程式即為一例，您可以在工作列的狀態通知區域中，按一下圖示來存取這個程式。  

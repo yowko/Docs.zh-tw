@@ -1,13 +1,6 @@
 ---
-title: "幾何概觀"
-ms.custom: 
+title: 幾何概觀
 ms.date: 03/30/2017
-ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.technology: dotnet-wpf
-ms.tgt_pltfrm: 
-ms.topic: article
 dev_langs:
 - csharp
 - vb
@@ -15,16 +8,11 @@ helpviewer_keywords:
 - geometry classes [WPF]
 - graphics [WPF], geometry classes
 ms.assetid: 9fba8934-98b7-4af6-82f6-f4ef887f963a
-caps.latest.revision: "23"
-author: dotnet-bot
-ms.author: dotnetcontent
-manager: wpickett
-ms.workload: dotnet
-ms.openlocfilehash: e58e3ea00a00b24e476fd158beb3b0515e607f9d
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.openlocfilehash: 01c460ae18c489a21c860c6d2b10f551e6e68242
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="geometry-overview"></a>幾何概觀
 本概觀說明如何使用[!INCLUDE[TLA#tla_winclient](../../../../includes/tlasharptla-winclient-md.md)]<xref:System.Windows.Media.Geometry>類別來描述圖形。 本主題也會對照之間的差異<xref:System.Windows.Media.Geometry>物件和<xref:System.Windows.Shapes.Shape>項目。  
@@ -34,7 +22,7 @@ ms.lasthandoff: 12/22/2017
 ## <a name="what-is-a-geometry"></a>什麼是幾何？  
  <xref:System.Windows.Media.Geometry>類別及類別衍生自它，例如<xref:System.Windows.Media.EllipseGeometry>， <xref:System.Windows.Media.PathGeometry>，和<xref:System.Windows.Media.CombinedGeometry>，讓您描述 2d 圖案的幾何。 這些幾何描繪有許多用途，像是定義圖形來繪製到螢幕或定義點擊測試和裁剪區域。 您甚至可以使用幾何來定義動畫路徑。  
   
- <xref:System.Windows.Media.Geometry>物件可以是簡單，例如矩形和圓形或複合，建立的兩個或多個幾何物件。  可以使用來建立更複雜的幾何<xref:System.Windows.Media.PathGeometry>和<xref:System.Windows.Media.StreamGeometry>類別，可讓您描述弧形和曲線。  
+ <xref:System.Windows.Media.Geometry> 物件可以是簡單，例如矩形和圓形或複合，建立的兩個或多個幾何物件。  可以使用來建立更複雜的幾何<xref:System.Windows.Media.PathGeometry>和<xref:System.Windows.Media.StreamGeometry>類別，可讓您描述弧形和曲線。  
   
  因為<xref:System.Windows.Media.Geometry>是一種<xref:System.Windows.Freezable>，<xref:System.Windows.Media.Geometry>物件提供數個特殊功能： 它們可以宣告為[資源](../../../../docs/framework/wpf/advanced/xaml-resources.md)、 變成唯讀，以改善效能，複製的多個物件之間共用，進行安全執行緒。 如需有關所提供的不同功能<xref:System.Windows.Freezable>物件，請參閱[Freezable 物件概觀](../../../../docs/framework/wpf/advanced/freezable-objects-overview.md)。  
   
@@ -187,7 +175,7 @@ PathGeometry
 ## <a name="composite-geometries"></a>複合幾何  
  您可以使用建立複合幾何物件<xref:System.Windows.Media.GeometryGroup>、 <xref:System.Windows.Media.CombinedGeometry>，或藉由呼叫靜態<xref:System.Windows.Media.Geometry>方法<xref:System.Windows.Media.Geometry.Combine%2A>。  
   
--   <xref:System.Windows.Media.CombinedGeometry>物件和<xref:System.Windows.Media.Geometry.Combine%2A>方法執行布林作業來結合兩個幾何所定義的區域。 <xref:System.Windows.Media.Geometry>物件具有不含區域都會被捨棄。 只有兩個<xref:System.Windows.Media.Geometry>物件可以組合 （雖然這些兩個幾何也可能是複合幾何）。  
+-   <xref:System.Windows.Media.CombinedGeometry>物件和<xref:System.Windows.Media.Geometry.Combine%2A>方法執行布林作業來結合兩個幾何所定義的區域。 <xref:System.Windows.Media.Geometry> 物件具有不含區域都會被捨棄。 只有兩個<xref:System.Windows.Media.Geometry>物件可以組合 （雖然這些兩個幾何也可能是複合幾何）。  
   
 -   <xref:System.Windows.Media.GeometryGroup>類別建立的 amalgamation<xref:System.Windows.Media.Geometry>而不將其區域的合併包含的物件。 任何數目的<xref:System.Windows.Media.Geometry>可以將物件加入至<xref:System.Windows.Media.GeometryGroup>。 如需範例，請參閱[建立複合圖案](../../../../docs/framework/wpf/graphics-multimedia/how-to-create-a-composite-shape.md)。  
   
@@ -219,15 +207,15 @@ PathGeometry
 ## <a name="other-geometry-features"></a>其他幾何功能  
  <xref:System.Windows.Media.Geometry>類別也提供有用的公用程式方法，如下所示：  
   
--   <xref:System.Windows.Media.Geometry.GetArea%2A>-取得的區域<xref:System.Windows.Media.Geometry>。  
+-   <xref:System.Windows.Media.Geometry.GetArea%2A> -取得的區域<xref:System.Windows.Media.Geometry>。  
   
--   <xref:System.Windows.Media.Geometry.FillContains%2A>-判斷 Geometry 是否包含另一個<xref:System.Windows.Media.Geometry>。  
+-   <xref:System.Windows.Media.Geometry.FillContains%2A> -判斷 Geometry 是否包含另一個<xref:System.Windows.Media.Geometry>。  
   
--   <xref:System.Windows.Media.Geometry.StrokeContains%2A>-判斷是否的筆劃<xref:System.Windows.Media.Geometry>包含指定的點。  
+-   <xref:System.Windows.Media.Geometry.StrokeContains%2A> -判斷是否的筆劃<xref:System.Windows.Media.Geometry>包含指定的點。  
   
  請參閱<xref:System.Windows.Media.Geometry>類別，其方法的完整清單。  
   
-## <a name="see-also"></a>請參閱  
+## <a name="see-also"></a>另請參閱  
  <xref:System.Windows.Media.Geometry>  
  <xref:System.Windows.Media.PathGeometry>  
  <xref:System.Windows.Shapes.Path>  

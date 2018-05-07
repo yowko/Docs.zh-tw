@@ -1,33 +1,19 @@
 ---
 title: 在 Windows Process Activation Service 中裝載
-ms.custom: ''
 ms.date: 03/30/2017
-ms.prod: .net-framework
-ms.reviewer: ''
-ms.suite: ''
-ms.technology:
-- dotnet-clr
-ms.tgt_pltfrm: ''
-ms.topic: article
 helpviewer_keywords:
 - hosting services [WCF], WAS
 ms.assetid: d2b9d226-15b7-41fc-8c9a-cb651ac20ecd
-caps.latest.revision: 16
-author: dotnet-bot
-ms.author: dotnetcontent
-manager: wpickett
-ms.workload:
-- dotnet
-ms.openlocfilehash: a31d66cd4b4430ec838b34fcd77d712698f9e1dc
-ms.sourcegitcommit: 94d33cadc5ff81d2ac389bf5f26422c227832052
+ms.openlocfilehash: 5cd2244c4b44592e436dfd983985dca3c1a50144
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/30/2018
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="hosting-in-windows-process-activation-service"></a>在 Windows Process Activation Service 中裝載
-Windows Process Activation Service (WAS) 管理背景工作處理序 (其中包含裝載 [!INCLUDE[indigo1](../../../../includes/indigo1-md.md)] 服務的應用程式) 的啟動與存留期。 WAS 處理序模型會藉由移除 HTTP 上的相依性，將 HTTP 伺服器的 [!INCLUDE[iis601](../../../../includes/iis601-md.md)] 處理序模型一般化。 如此可讓 [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] 服務在支援訊息啟動並且具備於指定電腦上裝載大量應用程式之能力的裝載環境中，同時使用 HTTP 和非 HTTP 通訊協定，例如 Net.TCP。  
+Windows Process Activation Service (WAS) 管理啟用和包含該主機的 Windows Communication Foundation (WCF) 服務的應用程式的工作者處理序的存留期。 WAS 處理序模型會藉由移除 HTTP 上的相依性，將 HTTP 伺服器的 [!INCLUDE[iis601](../../../../includes/iis601-md.md)] 處理序模型一般化。 這可讓 WCF 服務使用 HTTP 和非 HTTP 通訊協定，例如 Net.TCP，可支援訊息型啟用，並提供裝載大量給定機器上的應用程式之能力的裝載環境中。  
   
- 如需有關建置[!INCLUDE[indigo2](../../../../includes/indigo2-md.md)]在 WAS 裝載環境中，執行的服務，請參閱[How to： 將 WCF 服務裝載於 WAS](../../../../docs/framework/wcf/feature-details/how-to-host-a-wcf-service-in-was.md)。  
+ WAS 裝載環境中執行建置的 WCF 服務的相關詳細資訊，請參閱[How to： 將 WCF 服務裝載於 WAS](../../../../docs/framework/wcf/feature-details/how-to-host-a-wcf-service-in-was.md)。  
   
  WAS 處理序模型提供的幾項功能，可將應用程式裝載得更為穩固、容易管理，而且能夠更有效率地運用資源：  
   

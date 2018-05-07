@@ -1,13 +1,6 @@
 ---
-title: "逐步解說：在設計階段建立 Windows Form 的新 WPF 內容"
-ms.custom: 
+title: 逐步解說：在設計階段建立 Windows Form 的新 WPF 內容
 ms.date: 03/30/2017
-ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.technology: dotnet-winforms
-ms.tgt_pltfrm: 
-ms.topic: article
 helpviewer_keywords:
 - interoperability [Windows Forms], WPF and Windows Forms
 - WPF content [Windows Forms], hosting in Windows Forms
@@ -15,16 +8,11 @@ helpviewer_keywords:
 - ElementHost control
 - WPF user control [Windows Forms], hosting in Windows Forms
 ms.assetid: 2e92d8e8-f0e4-4df7-9f07-2acf35cd798c
-caps.latest.revision: "20"
-author: dotnet-bot
-ms.author: dotnetcontent
-manager: wpickett
-ms.workload: dotnet
-ms.openlocfilehash: cc357b8ad1ff450c699878dfffe1fbb6e2440f49
-ms.sourcegitcommit: c0dd436f6f8f44dc80dc43b07f6841a00b74b23f
+ms.openlocfilehash: 1ea0160530fea0f35c6d4746dc4bbca9439bc462
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 01/19/2018
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="walkthrough-creating-new-wpf-content-on-windows-forms-at-design-time"></a>逐步解說：在設計階段建立 Windows Form 的新 WPF 內容
 本主題示範如何建立 Windows Presentation Foundation (WPF) 控制項，以便在 Windows Form 應用程式中使用。  
@@ -120,7 +108,7 @@ ms.lasthandoff: 01/19/2018
   
 -   變更 WPF 內容的樣式。 如需詳細資訊，請參閱[逐步解說： 設定樣式的 WPF 內容](../../../../docs/framework/winforms/advanced/walkthrough-styling-wpf-content.md)。  
   
-## <a name="see-also"></a>請參閱  
+## <a name="see-also"></a>另請參閱  
  <xref:System.Windows.Forms.Integration.ElementHost>  
  <xref:System.Windows.Forms.Integration.WindowsFormsHost>  
  [移轉和互通性](../../../../docs/framework/wpf/advanced/migration-and-interoperability.md)  

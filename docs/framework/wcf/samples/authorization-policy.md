@@ -1,24 +1,12 @@
 ---
-title: "授權原則"
-ms.custom: 
+title: 授權原則
 ms.date: 03/30/2017
-ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.technology: dotnet-clr
-ms.tgt_pltfrm: 
-ms.topic: article
 ms.assetid: 1db325ec-85be-47d0-8b6e-3ba2fdf3dda0
-caps.latest.revision: "38"
-author: dotnet-bot
-ms.author: dotnetcontent
-manager: wpickett
-ms.workload: dotnet
-ms.openlocfilehash: 4ba4548e6ea62f408fddf3629eca1318c482f728
-ms.sourcegitcommit: c0dd436f6f8f44dc80dc43b07f6841a00b74b23f
-ms.translationtype: MT
+ms.openlocfilehash: fc0c147f2f9a57c80edda6144a14f208bde835eb
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 01/19/2018
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="authorization-policy"></a>授權原則
 此範例示範如何實作自訂宣告授權原則以及關聯的自訂服務授權管理員。 當服務對服務作業執行宣告架構的存取檢查，以及在執行存取檢查前便授予呼叫者特定權限時，這個方法就會很有用處。 此範例同時說明新增宣告的處理序，以及對最後宣告集的存取檢查處理序。 用戶端與伺服器之間的所有應用程式訊息都會經過簽署及加密。 根據預設，使用 `wsHttpBinding` 繫結時，會使用用戶端所提供的使用者名稱和密碼來登入有效的 Windows NT 帳戶。 這個範例會示範如何使用自訂<!--zz <xref:System.IdentityModel.Selectors.UsernamePasswordValidator>-->`System.IdentityModel.Selectors.UsernamePasswordValidator`來驗證用戶端。 此外，此範例會說明用戶端如何使用 X.509 憑證來向服務進行驗證。 此範例說明 <xref:System.IdentityModel.Policy.IAuthorizationPolicy> 和 <xref:System.ServiceModel.ServiceAuthorizationManager> 的實作 (此實作會針對特定使用者將存取權限授予特定的服務方法)。 這個範例根據[訊息安全性使用者名稱](../../../../docs/framework/wcf/samples/message-security-user-name.md)，示範如何執行之前宣告轉換，但<xref:System.ServiceModel.ServiceAuthorizationManager>所呼叫。  
@@ -292,9 +280,9 @@ serviceHost.Credentials.UserNameAuthentication.CustomUserNamePasswordValidator =
 </behavior>  
 ```  
   
- [!INCLUDE[indigo1](../../../../includes/indigo1-md.md)] 會提供豐富型宣告架構模型，以便執行存取檢查。 <xref:System.ServiceModel.ServiceAuthorizationManager> 物件會被用來執行存取檢查並判斷與用戶端相關的宣告是否能夠滿足存取服務方法所需的必要需求。  
+ Windows Communication Foundation (WCF) 提供豐富的宣告式模型執行存取檢查。 <xref:System.ServiceModel.ServiceAuthorizationManager> 物件會被用來執行存取檢查並判斷與用戶端相關的宣告是否能夠滿足存取服務方法所需的必要需求。  
   
- 為了便於示範，此範例說明可實作 <xref:System.ServiceModel.ServiceAuthorizationManager> 方法的 <xref:System.ServiceModel.ServiceAuthorizationManager.CheckAccessCore%2A>，以允許使用者依據型別 http://example.com/claims/allowedoperation 的宣告來存取方法，其型別值意指允許呼叫的作業之動作 URI。  
+ 為了示範，此範例會示範實作<xref:System.ServiceModel.ServiceAuthorizationManager>實作<xref:System.ServiceModel.ServiceAuthorizationManager.CheckAccessCore%2A>宣告的型別為基礎的方法，以允許使用者存取方法http://example.com/claims/allowedoperation其值為作業的動作 URI允許呼叫。  
   
 ```  
 public class MyServiceAuthorizationManager : ServiceAuthorizationManager  
@@ -510,4 +498,4 @@ public class MyAuthorizationPolicy : IAuthorizationPolicy
 > [!NOTE]
 >  跨電腦執行此範例時，這個指令碼不會移除用戶端上的服務憑證。 如果您已執行跨電腦使用憑證的 [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] 範例，請確定清除安裝在 CurrentUser - TrustedPeople 存放區中的服務憑證。 若要這麼做，請使用下列命令：`certmgr -del -r CurrentUser -s TrustedPeople -c -n <Fully Qualified Server Machine Name>`，例如：`certmgr -del -r CurrentUser -s TrustedPeople -c -n server1.contoso.com`。  
   
-## <a name="see-also"></a>請參閱
+## <a name="see-also"></a>另請參閱

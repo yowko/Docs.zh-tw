@@ -1,14 +1,6 @@
 ---
-title: "ICorProfilerInfo::GetInprocInspectionIThisThread 方法"
-ms.custom: 
+title: ICorProfilerInfo::GetInprocInspectionIThisThread 方法
 ms.date: 03/30/2017
-ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.technology:
-- dotnet-clr
-ms.tgt_pltfrm: 
-ms.topic: reference
 api_name:
 - ICorProfilerInfo.GetInprocInspectionIThisThread
 api_location:
@@ -23,17 +15,13 @@ helpviewer_keywords:
 ms.assetid: badddccd-f85c-416e-9f0f-419eab2c9d42
 topic_type:
 - apiref
-caps.latest.revision: 
 author: mairaw
 ms.author: mairaw
-manager: wpickett
-ms.workload:
-- dotnet
-ms.openlocfilehash: c36688af3ab8941a7004061add8598a480f3e202
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.openlocfilehash: 6d603d9bc7a343a41224cf8d889a69823875d9db
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="icorprofilerinfogetinprocinspectionithisthread-method"></a>ICorProfilerInfo::GetInprocInspectionIThisThread 方法
 ICorDebugThread 介面取得的可查詢的物件。 這個方法是.NET Framework 2.0 版中已過時。  
@@ -61,5 +49,5 @@ HRESULT GetInprocInspectionIThisThread(
   
  **.NET framework 版本：** 1.0  
   
-## <a name="see-also"></a>請參閱  
+## <a name="see-also"></a>另請參閱  
  [ICorProfilerInfo 介面](../../../../docs/framework/unmanaged-api/profiling/icorprofilerinfo-interface.md)

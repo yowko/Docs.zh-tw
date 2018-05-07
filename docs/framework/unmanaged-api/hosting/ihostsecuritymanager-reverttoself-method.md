@@ -1,14 +1,6 @@
 ---
-title: "IHostSecurityManager::RevertToSelf 方法"
-ms.custom: 
+title: IHostSecurityManager::RevertToSelf 方法
 ms.date: 03/30/2017
-ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.technology:
-- dotnet-clr
-ms.tgt_pltfrm: 
-ms.topic: reference
 api_name:
 - IHostSecurityManager.RevertToSelf
 api_location:
@@ -23,17 +15,13 @@ helpviewer_keywords:
 ms.assetid: 189f28f8-f9a1-4192-aedc-91084e4f8b99
 topic_type:
 - apiref
-caps.latest.revision: 
 author: rpetrusha
 ms.author: ronpet
-manager: wpickett
-ms.workload:
-- dotnet
-ms.openlocfilehash: 765d40cc99269031093e9241ed1bba6c82b9a042
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.openlocfilehash: c34d9243e4ed7ed2492784154b157189c7d22cd2
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="ihostsecuritymanagerreverttoself-method"></a>IHostSecurityManager::RevertToSelf 方法
 結束目前的使用者身分識別模擬並傳回原始的執行緒語彙基元。  
@@ -48,7 +36,7 @@ HRESULT RevertToSelf ();
   
 |HRESULT|描述|  
 |-------------|-----------------|  
-|S_OK|`RevertToSelf`已成功傳回。|  
+|S_OK|`RevertToSelf` 已成功傳回。|  
 |HOST_E_CLRNOTAVAILABLE|Common language runtime (CLR) 尚未載入到處理程序，或 CLR 正在中它無法執行 managed 程式碼，或成功地處理呼叫的狀態。|  
 |HOST_E_TIMEOUT|呼叫已逾時。|  
 |HOST_E_NOT_OWNER|呼叫端未擁有鎖定。|  
@@ -56,7 +44,7 @@ HRESULT RevertToSelf ();
 |E_FAIL|發生未知的嚴重失敗。 方法會傳回 E_FAIL CLR 已不再可用的處理序內。 裝載方法的後續呼叫會傳回 HOST_E_CLRNOTAVAILABLE。|  
   
 ## <a name="remarks"></a>備註  
- `RevertToSelf`呼叫之前呼叫之後，回到原始的執行緒語彙基元， [ImpersonateLoggedOnUser](../../../../docs/framework/unmanaged-api/hosting/ihostsecuritymanager-impersonateloggedonuser-method.md)方法。  
+ `RevertToSelf` 呼叫之前呼叫之後，回到原始的執行緒語彙基元， [ImpersonateLoggedOnUser](../../../../docs/framework/unmanaged-api/hosting/ihostsecuritymanager-impersonateloggedonuser-method.md)方法。  
   
 ## <a name="requirements"></a>需求  
  **平台：**看到[系統需求](../../../../docs/framework/get-started/system-requirements.md)。  
@@ -65,9 +53,9 @@ HRESULT RevertToSelf ();
   
  **程式庫：**包含做為 MSCorEE.dll 中的資源  
   
- **.NET framework 版本：**[!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]  
+ **.NET framework 版本：** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]  
   
-## <a name="see-also"></a>請參閱  
+## <a name="see-also"></a>另請參閱  
  [IHostSecurityContext 介面](../../../../docs/framework/unmanaged-api/hosting/ihostsecuritycontext-interface.md)  
  [IHostSecurityManager 介面](../../../../docs/framework/unmanaged-api/hosting/ihostsecuritymanager-interface.md)  
  [ImpersonateLoggedOnUser 方法](../../../../docs/framework/unmanaged-api/hosting/ihostsecuritymanager-impersonateloggedonuser-method.md)

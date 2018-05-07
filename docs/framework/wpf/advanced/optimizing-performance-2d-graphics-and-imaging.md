@@ -1,13 +1,6 @@
 ---
-title: "最佳化效能：2D 圖形和影像處理"
-ms.custom: 
+title: 最佳化效能：2D 圖形和影像處理
 ms.date: 03/30/2017
-ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.technology: dotnet-wpf
-ms.tgt_pltfrm: 
-ms.topic: article
 dev_langs:
 - csharp
 - vb
@@ -19,16 +12,11 @@ helpviewer_keywords:
 - 2-D graphics [WPF]
 - images [WPF], optimizing performance
 ms.assetid: e335601e-28c8-4d64-ba27-778fffd55f72
-caps.latest.revision: "8"
-author: dotnet-bot
-ms.author: dotnetcontent
-manager: wpickett
-ms.workload: dotnet
-ms.openlocfilehash: 99fc5e179fe7652868d47d93fbdcabd47bc8cab9
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.openlocfilehash: 4e6b72dae863e89d70ec70c2cb99a5874581e9ea
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="optimizing-performance-2d-graphics-and-imaging"></a>最佳化效能：2D 圖形和影像處理
 [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] 提供各種 2D 圖形和影像處理功能，可以針對您的應用程式需求最佳化。 本主題提供下列領域的效能最佳化相關資訊。  
@@ -36,23 +24,23 @@ ms.lasthandoff: 12/22/2017
   
 <a name="Drawing_and_Shapes"></a>   
 ## <a name="drawing-and-shapes"></a>繪圖和圖形  
- [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)]同時提供<xref:System.Windows.Media.Drawing>和<xref:System.Windows.Shapes.Shape>物件來代表圖形的繪圖內容。 不過，<xref:System.Windows.Media.Drawing>物件是簡單的建構，比<xref:System.Windows.Shapes.Shape>物件，並提供較佳的效能特性。  
+ [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] 同時提供<xref:System.Windows.Media.Drawing>和<xref:System.Windows.Shapes.Shape>物件來代表圖形的繪圖內容。 不過，<xref:System.Windows.Media.Drawing>物件是簡單的建構，比<xref:System.Windows.Shapes.Shape>物件，並提供較佳的效能特性。  
   
  A<xref:System.Windows.Shapes.Shape>可讓您在螢幕上繪製圖形的形狀。 因為衍生自<xref:System.Windows.FrameworkElement>類別<xref:System.Windows.Shapes.Shape>物件都可以使用面板中，大部分的控制項。  
   
  [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] 提供了數層的圖形和轉譯服務存取權。 位於最上層<xref:System.Windows.Shapes.Shape>物件很容易使用，並提供許多有用的功能，例如版面配置和事件處理。 [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] 則提供數個立即可用的 Shape 物件。 圖形的所有物件都繼承自<xref:System.Windows.Shapes.Shape>類別。 可用的圖形物件包括<xref:System.Windows.Shapes.Ellipse>， <xref:System.Windows.Shapes.Line>， <xref:System.Windows.Shapes.Path>， <xref:System.Windows.Shapes.Polygon>， <xref:System.Windows.Shapes.Polyline>，和<xref:System.Windows.Shapes.Rectangle>。  
   
- <xref:System.Windows.Media.Drawing>物件，相反地，非衍生自<xref:System.Windows.FrameworkElement>類別，並提供輕量型實作呈現圖形、 影像和文字。  
+ <xref:System.Windows.Media.Drawing> 物件，相反地，非衍生自<xref:System.Windows.FrameworkElement>類別，並提供輕量型實作呈現圖形、 影像和文字。  
   
  有四種類型的<xref:System.Windows.Media.Drawing>物件：  
   
--   <xref:System.Windows.Media.GeometryDrawing>繪製圖案。  
+-   <xref:System.Windows.Media.GeometryDrawing> 繪製圖案。  
   
--   <xref:System.Windows.Media.ImageDrawing>繪製影像。  
+-   <xref:System.Windows.Media.ImageDrawing> 繪製影像。  
   
--   <xref:System.Windows.Media.GlyphRunDrawing>繪製文字。  
+-   <xref:System.Windows.Media.GlyphRunDrawing> 繪製文字。  
   
--   <xref:System.Windows.Media.DrawingGroup>繪製其他繪圖。 您可以使用繪圖群組，來將其他繪圖結合為單一複合繪圖。  
+-   <xref:System.Windows.Media.DrawingGroup> 繪製其他繪圖。 您可以使用繪圖群組，來將其他繪圖結合為單一複合繪圖。  
   
  <xref:System.Windows.Media.GeometryDrawing>物件用來呈現幾何內容。 <xref:System.Windows.Media.Geometry>類別和衍生自它，例如的具象類別<xref:System.Windows.Media.CombinedGeometry>， <xref:System.Windows.Media.EllipseGeometry>，和<xref:System.Windows.Media.PathGeometry>、 轉譯 2D 圖形，提供方法，以及提供點擊測試和裁剪部分支援。 舉例來說，Geometry 物件可用來定義控制項的區域，或定義要套用至影像的裁剪區域。 Geometry 物件可以是矩形和圓形之類的簡單區域，或從兩個或多個 Geometry 物件建立的複合區域。 可以建立更複雜的幾何區域結合<xref:System.Windows.Media.PathSegment>-衍生的物件，例如<xref:System.Windows.Media.ArcSegment>， <xref:System.Windows.Media.BezierSegment>，和<xref:System.Windows.Media.QuadraticBezierSegment>。  
   
@@ -64,7 +52,7 @@ ms.lasthandoff: 12/22/2017
   
 <a name="StreamGeometry_Objects"></a>   
 ## <a name="streamgeometry-objects"></a>StreamGeometry 物件  
- <xref:System.Windows.Media.StreamGeometry>物件是輕量級替代方案<xref:System.Windows.Media.PathGeometry>建立幾何圖案。 使用<xref:System.Windows.Media.StreamGeometry>何時該添來描述複雜的幾何。 <xref:System.Windows.Media.StreamGeometry>最適合用於處理許多<xref:System.Windows.Media.PathGeometry>物件，並執行得更好，相較於使用許多個別<xref:System.Windows.Media.PathGeometry>物件。  
+ <xref:System.Windows.Media.StreamGeometry>物件是輕量級替代方案<xref:System.Windows.Media.PathGeometry>建立幾何圖案。 使用<xref:System.Windows.Media.StreamGeometry>何時該添來描述複雜的幾何。 <xref:System.Windows.Media.StreamGeometry> 最適合用於處理許多<xref:System.Windows.Media.PathGeometry>物件，並執行得更好，相較於使用許多個別<xref:System.Windows.Media.PathGeometry>物件。  
   
  下列範例會使用屬性語法建立三角形<xref:System.Windows.Media.StreamGeometry>中[!INCLUDE[TLA2#tla_xaml](../../../../includes/tla2sharptla-xaml-md.md)]。  
   
@@ -91,7 +79,7 @@ ms.lasthandoff: 12/22/2017
 -   如需詳細資訊，請參閱 [影像處理概觀](../../../../docs/framework/wpf/graphics-multimedia/imaging-overview.md)。  
   
 ### <a name="bitmapscalingmode"></a>BitmapScalingMode  
- 建立任何點陣圖的比例動畫時，預設的高品質影像重新取樣演算法有時會耗用過多系統資源，導致畫面播放速率降低，從而造成動畫中斷。 藉由設定<xref:System.Windows.Media.RenderOptions.BitmapScalingMode%2A>屬性<xref:System.Windows.Media.RenderOptions>物件<xref:System.Windows.Media.BitmapScalingMode.LowQuality>點陣圖的縮放比例時，您可以建立更順暢的動畫。 <xref:System.Windows.Media.BitmapScalingMode.LowQuality>模式會告知[!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)]轉譯引擎來處理映像時，從品質最佳化的演算法切換速度最佳化的演算法。  
+ 建立任何點陣圖的比例動畫時，預設的高品質影像重新取樣演算法有時會耗用過多系統資源，導致畫面播放速率降低，從而造成動畫中斷。 藉由設定<xref:System.Windows.Media.RenderOptions.BitmapScalingMode%2A>屬性<xref:System.Windows.Media.RenderOptions>物件<xref:System.Windows.Media.BitmapScalingMode.LowQuality>點陣圖的縮放比例時，您可以建立更順暢的動畫。 <xref:System.Windows.Media.BitmapScalingMode.LowQuality> 模式會告知[!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)]轉譯引擎來處理映像時，從品質最佳化的演算法切換速度最佳化的演算法。  
   
  下列範例示範如何設定<xref:System.Windows.Media.BitmapScalingMode>映像物件。  
   
@@ -110,7 +98,7 @@ ms.lasthandoff: 12/22/2017
  [!code-csharp[RenderOptions#RenderOptionsSnippet3](../../../../samples/snippets/csharp/VS_Snippets_Wpf/RenderOptions/CSharp/Window1.xaml.cs#renderoptionssnippet3)]
  [!code-vb[RenderOptions#RenderOptionsSnippet3](../../../../samples/snippets/visualbasic/VS_Snippets_Wpf/RenderOptions/visualbasic/window1.xaml.vb#renderoptionssnippet3)]  
   
-## <a name="see-also"></a>請參閱  
+## <a name="see-also"></a>另請參閱  
  [最佳化 WPF 應用程式效能](../../../../docs/framework/wpf/advanced/optimizing-wpf-application-performance.md)  
  [應用程式效能規劃](../../../../docs/framework/wpf/advanced/planning-for-application-performance.md)  
  [運用硬體](../../../../docs/framework/wpf/advanced/optimizing-performance-taking-advantage-of-hardware.md)  

@@ -1,34 +1,20 @@
 ---
-title: "使用者入門範例"
-ms.custom: 
+title: 使用者入門範例
 ms.date: 03/30/2017
-ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.technology:
-- dotnet-clr
-ms.tgt_pltfrm: 
-ms.topic: article
 dev_langs:
 - csharp
 - vb
 helpviewer_keywords:
 - basic samples [WCF], getting started
 ms.assetid: 967a3d94-0261-49ff-b85a-20bb07f1af20
-caps.latest.revision: 
-author: dotnet-bot
-ms.author: dotnetcontent
-manager: wpickett
-ms.workload:
-- dotnet
-ms.openlocfilehash: 2f97ad418f3d5ed197e8c35edf9e897eb393ef18
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.openlocfilehash: dfba7062d4226f3644aa6c4cc0efcd7c5fb9eab8
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="getting-started-sample"></a>使用者入門範例
-使用者入門範例會示範如何使用 [!INCLUDE[indigo1](../../../../includes/indigo1-md.md)] 實作一般服務與一般用戶端。 這個範例是所有其他基本技術範例的基礎。  
+使用者入門範例會示範如何實作一般服務與一般用戶端使用 Windows Communication Foundation (WCF)。 這個範例是所有其他基本技術範例的基礎。  
   
 > [!NOTE]
 >  此範例的安裝程序與建置指示位於本主題的結尾。  
@@ -38,7 +24,7 @@ ms.lasthandoff: 12/22/2017
 >   
 >  `<InstallDrive>:\WF_WCF_Samples`  
 >   
->  如果此目錄不存在，請移至 [Windows Communication Foundation (WCF) and Windows Workflow Foundation (WF) Samples for .NET Framework 4  (適用於 .NET Framework 4 的 Windows Communication Foundation (WCF) 與 Windows Workflow Foundation (WF) 範例)](http://go.microsoft.com/fwlink/?LinkId=150780) ，以下載所有 [!INCLUDE[indigo1](../../../../includes/indigo1-md.md)] 和 [!INCLUDE[wf1](../../../../includes/wf1-md.md)] 範例。 此範例位於下列目錄。  
+>  如果此目錄不存在，請移至[Windows Communication Foundation (WCF) 和適用於.NET Framework 4 的 Windows Workflow Foundation (WF) 範例](http://go.microsoft.com/fwlink/?LinkId=150780)下載所有 Windows Communication Foundation (WCF) 和[!INCLUDE[wf1](../../../../includes/wf1-md.md)]範例。 此範例位於下列目錄。  
 >   
 >  `<InstallDrive>:\WF_WCF_Samples\WCF\GettingStarted\GettingStarted`  
   
@@ -154,9 +140,9 @@ public class CalculatorService : ICalculator
   
  服務會公開位在 IIS 或 WAS 主機提供之基底位址上的端點。 繫結會設定為標準 <xref:System.ServiceModel.WSHttpBinding>，此繫結會提供用於定址和安全性的 HTTP 通訊與標準 Web 服務通訊協定。 此合約是服務實作的 `ICalculator`。  
   
- 在設定之後，位在相同電腦上的用戶端便可存取在 http://localhost/servicemodelsamples/service.svc 上的服務。 為了讓遠端電腦上的用戶端存取服務，這時必須指定完整網域名稱，而不要指定 localhost。  
+ 在設定，可以存取的服務在http://localhost/servicemodelsamples/service.svc在同一部電腦上的用戶端。 為了讓遠端電腦上的用戶端存取服務，這時必須指定完整網域名稱，而不要指定 localhost。  
   
- 根據預設，此架構不會公開任何中繼資料。 因此服務會開啟 <xref:System.ServiceModel.Description.ServiceMetadataBehavior>，並公開位在 http://localhost/servicemodelsamples/service.svc/mex 上的中繼資料交換 (MEX) 端點。 下列組態會示範這個作業。  
+ 根據預設，此架構不會公開任何中繼資料。 因此，服務會開啟<xref:System.ServiceModel.Description.ServiceMetadataBehavior>並公開在中繼資料交換 (MEX) 端點http://localhost/servicemodelsamples/service.svc/mex。 下列組態會示範這個作業。  
   
 ```xaml  
 <system.serviceModel>  
@@ -295,6 +281,6 @@ Press <ENTER> to terminate client.
   
 3.  若要在單一或跨電腦組態中執行範例時，請依照中的指示[執行 Windows Communication Foundation 範例](../../../../docs/framework/wcf/samples/running-the-samples.md)。  
   
-## <a name="see-also"></a>請參閱  
+## <a name="see-also"></a>另請參閱  
  [如何：於受管理的應用程式中裝載 WCF 服務](../../../../docs/framework/wcf/how-to-host-a-wcf-service-in-a-managed-application.md)  
  [如何：在 IIS 中裝載 WCF 服務](../../../../docs/framework/wcf/feature-details/how-to-host-a-wcf-service-in-iis.md)

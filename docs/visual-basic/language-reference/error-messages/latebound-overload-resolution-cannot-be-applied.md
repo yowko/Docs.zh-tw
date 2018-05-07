@@ -1,11 +1,6 @@
 ---
-title: "晚期繫結多載解析無法套用至 &#39;&lt;程序名稱&gt;&#39;，因為存取的執行個體為介面類型"
+title: 晚期繫結多載解析無法套用至&#39;&lt;程序名稱&gt;&#39;因為存取的執行個體為介面類型
 ms.date: 07/20/2015
-ms.prod: .net
-ms.reviewer: 
-ms.suite: 
-ms.technology: devlang-visual-basic
-ms.topic: article
 f1_keywords:
 - vbc30933
 - bc30933
@@ -13,16 +8,13 @@ helpviewer_keywords:
 - overload resolution [Visual Basic], with late-bound argument
 - BC30933
 ms.assetid: 8182eea0-dd34-4d6e-9ca0-41d8713e9dc4
-caps.latest.revision: "11"
-author: dotnet-bot
-ms.author: dotnetcontent
-ms.openlocfilehash: fb7f8a9f6eadfc9fd856ea57d362b43d25ff81a1
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.openlocfilehash: e41cbf30f06547ef39553e31542e4e8b6df49a3b
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 05/04/2018
 ---
-# <a name="latebound-overload-resolution-cannot-be-applied-to-39ltprocedurenamegt39-because-the-accessing-instance-is-an-interface-type"></a>晚期繫結多載解析無法套用至 &#39;&lt;程序名稱&gt;&#39;，因為存取的執行個體為介面類型
+# <a name="latebound-overload-resolution-cannot-be-applied-to-39ltprocedurenamegt39-because-the-accessing-instance-is-an-interface-type"></a>晚期繫結多載解析無法套用至&#39;&lt;程序名稱&gt;&#39;因為存取的執行個體為介面類型
 編譯器正在嘗試將參考解析成的多載的屬性或程序，但參考失敗，因為引數是型別`Object`和參考的物件具有介面的資料類型。 `Object`引數會強制編譯器解析參考為晚期繫結。  
   
  在這些情況下，編譯器就會透過實作類別而不是透過基礎介面的多載解析。 如果類別重新命名其中一個多載版本，編譯器不會將該版本，要多載，因為其名稱都不相同。 這會導致編譯器忽略已重新命名的版本時，它可能已解析參考正確的選擇。  

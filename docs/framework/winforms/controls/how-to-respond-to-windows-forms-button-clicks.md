@@ -1,13 +1,6 @@
 ---
-title: "如何：回應 Windows Form Button 按一下動作"
-ms.custom: 
+title: 如何：回應 Windows Form Button 按一下動作
 ms.date: 03/30/2017
-ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.technology: dotnet-winforms
-ms.tgt_pltfrm: 
-ms.topic: article
 dev_langs:
 - csharp
 - vb
@@ -22,16 +15,11 @@ helpviewer_keywords:
 - examples [Windows Forms], controls
 - Click event [Windows Forms], responding to
 ms.assetid: 7a4951bd-369c-4662-b246-28ad83eda484
-caps.latest.revision: "14"
-author: dotnet-bot
-ms.author: dotnetcontent
-manager: wpickett
-ms.workload: dotnet
-ms.openlocfilehash: 28b0467c8b589882fe5afd7e884d0de55d8ca564
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.openlocfilehash: 14a880c34f163dc6fece44c24d377822a741b0f2
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="how-to-respond-to-windows-forms-button-clicks"></a>如何：回應 Windows Form Button 按一下動作
 Windows Form 的最基本用法<xref:System.Windows.Forms.Button>控制項是在按下按鈕時執行某些程式碼。  
@@ -42,7 +30,7 @@ Windows Form 的最基本用法<xref:System.Windows.Forms.Button>控制項是在
   
 ### <a name="to-respond-to-a-button-click"></a>若要回應按下按鈕  
   
--   在按鈕的`Click`<xref:System.EventHandler>撰寫程式碼執行。 `Button1_Click`必須繫結至控制項。 如需詳細資訊，請參閱[How to： 建立事件處理常式在執行時間適用於 Windows Form](../../../../docs/framework/winforms/how-to-create-event-handlers-at-run-time-for-windows-forms.md)。  
+-   在按鈕的`Click`<xref:System.EventHandler>撰寫程式碼執行。 `Button1_Click` 必須繫結至控制項。 如需詳細資訊，請參閱[How to： 建立事件處理常式在執行時間適用於 Windows Form](../../../../docs/framework/winforms/how-to-create-event-handlers-at-run-time-for-windows-forms.md)。  
   
     ```vb  
     Private Sub Button1_Click(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles Button1.Click  
@@ -66,7 +54,7 @@ Windows Form 的最基本用法<xref:System.Windows.Forms.Button>控制項是在
        }  
     ```  
   
-## <a name="see-also"></a>請參閱  
+## <a name="see-also"></a>另請參閱  
  [Button 控制項概觀](../../../../docs/framework/winforms/controls/button-control-overview-windows-forms.md)  
  [選取 Windows Forms Button 控制項的方法](../../../../docs/framework/winforms/controls/ways-to-select-a-windows-forms-button-control.md)  
  [Button 控制項](../../../../docs/framework/winforms/controls/button-control-windows-forms.md)

@@ -1,31 +1,17 @@
 ---
-title: "宣告與權杖"
-ms.custom: 
+title: 宣告與權杖
 ms.date: 03/30/2017
-ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.technology:
-- dotnet-clr
-ms.tgt_pltfrm: 
-ms.topic: article
 helpviewer_keywords:
 - claims [WCF], and tokens
 ms.assetid: eff167f3-33f8-483d-a950-aa3e9f97a189
-caps.latest.revision: 
-author: dotnet-bot
-ms.author: dotnetcontent
-manager: wpickett
-ms.workload:
-- dotnet
-ms.openlocfilehash: b2e571e8526581269cedb65b83c9ea0d8a81e280
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.openlocfilehash: 087deeef91367210db936f2976a3846d0279dcba
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="claims-and-tokens"></a>宣告與權杖
-本主題描述 [!INCLUDE[indigo1](../../../../includes/indigo1-md.md)] 從支援的預設權杖中建立的各種宣告類型。  
+本主題說明 Windows Communication Foundation (WCF) 從它所支援的預設權杖所建立的各種宣告類型。  
   
  您可以使用 <xref:System.IdentityModel.Claims.ClaimSet> 和 <xref:System.IdentityModel.Claims.Claim> 類別來檢查用戶端認證的宣告。 `ClaimSet` 包含 `Claim` 物件的集合。 每個 `Claim` 都具有下列重要的成員：  
   
@@ -77,7 +63,7 @@ ms.lasthandoff: 12/22/2017
 ## <a name="identity-claims-and-servicesecuritycontextisanonymous"></a>身分識別宣告和 ServiceSecurityContext.IsAnonymous  
  如果沒有任何`ClaimSet`物件所產生的用戶端認證包含具有宣告`Right`的`Identity,`則<xref:System.ServiceModel.ServiceSecurityContext.IsAnonymous%2A>屬性會傳回`true`。 如果出現一或多個這類的宣告，則 `IsAnonymous` 屬性會傳回 `false`。  
   
-## <a name="see-also"></a>請參閱  
+## <a name="see-also"></a>另請參閱  
  <xref:System.IdentityModel.Claims.ClaimSet>  
  <xref:System.IdentityModel.Claims.Claim>  
  <xref:System.IdentityModel.Claims.Rights>  

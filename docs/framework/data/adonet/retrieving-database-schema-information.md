@@ -1,24 +1,12 @@
 ---
-title: "擷取資料庫結構描述資訊"
-ms.custom: 
+title: 擷取資料庫結構描述資訊
 ms.date: 03/30/2017
-ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.technology: dotnet-ado
-ms.tgt_pltfrm: 
-ms.topic: article
 ms.assetid: 79038d52-f122-4fd4-9bfb-aaa22d6a114b
-caps.latest.revision: "3"
-author: douglaslMS
-ms.author: douglasl
-manager: craigg
-ms.workload: dotnet
-ms.openlocfilehash: 09a0ec444801d1fe2caccf9e25a68e3c6ae8f5c2
-ms.sourcegitcommit: ed26cfef4e18f6d93ab822d8c29f902cff3519d1
+ms.openlocfilehash: 1ac39a556fd7539550b12cb71b701c4bd3224a0b
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 01/17/2018
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="retrieving-database-schema-information"></a>擷取資料庫結構描述資訊
 從資料庫取得結構描述資訊是透過結構描述探索處理序來完成。 結構描述探索允許應用程式要求 managed 提供者尋找並傳回資料庫結構描述的相關資訊，也稱為*中繼資料*，針對給定的資料庫。 不同的資料庫結構描述項目 (如資料表、資料行及預存程序) 都透過結構描述集合公開。 每個結構描述集合都包含正在使用的提供者之各種特定的結構描述資訊。  
@@ -82,6 +70,6 @@ ms.lasthandoff: 01/17/2018
  <xref:System.Data.SqlClient.SqlDataReader.GetSchemaTable%2A>  
  描述**GetSchemaTable**方法<xref:System.Data.SqlClient.SqlDataReader>類別。  
   
-## <a name="see-also"></a>請參閱  
+## <a name="see-also"></a>另請參閱  
  [在 ADO.NET 中擷取和修改資料](../../../../docs/framework/data/adonet/retrieving-and-modifying-data.md)  
  [ADO.NET Managed 提供者和 DataSet 開發人員中心](http://go.microsoft.com/fwlink/?LinkId=217917)

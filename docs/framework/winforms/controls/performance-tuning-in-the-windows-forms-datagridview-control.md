@@ -1,28 +1,16 @@
 ---
-title: "Windows Form DataGridView 控制項中的效能微調"
-ms.custom: 
+title: Windows Form DataGridView 控制項中的效能微調
 ms.date: 03/30/2017
-ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.technology: dotnet-winforms
-ms.tgt_pltfrm: 
-ms.topic: article
 helpviewer_keywords:
 - DataGridView control [Windows Forms], performance tuning
 - performance [Windows Forms], DataGridView control
 - performance tuning [Windows Forms], data grids
 ms.assetid: 6ccbff28-a0ff-41e4-b601-61b31b61851d
-caps.latest.revision: "9"
-author: dotnet-bot
-ms.author: dotnetcontent
-manager: wpickett
-ms.workload: dotnet
-ms.openlocfilehash: da0171bf4fa056de2dd06c2f7e431ea55a8dab1a
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.openlocfilehash: 97bf6f36ce029f879c3524fa92df08a483c2cb77
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="performance-tuning-in-the-windows-forms-datagridview-control"></a>Windows Form DataGridView 控制項中的效能微調
 當使用大量的資料，`DataGridView`控制會消耗大量的記憶體中負擔，除非您小心使用。 在用戶端具有有限的記憶體，您可以避免此額外負荷的某些避免有大量記憶體的功能。 您也可以管理部分或所有資料維護和擷取工作自己使用的虛擬模式也可以自訂用於您案例的記憶體使用量。  
@@ -47,6 +35,6 @@ ms.lasthandoff: 12/22/2017
  <xref:System.Windows.Forms.DataGridView.VirtualMode%2A>  
  提供參考文件<xref:System.Windows.Forms.DataGridView.VirtualMode%2A>屬性。  
   
-## <a name="see-also"></a>請參閱  
+## <a name="see-also"></a>另請參閱  
  [DataGridView 控制項](../../../../docs/framework/winforms/controls/datagridview-control-windows-forms.md)  
  [Windows Forms DataGridView 控制項的資料顯示模式](../../../../docs/framework/winforms/controls/data-display-modes-in-the-windows-forms-datagridview-control.md)

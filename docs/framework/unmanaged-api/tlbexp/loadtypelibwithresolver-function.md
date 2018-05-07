@@ -1,14 +1,6 @@
 ---
-title: "LoadTypeLibWithResolver 函式"
-ms.custom: 
+title: LoadTypeLibWithResolver 函式
 ms.date: 03/30/2017
-ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.technology:
-- dotnet-clr
-ms.tgt_pltfrm: 
-ms.topic: reference
 api_name:
 - LoadTypeLibWithResolver
 api_location:
@@ -22,17 +14,13 @@ helpviewer_keywords:
 ms.assetid: 7123a89b-eb9b-463a-a552-a081e33b0a3a
 topic_type:
 - apiref
-caps.latest.revision: 
 author: rpetrusha
 ms.author: ronpet
-manager: wpickett
-ms.workload:
-- dotnet
-ms.openlocfilehash: f069d09f25575c39db097024384ad1bf14eaaf02
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.openlocfilehash: 751794746e26bd8f0ec2cd6db2f62876e78674e5
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="loadtypelibwithresolver-function"></a>LoadTypeLibWithResolver 函式
 載入類型程式庫，並使用所提供[ITypeLibResolver 介面](../../../../docs/framework/unmanaged-api/tlbexp/itypelibresolver-interface.md)來解決任何內部參考的類型程式庫。  
@@ -104,6 +92,6 @@ HRESULT LoadTypeLibWithResolver(
   
  **.NET framework 版本：** 3.5、 3.0、 2.0  
   
-## <a name="see-also"></a>請參閱  
+## <a name="see-also"></a>另請參閱  
  [Tlbexp Helper 函式](../../../../docs/framework/unmanaged-api/tlbexp/index.md)  
  [LoadTypeLibEx 函式](https://msdn.microsoft.com/library/windows/desktop/ms221249\(v=vs.85\).aspx)

@@ -1,27 +1,15 @@
 ---
 title: Basic2
-ms.custom: 
 ms.date: 03/30/2017
-ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.technology: dotnet-clr
-ms.tgt_pltfrm: 
-ms.topic: article
 ms.assetid: 04e4d3bd-ab89-4b50-8f42-2a4430751a9c
-caps.latest.revision: "6"
-author: dotnet-bot
-ms.author: dotnetcontent
-manager: wpickett
-ms.workload: dotnet
-ms.openlocfilehash: 25743d5a3ab222f8fb4fde84b72021c233ec73f9
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
-ms.translationtype: MT
+ms.openlocfilehash: 295303dac471d06e3c2f7ccfba9abf683ccd0df6
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="basic"></a>基本
-本節包含示範基本 [!INCLUDE[indigo1](../../../../includes/indigo1-md.md)] 功能之範例的章節。  
+本節包含示範基本的 Windows Communication Foundation (WCF) 功能的範例的章節。  
   
 ## <a name="in-this-section"></a>本節內容  
  [快速入門](../../../../docs/framework/wcf/samples/getting-started-sample.md)  

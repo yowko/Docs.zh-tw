@@ -1,33 +1,21 @@
 ---
 title: 保護服務的安全
-ms.custom: ''
 ms.date: 03/30/2017
-ms.prod: .net-framework
-ms.reviewer: ''
-ms.suite: ''
-ms.technology:
-- dotnet-clr
-ms.tgt_pltfrm: ''
-ms.topic: article
 helpviewer_keywords:
 - configuration [WCF], securing services
 - WCF security
 - WCF, security
 ms.assetid: f0ecc6f7-f4b5-42a4-9cb1-b02e28e26620
-caps.latest.revision: 28
 author: BrucePerlerMS
-ms.author: bruceper
 manager: mbaldwin
-ms.workload:
-- dotnet
-ms.openlocfilehash: ffc985d528bfdcdd9b62772a8a8ba61823c95e76
-ms.sourcegitcommit: 94d33cadc5ff81d2ac389bf5f26422c227832052
-ms.translationtype: MT
+ms.openlocfilehash: 6bdac5a65c51ff08cfa170c1a6e556c3532ee7c9
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/30/2018
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="securing-services"></a>保護服務的安全
-[!INCLUDE[indigo1](../../../includes/indigo1-md.md)] 服務的安全性是由兩個主要需求所組成：傳輸安全性和授權 (第三個需求，安全性事件稽核的述[稽核](../../../docs/framework/wcf/feature-details/auditing-security-events.md)。)簡言之，傳輸安全性包含驗證 (驗證服務和用戶端兩者的身分識別)、機密性 (訊息加密) 和完整性 (用來偵測竄改的數位簽章)。 授權會控制存取資源，例如，只允許有權限的使用者讀取檔案。 使用 [!INCLUDE[indigo2](../../../includes/indigo2-md.md)]的功能，即可輕鬆實作這兩個主要需求。  
+Windows Communication Foundation (WCF) 服務的安全性是由兩個主要需求所組成： 傳輸安全性和授權。 (第三個需求，安全性事件稽核的述[稽核](../../../docs/framework/wcf/feature-details/auditing-security-events.md)。)簡言之，傳輸安全性包含驗證 (驗證服務和用戶端兩者的身分識別)、機密性 (訊息加密) 和完整性 (用來偵測竄改的數位簽章)。 授權會控制存取資源，例如，只允許有權限的使用者讀取檔案。 使用 [!INCLUDE[indigo2](../../../includes/indigo2-md.md)]的功能，即可輕鬆實作這兩個主要需求。  
   
  除了<xref:System.ServiceModel.BasicHttpBinding>類別 (或[ \<basicHttpBinding >](../../../docs/framework/configure-apps/file-schema/wcf/basichttpbinding.md)組態中的項目)，所有預先定義的繫結的預設都會啟用傳輸安全性。 本節中的主題涵蓋兩個基本案例：在裝載於 Internet Information Services (IIS) 的內部網路服務上實作傳輸安全性和授權，以及在裝載於 IIS 的服務上實作傳輸安全性和授權。  
   

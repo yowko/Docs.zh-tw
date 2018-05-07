@@ -1,13 +1,6 @@
 ---
-title: "如何：使用 MenuStrip 建立 MDI 視窗清單 (Windows Form)"
-ms.custom: 
+title: 如何：使用 MenuStrip 建立 MDI 視窗清單 (Windows Form)
 ms.date: 03/30/2017
-ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.technology: dotnet-winforms
-ms.tgt_pltfrm: 
-ms.topic: article
 dev_langs:
 - csharp
 - vb
@@ -15,16 +8,11 @@ helpviewer_keywords:
 - MDI [Windows Forms], creating window lists
 - MenuStrip control [Windows Forms], creating window lists
 ms.assetid: 04fb414b-811f-4a83-aab6-b4a24646dec5
-caps.latest.revision: "16"
-author: dotnet-bot
-ms.author: dotnetcontent
-manager: wpickett
-ms.workload: dotnet
-ms.openlocfilehash: d8bf09170b4def3f041e34942a968fdf41fcdf66
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.openlocfilehash: c87ffadaef2842f10d40f6fd84eb1c70c6dfe37e
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="how-to-create-an-mdi-window-list-with-menustrip-windows-forms"></a>如何：使用 MenuStrip 建立 MDI 視窗清單 (Windows Form)
 使用多重文件介面 (MDI) 建立應用程式，可以開啟數個文件在相同的時間和複製並貼至另一份文件內容。  
@@ -92,7 +80,7 @@ ms.lasthandoff: 12/22/2017
   
 -   <xref:System?displayProperty=nameWithType> 和 <xref:System.Windows.Forms?displayProperty=nameWithType> 組件的參考。  
   
-## <a name="see-also"></a>請參閱  
+## <a name="see-also"></a>另請參閱  
  [操作說明：建立 MDI 父表單](../../../../docs/framework/winforms/advanced/how-to-create-mdi-parent-forms.md)  
  [操作說明：建立 MDI 子表單](../../../../docs/framework/winforms/advanced/how-to-create-mdi-child-forms.md)  
  [MenuStrip 控制項](../../../../docs/framework/winforms/controls/menustrip-control-windows-forms.md)

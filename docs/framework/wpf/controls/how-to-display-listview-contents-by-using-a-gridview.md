@@ -1,27 +1,15 @@
 ---
-title: "如何：使用 GridView 顯示 ListView 內容"
-ms.custom: 
+title: 如何：使用 GridView 顯示 ListView 內容
 ms.date: 03/30/2017
-ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.technology: dotnet-wpf
-ms.tgt_pltfrm: 
-ms.topic: article
 helpviewer_keywords:
 - ListView controls [WPF], displaying contents with GridView
 - GridView [WPF], displaying ListView contents
 ms.assetid: 5bc1e767-ab46-4f14-bd41-3d5d39e1d000
-caps.latest.revision: "9"
-author: dotnet-bot
-ms.author: dotnetcontent
-manager: wpickett
-ms.workload: dotnet
-ms.openlocfilehash: ee2885868c07b00f16290b6414e7f7bdd64fd68c
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.openlocfilehash: 103a439b9cee959d0077e5a759364eb9b943905d
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="how-to-display-listview-contents-by-using-a-gridview"></a>如何：使用 GridView 顯示 ListView 內容
 這個範例示範如何定義<xref:System.Windows.Controls.GridView>檢視模式<xref:System.Windows.Controls.ListView>控制項。  
@@ -35,7 +23,7 @@ ms.lasthandoff: 12/22/2017
   
  ![含有 GridView 輸出的 ListView](../../../../docs/framework/wpf/controls/media/listviewgridview.JPG "ListViewGridView")  
   
-## <a name="see-also"></a>請參閱  
+## <a name="see-also"></a>另請參閱  
  <xref:System.Windows.Controls.ListView>  
  <xref:System.Windows.Controls.GridView>  
  [ListView 概觀](../../../../docs/framework/wpf/controls/listview-overview.md)  

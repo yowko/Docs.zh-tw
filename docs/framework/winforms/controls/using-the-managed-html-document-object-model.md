@@ -1,28 +1,14 @@
 ---
-title: "使用 Managed HTML 文件物件模型"
-ms.custom: 
+title: 使用 Managed HTML 文件物件模型
 ms.date: 03/30/2017
-ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.technology:
-- dotnet-winforms
-ms.tgt_pltfrm: 
-ms.topic: article
 helpviewer_keywords:
 - managed HTML DOM
 ms.assetid: a017dd5c-cd7b-47e4-952c-f4f54cb48409
-caps.latest.revision: 
-author: dotnet-bot
-ms.author: dotnetcontent
-manager: wpickett
-ms.workload:
-- dotnet
-ms.openlocfilehash: 876cee67f917291214d6ea8b9abf7d2975c1fd25
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.openlocfilehash: 95b14ae455ef8fcd0a81decec21b8305f2573643
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="using-the-managed-html-document-object-model"></a>使用 Managed HTML 文件物件模型
 Managed HTML 文件物件模型 (DOM) 提供的包裝函式，根據[!INCLUDE[dnprdnshort](../../../../includes/dnprdnshort-md.md)]的 Internet Explorer 所公開的 HTML 類別。 使用這些類別來管理裝載於 HTML 網頁<xref:System.Windows.Forms.WebBrowser>控制項，或是要建立新的頁面開始。  
@@ -53,5 +39,5 @@ Managed HTML 文件物件模型 (DOM) 提供的包裝函式，根據[!INCLUDE[dn
 ## <a name="related-sections"></a>相關章節  
  [WebBrowser 控制項](../../../../docs/framework/winforms/controls/webbrowser-control-windows-forms.md)  
   
-## <a name="see-also"></a>請參閱  
+## <a name="see-also"></a>另請參閱  
  [關於 DHTML 物件模型](http://msdn.microsoft.com/library/default.asp?url=/workshop/author/om/doc_object.asp)

@@ -1,14 +1,6 @@
 ---
-title: "如何：繪製外框形狀"
-ms.custom: 
+title: 如何：繪製外框形狀
 ms.date: 03/30/2017
-ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.technology:
-- dotnet-winforms
-ms.tgt_pltfrm: 
-ms.topic: article
 dev_langs:
 - csharp
 - vb
@@ -27,17 +19,11 @@ helpviewer_keywords:
 - drawing [Windows Forms], circular shapes
 - shapes [Windows Forms], drawing
 ms.assetid: f4f9214c-607e-407d-8cdd-6549f0278451
-caps.latest.revision: 
-author: dotnet-bot
-ms.author: dotnetcontent
-manager: wpickett
-ms.workload:
-- dotnet
-ms.openlocfilehash: eace68b646b3cdf75546527204bc41584ba64f85
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.openlocfilehash: b674c4d80ba6c70c0bdff6d020527a039e5c7baa
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="how-to-draw-an-outlined-shape"></a>如何：繪製外框形狀
 這個範例會在表單上繪製含外框的橢圓形和矩形。  
@@ -53,7 +39,7 @@ ms.lasthandoff: 12/22/2017
 ## <a name="robust-programming"></a>穩固程式設計  
  您應該一律呼叫<xref:System.IDisposable.Dispose%2A>耗用系統資源，例如任何物件上<xref:System.Drawing.Pen>和<xref:System.Drawing.Graphics>物件。  
   
-## <a name="see-also"></a>請參閱  
+## <a name="see-also"></a>另請參閱  
  <xref:System.Drawing.Graphics.DrawEllipse%2A>  
  <xref:System.Windows.Forms.Control.OnPaint%2A>  
  <xref:System.Drawing.Graphics.DrawRectangle%2A>  

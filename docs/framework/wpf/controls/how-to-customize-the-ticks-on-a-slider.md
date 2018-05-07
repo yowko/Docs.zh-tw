@@ -1,27 +1,15 @@
 ---
-title: "操作說明：自訂滑桿上的刻度"
-ms.custom: 
+title: 操作說明：自訂滑桿上的刻度
 ms.date: 03/30/2017
-ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.technology: dotnet-wpf
-ms.tgt_pltfrm: 
-ms.topic: article
 helpviewer_keywords:
 - TickBar [WPF]
 - Slider control [WPF], creating with TickBar
 ms.assetid: 4fa694f2-a620-4b15-be78-5f4286f89361
-caps.latest.revision: "17"
-author: dotnet-bot
-ms.author: dotnetcontent
-manager: wpickett
-ms.workload: dotnet
-ms.openlocfilehash: d21d2950ed228bf588a202419c222ee86dde5b0d
-ms.sourcegitcommit: c0dd436f6f8f44dc80dc43b07f6841a00b74b23f
+ms.openlocfilehash: 667ec5d5504e18449800598f0b14548b7463bdf3
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 01/19/2018
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="how-to-customize-the-ticks-on-a-slider"></a>操作說明：自訂滑桿上的刻度
 這個範例示範如何建立<xref:System.Windows.Controls.Slider>有刻度的控制項。  
@@ -35,7 +23,7 @@ ms.lasthandoff: 01/19/2018
   
  [!code-xaml[Slider#4](../../../../samples/snippets/xaml/VS_Snippets_Wpf/Slider/xaml/window1.xaml#4)]  
   
-## <a name="see-also"></a>請參閱  
+## <a name="see-also"></a>另請參閱  
  <xref:System.Windows.Controls.Slider>  
  <xref:System.Windows.Controls.Primitives.TickBar>  
  <xref:System.Windows.Controls.Slider.TickPlacement%2A>  

@@ -1,26 +1,12 @@
 ---
 title: HTTPS 上的自訂繫結可靠工作階段
-ms.custom: ''
 ms.date: 03/30/2017
-ms.prod: .net-framework
-ms.reviewer: ''
-ms.suite: ''
-ms.technology:
-- dotnet-clr
-ms.tgt_pltfrm: ''
-ms.topic: article
 ms.assetid: 16aaa80d-3ffe-47c4-8b16-ec65c4d25f8d
-caps.latest.revision: 13
-author: dotnet-bot
-ms.author: dotnetcontent
-manager: wpickett
-ms.workload:
-- dotnet
-ms.openlocfilehash: 716970f87d52a7535b9d42abd333d22685fdafc4
-ms.sourcegitcommit: 2042de78fcdceebb6b8ac4b7a292b93e8782cbf5
+ms.openlocfilehash: d470a4e0af655a8a7895c1db6c2699796f3db933
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/27/2018
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="custom-binding-reliable-session-over-https"></a>HTTPS 上的自訂繫結可靠工作階段
 這個範例示範透過可靠工作階段來使用 SSL 傳輸安全性。 可靠工作階段會實作 WS-Reliable Messaging 通訊協定。 您可以經由在可靠工作階段上撰寫 WS-Security 來建立安全可靠工作階段。 但有時候，您可以改成選擇搭配 SSL 來使用 HTTP 傳輸安全性。  
@@ -30,7 +16,7 @@ ms.lasthandoff: 04/27/2018
 >   
 >  `<InstallDrive>:\WF_WCF_Samples`  
 >   
->  如果此目錄不存在，請移至 [Windows Communication Foundation (WCF) and Windows Workflow Foundation (WF) Samples for .NET Framework 4  (適用於 .NET Framework 4 的 Windows Communication Foundation (WCF) 與 Windows Workflow Foundation (WF) 範例)](http://go.microsoft.com/fwlink/?LinkId=150780) ，以下載所有 [!INCLUDE[indigo1](../../../../includes/indigo1-md.md)] 和 [!INCLUDE[wf1](../../../../includes/wf1-md.md)] 範例。 此範例位於下列目錄。  
+>  如果此目錄不存在，請移至[Windows Communication Foundation (WCF) 和適用於.NET Framework 4 的 Windows Workflow Foundation (WF) 範例](http://go.microsoft.com/fwlink/?LinkId=150780)下載所有 Windows Communication Foundation (WCF) 和[!INCLUDE[wf1](../../../../includes/wf1-md.md)]範例。 此範例位於下列目錄。  
 >   
 >  `<InstallDrive>:\WF_WCF_Samples\WCF\Basic\Binding\Custom\ReliableSessionOverHttps`  
   
@@ -115,7 +101,7 @@ ms.lasthandoff: 04/27/2018
   
  指定的位址會使用 https:// 配置。  
   
- 當您嘗試存取 https 時，因為此範例中使用的憑證是使用 Makecert.exe 所建立的測試憑證，會顯示安全性警示： 位址，例如https://localhost/servicemodelsamples/service.svc，從您的瀏覽器。 若要允許 [!INCLUDE[indigo1](../../../../includes/indigo1-md.md)] 用戶端適當地使用測試憑證，就必須在用戶端新增某些其他程式碼以便隱藏安全性警示。 使用實際執行憑證時，不需要這個程式碼及伴隨的類別。  
+ 當您嘗試存取 https 時，因為此範例中使用的憑證是使用 Makecert.exe 所建立的測試憑證，會顯示安全性警示： 位址，例如https://localhost/servicemodelsamples/service.svc，從您的瀏覽器。 若要讓 Windows Communication Foundation (WCF) 用戶端使用測試憑證中的位置，具有以便隱藏安全性警示用戶端新增某些其他程式碼。 使用實際執行憑證時，不需要這個程式碼及伴隨的類別。  
 
 ```csharp
 // This code is required only for test certificates like those created by Makecert.exe.  

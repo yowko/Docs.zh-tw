@@ -1,31 +1,17 @@
 ---
-title: "如何：批次執行查詢 (WCF 資料服務)"
-ms.custom: 
+title: 如何：批次執行查詢 (WCF 資料服務)
 ms.date: 03/30/2017
-ms.prod: .net-framework-oob
-ms.reviewer: 
-ms.suite: 
-ms.technology:
-- dotnet-clr
-ms.tgt_pltfrm: 
-ms.topic: article
 dev_langs:
 - csharp
 - vb
 helpviewer_keywords:
 - WCF Data Services, batch requests
 ms.assetid: 3b4db7df-bd33-43a1-8ea4-63a18e131f97
-caps.latest.revision: 
-author: dotnet-bot
-ms.author: dotnetcontent
-manager: wpickett
-ms.workload:
-- dotnet
-ms.openlocfilehash: 01dfb1ac10bdc54f682df4b8af66ba4fd507b705
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.openlocfilehash: d710d6539cf465624aa985ce19a67a6d8fb8ee8d
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="how-to-execute-queries-in-a-batch-wcf-data-services"></a>如何：批次執行查詢 (WCF 資料服務)
 使用[!INCLUDE[ssAstoria](../../../../includes/ssastoria-md.md)]用戶端程式庫，您可以在單一批次中執行多個查詢對資料服務。 如需詳細資訊，請參閱[批次處理作業](../../../../docs/framework/data/wcf/batching-operations-wcf-data-services.md)。  
@@ -38,5 +24,5 @@ ms.lasthandoff: 12/22/2017
  [!code-csharp[Astoria Northwind Client#BatchQuery](../../../../samples/snippets/csharp/VS_Snippets_Misc/astoria northwind client/cs/source.cs#batchquery)]
  [!code-vb[Astoria Northwind Client#BatchQuery](../../../../samples/snippets/visualbasic/VS_Snippets_Misc/astoria northwind client/vb/source.vb#batchquery)]  
   
-## <a name="see-also"></a>請參閱  
+## <a name="see-also"></a>另請參閱  
  [WCF Data Services 用戶端程式庫](../../../../docs/framework/data/wcf/wcf-data-services-client-library.md)

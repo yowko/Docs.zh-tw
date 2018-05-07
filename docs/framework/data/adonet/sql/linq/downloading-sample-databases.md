@@ -1,26 +1,12 @@
 ---
 title: 下載範例資料庫
-ms.custom: ''
 ms.date: 03/30/2017
-ms.prod: .net-framework
-ms.reviewer: ''
-ms.suite: ''
-ms.technology:
-- dotnet-ado
-ms.tgt_pltfrm: ''
-ms.topic: article
 ms.assetid: ef9d69a1-9461-43fe-94bb-7c836754bcb5
-caps.latest.revision: 2
-author: douglaslMS
-ms.author: douglasl
-manager: craigg
-ms.workload:
-- dotnet
-ms.openlocfilehash: c4f18bc3e078a03795037f77505aa2533f1e853e
-ms.sourcegitcommit: 2042de78fcdceebb6b8ac4b7a292b93e8782cbf5
+ms.openlocfilehash: 4f5799b395abbbb5a4e61bac9572c808bb4ad5a1
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/27/2018
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="downloading-sample-databases"></a>下載範例資料庫
 [!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)] 文件中的許多範例和逐步解說都使用 Northwind 範例資料庫和 SQL Server Express Edition。 您可以從 Microsoft 下載網站免費下載這些產品。  

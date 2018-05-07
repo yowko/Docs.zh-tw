@@ -1,13 +1,6 @@
 ---
-title: "向量圖形概觀"
-ms.custom: 
+title: 向量圖形概觀
 ms.date: 03/30/2017
-ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.technology: dotnet-winforms
-ms.tgt_pltfrm: 
-ms.topic: article
 dev_langs:
 - csharp
 - vb
@@ -16,19 +9,14 @@ helpviewer_keywords:
 - coordinate systems
 - graphics [Windows Forms], vector graphics
 ms.assetid: 0195df81-66be-452d-bb53-5a582ebfdc09
-caps.latest.revision: "16"
-author: dotnet-bot
-ms.author: dotnetcontent
-manager: wpickett
-ms.workload: dotnet
-ms.openlocfilehash: 603b76c999933f177a9e48ddb819562b8e4dd8f8
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.openlocfilehash: 31fec6d0d3769251d21783b4657d00b06431e942
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="vector-graphics-overview"></a>向量圖形概觀
-[!INCLUDE[ndptecgdiplus](../../../../includes/ndptecgdiplus-md.md)]座標系統上繪製線條、 矩形和其他形狀。 您可以選擇各式各樣的座標系統，但預設座標系統具有原點左上角的 x 軸指向右側和 y 軸指向下方。 預設座標系統中的量值單位為像素。  
+[!INCLUDE[ndptecgdiplus](../../../../includes/ndptecgdiplus-md.md)] 座標系統上繪製線條、 矩形和其他形狀。 您可以選擇各式各樣的座標系統，但預設座標系統具有原點左上角的 x 軸指向右側和 y 軸指向下方。 預設座標系統中的量值單位為像素。  
   
 ## <a name="the-building-blocks-of-gdi"></a>建置組塊 GDI +  
  ![向量圖形](../../../../docs/framework/winforms/advanced/media/aboutgdip02-art01.gif "AboutGdip02_Art01")  
@@ -37,7 +25,7 @@ ms.lasthandoff: 12/22/2017
   
  ![向量圖形](../../../../docs/framework/winforms/advanced/media/aboutgdip02-art02.gif "AboutGdip02_Art02")  
   
- 當您使用[!INCLUDE[ndptecgdiplus](../../../../includes/ndptecgdiplus-md.md)]繪製線條、 矩形或曲線時，您可以提供要繪製之項目的某些重要資訊。 例如，您可以指定一條線，藉由提供兩個點，而您可以藉由點、 高度和寬度指定矩形。 [!INCLUDE[ndptecgdiplus](../../../../includes/ndptecgdiplus-md.md)]若要判斷哪一個像素為單位必須開啟以顯示線條、 矩形或曲線的顯示驅動程式軟體一起運作。 下圖顯示已開啟，顯示一條線從點 （4，2），以點 （12，8） 的像素。  
+ 當您使用[!INCLUDE[ndptecgdiplus](../../../../includes/ndptecgdiplus-md.md)]繪製線條、 矩形或曲線時，您可以提供要繪製之項目的某些重要資訊。 例如，您可以指定一條線，藉由提供兩個點，而您可以藉由點、 高度和寬度指定矩形。 [!INCLUDE[ndptecgdiplus](../../../../includes/ndptecgdiplus-md.md)] 若要判斷哪一個像素為單位必須開啟以顯示線條、 矩形或曲線的顯示驅動程式軟體一起運作。 下圖顯示已開啟，顯示一條線從點 （4，2），以點 （12，8） 的像素。  
   
  ![向量圖形](../../../../docs/framework/winforms/advanced/media/aboutgdip02-art03.gif "AboutGdip02_Art03")  
   
@@ -67,7 +55,7 @@ ms.lasthandoff: 12/22/2017
  [!code-csharp[LinesCurvesAndShapes#11](../../../../samples/snippets/csharp/VS_Snippets_Winforms/LinesCurvesAndShapes/CS/Class1.cs#11)]
  [!code-vb[LinesCurvesAndShapes#11](../../../../samples/snippets/visualbasic/VS_Snippets_Winforms/LinesCurvesAndShapes/VB/Class1.vb#11)]  
   
-## <a name="see-also"></a>請參閱  
+## <a name="see-also"></a>另請參閱  
  <xref:System.Drawing.Graphics?displayProperty=nameWithType>  
  <xref:System.Drawing.Pen?displayProperty=nameWithType>  
  [線條、曲線和形狀](../../../../docs/framework/winforms/advanced/lines-curves-and-shapes.md)  

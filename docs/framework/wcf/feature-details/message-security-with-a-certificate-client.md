@@ -1,32 +1,20 @@
 ---
 title: 憑證用戶端的訊息安全性
-ms.custom: ''
 ms.date: 03/30/2017
-ms.prod: .net-framework
-ms.reviewer: ''
-ms.suite: ''
-ms.technology:
-- dotnet-clr
-ms.tgt_pltfrm: ''
-ms.topic: article
 dev_langs:
 - csharp
 - vb
 ms.assetid: 99770573-c815-4428-a38c-e4335c8bd7ce
-caps.latest.revision: 16
 author: BrucePerlerMS
-ms.author: bruceper
 manager: mbaldwin
-ms.workload:
-- dotnet
-ms.openlocfilehash: 6e31c7a9e53e8b918661c0c6c544e697e2a772e6
-ms.sourcegitcommit: 94d33cadc5ff81d2ac389bf5f26422c227832052
+ms.openlocfilehash: 570c7763da912de4e0d2729e7579a200f35c4941
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/30/2018
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="message-security-with-a-certificate-client"></a>憑證用戶端的訊息安全性
-下列狀況顯示使用訊息安全性模式加以保障的 [!INCLUDE[indigo1](../../../../includes/indigo1-md.md)] 用戶端及服務。 用戶端與服務皆以憑證驗證。 如需詳細資訊，請參閱[分散式應用程式安全性](../../../../docs/framework/wcf/feature-details/distributed-application-security.md)。  
+下列案例會顯示 Windows Communication Foundation (WCF) 用戶端和服務使用訊息安全性模式保護。 用戶端與服務皆以憑證驗證。 如需詳細資訊，請參閱[分散式應用程式安全性](../../../../docs/framework/wcf/feature-details/distributed-application-security.md)。  
   
  範例應用程式，請參閱[訊息安全性憑證](../../../../docs/framework/wcf/samples/message-security-certificate.md)。  
   
@@ -35,7 +23,7 @@ ms.lasthandoff: 04/30/2018
 |特性|描述|  
 |--------------------|-----------------|  
 |安全性模式|訊息|  
-|互通性|僅限 [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)]|  
+|互通性|WCF 只|  
 |驗證 (伺服器)|使用服務憑證|  
 |驗證 (用戶端)|使用用戶端憑證|  
 |完整性|是|  

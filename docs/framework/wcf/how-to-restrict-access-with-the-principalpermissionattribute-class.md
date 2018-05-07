@@ -1,14 +1,6 @@
 ---
 title: HOW TO：使用 PrincipalPermissionAttribute 類別來限制存取
-ms.custom: ''
 ms.date: 03/30/2017
-ms.prod: .net-framework
-ms.reviewer: ''
-ms.suite: ''
-ms.technology:
-- dotnet-clr
-ms.tgt_pltfrm: ''
-ms.topic: article
 dev_langs:
 - csharp
 - vb
@@ -17,17 +9,11 @@ helpviewer_keywords:
 - WCF, authorization
 - WCF, security
 ms.assetid: 5162f5c4-8781-4cc4-9425-bb7620eaeaf4
-caps.latest.revision: 23
-author: dotnet-bot
-ms.author: dotnetcontent
-manager: wpickett
-ms.workload:
-- dotnet
-ms.openlocfilehash: dffeae6a114563ea6b030c303bd3ed3f3a27f4f5
-ms.sourcegitcommit: 94d33cadc5ff81d2ac389bf5f26422c227832052
-ms.translationtype: MT
+ms.openlocfilehash: a93726598b31ee57d583aca16012d615e90441f4
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/30/2018
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="how-to-restrict-access-with-the-principalpermissionattribute-class"></a>HOW TO：使用 PrincipalPermissionAttribute 類別來限制存取
 控制 Windows 網域電腦上資源的存取，是基本的安全性工作。 例如，只有特定使用者能夠檢視機密資料 (如薪資資料)。 本主題說明如何透過將使用者歸屬到預先定義的群組，以限制方法的存取。 如需實用範例，請參閱[授權存取服務作業](../../../docs/framework/wcf/samples/authorizing-access-to-service-operations.md)。  
@@ -52,7 +38,7 @@ ms.lasthandoff: 04/30/2018
   
 ### <a name="to-demand-user-membership"></a>要求使用者成員資格  
   
-1.  開啟包含所實作之服務合約程式碼的 [!INCLUDE[indigo1](../../../includes/indigo1-md.md)] 程式碼檔。 如需實作合約的詳細資訊，請參閱[實作服務合約](../../../docs/framework/wcf/implementing-service-contracts.md)。  
+1.  開啟 Windows Communication Foundation (WCF) 的程式碼檔案，其中包含實作的服務合約程式碼。 如需實作合約的詳細資訊，請參閱[實作服務合約](../../../docs/framework/wcf/implementing-service-contracts.md)。  
   
 2.  將 <xref:System.Security.Permissions.PrincipalPermissionAttribute> 屬性 (Attribute) 套用至每一個必須限於特定群組的方法。 將 <xref:System.Security.Permissions.SecurityAttribute.Action%2A> 屬性設為 <xref:System.Security.Permissions.SecurityAction.Demand>，並將 <xref:System.Security.Permissions.PrincipalPermissionAttribute.Role%2A> 屬性設為群組名稱。 例如:   
   

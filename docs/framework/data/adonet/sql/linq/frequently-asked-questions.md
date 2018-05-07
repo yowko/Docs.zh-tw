@@ -1,29 +1,15 @@
 ---
 title: 常見問題集
-ms.custom: ''
 ms.date: 03/30/2017
-ms.prod: .net-framework
-ms.reviewer: ''
-ms.suite: ''
-ms.technology:
-- dotnet-ado
-ms.tgt_pltfrm: ''
-ms.topic: article
 dev_langs:
 - csharp
 - vb
 ms.assetid: 252ed666-0679-4eea-b71b-2f14117ef443
-caps.latest.revision: 3
-author: douglaslMS
-ms.author: douglasl
-manager: craigg
-ms.workload:
-- dotnet
-ms.openlocfilehash: caccbb76f32c38f29fa4f49adc9b7b1c8fe4045d
-ms.sourcegitcommit: 86adcc06e35390f13c1e372c36d2e044f1fc31ef
+ms.openlocfilehash: 5f556c46823bd867709e8c53b59f7ac53201d242
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/26/2018
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="frequently-asked-questions"></a>常見問題集
 下列各節將解答實作 [!INCLUDE[vbteclinq](../../../../../../includes/vbteclinq-md.md)] 時可能會遇到的一些常見問題。  

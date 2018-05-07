@@ -1,24 +1,12 @@
 ---
-title: ".NET Framework Data Provider for Oracle 的系統需求"
-ms.custom: 
+title: .NET Framework Data Provider for Oracle 的系統需求
 ms.date: 03/30/2017
-ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.technology: dotnet-ado
-ms.tgt_pltfrm: 
-ms.topic: article
 ms.assetid: 054f76b9-1737-43f0-8160-84a00a387217
-caps.latest.revision: "3"
-author: douglaslMS
-ms.author: douglasl
-manager: craigg
-ms.workload: dotnet
-ms.openlocfilehash: 75a42962b0f4c8cd19f1cce5f9223d82e32ff369
-ms.sourcegitcommit: ed26cfef4e18f6d93ab822d8c29f902cff3519d1
+ms.openlocfilehash: a5ce0e831af40cbe86e6ac901d6e92d5a60f8774
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 01/17/2018
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="system-requirements-for-the-net-framework-data-provider-for-oracle"></a>.NET Framework Data Provider for Oracle 的系統需求
 Oracle 的 .NET Framework 資料提供者需要 Microsoft Data Access Components (MDAC) 2.6 (含) 以後版本。 建議使用 MDAC 2.8 SP1。  
@@ -48,6 +36,6 @@ Unicode=True
 ### <a name="oraclelob-can-only-update-full-characters"></a>OracleLob 僅能更新完整的字元。  
  基於可用性的理由，<xref:System.Data.OracleClient.OracleLob>物件繼承自.NET Framework 資料流類別，並提供**ReadByte**和**WriteByte**方法。 它也會實作方法，例如**CopyTo**和**清除**，該區段的 Oracle **LOB**物件。 相反地，Oracle 用戶端軟體會提供數個應用程式開發介面來處理字元**LOB**s (**CLOB**和**NCLOB**)。 但是，這些 API 僅適用於完整字元。 由於此差別，Oracle 的資料提供者會實作支援**讀取**和**ReadByte**以位元組方式使用 utf-16 資料。 不過，其他的方法**OracleLob**物件僅允許完整字元作業。  
   
-## <a name="see-also"></a>請參閱  
+## <a name="see-also"></a>另請參閱  
  [Oracle 和 ADO.NET](../../../../docs/framework/data/adonet/oracle-and-adonet.md)  
  [ADO.NET Managed 提供者和 DataSet 開發人員中心](http://go.microsoft.com/fwlink/?LinkId=217917)

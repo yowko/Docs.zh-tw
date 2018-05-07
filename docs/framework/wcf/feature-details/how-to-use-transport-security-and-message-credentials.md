@@ -1,34 +1,22 @@
 ---
 title: HOW TO：使用傳輸安全性和訊息認證
-ms.custom: ''
 ms.date: 03/30/2017
-ms.prod: .net-framework
-ms.reviewer: ''
-ms.suite: ''
-ms.technology:
-- dotnet-clr
-ms.tgt_pltfrm: ''
-ms.topic: article
 dev_langs:
 - csharp
 - vb
 helpviewer_keywords:
 - TransportWithMessageCredentials
 ms.assetid: 6cc35346-c37a-4859-b82b-946c0ba6e68f
-caps.latest.revision: 11
 author: BrucePerlerMS
-ms.author: bruceper
 manager: mbaldwin
-ms.workload:
-- dotnet
-ms.openlocfilehash: d30769c854dad04a333509f64169a257fc461ad0
-ms.sourcegitcommit: 94d33cadc5ff81d2ac389bf5f26422c227832052
+ms.openlocfilehash: b94c6fd4761a5b0383c21d36a6d717f78a8825de
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/30/2018
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="how-to-use-transport-security-and-message-credentials"></a>HOW TO：使用傳輸安全性和訊息認證
-同時使用傳輸與訊息認證來保護服務的安全時，需要在 [!INCLUDE[indigo1](../../../../includes/indigo1-md.md)] 中同時運用最佳的傳輸與訊息安全性模式。 簡單地說，傳輸層安全性可提供完整性與機密性，而訊息層安全性則提供各種在嚴格的傳輸安全性機制中不可能提供的認證。 本主題將說明使用 <xref:System.ServiceModel.WSHttpBinding> 和 <xref:System.ServiceModel.NetTcpBinding> 繫結，以訊息認證來實作傳輸時的基本步驟。 如需有關如何設定安全性模式的詳細資訊，請參閱[How to： 設定安全性模式](../../../../docs/framework/wcf/how-to-set-the-security-mode.md)。  
+傳輸和訊息安全性模式的最佳保護含有傳輸和訊息認證的服務會使用 Windows Communication Foundation (WCF)。 簡單地說，傳輸層安全性可提供完整性與機密性，而訊息層安全性則提供各種在嚴格的傳輸安全性機制中不可能提供的認證。 本主題將說明使用 <xref:System.ServiceModel.WSHttpBinding> 和 <xref:System.ServiceModel.NetTcpBinding> 繫結，以訊息認證來實作傳輸時的基本步驟。 如需有關如何設定安全性模式的詳細資訊，請參閱[How to： 設定安全性模式](../../../../docs/framework/wcf/how-to-set-the-security-mode.md)。  
   
  當您將安全性模式設為 `TransportWithMessageCredential` 時，傳輸會決定用來提供傳輸層安全性的實際機制。 對 HTTP 來說，此機制為 Secure Sockets Layer (SSL) over HTTP (HTTPS)；對 TCP 來說，此機制是 SSL over TCP 或 Windows 安全性。  
   

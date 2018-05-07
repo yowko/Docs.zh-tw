@@ -1,27 +1,15 @@
 ---
-title: "整合 Enterprise Services 異動元件"
-ms.custom: 
+title: 整合 Enterprise Services 異動元件
 ms.date: 03/30/2017
-ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.technology: dotnet-clr
-ms.tgt_pltfrm: 
-ms.topic: article
 ms.assetid: 05dab277-b8b2-48cf-b40c-826be128b175
-caps.latest.revision: "8"
-author: dotnet-bot
-ms.author: dotnetcontent
-manager: wpickett
-ms.workload: dotnet
-ms.openlocfilehash: b6ce82d100341fec4415cf9fdb7159706b2accc4
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.openlocfilehash: 8453b4199f5e6eae263ebc3fc1c457429c868d7f
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="integrating-enterprise-services-transactional-components"></a>整合 Enterprise Services 異動元件
-[!INCLUDE[indigo1](../../../../includes/indigo1-md.md)]提供整合 Enterprise Services 的自動機制 (請參閱[整合 COM + 應用程式](../../../../docs/framework/wcf/feature-details/integrating-with-com-plus-applications.md))。 不過，您可能希望能夠彈性地開發出可透過內部方式使用裝載於 Enterprise Services 之異動元件的服務。 因為[!INCLUDE[indigo2](../../../../includes/indigo2-md.md)]交易功能已內建<xref:System.Transactions>基礎結構、 整合與 Enterprise Services 的程序[!INCLUDE[indigo2](../../../../includes/indigo2-md.md)]指定之間的互通性相同<xref:System.Transactions>和 Enterprise服務中所述[互通性與 Enterprise Services 和 COM + 交易](http://go.microsoft.com/fwlink/?LinkId=94949)。  
+Windows Communication Foundation (WCF) 提供整合 Enterprise Services 的自動機制 (請參閱[整合 COM + 應用程式](../../../../docs/framework/wcf/feature-details/integrating-with-com-plus-applications.md))。 不過，您可能希望能夠彈性地開發出可透過內部方式使用裝載於 Enterprise Services 之異動元件的服務。 由於 WCF 交易功能建置在<xref:System.Transactions>基礎結構，與 WCF 整合 Enterprise Services 的程序是相同的指定之間的互通性<xref:System.Transactions>和 Enterprise Services 中所述[互通性與 Enterprise Services 和 COM + 交易](http://go.microsoft.com/fwlink/?LinkId=94949)。  
   
  為了在傳入的流動交易和 COM+ 內容交易之間提供所需等級的互通性，此服務的實作必須建立 <xref:System.Transactions.TransactionScope> 執行個體並使用適當的 <xref:System.Transactions.EnterpriseServicesInteropOption> 列舉值。  
   
@@ -103,6 +91,6 @@ static void Main()
 }  
 ```  
   
-## <a name="see-also"></a>請參閱  
+## <a name="see-also"></a>另請參閱  
  [整合 COM 應用程式](../../../../docs/framework/wcf/feature-details/integrating-with-com-plus-applications.md)  
  [整合 COM 應用程式](../../../../docs/framework/wcf/feature-details/integrating-with-com-applications.md)

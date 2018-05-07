@@ -1,14 +1,6 @@
 ---
 title: ICorProfilerInfo7::ReadInMemorySymbols
-ms.custom: 
 ms.date: 03/30/2017
-ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.technology:
-- dotnet-clr
-ms.tgt_pltfrm: 
-ms.topic: article
 api_name:
 - ICorProfilerInfo7.ReadInMemorySymbols
 api_location:
@@ -18,17 +10,13 @@ api_location:
 api_type:
 - COM
 ms.assetid: 1745a0b9-8332-4777-a670-b549bff3b901
-caps.latest.revision: 
 author: rpetrusha
 ms.author: ronpet
-manager: wpickett
-ms.workload:
-- dotnet
-ms.openlocfilehash: 5851f73cc899ef21d8a5dcfd8f03617641a6625a
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.openlocfilehash: 9874c8e567a89fd3977be360666c86406f2cd395
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="icorprofilerinfo7readinmemorysymbols"></a>ICorProfilerInfo7::ReadInMemorySymbols
 [受到 [!INCLUDE[net_v461](../../../../includes/net-v461-md.md)] 和更新版本的支援]  
@@ -69,7 +57,7 @@ HRESULT ReadInMemorySymbols(
  `CORPROF_E_MODULE_IS_DYNAMIC`如果模組使用建立<xref:System.Reflection.Emit>。  
   
 ## <a name="remarks"></a>備註  
- `ReadInMemorySymbols`方法會嘗試讀取`countSymbolBytes`資料位移處開始的`symbolsReadOffset`記憶體中資料流中。 將資料複製到`pSymbolBytes`，應該要有`countSymbolBytes`的可用空間。     `pCountSymbolsBytesRead`包含實際讀取位元組數，可能會小於比`countSymbolBytes`如果已到達資料流結尾。  
+ `ReadInMemorySymbols`方法會嘗試讀取`countSymbolBytes`資料位移處開始的`symbolsReadOffset`記憶體中資料流中。 將資料複製到`pSymbolBytes`，應該要有`countSymbolBytes`的可用空間。     `pCountSymbolsBytesRead` 包含實際讀取位元組數，可能會小於比`countSymbolBytes`如果已到達資料流結尾。  
   
 > [!NOTE]
 >  目前的實作不支援這些事件處理常式。 如果使用 Reflection.Emit 建立模組，則方法會傳回`CORPROF_E_MODULE_IS_DYNAMIC`。  
@@ -81,7 +69,7 @@ HRESULT ReadInMemorySymbols(
   
  **程式庫：** CorGuids.lib  
   
- **.NET framework 版本：**[!INCLUDE[net_current_v461plus](../../../../includes/net-current-v461plus-md.md)]  
+ **.NET framework 版本：** [!INCLUDE[net_current_v461plus](../../../../includes/net-current-v461plus-md.md)]  
   
-## <a name="see-also"></a>請參閱  
+## <a name="see-also"></a>另請參閱  
  [ICorProfilerInfo7 介面](../../../../docs/framework/unmanaged-api/profiling/icorprofilerinfo7-interface.md)

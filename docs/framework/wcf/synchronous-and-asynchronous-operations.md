@@ -1,14 +1,6 @@
 ---
 title: 同步和非同步作業
-ms.custom: ''
 ms.date: 03/30/2017
-ms.prod: .net-framework
-ms.reviewer: ''
-ms.suite: ''
-ms.technology:
-- dotnet-clr
-ms.tgt_pltfrm: ''
-ms.topic: article
 dev_langs:
 - csharp
 - vb
@@ -16,22 +8,16 @@ helpviewer_keywords:
 - service contracts [WCF], synchronous operations
 - service contracts [WCF], asynchronous operations
 ms.assetid: db8a51cb-67e6-411b-9035-e5821ed350c9
-caps.latest.revision: 24
-author: dotnet-bot
-ms.author: dotnetcontent
-manager: wpickett
-ms.workload:
-- dotnet
-ms.openlocfilehash: c626699dc5291f4d4f6d432e89708661b233f16d
-ms.sourcegitcommit: 94d33cadc5ff81d2ac389bf5f26422c227832052
-ms.translationtype: MT
+ms.openlocfilehash: 0b64d45797babff2da1649fb7469684342e65d47
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/30/2018
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="synchronous-and-asynchronous-operations"></a>同步和非同步作業
 本主題討論實作和呼叫非同步服務作業。  
   
- 許多應用程式會非同步呼叫方法，因為這麼做使應用程式可以在方法呼叫執行的同時繼續進行有用的工作。 [!INCLUDE[indigo1](../../../includes/indigo1-md.md)] 服務和用戶端可以在應用程式的兩個不同層級參與非同步作業呼叫，讓 [!INCLUDE[indigo2](../../../includes/indigo2-md.md)] 應用程式在互動性的權衡下有更大的彈性將輸送量最大化。  
+ 許多應用程式會非同步呼叫方法，因為這麼做使應用程式可以在方法呼叫執行的同時繼續進行有用的工作。 Windows Communication Foundation (WCF) 服務和用戶端可以參與兩個不同層級的應用程式，其提供的非同步作業呼叫[!INCLUDE[indigo2](../../../includes/indigo2-md.md)]更多的彈性來最大化輸送量之間取得平衡的應用程式互動功能。  
   
 ## <a name="types-of-asynchronous-operations"></a>非同步作業的類型  
  [!INCLUDE[indigo2](../../../includes/indigo2-md.md)] 的所有服務合約，無論參數型別和傳回值為何，都會使用 [!INCLUDE[indigo2](../../../includes/indigo2-md.md)] 屬性來指定用戶端與服務之間的特定訊息交換模式。 [!INCLUDE[indigo2](../../../includes/indigo2-md.md)] 會自動將傳入和傳出訊息路由傳送至適當的服務作業或執行的用戶端程式碼。  

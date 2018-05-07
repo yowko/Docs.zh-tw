@@ -1,27 +1,15 @@
 ---
-title: "ASP.NET 相容性"
-ms.custom: 
+title: ASP.NET 相容性
 ms.date: 03/30/2017
-ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.technology: dotnet-clr
-ms.tgt_pltfrm: 
-ms.topic: article
 ms.assetid: c8b51f1e-c096-4c42-ad99-0519887bbbc5
-caps.latest.revision: "25"
-author: dotnet-bot
-ms.author: dotnetcontent
-manager: wpickett
-ms.workload: dotnet
-ms.openlocfilehash: 751fe96caa2be63e925b3107fa2c198b523bef72
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
-ms.translationtype: MT
+ms.openlocfilehash: 35d9362fde21faf4998051e85f66fc4ddfb8b94b
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="aspnet-compatibility"></a>ASP.NET 相容性
-這個範例會示範如何在 [!INCLUDE[vstecasp](../../../../includes/vstecasp-md.md)] 中啟用 [!INCLUDE[indigo1](../../../../includes/indigo1-md.md)] 相容模式。 在 [!INCLUDE[vstecasp](../../../../includes/vstecasp-md.md)] 相容模式中執行的服務會完全參與 [!INCLUDE[vstecasp](../../../../includes/vstecasp-md.md)] 應用程式管線，並且會利用像是檔案/URL 授權、工作階段狀態，以及 [!INCLUDE[vstecasp](../../../../includes/vstecasp-md.md)] 類別等 <xref:System.Web.HttpContext> 功能。 <xref:System.Web.HttpContext> 類別允許存取 Cookie、工作階段以及其他 [!INCLUDE[vstecasp](../../../../includes/vstecasp-md.md)] 功能。 這個模式會要求這些繫結使用 HTTP 傳輸，而且服務本身必須以 IIS 裝載。  
+這個範例會示範如何啟用[!INCLUDE[vstecasp](../../../../includes/vstecasp-md.md)]相容性模式在 Windows Communication Foundation (WCF)。 在 [!INCLUDE[vstecasp](../../../../includes/vstecasp-md.md)] 相容模式中執行的服務會完全參與 [!INCLUDE[vstecasp](../../../../includes/vstecasp-md.md)] 應用程式管線，並且會利用像是檔案/URL 授權、工作階段狀態，以及 [!INCLUDE[vstecasp](../../../../includes/vstecasp-md.md)] 類別等 <xref:System.Web.HttpContext> 功能。 <xref:System.Web.HttpContext> 類別允許存取 Cookie、工作階段以及其他 [!INCLUDE[vstecasp](../../../../includes/vstecasp-md.md)] 功能。 這個模式會要求這些繫結使用 HTTP 傳輸，而且服務本身必須以 IIS 裝載。  
   
  在這個範例中，用戶端是主控台應用程式 (可執行檔)，而服務則是由網際網路資訊服務 (IIS) 裝載。  
   
@@ -33,15 +21,15 @@ ms.lasthandoff: 12/22/2017
 >   
 >  1.  開啟**控制台**。  開啟**系統管理工具**下方的小程式**系統及安全性**標題。 開啟**網際網路資訊服務 (IIS) 管理員**小程式。  
 > 2.  展開的 treeview**連線**窗格。 選取**應用程式集區**節點。  
-> 3.  若要設定要使用的預設應用程式集區[!INCLUDE[netfx40_long](../../../../includes/netfx40-long-md.md)]（這會導致與現有站台不相容問題），以滑鼠右鍵按一下**DefaultAppPool**清單項目，然後選取**基本設定...**. 設定**.Net Framework 版本**提取向**.Net Framework v4.0.30128** （或更新版本）。  
-> 4.  若要建立新的應用程式集區使用[!INCLUDE[netfx40_long](../../../../includes/netfx40-long-md.md)]（以保留與其他應用程式相容性），以滑鼠右鍵按一下**應用程式集區**節點，然後選取**新增應用程式集區...**. 為新的應用程式集區，並設定**.Net Framework 版本**提取向**.Net Framework v4.0.30128** （或更新版本）。 下面執行安裝程式步驟之後，以滑鼠右鍵按一下**ServiceModelSamples**應用程式並選取**管理應用程式**，**進階設定...**. 設定**應用程式集區**新的應用程式集區。  
+> 3.  若要設定要使用的預設應用程式集區[!INCLUDE[netfx40_long](../../../../includes/netfx40-long-md.md)]（這會導致與現有站台不相容問題），以滑鼠右鍵按一下**DefaultAppPool**清單項目，然後選取**基本設定...**. 設定 **.Net Framework 版本**提取向 **.Net Framework v4.0.30128** （或更新版本）。  
+> 4.  若要建立新的應用程式集區使用[!INCLUDE[netfx40_long](../../../../includes/netfx40-long-md.md)]（以保留與其他應用程式相容性），以滑鼠右鍵按一下**應用程式集區**節點，然後選取**新增應用程式集區...**. 為新的應用程式集區，並設定 **.Net Framework 版本**提取向 **.Net Framework v4.0.30128** （或更新版本）。 下面執行安裝程式步驟之後，以滑鼠右鍵按一下**ServiceModelSamples**應用程式並選取**管理應用程式**，**進階設定...**. 設定**應用程式集區**新的應用程式集區。  
   
 > [!IMPORTANT]
 >  這些範例可能已安裝在您的電腦上。 請先檢查下列 (預設) 目錄，然後再繼續。  
 >   
 >  `<InstallDrive>:\WF_WCF_Samples`  
 >   
->  如果此目錄不存在，請移至 [Windows Communication Foundation (WCF) and Windows Workflow Foundation (WF) Samples for .NET Framework 4  (適用於 .NET Framework 4 的 Windows Communication Foundation (WCF) 與 Windows Workflow Foundation (WF) 範例)](http://go.microsoft.com/fwlink/?LinkId=150780) ，以下載所有 [!INCLUDE[indigo1](../../../../includes/indigo1-md.md)] 和 [!INCLUDE[wf1](../../../../includes/wf1-md.md)] 範例。 此範例位於下列目錄。  
+>  如果此目錄不存在，請移至[Windows Communication Foundation (WCF) 和適用於.NET Framework 4 的 Windows Workflow Foundation (WF) 範例](http://go.microsoft.com/fwlink/?LinkId=150780)下載所有 Windows Communication Foundation (WCF) 和[!INCLUDE[wf1](../../../../includes/wf1-md.md)]範例。 此範例位於下列目錄。  
 >   
 >  `<InstallDrive>:\WF_WCF_Samples\WCF\Basic\Services\Hosting\WebHost\ASPNetCompatibility`  
   
@@ -136,5 +124,5 @@ Press <ENTER> to terminate client.
   
 4.  若要在單一或跨電腦組態中執行範例時，請依照中的指示[執行 Windows Communication Foundation 範例](../../../../docs/framework/wcf/samples/running-the-samples.md)。  
   
-## <a name="see-also"></a>請參閱  
+## <a name="see-also"></a>另請參閱  
  [AppFabric 主控與持續性範例](http://go.microsoft.com/fwlink/?LinkId=193961)

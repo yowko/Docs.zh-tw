@@ -1,24 +1,12 @@
 ---
-title: "WCF 及 WebSockets"
-ms.custom: 
+title: WCF 及 WebSockets
 ms.date: 03/30/2017
-ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.technology: dotnet-clr
-ms.tgt_pltfrm: 
-ms.topic: article
 ms.assetid: 1e53b49e-022c-49c7-8984-4b21b53c05b3
-caps.latest.revision: "4"
-author: dotnet-bot
-ms.author: dotnetcontent
-manager: wpickett
-ms.workload: dotnet
-ms.openlocfilehash: e84bf7a94a6a6fa980e223daf0a6c7aaf489bb6e
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.openlocfilehash: ac888db14ebd21c4aed2f717c1f71bed310b8388
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="wcf-and-websockets"></a>WCF 及 WebSockets
 .NET Framework 4.5 在 Windows Communication Foundation 中引入了 WebSockets 的支援。  WebSockets 是基於標準的高效率技術，可在標準 HTTP 通訊埠 80 和 443 上進行雙向通訊。 使用標準 HTTP 通訊埠允許 WebSockets 透過媒介在 Web 上進行通訊。  為了支援透過 WebSocket 傳輸所進行通訊，已加入兩個新的標準繫結。 <xref:System.ServiceModel.NetHttpBinding> 和 <xref:System.ServiceModel.NetHttpsBinding>。 可以上設定 WebSockets 的特定設定<xref:System.ServiceModel.Channels.HttpTransportBindingElement>藉由存取<xref:System.ServiceModel.Channels.HttpTransportBindingElement.WebSocketSettings%2A>屬性。

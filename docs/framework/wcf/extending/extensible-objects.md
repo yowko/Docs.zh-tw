@@ -1,23 +1,14 @@
 ---
-title: "可延伸物件"
+title: 可延伸物件
 ms.date: 03/30/2017
-ms.prod: .net-framework
-ms.technology:
-- dotnet-clr
-ms.topic: article
 helpviewer_keywords:
 - extensible objects [WCF]
 ms.assetid: bc88cefc-31fb-428e-9447-6d20a7d452af
-author: dotnet-bot
-ms.author: dotnetcontent
-manager: wpickett
-ms.workload:
-- dotnet
-ms.openlocfilehash: a1bb341d9e164b1ce232f238f8ddf4a0cf807363
-ms.sourcegitcommit: c1904b0437605a90e5aa65b4abd7e048000e349d
-ms.translationtype: MT
+ms.openlocfilehash: 4fdb3ddff6bda21ac7f9538645d92f15e0b443b9
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 01/24/2018
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="extensible-objects"></a>可延伸物件
 可延伸物件模式是用於以新功能延伸現有的執行階段類別，或將新狀態新增至物件。 附加至其中一個可擴充物件的擴充功能會在處理程序中的各種不同階段啟用行為，以存取附加至它們可存取之一般可擴充物件的共用狀態與功能。  
@@ -57,7 +48,7 @@ where T : IExtensibleObject<T>
  <xref:System.ServiceModel.IExtensionCollection%601> 介面是 <xref:System.ServiceModel.IExtension%601> 物件的集合，這些物件允許依據 <xref:System.ServiceModel.IExtension%601> 的型別將其擷取。 <xref:System.ServiceModel.IExtensionCollection%601.Find%2A?displayProperty=nameWithType> 會傳回最近所加入屬於該型別之 <xref:System.ServiceModel.IExtension%601> 的物件。  
   
 ### <a name="extensible-objects-in-windows-communication-foundation"></a>Windows Communication Foundation 中的可延伸物件  
- [!INCLUDE[indigo1](../../../../includes/indigo1-md.md)] 中有四種可延伸物件：  
+ Windows Communication Foundation (WCF) 中有四種可延伸物件：  
   
 -   <xref:System.ServiceModel.ServiceHostBase> – 這是服務之主機的基底類別。  這個類別的延伸可用於延伸 <xref:System.ServiceModel.ServiceHostBase> 本身的行為，或儲存各服務的狀態。  
   
@@ -73,7 +64,7 @@ where T : IExtensibleObject<T>
   
  [!code-csharp[IInstanceContextInitializer#1](../../../../samples/snippets/csharp/VS_Snippets_CFX/iinstancecontextinitializer/cs/initializer.cs#1)]  
   
-## <a name="see-also"></a>請參閱  
+## <a name="see-also"></a>另請參閱  
  <xref:System.ServiceModel.IExtensibleObject%601>  
  <xref:System.ServiceModel.IExtension%601>  
  <xref:System.ServiceModel.IExtensionCollection%601>

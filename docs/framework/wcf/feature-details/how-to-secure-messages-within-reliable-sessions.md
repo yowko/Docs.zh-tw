@@ -1,24 +1,14 @@
 ---
-title: "HOW TO：保護可靠工作階段內的訊息"
-ms.custom: 
+title: HOW TO：保護可靠工作階段內的訊息
 ms.date: 03/30/2017
-ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.technology: dotnet-clr
-ms.tgt_pltfrm: 
-ms.topic: article
 ms.assetid: aee33e50-936f-4486-9ca8-c1520c19a62d
-caps.latest.revision: "8"
 author: BrucePerlerMS
-ms.author: bruceper
 manager: mbaldwin
-ms.workload: dotnet
-ms.openlocfilehash: 2604b9dacf11b9971b10d23d9a807092ddf07830
-ms.sourcegitcommit: c0dd436f6f8f44dc80dc43b07f6841a00b74b23f
+ms.openlocfilehash: 4c320d74f7e7966bfa35c824dbe30da768cd1447
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 01/19/2018
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="how-to-secure-messages-within-reliable-sessions"></a>HOW TO：保護可靠工作階段內的訊息
 
@@ -36,9 +26,9 @@ ms.lasthandoff: 01/19/2018
 
 此組態程序所依據的範例的來源副本，請參閱[WS 可靠工作階段](../../../../docs/framework/wcf/samples/ws-reliable-session.md)。
 
-第二個工作的必要項目透過設定`mode`屬性**\<安全性 >**中所包含的項目**\<繫結 >**用戶端和服務的項目`Message`。
+第二個工作的必要項目透過設定`mode`屬性**\<安全性 >** 中所包含的項目**\<繫結 >** 用戶端和服務的項目`Message`。
 
-第三個工作的必要項目透過設定`clientCredentialType`屬性**\<訊息 >**中所包含的項目**\<安全性 >**用戶端和服務的項目`Certificate`。
+第三個工作的必要項目透過設定`clientCredentialType`屬性**\<訊息 >** 中所包含的項目**\<安全性 >** 用戶端和服務的項目`Certificate`。
 
 > [!NOTE]
 > 當使用訊息安全性與可靠工作階段，可信賴傳訊嘗試驗證未驗證用戶端，而不是擲回的例外狀況，在第一次失敗時，發生逾時為止。
@@ -55,11 +45,11 @@ ms.lasthandoff: 01/19/2018
 
 1. 新增適當的繫結項目的[ **\<繫結 >** ](../../../../docs/framework/configure-apps/file-schema/wcf/bindings.md)組態檔元素。 下列範例會將[  **\<wsHttpBinding >** ](../../../../docs/framework/configure-apps/file-schema/wcf/wshttpbinding.md)項目。
 
-1. 新增**\<繫結 >**項目並設定其`name`屬性設為適當值。 此範例會使用名稱`MessageSecurity`。
+1. 新增**\<繫結 >** 項目並設定其`name`屬性設為適當值。 此範例會使用名稱`MessageSecurity`。
 
-1. 新增**\<安全性 >**項目並設定`mode`屬性`Message`。
+1. 新增**\<安全性 >** 項目並設定`mode`屬性`Message`。
 
-1. 內**\<安全性 >**項目，加入**\<訊息 >**項目並設定`clientCredentialType`屬性`Certificate`。
+1. 內**\<安全性 >** 項目，加入**\<訊息 >** 項目並設定`clientCredentialType`屬性`Certificate`。
 
 ```xml
 <wsHttpBinding>

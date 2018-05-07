@@ -1,24 +1,12 @@
 ---
 title: Windows Workflow 概觀
-ms.custom: ''
 ms.date: 03/30/2017
-ms.prod: .net-framework
-ms.reviewer: ''
-ms.suite: ''
-ms.tgt_pltfrm: ''
-ms.topic: article
 ms.assetid: fc44adbe-1412-49ae-81af-0298be44aae6
-caps.latest.revision: 17
-author: dotnet-bot
-ms.author: dotnetcontent
-manager: wpickett
-ms.workload:
-- dotnet
-ms.openlocfilehash: bc1aa65b413b87b27c05e7a12ce607d1cd30b89b
-ms.sourcegitcommit: 94d33cadc5ff81d2ac389bf5f26422c227832052
+ms.openlocfilehash: 568797259087129ab4fc87a1f3523b0cce88eb4b
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/30/2018
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="windows-workflow-overview"></a>Windows Workflow 概觀
 工作流程是一組元素的單元*活動*，會儲存為描述真實世界的處理序模型。 工作流程能夠描述執行的順序，以及短期工作和長期工作之間的相依關係。 這個工作會從頭到尾經過整個模型，而活動可能會由人員或系統功能執行。  
@@ -34,7 +22,7 @@ ms.lasthandoff: 04/30/2018
   
  這裡每個類別都會包含核心活動執行階段，此執行階段是以負責活動執行的 <xref:System.Activities.ActivityInstance> 來表示。 在並行執行的應用程式網域內可能有幾個 <xref:System.Activities.ActivityInstance> 物件。  
   
- 前三個主機互動物件是從稱為工作流程程式的活動樹狀結構中所建立。 使用這些型別或包含的 <xref:System.Activities.ActivityInstance> 自訂主機，工作流程即可在任何 Windows 處理序內部執行，包括主控台應用程式、表單架構應用程式、Windows 服務、[!INCLUDE[vstecasp](../../../includes/vstecasp-md.md)] 網站和 [!INCLUDE[indigo1](../../../includes/indigo1-md.md)] 服務。  
+ 前三個主機互動物件是從稱為工作流程程式的活動樹狀中所建立。 使用這些型別或自訂主機包裝<xref:System.Activities.ActivityInstance>，可以在任何 Windows 處理程序包括主控台應用程式內執行工作流程表單為基礎的應用程式、 Windows 服務[!INCLUDE[vstecasp](../../../includes/vstecasp-md.md)]Web 站台，以及 Windows Communication Foundation （WCF) 服務。  
   
  ![在主控件程序中的工作流程元件](../../../docs/framework/windows-workflow-foundation/media/44c79d1d-178b-4487-87ed-3e33015a3842.gif "44c79d1d-178b-4487-87ed-3e33015a3842")  
 主機處理序中的工作流程元件  

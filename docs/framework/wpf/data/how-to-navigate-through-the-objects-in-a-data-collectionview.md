@@ -1,13 +1,6 @@
 ---
-title: "如何：透過資料 CollectionView 中的物件巡覽"
-ms.custom: 
+title: 如何：透過資料 CollectionView 中的物件巡覽
 ms.date: 03/30/2017
-ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.technology: dotnet-wpf
-ms.tgt_pltfrm: 
-ms.topic: article
 dev_langs:
 - csharp
 - vb
@@ -16,16 +9,11 @@ helpviewer_keywords:
 - data binding [WPF], navigating through objects in data CollectionView
 - navigating through objects in data CollectionView [WPF]
 ms.assetid: fcd37590-bce1-4ac9-8b74-3b96c7458b8a
-caps.latest.revision: "14"
-author: dotnet-bot
-ms.author: dotnetcontent
-manager: wpickett
-ms.workload: dotnet
-ms.openlocfilehash: 215e3583d50567a2bfec8226e006bc7398628299
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.openlocfilehash: ec78b7350d23364cfb0eaa9a0611be8449073cd7
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="how-to-navigate-through-the-objects-in-a-data-collectionview"></a>如何：透過資料 CollectionView 中的物件巡覽
 檢視可讓在不同的方式，根據排序、 篩選或群組中檢視相同的資料集合。 檢視也會提供目前的記錄指標概念，並啟用移動指標。 這個範例示範如何取得目前的物件，以及巡覽資料集合，使用所提供的功能中的物件<xref:System.Windows.Data.CollectionView>類別。  
@@ -40,7 +28,7 @@ ms.lasthandoff: 12/22/2017
  [!code-csharp[CollectionView#OnButton](../../../../samples/snippets/csharp/VS_Snippets_Wpf/CollectionView/CSharp/Page1.xaml.cs#onbutton)]
  [!code-vb[CollectionView#OnButton](../../../../samples/snippets/visualbasic/VS_Snippets_Wpf/CollectionView/VisualBasic/Page1.xaml.vb#onbutton)]  
   
-## <a name="see-also"></a>請參閱  
+## <a name="see-also"></a>另請參閱  
  [資料繫結概觀](../../../../docs/framework/wpf/data/data-binding-overview.md)  
  [排序檢視中的資料](../../../../docs/framework/wpf/data/how-to-sort-data-in-a-view.md)  
  [篩選檢視中的資料](../../../../docs/framework/wpf/data/how-to-filter-data-in-a-view.md)  

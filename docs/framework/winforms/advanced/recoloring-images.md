@@ -1,28 +1,16 @@
 ---
-title: "將影像重新著色"
-ms.custom: 
+title: 將影像重新著色
 ms.date: 03/30/2017
-ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.technology: dotnet-winforms
-ms.tgt_pltfrm: 
-ms.topic: article
 helpviewer_keywords:
 - images [Windows Forms], recoloring
 - recoloring images
 - examples [Windows Forms], recoloring images
 ms.assetid: f28c54fd-9c80-4f6f-b242-55f7ffcda84b
-caps.latest.revision: "11"
-author: dotnet-bot
-ms.author: dotnetcontent
-manager: wpickett
-ms.workload: dotnet
-ms.openlocfilehash: c55c27c09a60e5ac5dd8f2fc6ef9372d4390621d
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.openlocfilehash: 6a85a0637e86657d68b5ea34d8c6eea74cb31af8
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="recoloring-images"></a>將影像重新著色
 重新著色，以便是調整影像色彩的程序。 重新著色的一些範例會變更為另一個，調整相對於另一種色彩的色彩濃度、 調整亮度或對比的所有色彩，以及將色彩轉換成灰階的一種色彩。  

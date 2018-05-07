@@ -1,31 +1,17 @@
 ---
-title: "訊息通訊協定"
-ms.custom: 
+title: 訊息通訊協定
 ms.date: 03/30/2017
-ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.technology:
-- dotnet-clr
-ms.tgt_pltfrm: 
-ms.topic: article
 ms.assetid: 5b20bca7-87b3-4c8f-811b-f215b5987104
-caps.latest.revision: 
-author: dotnet-bot
-ms.author: dotnetcontent
-manager: wpickett
-ms.workload:
-- dotnet
-ms.openlocfilehash: 75a39fa1d0301a48cec7ad61c968ee3fc82d189c
-ms.sourcegitcommit: 15316053918995cc1380163a7d7e7edd5c44e6d7
+ms.openlocfilehash: c900c8fde8b13b4766fb245de2bab46b5601f135
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 03/19/2018
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="messaging-protocols"></a>訊息通訊協定
-[!INCLUDE[indigo1](../../../../includes/indigo1-md.md)] 通道堆疊利用編碼和傳輸通道將內部訊息表示法轉換為其 Wire 格式，並使用特定的傳輸予以傳送。 最常用於 Web 服務互通性的傳輸為 HTTP，而 Web 服務最常用的編碼為 XML 架構的 SOAP 1.1、SOAP 1.2 和訊息傳輸最佳化機制 (MTOM)。  
+Windows Communication Foundation (WCF) 通道堆疊利用編碼和傳輸通道內部訊息表示法轉換為其 wire 格式，並將其傳送使用特定的傳輸。 最常用於 Web 服務互通性的傳輸為 HTTP，而 Web 服務最常用的編碼為 XML 架構的 SOAP 1.1、SOAP 1.2 和訊息傳輸最佳化機制 (MTOM)。  
   
- 本主題涵蓋 [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)]為下列 <xref:System.ServiceModel.Channels.HttpTransportBindingElement> 所採用之通訊協定進行實作的詳細資訊。  
+ 本主題涵蓋下列通訊協定所採用的 WCF 實作細節<xref:System.ServiceModel.Channels.HttpTransportBindingElement>。  
   
 |規格/文件|連結|  
 |-----------------------------|----------|  
@@ -33,7 +19,7 @@ ms.lasthandoff: 03/19/2018
 |SOAP 1.1 HTTP 繫結|http://www.w3.org/TR/2000/NOTE-SOAP-20000508/第 7 節|  
 |SOAP 1.2 HTTP 繫結|http://www.w3.org/TR/soap12-part2/第 7 節|  
   
- 本主題涵蓋 [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] 為下列 <xref:System.ServiceModel.Channels.TextMessageEncodingBindingElement> 和 <xref:System.ServiceModel.Channels.MtomMessageEncodingBindingElement> 所採用之通訊協定進行實作的詳細資訊。  
+ 本主題涵蓋 WCF 實作詳細資料，下列通訊協定，<xref:System.ServiceModel.Channels.TextMessageEncodingBindingElement>和<xref:System.ServiceModel.Channels.MtomMessageEncodingBindingElement>採用。  
   
 |規格/文件|連結|  
 |-----------------------------|----------|  
@@ -48,7 +34,7 @@ W3C Web 服務定址 1.0 - 中繼資料|http://www.w3.org/TR/ws-addr-metadata/|
 |WSDL SOAP1.1 繫結|http://www.w3.org/TR/wsdl/|  
 |WSDL SOAP1.2 繫結|http://www.w3.org/Submission/wsdl11soap12/|  
   
- 本主題涵蓋 [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] 為下列 <xref:System.ServiceModel.Channels.MtomMessageEncodingBindingElement> 所採用之通訊協定進行實作的詳細資訊。  
+ 本主題涵蓋 WCF 實作詳細資料，下列通訊協定，<xref:System.ServiceModel.Channels.MtomMessageEncodingBindingElement>採用。  
   
 |規格/文件|連結|  
 |-----------------------------|----------|  
@@ -75,41 +61,41 @@ dp|http://schemas.microsoft.com/net/2006/06/duplex|
 ## <a name="soap-11-and-soap-12"></a>SOAP 1.1 和 SOAP 1.2  
   
 ### <a name="envelope-and-processing-model"></a>封套和處理模型  
- [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] 實作了 SOAP 1.1 封套，以處理下列 Basic Profile 1.1 (BP11) 和 Basic Profile 1.0 (SSBP10)。 SOAP 1.2 封套處理實作了下列 SOAP12-Part1。  
+ WCF 實作 SOAP 1.1 封套，以處理下列 Basic Profile 1.1 (BP11) 和 Basic Profile 1.0 (SSBP10)。 SOAP 1.2 封套處理實作了下列 SOAP12-Part1。  
   
- 本章節將說明 [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] 對於 BP11 和 SOAP12-Part1 所採取的某些實作選項。  
+ 本節說明對於 BP11 和 SOAP12 Part1 WCF 所採取的某些實作選項。  
   
 #### <a name="mandatory-header-processing"></a>強制處理標頭  
- [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] 依照標記 `mustUnderstand` 的規則處理標頭，如 SOAP 1.1 和 SOAP 1.2 規格中所述，並具有下列變化。  
+ WCF 會遵循規則處理標頭標記為`mustUnderstand`SOAP 1.1 和 SOAP 1.2 規格中，具有下列變化中所述。  
   
- 進入 [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] 通道堆疊的訊息，會根據關聯之繫結項目所設定的個別通道予以處理，例如，文字訊息編碼、安全性、可信賴傳訊，以及交易。 每個通道都會從關聯的命名空間辨識標頭，並將其標記為已辨識。 一旦訊息進入發送器，作業格式器便會讀取對應之訊息/作業合約所需的標頭，並將其標記為已辨識。 接著發送器便會檢查是否有任何剩餘之未辨識，但標記為 `mustUnderstand` 的標頭，並擲回例外狀況。 包含 `mustUnderstand` 標頭的訊息會以尚未由收件者應用程式碼處理的收件者為目標。  
+ 輸入 WCF 通道堆疊的訊息是由個別的通道相關聯的繫結項目，例如設定、 文字訊息編碼、 安全性、 可靠傳訊和交易處理。 每個通道都會從關聯的命名空間辨識標頭，並將其標記為已辨識。 一旦訊息進入發送器，作業格式器便會讀取對應之訊息/作業合約所需的標頭，並將其標記為已辨識。 接著發送器便會檢查是否有任何剩餘之未辨識，但標記為 `mustUnderstand` 的標頭，並擲回例外狀況。 包含 `mustUnderstand` 標頭的訊息會以尚未由收件者應用程式碼處理的收件者為目標。  
   
  此類分層式處理可將 SOAP 節點的基礎結構層與應用程式層分割：  
   
--   B1111：未辨識的標頭，在訊息經由 [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] 基礎結構通道堆疊處理後所偵測到，但在此之前是由應用程式處理  
+-   B1111： 無法辨識的標頭會偵測到由 WCF 基礎結構通道堆疊中，處理訊息之後，但它由應用程式處理之前  
   
      SOAP 1.1 和 SOAP 1.2 之間的 `mustUnderstand` 標頭值不同。 Basic Profile 1.1 要求 SOAP 1.1 訊息的 `mustUnderstand` 值必須為 0 或 1。 SOAP 1.2 允許 0、1、`false` 和 `true` 等值，但建議發出 `xs:boolean` 值的標準表示 (`false`、`true`)。  
   
--   B1112：[!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] 發出 `mustUnderstand` 值 0 和 1，供 SOAP envelope 的 SOAP 1.1 和 SOAP 1.2 版使用。 [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] 接受 `xs:boolean` 標頭的整個 `mustUnderstand` 值空間 (0、1、`false`、`true`)  
+-   B1112: WCF 發出`mustUnderstand`值 0，1 表示 SOAP 1.1 和 SOAP 1.2 版的 SOAP 封套。 WCF 接受的整個值空間`xs:boolean`如`mustUnderstand`標頭 (0、 1、 `false`， `true`)  
   
 #### <a name="soap-faults"></a>SOAP 錯誤  
- 以下為 [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] 專屬的 SOAP 錯誤實作清單。  
+ 下列是 WCF 特定 SOAP 錯誤實作清單。  
   
--   B2121:[!INCLUDE[indigo2](../../../../includes/indigo2-md.md)]會傳回下列 SOAP 1.1 錯誤代碼： `s11:mustUnderstand`， `s11:Client`，和`s11:Server`。  
+-   B2121: WCF 會傳回下列 SOAP 1.1 錯誤代碼： `s11:mustUnderstand`， `s11:Client`，和`s11:Server`。  
   
--   B2122：[!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] 會傳回下列 SOAP 1.2 錯誤碼：`s12:MustUnderstand`、`s12:Sender` 和 `s12:Receiver`。  
+-   B2122: WCF 會傳回下列 SOAP 1.2 錯誤碼： `s12:MustUnderstand`， `s12:Sender`，和`s12:Receiver`。  
   
 ### <a name="http-binding"></a>HTTP 繫結  
   
 #### <a name="soap-11-http-binding"></a>SOAP 1.1 HTTP 繫結  
- [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] 根據 Basic Profile 1.1 規格 3.4 節，以下列說明實作 SOAP1.1 HTTP 繫結：  
+ WCF 實作 SOAP1.1 HTTP 繫結 Basic Profile 1.1 規格 3.4 節，以下列說明：  
   
--   B2211：[!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] 服務未實作 HTTP POST 要求的重新導向。  
+-   B2211: WCF 服務未實作 HTTP POST 要求重新導向。  
   
--   B2212：[!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] 用戶端支援的 HTTP Cookie 必須符合 3.4.8。  
+-   B2212: WCF 用戶端支援 HTTP Cookie 3.4.8。  
   
 #### <a name="soap-12-http-binding"></a>SOAP 1.2 HTTP 繫結  
- [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] 根據 SOAP 1.2-part 2 (SOAP12Part2) 規格所述，以下列說明實作 SOAP 1.2 HTTP 繫結。  
+ SOAP 1.2-2 (SOAP12Part2) 規格以下列說明所述，WCF 會實作 SOAP 1.2 HTTP 繫結。  
   
  SOAP 1.2 為 `application/soap+xml` 媒體類型引入了選擇性的動作參數。 這個參數對於最佳化訊息分派非常有用，不需要在未使用 WS-Addressing 的情況下剖析 SOAP 訊息的主體。  
   
@@ -120,7 +106,7 @@ dp|http://schemas.microsoft.com/net/2006/06/duplex|
  當 WS-Addressing 已停用，且傳入的要求未包含動作參數時，訊息 `Action` 會視為未指定。  
   
 ## <a name="ws-addressing"></a>WS-Addressing  
- [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] 實作了 3 個 WS-Addressing 版本：  
+ WCF 實作 Ws-addressing 的 3 的版本：  
   
 -   WS-Addressing 2004/08  
   
@@ -129,21 +115,21 @@ dp|http://schemas.microsoft.com/net/2006/06/duplex|
 -   WS-Addressing 1.0 - 中繼資料  
   
 ### <a name="endpoint-references"></a>端點參考  
- [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] 所實作的所有 WS-Addressing 版本都使用了端點參考來描述端點。  
+ 所有 WCF 實作的 Ws-addressing 版本來描述端點都使用了端點參考。  
   
 #### <a name="endpoint-references-and-ws-addressing-versions"></a>端點參考和 WS-Addressing 版本  
- [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] 會實作一些使用 WS-Addressing 的基礎結構通訊協定，特別是 `EndpointReference` 元素和 `W3C.WsAddressing.EndpointReferenceType` 類別 (例如，WS-ReliableMessaging、WS-SecureConversation 和 WS-Trust)。 [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] 支援使用任一其他基礎結構通訊協定的 WS-Addressing 版本。 [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] 端點會針對每個端點各支援一個 WS-Addressing 版本。  
+ WCF 會實作一些使用 Ws-addressing 的基礎結構通訊協定，以及在特定`EndpointReference`項目和`W3C.WsAddressing.EndpointReferenceType`類別 （例如，Ws-reliablemessaging、 Ws-secureconversation 和 Ws-trust）。 WCF 還支援使用任一版本的 Ws-addressing 其他基礎結構通訊協定。 WCF 端點支援每個端點的 Ws-addressing 版本。  
   
- 若是 R3111，與 `EndpointReference` 端點進行訊息交換所使用之 [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] 項目的命名空間或型別，必須符合由此端點所實作的 WS-Addressing 版本。  
+ R3111 的命名空間`EndpointReference`項目或與 WCF 端點交換訊息中使用的類型必須符合的 WS 定址此端點實作版本。  
   
- 例如，若 [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] 端點實作了 WS-ReliableMessaging，由 `AcksTo` 內部的此類端點所傳回的 `CreateSequenceResponse` 標頭，便會使用由 `EncodingBinding` 項目為此端點所指定的 WS-Addressing 版本。  
+ 例如，如果 WCF 端點實作了 Ws-reliablemessaging，`AcksTo`內此類端點所傳回的標頭`CreateSequenceResponse`會使用 Ws-addressing 的版本，`EncodingBinding`項目會指定此端點。  
   
 #### <a name="endpoint-references-and-metadata"></a>端點參考和中繼資料  
  有許多案例都需要與中繼資料通訊，或需要參考指定之端點的中繼資料。  
   
- B3121：[!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] 利用 WS-MetadataExchange (MEX) 規格第 6 節所述的機制，透過值或參考為端點參考加入中繼資料。  
+ B3121: WCF 採用 Ws-metadataexchange (MEX) 規格第 6 節以傳值方式或傳址包含端點參考中繼資料中所述的機制。  
   
- 假設其中[!INCLUDE[indigo2](../../../../includes/indigo2-md.md)]服務要求以在權杖簽發者所發出的安全性判斷提示標記語言 (SAML) 權杖驗證http://sts.fabrikam123.com。[!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] 端點會以具有指向權杖簽發者之巢狀 `sp:IssuedToken` 判斷提示的 `sp:Issuer` 判斷提示，描述這項驗證需求。 存取 `sp:Issuer` 判斷提示的用戶端應用程式必須知道如何與權杖簽發者端點進行通訊。 用戶端需要知道與權杖簽發者有關的中繼資料。 使用 MEX 中定義的端點參考中繼資料延伸，[!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] 會提供對權杖簽發者中繼資料的參考。  
+ 假設 WCF 服務需要使用在權杖簽發者所發出的安全性判斷提示標記語言 (SAML) 權杖進行驗證的http://sts.fabrikam123.com。WCF 端點描述這項驗證需求使用`sp:IssuedToken`含有巢狀判斷提示`sp:Issuer`指向權杖簽發者的判斷提示。 存取 `sp:Issuer` 判斷提示的用戶端應用程式必須知道如何與權杖簽發者端點進行通訊。 用戶端需要知道與權杖簽發者有關的中繼資料。 使用 MEX 中定義的端點參考中繼資料延伸，WCF 會提供權杖簽發者中繼資料的參考。  
   
 ```xml  
 <sp:IssuedToken>  
@@ -169,26 +155,26 @@ dp|http://schemas.microsoft.com/net/2006/06/duplex|
 ### <a name="message-addressing-headers"></a>訊息定址標頭  
   
 #### <a name="message-headers"></a>訊息標頭  
- 這兩個 Ws-addressing 版本，[!INCLUDE[indigo2](../../../../includes/indigo2-md.md)]會使用下列的訊息標頭，如規格所規定`wsa:To`， `wsa:ReplyTo`， `wsa:Action`， `wsa:MessageID`，和`wsa:RelatesTo`。  
+ 這兩個 Ws-addressing 版本，WCF 會使用下列的訊息標頭如規格所規定`wsa:To`， `wsa:ReplyTo`， `wsa:Action`， `wsa:MessageID`，和`wsa:RelatesTo`。  
   
- B3211：對於 WS-Addressing 的所有版本，[!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] 允許但不直接產生 WS-Addressing 訊息標頭 `wsa:FaultTo` 和 `wsa:From`。  
+ B3211： 對於 Ws-addressing 的所有版本，WCF 會為準，但根據預設，Ws-addressing 訊息標頭不會產生`wsa:FaultTo`和`wsa:From`。  
   
- 與 [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] 應用程式互動的應用程式可以加入這些訊息標頭，而且 [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] 將會處理它們。  
+ 與 WCF 應用程式互動的應用程式可以將這些訊息標頭和 WCF 將會處理它們。  
   
 #### <a name="reference-parameters-and-properties"></a>參考參數和屬性  
- [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] 實作了符合個別規格之端點參考參數和參考  
+ WCF 實作端點參考參數和參考 p 的處理  
   
  屬性的處理。  
   
- B3221：當設定為使用 WS-Addressing 2004/08 時，[!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] 端點不會對處理參考屬性和參考參數予以區別。  
+ B3221： 當設定為使用 Ws-addressing 2004/08，WCF 端點不會區分處理參考屬性和參考參數。  
   
 ### <a name="message-exchange-patterns"></a>訊息交換模式  
- 包含在 Web 服務作業叫用的訊息順序稱為*訊息交換模式*。 [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] 支援單向、要求-回覆和雙工訊息交換模式。 本章節將根據所使用的訊息交換模式，釐清訊息處理上的 WS-Addressing 需求。  
+ 包含在 Web 服務作業叫用的訊息順序稱為*訊息交換模式*。 WCF 支援單向、 要求-回覆和雙工訊息交換模式。 本章節將根據所使用的訊息交換模式，釐清訊息處理上的 WS-Addressing 需求。  
   
  在本章節中，要求者會傳送第一個訊息，而回應程式將會接收第一個訊息。  
   
 #### <a name="one-way-message"></a>單向訊息  
- 當 [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] 端點設定為支援具有指定之 `Action` 的訊息，並採用單向模式時，[!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] 端點便會遵循下列行為和需求。 除非以其他方式指定，否則 [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] 內支援的兩個 WS-Addressing 版本都會套用這些行為和規則：  
+ 當 WCF 端點設定為支援訊息與給定`Action`採用單向模式時，WCF 端點便會遵循下列行為和需求。 除非另行指定，則行為和規則將套用這兩個版本的 Ws-addressing WCF 中支援：  
   
 -   R3311：要求者必須加入由端點參考指定的 `wsa:To`、`wsa:Action` 和所有參考參數的標頭。 在使用了 WS-Addressing 2004/08，並且以端點參考指定 [reference properties] 時，也必須在訊息內加入對應的標頭。  
   
@@ -198,10 +184,10 @@ dp|http://schemas.microsoft.com/net/2006/06/duplex|
   
      當使用 HTTP 傳輸，而且作業合約宣告訊息為單向時，HTTP 回應仍舊可以用來傳送基礎結構訊息，例如，HTTP 回應上的可靠訊息可以傳送 `SequenceAcknowledgement` 訊息。  
   
--   B3314：[!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] 回應程式不會在回應單向訊息時傳送錯誤訊息。  
+-   B3314: WCF 回應程式不會在回應單向訊息傳送的錯誤訊息。  
   
 #### <a name="request-reply"></a>要求-回覆  
- 當 [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] 端點設定為支援具有指定之 `Action` 的訊息，並採用要求-回覆模式時，[!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] 端點便會遵循下列行為和需求。 除非以其他方式指定，否則 [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] 內支援的兩個 WS-Addressing 版本都會套用這些行為和規則：  
+ 當 WCF 端點設定的訊息指定`Action`採用要求-回覆模式時，WCF 端點便會遵循行為和需求。 除非另行指定，則行為和規則將套用這兩個版本的 Ws-addressing WCF 中支援：  
   
 -   R3321： 要求者必須在要求中包含`wsa:To`， `wsa:Action`， `wsa:MessageID`，和所有參考參數或參考屬性 （或兩者） 的端點參照所指定的標頭。  
   
@@ -212,14 +198,14 @@ dp|http://schemas.microsoft.com/net/2006/06/duplex|
 -   R3324： 要求者必須加入`wsa:To`， `wsa:Action`，和`wsa:RelatesTo`在回覆訊息中的標頭，以及所有的參考參數或參考屬性 （或兩者） 所指定的標頭`ReplyTo`端點參考要求。  
   
 ### <a name="web-services-addressing-faults"></a>Web 服務定址錯誤  
- R3411：[!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] 會產生下列由 WS-Addressing 2004/08 定義的錯誤。  
+ R3411: WCF 會產生下列由 Ws-addressing 2004/08 定義的錯誤。  
   
 |程式碼|原因|  
 |----------|-----------|  
 |wsa:DestinationUnreachable|訊息到達時如帶有 `ReplyTo`，其回覆位址與為此通道所建立的不同。|  
 |wsa:ActionNotSupported|與端點關聯的基礎結構通道或發送器，不會辨識 `Action` 標頭內指定的動作。|  
   
- R3412：[!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] 會產生下列由 WS-Addressing 1.0 定義的錯誤。  
+ R3412: WCF 會產生下列由 Ws-addressing 1.0 定義的錯誤。  
   
 |程式碼|原因|  
 |----------|-----------|  
@@ -234,7 +220,7 @@ dp|http://schemas.microsoft.com/net/2006/06/duplex|
 ### <a name="wsdl-11-binding-and-ws-policy-assertions"></a>WSDL 1.1 繫結和 WS-Policy 判斷提示  
   
 #### <a name="indicating-use-of-ws-addressing"></a>指出使用了 WS-Addressing  
- [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] 使用原則判斷提示來指出支援特定之 WS-Addressing 版本的端點。  
+ WCF 使用原則判斷提示來指出端點的 Ws-addressing 的特定版本的支援。  
   
  下列原則判斷提示具有端點原則主體 [WS-PA]，並指出必須使用 WS-Addressing 2004/08，從端點傳送及接收訊息。  
   
@@ -278,7 +264,7 @@ dp|http://schemas.microsoft.com/net/2006/06/duplex|
   
  不過，有一些訊息交換模式可從要求者和回應程式之間所建立的兩個獨立反向 HTTP 連線中獲益，例如，由回應程式所傳送之未經要求的單向訊息。  
   
- [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] 提供了一項功能，讓兩個基礎傳輸通道可用以構成複合雙工通道，其中一個通道用於輸入訊息，另一個則用於輸出訊息。 在使用 HTTP 傳輸的情況下，複合雙工提供了兩種反向的 HTTP 連線。 要求者會使用其中一個連線傳送訊息給回應程式，而回應程式則使用另一個連線將訊息傳回給要求者。  
+ WCF 提供的功能，這兩個基礎傳輸通道可用以構成複合雙工通道，其中一個通道用於輸入訊息，而其他則用於輸出訊息。 在使用 HTTP 傳輸的情況下，複合雙工提供了兩種反向的 HTTP 連線。 要求者會使用其中一個連線傳送訊息給回應程式，而回應程式則使用另一個連線將訊息傳回給要求者。  
   
  若為透過個別 HTTP 要求傳送的回覆，WS-AM 判斷提示為：  
   
@@ -317,14 +303,14 @@ dp|http://schemas.microsoft.com/net/2006/06/duplex|
   
  兩者間的不同處就只是預設的動作模式語意，這些部分分別在 WS-ADDR 的第 3.3.2 節和 WS-ADDR10-WSDL 的第 4.4.4 節中描述。  
   
- 讓兩個端點共用相同的 `portType` (或以 [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] 術語而言為合約) 是合理的，但會使用不同的 WS-Addressing 版本。 但考慮到該動作是由 `portType` 所定義，不應在實作 `portType` 的端點上變更，如此將難以支援兩種預設的動作模式。  
+ 是具有兩個端點共用相同的合理`portType`（或合約，在 WCF 術語） 但會使用不同的 Ws-addressing 版本。 但考慮到該動作是由 `portType` 所定義，不應在實作 `portType` 的端點上變更，如此將難以支援兩種預設的動作模式。  
   
- 為了解決這個爭論，[!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] 支援 `Action` 屬性的單一版本。  
+ 若要解決這個爭論，WCF 支援的單一版本`Action`屬性。  
   
- B3521：[!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] 在 `wsaw10:Action` 項目上使用 `wsdl:portType/wsdl:operation/[wsdl:input | wsdl:output | wsdl:fault]` 屬性 (如 WS-ADDR10-WSDL 所定義) 來判斷對應訊息的 `Action` URI，此 URI 是由端點使用且與 WS-Addressing 版本無關。  
+ B3521: WCF 使用`wsaw10:Action`屬性`wsdl:portType/wsdl:operation/[wsdl:input | wsdl:output | wsdl:fault]`元素，若要判斷 WS-ADDR10-WSDL 中定義`Action`URI 對應的訊息，不論端點所使用的 Ws-addressing 版本。  
   
 #### <a name="use-endpoint-reference-inside-wsdl-port"></a>使用 WSDL 連接埠內部的端點參考  
- WS-ADDR10-WSDL 第 4.1 節將 `wsdl:port` 元素延伸為包含 `<wsa10:EndpointReference…/>` 子元素，以便使用 WS-Addressing 的詞彙描述端點。 [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] 在 WS-Addressing 2004/08 上則擴充此公用程式，允許 `<wsa:EndpointReference…/>` 顯示為 `wsdl:port` 的子元素。  
+ WS-ADDR10-WSDL 第 4.1 節將 `wsdl:port` 元素延伸為包含 `<wsa10:EndpointReference…/>` 子元素，以便使用 WS-Addressing 的詞彙描述端點。 WCF 擴充的 Ws-addressing 2004/08 時，此公用程式允許`<wsa:EndpointReference…/>`顯示為的子元素`wsdl:port`。  
   
 -   R3531：如果端點含有以 `<wsaw10:UsingAddressing/>`原則判斷提示取代之附加原則，則對應的 `wsdl:port` 項目可以包含一個子項目 `<wsa10:EndpointReference …/>`。  
   
@@ -389,7 +375,7 @@ Content-Length: 0
 ```  
   
 ## <a name="soap-message-transmission-optimization-mechanism"></a>SOAP 訊息傳輸最佳化機制  
- 本章節將描述 [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] 實作 HTTP SOAP MTOM 的詳細資訊。 MTOM 技術是一種 SOAP 訊息編碼機制，與傳統的 text/XML 編碼或 [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] 二進位編碼的類別相同。 MTOM 包含下列各項：  
+ 本章節將描述 HTTP SOAP MTOM 的 WCF 實作詳細資料。 MTOM 技術是類別的傳統的 text/XML 編碼或 WCF 二進位編碼相同的 SOAP 訊息編碼機制。 MTOM 包含下列各項：  
   
 -   由 [XOP] 描述的 XML 編碼和封裝機制，會將 XML 資訊項目最佳化，將包含了以 Base64 編碼的二進位資料分割為不同的二進位部分。  
   
@@ -399,7 +385,7 @@ Content-Length: 0
   
 -   HTTP 傳輸繫結。  
   
- 以非 HTTP 傳輸的 MTOM 搭配 [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] 使用是有可能的。 不過，在本主題中，我們將專注在 HTTP 上。  
+ 您可搭配使用 WCF 非 HTTP 傳輸的 MTOM。 不過，在本主題中，我們將專注在 HTTP 上。  
   
  MTOM 格式利用了大量的規格集，其中涵蓋了 MTOM 本身、XOP 和 MIME。 此規格集的模組化使其稍微難以重新建構格式及處理語意的正確需求。 本節將描述 MTOM HTTP 繫結的格式和處理需求。  
   
@@ -457,7 +443,7 @@ Content-Length: 0
     3.  取代 `xop:Include` 項目資訊項目，它出現在每個項目的 `children` 屬性中，具有代表標準 Base64 編碼的字元資訊項目 (請參閱 XSD-2、3.2.16 base64Binary)，這些項目是步驟 3b 內識別的 MIME 部分之實體主體 (實際上以從封裝部分重新建構的資料取代 `xop:Include` 項目資訊項目)。  
   
 #### <a name="http-content-type-header"></a>HTTP Content-Type 標頭  
- 以下為 [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] 的清單，說明 SOAP 1.x MTOM 編碼之訊息的 HTTP Content-Type 標頭格式，衍生自 MTOM 規格本身內陳述之要求，以及衍生自 MTOM 和 RFC 2387。  
+ 下列是 WCF 說明 SOAP 1.x MTOM 編碼訊息的衍生自 MTOM 規格本身內的 HTTP Content-type 標頭格式的清單，以及衍生自 MTOM 和 RFC 2387。  
   
 -   R4131：HTTP Content-Type 標頭必須具有多重/相關 (區分大小寫) 的值，以及其參數。 參數名稱是區分大小寫的。 參數的順序並不重要。  
   
@@ -525,7 +511,7 @@ msg-id    =       [CFWS] "<" id-left "@" id-right ">" [CFWS]
   
  R4143：Infoset MIME 部分的 Content-ID 標頭值必須遵守 RFC 2822 實際執行的 `msg-id`，其中省略了 `[CFWS]` 前置和後置字元部分。  
   
- 許多 MIME 實作嚴謹需求住值"\<"和">"是電子郵件地址並用`absoluteURI`括住"\<"，">"除了電子郵件地址。 這個版本的 [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] 會以下列型式使用 Content-ID MIME 標頭的值：  
+ 許多 MIME 實作嚴謹需求住值"\<"和">"是電子郵件地址並用`absoluteURI`括住"\<"，">"除了電子郵件地址。 這個版本的 WCF 使用表單的 CONTENT-ID MIME 標頭的值：  
   
 ```  
 Content-ID: <http://tempuri.org/0>   
@@ -571,12 +557,12 @@ mail-address   =     id-left "@" id-right
   
 -   R4151：任何包含 Base64 編碼資料的項目資訊項目可能都已進行了最佳化。  
   
--   B4152：[!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] 最佳化了包含 Base64 編碼資料且長度超過 1024 位元組的項目資訊項目。  
+-   B4152: WCF 最佳化項目資訊項目包含 base64 編碼資料，且超過 1024 個位元組的長度。  
   
- 設定為使用 MTOM 的 [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] 端點一定會傳送 MTOM 編碼的訊息。 即使沒有任何部分滿足所要求的準則，訊息仍舊會以 MTOM 編碼 (序列化為 MIME 封裝，其中具有含 SOAP 封套的單一 MIME 部分)。  
+ 設定為使用 MTOM 的 WCF 端點仍會一律傳送 MTOM 編碼訊息。 即使沒有任何部分滿足所要求的準則，訊息仍舊會以 MTOM 編碼 (序列化為 MIME 封裝，其中具有含 SOAP 封套的單一 MIME 部分)。  
   
 ### <a name="ws-policy-assertion-for-mtom"></a>MTOM 的 WS-Policy 判斷提示  
- [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] 使用下列原則判斷提示來指出端點使用的 MTOM：  
+ WCF 會使用下列原則判斷提示，指出 MTOM 使用量端點：  
   
 ```xml  
 <wsoma:OptimizedMimeSerialization ... />  
@@ -584,10 +570,10 @@ mail-address   =     id-left "@" id-right
   
 -   R4211：之前的原則判斷提示具有端點原則主體，並指定所有傳送訊息和接收訊息的端點必須使用 MTOM 進行最佳化。  
   
--   B4212：當設定為使用 MTOM 最佳化時，[!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] 端點會將 MTOM 原則判斷提示加入至附加於所對應之 `wsdl:binding` 的原則中。  
+-   B4212： 當設定為使用 MTOM 最佳化時，WCF 端點將 MTOM 原則判斷提示附加至對應的原則`wsdl:binding`。  
   
 ### <a name="composition-with-ws-security"></a>與 WS-Security 組合  
- MTOM 是一個類似於 `text/xml` 和 [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] 二進位 XML 的編碼機制。 MTOM 可與 WS-Security 和其他 WS-* 通訊協定自然組合：使用 MTOM，可以使 WS-Security 保護的訊息最佳化。  
+ MTOM 是一種編碼機制，類似於`text/xml`和 WCF 二進位 XML。 MTOM 可與 WS-Security 和其他 WS-* 通訊協定自然組合：使用 MTOM，可以使 WS-Security 保護的訊息最佳化。  
   
 ### <a name="examples"></a>範例  
   
@@ -625,7 +611,7 @@ Content-Type: application/octet-stream
 ```  
   
 #### <a name="wcf-secure-soap-12-message-encoded-using-mtom"></a>使用 MTOM 對 WCF Secure SOAP 1.2 訊息進行編碼  
- 在此範例中，訊息是以 MTOM 和 SOAP 1.2 進行編碼，並使用 WS-Security 予以保護。 用於識別編碼的二進位部分是 `BinarySecurityToken`的內容，以及對應於已加密簽章和已加密主體之 `CipherValue` 的 `EncryptedData`。 請注意，`CipherValue` 的 `EncryptedKey` 無法識別 [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] 的最佳化，因為其長度小於 1024 位元組。  
+ 在此範例中，訊息是以 MTOM 和 SOAP 1.2 進行編碼，並使用 WS-Security 予以保護。 用於識別編碼的二進位部分是 `BinarySecurityToken`的內容，以及對應於已加密簽章和已加密主體之 `CipherValue` 的 `EncryptedData`。 請注意，`CipherValue`的`EncryptedKey`未識別最佳化由 WCF，因為其長度小於 1024 位元組。  
   
 ```  
 POST http://131.107.72.15/Mtom/service.svc/Soap12MtomSecureSignEncrypt HTTP/1.1  

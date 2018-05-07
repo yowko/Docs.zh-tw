@@ -1,14 +1,6 @@
 ---
-title: "適用於 Silverlight 的 CreateDebuggingInterfaceFromVersion 函式"
-ms.custom: 
+title: 適用於 Silverlight 的 CreateDebuggingInterfaceFromVersion 函式
 ms.date: 03/30/2017
-ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.technology:
-- dotnet-clr
-ms.tgt_pltfrm: 
-ms.topic: reference
 f1_keywords:
 - CreateDebuggingInterfaceFromVersion
 helpviewer_keywords:
@@ -16,17 +8,13 @@ helpviewer_keywords:
 - debugging API [Silverlight]
 - Silverlight, debugging
 ms.assetid: 35c7a18f-133a-4584-bd25-bb338568b0c6
-caps.latest.revision: 
 author: rpetrusha
 ms.author: ronpet
-manager: wpickett
-ms.workload:
-- dotnet
-ms.openlocfilehash: c38171c5887bb207b3692e9fa92aa2be2bc72a27
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.openlocfilehash: 53571268391011cc1dc0ff112d484e1fa140057f
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="createdebugginginterfacefromversion-function-for-silverlight"></a>適用於 Silverlight 的 CreateDebuggingInterfaceFromVersion 函式
 接受 common language runtime (CLR) 版本字串所傳回的[CreateVersionStringFromModule 函式](../../../../docs/framework/unmanaged-api/debugging/createversionstringfrommodule-function.md)，並傳回對應的偵錯工具介面 (一般而言， [ICorDebug](../../../../docs/framework/unmanaged-api/debugging/icordebug-interface.md))。  
@@ -49,7 +37,7 @@ HRESULT CreateDebuggingInterfaceFromVersion (
   
 ## <a name="return-value"></a>傳回值  
  S_OK  
- `ppCordb`參考實作的有效物件[ICorDebug 介面](../../../../docs/framework/unmanaged-api/debugging/icordebug-interface.md)介面。  
+ `ppCordb` 參考實作的有效物件[ICorDebug 介面](../../../../docs/framework/unmanaged-api/debugging/icordebug-interface.md)介面。  
   
  E_INVALIDARG  
  `szDebuggeeVersion` 或 `ppCordb` 為 null。  

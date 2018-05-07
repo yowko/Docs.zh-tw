@@ -1,24 +1,12 @@
 ---
 title: '序列化工作流程及 XAML 之間的活動 '
-ms.custom: ''
 ms.date: 03/30/2017
-ms.prod: .net-framework
-ms.reviewer: ''
-ms.suite: ''
-ms.tgt_pltfrm: ''
-ms.topic: article
 ms.assetid: 37685b32-24e3-4d72-88d8-45d5fcc49ec2
-caps.latest.revision: 12
-author: dotnet-bot
-ms.author: dotnetcontent
-manager: wpickett
-ms.workload:
-- dotnet
-ms.openlocfilehash: a36b8a6bdf1a024f4ddee91bd937afac516e391f
-ms.sourcegitcommit: 94d33cadc5ff81d2ac389bf5f26422c227832052
+ms.openlocfilehash: f448d96de742b2d81adf7e3c95865a2dd0cb9fd0
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/30/2018
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="serializing-workflows-and-activities-to-and-from-xaml"></a>序列化工作流程及 XAML 之間的活動 
 除了將工作流程定義編譯成包含在組件中的類型之外，工作流程定義也可以序列化為 XAML。 這些序列化的定義可重新載入以供編輯或檢閱、傳遞至建置系統以進行編譯，或載入及叫用。 本主題提供序列化工作流程定義以及使用 XAML 工作流程定義的概觀。  

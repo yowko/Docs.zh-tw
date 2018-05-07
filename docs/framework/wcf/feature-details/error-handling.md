@@ -1,24 +1,12 @@
 ---
-title: "錯誤處理"
-ms.custom: 
+title: 錯誤處理
 ms.date: 03/30/2017
-ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.technology: dotnet-clr
-ms.tgt_pltfrm: 
-ms.topic: article
 ms.assetid: c948841a-7db9-40ae-9b78-587d216cbcaf
-caps.latest.revision: "3"
-author: dotnet-bot
-ms.author: dotnetcontent
-manager: wpickett
-ms.workload: dotnet
-ms.openlocfilehash: 29ae7505f3fcd460abe9e65974f564a296723aa1
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.openlocfilehash: ffcc817eb463a1787972bc9c4ae1434ff74f7bb4
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="error-handling"></a>錯誤處理
 ## <a name="error-handling-in-windows-communication-foundation"></a>Windows Communication Foundation 的錯誤處理  
@@ -78,5 +66,5 @@ ms.lasthandoff: 12/22/2017
   
  如同許多其他類型的分派失敗一般，透過安裝錯誤處理常式也可以檢查類型轉換分派失敗。 呼叫 IErrorHandler 擴充點，以處理服務層級例外狀況。 從此處，也可以選擇要送回呼叫端的回應 - 同時也執行任何自訂的工作和報告。  
   
-## <a name="see-also"></a>請參閱  
+## <a name="see-also"></a>另請參閱  
  [基本 WCF 錯誤處理](http://msdn.microsoft.com/library/gg281715.aspx)

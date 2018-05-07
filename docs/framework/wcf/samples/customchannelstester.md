@@ -1,24 +1,12 @@
 ---
 title: CustomChannelsTester
-ms.custom: 
 ms.date: 03/30/2017
-ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.technology: dotnet-clr
-ms.tgt_pltfrm: 
-ms.topic: article
 ms.assetid: ee1fa307-98b1-4647-8860-2e9217ba6082
-caps.latest.revision: "12"
-author: dotnet-bot
-ms.author: dotnetcontent
-manager: wpickett
-ms.workload: dotnet
-ms.openlocfilehash: 92de7f168ce323a0d84975863564389ff389d680
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.openlocfilehash: eebe4f15095c7cefbd32971fd2f3ee308e9916b5
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="customchannelstester"></a>CustomChannelsTester
 `CustomChannelsTester` 工具，可以用來針對預先定義之服務合約集合測試自訂通道實作。 您可以選擇服務合約集合，然後將該集合使用 XML 檔傳遞到此工具。 接著，此工具就會產生服務，以及會在訊息交換期間執行自訂通道實作的用戶端。  
@@ -39,7 +27,7 @@ ms.lasthandoff: 12/22/2017
   
      這時必須使用 `/binding` 選項。  
   
-     如果 "binding" 不是 `/dll` 提供的系統提供繫結，就需要 [!INCLUDE[indigo1](../../../../includes/indigo1-md.md)] 選項。  
+     `/dll` 如果"binding"不是系統提供的繫結，提供 Windows Communication Foundation (WCF)，則需要。  
   
      `/testspec` 是選擇項。  
   
@@ -80,4 +68,4 @@ ms.lasthandoff: 12/22/2017
     </TestSpec>  
     ```  
   
-## <a name="see-also"></a>請參閱
+## <a name="see-also"></a>另請參閱

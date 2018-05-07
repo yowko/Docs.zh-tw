@@ -1,31 +1,17 @@
 ---
-title: "繫結標記延伸"
-ms.custom: 
+title: 繫結標記延伸
 ms.date: 03/30/2017
-ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.technology:
-- dotnet-wpf
-ms.tgt_pltfrm: 
-ms.topic: article
 f1_keywords:
 - Binding
 helpviewer_keywords:
 - Binding markup extensions [WPF]
 - XAML [WPF], Binding markup extension
 ms.assetid: 83d6e2a4-1b0c-4fc8-bd96-b5e98800ab63
-caps.latest.revision: 
-author: dotnet-bot
-ms.author: dotnetcontent
-manager: wpickett
-ms.workload:
-- dotnet
-ms.openlocfilehash: cc6a0616c6b462ffe6aca0a9adf27ac2ac7b7828
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.openlocfilehash: 8fc860f52f8fde2aed3cae224c05bbcf08b864d3
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="binding-markup-extension"></a>繫結標記延伸
 延後建立中繼運算式物件及解譯資料內容套用至項目，且在執行階段與其繫結的繫結的資料值的屬性值。  
@@ -125,7 +111,7 @@ ms.lasthandoff: 12/22/2017
  未涵蓋在本主題描述在基本層級的資料繫結。 請參閱[資料繫結概觀](../../../../docs/framework/wpf/data/data-binding-overview.md)。  
   
 > [!NOTE]
->  <xref:System.Windows.Data.MultiBinding>和<xref:System.Windows.Data.PriorityBinding>不支援[!INCLUDE[TLA2#tla_xaml](../../../../includes/tla2sharptla-xaml-md.md)]延伸語法。 相反地，您會使用屬性項目。 請參閱參考主題<xref:System.Windows.Data.MultiBinding>和<xref:System.Windows.Data.PriorityBinding>。  
+>  <xref:System.Windows.Data.MultiBinding> 和<xref:System.Windows.Data.PriorityBinding>不支援[!INCLUDE[TLA2#tla_xaml](../../../../includes/tla2sharptla-xaml-md.md)]延伸語法。 相反地，您會使用屬性項目。 請參閱參考主題<xref:System.Windows.Data.MultiBinding>和<xref:System.Windows.Data.PriorityBinding>。  
   
  針對 XAML 的布林值為不區分大小寫。 例如，您可以指定 `{Binding NotifyOnValidationError=true}`或`{Binding NotifyOnValidationError=True}`。  
   
@@ -133,9 +119,9 @@ ms.lasthandoff: 12/22/2017
   
  `Binding` 是一種標記延伸。 要逸出常值或處理常式以外是名稱、 屬性值的需求，而且是比特定類型或屬性上使用屬性的類型轉換器更通用的需求時，通常會實作標記延伸。 所有標記延伸在 XAML 使用`{`和`}`字元在其屬性語法中，也就是，XAML 處理器會辨識的標記延伸必須處理的字串內容的慣例。 如需詳細資訊，請參閱[標記延伸和 WPF XAML](../../../../docs/framework/wpf/advanced/markup-extensions-and-wpf-xaml.md)。  
   
- `Binding`是中的非典型的標記延伸<xref:System.Windows.Data.Binding>實作 WPF 的 XAML 實作的擴充功能的類別也會實作數個其他的方法和不與 XAML 相關的屬性。 其他成員主要要讓<xref:System.Windows.Data.Binding>更具彈性且獨立的類別可以處理許多的資料繫結案例，除了以 XAML 標記延伸的方式運作。  
+ `Binding` 是中的非典型的標記延伸<xref:System.Windows.Data.Binding>實作 WPF 的 XAML 實作的擴充功能的類別也會實作數個其他的方法和不與 XAML 相關的屬性。 其他成員主要要讓<xref:System.Windows.Data.Binding>更具彈性且獨立的類別可以處理許多的資料繫結案例，除了以 XAML 標記延伸的方式運作。  
   
-## <a name="see-also"></a>請參閱  
+## <a name="see-also"></a>另請參閱  
  <xref:System.Windows.Data.Binding>  
  [資料繫結概觀](../../../../docs/framework/wpf/data/data-binding-overview.md)  
  [XAML 概觀 (WPF)](../../../../docs/framework/wpf/advanced/xaml-overview-wpf.md)  

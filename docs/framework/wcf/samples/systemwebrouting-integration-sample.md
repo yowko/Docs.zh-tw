@@ -1,26 +1,12 @@
 ---
-title: "SystemWebRouting 整合範例"
-ms.custom: 
+title: SystemWebRouting 整合範例
 ms.date: 03/30/2017
-ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.technology:
-- dotnet-clr
-ms.tgt_pltfrm: 
-ms.topic: article
 ms.assetid: f1c94802-95c4-49e4-b1e2-ee9dd126ff93
-caps.latest.revision: 
-author: dotnet-bot
-ms.author: dotnetcontent
-manager: wpickett
-ms.workload:
-- dotnet
-ms.openlocfilehash: de8869956a59cb47623dbc4d84763e19d6f181bf
-ms.sourcegitcommit: 3a96c706e4dbb4667bf3bf37edac9e1666646f93
-ms.translationtype: MT
+ms.openlocfilehash: 43785f84cb3852a35f1ed3bd555287842455a89b
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 02/27/2018
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="systemwebrouting-integration-sample"></a>SystemWebRouting 整合範例
 這個範例示範裝載層與 <xref:System.Web.Routing> 命名空間中的類別整合。 <xref:System.Web.Routing> 命名空間中的類別可讓應用程式使用不會直接回應實體資源的 URL。 使用 Web 路由可讓開發人員建立 HTTP 的虛擬位址，並且接著對應回實體 [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] 服務。 當 WCF 服務必須在不需要實體檔案或資源的情況下裝載，或是服務必須使用不包含 .html 或 .aspx 等檔案的 URL 存取時，這種方式會相當實用。 這個範例將示範如何使用 <xref:System.Web.Routing.RouteTable> 類別來建立虛擬 URI，以便對應至 global.asax 中所定義的執行中服務。 
@@ -39,7 +25,7 @@ ms.lasthandoff: 02/27/2018
    
 `<InstallDrive>:\WF_WCF_Samples`  
    
- 如果此目錄不存在，請移至 [Windows Communication Foundation (WCF) and Windows Workflow Foundation (WF) Samples for .NET Framework 4  (適用於 .NET Framework 4 的 Windows Communication Foundation (WCF) 與 Windows Workflow Foundation (WF) 範例)](http://go.microsoft.com/fwlink/?LinkId=150780) ，以下載所有 [!INCLUDE[indigo1](../../../../includes/indigo1-md.md)] 和 [!INCLUDE[wf1](../../../../includes/wf1-md.md)] 範例。 此範例位於下列目錄。  
+ 如果此目錄不存在，請移至[Windows Communication Foundation (WCF) 和適用於.NET Framework 4 的 Windows Workflow Foundation (WF) 範例](http://go.microsoft.com/fwlink/?LinkId=150780)下載所有 Windows Communication Foundation (WCF) 和[!INCLUDE[wf1](../../../../includes/wf1-md.md)]範例。 此範例位於下列目錄。  
    
 `<InstallDrive>:\WF_WCF_Samples\WCF\Basic\Services\Hosting\WebRoutingIntegration`  
   
@@ -51,11 +37,11 @@ ms.lasthandoff: 02/27/2018
   
      範例的目錄清單隨即出現。 請注意，沒有副檔名 .svc 的檔案。  
   
-3.  在 [網址] 列中，加入`movies`至的 URL，使其讀 http://localhost: [port] 電影，然後按 enter。  
+3.  在 [網址] 列中，加入`movies`至的 URL，使其讀http://localhost:[port] 電影，然後按 enter。  
   
      影片摘要會出現在瀏覽器中。  
   
-4.  在位址列中，將 `channels` 加入至 URL 成為 http://localhost:[port]/channels，然後按 ENTER。  
+4.  在 [網址] 列中，加入`channels`至的 URL，這就是讀取http://localhost:[port] / 通道，然後按 ENTER 鍵。  
   
      通道摘要會出現在瀏覽器中。  
   
@@ -81,11 +67,11 @@ ms.lasthandoff: 02/27/2018
   
 4.  啟動應用程式，以滑鼠右鍵按一下 Web 應用程式，然後選取**管理應用程式**然後**瀏覽**。  
   
-5.  在位址列中，將 `movies` 加入至 URL 成為 http://localhost:[port]/movies，然後按 ENTER。  
+5.  在 [網址] 列中，加入`movies`至的 URL，這就是讀取http://localhost:[port] 電影，然後按 enter。  
   
      影片摘要會出現在瀏覽器中。  
   
-6.  在位址列中，將 `channels` 加入至 URL 成為 http://localhost:[port]/channels，然後按 ENTER。  
+6.  在 [網址] 列中，加入`channels`至的 URL，這就是讀取http://localhost:[port] / 通道，然後按 ENTER 鍵。  
   
      通道摘要會出現在瀏覽器中。  
   
@@ -96,5 +82,5 @@ ms.lasthandoff: 02/27/2018
 > [!NOTE]
 >  您必須更新的預設應用程式集區版本[!INCLUDE[netfx40_long](../../../../includes/netfx40-long-md.md)]如果它設定為第 2 版。  
   
-## <a name="see-also"></a>請參閱  
+## <a name="see-also"></a>另請參閱  
  [AppFabric 主控與持續性範例](http://go.microsoft.com/fwlink/?LinkId=193961)

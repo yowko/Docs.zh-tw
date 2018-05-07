@@ -1,14 +1,6 @@
 ---
-title: "IHostTaskManager::SetUILocale 方法"
-ms.custom: 
+title: IHostTaskManager::SetUILocale 方法
 ms.date: 03/30/2017
-ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.technology:
-- dotnet-clr
-ms.tgt_pltfrm: 
-ms.topic: reference
 api_name:
 - IHostTaskManager.SetUILocale
 api_location:
@@ -23,17 +15,13 @@ helpviewer_keywords:
 ms.assetid: d0c87a9c-ea81-4237-a16b-c22b36ec9dc8
 topic_type:
 - apiref
-caps.latest.revision: 
 author: rpetrusha
 ms.author: ronpet
-manager: wpickett
-ms.workload:
-- dotnet
-ms.openlocfilehash: 099c3d4878e7dd83be9240e121777c71c2890c88
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.openlocfilehash: f929dceafc72af89cfd85b1617de7bbd0bc0dfff
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="ihosttaskmanagersetuilocale-method"></a>IHostTaskManager::SetUILocale 方法
 通知主機 common language runtime (CLR) 已變更的使用者介面 (UI) 的地區設定或文化特性，在目前執行的工作。  
@@ -54,7 +42,7 @@ HRESULT SetUILocale (
   
 |HRESULT|描述|  
 |-------------|-----------------|  
-|S_OK|`SetUILocale`已成功傳回。|  
+|S_OK|`SetUILocale` 已成功傳回。|  
 |HOST_E_CLRNOTAVAILABLE|CLR 尚未載入到處理程序，或 CLR 正在中它無法執行 managed 程式碼，或成功地處理呼叫的狀態。|  
 |HOST_E_TIMEOUT|呼叫已逾時。|  
 |HOST_E_NOT_OWNER|呼叫端未擁有鎖定。|  
@@ -72,9 +60,9 @@ HRESULT SetUILocale (
   
  **程式庫：**包含做為 MSCorEE.dll 中的資源  
   
- **.NET framework 版本：**[!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]  
+ **.NET framework 版本：** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]  
   
-## <a name="see-also"></a>請參閱  
+## <a name="see-also"></a>另請參閱  
  [ICLRTask 介面](../../../../docs/framework/unmanaged-api/hosting/iclrtask-interface.md)  
  [ICLRTaskManager 介面](../../../../docs/framework/unmanaged-api/hosting/iclrtaskmanager-interface.md)  
  [IHostTask 介面](../../../../docs/framework/unmanaged-api/hosting/ihosttask-interface.md)  

@@ -1,28 +1,14 @@
 ---
 title: GetCustomUI
-ms.custom: 
 ms.date: 03/30/2017
-ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.technology:
-- dotnet-wpf
-ms.tgt_pltfrm: 
-ms.topic: article
 helpviewer_keywords:
 - custom error messages [WPF]
 ms.assetid: e55180fc-35bb-4f80-a136-772b5eb3e4e5
-caps.latest.revision: 
-author: dotnet-bot
-ms.author: dotnetcontent
-manager: wpickett
-ms.workload:
-- dotnet
-ms.openlocfilehash: 88c2873a5929e25335b0c6ef64f8121e31177ab4
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.openlocfilehash: ff68c30c4e58cebb70c59352593d7b084413dce8
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="getcustomui"></a>GetCustomUI
 如果實作，呼叫 PresentationHost.exe 從主機上，取得自訂的進度和錯誤訊息。  
@@ -58,5 +44,5 @@ HRESULT GetCustomUI( [out] BSTR* pwzProgressAssemblyName, [out] BSTR* pwzProgres
   
  一次 PresentationHost 的初始化期間，會呼叫此函式。  
   
-## <a name="see-also"></a>請參閱  
+## <a name="see-also"></a>另請參閱  
  [IWpfHostSupport](../../../../docs/framework/wpf/app-development/iwpfhostsupport.md)

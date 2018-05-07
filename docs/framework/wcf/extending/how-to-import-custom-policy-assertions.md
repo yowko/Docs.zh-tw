@@ -1,27 +1,15 @@
 ---
-title: "HOW TO：匯入自訂原則判斷提示"
-ms.custom: 
+title: HOW TO：匯入自訂原則判斷提示
 ms.date: 03/30/2017
-ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.technology: dotnet-clr
-ms.tgt_pltfrm: 
-ms.topic: article
 dev_langs:
 - csharp
 - vb
 ms.assetid: 1f41d787-accb-4a10-bfc6-a807671d1581
-caps.latest.revision: "8"
-author: dotnet-bot
-ms.author: dotnetcontent
-manager: wpickett
-ms.workload: dotnet
-ms.openlocfilehash: 916f5b820ce9e1c30c13a9834548c83e32bc3579
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.openlocfilehash: b6155296e264bb3ae90aac2ee6b83797e632962e
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="how-to-import-custom-policy-assertions"></a>HOW TO：匯入自訂原則判斷提示
 原則判斷提示描述服務端點的功能與需求。  用戶端應用程式可使用服務中繼資料中的原則判斷提示，來設定用戶端繫結或自訂服務端點的服務合約。  
@@ -51,7 +39,7 @@ ms.lasthandoff: 12/22/2017
   
 3.  對支援原則判斷提示所指定能力或需求的繫結程序或合約執行自訂。 判斷提示通常會指出繫結需要特別的組態或特定的繫結項目。 透過存取 <xref:System.ServiceModel.Description.PolicyConversionContext.BindingElements%2A?displayProperty=nameWithType> 屬性進行這些修改。 其他判斷提示需要您修改合約。  您可以使用 <xref:System.ServiceModel.Description.PolicyConversionContext.Contract%2A?displayProperty=nameWithType> 屬性存取和修改合約。  請注意，您的原則匯入工具可以為同樣的繫結和合約呼叫多次，但如果無法匯入原則替代選項，則會以不同的原則替代。 您的程式碼應回復到此行為。  
   
-4.  從判斷提示集合移除自訂原則判斷提示。 如果您沒有移除判斷提示，[!INCLUDE[indigo1](../../../../includes/indigo1-md.md)] 會假設原則匯入不成功，而不會匯入有關聯的繫結。 如果您使用 <xref:System.ServiceModel.Description.PolicyAssertionCollection.Remove%2A?displayProperty=nameWithType> 方法找到自訂原則判斷提示，並用一個步驟將它從集合中移除，就不必執行這個步驟。  
+4.  從判斷提示集合移除自訂原則判斷提示。 如果您沒有移除判斷提示 Windows Communication Foundation (WCF) 會假設原則匯入不成功，而不會匯入有關聯的繫結。 如果您使用 <xref:System.ServiceModel.Description.PolicyAssertionCollection.Remove%2A?displayProperty=nameWithType> 方法找到自訂原則判斷提示，並用一個步驟將它從集合中移除，就不必執行這個步驟。  
   
 ### <a name="to-insert-the-custom-policy-importer-into-the-metadata-system-using-a-configuration-file"></a>若要使用組態檔將自訂原則匯入工具插入中繼資料系統  
   
@@ -74,7 +62,7 @@ ms.lasthandoff: 12/22/2017
   
 1.  先將匯入工具新增至 <xref:System.ServiceModel.Description.MetadataImporter.PolicyImportExtensions%2A?displayProperty=nameWithType> 屬性 (例如，如果您目前使用的是 <xref:System.ServiceModel.Description.WsdlImporter?displayProperty=nameWithType>)，再匯入中繼資料。  
   
-## <a name="see-also"></a>請參閱  
+## <a name="see-also"></a>另請參閱  
  <xref:System.ServiceModel.Description.MetadataResolver?displayProperty=nameWithType>  
  <xref:System.ServiceModel.Description.WsdlImporter?displayProperty=nameWithType>  
  <xref:System.ServiceModel.Description.MetadataResolver?displayProperty=nameWithType>  

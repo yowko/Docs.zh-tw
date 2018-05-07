@@ -1,27 +1,15 @@
 ---
-title: "Windows Form DataGridView 控制項中的基本格式化和樣式設定"
-ms.custom: 
+title: Windows Form DataGridView 控制項中的基本格式化和樣式設定
 ms.date: 03/30/2017
-ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.technology: dotnet-winforms
-ms.tgt_pltfrm: 
-ms.topic: article
 helpviewer_keywords:
 - DataGridView control [Windows Forms], formatting and styling
 - data grids [Windows Forms], formatting
 ms.assetid: b9b90836-1f56-4aa9-8db8-edc78fe830e8
-caps.latest.revision: "13"
-author: dotnet-bot
-ms.author: dotnetcontent
-manager: wpickett
-ms.workload: dotnet
-ms.openlocfilehash: 3fa5c240adaaf6512cfbd6b7bd0796bd0983a530
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.openlocfilehash: d38620c321fb12b9f489fd086e222b7780337ab3
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="basic-formatting-and-styling-in-the-windows-forms-datagridview-control"></a>Windows Form DataGridView 控制項中的基本格式化和樣式設定
 `DataGridView`控制項讓您輕鬆地定義儲存格的基本外觀和儲存格的值顯示格式。 您可以定義外觀和格式樣式的個別資料格、 特定資料行和資料列中的資料格或控制項中的所有資料格所設定的屬性`DataGridViewCellStyle`存取透過各種物件`DataGridView`控制屬性。 此外，您可以修改這些樣式以動態方式會根據所處理的因素，例如儲存格的值`CellFormatting`事件。  
@@ -68,5 +56,5 @@ ms.lasthandoff: 12/22/2017
  [Windows Forms DataGridView 控制項中的基本資料行、資料列和儲存格功能](../../../../docs/framework/winforms/controls/basic-column-row-and-cell-features-wf-datagridview-control.md)  
  提供主題描述常用的資料格、 列和資料行的屬性。  
   
-## <a name="see-also"></a>請參閱  
+## <a name="see-also"></a>另請參閱  
  [DataGridView 控制項](../../../../docs/framework/winforms/controls/datagridview-control-windows-forms.md)

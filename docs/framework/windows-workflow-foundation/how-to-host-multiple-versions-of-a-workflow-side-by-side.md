@@ -1,26 +1,15 @@
 ---
-title: "HOW TO：裝載工作流程並存的多個版本"
-ms.custom: 
+title: HOW TO：裝載工作流程並存的多個版本
 ms.date: 03/30/2017
-ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.tgt_pltfrm: 
-ms.topic: article
 dev_langs:
 - csharp
 - vb
 ms.assetid: 09c575df-e0a3-4f3b-9e01-a7ac59d65287
-caps.latest.revision: "10"
-author: dotnet-bot
-ms.author: dotnetcontent
-manager: wpickett
-ms.workload: dotnet
-ms.openlocfilehash: 96ae4d3e02b923187b3e0f88a7b18e84094fa584
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.openlocfilehash: d8fef8523f827ab91729054ee87544879b1f1aa3
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="how-to-host-multiple-versions-of-a-workflow-side-by-side"></a>HOW TO：裝載工作流程並存的多個版本
 `WorkflowIdentity` 提供一種方法，讓工作流程應用程式開發人員能夠將名稱和版本與工作流程定義產生關聯性，並為這項資訊與持續性工作流程執行個體建立關聯性。 此身分識別資訊可由工作流程應用程式開發人員使用以啟用案例 (例如並存執行多個版本的工作流程定義)，以及提供動態更新等其他功能的基礎。 教學課程中的此步驟示範如何使用 `WorkflowIdentity` 同時裝載工作流程的多個版本。  
@@ -51,7 +40,7 @@ ms.lasthandoff: 12/22/2017
 > [!NOTE]
 >  「快速入門教學課程」中的每個步驟都與之前的步驟息息相關。 如果您未完成上述步驟，您就可以下載完整的版的教學課程中，從[Windows Workflow Foundation (WF45)-入門教學課程](http://go.microsoft.com/fwlink/?LinkID=248976)。  
   
-###  <a name="BKMK_BackupCopy"></a>製作 NumberGuessWorkflowActivities 專案的複本  
+###  <a name="BKMK_BackupCopy"></a> 製作 NumberGuessWorkflowActivities 專案的複本  
   
 1.  開啟**WF45GettingStartedTutorial**解決方案[!INCLUDE[vs_current_long](../../../includes/vs-current-long-md.md)]如果尚未開啟。  
   
@@ -74,10 +63,10 @@ ms.lasthandoff: 12/22/2017
   
 9. 重新開啟**WF45GettingStartedTutorial**解決方案[!INCLUDE[vs_current_long](../../../includes/vs-current-long-md.md)]。  
   
-###  <a name="BKMK_UpdateWorkflows"></a>更新工作流程  
+###  <a name="BKMK_UpdateWorkflows"></a> 更新工作流程  
  本節已更新工作流程定義。 已更新回應使用者猜測的兩個 `WriteLine` 活動，並新增可在猜測數字後提供遊戲其他相關資訊的 `WriteLine` 活動。  
   
-####  <a name="BKMK_UpdateStateMachine"></a>若要更新狀態機器工作流程  
+####  <a name="BKMK_UpdateStateMachine"></a> 若要更新狀態機器工作流程  
   
 1.  在**方案總管 中**下**NumberGuessWorkflowActivities**專案中，按兩下**StateMachineNumberGuessWorkflow.xaml**。  
   
@@ -119,7 +108,7 @@ ms.lasthandoff: 12/22/2017
     Guess + " is correct. You guessed it in " + Turns + " turns."  
     ```  
   
-####  <a name="BKMK_UpdateFlowchart"></a>更新流程圖工作流程  
+####  <a name="BKMK_UpdateFlowchart"></a> 更新流程圖工作流程  
   
 1.  在**方案總管 中**下**NumberGuessWorkflowActivities**專案中，按兩下**FlowchartNumberGuessWorkflow.xaml**。  
   
@@ -155,7 +144,7 @@ ms.lasthandoff: 12/22/2017
     Guess + " is correct. You guessed it in " + Turns + " turns."  
     ```  
   
-####  <a name="BKMK_UpdateSequential"></a>若要更新循序工作流程  
+####  <a name="BKMK_UpdateSequential"></a> 若要更新循序工作流程  
   
 1.  在**方案總管 中**下**NumberGuessWorkflowActivities**專案中，按兩下**SequentialNumberGuessWorkflow.xaml**。  
   
@@ -191,7 +180,7 @@ ms.lasthandoff: 12/22/2017
     Guess + " is correct. You guessed it in " + Turns + " turns."  
     ```  
   
-###  <a name="BKMK_UpdateWorkflowVersionMap"></a>若要更新 WorkflowVersionMap 以包含舊版的工作流程  
+###  <a name="BKMK_UpdateWorkflowVersionMap"></a> 若要更新 WorkflowVersionMap 以包含舊版的工作流程  
   
 1.  按兩下**Numberguessworkflowhost** (或**Workflowversionmap.cs**) 下**NumberGuessWorkflowHost**專案加以開啟。  
   
@@ -559,7 +548,7 @@ ms.lasthandoff: 12/22/2017
     }  
     ```  
   
-###  <a name="BKMK_BuildAndRun"></a>若要建置並執行應用程式  
+###  <a name="BKMK_BuildAndRun"></a> 若要建置並執行應用程式  
   
 1.  按下 CTRL+SHIFT+B 建置應用程式，然後按下 CTRL+F5 啟動。  
   

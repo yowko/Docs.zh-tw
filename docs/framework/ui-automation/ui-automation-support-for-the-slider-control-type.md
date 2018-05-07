@@ -1,28 +1,19 @@
 ---
-title: "Slider 控制項類型的 UI 自動化支援"
-ms.custom: 
+title: Slider 控制項類型的 UI 自動化支援
 ms.date: 03/30/2017
-ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.technology: dotnet-bcl
-ms.tgt_pltfrm: 
-ms.topic: article
 helpviewer_keywords:
 - control types, Slider
 - UI Automation, Slider control type
 - Slider control type
 ms.assetid: 045ea62f-7b50-46cf-a5a9-8eb97704355f
-caps.latest.revision: "18"
 author: Xansky
 ms.author: mhopkins
 manager: markl
-ms.workload: dotnet
-ms.openlocfilehash: d5edee3499c5d3e50c0ed359a5afdfbe1d37b376
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.openlocfilehash: 56c18b34ddf960ac053ad2ce8388b74cf68e2500
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="ui-automation-support-for-the-slider-control-type"></a>Slider 控制項類型的 UI 自動化支援
 > [!NOTE]
@@ -85,7 +76,7 @@ ms.lasthandoff: 12/22/2017
 |<xref:System.Windows.Automation.AutomationElementIdentifiers.AutomationFocusChangedEvent>|必要|無|  
 |<xref:System.Windows.Automation.AutomationElementIdentifiers.StructureChangedEvent>|必要|無|  
   
-## <a name="see-also"></a>請參閱  
+## <a name="see-also"></a>另請參閱  
  <xref:System.Windows.Automation.ControlType.Slider>  
  [UI 自動化控制項類型概觀](../../../docs/framework/ui-automation/ui-automation-control-types-overview.md)  
  [UI 自動化概觀](../../../docs/framework/ui-automation/ui-automation-overview.md)

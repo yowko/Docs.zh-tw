@@ -1,14 +1,6 @@
 ---
-title: "ISymUnmanagedBinder::GetReaderFromStream 方法"
-ms.custom: 
+title: ISymUnmanagedBinder::GetReaderFromStream 方法
 ms.date: 03/30/2017
-ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.technology:
-- dotnet-clr
-ms.tgt_pltfrm: 
-ms.topic: reference
 api_name:
 - ISymUnmanagedBinder.GetReaderFromStream
 api_location:
@@ -23,17 +15,13 @@ helpviewer_keywords:
 ms.assetid: aa38efd4-de7e-4482-a5d3-adc152093460
 topic_type:
 - apiref
-caps.latest.revision: 
 author: mairaw
 ms.author: mairaw
-manager: wpickett
-ms.workload:
-- dotnet
-ms.openlocfilehash: 36d4d0067cd638eb39ce82eb042242b7b08d3647
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.openlocfilehash: 4c5d3d1b868849d17b2068eecfcfeea0f1e598f8
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="isymunmanagedbindergetreaderfromstream-method"></a>ISymUnmanagedBinder::GetReaderFromStream 方法
 提供中繼資料介面和包含符號存放區的資料流，傳回的正確[ISymUnmanagedReader](isymunmanagedreader-interface.md)從給定的符號存放區的結構，將讀取的偵錯符號。  
@@ -63,5 +51,5 @@ HRESULT GetReaderFromStream(
 ## <a name="requirements"></a>需求  
  **標頭：**於 CorSym.idl、 CorSym.h  
   
-## <a name="see-also"></a>請參閱  
+## <a name="see-also"></a>另請參閱  
  [ISymUnmanagedBinder 介面](../../../../docs/framework/unmanaged-api/diagnostics/isymunmanagedbinder-interface.md)

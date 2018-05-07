@@ -1,14 +1,6 @@
 ---
 title: WPF 應用程式資源、內容和資料檔案
-ms.custom: ''
 ms.date: 03/30/2017
-ms.prod: .net-framework
-ms.reviewer: ''
-ms.suite: ''
-ms.technology:
-- dotnet-wpf
-ms.tgt_pltfrm: ''
-ms.topic: article
 dev_langs:
 - csharp
 - vb
@@ -25,17 +17,11 @@ helpviewer_keywords:
 - application development [WPF], files
 - application management [WPF]
 ms.assetid: 7ad2943b-3961-41d3-8fc6-1582d43f5d99
-caps.latest.revision: 25
-author: dotnet-bot
-ms.author: dotnetcontent
-manager: wpickett
-ms.workload:
-- dotnet
-ms.openlocfilehash: bcf0a725b7b3467a50a9f51850709dd972da217d
-ms.sourcegitcommit: 94d33cadc5ff81d2ac389bf5f26422c227832052
+ms.openlocfilehash: 571b8f71ce233011ae6fc7a6d4d53c5029d27d69
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/30/2018
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="wpf-application-resource-content-and-data-files"></a>WPF 應用程式資源、內容和資料檔案
 [!INCLUDE[TLA#tla_win](../../../../includes/tlasharptla-win-md.md)] 應用程式通常取決於檔案包含非可執行檔的資料，例如[!INCLUDE[TLA#tla_xaml](../../../../includes/tlasharptla-xaml-md.md)]、 影像、 視訊和音訊。 Windows Presentation Foundation (WPF) 提供如何設定、 識別，以及使用這些類型的資料檔案，稱為應用程式資料檔案的特殊支援。 這項支援是以一組特定的應用程式資料檔案類型為中心，包括：  

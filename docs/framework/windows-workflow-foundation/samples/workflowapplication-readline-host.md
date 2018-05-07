@@ -1,23 +1,12 @@
 ---
-title: "WorkflowApplication ReadLine 主機"
-ms.custom: 
+title: WorkflowApplication ReadLine 主機
 ms.date: 03/30/2017
-ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.tgt_pltfrm: 
-ms.topic: article
 ms.assetid: f7b362be-cb42-40d7-b9ef-cfc4aed2455b
-caps.latest.revision: "14"
-author: dotnet-bot
-ms.author: dotnetcontent
-manager: wpickett
-ms.workload: dotnet
-ms.openlocfilehash: f8426dd3835f53eeb85711a691c878ce2b877d09
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.openlocfilehash: 8da8a5bb4c80a86fe5ae9e133ea545c00ee17fba
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="workflowapplication-readline-host"></a>WorkflowApplication ReadLine 主機
 這個範例為泛型 ReadLine 主機。 您可以使用包含的 `ReadLine` 活動來載入及執行任何工作流程 (或是與它類似的其他活動，從使用字串繼續的書籤中取得資料)。 來自 `WriteLine` 活動的輸出或是寫入 <xref:System.Activities.Statements.WriteLine.TextWriter%2A> 延伸模組的任何內容都會導向主機視窗。 當執行個體閒置時，該執行個體可用的書籤會出現在下拉式方塊中。 選取書籤、輸入某些文字並按下繼續書籤按鈕，將會繼續執行工作流程。 您也可以取消、中止或終止選取的工作流程。 預設會啟用持續性，您可以關閉主機並將它開啟，執行個體清單就會填入資料庫內所存放的執行個體。 追蹤是用來將 <xref:System.Activities.WorkflowApplication> 層級的事件輸出到主機，而且包含了加入活動層級之詳細追蹤的選項。  
@@ -66,6 +55,6 @@ ms.lasthandoff: 12/22/2017
 >   
 >  `<InstallDrive>:\WF_WCF_Samples`  
 >   
->  如果此目錄不存在，請移至 [Windows Communication Foundation (WCF) and Windows Workflow Foundation (WF) Samples for .NET Framework 4  (適用於 .NET Framework 4 的 Windows Communication Foundation (WCF) 與 Windows Workflow Foundation (WF) 範例)](http://go.microsoft.com/fwlink/?LinkId=150780) ，以下載所有 [!INCLUDE[indigo1](../../../../includes/indigo1-md.md)] 和 [!INCLUDE[wf1](../../../../includes/wf1-md.md)] 範例。 此範例位於下列目錄。  
+>  如果此目錄不存在，請移至[Windows Communication Foundation (WCF) 和適用於.NET Framework 4 的 Windows Workflow Foundation (WF) 範例](http://go.microsoft.com/fwlink/?LinkId=150780)下載所有 Windows Communication Foundation (WCF) 和[!INCLUDE[wf1](../../../../includes/wf1-md.md)]範例。 此範例位於下列目錄。  
 >   
 >  `<InstallDrive>:\WF_WCF_Samples\WF\Basic\Execution\ControllingWorkflowApplications`

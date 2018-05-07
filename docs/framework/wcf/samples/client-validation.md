@@ -1,31 +1,19 @@
 ---
-title: "用戶端驗證"
-ms.custom: 
+title: 用戶端驗證
 ms.date: 03/30/2017
-ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.technology: dotnet-clr
-ms.tgt_pltfrm: 
-ms.topic: article
 ms.assetid: f0c1f805-1a81-4d0d-a112-bf5e2e87a631
-caps.latest.revision: "15"
-author: dotnet-bot
-ms.author: dotnetcontent
-manager: wpickett
-ms.workload: dotnet
-ms.openlocfilehash: bd9c698962bbca04ac05473265d95fc00517b039
-ms.sourcegitcommit: c0dd436f6f8f44dc80dc43b07f6841a00b74b23f
-ms.translationtype: MT
+ms.openlocfilehash: a5c1c5f907a797bff3dff490cbc953879ab69718
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 01/19/2018
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="client-validation"></a>用戶端驗證
 服務經常會發行中繼資料，以便自動產生和設定用戶端 Proxy 型別。 當服務不受信任時，用戶端應用程式應該根據安全性、交易和服務合約類型等條件，驗證中繼資料是否符合用戶端應用程式的原則。 下列範例會示範如何撰寫用戶端端點行為，此行為會驗證服務端點以確定能夠安全地使用服務端點。  
   
  服務會公開 (Expose) 四個服務端點。 第一個端點使用 WSDualHttpBinding，第二個端點會使用 NTLM 驗證，第三個端點會啟用交易流程，而第四個端點會使用憑證架構的驗證。  
   
- 用戶端會使用 <xref:System.ServiceModel.Description.MetadataResolver> 類別來擷取服務的中繼資料。 用戶端會使用驗證行為，強制禁止雙工繫結、NTLM 驗證與交易流程的原則。 對於從服務中繼資料匯入的每個 <xref:System.ServiceModel.Description.ServiceEndpoint> 執行個體，用戶端應用程式會在嘗試使用 `InternetClientValidatorBehavior` 用戶端連接至端點之前，將 <xref:System.ServiceModel.Description.ServiceEndpoint> 端點行為的執行個體新增至 [!INCLUDE[indigo1](../../../../includes/indigo1-md.md)]。 此行為的 `Validate` 方法會在呼叫服務的任何作業之前執行，並且擲回 `InvalidOperationExceptions` 以強制執行該用戶端的原則。  
+ 用戶端會使用 <xref:System.ServiceModel.Description.MetadataResolver> 類別來擷取服務的中繼資料。 用戶端會使用驗證行為，強制禁止雙工繫結程序、NTLM 驗證與異動流程的原則。 每個<xref:System.ServiceModel.Description.ServiceEndpoint>從服務的中繼資料，用戶端應用程式匯入的執行個體會將執行個體`InternetClientValidatorBehavior`端點行為<xref:System.ServiceModel.Description.ServiceEndpoint>之前嘗試連線到使用 Windows Communication Foundation (WCF) 用戶端端點。 此行為的 `Validate` 方法會在呼叫服務的任何作業之前執行，並且擲回 `InvalidOperationExceptions` 以強制執行該用戶端的原則。  
   
 ### <a name="to-build-the-sample"></a>若要建置範例  
   
@@ -74,5 +62,5 @@ ms.lasthandoff: 01/19/2018
     > [!NOTE]
     >  跨電腦執行此範例時，這個指令碼不會移除用戶端上的服務憑證。 如果您已執行跨電腦使用憑證的 [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] 範例，請確定清除安裝在 CurrentUser - TrustedPeople 存放區中的服務憑證。 若要這麼做，請使用下列命令：`certmgr -del -r CurrentUser -s TrustedPeople -c -n <Fully Qualified Server Machine Name>. For example: certmgr -del -r CurrentUser -s TrustedPeople -c -n server1.contoso.com`。  
   
-## <a name="see-also"></a>請參閱  
+## <a name="see-also"></a>另請參閱  
  [使用中繼資料](../../../../docs/framework/wcf/feature-details/using-metadata.md)

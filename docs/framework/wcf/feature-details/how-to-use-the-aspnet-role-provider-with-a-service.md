@@ -1,33 +1,19 @@
 ---
 title: HOW TO：使用 ASP.NET 角色提供者搭配服務
-ms.custom: ''
 ms.date: 03/30/2017
-ms.prod: .net-framework
-ms.reviewer: ''
-ms.suite: ''
-ms.technology:
-- dotnet-clr
-ms.tgt_pltfrm: ''
-ms.topic: article
 ms.assetid: 88d33a81-8ac7-48de-978c-5c5b1257951e
-caps.latest.revision: 8
-author: dotnet-bot
-ms.author: dotnetcontent
-manager: wpickett
-ms.workload:
-- dotnet
-ms.openlocfilehash: 9180ebe687d61315a66160a6fc95569a0e6b8e72
-ms.sourcegitcommit: 94d33cadc5ff81d2ac389bf5f26422c227832052
+ms.openlocfilehash: 846caf59816ee23166fb382a0c36ac0fed9df151
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/30/2018
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="how-to-use-the-aspnet-role-provider-with-a-service"></a>HOW TO：使用 ASP.NET 角色提供者搭配服務
 [!INCLUDE[vstecasp](../../../../includes/vstecasp-md.md)] 角色提供者 (以及 [!INCLUDE[vstecasp](../../../../includes/vstecasp-md.md)] 成員資格提供者) 這項功能可讓 [!INCLUDE[vstecasp](../../../../includes/vstecasp-md.md)] 開發人員建立網站，以允許使用者在網站中建立帳戶，並允許對使用者指派角色做為授權用途。 任何使用者都可以使用這個功能在網站上建立帳戶，並登入以擁有網站與其服務的獨佔存取權。 這與 Windows 安全性形成對比，因為 Windows 安全性需要使用者有 Windows 網域的帳戶。 相反的，任何使用者只要提供認證 (使用者名稱/密碼組合) 就可以使用該網站與其服務。  
   
  範例應用程式，請參閱[成員資格和角色提供者](../../../../docs/framework/wcf/samples/membership-and-role-provider.md)。 如需有關[!INCLUDE[vstecasp](../../../../includes/vstecasp-md.md)]成員資格提供者功能，請參閱[How to： 使用 ASP.NET 成員資格提供者](../../../../docs/framework/wcf/feature-details/how-to-use-the-aspnet-membership-provider.md)。  
   
- 角色提供者功能會使用 SQL Server 資料庫儲存使用者資訊。 [!INCLUDE[indigo1](../../../../includes/indigo1-md.md)] 程式開發人員可以針對安全性目的利用這些功能。 當整合至 [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] 應用程式時，使用者必須將使用者名稱/密碼組合提供給 [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] 用戶端應用程式。 若要啟用 [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] 來使用資料庫，您必須建立 <xref:System.ServiceModel.Description.ServiceAuthorizationBehavior> 類別的執行個體，並將其 <xref:System.ServiceModel.Description.ServiceAuthorizationBehavior.PrincipalPermissionMode%2A> 屬性設為 <xref:System.ServiceModel.Description.PrincipalPermissionMode.UseAspNetRoles>，然後將行為集合的執行個體新增至裝載服務的 <xref:System.ServiceModel.ServiceHost>。  
+ 角色提供者功能會使用 SQL Server 資料庫儲存使用者資訊。 Windows Communication Foundation (WCF) 開發人員可以利用這些功能，基於安全性考量。 當整合至 WCF 應用程式，使用者必須提供使用者名稱/密碼組合，WCF 用戶端應用程式。 若要啟用 WCF 使用資料庫，您必須建立的執行個體<xref:System.ServiceModel.Description.ServiceAuthorizationBehavior>類別中，設定其<xref:System.ServiceModel.Description.ServiceAuthorizationBehavior.PrincipalPermissionMode%2A>屬性<xref:System.ServiceModel.Description.PrincipalPermissionMode.UseAspNetRoles>，並將執行個體新增至行為集合<xref:System.ServiceModel.ServiceHost>裝載服務。  
   
 ### <a name="to-configure-the-role-provider"></a>若要設定角色提供者  
   

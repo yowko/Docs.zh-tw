@@ -1,24 +1,12 @@
 ---
-title: "X.509 憑證驗證程式"
-ms.custom: 
+title: X.509 憑證驗證程式
 ms.date: 03/30/2017
-ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.technology: dotnet-clr
-ms.tgt_pltfrm: 
-ms.topic: article
 ms.assetid: 3b042379-02c4-4395-b927-e57c842fd3e0
-caps.latest.revision: "21"
-author: dotnet-bot
-ms.author: dotnetcontent
-manager: wpickett
-ms.workload: dotnet
-ms.openlocfilehash: 08ccbbf50db089841d2af2205c7a7cb289a8767c
-ms.sourcegitcommit: c0dd436f6f8f44dc80dc43b07f6841a00b74b23f
+ms.openlocfilehash: 3d9aa14af3ded11bcd373f38656763036e83b0bf
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 01/19/2018
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="x509-certificate-validator"></a>X.509 憑證驗證程式
 這個範例會示範如何實作自訂 X.509 憑證驗證程式。 當內建的 X.509 憑證驗證程式模式都不符合應用程式需求時，這個驗證程式就很有用。 這個範例示範的服務具有可接受自動發行之憑證的自訂驗證程式。 用戶端會使用這類憑證來向服務驗證。  
@@ -365,6 +353,6 @@ serviceHost.Credentials.ClientCertificate.Authentication.CustomCertificateValida
 1.  當您完成執行範例後，請執行範例資料夾中的 Cleanup.bat。 這樣會從憑證存放區中移除伺服器與用戶端憑證。  
   
 > [!NOTE]
->  跨電腦執行此範例時，這個指令碼不會移除用戶端上的服務憑證。 如果您已執行跨電腦使用憑證的 [!INCLUDE[indigo1](../../../../includes/indigo1-md.md)] 範例，請確定清除安裝在 CurrentUser - TrustedPeople 存放區中的服務憑證。 若要這麼做，請使用下列命令：`certmgr -del -r CurrentUser -s TrustedPeople -c -n <Fully Qualified Server Machine Name>`，例如：`certmgr -del -r CurrentUser -s TrustedPeople -c -n server1.contoso.com`。  
+>  跨電腦執行此範例時，這個指令碼不會移除用戶端上的服務憑證。 如果您已執行跨電腦使用憑證的 Windows Communication Foundation (WCF) 範例，請務必清除安裝在 CurrentUser-TrustedPeople 存放區的服務憑證。 若要這麼做，請使用下列命令：`certmgr -del -r CurrentUser -s TrustedPeople -c -n <Fully Qualified Server Machine Name>`，例如：`certmgr -del -r CurrentUser -s TrustedPeople -c -n server1.contoso.com`。  
   
-## <a name="see-also"></a>請參閱
+## <a name="see-also"></a>另請參閱

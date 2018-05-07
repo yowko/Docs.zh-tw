@@ -1,14 +1,6 @@
 ---
-title: "StrongNameKeyInstall 函式"
-ms.custom: 
+title: StrongNameKeyInstall 函式
 ms.date: 03/30/2017
-ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.technology:
-- dotnet-clr
-ms.tgt_pltfrm: 
-ms.topic: reference
 api_name:
 - StrongNameKeyInstall
 api_location:
@@ -22,17 +14,13 @@ helpviewer_keywords:
 ms.assetid: e32fd546-7757-4681-be3d-658e93281e50
 topic_type:
 - apiref
-caps.latest.revision: 
 author: rpetrusha
 ms.author: ronpet
-manager: wpickett
-ms.workload:
-- dotnet
-ms.openlocfilehash: 9a8dbc84f375b7bbbad47971936650d81c5c63df
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.openlocfilehash: 1b6760a6418533f5c8f6cec815d86b4cff68aab1
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="strongnamekeyinstall-function"></a>StrongNameKeyInstall 函式
 匯入容器的公開/私密金鑰組。  
@@ -51,7 +39,7 @@ BOOLEAN StrongNameKeyInstall (
   
 #### <a name="parameters"></a>參數  
  `wszKeyContainer`  
- [in]金鑰容器的名稱。 `wszKeyContainer`必須是非空白字串。  
+ [in]金鑰容器的名稱。 `wszKeyContainer` 必須是非空白字串。  
   
  `pbKeyBlob`  
  [in]二進位的金鑰組。  
@@ -60,7 +48,7 @@ BOOLEAN StrongNameKeyInstall (
  [in]大小，以位元組為單位的`pbKeyBlob`。  
   
 ## <a name="return-value"></a>傳回值  
- `true`如果成功地完成。否則， `false`。  
+ `true` 如果成功地完成。否則， `false`。  
   
 ## <a name="remarks"></a>備註  
  使用[StrongNameKeyDelete](../../../../docs/framework/unmanaged-api/strong-naming/strongnamekeydelete-function.md)函式來刪除金鑰容器。  
@@ -74,9 +62,9 @@ BOOLEAN StrongNameKeyInstall (
   
  **程式庫：**包含做為 MsCorEE.dll 中的資源  
   
- **.NET framework 版本：**[!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
+ **.NET framework 版本：** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
   
-## <a name="see-also"></a>請參閱  
+## <a name="see-also"></a>另請參閱  
  [StrongNameKeyInstall 方法](../../../../docs/framework/unmanaged-api/hosting/iclrstrongname-strongnamekeyinstall-method.md)  
  [StrongNameKeyDelete 方法](../../../../docs/framework/unmanaged-api/hosting/iclrstrongname-strongnamekeydelete-method.md)  
  [ICLRStrongName 介面](../../../../docs/framework/unmanaged-api/hosting/iclrstrongname-interface.md)

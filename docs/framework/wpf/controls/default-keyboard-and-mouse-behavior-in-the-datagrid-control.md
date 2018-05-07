@@ -1,29 +1,17 @@
 ---
-title: "DataGrid 控制項中的預設鍵盤和滑鼠行為"
-ms.custom: 
+title: DataGrid 控制項中的預設鍵盤和滑鼠行為
 ms.date: 03/30/2017
-ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.technology: dotnet-wpf
-ms.tgt_pltfrm: 
-ms.topic: article
 helpviewer_keywords:
 - DataGrid [WPF], keyboard behavior
 - DataGrid [WPF], mouse behavior
 - keyboard behavior [WPF], DataGrid
 - mouse behavior [WPF], DataGrid
 ms.assetid: 563b8854-ca39-4d97-8235-17eaa0f93c8d
-caps.latest.revision: "7"
-author: dotnet-bot
-ms.author: dotnetcontent
-manager: wpickett
-ms.workload: dotnet
-ms.openlocfilehash: 28cb1b02e67d076f9190e2d8e36b72c20cc5c4e2
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.openlocfilehash: 559b84d3e6b5ece6c71f17e6766cac4ec14824cb
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="default-keyboard-and-mouse-behavior-in-the-datagrid-control"></a>DataGrid 控制項中的預設鍵盤和滑鼠行為
 本主題描述使用者可以互動<xref:System.Windows.Controls.DataGrid>使用鍵盤和滑鼠控制。  
@@ -96,7 +84,7 @@ ms.lasthandoff: 12/22/2017
 |CTRL + 按一下的資料列|如果<xref:System.Windows.Controls.DataGrid.SelectionMode%2A>設<xref:System.Windows.Controls.DataGridSelectionMode.Extended>，修改非連續的多重資料列選取。<br /><br /> 如果已選取的資料列，會取消選取資料列。|  
 |SHIFT + 按一下的資料列|如果<xref:System.Windows.Controls.DataGrid.SelectionMode%2A>設<xref:System.Windows.Controls.DataGridSelectionMode.Extended>，修改非連續的多重資料列選取範圍。|  
 |按一下資料列群組標頭|展開或摺疊群組。|  
-|按一下左上角的 [全選] 按鈕<xref:System.Windows.Controls.DataGrid>|如果<xref:System.Windows.Controls.DataGrid.SelectionMode%2A>設<xref:System.Windows.Controls.DataGridSelectionMode.Extended>，會選取所有資料列中的<xref:System.Windows.Controls.DataGrid>。|  
+|按一下左上角的 [全選] 按鈕 <xref:System.Windows.Controls.DataGrid>|如果<xref:System.Windows.Controls.DataGrid.SelectionMode%2A>設<xref:System.Windows.Controls.DataGridSelectionMode.Extended>，會選取所有資料列中的<xref:System.Windows.Controls.DataGrid>。|  
   
 ## <a name="mouse-selection"></a>滑鼠選取範圍  
  如果<xref:System.Windows.Controls.DataGrid.SelectionMode%2A>屬性設定為<xref:System.Windows.Controls.DataGridSelectionMode.Extended>，按一下資料列時按住 CTRL 或 shift 鍵，將會修改多資料列選取範圍。  
@@ -107,6 +95,6 @@ ms.lasthandoff: 12/22/2017
   
  CTRL + shift 鍵可以結合以選取非相鄰的範圍內的相鄰的資料列。 若要這樣做，請選取第一個範圍，使用 SHIFT + 滑鼠左鍵如先前所述。 選取的資料列的第一個範圍後，使用 CTRL + 按一下以在下一個範圍中，選取第一個資料列，然後按一下下一個範圍中的最後一個資料列時按住 CTRL + SHIFT。  
   
-## <a name="see-also"></a>請參閱  
+## <a name="see-also"></a>另請參閱  
  <xref:System.Windows.Controls.DataGrid>  
  <xref:System.Windows.Controls.DataGrid.SelectionMode%2A>

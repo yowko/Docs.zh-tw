@@ -1,24 +1,12 @@
 ---
-title: "在 SQL Server 中建立應用程式角色"
-ms.custom: 
+title: 在 SQL Server 中建立應用程式角色
 ms.date: 03/30/2017
-ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.technology: dotnet-ado
-ms.tgt_pltfrm: 
-ms.topic: article
 ms.assetid: 27442435-dfb2-4062-8c59-e2960833a638
-caps.latest.revision: "9"
-author: douglaslMS
-ms.author: douglasl
-manager: craigg
-ms.workload: dotnet
-ms.openlocfilehash: a6c8027e3cbf7bcef3bbe36ba381a08b650516bc
-ms.sourcegitcommit: ed26cfef4e18f6d93ab822d8c29f902cff3519d1
+ms.openlocfilehash: cb3bcb08877d8a17ea40ea48440c1d71560d0e5f
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 01/17/2018
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="creating-application-roles-in-sql-server"></a>在 SQL Server 中建立應用程式角色
 應用程式角色可以用於將權限指派給應用程式，而不是資料庫角色或使用者。 使用者可以連接到資料庫、啟動應用程式角色，並採用授與應用程式的權限。 授與應用程式角色的權限在連接期間內都會維持有效。  
@@ -69,7 +57,7 @@ ms.lasthandoff: 01/17/2018
 |--------------|-----------------|  
 |[應用程式角色](http://msdn.microsoft.com/library/ms190998.aspx)SQL Server 線上叢書中|說明如何在 SQL Server 2008 中建立及使用應用程式角色。|  
   
-## <a name="see-also"></a>請參閱  
+## <a name="see-also"></a>另請參閱  
  [設定 ADO.NET 應用程式的安全性](../../../../../docs/framework/data/adonet/securing-ado-net-applications.md)  
  [SQL Server 安全性概觀](../../../../../docs/framework/data/adonet/sql/overview-of-sql-server-security.md)  
  [SQL Server 中的應用程式安全性案例](../../../../../docs/framework/data/adonet/sql/application-security-scenarios-in-sql-server.md)  

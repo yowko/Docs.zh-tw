@@ -1,14 +1,6 @@
 ---
 title: 如何：顯示 Windows Form 和 ShowDialog 方法以支援 COM Interop
-ms.custom: ''
 ms.date: 03/30/2017
-ms.prod: .net-framework
-ms.reviewer: ''
-ms.suite: ''
-ms.technology:
-- dotnet-winforms
-ms.tgt_pltfrm: ''
-ms.topic: article
 helpviewer_keywords:
 - COM [Windows Forms]
 - Windows Forms, unmanaged
@@ -16,17 +8,11 @@ helpviewer_keywords:
 - ActiveX controls [Windows Forms], COM interop
 - Windows Forms, interop
 ms.assetid: 87aac8ad-3c04-43b3-9b0c-d0b00df9ee74
-caps.latest.revision: ''
-author: dotnet-bot
-ms.author: dotnetcontent
-manager: wpickett
-ms.workload:
-- dotnet
-ms.openlocfilehash: 415ffebbcf196a163932b1b83e32a6128f0bf1a8
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.openlocfilehash: c764395b7926a131deae4109fed3a7461c45e2d1
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="how-to-support-com-interop-by-displaying-a-windows-form-with-the-showdialog-method"></a>如何：顯示 Windows Form 和 ShowDialog 方法以支援 COM Interop
 您可以藉由在 [!INCLUDE[dnprdnshort](../../../../includes/dnprdnshort-md.md)] 訊息迴圈上顯示 Windows Forms 來解決元件物件模型 (COM) 互通性問題，而此訊息迴圈是使用 <xref:System.Windows.Forms.Application.Run%2A?displayProperty=nameWithType> 方法建立而成。  
@@ -50,7 +36,7 @@ ms.lasthandoff: 12/22/2017
   
 -   在 [!INCLUDE[dnprdnshort](../../../../includes/dnprdnshort-md.md)] 元件中，將所有對 <xref:System.Windows.Forms.Form.Show%2A?displayProperty=nameWithType> 方法的呼叫取代為對 <xref:System.Windows.Forms.Form.ShowDialog%2A?displayProperty=nameWithType> 方法的呼叫。  
   
-## <a name="see-also"></a>請參閱  
+## <a name="see-also"></a>另請參閱  
  [將 .NET Framework 元件公開給 COM](../../../../docs/framework/interop/exposing-dotnet-components-to-com.md)  
  [操作說明：在自己的執行緒上顯示每個 Windows Form 以支援 COM Interop](../../../../docs/framework/winforms/advanced/how-to-support-com-interop-by-displaying-each-windows-form-on-its-own-thread.md)  
  [Windows Forms 和 Unmanaged 應用程式](../../../../docs/framework/winforms/advanced/windows-forms-and-unmanaged-applications.md)

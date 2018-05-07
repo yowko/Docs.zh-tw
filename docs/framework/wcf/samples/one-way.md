@@ -1,24 +1,12 @@
 ---
-title: "單向"
-ms.custom: 
+title: 單向
 ms.date: 03/30/2017
-ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.technology: dotnet-clr
-ms.tgt_pltfrm: 
-ms.topic: article
 ms.assetid: 74e3e03d-cd15-4191-a6a5-1efa2dcb9e73
-caps.latest.revision: "26"
-author: dotnet-bot
-ms.author: dotnetcontent
-manager: wpickett
-ms.workload: dotnet
-ms.openlocfilehash: a781963205f260c82d3db316680c9e8c33045434
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.openlocfilehash: 5cb3619d56720333f23d933a8f356e8b0268c4d9
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="one-way"></a>單向
 這個範例示範具有單向服務作業的服務合約。 與雙向服務作業的情況不同，用戶端不會等候服務作業完成。 這個範例根據[入門](../../../../docs/framework/wcf/samples/getting-started-sample.md)並用`wsHttpBinding`繫結。 這個範例中的服務是自我裝載的主控台應用程式，您可以用來觀察接收和處理要求的服務。 用戶端也是主控台應用程式。  
@@ -113,8 +101,8 @@ Processing Divide(22,7) - result: 3.14285714285714
 >   
 >  `<InstallDrive>:\WF_WCF_Samples`  
 >   
->  如果此目錄不存在，請移至 [Windows Communication Foundation (WCF) and Windows Workflow Foundation (WF) Samples for .NET Framework 4  (適用於 .NET Framework 4 的 Windows Communication Foundation (WCF) 與 Windows Workflow Foundation (WF) 範例)](http://go.microsoft.com/fwlink/?LinkId=150780) ，以下載所有 [!INCLUDE[indigo1](../../../../includes/indigo1-md.md)] 和 [!INCLUDE[wf1](../../../../includes/wf1-md.md)] 範例。 此範例位於下列目錄。  
+>  如果此目錄不存在，請移至[Windows Communication Foundation (WCF) 和適用於.NET Framework 4 的 Windows Workflow Foundation (WF) 範例](http://go.microsoft.com/fwlink/?LinkId=150780)下載所有 Windows Communication Foundation (WCF) 和[!INCLUDE[wf1](../../../../includes/wf1-md.md)]範例。 此範例位於下列目錄。  
 >   
 >  `<InstallDrive>:\WF_WCF_Samples\WCF\Basic\Contract\Service\Oneway`  
   
-## <a name="see-also"></a>請參閱
+## <a name="see-also"></a>另請參閱

@@ -1,28 +1,16 @@
 ---
-title: "操作說明：繫結至方法"
-ms.custom: 
+title: 操作說明：繫結至方法
 ms.date: 03/30/2017
-ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.technology: dotnet-wpf
-ms.tgt_pltfrm: 
-ms.topic: article
 helpviewer_keywords:
 - data binding [WPF], binding to methods using ObjectDataProvider
 - binding [WPF], to methods
 - methods [WPF], binding to
 ms.assetid: 5f55e71e-2182-42a0-88d1-700cc1427a7a
-caps.latest.revision: "10"
-author: dotnet-bot
-ms.author: dotnetcontent
-manager: wpickett
-ms.workload: dotnet
-ms.openlocfilehash: 45f2a141b09c52085c13803b8d338fdc9eebf135
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.openlocfilehash: 58e243812f9c2dcb65dc37bfd50d9bcfb124e4f6
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="how-to-bind-to-a-method"></a>操作說明：繫結至方法
 下列範例示範如何將繫結至方法，使用<xref:System.Windows.Data.ObjectDataProvider>。  
@@ -42,6 +30,6 @@ ms.lasthandoff: 12/22/2017
   
  `InvalidationCharacterRule`是<xref:System.Windows.Controls.ValidationRule>，會檢查是否有無效的字元。 預設錯誤範本，也就是紅色框線周圍<xref:System.Windows.Controls.TextBox>，出現時輸入的值不是雙精度浮點數值通知使用者。  
   
-## <a name="see-also"></a>請參閱  
+## <a name="see-also"></a>另請參閱  
  [HOW-TO 主題](../../../../docs/framework/wpf/data/data-binding-how-to-topics.md)  
  [繫結至列舉](../../../../docs/framework/wpf/data/how-to-bind-to-an-enumeration.md)

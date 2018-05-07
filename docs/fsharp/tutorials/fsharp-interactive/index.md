@@ -1,17 +1,12 @@
 ---
 title: F# Interactive (fsi.exe) 參考
 description: '了解如何 F # Interactive (fsi.exe) 用來以互動方式在主控台執行 F # 程式碼或執行 F # 指令碼。'
-author: cartermp
-ms.author: phcart
 ms.date: 05/16/2016
-ms.topic: language-reference
-ms.prod: dotnet-fsharp
-ms.devlang: fsharp
-ms.openlocfilehash: e745562e4165ce6744fcb6d07268b1a5761194aa
-ms.sourcegitcommit: 03ee570f6f528a7d23a4221dcb26a9498edbdf8c
+ms.openlocfilehash: b16ebcfe361ef50c7c7ba8510f01f6704e62ce3b
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/28/2018
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="interactive-programming-with-f"></a>F# 互動式程式設計 #
 
@@ -88,7 +83,7 @@ printfn "%A" (MyAssembly.myFunction 10 40)
 Command line arguments: 
 file1.fsx
 test
-60
+90
 ```
 
 ## <a name="related-topics"></a>相關主題

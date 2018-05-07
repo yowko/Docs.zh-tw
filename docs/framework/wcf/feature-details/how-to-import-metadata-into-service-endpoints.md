@@ -1,26 +1,12 @@
 ---
 title: HOW TO：將中繼資料匯入服務端點
-ms.custom: ''
 ms.date: 03/30/2017
-ms.prod: .net-framework
-ms.reviewer: ''
-ms.suite: ''
-ms.technology:
-- dotnet-clr
-ms.tgt_pltfrm: ''
-ms.topic: article
 ms.assetid: b69dbe20-92a1-4911-89d8-ffbc3dad4663
-caps.latest.revision: 13
-author: dotnet-bot
-ms.author: dotnetcontent
-manager: wpickett
-ms.workload:
-- dotnet
-ms.openlocfilehash: b86f31217812767b0fbbd785a0f3ff96c2948854
-ms.sourcegitcommit: 03ee570f6f528a7d23a4221dcb26a9498edbdf8c
+ms.openlocfilehash: 88b48b95a62c000d88b302589ebc489089e77602
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/28/2018
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="how-to-import-metadata-into-service-endpoints"></a>HOW TO：將中繼資料匯入服務端點
 本主題說明如何匯入服務端點的集合中的中繼資料以及如何使用服務中定義[入門](../../../../docs/framework/wcf/samples/getting-started-sample.md)。 本主題將示範如何建立用戶端應用程式，從服務匯入中繼資料，然後在服務上呼叫 `Add` 方法。  

@@ -1,24 +1,12 @@
 ---
 title: 宣告式條件約束
-ms.custom: ''
 ms.date: 03/30/2017
-ms.prod: .net-framework
-ms.reviewer: ''
-ms.suite: ''
-ms.tgt_pltfrm: ''
-ms.topic: article
 ms.assetid: 67001ed1-7f4d-4ada-ae57-a31176901a53
-caps.latest.revision: 12
-author: dotnet-bot
-ms.author: dotnetcontent
-manager: wpickett
-ms.workload:
-- dotnet
-ms.openlocfilehash: 4406bbbe7780fabc8872718ca21e8d755ea85c59
-ms.sourcegitcommit: 94d33cadc5ff81d2ac389bf5f26422c227832052
+ms.openlocfilehash: bf794d5b14d2d278dc4068309f25e6f0ddcf3342
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/30/2018
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="declarative-constraints"></a>宣告式條件約束
 宣告式條件約束提供強大的驗證方法，適用於驗證活動及該活動與其他活動之間的關聯性。 條件約束是在撰寫處理序期間針對活動所設定的，但工作流程主機亦可指定其他條件約束。 本主題介紹使用宣告式條件約束來提供活動驗證的概觀。  
