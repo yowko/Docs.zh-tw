@@ -1,27 +1,17 @@
 ---
 title: Visual Basic 程式的結構
-ms.custom: ''
 ms.date: 07/20/2015
-ms.prod: .net
-ms.reviewer: ''
-ms.suite: ''
-ms.technology:
-- devlang-visual-basic
-ms.topic: article
 helpviewer_keywords:
 - conditional compilation [Visual Basic], Visual Basic
 - program structure [Visual Basic], Visual Basic
 - procedures [Visual Basic], structure
 - Visual Basic code, program structure
 ms.assetid: ad0c6531-d762-4c77-a700-de16b07b6119
-caps.latest.revision: 17
-author: dotnet-bot
-ms.author: dotnetcontent
-ms.openlocfilehash: 5def0de1e22af39eb16489a2d4d27bdbd1853f2b
-ms.sourcegitcommit: 86adcc06e35390f13c1e372c36d2e044f1fc31ef
+ms.openlocfilehash: 5c45cc8982a03d5bdd974434164187b03529ae05
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/26/2018
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="structure-of-a-visual-basic-program"></a>Visual Basic 程式的結構
 Visual Basic 程式建立的標準建置組塊。 A*方案*可以包含一或多個專案。 A*專案*又可以包含一或多個組件。 每個*組件*編譯從一或多個原始程式檔。 A*原始程式檔*提供定義和實作的類別、 結構、 模組和介面，最後會包含您的程式碼。  

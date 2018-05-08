@@ -1,22 +1,12 @@
 ---
-title: "如何： 使用屬性 (Visual Basic) 建立的 C + + 等位"
-ms.custom: 
+title: 如何： 使用屬性 (Visual Basic) 建立的 C + + 等位
 ms.date: 07/20/2015
-ms.prod: .net
-ms.reviewer: 
-ms.suite: 
-ms.technology: devlang-visual-basic
-ms.tgt_pltfrm: 
-ms.topic: article
 ms.assetid: 9352a7e4-c0da-4d07-aa14-55ed43736fcb
-caps.latest.revision: "4"
-author: dotnet-bot
-ms.author: dotnetcontent
-ms.openlocfilehash: 51d04c573e91a351c48edefebdb3d32fce1d306f
-ms.sourcegitcommit: 34ec7753acf76f90a0fa845235ef06663dc9e36e
+ms.openlocfilehash: b07168df3fb7ec8195a3f64ef5b1bef0cc16dda2
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="how-to-create-a-cc-union-by-using-attributes-visual-basic"></a>如何： 使用屬性 (Visual Basic) 建立的 C/c + + 等位
 您可以使用屬性，自訂如何在記憶體中配置結構。 例如，您可以使用 `StructLayout(LayoutKind.Explicit)` 和 `FieldOffset` 屬性，以 C/C++ 建立所謂的等位。  
@@ -75,7 +65,7 @@ Structure TestExplicit
   
  `i1` 和 `i2` 這兩個整數欄位和 `lg` 共用相同的記憶體位置。 使用平台叫用時，這種結構配置控制項很有用。  
   
-## <a name="see-also"></a>請參閱  
+## <a name="see-also"></a>另請參閱  
  <xref:System.Reflection>  
  <xref:System.Attribute>  
  [Visual Basic 程式設計手冊](../../../../visual-basic/programming-guide/index.md)  

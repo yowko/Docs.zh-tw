@@ -1,21 +1,14 @@
 ---
-title: "此單一執行個體應用程式無法連接到原始執行個體"
+title: 此單一執行個體應用程式無法連接到原始執行個體
 ms.date: 07/20/2015
-ms.prod: .net
-ms.technology:
-- devlang-visual-basic
-ms.topic: article
 f1_keywords:
 - vbrAppModel_SingleInstanceCantConnect
 ms.assetid: 7c2c0cee-02a1-4157-be03-39d18e18408f
-caps.latest.revision: 
-author: dotnet-bot
-ms.author: dotnetcontent
-ms.openlocfilehash: 9cb8cef696ba93f922dfe0d92195a5fb5147b4cc
-ms.sourcegitcommit: 34ec7753acf76f90a0fa845235ef06663dc9e36e
+ms.openlocfilehash: 9bc1f33231cc4f29fabd100a695843beb334aeaa
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="this-single-instance-application-could-not-connect-to-the-original-instance"></a>此單一執行個體應用程式無法連接到原始執行個體
 此單一執行個體應用程式無法連接到原始執行個體。 此問題的部分可能原因如下：  
@@ -38,6 +31,6 @@ ms.lasthandoff: 12/21/2017
   
 5.  記下錯誤發生時的情況，並致電 Microsoft 產品支援服務。  
   
-## <a name="see-also"></a>請參閱  
+## <a name="see-also"></a>另請參閱  
  [偵錯工具基礎](/visualstudio/debugger/debugger-basics)  
 

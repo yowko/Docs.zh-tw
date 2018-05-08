@@ -1,13 +1,6 @@
 ---
 title: 匿名類型 (Visual Basic)
-ms.custom: ''
 ms.date: 07/20/2015
-ms.prod: .net
-ms.reviewer: ''
-ms.suite: ''
-ms.technology:
-- devlang-visual-basic
-ms.topic: article
 f1_keywords:
 - vb.AnonymousType
 helpviewer_keywords:
@@ -15,14 +8,11 @@ helpviewer_keywords:
 - anonymous types [Visual Basic]
 - types [Visual Basic], anonymous
 ms.assetid: 7b87532c-4b3e-4398-8503-6ea9d67574a4
-caps.latest.revision: 46
-author: dotnet-bot
-ms.author: dotnetcontent
-ms.openlocfilehash: 530e21e1595f9bbc3436280418287413e2a48111
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.openlocfilehash: 451fe45c9b5efbeb64b1066d6ba8e5f9b27300c2
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="anonymous-types-visual-basic"></a>匿名類型 (Visual Basic)
 Visual Basic 支援可讓您建立的物件，而不需要撰寫的資料類型的類別定義的匿名型別。 編譯器 (Compiler) 會自動幫您建立類別 (Class)。 類別沒有可用的名稱，直接繼承自<xref:System.Object>，且包含您指定在宣告物件的屬性。 未指定資料類型的名稱，因為它指*匿名型別*。  
@@ -95,11 +85,11 @@ Visual Basic 支援可讓您建立的物件，而不需要撰寫的資料類型�
 ## <a name="anonymous-types-from-query-expressions"></a>從查詢運算式的匿名型別  
  查詢運算式不一定需要建立匿名型別。 如果可能的話，他們會使用現有的類型來保存資料行的資料。 會發生這種情況是當查詢傳回整筆記錄，從資料來源或只有一個欄位，從每個記錄。 下列程式碼範例中，`customers`是物件的集合`Customer`類別。 類別具有許多屬性，而且您可以在查詢結果中，依任何順序包含一或多個。 在前兩個範例中，沒有匿名型別是必要的因為查詢選取的具名類型的項目：  
   
--   `custs1`包含字串的集合，因為`cust.Name`是字串。  
+-   `custs1` 包含字串的集合，因為`cust.Name`是字串。  
   
      [!code-vb[VbVbalrAnonymousTypes#30](../../../../visual-basic/language-reference/modifiers/codesnippet/VisualBasic/anonymous-types_9.vb)]  
   
--   `custs2`包含集合`Customer`物件，因為每個項目`customers`是`Customer`查詢所選取物件，且整個項目。  
+-   `custs2` 包含集合`Customer`物件，因為每個項目`customers`是`Customer`查詢所選取物件，且整個項目。  
   
      [!code-vb[VbVbalrAnonymousTypes#31](../../../../visual-basic/language-reference/modifiers/codesnippet/VisualBasic/anonymous-types_10.vb)]  
   

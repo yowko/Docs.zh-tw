@@ -1,10 +1,6 @@
 ---
 title: .NET Framework 4.7、4.6 和 4.5
-ms.date: 10/17/2017
-ms.prod: .net-framework
-ms.technology:
-- dotnet-clr
-ms.topic: article
+ms.date: 04/10/2018
 ms.custom: updateeachrelease
 f1_keywords:
 - f61f02f2-2f20-483d-8f56-a9c8f3a54986
@@ -14,19 +10,16 @@ helpviewer_keywords:
 ms.assetid: f61f02f2-2f20-483d-8f56-a9c8f3a54986
 author: rpetrusha
 ms.author: ronpet
-manager: wpickett
-ms.workload:
-- dotnet
-ms.openlocfilehash: 34402e74bb0cb560d213760c38ce4b936d712eb4
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.openlocfilehash: 85bb386f2adbf02a8fde891c65c78b8e8d4537b2
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="net-framework-guide"></a>.NET Framework 指南
 
 > [!NOTE]
-> 此 .NET Framework 內容集包含 .NET Framework 4.5、4.5.1、4.5.2、4.6、4.6.1、4.6.2、4.7 和 4.7.1 版的資訊。 若要下載 .NET Framework，請參閱[安裝 .NET Framework](../../docs/framework/install/guide-for-developers.md)。 如需 NET Framework 4.5、[!INCLUDE[net_v46](../../includes/net-v46-md.md)]、其點發行版以及 .NET Framework 4.7 和 4.7.1 版的新功能和變更清單，請參閱 [.NET Framework 的新功能](../../docs/framework/whats-new/index.md)。 如需支援平台的清單，請參閱 [.NET Framework 系統需求](../../docs/framework/get-started/system-requirements.md)。 
+> 此 .NET Framework 內容集包含 .NET Framework 4.5、4.5.1、4.5.2、4.6、4.6.1、4.6.2、4.7、4.7.1 和 4.7.2 版的資訊。 若要下載 .NET Framework，請參閱[安裝 .NET Framework](../../docs/framework/install/guide-for-developers.md)。 如需 NET Framework 4.5、[!INCLUDE[net_v46](../../includes/net-v46-md.md)]、其小數點版本以及 .NET Framework 4.7、4.7.1 和 4.7.2 版的新功能和變更清單，請參閱 [.NET Framework 的新功能](../../docs/framework/whats-new/index.md)。 如需支援平台的清單，請參閱 [.NET Framework 系統需求](../../docs/framework/get-started/system-requirements.md)。 
 
 .NET Framework 這套開發平台可用於建置可在網路、Windows、Windows Phone、Windows Server 及 Microsoft Azure 上使用的 App。 這是由通用語言執行平台 (CLR) 和 .NET Framework 類別庫 (包括各種功能且支援許多產業標準) 所組成。
 
@@ -61,7 +54,7 @@ ms.lasthandoff: 12/22/2017
 [工具](../../docs/framework/tools/index.md)  
 說明透過使用 .NET Framework 技術，可協助您開發、設定及部署應用程式的工具。  
   
-[.NET Framework 類別庫](/dotnet/api/?view=netframework-4.7.1)   
+[.NET Framework 類別庫](/dotnet/api/?view=netframework-4.7.2)   
 為每個包含在 .NET Framework 命名空間的類別提供語法、程式碼範例和相關資訊。  
   
 [其他類別庫和 API](../../docs/framework/additional-apis/index.md)  

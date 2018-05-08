@@ -1,11 +1,6 @@
 ---
 title: -參考 (Visual Basic)
 ms.date: 03/13/2018
-ms.prod: .net
-ms.suite: ''
-ms.technology:
-- devlang-visual-basic
-ms.topic: article
 helpviewer_keywords:
 - /reference compiler option [Visual Basic]
 - r compiler option [Visual Basic]
@@ -16,11 +11,11 @@ helpviewer_keywords:
 ms.assetid: 66bdfced-bbf6-43d1-a554-bc0990315737
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: ba879dd7079b35bea50c4a6c1d67da7aa57110f6
-ms.sourcegitcommit: 498799639937c89de777361aab74261efe7b79ea
+ms.openlocfilehash: cb5d3b4c50a9c22880bdcc8406835cf51481e3cd
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 03/22/2018
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="-reference-visual-basic"></a>-參考 (Visual Basic)
 會導致編譯器提供給目前正在編譯的專案中指定的組件的類型資訊。  

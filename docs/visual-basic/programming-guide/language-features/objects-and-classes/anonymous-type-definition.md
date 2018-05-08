@@ -1,24 +1,14 @@
 ---
 title: 匿名類型定義 (Visual Basic)
-ms.custom: ''
 ms.date: 07/20/2015
-ms.prod: .net
-ms.reviewer: ''
-ms.suite: ''
-ms.technology:
-- devlang-visual-basic
-ms.topic: article
 helpviewer_keywords:
 - anonymous types [Visual Basic], type definition
 ms.assetid: 7a8a0ddc-55ba-4d67-869e-87a84d938bac
-caps.latest.revision: 21
-author: dotnet-bot
-ms.author: dotnetcontent
-ms.openlocfilehash: 8b5b7eba55d719c1482b7224ecffc78b776feb00
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.openlocfilehash: 179fb9773fde2631666498d54894037b2bbfd087
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="anonymous-type-definition-visual-basic"></a>匿名類型定義 (Visual Basic)
 為了回應執行個體的匿名類型宣告，編譯器會建立新的類別定義，其中包含指定的屬性類型。  
@@ -63,7 +53,7 @@ End Class
   
  匿名類型宣告包含至少一個索引鍵內容，如果型別定義會覆寫繼承自的三個成員<xref:System.Object>: <xref:System.Object.Equals%2A>， <xref:System.Object.GetHashCode%2A>，和<xref:System.Object.ToString%2A>。 如果沒有索引鍵屬性宣告，只<xref:System.Object.ToString%2A>會覆寫。 覆寫中提供下列功能：  
   
--   `Equals`傳回`True`兩個匿名型別執行個體是否相同的執行個體，或若符合下列條件：  
+-   `Equals` 傳回`True`兩個匿名型別執行個體是否相同的執行個體，或若符合下列條件：  
   
     -   它們有相同數目的屬性。  
   
@@ -77,9 +67,9 @@ End Class
   
      [!code-vb[VbVbalrAnonymousTypes#24](../../../../visual-basic/language-reference/modifiers/codesnippet/VisualBasic/anonymous-type-definition_2.vb)]  
   
--   `GetHashcode`提供的適當唯一 GetHashCode 演算法。 此演算法會使用索引鍵的屬性，用來計算雜湊碼。  
+-   `GetHashcode` 提供的適當唯一 GetHashCode 演算法。 此演算法會使用索引鍵的屬性，用來計算雜湊碼。  
   
--   `ToString`傳回串連的屬性值的字串，如下列範例所示。 索引鍵和非索引鍵屬性會包含項目。  
+-   `ToString` 傳回串連的屬性值的字串，如下列範例所示。 索引鍵和非索引鍵屬性會包含項目。  
   
      [!code-vb[VbVbalrAnonymousTypes#29](../../../../visual-basic/language-reference/modifiers/codesnippet/VisualBasic/anonymous-type-definition_3.vb)]  
   

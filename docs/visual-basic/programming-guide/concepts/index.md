@@ -1,26 +1,19 @@
 ---
 title: 程式設計概念 (Visual Basic)
 ms.date: 07/20/2015
-ms.prod: .net
-ms.technology:
-- devlang-visual-basic
-ms.topic: article
 ms.assetid: cc9cac84-61f6-476e-b8c7-9bae7749bd90
-caps.latest.revision: 4
-author: dotnet-bot
-ms.author: dotnetcontent
-ms.openlocfilehash: c84b26f757ec852c9aefecab58eff9e631b95d15
-ms.sourcegitcommit: bd1ef61f4bb794b25383d3d72e71041a5ced172e
+ms.openlocfilehash: 85e23fcca0607e9f42daa94334c983462f6cf881
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/18/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="programming-concepts-visual-basic"></a>程式設計概念 (Visual Basic)
 本節說明 Visual Basic 語言的程式設計概念。  
   
-## <a name="in-this-section"></a>本章節內容  
+## <a name="in-this-section"></a>本節內容  
   
-|標題|說明|  
+|標題|描述|  
 |-----------|-----------------|  
 |[組件和全域組件快取 (Visual Basic)](../../../visual-basic/programming-guide/concepts/assemblies-gac/index.md)|說明如何建立及使用組件。|  
 |[使用 Async 和 Await 進行非同步程式設計 (Visual Basic)](../../../visual-basic/programming-guide/concepts/async/index.md)|說明如何使用 [Async](../../../visual-basic/language-reference/modifiers/async.md) 和 [Await](../../../visual-basic/language-reference/operators/await-operator.md) 關鍵字撰寫非同步解決方案。 其中包含逐步解說。|  

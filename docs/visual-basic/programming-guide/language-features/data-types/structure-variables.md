@@ -1,26 +1,17 @@
 ---
-title: "結構變數 (Visual Basic)"
-ms.custom: 
+title: 結構變數 (Visual Basic)
 ms.date: 07/20/2015
-ms.prod: .net
-ms.reviewer: 
-ms.suite: 
-ms.technology: devlang-visual-basic
-ms.topic: article
 helpviewer_keywords:
 - structures [Visual Basic], variables
 - structures [Visual Basic], structure variables
 - variables [Visual Basic], structure variables
 - structure variables [Visual Basic]
 ms.assetid: 156872f8-aabc-4454-8e2d-f2253c3c13c9
-caps.latest.revision: "11"
-author: dotnet-bot
-ms.author: dotnetcontent
-ms.openlocfilehash: ef42c44de84caffde909eb2b3e9361016a6abb97
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.openlocfilehash: 0dad7bdcac5428753e252f3b26ca0a127c293a7f
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="structure-variables-visual-basic"></a>結構變數 (Visual Basic)
 當您建立結構之後時，您可以為該型別宣告程序層級和模組層級變數。 例如，您可以建立結構有關電腦系統記錄資訊。 下列範例為其示範。  

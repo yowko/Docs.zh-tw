@@ -1,12 +1,6 @@
 ---
-title: "如何：隱藏與您的變數名稱相同的變數 (Visual Basic)"
-ms.custom: 
+title: 如何：隱藏與您的變數名稱相同的變數 (Visual Basic)
 ms.date: 07/20/2015
-ms.prod: .net
-ms.reviewer: 
-ms.suite: 
-ms.technology: devlang-visual-basic
-ms.topic: article
 helpviewer_keywords:
 - qualification [Visual Basic], of element names
 - declarations [Visual Basic], elements
@@ -18,14 +12,11 @@ helpviewer_keywords:
 - declared elements [Visual Basic], referencing
 - declared elements [Visual Basic], about declared elements
 ms.assetid: e39c0752-f19f-4d2e-a453-00df1b5fc7ee
-caps.latest.revision: "25"
-author: dotnet-bot
-ms.author: dotnetcontent
-ms.openlocfilehash: af031f3ef134b2a509922e6ada28aa5b2b80d641
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.openlocfilehash: a7ebc4eb44592800decd5ef943750f0cd845afb4
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="how-to-hide-a-variable-with-the-same-name-as-your-variable-visual-basic"></a>如何：隱藏與您的變數名稱相同的變數 (Visual Basic)
 您可以隱藏變數*遮蔽*它，也就是來重新定義具有相同名稱的變數。 您可以遮蔽的變數，您想要隱藏兩種方式：  
@@ -42,7 +33,7 @@ ms.lasthandoff: 11/21/2017
   
     |變數的區域|重新定義它的可允許子地區|  
     |-----------------------|-------------------------------------------|  
-    |模組|在模組中的類別|  
+    |Module|在模組中的類別|  
     |類別|類別內的子類別<br /><br /> 類別內的程序|  
   
      您無法重新定義程序變數的區塊中的程序，例如在`If`...`End If`建構或`For`迴圈。  

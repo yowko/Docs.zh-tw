@@ -1,22 +1,12 @@
 ---
-title: "常見屬性 (Visual Basic)"
-ms.custom: 
+title: 常見屬性 (Visual Basic)
 ms.date: 07/20/2015
-ms.prod: .net
-ms.reviewer: 
-ms.suite: 
-ms.technology: devlang-visual-basic
-ms.tgt_pltfrm: 
-ms.topic: article
 ms.assetid: 11fe4894-1bf9-4525-a36b-cddcd3a5d22b
-caps.latest.revision: "3"
-author: dotnet-bot
-ms.author: dotnetcontent
-ms.openlocfilehash: 9528b7dcfa52c30954929d714bd098eb51886ebd
-ms.sourcegitcommit: 34ec7753acf76f90a0fa845235ef06663dc9e36e
+ms.openlocfilehash: 5a91b0aa48a22db4ea7fb56a9c632ff0cb44dce5
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="common-attributes-visual-basic"></a>常見屬性 (Visual Basic)
 本主題說明在 Visual Basic 程式中最常用的屬性。  
@@ -231,7 +221,7 @@ End Class
   
  如需 Caller Info 屬性的詳細資訊，請參閱[呼叫端資訊 (Visual Basic)](../../../../visual-basic/programming-guide/concepts/caller-information.md)。  
   
-##  <a name="VB"></a>Visual Basic 屬性  
+##  <a name="VB"></a> Visual Basic 屬性  
  下表列出 Visual Basic 特有的屬性。  
   
 |屬性|用途|  
@@ -263,7 +253,7 @@ End Structure
 ### <a name="vbfixedarrayattribute"></a>VBFixedArrayAttribute  
  使用`VBFixedArrayAttribute`來宣告陣列的大小固定的。 例如 Visual Basic 字串陣列是預設的可變長度。 這個屬性會序列化，或將資料寫入至檔案時很有用。  
   
-## <a name="see-also"></a>請參閱  
+## <a name="see-also"></a>另請參閱  
  <xref:System.Reflection>  
  <xref:System.Attribute>  
  [Visual Basic 程式設計手冊](../../../../visual-basic/programming-guide/index.md)  

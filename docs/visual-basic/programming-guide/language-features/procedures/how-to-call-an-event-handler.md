@@ -1,13 +1,6 @@
 ---
 title: 如何：在 Visual Basic 中呼叫事件處理常式
-ms.custom: ''
 ms.date: 07/20/2015
-ms.prod: .net
-ms.reviewer: ''
-ms.suite: ''
-ms.technology:
-- devlang-visual-basic
-ms.topic: article
 helpviewer_keywords:
 - Visual Basic code, procedures
 - event handlers [Visual Basic], calling
@@ -15,14 +8,11 @@ helpviewer_keywords:
 - procedures [Visual Basic], event handlers
 - procedures [Visual Basic], calling
 ms.assetid: 72e18ef8-144e-40df-a1f4-066a57271e28
-caps.latest.revision: 19
-author: dotnet-bot
-ms.author: dotnetcontent
-ms.openlocfilehash: 2b8a35459fdeb7cce0b494a9b3024a79bd4173cc
-ms.sourcegitcommit: 86adcc06e35390f13c1e372c36d2e044f1fc31ef
+ms.openlocfilehash: 4e6aeaee8027e462dcdf80cae34b4b246fd58cf7
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/26/2018
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="how-to-call-an-event-handler-in-visual-basic"></a>如何：在 Visual Basic 中呼叫事件處理常式
 *事件*是動作或狀況，例如滑鼠點選或信用限制，或是超過 — 辨認某個程式元件，而且您可以撰寫程式碼回應。 *事件處理常式*是您撰寫來回應事件的程式碼。  

@@ -1,12 +1,6 @@
 ---
-title: "與 Visual Basic 運算子一起執行的一般工作"
-ms.custom: 
+title: 與 Visual Basic 運算子一起執行的一般工作
 ms.date: 07/20/2015
-ms.prod: .net
-ms.reviewer: 
-ms.suite: 
-ms.technology: devlang-visual-basic
-ms.topic: article
 helpviewer_keywords:
 - operators [Visual Basic], logical
 - operators [Visual Basic], string concatenation
@@ -19,14 +13,11 @@ helpviewer_keywords:
 - operators [Visual Basic], comparison
 - operators [Visual Basic], short-circuiting logical
 ms.assetid: d181afe5-fafa-460f-a13b-81203f6f4587
-caps.latest.revision: "9"
-author: dotnet-bot
-ms.author: dotnetcontent
-ms.openlocfilehash: 0886bc0365f37f964c4c4872a7b1624ec7388067
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.openlocfilehash: ab0b7e7c35992908aeaac14053665ff84719f1fc
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="common-tasks-performed-with-visual-basic-operators"></a>與 Visual Basic 運算子一起執行的一般工作
 運算子會執行許多常見的工作包含一個或多個運算式呼叫*運算元*。  
@@ -44,7 +35,7 @@ ms.lasthandoff: 11/21/2017
 |尋找商數的兩個數值 （沒有餘數）|[\ 運算子 (Visual Basic)](../../../../visual-basic/language-reference/operators/integer-division-operator.md)|  
 |找出餘數的數字的值除以另一個 （不含商數）|[Mod 運算子](../../../../visual-basic/language-reference/operators/mod-operator.md)|  
 |引發的另一個數字的值|[^ 運算子](../../../../visual-basic/language-reference/operators/exponentiation-operator.md)|  
-|向左移一個數字值的位元模式|[<\<運算子](../../../../visual-basic/language-reference/operators/left-shift-operator.md)|  
+|向左移一個數字值的位元模式|[<\< 運算子](../../../../visual-basic/language-reference/operators/left-shift-operator.md)|  
 |向右移位一個數字值的位元模式|[>> 運算子](../../../../visual-basic/language-reference/operators/right-shift-operator.md)|  
   
 ## <a name="comparison-tasks"></a>比較工作  
@@ -52,12 +43,12 @@ ms.lasthandoff: 11/21/2017
   
 |以|請參閱|  
 |---|---|  
-|判斷兩個值是否相等|`=`運算子 ([在 Visual Basic 中的比較運算子](../../../../visual-basic/programming-guide/language-features/operators-and-expressions/comparison-operators.md))|  
-|判斷兩個值是否不相等|`<>`運算子 ([在 Visual Basic 中的比較運算子](../../../../visual-basic/programming-guide/language-features/operators-and-expressions/comparison-operators.md))|  
-|判斷某個值是否小於另一個|`<`運算子 ([在 Visual Basic 中的比較運算子](../../../../visual-basic/programming-guide/language-features/operators-and-expressions/comparison-operators.md))|  
-|判斷某個值是否大於另一個|`>`運算子 ([在 Visual Basic 中的比較運算子](../../../../visual-basic/programming-guide/language-features/operators-and-expressions/comparison-operators.md))|  
-|判斷某個值是否小於或等於另一個|`<=`運算子 ([在 Visual Basic 中的比較運算子](../../../../visual-basic/programming-guide/language-features/operators-and-expressions/comparison-operators.md))|  
-|判斷某個值是否大於或等於另一個|`>=`運算子 ([在 Visual Basic 中的比較運算子](../../../../visual-basic/programming-guide/language-features/operators-and-expressions/comparison-operators.md))|  
+|判斷兩個值是否相等|`=` 運算子 ([在 Visual Basic 中的比較運算子](../../../../visual-basic/programming-guide/language-features/operators-and-expressions/comparison-operators.md))|  
+|判斷兩個值是否不相等|`<>` 運算子 ([在 Visual Basic 中的比較運算子](../../../../visual-basic/programming-guide/language-features/operators-and-expressions/comparison-operators.md))|  
+|判斷某個值是否小於另一個|`<` 運算子 ([在 Visual Basic 中的比較運算子](../../../../visual-basic/programming-guide/language-features/operators-and-expressions/comparison-operators.md))|  
+|判斷某個值是否大於另一個|`>` 運算子 ([在 Visual Basic 中的比較運算子](../../../../visual-basic/programming-guide/language-features/operators-and-expressions/comparison-operators.md))|  
+|判斷某個值是否小於或等於另一個|`<=` 運算子 ([在 Visual Basic 中的比較運算子](../../../../visual-basic/programming-guide/language-features/operators-and-expressions/comparison-operators.md))|  
+|判斷某個值是否大於或等於另一個|`>=` 運算子 ([在 Visual Basic 中的比較運算子](../../../../visual-basic/programming-guide/language-features/operators-and-expressions/comparison-operators.md))|  
 |判斷兩個物件變數是否參考相同的物件執行個體|[Is 運算子](../../../../visual-basic/language-reference/operators/is-operator.md)|  
 |判斷兩個物件變數是否參考不同物件執行個體|[IsNot 運算子](../../../../visual-basic/language-reference/operators/isnot-operator.md)|  
 |判斷物件是否為特定的型別|[TypeOf 運算子](../../../../visual-basic/language-reference/operators/typeof-operator.md)|  
@@ -67,8 +58,8 @@ ms.lasthandoff: 11/21/2017
   
 |以|請參閱|  
 |---|---|  
-|多個字串結合成單一字串|`&`運算子 ([Visual Basic 中的串連運算子](../../../../visual-basic/programming-guide/language-features/operators-and-expressions/concatenation-operators.md))|  
-|聯結數值與字串值|`+`運算子 ([Visual Basic 中的串連運算子](../../../../visual-basic/programming-guide/language-features/operators-and-expressions/concatenation-operators.md))|  
+|多個字串結合成單一字串|`&` 運算子 ([Visual Basic 中的串連運算子](../../../../visual-basic/programming-guide/language-features/operators-and-expressions/concatenation-operators.md))|  
+|聯結數值與字串值|`+` 運算子 ([Visual Basic 中的串連運算子](../../../../visual-basic/programming-guide/language-features/operators-and-expressions/concatenation-operators.md))|  
   
 ## <a name="logical-and-bitwise-tasks"></a>邏輯和位元的工作  
  下表摘要說明可用的邏輯和位元作業。  

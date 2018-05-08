@@ -1,22 +1,12 @@
 ---
-title: "非同步方法的傳回類型 (Visual Basic)"
-ms.custom: 
+title: 非同步方法的傳回類型 (Visual Basic)
 ms.date: 07/20/2015
-ms.prod: .net
-ms.reviewer: 
-ms.suite: 
-ms.technology: devlang-visual-basic
-ms.tgt_pltfrm: 
-ms.topic: article
 ms.assetid: 07890291-ee72-42d3-932a-fa4d312f2c60
-caps.latest.revision: "3"
-author: dotnet-bot
-ms.author: dotnetcontent
-ms.openlocfilehash: 1a62556fb93a3d8547d880e4ea6770b206ead900
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.openlocfilehash: 0c6c02efd282f8581f3dc85905149acf7b3ea6ac
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="async-return-types-visual-basic"></a>非同步方法的傳回類型 (Visual Basic)
 非同步方法有三個可能的傳回型別： <xref:System.Threading.Tasks.Task%601>， <xref:System.Threading.Tasks.Task>，和 void。 在 Visual Basic 中，void 傳回型別會撰寫為 [Sub](../../../../visual-basic/programming-guide/language-features/procedures/sub-procedures.md) 程序。 如需非同步方法的詳細資訊，請參閱[使用 Async 和 Await (Visual Basic) 進行非同步程式設計](../../../../visual-basic/programming-guide/concepts/async/index.md)。  
@@ -107,7 +97,7 @@ Async Function Task_MethodAsync() As Task
 End Function  
 ```  
   
- `Task_MethodAsync`呼叫並等候使用 await 陳述式，而不是使用 await 運算式，類似於同步呼叫的陳述式`Sub`或傳回 void 的方法。 應用程式的`Await`運算子在此情況下不會產生值。  
+ `Task_MethodAsync` 呼叫並等候使用 await 陳述式，而不是使用 await 運算式，類似於同步呼叫的陳述式`Sub`或傳回 void 的方法。 應用程式的`Await`運算子在此情況下不會產生值。  
   
  下列程式碼會呼叫並等候方法 `Task_MethodAsync`。  
   
