@@ -1,12 +1,6 @@
 ---
-title: "如何：定義運算子 (Visual Basic)"
-ms.custom: 
+title: 如何：定義運算子 (Visual Basic)
 ms.date: 07/20/2015
-ms.prod: .net
-ms.reviewer: 
-ms.suite: 
-ms.technology: devlang-visual-basic
-ms.topic: article
 helpviewer_keywords:
 - procedures [Visual Basic], defining
 - Visual Basic code, procedures
@@ -19,14 +13,11 @@ helpviewer_keywords:
 - return values [Visual Basic], Operator procedures
 - operator overloading
 ms.assetid: d4b0e253-092a-4e6e-9fe2-01f562140a29
-caps.latest.revision: "15"
-author: dotnet-bot
-ms.author: dotnetcontent
-ms.openlocfilehash: 51921ee38204fd528ed19436806fc9433abbdc5e
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.openlocfilehash: c759ebf38ab0727aeada218d288b5ac01e3ecd03
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="how-to-define-an-operator-visual-basic"></a>如何：定義運算子 (Visual Basic)
 如果您已定義類別或結構，您可以定義標準的運算子的行為 (例如`*`， `<>`，或`And`) 當一或兩個運算元是類別或結構的類型。  

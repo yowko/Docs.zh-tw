@@ -1,12 +1,6 @@
 ---
-title: "參數和引數之間的差異 (Visual Basic)"
-ms.custom: 
+title: 參數和引數之間的差異 (Visual Basic)
 ms.date: 07/20/2015
-ms.prod: .net
-ms.reviewer: 
-ms.suite: 
-ms.technology: devlang-visual-basic
-ms.topic: article
 helpviewer_keywords:
 - procedures [Visual Basic], arguments
 - procedures [Visual Basic], parameters
@@ -17,14 +11,11 @@ helpviewer_keywords:
 - procedure parameters
 - parameters [Visual Basic], definition
 ms.assetid: c237c056-74f4-4749-9f2c-15864f139a31
-caps.latest.revision: "18"
-author: dotnet-bot
-ms.author: dotnetcontent
-ms.openlocfilehash: b6613c64a24ef18239422b69f8b5320eadc95b92
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.openlocfilehash: a5075c218371b754ac883b97475ab941811966b5
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="differences-between-parameters-and-arguments-visual-basic"></a>參數和引數之間的差異 (Visual Basic)
 在大部分情況下，程序必須有一些情況中呼叫的相關資訊。 執行重複或共用的工作的程序會針對每個呼叫使用不同的資訊。 這項資訊包含變數、 常數和呼叫它時傳遞至程序的運算式。  

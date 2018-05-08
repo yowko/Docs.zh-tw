@@ -1,13 +1,6 @@
 ---
 title: 運算子程序 (Visual Basic)
-ms.custom: ''
 ms.date: 07/20/2015
-ms.prod: .net
-ms.reviewer: ''
-ms.suite: ''
-ms.technology:
-- devlang-visual-basic
-ms.topic: article
 helpviewer_keywords:
 - Visual Basic code, procedures
 - procedures [Visual Basic], operator
@@ -18,14 +11,11 @@ helpviewer_keywords:
 - operator overloading
 - operator procedures
 ms.assetid: 8c513d38-246b-4fb7-8b75-29e1364e555b
-caps.latest.revision: 17
-author: dotnet-bot
-ms.author: dotnetcontent
-ms.openlocfilehash: 8fba5180da6498d280fa4192937c39d3e33168e8
-ms.sourcegitcommit: 86adcc06e35390f13c1e372c36d2e044f1fc31ef
+ms.openlocfilehash: 63a16163900f1b4dc7dadef6a227f56b89f4e820
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/26/2018
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="operator-procedures-visual-basic"></a>運算子程序 (Visual Basic)
 運算子程序是一系列的 Visual Basic 陳述式，定義標準的運算子的行為 (例如`*`， `<>`，或`And`) 上的類別或您已定義的結構。 這也稱為*運算子多載*。  

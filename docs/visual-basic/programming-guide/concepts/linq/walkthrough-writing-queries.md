@@ -1,32 +1,22 @@
 ---
-title: "在 Visual Basic 中撰寫查詢"
-ms.custom: 
+title: 在 Visual Basic 中撰寫查詢
 ms.date: 07/20/2015
-ms.prod: .net
-ms.reviewer: 
-ms.suite: 
-ms.technology: devlang-visual-basic
-ms.tgt_pltfrm: 
-ms.topic: get-started-article
 helpviewer_keywords:
 - queries [LINQ in Visual Basic], writing
 - LINQ [Visual Basic], walkthroughs
 - LINQ [Visual Basic], writing queries
 - writing LINQ queries [Visual Basic]
 ms.assetid: f0045808-b9fe-4d31-88d1-473d9957211e
-caps.latest.revision: "70"
-author: dotnet-bot
-ms.author: dotnetcontent
-ms.openlocfilehash: e78d93895a86ad9b2456e5ac7c05db83ebf0379d
-ms.sourcegitcommit: 34ec7753acf76f90a0fa845235ef06663dc9e36e
+ms.openlocfilehash: beb192f6b136455cb1adcb6cf2616578b63fcebf
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="walkthrough-writing-queries-in-visual-basic"></a>逐步解說：在 Visual Basic 中撰寫查詢
 本逐步解說示範如何使用 Visual Basic 語言功能，以及在寫入[!INCLUDE[vbteclinqext](~/includes/vbteclinqext-md.md)]查詢運算式。 逐步解說示範如何建立一份學生物件上的查詢、 如何執行查詢，以及如何修改它們。 查詢會將數個功能，包括物件初始設定式、 區域類型推斷和匿名型別。  
   
- 完成本逐步解說之後, 您就可以移至範例和文件特定[!INCLUDE[vbteclinq](~/includes/vbteclinq-md.md)]您感興趣的提供者。 [!INCLUDE[vbteclinq](~/includes/vbteclinq-md.md)]提供者包括[!INCLUDE[vbtecdlinq](~/includes/vbtecdlinq-md.md)]， [!INCLUDE[linq_dataset](~/includes/linq-dataset-md.md)]，和[!INCLUDE[sqltecxlinq](~/includes/sqltecxlinq-md.md)]。  
+ 完成本逐步解說之後, 您就可以移至範例和文件特定[!INCLUDE[vbteclinq](~/includes/vbteclinq-md.md)]您感興趣的提供者。 [!INCLUDE[vbteclinq](~/includes/vbteclinq-md.md)] 提供者包括[!INCLUDE[vbtecdlinq](~/includes/vbtecdlinq-md.md)]， [!INCLUDE[linq_dataset](~/includes/linq-dataset-md.md)]，和[!INCLUDE[sqltecxlinq](~/includes/sqltecxlinq-md.md)]。  
   
 ## <a name="create-a-project"></a>建立專案  
   
@@ -151,7 +141,7 @@ ms.lasthandoff: 12/21/2017
   
  [LINQ to DataSet](../../../../framework/data/adonet/linq-to-dataset.md)  
   
-## <a name="see-also"></a>請參閱  
+## <a name="see-also"></a>另請參閱  
  [Language-Integrated Query (LINQ) (Visual Basic)](../../../../visual-basic/programming-guide/concepts/linq/index.md)  
  [使用 Visual Basic 撰寫 LINQ 入門](../../../../visual-basic/programming-guide/concepts/linq/getting-started-with-linq.md)  
  [區域類型推斷](../../../../visual-basic/programming-guide/language-features/variables/local-type-inference.md)  

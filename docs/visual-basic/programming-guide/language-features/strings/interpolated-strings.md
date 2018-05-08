@@ -1,17 +1,13 @@
 ---
 title: 字串插值 (Visual Basic)
 ms.date: 10/31/2017
-ms.prod: .net
-ms.technology:
-- devlang-visual-basic
-ms.topic: article
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 9501c052f387a522226e957193a8866083aa4233
-ms.sourcegitcommit: 935d5267c44f9bce801468ef95f44572f1417e8c
+ms.openlocfilehash: 95f79c5cdff1a48da2bb0eaf92229570ced631b1
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 03/28/2018
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="interpolated-strings-visual-basic-reference"></a>字串插值 （Visual Basic 參考）
 
@@ -61,7 +57,7 @@ $"<text> {<interpolated-expression> [,<field-width>] [:<format-string>] } <text>
 
    這是字串解譯的最終結果。 所有出現的雙大括弧 ("{{" 和 "}}") 都會轉換成單一大括弧。 
 
-2. 將字串插值轉換成 <xref:System.IFormattable> 變數，可讓您從單一 <xref:System.IFormattable> 執行個體建立多個具有特定文化特性內容的結果字串。 若要加入個別文化特性的正確數值和日期格式等項目時，這樣做會很有用。  在您明確或隱含呼叫 <xref:System.Object.ToString> 方法以格式化字串之前，所有出現的雙大括弧 ("{{" 和 "}}") 會保持為雙大括弧。  所有包含插值運算式會轉換成 {0}、\{1\} 等。  
+2. 將字串插值轉換成 <xref:System.IFormattable> 變數，可讓您從單一 <xref:System.IFormattable> 執行個體建立多個具有特定文化特性內容的結果字串。 若要加入個別文化特性的正確數值和日期格式等項目時，這樣做會很有用。  在您明確或隱含呼叫 <xref:System.Object.ToString> 方法以格式化字串之前，所有出現的雙大括弧 ("{{" 和 "}}") 會保持為雙大括弧。  所有包含的插值運算式會轉換成{0}， {1}，依此類推。  
 
    下列範例使用反映來顯示成員，以及從字串插值建立之 <xref:System.IFormattable> 變數的欄位和屬性值。 它也會將 <xref:System.IFormattable> 變數傳遞給 <xref:System.Console.WriteLine(System.String)?displayProperty=nameWithType> 方法。
 
@@ -71,13 +67,13 @@ $"<text> {<interpolated-expression> [,<field-width>] [:<format-string>] } <text>
 
 3. 轉換至字串插值的<xref:System.FormattableString>代表複合格式字串的變數。 檢查複合格式字串及其如何轉譯為結果字串有助於在建立查詢時，防止插入式攻擊。 A<xref:System.FormattableString>還包括：
 
-      - A<xref:System.FormattableString.ToString>產生的結果字串的多載<xref:System.Globalization.CultureInfo.CurrentCulture>。
+      - 產生 <xref:System.Globalization.CultureInfo.CurrentCulture> 的結果字串的 <xref:System.FormattableString.ToString> 多載。
       
       - A<xref:System.FormattableString.Invariant%2A>方法所產生的字串<xref:System.Globalization.CultureInfo.InvariantCulture>。
       
-      - A<xref:System.FormattableString.ToString(System.IFormatProvider)>產生的結果字串會指定文化特性的方法。 
+      - 產生指定文化特性的結果字串的 <xref:System.FormattableString.ToString(System.IFormatProvider)> 方法。 
   
-    所有出現的雙大括弧 ("{{"和"}}") 保持為雙大括弧，直到您格式化為止。  所有包含插值運算式會轉換成 {0}、\{1\} 等。  
+    所有出現的雙大括弧 ("{{"和"}}") 保持為雙大括弧，直到您格式化為止。  所有包含的插值運算式會轉換成{0}， {1}，依此類推。  
 
    [!code-vb[interpolated-strings3](../../../../../samples/snippets/visualbasic/programming-guide/language-features/strings/interpolated-strings3.vb)]  
 
