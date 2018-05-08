@@ -1,28 +1,19 @@
 ---
-title: 屬性 &#39;&lt;propertyname&gt;&#39; 沒有 &#39; t 傳回有關所有程式碼路徑的值
+title: 屬性&#39; &lt;propertyname&gt; &#39;規定&#39;t 傳回有關所有程式碼路徑的值
 ms.date: 07/20/2015
-ms.prod: .net
-ms.reviewer: ''
-ms.suite: ''
-ms.technology:
-- devlang-visual-basic
-ms.topic: article
 f1_keywords:
 - bc42107
 - vbc42107
 helpviewer_keywords:
 - BC42107
 ms.assetid: 06800966-9c3b-4844-9f13-83ac95607d32
-caps.latest.revision: 7
-author: dotnet-bot
-ms.author: dotnetcontent
-ms.openlocfilehash: c9ef5b2ac62412f5684cbc78ab6bebf6bc7b6752
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.openlocfilehash: 72bc7e45cadd2528f29c88bf6e80ee5f381052dd
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 05/04/2018
 ---
-# <a name="property-39ltpropertynamegt39-doesn39t-return-a-value-on-all-code-paths"></a>屬性 &#39;&lt;propertyname&gt;&#39; 沒有 &#39; t 傳回有關所有程式碼路徑的值
+# <a name="property-39ltpropertynamegt39-doesn39t-return-a-value-on-all-code-paths"></a>屬性&#39; &lt;propertyname&gt; &#39;規定&#39;t 傳回有關所有程式碼路徑的值
 屬性 '\<屬性名稱 >' 並未傳回有關所有程式碼路徑的值。 使用結果時，Null 參考例外狀況可能在執行階段時發生。  
   
  屬性`Get`程序有至少一個通過程式碼不會傳回值的可能路徑。  

@@ -1,11 +1,6 @@
 ---
-title: "Select...Case 陳述式 (Visual Basic)"
+title: Select...Case 陳述式 (Visual Basic)
 ms.date: 07/20/2015
-ms.prod: .net
-ms.reviewer: 
-ms.suite: 
-ms.technology: devlang-visual-basic
-ms.topic: article
 f1_keywords:
 - vb.Select
 - vb.Case
@@ -26,14 +21,11 @@ helpviewer_keywords:
 - End keyword [Visual Basic], Select Case statements
 - Case statement [Visual Basic], Select...Case
 ms.assetid: 68877b65-5419-4bf0-a465-20cd0e4c7d44
-caps.latest.revision: "15"
-author: dotnet-bot
-ms.author: dotnetcontent
-ms.openlocfilehash: a7527763a05ec32af88c6ba66ef717d839c33154
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.openlocfilehash: 9d24b455d92cbd00b268df26283aab082b7703a1
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="selectcase-statement-visual-basic"></a>Select...Case 陳述式 (Visual Basic)
 執行其中一個陳述式中，運算式的值而定的數個群組。  
@@ -53,10 +45,10 @@ End Select
   
 |詞彙|定義|  
 |---|---|  
-|`testexpression`|必要項。 運算式。 必須評估為其中一種基本資料類型 (`Boolean`， `Byte`， `Char`， `Date`， `Double`， `Decimal`， `Integer`， `Long`， `Object`， `SByte`， `Short`，`Single`， `String`， `UInteger`， `ULong`，和`UShort`)。|  
+|`testexpression`|必要。 運算式。 必須評估為其中一種基本資料類型 (`Boolean`， `Byte`， `Char`， `Date`， `Double`， `Decimal`， `Integer`， `Long`， `Object`， `SByte`， `Short`，`Single`， `String`， `UInteger`， `ULong`，和`UShort`)。|  
 |`expressionlist`|中需要`Case`陳述式。 代表比對值運算式子句的清單`testexpression`。 多個運算式子句會以逗號分隔。 每個子句可以採用下列格式之一：<br /><br /> -   *expression1* `To` *expression2*<br />-[ `Is` ]*關係運算子**運算式*<br />-   *運算式*<br /><br /> 使用`To`關鍵字來指定比對的範圍界限值`testexpression`。 值`expression1`必須小於或等於值`expression2`。<br /><br /> 使用`Is`關鍵字搭配比較運算子 (`=`， `<>`， `<`， `<=`， `>`，或`>=`) 來比對值的指定限制`testexpression`。 如果`Is`關鍵字未提供，它會自動插入之前*關係運算子*。<br /><br /> 只指定表單`expression`的特殊案例會被視為`Is`形成 where*關係運算子*為等號 (`=`)。 此表單會評估為`testexpression`  =  `expression`。<br /><br /> 中的運算式`expressionlist`可以是任何資料類型，提供可以隱含地轉換成的型別`testexpression`和適當`comparisonoperator`適用於兩種類型與正在使用它。|  
-|`statements`|選擇項。 一或多個陳述式下列`Case`，執行的如果`testexpression`符合中的任何子句`expressionlist`。|  
-|`elsestatements`|選擇項。 一或多個陳述式下列`Case Else`，執行的如果`testexpression`不相符在任何子句`expressionlist`其中任一`Case`陳述式。|  
+|`statements`|選擇性。 一或多個陳述式下列`Case`，執行的如果`testexpression`符合中的任何子句`expressionlist`。|  
+|`elsestatements`|選擇性。 一或多個陳述式下列`Case Else`，執行的如果`testexpression`不相符在任何子句`expressionlist`其中任一`Case`陳述式。|  
 |`End Select`|結束的定義`Select`...`Case`建構。|  
   
 ## <a name="remarks"></a>備註  
@@ -82,7 +74,7 @@ End Select
   
  如果中的程式碼`Case`或`Case Else`陳述式區塊就不需要執行更多的陳述式區塊中，它可以使用結束區塊`Exit Select`陳述式。 這將控制項傳送立即之後的陳述式`End Select`。  
   
- `Select Case`語法結構，可以是巢狀。 每個巢狀`Select Case`建構必須具有相符`End Select`陳述式，而且必須完全包含在單一`Case`或`Case Else`陳述式區塊外部`Select Case`建構巢狀內。  
+ `Select Case` 語法結構，可以是巢狀。 每個巢狀`Select Case`建構必須具有相符`End Select`陳述式，而且必須完全包含在單一`Case`或`Case Else`陳述式區塊外部`Select Case`建構巢狀內。  
   
 ## <a name="example"></a>範例  
  下列範例會使用`Select Case`建構來寫入變數的值對應的行`number`。 第二個`Case`陳述式包含的值符合目前的值， `number`，因此陳述式會將寫入 「 介於 6 和 8 （含) 」 執行。  

@@ -1,11 +1,6 @@
 ---
-title: "Date 資料類型 (Visual Basic)"
+title: Date 資料類型 (Visual Basic)
 ms.date: 07/20/2015
-ms.prod: .net
-ms.suite: 
-ms.technology:
-- devlang-visual-basic
-ms.topic: article
 f1_keywords:
 - vb.Date
 helpviewer_keywords:
@@ -20,14 +15,11 @@ helpviewer_keywords:
 - literals [Visual Basic], Date
 - '# specifier for Date literals'
 ms.assetid: d9edf5b0-e85e-438b-a1cf-1f321e7c831b
-caps.latest.revision: 
-author: dotnet-bot
-ms.author: dotnetcontent
-ms.openlocfilehash: 190b40888dc4a42075b7b6b27bdb1bd403a7efb5
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.openlocfilehash: b7827206d6e145b559d9716df5ec4a98ac4ea0b5
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="date-data-type-visual-basic"></a>Date 資料類型 (Visual Basic)
 具有 IEEE 64 位元 (8 位元組) 值，以代表從 0001 年 1 月 1 日到 9999 年 12 月 31 日的日期，以及從上午 (午夜) 12:00:00 到下午 11:59:59.9999999 的時間。 每個增量代表西曆日曆 1 年 1 月 1 日開始之後經過 100 奈秒的時間。 最大值代表 10000 年 1 月 1 開始之前的 100 奈秒。  
@@ -70,7 +62,7 @@ Dim dateInMay As New System.DateTime(1993, 5, 31, 12, 14, 0)
   
 -   **Interop 考量。** 如果您要使用的元件不是針對 .NET Framework 所撰寫 (例如 Automation 或 COM 物件)，請記住，其他環境中的日期/時間類型與 Visual Basic `Date` 類型並不相融。 如果您要將日期/時間引數傳遞至這類元件，請在新的 Visual Basic 程式碼中將它宣告為 `Double` (而不是 `Date`)，並使用轉換方法 <xref:System.DateTime.FromOADate%2A?displayProperty=nameWithType> 和 <xref:System.DateTime.ToOADate%2A?displayProperty=nameWithType>。  
   
--   **類型字元。** `Date`沒有任何常值類型字元或識別項類型字元。 不過，編譯器會將包含在數字符號 (`# #`) 內的常值視為 `Date`。  
+-   **類型字元。** `Date` 沒有任何常值類型字元或識別項類型字元。 不過，編譯器會將包含在數字符號 (`# #`) 內的常值視為 `Date`。  
   
 -   **架構類型。** 在 .NET Framework 中對應的類型為 <xref:System.DateTime?displayProperty=nameWithType> 結構。  
   

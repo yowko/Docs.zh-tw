@@ -1,12 +1,6 @@
 ---
-title: '&amp;運算子 (Visual Basic)'
+title: '&amp; 運算子 (Visual Basic)'
 ms.date: 07/20/2015
-ms.prod: .net
-ms.reviewer: ''
-ms.suite: ''
-ms.technology:
-- devlang-visual-basic
-ms.topic: article
 f1_keywords:
 - vb.&
 helpviewer_keywords:
@@ -16,16 +10,13 @@ helpviewer_keywords:
 - concatenation operators [Visual Basic], syntax
 - strings [Visual Basic], concatenating
 ms.assetid: fefc3d00-cbf1-475c-8c5e-6fb213b3f85a
-caps.latest.revision: 12
-author: dotnet-bot
-ms.author: dotnetcontent
-ms.openlocfilehash: 76c8fc52a518dfe7850a5680b7d4f06f3d09bf73
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.openlocfilehash: 28d8cdb22974d77edf055ab9b2c6c767872e6783
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 05/04/2018
 ---
-# <a name="amp-operator-visual-basic"></a>&amp;運算子 (Visual Basic)
+# <a name="amp-operator-visual-basic"></a>&amp; 運算子 (Visual Basic)
 產生的字串串連兩個運算式。  
   
 ## <a name="syntax"></a>語法  
@@ -36,13 +27,13 @@ result = expression1 & expression2
   
 ## <a name="parts"></a>組件  
  `result`  
- 必要項。 任何`String`或`Object`變數。  
+ 必要。 任何`String`或`Object`變數。  
   
  `expression1`  
- 必要項。 任何運算式資料類型可擴展成`String`。  
+ 必要。 任何運算式資料類型可擴展成`String`。  
   
  `expression2`  
- 必要項。 任何運算式資料類型可擴展成`String`。  
+ 必要。 任何運算式資料類型可擴展成`String`。  
   
 ## <a name="remarks"></a>備註  
  資料類型，是否`expression1`或`expression2`不`String`但可擴展為`String`，它會轉換成`String`。 如果資料類型並不會擴展為`String`，編譯器會產生錯誤。  

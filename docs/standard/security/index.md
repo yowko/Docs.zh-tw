@@ -1,31 +1,20 @@
 ---
 title: .NET Framework 中的安全性
-ms.custom: ''
 ms.date: 03/30/2017
-ms.prod: .net
-ms.reviewer: ''
-ms.suite: ''
 ms.technology: dotnet-standard
-ms.tgt_pltfrm: ''
-ms.topic: article
 helpviewer_keywords:
 - .NET Framework, security
 - security [.NET Framework], about security
 - application development [.NET Framework], security
 - security [.NET Framework]
 ms.assetid: 9a9621d7-8883-4a4f-a874-65e8e09e20a6
-caps.latest.revision: 37
 author: mairaw
 ms.author: mairaw
-manager: wpickett
-ms.workload:
-- dotnet
-- dotnetcore
-ms.openlocfilehash: 7f8600da624ff75ce2dbd5c417f886d6b3b1ac37
-ms.sourcegitcommit: e7f04439d78909229506b56935a1105a4149ff3d
+ms.openlocfilehash: 4f3911a46eaea2ed29287132935b0294ba509227
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 12/23/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="security-in-the-net-framework"></a>.NET Framework 中的安全性
 Common Language Runtime 和 .NET Framework 提供了許多有用的類別和服務，可讓開發人員輕鬆地撰寫安全程式碼，以及讓系統管理員自訂權限授與程式碼，使其可以存取受保護的資源。 此外，執行階段和 .NET Framework 提供實用的類別和服務，方便使用密碼編譯和以角色為基礎的安全性。  

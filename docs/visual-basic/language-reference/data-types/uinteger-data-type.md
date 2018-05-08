@@ -1,11 +1,6 @@
 ---
-title: "UInteger 資料類型"
+title: UInteger 資料類型
 ms.date: 01/31/2018
-ms.prod: .net
-ms.suite: 
-ms.technology:
-- devlang-visual-basic
-ms.topic: article
 f1_keywords:
 - vb.uinteger
 helpviewer_keywords:
@@ -23,11 +18,11 @@ helpviewer_keywords:
 ms.assetid: db7ddd34-4f23-46f5-84dd-8b0f83bb8729
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: ea6d42a604e5a50fab62644034afc82e089792c7
-ms.sourcegitcommit: d2da0142247ef42a219a5d2907f153e62dc6ea0d
+ms.openlocfilehash: a1c734578abd55270dd6feb9060d02691a6aaf8d
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 02/01/2018
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="uinteger-data-type"></a>UInteger 資料類型
 
@@ -80,11 +75,11 @@ Dim number = &H_0FAC_14D7ui
   
 -   **擴展。** `UInteger`資料類型可擴展成`Long`， `ULong`， `Decimal`， `Single`，和`Double`。 這表示您可以將轉換`UInteger`而不會發生這些類型的任何<xref:System.OverflowException?displayProperty=nameWithType>錯誤。  
   
--   **類型字元。** 將常值類型字元附加`UI`到常值會強制其成為`UInteger`資料型別。 `UInteger`有任何識別項類型字元。  
+-   **類型字元。** 將常值類型字元附加`UI`到常值會強制其成為`UInteger`資料型別。 `UInteger` 有任何識別項類型字元。  
   
 -   **架構類型。** 在 .NET Framework 中對應的類型為 <xref:System.UInt32?displayProperty=nameWithType> 結構。  
   
-## <a name="see-also"></a>請參閱  
+## <a name="see-also"></a>另請參閱  
  <xref:System.UInt32>  
  [資料類型](../../../visual-basic/language-reference/data-types/data-type-summary.md)  
  [類型轉換函式](../../../visual-basic/language-reference/functions/type-conversion-functions.md)  

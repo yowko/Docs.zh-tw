@@ -1,13 +1,6 @@
 ---
-title: "x:Static 標記延伸"
-ms.custom: 
+title: x:Static 標記延伸
 ms.date: 03/30/2017
-ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.technology: dotnet-wpf
-ms.tgt_pltfrm: 
-ms.topic: article
 f1_keywords:
 - StaticExtension
 - xStatic
@@ -17,16 +10,11 @@ helpviewer_keywords:
 - Static markup extension in XAML [XAML Services]
 - XAML [XAML Services], x:Static markup extension
 ms.assetid: 056aee79-7cdd-434f-8174-dfc856cad343
-caps.latest.revision: "25"
-author: wadepickett
-ms.author: wpickett
-manager: wpickett
-ms.workload: dotnet
-ms.openlocfilehash: 647bfed7b321a949090f6da047f9b8105d335101
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.openlocfilehash: 980bf6a1bdb19afd5c8d3c798d31037ab8cd7086
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="xstatic-markup-extension"></a>x:Static 標記延伸
 參考任何靜態值的程式碼實體中定義[!INCLUDE[TLA#tla_cls](../../../includes/tlasharptla-cls-md.md)]– 相容的方式。 參考的靜態屬性可以用來提供屬性，以在 XAML 中的值。  
@@ -41,7 +29,7 @@ ms.lasthandoff: 12/22/2017
   
 |||  
 |-|-|  
-|`prefix`|選擇性。 是指對應、 非預設 XAML 命名空間前置詞。 `prefix`顯示明確使用因為您很少會參考來自預設 XAML 命名空間的靜態屬性。 請參閱＜備註＞。|  
+|`prefix`|選擇性。 是指對應、 非預設 XAML 命名空間前置詞。 `prefix` 顯示明確使用因為您很少會參考來自預設 XAML 命名空間的靜態屬性。 請參閱＜備註＞。|  
 |`typeName`|必要。 定義所需的靜態成員的型別名稱。|  
 |`staticMemberName`|必要。 （常數、 靜態屬性、 欄位或列舉值） 所需的靜態值成員的名稱。|  
   
@@ -68,9 +56,9 @@ ms.lasthandoff: 12/22/2017
   
  有兩個其他是可行的 XAML 用法。 不過，這些使用方式的較不常見，因為它們是必要的詳細資訊：  
   
- **物件項目語法：** `<x:Static Member="` `prefix` `:` `typeName` `.` `staticMemberName``" .../>`  
+ **物件項目語法：** `<x:Static Member="` `prefix` `:` `typeName` `.` `staticMemberName` `" .../>`  
   
- **屬性具有明確的初始化字串的成員屬性的語法：** `<` `object`  ``  `property` `="{x:Static Member=` `prefix` `:` `typeName` `.` `staticMemberName``}" .../>`  
+ **屬性具有明確的初始化字串的成員屬性的語法：** `<` `object` `` `property` `="{x:Static Member=` `prefix` `:` `typeName` `.` `staticMemberName` `}" .../>`  
   
  在.NET Framework XAML 服務實作中，這個標記延伸的處理由定義<xref:System.Windows.Markup.StaticExtension>類別。  
   
@@ -87,6 +75,6 @@ ms.lasthandoff: 12/22/2017
   
  如需有關如何使用前置詞和 XAML 命名空間的 WPF 的詳細資訊，請參閱[XAML 命名空間和 WPF XAML 命名空間對應](../../../docs/framework/wpf/advanced/xaml-namespaces-and-namespace-mapping-for-wpf-xaml.md)。  
   
-## <a name="see-also"></a>請參閱  
+## <a name="see-also"></a>另請參閱  
  [x:Type 標記延伸模組](../../../docs/framework/xaml-services/x-type-markup-extension.md)  
  [從 WPF 移轉至 System.Xaml 的類型](../../../docs/framework/xaml-services/types-migrated-from-wpf-to-system-xaml.md)

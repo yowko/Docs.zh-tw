@@ -1,12 +1,6 @@
 ---
 title: Get 陳述式
 ms.date: 07/20/2015
-ms.prod: .net
-ms.reviewer: ''
-ms.suite: ''
-ms.technology:
-- devlang-visual-basic
-ms.topic: article
 f1_keywords:
 - vb.Get
 helpviewer_keywords:
@@ -17,14 +11,11 @@ helpviewer_keywords:
 - Get keyword [Visual Basic]
 - property procedures [Visual Basic], Get statements
 ms.assetid: 56b05cdc-bd64-4dfd-bb12-824eacec6f94
-caps.latest.revision: 19
-author: dotnet-bot
-ms.author: dotnetcontent
-ms.openlocfilehash: c1ff062a5e3bf41794bd5b4c90f1e188d6d97480
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.openlocfilehash: d6a6fdfd191de76871619dea3bd1794b487698aa
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="get-statement"></a>Get 陳述式
 宣告`Get`屬性程序用來擷取屬性的值。  
@@ -41,10 +32,10 @@ End Get
   
 |詞彙|定義|  
 |---|---|  
-|`attributelist`|選擇項。 請參閱[屬性清單](../../../visual-basic/language-reference/statements/attribute-list.md)。|  
+|`attributelist`|選擇性。 請參閱[屬性清單](../../../visual-basic/language-reference/statements/attribute-list.md)。|  
 |`accessmodifier`|上一個選擇性`Get`和`Set`這個屬性中的陳述式。 可以是下列其中一項：<br /><br /> -   [受保護](../../../visual-basic/language-reference/modifiers/protected.md)<br />-   [Friend](../../../visual-basic/language-reference/modifiers/friend.md)<br />-   [私用](../../../visual-basic/language-reference/modifiers/private.md)<br />-   `Protected Friend`<br /><br /> 請參閱[存取 Visual Basic 中的層級](../../../visual-basic/programming-guide/language-features/declared-elements/access-levels.md)。|  
-|`statements`|選擇項。 一或多個陳述式時執行`Get`呼叫屬性程序。|  
-|`End Get`|必要項。 結束的定義`Get`屬性程序。|  
+|`statements`|選擇性。 一或多個陳述式時執行`Get`呼叫屬性程序。|  
+|`End Get`|必要。 結束的定義`Get`屬性程序。|  
   
 ## <a name="remarks"></a>備註  
  每個屬性必須有`Get`屬性程序除非屬性標記為`WriteOnly`。 `Get`程序用來傳回屬性的目前值。  
@@ -69,7 +60,7 @@ End Get
   
 -   **傳回從程序。** 當`Get`程序傳回呼叫程式碼，會繼續執行要求的屬性值的陳述式中。  
   
-     `Get`屬性程序可以傳回值使用[Return 陳述式](../../../visual-basic/language-reference/statements/return-statement.md)或傳回值指派至屬性名稱。 如需詳細資訊，請參閱 「 傳回的值 」 中[Function 陳述式](../../../visual-basic/language-reference/statements/function-statement.md)。  
+     `Get` 屬性程序可以傳回值使用[Return 陳述式](../../../visual-basic/language-reference/statements/return-statement.md)或傳回值指派至屬性名稱。 如需詳細資訊，請參閱 「 傳回的值 」 中[Function 陳述式](../../../visual-basic/language-reference/statements/function-statement.md)。  
   
      `Exit Property`和`Return`陳述式會導致屬性程序立即結束。 任何數目的`Exit Property`和`Return`陳述式可以出現在任何地方程序，且您可以混合`Exit Property`和`Return`陳述式。  
   

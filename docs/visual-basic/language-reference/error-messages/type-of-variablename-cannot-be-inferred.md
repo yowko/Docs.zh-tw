@@ -1,28 +1,19 @@
 ---
-title: 類型 &#39;&lt;variablename&gt;&#39; 無法推斷，因為迴圈繫結和 step 變數不會擴展為相同的型別
+title: 輸入的&#39; &lt;variablename&gt; &#39;無法推斷，因為迴圈繫結和 step 變數不會擴展為相同的型別
 ms.date: 07/20/2015
-ms.prod: .net
-ms.reviewer: ''
-ms.suite: ''
-ms.technology:
-- devlang-visual-basic
-ms.topic: article
 f1_keywords:
 - bc30982
 - vbc30982
 helpviewer_keywords:
 - BC30982
 ms.assetid: 741e85d9-a747-42ad-a1e1-a3f1928aaff5
-caps.latest.revision: 30
-author: dotnet-bot
-ms.author: dotnetcontent
-ms.openlocfilehash: 022e29e38a93d2880bbfa250e65a8b95b39ff140
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.openlocfilehash: d6fdd9445b5336773d150c643c7bf1ca58a0c87a
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 05/04/2018
 ---
-# <a name="type-of-39ltvariablenamegt39-cannot-be-inferred-because-the-loop-bounds-and-the-step-variable-do-not-widen-to-the-same-type"></a>類型 &#39;&lt;variablename&gt;&#39; 無法推斷，因為迴圈繫結和 step 變數不會擴展為相同的型別
+# <a name="type-of-39ltvariablenamegt39-cannot-be-inferred-because-the-loop-bounds-and-the-step-variable-do-not-widen-to-the-same-type"></a>輸入的&#39; &lt;variablename&gt; &#39;無法推斷，因為迴圈繫結和 step 變數不會擴展為相同的型別
 您已經撰寫`For...Next`迴圈下列條件成立，因為編譯器無法推斷迴圈控制變數的資料類型：  
   
 -   未使用 `As` 子句指定迴圈控制變數的資料類型。  

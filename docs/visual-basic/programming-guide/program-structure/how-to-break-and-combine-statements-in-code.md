@@ -1,13 +1,6 @@
 ---
 title: 如何：在程式碼中中斷和合併陳述式 (Visual Basic)
-ms.custom: ''
 ms.date: 07/20/2015
-ms.prod: .net
-ms.reviewer: ''
-ms.suite: ''
-ms.technology:
-- devlang-visual-basic
-ms.topic: article
 f1_keywords:
 - vb._
 helpviewer_keywords:
@@ -28,14 +21,11 @@ helpviewer_keywords:
 - Visual Basic code, line continuation in
 - statements [Visual Basic], line breaks in
 ms.assetid: dea01dad-a8ac-484a-bb3a-8c45a1b1eccc
-caps.latest.revision: 21
-author: dotnet-bot
-ms.author: dotnetcontent
-ms.openlocfilehash: 06702cdc9073065a418b17d198dbb43be4aefca1
-ms.sourcegitcommit: 86adcc06e35390f13c1e372c36d2e044f1fc31ef
+ms.openlocfilehash: 6bca3d62cb3e886ee08b9169d63d4c3a38247f3f
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/26/2018
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="how-to-break-and-combine-statements-in-code-visual-basic"></a>如何：在程式碼中中斷和合併陳述式 (Visual Basic)
 撰寫程式碼，就表示您有時候可能會建立冗長且必須水平捲軸在程式碼編輯器中的陳述式。 雖然這不會影響的方式執行程式碼，但是它困難為您或其他人閱讀的程式碼，因為它會出現在監視器。 在這種情況下，您應該考慮分為數行的單一長陳述式。  

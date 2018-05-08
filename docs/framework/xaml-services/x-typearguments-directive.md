@@ -1,13 +1,6 @@
 ---
-title: "x:TypeArguments 指示詞"
-ms.custom: 
+title: x:TypeArguments 指示詞
 ms.date: 03/30/2017
-ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.technology: dotnet-wpf
-ms.tgt_pltfrm: 
-ms.topic: article
 f1_keywords:
 - x:TypeArguments
 - xTypeArguments
@@ -17,16 +10,11 @@ helpviewer_keywords:
 - TypeArguments attribute in XAML [XAML Services]
 - XAML [XAML Services], x:TypeArguments attribute
 ms.assetid: 86561058-d393-4a44-b5c3-993a4513ea74
-caps.latest.revision: "18"
-author: wadepickett
-ms.author: wpickett
-manager: wpickett
-ms.workload: dotnet
-ms.openlocfilehash: e601fb5895460e52aa21836c542d0b1367527f09
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.openlocfilehash: 94f09bdd3b6ee0b180e30bab0993f0b4e41730ac
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="xtypearguments-directive"></a>x:TypeArguments 指示詞
 將型別引數的泛型型別建構函式的泛型條件約束的傳遞。  
@@ -62,13 +50,13 @@ xmlns:scg="clr-namespace:System.Collections.Generic;assembly=mscorlib"
 ```  
   
 ### <a name="liststring"></a>清單\<字串 >  
- `<scg:List x:TypeArguments="sys:String" ...>`具現化新<xref:System.Collections.Generic.List%601>與<xref:System.String>型別引數。  
+ `<scg:List x:TypeArguments="sys:String" ...>` 具現化新<xref:System.Collections.Generic.List%601>與<xref:System.String>型別引數。  
   
 ### <a name="dictionarystringstring"></a>字典\<字串、 字串 >  
- `<scg:Dictionary x:TypeArguments="sys:String,sys:String" ...>`具現化新<xref:System.Collections.Generic.Dictionary%602>具有兩個<xref:System.String>型別引數。  
+ `<scg:Dictionary x:TypeArguments="sys:String,sys:String" ...>` 具現化新<xref:System.Collections.Generic.Dictionary%602>具有兩個<xref:System.String>型別引數。  
   
 ### <a name="queuekeyvaluepairstringstring"></a>佇列 < KeyValuePair\<String，String >>  
- `<scg:Queue x:TypeArguments="scg:KeyValuePair(sys:String,sys:String)" ...>`具現化新<xref:System.Collections.Generic.Queue%601>，有條件約束的<xref:System.Collections.Generic.KeyValuePair%602>內部條件約束的型別引數<xref:System.String>和<xref:System.String>。  
+ `<scg:Queue x:TypeArguments="scg:KeyValuePair(sys:String,sys:String)" ...>` 具現化新<xref:System.Collections.Generic.Queue%601>，有條件約束的<xref:System.Collections.Generic.KeyValuePair%602>內部條件約束的型別引數<xref:System.String>和<xref:System.String>。  
   
 ## <a name="xaml-2006-and-wpf-generic-xaml-usages"></a>XAML 2006 和 WPF XAML 一般使用方式  
  如需 XAML 2006 使用量和使用 WPF 應用程式的 XAML，有下列限制`x:TypeArguments`以及從 XAML 中一般的泛型型別使用方式：  
@@ -79,7 +67,7 @@ xmlns:scg="clr-namespace:System.Collections.Generic;assembly=mscorlib"
   
 -   泛型的根項目 XAML 物件項目也必須宣告部分類別，使用`x:Class`。 即使定義 WPF 建置動作，也是如此。  
   
--   `x:TypeArguments`無法參考巢狀泛型條件約束。  
+-   `x:TypeArguments` 無法參考巢狀泛型條件約束。  
   
 ## <a name="xaml-2009-or-xaml-2006-with-no-wpf-30-or-wpf-35-dependency"></a>XAML 2009 或不含 WPF 3.0 或 3.5 WPF XAML 2006 相依性  
  在.NET Framework XAML 服務 XAML 2006 或 XAML 2009 被放寬泛型的 XAML 用法的 WPF 相關限制。 您可以具現化的支援類型系統和物件模型可支援的 XAML 標記中的任何位置的泛用的物件項目。  
@@ -92,7 +80,7 @@ xmlns:scg="clr-namespace:System.Collections.Generic;assembly=mscorlib"
   
  在 WPF 中，並為目標時[!INCLUDE[net_v40_long](../../../includes/net-v40-long-md.md)]，您可以使用 XAML 2009 功能與搭配`x:TypeArguments`但僅針對鬆散的 XAML (未標記編譯 XAML)。 WPF 之編譯標記的 XAML 和 BAML 形式的 XAML 目前不支援 XAML 2009 關鍵字和功能。 如果您需要以標記編譯 XAML，您必須以"XAML 2006 and WPF 泛型 XAML 使用方法 」 一節所述的限制來運作。  
   
-## <a name="see-also"></a>請參閱  
+## <a name="see-also"></a>另請參閱  
  [x:Class 指示詞](../../../docs/framework/xaml-services/x-class-directive.md)  
  [x:Type 標記延伸模組](../../../docs/framework/xaml-services/x-type-markup-extension.md)  
  [通用 XAML 語言基本類型的內建類型](../../../docs/framework/xaml-services/built-in-types-for-common-xaml-language-primitives.md)  

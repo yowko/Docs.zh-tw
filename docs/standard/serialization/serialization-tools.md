@@ -1,25 +1,12 @@
 ---
-title: "序列化工具"
-ms.custom: 
+title: 序列化工具
 ms.date: 03/30/2017
-ms.prod: .net
-ms.reviewer: 
-ms.suite: 
-ms.tgt_pltfrm: 
-ms.topic: article
 ms.assetid: 593b675f-938c-44ff-807b-0ca9fea30103
-caps.latest.revision: "4"
-author: dotnet-bot
-ms.author: dotnetcontent
-manager: wpickett
-ms.workload:
-- dotnet
-- dotnetcore
-ms.openlocfilehash: 33da3336cc78763de080eb21e3b84fd4cfdc7716
-ms.sourcegitcommit: e7f04439d78909229506b56935a1105a4149ff3d
+ms.openlocfilehash: c03edbc7747d680f151c4a3ea1857937314b4c78
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 12/23/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="serialization-tools"></a>序列化工具
 本章節內容包含序列化工具的詳細資訊。 您可以從命令列執行所有工具。  
@@ -34,5 +21,5 @@ ms.lasthandoff: 12/23/2017
 |[XML 序列化程式產生器工具 (Sgen.exe)](../../../docs/standard/serialization/xml-serializer-generator-tool-sgen-exe.md)|為指定組態中的型別建立 XML 序列化組件，以改善 <xref:System.Xml.Serialization.XmlSerializer> 的執行階段效能。|  
 |[XML 結構描述定義工具 (Xsd.exe)](../../../docs/standard/serialization/xml-schema-definition-tool-xsd-exe.md)|產生遵循全球資訊網協會 (W3C) 所提議 XML 結構描述定義 (XSD) 語言的 XML 結構描述。 這項工具可以產生 Common Language Runtime 類別和來自 XSD 結構描述檔的 <xref:System.Data.DataSet> 類別。|  
   
-## <a name="see-also"></a>請參閱  
+## <a name="see-also"></a>另請參閱  
  [工具](../../../docs/framework/tools/index.md)
