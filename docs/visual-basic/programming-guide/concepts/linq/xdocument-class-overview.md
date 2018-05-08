@@ -1,22 +1,12 @@
 ---
-title: "XDocument 類別概觀 (Visual Basic)"
-ms.custom: 
+title: XDocument 類別概觀 (Visual Basic)
 ms.date: 07/20/2015
-ms.prod: .net
-ms.reviewer: 
-ms.suite: 
-ms.technology: devlang-visual-basic
-ms.tgt_pltfrm: 
-ms.topic: article
 ms.assetid: 45cb7e71-196a-47da-bfe9-7a5589db1eed
-caps.latest.revision: "3"
-author: dotnet-bot
-ms.author: dotnetcontent
-ms.openlocfilehash: 41b09335ae124ac290d8cd51afda71dfd935b7ff
-ms.sourcegitcommit: bd1ef61f4bb794b25383d3d72e71041a5ced172e
+ms.openlocfilehash: 98ab095d67add2375eaf912ade71114c022b2ebb
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/18/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="xdocument-class-overview-visual-basic"></a>XDocument 類別概觀 (Visual Basic)
 本主題說明 <xref:System.Xml.Linq.XDocument> 類別。  

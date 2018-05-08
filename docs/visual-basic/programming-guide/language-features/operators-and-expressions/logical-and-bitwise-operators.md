@@ -1,12 +1,6 @@
 ---
-title: "Visual Basic 中的邏輯運算子和位元運算子"
-ms.custom: 
+title: Visual Basic 中的邏輯運算子和位元運算子
 ms.date: 07/20/2015
-ms.prod: .net
-ms.reviewer: 
-ms.suite: 
-ms.technology: devlang-visual-basic
-ms.topic: article
 helpviewer_keywords:
 - short-circuiting
 - Boolean expressions
@@ -27,14 +21,11 @@ helpviewer_keywords:
 - OrElse operator [Visual Basic]
 - logical operators [Visual Basic], unary
 ms.assetid: ca474e13-567d-4b1d-a18b-301433705e57
-caps.latest.revision: "22"
-author: dotnet-bot
-ms.author: dotnetcontent
-ms.openlocfilehash: ba48f722a11e93f82ae99aa407c3096a964e5ddd
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.openlocfilehash: 371d28629b39fb2808ca018ea69da3306a31f50c
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="logical-and-bitwise-operators-in-visual-basic"></a>Visual Basic 中的邏輯運算子和位元運算子
 邏輯運算子會比較`Boolean`運算式並傳回`Boolean`結果。 `And`， `Or`， `AndAlso`， `OrElse`，和`Xor`運算子是*二進位*由於它們會採用兩個運算元，而`Not`運算子是*一元*因為它會採用單一運算元。 其中某些運算子也可以執行位元整數值上的邏輯作業。  
@@ -96,7 +87,7 @@ ms.lasthandoff: 11/21/2017
   
 -   結果會被視為十進位。 001 的值是 1 的二進位表示法因此`x`= 1。  
   
- 位元`Or`作業很類似，不同之處在於如果一個或兩個比較的位元為 1 1 指派給結果位元。 `Xor`如果只有其中一個比較 （非兩者） 位元為 1，將 1 指派的結果位元。 `Not`使用單一運算元反轉所有位元，包括正負號位元，並將該值指派給結果。 這表示針對簽署正數，`Not`一律會傳回一個負數值，並為負數，`Not`一律會傳回正或零值。  
+ 位元`Or`作業很類似，不同之處在於如果一個或兩個比較的位元為 1 1 指派給結果位元。 `Xor` 如果只有其中一個比較 （非兩者） 位元為 1，將 1 指派的結果位元。 `Not` 使用單一運算元反轉所有位元，包括正負號位元，並將該值指派給結果。 這表示針對簽署正數，`Not`一律會傳回一個負數值，並為負數，`Not`一律會傳回正或零值。  
   
  `AndAlso`和`OrElse`運算子不支援位元運算。  
   

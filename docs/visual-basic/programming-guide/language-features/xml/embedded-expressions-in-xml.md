@@ -1,14 +1,6 @@
 ---
 title: XML 中內嵌的運算式 (Visual Basic)
-ms.custom: ''
 ms.date: 07/20/2015
-ms.prod: .net
-ms.reviewer: ''
-ms.suite: ''
-ms.technology:
-- devlang-visual-basic
-ms.tgt_pltfrm: ''
-ms.topic: article
 f1_keywords:
 - vb.XmlEmbeddedExpression
 helpviewer_keywords:
@@ -16,14 +8,11 @@ helpviewer_keywords:
 - LINQ to XML [Visual Basic], embedded expressions
 - XML literals [Visual Basic], embedded expressions
 ms.assetid: bf2eb779-b751-4b7c-854f-9f2161482352
-caps.latest.revision: 22
-author: dotnet-bot
-ms.author: dotnetcontent
-ms.openlocfilehash: 3c6dff88d123f33ad4c33e91685104b760ecca3b
-ms.sourcegitcommit: 86adcc06e35390f13c1e372c36d2e044f1fc31ef
+ms.openlocfilehash: f99735df2512fd4b1477bab9126e18f5afbbfa8c
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/26/2018
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="embedded-expressions-in-xml-visual-basic"></a>XML 中內嵌的運算式 (Visual Basic)
 內嵌的運算式可讓您建立 XML 常值包含在執行階段所評估的運算式。 內嵌運算式的語法是`<%=` `expression` `%>`，這會是相同的語法中所使用[!INCLUDE[vstecasp](~/includes/vstecasp-md.md)]。  

@@ -1,25 +1,16 @@
 ---
-title: "如何：撰寫擴充方法 (Visual Basic)"
-ms.custom: 
+title: 如何：撰寫擴充方法 (Visual Basic)
 ms.date: 07/20/2015
-ms.prod: .net
-ms.reviewer: 
-ms.suite: 
-ms.technology: devlang-visual-basic
-ms.topic: article
 helpviewer_keywords:
 - extending data types [Visual Basic]
 - writing extension methods [Visual Basic]
 - extension methods [Visual Basic]
 ms.assetid: fb2739cc-958d-4ef4-a38b-214a74c93413
-caps.latest.revision: "11"
-author: dotnet-bot
-ms.author: dotnetcontent
-ms.openlocfilehash: 65cdabf59886e7457a327ee9cde968a6a73f2280
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.openlocfilehash: e220a025c39757b492be033caeb8924523515804
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="how-to-write-an-extension-method-visual-basic"></a>如何：撰寫擴充方法 (Visual Basic)
 擴充方法可讓您將方法加入至現有的類別。 可以呼叫擴充方法，就好像該類別的執行個體。  

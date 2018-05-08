@@ -1,28 +1,17 @@
 ---
 title: Language-Integrated Query (LINQ) (Visual Basic)
-ms.custom: ''
 ms.date: 07/20/2015
-ms.prod: .net
-ms.reviewer: ''
-ms.suite: ''
-ms.technology:
-- devlang-visual-basic
-ms.tgt_pltfrm: ''
-ms.topic: article
 ms.assetid: a99371f7-097c-49a0-b62b-0e31c34aad0e
-caps.latest.revision: 4
-author: dotnet-bot
-ms.author: dotnetcontent
-ms.openlocfilehash: 4c465d18ec8b728b9b06d3de70e55b1275d1a565
-ms.sourcegitcommit: bd1ef61f4bb794b25383d3d72e71041a5ced172e
+ms.openlocfilehash: 7f16f8f8b806466fb7c73689731094c106e68c9f
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/18/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="language-integrated-query-linq-visual-basic"></a>Language-Integrated Query (LINQ) (Visual Basic)
 LINQ 是可將強大查詢功能擴充至 Visual Basic 語言語法的一組功能。 LINQ 推出標準且容易學習的資料查詢與更新模式，而且這項技術可擴充為支援幾乎所有類型的資料存放區。  .NET Framework 包括 LINQ 提供者組件，可讓您使用 LINQ 搭配 .NET Framework 集合、SQL Server 資料庫、ADO.NET 資料集和 XML 文件。  
   
-## <a name="in-this-section"></a>本章節內容  
+## <a name="in-this-section"></a>本節內容  
  [LINQ 簡介 (Visual Basic)](../../../../visual-basic/programming-guide/concepts/linq/introduction-to-linq.md)  
  提供您可撰寫之應用程式類型以及可使用 LINQ 查詢解決之問題類型的一般簡介。  
   

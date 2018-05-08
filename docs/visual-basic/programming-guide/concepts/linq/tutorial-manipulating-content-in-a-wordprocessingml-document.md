@@ -1,31 +1,21 @@
 ---
-title: "教學課程： 操作 WordprocessingML 文件 (Visual Basic) 中的內容"
-ms.custom: 
+title: 教學課程： 操作 WordprocessingML 文件 (Visual Basic) 中的內容
 ms.date: 07/20/2015
-ms.prod: .net
-ms.reviewer: 
-ms.suite: 
-ms.technology: devlang-visual-basic
-ms.tgt_pltfrm: 
-ms.topic: article
 ms.assetid: f8028ba8-2dd1-4425-930c-8cc23176ebbc
-caps.latest.revision: "3"
-author: dotnet-bot
-ms.author: dotnetcontent
-ms.openlocfilehash: cd84b8cc9f3c959913b2eac943e7fac16862d4c8
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.openlocfilehash: f43f193ed637656cef98583075ae0cb35e93c337
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="tutorial-manipulating-content-in-a-wordprocessingml-document-visual-basic"></a>教學課程： 操作 WordprocessingML 文件 (Visual Basic) 中的內容
 本教學課程顯示如何應用功能性轉換方法與 LINQ to XML 來管理 XML 文件。 Visual Basic 範例查詢，並管理 Microsoft Word 所儲存的 Office Open XML WordprocessingML 文件中的資訊。  
   
  如需詳細資訊，請參閱 [OpenXML Developer](http://go.microsoft.com/fwlink/?LinkID=95573) 網站。  
   
-## <a name="in-this-section"></a>本章節內容  
+## <a name="in-this-section"></a>本節內容  
   
-|主題|說明|  
+|主題|描述|  
 |-----------|-----------------|  
 |[WordprocessingML 文件的 (Visual Basic)](../../../../visual-basic/programming-guide/concepts/linq/shape-of-wordprocessingml-documents.md)|提供 WordprocessingML 文件詳細資料的快速說明。|  
 |[建立來源 Office Open XML 文件 (Visual Basic)](../../../../visual-basic/programming-guide/concepts/linq/creating-the-source-office-open-xml-document.md)|提供逐步指示來建立此教學課程中，查詢的來源文件。|  

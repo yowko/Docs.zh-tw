@@ -1,13 +1,6 @@
 ---
 title: Lambda 運算式 (Visual Basic)
-ms.custom: ''
 ms.date: 07/20/2015
-ms.prod: .net
-ms.reviewer: ''
-ms.suite: ''
-ms.technology:
-- devlang-visual-basic
-ms.topic: article
 f1_keywords:
 - vb.LambdaFunction
 helpviewer_keywords:
@@ -16,14 +9,11 @@ helpviewer_keywords:
 - expressions [Visual Basic], lambda
 - inline functions [Visual Basic]
 ms.assetid: 137064b0-3928-4bfa-ba71-c3f9cbd951e2
-caps.latest.revision: 52
-author: dotnet-bot
-ms.author: dotnetcontent
-ms.openlocfilehash: 69ac88d295420277e99058d0f80a5ae1c2ce2e39
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.openlocfilehash: c45500dc7a1e59a7ac83d43b826ca4cbfca6efb3
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="lambda-expressions-visual-basic"></a>Lambda 運算式 (Visual Basic)
 A *lambda 運算式*函式或副程式沒有可用於委派是有效的名稱。 Lambda 運算式可以是函式或副程式，而且可以是單行或多行。 您可以在 lambda 運算式，從目前的範圍傳遞值。  
@@ -70,7 +60,7 @@ A *lambda 運算式*函式或副程式沒有可用於委派是有效的名稱。
   
 -   您可以使用指定的 lambda 運算式參數的資料型別`As`推斷關鍵字或參數的資料類型。 必須推斷資料型別或所有必須指定所有參數。  
   
--   `Optional`和`Paramarray`參數不允許使用。  
+-   `Optional` 和`Paramarray`參數不允許使用。  
   
 -   不允許泛型參數。  
   
@@ -118,7 +108,7 @@ End Class
   
  如需如何建立和使用非同步方法的詳細資訊，請參閱[使用 Async 和 Await 進行非同步程式設計](../../../../visual-basic/programming-guide/concepts/async/index.md)。  
   
-##  <a name="context"></a>內容  
+##  <a name="context"></a> 內容  
  Lambda 運算式內定義的範圍與共用其內容。 其包含的範圍中撰寫任何程式碼的相同存取權限。 這包括存取成員變數、 函式和子函數， `Me`，在包含的範圍中的區域變數和參數。  
   
  存取區域變數和參數中包含的範圍可以擴充到超出該範圍的存留期間。 只要參考 lambda 運算式的委派不適用於記憶體回收，會保留原始的環境變數的存取權。 在下列範例中，變數`target`本機`makeTheGame`，此方法用於 lambda 運算式`playTheGame`定義。 請注意，傳回的 lambda 運算式中，指派給`takeAGuess`中`Main`，仍然可以存取區域變數`target`。  
@@ -127,15 +117,15 @@ End Class
   
  下列範例會示範各種不同的存取權限的巢狀的 lambda 運算式。 從執行傳回的 lambda 運算式時`Main`為`aDel`，它會存取這些項目：  
   
--   在定義類別的欄位：`aField`  
+-   在定義類別的欄位： `aField`  
   
--   在定義類別的屬性：`aProp`  
+-   在定義類別的屬性： `aProp`  
   
--   方法的參數`functionWithNestedLambda`，它會定義：`level1`  
+-   方法的參數`functionWithNestedLambda`，它會定義： `level1`  
   
--   本機變數`functionWithNestedLambda`:`localVar`  
+-   本機變數`functionWithNestedLambda`: `localVar`  
   
--   在它巢狀 lambda 運算式的參數：`level2`  
+-   在它巢狀 lambda 運算式的參數： `level2`  
   
  [!code-vb[VbVbalrLambdas#9](../../../../visual-basic/language-reference/operators/codesnippet/VisualBasic/lambda-expressions_6.vb)]  
   

@@ -1,13 +1,6 @@
 ---
 title: 如何：建立程序 (Visual Basic)
-ms.custom: ''
 ms.date: 07/20/2015
-ms.prod: .net
-ms.reviewer: ''
-ms.suite: ''
-ms.technology:
-- devlang-visual-basic
-ms.topic: article
 helpviewer_keywords:
 - procedures [Visual Basic], defining
 - Visual Basic code, procedures
@@ -15,14 +8,11 @@ helpviewer_keywords:
 - procedure declarations
 - procedures [Visual Basic], about procedures
 ms.assetid: 4f779247-0b50-47e8-9e5c-ab5cf39ac0d2
-caps.latest.revision: 27
-author: dotnet-bot
-ms.author: dotnetcontent
-ms.openlocfilehash: 5e23358e26dbc993b0f9290a8491a3c66717b4c6
-ms.sourcegitcommit: 86adcc06e35390f13c1e372c36d2e044f1fc31ef
+ms.openlocfilehash: da4cc299fbe35702990a62b5bf824e3ac71d5902
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/26/2018
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="how-to-create-a-procedure-visual-basic"></a>如何：建立程序 (Visual Basic)
 您將開始的宣告陳述式之間的程序 (`Sub`或`Function`) 和結束的宣告陳述式 (`End Sub`或`End Function`)。 所有程序的程式碼都位於這些陳述式之間。  
