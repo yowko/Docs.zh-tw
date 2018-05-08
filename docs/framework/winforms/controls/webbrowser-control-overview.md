@@ -1,31 +1,17 @@
 ---
-title: "WebBrowser 控制項概觀"
-ms.custom: 
+title: WebBrowser 控制項概觀
 ms.date: 03/30/2017
-ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.technology:
-- dotnet-winforms
-ms.tgt_pltfrm: 
-ms.topic: article
 f1_keywords:
 - WebBrowser
 helpviewer_keywords:
 - WebBrowser control [Windows Forms], about
 - Web pages [Windows Forms], displaying in applications
 ms.assetid: 6e3e1cc2-9c48-4136-9659-e99e4e60b7e9
-caps.latest.revision: 
-author: dotnet-bot
-ms.author: dotnetcontent
-manager: wpickett
-ms.workload:
-- dotnet
-ms.openlocfilehash: d2c1ed93769cc91d9622a86ea2d894cea57f5bcd
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.openlocfilehash: 2e69b71b3e354101d950d6f7011b13fc7c0de030
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="webbrowser-control-overview"></a>WebBrowser 控制項概觀
 <xref:System.Windows.Forms.WebBrowser>控制項提供 WebBrowser ActiveX 控制項 managed 包裝函式。 Managed 包裝函式可讓您在 Windows Form 用戶端應用程式中顯示網頁。 您可以使用<xref:System.Windows.Forms.WebBrowser>控制項複製 Internet Explorer Web 瀏覽功能，您的應用程式，或者您可以停用預設的 Internet Explorer 功能和控制項做為簡單的 HTML 文件檢視器。 您也可以使用此控制項將 DHTML 為基礎的使用者介面項目加入至表單，隱藏的事實，它們會裝載在<xref:System.Windows.Forms.WebBrowser>控制項。 這種方法可讓您順暢地結合到單一應用程式的 Windows Form 控制項使用的 Web 控制項。  
@@ -40,20 +26,20 @@ ms.lasthandoff: 12/22/2017
 |名稱|描述|  
 |----------|-----------------|  
 |<xref:System.Windows.Forms.WebBrowser.Document%2A> 屬性|取得物件，提供受管理的存取權，目前網頁的 HTML 文件物件模型 (DOM)。|  
-|<xref:System.Windows.Forms.WebBrowser.DocumentCompleted>事件|當網頁載入完畢時，就會發生。|  
+|<xref:System.Windows.Forms.WebBrowser.DocumentCompleted> 事件|當網頁載入完畢時，就會發生。|  
 |<xref:System.Windows.Forms.WebBrowser.DocumentText%2A> 屬性|取得或設定內容的目前網頁的 HTML。|  
 |<xref:System.Windows.Forms.WebBrowser.DocumentTitle%2A> 屬性|取得目前網頁的標題。|  
 |<xref:System.Windows.Forms.WebBrowser.GoBack%2A> 方法|巡覽至歷程記錄中的上一頁。|  
 |<xref:System.Windows.Forms.WebBrowser.GoForward%2A> 方法|巡覽至歷程記錄的下一個頁面。|  
 |<xref:System.Windows.Forms.WebBrowser.Navigate%2A> 方法|巡覽至指定的 URL。|  
-|<xref:System.Windows.Forms.WebBrowser.Navigating>事件|發生於之前瀏覽開始，啟用取消的動作。|  
+|<xref:System.Windows.Forms.WebBrowser.Navigating> 事件|發生於之前瀏覽開始，啟用取消的動作。|  
 |<xref:System.Windows.Forms.WebBrowser.ObjectForScripting%2A> 屬性|取得或設定指令碼的網頁可以用來與您的應用程式通訊的物件。|  
 |<xref:System.Windows.Forms.WebBrowser.Print%2A> 方法|列印目前頁面。|  
 |<xref:System.Windows.Forms.WebBrowser.Refresh%2A> 方法|重新載入目前頁面。|  
 |<xref:System.Windows.Forms.WebBrowser.Stop%2A> 方法|中止目前的巡覽和停止音效及動畫等動態頁面項目。|  
 |<xref:System.Windows.Forms.WebBrowser.Url%2A> 屬性|取得或設定目前網頁的 URL。 設定這個屬性可巡覽至新的 URL 控制項。|  
   
-## <a name="see-also"></a>請參閱  
+## <a name="see-also"></a>另請參閱  
  <xref:System.Windows.Forms.WebBrowser>  
  <xref:System.Windows.Forms.WebBrowserDocumentCompletedEventArgs>  
  <xref:System.Windows.Forms.WebBrowserDocumentCompletedEventHandler>  

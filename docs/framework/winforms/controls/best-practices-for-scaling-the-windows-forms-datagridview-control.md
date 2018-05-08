@@ -1,13 +1,6 @@
 ---
-title: "縮放 Windows Form DataGridView 控制項的最佳作法"
-ms.custom: 
+title: 縮放 Windows Form DataGridView 控制項的最佳作法
 ms.date: 03/30/2017
-ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.technology: dotnet-winforms
-ms.tgt_pltfrm: 
-ms.topic: article
 helpviewer_keywords:
 - DataGridView control [Windows Forms], row sharing
 - data grids [Windows Forms], best practices
@@ -16,16 +9,11 @@ helpviewer_keywords:
 - best practices [Windows Forms], dataGridView control
 - DataGridView control [Windows Forms], scaling
 ms.assetid: 8321a8a6-6340-4fd1-b475-fa090b905aaf
-caps.latest.revision: "31"
-author: dotnet-bot
-ms.author: dotnetcontent
-manager: wpickett
-ms.workload: dotnet
-ms.openlocfilehash: ecd629bd38e08c8d6909ee4ad771f17b1554fc80
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.openlocfilehash: 91153df539871de571375d7bf6d49d712a0c43b2
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="best-practices-for-scaling-the-windows-forms-datagridview-control"></a>縮放 Windows Form DataGridView 控制項的最佳作法
 <xref:System.Windows.Forms.DataGridView>控制項用來提供最大的延展性。 如果您需要顯示大量的資料，您應該遵循本主題，以避免消耗大量的記憶體，或降低使用者介面 (UI) 的回應中所述的指導方針。 本主題將討論下列問題：  
@@ -124,7 +112,7 @@ ms.lasthandoff: 12/22/2017
   
  若要防止資料列變成非共用，請使用下列指導方針：  
   
--   避免索引<xref:System.Windows.Forms.DataGridView.Rows%2A>集合或逐一查看其與`foreach`迴圈。 您通常不需要直接存取資料列。 <xref:System.Windows.Forms.DataGridView>在資料列操作的方法會採用資料列索引引數，而不是資料列執行個體。 此外，資料列相關的事件處理常式會接收包含可用來操作資料列，而不會使其變成非共用的資料列屬性的事件引數物件。  
+-   避免索引<xref:System.Windows.Forms.DataGridView.Rows%2A>集合或逐一查看其與`foreach`迴圈。 您通常不需要直接存取資料列。 <xref:System.Windows.Forms.DataGridView> 在資料列操作的方法會採用資料列索引引數，而不是資料列執行個體。 此外，資料列相關的事件處理常式會接收包含可用來操作資料列，而不會使其變成非共用的資料列屬性的事件引數物件。  
   
 -   如果您需要存取資料列的物件，使用<xref:System.Windows.Forms.DataGridViewRowCollection.SharedRow%2A?displayProperty=nameWithType>方法並傳入資料列的實際的索引。 不過請注意，修改共用的資料列物件擷取透過這個方法會修改共用此物件的所有資料列。 新記錄的資料列不會與共用其他資料列，不過，讓它不會影響當您修改任何其他資料列。 請注意不同共用資料列所代表的資料列可能會有不同的捷徑功能表。 若要從共用資料列的執行個體擷取正確的捷徑功能表，請使用<xref:System.Windows.Forms.DataGridViewRow.GetContextMenuStrip%2A>方法並傳入資料列的實際的索引。 如果您存取共用的資料列<xref:System.Windows.Forms.DataGridViewRow.ContextMenuStrip%2A>屬性相反地，它會使用共用資料列的索引，-1 並將不會擷取正確的快顯功能表。  
   
@@ -146,7 +134,7 @@ ms.lasthandoff: 12/22/2017
   
 -   請勿呼叫`Sort(IComparer)`多載<xref:System.Windows.Forms.DataGridView.Sort%2A>方法。 使用自訂比較子排序會導致變成非共用的所有資料列。  
   
-## <a name="see-also"></a>請參閱  
+## <a name="see-also"></a>另請參閱  
  <xref:System.Windows.Forms.DataGridView>  
  [Windows Forms DataGridView 控制項中的效能微調](../../../../docs/framework/winforms/controls/performance-tuning-in-the-windows-forms-datagridview-control.md)  
  [Windows Forms DataGridView 控制項中的虛擬模式](../../../../docs/framework/winforms/controls/virtual-mode-in-the-windows-forms-datagridview-control.md)  

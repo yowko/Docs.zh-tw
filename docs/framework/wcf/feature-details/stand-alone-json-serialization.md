@@ -1,29 +1,15 @@
 ---
 title: 獨立 JSON 序列化
-ms.custom: ''
 ms.date: 03/30/2017
-ms.prod: .net-framework
-ms.reviewer: ''
-ms.suite: ''
-ms.technology:
-- dotnet-clr
-ms.tgt_pltfrm: ''
-ms.topic: article
 ms.assetid: 312bd7b2-1300-4b12-801e-ebe742bd2287
-caps.latest.revision: 32
-author: dotnet-bot
-ms.author: dotnetcontent
-manager: wpickett
-ms.workload:
-- dotnet
-ms.openlocfilehash: 4d3c7234c25b0a968ca67b58a560e8c8b55bb73d
-ms.sourcegitcommit: 94d33cadc5ff81d2ac389bf5f26422c227832052
+ms.openlocfilehash: 5a157dfd55e722b3e7be967a26e8d2ff5fd54afe
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/30/2018
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="stand-alone-json-serialization"></a>獨立 JSON 序列化
-JSON (JavaScript 物件標記法) 是專為在瀏覽器內的網頁上執行的 JavaScript 程式碼而設計的資料格式。 它是 [!INCLUDE[indigo1](../../../../includes/indigo1-md.md)] 中建立的 ASP.NET AJAX 服務所使用的預設資料格式。  
+JSON (JavaScript 物件標記法) 是專為在瀏覽器內的網頁上執行的 JavaScript 程式碼而設計的資料格式。 它是建立 Windows Communication Foundation (WCF) 的 ASP.NET AJAX 服務所使用的預設資料格式。  
   
  此外，在未與 ASP.NET 整合的情況下建立 AJAX 服務時，也可以使用這個格式，在這種情況中，XML 是預設值，不過您也可以選擇 JSON。  
   
@@ -87,7 +73,7 @@ JSON (JavaScript 物件標記法) 是專為在瀏覽器內的網頁上執行的 
   
 -   JSON 表示法會忽略任何使用 <xref:System.Runtime.Serialization.CollectionDataContractAttribute> 的自訂。  
   
--   您不可以直接使用字典來搭配 JSON。 字典\<字串、 物件 > 可能不支援在相同方式[!INCLUDE[indigo2](../../../../includes/indigo2-md.md)]如使用其他 JSON 技術般。 例如，如果字典中 "abc" 是對應至 "xyz" 而 "def" 是對應至 42，則 JSON 表示法不是 {"abc":"xyz","def":42}，而是 [{"Key":"abc","Value":"xyz"},{"Key":"def","Value":42}]。  
+-   您不可以直接使用字典來搭配 JSON。 字典\<字串、 物件 > 可能不支援在 WCF 中相同的方式如使用其他 JSON 技術般。 例如，如果字典中 "abc" 是對應至 "xyz" 而 "def" 是對應至 42，則 JSON 表示法不是 {"abc":"xyz","def":42}，而是 [{"Key":"abc","Value":"xyz"},{"Key":"def","Value":42}]。  
   
 -   如果您希望直接使用 JSON (動態存取索引鍵和值，而不需預先定義嚴謹的合約)，可以選擇數個選項：  
   
@@ -108,7 +94,7 @@ JSON (JavaScript 物件標記法) 是專為在瀏覽器內的網頁上執行的 
  在還原序列化時，JSON 型別不必符合上述表格。 例如，`Int` 通常會對應至 JSON 數字，但是它也可以成功地從 JSON 字串還原序列化，只要該字串包含有效數字。 也就是說，只要有一個 `Int` 資料成員稱為 "q"，{"q":42} 和 {"q":"42"} 兩者皆為有效。  
   
 ### <a name="polymorphism"></a>多型  
- 多型序列化是由可序列化必須是基底型別之衍生型別的能力所組成。 與支援 XML 序列化的方式相比，JSON 序列化會藉由 [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] 支援這項功能。 例如，您可以將序列化`MyDerivedType`其中`MyBaseType`預期，或序列化`Int`其中`Object`預期。  
+ 多型序列化是由可序列化必須是基底型別之衍生型別的能力所組成。 這是由 WCF 支援 XML 序列化的方式相比支援 JSON 序列化。 例如，您可以將序列化`MyDerivedType`其中`MyBaseType`預期，或序列化`Int`其中`Object`預期。  
   
  如果必須是基底型別，則在還原序列化衍生型別時可能會遺失型別資訊，除非您還原序列化複雜型別。 例如，如果序列化必須是 <xref:System.Uri> 的 <xref:System.Object>，則會產生 JSON 字串。 如果這個字串接著再還原序列化為 <xref:System.Object>，則會傳回 .NET <xref:System.String>。 還原序列化程式並不知道字串初始的型別為 <xref:System.Uri>。 一般而言，當必須是 <xref:System.Object> 時，所有的 JSON 字串都會還原序列化為 .NET 字串，並且所有用於序列化 .NET 集合、字典和陣列的 JSON 陣列都會還原序列化為 <xref:System.Array> 型別的 .NET <xref:System.Object>，不論實際的原始型別為何。 JSON 布林值會對應至 .NET <xref:System.Boolean>。 然而，當必須是 <xref:System.Object> 時，JSON 數字會還原序列化為 .NET <xref:System.Int32>、<xref:System.Decimal> 或 <xref:System.Double>，其中會自動選取最適合的型別。  
   
@@ -151,7 +137,7 @@ http://example.com/myservice.svc/MyOperation?number=7&p={"name":"John","age":42}
   
  ASP.NET AJAX 用戶端 JavaScript 程式碼會將此類字串自動轉換成 JavaScript `DateTime` 執行個體。 如果在 .NET 中有其他字串有不是 <xref:System.DateTime> 型別的類似格式，它們也會被轉換。  
   
- "/"字元會逸出才只會發生的轉換 (亦即，JSON 外觀類似"\\/Date(700000+0500)\\/")，且基於此原因，[!INCLUDE[indigo2](../../../../includes/indigo2-md.md)]的 JSON 編碼器 (啟用<xref:System.ServiceModel.WebHttpBinding>) 永遠會逸出"/"字元。  
+ "/"字元會逸出才只會發生的轉換 (亦即，JSON 外觀類似"\\/Date(700000+0500)\\/")，以及此原因 WCF 的 JSON 編碼器 (啟用<xref:System.ServiceModel.WebHttpBinding>) 永遠會逸出"/"字元。  
   
 ### <a name="xml-in-json-strings"></a>JSON 字串中的 XML  
   
@@ -209,7 +195,7 @@ http://example.com/myservice.svc/MyOperation?number=7&p={"name":"John","age":42}
 {"x":50,"y":70,"radius":10,"__type":"Circle:#MyApp.Shapes"}  
 ```  
   
- <xref:System.Runtime.Serialization.Json.DataContractJsonSerializer> 所使用的 [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] 和 ASP.NET AJAX 用戶端頁面永遠會先發出型別提示。  
+ 這兩個<xref:System.Runtime.Serialization.Json.DataContractJsonSerializer>使用 WCF 和 ASP.NET AJAX 用戶端頁面永遠發出型別提示第一次。  
   
 #### <a name="type-hints-apply-only-to-complex-types"></a>型別提示只套用至複雜型別  
  非複雜型別是無法發出型別提示的。 例如，如果作業有 <xref:System.Object> 傳回型別但傳回 Circle，JSON 表示可以如稍早所示，並保留型別資訊。 然而，如果傳回 URI，JSON 表示就是字串，而用於代表 URI 的字串會遺失。 這不僅適用於基本型別，也適用於集合和陣列。  

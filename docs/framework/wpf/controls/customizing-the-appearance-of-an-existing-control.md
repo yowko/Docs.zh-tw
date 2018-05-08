@@ -1,13 +1,6 @@
 ---
-title: "透過建立 ControlTemplate 自訂現有控制項的外觀"
-ms.custom: 
+title: 透過建立 ControlTemplate 自訂現有控制項的外觀
 ms.date: 03/30/2017
-ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.technology: dotnet-wpf
-ms.tgt_pltfrm: 
-ms.topic: article
 dev_langs:
 - csharp
 - vb
@@ -19,19 +12,14 @@ helpviewer_keywords:
 - controls [WPF], appearance specified by state
 - templates [WPF], custom for existing controls
 ms.assetid: 678dd116-43a2-4b8c-82b5-6b826f126e31
-caps.latest.revision: "12"
-author: dotnet-bot
-ms.author: dotnetcontent
-manager: wpickett
-ms.workload: dotnet
-ms.openlocfilehash: 0019b739c794cbffa62b49749371c2a19f752267
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.openlocfilehash: bbdc79fabf8dbe344baae66d718d79ac6375db7e
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="customizing-the-appearance-of-an-existing-control-by-creating-a-controltemplate"></a>透過建立 ControlTemplate 自訂現有控制項的外觀
-<a name="introduction"></a>A<xref:System.Windows.Controls.ControlTemplate>指定的視覺化結構和控制項的視覺行為。 您可以自訂控制項的外觀，提供新的 it <xref:System.Windows.Controls.ControlTemplate>。 當您建立<xref:System.Windows.Controls.ControlTemplate>，您不需要變更它的功能取代現有的控制項的外觀。 例如，您可以讓按鈕在您的應用程式而不是預設的方形，round，但仍會引發按鈕<xref:System.Windows.Controls.Primitives.ButtonBase.Click>事件。  
+<a name="introduction"></a> A<xref:System.Windows.Controls.ControlTemplate>指定的視覺化結構和控制項的視覺行為。 您可以自訂控制項的外觀，提供新的 it <xref:System.Windows.Controls.ControlTemplate>。 當您建立<xref:System.Windows.Controls.ControlTemplate>，您不需要變更它的功能取代現有的控制項的外觀。 例如，您可以讓按鈕在您的應用程式而不是預設的方形，round，但仍會引發按鈕<xref:System.Windows.Controls.Primitives.ButtonBase.Click>事件。  
   
  本主題說明不同的部分<xref:System.Windows.Controls.ControlTemplate>，示範如何建立簡單<xref:System.Windows.Controls.ControlTemplate>如<xref:System.Windows.Controls.Button>，並說明如何了解控制項的控制項合約，可讓您可以自訂其外觀。 因為您建立<xref:System.Windows.Controls.ControlTemplate>中[!INCLUDE[TLA2#tla_xaml](../../../../includes/tla2sharptla-xaml-md.md)]，您可以變更控制項的外觀，而不需要撰寫任何程式碼。 您也可以使用設計工具 (例如 Microsoft Expression Blend) 來建立自訂控制項樣板。 本主題說明中的範例[!INCLUDE[TLA2#tla_xaml](../../../../includes/tla2sharptla-xaml-md.md)]，自訂的外觀<xref:System.Windows.Controls.Button>，並列出完整的範例，本主題的結尾。 如需有關使用 Expression Blend 的詳細資訊，請參閱[設定支援範本之控制項的樣式](http://go.microsoft.com/fwlink/?LinkId=161153)。  
   
@@ -93,7 +81,7 @@ ms.lasthandoff: 12/22/2017
   
  在此範例中，<xref:System.Windows.Controls.Grid>具有其<xref:System.Windows.Controls.Panel.Background%2A?displayProperty=nameWithType>屬性範本繫結至<xref:System.Windows.Controls.Control.Background%2A?displayProperty=nameWithType>。 因為<xref:System.Windows.Controls.Panel.Background%2A?displayProperty=nameWithType>是範本繫結，您可以建立多個使用相同的按鈕<xref:System.Windows.Controls.ControlTemplate>並設定<xref:System.Windows.Controls.Control.Background%2A?displayProperty=nameWithType>每個按鈕上的不同值。 如果<xref:System.Windows.Controls.Control.Background%2A?displayProperty=nameWithType>已不是範本的內容繫結中項目的<xref:System.Windows.Controls.ControlTemplate>，設定<xref:System.Windows.Controls.Control.Background%2A?displayProperty=nameWithType>按鈕的上會有任何影響按鈕的外觀。  
   
- 請注意，兩個屬性的名稱不一定要相同。 在上述範例中，<xref:System.Windows.Controls.Control.HorizontalContentAlignment%2A?displayProperty=nameWithType>屬性<xref:System.Windows.Controls.Button>範本繫結至<xref:System.Windows.FrameworkElement.HorizontalAlignment%2A?displayProperty=nameWithType>屬性<xref:System.Windows.Controls.ContentPresenter>。 這可讓您以水平方式置放按鈕的內容。 <xref:System.Windows.Controls.ContentPresenter>沒有屬性，名為`HorizontalContentAlignment`，但<xref:System.Windows.Controls.Control.HorizontalContentAlignment%2A?displayProperty=nameWithType>可以繫結至<xref:System.Windows.FrameworkElement.HorizontalAlignment%2A?displayProperty=nameWithType>。 當您的範本繫結某個屬性時，請確定目標與來源屬性是相同類型。  
+ 請注意，兩個屬性的名稱不一定要相同。 在上述範例中，<xref:System.Windows.Controls.Control.HorizontalContentAlignment%2A?displayProperty=nameWithType>屬性<xref:System.Windows.Controls.Button>範本繫結至<xref:System.Windows.FrameworkElement.HorizontalAlignment%2A?displayProperty=nameWithType>屬性<xref:System.Windows.Controls.ContentPresenter>。 這可讓您以水平方式置放按鈕的內容。 <xref:System.Windows.Controls.ContentPresenter> 沒有屬性，名為`HorizontalContentAlignment`，但<xref:System.Windows.Controls.Control.HorizontalContentAlignment%2A?displayProperty=nameWithType>可以繫結至<xref:System.Windows.FrameworkElement.HorizontalAlignment%2A?displayProperty=nameWithType>。 當您的範本繫結某個屬性時，請確定目標與來源屬性是相同類型。  
   
  <xref:System.Windows.Controls.Control>類別會定義必須由造成影響在控制項上的，當這些設定控制項範本的數個屬性。 如何<xref:System.Windows.Controls.ControlTemplate>屬性取決於屬性的使用。 <xref:System.Windows.Controls.ControlTemplate>必須使用下列方式之一的屬性：  
   
@@ -200,9 +188,9 @@ ms.lasthandoff: 12/22/2017
   
 |限制的類型|來源的值|目標的值|  
 |-------------------------|-------------------|-----------------|  
-|從指定的狀態到另一個指定的狀態|名稱<xref:System.Windows.VisualState>|名稱<xref:System.Windows.VisualState>|  
-|從任何狀態到指定的狀態|未設定|名稱<xref:System.Windows.VisualState>|  
-|從指定的狀態到任何狀態|名稱<xref:System.Windows.VisualState>|未設定|  
+|從指定的狀態到另一個指定的狀態|名稱 <xref:System.Windows.VisualState>|名稱 <xref:System.Windows.VisualState>|  
+|從任何狀態到指定的狀態|未設定|名稱 <xref:System.Windows.VisualState>|  
+|從指定的狀態到任何狀態|名稱 <xref:System.Windows.VisualState>|未設定|  
 |從任何狀態到任何其他狀態|未設定|未設定|  
   
  您可以有多個<xref:System.Windows.VisualTransition>中的物件<xref:System.Windows.VisualStateGroup>，參考相同的狀態，但它們將會使用上表所指定的順序。 在下列範例中，有兩個<xref:System.Windows.VisualTransition>物件。 控制當轉換從`Pressed`狀態`MouseOver`狀態， <xref:System.Windows.VisualTransition> ，同時具有<xref:System.Windows.VisualTransition.From%2A>和<xref:System.Windows.VisualTransition.To%2A>集使用。 當控制項從不是 `Pressed` 的狀態轉換到 `MouseOver` 狀態時，則會使用另一個狀態。  
@@ -272,5 +260,5 @@ ms.lasthandoff: 12/22/2017
   
  [!code-xaml[VSMButtonTemplate#3](../../../../samples/snippets/csharp/VS_Snippets_Wpf/vsmbuttontemplate/csharp/skinnedbutton.xaml#3)]  
   
-## <a name="see-also"></a>請參閱  
+## <a name="see-also"></a>另請參閱  
  [樣式設定和範本化](../../../../docs/framework/wpf/controls/styling-and-templating.md)

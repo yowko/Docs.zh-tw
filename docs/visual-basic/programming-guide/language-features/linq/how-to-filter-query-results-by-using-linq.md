@@ -1,12 +1,6 @@
 ---
-title: "如何：使用 LINQ 篩選查詢結果 (Visual Basic)"
-ms.custom: 
+title: 如何：使用 LINQ 篩選查詢結果 (Visual Basic)
 ms.date: 07/20/2015
-ms.prod: .net
-ms.reviewer: 
-ms.suite: 
-ms.technology: devlang-visual-basic
-ms.topic: article
 helpviewer_keywords:
 - filtering [Visual Basic]
 - filtering data [LINQ in Visual Basic]
@@ -17,14 +11,11 @@ helpviewer_keywords:
 - query samples [Visual Basic]
 - filtering data [Visual Basic]
 ms.assetid: ef103092-9bed-4134-97f4-2db696e83c12
-caps.latest.revision: "6"
-author: dotnet-bot
-ms.author: dotnetcontent
-ms.openlocfilehash: 80d4f05e9f90e8543c61af26080e66f9cf262f01
-ms.sourcegitcommit: 34ec7753acf76f90a0fa845235ef06663dc9e36e
+ms.openlocfilehash: 5bbccae580a2d1dcc43008f8002a34e95476c259
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="how-to-filter-query-results-by-using-linq-visual-basic"></a>如何：使用 LINQ 篩選查詢結果 (Visual Basic)
 Language Integrated Query (LINQ) 可讓您輕鬆地存取資料庫的資訊並執行查詢。  
@@ -85,7 +76,7 @@ Language Integrated Query (LINQ) 可讓您輕鬆地存取資料庫的資訊並�
   
      [!code-vb[VbLINQToSQLHowTos#12](../../../../visual-basic/programming-guide/language-features/linq/codesnippet/VisualBasic/how-to-filter-query-results-by-using-linq_2.vb)]  
   
-## <a name="see-also"></a>請參閱  
+## <a name="see-also"></a>另請參閱  
  [LINQ](../../../../visual-basic/programming-guide/language-features/linq/index.md)  
  [查詢](../../../../visual-basic/language-reference/queries/queries.md)  
  [LINQ to SQL](../../../../framework/data/adonet/sql/linq/index.md)  

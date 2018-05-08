@@ -1,13 +1,6 @@
 ---
-title: "資料繫結概觀"
-ms.custom: 
+title: 資料繫結概觀
 ms.date: 03/30/2017
-ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.technology: dotnet-wpf
-ms.tgt_pltfrm: 
-ms.topic: article
 dev_langs:
 - csharp
 - vb
@@ -17,16 +10,11 @@ helpviewer_keywords:
 - data binding [WPF], about data binding
 - conversion for data binding [WPF]
 ms.assetid: c707c95f-7811-401d-956e-2fffd019a211
-caps.latest.revision: "78"
-author: dotnet-bot
-ms.author: dotnetcontent
-manager: wpickett
-ms.workload: dotnet
-ms.openlocfilehash: 817a7ba73c37c15afa1be402da38e828d2aba426
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.openlocfilehash: 0b58cde738e2584662fa5f9ad90634931674f48b
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="data-binding-overview"></a>資料繫結概觀
 [!INCLUDE[TLA#tla_winclient](../../../../includes/tlasharptla-winclient-md.md)] 資料繫結在資料的展示和互動上，提供應用程式簡單而一致的方式。 項目可以和各種資料來源的資料繫結，資料的形式可以是 [!INCLUDE[TLA#tla_clr](../../../../includes/tlasharptla-clr-md.md)] 物件和 [!INCLUDE[TLA#tla_xml](../../../../includes/tlasharptla-xml-md.md)]。 <xref:System.Windows.Controls.ContentControl>例如 s<xref:System.Windows.Controls.Button>和<xref:System.Windows.Controls.ItemsControl>例如 s<xref:System.Windows.Controls.ListBox>和<xref:System.Windows.Controls.ListView>具有內建的功能，可啟用彈性樣式的單一資料項目的集合。 您可以在資料上方產生排序、篩選和群組檢視。  
@@ -94,11 +82,11 @@ ms.lasthandoff: 12/22/2017
   
  ![資料繫結資料流程](../../../../docs/framework/wpf/data/media/databinding-dataflow.png "DataBinding_DataFlow")  
   
--   <xref:System.Windows.Data.BindingMode.OneWay>繫結會自動更新 [目標] 屬性中，[來源] 屬性的變更，但目標屬性變更不會傳播至來源屬性。 如果要繫結的控制項是隱含唯讀的，這種類型的繫結很適當。 例如，您可以繫結到股票行情即時看板這類的來源，或者目標屬性沒有可供進行變更的控制項介面，例如資料表的資料繫結背景色彩。 如果沒有不需要監視目標屬性的變更，使用<xref:System.Windows.Data.BindingMode.OneWay>繫結模式可以避免的額外負荷<xref:System.Windows.Data.BindingMode.TwoWay>繫結模式。  
+-   <xref:System.Windows.Data.BindingMode.OneWay> 繫結會自動更新 [目標] 屬性中，[來源] 屬性的變更，但目標屬性變更不會傳播至來源屬性。 如果要繫結的控制項是隱含唯讀的，這種類型的繫結很適當。 例如，您可以繫結到股票行情即時看板這類的來源，或者目標屬性沒有可供進行變更的控制項介面，例如資料表的資料繫結背景色彩。 如果沒有不需要監視目標屬性的變更，使用<xref:System.Windows.Data.BindingMode.OneWay>繫結模式可以避免的額外負荷<xref:System.Windows.Data.BindingMode.TwoWay>繫結模式。  
   
--   <xref:System.Windows.Data.BindingMode.TwoWay>繫結會讓來源屬性或要自動更新對方的目標屬性的變更。 這種類型的繫結適合可編輯表單或其他完全互動式的 [!INCLUDE[TLA2#tla_ui](../../../../includes/tla2sharptla-ui-md.md)] 案例。 大部分屬性預設為<xref:System.Windows.Data.BindingMode.OneWay>繫結，但是某些相依性屬性 (通常是屬性的使用者可編輯的控制項，例如<xref:System.Windows.Controls.TextBox.Text%2A>屬性<xref:System.Windows.Controls.TextBox>和<xref:System.Windows.Controls.Primitives.ToggleButton.IsChecked%2A>屬性<xref:System.Windows.Controls.CheckBox>) 預設為<xref:System.Windows.Data.BindingMode.TwoWay>繫結。 判斷相依性屬性預設是否會單向或雙向繫結的程式設計方式是，使用 <xref:System.Windows.DependencyProperty.GetMetadata%2A> 取得屬性的屬性中繼資料，然後檢查 <xref:System.Windows.FrameworkPropertyMetadata.BindsTwoWayByDefault%2A> 屬性的布林值。  
+-   <xref:System.Windows.Data.BindingMode.TwoWay> 繫結會讓來源屬性或要自動更新對方的目標屬性的變更。 這種類型的繫結適合可編輯表單或其他完全互動式的 [!INCLUDE[TLA2#tla_ui](../../../../includes/tla2sharptla-ui-md.md)] 案例。 大部分屬性預設為<xref:System.Windows.Data.BindingMode.OneWay>繫結，但是某些相依性屬性 (通常是屬性的使用者可編輯的控制項，例如<xref:System.Windows.Controls.TextBox.Text%2A>屬性<xref:System.Windows.Controls.TextBox>和<xref:System.Windows.Controls.Primitives.ToggleButton.IsChecked%2A>屬性<xref:System.Windows.Controls.CheckBox>) 預設為<xref:System.Windows.Data.BindingMode.TwoWay>繫結。 判斷相依性屬性預設是否會單向或雙向繫結的程式設計方式是，使用 <xref:System.Windows.DependencyProperty.GetMetadata%2A> 取得屬性的屬性中繼資料，然後檢查 <xref:System.Windows.FrameworkPropertyMetadata.BindsTwoWayByDefault%2A> 屬性的布林值。  
   
--   <xref:System.Windows.Data.BindingMode.OneWayToSource>是反向<xref:System.Windows.Data.BindingMode.OneWay>繫結，它會更新 [來源] 屬性的目標屬性變更時。 範例案例之一是當您只需要從 [!INCLUDE[TLA2#tla_ui](../../../../includes/tla2sharptla-ui-md.md)] 重新評估來源值時。  
+-   <xref:System.Windows.Data.BindingMode.OneWayToSource> 是反向<xref:System.Windows.Data.BindingMode.OneWay>繫結，它會更新 [來源] 屬性的目標屬性變更時。 範例案例之一是當您只需要從 [!INCLUDE[TLA2#tla_ui](../../../../includes/tla2sharptla-ui-md.md)] 重新評估來源值時。  
   
 -   不在此圖說明是<xref:System.Windows.Data.BindingMode.OneTime>繫結，因而導致來源屬性，來初始化目標屬性，但不是會傳播後續變更。 這代表如果資料內容發生變更或資料內容中的物件有變更，則變更不會反映在目標屬性中。 如果您使用的資料適合使用目前狀態的快照集或資料是真正的靜態，則此類型的繫結很適當。 如果您想要以來源屬性的某些值初始化目標屬性，但無法預先得知資料內容，則此類型的繫結也很有用。 這是基本簡易形式的<xref:System.Windows.Data.BindingMode.OneWay>繫結，提供更佳的效能，萬一來源值不會變更。  
   
@@ -125,8 +113,8 @@ ms.lasthandoff: 12/22/2017
 |UpdateSourceTrigger 值|來源值更新時機|TextBox 的範例案例|  
 |-------------------------------|----------------------------------------|----------------------------------|  
 |LostFocus (預設為<xref:System.Windows.Controls.TextBox.Text%2A?displayProperty=nameWithType>)|TextBox 控制項失去焦點時|A<xref:System.Windows.Controls.TextBox>驗證邏輯與相關聯 （請參閱資料驗證 > 一節）|  
-|PropertyChanged|當您輸入至<xref:System.Windows.Controls.TextBox>|<xref:System.Windows.Controls.TextBox>聊天室 視窗中的控制項|  
-|明確|當呼叫應用程式<xref:System.Windows.Data.BindingExpression.UpdateSource%2A>|<xref:System.Windows.Controls.TextBox>（只有當使用者按一下 [提交] 按鈕時，才會更新在來源值） 的可編輯表單中的控制項|  
+|PropertyChanged|當您輸入至 <xref:System.Windows.Controls.TextBox>|<xref:System.Windows.Controls.TextBox> 聊天室 視窗中的控制項|  
+|明確|當呼叫應用程式 <xref:System.Windows.Data.BindingExpression.UpdateSource%2A>|<xref:System.Windows.Controls.TextBox> （只有當使用者按一下 [提交] 按鈕時，才會更新在來源值） 的可編輯表單中的控制項|  
   
  如需範例，請參閱[控制 TextBox 文字更新來源的時機](../../../../docs/framework/wpf/data/how-to-control-when-the-textbox-text-updates-the-source.md)。  
   
@@ -236,7 +224,7 @@ ms.lasthandoff: 12/22/2017
 ### <a name="how-to-implement-collections"></a>如何實作集合  
  您可以實作任何集合上列舉<xref:System.Collections.IEnumerable>介面。 不過，若要設定動態繫結，以便插入或刪除集合中的更新[!INCLUDE[TLA2#tla_ui](../../../../includes/tla2sharptla-ui-md.md)]集合必須實作自動<xref:System.Collections.Specialized.INotifyCollectionChanged>介面。 這個介面會公開每次基礎集合變更時必須引發的事件。  
   
- [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)]提供<xref:System.Collections.ObjectModel.ObservableCollection%601>類別，這是公開的資料集合的內建實作<xref:System.Collections.Specialized.INotifyCollectionChanged>介面。 請注意，若要完全支援傳輸資料值從來源物件為目標，您支援可繫結屬性的集合中每個物件也必須實作<xref:System.ComponentModel.INotifyPropertyChanged>介面。 如需詳細資訊，請參閱[繫結來源概觀](../../../../docs/framework/wpf/data/binding-sources-overview.md)。  
+ [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] 提供<xref:System.Collections.ObjectModel.ObservableCollection%601>類別，這是公開的資料集合的內建實作<xref:System.Collections.Specialized.INotifyCollectionChanged>介面。 請注意，若要完全支援傳輸資料值從來源物件為目標，您支援可繫結屬性的集合中每個物件也必須實作<xref:System.ComponentModel.INotifyPropertyChanged>介面。 如需詳細資訊，請參閱[繫結來源概觀](../../../../docs/framework/wpf/data/binding-sources-overview.md)。  
   
  在實作之前您自己的集合，請考慮使用<xref:System.Collections.ObjectModel.ObservableCollection%601>或其中一個現有的集合類別，例如<xref:System.Collections.Generic.List%601>， <xref:System.Collections.ObjectModel.Collection%601>，和<xref:System.ComponentModel.BindingList%601>，還有許多其他。 如果您有進階的案例，而且想要實作您自己的集合，請考慮使用<xref:System.Collections.IList>，這樣會提供非泛型集合的索引，因此是最佳的效能可個別存取的物件。  
   
@@ -269,7 +257,7 @@ ms.lasthandoff: 12/22/2017
   
 |來源集合型別|集合檢視型別|注意|  
 |----------------------------|--------------------------|-----------|  
-|<xref:System.Collections.IEnumerable>|內部類型根據<xref:System.Windows.Data.CollectionView>|無法群組項目。|  
+|<xref:System.Collections.IEnumerable>|內部類型根據 <xref:System.Windows.Data.CollectionView>|無法群組項目。|  
 |<xref:System.Collections.IList>|<xref:System.Windows.Data.ListCollectionView>|最快。|  
 |<xref:System.ComponentModel.IBindingList>|<xref:System.Windows.Data.BindingListCollectionView>||  
   
@@ -373,7 +361,7 @@ ms.lasthandoff: 12/22/2017
   
  [!code-xaml[DataBindingLab#DefaultValidation](../../../../samples/snippets/csharp/VS_Snippets_Wpf/DataBindingLab/CSharp/AddProductWindow.xaml#defaultvalidation)]  
   
- A<xref:System.Windows.Controls.ValidationRule>物件會檢查屬性的值是否有效。 [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)]有下列兩種內建<xref:System.Windows.Controls.ValidationRule>物件：  
+ A<xref:System.Windows.Controls.ValidationRule>物件會檢查屬性的值是否有效。 [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] 有下列兩種內建<xref:System.Windows.Controls.ValidationRule>物件：  
   
 -   A<xref:System.Windows.Controls.ExceptionValidationRule>檢查繫結來源屬性更新期間擲回的例外狀況。 在上面的範例中，`StartPrice` 的型別為整數。 當使用者輸入的值無法轉換為整數時，就會擲回例外狀況，造成繫結標記為無效。 若要設定替代語法<xref:System.Windows.Controls.ExceptionValidationRule>明確設定為<xref:System.Windows.Data.Binding.ValidatesOnExceptions%2A>屬性`true`上您<xref:System.Windows.Data.Binding>或<xref:System.Windows.Data.MultiBinding>物件。  
   
@@ -440,7 +428,7 @@ ms.lasthandoff: 12/22/2017
 ## <a name="debugging-mechanism"></a>偵錯機制  
  您可以設定附加的屬性<xref:System.Diagnostics.PresentationTraceSources.TraceLevel%2A?displayProperty=nameWithType>上繫結相關的物件，以擷取特定的繫結的相關狀態資訊。  
   
-## <a name="see-also"></a>請參閱  
+## <a name="see-also"></a>另請參閱  
  <xref:System.Windows.Controls.DataErrorValidationRule>  
  [WPF 第 4.5 版的新功能](../../../../docs/framework/wpf/getting-started/whats-new.md)  
  [繫結至 LINQ 查詢的結果](../../../../docs/framework/wpf/data/how-to-bind-to-the-results-of-a-linq-query.md)  

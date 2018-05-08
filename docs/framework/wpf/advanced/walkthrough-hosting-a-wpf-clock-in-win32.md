@@ -1,28 +1,16 @@
 ---
-title: "逐步解說：在 Win32 中裝載 WPF 時鐘"
-ms.custom: 
+title: 逐步解說：在 Win32 中裝載 WPF 時鐘
 ms.date: 03/30/2017
-ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.technology: dotnet-wpf
-ms.tgt_pltfrm: 
-ms.topic: article
 helpviewer_keywords:
 - interoperability [WPF], tutorials
 - Win32 code [WPF], WPF interoperation
 - interoperability [WPF], Win32
 ms.assetid: 555e55a7-0851-4ec8-b1c6-0acba7e9b648
-caps.latest.revision: "15"
-author: dotnet-bot
-ms.author: dotnetcontent
-manager: wpickett
-ms.workload: dotnet
-ms.openlocfilehash: caf652f8a80da8e927a74ffc012d09b2389b1b09
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.openlocfilehash: 58e4b1dd311ccd6e1bbab79f4c4dda2207f96eaa
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="walkthrough-hosting-a-wpf-clock-in-win32"></a>逐步解說：在 Win32 中裝載 WPF 時鐘
 要放置[!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)]內[!INCLUDE[TLA2#tla_win32](../../../../includes/tla2sharptla-win32-md.md)]應用程式會使用<xref:System.Windows.Interop.HwndSource>，這樣會提供包含 HWND 您[!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)]內容。 第一次建立<xref:System.Windows.Interop.HwndSource>，讓它類似於 CreateWindow 參數。  接著您告訴<xref:System.Windows.Interop.HwndSource>有關[!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)]內容您想要在其中。  最後，您取得的 HWND 出<xref:System.Windows.Interop.HwndSource>。 這個逐步解說將說明如何建立了混合[!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)]內[!INCLUDE[TLA2#tla_win32](../../../../includes/tla2sharptla-win32-md.md)]reimplements 作業系統的應用程式**日期和時間內容**對話方塊。  
@@ -236,7 +224,7 @@ HWND clock = ManagedCode::GetHwnd(hDlg, point.x, point.y, width, height);
   
  若要比較您產生這個螢幕擷取畫面的程式碼的最後結果，請參閱[Win32 時鐘的互通性範例](http://go.microsoft.com/fwlink/?LinkID=160051)。  
   
-## <a name="see-also"></a>請參閱  
+## <a name="see-also"></a>另請參閱  
  <xref:System.Windows.Interop.HwndSource>  
  [WPF 和 Win32 交互操作](../../../../docs/framework/wpf/advanced/wpf-and-win32-interoperation.md)  
  [Win32 時鐘交互操作範例](http://go.microsoft.com/fwlink/?LinkID=160051)

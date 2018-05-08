@@ -1,22 +1,12 @@
 ---
-title: "使用純虛擬函式 (Visual Basic) 進行重構"
-ms.custom: 
+title: 使用純虛擬函式 (Visual Basic) 進行重構
 ms.date: 07/20/2015
-ms.prod: .net
-ms.reviewer: 
-ms.suite: 
-ms.technology: devlang-visual-basic
-ms.tgt_pltfrm: 
-ms.topic: article
 ms.assetid: af0ea62f-4f57-4868-b624-a85524055935
-caps.latest.revision: "3"
-author: dotnet-bot
-ms.author: dotnetcontent
-ms.openlocfilehash: 7a8114dcfde7adbbdb1016bae4f2916dc28b6854
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.openlocfilehash: fe1ad3b189891a1655e014dc49dac00c79507a7c
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="refactoring-using-a-pure-function-visual-basic"></a>使用純虛擬函式 (Visual Basic) 進行重構
 下列範例重構前一個範例中，[使用擴充方法 (Visual Basic) 進行重構](../../../../visual-basic/programming-guide/concepts/linq/refactoring-using-an-extension-method.md)，可使用純虛擬函式在此範例中，程式碼以尋找段落的文字會移至 單純的靜態方法`ParagraphText`.  

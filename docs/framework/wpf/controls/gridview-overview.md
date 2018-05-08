@@ -1,31 +1,19 @@
 ---
-title: "GridView 概觀"
-ms.custom: 
+title: GridView 概觀
 ms.date: 03/30/2017
-ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.technology: dotnet-wpf
-ms.tgt_pltfrm: 
-ms.topic: article
 helpviewer_keywords:
 - GridView view mode [WPF]
 - ListView controls [WPF], GridView view mode
 - controls [WPF], ListView
 ms.assetid: b2d02267-32b3-40ce-8e9f-06972d8749d9
-caps.latest.revision: "26"
-author: dotnet-bot
-ms.author: dotnetcontent
-manager: wpickett
-ms.workload: dotnet
-ms.openlocfilehash: 099584ff5149891f406d5ad24a28a6b3e3faafb4
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.openlocfilehash: 776897d490b2748e240cf7b9a4ea21364284c4c4
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="gridview-overview"></a>GridView 概觀
-<xref:System.Windows.Controls.GridView>檢視模式是一種檢視模式的<xref:System.Windows.Controls.ListView>控制項。 <xref:System.Windows.Controls.GridView>類別和其支援的類別可讓您和您的使用者通常使用按鈕為互動式的資料行標頭的資料表中檢視項目集合。 本主題將介紹<xref:System.Windows.Controls.GridView>類別，並且摘要說明其用途。  
+<xref:System.Windows.Controls.GridView> 檢視模式是一種檢視模式的<xref:System.Windows.Controls.ListView>控制項。 <xref:System.Windows.Controls.GridView>類別和其支援的類別可讓您和您的使用者通常使用按鈕為互動式的資料行標頭的資料表中檢視項目集合。 本主題將介紹<xref:System.Windows.Controls.GridView>類別，並且摘要說明其用途。  
   
   
   
@@ -42,7 +30,7 @@ ms.lasthandoff: 12/22/2017
   
  ![已設定樣式的 ListView](../../../../docs/framework/wpf/controls/media/styledlistview.PNG "StyledListView")  
   
- <xref:System.Windows.Controls.GridView>資料行都由<xref:System.Windows.Controls.GridViewColumn>物件，其內容可以自動調整大小。 （選擇性） 您可以明確設定<xref:System.Windows.Controls.GridViewColumn>寬度。 您可以藉由拖曳資料行標頭間的移駐夾來調整資料行大小。 您可以也會動態地新增、 移除、 取代和重新排列資料行，因為這項功能已內建在<xref:System.Windows.Controls.GridView>。 不過，<xref:System.Windows.Controls.GridView>無法直接更新它所顯示的資料。  
+ <xref:System.Windows.Controls.GridView> 資料行都由<xref:System.Windows.Controls.GridViewColumn>物件，其內容可以自動調整大小。 （選擇性） 您可以明確設定<xref:System.Windows.Controls.GridViewColumn>寬度。 您可以藉由拖曳資料行標頭間的移駐夾來調整資料行大小。 您可以也會動態地新增、 移除、 取代和重新排列資料行，因為這項功能已內建在<xref:System.Windows.Controls.GridView>。 不過，<xref:System.Windows.Controls.GridView>無法直接更新它所顯示的資料。  
   
  下列範例示範如何定義<xref:System.Windows.Controls.GridView>，會顯示員工資料。 在此範例中，<xref:System.Windows.Controls.ListView>定義`EmployeeInfoDataSource`為<xref:System.Windows.Controls.ItemsControl.ItemsSource%2A>。 屬性定義的<xref:System.Windows.Controls.GridViewColumn.DisplayMemberBinding%2A>繫結<xref:System.Windows.Controls.GridViewColumn>內容`EmployeeInfoDataSource`資料類別。  
   
@@ -139,7 +127,7 @@ ms.lasthandoff: 12/22/2017
   
 -   <xref:System.Windows.Controls.GridViewColumnHeaderRole>  
   
-## <a name="see-also"></a>請參閱  
+## <a name="see-also"></a>另請參閱  
  <xref:System.Windows.Controls.ListView>  
  <xref:System.Windows.Controls.ListViewItem>  
  <xref:System.Windows.Controls.GridViewColumn>  

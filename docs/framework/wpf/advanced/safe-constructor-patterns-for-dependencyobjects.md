@@ -1,28 +1,16 @@
 ---
-title: "DependencyObject 的安全建構函式模式"
-ms.custom: 
+title: DependencyObject 的安全建構函式模式
 ms.date: 03/30/2017
-ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.technology: dotnet-wpf
-ms.tgt_pltfrm: 
-ms.topic: article
 helpviewer_keywords:
 - constructor patterns for dependency objects [WPF]
 - dependency objects [WPF], constructor patterns
 - FXCop tool [WPF]
 ms.assetid: f704b81c-449a-47a4-ace1-9332e3cc6d60
-caps.latest.revision: "12"
-author: dotnet-bot
-ms.author: dotnetcontent
-manager: wpickett
-ms.workload: dotnet
-ms.openlocfilehash: db1b7f47ef135b1a174eecef7e53b41e6996256d
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.openlocfilehash: 03615c1c49f2acf2a7c7f0910860f36de0a4f2d3
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="safe-constructor-patterns-for-dependencyobjects"></a>DependencyObject 的安全建構函式模式
 一般而言，類別建構函式不應該呼叫回呼 (例如，虛擬方法或委派)，因為建構函式可以當成衍生類別之建構函式的基底初始化來呼叫。 進入虛擬項目，可能是在任何指定物件的未完成初始化狀態中完成的。 不過，屬性系統本身會在內部呼叫並公開回呼，以做為相依性屬性系統的一部分。 簡單作業與相依性屬性值設定為<xref:System.Windows.DependencyObject.SetValue%2A>呼叫可能會包含回呼某處判斷。 基於這個理由，在建構函式的主體內設定相依性屬性值時應特別小心，如果您的類型是用來做為基底類別，這可能就會發生問題。 沒有實作的特定模式<xref:System.Windows.DependencyObject>可避免特定問題與相依性屬性的狀態和固有的回呼，其中記載於此處的建構函式。  
@@ -125,7 +113,7 @@ public MyClass : SomeBaseClass {
 #### <a name="setting-dependency-properties-with-setvalue"></a>使用 SetValue 設定相依性屬性  
  如果您要設定此屬性，沒有屬性設定方便起見，包裝函式，以及設定值，這些相同的模式適用於<xref:System.Windows.DependencyObject.SetValue%2A>。 您呼叫<xref:System.Windows.DependencyObject.SetValue%2A>該傳遞參數建構函式也應該呼叫類別的預設建構函式進行初始化。  
   
-## <a name="see-also"></a>請參閱  
+## <a name="see-also"></a>另請參閱  
  [自訂相依性屬性](../../../../docs/framework/wpf/advanced/custom-dependency-properties.md)  
  [相依性屬性概觀](../../../../docs/framework/wpf/advanced/dependency-properties-overview.md)  
  [相依性屬性的安全性](../../../../docs/framework/wpf/advanced/dependency-property-security.md)

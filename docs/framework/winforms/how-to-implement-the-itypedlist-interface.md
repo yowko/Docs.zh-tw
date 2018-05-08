@@ -1,13 +1,6 @@
 ---
-title: "如何：實作 ITypedList 介面"
-ms.custom: 
+title: 如何：實作 ITypedList 介面
 ms.date: 03/30/2017
-ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.technology: dotnet-winforms
-ms.tgt_pltfrm: 
-ms.topic: article
 dev_langs:
 - csharp
 - vb
@@ -17,16 +10,11 @@ helpviewer_keywords:
 - data binding [Windows Forms], implementing
 - IBindingList interface
 ms.assetid: 834cc15c-50bc-4a8b-a610-313d6a217357
-caps.latest.revision: "6"
-author: dotnet-bot
-ms.author: dotnetcontent
-manager: wpickett
-ms.workload: dotnet
-ms.openlocfilehash: 09eb28e865fb020dae9a8b6ffc3f05a52e6eec4a
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.openlocfilehash: 181879d3e41e0dd140c79a4c63d52e6999acf86d
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="how-to-implement-the-itypedlist-interface"></a>如何：實作 ITypedList 介面
 實作<xref:System.ComponentModel.ITypedList>介面以啟用探索可繫結清單的結構描述。  
@@ -48,7 +36,7 @@ ms.lasthandoff: 12/22/2017
   
 -   System.Drawing 和 System.Windows.Forms 組件的參考。  
   
-## <a name="see-also"></a>請參閱  
+## <a name="see-also"></a>另請參閱  
  <xref:System.ComponentModel.ITypedList>  
  <xref:System.ComponentModel.BindingList%601>  
  <xref:System.ComponentModel.IBindingList>  

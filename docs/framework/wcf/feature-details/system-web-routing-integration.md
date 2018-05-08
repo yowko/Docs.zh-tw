@@ -1,29 +1,15 @@
 ---
 title: System.Web.Routing 整合
-ms.custom: ''
 ms.date: 03/30/2017
-ms.prod: .net-framework
-ms.reviewer: ''
-ms.suite: ''
-ms.technology:
-- dotnet-clr
-ms.tgt_pltfrm: ''
-ms.topic: article
 ms.assetid: 31fe2a4f-5c47-4e5d-8ee1-84c524609d41
-caps.latest.revision: 7
-author: dotnet-bot
-ms.author: dotnetcontent
-manager: wpickett
-ms.workload:
-- dotnet
-ms.openlocfilehash: 72403671fe6700ae26cae4471a1d0ac100005f3a
-ms.sourcegitcommit: 94d33cadc5ff81d2ac389bf5f26422c227832052
+ms.openlocfilehash: 5bd405d66dcad597bbe6f452703d25372fdb7682
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/30/2018
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="systemwebrouting-integration"></a>System.Web.Routing 整合
-在 Internet Information Service (IIS) 中裝載 [!INCLUDE[indigo1](../../../../includes/indigo1-md.md)] 服務時，您會將一個 .svc 檔案置入虛擬目錄。 此 .svc 檔案會指定要使用的服務主機處理站，以及實作服務的類別。 時，對服務提出要求的.svc 檔案中指定 URI，例如： http://contoso.com/EmployeeServce.svc。 對於撰寫 REST 服務的程式設計人員而言，此類型的 URI 不是最佳的方法。 REST 服務的 URI 會指定特定資源，且一般來說沒有任何擴充。 <xref:System.Web.Routing> 整合功能可讓您裝載 [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] REST 服務，該服務不需要擴充即可回應 URI。 如需有關路由，請參閱[ASP.NET 路由](http://go.microsoft.com/fwlink/?LinkId=184660)和[AspNetRouteIntegration](../../../../docs/framework/wcf/samples/aspnetrouteintegration.md)範例。  
+裝載 Windows Communication Foundation (WCF) 服務中網際網路資訊服務 (IIS) 時您放置.svc 檔案中的虛擬目錄。 此 .svc 檔案會指定要使用的服務主機處理站，以及實作服務的類別。 時，對服務提出要求的.svc 檔案中指定 URI，例如： http://contoso.com/EmployeeServce.svc。 對於撰寫 REST 服務的程式設計人員而言，此類型的 URI 不是最佳的方法。 REST 服務的 URI 會指定特定資源，且一般來說沒有任何擴充。 <xref:System.Web.Routing>整合功能可讓您裝載即可回應 Uri 不含副檔名的 WCF REST 服務。 如需有關路由，請參閱[ASP.NET 路由](http://go.microsoft.com/fwlink/?LinkId=184660)和[AspNetRouteIntegration](../../../../docs/framework/wcf/samples/aspnetrouteintegration.md)範例。  
   
 ## <a name="using-systemwebrouting-integration"></a>使用 System.Web.Routing 整合  
  若要使用 <xref:System.Web.Routing> 整合功能，請使用 <xref:System.ServiceModel.Activation.ServiceRoute> 類別建立一個或多個路由，並且將路由加入至 Global.asax 檔案中的 <xref:System.Web.Routing.RouteTable>。 這些路由會指定服務回應的相對 URI。 下列範例顯示如何執行這項工作。  

@@ -1,31 +1,17 @@
 ---
-title: "逐步解說：建立裝載於 WPF 中的 Direct3D9 內容"
-ms.custom: 
+title: 逐步解說：建立裝載於 WPF 中的 Direct3D9 內容
 ms.date: 03/30/2017
-ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.technology:
-- dotnet-wpf
-ms.tgt_pltfrm: 
-ms.topic: article
 dev_langs:
 - cpp
 helpviewer_keywords:
 - WPF [WPF], creating Direct3D9 content
 - Direct3D9 [WPF interoperability], creating Direct3D9 content
 ms.assetid: 286e98bc-1eaa-4b5e-923d-3490a9cca5fc
-caps.latest.revision: 
-author: dotnet-bot
-ms.author: dotnetcontent
-manager: wpickett
-ms.workload:
-- dotnet
-ms.openlocfilehash: f1a5d70807541a0a3faf6bc99a3ced42827efd72
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.openlocfilehash: f279fb1749be9953e6d09d4b1bd4dd8578d42615
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="walkthrough-creating-direct3d9-content-for-hosting-in-wpf"></a>逐步解說：建立裝載於 WPF 中的 Direct3D9 內容
 本逐步解說示範如何建立適用於 Windows Presentation Foundation (WPF) 應用程式中裝載的 Direct3D9 內容。 如需有關裝載 WPF 應用程式中的 Direct3D9 內容的詳細資訊，請參閱[WPF 和 Direct3D9 互通](../../../../docs/framework/wpf/advanced/wpf-and-direct3d9-interoperation.md)。  
@@ -68,7 +54,7 @@ ms.lasthandoff: 12/22/2017
   
      **D3DContent 屬性頁**對話方塊隨即開啟。  
   
-6.  選取**C/c + +**節點。  
+6.  選取**C/c + +** 節點。  
   
 7.  在**其他 Include 目錄**欄位中，指定位置的 DirectX 包括資料夾。 此資料夾的預設位置是 %ProgramFiles%\Microsoft DirectX SDK (*版本*) \Include。  
   
@@ -89,7 +75,7 @@ ms.lasthandoff: 12/22/2017
   
 1.  使用方案總管 中，加入名為下列專案的 c + + 的三個類別。  
   
-     `CRenderer`（使用虛擬解構函式）  
+     `CRenderer` （使用虛擬解構函式）  
   
      `CRendererManager`  
   
@@ -152,7 +138,7 @@ ms.lasthandoff: 12/22/2017
   
 -   裝載 Direct3D9 內容，在 WPF 應用程式。 如需詳細資訊，請參閱[逐步解說： 裝載 Direct3D9 內容在 WPF 中](../../../../docs/framework/wpf/advanced/walkthrough-hosting-direct3d9-content-in-wpf.md)。  
   
-## <a name="see-also"></a>請參閱  
+## <a name="see-also"></a>另請參閱  
  <xref:System.Windows.Interop.D3DImage>  
  [Direct3D9 和 WPF 互通性的效能考量](../../../../docs/framework/wpf/advanced/performance-considerations-for-direct3d9-and-wpf-interoperability.md)  
  [逐步解說：在 WPF 中裝載 Direct3D9 內容](../../../../docs/framework/wpf/advanced/walkthrough-hosting-direct3d9-content-in-wpf.md)

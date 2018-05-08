@@ -1,23 +1,12 @@
 ---
-title: "使用 DynamicActivity 在執行階段建立活動"
-ms.custom: 
+title: 使用 DynamicActivity 在執行階段建立活動
 ms.date: 03/30/2017
-ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.tgt_pltfrm: 
-ms.topic: article
 ms.assetid: 1af85cc6-912d-449e-90c5-c5db3eca5ace
-caps.latest.revision: "9"
-author: dotnet-bot
-ms.author: dotnetcontent
-manager: wpickett
-ms.workload: dotnet
-ms.openlocfilehash: ebbd6e77c2c47754054a81f4b07d3d845cdcac00
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.openlocfilehash: 0450a56059083f355f3fd71d95c83bf8dd1cf0e2
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="creating-an-activity-at-runtime-with-dynamicactivity"></a>使用 DynamicActivity 在執行階段建立活動
 <xref:System.Activities.DynamicActivity> 是含公用建構函式的具體密封類別。 <xref:System.Activities.DynamicActivity> 可在執行階段中使用活動 DOM 來組合活動功能。  
@@ -33,7 +22,7 @@ ms.lasthandoff: 12/22/2017
   
 1.  開啟 [!INCLUDE[vs2010](../../../includes/vs2010-md.md)]。  
   
-2.  選取**檔案**，**新**，**專案**。 選取**Workflow 4.0**下**Visual C#**中**專案類型**視窗，並選取**v2010**節點。 選取**循序工作流程主控台應用程式**中**範本**視窗。 將新專案命名為 DynamicActivitySample。  
+2.  選取**檔案**，**新**，**專案**。 選取**Workflow 4.0**下**Visual C#** 中**專案類型**視窗，並選取**v2010**節點。 選取**循序工作流程主控台應用程式**中**範本**視窗。 將新專案命名為 DynamicActivitySample。  
   
 3.  以滑鼠右鍵按一下 HelloActivity 專案中的 Workflow1.xaml，然後選取**刪除**。  
   
@@ -82,7 +71,7 @@ ms.lasthandoff: 12/22/2017
   
 1.  開啟 [!INCLUDE[vs2010](../../../includes/vs2010-md.md)]。  
   
-2.  選取**檔案**，**新**，**專案**。 選取**Workflow 4.0**下**Visual C#**中**專案類型**視窗，並選取**v2010**節點。 選取**工作流程主控台應用程式**中**範本**視窗。 將新專案命名為 DynamicActivitySample。  
+2.  選取**檔案**，**新**，**專案**。 選取**Workflow 4.0**下**Visual C#** 中**專案類型**視窗，並選取**v2010**節點。 選取**工作流程主控台應用程式**中**範本**視窗。 將新專案命名為 DynamicActivitySample。  
   
 3.  開啟 HelloActivity 專案中的 Workflow1.xaml。 按一下**引數**在設計工具底部的選項。 建立新的 `In` 引數，其名稱為 `TextToWrite`、型別為 `String`。  
   
@@ -106,6 +95,6 @@ ms.lasthandoff: 12/22/2017
   
 8.  以滑鼠右鍵按一下中的 workflow1.xaml**方案總管 中**選取**檢視程式碼**。 請注意，活動類別是以 `x:Class` 建立的，而屬性則是以 `x:Property` 建立的。  
   
-## <a name="see-also"></a>請參閱  
+## <a name="see-also"></a>另請參閱  
  [使用命令式程式碼撰寫工作流程、活動與運算式](../../../docs/framework/windows-workflow-foundation/authoring-workflows-activities-and-expressions-using-imperative-code.md)  
  [DynamicActivity 建立](../../../docs/framework/windows-workflow-foundation/samples/dynamicactivity-creation.md)

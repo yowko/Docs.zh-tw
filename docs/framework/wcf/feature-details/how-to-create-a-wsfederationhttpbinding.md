@@ -1,14 +1,6 @@
 ---
 title: HOW TO：建立 WSFederationHttpBinding
-ms.custom: ''
 ms.date: 03/30/2017
-ms.prod: .net-framework
-ms.reviewer: ''
-ms.suite: ''
-ms.technology:
-- dotnet-clr
-ms.tgt_pltfrm: ''
-ms.topic: article
 dev_langs:
 - csharp
 - vb
@@ -16,20 +8,14 @@ helpviewer_keywords:
 - WCF, federation
 - federation
 ms.assetid: e54897d7-aa6c-46ec-a278-b2430c8c2e10
-caps.latest.revision: 16
-author: dotnet-bot
-ms.author: dotnetcontent
-manager: wpickett
-ms.workload:
-- dotnet
-ms.openlocfilehash: f43b95df73b35b7dc7c34c2e16364dfa7bbdbee4
-ms.sourcegitcommit: 94d33cadc5ff81d2ac389bf5f26422c227832052
+ms.openlocfilehash: 41fa1e7c0430f4723123b03f04d4fc74f9bfc589
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/30/2018
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="how-to-create-a-wsfederationhttpbinding"></a>HOW TO：建立 WSFederationHttpBinding
-在[!INCLUDE[indigo1](../../../../includes/indigo1-md.md)]、<xref:System.ServiceModel.WSFederationHttpBinding>類別 ([\<wsFederationHttpBinding >](../../../../docs/framework/configure-apps/file-schema/wcf/wsfederationhttpbinding.md)組態中) 會提供一個機制來公開聯合的服務。 也就是，要求用戶端使用由安全性權杖服務發出的安全性權杖進行驗證的一種服務。 這個主題會表示如何在程式碼和組態中設定 <xref:System.ServiceModel.WSFederationHttpBinding>。 一旦建立了繫結，就可以設定端點以使用該繫結。  
+在 Windows Communication Foundation (WCF)，<xref:System.ServiceModel.WSFederationHttpBinding>類別 ([\<wsFederationHttpBinding >](../../../../docs/framework/configure-apps/file-schema/wcf/wsfederationhttpbinding.md)組態中) 會提供一個機制來公開聯合的服務。 也就是，要求用戶端使用由安全性權杖服務發出的安全性權杖進行驗證的一種服務。 這個主題會表示如何在程式碼和組態中設定 <xref:System.ServiceModel.WSFederationHttpBinding>。 一旦建立了繫結，就可以設定端點以使用該繫結。  
   
  以下將粗略說明基本步驟：  
   
@@ -38,7 +24,7 @@ ms.lasthandoff: 04/30/2018
     > [!NOTE]
     >  <xref:System.ServiceModel.WSFederationHttpBinding> 也支援 `None` 做為安全性模式。 這個模式並不安全，主要目的僅用於偵錯。 如果服務端點部署與<xref:System.ServiceModel.WSFederationHttpBinding>以及其安全性模式設為`None`、 產生的用戶端繫結 (由產生[ServiceModel Metadata Utility Tool (Svcutil.exe)](../../../../docs/framework/wcf/servicemodel-metadata-utility-tool-svcutil-exe.md)) 是 <<!--zz xref:System.ServiceModel.WsHttpBinding --> `xref:System.ServiceModel.WsHttpBinding`> 使用的安全性模式`None`。  
   
-     和其他系統提供的繫結不一樣，在您使用 `WSFederationHttpBinding` 時不需要選取用戶端認證類型。 這是因為用戶端認證類型一律為已發行的權杖。 [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] 會從指定的簽發者取得權杖，並對服務呈現該權杖以驗證用戶端。  
+     和其他系統提供的繫結不一樣，在您使用 `WSFederationHttpBinding` 時不需要選取用戶端認證類型。 這是因為用戶端認證類型一律為已發行的權杖。 WCF 會取得指定的簽發者的語彙基元，並呈現該權杖來驗證用戶端服務。  
   
 2.  在聯合用戶端上，請將 <xref:System.ServiceModel.FederatedMessageSecurityOverHttp.IssuerAddress%2A> 屬性設定為安全性權杖服務的 URL。 將 <xref:System.ServiceModel.FederatedMessageSecurityOverHttp.IssuerBinding%2A> 設定為繫結，以用來與安全性權杖服務進行通訊。  
   
@@ -65,7 +51,7 @@ ms.lasthandoff: 04/30/2018
   
 4.  設定<xref:System.ServiceModel.FederatedMessageSecurityOverHttp.IssuedKeyType%2A>屬性<xref:System.IdentityModel.Tokens.SecurityKeyType>`SymmetricKey`或。`AsymmetricKey` 視需要而定。  
   
-5.  將 <xref:System.ServiceModel.FederatedMessageSecurityOverHttp.IssuedTokenType%2A> 屬性設定為適當值。 如果未不設定任何值，[!INCLUDE[indigo2](../../../../includes/indigo2-md.md)]預設值為"http://docs.oasis-open.org/wss/oasis-wss-saml-token-profile-1.1#SAMLV1.1"，這表示 SAML 1.1 權杖。  
+5.  將 <xref:System.ServiceModel.FederatedMessageSecurityOverHttp.IssuedTokenType%2A> 屬性設定為適當值。 如果未不設定任何值，WCF 會預設為"http://docs.oasis-open.org/wss/oasis-wss-saml-token-profile-1.1#SAMLV1.1"，這表示 SAML 1.1 權杖。  
   
 6.  如果未指定本機簽發者，則在用戶端上為必要項；在服務上則為選擇項。 建立其中包含安全性權杖服務之位址和身分識別資訊的 <xref:System.ServiceModel.EndpointAddress>，並將 <xref:System.ServiceModel.EndpointAddress> 執行個體指派給 <xref:System.ServiceModel.FederatedMessageSecurityOverHttp.IssuerAddress%2A> 屬性。  
   

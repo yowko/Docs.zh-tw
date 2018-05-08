@@ -1,12 +1,6 @@
 ---
 title: ^ 運算子 (Visual Basic)
 ms.date: 07/20/2015
-ms.prod: .net
-ms.reviewer: ''
-ms.suite: ''
-ms.technology:
-- devlang-visual-basic
-ms.topic: article
 f1_keywords:
 - vb.^
 helpviewer_keywords:
@@ -20,14 +14,11 @@ helpviewer_keywords:
 - powers
 - arithmetic operators [Visual Basic], exponentiation
 ms.assetid: d89a1ca8-83da-4784-a87b-a9d7dceb3f62
-caps.latest.revision: 14
-author: dotnet-bot
-ms.author: dotnetcontent
-ms.openlocfilehash: 9e7159f289b687055c7d75cc8da58d6f76607a83
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.openlocfilehash: 426c3e9913dadda1091f4ba53c66c6b65e40e768
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="-operator-visual-basic"></a>^ 運算子 (Visual Basic)
 數目自乘至另一個數字乘冪。  
@@ -40,10 +31,10 @@ number ^ exponent
   
 ## <a name="parts"></a>組件  
  `number`  
- 必要項。 任何數值運算式。  
+ 必要。 任何數值運算式。  
   
  `exponent`  
- 必要項。 任何數值運算式。  
+ 必要。 任何數值運算式。  
   
 ## <a name="result"></a>結果  
  結果是`number`乘冪`exponent`，一律為`Double`值。  
@@ -68,23 +59,23 @@ number ^ exponent
   
  上述範例會產生下列結果：  
   
- `exp1`設為 4 (平方 2)。  
+ `exp1` 設為 4 (平方 2)。  
   
- `exp2`設定為 19683 (3 立方，然後該值立方)。  
+ `exp2` 設定為 19683 (3 立方，然後該值立方)。  
   
- `exp3`設定為-125 (立方-5)。  
+ `exp3` 設定為-125 (立方-5)。  
   
- `exp4`設定為 625 (第四個的乘冪-5)。  
+ `exp4` 設定為 625 (第四個的乘冪-5)。  
   
- `exp5`設定為 2 （8 個的立方根）。  
+ `exp5` 設定為 2 （8 個的立方根）。  
   
- `exp6`設定為 0.5 (除以 8 的立方根 1.0)。  
+ `exp6` 設定為 0.5 (除以 8 的立方根 1.0)。  
   
  請注意在上述範例中的運算式中的括弧的重要性。 因為*運算子優先順序*，通常會先執行 Visual Basic`^`運算子，再執行其他的即使是一元`–`運算子。 如果`exp4`和`exp6`已計算沒有括號，則可能產生下列結果：  
   
- `exp4 = -5 ^ 4`會計算為 (第四個的乘冪 5)，這會導致-625。  
+ `exp4 = -5 ^ 4` 會計算為 (第四個的乘冪 5)，這會導致-625。  
   
- `exp6 = 8 ^ -1.0 / 3.0`將計算成 (8 – 1 乘冪或 0.125) 除以可得到 0.041666666666666666666666666666667 3.0。  
+ `exp6 = 8 ^ -1.0 / 3.0` 將計算成 (8 – 1 乘冪或 0.125) 除以可得到 0.041666666666666666666666666666667 3.0。  
   
 ## <a name="see-also"></a>另請參閱  
  [^= 運算子](../../../visual-basic/language-reference/operators/exponentiation-assignment-operator.md)  

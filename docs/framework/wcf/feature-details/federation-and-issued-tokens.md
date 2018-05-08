@@ -1,31 +1,19 @@
 ---
-title: "聯合與發行的權杖"
-ms.custom: 
+title: 聯合與發行的權杖
 ms.date: 03/30/2017
-ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.technology: dotnet-clr
-ms.tgt_pltfrm: 
-ms.topic: article
 helpviewer_keywords:
 - WCF, federation
 - issued tokens [WCF]
 - federation [WCF], issued tokens
 ms.assetid: 4c31ee7d-a820-4067-8b84-a83049021bb6
-caps.latest.revision: "16"
-author: dotnet-bot
-ms.author: dotnetcontent
-manager: wpickett
-ms.workload: dotnet
-ms.openlocfilehash: 017d3e51022ad9980dc8f058415697c80a2a6b35
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.openlocfilehash: b6a5411b74b53cb5e3b18cced7fd8fc09e9a9676
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="federation-and-issued-tokens"></a>聯合與發行的權杖
-有了 [!INCLUDE[indigo1](../../../../includes/indigo1-md.md)]，您就可以建立與服務進行安全通訊的用戶端，其中實作了 WS-Federation 和 WS-Trust 規格。 這些規格使用 XML、SOAP 和 Web 服務描述語言 (WSDL)，提供跨不同信任領域的驗證和授權。  
+使用 Windows Communication Foundation (WCF)，您可以建立與實作 WS-同盟和 Ws-trust 規格的服務進行安全通訊的用戶端。 這些規格使用 XML、SOAP 和 Web 服務描述語言 (WSDL)，提供跨不同信任領域的驗證和授權。  
   
 ## <a name="in-this-section"></a>本節內容  
  [同盟](../../../../docs/framework/wcf/feature-details/federation.md)  
@@ -35,7 +23,7 @@ ms.lasthandoff: 12/22/2017
  列出建立聯合服務或用戶端時應注意的設計問題。  
   
  [如何：建立同盟用戶端](../../../../docs/framework/wcf/feature-details/how-to-create-a-federated-client.md)  
- 說明以 [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] 建立聯合用戶端的基本概念。  
+ 說明使用 WCF 建立聯合用戶端的基本概念。  
   
  [如何：設定同盟服務的認證](../../../../docs/framework/wcf/feature-details/how-to-configure-credentials-on-a-federation-service.md)  
  說明建立聯盟服務的步驟。  
@@ -72,7 +60,7 @@ ms.lasthandoff: 12/22/2017
   
  <xref:System.ServiceModel.WSFederationHttpBinding>  
   
-## <a name="see-also"></a>請參閱  
+## <a name="see-also"></a>另請參閱  
  [授權](../../../../docs/framework/wcf/feature-details/authorization-in-wcf.md)  
  [自訂權杖](../../../../docs/framework/wcf/extending/custom-tokens.md)  
  [Windows Server App Fabric 的安全性模型](http://go.microsoft.com/fwlink/?LinkID=201279&clcid=0x409)

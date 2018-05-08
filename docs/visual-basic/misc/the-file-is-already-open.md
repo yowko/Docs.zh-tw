@@ -1,18 +1,12 @@
 ---
-title: "檔案已經開啟"
+title: 檔案已經開啟
 ms.date: 07/20/2015
-ms.prod: .net
-ms.technology: devlang-visual-basic
-ms.topic: article
 ms.assetid: bbde8390-05cf-4ca4-9c24-073f656bd935
-caps.latest.revision: "9"
-author: dotnet-bot
-ms.author: dotnetcontent
-ms.openlocfilehash: 3ce304cde3f7d133abc0e67c5a738e9a6ef8161e
-ms.sourcegitcommit: 34ec7753acf76f90a0fa845235ef06663dc9e36e
+ms.openlocfilehash: 637c33c88efb2bf69275ec2c31425c1376627528
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="the-file-is-already-open"></a>檔案已經開啟
 已嘗試開啟已開啟的檔案。  
@@ -25,6 +19,6 @@ ms.lasthandoff: 12/21/2017
   
 -   從您的程式碼中移除多餘的 `FileOpen` 陳述式。  
   
-## <a name="see-also"></a>請參閱  
+## <a name="see-also"></a>另請參閱  
    
  [My.Computer.FileSystem](xref:Microsoft.VisualBasic.FileIO.FileSystem)

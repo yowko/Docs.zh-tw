@@ -1,22 +1,12 @@
 ---
-title: "標準查詢運算子 (Visual Basic) 的查詢運算式語法"
-ms.custom: 
+title: 標準查詢運算子 (Visual Basic) 的查詢運算式語法
 ms.date: 07/20/2015
-ms.prod: .net
-ms.reviewer: 
-ms.suite: 
-ms.technology: devlang-visual-basic
-ms.tgt_pltfrm: 
-ms.topic: article
 ms.assetid: eb978d86-d3b5-497b-95ce-a054bea8f510
-caps.latest.revision: "3"
-author: dotnet-bot
-ms.author: dotnetcontent
-ms.openlocfilehash: c68e924b88b312ef17b8bb83de0def21ea621824
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.openlocfilehash: 2f0a32ca2e76122aa13e4ad44c4b69838af26cdb
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="query-expression-syntax-for-standard-query-operators-visual-basic"></a>標準查詢運算子 (Visual Basic) 的查詢運算式語法
 某些較常使用的標準查詢運算子具有專用的 Visual Basic 語言關鍵字語法可讓它們的一部分呼叫*查詢運算式*。 相較於「方法」對等項目，查詢運算式是一個不同且更具可讀性的表示查詢形式。 查詢運算式子句會在編譯時期轉譯成查詢方法的呼叫。  

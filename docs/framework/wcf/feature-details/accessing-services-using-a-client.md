@@ -1,32 +1,18 @@
 ---
 title: 使用用戶端存取服務
-ms.custom: ''
 ms.date: 03/30/2017
-ms.prod: .net-framework
-ms.reviewer: ''
-ms.suite: ''
-ms.technology:
-- dotnet-clr
-ms.tgt_pltfrm: ''
-ms.topic: article
 dev_langs:
 - csharp
 - vb
 ms.assetid: c8329832-bf66-4064-9034-bf39f153fc2d
-caps.latest.revision: 15
-author: dotnet-bot
-ms.author: dotnetcontent
-manager: wpickett
-ms.workload:
-- dotnet
-ms.openlocfilehash: 209d10f9545be65870f584fa79444f7fab90211a
-ms.sourcegitcommit: 94d33cadc5ff81d2ac389bf5f26422c227832052
+ms.openlocfilehash: 1369403b493683f58640047fe042708afc5d5b46
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/30/2018
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="accessing-services-using-a-client"></a>使用用戶端存取服務
-用戶端應用程式必須建立、設定，以及使用 [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] 用戶端或通道物件來與服務通訊。 [WCF 用戶端概觀](../../../../docs/framework/wcf/wcf-client-overview.md)主題提供的物件和建立基本用戶端和通道物件，以及使用它們的相關步驟的概觀。  
+用戶端應用程式必須建立、 設定及使用 WCF 用戶端或通道物件來與服務通訊。 [WCF 用戶端概觀](../../../../docs/framework/wcf/wcf-client-overview.md)主題提供的物件和建立基本用戶端和通道物件，以及使用它們的相關步驟的概觀。  
   
  本主題會就用戶端應用程式以及在不同案例下可能有用的用戶端和通道物件，提供一些相關問題的深入資訊。  
   
@@ -42,7 +28,7 @@ ms.lasthandoff: 04/30/2018
 -   以互動方式初始化通道。  
   
 ### <a name="channel-and-session-lifetimes"></a>通道和工作階段存留期。  
- [!INCLUDE[indigo1](../../../../includes/indigo1-md.md)] 應用程式包含兩種通道：資料包和工作階段。  
+ Windows Communication Foundation (WCF) 應用程式包含兩種通道： 資料包和工作階段。  
   
  A*資料包*通道是在其中所有訊息都都沒有關聯的通道。 使用資料包通道時，如果輸入或輸出作業失敗，下一個作業通常不會受到影響，而且還可以重複使用同一個通道。 基於這點，資料包通道通常不會發生錯誤。  
   
@@ -79,11 +65,11 @@ ms.lasthandoff: 04/30/2018
  更完整與應用程式層級的錯誤訊息工作的相關資訊，請參閱[指定與處理合約和服務中的錯誤](../../../../docs/framework/wcf/specifying-and-handling-faults-in-contracts-and-services.md)。 [預期的例外狀況](../../../../docs/framework/wcf/samples/expected-exceptions.md)描述預期的例外狀況，並示範如何處理它們。 如需如何開發通道時處理錯誤的詳細資訊，請參閱[處理的例外狀況和錯誤](../../../../docs/framework/wcf/extending/handling-exceptions-and-faults.md)。  
   
 ### <a name="client-blocking-and-performance"></a>用戶端封鎖和效能  
- 當應用程式同步呼叫要求-回覆作業時，除非有收到傳回值或擲回例外狀況 (例如 <xref:System.TimeoutException?displayProperty=nameWithType>)，否則用戶端會封鎖。 這個行為類似本機行為。 當應用程式同步叫用 [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] 用戶端物件或通道上的作業時，除非通道層可以將資料寫入至網路或有擲回例外狀況，否則用戶端不會傳回。 雖然單向訊息交換模式 (指定方式是標示作業的 <xref:System.ServiceModel.OperationContractAttribute.IsOneWay%2A?displayProperty=nameWithType> 設定為 `true`) 可以讓某些用戶端更能有效回應，但單向作業也會根據繫結和已經傳送的訊息來執行封鎖。 單向作業只能進行訊息交換，無法執行其他作業。 如需詳細資訊，請參閱[單向服務](../../../../docs/framework/wcf/feature-details/one-way-services.md)。  
+ 當應用程式同步呼叫要求-回覆作業時，除非有收到傳回值或擲回例外狀況 (例如 <xref:System.TimeoutException?displayProperty=nameWithType>)，否則用戶端會封鎖。 這個行為類似本機行為。 當應用程式同步叫用 WCF 用戶端物件或通道上的作業時，除非通道層可以將資料寫入至網路或擲回例外狀況之前，不會傳回用戶端。 雖然單向訊息交換模式 (指定方式是標示作業的 <xref:System.ServiceModel.OperationContractAttribute.IsOneWay%2A?displayProperty=nameWithType> 設定為 `true`) 可以讓某些用戶端更能有效回應，但單向作業也會根據繫結和已經傳送的訊息來執行封鎖。 單向作業只能進行訊息交換，無法執行其他作業。 如需詳細資訊，請參閱[單向服務](../../../../docs/framework/wcf/feature-details/one-way-services.md)。  
   
  不論在何種訊息交換模式下，大型資料區塊都會減慢用戶端的處理速度。 若要了解如何處理這些問題，請參閱[大型資料和串流處理](../../../../docs/framework/wcf/feature-details/large-data-and-streaming.md)。  
   
- 如果您的應用程式必須在完成作業的同時執行更多工作，則您應該在 [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] 用戶端實作的服務合約介面上建立非同步方法組。 若要這樣做最簡單的方式是使用`/async`上切換[ServiceModel Metadata Utility Tool (Svcutil.exe)](../../../../docs/framework/wcf/servicemodel-metadata-utility-tool-svcutil-exe.md)。 如需範例，請參閱[如何： 非同步呼叫服務作業](../../../../docs/framework/wcf/feature-details/how-to-call-wcf-service-operations-asynchronously.md)。  
+ 如果作業完成時，您的應用程式必須執行更多工作，您應該在您的 WCF 用戶端實作服務合約介面上建立非同步方法組。 若要這樣做最簡單的方式是使用`/async`上切換[ServiceModel Metadata Utility Tool (Svcutil.exe)](../../../../docs/framework/wcf/servicemodel-metadata-utility-tool-svcutil-exe.md)。 如需範例，請參閱[如何： 非同步呼叫服務作業](../../../../docs/framework/wcf/feature-details/how-to-call-wcf-service-operations-asynchronously.md)。  
   
  如需增加用戶端效能的詳細資訊，請參閱[中介層用戶端應用程式](../../../../docs/framework/wcf/feature-details/middle-tier-client-applications.md)。  
   

@@ -1,11 +1,6 @@
 ---
 title: Friend (Visual Basic)
 ms.date: 07/20/2015
-ms.prod: .net
-ms.suite: 
-ms.technology:
-- devlang-visual-basic
-ms.topic: article
 f1_keywords:
 - vb.Friend
 helpviewer_keywords:
@@ -15,14 +10,11 @@ helpviewer_keywords:
 - Protected Friend keyword combination
 - Friend keyword [Visual Basic], and Protected
 ms.assetid: b664605e-1c79-4728-b996-aa59c50846bc
-caps.latest.revision: 
-author: dotnet-bot
-ms.author: dotnetcontent
-ms.openlocfilehash: df0e8ad1990fe7a1aa495e1794c942813cffb5bc
-ms.sourcegitcommit: 34ec7753acf76f90a0fa845235ef06663dc9e36e
+ms.openlocfilehash: 756a18da74ff49cbefaf6a63980302bbcb141713
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="friend-visual-basic"></a>Friend (Visual Basic)
 指定一或多個宣告的程式設計項目只能從包含其宣告的組件內存取。  
@@ -32,7 +24,7 @@ ms.lasthandoff: 12/21/2017
   
  其他的類別、 結構和編譯成相同的模組中的程式碼組件可以存取所有`Friend`該組件中的項目。  
   
- `Friend`存取通常是慣用的應用程式的程式設計項目層級和`Friend`是介面、 模組、 類別或結構的層級的預設存取權。  
+ `Friend` 存取通常是慣用的應用程式的程式設計項目層級和`Friend`是介面、 模組、 類別或結構的層級的預設存取權。  
   
  您可以使用`Friend`只在模組、 介面或命名空間層級。 因此，宣告內容`Friend`項目必須是原始程式檔、 命名空間、 介面、 模組、 類別或結構，不能在程序。  
   
@@ -77,7 +69,7 @@ ms.lasthandoff: 12/21/2017
   
  [Sub 陳述式](../../../visual-basic/language-reference/statements/sub-statement.md)  
   
-## <a name="see-also"></a>請參閱  
+## <a name="see-also"></a>另請參閱  
  <xref:System.Runtime.CompilerServices.InternalsVisibleToAttribute>  
  [Public](../../../visual-basic/language-reference/modifiers/public.md)  
  [Protected](../../../visual-basic/language-reference/modifiers/protected.md)  

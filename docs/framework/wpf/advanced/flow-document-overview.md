@@ -1,13 +1,6 @@
 ---
-title: "非固定格式文件概觀"
-ms.custom: 
+title: 非固定格式文件概觀
 ms.date: 03/30/2017
-ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.technology: dotnet-wpf
-ms.tgt_pltfrm: 
-ms.topic: article
 dev_langs:
 - csharp
 - vb
@@ -16,16 +9,11 @@ helpviewer_keywords:
 - ', '
 - flow documents [WPF]
 ms.assetid: ef236a50-d44f-43c8-ba7c-82b0c733c0b7
-caps.latest.revision: "39"
-author: dotnet-bot
-ms.author: dotnetcontent
-manager: wpickett
-ms.workload: dotnet
-ms.openlocfilehash: a99bd2336de41366d27c15e4bc4cfb2b2aff3cd0
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.openlocfilehash: 0cf8944298af62a512599fc52998a046c66fed9b
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="flow-document-overview"></a>非固定格式文件概觀
 非固定格式文件的設計是為最佳化檢視和可讀性。 非固定格式文件並不會設為某種預先定義的配置，而是會根據執行階段變數 (例如視窗大小、裝置解析度和選擇性的使用者喜好設定)，動態調整及自動重排其內容。 此外，非固定格式文件提供進階文件功能，例如編頁和資料行。 本主題提供非固定格式文件和建立方式的概觀。  
@@ -69,13 +57,13 @@ ms.lasthandoff: 12/22/2017
 ## <a name="flow-document-types"></a>非固定格式文件類型  
  非固定格式文件內容的外觀和顯示方式，取決於裝載非固定格式內容的物件。 有四個控制項支援的非固定格式內容的檢視： <xref:System.Windows.Controls.FlowDocumentReader>， <xref:System.Windows.Controls.FlowDocumentPageViewer>， <xref:System.Windows.Controls.RichTextBox>，和<xref:System.Windows.Controls.FlowDocumentScrollViewer>。 以下簡短說明這些控制項。  
   
- **注意：** <xref:System.Windows.Documents.FlowDocument>無須直接裝載非固定格式內容，因此所有的這些檢視控制項耗用<xref:System.Windows.Documents.FlowDocument>可以讓非固定格式內容的裝載。
+ **注意：** <xref:System.Windows.Documents.FlowDocument>無須直接裝載非固定格式內容，因此所有的這些檢視控制項耗用<xref:System.Windows.Documents.FlowDocument>可以讓非固定格式內容的裝載。  
   
 ### <a name="flowdocumentreader"></a>FlowDocumentReader  
- <xref:System.Windows.Controls.FlowDocumentReader>包含可讓使用者以動態方式選擇不同的檢視模式，包括單一頁面 （頁面-一次） 檢視模式中，兩個頁面-a-次 （活頁簿讀取格式） 檢視模式，以及連續捲動 （無底邊） 的檢視模式的功能。 如需有關這些檢視模式的詳細資訊，請參閱<xref:System.Windows.Controls.FlowDocumentReaderViewingMode>。 如果您不需要不同的檢視模式之間動態切換<xref:System.Windows.Controls.FlowDocumentPageViewer>和<xref:System.Windows.Controls.FlowDocumentScrollViewer>提供輕量型流程固定的特定檢視模式的內容檢視器。  
+ <xref:System.Windows.Controls.FlowDocumentReader> 包含可讓使用者以動態方式選擇不同的檢視模式，包括單一頁面 （頁面-一次） 檢視模式中，兩個頁面-a-次 （活頁簿讀取格式） 檢視模式，以及連續捲動 （無底邊） 的檢視模式的功能。 如需有關這些檢視模式的詳細資訊，請參閱<xref:System.Windows.Controls.FlowDocumentReaderViewingMode>。 如果您不需要不同的檢視模式之間動態切換<xref:System.Windows.Controls.FlowDocumentPageViewer>和<xref:System.Windows.Controls.FlowDocumentScrollViewer>提供輕量型流程固定的特定檢視模式的內容檢視器。  
   
 ### <a name="flowdocumentpageviewer-and-flowdocumentscrollviewer"></a>FlowDocumentPageViewer 和 FlowDocumentScrollViewer  
- <xref:System.Windows.Controls.FlowDocumentPageViewer>顯示內容頁-一次檢視模式，而<xref:System.Windows.Controls.FlowDocumentScrollViewer>顯示連續捲動模式中的內容。 同時<xref:System.Windows.Controls.FlowDocumentPageViewer>和<xref:System.Windows.Controls.FlowDocumentScrollViewer>會固定為特定檢視模式。 要比較<xref:System.Windows.Controls.FlowDocumentReader>，其中包括功能，可讓使用者以動態方式選擇各種不同的檢視模式之間 (所提供<xref:System.Windows.Controls.FlowDocumentReaderViewingMode>列舉型別)，但要付出正在耗用更多資源<xref:System.Windows.Controls.FlowDocumentPageViewer>或<xref:System.Windows.Controls.FlowDocumentScrollViewer>。  
+ <xref:System.Windows.Controls.FlowDocumentPageViewer> 顯示內容頁-一次檢視模式，而<xref:System.Windows.Controls.FlowDocumentScrollViewer>顯示連續捲動模式中的內容。 同時<xref:System.Windows.Controls.FlowDocumentPageViewer>和<xref:System.Windows.Controls.FlowDocumentScrollViewer>會固定為特定檢視模式。 要比較<xref:System.Windows.Controls.FlowDocumentReader>，其中包括功能，可讓使用者以動態方式選擇各種不同的檢視模式之間 (所提供<xref:System.Windows.Controls.FlowDocumentReaderViewingMode>列舉型別)，但要付出正在耗用更多資源<xref:System.Windows.Controls.FlowDocumentPageViewer>或<xref:System.Windows.Controls.FlowDocumentScrollViewer>。  
   
  預設一定會顯示垂直捲軸，而水平捲動則會視需要顯示。 預設 UI<xref:System.Windows.Controls.FlowDocumentScrollViewer>不包含的工具列，但是<xref:System.Windows.Controls.FlowDocumentScrollViewer.IsToolBarVisible%2A>屬性可以用來啟用內建工具列。  
   
@@ -111,7 +99,7 @@ ms.lasthandoff: 12/22/2017
 ### <a name="block-derived-classes"></a>區塊衍生類別  
  **段落**  
   
- <xref:System.Windows.Documents.Paragraph>通常用來將內容群組到段落。 段落最簡單且最常見的用法是建立一段文字。  
+ <xref:System.Windows.Documents.Paragraph> 通常用來將內容群組到段落。 段落最簡單且最常見的用法是建立一段文字。  
   
  [!code-xaml[FlowOvwSnippets_snip#ParagraphExampleWholePage](../../../../samples/snippets/csharp/VS_Snippets_Wpf/FlowOvwSnippets_snip/CS/ParagraphExample.xaml#paragraphexamplewholepage)]  
   
@@ -122,7 +110,7 @@ ms.lasthandoff: 12/22/2017
   
  **區段**  
   
- <xref:System.Windows.Documents.Section>只能用來包含其他<xref:System.Windows.Documents.Block>-衍生項目。 它不會將任何預設的格式設定套用到其所包含的項目。 不過，任何屬性上的值集<xref:System.Windows.Documents.Section>套用至其子項目。 區段也可讓您以程式設計的方式逐一查看其子集合。 <xref:System.Windows.Documents.Section>使用類似的方式來\<d i v > 標記在 HTML 中的。  
+ <xref:System.Windows.Documents.Section> 只能用來包含其他<xref:System.Windows.Documents.Block>-衍生項目。 它不會將任何預設的格式設定套用到其所包含的項目。 不過，任何屬性上的值集<xref:System.Windows.Documents.Section>套用至其子項目。 區段也可讓您以程式設計的方式逐一查看其子集合。 <xref:System.Windows.Documents.Section> 使用類似的方式來\<d i v > 標記在 HTML 中的。  
   
  在下列範例中，三段會定義下列其中一個之下<xref:System.Windows.Documents.Section>。 區段具有<xref:System.Windows.Documents.TextElement.Background%2A>屬性值的紅色，因此段落的背景色彩也會是紅色。  
   
@@ -133,7 +121,7 @@ ms.lasthandoff: 12/22/2017
   
  **BlockUIContainer**  
   
- <xref:System.Windows.Documents.BlockUIContainer>可讓<xref:System.Windows.UIElement>項目 (也就是<xref:System.Windows.Controls.Button>) 要內嵌在區塊衍生的非固定格式內容。 <xref:System.Windows.Documents.InlineUIContainer>（請參閱下文） 用來將內嵌<xref:System.Windows.UIElement>中內嵌衍生的非固定格式內容項目。 <xref:System.Windows.Documents.BlockUIContainer>和<xref:System.Windows.Documents.InlineUIContainer>很重要，因為沒有其他方法使用<xref:System.Windows.UIElement>內容，除非它包含這兩個元素的其中一個內資料流程中。  
+ <xref:System.Windows.Documents.BlockUIContainer> 可讓<xref:System.Windows.UIElement>項目 (也就是<xref:System.Windows.Controls.Button>) 要內嵌在區塊衍生的非固定格式內容。 <xref:System.Windows.Documents.InlineUIContainer> （請參閱下文） 用來將內嵌<xref:System.Windows.UIElement>中內嵌衍生的非固定格式內容項目。 <xref:System.Windows.Documents.BlockUIContainer> 和<xref:System.Windows.Documents.InlineUIContainer>很重要，因為沒有其他方法使用<xref:System.Windows.UIElement>內容，除非它包含這兩個元素的其中一個內資料流程中。  
   
  下列範例示範如何使用<xref:System.Windows.Documents.BlockUIContainer>項目以主機<xref:System.Windows.UIElement>內非固定格式內容的物件。  
   
@@ -145,7 +133,7 @@ ms.lasthandoff: 12/22/2017
   
  **清單**  
   
- <xref:System.Windows.Documents.List>用來建立項目符號或數字的清單。 設定<xref:System.Windows.Documents.List.MarkerStyle%2A>屬性<xref:System.Windows.TextMarkerStyle>列舉值，以決定清單的樣式。 下例示範如何建立簡單的清單。  
+ <xref:System.Windows.Documents.List> 用來建立項目符號或數字的清單。 設定<xref:System.Windows.Documents.List.MarkerStyle%2A>屬性<xref:System.Windows.TextMarkerStyle>列舉值，以決定清單的樣式。 下例示範如何建立簡單的清單。  
   
  [!code-xaml[FlowOvwSnippets_snip#ListExampleWholePage](../../../../samples/snippets/csharp/VS_Snippets_Wpf/FlowOvwSnippets_snip/CS/ListExample.xaml#listexamplewholepage)]  
   
@@ -156,12 +144,12 @@ ms.lasthandoff: 12/22/2017
   
  **資料表**  
   
- <xref:System.Windows.Documents.Table>用來建立資料表。 <xref:System.Windows.Documents.Table>類似於<xref:System.Windows.Controls.Grid>項目，但它具有多個功能，因此，需要更高的資源負擔。 因為<xref:System.Windows.Controls.Grid>是<xref:System.Windows.UIElement>，它不能在非固定格式內容除非它包含在<xref:System.Windows.Documents.BlockUIContainer>或<xref:System.Windows.Documents.InlineUIContainer>。 如需有關<xref:System.Windows.Documents.Table>，請參閱[資料表概觀](../../../../docs/framework/wpf/advanced/table-overview.md)。  
+ <xref:System.Windows.Documents.Table> 用來建立資料表。 <xref:System.Windows.Documents.Table> 類似於<xref:System.Windows.Controls.Grid>項目，但它具有多個功能，因此，需要更高的資源負擔。 因為<xref:System.Windows.Controls.Grid>是<xref:System.Windows.UIElement>，它不能在非固定格式內容除非它包含在<xref:System.Windows.Documents.BlockUIContainer>或<xref:System.Windows.Documents.InlineUIContainer>。 如需有關<xref:System.Windows.Documents.Table>，請參閱[資料表概觀](../../../../docs/framework/wpf/advanced/table-overview.md)。  
   
 ### <a name="inline-derived-classes"></a>內嵌衍生類別  
  **執行**  
   
- <xref:System.Windows.Documents.Run>用來包含未格式化的文字。 您可能預期<xref:System.Windows.Documents.Run>物件廣泛地在使用非固定格式內容。 不過，在標記中，<xref:System.Windows.Documents.Run>項目不需要明確使用。 <xref:System.Windows.Documents.Run>需要時建立或操作固定格式文件，使用程式碼使用。 例如，在下面第一個標記<xref:System.Windows.Documents.Paragraph>指定<xref:System.Windows.Documents.Run>明確時，第二個元素則否。 這兩個段落會產生相同的輸出。  
+ <xref:System.Windows.Documents.Run> 用來包含未格式化的文字。 您可能預期<xref:System.Windows.Documents.Run>物件廣泛地在使用非固定格式內容。 不過，在標記中，<xref:System.Windows.Documents.Run>項目不需要明確使用。 <xref:System.Windows.Documents.Run> 需要時建立或操作固定格式文件，使用程式碼使用。 例如，在下面第一個標記<xref:System.Windows.Documents.Paragraph>指定<xref:System.Windows.Documents.Run>明確時，第二個元素則否。 這兩個段落會產生相同的輸出。  
   
  [!code-xaml[FlowOvwSnippets_snip#RunExample1](../../../../samples/snippets/csharp/VS_Snippets_Wpf/FlowOvwSnippets_snip/CS/RunSnippetsExample.xaml#runexample1)]  
   
@@ -169,7 +157,7 @@ ms.lasthandoff: 12/22/2017
   
  **Span**  
   
- <xref:System.Windows.Documents.Span>組合在一起的其他內嵌內容項目。 沒有固有的轉譯會套用至內容內<xref:System.Windows.Documents.Span>項目。 不過，項目會繼承自<xref:System.Windows.Documents.Span>包括<xref:System.Windows.Documents.Hyperlink>， <xref:System.Windows.Documents.Bold>，<xref:System.Windows.Documents.Italic>和<xref:System.Windows.Documents.Underline>不要將格式套用至文字。  
+ <xref:System.Windows.Documents.Span> 組合在一起的其他內嵌內容項目。 沒有固有的轉譯會套用至內容內<xref:System.Windows.Documents.Span>項目。 不過，項目會繼承自<xref:System.Windows.Documents.Span>包括<xref:System.Windows.Documents.Hyperlink>， <xref:System.Windows.Documents.Bold>，<xref:System.Windows.Documents.Italic>和<xref:System.Windows.Documents.Underline>不要將格式套用至文字。  
   
  以下是範例<xref:System.Windows.Documents.Span>用於包含內嵌的內容，包括文字、<xref:System.Windows.Documents.Bold>項目，和<xref:System.Windows.Controls.Button>。  
   
@@ -181,7 +169,7 @@ ms.lasthandoff: 12/22/2017
   
  **InlineUIContainer**  
   
- <xref:System.Windows.Documents.InlineUIContainer>可讓<xref:System.Windows.UIElement>項目 (也就是控制像<xref:System.Windows.Controls.Button>) 要內嵌在<xref:System.Windows.Documents.Inline>內容項目。 這個項目是相當於內嵌<xref:System.Windows.Documents.BlockUIContainer>上面所述。 以下是範例，使用<xref:System.Windows.Documents.InlineUIContainer>插入<xref:System.Windows.Controls.Button>中的內嵌<xref:System.Windows.Documents.Paragraph>。  
+ <xref:System.Windows.Documents.InlineUIContainer> 可讓<xref:System.Windows.UIElement>項目 (也就是控制像<xref:System.Windows.Controls.Button>) 要內嵌在<xref:System.Windows.Documents.Inline>內容項目。 這個項目是相當於內嵌<xref:System.Windows.Documents.BlockUIContainer>上面所述。 以下是範例，使用<xref:System.Windows.Documents.InlineUIContainer>插入<xref:System.Windows.Controls.Button>中的內嵌<xref:System.Windows.Documents.Paragraph>。  
   
  [!code-xaml[FlowOvwSnippets_snip#InlineUIContainerExampleWholePage](../../../../samples/snippets/csharp/VS_Snippets_Wpf/FlowOvwSnippets_snip/CS/InlineUIContainerExample.xaml#inlineuicontainerexamplewholepage)]  
   
@@ -192,7 +180,7 @@ ms.lasthandoff: 12/22/2017
   
  **圖表和 Floater**  
   
- <xref:System.Windows.Documents.Figure>和<xref:System.Windows.Documents.Floater>用來放置屬性可自訂獨立的主要內容流程與內嵌非固定格式文件中的內容。 <xref:System.Windows.Documents.Figure>或<xref:System.Windows.Documents.Floater>項目通常用於反白顯示，或強調部分內容、 影像或其他內容中主要的內容流程支援的主機，或將鬆散相關內容，例如廣告。  
+ <xref:System.Windows.Documents.Figure> 和<xref:System.Windows.Documents.Floater>用來放置屬性可自訂獨立的主要內容流程與內嵌非固定格式文件中的內容。 <xref:System.Windows.Documents.Figure> 或<xref:System.Windows.Documents.Floater>項目通常用於反白顯示，或強調部分內容、 影像或其他內容中主要的內容流程支援的主機，或將鬆散相關內容，例如廣告。  
   
  下列範例示範如何內嵌<xref:System.Windows.Documents.Figure>到段落的文字。  
   
@@ -205,7 +193,7 @@ ms.lasthandoff: 12/22/2017
   
  ![螢幕擷取畫面︰圖表範例](../../../../docs/framework/wpf/advanced/media/flow-ovw-figure-example.png "Flow_Ovw_Figure_Example")  
   
- <xref:System.Windows.Documents.Figure>和<xref:System.Windows.Documents.Floater>數種方式不同，而且會用於不同的案例。  
+ <xref:System.Windows.Documents.Figure> 和<xref:System.Windows.Documents.Floater>數種方式不同，而且會用於不同的案例。  
   
  **圖表：**  
   
@@ -219,15 +207,15 @@ ms.lasthandoff: 12/22/2017
   
 -   無法定位，但會轉譯任何可用的空間。 您不能設定位移或錨點<xref:System.Windows.Documents.Floater>。  
   
--   無法調整為多個資料行： 根據預設，<xref:System.Windows.Documents.Floater>在一個資料行的大小。 它有<xref:System.Windows.Documents.Floater.Width%2A>屬性可以設為絕對像素值，但如果這個值是大於則會忽略它的一個資料行寬度] 和 [浮動器的大小調整為一個資料行。 大小不超過一個資料行藉由設定正確的像素寬度，但調整大小不是資料行相關，因此 「 0.5Column"不是有效的運算式<xref:System.Windows.Documents.Floater>寬度。 <xref:System.Windows.Documents.Floater>沒有高度屬性，而且無法設定高度時，它的高度取決於內容  
+-   無法調整為多個資料行： 根據預設，<xref:System.Windows.Documents.Floater>在一個資料行的大小。 它有<xref:System.Windows.Documents.Floater.Width%2A>屬性可以設為絕對像素值，但如果這個值是大於則會忽略它的一個資料行寬度] 和 [浮動器的大小調整為一個資料行。 大小不超過一個資料行藉由設定正確的像素寬度，但調整大小不是資料行相關，因此 「 0.5Column"不是有效的運算式<xref:System.Windows.Documents.Floater>寬度。 <xref:System.Windows.Documents.Floater> 沒有高度屬性，而且無法設定高度時，它的高度取決於內容  
   
--   <xref:System.Windows.Documents.Floater>編頁： 如果在指定的寬度其內容延伸到 1 個以上的資料行高度，浮動器會中斷，並會分頁至下一個資料行，下一個頁面等。  
+-   <xref:System.Windows.Documents.Floater> 編頁： 如果在指定的寬度其內容延伸到 1 個以上的資料行高度，浮動器會中斷，並會分頁至下一個資料行，下一個頁面等。  
   
- <xref:System.Windows.Documents.Figure>若要將獨立內容適合您想要用來控制大小和定位和確信內容將放在指定的大小。 <xref:System.Windows.Documents.Floater>是將多個自由的內容流程類似於主頁面內容，但是它分隔的好地方。  
+ <xref:System.Windows.Documents.Figure> 若要將獨立內容適合您想要用來控制大小和定位和確信內容將放在指定的大小。 <xref:System.Windows.Documents.Floater> 是將多個自由的內容流程類似於主頁面內容，但是它分隔的好地方。  
   
  **LineBreak**  
   
- <xref:System.Windows.Documents.LineBreak>會導致在非固定格式內容發生分行。 下列範例示範 <xref:System.Windows.Documents.LineBreak> 的用法。  
+ <xref:System.Windows.Documents.LineBreak> 會導致在非固定格式內容發生分行。 下列範例示範 <xref:System.Windows.Documents.LineBreak> 的用法。  
   
  [!code-xaml[FlowOvwSnippets_snip#LineBreakExampleWholePage](../../../../samples/snippets/csharp/VS_Snippets_Wpf/FlowOvwSnippets_snip/CS/LineBreakExample.xaml#linebreakexamplewholepage)]  
   
@@ -285,7 +273,7 @@ ms.lasthandoff: 12/22/2017
   
  可以看出從上圖中，允許的項目子系不一定是取決於它是否<xref:System.Windows.Documents.Block>項目或<xref:System.Windows.Documents.Inline>項目。 例如， <xref:System.Windows.Documents.Span> (<xref:System.Windows.Documents.Inline>項目) 只能有<xref:System.Windows.Documents.Inline>時的子項目<xref:System.Windows.Documents.Figure>(也<xref:System.Windows.Documents.Inline>項目) 只能有<xref:System.Windows.Documents.Block>子項目。 因此，可快速判斷哪個元素可包含於其他元素中的圖表就很有用。 例如，讓我們使用圖表，即可決定如何建構的非固定格式內容<xref:System.Windows.Controls.RichTextBox>。  
   
- **1.**A<xref:System.Windows.Controls.RichTextBox>必須包含<xref:System.Windows.Documents.FlowDocument>其中必須包含<xref:System.Windows.Documents.Block>-衍生物件。 以下是來自上圖的對應區段。  
+ **1.** A<xref:System.Windows.Controls.RichTextBox>必須包含<xref:System.Windows.Documents.FlowDocument>其中必須包含<xref:System.Windows.Documents.Block>-衍生物件。 以下是來自上圖的對應區段。  
   
  ![圖表：RichTextBox 內含項目規則](../../../../docs/framework/wpf/advanced/media/flow-ovw-schemawalkthrough1.png "Flow_Ovw_SchemaWalkThrough1")  
   
@@ -293,7 +281,7 @@ ms.lasthandoff: 12/22/2017
   
  [!code-xaml[FlowOvwSnippets_snip#SchemaWalkThrough1](../../../../samples/snippets/csharp/VS_Snippets_Wpf/FlowOvwSnippets_snip/CS/MiscSnippets.xaml#schemawalkthrough1)]  
   
- **2.**根據圖表中，有好幾種<xref:System.Windows.Documents.Block>包括從選擇的項目<xref:System.Windows.Documents.Paragraph>， <xref:System.Windows.Documents.Section>， <xref:System.Windows.Documents.Table>， <xref:System.Windows.Documents.List>，和<xref:System.Windows.Documents.BlockUIContainer>（請參閱上述區塊衍生類別）。 假設我們想要<xref:System.Windows.Documents.Table>。 上圖，根據<xref:System.Windows.Documents.Table>包含<xref:System.Windows.Documents.TableRowGroup>包含<xref:System.Windows.Documents.TableRow>項目，其中包含<xref:System.Windows.Documents.TableCell>項目，其中包含<xref:System.Windows.Documents.Block>-衍生物件。 以下是對應的區段，如<xref:System.Windows.Documents.Table>取自圖。  
+ **2.** 根據圖表中，有好幾種<xref:System.Windows.Documents.Block>包括從選擇的項目<xref:System.Windows.Documents.Paragraph>， <xref:System.Windows.Documents.Section>， <xref:System.Windows.Documents.Table>， <xref:System.Windows.Documents.List>，和<xref:System.Windows.Documents.BlockUIContainer>（請參閱上述區塊衍生類別）。 假設我們想要<xref:System.Windows.Documents.Table>。 上圖，根據<xref:System.Windows.Documents.Table>包含<xref:System.Windows.Documents.TableRowGroup>包含<xref:System.Windows.Documents.TableRow>項目，其中包含<xref:System.Windows.Documents.TableCell>項目，其中包含<xref:System.Windows.Documents.Block>-衍生物件。 以下是對應的區段，如<xref:System.Windows.Documents.Table>取自圖。  
   
  ![圖表︰表格的父/子結構描述](../../../../docs/framework/wpf/advanced/media/flow-ovw-schemawalkthrough2.png "Flow_Ovw_SchemaWalkThrough2")  
   
@@ -301,7 +289,7 @@ ms.lasthandoff: 12/22/2017
   
  [!code-xaml[FlowOvwSnippets_snip#SchemaWalkThrough2](../../../../samples/snippets/csharp/VS_Snippets_Wpf/FlowOvwSnippets_snip/CS/MiscSnippets.xaml#schemawalkthrough2)]  
   
- **3.**同樣地，一或多個<xref:System.Windows.Documents.Block>都需要項目下方<xref:System.Windows.Documents.TableCell>。 為求簡便，我們在儲存格中放入一些文字。 我們可以這樣使用<xref:System.Windows.Documents.Paragraph>與<xref:System.Windows.Documents.Run>項目。 以下是從圖表中顯示的對應區段<xref:System.Windows.Documents.Paragraph>可以採取<xref:System.Windows.Documents.Inline>項目， <xref:System.Windows.Documents.Run> (<xref:System.Windows.Documents.Inline>項目) 可能只需要純文字。  
+ **3.** 同樣地，一或多個<xref:System.Windows.Documents.Block>都需要項目下方<xref:System.Windows.Documents.TableCell>。 為求簡便，我們在儲存格中放入一些文字。 我們可以這樣使用<xref:System.Windows.Documents.Paragraph>與<xref:System.Windows.Documents.Run>項目。 以下是從圖表中顯示的對應區段<xref:System.Windows.Documents.Paragraph>可以採取<xref:System.Windows.Documents.Inline>項目， <xref:System.Windows.Documents.Run> (<xref:System.Windows.Documents.Inline>項目) 可能只需要純文字。  
   
  ![圖表︰段落的父/子結構描述](../../../../docs/framework/wpf/advanced/media/flow-ovw-schemawalkthrough3.png "Flow_Ovw_SchemaWalkThrough3")  
   
@@ -359,7 +347,7 @@ ms.lasthandoff: 12/22/2017
   
  請參閱[WPF 中的印刷樣式](../../../../docs/framework/wpf/advanced/typography-in-wpf.md)如需有關印刷樣式。  
   
-## <a name="see-also"></a>請參閱  
+## <a name="see-also"></a>另請參閱  
  [Text](../../../../docs/framework/wpf/advanced/optimizing-performance-text.md)  
  [WPF 中的印刷樣式](../../../../docs/framework/wpf/advanced/typography-in-wpf.md)  
  [HOW-TO 主題](../../../../docs/framework/wpf/advanced/flow-content-elements-how-to-topics.md)  

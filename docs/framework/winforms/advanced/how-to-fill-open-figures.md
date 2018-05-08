@@ -1,13 +1,6 @@
 ---
-title: "如何：填滿開放圖形"
-ms.custom: 
+title: 如何：填滿開放圖形
 ms.date: 03/30/2017
-ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.technology: dotnet-winforms
-ms.tgt_pltfrm: 
-ms.topic: article
 dev_langs:
 - csharp
 - vb
@@ -15,19 +8,14 @@ helpviewer_keywords:
 - open figures [Windows Forms], filling
 - figures [Windows Forms], filling
 ms.assetid: 5a36b0e4-f1f4-46c0-a85a-22ae98491950
-caps.latest.revision: "15"
-author: dotnet-bot
-ms.author: dotnetcontent
-manager: wpickett
-ms.workload: dotnet
-ms.openlocfilehash: c020e5f7306e73ee97dff0b492b04b5a153059cd
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.openlocfilehash: b7422ae2a4dc4d59fd337ab2294caa0d65057bae
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="how-to-fill-open-figures"></a>如何：填滿開放圖形
-您可以藉由傳遞填滿路徑<xref:System.Drawing.Drawing2D.GraphicsPath>物件<xref:System.Drawing.Graphics.FillPath%2A>方法。 <xref:System.Drawing.Graphics.FillPath%2A>方法填入填滿模式 （替代或捲繞） 根據目前設定路徑的路徑。 如果路徑有任何開啟的數字，如同這些數字已關閉，已填入的路徑。 [!INCLUDE[ndptecgdiplus](../../../../includes/ndptecgdiplus-md.md)]關閉圖繪製直線其結束點從它的起點。  
+您可以藉由傳遞填滿路徑<xref:System.Drawing.Drawing2D.GraphicsPath>物件<xref:System.Drawing.Graphics.FillPath%2A>方法。 <xref:System.Drawing.Graphics.FillPath%2A>方法填入填滿模式 （替代或捲繞） 根據目前設定路徑的路徑。 如果路徑有任何開啟的數字，如同這些數字已關閉，已填入的路徑。 [!INCLUDE[ndptecgdiplus](../../../../includes/ndptecgdiplus-md.md)] 關閉圖繪製直線其結束點從它的起點。  
   
 ## <a name="example"></a>範例  
  下列範例會建立一個開放的圖表 （弧形） 和一個封閉的圖形 （橢圓形） 的路徑。 <xref:System.Drawing.Graphics.FillPath%2A>方法中填入預設填滿模式，這是根據路徑<xref:System.Drawing.Drawing2D.FillMode.Alternate>。  
@@ -42,6 +30,6 @@ ms.lasthandoff: 12/22/2017
 ## <a name="compiling-the-code"></a>編譯程式碼  
  上述範例是為了搭配 Windows Form 使用而設計，且其需要 <xref:System.Windows.Forms.PaintEventArgs> `e`，這是 <xref:System.Windows.Forms.Control.Paint> 事件處理常式的參數。  
   
-## <a name="see-also"></a>請參閱  
+## <a name="see-also"></a>另請參閱  
  <xref:System.Drawing.Drawing2D.GraphicsPath>  
  [GDI+ 中的圖形路徑](../../../../docs/framework/winforms/advanced/graphics-paths-in-gdi.md)

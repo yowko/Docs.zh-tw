@@ -1,13 +1,6 @@
 ---
-title: "如何：使用 Windows Form RichTextBox 控制項儲存檔案"
-ms.custom: 
+title: 如何：使用 Windows Form RichTextBox 控制項儲存檔案
 ms.date: 03/30/2017
-ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.technology: dotnet-winforms
-ms.tgt_pltfrm: 
-ms.topic: article
 dev_langs:
 - csharp
 - vb
@@ -22,16 +15,11 @@ helpviewer_keywords:
 - .rtf files [Windows Forms], saving in RichTextBox control
 - text files [Windows Forms], saving from RichTextBox control
 ms.assetid: 4a58ec19-84d1-4383-9110-298c06adcfca
-caps.latest.revision: "15"
-author: dotnet-bot
-ms.author: dotnetcontent
-manager: wpickett
-ms.workload: dotnet
-ms.openlocfilehash: 7fece6685c1ac71d6ddc152e25c22010e6d579c2
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.openlocfilehash: c50b2f3309c1f811b29e824327a709e2cc4bd791
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="how-to-save-files-with-the-windows-forms-richtextbox-control"></a>如何：使用 Windows Form RichTextBox 控制項儲存檔案
 Windows Form<xref:System.Windows.Forms.RichTextBox>控制項可以撰寫會在幾種格式之一顯示的資訊：  
@@ -98,7 +86,7 @@ Windows Form<xref:System.Windows.Forms.RichTextBox>控制項可以撰寫會在�
     > [!IMPORTANT]
     >  如果檔案不存在，此範例就會建立新的檔案。 如果必須建立檔案的應用程式，則該應用程式需要資料夾的建立權限。 您可以使用存取控制清單來設定權限。 如果檔案已經存在，應用程式只需要寫入權，較小者的權限。 可能的話，它是更安全，在部署期間，建立檔案並只授與讀取權限到單一檔案，而建立資料夾的存取。 此外，將資料寫入使用者資料夾，而不是根資料夾或 Program Files 資料夾，也更加安全。  
   
-## <a name="see-also"></a>請參閱  
+## <a name="see-also"></a>另請參閱  
  <xref:System.Windows.Forms.RichTextBox.SaveFile%2A?displayProperty=nameWithType>  
  <xref:System.Windows.Forms.RichTextBox>  
  [RichTextBox 控制項](../../../../docs/framework/winforms/controls/richtextbox-control-windows-forms.md)  

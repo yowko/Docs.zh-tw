@@ -1,13 +1,6 @@
 ---
 title: 結構 (Visual Basic)
-ms.custom: ''
 ms.date: 07/20/2015
-ms.prod: .net
-ms.reviewer: ''
-ms.suite: ''
-ms.technology:
-- devlang-visual-basic
-ms.topic: article
 helpviewer_keywords:
 - structures [Visual Basic]
 - user-defined data types [Visual Basic], structures
@@ -16,14 +9,11 @@ helpviewer_keywords:
 - user-defined data types [Visual Basic], about user-defined data types
 - types [Visual Basic], user-defined
 ms.assetid: 55e86462-5e99-4d33-8018-6d097ca491b2
-caps.latest.revision: 13
-author: dotnet-bot
-ms.author: dotnetcontent
-ms.openlocfilehash: d1f537b25a405548816ab3d356a18f693a5d0006
-ms.sourcegitcommit: 86adcc06e35390f13c1e372c36d2e044f1fc31ef
+ms.openlocfilehash: 1e245cb562a3112107ee805cf05c10b0374d8831
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/26/2018
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="structures-visual-basic"></a>結構 (Visual Basic)
 A*結構*為一般化的使用者定義型別 (UDT) 由舊版 Visual Basic 的支援。 欄位中，除了結構可以公開屬性、 方法和事件。 結構可以實作一個或多個介面，您可以宣告為每個欄位個別的存取層級。  

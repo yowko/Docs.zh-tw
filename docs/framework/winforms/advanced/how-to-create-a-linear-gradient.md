@@ -1,13 +1,6 @@
 ---
-title: "如何：建立線形漸層"
-ms.custom: 
+title: 如何：建立線形漸層
 ms.date: 03/30/2017
-ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.technology: dotnet-winforms
-ms.tgt_pltfrm: 
-ms.topic: article
 dev_langs:
 - csharp
 - vb
@@ -17,19 +10,14 @@ helpviewer_keywords:
 - colors [Windows Forms], creating linear gradients
 - gradients
 ms.assetid: 6c88e1cc-1217-4399-ac12-cb37592b9f01
-caps.latest.revision: "17"
-author: dotnet-bot
-ms.author: dotnetcontent
-manager: wpickett
-ms.workload: dotnet
-ms.openlocfilehash: 33979decf37e9adb29d94a6602a43f992d93aaa1
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.openlocfilehash: 9eeedf1ef92bdf6e5e2724eeca5060765b0778f3
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="how-to-create-a-linear-gradient"></a>如何：建立線形漸層
-[!INCLUDE[ndptecgdiplus](../../../../includes/ndptecgdiplus-md.md)]提供水平、 垂直和對角線線形漸層。 根據預設，線性漸層色彩一致變更。 不過，您可以自訂線性漸層，以便以非統一的方式變更色彩。  
+[!INCLUDE[ndptecgdiplus](../../../../includes/ndptecgdiplus-md.md)] 提供水平、 垂直和對角線線形漸層。 根據預設，線性漸層色彩一致變更。 不過，您可以自訂線性漸層，以便以非統一的方式變更色彩。  
   
  下列範例會填滿線條、 橢圓形和矩形，水平的線性漸層筆刷。  
   
@@ -50,7 +38,7 @@ ms.lasthandoff: 12/22/2017
   
  在上述範例中，色彩元件變更以線性方式從水平座標 0 移到 200 水平座標。 比方說，其第一個座標為偶數，介於 0 到 200 之間的點必須是介於 0 和 255 的藍色元件。  
   
- [!INCLUDE[ndptecgdiplus](../../../../includes/ndptecgdiplus-md.md)]可讓您調整色彩更改一邊漸層的其他方式。 假設您想要建立從黑色變成紅色，根據下表的漸層筆刷。  
+ [!INCLUDE[ndptecgdiplus](../../../../includes/ndptecgdiplus-md.md)] 可讓您調整色彩更改一邊漸層的其他方式。 假設您想要建立從黑色變成紅色，根據下表的漸層筆刷。  
   
 |水平座標|RGB 元件|  
 |---------------------------|--------------------|  
@@ -88,6 +76,6 @@ ms.lasthandoff: 12/22/2017
      [!code-csharp[System.Drawing.UsingaGradientBrush#23](../../../../samples/snippets/csharp/VS_Snippets_Winforms/System.Drawing.UsingaGradientBrush/CS/Class1.cs#23)]
      [!code-vb[System.Drawing.UsingaGradientBrush#23](../../../../samples/snippets/visualbasic/VS_Snippets_Winforms/System.Drawing.UsingaGradientBrush/VB/Class1.vb#23)]  
   
-## <a name="see-also"></a>請參閱  
+## <a name="see-also"></a>另請參閱  
  [使用漸層筆刷填滿形狀](../../../../docs/framework/winforms/advanced/using-a-gradient-brush-to-fill-shapes.md)  
  [Windows Forms 中的圖形和繪圖](../../../../docs/framework/winforms/advanced/graphics-and-drawing-in-windows-forms.md)

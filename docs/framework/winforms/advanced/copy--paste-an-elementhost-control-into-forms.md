@@ -1,29 +1,17 @@
 ---
-title: "逐步解說：將 ElementHost 控制項複製並貼至另外的 Windows Form"
-ms.custom: 
+title: 逐步解說：將 ElementHost 控制項複製並貼至另外的 Windows Form
 ms.date: 03/30/2017
-ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.technology: dotnet-winforms
-ms.tgt_pltfrm: 
-ms.topic: article
 helpviewer_keywords:
 - Windows Forms, content copying and pasting
 - interoperability [WPF]
 - ElementHost control [Windows Forms], copying and pasting at design time
 - WPF user control [Windows Forms], hosting in Windows Forms
 ms.assetid: 6e81bb13-577c-46c3-a1cf-8d15969fb83e
-caps.latest.revision: "19"
-author: dotnet-bot
-ms.author: dotnetcontent
-manager: wpickett
-ms.workload: dotnet
-ms.openlocfilehash: 2f98d3463adab9bace30610efbaf06dcade78f17
-ms.sourcegitcommit: c0dd436f6f8f44dc80dc43b07f6841a00b74b23f
+ms.openlocfilehash: 1cce981e4cb04ab6ed6ed41e0afac0121b242761
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 01/19/2018
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="walkthrough-copying-and-pasting-an-elementhost-control-into-separate-windows-forms"></a>逐步解說：將 ElementHost 控制項複製並貼至另外的 Windows Form
 本逐步解說示範如何將 Windows Presentation Foundation (WPF) 控制項從一個 Windows Form 複製到另一個 Windows Form。  
@@ -75,7 +63,7 @@ ms.lasthandoff: 01/19/2018
   
      由於複製的控制項是 `Form2` 類別的私用欄位，因此該控制項的名稱也是 `elementHost1`。 這樣並不會與 `Form1` 類別中的 `elementHost1` 產生名稱衝突。  
   
-## <a name="see-also"></a>請參閱  
+## <a name="see-also"></a>另請參閱  
  <xref:System.Windows.Forms.Integration.ElementHost>  
  <xref:System.Windows.Forms.Integration.WindowsFormsHost>  
  [移轉和互通性](../../../../docs/framework/wpf/advanced/migration-and-interoperability.md)  

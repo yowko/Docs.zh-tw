@@ -1,13 +1,6 @@
 ---
-title: "ProgressBar 樣式和範本"
-ms.custom: 
+title: ProgressBar 樣式和範本
 ms.date: 03/30/2017
-ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.technology: dotnet-wpf
-ms.tgt_pltfrm: 
-ms.topic: article
 helpviewer_keywords:
 - parts [WPF], ProgressBar
 - ProgressBar [WPF], styles and templates
@@ -16,16 +9,11 @@ helpviewer_keywords:
 - templates [WPF], ProgressBar
 - states [WPF], ProgressBar
 ms.assetid: 935aa600-16e6-4947-a905-37a189a583dd
-caps.latest.revision: "15"
-author: dotnet-bot
-ms.author: dotnetcontent
-manager: wpickett
-ms.workload: dotnet
-ms.openlocfilehash: 6809ce2f51af8a1baf535afa8fe80f4e5b5f53e9
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.openlocfilehash: 0ed9d134a055e5b411ab105b72706839e2f216c1
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="progressbar-styles-and-templates"></a>ProgressBar 樣式和範本
 本主題描述樣式和範本<xref:System.Windows.Controls.ProgressBar>控制項。 您可以修改預設<xref:System.Windows.Controls.ControlTemplate>來提供獨特的外觀的控制項。 如需詳細資訊，請參閱[透過建立 ControlTemplate 自訂現有控制項的外觀](../../../../docs/framework/wpf/controls/customizing-the-appearance-of-an-existing-control.md)。  
@@ -44,8 +32,8 @@ ms.lasthandoff: 12/22/2017
   
 |VisualState 名稱|VisualStateGroup 名稱|描述|  
 |----------------------|---------------------------|-----------------|  
-|確定|CommonStates|<xref:System.Windows.Controls.ProgressBar>報告進度根據<xref:System.Windows.Controls.Primitives.RangeBase.Value%2A>屬性。|  
-|不定|CommonStates|<xref:System.Windows.Controls.ProgressBar>報告泛型的進度，以重複模式。|  
+|確定|CommonStates|<xref:System.Windows.Controls.ProgressBar> 報告進度根據<xref:System.Windows.Controls.Primitives.RangeBase.Value%2A>屬性。|  
+|不定|CommonStates|<xref:System.Windows.Controls.ProgressBar> 報告泛型的進度，以重複模式。|  
 |驗證|ValidationStates|此控制項會使用<xref:System.Windows.Controls.Validation>類別和<xref:System.Windows.Controls.Validation.HasError%2A?displayProperty=nameWithType>附加屬性`false`。|  
 |InvalidFocused|ValidationStates|<xref:System.Windows.Controls.Validation.HasError%2A?displayProperty=nameWithType>附加屬性`true`具有焦點的控制項。|  
 |InvalidUnfocused|ValidationStates|<xref:System.Windows.Controls.Validation.HasError%2A?displayProperty=nameWithType>附加屬性`true`有控制項沒有焦點。|  
@@ -61,7 +49,7 @@ ms.lasthandoff: 12/22/2017
   
  如需完整的範例，請參閱[使用 ControlTemplate 設定樣式範例](http://go.microsoft.com/fwlink/?LinkID=160041)。  
   
-## <a name="see-also"></a>請參閱  
+## <a name="see-also"></a>另請參閱  
  <xref:System.Windows.FrameworkElement.Style%2A>  
  <xref:System.Windows.Controls.ControlTemplate>  
  [控制項的樣式和範本](../../../../docs/framework/wpf/controls/control-styles-and-templates.md)  

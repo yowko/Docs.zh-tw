@@ -1,32 +1,18 @@
 ---
 title: HOW TO：使用程式碼發行服務的中繼資料
-ms.custom: ''
 ms.date: 03/30/2017
-ms.prod: .net-framework
-ms.reviewer: ''
-ms.suite: ''
-ms.technology:
-- dotnet-clr
-ms.tgt_pltfrm: ''
-ms.topic: article
 dev_langs:
 - csharp
 - vb
 ms.assetid: 51407e6d-4d87-42d5-be7c-9887b8652006
-caps.latest.revision: 19
-author: dotnet-bot
-ms.author: dotnetcontent
-manager: wpickett
-ms.workload:
-- dotnet
-ms.openlocfilehash: c3d2fd1222539ec8017846069e7eda9a2c503f22
-ms.sourcegitcommit: 94d33cadc5ff81d2ac389bf5f26422c227832052
+ms.openlocfilehash: bef5421d377bcae6e8c56b0117ebbe22a861de86
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/30/2018
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="how-to-publish-metadata-for-a-service-using-code"></a>HOW TO：使用程式碼發行服務的中繼資料
-本文是探討發行 [!INCLUDE[indigo1](../../../../includes/indigo1-md.md)] 服務中繼資料的兩個 HOW TO 主題之其一。 有兩種方法可以指定服務發行中繼資料的方式，分別是使用組態檔和使用程式碼。 本主題說明如何使用程式碼發行服務的中繼資料。  
+這是兩個使用說明主題會討論 Windows Communication Foundation (WCF) 服務發行中繼資料。 有兩種方法可以指定服務發行中繼資料的方式，分別是使用組態檔和使用程式碼。 本主題說明如何使用程式碼發行服務的中繼資料。  
   
 > [!CAUTION]
 >  本主題將示範以不安全的方法發行中繼資料。 任何用戶端都能從服務擷取中繼資料。 若您的服務需要以安全的方法發行中繼資料。 請參閱[自訂安全中繼資料端點](../../../../docs/framework/wcf/samples/custom-secure-metadata-endpoint.md)。  
@@ -94,7 +80,7 @@ ms.lasthandoff: 04/30/2018
 11. 使用 Internet Explorer 瀏覽至服務的基底位址 (http://localhost:8001/MetadataSample在此範例中)，並確認已開啟中繼資料發行。 您應該會看到頁面上方標示「簡易服務」，且在其下跟著「您已建立服務」的網頁。 如果沒有的話，結果頁面上方應該會顯示：「為此服務發行的中繼資料目前停用」。  
   
 ## <a name="example"></a>範例  
- 下列程式碼範例說明可透過程式碼發行服務中繼資料的基本 [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] 服務實作。  
+ 下列程式碼範例示範基本的 WCF 服務，透過程式碼發行服務中繼資料的實作。  
   
  [!code-csharp[htPublishMetadataCode#11](../../../../samples/snippets/csharp/VS_Snippets_CFX/htpublishmetadatacode/cs/program.cs#11)]
  [!code-vb[htPublishMetadataCode#11](../../../../samples/snippets/visualbasic/VS_Snippets_CFX/htpublishmetadatacode/vb/program.vb#11)]  

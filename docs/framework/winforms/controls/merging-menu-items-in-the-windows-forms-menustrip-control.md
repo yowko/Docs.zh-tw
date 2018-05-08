@@ -1,27 +1,15 @@
 ---
-title: "合併 Windows Form MenuStrip 控制項中的功能表項目"
-ms.custom: 
+title: 合併 Windows Form MenuStrip 控制項中的功能表項目
 ms.date: 03/30/2017
-ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.technology: dotnet-winforms
-ms.tgt_pltfrm: 
-ms.topic: article
 helpviewer_keywords:
 - MenuStrip [Windows Forms], merging
 - merging [Windows Forms], general concepts
 ms.assetid: 95e113ba-f362-4dda-8a76-6d95ddc45cee
-caps.latest.revision: "7"
-author: dotnet-bot
-ms.author: dotnetcontent
-manager: wpickett
-ms.workload: dotnet
-ms.openlocfilehash: cd54855f7ee618915fea4fcb8f465cc8c1a68164
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.openlocfilehash: 2782ae483d673f8f1eccab10876aca858737260a
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="merging-menu-items-in-the-windows-forms-menustrip-control"></a>合併 Windows Form MenuStrip 控制項中的功能表項目
 如果您有多個文件介面 (MDI) 應用程式，您可以合併到父表單的功能表的功能表項目或從子表單的整個功能表。  
@@ -41,7 +29,7 @@ ms.lasthandoff: 12/22/2017
   
  您可以在手動或自動合併功能表項目。 這兩種方法中，相同的方式合併的功能表項目，但會以不同的方式，本主題稍後的 「 手動合併 」 和 「 自動合併 」 章節所討論啟動合併。 在手動和自動合併，每個合併動作會影響下一步合併動作。  
   
- <xref:System.Windows.Forms.MenuStrip>合併移動功能表項目從某個<xref:System.Windows.Forms.ToolStrip>之間而非複製，因為已使用的情況下<xref:System.Windows.Forms.MainMenu>。  
+ <xref:System.Windows.Forms.MenuStrip> 合併移動功能表項目從某個<xref:System.Windows.Forms.ToolStrip>之間而非複製，因為已使用的情況下<xref:System.Windows.Forms.MainMenu>。  
   
 ## <a name="mergeaction-values"></a>MergeAction 值  
  您在來源中的功能表項目上設定合併動作<xref:System.Windows.Forms.MenuStrip>使用<xref:System.Windows.Forms.MergeAction>屬性。  
@@ -53,7 +41,7 @@ ms.lasthandoff: 12/22/2017
 |<xref:System.Windows.Forms.MergeAction.Append>|（預設值）將來源項目加入至目標項目集合的結尾。|功能表項目加入功能表的結束時啟動程式的某些部分。|  
 |<xref:System.Windows.Forms.MergeAction.Insert>|將來源項目加入至目標項目的集合，在所指定的位置<xref:System.Windows.Forms.ToolStripItem.MergeIndex%2A>來源項目上設定的屬性。|啟動程式的某些部分時，請至中間或功能表的開頭加入功能表項目。<br /><br /> 如果值<xref:System.Windows.Forms.ToolStripItem.MergeIndex%2A>相同的兩個功能表項目，就會加入以反向順序。 設定<xref:System.Windows.Forms.ToolStripItem.MergeIndex%2A>適當地保留原始的順序。|  
 |<xref:System.Windows.Forms.MergeAction.Replace>|尋找文字的相符項目，或使用<xref:System.Windows.Forms.ToolStripItem.MergeIndex%2A>值，如果沒有文字相符項目發現，然後將相符的目標功能表項目取代來源功能表項目。|取代來源功能表項目沒有其他同名的目標功能表項目。|  
-|<xref:System.Windows.Forms.MergeAction.MatchOnly>|尋找文字的相符項目，或使用<xref:System.Windows.Forms.ToolStripItem.MergeIndex%2A>如果沒有文字相符項目找到，並將所有下拉式項目從來源到目標值。|建立功能表結構插入或將功能表項目新增到子功能表，或移除子功能表的功能表項目。 例如，您可以加入功能表項目從 MDI 子系主要<xref:System.Windows.Forms.MenuStrip>**存**功能表。<br /><br /> <xref:System.Windows.Forms.MergeAction.MatchOnly>可讓您瀏覽功能表結構而不採取任何動作。 它提供方法來評估後續項目。|  
+|<xref:System.Windows.Forms.MergeAction.MatchOnly>|尋找文字的相符項目，或使用<xref:System.Windows.Forms.ToolStripItem.MergeIndex%2A>如果沒有文字相符項目找到，並將所有下拉式項目從來源到目標值。|建立功能表結構插入或將功能表項目新增到子功能表，或移除子功能表的功能表項目。 例如，您可以加入功能表項目從 MDI 子系主要<xref:System.Windows.Forms.MenuStrip>**存**功能表。<br /><br /> <xref:System.Windows.Forms.MergeAction.MatchOnly> 可讓您瀏覽功能表結構而不採取任何動作。 它提供方法來評估後續項目。|  
 |<xref:System.Windows.Forms.MergeAction.Remove>|尋找文字的相符項目，或使用<xref:System.Windows.Forms.ToolStripItem.MergeIndex%2A>值，如果沒有文字相符項目發現，然後在目標中移除的項目。|從目標中移除功能表項目<xref:System.Windows.Forms.MenuStrip>。|  
   
 ## <a name="manual-merging"></a>手動合併  
@@ -64,7 +52,7 @@ ms.lasthandoff: 12/22/2017
   
  您可以觸發自動合併藉由啟用<xref:System.Windows.Forms.MenuStrip>MDI 來源。 在啟動過程中，來源<xref:System.Windows.Forms.MenuStrip>合併到 MDI 目標。 當新的表單變成作用中時，合併會還原上一個表單，而且觸發新的表單上。 您可以設定來控制此行為<xref:System.Windows.Forms.ToolStripItem.MergeAction%2A>屬性視需要在每個<xref:System.Windows.Forms.ToolStripItem>，以及設定<xref:System.Windows.Forms.ToolStrip.AllowMerge%2A>上每個屬性<xref:System.Windows.Forms.MenuStrip>。  
   
-## <a name="see-also"></a>請參閱  
+## <a name="see-also"></a>另請參閱  
  <xref:System.Windows.Forms.ToolStripManager>  
  <xref:System.Windows.Forms.MenuStrip>  
  [MenuStrip 控制項](../../../../docs/framework/winforms/controls/menustrip-control-windows-forms.md)  

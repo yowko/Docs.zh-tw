@@ -1,22 +1,12 @@
 ---
-title: "WordprocessingML 文件的 (Visual Basic)"
-ms.custom: 
+title: WordprocessingML 文件的 (Visual Basic)
 ms.date: 07/20/2015
-ms.prod: .net
-ms.reviewer: 
-ms.suite: 
-ms.technology: devlang-visual-basic
-ms.tgt_pltfrm: 
-ms.topic: article
 ms.assetid: 2dfb446b-5a07-4c00-9ab3-a74ba734ff3a
-caps.latest.revision: "3"
-author: dotnet-bot
-ms.author: dotnetcontent
-ms.openlocfilehash: 5809e8148e7ac426b876ad11948878ee0bfcd016
-ms.sourcegitcommit: 8ed4ebc15b5ef89d06a7507dc9d5e306e30accf7
+ms.openlocfilehash: 40d1013d5b5c131cc0b83c1b62bff2555ab179a4
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 12/14/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="shape-of-wordprocessingml-documents-visual-basic"></a>WordprocessingML 文件的 (Visual Basic)
 這個主題說明 WordprocessingML 文件的 XML 組織結構。  
@@ -24,7 +14,7 @@ ms.lasthandoff: 12/14/2017
 ## <a name="microsoft-office-formats"></a>Microsoft Office 格式  
  2007 Microsoft Office 系統的原始檔案格式為 Office Open XML (一般稱為 Open XML)。 Open XML 是一種 Ecma 標準，而且目前正在通過 ISO-IEC 標準程序的 XML 格式。 在 Open XML 中，字組處理檔案的標記語言稱為 WordprocessingML。 這個教學課程會使用 WordprocessingML 原始程式檔做為範例的輸入。  
   
- 如果您使用 Microsoft Office 2003，您可以將儲存的文件中的 Office Open XML 格式如果您已經安裝 Microsoft Office Compatibility Pack for Word、 Excel 和 PowerPoint 2007 檔案格式。  
+ 如果您是使用 Microsoft Office 2003 且有安裝 Word、Excel 與 PowerPoint 2007 檔案格式的 Microsoft Office 相容性套件，便可以將文件儲存為 Office Open XML 格式。  
   
 ## <a name="the-shape-of-wordprocessingml-documents"></a>WordprocessingML 文件的組織結構  
  第一件要了解的事情是 WordprocessingML 文件的組織結構。 WordprocessingML 文件包含具有文件段落的本文項目 (稱為 `w:body`)。 每個段落都包含一或多個文字執行 (稱為 `w:r`)。 每個文字執行都包含一或多個文字片段 (稱為 `w:t`)。  

@@ -1,13 +1,6 @@
 ---
-title: "Visual Basic 中的 Main 程序"
-ms.custom: 
+title: Visual Basic 中的 Main 程序
 ms.date: 07/20/2015
-ms.prod: .net
-ms.reviewer: 
-ms.suite: 
-ms.technology:
-- devlang-visual-basic
-ms.topic: article
 f1_keywords:
 - vb.Main
 helpviewer_keywords:
@@ -15,24 +8,21 @@ helpviewer_keywords:
 - Main method [Visual Basic]
 - main function
 ms.assetid: f0db283e-f283-4464-b521-b90858cc1b44
-caps.latest.revision: 
-author: dotnet-bot
-ms.author: dotnetcontent
-ms.openlocfilehash: 6de98ad4e470cd0becaf25f5a9a00c8095e44b15
-ms.sourcegitcommit: 34ec7753acf76f90a0fa845235ef06663dc9e36e
+ms.openlocfilehash: 109bf94eb91292cfca700a9e456c8ab53e83d68f
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="main-procedure-in-visual-basic"></a>Visual Basic 中的 Main 程序
 每個 Visual Basic 應用程式必須包含呼叫的程序`Main`。 起始點和應用程式的整體控制，就會作為此程序。 .NET Framework 會呼叫您`Main`程序時已載入您的應用程式已準備好將控制權傳給它。 除非您要建立 Windows Forms 應用程式，您必須撰寫`Main`上執行自己的應用程式的程序。  
   
- `Main`包含會先執行程式碼。 在`Main`，您可以決定要在程式啟動時，第一次載入的表單中，找出您的應用程式的複本是否已執行系統上、 應用程式建立一組變數或開啟應用程式需要的資料庫。  
+ `Main` 包含會先執行程式碼。 在`Main`，您可以決定要在程式啟動時，第一次載入的表單中，找出您的應用程式的複本是否已執行系統上、 應用程式建立一組變數或開啟應用程式需要的資料庫。  
   
 ## <a name="requirements-for-the-main-procedure"></a>主要程序的需求  
  在執行它自己 （通常具有副檔名.exe) 檔案必須包含`Main`程序。 不執行於它自己的程式庫 （例如使用副檔名.dll)，而且不需要`Main`程序。 您可以建立不同類型的專案的需求如下所示：  
   
--   主控台應用程式上執行其本身，以及您必須提供至少一個`Main`程序。 .  
+-   主控台應用程式上執行其本身，以及您必須提供至少一個`Main`程序。 。  
   
 -   Windows Form 應用程式上執行其本身。 不過，Visual Basic 編譯器會自動產生`Main`程序，例如應用程式，而且您不需要撰寫一個。  
   
@@ -56,7 +46,7 @@ ms.lasthandoff: 12/21/2017
     End Module  
     ```  
   
--   `Main`也可以傳回`Integer`值，作業系統會使用與結束碼為您的程式。 其他程式可以藉由檢查 Windows ERRORLEVEL 值測試這段程式碼。 若要傳回的結束代碼，您必須宣告`Main`為`Function`程序，而不是`Sub`程序。  
+-   `Main` 也可以傳回`Integer`值，作業系統會使用與結束碼為您的程式。 其他程式可以藉由檢查 Windows ERRORLEVEL 值測試這段程式碼。 若要傳回的結束代碼，您必須宣告`Main`為`Function`程序，而不是`Sub`程序。  
   
     ```  
     Module mainModule  
@@ -73,7 +63,7 @@ ms.lasthandoff: 12/21/2017
     End Module  
     ```  
   
--   `Main`也可以採用`String`做為引數的陣列。 陣列中的每個字串可包含一個用來叫用您的程式命令列引數。 您可以採取不同的動作，取決於其值。  
+-   `Main` 也可以採用`String`做為引數的陣列。 陣列中的每個字串可包含一個用來叫用您的程式命令列引數。 您可以採取不同的動作，取決於其值。  
   
     ```  
     Module mainModule  
@@ -117,7 +107,7 @@ ms.lasthandoff: 12/21/2017
     End Module  
     ```  
   
-## <a name="see-also"></a>請參閱  
+## <a name="see-also"></a>另請參閱  
  <xref:Microsoft.VisualBasic.Interaction.MsgBox%2A>  
  <xref:System.Array.Length%2A>  
  <xref:Microsoft.VisualBasic.Information.UBound%2A>  

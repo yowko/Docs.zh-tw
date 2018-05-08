@@ -1,24 +1,12 @@
 ---
-title: "了解狀態變更"
-ms.custom: 
+title: 了解狀態變更
 ms.date: 03/30/2017
-ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.technology: dotnet-clr
-ms.tgt_pltfrm: 
-ms.topic: article
 ms.assetid: a79ed2aa-e49a-47a8-845a-c9f436ec9987
-caps.latest.revision: "13"
-author: dotnet-bot
-ms.author: dotnetcontent
-manager: wpickett
-ms.workload: dotnet
-ms.openlocfilehash: ce0d3be43b8e50367d1cdd9b4e486a4154001624
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.openlocfilehash: 5bfee392053d9f3fd529d68b533a046e53f20dd1
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="understanding-state-changes"></a>了解狀態變更
 本主題說明通道具有的狀態和轉換、用來建構通道狀態的型別，以及如何實作。  
@@ -42,7 +30,7 @@ ms.lasthandoff: 12/22/2017
  ![通道狀態轉換](../../../../docs/framework/wcf/extending/media/channelstatetranitionshighleveldiagram.gif "ChannelStateTranitionsHighLevelDiagram")  
 圖 1。 ICommunicationObject 狀態機器。  
   
- [!INCLUDE[indigo1](../../../../includes/indigo1-md.md)] 提供了一個名為 <xref:System.ServiceModel.Channels.CommunicationObject>，會實作 <xref:System.ServiceModel.ICommunicationObject> 和通道狀態機器的抽象基底類別。 下圖是 <xref:System.ServiceModel.Channels.CommunicationObject> 特定的狀態修訂圖。 除了 <xref:System.ServiceModel.ICommunicationObject> 狀態機器之外，它還說明了叫用其他 <xref:System.ServiceModel.Channels.CommunicationObject> 方法的時機。  
+ Windows Communication Foundation (WCF) 提供的抽象的基底類別，名為<xref:System.ServiceModel.Channels.CommunicationObject>實作<xref:System.ServiceModel.ICommunicationObject>和通道狀態機器。 下圖是 <xref:System.ServiceModel.Channels.CommunicationObject> 特定的狀態修訂圖。 除了 <xref:System.ServiceModel.ICommunicationObject> 狀態機器之外，它還說明了叫用其他 <xref:System.ServiceModel.Channels.CommunicationObject> 方法的時機。  
   
  ![狀態變更](../../../../docs/framework/wcf/extending/media/wcfc-wcfchannelsigure5statetransitionsdetailsc.gif "wcfc_WCFChannelsigure5StateTransitionsDetailsc")  
 圖 2。 CommunicationObject 狀態機器的 CommunicationObject 實作，包括呼叫事件和受保護的方法。  

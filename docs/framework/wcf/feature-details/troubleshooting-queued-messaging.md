@@ -1,38 +1,24 @@
 ---
 title: 佇列訊息的疑難排解
-ms.custom: ''
 ms.date: 03/30/2017
-ms.prod: .net-framework
-ms.reviewer: ''
-ms.suite: ''
-ms.technology:
-- dotnet-clr
-ms.tgt_pltfrm: ''
-ms.topic: article
 ms.assetid: a5f2836f-018d-42f5-a571-1e97e64ea5b0
-caps.latest.revision: 19
-author: dotnet-bot
-ms.author: dotnetcontent
-manager: wpickett
-ms.workload:
-- dotnet
-ms.openlocfilehash: 1342f2383e7cf2aa15ea60be03c93044e4332612
-ms.sourcegitcommit: 94d33cadc5ff81d2ac389bf5f26422c227832052
+ms.openlocfilehash: 45a3bf82662fcc01b732428d1ca351e4ae8ddca0
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/30/2018
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="troubleshooting-queued-messaging"></a>佇列訊息的疑難排解
-本章節包含在 [!INCLUDE[indigo1](../../../../includes/indigo1-md.md)] 中使用佇列之常見問題與疑難排解說明。  
+本章節包含常見問題與疑難排解說明，以便使用 Windows Communication Foundation (WCF) 佇列。  
   
 ## <a name="common-questions"></a>常見問題  
- **問：**用[!INCLUDE[indigo2](../../../../includes/indigo2-md.md)]Beta 1，而且有安裝 MSMQ hotfix。 我是否需要移除這個 Hotfix？  
+ **問：**我使用 WCF Beta 1，我會安裝 MSMQ hotfix。 我是否需要移除這個 Hotfix？  
   
- **答：** 可以。 不再支援這個 Hotfix。 現在 [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] 可以執行 MSMQ 而不需要 Hotfix。  
+ **答：** 可以。 不再支援這個 Hotfix。 WCF 現在可以執行 MSMQ 而不需 hotfix。  
   
  **問：**有兩個繫結的 MSMQ:<xref:System.ServiceModel.NetMsmqBinding>和<xref:System.ServiceModel.MsmqIntegration.MsmqIntegrationBinding>。 我應該在什麼狀況下使用它們？  
   
- **答：**使用<xref:System.ServiceModel.NetMsmqBinding>當您想要使用 MSMQ 做為傳輸佇列之間進行通訊兩個[!INCLUDE[indigo2](../../../../includes/indigo2-md.md)]應用程式。 當您要使用現有的 MSMQ 應用程式與新的 <xref:System.ServiceModel.MsmqIntegration.MsmqIntegrationBinding> 應用程式通訊時，請使用 [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)]。  
+ **答：**使用<xref:System.ServiceModel.NetMsmqBinding>當您想要使用 MSMQ 做為傳輸，兩個 WCF 應用程式之間佇列通訊。 使用<xref:System.ServiceModel.MsmqIntegration.MsmqIntegrationBinding>當您想要使用現有 MSMQ 應用程式與新的 WCF 應用程式通訊。  
   
  **問：**我是否需要升級 MSMQ 才能使用<xref:System.ServiceModel.NetMsmqBinding>和`MsmqIntegration`繫結？  
   
@@ -54,7 +40,7 @@ ms.lasthandoff: 04/30/2018
   
  **答：** 可以。  
   
- **問：**我想要整合現有 MSMQ 應用程式，以新[!INCLUDE[indigo2](../../../../includes/indigo2-md.md)]用戶端或伺服器。 我是否需要為 MSMQ 基礎結構的兩端同時升級？  
+ **問：**我想要與新的 WCF 用戶端或伺服器整合現有 MSMQ 應用程式。 我是否需要為 MSMQ 基礎結構的兩端同時升級？  
   
  **答：** 否。 您不需要將任何一端升級至 MSMQ 4.0。  
   
@@ -145,9 +131,9 @@ System.ServiceModel.MsmqPoisonMessageException: The transport channel detected a
   
  **問：**當我使用 public 或 private 格式名稱，並開啟服務主機上[!INCLUDE[wv](../../../../includes/wv-md.md)]，收到的錯誤。 為什麼？  
   
- **答：** [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)]整合通道上的[!INCLUDE[wv](../../../../includes/wv-md.md)]檢查如果子佇列可以開啟主應用程式佇列來處理有害訊息。 子佇列的名稱衍生自傳遞至接聽項的 msmq.formatname URI。 但是 MSMQ 中的子佇列名稱只能是直接格式名稱。 所以您會看到錯誤。 請將佇列 URI 變更為直接格式名稱。  
+ **答：** WCF 整合通道上的[!INCLUDE[wv](../../../../includes/wv-md.md)]檢查如果子佇列可以開啟主應用程式佇列來處理有害訊息。 子佇列的名稱衍生自傳遞至接聽項的 msmq.formatname URI。 但是 MSMQ 中的子佇列名稱只能是直接格式名稱。 所以您會看到錯誤。 請將佇列 URI 變更為直接格式名稱。  
   
- **問：**時從 MSMQ 應用程式收到訊息時，位於佇列中並不會讀取接收訊息[!INCLUDE[indigo2](../../../../includes/indigo2-md.md)]應用程式。 為什麼？  
+ **問：**時從 MSMQ 應用程式中接收訊息，訊息都位於佇列中的且不會讀取所接收的 WCF 應用程式。 為什麼？  
   
  **答：**檢查訊息是否有內文。 如果訊息沒有本文，MSMQ 整合通道便會忽略該訊息。 實作 `IErrorHandler`，即可獲得例外狀況的通知和檢查追蹤。  
   
@@ -193,7 +179,7 @@ System.ServiceModel.MsmqPoisonMessageException: The transport channel detected a
  **答：**檢查繫結組態。 預設繫結會開啟 MSMQ 傳輸安全性以簽署訊息。 請關閉此選項。  
   
 ### <a name="remote-transacted-receives"></a>遠端交易接收  
- **問：**當我在電腦 A 上有佇列和[!INCLUDE[indigo2](../../../../includes/indigo2-md.md)]讀取訊息的 B （遠端交易接收案例），從電腦上的佇列訊息不會從佇列讀取的服務。 追蹤資訊指出接收失敗，訊息 「 無法匯入交易。" 可以做什麼來修正這個問題？  
+ **問：**當我在電腦 A 上設有佇列，並從電腦 B （遠端交易接收案例），訊息上的佇列讀取訊息的 WCF 服務不會從佇列讀取。 追蹤資訊指出接收失敗，訊息 「 無法匯入交易。" 可以做什麼來修正這個問題？  
   
  **答：**有三個可能的原因：  
   

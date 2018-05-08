@@ -1,10 +1,6 @@
 ---
-title: "衍生的數學函式 (Visual Basic)"
+title: 衍生的數學函式 (Visual Basic)
 ms.date: 07/20/2015
-ms.prod: .net
-ms.suite: 
-ms.technology: devlang-visual-basic
-ms.topic: article
 helpviewer_keywords:
 - arithmetic operations, derived math functions
 - cosecant function
@@ -25,19 +21,16 @@ helpviewer_keywords:
 - degrees
 - arccosine function
 ms.assetid: 63e449d8-9444-44fb-8db1-6d9cf346e2aa
-caps.latest.revision: "11"
-author: dotnet-bot
-ms.author: dotnetcontent
-ms.openlocfilehash: 5816fa4c8c384eca116fa1512950a3588c6e3392
-ms.sourcegitcommit: bd1ef61f4bb794b25383d3d72e71041a5ced172e
+ms.openlocfilehash: 87faa623f5b145eec8b88e350fce4171125324dc
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/18/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="derived-math-functions-visual-basic"></a>衍生的數學函式 (Visual Basic)
 下表顯示這些可以衍生自內建數學函式的非內建的數學函式<xref:System.Math?displayProperty=nameWithType>物件。 您可以存取內建數學函式加入`Imports System.Math`至您的檔案或專案。  
   
-|函式|在衍生的對等項目|  
+|功能|在衍生的對等項目|  
 |--------------|-------------------------|  
 |正割 (Sec(x))|1 / Cos(x)|  
 |餘割 (Csc(x))|1 / Sin(x)|  

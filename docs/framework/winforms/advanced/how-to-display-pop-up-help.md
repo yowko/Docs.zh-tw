@@ -1,13 +1,6 @@
 ---
-title: "如何：顯示快顯說明"
-ms.custom: 
+title: 如何：顯示快顯說明
 ms.date: 03/30/2017
-ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.technology: dotnet-winforms
-ms.tgt_pltfrm: 
-ms.topic: article
 helpviewer_keywords:
 - pop-up Help
 - Help [Windows Forms], pop-up Help
@@ -18,16 +11,11 @@ helpviewer_keywords:
 - HelpProvider component [Windows Forms]
 - Help [Windows Forms], adding to dialog boxes
 ms.assetid: 218aa81e-e87e-4d67-af05-11627bbdce3b
-caps.latest.revision: "16"
-author: dotnet-bot
-ms.author: dotnetcontent
-manager: wpickett
-ms.workload: dotnet
-ms.openlocfilehash: 3ec4401bb3465f72e4ef732e7554dc64603d700c
-ms.sourcegitcommit: c0dd436f6f8f44dc80dc43b07f6841a00b74b23f
+ms.openlocfilehash: 5751bcdb9fe7a16138680f34a4fcc1760f85a1d6
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 01/19/2018
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="how-to-display-pop-up-help"></a>如何：顯示快顯說明
 Windows Form 上顯示說明的其中一種方式是透過**協助**位於標題列，可透過存取右側的按鈕<xref:System.Windows.Forms.Form.HelpButton%2A>屬性。 這種顯示 [說明] 的方式非常適合與對話方塊一起使用。 以強制回應方式 (使用 <xref:System.Windows.Forms.Form.ShowDialog%2A> 方法) 顯示的對話方塊無法啟動外部 [說明] 系統，因為將焦點轉換至另一個視窗之前，必須先關閉強制回應對話方塊。 此外，使用**協助**按鈕需要有沒有**最小化**按鈕或**最大化**標題列中顯示的按鈕。 這是標準的對話方塊慣例，而表單則通常具有**最小化**和**最大化**按鈕。  
@@ -53,7 +41,7 @@ Windows Form 上顯示說明的其中一種方式是透過**協助**位於標題
   
 6.  按**協助**按鈕標題列上，按一下的控制項，供您設定的說明字串。  
   
-## <a name="see-also"></a>請參閱  
+## <a name="see-also"></a>另請參閱  
  [使用工具提示來顯示控制項說明](../../../../docs/framework/winforms/advanced/control-help-using-tooltips.md)  
  [整合 Windows Forms 中的使用者說明](../../../../docs/framework/winforms/advanced/integrating-user-help-in-windows-forms.md)  
  [Windows Forms](../../../../docs/framework/winforms/index.md)

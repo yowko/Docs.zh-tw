@@ -1,9 +1,6 @@
 ---
-title: "類型清單 (Visual Basic)"
+title: 類型清單 (Visual Basic)
 ms.date: 07/20/2015
-ms.prod: .net
-ms.technology: devlang-visual-basic
-ms.topic: article
 f1_keywords:
 - StructureConstraint
 - vb.StructureConstraint
@@ -27,14 +24,11 @@ helpviewer_keywords:
 - type parameters
 - constraints, Class keyword
 ms.assetid: 56db947a-2ae8-40f2-a70a-960764e9d0db
-caps.latest.revision: "33"
-author: dotnet-bot
-ms.author: dotnetcontent
-ms.openlocfilehash: 35e72414b236615dc230b654ccfeed290841fb31
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.openlocfilehash: 5fbb07154fce27feb257b431c1726446b42fbfe0
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="type-list-visual-basic"></a>類型清單 (Visual Basic)
 指定*型別參數*如*泛型*程式設計項目。 以逗號分隔多個參數。 以下是一個型別參數的語法。  
@@ -49,9 +43,9 @@ ms.lasthandoff: 11/21/2017
   
 |詞彙|定義|  
 |---|---|  
-|`genericmodifier`|選擇項。 可在泛型介面與委派中。 您可以宣告型別 covariant 使用[出](../../../visual-basic/language-reference/modifiers/out-generic-modifier.md)關鍵字或使用 contravariant[中](../../../visual-basic/language-reference/modifiers/in-generic-modifier.md)關鍵字。 請參閱 [共變數和反變數](../../programming-guide/concepts/covariance-contravariance/index.md)。|  
-|`typename`|必要項。 型別參數的名稱。 這是預留位置，以對應的型別引數所提供的定義類型所取代。|  
-|`constraintlist`|選擇項。 限制可以針對提供的資料類型的需求清單的`typename`。 如果您有多個條件約束，將其括在大括號 (`{ }`) 並以逗號分隔。 您必須引入與條件約束清單[為](../../../visual-basic/language-reference/statements/as-clause.md)關鍵字。 您使用`As`只能出現一次，在清單的開頭。|  
+|`genericmodifier`|選擇性。 可在泛型介面與委派中。 您可以宣告型別 covariant 使用[出](../../../visual-basic/language-reference/modifiers/out-generic-modifier.md)關鍵字或使用 contravariant[中](../../../visual-basic/language-reference/modifiers/in-generic-modifier.md)關鍵字。 請參閱 [共變數和反變數](../../programming-guide/concepts/covariance-contravariance/index.md)。|  
+|`typename`|必要。 型別參數的名稱。 這是預留位置，以對應的型別引數所提供的定義類型所取代。|  
+|`constraintlist`|選擇性。 限制可以針對提供的資料類型的需求清單的`typename`。 如果您有多個條件約束，將其括在大括號 (`{ }`) 並以逗號分隔。 您必須引入與條件約束清單[為](../../../visual-basic/language-reference/statements/as-clause.md)關鍵字。 您使用`As`只能出現一次，在清單的開頭。|  
   
 ## <a name="remarks"></a>備註  
  每個泛型的程式設計項目必須使用至少一個的類型參數。 型別參數是特定類型的預留位置 (*建構的項目*) 用戶端程式碼指定當它建立泛型類型的執行個體。 您可以定義泛型類別、 結構、 介面、 程序或委派。  

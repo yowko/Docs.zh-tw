@@ -1,33 +1,19 @@
 ---
 title: HOW TO：若要以受限的保留項目取代 WCF URL URL 保留項目
-ms.custom: ''
 ms.date: 03/30/2017
-ms.prod: .net-framework
-ms.reviewer: ''
-ms.suite: ''
-ms.technology:
-- dotnet-clr
-ms.tgt_pltfrm: ''
-ms.topic: article
 ms.assetid: 2754d223-79fc-4e2b-a6ce-989889f2abfa
-caps.latest.revision: 6
-author: dotnet-bot
-ms.author: dotnetcontent
-manager: wpickett
-ms.workload:
-- dotnet
-ms.openlocfilehash: b1f17a5c21888a9fc778d9649f62478d43ba0e86
-ms.sourcegitcommit: 94d33cadc5ff81d2ac389bf5f26422c227832052
+ms.openlocfilehash: 823a59f53823a2480655c4f8720504dd4199d0bc
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/30/2018
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="how-to-replace-the-wcf-url-reservation-with-a-restricted-reservation"></a>HOW TO：若要以受限的保留項目取代 WCF URL URL 保留項目
 URL 保留項目可讓您限制誰可以接收來自某個 URL 或一組 URL 的訊息。 保留項目是由一個 URL 範本、一個存取控制清單 (ACL)，以及一組旗標所組成。 URL 範本會定義保留項目所影響的 URL。 如需如何處理 URL 範本的詳細資訊，請參閱[路由內送要求](http://go.microsoft.com/fwlink/?LinkId=136764)。 ACL 會控制允許從指定之 URL 接收訊息的使用者或使用者群組。 旗標會指出保留項目是要提供使用者或群組直接在 URL 上接聽的權限，還是要委派接聽其他特定處理序的權限。  
   
- As part of the default operating system configuration, [!INCLUDE[indigo1](../../../../includes/indigo1-md.md)] 會針對通訊埠 80 建立可全域存取的保留項目，讓所有使用者執行使用雙重 HTTP 繫結進行雙工通訊的應用程式。 此保留項目的 ACL 是攻所有人使用，因此，系統管理員無法明確地允許或不允許在一個 URL 或一組 URL 上接聽的權限。 本主題說明如何刪除此保留項目，以及如何使用受限的 ACL 重新建立保留項目。  
+ 預設作業系統組態的一部分，Windows Communication Foundation (WCF) 建立連接埠 80，讓所有使用者執行使用雙重 HTTP 繫結進行雙工通訊的應用程式的全域存取保留項目。 此保留項目的 ACL 是攻所有人使用，因此，系統管理員無法明確地允許或不允許在一個 URL 或一組 URL 上接聽的權限。 本主題說明如何刪除此保留項目，以及如何使用受限的 ACL 重新建立保留項目。  
   
- 在 [!INCLUDE[wv](../../../../includes/wv-md.md)] 或 [!INCLUDE[lserver](../../../../includes/lserver-md.md)] 上，您可以從更高權限的命令提示字元輸入 `netsh http show urlacl`，以檢視所有 HTTP URL 保留項目。  下列範例顯示應該類似的 [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] URL 保留項目。  
+ 在 [!INCLUDE[wv](../../../../includes/wv-md.md)] 或 [!INCLUDE[lserver](../../../../includes/lserver-md.md)] 上，您可以從更高權限的命令提示字元輸入 `netsh http show urlacl`，以檢視所有 HTTP URL 保留項目。  下列範例示範 WCF URL 保留項目應該類似。  
   
 ```  
 Reserved URL : http://+:80/Temporary_Listen_Addresses/  
@@ -37,7 +23,7 @@ Reserved URL : http://+:80/Temporary_Listen_Addresses/
             SDDL: D:(A;;GX;;;WD)  
 ```  
   
- 保留項目是由 [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] 應用程式使用 HTTP 雙重繫結進行雙工通訊時所使用的 URL 範本所組成。 透過 HTTP 雙重繫結進行通訊時，[!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] 服務會使用這種形式的 URL，將訊息傳回 [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] 用戶端。 所有人都會得到在 URL 上接聽的權限，但沒有委派接聽其他處理序的權限。 最後，ACL 會以 Security Descriptor Definition Language (SSDL) 描述。 如需 SSDL 的詳細資訊，請參閱[SSDL](http://go.microsoft.com/fwlink/?LinkId=136789)  
+ 此保留項目所組成的 WCF 應用程式使用 HTTP 雙重繫結進行雙工通訊時使用的 URL 範本。 WCF 服務會使用這種形式的 Url 將訊息傳回給 WCF 用戶端透過 HTTP 雙重繫結進行通訊時。 所有人都會得到在 URL 上接聽的權限，但沒有委派接聽其他處理序的權限。 最後，ACL 會以 Security Descriptor Definition Language (SSDL) 描述。 如需 SSDL 的詳細資訊，請參閱[SSDL](http://go.microsoft.com/fwlink/?LinkId=136789)  
   
 ### <a name="to-delete-the-wcf-url-reservation"></a>若要刪除 WCF URL 保留項目  
   
@@ -48,7 +34,7 @@ Reserved URL : http://+:80/Temporary_Listen_Addresses/
 3.  如果成功刪除保留項目，就會顯示下列訊息。 **已成功刪除的 URL 保留項目**  
   
 ## <a name="creating-a-new-security-group-and-new-restricted-url-reservation"></a>建立新的安全性群組與新的受限 URL 保留項目  
- 若要以受限的保留項目取代 [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] URL 保留項目，您必須先建立一個新的安全性群組。 您可以從命令提示字元或電腦管理主控台執行這個動作。 您只需要選擇其中一種方式。  
+ 若要以受限的保留項目取代 WCF URL 保留項目，您必須先建立新的安全性群組。 您可以從命令提示字元或電腦管理主控台執行這個動作。 您只需要選擇其中一種方式。  
   
 #### <a name="to-create-a-new-security-group-from-a-command-prompt"></a>若要從命令提示字元建立新的安全性群組  
   

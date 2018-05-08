@@ -1,13 +1,6 @@
 ---
-title: "WPF 內容模型"
-ms.custom: 
+title: WPF 內容模型
 ms.date: 03/30/2017
-ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.technology: dotnet-wpf
-ms.tgt_pltfrm: 
-ms.topic: article
 helpviewer_keywords:
 - UIElement class [WPF], displaying content
 - content model [WPF], controls
@@ -18,16 +11,11 @@ helpviewer_keywords:
 - arbitrary content classes [WPF], content model
 - ContentControl class [WPF], displaying content
 ms.assetid: 214da5ef-547a-4cf8-9b07-4aa8a0e52cdd
-caps.latest.revision: "17"
-author: dotnet-bot
-ms.author: dotnetcontent
-manager: wpickett
-ms.workload: dotnet
-ms.openlocfilehash: 7d708674682ffd7b0d13c9cbe828e28bbc26e260
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.openlocfilehash: 48e96b04a3459aa18a52624758d5fa2347570fcf
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="wpf-content-model"></a>WPF 內容模型
 [!INCLUDE[TLA#tla_winclient](../../../../includes/tlasharptla-winclient-md.md)] 是展示平台，提供許多以顯示不同類型內容為主要目的的控制項和類控制項類型。 為了判斷要使用哪一種控制項或從哪一種控制項衍生，您應該了解特定控制項顯示哪些物件的效果最佳。  
@@ -122,7 +110,7 @@ ms.lasthandoff: 12/22/2017
  如需如何建立<xref:System.Windows.Controls.TabItem>物件，請參閱<xref:System.Windows.Controls.HeaderedContentControl>。  
   
 ### <a name="controls-that-contain-a-collection-of-arbitrary-objects"></a>包含任意物件集合的控制項  
- <xref:System.Windows.Controls.ItemsControl>類別繼承自<xref:System.Windows.Controls.Control>，而且可以包含多個項目，例如字串、 物件或其他項目。 其內容屬性也<xref:System.Windows.Controls.ItemsControl.ItemsSource%2A>和<xref:System.Windows.Controls.ItemsControl.Items%2A>。 <xref:System.Windows.Controls.ItemsControl.ItemsSource%2A>通常用來填入<xref:System.Windows.Controls.ItemsControl>與資料收集。 如果您不想使用集合來填入<xref:System.Windows.Controls.ItemsControl>，您可以加入項目使用<xref:System.Windows.Controls.ItemsControl.Items%2A>屬性。  
+ <xref:System.Windows.Controls.ItemsControl>類別繼承自<xref:System.Windows.Controls.Control>，而且可以包含多個項目，例如字串、 物件或其他項目。 其內容屬性也<xref:System.Windows.Controls.ItemsControl.ItemsSource%2A>和<xref:System.Windows.Controls.ItemsControl.Items%2A>。 <xref:System.Windows.Controls.ItemsControl.ItemsSource%2A> 通常用來填入<xref:System.Windows.Controls.ItemsControl>與資料收集。 如果您不想使用集合來填入<xref:System.Windows.Controls.ItemsControl>，您可以加入項目使用<xref:System.Windows.Controls.ItemsControl.Items%2A>屬性。  
   
  下列控制項都繼承自<xref:System.Windows.Controls.ItemsControl>並使用其內容的模型：  
   
@@ -261,7 +249,7 @@ ms.lasthandoff: 12/22/2017
   
 <a name="classes_that_format_text"></a>   
 ## <a name="classes-that-format-your-text"></a>格式化文字的類別  
- <xref:System.Windows.Documents.TextElement>和其相關的類別可讓您格式化文字。 <xref:System.Windows.Documents.TextElement>物件包含與格式化文字方塊中的<xref:System.Windows.Controls.TextBlock>和<xref:System.Windows.Documents.FlowDocument>物件。 兩種主要類型<xref:System.Windows.Documents.TextElement>物件<xref:System.Windows.Documents.Block>項目和<xref:System.Windows.Documents.Inline>項目。 A<xref:System.Windows.Documents.Block>項目代表一個區塊的文字，例如段落或清單。 <xref:System.Windows.Documents.Inline>元素代表區塊中文字的一部分。 許多<xref:System.Windows.Documents.Inline>類別可讓您指定要套用的文字格式。 每個<xref:System.Windows.Documents.TextElement>具有自己的內容模型。 如需詳細資訊，請參閱 [TextElement 內容模型概觀](../../../../docs/framework/wpf/advanced/textelement-content-model-overview.md)。  
+ <xref:System.Windows.Documents.TextElement> 和其相關的類別可讓您格式化文字。 <xref:System.Windows.Documents.TextElement> 物件包含與格式化文字方塊中的<xref:System.Windows.Controls.TextBlock>和<xref:System.Windows.Documents.FlowDocument>物件。 兩種主要類型<xref:System.Windows.Documents.TextElement>物件<xref:System.Windows.Documents.Block>項目和<xref:System.Windows.Documents.Inline>項目。 A<xref:System.Windows.Documents.Block>項目代表一個區塊的文字，例如段落或清單。 <xref:System.Windows.Documents.Inline>元素代表區塊中文字的一部分。 許多<xref:System.Windows.Documents.Inline>類別可讓您指定要套用的文字格式。 每個<xref:System.Windows.Documents.TextElement>具有自己的內容模型。 如需詳細資訊，請參閱 [TextElement 內容模型概觀](../../../../docs/framework/wpf/advanced/textelement-content-model-overview.md)。  
   
-## <a name="see-also"></a>請參閱  
+## <a name="see-also"></a>另請參閱  
  [進階](../../../../docs/framework/wpf/advanced/index.md)

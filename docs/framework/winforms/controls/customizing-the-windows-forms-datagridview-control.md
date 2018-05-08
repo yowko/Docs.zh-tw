@@ -1,27 +1,15 @@
 ---
-title: "自訂 Windows Form DataGridView 控制項"
-ms.custom: 
+title: 自訂 Windows Form DataGridView 控制項
 ms.date: 03/30/2017
-ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.technology: dotnet-winforms
-ms.tgt_pltfrm: 
-ms.topic: article
 helpviewer_keywords:
 - data grids [Windows Forms], customization
 - DataGridView control [Windows Forms], customization
 ms.assetid: 01ea5d4c-a736-4596-b0e9-a67a1b86e15f
-caps.latest.revision: "12"
-author: dotnet-bot
-ms.author: dotnetcontent
-manager: wpickett
-ms.workload: dotnet
-ms.openlocfilehash: 348651784ef2b4d99679038a1875fc6650688a6d
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.openlocfilehash: 92bbace4d0869aca67025f1e4ac8c451fe073219
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="customizing-the-windows-forms-datagridview-control"></a>自訂 Windows Form DataGridView 控制項
 `DataGridView`控制項也提供數個屬性可讓您調整的外觀和其資料格、 資料列和資料行的基本行為 （外觀及操作）。 如果您有特殊需求的功能，<xref:System.Windows.Forms.DataGridViewCellStyle>類別，不過，您也可以實作主控描繪控制項或建立自訂的資料格、 資料行和資料列來擴充其功能。  
@@ -64,6 +52,6 @@ ms.lasthandoff: 12/22/2017
  [Windows Forms DataGridView 控制項中的基本格式化和樣式設定](../../../../docs/framework/winforms/controls/basic-formatting-and-styling-in-the-windows-forms-datagridview-control.md)  
  提供主題描述如何修改控制項基本外觀和儲存格資料顯示格式。  
   
-## <a name="see-also"></a>請參閱  
+## <a name="see-also"></a>另請參閱  
  [DataGridView 控制項](../../../../docs/framework/winforms/controls/datagridview-control-windows-forms.md)  
  [Windows Forms DataGridView 控制項中的資料行類型](../../../../docs/framework/winforms/controls/column-types-in-the-windows-forms-datagridview-control.md)

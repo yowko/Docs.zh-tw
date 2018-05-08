@@ -1,27 +1,15 @@
 ---
-title: "HOW TO：使用通道處理站以非同步方式呼叫作業"
-ms.custom: 
+title: HOW TO：使用通道處理站以非同步方式呼叫作業
 ms.date: 03/30/2017
-ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.technology: dotnet-clr
-ms.tgt_pltfrm: 
-ms.topic: article
 dev_langs:
 - csharp
 - vb
 ms.assetid: cc17dd47-b9ad-451c-a362-e36e0aac7ba0
-caps.latest.revision: "7"
-author: dotnet-bot
-ms.author: dotnetcontent
-manager: wpickett
-ms.workload: dotnet
-ms.openlocfilehash: 216c0d529a15004ea9f7d6f087aeee4bf4f10e56
-ms.sourcegitcommit: c0dd436f6f8f44dc80dc43b07f6841a00b74b23f
+ms.openlocfilehash: 95279f90fbf87d64d96a1ed036449b72416e4f44
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 01/19/2018
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="how-to-call-operations-asynchronously-using-a-channel-factory"></a>HOW TO：使用通道處理站以非同步方式呼叫作業
 本主題涵蓋用戶端如何能夠在使用 <xref:System.ServiceModel.ChannelFactory%601> 架構的用戶端應用程式時，非同步地存取服務作業  (當使用 <xref:System.ServiceModel.ClientBase%601?displayProperty=nameWithType> 物件來叫用服務時，您可以使用事件驅動的非同步呼叫模型。 如需詳細資訊，請參閱[如何： 非同步呼叫服務作業](../../../../docs/framework/wcf/feature-details/how-to-call-wcf-service-operations-asynchronously.md)。 如需事件架構非同步呼叫模型的詳細資訊，請參閱[使用事件架構非同步模式的多執行緒程式設計](../../../../docs/standard/asynchronous-programming-patterns/multithreaded-programming-with-the-event-based-asynchronous-pattern.md)。)  
@@ -53,10 +41,10 @@ ms.lasthandoff: 01/19/2018
      當此回呼函式執行時，用戶端便會呼叫 `End<operation>` (例如，`EndAdd`) 以擷取結果。  
   
 ## <a name="example"></a>範例  
- 在用於上述程序中之用戶端程式碼所使用的服務會實作 `ICalculator` 介面，如下列程式碼所示。 在服務端，合約的 `Add` 和 `Subtract` 作業會由 [!INCLUDE[indigo1](../../../../includes/indigo1-md.md)] 執行階段同步叫用，即使已經在用戶端上非同步叫用了先前的用戶端步驟也是一樣。 在服務端，會使用 `Multiply` 和 `Divide` 作業來非同步叫用服務，即使用戶端會同步叫用這些服務也是一樣。 這個範例會將 <xref:System.ServiceModel.OperationContractAttribute.AsyncPattern%2A> 屬性設定為 `true`。 這項屬性設定在配合 [!INCLUDE[dnprdnshort](../../../../includes/dnprdnshort-md.md)] 非同步模式 (Asynchronous Pattern) 的實作時，便會告知執行階段以非同步方式來叫用作業。  
+ 在用於上述程序中之用戶端程式碼所使用的服務會實作 `ICalculator` 介面，如下列程式碼所示。 在服務端，`Add`和`Subtract`合約作業會同步叫用由 Windows Communication Foundation (WCF) 執行階段，即使先前的用戶端步驟上非同步叫用用戶端。 在服務端，會使用 `Multiply` 和 `Divide` 作業來非同步叫用服務，即使用戶端會同步叫用這些服務也是一樣。 這個範例會將 <xref:System.ServiceModel.OperationContractAttribute.AsyncPattern%2A> 屬性設定為 `true`。 這項屬性設定在配合 [!INCLUDE[dnprdnshort](../../../../includes/dnprdnshort-md.md)] 非同步模式 (Asynchronous Pattern) 的實作時，便會告知執行階段以非同步方式來叫用作業。  
   
  [!code-csharp[C_How_To_CF_Async#4](../../../../samples/snippets/csharp/VS_Snippets_CFX/c_how_to_cf_async/cs/service.cs#4)]
  [!code-vb[C_How_To_CF_Async#4](../../../../samples/snippets/visualbasic/VS_Snippets_CFX/c_how_to_cf_async/vb/service.vb#4)]  
   
-## <a name="see-also"></a>請參閱  
+## <a name="see-also"></a>另請參閱  
  [服務合約： 非同步範例](http://msdn.microsoft.com/library/833db946-f511-4f64-a26f-2759a11217c7)

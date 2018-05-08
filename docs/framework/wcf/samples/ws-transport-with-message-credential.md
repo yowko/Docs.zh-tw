@@ -1,31 +1,17 @@
 ---
 title: 使用訊息認證的 WS 傳輸
-ms.custom: ''
 ms.date: 03/30/2017
-ms.prod: .net-framework
-ms.reviewer: ''
-ms.suite: ''
-ms.technology:
-- dotnet-clr
-ms.tgt_pltfrm: ''
-ms.topic: article
 ms.assetid: 0d092f3a-b309-439b-920b-66d8f46a0e3c
-caps.latest.revision: 7
-author: dotnet-bot
-ms.author: dotnetcontent
-manager: wpickett
-ms.workload:
-- dotnet
-ms.openlocfilehash: 7b954e2d19f601476876beef6482ca10eb3f113b
-ms.sourcegitcommit: 2042de78fcdceebb6b8ac4b7a292b93e8782cbf5
-ms.translationtype: MT
+ms.openlocfilehash: acb2960fe3d563a05b0bdeee70af0d4093aae6f0
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/27/2018
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="ws-transport-with-message-credential"></a>使用訊息認證的 WS 傳輸
 這個範例會示範結合訊息中傳遞的用戶端認證來使用 SSL 傳輸安全性。 這個範例會使用 `wsHttpBinding` 繫結。  
   
- 根據預設，`wsHttpBinding` 繫結會提供 HTTP 通訊。 當針對傳輸安全性設定時，此繫結會支援 HTTPS 通訊。 HTTPS 會保護在網路上傳輸之訊息的機密性與完整性。 但是，可以用來驗證服務之用戶端的驗證機制集合會受限於 HTTPS 傳輸所支援的機制。 [!INCLUDE[indigo1](../../../../includes/indigo1-md.md)] 提供的 `TransportWithMessageCredential` 安全性模式，就是為了克服這項限制而設計的。 如果是設定這種安全性模式，傳輸安全性就會用來提供所傳輸訊息的機密性與完整性，以及用來執行服務驗證。 不過，用戶端驗證是由訊息中直接將用戶端認證的方式執行。 這可讓您使用任何支援的傳輸安全性模式的效能優勢，同時用戶端驗證的訊息安全性模式的認證類型。  
+ 根據預設，`wsHttpBinding` 繫結會提供 HTTP 通訊。 當針對傳輸安全性設定時，此繫結會支援 HTTPS 通訊。 HTTPS 會保護在網路上傳輸之訊息的機密性與完整性。 但是，可以用來驗證服務之用戶端的驗證機制集合會受限於 HTTPS 傳輸所支援的機制。 Windows Communication Foundation (WCF) 提供`TransportWithMessageCredential`為了克服這項限制的安全性模式。 如果是設定這種安全性模式，傳輸安全性就會用來提供所傳輸訊息的機密性與完整性，以及用來執行服務驗證。 不過，用戶端驗證是由訊息中直接將用戶端認證的方式執行。 這可讓您使用任何支援的傳輸安全性模式的效能優勢，同時用戶端驗證的訊息安全性模式的認證類型。  
   
  在這個範例中，`UserName` 認證類型會用來驗證服務的用戶端。  
   

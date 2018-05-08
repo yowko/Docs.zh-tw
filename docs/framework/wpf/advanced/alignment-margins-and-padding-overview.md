@@ -1,13 +1,6 @@
 ---
-title: "對齊、邊界和填補概觀"
-ms.custom: 
+title: 對齊、邊界和填補概觀
 ms.date: 03/30/2017
-ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.technology: dotnet-wpf
-ms.tgt_pltfrm: 
-ms.topic: article
 dev_langs:
 - csharp
 - vb
@@ -17,16 +10,11 @@ helpviewer_keywords:
 - padding [WPF]
 - aligning [WPF]
 ms.assetid: 9c6a2009-9b86-4e40-8605-0a2664dc3973
-caps.latest.revision: "22"
-author: dotnet-bot
-ms.author: dotnetcontent
-manager: wpickett
-ms.workload: dotnet
-ms.openlocfilehash: 9d53ec57bdd6126aa1b82e3fa34d01b8907ca169
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.openlocfilehash: 70eff35db638c5bfbc9c164dc381e3f58e18957b
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="alignment-margins-and-padding-overview"></a>對齊、邊界和填補概觀
 <xref:System.Windows.FrameworkElement>類別會公開數個屬性，可用來明確地說放置子項目。 本主題討論四個最重要的屬性： <xref:System.Windows.FrameworkElement.HorizontalAlignment%2A>， <xref:System.Windows.FrameworkElement.Margin%2A>， <xref:System.Windows.Controls.Border.Padding%2A>，和<xref:System.Windows.FrameworkElement.VerticalAlignment%2A>。 一定要了解這些屬性的作用，因為它們提供控制 [!INCLUDE[TLA#tla_winclient](../../../../includes/tlasharptla-winclient-md.md)] 應用程式中項目位置的基礎。  
@@ -67,7 +55,7 @@ ms.lasthandoff: 12/22/2017
 |<xref:System.Windows.HorizontalAlignment.Left>|子項目對齊父項目的已配置版面配置空間的左側。|  
 |<xref:System.Windows.HorizontalAlignment.Center>|子項目對齊父項目的已配置版面配置空間的中間。|  
 |<xref:System.Windows.HorizontalAlignment.Right>|子項目對齊父項目的已配置版面配置空間的右側。|  
-|<xref:System.Windows.HorizontalAlignment.Stretch>（預設值）|子項目會自動縮放以填滿父項目的已配置版面配置空間。 明確<xref:System.Windows.FrameworkElement.Width%2A>和<xref:System.Windows.FrameworkElement.Height%2A>值優先。|  
+|<xref:System.Windows.HorizontalAlignment.Stretch> （預設值）|子項目會自動縮放以填滿父項目的已配置版面配置空間。 明確<xref:System.Windows.FrameworkElement.Width%2A>和<xref:System.Windows.FrameworkElement.Height%2A>值優先。|  
   
  下列範例示範如何套用<xref:System.Windows.FrameworkElement.HorizontalAlignment%2A>屬性<xref:System.Windows.Controls.Button>項目。 為了更清楚說明各種不同的轉譯行為，會顯示每個屬性值。  
   
@@ -87,7 +75,7 @@ ms.lasthandoff: 12/22/2017
 |<xref:System.Windows.VerticalAlignment.Top>|子項目對齊父項目的已配置版面配置空間的頂端。|  
 |<xref:System.Windows.VerticalAlignment.Center>|子項目對齊父項目的已配置版面配置空間的中間。|  
 |<xref:System.Windows.VerticalAlignment.Bottom>|子項目對齊父項目的已配置版面配置空間的底部。|  
-|<xref:System.Windows.VerticalAlignment.Stretch>（預設值）|子項目會自動縮放以填滿父項目的已配置版面配置空間。 明確<xref:System.Windows.FrameworkElement.Width%2A>和<xref:System.Windows.FrameworkElement.Height%2A>值優先。|  
+|<xref:System.Windows.VerticalAlignment.Stretch> （預設值）|子項目會自動縮放以填滿父項目的已配置版面配置空間。 明確<xref:System.Windows.FrameworkElement.Width%2A>和<xref:System.Windows.FrameworkElement.Height%2A>值優先。|  
   
  下列範例示範如何套用<xref:System.Windows.FrameworkElement.VerticalAlignment%2A>屬性<xref:System.Windows.Controls.Button>項目。 為了更清楚說明各種不同的轉譯行為，會顯示每個屬性值。 此範例中，以利<xref:System.Windows.Controls.Grid>可見格線項目做為父代，更清楚說明每個屬性值的配置行為。  
   
@@ -101,7 +89,7 @@ ms.lasthandoff: 12/22/2017
   
 <a name="wcpsdk_layout_amp_margin_properties"></a>   
 ## <a name="understanding-margin-properties"></a>了解邊界屬性  
- <xref:System.Windows.FrameworkElement.Margin%2A>屬性描述項目及其子系或對等之間的距離。 <xref:System.Windows.FrameworkElement.Margin%2A>值可以使用類似下面的語法統一， `Margin="20"`。 使用此語法，統一<xref:System.Windows.FrameworkElement.Margin%2A>的 20 裝置無關的像素會套用至項目。 <xref:System.Windows.FrameworkElement.Margin%2A>值也可以採用四個相異值的形式每個值，描述要套用到左側、 頂端、 右側和下方 （依該順序），相異邊界像`Margin="0,10,5,25"`。 正確使用<xref:System.Windows.FrameworkElement.Margin%2A>屬性可讓其相鄰項目和子系呈現位置的項目呈現位置的非常精細的控制。  
+ <xref:System.Windows.FrameworkElement.Margin%2A>屬性描述項目及其子系或對等之間的距離。 <xref:System.Windows.FrameworkElement.Margin%2A> 值可以使用類似下面的語法統一， `Margin="20"`。 使用此語法，統一<xref:System.Windows.FrameworkElement.Margin%2A>的 20 裝置無關的像素會套用至項目。 <xref:System.Windows.FrameworkElement.Margin%2A> 值也可以採用四個相異值的形式每個值，描述要套用到左側、 頂端、 右側和下方 （依該順序），相異邊界像`Margin="0,10,5,25"`。 正確使用<xref:System.Windows.FrameworkElement.Margin%2A>屬性可讓其相鄰項目和子系呈現位置的項目呈現位置的非常精細的控制。  
   
 > [!NOTE]
 >  非零邊界適用於空間的項目之外<xref:System.Windows.FrameworkElement.ActualWidth%2A>和<xref:System.Windows.FrameworkElement.ActualHeight%2A>。  
@@ -135,7 +123,7 @@ ms.lasthandoff: 12/22/2017
 ## <a name="using-alignment-margins-and-padding-in-an-application"></a>在應用程式使用對齊、邊界和邊框間距  
  <xref:System.Windows.FrameworkElement.HorizontalAlignment%2A><xref:System.Windows.FrameworkElement.Margin%2A>， <xref:System.Windows.Controls.Border.Padding%2A>，和<xref:System.Windows.FrameworkElement.VerticalAlignment%2A>提供定位控制項需要建立複雜[!INCLUDE[TLA#tla_ui](../../../../includes/tlasharptla-ui-md.md)]。 您可以使用每個屬性的效果來變更子項目定位，這樣可以在建立動態應用程式和使用者體驗時具有彈性。  
   
- 下列範例示範本主題所述的每個概念。 本主題中的第一個範例中找到的基礎結構上建置，則這個範例會將<xref:System.Windows.Controls.Grid>做為子系的項目<xref:System.Windows.Controls.Border>中第一個範例。 <xref:System.Windows.Controls.Border.Padding%2A>套用至父<xref:System.Windows.Controls.Border>項目。 <xref:System.Windows.Controls.Grid>用來分割三個子系之間的空間<xref:System.Windows.Controls.StackPanel>項目。 <xref:System.Windows.Controls.Button>元素一次用來顯示不同效果<xref:System.Windows.FrameworkElement.Margin%2A>和<xref:System.Windows.FrameworkElement.HorizontalAlignment%2A>。 <xref:System.Windows.Controls.TextBlock>項目會加入至每個<xref:System.Windows.Controls.ColumnDefinition>更明確地定義套用到的各種屬性<xref:System.Windows.Controls.Button>每個資料行中的項目。  
+ 下列範例示範本主題所述的每個概念。 本主題中的第一個範例中找到的基礎結構上建置，則這個範例會將<xref:System.Windows.Controls.Grid>做為子系的項目<xref:System.Windows.Controls.Border>中第一個範例。 <xref:System.Windows.Controls.Border.Padding%2A> 套用至父<xref:System.Windows.Controls.Border>項目。 <xref:System.Windows.Controls.Grid>用來分割三個子系之間的空間<xref:System.Windows.Controls.StackPanel>項目。 <xref:System.Windows.Controls.Button> 元素一次用來顯示不同效果<xref:System.Windows.FrameworkElement.Margin%2A>和<xref:System.Windows.FrameworkElement.HorizontalAlignment%2A>。 <xref:System.Windows.Controls.TextBlock> 項目會加入至每個<xref:System.Windows.Controls.ColumnDefinition>更明確地定義套用到的各種屬性<xref:System.Windows.Controls.Button>每個資料行中的項目。  
   
  [!code-cpp[MarginPaddingAlignmentSample#4](../../../../samples/snippets/cpp/VS_Snippets_Wpf/MarginPaddingAlignmentSample/CPP/Margin_Padding_Alignment_Sample.cpp#4)]
  [!code-csharp[MarginPaddingAlignmentSample#4](../../../../samples/snippets/csharp/VS_Snippets_Wpf/MarginPaddingAlignmentSample/CSharp/Margin_Padding_Alignment_Sample.cs#4)]
@@ -152,7 +140,7 @@ ms.lasthandoff: 12/22/2017
   
  有更詳細說明 [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] 版面配置的其他資源可供使用。 [面板概觀](../../../../docs/framework/wpf/controls/panels-overview.md)主題包含有關在各種詳細<xref:System.Windows.Controls.Panel>項目。 本主題[逐步解說： 第一個 WPF 桌面應用程式](../../../../docs/framework/wpf/getting-started/walkthrough-my-first-wpf-desktop-application.md)導入了進階的技術，將元件，並將其動作繫結至資料來源使用版面配置項目。  
   
-## <a name="see-also"></a>請參閱  
+## <a name="see-also"></a>另請參閱  
  <xref:System.Windows.FrameworkElement>  
  <xref:System.Windows.FrameworkElement.HorizontalAlignment%2A>  
  <xref:System.Windows.FrameworkElement.VerticalAlignment%2A>  
