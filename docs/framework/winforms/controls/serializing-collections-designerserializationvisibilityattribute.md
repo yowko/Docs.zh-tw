@@ -1,13 +1,6 @@
 ---
-title: "逐步解說：使用 DesignerSerializationVisibilityAttribute 序列化標準類型的集合"
-ms.custom: 
+title: 逐步解說：使用 DesignerSerializationVisibilityAttribute 序列化標準類型的集合
 ms.date: 03/30/2017
-ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.technology: dotnet-winforms
-ms.tgt_pltfrm: 
-ms.topic: article
 dev_langs:
 - csharp
 - vb
@@ -18,16 +11,11 @@ helpviewer_keywords:
 - collections [Windows Forms], serializing
 - collections [Windows Forms], standard types
 ms.assetid: 020c9df4-fdc5-4dae-815a-963ecae5668c
-caps.latest.revision: "19"
-author: dotnet-bot
-ms.author: dotnetcontent
-manager: wpickett
-ms.workload: dotnet
-ms.openlocfilehash: 0267020f7e7a52e92b05a0bda0ee397e5c3393fc
-ms.sourcegitcommit: c0dd436f6f8f44dc80dc43b07f6841a00b74b23f
+ms.openlocfilehash: a502ecc30911f2296bf48eaa195f5b6452b7588a
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 01/19/2018
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="walkthrough-serializing-collections-of-standard-types-with-the-designerserializationvisibilityattribute"></a>逐步解說：使用 DesignerSerializationVisibilityAttribute 序列化標準類型的集合
 您的自訂控制項有時會公開為屬性的集合。 本逐步解說示範如何使用<xref:System.ComponentModel.DesignerSerializationVisibilityAttribute>類別來控制如何在設計階段序列化集合。 套用<xref:System.ComponentModel.DesignerSerializationVisibilityAttribute.Content>集合屬性的值可確保屬性會序列化。  
@@ -60,7 +48,7 @@ ms.lasthandoff: 01/19/2018
     |屬性|變更為|  
     |--------------|---------------|  
     |**多行**|`true`|  
-    |**Dock**|<xref:System.Windows.Forms.DockStyle.Fill>|  
+    |**停駐**|<xref:System.Windows.Forms.DockStyle.Fill>|  
     |**捲軸**|<xref:System.Windows.Forms.ScrollBars.Vertical>|  
     |**ReadOnly**|`true`|  
   
@@ -148,7 +136,7 @@ ms.lasthandoff: 01/19/2018
   
 -   [逐步解說：建立利用 Visual Studio 設計階段功能的 Windows Forms 控制項](../../../../docs/framework/winforms/controls/creating-a-wf-control-design-time-features.md)  
   
-## <a name="see-also"></a>請參閱  
+## <a name="see-also"></a>另請參閱  
  <xref:System.ComponentModel.DesignerSerializationVisibilityAttribute>  
  [設計工具序列化概觀](http://msdn.microsoft.com/library/c342635a-aa5f-4281-915b-b013738af15a)  
  [如何： 使用 designerserializationvisibilityattribute 序列化標準類型的序列化](http://msdn.microsoft.com/library/7829fcdd-8205-405f-8231-a1282a9835c9)  

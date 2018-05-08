@@ -1,28 +1,16 @@
 ---
-title: "使用主要畫面格建立字串的動畫"
-ms.custom: 
+title: 使用主要畫面格建立字串的動畫
 ms.date: 03/30/2017
-ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.technology: dotnet-wpf
-ms.tgt_pltfrm: 
-ms.topic: article
 helpviewer_keywords:
 - animation [WPF], strings with key frames
 - strings [WPF], animating with key frames
 - key frames [WPF], animating strings with
 ms.assetid: c62bc9fd-c09a-4227-bce0-0a1ab82049dd
-caps.latest.revision: "9"
-author: dotnet-bot
-ms.author: dotnetcontent
-manager: wpickett
-ms.workload: dotnet
-ms.openlocfilehash: 1692777a97754fb7f6481b2d9cb8942dcb62df77
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.openlocfilehash: 5219ce11667c84d3ceca380d5a4ddd52695736b9
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="how-to-animate-a-string-by-using-key-frames"></a>使用主要畫面格建立字串的動畫
 此範例示範如何以動畫方式顯示的字串，在此範例中是<xref:System.Windows.Controls.ContentControl.Content%2A>屬性<xref:System.Windows.Controls.Button>控制項，使用主要畫面格。  
@@ -36,7 +24,7 @@ ms.lasthandoff: 12/22/2017
   
  如需完整的範例，請參閱[主要畫面格動畫範例](http://go.microsoft.com/fwlink/?LinkID=160012)。  
   
-## <a name="see-also"></a>請參閱  
+## <a name="see-also"></a>另請參閱  
  <xref:System.Windows.Media.Animation.StringAnimationUsingKeyFrames>  
  <xref:System.Windows.Controls.ContentControl.Content%2A>  
  <xref:System.Windows.Controls.Button>  

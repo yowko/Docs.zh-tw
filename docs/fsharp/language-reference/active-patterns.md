@@ -1,17 +1,12 @@
 ---
 title: 作用中的模式 (F#)
 description: '了解如何定義具名細分 F # 程式語言中的輸入的資料的資料分割使用作用中的模式。'
-author: cartermp
-ms.author: phcart
 ms.date: 05/16/2016
-ms.topic: language-reference
-ms.prod: dotnet-fsharp
-ms.devlang: fsharp
-ms.openlocfilehash: 66e1e39c4822ec7262642d301ceb1deea17fcb8c
-ms.sourcegitcommit: 03ee570f6f528a7d23a4221dcb26a9498edbdf8c
+ms.openlocfilehash: b8c3270b1efbeb3495ac69bf1217fddf8a5a73e0
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/28/2018
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="active-patterns"></a>現用模式
 

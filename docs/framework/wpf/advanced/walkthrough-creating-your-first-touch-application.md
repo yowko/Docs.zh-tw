@@ -1,13 +1,6 @@
 ---
-title: "逐步解說：建立您的第一個觸控應用程式"
-ms.custom: 
+title: 逐步解說：建立您的第一個觸控應用程式
 ms.date: 03/30/2017
-ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.technology: dotnet-wpf
-ms.tgt_pltfrm: 
-ms.topic: article
 dev_langs:
 - csharp
 - vb
@@ -17,19 +10,14 @@ helpviewer_keywords:
 - touch-sensitive applications [WPF], creating
 - creating a touchscreen application [WPF]
 ms.assetid: d69e602e-9a25-4e24-950b-e89eaa2a906b
-caps.latest.revision: "9"
-author: dotnet-bot
-ms.author: dotnetcontent
-manager: wpickett
-ms.workload: dotnet
-ms.openlocfilehash: 08f4004329d15b527a889cd7b437a7f18278fc79
-ms.sourcegitcommit: c0dd436f6f8f44dc80dc43b07f6841a00b74b23f
+ms.openlocfilehash: 94a97c30179f7a8231426e31b8cacc364629ffc3
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 01/19/2018
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="walkthrough-creating-your-first-touch-application"></a>逐步解說：建立您的第一個觸控應用程式
-[!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)]可讓應用程式要碰觸的回應。 例如，您可以使用其中一個應用程式與互動或觸控式裝置，例如本逐步解說建立的應用程式，可讓使用者移動，觸控螢幕上的多個指調整大小或旋轉使用觸控的單一物件。  
+[!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] 可讓應用程式要碰觸的回應。 例如，您可以使用其中一個應用程式與互動或觸控式裝置，例如本逐步解說建立的應用程式，可讓使用者移動，觸控螢幕上的多個指調整大小或旋轉使用觸控的單一物件。  
   
 ## <a name="prerequisites"></a>必要條件  
  您需要下列元件才能完成此逐步解說：  
@@ -94,7 +82,7 @@ ms.lasthandoff: 01/19/2018
   
  若要使慣性，快速引發從螢幕手指與您執行先前的操作。 <xref:System.Windows.Shapes.Rectangle>移動、 調整大小或旋轉數秒鐘，它會停止之前會繼續。  
   
-## <a name="see-also"></a>請參閱  
+## <a name="see-also"></a>另請參閱  
  <xref:System.Windows.UIElement.ManipulationStarting?displayProperty=nameWithType>  
  <xref:System.Windows.UIElement.ManipulationDelta?displayProperty=nameWithType>  
  <xref:System.Windows.UIElement.ManipulationInertiaStarting?displayProperty=nameWithType>

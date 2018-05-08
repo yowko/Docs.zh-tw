@@ -1,14 +1,6 @@
 ---
-title: "筆墨入門"
-ms.custom: 
+title: 筆墨入門
 ms.date: 03/30/2017
-ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.technology:
-- dotnet-wpf
-ms.tgt_pltfrm: 
-ms.topic: article
 dev_langs:
 - csharp
 - vb
@@ -19,17 +11,11 @@ helpviewer_keywords:
 - animation [WPF], gradient brush colors
 - brushes [WPF], animating colors of
 ms.assetid: 760332dd-594a-475d-865b-01659db8cab7
-caps.latest.revision: 
-author: dotnet-bot
-ms.author: dotnetcontent
-manager: wpickett
-ms.workload:
-- dotnet
-ms.openlocfilehash: 74227ebe815e971087569ff39ac0a3479c1b0d14
-ms.sourcegitcommit: d3cfda0943364aaf6ccd574f55f584576c8a4fee
+ms.openlocfilehash: 9a1b53d0513eeef377fe8e012a8d5d7ea3f8a984
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 03/08/2018
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="getting-started-with-ink"></a>筆墨入門
 數位筆跡併入您的應用程式是比以往更為容易。 從 COM 和 Windows Form 的方法達到完整地整合到程式設計必然發展筆墨[!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)]。 您不需要安裝個別的 Sdk 或執行階段程式庫。  
@@ -47,7 +33,7 @@ ms.lasthandoff: 03/08/2018
 #### <a name="got-ink"></a>有筆墨嗎？  
  若要啟動您的第一個[!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)]支援筆墨的應用程式：  
   
-1.  Open Microsoft Visual Studio 2005  
+1.  開啟 Microsoft Visual Studio 2005  
   
 2.  建立新**Windows 應用程式 (WPF)**  
   
@@ -90,7 +76,7 @@ ms.lasthandoff: 03/08/2018
  [!code-csharp[InkCanvasConsoleApp#1](../../../../samples/snippets/csharp/VS_Snippets_Wpf/InkCanvasConsoleApp/CSharp/Program.cs#1)]
  [!code-vb[InkCanvasConsoleApp#1](../../../../samples/snippets/visualbasic/VS_Snippets_Wpf/InkCanvasConsoleApp/VisualBasic/Module1.vb#1)]  
   
-## <a name="see-also"></a>請參閱  
+## <a name="see-also"></a>另請參閱  
  [數位筆跡](../../../../docs/framework/wpf/advanced/digital-ink.md)  
  [收集筆墨](../../../../docs/framework/wpf/advanced/collecting-ink.md)  
  [手寫辨識](../../../../docs/framework/wpf/advanced/handwriting-recognition.md)  

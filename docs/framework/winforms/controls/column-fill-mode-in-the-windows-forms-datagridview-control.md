@@ -1,14 +1,6 @@
 ---
 title: 在 Windows Form DataGridView 控制項中的資料行填入模式
-ms.custom: ''
 ms.date: 03/30/2017
-ms.prod: .net-framework
-ms.reviewer: ''
-ms.suite: ''
-ms.technology:
-- dotnet-winforms
-ms.tgt_pltfrm: ''
-ms.topic: article
 dev_langs:
 - csharp
 - vb
@@ -17,17 +9,11 @@ helpviewer_keywords:
 - DataGridView control [Windows Forms], column fill mode
 - data grids [Windows Forms], column fill mode
 ms.assetid: b4ef7411-ebf4-4e26-bb33-aecec90de80c
-caps.latest.revision: 16
-author: dotnet-bot
-ms.author: dotnetcontent
-manager: wpickett
-ms.workload:
-- dotnet
-ms.openlocfilehash: c791de28ef6547766fb51ff528870f377ec339e8
-ms.sourcegitcommit: 2042de78fcdceebb6b8ac4b7a292b93e8782cbf5
+ms.openlocfilehash: 372ee5b0eb0101a13e7eb458ee8a8bcc06d3baff
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/27/2018
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="column-fill-mode-in-the-windows-forms-datagridview-control"></a>在 Windows Form DataGridView 控制項中的資料行填入模式
 在資料行填滿模式中，<xref:System.Windows.Forms.DataGridView> 控制項會自動調整其資料行的大小，使資料行填滿可用顯示區域的寬度。 只有在必須將每個資料行的寬度保持等於或大於其 <xref:System.Windows.Forms.DataGridViewColumn.MinimumWidth%2A> 屬性值時，這個控制項才會顯示水平捲軸。  

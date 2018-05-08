@@ -1,28 +1,16 @@
 ---
-title: "如何：使用設計工具隱藏 ToolStripMenuItems"
-ms.custom: 
+title: 如何：使用設計工具隱藏 ToolStripMenuItems
 ms.date: 03/30/2017
-ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.technology: dotnet-winforms
-ms.tgt_pltfrm: 
-ms.topic: article
 helpviewer_keywords:
 - ToolStripMenuItems [Windows Forms], hiding menu items in designer
 - MenuStrip control [Windows Forms], hiding menu items in designer
 - menu items [Windows Forms], hiding
 ms.assetid: 8f1b057e-3d8a-4f11-88df-935f7b29a836
-caps.latest.revision: "8"
-author: dotnet-bot
-ms.author: dotnetcontent
-manager: wpickett
-ms.workload: dotnet
-ms.openlocfilehash: 06a95581e156a7027c8fa0bda6e5fbc4babdb85b
-ms.sourcegitcommit: c0dd436f6f8f44dc80dc43b07f6841a00b74b23f
+ms.openlocfilehash: b0018516b9ac337cea3716c4b2eddc6eb859dbb0
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 01/19/2018
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="how-to-hide-toolstripmenuitems-using-the-designer"></a>如何：使用設計工具隱藏 ToolStripMenuItems
 隱藏功能表項目是能夠控制您的應用程式的使用者介面 (UI)，並限制使用者命令。 通常，您要隱藏整個功能表，當所有在其上的功能表項目都無法使用。 這代表使用者的分心。 此外，您可能想要隱藏並停用功能表或功能表項目，如單獨隱藏不會阻止使用者使用快速鍵來存取功能表命令。 如需有關如何停用功能表項目的詳細資訊，請參閱[如何： 停用 ToolStripMenuItems 使用設計工具](../../../../docs/framework/winforms/controls/how-to-disable-toolstripmenuitems-using-the-designer.md)。  
@@ -45,7 +33,7 @@ ms.lasthandoff: 01/19/2018
   
      當您隱藏子功能表項目時，它仍會顯示在設計階段在表單上，因此您可以進一步的工作，輕鬆地選取它。 實際上會在執行階段隱藏。  
   
-## <a name="see-also"></a>請參閱  
+## <a name="see-also"></a>另請參閱  
  <xref:System.Windows.Forms.ToolStripItem.Visible%2A>  
  <xref:System.Windows.Forms.MenuStrip>  
  <xref:System.Windows.Forms.ToolStripMenuItem.Enabled%2A>  

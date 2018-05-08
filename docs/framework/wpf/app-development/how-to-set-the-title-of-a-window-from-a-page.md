@@ -1,28 +1,16 @@
 ---
-title: "如何： 設定視窗的標題，從頁面"
-ms.custom: 
+title: 如何： 設定視窗的標題，從頁面
 ms.date: 03/30/2017
-ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.technology: dotnet-wpf
-ms.tgt_pltfrm: 
-ms.topic: article
 helpviewer_keywords:
 - windows [WPF], setting title from a page
 - title of window [WPF], setting from a page
 - pages [WPF], setting window title from
 ms.assetid: fecf0d19-3eb6-4f8c-a44f-ff1b6f2b34b3
-caps.latest.revision: "5"
-author: dotnet-bot
-ms.author: dotnetcontent
-manager: wpickett
-ms.workload: dotnet
-ms.openlocfilehash: 11f33eede479e090a78bffe841d7998e03eab6c4
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.openlocfilehash: e69812b59783717b7b9c832d4e8ab01ab42827c8
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="how-to-set-the-title-of-a-window-from-a-page"></a>如何： 設定視窗的標題，從頁面
 這個範例示範如何在其中設定視窗的標題<xref:System.Windows.Controls.Page>裝載。  

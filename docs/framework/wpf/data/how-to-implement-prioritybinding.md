@@ -1,34 +1,20 @@
 ---
-title: "如何：實作 PriorityBinding"
-ms.custom: 
+title: 如何：實作 PriorityBinding
 ms.date: 03/30/2017
-ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.technology:
-- dotnet-wpf
-ms.tgt_pltfrm: 
-ms.topic: article
 dev_langs:
 - csharp
 - vb
 helpviewer_keywords:
 - data binding [WPF], PriorityBinding class
 ms.assetid: d63b65ab-b3e9-4322-9aa8-1450f8d89532
-caps.latest.revision: 
-author: dotnet-bot
-ms.author: dotnetcontent
-manager: wpickett
-ms.workload:
-- dotnet
-ms.openlocfilehash: 0e6ab8826f2298a8660a85d739fbe3456374b476
-ms.sourcegitcommit: c0dd436f6f8f44dc80dc43b07f6841a00b74b23f
+ms.openlocfilehash: cf0ed5c2b55358d3a583ac89e307b23b3ab08a9a
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 01/19/2018
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="how-to-implement-prioritybinding"></a>如何：實作 PriorityBinding
-<xref:System.Windows.Data.PriorityBinding>在[!INCLUDE[TLA#tla_winclient](../../../../includes/tlasharptla-winclient-md.md)]的運作方式是指定繫結的清單。 繫結清單被依優先順序從高到最低優先順序。 如果最高優先權繫結的傳回值已成功處理時就永遠不需要處理清單中的其他繫結。 這可能是最高的優先權繫結需要很長的時間進行評估的案例，優先順序較高的繫結成功傳回值之前，都會使用下一個最高優先順序成功傳回值。  
+<xref:System.Windows.Data.PriorityBinding> 在[!INCLUDE[TLA#tla_winclient](../../../../includes/tlasharptla-winclient-md.md)]的運作方式是指定繫結的清單。 繫結清單被依優先順序從高到最低優先順序。 如果最高優先權繫結的傳回值已成功處理時就永遠不需要處理清單中的其他繫結。 這可能是最高的優先權繫結需要很長的時間進行評估的案例，優先順序較高的繫結成功傳回值之前，都會使用下一個最高優先順序成功傳回值。  
   
 ## <a name="example"></a>範例  
  若要示範如何<xref:System.Windows.Data.PriorityBinding>運作方式、`AsyncDataSource`物件已建立具有下列三個屬性： `FastDP`， `SlowerDP`，和`SlowestDP`。  
@@ -40,7 +26,7 @@ ms.lasthandoff: 01/19/2018
  Get 存取子的`SlowestDP`等待 5 秒鐘，再傳回`_slowestDP`資料成員。  
   
 > [!NOTE]
->  這個範例是僅針對示範目的。 [!INCLUDE[TLA#tla_net](../../../../includes/tlasharptla-net-md.md)]指導方針，建議您不要定義速度較慢比欄位集的屬性。 如需詳細資訊，請參閱[NIB： 選擇之間指定屬性和方法](http://msdn.microsoft.com/library/55825e8f-7e2e-448a-9505-7217cc91b1af)。  
+>  此範例僅供示範之用。 [!INCLUDE[TLA#tla_net](../../../../includes/tlasharptla-net-md.md)]指導方針，建議您不要定義速度較慢比欄位集的屬性。 如需詳細資訊，請參閱[NIB： 選擇之間指定屬性和方法](http://msdn.microsoft.com/library/55825e8f-7e2e-448a-9505-7217cc91b1af)。  
   
  [!code-csharp[PriorityBinding#1](../../../../samples/snippets/csharp/VS_Snippets_Wpf/PriorityBinding/CSharp/Window1.xaml.cs#1)]
  [!code-vb[PriorityBinding#1](../../../../samples/snippets/visualbasic/VS_Snippets_Wpf/PriorityBinding/VisualBasic/AsyncDataSource.vb#1)]  
@@ -57,7 +43,7 @@ ms.lasthandoff: 01/19/2018
   
  請參閱<xref:System.Windows.Data.PriorityBinding>如需有關什麼被視為成功的傳回值，從繫結資訊。  
   
-## <a name="see-also"></a>請參閱  
+## <a name="see-also"></a>另請參閱  
  <xref:System.Windows.Data.Binding.IsAsync%2A?displayProperty=nameWithType>  
  [資料繫結概觀](../../../../docs/framework/wpf/data/data-binding-overview.md)  
  [HOW-TO 主題](../../../../docs/framework/wpf/data/data-binding-how-to-topics.md)

@@ -1,27 +1,15 @@
 ---
-title: "如何：使用含階層式 XML 資料的主從式模式"
-ms.custom: 
+title: 如何：使用含階層式 XML 資料的主從式模式
 ms.date: 03/30/2017
-ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.technology: dotnet-wpf
-ms.tgt_pltfrm: 
-ms.topic: article
 helpviewer_keywords:
 - data binding [WPF], Master-Detail data paradigm
 - Master-Detail data paradigm
 ms.assetid: eb8dbdd8-5871-42bb-a16b-04e655fea677
-caps.latest.revision: "14"
-author: dotnet-bot
-ms.author: dotnetcontent
-manager: wpickett
-ms.workload: dotnet
-ms.openlocfilehash: f0ef460664b3701f4942b8c28b8e39f891d7c871
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.openlocfilehash: 5b3a9d83dcec169fd9607c84b0a66eab0098b238
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="how-to-use-the-master-detail-pattern-with-hierarchical-xml-data"></a>如何：使用含階層式 XML 資料的主從式模式
 這個範例示範如何實作與主版詳細資料案例[!INCLUDE[TLA2#tla_xml](../../../../includes/tla2sharptla-xml-md.md)]資料。  
@@ -32,6 +20,6 @@ ms.lasthandoff: 12/22/2017
  [!code-xaml[MasterDetailXml#HowTo1](../../../../samples/snippets/csharp/VS_Snippets_Wpf/MasterDetailXml/CS/Window1.xaml#howto1)]  
 [!code-xaml[MasterDetailXml#HowTo2](../../../../samples/snippets/csharp/VS_Snippets_Wpf/MasterDetailXml/CS/Window1.xaml#howto2)]  
   
-## <a name="see-also"></a>請參閱  
+## <a name="see-also"></a>另請參閱  
  <xref:System.Windows.HierarchicalDataTemplate>  
  [HOW-TO 主題](../../../../docs/framework/wpf/data/data-binding-how-to-topics.md)

@@ -1,28 +1,14 @@
 ---
-title: "Windows Forms 應用程式中的使用者輸入"
-ms.custom: 
+title: Windows Forms 應用程式中的使用者輸入
 ms.date: 03/30/2017
-ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.technology:
-- dotnet-winforms
-ms.tgt_pltfrm: 
-ms.topic: article
 helpviewer_keywords:
 - Windows Forms, user input
 ms.assetid: 9d61fa96-70f7-4754-885a-49a4a6316bdb
-caps.latest.revision: 
-author: dotnet-bot
-ms.author: dotnetcontent
-manager: wpickett
-ms.workload:
-- dotnet
-ms.openlocfilehash: 60135c09f63bd98f753e151c515938cbf13e70ee
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.openlocfilehash: 4f1b96ab53b30d045a315b43abd0e38157e26c07
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="user-input-in-a-windows-forms-application"></a>Windows Forms 應用程式中的使用者輸入
 在 Windows Form 使用者輸入會傳送至應用程式的 Windows 訊息的形式。 一系列的可覆寫方法處理這些訊息的應用程式表單，並控制層級。 當這些方法會接收滑鼠和鍵盤訊息時，它們就會引發事件，可取得資訊滑鼠或鍵盤輸入來處理。 在許多情況下，Windows Forms 應用程式將能夠處理所有的使用者輸入，只要處理這些事件。 在其他情況下，應用程式可能需要覆寫其中一個處理訊息才能攔截特定的訊息之前收到由應用程式、 表單或控制項的方法。  
@@ -43,7 +29,7 @@ ms.lasthandoff: 12/22/2017
   
  鍵盤和滑鼠訊息也會處理一組額外的可覆寫的方法專屬於這些類型的訊息。 如需詳細資訊，請參閱[鍵盤輸入的運作方式](../../../docs/framework/winforms/how-keyboard-input-works.md)和[滑鼠輸入的運作方式在 Windows Form 中](../../../docs/framework/winforms/how-mouse-input-works-in-windows-forms.md)。  
   
-## <a name="see-also"></a>請參閱  
+## <a name="see-also"></a>另請參閱  
  [Windows Forms 中的使用者輸入](../../../docs/framework/winforms/user-input-in-windows-forms.md)  
  [Windows Forms 應用程式中的鍵盤輸入](../../../docs/framework/winforms/keyboard-input-in-a-windows-forms-application.md)  
  [Windows Forms 應用程式中的滑鼠輸入](../../../docs/framework/winforms/mouse-input-in-a-windows-forms-application.md)

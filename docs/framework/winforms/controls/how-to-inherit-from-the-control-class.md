@@ -1,13 +1,6 @@
 ---
-title: "如何：繼承自 Control 類別"
-ms.custom: 
+title: 如何：繼承自 Control 類別
 ms.date: 03/30/2017
-ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.technology: dotnet-winforms
-ms.tgt_pltfrm: 
-ms.topic: article
 helpviewer_keywords:
 - inheritance [Windows Forms], Windows Forms custom controls
 - Control class [Windows Forms], inheriting from
@@ -15,16 +8,11 @@ helpviewer_keywords:
 - OnPaint method [Windows Forms]
 - custom controls [Windows Forms], creating
 ms.assetid: 46ba0df3-5cf7-443c-a3b4-a72660172476
-caps.latest.revision: "11"
-author: dotnet-bot
-ms.author: dotnetcontent
-manager: wpickett
-ms.workload: dotnet
-ms.openlocfilehash: bdc4a5c7f721fd350f5c604d4529f05afd62a42c
-ms.sourcegitcommit: c0dd436f6f8f44dc80dc43b07f6841a00b74b23f
+ms.openlocfilehash: da80d46f27d7cd721af7a9600d2b0cde84876d23
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 01/19/2018
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="how-to-inherit-from-the-control-class"></a>如何：繼承自 Control 類別
 如果您想要建立使用 Windows Form 上的完全自訂控制項，您應該繼承自<xref:System.Windows.Forms.Control>類別。 同時繼承自<xref:System.Windows.Forms.Control>類別會要求您執行詳細的規劃和實作，它也提供您選項的最大範圍。 繼承自<xref:System.Windows.Forms.Control>，繼承的非常基本的功能可讓工作的控制項。 繼承的功能<xref:System.Windows.Forms.Control>類別會處理透過鍵盤和滑鼠的使用者輸入，定義範圍和控制項的大小、 提供的 windows 控制代碼，並提供訊息處理和安全性。 它不會併入任何繪製功能 (在此例中是控制項圖形化介面的實際轉譯)，也不會併入任何特定的使用者互動功能。 您必須透過自訂程式碼來提供上述一切。  
@@ -54,7 +42,7 @@ ms.lasthandoff: 01/19/2018
   
 8.  儲存並測試您的控制項。  
   
-## <a name="see-also"></a>請參閱  
+## <a name="see-also"></a>另請參閱  
  [各種自訂控制項](../../../../docs/framework/winforms/controls/varieties-of-custom-controls.md)  
  [操作說明：繼承自 UserControl 類別](../../../../docs/framework/winforms/controls/how-to-inherit-from-the-usercontrol-class.md)  
  [操作說明：繼承自現有的 Windows Forms 控制項](../../../../docs/framework/winforms/controls/how-to-inherit-from-existing-windows-forms-controls.md)  

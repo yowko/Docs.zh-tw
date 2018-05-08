@@ -1,13 +1,6 @@
 ---
-title: "最佳化效能：應用程式資源"
-ms.custom: 
+title: 最佳化效能：應用程式資源
 ms.date: 03/30/2017
-ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.technology: dotnet-wpf
-ms.tgt_pltfrm: 
-ms.topic: article
 helpviewer_keywords:
 - application resources [WPF], performance
 - resources [WPF], performance
@@ -16,19 +9,14 @@ helpviewer_keywords:
 - brushes [WPF], performance
 - sharing brushes without copying [WPF]
 ms.assetid: 62b88488-c08e-4804-b7de-a1c34fbe929c
-caps.latest.revision: "6"
-author: dotnet-bot
-ms.author: dotnetcontent
-manager: wpickett
-ms.workload: dotnet
-ms.openlocfilehash: c0a7c9920b321f15f3f01a64fbfc80693042a025
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.openlocfilehash: 53e906f31f32fb0f1df3f8d986daa0ae95ea9e4c
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="optimizing-performance-application-resources"></a>最佳化效能：應用程式資源
-[!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)]可讓您共用應用程式資源，以便您可以透過類似具類型的項目支援一致的外觀或行為。 本主題提供的一些建議這個區域，可協助您改善應用程式的效能。  
+[!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] 可讓您共用應用程式資源，以便您可以透過類似具類型的項目支援一致的外觀或行為。 本主題提供的一些建議這個區域，可協助您改善應用程式的效能。  
   
  如需詳細資訊，請參閱 [XAML 資源](../../../../docs/framework/wpf/advanced/xaml-resources.md)。  
   
@@ -53,7 +41,7 @@ ms.lasthandoff: 12/22/2017
   
  [!code-xaml[Performance#PerformanceSnippet8](../../../../samples/snippets/csharp/VS_Snippets_Wpf/Performance/CSharp/DynamicResource.xaml#performancesnippet8)]  
   
-## <a name="see-also"></a>請參閱  
+## <a name="see-also"></a>另請參閱  
  [最佳化 WPF 應用程式效能](../../../../docs/framework/wpf/advanced/optimizing-wpf-application-performance.md)  
  [應用程式效能規劃](../../../../docs/framework/wpf/advanced/planning-for-application-performance.md)  
  [運用硬體](../../../../docs/framework/wpf/advanced/optimizing-performance-taking-advantage-of-hardware.md)  

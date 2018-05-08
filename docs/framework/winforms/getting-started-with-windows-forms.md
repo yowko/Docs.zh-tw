@@ -1,13 +1,6 @@
 ---
-title: "Windows Form 使用者入門"
-ms.custom: 
+title: Windows Form 使用者入門
 ms.date: 03/30/2017
-ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.technology: dotnet-winforms
-ms.tgt_pltfrm: 
-ms.topic: article
 f1_keywords:
 - Designer_System.Windows.Forms.Design.FormDocumentDesigner
 - vb.wfc.formdesigner
@@ -15,16 +8,11 @@ helpviewer_keywords:
 - Windows Forms, getting started
 - getting started [Windows Forms], Windows Forms
 ms.assetid: a031aa58-5027-4082-b590-df7c12c77dec
-caps.latest.revision: "10"
-author: dotnet-bot
-ms.author: dotnetcontent
-manager: wpickett
-ms.workload: dotnet
-ms.openlocfilehash: d5d81497872e231fb1b235d9707b9a36505d3165
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.openlocfilehash: 7fc45efec8878ba4a098ad686e53bca375200c23
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="getting-started-with-windows-forms"></a>Windows Form 使用者入門
 您可以使用 Windows Form 建立功能強大的 Windows 應用程式。 下列主題說明如何利用 Windows Form 顯示資料、 處理使用者輸入和部署您的應用程式，以增強安全性輕鬆能力深入了解。  

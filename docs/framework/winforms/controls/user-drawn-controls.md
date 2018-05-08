@@ -1,13 +1,6 @@
 ---
-title: "使用者自訂描繪控制項"
-ms.custom: 
+title: 使用者自訂描繪控制項
 ms.date: 03/30/2017
-ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.technology: dotnet-winforms
-ms.tgt_pltfrm: 
-ms.topic: article
 dev_langs:
 - csharp
 - vb
@@ -16,25 +9,20 @@ helpviewer_keywords:
 - OnPaint method [Windows Forms]
 - user-drawn controls [Windows Forms]
 ms.assetid: 034af4b5-457f-4160-a937-22891817faa8
-caps.latest.revision: "14"
-author: dotnet-bot
-ms.author: dotnetcontent
-manager: wpickett
-ms.workload: dotnet
-ms.openlocfilehash: e9e486058850616c2304ce0032c35baa855fdf2f
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.openlocfilehash: 26b4f062c120bf543a5e597fc8c734e8cc336bd8
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="user-drawn-controls"></a>使用者自訂描繪控制項
 .NET Framework 會提供您能夠輕鬆地開發您自己的控制項。 您可以建立使用者控制項，也就是一組標準的控制項繫結在一起的程式碼，或您可以設計自己的控制項，從頭組成。 您甚至可以使用繼承建立繼承自現有的控制項的控制項，並將新增到其繼承的功能。 方法使用時，.NET Framework 提供的功能，以繪製自訂的圖形化介面，任何您所建立的控制項。  
   
  繪製控制項的作業透過在控制項的程式碼執行<xref:System.Windows.Forms.Control.OnPaint%2A>方法。 單一引數<xref:System.Windows.Forms.Control.OnPaint%2A>方法<xref:System.Windows.Forms.PaintEventArgs>物件，提供的所有資訊和轉譯控制項時所需的功能。 <xref:System.Windows.Forms.PaintEventArgs>做為屬性提供將用於程式控制項的呈現的兩個主要物件：  
   
--   <xref:System.Windows.Forms.PaintEventArgs.ClipRectangle%2A>物件的矩形，表示要繪製之控制項的一部分。 這可以是整個控制項或根據如何繪製控制項的控制項的一部分。  
+-   <xref:System.Windows.Forms.PaintEventArgs.ClipRectangle%2A> 物件的矩形，表示要繪製之控制項的一部分。 這可以是整個控制項或根據如何繪製控制項的控制項的一部分。  
   
--   <xref:System.Drawing.Graphics>物件-封裝數個圖形導向的物件和方法，提供繪製控制項所需的功能。  
+-   <xref:System.Drawing.Graphics> 物件-封裝數個圖形導向的物件和方法，提供繪製控制項所需的功能。  
   
  如需有關<xref:System.Drawing.Graphics>物件，以及如何使用它，請參閱[How to： 建立繪製的圖形物件](../../../../docs/framework/winforms/advanced/how-to-create-graphics-objects-for-drawing.md)。  
   
@@ -86,7 +74,7 @@ SetStyle(ControlStyles.ResizeRedraw, true);
 > [!NOTE]
 >  使用<xref:System.Windows.Forms.Control.Region%2A?displayProperty=nameWithType>實作非矩形控制項的屬性。  
   
-## <a name="see-also"></a>請參閱  
+## <a name="see-also"></a>另請參閱  
  <xref:System.Windows.Forms.Control.Region%2A>  
  <xref:System.Windows.Forms.ControlStyles>  
  <xref:System.Drawing.Graphics>  

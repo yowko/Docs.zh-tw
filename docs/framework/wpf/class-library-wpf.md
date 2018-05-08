@@ -1,27 +1,15 @@
 ---
-title: "類別庫 (WPF)"
-ms.custom: 
+title: 類別庫 (WPF)
 ms.date: 03/30/2017
-ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.technology: dotnet-wpf
-ms.tgt_pltfrm: 
-ms.topic: article
 helpviewer_keywords:
 - WPF class library [WPF]
 - Windows Presentation Foundation class library [WPF]
 ms.assetid: dcb35927-00ad-4141-a1ab-a7a524dd3f10
-caps.latest.revision: "10"
-author: dotnet-bot
-ms.author: dotnetcontent
-manager: wpickett
-ms.workload: dotnet
-ms.openlocfilehash: 259aeca19f1b5865cee2749e76398e3e7f30aa51
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.openlocfilehash: 1d6f23c253a081bf454606a222ee4deed6c52e81
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="class-library-wpf"></a>類別庫 (WPF)
 下列連結是指包含命名空間[!INCLUDE[TLA#tla_winclient](../../../includes/tlasharptla-winclient-md.md)] [!INCLUDE[TLA#tla_api#plural](../../../includes/tlasharptla-apisharpplural-md.md)]。  
@@ -32,19 +20,19 @@ ms.lasthandoff: 12/22/2017
   
 -   <xref:Microsoft.Build.Tasks.Windows>  
   
--   <xref:Microsoft.Win32>（共用）  
+-   <xref:Microsoft.Win32> （共用）  
   
 -   <xref:Microsoft.Windows.Themes>  
   
--   <xref:System.Collections.ObjectModel>（共用）  
+-   <xref:System.Collections.ObjectModel> （共用）  
   
--   <xref:System.Collections.Specialized>（共用）  
+-   <xref:System.Collections.Specialized> （共用）  
   
--   <xref:System.ComponentModel>（共用）  
+-   <xref:System.ComponentModel> （共用）  
   
--   <xref:System.Diagnostics>（共用）  
+-   <xref:System.Diagnostics> （共用）  
   
--   <xref:System.IO>（共用）  
+-   <xref:System.IO> （共用）  
   
 -   <xref:System.IO.Packaging>  
   
@@ -54,7 +42,7 @@ ms.lasthandoff: 12/22/2017
   
 -   <xref:System.Printing.Interop>  
   
--   <xref:System.Security.Permissions>（共用）  
+-   <xref:System.Security.Permissions> （共用）  
   
 -   <xref:System.Security.RightsManagement>  
   
@@ -96,7 +84,7 @@ ms.lasthandoff: 12/22/2017
   
 -   <xref:System.Windows.Interop>  
   
--   <xref:System.Windows.Markup>（共用）  
+-   <xref:System.Windows.Markup> （共用）  
   
 -   <xref:System.Windows.Markup.Localizer>  
   
@@ -137,7 +125,7 @@ ms.lasthandoff: 12/22/2017
 ## <a name="xaml-support-in-net-4"></a>.NET 4 中的 XAML 支援  
  下列命名空間包含類型來自 System.Xaml 組件。 System.Xaml 提供一般 XAML 語言支援的架構，例如之上的 WPF [!INCLUDE[net_v40_long](../../../includes/net-v40-long-md.md)]。  
   
--   <xref:System.Windows.Markup>（共用）  
+-   <xref:System.Windows.Markup> （共用）  
   
 -   <xref:System.Xaml>  
   

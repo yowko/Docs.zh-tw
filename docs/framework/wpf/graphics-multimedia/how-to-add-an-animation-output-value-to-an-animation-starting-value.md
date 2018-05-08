@@ -1,28 +1,14 @@
 ---
-title: "如何：將動畫輸出值加入至動畫啟動值"
-ms.custom: 
+title: 如何：將動畫輸出值加入至動畫啟動值
 ms.date: 03/30/2017
-ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.technology:
-- dotnet-wpf
-ms.tgt_pltfrm: 
-ms.topic: article
 helpviewer_keywords:
 - animation [WPF]
 ms.assetid: b89a82be-b03d-481e-a8d3-cc513d09ca00
-caps.latest.revision: 
-author: dotnet-bot
-ms.author: dotnetcontent
-manager: wpickett
-ms.workload:
-- dotnet
-ms.openlocfilehash: 3a670a29e4bd982418ac92ef0e2ac65635763671
-ms.sourcegitcommit: c0dd436f6f8f44dc80dc43b07f6841a00b74b23f
+ms.openlocfilehash: 7f60a3cd3fc88c5bb2460864be6cee008dc672fd
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 01/19/2018
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="how-to-add-an-animation-output-value-to-an-animation-starting-value"></a>如何：將動畫輸出值加入至動畫啟動值
 這個範例示範如何加入動畫的起始值的動畫輸出值。  
@@ -34,7 +20,7 @@ ms.lasthandoff: 01/19/2018
   
  [!code-xaml[timingbehaviors_snip#IsAdditiveWholePage](../../../../samples/snippets/csharp/VS_Snippets_Wpf/timingbehaviors_snip/CSharp/IsAdditiveExample.xaml#isadditivewholepage)]  
   
-## <a name="see-also"></a>請參閱  
+## <a name="see-also"></a>另請參閱  
  [在重複循環期間累加動畫值](../../../../docs/framework/wpf/graphics-multimedia/how-to-accumulate-animation-values-during-repeat-cycles.md)  
  [動畫概觀](../../../../docs/framework/wpf/graphics-multimedia/animation-overview.md)  
  [主要畫面格動畫概觀](../../../../docs/framework/wpf/graphics-multimedia/key-frame-animations-overview.md)  

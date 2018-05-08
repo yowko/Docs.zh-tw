@@ -1,24 +1,12 @@
 ---
-title: "XAML 的集合和集合類型"
-ms.custom: 
+title: XAML 的集合和集合類型
 ms.date: 03/30/2017
-ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.technology: dotnet-wpf
-ms.tgt_pltfrm: 
-ms.topic: article
 ms.assetid: 58f8e7c6-9a41-4f25-8551-c042f1315baa
-caps.latest.revision: "2"
-author: wadepickett
-ms.author: wpickett
-manager: wpickett
-ms.workload: dotnet
-ms.openlocfilehash: b67fec476c95d82b769494d53e50550cad0c719b
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.openlocfilehash: 5605c97b13503e18e2f698f2a19f715663052b08
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="collections-and-collection-types-for-xaml"></a>XAML 的集合和集合類型
 本主題描述如何定義是用來支援一個集合，以及支援 XAML 語法產生做為父物件項目或屬性項目的項目子系的集合項目類型的屬性。  
@@ -34,7 +22,7 @@ ms.lasthandoff: 12/22/2017
   
 2.  <xref:System.Collections.IDictionary>介面的指出 dicionary 的集合。  
   
-3.  <xref:System.Array>支援陣列和陣列，代表<xref:System.Collections.IList>方法。  
+3.  <xref:System.Array> 支援陣列和陣列，代表<xref:System.Collections.IList>方法。  
   
  在每個這些集合的概念，.NET Framework XAML 服務 XAML 處理器預期呼叫`Add`特定執行個體的集合屬性的型別方法。 或者，在序列化案例中，XAML 處理器會產生每個項目清單、 字典或 「 項目 」 的每個集合的特定概念為基礎的陣列中所找到的離散 XAML 類型執行個體。 這些是： <xref:System.Collections.IList.Item%2A>;<xref:System.Collections.IDictionary.Item%2A>; 明確<xref:System.Array.System%23Collections%23IList%23Item%2A>如<xref:System.Array>。  
   
@@ -49,8 +37,8 @@ ms.lasthandoff: 12/22/2017
 ## <a name="xaml-type-system-support-and-collections"></a>XAML 類型系統支援和集合  
  超出剖析 XAML 和填入或序列化集合屬性的基本機制，在.NET Framework XAML 服務中實作時，XAML 類型系統會包含數個設計功能與在 XAML 中的集合。  
   
-1.  <xref:System.Xaml.XamlType.IsCollection%2A>如果提供 XAML 集合支援的型別所支援的 XAML 型別，傳回 true。  
+1.  <xref:System.Xaml.XamlType.IsCollection%2A> 如果提供 XAML 集合支援的型別所支援的 XAML 型別，傳回 true。  
   
-2.  <xref:System.Xaml.XamlType.IsDictionary%2A>和<xref:System.Xaml.XamlType.IsArray%2A>可以進一步指定 XAML 型別支援的收集模式。 自訂 XAML 的.NET Framework XAML 服務和 XAML 為基礎的處理器類型系統，但無法根據現有的<xref:System.Xaml.XamlWriter>實作中，了解使用的收集模式可能需要才能知道哪一種方法來叫用的收集處理程序。  
+2.  <xref:System.Xaml.XamlType.IsDictionary%2A> 和<xref:System.Xaml.XamlType.IsArray%2A>可以進一步指定 XAML 型別支援的收集模式。 自訂 XAML 的.NET Framework XAML 服務和 XAML 為基礎的處理器類型系統，但無法根據現有的<xref:System.Xaml.XamlWriter>實作中，了解使用的收集模式可能需要才能知道哪一種方法來叫用的收集處理程序。  
   
 3.  每個先前屬性的值可能受到的覆寫<xref:System.Xaml.XamlType.LookupCollectionKind%2A>XAML 型別上。

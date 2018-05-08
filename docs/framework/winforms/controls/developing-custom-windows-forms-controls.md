@@ -1,27 +1,15 @@
 ---
-title: "使用 .NET Framework 開發自訂的 Windows Form 控制項"
-ms.custom: 
+title: 使用 .NET Framework 開發自訂的 Windows Form 控制項
 ms.date: 03/30/2017
-ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.technology: dotnet-winforms
-ms.tgt_pltfrm: 
-ms.topic: article
 helpviewer_keywords:
 - custom controls [Windows Forms], developing using code
 - Control class [Windows Forms], Windows Forms
 ms.assetid: 236cebc0-bd71-4f18-9fd6-5d0e592375df
-caps.latest.revision: "22"
-author: dotnet-bot
-ms.author: dotnetcontent
-manager: wpickett
-ms.workload: dotnet
-ms.openlocfilehash: d2f15dc4bb3bd4a6d1163823509f0f2c2bf2c11a
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.openlocfilehash: 935358664f93b6428b9153a9bcbed862aeee07ab
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="developing-custom-windows-forms-controls-with-the-net-framework"></a>使用 .NET Framework 開發自訂的 Windows Form 控制項
 Windows Form 控制項是可重複使用的元件，這些控制項可封裝使用者介面功能，並可用於用戶端 Windows 應用程式。 Windows Form 不僅提供許多立即可用的控制項，也提供用以開發您自己的控制項的基礎結構。 您可以結合現有的控制項、擴充現有的控制項，或撰寫您自己的自訂控制項。 本節提供背景資訊和範例，以協助您開發 Windows Form 控制項。  

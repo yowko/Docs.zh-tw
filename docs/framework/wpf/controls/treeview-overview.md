@@ -1,28 +1,16 @@
 ---
-title: "TreeView 概觀"
-ms.custom: 
+title: TreeView 概觀
 ms.date: 03/30/2017
-ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.technology: dotnet-wpf
-ms.tgt_pltfrm: 
-ms.topic: article
 helpviewer_keywords:
 - expanding node [WPF]
 - TreeView control [WPF], about TreeView control
 - Control class [WPF], TreeView
 ms.assetid: 62212512-5a5c-4864-949e-b6a6a3a52c02
-caps.latest.revision: "33"
-author: dotnet-bot
-ms.author: dotnetcontent
-manager: wpickett
-ms.workload: dotnet
-ms.openlocfilehash: 6e5f6b3d0a185754bc0d8d8ee726ca13443ccdc1
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.openlocfilehash: f8c49013bc34671ec590f0bd9f84a0f2cf3f9aaf
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="treeview-overview"></a>TreeView 概觀
 <xref:System.Windows.Controls.TreeView>控制項可用來顯示階層式結構的資訊，使用可摺疊的節點。 本主題將介紹<xref:System.Windows.Controls.TreeView>和<xref:System.Windows.Controls.TreeViewItem>控制項，並提供其用法的簡單範例。  
@@ -30,7 +18,7 @@ ms.lasthandoff: 12/22/2017
   
 <a name="Simple_TreeView_Control"></a>   
 ## <a name="what-is-a-treeview"></a>什麼是 TreeView？  
- <xref:System.Windows.Controls.TreeView>是<xref:System.Windows.Controls.ItemsControl>，形成使用巢狀項目<xref:System.Windows.Controls.TreeViewItem>控制項。 下列範例會建立<xref:System.Windows.Controls.TreeView>。  
+ <xref:System.Windows.Controls.TreeView> 是<xref:System.Windows.Controls.ItemsControl>，形成使用巢狀項目<xref:System.Windows.Controls.TreeViewItem>控制項。 下列範例會建立<xref:System.Windows.Controls.TreeView>。  
   
  [!code-xaml[TreeViewSnips#EmbeddedTVIs](../../../../samples/snippets/csharp/VS_Snippets_Wpf/TreeViewSnips/CSharp/Window1.xaml#embeddedtvis)]  
   
@@ -84,7 +72,7 @@ ms.lasthandoff: 12/22/2017
   
  [!code-xaml[TreeViewDataBinding#6](../../../../samples/snippets/csharp/VS_Snippets_Wpf/TreeViewDataBinding/CSharp/Window1.xaml#6)]  
   
-## <a name="see-also"></a>請參閱  
+## <a name="see-also"></a>另請參閱  
  <xref:System.Windows.Controls.TreeView>  
  <xref:System.Windows.Controls.TreeViewItem>  
  [HOW-TO 主題](../../../../docs/framework/wpf/controls/treeview-how-to-topics.md)  

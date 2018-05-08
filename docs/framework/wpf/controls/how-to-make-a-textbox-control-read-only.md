@@ -1,27 +1,15 @@
 ---
-title: "如何：將 TextBox 控制項設為唯讀"
-ms.custom: 
+title: 如何：將 TextBox 控制項設為唯讀
 ms.date: 03/30/2017
-ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.technology: dotnet-wpf
-ms.tgt_pltfrm: 
-ms.topic: article
 helpviewer_keywords:
 - read-only TextBox controls [WPF]
 - TextBox control read-only
 ms.assetid: e707ec59-8b22-473e-b77c-3060a237517a
-caps.latest.revision: "11"
-author: dotnet-bot
-ms.author: dotnetcontent
-manager: wpickett
-ms.workload: dotnet
-ms.openlocfilehash: f3d3acf1e5065633f9f4c75f24780230525b01ba
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.openlocfilehash: 3ba93cae5977f3c8c76f3bfa9f5732d3f0736af7
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="how-to-make-a-textbox-control-read-only"></a>如何：將 TextBox 控制項設為唯讀
 這個範例示範如何設定<xref:System.Windows.Controls.TextBox>控制項不允許使用者輸入或修改。  
@@ -35,6 +23,6 @@ ms.lasthandoff: 12/22/2017
   
  預設值<xref:System.Windows.Controls.Primitives.TextBoxBase.IsReadOnly%2A>是**false**。  
   
-## <a name="see-also"></a>請參閱  
+## <a name="see-also"></a>另請參閱  
  [TextBox 概觀](../../../../docs/framework/wpf/controls/textbox-overview.md)  
  [RichTextBox 概觀](../../../../docs/framework/wpf/controls/richtextbox-overview.md)
