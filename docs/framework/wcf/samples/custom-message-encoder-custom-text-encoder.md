@@ -2,11 +2,11 @@
 title: 自訂訊息編碼器：自訂文字編碼器
 ms.date: 03/30/2017
 ms.assetid: 68ff5c74-3d33-4b44-bcae-e1d2f5dea0de
-ms.openlocfilehash: 975cfd44834ed31a5d723fdca0fe467cba63e68d
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
-ms.translationtype: HT
+ms.openlocfilehash: 369706ecdc2e37a5fb62a448a273b045fe424df8
+ms.sourcegitcommit: 15109844229ade1c6449f48f3834db1b26907824
+ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/04/2018
+ms.lasthandoff: 05/07/2018
 ---
 # <a name="custom-message-encoder-custom-text-encoder"></a>自訂訊息編碼器：自訂文字編碼器
 這個範例示範如何實作自訂文字訊息編碼器使用 Windows Communication Foundation (WCF)。  
@@ -20,7 +20,7 @@ ms.lasthandoff: 05/04/2018
 >   
 >  `<InstallDrive>:\WF_WCF_Samples\WCF\Extensibility\MessageEncoder\Text`  
   
- <xref:System.ServiceModel.Channels.TextMessageEncodingBindingElement> 的 [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] 只支援 UTF-8、UTF-16 和 Big Endean Unicode 編碼方式。 這個範例中的自訂文字訊息編碼器會支援所有平台支援的字元編碼，這是為達成互通性而可能需要的編碼方式。 這個範例是由用戶端主控台程式 (.exe)、網際網路資訊服務 (IIS) 裝載的服務程式庫 (.dll) 和文字訊息編碼器程式庫 (.dll) 所組成。 服務會實作定義要求-回覆通訊模式的合約。 合約是由 `ICalculator` 介面所定義，這個介面會公開數學運算作業 (加、減、乘、除)。 用戶端會對指定的數學運算作業提出同步要求，服務則會以結果回覆。 用戶端和服務都會使用 `CustomTextMessageEncoder`，而不使用預設的 <xref:System.ServiceModel.Channels.TextMessageEncodingBindingElement>。  
+ <xref:System.ServiceModel.Channels.TextMessageEncodingBindingElement> WCF 的支援只有 utf-8、 utf-16 和 Big Endean Unicode 編碼方式。 這個範例中的自訂文字訊息編碼器會支援所有平台支援的字元編碼，這是為達成互通性而可能需要的編碼方式。 這個範例是由用戶端主控台程式 (.exe)、網際網路資訊服務 (IIS) 裝載的服務程式庫 (.dll) 和文字訊息編碼器程式庫 (.dll) 所組成。 服務會實作定義要求-回覆通訊模式的合約。 合約是由 `ICalculator` 介面所定義，這個介面會公開數學運算作業 (加、減、乘、除)。 用戶端會對指定的數學運算作業提出同步要求，服務則會以結果回覆。 用戶端和服務都會使用 `CustomTextMessageEncoder`，而不使用預設的 <xref:System.ServiceModel.Channels.TextMessageEncodingBindingElement>。  
   
  自訂編碼器的實作是由訊息編碼器處理站、訊息編碼器、訊息編碼繫結項目和組態處理常式所組成，說明如下：  
   
@@ -47,7 +47,7 @@ ms.lasthandoff: 05/04/2018
 4.  若要在單一或跨電腦組態中執行範例時，請依照中的指示[執行 Windows Communication Foundation 範例](../../../../docs/framework/wcf/samples/running-the-samples.md)。  
   
 ## <a name="message-encoder-factory-and-the-message-encoder"></a>訊息編碼器處理站和訊息編碼器  
- 開啟 <xref:System.ServiceModel.ServiceHost> 或用戶端通道時，設計階段元件 `CustomTextMessageBindingElement` 會建立 `CustomTextMessageEncoderFactory`。 處理站則會建立 `CustomTextMessageEncoder`。 訊息編碼器會同時以資料流處理模式和緩衝模式來運作。 它會分別使用 <xref:System.Xml.XmlReader> 和 <xref:System.Xml.XmlWriter> 來讀取和寫入訊息。 正好與僅支援 UTF-8、UTF-16 和 Big-Endean Unicode 之 [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] 的最佳化 XML 讀取器和寫入器相反，這些讀取器和寫入器會支援所有平台支援的編碼方式。  
+ 開啟 <xref:System.ServiceModel.ServiceHost> 或用戶端通道時，設計階段元件 `CustomTextMessageBindingElement` 會建立 `CustomTextMessageEncoderFactory`。 處理站則會建立 `CustomTextMessageEncoder`。 訊息編碼器會同時以資料流處理模式和緩衝模式來運作。 它會分別使用 <xref:System.Xml.XmlReader> 和 <xref:System.Xml.XmlWriter> 來讀取和寫入訊息。 最佳化 XML 讀取器和寫入器的 WCF 支援 utf-8、 utf-16 和 Big-endean Unicode 之這些讀取器和寫入器支援所有平台支援編碼方式。  
   
  下列程式碼範例示範 CustomTextMessageEncoder。  
   
@@ -190,11 +190,11 @@ public class CustomTextMessageEncoderFactory : MessageEncoderFactory
 ```  
   
 ## <a name="message-encoding-binding-element"></a>訊息編碼繫結項目  
- 繫結項目允許設定 [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] 執行階段堆疊。 為了在 [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] 應用程式中使用自訂訊息編碼器，繫結項目必須在執行階段堆疊中的適當層級上使用適當的設定來建立訊息編碼器處理站。  
+ 繫結項目允許設定 WCF 執行階段堆疊。 若要在 WCF 應用程式中使用自訂訊息編碼器，繫結項目則需要使用適當的設定，在執行階段堆疊中的適當層級來建立的訊息編碼器處理站。  
   
- `CustomTextMessageBindingElement` 是從 <xref:System.ServiceModel.Channels.BindingElement> 基底類別衍生，而且繼承自 <xref:System.ServiceModel.Channels.MessageEncodingBindingElement> 類別。 這會讓其他 [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] 元件將此繫結項目看成是訊息編碼繫結項目。 <xref:System.ServiceModel.Channels.MessageEncodingBindingElement.CreateMessageEncoderFactory%2A> 的實作會傳回相符之訊息編碼器處理站的執行個體，其中包含適當的設定。  
+ `CustomTextMessageBindingElement` 是從 <xref:System.ServiceModel.Channels.BindingElement> 基底類別衍生，而且繼承自 <xref:System.ServiceModel.Channels.MessageEncodingBindingElement> 類別。 這可讓其他 WCF 元件，以這個繫結項目看成訊息編碼繫結項目。 <xref:System.ServiceModel.Channels.MessageEncodingBindingElement.CreateMessageEncoderFactory%2A> 的實作會傳回相符之訊息編碼器處理站的執行個體，其中包含適當的設定。  
   
- `CustomTextMessageBindingElement` 會透過屬性公開 `MessageVersion`、`ContentType` 和 `Encoding` 的設定。 編碼器同時支援 Soap11Addressing 和 Soap12Addressing1 版本。 預設為 Soap11Addressing1。 `ContentType` 的預設值為 "text/xml"。 `Encoding` 屬性可讓您設定所需的字元編碼值。 範例用戶端與服務會使用 ISO-8859-1 (Latin1) 字元編碼，但是 <xref:System.ServiceModel.Channels.TextMessageEncodingBindingElement> 的 [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] 不支援這種編碼方式。  
+ `CustomTextMessageBindingElement` 會透過屬性公開 `MessageVersion`、`ContentType` 和 `Encoding` 的設定。 編碼器同時支援 Soap11Addressing 和 Soap12Addressing1 版本。 預設為 Soap11Addressing1。 `ContentType` 的預設值為 "text/xml"。 `Encoding` 屬性可讓您設定所需的字元編碼值。 範例用戶端和服務會使用 iso-8859-1 (Latin1) 字元編碼，不支援由<xref:System.ServiceModel.Channels.TextMessageEncodingBindingElement>的 WCF。  
   
  下列程式碼將示範如何使用自訂文字訊息編碼器，透過程式設計方式建立繫結。  
   

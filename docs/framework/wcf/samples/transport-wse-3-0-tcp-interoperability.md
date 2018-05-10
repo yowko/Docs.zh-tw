@@ -2,14 +2,14 @@
 title: 傳輸：WSE 3.0 TCP 互通性
 ms.date: 03/30/2017
 ms.assetid: 5f7c3708-acad-4eb3-acb9-d232c77d1486
-ms.openlocfilehash: fb877e6d55214e9a268a88b33a4613ca8df0eb8f
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
-ms.translationtype: HT
+ms.openlocfilehash: 8cdd88b354f2e07c84ccfda85c8552d37ca2f519
+ms.sourcegitcommit: 15109844229ade1c6449f48f3834db1b26907824
+ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/04/2018
+ms.lasthandoff: 05/07/2018
 ---
 # <a name="transport-wse-30-tcp-interoperability"></a>傳輸：WSE 3.0 TCP 互通性
-WSE 3.0 TCP 互通性傳輸範例示範如何實作 TCP 雙工工作階段做為自訂的 Windows Communication Foundation (WCF) 傳輸。 也會示範如何使用通道層的擴充性，透過網路與現有的已部署系統相連結。 下列步驟會顯示如何建置此自訂 [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] 傳輸：  
+WSE 3.0 TCP 互通性傳輸範例示範如何實作 TCP 雙工工作階段做為自訂的 Windows Communication Foundation (WCF) 傳輸。 也會示範如何使用通道層的擴充性，透過網路與現有的已部署系統相連結。 下列步驟示範如何建置此自訂 WCF 傳輸：  
   
 1.  從 TCP 通訊端 (Socket) 開始，建立會使用 DIME 框架來描述訊息界限之 <xref:System.ServiceModel.Channels.IDuplexSessionChannel> 的用戶端和伺服器實作。  
   
@@ -128,7 +128,7 @@ WSE 3.0 TCP 互通性傳輸範例示範如何實作 TCP 雙工工作階段做為
   
  `binding.Elements.Add(new WseTcpTransportBindingElement());`  
   
- 其中包含兩個測試：第一個測試會使用 WSE 3.0 WSDL 產生的程式碼來設定具型別的用戶端。 第二個測試會直接在通道 API 最上層傳送訊息，以將 [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] 同時當做用戶端和伺服器。  
+ 其中包含兩個測試：第一個測試會使用 WSE 3.0 WSDL 產生的程式碼來設定具型別的用戶端。 第二個測試會使用 WCF 做為用戶端和伺服器所傳送訊息，直接在通道 Api 之上。  
   
  執行範例時，預期會產生下列輸出。  
   
@@ -182,7 +182,7 @@ Symbols:
   
     2.  將 StockService 專案設定為啟始專案。  
   
-    3.  開啟 StockService 專案中的 StockService.cs，並將 `StockService` 類別中的 [Policy] 屬性標記為註解。 這樣就會停用範例的安全性。 雖然 [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] 可以和 WSE 3.0 安全端點相互操作，但安全性會設為停用，以讓此範例保持專注於自訂 TCP 傳輸。  
+    3.  開啟 StockService 專案中的 StockService.cs，並將 `StockService` 類別中的 [Policy] 屬性標記為註解。 這樣就會停用範例的安全性。 WCF 可以與 WSE 3.0 安全端點相互操作，而安全性已停用保留此範例著重於自訂 TCP 傳輸。  
   
     4.  按 F5 以啟動 `TcpSyncStockService`。 將在新主控台視窗中啟動服務。  
   

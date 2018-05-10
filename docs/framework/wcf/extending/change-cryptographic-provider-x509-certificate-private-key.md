@@ -8,16 +8,16 @@ helpviewer_keywords:
 - cryptographic provider [WCF], changing
 - cryptographic provider [WCF]
 ms.assetid: b4254406-272e-4774-bd61-27e39bbb6c12
-ms.openlocfilehash: be6033efc03e25967af8bbb3266b0f60df02eaba
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
-ms.translationtype: HT
+ms.openlocfilehash: 633e87bca302adc0963e1bf52d2470c9dbae81a5
+ms.sourcegitcommit: 15109844229ade1c6449f48f3834db1b26907824
+ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/04/2018
+ms.lasthandoff: 05/07/2018
 ---
 # <a name="how-to-change-the-cryptographic-provider-for-an-x509-certificate39s-private-key"></a>如何： 變更 X.509 憑證的密碼編譯提供者&#39;s 私密金鑰
 本主題說明如何變更用來提供 X.509 憑證之私密金鑰的密碼編譯提供者，以及如何將提供者整合到 Windows Communication Foundation (WCF) 安全性架構。 如需有關如何使用憑證的詳細資訊，請參閱[使用憑證](../../../../docs/framework/wcf/feature-details/working-with-certificates.md)。  
   
- [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)]安全性架構會提供導入新的安全性權杖類型中所述的方式[How to： 建立自訂權杖](../../../../docs/framework/wcf/extending/how-to-create-a-custom-token.md)。 也可以使用自訂權杖來取代現有由系統提供的權杖型別。  
+ WCF 安全性架構會提供導入新的安全性權杖類型中所述的方式[How to： 建立自訂權杖](../../../../docs/framework/wcf/extending/how-to-create-a-custom-token.md)。 也可以使用自訂權杖來取代現有由系統提供的權杖型別。  
   
  在本主題中，系統提供的 X.509 安全性權杖會由自訂 X.509 權杖取代，為憑證私密金鑰提供不同的實作。 在實際的私密金鑰是由與預設 Windows 密碼編譯提供者不同的密碼編譯提供者所提供的案例中，這十分有用。 替代密碼編譯提供者的其中一個範例是硬體安全性模組，它執行所有私密金鑰相關密碼編譯作業，且不會將私密金鑰儲存在記憶體中，因而增強系統的安全性。  
   
@@ -32,11 +32,11 @@ ms.lasthandoff: 05/04/2018
   
 2.  覆寫 <xref:System.IdentityModel.Tokens.SecurityKey.KeySize%2A> 唯讀屬性。 這個屬性會傳回憑證之公開/私密金鑰組的實際金鑰大小。  
   
-3.  覆寫 <xref:System.IdentityModel.Tokens.SecurityKey.DecryptKey%2A> 方法。 這個方法是由 [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] 安全性架構所呼叫，以使用憑證的私密金鑰來解密對稱金鑰  (金鑰之前是使用憑證的公開金鑰來加密)。  
+3.  覆寫 <xref:System.IdentityModel.Tokens.SecurityKey.DecryptKey%2A> 方法。 呼叫這個方法是由 WCF 安全性架構，來解密對稱金鑰與憑證的私密金鑰。 (金鑰之前是使用憑證的公開金鑰來加密)。  
   
-4.  覆寫 <xref:System.IdentityModel.Tokens.AsymmetricSecurityKey.GetAsymmetricAlgorithm%2A> 方法。 這個方法是由 [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] 安全性架構所呼叫，以取得 <xref:System.Security.Cryptography.AsymmetricAlgorithm> 類別的執行個體，表示憑證之私密或公開金鑰的密碼編譯提供者，這要視傳遞至方法的參數而定。  
+4.  覆寫 <xref:System.IdentityModel.Tokens.AsymmetricSecurityKey.GetAsymmetricAlgorithm%2A> 方法。 取得執行個體的 WCF 安全性架構會呼叫這個方法<xref:System.Security.Cryptography.AsymmetricAlgorithm>表示根據的參數兩個憑證的私用或公用金鑰的密碼編譯提供者類別傳遞給方法。  
   
-5.  選擇項。 覆寫 <xref:System.IdentityModel.Tokens.AsymmetricSecurityKey.GetHashAlgorithmForSignature%2A> 方法。 如果需要 <xref:System.Security.Cryptography.HashAlgorithm> 類別的不同實作，請覆寫這個方法。  
+5.  選擇性。 覆寫 <xref:System.IdentityModel.Tokens.AsymmetricSecurityKey.GetHashAlgorithmForSignature%2A> 方法。 如果需要 <xref:System.Security.Cryptography.HashAlgorithm> 類別的不同實作，請覆寫這個方法。  
   
 6.  覆寫 <xref:System.IdentityModel.Tokens.AsymmetricSecurityKey.GetSignatureFormatter%2A> 方法。 這個方法會傳回與憑證私密金鑰有關聯之 <xref:System.Security.Cryptography.AsymmetricSignatureFormatter> 類別的執行個體。  
   
@@ -45,7 +45,7 @@ ms.lasthandoff: 05/04/2018
      [!code-csharp[c_CustomX509Token#1](../../../../samples/snippets/csharp/VS_Snippets_CFX/c_customx509token/cs/source.cs#1)]
      [!code-vb[c_CustomX509Token#1](../../../../samples/snippets/visualbasic/VS_Snippets_CFX/c_customx509token/vb/source.vb#1)]  
   
- 下列程序將示範如何整合在上述程序中建立的自訂 X.509 非對稱安全性金鑰實作與 [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] 安全性架構，以便取代系統提供的 X.509 安全性權杖。  
+ 下列程序顯示如何整合自訂 X.509 非對稱安全性金鑰實作 WCF 安全性架構之前程序中建立，以便取代系統提供的 X.509 安全性權杖。  
   
 #### <a name="to-replace-the-system-provided-x509-security-token-with-a-custom-x509-asymmetric-security-key-token"></a>使用自訂的 X.509 非對稱安全性金鑰權杖來取代系統提供的 X.509 安全性權杖  
   

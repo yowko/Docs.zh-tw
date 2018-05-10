@@ -2,11 +2,11 @@
 title: Contract-First 工具
 ms.date: 03/30/2017
 ms.assetid: 0a880690-f460-4475-a5f4-9f91ce08fcc6
-ms.openlocfilehash: b8d38cc31eacf1d8eb29aaaf7d6ef29056ff9b79
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
-ms.translationtype: HT
+ms.openlocfilehash: f061f4dd37861c1cf3dd0cc8318de9f0f65b90e4
+ms.sourcegitcommit: 15109844229ade1c6449f48f3834db1b26907824
+ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/04/2018
+ms.lasthandoff: 05/07/2018
 ---
 # <a name="contract-first-tool"></a>Contract-First 工具
 服務合約通常必須從現有的服務來建立。 在 [!INCLUDE[net_v45](../../../includes/net-v45-md.md)] 中，可以使用合約優先 (Contract-First) 工具自動從現有的服務建立資料合約類別。 若要使用合約優先工具，必須將 XML 結構描述定義 (XSD) 檔案下載至本機，這個工具無法透過 HTTP 匯入遠端資料合約。  
@@ -58,7 +58,7 @@ ms.lasthandoff: 05/04/2018
  將上述服務合約加入至專案，以滑鼠右鍵按一下專案，然後選取**加入新...**. 從 [範本] 對話方塊的 [WCF] 窗格中選取 [結構描述定義]，並命名新的檔案 SampleContract.xsd。 複製上面的程式碼，將其貼入新檔案的程式碼檢視中。  
   
 ## <a name="configuring-contract-first-options"></a>設定合約優先選項  
- 合約優先選項可以在 [!INCLUDE[indigo2](../../../includes/indigo2-md.md)]專案的 [屬性] 功能表進行設定。 若要啟用合約優先開發，請選取**將 XSD 啟用為型別定義語言**專案屬性 視窗的 WCF 頁面中核取方塊。  
+ 合約優先選項可以在 WCF 專案中的內容功能表中加以設定。 若要啟用合約優先開發，請選取**將 XSD 啟用為型別定義語言**專案屬性 視窗的 WCF 頁面中核取方塊。  
   
  ![WCF 專案選項顯示合約&#45;第一個](../../../docs/framework/wcf/media/contractfirstoptions.png "ContractFirstOptions")  
   

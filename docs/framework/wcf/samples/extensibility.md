@@ -2,11 +2,11 @@
 title: 擴充性
 ms.date: 03/30/2017
 ms.assetid: cd7ddffc-a261-44aa-bd50-33c1c74f0df0
-ms.openlocfilehash: 7cba21715a6a0347e910300de46c1e47fd6e30bf
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
-ms.translationtype: HT
+ms.openlocfilehash: 010d6d7b17d3cb39e19c23550ca3522d6ea73a21
+ms.sourcegitcommit: 15109844229ade1c6449f48f3834db1b26907824
+ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/04/2018
+ms.lasthandoff: 05/07/2018
 ---
 # <a name="extensibility"></a>擴充性
 本節範例將自訂擴充性和其他功能的 Windows Communication Foundation (WCF) 處理。  
@@ -55,10 +55,10 @@ ms.lasthandoff: 05/04/2018
  示範如何使用資料合約代理類別來自訂像是序列化 (Serialization)、還原序列化 (Deserialization)、結構描述匯出以及結構描述匯入等程序。  
   
  [擴充對錯誤處理和報告的控制](../../../../docs/framework/wcf/samples/extending-control-over-error-handling-and-reporting.md)  
- 示範如何使用 [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] 介面，擴充對 <xref:System.ServiceModel.Dispatcher.IErrorHandler> 服務中錯誤處理與錯誤報告的控制。  
+ 示範如何擴充控制錯誤處理和 WCF 服務使用的錯誤報告<xref:System.ServiceModel.Dispatcher.IErrorHandler>介面。  
   
  [訊息偵測器](../../../../docs/framework/wcf/samples/message-inspectors.md)  
  示範如何實作與設定用戶端和服務訊息偵測器。  
   
  [WebContentTypeMapper](../../../../docs/framework/wcf/samples/webcontenttypemapper-sample.md)  
- 示範如何將新內容型別對應至 [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] 訊息本文格式。
+ 示範如何將新內容型別對應至 WCF 訊息本文格式。

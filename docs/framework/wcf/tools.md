@@ -5,14 +5,14 @@ helpviewer_keywords:
 - WCF, tools
 - Windows Communication Foundation, tools
 ms.assetid: 399a47b4-bfea-434b-8e83-f76b5063d79d
-ms.openlocfilehash: 7d42ab9711a8d0b46ec3d35eec979e276a8c74a7
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
-ms.translationtype: HT
+ms.openlocfilehash: 27a18d436d4ee63cb6e65ed5981b65d55aadf036
+ms.sourcegitcommit: 15109844229ade1c6449f48f3834db1b26907824
+ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/04/2018
+ms.lasthandoff: 05/07/2018
 ---
 # <a name="windows-communication-foundation-tools"></a>Windows Communication Foundation 工具
-Microsoft Windows Communication Foundation (WCF) 工具的設計，讓您更輕鬆地建立、 部署和管理[!INCLUDE[indigo2](../../../includes/indigo2-md.md)]應用程式。 本章節內容包含工具的詳細資訊。 請注意，並不支援這些工具。  
+Microsoft Windows Communication Foundation (WCF) 工具被為了讓您更輕鬆地建立、 部署和管理 WCF 應用程式。 本章節內容包含工具的詳細資訊。 請注意，並不支援這些工具。  
   
  您可以從命令列執行所有工具。  
   
@@ -29,7 +29,7 @@ Microsoft Windows Communication Foundation (WCF) 工具的設計，讓您更輕�
 |[WS-AtomicTransaction 設定公用程式 (wsatConfig.exe)](../../../docs/framework/wcf/ws-atomictransaction-configuration-utility-wsatconfig-exe.md)|使用命令列工具來設定基本 WS-AtomicTransaction 支援設定。|  
 |[WS-AtomicTransaction 設定 MMC 嵌入式管理單元](../../../docs/framework/wcf/ws-atomictransaction-configuration-mmc-snap-in.md)|使用 MMC 嵌入式管理單元來設定基本 WS-AtomicTransaction 支援設定。|  
 |[WorkFlow 服務註冊工具 (WFServicesReg.exe)](../../../docs/framework/wcf/workflow-service-registration-tool-wfservicesreg-exe.md)|註冊 Windows 工作流程服務。|  
-|[WCF 服務主機 (WcfSvcHost.exe)](../../../docs/framework/wcf/wcf-service-host-wcfsvchost-exe.md)|裝載程式庫 (*.dll) 檔案中包含的 [!INCLUDE[indigo2](../../../includes/indigo2-md.md)] 服務|  
+|[WCF 服務主機 (WcfSvcHost.exe)](../../../docs/framework/wcf/wcf-service-host-wcfsvchost-exe.md)|包含在程式庫 (*.dll) 檔案的裝載 WCF 服務|  
 |[WCF 測試用戶端 (WcfTestClient.exe)](../../../docs/framework/wcf/wcf-test-client-wcftestclient-exe.md)|一種 GUI 工具，可讓您輸入任意型別的參數、將該輸入送出至服務，以及檢視服務傳回的回應。|  
 |[Contract-First 工具](../../../docs/framework/wcf/contract-first-tool.md)|從 XSD 資料合約建立程式碼類別的 Visual Studio 建置工作。|  
   

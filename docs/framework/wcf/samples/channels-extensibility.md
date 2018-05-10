@@ -2,27 +2,27 @@
 title: 通道擴充性
 ms.date: 03/30/2017
 ms.assetid: 4cc3b20b-778a-4ae8-b58c-a3822fb13065
-ms.openlocfilehash: 90a35700b85f73a0a0ff668d7c33274ae62dd718
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
-ms.translationtype: HT
+ms.openlocfilehash: 13cce100875a4bab8d2c4e9f62933057d9c681a0
+ms.sourcegitcommit: 15109844229ade1c6449f48f3834db1b26907824
+ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/04/2018
+ms.lasthandoff: 05/07/2018
 ---
 # <a name="channels-extensibility"></a>通道擴充性
 本節包含示範自訂通道的範例。  
   
 ## <a name="in-this-section"></a>本節內容  
  [本機通道](../../../../docs/framework/wcf/samples/local-channel.md)  
- 示範邏輯通道，也就是在相同的應用程式網域中，用於通訊的 [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] 傳輸通道。  
+ 示範邏輯通道，而 WCF 傳輸通道，可用於在相同的應用程式網域中的通訊。  
   
  [可靠的安全設定檔](../../../../docs/framework/wcf/samples/reliable-secure-profile.md)  
- 示範如何撰寫 [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] 與可靠的安全設定檔 (Reliable Secure Profile，RSP)。  
+ 示範如何撰寫 WCF 和可靠安全設定檔 (RSP)。  
   
  [自訂通道發送器](../../../../docs/framework/wcf/samples/custom-channel-dispatcher.md)  
  示範如何使用自訂的方式，直接實作 <xref:System.ServiceModel.ServiceHostBase> 來建立通道堆疊，以及如何在 Web 主機環境中建立自訂通道發送器。  
   
  [區塊處理通道](../../../../docs/framework/wcf/samples/chunking-channel.md)  
- 示範如何限制使用 [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] 緩衝大型訊息所使用的記憶體數量。  
+ 示範如何用來使用 WCF 傳送大型訊息的緩衝區記憶體的資訊量。  
   
  [HTTP 通知通道](../../../../docs/framework/wcf/samples/http-acknowledgement-channel.md)  
  示範變更單向訊息模式的層次通道。  

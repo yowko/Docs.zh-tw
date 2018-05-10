@@ -2,11 +2,11 @@
 title: Pooling
 ms.date: 03/30/2017
 ms.assetid: 688dfb30-b79a-4cad-a687-8302f8a9ad6a
-ms.openlocfilehash: 2c864bd0c1d27e9c771a1b97e756c04b107ac2b8
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
-ms.translationtype: HT
+ms.openlocfilehash: 6554ec9c5eaefaf8c9e39d2a8d92982716cc18c5
+ms.sourcegitcommit: 15109844229ade1c6449f48f3834db1b26907824
+ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/04/2018
+ms.lasthandoff: 05/07/2018
 ---
 # <a name="pooling"></a>Pooling
 這個範例示範如何擴充 Windows Communication Foundation (WCF) 支援物件共用。 此範例會示範如何建立語法上及語意上與 Enterprise Services 的 `ObjectPoolingAttribute` 屬性功能相似的屬性。 物件共用可以大幅提升應用程式的效能。 不過，如果不當使用，可能會產生反效果。 物件共用有助於避免重複建立常用物件的煩瑣工作，這些物件往往需要大量的初始設定。 不過，如果呼叫共用物件上的方法要花費相當長的時間才能完成，而一旦到達集區的大小上限，物件共用就得將多出的要求加入佇列中。 它可能因此無法受理某個建立物件的要求，而擲回逾時例外狀況。  
@@ -14,14 +14,14 @@ ms.lasthandoff: 05/04/2018
 > [!NOTE]
 >  此範例的安裝程序與建置指示位於本主題的結尾。  
   
- 建立 [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] 延伸項目的第一個步驟是決定要使用的擴充點。  
+ 建立 WCF 延伸模組的第一個步驟是決定要使用的擴充點。  
   
- 在[!INCLUDE[indigo2](../../../../includes/indigo2-md.md)]詞彙*發送器*指負責將傳入訊息轉換為使用者服務上的方法引動過程，並且將來自該方法的傳回值轉換成傳出的執行階段元件訊息。 [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] 服務會為每個端點建立發送器。 如果與這個用戶端關聯的合約是雙工合約，[!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] 用戶端如果必須使用發送器。  
+ 在 WCF 中的詞彙*發送器*指的是執行階段元件負責將傳入訊息轉換為使用者服務上的方法引動過程，並且將來自該方法的傳回值轉換為傳出訊息。 WCF 服務建立的每個端點發送器。 如果該用戶端相關聯的合約是雙工合約，WCF 用戶端必須使用發送器。  
   
  通道和端點發送器可以公開各種控制發送器行為的屬性，提供適用於整個通道及合約範圍的擴充性。 <xref:System.ServiceModel.Dispatcher.EndpointDispatcher.DispatchRuntime%2A> 屬性同時可讓您檢查、修改或自訂分派程序。 此範例著重於 <xref:System.ServiceModel.Dispatcher.DispatchRuntime.InstanceProvider%2A> 屬性，這個屬性會指向提供服務類別之執行個體的物件。  
   
 ## <a name="the-iinstanceprovider"></a>IInstanceProvider  
- 在 [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] 中，發送器藉由使用會實作 <xref:System.ServiceModel.Dispatcher.DispatchRuntime.InstanceProvider%2A> 介面的 <xref:System.ServiceModel.Dispatcher.IInstanceProvider>，來建立服務類別的執行個體。 這個介面有三個方法：  
+ 在 WCF 中，發送器會建立執行個體的服務類別會使用<xref:System.ServiceModel.Dispatcher.DispatchRuntime.InstanceProvider%2A>，它會實作<xref:System.ServiceModel.Dispatcher.IInstanceProvider>介面。 這個介面有三個方法：  
   
 -   <xref:System.ServiceModel.Dispatcher.IInstanceProvider.GetInstance%28System.ServiceModel.InstanceContext%2CSystem.ServiceModel.Channels.Message%29>：訊息送達時，發送器會呼叫 <xref:System.ServiceModel.Dispatcher.IInstanceProvider.GetInstance%28System.ServiceModel.InstanceContext%2CSystem.ServiceModel.Channels.Message%29> 方法來建立服務類別的執行個體，以便處理訊息。 呼叫此方法的頻率是由 <xref:System.ServiceModel.ServiceBehaviorAttribute.InstanceContextMode%2A> 屬性決定。 例如，如果 <xref:System.ServiceModel.ServiceBehaviorAttribute.InstanceContextMode%2A> 屬性設定為 <xref:System.ServiceModel.InstanceContextMode.PerCall>，則會建立服務類別的執行個體來處理送達的每個訊息，所以只要訊息一送達就會呼叫 <xref:System.ServiceModel.Dispatcher.IInstanceProvider.GetInstance%28System.ServiceModel.InstanceContext%2CSystem.ServiceModel.Channels.Message%29>。  
   
@@ -100,7 +100,7 @@ void IInstanceProvider.ReleaseInstance(InstanceContext instanceContext, object i
   
  這個範例會使用自訂屬性。 建構 <xref:System.ServiceModel.ServiceHost> 時，它會檢查服務型別定義中使用的屬性，然後將可用的行為加入至服務描述的行為集合。  
   
- <xref:System.ServiceModel.Description.IServiceBehavior> 介面中有三個方法：<xref:System.ServiceModel.Description.IServiceBehavior.Validate%2A>、<xref:System.ServiceModel.Description.IServiceBehavior.AddBindingParameters%2A> 和 <xref:System.ServiceModel.Description.IServiceBehavior.ApplyDispatchBehavior%2A>。 <xref:System.ServiceModel.Description.IServiceBehavior.Validate%2A> 方法是用來確保行為可以套用至服務。 在這個範例中，此實作會確認服務不是透過 <xref:System.ServiceModel.InstanceContextMode.Single> 所設定。 <xref:System.ServiceModel.Description.IServiceBehavior.AddBindingParameters%2A> 方法是用來設定服務的繫結。 這在本案例中不是必要項。 <xref:System.ServiceModel.Description.IServiceBehavior.ApplyDispatchBehavior%2A> 是用來設定服務的發送器。 [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] 會在初始化 <xref:System.ServiceModel.ServiceHost> 時呼叫這個方法。 傳遞至這個方法中的參數如下：  
+ <xref:System.ServiceModel.Description.IServiceBehavior> 介面中有三個方法：<xref:System.ServiceModel.Description.IServiceBehavior.Validate%2A>、<xref:System.ServiceModel.Description.IServiceBehavior.AddBindingParameters%2A> 和 <xref:System.ServiceModel.Description.IServiceBehavior.ApplyDispatchBehavior%2A>。 <xref:System.ServiceModel.Description.IServiceBehavior.Validate%2A> 方法是用來確保行為可以套用至服務。 在這個範例中，此實作會確認服務不是透過 <xref:System.ServiceModel.InstanceContextMode.Single> 所設定。 <xref:System.ServiceModel.Description.IServiceBehavior.AddBindingParameters%2A> 方法是用來設定服務的繫結。 這在本案例中不是必要項。 <xref:System.ServiceModel.Description.IServiceBehavior.ApplyDispatchBehavior%2A> 是用來設定服務的發送器。 WCF 會呼叫這個方法時<xref:System.ServiceModel.ServiceHost>正在初始化。 傳遞至這個方法中的參數如下：  
   
 -   `Description`：這個引數會為整個服務提供服務描述。 這可以用來檢查有關服務之端點、合約、繫結程序及其他資料的描述資料。  
   
@@ -177,7 +177,7 @@ InvalidOperationException(ResourceHelper.GetString("ExNullThrottle"));
   
  除了 <xref:System.ServiceModel.Description.IServiceBehavior> 實作之外，<xref:System.EnterpriseServices.ObjectPoolingAttribute> 類別還有數個可以使用屬性引數來自訂物件集區的成員。 這些成員包括 <xref:System.EnterpriseServices.ObjectPoolingAttribute.MaxPoolSize%2A>、<xref:System.EnterpriseServices.ObjectPoolingAttribute.MinPoolSize%2A> 和 <xref:System.EnterpriseServices.ObjectPoolingAttribute.CreationTimeout%2A>，可以用來配合 .NET Enterprise Services 提供的物件共用功能集。  
   
- 現在，使用新建立的自訂 [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] 屬性對服務實作加上附註，即可將物件共用行為加入至 `ObjectPooling` 服務。  
+ 將物件共用行為可以立即加入至 WCF 服務加上附註與新建立的自訂服務實作`ObjectPooling`屬性。  
   
 ```  
 [ObjectPooling(MaxPoolSize=1024, MinPoolSize=10, CreationTimeout=30000)]      

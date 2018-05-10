@@ -6,18 +6,18 @@ helpviewer_keywords:
 ms.assetid: a015a040-9fdf-4147-9ea9-f83b570be1d4
 author: BrucePerlerMS
 manager: mbaldwin
-ms.openlocfilehash: 6ba6df24163064ee65c563253fa56a1ec574cffc
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
-ms.translationtype: HT
+ms.openlocfilehash: 94aefe80674c5b4ec6fcce6a41d9b68e093f4262
+ms.sourcegitcommit: 15109844229ade1c6449f48f3834db1b26907824
+ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/04/2018
+ms.lasthandoff: 05/07/2018
 ---
 # <a name="extending-security"></a>擴充安全性
 為了配合新的宣告類型和自訂權杖，您可以擴充安全性基礎結構的 Windows Communication Foundation (WCF)。 本章節中的主題會示範如何做到這點。  
   
 ## <a name="in-this-section"></a>本節內容  
  [安全性架構](http://msdn.microsoft.com/library/16593476-d36a-408d-808c-ae6fd483e28f)  
- 逐步解說 [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] 安全性系統的基礎結構。  
+ 逐步解說 WCF 安全性系統的架構。  
   
  [自訂認證與認證驗證](../../../../docs/framework/wcf/extending/custom-credential-and-credential-validation.md)  
  說明如何在驗證自訂認證時使用身分識別模型。  

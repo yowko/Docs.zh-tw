@@ -2,17 +2,17 @@
 title: 建立 BindingElement
 ms.date: 03/30/2017
 ms.assetid: 01a35307-a41f-4ef6-a3db-322af40afc99
-ms.openlocfilehash: fdc3ec1fef86ad31434ea372740497969c7ae6a7
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
-ms.translationtype: HT
+ms.openlocfilehash: 96924e97ad3fcc121ef7b28125301060d8448514
+ms.sourcegitcommit: 15109844229ade1c6449f48f3834db1b26907824
+ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/04/2018
+ms.lasthandoff: 05/07/2018
 ---
 # <a name="creating-a-bindingelement"></a>建立 BindingElement
-繫結和繫結項目 (延伸的物件<xref:System.ServiceModel.Channels.Binding?displayProperty=nameWithType>和<xref:System.ServiceModel.Channels.BindingElement?displayProperty=nameWithType>分別) 是 Windows Communication Foundation (WCF) 應用程式模型所在的通道處理站和通道接聽程式相關聯的位置。 不繫結，使用自訂通道，需要在通道層級的程式設計中所述[服務通道層級程式設計](../../../../docs/framework/wcf/extending/service-channel-level-programming.md)和[用戶端通道層級程式設計](../../../../docs/framework/wcf/extending/client-channel-level-programming.md)。 本主題討論的最低需求，以便使用您的通道中[!INCLUDE[indigo2](../../../../includes/indigo2-md.md)]，開發<xref:System.ServiceModel.Channels.BindingElement>為您的通道，並從應用程式的步驟 4 中所述的啟用使用[開發通道](../../../../docs/framework/wcf/extending/developing-channels.md)。  
+繫結和繫結項目 (延伸的物件<xref:System.ServiceModel.Channels.Binding?displayProperty=nameWithType>和<xref:System.ServiceModel.Channels.BindingElement?displayProperty=nameWithType>分別) 是 Windows Communication Foundation (WCF) 應用程式模型所在的通道處理站和通道接聽程式相關聯的位置。 不繫結，使用自訂通道，需要在通道層級的程式設計中所述[服務通道層級程式設計](../../../../docs/framework/wcf/extending/service-channel-level-programming.md)和[用戶端通道層級程式設計](../../../../docs/framework/wcf/extending/client-channel-level-programming.md)。 本主題討論的最低需求，以便使用您的通道在 WCF 中，開發<xref:System.ServiceModel.Channels.BindingElement>為您的通道，並從應用程式的步驟 4 中所述的啟用使用[開發通道](../../../../docs/framework/wcf/extending/developing-channels.md)。  
   
 ## <a name="overview"></a>總覽  
- 為您的通道建立 <xref:System.ServiceModel.Channels.BindingElement>，便可讓開發人員在 [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] 應用程式中使用您的通道。 <xref:System.ServiceModel.Channels.BindingElement> 物件可從 <xref:System.ServiceModel.ServiceHost?displayProperty=nameWithType> 類別用來將 [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] 應用程式連接至您的通道，而不需要精確輸入您的通道資訊。  
+ 建立<xref:System.ServiceModel.Channels.BindingElement>您的通道可讓開發人員可以使用 WCF 應用程式中。 <xref:System.ServiceModel.Channels.BindingElement> 物件可以用從<xref:System.ServiceModel.ServiceHost?displayProperty=nameWithType>WCF 應用程式連接到您的通道而不需要您的通道的精確的類型資訊的類別。  
   
  一次<xref:System.ServiceModel.Channels.BindingElement>已建立，您可以啟用更多的功能取決於您的需求而定的其餘通道開發步驟所述的下列[開發通道](../../../../docs/framework/wcf/extending/developing-channels.md)。  
   

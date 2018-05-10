@@ -5,14 +5,14 @@ dev_langs:
 - csharp
 - vb
 ms.assetid: d619976b-eda3-475e-ac23-c7988a2dceb0
-ms.openlocfilehash: c1e8886ab3d9d90b217ce79078633433458bbe4b
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
-ms.translationtype: HT
+ms.openlocfilehash: 3ee707ae4e2a7dafeb7cb42d6d56eeece8f23306
+ms.sourcegitcommit: 15109844229ade1c6449f48f3834db1b26907824
+ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/04/2018
+ms.lasthandoff: 05/07/2018
 ---
 # <a name="how-to-create-a-custom-claim"></a>HOW TO：建立自訂宣告
-識別模型基礎結構中 Windows Communication Foundation (WCF) 提供一組內建宣告類型和權限與協助程式函式建立<xref:System.IdentityModel.Claims.Claim>具有這些類型和權限的執行個體。 這些內建宣告是專門用來模擬在 [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] 預設支援的用戶端認證類型中找到的資訊。 在許多情況下，內建宣告就已足夠；不過有些應用程式可能需要自訂宣告。 宣告中包含了宣告類型、宣告適用的資源，以及擁有該資源所需的權限。 這個主題會描述如何建立自訂宣告。  
+識別模型基礎結構中 Windows Communication Foundation (WCF) 提供一組內建宣告類型和權限與協助程式函式建立<xref:System.IdentityModel.Claims.Claim>具有這些類型和權限的執行個體。 這些內建宣告專為 WCF 支援的用戶端認證類型中找到預設的模型資訊。 在許多情況下，內建宣告就已足夠；不過有些應用程式可能需要自訂宣告。 宣告中包含了宣告類型、宣告適用的資源，以及擁有該資源所需的權限。 這個主題會描述如何建立自訂宣告。  
   
 ### <a name="to-create-a-custom-claim-that-is-based-on-a-primitive-data-type"></a>依據基本資料型別建立自訂宣告  
   
@@ -20,15 +20,15 @@ ms.lasthandoff: 05/04/2018
   
     1.  決定用於宣告類型的唯一值。  
   
-         宣告類型為唯一的字串識別碼。 自訂宣告設計者的責任在於確保用於宣告類型的字串識別碼為獨一無二的。 如需 [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] 定義的宣告類型清單，請參閱 <xref:System.IdentityModel.Claims.ClaimTypes> 類別。  
+         宣告類型為唯一的字串識別碼。 自訂宣告設計者的責任在於確保用於宣告類型的字串識別碼為獨一無二的。 如需由 WCF 所定義的宣告類型的清單，請參閱<xref:System.IdentityModel.Claims.ClaimTypes>類別。  
   
     2.  選擇基本資料型別和資源的值。  
   
-         資源就是物件。 資源的 CLR 類型可以為基本，例如 <xref:System.String> 或 <xref:System.Int32>，或任何可序列化的類型。 因為 [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] 會在不同時間點序列化宣告，所以資源的 CLR 類型必須是可序列化的類型。 基本類型為可序列化。  
+         資源就是物件。 資源的 CLR 類型可以為基本，例如 <xref:System.String> 或 <xref:System.Int32>，或任何可序列化的類型。 資源的 CLR 型別必須可序列化，因為由 WCF 在不同時間點序列化宣告。 基本類型為可序列化。  
   
-    3.  選擇 [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] 定義的權限，或者用於自訂權限的唯一值。  
+    3.  選擇 WCF 或自訂的權限的唯一值所定義的權限。  
   
-         權限為唯一字串識別碼。 [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] 所定義的權限會在 <xref:System.IdentityModel.Claims.Rights> 類別中加以定義。  
+         權限為唯一字串識別碼。 中所定義的權限，會由 WCF<xref:System.IdentityModel.Claims.Rights>類別。  
   
          自訂宣告設計者的責任在於確保用於權限的字串識別碼為獨一無二的。  
   
@@ -43,11 +43,11 @@ ms.lasthandoff: 05/04/2018
   
     1.  決定用於宣告類型的唯一值。  
   
-         宣告類型為唯一的字串識別碼。 自訂宣告設計者的責任在於確保用於宣告類型的字串識別碼為獨一無二的。 如需 [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] 定義的宣告類型清單，請參閱 <xref:System.IdentityModel.Claims.ClaimTypes> 類別。  
+         宣告類型為唯一的字串識別碼。 自訂宣告設計者的責任在於確保用於宣告類型的字串識別碼為獨一無二的。 如需由 WCF 所定義的宣告類型的清單，請參閱<xref:System.IdentityModel.Claims.ClaimTypes>類別。  
   
     2.  選擇或定義資源的可序列化非基本類型。  
   
-         資源就是物件。 因為 [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] 會在不同時間點序列化宣告，所以資源的 CLR 類型必須是可序列化的類型。 基本類型已為可序列化。  
+         資源就是物件。 資源的 CLR 型別必須可序列化，因為由 WCF 在不同時間點序列化宣告。 基本類型已為可序列化。  
   
          定義新類型時，請將 <xref:System.Runtime.Serialization.DataContractAttribute> 套用至類別。 也將 <xref:System.Runtime.Serialization.DataMemberAttribute> 屬性套用至需要序列化以做為宣告一部分之新類型的所有成員。  
   
@@ -56,9 +56,9 @@ ms.lasthandoff: 05/04/2018
          [!code-csharp[c_CustomClaim#2](../../../../samples/snippets/csharp/VS_Snippets_CFX/c_customclaim/cs/c_customclaim.cs#2)] 
          [!code-vb[c_CustomClaim#2](../../../../samples/snippets/visualbasic/VS_Snippets_CFX/c_customclaim/vb/c_customclaim.vb#2)]        
   
-    3.  選擇 [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] 定義的權限，或者用於自訂權限的唯一值。  
+    3.  選擇 WCF 或自訂的權限的唯一值所定義的權限。  
   
-         權限為唯一字串識別碼。 [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] 所定義的權限會在 <xref:System.IdentityModel.Claims.Rights> 類別中加以定義。  
+         權限為唯一字串識別碼。 中所定義的權限，會由 WCF<xref:System.IdentityModel.Claims.Rights>類別。  
   
          自訂宣告設計者的責任在於確保用於權限的字串識別碼為獨一無二的。  
   

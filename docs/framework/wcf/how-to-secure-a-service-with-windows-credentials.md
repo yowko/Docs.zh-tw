@@ -9,11 +9,11 @@ helpviewer_keywords:
 ms.assetid: d171b5ca-96ef-47ff-800c-c138023cf76e
 author: BrucePerlerMS
 manager: mbaldwin
-ms.openlocfilehash: 5ed09947350a284dd7701b37bad93912f79f7e3c
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
-ms.translationtype: HT
+ms.openlocfilehash: 2fa8d753d5fb168c14ee71cbbf6de62e0e4aff9e
+ms.sourcegitcommit: 15109844229ade1c6449f48f3834db1b26907824
+ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/04/2018
+ms.lasthandoff: 05/07/2018
 ---
 # <a name="how-to-secure-a-service-with-windows-credentials"></a>HOW TO：使用 Windows 認證來確保服務安全
 本主題示範如何啟用 Windows Communication Foundation (WCF) 服務位於 Windows 網域，且呼叫相同的網域中的用戶端上的傳輸安全性。 如需有關此案例的詳細資訊，請參閱[Windows 驗證的傳輸安全性](../../../docs/framework/wcf/feature-details/transport-security-with-windows-authentication.md)。 範例應用程式，請參閱[WSHttpBinding](../../../docs/framework/wcf/samples/wshttpbinding.md)範例。  
@@ -75,7 +75,7 @@ ms.lasthandoff: 05/04/2018
   
 ##### <a name="to-use-a-binding-in-a-client-with-code"></a>搭配程式碼在用戶端中使用繫結  
   
-1.  使用 SvcUtil.exe 工具，從服務的中繼資料產生 Proxy 程式碼。 如需詳細資訊，請參閱[How to： 建立用戶端](../../../docs/framework/wcf/how-to-create-a-wcf-client.md)。 產生的 Proxy 程式碼繼承自 <xref:System.ServiceModel.ClientBase%601> 類別，這樣可確保每個用戶端都有與 [!INCLUDE[indigo2](../../../includes/indigo2-md.md)] 服務進行通訊時所需要的建構函式 (Constructor)、方法和屬性。 在這個範例中，產生的程式碼包含 `CalculatorClient` 類別，這個類別會實作 `ICalculator` 介面，因此就會與服務程式碼相容。  
+1.  使用 SvcUtil.exe 工具，從服務的中繼資料產生 Proxy 程式碼。 如需詳細資訊，請參閱[How to： 建立用戶端](../../../docs/framework/wcf/how-to-create-a-wcf-client.md)。 產生的 proxy 程式碼繼承自<xref:System.ServiceModel.ClientBase%601>類別，可確保每個用戶端具有必要的建構函式、 方法和屬性，以與 WCF 服務進行通訊。 在這個範例中，產生的程式碼包含 `CalculatorClient` 類別，這個類別會實作 `ICalculator` 介面，因此就會與服務程式碼相容。  
   
 2.  此程序的程式碼會插入至用戶端程式的 `Main` 方法開頭。  
   

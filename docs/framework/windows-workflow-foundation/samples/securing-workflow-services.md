@@ -2,11 +2,11 @@
 title: 保護工作流程服務
 ms.date: 03/30/2017
 ms.assetid: 53f84ad5-1ed1-4114-8d0d-b12e8a021c6e
-ms.openlocfilehash: ac02b5ffcfc14ea4aab9e8aafd5f6a4cbcdef3b4
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
-ms.translationtype: HT
+ms.openlocfilehash: 5dbd724f3a2f8febfc74719584f4d69cbf75b567
+ms.sourcegitcommit: 15109844229ade1c6449f48f3834db1b26907824
+ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/04/2018
+ms.lasthandoff: 05/07/2018
 ---
 # <a name="securing-workflow-services"></a>保護工作流程服務
 安全工作流程服務範例示範下列程序：  
@@ -21,7 +21,7 @@ ms.lasthandoff: 05/04/2018
  使用 WCF 安全性保護用戶端和工作流程服務之間的通訊、宣告架構的授權  
   
 ## <a name="discussion"></a>討論  
- 這個範例示範如何使用 [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] 安全性基礎結構來保護工作流程服務，就像保護一般 [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] 服務一樣。 特別是對授權使用自訂宣告。 在這個範例中，會使用 <xref:System.ServiceModel.WSHttpBinding> 和訊息模式安全性搭配 Windows 認證。  
+ 這個範例示範如何使用 WCF 安全性基礎結構來保護工作流程服務，就如同正常的 WCF 服務使用。 特別是對授權使用自訂宣告。 在這個範例中，會使用 <xref:System.ServiceModel.WSHttpBinding> 和訊息模式安全性搭配 Windows 認證。  
   
  自訂 <xref:System.IdentityModel.Policy.IAuthorizationPolicy> (`CustomNameCheckerPolicy`) 會檢查用戶端的 Windows 使用者名稱和特定字元。 如果該字元存在，則會建立宣告並將它加入至 <xref:System.IdentityModel.Policy.EvaluationContext>。 透過這種方式，自訂原則表示用戶端的使用者名稱中有這個字元。 在呼叫的存留期間，可以查詢這個宣告。 您可以在 `Constants.cs` 中找到該字元。  
   

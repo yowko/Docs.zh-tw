@@ -4,19 +4,19 @@ ms.date: 03/30/2017
 helpviewer_keywords:
 - load balancing [WCF]
 ms.assetid: 148e0168-c08d-4886-8769-776d0953b80f
-ms.openlocfilehash: 9ad9c9c569137534addfa3b91f412fb0c0a4b808
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
-ms.translationtype: HT
+ms.openlocfilehash: c9d554dfd8d21b6e0e5f4aef0f4402e16485c2e8
+ms.sourcegitcommit: 15109844229ade1c6449f48f3834db1b26907824
+ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/04/2018
+ms.lasthandoff: 05/07/2018
 ---
 # <a name="load-balancing"></a>負載平衡
-以增加容量的 Windows Communication Foundation (WCF) 應用程式的方法之一是調整排除這些程式部署到負載平衡的伺服器陣列。 [!INCLUDE[indigo2](../../../includes/indigo2-md.md)] 應用程式可以透過標準負載平衡技術來達到負載平衡，這類技術包括 Windows 網路負載平衡等軟體負載平衡器，以及硬體架構的負載平衡裝置。  
+以增加容量的 Windows Communication Foundation (WCF) 應用程式的方法之一是調整排除這些程式部署到負載平衡的伺服器陣列。 WCF 應用程式可以進行負載平衡使用標準負載平衡技術，包括 Windows 網路負載平衡等軟體負載平衡器，以及硬體架構的負載平衡裝置。  
   
- 下列各節會討論在針對使用各種系統提供繫結所建置 [!INCLUDE[indigo2](../../../includes/indigo2-md.md)] 應用程式進行負載平衡時的考量。  
+ 下列章節會討論負載平衡使用各種系統提供的繫結所建置的 WCF 應用程式的考量。  
   
 ## <a name="load-balancing-with-the-basic-http-binding"></a>使用基本 HTTP 繫結的負載平衡  
- 從負載平衡的觀點而言，使用 [!INCLUDE[indigo2](../../../includes/indigo2-md.md)] 通訊的 <xref:System.ServiceModel.BasicHttpBinding> 應用程式與其他常見的 HTTP 網路流量類型 (靜態 HTML 內容、ASP.NET 網頁或 ASMX Web 服務) 並無不同。 使用這個繫結的 [!INCLUDE[indigo2](../../../includes/indigo2-md.md)] 通道原本是沒有狀態 (Stateless)，而且會在通道關閉時終止其連線。 因此，<xref:System.ServiceModel.BasicHttpBinding> 可搭配現有的 HTTP 負載平衡技術正常運作。  
+ 從負載平衡，使用進行通訊的 WCF 應用程式的觀點來看<xref:System.ServiceModel.BasicHttpBinding>與其他常見的 HTTP 網路流量類型 （靜態 HTML 內容、 ASP.NET 網頁或 ASMX Web 服務） 並無不同。 使用此繫結的 WCF 通道原本是無狀態，並在通道關閉時終止其連線。 因此，<xref:System.ServiceModel.BasicHttpBinding> 可搭配現有的 HTTP 負載平衡技術正常運作。  
   
  根據預設，<xref:System.ServiceModel.BasicHttpBinding> 會在訊息中傳送包含 `Keep-Alive` 值的連線 HTTP 標頭，該值可以讓使用者建立服務 (指支援使用者的服務) 的持續連線。 這項組態會改進處理能力，因為先前建立的連線可以重複使用，並將後續訊息傳送到相同的伺服器。 不過，重複使用連線可能會使用戶端與負載平衡陣列內的特定伺服器產生強烈的關聯性，這樣就會降低循環配置資源的有效性。 如果不希望發生這種行為，請針對 `Keep-Alive` 或使用者定義的 <xref:System.ServiceModel.Channels.HttpTransportBindingElement.KeepAliveEnabled%2A> 使用 <xref:System.ServiceModel.Channels.CustomBinding> 屬性，停用伺服器上的 HTTP <xref:System.ServiceModel.Channels.Binding>。 下列範例會示範如何使用組態來做到這點。  
   

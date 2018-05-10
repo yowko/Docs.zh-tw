@@ -10,20 +10,20 @@ helpviewer_keywords:
 - WSSecurityTokenSerializer class
 - SecurityToken class
 ms.assetid: 6d892973-1558-4115-a9e1-696777776125
-ms.openlocfilehash: eb227075b1a696216e62e851aa8b10c7511ac93f
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
-ms.translationtype: HT
+ms.openlocfilehash: 2198d5548b09ba05eeb11466a6fd2d3a1262de94
+ms.sourcegitcommit: 15109844229ade1c6449f48f3834db1b26907824
+ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/04/2018
+ms.lasthandoff: 05/07/2018
 ---
 # <a name="how-to-create-a-custom-token"></a>HOW TO：建立自訂權杖
 本主題說明如何使用 <xref:System.IdentityModel.Tokens.SecurityToken> 類別來建立自訂安全性權杖，以及如何將它與自訂安全性權杖提供者和驗證器整合。 如需完整的程式碼範例，請參閱[自訂語彙基元](../../../../docs/framework/wcf/samples/custom-token.md)範例。  
   
- A*安全性權杖*是基本上是由 Windows Communication Foundation (WCF) 安全性架構用來表示 SOAP 訊息內的寄件者的相關宣告的 XML 項目。 [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] 安全性會為系統提供的驗證模式提供各種權杖。 範例包括 <xref:System.IdentityModel.Tokens.X509SecurityToken> 類別所代表的 X.509 憑證安全性權杖，或是 <xref:System.IdentityModel.Tokens.UserNameSecurityToken> 類別所代表的使用者名稱安全性權杖。  
+ A*安全性權杖*是基本上是由 Windows Communication Foundation (WCF) 安全性架構用來表示 SOAP 訊息內的寄件者的相關宣告的 XML 項目。 WCF 安全性系統提供的驗證模式提供各種權杖。 範例包括 <xref:System.IdentityModel.Tokens.X509SecurityToken> 類別所代表的 X.509 憑證安全性權杖，或是 <xref:System.IdentityModel.Tokens.UserNameSecurityToken> 類別所代表的使用者名稱安全性權杖。  
   
  有時候提供的類型並不支援驗證模式或認證。 在此情況下，您就需要建立自訂安全性權杖，以便在 SOAP 訊息內部提供自訂認證的 XML 表示法。  
   
- 下列程序說明如何建立自訂安全性權杖，以及如何將它與 [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] 安全性基礎結構整合。 本主題將建立信用卡權杖，它可以用來將用戶端的信用卡相關資訊傳遞給伺服器。  
+ 下列程序顯示如何建立自訂安全性權杖，以及如何整合 WCF 安全性基礎結構。 本主題將建立信用卡權杖，它可以用來將用戶端的信用卡相關資訊傳遞給伺服器。  
   
  如需有關自訂認證和安全性權杖管理員的詳細資訊，請參閱[逐步解說： 建立自訂用戶端和服務認證](../../../../docs/framework/wcf/extending/walkthrough-creating-custom-client-and-service-credentials.md)。  
   
@@ -43,7 +43,7 @@ ms.lasthandoff: 05/04/2018
      [!code-csharp[c_CustomToken#4](../../../../samples/snippets/csharp/VS_Snippets_CFX/c_customtoken/cs/source.cs#4)]
      [!code-vb[c_CustomToken#4](../../../../samples/snippets/visualbasic/VS_Snippets_CFX/c_customtoken/vb/source.vb#4)]  
   
- 接下來，必須建立可代表自訂安全性權杖的類別。 安全性權杖提供者、驗證器和序列化程式類別會使用此類別，從 [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] 安全性基礎結構傳遞安全性權杖的相關資訊，或是將資訊傳遞至其中。  
+ 接下來，必須建立可代表自訂安全性權杖的類別。 這個類別可由安全性權杖提供者、 驗證器和序列化程式類別來傳遞安全性權杖與 WCF 安全性基礎結構的相關資訊。  
   
 #### <a name="to-create-a-custom-security-token-class"></a>若要建立自訂安全性權杖類別  
   
@@ -51,14 +51,14 @@ ms.lasthandoff: 05/04/2018
   
 2.  覆寫 <xref:System.IdentityModel.Tokens.SecurityToken.Id%2A> 屬性。 這個屬性是用來取得安全性權杖的區域識別項，該識別項則是用來指向 SOAP 訊息內來自其他項目的安全性權杖 XML 表示法。 在此範例中，可以將權杖識別項當成建構函式參數傳遞給它，否則每次建立安全性權杖執行個體時，就會產生新的隨機權杖識別項。  
   
-3.  實作 <xref:System.IdentityModel.Tokens.SecurityToken.SecurityKeys%2A> 屬性。 此屬性會傳回安全性權杖執行個體所代表的安全性金鑰集合。 [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] 可使用這些金鑰來簽署或加密部分 SOAP 訊息。 在此範例中，信用卡安全性權杖無法包含任何安全性金鑰；因此，實作一律會傳回空的集合。  
+3.  實作 <xref:System.IdentityModel.Tokens.SecurityToken.SecurityKeys%2A> 屬性。 此屬性會傳回安全性權杖執行個體所代表的安全性金鑰集合。 WCF 可以使用這類金鑰來簽署或加密 SOAP 訊息的部分。 在此範例中，信用卡安全性權杖無法包含任何安全性金鑰；因此，實作一律會傳回空的集合。  
   
-4.  覆寫 <xref:System.IdentityModel.Tokens.SecurityToken.ValidFrom%2A> 和 <xref:System.IdentityModel.Tokens.SecurityToken.ValidTo%2A> 屬性。 [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] 會使用這些屬性來判斷安全性權杖執行個體的有效性。 在此範例中，信用卡安全性權杖只擁有一個到期日，因此 `ValidFrom` 屬性會傳回 <xref:System.DateTime>，這個值代表執行個體的建立日期與時間。  
+4.  覆寫 <xref:System.IdentityModel.Tokens.SecurityToken.ValidFrom%2A> 和 <xref:System.IdentityModel.Tokens.SecurityToken.ValidTo%2A> 屬性。 這些屬性由 WCF 用於決定安全性權杖執行個體的有效性。 在此範例中，信用卡安全性權杖只擁有一個到期日，因此 `ValidFrom` 屬性會傳回 <xref:System.DateTime>，這個值代表執行個體的建立日期與時間。  
   
      [!code-csharp[c_CustomToken#1](../../../../samples/snippets/csharp/VS_Snippets_CFX/c_customtoken/cs/source.cs#1)]
      [!code-vb[c_CustomToken#1](../../../../samples/snippets/visualbasic/VS_Snippets_CFX/c_customtoken/vb/source.vb#1)]  
   
- 新的安全性權杖類型建立完畢後，需要實作 <xref:System.ServiceModel.Security.Tokens.SecurityTokenParameters> 類別。 這項實作會在安全性繫結項目組態中用來代表新的權杖類型。 安全性權杖參數類別可當成範本，用來比對實際安全性權杖執行個體與訊息處理時間。 範本所提供的其他屬性可供應用程式用來指定準則，安全性權杖必須符合這個準則才能加以使用或驗證。 下列範例並未新增任何其他屬性，因此當 [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] 基礎結構搜尋要使用或驗證的安全性權杖執行個體時，只會比對安全性權杖類型。  
+ 新的安全性權杖類型建立完畢後，需要實作 <xref:System.ServiceModel.Security.Tokens.SecurityTokenParameters> 類別。 這項實作會在安全性繫結項目組態中用來代表新的權杖類型。 安全性權杖參數類別可當成範本，用來比對實際安全性權杖執行個體與訊息處理時間。 範本所提供的其他屬性可供應用程式用來指定準則，安全性權杖必須符合這個準則才能加以使用或驗證。 下列範例不會新增任何其他屬性，因此只有語彙基元的類型會比對時，WCF 基礎結構中搜尋的安全性權杖執行個體使用，或驗證的安全性。  
   
 #### <a name="to-create-a-custom-security-token-parameters-class"></a>若要建立自訂安全性權杖參數類別  
   
@@ -72,17 +72,17 @@ ms.lasthandoff: 05/04/2018
   
 5.  實作 <xref:System.ServiceModel.Security.Tokens.SecurityTokenParameters.SupportsClientWindowsIdentity%2A> 唯讀屬性。 如果此類別所代表的安全性權杖類型可用來對應至 Windows 帳戶，則這個屬性會傳回 `true`。 因此，驗證結果會由 <xref:System.Security.Principal.WindowsIdentity> 類別執行個體來表示。 在此範例中，權杖無法對應至 Windows 帳戶。  
   
-6.  實作 <xref:System.ServiceModel.Security.Tokens.SecurityTokenParameters.CreateKeyIdentifierClause%28System.IdentityModel.Tokens.SecurityToken%2CSystem.ServiceModel.Security.Tokens.SecurityTokenReferenceStyle%29> 方法。 當 [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] 安全性架構需要此安全性權杖參數類別所代表之安全性權杖執行個體的參照時，就會呼叫此方法。 實際安全性權杖執行個體與可指定所要求之參考型別的 <xref:System.ServiceModel.Security.Tokens.SecurityTokenReferenceStyle> 會同時當成引數傳遞至此方法。 在此範例中，信用卡安全性權杖僅支援內部參考。 <xref:System.IdentityModel.Tokens.SecurityToken> 類別具有建立內部參考的功能，因此實作不需要其他程式碼。  
+6.  實作 <xref:System.ServiceModel.Security.Tokens.SecurityTokenParameters.CreateKeyIdentifierClause%28System.IdentityModel.Tokens.SecurityToken%2CSystem.ServiceModel.Security.Tokens.SecurityTokenReferenceStyle%29> 方法。 如果需要此安全性權杖參數類別所代表的安全性權杖執行個體的參考，則 WCF 安全性架構會呼叫這個方法。 實際安全性權杖執行個體與可指定所要求之參考型別的 <xref:System.ServiceModel.Security.Tokens.SecurityTokenReferenceStyle> 會同時當成引數傳遞至此方法。 在此範例中，信用卡安全性權杖僅支援內部參考。 <xref:System.IdentityModel.Tokens.SecurityToken> 類別具有建立內部參考的功能，因此實作不需要其他程式碼。  
   
-7.  實作 <xref:System.ServiceModel.Security.Tokens.SecurityTokenParameters.InitializeSecurityTokenRequirement%28System.IdentityModel.Selectors.SecurityTokenRequirement%29> 方法。 [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] 會呼叫此方法，將安全性權杖參數類別執行個體轉換為 <xref:System.IdentityModel.Selectors.SecurityTokenRequirement> 類別的執行個體。 安全性權杖提供者會使用此結果來建立適當的安全性權杖執行個體。  
+7.  實作 <xref:System.ServiceModel.Security.Tokens.SecurityTokenParameters.InitializeSecurityTokenRequirement%28System.IdentityModel.Selectors.SecurityTokenRequirement%29> 方法。 呼叫這個方法是將安全性權杖參數類別執行個體轉換成的執行個體的 WCF<xref:System.IdentityModel.Selectors.SecurityTokenRequirement>類別。 安全性權杖提供者會使用此結果來建立適當的安全性權杖執行個體。  
   
      [!code-csharp[c_CustomToken#2](../../../../samples/snippets/csharp/VS_Snippets_CFX/c_customtoken/cs/source.cs#2)]
      [!code-vb[c_CustomToken#2](../../../../samples/snippets/visualbasic/VS_Snippets_CFX/c_customtoken/vb/source.vb#2)]  
   
- 安全性權杖會在 SOAP 訊息內傳輸，這麼做需要在記憶體中的安全性權杖表示與網路上的表示之間使用轉譯機制。 [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] 會使用安全性權杖序列化程式來完成這項工作。 每個自訂權杖必須搭配自訂安全性權杖序列化程式，這個程式可以序列化與還原序列化來自 SOAP 訊息的自訂安全性權杖。  
+ 安全性權杖會在 SOAP 訊息內傳輸，這麼做需要在記憶體中的安全性權杖表示與網路上的表示之間使用轉譯機制。 WCF 會使用安全性權杖序列化程式來完成這項工作。 每個自訂權杖必須搭配自訂安全性權杖序列化程式，這個程式可以序列化與還原序列化來自 SOAP 訊息的自訂安全性權杖。  
   
 > [!NOTE]
->  衍生金鑰預設為啟用。 當您建立自訂的安全性權杖並將它當做主要權杖時，[!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] 會從它衍生金鑰。 這時，它會呼叫自訂安全性權杖序列化程式來寫入自訂安全性權杖的 <xref:System.IdentityModel.Tokens.SecurityKeyIdentifierClause>，同時將 `DerivedKeyToken` 序列化至連線。 在接收端，將連線上的權杖還原序列化時，`DerivedKeyToken` 序列化程式需要 `SecurityTokenReference` 項目做為它底下的最上層子項目。 如果自訂安全性權杖序列化程式在序列化其子句型別時未加入 `SecurityTokenReference` 項目，則會擲回例外狀況。  
+>  衍生金鑰預設為啟用。 如果您建立自訂安全性權杖，並將它當做主要權杖，WCF 會從它衍生金鑰。 這時，它會呼叫自訂安全性權杖序列化程式來寫入自訂安全性權杖的 <xref:System.IdentityModel.Tokens.SecurityKeyIdentifierClause>，同時將 `DerivedKeyToken` 序列化至連線。 在接收端，將連線上的權杖還原序列化時，`DerivedKeyToken` 序列化程式需要 `SecurityTokenReference` 項目做為它底下的最上層子項目。 如果自訂安全性權杖序列化程式在序列化其子句型別時未加入 `SecurityTokenReference` 項目，則會擲回例外狀況。  
   
 #### <a name="to-create-a-custom-security-token-serializer"></a>若要建立自訂安全性權杖序列化程式  
   
@@ -138,7 +138,7 @@ ms.lasthandoff: 05/04/2018
      [!code-csharp[c_customToken#11](../../../../samples/snippets/csharp/VS_Snippets_CFX/c_customtoken/cs/source.cs#11)]
      [!code-vb[c_customToken#11](../../../../samples/snippets/visualbasic/VS_Snippets_CFX/c_customtoken/vb/source.vb#11)]  
   
- 先前建立的自訂安全性權杖參數類別是用來告知 [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] 安全性架構，讓架構知道與服務進行通訊時必須使用自訂安全性權杖。 下列程序會示範執行此作業的方法。  
+ 先前建立的自訂安全性權杖參數類別用來告知 WCF 安全性架構與服務通訊時，必須使用自訂安全性權杖。 下列程序會示範執行此作業的方法。  
   
 #### <a name="to-integrate-the-custom-security-token-with-the-binding"></a>若要將自訂安全性權杖與繫結整合  
   

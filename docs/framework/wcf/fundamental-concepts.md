@@ -7,31 +7,31 @@ helpviewer_keywords:
 - fundamentals [WCF]
 - Windows Communication Foundation [WCF], concepts
 ms.assetid: 3e7e0afd-7913-499d-bafb-eac7caacbc7a
-ms.openlocfilehash: 44b36fc917ceb30141d7d2235b8bb364d3b998c9
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
-ms.translationtype: HT
+ms.openlocfilehash: 41bef6bf5a69a51738c6848050972a1a4e01c153
+ms.sourcegitcommit: 15109844229ade1c6449f48f3834db1b26907824
+ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/04/2018
+ms.lasthandoff: 05/07/2018
 ---
 # <a name="fundamental-windows-communication-foundation-concepts"></a>Windows Communication Foundation 的主要概念
-本文件提供 Windows Communication Foundation (WCF) 架構的高階檢視。 以說明重要概念，以及如何搭配運用這些概念。 如需教學課程建立的簡單版本[!INCLUDE[indigo2](../../../includes/indigo2-md.md)]服務與用戶端，請參閱[入門教學課程](../../../docs/framework/wcf/getting-started-tutorial.md)。 若要了解[!INCLUDE[indigo2](../../../includes/indigo2-md.md)]程式設計，請參閱[基本 WCF 程式設計](../../../docs/framework/wcf/basic-wcf-programming.md)。  
+本文件提供 Windows Communication Foundation (WCF) 架構的高階檢視。 以說明重要概念，以及如何搭配運用這些概念。 如需建立簡單的 WCF 服務和用戶端版本的教學課程，請參閱[入門教學課程](../../../docs/framework/wcf/getting-started-tutorial.md)。 若要深入了解 WCF 程式設計，請參閱[基本 WCF 程式設計](../../../docs/framework/wcf/basic-wcf-programming.md)。  
   
 ## <a name="wcf-fundamentals"></a>WCF 基本概念  
- [!INCLUDE[indigo2](../../../includes/indigo2-md.md)] 為執行階段及一組 API，用來建立在服務和用戶端間傳送訊息的系統。 相同的基礎結構和 API 可用來在同一個電腦系統或位於其他電腦且透過網際網路存取的系統上，建立與其他應用程式通訊的應用程式。  
+ WCF 是的執行階段和一組 Api 來建立服務和用戶端之間傳送訊息的系統。 相同的基礎結構和 API 可用來在同一個電腦系統或位於其他電腦且透過網際網路存取的系統上，建立與其他應用程式通訊的應用程式。  
   
 ### <a name="messaging-and-endpoints"></a>傳訊和端點  
- [!INCLUDE[indigo2](../../../includes/indigo2-md.md)] 是以訊息通訊的概念為基礎，而且任何可模型化為訊息的項目 (例如 HTTP 要求或訊息佇列 (亦稱為 MSMQ) 訊息) 都能在程式設計模型中以制式方式表示。 如此一來，不同傳輸機制上就可以有統一的 API。  
+ WCF 根據訊息為基礎的通訊，以及任何的概念，可模型化為訊息 （例如，HTTP 要求或訊息佇列 (也稱為 MSMQ) 訊息） 可以表示的程式設計模型中統一的方式。 如此一來，不同傳輸機制上就可以有統一的 API。  
   
  此模型區別*用戶端*，這是起始通訊，應用程式和*服務*，這是等候用戶端與其通訊並回應的應用程式通訊。 單一應用程式可以同時做為用戶端和服務。 如需範例，請參閱[雙工服務](../../../docs/framework/wcf/feature-details/duplex-services.md)和[對等網路](../../../docs/framework/wcf/feature-details/peer-to-peer-networking.md)。  
   
  訊息會在端點間傳送。 *端點*傳送或接收訊息的位置 （或兩者），而且會定義所有訊息交換所需的資訊。 服務會公開一或多個應用程式端點 (以及零或多個基礎結構端點)，而用戶端則會產生與其中一個服務端點相容的端點。  
   
- *端點*描述以標準為基礎的方式應該傳送訊息的位置、 方式應該傳送，以及訊息的顯示方式。 服務可以公開此資訊做為用戶端可以處理以產生適當的中繼資料[!INCLUDE[indigo2](../../../includes/indigo2-md.md)]用戶端和通訊*堆疊*。  
+ *端點*描述以標準為基礎的方式應該傳送訊息的位置、 方式應該傳送，以及訊息的顯示方式。 服務可以公開此資訊做為用戶端可以處理以產生適當的 WCF 用戶端與通訊的中繼資料*堆疊*。  
   
 ### <a name="communication-protocols"></a>通訊協定  
- 其中一個所需的通訊堆疊的項目是*傳輸通訊協定*。 使用通用傳輸 (例如 HTTP 和 TCP)，就可以在內部網路和網際網路上傳送訊息。 另外，當中也包括了其他傳輸，以支援與訊息佇列應用程式和對等網路 mesh 上的節點通訊。 使用 [!INCLUDE[indigo2](../../../includes/indigo2-md.md)] 的內建擴充點，可以加入其他傳輸機制。  
+ 其中一個所需的通訊堆疊的項目是*傳輸通訊協定*。 使用通用傳輸 (例如 HTTP 和 TCP)，就可以在內部網路和網際網路上傳送訊息。 另外，當中也包括了其他傳輸，以支援與訊息佇列應用程式和對等網路 mesh 上的節點通訊。 使用 WCF 的內建擴充點，可以加入其他傳輸機制。  
   
- 通訊堆疊中的另一個必要元素是編碼方式，這會指定要以何種方式格式化任何給定訊息。 [!INCLUDE[indigo2](../../../includes/indigo2-md.md)] 提供下列編碼方式：  
+ 通訊堆疊中的另一個必要元素是編碼方式，這會指定要以何種方式格式化任何給定訊息。 WCF 提供下列編碼：  
   
 -   文字編碼方式，互通的編碼方式。  
   
@@ -39,13 +39,13 @@ ms.lasthandoff: 05/04/2018
   
 -   二進位編碼方式，可有效進行傳輸。  
   
- 使用 [!INCLUDE[indigo2](../../../includes/indigo2-md.md)] 的內建擴充點，可以加入其他編碼機制 (例如，壓縮編碼方式)。  
+ 您可以使用 WCF 的內建擴充點新增更多的編碼機制 （例如，壓縮編碼方式）。  
   
 ### <a name="message-patterns"></a>訊息模式  
- [!INCLUDE[indigo2](../../../includes/indigo2-md.md)] 支援數種傳訊模式，包括要求-回覆、單向和雙工通訊。 不同傳輸支援不同傳訊模式，因此會影響所支援的互動類型。 [!INCLUDE[indigo2](../../../includes/indigo2-md.md)] API 和執行階段也有助於安全、可靠地傳送訊息。  
+ WCF 還支援數種傳訊模式，包括要求-回覆、 單向和雙工通訊。 不同傳輸支援不同傳訊模式，因此會影響所支援的互動類型。 WCF 應用程式開發介面和執行階段，也有助於安全可靠地傳送訊息的項目。  
   
 ## <a name="wcf-terms"></a>WCF 詞彙  
- 下列是 [!INCLUDE[indigo2](../../../includes/indigo2-md.md)] 文件中使用的其他概念和詞彙。  
+ 其他概念和詞彙用於 WCF 文件包括下列項目。  
   
  訊息  
  這是獨立的資料單位，可由數個部分組成，其中包括本文和標頭。  
@@ -56,7 +56,7 @@ ms.lasthandoff: 05/04/2018
  endpoint  
  這是訊息傳送或接收 (或兩者) 所在位置的建構。 它包含一個定義可以傳送訊息的位置 (位址)、描述如何傳送訊息的通訊機制規格 (繫結)，以及該位置 (描述可以傳送訊息的位置) 上一組可傳送或接收 (或兩者) 之訊息的定義 (服務合約)。  
   
- [!INCLUDE[indigo2](../../../includes/indigo2-md.md)] 服務會對外界公開為端點集合。  
+ WCF 服務會對外界公開為端點集合。  
   
  Application Endpoint - 應用程式端點  
  由應用程式公開的端點，會對應至應用程式所實作的服務合約。  
@@ -83,13 +83,13 @@ HTTPS://cohowinery:8005/ServiceModelSamples/CalculatorService
  此元件可控制服務、端點、特定作業或用戶端的各種執行階段層面。 行為是根據範圍來分組：通用行為會影響全域所有的端點、服務行為只會影響服務相關的層面、端點行為只會影響端點相關的屬性，而作業層級行為會影響特定作業。 例如，其中一個服務行為是節流，這會在過多訊息威脅造成服務處理功能過度負荷時，指定服務的回應方式。 另一方面，端點行為只會控制與端點相關的層面，例如尋找安全性認證的方式和位置。  
   
  System-provided Bindings - 系統提供的繫結  
- [!INCLUDE[indigo2](../../../includes/indigo2-md.md)] 包含一些系統提供的繫結。 這些繫結是已針對特定案例最佳化的繫結項目集合。 例如，<xref:System.ServiceModel.WSHttpBinding> 是設計用來與實作各種 WS-* 規格的服務增加互通性 (Interoperability)。 這些預先定義的繫結只會提供可正確套用至特定案例的選項，因此能夠節省時間。 如果預先定義的繫結不符合您的需求，請建立自訂繫結。  
+ WCF 包含一些系統提供的繫結。 這些繫結是已針對特定案例最佳化的繫結項目集合。 例如，<xref:System.ServiceModel.WSHttpBinding> 是設計用來與實作各種 WS-* 規格的服務增加互通性 (Interoperability)。 這些預先定義的繫結只會提供可正確套用至特定案例的選項，因此能夠節省時間。 如果預先定義的繫結不符合您的需求，請建立自訂繫結。  
   
  組態和程式碼  
  應用程式可以透過程式碼、組態或兩者的組合來控制。 組態的優點是，在撰寫程式碼之後，允許開發人員以外的其他人 (例如，網路系統管理員) 設定用戶端和服務參數，而不需要重新編譯。 組態不僅可讓您設定如端點位址的值，還能讓您加入端點、繫結和行為，取得進一步的控制。 程式碼可讓開發人員嚴格控制服務或用戶端的所有元件，而且透過組態所做的任何設定都可以使用程式碼進行檢查，並在必要時加以覆寫。  
   
  服務作業  
- 在服務的程式碼中定義的程序，以實作某項作業的功能。 這項作業會向用戶端公開為 [!INCLUDE[indigo2](../../../includes/indigo2-md.md)] 用戶端上的方法。 此方法可傳回值並能接受選擇性數目的引數，或者不接受引數且不傳回任何回應。 例如，作用為簡單 "Hello" 的作業，可以做為用戶端出席狀態的通知，並且用來開始一系列的作業。  
+ 在服務的程式碼中定義的程序，以實作某項作業的功能。 這項作業會向用戶端公開為 WCF 用戶端上的方法。 此方法可傳回值並能接受選擇性數目的引數，或者不接受引數且不傳回任何回應。 例如，作用為簡單 "Hello" 的作業，可以做為用戶端出席狀態的通知，並且用來開始一系列的作業。  
   
  Service Contract - 服務合約  
  將多個相關作業結合成單一功能單位。 合約可以定義服務層級的設定，例如服務的命名空間、對應的回呼合約和其他類似的設定。 在大部分的情況下，合約是以您選擇的程式語言建立介面，並且將 <xref:System.ServiceModel.ServiceContractAttribute> 屬性套用至介面的方式來定義。 藉由實作介面，即可產生實際服務程式碼。  
@@ -119,25 +119,25 @@ HTTPS://cohowinery:8005/ServiceModelSamples/CalculatorService
  服務具有執行個體模型 (Instancing Model)。 執行個體模型有三種：「單一」表示單一 CLR 物件會服務所有用戶端，「每一呼叫」表示會建立新 CLR 物件來處理每個用戶端呼叫，而「每一工作階段」表示會建立一組 CLR 物件，每個物件各代表單一個別工作階段。 執行個體模型的選擇取決於應用程式需求和預期的服務使用模式。  
   
  Client Application - 用戶端應用程式  
- 這是與一個或多個端點交換訊息的程式。 用戶端應用程式首先會建立 [!INCLUDE[indigo2](../../../includes/indigo2-md.md)] 用戶端的執行個體，並呼叫 [!INCLUDE[indigo2](../../../includes/indigo2-md.md)] 用戶端的方法。 值得注意的是，單一應用程式可以同時是用戶端和服務。  
+ 這是與一個或多個端點交換訊息的程式。 用戶端應用程式首先會建立 WCF 用戶端的執行個體，並呼叫 WCF 用戶端的方法。 值得注意的是，單一應用程式可以同時是用戶端和服務。  
   
  Channel - 通道  
- 這是繫結項目的實體實作。 繫結表示組態，通道則是與該組態相關聯的實作。 因此，每個繫結項目都有相關聯的通道。 通道會彼此堆疊，以建立繫結的實體實作，也就是「通道堆疊」。  
+ 這是繫結項目的實體實作。 繫結表示組態，通道則是與該組態相關聯的實作。 因此，每個繫結項目都有相關聯的通道。 通道會彼此堆疊，以建立繫結程序的實體實作，也就是「通道堆疊」。  
   
- [!INCLUDE[indigo2](../../../includes/indigo2-md.md)] 用戶端  
- 一種用戶端應用程式建構，會將服務作業公開為方法 (在您所選的 [!INCLUDE[dnprdnshort](../../../includes/dnprdnshort-md.md)] 程式語言中，例如 Visual Basic 或 Visual C#)。 任何應用程式都可以裝載 [!INCLUDE[indigo2](../../../includes/indigo2-md.md)] 用戶端，包括裝載服務的應用程式， 因此，您可以建立包含其他服務之 [!INCLUDE[indigo2](../../../includes/indigo2-md.md)] 用戶端的服務。  
+ WCF Client - WCF 用戶端  
+ 一種用戶端應用程式建構，會將服務作業公開為方法 (在您所選的 [!INCLUDE[dnprdnshort](../../../includes/dnprdnshort-md.md)] 程式語言中，例如 Visual Basic 或 Visual C#)。 任何應用程式都可以裝載 WCF 用戶端，包括裝載服務的應用程式， 因此，您可以建立包含其他服務之 WCF 用戶端的服務。  
   
- A[!INCLUDE[indigo2](../../../includes/indigo2-md.md)]用戶端可以使用自動產生[ServiceModel Metadata Utility Tool (Svcutil.exe)](../../../docs/framework/wcf/servicemodel-metadata-utility-tool-svcutil-exe.md)和它指向發行中繼資料執行中服務。  
+ WCF 用戶端可以使用自動產生[ServiceModel Metadata Utility Tool (Svcutil.exe)](../../../docs/framework/wcf/servicemodel-metadata-utility-tool-svcutil-exe.md)和它指向發行中繼資料執行中服務。  
   
  中繼資料  
- 在服務中描述服務的特性，外部實體必須了解這些服務特性，才能與此服務通訊。 中繼資料可供[ServiceModel Metadata Utility Tool (Svcutil.exe)](../../../docs/framework/wcf/servicemodel-metadata-utility-tool-svcutil-exe.md)產生[!INCLUDE[indigo2](../../../includes/indigo2-md.md)]用戶端和用戶端應用程式可以用來與服務互動的伴隨組態。  
+ 在服務中描述服務的特性，外部實體必須了解這些服務特性，才能與此服務通訊。 中繼資料可供[ServiceModel Metadata Utility Tool (Svcutil.exe)](../../../docs/framework/wcf/servicemodel-metadata-utility-tool-svcutil-exe.md)產生 WCF 用戶端和用戶端應用程式可以用來與服務互動的伴隨組態。  
   
  服務公開的中繼資料包括 XML 結構描述文件 (定義服務的資料合約) 和 WSDL 文件 (描述服務的方法)。  
   
- 啟用時，[!INCLUDE[indigo2](../../../includes/indigo2-md.md)] 會藉由檢查服務及其端點，自動產生服務的中繼資料。 若要從服務發行中繼資料，您必須明確啟用中繼資料行為。  
+ 啟用時，WCF 會藉由檢查服務及其端點，自動產生服務的中繼資料。 若要從服務發行中繼資料，您必須明確啟用中繼資料行為。  
   
  安全性  
- 這在 [!INCLUDE[indigo2](../../../includes/indigo2-md.md)] 中包括了機密性 (加密訊息以防竊聽)、完整性 (偵測訊息是否遭竄改的方法)、驗證 (驗證伺服器和用戶端的方法) 以及授權 (控制對資源的存取)。 運用現有的安全性機制 (例如 TLS over HTTP，也稱為 HTTPS)，或實作一或多個不同的 WS-* 安全性規格，都能提供這些功能。  
+ 在 WCF 中，包含機密性 （加密訊息以防竊聽）、 完整性 （偵測竄改訊息的方法）、 驗證 （驗證伺服器和用戶端） 和授權 （控制存取權資源）。 運用現有的安全性機制 (例如 TLS over HTTP，也稱為 HTTPS)，或實作一或多個不同的 WS-* 安全性規格，都能提供這些功能。  
   
  傳輸安全性模式  
  指定由傳輸層機制 (例如 HTTPS) 提供機密性、完整性和驗證。 在使用如 HTTPS 的傳輸時，這個模式的優點在於效能會更有效率，而且易於理解 (因為普遍使用在網際網路上)。 缺點是，這種類型的安全性是個別套用在通訊路徑上的每個躍點，因此通訊容易受到「攔截式」攻擊。  
@@ -149,7 +149,7 @@ HTTPS://cohowinery:8005/ServiceModelSamples/CalculatorService
  指定使用傳輸層來提供訊息的機密性、驗證和完整性，而每個訊息都包含訊息接收者所需的多個認證 (宣告)。  
   
  WS-*  
- 一組發展中 Web 服務 (WS) 規格的縮寫，例如 [!INCLUDE[indigo2](../../../includes/indigo2-md.md)] 中所實作的 WS-Security 與 WS-ReliableMessaging 等等。  
+ 一組發展中 Web 服務 (WS) 規格的縮寫，例如 WCF 中所實作的 WS-Security 與 WS-ReliableMessaging 等等。  
   
 ## <a name="see-also"></a>另請參閱  
  [什麼是 Windows Communication Foundation](../../../docs/framework/wcf/whats-wcf.md)  

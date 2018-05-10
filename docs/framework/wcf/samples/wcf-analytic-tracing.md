@@ -2,21 +2,21 @@
 title: WCF 分析追蹤
 ms.date: 03/30/2017
 ms.assetid: 6029c7c7-3515-4d36-9d43-13e8f4971790
-ms.openlocfilehash: 99b28dcc1cfb32f5f6835eadee1bded14375c216
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
-ms.translationtype: HT
+ms.openlocfilehash: e13aa0f7d0dbc48bedad0a9c639695ed038b9303
+ms.sourcegitcommit: 15109844229ade1c6449f48f3834db1b26907824
+ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/04/2018
+ms.lasthandoff: 05/07/2018
 ---
 # <a name="wcf-analytic-tracing"></a>WCF 分析追蹤
-這個範例會示範如何將您自己的追蹤事件加入至 Windows Communication Foundation (WCF) 寫入至 ETW 的分析追蹤的資料流[!INCLUDE[netfx_current_long](../../../../includes/netfx-current-long-md.md)]。 分析追蹤的用意在於輕鬆取得服務的可視性，而不必付出高效能的代價。 此範例示範如何使用 <xref:System.Diagnostics.Eventing?displayProperty=nameWithType> API 撰寫與 [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] 服務整合的事件。  
+這個範例會示範如何將您自己的追蹤事件加入至 Windows Communication Foundation (WCF) 寫入至 ETW 的分析追蹤的資料流[!INCLUDE[netfx_current_long](../../../../includes/netfx-current-long-md.md)]。 分析追蹤的用意在於輕鬆取得服務的可視性，而不必付出高效能的代價。 這個範例示範如何使用<xref:System.Diagnostics.Eventing?displayProperty=nameWithType>Api 與 WCF 服務整合的寫入事件。  
   
  如需有關<xref:System.Diagnostics.Eventing?displayProperty=nameWithType>Api，請參閱<xref:System.Diagnostics.Eventing?displayProperty=nameWithType>。  
   
  若要了解有關在 Windows 事件追蹤的詳細資訊，請參閱[改善偵錯和效能微調與 ETW](http://go.microsoft.com/fwlink/?LinkId=166488)。  
   
 ## <a name="disposing-eventprovider"></a>處置 EventProvider  
- 此範例使用實作 <xref:System.Diagnostics.Eventing.EventProvider?displayProperty=nameWithType> 的 <xref:System.IDisposable?displayProperty=nameWithType> 類別。 實作 [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] 服務的追蹤時，您可能會在服務的存留時間中使用 <xref:System.Diagnostics.Eventing.EventProvider> 的資源。 因此，為了便於讀取，此範例絕不會處置已包裝的 <xref:System.Diagnostics.Eventing.EventProvider>。 如果您的服務因為任何原因而有不同的追蹤需求，而且您必須處置這個資源，則應根據處置 Unmanaged 資源的最佳作法修改此範例。 如需處置 unmanaged 的資源的詳細資訊，請參閱[實作 Dispose 方法](http://go.microsoft.com/fwlink/?LinkId=166436)。  
+ 此範例使用實作 <xref:System.Diagnostics.Eventing.EventProvider?displayProperty=nameWithType> 的 <xref:System.IDisposable?displayProperty=nameWithType> 類別。 當實作 WCF 服務的追蹤時，很可能您可能使用<xref:System.Diagnostics.Eventing.EventProvider>的資源服務的存留期間。 因此，為了便於讀取，此範例絕不會處置已包裝的 <xref:System.Diagnostics.Eventing.EventProvider>。 如果您的服務因為任何原因而有不同的追蹤需求，而且您必須處置這個資源，則應根據處置 Unmanaged 資源的最佳作法修改此範例。 如需處置 unmanaged 的資源的詳細資訊，請參閱[實作 Dispose 方法](http://go.microsoft.com/fwlink/?LinkId=166436)。  
   
 ## <a name="self-hosting-vs-web-hosting"></a>自我裝載與Web 裝載  
  為 Web 託管服務，WCF 的分析追蹤會提供名為"HostReference"，這用來識別發出追蹤服務的欄位。 可延伸的使用者追蹤可以參與這個模型，而且此範例會示範其最佳作法。 Web 主控件的格式會參考當管道 '&#124;' 字元實際出現在所產生的字串可以是下列任何一個：  
@@ -29,10 +29,10 @@ ms.lasthandoff: 05/04/2018
   
      \<站台名稱 >&#124;\<ServiceVirtualPath >&#124;\<ServiceName >  
   
- 對於自我裝載服務，[!INCLUDE[indigo2](../../../../includes/indigo2-md.md)]的分析追蹤不會填入"HostReference"欄位。 此範例中的 `WCFUserEventProvider` 類別與自我裝載之服務所使用的類別行為一致。  
+ 對於自我裝載服務，WCF 的分析追蹤不會填入"HostReference"欄位。 此範例中的 `WCFUserEventProvider` 類別與自我裝載之服務所使用的類別行為一致。  
   
 ## <a name="custom-event-details"></a>自訂事件詳細資料  
- [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] 的 ETW 事件提供者資訊清單會定義設計為 [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] 服務作者從服務程式碼中所發出的三個事件。 下表為顯示這三個事件的分解。  
+ WCF 的 ETW 事件提供者資訊清單定義專為 WCF 服務作者從服務程式碼中發出的三個事件。 下表為顯示這三個事件的分解。  
   
 |Event - 事件|描述|事件 ID|  
 |-----------|-----------------|--------------|  
@@ -50,11 +50,11 @@ ms.lasthandoff: 05/04/2018
   
      在 Web 瀏覽器中，按一下**Calculator.svc**。 服務的 WSDL 文件 URI 應該會出現在瀏覽器中。 請複製該 URI。  
   
-4.  執行 [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] 測試用戶端 (WcfTestClient.exe)。  
+4.  執行 WCF 測試用戶端 (WcfTestClient.exe)。  
   
-     [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)]測試用戶端 (WcfTestClient.exe) 位於\< [!INCLUDE[vs_current_long](../../../../includes/vs-current-long-md.md)] Install Dir> > \Common7\IDE\ WcfTestClient.exe (預設[!INCLUDE[vs_current_long](../../../../includes/vs-current-long-md.md)]安裝目錄是 C:\Program Files\Microsoft Visual Studio 10.0)。  
+     WCF 測試用戶端 (WcfTestClient.exe) 位於\< [!INCLUDE[vs_current_long](../../../../includes/vs-current-long-md.md)] Install Dir> > \Common7\IDE\ WcfTestClient.exe (預設[!INCLUDE[vs_current_long](../../../../includes/vs-current-long-md.md)]安裝目錄是 C:\Program Files\Microsoft Visual Studio 10.0)。  
   
-5.  內[!INCLUDE[indigo2](../../../../includes/indigo2-md.md)]測試用戶端中，選取 加入服務**檔案**，然後**加入服務**。  
+5.  在 WCF 測試用戶端，將服務新增選取**檔案**，然後**加入服務**。  
   
      在輸入方塊中加入端點位址。  
   
@@ -64,7 +64,7 @@ ms.lasthandoff: 05/04/2018
   
 7.  開啟 [事件檢視器] 應用程式。  
   
-     叫用服務之前，啟動 [事件檢視器] 並確認事件記錄正在接聽從 [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] 服務發出的追蹤事件。  
+     之前叫用服務，啟動 [事件檢視器] 並確認事件記錄檔正在接聽從 WCF 服務發出的追蹤事件。  
   
 8.  從**啟動**功能表上，選取**系統管理工具**，然後**事件檢視器**。 啟用**分析**和**偵錯**記錄檔。  
   

@@ -2,11 +2,11 @@
 title: ASP.NET 快取整合
 ms.date: 03/30/2017
 ms.assetid: f581923a-8a72-42fc-bd6a-46de2aaeecc1
-ms.openlocfilehash: 420ff192caf41a37b6229bf36e32124f3646d69c
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
-ms.translationtype: HT
+ms.openlocfilehash: 744ecbff8b51565906ff4c619ba8c8aecff123c7
+ms.sourcegitcommit: 15109844229ade1c6449f48f3834db1b26907824
+ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/04/2018
+ms.lasthandoff: 05/07/2018
 ---
 # <a name="aspnet-caching-integration"></a>ASP.NET 快取整合
 這個範例示範如何使用 ASP.NET 輸出快取搭配 WCF WEB HTTP 程式設計模型。 請參閱[基本資源服務](../../../../docs/framework/wcf/samples/basic-resource-service.md)之自我裝載的版本，討論深度的服務實作此案例的範例。 本主題著重在 ASP.NET 輸出快取整合功能。  
@@ -28,7 +28,7 @@ ms.lasthandoff: 05/04/2018
   
  範例服務專案的 Service.cs 檔案中同時`GetCustomer`和`GetCustomers`作業會標示<xref:System.ServiceModel.Web.AspNetCacheProfileAttribute>，這樣會提供快取設定檔名稱"CacheFor60Seconds"。 在服務專案的 Web.config 檔案中，快取設定檔"CacheFor60Seconds"提供下 <`caching`> 項目 <`system.web`>。 此快取設定檔，值`duration`屬性是"60"，因此與這個設定檔相關聯的回應會在 ASP.NET 輸出快取中快取 60 秒。 此外，對於這個快取設定檔，`varmByParam`屬性設定為"format"這樣的要求包含不同的值`format`查詢字串參數另行快取其回應。 最後，快取設定檔的`varyByHeader`屬性設為"Accept"，因此對於 Accept 標頭值不同的要求，必須另行快取其回應。  
   
- 用戶端專案中的 Program.cs 會示範如何使用 <xref:System.Net.HttpWebRequest> 編寫這種用戶端。 請注意，這只是存取 WCF 服務的其中一種方式。 您也可以使用其他 .NET Framework 類別 (例如 [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] 通道處理站和 <xref:System.Net.WebClient>) 來存取服務。 SDK 中的其他範例 (例如[基本 HTTP 服務](../../../../docs/framework/wcf/samples/basic-http-service.md)範例和[自動格式選取](../../../../docs/framework/wcf/samples/automatic-format-selection.md)範例) 說明如何使用這些類別來與通訊[!INCLUDE[indigo2](../../../../includes/indigo2-md.md)]服務。  
+ 用戶端專案中的 Program.cs 會示範如何使用 <xref:System.Net.HttpWebRequest> 編寫這種用戶端。 請注意，這只是存取 WCF 服務的其中一種方式。 它也可使用其他.NET Framework 類別，例如 WCF 通道處理站存取服務和<xref:System.Net.WebClient>。 SDK 中的其他範例 (例如[基本 HTTP 服務](../../../../docs/framework/wcf/samples/basic-http-service.md)範例和[自動格式選取](../../../../docs/framework/wcf/samples/automatic-format-selection.md)範例) 說明如何使用這些類別，與 WCF 服務進行通訊。  
   
 ## <a name="to-run-the-sample"></a>若要執行範例  
  此範例包含三個專案：  

@@ -2,11 +2,11 @@
 title: NamedPipe 啟用
 ms.date: 03/30/2017
 ms.assetid: f3c0437d-006c-442e-bfb0-6b29216e4e29
-ms.openlocfilehash: a4d6612f8d598be6f02def2526920251e36047f4
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
-ms.translationtype: HT
+ms.openlocfilehash: 46b59dab0f67c66ca364d9e880ef519386d0df94
+ms.sourcegitcommit: 15109844229ade1c6449f48f3834db1b26907824
+ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/04/2018
+ms.lasthandoff: 05/07/2018
 ---
 # <a name="namedpipe-activation"></a>NamedPipe 啟用
 此範例示範裝載服務，該服務使用 Windows Process Activation Service (WAS) 啟用透過名稱管道通訊的服務。 這個範例根據[入門](../../../../docs/framework/wcf/samples/getting-started-sample.md)且需要[!INCLUDE[wv](../../../../includes/wv-md.md)]執行。  
@@ -160,7 +160,7 @@ Press <ENTER> to terminate client.
   
 2.  確認您已經執行[的 Windows Communication Foundation 範例的單次安裝程序](../../../../docs/framework/wcf/samples/one-time-setup-procedure-for-the-wcf-samples.md)。  
   
-     此外，您必須安裝 [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] 非 HTTP 啟動元件：  
+     此外，您必須安裝 WCF 非 HTTP 啟動元件：  
   
     1.  從**啟動**功能表上，選擇**控制台**。  
   

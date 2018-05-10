@@ -2,14 +2,14 @@
 title: 含 WCF 服務的 ASMX 用戶端
 ms.date: 03/30/2017
 ms.assetid: 3ea381ee-ac7d-4d62-8c6c-12dc3650879f
-ms.openlocfilehash: 5a0262361eac35ac45c3861deee13133011754ad
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
-ms.translationtype: HT
+ms.openlocfilehash: 93a881e486d82183fc42c524f3d83527c649516d
+ms.sourcegitcommit: 15109844229ade1c6449f48f3834db1b26907824
+ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/04/2018
+ms.lasthandoff: 05/07/2018
 ---
 # <a name="asmx-client-with-a-wcf-service"></a>含 WCF 服務的 ASMX 用戶端
-這個範例會示範如何使用 Windows Communication Foundation (WCF) 建立服務，然後存取服務從非[!INCLUDE[indigo2](../../../../includes/indigo2-md.md)]用戶端，例如 ASMX 用戶端。  
+這個範例示範如何使用 Windows Communication Foundation (WCF) 建立服務，然後從非 WCF 用戶端，例如 ASMX 用戶端存取服務。  
   
 > [!NOTE]
 >  此範例的安裝程序與建置指示位於本主題的結尾。  
@@ -33,7 +33,7 @@ public interface ICalculator
 }  
 ```  
   
- <xref:System.Runtime.Serialization.DataContractSerializer> 和 <xref:System.Xml.Serialization.XmlSerializer> 會將 CLR 型別對應成 XML 表示。 <xref:System.Runtime.Serialization.DataContractSerializer> 解譯某些 XML 表示的方式與 XmlSerializer 的方式不同。 當使用 XmlSerializer 時，非 [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] Proxy 產生器 (例如 Wsdl.exe) 會產生更實用的介面。 <xref:System.ServiceModel.XmlSerializerFormatAttribute>套用至`ICalculator`介面，以確保使用 XmlSerializer 將 CLR 型別對應至 XML。 服務實作會計算並傳回適當結果。  
+ <xref:System.Runtime.Serialization.DataContractSerializer> 和 <xref:System.Xml.Serialization.XmlSerializer> 會將 CLR 型別對應成 XML 表示。 <xref:System.Runtime.Serialization.DataContractSerializer> 解譯某些 XML 表示的方式與 XmlSerializer 的方式不同。 使用 XmlSerializer 時，非 WCF proxy 產生器，例如 Wsdl.exe，會產生更實用的介面。 <xref:System.ServiceModel.XmlSerializerFormatAttribute>套用至`ICalculator`介面，以確保使用 XmlSerializer 將 CLR 型別對應至 XML。 服務實作會計算並傳回適當結果。  
   
  此服務會公開 (Expose) 單一的端點來與已使用組態檔 Web.config 定義之服務進行通訊。 端點是由位址、繫結及合約所組成。 服務會公開位在網際網路資訊服務 (IIS) 主機提供之基底位址上的端點。 `binding` 屬性會設定為 basicHttpBinding，它會提供使用 SOAP 1.1 並與 WS-I BasicProfile 1.1 相容的 HTTP 通訊，如下列範例組態所示。  
   
@@ -49,7 +49,7 @@ public interface ICalculator
 </services>  
 ```  
   
- ASMX 用戶端會使用具型別的 Proxy (由 Web Services Description Language (WSDL) 公用程式 (Wsdl.exe) 所產生) 來與 [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] 服務進行通訊。 此具型別的 Proxy 會包含在 generatedClient.cs 檔中。 WSDL 公用程式會擷取所指定服務的中繼資料，然後產生讓用戶端用來進行通訊的具型別 Proxy。 根據預設，此架構不會公開任何中繼資料。 若要產生 proxy 所需的中繼資料公開 （expose），您必須新增[ \<serviceMetadata >](../../../../docs/framework/configure-apps/file-schema/wcf/servicemetadata.md)並設定其`httpGetEnabled`屬性`True`下列組態所示。  
+ ASMX 用戶端會使用 Web 服務描述語言 (WSDL) 公用程式 (Wsdl.exe) 所產生具型別的的 proxy 的 WCF 服務進行通訊。 此具型別的 Proxy 會包含在 generatedClient.cs 檔中。 WSDL 公用程式會擷取所指定服務的中繼資料，然後產生讓用戶端用來進行通訊的具型別 Proxy。 根據預設，此架構不會公開任何中繼資料。 若要產生 proxy 所需的中繼資料公開 （expose），您必須新增[ \<serviceMetadata >](../../../../docs/framework/configure-apps/file-schema/wcf/servicemetadata.md)並設定其`httpGetEnabled`屬性`True`下列組態所示。  
   
 ```xml  
 <behaviors>  

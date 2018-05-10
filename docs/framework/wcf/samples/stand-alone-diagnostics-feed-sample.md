@@ -2,16 +2,16 @@
 title: 獨立診斷摘要範例
 ms.date: 03/30/2017
 ms.assetid: d31c6c1f-292c-4d95-8e23-ed8565970ea5
-ms.openlocfilehash: 1edd1c2184dde368fbd16299a836f1811dd24ba6
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
-ms.translationtype: HT
+ms.openlocfilehash: 730cf011208ea1b57929fff4a1953fd3a935335c
+ms.sourcegitcommit: 15109844229ade1c6449f48f3834db1b26907824
+ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/04/2018
+ms.lasthandoff: 05/07/2018
 ---
 # <a name="stand-alone-diagnostics-feed-sample"></a>獨立診斷摘要範例
 這個範例示範如何建立的 RSS/Atom 摘要的新聞訂閱與 Windows Communication Foundation (WCF)。 它是基本的"Hello World"程式，其中顯示物件模型的基本概念和如何設定 Windows Communication Foundation (WCF) 服務。  
   
- [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] 會將新聞訂閱摘要製作為可傳回特殊資料型別 <xref:System.ServiceModel.Syndication.SyndicationFeedFormatter> 的服務作業。 <xref:System.ServiceModel.Syndication.SyndicationFeedFormatter> 的執行個體可將摘要序列化至 RSS 2.0 和 Atom 1.0 格式。 下列範例程式碼會顯示使用的合約。  
+ WCF 新聞訂閱摘要製作為的特殊資料型別，傳回的服務作業<xref:System.ServiceModel.Syndication.SyndicationFeedFormatter>。 <xref:System.ServiceModel.Syndication.SyndicationFeedFormatter> 的執行個體可將摘要序列化至 RSS 2.0 和 Atom 1.0 格式。 下列範例程式碼會顯示使用的合約。  
   
 ```  
 [ServiceContract(Namespace = "")]  
@@ -31,9 +31,9 @@ ms.lasthandoff: 05/04/2018
     }  
 ```  
   
- `GetProcesses` 作業會以 <xref:System.ServiceModel.Web.WebGetAttribute> 屬性來註解，這個屬性可讓您控制 [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] 將 HTTP GET 要求分派至服務作業的方式，以及指定所傳送訊息的格式。  
+ `GetProcesses`作業以註解<xref:System.ServiceModel.Web.WebGetAttribute>屬性，可讓您控制 WCF 分派 HTTP GET 要求至服務作業，以及指定所傳送的訊息格式。  
   
- 就像任何的 [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] 服務一樣，新聞訂閱摘要可以自我裝載於任何 Managed 應用程式中。 新聞訂閱服務需要指定的繫結 (<xref:System.ServiceModel.WebHttpBinding>) 和指定的端點行為 (<xref:System.ServiceModel.Description.WebHttpBehavior>) 才能正常運作。 新的 <xref:System.ServiceModel.Web.WebServiceHost> 類別提供方便的 API，不需特定的組態即可建立這類端點。  
+ 如同任何 WCF 服務，新聞訂閱摘要可以是自我裝載於任何 managed 應用程式。 新聞訂閱服務需要指定的繫結 (<xref:System.ServiceModel.WebHttpBinding>) 和指定的端點行為 (<xref:System.ServiceModel.Description.WebHttpBehavior>) 才能正常運作。 新的 <xref:System.ServiceModel.Web.WebServiceHost> 類別提供方便的 API，不需特定的組態即可建立這類端點。  
   
 ```  
 WebServiceHost host = new WebServiceHost(typeof(ProcessService), new Uri("http://localhost:8000/diagnostics"));  

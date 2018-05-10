@@ -5,11 +5,11 @@ dev_langs:
 - csharp
 - vb
 ms.assetid: 8d8dcd85-0a05-4c44-8861-4a0b3b90cca9
-ms.openlocfilehash: e48c519f6e10be4521d75345845eb5c019ec342c
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
-ms.translationtype: HT
+ms.openlocfilehash: 4d1ee0671a45b12e70f8f43ed2ea83b0a22d6c98
+ms.sourcegitcommit: 15109844229ade1c6449f48f3834db1b26907824
+ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/04/2018
+ms.lasthandoff: 05/07/2018
 ---
 # <a name="service-channel-level-programming"></a>服務通道層級的程式設計
 本主題說明如何撰寫 Windows Communication Foundation (WCF) 服務應用程式，而不使用<xref:System.ServiceModel.ServiceHost?displayProperty=nameWithType>和其相關聯的物件模型。  
@@ -28,7 +28,7 @@ ms.lasthandoff: 05/04/2018
 5.  關閉所有通道物件。  
   
 #### <a name="creating-a-binding"></a>建立繫結。  
- 接聽與接收訊息的第一步，就是建立繫結。 [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] 隨附幾個內建或系統提供的繫結，您可以具現化其中一個來直接使用。 此外，您也可以產生 CustomBinding 類別來建立自己的自訂繫結 (清單 1 中的程式碼也會執行相同作業)。  
+ 接聽與接收訊息的第一步，就是建立繫結。 WCF 隨附數個內建或系統提供繫結，可供直接具現化其中。 此外，您也可以產生 CustomBinding 類別來建立自己的自訂繫結 (清單 1 中的程式碼也會執行相同作業)。  
   
  下列的程式碼範例會建立 <xref:System.ServiceModel.Channels.CustomBinding?displayProperty=nameWithType> 的執行個體，並將 <xref:System.ServiceModel.Channels.HttpTransportBindingElement?displayProperty=nameWithType> 新增至其項目集合 (用來建置通道堆疊的繫結項目集合)。 在此範例中，由於項目集合只具有 <xref:System.ServiceModel.Channels.HttpTransportBindingElement>，因此結果通道堆疊也只有 HTTP 傳輸通道。  
   

@@ -8,23 +8,23 @@ helpviewer_keywords:
 - service contracts [WCF], synchronous operations
 - service contracts [WCF], asynchronous operations
 ms.assetid: db8a51cb-67e6-411b-9035-e5821ed350c9
-ms.openlocfilehash: 0b64d45797babff2da1649fb7469684342e65d47
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
-ms.translationtype: HT
+ms.openlocfilehash: 6c464dc79e0f38b72f724fafcef59916d766e2d0
+ms.sourcegitcommit: 15109844229ade1c6449f48f3834db1b26907824
+ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/04/2018
+ms.lasthandoff: 05/07/2018
 ---
 # <a name="synchronous-and-asynchronous-operations"></a>同步和非同步作業
 本主題討論實作和呼叫非同步服務作業。  
   
- 許多應用程式會非同步呼叫方法，因為這麼做使應用程式可以在方法呼叫執行的同時繼續進行有用的工作。 Windows Communication Foundation (WCF) 服務和用戶端可以參與兩個不同層級的應用程式，其提供的非同步作業呼叫[!INCLUDE[indigo2](../../../includes/indigo2-md.md)]更多的彈性來最大化輸送量之間取得平衡的應用程式互動功能。  
+ 許多應用程式會非同步呼叫方法，因為這麼做使應用程式可以在方法呼叫執行的同時繼續進行有用的工作。 Windows Communication Foundation (WCF) 服務和用戶端可以參與非同步作業呼叫兩個不同層級的應用程式，可提供更多的彈性來最大化輸送量互動性的權衡 WCF 應用程式.  
   
 ## <a name="types-of-asynchronous-operations"></a>非同步作業的類型  
- [!INCLUDE[indigo2](../../../includes/indigo2-md.md)] 的所有服務合約，無論參數型別和傳回值為何，都會使用 [!INCLUDE[indigo2](../../../includes/indigo2-md.md)] 屬性來指定用戶端與服務之間的特定訊息交換模式。 [!INCLUDE[indigo2](../../../includes/indigo2-md.md)] 會自動將傳入和傳出訊息路由傳送至適當的服務作業或執行的用戶端程式碼。  
+ 所有服務合約在 WCF 中，無論參數型別和傳回值，請使用 WCF 屬性來指定用戶端與服務之間的特定訊息交換模式。 WCF 會自動路由至適當的服務作業或執行用戶端程式碼的輸入和輸出訊息。  
   
  用戶端僅擁有服務合約，而這個服務合約會指定特定作業的訊息交換模式。 只要觀察到基礎訊息交換模式，用戶端便可以提供開發人員所選擇的程式設計模型。 同樣的，只要觀察到指定的訊息模式，服務便可以任何方式實作作業。  
   
- 服務合約與服務或用戶端實作無關，而這樣的獨立性就允許在 [!INCLUDE[indigo2](../../../includes/indigo2-md.md)] 應用程式中以下列形式進行非同步執行：  
+ 服務合約的服務或用戶端實作的獨立性可讓 WCF 應用程式中的非同步執行的下列形式：  
   
 -   用戶端可以使用同步訊息交換，以非同步方式叫用要求/回應作業。  
   
@@ -147,7 +147,7 @@ Function DoWork(ByVal data As String, ByRef inout As String, _out outonly As out
 >  <xref:System.ServiceModel.OperationContractAttribute> 屬性只會套用至 `BeginDoWork` 方法。 產生的合約具有一個名為 `DoWork` 的 WSDL 作業。  
   
 ### <a name="client-side-asynchronous-invocations"></a>用戶端非同步叫用  
- [!INCLUDE[indigo2](../../../includes/indigo2-md.md)] 用戶端應用程式可以使用前述三個非同步呼叫模型中的任何一個模型  
+ WCF 用戶端應用程式可以使用任何三個非同步呼叫模型中先前所述  
   
  使用工作架構模型時，只需使用 await 關鍵字呼叫作業，如下列程式碼片段所示。  
   
@@ -161,9 +161,9 @@ await simpleServiceClient.SampleMethodTaskAsync("hello, world");
 svcutil http://localhost:8000/servicemodelsamples/service/mex /async /tcv:Version35  
 ```  
   
- 當完成時，Svcutil.exe 會產生 [!INCLUDE[indigo2](../../../includes/indigo2-md.md)] 用戶端類別，其中的事件基礎結構能夠呼叫應用程式去實作與指派事件處理常式，以接收回應並採取適當的動作。 如需完整範例，請參閱[如何： 非同步呼叫服務作業](../../../docs/framework/wcf/feature-details/how-to-call-wcf-service-operations-asynchronously.md)。  
+ 完成此動作後，Svcutil.exe 會產生 WCF 用戶端類別與事件基礎結構，可讓呼叫的應用程式去實作與指派事件處理常式以接收回應並採取適當的動作。 如需完整範例，請參閱[如何： 非同步呼叫服務作業](../../../docs/framework/wcf/feature-details/how-to-call-wcf-service-operations-asynchronously.md)。  
   
- 但是，事件架構非同步呼叫只能在 [!INCLUDE[netfx35_long](../../../includes/netfx35-long-md.md)] 中使用。 此外，使用 [!INCLUDE[netfx35_short](../../../includes/netfx35-short-md.md)] 建立 [!INCLUDE[indigo2](../../../includes/indigo2-md.md)] 用戶端通道時，即使在 <xref:System.ServiceModel.ChannelFactory%601?displayProperty=nameWithType> 中，亦不支援此呼叫。 透過 [!INCLUDE[indigo2](../../../includes/indigo2-md.md)] 用戶端通道物件，您必須使用 <xref:System.IAsyncResult?displayProperty=nameWithType> 物件非同步的叫用您的作業。 若要使用此方法，指定 **/async**命令選項加[ServiceModel Metadata Utility Tool (Svcutil.exe)](../../../docs/framework/wcf/servicemodel-metadata-utility-tool-svcutil-exe.md)，如下列範例所示。  
+ 但是，事件架構非同步呼叫只能在 [!INCLUDE[netfx35_long](../../../includes/netfx35-long-md.md)] 中使用。 此外，它不支援在即使[!INCLUDE[netfx35_short](../../../includes/netfx35-short-md.md)]WCF 用戶端通道建立時使用<xref:System.ServiceModel.ChannelFactory%601?displayProperty=nameWithType>。 使用 WCF 用戶端通道物件，您必須使用<xref:System.IAsyncResult?displayProperty=nameWithType>物件以非同步方式叫用您的作業。 若要使用此方法，指定 **/async**命令選項加[ServiceModel Metadata Utility Tool (Svcutil.exe)](../../../docs/framework/wcf/servicemodel-metadata-utility-tool-svcutil-exe.md)，如下列範例所示。  
   
 ```  
 svcutil http://localhost:8000/servicemodelsamples/service/mex /async   

@@ -2,11 +2,11 @@
 title: 控制資源使用並改善效能
 ms.date: 03/30/2017
 ms.assetid: 9a829669-5f76-4c88-80ec-92d0c62c0660
-ms.openlocfilehash: 031261f50a0615efa7227d3655c90c3423e77796
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
-ms.translationtype: HT
+ms.openlocfilehash: ee94ae7c570156d870b93311365ad52b815f12d5
+ms.sourcegitcommit: 15109844229ade1c6449f48f3834db1b26907824
+ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/04/2018
+ms.lasthandoff: 05/07/2018
 ---
 # <a name="controlling-resource-consumption-and-improving-performance"></a>控制資源使用並改善效能
 本主題說明中的 Windows Communication Foundation (WCF) 架構的不同區域，用於控制資源消耗並影響效能度量資訊的各種屬性。  
@@ -18,7 +18,7 @@ ms.lasthandoff: 05/04/2018
   
  序列化配額的範例為 <xref:System.Runtime.Serialization.DataContractSerializer.MaxItemsInObjectGraph%2A?displayProperty=nameWithType> 屬性，這種屬性會指定序列化程式在單一 <xref:System.Runtime.Serialization.DataContractSerializer.ReadObject%2A> 方法呼叫中，序列化或還原序列化的物件最大數量。 應用程式層級的節流閥範例為 <xref:System.ServiceModel.Dispatcher.ServiceThrottle.MaxConcurrentSessions%2A?displayProperty=nameWithType> 屬性，其預設的同時工作階段通道連線數為 10  (與配額不同，若達到此節流閥值，應用程式會持續處理，但不接受新工作階段通道，也就是說在其他工作階段通道結束之前，新用戶端將無法連接)。  
   
- 這些控制項在設計上是要提供緩和特定類型攻擊的現成方法，或是改善效能度量資訊，例如記憶體使用量、啟動時間等等。 然而，根據應用程式而定，這些控制項會阻礙服務應用程式的效能，甚至造成應用程式無法運作。 例如，設計處理視訊資料流的應用程式，可能很容易就超過預設的 <xref:System.ServiceModel.Channels.TransportBindingElement.MaxReceivedMessageSize%2A?displayProperty=nameWithType> 屬性。 此主題提供適用於 [!INCLUDE[indigo2](../../../includes/indigo2-md.md)] 所有層級應用程式之各種控制項的概觀，描述各種取得設定是否妨礙應用程式之詳細資訊的方法，以及描述修正各種問題的方法。 多數節流閥與某些配額可在應用程式層級取得，即使基底屬性為序列化或傳輸限制。 例如，您可設定 <xref:System.Runtime.Serialization.DataContractSerializer.MaxItemsInObjectGraph%2A?displayProperty=nameWithType> 屬性使用服務類別上的 <xref:System.ServiceModel.ServiceBehaviorAttribute.MaxItemsInObjectGraph%2A?displayProperty=nameWithType> 屬性。  
+ 這些控制項在設計上是要提供緩和特定類型攻擊的現成方法，或是改善效能度量資訊，例如記憶體使用量、啟動時間等等。 然而，根據應用程式而定，這些控制項會阻礙服務應用程式的效能，甚至造成應用程式無法運作。 例如，設計處理視訊資料流的應用程式，可能很容易就超過預設的 <xref:System.ServiceModel.Channels.TransportBindingElement.MaxReceivedMessageSize%2A?displayProperty=nameWithType> 屬性。 本主題提供的各種控制項概觀套用到所有層級的 WCF 應用程式，描述取得更多有關是否設定是否妨礙應用程式的各種方式以及描述修正各種問題的方式。 多數節流閥與某些配額可在應用程式層級取得，即使基底屬性為序列化或傳輸限制。 例如，您可設定 <xref:System.Runtime.Serialization.DataContractSerializer.MaxItemsInObjectGraph%2A?displayProperty=nameWithType> 屬性使用服務類別上的 <xref:System.ServiceModel.ServiceBehaviorAttribute.MaxItemsInObjectGraph%2A?displayProperty=nameWithType> 屬性。  
   
 > [!NOTE]
 >  如果您有特定問題，您應該先閱讀[WCF 疑難排解快速入門](../../../docs/framework/wcf/wcf-troubleshooting-quickstart.md)以查看您的問題 （和解決方案） 清單中是否那里。  
@@ -28,11 +28,11 @@ ms.lasthandoff: 05/04/2018
 ## <a name="detecting-application-and-performance-issues-related-to-quota-settings"></a>偵測應用程式及與配額設定值相關的效能問題  
  上述值的預設值選取原則是讓各種應用程式類別都能有基本應用程式功能，同時提供對一般安全性問題的基本保護。 然而，不同應用程式的設計可能會超出一個或更多個節流閥的設定值 (雖然在其他方面，應用程式依然安全，且一如往常般運作)。 出現這些狀況時，您必須找出是哪些節流閥值被超過以及超過多少，然後決定應對方法以增加應用程式的輸送量。  
   
- 一般而言，撰寫應用程式與偵錯時，您會在組態檔或以程式設計的方式，將 <xref:System.ServiceModel.Description.ServiceDebugBehavior.IncludeExceptionDetailInFaults%2A?displayProperty=nameWithType> 屬性設為 `true`。 如此會指示 [!INCLUDE[indigo2](../../../includes/indigo2-md.md)] 傳回服務例外狀況堆疊，追蹤至用戶端應用程式加以檢視。 此功能會報告多數的應用程式層級例外狀況，顯示可能造成問題的配額值 (若該值為問題所在)。  
+ 一般而言，撰寫應用程式與偵錯時，您會在組態檔或以程式設計的方式，將 <xref:System.ServiceModel.Description.ServiceDebugBehavior.IncludeExceptionDetailInFaults%2A?displayProperty=nameWithType> 屬性設為 `true`。 這會指示 WCF 服務例外狀況堆疊追蹤回到用戶端應用程式加以檢視。 此功能會報告多數的應用程式層級例外狀況，顯示可能造成問題的配額值 (若該值為問題所在)。  
   
  有些例外狀況會在執行階段在低於應用程式層可見範圍之下發生，並且無法使用此機制傳回，這些例外可能無法透過自訂的 <xref:System.ServiceModel.Dispatcher.IErrorHandler?displayProperty=nameWithType> 實作來處理。 如果您處於像是 Microsoft Visual Studio 的開發環境之下，這些例外狀況大多會自動顯示。 不過，有些例外狀況可以而被掩蓋開發環境設定，例如[Just My Code](http://go.microsoft.com/fwlink/?LinkId=82174) Visual Studio 2005 中的設定。  
   
- 不論您開發環境的功能如何，您都可以使用 [!INCLUDE[indigo2](../../../includes/indigo2-md.md)] 追蹤與訊息記錄功能偵錯所有例外狀況，並調整應用程式的效能。 如需詳細資訊，請參閱[使用追蹤疑難排解您的應用程式](../../../docs/framework/wcf/diagnostics/tracing/using-tracing-to-troubleshoot-your-application.md)。  
+ 不論您的開發環境的功能，您可以使用 WCF 追蹤和訊息記錄功能偵錯所有例外狀況，並調整您的應用程式的效能。 如需詳細資訊，請參閱[使用追蹤疑難排解您的應用程式](../../../docs/framework/wcf/diagnostics/tracing/using-tracing-to-troubleshoot-your-application.md)。  
   
 ## <a name="performance-issues-and-xmlserializer"></a>效能問題與 XmlSerializer  
  使用資料型別 (可使用 <xref:System.Xml.Serialization.XmlSerializer> 加以序列化) 的服務和用戶端應用程式會在執行階段針對這些資料型別產生和編譯序列化程式碼，這可能會導致啟動的效能變慢。  

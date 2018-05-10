@@ -2,18 +2,18 @@
 title: WCF 服務及 Windows 的事件追蹤
 ms.date: 03/30/2017
 ms.assetid: eda4355d-0bd0-4dc9-80a2-d2c832152272
-ms.openlocfilehash: ef98cb14b5f1ee6a2ce11c35627456459d3215b5
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
-ms.translationtype: HT
+ms.openlocfilehash: ea917ee87b598fc3ad01df70d9aedfadfd1396a4
+ms.sourcegitcommit: 15109844229ade1c6449f48f3834db1b26907824
+ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/04/2018
+ms.lasthandoff: 05/07/2018
 ---
 # <a name="wcf-services-and-event-tracing-for-windows"></a>WCF 服務及 Windows 的事件追蹤
-這個範例示範如何使用 Windows Communication Foundation (WCF) 的分析追蹤功能發出的事件追蹤的 Windows (ETW) 事件。 分析追蹤是在 [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] 堆疊中的關鍵點發出，該堆疊允許在實際執行環境中進行 [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] 服務的疑難排解。  
+這個範例示範如何使用 Windows Communication Foundation (WCF) 的分析追蹤功能發出的事件追蹤的 Windows (ETW) 事件。 分析追蹤是在 WCF 堆疊中允許的實際執行環境中的 WCF 服務進行疑難排解的關鍵點發出的事件。  
   
- [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] 服務中的分析追蹤是可以在實際執行環境中開啟的追蹤功能，對效能產生的影響相當小。 這些追蹤都會做為事件發出至 ETW 工作階段。  
+ WCF 服務中的分析追蹤追蹤，可以開啟在生產環境中對效能的影響降至最低。 這些追蹤都會做為事件發出至 ETW 工作階段。  
   
- 這個範例包括基本的 [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] 服務，其中事件會從服務發出至事件記錄檔，而使用事件檢視器即可檢視此事件記錄檔。 此外還可以啟動專用的 ETW 工作階段，以接聽來自 [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] 服務的事件。 這個範例包括指令碼，可建立專用的 ETW 工作階段，用來將事件儲存到可以使用事件檢視器讀取的二進位檔中。  
+ 此範例包含基本的 WCF 服務中的事件會從服務發出至事件記錄檔，您可以使用事件檢視器檢視。 它也可啟動專用的 ETW 工作階段接聽事件從 WCF 服務。 這個範例包括指令碼，可建立專用的 ETW 工作階段，用來將事件儲存到可以使用事件檢視器讀取的二進位檔中。  
   
 #### <a name="to-use-this-sample"></a>若要使用這個範例  
   
@@ -27,17 +27,17 @@ ms.lasthandoff: 05/04/2018
   
      根據預設，服務會開始接聽連接埠 1378年上的要求 (http://localhost:1378/Calculator.svc)。  
   
-4.  執行 [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] 測試用戶端 (WcfTestClient.exe)。  
+4.  執行 WCF 測試用戶端 (WcfTestClient.exe)。  
   
-     [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)]測試用戶端 (WcfTestClient.exe) 位於\< [!INCLUDE[vs_current_long](../../../../includes/vs-current-long-md.md)] Install Dir> > \Common7\IDE\ WcfTestClient.exe (預設[!INCLUDE[vs_current_long](../../../../includes/vs-current-long-md.md)]安裝目錄是 C:\Program Files\Microsoft Visual Studio 10.0)。  
+     WCF 測試用戶端 (WcfTestClient.exe) 位於\< [!INCLUDE[vs_current_long](../../../../includes/vs-current-long-md.md)] Install Dir> > \Common7\IDE\ WcfTestClient.exe (預設[!INCLUDE[vs_current_long](../../../../includes/vs-current-long-md.md)]安裝目錄是 C:\Program Files\Microsoft Visual Studio 10.0)。  
   
-5.  內[!INCLUDE[indigo2](../../../../includes/indigo2-md.md)]測試用戶端中，選取 加入服務**檔案**，然後**加入服務**。  
+5.  在 WCF 測試用戶端，將服務新增選取**檔案**，然後**加入服務**。  
   
      在輸入方塊中加入端點位址。 預設值為 http://localhost:1378/Calculator.svc。  
   
 6.  開啟 [事件檢視器] 應用程式。  
   
-     叫用服務之前，啟動 [事件檢視器] 並確認事件記錄正在接聽從 [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] 服務發出的追蹤事件。  
+     之前叫用服務，啟動 [事件檢視器] 並確認事件記錄檔正在接聽從 WCF 服務發出的追蹤事件。  
   
 7.  從**啟動**功能表上，選取**系統管理工具**，然後**事件檢視器**。  啟用**分析**和**偵錯**記錄檔。  
   
@@ -51,7 +51,7 @@ ms.lasthandoff: 05/04/2018
   
 #### <a name="to-test-the-service"></a>若要測試服務  
   
-1.  切換回 [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] 測試用戶端，然後按兩下 `Divide` 並且保留預設值，這樣會將分母指定為 0。  
+1.  切換回 WCF 測試用戶端，並按兩下`Divide`並保留預設值，其中將分母指定為 0。  
   
      如果分母為 0，則服務會擲回錯誤。  
   

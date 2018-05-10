@@ -4,23 +4,23 @@ ms.date: 03/30/2017
 helpviewer_keywords:
 - proxy extensions [WCF]
 ms.assetid: 1328c61c-06e5-455f-9ebd-ceefb59d3867
-ms.openlocfilehash: 7eea247602d24c545e0de5fa9df50e83aae8ed7f
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
-ms.translationtype: HT
+ms.openlocfilehash: 95340a9ae6ac5a3face81d5fe6f61ea134fb6ad2
+ms.sourcegitcommit: 15109844229ade1c6449f48f3834db1b26907824
+ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/04/2018
+ms.lasthandoff: 05/07/2018
 ---
 # <a name="extending-clients"></a>擴充用戶端
 在呼叫應用程式中，服務模型層會負責使用應用程式程式碼將方法引動過程轉譯到傳出訊息中、將這些訊息推送到基礎通道、將結果轉譯回應用程式程式碼中的傳回值與 out 參數，並將結果傳回到呼叫端。 服務模型延伸會修改或實作涉及用戶端或發送器功能、自訂行為、訊息與參數攔截以及其他擴充性功能的執行或通訊行為與功能。  
   
- 本主題描述如何使用<xref:System.ServiceModel.Dispatcher.ClientRuntime>和<xref:System.ServiceModel.Dispatcher.ClientOperation>類別在 Windows Communication Foundation (WCF) 用戶端應用程式中修改的預設執行行為[!INCLUDE[indigo2](../../../../includes/indigo2-md.md)]用戶端攔截或修改訊息、 參數或傳回值之前或之後傳送或擷取它們在通道層中。 如需延伸服務執行階段的詳細資訊，請參閱[擴充發送器](../../../../docs/framework/wcf/extending/extending-dispatchers.md)。 如需修改的自訂物件插入到用戶端執行階段行為的詳細資訊，請參閱[設定與擴充執行階段行為](../../../../docs/framework/wcf/extending/configuring-and-extending-the-runtime-with-behaviors.md)。  
+ 本主題描述如何使用<xref:System.ServiceModel.Dispatcher.ClientRuntime>和<xref:System.ServiceModel.Dispatcher.ClientOperation>類別在 Windows Communication Foundation (WCF) 用戶端應用程式中修改預設的執行行為的 WCF 用戶端或用來攔截或修改訊息、 參數或傳回值之前或之後傳送或擷取它們在通道層中。 如需延伸服務執行階段的詳細資訊，請參閱[擴充發送器](../../../../docs/framework/wcf/extending/extending-dispatchers.md)。 如需修改的自訂物件插入到用戶端執行階段行為的詳細資訊，請參閱[設定與擴充執行階段行為](../../../../docs/framework/wcf/extending/configuring-and-extending-the-runtime-with-behaviors.md)。  
   
 ## <a name="clients"></a>用戶端  
- 在用戶端上，[!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] 用戶端物件或用戶端通道會將方法引動過程轉換成傳出訊息與傳入訊息中的作業結果，而該結果會傳回到呼叫應用程式。 (如需用戶端類型的詳細資訊，請參閱[WCF 用戶端架構](../../../../docs/framework/wcf/feature-details/client-architecture.md)。)  
+ 在用戶端，WCF 用戶端物件或用戶端通道會將方法引動過程轉換成傳出訊息與作業結果傳回呼叫的應用程式的內送訊息。 (如需用戶端類型的詳細資訊，請參閱[WCF 用戶端架構](../../../../docs/framework/wcf/feature-details/client-architecture.md)。)  
   
- [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] 用戶端類型具有可處理這種端點和作業層級功能的執行階段型別。 當應用程式呼叫作業時，<xref:System.ServiceModel.Dispatcher.ClientOperation> 便會將傳出物件轉譯到訊息中、處理攔截器、確認該傳出呼叫符合目標合約，並將傳出訊息交給 <xref:System.ServiceModel.Dispatcher.ClientRuntime>，該執行階段會負責建立及管理傳出通道 (在雙工服務的情況下也包括傳入通道)、處理額外的傳出訊息處理程序 (例如標頭修改)、處理雙向的訊息攔截器，以及將傳入的雙工呼叫傳遞到適當的用戶端 <xref:System.ServiceModel.Dispatcher.DispatchRuntime> 物件。 <xref:System.ServiceModel.Dispatcher.ClientOperation> 和 <xref:System.ServiceModel.Dispatcher.ClientRuntime> 都會在訊息 (包括錯誤) 傳回到用戶端時提供相似的服務。  
+ WCF 用戶端類型擁有的處理此端點和作業層級功能的執行階段型別。 當應用程式呼叫作業時，<xref:System.ServiceModel.Dispatcher.ClientOperation> 便會將傳出物件轉譯到訊息中、處理攔截器、確認該傳出呼叫符合目標合約，並將傳出訊息交給 <xref:System.ServiceModel.Dispatcher.ClientRuntime>，該執行階段會負責建立及管理傳出通道 (在雙工服務的情況下也包括傳入通道)、處理額外的傳出訊息處理程序 (例如標頭修改)、處理雙向的訊息攔截器，以及將傳入的雙工呼叫傳遞到適當的用戶端 <xref:System.ServiceModel.Dispatcher.DispatchRuntime> 物件。 <xref:System.ServiceModel.Dispatcher.ClientOperation> 和 <xref:System.ServiceModel.Dispatcher.ClientRuntime> 都會在訊息 (包括錯誤) 傳回到用戶端時提供相似的服務。  
   
- 這兩個執行階段類別是用來自訂 [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] 用戶端物件和通道之處理程序的主要延伸。 <xref:System.ServiceModel.Dispatcher.ClientRuntime> 類別讓使用者能夠對合約中的所有訊息進行攔截和擴充用戶端執行。 <xref:System.ServiceModel.Dispatcher.ClientOperation> 類別則讓使用者能夠對特定作業中的所有訊息進行攔截和擴充用戶端執行。  
+ 這兩個執行階段類別是主要的擴充功能，來自訂的 WCF 用戶端物件和通道的處理。 <xref:System.ServiceModel.Dispatcher.ClientRuntime> 類別讓使用者能夠對合約中的所有訊息進行攔截和擴充用戶端執行。 <xref:System.ServiceModel.Dispatcher.ClientOperation> 類別則讓使用者能夠對特定作業中的所有訊息進行攔截和擴充用戶端執行。  
   
  使用合約、端點及作業行為，即可修改屬性或插入自訂。 如需如何使用這些類型的行為來執行用戶端執行階段自訂的詳細資訊，請參閱[設定與擴充執行階段行為](../../../../docs/framework/wcf/extending/configuring-and-extending-the-runtime-with-behaviors.md)。  
   
@@ -33,7 +33,7 @@ ms.lasthandoff: 05/04/2018
   
 -   自訂訊息轉換。 除了修改應用程式程式碼以外，使用者可能想要將特定轉換套用到執行階段中的訊息 (例如，為了進行版本管理)。 使用訊息攔截器介面同樣可以完成這個動作。  
   
--   自訂資料模型。 使用者可能想要擁有不同於 [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] 預設提供的資料或序列化 (Serialization) 模型 (也就是 <xref:System.Runtime.Serialization.DataContractSerializer?displayProperty=nameWithType>、<xref:System.Xml.Serialization.XmlSerializer?displayProperty=nameWithType> 及 <xref:System.ServiceModel.Channels.Message?displayProperty=nameWithType> 物件)。 實作訊息格式器介面即可做到這點。 如需詳細資訊，請參閱 <xref:System.ServiceModel.Dispatcher.IClientMessageFormatter?displayProperty=nameWithType> 和 <xref:System.ServiceModel.Dispatcher.ClientOperation.Formatter%2A?displayProperty=nameWithType> 屬性。  
+-   自訂資料模型。 使用者可能想要擁有所支援的 WCF 中的預設值以外的資料或序列化模型 (也就是<xref:System.Runtime.Serialization.DataContractSerializer?displayProperty=nameWithType>， <xref:System.Xml.Serialization.XmlSerializer?displayProperty=nameWithType>，和<xref:System.ServiceModel.Channels.Message?displayProperty=nameWithType>物件)。 實作訊息格式器介面即可做到這點。 如需詳細資訊，請參閱 <xref:System.ServiceModel.Dispatcher.IClientMessageFormatter?displayProperty=nameWithType> 和 <xref:System.ServiceModel.Dispatcher.ClientOperation.Formatter%2A?displayProperty=nameWithType> 屬性。  
   
 -   自訂參數驗證。 使用者可能想要強制型別參數都是有效的 (即非 XML)。 使用參數偵測器介面即可達到這個目的。 如需範例，請參閱[How to： 檢查或修改參數](../../../../docs/framework/wcf/extending/how-to-inspect-or-modify-parameters.md)或[用戶端驗證](../../../../docs/framework/wcf/samples/client-validation.md)。  
   
@@ -52,7 +52,7 @@ ms.lasthandoff: 05/04/2018
   
 -   <xref:System.ServiceModel.Dispatcher.ClientRuntime.Via%2A> 屬性會設定在傳輸層之訊息的目的端值，以便支援媒介及其他案例。  
   
--   <xref:System.ServiceModel.Dispatcher.ClientRuntime.MessageInspectors%2A> 屬性會取得 <xref:System.ServiceModel.Dispatcher.IClientMessageInspector> 物件的集合，而您可以在這些物件中針對所有經過 [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)]用戶端的訊息新增自訂訊息攔截器。  
+-   <xref:System.ServiceModel.Dispatcher.ClientRuntime.MessageInspectors%2A>屬性取得的集合<xref:System.ServiceModel.Dispatcher.IClientMessageInspector>，您可以新增自訂訊息攔截器，針對所有經過 WCF 用戶端的物件。  
   
  此外，還有一些會擷取合約資訊的其他屬性：  
   
@@ -62,22 +62,22 @@ ms.lasthandoff: 05/04/2018
   
 -   <xref:System.ServiceModel.Dispatcher.ClientRuntime.ContractClientType%2A>  
   
- 如果 [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] 用戶端是雙工 [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] 用戶端，下列屬性還會擷取回呼 [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] 用戶端資訊：  
+ 如果 WCF 用戶端是雙工的 WCF 用戶端，下列屬性還會擷取回呼 WCF 用戶端資訊：  
   
 -   <xref:System.ServiceModel.Dispatcher.ClientRuntime.CallbackClientType%2A>  
   
 -   <xref:System.ServiceModel.Dispatcher.ClientRuntime.CallbackDispatchRuntime%2A>  
   
- 若要在整個 [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] 用戶端上擴充 [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] 用戶端執行，請檢閱 <xref:System.ServiceModel.Dispatcher.ClientRuntime> 類別上所提供的屬性，以了解修改屬性、或實作介面並將其新增到屬性時，是否會建立您所需要的功能。 選擇了要建置的特定延伸之後，請透過實作會在叫用時提供存取 <xref:System.ServiceModel.Dispatcher.ClientRuntime> 類別的用戶端行為，將您的延伸插入到適當的 <xref:System.ServiceModel.Dispatcher.ClientRuntime> 屬性。  
+ 若要擴充 WCF 用戶端執行跨整個的 WCF 用戶端，檢閱上的可用內容<xref:System.ServiceModel.Dispatcher.ClientRuntime>類別，以查看修改屬性或實作介面並將它加入至屬性是否會建立所需要的功能。 選擇了要建置的特定延伸之後，請透過實作會在叫用時提供存取 <xref:System.ServiceModel.Dispatcher.ClientRuntime> 類別的用戶端行為，將您的延伸插入到適當的 <xref:System.ServiceModel.Dispatcher.ClientRuntime> 屬性。  
   
  您可以使用作業行為 (實作 <xref:System.ServiceModel.Description.IOperationBehavior> 的物件)、合約行為 (實作 <xref:System.ServiceModel.Description.IContractBehavior> 的物件) 或是端點行為 (實作 <xref:System.ServiceModel.Description.IEndpointBehavior> 的物件)，將自訂延伸物件插入到集合中。 安裝行為物件新增到適當的行為集合的方式，可以是程式設計方式、宣告方式 (即透過實作自訂屬性)，或是實作自訂 <xref:System.ServiceModel.Configuration.BehaviorExtensionElement> 物件以便讓該行為可透過應用程式組態檔來進行插入等方式。 如需詳細資訊，請參閱[設定與擴充執行階段行為](../../../../docs/framework/wcf/extending/configuring-and-extending-the-runtime-with-behaviors.md)。  
   
- 如需範例，示範如何攔截跨[!INCLUDE[indigo2](../../../../includes/indigo2-md.md)]用戶端，請參閱[How to： 檢查或修改訊息用戶端上](../../../../docs/framework/wcf/extending/how-to-inspect-or-modify-messages-on-the-client.md)。  
+ 如需示範攔截 WCF 用戶端的範例，請參閱[How to： 檢查或修改訊息用戶端上](../../../../docs/framework/wcf/extending/how-to-inspect-or-modify-messages-on-the-client.md)。  
   
 ### <a name="using-the-clientoperation-class"></a>使用 ClientOperation 類別  
  用戶端執行階段修改的位置以及範圍僅限一項服務作業之自訂擴充的插入點，就是 <xref:System.ServiceModel.Dispatcher.ClientOperation> 類別。 (若要修改合約中所有訊息的用戶端執行階段行為，請使用 <xref:System.ServiceModel.Dispatcher.ClientRuntime> 類別)。  
   
- 您可以使用 <xref:System.ServiceModel.Dispatcher.ClientRuntime.Operations%2A> 屬性找出表示特定服務作業的 <xref:System.ServiceModel.Dispatcher.ClientOperation> 物件。 您可以使用下列屬性來將自訂物件插入到 [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] 用戶端系統中：  
+ 您可以使用 <xref:System.ServiceModel.Dispatcher.ClientRuntime.Operations%2A> 屬性找出表示特定服務作業的 <xref:System.ServiceModel.Dispatcher.ClientOperation> 物件。 下列屬性可讓您自訂物件插入到 WCF 用戶端系統：  
   
 -   使用 <xref:System.ServiceModel.Dispatcher.ClientOperation.Formatter%2A> 屬性，即可插入作業的自訂 <xref:System.ServiceModel.Dispatcher.IClientMessageFormatter> 實作或修改目前的格式器。  
   
@@ -91,7 +91,7 @@ ms.lasthandoff: 05/04/2018
   
 -   使用 <xref:System.ServiceModel.Dispatcher.ClientOperation.Action%2A> 屬性，即可控制要求訊息的 WS-Addressing 動作。  
   
--   使用 <xref:System.ServiceModel.Dispatcher.ClientOperation.BeginMethod%2A> 和 <xref:System.ServiceModel.Dispatcher.ClientOperation.EndMethod%2A>，即可指定要與非同步作業產生關聯的 [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] 用戶端方法。  
+-   使用<xref:System.ServiceModel.Dispatcher.ClientOperation.BeginMethod%2A>和<xref:System.ServiceModel.Dispatcher.ClientOperation.EndMethod%2A>來指定哪些 WCF 用戶端方法的非同步作業相關聯。  
   
 -   使用 <xref:System.ServiceModel.Dispatcher.ClientOperation.FaultContractInfos%2A> 屬性來取得集合，其中包含可依詳細類型方式出現在 SOAP 錯誤中的型別。  
   
@@ -105,13 +105,13 @@ ms.lasthandoff: 05/04/2018
   
 -   使用 <xref:System.ServiceModel.Dispatcher.ClientOperation.SyncMethod%2A> 屬性，即可控制要對應到作業的方法。  
   
- 若是只要在一個服務作業上擴充 [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] 用戶端執行，請檢閱 <xref:System.ServiceModel.Dispatcher.ClientOperation> 類別所提供的屬性，以了解修改屬性、或實作介面並將其新增到屬性時，是否會建立您所需要的功能。 選擇了要建置的特定延伸之後，請透過實作會在叫用時提供存取 <xref:System.ServiceModel.Dispatcher.ClientOperation> 類別的用戶端行為，將您的延伸插入到適當的 <xref:System.ServiceModel.Dispatcher.ClientOperation> 屬性。 然後，您就可以在該行為的內部，將 <xref:System.ServiceModel.Dispatcher.ClientRuntime> 屬性修改成符合您的需求。  
+ 若要擴充 WCF 用戶端執行跨只有一個服務作業，檢閱上的可用內容<xref:System.ServiceModel.Dispatcher.ClientOperation>類別，以查看修改屬性或實作介面並將它加入至屬性是否會建立所需要的功能。 選擇了要建置的特定延伸之後，請透過實作會在叫用時提供存取 <xref:System.ServiceModel.Dispatcher.ClientOperation> 類別的用戶端行為，將您的延伸插入到適當的 <xref:System.ServiceModel.Dispatcher.ClientOperation> 屬性。 然後，您就可以在該行為的內部，將 <xref:System.ServiceModel.Dispatcher.ClientRuntime> 屬性修改成符合您的需求。  
   
  一般而言，實作作業行為 (即實作 <xref:System.ServiceModel.Description.IOperationBehavior> 介面的物件) 就夠了，不過您也可以使用端點行為與合約行為，找到特定作業的 <xref:System.ServiceModel.Description.OperationDescription>，並在此處附加該行為來達成相同結果。 如需詳細資訊，請參閱[設定與擴充執行階段行為](../../../../docs/framework/wcf/extending/configuring-and-extending-the-runtime-with-behaviors.md)。  
   
  若要從組態使用自訂行為，請使用自訂行為組態區段處理常式來安裝您的行為。 您也可以建立自訂屬性以安裝行為。  
   
- 如需範例，示範如何攔截跨[!INCLUDE[indigo2](../../../../includes/indigo2-md.md)]用戶端，請參閱[How to： 檢查或修改參數](../../../../docs/framework/wcf/extending/how-to-inspect-or-modify-parameters.md)。  
+ 如需示範攔截 WCF 用戶端的範例，請參閱[How to： 檢查或修改參數](../../../../docs/framework/wcf/extending/how-to-inspect-or-modify-parameters.md)。  
   
 ## <a name="see-also"></a>另請參閱  
  <xref:System.ServiceModel.Dispatcher.ClientRuntime>  

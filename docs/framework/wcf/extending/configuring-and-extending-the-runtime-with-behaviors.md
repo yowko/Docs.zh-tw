@@ -4,17 +4,17 @@ ms.date: 03/30/2017
 helpviewer_keywords:
 - attaching extensions using behaviors [WCF]
 ms.assetid: 149b99b6-6eb6-4f45-be22-c967279677d9
-ms.openlocfilehash: 05fd96574f072f8e349f83d11aca20bc5269dfc7
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
-ms.translationtype: HT
+ms.openlocfilehash: af95fa01fc9caffb8a4f0e85d3457c7f3fa60320
+ms.sourcegitcommit: 15109844229ade1c6449f48f3834db1b26907824
+ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/04/2018
+ms.lasthandoff: 05/07/2018
 ---
 # <a name="configuring-and-extending-the-runtime-with-behaviors"></a>使用行為來設定與擴充執行階段
 行為讓您修改預設行為，並加入 檢查並驗證服務組態或修改 Windows Communication Foundation (WCF) 用戶端和服務應用程式在執行階段行為的自訂延伸模組。 本主題會說明行為介面、如何實作這些介面，以及如何透過程式設計方式或組態檔來將它們新增到服務描述 (在服務應用程式中) 或端點 (在用戶端應用程式中)。 如需有關如何使用系統提供行為的詳細資訊，請參閱[指定服務執行階段行為](../../../../docs/framework/wcf/specifying-service-run-time-behavior.md)和[指定用戶端執行階段行為](../../../../docs/framework/wcf/specifying-client-run-time-behavior.md)。  
   
 ## <a name="behaviors"></a>「行為」  
- 行為型別會加入至服務或服務端點描述物件 (在服務或用戶端，分別) 之前，這些物件會使用 Windows Communication Foundation (WCF) 來建立執行執行階段[!INCLUDE[indigo2](../../../../includes/indigo2-md.md)]服務或[!INCLUDE[indigo2](../../../../includes/indigo2-md.md)]用戶端。 當在執行階段建構程序期間呼叫這些行為之後，這些行為即可存取可修改由合約、繫結及位址所構成之執行階段的執行階段屬性和方法。  
+ 行為型別會加入至服務或服務端點描述物件 (在服務或用戶端，分別) 之前，這些物件會使用 Windows Communication Foundation (WCF) 來建立執行 WCF 服務或 WCF 用戶端執行階段。 當在執行階段建構程序期間呼叫這些行為之後，這些行為即可存取可修改由合約、繫結及位址所構成之執行階段的執行階段屬性和方法。  
   
 ### <a name="behavior-methods"></a>行為方法  
  所有的行為方法都有 `AddBindingParameters` 方法、`ApplyDispatchBehavior` 方法、`Validate` 方法，以及例外的 `ApplyClientBehavior` 方法：因為 <xref:System.ServiceModel.Description.IServiceBehavior> 無法在用戶端中執行，因此它不會實作 `ApplyClientBehavior`。  
@@ -33,9 +33,9 @@ ms.lasthandoff: 05/04/2018
 > [!NOTE]
 >  如需執行階段屬性和延伸模組類型可用來修改用戶端的執行行為的討論，請參閱[擴充用戶端](../../../../docs/framework/wcf/extending/extending-clients.md)。 如需執行階段屬性和擴充功能類型可讓您修改服務發送器的執行行為的討論，請參閱[擴充發送器](../../../../docs/framework/wcf/extending/extending-dispatchers.md)。  
   
- 大多數 [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] 使用者都不會與執行階段直接互動，而是在組態檔中的類別或行為上使用核心程式設計模型建構，例如端點、合約、繫結、位址及行為屬性。 這些建構組成*描述樹狀目錄*，這是完整的規格來建構執行階段以支援服務用戶端所描述或描述樹狀目錄。  
+ 大部分的 WCF 使用者直接; 不會互動執行階段改為使用核心程式設計模型建構，例如端點、 合約、 繫結、 位址及行為屬性上的類別或行為組態檔中。 這些建構組成*描述樹狀目錄*，這是完整的規格來建構執行階段以支援服務用戶端所描述或描述樹狀目錄。  
   
- [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] 中的行為分為四種：  
+ 有四種 WCF 中的行為：  
   
 -   服務行為 (<xref:System.ServiceModel.Description.IServiceBehavior> 類型) 讓整個服務執行階段 (包括 <xref:System.ServiceModel.ServiceHostBase>) 能夠進行自訂。  
   
@@ -64,24 +64,24 @@ ms.lasthandoff: 05/04/2018
   
 3.  實作會擴充組態的自訂 <xref:System.ServiceModel.Configuration.BehaviorExtensionElement>。 這樣便可從應用程式組態檔使用服務行為。  
   
- 有關 [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] 中服務行為的範例包括 <xref:System.ServiceModel.ServiceBehaviorAttribute> 屬性、<xref:System.ServiceModel.Description.ServiceThrottlingBehavior> 及 <xref:System.ServiceModel.Description.ServiceMetadataBehavior> 行為。  
+ 在 WCF 中的服務行為的範例包括<xref:System.ServiceModel.ServiceBehaviorAttribute>屬性<xref:System.ServiceModel.Description.ServiceThrottlingBehavior>，而<xref:System.ServiceModel.Description.ServiceMetadataBehavior>行為。  
   
 #### <a name="contract-behaviors"></a>合約行為  
  實作 <xref:System.ServiceModel.Description.IContractBehavior> 介面的合約行為，可用於擴充整個合約的用戶端與服務執行階段。  
   
- 將合約行為新增到合約時可以使用兩種機制。  第一種機制是建立要在合約介面上使用的自訂屬性。 當合約介面傳遞至 <xref:System.ServiceModel.ServiceHost> 或 <xref:System.ServiceModel.ChannelFactory%601> 時，[!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] 便會檢查該介面上的屬性。 如果其中任何一個屬性是 <xref:System.ServiceModel.Description.IContractBehavior> 的實作，這些屬性便會新增到為該介面建立之 <xref:System.ServiceModel.Description.ContractDescription?displayProperty=nameWithType> 上的行為集合中。  
+ 將合約行為新增到合約時可以使用兩種機制。  第一種機制是建立要在合約介面上使用的自訂屬性。 當合約介面傳遞至<xref:System.ServiceModel.ServiceHost>或<xref:System.ServiceModel.ChannelFactory%601>，WCF 會檢查介面上的屬性。 如果其中任何一個屬性是 <xref:System.ServiceModel.Description.IContractBehavior> 的實作，這些屬性便會新增到為該介面建立之 <xref:System.ServiceModel.Description.ContractDescription?displayProperty=nameWithType> 上的行為集合中。  
   
  您也可以在自訂合約行為屬性上實作 <xref:System.ServiceModel.Description.IContractBehaviorAttribute?displayProperty=nameWithType>。 在此情況下，將依套用對象產生類似下列的行為：  
   
- •合約介面。 在此情況下，行為會套用至任何端點中的所有該類型合約，而且 [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] 會忽略 <xref:System.ServiceModel.Description.IContractBehaviorAttribute.TargetContract%2A?displayProperty=nameWithType> 屬性的值。  
+ •合約介面。 在此情況下，行為會套用至任何端點中該型別的所有合約，WCF 會忽略的值<xref:System.ServiceModel.Description.IContractBehaviorAttribute.TargetContract%2A?displayProperty=nameWithType>屬性。  
   
  •服務類別。 在此情況下，行為只會套用至其中合約為 <xref:System.ServiceModel.Description.IContractBehaviorAttribute.TargetContract%2A> 屬性值的端點。  
   
- •回呼類別。 在此情況下，行為會套用至雙工用戶端的端點，而且 [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] 會忽略 <xref:System.ServiceModel.Description.IContractBehaviorAttribute.TargetContract%2A> 屬性的值。  
+ •回呼類別。 在此情況下，行為會套用至雙工用戶端的端點，WCF 會忽略的值<xref:System.ServiceModel.Description.IContractBehaviorAttribute.TargetContract%2A>屬性。  
   
  第二種機制是將行為新增至 <xref:System.ServiceModel.Description.ContractDescription> 上的行為集合。  
   
- 有關在 [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] 中的合約行為範例包括 <xref:System.ServiceModel.DeliveryRequirementsAttribute?displayProperty=nameWithType> 屬性。 如需詳細資訊和範例，請參閱參考主題。  
+ 在 WCF 中的合約行為的範例包括<xref:System.ServiceModel.DeliveryRequirementsAttribute?displayProperty=nameWithType>屬性。 如需詳細資訊和範例，請參閱參考主題。  
   
 #### <a name="endpoint-behaviors"></a>端點行為  
  實作 <xref:System.ServiceModel.Description.IEndpointBehavior> 的端點行為，是您用來針對特定端點修改整個服務或用戶端執行階段的主要機制。  
@@ -97,11 +97,11 @@ ms.lasthandoff: 05/04/2018
 #### <a name="operation-behaviors"></a>作業行為  
  實作 <xref:System.ServiceModel.Description.IOperationBehavior> 介面的作業行為，可用來擴充每個作業的用戶端與服務執行階段。  
   
- 將作業行為新增到作業時可以使用兩種機制。 第一種機制是建立要用於建立作業模型之方法的自訂屬性。 當作業新增到 <xref:System.ServiceModel.ServiceHost> 或 <xref:System.ServiceModel.ChannelFactory> 時，[!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] 會將任何 <xref:System.ServiceModel.Description.IOperationBehavior> 屬性都新增到為該作業建立之 <xref:System.ServiceModel.Description.OperationDescription> 上的行為集合。  
+ 將作業行為新增到作業時可以使用兩種機制。 第一種機制是建立要用於建立作業模型之方法的自訂屬性。 當設為 新增作業時<xref:System.ServiceModel.ServiceHost>或<xref:System.ServiceModel.ChannelFactory>，WCF 會加入任何<xref:System.ServiceModel.Description.IOperationBehavior>上的行為集合的屬性<xref:System.ServiceModel.Description.OperationDescription>建立該作業。  
   
  第二種機制是將行為直接新增至已建構 <xref:System.ServiceModel.Description.OperationDescription> 上的行為集合中。  
   
- 有關 [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] 中的作業行為範例包括 <xref:System.ServiceModel.OperationBehaviorAttribute> 和 <xref:System.ServiceModel.TransactionFlowAttribute>。  
+ 在 WCF 中的作業行為的範例包括<xref:System.ServiceModel.OperationBehaviorAttribute>和<xref:System.ServiceModel.TransactionFlowAttribute>。  
   
  如需詳細資訊和範例，請參閱參考主題。  
   

@@ -2,11 +2,11 @@
 title: MSMQ 4.0 中的有害訊息處理
 ms.date: 03/30/2017
 ms.assetid: ec8d59e3-9937-4391-bb8c-fdaaf2cbb73e
-ms.openlocfilehash: 25d99e6864b967b498fc53a6f6d78f476f4d938f
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
-ms.translationtype: HT
+ms.openlocfilehash: d0ddab7832e308336d5bfb1c5f75fd13fe63fe72
+ms.sourcegitcommit: 15109844229ade1c6449f48f3834db1b26907824
+ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/04/2018
+ms.lasthandoff: 05/07/2018
 ---
 # <a name="poison-message-handling-in-msmq-40"></a>MSMQ 4.0 中的有害訊息處理
 這個範例會示範如何在服務中執行有害訊息處理。 這個範例根據[交易 MSMQ 繫結](../../../../docs/framework/wcf/samples/transacted-msmq-binding.md)範例。 這個範例會使用 `netMsmqBinding`。 這個服務是自我裝載的主控台應用程式，可讓您觀察接收佇列訊息的服務。  
@@ -156,7 +156,7 @@ public class OrderProcessorService : IOrderProcessor
 ## <a name="processing-messages-from-the-poison-message-queue"></a>處理有害訊息佇列中的訊息  
  有害訊息服務會讀取最終有害訊息佇列中的訊息，並處理這些訊息。  
   
- 有害訊息佇列中的訊息是指定址到正在處理這些訊息之服務的訊息，這個服務與有害訊息服務端點可能不同。 因此，當有害訊息服務是從佇列讀取訊息時，[!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] 通道層會在端點中尋找不相符的項目，而且不會分派訊息。 此時，該訊息是定址到訂單處理服務，但卻是由有害訊息服務接收。 即使訊息是定址到其他端點，若要繼續接收訊息，我們就必須新增 `ServiceBehavior`，以便篩選比對準則要比對訊息定址到的任何服務端點時的所在位址。 若要成功處理從有害訊息佇列中讀取的訊息，您就必須執行這項操作。  
+ 有害訊息佇列中的訊息是指定址到正在處理這些訊息之服務的訊息，這個服務與有害訊息服務端點可能不同。 因此，當有害訊息服務從佇列讀取訊息，WCF 通道層會發覺端點中，而且不會分派訊息。 此時，該訊息是定址到訂單處理服務，但卻是由有害訊息服務接收。 即使訊息是定址到其他端點，若要繼續接收訊息，我們就必須新增 `ServiceBehavior`，以便篩選比對準則要比對訊息定址到的任何服務端點時的所在位址。 若要成功處理從有害訊息佇列中讀取的訊息，您就必須執行這項操作。  
   
  有害訊息服務實作本身與服務實作非常相似， 它會實作合約並處理訂單。 程式碼範例如下所示。  
 

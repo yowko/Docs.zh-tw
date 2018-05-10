@@ -2,19 +2,19 @@
 title: 使用 Windows Management Instrumentation 進行診斷
 ms.date: 03/30/2017
 ms.assetid: fe48738d-e31b-454d-b5ec-24c85c6bf79a
-ms.openlocfilehash: a53fee8bfed9f5a0f5773c9dfcfbaab5f173ddad
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
-ms.translationtype: HT
+ms.openlocfilehash: 3b06cc61714b3fdc63086d2b79b087540bece698
+ms.sourcegitcommit: 15109844229ade1c6449f48f3834db1b26907824
+ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/04/2018
+ms.lasthandoff: 05/07/2018
 ---
 # <a name="using-windows-management-instrumentation-for-diagnostics"></a>使用 Windows Management Instrumentation 進行診斷
-Windows Communication Foundation (WCF) 公開的服務，透過在執行階段檢查資料[!INCLUDE[indigo2](../../../../../includes/indigo2-md.md)]Windows Management Instrumentation (WMI) 提供者。  
+Windows Communication Foundation (WCF) 公開服務，以透過 WCF Windows Management Instrumentation (WMI) 提供者在執行階段檢查的資料。  
   
 ## <a name="enabling-wmi"></a>啟用 WMI  
  WMI 是 Microsoft 對「Web 架構企業管理」(Web-Based Enterprise Management，WBEM) 標準的實作。 如需有關 WMI SDK 的詳細資訊，請參閱[Windows Management Instrumentation](https://msdn.microsoft.com/library/aa394582.aspx)。 WBEM 是一套業界標準，說明應用程式如何將管理測試設備公開至外部管理工具。  
   
- WMI 提供者是一個元件，可透過 WBEM 相容介面，在執行階段公開測試設備。 它是由一組含有屬性/值配對的 WMI 物件所組成。 配對可以是數個簡單型別。 管理工具可以在執行階段，透過介面連接到服務。 [!INCLUDE[indigo2](../../../../../includes/indigo2-md.md)] 會公開服務的屬性，例如位址、繫結、行為和接聽項。  
+ WMI 提供者是一個元件，可透過 WBEM 相容介面，在執行階段公開測試設備。 它是由一組含有屬性/值配對的 WMI 物件所組成。 配對可以是數個簡單型別。 管理工具可以在執行階段，透過介面連接到服務。 WCF 會公開服務，例如位址、 繫結、 行為和接聽程式的屬性。  
   
  內建的 WMI 提供者可以在應用程式的組態檔中啟動。 這透過完成`wmiProviderEnabled`屬性[\<診斷 >](../../../../../docs/framework/configure-apps/file-schema/wcf/diagnostics.md)中[ \<system.serviceModel >](../../../../../docs/framework/configure-apps/file-schema/wcf/system-servicemodel.md)區段，如下列範例所示組態設定。  
   
@@ -38,18 +38,18 @@ Windows Communication Foundation (WCF) 公開的服務，透過在執行階段�
   
  您要注意，如果沒有為訊息記錄設定訊息記錄追蹤接聽項，或者組態檔中沒有指定 `System.ServiceModel` 追蹤接聽項來進行追蹤，則您所做的變更不會有任何作用，即使 WMI 接受這些變更也一樣。 如需正確設定各接聽項的詳細資訊，請參閱[設定訊息記錄](../../../../../docs/framework/wcf/diagnostics/configuring-message-logging.md)和[設定追蹤](../../../../../docs/framework/wcf/diagnostics/tracing/configuring-tracing.md)。 組態所指定之所有其他追蹤來源的追蹤層級，會在應用程式啟動時生效，並且無法變更。  
   
- [!INCLUDE[indigo2](../../../../../includes/indigo2-md.md)] 會公開指令執行的 `GetOperationCounterInstanceName` 方法。 如果您提供了一個作業名稱，這個方法就會傳回一個效能計數器執行個體名稱。 不過，它不會驗證您的輸入。 因此，如果您提供的作業名稱不正確，就會傳回錯誤的計數器名稱。  
+ WCF 公開`GetOperationCounterInstanceName`指令碼處理方法。 如果您提供了一個作業名稱，這個方法就會傳回一個效能計數器執行個體名稱。 不過，它不會驗證您的輸入。 因此，如果您提供的作業名稱不正確，就會傳回錯誤的計數器名稱。  
   
- 如果連到目的服務的 `OutgoingChannel` 用戶端不是在 `Service` 方法內建立的，[!INCLUDE[indigo2](../../../../../includes/indigo2-md.md)] 執行個體的 `Service` 屬性就不會將服務所開啟、用來連接到另一個服務的通道計算在內。  
+ `OutgoingChannel`屬性`Service`執行個體不會計算內未建立 WCF 用戶端至目的地服務，連線到另一個服務，將服務所開啟的通道`Service`方法。  
   
  **注意：** WMI 只支援<xref:System.TimeSpan>值最多 3 個小數位數。 例如，如果您的服務將其中一個屬性設定為 <xref:System.TimeSpan.MaxValue>，則透過 WMI 檢視時，小數點後三位之後的值將被截斷。  
   
 ## <a name="security"></a>安全性  
- [!INCLUDE[indigo2](../../../../../includes/indigo2-md.md)] WMI 提供者允許在環境中探索服務，所以，在授與存取權限時，應該特別小心謹慎。 如果您將預設僅供系統管理員存取的限制放寬，可能導致信賴度較低的一方存取環境中的敏感性資料。 特別是，如果您放寬遠端 WMI 存取的權限，可能導致氾濫攻擊。 如果某個處理序湧入了大量 WMI 要求，可能會使它的效能降低。  
+ 由於 WCF WMI 提供者允許在環境中的探索服務，您應該特別小心謹慎授與存取權限。 如果您將預設僅供系統管理員存取的限制放寬，可能導致信賴度較低的一方存取環境中的敏感性資料。 特別是，如果您放寬遠端 WMI 存取的權限，可能導致氾濫攻擊。 如果某個處理序湧入了大量 WMI 要求，可能會使它的效能降低。  
   
  此外，如果您放寬了 MOF 檔案的存取權限，信賴度較低的一方就可以操控 WMI 的行為，並改變 WMI 結構描述中載入的物件。 例如，欄位可能會遭到移除，導致管理員無法看見重要資料，或是原本不會填入或造成例外狀況的欄位會加入至檔案。  
   
- 根據預設，[!INCLUDE[indigo2](../../../../../includes/indigo2-md.md)] WMI 提供者會授與系統管理員「執行方法」、「提供者寫入」和「啟用帳戶」的權限，並授與 ASP.NET、本機服務和網路服務「啟用帳戶」的權限。 特別是，在非 [!INCLUDE[wv](../../../../../includes/wv-md.md)] 平台上，ASP.NET 帳戶具有 WMI ServiceModel 命名空間的讀取權限。 如果您不想將這些權限授與特定使用者群組，則應該停用 WMI 提供者 (預設為停用) 或停用特定使用者群組的存取。  
+ 根據預設，WCF WMI 提供者授與 「 執行方法 」、 「 提供者寫入 」 和 「 啟用帳戶 」 系統管理員權限和 ASP.NET、 本機服務和網路服務的 「 啟用帳戶 」 權限。 特別是，在非 [!INCLUDE[wv](../../../../../includes/wv-md.md)] 平台上，ASP.NET 帳戶具有 WMI ServiceModel 命名空間的讀取權限。 如果您不想將這些權限授與特定使用者群組，則應該停用 WMI 提供者 (預設為停用) 或停用特定使用者群組的存取。  
   
  此外，當您嘗試透過組態啟用 WMI 時，可能因為使用者權限不足，而無法啟用 WMI。 不過，事件記錄內不會寫入任何事件以記錄這項失敗。  
   
@@ -149,7 +149,7 @@ Whoami /user
  這個方法會提供目前使用者的 SID，但無法用來取得任意使用者的 SID。 另一個取得 SID 的方法是使用[getsid.exe](http://go.microsoft.com/fwlink/?LinkId=186467)工具[Windows 2000 Resource Kit 工具的系統管理工作](http://go.microsoft.com/fwlink/?LinkId=178660)。 此工具會比較兩個使用者 (本機或網域) 的 SID，並以副作用方式將兩個 SID 列印至命令列。 如需詳細資訊，請參閱[已知 Sid](http://go.microsoft.com/fwlink/?LinkId=186468)。  
   
 ## <a name="accessing-remote-wmi-object-instances"></a>存取遠端 WMI 物件執行個體  
- 如果您需要在遠端電腦上存取 [!INCLUDE[indigo2](../../../../../includes/indigo2-md.md)] WMI 執行個體，則您必須在用來存取的工具上啟用封包私密性。 下列小節說明如何使用 WMI CIM Studio、Windows Management Instrumentation 測試器以及 .NET SDK 2.0 來完成這項工作。  
+ 如果您需要存取遠端電腦上的 WCF WMI 執行個體，您必須啟用封包私密性您用來存取的工具。 下列小節說明如何使用 WMI CIM Studio、Windows Management Instrumentation 測試器以及 .NET SDK 2.0 來完成這項工作。  
   
 ### <a name="wmi-cim-studio"></a>WMI CIM Studio  
  如果您已安裝[WMI 系統管理工具](http://go.microsoft.com/fwlink/?LinkId=95185)，您可以使用 WMI CIM Studio 來存取 WMI 執行個體。 工具位於下列資料夾中  

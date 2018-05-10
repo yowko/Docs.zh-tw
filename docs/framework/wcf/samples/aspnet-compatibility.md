@@ -2,11 +2,11 @@
 title: ASP.NET 相容性
 ms.date: 03/30/2017
 ms.assetid: c8b51f1e-c096-4c42-ad99-0519887bbbc5
-ms.openlocfilehash: 35d9362fde21faf4998051e85f66fc4ddfb8b94b
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
-ms.translationtype: HT
+ms.openlocfilehash: f621a3f13fafee67a015d463898a10aaf9104008
+ms.sourcegitcommit: 15109844229ade1c6449f48f3834db1b26907824
+ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/04/2018
+ms.lasthandoff: 05/07/2018
 ---
 # <a name="aspnet-compatibility"></a>ASP.NET 相容性
 這個範例會示範如何啟用[!INCLUDE[vstecasp](../../../../includes/vstecasp-md.md)]相容性模式在 Windows Communication Foundation (WCF)。 在 [!INCLUDE[vstecasp](../../../../includes/vstecasp-md.md)] 相容模式中執行的服務會完全參與 [!INCLUDE[vstecasp](../../../../includes/vstecasp-md.md)] 應用程式管線，並且會利用像是檔案/URL 授權、工作階段狀態，以及 [!INCLUDE[vstecasp](../../../../includes/vstecasp-md.md)] 類別等 <xref:System.Web.HttpContext> 功能。 <xref:System.Web.HttpContext> 類別允許存取 Cookie、工作階段以及其他 [!INCLUDE[vstecasp](../../../../includes/vstecasp-md.md)] 功能。 這個模式會要求這些繫結使用 HTTP 傳輸，而且服務本身必須以 IIS 裝載。  
@@ -59,7 +59,7 @@ public interface ICalculatorSession
  服務會使用 [!INCLUDE[vstecasp](../../../../includes/vstecasp-md.md)] 工作階段來儲存每個用戶端工作階段的結果。 這樣服務便可在跨多個服務呼叫時維護每個工作階段的執行結果。  
   
 > [!NOTE]
->  [!INCLUDE[vstecasp](../../../../includes/vstecasp-md.md)] 工作階段狀態與 [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] 工作階段是完全不同的項目。  請參閱[工作階段](../../../../docs/framework/wcf/samples/session.md)如需詳細資訊[!INCLUDE[indigo2](../../../../includes/indigo2-md.md)]工作階段。  
+>  [!INCLUDE[vstecasp](../../../../includes/vstecasp-md.md)] 工作階段狀態和 WCF 工作階段是非常不同的事物。  請參閱[工作階段](../../../../docs/framework/wcf/samples/session.md)如 WCF 工作階段的詳細資訊。  
   
  服務對 [!INCLUDE[vstecasp](../../../../includes/vstecasp-md.md)] 工作階段狀態有相當深的相依性，並且需要 [!INCLUDE[vstecasp](../../../../includes/vstecasp-md.md)] 相容性模式才能正確運作。 這些需求會在套用 `AspNetCompatibilityRequirements` 屬性時以宣告方式表達。  
   

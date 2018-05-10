@@ -4,11 +4,11 @@ ms.date: 03/30/2017
 ms.assetid: 21f513f2-815b-47f3-85a6-03c008510038
 author: BrucePerlerMS
 manager: mbaldwin
-ms.openlocfilehash: c8b2fe3300bacc76e63f9d533c613171d03600d7
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
-ms.translationtype: HT
+ms.openlocfilehash: 0ca5eee4d4a1fd0dfaabbf9160488eb2d88f3d3d
+ms.sourcegitcommit: 15109844229ade1c6449f48f3834db1b26907824
+ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/04/2018
+ms.lasthandoff: 05/07/2018
 ---
 # <a name="security-concerns-for-message-logging"></a>訊息記錄的安全性考量
 此主題描述如何保護訊息記錄以及記錄訊息時所產生之事件中的敏感性資料，使其不會被公開。  
@@ -16,7 +16,7 @@ ms.lasthandoff: 05/04/2018
 ## <a name="security-concerns"></a>安全性考量  
   
 ### <a name="logging-sensitive-information"></a>記錄敏感資訊  
- Windows Communication Foundation (WCF) 不會修改應用程式特定標頭和本文中的任何資料。 [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] 也不會追蹤應用程式特定標頭或本文資料中的個人資訊。  
+ Windows Communication Foundation (WCF) 不會修改應用程式特定標頭和本文中的任何資料。 WCF 也不會追蹤應用程式特定標頭或本文資料中的個人資訊。  
   
  啟用訊息記錄時，應用程式特定標頭中的個人資訊 (例如查詢字串) 和本文資訊 (例如信用卡號碼) 會在記錄檔中變得可見。 應用程式部署者負責強制針對組態和記錄檔採取存取控制。 如果不要讓這類資訊變得可見，您應該停用記錄，如果要共用記錄檔，則應該篩選掉部分資料。  
   

@@ -2,11 +2,11 @@
 title: 執行 Windows Communication Foundation 範例
 ms.date: 03/30/2017
 ms.assetid: db8a83da-95c1-4a21-a9d2-48caeb6398ea
-ms.openlocfilehash: ee02b6e737e4728a378533ebb5ba89cec9807b33
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
-ms.translationtype: HT
+ms.openlocfilehash: 68b05b590e80a65ba8816c0dcfd8d140b71eb8c8
+ms.sourcegitcommit: 15109844229ade1c6449f48f3834db1b26907824
+ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/04/2018
+ms.lasthandoff: 05/07/2018
 ---
 # <a name="running-the-windows-communication-foundation-samples"></a>執行 Windows Communication Foundation 範例
 可以在單一電腦或跨電腦組態中執行 Windows Communication Foundation (WCF) 範例。 這些範例可依提供現狀直接執行於單一機器上。 在跨機器組態中，就需要修改範例的組態檔設定。 下列程序會說明如何在相同機器與跨機器組態中執行此範例。 請注意，透過網際網路資訊服務 (IIS) 裝載與自我裝載範例中的服務步驟會有所變化。 大部分的範例都是以 IIS 進行裝載；請參閱範例讀我資訊以決定其裝載方式。  
@@ -14,7 +14,7 @@ ms.lasthandoff: 05/04/2018
  在 [!INCLUDE[wv](../../../../includes/wv-md.md)] 上，不是裝載在 IIS 中的範例需要更高的權限向 Http.sys 註冊接聽項。 請使用 Httpcfg.exe 以在其中執行服務的帳戶來註冊服務的接聽位址，或從使用系統管理員權限執行的命令提示字元來啟用服務。  
   
 > [!NOTE]
->  在建置或執行任何之前[!INCLUDE[indigo2](../../../../includes/indigo2-md.md)]範例，確認您已經執行[的 Windows Communication Foundation 範例的單次安裝程序](../../../../docs/framework/wcf/samples/one-time-setup-procedure-for-the-wcf-samples.md)。  
+>  在建置或執行任何 WCF 範例之前, 要先確認您已經執行[的 Windows Communication Foundation 範例的單次安裝程序](../../../../docs/framework/wcf/samples/one-time-setup-procedure-for-the-wcf-samples.md)。  
   
 ### <a name="to-run-the-sample-on-the-same-machine"></a>若要在同一部機器上執行範例  
   

@@ -2,14 +2,14 @@
 title: HttpCookieSession
 ms.date: 03/30/2017
 ms.assetid: 101cb624-8303-448a-a3af-933247c1e109
-ms.openlocfilehash: 54e2459f5b480d8f53df42a08d4ebc8ac07b128c
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
-ms.translationtype: HT
+ms.openlocfilehash: 64a7cba7b1bbc55a4504e3af4784fcb2a84f0fa1
+ms.sourcegitcommit: 15109844229ade1c6449f48f3834db1b26907824
+ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/04/2018
+ms.lasthandoff: 05/07/2018
 ---
 # <a name="httpcookiesession"></a>HttpCookieSession
-這個範例會示範如何建置自訂通訊協定通道，以便在工作階段管理使用 HTTP Cookie。 這個通道可以啟用 Windows Communication Foundation (WCF) 服務和 ASMX 用戶端或之間的通訊[!INCLUDE[indigo2](../../../../includes/indigo2-md.md)]用戶端和 ASMX 服務。  
+這個範例會示範如何建置自訂通訊協定通道，以便在工作階段管理使用 HTTP Cookie。 這個通道可以啟用 Windows Communication Foundation (WCF) 服務和 ASMX 用戶端或 WCF 用戶端與 ASMX 服務之間的通訊。  
   
  當用戶端在工作階段架構 ASMX Web 服務中呼叫 Web 方法時，[!INCLUDE[vstecasp](../../../../includes/vstecasp-md.md)] 引擎會執行下列動作：  
   
@@ -74,7 +74,7 @@ ms.lasthandoff: 05/04/2018
 InputQueue<RequestContext> requestQueue;  
 ```  
   
- 在某人呼叫 <xref:System.ServiceModel.Channels.IReplyChannel.ReceiveRequest%2A> 方法而且訊息佇列中沒有任何訊息的情況下，通道會先等待指定的時間量，然後才自行關機。 這樣做會清除針對非 [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] 用戶端所建立的工作階段通道。  
+ 在某人呼叫 <xref:System.ServiceModel.Channels.IReplyChannel.ReceiveRequest%2A> 方法而且訊息佇列中沒有任何訊息的情況下，通道會先等待指定的時間量，然後才自行關機。 這會清除為非 WCF 用戶端建立的工作階段通道。  
   
  我們會使用 `channelMapping` 來追蹤 `ReplySessionChannels`，而在所有已接受的通道關閉之前，不會關閉基礎 `innerChannel`。 使用這個方法時，`HttpCookieReplySessionChannel` 存在的時間會超過 `HttpCookieReplySessionChannelListener` 的存留期。 我們也不用擔心接聽程式會在執行時進行記憶體回收，因為接受的通道會透過 `OnClosed` 回呼參考其接聽程式。  
   
@@ -82,7 +82,7 @@ InputQueue<RequestContext> requestQueue;
  對應的用戶端通道位於 `HttpCookieSessionChannelFactory` 類別中。 在通道建立期間，通道處理站會使用 `HttpCookieRequestSessionChannel` 包裝內部要求。 `HttpCookieRequestSessionChannel` 類別則會將呼叫轉寄至基礎要求通道。 當用戶端關閉 Proxy 時，`HttpCookieRequestSessionChannel` 會將訊息傳送至服務，指出通道正在關閉。 因此，服務通道堆疊可順利關閉使用中的工作階段通道。  
   
 ## <a name="binding-and-binding-element"></a>繫結和繫結項目  
- 建立服務和用戶端通道之後，下一個步驟就是將它們整合至 [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] 執行階段。 通道可透過繫結和繫結項目公開至 [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)]。 繫結是由一個或多個繫結元素所組成。 [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] 會提供數個系統定義的繫結，例如 BasicHttpBinding 或 WSHttpBinding。 `HttpCookieSessionBindingElement` 類別含有繫結項目的實作。 該類別會覆寫通道接聽程式和通道處理站的建立方法，以執行必要的通道接聽程式或通道處理站執行個體化 (Instantiation)。  
+ 建立服務與用戶端通道之後, 的下一個步驟是將它們整合到 WCF 執行階段。 通道會透過繫結和繫結項目公開至 WCF。 繫結是由一個或多個繫結元素所組成。 WCF 提供數種具有系統定義的繫結。例如，BasicHttpBinding 或 WSHttpBinding。 `HttpCookieSessionBindingElement` 類別含有繫結項目的實作。 該類別會覆寫通道接聽程式和通道處理站的建立方法，以執行必要的通道接聽程式或通道處理站執行個體化 (Instantiation)。  
   
  範例會在服務描述中使用原則判斷提示。 這可讓範例將其通道需求發行至使用服務的其他用戶端。 例如，這個繫結項目會發行原則判斷提示，讓可能的用戶端清楚繫結項目可支援工作階段。 由於範例會啟用繫結項目組態中的 `ExchangeTerminateMessage` 屬性，因此會新增必要的判斷提示，表示該服務支援額外的訊息交換動作以終止工作階段對話。 接著，用戶端就可以使用此動作。 下列 WSDL 程式碼會顯示從 `HttpCookieSessionBindingElement` 建立的原則判斷提示。  
   

@@ -2,22 +2,22 @@
 title: SAML 權杖提供者
 ms.date: 03/30/2017
 ms.assetid: eb16e5e2-4c8d-4f61-a479-9c965fcec80c
-ms.openlocfilehash: 56c432b0874f59fed87c0d892732422161d668ed
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
-ms.translationtype: HT
+ms.openlocfilehash: 519bde6b2849328efdeb2f295bde4749fbb652ca
+ms.sourcegitcommit: 15109844229ade1c6449f48f3834db1b26907824
+ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/04/2018
+ms.lasthandoff: 05/07/2018
 ---
 # <a name="saml-token-provider"></a>SAML 權杖提供者
-這個範例會示範如何實作自訂的用戶端 SAML 權杖提供者。 Windows Communication Foundation (WCF) 的權杖提供者用來提供認證給安全性基礎結構。 一般而言，權杖提供者會檢查目標並發行適當的認證，讓安全性基礎結構能夠保護訊息的安全。 [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] 會隨附預設的認證管理員權杖提供者。 [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] 也會隨附 [!INCLUDE[infocard](../../../../includes/infocard-md.md)] 權杖提供者。 自訂權杖提供者適用於下列情況：  
+這個範例會示範如何實作自訂的用戶端 SAML 權杖提供者。 Windows Communication Foundation (WCF) 的權杖提供者用來提供認證給安全性基礎結構。 一般而言，權杖提供者會檢查目標並發行適當的認證，讓安全性基礎結構能夠保護訊息的安全。 WCF 隨附預設的認證管理員權杖提供者。 WCF 還隨附[!INCLUDE[infocard](../../../../includes/infocard-md.md)]權杖提供者。 自訂權杖提供者適用於下列情況：  
   
 -   如果您有這些權杖提供者無法使用的認證存放區。  
   
--   如果您要提供自訂的機制，將認證從使用者提供詳細資料時，轉換成當 [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] 用戶端架構使用認證時。  
+-   如果您想要提供您自己自訂的機制，轉換認證從使用者提供詳細資料，當 WCF 用戶端架構使用認證時。  
   
 -   如果您要建置自訂權杖。  
   
- 這個範例會示範如何建置自訂權杖提供者，該權杖提供者會允許使用從 [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] 用戶端架構外部取得的 SAML 權杖。  
+ 這個範例示範如何建置自訂權杖提供者，可讓外部 WCF 用戶端架構，用於從取得的 SAML 權杖。  
   
  簡而言之，這個範例示範下面的情形：  
   
@@ -25,7 +25,7 @@ ms.lasthandoff: 05/04/2018
   
 -   如何將 SAML 權杖傳遞至自訂用戶端認證。  
   
--   如何將 SAML 權杖提供給 [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] 用戶端架構。  
+-   如何將 SAML 權杖提供給 WCF 用戶端架構。  
   
 -   用戶端如何使用伺服器的 X.509 憑證來驗證伺服器。  
   
@@ -110,7 +110,7 @@ ms.lasthandoff: 05/04/2018
 </system.serviceModel>  
 ```  
   
- 下列步驟示範如何開發 SAML 自訂權杖提供者，並將其整合至 [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] 安全性架構：  
+ 下列步驟示範如何開發自訂 SAML 權杖提供者，並將其整合與 WCF： 安全性架構：  
   
 1.  撰寫自訂 SAML 權杖提供者。  
   

@@ -2,14 +2,14 @@
 title: 橋接及錯誤處理
 ms.date: 03/30/2017
 ms.assetid: 4ae87d1a-b615-4014-a494-a53f63ff0137
-ms.openlocfilehash: f13a55704422e8a958e55c489f6db11108b03c90
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
-ms.translationtype: HT
+ms.openlocfilehash: 20f5af5736e5869ead0f7c50ce0fff22391ea730
+ms.sourcegitcommit: 15109844229ade1c6449f48f3834db1b26907824
+ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/04/2018
+ms.lasthandoff: 05/07/2018
 ---
 # <a name="bridging-and-error-handling"></a>橋接及錯誤處理
-這個範例會示範 Windows Communication Foundation (WCF) 路由服務如何用於通訊的用戶端和服務使用不同繫結之間的橋接。 此範例也會示範如何針對容錯移轉情況使用備份服務。 路由服務是一個 [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] 元件，該元件可讓它在應用程式中輕鬆加入內容架構的路由器。 此範例會調整標準 [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] 計算機範例，以便使用路由服務進行通訊。  
+這個範例會示範 Windows Communication Foundation (WCF) 路由服務如何用於通訊的用戶端和服務使用不同繫結之間的橋接。 此範例也會示範如何針對容錯移轉情況使用備份服務。 路由服務是 WCF 元件，以簡化應用程式中加入內容架構的路由器。 此範例會調整標準 WCF 計算機範例，以便使用路由服務進行通訊。  
   
 > [!IMPORTANT]
 >  這些範例可能已安裝在您的電腦上。 請先檢查下列 (預設) 目錄，然後再繼續。  

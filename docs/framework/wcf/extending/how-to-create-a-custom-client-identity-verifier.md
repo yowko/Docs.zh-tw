@@ -5,11 +5,11 @@ dev_langs:
 - csharp
 - vb
 ms.assetid: f2d34e43-fa8b-46d2-91cf-d2960e13e16b
-ms.openlocfilehash: 99d46b19e744190c50a2ba316fe0f59a8f6cf07b
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
-ms.translationtype: HT
+ms.openlocfilehash: a9f03419c5c924f129b3ec8580ee25693c218715
+ms.sourcegitcommit: 15109844229ade1c6449f48f3834db1b26907824
+ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/04/2018
+ms.lasthandoff: 05/07/2018
 ---
 # <a name="how-to-create-a-custom-client-identity-verifier"></a>HOW TO：建立自訂用戶端身分識別驗證器
 *識別*功能的 Windows Communication Foundation (WCF) 可讓用戶端預先指定預期的服務身分識別。 每當伺服器向用戶端驗證自身時，就會比對預期身分識別來檢查身分識別  (如身分識別，以及它的運作方式的說明，請參閱[服務識別和驗證](../../../../docs/framework/wcf/feature-details/service-identity-and-authentication.md)。)  
@@ -43,7 +43,7 @@ ms.lasthandoff: 05/04/2018
   
 ### <a name="to-implement-the-trygetidentity-method"></a>若要實作 TryGetIdentity 方法  
   
-1.  實作 <xref:System.ServiceModel.Security.IdentityVerifier.TryGetIdentity%2A> 方法，可判斷 <xref:System.ServiceModel.EndpointIdentity> 類別的執行個體是否可由用戶端傳回。 [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] 基礎結構會先呼叫 `TryGetIdentity` 方法的實作，從訊息擷取服務的身分識別。 接著，基礎結構會使用所傳回的 `CheckAccess` 和 `EndpointIdentity` 來呼叫 <xref:System.IdentityModel.Policy.AuthorizationContext> 實作。  
+1.  實作 <xref:System.ServiceModel.Security.IdentityVerifier.TryGetIdentity%2A> 方法，可判斷 <xref:System.ServiceModel.EndpointIdentity> 類別的執行個體是否可由用戶端傳回。 WCF 基礎結構會呼叫實作`TryGetIdentity`方法以從訊息擷取服務的身分識別。 接著，基礎結構會使用所傳回的 `CheckAccess` 和 `EndpointIdentity` 來呼叫 <xref:System.IdentityModel.Policy.AuthorizationContext> 實作。  
   
 2.  在 `TryGetIdentity` 方法中，放入下列程式碼：  
   

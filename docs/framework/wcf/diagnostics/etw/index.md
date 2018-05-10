@@ -6,18 +6,18 @@ helpviewer_keywords:
 - administration [WCF], analytic tracing
 - analytic tracing [WCF]
 ms.assetid: 1d518e47-a38d-41e8-93d7-8c3b361f6a56
-ms.openlocfilehash: a0e3e3d27283e588b161e2209c5a682558d18f79
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
-ms.translationtype: HT
+ms.openlocfilehash: 210418b8a8765a1fc59658e9df57c92ce087c95f
+ms.sourcegitcommit: 15109844229ade1c6449f48f3834db1b26907824
+ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/04/2018
+ms.lasthandoff: 05/07/2018
 ---
 # <a name="analytic-tracing-with-etw"></a>具有 ETW 的分析追蹤
-Windows Communication Foundation (WCF) 的分析追蹤會提供一種方式在執行期間擷取診斷資訊[!INCLUDE[indigo2](../../../../../includes/indigo2-md.md)]服務。 [!INCLUDE[indigo2](../../../../../includes/indigo2-md.md)] 分析追蹤事件會在 [!INCLUDE[indigo2](../../../../../includes/indigo2-md.md)] 堆疊中的關鍵點發出，以便在實際執行環境中處理 [!INCLUDE[indigo2](../../../../../includes/indigo2-md.md)] 服務的疑難排解。 分析追蹤[!INCLUDE[indigo2](../../../../../includes/indigo2-md.md)]服務最少對效能造成影響的產品伺服器裝載[!INCLUDE[netfx_current_long](../../../../../includes/netfx-current-long-md.md)][!INCLUDE[indigo2](../../../../../includes/indigo2-md.md)]為這些事件會非常有效率的方式發出 Windows 事件追蹤 (ETW) 工作階段 services。  
+Windows Communication Foundation (WCF) 的分析追蹤提供 WCF 服務的執行期間擷取診斷資訊的方式。 允許在生產環境中的 WCF 服務的疑難排解 WCF 堆疊中的關鍵點發出 WCF 分析追蹤事件。 WCF 服務的分析追蹤最少對效能造成影響的產品伺服器裝載[!INCLUDE[netfx_current_long](../../../../../includes/netfx-current-long-md.md)]WCF 服務，因為這些事件會非常有效率的方式發出 Windows 事件追蹤 (ETW) 工作階段。  
   
 ## <a name="in-this-section"></a>本節內容  
  [分析追蹤概觀](../../../../../docs/framework/wcf/diagnostics/etw/analytic-tracing-overview.md)  
- 討論 [!INCLUDE[indigo2](../../../../../includes/indigo2-md.md)] 分析追蹤如何在 [!INCLUDE[netfx_current_long](../../../../../includes/netfx-current-long-md.md)] 中運作。  
+ WCF 分析追蹤中的運作方式的討論[!INCLUDE[netfx_current_long](../../../../../includes/netfx-current-long-md.md)]。  
   
  [動態地啟用分析追蹤](../../../../../docs/framework/wcf/diagnostics/etw/dynamically-enabling-analytic-tracing.md)  
  討論如何啟用或停用 ETW 動態追蹤。  

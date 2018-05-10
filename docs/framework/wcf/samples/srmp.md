@@ -2,11 +2,11 @@
 title: SRMP
 ms.date: 03/30/2017
 ms.assetid: cf37078c-dcb4-45e0-acaf-2f196521b226
-ms.openlocfilehash: 5c2079f1aa90821448c88de53d311d064bb6e65b
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
-ms.translationtype: HT
+ms.openlocfilehash: c746897666ae78844df35c2989c803d852c3f70e
+ms.sourcegitcommit: 15109844229ade1c6449f48f3834db1b26907824
+ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/04/2018
+ms.lasthandoff: 05/07/2018
 ---
 # <a name="srmp"></a>SRMP
 這個範例示範如何使用訊息佇列 (MSMQ)，透過 HTTP 來執行交易佇列通訊。  
@@ -37,7 +37,7 @@ ms.lasthandoff: 05/04/2018
  若要執行這個範例，除了安裝 MSMQ 之外，還必須在服務及用戶端機器兩端都安裝 IIS。  
   
 ## <a name="demonstrates"></a>示範  
- 範例會透過 HTTP 使用 MSMQ 示範傳送 [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] 佇列訊息。 這也會呼叫 SRMP 訊息處理。 傳送佇列訊息時，在傳送端電腦上的 MSMQ 會透過 TCP 或 HTTP 傳輸，將訊息傳輸至接收端佇列管理員。 如果使用者選擇 SRMP，就表示他選擇了 HTTP 做為佇列傳輸的傳輸機制。 SRMP Secure (SRMPS) 會啟用 HTTPS。  
+ 此範例會示範傳送 WCF 訊息透過 HTTP 使用 MSMQ 排入佇列。 這也會呼叫 SRMP 訊息處理。 傳送佇列訊息時，在傳送端電腦上的 MSMQ 會透過 TCP 或 HTTP 傳輸，將訊息傳輸至接收端佇列管理員。 如果使用者選擇 SRMP，就表示他選擇了 HTTP 做為佇列傳輸的傳輸機制。 SRMP Secure (SRMPS) 會啟用 HTTPS。  
   
 ## <a name="example"></a>範例  
  此範例程式碼是以交易範例為基礎。 當傳送訊息至佇列以及從佇列接收訊息時，其使用 SRMP 的方式，與使用原生通訊協定傳送和接收訊息的方式相同。  

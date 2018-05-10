@@ -8,33 +8,33 @@ helpviewer_keywords:
 - Windows Communication Foundation [WCF], basic programming
 - Windows Communication Foundation [WCF], programming
 ms.assetid: 3ae3d498-f43c-4ecc-8cc0-6cbe36b62593
-ms.openlocfilehash: de56725f926ec9f6d4cc39c8160fa7af0f3ab80a
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
-ms.translationtype: HT
+ms.openlocfilehash: cbdc693197344fe570c1462f6ca3115018eb69d6
+ms.sourcegitcommit: 15109844229ade1c6449f48f3834db1b26907824
+ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/04/2018
+ms.lasthandoff: 05/07/2018
 ---
 # <a name="basic-wcf-programming"></a>基本 WCF 程式設計
 本節提供建立 Windows Communication Foundation (WCF) 應用程式的基本概念。  
   
 ## <a name="in-this-section"></a>本節內容  
  [基本程式設計週期](../../../docs/framework/wcf/basic-programming-lifecycle.md)  
- 說明設計、建置及部署 [!INCLUDE[indigo2](../../../includes/indigo2-md.md)] 服務和用戶端應用程式的生命週期。  
+ 說明設計、 建置和部署 WCF 服務和用戶端應用程式的生命週期。  
   
  [設計與實作服務](../../../docs/framework/wcf/designing-and-implementing-services.md)  
  說明如何設計和實作服務合約、選擇訊息交換模式、指定錯誤合約，以及其他服務的基本部分。  
   
  [設定服務](../../../docs/framework/wcf/configuring-services.md)  
- 說明如何設定 [!INCLUDE[indigo2](../../../includes/indigo2-md.md)] 服務使其支援合約要求、自訂本機執行階段行為，以及指示發行服務的位址。  
+ 描述如何設定 WCF 服務以支援合約要求、 自訂本機執行階段行為，以及指示發行服務的位址。  
   
  [裝載服務](../../../docs/framework/wcf/hosting-services.md)  
  說明在應用程式中裝載服務的基本概念。  
   
  [建置用戶端](../../../docs/framework/wcf/building-clients.md)  
- 說明如何取得服務的中繼資料、將該資料轉換成 [!INCLUDE[indigo2](../../../includes/indigo2-md.md)] 用戶端程式碼、處理安全性問題，以及建置、設定和裝載 [!INCLUDE[indigo2](../../../includes/indigo2-md.md)] 用戶端。  
+ 描述如何從服務取得中繼資料、 將其轉換為 WCF 用戶端程式碼、 處理安全性問題，以及建置、 設定和裝載 WCF 用戶端。  
   
  [擴充性簡介](../../../docs/framework/wcf/introduction-to-extensibility.md)  
- 說明如何擴充 [!INCLUDE[indigo2](../../../includes/indigo2-md.md)] 以建立自訂解決方案。  
+ 說明如何擴充 WCF 來建立自訂解決方案。  
   
  [WCF 疑難排解快速入門](../../../docs/framework/wcf/wcf-troubleshooting-quickstart.md)  
  說明某些最常發生的問題、解決這些問題的方法，以及如何尋找更多相關問題的資訊。  

@@ -2,18 +2,18 @@
 title: WebContentTypeMapper 範例
 ms.date: 03/30/2017
 ms.assetid: a4fe59e7-44d8-43c6-a1f8-40c45223adca
-ms.openlocfilehash: 3b3d53b0fe619c74c5e7f3533194f4b5e7c18a16
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
-ms.translationtype: HT
+ms.openlocfilehash: 89f13599e23f3e60ae4d9bc973debc436f46c147
+ms.sourcegitcommit: 15109844229ade1c6449f48f3834db1b26907824
+ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/04/2018
+ms.lasthandoff: 05/07/2018
 ---
 # <a name="webcontenttypemapper-sample"></a>WebContentTypeMapper 範例
 這個範例示範如何將新內容型別對應至 Windows Communication Foundation (WCF) 訊息本文格式。  
   
- <xref:System.ServiceModel.Description.WebHttpEndpoint> 項目會插入 Web 訊息編碼器，這個編碼器可以讓 [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] 在相同的端點上接收 JSON、XML 或原始二進位訊息。 此編碼器會藉由尋找要求的 HTTP 內容型別來判定訊息的本文格式。 這個範例會介紹 <xref:System.ServiceModel.Channels.WebContentTypeMapper> 類別，以允許使用者控制內容型別與本文格式之間的對應。  
+ <xref:System.ServiceModel.Description.WebHttpEndpoint>項目會插入 Web 訊息編碼器，可讓 WCF 接收 JSON、 XML 或原始二進位訊息，在相同的端點。 此編碼器會藉由尋找要求的 HTTP 內容型別來判定訊息的本文格式。 這個範例會介紹 <xref:System.ServiceModel.Channels.WebContentTypeMapper> 類別，以允許使用者控制內容型別與本文格式之間的對應。  
   
- [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] 會為內容型別提供一組預設對應。 例如，`application/json` 會對應至 JSON，而 `text/xml` 會對應至 XML。 未對應至 JSON 或 XML 的任何內容型別都會對應至原始二進位格式。  
+ WCF 提供的內容類型的一組預設對應。 例如，`application/json` 會對應至 JSON，而 `text/xml` 會對應至 XML。 未對應至 JSON 或 XML 的任何內容型別都會對應至原始二進位格式。  
   
  在某些案例中 (例如，Push-Style API)，服務開發人員不會控制由用戶端傳回的內容型別。 例如，用戶端可能會以 `text/javascript` 方式傳回 JSON，而不是以 `application/json` 方式。 在這種情況中，服務開發人員必須提供衍生自 <xref:System.ServiceModel.Channels.WebContentTypeMapper> 的型別來正確地處理指定的內容型別，如下列範例程式碼所示。  
   

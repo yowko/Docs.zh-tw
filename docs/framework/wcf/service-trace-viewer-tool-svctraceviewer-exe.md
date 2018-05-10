@@ -2,14 +2,14 @@
 title: 服務追蹤檢視器工具 (SvcTraceViewer.exe)
 ms.date: 03/30/2017
 ms.assetid: 9027efd3-df8d-47ed-8bcd-f53d55ed803c
-ms.openlocfilehash: d9cd87bba52297d37683127ece3dd9c31e9a9a70
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
-ms.translationtype: HT
+ms.openlocfilehash: 215e34a3e7b075463ceeaa15386d3a347ffff064
+ms.sourcegitcommit: 15109844229ade1c6449f48f3834db1b26907824
+ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/04/2018
+ms.lasthandoff: 05/07/2018
 ---
 # <a name="service-trace-viewer-tool-svctraceviewerexe"></a>服務追蹤檢視器工具 (SvcTraceViewer.exe)
-Windows Communication Foundation (WCF) 服務追蹤檢視器工具可協助您分析所產生的診斷追蹤[!INCLUDE[indigo2](../../../includes/indigo2-md.md)]。 服務追蹤檢視器提供一種輕鬆合併、檢視和篩選記錄內追蹤訊息的方式，方便您診斷、修復以及驗證 [!INCLUDE[indigo2](../../../includes/indigo2-md.md)] 服務的問題。  
+Windows Communication Foundation (WCF) 服務追蹤檢視器工具可協助您分析由 WCF 所產生的診斷追蹤。 服務追蹤檢視器能夠輕鬆合併、 檢視和篩選記錄內追蹤訊息，以便您可以診斷、 修復和驗證 WCF 服務的問題。  
   
 ## <a name="configuring-tracing"></a>設定追蹤  
  診斷追蹤可提供您資訊，顯示整個應用程式的作業期間所發生之事件。 顧名思義，您可以從作業的來源開始追蹤，一直追蹤到作業的目的端，也可以透過中繼點追蹤。  
@@ -55,7 +55,7 @@ Windows Communication Foundation (WCF) 服務追蹤檢視器工具可協助您�
 ### <a name="opening-and-viewing-wcf-trace-files"></a>開啟和檢視 WCF 追蹤檔案  
  服務追蹤檢視器支援三種檔案類型：  
   
--   [!INCLUDE[indigo2](../../../includes/indigo2-md.md)] 追蹤檔 (.svcLog)  
+-   WCF 追蹤檔 (.svcLog)  
   
 -   事件追蹤檔 (.etl)  
   
@@ -65,7 +65,7 @@ Windows Communication Foundation (WCF) 服務追蹤檢視器工具可協助您�
   
 ##### <a name="to-open-a-trace-file"></a>若要開啟追蹤檔  
   
-1.  啟動服務追蹤檢視器所使用的命令視窗巡覽至您[!INCLUDE[indigo2](../../../includes/indigo2-md.md)]安裝位置 (C:\Program Files\Microsoft SDKs\Windows\v6.0\Bin)，然後輸入`SvcTraceViewer.exe`。  
+1.  若要瀏覽至 WCF 安裝位置 (C:\Program Files\Microsoft SDKs\Windows\v6.0\Bin)，然後輸入使用命令視窗中啟動服務追蹤檢視器`SvcTraceViewer.exe`。  
   
 > [!NOTE]
 >  服務追蹤檢視器工具可以和兩種檔案類型產生關聯：.svclog 與 .stvproj。 您可以在命令列中使用兩個參數來註冊與取消註冊檔案的副檔名。  
@@ -87,7 +87,7 @@ Windows Communication Foundation (WCF) 服務追蹤檢視器工具可協助您�
 >  不建議您載入大於 200MB 的追蹤記錄檔。 如果嘗試載入大於這項限制的檔案，載入程序可能會花費很長的時間 (視您電腦的資源而定)。 服務追蹤檢視器工具不是造成需花費這麼長時間的原因，但它可能會耗盡電腦的記憶體。 建議您設定部分載入，以避免發生這種狀況。 如需如何執行此作業的詳細資訊，請參閱「載入大型追蹤檔」一節。  
   
 #### <a name="event-tracing-and-crimson-tracing"></a>事件追蹤與 Crimson 追蹤  
- 檢視器的原生格式即為 [!INCLUDE[indigo2](../../../includes/indigo2-md.md)] 所發出的活動追蹤格式。 以不同格式發出的追蹤資料必須先經過轉換，才能透過檢視器加以顯示。 除了活動追蹤格式之外，目前的檢視器還支援事件追蹤和 Crimson 追蹤。  
+ 檢視器的原生格式是 WCF 發出活動追蹤格式。 以不同格式發出的追蹤資料必須先經過轉換，才能透過檢視器加以顯示。 除了活動追蹤格式之外，目前的檢視器還支援事件追蹤和 Crimson 追蹤。  
   
  當您開啟不包含活動追蹤的檔案時，檢視器會嘗試轉換檔案。 您必須指定將包含已轉換追蹤資料之檔案的名稱與位置。 一旦資料轉換完畢，檢視器就會顯示新檔案的內容。  
   
@@ -104,7 +104,7 @@ Windows Communication Foundation (WCF) 服務追蹤檢視器工具可協助您�
 -   在**專案**索引標籤上，您可以將檔案加入專案。  
   
 ### <a name="viewing-wcf-traces"></a>檢視 WCF 追蹤  
- [!INCLUDE[indigo2](../../../includes/indigo2-md.md)] 使用活動追蹤格式發出追蹤。 在活動追蹤模型中，個別追蹤會依其用途分為不同的活動群組。 邏輯控制流程會在活動之間傳輸。 例如，在應用程式的存留期內，會出現許多「訊息傳送活動」然後消失。 多個太檢視追蹤和活動和使用者介面的服務追蹤檢視器的詳細資訊，請參閱[使用服務追蹤檢視器檢視相關追蹤和疑難排解](../../../docs/framework/wcf/diagnostics/tracing/using-service-trace-viewer-for-viewing-correlated-traces-and-troubleshooting.md)。  
+ WCF 會發出追蹤使用活動追蹤格式。 在活動追蹤模型中，個別追蹤會依其用途分為不同的活動群組。 邏輯控制流程會在活動之間傳輸。 例如，在應用程式的存留期內，會出現許多「訊息傳送活動」然後消失。 多個太檢視追蹤和活動和使用者介面的服務追蹤檢視器的詳細資訊，請參閱[使用服務追蹤檢視器檢視相關追蹤和疑難排解](../../../docs/framework/wcf/diagnostics/tracing/using-service-trace-viewer-for-viewing-correlated-traces-and-troubleshooting.md)。  
   
 #### <a name="switching-to-different-views"></a>切換至不同的檢視  
  服務追蹤檢視器可提供不同的檢視， 它們會顯示成索引標籤，在左窗格中的檢視器中，而且也可以存取從**檢視**功能表。  
@@ -217,7 +217,7 @@ Windows Communication Foundation (WCF) 服務追蹤檢視器工具可協助您�
   
 -   篩選器工具列可讓您存取預先定義和自訂的篩選器。 可透過啟用**檢視**功能表。  
   
--   您可以使用檢視器預先定義的篩選器，針對 [!INCLUDE[indigo2](../../../includes/indigo2-md.md)] 追蹤部分進行選擇性的篩選。 根據預設，這個篩選器會允許所有的基礎結構追蹤通過。 此篩選器的設定會定義在**篩選選項**子功能表下的**檢視**功能表。  
+-   檢視器的預先定義的篩選條件可以用於選擇性地篩選 WCF 追蹤的部分。 根據預設，這個篩選器會允許所有的基礎結構追蹤通過。 此篩選器的設定會定義在**篩選選項**子功能表下的**檢視**功能表。  
   
 -   [自訂 XPath] 篩選器可讓使用者完整控制整個篩選過程。 可以在定義**自訂篩選**下**檢視**功能表。  
   
@@ -237,7 +237,7 @@ Windows Communication Foundation (WCF) 服務追蹤檢視器工具可協助您�
  **清除**按鈕會重設預先定義和自訂篩選器，以允許所有追蹤通過。  
   
 #### <a name="filter-options"></a>篩選選項：  
- 檢視器能夠自動移除檢視中的 [!INCLUDE[indigo2](../../../includes/indigo2-md.md)] 追蹤。 它可以選擇性地移除由 [!INCLUDE[indigo2](../../../includes/indigo2-md.md)] 特定區域所發出的追蹤，例如，從檢視中移除與交易相關的追蹤。  
+ 檢視器會自訂移除檢視中的 WCF 追蹤。 它會選擇性地移除由 WCF 特定區域所發出的追蹤，例如，從檢視中移除與交易相關的追蹤。  
   
  此篩選器的設定會定義在**篩選選項**子功能表下的**檢視**功能表。  
   
@@ -347,7 +347,7 @@ Windows Communication Foundation (WCF) 服務追蹤檢視器工具可協助您�
 -   逐步返回： 使用**活動**功能表，或是按下 「 F9"。 您也可以使用 「 向上 」 的方向鍵，在 [追蹤] 窗格中。  
   
 > [!NOTE]
->  這會將您帶往在不同處理序中，甚至是不同電腦上發生的活動，因為 [!INCLUDE[indigo2](../../../includes/indigo2-md.md)] 訊息可包含跨越電腦的活動識別碼。  
+>  這會將您帶往在不同的處理序，或甚至是不同的電腦上發生的活動因為 WCF 訊息可包含跨越電腦的活動識別碼。  
   
 #### <a name="follow-transfer"></a>跟隨 Transfer  
  傳輸追蹤是追蹤檔案中的特別追蹤。 活動可以藉由傳輸追蹤來傳輸到另一個活動。 例如，「 活動 A 」 可以傳輸至 「 活動 B 」。 在這種情況下，將傳輸追蹤中沒有名稱"至： 活動 」 與傳送的 「 活動 A 」 圖示。 這個傳輸追蹤是這兩個追蹤的連結。 「 活動 B 」 中可能也有一個傳輸追蹤，用來傳輸回到 「 活動 A 」 活動的結尾。 這跟程式中的函式呼叫 (Function Call) 類似：A 呼叫 B，然後 B 將資料傳回 A。  
@@ -417,9 +417,9 @@ Windows Communication Foundation (WCF) 服務追蹤檢視器工具可協助您�
   
 |圖示|描述|  
 |----------|-----------------|  
-|![訊息記錄追蹤](../../../docs/framework/wcf/media/7c66e994-2476-4260-a0db-98948b9af197.gif "7c66e994-2476-4260-a0db-98948b9af197")|訊息記錄追蹤：當 [!INCLUDE[indigo2](../../../includes/indigo2-md.md)] 追蹤來源已啟用時，某個 `System.ServiceModel.MessageLogging` 訊息由訊息記錄功能記錄時所發出的追蹤。 按一下此追蹤會顯示訊息。 訊息有四個可設定記錄點：ServiceLevelSendRequest、TransportSend、TransportReceive 和 ServiceLevelReceiveRequest，也可以由訊息記錄追蹤中的 `messageSource` 屬性來指定。|  
-|![收到的訊息追蹤](../../../docs/framework/wcf/media/de4f586c-c5dd-41ec-b1c3-ac56b4dfa35c.gif "de4f586c-c5dd-41ec-b1c3-ac56b4dfa35c")|已接收訊息追蹤：如果已在「資訊」層級或「詳細資訊」層級啟用 [!INCLUDE[indigo2](../../../includes/indigo2-md.md)] 追蹤來源而收到 `System.ServiceModel` 訊息時，便會發出此追蹤。 此追蹤是不可或缺的活動中檢視訊息相互關聯箭頭**圖形**檢視。|  
-|![傳送訊息追蹤](../../../docs/framework/wcf/media/558943c4-17cf-4c12-9405-677e995ac387.gif "558943c4-17cf-4c12-9405-677e995ac387")|已傳送訊息追蹤：如果已在「資訊」層級或「詳細資訊」層級啟用 [!INCLUDE[indigo2](../../../includes/indigo2-md.md)] 追蹤來源而傳送 `System.ServiceModel` 訊息時，便會發出此追蹤。 此追蹤是不可或缺的活動中檢視訊息相互關聯箭頭**圖形**檢視。|  
+|![訊息記錄追蹤](../../../docs/framework/wcf/media/7c66e994-2476-4260-a0db-98948b9af197.gif "7c66e994-2476-4260-a0db-98948b9af197")|訊息記錄追蹤： WCF 訊息記錄訊息記錄功能時，就會發出追蹤時`System.ServiceModel.MessageLogging`追蹤來源已啟用。 按一下此追蹤會顯示訊息。 訊息有四個可設定記錄點：ServiceLevelSendRequest、TransportSend、TransportReceive 和 ServiceLevelReceiveRequest，也可以由訊息記錄追蹤中的 `messageSource` 屬性來指定。|  
+|![收到的訊息追蹤](../../../docs/framework/wcf/media/de4f586c-c5dd-41ec-b1c3-ac56b4dfa35c.gif "de4f586c-c5dd-41ec-b1c3-ac56b4dfa35c")|收到的訊息追蹤： 如果收到 WCF 訊息時，發出的追蹤`System.ServiceModel`追蹤來源已啟用資訊或詳細資訊層級。 此追蹤是不可或缺的活動中檢視訊息相互關聯箭頭**圖形**檢視。|  
+|![傳送訊息追蹤](../../../docs/framework/wcf/media/558943c4-17cf-4c12-9405-677e995ac387.gif "558943c4-17cf-4c12-9405-677e995ac387")|傳送訊息追蹤： 如果傳送 WCF 訊息時，就會發出追蹤`System.ServiceModel`追蹤來源已啟用資訊或詳細資訊層級。 此追蹤是不可或缺的活動中檢視訊息相互關聯箭頭**圖形**檢視。|  
   
 ### <a name="activities"></a>活動  
   
@@ -432,11 +432,11 @@ Windows Communication Foundation (WCF) 服務追蹤檢視器工具可協助您�
   
 |圖示|描述|  
 |----------|-----------------|  
-|![環境活動](../../../docs/framework/wcf/media/29fa00ac-cf78-46e5-822d-56222fff61d1.gif "29fa00ac-cf78-46e5-822d-56222fff61d1")|環境活動：可建立、開啟或關閉 [!INCLUDE[indigo2](../../../includes/indigo2-md.md)] 主機或用戶端的活動。 在這些階段內發生的錯誤會出現在這個活動中。|  
+|![環境活動](../../../docs/framework/wcf/media/29fa00ac-cf78-46e5-822d-56222fff61d1.gif "29fa00ac-cf78-46e5-822d-56222fff61d1")|環境活動： 建立、 開啟或關閉 WCF 主機或用戶端的活動。 在這些階段內發生的錯誤會出現在這個活動中。|  
 |![接聽活動](../../../docs/framework/wcf/media/d7b135f6-ec7d-45d7-9913-037ab30e4c26.gif "d7b135f6-ec7d-45d7-9913-037ab30e4c26")|接聽活動：記錄與接聽項相關之追蹤的活動。 在這個活動內，我們可以檢視接聽項資訊和連線要求。|  
 |![接收位元組活動](../../../docs/framework/wcf/media/2f628580-b80f-45a7-925b-616c96426c0e.gif "2f628580-b80f-45a7-925b-616c96426c0e")|接收位元組活動：這個活動會將所有關於在兩端點間連線上接收傳入位元組的追蹤組成群組。 必須有這個活動，才能與傳播活動識別碼的傳輸活動建立相互關聯。 包括連線中止在內的連線錯誤會出現在這個活動中。|  
-|![處理訊息活動](../../../docs/framework/wcf/media/wcfc-executionactivityiconc.GIF "wcfc_ExecutionActivityIconc")|處理訊息活動：這個活動會將有關建立 [!INCLUDE[indigo2](../../../includes/indigo2-md.md)] 訊息的追蹤組成群組。 由於信封不良或格式錯誤的訊息而發生的錯誤會出現在這個活動中。 在這個活動內，我們可以檢查訊息標頭，了解是否已從呼叫端傳播出活動識別碼。 如果已傳播活動識別碼，當傳輸至處理動作活動 (請參閱下一個圖示) 時，也可以將傳播的活動識別碼指派給該活動，讓呼叫端和被呼叫端追蹤之間能產生相互關聯。|  
-|![訊息記錄追蹤](../../../docs/framework/wcf/media/7c66e994-2476-4260-a0db-98948b9af197.gif "7c66e994-2476-4260-a0db-98948b9af197")|處理動作活動：這個活動會將所有關於跨越兩個端點之 [!INCLUDE[indigo2](../../../includes/indigo2-md.md)] 要求的追蹤組成群組。 如果組態中兩個端點上的 `propagateActivity` 都設為 `true`，則來自這兩個端點的所有追蹤會合併為一個活動，以便直接相互關聯。 由於傳輸或安全性處理在擴及使用者程式碼界限後返回 (如果回應存在的話) 所造成的錯誤，會包含在這個活動中。|  
+|![處理訊息活動](../../../docs/framework/wcf/media/wcfc-executionactivityiconc.GIF "wcfc_ExecutionActivityIconc")|處理訊息活動： 建立 WCF 訊息的相關追蹤組成群組的活動。 由於信封不良或格式錯誤的訊息而發生的錯誤會出現在這個活動中。 在這個活動內，我們可以檢查訊息標頭，了解是否已從呼叫端傳播出活動識別碼。 如果已傳播活動識別碼，當傳輸至處理動作活動 (請參閱下一個圖示) 時，也可以將傳播的活動識別碼指派給該活動，讓呼叫端和被呼叫端追蹤之間能產生相互關聯。|  
+|![訊息記錄追蹤](../../../docs/framework/wcf/media/7c66e994-2476-4260-a0db-98948b9af197.gif "7c66e994-2476-4260-a0db-98948b9af197")|處理動作活動： 群組的所有追蹤的活動 WCF 與要求相關跨越兩個端點。 如果組態中兩個端點上的 `propagateActivity` 都設為 `true`，則來自這兩個端點的所有追蹤會合併為一個活動，以便直接相互關聯。 由於傳輸或安全性處理在擴及使用者程式碼界限後返回 (如果回應存在的話) 所造成的錯誤，會包含在這個活動中。|  
 |![處理訊息活動](../../../docs/framework/wcf/media/wcfc-executionactivityiconc.GIF "wcfc_ExecutionActivityIconc")|執行使用者程式碼活動：將處理要求的使用者程式碼追蹤組成群組的活動。|  
   
 ## <a name="troubleshooting"></a>疑難排解  

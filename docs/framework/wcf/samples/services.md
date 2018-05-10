@@ -2,30 +2,30 @@
 title: Services2
 ms.date: 03/30/2017
 ms.assetid: 462a2218-f8c6-4fb7-95bc-64765459c429
-ms.openlocfilehash: ef5de3fc51e43a88adb021b66732492f03d9d912
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
-ms.translationtype: HT
+ms.openlocfilehash: 2b6d8322caa32246d6171af50c7773342ac11de2
+ms.sourcegitcommit: 15109844229ade1c6449f48f3834db1b26907824
+ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/04/2018
+ms.lasthandoff: 05/07/2018
 ---
 # <a name="services"></a>服務
 本節包含示範 Windows Communication Foundation (WCF) 服務的範例。  
   
 ## <a name="in-this-section"></a>本節內容  
  [裝載](../../../../docs/framework/wcf/feature-details/hosting.md)  
- 示範裝載 [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] 服務。  
+ 示範裝載 WCF 服務。  
   
  [服務互通性](../../../../docs/framework/wcf/samples/service-interoperability.md)  
- 示範 [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] 和其他服務技術之間的互動。  
+ 示範 WCF 與其他服務技術之間的互動。  
   
  [行為](../../../../docs/framework/wcf/samples/behaviors.md)  
- 示範 [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] 服務行為。  
+ 示範 WCF 服務行為。  
   
  [服務安全性](../../../../docs/framework/wcf/samples/service-security.md)  
- 示範 [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] 服務安全性。  
+ 示範 WCF 服務的安全性。  
   
  [WCF 服務的簡化組態](../../../../docs/framework/wcf/samples/simplified-configuration-for-wcf-services.md)  
- 示範如何使用 [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] 實作與設定一般服務和用戶端。  
+ 示範如何實作與設定一般服務與使用 WCF 用戶端。  
   
  [使用標準端點](../../../../docs/framework/wcf/samples/usage-of-standard-endpoints.md)  
  示範如何在服務組態檔中使用標準端點。  
@@ -55,7 +55,7 @@ ms.lasthandoff: 05/04/2018
  示範在單一 `ListenUri` 裝載多個端點的服務。  
   
  [OperationContextScope](../../../../docs/framework/wcf/samples/operationcontextscope.md)  
- 示範如何使用標頭在 [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] 呼叫時傳送額外資訊。  
+ 示範如何傳送使用標頭在 WCF 呼叫的額外資訊。  
   
  [服務描述](../../../../docs/framework/wcf/samples/service-description.md)  
  示範服務如何在執行階段擷取其服務描述資訊。  

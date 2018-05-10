@@ -2,11 +2,11 @@
 title: 自訂通道發送器
 ms.date: 03/30/2017
 ms.assetid: 813acf03-9661-4d57-a3c7-eeab497321c6
-ms.openlocfilehash: 7cd27d485efe7fe91e7c59627bf14e188e85f386
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
-ms.translationtype: HT
+ms.openlocfilehash: 2f7bb67f45c3aa9eb0cb58fa2f30744d5500fab0
+ms.sourcegitcommit: 15109844229ade1c6449f48f3834db1b26907824
+ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/04/2018
+ms.lasthandoff: 05/07/2018
 ---
 # <a name="custom-channel-dispatcher"></a>自訂通道發送器
 此範例示範如何使用自訂的方式，直接實作 <xref:System.ServiceModel.ServiceHostBase> 來建立通道堆疊，以及如何在 Web 主機環境中建立自訂通道發送器。 通道發送器會與 <xref:System.ServiceModel.Channels.IChannelListener> 互動，以接受通道並擷取來自通道堆疊的訊息。 此範例也提供基本範例，示範如何在 Web 主機環境中使用 <xref:System.ServiceModel.Activation.VirtualPathExtension> 建立通道堆疊。  
@@ -22,13 +22,13 @@ ms.lasthandoff: 05/04/2018
  發送器會先開啟通道接聽項，然後接受單一回覆通道。 它會利用通道，開始以無限迴圈傳送訊息 (要求)。 針對每個要求，它都會建立一個回覆訊息，並將其傳回用戶端。  
   
 ## <a name="creating-a-response-message"></a>建立回應訊息  
- 訊息處理是以 `MyServiceManager` 類型實作。 在 `HandleRequest` 方法中，會先檢查訊息的 `Action` 標頭，以查看是否支援要求。 預先定義的 SOAP 動作"http://tempuri.org/HelloWorld/Hello」 定義來提供訊息篩選。 這類似於 [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] 之 <xref:System.ServiceModel.ServiceHost> 實作中的服務合約概念。  
+ 訊息處理是以 `MyServiceManager` 類型實作。 在 `HandleRequest` 方法中，會先檢查訊息的 `Action` 標頭，以查看是否支援要求。 預先定義的 SOAP 動作"http://tempuri.org/HelloWorld/Hello」 定義來提供訊息篩選。 這是 WCF 實作的服務合約概念類似<xref:System.ServiceModel.ServiceHost>。  
   
  若是正確的 SOAP 動作案例，此範例會擷取要求的訊息資料，並針對要求產生類似於 <xref:System.ServiceModel.ServiceHost> 案例中看到的對應回應。  
   
  在此情況下，您要透過傳回自訂 HTML 訊息來明確地處理 HTTP-GET 動詞命令，讓您可以從瀏覽器瀏覽服務，以查看它是否正確編譯。 如果 SOAP 動作不相符，請傳回錯誤訊息以指出此要求不受到支援。  
   
- 此範例的用戶端是一個標準的 [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] 用戶端，不會假定來自服務的任何事項。 因此，此服務是特別針對符合您從一般 [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)]<xref:System.ServiceModel.ServiceHost> 實作所取得的項目而設計。 所以，在用戶端上只需要一個服務合約。  
+ 此範例的用戶端是正常的 WCF 用戶端不會假設來自服務的任何項目。 服務，特別設計為比對您會取得從標準 WCF<xref:System.ServiceModel.ServiceHost>實作。 所以，在用戶端上只需要一個服務合約。  
   
 ## <a name="using-the-sample"></a>使用範例  
  執行用戶端應用程式會直接產生下列輸出。  

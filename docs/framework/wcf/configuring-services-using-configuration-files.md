@@ -4,16 +4,16 @@ ms.date: 03/30/2017
 helpviewer_keywords:
 - configuring services [WCF]
 ms.assetid: c9c8cd32-2c9d-4541-ad0d-16dff6bd2a00
-ms.openlocfilehash: abfe502c6b50234037cad786a658edc3d479cc9e
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
-ms.translationtype: HT
+ms.openlocfilehash: 19ba0e585dfdd2ee47781b04a3d1a5bbdba60371
+ms.sourcegitcommit: 15109844229ade1c6449f48f3834db1b26907824
+ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/04/2018
+ms.lasthandoff: 05/07/2018
 ---
 # <a name="configuring-services-using-configuration-files"></a>使用組態檔設定服務
 使用組態檔設定 Windows Communication Foundation (WCF) 服務可讓您彈性提供端點和服務行為資料在部署而不是在設計階段。 本主題概要說明可用的主要技巧。  
   
- [!INCLUDE[indigo2](../../../includes/indigo2-md.md)] 服務可使用 [!INCLUDE[dnprdnshort](../../../includes/dnprdnshort-md.md)] 組態技術來設定。 最常見的是，會將 XML 項目新增至裝載 [!INCLUDE[indigo2](../../../includes/indigo2-md.md)] 服務的網際網路資訊服務 (IIS) 網站的 Web.config 檔案。 這些項目允許您變更詳細資料，例如各電腦的端點位址 (用於與服務通訊的實際位址)。 此外， [!INCLUDE[indigo2](../../../includes/indigo2-md.md)] 還包含了一些系統提供的項目，方便您快速選取最基本的服務功能。 從 [!INCLUDE[netfx40_long](../../../includes/netfx40-long-md.md)]開始， [!INCLUDE[indigo2](../../../includes/indigo2-md.md)] 隨附可簡化 [!INCLUDE[indigo2](../../../includes/indigo2-md.md)] 組態需求的新預設組態模型。 如果您沒有對特定服務提供任何 [!INCLUDE[indigo2](../../../includes/indigo2-md.md)] 組態，執行階段會以一些標準端點和預設繫結/行為來設定服務。 事實上，撰寫組態是程式設計 [!INCLUDE[indigo2](../../../includes/indigo2-md.md)] 應用程式的主要部分。  
+ WCF 服務是可設定使用[!INCLUDE[dnprdnshort](../../../includes/dnprdnshort-md.md)]技術設定。 最常見的是，XML 項目新增至裝載 WCF 服務的 Internet Information Services (IIS) 網站的 Web.config 檔案。 這些項目允許您變更詳細資料，例如各電腦的端點位址 (用於與服務通訊的實際位址)。 此外，WCF 會包含數個系統提供的項目可讓您快速選取最基本功能的服務。 從開始[!INCLUDE[netfx40_long](../../../includes/netfx40-long-md.md)]，WCF 隨附可簡化 WCF 組態需求的新預設組態模型。 如果您未提供任何特定服務的 WCF 組態，執行階段會以一些標準端點和預設繫結/行為自動設定服務。 事實上，撰寫組態是主要的撰寫 WCF 應用程式一部分。  
   
  如需詳細資訊，請參閱[設定服務的繫結](../../../docs/framework/wcf/configuring-bindings-for-wcf-services.md)。 如需的最常用的項目，請參閱 <<c0> [ 之繫結](../../../docs/framework/wcf/system-provided-bindings.md)。 如需有關預設端點、 繫結和行為的詳細資訊，請參閱[簡化的組態](../../../docs/framework/wcf/simplified-configuration.md)和[簡化 WCF 服務的組態](../../../docs/framework/wcf/samples/simplified-configuration-for-wcf-services.md)。  
   
@@ -21,7 +21,7 @@ ms.lasthandoff: 05/04/2018
 >  部署並存案例時，如果部署了兩個不同的服務版本，您就必須指定組態檔所參考之組件的部分名稱。 這是因為組態檔會在所有服務版本之間共用，而且它們可能會在不同的 .NET Framework 版本底下執行。  
   
 ## <a name="systemconfiguration-webconfig-and-appconfig"></a>System.Configuration：Web.config 和 App.config  
- [!INCLUDE[indigo2](../../../includes/indigo2-md.md)] 使用 [!INCLUDE[dnprdnshort](../../../includes/dnprdnshort-md.md)]的 System.Configuration 組態系統。  
+ WCF 中使用的 System.Configuration 組態系統[!INCLUDE[dnprdnshort](../../../includes/dnprdnshort-md.md)]。  
   
  設定服務時 Visual Studio 中，使用 Web.config 檔或 App.config 檔案以指定的設定。 組態檔名稱的選擇取決於您為服務選擇的裝載環境。 如果您選擇使用 IIS 來裝載服務，請使用 Web.config 檔。 如果您使用其他任何裝載環境，請使用 App.config 檔。  
   
@@ -115,7 +115,7 @@ ms.lasthandoff: 05/04/2018
  [\<行為 >](../../../docs/framework/configure-apps/file-schema/wcf/behavior-of-servicebehaviors.md)  
   
 ## <a name="how-to-use-binding-and-behavior-configurations"></a>如何使用繫結與行為組態  
- [!INCLUDE[indigo2](../../../includes/indigo2-md.md)] 可讓您輕易地透過組態的參考系統在端點之間共用組態。 與其直接指派組態值給端點，繫結相關的組態值會被分類到 `bindingConfiguration` 區段的 `<binding>` 項目群組中。 一個繫結組態是繫結上的一個具名的設定群組。 然後，端點可以依照名稱來參考 `bindingConfiguration` 。  
+ WCF 可讓您更容易使用的參考系統組態中的端點之間共用組態。 與其直接指派組態值給端點，繫結相關的組態值會被分類到 `bindingConfiguration` 區段的 `<binding>` 項目群組中。 一個繫結組態是繫結上的一個具名的設定群組。 然後，端點可以依照名稱來參考 `bindingConfiguration` 。  
   
 ```xml  
 <?xml version="1.0" encoding="utf-8"?>  

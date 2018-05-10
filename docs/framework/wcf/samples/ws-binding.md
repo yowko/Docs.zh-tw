@@ -2,11 +2,11 @@
 title: WS 繫結
 ms.date: 03/30/2017
 ms.assetid: 629945b2-d771-46d7-a87b-5df3b2e460da
-ms.openlocfilehash: 67102c7c2925c2ac032d9defccdd5e187e76d608
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
-ms.translationtype: HT
+ms.openlocfilehash: 11480b91c6ac6a5501029dfdf10cd81d3fa18820
+ms.sourcegitcommit: 15109844229ade1c6449f48f3834db1b26907824
+ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/04/2018
+ms.lasthandoff: 05/07/2018
 ---
 # <a name="ws-binding"></a>WS 繫結
 本節包含示範 Windows 服務繫結中 Windows Communication Foundation (WCF) 的範例。  
@@ -25,7 +25,7 @@ ms.lasthandoff: 05/04/2018
  透過 WSHttpBinding 使用「訊息傳輸最佳化機制」(Message Transmission Optimization Mechanism，MTOM) 訊息編碼。  
   
  [WSHttpBinding](../../../../docs/framework/wcf/samples/wshttpbinding.md)  
- 示範如何使用 [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] 實作一般服務與一般用戶端。  
+ 示範如何實作一般服務與一般用戶端使用 WCF。  
   
  [WS 可靠工作階段](../../../../docs/framework/wcf/samples/ws-reliable-session.md)  
  示範可靠工作階段的使用方式。  
@@ -34,7 +34,7 @@ ms.lasthandoff: 05/04/2018
  示範如何搭配 <xref:System.ServiceModel.WSHttpBinding> 繫結來使用 SSL 傳輸安全性。  
   
  [訊息安全性繫結](../../../../docs/framework/wcf/samples/message-security-binding.md)  
- 示範如何使用 [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] 中的訊息安全性。  
+ 示範如何在 WCF 中使用訊息安全性。  
   
  [使用訊息認證的 WS 傳輸](../../../../docs/framework/wcf/samples/ws-transport-with-message-credential.md)  
  這個範例會示範如何結合訊息中傳遞的用戶端認證來使用 SSL 傳輸安全性。

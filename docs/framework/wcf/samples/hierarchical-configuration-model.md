@@ -2,17 +2,17 @@
 title: 階層式組態模型
 ms.date: 03/30/2017
 ms.assetid: 28dcc698-226c-4b77-9e51-8bf45a36216c
-ms.openlocfilehash: 4debeaf0bfd2558552a7943f3767a4f9b53ce550
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
-ms.translationtype: HT
+ms.openlocfilehash: 233a8d4ba36835ab26e0c4a8cd044cf60d497a0b
+ms.sourcegitcommit: 15109844229ade1c6449f48f3834db1b26907824
+ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/04/2018
+ms.lasthandoff: 05/07/2018
 ---
 # <a name="hierarchical-configuration-model"></a>階層式組態模型
 此範例示範如何針對服務實作組態檔的階層。 它也會示範如何從階層中較高的層級繼承繫結、服務行為與端點行為。  
   
 ## <a name="sample-details"></a>範例詳細資料  
- 針對 [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] 中的 [!INCLUDE[netfx40_long](../../../../includes/netfx40-long-md.md)] 開發之其中一個功能是階層組態模型中的改進功能。 階層組態模型的範例是由 Machine.config -> Rootweb.config -> Web.config 所定義的範例。在 [!INCLUDE[netfx40_short](../../../../includes/netfx40-short-md.md)] 中，於組態階層之較上層中定義的那些繫結與行為都會在沒有明確組態的情況下，加入至您的服務。 此範例示範如何能夠透過依賴在電腦或應用程式層級定義的組態項目，簡化您的服務組態。  
+ 其中一項功能針對中的 WCF 開發[!INCLUDE[netfx40_long](../../../../includes/netfx40-long-md.md)]是階層組態模型中的改進。 階層組態模型的範例是由 Machine.config -> Rootweb.config -> Web.config 所定義的範例。在 [!INCLUDE[netfx40_short](../../../../includes/netfx40-short-md.md)] 中，於組態階層之較上層中定義的那些繫結與行為都會在沒有明確組態的情況下，加入至您的服務。 此範例示範如何能夠透過依賴在電腦或應用程式層級定義的組態項目，簡化您的服務組態。  
   
  這個範例由三個階層層級中定義的九個服務所組成。 `Service1` 位於根目錄。 `Service2` 和 `Service3` 從 `Service1` 繼承預設元素。 `Service4`、`Service5`、`Service6` 和 `Service7` 是在階層的第三個層級定義的，且從 `Service3` 繼承預設項目。 最後，`Service10` 和 `Service11` 則位於階層的第四個層級。  
   

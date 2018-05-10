@@ -7,11 +7,11 @@ helpviewer_keywords:
 - deploying [WCF Data Services
 - developing applications [WCF Data Services]
 ms.assetid: 6557c0e3-5aea-4f6e-bc14-77ad317a168b
-ms.openlocfilehash: e02b7317eef8e7124bd5ba9ceef201cddc9bbea1
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
-ms.translationtype: HT
+ms.openlocfilehash: ca0f78239e6e259ec5bd75e9f93af5c3a4b7adf1
+ms.sourcegitcommit: 15109844229ade1c6449f48f3834db1b26907824
+ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/04/2018
+ms.lasthandoff: 05/07/2018
 ---
 # <a name="developing-and-deploying-wcf-data-services"></a>開發和部署 WCF Data Services
 本主題提供有關開發及部署 [!INCLUDE[ssAstoria](../../../../includes/ssastoria-md.md)]的資訊。 如需更多的基本資訊[!INCLUDE[ssAstoria](../../../../includes/ssastoria-md.md)]，請參閱[入門](../../../../docs/framework/data/wcf/getting-started-with-wcf-data-services.md)和[概觀](../../../../docs/framework/data/wcf/wcf-data-services-overview.md)。  
@@ -75,7 +75,7 @@ ms.lasthandoff: 05/04/2018
   
 -   透過讓您檢查要求和回應訊息的內容對資料服務進行偵錯時，HTTP 檢查程式可能會很有幫助。 可以顯示原始封包的任何網路封包分析器可用於檢查資料服務的 HTTP 要求及其回應。  
   
--   對資料服務進行偵錯時，可能比正常作業期間更想要從資料服務取得有關錯誤的詳細資訊。 您可以從資料服務取得其他錯誤資訊，方法是，將 <xref:System.Data.Services.DataServiceConfiguration.UseVerboseErrors%2A> 中的 <xref:System.Data.Services.DataServiceConfiguration> 屬性 (Property) 設為 `true` ，然後在資料服務類別上，將 <xref:System.ServiceModel.Description.ServiceDebugBehavior.IncludeExceptionDetailInFaults%2A> 屬性 (Attribute) 的 <xref:System.ServiceModel.Description.ServiceDebugBehavior> 屬性 (Property) 設為 `true`。 如需詳細資訊，請參閱下列文章[偵錯 WCF Data Services](http://go.microsoft.com/fwlink/?LinkId=201868)。 您也可以在 [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] 中啟用追蹤來檢視在 HTTP 訊息層引發的例外狀況。 如需詳細資訊，請參閱 [Configuring Tracing](../../../../docs/framework/wcf/diagnostics/tracing/configuring-tracing.md)。  
+-   對資料服務進行偵錯時，可能比正常作業期間更想要從資料服務取得有關錯誤的詳細資訊。 您可以從資料服務取得其他錯誤資訊，方法是，將 <xref:System.Data.Services.DataServiceConfiguration.UseVerboseErrors%2A> 中的 <xref:System.Data.Services.DataServiceConfiguration> 屬性 (Property) 設為 `true` ，然後在資料服務類別上，將 <xref:System.ServiceModel.Description.ServiceDebugBehavior.IncludeExceptionDetailInFaults%2A> 屬性 (Attribute) 的 <xref:System.ServiceModel.Description.ServiceDebugBehavior> 屬性 (Property) 設為 `true`。 如需詳細資訊，請參閱下列文章[偵錯 WCF Data Services](http://go.microsoft.com/fwlink/?LinkId=201868)。 您也可以啟用追蹤，在 WCF 中，檢視在 HTTP 訊息層引發的例外狀況。 如需詳細資訊，請參閱 [Configuring Tracing](../../../../docs/framework/wcf/diagnostics/tracing/configuring-tracing.md)。  
   
 -   資料服務通常會開發為[!INCLUDE[vstecasp](../../../../includes/vstecasp-md.md)]應用程式專案，但是您也可以建立您資料服務當做[!INCLUDE[vstecasp](../../../../includes/vstecasp-md.md)]Visual Studio 中的網站專案。 兩種專案類型之間差異的詳細資訊，請參閱[NIB: Web 應用程式專案與 Visual Studio 中的網站專案](http://msdn.microsoft.com/library/2861815e-f5a2-4378-a2f8-b8a86dc012f5)。  
   
@@ -116,7 +116,7 @@ ms.lasthandoff: 05/04/2018
   
 -   當您部署使用 [!INCLUDE[adonet_ef](../../../../includes/adonet-ef-md.md)] 提供者存取 SQL Server 資料庫的資料服務時，可能也需要使用資料服務部署傳播資料結構、資料或兩者。 Visual Studio 可以自動建立指令碼 （.sql 檔），以在目的地資料庫中，執行這項操作，而且這些指令碼可併入 Web 部署套件[!INCLUDE[vstecasp](../../../../includes/vstecasp-md.md)]應用程式。 如需詳細資訊，請參閱[NIB： 如何： 部署資料庫與 Web 應用程式專案](http://msdn.microsoft.com/library/683b33f1-8a3d-45cf-af6e-61ab50fc518b)。 如[!INCLUDE[vstecasp](../../../../includes/vstecasp-md.md)]網站上，您可以使用**資料庫發行精靈**Visual Studio 中。 如需詳細資訊，請參閱 [部署資料庫使用資料庫發行精靈](http://msdn.microsoft.com/library/1e3682e7-8b57-4da6-a393-af9640ccf8b7)。  
   
--   [!INCLUDE[ssAstoria](../../../../includes/ssastoria-md.md)] 包含基本的 [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] 實作，因此您可以使用 Windows Server AppFabric 監視部署至在 Windows Server 上執行之 IIS 的資料服務。 如需使用 Windows Server AppFabric 監視資料服務的詳細資訊，請參閱下列文章[使用 Windows Server AppFabric 追蹤 WCF Data Services](http://go.microsoft.com/fwlink/?LinkID=202005)。  
+-   因為[!INCLUDE[ssAstoria](../../../../includes/ssastoria-md.md)]包含基本的 WCF 實作，您可以使用 Windows Server AppFabric 監視部署至 Windows Server 上執行之 IIS 的資料服務。 如需使用 Windows Server AppFabric 監視資料服務的詳細資訊，請參閱下列文章[使用 Windows Server AppFabric 追蹤 WCF Data Services](http://go.microsoft.com/fwlink/?LinkID=202005)。  
   
 ## <a name="see-also"></a>另請參閱  
  [裝載資料服務](../../../../docs/framework/data/wcf/hosting-the-data-service-wcf-data-services.md)  

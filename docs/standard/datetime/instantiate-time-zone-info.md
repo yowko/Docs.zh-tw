@@ -36,7 +36,7 @@ ms.lasthandoff: 05/04/2018
 [!code-csharp[System.TimeZone2.Concepts#5](../../../samples/snippets/csharp/VS_Snippets_CLR_System/system.TimeZone2.Concepts/CS/TimeZone2Concepts.cs#5)]
 [!code-vb[System.TimeZone2.Concepts#5](../../../samples/snippets/visualbasic/VS_Snippets_CLR_System/system.TimeZone2.Concepts/VB/TimeZone2Concepts.vb#5)]
 
-<xref:System.TimeZoneInfo.FindSystemTimeZoneById%2A?displayProperty=nameWithType>方法的參數，就是時區的識別項，您想要擷取其對應至物件的<xref:System.TimeZoneInfo.Id%2A?displayProperty=nameWithType>屬性。 時區識別項是唯一識別時區的索引鍵欄位。 雖然大部分的索引鍵相對較短，但時區識別項相較之下就很長。 在大部分情況下，其值會對應到 <xref:System.TimeZoneInfo.StandardName%2A> 物件的 <xref:System.TimeZoneInfo> 屬性，其用來提供時區標準時間的名稱。 不過仍有例外狀況。 若要確定您提供了有效的識別項，最好的方法是列舉系統上可用的時區，並記下存在於其之上的時區識別項。 如需圖例，請參閱 [How to: Enumerate time zones present on a computer](../../../docs/standard/datetime/enumerate-time-zones.md)。 [Finding the time zones defined on a local system](../../../docs/standard/datetime/finding-the-time-zones-on-local-system.md) 主題同時包含所選取的時區識別碼的清單。
+<xref:System.TimeZoneInfo.FindSystemTimeZoneById%2A?displayProperty=nameWithType>方法的參數，就是時區的識別項，您想要擷取其對應至物件的<xref:System.TimeZoneInfo.Id%2A?displayProperty=nameWithType>屬性。 時區識別項是唯一識別時區的索引鍵欄位。 雖然大部分的索引鍵相對較短，但時區識別項相較之下就很長。 在大部分情況下，其值會對應到 <xref:System.TimeZoneInfo.StandardName%2A> 物件的 <xref:System.TimeZoneInfo> 屬性，其用來提供時區標準時間的名稱。 不過仍有例外狀況。 若要確定您提供了有效的識別項，最好的方法是列舉系統上可用的時區，並記下存在於其之上的時區識別項。 如需圖例，請參閱 [如何：列舉電腦上展示的時區](../../../docs/standard/datetime/enumerate-time-zones.md)。 [尋找定義於本機系統的時區](../../../docs/standard/datetime/finding-the-time-zones-on-local-system.md) 主題同時包含所選取的時區識別碼的清單。
 
 如果找到時區，此方法會傳回其 <xref:System.TimeZoneInfo> 物件。 如果找不到時區，方法會擲回 <xref:System.TimeZoneNotFoundException>。 如果找到時區，但其資料已損毀或不完整，則方法會擲回 <xref:System.InvalidTimeZoneException>。
 

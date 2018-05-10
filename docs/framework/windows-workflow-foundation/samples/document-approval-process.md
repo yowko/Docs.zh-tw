@@ -2,11 +2,11 @@
 title: 文件核准程序
 ms.date: 03/30/2017
 ms.assetid: 9b240937-76a7-45cd-8823-7f82c34d03bd
-ms.openlocfilehash: b1ef35f5a96399b669f0cda039bf1f6dd0fde979
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
-ms.translationtype: HT
+ms.openlocfilehash: c28dafd3b0a1cb6dbee37fed2b3df8923ccd82c8
+ms.sourcegitcommit: 15109844229ade1c6449f48f3834db1b26907824
+ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/04/2018
+ms.lasthandoff: 05/07/2018
 ---
 # <a name="document-approval-process"></a>文件核准程序
 這個範例會示範一起使用的 Windows Workflow Foundation (WF) 和 Windows Communication Foundation (WCF) 的許多功能。 結合這些功能來實作文件核准程序案例。 用戶端應用程式會提交文件以供核准，以及核准文件。 核准管理員應用程式是用來促進用戶端之間的通訊，以及強制執行核准程序的規則。 核准程序是可執行數個核准類型的工作流程。 活動是用來取得單一核准、仲裁核准 (核准者集合的百分比)，以及在序列中包含仲裁和單一核准的複雜核准程序。  
@@ -29,7 +29,7 @@ ms.lasthandoff: 05/04/2018
   
 1.  用戶端在核准程序系統中訂閱成為使用者。  
   
-2.  [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] 用戶端傳送要求給核准管理員應用程式主控的 [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] 服務。  
+2.  WCF 用戶端傳送給核准管理員應用程式所裝載 WCF 服務。  
   
 3.  唯一的使用者識別碼傳回至用戶端。 用戶端現在會參與核准程序。  
   
@@ -47,19 +47,19 @@ ms.lasthandoff: 05/04/2018
   
 10. 用戶端隨時可能收到核准要求，並回應要求。  
   
-11. 裝載於用戶端的 [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] 服務可以從核准管理員應用程式收到核准要求。  
+11. 在用戶端上託管的 WCF 服務可以從核准管理員應用程式收到核准要求。  
   
 12. 文件資訊在用戶端上呈現以供檢閱。  
   
 13. 使用者可以核准或拒絕文件。  
   
-14. [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] 用戶端用來將核准回應送回核准管理員應用程式。  
+14. WCF 用戶端用於傳送核准回應送回核准管理員應用程式。  
   
  從核准管理員應用程式的觀點來看，核准程序的運作方式如下：  
   
 1.  用戶端要求參與核准程序系統。  
   
-2.  核准管理員應用程式上的 [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] 服務收到加入成為核准程序系統一部分的要求。  
+2.  WCF 服務上核准管理員收到核准程序系統一部分的要求。  
   
 3.  產生用戶端的唯一識別碼。 將使用者資訊儲存在資料庫中。  
   

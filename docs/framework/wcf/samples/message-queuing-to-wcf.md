@@ -2,11 +2,11 @@
 title: 訊息佇列至 Windows Communication Foundation
 ms.date: 03/30/2017
 ms.assetid: 6d718eb0-9f61-4653-8a75-d2dac8fb3520
-ms.openlocfilehash: c0208de93ad0c903b8a75383b509de57365ac4bf
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
-ms.translationtype: HT
+ms.openlocfilehash: b3c16a95b21dcdea941e605f3e25e560b7193b03
+ms.sourcegitcommit: 15109844229ade1c6449f48f3834db1b26907824
+ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/04/2018
+ms.lasthandoff: 05/07/2018
 ---
 # <a name="message-queuing-to-windows-communication-foundation"></a>訊息佇列至 Windows Communication Foundation
 這個範例示範訊息佇列 (MSMQ) 應用程式如何將 MSMQ 訊息傳送至 Windows Communication Foundation (WCF) 服務。 這個服務是自我裝載的主控台應用程式，可讓您觀察接收佇列訊息的服務。  
@@ -59,7 +59,7 @@ using (ServiceHost serviceHost = new ServiceHost(typeof(OrderProcessorService)))
  MSMQ 佇列名稱是指定在組態檔的 appSettings 區段中，如下面的範例組態所示。  
   
 > [!NOTE]
->  佇列名稱會使用點 (.) 來代表本機電腦，並在其路徑中使用反斜線分隔符號。 [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] 端點位址會指定 msmq.formatname 配置，並使用 localhost 表示本機電腦。 每個 MSMQ 格式名稱定址方針的佇列位址會遵循 msmq.formatname 配置。  
+>  佇列名稱會使用點 (.) 來代表本機電腦，並在其路徑中使用反斜線分隔符號。 WCF 端點位址會指定 msmq.formatname 配置，並使用 localhost 表示本機電腦。 每個 MSMQ 格式名稱定址方針的佇列位址會遵循 msmq.formatname 配置。  
   
 ```xml  
 <appSettings>  

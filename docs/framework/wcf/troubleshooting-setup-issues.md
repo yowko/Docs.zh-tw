@@ -2,11 +2,11 @@
 title: 疑難排解安裝程式問題
 ms.date: 03/30/2017
 ms.assetid: 1644f885-c408-4d5f-a5c7-a1a907bc8acd
-ms.openlocfilehash: 806e8a1f45deec5861e3bcc9a9c06a93ce410c1a
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
-ms.translationtype: HT
+ms.openlocfilehash: 3c750aa4f9a4ec4750aa24ffcd685c9c349a45a7
+ms.sourcegitcommit: 15109844229ade1c6449f48f3834db1b26907824
+ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/04/2018
+ms.lasthandoff: 05/07/2018
 ---
 # <a name="troubleshooting-setup-issues"></a>疑難排解安裝程式問題
 本主題描述如何疑難排解 Windows Communication Foundation (WCF) 設定問題。  
@@ -61,12 +61,12 @@ ms.lasthandoff: 05/04/2018
  [WorkFlow 服務登錄工具 (WFServicesReg.exe)](../../../docs/framework/wcf/workflow-service-registration-tool-wfservicesreg-exe.md)位於 %windir%\Microsoft.NET\framework\v3.5\ 或 %windir%\Microsoft.NET\framework64\v3.5\  
   
 ## <a name="configure-iis-properly-for-wcfwf-webhost-after-installing-net-framework-35"></a>在安裝 .NET Framework 3.5 之後，適當地為 WCF/WF Webhost 設定 IIS  
- [!INCLUDE[netfx35_short](../../../includes/netfx35-short-md.md)] 安裝無法設定額外的 [!INCLUDE[indigo2](../../../includes/indigo2-md.md)] - 相關的 IIS 組態設定時，它會將錯誤記錄在安裝記錄檔中，然後繼續。 任何執行 WorkflowServices 應用程式的嘗試都將失敗，因為缺少必要的組態設定。 例如，無法載入 xoml 或規則服務。  
+ 當[!INCLUDE[netfx35_short](../../../includes/netfx35-short-md.md)]安裝無法設定其他 WCF 相關的 IIS 組態設定，它在安裝記錄檔中記錄錯誤，並繼續進行。 任何執行 WorkflowServices 應用程式的嘗試都將失敗，因為缺少必要的組態設定。 例如，無法載入 xoml 或規則服務。  
   
  若要解決這個問題，請使用[WorkFlow 服務登錄工具 (WFServicesReg.exe)](../../../docs/framework/wcf/workflow-service-registration-tool-wfservicesreg-exe.md)與`/c`切換到正確的電腦上設定 IIS 指令碼對應。 [WorkFlow 服務登錄工具 (WFServicesReg.exe)](../../../docs/framework/wcf/workflow-service-registration-tool-wfservicesreg-exe.md)位於 %windir%\Microsoft.NET\framework\v3.5\ 或 %windir%\Microsoft.NET\framework64\v3.5\  
   
 ## <a name="could-not-load-type-systemservicemodelactivationhttpmodule-from-assembly-systemservicemodel-version-3000-cultureneutral-publickeytokenb77a5c561934e089"></a>無法從組件 ‘System.ServiceModel, Version 3.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089’ 載入類型 ‘System.ServiceModel.Activation.HttpModule’  
- 如果發生此錯誤[!INCLUDE[netfx40_short](../../../includes/netfx40-short-md.md)]已安裝，然後[!INCLUDE[netfx35_short](../../../includes/netfx35-short-md.md)][!INCLUDE[indigo2](../../../includes/indigo2-md.md)]已啟用 HTTP 啟用。 若要解決這個問題，請從 [!INCLUDE[vs2010](../../../includes/vs2010-md.md)] 命令提示字元內部執行下列命令列：  
+ 如果發生此錯誤[!INCLUDE[netfx40_short](../../../includes/netfx40-short-md.md)]已安裝，然後啟用 WCF HTTP 啟用。 若要解決這個問題，請從 [!INCLUDE[vs2010](../../../includes/vs2010-md.md)] 命令提示字元內部執行下列命令列：  
   
 ```Output  
 aspnet_regiis.exe -i -enable  

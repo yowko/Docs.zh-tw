@@ -5,11 +5,11 @@ dev_langs:
 - csharp
 - vb
 ms.assetid: f8b97862-e8bb-470d-8b96-07733c21fe26
-ms.openlocfilehash: 40efa49836561351dc14c2cb49d906a6d344a5bc
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
-ms.translationtype: HT
+ms.openlocfilehash: 04b81689d7d625d519a0a9fc8b1fa6df3df16ada
+ms.sourcegitcommit: 15109844229ade1c6449f48f3834db1b26907824
+ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/04/2018
+ms.lasthandoff: 05/07/2018
 ---
 # <a name="how-to-customize-a-system-provided-binding"></a>HOW TO：自訂系統提供的繫結
 Windows Communication Foundation (WCF) 包含數種系統提供繫結可讓您設定一些屬性的基礎繫結項目，但不是所有的屬性。 本主題示範如何設定繫結項目上的屬性來建立自訂繫結。  
@@ -18,7 +18,7 @@ Windows Communication Foundation (WCF) 包含數種系統提供繫結可讓您�
   
  如需有關建立和擴充自訂繫結的詳細資訊，請參閱[擴充繫結](../../../../docs/framework/wcf/extending/extending-bindings.md)。  
   
- 在[!INCLUDE[indigo2](../../../../includes/indigo2-md.md)]所有繫結所組成*繫結項目*。 每個繫結項目均衍生自 <xref:System.ServiceModel.Channels.BindingElement> 類別。 諸如 <xref:System.ServiceModel.BasicHttpBinding> 的系統提供繫結，會建立並設定自有的繫結項目。 本主題說明如何存取與變更這些繫結項目的屬性，而這些屬性並未直接在繫結上公開 (特別是 <xref:System.ServiceModel.BasicHttpBinding> 類別)。  
+ 在 WCF 中的所有繫結所組成*繫結項目*。 每個繫結項目均衍生自 <xref:System.ServiceModel.Channels.BindingElement> 類別。 諸如 <xref:System.ServiceModel.BasicHttpBinding> 的系統提供繫結，會建立並設定自有的繫結項目。 本主題說明如何存取與變更這些繫結項目的屬性，而這些屬性並未直接在繫結上公開 (特別是 <xref:System.ServiceModel.BasicHttpBinding> 類別)。  
   
  個別的繫結項目會包含在由 <xref:System.ServiceModel.Channels.BindingElementCollection> 類別表示的集合中，並依下列順序新增：交易流程、可靠工作階段、安全性、複合雙工、單向、資料流安全性、訊息編碼和傳輸。 請注意，並非每個繫結都需要所列的所有繫結項目。 使用者定義的繫結項目也可以出現在此繫結項目集合中，而且必須依照前述順序。 例如，使用者定義的傳輸必須是繫結項目集合中的最後一個項目。  
   

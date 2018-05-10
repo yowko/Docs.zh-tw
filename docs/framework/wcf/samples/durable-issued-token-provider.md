@@ -2,21 +2,21 @@
 title: 永久性發行權杖提供者
 ms.date: 03/30/2017
 ms.assetid: 76fb27f5-8787-4b6a-bf4c-99b4be1d2e8b
-ms.openlocfilehash: 20006f87f7ecba9c09f6c957f8b6355dec7fbd32
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
-ms.translationtype: HT
+ms.openlocfilehash: 145faaae709119708240863f85eb5352fb2c5a1b
+ms.sourcegitcommit: 15109844229ade1c6449f48f3834db1b26907824
+ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/04/2018
+ms.lasthandoff: 05/07/2018
 ---
 # <a name="durable-issued-token-provider"></a>永久性發行權杖提供者
 這個範例示範如何實作自訂用戶端發行的權杖提供者。  
   
 ## <a name="discussion"></a>討論  
- Windows Communication Foundation (WCF) 的權杖提供者用來提供認證給安全性基礎結構。 一般而言，權杖提供者會檢查目標並發行適當的認證，讓安全性基礎結構能夠保護訊息的安全。 [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] 發行時會隨附 [!INCLUDE[infocard](../../../../includes/infocard-md.md)] 權杖提供者。 自訂權杖提供者適用於下列情況：  
+ Windows Communication Foundation (WCF) 的權杖提供者用來提供認證給安全性基礎結構。 一般而言，權杖提供者會檢查目標並發行適當的認證，讓安全性基礎結構能夠保護訊息的安全。 WCF 隨附[!INCLUDE[infocard](../../../../includes/infocard-md.md)]權杖提供者。 自訂權杖提供者適用於下列情況：  
   
 -   如果您有內建權杖提供者無法使用的認證存放區。  
   
--   如果您要提供自訂的機制，將認證從使用者提供詳細資料時，轉換成當 [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] 用戶端使用認證時。  
+-   如果您想要提供您自己自訂的機制，將認證從使用者提供詳細資料，當 WCF 用戶端會使用認證時。  
   
 -   如果您要建置自訂權杖。  
   
@@ -26,7 +26,7 @@ ms.lasthandoff: 05/04/2018
   
 -   如何使用自訂權杖提供者設定用戶端。  
   
--   如何快取發行的權杖，並將它提供給 [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] 用戶端。  
+-   如何發行的權杖可以快取，並提供給 WCF 用戶端。  
   
 -   用戶端如何使用伺服器的 X.509 憑證來驗證伺服器。  
   
@@ -109,7 +109,7 @@ ms.lasthandoff: 05/04/2018
  安全性權杖服務會使用標準 wsHttpBinding 來公開單一端點。 「安全性權杖服務」會對用戶端要求權杖做出回應，假設用戶端驗證是使用 Windows 帳戶，會再發行包含用戶端之使用者名稱的權杖，當做發行之權杖中的宣告。 在建立權杖的過程中，「安全性權杖服務」會使用與 CN=STS 憑證關聯的私密金鑰來簽署權杖。 此外，它還會建立對稱金鑰，並使用與 CN=localhost 憑證關聯的公開金鑰進行加密。 在將權杖傳回至用戶端時，「安全性權杖服務」也會傳回對稱金鑰。 用戶端會向計算機服務出示發行權杖，然後使用對稱金鑰簽署訊息來證明它知道這把金鑰。  
   
 ## <a name="custom-client-credentials-and-token-provider"></a>自訂用戶端認證和權杖提供者  
- 下列步驟示範如何開發自訂權杖提供者，以快取發行的權杖並將它與 [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] 安全性整合。  
+ 下列步驟示範如何開發自訂權杖提供者會快取核發的權杖，並將其整合與 WCF： 安全性。  
   
 #### <a name="to-develop-a-custom-token-provider"></a>若要開發自訂權杖提供者  
   

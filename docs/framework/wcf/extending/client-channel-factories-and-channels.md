@@ -2,11 +2,11 @@
 title: 用戶端：通道處理站與通道
 ms.date: 03/30/2017
 ms.assetid: ef245191-fdab-4468-a0da-7c6f25d2110f
-ms.openlocfilehash: c7890f5fafb4e53053c4c393a7c8af584bd7a520
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
-ms.translationtype: HT
+ms.openlocfilehash: 91e19c692718ae02e2f125a791904f62fe8401f7
+ms.sourcegitcommit: 15109844229ade1c6449f48f3834db1b26907824
+ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/04/2018
+ms.lasthandoff: 05/07/2018
 ---
 # <a name="client-channel-factories-and-channels"></a>用戶端：通道處理站與通道
 這個主題會討論通道處理站和通道的建立方面。  
@@ -19,7 +19,7 @@ ms.lasthandoff: 05/04/2018
   
  關閉時，通道處理站會負責關閉所建立但尚未關閉的任何通道。 請注意，此處的模型為非對稱，這是因為關閉通道接聽項時，只會停止接受新通道，但會讓現有的通道保持為開啟，這樣才可以繼續接收訊息。  
   
- [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] 會提供此處理序的基底類別協助程式  (如本主題所討論的通道 helper 類別圖表，請參閱[通道模型概觀](../../../../docs/framework/wcf/extending/channel-model-overview.md)。)  
+ WCF 有提供此程序的基底類別協助程式。 (如本主題所討論的通道 helper 類別圖表，請參閱[通道模型概觀](../../../../docs/framework/wcf/extending/channel-model-overview.md)。)  
   
 -   <xref:System.ServiceModel.Channels.CommunicationObject>類別會實作<xref:System.ServiceModel.ICommunicationObject>並強制執行的步驟 2 中所述的狀態機器[開發通道](../../../../docs/framework/wcf/extending/developing-channels.md)。  
   

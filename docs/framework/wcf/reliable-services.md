@@ -8,14 +8,14 @@ helpviewer_keywords:
 - Windows Communication Foundation [WCF], reliable sessions
 - service contracts [WCF], reliable services
 ms.assetid: 07814ed0-0775-47f2-987b-d8134fdd5099
-ms.openlocfilehash: 02e0b8822c29490462fe74803a34222188afc910
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
-ms.translationtype: HT
+ms.openlocfilehash: f98da5db34686e3bf09cc14c42a2ff6b693201f6
+ms.sourcegitcommit: 15109844229ade1c6449f48f3834db1b26907824
+ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/04/2018
+ms.lasthandoff: 05/07/2018
 ---
 # <a name="reliable-services"></a>可靠的服務
-佇列和可靠工作階段是實作可信賴傳訊的 Windows Communication Foundation (WCF) 功能。 本主題將說明 [!INCLUDE[indigo2](../../../includes/indigo2-md.md)] 的可信賴傳訊功能。  
+佇列和可靠工作階段是實作可信賴傳訊的 Windows Communication Foundation (WCF) 功能。 本主題說明 WCF 的可信賴傳訊功能。  
   
  *可信賴傳訊*是可信賴傳訊來源 (稱為*來源*) 將訊息可靠地傳輸到可信賴傳訊目的地 (稱為*目的地*)。  
   
@@ -25,7 +25,7 @@ ms.lasthandoff: 05/04/2018
   
 -   區隔來源和目的地。 這樣可以讓來源和目的地所發生的失敗與復原不具相關性，並且提供可靠的訊息傳輸和傳遞，即使在來源或目的地無法使用的情況下也是如此。  
   
- 可信賴傳訊通常會伴隨長延遲時間的發生。 *延遲*是要從來源到達目的地的訊息所花費的時間。 因此，[!INCLUDE[indigo2](../../../includes/indigo2-md.md)] 提供了下列幾種類型的可信賴傳訊：  
+ 可信賴傳訊通常會伴隨長延遲時間的發生。 *延遲*是要從來源到達目的地的訊息所花費的時間。 WCF，因此，提供下列類型的可信賴傳訊：  
   
 -   [可靠工作階段](../../../docs/framework/wcf/feature-details/reliable-sessions.md)，提供可靠的傳輸，而不是高延遲時間的成本。  
   
@@ -37,7 +37,7 @@ ms.lasthandoff: 05/04/2018
  可靠工作階段會提供短延遲時間的可信賴訊息傳輸。 它們可透過任何的 Proxy 或媒介提供 SOAP 訊息，而這相當於 TCP 透過 IP 橋接器為封包提供的內容。 如需可靠工作階段的詳細資訊，請參閱[可靠工作階段](../../../docs/framework/wcf/feature-details/reliable-sessions.md)。  
   
 ### <a name="queues"></a>佇列  
- [!INCLUDE[indigo2](../../../includes/indigo2-md.md)] 中的佇列會在高延遲的情況下，提供可信賴傳訊以及來源和目的地的區隔性。 [!INCLUDE[indigo2](../../../includes/indigo2-md.md)] 佇列通訊是建置在訊息佇列 (MSMQ) 之上。  
+ 在 WCF 中的佇列會提供可信賴傳訊訊息及區隔來源和目的地高延遲的情況下之間。 WCF 排入佇列通訊建置在訊息佇列 (MSMQ)。  
   
  MSMQ 是 Windows 所附的選用元件。 MSMQ 服務會執行為 Windows 服務。 它會代表來源擷取傳輸佇列中要進行傳輸的訊息，並將該訊息傳遞至目標佇列。 目標佇列會代表目的地接受訊息，以便隨時因應目的地要求訊息而進行傳遞。 MSMQ 管理員會實作可信賴傳訊通訊協定，這樣訊息就不會在傳輸期間遺失。 此通訊協定可以是原生 (Native)，或是稱為 SOAP Reliable Messaging Protocol (SRMP) 的 SOAP 架構通訊協定。  
   

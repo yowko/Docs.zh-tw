@@ -2,11 +2,11 @@
 title: 發出使用者程式碼追蹤
 ms.date: 03/30/2017
 ms.assetid: fa54186a-8ffa-4332-b0e7-63867126fd49
-ms.openlocfilehash: 120827bff85d4bc347274cad1370d291caba1c3d
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
-ms.translationtype: HT
+ms.openlocfilehash: 18b424139f4c1656193f80cf76c704af2b2887e3
+ms.sourcegitcommit: 15109844229ade1c6449f48f3834db1b26907824
+ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/04/2018
+ms.lasthandoff: 05/07/2018
 ---
 # <a name="emitting-user-code-traces"></a>發出使用者程式碼追蹤
 除了啟用追蹤來收集檢測資料產生 Windows Communication Foundation (WCF) 組態中的，您也可以發出使用者程式碼中以程式設計方式追蹤。 如此一來，您就可以主動建立供日後深入診斷之用的檢測資料。 本主題將討論如何完成這項工作。  
@@ -65,9 +65,9 @@ Trace.CorrelationManager.ActivityId = oldID;
  如果同時在用戶端和服務的組態檔中，將其 `propagateActivity` 追蹤來源的 `true` 屬性設定為 `System.ServiceModel`，則會在用戶端定義的同一個活動中進行「加法」要求的服務處理。 如果服務定義了本身的活動和傳輸，服務追蹤就不會出現在用戶端傳播的活動中， 而會出現在和用戶端傳播的識別碼所代表之活動相互關聯的活動中 (此相互關聯是由傳輸追蹤建立)。  
   
 > [!NOTE]
->  如果同時在用戶端和服務上，將其 `propagateActivity` 屬性設定為 `true`，則服務作業範圍內的環境活動 (Ambient Activity) 是由 [!INCLUDE[indigo2](../../../../../includes/indigo2-md.md)] 所設定。  
+>  如果`propagateActivity`屬性設為`true`WCF 用戶端和服務上，設定環境活動中的服務作業範圍內。  
   
- 您可以使用下列程式碼來檢查 [!INCLUDE[indigo2](../../../../../includes/indigo2-md.md)] 是否已在範圍中設定某項活動。  
+ 您可以使用下列程式碼檢查活動是否已由 WCF 設定範圍中。  
   
 ```  
 // Check if an activity was set in scope by WCF, if it was   
@@ -135,7 +135,7 @@ ts.TraceEvent(TraceEventType.Warning, 0, "Throwing exception " + "exceptionMessa
  ![使用追蹤檢視器產生使用者&#45;程式碼追蹤](../../../../../docs/framework/wcf/diagnostics/tracing/media/e2etrace3.gif "e2eTrace3")  
 錯誤相互關聯的圖形檢視  
   
- 為了取得前述的追蹤，我們將使用者追蹤來源設定為 `ActivityTracing`，而將 `propagateActivity=true` 追蹤來源設定為 `System.ServiceModel`。 我們並未將 `ActivityTracing` 設定給 `System.ServiceModel` 追蹤來源，來讓使用者程式碼使用使用者程式碼活動傳播  (當 ServiceModel 活動追蹤為開啟狀態時，用戶端中定義的活動識別碼不會直接傳播到服務使用者程式碼；然而，傳輸會讓用戶端及服務使用者程式碼活動與 [!INCLUDE[indigo2](../../../../../includes/indigo2-md.md)] 中繼活動產生相互關聯)。  
+ 為了取得前述的追蹤，我們將使用者追蹤來源設定為 `ActivityTracing`，而將 `propagateActivity=true` 追蹤來源設定為 `System.ServiceModel`。 我們並未將 `ActivityTracing` 設定給 `System.ServiceModel` 追蹤來源，來讓使用者程式碼使用使用者程式碼活動傳播  （當 ServiceModel 活動追蹤為開啟狀態的用戶端中定義的活動識別碼不會傳播到服務使用者程式碼;傳輸，不過，相互關聯的用戶端和服務使用者程式碼活動的中繼 WCF 活動。）  
   
  定義活動和傳播活動識別碼可讓我們在端點之間執行直接錯誤相互關聯。 如此一來，就可以更迅速地找到錯誤的根本原因。  
   

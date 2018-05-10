@@ -2,11 +2,11 @@
 title: 自訂權杖
 ms.date: 03/30/2017
 ms.assetid: e7fd8b38-c370-454f-ba3e-19759019f03d
-ms.openlocfilehash: 5850f97d6d3a66aacf82ab1cb2338240a75a00fb
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
-ms.translationtype: HT
+ms.openlocfilehash: c7219b94861cd23f27b331d1d3e5509654263430
+ms.sourcegitcommit: 15109844229ade1c6449f48f3834db1b26907824
+ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/04/2018
+ms.lasthandoff: 05/07/2018
 ---
 # <a name="custom-token"></a>自訂權杖
 這個範例示範如何新增自訂權杖實作 Windows Communication Foundation (WCF) 應用程式。 範例會使用 `CreditCardToken`，將用戶端的信用卡資訊安全地傳遞至服務。 權杖會在 WS-Security 訊息標頭中傳遞，並且是使用對稱安全性繫結項目，與訊息本文及其他訊息標頭一起經過簽署和加密。 當內建權杖的安全性不足時，這會十分有幫助。 這個範例將示範如何提供自訂安全性權杖給服務，而不使用其中一個內建權杖。 服務會實作定義要求-回覆通訊模式的合約。  
@@ -20,7 +20,7 @@ ms.lasthandoff: 05/04/2018
   
 -   服務如何取用並驗證自訂安全性權杖。  
   
--   [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] 服務程式碼如何取得所收到關於安全性權杖 (包含自訂安全性權杖) 的資訊。  
+-   WCF 服務程式碼如何取得所接收的安全性權杖包含自訂安全性權杖的相關資訊。  
   
 -   如何使用伺服器的 X.509 憑證保護用於訊息加密和簽章的對稱金鑰。  
   
@@ -114,9 +114,9 @@ channelFactory.Close();
 ```  
   
 ## <a name="custom-security-token-implementation"></a>自訂安全性權杖實作  
- 若要在 [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] 中啟用自訂安全性權杖，請建立自訂安全性權杖的物件表示。 範例會在 `CreditCardToken` 類別中產生這個表示。 此物件表示負責保存所有相關的安全性權杖資訊，並提供安全性權杖所含安全性金鑰的清單。 在本例中，信用卡安全性權杖未包含任何安全性金鑰。  
+ 若要啟用自訂安全性權杖在 WCF 中的，建立自訂安全性權杖的物件表示。 範例會在 `CreditCardToken` 類別中產生這個表示。 此物件表示負責保存所有相關的安全性權杖資訊，並提供安全性權杖所含安全性金鑰的清單。 在本例中，信用卡安全性權杖未包含任何安全性金鑰。  
   
- 下一節會說明應該如何做，才能讓自訂權杖在網路上傳輸並且供 [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] 端點取用。  
+ 下一節會說明什麼必須完成，以啟用要在網路上傳輸的自訂語彙基元並供 WCF 端點。  
   
 ```  
 class CreditCardToken : SecurityToken  
@@ -154,7 +154,7 @@ class CreditCardToken : SecurityToken
 ```  
   
 ## <a name="getting-the-custom-credit-card-token-to-and-from-the-message"></a>在訊息中存取自訂信用卡權杖  
- [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] 中的安全性權杖序列化程式會負責從訊息的 XML 中建立安全性權杖的物件表示，以及從安全性權杖的物件表示中建立 XML。 它們還負責像是讀取和寫入指向安全性權杖之金鑰識別項等其他的功能，但是本範例僅使用與安全性權杖相關的功能。 若要啟用自訂權杖，就必須實作您自己的安全性權杖序列化程式。 本範例會使用 `CreditCardSecurityTokenSerializer` 類別來達到這個目的。  
+ 在 WCF 中的安全性權杖序列化程式必須負責從訊息中的 XML 建立安全性權杖的物件表示，並建立安全性權杖的 XML 表單項目。 它們還負責像是讀取和寫入指向安全性權杖之金鑰識別項等其他的功能，但是本範例僅使用與安全性權杖相關的功能。 若要啟用自訂權杖，就必須實作您自己的安全性權杖序列化程式。 本範例會使用 `CreditCardSecurityTokenSerializer` 類別來達到這個目的。  
   
  在服務上，自訂序列化程式會讀取自訂權杖的 XML 表單，並由其中建立自訂權杖物件表示。  
   

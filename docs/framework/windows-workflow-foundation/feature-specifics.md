@@ -2,17 +2,17 @@
 title: Windows Workflow Foundation 功能內容
 ms.date: 03/30/2017
 ms.assetid: e84d12da-a055-45f6-b4d1-878d127b46b6
-ms.openlocfilehash: dc3ff5669d23e57685c89937f7c2171053f938ca
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
-ms.translationtype: HT
+ms.openlocfilehash: 0f9bc81609379414ce022499e20791073d259cdc
+ms.sourcegitcommit: 15109844229ade1c6449f48f3834db1b26907824
+ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/04/2018
+ms.lasthandoff: 05/07/2018
 ---
 # <a name="windows-workflow-foundation-feature-specifics"></a>Windows Workflow Foundation 功能內容
 [!INCLUDE[netfx40_long](../../../includes/netfx40-long-md.md)] 在 Windows Workflow Foundation 中加入一些功能。 本文件將描述一些新功能，並且詳細說明適合使用這些功能的案例。  
   
 ## <a name="messaging-activities"></a>傳訊活動  
- 傳訊活動 (<xref:System.ServiceModel.Activities.Receive>， <xref:System.ServiceModel.Activities.SendReply>， <xref:System.ServiceModel.Activities.Send>， <xref:System.ServiceModel.Activities.ReceiveReply>) 用來傳送和接收[!INCLUDE[indigo2](../../../includes/indigo2-md.md)]與工作流程的訊息。  <xref:System.ServiceModel.Activities.Receive> 和<xref:System.ServiceModel.Activities.SendReply>活動用來形成透過 WSDL 公開就像標準的 Windows Communication Foundation (WCF) 服務作業[!INCLUDE[indigo2](../../../includes/indigo2-md.md)]web 服務。  <xref:System.ServiceModel.Activities.Send> 和<xref:System.ServiceModel.Activities.ReceiveReply>用來取用 web 服務與 WCF <xref:System.ServiceModel.ChannelFactory>;**加入服務參考**經驗也有會產生預先設定的活動的 Workflow Foundation。  
+ 傳訊活動 (<xref:System.ServiceModel.Activities.Receive>， <xref:System.ServiceModel.Activities.SendReply>， <xref:System.ServiceModel.Activities.Send>， <xref:System.ServiceModel.Activities.ReceiveReply>) 用來傳送和接收 WCF 訊息從您的工作流程。  <xref:System.ServiceModel.Activities.Receive> 和<xref:System.ServiceModel.Activities.SendReply>活動用來形成透過 WSDL 公開就像標準的 WCF web 服務的 Windows Communication Foundation (WCF) 服務作業。  <xref:System.ServiceModel.Activities.Send> 和<xref:System.ServiceModel.Activities.ReceiveReply>用來取用 web 服務與 WCF <xref:System.ServiceModel.ChannelFactory>;**加入服務參考**經驗也有會產生預先設定的活動的 Workflow Foundation。  
   
 ### <a name="getting-started-with-messaging-activities"></a>傳訊活動使用者入門  
   
@@ -34,11 +34,11 @@ ms.lasthandoff: 05/04/2018
  A`BestPriceFinder`服務呼叫以尋找最佳的票證價格特定路由的多個 airline 服務。  實作此案例會要求您使用訊息活動來接收價格要求、 擷取後端服務的價格和價格的價格要求回覆。  它也會要求您使用其他現成的活動，以建立計算最佳的價格的商務邏輯。  
   
 ## <a name="workflowservicehost"></a>WorkflowServiceHost  
- <xref:System.ServiceModel.WorkflowServiceHost>支援多個執行個體，預設的工作流程主機組態和[!INCLUDE[indigo2](../../../includes/indigo2-md.md)]傳訊 （雖然工作流程不需要使用訊息，就能夠裝載）。  此外，它也會透過一組服務行為，與持續性、追蹤和執行個體控制項整合。  就像[!INCLUDE[indigo2](../../../includes/indigo2-md.md)]的<xref:System.ServiceModel.ServiceHost>、<xref:System.ServiceModel.WorkflowServiceHost>可以自行裝載於主控台/WinForms/WPF 應用程式或 Windows 服務或 web 裝載 （成為.xamlx 檔案） 在 IIS 或 WAS。  
+ <xref:System.ServiceModel.WorkflowServiceHost> （雖然這些工作流程不需要使用訊息，就能夠裝載） 支援多個執行個體、 組態和 WCF 訊息的預設工作流程主機。  此外，它也會透過一組服務行為，與持續性、追蹤和執行個體控制項整合。  就像 WCF 的<xref:System.ServiceModel.ServiceHost>、<xref:System.ServiceModel.WorkflowServiceHost>可以自行裝載於主控台/WinForms/WPF 應用程式或 Windows 服務或 web 裝載 （成為.xamlx 檔案） 在 IIS 或 WAS。  
   
 ### <a name="getting-started-with-workflow-service-host"></a>工作流程服務主機使用者入門  
   
--   在 Visual Studio 2010 中，建立 [!INCLUDE[indigo2](../../../includes/indigo2-md.md)] 工作流程服務應用程式專案：這個專案將設定為使用 Web 主機環境中的 <xref:System.ServiceModel.WorkflowServiceHost>。  
+-   在 Visual Studio 2010 中，建立 WCF 工作流程服務應用程式專案： 此專案將會設定為使用<xref:System.ServiceModel.WorkflowServiceHost>web 主機環境中。  
   
 -   若要裝載非傳訊工作流程，請加入會根據訊息建立執行個體的自訂 <xref:System.ServiceModel.Activities.WorkflowHostingEndpoint>。  
   
@@ -92,7 +92,7 @@ ms.lasthandoff: 05/04/2018
  訂單處理工作流程用來處理新的順序建立及更新程序中之現有訂單。  實作此案例會需要您裝載中的工作流程<xref:System.ServiceModel.WorkflowServiceHost>和使用訊息活動。  它也會需要為基礎的相互關聯`orderId`以確保正確的工作流程進行更新。  
   
 ## <a name="simplified-configuration"></a>簡化的組態  
- [!INCLUDE[indigo2](../../../includes/indigo2-md.md)] 組態結構描述很複雜，而且為使用者提供了許多難以找到的功能。 在 [!INCLUDE[netfx_current_short](../../../includes/netfx-current-short-md.md)] 中，我們已經著重於協助 [!INCLUDE[indigo2](../../../includes/indigo2-md.md)] 使用者使用下列功能來設定其服務：  
+ WCF 組態結構描述很複雜，而且使用者提供了許多難以找到的功能。 在[!INCLUDE[netfx_current_short](../../../includes/netfx-current-short-md.md)]，我們已經著重於協助 WCF 使用者設定其服務的下列功能：  
   
 -   移除每項服務明確組態的需求。 如果您未設定任何\<服務 > 項目，為您的服務，而且您的服務不會定義任何端點以程式設計的方式，則一組端點將會自動加入至您的服務，其中每個服務基底位址和每個合約實作您的服務。  
   
@@ -100,7 +100,7 @@ ms.lasthandoff: 05/04/2018
   
 -   標準端點會定義可重複使用的預先設定端點，其中一個或多個端點屬性 (位址、繫結和合約) 具有固定的值，而且允許定義自訂屬性。  
   
--   最後，<xref:System.ServiceModel.Configuration.ConfigurationChannelFactory%601> 可讓您集中管理 [!INCLUDE[indigo2](../../../includes/indigo2-md.md)] 用戶端組態，這在應用程式定義域載入時間之後選取或變更組態的案例中很有用。  
+-   最後，<xref:System.ServiceModel.Configuration.ConfigurationChannelFactory%601>可讓您集中管理 WCF 用戶端組態，組態是選取或變更應用程式定義域載入時間之後的案例中很有用。  
   
 ### <a name="getting-started"></a>快速入門  
   
@@ -116,7 +116,7 @@ ms.lasthandoff: 05/04/2018
   
 ### <a name="simplified-configuration-scenarios"></a>簡化的組態案例  
   
--   有經驗的 ASMX 開發人員想要開始使用 [!INCLUDE[indigo2](../../../includes/indigo2-md.md)]。 不過，[!INCLUDE[indigo2](../../../includes/indigo2-md.md)] 看起來太複雜！ 我需要在組態檔中寫入哪些資訊？ 在 .NET 4 中，您甚至可以決定完全不使用組態檔。  
+-   有經驗的 ASMX 開發人員想要開始使用 WCF。 不過，WCF 看起來太複雜 ！ 我需要在組態檔中寫入哪些資訊？ 在 .NET 4 中，您甚至可以決定完全不使用組態檔。  
   
 -   現有的 WCF 服務集非常難以設定和維護。 組態檔具有數千行 XML 程式碼，任意修改可能會非常危險。 因此需要相關協助，以便將程式碼數量減少至較容易管理的數量。  
   
@@ -272,7 +272,7 @@ ms.lasthandoff: 05/04/2018
  系統需要提示使用者輸入。 在一般情況下，開發人員會使用 <xref:System.Console.ReadLine%2A> 之類的方法呼叫來提示使用者輸入。 這種設定的問題在於，直到使用者輸入某些內容為止，程式都會處於等候狀態。 在此案例中，您需要使用逾時將封鎖的活動解除封鎖。 常見的案例就是要求在指定的一段時間內完成工作。 讓封鎖的活動逾時則為 Pick 發揮功能的案例。  
   
 ## <a name="wcf-routing-service"></a>WCF 路由服務  
- 路由服務設計為一般的軟體路由器，可讓您控制如何[!INCLUDE[indigo2](../../../includes/indigo2-md.md)]訊息用戶端和服務之間的流量。  路由服務可讓您分離您的用戶端，從您的服務，它將提供更多的自由，組態設定方面，您可以在支援彈性時，您必須考慮如何裝載您的服務。  在.NET 3.5 用戶端和服務所緊密結合。用戶端必須知道所有的服務，需要向他們不到。 此外，.Net Framework 3.5 中的 WCF 具有下列限制：  
+ 路由服務被設計為一般的軟體路由器，可讓您控制 WCFmessages 您的用戶端和服務之間的流程為何。  路由服務可讓您分離您的用戶端，從您的服務，它將提供更多的自由，組態設定方面，您可以在支援彈性時，您必須考慮如何裝載您的服務。  在.NET 3.5 用戶端和服務所緊密結合。用戶端必須知道所有的服務，需要向他們不到。 此外，.Net Framework 3.5 中的 WCF 具有下列限制：  
   
 -   錯誤處理很複雜，因為此邏輯必須透過硬式編碼寫入用戶端。  
   
@@ -312,7 +312,7 @@ ms.lasthandoff: 05/04/2018
 -   用戶端可以具備更健全的功能，以防範失敗或無法使用服務的情況。  
   
 ## <a name="wcf-discovery"></a>WCF 探索  
- [!INCLUDE[indigo2](../../../includes/indigo2-md.md)] 探索是一項架構技術，可讓您將探索機制併入應用程式基礎結構中。 您可以使用這項技術，讓服務成為可探索的服務，並且設定用戶端來搜尋服務。 用戶端不再需要對端點進行硬式編碼，讓應用程式更健全並提高容錯能力。 探索是在應用程式中建置自動組態功能的完美平台。  
+ WCF 探索是一項架構技術，可讓您應用程式基礎結構探索機制併入。 您可以使用這項技術，讓服務成為可探索的服務，並且設定用戶端來搜尋服務。 用戶端不再需要對端點進行硬式編碼，讓應用程式更健全並提高容錯能力。 探索是在應用程式中建置自動組態功能的完美平台。  
   
  此產品是以 WS-Discovery 標準為建置基礎。 其設計目的是要成為可互通、可擴充且泛型的產品。 此產品支援兩種作業模式：  
   

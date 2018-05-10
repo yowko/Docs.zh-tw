@@ -2,11 +2,11 @@
 title: 以組態為基礎的啟用
 ms.date: 03/30/2017
 ms.assetid: 21bb762e-c43e-4b0c-887b-5e434d665838
-ms.openlocfilehash: 2829458d40e3efb180699122570b2775a90be9e6
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
-ms.translationtype: HT
+ms.openlocfilehash: 3ac4edd2a51e4ed8a5c0b7e73d7d1afa31334c33
+ms.sourcegitcommit: 15109844229ade1c6449f48f3834db1b26907824
+ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/04/2018
+ms.lasthandoff: 05/07/2018
 ---
 # <a name="configuration-based-activation"></a>以組態為基礎的啟用
 這個範例示範如何啟用 Windows Communication Foundation (WCF) 服務，而不需要.svc 檔案。  
@@ -21,7 +21,7 @@ ms.lasthandoff: 05/04/2018
 >  `<InstallDrive>:\WF_WCF_Samples\WCF\Basic\Services\Hosting\ConfigBasedActivation`  
   
 ## <a name="sample-details"></a>範例詳細資料  
- 在這個範例中，用戶端是 [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] 的測試用戶端，而服務是裝載在 IIS 中。  
+ 在此範例中，用戶端是 WCF 測試用戶端和服務裝載在 IIS 中。  
   
 > [!NOTE]
 >  此範例的安裝與建立指示位於本主題的結尾。  

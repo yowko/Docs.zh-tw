@@ -2,11 +2,11 @@
 title: 進階格式選取
 ms.date: 03/30/2017
 ms.assetid: e02d9082-4d55-41d8-9329-98f6d1c77f06
-ms.openlocfilehash: 2d0e78bc1ec1dcd7e4a22b246f5cc35356f5f986
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
-ms.translationtype: HT
+ms.openlocfilehash: 4913d8dbf69f574aa4f329279bed0d92710512f9
+ms.sourcegitcommit: 15109844229ade1c6449f48f3834db1b26907824
+ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/04/2018
+ms.lasthandoff: 05/07/2018
 ---
 # <a name="advanced-format-selection"></a>進階格式選取
 這個範例示範如何擴充以支援新的傳出回應格式的 Windows Communication Foundation (WCF) REST 程式設計模型。 此外，這個範例使用 T4 範本將回應當做 XHTML 頁面傳回，示範如何實作檢視樣式程式設計模型。  
@@ -18,7 +18,7 @@ ms.lasthandoff: 05/04/2018
   
  服務傳回的回應格式會先以 `format` 查詢字串參數決定，再以隨要求提供的 HTTP Accept 標頭決定。 如果 `format` 查詢字串參數的值是上面其中一種格式，則回應會以該格式傳回。 如果 `format` 查詢字串不存在，則服務會從要求逐一查看 Accept 標頭項目，然後傳回服務支援的第一個 content-type 的格式。  
   
- 值得注意的是作業的傳回類型。 當作業傳回的類型不是 [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] 時，<xref:System.ServiceModel.Channels.Message> REST 程式設計模型原本就僅支援 XML 和 JSON 回應格式。 不過，使用 <xref:System.ServiceModel.Channels.Message> 做為傳回類型時，開發人員可以完全掌控應如何格式化訊息的內容。  
+ 值得注意的是作業的傳回型別。 當作業傳回的類型以外，WCF REST 程式設計模型原本就僅支援 XML 和 JSON 回應格式<xref:System.ServiceModel.Channels.Message>。 不過，使用 <xref:System.ServiceModel.Channels.Message> 做為傳回類型時，開發人員可以完全掌控應如何格式化訊息的內容。  
   
  這個範例使用 <xref:System.ServiceModel.Web.WebOperationContext.CreateXmlResponse%2A>、<xref:System.ServiceModel.Web.WebOperationContext.CreateJsonResponse%2A> 和 <xref:System.ServiceModel.Web.WebOperationContext.CreateAtom10Response%2A> 方法分別將字串清單序列化為 XML、JSON 和 ATOM 訊息。 若為 jpeg 回應格式，則會使用 <xref:System.ServiceModel.Web.WebOperationContext.CreateStreamResponse%2A> 方法，且影像會儲存到資料流。 若為 XHTML 回應，則會使用 <xref:System.ServiceModel.Web.WebOperationContext.CreateTextResponse%2A> 搭配預先處理的 T4 範本，這個範本是由 .tt 檔和自動產生的 .cs 檔所組成。 .tt 檔可讓開發人員以包含變數和控制項結構的範本形式撰寫回應。 如需 T4 的詳細資訊，請參閱[所使用文字範本產生成品](http://go.microsoft.com/fwlink/?LinkId=166023)。  
   

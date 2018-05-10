@@ -4,11 +4,11 @@ ms.date: 03/30/2017
 helpviewer_keywords:
 - message logging [WCF]
 ms.assetid: 0ff4c857-8f09-4b85-9dc0-89084706e4c9
-ms.openlocfilehash: 4c75b0f27e82b8cfe9327a9911d27d4e435ddf81
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
-ms.translationtype: HT
+ms.openlocfilehash: cea307b4e3920ff6413d6db28c2ce1e640b673f9
+ms.sourcegitcommit: 15109844229ade1c6449f48f3834db1b26907824
+ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/04/2018
+ms.lasthandoff: 05/07/2018
 ---
 # <a name="configuring-message-logging"></a>設定訊息記錄
 本主題描述如何針對不同的案例設定訊息記錄。  
@@ -66,7 +66,7 @@ ms.lasthandoff: 05/04/2018
   
  對於傳出的訊息，系統會緊接在訊息離開使用者程式碼之後，以及在訊息傳送到網路上之前進行記錄。  
   
- [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] 會在服務和傳輸這兩個不同的層級上記錄訊息。 格式錯誤的訊息也會加以記錄。 三個分類彼此獨立，而且可以透過組態來個別啟動。  
+ WCF 會記錄在兩個不同層、 服務和傳輸的訊息。 格式錯誤的訊息也會加以記錄。 三個分類彼此獨立，而且可以透過組態來個別啟動。  
   
  您可以設定 `logMessagesAtServiceLevel` 項目的 `logMalformedMessages`、`logMessagesAtTransportLevel` 及 `messageLogging` 屬性以控制記錄層級。  
   
@@ -77,7 +77,7 @@ ms.lasthandoff: 05/04/2018
  記錄在這層的是要送到網路上傳輸或是在傳輸後而要進行編碼或解碼的訊息。 如果有定義篩選條件，就只會記錄符合篩選條件的訊息。 否則，便會記錄傳輸層級中的所有訊息。 所有的基礎結構訊息都會記錄在這層，其中包括可信賴傳訊訊息。 若是已進行資料流處理的訊息，則只記錄標頭。 此外，安全訊息會以加密形式記錄在此層級，除了使用 HTTPS 一類的安全傳輸的情況以外。  
   
 ### <a name="malformed-level"></a>格式錯誤層級  
- 格式錯誤訊息是指 [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] 堆疊在任何處理階段所拒絕的訊息。 格式錯誤訊息會依現狀加以記錄：也就是若有加密，便會以加密形式記錄，並包含不正確的 XML 和其他格式。 `maxSizeOfMessageToLog` 定義了要以 CDATA 形式記錄之訊息的大小。 根據預設，`maxSizeOfMessageToLog` 會等於 256 K。 如需有關這個屬性的詳細資訊，請參閱其他選項 > 一節。  
+ 格式不正確的訊息是已處理的任何階段拒絕由 WCF 堆疊的訊息。 格式錯誤訊息會依現狀加以記錄：也就是若有加密，便會以加密形式記錄，並包含不正確的 XML 和其他格式。 `maxSizeOfMessageToLog` 定義了要以 CDATA 形式記錄之訊息的大小。 根據預設，`maxSizeOfMessageToLog` 會等於 256 K。 如需有關這個屬性的詳細資訊，請參閱其他選項 > 一節。  
   
 ### <a name="other-options"></a>其他選項  
  除了記錄層級，使用者也可以指定下列選項：  

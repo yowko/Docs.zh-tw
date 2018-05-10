@@ -2,11 +2,11 @@
 title: 使用效能計數器
 ms.date: 03/30/2017
 ms.assetid: 00a787af-1876-473c-a48d-f52b51e28a3f
-ms.openlocfilehash: 2e25551494a433c53832127fdb0a32cb4eccac47
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
-ms.translationtype: HT
+ms.openlocfilehash: 8784b4a481b8313d370aad1d8f265dcb44ab3ed6
+ms.sourcegitcommit: 15109844229ade1c6449f48f3834db1b26907824
+ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/04/2018
+ms.lasthandoff: 05/07/2018
 ---
 # <a name="using-performance-counters"></a>使用效能計數器
 這個範例會示範如何存取 Windows Communication Foundation (WCF) 的效能計數器，以及如何建立使用者定義的效能計數器。 這個範例根據[入門](../../../../docs/framework/wcf/samples/getting-started-sample.md)。  
@@ -28,7 +28,7 @@ ms.lasthandoff: 05/04/2018
   
  這項工作還可以使用[組態編輯器工具 (SvcConfigEditor.exe)](../../../../docs/framework/wcf/configuration-editor-tool-svcconfigeditor-exe.md)。  
   
- 當效能監視器啟用時，啟用 [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] 效能計數器的整個套件供服務使用。 .NET Framework 自動在三個層級保有效能資料：`ServiceModelService`、`ServiceModelEndpoint` 和 `ServiceModelOperation`。 這些層級中的每個層級都有效能計數器，例如「呼叫」、「每秒的呼叫數」和「未授權的安全性呼叫數」。  
+ 當啟用效能計數器時，服務已啟用 WCF 效能計數器的整個套件。 .NET Framework 自動在三個層級保有效能資料：`ServiceModelService`、`ServiceModelEndpoint` 和 `ServiceModelOperation`。 這些層級中的每個層級都有效能計數器，例如「呼叫」、「每秒的呼叫數」和「未授權的安全性呼叫數」。  
   
 ### <a name="to-set-up-build-and-run-the-sample"></a>若要安裝、建置及執行範例  
   
@@ -47,10 +47,10 @@ ms.lasthandoff: 05/04/2018
   
 2.  選擇列出的效能計數器，然後按 Delete 鍵將它們刪除。  
   
-3.  新增[!INCLUDE[indigo2](../../../../includes/indigo2-md.md)]計數器，以滑鼠右鍵按一下 [圖表] 窗格中選取**新增計數器**。 在**新增計數器**對話方塊中，選取**ServiceModelOperation 3.0.0.0、 ServiceModelEndpoint 3.0.0.0 或 ServiceModelService 3.0.0.0**效能物件中下拉式清單方塊。 從清單中選取您要檢視的計數器。  
+3.  以滑鼠右鍵按一下 [圖表] 窗格中選取新增 WCF 計數器**新增計數器**。 在**新增計數器**對話方塊中，選取**ServiceModelOperation 3.0.0.0、 ServiceModelEndpoint 3.0.0.0 或 ServiceModelService 3.0.0.0**效能物件中下拉式清單方塊。 從清單中選取您要檢視的計數器。  
   
     > [!NOTE]
-    >  如果電腦上沒有正在執行的 [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] 服務，就沒有服務的 [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] 效能計數器。  
+    >  如果沒有在電腦上執行的 WCF 服務，則需要有服務的 WCF 效能計數器。  
   
 ### <a name="to-use-the-configuration-editor-to-enable-counters"></a>若要使用組態編輯器來啟用計數器  
   

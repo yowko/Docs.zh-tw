@@ -8,11 +8,11 @@ helpviewer_keywords:
 - WCF, security
 - ProtectionLevel property
 ms.assetid: 0c034608-a1ac-4007-8287-b1382eaa8bf2
-ms.openlocfilehash: 0f17d6e787a48edd562559f52ac015edf7bc702c
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
-ms.translationtype: HT
+ms.openlocfilehash: 157e660a8b4d3866b9ab1994c409f82f16ac8359
+ms.sourcegitcommit: 15109844229ade1c6449f48f3834db1b26907824
+ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/04/2018
+ms.lasthandoff: 05/07/2018
 ---
 # <a name="understanding-protection-level"></a>了解保護層級
 在許多不同的類別上都可找到 `ProtectionLevel` 屬性，例如 <xref:System.ServiceModel.ServiceContractAttribute> 和 <xref:System.ServiceModel.OperationContractAttribute> 類別。 此屬性會控制如何保護訊息的部分 (或全部) 內容。 本主題說明 Windows Communication Foundation (WCF) 功能及其運作方式。  
@@ -39,7 +39,7 @@ ms.lasthandoff: 05/04/2018
   
 -   `ProtectionLevel`可讓開發人員設定*最低層級*繫結必須符合。 當服務完成部署之後，指定於組態中的實際繫結不一定會支援該最低層級。 例如，根據預設，<xref:System.ServiceModel.BasicHttpBinding> 類別不支援安全性 (雖然此選項可加以啟用)。 因此，搭配使用該類別與具有不同於 `None` 之任何設定的合約，將會造成例外狀況 (Exception) 的擲回。  
   
--   如果服務要求所有訊息的最低 `ProtectionLevel` 都是 `Sign`，則用戶端 (可能是透過非 [!INCLUDE[indigo2](../../../includes/indigo2-md.md)] 的技術所建立) 便可加密並簽署所有訊息 (這樣就會超過指定的最低層級)。 在此情況下，由於用戶端所做的已超過最低層級，[!INCLUDE[indigo2](../../../includes/indigo2-md.md)] 就不會擲回例外狀況。 然而，請注意，[!INCLUDE[indigo2](../../../includes/indigo2-md.md)] 應用程式 (服務或用戶端) 會盡可能不過度保護訊息部分，而只是符合最低的層級。 並請注意，當使用 `Transport` 做為安全性模式時，由於傳輸層級在本質上無法提供更細微層級的安全保護，所以它可能會過度保護訊息資料流。  
+-   如果服務要求的最小值`ProtectionLevel`所有訊息是`Sign`，用戶端 （或許是非 WCF 技術所建立） 可加密並簽署所有訊息 （此為多個所需的最小）。 在此情況下，WCF 不會擲回例外狀況因為用戶端已完成多個最小值。 不過請注意，WCF 應用程式 （服務或用戶端） 不會過度保護訊息部分可能的話，但會遵守最低層級。 並請注意，當使用 `Transport` 做為安全性模式時，由於傳輸層級在本質上無法提供更細微層級的安全保護，所以它可能會過度保護訊息資料流。  
   
 -   若您明確地將 `ProtectionLevel` 明確設定為 `Sign` 或 `EncryptAndSign`，則您必須使用已啟用安全性的繫結，否則會擲回例外狀況。  
   

@@ -2,14 +2,14 @@
 title: XMLSerializer 範例
 ms.date: 03/30/2017
 ms.assetid: 7d134453-9a35-4202-ba77-9ca3a65babc3
-ms.openlocfilehash: 3d1df93ef0efb7da24a1478f87e10dd18aa10bf1
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
-ms.translationtype: HT
+ms.openlocfilehash: 155719f546491f53ad2587e12d030dd7821b1fd3
+ms.sourcegitcommit: 15109844229ade1c6449f48f3834db1b26907824
+ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/04/2018
+ms.lasthandoff: 05/07/2018
 ---
 # <a name="xmlserializer-sample"></a>XMLSerializer 範例
-這個範例會示範如何序列化和還原序列化與 <xref:System.Xml.Serialization.XmlSerializer> 相容的型別。 預設的 Windows Communication Foundation (WCF) 格式器是<xref:System.Runtime.Serialization.DataContractSerializer>類別。 當無法使用 <xref:System.Xml.Serialization.XmlSerializer> 類別時，<xref:System.Runtime.Serialization.DataContractSerializer> 類別可以用來序列化與還原序列化型別。 這時通常需要精確控制 XML，例如，當資料片段必須是 XML 屬性而且不是 XML 項目的情況下。 當建立非 <xref:System.Xml.Serialization.XmlSerializer> 服務的用戶端時，通常也會自動選取 [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)]。  
+這個範例會示範如何序列化和還原序列化與 <xref:System.Xml.Serialization.XmlSerializer> 相容的型別。 預設的 Windows Communication Foundation (WCF) 格式器是<xref:System.Runtime.Serialization.DataContractSerializer>類別。 當無法使用 <xref:System.Xml.Serialization.XmlSerializer> 類別時，<xref:System.Runtime.Serialization.DataContractSerializer> 類別可以用來序列化與還原序列化型別。 這時通常需要精確控制 XML，例如，當資料片段必須是 XML 屬性而且不是 XML 項目的情況下。 此外，<xref:System.Xml.Serialization.XmlSerializer>通常會自動選取建立非 WCF 服務的用戶端時。  
   
  在這個範例中，用戶端是主控台應用程式 (.exe)，而服務則是由網際網路資訊服務 (IIS) 所裝載。  
   

@@ -2,11 +2,11 @@
 title: 傳播
 ms.date: 03/30/2017
 ms.assetid: f8181e75-d693-48d1-b333-a776ad3b382a
-ms.openlocfilehash: 5d848a2b74402d0adf125488481f5b82e0b09781
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
-ms.translationtype: HT
+ms.openlocfilehash: f4e92c6dec163d191c507dd80bb0d9dc129c6e96
+ms.sourcegitcommit: 15109844229ade1c6449f48f3834db1b26907824
+ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/04/2018
+ms.lasthandoff: 05/07/2018
 ---
 # <a name="propagation"></a>傳播
 本主題說明 Windows Communication Foundation (WCF) 追蹤模型中的活動傳播。  
@@ -20,7 +20,7 @@ ms.lasthandoff: 05/04/2018
 <source name="System.ServiceModel" switchValue="Verbose,ActivityTracing" propagateActivity="true" >  
 ```  
   
- 活動傳播是可設定的功能，這項功能會促使 [!INCLUDE[indigo2](../../../../../includes/indigo2-md.md)] 將標頭新增至傳出訊息，而其中會包含 TLS 上的活動識別碼。 將這個識別碼包含在對伺服器端的後續追蹤中，我們就可以將用戶端和伺服器活動相互關聯起來。  
+ 活動傳播是可設定的功能，讓 WCF 將標頭新增至傳出訊息，其中包含 TLS 上的活動識別碼。 將這個識別碼包含在對伺服器端的後續追蹤中，我們就可以將用戶端和伺服器活動相互關聯起來。  
   
 ## <a name="propagation-definition"></a>傳播定義  
  如果下列所有條件都成立，就會將活動 M 的 gAId 傳播至活動 N。  

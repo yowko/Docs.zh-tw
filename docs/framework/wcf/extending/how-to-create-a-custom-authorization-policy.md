@@ -5,14 +5,14 @@ dev_langs:
 - csharp
 - vb
 ms.assetid: 05b0549b-882d-4660-b6f0-5678543e5475
-ms.openlocfilehash: 83b796c76887c6ba30ddb3c985ee43ab8dce2ec9
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
-ms.translationtype: HT
+ms.openlocfilehash: 0bacf874e09aca82b2f2685a146612cdef0673db
+ms.sourcegitcommit: 15109844229ade1c6449f48f3834db1b26907824
+ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/04/2018
+ms.lasthandoff: 05/07/2018
 ---
 # <a name="how-to-create-a-custom-authorization-policy"></a>HOW TO：建立自訂授權原則
-識別模型基礎結構中 Windows Communication Foundation (WCF) 支援宣告型授權模型。 宣告會從權杖擷取出來 (可以選擇性地由自訂授權原則進行處理)，接著會放置到可隨後進行檢查以做出授權決策的 <xref:System.IdentityModel.Policy.AuthorizationContext>。 自訂原則可用於將來自傳入權杖的宣告轉換為應用程式所需要的宣告。 如此一來，應用程式層就可以和受 [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] 支援之不同權杖類型所服務之不同宣告的詳細資料達成隔離。 本主題會說明如何實作自訂授權原則，以及如何將該原則新增至服務所使用的原則集合。  
+識別模型基礎結構中 Windows Communication Foundation (WCF) 支援宣告型授權模型。 宣告會從權杖擷取出來 (可以選擇性地由自訂授權原則進行處理)，接著會放置到可隨後進行檢查以做出授權決策的 <xref:System.IdentityModel.Policy.AuthorizationContext>。 自訂原則可用於將來自傳入權杖的宣告轉換為應用程式所需要的宣告。 如此一來，應用程式層都可以 WCF 支援的不同權杖類型所服務之不同宣告的詳細資料達成隔離。 本主題會說明如何實作自訂授權原則，以及如何將該原則新增至服務所使用的原則集合。  
   
 ### <a name="to-implement-a-custom-authorization-policy"></a>實作自訂授權原則  
   

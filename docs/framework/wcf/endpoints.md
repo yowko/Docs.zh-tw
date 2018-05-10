@@ -4,14 +4,14 @@ ms.date: 03/30/2017
 helpviewer_keywords:
 - endpoints [WCF]
 ms.assetid: bd0c310f-dd9f-4081-9be2-3db5909850b6
-ms.openlocfilehash: 2588cc0bd70932aa91d300d8ecbe35cd2bcd7d00
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
-ms.translationtype: HT
+ms.openlocfilehash: b55abe937701f8708643efa2ea4cb62514b3521b
+ms.sourcegitcommit: 15109844229ade1c6449f48f3834db1b26907824
+ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/04/2018
+ms.lasthandoff: 05/07/2018
 ---
 # <a name="windows-communication-foundation-endpoints"></a>Windows Communication Foundation 端點
-所有與 Windows Communication Foundation (WCF) 服務的通訊會透過*端點*的服務。 端點針對 [!INCLUDE[indigo2](../../../includes/indigo2-md.md)] 服務所提供的功能提供了用戶端存取。  
+所有與 Windows Communication Foundation (WCF) 服務的通訊會透過*端點*的服務。 端點可讓用戶端存取 WCF 服務提供的功能。  
   
  如需有關如何建立端點的概觀，請參閱[端點建立概觀](../../../docs/framework/wcf/endpoint-creation-overview.md)。 每個端點包含：  
   
@@ -34,7 +34,7 @@ ms.lasthandoff: 05/04/2018
  說明端點的結構，並且摘要說明如何透過組態與程式碼來定義端點，以及如何使用執行階段所提供的預設端點、繫結和行為。  
   
  [指定端點位址](../../../docs/framework/wcf/specifying-an-endpoint-address.md)  
- 說明與 [!INCLUDE[indigo2](../../../includes/indigo2-md.md)] 服務的通訊如何透過端點來進行。  
+ 描述如何透過端點來進行與 WCF 服務的通訊。  
   
  [如何：在組態中建立服務端點](../../../docs/framework/wcf/feature-details/how-to-create-a-service-endpoint-in-configuration.md)  
  示範如何在組態中建立服務端點。  

@@ -4,18 +4,18 @@ ms.date: 03/30/2017
 ms.assetid: 947986cf-9946-4987-84e5-a14678d96edb
 author: BrucePerlerMS
 manager: mbaldwin
-ms.openlocfilehash: 97602a261f1e86cb70b38f21080c2a2e792605e8
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
-ms.translationtype: HT
+ms.openlocfilehash: d513ddd41d87da7274f961969d261724b49aab65
+ms.sourcegitcommit: 15109844229ade1c6449f48f3834db1b26907824
+ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/04/2018
+ms.lasthandoff: 05/07/2018
 ---
 # <a name="token-provider"></a>權杖提供者
-這個範例會示範如何實作自訂權杖提供者。 Windows Communication Foundation (WCF) 的權杖提供者用來提供認證給安全性基礎結構。 一般而言，權杖提供者會檢查目標並發行適當的認證，讓安全性基礎結構能夠保護訊息的安全。 [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] 會隨附預設的認證管理員權杖提供者。 [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] 也會隨附 [!INCLUDE[infocard](../../../../includes/infocard-md.md)] 權杖提供者。 自訂權杖提供者適用於下列情況：  
+這個範例會示範如何實作自訂權杖提供者。 Windows Communication Foundation (WCF) 的權杖提供者用來提供認證給安全性基礎結構。 一般而言，權杖提供者會檢查目標並發行適當的認證，讓安全性基礎結構能夠保護訊息的安全。 WCF 隨附預設的認證管理員權杖提供者。 WCF 還隨附[!INCLUDE[infocard](../../../../includes/infocard-md.md)]權杖提供者。 自訂權杖提供者適用於下列情況：  
   
 -   如果您有這些權杖提供者無法使用的認證存放區。  
   
--   如果您要提供自訂的機制，將認證從使用者提供詳細資料時，轉換成當 [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] 用戶端架構使用認證時。  
+-   如果您想要提供您自己自訂的機制，轉換認證從使用者提供詳細資料，當 WCF 用戶端架構使用認證時。  
   
 -   如果您要建置自訂權杖。  
   
@@ -108,7 +108,7 @@ ms.lasthandoff: 05/04/2018
 </system.serviceModel>  
 ```  
   
- 下列步驟示範如何開發自訂權杖提供者，並將其整合至 [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] 安全性架構：  
+ 下列步驟示範如何開發自訂權杖提供者，並將其整合與 WCF 安全性架構：  
   
 1.  撰寫自訂權杖提供者。  
   

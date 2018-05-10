@@ -2,11 +2,11 @@
 title: 權杖驗證器
 ms.date: 03/30/2017
 ms.assetid: 84382f2c-f6b1-4c32-82fa-aebc8f6064db
-ms.openlocfilehash: 35bba0b6a81ff11164636e906440db7e9b2ca25b
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
-ms.translationtype: HT
+ms.openlocfilehash: 4681dea4fd39b039346d22c02c478323ff53e240
+ms.sourcegitcommit: 15109844229ade1c6449f48f3834db1b26907824
+ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/04/2018
+ms.lasthandoff: 05/07/2018
 ---
 # <a name="token-authenticator"></a>權杖驗證器
 這個範例示範如何實作自訂權杖驗證器。 Windows Communication Foundation (WCF) 的權杖驗證器用來驗證郵件時，所使用的權杖驗證前後一致，以及驗證身分識別相關聯的語彙基元。  
@@ -23,11 +23,11 @@ ms.lasthandoff: 05/04/2018
   
 -   伺服器如何使用自訂權杖驗證器驗證用戶端認證。  
   
--   [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] 服務程式碼如何與自訂權杖驗證器結合在一起。  
+-   如何 WCF 服務程式碼會結合自訂權杖驗證器。  
   
 -   如何使用伺服器的 X.509 憑證來驗證伺服器。  
   
- 這個範例還會示範如何在自訂權杖驗證程序之後，從 [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] 存取呼叫者的身分識別。  
+ 這個範例也示範如何呼叫者身分識別可從 WCF 自訂權杖驗證程序之後。  
   
  服務會公開 (Expose) 單一的端點來與已使用組態檔 App.config 定義之服務進行通訊。 端點是由位址、繫結及合約所組成。 繫結已設定成標準 `wsHttpBinding`，以及將安全性模式設為訊息 (`wsHttpBinding` 的預設模式)。 這個範例會將標準 `wsHttpBinding` 設定為使用用戶端使用者名稱驗證。 服務也會使用 `serviceCredentials` 行為來設定服務憑證。 `securityCredentials` 行為允許您指定服務憑證。 服務憑證是由用戶端用來驗證服務並提供訊息保護。 下列組態會參考在安裝範例期間所安裝的 localhost 憑證，如下列安裝指示中所述。  
   

@@ -8,11 +8,11 @@ helpviewer_keywords:
 - handling faults [WCF], specifying
 - handling faults [WCF], defining
 ms.assetid: c00c84f1-962d-46a7-b07f-ebc4f80fbfc1
-ms.openlocfilehash: b71aaf22c98c7f8e62b5c02449a45ec75567d064
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
-ms.translationtype: HT
+ms.openlocfilehash: 99e0c22a66eb1d839f1594cf53373a74fc3dd02d
+ms.sourcegitcommit: 15109844229ade1c6449f48f3834db1b26907824
+ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/04/2018
+ms.lasthandoff: 05/07/2018
 ---
 # <a name="defining-and-specifying-faults"></a>定義並指定錯誤
 SOAP 錯誤會將錯誤狀況資訊從服務傳送到用戶端，而在雙工案例中，則是以互通的方式從用戶端傳送到服務。 本主題討論何時及如何定義自訂錯誤內容，並指定可以傳回它們的作業。 如需有關服務或雙工用戶端，可以傳送這些錯誤，且用戶端或服務的應用程式如何處理這些錯誤的詳細資訊，請參閱[傳送和接收錯誤](../../../docs/framework/wcf/sending-and-receiving-faults.md)。 如需 Windows Communication Foundation (WCF) 應用程式中的錯誤處理的概觀，請參閱[指定與處理合約和服務中的錯誤](../../../docs/framework/wcf/specifying-and-handling-faults-in-contracts-and-services.md)。  
@@ -27,7 +27,7 @@ SOAP 錯誤會將錯誤狀況資訊從服務傳送到用戶端，而在雙工案
 3.  標示您的作業，讓其擲回的特定 SOAP 錯誤以 WSDL 格式對用戶端公開。  
   
 ### <a name="defining-error-conditions-that-clients-should-know-about"></a>定義用戶端應知道的錯誤狀況  
- SOAP 錯誤是公開描述的訊息，具有特定作業的錯誤資訊。 由於它們是和其他作業訊息一起以 WSDL 描述的，因此用戶端知道並預期在叫用作業時處理這類錯誤。 但是由於 [!INCLUDE[indigo2](../../../includes/indigo2-md.md)] 服務是以 Managed 程式碼撰寫的，因此決定要將哪些使用 Managed 程式碼的錯誤狀況轉換成錯誤並傳回用戶端，可讓您有機會將錯誤狀況和您服務中的錯誤與您和用戶端的正式錯誤對話分開。  
+ SOAP 錯誤是公開描述的訊息，具有特定作業的錯誤資訊。 由於它們是和其他作業訊息一起以 WSDL 描述的，因此用戶端知道並預期在叫用作業時處理這類錯誤。 不過這是因為 WCF 服務以 managed 程式碼，決定哪些錯誤條件在 managed 程式碼來轉換成錯誤並傳回至用戶端可讓您得以分開正式錯誤的錯誤情況及您的服務中的 bug您有與用戶端的交談。  
   
  例如，下列程式碼範例顯示採用兩個整數並傳回另一個整數的作業。 此處可擲回數個例外狀況，因此當設計錯誤合約時，您必須決定哪些錯誤狀況對您的用戶端是重要的。 在此案例中，服務應會偵測到 <xref:System.DivideByZeroException?displayProperty=nameWithType> 例外狀況。  
   
@@ -84,7 +84,7 @@ End Class
   
  根據 SOAP 標準，錯誤可以有 `Action`、`Code` 和 `Reason`。 `Action` 是由 <xref:System.ServiceModel.FaultContractAttribute.Action%2A> 屬性控制的。 <xref:System.ServiceModel.FaultException.Code%2A> 屬性和 <xref:System.ServiceModel.FaultException.Reason%2A> 屬性都是 <xref:System.ServiceModel.FaultException?displayProperty=nameWithType> 類別的屬性，而該類別是一般 <xref:System.ServiceModel.FaultException%601?displayProperty=nameWithType> 的父類別。 `Code` 屬性包括 <xref:System.ServiceModel.FaultCode.SubCode%2A> 成員。  
   
- 當存取產生錯誤的非服務時，會有特定限制。 [!INCLUDE[indigo2](../../../includes/indigo2-md.md)] 只支援有結構描述所描述以及與資料合約相容之詳細類型的錯誤。 例如，如上所述，[!INCLUDE[indigo2](../../../includes/indigo2-md.md)] 不支援在其詳細類型中使用 XML 屬性的錯誤，或在詳細資訊區段中有一個以上之最上層項目的錯誤。  
+ 當存取產生錯誤的非服務時，會有特定限制。 WCF 支援只詳細型別錯誤，結構描述所描述，並與資料合約相容。 例如，如上面所述，WCF 不支援詳細資料型別，請使用 XML 屬性的錯誤或錯誤的詳細資料區段中的多個最上層元素。  
   
 ## <a name="see-also"></a>另請參閱  
  <xref:System.ServiceModel.FaultContractAttribute>  

@@ -2,11 +2,11 @@
 title: Windows Workflow Foundation 4 效能
 ms.date: 03/30/2017
 ms.assetid: 67d2b3e8-3777-49f8-9084-abbb33b5a766
-ms.openlocfilehash: 793645c442e960c43f00c3ea3c9b636a4c539706
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
-ms.translationtype: HT
+ms.openlocfilehash: 5d532cab71dacd4669435ff5afbafb53744953dd
+ms.sourcegitcommit: 15109844229ade1c6449f48f3834db1b26907824
+ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/04/2018
+ms.lasthandoff: 05/07/2018
 ---
 # <a name="windows-workflow-foundation-4-performance"></a>Windows Workflow Foundation 4 效能
 Dustin Metzgar  
@@ -17,7 +17,7 @@ Dustin Metzgar
   
  Microsoft[!INCLUDE[netfx40_long](../../../includes/netfx40-long-md.md)]效能中包含的重大修訂的 Windows Workflow Foundation (WF) 進行了大量投資。  這個新修訂在設計方面做了改變，與 .NET Framework 3.0 和 [!INCLUDE[wf1](../../../includes/wf1-md.md)] 隨附的舊版 [!INCLUDE[netfx35_short](../../../includes/netfx35-short-md.md)] 有明顯的不同。 在此版本中，程式設計模型、執行階段及工具的核心已重新架構，以大幅改善效能和可用性。 本主題說明這些修訂的重要效能特性，並且與其舊版進行比較。  
   
- WF3 與 WF4 之間個別工作流程元件效能提升的速度很快。  如此一手動編碼 Windows Communication Foundation (WCF) 服務之間的間距和[!INCLUDE[indigo2](../../../includes/indigo2-md.md)]要變得很小的工作流程服務。  在 WF4 中，工作流程延遲已大幅降低。  持續性效能已提升 2.5 至 3.0 倍。  透過工作流程追蹤進行健康監視的負荷已明顯減少。  這些都是移轉至 WF4 或在應用程式中採用 WF4 的絕佳理由。  
+ WF3 與 WF4 之間個別工作流程元件效能提升的速度很快。  這手動編碼 Windows Communication Foundation (WCF) 服務和 WCF 工作流程服務變得很小之間保留間距。  在 WF4 中，工作流程延遲已大幅降低。  持續性效能已提升 2.5 至 3.0 倍。  透過工作流程追蹤進行健康監視的負荷已明顯減少。  這些都是移轉至 WF4 或在應用程式中採用 WF4 的絕佳理由。  
   
 ## <a name="terminology"></a>用語  
  本主題後續內容皆以 WF4 代表 [!INCLUDE[wf1](../../../includes/wf1-md.md)] 中引進的 [!INCLUDE[netfx40_short](../../../includes/netfx40-short-md.md)] 版本。  [!INCLUDE[wf1](../../../includes/wf1-md.md)] 是在 .Net 3.0 中引進的，並且透過 [!INCLUDE[netfx35_short](../../../includes/netfx35-short-md.md)] SP1 進行了幾項小幅修訂。 本主題中一律將 [!INCLUDE[netfx35_short](../../../includes/netfx35-short-md.md)] 版的 Workflow Foundation 稱為 WF3。 WF3 與 WF4 一同隨附於 [!INCLUDE[netfx40_short](../../../includes/netfx40-short-md.md)]。 將 WF3 成品移轉至 WF4 的詳細資訊請參閱： [Windows Workflow Foundation 4 移轉指南](http://go.microsoft.com/fwlink/?LinkID=153313)  
@@ -35,7 +35,7 @@ Dustin Metzgar
 ### <a name="wf-runtime"></a>WF 執行階段  
  [!INCLUDE[wf1](../../../includes/wf1-md.md)] 執行階段的核心擁有非同步的排程器，可讓工作流程中的活動執行。 它提供了高效能且可預測的活動執行環境。 這個環境具備妥善定義的執行、接續、完成、取消、例外狀況合約，以及可預測的執行緒模型。  
   
- 與 WF3 相較之下，WF4 執行階段的排程器更有效率。 它會運用與 [!INCLUDE[indigo2](../../../includes/indigo2-md.md)] 所使用相同的 I/O 執行緒集區，因此在執行批次工作項目時相當有效率。 內部工作項目排程器佇列已針對最常見的使用模式完成最佳化。 WF4 執行階段還會透過最低限度的同步處理和事件處理邏輯，以相當輕量的方式管理執行狀態，而 WF3 則須倚賴大量的事件註冊和叫用作業，針對狀態轉換進行複雜的同步處理。  
+ 與 WF3 相較之下，WF4 執行階段的排程器更有效率。 它會利用同一個 I/O 執行緒集區所使用 WCF，這會非常有效率，在執行批次的工作項目。 內部工作項目排程器佇列已針對最常見的使用模式完成最佳化。 WF4 執行階段還會透過最低限度的同步處理和事件處理邏輯，以相當輕量的方式管理執行狀態，而 WF3 則須倚賴大量的事件註冊和叫用作業，針對狀態轉換進行複雜的同步處理。  
   
 ### <a name="data-storage-and-flow"></a>資料儲存和流程  
  在 WF3 中，與活動相關聯的資料會透過 <xref:System.Windows.DependencyProperty> 型別所實作的相依性屬性模型化。 相依性屬性模式已導入 Windows Presentation Foundation (WPF) 中。 一般而言，此模式相當富彈性，可支援簡單的資料繫結和其他 UI 功能。 不過，此模式需要將屬性定義為工作流程定義中的靜態欄位。 每當 [!INCLUDE[wf1](../../../includes/wf1-md.md)] 執行階段設定或取得屬性值，就會涉及相當大量的查詢邏輯。  
@@ -53,9 +53,9 @@ Dustin Metzgar
  應用程式針對長時間執行的封鎖作業 (例如 I/O) 或分散式運算作業採用非同步程式設計時，通常可展現較佳的效能和延展性。 WF4 會透過基礎活動型別 <xref:System.Activities.AsyncCodeActivity> 和 <xref:System.Activities.AsyncCodeActivity%601> 提供非同步支援。 執行階段原本即了解非同步活動，因此可以在非同步工作未處理完畢時，自動將執行個體放入不保存區域中。 您可以從這些類型衍生自訂活動，以執行非同步工作；如此就不會佔用工作流程排程器執行緒，也不會阻擋任何可平行執行的活動。  
   
 ### <a name="messaging"></a>傳訊  
- WF3 一開始僅透過外部事件或叫用 Web 服務提供相當有限的傳訊支援。 在 .NET 3.5 中，工作流程可透過 [!INCLUDE[indigo2](../../../includes/indigo2-md.md)] 和 [!INCLUDE[indigo2](../../../includes/indigo2-md.md)] 實作為 <xref:System.Workflow.Activities.SendActivity> 用戶端，或是公開為 <xref:System.Workflow.Activities.ReceiveActivity> 服務。 WF4 已強化這個以工作流程為架構的傳訊程式設計概念，方法是將 [!INCLUDE[indigo2](../../../includes/indigo2-md.md)] 傳訊邏輯緊密整合至 WF。  
+ WF3 一開始僅透過外部事件或叫用 Web 服務提供相當有限的傳訊支援。 在.Net 3.5 中，工作流程可以是實作為 WCF 用戶端或公開為 WCF 服務，透過<xref:System.Workflow.Activities.SendActivity>和<xref:System.Workflow.Activities.ReceiveActivity>。 在 WF4 中，工作流程為基礎的傳訊程式設計概念我們已進一步增強透過 WCF 到 WF 傳訊邏輯緊密整合。  
   
- .NET 4 的 [!INCLUDE[indigo2](../../../includes/indigo2-md.md)] 中提供的統一訊息處理管線，可大幅提升 WF4 服務的效能和延展性，比 WF3 要高出許多。 WF4 還提供更豐富的傳訊程式設計支援，可建立複雜的訊息交換模式 (MEP) 模型。 開發人員可以使用具型別的服務合約輕鬆進行程式設計，或使用不具型別的服務合約獲得更佳的效能，而不必付出序列化成本。 WF4 中透過 <xref:System.ServiceModel.Activities.SendMessageChannelCache> 類別提供的用戶端通道快取支援，可幫助開發人員執行最少的工作來建置快速的應用程式。 如需詳細資訊，請參閱[傳送活動的變更快取共用層級](../../../docs/framework/wcf/feature-details/changing-the-cache-sharing-levels-for-send-activities.md)。  
+ .Net 4 中的 WCF 中提供的統一的訊息處理管線有助於大幅提升效能和延展性比 WF3 WF4 服務。 WF4 還提供更豐富的傳訊程式設計支援，可建立複雜的訊息交換模式 (MEP) 模型。 開發人員可以使用具型別的服務合約輕鬆進行程式設計，或使用不具型別的服務合約獲得更佳的效能，而不必付出序列化成本。 WF4 中透過 <xref:System.ServiceModel.Activities.SendMessageChannelCache> 類別提供的用戶端通道快取支援，可幫助開發人員執行最少的工作來建置快速的應用程式。 如需詳細資訊，請參閱[傳送活動的變更快取共用層級](../../../docs/framework/wcf/feature-details/changing-the-cache-sharing-levels-for-send-activities.md)。  
   
 ### <a name="declarative-programming"></a>宣告式程式設計  
  WF4 提供清楚且簡單的宣告式程式設計架構來建立商務程序和服務的模型。 程式設計模型支援完全以宣告的方式撰寫活動，沒有任何 Code-Beside，因而大幅簡化了工作流程的撰寫。 在 [!INCLUDE[netfx40_short](../../../includes/netfx40-short-md.md)] 中，XAML 宣告式程式設計架構已整合至單一組件 System.Xaml.dll，以同時支援 WPF 和 WF。  
@@ -177,36 +177,36 @@ public sealed class CompensableActivityEmptyCompensation : CodeActivity
  工作流程的所有測試都是以秒為測量單位，但是異動範圍測試除外。  如上面所示，[!INCLUDE[wf1](../../../includes/wf1-md.md)] 執行階段效能已全面提升，尤其是在需要多次執行相同活動 (如 while 迴圈) 的區域中。  
   
 ## <a name="service-composition-scenario"></a>服務撰寫案例  
- 在上一節 「 元件層級的效能比較 > 中所顯示已經過大幅縮小程式 WF3 和 WF4 之間的額外負荷。  [!INCLUDE[indigo2](../../../includes/indigo2-md.md)] 工作流程服務現在幾乎能夠和手寫程式碼 [!INCLUDE[indigo2](../../../includes/indigo2-md.md)] 服務的效能相抗衡，但仍保有 [!INCLUDE[wf1](../../../includes/wf1-md.md)] 執行階段的所有優點。  這個測試案例會比較 [!INCLUDE[indigo2](../../../includes/indigo2-md.md)] 服務與 WF4 中的 [!INCLUDE[indigo2](../../../includes/indigo2-md.md)] 工作流程服務。  
+ 在上一節 「 元件層級的效能比較 > 中所顯示已經過大幅縮小程式 WF3 和 WF4 之間的額外負荷。  WCF workflow service 可現在幾乎符合手動編碼的 WCF 服務的效能，但仍擁有的所有優點[!INCLUDE[wf1](../../../includes/wf1-md.md)]執行階段。  此測試案例會比較針對 WCF workflow service，WF4 中的 WCF 服務。  
   
 ### <a name="online-store-service"></a>線上存放服務  
  Windows Workflow Foundation 的強項之一是能夠撰寫使用數個服務處理程序。  這個優點的範例為線上存放服務，該服務會協調兩個服務呼叫以採購訂單。  第一個步驟是使用訂單驗證服務驗證訂單。  第二個步驟是使用倉儲服務填寫訂單。  
   
- 在兩項測驗中，訂單驗證服務和倉儲服務這兩項後端服務保持不變。  變更的部分是執行協調流程的線上存放服務。  在其中一個案例中，此服務會手動編碼為 [!INCLUDE[indigo2](../../../includes/indigo2-md.md)] 服務。  而在另一個案例中，服務會撰寫為 WF4 中的 [!INCLUDE[indigo2](../../../includes/indigo2-md.md)] 工作流程服務。 在這項測試中，[!INCLUDE[wf1](../../../includes/wf1-md.md)] 的專屬功能像是追蹤和持續性都會關閉。  
+ 在兩項測驗中，訂單驗證服務和倉儲服務這兩項後端服務保持不變。  變更的部分是執行協調流程的線上存放服務。  在其中一個案例中，服務會手動編碼為 WCF 服務。  其他情況下，服務會撰寫為 WF4 中的 WCF workflow service。 在這項測試中，[!INCLUDE[wf1](../../../includes/wf1-md.md)] 的專屬功能像是追蹤和持續性都會關閉。  
   
 ### <a name="environment"></a>環境  
  ![工作流程效能測試環境](../../../docs/framework/windows-workflow-foundation/media/wfperfenvironment.gif "WFPerfEnvironment")  
   
- 從多部電腦透過 HTTP 對線上存放服務發出用戶端要求。  這三項服務全裝載於單一電腦。  線上存放服務和後端服務之間的傳輸層是 TCP 或 HTTP。  對作業/秒的測量是以完成的 `PurchaseOrder` 呼叫數目為基礎，這些呼叫的目標是線上存放服務。  通道共用是 WF4 提供的新功能。  在這項測試的 [!INCLUDE[indigo2](../../../includes/indigo2-md.md)] 部分，通道共用並非立即可用，因此線上存放服務中是使用簡單共用技術的手動編碼實作。  
+ 從多部電腦透過 HTTP 對線上存放服務發出用戶端要求。  這三項服務全裝載於單一電腦。  線上存放服務和後端服務之間的傳輸層是 TCP 或 HTTP。  對作業/秒的測量是以完成的 `PurchaseOrder` 呼叫數目為基礎，這些呼叫的目標是線上存放服務。  通道共用是 WF4 提供的新功能。  在 WCF 部分此測試通道共用並非立即可用的因此線上存放服務中使用簡單共用技術的手動編碼實作。  
   
 ### <a name="performance"></a>效能  
  ![線上商店服務效能圖表](../../../docs/framework/windows-workflow-foundation/media/onlinestoreperfgraph.gif "OnlineStorePerfGraph")  
   
  不透過通道共用連線到後端 TCP 服務時，[!INCLUDE[wf1](../../../includes/wf1-md.md)] 服務的輸送量會有 17.2% 的影響。  若透過通道共用，則影響約 23.8%。  若為 HTTP，則影響相對較低：不透過共用為 4.3%，透過共用則為 8.1%。  另外要特別注意的是，使用 HTTP 時通道共用的效用不大。  
   
- 雖然在這項測試中，WF4 執行階段與手動編碼的 [!INCLUDE[indigo2](../../../includes/indigo2-md.md)] 服務相較之下仍有負荷，但是可以視為最壞情況的案例。  在這項測試中，兩個後端服務執行的工作相當少。  在實際的端對端案例中，這些服務會執行更耗費資源的作業，像是資料庫呼叫，傳輸層效能的影響即變得較不重要。  再加上 WF4 所提供的功能優勢，使得 Workflow Foundation 成為一項建立協調流程服務的可行選擇。  
+ 雖然沒有額外負荷項目相較於手動編碼中的 WCF 服務這項測試的 WF4 執行階段中，但是可以視為最糟的狀況。  在這項測試中，兩個後端服務執行的工作相當少。  在實際的端對端案例中，這些服務會執行更耗費資源的作業，像是資料庫呼叫，傳輸層效能的影響即變得較不重要。  再加上 WF4 所提供的功能優勢，使得 Workflow Foundation 成為一項建立協調流程服務的可行選擇。  
   
 ## <a name="key-performance-considerations"></a>重要的效能考量  
  本節中提到的功能 (Interop 除外) 在 WF3 和 WF4 之間已有大幅變更。  這會影響工作流程應用程式的設計以及效能。  
   
 #### <a name="workflow-activation-latency"></a>工作流程啟動延遲  
- 在 [!INCLUDE[indigo2](../../../includes/indigo2-md.md)] 工作流程服務應用程式中，用於啟動新工作流程或載入現有工作流程的延遲十分重要，因為可能會造成封鎖的情況。  這項測試案例會評估一般案例中的 WF3 XOML 主機與 WF4 XAMLX 主機。  
+ WCF 工作流程服務應用程式中啟動新的工作流程或載入現有的工作流程的延遲時間是重要，因為它可能會造成封鎖。  這項測試案例會評估一般案例中的 WF3 XOML 主機與 WF4 XAMLX 主機。  
   
 ##### <a name="environment-setup"></a>環境設定  
  ![延遲和輸送量測試的環境設定](../../../docs/framework/windows-workflow-foundation/media/latencyandthroughputenvironment.gif "LatencyAndThroughputEnvironment")  
   
 ##### <a name="test-setup"></a>測試設定  
- 在此案例中，用戶端電腦會使用以內容為主的相互關聯來連絡 [!INCLUDE[indigo2](../../../includes/indigo2-md.md)] 工作流程服務。  內容相互關聯需要特殊的內容繫結，並使用內容標頭或 Cookie 將訊息與正確的工作流程產生關聯。  這樣做有益於效能，因為相互關聯 ID 位於訊息標頭中，因此訊息本文不需要進行剖析。 如需內容相互關聯的詳細資訊，請參閱[內容交換相互關聯](../../../docs/framework/wcf/feature-details/context-exchange-correlation.md)  
+ 在案例中，用戶端電腦會連絡 WCF workflow service 使用以內容為主的相互關聯。  內容相互關聯需要特殊的內容繫結，並使用內容標頭或 Cookie 將訊息與正確的工作流程產生關聯。  這樣做有益於效能，因為相互關聯 ID 位於訊息標頭中，因此訊息本文不需要進行剖析。 如需內容相互關聯的詳細資訊，請參閱[內容交換相互關聯](../../../docs/framework/wcf/feature-details/context-exchange-correlation.md)  
   
  服務將根據要求建立新的工作流程，並且傳送立即回應，如此對延遲的測量就不會包括執行工作流程所花的時間。  WF3 工作流程是包含程式碼後置的 XOML，而 WF4 工作流程完全是 XAML。  WF4 工作流程看起來像這樣：  
   
@@ -222,7 +222,7 @@ public sealed class CompensableActivityEmptyCompensation : CodeActivity
  在上圖中，「冷」是表示指定的工作流程沒有現有的 <xref:System.ServiceModel.WorkflowServiceHost>。  換句話說，冷延遲意謂第一次使用此工作流程，XOML 或 XAML 需要進行編譯。  暖延遲則意謂所建立的新工作流程執行個體，其工作流程類型已完成編譯。  工作流程的複雜度在 WF4 案例中只有相當些微的差異，但是在 WF3 案例中則呈現直線進展。  
   
 #### <a name="correlation-throughput"></a>相互關聯輸送量  
- WF4 採用新的內容架構相互關聯 (Content-Based Correlation) 功能。  WF3 僅提供以內容為主的相互關聯 (Context-Based Correlation)。  以內容為主的相互關聯只能透過特定 [!INCLUDE[indigo2](../../../includes/indigo2-md.md)] 通道繫結進行。  使用這些繫結時，工作流程 ID 會插入至訊息標頭。  WF3 執行階段只能根據工作流程 ID 來識別工作流程。透過內容架構的相互關聯，工作流程作者可以從相關的資料片段 (像是帳戶號碼或客戶 ID) 建立相互關聯索引鍵。如需有關內容架構相互關聯，請參閱[內容基礎的相互關聯](../../../docs/framework/wcf/feature-details/content-based-correlation.md)。  
+ WF4 採用新的內容架構相互關聯 (Content-Based Correlation) 功能。  WF3 僅提供以內容為主的相互關聯 (Context-Based Correlation)。  以內容為主的相互關聯只能透過特定的 WCF 通道繫結。  使用這些繫結時，工作流程 ID 會插入至訊息標頭。  WF3 執行階段只能根據工作流程 ID 來識別工作流程。透過內容架構的相互關聯，工作流程作者可以從相關的資料片段 (像是帳戶號碼或客戶 ID) 建立相互關聯索引鍵。如需有關內容架構相互關聯，請參閱[內容基礎的相互關聯](../../../docs/framework/wcf/feature-details/content-based-correlation.md)。  
   
  以內容為主的相互關聯擁有的效能優勢在於，相互關聯索引鍵位於訊息標頭內。  索引鍵可以從訊息讀取，而不需進行還原序列化/訊息複製。  在內容架構的相互關聯中，相互關聯索引鍵是儲存在訊息主體中。  XPath 運算式會用來尋找該索引鍵。  這項額外處理的成本取決於訊息的大小、索引鍵在主體中的深度，以及索引鍵的數量。  這項測試會比較以內容為主的相互關聯與內容架構的相互關聯，另外還會顯示使用多個索引鍵時效能降低的情況。  
   
@@ -321,7 +321,7 @@ public sealed class CompensableActivityEmptyCompensation : CodeActivity
 |主控台應用程式裝載的工作流程|18 MB|9 MB|  
 |IIS 裝載的工作流程服務|446 MB|364 MB|  
   
- 在 IIS 中裝載工作流程定義會因為 <xref:System.ServiceModel.WorkflowServiceHost>、詳細的 [!INCLUDE[indigo2](../../../includes/indigo2-md.md)] 服務成品，以及與主機相關聯的訊息處理邏輯，而耗用更多記憶體。  
+ 裝載在 IIS 中的工作流程定義耗用更多的記憶體，因為<xref:System.ServiceModel.WorkflowServiceHost>，詳細的 WCF 服務成品，以及處理邏輯與主機關聯的訊息。  
   
  針對 WF3 中的主控台裝載作業，工作流程會以程式碼實作，而不是 XOML。  在 WF4 中，預設為使用 XAML。  XAML 會在組件中儲存為內嵌資源，並且在執行階段期間編譯，以提供工作流程的實作。  此程序會產生一些負荷。  為了在 WF3 和 WF4 之間進行公平的比較，會使用以程式碼 (而非 XAML) 撰寫的工作流程。  以下顯示其中一個 WF4 工作流程的範例：  
   
@@ -413,7 +413,7 @@ public class Workflow1 : Activity
   
 -   追蹤事件的收集工作可以分割到另一個處理序。  如此就能在事件記錄方式上獲得更大的彈性。  
   
--   ETW 追蹤事件可輕鬆結合 [!INCLUDE[indigo2](../../../includes/indigo2-md.md)] ETW 事件或是其他 ETW 提供者，例如 SQL Server 或核心提供者。  
+-   ETW 追蹤事件可輕鬆結合 WCF ETW 事件或是其他 ETW 提供者，例如 SQL Server 或核心提供者。  
   
 -   工作流程作者不需要修改工作流程，就能更充分地運用特定追蹤實作，例如 WF3 SQL 追蹤服務的批次模式。  
   
@@ -453,7 +453,7 @@ public class Workflow1 : Activity
  直接透過 WF3 使用 Interop 在效能上有顯著提升。  不過，與 WF4 活動相較之下，這項提升就顯得微不足道。  
   
 ## <a name="summary"></a>摘要  
- WF4 中對效能的大量投資已在許多重要的方面獲得成效。  在某些情況下，WF4 中個別工作流程元件的效能比 WF3 快上數百倍，因為 WF4 擁有較精簡的 [!INCLUDE[wf1](../../../includes/wf1-md.md)] 執行階段。  延遲數據同樣大為改善。  這表示若將使用 [!INCLUDE[wf1](../../../includes/wf1-md.md)] 的附加優勢納入考量，則相較於手動編碼的 [!INCLUDE[indigo2](../../../includes/indigo2-md.md)] 協調流程服務，使用 [!INCLUDE[wf1](../../../includes/wf1-md.md)] 的效能負面影響便相當小。  持續性效能已提升 2.5 至 3.0 倍。  現在透過工作流程追蹤進行健康監視的負荷已相當低。  若您考慮從 WF3 移至 WF4，我們提供了一套完整的移轉指南。  這些都將使 WF4 成為撰寫複雜應用程式的理想選擇。  
+ WF4 中對效能的大量投資已在許多重要的方面獲得成效。  在某些情況下，WF4 中個別工作流程元件的效能比 WF3 快上數百倍，因為 WF4 擁有較精簡的 [!INCLUDE[wf1](../../../includes/wf1-md.md)] 執行階段。  延遲數據同樣大為改善。  這表示的效能負面影響使用[!INCLUDE[wf1](../../../includes/wf1-md.md)]而不是手動編碼的 WCF 協調流程服務是使用的附加的優勢納入考量非常小[!INCLUDE[wf1](../../../includes/wf1-md.md)]。  持續性效能已提升 2.5 至 3.0 倍。  現在透過工作流程追蹤進行健康監視的負荷已相當低。  若您考慮從 WF3 移至 WF4，我們提供了一套完整的移轉指南。  這些都將使 WF4 成為撰寫複雜應用程式的理想選擇。  
   
 ## <a name="acknowledgements"></a>謝誌  
  非常感謝下列參與人員與校閱人員的大力協助：  

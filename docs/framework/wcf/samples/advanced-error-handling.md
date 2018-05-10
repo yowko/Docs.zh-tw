@@ -2,14 +2,14 @@
 title: 進階的錯誤處理
 ms.date: 03/30/2017
 ms.assetid: ed54b687-78af-4eda-8507-9fd081bdea1a
-ms.openlocfilehash: 035f15cb817e6a6a9ed54c56f4b848932a193ecf
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
-ms.translationtype: HT
+ms.openlocfilehash: 723b1ca9c2fa771d8bc3f337d9c4fde8c9632c68
+ms.sourcegitcommit: 15109844229ade1c6449f48f3834db1b26907824
+ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/04/2018
+ms.lasthandoff: 05/07/2018
 ---
 # <a name="advanced-error-handling"></a>進階的錯誤處理
-這個範例會示範 Windows Communication Foundation (WCF) 路由服務。 路由服務是一個 [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] 元件，該元件可讓它在應用程式中輕鬆加入內容架構的路由器。 此範例示範路由服務如何使用交易和其他更複雜的訊息處理概念，例如多點傳送，以聰明的方式從錯誤中復原。  
+這個範例會示範 Windows Communication Foundation (WCF) 路由服務。 路由服務是 WCF 元件，以簡化應用程式中加入內容架構的路由器。 此範例示範路由服務如何使用異動和其他更複雜的訊息處理概念，例如多點傳送，以聰明的方式從錯誤中復原。  
   
 > [!IMPORTANT]
 >  這些範例可能已安裝在您的電腦上。 請先檢查下列 (預設) 目錄，然後再繼續。  

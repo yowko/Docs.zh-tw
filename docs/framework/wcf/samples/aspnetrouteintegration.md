@@ -2,25 +2,25 @@
 title: AspNetRouteIntegration
 ms.date: 03/30/2017
 ms.assetid: 0638ce0e-d053-47df-a447-688e447a03fb
-ms.openlocfilehash: c2b2a47a0c817e23a06c39d622bca9c649cbadb4
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
-ms.translationtype: HT
+ms.openlocfilehash: 671857b0ace2e18f0dac7fd8033a20f3af889c8b
+ms.sourcegitcommit: 15109844229ade1c6449f48f3834db1b26907824
+ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/04/2018
+ms.lasthandoff: 05/07/2018
 ---
 # <a name="aspnetrouteintegration"></a>AspNetRouteIntegration
 這個範例示範如何將服務裝載於 Windows Communication Foundation (WCF) 的其餘部分使用 ASP.NET 路由。 [基本資源服務](../../../../docs/framework/wcf/samples/basic-resource-service.md)範例示範此案例中的自我裝載的版本，並討論深度的服務實作。 本主題著重在 ASP.NET 整合功能。 如需 ASP.NET 路由的詳細資訊，請參閱<xref:System.Web.Routing>。  
   
 ## <a name="sample-details"></a>範例詳細資料  
- [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] 服務會以資源導向/REST 的方式公開客戶的集合。 此服務就像以 SOAP 為基礎的 [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] 服務，可以使用 .svc 檔案在 ASP.NET 中裝載。 不過，這通常不適用於 HTTP 情況，因為它必須在服務的 URL 中擁有 .svc。 此外，它需要部署 .svc 檔案以及服務程式庫。 您可以如本範例中所示範的方式，使用 ASP.NET 路由裝載服務來避免這些限制。  
+ WCF 服務會以資源導向 /REST 的方式公開客戶集合。 就像以 SOAP 為基礎的 WCF 服務，服務可以裝載在 ASP.NET 中使用.svc 檔案中。 不過，這通常不適用於 HTTP 情況，因為它必須在服務的 URL 中擁有 .svc。 此外，它需要部署 .svc 檔案以及服務程式庫。 您可以如本範例中所示範的方式，使用 ASP.NET 路由裝載服務來避免這些限制。  
   
  此範例會在 Global.asax 檔案中加入 <xref:System.ServiceModel.Activation.ServiceRoute> 來裝載 ASP.NET 中的服務。 <xref:System.ServiceModel.Activation.ServiceRoute> 會指定服務的類型 (在此案例中為 ‘Service’)、用於服務的服務主機處理站類型 (在此案例中為 <xref:System.ServiceModel.Activation.WebServiceHostFactory>)，以及服務的 HTTP 起始位址 (在此案例中為 ‘~/Customers’)。  
   
- 除此之外，此範例還包含加入 <xref:System.Web.Routing.UrlRoutingModule> (以開啟 ASP.NET 路由) 的 Web.config 以及服務的組態。 特別是，此組態會以預設的 [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] 來設定 <xref:System.ServiceModel.Description.WebHttpEndpoint> 服務，且 <xref:System.ServiceModel.Description.WebHttpEndpoint.HelpEnabled%2A> 設定為 `true`。 因此，[!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] 基礎結構會在 `http://localhost/Customers/help` 中建立自動 HTML 說明頁，這個頁面會提供如何對服務建構 HTTP 要求以及如何存取服務之 HTTP 回應的相關資訊，例如，如何以 XML 和 JSON 表示客戶詳細資料的範例。  
+ 除此之外，此範例還包含加入 <xref:System.Web.Routing.UrlRoutingModule> (以開啟 ASP.NET 路由) 的 Web.config 以及服務的組態。 特別是的組態會設定 WCF 服務，預設值<xref:System.ServiceModel.Description.WebHttpEndpoint>具有<xref:System.ServiceModel.Description.WebHttpEndpoint.HelpEnabled%2A>設`true`。 如此一來，WCF 基礎結構會建立自動 HTML 說明網頁`http://localhost/Customers/help`會提供如何建構 HTTP 的相關資訊的範例要求服務以及如何存取服務的 HTTP 回應執行個體，客戶以 XML 和 JSON 表示詳細資料。  
   
  以此方式公開客戶集合 (以及更普遍的任何資源) 可讓用戶端以統一的方式，使用 URI 和 HTTP `GET`、`PUT`、`DELETE` 以及 `POST` 與服務互動。  
   
- 用戶端專案中的 Program.cs 會示範如何使用 <xref:System.Net.HttpWebRequest> 編寫這種用戶端。 請注意，這只是存取 [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] 服務的其中一種方式。 您也可以使用其他 .NET Framework 類別 (例如 [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] 通道處理站和 <xref:System.Net.WebClient>) 來存取服務。 SDK 中的其他範例 (例如[基本 HTTP 服務](../../../../docs/framework/wcf/samples/basic-http-service.md)範例和[自動格式選取](../../../../docs/framework/wcf/samples/automatic-format-selection.md)範例) 示範如何使用這些類別來與通訊[!INCLUDE[indigo2](../../../../includes/indigo2-md.md)]服務。  
+ 用戶端專案中的 Program.cs 會示範如何使用 <xref:System.Net.HttpWebRequest> 編寫這種用戶端。 請注意，這只是存取 WCF 服務的其中一種方式。 它也可使用其他.NET Framework 類別，例如 WCF 通道處理站存取服務和<xref:System.Net.WebClient>。 SDK 中的其他範例 (例如[基本 HTTP 服務](../../../../docs/framework/wcf/samples/basic-http-service.md)範例和[自動格式選取](../../../../docs/framework/wcf/samples/automatic-format-selection.md)範例) 示範如何使用這些類別，與 WCF 服務進行通訊。  
   
  此範例包含 3 個專案：  
   

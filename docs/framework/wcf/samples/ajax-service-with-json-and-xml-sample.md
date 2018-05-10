@@ -2,16 +2,16 @@
 title: 含 JSON 和 XML 的 AJAX 服務範例
 ms.date: 03/30/2017
 ms.assetid: 8ea5860d-0c42-4ae9-941a-e07efdd8e29c
-ms.openlocfilehash: 1973be48457d3164bec6b8df236c07f5bfa6b897
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
-ms.translationtype: HT
+ms.openlocfilehash: 32964c287b0064daf529aa4c1e28f0927d29a6d5
+ms.sourcegitcommit: 15109844229ade1c6449f48f3834db1b26907824
+ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/04/2018
+ms.lasthandoff: 05/07/2018
 ---
 # <a name="ajax-service-with-json-and-xml-sample"></a>含 JSON 和 XML 的 AJAX 服務範例
 這個範例示範如何使用 Windows Communication Foundation (WCF) 建立傳回 JavaScript 物件標記法 (JSON) 或 XML 資料的 Asynchronous JavaScript and XML (AJAX) 服務。 您可以從 Web 瀏覽器用戶端使用 JavaScript 程式碼存取 AJAX 服務。 這個範例是根據[基本 AJAX 服務](../../../../docs/framework/wcf/samples/basic-ajax-service.md)範例。  
   
- 不像其他 AJAX 範例，這個範例不會使用 ASP.NET AJAX 以及 <xref:System.Web.UI.ScriptManager> 控制項。 搭配一些額外組態時，便可透過 JavaScript 從任何 HTML 網頁存取 [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] AJAX 服務，以下即顯示此案例。 如需使用[!INCLUDE[indigo2](../../../../includes/indigo2-md.md)]與 ASP.NET AJAX，請參閱[AJAX 範例](http://msdn.microsoft.com/library/f3fa45b3-44d5-4926-8cc4-a13c30a3bf3e)。  
+ 不像其他 AJAX 範例，這個範例不會使用 ASP.NET AJAX 以及 <xref:System.Web.UI.ScriptManager> 控制項。 搭配一些額外的組態，可以從 JavaScript 中，透過任何 HTML 網頁存取 WCF AJAX 服務，此案例如下所示。 如需使用 WCF 與 ASP.NET AJAX 的範例，請參閱[AJAX 範例](http://msdn.microsoft.com/library/f3fa45b3-44d5-4926-8cc4-a13c30a3bf3e)。  
   
  這個範例會示範如何從 JSON 和 XML 之間切換作業的回應型別。 不論是設定由 ASP.NET AJAX 或 HTML/JavaScript 用戶端頁面存取此服務，這項功能都會提供使用。  
   
@@ -39,7 +39,7 @@ ms.lasthandoff: 05/04/2018
   
  預設資料格式<xref:System.ServiceModel.Description.WebHttpEndpoint>為 XML，而預設資料格式<xref:System.ServiceModel.Description.WebScriptEndpoint>為 JSON。 如需詳細資訊，請參閱[不含 ASP.NET 建立 WCF AJAX 服務](../../../../docs/framework/wcf/feature-details/creating-wcf-ajax-services-without-aspnet.md)。  
   
- 下列範例中的服務是包含兩種作業的標準 [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] 服務。 這兩種作業的 <xref:System.ServiceModel.Web.WebMessageBodyStyle.Wrapped> 或 <xref:System.ServiceModel.Web.WebGetAttribute> 屬性上都必須是 <xref:System.ServiceModel.Web.WebInvokeAttribute> 本文樣式，這是 `webHttp` 行為的特定需求，而且不會影響 JSON/XML 資料格式切換。  
+ 下列範例中的服務是標準的 WCF 服務，有兩個作業。 這兩種作業的 <xref:System.ServiceModel.Web.WebMessageBodyStyle.Wrapped> 或 <xref:System.ServiceModel.Web.WebGetAttribute> 屬性上都必須是 <xref:System.ServiceModel.Web.WebInvokeAttribute> 本文樣式，這是 `webHttp` 行為的特定需求，而且不會影響 JSON/XML 資料格式切換。  
 
 ```csharp
 [OperationContract]  
@@ -57,7 +57,7 @@ MathResult DoMathXml(double n1, double n2);
 MathResult DoMathJson(double n1, double n2);  
 ```
 
- 請注意，在這兩種情況中，作業都會傳回屬於標準 `MathResult` 資料合約型別的複雜型別 [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)]。  
+ 請注意，這兩種情況的作業傳回複雜類型， `MathResult`，這是標準的 WCF 資料合約型別。  
   
  用戶端網頁 XmlAjaxClientPage.htm 包含的 JavaScript 程式碼叫用前述兩項作業的其中一個當使用者按一下**執行計算 (傳回 JSON)** 或**執行計算 (傳回 XML)** 網頁上的按鈕。 叫用此服務的程式碼會建構 JSON 本文，然後使用 HTTP POST 加以傳送。 建立要求以手動方式在 JavaScript 中，不同於[基本 AJAX 服務](../../../../docs/framework/wcf/samples/basic-ajax-service.md)範例，並使用 ASP.NET AJAX 的其他範例。  
 

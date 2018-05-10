@@ -5,11 +5,11 @@ dev_langs:
 - csharp
 - vb
 ms.assetid: d613a22b-07d7-41a4-bada-1adc653b9b5d
-ms.openlocfilehash: 6fbdd7f09c7ae15368972afbce896c5ecb39ccbe
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
-ms.translationtype: HT
+ms.openlocfilehash: 3df1f2490f8636d52ac75fad2469adadec2a57da
+ms.sourcegitcommit: 15109844229ade1c6449f48f3834db1b26907824
+ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/04/2018
+ms.lasthandoff: 05/07/2018
 ---
 # <a name="overriding-the-identity-of-a-service-for-authentication"></a>覆寫服務的身分識別以進行驗證
 一般來說，您不需要在服務上設定身分識別，因為選擇用戶端認證類型，即表示服務中繼資料中公開的身分識別類型。 例如，下列組態程式碼會使用[ \<wsHttpBinding >](../../../../docs/framework/configure-apps/file-schema/wcf/wshttpbinding.md)項目和設定`clientCredentialType`屬性設定為 Windows。  
@@ -30,9 +30,9 @@ ms.lasthandoff: 05/04/2018
 > [!NOTE]
 >  若不進行交涉而使用 Windows 認證類型，服務的使用者帳戶必須可以存取透過 Active Directory 網域登錄的 SPN。 您可以透過下列方法完成這項作業：  
   
--   使用 NetworkService 或 LocalSystem 帳戶執行服務。 因為這些帳戶均可存取電腦加入 Active Directory 網域時所建立的電腦 SPN，所以 [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] 會自動在服務中繼資料 (WSDL) 的服務端點內產生適當的 SPN 項目。  
+-   使用 NetworkService 或 LocalSystem 帳戶執行服務。 因為那些帳戶存取的電腦會在電腦加入 Active Directory 網域時所建立的 SPN，WCF 自動服務的中繼資料 (WSDL) 內產生適當的 SPN 項目內的服務端點。  
   
--   使用任意的 Active Directory 網域帳戶來執行服務。 在這個情況下，請建立該網域帳戶的 SPN，您可使用 Setspn.exe 公用程式工具來進行。 一旦您建立了服務帳戶的 SPN，請設定 [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] 以透過其中繼資料 (WSDL) 將該 SPN 發行至服務的用戶端。 不論是透過應用程式組態檔或程式碼，均可設定公開端點的端點身分識別以完成此作業。  
+-   使用任意的 Active Directory 網域帳戶來執行服務。 在這個情況下，請建立該網域帳戶的 SPN，您可使用 Setspn.exe 公用程式工具來進行。 一旦您建立的服務帳戶的 SPN 時，設定以將該 SPN 發行至服務的用戶端，透過它的中繼資料 (WSDL) 的 WCF。 不論是透過應用程式組態檔或程式碼，均可設定公開端點的端點身分識別以完成此作業。  
   
  Spn 的詳細資訊、 Kerberos 通訊協定和 Active Directory 的內容，請參閱[補充 Windows 的 Kerberos 技術](http://go.microsoft.com/fwlink/?LinkId=88330)。  
   
@@ -59,7 +59,7 @@ ms.lasthandoff: 05/04/2018
   
   
 ### <a name="setting-identity-programmatically"></a>以程式設計方式設定身分識別  
- 您的服務不需要明確指定身分識別，因為 [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] 會自動決定。 不過，如果有需要，[!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] 可讓您指定端點上的身分識別。 下列程式碼會新增具有特定 DNS 身分識別的新服務端點。  
+ 您的服務並沒有明確指定身分識別，因為 WCF 自動決定。 不過，WCF 可讓您識別端點上指定，如果所需。 下列程式碼會新增具有特定 DNS 身分識別的新服務端點。  
   
  [!code-csharp[C_Identity#5](../../../../samples/snippets/csharp/VS_Snippets_CFX/c_identity/cs/source.cs#5)]
  [!code-vb[C_Identity#5](../../../../samples/snippets/visualbasic/VS_Snippets_CFX/c_identity/vb/source.vb#5)]  

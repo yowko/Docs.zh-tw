@@ -2,11 +2,11 @@
 title: OLE DB、ODBC 和 Oracle 連接共用
 ms.date: 03/30/2017
 ms.assetid: 2bd83b1e-3ea9-43c4-bade-d9cdb9bbbb04
-ms.openlocfilehash: 2e42b52bb75008fd34f3e4bef1788626d96368bc
-ms.sourcegitcommit: 11f11ca6cefe555972b3a5c99729d1a7523d8f50
+ms.openlocfilehash: 5b70f6aeeae565684158aeb135d0d3e765e694d1
+ms.sourcegitcommit: 15109844229ade1c6449f48f3834db1b26907824
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 05/07/2018
 ---
 # <a name="ole-db-odbc-and-oracle-connection-pooling"></a>OLE DB、ODBC 和 Oracle 連接共用
 共用連接可顯著提高應用程式的效能及延展性。 本節說明 OLE DB、ODBC 和 Oracle 的 .NET Framework 資料提供者的連接共用 (Connection Pooling)。  
@@ -26,8 +26,6 @@ Provider=SQLOLEDB;OLE DB Services=-4;Data Source=localhost;Integrated Security=S
  ODBC 的 .NET Framework 資料提供者連接共用由用於連接的 ODBC 驅動程式管理員管理，並且不受 ODBC 的 .NET Framework 資料提供者的影響。  
   
  若要啟用或停用連接共用，請開啟**ODBC 資料來源管理員**控制台的 [系統管理工具] 資料夾中。 **連接共用** 索引標籤可讓您指定連接共用參數，每個 ODBC 驅動程式安裝。 請注意，特定 ODBC 驅動程式的連接共用變更會影響使用該 ODBC 驅動程式的所有應用程式。  
-  
- 如需 ODBC 連接共用的詳細資訊，請參閱[資訊： 常見問題集問題關於 ODBC 連接共用](http://support.microsoft.com/kb/169470)。  
   
 ## <a name="connection-pooling-for-oracleclient"></a>OracleClient 的連接共用  
  Oracle 的 .NET Framework 資料提供者會自動為 ADO.NET 用戶端應用程式提供連接共用。 您也可以提供數個連接字串修飾詞，以控制連接共用行為 (請參閱本主題稍後的＜使用連接字串關鍵字控制連接共用＞)。  

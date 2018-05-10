@@ -2,11 +2,11 @@
 title: 訊息流程概觀
 ms.date: 03/30/2017
 ms.assetid: fb0899e1-84cc-4d90-b45b-dc5a50063943
-ms.openlocfilehash: 056737b9d057101568274ab8d24c0c0e2780f93a
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
-ms.translationtype: HT
+ms.openlocfilehash: aea0ca4c5a8574f6039cd055561ce7da0099841b
+ms.sourcegitcommit: 15109844229ade1c6449f48f3834db1b26907824
+ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/04/2018
+ms.lasthandoff: 05/07/2018
 ---
 # <a name="message-flow-overview"></a>訊息流程概觀
 在包含互連服務的分散式系統中，您必須判斷服務之間的因果關係。 請務必了解屬於要求流程一部分的各種元件，以便支援重要案例，例如健康監視、疑難排解和根本原因分析。 為了讓各種服務之間的追蹤相互關聯，我們透過下列功能，在 .NET Framework 4 中加入了支援：  
@@ -25,7 +25,7 @@ ms.lasthandoff: 05/04/2018
   
 2.  如果您尚未啟用分析追蹤，展開**Applications and Services Logs**， **Microsoft**， **Windows**，**應用程式伺服器-應用程式**. 選取**檢視**，**顯示分析與偵錯記錄檔**。 以滑鼠右鍵按一下**分析**選取**啟用記錄**。 讓 [事件檢視器] 保持開啟狀態，以便檢視追蹤。  
   
-3.  開啟範例中建立[入門教學課程](../../../../docs/framework/wcf/getting-started-tutorial.md)中[!INCLUDE[vs_current_long](../../../../includes/vs-current-long-md.md)]。 請注意，您必須以系統管理員的身分執行 [!INCLUDE[vs_current_long](../../../../includes/vs-current-long-md.md)]，才能建立此服務。 如果您有[!INCLUDE[indigo2](../../../../includes/indigo2-md.md)]範例的安裝，您可以開啟[入門](../../../../docs/framework/wcf/samples/getting-started-sample.md)，其中包含已完成本教學課程中建立的專案。  
+3.  開啟範例中建立[入門教學課程](../../../../docs/framework/wcf/getting-started-tutorial.md)中[!INCLUDE[vs_current_long](../../../../includes/vs-current-long-md.md)]。 請注意，您必須以系統管理員的身分執行 [!INCLUDE[vs_current_long](../../../../includes/vs-current-long-md.md)]，才能建立此服務。 如果您有安裝 WCF 範例，您可以開啟[入門](../../../../docs/framework/wcf/samples/getting-started-sample.md)，其中包含已完成本教學課程中建立的專案。  
   
 4.  以滑鼠右鍵按一下**服務**專案，然後選取**新增**，**新項目**。 選取**應用程式組態檔**按一下**確定**。  
   

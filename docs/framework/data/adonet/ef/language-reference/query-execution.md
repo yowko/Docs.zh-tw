@@ -5,11 +5,11 @@ dev_langs:
 - csharp
 - vb
 ms.assetid: c0e6cf23-63ac-47dd-bfe9-d5bdca826fac
-ms.openlocfilehash: 7be5ca95732b4ddadf851ccf839e31be3c5b47bf
-ms.sourcegitcommit: 11f11ca6cefe555972b3a5c99729d1a7523d8f50
+ms.openlocfilehash: f152146e7483c6b3c162fd81f20f359e6c82123a
+ms.sourcegitcommit: 15109844229ade1c6449f48f3834db1b26907824
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 05/07/2018
 ---
 # <a name="query-execution"></a>查詢執行
 使用者建立 LINQ 查詢之後，查詢就會轉換成命令樹。 命令樹一種可與 Entity Framework 比較的查詢表示方式。 接下來命令樹會針對資料來源執行。 查詢執行期間會評估所有查詢運算式 (也就是查詢的所有元件)，包括結果具體化中使用的運算式。  
@@ -17,7 +17,10 @@ ms.lasthandoff: 05/03/2018
  查詢運算式執行的時間點可能會變動。 LINQ 查詢一定是在重複處理查詢變數時執行，而不是在查詢變數建立後執行。 這稱為*延後執行*。 您也可以強制查詢立即執行，這對於快取查詢結果很有用處。 本主題稍後將提供這方面的說明。  
   
  執行 LINQ to Entities 查詢時，查詢中的某些運算式可能會在伺服器上執行，而某些部分則可能在本機用戶端上執行。 在伺服器上執行查詢以前，會先在用戶端評估運算式。 如果運算式是在用戶端上評估，該評估的結果會代替查詢中的運算式，然後會在伺服器上執行查詢。 由於查詢會在資料存來源執行，所以資料來源組態會覆寫用戶端中指定的行為。 例如，null 值的處理和數值的有效位數都會因伺服器設定而異。 在伺服器上執行查詢的期間擲回的任何例外狀況，都會直接傳遞給用戶端。  
-  
+ 
+> [!TIP]
+> 為方便摘要查詢運算子，以資料表格式，可讓您快速識別操作員的執行行為，請參閱[分類的標準查詢運算子的執行方式 (C#) 所](../../../../../csharp/programming-guide/concepts/linq/classification-of-standard-query-operators-by-manner-of-execution.md)。
+
 ## <a name="deferred-query-execution"></a>延後查詢執行  
  在傳回值序列的查詢中，查詢變數本身絕不會保存查詢結果，只會儲存查詢命令而已。 查詢的執行會延後，直到在 `foreach` 或 `For Each` 迴圈 (Loop) 中反覆查看查詢變數為止。 這稱為*延後執行*; 也就是查詢執行會在建構查詢後一些時間。 這表示您可以隨時都可以執行查詢。 例如，當您擁有一個正由其他應用程式更新的資料庫時，這就很有用。 您可以在應用程式中建立擷取最新資訊的查詢，然後重複執行此查詢，以便每次都傳回更新的資訊。  
   

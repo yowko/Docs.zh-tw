@@ -10,11 +10,11 @@ helpviewer_keywords:
 - streaming data provider [WCF Data Services]
 - WCF Data Services, streams
 ms.assetid: f0978fe4-5f9f-42aa-a5c2-df395d7c9495
-ms.openlocfilehash: 119877802bc6d685cd5b440cedb6ab71b20abf45
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
-ms.translationtype: HT
+ms.openlocfilehash: d65ea58bc2e98ab2607ce105b496ac0a870362b0
+ms.sourcegitcommit: 15109844229ade1c6449f48f3834db1b26907824
+ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/04/2018
+ms.lasthandoff: 05/07/2018
 ---
 # <a name="streaming-provider-wcf-data-services"></a>資料流處理提供者 (WCF Data Services)
 資料服務可以公開大型物件二進位資料。 這項二進位資料可能代表視訊和音訊資料流、影像、文件檔案，或其他類型的二進位媒體。 當資料模型中的實體包含一個或多個二進位屬性時，資料服務會在回應摘要的項目內，傳回這個 base-64 編碼形式的二進位資料。 載入及序列化大型二進位資料，以這種方式可能會影響效能，因為[!INCLUDE[ssODataFull](../../../../includes/ssodatafull-md.md)]定義一個機制來擷取二進位資料所屬的實體無關。 只要將實體中的二進位資料分成一個或多個資料流就可以完成這項處理。  
@@ -79,12 +79,12 @@ ms.lasthandoff: 05/04/2018
  如需如何建立資料服務的一般資訊，請參閱[設定資料服務](../../../../docs/framework/data/wcf/configuring-the-data-service-wcf-data-services.md)。  
   
 ## <a name="enabling-large-binary-streams-in-the-hosting-environment"></a>在裝載環境中啟用大型二進位資料流  
- 當您在 [!INCLUDE[vstecasp](../../../../includes/vstecasp-md.md)] Web 應用程式中建立資料服務時，便會使用 Windows Communication Foundation (WCF) 來提供 HTTP 通訊協定實作。 根據預設，[!INCLUDE[indigo2](../../../../includes/indigo2-md.md)]限制只有 65k 位元組的 HTTP 訊息的大小。 為了要能夠與資料服務之間來回進行大型二進位資料的資料流處理，您也必須設定 Web 應用程式啟用大型二進位檔案及使用資料流進行傳輸。 若要這樣做，請在應用程式 Web.config 檔案的 `<configuration />` 項目中加入下列程式碼：  
+ 當您在 [!INCLUDE[vstecasp](../../../../includes/vstecasp-md.md)] Web 應用程式中建立資料服務時，便會使用 Windows Communication Foundation (WCF) 來提供 HTTP 通訊協定實作。 根據預設，WCF 會將 HTTP 訊息大小限制為只有 65K 位元組。 為了要能夠與資料服務之間來回進行大型二進位資料的資料流處理，您也必須設定 Web 應用程式啟用大型二進位檔案及使用資料流進行傳輸。 若要這樣做，請在應用程式 Web.config 檔案的 `<configuration />` 項目中加入下列程式碼：  
   
   
   
 > [!NOTE]
->  您必須使用 <xref:System.ServiceModel.TransferMode.Streamed?displayProperty=nameWithType> 傳輸模式來確保要求和回應訊息中的二進位資料進行串流處理，而非由 [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] 進行緩衝處理。  
+>  您必須使用<xref:System.ServiceModel.TransferMode.Streamed?displayProperty=nameWithType>以確保要求和回應訊息中的二進位資料會進行資料流處理，且未緩衝處理由 WCF 傳輸模式。  
   
  如需詳細資訊，請參閱[資料流訊息傳輸](../../../../docs/framework/wcf/feature-details/streaming-message-transfer.md)和[傳輸配額](../../../../docs/framework/wcf/feature-details/transport-quotas.md)。  
   

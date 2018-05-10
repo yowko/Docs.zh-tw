@@ -7,20 +7,20 @@ dev_langs:
 helpviewer_keywords:
 - clients [WCF], consuming services
 ms.assetid: d780af9f-73c5-42db-9e52-077a5e4de7fe
-ms.openlocfilehash: d29483995a1fbf7a8c9918db0c3b65f7deac1e44
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
-ms.translationtype: HT
+ms.openlocfilehash: b0bde07dbeb70eaafbde4d90627d245554ad7ca6
+ms.sourcegitcommit: 15109844229ade1c6449f48f3834db1b26907824
+ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/04/2018
+ms.lasthandoff: 05/07/2018
 ---
 # <a name="accessing-services-using-a-wcf-client"></a>使用 WCF 用戶端存取服務
-建立服務之後，下一個步驟就是建立 [!INCLUDE[indigo2](../../../includes/indigo2-md.md)] 用戶端 Proxy。 用戶端應用程式會使用 [!INCLUDE[indigo2](../../../includes/indigo2-md.md)] 用戶端 Proxy 與服務進行通訊。 用戶端應用程式通常會匯入服務的中繼資料，以產生可用來叫用服務的 [!INCLUDE[indigo2](../../../includes/indigo2-md.md)] 用戶端程式碼。  
+建立服務之後下, 一個步驟是建立 WCF 用戶端 proxy。 用戶端應用程式使用 WCF 用戶端 proxy 來與服務通訊。 用戶端應用程式通常會匯入服務的中繼資料來產生可用來叫用此服務的 WCF 用戶端程式碼。  
   
- 建立 [!INCLUDE[indigo2](../../../includes/indigo2-md.md)] 用戶端的基本步驟包含下列各項：  
+ 建立 WCF 用戶端的基本步驟如下：  
   
 1.  編譯服務程式碼。  
   
-2.  產生 [!INCLUDE[indigo2](../../../includes/indigo2-md.md)] 用戶端 Proxy。  
+2.  產生 WCF 用戶端 proxy。  
   
 3.  具現化 WCF 用戶端 Proxy。  
   
@@ -39,7 +39,7 @@ Svcutil.exe <service's Metadata Exchange (MEX) address or HTTP GET address>
 Svcutil.exe <list of WSDL and XSD files on file system>  
 ```  
   
- 如此會產生包含 [!INCLUDE[indigo2](../../../includes/indigo2-md.md)] 用戶端程式碼的程式碼檔案，其中的用戶端程式碼可讓用戶端應用程式使用，藉此叫用服務。  
+ 結果會是包含用戶端應用程式可以使用叫用此服務的 WCF 用戶端程式碼的程式碼檔案。  
   
  您也可以使用工具來產生組態檔。  
   
@@ -79,7 +79,7 @@ Public Interface ICalculator
 End Interface
 ```
   
- Visual Studio 中的 ServiceModel 中繼資料公用程式工具和 [加入服務參考] 會產生下列 [!INCLUDE[indigo2](../../../includes/indigo2-md.md)] 用戶端類別。 該類別是繼承自一般 <xref:System.ServiceModel.ClientBase%601> 類別，而且會實作 `ICalculator` 介面。 這個工具也會產生 `ICalculator` 介面 (此處未顯示)。  
+ ServiceModel 中繼資料公用程式工具和 Visual Studio 中的 加入服務參考會產生下列的 WCF 用戶端類別。 該類別是繼承自一般 <xref:System.ServiceModel.ClientBase%601> 類別，而且會實作 `ICalculator` 介面。 這個工具也會產生 `ICalculator` 介面 (此處未顯示)。  
   
 ```csharp
 public partial class CalculatorClient : System.ServiceModel.ClientBase<ICalculator>, ICalculator
@@ -147,7 +147,7 @@ End Class
 ```
   
 ## <a name="using-the-wcf-client"></a>使用 WCF 用戶端  
- 若要使用 [!INCLUDE[indigo2](../../../includes/indigo2-md.md)] 用戶端，請建立 [!INCLUDE[indigo2](../../../includes/indigo2-md.md)] 用戶端的執行個體，然後呼叫其方法，如下列程式碼所示。  
+ 若要使用 WCF 用戶端，建立 WCF 用戶端的執行個體，然後呼叫的方法，如下列程式碼所示。  
   
 ```csharp
 // Create a client object with the given client endpoint configuration.
@@ -172,7 +172,7 @@ Console.WriteLine("Add({0},{1}) = {2}", value1, value2, result)
 ```
   
 ## <a name="debugging-exceptions-thrown-by-a-client"></a>對用戶端擲回的例外狀況進行偵錯  
- 許多由 [!INCLUDE[indigo2](../../../includes/indigo2-md.md)] 用戶端擲回的例外狀況是由服務上的例外狀況所造成。 以下提供一些這類範例：  
+ 許多由 WCF 用戶端擲回的例外狀況會造成在服務上的例外狀況。 以下提供一些這類範例：  
   
 -   <xref:System.Net.Sockets.SocketException>：現有的連接遭遠端主機強制關閉。  
   

@@ -2,14 +2,14 @@
 title: 在程式碼中設定 WCF 服務
 ms.date: 03/30/2017
 ms.assetid: 193c725d-134f-4d31-a8f8-4e575233bff6
-ms.openlocfilehash: 2046ee00bef0f3e84a61151474c777d64005a30c
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
-ms.translationtype: HT
+ms.openlocfilehash: 714236bcdb562840323698622cdf3d0c6c89b6ca
+ms.sourcegitcommit: 15109844229ade1c6449f48f3834db1b26907824
+ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/04/2018
+ms.lasthandoff: 05/07/2018
 ---
 # <a name="configuring-wcf-services-in-code"></a>在程式碼中設定 WCF 服務
-Windows Communication Foundation (WCF) 可讓開發人員使用組態檔或程式碼來設定服務。  當服務需要在部署後進行設定時，組態檔非常有用。 使用組態檔時，IT 專業人員只需更新組態檔，不必重新編譯。 但是組態檔可能會很複雜而難以維護。 由於不支援組態檔偵錯，而且組態項目是以名稱來參考，這使得製作組態檔容易出錯且難度增加。 [!INCLUDE[indigo2](../../../includes/indigo2-md.md)] 也允許您以程式碼來設定服務。 在舊版 [!INCLUDE[indigo2](../../../includes/indigo2-md.md)] (4.0 及更早版本) 的在自我裝載案例中，您可以輕鬆使用程式碼來設定服務，因為 <xref:System.ServiceModel.ServiceHost> 類別可讓您在呼叫 ServiceHost.Open 之前設定端點和行為。 但是在 Web 裝載案例中，您就無法直接存取 <xref:System.ServiceModel.ServiceHost> 類別。 為了設定 Web 裝載服務，您需要建立會建立 `System.ServiceModel.ServiceHostFactory` 的 <xref:System.ServiceModel.Activation.ServiceHostFactory>，並執行任何所需的設定。 從 .NET 4.5 開始，[!INCLUDE[indigo2](../../../includes/indigo2-md.md)] 提供了更簡單的方法，以程式碼來設定自我裝載和 Web 裝載服務。  
+Windows Communication Foundation (WCF) 可讓開發人員使用組態檔或程式碼來設定服務。  當服務需要在部署後進行設定時，組態檔非常有用。 使用組態檔時，IT 專業人員只需更新組態檔，不必重新編譯。 但是組態檔可能會很複雜而難以維護。 由於不支援組態檔偵錯，而且組態項目是以名稱來參考，這使得製作組態檔容易出錯且難度增加。 WCF 也可讓您在程式碼中設定服務。 在舊版的程式碼中的 WCF （4.0 及更早版本） 設定服務已在自我裝載案例中，輕鬆<xref:System.ServiceModel.ServiceHost>類別可讓您設定端點和行為，在呼叫 ServiceHost.Open 之前。 但是在 Web 裝載案例中，您就無法直接存取 <xref:System.ServiceModel.ServiceHost> 類別。 為了設定 Web 裝載服務，您需要建立會建立 `System.ServiceModel.ServiceHostFactory` 的 <xref:System.ServiceModel.Activation.ServiceHostFactory>，並執行任何所需的設定。 從.NET 4.5 開始，WCF 會提供更簡單的方法來設定自我裝載和 web 裝載服務程式碼中。  
   
 ## <a name="the-configure-method"></a>Configure 方法  
  只需定義名為 `Configure` 的公用靜態方法，並在您的服務實作類別中包含下列簽章：  
@@ -18,7 +18,7 @@ Windows Communication Foundation (WCF) 可讓開發人員使用組態檔或程�
 public static void Configure(ServiceConfiguration config)  
 ```  
   
- Configure 方法接受可讓開發人員加入端點和行為的 <xref:System.ServiceModel.ServiceConfiguration> 執行個體。 [!INCLUDE[indigo2](../../../includes/indigo2-md.md)] 會在服務主機開啟之前呼叫這個方法。 一旦定義之後，將會忽略 app.config 或 web.config 檔案中指定的任何服務組態設定。  
+ Configure 方法接受可讓開發人員加入端點和行為的 <xref:System.ServiceModel.ServiceConfiguration> 執行個體。 開啟服務主機之前，WCF 會呼叫這個方法。 一旦定義之後，將會忽略 app.config 或 web.config 檔案中指定的任何服務組態設定。  
   
  下列程式碼片段說明如何定義 `Configure` 方法，以及加入服務端點、端點行為和服務行為：  
   

@@ -2,17 +2,17 @@
 title: 檢視訊息記錄
 ms.date: 03/30/2017
 ms.assetid: 3012fa13-f650-45fb-aaea-c5cca8c7d372
-ms.openlocfilehash: 56e4fb1ea8c67c35df440a2088034327788f6f15
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
-ms.translationtype: HT
+ms.openlocfilehash: 4fa205b52e3d19d2421d93297b5689422775f719
+ms.sourcegitcommit: 15109844229ade1c6449f48f3834db1b26907824
+ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/04/2018
+ms.lasthandoff: 05/07/2018
 ---
 # <a name="viewing-message-logs"></a>檢視訊息記錄
 此主題描述如何檢視訊息記錄。  
   
 ## <a name="viewing-message-logs-in-the-service-trace-viewer"></a>在服務追蹤檢視器中檢視訊息記錄  
- 訊息將會如同由 [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] 處理的方式轉換。 因此，記錄的訊息只會反應記錄當時的訊息內容，而不是在網路上傳輸的內容。  
+ 由 WCF 所處理時，會轉換訊息。 因此，記錄的訊息只會反應記錄當時的訊息內容，而不是在網路上傳輸的內容。  
   
  由於訊息記錄輸出與訊息的傳輸格式沒有任何關係，因此訊息記錄會一律輸出解碼的訊息。 如果您已適當地設定訊息記錄，則任何記錄的訊息應為純文字。 例如，使用二進位訊息編碼器不會影響到記錄之訊息的格式 (純文字)。  
   

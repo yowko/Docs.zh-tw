@@ -2,11 +2,11 @@
 title: 匯出 WCF 擴充的自訂中繼資料
 ms.date: 03/30/2017
 ms.assetid: 53c93882-f8ba-4192-965b-787b5e3f09c0
-ms.openlocfilehash: 8d9f5e223bb47fc8997f6509ec882b282e1ee8b5
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
-ms.translationtype: HT
+ms.openlocfilehash: c2ae547f10e96a1fdc16fc428e98145fc81c59d5
+ms.sourcegitcommit: 15109844229ade1c6449f48f3834db1b26907824
+ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/04/2018
+ms.lasthandoff: 05/07/2018
 ---
 # <a name="exporting-custom-metadata-for-a-wcf-extension"></a>匯出 WCF 擴充的自訂中繼資料
 在 Windows Communication Foundation (WCF) 中，中繼資料匯出是描述服務端點，並將其投射至並行標準化表示法，用戶端可用來了解如何使用服務的程序。 自訂中繼資料包含系統提供之中繼資料匯出工具所無法匯出的 XML 項目。 通常這包括使用者定義行為的自訂 WSDL 項目和繫結項目，以及有關繫結與合約功能和需求的原則判斷提示。  
@@ -14,7 +14,7 @@ ms.lasthandoff: 05/04/2018
  本章節將說明匯出自訂 WSDL 或原則判斷提示，但重點不會放在匯出程序本身。 如需如何使用匯出和匯入中繼資料，不論中繼資料是自訂或系統建構的類型的詳細資訊，請參閱[匯出和匯入中繼資料](../../../../docs/framework/wcf/feature-details/exporting-and-importing-metadata.md)。  
   
 ## <a name="overview"></a>總覽  
- 使用 <xref:System.ServiceModel.Description.ServiceMetadataBehavior?displayProperty=nameWithType> 發行中繼資料時會檢查 <xref:System.ServiceModel.Description.ServiceDescription?displayProperty=nameWithType>，並且會針對 [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] 透過系統提供的屬性和繫結所支援的所有合約和繫結，產生 XSD 和 WSDL (包括原則判斷提示)。 不過，必須支援自訂行為屬性或繫結項目，才能將它們正確匯出。  
+ 發行中繼資料使用<xref:System.ServiceModel.Description.ServiceMetadataBehavior?displayProperty=nameWithType>、<xref:System.ServiceModel.Description.ServiceDescription?displayProperty=nameWithType>會檢查並為所有合約和 WCF 可以支援使用系統提供的屬性和繫結的繫結產生 XSD 和 WSDL （包括原則判斷提示）。 不過，必須支援自訂行為屬性或繫結項目，才能將它們正確匯出。  
   
  本章節內容：  
   

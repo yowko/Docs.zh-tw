@@ -2,20 +2,20 @@
 title: 探索繫結項目範例
 ms.date: 03/30/2017
 ms.assetid: af513015-85bf-417b-8729-1bdff77ff6d6
-ms.openlocfilehash: 7dc38acbe91e03f579414294da07bff5cc53cc4c
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
-ms.translationtype: HT
+ms.openlocfilehash: 853f5cebfd745b3413d605dcfbf0e395e103b4f1
+ms.sourcegitcommit: 15109844229ade1c6449f48f3834db1b26907824
+ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/04/2018
+ms.lasthandoff: 05/07/2018
 ---
 # <a name="discovery-binding-element-sample"></a>探索繫結項目範例
 此範例示範如何使用探索用戶端繫結項目探索服務。 此功能可讓開發人員將探索用戶端通道加入至其現有的用戶端通道堆疊中，讓程式設計模型變得非常直覺。 開啟相關聯的通道時，就會使用探索解析服務的位址。 這個範例包含下列專案：  
   
--   **CalculatorService**： 可搜尋[!INCLUDE[indigo2](../../../../includes/indigo2-md.md)]服務。  
+-   **CalculatorService**： 可探索的 WCF 服務。  
   
--   **CalculatorClient**: A[!INCLUDE[indigo2](../../../../includes/indigo2-md.md)]使用探索用戶端通道搜尋與呼叫 CalculatorService 的用戶端應用程式。  
+-   **CalculatorClient**： 使用探索用戶端通道搜尋與呼叫 CalculatorService 的 WCF 用戶端應用程式。  
   
--   **DynamicCalculatorClient**: A[!INCLUDE[indigo2](../../../../includes/indigo2-md.md)]使用動態端點搜尋與呼叫 CalculatorService 的用戶端應用程式。  
+-   **DynamicCalculatorClient**： 使用動態端點搜尋與呼叫 CalculatorService 的 WCF 用戶端應用程式。  
   
 > [!IMPORTANT]
 >  這些範例可能已安裝在您的電腦上。 請先檢查下列 (預設) 目錄，然後再繼續。  

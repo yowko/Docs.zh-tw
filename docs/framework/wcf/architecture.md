@@ -6,11 +6,11 @@ helpviewer_keywords:
 - WCF [WCF], architecture
 - architecture [WCF]
 ms.assetid: a3bcb0a1-56ea-4ba6-9736-d260d90dade5
-ms.openlocfilehash: b54c9cd7f4e6bc33dac07d30a86df81668ae13e5
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
-ms.translationtype: HT
+ms.openlocfilehash: 1514010ca573be364e54a53ae047a2ff49cdad82
+ms.sourcegitcommit: 15109844229ade1c6449f48f3834db1b26907824
+ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/04/2018
+ms.lasthandoff: 05/07/2018
 ---
 # <a name="windows-communication-foundation-architecture"></a>Windows Communication Foundation 架構
 下圖說明主要的層級的 Windows Communication Foundation (WCF) 架構。  
@@ -24,7 +24,7 @@ ms.lasthandoff: 05/04/2018
  原則和繫結會規定與服務進行通訊時的必要條件。  例如，繫結必須 (至少需要) 指定使用的傳輸 (例如，HTTP 或 TCP)，以及編碼方式。 原則包含在與服務通訊時必須符合的安全性需求和其他條件。  
   
 ### <a name="service-runtime"></a>服務執行階段  
- 服務執行階段層包含只會在服務之實際作業期間發生的行為，也就是服務的執行階段行為。 節流設定會控制要處理多少訊息，而隨著對服務的要求擴大到預設限制，這個數量可能會有所不同。 錯誤行為會指定在服務發生內部錯誤時所要發生的動作，例如，控制有哪些資訊要傳送到用戶端  (有太多資料會讓惡意使用者有機會發動攻擊)。中繼資料行為會管理採用什麼方式以及是否將中繼資料提供給外界。 執行個體 (Instance) 行為會指定可以執行服務之執行個體的數目 (例如，「單一」就是指定僅能使用一個執行個體來處理所有訊息)。 交易行為可使交易的作業在發生失敗時進行復原。 分派行為會控制 [!INCLUDE[indigo2](../../../includes/indigo2-md.md)] 基礎結構處理訊息的方式。  
+ 服務執行階段層包含只會在服務之實際作業期間發生的行為，也就是服務的執行階段行為。 節流設定會控制要處理多少訊息，而隨著對服務的要求擴大到預設限制，這個數量可能會有所不同。 錯誤行為會指定在服務發生內部錯誤時所要發生的動作，例如，控制有哪些資訊要傳送到用戶端  (有太多資料會讓惡意使用者有機會發動攻擊)。中繼資料行為會管理採用什麼方式以及是否將中繼資料提供給外界。 執行個體 (Instance) 行為會指定可以執行服務之執行個體的數目 (例如，「單一」就是指定僅能使用一個執行個體來處理所有訊息)。 異動行為可使異動的作業在發生失敗時進行復原。 分派行為會控制如何處理訊息時，WCF 基礎結構。  
   
  擴充性可使執行階段處理序進行自訂。 例如，訊息檢查是檢查訊息之部分的功能，而啟用參數篩選功能時，便會根據作用於訊息標頭的篩選來發生預設動作。  
   
@@ -42,7 +42,7 @@ ms.lasthandoff: 05/04/2018
 ### <a name="hosting-and-activation"></a>裝載和啟動  
  服務的最終形式就是程式。 就像其他的程式，服務必須在可執行檔中執行。 這稱為*自我裝載*服務。  
   
- 服務也可以是*裝載*，或是執行受外部代理程式，例如 IIS 或 Windows Activation Service (WAS) 的可執行檔中。 WAS 讓 [!INCLUDE[indigo2](../../../includes/indigo2-md.md)] 應用程式能在部署到執行 WAS 的電腦上時自動啟動。 服務也可以透過手動方式來當做可執行檔 (.exe 檔) 執行。 服務也可以自動當做 Windows 服務執行。 COM+ 元件也可以裝載為 [!INCLUDE[indigo2](../../../includes/indigo2-md.md)] 服務。  
+ 服務也可以是*裝載*，或是執行受外部代理程式，例如 IIS 或 Windows Activation Service (WAS) 的可執行檔中。 是可讓 WCF 應用程式執行的電腦上部署時，會自動啟動。 服務也可以透過手動方式來當做可執行檔 (.exe 檔) 執行。 服務也可以自動當做 Windows 服務執行。 COM + 元件也可以裝載為 WCF 服務。  
   
 ## <a name="see-also"></a>另請參閱  
  [什麼是 Windows Communication Foundation](../../../docs/framework/wcf/whats-wcf.md)  

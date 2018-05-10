@@ -6,14 +6,14 @@ helpviewer_keywords:
 - Windows Communication Foundation [WCF], extensibility
 - extensibility [WCF]
 ms.assetid: ef56c251-d63c-4b3f-944f-b0c67bfb0f68
-ms.openlocfilehash: 142478352c8eb1c893d8b95b960c6079f735fa06
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
-ms.translationtype: HT
+ms.openlocfilehash: 7b302a7d0643ed61d12cfedf26348590d40d18f3
+ms.sourcegitcommit: 15109844229ade1c6449f48f3834db1b26907824
+ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/04/2018
+ms.lasthandoff: 05/07/2018
 ---
 # <a name="introduction-to-extensibility"></a>擴充性簡介
-Windows Communication Foundation (WCF) 應用程式模型被設計來解決任何分散式應用程式的通訊要求更高的一部分。 但是一定有預設應用程式模型和系統提供的實作所不支援的情況。 [!INCLUDE[indigo2](../../../includes/indigo2-md.md)] 擴充性模型是用來讓您能修改每個層級的系統行為，甚至到取代整個系統模型，所以可以支援自訂的情況。 本主題會概述各種擴充區域，並指向每個擴充區域的詳細資訊。  
+Windows Communication Foundation (WCF) 應用程式模型被設計來解決任何分散式應用程式的通訊要求更高的一部分。 但是一定有預設應用程式模型和系統提供的實作所不支援的情況。 WCF 擴充性模型被要支援的自訂案例，讓您以修改在每個層級，甚至到取代整個應用程式模型的系統行為。 本主題會概述各種擴充區域，並指向每個擴充區域的詳細資訊。  
   
 ## <a name="areas-to-extend"></a>要擴充的區域  
  您可以擴充：  
@@ -25,7 +25,7 @@ Windows Communication Foundation (WCF) 應用程式模型被設計來解決任�
 -   主機執行階段， 這會擴充裝載應用程式定義域與通道和應用程式執行階段之間的關係。  
   
 ### <a name="extending-the-application-runtime"></a>擴充應用程式執行階段  
- 在 [!INCLUDE[indigo2](../../../includes/indigo2-md.md)] 應用程式中，用於對應通道的訊息和用於應用程式本身的訊息之間有不同之處。 通道訊息支援某些與通道相關的功能，例如建立安全對話或建立可靠的工作階段。 這些訊息不適用於應用程式執行階段，在使用應用程式層之前，就會先處理訊息。  
+ 在 WCF 應用程式中，沒有區分目的地為對應通道的訊息和訊息目的地為應用程式本身。 通道訊息支援某些與通道相關的功能，例如建立安全對話或建立可靠的工作階段。 這些訊息不適用於應用程式執行階段，在使用應用程式層之前，就會先處理訊息。  
   
  應用程式訊息包含您或您的客戶所建立，並且用於用戶端或服務作業的資料。 視您的需要而定，這些訊息適用於形式為訊息或物件的應用程式層級擴充系統。  
   

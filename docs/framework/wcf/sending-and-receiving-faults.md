@@ -7,11 +7,11 @@ dev_langs:
 helpviewer_keywords:
 - handling faults [WCF], sending
 ms.assetid: 7be6fb96-ce2a-450b-aebe-f932c6a4bc5d
-ms.openlocfilehash: 76fb07a6c9a5e0efdbf21f153f5fc2aea7f1880e
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
-ms.translationtype: HT
+ms.openlocfilehash: 5a4b4dc79b0f0dad661d99fae6377d1c86b673b6
+ms.sourcegitcommit: 15109844229ade1c6449f48f3834db1b26907824
+ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/04/2018
+ms.lasthandoff: 05/07/2018
 ---
 # <a name="sending-and-receiving-faults"></a>傳送和接收錯誤
 SOAP 錯誤會將錯誤狀況資訊從服務傳送到用戶端，而在雙工案例中，則是以互通的方式從用戶端傳送到服務。 一般來說，服務會定義自訂錯誤內容，並指定透過哪項作業來傳回這些內容 (如需詳細資訊，請參閱[定義與指定的錯誤](../../../docs/framework/wcf/defining-and-specifying-faults.md)。)本主題將說明在發生錯誤情況時，服務或雙工用戶端如何傳送這些錯誤，以及用戶端或服務應用程式如何處理這些錯誤。 如需 Windows Communication Foundation (WCF) 應用程式中的錯誤處理的概觀，請參閱[指定與處理合約和服務中的錯誤](../../../docs/framework/wcf/specifying-and-handling-faults-in-contracts-and-services.md)。  
@@ -25,26 +25,26 @@ SOAP 錯誤會將錯誤狀況資訊從服務傳送到用戶端，而在雙工案
  [!code-csharp[FaultContractAttribute#4](../../../samples/snippets/csharp/VS_Snippets_CFX/faultcontractattribute/cs/services.cs#4)]
  [!code-vb[FaultContractAttribute#4](../../../samples/snippets/visualbasic/VS_Snippets_CFX/faultcontractattribute/vb/services.vb#4)]  
   
- 若要將 `GreetingFault` 錯誤資訊傳送到用戶端，請捕捉適當的錯誤情況並擲回包含新的 <xref:System.ServiceModel.FaultException%601?displayProperty=nameWithType> 物件之新的 `GreetingFault` (屬於 `GreetingFault` 型別) 做為引數，如下列程式碼範例所示。 如果用戶端為 [!INCLUDE[indigo2](../../../includes/indigo2-md.md)] 用戶端應用程式，它會碰到 Managed 例外狀況 (其中包含 <xref:System.ServiceModel.FaultException%601?displayProperty=nameWithType> 型別的 `GreetingFault`)。  
+ 若要將 `GreetingFault` 錯誤資訊傳送到用戶端，請捕捉適當的錯誤情況並擲回包含新的 <xref:System.ServiceModel.FaultException%601?displayProperty=nameWithType> 物件之新的 `GreetingFault` (屬於 `GreetingFault` 型別) 做為引數，如下列程式碼範例所示。 如果用戶端是 WCF 用戶端應用程式，它會碰到 managed 例外狀況，其中類型是<xref:System.ServiceModel.FaultException%601?displayProperty=nameWithType>型別的`GreetingFault`。  
   
  [!code-csharp[FaultContractAttribute#5](../../../samples/snippets/csharp/VS_Snippets_CFX/faultcontractattribute/cs/services.cs#5)]
  [!code-vb[FaultContractAttribute#5](../../../samples/snippets/visualbasic/VS_Snippets_CFX/faultcontractattribute/vb/services.vb#5)]  
   
 ### <a name="sending-undeclared-faults"></a>傳送未宣告的錯誤  
- 在 [!INCLUDE[indigo2](../../../includes/indigo2-md.md)] 應用程式中傳送未宣告的錯誤可以針對問題協助快速診斷與偵錯，但是在偵錯上，這項工具的功能很有限。 在偵錯時，使用 <xref:System.ServiceModel.Description.ServiceDebugBehavior.IncludeExceptionDetailInFaults%2A?displayProperty=nameWithType> 屬性是較普遍的建議做法。 當您將此值設為 true，用戶端會碰到諸如 <xref:System.ServiceModel.FaultException%601> 類別的 <xref:System.ServiceModel.ExceptionDetail> 例外狀況之類的錯誤。  
+ 傳送未宣告的錯誤可以是很有用，可協助快速診斷與偵錯 WCF 應用程式，但它的實用性的問題，因為偵錯工具會受到限制。 在偵錯時，使用 <xref:System.ServiceModel.Description.ServiceDebugBehavior.IncludeExceptionDetailInFaults%2A?displayProperty=nameWithType> 屬性是較普遍的建議做法。 當您將此值設為 true，用戶端會碰到諸如 <xref:System.ServiceModel.FaultException%601> 類別的 <xref:System.ServiceModel.ExceptionDetail> 例外狀況之類的錯誤。  
   
 > [!IMPORTANT]
->  由於 Managed 例外狀況會暴露內部應用程式資訊，所以將 <xref:System.ServiceModel.ServiceBehaviorAttribute.IncludeExceptionDetailInFaults%2A?displayProperty=nameWithType> 或 <xref:System.ServiceModel.Description.ServiceDebugBehavior.IncludeExceptionDetailInFaults%2A?displayProperty=nameWithType> 設為 `true`，便可讓 [!INCLUDE[indigo2](../../../includes/indigo2-md.md)] 用戶端取得內部服務作業例外狀況的相關資訊，包括個人識別資訊或其他敏感資訊。  
+>  由於 managed 例外狀況會暴露內部應用程式資訊，所以將<xref:System.ServiceModel.ServiceBehaviorAttribute.IncludeExceptionDetailInFaults%2A?displayProperty=nameWithType>或<xref:System.ServiceModel.Description.ServiceDebugBehavior.IncludeExceptionDetailInFaults%2A?displayProperty=nameWithType>至`true`可以允許 WCF 用戶端取得有關內部服務作業例外狀況，包括個人資訊識別資訊或其他敏感資訊。  
 >   
->  因此，若您只是暫時對服務應用程式進行偵錯，才建議把 <xref:System.ServiceModel.ServiceBehaviorAttribute.IncludeExceptionDetailInFaults%2A?displayProperty=nameWithType> 或 <xref:System.ServiceModel.Description.ServiceDebugBehavior.IncludeExceptionDetailInFaults%2A?displayProperty=nameWithType> 設為 `true`。 此外，若某個方法以這種方式傳回未處理的 Managed 例外狀況，則該方法的 WSDL 不會包含 <xref:System.ServiceModel.FaultException%601> 型別之 <xref:System.ServiceModel.ExceptionDetail> 的合約。 用戶端必須接受有未知 SOAP 錯誤 (以 [!INCLUDE[indigo2](../../../includes/indigo2-md.md)] 物件的形式傳回給 <xref:System.ServiceModel.FaultException?displayProperty=nameWithType> 用戶端) 的可能性，才能正確取得偵錯資訊。  
+>  因此，若您只是暫時對服務應用程式進行偵錯，才建議把 <xref:System.ServiceModel.ServiceBehaviorAttribute.IncludeExceptionDetailInFaults%2A?displayProperty=nameWithType> 或 <xref:System.ServiceModel.Description.ServiceDebugBehavior.IncludeExceptionDetailInFaults%2A?displayProperty=nameWithType> 設為 `true`。 此外，若某個方法以這種方式傳回未處理的 Managed 例外狀況，則該方法的 WSDL 不會包含 <xref:System.ServiceModel.FaultException%601> 型別之 <xref:System.ServiceModel.ExceptionDetail> 的合約。 用戶端必須預期未知 SOAP 錯誤的可能性 (傳回給 WCF 用戶端，做為<xref:System.ServiceModel.FaultException?displayProperty=nameWithType>物件) 才能正確取得偵錯資訊。  
   
- 若要傳送未宣告的 SOAP 錯誤，請擲回 <xref:System.ServiceModel.FaultException?displayProperty=nameWithType> 物件 (亦即，不是泛型 <xref:System.ServiceModel.FaultException%601> 型別)，並將字串傳送至建構函式。 當您呼叫 [!INCLUDE[indigo2](../../../includes/indigo2-md.md)] 方法來提供字串時，就會將此公開到 <xref:System.ServiceModel.FaultException?displayProperty=nameWithType> 用戶端應用程式當做擲回的 <xref:System.ServiceModel.FaultException%601.ToString%2A?displayProperty=nameWithType> 例外狀況方法。  
+ 若要傳送未宣告的 SOAP 錯誤，請擲回 <xref:System.ServiceModel.FaultException?displayProperty=nameWithType> 物件 (亦即，不是泛型 <xref:System.ServiceModel.FaultException%601> 型別)，並將字串傳送至建構函式。 這公開的 WCF 用戶端應用程式當做擲回<xref:System.ServiceModel.FaultException?displayProperty=nameWithType>例外狀況的字串可使用的呼叫<xref:System.ServiceModel.FaultException%601.ToString%2A?displayProperty=nameWithType>方法。  
   
 > [!NOTE]
 >  如果您宣告 String 型別的 SOAP 錯誤，則請將此項目做為 <xref:System.ServiceModel.FaultException%601> 擲回服務 (當中的型別參數是一個 <xref:System.String?displayProperty=nameWithType>，而字串值則是指派給 <xref:System.ServiceModel.FaultException%601.Detail%2A?displayProperty=nameWithType> 屬性，而且無法透過 <xref:System.ServiceModel.FaultException%601.ToString%2A?displayProperty=nameWithType> 取得)。  
   
 ## <a name="handling-faults"></a>處理錯誤  
- 在 [!INCLUDE[indigo2](../../../includes/indigo2-md.md)] 用戶端中，於通訊期間發生且與用戶端應用程式相關的 SOAP 錯誤會引發為 Managed 例外狀況。 儘管有許多例外狀況會在任何程式的執行期間發生，但是使用 [!INCLUDE[indigo2](../../../includes/indigo2-md.md)] 用戶端程式設計模型的應用程式仍然能夠處理下列兩種因通訊而產生的例外狀況型別。  
+ WCF 用戶端，在 SOAP 錯誤通訊期間所發生感興趣用戶端應用程式，會引發為 managed 例外狀況。 雖然有許多可能會在任何程式執行期間發生的例外狀況，應用程式使用 WCF 用戶端程式設計模型可以預期處理下列兩種因通訊而產生的例外狀況。  
   
 -   <xref:System.TimeoutException>  
   
@@ -61,7 +61,7 @@ SOAP 錯誤會將錯誤狀況資訊從服務傳送到用戶端，而在雙工案
  收到作業合約中指定的錯誤時，用戶端會擲回 <xref:System.ServiceModel.FaultException%601> 例外狀況，以回應雙向作業 (也就是具有 <xref:System.ServiceModel.OperationContractAttribute> 屬性，且將 <xref:System.ServiceModel.OperationContractAttribute.IsOneWay%2A> 設為 `false` 的方法)。  
   
 > [!NOTE]
->  當 [!INCLUDE[indigo2](../../../includes/indigo2-md.md)] 服務將 <xref:System.ServiceModel.ServiceBehaviorAttribute.IncludeExceptionDetailInFaults%2A?displayProperty=nameWithType> 或 <xref:System.ServiceModel.Description.ServiceDebugBehavior.IncludeExceptionDetailInFaults%2A?displayProperty=nameWithType> 屬性設為 `true` 時，用戶端就會碰到這種未宣告的 <xref:System.ServiceModel.FaultException%601> (屬於 <xref:System.ServiceModel.ExceptionDetail> 型別)。 用戶端可以捕捉此特定錯誤，或是在 <xref:System.ServiceModel.FaultException> 的 catch 區塊中處理此錯誤。  
+>  當 WCF 服務具有<xref:System.ServiceModel.ServiceBehaviorAttribute.IncludeExceptionDetailInFaults%2A?displayProperty=nameWithType>或<xref:System.ServiceModel.Description.ServiceDebugBehavior.IncludeExceptionDetailInFaults%2A?displayProperty=nameWithType>屬性設定為`true`用戶端會碰到這種未宣告<xref:System.ServiceModel.FaultException%601>型別的<xref:System.ServiceModel.ExceptionDetail>。 用戶端可以捕捉此特定錯誤，或是在 <xref:System.ServiceModel.FaultException> 的 catch 區塊中處理此錯誤。  
   
  一般來說，只有 <xref:System.ServiceModel.FaultException%601>、<xref:System.TimeoutException>，和 <xref:System.ServiceModel.CommunicationException> 例外狀況會與用戶端及服務相關。  
   
@@ -74,13 +74,13 @@ SOAP 錯誤會將錯誤狀況資訊從服務傳送到用戶端，而在雙工案
  請記住，一項作業可以傳回的指定錯誤數量不限。 每一項錯誤都具有唯一的型別，而且必須個別處理。  
   
 ### <a name="handle-exceptions-when-closing-the-channel"></a>關閉通道時處理例外狀況  
- 在先前的討論中，大部分都是關於處理應用程式訊息期間所傳送的錯誤 (亦即，當用戶端應用程式呼叫 [!INCLUDE[indigo2](../../../includes/indigo2-md.md)] 用戶端物件上的作業時，用戶端所明確傳送訊息)。  
+ 前述討論的大部分必須設定過程中處理應用程式訊息，也就是傳送的錯誤所明確傳送訊息的用戶端時用戶端應用程式呼叫 WCF 用戶端物件上的作業。  
   
- 就算是本機物件，處理物件也可能引發或遮罩在回收處理序期間所發生的例外狀況。 當您使用 [!INCLUDE[indigo2](../../../includes/indigo2-md.md)] 用戶端物件時，也會發生類似的情況。 當您呼叫作業時，事實上您是透過已建立的連線來傳送訊息。 如果連線無法完全關閉，或是已經關閉，則關閉通道會擲回例外狀況，就算所有作業都正常傳回也是一樣。  
+ 就算是本機物件，處理物件也可能引發或遮罩在回收處理序期間所發生的例外狀況。 當您使用 WCF 用戶端物件時，就會發生類似的項目可以。 當您呼叫作業時，事實上您是透過已建立的連線來傳送訊息。 如果連線無法完全關閉，或是已經關閉，則關閉通道會擲回例外狀況，就算所有作業都正常傳回也是一樣。  
   
  一般來說，用戶端物件通道可透過下列其中一種方式來關閉：  
   
--   當 [!INCLUDE[indigo2](../../../includes/indigo2-md.md)] 用戶端物件已回收時。  
+-   當 WCF 用戶端物件就會回收。  
   
 -   當用戶端應用程式呼叫 <xref:System.ServiceModel.ClientBase%601.Close%2A?displayProperty=nameWithType> 時。  
   
@@ -98,7 +98,7 @@ SOAP 錯誤會將錯誤狀況資訊從服務傳送到用戶端，而在雙工案
  下列程式碼範例將說明如何透過基本用戶端應用程式來處理 SOAP 錯誤例外狀況，包括已宣告與未宣告的錯誤。  
   
 > [!NOTE]
->  此範例程式碼不會使用 `using` 建構。 由於關閉通道可能會擲回例外狀況，建議您先透過應用程式建立一個 [!INCLUDE[indigo2](../../../includes/indigo2-md.md)] 用戶端，然後在同一個 try 區塊中開啟、使用，並關閉 [!INCLUDE[indigo2](../../../includes/indigo2-md.md)] 用戶端。 如需詳細資訊，請參閱[WCF 用戶端概觀](../../../docs/framework/wcf/wcf-client-overview.md)和[避免 Using 陳述式的問題](../../../docs/framework/wcf/samples/avoiding-problems-with-the-using-statement.md)。  
+>  此範例程式碼不會使用 `using` 建構。 由於關閉通道，可擲回例外狀況，建議應用程式建立 WCF 用戶端第一次，並開啟，請使用，，和關閉 WCF 用戶端在同一個 try 區塊。 如需詳細資訊，請參閱[WCF 用戶端概觀](../../../docs/framework/wcf/wcf-client-overview.md)和[避免 Using 陳述式的問題](../../../docs/framework/wcf/samples/avoiding-problems-with-the-using-statement.md)。  
   
  [!code-csharp[FaultContractAttribute#3](../../../samples/snippets/csharp/VS_Snippets_CFX/faultcontractattribute/cs/client.cs#3)]
  [!code-vb[FaultContractAttribute#3](../../../samples/snippets/visualbasic/VS_Snippets_CFX/faultcontractattribute/vb/client.vb#3)]  

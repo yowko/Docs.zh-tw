@@ -2,11 +2,11 @@
 title: 自訂訊息攔截器
 ms.date: 03/30/2017
 ms.assetid: 73f20972-53f8-475a-8bfe-c133bfa225b0
-ms.openlocfilehash: 0ed34823251dcc010fc438bda1e746549b97f0f3
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
-ms.translationtype: HT
+ms.openlocfilehash: a59b2075473e2ca4c8cb8751fd6cb733f282238b
+ms.sourcegitcommit: 15109844229ade1c6449f48f3834db1b26907824
+ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/04/2018
+ms.lasthandoff: 05/07/2018
 ---
 # <a name="custom-message-interceptor"></a>自訂訊息攔截器
 這個範例示範通道擴充性模型的使用方式。 尤其，這個範例會示範如何實作建立通道處理站和通道接聽程式的自訂繫結項目，以攔截執行階段堆疊中特定點的所有傳入與傳出訊息。 範例也包含用戶端和伺服器，以示範這些自訂處理站的使用方式。  
@@ -25,7 +25,7 @@ ms.lasthandoff: 05/04/2018
 >   
 >  `<InstallDrive>:\WF_WCF_Samples\WCF\Extensibility\Channels\MessageInterceptor`  
   
- 此範例說明建議的程序來建立自訂層次的通道中 Windows Communication Foundation (WCF) 中，使用通道架構並遵循[!INCLUDE[indigo2](../../../../includes/indigo2-md.md)]最佳做法。 建立自訂層次通道的步驟如下：  
+ 此範例說明建立自訂層次的通道中 Windows Communication Foundation (WCF) 中，使用通道架構並遵循 WCF 最佳作法的建議程序。 建立自訂層次通道的步驟如下：  
   
 1.  決定通道處理站和通道接聽項所要支援的通道類型。  
   

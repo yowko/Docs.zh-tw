@@ -5,11 +5,11 @@ helpviewer_keywords:
 - WCF [WCF], troubleshooting
 - Windows Communication Foundation [WCF], troubleshooting
 ms.assetid: a9ea7a53-f31a-46eb-806e-898e465a4992
-ms.openlocfilehash: 5a6ea4f3ba121f419d1a8c46fc2534988a93d554
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
-ms.translationtype: HT
+ms.openlocfilehash: e752f6f4428d01474d643f1571935cb7d96d41ca
+ms.sourcegitcommit: 15109844229ade1c6449f48f3834db1b26907824
+ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/04/2018
+ms.lasthandoff: 05/07/2018
 ---
 # <a name="wcf-troubleshooting-quickstart"></a>WCF 疑難排解快速入門
 本主題列出客戶在開發 WCF 用戶端和服務時會碰到的幾個已知問題。 如果您遇到的問題不在此清單中，建議您為您的服務設定追蹤。 這會產生一個追蹤檔案，您可以使用追蹤檔案檢視器檢視這個檔案，並取得服務中可能會發生之例外狀況的詳細資訊。 如需設定追蹤的詳細資訊，請參閱： [Configuring Tracing](../../../docs/framework/wcf/diagnostics/tracing/configuring-tracing.md)。 如需追蹤檔案檢視器的詳細資訊，請參閱： [Service Trace Viewer Tool (SvcTraceViewer.exe)](../../../docs/framework/wcf/service-trace-viewer-tool-svctraceviewer-exe.md)。  
@@ -153,7 +153,7 @@ public class MyServiceHost : ServiceHost
   
 <a name="BKMK_q6"></a>   
 ## <a name="it-seems-like-one-way-and-request-reply-operations-return-at-roughly-the-same-speed-when-the-reply-contains-no-data-whats-happening"></a>當回覆未包含任何資料時，單向和要求與回覆作業似乎會以大約相同的速度傳回。 這是為什麼？  
- 將作業指定為單向只是表示作業合約接受輸入訊息，而沒有傳回輸出訊息。 在 [!INCLUDE[indigo2](../../../includes/indigo2-md.md)]中，當傳出資料已寫入網路或擲回例外狀況時，所有用戶端叫用都會傳回。 單向作業的運作方式相同，如果找不到服務可以擲回，或如果服務尚未準備好從網路接受資料便會封鎖。 通常在 [!INCLUDE[indigo2](../../../includes/indigo2-md.md)]中，這會造成單向呼叫比要求與回覆更快傳回用戶端，但是任何減慢傳出資料在網路上的傳送速度的情況，都會減慢單向作業以及要求與回覆作業。 如需詳細資訊，請參閱[單向服務](../../../docs/framework/wcf/feature-details/one-way-services.md)和[使用 WCF 用戶端存取服務](../../../docs/framework/wcf/feature-details/accessing-services-using-a-client.md)。  
+ 將作業指定為單向只是表示作業合約接受輸入訊息，而沒有傳回輸出訊息。 在 WCF 中，所有用戶端叫用時，傳回的輸出資料寫入網路或擲回例外狀況。 單向作業的運作方式相同，如果找不到服務可以擲回，或如果服務尚未準備好從網路接受資料便會封鎖。 通常在 WCF 中，這造成單向呼叫比要求與回覆; 更快傳回用戶端但是任何減慢傳出資料傳送透過網路的條件會減慢單向作業以及要求與回覆作業。 如需詳細資訊，請參閱[單向服務](../../../docs/framework/wcf/feature-details/one-way-services.md)和[使用 WCF 用戶端存取服務](../../../docs/framework/wcf/feature-details/accessing-services-using-a-client.md)。  
   
 <a name="BKMK_q77"></a>   
 ## <a name="im-using-an-x509-certificate-with-my-service-and-i-get-a-systemsecuritycryptographycryptographicexception-whats-happening"></a>我使用 X.509 憑證搭配我的服務，然後得到 System.Security.Cryptography.CryptographicException。 發生什麼事？  
@@ -169,7 +169,7 @@ public class MyServiceHost : ServiceHost
   
 <a name="BKMK_q99"></a>   
 ## <a name="im-using-one-of-my-tracing-tools-and-i-get-an-endpointnotfoundexception-whats-happening"></a>我正在使用我的其中一種追蹤工具，而我得到 EndpointNotFoundException。 發生什麼事？  
- 如果您使用的追蹤工具不是系統提供的 [!INCLUDE[indigo2](../../../includes/indigo2-md.md)] 追蹤機制，且收到 <xref:System.ServiceModel.EndpointNotFoundException> 指出有位址篩選不符的情況，則您需要使用 <xref:System.ServiceModel.Description.ClientViaBehavior> 類別將訊息導向追蹤公用程式，然後讓公用程式將這些訊息重新導向至服務位址。 <xref:System.ServiceModel.Description.ClientViaBehavior> 類別會變更 `Via` 位址標頭，以指定與最終接收者不同的下一個網路位址，由 `To` 位址標頭指示。 然而，執行這項操作時，請勿變更端點位址，它是用於建立 `To` 值的。  
+ 如果您使用一種追蹤工具不是系統提供 WCF 追蹤機制，而您收到<xref:System.ServiceModel.EndpointNotFoundException>，指出有位址篩選不符的情況，您必須使用<xref:System.ServiceModel.Description.ClientViaBehavior>類別，以將訊息導向追蹤公用程式和讓公用程式將這些訊息重新導向至服務位址。 <xref:System.ServiceModel.Description.ClientViaBehavior> 類別會變更 `Via` 位址標頭，以指定與最終接收者不同的下一個網路位址，由 `To` 位址標頭指示。 然而，執行這項操作時，請勿變更端點位址，它是用於建立 `To` 值的。  
   
  下列程式碼範例顯示用戶端組態檔範例。  
   

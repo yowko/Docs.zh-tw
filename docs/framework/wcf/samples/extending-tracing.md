@@ -2,11 +2,11 @@
 title: 擴充追蹤
 ms.date: 03/30/2017
 ms.assetid: 2b971a99-16ec-4949-ad2e-b0c8731a873f
-ms.openlocfilehash: 685ba85dc240bc2fdefdf02d9ece2279e3507abc
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
-ms.translationtype: HT
+ms.openlocfilehash: 59291b6a57ba602e5fea84dcd571a8d767b7cc04
+ms.sourcegitcommit: 15109844229ade1c6449f48f3834db1b26907824
+ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/04/2018
+ms.lasthandoff: 05/07/2018
 ---
 # <a name="extending-tracing"></a>擴充追蹤
 這個範例示範如何在用戶端與服務程式碼中撰寫使用者定義的活動追蹤的擴充 Windows Communication Foundation (WCF) 追蹤功能。 這樣可以讓使用者建立追蹤活動，並將追蹤分組成工作的邏輯單位 (Logical Unit)。 也可以透過傳輸 (在相同的端點內) 以及傳播 (跨端點) 方式來關聯活動。 在此範例中，用戶端與服務都會啟用追蹤。 如需如何在用戶端和服務組態檔中啟用追蹤的詳細資訊，請參閱[追蹤和訊息記錄](../../../../docs/framework/wcf/samples/tracing-and-message-logging.md)。  
@@ -26,7 +26,7 @@ ms.lasthandoff: 05/04/2018
 >  `<InstallDrive>:\WF_WCF_Samples\WCF\Basic\Management\ExtendingTracing`  
   
 ## <a name="tracing-and-activity-propagation"></a>追蹤與活動傳播  
- 使用者定義的活動追蹤可以讓使用者建立自己的追蹤活動，並將追蹤分組成工作邏輯單位、透過傳輸與傳播來關聯活動，以及降低 [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] 追蹤的效能成本 (例如，記錄檔的磁碟空間成本)。  
+ 使用者定義的活動追蹤 」 可讓使用者建立自己的 「 追蹤 」 活動來群組追蹤成工作邏輯單位的、 透過傳輸和傳播，活動相互關聯，並降低 WCF 追蹤 （例如成本的磁碟空間的效能成本記錄檔）。  
   
 ### <a name="adding-custom-sources"></a>新增自訂來源  
  使用者定義的追蹤可以同時新增至用戶端與服務程式碼。 加入追蹤來源的用戶端或服務組態檔來允許這些自訂的追蹤以記錄並顯示於[服務追蹤檢視器工具 (SvcTraceViewer.exe)](../../../../docs/framework/wcf/service-trace-viewer-tool-svctraceviewer-exe.md)。 下列程式碼示範如何將名為 `ServerCalculatorTraceSource` 之使用者定義的追蹤來源新增至組態檔。  
@@ -67,7 +67,7 @@ ms.lasthandoff: 05/04/2018
 ```  
   
 ### <a name="correlating-activities"></a>關聯活動  
- 若要直接關聯跨端點的活動，在 `propagateActivity` 追蹤來源中的 `true` 屬性必須設定為 `System.ServiceModel`。 此外，若要不經過 [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] 活動來傳播追蹤，這時必須關閉 ServiceModel 活動追蹤。 這項設定將如下列程式碼範例所示。  
+ 若要直接關聯跨端點的活動，在 `propagateActivity` 追蹤來源中的 `true` 屬性必須設定為 `System.ServiceModel`。 此外，而不需要透過 WCF 活動傳播追蹤，ServiceModel 活動追蹤必須關閉。 這項設定將如下列程式碼範例所示。  
   
 > [!NOTE]
 >  關閉 ServiceModel 活動追蹤的方式不同於指定追蹤層級 (以設定為 Off 的 `switchValue` 屬性表示)。  
@@ -85,7 +85,7 @@ ms.lasthandoff: 05/04/2018
 ```  
   
 ### <a name="lessening-performance-cost"></a>降低效能成本  
- 將 `ActivityTracing` 追蹤來源中的 `System.ServiceModel` 設定為 Off 時會產生追蹤檔，其中只包含使用者定義的活動追蹤，而不包含任何 ServiceModel 活動追蹤。 這樣會使記錄檔的大小變小許多。 但是，這樣就沒辦法關聯 [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] 處理追蹤。  
+ 將 `ActivityTracing` 追蹤來源中的 `System.ServiceModel` 設定為 Off 時會產生追蹤檔，其中只包含使用者定義的活動追蹤，而不包含任何 ServiceModel 活動追蹤。 這樣會使記錄檔的大小變小許多。 不過，有機會處理追蹤 WCF 相互關聯會遺失。  
   
 ##### <a name="to-set-up-build-and-run-the-sample"></a>若要安裝、建置及執行範例  
   

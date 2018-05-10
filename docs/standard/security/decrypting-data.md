@@ -173,7 +173,7 @@ class Class1
 ## <a name="asymmetric-decryption"></a>非對稱解密  
  一般而言，有一方 (A 方) 會同時產生公開和私密金鑰，並將金鑰儲存在記憶體或密碼編譯金鑰容器中。  A 方接著會將公開金鑰傳送給另一方 (B 方)。  使用公開金鑰時，B 方會加密資料並將資料傳回 A 方。在收到資料之後，A 方會使用對應的私密金鑰將資料解密。  只有在 A 方使用的私密金鑰對應於 B 方用來加密資料的公開金鑰時，解密才會成功。  
   
- 如需如何在安全的密碼編譯金鑰容器儲存非對稱金鑰，以及稍後如何擷取非對稱金鑰的相關資訊，請參閱 [How to: Store Asymmetric Keys in a Key Container](../../../docs/standard/security/how-to-store-asymmetric-keys-in-a-key-container.md)。  
+ 如需如何在安全的密碼編譯金鑰容器儲存非對稱金鑰，以及稍後如何擷取非對稱金鑰的相關資訊，請參閱 [如何：將對稱金鑰儲存在金鑰容器中](../../../docs/standard/security/how-to-store-asymmetric-keys-in-a-key-container.md)。  
   
  下列範例說明代表對稱金鑰和 IV 的兩個位元組陣列的解密。  如需如何從 <xref:System.Security.Cryptography.RSACryptoServiceProvider> 物件擷取非對稱式公開金鑰，且使用的格式可以輕鬆地傳送給第三方的相關資訊，請參閱 [Encrypting Data](../../../docs/standard/security/encrypting-data.md)的 Managed 資料流的值。  
   

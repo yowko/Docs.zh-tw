@@ -1,29 +1,15 @@
 ---
 title: WPF 全球化和當地語系化概觀
-ms.custom: ''
 ms.date: 03/30/2017
-ms.prod: .net-framework
-ms.reviewer: ''
-ms.suite: ''
-ms.technology:
-- dotnet-wpf
-ms.tgt_pltfrm: ''
-ms.topic: article
 helpviewer_keywords:
 - globalization [WPF], about globalization
 - localization [WPF], about localization
 ms.assetid: 56e5a5c8-6c96-4d19-b8e1-a5be1dc564af
-caps.latest.revision: ''
-author: dotnet-bot
-ms.author: dotnetcontent
-manager: wpickett
-ms.workload:
-- dotnet
-ms.openlocfilehash: 6f2bc9021ca376b7b27f74efed6866a907b480ad
-ms.sourcegitcommit: c883637b41ee028786edceece4fa872939d2e64c
+ms.openlocfilehash: 957ba16886669acdfa5501ffe02501cbe6e57198
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 03/26/2018
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="wpf-globalization-and-localization-overview"></a>WPF 全球化和當地語系化概觀
 當您限制只有一種語言可以使用您的產品時，就是將潛在客戶群限制為全世界 65 億人口的一小部分。 如果您想要全球對象都可以使用應用程式，則具成本效益的產品當地語系化是更多客戶可以使用的一種最佳且最經濟的方法。  
@@ -67,7 +53,7 @@ ms.lasthandoff: 03/26/2018
   
 -   用於當地語系化屬性控制而不是選擇性地省略當地語系化<xref:System.Windows.Markup.Localizer.BamlLocalizableResourceKey.Uid%2A>項目上的屬性。 請參閱[當地語系化屬性和註解](../../../../docs/framework/wpf/advanced/localization-attributes-and-comments.md)如需詳細資訊。  
   
--   使用**msbuild /t:updateuid**和**/t:checkuid**新增並檢查<xref:System.Windows.Markup.Localizer.BamlLocalizableResourceKey.Uid%2A>屬性中的您[!INCLUDE[TLA2#tla_xaml](../../../../includes/tla2sharptla-xaml-md.md)]。 使用<xref:System.Windows.Markup.Localizer.BamlLocalizableResourceKey.Uid%2A>來追蹤開發和當地語系化之間變更的屬性。 <xref:System.Windows.Markup.Localizer.BamlLocalizableResourceKey.Uid%2A> 屬性可協助您將新的開發變更的當地語系化。 如果您手動新增<xref:System.Windows.Markup.Localizer.BamlLocalizableResourceKey.Uid%2A>屬性[!INCLUDE[TLA2#tla_ui](../../../../includes/tla2sharptla-ui-md.md)]，此工作是通常繁瑣且較不精確。  
+-   使用**msbuild /t:updateuid**和 **/t:checkuid**新增並檢查<xref:System.Windows.Markup.Localizer.BamlLocalizableResourceKey.Uid%2A>屬性中的您[!INCLUDE[TLA2#tla_xaml](../../../../includes/tla2sharptla-xaml-md.md)]。 使用<xref:System.Windows.Markup.Localizer.BamlLocalizableResourceKey.Uid%2A>來追蹤開發和當地語系化之間變更的屬性。 <xref:System.Windows.Markup.Localizer.BamlLocalizableResourceKey.Uid%2A> 屬性可協助您將新的開發變更的當地語系化。 如果您手動新增<xref:System.Windows.Markup.Localizer.BamlLocalizableResourceKey.Uid%2A>屬性[!INCLUDE[TLA2#tla_ui](../../../../includes/tla2sharptla-ui-md.md)]，此工作是通常繁瑣且較不精確。  
   
     -   無法編輯或變更<xref:System.Windows.Markup.Localizer.BamlLocalizableResourceKey.Uid%2A>之後開始當地語系化的屬性。  
   
@@ -176,7 +162,7 @@ ms.lasthandoff: 03/26/2018
   
  **剖析**  
   
- 建置應用程式之後，將它當地語系化的第一個步驟是剖析附屬組件的可當地語系化資源。 本主題的用途，使用範例 LocBaml 工具，可以在找到[LocBaml 工具範例](http://go.microsoft.com/fwlink/?LinkID=160016)。 請注意，LocBaml 只是一種範例工具，旨在協助您開始建置符合當地語系化程序的當地語系化工具。 使用 LocBaml，執行下列命令以剖析： **LocBaml/剖析 RunDialog.resources.dll /out:**來產生 「 RunDialog.resources.dll.CSV"檔案。  
+ 建置應用程式之後，將它當地語系化的第一個步驟是剖析附屬組件的可當地語系化資源。 本主題的用途，使用範例 LocBaml 工具，可以在找到[LocBaml 工具範例](http://go.microsoft.com/fwlink/?LinkID=160016)。 請注意，LocBaml 只是一種範例工具，旨在協助您開始建置符合當地語系化程序的當地語系化工具。 使用 LocBaml，執行下列命令以剖析： **LocBaml/剖析 RunDialog.resources.dll /out:** 來產生 「 RunDialog.resources.dll.CSV"檔案。  
   
  **當地語系化**  
   

@@ -2,11 +2,11 @@
 title: 發行與擷取自訂繫結上的中繼資料
 ms.date: 03/30/2017
 ms.assetid: 904e11b4-d90e-45c6-9ee5-c3472c90008c
-ms.openlocfilehash: 607cf70e8e226e6c97a785f2478ad3a655b21a7c
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
-ms.translationtype: HT
+ms.openlocfilehash: 528f7662ee3a1f956427e5e42f540816f55027f8
+ms.sourcegitcommit: 15109844229ade1c6449f48f3834db1b26907824
+ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/04/2018
+ms.lasthandoff: 05/07/2018
 ---
 # <a name="publishing-and-retrieving-metadata-over-a-custom-binding"></a>發行與擷取自訂繫結上的中繼資料
 <xref:System.ServiceModel.Description.ServiceMetadataBehavior?displayProperty=nameWithType> 提供新增中繼資料端點到服務的支援。 這些中繼資料端點可以回應 HTTP GET 要求 URL，其中具有`?wsdl`querystring 和 Ws-transfer GET 要求 Ws-metadataexchange (MEX) 規格中所定義。 MEX 端點會實作 <xref:System.ServiceModel.Description.IMetadataExchange?displayProperty=nameWithType> 合約。  
@@ -19,7 +19,7 @@ ms.lasthandoff: 05/04/2018
 ## <a name="retrieving-metadata-over-a-custom-binding"></a>擷取自訂繫結上的中繼資料  
  您可以使用標準 HTTP 或 HTTPS GET 要求，從 HTTP Get 與 HTTPS Get 中繼資料端點擷取中繼資料。  
   
- 若要從 MEX 中繼資料端點擷取中繼資料，一般可使用 [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)]支援的其中一個標準 MEX 繫結。 如需詳細資訊，請參閱<xref:System.ServiceModel.Description.MetadataExchangeBindings?displayProperty=nameWithType>。 <xref:System.ServiceModel.Description.MetadataExchangeClient?displayProperty=nameWithType> 型別與 Svcutil.exe 工具會根據指定中繼資料端點的位址，自動選取其中一個標準 MEX 繫結。  
+ 若要從您通常可以使用其中一個標準 MEX 繫結支援由 WCF MEX 中繼資料端點擷取中繼資料。 如需詳細資訊，請參閱<xref:System.ServiceModel.Description.MetadataExchangeBindings?displayProperty=nameWithType>。 <xref:System.ServiceModel.Description.MetadataExchangeClient?displayProperty=nameWithType> 型別與 Svcutil.exe 工具會根據指定中繼資料端點的位址，自動選取其中一個標準 MEX 繫結。  
   
  如果 MEX 中繼資料端點使用的繫結異於其中一個標準 MEX 繫結，您可以使用程式碼或提供 <xref:System.ServiceModel.Description.MetadataExchangeClient> 用戶端端點組態，設定 <xref:System.ServiceModel.Description.IMetadataExchange> 所使用的繫結。 Svcutil.exe 工具會自動從其組態檔載入 <xref:System.ServiceModel.Description.IMetadataExchange> 用戶端端點組態，此組態與中繼資料端點位址之 URI 配置的名稱相同。  
   

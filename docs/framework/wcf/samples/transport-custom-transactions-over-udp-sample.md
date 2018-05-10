@@ -2,11 +2,11 @@
 title: 傳輸：自訂跨 UDP 異動範例
 ms.date: 03/30/2017
 ms.assetid: 6cebf975-41bd-443e-9540-fd2463c3eb23
-ms.openlocfilehash: e395300df4cd9917b9662d4bc3b1e8d50d82914d
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
-ms.translationtype: HT
+ms.openlocfilehash: 911331d5f5120f33a6c442a1eb4b2be2c8269a0e
+ms.sourcegitcommit: 15109844229ade1c6449f48f3834db1b26907824
+ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/04/2018
+ms.lasthandoff: 05/07/2018
 ---
 # <a name="transport-custom-transactions-over-udp-sample"></a>傳輸：自訂跨 UDP 異動範例
 這個範例根據[傳輸： UDP](../../../../docs/framework/wcf/samples/transport-udp.md)範例 Windows Communication Foundation (WCF) 中[傳輸擴充性](../../../../docs/framework/wcf/samples/transport-extensibility.md)。 它會延伸 UDP 傳輸範例以支援自訂交易流程，並示範 <xref:System.ServiceModel.Channels.TransactionMessageProperty> 屬性的使用方式。  
@@ -47,7 +47,7 @@ int bytesSent = this.socket.SendTo(txmsgBuffer, 0, txmsgBuffer.Length, SocketFla
   
  `TransactionMessageBuffer.WriteTransactionMessageBuffer` 是 Helper 方法，其中包含的新功能可以將目前交易的傳播權杖與訊息實體 (Entity) 合併，再將它放在緩衝區中。  
   
- 就自訂交易流程傳輸而言，用戶端的實作必須知道何種服務作業需要交易流程，並將此項資訊傳遞給 [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)]。 其中也必須有可以用來傳輸使用者異動至傳輸層的機制。 這個範例會使用「[!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] 訊息偵測器」來取得此項資訊。 此處實作的用戶端訊息偵測器稱為 `TransactionFlowInspector`，它會執行下列工作：  
+ 自訂交易流程傳輸而言，用戶端的實作必須知道何種服務作業需要異動流程，並且將這項資訊傳遞至 WCF。 其中也必須有可以用來傳輸使用者異動至傳輸層的機制。 這個範例會使用 「 WCF 訊息偵測器 」 來取得這項資訊。 此處實作的用戶端訊息偵測器稱為 `TransactionFlowInspector`，它會執行下列工作：  
   
 -   判斷交易是否必須針對指定的訊息動作流動 (這會在 `IsTxFlowRequiredForThisOperation()` 中進行)。  
   

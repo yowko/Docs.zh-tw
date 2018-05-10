@@ -2,17 +2,17 @@
 title: 傳輸
 ms.date: 03/30/2017
 ms.assetid: dfcfa36c-d3bb-44b4-aa15-1c922c6f73e6
-ms.openlocfilehash: 7daa486286e022b24be32df7335ddbd5db7233f0
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
-ms.translationtype: HT
+ms.openlocfilehash: aa7535aa393544077a9802b5c3255d6e5f6accda
+ms.sourcegitcommit: 15109844229ade1c6449f48f3834db1b26907824
+ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/04/2018
+ms.lasthandoff: 05/07/2018
 ---
 # <a name="transfer"></a>傳輸
 本主題說明 Windows Communication Foundation (WCF) 的活動追蹤模型中的傳輸。  
   
 ## <a name="transfer-definition"></a>傳輸定義  
- 活動之間的傳輸表示在端點內相關活動中事件之間的因果關係。 當控制在這些活動之間流動時 (例如跨活動界限的方法呼叫)，有兩個活動會與傳輸相關。 在 [!INCLUDE[indigo2](../../../../../includes/indigo2-md.md)] 中，當位元組傳入服務時，接聽活動就會傳輸至建立訊息物件之接收位元組活動。 如需端對端追蹤案例，以及其個別活動和追蹤設計的清單，請參閱[端對端追蹤案例](../../../../../docs/framework/wcf/diagnostics/tracing/end-to-end-tracing-scenarios.md)。  
+ 活動之間的傳輸表示在端點內相關活動中事件之間的因果關係。 當控制在這些活動之間流動時 (例如跨活動界限的方法呼叫)，有兩個活動會與傳輸相關。 在 WCF 中，當位元組傳入服務時，「 接聽 」 活動會傳送到接收位元組活動建立訊息物件的位置。 如需端對端追蹤案例，以及其個別活動和追蹤設計的清單，請參閱[端對端追蹤案例](../../../../../docs/framework/wcf/diagnostics/tracing/end-to-end-tracing-scenarios.md)。  
   
  若要發出傳輸追蹤，請使用追蹤來源的 `ActivityTracing` 設定，如同下列組態程式碼所示。  
   

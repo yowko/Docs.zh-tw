@@ -2,11 +2,11 @@
 title: 自訂服務裝載
 ms.date: 03/30/2017
 ms.assetid: fe16ff50-7156-4499-9c32-13d8a79dc100
-ms.openlocfilehash: c081858d57d9575a616c7c057047b0593a177f3e
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
-ms.translationtype: HT
+ms.openlocfilehash: c02ceb114a5346ea2a851f711f1ab9b50373cb75
+ms.sourcegitcommit: 15109844229ade1c6449f48f3834db1b26907824
+ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/04/2018
+ms.lasthandoff: 05/07/2018
 ---
 # <a name="custom-service-host"></a>自訂服務裝載
 這個範例會示範如何使用 <xref:System.ServiceModel.ServiceHost> 類別的自訂衍生，以變更服務的執行階段行為。 這個方法會提供可重複使用替代方案，以便透過常用方法來設定大量服務。 此範例也會示範如何使用 <xref:System.ServiceModel.Activation.ServiceHostFactory> 類別，以便在網際網路資訊服務 (IIS) 或 Windows Process Activation Service (WAS) 裝載環境中使用自訂 ServiceHost。  
@@ -121,7 +121,7 @@ host.Open();
  自訂主機仍會從應用程式的組態檔中讀取服務的端點組態，就如使用預設 <xref:System.ServiceModel.ServiceHost> 類別裝載服務一樣。 不過，由於新增邏輯以在自訂主機內啟用中繼資料發行，就不再需要於組態中明確啟用中繼資料發行行為。 當您建置其中包含多個服務的應用程式，而且想要在每個服務上啟用中繼資料發行，但不想要重複撰寫相同的組態項目時，這個方法特別有用。  
   
 ## <a name="using-a-custom-servicehost-in-iis-or-was"></a>在 IIS 或 WAS 中使用自訂 ServiceHost  
- 在自我裝載案例中使用自訂服務主機很簡單，因為這是您的應用程式程式碼，而且主要負責建立及開啟服務主機執行個體。 不過在 IIS 或 WAS 裝載環境中，[!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] 基礎結構會動態執行個體化您的服務主機，以回應傳入的訊息。 自訂服務主機也可以在此裝載環境中使用，但形式上在 ServiceHostFactory 中需要額外的程式碼。 下列程式碼會顯示 <xref:System.ServiceModel.Activation.ServiceHostFactory> 衍生，而這個衍生會傳回自訂 `SelfDescribingServiceHost` 的執行個體。  
+ 在自我裝載案例中使用自訂服務主機很簡單，因為這是您的應用程式程式碼，而且主要負責建立及開啟服務主機執行個體。 在 IIS 或 WAS 裝載環境中，不過，WCF 基礎結構會動態執行個體化您的服務主機，以回應傳入訊息中。 自訂服務主機也可以在此裝載環境中使用，但形式上在 ServiceHostFactory 中需要額外的程式碼。 下列程式碼會顯示 <xref:System.ServiceModel.Activation.ServiceHostFactory> 衍生，而這個衍生會傳回自訂 `SelfDescribingServiceHost` 的執行個體。  
   
 ```  
 public class SelfDescribingServiceHostFactory : ServiceHostFactory  
@@ -150,7 +150,7 @@ public class SelfDescribingServiceHostFactory : ServiceHostFactory
                language=c# Debug="true" %>  
 ```  
   
- 在這裡會將額外的 `Factory` 屬性新增至 `@ServiceHost` 指示詞，並傳遞自訂處理站的 CLR 型別名稱做為屬性值。 當 IIS 或 WAS 接收此服務的訊息時，[!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] 裝載基礎結構會先建立 ServiceHostFactory 的執行個體，然後藉由呼叫 `ServiceHostFactory.CreateServiceHost()` 來執行個體化服務主機本身。  
+ 在這裡會將額外的 `Factory` 屬性新增至 `@ServiceHost` 指示詞，並傳遞自訂處理站的 CLR 型別名稱做為屬性值。 當 IIS 或 WAS 接收此服務的訊息時，WCF 裝載基礎結構會先建立 ServiceHostFactory 的執行個體，然後具現化服務主機本身呼叫`ServiceHostFactory.CreateServiceHost()`。  
   
 ## <a name="running-the-sample"></a>執行範例  
  雖然此範例確實提供了完整功能的用戶端和服務實作，但此範例的目的為說明如何使用自訂主機，變更服務的執行個體行為。請執行下列步驟：  

@@ -4,20 +4,20 @@ ms.date: 03/30/2017
 ms.assetid: c2c549e5-ac19-40c5-b686-8f67f52b6dbf
 author: BrucePerlerMS
 manager: mbaldwin
-ms.openlocfilehash: 5fa4c3cf45eb17822effaa9284864274923b2504
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
-ms.translationtype: HT
+ms.openlocfilehash: 40f4f8523d5286911216180846e94ec18e40da1c
+ms.sourcegitcommit: 15109844229ade1c6449f48f3834db1b26907824
+ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/04/2018
+ms.lasthandoff: 05/07/2018
 ---
 # <a name="cryptographic-agility-in-wcf-security"></a>WCF 安全性中的加密彈性
 這個範例示範如何在標準/自訂演算法，以提供密碼編譯的敏捷式軟體開發實作 Windows Communication Foundation (WCF) 用戶端與服務中指定。 此範例是由下列專案所組成：  
   
  服務  
- 這是自我裝載[!INCLUDE[indigo2](../../../../includes/indigo2-md.md)]實作服務`ICalculator`介面，並可保護端點使用 <<!--zz xref:System.ServiceModel.WsHttpBinding --> `xref:System.ServiceModel.WsHttpBinding`> 安全工作階段與可靠工作階段停用。 這項服務會定義自訂的 `SecurityAlgorithmSuite` 類別，以指定用於訊息安全性的密碼編譯演算法。  
+ 這是自我裝載的 WCF 服務實作`ICalculator`介面，並可保護端點使用 <<!--zz xref:System.ServiceModel.WsHttpBinding --> `xref:System.ServiceModel.WsHttpBinding`> 安全工作階段與可靠工作階段停用。 這項服務會定義自訂的 `SecurityAlgorithmSuite` 類別，以指定用於訊息安全性的密碼編譯演算法。  
   
  用戶端  
- 這是 [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] 用戶端，會在驗證成功之後存取服務。 它會叫用由 `ICalculator` 介面公開並且由服務實作的作業。 這個用戶端還會定義相同的自訂 `SecurityAlgorithmSuite` 類別，以指定用於訊息安全性的密碼編譯演算法。  
+ 這是在成功驗證之後存取該服務 WCFclient。 它會叫用由 `ICalculator` 介面公開並且由服務實作的作業。 這個用戶端還會定義相同的自訂 `SecurityAlgorithmSuite` 類別，以指定用於訊息安全性的密碼編譯演算法。  
   
 ### <a name="to-use-this-sample"></a>若要使用這個範例  
   

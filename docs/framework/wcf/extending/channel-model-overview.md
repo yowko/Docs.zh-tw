@@ -4,17 +4,17 @@ ms.date: 03/30/2017
 helpviewer_keywords:
 - channel model [WCF]
 ms.assetid: 07a81e11-3911-4632-90d2-cca99825b5bd
-ms.openlocfilehash: df2993d9ba25c043aa66029aa00fae945d5cec9d
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
-ms.translationtype: HT
+ms.openlocfilehash: 13fe07d1521832ed12ba5770e0bd069ff9b917d2
+ms.sourcegitcommit: 15109844229ade1c6449f48f3834db1b26907824
+ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/04/2018
+ms.lasthandoff: 05/07/2018
 ---
 # <a name="channel-model-overview"></a>通道模型概觀
-Windows Communication Foundation (WCF) 通道堆疊是處理訊息的一或多個通道的分層的通訊堆疊。 堆疊底部為傳輸通道，其負責針對基礎傳輸進行調整 (例如，TCP、HTTP、SMTP 和其他的傳輸類型)。 通道會提供低階的程式設計模型來傳送及接收訊息。 這個程式設計模型依賴多個介面和其他類型，一般統稱為 [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] 通道模型。 本主題將討論通道形狀、建構基本通道接聽程式 (在服務上) 以及通道處理站 (在用戶端上)。  
+Windows Communication Foundation (WCF) 通道堆疊是處理訊息的一或多個通道的分層的通訊堆疊。 堆疊底部為傳輸通道，其負責針對基礎傳輸進行調整 (例如，TCP、HTTP、SMTP 和其他的傳輸類型)。 通道會提供低階的程式設計模型來傳送及接收訊息。 這個程式設計模型依賴多個介面和其他類型，統稱為 WCF 通道模型。 本主題將討論通道形狀、建構基本通道接聽程式 (在服務上) 以及通道處理站 (在用戶端上)。  
   
 ## <a name="channel-stack"></a>通道堆疊  
- [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] 端點會使用稱為通道堆疊的通訊堆疊來與外界進行通訊。 下列圖表比較通道堆疊與其他的通訊堆疊，例如 TCP/IP。  
+ WCF 端點進行通訊與世界各地使用稱為通道堆疊的通訊堆疊。 下列圖表比較通道堆疊與其他的通訊堆疊，例如 TCP/IP。  
   
  ![通道模型](../../../../docs/framework/wcf/extending/media/wcfc-channelstackhighlevelc.gif "wcfc_ChannelStackHighLevelc")  
   

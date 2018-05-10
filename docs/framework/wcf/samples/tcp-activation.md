@@ -2,11 +2,11 @@
 title: TCP 啟用
 ms.date: 03/30/2017
 ms.assetid: bf8c215c-0228-4f4f-85c2-e33794ec09a7
-ms.openlocfilehash: 3627307c74604f30c77927067d302baf41b1c536
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
-ms.translationtype: HT
+ms.openlocfilehash: 9f08864c1d5139160ac25e0733ddcfc1c8557ad9
+ms.sourcegitcommit: 15109844229ade1c6449f48f3834db1b26907824
+ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/04/2018
+ms.lasthandoff: 05/07/2018
 ---
 # <a name="tcp-activation"></a>TCP 啟用
 這個範例會示範裝載使用 Windows Process Activation Service (WAS) 的服務，以便啟用透過 net.tcp 通訊協定進行通訊的服務。 這個範例根據[入門](../../../../docs/framework/wcf/samples/getting-started-sample.md)。  
@@ -143,7 +143,7 @@ Press <ENTER> to terminate client.
   
 2.  確認您已經執行[的 Windows Communication Foundation 範例的單次安裝程序](../../../../docs/framework/wcf/samples/one-time-setup-procedure-for-the-wcf-samples.md)。  
   
-     此外，您必須安裝 [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] 非 HTTP 啟動元件：  
+     此外，您必須安裝 WCF 非 HTTP 啟動元件：  
   
     1.  從**啟動**功能表上，選擇**控制台**。  
   

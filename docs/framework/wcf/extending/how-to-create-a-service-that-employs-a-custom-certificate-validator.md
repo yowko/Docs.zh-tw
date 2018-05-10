@@ -7,16 +7,16 @@ dev_langs:
 helpviewer_keywords:
 - WCF, authentication
 ms.assetid: bb0190ff-0738-4e54-8d22-c97d343708bf
-ms.openlocfilehash: d4a1532ed91b17cf5bed909026ace695aeba8cd9
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
-ms.translationtype: HT
+ms.openlocfilehash: cc768f5e5086e6eba1ccac9d969eac14e14ceb2f
+ms.sourcegitcommit: 15109844229ade1c6449f48f3834db1b26907824
+ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/04/2018
+ms.lasthandoff: 05/07/2018
 ---
 # <a name="how-to-create-a-service-that-employs-a-custom-certificate-validator"></a>HOW TO：建立使用自訂憑證驗證程式的服務
 這個主題將示範如何實作自訂憑證驗證程式，以及如何設定用戶端或服務認證，以使用自訂憑證驗證程式來取代預設的憑證驗證邏輯。  
   
- 如果 X.509 憑證用來驗證用戶端或服務，Windows Communication Foundation (WCF) 預設會使用 Windows 憑證存放區和 Crypto API 來驗證憑證，並確保它是受信任。 有時內建的憑證驗證功能不足，必須變更。 [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] 提供簡單的方法，可讓使用者新增憑證驗證程式以變更驗證邏輯。 如果指定了自訂憑證驗證程式，[!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] 便不會使用內建的憑證驗證邏輯，而會改用自訂驗證程式。  
+ 如果 X.509 憑證用來驗證用戶端或服務，Windows Communication Foundation (WCF) 預設會使用 Windows 憑證存放區和 Crypto API 來驗證憑證，並確保它是受信任。 有時內建的憑證驗證功能不足，必須變更。 WCF 提供簡單的方法，以變更驗證邏輯可讓使用者新增自訂憑證驗證程式。 如果指定了自訂憑證驗證程式，則 WCF 不會使用內建的憑證驗證邏輯，但改用自訂驗證程式。  
   
 ## <a name="procedures"></a>程序  
   

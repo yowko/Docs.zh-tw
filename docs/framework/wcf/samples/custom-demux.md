@@ -2,11 +2,11 @@
 title: 自訂 Demux
 ms.date: 03/30/2017
 ms.assetid: fc54065c-518e-4146-b24a-0fe00038bfa7
-ms.openlocfilehash: 76f8d60fdcc1fcba9942a78138e83104dfcd972b
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
-ms.translationtype: HT
+ms.openlocfilehash: e88672f152b87740feef1345b3eac213916a1527
+ms.sourcegitcommit: 15109844229ade1c6449f48f3834db1b26907824
+ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/04/2018
+ms.lasthandoff: 05/07/2018
 ---
 # <a name="custom-demux"></a>自訂 Demux
 這個範例會示範如何 MSMQ 訊息標頭會對應至不同的服務作業，讓 Windows Communication Foundation (WCF) 服務使用<xref:System.ServiceModel.MsmqIntegration.MsmqIntegrationBinding>不限於使用一項服務作業中所示[訊息佇列至 Windows Communication Foundation](../../../../docs/framework/wcf/samples/message-queuing-to-wcf.md)和[Windows Communication Foundation 至訊息佇列](../../../../docs/framework/wcf/samples/wcf-to-message-queuing.md)範例。  
@@ -108,7 +108,7 @@ public static void Main()
  MSMQ 佇列名稱是指定在組態檔的 appSettings 區段中。  
   
 > [!NOTE]
->  佇列名稱會使用點 (.) 來代表本機電腦，並在其路徑中使用反斜線分隔符號。 [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] 端點位址會指定 msmq.formatname 配置，並使用 localhost 表示本機電腦。 在配置後面的是根據 MSMQ 格式名稱定址方針而正確格式化的佇列位址。  
+>  佇列名稱會使用點 (.) 來代表本機電腦，並在其路徑中使用反斜線分隔符號。 WCF 端點位址會指定 msmq.formatname 配置，並使用 localhost 表示本機電腦。 在配置後面的是根據 MSMQ 格式名稱定址方針而正確格式化的佇列位址。  
   
 ```xml  
 <appSettings>  

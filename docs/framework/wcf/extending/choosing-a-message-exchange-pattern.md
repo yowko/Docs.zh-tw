@@ -2,11 +2,11 @@
 title: 選擇訊息交換模式
 ms.date: 03/30/2017
 ms.assetid: 0f502ca1-6a8e-4607-ba15-59198c0e6146
-ms.openlocfilehash: 3466be98522eef0ebec6f6613f51566700a7cdb7
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
-ms.translationtype: HT
+ms.openlocfilehash: ac5ff841eb4e314c1c9d04c895d7a22766da003e
+ms.sourcegitcommit: 15109844229ade1c6449f48f3834db1b26907824
+ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/04/2018
+ms.lasthandoff: 05/07/2018
 ---
 # <a name="choosing-a-message-exchange-pattern"></a>選擇訊息交換模式
 撰寫自訂傳輸的第一個步驟是決定*訊息交換模式*（又稱為 Mep） 所需的通道所開發。 本主題會說明可用的選項，並討論各種需求。 這是通道開發工作清單中所述的第一個工作[開發通道](../../../../docs/framework/wcf/extending/developing-channels.md)。  
@@ -47,7 +47,7 @@ ms.lasthandoff: 05/04/2018
 >  若是 UDP 傳輸，唯一支援的 MEP 是資料包，因為 UDP 原本就是射後不理 (Fire and Forget) 通訊協定。  
   
 ## <a name="sessions-and-sessionful-channels"></a>工作階段和工作階段通道  
- 在網路世界中有連線導向的通訊協定 (例如 TCP)，以及無連線的通訊協定 (例如 UDP)。 [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] 使用工作階段一詞來表示像是連線的邏輯抽象概念。 工作階段 WCF 通訊協定類似連線導向的網路通訊協定，而無工作階段的 WCF 通訊協定類似無連線的網路通訊協定。  
+ 在網路世界中有連線導向的通訊協定 (例如 TCP)，以及無連線的通訊協定 (例如 UDP)。 WCF 會使用工作階段一詞來表示像是連線的邏輯抽象概念。 工作階段 WCF 通訊協定類似連線導向的網路通訊協定，而無工作階段的 WCF 通訊協定類似無連線的網路通訊協定。  
   
  在通道物件模型中，每個邏輯工作階段都會顯示為工作階段通道的執行個體。 因此，由用戶端建立並由服務接受的每個新工作階段，都會對應到每一端上的新工作階段通道。 下圖的最上方顯示出無工作階段通道的結構，而下方則顯示工作階段通道的結構。  
   

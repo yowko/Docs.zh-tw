@@ -4,18 +4,18 @@ ms.date: 03/30/2017
 helpviewer_keywords:
 - WCF clients [WCF], using
 ms.assetid: 190349fc-0573-49c7-bb85-8e316df7f31f
-ms.openlocfilehash: 6667a8e9862054d7d8d5b20e70dfbe699de02eab
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
-ms.translationtype: HT
+ms.openlocfilehash: 79431588e27b02a40d5898929f1bdf644c8a79cd
+ms.sourcegitcommit: 15109844229ade1c6449f48f3834db1b26907824
+ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/04/2018
+ms.lasthandoff: 05/07/2018
 ---
 # <a name="how-to-use-a-windows-communication-foundation-client"></a>HOW TO：使用 Windows Communication Foundation 用戶端
 這是建立基本的 Windows Communication Foundation (WCF) 應用程式所需的六個工作的最後一個。 六個工作的概觀，請參閱[入門教學課程](../../../docs/framework/wcf/getting-started-tutorial.md)主題。  
   
- 一旦已建立並設定 Windows Communication Foundation (WCF) proxy，可以建立用戶端執行個體和用戶端應用程式可編譯及用來與通訊[!INCLUDE[indigo2](../../../includes/indigo2-md.md)]服務。 本主題將說明具現化及使用 [!INCLUDE[indigo2](../../../includes/indigo2-md.md)] 用戶端的程序。 這個程序會執行三項工作：  
+ 一旦已建立並設定 Windows Communication Foundation (WCF) proxy，可以建立用戶端執行個體和用戶端應用程式可編譯及用來與 WCF 服務進行通訊。 本主題會描述具現化及使用 WCF 用戶端的程序。 這個程序會執行三項工作：  
   
-1.  具現化 [!INCLUDE[indigo2](../../../includes/indigo2-md.md)] 用戶端。  
+1.  具現化 WCF 用戶端。  
   
 2.  從產生的 Proxy 呼叫服務作業。  
   

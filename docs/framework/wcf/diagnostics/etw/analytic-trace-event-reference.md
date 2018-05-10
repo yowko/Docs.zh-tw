@@ -4,14 +4,14 @@ ms.date: 03/30/2017
 helpviewer_keywords:
 - analytic tracing [WCF]. reference
 ms.assetid: e44540cf-44a1-4efc-b965-7fbfd2131d73
-ms.openlocfilehash: 9066f3cde47f95773596fbbf1c6cc36b71d3f3ba
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
-ms.translationtype: HT
+ms.openlocfilehash: 0f8b4c15f2afefbc62b98dca66dcf3ccc31b1dc0
+ms.sourcegitcommit: 15109844229ade1c6449f48f3834db1b26907824
+ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/04/2018
+ms.lasthandoff: 05/07/2018
 ---
 # <a name="analytic-trace-event-reference"></a>分析的追蹤事件參考
-下表定義事件層級、識別項，以及與 [!INCLUDE[indigo2](../../../../../includes/indigo2-md.md)] 分析追蹤關聯的訊息。  
+下表定義事件層級、 識別碼和與 WCF 分析追蹤關聯的訊息。  
   
 ## <a name="event-reference"></a>事件參考  
   

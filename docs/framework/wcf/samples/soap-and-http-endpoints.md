@@ -2,24 +2,24 @@
 title: SOAP 及 HTTP 端點
 ms.date: 03/30/2017
 ms.assetid: e3c8be75-9dda-4afa-89b6-a82cb3b73cf8
-ms.openlocfilehash: bf11563b937426c3c1701e7fed79e82e4e4669ad
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
-ms.translationtype: HT
+ms.openlocfilehash: 4c8a4695dbcaee2f0e7584418fbeac12815fa967
+ms.sourcegitcommit: 15109844229ade1c6449f48f3834db1b26907824
+ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/04/2018
+ms.lasthandoff: 05/07/2018
 ---
 # <a name="soap-and-http-endpoints"></a>SOAP 及 HTTP 端點
-這個範例會示範如何實作以 RPC 為基礎的服務，並將它公開 SOAP 格式和"Plain Old XML"(POX) 格式使用[!INCLUDE[indigo2](../../../../includes/indigo2-md.md)]Web 程式設計模型。 請參閱[基本 HTTP 服務](../../../../docs/framework/wcf/samples/basic-http-service.md)服務的 HTTP 繫結的更多詳細的範例。 這個範例的重點在於，使用不同繫結透過 SOAP 和 HTTP 公開相同服務的相關詳細資料。  
+這個範例示範如何實作以 RPC 為基礎的服務，並將它公開在 SOAP 格式和"Plain Old XML"(POX) 格式使用 WCF Web 程式設計模型。 請參閱[基本 HTTP 服務](../../../../docs/framework/wcf/samples/basic-http-service.md)服務的 HTTP 繫結的更多詳細的範例。 這個範例的重點在於，使用不同繫結透過 SOAP 和 HTTP 公開相同服務的相關詳細資料。  
   
 ## <a name="demonstrates"></a>示範  
- 使用 [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] 透過 SOAP 和 HTTP 公開 RPC 服務。  
+ 使用 WCF 透過 SOAP 和 HTTP 公開 RPC 服務。  
   
 ## <a name="discussion"></a>討論  
- 這個範例是由兩個元件所組成：包含 [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] 服務的 Web 應用程式專案 (服務)，以及使用 SOAP 和 HTTP 繫結叫用服務作業的主控台應用程式 (用戶端)。  
+ 這個範例是由兩個元件所組成： 包含 WCF 服務，並叫用服務作業使用 SOAP 和 HTTP 繫結的主控台應用程式 （用戶端） 的 Web 應用程式專案 （服務）。  
   
- [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] 服務會公開兩項作業：`GetData` 和 `PutData`，這兩項作業會 echo 當做輸入傳遞的字串。 服務作業會以 <xref:System.ServiceModel.Web.WebGetAttribute> 和 <xref:System.ServiceModel.Web.WebInvokeAttribute> 加上附註。 這些屬性會控制這些作業的 HTTP 投射。 此外，這些作業還會以 <xref:System.ServiceModel.OperationContractAttribute> 加上附註，這個屬性可讓作業透過 SOAP 繫結公開。 服務的 `PutData` 方法會擲回 <xref:System.ServiceModel.Web.WebFaultException>，它會使用 HTTP 狀態碼透過 HTTP 送回，以及透過 SOAP 做為 SOAP 錯誤送回。  
+ WCF 服務會公開 2 的作業 –`GetData`和`PutData`– 會 echo 當做輸入傳遞的字串。 服務作業會以 <xref:System.ServiceModel.Web.WebGetAttribute> 和 <xref:System.ServiceModel.Web.WebInvokeAttribute> 加上附註。 這些屬性會控制這些作業的 HTTP 投射。 此外，這些作業還會以 <xref:System.ServiceModel.OperationContractAttribute> 加上附註，這個屬性可讓作業透過 SOAP 繫結公開。 服務的 `PutData` 方法會擲回 <xref:System.ServiceModel.Web.WebFaultException>，它會使用 HTTP 狀態碼透過 HTTP 送回，以及透過 SOAP 做為 SOAP 錯誤送回。  
   
- Web.config 檔案會為 [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] 服務設定 3 個端點：  
+ Web.config 檔案設定 3 個端點的 WCF 服務：  
   
 -   ~/service.svc/mex 端點，這個端點會公開服務中繼資料讓 SOAP 用戶端存取。  
   

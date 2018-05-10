@@ -1,17 +1,12 @@
 ---
 title: 'F # 教學課程'
 description: '檢查部份 F # 程式語言中的程式碼範例使用此教學課程的主要功能。'
-author: cartermp
-ms.author: phcart
 ms.date: 02/28/2018
-ms.topic: conceptual
-ms.prod: dotnet-fsharp
-ms.devlang: fsharp
-ms.openlocfilehash: 6821c74827b928cdd0c5aff101be4f9103986e3e
-ms.sourcegitcommit: 03ee570f6f528a7d23a4221dcb26a9498edbdf8c
-ms.translationtype: HT
+ms.openlocfilehash: 2ce251b90d5c202996e0b1673e8f7f378a38af5f
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/28/2018
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="tour-of-f"></a>F # 教學課程 #
 

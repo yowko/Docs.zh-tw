@@ -2,7 +2,7 @@
 
 |   |   |
 |---|---|
-|詳細資料|<xref:System.Runtime.Serialization.Formatters.Soap.SoapFormatter?displayProperty=name> 不保證以某個 .NET Framework 版本序列化的物件，可成功以另一個版本還原序列化。 具體來說，某些已排序的集合 (例如 <xref:System.Collections.Hashtable?displayProperty=name>) 在 4.0 和 4.5 之間新增成員；如果這些類型的物件以 .NET 4.5 序列化，就無法以 .NET 4.0 還原序列化。 請注意，如果序列化資料以相同的 .NET Framework 版本序列化和還原序列化，就不會發生任何問題。|
+|詳細資料|<xref:System.Runtime.Serialization.Formatters.Soap.SoapFormatter?displayProperty=name> 不保證以某個 .NET Framework 版本序列化的物件，可成功以另一個版本還原序列化。 具體來說，某些已排序的集合 (例如 <xref:System.Collections.Hashtable?displayProperty=name>) 在 4.0 和 4.5 之間新增成員；如果這些類型的物件以 .NET Framework 4.5 序列化，就無法以 .NET Framework 4.0 還原序列化。 請注意，如果序列化資料以相同的 .NET Framework 版本序列化和還原序列化，就不會發生任何問題。|
 |建議|<xref:System.Runtime.Serialization.Formatters.Soap.SoapFormatter?displayProperty=name> 應該取代為 <xref:System.Runtime.Serialization.Formatters.Binary.BinaryFormatter?displayProperty=name> 序列化或 <xref:System.Runtime.Serialization.NetDataContractSerializer?displayProperty=name> 應該彈性處理 .NET Framework 變更。|
 |範圍|次要|
 |版本|4.5|

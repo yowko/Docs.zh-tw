@@ -2,21 +2,21 @@
 title: 用戶端
 ms.date: 03/30/2017
 ms.assetid: fabb0c70-b79b-4e58-a5d3-9705de85ee5b
-ms.openlocfilehash: 4c44ed4be9a3598ea79355737db678dd7a80a56a
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
-ms.translationtype: HT
+ms.openlocfilehash: cd172aefa640853c7ace1d9d7ad3fada73714642
+ms.sourcegitcommit: 15109844229ade1c6449f48f3834db1b26907824
+ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/04/2018
+ms.lasthandoff: 05/07/2018
 ---
 # <a name="client"></a>用戶端
 本節包含示範 Windows Communication Foundation (WCF) 用戶端應用程式的範例。  
   
 ## <a name="in-this-section"></a>本節內容  
  [用戶端互通性](../../../../docs/framework/wcf/samples/client-interoperability.md)  
- 示範 [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] 與其他技術之間的互通性。  
+ 示範 WCF 與其他技術之間的互通性。  
   
  [位址標頭](../../../../docs/framework/wcf/samples/address-headers.md)  
- 示範用戶端如何將參考參數傳遞至使用 [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] 的服務。  
+ 示範用戶端如何參考參數傳遞給使用 WCF 服務。  
   
  [通道處理站](../../../../docs/framework/wcf/samples/channel-factory.md)  
  示範用戶端應用程式如何使用 <xref:System.ServiceModel.ChannelFactory> 類別而不是所產生的用戶端來建立通道。  

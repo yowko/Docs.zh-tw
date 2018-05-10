@@ -8,11 +8,11 @@ helpviewer_keywords:
 - WCF, best practices
 - Windows Communication Foundation, guidelines
 ms.assetid: 5098ba46-6e8d-4e02-b0c5-d737f9fdad84
-ms.openlocfilehash: 09996681b17d324d53c74b727b183f3a457cc664
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
-ms.translationtype: HT
+ms.openlocfilehash: 40e0d2e8d9293792e295f1b1a45de84f4d66d8af
+ms.sourcegitcommit: 15109844229ade1c6449f48f3834db1b26907824
+ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/04/2018
+ms.lasthandoff: 05/07/2018
 ---
 # <a name="guidelines-and-best-practices"></a>方針及最佳作法
 本節將提供指導方針建立 Windows Communication Foundation (WCF) 應用程式的主題。  
@@ -22,7 +22,7 @@ ms.lasthandoff: 05/04/2018
  說明如何及何時建立不會在未來版本建立時中斷的資料合約。  
   
  [服務版本設定](../../../docs/framework/wcf/service-versioning.md)  
- 說明如何考量 [!INCLUDE[indigo2](../../../includes/indigo2-md.md)] 內的版本控制。 部署之後，服務 (及其公開的端點) 可能必須予以變更，例如，為了滿足商務需求或 IT 需求的變更，或者為了修復問題。 每個變更都會產生新的服務版本。  
+ 說明如何在 WCF 中的版本控制，請考慮。 部署之後，服務 (及其公開的端點) 可能必須予以變更，例如，為了滿足商務需求或 IT 需求的變更，或者為了修復問題。 每個變更都會產生新的服務版本。  
   
  [負載平衡](../../../docs/framework/wcf/load-balancing.md)  
  列出使用 Web 伺服陣列的負載平衡方針。  

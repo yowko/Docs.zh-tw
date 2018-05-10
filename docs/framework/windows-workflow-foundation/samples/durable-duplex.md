@@ -2,11 +2,11 @@
 title: 永久性雙工
 ms.date: 03/30/2017
 ms.assetid: 4e76d1a1-f3d8-4a0f-8746-4a322cdff6eb
-ms.openlocfilehash: 91490eb3ee6c11f29bb49d8343b807e74e8d3bc2
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
-ms.translationtype: HT
+ms.openlocfilehash: 3df5ba962ef33594df1eaebc20789fa9e2d35244
+ms.sourcegitcommit: 15109844229ade1c6449f48f3834db1b26907824
+ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/04/2018
+ms.lasthandoff: 05/07/2018
 ---
 # <a name="durable-duplex"></a>永久性雙工
 這個範例示範如何安裝及設定使用訊息活動中 Windows Workflow Foundation (WF) 的永久性雙工訊息交換。 永久性的雙工訊息交換是長時間進行的雙向訊息交換。 此訊息交換的存留期間可能比通訊通道的存留期間以及服務執行個體的記憶體中存留期間還要長。  
@@ -41,7 +41,7 @@ ms.lasthandoff: 05/04/2018
 >  這個範例所使用的繫結並不安全。 當您部署應用程式時，應該根據應用程式的安全性需求來設定繫結。  
   
 > [!NOTE]
->  這個範例所使用的佇列不是異動式。 如需範例，示範如何設定[!INCLUDE[indigo2](../../../../includes/indigo2-md.md)]訊息交換使用交易佇列中，請參閱[MSMQ 啟用](../../../../docs/framework/wcf/samples/msmq-activation.md)範例。  
+>  這個範例所使用的佇列不是異動式。 如需示範如何設定 WCF 使用交易佇列的訊息交換的範例，請參閱[MSMQ 啟用](../../../../docs/framework/wcf/samples/msmq-activation.md)範例。  
   
  由 Service1.xamlx 傳送至 Service2.xamlx 的訊息是透過設定有 Service2.xamlx 位址和先前定義之自訂繫結的用戶端端點所傳送。 從 Service2.xamlx 到 Service1.xamlx 的回呼是透過不含明確設定之位址的用戶端端點所傳送，因為位址是取自 Service1.xamlx 所傳送的回呼內容。 下列程式碼範例定義用戶端端點。  
   

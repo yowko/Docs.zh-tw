@@ -5,11 +5,11 @@ helpviewer_keywords:
 - NT Service
 - NT Service Host Sample [Windows Communication Foundation]
 ms.assetid: 1b2f45c5-2bed-4979-b0ee-8f9efcfec028
-ms.openlocfilehash: 14fdb278f89f30e0941a88c2c0a40c768717f8bc
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
-ms.translationtype: HT
+ms.openlocfilehash: 06bb17ca174eef069889381460b77f6b50902f70
+ms.sourcegitcommit: 15109844229ade1c6449f48f3834db1b26907824
+ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/04/2018
+ms.lasthandoff: 05/07/2018
 ---
 # <a name="windows-service-host"></a>Windows 服務主機
 此範例將示範如何在 managed Windows 服務裝載 Windows Communication Foundation (WCF) 服務。 Windows 服務控制使用中的 [服務] 小程式**控制台**和可以設定為在系統重新開機後自動啟動。 範例是由用戶端程式與 Windows 服務程式所組成。 服務會實作為 .exe 程式並包含專屬的裝載程式碼。 在其他裝載環境中，例如 Windows 處理序啟用服務 (WAS) 或 Internet Information Services (IIS)，就不需要撰寫裝載程式碼。  
@@ -26,9 +26,9 @@ ms.lasthandoff: 05/04/2018
 >   
 >  `<InstallDrive>:\WF_WCF_Samples\WCF\Basic\Services\Hosting\WindowsService`  
   
- 在這個服務完成建置後，它必須像任何其他 Windows 服務一樣使用 Installutil.exe 公用程式安裝。 如果要變更服務，就必須先以 `installutil /u` 將它解除安裝。 這個範例中包含的 Setup.bat 和 Cleanup.bat 檔是用來安裝和啟動 Windows 服務，以及關閉和解除安裝 Windows 服務的命令。 只有在執行 Windows 服務的情況下，[!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] 服務才會回應用戶端。 如果您使用從 [服務] 小程式停止 Windows 服務**控制台**並執行用戶端，<xref:System.ServiceModel.EndpointNotFoundException>用戶端嘗試存取服務時，就會發生例外狀況。 如果重新啟動 Windows 服務然後重新執行用戶端，就可成功進行通訊。  
+ 在這個服務完成建置後，它必須像任何其他 Windows 服務一樣使用 Installutil.exe 公用程式安裝。 如果要變更服務，就必須先以 `installutil /u` 將它解除安裝。 這個範例中包含的 Setup.bat 和 Cleanup.bat 檔是用來安裝和啟動 Windows 服務，以及關閉和解除安裝 Windows 服務的命令。 如果 Windows 服務執行用戶端只可以回應的 WCF 服務。 如果您使用從 [服務] 小程式停止 Windows 服務**控制台**並執行用戶端，<xref:System.ServiceModel.EndpointNotFoundException>用戶端嘗試存取服務時，就會發生例外狀況。 如果重新啟動 Windows 服務然後重新執行用戶端，就可成功進行通訊。  
   
- 這段服務程式碼包含安裝程式類別、會實作 ICalculator 合約的 [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] 服務實作類別，以及做為執行階段主機的 Windows 服務類別。 繼承自 <xref:System.Configuration.Install.Installer> 的安裝程式類別，會允許 Installutil.exe 工具將程式當做 NT 服務進行安裝。 服務實作類別 `WcfCalculatorService` 是實作基本服務合約的 [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] 服務。 這個 [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] 服務是裝載於稱為 `WindowsCalculatorService` 的 Windows 服務類別中。 為了限定為 Windows 服務，此類別會繼承自 <xref:System.ServiceProcess.ServiceBase>，並且實作 <xref:System.ServiceProcess.ServiceBase.OnStart%28System.String%5B%5D%29> 和 <xref:System.ServiceProcess.ServiceBase.OnStop> 方法。 使用 <xref:System.ServiceProcess.ServiceBase.OnStart%28System.String%5B%5D%29> 時，會建立並開啟型別為 <xref:System.ServiceModel.ServiceHost> 的 `WcfCalculatorService` 物件。 使用 <xref:System.ServiceProcess.ServiceBase.OnStop> 時，會呼叫 <xref:System.ServiceModel.Channels.CommunicationObject.Close%28System.TimeSpan%29> 物件的 <xref:System.ServiceModel.ServiceHost> 方法來關閉 ServiceHost。 使用設定主機的基底位址[\<新增 >](../../../../docs/framework/configure-apps/file-schema/wcf/add-of-baseaddresses.md)項目子系的[ \<baseAddresses >](../../../../docs/framework/configure-apps/file-schema/wcf/baseaddresses.md)，這是子系[ \<主機 >](../../../../docs/framework/configure-apps/file-schema/wcf/host.md)項目子系的[\<服務 >](../../../../docs/framework/configure-apps/file-schema/wcf/service.md)項目。  
+ 服務程式碼包含安裝程式類別、 會實作 ICalculator 合約，WCF 服務實作類別，以及做為執行階段主機的 Windows 服務類別。 繼承自 <xref:System.Configuration.Install.Installer> 的安裝程式類別，會允許 Installutil.exe 工具將程式當做 NT 服務進行安裝。 服務實作類別`WcfCalculatorService`，是實作的基本服務合約的 WCF 服務。 此 WCF 服務裝載在 Windows 服務類別，稱為內`WindowsCalculatorService`。 為了限定為 Windows 服務，此類別會繼承自 <xref:System.ServiceProcess.ServiceBase>，並且實作 <xref:System.ServiceProcess.ServiceBase.OnStart%28System.String%5B%5D%29> 和 <xref:System.ServiceProcess.ServiceBase.OnStop> 方法。 使用 <xref:System.ServiceProcess.ServiceBase.OnStart%28System.String%5B%5D%29> 時，會建立並開啟型別為 <xref:System.ServiceModel.ServiceHost> 的 `WcfCalculatorService` 物件。 使用 <xref:System.ServiceProcess.ServiceBase.OnStop> 時，會呼叫 <xref:System.ServiceModel.Channels.CommunicationObject.Close%28System.TimeSpan%29> 物件的 <xref:System.ServiceModel.ServiceHost> 方法來關閉 ServiceHost。 使用設定主機的基底位址[\<新增 >](../../../../docs/framework/configure-apps/file-schema/wcf/add-of-baseaddresses.md)項目子系的[ \<baseAddresses >](../../../../docs/framework/configure-apps/file-schema/wcf/baseaddresses.md)，這是子系[ \<主機 >](../../../../docs/framework/configure-apps/file-schema/wcf/host.md)項目子系的[\<服務 >](../../../../docs/framework/configure-apps/file-schema/wcf/service.md)項目。  
   
  定義端點使用的基底位址和[ \<wsHttpBinding >](../../../../docs/framework/configure-apps/file-schema/wcf/wshttpbinding.md)。 下列範例會示範設定基底位址，以及會公開 (Expose) CalculatorService 的端點。  
   

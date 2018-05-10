@@ -7,11 +7,11 @@ helpviewer_keywords:
 - best practices [WCF], data contract versioning
 - Windows Communication Foundation, data contracts
 ms.assetid: bf0ab338-4d36-4e12-8002-8ebfdeb346cb
-ms.openlocfilehash: a578235a0db0ba769cae0b2ade93edbfd72b5508
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
-ms.translationtype: HT
+ms.openlocfilehash: 33db8749656a8bb001f0a1797c77451476a126f2
+ms.sourcegitcommit: 15109844229ade1c6449f48f3834db1b26907824
+ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/04/2018
+ms.lasthandoff: 05/07/2018
 ---
 # <a name="best-practices-data-contract-versioning"></a>最佳做法：資料合約版本控制
 本主題會列出最佳做法以建立可隨時間輕鬆改進的資料合約。 如需資料合約的詳細資訊，請參閱[使用資料合約](../../../docs/framework/wcf/feature-details/using-data-contracts.md)。  
@@ -21,7 +21,7 @@ ms.lasthandoff: 05/04/2018
   
  這表示即使最常見的版本設定案例 (例如新增資料成員)，也無法以與指定結構描述完全整合的方式來實作。 較新版的資料合約 (例如具有新的資料成員) 不會使用舊的結構描述來驗證。  
   
- 然而，有許多案例並不需要嚴格的結構描述相容性。 許多 Web 服務平台 (包括 [!INCLUDE[indigo2](../../../includes/indigo2-md.md)] 和使用 ASP.NET 建立的 XML Web Service) 都預設為不執行結構描述驗證，因此可容許結構描述未描述的額外項目。 當使用此類平台時，許多版本設定案例都更容易實作。  
+ 然而，有許多案例並不需要嚴格的結構描述相容性。 許多 Web 服務平台包括使用 ASP.NET 建立的 WCF 和 XML Web services 請勿執行預設結構描述驗證，因此可容許結構描述未描述的額外項目。 當使用此類平台時，許多版本設定案例都更容易實作。  
   
  因此，有兩組資料合約版本設定指導方針：一組適用於嚴格結構描述驗證很重要的案例，另一組適用於不重要的案例。  
   
@@ -36,7 +36,7 @@ ms.lasthandoff: 05/04/2018
   
  如需詳細資訊，請參閱 < 最佳作法：[服務版本控制](../../../docs/framework/wcf/service-versioning.md)。  
   
- 雖然有時候，您必須為應用程式傳送的訊息，保證具有嚴格結構描述相容性，但不能依賴傳入訊息來達到嚴格的結構描述相容性。 此案例具有一項危險性，就是傳入訊息可能會包含一些無關的資料。 這些無關值會由 [!INCLUDE[indigo2](../../../includes/indigo2-md.md)] 儲存及傳回，因此造成傳送結構描述無效的訊息。 如果要避免這個問題，應關閉往返功能。 執行這項作業的方法有兩種。  
+ 雖然有時候，您必須為應用程式傳送的訊息，保證具有嚴格結構描述相容性，但不能依賴傳入訊息來達到嚴格的結構描述相容性。 此案例具有一項危險性，就是傳入訊息可能會包含一些無關的資料。 這些無關值會儲存並傳回由 WCF 因此造成傳送訊息的結構描述無效。 如果要避免這個問題，應關閉往返功能。 執行這項作業的方法有兩種。  
   
 -   請勿在您任何的型別上實作 <xref:System.Runtime.Serialization.IExtensibleDataObject> 介面。  
   

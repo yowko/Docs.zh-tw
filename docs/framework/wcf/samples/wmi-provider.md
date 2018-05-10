@@ -2,18 +2,18 @@
 title: WMI 提供者
 ms.date: 03/30/2017
 ms.assetid: 462f0db3-f4a4-4a4b-ac26-41fc25c670a4
-ms.openlocfilehash: 202923ab1d09b0ce836dbfce7360dd22a479a900
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
-ms.translationtype: HT
+ms.openlocfilehash: d135466c402fa21b6a1b11f208ca900f58748bdb
+ms.sourcegitcommit: 15109844229ade1c6449f48f3834db1b26907824
+ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/04/2018
+ms.lasthandoff: 05/07/2018
 ---
 # <a name="wmi-provider"></a>WMI 提供者
-這個範例會示範如何在執行階段的 Windows Communication Foundation (WCF) 服務收集資料，請使用內建的 Windows Management Instrumentation (WMI) 提供者[!INCLUDE[indigo2](../../../../includes/indigo2-md.md)]。 此外，這個範例還會示範如何將使用者定義的 WMI 物件新增至服務。 此範例會啟動的 WMI 提供者[入門](../../../../docs/framework/wcf/samples/getting-started-sample.md)並示範如何收集資料，從`ICalculator`服務在執行階段。  
+這個範例示範如何在執行階段的 Windows Communication Foundation (WCF) 服務收集資料，請使用 WCF 內建的 Windows Management Instrumentation (WMI) 提供者。 此外，這個範例還會示範如何將使用者定義的 WMI 物件新增至服務。 此範例會啟動的 WMI 提供者[入門](../../../../docs/framework/wcf/samples/getting-started-sample.md)並示範如何收集資料，從`ICalculator`服務在執行階段。  
   
  WMI 是 Microsoft 對「Web 架構企業管理」(Web-Based Enterprise Management，WBEM) 標準的實作。 如需有關 WMI SDK 的詳細資訊，請參閱[Windows Management Instrumentation](https://msdn.microsoft.com/library/aa394582.aspx)。 WBEM 是一套業界標準，說明應用程式如何將管理測試設備公開至外部管理工具。  
   
- [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] 會實作 WMI 提供者，這是可透過 WBEM 相容介面，在執行階段公開測試設備的元件。 管理工具可以在執行階段，透過介面連接到服務。 [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] 會公開服務的屬性，例如位址、繫結、行為和接聽項。  
+ WCF 實作 WMI 提供者公開測試設備在執行階段透過 WBEM 相容介面的元件。 管理工具可以在執行階段，透過介面連接到服務。 WCF 會公開服務，例如位址、 繫結、 行為和接聽程式的屬性。  
   
  內建 WMI 提供者可以在應用程式的組態檔中啟動。 這透過完成`wmiProviderEnabled`屬性[\<診斷 >](../../../../docs/framework/configure-apps/file-schema/wcf/diagnostics.md)中[ \<system.serviceModel >](../../../../docs/framework/configure-apps/file-schema/wcf/system-servicemodel.md)區段，如下列範例所示組態：  
   
@@ -35,7 +35,7 @@ ms.lasthandoff: 05/04/2018
   
  這個範例會使用兩個 Java 指令碼：一個是用來列舉電腦上執行的服務及其部分屬性，而第二個則是用來檢視使用者定義的 WMI 資料。 指令碼會開啟 WMI 提供者的連線、剖析資料，以及顯示收集到的資料。  
   
- 請啟動範例以建立 [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] 服務的執行中執行個體。 在服務執行的同時，請於命令提示字元中使用下列命令來執行各個 Java 指令碼：  
+ 啟動範例以建立 WCF 服務的執行個體。 在服務執行的同時，請於命令提示字元中使用下列命令來執行各個 Java 指令碼：  
   
 ```  
 cscript EnumerateServices.js  
@@ -116,7 +116,7 @@ cscript EnumerateCustomObjects.js
   
  這項輸出顯示電腦上有一個服務在執行。 服務會公開一個實作 `ICalculator` 合約的端點。 端點所實作之行為和繫結的設定會以訊息堆疊個別項目的總和列出。  
   
- WMI 不限於只是公開 [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] 基礎結構的管理測試設備。 應用程式也可以透過同樣的機制公開自己網域的特定資料項目。 WMI 是適用於檢查並控制 Web 服務的統一機制。  
+ WMI 不限於公開 WCF 基礎結構的管理測試設備。 應用程式也可以透過同樣的機制公開自己網域的特定資料項目。 WMI 是適用於檢查並控制 Web 服務的統一機制。  
   
 #### <a name="to-set-up-build-and-run-the-sample"></a>若要安裝、建置及執行範例  
   
@@ -129,7 +129,7 @@ cscript EnumerateCustomObjects.js
 4.  若要在單一或跨電腦組態中執行範例時，請依照中的指示[執行 Windows Communication Foundation 範例](../../../../docs/framework/wcf/samples/running-the-samples.md)。  
   
     > [!NOTE]
-    >  如果是在安裝 ASP.NET 之後安裝 [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)]，您可能需要執行 "%WINDIR%\ Microsoft.Net\Framework\v3.0\Windows Communication Foundation\servicemodelreg.exe " -r -x，以授與 ASPNET 帳戶發行 WMI 物件的權限。  
+    >  如果您在安裝 ASP.NET 之後安裝 WCF，您可能需要執行 「 %WINDIR%\Microsoft.Net\Framework\v3.0\Windows Communication Foundation\servicemodelreg.exe"-r-x 提供 ASPNET 帳戶發行 WMI 物件權限。  
   
 5.  請使用命令 `cscript EnumerateServices.js` 或 `cscript EnumerateCustomObjects.js`，檢視由範例透過 WMI 呈現的資料。  
   

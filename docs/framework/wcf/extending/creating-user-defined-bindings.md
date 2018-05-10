@@ -4,11 +4,11 @@ ms.date: 03/30/2017
 helpviewer_keywords:
 - user-defined bindings [WCF]
 ms.assetid: c4960675-d701-4bc9-b400-36a752fdd08b
-ms.openlocfilehash: 82fe3baada73b89291311a891069c6ee3f19cf20
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
-ms.translationtype: HT
+ms.openlocfilehash: c9d37163770f2fd192a6fd2a03878b28f0237646
+ms.sourcegitcommit: 15109844229ade1c6449f48f3834db1b26907824
+ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/04/2018
+ms.lasthandoff: 05/07/2018
 ---
 # <a name="creating-user-defined-bindings"></a>建立使用者定義繫結
 您有幾種方式可以建立系統不提供的繫結：  
@@ -26,9 +26,9 @@ ms.lasthandoff: 05/04/2018
   
  通訊協定繫結項目 – 這些項目代表會處理訊息的較高階處理步驟。 由這些繫結項目所建立的通道與接聽項，可以新增、移除，或是修改訊息內容。 特定繫結可能包含任意數量的通訊協定繫結項目，而這些項目每個都繼承自 <xref:System.ServiceModel.Channels.BindingElement>。 Windows Communication Foundation (WCF) 包含數個通訊協定的繫結項目，包括<xref:System.ServiceModel.Channels.ReliableSessionBindingElement>和<xref:System.ServiceModel.Channels.SymmetricSecurityBindingElement>。  
   
- 編碼繫結程序項目 – 這些項目代表訊息與準備好在網路上進行傳輸的編碼之間的轉換。 一般的 [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] 繫結剛好包含一個編碼繫結項目。 編碼繫結項目範例包含 <xref:System.ServiceModel.Channels.MtomMessageEncodingBindingElement>、<xref:System.ServiceModel.Channels.BinaryMessageEncodingBindingElement>，和 <xref:System.ServiceModel.Channels.TextMessageEncodingBindingElement>。 如果某個繫結未指定編碼繫結項目，則會使用預設編碼。 當傳輸為 HTTP 和二進位格式，預設為文字。  
+ 編碼繫結程序項目 – 這些項目代表訊息與準備好在網路上進行傳輸的編碼之間的轉換。 典型的 WCF 繫結包含一個編碼繫結項目。 編碼繫結項目範例包含 <xref:System.ServiceModel.Channels.MtomMessageEncodingBindingElement>、<xref:System.ServiceModel.Channels.BinaryMessageEncodingBindingElement>，和 <xref:System.ServiceModel.Channels.TextMessageEncodingBindingElement>。 如果某個繫結未指定編碼繫結項目，則會使用預設編碼。 當傳輸為 HTTP 和二進位格式，預設為文字。  
   
- 傳輸繫結項目 – 這些項目代表傳輸通訊協定上編碼訊息的傳輸。 一般的 [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] 繫結剛好包含一個傳輸繫結項目 (繼承自 <xref:System.ServiceModel.Channels.TransportBindingElement>)。 傳輸繫結項目範例包含 <xref:System.ServiceModel.Channels.TcpTransportBindingElement>、<xref:System.ServiceModel.Channels.HttpTransportBindingElement> 和 <xref:System.ServiceModel.Channels.NamedPipeTransportBindingElement>。  
+ 傳輸繫結項目 – 這些項目代表傳輸通訊協定上編碼訊息的傳輸。 典型的 WCF 繫結包含一個傳輸繫結項目，以繼承自<xref:System.ServiceModel.Channels.TransportBindingElement>。 傳輸繫結項目範例包含 <xref:System.ServiceModel.Channels.TcpTransportBindingElement>、<xref:System.ServiceModel.Channels.HttpTransportBindingElement> 和 <xref:System.ServiceModel.Channels.NamedPipeTransportBindingElement>。  
   
  建立新繫結時，新增的繫結項目順序非常重要。 請務必遵守下列順序加入繫結項目：  
   
@@ -39,12 +39,12 @@ ms.lasthandoff: 05/04/2018
 |安全性|<xref:System.ServiceModel.Channels.SecurityBindingElement?displayProperty=nameWithType>|否|  
 |複合雙工|<xref:System.ServiceModel.Channels.CompositeDuplexBindingElement?displayProperty=nameWithType>|否|  
 |編碼|文字、二進位、MTOM、自訂|是*|  
-|Transport|TCP、具名管道、HTTP、HTTPS、MSMQ、自訂|是|  
+|Transport|TCP、具名管道、HTTP、HTTPS、MSMQ、自訂|[是]|  
   
- *因為每一個繫結都需要編碼方式，所以未指定編碼方式時，[!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] 就會為您新增預設編碼方式。 預設為 Text/XML (適用於 HTTP 和 HTTPS 傳輸) 和 Binary (適用於其他傳輸)。  
+ * 因為如果未指定的編碼方式，都需要每一個繫結的編碼方式，WCF 會加入您的預設編碼方式。 預設為 Text/XML (適用於 HTTP 和 HTTPS 傳輸) 和 Binary (適用於其他傳輸)。  
   
 ## <a name="creating-a-new-binding-element"></a>建立新的繫結項目  
- 除了衍生自 <xref:System.ServiceModel.Channels.BindingElement> (由 [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] 提供) 的型別之外，您還可以建立自己的繫結項目。 這樣一來，您就可以自訂繫結堆疊的建立方式和內含的元件，並使用堆疊中其他系統提供型別共同組成自己的 <xref:System.ServiceModel.Channels.BindingElement>。  
+ 除了衍生自型別<xref:System.ServiceModel.Channels.BindingElement>所提供的 WCF 中，您可以建立自己的繫結項目。 這樣一來，您就可以自訂繫結堆疊的建立方式和內含的元件，並使用堆疊中其他系統提供型別共同組成自己的 <xref:System.ServiceModel.Channels.BindingElement>。  
   
  例如，如果您實作了可將訊息記錄至資料庫的 `LoggingBindingElement`，則您必須將其放置到通道堆疊中的傳輸通道上層。 在此情況中，應用程式會建立由 `LoggingBindingElement` 和 `TcpTransportBindingElement` 組成的自訂繫結，如下列範例所示。  
   
@@ -64,7 +64,7 @@ Binding customBinding = new CustomBinding(
   
  使用者定義的繫結必須至少實作 <xref:System.ServiceModel.Channels.Binding.CreateBindingElements%2A> 方法和 <xref:System.ServiceModel.Channels.Binding.Scheme%2A> 屬性。  
   
- <xref:System.ServiceModel.Channels.Binding.CreateBindingElements%2A> 方法會傳回新的 <xref:System.ServiceModel.Channels.BindingElementCollection>，其中包含繫結的繫結項目。 經過排序的集合應該會先包含通訊協定繫結項目，而後包含編碼繫結項目，最後才是包含傳輸繫結項目。 當使用[!INCLUDE[indigo2](../../../../includes/indigo2-md.md)]系統提供的繫結項目，您必須遵循排序規則中指定的繫結項目[自訂繫結](../../../../docs/framework/wcf/extending/custom-bindings.md)。 此集合一律不得參考使用者定義的繫結類別所參考的物件；如此一來，繫結作者必須在每次呼叫 `Clone()` 時，傳回 <xref:System.ServiceModel.Channels.BindingElementCollection> 的 <xref:System.ServiceModel.Channels.Binding.CreateBindingElements%2A>。  
+ <xref:System.ServiceModel.Channels.Binding.CreateBindingElements%2A> 方法會傳回新的 <xref:System.ServiceModel.Channels.BindingElementCollection>，其中包含繫結的繫結項目。 經過排序的集合應該會先包含通訊協定繫結項目，而後包含編碼繫結項目，最後才是包含傳輸繫結項目。 當使用 WCF 系統提供繫結項目，您必須遵循排序規則中指定的繫結項目[自訂繫結](../../../../docs/framework/wcf/extending/custom-bindings.md)。 此集合一律不得參考使用者定義的繫結類別所參考的物件；如此一來，繫結作者必須在每次呼叫 `Clone()` 時，傳回 <xref:System.ServiceModel.Channels.BindingElementCollection> 的 <xref:System.ServiceModel.Channels.Binding.CreateBindingElements%2A>。  
   
  <xref:System.ServiceModel.Channels.Binding.Scheme%2A> 屬性代表繫結上正在使用的傳輸通訊協定的 URI 配置。 例如， *WSHttpBinding*和*NetTcpBinding*從其各自傳回"http"和"net.tcp"<xref:System.ServiceModel.Channels.Binding.Scheme%2A>屬性。  
   

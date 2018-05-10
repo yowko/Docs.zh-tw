@@ -2,19 +2,19 @@
 title: WCF 服務發行
 ms.date: 03/30/2017
 ms.assetid: c806b253-cd47-4b96-b831-e73cbf08808f
-ms.openlocfilehash: 9f76ab11e9697fc5af5c507d4dc9d944c433c918
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
-ms.translationtype: HT
+ms.openlocfilehash: 258c7e65b69648477e58880f35b100a9378dc9c0
+ms.sourcegitcommit: 15109844229ade1c6449f48f3834db1b26907824
+ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/04/2018
+ms.lasthandoff: 05/07/2018
 ---
 # <a name="wcf-service-publishing"></a>WCF 服務發行
-Windows Communication Foundation (WCF) 服務發行可協助您從所提供的早期開發環境進入[!INCLUDE[indigo2](../../../includes/indigo2-md.md)]服務主機和[!INCLUDE[indigo2](../../../includes/indigo2-md.md)]實際部署到生產環境應用程式的測試用戶端環境進行測試。 在認可最後開發計畫之前，您可以使用 Windows Communication Foundation (WCF) 服務的發行可讓您確認您[!INCLUDE[indigo2](../../../includes/indigo2-md.md)]服務正確執行，而且已準備好可以發佈。 您也可以選擇將 [!INCLUDE[indigo2](../../../includes/indigo2-md.md)] 服務程式庫部署到各種不同的目標位置進行測試。  
+Windows Communication Foundation (WCF) 服務的發行可協助您從實際部署至生產環境進行測試應用程式的 WCF 服務主機和 WCF 測試用戶端提供的早期開發環境的進度。 在認可最後開發計畫之前，您可以使用 Windows Communication Foundation (WCF) 服務發行確認您的 WCF 服務正確執行，而且已準備好可以發佈。 您也可以選擇將您的 WCF 服務程式庫部署到不同的目標位置進行測試。  
   
 ## <a name="supported-services-and-target-locations"></a>支援的服務和目標位置  
- [!INCLUDE[indigo2](../../../includes/indigo2-md.md)] 服務發行支援發行從 [!INCLUDE[indigo2](../../../includes/indigo2-md.md)] 服務程式庫範本集及其對應的項目範本建立的 [!INCLUDE[indigo2](../../../includes/indigo2-md.md)] 服務，這些範本包括如下：  
+ WCF 服務發行支援發佈的 WCF 服務所建立的一組 WCF 服務程式庫範本和其對應的項目範本，其中包括下列各項：  
   
--   [!INCLUDE[indigo2](../../../includes/indigo2-md.md)] 服務程式庫範本，包含項目範本。  
+-   WCF 服務程式庫範本，包含項目範本。  
   
 -   新聞訂閱服務程式庫。  
   
@@ -43,31 +43,31 @@ Windows Communication Foundation (WCF) 服務發行可協助您從所提供的�
   
  您可以使用**發行**指定是否您想要複製的組件、 組態和目標位置，專案中定義之所有服務的.svc 檔案，並覆寫現有目的地檔案。  
   
- 如果您選擇將應用程式部署至本機 IIS，可能會遇到有關 IIS 安裝程式的錯誤。 請確定 IIS 已正確安裝。 您可以輸入"超連結"http://localhost" http://localhost」 在瀏覽器，然後檢查是否 IIS 預設頁面會顯示。  在某些情況下，IIS 中註冊不當的 ASP.NET 或 [!INCLUDE[indigo2](../../../includes/indigo2-md.md)] 可能也會導致這些問題。 您可以開啟 Visual Studio 命令提示字元並執行命令"aspnet_regiis.exe-ir"來修正 ASP.NET 註冊問題，或執行"ServiceModelReg.exe – ia"命令來修正 WCF 註冊問題。  
+ 如果您選擇將應用程式部署至本機 IIS，可能會遇到有關 IIS 安裝程式的錯誤。 請確定 IIS 已正確安裝。 您可以輸入"超連結"http://localhost" http://localhost」 在瀏覽器，然後檢查是否 IIS 預設頁面會顯示。  在某些情況下，問題可能也是 ASP.NET 或 WCF IIS 中註冊不當所造成。 您可以開啟 Visual Studio 命令提示字元並執行命令"aspnet_regiis.exe-ir"來修正 ASP.NET 註冊問題，或執行"ServiceModelReg.exe – ia"命令來修正 WCF 註冊問題。  
   
 ## <a name="files-generated-for-publishing"></a>針對發行產生的檔案  
- 此工具會先產生組件檔、Web.config 檔和 .svc 檔等檔案，才能使 [!INCLUDE[indigo2](../../../includes/indigo2-md.md)] 服務程式庫成為 Web 裝載。 所有檔案都會複製到目標位置。 接著便會發行服務。  
+ WCF 服務程式庫可以在 Web 裝載之前，工具會產生下列檔案： 組件檔、 Web.config 檔和.svc 檔案。 所有檔案都會複製到目標位置。 接著便會發行服務。  
   
 ### <a name="assembly-files"></a>組件檔  
- 當您使用這個工具發行 [!INCLUDE[indigo2](../../../includes/indigo2-md.md)] 服務時，服務會先自動建置，而組件檔會在建置之後於服務專案中產生。  
+ 當您發佈的 WCF 服務時使用這項工具，服務會先自動建置組件檔會產生和服務專案建置之後。  
   
 ### <a name="svc-file"></a>.SVC 檔案  
- 發行作業會為每個 [!INCLUDE[indigo2](../../../includes/indigo2-md.md)] 服務產生 *.svc 檔 (無論檔案是否存在)，確保版本有效。 svc 檔有兩種不同的版本：一種用於 [!INCLUDE[indigo2](../../../includes/indigo2-md.md)] 服務程式庫和新聞訂閱服務程式庫，另一種用於循序和狀態機器工作流程服務程式庫。 產生\*.svc 檔案會複製到目標位置中的根資料夾。  
+ 發行作業會產生 *.svc 檔案的每個 WCF 服務，檔案是否存在，確保版本有效。 有兩種不同的 svc 檔案： 一個用於 WCF 服務程式庫和新聞訂閱服務程式庫和另一種用於循序和狀態機器工作流程服務程式庫。 產生\*.svc 檔案會複製到目標位置中的根資料夾。  
   
 ### <a name="webconfig-file"></a>Web.config 檔  
  每次服務專案發行到特定目標位置時，都會建立 Web.config 檔。  
   
- 產生的 Web.config 檔包括可用於 Web 裝載的 Web 區段，以及 [!INCLUDE[indigo2](../../../includes/indigo2-md.md)] 服務程式庫的 App.config 內容，其中包含下列變更：  
+ 產生的 Web.config 檔案包含 Web 區段，適用於 Web 主控及的 App.config 內容，針對 WCF 服務程式庫，以下列變更：  
   
 -   已排除基底位址 (Base Address)。  
   
 -   已排除 `<diagnostics>` 項目中的設定，以保留目標平台的追蹤設定。  
   
 ## <a name="publishing-wcf-services-with-non-http-bindings-to-iis"></a>將包含非 HTTP 繫結的 WCF 服務發行至 IIS  
- 如果您使用的是 IIS7.0 或更新版本，就可以將包含非 HTTP 繫結的 [!INCLUDE[indigo2](../../../includes/indigo2-md.md)] 服務發行至 IIS。 不過，您必須進行一些預先組態設定。 如需詳細資訊，請參閱主題[Windows Process Activation Service 中裝載](../../../docs/framework/wcf/feature-details/hosting-in-windows-process-activation-service.md)。  
+ 如果您使用的是 IIS7.0 或更新版本中，您可以發佈 WCF 服務使用非 HTTP 繫結到 IIS。 不過，您必須進行一些預先組態設定。 如需詳細資訊，請參閱主題[Windows Process Activation Service 中裝載](../../../docs/framework/wcf/feature-details/hosting-in-windows-process-activation-service.md)。  
   
 ## <a name="security"></a>安全性  
- 發行到本機 IIS 時需要具有系統管理員權限，因為 IIS 需要使用 Administrator 帳戶執行。 如果由不具系統管理員權限的使用者開啟 [!INCLUDE[indigo2](../../../includes/indigo2-md.md)] 服務發行，IIS 就不能做為目標位置使用。 發行至檔案系統或 FTP 站台的運作方式沒有系統管理員權限。  
+ 發行到本機 IIS 時需要具有系統管理員權限，因為 IIS 需要使用 Administrator 帳戶執行。 如果使用者沒有系統管理員權限開啟 WCF 服務發行，IIS 就無法使用做為目標位置。 發行至檔案系統或 FTP 站台的運作方式沒有系統管理員權限。  
   
 ## <a name="see-also"></a>另請參閱  
  [WCF Visual Studio 範本](../../../docs/framework/wcf/wcf-vs-templates.md)  

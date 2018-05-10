@@ -4,14 +4,14 @@ ms.date: 03/30/2017
 ms.assetid: 921edc41-e91b-40f9-bde9-b6148b633e61
 author: BrucePerlerMS
 manager: mbaldwin
-ms.openlocfilehash: b8faa7a3f92be25b1c1ae700c92e5d2a0828a5a5
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
-ms.translationtype: HT
+ms.openlocfilehash: 65523fcc1d08bd48a432e6cf599dfcb73ade8747
+ms.sourcegitcommit: 15109844229ade1c6449f48f3834db1b26907824
+ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/04/2018
+ms.lasthandoff: 05/07/2018
 ---
 # <a name="reliable-secure-profile"></a>可靠的安全設定檔
-這個範例會示範如何撰寫[!INCLUDE[indigo2](../../../../includes/indigo2-md.md)]和[可靠的安全設定檔](http://go.microsoft.com/fwlink/?LinkId=178140)(RSP)。 這個範例會示範實作[建立連線](http://go.microsoft.com/fwlink/?LinkId=178141)通道可以在與可信賴傳訊，並選擇性地撰寫安全的通道，以建立可靠的安全繫結根據 RSP 規格。  
+這個範例會示範如何撰寫 WCF 和[可靠的安全設定檔](http://go.microsoft.com/fwlink/?LinkId=178140)(RSP)。 這個範例會示範實作[建立連線](http://go.microsoft.com/fwlink/?LinkId=178141)通道可以在與可信賴傳訊，並選擇性地撰寫安全的通道，以建立可靠的安全繫結根據 RSP 規格。  
   
 > [!IMPORTANT]
 >  這些範例可能已安裝在您的電腦上。 請先檢查下列 (預設) 目錄，然後再繼續。  

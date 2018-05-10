@@ -4,11 +4,11 @@ ms.date: 03/30/2017
 helpviewer_keywords:
 - binding configuration [WCF]
 ms.assetid: 99a85fd8-f7eb-4a84-a93e-7721b37d415c
-ms.openlocfilehash: 8fcb2fbf49984ce2b6aaf1f112575d05a3d7d038
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
-ms.translationtype: HT
+ms.openlocfilehash: b91c8ff5a78ef2b2b2db5ea26ae7a1733a97ffd0
+ms.sourcegitcommit: 15109844229ade1c6449f48f3834db1b26907824
+ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/04/2018
+ms.lasthandoff: 05/07/2018
 ---
 # <a name="configuring-bindings-for-windows-communication-foundation-services"></a>設定 Windows Communication Foundation 服務的繫結
 建立應用程式時，您經常會需要在應用程式部署後，延後系統管理員的決定。 例如，我們很多時都無法預知服務位址，或統一資源識別元 (URI)。 這時候，為位址進行硬式編碼並不是理想的作法，較好的作法是讓系統管理員在建立服務後再處理。 這樣的靈活性是透過組態達成。  
@@ -39,9 +39,9 @@ ms.lasthandoff: 05/04/2018
   
  例如，指定[ \<basicHttpBinding >](../../../docs/framework/configure-apps/file-schema/wcf/basichttpbinding.md)指出端點使用 HTTP 做為傳輸的項目。 這是在執行階段，當使用此端點的服務開啟時，用來連接端點。  
   
- 有兩類的繫結：預先定義和自訂。 預先定義的繫結包含有用的項目組合，在一般狀況下使用。 一份預先定義繫結類型，[!INCLUDE[indigo2](../../../includes/indigo2-md.md)]提供，請參閱[之繫結](../../../docs/framework/wcf/system-provided-bindings.md)。 若無預先定義的繫結程序集合擁有服務應用程式所需的正確功能組合，您可以建構自訂繫結程序來滿足應用程式的要求。 如需有關自訂繫結的詳細資訊，請參閱[ \<customBinding >](../../../docs/framework/configure-apps/file-schema/wcf/custombinding.md)。  
+ 有兩類的繫結：預先定義和自訂。 預先定義的繫結包含有用的項目組合，在一般狀況下使用。 如需 WCF 所提供的預先定義繫結類型的清單，請參閱[之繫結](../../../docs/framework/wcf/system-provided-bindings.md)。 若無預先定義的繫結程序集合擁有服務應用程式所需的正確功能組合，您可以建構自訂繫結程序來滿足應用程式的要求。 如需有關自訂繫結的詳細資訊，請參閱[ \<customBinding >](../../../docs/framework/configure-apps/file-schema/wcf/custombinding.md)。  
   
- 以下四個範例說明用來設定 [!INCLUDE[indigo2](../../../includes/indigo2-md.md)] 服務，最常見的繫結組態。  
+ 下列四個範例說明用來設定 WCF 服務的最常見的繫結組態。  
   
 #### <a name="specifying-an-endpoint-to-use-a-binding-type"></a>指定使用繫結型別的端點  
  第一個範例說明如何指定以位址、合約及繫結組態的端點。  

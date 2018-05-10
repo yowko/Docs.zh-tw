@@ -2,11 +2,11 @@
 title: 位址標頭
 ms.date: 03/30/2017
 ms.assetid: b0c94d4a-3bde-4b4d-bb6d-9f12bc3a6940
-ms.openlocfilehash: c0e3807aadc18c7737f3a5e354135721cbfccf3e
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
-ms.translationtype: HT
+ms.openlocfilehash: 276649c17a04822eb27eb4e3ed9cbe711b384edc
+ms.sourcegitcommit: 15109844229ade1c6449f48f3834db1b26907824
+ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/04/2018
+ms.lasthandoff: 05/07/2018
 ---
 # <a name="address-headers"></a>位址標頭
 位址標頭範例會示範用戶端如何參考參數傳遞給使用 Windows Communication Foundation (WCF) 服務。  
@@ -14,9 +14,9 @@ ms.lasthandoff: 05/04/2018
 > [!NOTE]
 >  此範例的安裝程序與建置指示位於本主題的結尾。  
   
- WS-Addressing 規格會將端點參考的概念定義成針對特定 Web 服務端點的定址方式。 在 [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] 中，端點參考會使用 `EndpointAddress` 類別模型化，而 `EndpointAddress` 是 `ServiceEndpoint` 類別之 [位址] 欄位的類型。  
+ WS-Addressing 規格會將端點參考的概念定義成針對特定 Web 服務端點的定址方式。 在 WCF 中，端點參考使用建立模型`EndpointAddress`類別-`EndpointAddress`的 [位址] 欄位的類型`ServiceEndpoint`類別。  
   
- 端點參考模型的一部分，是每個參考可以包含一些會新增額外識別資訊的參考參數。 在 [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] 中，這些參考參數會模型化為 `AddressHeader` 類別的執行個體。  
+ 端點參考模型的一部分，是每個參考可以包含一些會新增額外識別資訊的參考參數。 在 WCF 中，這些參考參數會模型化為的執行個體`AddressHeader`類別。  
   
  在這個範例中，用戶端會新增用戶端端點之 `EndpointAddress` 的參考參數。 服務會尋找這個參考參數，然後在其 "Hello" 服務作業的邏輯中使用這個參數的值。  
   

@@ -2,11 +2,11 @@
 title: 虛擬目錄安裝指示
 ms.date: 03/30/2017
 ms.assetid: 3c62cab5-81a4-48b6-ac8c-9ce33a85a157
-ms.openlocfilehash: a6fc8309563e78f919fe1e2009c1f46801c32913
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
-ms.translationtype: HT
+ms.openlocfilehash: 3ff578b69590071ef2135e777b3105e7c226563e
+ms.sourcegitcommit: 15109844229ade1c6449f48f3834db1b26907824
+ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/04/2018
+ms.lasthandoff: 05/07/2018
 ---
 # <a name="virtual-directory-setup-instructions"></a>虛擬目錄安裝指示
 Windows Communication Foundation (WCF) 範例所共用一個通用的虛擬目錄，名為 servicemodelsamples 的會對應到 %SystemDrive%\inetpub\wwwroot\servicemodelsamples 資料夾。  
@@ -35,12 +35,12 @@ Windows Communication Foundation (WCF) 範例所共用一個通用的虛擬目�
 7.  按一下 [確定 **Deploying Office Solutions**]。 隨即為 WCF 範例建立 Web 應用程式。  
   
     > [!NOTE]
-    >  這個工作只需執行一次，因為所有的 [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] 範例都使用相同的 servicemodelsamples Web 應用程式。  
+    >  這項工作必須執行一次，因為所有的 WCF 範例都使用相同的 servicemodelsamples Web 應用程式。  
   
     > [!NOTE]
     >  就此文件的用途而言，`virtual directory`一詞是 `Web application`的同義詞。  
   
-     除了建立虛擬目錄外，您也必須設定其屬性，以啟用要執行的 [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] 服務。 如需詳細資訊，請參閱下方。  
+     除了建立虛擬目錄，您也必須設定其屬性，以啟用要執行 WCF 服務。 如需詳細資訊，請參閱下方。  
   
 #### <a name="to-create-a-virtual-directory-in-iis-51-or-60"></a>在 IIS 5.1 或 6.0 中建立虛擬目錄  
   
@@ -52,7 +52,7 @@ Windows Communication Foundation (WCF) 範例所共用一個通用的虛擬目�
   
 4.  在精靈中，輸入`servicemodelsamples`做為您建立的虛擬目錄的別名。  
   
-5.  設定到 %SystemDrive%\inetpub\wwwroot\servicemodelsamples 的路徑。 在建置時，大部分的 [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] 範例會將服務可執行檔複製到這個位置。  
+5.  設定到 %SystemDrive%\inetpub\wwwroot\servicemodelsamples 的路徑。 建立時，大部分的 WCF 範例會將服務可執行檔複製到這個位置。  
   
 6.  按 [ **下一步**]。  
   
@@ -65,7 +65,7 @@ Windows Communication Foundation (WCF) 範例所共用一個通用的虛擬目�
 8.  按一下**下一步**，然後按一下 **完成**以完成精靈。  
   
     > [!NOTE]
-    >  這個工作只需執行一次，因為所有的 [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] 範例都使用相同的 servicemodelsamples 虛擬目錄。  
+    >  因為所有的 WCF 範例都使用相同的 servicemodelsamples 虛擬目錄，必須一次執行這項工作。  
   
 #### <a name="to-set-additional-virtual-directory-properties-in-iis-70-or-75"></a>若要設定其他的虛擬目錄內容，在 IIS 7.0 或 7.5  
   

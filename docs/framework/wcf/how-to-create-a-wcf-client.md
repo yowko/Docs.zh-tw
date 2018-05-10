@@ -5,22 +5,22 @@ helpviewer_keywords:
 - clients [WCF], running
 - WCF clients [WCF], running
 ms.assetid: a67884cc-1c4b-416b-8c96-5c954099f19f
-ms.openlocfilehash: 962f1255f3c759d623850678005eff138353cc80
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
-ms.translationtype: HT
+ms.openlocfilehash: d2932293536f875d8986d8d49842cddc196ced0f
+ms.sourcegitcommit: 15109844229ade1c6449f48f3834db1b26907824
+ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/04/2018
+ms.lasthandoff: 05/07/2018
 ---
 # <a name="how-to-create-a-windows-communication-foundation-client"></a>HOW TO：建立 Windows Communication Foundation 用戶端
 這是建立 Windows Communication Foundation (WCF) 應用程式所需的六個工作的第四個。 六個工作的概觀，請參閱[入門教學課程](../../../docs/framework/wcf/getting-started-tutorial.md)主題。  
   
- 本主題會說明如何從 [!INCLUDE[indigo2](../../../includes/indigo2-md.md)] 服務擷取中繼資料，以建立可以存取服務的 [!INCLUDE[indigo2](../../../includes/indigo2-md.md)] Proxy。 這個工作是使用 Visual Studio 提供的 [加入服務參考] 功能來完成。 這個工具會從服務的 MEX 端點取得中繼資料，並以您所選擇的語言 (預設為 C#) 產生用戶端 Proxy 的 Managed 原始程式碼檔。 除了建立用戶端 Proxy，此工具也會建立或更新用戶端的組態檔，讓用戶端應用程式在其中一個端點與服務連線。  
+ 本主題描述如何從 WCF 服務擷取中繼資料，並使用它來建立 WCF proxy 可以存取服務。 這個工作是使用 Visual Studio 提供的 [加入服務參考] 功能來完成。 這個工具會從服務的 MEX 端點取得中繼資料，並以您所選擇的語言 (預設為 C#) 產生用戶端 Proxy 的 Managed 原始程式碼檔。 除了建立用戶端 Proxy，此工具也會建立或更新用戶端的組態檔，讓用戶端應用程式在其中一個端點與服務連線。  
   
 > [!NOTE]
 >  您也可以使用[ServiceModel Metadata Utility Tool (Svcutil.exe)](../../../docs/framework/wcf/servicemodel-metadata-utility-tool-svcutil-exe.md)工具來產生 proxy 類別和組態，而不使用在 Visual Studio 內加入服務參考。  
   
 > [!WARNING]
->  從 [!INCLUDE[indigo2](../../../includes/indigo2-md.md)] 的類別庫專案中呼叫 [!INCLUDE[vs_current_long](../../../includes/vs-current-long-md.md)] 服務時，您可以使用 [加入服務參考] 功能來自動產生 Proxy 與相關聯的組態檔。  類別庫專案將不會使用組態檔。 您必須將所產生組態檔中的設定加入至將會呼叫類別庫之可執行檔的 app.config 檔案。  
+>  從 類別庫專案中呼叫 WCF 服務時[!INCLUDE[vs_current_long](../../../includes/vs-current-long-md.md)]您可以使用 [加入服務參考] 功能來自動產生 proxy 與相關聯的組態檔。  類別庫專案將不會使用組態檔。 您必須將所產生組態檔中的設定加入至將會呼叫類別庫之可執行檔的 app.config 檔案。  
   
  用戶端應用程式會使用產生的 Proxy 類別來建立與服務通訊的用戶端。 此程序所述[How to： 使用用戶端](../../../docs/framework/wcf/how-to-use-a-wcf-client.md)。  
   

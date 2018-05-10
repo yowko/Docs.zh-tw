@@ -2,14 +2,14 @@
 title: 傳輸：UDP
 ms.date: 03/30/2017
 ms.assetid: 738705de-ad3e-40e0-b363-90305bddb140
-ms.openlocfilehash: 51f445d7f53f70fa206c53835b107da68749e3c2
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
-ms.translationtype: HT
+ms.openlocfilehash: 4f69730831ec57efc782a95d7412496aa69a4afb
+ms.sourcegitcommit: 15109844229ade1c6449f48f3834db1b26907824
+ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/04/2018
+ms.lasthandoff: 05/07/2018
 ---
 # <a name="transport-udp"></a>傳輸：UDP
-UDP 傳輸範例示範如何實作 UDP 單點傳播與多點傳送做為自訂的 Windows Communication Foundation (WCF) 傳輸。 範例會使用通道架構並遵循 [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] 最佳做法，以說明在 [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] 中建立自訂傳輸的建議程序。 建立自訂傳輸的步驟如下：  
+UDP 傳輸範例示範如何實作 UDP 單點傳播與多點傳送做為自訂的 Windows Communication Foundation (WCF) 傳輸。 此範例描述，以建立自訂傳輸在 WCF 中，使用通道架構並遵循 WCF 最佳作法建議的程序。 建立自訂傳輸的步驟如下：  
   
 1.  決定哪些通道[訊息交換模式](#MessageExchangePatterns)（IOutputChannel、 IInputChannel、 IDuplexChannel、 IRequestChannel 或 IReplyChannel） ChannelFactory 和 channellistener 所支援。 然後決定是否要支援這些介面的工作階段變化。  
   
@@ -49,7 +49,7 @@ UDP 傳輸範例示範如何實作 UDP 單點傳播與多點傳送做為自訂�
 >  就 UDP 傳輸而言，唯一支援的 MEP 是「資料包」，因為 UDP 原本就是「射後不理」(Fire and Forget) 通訊協定。  
   
 ### <a name="the-icommunicationobject-and-the-wcf-object-lifecycle"></a>ICommunicationObject 和 WCF 物件生命週期  
- [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] 具有可用於管理物件生命週期的通用狀態機器，例如用於通訊的 <xref:System.ServiceModel.Channels.IChannel>、<xref:System.ServiceModel.Channels.IChannelFactory> 和 <xref:System.ServiceModel.Channels.IChannelListener>。 這些通訊物件可能呈現的狀態有五種。 這些狀態是由 <xref:System.ServiceModel.CommunicationState> 列舉表示，如下所述：  
+ WCF 可用於管理等物件的生命週期的通用狀態機器<xref:System.ServiceModel.Channels.IChannel>， <xref:System.ServiceModel.Channels.IChannelFactory>，和<xref:System.ServiceModel.Channels.IChannelListener>所使用的通訊。 這些通訊物件可能呈現的狀態有五種。 這些狀態是由 <xref:System.ServiceModel.CommunicationState> 列舉表示，如下所述：  
   
 -   Created：這是 <xref:System.ServiceModel.ICommunicationObject> 在初次具現化 (Instantiated) 時的狀態。 在這個狀態下不會發生任何輸入/輸出 (I/O)。  
   
@@ -67,7 +67,7 @@ UDP 傳輸範例示範如何實作 UDP 單點傳播與多點傳送做為自訂�
   
 <a name="ChannelAndChannelListener"></a>   
 ## <a name="channel-factory-and-channel-listener"></a>通道處理站和通道接聽項  
- 撰寫自訂傳輸的下一個步驟是，建立用戶端通道的 <xref:System.ServiceModel.Channels.IChannelFactory> 實作以及服務通道的 <xref:System.ServiceModel.Channels.IChannelListener> 實作。 通道層會使用建構通道所需的處理站模式。 [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] 會提供此處理序的基底類別協助程式   
+ 撰寫自訂傳輸的下一個步驟是，建立用戶端通道的 <xref:System.ServiceModel.Channels.IChannelFactory> 實作以及服務通道的 <xref:System.ServiceModel.Channels.IChannelListener> 實作。 通道層會使用建構通道所需的處理站模式。 WCF 有提供此程序的基底類別協助程式。  
   
 -   <xref:System.ServiceModel.Channels.CommunicationObject> 類別會實作 <xref:System.ServiceModel.ICommunicationObject>，並強制執行先前在步驟 2 中所述的狀態機器。 
 
@@ -256,7 +256,7 @@ AddWSAddressingAssertion(context, encodingBindingElement.MessageVersion.Addressi
   
 -   透過自訂繫結：自訂繫結允許使用者根據任意一組繫結項目，建立自己的繫結。  
   
--   使用系統提供的繫結，其中包含我們的繫結元素。 [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] 會提供一些系統定義的繫結，例如 `BasicHttpBinding`、`NetTcpBinding` 和 `WsHttpBinding`。 每個這個繫結都會與妥善定義的設定檔相關聯。  
+-   使用系統提供的繫結，其中包含我們的繫結元素。 WCF 提供數個系統定義繫結，例如`BasicHttpBinding`， `NetTcpBinding`，和`WsHttpBinding`。 每個這個繫結都會與妥善定義的設定檔相關聯。  
   
  範例會在衍生自 `SampleProfileUdpBinding` 的 <xref:System.ServiceModel.Channels.Binding> 中實作設定檔繫結。 `SampleProfileUdpBinding` 中最多包含四個繫結項目：`UdpTransportBindingElement`、`TextMessageEncodingBindingElement CompositeDuplexBindingElement` 和 `ReliableSessionBindingElement`。  
   

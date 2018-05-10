@@ -2,11 +2,11 @@
 title: 執行個體初始化
 ms.date: 03/30/2017
 ms.assetid: 154d049f-2140-4696-b494-c7e53f6775ef
-ms.openlocfilehash: 75b8d2a2696d5900fd7bffe42dbaf62b9f6ce694
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
-ms.translationtype: HT
+ms.openlocfilehash: ae01254760219f2b408ef9d9663c4158e2802be8
+ms.sourcegitcommit: 15109844229ade1c6449f48f3834db1b26907824
+ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/04/2018
+ms.lasthandoff: 05/07/2018
 ---
 # <a name="instancing-initialization"></a>執行個體初始化
 這個範例會延續[共用](../../../../docs/framework/wcf/samples/pooling.md)範例藉由定義介面， `IObjectControl`，其啟用及停用它的自訂初始化物件。 用戶端會叫用將物件傳回集區的方法，以及不將物件傳回集區的方法。  
@@ -15,12 +15,12 @@ ms.lasthandoff: 05/04/2018
 >  此範例的安裝程序與建置指示位於本主題的結尾。  
   
 ## <a name="extensibility-points"></a>擴充點  
- 建立 Windows Communication Foundation (WCF) 擴充功能的第一個步驟是決定要使用的擴充點。 在[!INCLUDE[indigo2](../../../../includes/indigo2-md.md)]，詞彙*EndpointDispatcher*指負責將傳入訊息轉換為使用者服務上的方法引動過程，並且將來自該方法傳回的值轉換執行階段元件外寄訊息。 [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] 服務會為每個端點建立 EndpointDispatcher。  
+ 建立 Windows Communication Foundation (WCF) 擴充功能的第一個步驟是決定要使用的擴充點。 在 WCF 中，詞彙*EndpointDispatcher*指負責將傳入訊息轉換為使用者服務上的方法引動過程，並且將來自該方法的傳回值轉換為傳出訊息的執行階段元件. WCF 服務建立的每個端點 EndpointDispatcher。  
   
  EndpointDispatcher 會使用 <xref:System.ServiceModel.Dispatcher.EndpointDispatcher> 類別，為端點範圍 (針對服務已接收或傳送的所有訊息) 提供擴充性。 這個類別可讓您自訂各種屬性，以控制 EndpointDispatcher 的行為。 此範例著重於 <xref:System.ServiceModel.Dispatcher.DispatchRuntime.InstanceProvider%2A> 屬性，這個屬性會指向提供服務類別之執行個體的物件。  
   
 ## <a name="iinstanceprovider"></a>IInstanceProvider  
- 在 [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] 中，EndpointDispatcher 藉由使用會實作 <xref:System.ServiceModel.Dispatcher.IInstanceProvider> 介面的執行個體提供者，來建立服務類別的執行個體。 這個介面只有兩個方法：  
+ 在 WCF 中，EndpointDispatcher 會建立服務類別的執行個體所使用的執行個體提供者實作<xref:System.ServiceModel.Dispatcher.IInstanceProvider>介面。 這個介面只有兩個方法：  
   
 -   <xref:System.ServiceModel.Dispatcher.IInstanceProvider.GetInstance%2A>：訊息送達時，發送器會呼叫 <xref:System.ServiceModel.Dispatcher.IInstanceProvider.GetInstance%2A> 方法來建立服務類別的執行個體，以便處理訊息。 呼叫此方法的頻率是由 <xref:System.ServiceModel.ServiceBehaviorAttribute.InstanceContextMode%2A> 屬性決定。 例如，如果 <xref:System.ServiceModel.ServiceBehaviorAttribute.InstanceContextMode%2A> 屬性設定為 <xref:System.ServiceModel.InstanceContextMode.PerCall?displayProperty=nameWithType>，則會建立服務類別的執行個體來處理送達的每個訊息，這表示只要訊息一送達就會呼叫 <xref:System.ServiceModel.Dispatcher.IInstanceProvider.GetInstance%2A>。  
   
@@ -153,7 +153,7 @@ if (activeObjectsCount == 0)
   
  這個範例會使用自訂屬性。 建構 <xref:System.ServiceModel.ServiceHost> 時，會檢查服務型別定義中使用的屬性，並將可用的行為加入至服務描述的行為集合。  
   
- <xref:System.ServiceModel.Description.IServiceBehavior>介面有三個方法： <xref:System.ServiceModel.Description.IServiceBehavior.Validate%2A> `,` <xref:System.ServiceModel.Description.IServiceBehavior.AddBindingParameters%2A> `,`和<xref:System.ServiceModel.Description.IServiceBehavior.ApplyDispatchBehavior%2A>。 在初始化 [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] 時，<xref:System.ServiceModel.ServiceHost> 會呼叫這些方法。 首先會呼叫 <xref:System.ServiceModel.Description.IServiceBehavior.Validate%2A?displayProperty=nameWithType>，這個方法允許檢查服務有無不一致之處。 接著會呼叫 <xref:System.ServiceModel.Description.IServiceBehavior.AddBindingParameters%2A?displayProperty=nameWithType>，這個方法只有在非常進階的狀況中才需要使用。 最後會呼叫 <xref:System.ServiceModel.Description.IServiceBehavior.ApplyDispatchBehavior%2A?displayProperty=nameWithType>，這個方法負責設定執行階段。 下列參數會傳遞至 <xref:System.ServiceModel.Description.IServiceBehavior.ApplyDispatchBehavior%2A?displayProperty=nameWithType>：  
+ <xref:System.ServiceModel.Description.IServiceBehavior>介面有三個方法： <xref:System.ServiceModel.Description.IServiceBehavior.Validate%2A> `,` <xref:System.ServiceModel.Description.IServiceBehavior.AddBindingParameters%2A> `,`和<xref:System.ServiceModel.Description.IServiceBehavior.ApplyDispatchBehavior%2A>。 WCF 會呼叫這些方法時<xref:System.ServiceModel.ServiceHost>正在初始化。 首先會呼叫 <xref:System.ServiceModel.Description.IServiceBehavior.Validate%2A?displayProperty=nameWithType>，這個方法允許檢查服務有無不一致之處。 接著會呼叫 <xref:System.ServiceModel.Description.IServiceBehavior.AddBindingParameters%2A?displayProperty=nameWithType>，這個方法只有在非常進階的狀況中才需要使用。 最後會呼叫 <xref:System.ServiceModel.Description.IServiceBehavior.ApplyDispatchBehavior%2A?displayProperty=nameWithType>，這個方法負責設定執行階段。 下列參數會傳遞至 <xref:System.ServiceModel.Description.IServiceBehavior.ApplyDispatchBehavior%2A?displayProperty=nameWithType>：  
   
 -   `Description`：這個參數提供整個服務的服務描述， 可以用來檢查有關服務端點、合約、繫結以及與服務相關聯之其他資料的描述資料。  
   
@@ -189,7 +189,7 @@ public void ApplyDispatchBehavior(ServiceDescription description, ServiceHostBas
   
  除了 <xref:System.ServiceModel.Description.IServiceBehavior> 實作之外，`ObjectPoolingAttribute` 類別還有數個可以使用屬性引數來自訂物件集區的成員。 這些成員包括 `MaxSize`、`MinSize`、`Enabled` 和 `CreationTimeout`，可用來比對 .NET Enterprise Services 提供的物件共用功能集。  
   
- 現在，使用新建立的自訂 [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] 屬性對服務實作加上附註，即可將物件共用行為加入至 `ObjectPooling` 服務。  
+ 將物件共用行為可以立即加入至 WCF 服務加上附註與新建立的自訂服務實作`ObjectPooling`屬性。  
   
 ```  
 [ObjectPooling(MaxSize=1024, MinSize=10, CreationTimeout=30000]      

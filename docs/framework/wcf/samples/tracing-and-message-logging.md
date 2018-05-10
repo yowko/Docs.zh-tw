@@ -4,11 +4,11 @@ ms.date: 03/30/2017
 helpviewer_keywords:
 - Tracing and logging
 ms.assetid: a4f39bfc-3c5e-4d51-a312-71c5c3ce0afd
-ms.openlocfilehash: 5f0cca66798a9d84b01c9fde1147c28f14a953db
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
-ms.translationtype: HT
+ms.openlocfilehash: 13d23c0f69c65dd3bd6b2714dd710eb7f97a1c07
+ms.sourcegitcommit: 15109844229ade1c6449f48f3834db1b26907824
+ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/04/2018
+ms.lasthandoff: 05/07/2018
 ---
 # <a name="tracing-and-message-logging"></a>追蹤和訊息記錄
 這個範例示範如何啟用追蹤和訊息記錄。 產生的追蹤和訊息記錄檔會使用檢視[服務追蹤檢視器工具 (SvcTraceViewer.exe)](../../../../docs/framework/wcf/service-trace-viewer-tool-svctraceviewer-exe.md)。 這個範例根據[入門](../../../../docs/framework/wcf/samples/getting-started-sample.md)。  
@@ -17,7 +17,7 @@ ms.lasthandoff: 05/04/2018
 >  此範例的安裝程序與建置指示位於本主題的結尾。  
   
 ## <a name="tracing"></a>追蹤  
- Windows Communication Foundation (WCF) 會使用定義中的追蹤機制<xref:System.Diagnostics>命名空間。 在這個追蹤模型中，應用程式實作的追蹤來源會產生追蹤資料。 每個來源都是以名稱來識別。 追蹤消費者會為他們要擷取資訊的追蹤來源建立追蹤接聽項。 若要接收追蹤資料，就必須建立追蹤來源的接聽項。 在 [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] 中，藉由設定服務模型追蹤來源 `switchValue`，將下列程式碼新增至服務或用戶端的組態檔，可以完成這項工作：  
+ Windows Communication Foundation (WCF) 會使用定義中的追蹤機制<xref:System.Diagnostics>命名空間。 在這個追蹤模型中，應用程式實作的追蹤來源會產生追蹤資料。 每個來源都是以名稱來識別。 追蹤消費者會為他們要擷取資訊的追蹤來源建立追蹤接聽項。 若要接收追蹤資料，就必須建立追蹤來源的接聽項。 在 WCF 中，這可藉由將下列程式碼加入至服務的伺服器或用戶端的組態檔中，藉由設定服務模型追蹤來源`switchValue`:  
   
 ```xml  
 <system.diagnostics>  
@@ -55,12 +55,12 @@ ms.lasthandoff: 05/04/2018
   
 -   透過傳輸和傳播將活動相互關聯。  
   
--   降低 [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] 追蹤的效能成本 (例如，記錄檔的磁碟空間成本)。  
+-   降低 （例如，記錄檔的磁碟空間成本） 的 WCF 追蹤的效能成本。  
   
  如需有關使用者定義的活動追蹤的詳細資訊，請參閱[擴充追蹤](../../../../docs/framework/wcf/samples/extending-tracing.md)範例。  
   
 ## <a name="message-logging"></a>訊息記錄  
- 任何 [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] 應用程式的用戶端和服務上都可以啟用訊息記錄。 若要啟用訊息記錄，您必須將下列程式碼新增至用戶端或服務：  
+ 您可以啟用訊息記錄，同時在用戶端和服務的任何 WCF 應用程式。 若要啟用訊息記錄，您必須將下列程式碼新增至用戶端或服務：  
   
 ```xml  
 <configuration>  

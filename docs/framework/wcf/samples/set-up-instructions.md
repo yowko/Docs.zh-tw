@@ -5,21 +5,21 @@ helpviewer_keywords:
 - WCF Samples [WCF], setup
 - Windows Communication Foundation Samples [WCF], setup
 ms.assetid: 0be7d232-485b-4f6d-9ed0-b4243c907376
-ms.openlocfilehash: 20f6662289384b1a094c34c0c0c986b754a44ad2
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
-ms.translationtype: HT
+ms.openlocfilehash: cbb23281d94bbd1edc66b0a3b9caafca62304487
+ms.sourcegitcommit: 15109844229ade1c6449f48f3834db1b26907824
+ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/04/2018
+ms.lasthandoff: 05/07/2018
 ---
 # <a name="set-up-instructions"></a>設定指示
 這組主題說明如何設定執行 Windows Communication Foundation (WCF) 服務所需的服務。  
   
 ## <a name="in-this-section"></a>本節內容  
  [Windows Communication Foundation 範例的單次安裝程序](../../../../docs/framework/wcf/samples/one-time-setup-procedure-for-the-wcf-samples.md)  
- 概述設定 [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] 範例的步驟。  
+ 概述的步驟來設定 WCF 範例。  
   
  [防火牆指示](../../../../docs/framework/wcf/samples/firewall-instructions.md)  
- 概述設定 Windows 防火牆以允許 [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] 服務運作時所需要的步驟。  
+ 概述設定 Windows 防火牆以允許 WCF 服務運作所需的步驟。  
   
  [Internet Information Service 裝載指示](../../../../docs/framework/wcf/samples/internet-information-service-hosting-instructions.md)  
  概述設定 IIS 時所需要的步驟。  
@@ -31,10 +31,10 @@ ms.lasthandoff: 05/04/2018
  概述建立虛擬目錄時所需要的步驟。  
   
  [建置 Windows Communication Foundation 範例](../../../../docs/framework/wcf/samples/building-the-samples.md)  
- 概述建置 [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] 範例的步驟。  
+ 概述的步驟來建立 WCF 範例。  
   
  [執行 Windows Communication Foundation 範例](../../../../docs/framework/wcf/samples/running-the-samples.md)  
- 概述在相同電腦與跨電腦執行 [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] 範例的步驟。  
+ 概述的步驟，在相同電腦上，與跨電腦執行的 WCF 範例。  
   
  [啟用對等服務](http://msdn.microsoft.com/library/e7a0fcf4-b0e5-4b26-a7e3-f0f37b60a1f9)  
  概述安裝 Windows 對等元件 (即對等訊息服務的內建解析程式) 的步驟。  

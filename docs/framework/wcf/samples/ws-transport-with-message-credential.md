@@ -2,11 +2,11 @@
 title: 使用訊息認證的 WS 傳輸
 ms.date: 03/30/2017
 ms.assetid: 0d092f3a-b309-439b-920b-66d8f46a0e3c
-ms.openlocfilehash: acb2960fe3d563a05b0bdeee70af0d4093aae6f0
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
-ms.translationtype: HT
+ms.openlocfilehash: 708869f2350f01e75b949f4817fcf8aac35ea018
+ms.sourcegitcommit: 15109844229ade1c6449f48f3834db1b26907824
+ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/04/2018
+ms.lasthandoff: 05/07/2018
 ---
 # <a name="ws-transport-with-message-credential"></a>使用訊息認證的 WS 傳輸
 這個範例會示範結合訊息中傳遞的用戶端認證來使用 SSL 傳輸安全性。 這個範例會使用 `wsHttpBinding` 繫結。  
@@ -60,7 +60,7 @@ public string GetCallerIdentity()
   
  指定的位址會使用 https:// 配置。 繫結組態會將安全性模式設定為 `TransportWithMessageCredential`。 相同的安全性模式必須指定在服務的 Web.config 檔中。  
   
- 當您嘗試存取 https 時，因為此範例中使用的憑證是使用 Makecert.exe 所建立的測試憑證，會顯示安全性警示： 位址，例如https://localhost/servicemodelsamples/service.svc，從您的瀏覽器。 若要允許 [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] 用戶端適當地使用測試憑證，就必須在用戶端新增某些其他程式碼以便隱藏安全性警示。 使用實際執行憑證時，不需要這個程式碼及伴隨的類別。  
+ 當您嘗試存取 https 時，因為此範例中使用的憑證是使用 Makecert.exe 所建立的測試憑證，會顯示安全性警示： 位址，例如https://localhost/servicemodelsamples/service.svc，從您的瀏覽器。 若要允許 WCF 用戶端使用測試憑證中的位置，具有以便隱藏安全性警示用戶端新增某些其他程式碼。 使用實際執行憑證時，不需要這個程式碼及伴隨的類別。  
 
 ```csharp
 // WARNING: This code is only needed for test certificates such as those created by makecert. It is   

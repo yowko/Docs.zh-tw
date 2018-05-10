@@ -5,11 +5,11 @@ helpviewer_keywords:
 - Windows Communication Foundation [WCF]
 - WCF [WCF]
 ms.assetid: 149348a6-bf82-4ccc-9604-fa7cc88c0749
-ms.openlocfilehash: f3b8abb2a8e0079dc18624c5ac0408a2738f06b6
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
-ms.translationtype: HT
+ms.openlocfilehash: 56054216dc6e90e789c230acb3d56565a9ba3d69
+ms.sourcegitcommit: 15109844229ade1c6449f48f3834db1b26907824
+ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/04/2018
+ms.lasthandoff: 05/07/2018
 ---
 # <a name="developing-service-oriented-applications-with-wcf"></a>使用 WCF 開發以服務為導向的應用程式
 文件的這一節提供 Windows Communication Foundation (WCF) 的詳細資訊，這是用於建置服務導向應用程式的統一程式設計模型。 開發人員可運用它來建置安全、可靠與可交易性的方案，且這些方案會跨平台進行整合，並與現有投資交互操作。
@@ -34,7 +34,7 @@ ms.lasthandoff: 05/04/2018
  說明建立 Windows Communication Foundation 應用程式的基本概念。  
   
  [WCF 功能詳細資料](../../../docs/framework/wcf/feature-details/index.md)  
- 顯示各個主題，供您選擇需要採用哪一項或哪幾項 [!INCLUDE[indigo2](../../../includes/indigo2-md.md)] 功能。  
+ 顯示可讓您選擇的 WCF 功能需要採用的主題。  
   
  [擴充 WCF](../../../docs/framework/wcf/extending/index.md)  
  說明如何修改和擴充 WCF 執行階段元件  
@@ -67,7 +67,7 @@ ms.lasthandoff: 05/04/2018
  可就 Windows Communication Foundation 提供各方面指示的範例  
   
  [Windows Communication Foundation 字彙](../../../docs/framework/wcf/glossary.md)  
- 顯示 [!INCLUDE[indigo2](../../../includes/indigo2-md.md)] 專用詞彙的清單  
+ 顯示詞彙的清單的特定至 WCF  
   
  [一般參考](../../../docs/framework/wcf/general-reference.md)  
  本節說明用於設定 Windows Communication Foundation 用戶端和服務的元素。  

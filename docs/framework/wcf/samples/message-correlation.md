@@ -2,11 +2,11 @@
 title: 訊息相互關聯
 ms.date: 03/30/2017
 ms.assetid: 3f62babd-c991-421f-bcd8-391655c82a1f
-ms.openlocfilehash: 1573cdafafb5861099b275caa888c79d23cafeb1
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
-ms.translationtype: HT
+ms.openlocfilehash: 7105c66153625b4a7a2b9a2d61a2ab2821cab2af
+ms.sourcegitcommit: 15109844229ade1c6449f48f3834db1b26907824
+ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/04/2018
+ms.lasthandoff: 05/07/2018
 ---
 # <a name="message-correlation"></a>訊息相互關聯
 這個範例示範訊息佇列 (MSMQ) 應用程式如何將 MSMQ 訊息傳送至 Windows Communication Foundation (WCF) 服務，以及如何訊息可以相互關聯的要求/回應案例中的傳送者與接收者應用程式之間。 這個範例會使用 msmqIntegrationBinding 繫結。 本實例中的服務是自我裝載的主控台應用程式，可讓您觀察接收佇列訊息的服務。 K  
@@ -64,9 +64,9 @@ public class OrderProcessorService : IOrderProcessor
 }  
 ```
 
- 服務會使用自訂用戶端 `OrderResponseClient`，將 MSMQ 訊息傳送至佇列。 由於接收和處理訊息的應用程式是 MSMQ 應用程式，而非 [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] 應用程式，所以兩個應用程式之間沒有隱含的服務合約。 因此，我們無法在這個案例中使用 Svcutil.exe 工具來建立 Proxy。  
+ 服務會使用自訂用戶端 `OrderResponseClient`，將 MSMQ 訊息傳送至佇列。 由於接收和處理訊息的應用程式是 MSMQ 應用程式並不是 WCF 應用程式，有兩個應用程式之間便沒有隱含的服務合約。 因此，我們無法在這個案例中使用 Svcutil.exe 工具來建立 Proxy。  
   
- 對所有使用 [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] 繫結傳送訊息的 `msmqIntegrationBinding` 應用程式來說，自訂 Proxy 基本上都相同。 與其他 Proxy 不同的是，它並不包含服務作業的範圍， 而只是一項送出訊息的作業。  
+ 自訂 proxy 基本上是相同的所有使用的 WCF 應用程式`msmqIntegrationBinding`繫結傳送訊息。 與其他 Proxy 不同的是，它並不包含服務作業的範圍， 而只是一項送出訊息的作業。  
 
 ```csharp
 [System.ServiceModel.ServiceContractAttribute(Namespace = "http://Microsoft.ServiceModel.Samples")]  
@@ -212,7 +212,7 @@ static void PlaceOrder()
  接收訂單回應的 MSMQ 佇列是在組態檔的 appSettings 區段中指定，如下列範例組態所示。  
   
 > [!NOTE]
->  佇列名稱會使用點 (.) 來代表本機電腦，並在其路徑中使用反斜線分隔符號。 [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] 端點位址會指定 msmq.formatname 配置，並使用 "localhost" 表示本機電腦。 根據 MSMQ 方針，正確的格式名稱應遵照 URI 中的 msmq.formatname。  
+>  佇列名稱會使用點 (.) 來代表本機電腦，並在其路徑中使用反斜線分隔符號。 WCF 端點位址會指定 msmq.formatname 配置，並使用"localhost"代表本機電腦。 根據 MSMQ 方針，正確的格式名稱應遵照 URI 中的 msmq.formatname。  
   
 ```xml  
 <appSettings>  

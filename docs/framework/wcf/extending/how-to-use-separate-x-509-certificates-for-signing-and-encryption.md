@@ -9,16 +9,16 @@ helpviewer_keywords:
 - ClientCredentials class
 - ClientCredentialsSecurityTokenManager class
 ms.assetid: 0b06ce4e-7835-4d82-8baf-d525c71a0e49
-ms.openlocfilehash: d171af8dbcbbdd51cc015986a2c69e0393fe56dc
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
-ms.translationtype: HT
+ms.openlocfilehash: d4c2e34b3e123e6fa9d8dc8e544f621b39861592
+ms.sourcegitcommit: 15109844229ade1c6449f48f3834db1b26907824
+ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/04/2018
+ms.lasthandoff: 05/07/2018
 ---
 # <a name="how-to-use-separate-x509-certificates-for-signing-and-encryption"></a>HOW TO：使用個別 X.509 憑證簽署與加密
 本主題說明如何設定 Windows Communication Foundation (WCF) 訊息簽署和加密用戶端和服務上的使用不同的憑證。  
   
- 若要使用個別的憑證來進行簽章和加密，此時必須建立自訂的用戶端或服務憑證 (或兩者皆建立)，這是因為 [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] 並未提供可以設定多個用戶端或服務憑證的 API。 此外，必須提供安全性權杖管理員才能運用多份憑證的資訊，以及建立可用於特定金鑰使用方式和訊息方向的適當安全性權杖提供者。  
+ 若要啟用不同的憑證來簽署和加密，自訂用戶端或服務認證 （或兩者） 必須建立，因為 WCF 不會提供 API，以設定多個用戶端或服務的憑證。 此外，必須提供安全性權杖管理員才能運用多份憑證的資訊，以及建立可用於特定金鑰使用方式和訊息方向的適當安全性權杖提供者。  
   
  下方圖表會顯示所使用的主要類別、它們繼承的來源類別 (以上指標示)，以及特定方向和屬性所傳回的類別。  
   

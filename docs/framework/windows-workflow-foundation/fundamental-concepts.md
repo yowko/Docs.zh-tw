@@ -2,11 +2,11 @@
 title: 基本 Windows Workflow 概念
 ms.date: 03/30/2017
 ms.assetid: 0e930e80-5060-45d2-8a7a-95c0690105d4
-ms.openlocfilehash: 8ffa1bd1cdcc0347691032885fb929784045bf8a
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
-ms.translationtype: HT
+ms.openlocfilehash: c5306f8616086835373bc52bdd8195564441b8b7
+ms.sourcegitcommit: 15109844229ade1c6449f48f3834db1b26907824
+ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/04/2018
+ms.lasthandoff: 05/07/2018
 ---
 # <a name="fundamental-windows-workflow-concepts"></a>基本 Windows Workflow 概念
 [!INCLUDE[netfx_current_long](../../../includes/netfx-current-long-md.md)] 中的工作流程開發運用了一些開發人員可能未曾使用過的概念。 本主題描述其中的部分概念及其實作方式。  
@@ -51,7 +51,7 @@ ms.lasthandoff: 05/04/2018
  藉由使用適當的 <xref:System.Activities.ActivityContext> 衍生類別 (例如 <xref:System.Activities.NativeActivityContext> 或 <xref:System.Activities.CodeActivityContext>)，活動可以存取工作流程執行階段環境。 並且會利用這種方式解析引數與變數、排程子活動，以及用於許多其他用途。  
   
 ## <a name="services"></a>服務  
- 工作流程利用傳訊活動，提供自然的方式來實作及存取鬆散耦合服務。 傳訊活動建構於 [!INCLUDE[indigo2](../../../includes/indigo2-md.md)]，而且是用來將資料傳入及傳出工作流程的主要機制。 您可以一起撰寫傳訊活動，針對您所需的任何傳訊交換型式建立模型。 如需詳細資訊，請參閱 < 請參閱[傳訊活動](../../../docs/framework/wcf/feature-details/messaging-activities.md)。 工作流程服務是使用 <xref:System.ServiceModel.Activities.WorkflowServiceHost> 類別裝載的。 如需詳細資訊，請參閱[裝載工作流程服務概觀](../../../docs/framework/wcf/feature-details/hosting-workflow-services-overview.md)。 如需有關工作流程服務，請參閱[工作流程服務](../../../docs/framework/wcf/feature-details/workflow-services.md)  
+ 工作流程利用傳訊活動，提供自然的方式來實作及存取鬆散耦合服務。 傳訊活動所建置的 WCF，而且是用來將資料傳入及傳出工作流程的主要機制。 您可以一起撰寫傳訊活動，針對您所需的任何傳訊交換型式建立模型。 如需詳細資訊，請參閱 < 請參閱[傳訊活動](../../../docs/framework/wcf/feature-details/messaging-activities.md)。 工作流程服務是使用 <xref:System.ServiceModel.Activities.WorkflowServiceHost> 類別裝載的。 如需詳細資訊，請參閱[裝載工作流程服務概觀](../../../docs/framework/wcf/feature-details/hosting-workflow-services-overview.md)。 如需有關工作流程服務，請參閱[工作流程服務](../../../docs/framework/wcf/feature-details/workflow-services.md)  
   
 ## <a name="persistence-unloading-and-long-running-workflows"></a>持續性工作流程、卸載工作流程，以及長期執行工作流程  
  Windows 工作流程透過提供下列功能，簡化長期執行反應式程式的製作：  

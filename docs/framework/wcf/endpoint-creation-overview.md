@@ -7,19 +7,19 @@ dev_langs:
 helpviewer_keywords:
 - endpoints [WCF], overview
 ms.assetid: f4dce0fb-6f54-47e6-8054-86d7f574b91c
-ms.openlocfilehash: 91e5e45d380ec6a8229a7272c841e1a345423c7a
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
-ms.translationtype: HT
+ms.openlocfilehash: 46ca6294d68537e86a319b55d8c11e3ae0084738
+ms.sourcegitcommit: 15109844229ade1c6449f48f3834db1b26907824
+ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/04/2018
+ms.lasthandoff: 05/07/2018
 ---
 # <a name="endpoint-creation-overview"></a>端點建立概觀
-所有與 Windows Communication Foundation (WCF) 服務的通訊會透過*端點*的服務。 端點可讓用戶端存取 [!INCLUDE[indigo2](../../../includes/indigo2-md.md)] 服務提供的功能。 本章節說明端點的結構，並且摘要說明如何透過組態與程式碼來定義端點。  
+所有與 Windows Communication Foundation (WCF) 服務的通訊會透過*端點*的服務。 端點可讓用戶端存取 WCF 服務提供的功能。 本章節說明端點的結構，並且摘要說明如何透過組態與程式碼來定義端點。  
   
 ## <a name="the-structure-of-an-endpoint"></a>端點結構  
  每個端點都包含一個位址用以指出該到何處尋找端點、一個指定用戶端與端點如何進行通訊的繫結，以及一個可識別可用方法的合約。  
   
--   **位址**。 位址會唯一識別端點並告訴潛在取用者服務的位置。 它是由 [!INCLUDE[indigo2](../../../includes/indigo2-md.md)] 物件模型中的 <xref:System.ServiceModel.EndpointAddress> 位址所代表，內含統一資源識別元 (URI) 與位址屬性，而這些屬性又包含了身分識別、一些 Web 服務描述語言 (WSDL) 項目，以及選用標頭的集合。 選用標頭會提供額外的詳細位址資訊來識別端點或與端點互動。 如需詳細資訊，請參閱[指定端點位址](../../../docs/framework/wcf/specifying-an-endpoint-address.md)。  
+-   **位址**。 位址會唯一識別端點並告訴潛在取用者服務的位置。 它由 WCF 物件模型中代表<xref:System.ServiceModel.EndpointAddress>位址，內含統一資源識別元 (URI) 和位址屬性，包括身分識別、 一些 Web 服務描述語言 (WSDL) 項目，以及選用的集合標頭。 選用標頭會提供額外的詳細位址資訊來識別端點或與端點互動。 如需詳細資訊，請參閱[指定端點位址](../../../docs/framework/wcf/specifying-an-endpoint-address.md)。  
   
 -   **繫結**。 繫結會指定與端點的通訊方式。 繫結程序會指定端點與世界的通訊方式，包括要使用的傳輸通訊協定 (例如，TCP 或 HTTP)、訊息使用的編碼 (例如，文字或二進位)，以及必要的安全性要求有哪些 (例如，Secure Sockets Layer [SSL] 或 SOAP 訊息安全性)。 如需詳細資訊，請參閱[使用繫結來設定服務和用戶端](../../../docs/framework/wcf/using-bindings-to-configure-services-and-clients.md)。  
   

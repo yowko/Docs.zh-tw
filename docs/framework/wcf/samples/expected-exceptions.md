@@ -2,11 +2,11 @@
 title: 預期的例外狀況
 ms.date: 03/30/2017
 ms.assetid: 299a6987-ae6b-43c6-987f-12b034b583ae
-ms.openlocfilehash: 9552bf5178e3309d46e0f9220311c9e1a811c4b9
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
-ms.translationtype: HT
+ms.openlocfilehash: 6c4af62e0870cdd670c46ead169033ff72902fc0
+ms.sourcegitcommit: 15109844229ade1c6449f48f3834db1b26907824
+ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/04/2018
+ms.lasthandoff: 05/07/2018
 ---
 # <a name="expected-exceptions"></a>預期的例外狀況
 此範例示範如何在使用型別用戶端時，攔截預期的例外狀況。 這個範例根據[入門](../../../../docs/framework/wcf/samples/getting-started-sample.md)，用來實作計算機服務。 在這個範例中，用戶端是主控台應用程式 (.exe)，而服務則是由網際網路資訊服務 (IIS) 所裝載。  
@@ -16,9 +16,9 @@ ms.lasthandoff: 05/04/2018
   
  此範例示範正確的程式必須處理的兩個預期例外狀況類型之捕捉與處理方式：`TimeoutException` 和 `CommunicationException`。  
   
- 從 Windows Communication Foundation (WCF) 用戶端上的通訊方法就會擲回的例外狀況會預期或未預期的。 未預期的例外狀況包含 `OutOfMemoryException` 之類的災難性失敗，以及像 `ArgumentNullException` 或 `InvalidOperationException` 之類的程式設計錯誤。 一般來說，您無法有效處理未預期錯誤，因此在呼叫 [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] 用戶端通訊方法時，通常您不應該捕捉這些錯誤。  
+ 從 Windows Communication Foundation (WCF) 用戶端上的通訊方法就會擲回的例外狀況會預期或未預期的。 未預期的例外狀況包含 `OutOfMemoryException` 之類的災難性失敗，以及像 `ArgumentNullException` 或 `InvalidOperationException` 之類的程式設計錯誤。 通常是沒有實用的方式來處理未預期的錯誤，因此通常不應該捕捉這些，當呼叫 WCF 用戶端通訊方法。  
   
- [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] 用戶端上，來自通訊方法的預期例外狀況包含 `TimeoutException`、`CommunicationException` 和任何衍生的 `CommunicationException` 類別。 這些都代表在通訊期間發生的問題，而您可以藉由中止 [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] 用戶端並報告通訊失敗來妥善處理這些狀況。 因為外部因素可能導致在任何應用程式中發生這些錯誤，正確的應用程式必須捕捉這些例外狀況，並在發生時加以復原。  
+ 必須是由 WCF 用戶端上的通訊方法的例外狀況包含`TimeoutException`， `CommunicationException`，和任何衍生的類別`CommunicationException`。 這些可以中止 WCF 用戶端並報告通訊失敗來妥善處理的通訊期間表示有問題。 因為外部因素可能導致在任何應用程式中發生這些錯誤，正確的應用程式必須捕捉這些例外狀況，並在發生時加以復原。  
   
  用戶端可以擲回的 `CommunicationException` 衍生類別有好幾種。 在某些情況中，應用程式也會捕捉當中的一些狀況以進行特殊處理，但同時讓其他狀況當成 `CommunicationException` 來處理。 首先您可以捕捉比較特別的例外狀況類型，然後在稍後的 catch 子句中捕捉 `CommunicationException` 來做同樣的處理。  
   

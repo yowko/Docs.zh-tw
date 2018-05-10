@@ -5,14 +5,14 @@ dev_langs:
 - csharp
 - vb
 ms.assetid: ab6c0ac7-aac4-45ba-93d6-a0e9afd1756f
-ms.openlocfilehash: ddf6ad667eb131ec6fa4f12ed112c57368c43d9c
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
-ms.translationtype: HT
+ms.openlocfilehash: 1b825ff795f4db9d570420b187b8fedd041ddd3d
+ms.sourcegitcommit: 15109844229ade1c6449f48f3834db1b26907824
+ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/04/2018
+ms.lasthandoff: 05/07/2018
 ---
 # <a name="how-to-inspect-or-modify-parameters"></a>HOW TO：檢查或修改參數
-您可以檢查或修改傳入或傳出的訊息上的 Windows Communication Foundation (WCF) 用戶端物件的單一作業或[!INCLUDE[indigo2](../../../../includes/indigo2-md.md)]服務藉由實作<xref:System.ServiceModel.Dispatcher.IParameterInspector?displayProperty=nameWithType>介面並將它插入用戶端或服務執行階段。 一般來說，作業行為是用於新增單一作業的參數偵測器；其他行為可用於提供範圍更大之執行階段的簡易存取。 如需詳細資訊，請參閱[擴充用戶端](../../../../docs/framework/wcf/extending/extending-clients.md)和[擴充發送器](../../../../docs/framework/wcf/extending/extending-dispatchers.md)。  
+您可以檢查或修改傳入或傳出的訊息上的 Windows Communication Foundation (WCF) 用戶端物件或 WCF 服務的單一作業實作<xref:System.ServiceModel.Dispatcher.IParameterInspector?displayProperty=nameWithType>介面並將它插入用戶端或服務執行階段。 一般來說，作業行為是用於新增單一作業的參數偵測器；其他行為可用於提供範圍更大之執行階段的簡易存取。 如需詳細資訊，請參閱[擴充用戶端](../../../../docs/framework/wcf/extending/extending-clients.md)和[擴充發送器](../../../../docs/framework/wcf/extending/extending-dispatchers.md)。  
   
 ### <a name="inspecting-or-modifying-parameters"></a>檢查或修改參數  
   

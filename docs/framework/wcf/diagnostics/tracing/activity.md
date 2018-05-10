@@ -2,19 +2,19 @@
 title: 活動
 ms.date: 03/30/2017
 ms.assetid: 70471705-f55f-4da1-919f-4b580f172665
-ms.openlocfilehash: 34281647f65157484c1e732bc67a6a4b2cf58db6
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
-ms.translationtype: HT
+ms.openlocfilehash: 3100d5bb60dc1b11d23b0705f4d6f23a3675ac51
+ms.sourcegitcommit: 15109844229ade1c6449f48f3834db1b26907824
+ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/04/2018
+ms.lasthandoff: 05/07/2018
 ---
 # <a name="activity"></a>活動
 本主題說明 Windows Communication Foundation (WCF) 追蹤模型中的活動追蹤。 活動指的是協助使用者縮小失敗範圍的處理單位。 發生在同一個活動中的錯誤都是直接相關的。 例如，因為訊息解密失敗而導致作業失敗。 作業與訊息解密失敗的追蹤會同時出現在同一個活動中，顯示解密錯誤與要求錯誤之間直接的相互關聯性。  
   
 ## <a name="configuring-activity-tracing"></a>設定活動追蹤  
- [!INCLUDE[indigo2](../../../../../includes/indigo2-md.md)] 提供預先定義的活動以處理應用程式 (請參閱[活動清單](../../../../../docs/framework/wcf/diagnostics/tracing/activity-list.md))。 您也可以使用程式設計方式來定義活動，以便將使用者追蹤加以群組。 如需詳細資訊，請參閱[發出使用者程式碼追蹤](../../../../../docs/framework/wcf/diagnostics/tracing/emitting-user-code-traces.md)。  
+ WCF 會提供預先定義的活動，以處理應用程式 (請參閱[活動清單](../../../../../docs/framework/wcf/diagnostics/tracing/activity-list.md))。 您也可以使用程式設計方式來定義活動，以便將使用者追蹤加以群組。 如需詳細資訊，請參閱[發出使用者程式碼追蹤](../../../../../docs/framework/wcf/diagnostics/tracing/emitting-user-code-traces.md)。  
   
- 若要在執行階段發出活動追蹤，則針對 `ActivityTracing` 追蹤來源，或其他 `System.ServiceModel` 或自訂追蹤來源，請使用 [!INCLUDE[indigo2](../../../../../includes/indigo2-md.md)] 設定，如下列組態程式碼所示。  
+ 若要在執行階段發出活動追蹤，請使用`ActivityTracing`設定`System.ServiceModel`追蹤來源，或其他 WCF 或自訂追蹤來源，如下列組態程式碼所示。  
   
 ```xml  
 <source name="System.ServiceModel" switchValue="Verbose,ActivityTracing">  
@@ -88,7 +88,7 @@ traceSource.TraceEvent(TraceEventType.Warning, eventId, "Information");
   
 -   活動代表處理界限，這對系統管理員或支援能力而言十分重要。  
   
--   每個 [!INCLUDE[indigo2](../../../../../includes/indigo2-md.md)] 方法 (不管在用戶端或伺服器上) 的界限都是由開始新的活動，並在完成工作之後結束新活動，最後返回環境活動來加以界定。  
+-   開始新的活動，然後 （之後完成的工作），會受限於用戶端和伺服器，每個 WCF 方法結束新活動，然後返回環境活動。  
   
 -   例如，接聽連線或等候訊息的長時間 (持續) 活動，將以相對應的開始/停止資料標記來表示。  
   

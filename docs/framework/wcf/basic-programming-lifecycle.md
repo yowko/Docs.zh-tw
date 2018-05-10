@@ -4,14 +4,14 @@ ms.date: 03/30/2017
 helpviewer_keywords:
 - service creation [WCF]
 ms.assetid: 7cf21bfe-23bd-46aa-8033-609f851dbf76
-ms.openlocfilehash: df86b0750a0fb8760d77fa36ec0806a1c5a9c0a0
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
-ms.translationtype: HT
+ms.openlocfilehash: b20167ad776f3524e4516b71e43ab8cdb5c2aea4
+ms.sourcegitcommit: 15109844229ade1c6449f48f3834db1b26907824
+ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/04/2018
+ms.lasthandoff: 05/07/2018
 ---
 # <a name="basic-programming-lifecycle"></a>基本程式設計週期
-Windows Communication Foundation (WCF) 可讓它們是否在相同的電腦上透過網際網路，或在不同的應用程式平台上進行通訊的應用程式。 本主題將概要說明建置 [!INCLUDE[indigo2](../../../includes/indigo2-md.md)] 應用程式需要執行的工作。 可用的範例應用程式，請參閱[入門教學課程](../../../docs/framework/wcf/getting-started-tutorial.md)。  
+Windows Communication Foundation (WCF) 可讓它們是否在相同的電腦上透過網際網路，或在不同的應用程式平台上進行通訊的應用程式。 本主題概要說明建置的 WCF 應用程式所需的工作。 可用的範例應用程式，請參閱[入門教學課程](../../../docs/framework/wcf/getting-started-tutorial.md)。  
   
 ## <a name="the-basic-tasks"></a>基本工作  
  要執行的基本工作依序為：  

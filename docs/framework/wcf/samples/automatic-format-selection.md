@@ -2,11 +2,11 @@
 title: 自動格式選取
 ms.date: 03/30/2017
 ms.assetid: dab51e56-8517-4a6a-bb54-b55b15ab37bb
-ms.openlocfilehash: 9b9b4da4d5d3bdb3892feb49c033fbe4fc640cb0
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
-ms.translationtype: HT
+ms.openlocfilehash: 8c26253bee069bf9bbc009ea219e6c12cab034ef
+ms.sourcegitcommit: 15109844229ade1c6449f48f3834db1b26907824
+ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/04/2018
+ms.lasthandoff: 05/07/2018
 ---
 # <a name="automatic-format-selection"></a>自動格式選取
 這個範例會示範如何啟用自動格式選取 （XML 或 JSON），使用 Windows Communication Foundation (WCF) REST 程式設計模型，以及如何明確設定作業碼中的格式。  
@@ -14,9 +14,9 @@ ms.lasthandoff: 05/04/2018
 ## <a name="sample-details"></a>範例詳細資料  
  這個範例包含服務，以及可對服務發出要求的用戶端程式碼。 服務支援單一 HTTP `GET` 作業 (`EchoWithGet`) 以及單一 HTTP `POST` 作業 (`EchoWithPost`)。 這兩種作業都需要字串，然後會在回應中傳回字串。 在 `GET` 作業中，字串會在 URI 查詢字串參數中提供。 而在 `POST` 作業中，字串會在以 XML 序列化的要求主體中提供。 服務能夠以 XML 或 JSON 傳回回應，並且利用 [!INCLUDE[netfx40_long](../../../../includes/netfx40-long-md.md)] 中新的自動格式選取和命令式格式選取功能。  
   
- 在這個範例中，自動格式選取是使用 App.config 檔啟用。 在預設的 Web HTTP 端點上，`automaticFormatSelectionEnabled` 屬性已有 `true` 值。 在啟用自動格式選取的情況下，如果要求的標頭為 HTTP Accept 或 Content-Type，則 [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] 基礎結構會選取最適合的回應格式 (XML 或 JSON)。 開發人員除了將 `automaticFormatSelectionEnabled` 屬性設定為 `true` 以使用這個新功能之外，不需要提供任何額外的程式碼或組態。 在 Program.cs 的用戶端程式碼，要求會傳送兩個`GET`和`POST`HTTP Accept 標頭指定為 「 應用程式/xml"或"應用程式/json"的服務和服務作業中，傳回的回應個別的格式。  
+ 在這個範例中，自動格式選取是使用 App.config 檔啟用。 在預設的 Web HTTP 端點上，`automaticFormatSelectionEnabled` 屬性已有 `true` 值。 啟用自動格式選取，WCF 基礎結構會選取最適合的回應格式 （XML 或 JSON） 指定要求的 HTTP Accept 或 Content-type 標頭。 開發人員除了將 `automaticFormatSelectionEnabled` 屬性設定為 `true` 以使用這個新功能之外，不需要提供任何額外的程式碼或組態。 在 Program.cs 的用戶端程式碼，要求會傳送兩個`GET`和`POST`HTTP Accept 標頭指定為 「 應用程式/xml"或"應用程式/json"的服務和服務作業中，傳回的回應個別的格式。  
   
- 在 `GET` 作業中同樣會使用命令式格式選取。 `GET` 作業會檢查選擇性的 `format` 查詢字串參數，如果該參數存在，則會設定 <xref:System.ServiceModel.Web.WebOperationContext.OutgoingResponse%2A> 屬性上的回應格式。 以命令方式設定回應格式會覆寫 [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] 基礎結構所做的自動格式選取。  
+ 在 `GET` 作業中同樣會使用命令式格式選取。 `GET` 作業會檢查選擇性的 `format` 查詢字串參數，如果該參數存在，則會設定 <xref:System.ServiceModel.Web.WebOperationContext.OutgoingResponse%2A> 屬性上的回應格式。 以命令方式設定回應格式，如此一來，就會覆寫由 WCF 基礎結構自動格式化選取範圍。  
   
  此範例包含在主控台應用程式中執行的自我裝載服務和用戶端。 當主控台應用程式執行時，用戶端會對服務發出要求，然後將相關的資訊從回應寫入至主控台視窗。  
   

@@ -4,22 +4,22 @@ ms.date: 03/30/2017
 helpviewer_keywords:
 - event logging [WCF]
 ms.assetid: aac0530d-f44c-45a1-bada-e30e0677b41f
-ms.openlocfilehash: 78ad80188b8428bb718251045ef04ab803862a0f
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
-ms.translationtype: HT
+ms.openlocfilehash: ea0e6f3dc66bf40d631077c0dce20ea46f3a6688
+ms.sourcegitcommit: 15109844229ade1c6449f48f3834db1b26907824
+ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/04/2018
+ms.lasthandoff: 05/07/2018
 ---
 # <a name="event-logging-in-wcf"></a>WCF 的事件記錄
 Windows Communication Foundation (WCF) 會追蹤 Windows 事件記錄檔中的內部事件。  
   
 ## <a name="viewing-event-logs"></a>檢視事件記錄檔  
- 根據預設會自動啟用事件記錄，且沒有機制可停用它。 由 [!INCLUDE[indigo2](../../../../../includes/indigo2-md.md)] 所記錄的事件可以使用事件檢視器來檢視。 若要啟動此工具，請按一下**啟動**，按一下**控制台**，連按兩下**系統管理工具**，然後按兩下**事件檢視器**.  
+ 根據預設會自動啟用事件記錄，且沒有機制可停用它。 使用事件檢視器可以檢視由 WCF 記錄的事件。 若要啟動此工具，請按一下**啟動**，按一下**控制台**，連按兩下**系統管理工具**，然後按兩下**事件檢視器**.  
   
 ### <a name="application-event-log"></a>應用程式事件記錄檔  
- **應用程式事件記錄檔**包含大部分的所產生的事件[!INCLUDE[indigo2](../../../../../includes/indigo2-md.md)]。 大部分的項目都指出應用程式的特定功能無法啟動。 範例包括：  
+ **應用程式事件記錄檔**包含大部分的 WCF 所產生的事件。 大部分的項目都指出應用程式的特定功能無法啟動。 範例包括：  
   
--   訊息記錄/追蹤：當追蹤和訊息記錄失敗時，[!INCLUDE[indigo2](../../../../../includes/indigo2-md.md)] 會將事件寫入事件記錄檔中。 然而，並不是每次追蹤失敗都會觸發事件。 為防止事件記錄檔全部填滿追蹤失敗，[!INCLUDE[indigo2](../../../../../includes/indigo2-md.md)] 會為此類事件實作 10 分鐘的關閉時間。 這表示如果 [!INCLUDE[indigo2](../../../../../includes/indigo2-md.md)] 將追蹤失敗寫入事件記錄檔，至少 10 分鐘不會再執行這項操作。  
+-   訊息記錄/追蹤： WCF 將事件寫入事件記錄檔追蹤和訊息記錄失敗時。 然而，並不是每次追蹤失敗都會觸發事件。 若要避免事件記錄檔全部填滿追蹤失敗，WCF 會實作這類事件的 10 分鐘的關閉時間。 這表示，如果 WCF 追蹤失敗寫入事件記錄檔，都不會再次至少 10 分鐘。  
   
 -   共用接聽程式：WCF TCP Port Sharing Service 會在無法啟動時記錄事件。  
   

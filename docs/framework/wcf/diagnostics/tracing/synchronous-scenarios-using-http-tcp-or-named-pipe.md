@@ -2,11 +2,11 @@
 title: 使用 HTTP、TCP 或具名管道的同步案例
 ms.date: 03/30/2017
 ms.assetid: 7e90af1b-f8f6-41b9-a63a-8490ada502b1
-ms.openlocfilehash: 03f4fdcaa5fc59efe7e92d2cb900212ed5ebae77
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
-ms.translationtype: HT
+ms.openlocfilehash: 11a5d8f43d12d35728c65c7a60ad8a4fa2fc1b3a
+ms.sourcegitcommit: 15109844229ade1c6449f48f3834db1b26907824
+ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/04/2018
+ms.lasthandoff: 05/07/2018
 ---
 # <a name="synchronous-scenarios-using-http-tcp-or-named-pipe"></a>使用 HTTP、TCP 或具名管道的同步案例
 本主題將說明不同的同步要求/回覆案例中的各種活動與傳輸，以及使用 HTTP、TCP 或具名管道的單一執行緒用戶端。 請參閱[使用 HTTP、 TCP 或具名管道的非同步案例](../../../../../docs/framework/wcf/diagnostics/tracing/asynchronous-scenarios-using-http-tcp-or-named-pipe.md)如需詳細資訊，在多執行緒的要求。  
@@ -54,7 +54,7 @@ ms.lasthandoff: 05/04/2018
  與先前案例的唯一不同點在於，SOAP 錯誤訊息將做為回應訊息傳回。 如果`propagateActivity` = `true`，要求訊息的活動識別碼會加入至 SOAP 錯誤訊息。  
   
 ## <a name="synchronous-one-way-without-errors"></a>不具有錯誤的同步單向  
- 與第一個案例的唯一不同點在於，沒有任何訊息會傳回伺服器。 如果是以 HTTP 為基礎的通訊協定，則仍舊會將狀態 (有效或錯誤) 傳回用戶端。 這是因為 HTTP 是唯一使用要求-回應語意 (屬於 [!INCLUDE[indigo2](../../../../../includes/indigo2-md.md)] 通訊協定堆疊的一部分) 的通訊協定。 由於 TCP 處理已隱藏起來不讓 [!INCLUDE[indigo2](../../../../../includes/indigo2-md.md)] 看見，因此不會將任何認可傳送到用戶端。  
+ 與第一個案例的唯一不同點在於，沒有任何訊息會傳回伺服器。 如果是以 HTTP 為基礎的通訊協定，則仍舊會將狀態 (有效或錯誤) 傳回用戶端。 這是因為 HTTP 是唯一的通訊協定與要求-回應語意，是 WCF 通訊協定堆疊的一部分。 由於 TCP 處理已經從 WCF 隱藏，通知會傳送至用戶端。  
   
 ## <a name="synchronous-one-way-with-errors"></a>具有錯誤的同步單向  
  如果在處理訊息 (Q 或更多) 時發生錯誤，就不會將任何通知傳回用戶端。 這個案例與「不具有錯誤的同步單向」案例相同。 如果您想要收到錯誤訊息，就不應該使用單向案例。  

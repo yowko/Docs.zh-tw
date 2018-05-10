@@ -5,11 +5,11 @@ helpviewer_keywords:
 - WCF [WCF], what's new
 - Windows Communication Foundation [WCF], what's new
 ms.assetid: 7e93fe73-af93-46b5-9f63-32f761ee40cf
-ms.openlocfilehash: 1d4ac2fe884a3c6696dc70ea2de9967a23fc6605
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
-ms.translationtype: HT
+ms.openlocfilehash: 910da1073f0dc787be26d2c87b5bf49b4115aaef
+ms.sourcegitcommit: 15109844229ade1c6449f48f3834db1b26907824
+ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/04/2018
+ms.lasthandoff: 05/07/2018
 ---
 # <a name="what39s-new-in-windows-communication-foundation-45"></a>什麼&#39;s Windows Communication Foundation 4.5 的新功能
 本主題討論 Windows Communication Foundation (WCF) 的新功能。  
@@ -73,7 +73,7 @@ ms.lasthandoff: 05/04/2018
  為了協助新的和現有的 WCF 服務開發人員設定其服務，現在每個屬於服務組態檔之一部分的組態項目及其屬性，Visual Studio XML 編輯器都有提供工具提示。  
   
 ## <a name="configuring-wcf-services-in-code"></a>在程式碼中設定 WCF 服務  
- Windows Communication Foundation (WCF) 可讓開發人員使用組態檔或程式碼來設定服務。  當服務需要在部署後進行設定時，組態檔非常有用。 使用組態檔時，IT 專業人員只需更新組態檔，不必重新編譯。 但是組態檔可能會很複雜而難以維護。 由於不支援組態檔偵錯，而且組態項目是以名稱來參考，這使得製作組態檔容易出錯且難度增加。 [!INCLUDE[indigo2](../../../includes/indigo2-md.md)] 也允許您以程式碼來設定服務。 在舊版 [!INCLUDE[indigo2](../../../includes/indigo2-md.md)] (4.0 及更早版本) 的在自我裝載案例中，您可以輕鬆使用程式碼來設定服務，因為 <xref:System.ServiceModel.ServiceHost> 類別可讓您在呼叫 ServiceHost.Open 之前設定端點和行為。 但是在 Web 裝載案例中，您就無法存取 <xref:System.ServiceModel.ServiceHost> 類別。 為了設定 Web 裝載服務，您需要建立會建立 `System.ServiceModel.ServiceHostFactory` 的 <xref:System.ServiceModel.Activation.ServiceHostFactory>，並執行任何所需的設定。 從 .NET 4.5 開始，[!INCLUDE[indigo2](../../../includes/indigo2-md.md)] 提供了更簡單的方法，以程式碼來設定自我裝載和 Web 裝載服務。 如需詳細資訊，請參閱[程式碼中設定 WCF 服務](../../../docs/framework/wcf/configuring-wcf-services-in-code.md)。  
+ Windows Communication Foundation (WCF) 可讓開發人員使用組態檔或程式碼來設定服務。  當服務需要在部署後進行設定時，組態檔非常有用。 使用組態檔時，IT 專業人員只需更新組態檔，不必重新編譯。 但是組態檔可能會很複雜而難以維護。 由於不支援組態檔偵錯，而且組態項目是以名稱來參考，這使得製作組態檔容易出錯且難度增加。 WCF 也可讓您在程式碼中設定服務。 在舊版的程式碼中的 WCF （4.0 及更早版本） 設定服務已在自我裝載案例中，輕鬆<xref:System.ServiceModel.ServiceHost>類別可讓您設定端點和行為，在呼叫 ServiceHost.Open 之前。 但是在 Web 裝載案例中，您就無法存取 <xref:System.ServiceModel.ServiceHost> 類別。 為了設定 Web 裝載服務，您需要建立會建立 `System.ServiceModel.ServiceHostFactory` 的 <xref:System.ServiceModel.Activation.ServiceHostFactory>，並執行任何所需的設定。 從.NET 4.5 開始，WCF 會提供更簡單的方法來設定自我裝載和 web 裝載服務程式碼中。 如需詳細資訊，請參閱[程式碼中設定 WCF 服務](../../../docs/framework/wcf/configuring-wcf-services-in-code.md)。  
   
 ## <a name="channelfactory-caching"></a>ChannelFactory 快取  
  WCF 用戶端應用程式會使用 <xref:System.ServiceModel.ChannelFactory%601> 類別來建立與 WCF 服務的通訊通道。  建立 <xref:System.ServiceModel.ChannelFactory%601> 執行個體會產生額外負荷，因為這涉及到下列作業：  
@@ -107,7 +107,7 @@ ms.lasthandoff: 05/04/2018
  在組態檔中，對於專案內定義之自訂屬性的屬性值現可支援 Intellisense 功能，以協助您快速準確地處理組態檔。  
   
 ## <a name="configuration-tooltips"></a>組態工具提示  
- [!INCLUDE[indigo2](../../../includes/indigo2-md.md)] 項目和屬性目前在 XML 編輯器中會有工具提示，以協助您輕鬆並準確地識別項目或屬性的用途。  
+ WCF 元素和屬性現在需要更輕鬆地在 XML 編輯器中，工具提示並準確地識別項目或屬性的目的。  
   
 ## <a name="paste-data-as-classes"></a>貼上資料做為類別  
  在 WCF 專案中，定義於 XML 的資料型別 (例如服務中所公開的項目) 可以直接貼到程式碼頁面上。 XML 型別會以 CLR 型別貼上。 請參閱[從 XML 產生資料型別類別](../../../docs/framework/wcf/generating-data-type-classes-from-xml.md)如需詳細資訊。  

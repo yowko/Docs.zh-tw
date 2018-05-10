@@ -2,17 +2,17 @@
 title: 簡化的組態
 ms.date: 03/30/2017
 ms.assetid: dcbe1f84-437c-495f-9324-2bc09fd79ea9
-ms.openlocfilehash: a07ab26b19004df97f4ac65f711b03fc6a6ba445
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
-ms.translationtype: HT
+ms.openlocfilehash: 9f35a5f4fa4ae6be63bd75a24f58b56dd236ee9c
+ms.sourcegitcommit: 15109844229ade1c6449f48f3834db1b26907824
+ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/04/2018
+ms.lasthandoff: 05/07/2018
 ---
 # <a name="simplified-configuration"></a>簡化的組態
-設定 Windows Communication Foundation (WCF) 服務，可以是一個複雜的工作。 這項工作不但包含許多不同的選項，而且判斷需要哪些設定往往絕非易事。 雖然組態檔能夠增加 [!INCLUDE[indigo2](../../../includes/indigo2-md.md)] 服務的靈活度，但是也會造成許多不易發現的問題。 [!INCLUDE[netfx_current_long](../../../includes/netfx-current-long-md.md)] 能夠解決這些問題，並且提供可讓使用者降低服務組態大小與複雜度的方式。  
+設定 Windows Communication Foundation (WCF) 服務，可以是一個複雜的工作。 這項工作不但包含許多不同的選項，而且判斷需要哪些設定往往絕非易事。 雖然組態檔能夠增加 WCF 服務的彈性，但是也會造成許多不易發現的問題。 [!INCLUDE[netfx_current_long](../../../includes/netfx-current-long-md.md)] 能夠解決這些問題，並且提供可讓使用者降低服務組態大小與複雜度的方式。  
   
 ## <a name="simplified-configuration"></a>簡化的組態  
- 在 [!INCLUDE[indigo2](../../../includes/indigo2-md.md)] 服務組態檔中，<`system.serviceModel`> 區段會針對每一項裝載的服務包含一個 <`service`> 項目。 <`service`> 項目包含 <`endpoint`> 項目的集合，這些項目可指定對每一項服務公開的端點，以及一組選擇性的服務行為。 <`endpoint`> 項目會指定端點公開的位址、繫結和合約，以及選擇性的繫結組態和端點行為。 <`system.serviceModel`> 區段還包含 <`behaviors`> 項目，可讓您指定服務或端點行為。 下列範例顯示組態檔的 <`system.serviceModel`> 區段。  
+ 在 WCF 服務組態檔中，<`system.serviceModel`> 章節包含 <`service`> 裝載每個服務的項目。 <`service`> 項目包含 <`endpoint`> 項目的集合，這些項目可指定對每一項服務公開的端點，以及一組選擇性的服務行為。 <`endpoint`> 項目會指定端點公開的位址、繫結和合約，以及選擇性的繫結組態和端點行為。 <`system.serviceModel`> 區段還包含 <`behaviors`> 項目，可讓您指定服務或端點行為。 下列範例顯示組態檔的 <`system.serviceModel`> 區段。  
   
 ```  
 <system.serviceModel>  
@@ -45,7 +45,7 @@ ms.lasthandoff: 05/04/2018
 </system.serviceModel>  
 ```  
   
- [!INCLUDE[netfx_current_short](../../../includes/netfx-current-short-md.md)] 會透過免除對 <[!INCLUDE[indigo2](../../../includes/indigo2-md.md)]> 項目的需求，讓設定 `service` 服務更為容易。 如果您沒有加入 <`service`> 區段，或在 <`service`> 區段中加入任何端點，而且您的服務並未以程式設計方式定義任何端點，則會自動將一組預設端點加入至服務，而且每個服務基底位址和服務實作的每個合約都會有一個端點。 每一個端點中的端點位置都會對應至基底位址，繫結是由基底位址配置所決定，而合約則是服務實作的合約。 如果您不需要指定任何端點或服務行為，或是進行任何繫結設定變更，就不需要指定服務組態檔。 如果服務實作兩個合約，而且主機同時啟用 HTTP 和 TCP 傳輸，服務主機就會建立四個預設端點，使用各個傳輸的每一個合約都會有一個端點。 若要建立預設端點，服務主機必須知道要使用哪些繫結。 這些設定是在 <`protocolMappings`> 區段內的 <`system.serviceModel`> 區段中指定。 <`protocolMappings`> 區段包含傳輸通訊協定配置的清單，這些配置會對應至繫結型別。 服務主機會使用傳遞至主機本身的基底位址判斷要使用的繫結。 下列範例使用 <`protocolMappings`> 項目。  
+ [!INCLUDE[netfx_current_short](../../../includes/netfx-current-short-md.md)] 讓您更輕鬆的 WCF 服務設定透過免除對 <`service`> 項目。 如果您沒有加入 <`service`> 區段，或在 <`service`> 區段中加入任何端點，而且您的服務並未以程式設計方式定義任何端點，則會自動將一組預設端點加入至服務，而且每個服務基底位址和服務實作的每個合約都會有一個端點。 每一個端點中的端點位置都會對應至基底位址，繫結是由基底位址配置所決定，而合約則是服務實作的合約。 如果您不需要指定任何端點或服務行為，或是進行任何繫結設定變更，就不需要指定服務組態檔。 如果服務實作兩個合約，而且主機同時啟用 HTTP 和 TCP 傳輸，服務主機就會建立四個預設端點，使用各個傳輸的每一個合約都會有一個端點。 若要建立預設端點，服務主機必須知道要使用哪些繫結。 這些設定是在 <`protocolMappings`> 區段內的 <`system.serviceModel`> 區段中指定。 <`protocolMappings`> 區段包含傳輸通訊協定配置的清單，這些配置會對應至繫結型別。 服務主機會使用傳遞至主機本身的基底位址判斷要使用的繫結。 下列範例使用 <`protocolMappings`> 項目。  
   
 > [!WARNING]
 >  變更預設組態項目 (例如繫結或行為) 可能會影響定義於組態階層架構中較低層級的服務，因為它們可能會使用這些預設繫結和行為。 因此，變更預設繫結和行為的所有人員都必須注意，這些變更可能會影響階層中的其他服務。  

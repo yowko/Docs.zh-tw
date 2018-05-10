@@ -7,23 +7,23 @@ helpviewer_keywords:
 - Configuration file
 - configuration file schema
 ms.assetid: 2db21a57-5f64-426f-89df-fb0dc2d2def5
-ms.openlocfilehash: ab6e3a99f951d2977a079f49e4aa3eff250ee8d5
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
-ms.translationtype: HT
+ms.openlocfilehash: 75657786135fd13222c6c7edd5acfa122cc72e52
+ms.sourcegitcommit: 15109844229ade1c6449f48f3834db1b26907824
+ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/04/2018
+ms.lasthandoff: 05/07/2018
 ---
 # <a name="configuration-editor-tool-svcconfigeditorexe"></a>組態編輯器工具 (SvcConfigEditor.exe)
-Windows Communication Foundation (WCF) 服務組態編輯器 (SvcConfigEditor.exe) 可讓系統管理員和開發人員建立及修改組態設定[!INCLUDE[indigo2](../../../includes/indigo2-md.md)]服務以使用圖形化使用者介面。 有了這項工具，您可以管理 [!INCLUDE[indigo2](../../../includes/indigo2-md.md)] 繫結、行為、服務及診斷的設定，而不用直接編輯 XML 組態檔。  
+Windows Communication Foundation (WCF) 服務組態編輯器 (SvcConfigEditor.exe) 可讓系統管理員和開發人員使用圖形化使用者介面建立並修改 WCF 服務的組態設定。 有了這項工具，您可以管理 WCF 繫結、行為、服務及診斷的設定，而不用直接編輯 XML 組態檔。  
   
  服務組態編輯器位於 C:\Program Files\Microsoft SDKs\Windows\v6.0\Bin 資料夾。  
   
 ## <a name="the-wcf-configuration-editor"></a>WCF 組態編輯器  
- 服務組態編輯器所提供的精靈會指引您完成設定 [!INCLUDE[indigo2](../../../includes/indigo2-md.md)] 服務或用戶端的所有步驟。 強烈建議您使用精靈，而不直接使用編輯器。  
+ 服務組態編輯器所提供的精靈會指引您完成設定 WCF 服務或用戶端的所有步驟。 強烈建議您使用精靈，而不直接使用編輯器。  
   
- 如果您已經擁有一些符合標準 System.Configuration 結構描述的組態檔，就可以透過使用者介面來管理繫結、行為、服務和診斷的特定設定。 服務組態編輯器可讓您管理現有 [!INCLUDE[indigo2](../../../includes/indigo2-md.md)] 組態檔和可執行檔、COM+ 服務，以及 Web 裝載服務的設定。 使用服務組態編輯器開啟 Web 託管服務時，服務本身的組態和繼承自高層節點的組態區段都會顯示。  
+ 如果您已經擁有一些符合標準 System.Configuration 結構描述的組態檔，就可以透過使用者介面來管理繫結、行為、服務和診斷的特定設定。 服務組態編輯器可讓您管理現有 WCF 組態檔和可執行檔、COM+ 服務，以及 Web 託管服務的設定。 使用服務組態編輯器開啟 Web 託管服務時，服務本身的組態和繼承自高層節點的組態區段都會顯示。  
   
- 因為 [!INCLUDE[indigo2](../../../includes/indigo2-md.md)] 組態設定位於組態檔的 `<system.serviceModel>` 區段中，所以編輯器會在這個項目的內容上獨佔式作業，不會存取同一個檔案中的其他項目。 您可以直接巡覽至現有的組態檔，或是選取包含服務、虛擬目錄或 COM+ 服務的組件。 編輯器會載入特定服務的組態檔，並允許使用者加入新項目，或編輯以巢狀方式置於組態檔 `<system.serviceModel>` 區段中的現有項目。  
+ 因為 WCF 組態設定位於組態檔的 `<system.serviceModel>` 區段中，所以編輯器只會在這個項目的內容進行作業，不會存取同一個檔案中的其他項目。 您可以直接巡覽至現有的組態檔，或是選取包含服務、虛擬目錄或 COM+ 服務的組件。 編輯器會載入特定服務的組態檔，並允許使用者加入新項目，或編輯以巢狀方式置於組態檔 `<system.serviceModel>` 區段中的現有項目。  
   
  編輯器支援 IntelliSense 並增強結構描述相容性。 編輯器保證結果輸出符合組態檔的結構描述，且資料值有正確的語法， 但是不保證組態檔的語意為有效。 換句話說，編輯器不保證組態檔能夠與它所設定的服務搭配使用。  
   
@@ -45,7 +45,7 @@ Windows Communication Foundation (WCF) 服務組態編輯器 (SvcConfigEditor.ex
   
  C:\Program Files\Microsoft SDKs\Windows\v6.0\Bin\SvcConfigEditor.exe  
   
- 啟動 服務組態編輯器後，您可以使用**檔案/開啟**功能表來瀏覽至服務或您想要管理組件。 您可以直接開啟組態檔，瀏覽 [!INCLUDE[indigo2](../../../includes/indigo2-md.md)] /COM+ 服務，並開啟 Web 託管服務的組態檔。  
+ 啟動 服務組態編輯器後，您可以使用**檔案/開啟**功能表來瀏覽至服務或您想要管理組件。 您可以直接開啟組態檔，瀏覽 WCF/COM+ 服務，並開啟 Web 託管服務的組態檔。  
   
  服務組態編輯器的使用者介面共分為下列幾個區域：  
   
@@ -57,7 +57,7 @@ Windows Communication Foundation (WCF) 服務組態編輯器 (SvcConfigEditor.ex
   
 ### <a name="opening-a-configuration-file"></a>開啟組態檔  
   
-1.  啟動服務組態編輯器使用命令視窗巡覽至您[!INCLUDE[indigo2](../../../includes/indigo2-md.md)]安裝位置，然後輸入`SvcConfigEditor.exe`。  
+1.  若要瀏覽至 WCF 安裝位置，然後輸入使用命令視窗中啟動服務組態編輯器`SvcConfigEditor.exe`。  
   
 2.  從**檔案**功能表上，選取**開啟**，按一下您想要管理的檔案類型。  
   
@@ -208,7 +208,7 @@ Windows Communication Foundation (WCF) 服務組態編輯器 (SvcConfigEditor.ex
 3.  選取您要編輯的繫結項目延伸。 項目設定會出現在右窗格中供您進行編輯。  
   
 ### <a name="diagnostics"></a>診斷  
- **診斷**節點會顯示在組態檔中的所有診斷設定。 它可讓您開啟或關閉效能計數器、啟用或停用 Windows Management Instrumentation (WMI)、設定 [!INCLUDE[indigo2](../../../includes/indigo2-md.md)] 追蹤，以及設定 [!INCLUDE[indigo2](../../../includes/indigo2-md.md)] 訊息記錄。 中的設定**診斷**節點對應至 <`system.diagnostics`> 區段中，和`<diagnostics>`一節中`<system.serviceModel>`組態檔中。  
+ **診斷**節點會顯示在組態檔中的所有診斷設定。 它可讓您開啟或關閉效能計數器、 啟用或停用 Windows Management Instrumentation (WMI)、 設定 WCF 追蹤及設定 WCF 訊息記錄。 中的設定**診斷**節點對應至 <`system.diagnostics`> 區段中，和`<diagnostics>`一節中`<system.serviceModel>`組態檔中。  
   
  當您按一下**診斷** 節點，您可以檢視或執行工作的診斷**摘要頁面**中**詳細資料 窗格**。  
   
@@ -225,18 +225,18 @@ Windows Communication Foundation (WCF) 服務組態編輯器 (SvcConfigEditor.ex
 2.  若要啟用 WMI 提供者，請按一下**啟用 WMI 提供者**連結。  
   
 #### <a name="enabling-wcf-tracing"></a>啟用 WCF 追蹤  
- 您可以使用標準屬性來建立 [!INCLUDE[indigo2](../../../includes/indigo2-md.md)] 追蹤檔，或是設定自訂追蹤檔。  
+ 您可以使用標準屬性來建立 WCF 追蹤檔，或是設定自訂追蹤檔。  
   
 1.  按一下**診斷**節點。  
   
 2.  按一下**啟用追蹤**。  
   
-3.  按一下**追蹤層級**連結調整追蹤層級。 追蹤層級共有六個：關閉、關鍵、錯誤、警告、資訊與詳細資訊。 **活動追蹤**和**傳播活動**選項可讓您使用[!INCLUDE[indigo2](../../../includes/indigo2-md.md)]活動追蹤功能。  
+3.  按一下**追蹤層級**連結調整追蹤層級。 追蹤層級共有六個：關閉、關鍵、錯誤、警告、資訊與詳細資訊。 **活動追蹤**和**傳播活動**選項可讓您使用 WCF 活動追蹤功能。  
   
 4.  您可以按一下追蹤接聽項名稱，指定追蹤檔案與選項。  
   
 #### <a name="enabling-wcf-logging"></a>啟用 WCF 記錄  
- 您可以使用標準屬性來建立 [!INCLUDE[indigo2](../../../includes/indigo2-md.md)] 追蹤檔，或是設定自訂追蹤檔。  
+ 您可以使用標準屬性來建立 WCF 追蹤檔，或是設定自訂追蹤檔。  
   
 1.  按一下**診斷**節點。  
   
@@ -316,7 +316,7 @@ Windows Communication Foundation (WCF) 服務組態編輯器 (SvcConfigEditor.ex
  這個區段可讓您透過通訊協定位址配置與可能的繫結之間已定義的對應，針對不同的通訊協定設定預設的繫結型別，例如 http、tcp、MSMQ 或 net.pipe。 您也可以加入其他通訊協定的新對應。  
   
 #### <a name="extensions"></a>延伸模組  
- 新繫結延伸、繫結項目延伸、標準端點延伸和行為延伸可以經過註冊，以便用於 [!INCLUDE[indigo2](../../../includes/indigo2-md.md)] 組態中。 擴充功能是名稱/型別的配對。 名稱可定義組態中延伸的名稱，而型別則可實作延伸。 延伸有四種型別：  
+ 可以註冊新的繫結延伸、 繫結項目延伸、 標準端點延伸和行為延伸模組，以便在 WCF 組態中使用。 擴充功能是名稱/型別的配對。 名稱可定義組態中延伸的名稱，而型別則可實作延伸。 延伸有四種型別：  
   
 -   繫結延伸可定義整個繫結型別。 範例：`basicHttpBinding`。  
   
@@ -326,7 +326,7 @@ Windows Communication Foundation (WCF) 服務組態編輯器 (SvcConfigEditor.ex
   
 -   行為項目延伸可定義行為項目。 範例：`clientVia`。  
   
- 已經於組態中註冊的延伸可比照同類型的任何其他 [!INCLUDE[indigo2](../../../includes/indigo2-md.md)] 元件使用。  
+ 已經於組態中註冊的擴充功能可比照同類型的任何其他 WCF 元件使用。  
   
 ##### <a name="adding-a-new-extension"></a>加入新的延伸  
  在進階節點中選取其中一個延伸節點：  
@@ -343,11 +343,11 @@ Windows Communication Foundation (WCF) 服務組態編輯器 (SvcConfigEditor.ex
  這個區段可讓您定義服務裝載環境的執行個體化設定。  
   
 ### <a name="creating-a-configuration-file-using-the-wizard"></a>使用精靈來建立組態檔  
- 建立新組態檔的一個方法是使用 [新增服務項目精靈]。 此精靈會找到與電腦上 [!INCLUDE[indigo2](../../../includes/indigo2-md.md)] 相容的已安裝服務類型和其他項目 (包含 COM+ 與 Web 裝載虛擬目錄)，並載入以簡化組態的建立程序。  
+ 建立新組態檔的一個方法是使用 [新增服務項目精靈]。 精靈會尋找已安裝的服務類型和其他項目與 WCF 相容的電腦上，包括 COM + 與 Web 裝載虛擬目錄，並載入以簡化組態的建立。  
   
 #### <a name="creating-a-configuration-file"></a>建立組態檔  
   
-1.  啟動服務組態編輯器使用命令視窗巡覽至您[!INCLUDE[indigo2](../../../includes/indigo2-md.md)]安裝位置，然後輸入`SvcConfigEditor.exe`。  
+1.  若要瀏覽至 WCF 安裝位置，然後輸入使用命令視窗中啟動服務組態編輯器`SvcConfigEditor.exe`。  
   
 2.  從**檔案**功能表上，選取**開啟**按一下**可執行檔**， **COM + 服務**，或**WebHosted 服務**，取決於您想要建立的組態檔的類型。  
   
@@ -370,7 +370,7 @@ Windows Communication Foundation (WCF) 服務組態編輯器 (SvcConfigEditor.ex
   
 2.  從第一頁的樹狀目錄中選取 COM+ 應用程式。 如果您在樹狀目錄中找不到您的 COM+ 應用程式，請確認該應用程式是否已經安裝在 [元件服務] 中，並且在 [全域組件快取] \(GAC) 中註冊。  
   
-3.  在下一頁，選取您要公開為 [!INCLUDE[indigo2](../../../includes/indigo2-md.md)] 服務的方法。 預設會顯示並選取 COM+ 應用程式支援的所有方法。  
+3.  在下一頁，選取您要公開為 WCF 服務的方法。 預設會顯示並選取 COM+ 應用程式支援的所有方法。  
   
 4.  選擇裝載的方法。  
   
@@ -390,6 +390,6 @@ Windows Communication Foundation (WCF) 服務組態編輯器 (SvcConfigEditor.ex
     >  您也可以直接開啟並編輯包含 COM 合約的組態檔。  
   
 ## <a name="security"></a>安全性  
- 不保證組態編輯器產生的服務組態檔是安全的。 請參閱[安全性](../../../docs/framework/wcf/feature-details/security.md)文件以了解如何保護您[!INCLUDE[indigo2](../../../includes/indigo2-md.md)]服務。  
+ 不保證組態編輯器產生的服務組態檔是安全的。 請參閱[安全性](../../../docs/framework/wcf/feature-details/security.md)文件以了解如何保護您的 WCF 服務。  
   
- 此外，組態編輯器只能用於讀取和寫入有效的 [!INCLUDE[indigo2](../../../includes/indigo2-md.md)] 組態項目。 該工具會忽略符合結構描述、使用者定義的項目。 它也不會嘗試將這些項目從組態檔中移除，或判斷其對已知 [!INCLUDE[indigo2](../../../includes/indigo2-md.md)] 項目的影響。 使用者應負責判斷這些項目是否會對應用程式或系統造成威脅。
+ 此外，組態編輯器只能用於讀取和寫入有效的 WCF 組態項目。 該工具會忽略符合結構描述、使用者定義的項目。 它也不會嘗試將這些項目從組態檔中移除，或判斷其對已知 WCF 項目的影響。 使用者應負責判斷這些項目是否會對應用程式或系統造成威脅。

@@ -2,11 +2,11 @@
 title: UDP 啟用
 ms.date: 03/30/2017
 ms.assetid: 4b0ccd10-0dfb-4603-93f9-f0857c581cb7
-ms.openlocfilehash: 6dd1ee02b51dc969af0ba1bc418b7fb20f6f0ed6
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
-ms.translationtype: HT
+ms.openlocfilehash: 9f7600bff17c015f28c3fb94ed5360561d45c65b
+ms.sourcegitcommit: 15109844229ade1c6449f48f3834db1b26907824
+ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/04/2018
+ms.lasthandoff: 05/07/2018
 ---
 # <a name="udp-activation"></a>UDP 啟用
 這個範例根據[傳輸： UDP](../../../../docs/framework/wcf/samples/transport-udp.md)範例。 它會擴充[傳輸： UDP](../../../../docs/framework/wcf/samples/transport-udp.md)範例以支援使用 Windows Process Activation Service (WAS) 的處理序啟用。  
@@ -20,7 +20,7 @@ ms.lasthandoff: 05/04/2018
 -   服務 (在 WAS 啟動的背景工作處理序中裝載)，會透過 UDP 自訂傳輸來接收訊息。  
   
 ## <a name="udp-protocol-activator"></a>UDP 通訊協定啟動程式  
- UDP 通訊協定啟動程式是 [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] 用戶端和 [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] 服務之間的橋樑。 可提供在傳輸層中，透過 UDP 通訊協定進行資料通訊。 這個啟動程式有兩個主要功能：  
+ UDP 通訊協定啟動程式是 WCF 用戶端與 WCF 服務之間的橋樑。 可提供在傳輸層中，透過 UDP 通訊協定進行資料通訊。 這個啟動程式有兩個主要功能：  
   
 -   WAS 接聽程式配接器 (LA)，會與 WAS 共同作業以啟動處理序，進而回應傳入訊息。  
   
@@ -55,7 +55,7 @@ ms.lasthandoff: 05/04/2018
  UDP 通訊協定接聽程式是通訊協定啟動程式內部的模組，會代表虛擬應用程式接聽 UDP 端點。 會在類別 `UdpSocketListener` 中實作此項。 端點會表示為 `IPEndpoint`，而這是針對站台從通訊協定繫結擷取的連接埠號。  
   
 ### <a name="control-service"></a>控制服務  
- 在此範例中，會使用 [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] 以在啟動程式和 WAS 背景工作處理序之間進行通訊。 常駐在啟動程式中的服務稱為「控制服務」。  
+ 在此範例中，我們會使用 WCF 啟動程式和 WAS 背景工作處理序之間的通訊。 常駐在啟動程式中的服務稱為「控制服務」。  
   
 ## <a name="protocol-handlers"></a>通訊協定處理常式  
  在接聽程式配接器呼叫 `WebhostOpenListenerChannelInstance` 之後，WAS 處理序管理員就會啟動背景工作處理序 (如果尚未啟動)。 背景工作處理序內的應用程式管理員接著會載入 UDP 處理序通訊協定處理常式 (PPH)，以及針對該 `ListenerChannelId` 所發出的要求。 Pph 接著會呼叫`IAdphManager`。`StartAppDomainProtocolListenerChannel` 若要啟動 UDP AppDomain 通訊協定處理常式 (ADPH)。  

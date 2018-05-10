@@ -4,16 +4,16 @@ ms.date: 03/30/2017
 helpviewer_keywords:
 - service contracts [WCF], defining
 ms.assetid: 67bf05b7-1d08-4911-83b7-a45d0b036fc3
-ms.openlocfilehash: 98e0b07f608db4396a5b8f5e25cde243e03390a3
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
-ms.translationtype: HT
+ms.openlocfilehash: 5e8abbf8c5f9b0696d90ccbee94c5d8f4dd8b1ec
+ms.sourcegitcommit: 15109844229ade1c6449f48f3834db1b26907824
+ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/04/2018
+ms.lasthandoff: 05/07/2018
 ---
 # <a name="how-to-define-a-windows-communication-foundation-service-contract"></a>HOW TO：定義 Windows Communication Foundation 服務合約
 這是建立基本的 Windows Communication Foundation (WCF) 應用程式所需的六項工作中的第一個。 六個工作的概觀，請參閱[入門教學課程](../../../docs/framework/wcf/getting-started-tutorial.md)主題。  
   
- 建立 [!INCLUDE[indigo2](../../../includes/indigo2-md.md)] 服務時，第一項工作是要定義服務合約。 服務合約會指定服務所支援的作業。 作業可以視為一種 Web 服務方法。 合約可以透過定義 C++、C# 或 Visual Basic (VB) 介面來建立。 介面中的每一個方法都會對應到一個特定的服務作業。 每一個介面都要有套用一個 <xref:System.ServiceModel.ServiceContractAttribute>，而且每一個作業都必須套用一個 <xref:System.ServiceModel.OperationContractAttribute> 屬性。 如果具有 <xref:System.ServiceModel.ServiceContractAttribute> 屬性之介面中的方法沒有 <xref:System.ServiceModel.OperationContractAttribute> 屬性，服務就不會公開該方法。  
+ 建立 WCF 服務時，第一個工作是定義服務合約。 服務合約會指定服務所支援的作業。 作業可以視為一種 Web 服務方法。 合約可以透過定義 C++、C# 或 Visual Basic (VB) 介面來建立。 介面中的每一個方法都會對應到一個特定的服務作業。 每一個介面都要有套用一個 <xref:System.ServiceModel.ServiceContractAttribute>，而且每一個作業都必須套用一個 <xref:System.ServiceModel.OperationContractAttribute> 屬性。 如果具有 <xref:System.ServiceModel.ServiceContractAttribute> 屬性之介面中的方法沒有 <xref:System.ServiceModel.OperationContractAttribute> 屬性，服務就不會公開該方法。  
   
  用於這項工作的程式碼將於本程序之後的範例中提供。  
   

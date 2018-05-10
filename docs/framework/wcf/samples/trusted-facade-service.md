@@ -2,11 +2,11 @@
 title: 信任的外觀服務
 ms.date: 03/30/2017
 ms.assetid: c34d1a8f-e45e-440b-a201-d143abdbac38
-ms.openlocfilehash: 08e115d297439910c16601051539a23a5a6bebc9
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
-ms.translationtype: HT
+ms.openlocfilehash: d5a4cfe63f2fc6facbe4ce78d1c0047349e303fd
+ms.sourcegitcommit: 15109844229ade1c6449f48f3834db1b26907824
+ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/04/2018
+ms.lasthandoff: 05/07/2018
 ---
 # <a name="trusted-facade-service"></a>信任的外觀服務
 這個案例範例示範如何呼叫者的身分識別資訊從一項服務之間使用 Windows Communication Foundation (WCF) 安全性基礎結構。  
@@ -21,7 +21,7 @@ ms.lasthandoff: 05/04/2018
   
 -   計算機後端服務  
   
- 外觀服務主要負責驗證要求及呼叫者。 在成功驗證之後，會使用周邊網路到內部網路之間的控制式通訊通道，將要求轉遞至後端服務。 做為轉遞要求的一部分，外觀服務會包含呼叫者身分識別的相關資訊，讓後端服務可以用此資訊進行處理。 將使用訊息 `Username` 標頭內的 `Security` 安全性權杖來傳輸呼叫者身分識別。 本範例會使用 [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] 安全性基礎結構，從 `Security` 標頭中傳輸及擷取此資訊。  
+ 外觀服務主要負責驗證要求及呼叫者。 在成功驗證之後，會使用周邊網路到內部網路之間的控制式通訊通道，將要求轉遞至後端服務。 做為轉遞要求的一部分，外觀服務會包含呼叫者身分識別的相關資訊，讓後端服務可以用此資訊進行處理。 將使用訊息 `Username` 標頭內的 `Security` 安全性權杖來傳輸呼叫者身分識別。 範例會使用 WCF 安全性基礎結構來傳輸及擷取這項資訊從`Security`標頭。  
   
 > [!IMPORTANT]
 >  後端服務會信任外觀服務以驗證呼叫者。 因此，後端服務不會再次驗證呼叫者，而是會在轉遞要求中使用外觀服務提供的身分識別資訊。 由於此信任關係，後端服務必須驗證外觀服務，確保轉遞的訊息是來自可信任的來源，在此例中也就是指外觀服務。  
@@ -110,7 +110,7 @@ public class MyUserNamePasswordValidator : UserNamePasswordValidator
   
  [\<安全性 >](../../../../docs/framework/configure-apps/file-schema/wcf/security-of-custombinding.md)繫結項目會處理初始呼叫者的使用者名稱傳輸和擷取。 [ \<Windowsstreamsecurity 正在 >](../../../../docs/framework/configure-apps/file-schema/wcf/windowsstreamsecurity.md)和[ \<tcpTransport >](../../../../docs/framework/configure-apps/file-schema/wcf/tcptransport.md)負責驗證外觀和後端服務以及訊息保護。  
   
- 若要轉遞要求，外觀服務實作必須提供初始呼叫者的使用者名稱，讓 [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] 安全性基礎結構可將此資訊放置在轉遞的訊息中。 會在外觀服務實作中提供初始呼叫者的使用者名稱，方法是在用戶端 Proxy 執行個體 (外觀服務用此執行個體與後端服務通訊) 上的 `ClientCredentials` 屬性設定即可。  
+ 若要轉遞要求，外觀服務實作必須提供初始呼叫者的使用者名稱，讓該 WCF 安全性基礎結構，可將此放置轉遞的訊息。 會在外觀服務實作中提供初始呼叫者的使用者名稱，方法是在用戶端 Proxy 執行個體 (外觀服務用此執行個體與後端服務通訊) 上的 `ClientCredentials` 屬性設定即可。  
   
  下列程式碼會顯示如何在外觀服務上實作 `GetCallerIdentity` 方法。 其他方法也使用相同的模式。  
   
@@ -125,9 +125,9 @@ public string GetCallerIdentity()
 }  
 ```  
   
- 如前面程式碼所示，不會在 `ClientCredentials` 屬性中設定密碼，而只會設定使用者名稱。 在這種情況下，[!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] 安全性基礎結構會建立沒有密碼的使用者名稱安全性權杖，而這正是此情節需要的做法。  
+ 如前面程式碼所示，不會在 `ClientCredentials` 屬性中設定密碼，而只會設定使用者名稱。 WCF 安全性基礎結構會建立沒有密碼的使用者名稱安全性權杖在此情況下，而這正是在此案例中所需。  
   
- 在後端服務上，必須驗證使用者名稱安全性權杖中所含的資訊。 根據預設， [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] 安全性會嘗試使用提供的密碼，將使用者對應至 Windows 帳戶。 在此情況下，將不會提供密碼，而且驗證使用者名稱也不需要後端服務，這是因為外觀服務已經執行驗證了。 為了在 [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)]中實作此功能，將提供自訂 `UserNamePasswordValidator` ，它只會強制在權杖中指定使用者名稱，而且不會執行其他驗證。  
+ 在後端服務上，必須驗證使用者名稱安全性權杖中所含的資訊。 根據預設，WCF 安全性會嘗試將使用者對應至 Windows 帳戶，使用提供的密碼。 在此情況下，將不會提供密碼，而且驗證使用者名稱也不需要後端服務，這是因為外觀服務已經執行驗證了。 若要實作這項功能在 WCF 中，自訂`UserNamePasswordValidator`提供它只會強制使用者名稱權杖中指定，並不會執行任何額外的驗證。  
   
 ```  
 public class MyUserNamePasswordValidator : UserNamePasswordValidator  
@@ -208,7 +208,7 @@ public string GetCallerIdentity()
 }  
 ```  
   
- 使用 `ServiceSecurityContext.Current.WindowsIdentity` 屬性擷取外觀服務的帳戶資訊。 若要存取初始呼叫者的相關資訊，後端服務會使用 `ServiceSecurityContext.Current.AuthorizationContext.ClaimSets` 屬性。 這個屬性會查詢型別為 `Identity` 的 `Name`宣告。 [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] 安全性基礎結構會自動從 `Username` 安全性權杖中所含的資訊產生此宣告。  
+ 使用 `ServiceSecurityContext.Current.WindowsIdentity` 屬性擷取外觀服務的帳戶資訊。 若要存取初始呼叫者的相關資訊，後端服務會使用 `ServiceSecurityContext.Current.AuthorizationContext.ClaimSets` 屬性。 這個屬性會查詢型別為 `Identity` 的 `Name`宣告。 這個宣告會由 WCF 安全性基礎結構中包含的資訊從自動產生`Username`安全性權杖。  
   
 ## <a name="running-the-sample"></a>執行範例  
  當您執行範例時，作業要求和回應會顯示在用戶端主控台視窗中。 在用戶端視窗中按下 ENTER 鍵，即可關閉用戶端。 您可以在外觀和後端服務的主控台視窗中按 ENTER 鍵，即可關閉服務。  

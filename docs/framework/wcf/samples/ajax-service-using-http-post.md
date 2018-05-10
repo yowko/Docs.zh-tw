@@ -2,21 +2,21 @@
 title: 使用 HTTP POST 的 AJAX 服務
 ms.date: 03/30/2017
 ms.assetid: 1ac80f20-ac1c-4ed1-9850-7e49569ff44e
-ms.openlocfilehash: 742f14d10fbd668609e8bd20db817d51269777ed
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
-ms.translationtype: HT
+ms.openlocfilehash: f904a26d87a21a931035b45261dbcd970f7d63a1
+ms.sourcegitcommit: 15109844229ade1c6449f48f3834db1b26907824
+ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/04/2018
+ms.lasthandoff: 05/07/2018
 ---
 # <a name="ajax-service-using-http-post"></a>使用 HTTP POST 的 AJAX 服務
 這個範例會示範如何使用 Windows Communication Foundation (WCF) 建立[!INCLUDE[vstecasp](../../../../includes/vstecasp-md.md)]Asynchronous JavaScript and XML (AJAX) 服務會使用 HTTP POST。 AJAX 是可從 Web 瀏覽器用戶端使用基本 JavaScript 程式碼存取的一種服務。 這個範例是根據[基本 AJAX 服務](../../../../docs/framework/wcf/samples/basic-ajax-service.md)範例; 兩個樣本之間的唯一差異就是使用 HTTP POST，而不是 HTTP GET。  
   
- AJAX 支援 Windows Communication Foundation (WCF) 最適合用於搭配 ASP.NET AJAX 使用透過`ScriptManager`控制項。 如需使用[!INCLUDE[indigo2](../../../../includes/indigo2-md.md)]與 ASP.NET AJAX，請參閱[Ajax 範例](../../../../docs/framework/wcf/samples/ajax-service-using-http-post.md)。  
+ AJAX 支援 Windows Communication Foundation (WCF) 最適合用於搭配 ASP.NET AJAX 使用透過`ScriptManager`控制項。 如需使用 WCF 與 ASP.NET AJAX 的範例，請參閱[Ajax 範例](../../../../docs/framework/wcf/samples/ajax-service-using-http-post.md)。  
   
 > [!NOTE]
 >  此範例的安裝程序與建置指示位於本主題的結尾。  
   
- 下列範例中的服務是沒有使用 AJAX 特定程式碼的 [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] 服務。  
+ 下列範例中的服務是沒有使用 AJAX 特定程式碼的 WCF 服務。  
   
  如果<xref:System.ServiceModel.Web.WebInvokeAttribute>屬性會套用至作業，或<xref:System.ServiceModel.Web.WebGetAttribute>不套用屬性，會使用預設的 HTTP 動詞命令 ("POST")。 POST 要求比 GET 要求更難建構，不過 POST 要求不會被快取。請在不適合快取的所有作業上使用 POST 要求。  
 

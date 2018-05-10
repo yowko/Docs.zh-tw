@@ -2,11 +2,11 @@
 title: 使用追蹤來疑難排解應用程式
 ms.date: 03/30/2017
 ms.assetid: 7676b9bb-cbd1-41fd-9a93-cc615af6e2d0
-ms.openlocfilehash: 7613ff24161fd7dc159838fb232e2fc6742ab1a4
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
-ms.translationtype: HT
+ms.openlocfilehash: 684fd79e2aa8062ddeb183576cb449bf838aa6c3
+ms.sourcegitcommit: 15109844229ade1c6449f48f3834db1b26907824
+ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/04/2018
+ms.lasthandoff: 05/07/2018
 ---
 # <a name="using-tracing-to-troubleshoot-your-application"></a>使用追蹤來疑難排解應用程式
 本節中的各個主題會說明如何使用追蹤來排解應用程式的問題。  
@@ -19,13 +19,13 @@ ms.lasthandoff: 05/04/2018
  說明如何使用服務追蹤檢視器工具來檢視、關聯與分析追蹤資料。  
   
  [重大追蹤](../../../../../docs/framework/wcf/diagnostics/tracing/significant-traces.md)  
- [!INCLUDE[indigo2](../../../../../includes/indigo2-md.md)] 所發出之主要追蹤的清單。  
+ 一份主要由 WCF 所發出的追蹤。  
   
  [用戶端偵錯](../../../../../docs/framework/wcf/diagnostics/tracing/debugging-on-the-client.md)  
  讓用戶端能夠對您的應用程式進行偵錯。  
   
  [端對端追蹤案例](../../../../../docs/framework/wcf/diagnostics/tracing/end-to-end-tracing-scenarios.md)  
- 說明 E2E [!INCLUDE[indigo2](../../../../../includes/indigo2-md.md)] 案例所使用的追蹤，例如，同步 wsHttp 要求-回覆，與非同步 TCP 單向要求。  
+ 說明 E2E WCF 案例，例如使用的追蹤，同步 wsHttp 要求-回覆，與非同步 TCP 單向要求。  
   
  [發出使用者程式碼追蹤](../../../../../docs/framework/wcf/diagnostics/tracing/emitting-user-code-traces.md)  
  說明如何透過使用者程式碼以程式設計方式發出追蹤，方便您主動建立檢測資料以便稍後用在診斷用途上，並與 WCF 追蹤產生關聯。  

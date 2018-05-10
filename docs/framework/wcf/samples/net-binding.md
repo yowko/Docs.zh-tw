@@ -2,11 +2,11 @@
 title: Net 繫結
 ms.date: 03/30/2017
 ms.assetid: 4d10072a-ae0a-486a-b713-49703e26d9bf
-ms.openlocfilehash: 37a02f763694ab7d39a699551f86e4f188a52917
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
-ms.translationtype: HT
+ms.openlocfilehash: 26d5d19e85ab560390d77bcd45ea446c46f46d42
+ms.sourcegitcommit: 15109844229ade1c6449f48f3834db1b26907824
+ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/04/2018
+ms.lasthandoff: 05/07/2018
 ---
 # <a name="net-binding"></a>Net 繫結
 本節包含示範使用端點項目之網路繫結屬性的範例。  
@@ -16,10 +16,10 @@ ms.lasthandoff: 05/04/2018
  使用端點項目的 MSMQ 繫結屬性示範。  
   
  [訊息佇列整合](../../../../docs/framework/wcf/samples/message-queueing-integration.md)  
- 示範訊息佇列與 [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] 之間的整合。  
+ 示範訊息佇列和 WCF 之間的整合。  
   
  [NetTCPBinding](../../../../docs/framework/wcf/samples/nettcpbinding.md)  
- 使用 [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] 中的 TCP 繫結示範。  
+ 示範如何在 WCF 中使用的 TCP 繫結。  
   
  [NetNamedPipeBinding](../../../../docs/framework/wcf/samples/netnamedpipebinding.md)  
  示範 `netNamedPipeBinding` 繫結，這會在相同電腦上提供跨處理序通訊。

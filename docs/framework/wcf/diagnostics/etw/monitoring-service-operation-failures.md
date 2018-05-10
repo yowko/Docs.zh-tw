@@ -2,11 +2,11 @@
 title: 監控服務作業失敗
 ms.date: 03/30/2017
 ms.assetid: 59472ba3-8ebf-4479-bd7b-f440d5e636cb
-ms.openlocfilehash: 16ed779f77836fb68cf1edf1e01dbb3c0df01d45
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
-ms.translationtype: HT
+ms.openlocfilehash: 3d708b537789c8d0decf75df780300c1e185c4c8
+ms.sourcegitcommit: 15109844229ade1c6449f48f3834db1b26907824
+ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/04/2018
+ms.lasthandoff: 05/07/2018
 ---
 # <a name="monitoring-service-operation-failures"></a>監控服務作業失敗
 如果您為應用程式啟用分析追蹤，可以在事件檢視器中輕鬆監視服務失敗。  本主題示範如何判斷服務作業失敗的時間，以及如何判斷造成失敗的原因。  
@@ -17,7 +17,7 @@ ms.lasthandoff: 05/04/2018
   
 2.  如果您尚未啟用分析追蹤，展開**Applications and Services Logs**， **Microsoft**， **Windows**，**應用程式伺服器-應用程式**. 選取**檢視**，**顯示分析與偵錯記錄檔**。 以滑鼠右鍵按一下**分析**選取**啟用記錄**。 讓 [事件檢視器] 保持開啟狀態，如此在服務作業失敗之後就能檢視追蹤。  
   
-3.  接下來，開啟 建立範例[入門教學課程](../../../../../docs/framework/wcf/getting-started-tutorial.md)中[!INCLUDE[vs_current_long](../../../../../includes/vs-current-long-md.md)]請注意，您必須執行[!INCLUDE[vs_current_long](../../../../../includes/vs-current-long-md.md)]身為系統管理員，以便可以建立服務。 如果您有[!INCLUDE[indigo2](../../../../../includes/indigo2-md.md)]範例的安裝，您可以開啟[入門](../../../../../docs/framework/wcf/samples/getting-started-sample.md)，其中包含已完成本教學課程中建立的專案。  
+3.  接下來，開啟 建立範例[入門教學課程](../../../../../docs/framework/wcf/getting-started-tutorial.md)中[!INCLUDE[vs_current_long](../../../../../includes/vs-current-long-md.md)]請注意，您必須執行[!INCLUDE[vs_current_long](../../../../../includes/vs-current-long-md.md)]身為系統管理員，以便可以建立服務。 如果您有安裝 WCF 範例，您可以開啟[入門](../../../../../docs/framework/wcf/samples/getting-started-sample.md)，其中包含已完成本教學課程中建立的專案。  
   
 4.  在伺服器專案的 Program.cs 檔案中，將下列程式碼行加入到 `Divide` 類別中，`CalculatorService` 方法的開頭：  
   

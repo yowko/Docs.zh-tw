@@ -2,11 +2,11 @@
 title: 使用文字檔追蹤
 ms.date: 03/30/2017
 ms.assetid: 56a82682-73c2-4b91-a206-4d8bb12c561b
-ms.openlocfilehash: 3ff786836dbf5b10d64702733c92579185ef2f3c
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
-ms.translationtype: HT
+ms.openlocfilehash: aa59ab8304c68873c938f42fc585be883b234ecc
+ms.sourcegitcommit: 15109844229ade1c6449f48f3834db1b26907824
+ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/04/2018
+ms.lasthandoff: 05/07/2018
 ---
 # <a name="tracking-using-a-text-file"></a>使用文字檔追蹤
 這個範例示範如何建立自訂追蹤參與者來擴充追蹤中 Windows Workflow Foundation (WF)。 追蹤參與者是可接收執行階段所發出之追蹤記錄的 .NET Framework 類別。 您可以建立追蹤參與者，將追蹤事件傳輸至特定狀況所需的任何目的地。 例如，ETW (Windows 事件追蹤) 追蹤參與者是在 [!INCLUDE[dnprdnshort](../../../../includes/dnprdnshort-md.md)] 中提供的。 這個範例中的追蹤參與者會將 XML 格式的記錄寫入至文字檔。  
@@ -17,7 +17,7 @@ ms.lasthandoff: 05/04/2018
 |類別|描述|  
 |-----------|-----------------|  
 |`TextFileTrackingExtensionElement`|<xref:System.ServiceModel.Configuration.BehaviorExtensionElement> 是用來定義用於設定文字檔追蹤參與者的組態區段。 這可讓使用者使用標準 .NET Framework 組態檔來指定記錄檔的目的地。|  
-|`TextFileTrackingBehavior`|[!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] 中的行為可讓使用者將延伸模組插入執行階段中。 當服務啟動時，此行為會將追蹤參與者加入至服務。|  
+|`TextFileTrackingBehavior`|WCF 中的行為可讓使用者將延伸模組插入執行階段。 當服務啟動時，此行為會將追蹤參與者加入至服務。|  
 |`TextFileTrackingParticipant`|在執行階段，接收追蹤記錄並將其以 XML 格式儲存至記錄檔的追蹤參與者。|  
   
 ## <a name="behavior-extension-elements-configuration"></a>行為延伸項目組態  

@@ -2,14 +2,14 @@
 title: 動態重新組態
 ms.date: 03/30/2017
 ms.assetid: b20786ae-cce6-4f91-b6cb-9cae116faf8b
-ms.openlocfilehash: 3783dd79918dc42a5ad6567bb4f3d2d0fe8bc1e1
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
-ms.translationtype: HT
+ms.openlocfilehash: 81a2b494c48476e683053e12e58264e756201124
+ms.sourcegitcommit: 15109844229ade1c6449f48f3834db1b26907824
+ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/04/2018
+ms.lasthandoff: 05/07/2018
 ---
 # <a name="dynamic-reconfiguration"></a>動態重新組態
-這個範例會示範 Windows Communication Foundation (WCF) 路由服務。 路由服務是一個 [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] 元件，該元件可讓它在應用程式中輕鬆加入內容架構的路由器。 此範例會調整標準 [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] 計算機範例，以便使用路由服務進行通訊。 此範例示範如何在執行階段以動態方式重新設定路由服務。  
+這個範例會示範 Windows Communication Foundation (WCF) 路由服務。 路由服務是 WCF 元件，以簡化應用程式中加入內容架構的路由器。 此範例會調整標準 WCF 計算機範例，以便使用路由服務進行通訊。 此範例示範如何在執行階段以動態方式重新設定路由服務。  
   
 > [!IMPORTANT]
 >  這些範例可能已安裝在您的電腦上。 請先檢查下列 (預設) 目錄，然後再繼續。  

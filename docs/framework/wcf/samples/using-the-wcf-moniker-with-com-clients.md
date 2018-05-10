@@ -2,11 +2,11 @@
 title: 利用 COM 用戶端使用 WCF Moniker
 ms.date: 03/30/2017
 ms.assetid: e2799bfe-88bd-49d7-9d6d-ac16a9b16b04
-ms.openlocfilehash: 79040cd267d354d32b3e957dc70fcc65b09b0fc8
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
-ms.translationtype: HT
+ms.openlocfilehash: 6d47b9c655db932bb9a4243533fbd01bcf25e0df
+ms.sourcegitcommit: 15109844229ade1c6449f48f3834db1b26907824
+ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/04/2018
+ms.lasthandoff: 05/07/2018
 ---
 # <a name="using-the-wcf-moniker-with-com-clients"></a>利用 COM 用戶端使用 WCF Moniker
 這個範例示範如何使用 Windows Communication Foundation (WCF) 服務 moniker，將 Web 服務整合到以 COM 為基礎的開發環境，例如 Microsoft Office Visual Basic for Applications (Office VBA) 或 Visual Basic 6.0。 這個範例由 Windows Script Host 用戶端 (.vbs)、支援的用戶端程式庫 (.dll) 和網際網路資訊服務 (IIS) 裝載的服務程式庫 (.dll) 所組成。 服務為計算機服務，而 COM 用戶端會呼叫服務上的數學作業：加法、減法、乘法和除法。 您可以在訊息方塊視窗中看到用戶端活動。  
@@ -99,7 +99,7 @@ contractType={9213C6D2-5A6F-3D26-839B-3BA9B82228D3}")
 WScript.Echo "Typed service moniker: 100 + 15.99 = " & typedServiceMoniker.Add(100, 15.99)  
 ```  
   
- 當您執行範例時，作業回應會顯示在 Windows Script Host 訊息方塊視窗中。 這將示範使用具型別 Moniker 進行 COM 呼叫，以與 [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] 服務通訊的 COM 用戶端。 就算在用戶端應用程式中使用 COM，服務通訊只能包含 Web 服務呼叫。  
+ 當您執行範例時，作業回應會顯示在 Windows Script Host 訊息方塊視窗中。 這會顯示與 WCF 服務進行通訊使用具型別的 moniker 進行 COM 呼叫的 COM 用戶端。 就算在用戶端應用程式中使用 COM，服務通訊只能包含 Web 服務呼叫。  
   
 ## <a name="wsdl-contract"></a>WSDL 合約  
  若要搭配使用 Moniker 和 WSDL 合約，您不需要用戶端程式庫註冊，但必須透過超出範圍之外的機制擷取服務的 WSDL 合約，例如使用瀏覽器存取服務的 WSDL 端點。 Moniker 接著可在執行階段存取該合約。  
@@ -135,7 +135,7 @@ Set wsdlServiceMoniker = GetObject(wsdlMonikerString)
 -   合約的名稱與命名空間。 這是必要的識別，因為 WSDL 可能包含多個合約。  
   
     > [!NOTE]
-    >  根據預設，[!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] 服務會對每個命名空間產生不同的 WSDL 檔。 而這些檔案則與使用 WSDL 匯入建構相連結。 由於 Moniker 預期使用單一 WSDL 定義，服務必須如同本範例所示範使用單一命名空間，或必須以手動方式合併不同的檔案。  
+    >  根據預設，WCF 服務產生不同的 WSDL 檔案，每個命名空間的使用。 而這些檔案則與使用 WSDL 匯入建構相連結。 由於 Moniker 預期使用單一 WSDL 定義，服務必須如同本範例所示範使用單一命名空間，或必須以手動方式合併不同的檔案。  
   
  使用服務 Moniker 建構 Proxy 執行個體完畢之後，用戶端應用程式就可以針對 Proxy 呼叫方法，使服務 Moniker 基礎結構呼叫對應的服務作業。  
   
@@ -144,7 +144,7 @@ Set wsdlServiceMoniker = GetObject(wsdlMonikerString)
 WScript.Echo "WSDL service moniker: 145 - 76.54 = " & wsdlServiceMoniker.Subtract(145, 76.54)  
 ```  
   
- 當您執行範例時，作業回應會顯示在 Windows Script Host 訊息方塊視窗中。 這將示範搭配使用 Moniker 和 WSDL 合約進行 COM 呼叫，以與 [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] 服務通訊的 COM 用戶端。  
+ 當您執行範例時，作業回應會顯示在 Windows Script Host 訊息方塊視窗中。 這將示範使用 moniker 和 WSDL 合約，與 WCF 服務進行通訊的 COM 呼叫的 COM 用戶端。  
   
 ## <a name="metadata-exchange-contract"></a>中繼資料交換合約  
  若要搭配使用 Moniker 和 MEX 合約，就如同搭配使用 WSDL 合約一樣，將不需要用戶端註冊。 透過內部使用中繼資料交換，即可在執行階段擷取服務合約。  
@@ -179,7 +179,7 @@ Set mexServiceMoniker = GetObject(mexMonikerString)
 WScript.Echo "MEX service moniker: 9 * 81.25 = " & mexServiceMoniker.Multiply(9, 81.25)  
 ```  
   
- 當您執行範例時，作業回應會顯示在 Windows Script Host 訊息方塊視窗中。 這將示範搭配使用 Moniker 和 MEX 合約進行 COM 呼叫，以便與 [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] 服務通訊的 COM 用戶端。  
+ 當您執行範例時，作業回應會顯示在 Windows Script Host 訊息方塊視窗中。 這會顯示 COM 用戶端進行通訊與 WCF 服務搭配使用 moniker 和 MEX 合約的 COM 呼叫。  
   
 #### <a name="to-set-up-and-build-the-sample"></a>若要設定和建置範例  
   

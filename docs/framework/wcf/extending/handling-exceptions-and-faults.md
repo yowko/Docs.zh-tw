@@ -2,11 +2,11 @@
 title: 處理例外狀況和錯誤
 ms.date: 03/30/2017
 ms.assetid: a64d01c6-f221-4f58-93e5-da4e87a5682e
-ms.openlocfilehash: a7fb7b5dd5755b9d534d9a96af3db598a44b42b0
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
-ms.translationtype: HT
+ms.openlocfilehash: 494a0665f5bad2c7da3998cf77ced79314ca2f36
+ms.sourcegitcommit: 15109844229ade1c6449f48f3834db1b26907824
+ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/04/2018
+ms.lasthandoff: 05/07/2018
 ---
 # <a name="handling-exceptions-and-faults"></a>處理例外狀況和錯誤
 例外狀況是用來在本機上傳送服務或用戶端實作內發生的錯誤。 另一方面，錯誤 (Fault) 是用來傳送跨越服務界限 (例如從伺服器到用戶端，反之亦然) 發生的錯誤 (Error)。 除了錯誤 (Fault) 以外，傳輸通道也經常會使用傳輸特定的機制來傳送傳輸層級的錯誤 (Error)。 例如，HTTP 傳輸會使用 404 等狀態碼來傳送不存在的端點 URL (表示沒有端點可傳回錯誤)。 本文件包含的三個章節都提供指引給自訂通道作者。 第一個章節會提供關於何時與如何定義及擲回例外狀況的指引， 而第二個章節會提供關於產生和使用錯誤的指引， 第三個章節則會說明如何提供追蹤資訊，以協助自訂通道的使用者針對執行中的應用程式進行疑難排解。  
@@ -15,7 +15,7 @@ ms.lasthandoff: 05/04/2018
  在擲回例外狀況時必須記住兩件事。首先，例外狀況的類型必須可讓使用者撰寫可適當回應此例外狀況的正確程式碼。 其次，例外狀況必須提供足夠的資訊，讓使用者瞭解何處出錯、失敗的影響以及如何進行修正。 下列章節會提供有關例外狀況類型和 Windows Communication Foundation (WCF) 通道訊息的指引。 在＜例外狀況的設計方針＞文件中，也有關於 .NET 例外狀況的一般指引。  
   
 ### <a name="exception-types"></a>例外狀況類型  
- 由通道擲回的所有例外狀況都必須是 <xref:System.TimeoutException?displayProperty=nameWithType>、<xref:System.ServiceModel.CommunicationException?displayProperty=nameWithType>，或是從 <xref:System.ServiceModel.CommunicationException> 衍生的類型。 系統可能也會擲回 <xref:System.ObjectDisposedException> 等例外狀況，不過這只是用來表示呼叫的程式碼誤用通道。 如果正確使用通道，它一定只會擲回指定的例外狀況。) [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] 提供的七個例外狀況型別是衍生自 <xref:System.ServiceModel.CommunicationException>，而且是設計給通道使用。 還有其他 <xref:System.ServiceModel.CommunicationException>衍生的例外狀況是設計用來讓系統的其他部分使用。 這些例外狀況類型包括：  
+ 由通道擲回的所有例外狀況都必須是 <xref:System.TimeoutException?displayProperty=nameWithType>、<xref:System.ServiceModel.CommunicationException?displayProperty=nameWithType>，或是從 <xref:System.ServiceModel.CommunicationException> 衍生的類型。 系統可能也會擲回 <xref:System.ObjectDisposedException> 等例外狀況，不過這只是用來表示呼叫的程式碼誤用通道。 如果正確使用通道，它一定只會擲回指定的例外狀況。WCF 會提供七個例外狀況類型衍生自<xref:System.ServiceModel.CommunicationException>而且設計給通道。 還有其他 <xref:System.ServiceModel.CommunicationException>衍生的例外狀況是設計用來讓系統的其他部分使用。 這些例外狀況類型包括：  
   
 |例外狀況類型|意義|內部例外狀況內容|復原策略|  
 |--------------------|-------------|-----------------------------|-----------------------|  
@@ -131,7 +131,7 @@ public class FaultConverter
 }  
 ```  
   
- 每個產生自訂錯誤的通道都必須實作 `FaultConverter`，並藉由呼叫 `GetProperty<FaultConverter>` 來傳回它。 自訂的 `OnTryCreateFaultMessage` 實作必須將例外狀況轉換成錯誤，或是委派到內部通道的 `FaultConverter`。 如果通道是一項傳輸，就必須轉換例外狀況，或是委派到編碼器的 `FaultConverter` 或 `FaultConverter` 中提供的預設 [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)]。 預設的 `FaultConverter` 會轉換與 WS-Addressing 和 SOAP 指定之錯誤 (Fault) 訊息相對應的錯誤 (Error)。 以下是 `OnTryCreateFaultMessage` 實作的範例。  
+ 每個產生自訂錯誤的通道都必須實作 `FaultConverter`，並藉由呼叫 `GetProperty<FaultConverter>` 來傳回它。 自訂的 `OnTryCreateFaultMessage` 實作必須將例外狀況轉換成錯誤，或是委派到內部通道的 `FaultConverter`。 如果為傳輸通道是它必須轉換例外狀況，或要委派到編碼器的`FaultConverter`或預設`FaultConverter`WCF 中提供。 預設的 `FaultConverter` 會轉換與 WS-Addressing 和 SOAP 指定之錯誤 (Fault) 訊息相對應的錯誤 (Error)。 以下是 `OnTryCreateFaultMessage` 實作的範例。  
   
 ```  
 public override bool OnTryCreateFaultMessage(Exception exception,   
@@ -186,7 +186,7 @@ public override bool OnTryCreateFaultMessage(Exception exception,
   
 3.  導向到堆疊中單一層的錯誤 (Fault) ，例如 WS-RM 序號錯誤 (Fault) 等錯誤 (Error)。  
   
- 類別目錄 1。 錯誤通常是指 WS-Addressing 和 SOAP 錯誤。 `FaultConverter` 所提供的基底 [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] 類別會轉換與 WS-Addressing 和 SOAP 指定之錯誤 (Fault) 訊息相對應的錯誤 (Error)，所以您不需要自己處理這些例外狀況的轉換。  
+ 類別目錄 1。 錯誤通常是指 WS-Addressing 和 SOAP 錯誤。 基底`FaultConverter`類別提供由 WCF 轉換錯誤對應到錯誤訊息所指定之 Ws-addressing 和 SOAP 不必處理這些例外狀況的轉換自己。  
   
  類別目錄 2。 當某一層將屬性加入到未完全使用與該層相關之訊息資訊的訊息時，就會出現錯誤。 如果有較高層要求此訊息屬性更進一步處理訊息資訊時，可能就會偵測出錯誤 (Error)。 這類通道應該實作先前指定的 `GetProperty`，以便讓較高層能夠傳回正確的錯誤 (Fault)。 TransactionMessageProperty 就是一個範例， 這個屬性會新增到訊息中，不會完整驗證標頭中的所有資料 (這麼做可能會涉及連絡分散式交易協調器 (DTC))。  
   
@@ -285,7 +285,7 @@ public override bool OnTryCreateException(
  如果是復原情形不同的特定錯誤情況，可考慮定義 `ProtocolException` 的衍生類別。  
   
 ### <a name="mustunderstand-processing"></a>MustUnderstand 處理  
- SOAP 會定義一般錯誤，表示接收者不瞭解必要標頭。 這個錯誤稱為 `mustUnderstand` 錯誤。 在 [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] 中，自訂通道永遠不會產生 `mustUnderstand` 錯誤， 反而是位於 [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] 通訊堆疊最上層的 [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] 發送器會執行檢查，查看基礎堆疊是否瞭解所有已標記為 MustUndestand=true 的標頭。 如果全部都不瞭解，此時就會產生 `mustUnderstand` 錯誤。 使用者可以選擇關閉這個 `mustUnderstand` 處理，然後讓應用程式接收所有訊息標頭。 在這種情況下，應用程式便會負責執行 `mustUnderstand` 處理。產生的錯誤包括 NotUnderstood 標頭，其中包含堆疊不瞭解其 MustUnderstand=true 之標頭的名稱。  
+ SOAP 會定義一般錯誤，表示接收者不瞭解必要標頭。 這個錯誤稱為 `mustUnderstand` 錯誤。 在 WCF 中，自訂通道永遠不會產生`mustUnderstand`錯誤。 相反地，WCF 發送器，位於 WCF 通訊堆疊的頂端，會檢查，查看所有標頭的已標記為 MustUndestand = true 已瞭解基礎堆疊。 如果全部都不瞭解，此時就會產生 `mustUnderstand` 錯誤。 使用者可以選擇關閉這個 `mustUnderstand` 處理，然後讓應用程式接收所有訊息標頭。 在這種情況下，應用程式便會負責執行 `mustUnderstand` 處理。產生的錯誤包括 NotUnderstood 標頭，其中包含堆疊不瞭解其 MustUnderstand=true 之標頭的名稱。  
   
  如果您的通訊協定通道傳送 MustUnderstand=true 的自訂標頭，並且收到 `mustUnderstand` 錯誤，則通道必須瞭解其傳送的標頭是否為該錯誤的成因。 `MessageFault` 類別上有兩個成員適用於這種情況：  
   
@@ -310,14 +310,14 @@ public class MessageFault
   
 -   <xref:System.Diagnostics.TraceSource?displayProperty=nameWithType>，這是要寫入之追蹤資訊的來源；<xref:System.Diagnostics.TraceListener?displayProperty=nameWithType>，這是具體接聽項的抽象基底類別，這些具體接聽項會從 <xref:System.Diagnostics.TraceSource> 接收要追蹤的資訊，並將其輸出到接聽項特定的目的端。 例如，<xref:System.Diagnostics.XmlWriterTraceListener> 會將追蹤資訊輸出到 XML 檔。 最後一項是 <xref:System.Diagnostics.TraceSwitch?displayProperty=nameWithType>，它可讓應用程式使用者控制追蹤詳細資訊，而且通常是在組態中指定。  
   
--   除了核心元件，您可以使用[服務追蹤檢視器工具 (SvcTraceViewer.exe)](../../../../docs/framework/wcf/service-trace-viewer-tool-svctraceviewer-exe.md)檢視與搜尋[!INCLUDE[indigo2](../../../../includes/indigo2-md.md)]追蹤。 這個工具是專門設計用於 [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] 產生，並且使用 <xref:System.Diagnostics.XmlWriterTraceListener> 寫出的追蹤檔。 下圖顯示與追蹤有關的各種元件。  
+-   除了核心元件，您可以使用[服務追蹤檢視器工具 (SvcTraceViewer.exe)](../../../../docs/framework/wcf/service-trace-viewer-tool-svctraceviewer-exe.md)來檢視和搜尋 WCF 追蹤。 此工具所專用的追蹤檔案由 WCF 所產生，並寫入使用<xref:System.Diagnostics.XmlWriterTraceListener>。 下圖顯示與追蹤有關的各種元件。  
   
  ![處理例外狀況和錯誤](../../../../docs/framework/wcf/extending/media/wcfc-tracinginchannelsc.gif "wcfc_TracingInChannelsc")  
   
 ### <a name="tracing-from-a-custom-channel"></a>從自訂通道追蹤  
  當偵錯工具無法附加到執行中的應用程式時，自訂通道便應該寫出追蹤訊息以協助診斷問題。 這涉及兩項高階工作：具現化 <xref:System.Diagnostics.TraceSource>，以及呼叫其方法來寫入追蹤。  
   
- 當具現化 <xref:System.Diagnostics.TraceSource> 時，您所指定的字串會成為該來源的名稱。 這個名稱是用來設定 (啟用/停用/設定追蹤層級) 追蹤來源， 同時也會出現在追蹤輸出本身。 自訂通道應該使用唯一來源名稱，以利追蹤輸出的讀取器瞭解該追蹤資訊的來源為何。 使用將資訊寫入成為追蹤來源名稱之組件的名稱是常見的做法。 例如，[!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] 會使用 System.ServiceModel 做為從 System.ServiceModel 組件寫入之資訊的追蹤來源。  
+ 當具現化 <xref:System.Diagnostics.TraceSource> 時，您所指定的字串會成為該來源的名稱。 這個名稱是用來設定 (啟用/停用/設定追蹤層級) 追蹤來源， 同時也會出現在追蹤輸出本身。 自訂通道應該使用唯一來源名稱，以利追蹤輸出的讀取器瞭解該追蹤資訊的來源為何。 使用將資訊寫入成為追蹤來源名稱之組件的名稱是常見的做法。 例如，WCF 會使用 System.ServiceModel 做為追蹤來源寫入從 System.ServiceModel 組件之資訊。  
   
  有了追蹤來源之後，您可以呼叫其 <xref:System.Diagnostics.TraceSource.TraceData%2A>、<xref:System.Diagnostics.TraceSource.TraceEvent%2A> 或 <xref:System.Diagnostics.TraceSource.TraceInformation%2A> 方法，將追蹤項目寫入到追蹤接聽項中。 針對每一個您寫入的追蹤項目，您都需要將事件的型別分類為 <xref:System.Diagnostics.TraceEventType> 中定義的其中一個事件型別。 這個分類和組態中的追蹤層級設定會判斷追蹤項目是否要輸出到接聽項中。 例如，如果將組態中的追蹤層級設定為 `Warning`，就可以寫入 `Warning`、`Error` 和 `Critical` 追蹤項目，但會封鎖「資訊」和「詳細資訊」項目。 以下是具現化追蹤來源，並且在資訊層級寫出項目的範例：  
   
@@ -402,4 +402,4 @@ udpsource.TraceInformation("UdpInputChannel received a message");
 </E2ETraceEvent>  
 ```  
   
- [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] 追蹤檢視器會瞭解先前所示之 `TraceRecord` 項目的結構描述，並且從其子項目擷取資料，然後以表格格式顯示。 在追蹤結構化應用程式資料時，您的通道應該要使用此結構描述，以利 Svctraceviewer.exe 使用者讀取資料。
+ WCF 追蹤檢視器，了解的結構描述`TraceRecord`先前顯示的項目和其子項目從擷取資料並將其以表格格式顯示。 在追蹤結構化應用程式資料時，您的通道應該要使用此結構描述，以利 Svctraceviewer.exe 使用者讀取資料。

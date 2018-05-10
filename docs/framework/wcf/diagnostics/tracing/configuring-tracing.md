@@ -4,11 +4,11 @@ ms.date: 03/30/2017
 helpviewer_keywords:
 - tracing [WCF]
 ms.assetid: 82922010-e8b3-40eb-98c4-10fc05c6d65d
-ms.openlocfilehash: 2f84254a993df35ef999ee6cdd36c4f6b256a89f
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
-ms.translationtype: HT
+ms.openlocfilehash: f9603f79992c31ad1af3b6c672b448ab031ba78d
+ms.sourcegitcommit: 15109844229ade1c6449f48f3834db1b26907824
+ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/04/2018
+ms.lasthandoff: 05/07/2018
 ---
 # <a name="configuring-tracing"></a>設定追蹤
 本主題將說明如何啟用追蹤、設定追蹤來源以發出追蹤並設定追蹤層級、設定活動追蹤與傳播以支援端對端追蹤相互關聯，以及設定追蹤接聽項來存取追蹤。  
@@ -25,11 +25,11 @@ ms.lasthandoff: 05/04/2018
   
 -   追蹤功能故障時出現的 Windows 錯誤事件。 請參閱[事件記錄](../../../../../docs/framework/wcf/diagnostics/event-logging/index.md)。  
   
- [!INCLUDE[indigo2](../../../../../includes/indigo2-md.md)] 追蹤是建立在 <xref:System.Diagnostics> 之上。 若要使用追蹤，您應該透過組態檔或程式碼來定義追蹤來源。 [!INCLUDE[indigo2](../../../../../includes/indigo2-md.md)] 會為每個 [!INCLUDE[indigo2](../../../../../includes/indigo2-md.md)] 組件定義追蹤來源。 `System.ServiceModel` 追蹤來源是最普遍的 [!INCLUDE[indigo2](../../../../../includes/indigo2-md.md)] 追蹤來源，可記錄從進入/離開傳輸到進入/離開使用者程式碼的整個 [!INCLUDE[indigo2](../../../../../includes/indigo2-md.md)] 通訊堆疊的處理里程碑。 `System.ServiceModel.MessageLogging` 追蹤來源會記錄在系統之間來回傳送的所有訊息。  
+ WCF 追蹤之上<xref:System.Diagnostics>。 若要使用追蹤，您應該透過組態檔或程式碼來定義追蹤來源。 WCF 會為每個 WCF 組件定義追蹤來源。 `System.ServiceModel`追蹤來源是最一般的 WCF 追蹤來源，可跨 WCF 通訊堆疊，從進入/離開傳輸到進入/離開使用者程式碼會記錄處理里程碑。 `System.ServiceModel.MessageLogging` 追蹤來源會記錄在系統之間來回傳送的所有訊息。  
   
- 預設不會啟用追蹤。 若要啟動追蹤，您必須建立追蹤接聽項並針對組態中的選取追蹤來源，將追蹤層級設為「關閉」以外的層級，否則，[!INCLUDE[indigo2](../../../../../includes/indigo2-md.md)] 將不會產生任何追蹤。 如果您沒有指定接聽項，就會自動停用追蹤。 如果已定義接聽項，但是未指定層級，則預設會將層級設定為「關閉」，這表示將不會發出任何追蹤。  
+ 預設不會啟用追蹤。 若要啟動追蹤，必須先建立追蹤接聽程式和組態中設定追蹤層級以外 「 關閉 」 時選取的追蹤來源否則，WCF 不會產生任何追蹤。 如果您沒有指定接聽項，就會自動停用追蹤。 如果已定義接聽項，但是未指定層級，則預設會將層級設定為「關閉」，這表示將不會發出任何追蹤。  
   
- 如果您使用自訂作業啟動程式等 [!INCLUDE[indigo2](../../../../../includes/indigo2-md.md)] 擴充點，就應該發出自己的追蹤。 這是因為，如果您實作了擴充點，[!INCLUDE[indigo2](../../../../../includes/indigo2-md.md)] 將無法在預設路徑中發出標準追蹤。 如果您沒有透過發出追蹤來實作手動追蹤支援，可能無法看見預期的追蹤。  
+ 如果您使用自訂作業啟動程式等的 WCF 擴充性點，您應該發出自己的追蹤。 這是因為如果您實作了擴充點，WCF 將不再發出標準追蹤預設路徑中。 如果您沒有透過發出追蹤來實作手動追蹤支援，可能無法看見預期的追蹤。  
   
  您可以透過編輯應用程式的組態檔 (Web 主控應用程式的 Web.config，或自我裝載應用程式的 Appname.exe.config) 來設定追蹤。 下列是這類編輯的範例。 如需有關這些設定的詳細資訊，請參閱 「 設定追蹤接聽項來使用追蹤 > 一節。  
   
@@ -52,12 +52,12 @@ ms.lasthandoff: 05/04/2018
 ```  
   
 > [!NOTE]
->  若要編輯的組態檔[!INCLUDE[indigo2](../../../../../includes/indigo2-md.md)]服務 [Visual Studio 專案中的，以滑鼠右鍵按一下應用程式的組態檔，Web 裝載的應用程式，或在自我裝載應用程式的 Appname.exe.config Web.config **方案總管] 中**。 然後選擇 **編輯 WCF 組態**操作功能表項目。 這會啟動[組態編輯器工具 (SvcConfigEditor.exe)](../../../../../docs/framework/wcf/configuration-editor-tool-svcconfigeditor-exe.md)，可讓您修改組態設定[!INCLUDE[indigo2](../../../../../includes/indigo2-md.md)]服務以使用圖形化使用者介面。  
+>  若要編輯的 Visual Studio 中的 WCF 服務專案的組態檔，以滑鼠右鍵按一下應用程式的組態檔，Web 裝載的應用程式，或在自我裝載應用程式的 Appname.exe.config Web.config**方案總管**. 然後選擇 **編輯 WCF 組態**操作功能表項目。 這會啟動[組態編輯器工具 (SvcConfigEditor.exe)](../../../../../docs/framework/wcf/configuration-editor-tool-svcconfigeditor-exe.md)，可讓您修改 WCF 服務使用圖形化使用者介面的組態設定。  
   
 ## <a name="configuring-trace-sources-to-emit-traces"></a>設定追蹤來源來發出追蹤  
- [!INCLUDE[indigo2](../../../../../includes/indigo2-md.md)] 會為每個組件定義追蹤來源。 組件中產生的追蹤是由針對該來源而定義的接聽項所存取。 下列為定義的追蹤來源：  
+ WCF 會為每個組件定義追蹤來源。 組件中產生的追蹤是由針對該來源而定義的接聽項所存取。 下列為定義的追蹤來源：  
   
--   System.ServiceModel：記錄 [!INCLUDE[indigo2](../../../../../includes/indigo2-md.md)] 處理的所有階段，不管是讀取組態、在傳輸過程中處理訊息、安全性處理、透過使用者程式碼來分派訊息等等。  
+-   System.ServiceModel： 記錄所有階段的 WCF 處理，只要讀取組態、 處理訊息傳輸、 安全性處理、 將訊息分派使用者程式碼，等等。  
   
 -   System.ServiceModel.MessageLogging：記錄在整個系統來回傳送的所有訊息。  
   
@@ -135,7 +135,7 @@ ms.lasthandoff: 05/04/2018
  如需有關如何建立使用者定義的追蹤來源的詳細資訊，請參閱[擴充追蹤](../../../../../docs/framework/wcf/samples/extending-tracing.md)。  
   
 ## <a name="configuring-trace-listeners-to-consume-traces"></a>設定追蹤接聽項來使用追蹤  
- 在執行階段，[!INCLUDE[indigo2](../../../../../includes/indigo2-md.md)] 會將追蹤資料輸送到負責處理資料的接聽項。 [!INCLUDE[indigo2](../../../../../includes/indigo2-md.md)] 會為 <xref:System.Diagnostics> 提供幾項預先定義的接聽項，其格式與輸出時使用的格式不同。 您也可以新增自訂接聽項型別。  
+ 在執行階段，WCF 追蹤資料摘要的接聽程式負責處理資料。 WCF 提供數個預先定義的接聽程式，以<xref:System.Diagnostics>，其格式與輸出時使用的格式不同。 您也可以新增自訂接聽項型別。  
   
  您可以使用 `add` 來指定要使用的追蹤接聽項名稱與型別。 在我們的組態範例中，我們將接聽項命名為 `traceListener` 並將標準 .NET Framework 追蹤接聽項 (`System.Diagnostics.XmlWriterTraceListener`) 當成要使用的型別加入。 您可以為每一個來源新增任何數量的追蹤接聽項。 如果追蹤接聽項將追蹤發出到檔案中，則您必須在組態檔中指定輸出檔案位置與名稱。 您可以將 `initializeData` 設定為該接聽項的檔案名稱來完成。 如果您沒有指定檔案名稱，就會根據使用的接聽項型別產生隨機檔案名稱。 如果使用了 <xref:System.Diagnostics.XmlWriterTraceListener>，則會產生不含副檔名的檔名。 如果您實作自訂接聽項，也可以同時使用此屬性來接收初始化資料 (而不是檔名)。 例如，您可以為此屬性指定資料庫識別項。  
   
@@ -169,13 +169,13 @@ ms.lasthandoff: 05/04/2018
  針對 `activityTracing` 屬性而指定的 `switchValue` 值可用來啟用活動追蹤，活動追蹤會為活動界限發出追蹤並在端點之間進行傳送。  
   
 > [!NOTE]
->  當您使用 [!INCLUDE[indigo2](../../../../../includes/indigo2-md.md)] 中的特定擴充功能時，如果活動追蹤已啟用，則您可能會取得 <xref:System.NullReferenceException>。 若要修正這個問題，請檢查您應用程式的組態檔，並確定追蹤來源的 `switchValue` 屬性不是設定為 `activityTracing`。  
+>  當您在 WCF 中使用的特定擴充功能時，您可能會收到<xref:System.NullReferenceException>已啟用活動追蹤。 若要修正這個問題，請檢查您應用程式的組態檔，並確定追蹤來源的 `switchValue` 屬性不是設定為 `activityTracing`。  
   
  `propagateActivity` 屬性會指出是否應該將活動傳播至其他參與訊息交換的端點。 將這個值設定為 `true` 之後，您就可以使用任意兩個端點所產生的追蹤檔，來觀察一個端點上的一組追蹤如何流動至另一個端點的一組追蹤。  
   
  如需活動追蹤與傳播的詳細資訊，請參閱[傳播](../../../../../docs/framework/wcf/diagnostics/tracing/propagation.md)。  
   
- 同時`propagateActivity`和`ActivityTracing`布林值會套用至 System.ServiceModel TraceSource。 `ActivityTracing`值也適用於任何追蹤來源，包括[!INCLUDE[indigo2](../../../../../includes/indigo2-md.md)]或使用者定義的。  
+ 同時`propagateActivity`和`ActivityTracing`布林值會套用至 System.ServiceModel TraceSource。 `ActivityTracing`值也適用於任何追蹤來源，包括 WCF 或使用者定義的。  
   
  您無法使用具有使用者定義追蹤來源的 `propagateActivity` 屬性。 若要進行使用者程式碼活動識別碼傳播，請確定您未設定 ServiceModel `ActivityTracing`，而且讓 ServiceModel `propagateActivity` 屬性仍舊設定為 `true`。  
   

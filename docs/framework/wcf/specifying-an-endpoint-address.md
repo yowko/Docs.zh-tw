@@ -7,17 +7,17 @@ dev_langs:
 helpviewer_keywords:
 - endpoints [WCF], addressing
 ms.assetid: ac24f5ad-9558-4298-b168-c473c68e819b
-ms.openlocfilehash: 784b0fe3e2b23287d458f9aa4d8276e10dd6ed97
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
-ms.translationtype: HT
+ms.openlocfilehash: f7e2253c527cbb2b6f21b222b1e9691c2ecff01f
+ms.sourcegitcommit: 15109844229ade1c6449f48f3834db1b26907824
+ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/04/2018
+ms.lasthandoff: 05/07/2018
 ---
 # <a name="specifying-an-endpoint-address"></a>指定端點位址
 所有與 Windows Communication Foundation (WCF) 服務的通訊是透過其端點。 每個 <xref:System.ServiceModel.Description.ServiceEndpoint> 都包含有 <xref:System.ServiceModel.Description.ServiceEndpoint.Address%2A>、<xref:System.ServiceModel.Description.ServiceEndpoint.Binding%2A> 和 <xref:System.ServiceModel.Description.ServiceEndpoint.Contract%2A>。 合約會指定哪些為可用的作業。 繫結會指定如何與服務通訊，而位址則指定何處可找到服務。 每個端點必須具備唯一的位址。 端點位址是由 <xref:System.ServiceModel.EndpointAddress> 類別所代表，其中包含代表服務位址的統一資源識別元 (URI)、代表服務之安全性身分識別的 <xref:System.ServiceModel.EndpointAddress.Identity%2A>，以及選用的 <xref:System.ServiceModel.EndpointAddress.Headers%2A> 集合。 選用標頭會提供更多詳細的定址資訊來識別端點或與端點互動。 例如，標頭會指出如何處理傳入訊息、端點應該將回覆訊息傳送到哪裡，或是當有多個執行個體可用時，要使用哪個服務執行個體來處理來自特定使用者的傳入訊息。  
   
 ## <a name="definition-of-an-endpoint-address"></a>端點位址的定義  
- 在 [!INCLUDE[indigo2](../../../includes/indigo2-md.md)] 中，<xref:System.ServiceModel.EndpointAddress> 會依據 WS-Addressing 標準的定義，製造端點參考 (EPR) 的模型。  
+ 在 WCF 中，<xref:System.ServiceModel.EndpointAddress>模型中之 Ws-addressing 標準所定義的端點參考 (EPR)。  
   
  大部分傳輸的位址 URI 具有四個部分。 例如，此 URI"http://www.fabrikam.com:322/mathservice.svc/secureEndpoint」 具有下列四個部分：  
   
@@ -29,11 +29,11 @@ ms.lasthandoff: 05/04/2018
   
 -   路徑：/mathservice.svc/secureEndpoint  
   
- EPR 模型的一部分，就是每個端點參考都包含可新增額外識別資訊的某些參考參數。 在 [!INCLUDE[indigo2](../../../includes/indigo2-md.md)] 中，這些參考參數會模型化為 <xref:System.ServiceModel.Channels.AddressHeader> 類別的執行個體。  
+ EPR 模型的一部分，就是每個端點參考都包含可新增額外識別資訊的某些參考參數。 在 WCF 中，這些參考參數會模型化為的執行個體<xref:System.ServiceModel.Channels.AddressHeader>類別。  
   
  您可以強制使用程式碼，或是透過組態以宣告的形式來指定服務的端點位址。 在程式碼中定義端點通常不太實用，因為部署之服務的繫結和位址通常與開發服務時所使用的繫結和位址不同。 一般來說，透過組態來定義服務端點會比透過程式碼來得實際一些。 將繫結和位址資訊留在程式碼外面可讓它們直接進行變更，而不需要重新編譯或重新部署應用程式。 如果在程式碼或組態中沒有指定端點，則執行階段會針對服務所實作的每個合約，在每個基底位址上加入一個預設端點。  
   
- 在 [!INCLUDE[indigo2](../../../includes/indigo2-md.md)] 中，有兩種方式可以用來指定服務的端點位址。 您可以為每個與服務相關聯的端點指定絕對位址，或是為服務的 <xref:System.ServiceModel.ServiceHost> 提供基底位址，然後指定相對於此基底位址所定義之服務相關聯的每個端點位址。 您可以透過組態或程式碼，使用這些程序中的任何一個來指定服務的端點位址。 如果您沒有指定相對位址，則服務會使用基底位址。 您可以讓同一個服務使用多個基底位址，但是每個服務只允許每個傳輸使用一個基底位址。 如果您具有多個端點，而其中每一個都設定為不同的繫結，則其位址必須是唯一的。 使用相同繫結但不同合約的端點可以使用相同的位址。  
+ 有兩種方式可在 WCF 中指定服務的端點位址。 您可以為每個與服務相關聯的端點指定絕對位址，或是為服務的 <xref:System.ServiceModel.ServiceHost> 提供基底位址，然後指定相對於此基底位址所定義之服務相關聯的每個端點位址。 您可以透過組態或程式碼，使用這些程序中的任何一個來指定服務的端點位址。 如果您沒有指定相對位址，則服務會使用基底位址。 您可以讓同一個服務使用多個基底位址，但是每個服務只允許每個傳輸使用一個基底位址。 如果您具有多個端點，而其中每一個都設定為不同的繫結，則其位址必須是唯一的。 使用相同繫結但不同合約的端點可以使用相同的位址。  
   
  使用 IIS 裝載時，您不用自行管理 <xref:System.ServiceModel.ServiceHost> 執行個體。 裝載於 IIS 時，基底位址一律是服務的 .svc 檔案中指定的位址。 因此請務必針對 IIS 裝載的服務端點使用相對端點位址。 在部署服務時，提供完整的端點位址可能會導致錯誤。 如需詳細資訊，請參閱[部署 Internet Information Services-Hosted WCF 服務](../../../docs/framework/wcf/feature-details/deploying-an-internet-information-services-hosted-wcf-service.md)。  
   

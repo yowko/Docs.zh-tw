@@ -4,11 +4,11 @@ ms.date: 03/30/2017
 helpviewer_keywords:
 - bindings [WCF], system-provided
 ms.assetid: 2c243746-45ce-4588-995e-c17126a579a6
-ms.openlocfilehash: 12382b0886970bc48345107008ee449d9653ec4f
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
-ms.translationtype: HT
+ms.openlocfilehash: 97a8e9fd8f0e2c906f14556fcdccd7ef0d3c8033
+ms.sourcegitcommit: 15109844229ade1c6449f48f3834db1b26907824
+ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/04/2018
+ms.lasthandoff: 05/07/2018
 ---
 # <a name="system-provided-bindings"></a>系統提供的繫結
 在與端點對話時，繫結會指定要使用的通訊機制，並指出如何連接至端點。 繫結包含下列項目：  
@@ -30,7 +30,7 @@ ms.lasthandoff: 05/04/2018
 >  請勿使用不支援或已停用安全性的繫結來搭配雙工合約一起使用，除非您能夠以其他方式來保護資料的安全。  
   
 ## <a name="system-provided-bindings"></a>系統提供的繫結  
- 下列繫結會隨附於 [!INCLUDE[indigo2](../../../includes/indigo2-md.md)]。  
+ 下列繫結是由 WCF 所隨附。  
   
 |繫結|組態項目|描述|  
 |-------------|---------------------------|-----------------|  
@@ -40,14 +40,14 @@ ms.lasthandoff: 05/04/2018
 |<xref:System.ServiceModel.WSFederationHttpBinding>|[\<wsFederationHttpBinding>](../../../docs/framework/configure-apps/file-schema/wcf/wsfederationhttpbinding.md)|安全、互通且支援 WS-Federation 通訊協定的繫結，此繫結可讓聯合組織有效率地驗證並授權使用者。|  
 |<xref:System.ServiceModel.NetHttpBinding>|\<netHttpBinding>|為了使用 HTTP 或 WebSocket 服務而設計的繫結，其預設會使用二進位編碼。|  
 |<xref:System.ServiceModel.NetHttpsBinding>|\<netHttpsBinding >|為了使用 HTTP 或 WebSocket 服務而設計的安全繫結，其預設會採用二進位編碼。|  
-|<xref:System.ServiceModel.NetTcpBinding>|[\<netTcpBinding>](../../../docs/framework/configure-apps/file-schema/wcf/nettcpbinding.md)|安全且最佳化的繫結，適用於 [!INCLUDE[indigo2](../../../includes/indigo2-md.md)] 應用程式之間的跨電腦通訊。|  
-|<xref:System.ServiceModel.NetNamedPipeBinding>|[\<netNamedPipeBinding >](../../../docs/framework/configure-apps/file-schema/wcf/netnamedpipebinding.md)|安全、可靠且最佳化的繫結，適用於 [!INCLUDE[indigo2](../../../includes/indigo2-md.md)] 應用程式之間的電腦通訊。|  
-|<xref:System.ServiceModel.NetMsmqBinding>|[\<netMsmqBinding >](../../../docs/framework/configure-apps/file-schema/wcf/netmsmqbinding.md)|佇列繫結，適用於 [!INCLUDE[indigo2](../../../includes/indigo2-md.md)] 應用程式之間的跨電腦通訊。|  
+|<xref:System.ServiceModel.NetTcpBinding>|[\<netTcpBinding>](../../../docs/framework/configure-apps/file-schema/wcf/nettcpbinding.md)|安全且最佳化的繫結適用於 WCF 應用程式之間的跨電腦通訊。|  
+|<xref:System.ServiceModel.NetNamedPipeBinding>|[\<netNamedPipeBinding >](../../../docs/framework/configure-apps/file-schema/wcf/netnamedpipebinding.md)|適當的 WCF 應用程式之間的電腦通訊的安全、 可靠且最佳化的繫結。|  
+|<xref:System.ServiceModel.NetMsmqBinding>|[\<netMsmqBinding >](../../../docs/framework/configure-apps/file-schema/wcf/netmsmqbinding.md)|佇列繫結，適用於 WCF 應用程式之間的跨電腦通訊。|  
 |<xref:System.ServiceModel.NetPeerTcpBinding>|[\<netPeerTcpBinding >](../../../docs/framework/configure-apps/file-schema/wcf/netpeertcpbinding.md)|可啟用安全、多電腦通訊的繫結。|  
-|<xref:System.ServiceModel.MsmqIntegration.MsmqIntegrationBinding>|[\<msmqIntegrationBinding>](../../../docs/framework/configure-apps/file-schema/wcf/msmqintegrationbinding.md)|繫結，適用於 [!INCLUDE[indigo2](../../../includes/indigo2-md.md)] 應用程式與現有訊息佇列應用程式之間的跨電腦通訊。|  
+|<xref:System.ServiceModel.MsmqIntegration.MsmqIntegrationBinding>|[\<msmqIntegrationBinding>](../../../docs/framework/configure-apps/file-schema/wcf/msmqintegrationbinding.md)|繫結，適用於 WCF 應用程式與現有訊息佇列應用程式之間的跨電腦通訊。|  
 |<xref:System.ServiceModel.BasicHttpContextBinding>|[\<basicHttpContextBinding >](../../../docs/framework/configure-apps/file-schema/wcf/basichttpcontextbinding.md)|繫結，適合用來與 WS-Basic Profile 相容的 Web 服務進行通訊，能夠啟用用於交換內容的 HTTP Cookie。|  
-|<xref:System.ServiceModel.NetTcpContextBinding>|[\<netTcpContextBinding >](../../../docs/framework/configure-apps/file-schema/wcf/nettcpcontextbinding.md)|安全且最佳化的繫結，適用於在 [!INCLUDE[indigo2](../../../includes/indigo2-md.md)] 應用程式之間進行跨電腦的通訊，可以啟用用於交換內容的 SOAP 標頭。|  
-|<xref:System.ServiceModel.WebHttpBinding>|[\<webHttpBinding>](../../../docs/framework/configure-apps/file-schema/wcf/webhttpbinding.md)|用於設定 [!INCLUDE[indigo2](../../../includes/indigo2-md.md)] Web 服務端點的繫結，這些服務的公開會透過 HTTP 要求，而非 SOAP 訊息。|  
+|<xref:System.ServiceModel.NetTcpContextBinding>|[\<netTcpContextBinding >](../../../docs/framework/configure-apps/file-schema/wcf/nettcpcontextbinding.md)|可讓用來交換內容的 SOAP 標頭的安全且最佳化的繫結適用於 WCF 應用程式之間的跨電腦通訊。|  
+|<xref:System.ServiceModel.WebHttpBinding>|[\<webHttpBinding>](../../../docs/framework/configure-apps/file-schema/wcf/webhttpbinding.md)|若要設定透過 HTTP 要求，而非 SOAP 訊息所公開的 WCF Web 服務端點所用的繫結。|  
 |<xref:System.ServiceModel.WSHttpContextBinding>|[\<wsHttpContextBinding >](../../../docs/framework/configure-apps/file-schema/wcf/wshttpcontextbinding.md)|安全和 |<xref:System.ServiceModel.UdpBinding>|\<udpBinding >|要在同時傳送一批突發之簡單訊息給大量用戶端時使用的繫結。|  
   
  下表說明每一個系統提供繫結的個別功能。 您將於表格欄位中找到繫結；各項功能則列於各資料列，並於另一個表格中加以描述。 下表將說明使用的繫結縮寫。 若要選取繫結，請決定哪一欄可滿足所有您需要的資料列功能。  

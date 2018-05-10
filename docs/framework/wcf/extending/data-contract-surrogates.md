@@ -4,11 +4,11 @@ ms.date: 03/30/2017
 helpviewer_keywords:
 - data contracts [WCF], surrogates
 ms.assetid: 8c31134c-46c5-4ed7-94af-bab0ac0dfce5
-ms.openlocfilehash: 455900b1ac5d10c02e6b1341e737eb6874c874f4
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
-ms.translationtype: HT
+ms.openlocfilehash: b06cb45d6075c8de1da973a11e2edec6792df304
+ms.sourcegitcommit: 15109844229ade1c6449f48f3834db1b26907824
+ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/04/2018
+ms.lasthandoff: 05/07/2018
 ---
 # <a name="data-contract-surrogates"></a>資料合約代理
 資料合約*surrogate*是資料合約模型上建置的進階的功能。 這項功能是專為在使用者想要變更型別序列化、還原序列化或投射至中繼資料的方式時，用來自訂和替換型別所設計。 某些可能使用代理的情況包括：尚未指定型別的資料合約、欄位和屬性 (Property) 尚未以 <xref:System.Runtime.Serialization.DataMemberAttribute> 屬性 (Attribute) 標記，或是使用者希望動態建立結構描述變形時。  
@@ -133,7 +133,7 @@ ms.lasthandoff: 05/04/2018
  這個方法會在結構描述匯出和匯入開始時呼叫。 然後傳回在匯出或匯入的結構描述中使用的自訂資料型別。 這個方法會收到傳遞的 <xref:System.Collections.ObjectModel.Collection%601> (`customDataTypes` 參數)，此為型別的集合。 這個方法應將額外的已知型別加入這個集合中。 必須有已知的自訂資料型別，才能使用 <xref:System.Runtime.Serialization.DataContractSerializer> 序列化和還原序列化自訂資料。 如需詳細資訊，請參閱[資料合約已知型別](../../../../docs/framework/wcf/feature-details/data-contract-known-types.md)。  
   
 ## <a name="implementing-a-surrogate"></a>實作代理  
- 若要在 [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] 內使用資料合約代理，您必須執行幾項特殊的程序。  
+ 若要使用資料合約代理，WCF 中的，您必須遵循一些特殊的程序。  
   
 ### <a name="to-use-a-surrogate-for-serialization-and-deserialization"></a>若要使用代理進行序列化和還原序列化  
  您可以使用 <xref:System.Runtime.Serialization.DataContractSerializer> 搭配代理來執行資料序列化和還原序列化。 <xref:System.Runtime.Serialization.DataContractSerializer> 是由 <xref:System.ServiceModel.Description.DataContractSerializerOperationBehavior> 建立。 代理同樣必須指定。  
@@ -174,7 +174,7 @@ ms.lasthandoff: 05/04/2018
      [!code-csharp[C_IDataContractSurrogate#9](../../../../samples/snippets/csharp/VS_Snippets_CFX/c_idatacontractsurrogate/cs/source.cs#9)]  
   
 ### <a name="to-use-a-surrogate-for-metadata-export"></a>若要使用代理進行中繼資料匯出  
- 根據預設，從 [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] 匯出服務的中繼資料時，必須產生 WSDL 和 XSD 這兩種結構描述。 代理必須加入至負責產生資料合約型別 <xref:System.Runtime.Serialization.XsdDataContractExporter> 的 XSD 結構描述元件中。 若要執行這項操作，可使用實作 <xref:System.ServiceModel.Description.IWsdlExportExtension> 的行為修改 <xref:System.ServiceModel.Description.WsdlExporter>，或是直接修改用來匯出中繼資料的 <xref:System.ServiceModel.Description.WsdlExporter>。  
+ 根據預設，從 WCF 匯出中繼資料服務時，需要產生 WSDL 和 XSD 結構描述。 代理必須加入至負責產生資料合約型別 <xref:System.Runtime.Serialization.XsdDataContractExporter> 的 XSD 結構描述元件中。 若要執行這項操作，可使用實作 <xref:System.ServiceModel.Description.IWsdlExportExtension> 的行為修改 <xref:System.ServiceModel.Description.WsdlExporter>，或是直接修改用來匯出中繼資料的 <xref:System.ServiceModel.Description.WsdlExporter>。  
   
 ##### <a name="to-use-a-surrogate-for-metadata-export"></a>若要使用代理進行中繼資料匯出  
   

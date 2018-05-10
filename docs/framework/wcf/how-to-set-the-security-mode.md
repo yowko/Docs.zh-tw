@@ -11,18 +11,18 @@ helpviewer_keywords:
 ms.assetid: 6e01dd9f-b5dd-4474-b24c-06e124de4ff7
 author: BrucePerlerMS
 manager: mbaldwin
-ms.openlocfilehash: ddcf6983a7308bc1a615b11e86f17da1302d5085
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
-ms.translationtype: HT
+ms.openlocfilehash: e8c08fba0e4a74eafab00e75977a9f756c1b1cfa
+ms.sourcegitcommit: 15109844229ade1c6449f48f3834db1b26907824
+ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/04/2018
+ms.lasthandoff: 05/07/2018
 ---
 # <a name="how-to-set-the-security-mode"></a>HOW TO：設定安全性模式
 Windows Communication Foundation (WCF) 安全性有三種常見的安全性模式最預先定義繫結上找到： 傳輸、 訊息與 「 使用訊息認證進行傳輸。 」 另外有兩種額外的模式適用於下列兩種繫結：<xref:System.ServiceModel.BasicHttpBinding> 上的「僅限傳輸-認證」以及 <xref:System.ServiceModel.NetMsmqBinding> 上的「兩者並存」模式。 然而，此主題將著重在三種常見的安全性模式：<xref:System.ServiceModel.SecurityMode.Transport>、<xref:System.ServiceModel.SecurityMode.Message> 與 <xref:System.ServiceModel.SecurityMode.TransportWithMessageCredential>。  
   
  請注意，並非所有預先定義的繫結都支援這些模式。 本主題將使用 <xref:System.ServiceModel.WSHttpBinding> 和 <xref:System.ServiceModel.NetTcpBinding> 類別來設定模式，並示範如何以程式設計方式及透過組態來設定模式。  
   
- 如需詳細資訊，請參閱[!INCLUDE[indigo2](../../../includes/indigo2-md.md)]安全性，請參閱[安全性概觀](../../../docs/framework/wcf/feature-details/security-overview.md)，[保護 Services](../../../docs/framework/wcf/securing-services.md)，和[保護服務和用戶端](../../../docs/framework/wcf/feature-details/securing-services-and-clients.md)。 如需傳輸的模式與訊息的詳細資訊，請參閱[傳輸安全性](../../../docs/framework/wcf/feature-details/transport-security.md)和[訊息安全性](../../../docs/framework/wcf/feature-details/message-security-in-wcf.md)。  
+ 如需詳細資訊，請參閱 WCF 安全性，請參閱[安全性概觀](../../../docs/framework/wcf/feature-details/security-overview.md)，[保護 Services](../../../docs/framework/wcf/securing-services.md)，和[保護服務和用戶端](../../../docs/framework/wcf/feature-details/securing-services-and-clients.md)。 如需傳輸的模式與訊息的詳細資訊，請參閱[傳輸安全性](../../../docs/framework/wcf/feature-details/transport-security.md)和[訊息安全性](../../../docs/framework/wcf/feature-details/message-security-in-wcf.md)。  
   
 ### <a name="to-set-the-security-mode-in-code"></a>若要在程式碼中設定安全性模式  
   

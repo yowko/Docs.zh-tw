@@ -2,11 +2,11 @@
 title: WSStreamedHttpBinding
 ms.date: 03/30/2017
 ms.assetid: 97ce4d3d-ca6f-45fa-b33b-2429bb84e65b
-ms.openlocfilehash: f146e469a323dffa2cdb9b76b6956be97747b2de
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
-ms.translationtype: HT
+ms.openlocfilehash: b0a4c316957a002f7541d230f96299e3f43ef778
+ms.sourcegitcommit: 15109844229ade1c6449f48f3834db1b26907824
+ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/04/2018
+ms.lasthandoff: 05/07/2018
 ---
 # <a name="wsstreamedhttpbinding"></a>WSStreamedHttpBinding
 本範例會示範如何建立可在使用 HTTP 傳輸時支援資料流案例的繫結。  
@@ -51,7 +51,7 @@ ms.lasthandoff: 05/04/2018
   
 2.  新增組態支援  
   
-     為了透過組態公開傳輸，此範例會實作兩個額外的類別：`WSStreamedHttpBindingConfigurationElement` 和 `WSStreamedHttpBindingSection`。 類別 `WSStreamedHttpBindingSection` 是 <xref:System.ServiceModel.Configuration.StandardBindingCollectionElement%602>`WSStreamedHttpBinding`，它會將 [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] 公開至組態系統。 大量實作會委派至衍生自 `WSStreamedHttpBindingConfigurationElement` 的 <xref:System.ServiceModel.Configuration.StandardBindingElement>。 類別 `WSStreamedHttpBindingConfigurationElement` 有對應至 `WSStreamedHttpBinding` 之屬性的屬性，以及將每個組態項目對應至繫結的功能。  
+     為了透過組態公開傳輸，此範例會實作兩個額外的類別：`WSStreamedHttpBindingConfigurationElement` 和 `WSStreamedHttpBindingSection`。 類別`WSStreamedHttpBindingSection`是<xref:System.ServiceModel.Configuration.StandardBindingCollectionElement%602>公開`WSStreamedHttpBinding`至 WCF 組態系統。 大量實作會委派至衍生自 `WSStreamedHttpBindingConfigurationElement` 的 <xref:System.ServiceModel.Configuration.StandardBindingElement>。 類別 `WSStreamedHttpBindingConfigurationElement` 有對應至 `WSStreamedHttpBinding` 之屬性的屬性，以及將每個組態項目對應至繫結的功能。  
   
      向組態系統註冊此處理常式的方式是，將下列區段新增至服務的組態檔中。  
   
@@ -133,7 +133,7 @@ public class StreamedEchoService : IStreamedEchoService
 ```  
   
 ## <a name="the-wsstreamedhttpbinding-sample-client"></a>WSStreamedHttpBinding 範例用戶端  
- 透過 `WSStreamedHttpBinding` 與服務互動時所使用的用戶端位於用戶端子目錄中。 當您嘗試存取 HTTPS 位址瀏覽器中的，例如，因為此範例中使用的憑證是使用 Makecert.exe 所建立的測試憑證，會顯示安全性警示https://localhost/servicemodelsamples/service.svc。 若要允許 [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] 用戶端適當地使用測試憑證，就必須在用戶端新增某些其他程式碼以便隱藏安全性警示。 使用實際執行憑證時，不需要這個程式碼及伴隨的類別。  
+ 透過 `WSStreamedHttpBinding` 與服務互動時所使用的用戶端位於用戶端子目錄中。 當您嘗試存取 HTTPS 位址瀏覽器中的，例如，因為此範例中使用的憑證是使用 Makecert.exe 所建立的測試憑證，會顯示安全性警示https://localhost/servicemodelsamples/service.svc。 若要允許 WCF 用戶端使用測試憑證中的位置，具有以便隱藏安全性警示用戶端新增某些其他程式碼。 使用實際執行憑證時，不需要這個程式碼及伴隨的類別。  
   
 ```  
 // WARNING: This code is only required for test certificates such as those created by makecert. It is   

@@ -4,11 +4,11 @@ ms.date: 03/30/2017
 helpviewer_keywords:
 - extensible objects [WCF]
 ms.assetid: bc88cefc-31fb-428e-9447-6d20a7d452af
-ms.openlocfilehash: 4fdb3ddff6bda21ac7f9538645d92f15e0b443b9
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
-ms.translationtype: HT
+ms.openlocfilehash: 95bd354e3aed8e0968debcac160383eb9c26cd0a
+ms.sourcegitcommit: 15109844229ade1c6449f48f3834db1b26907824
+ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/04/2018
+ms.lasthandoff: 05/07/2018
 ---
 # <a name="extensible-objects"></a>可延伸物件
 可延伸物件模式是用於以新功能延伸現有的執行階段類別，或將新狀態新增至物件。 附加至其中一個可擴充物件的擴充功能會在處理程序中的各種不同階段啟用行為，以存取附加至它們可存取之一般可擴充物件的共用狀態與功能。  
@@ -56,7 +56,7 @@ where T : IExtensibleObject<T>
   
 -   <xref:System.ServiceModel.OperationContext> – 這個類別代表執行階段為各作業蒐集的作業資訊。  其中包括的資訊如傳入訊息標頭、傳入訊息屬性、傳入安全性身分識別和其他資訊。  這個類別的延伸可以延伸 <xref:System.ServiceModel.OperationContext> 的行為，或儲存各作業的狀態。  
   
--   <xref:System.ServiceModel.IContextChannel> – 這個介面允許檢查由 [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] 執行階段所建置的通道和 Proxy 的各個狀態。  這個類別的延伸可以延伸 <xref:System.ServiceModel.IClientChannel> 的行為，或可用它來儲存各通道的狀態。  
+-   <xref:System.ServiceModel.IContextChannel> – 這個介面可讓每個狀態之通道與 WCF 執行階段所建置的 proxy 進行檢查。  這個類別的延伸可以延伸 <xref:System.ServiceModel.IClientChannel> 的行為，或可用它來儲存各通道的狀態。  
   
 -  
   

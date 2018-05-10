@@ -2,17 +2,17 @@
 title: 聯合範例
 ms.date: 03/30/2017
 ms.assetid: 7e9da0ca-e925-4644-aa96-8bfaf649d4bb
-ms.openlocfilehash: 38581c7003c30038ee1a3438caa96b7f2782a23e
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
-ms.translationtype: HT
+ms.openlocfilehash: a9c2b91f7d8bdf24476c76fcd479b7f2fb44c90f
+ms.sourcegitcommit: 15109844229ade1c6449f48f3834db1b26907824
+ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/04/2018
+ms.lasthandoff: 05/07/2018
 ---
 # <a name="federation-sample"></a>聯合範例
 這個範例將示範聯合安全性。  
   
 ## <a name="sample-details"></a>範例詳細資料  
- Windows Communication Foundation (WCF) 提供支援部署聯合的安全性架構透過`wsFederationHttpBinding`。 `wsFederationHttpBinding` 提供安全、可靠以及可互通的繫結，其中包括使用 HTTP 做為要求/回覆通訊的基礎傳輸機制，以及採用文字/XML 做為編碼的 Wire 格式。 如需有關中同盟[!INCLUDE[indigo2](../../../../includes/indigo2-md.md)]，請參閱[同盟](../../../../docs/framework/wcf/feature-details/federation.md)。  
+ Windows Communication Foundation (WCF) 提供支援部署聯合的安全性架構透過`wsFederationHttpBinding`。 `wsFederationHttpBinding` 提供安全、可靠以及可互通的繫結，其中包括使用 HTTP 做為要求/回覆通訊的基礎傳輸機制，以及採用文字/XML 做為編碼的 Wire 格式。 如需在 WCF 中的同盟的詳細資訊，請參閱[同盟](../../../../docs/framework/wcf/feature-details/federation.md)。  
   
  本案例由 4 個部分組成：  
   

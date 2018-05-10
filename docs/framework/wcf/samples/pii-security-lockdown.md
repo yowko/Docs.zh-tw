@@ -4,11 +4,11 @@ ms.date: 03/30/2017
 ms.assetid: c44fb338-9527-4dd0-8607-b8787d15acb4
 author: BrucePerlerMS
 manager: mbaldwin
-ms.openlocfilehash: 81fc656784dadf0706e2ae3feda09cd08b886560
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
-ms.translationtype: HT
+ms.openlocfilehash: ec8af8c7df9335774b1f3953f88c2aad438963b6
+ms.sourcegitcommit: 15109844229ade1c6449f48f3834db1b26907824
+ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/04/2018
+ms.lasthandoff: 05/07/2018
 ---
 # <a name="pii-security-lockdown"></a>PII 安全性鎖定
 這個範例示範如何控制的 Windows Communication Foundation (WCF) 服務的數個安全性相關功能：  
@@ -29,11 +29,11 @@ ms.lasthandoff: 05/04/2018
 >  `<InstallDrive>:\WF_WCF_Samples\WCF\Basic\Management\SecurityLockdown`  
   
 ## <a name="discussion"></a>討論  
- 您可以單獨或一起使用這些功能，以控制服務安全性的各個方面。 不過這不是確認 [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] 服務安全的決定性做法。  
+ 您可以單獨或一起使用這些功能，以控制服務安全性的各個方面。 這不是最終指南保護 WCF 服務。  
   
  .NET Framework 組態檔中包含敏感性資訊，例如連接至資料庫的連線字串。 在共用的 Web 裝載案例中，可能需要針對服務在組態檔中加密此資訊，因此組態檔所含的資料便不會任意讓人檢視。 .NET Framework 2.0 和更新版本可以使用 Windows Data Protection 應用程式開發介面 (DPAPI) 或 RSA 密碼編譯提供者，加密組態檔的各個部分。 使用 DPAPI 或 RSA 的 aspnet_regiis.exe 可以加密組態檔的選取部分。  
   
- 在 Web 裝載的案例中，可能在其他服務的子目錄中還有服務。 判斷組態值的預設語意可允許巢狀目錄中的組態檔複寫上層目錄中的組態值。 在特定情況下，有許多原因都顯示不應該這樣做。 [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] 服務組態支援鎖定組態值，因此當巢狀服務正在使用覆寫的組態值執行時，巢狀組態就會產生例外狀況。  
+ 在 Web 裝載的案例中，可能在其他服務的子目錄中還有服務。 判斷組態值的預設語意可允許巢狀目錄中的組態檔複寫上層目錄中的組態值。 在特定情況下，有許多原因都顯示不應該這樣做。 WCF 服務的組態支援鎖定組態值，讓巢狀組態會產生例外狀況，巢狀的服務執行時使用覆寫組態值。  
   
  這個範例示範如何控制在追蹤與訊息記錄檔中的已知個人可識別資訊 (PII) 記錄，例如使用者名稱與密碼。 根據預設，已停用記錄已知 PII，不過在特定情況下，記錄 PII 在偵錯應用程式時相當重要。 這個範例根據[入門](../../../../docs/framework/wcf/samples/getting-started-sample.md)。 此外，這個範例會使用追蹤和訊息記錄。 如需詳細資訊，請參閱[追蹤和訊息記錄](../../../../docs/framework/wcf/samples/tracing-and-message-logging.md)範例。  
   

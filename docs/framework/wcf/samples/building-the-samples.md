@@ -2,17 +2,17 @@
 title: 建置 Windows Communication Foundation 範例
 ms.date: 03/30/2017
 ms.assetid: 2899e7a5-9cb2-4e8d-b8d2-f31391549198
-ms.openlocfilehash: 5493972306092fc3309b0993d595f22c74c8603a
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
-ms.translationtype: HT
+ms.openlocfilehash: 637b862d81ce4eeddc56acb24a527e6937f33f64
+ms.sourcegitcommit: 15109844229ade1c6449f48f3834db1b26907824
+ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/04/2018
+ms.lasthandoff: 05/07/2018
 ---
 # <a name="building-the-windows-communication-foundation-samples"></a>建置 Windows Communication Foundation 範例
 您可以建置 Windows Communication Foundation (WCF) 範例，使用 Visual Studio 2010 或**msbuild**從命令列命令。 本主題將同時說明這兩個程序。  
   
 > [!NOTE]
->  在建置或執行任何之前[!INCLUDE[indigo2](../../../../includes/indigo2-md.md)]範例，請確定您已經執行[的 Windows Communication Foundation 範例的單次安裝程序](../../../../docs/framework/wcf/samples/one-time-setup-procedure-for-the-wcf-samples.md)。  
+>  之前建置或執行任何 WCF 範例，請確定您已經執行[的 Windows Communication Foundation 範例的單次安裝程序](../../../../docs/framework/wcf/samples/one-time-setup-procedure-for-the-wcf-samples.md)。  
   
 ### <a name="to-build-the-sample-using-a-command-prompt"></a>若要使用命令提示字元建置範例  
   

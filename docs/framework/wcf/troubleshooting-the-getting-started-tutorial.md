@@ -2,11 +2,11 @@
 title: 使用者入門教學課程疑難排解
 ms.date: 03/30/2017
 ms.assetid: 69a21511-0871-4c41-9a53-93110e84d7fd
-ms.openlocfilehash: 863e9dd1253624c025e830f589068068cb996413
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
-ms.translationtype: HT
+ms.openlocfilehash: 12812bd1ef88eab14a8defed0b71657b0d33c618
+ms.sourcegitcommit: 15109844229ade1c6449f48f3834db1b26907824
+ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/04/2018
+ms.lasthandoff: 05/07/2018
 ---
 # <a name="troubleshooting-the-getting-started-tutorial"></a>使用者入門教學課程疑難排解
 本主題列出在進行使用者入門教學課程時遇到的最常見問題，以及如何解決這些問題的方式。  
@@ -31,7 +31,7 @@ ms.lasthandoff: 05/04/2018
   
 <a name="BKMK_q2"></a>   
 ## <a name="attempting-to-run-the-service-application-http-could-not-register-url-http8000servicemodelsamplesservice-your-process-does-not-have-access-rights-to-this-namespace"></a>嘗試執行服務應用程式： HTTP 無法登錄 URL http://+:8000/ServiceModelSamples/Service/。 您的處理程序沒有足夠的存取權可存取此命名空間。  
- 裝載 [!INCLUDE[indigo2](../../../includes/indigo2-md.md)] 服務的處理序必須以系統管理權限執行。 如果您是從 [!INCLUDE[vs_current_long](../../../includes/vs-current-long-md.md)] 內部執行此服務，則必須以系統管理員身分執行 [!INCLUDE[vs_current_long](../../../includes/vs-current-long-md.md)]。 若要這樣做，因此按一下**啟動**，以滑鼠右鍵按一下[!INCLUDE[vs_current_long](../../../includes/vs-current-long-md.md)]選取**系統管理員身分執行**。 如果您是從命令提示字元執行此服務，同樣必須以系統管理員身分啟動命令提示字元。 按一下**啟動**，以滑鼠右鍵按一下**命令提示字元**選取**系統管理員身分執行**。  
+ 裝載 WCF 服務的處理序必須以系統管理權限執行。 如果您是從 [!INCLUDE[vs_current_long](../../../includes/vs-current-long-md.md)] 內部執行此服務，則必須以系統管理員身分執行 [!INCLUDE[vs_current_long](../../../includes/vs-current-long-md.md)]。 若要這樣做，因此按一下**啟動**，以滑鼠右鍵按一下[!INCLUDE[vs_current_long](../../../includes/vs-current-long-md.md)]選取**系統管理員身分執行**。 如果您是從命令提示字元執行此服務，同樣必須以系統管理員身分啟動命令提示字元。 按一下**啟動**，以滑鼠右鍵按一下**命令提示字元**選取**系統管理員身分執行**。  
   
 <a name="BKMK_q3"></a>   
 ## <a name="attempting-to-use-the-svcutilexe-tool-svcutil-is-not-recognized-as-an-internal-or-external-command-operable-program-or-batch-file"></a>當嘗試使用 Svcutil.exe 工具時，發生下列錯誤：'svcutil' 不是內部或外部命令、可執行的程式或批次檔。  

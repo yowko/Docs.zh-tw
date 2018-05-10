@@ -4,11 +4,11 @@ ms.date: 03/30/2017
 helpviewer_keywords:
 - Transactions
 ms.assetid: f8eecbcf-990a-4dbb-b29b-c3f9e3b396bd
-ms.openlocfilehash: 699ba3efad0c8b98aacfc4b64f2fdf03270478b0
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
-ms.translationtype: HT
+ms.openlocfilehash: bf78b679be84efa416d088d5addaaa25a593abf4
+ms.sourcegitcommit: 15109844229ade1c6449f48f3834db1b26907824
+ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/04/2018
+ms.lasthandoff: 05/07/2018
 ---
 # <a name="ws-transaction-flow"></a>WS 異動流程
 這個範例會示範用戶端協調異動的用法，以及使用 WS-Atomic 異動或 OleTransactions 通訊協定之異動流程的用戶端和伺服器選項。 這個範例根據[入門](../../../../docs/framework/wcf/samples/getting-started-sample.md)，用來實作計算機服務，但作業屬於示範如何使用`TransactionFlowAttribute`與**transactionflowoption 設定**若要判斷何種程度交易啟用流程列舉型別。 在流動的交易範圍內，會將所要求作業的記錄檔寫入資料庫，並在完成用戶端協調交易之前都會保存該記錄檔。如果用戶端交易未完成，Web 服務交易一定不會認可對資料庫進行適當的更新。  
@@ -231,7 +231,7 @@ Press <ENTER> to terminate the service.
     > [!NOTE]
     >  若為跨電腦組態，請使用下列指示來啟用分散式異動協調器，然後使用 Windows SDK 中的 WsatConfig.exe 工具來啟用 WCF 異動網路支援。 請參閱[設定 Ws-atomic 交易支援](http://go.microsoft.com/fwlink/?LinkId=190370)如需設定 WsatConfig.exe 的詳細資訊。  
   
- 不管您是在同一部電腦還是不同電腦上執行範例，您都必須設定 Microsoft Distributed Transaction Coordinator (MSDTC) 以啟用網路交易流程，並使用 WsatConfig.exe 工具來啟用 [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] 交易網路支援。  
+ 不管您是在相同電腦上或不同電腦上執行範例，您必須設定 Microsoft Distributed Transaction Coordinator (MSDTC) 以啟用網路交易流程，並使用 WsatConfig.exe 工具來啟用 WCF 交易網路支援。  
   
 ### <a name="to-configure-the-microsoft-distributed-transaction-coordinator-msdtc-to-support-running-the-sample"></a>若要設定 Microsoft Distributed Transaction Coordinator (MSDTC) 以支援執行範例  
   
