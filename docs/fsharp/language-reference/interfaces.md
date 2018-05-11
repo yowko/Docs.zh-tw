@@ -2,11 +2,11 @@
 title: 介面 (F#)
 description: '了解 F # 介面指定集之相關成員的其他類別所實作的方式。'
 ms.date: 05/16/2016
-ms.openlocfilehash: 174e30c03cd555d2d9c89c88bd80e06a2cdcef46
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: 54ae8a2840ce26814be25f08c3ed02e12df6b7c0
+ms.sourcegitcommit: ff1d40507b3eb6e2185478e37c66c66be6de46f1
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/04/2018
+ms.lasthandoff: 05/11/2018
 ---
 # <a name="interfaces"></a>介面
 
@@ -17,7 +17,7 @@ ms.lasthandoff: 05/04/2018
 ```fsharp
 // Interface declaration:
 [ attributes ]
-type interface-name =
+type [accessibility-modifier] interface-name =
     [ interface ]     [ inherit base-interface-name ...]
     abstract member1 : [ argument-types1 -> ] return-type1
     abstract member2 : [ argument-types2 -> ] return-type2
@@ -42,6 +42,8 @@ let class-name (argument-list) =
 
 ## <a name="remarks"></a>備註
 介面宣告類似於類別宣告，不同之處在於會實作任何成員。 相反地，所有成員都是抽象的由關鍵字`abstract`。 您未提供抽象方法的方法主體。 不過，您可以提供的預設實作，也包含成員的方法，以搭配不同的定義`default`關鍵字。 這樣相當於在其他.NET 語言中的基底類別中建立的虛擬方法。 這種虛擬的方法可以實作介面的類別中被覆寫。
+
+介面的預設存取範圍是`public`。
 
 您可以選擇性提供每個方法的參數名稱，使用一般的 F # 語法：
 

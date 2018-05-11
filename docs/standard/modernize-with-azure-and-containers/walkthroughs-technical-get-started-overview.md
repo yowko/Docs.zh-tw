@@ -3,12 +3,12 @@ title: 逐步解說和技術取得已啟動的概觀
 description: 現代化現有的.NET 應用程式與 Azure 雲端和 Windows Containers |逐步解說和技術取得已啟動的概觀
 author: CESARDELATORRE
 ms.author: wiwagn
-ms.date: 10/26/2017
-ms.openlocfilehash: b41fe9e8b492b1348cc5615f6254d5fd3ddebf25
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.date: 04/28/2018
+ms.openlocfilehash: 27de9d1c5475855a22f2d8a3518982605277f6d9
+ms.sourcegitcommit: 88f251b08bf0718ce119f3d7302f514b74895038
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/04/2018
+ms.lasthandoff: 05/10/2018
 ---
 # <a name="walkthroughs-and-technical-get-started-overview"></a>逐步解說和技術取得已啟動的概觀
 
@@ -22,9 +22,11 @@ ms.lasthandoff: 05/04/2018
 
 下列逐步解說使用的新範例 eShopLegacy 和 eShopModernizing 應用程式，可在 GitHub 上[ https://github.com/dotnet-architecture/eShopModernizing ](https://github.com/dotnet-architecture/eShopModernizing)。
 
-- **教學課程的資格舊版應用程式**
+- **教學課程的資格舊版應用程式 （如來現代化的應用程式基準）**
 
-- **化您現有的.NET 應用程式與 Windows 容器**
+- **使用 Windows 容器化現有 ASP.NET web 應用程式 (WebForms & MVC)**
+
+- **化現有的 WCF 服務 （多層式架構應用程式） 使用 Windows 容器**
 
 - **將 Windows 容器基礎應用程式部署至 Azure Vm**
 
@@ -32,59 +34,61 @@ ms.lasthandoff: 05/04/2018
 
 - **將 Windows 容器基礎應用程式部署至 Azure Service Fabric**
 
+
 ## <a name="walkthrough-1-tour-of-eshop-legacy-apps"></a>逐步解說 1： 教學課程的資格舊版應用程式
 
 ### <a name="technical-walkthrough-availability"></a>可用性技術的逐步解說
 
 EShopModernizing GitHub 儲存機制 wiki 有完整的技術的逐步解說：
 
-[https://github.com/dotnet-architecture/eShopModernizing/wiki/01.-Tour-on-eShopModernizing-apps-implementation-code](https://github.com/dotnet-architecture/eShopModernizing/wiki/01.-Tour-on-eShopModernizing-apps-implementation-code)
+[eShopModernizing wiki 逐步解說](https://github.com/dotnet-architecture/eShopModernizing/wiki)
+
 
 ### <a name="overview"></a>總覽
 
-在本逐步解說中，您可以瀏覽初始實作中的兩個範例舊版應用程式。 兩個範例應用程式整合的架構，並使用傳統 ASP.NET 所建立的。 一個應用程式根據 ASP.NET 4.x MVC;第二個應用程式是以 ASP.NET 4.x Web Form 為基礎。 這兩個應用程式處於[eShopModernizing GitHub 儲存機制](https://github.com/dotnet-architecture/eShopModernizing)。
+在本逐步解說中，您可以瀏覽初始實作中的三個範例舊版應用程式。 前兩個範例 web 應用程式整合的架構，並使用傳統 ASP.NET 所建立的。 一個應用程式根據 ASP.NET 4.x MVC;第二個應用程式是以 ASP.NET 4.x Web Form 為基礎。 第三個應用程式是由用戶端 WinForms 應用程式和伺服器端的 3 層應用程式[Windows Communication Foundation (WCF)](../../framework/wcf/whats-wcf.md)服務。
 
-可以化兩個範例應用程式，其方式類似於可以化傳統[Windows Communication Foundation](../../framework/wcf/whats-wcf.md)取用做為桌面應用程式 (WCF) 應用程式。 如需範例，請參閱[eShopModernizingWCFWinForms](https://github.com/dotnet-architecture/eShopModernizingWCFWinForms)。
+所有這些應用程式位於[eShopModernizing GitHub 儲存機制](https://github.com/dotnet-architecture/eShopModernizing)。
 
 ### <a name="goals"></a>目標
 
 本逐步解說的主要目的是只要取得熟悉這些應用程式，以及其程式碼和組態。 您可以設定應用程式，以便產生並使用模擬的資料，而不需要使用 SQL database 中，基於測試目的。 這個選用的設定根據相依性插入解除解合的方式。
 
-### <a name="scenario"></a>情節
+### <a name="scenario-1-aspnet-web-apps"></a>案例 1: ASP.NET Web 應用程式
 
-圖 5-1 會顯示原始的舊版應用程式的簡單案例。
+下圖顯示原始的舊版 ASP.NET web 應用程式的簡單案例。
 
-> ![原始的舊版應用程式的簡單架構案例](./media/image5-1.png)
+> ![原始的舊版 ASP.NET web 應用程式的簡單架構案例](./media/image5-1.png)
 >
-> **圖 5-1。** 原始的舊版應用程式的簡單架構案例
 
-商務網域的觀點而言，這兩個應用程式會提供在相同的目錄管理功能。 資格企業小組的成員可使用應用程式來檢視和編輯產品類別目錄。 圖 5-2 顯示的初始應用程式螢幕擷取畫面。
+商務網域的觀點而言，這兩個應用程式會提供在相同的目錄管理功能。 資格企業小組的成員可使用應用程式來檢視和編輯產品類別目錄。 
+
+下圖將顯示的初始應用程式螢幕擷取畫面。
 
 ![ASP.NET MVC 與 ASP.NET Web Form 應用程式 （舊版現有技術）](./media/image5-2.png)
 
-> **圖 5-2.** ASP.NET MVC 與 ASP.NET Web Form 應用程式 （舊版現有技術）
+相依性中 ASP.NET 4.x 或更早的版本 （無論是 MVC 或 Web Form） 表示除非使用 ASP.NET Core MVC 完全重寫程式碼，將不會在.NET Core 上執行這些應用程式。 
 
-這些是 web 應用程式，可用來瀏覽並修改類別目錄項目。 兩個應用程式傳遞相同的功能/功能其實只是進行比較。 您可以看到類似的現代化程序所建立的 ASP.NET MVC 與 ASP.NET Web Form 架構的應用程式。
+### <a name="scenario-2-wcf-service-and-winforms-client-app-3-tier-app"></a>案例 2: WCF 服務和 WinForms 用戶端應用程式 （3 層應用程式）
 
-相依性中 ASP.NET 4.x 或更早的版本 （無論是 MVC 或 Web Form） 表示除非使用 ASP.NET Core MVC 完全重寫程式碼，將不會在.NET Core 上執行這些應用程式。 這示範了，如果您不想要重新建構或重寫程式碼，您可以化現有的應用程式，並且仍然使用相同的.NET 技術和相同的程式碼。 您可以查看如何執行這類在容器中，不進行任何變更，舊版程式碼的應用程式。
+下圖顯示原始 3 層式架構的舊版應用程式的簡單案例。
+
+> ![簡單的架構案例中的原始舊版 3 層應用程式與 WCF 服務和 WinForms 用戶端應用程式](./media/image5-1.5.png)
+>
 
 ### <a name="benefits"></a>優點
 
-本逐步解說的好處是簡單： 只讓您熟悉的程式碼和應用程式的組態，根據相依性插入。 然後，您可以嘗試透過這種方式化和未來部署至多個環境時。
+本逐步解說的好處是簡單： 只讓您熟悉的程式碼和初始應用程式。
 
 ### <a name="next-steps"></a>後續步驟
 
 瀏覽更深入了解此內容上的 GitHub wiki:
 
-[https://github.com/dotnet-architecture/eShopModernizing/wiki/01.-Tour-on-eShopModernizing-apps-implementation-code](https://github.com/dotnet-architecture/eShopModernizing/wiki/01.-Tour-on-eShopModernizing-apps-implementation-code)
+  - [基準 ASP.NET MVC 的教學課程和 Web Form 「 舊版 」 的應用程式](https://github.com/dotnet-architecture/eShopModernizing/wiki/01.-Tour-on-the-ASP.NET-MVC-and-WebForms-apps-implementation-code)
+  - [基準 WCF 服務，然後 WinForms （3 層） 的 「 舊版 」 應用程式的教學課程](https://github.com/dotnet-architecture/eShopModernizing/wiki/21.-Tour-on-the-WCF-service-and-WinForms-apps)
+
 
 ## <a name="walkthrough-2-containerize-your-existing-net-applications-with-windows-containers"></a>逐步解說 2： 化您現有的.NET 應用程式與 Windows 容器
-
-### <a name="technical-walkthrough-availability"></a>可用性技術的逐步解說
-
-EShopModernizing GitHub 儲存機制 wiki 有完整的技術的逐步解說：
-
-[https://github.com/dotnet-architecture/eShopModernizing/wiki/02.-How-to-containerize-the-.NET-Framework-web-apps-with-Windows-Containers-and-Docker](https://github.com/dotnet-architecture/eShopModernizing/wiki/02.-How-to-containerize-the-.NET-Framework-web-apps-with-Windows-Containers-and-Docker)
 
 ### <a name="overview"></a>總覽
 
@@ -102,13 +106,20 @@ EShopModernizing GitHub 儲存機制 wiki 有完整的技術的逐步解說：
 
 本逐步解說著重於 Visual Studio 2017 Tools for Docker 方法，但其他兩種方法是使用 Dockerfiles 方面相當類似。
 
-### <a name="scenario"></a>情節
+### <a name="scenario-1-containerized-aspnet-web-apps"></a>案例 1： 進行容器化的 ASP.NET web 應用程式
 
-圖 5-3 顯示容器化的資格舊版應用程式的案例。
+下圖顯示容器化的資格舊版 web 應用程式的應用程式的案例。
 
-> ![在開發環境中的容器化應用程式的簡化的架構圖](./media/image5-3.png)
+> ![簡化的架構圖表的容器化在開發環境中的 ASP.NET 應用程式](./media/image5-3.png)
 >
-> **圖 5-3.** 在開發環境中的容器化應用程式的簡化的架構圖
+
+
+### <a name="scenario-2-containerized-wcf-service"></a>案例 2： 進行容器化的 WCF 服務
+
+下圖顯示以進行容器化的 WCF 服務的 3 層應用程式的案例。 
+
+> ![簡化的開發環境中進行容器化的 WCF 服務的架構圖](./media/image5-3.5.png)
+>
 
 ### <a name="benefits"></a>優點
 
@@ -122,15 +133,18 @@ EShopModernizing GitHub 儲存機制 wiki 有完整的技術的逐步解說：
 
 ### <a name="next-steps"></a>後續步驟
 
-瀏覽更深入了解此內容上的 GitHub wiki: [https://github.com/dotnet-architecture/eShopModernizing/wiki/02.-How-to-containerize-the-.NET-Framework-web-apps-with-Windows-Containers-and-Docker](https://github.com/dotnet-architecture/eShopModernizing/wiki/02.-How-to-containerize-the-.NET-Framework-web-apps-with-Windows-Containers-and-Docker)
+瀏覽更深入了解此內容上的 GitHub wiki:
+
+  - [如何化 .NET Framework web 應用程式與 Windows 容器和 Docker](https://github.com/dotnet-architecture/eShopModernizing/wiki/02.-How-to-containerize-the-.NET-Framework-web-apps-with-Windows-Containers-and-Docker)
+  - [將 Docker 的支援加入至 WCF 服務](https://github.com/dotnet-architecture/eShopModernizing/wiki/22.-Adding-Docker-Support)
+
+
 
 ## <a name="walkthrough-3-deploy-your-windows-containers-based-app-to-azure-vms"></a>逐步解說 3： 將 Windows 容器基礎應用程式部署至 Azure Vm
 
 ### <a name="technical-walkthrough-availability"></a>可用性技術的逐步解說
 
-EShopModernizing GitHub 儲存機制 wiki 有完整的技術的逐步解說：
-
-[https://github.com/dotnet-architecture/eShopModernizing/wiki/03.-How-to-deploy-your-Windows-Containers-based-app-into-Azure-VMs-(Including-CI-CD)](https://github.com/dotnet-architecture/eShopModernizing/wiki/03.-How-to-deploy-your-Windows-Containers-based-app-into-Azure-VMs-(Including-CI-CD))
+EShopModernizing GitHub 儲存機制 wiki 有完整的技術的逐步解說： [https://github.com/dotnet-architecture/eShopModernizing/wiki/03.-How-to-deploy-your-Windows-Containers-based-app-into-Azure-VMs-(Including-CI-CD)](https://github.com/dotnet-architecture/eShopModernizing/wiki/03.-How-to-deploy-your-Windows-Containers-based-app-into-Azure-VMs-(Including-CI-CD))
 
 ### <a name="overview"></a>總覽
 
@@ -178,7 +192,46 @@ Azure 目前提供名為的 VM**與容器的 Windows Server 2016**。 您可以�
 
 [https://github.com/dotnet-architecture/eShopModernizing/wiki/03.-How-to-deploy-your-Windows-Containers-based-app-into-Azure-VMs-(Including-CI-CD)](https://github.com/dotnet-architecture/eShopModernizing/wiki/03.-How-to-deploy-your-Windows-Containers-based-app-into-Azure-VMs-(Including-CI-CD))
 
-## <a name="walkthrough-4-deploy-your-windows-containers-based-apps-to-kubernetes-in-azure-container-service"></a>逐步解說 4： 將 Windows 容器基礎應用程式部署到 Kubernetes Azure 容器服務中
+## <a name="walkthrough-4-deploy-your-windows-containers-based-apps-to-azure-container-instances-aci"></a>逐步解說 4： 將 Windows 容器基礎應用程式部署至 Azure 容器執行個體 (ACI)
+
+### <a name="technical-walkthrough-availability"></a>可用性技術的逐步解說
+
+EShopModernizing GitHub 儲存機制 wiki 有完整的技術的逐步解說：
+
+[將應用程式部署至 ACI （Azure 容器執行個體）](https://github.com/dotnet-architecture/eShopModernizing/wiki/05.-Deploying-the-Apps-to-ACI-(Azure-Container-Instances))
+
+### <a name="overview"></a>總覽
+
+[Azure 容器執行個體 (ACI)](https://docs.microsoft.com/en-us/azure/container-instances/)是最快的方式有容器開發/測試/預備環境，您可以在其中部署容器的單一執行個體。
+
+### <a name="goals"></a>目標
+
+本逐步解說示範您的主要案例 Azure 容器執行個體 (ACI) 和您如何部署到 ACI eShopModernizing 應用程式部署 Windows 容器時。
+
+### <a name="scenarios"></a>案例
+
+可以部署到 ACI eShopModernizing 應用程式，例如部署下列其中一個或所有應用程式 （MVC 應用程式、 WebForms 應用程式或 WCF 服務） 相關的變化。 在下列案例中如下所示您可以看到 ASP.NET MVC 應用程式加上這兩種部署的 SQL Server 容器做為容器 ACI （Azure 容器執行個體）。
+
+![從開發環境部署至 ACI](./media/image5-3.5.6.png)
+
+### <a name="benefits"></a>優點
+
+Azure 容器執行個體，可讓您輕鬆地建立及管理 Docker 容器，在 Azure 中，不需要重新佈建虛擬機器，或採用較高層級的服務。 使用 ACI，您可以直接部署在 Azure 中的 Windows 容器，並將它公開至網際網路的完整的網域名稱 (FQDN) 會在幾秒 （前提是您在 Docker Hub 或 Azure 容器 Docker 登錄 Windows 容器映像準備登錄中）。
+
+### <a name="considerations"></a>考量
+
+部署 Windows 容器，以其中一個完整的.NET Framework / ASP.NET 或 SQL Server 到 Azure 容器執行個體 (ACI) 不是完全一樣快速，因為 Docker 映像必須部署至規則的 Docker 主機 （例如 Windows Server 2016 與 Windows 容器)每次下載 （提取從 Docker 登錄） 和 SQL 容器映像 (15.1 GB) 和 ASP.NET 的容器映像 (13.9 GB) 的大小為相當龐大，不過，它是比維持您自己的 docker 主機 （永久線上成本更低Windows Server 2016 與 Windows Azure 中的容器 VM) 更別說像在 Azure (AKS/ACS) 或 Azure Service Fabric Kubernetes，也就是，相反地，對於實際執行部署的絕佳選擇整個 orchestrator。
+
+做為主要結束時，使用 Azure 容器執行個體是極具說服力的選項為開發/測試案例和 CI/CD 管線。
+
+## <a name="next-steps"></a>後續步驟
+
+瀏覽更深入了解此內容上的 GitHub wiki: 
+
+[https://github.com/dotnet-architecture/eShopModernizing/wiki/05.-Deploying-the-Apps-to-ACI-(Azure-Container-Instances)](https://github.com/dotnet-architecture/eShopModernizing/wiki/05.-Deploying-the-Apps-to-ACI-(Azure-Container-Instances)TBD)
+
+
+## <a name="walkthrough-5-deploy-your-windows-containers-based-apps-to-kubernetes-in-azure-container-service"></a>逐步解說 5： 將 Windows 容器基礎應用程式部署到 Kubernetes Azure 容器服務中
 
 ### <a name="technical-walkthrough-availability"></a>可用性技術的逐步解說
 
@@ -238,7 +291,7 @@ Azure 容器服務，特別針對 Azure 最佳化熱門的開放原始碼工具�
 
 瀏覽更深入了解此內容上的 GitHub wiki: [https://github.com/dotnet-architecture/eShopModernizing/wiki/04.-How-to-deploy-your-Windows-Containers-based-apps-into-Kubernetes-in-Azure-Container-Service-(Including-C-CD)](https://github.com/dotnet-architecture/eShopModernizing/wiki/04.-How-to-deploy-your-Windows-Containers-based-apps-into-Kubernetes-in-Azure-Container-Service-(Including-C-CD))
 
-## <a name="walkthrough-5-deploy-your-windows-containers-based-apps-to-azure-service-fabric"></a>逐步解說 5： 將 Windows 容器基礎應用程式部署至 Azure Service Fabric
+## <a name="walkthrough-6-deploy-your-windows-containers-based-apps-to-azure-service-fabric"></a>逐步解說 6： 將 Windows 容器基礎應用程式部署至 Azure Service Fabric
 
 ### <a name="technical-walkthrough-availability"></a>可用性技術的逐步解說
 

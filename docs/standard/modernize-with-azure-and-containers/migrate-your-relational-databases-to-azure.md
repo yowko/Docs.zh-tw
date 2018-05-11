@@ -3,12 +3,12 @@ title: 將關聯式資料庫移轉至 azure
 description: 現代化現有的.NET 應用程式與 Azure 雲端和 Windows Containers |將關聯式資料庫移轉至 azure
 author: CESARDELATORRE
 ms.author: wiwagn
-ms.date: 10/26/2017
-ms.openlocfilehash: efc558115d184ed53a963eab2acdd847a12dbb3c
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.date: 04/28/2018
+ms.openlocfilehash: fe1bf5820c2306beb380749b34d5a56964e016e4
+ms.sourcegitcommit: 88f251b08bf0718ce119f3d7302f514b74895038
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/04/2018
+ms.lasthandoff: 05/10/2018
 ---
 # <a name="migrate-your-relational-databases-to-azure"></a>將關聯式資料庫移轉至 azure
 
@@ -22,7 +22,7 @@ ms.lasthandoff: 05/04/2018
 
 ## <a name="when-to-migrate-to-azure-sql-database-managed-instance"></a>當移轉到 Azure SQL Database 管理執行個體
 
-在大部分情況下，Azure SQL Database 管理執行個體將會是您最佳的選項，您將資料移轉至 Azure 時，請考慮。 如果您要移轉 SQL Server 資料庫，而且需要將近 100%的保證，讓您不需要重新設計應用程式架構，或變更您的資料或資料存取程式碼，請選擇 Azure SQL Database 的 Managed 執行個體功能。
+在大部分情況下，Azure SQL Database 管理執行個體將會是您最佳的選項，您將資料移轉至 Azure 時，請考慮。 如果您要移轉 SQL Server 資料庫，而且需要將近 100%的保證，讓您不需要 rearchitect 您的應用程式，或變更您的資料或資料存取程式碼，請選擇 Azure SQL Database 的 Managed 執行個體功能。
 
 如果您有其他需求，如需 SQL Server 執行個體層級功能或隔離需求，提供標準的 Azure SQL Database （單一資料庫模型） 中的功能之外，azure SQL Database 管理執行個體是最佳選擇。 這個最後一個最以 PaaS 為導向的選擇，但它不提供與傳統的 SQL server 的相同的功能。 移轉可能會出現 frictions。
 
@@ -56,7 +56,7 @@ Azure SQL Database 中的 managed 執行個體具有下列特性：
 
 如前所述，標準的 Azure SQL Database 是完全受管理、 關聯式 DBaaS。 SQL Database 目前管理包含數百萬個生產資料庫，在世界各地的 38 資料中心。 它支援廣泛的應用程式和工作負載，而不需要管理要開車最需要大量資料的關鍵任務應用程式，需要全域的縮放比例的進階的資料處理簡單的交易式資料。
 
-由於其完整的 PaaS 功能，因此更好的定價層和降低成本-要改用標準的 Azure SQL Database 為 」 的預設選擇 「 如果您的應用程式，使用基本、 標準 SQL 資料庫以及任何額外的執行個體功能。 在標準的 Azure SQL Database 不支援 SQL Server 功能，例如 SQL CLR 整合、 SQL Server 代理程式，以及跨資料庫查詢。 只能在 Azure SQL Database 管理執行個體模型中使用這些功能。
+因為其完整的 PaaS 功能，更好定價層和降低成本-要改用標準的 Azure SQL Database 為 」 的預設選擇 「 如果您的應用程式，使用基本、 標準 SQL 資料庫以及任何額外的執行個體功能。 在標準的 Azure SQL Database 不支援 SQL Server 功能，例如 SQL CLR 整合、 SQL Server 代理程式，以及跨資料庫查詢。 只能在 Azure SQL Database 管理執行個體模型中使用這些功能。
 
 Azure SQL Database 是建置應用程式開發人員只智慧型雲端資料庫服務。 它也是縮放上作業，而不需要停機，可協助您有效率地將多租用戶應用程式提供的唯一雲端資料庫服務。 最後，Azure SQL Database 會讓您更多時間來創新，而且它市場加速您的時間。 您可以建置安全的應用程式，並連接到 SQL database 所使用的語言和您偏好的平台。
 
@@ -76,13 +76,13 @@ Azure SQL Database 提供下列優點：
 
 - 與 SQL Server 2016，包括混合式和移轉的相容性
 
-標準的 Azure SQL Database 是 PaaS 接近於 Azure SQL Database 管理執行個體。 您應該嘗試使用它，可能的話，請從受管理的雲端，將會有更多的優點。 不過，Azure SQL Database 已從規則的一些主要差異而且在內部部署 SQL Server 執行個體。 根據您現有的應用程式的資料庫需求，和企業需求和原則，它可能無法最佳的選擇時您計劃移轉至雲端。
+標準的 Azure SQL Database 是 PaaS 接近於 Azure SQL Database 管理執行個體。 偏好使用標準的 Azure SQL Database，從受管理的雲端，將會有更多的優點。 不過，Azure SQL Database 已從規則的一些主要差異而且在內部部署 SQL Server 執行個體。 根據您現有的應用程式的資料庫需求，和企業需求和原則，它可能無法最佳的選擇時您計劃移轉至雲端。
 
 ## <a name="when-to-move-your-original-rdbms-to-a-vm-iaas"></a>何時將您的原始 RDBMS 移至 VM (IaaS)
 
 移轉選項的其中一個是移動您原始關聯式資料庫管理系統 (RDBMS)，包括 Oracle、 IBM DB2、 MySQL、 PostgreSQL 或 SQL Server 到類似的伺服器在 Azure VM 上執行。 如果您有現有的應用程式需要最少的變更或沒有變更雲端最快速移轉，直接移轉至雲端中的 IaaS 可能公平的選項。 您可能無法充分利用的所有雲端優點的最佳方式，但它可能是最快的初始路徑。
 
-Microsoft Azure 目前最多支援[331 不同資料庫伺服器](https://azuremarketplace.microsoft.com/en-us/marketplace/apps/category/databases?page=1&subcategories=databases-all)部署為 IaaS Vm。 其中包括熱門 RDBMSes 像 SQL Server、 Oracle、 MySQL、 PostgreSQL 和 IBM DB2 和類似 MongoDB、 Cassandra、 DataStax、 MariaDB 和 Cloudera 的許多其他 NoSQL 資料庫。
+Microsoft Azure 目前最多支援[331 不同資料庫伺服器](https://azuremarketplace.microsoft.com/en-us/marketplace/apps/category/databases?page=1&subcategories=databases-all)部署為 IaaS Vm。 其中包括常用的 RDBMS 像 SQL Server、 Oracle、 MySQL、 PostgreSQL 和 IBM DB2 和類似 MongoDB、 Cassandra、 DataStax、 MariaDB 和 Cloudera 的許多其他 NoSQL 資料庫。
 
 > [!NOTE]
 > 雖然移動您到 Azure VM 的 RDBMS 可能 （因為它是 IaaS），將資料移轉至雲端最快速的方式，這個方法會要求您的 IT 團隊 （資料庫管理員和 IT 專業人員） 方面的大量投資。 企業團隊必須能夠設定和管理高可用性、 災害復原和修補 SQL Server。 此內容也需要自訂的環境中，以完整系統管理權限。
@@ -127,4 +127,4 @@ Microsoft Azure 目前最多支援[331 不同資料庫伺服器](https://azurema
 
 >[!div class="step-by-step"]
 [上一頁](lift-and-shift-existing-apps-azure-iaas.md)
-[下一頁](lift-and-shift-existing-apps-devops/index.md)
+[下一頁](modernize-existing-apps-to-cloud-optimized/index.md)

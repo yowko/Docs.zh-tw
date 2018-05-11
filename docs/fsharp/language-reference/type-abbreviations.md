@@ -2,11 +2,11 @@
 title: 類型縮寫 (F#)
 description: '深入了解 F # 類型縮寫來提供型別更有意義的名稱以使程式碼更容易讀取。'
 ms.date: 05/16/2016
-ms.openlocfilehash: cd0b2365aecc5d5b73df95a4b94ae4dd8327446d
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: e222caa41a20a64071c94cffea6ea7b2bec8eb22
+ms.sourcegitcommit: ff1d40507b3eb6e2185478e37c66c66be6de46f1
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/04/2018
+ms.lasthandoff: 05/11/2018
 ---
 # <a name="type-abbreviations"></a>類型縮寫
 
@@ -15,11 +15,13 @@ A*類型縮寫*是別名或替代名稱的類型。
 ## <a name="syntax"></a>語法
 
 ```fsharp
-type type-abbreviation = type-name
+type [accessibility-modifier] type-abbreviation = type-name
 ```
 
 ## <a name="remarks"></a>備註
 您可以使用類型縮寫來提供型別更有意義的名稱，以使程式碼更容易讀取。 您也可以使用它們建立易於使用，否則會寫出麻煩型別的名稱。此外，您可以讓您更輕鬆地變更的基礎類型，而不需要變更使用類型的所有程式碼使用類型縮寫。 以下是簡單類型縮寫。
+
+類型縮寫的存取範圍預設為`public`。
 
 [!code-fsharp[Main](../../../samples/snippets/fsharp/lang-ref-1/snippet2301.fs)]
 

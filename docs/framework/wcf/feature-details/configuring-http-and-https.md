@@ -4,11 +4,11 @@ ms.date: 03/30/2017
 helpviewer_keywords:
 - configuring HTTP [WCF]
 ms.assetid: b0c29a86-bc0c-41b3-bc1e-4eb5bb5714d4
-ms.openlocfilehash: 70c947724abf8da68ec8f7e6d858e26fec62dce5
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: ed9c7a444018e7c5e9ac00de82133cce633fac93
+ms.sourcegitcommit: 88f251b08bf0718ce119f3d7302f514b74895038
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/04/2018
+ms.lasthandoff: 05/10/2018
 ---
 # <a name="configuring-http-and-https"></a>設定 HTTP 和 HTTPS
 WCF 服務與用戶端可以透過 HTTP 和 HTTPS 進行通訊。 HTTP/HTTPS 設定是使用 Internet Information Services (IIS)，或使用命令列工具設定。 在 IIS HTTP 或 HTTPS 之下裝載 WCF 服務時，設定可以在 IIS (使用 inetmgr.exe 工具) 內進行。 如果是自我裝載的 WCF 服務，可以使用命令列工具設定 HTTP 或 HTTPS 設定。  
@@ -19,7 +19,7 @@ WCF 服務與用戶端可以透過 HTTP 和 HTTPS 進行通訊。 HTTP/HTTPS 設
   
  當執行[!INCLUDE[ws2003](../../../../includes/ws2003-md.md)]或[!INCLUDE[wxp](../../../../includes/wxp-md.md)]，使用 HttpCfg.exe 工具。 [!INCLUDE[ws2003](../../../../includes/ws2003-md.md)] 會自動安裝這項工具。 當執行[!INCLUDE[wxp](../../../../includes/wxp-md.md)]，您可以下載此工具在[Windows XP Service Pack 2 支援工具](http://go.microsoft.com/fwlink/?LinkId=88606)。 如需詳細資訊，請參閱[Httpcfg 概觀](http://go.microsoft.com/fwlink/?LinkId=88605)。  
   
- 執行 [!INCLUDE[wv](../../../../includes/wv-md.md)] 或 Windows 7 時，您可以透過 Netsh.exe 工具來設定這些設定。  
+ 當執行[!INCLUDE[wv](../../../../includes/wv-md.md)]或 Windows 7 中，您設定這些設定使用 Netsh.exe 工具。  
   
 ## <a name="configuring-namespace-reservations"></a>設定命名空間保留區  
  命名空間保留區會將一部分 HTTP URL 命名空間的權限指派給特定的使用者群組。 保留區會授予這些使用者建立服務的權限，以接聽那一部分的命名空間。 保留區是 URL 前置詞，也就是說，保留區可涵蓋保留路徑的所有子路徑。 命名空間保留區允許兩種使用萬用字元的方式。 HTTP 伺服器 API 文件說明[解析使用萬用字元的命名空間宣告順序](http://go.microsoft.com/fwlink/?LinkId=94841)。  
