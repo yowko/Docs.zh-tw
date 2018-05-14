@@ -2,11 +2,11 @@
 title: 值 (F#)
 description: '了解如何在 F # 中的值為具有特定類型的數量。'
 ms.date: 05/16/2016
-ms.openlocfilehash: 610ff6cfc6d33cd22a175ca928bfb6e9f8974a36
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: 4d2874a694d9c39048a28827be858cba499dca87
+ms.sourcegitcommit: e5bb395ec86f536e114314184288f40a8c745e2e
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/04/2018
+ms.lasthandoff: 05/12/2018
 ---
 # <a name="values"></a>值
 
@@ -20,6 +20,7 @@ F# 中的值是具有特定類型的數量；值可以是整數或浮點數、�
 
 值的類型是從定義推斷的。 若為基本類型 (例如整數或浮點數)，則是從常值的類型來決定類型。 因此，在上述範例中，編譯器推斷 `b` 的類型是 `unsigned int`，而推斷 `a` 的類型是 `int`。 函式值的類型是從函式主體中的傳回值決定。 如需函式值類型的詳細資訊，請參閱[函式](../functions/index.md)。 如需常值型別的詳細資訊，請參閱[常值](../literals.md)。
 
+編譯器不會發出有關未使用的繫結的診斷預設。 若要接收這些訊息，啟用警告 1182年專案檔中，或叫用編譯器時 (請參閱`--warnon`下[編譯器選項](../compiler-options.md))。
 
 ## <a name="why-immutable"></a>使用不可變的原因
 不可變的值是在程式執行過程中無法變更的值。 若您習慣使用 C++、Visual Basic 或 C# 等語言，F# 首重不可變的值，而不是程式執行期間可指派新值的變數，這可能讓您訝異。 不可變的資料是函式程式設計的重要項目。 在多執行緒環境中，難以管理可由許多不同的執行緒變更的共用可變變數。 此外，對於可變變數，有時候難以判斷變數是否會在傳遞至另一個函式時變更。
@@ -35,6 +36,8 @@ F# 不是純函式語言，但完全支援函式程式設計。 使用不可變�
 您可以透過與定義值相同的方式使用 `let` 關鍵字，將初始值指派給可變變數。 不過，差異在於後續可以透過 `<-` 運算子將新值指派給可變變數，如下列範例所示。
 
 [!code-fsharp[Main](../../../../samples/snippets/fsharp/lang-ref-1/snippet602.fs)]
+
+標記值`mutable`可能需要自動提升為`'a ref`如果擷取的 closure 中，包括建立封閉區段，例如表單`seq`產生器。 如果您想要在發生這種情況時收到通知，啟用警告 3180 叫用編譯器時，或在您的專案檔。
     
 ## <a name="related-topics"></a>相關主題
 

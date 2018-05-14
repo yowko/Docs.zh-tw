@@ -2,11 +2,11 @@
 title: 簽章 (F#)
 description: '了解如何使用 F # 簽章檔案，以容納 F # 程式元素，例如類型、 命名空間和模組的一組公開金鑰的簽章資訊。'
 ms.date: 05/16/2016
-ms.openlocfilehash: 04539a871dda9eedd1495e0e5b1f3f5026bae037
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: 6e182a1a0ac7f3f9fab27026e582d83ee737822e
+ms.sourcegitcommit: e5bb395ec86f536e114314184288f40a8c745e2e
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/04/2018
+ms.lasthandoff: 05/12/2018
 ---
 # <a name="signatures"></a>簽章
 
@@ -64,6 +64,9 @@ ms.lasthandoff: 05/04/2018
 
 
 - 簽章及實作的參數模式 (也稱為 *Arity*) 必須一致。
+
+
+- 如果簽章檔案中的參數名稱與對應的實作檔案不同，簽章檔案中的名稱將會改用，這可能會造成偵錯或分析時的問題。 如果您想要接收這類不符，啟用警告 3218 專案檔中的通知，或叫用編譯器時 (請參閱`--warnon`下[編譯器選項](compiler-options.md))。
 
 
 下列程式碼範例顯示的簽章檔案範例，具有命名空間、模組、函式值和有適當屬性的類型簽章。 它也顯示對應的實作檔案。

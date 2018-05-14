@@ -2,11 +2,11 @@
 title: 已區分的聯集 (F#)
 description: '了解如何使用 F # 差別等位。'
 ms.date: 05/16/2016
-ms.openlocfilehash: 7949fd1685ca128f19dd0d0d4aec7236169cd375
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: 617c659e26df52819a98294bcbfa081ab82fed03
+ms.sourcegitcommit: e5bb395ec86f536e114314184288f40a8c745e2e
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/04/2018
+ms.lasthandoff: 05/12/2018
 ---
 # <a name="discriminated-unions"></a>已區分的聯集
 
@@ -16,14 +16,16 @@ ms.lasthandoff: 05/04/2018
 
 ```fsharp
 [ attributes ]
-type type-name =
+type [accessibility-modifier] type-name =
     | case-identifier1 [of [ fieldname1 : ] type1 [ * [ fieldname2 : ] type2 ...]
     | case-identifier2 [of [fieldname3 : ]type3 [ * [ fieldname4 : ]type4 ...]
 ...
 ```
 
 ## <a name="remarks"></a>備註
-差別等位類似於聯集類型在其他語言中，但有一些差異。 做為與 c + + 中的等位型別或在 Visual Basic 中的之變數類型的值中所儲存的資料不被固定;它可以是其中幾個不同的選項。 不同於這些其他語言中的等位，不過，每個可能的選項擁有*案例識別碼*。 大小寫的識別項是各種可能的值，這個類型的物件; 類型名稱值是選擇性的。 如果值不存在，就有一個情況相當於列舉案例。 如果值存在，每個值可以是單一值的指定的類型或彙總多個欄位的相同或不同類型的 tuple。 為準，F # 3.1，您可以指定個別欄位的名稱，但名稱是選擇性的即使名為相同的大小寫的其他欄位。
+差別等位類似於聯集類型在其他語言中，但有一些差異。 做為與 c + + 中的等位型別或在 Visual Basic 中的之變數類型的值中所儲存的資料不被固定;它可以是其中幾個不同的選項。 不同於這些其他語言中的等位，不過，每個可能的選項擁有*案例識別碼*。 大小寫的識別項是各種可能的值，這個類型的物件; 類型名稱值是選擇性的。 如果值不存在，就有一個情況相當於列舉案例。 如果值存在，每個值可以是單一值的指定的類型或彙總多個欄位的相同或不同類型的 tuple。 您可以指定個別欄位的名稱，但名稱是選擇性的即使名為相同的大小寫的其他欄位。
+
+差別等位的存取範圍預設為`public`。
 
 例如，請考慮下列的圖形類型宣告。
 

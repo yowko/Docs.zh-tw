@@ -2,11 +2,11 @@
 title: 參照儲存格 (F#)
 description: '了解 F # 參考儲存格的儲存位置可讓您參考語意建立可變值的方式。'
 ms.date: 05/16/2016
-ms.openlocfilehash: d68726619bdfce5a9ed9bd94d6434427644cd9f1
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: 3a632425356a250f07e5babd2751b9923eec6552
+ms.sourcegitcommit: e5bb395ec86f536e114314184288f40a8c745e2e
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/04/2018
+ms.lasthandoff: 05/12/2018
 ---
 # <a name="reference-cells"></a>參考儲存格
 
@@ -81,6 +81,9 @@ let ref x = { contents = x }
 >[!NOTE]
 C# 程式設計人員應該知道運作方式，該 ref F # 中不同於 C#。 比方說，使用 ref 時傳遞引數並沒有相同的效果在 F # 與 C# 中。
 
+>[!NOTE]
+`mutable` 變數可能會自動提升為`'a ref`如果擷取方式，請參閱[值](values/index.md)。
+
 ## <a name="consuming-c-ref-returns"></a>使用 C#`ref`傳回
 
 從 F # 4.1 開始，您可以使用`ref`傳回 C# 中產生。  這類呼叫的結果是`byref<_>`指標。
@@ -132,3 +135,5 @@ let f (x: byref<int>) = &x
 [參數和引數](parameters-and-arguments.md)
 
 [符號和運算子參考](symbol-and-operator-reference/index.md)
+
+[值](values/index.md)
