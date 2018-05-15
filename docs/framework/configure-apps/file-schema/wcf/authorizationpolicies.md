@@ -1,29 +1,17 @@
 ---
 title: '&lt;authorizationPolicies&gt;'
-ms.custom: 
 ms.date: 03/30/2017
-ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.technology: dotnet-clr
-ms.tgt_pltfrm: 
-ms.topic: article
 ms.assetid: 5b367489-54d7-408b-8f56-cb157dd68eaf
-caps.latest.revision: "7"
-author: dotnet-bot
-ms.author: dotnetcontent
-manager: wpickett
-ms.workload: dotnet
-ms.openlocfilehash: 9e33dca28f11b564f622ff1c202827c693f0874c
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.openlocfilehash: 8e1bc702db899c4b0b3ee539fdc89cdda6c4cf10
+ms.sourcegitcommit: 11f11ca6cefe555972b3a5c99729d1a7523d8f50
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 05/03/2018
 ---
-# <a name="ltauthorizationpoliciesgt"></a><span data-ttu-id="55389-102">&lt;authorizationPolicies&gt;</span><span class="sxs-lookup"><span data-stu-id="55389-102">&lt;authorizationPolicies&gt;</span></span>
-<span data-ttu-id="55389-103">這個組態區段包含授權原則型別的集合，使用 `add` 關鍵字可加入這些型別。</span><span class="sxs-lookup"><span data-stu-id="55389-103">This configuration section contains a collection of authorization policy types, which can be added using the `add` keyword.</span></span> <span data-ttu-id="55389-104">每個授權原則包含一個必要的 `policyType` 屬性字串。</span><span class="sxs-lookup"><span data-stu-id="55389-104">Each authorization policy contains a single required `policyType` attribute that is a string.</span></span> <span data-ttu-id="55389-105">該屬性會指定授權原則，可讓一組輸入宣告轉換成另一組宣告。</span><span class="sxs-lookup"><span data-stu-id="55389-105">The attribute specifies an authorization policy, which enables transformation of one set of input claims into another set of claims.</span></span> <span data-ttu-id="55389-106">它可以做為授與或拒絕存取控制 (Access Control) 的基礎。</span><span class="sxs-lookup"><span data-stu-id="55389-106">Access control can be granted or denied based on that.</span></span> <span data-ttu-id="55389-107">如需有關授權原則的運作方式的詳細資訊，請參閱<xref:System.IdentityModel.Policy.IAuthorizationPolicy>和[授權原則](../../../../../docs/framework/wcf/samples/authorization-policy.md)。</span><span class="sxs-lookup"><span data-stu-id="55389-107">For more information on how an authorization policy works, see <xref:System.IdentityModel.Policy.IAuthorizationPolicy> and [Authorization Policy](../../../../../docs/framework/wcf/samples/authorization-policy.md).</span></span>  
+# <a name="ltauthorizationpoliciesgt"></a><span data-ttu-id="948b9-102">&lt;authorizationPolicies&gt;</span><span class="sxs-lookup"><span data-stu-id="948b9-102">&lt;authorizationPolicies&gt;</span></span>
+<span data-ttu-id="948b9-103">這個組態區段包含授權原則型別的集合，使用 `add` 關鍵字可加入這些型別。</span><span class="sxs-lookup"><span data-stu-id="948b9-103">This configuration section contains a collection of authorization policy types, which can be added using the `add` keyword.</span></span> <span data-ttu-id="948b9-104">每個授權原則包含一個必要的 `policyType` 屬性字串。</span><span class="sxs-lookup"><span data-stu-id="948b9-104">Each authorization policy contains a single required `policyType` attribute that is a string.</span></span> <span data-ttu-id="948b9-105">該屬性會指定授權原則，可讓一組輸入宣告轉換成另一組宣告。</span><span class="sxs-lookup"><span data-stu-id="948b9-105">The attribute specifies an authorization policy, which enables transformation of one set of input claims into another set of claims.</span></span> <span data-ttu-id="948b9-106">它可以做為授與或拒絕存取控制 (Access Control) 的基礎。</span><span class="sxs-lookup"><span data-stu-id="948b9-106">Access control can be granted or denied based on that.</span></span> <span data-ttu-id="948b9-107">如需有關授權原則的運作方式的詳細資訊，請參閱<xref:System.IdentityModel.Policy.IAuthorizationPolicy>和[授權原則](../../../../../docs/framework/wcf/samples/authorization-policy.md)。</span><span class="sxs-lookup"><span data-stu-id="948b9-107">For more information on how an authorization policy works, see <xref:System.IdentityModel.Policy.IAuthorizationPolicy> and [Authorization Policy](../../../../../docs/framework/wcf/samples/authorization-policy.md).</span></span>  
   
-## <a name="see-also"></a><span data-ttu-id="55389-108">請參閱</span><span class="sxs-lookup"><span data-stu-id="55389-108">See Also</span></span>  
+## <a name="see-also"></a><span data-ttu-id="948b9-108">另請參閱</span><span class="sxs-lookup"><span data-stu-id="948b9-108">See Also</span></span>  
  <xref:System.ServiceModel.Configuration.ServiceAuthorizationElement>  
  <xref:System.ServiceModel.Description.ServiceAuthorizationBehavior.ExternalAuthorizationPolicies%2A>  
  <xref:System.ServiceModel.Description.ServiceAuthorizationBehavior>  
@@ -31,7 +19,7 @@ ms.lasthandoff: 12/22/2017
  <xref:System.ServiceModel.Configuration.ServiceAuthorizationElement.AuthorizationPolicies%2A>  
  <xref:System.ServiceModel.Configuration.AuthorizationPolicyTypeElementCollection>  
  <xref:System.IdentityModel.Policy.IAuthorizationPolicy>  
- [<span data-ttu-id="55389-109">授權存取服務作業</span><span class="sxs-lookup"><span data-stu-id="55389-109">Authorizing Access to Service Operations</span></span>](../../../../../docs/framework/wcf/samples/authorizing-access-to-service-operations.md)  
- [<span data-ttu-id="55389-110">如何：為服務建立自訂授權管理員</span><span class="sxs-lookup"><span data-stu-id="55389-110">How to: Create a Custom Authorization Manager for a Service</span></span>](../../../../../docs/framework/wcf/extending/how-to-create-a-custom-authorization-manager-for-a-service.md)  
- [<span data-ttu-id="55389-111">\<add></span><span class="sxs-lookup"><span data-stu-id="55389-111">\<add></span></span>](../../../../../docs/framework/configure-apps/file-schema/wcf/add-of-authorizationpolicies.md)  
- [<span data-ttu-id="55389-112">授權原則</span><span class="sxs-lookup"><span data-stu-id="55389-112">Authorization Policy</span></span>](../../../../../docs/framework/wcf/samples/authorization-policy.md)
+ [<span data-ttu-id="948b9-109">授權存取服務作業</span><span class="sxs-lookup"><span data-stu-id="948b9-109">Authorizing Access to Service Operations</span></span>](../../../../../docs/framework/wcf/samples/authorizing-access-to-service-operations.md)  
+ [<span data-ttu-id="948b9-110">如何：為服務建立自訂授權管理員</span><span class="sxs-lookup"><span data-stu-id="948b9-110">How to: Create a Custom Authorization Manager for a Service</span></span>](../../../../../docs/framework/wcf/extending/how-to-create-a-custom-authorization-manager-for-a-service.md)  
+ [<span data-ttu-id="948b9-111">\<add></span><span class="sxs-lookup"><span data-stu-id="948b9-111">\<add></span></span>](../../../../../docs/framework/configure-apps/file-schema/wcf/add-of-authorizationpolicies.md)  
+ [<span data-ttu-id="948b9-112">授權原則</span><span class="sxs-lookup"><span data-stu-id="948b9-112">Authorization Policy</span></span>](../../../../../docs/framework/wcf/samples/authorization-policy.md)

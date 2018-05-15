@@ -1,13 +1,6 @@
 ---
-title: "&lt;TimeSpan_LegacyFormatMode&gt;項目"
-ms.custom: 
+title: '&lt;TimeSpan_LegacyFormatMode&gt;項目'
 ms.date: 03/30/2017
-ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.technology: dotnet-clr
-ms.tgt_pltfrm: 
-ms.topic: article
 dev_langs:
 - csharp
 - vb
@@ -15,83 +8,80 @@ helpviewer_keywords:
 - <TimeSpan_LegacyFormatMode> element
 - TimeSpan_LegacyFormatMode element
 ms.assetid: 865e7207-d050-4442-b574-57ea29d5e2d6
-caps.latest.revision: "8"
 author: rpetrusha
 ms.author: ronpet
-manager: wpickett
-ms.workload: dotnet
-ms.openlocfilehash: be4b26cdc79cef0854221172b8dea0bcc0f50981
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.openlocfilehash: 0faf2876680ef5ec3fc7373cae9f81eb091f47a1
+ms.sourcegitcommit: 11f11ca6cefe555972b3a5c99729d1a7523d8f50
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 05/03/2018
 ---
-# <a name="lttimespanlegacyformatmodegt-element"></a><span data-ttu-id="68e75-102">&lt;TimeSpan_LegacyFormatMode&gt;項目</span><span class="sxs-lookup"><span data-stu-id="68e75-102">&lt;TimeSpan_LegacyFormatMode&gt; Element</span></span>
-<span data-ttu-id="68e75-103">決定是否執行階段會保留舊版的行為在格式化作業與<xref:System.TimeSpan?displayProperty=nameWithType>值。</span><span class="sxs-lookup"><span data-stu-id="68e75-103">Determines whether the runtime preserves legacy behavior in formatting operations with <xref:System.TimeSpan?displayProperty=nameWithType> values.</span></span>  
+# <a name="lttimespanlegacyformatmodegt-element"></a><span data-ttu-id="b4c8c-102">&lt;TimeSpan_LegacyFormatMode&gt;項目</span><span class="sxs-lookup"><span data-stu-id="b4c8c-102">&lt;TimeSpan_LegacyFormatMode&gt; Element</span></span>
+<span data-ttu-id="b4c8c-103">決定是否執行階段會保留舊版的行為在格式化作業與<xref:System.TimeSpan?displayProperty=nameWithType>值。</span><span class="sxs-lookup"><span data-stu-id="b4c8c-103">Determines whether the runtime preserves legacy behavior in formatting operations with <xref:System.TimeSpan?displayProperty=nameWithType> values.</span></span>  
   
- <span data-ttu-id="68e75-104">\<configuration></span><span class="sxs-lookup"><span data-stu-id="68e75-104">\<configuration></span></span>  
-<span data-ttu-id="68e75-105">\<執行階段 ></span><span class="sxs-lookup"><span data-stu-id="68e75-105">\<runtime></span></span>  
-<span data-ttu-id="68e75-106">< TimeSpan_LegacyFormatMode ></span><span class="sxs-lookup"><span data-stu-id="68e75-106"><TimeSpan_LegacyFormatMode></span></span>  
+ <span data-ttu-id="b4c8c-104">\<configuration></span><span class="sxs-lookup"><span data-stu-id="b4c8c-104">\<configuration></span></span>  
+<span data-ttu-id="b4c8c-105">\<執行階段 ></span><span class="sxs-lookup"><span data-stu-id="b4c8c-105">\<runtime></span></span>  
+<span data-ttu-id="b4c8c-106">< TimeSpan_LegacyFormatMode ></span><span class="sxs-lookup"><span data-stu-id="b4c8c-106"><TimeSpan_LegacyFormatMode></span></span>  
   
-## <a name="syntax"></a><span data-ttu-id="68e75-107">語法</span><span class="sxs-lookup"><span data-stu-id="68e75-107">Syntax</span></span>  
+## <a name="syntax"></a><span data-ttu-id="b4c8c-107">語法</span><span class="sxs-lookup"><span data-stu-id="b4c8c-107">Syntax</span></span>  
   
 ```xml  
 <TimeSpan_LegacyFormatMode    
    enabled="true|false"/>  
 ```  
   
-## <a name="attributes-and-elements"></a><span data-ttu-id="68e75-108">屬性和項目</span><span class="sxs-lookup"><span data-stu-id="68e75-108">Attributes and Elements</span></span>  
- <span data-ttu-id="68e75-109">下列章節說明屬性、子項目和父項目。</span><span class="sxs-lookup"><span data-stu-id="68e75-109">The following sections describe attributes, child elements, and parent elements.</span></span>  
+## <a name="attributes-and-elements"></a><span data-ttu-id="b4c8c-108">屬性和項目</span><span class="sxs-lookup"><span data-stu-id="b4c8c-108">Attributes and Elements</span></span>  
+ <span data-ttu-id="b4c8c-109">下列各節描述屬性、子項目和父項目。</span><span class="sxs-lookup"><span data-stu-id="b4c8c-109">The following sections describe attributes, child elements, and parent elements.</span></span>  
   
-### <a name="attributes"></a><span data-ttu-id="68e75-110">屬性</span><span class="sxs-lookup"><span data-stu-id="68e75-110">Attributes</span></span>  
+### <a name="attributes"></a><span data-ttu-id="b4c8c-110">屬性</span><span class="sxs-lookup"><span data-stu-id="b4c8c-110">Attributes</span></span>  
   
-|<span data-ttu-id="68e75-111">屬性</span><span class="sxs-lookup"><span data-stu-id="68e75-111">Attribute</span></span>|<span data-ttu-id="68e75-112">描述</span><span class="sxs-lookup"><span data-stu-id="68e75-112">Description</span></span>|  
+|<span data-ttu-id="b4c8c-111">屬性</span><span class="sxs-lookup"><span data-stu-id="b4c8c-111">Attribute</span></span>|<span data-ttu-id="b4c8c-112">描述</span><span class="sxs-lookup"><span data-stu-id="b4c8c-112">Description</span></span>|  
 |---------------|-----------------|  
-|`enabled`|<span data-ttu-id="68e75-113">必要屬性。</span><span class="sxs-lookup"><span data-stu-id="68e75-113">Required attribute.</span></span><br /><br /> <span data-ttu-id="68e75-114">指定執行階段是否使用傳統的格式化行為<xref:System.TimeSpan?displayProperty=nameWithType>值。</span><span class="sxs-lookup"><span data-stu-id="68e75-114">Specifies whether the runtime uses legacy formatting behavior with <xref:System.TimeSpan?displayProperty=nameWithType> values.</span></span>|  
+|`enabled`|<span data-ttu-id="b4c8c-113">必要屬性。</span><span class="sxs-lookup"><span data-stu-id="b4c8c-113">Required attribute.</span></span><br /><br /> <span data-ttu-id="b4c8c-114">指定執行階段是否使用傳統的格式化行為<xref:System.TimeSpan?displayProperty=nameWithType>值。</span><span class="sxs-lookup"><span data-stu-id="b4c8c-114">Specifies whether the runtime uses legacy formatting behavior with <xref:System.TimeSpan?displayProperty=nameWithType> values.</span></span>|  
   
-## <a name="enabled-attribute"></a><span data-ttu-id="68e75-115">啟用屬性</span><span class="sxs-lookup"><span data-stu-id="68e75-115">enabled Attribute</span></span>  
+## <a name="enabled-attribute"></a><span data-ttu-id="b4c8c-115">啟用屬性</span><span class="sxs-lookup"><span data-stu-id="b4c8c-115">enabled Attribute</span></span>  
   
-|<span data-ttu-id="68e75-116">值</span><span class="sxs-lookup"><span data-stu-id="68e75-116">Value</span></span>|<span data-ttu-id="68e75-117">描述</span><span class="sxs-lookup"><span data-stu-id="68e75-117">Description</span></span>|  
+|<span data-ttu-id="b4c8c-116">值</span><span class="sxs-lookup"><span data-stu-id="b4c8c-116">Value</span></span>|<span data-ttu-id="b4c8c-117">描述</span><span class="sxs-lookup"><span data-stu-id="b4c8c-117">Description</span></span>|  
 |-----------|-----------------|  
-|`false`|<span data-ttu-id="68e75-118">執行階段不會還原舊版格式的行為。</span><span class="sxs-lookup"><span data-stu-id="68e75-118">The runtime does not restore legacy formatting behavior.</span></span>|  
-|`true`|<span data-ttu-id="68e75-119">執行階段會還原舊版格式的行為。</span><span class="sxs-lookup"><span data-stu-id="68e75-119">The runtime restores legacy formatting behavior.</span></span>|  
+|`false`|<span data-ttu-id="b4c8c-118">執行階段不會還原舊版格式的行為。</span><span class="sxs-lookup"><span data-stu-id="b4c8c-118">The runtime does not restore legacy formatting behavior.</span></span>|  
+|`true`|<span data-ttu-id="b4c8c-119">執行階段會還原舊版格式的行為。</span><span class="sxs-lookup"><span data-stu-id="b4c8c-119">The runtime restores legacy formatting behavior.</span></span>|  
   
-### <a name="child-elements"></a><span data-ttu-id="68e75-120">子元素</span><span class="sxs-lookup"><span data-stu-id="68e75-120">Child Elements</span></span>  
- <span data-ttu-id="68e75-121">無。</span><span class="sxs-lookup"><span data-stu-id="68e75-121">None.</span></span>  
+### <a name="child-elements"></a><span data-ttu-id="b4c8c-120">子項目</span><span class="sxs-lookup"><span data-stu-id="b4c8c-120">Child Elements</span></span>  
+ <span data-ttu-id="b4c8c-121">無。</span><span class="sxs-lookup"><span data-stu-id="b4c8c-121">None.</span></span>  
   
-### <a name="parent-elements"></a><span data-ttu-id="68e75-122">父項目</span><span class="sxs-lookup"><span data-stu-id="68e75-122">Parent Elements</span></span>  
+### <a name="parent-elements"></a><span data-ttu-id="b4c8c-122">父項目</span><span class="sxs-lookup"><span data-stu-id="b4c8c-122">Parent Elements</span></span>  
   
-|<span data-ttu-id="68e75-123">項目</span><span class="sxs-lookup"><span data-stu-id="68e75-123">Element</span></span>|<span data-ttu-id="68e75-124">描述</span><span class="sxs-lookup"><span data-stu-id="68e75-124">Description</span></span>|  
+|<span data-ttu-id="b4c8c-123">項目</span><span class="sxs-lookup"><span data-stu-id="b4c8c-123">Element</span></span>|<span data-ttu-id="b4c8c-124">描述</span><span class="sxs-lookup"><span data-stu-id="b4c8c-124">Description</span></span>|  
 |-------------|-----------------|  
-|`configuration`|<span data-ttu-id="68e75-125">通用語言執行平台和 .NET Framework 應用程式所使用之每個組態檔中的根項目。</span><span class="sxs-lookup"><span data-stu-id="68e75-125">The root element in every configuration file used by the common language runtime and .NET Framework applications.</span></span>|  
-|`runtime`|<span data-ttu-id="68e75-126">包含有關執行階段初始化選項的資訊。</span><span class="sxs-lookup"><span data-stu-id="68e75-126">Contains information about runtime initialization options.</span></span>|  
+|`configuration`|<span data-ttu-id="b4c8c-125">通用語言執行平台和 .NET Framework 應用程式所使用之每個組態檔中的根項目。</span><span class="sxs-lookup"><span data-stu-id="b4c8c-125">The root element in every configuration file used by the common language runtime and .NET Framework applications.</span></span>|  
+|`runtime`|<span data-ttu-id="b4c8c-126">包含有關執行階段初始化選項的資訊。</span><span class="sxs-lookup"><span data-stu-id="b4c8c-126">Contains information about runtime initialization options.</span></span>|  
   
-## <a name="remarks"></a><span data-ttu-id="68e75-127">備註</span><span class="sxs-lookup"><span data-stu-id="68e75-127">Remarks</span></span>  
- <span data-ttu-id="68e75-128">從開始[!INCLUDE[net_v40_long](../../../../../includes/net-v40-long-md.md)]、<xref:System.TimeSpan?displayProperty=nameWithType>結構實作<xref:System.IFormattable>介面，並支援格式設定與標準和自訂格式字串的作業。</span><span class="sxs-lookup"><span data-stu-id="68e75-128">Starting with the [!INCLUDE[net_v40_long](../../../../../includes/net-v40-long-md.md)], the <xref:System.TimeSpan?displayProperty=nameWithType> structure implements the <xref:System.IFormattable> interface and supports formatting operations with standard and custom format strings.</span></span> <span data-ttu-id="68e75-129">如果剖析方法時，遇到不支援的格式規範或格式字串，它會擲回<xref:System.FormatException>。</span><span class="sxs-lookup"><span data-stu-id="68e75-129">If a parsing method encounters an unsupported format specifier or format string, it throws a <xref:System.FormatException>.</span></span>  
+## <a name="remarks"></a><span data-ttu-id="b4c8c-127">備註</span><span class="sxs-lookup"><span data-stu-id="b4c8c-127">Remarks</span></span>  
+ <span data-ttu-id="b4c8c-128">從開始[!INCLUDE[net_v40_long](../../../../../includes/net-v40-long-md.md)]、<xref:System.TimeSpan?displayProperty=nameWithType>結構實作<xref:System.IFormattable>介面，並支援格式設定與標準和自訂格式字串的作業。</span><span class="sxs-lookup"><span data-stu-id="b4c8c-128">Starting with the [!INCLUDE[net_v40_long](../../../../../includes/net-v40-long-md.md)], the <xref:System.TimeSpan?displayProperty=nameWithType> structure implements the <xref:System.IFormattable> interface and supports formatting operations with standard and custom format strings.</span></span> <span data-ttu-id="b4c8c-129">如果剖析方法時，遇到不支援的格式規範或格式字串，它會擲回<xref:System.FormatException>。</span><span class="sxs-lookup"><span data-stu-id="b4c8c-129">If a parsing method encounters an unsupported format specifier or format string, it throws a <xref:System.FormatException>.</span></span>  
   
- <span data-ttu-id="68e75-130">在舊版的.NET Framework 中，<xref:System.TimeSpan>結構不會實作<xref:System.IFormattable>和不支援格式字串。</span><span class="sxs-lookup"><span data-stu-id="68e75-130">In previous versions of the .NET Framework, the <xref:System.TimeSpan> structure did not implement <xref:System.IFormattable> and did not support format strings.</span></span> <span data-ttu-id="68e75-131">不過，許多開發人員不小心假設<xref:System.TimeSpan>未支援的格式字串集，並使用它們在[複合格式化作業](../../../../../docs/standard/base-types/composite-formatting.md)與這類方法<xref:System.String.Format%2A?displayProperty=nameWithType>。</span><span class="sxs-lookup"><span data-stu-id="68e75-131">However, many developers mistakenly assumed that <xref:System.TimeSpan> did support a set of format strings and used them in [composite formatting operations](../../../../../docs/standard/base-types/composite-formatting.md) with methods such as <xref:System.String.Format%2A?displayProperty=nameWithType>.</span></span> <span data-ttu-id="68e75-132">一般情況下，如果型別實作<xref:System.IFormattable>並支援格式字串，呼叫格式化方法不支援的格式字串通常會擲回<xref:System.FormatException>。</span><span class="sxs-lookup"><span data-stu-id="68e75-132">Ordinarily, if a type implements <xref:System.IFormattable> and supports format strings, calls to formatting methods with unsupported format strings usually throw a <xref:System.FormatException>.</span></span> <span data-ttu-id="68e75-133">不過，因為<xref:System.TimeSpan>並未實作<xref:System.IFormattable>，執行階段略過的格式字串，並改為呼叫<xref:System.TimeSpan.ToString?displayProperty=nameWithType>方法。</span><span class="sxs-lookup"><span data-stu-id="68e75-133">However, because <xref:System.TimeSpan> did not implement <xref:System.IFormattable>, the runtime ignored the format string and instead called the <xref:System.TimeSpan.ToString?displayProperty=nameWithType> method.</span></span> <span data-ttu-id="68e75-134">這表示，雖然格式字串不會影響格式化作業，其目前狀態不會造成<xref:System.FormatException>。</span><span class="sxs-lookup"><span data-stu-id="68e75-134">This means that, although the format strings had no effect on the formatting operation, their presence did not result in a <xref:System.FormatException>.</span></span>  
+ <span data-ttu-id="b4c8c-130">在舊版的.NET Framework 中，<xref:System.TimeSpan>結構不會實作<xref:System.IFormattable>和不支援格式字串。</span><span class="sxs-lookup"><span data-stu-id="b4c8c-130">In previous versions of the .NET Framework, the <xref:System.TimeSpan> structure did not implement <xref:System.IFormattable> and did not support format strings.</span></span> <span data-ttu-id="b4c8c-131">不過，許多開發人員不小心假設<xref:System.TimeSpan>未支援的格式字串集，並使用它們在[複合格式化作業](../../../../../docs/standard/base-types/composite-formatting.md)與這類方法<xref:System.String.Format%2A?displayProperty=nameWithType>。</span><span class="sxs-lookup"><span data-stu-id="b4c8c-131">However, many developers mistakenly assumed that <xref:System.TimeSpan> did support a set of format strings and used them in [composite formatting operations](../../../../../docs/standard/base-types/composite-formatting.md) with methods such as <xref:System.String.Format%2A?displayProperty=nameWithType>.</span></span> <span data-ttu-id="b4c8c-132">一般情況下，如果型別實作<xref:System.IFormattable>並支援格式字串，呼叫格式化方法不支援的格式字串通常會擲回<xref:System.FormatException>。</span><span class="sxs-lookup"><span data-stu-id="b4c8c-132">Ordinarily, if a type implements <xref:System.IFormattable> and supports format strings, calls to formatting methods with unsupported format strings usually throw a <xref:System.FormatException>.</span></span> <span data-ttu-id="b4c8c-133">不過，因為<xref:System.TimeSpan>並未實作<xref:System.IFormattable>，執行階段略過的格式字串，並改為呼叫<xref:System.TimeSpan.ToString?displayProperty=nameWithType>方法。</span><span class="sxs-lookup"><span data-stu-id="b4c8c-133">However, because <xref:System.TimeSpan> did not implement <xref:System.IFormattable>, the runtime ignored the format string and instead called the <xref:System.TimeSpan.ToString?displayProperty=nameWithType> method.</span></span> <span data-ttu-id="b4c8c-134">這表示，雖然格式字串不會影響格式化作業，其目前狀態不會造成<xref:System.FormatException>。</span><span class="sxs-lookup"><span data-stu-id="b4c8c-134">This means that, although the format strings had no effect on the formatting operation, their presence did not result in a <xref:System.FormatException>.</span></span>  
   
- <span data-ttu-id="68e75-135">中的舊版程式碼傳遞的複合格式方法和格式字串無效，而且無法重新編譯該程式碼的情況下，您可以使用`<TimeSpan_LegacyFormatMode>`項目還原舊版<xref:System.TimeSpan>行為。</span><span class="sxs-lookup"><span data-stu-id="68e75-135">For cases in which legacy code passes a composite formatting method and an invalid format string, and that code cannot be recompiled, you can use the `<TimeSpan_LegacyFormatMode>` element to restore the legacy <xref:System.TimeSpan> behavior.</span></span> <span data-ttu-id="68e75-136">當您將`enabled`此項目的屬性`true`複合格式方法的呼叫中的結果、<xref:System.TimeSpan.ToString?displayProperty=nameWithType>而非<xref:System.TimeSpan.ToString%28System.String%2CSystem.IFormatProvider%29?displayProperty=nameWithType>，和<xref:System.FormatException>不會擲回。</span><span class="sxs-lookup"><span data-stu-id="68e75-136">When you set the `enabled` attribute of this element to `true`, the composite formatting method results in a call to <xref:System.TimeSpan.ToString?displayProperty=nameWithType> rather than <xref:System.TimeSpan.ToString%28System.String%2CSystem.IFormatProvider%29?displayProperty=nameWithType>, and a <xref:System.FormatException> is not thrown.</span></span>  
+ <span data-ttu-id="b4c8c-135">中的舊版程式碼傳遞的複合格式方法和格式字串無效，而且無法重新編譯該程式碼的情況下，您可以使用`<TimeSpan_LegacyFormatMode>`項目還原舊版<xref:System.TimeSpan>行為。</span><span class="sxs-lookup"><span data-stu-id="b4c8c-135">For cases in which legacy code passes a composite formatting method and an invalid format string, and that code cannot be recompiled, you can use the `<TimeSpan_LegacyFormatMode>` element to restore the legacy <xref:System.TimeSpan> behavior.</span></span> <span data-ttu-id="b4c8c-136">當您將`enabled`此項目的屬性`true`複合格式方法的呼叫中的結果、<xref:System.TimeSpan.ToString?displayProperty=nameWithType>而非<xref:System.TimeSpan.ToString%28System.String%2CSystem.IFormatProvider%29?displayProperty=nameWithType>，和<xref:System.FormatException>不會擲回。</span><span class="sxs-lookup"><span data-stu-id="b4c8c-136">When you set the `enabled` attribute of this element to `true`, the composite formatting method results in a call to <xref:System.TimeSpan.ToString?displayProperty=nameWithType> rather than <xref:System.TimeSpan.ToString%28System.String%2CSystem.IFormatProvider%29?displayProperty=nameWithType>, and a <xref:System.FormatException> is not thrown.</span></span>  
   
-## <a name="example"></a><span data-ttu-id="68e75-137">範例</span><span class="sxs-lookup"><span data-stu-id="68e75-137">Example</span></span>  
- <span data-ttu-id="68e75-138">下列範例會具現化<xref:System.TimeSpan>物件，並嘗試使用下列格式<xref:System.String.Format%28System.String%2CSystem.Object%29?displayProperty=nameWithType>方法藉由使用不支援的標準格式字串。</span><span class="sxs-lookup"><span data-stu-id="68e75-138">The following example instantiates a <xref:System.TimeSpan> object and attempts to format it with the <xref:System.String.Format%28System.String%2CSystem.Object%29?displayProperty=nameWithType> method by using an unsupported standard format string.</span></span>  
+## <a name="example"></a><span data-ttu-id="b4c8c-137">範例</span><span class="sxs-lookup"><span data-stu-id="b4c8c-137">Example</span></span>  
+ <span data-ttu-id="b4c8c-138">下列範例會具現化<xref:System.TimeSpan>物件，並嘗試使用下列格式<xref:System.String.Format%28System.String%2CSystem.Object%29?displayProperty=nameWithType>方法藉由使用不支援的標準格式字串。</span><span class="sxs-lookup"><span data-stu-id="b4c8c-138">The following example instantiates a <xref:System.TimeSpan> object and attempts to format it with the <xref:System.String.Format%28System.String%2CSystem.Object%29?displayProperty=nameWithType> method by using an unsupported standard format string.</span></span>  
   
  [!code-csharp[TimeSpan.BreakingChanges#1](../../../../../samples/snippets/csharp/VS_Snippets_CLR/timespan.breakingchanges/cs/legacyformatmode1.cs#1)]
  [!code-vb[TimeSpan.BreakingChanges#1](../../../../../samples/snippets/visualbasic/VS_Snippets_CLR/timespan.breakingchanges/vb/legacyformatmode1.vb#1)]  
   
- <span data-ttu-id="68e75-139">當您執行此範例[!INCLUDE[net_v35_short](../../../../../includes/net-v35-short-md.md)]或在較早的版本，它會顯示下列輸出：</span><span class="sxs-lookup"><span data-stu-id="68e75-139">When you run the example on the [!INCLUDE[net_v35_short](../../../../../includes/net-v35-short-md.md)] or on an earlier version, it displays the following output:</span></span>  
+ <span data-ttu-id="b4c8c-139">當您執行此範例[!INCLUDE[net_v35_short](../../../../../includes/net-v35-short-md.md)]或在較早的版本，它會顯示下列輸出：</span><span class="sxs-lookup"><span data-stu-id="b4c8c-139">When you run the example on the [!INCLUDE[net_v35_short](../../../../../includes/net-v35-short-md.md)] or on an earlier version, it displays the following output:</span></span>  
   
 ```  
 12:30:45  
 ```  
   
- <span data-ttu-id="68e75-140">如果您在 [!INCLUDE[net_v40_long](../../../../../includes/net-v40-long-md.md)] (含) 以後版本上執行範例，會出現相當不同的輸出結果：</span><span class="sxs-lookup"><span data-stu-id="68e75-140">This differs markedly from the output if you run the example on the [!INCLUDE[net_v40_long](../../../../../includes/net-v40-long-md.md)] or later version:</span></span>  
+ <span data-ttu-id="b4c8c-140">如果您在 [!INCLUDE[net_v40_long](../../../../../includes/net-v40-long-md.md)] (含) 以後版本上執行範例，會出現相當不同的輸出結果：</span><span class="sxs-lookup"><span data-stu-id="b4c8c-140">This differs markedly from the output if you run the example on the [!INCLUDE[net_v40_long](../../../../../includes/net-v40-long-md.md)] or later version:</span></span>  
   
 ```  
 Invalid Format  
 ```  
   
- <span data-ttu-id="68e75-141">不過，如果您將下列組態檔加入範例的目錄中，然後在 [!INCLUDE[net_v40_long](../../../../../includes/net-v40-long-md.md)] (含) 以後版本上執行該範例，則輸出會與在 [!INCLUDE[net_v35_short](../../../../../includes/net-v35-short-md.md)] 上執行範例時所產生的輸出完全相同。</span><span class="sxs-lookup"><span data-stu-id="68e75-141">However, if you add the following configuration file to the example's directory and then run the example on the [!INCLUDE[net_v40_long](../../../../../includes/net-v40-long-md.md)] or later version, the output is identical to that produced by the example when it is run on [!INCLUDE[net_v35_short](../../../../../includes/net-v35-short-md.md)].</span></span>  
+ <span data-ttu-id="b4c8c-141">不過，如果您將下列組態檔加入範例的目錄中，然後在 [!INCLUDE[net_v40_long](../../../../../includes/net-v40-long-md.md)] (含) 以後版本上執行該範例，則輸出會與在 [!INCLUDE[net_v35_short](../../../../../includes/net-v35-short-md.md)] 上執行範例時所產生的輸出完全相同。</span><span class="sxs-lookup"><span data-stu-id="b4c8c-141">However, if you add the following configuration file to the example's directory and then run the example on the [!INCLUDE[net_v40_long](../../../../../includes/net-v40-long-md.md)] or later version, the output is identical to that produced by the example when it is run on [!INCLUDE[net_v35_short](../../../../../includes/net-v35-short-md.md)].</span></span>  
   
 ```xml  
 <?xml version ="1.0"?>  
@@ -102,6 +92,6 @@ Invalid Format
 </configuration>  
 ```  
   
-## <a name="see-also"></a><span data-ttu-id="68e75-142">請參閱</span><span class="sxs-lookup"><span data-stu-id="68e75-142">See Also</span></span>  
- [<span data-ttu-id="68e75-143">執行階段設定結構描述</span><span class="sxs-lookup"><span data-stu-id="68e75-143">Runtime Settings Schema</span></span>](../../../../../docs/framework/configure-apps/file-schema/runtime/index.md)  
- [<span data-ttu-id="68e75-144">組態檔結構描述</span><span class="sxs-lookup"><span data-stu-id="68e75-144">Configuration File Schema</span></span>](../../../../../docs/framework/configure-apps/file-schema/index.md)
+## <a name="see-also"></a><span data-ttu-id="b4c8c-142">另請參閱</span><span class="sxs-lookup"><span data-stu-id="b4c8c-142">See Also</span></span>  
+ [<span data-ttu-id="b4c8c-143">執行階段設定結構描述</span><span class="sxs-lookup"><span data-stu-id="b4c8c-143">Runtime Settings Schema</span></span>](../../../../../docs/framework/configure-apps/file-schema/runtime/index.md)  
+ [<span data-ttu-id="b4c8c-144">組態檔結構描述</span><span class="sxs-lookup"><span data-stu-id="b4c8c-144">Configuration File Schema</span></span>](../../../../../docs/framework/configure-apps/file-schema/index.md)

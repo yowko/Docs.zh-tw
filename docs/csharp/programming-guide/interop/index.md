@@ -1,54 +1,47 @@
 ---
 title: 互通性 (C# 程式設計手冊)
 ms.date: 07/20/2015
-ms.prod: .net
-ms.technology:
-- devlang-csharp
-ms.topic: article
 helpviewer_keywords:
 - COM interop
 - interoperability
 - platform invoke, accessing APIs with C#
 - C# language, interoperability
 ms.assetid: 238bb95a-e962-4026-bbd5-197055bdb8ee
-caps.latest.revision: 31
-author: BillWagner
-ms.author: wiwagn
-ms.openlocfilehash: 2965543066b0846a6a4f8a3199590049947122f2
-ms.sourcegitcommit: 685143b62385500f59bc36274b8adb191f573a16
+ms.openlocfilehash: e854c51bd80809b92bb538475a407422b2eba7c0
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 12/09/2017
+ms.lasthandoff: 05/04/2018
 ---
-# <a name="interoperability-c-programming-guide"></a><span data-ttu-id="964a3-102">互通性 (C# 程式設計手冊)</span><span class="sxs-lookup"><span data-stu-id="964a3-102">Interoperability (C# Programming Guide)</span></span>
-<span data-ttu-id="964a3-103">互通性可讓您保留並充分利用目前在 Unmanaged 程式碼上的投資。</span><span class="sxs-lookup"><span data-stu-id="964a3-103">Interoperability enables you to preserve and take advantage of existing investments in unmanaged code.</span></span> <span data-ttu-id="964a3-104">在 Common Language Runtime (CLR) 控制下執行的程式碼稱為「Managed 程式碼」，而在 CLR 外部執行的程式碼稱為「Unmanaged 程式碼」。</span><span class="sxs-lookup"><span data-stu-id="964a3-104">Code that runs under the control of the common language runtime (CLR) is called *managed code*, and code that runs outside the CLR is called *unmanaged code*.</span></span> <span data-ttu-id="964a3-105">COM、COM+、C++ 元件、ActiveX 元件及 Microsoft Win32 API 都是 Unmanaged 程式碼的範例。</span><span class="sxs-lookup"><span data-stu-id="964a3-105">COM, COM+, C++ components, ActiveX components, and Microsoft Win32 API are examples of unmanaged code.</span></span>  
+# <a name="interoperability-c-programming-guide"></a><span data-ttu-id="0ce2f-102">互通性 (C# 程式設計手冊)</span><span class="sxs-lookup"><span data-stu-id="0ce2f-102">Interoperability (C# Programming Guide)</span></span>
+<span data-ttu-id="0ce2f-103">互通性可讓您保留並充分利用目前在 Unmanaged 程式碼上的投資。</span><span class="sxs-lookup"><span data-stu-id="0ce2f-103">Interoperability enables you to preserve and take advantage of existing investments in unmanaged code.</span></span> <span data-ttu-id="0ce2f-104">在 Common Language Runtime (CLR) 控制下執行的程式碼稱為「Managed 程式碼」，而在 CLR 外部執行的程式碼稱為「Unmanaged 程式碼」。</span><span class="sxs-lookup"><span data-stu-id="0ce2f-104">Code that runs under the control of the common language runtime (CLR) is called *managed code*, and code that runs outside the CLR is called *unmanaged code*.</span></span> <span data-ttu-id="0ce2f-105">COM、COM+、C++ 元件、ActiveX 元件及 Microsoft Win32 API 都是 Unmanaged 程式碼的範例。</span><span class="sxs-lookup"><span data-stu-id="0ce2f-105">COM, COM+, C++ components, ActiveX components, and Microsoft Win32 API are examples of unmanaged code.</span></span>  
   
- <span data-ttu-id="964a3-106">[!INCLUDE[dnprdnshort](~/includes/dnprdnshort-md.md)] 會透過平台叫用服務、<xref:System.Runtime.InteropServices> 命名空間、C++ 的互通性及 COM 互通性 (COM Interop)，啟用與 Unmanaged 程式碼的互通性。</span><span class="sxs-lookup"><span data-stu-id="964a3-106">The [!INCLUDE[dnprdnshort](~/includes/dnprdnshort-md.md)] enables interoperability with unmanaged code through platform invoke services, the <xref:System.Runtime.InteropServices> namespace, C++ interoperability, and COM interoperability (COM interop).</span></span>  
+ <span data-ttu-id="0ce2f-106">[!INCLUDE[dnprdnshort](~/includes/dnprdnshort-md.md)] 會透過平台叫用服務、<xref:System.Runtime.InteropServices> 命名空間、C++ 的互通性及 COM 互通性 (COM Interop)，啟用與 Unmanaged 程式碼的互通性。</span><span class="sxs-lookup"><span data-stu-id="0ce2f-106">The [!INCLUDE[dnprdnshort](~/includes/dnprdnshort-md.md)] enables interoperability with unmanaged code through platform invoke services, the <xref:System.Runtime.InteropServices> namespace, C++ interoperability, and COM interoperability (COM interop).</span></span>  
   
-## <a name="in-this-section"></a><span data-ttu-id="964a3-107">本章節內容</span><span class="sxs-lookup"><span data-stu-id="964a3-107">In This Section</span></span>  
- [<span data-ttu-id="964a3-108">互通性概觀</span><span class="sxs-lookup"><span data-stu-id="964a3-108">Interoperability Overview</span></span>](../../../csharp/programming-guide/interop/interoperability-overview.md)  
- <span data-ttu-id="964a3-109">說明要在 C# Managed 程式碼和 Unmanaged 程式碼之間相互操作的方法。</span><span class="sxs-lookup"><span data-stu-id="964a3-109">Describes methods to interoperate between C# managed code and unmanaged code.</span></span>  
+## <a name="in-this-section"></a><span data-ttu-id="0ce2f-107">本節內容</span><span class="sxs-lookup"><span data-stu-id="0ce2f-107">In This Section</span></span>  
+ [<span data-ttu-id="0ce2f-108">互通性概觀</span><span class="sxs-lookup"><span data-stu-id="0ce2f-108">Interoperability Overview</span></span>](../../../csharp/programming-guide/interop/interoperability-overview.md)  
+ <span data-ttu-id="0ce2f-109">說明要在 C# Managed 程式碼和 Unmanaged 程式碼之間相互操作的方法。</span><span class="sxs-lookup"><span data-stu-id="0ce2f-109">Describes methods to interoperate between C# managed code and unmanaged code.</span></span>  
   
- [<span data-ttu-id="964a3-110">如何：使用 Visual C# 功能存取 Office Interop 物件</span><span class="sxs-lookup"><span data-stu-id="964a3-110">How to: Access Office Interop Objects by Using Visual C# Features</span></span>](../../../csharp/programming-guide/interop/how-to-access-office-onterop-objects.md)  
- <span data-ttu-id="964a3-111">說明在 Visual C# 中引進以利 Office 程式設計的功能。</span><span class="sxs-lookup"><span data-stu-id="964a3-111">Describes features that are introduced in Visual C# to facilitate Office programming.</span></span>  
+ [<span data-ttu-id="0ce2f-110">如何：使用 Visual C# 功能存取 Office Interop 物件</span><span class="sxs-lookup"><span data-stu-id="0ce2f-110">How to: Access Office Interop Objects by Using Visual C# Features</span></span>](../../../csharp/programming-guide/interop/how-to-access-office-onterop-objects.md)  
+ <span data-ttu-id="0ce2f-111">說明在 Visual C# 中引進以利 Office 程式設計的功能。</span><span class="sxs-lookup"><span data-stu-id="0ce2f-111">Describes features that are introduced in Visual C# to facilitate Office programming.</span></span>  
   
- [<span data-ttu-id="964a3-112">如何：在 COM Interop 程式設計中使用已編製索引的屬性</span><span class="sxs-lookup"><span data-stu-id="964a3-112">How to: Use Indexed Properties in COM Interop Programming</span></span>](../../../csharp/programming-guide/interop/how-to-use-indexed-properties-in-com-interop-rogramming.md)  
- <span data-ttu-id="964a3-113">說明如何使用已索引的屬性來存取具有參數的 COM 屬性。</span><span class="sxs-lookup"><span data-stu-id="964a3-113">Describes how to use indexed properties to access COM properties that have parameters.</span></span>  
+ [<span data-ttu-id="0ce2f-112">如何：在 COM Interop 程式設計中使用已編製索引的屬性</span><span class="sxs-lookup"><span data-stu-id="0ce2f-112">How to: Use Indexed Properties in COM Interop Programming</span></span>](../../../csharp/programming-guide/interop/how-to-use-indexed-properties-in-com-interop-rogramming.md)  
+ <span data-ttu-id="0ce2f-113">說明如何使用已索引的屬性來存取具有參數的 COM 屬性。</span><span class="sxs-lookup"><span data-stu-id="0ce2f-113">Describes how to use indexed properties to access COM properties that have parameters.</span></span>  
   
- [<span data-ttu-id="964a3-114">如何：使用平台叫用播放 WAV 檔</span><span class="sxs-lookup"><span data-stu-id="964a3-114">How to: Use Platform Invoke to Play a Wave File</span></span>](../../../csharp/programming-guide/interop/how-to-use-platform-invoke-to-play-a-wave-file.md)  
- <span data-ttu-id="964a3-115">說明如何在 Windows 作業系統上使用平台叫用服務來播放 .wav 音效檔。</span><span class="sxs-lookup"><span data-stu-id="964a3-115">Describes how to use platform invoke services to play a .wav sound file on the Windows operating system.</span></span>  
+ [<span data-ttu-id="0ce2f-114">如何：使用平台叫用播放 WAV 檔</span><span class="sxs-lookup"><span data-stu-id="0ce2f-114">How to: Use Platform Invoke to Play a Wave File</span></span>](../../../csharp/programming-guide/interop/how-to-use-platform-invoke-to-play-a-wave-file.md)  
+ <span data-ttu-id="0ce2f-115">說明如何在 Windows 作業系統上使用平台叫用服務來播放 .wav 音效檔。</span><span class="sxs-lookup"><span data-stu-id="0ce2f-115">Describes how to use platform invoke services to play a .wav sound file on the Windows operating system.</span></span>  
   
- [<span data-ttu-id="964a3-116">逐步解說：Office 程式設計</span><span class="sxs-lookup"><span data-stu-id="964a3-116">Walkthrough: Office Programming</span></span>](../../../csharp/programming-guide/interop/walkthrough-office-programming.md)  
- <span data-ttu-id="964a3-117">示範如何建立 Excel 活頁簿以及包含對該活頁簿之連結的 Word 文件。</span><span class="sxs-lookup"><span data-stu-id="964a3-117">Shows how to create an Excel workbook and a Word document that contains a link to the workbook.</span></span>  
+ [<span data-ttu-id="0ce2f-116">逐步解說：Office 程式設計</span><span class="sxs-lookup"><span data-stu-id="0ce2f-116">Walkthrough: Office Programming</span></span>](../../../csharp/programming-guide/interop/walkthrough-office-programming.md)  
+ <span data-ttu-id="0ce2f-117">示範如何建立 Excel 活頁簿以及包含對該活頁簿之連結的 Word 文件。</span><span class="sxs-lookup"><span data-stu-id="0ce2f-117">Shows how to create an Excel workbook and a Word document that contains a link to the workbook.</span></span>  
   
- [<span data-ttu-id="964a3-118">範例 COM 類別</span><span class="sxs-lookup"><span data-stu-id="964a3-118">Example COM Class</span></span>](../../../csharp/programming-guide/interop/example-com-class.md)  
- <span data-ttu-id="964a3-119">示範如何將 C# 類別公開為 COM 物件。</span><span class="sxs-lookup"><span data-stu-id="964a3-119">Demonstrates how to expose a C# class as a COM object.</span></span>  
+ [<span data-ttu-id="0ce2f-118">範例 COM 類別</span><span class="sxs-lookup"><span data-stu-id="0ce2f-118">Example COM Class</span></span>](../../../csharp/programming-guide/interop/example-com-class.md)  
+ <span data-ttu-id="0ce2f-119">示範如何將 C# 類別公開為 COM 物件。</span><span class="sxs-lookup"><span data-stu-id="0ce2f-119">Demonstrates how to expose a C# class as a COM object.</span></span>  
   
-## <a name="c-language-specification"></a><span data-ttu-id="964a3-120">C# 語言規格</span><span class="sxs-lookup"><span data-stu-id="964a3-120">C# Language Specification</span></span>  
+## <a name="c-language-specification"></a><span data-ttu-id="0ce2f-120">C# 語言規格</span><span class="sxs-lookup"><span data-stu-id="0ce2f-120">C# Language Specification</span></span>  
  [!INCLUDE[CSharplangspec](~/includes/csharplangspec-md.md)]  
   
-## <a name="see-also"></a><span data-ttu-id="964a3-121">另請參閱</span><span class="sxs-lookup"><span data-stu-id="964a3-121">See Also</span></span>  
+## <a name="see-also"></a><span data-ttu-id="0ce2f-121">請參閱</span><span class="sxs-lookup"><span data-stu-id="0ce2f-121">See Also</span></span>  
  <xref:System.Runtime.InteropServices.Marshal.ReleaseComObject%2A?displayProperty=nameWithType>  
- [<span data-ttu-id="964a3-122">C# 程式設計指南</span><span class="sxs-lookup"><span data-stu-id="964a3-122">C# Programming Guide</span></span>](../../../csharp/programming-guide/index.md)  
- [<span data-ttu-id="964a3-123">與 Unmanaged 程式碼互通</span><span class="sxs-lookup"><span data-stu-id="964a3-123">Interoperating with Unmanaged Code</span></span>](../../../../docs/framework/interop/index.md)  
- [<span data-ttu-id="964a3-124">逐步解說：Office 程式設計</span><span class="sxs-lookup"><span data-stu-id="964a3-124">Walkthrough: Office Programming</span></span>](../../../csharp/programming-guide/interop/walkthrough-office-programming.md)
+ [<span data-ttu-id="0ce2f-122">C# 程式設計指南</span><span class="sxs-lookup"><span data-stu-id="0ce2f-122">C# Programming Guide</span></span>](../../../csharp/programming-guide/index.md)  
+ [<span data-ttu-id="0ce2f-123">與 Unmanaged 程式碼互通</span><span class="sxs-lookup"><span data-stu-id="0ce2f-123">Interoperating with Unmanaged Code</span></span>](../../../../docs/framework/interop/index.md)  
+ [<span data-ttu-id="0ce2f-124">逐步解說：Office 程式設計</span><span class="sxs-lookup"><span data-stu-id="0ce2f-124">Walkthrough: Office Programming</span></span>](../../../csharp/programming-guide/interop/walkthrough-office-programming.md)

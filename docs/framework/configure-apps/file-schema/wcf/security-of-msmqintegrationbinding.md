@@ -1,35 +1,25 @@
 ---
-title: "&lt;msmqIntegrationBinding&gt; 的 &lt;security&gt;"
-ms.custom: 
+title: '&lt;msmqIntegrationBinding&gt; 的 &lt;security&gt;'
 ms.date: 03/30/2017
-ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.technology: dotnet-clr
-ms.tgt_pltfrm: 
-ms.topic: article
 ms.assetid: ae5c68a8-14a2-4c6e-b9e0-3e94e3e9135e
-caps.latest.revision: "13"
 author: BrucePerlerMS
-ms.author: bruceper
 manager: mbaldwin
-ms.workload: dotnet
-ms.openlocfilehash: 94f6bf63a1da5385b884d67c582cd7d6577a6b67
-ms.sourcegitcommit: c0dd436f6f8f44dc80dc43b07f6841a00b74b23f
+ms.openlocfilehash: 861942ac3ce84d75be61d7b4125ab0e17c6d86e1
+ms.sourcegitcommit: 11f11ca6cefe555972b3a5c99729d1a7523d8f50
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 01/19/2018
+ms.lasthandoff: 05/03/2018
 ---
-# <a name="ltsecuritygt-of-ltmsmqintegrationbindinggt"></a><span data-ttu-id="cdd86-102">&lt;msmqIntegrationBinding&gt; 的 &lt;security&gt;</span><span class="sxs-lookup"><span data-stu-id="cdd86-102">&lt;security&gt; of &lt;msmqIntegrationBinding&gt;</span></span>
-<span data-ttu-id="cdd86-103">定義訊息佇列 (MSMQ) 整合通道的傳輸安全性設定。</span><span class="sxs-lookup"><span data-stu-id="cdd86-103">Defines the transport security settings for the Message Queuing (MSMQ) integration channel.</span></span>  
+# <a name="ltsecuritygt-of-ltmsmqintegrationbindinggt"></a><span data-ttu-id="48e3e-102">&lt;msmqIntegrationBinding&gt; 的 &lt;security&gt;</span><span class="sxs-lookup"><span data-stu-id="48e3e-102">&lt;security&gt; of &lt;msmqIntegrationBinding&gt;</span></span>
+<span data-ttu-id="48e3e-103">定義訊息佇列 (MSMQ) 整合通道的傳輸安全性設定。</span><span class="sxs-lookup"><span data-stu-id="48e3e-103">Defines the transport security settings for the Message Queuing (MSMQ) integration channel.</span></span>  
   
- <span data-ttu-id="cdd86-104">\<system.ServiceModel></span><span class="sxs-lookup"><span data-stu-id="cdd86-104">\<system.ServiceModel></span></span>  
-<span data-ttu-id="cdd86-105">\<bindings></span><span class="sxs-lookup"><span data-stu-id="cdd86-105">\<bindings></span></span>  
-<span data-ttu-id="cdd86-106">msmqIntegrationBinding</span><span class="sxs-lookup"><span data-stu-id="cdd86-106">msmqIntegrationBinding</span></span>  
-<span data-ttu-id="cdd86-107">\<binding></span><span class="sxs-lookup"><span data-stu-id="cdd86-107">\<binding></span></span>  
-<span data-ttu-id="cdd86-108">\<security></span><span class="sxs-lookup"><span data-stu-id="cdd86-108">\<security></span></span>  
+ <span data-ttu-id="48e3e-104">\<system.ServiceModel></span><span class="sxs-lookup"><span data-stu-id="48e3e-104">\<system.ServiceModel></span></span>  
+<span data-ttu-id="48e3e-105">\<繫結 ></span><span class="sxs-lookup"><span data-stu-id="48e3e-105">\<bindings></span></span>  
+<span data-ttu-id="48e3e-106">msmqIntegrationBinding</span><span class="sxs-lookup"><span data-stu-id="48e3e-106">msmqIntegrationBinding</span></span>  
+<span data-ttu-id="48e3e-107">\<繫結 ></span><span class="sxs-lookup"><span data-stu-id="48e3e-107">\<binding></span></span>  
+<span data-ttu-id="48e3e-108">\<安全性 ></span><span class="sxs-lookup"><span data-stu-id="48e3e-108">\<security></span></span>  
   
-## <a name="syntax"></a><span data-ttu-id="cdd86-109">語法</span><span class="sxs-lookup"><span data-stu-id="cdd86-109">Syntax</span></span>  
+## <a name="syntax"></a><span data-ttu-id="48e3e-109">語法</span><span class="sxs-lookup"><span data-stu-id="48e3e-109">Syntax</span></span>  
   
 ```xml  
 <msmqIntegrationBinding>  
@@ -47,36 +37,36 @@ ms.lasthandoff: 01/19/2018
 </msmqIntegrationBinding>   
 ```  
   
-## <a name="attributes-and-elements"></a><span data-ttu-id="cdd86-110">屬性和項目</span><span class="sxs-lookup"><span data-stu-id="cdd86-110">Attributes and Elements</span></span>  
- <span data-ttu-id="cdd86-111">下列各節描述屬性、子項目和父項目。</span><span class="sxs-lookup"><span data-stu-id="cdd86-111">The following sections describe attributes, child elements, and parent elements.</span></span>  
+## <a name="attributes-and-elements"></a><span data-ttu-id="48e3e-110">屬性和項目</span><span class="sxs-lookup"><span data-stu-id="48e3e-110">Attributes and Elements</span></span>  
+ <span data-ttu-id="48e3e-111">下列各節描述屬性、子項目和父項目。</span><span class="sxs-lookup"><span data-stu-id="48e3e-111">The following sections describe attributes, child elements, and parent elements.</span></span>  
   
-### <a name="attributes"></a><span data-ttu-id="cdd86-112">屬性</span><span class="sxs-lookup"><span data-stu-id="cdd86-112">Attributes</span></span>  
+### <a name="attributes"></a><span data-ttu-id="48e3e-112">屬性</span><span class="sxs-lookup"><span data-stu-id="48e3e-112">Attributes</span></span>  
   
-|<span data-ttu-id="cdd86-113">屬性</span><span class="sxs-lookup"><span data-stu-id="cdd86-113">Attribute</span></span>|<span data-ttu-id="cdd86-114">描述</span><span class="sxs-lookup"><span data-stu-id="cdd86-114">Description</span></span>|  
+|<span data-ttu-id="48e3e-113">屬性</span><span class="sxs-lookup"><span data-stu-id="48e3e-113">Attribute</span></span>|<span data-ttu-id="48e3e-114">描述</span><span class="sxs-lookup"><span data-stu-id="48e3e-114">Description</span></span>|  
 |---------------|-----------------|  
-|<span data-ttu-id="cdd86-115">模式</span><span class="sxs-lookup"><span data-stu-id="cdd86-115">mode</span></span>|<span data-ttu-id="cdd86-116">指定控制訊息佇列整合通道之完整性、機密性和驗證的安全性類型。</span><span class="sxs-lookup"><span data-stu-id="cdd86-116">Specifies the type of security that controls integrity, confidentiality and authentication with the Message Queuing integration channel.</span></span> <span data-ttu-id="cdd86-117">有效值包括以下的值：</span><span class="sxs-lookup"><span data-stu-id="cdd86-117">Valid values include the following:</span></span><br /><br /> <span data-ttu-id="cdd86-118">-None： 這會停用安全性。</span><span class="sxs-lookup"><span data-stu-id="cdd86-118">-   None: This disables security.</span></span><br /><span data-ttu-id="cdd86-119">傳輸： 保護和驗證是由傳輸提供。</span><span class="sxs-lookup"><span data-stu-id="cdd86-119">-   Transport: Protection and authentication are offered by the transport.</span></span> <span data-ttu-id="cdd86-120">這會套用在兩個佇列管理員之間的訊息安全性。</span><span class="sxs-lookup"><span data-stu-id="cdd86-120">This applies to the message security between the two queue managers.</span></span> <span data-ttu-id="cdd86-121">應用程式和佇列管理員之間沒有提供安全性。</span><span class="sxs-lookup"><span data-stu-id="cdd86-121">There is no security offered between the application and queue manager.</span></span> <span data-ttu-id="cdd86-122">現有 Msmq 應用程式在功能上相當於這個安全性模式類型。</span><span class="sxs-lookup"><span data-stu-id="cdd86-122">Existing Msmq applications are functionally equivalent with this type of security mode.</span></span><br /><br /> <span data-ttu-id="cdd86-123">預設值是 `Transport`。</span><span class="sxs-lookup"><span data-stu-id="cdd86-123">The default value is `Transport`.</span></span> <span data-ttu-id="cdd86-124">此屬性的型別為 <xref:System.ServiceModel.MsmqIntegration.MsmqIntegrationSecurityMode>。</span><span class="sxs-lookup"><span data-stu-id="cdd86-124">This attribute is of type <xref:System.ServiceModel.MsmqIntegration.MsmqIntegrationSecurityMode>.</span></span>|  
+|<span data-ttu-id="48e3e-115">模式</span><span class="sxs-lookup"><span data-stu-id="48e3e-115">mode</span></span>|<span data-ttu-id="48e3e-116">指定控制訊息佇列整合通道之完整性、機密性和驗證的安全性類型。</span><span class="sxs-lookup"><span data-stu-id="48e3e-116">Specifies the type of security that controls integrity, confidentiality and authentication with the Message Queuing integration channel.</span></span> <span data-ttu-id="48e3e-117">有效值包括以下的值：</span><span class="sxs-lookup"><span data-stu-id="48e3e-117">Valid values include the following:</span></span><br /><br /> <span data-ttu-id="48e3e-118">-None： 這會停用安全性。</span><span class="sxs-lookup"><span data-stu-id="48e3e-118">-   None: This disables security.</span></span><br /><span data-ttu-id="48e3e-119">傳輸： 保護和驗證是由傳輸提供。</span><span class="sxs-lookup"><span data-stu-id="48e3e-119">-   Transport: Protection and authentication are offered by the transport.</span></span> <span data-ttu-id="48e3e-120">這會套用在兩個佇列管理員之間的訊息安全性。</span><span class="sxs-lookup"><span data-stu-id="48e3e-120">This applies to the message security between the two queue managers.</span></span> <span data-ttu-id="48e3e-121">應用程式和佇列管理員之間沒有提供安全性。</span><span class="sxs-lookup"><span data-stu-id="48e3e-121">There is no security offered between the application and queue manager.</span></span> <span data-ttu-id="48e3e-122">現有 Msmq 應用程式在功能上相當於這個安全性模式類型。</span><span class="sxs-lookup"><span data-stu-id="48e3e-122">Existing Msmq applications are functionally equivalent with this type of security mode.</span></span><br /><br /> <span data-ttu-id="48e3e-123">預設值是 `Transport`。</span><span class="sxs-lookup"><span data-stu-id="48e3e-123">The default value is `Transport`.</span></span> <span data-ttu-id="48e3e-124">此屬性的型別為 <xref:System.ServiceModel.MsmqIntegration.MsmqIntegrationSecurityMode>。</span><span class="sxs-lookup"><span data-stu-id="48e3e-124">This attribute is of type <xref:System.ServiceModel.MsmqIntegration.MsmqIntegrationSecurityMode>.</span></span>|  
   
-### <a name="child-elements"></a><span data-ttu-id="cdd86-125">子元素</span><span class="sxs-lookup"><span data-stu-id="cdd86-125">Child Elements</span></span>  
+### <a name="child-elements"></a><span data-ttu-id="48e3e-125">子項目</span><span class="sxs-lookup"><span data-stu-id="48e3e-125">Child Elements</span></span>  
   
-|<span data-ttu-id="cdd86-126">項目</span><span class="sxs-lookup"><span data-stu-id="cdd86-126">Element</span></span>|<span data-ttu-id="cdd86-127">描述</span><span class="sxs-lookup"><span data-stu-id="cdd86-127">Description</span></span>|  
+|<span data-ttu-id="48e3e-126">項目</span><span class="sxs-lookup"><span data-stu-id="48e3e-126">Element</span></span>|<span data-ttu-id="48e3e-127">描述</span><span class="sxs-lookup"><span data-stu-id="48e3e-127">Description</span></span>|  
 |-------------|-----------------|  
-|[<span data-ttu-id="cdd86-128">\<transport></span><span class="sxs-lookup"><span data-stu-id="cdd86-128">\<transport></span></span>](../../../../../docs/framework/configure-apps/file-schema/wcf/transport-of-msmqintegrationbinding.md)|<span data-ttu-id="cdd86-129">定義訊息佇列整合傳輸的安全性設定。</span><span class="sxs-lookup"><span data-stu-id="cdd86-129">Defines the security settings for the Message Queuing integration transport.</span></span> <span data-ttu-id="cdd86-130">此項目的型別為 <xref:System.ServiceModel.Configuration.MsmqTransportSecurityElement>。</span><span class="sxs-lookup"><span data-stu-id="cdd86-130">This element is of type <xref:System.ServiceModel.Configuration.MsmqTransportSecurityElement>.</span></span>|  
+|[<span data-ttu-id="48e3e-128">\<transport></span><span class="sxs-lookup"><span data-stu-id="48e3e-128">\<transport></span></span>](../../../../../docs/framework/configure-apps/file-schema/wcf/transport-of-msmqintegrationbinding.md)|<span data-ttu-id="48e3e-129">定義訊息佇列整合傳輸的安全性設定。</span><span class="sxs-lookup"><span data-stu-id="48e3e-129">Defines the security settings for the Message Queuing integration transport.</span></span> <span data-ttu-id="48e3e-130">此項目的型別為 <xref:System.ServiceModel.Configuration.MsmqTransportSecurityElement>。</span><span class="sxs-lookup"><span data-stu-id="48e3e-130">This element is of type <xref:System.ServiceModel.Configuration.MsmqTransportSecurityElement>.</span></span>|  
   
-### <a name="parent-elements"></a><span data-ttu-id="cdd86-131">父項目</span><span class="sxs-lookup"><span data-stu-id="cdd86-131">Parent Elements</span></span>  
+### <a name="parent-elements"></a><span data-ttu-id="48e3e-131">父項目</span><span class="sxs-lookup"><span data-stu-id="48e3e-131">Parent Elements</span></span>  
   
-|<span data-ttu-id="cdd86-132">項目</span><span class="sxs-lookup"><span data-stu-id="cdd86-132">Element</span></span>|<span data-ttu-id="cdd86-133">描述</span><span class="sxs-lookup"><span data-stu-id="cdd86-133">Description</span></span>|  
+|<span data-ttu-id="48e3e-132">項目</span><span class="sxs-lookup"><span data-stu-id="48e3e-132">Element</span></span>|<span data-ttu-id="48e3e-133">描述</span><span class="sxs-lookup"><span data-stu-id="48e3e-133">Description</span></span>|  
 |-------------|-----------------|  
-|[<span data-ttu-id="cdd86-134">\<binding></span><span class="sxs-lookup"><span data-stu-id="cdd86-134">\<binding></span></span>](../../../../../docs/framework/misc/binding.md)|<span data-ttu-id="cdd86-135">繫結項目[ \<msmqIntegrationBinding >](../../../../../docs/framework/configure-apps/file-schema/wcf/msmqintegrationbinding.md)。</span><span class="sxs-lookup"><span data-stu-id="cdd86-135">The binding element of the [\<msmqIntegrationBinding>](../../../../../docs/framework/configure-apps/file-schema/wcf/msmqintegrationbinding.md).</span></span>|  
+|[<span data-ttu-id="48e3e-134">\<繫結 ></span><span class="sxs-lookup"><span data-stu-id="48e3e-134">\<binding></span></span>](../../../../../docs/framework/misc/binding.md)|<span data-ttu-id="48e3e-135">繫結項目[ \<msmqIntegrationBinding >](../../../../../docs/framework/configure-apps/file-schema/wcf/msmqintegrationbinding.md)。</span><span class="sxs-lookup"><span data-stu-id="48e3e-135">The binding element of the [\<msmqIntegrationBinding>](../../../../../docs/framework/configure-apps/file-schema/wcf/msmqintegrationbinding.md).</span></span>|  
   
-## <a name="see-also"></a><span data-ttu-id="cdd86-136">請參閱</span><span class="sxs-lookup"><span data-stu-id="cdd86-136">See Also</span></span>  
+## <a name="see-also"></a><span data-ttu-id="48e3e-136">另請參閱</span><span class="sxs-lookup"><span data-stu-id="48e3e-136">See Also</span></span>  
  <xref:System.ServiceModel.Configuration.MsmqIntegrationSecurityElement>  
  <xref:System.ServiceModel.MsmqIntegration.MsmqIntegrationBinding.Security%2A>  
  <xref:System.ServiceModel.Configuration.MsmqIntegrationBindingElement.Security%2A>  
  <xref:System.ServiceModel.MsmqIntegration.MsmqIntegrationSecurity>  
- [<span data-ttu-id="cdd86-137">WCF 中的佇列</span><span class="sxs-lookup"><span data-stu-id="cdd86-137">Queues in WCF</span></span>](../../../../../docs/framework/wcf/feature-details/queues-in-wcf.md)  
- [<span data-ttu-id="cdd86-138">保護服務和用戶端的安全</span><span class="sxs-lookup"><span data-stu-id="cdd86-138">Securing Services and Clients</span></span>](../../../../../docs/framework/wcf/feature-details/securing-services-and-clients.md)  
- [<span data-ttu-id="cdd86-139">繫結</span><span class="sxs-lookup"><span data-stu-id="cdd86-139">Bindings</span></span>](../../../../../docs/framework/wcf/bindings.md)  
- [<span data-ttu-id="cdd86-140">設定系統提供的繫結</span><span class="sxs-lookup"><span data-stu-id="cdd86-140">Configuring System-Provided Bindings</span></span>](../../../../../docs/framework/wcf/feature-details/configuring-system-provided-bindings.md)  
- [<span data-ttu-id="cdd86-141">使用繫結來設定 Windows Communication Foundation 服務和用戶端</span><span class="sxs-lookup"><span data-stu-id="cdd86-141">Using Bindings to Configure Windows Communication Foundation Services and Clients</span></span>](http://msdn.microsoft.com/library/bd8b277b-932f-472f-a42a-b02bb5257dfb)  
- [<span data-ttu-id="cdd86-142">\<binding></span><span class="sxs-lookup"><span data-stu-id="cdd86-142">\<binding></span></span>](../../../../../docs/framework/misc/binding.md)  
- [<span data-ttu-id="cdd86-143">\<msmqIntegrationBinding></span><span class="sxs-lookup"><span data-stu-id="cdd86-143">\<msmqIntegrationBinding></span></span>](../../../../../docs/framework/configure-apps/file-schema/wcf/msmqintegrationbinding.md)
+ [<span data-ttu-id="48e3e-137">WCF 中的佇列</span><span class="sxs-lookup"><span data-stu-id="48e3e-137">Queues in WCF</span></span>](../../../../../docs/framework/wcf/feature-details/queues-in-wcf.md)  
+ [<span data-ttu-id="48e3e-138">保護服務和用戶端的安全</span><span class="sxs-lookup"><span data-stu-id="48e3e-138">Securing Services and Clients</span></span>](../../../../../docs/framework/wcf/feature-details/securing-services-and-clients.md)  
+ [<span data-ttu-id="48e3e-139">繫結</span><span class="sxs-lookup"><span data-stu-id="48e3e-139">Bindings</span></span>](../../../../../docs/framework/wcf/bindings.md)  
+ [<span data-ttu-id="48e3e-140">設定系統提供的繫結</span><span class="sxs-lookup"><span data-stu-id="48e3e-140">Configuring System-Provided Bindings</span></span>](../../../../../docs/framework/wcf/feature-details/configuring-system-provided-bindings.md)  
+ [<span data-ttu-id="48e3e-141">使用繫結來設定 Windows Communication Foundation 服務和用戶端</span><span class="sxs-lookup"><span data-stu-id="48e3e-141">Using Bindings to Configure Windows Communication Foundation Services and Clients</span></span>](http://msdn.microsoft.com/library/bd8b277b-932f-472f-a42a-b02bb5257dfb)  
+ [<span data-ttu-id="48e3e-142">\<繫結 ></span><span class="sxs-lookup"><span data-stu-id="48e3e-142">\<binding></span></span>](../../../../../docs/framework/misc/binding.md)  
+ [<span data-ttu-id="48e3e-143">\<msmqIntegrationBinding></span><span class="sxs-lookup"><span data-stu-id="48e3e-143">\<msmqIntegrationBinding></span></span>](../../../../../docs/framework/configure-apps/file-schema/wcf/msmqintegrationbinding.md)

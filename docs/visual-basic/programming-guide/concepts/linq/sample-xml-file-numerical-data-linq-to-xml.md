@@ -1,27 +1,17 @@
 ---
-title: "範例 XML 檔：數值資料 (LINQ to XML)"
-ms.custom: 
+title: 範例 XML 檔：數值資料 (LINQ to XML)
 ms.date: 07/20/2015
-ms.prod: .net
-ms.reviewer: 
-ms.suite: 
-ms.technology: devlang-visual-basic
-ms.tgt_pltfrm: 
-ms.topic: article
 ms.assetid: 5faef812-0006-4d84-9cf2-5746070e7fbf
-caps.latest.revision: "3"
-author: dotnet-bot
-ms.author: dotnetcontent
-ms.openlocfilehash: 7da4b44e20d1d1e980c8acc4fe83b32e4d0b2018
-ms.sourcegitcommit: bd1ef61f4bb794b25383d3d72e71041a5ced172e
+ms.openlocfilehash: fb7bdb93aa63d430ba9371ed754616e39ea03487
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/18/2017
+ms.lasthandoff: 05/04/2018
 ---
-# <a name="sample-xml-file-numerical-data-linq-to-xml"></a><span data-ttu-id="e6dc2-102">範例 XML 檔：數值資料 (LINQ to XML)</span><span class="sxs-lookup"><span data-stu-id="e6dc2-102">Sample XML File: Numerical Data (LINQ to XML)</span></span>
-<span data-ttu-id="e6dc2-103">下列 XML 檔案用於 [!INCLUDE[sqltecxlinq](~/includes/sqltecxlinq-md.md)] 文件的各種範例中。</span><span class="sxs-lookup"><span data-stu-id="e6dc2-103">The following XML file is used in various examples in the [!INCLUDE[sqltecxlinq](~/includes/sqltecxlinq-md.md)] documentation.</span></span> <span data-ttu-id="e6dc2-104">此檔案包含數值資料以進行加總、平均和群組。</span><span class="sxs-lookup"><span data-stu-id="e6dc2-104">This file contains numerical data for summing, averaging, and grouping.</span></span>  
+# <a name="sample-xml-file-numerical-data-linq-to-xml"></a><span data-ttu-id="ac548-102">範例 XML 檔：數值資料 (LINQ to XML)</span><span class="sxs-lookup"><span data-stu-id="ac548-102">Sample XML File: Numerical Data (LINQ to XML)</span></span>
+<span data-ttu-id="ac548-103">下列 XML 檔案用於 [!INCLUDE[sqltecxlinq](~/includes/sqltecxlinq-md.md)] 文件的各種範例中。</span><span class="sxs-lookup"><span data-stu-id="ac548-103">The following XML file is used in various examples in the [!INCLUDE[sqltecxlinq](~/includes/sqltecxlinq-md.md)] documentation.</span></span> <span data-ttu-id="ac548-104">此檔案包含數值資料以進行加總、平均和群組。</span><span class="sxs-lookup"><span data-stu-id="ac548-104">This file contains numerical data for summing, averaging, and grouping.</span></span>  
   
-## <a name="dataxml"></a><span data-ttu-id="e6dc2-105">Data.xml</span><span class="sxs-lookup"><span data-stu-id="e6dc2-105">Data.xml</span></span>  
+## <a name="dataxml"></a><span data-ttu-id="ac548-105">Data.xml</span><span class="sxs-lookup"><span data-stu-id="ac548-105">Data.xml</span></span>  
   
 ```xml  
 <Root>  
@@ -64,5 +54,5 @@ ms.lasthandoff: 10/18/2017
 </Root>  
 ```  
   
-## <a name="see-also"></a><span data-ttu-id="e6dc2-106">另請參閱</span><span class="sxs-lookup"><span data-stu-id="e6dc2-106">See Also</span></span>  
- [<span data-ttu-id="e6dc2-107">範例 XML 文件 (LINQ to XML)</span><span class="sxs-lookup"><span data-stu-id="e6dc2-107">Sample XML Documents (LINQ to XML)</span></span>](../../../../visual-basic/programming-guide/concepts/linq/sample-xml-documents-linq-to-xml.md)
+## <a name="see-also"></a><span data-ttu-id="ac548-106">另請參閱</span><span class="sxs-lookup"><span data-stu-id="ac548-106">See Also</span></span>  
+ [<span data-ttu-id="ac548-107">範例 XML 文件 (LINQ to XML)</span><span class="sxs-lookup"><span data-stu-id="ac548-107">Sample XML Documents (LINQ to XML)</span></span>](../../../../visual-basic/programming-guide/concepts/linq/sample-xml-documents-linq-to-xml.md)

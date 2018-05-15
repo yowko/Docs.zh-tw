@@ -4,6 +4,7 @@
 ### [使用實作 IDisposable 的物件](using-objects.md)
 ## [記憶體回收](index.md)
 ### [記憶體回收的基本概念](fundamentals.md)
+### [大型物件堆積](large-object-heap.md)
 ### [記憶體回收和效能](performance.md)
 ### [引發的收集](induced.md)
 ### [延遲模式](latency.md)

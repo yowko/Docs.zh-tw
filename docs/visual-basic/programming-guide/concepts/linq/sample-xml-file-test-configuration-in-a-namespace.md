@@ -1,27 +1,17 @@
 ---
-title: "範例 XML 檔： Namespace3 中的測試組態"
-ms.custom: 
+title: 範例 XML 檔： Namespace3 中的測試組態
 ms.date: 07/20/2015
-ms.prod: .net
-ms.reviewer: 
-ms.suite: 
-ms.technology: devlang-visual-basic
-ms.tgt_pltfrm: 
-ms.topic: article
 ms.assetid: aff02614-30ee-45e1-bc0f-d64b193d20b8
-caps.latest.revision: "5"
-author: dotnet-bot
-ms.author: dotnetcontent
-ms.openlocfilehash: 58e0adcad36b42b0dc994a0c878ebd4e069186ca
-ms.sourcegitcommit: bd1ef61f4bb794b25383d3d72e71041a5ced172e
+ms.openlocfilehash: 2a572bb4d2618bdd6ef002389703ea63ee2ed21b
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/18/2017
+ms.lasthandoff: 05/04/2018
 ---
-# <a name="sample-xml-file-test-configuration-in-a-namespace"></a><span data-ttu-id="b1517-102">範例 XML 檔：命名空間中的測試組態</span><span class="sxs-lookup"><span data-stu-id="b1517-102">Sample XML File: Test Configuration in a Namespace</span></span>
-<span data-ttu-id="b1517-103">下列 XML 檔案用於 [!INCLUDE[sqltecxlinq](~/includes/sqltecxlinq-md.md)] 文件的各種範例中。</span><span class="sxs-lookup"><span data-stu-id="b1517-103">The following XML file is used in various examples in the [!INCLUDE[sqltecxlinq](~/includes/sqltecxlinq-md.md)] documentation.</span></span> <span data-ttu-id="b1517-104">這是測試組態檔案。</span><span class="sxs-lookup"><span data-stu-id="b1517-104">This is a test configuration file.</span></span> <span data-ttu-id="b1517-105">XML 位於命名空間中。</span><span class="sxs-lookup"><span data-stu-id="b1517-105">The XML is in a namespace.</span></span>  
+# <a name="sample-xml-file-test-configuration-in-a-namespace"></a><span data-ttu-id="7b7bb-102">範例 XML 檔：命名空間中的測試組態</span><span class="sxs-lookup"><span data-stu-id="7b7bb-102">Sample XML File: Test Configuration in a Namespace</span></span>
+<span data-ttu-id="7b7bb-103">下列 XML 檔案用於 [!INCLUDE[sqltecxlinq](~/includes/sqltecxlinq-md.md)] 文件的各種範例中。</span><span class="sxs-lookup"><span data-stu-id="7b7bb-103">The following XML file is used in various examples in the [!INCLUDE[sqltecxlinq](~/includes/sqltecxlinq-md.md)] documentation.</span></span> <span data-ttu-id="7b7bb-104">這是測試組態檔案。</span><span class="sxs-lookup"><span data-stu-id="7b7bb-104">This is a test configuration file.</span></span> <span data-ttu-id="7b7bb-105">XML 位於命名空間中。</span><span class="sxs-lookup"><span data-stu-id="7b7bb-105">The XML is in a namespace.</span></span>  
   
-## <a name="testconfiginnamespacexml"></a><span data-ttu-id="b1517-106">TestConfigInNamespace.xml</span><span class="sxs-lookup"><span data-stu-id="b1517-106">TestConfigInNamespace.xml</span></span>  
+## <a name="testconfiginnamespacexml"></a><span data-ttu-id="7b7bb-106">TestConfigInNamespace.xml</span><span class="sxs-lookup"><span data-stu-id="7b7bb-106">TestConfigInNamespace.xml</span></span>  
   
 ```xml  
 <?xml version="1.0"?>  
@@ -65,5 +55,5 @@ ms.lasthandoff: 10/18/2017
 </Tests>  
 ```  
   
-## <a name="see-also"></a><span data-ttu-id="b1517-107">另請參閱</span><span class="sxs-lookup"><span data-stu-id="b1517-107">See Also</span></span>  
- [<span data-ttu-id="b1517-108">範例 XML 文件 (LINQ to XML)</span><span class="sxs-lookup"><span data-stu-id="b1517-108">Sample XML Documents (LINQ to XML)</span></span>](../../../../visual-basic/programming-guide/concepts/linq/sample-xml-documents-linq-to-xml.md)
+## <a name="see-also"></a><span data-ttu-id="7b7bb-107">另請參閱</span><span class="sxs-lookup"><span data-stu-id="7b7bb-107">See Also</span></span>  
+ [<span data-ttu-id="7b7bb-108">範例 XML 文件 (LINQ to XML)</span><span class="sxs-lookup"><span data-stu-id="7b7bb-108">Sample XML Documents (LINQ to XML)</span></span>](../../../../visual-basic/programming-guide/concepts/linq/sample-xml-documents-linq-to-xml.md)

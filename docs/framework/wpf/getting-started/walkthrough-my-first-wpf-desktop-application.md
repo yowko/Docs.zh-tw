@@ -1,9 +1,6 @@
 ---
 title: 在 Visual Studio 中建立 WPF 應用程式
-ms.custom: 04/12/2018
-ms.prod: .net-framework
-ms.technology: dotnet-wpf
-ms.topic: conceptual
+ms.date: 04/12/2018
 dev_langs:
 - csharp
 - vb
@@ -13,82 +10,79 @@ helpviewer_keywords:
 ms.assetid: b96bed40-8946-4285-8fe4-88045ab854ed
 author: mairaw
 ms.author: mairaw
-manager: wpickett
-ms.workload:
-- dotnet
-ms.openlocfilehash: edc7a22a7b108731e08c5d67ef8b8a52e9959ddc
-ms.sourcegitcommit: 2e8acae16ae802f2d6d04e3ce0a6dbf04e476513
+ms.openlocfilehash: 7ceb4d79bb88e41e62f3ee136b6beb3324b3dbd7
+ms.sourcegitcommit: 15109844229ade1c6449f48f3834db1b26907824
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/18/2018
+ms.lasthandoff: 05/07/2018
 ---
-# <a name="walkthrough-my-first-wpf-desktop-application"></a><span data-ttu-id="0d49c-102">逐步解說：我的第一個 WPF 桌面應用程式</span><span class="sxs-lookup"><span data-stu-id="0d49c-102">Walkthrough: My first WPF desktop application</span></span>
+# <a name="walkthrough-my-first-wpf-desktop-application"></a><span data-ttu-id="62622-102">逐步解說：我的第一個 WPF 桌面應用程式</span><span class="sxs-lookup"><span data-stu-id="62622-102">Walkthrough: My first WPF desktop application</span></span>
 
-<span data-ttu-id="0d49c-103">本文章將示範如何開發簡單的 Windows Presentation Foundation (WPF) 應用程式，其中包含的項目通用於大多數 WPF 應用程式： Extensible Application Markup Language (XAML) 標記、 程式碼後置、 應用程式定義控制項、 版面配置、 資料繫結和樣式。</span><span class="sxs-lookup"><span data-stu-id="0d49c-103">This article shows you how to develop a simple Windows Presentation Foundation (WPF) application that includes the elements that are common to most WPF applications: Extensible Application Markup Language (XAML) markup, code-behind, application definitions, controls, layout, data binding, and styles.</span></span>
+<span data-ttu-id="62622-103">本文章將示範如何開發簡單的 Windows Presentation Foundation (WPF) 應用程式，其中包含的項目通用於大多數 WPF 應用程式： Extensible Application Markup Language (XAML) 標記、 程式碼後置、 應用程式定義控制項、 版面配置、 資料繫結和樣式。</span><span class="sxs-lookup"><span data-stu-id="62622-103">This article shows you how to develop a simple Windows Presentation Foundation (WPF) application that includes the elements that are common to most WPF applications: Extensible Application Markup Language (XAML) markup, code-behind, application definitions, controls, layout, data binding, and styles.</span></span>
 
-<span data-ttu-id="0d49c-104">本逐步解說包含下列步驟：</span><span class="sxs-lookup"><span data-stu-id="0d49c-104">This walkthrough includes the following steps:</span></span>
+<span data-ttu-id="62622-104">本逐步解說包含下列步驟：</span><span class="sxs-lookup"><span data-stu-id="62622-104">This walkthrough includes the following steps:</span></span>
 
-- <span data-ttu-id="0d49c-105">您可以使用 XAML 設計的應用程式的使用者介面 (UI) 外觀。</span><span class="sxs-lookup"><span data-stu-id="0d49c-105">Use XAML to design the appearance of the application's user interface (UI).</span></span>
+- <span data-ttu-id="62622-105">您可以使用 XAML 設計的應用程式的使用者介面 (UI) 外觀。</span><span class="sxs-lookup"><span data-stu-id="62622-105">Use XAML to design the appearance of the application's user interface (UI).</span></span>
 
-- <span data-ttu-id="0d49c-106">撰寫程式碼以建置應用程式的行為。</span><span class="sxs-lookup"><span data-stu-id="0d49c-106">Write code to build the application's behavior.</span></span>
+- <span data-ttu-id="62622-106">撰寫程式碼以建置應用程式的行為。</span><span class="sxs-lookup"><span data-stu-id="62622-106">Write code to build the application's behavior.</span></span>
 
-- <span data-ttu-id="0d49c-107">建立管理應用程式的應用程式定義。</span><span class="sxs-lookup"><span data-stu-id="0d49c-107">Create an application definition to manage the application.</span></span>
+- <span data-ttu-id="62622-107">建立管理應用程式的應用程式定義。</span><span class="sxs-lookup"><span data-stu-id="62622-107">Create an application definition to manage the application.</span></span>
 
-- <span data-ttu-id="0d49c-108">將控制項加入和建立要撰寫應用程式 UI 的配置。</span><span class="sxs-lookup"><span data-stu-id="0d49c-108">Add controls and create the layout to compose the application UI.</span></span>
+- <span data-ttu-id="62622-108">將控制項加入和建立要撰寫應用程式 UI 的配置。</span><span class="sxs-lookup"><span data-stu-id="62622-108">Add controls and create the layout to compose the application UI.</span></span>
 
-- <span data-ttu-id="0d49c-109">建立一致的外觀，整個應用程式的 UI 的樣式。</span><span class="sxs-lookup"><span data-stu-id="0d49c-109">Create styles for a consistent appearance throughout an application's UI.</span></span>
+- <span data-ttu-id="62622-109">建立一致的外觀，整個應用程式的 UI 的樣式。</span><span class="sxs-lookup"><span data-stu-id="62622-109">Create styles for a consistent appearance throughout an application's UI.</span></span>
 
-- <span data-ttu-id="0d49c-110">將 UI 繫結至資料填入資料從 UI 和保護資料和同步處理的 UI。</span><span class="sxs-lookup"><span data-stu-id="0d49c-110">Bind the UI to data to both populate the UI from data and keep the data and UI synchronized.</span></span>
+- <span data-ttu-id="62622-110">將 UI 繫結至資料填入資料從 UI 和保護資料和同步處理的 UI。</span><span class="sxs-lookup"><span data-stu-id="62622-110">Bind the UI to data to both populate the UI from data and keep the data and UI synchronized.</span></span>
 
-<span data-ttu-id="0d49c-111">本逐步解說結束時，您會建立獨立的 Windows 應用程式，可讓使用者選取的人員檢視經費支出報表。</span><span class="sxs-lookup"><span data-stu-id="0d49c-111">By the end of the walkthrough, you'll have built a standalone Windows application that allows users to view expense reports for selected people.</span></span> <span data-ttu-id="0d49c-112">應用程式是由數個裝載在瀏覽器樣式視窗中的 WPF 頁面組成。</span><span class="sxs-lookup"><span data-stu-id="0d49c-112">The application is composed of several WPF pages that are hosted in a browser-style window.</span></span>
+<span data-ttu-id="62622-111">本逐步解說結束時，您會建立獨立的 Windows 應用程式，可讓使用者選取的人員檢視經費支出報表。</span><span class="sxs-lookup"><span data-stu-id="62622-111">By the end of the walkthrough, you'll have built a standalone Windows application that allows users to view expense reports for selected people.</span></span> <span data-ttu-id="62622-112">應用程式是由數個裝載在瀏覽器樣式視窗中的 WPF 頁面組成。</span><span class="sxs-lookup"><span data-stu-id="62622-112">The application is composed of several WPF pages that are hosted in a browser-style window.</span></span>
 
 > [!TIP]
-> <span data-ttu-id="0d49c-113">用來建立這個逐步解說的範例程式碼適用於 Visual Basic 和 C# 在[建置 WPF 應用程式簡介](http://go.microsoft.com/fwlink/?LinkID=160008)。</span><span class="sxs-lookup"><span data-stu-id="0d49c-113">The sample code that is used to build this walkthrough is available for both Visual Basic and C# at [Introduction to Building WPF Applications](http://go.microsoft.com/fwlink/?LinkID=160008).</span></span>
+> <span data-ttu-id="62622-113">用來建立這個逐步解說的範例程式碼適用於 Visual Basic 和 C# 在[建置 WPF 應用程式簡介](http://go.microsoft.com/fwlink/?LinkID=160008)。</span><span class="sxs-lookup"><span data-stu-id="62622-113">The sample code that is used to build this walkthrough is available for both Visual Basic and C# at [Introduction to Building WPF Applications](http://go.microsoft.com/fwlink/?LinkID=160008).</span></span>
 
-## <a name="prerequisites"></a><span data-ttu-id="0d49c-114">必要條件</span><span class="sxs-lookup"><span data-stu-id="0d49c-114">Prerequisites</span></span>
+## <a name="prerequisites"></a><span data-ttu-id="62622-114">必要條件</span><span class="sxs-lookup"><span data-stu-id="62622-114">Prerequisites</span></span>
 
-- <span data-ttu-id="0d49c-115">Visual Studio 2012 或更新版本</span><span class="sxs-lookup"><span data-stu-id="0d49c-115">Visual Studio 2012 or later</span></span>
+- <span data-ttu-id="62622-115">Visual Studio 2012 或更新版本</span><span class="sxs-lookup"><span data-stu-id="62622-115">Visual Studio 2012 or later</span></span>
 
-<span data-ttu-id="0d49c-116">如需安裝最新版本的 Visual Studio 的詳細資訊，請參閱[安裝 Visual Studio](/visualstudio/install/install-visual-studio)。</span><span class="sxs-lookup"><span data-stu-id="0d49c-116">For more information about installing the latest version of Visual Studio, see [Install Visual Studio](/visualstudio/install/install-visual-studio).</span></span>
+<span data-ttu-id="62622-116">如需安裝最新版本的 Visual Studio 的詳細資訊，請參閱[安裝 Visual Studio](/visualstudio/install/install-visual-studio)。</span><span class="sxs-lookup"><span data-stu-id="62622-116">For more information about installing the latest version of Visual Studio, see [Install Visual Studio](/visualstudio/install/install-visual-studio).</span></span>
 
-## <a name="create-the-application-project"></a><span data-ttu-id="0d49c-117">建立應用程式專案</span><span class="sxs-lookup"><span data-stu-id="0d49c-117">Create the application project</span></span>
+## <a name="create-the-application-project"></a><span data-ttu-id="62622-117">建立應用程式專案</span><span class="sxs-lookup"><span data-stu-id="62622-117">Create the application project</span></span>
 
-<span data-ttu-id="0d49c-118">第一個步驟是建立應用程式基礎結構，其中包含應用程式定義、 兩個頁面，以及映像。</span><span class="sxs-lookup"><span data-stu-id="0d49c-118">The first step is to create the application infrastructure, which includes an application definition, two pages, and an image.</span></span>
+<span data-ttu-id="62622-118">第一個步驟是建立應用程式基礎結構，其中包含應用程式定義、 兩個頁面，以及映像。</span><span class="sxs-lookup"><span data-stu-id="62622-118">The first step is to create the application infrastructure, which includes an application definition, two pages, and an image.</span></span>
 
-1. <span data-ttu-id="0d49c-119">建立新的 WPF 應用程式專案在 Visual Basic 或 Visual C# 中名為**ExpenseIt**:</span><span class="sxs-lookup"><span data-stu-id="0d49c-119">Create a new WPF Application project in Visual Basic or Visual C# named **ExpenseIt**:</span></span>
+1. <span data-ttu-id="62622-119">建立新的 WPF 應用程式專案在 Visual Basic 或 Visual C# 中名為**ExpenseIt**:</span><span class="sxs-lookup"><span data-stu-id="62622-119">Create a new WPF Application project in Visual Basic or Visual C# named **ExpenseIt**:</span></span>
 
-   1. <span data-ttu-id="0d49c-120">開啟 Visual Studio，然後選取**檔案** > **新增** > **專案**。</span><span class="sxs-lookup"><span data-stu-id="0d49c-120">Open Visual Studio and select **File** > **New** > **Project**.</span></span>
+   1. <span data-ttu-id="62622-120">開啟 Visual Studio，然後選取**檔案** > **新增** > **專案**。</span><span class="sxs-lookup"><span data-stu-id="62622-120">Open Visual Studio and select **File** > **New** > **Project**.</span></span>
 
-      <span data-ttu-id="0d49c-121">**新專案** 對話方塊隨即開啟。</span><span class="sxs-lookup"><span data-stu-id="0d49c-121">The **New Project** dialog opens.</span></span>
+      <span data-ttu-id="62622-121">**新專案** 對話方塊隨即開啟。</span><span class="sxs-lookup"><span data-stu-id="62622-121">The **New Project** dialog opens.</span></span>
 
-   2. <span data-ttu-id="0d49c-122">在下**已安裝**分類中，展開  **Visual C#** 或**Visual Basic**節點，然後再選取**的傳統 Windows 桌面**。</span><span class="sxs-lookup"><span data-stu-id="0d49c-122">Under the **Installed** category, expand either the **Visual C#** or **Visual Basic** node, and then select **Windows Classic Desktop**.</span></span>
+   2. <span data-ttu-id="62622-122">在下**已安裝**分類中，展開  **Visual C#** 或**Visual Basic**節點，然後再選取**的傳統 Windows 桌面**。</span><span class="sxs-lookup"><span data-stu-id="62622-122">Under the **Installed** category, expand either the **Visual C#** or **Visual Basic** node, and then select **Windows Classic Desktop**.</span></span>
 
-   3. <span data-ttu-id="0d49c-123">選取**WPF 應用程式 (.NET Framework)** 範本。</span><span class="sxs-lookup"><span data-stu-id="0d49c-123">Select the **WPF App (.NET Framework)** template.</span></span> <span data-ttu-id="0d49c-124">輸入名稱**ExpenseIt** ，然後選取 **確定**。</span><span class="sxs-lookup"><span data-stu-id="0d49c-124">Enter the name **ExpenseIt** and then select **OK**.</span></span>
+   3. <span data-ttu-id="62622-123">選取**WPF 應用程式 (.NET Framework)** 範本。</span><span class="sxs-lookup"><span data-stu-id="62622-123">Select the **WPF App (.NET Framework)** template.</span></span> <span data-ttu-id="62622-124">輸入名稱**ExpenseIt** ，然後選取 **確定**。</span><span class="sxs-lookup"><span data-stu-id="62622-124">Enter the name **ExpenseIt** and then select **OK**.</span></span>
 
       ![WPF 應用程式選取新專案 對話方塊](media/new-project-dialog.png)
 
-      <span data-ttu-id="0d49c-126">Visual Studio 會建立專案並開啟名為預設應用程式視窗的設計工具**MainWindow.xaml**。</span><span class="sxs-lookup"><span data-stu-id="0d49c-126">Visual Studio creates the project and opens the designer for the default application window named **MainWindow.xaml**.</span></span>
+      <span data-ttu-id="62622-126">Visual Studio 會建立專案並開啟名為預設應用程式視窗的設計工具**MainWindow.xaml**。</span><span class="sxs-lookup"><span data-stu-id="62622-126">Visual Studio creates the project and opens the designer for the default application window named **MainWindow.xaml**.</span></span>
 
    > [!NOTE]
-   > <span data-ttu-id="0d49c-127">本逐步解說使用<xref:System.Windows.Controls.DataGrid>可在.NET Framework 4 及更新版本的控制項。</span><span class="sxs-lookup"><span data-stu-id="0d49c-127">This walkthrough uses the <xref:System.Windows.Controls.DataGrid> control that is available in the .NET Framework 4 and later.</span></span> <span data-ttu-id="0d49c-128">為確定您的專案目標.NET Framework 4 或更新版本。</span><span class="sxs-lookup"><span data-stu-id="0d49c-128">Be sure that your project targets the .NET Framework 4 or later.</span></span> <span data-ttu-id="0d49c-129">如需詳細資訊，請參閱[如何：以 .NET Framework 版本為目標](/visualstudio/ide/how-to-target-a-version-of-the-dotnet-framework)。</span><span class="sxs-lookup"><span data-stu-id="0d49c-129">For more information, see [How to: Target a Version of the .NET Framework](/visualstudio/ide/how-to-target-a-version-of-the-dotnet-framework).</span></span>
+   > <span data-ttu-id="62622-127">本逐步解說使用<xref:System.Windows.Controls.DataGrid>可在.NET Framework 4 及更新版本的控制項。</span><span class="sxs-lookup"><span data-stu-id="62622-127">This walkthrough uses the <xref:System.Windows.Controls.DataGrid> control that is available in the .NET Framework 4 and later.</span></span> <span data-ttu-id="62622-128">為確定您的專案目標.NET Framework 4 或更新版本。</span><span class="sxs-lookup"><span data-stu-id="62622-128">Be sure that your project targets the .NET Framework 4 or later.</span></span> <span data-ttu-id="62622-129">如需詳細資訊，請參閱[如何：以 .NET Framework 版本為目標](/visualstudio/ide/how-to-target-a-version-of-the-dotnet-framework)。</span><span class="sxs-lookup"><span data-stu-id="62622-129">For more information, see [How to: Target a Version of the .NET Framework](/visualstudio/ide/how-to-target-a-version-of-the-dotnet-framework).</span></span>
 
-2. <span data-ttu-id="0d49c-130">開啟*Application.xaml* (Visual Basic) 或*App.xaml* (C#)。</span><span class="sxs-lookup"><span data-stu-id="0d49c-130">Open *Application.xaml* (Visual Basic) or *App.xaml* (C#).</span></span>
+2. <span data-ttu-id="62622-130">開啟*Application.xaml* (Visual Basic) 或*App.xaml* (C#)。</span><span class="sxs-lookup"><span data-stu-id="62622-130">Open *Application.xaml* (Visual Basic) or *App.xaml* (C#).</span></span>
 
-    <span data-ttu-id="0d49c-131">此 XAML 檔案定義 WPF 應用程式和應用程式的任何資源。</span><span class="sxs-lookup"><span data-stu-id="0d49c-131">This XAML file defines a WPF application and any application resources.</span></span> <span data-ttu-id="0d49c-132">您也使用此檔案來指定 UI 會自動顯示時，應用程式啟動。在此情況下， *MainWindow.xaml*。</span><span class="sxs-lookup"><span data-stu-id="0d49c-132">You also use this file to specify the UI that automatically shows when the application starts; in this case, *MainWindow.xaml*.</span></span>
+    <span data-ttu-id="62622-131">此 XAML 檔案定義 WPF 應用程式和應用程式的任何資源。</span><span class="sxs-lookup"><span data-stu-id="62622-131">This XAML file defines a WPF application and any application resources.</span></span> <span data-ttu-id="62622-132">您也使用此檔案來指定 UI 會自動顯示時，應用程式啟動。在此情況下， *MainWindow.xaml*。</span><span class="sxs-lookup"><span data-stu-id="62622-132">You also use this file to specify the UI that automatically shows when the application starts; in this case, *MainWindow.xaml*.</span></span>
 
-    <span data-ttu-id="0d49c-133">在 Visual Basic 中，XAML 應該看起來如下：</span><span class="sxs-lookup"><span data-stu-id="0d49c-133">Your XAML should look like this in Visual Basic:</span></span>
+    <span data-ttu-id="62622-133">在 Visual Basic 中，XAML 應該看起來如下：</span><span class="sxs-lookup"><span data-stu-id="62622-133">Your XAML should look like this in Visual Basic:</span></span>
 
     [!code-xaml[ExpenseIt#1_A](../../../../samples/snippets/visualbasic/VS_Snippets_Wpf/ExpenseIt/VB/ExpenseIt1_A/Application.xaml#1_a)]
 
-    <span data-ttu-id="0d49c-134">或在 C# 中如下所示：</span><span class="sxs-lookup"><span data-stu-id="0d49c-134">Or like this in C#:</span></span>
+    <span data-ttu-id="62622-134">或在 C# 中如下所示：</span><span class="sxs-lookup"><span data-stu-id="62622-134">Or like this in C#:</span></span>
 
     [!code-xaml[ExpenseIt#1](../../../../samples/snippets/csharp/VS_Snippets_Wpf/ExpenseIt/CSharp/ExpenseIt/App.xaml#1)]
 
-3. <span data-ttu-id="0d49c-135">開啟*MainWindow.xaml*。</span><span class="sxs-lookup"><span data-stu-id="0d49c-135">Open *MainWindow.xaml*.</span></span>
+3. <span data-ttu-id="62622-135">開啟*MainWindow.xaml*。</span><span class="sxs-lookup"><span data-stu-id="62622-135">Open *MainWindow.xaml*.</span></span>
 
-    <span data-ttu-id="0d49c-136">此 XAML 檔案是您的應用程式的主視窗，並顯示在頁面中建立的內容。</span><span class="sxs-lookup"><span data-stu-id="0d49c-136">This XAML file is the main window of your application and displays content created in pages.</span></span> <span data-ttu-id="0d49c-137"><xref:System.Windows.Window>類別定義的視窗中，其標題、 大小或圖示，例如屬性和處理事件，例如關閉或隱藏。</span><span class="sxs-lookup"><span data-stu-id="0d49c-137">The <xref:System.Windows.Window> class defines the properties of a window, such as its title, size, or icon, and handles events, such as closing or hiding.</span></span>
+    <span data-ttu-id="62622-136">此 XAML 檔案是您的應用程式的主視窗，並顯示在頁面中建立的內容。</span><span class="sxs-lookup"><span data-stu-id="62622-136">This XAML file is the main window of your application and displays content created in pages.</span></span> <span data-ttu-id="62622-137"><xref:System.Windows.Window>類別定義的視窗中，其標題、 大小或圖示，例如屬性和處理事件，例如關閉或隱藏。</span><span class="sxs-lookup"><span data-stu-id="62622-137">The <xref:System.Windows.Window> class defines the properties of a window, such as its title, size, or icon, and handles events, such as closing or hiding.</span></span>
 
-4. <span data-ttu-id="0d49c-138">變更<xref:System.Windows.Window>元素<xref:System.Windows.Navigation.NavigationWindow>，如下列 XAML 中所示：</span><span class="sxs-lookup"><span data-stu-id="0d49c-138">Change the <xref:System.Windows.Window> element to a <xref:System.Windows.Navigation.NavigationWindow>, as shown in the following XAML:</span></span>
+4. <span data-ttu-id="62622-138">變更<xref:System.Windows.Window>元素<xref:System.Windows.Navigation.NavigationWindow>，如下列 XAML 中所示：</span><span class="sxs-lookup"><span data-stu-id="62622-138">Change the <xref:System.Windows.Window> element to a <xref:System.Windows.Navigation.NavigationWindow>, as shown in the following XAML:</span></span>
 
    ```xaml
    <NavigationWindow x:Class="ExpenseIt.MainWindow"
@@ -98,134 +92,134 @@ ms.lasthandoff: 04/18/2018
    </NavigationWindow>
    ```
 
-   <span data-ttu-id="0d49c-139">此應用程式巡覽至不同的內容，根據使用者輸入而定。</span><span class="sxs-lookup"><span data-stu-id="0d49c-139">This app navigates to different content depending on the user input.</span></span> <span data-ttu-id="0d49c-140">這就是為什麼主要<xref:System.Windows.Window>需要變更以<xref:System.Windows.Navigation.NavigationWindow>。</span><span class="sxs-lookup"><span data-stu-id="0d49c-140">This is why the main <xref:System.Windows.Window> needs to be changed to a <xref:System.Windows.Navigation.NavigationWindow>.</span></span> <span data-ttu-id="0d49c-141"><xref:System.Windows.Navigation.NavigationWindow> 繼承的所有屬性<xref:System.Windows.Window>。</span><span class="sxs-lookup"><span data-stu-id="0d49c-141"><xref:System.Windows.Navigation.NavigationWindow> inherits all the properties of <xref:System.Windows.Window>.</span></span> <span data-ttu-id="0d49c-142"><xref:System.Windows.Navigation.NavigationWindow> XAML 檔案中的項目建立的執行個體<xref:System.Windows.Navigation.NavigationWindow>類別。</span><span class="sxs-lookup"><span data-stu-id="0d49c-142">The <xref:System.Windows.Navigation.NavigationWindow> element in the XAML file creates an instance of the <xref:System.Windows.Navigation.NavigationWindow> class.</span></span> <span data-ttu-id="0d49c-143">如需詳細資訊，請參閱[巡覽概觀](../../../../docs/framework/wpf/app-development/navigation-overview.md)。</span><span class="sxs-lookup"><span data-stu-id="0d49c-143">For more information, see [Navigation overview](../../../../docs/framework/wpf/app-development/navigation-overview.md).</span></span>
+   <span data-ttu-id="62622-139">此應用程式巡覽至不同的內容，根據使用者輸入而定。</span><span class="sxs-lookup"><span data-stu-id="62622-139">This app navigates to different content depending on the user input.</span></span> <span data-ttu-id="62622-140">這就是為什麼主要<xref:System.Windows.Window>需要變更以<xref:System.Windows.Navigation.NavigationWindow>。</span><span class="sxs-lookup"><span data-stu-id="62622-140">This is why the main <xref:System.Windows.Window> needs to be changed to a <xref:System.Windows.Navigation.NavigationWindow>.</span></span> <span data-ttu-id="62622-141"><xref:System.Windows.Navigation.NavigationWindow> 繼承的所有屬性<xref:System.Windows.Window>。</span><span class="sxs-lookup"><span data-stu-id="62622-141"><xref:System.Windows.Navigation.NavigationWindow> inherits all the properties of <xref:System.Windows.Window>.</span></span> <span data-ttu-id="62622-142"><xref:System.Windows.Navigation.NavigationWindow> XAML 檔案中的項目建立的執行個體<xref:System.Windows.Navigation.NavigationWindow>類別。</span><span class="sxs-lookup"><span data-stu-id="62622-142">The <xref:System.Windows.Navigation.NavigationWindow> element in the XAML file creates an instance of the <xref:System.Windows.Navigation.NavigationWindow> class.</span></span> <span data-ttu-id="62622-143">如需詳細資訊，請參閱[巡覽概觀](../../../../docs/framework/wpf/app-development/navigation-overview.md)。</span><span class="sxs-lookup"><span data-stu-id="62622-143">For more information, see [Navigation overview](../../../../docs/framework/wpf/app-development/navigation-overview.md).</span></span>
 
-5. <span data-ttu-id="0d49c-144">變更下列屬性上<xref:System.Windows.Navigation.NavigationWindow>項目：</span><span class="sxs-lookup"><span data-stu-id="0d49c-144">Change the following properties on the <xref:System.Windows.Navigation.NavigationWindow> element:</span></span>
+5. <span data-ttu-id="62622-144">變更下列屬性上<xref:System.Windows.Navigation.NavigationWindow>項目：</span><span class="sxs-lookup"><span data-stu-id="62622-144">Change the following properties on the <xref:System.Windows.Navigation.NavigationWindow> element:</span></span>
 
-    - <span data-ttu-id="0d49c-145">設定<xref:System.Windows.Window.Title%2A>"ExpenseIt"的屬性。</span><span class="sxs-lookup"><span data-stu-id="0d49c-145">Set the <xref:System.Windows.Window.Title%2A> property to "ExpenseIt".</span></span>
+    - <span data-ttu-id="62622-145">設定<xref:System.Windows.Window.Title%2A>"ExpenseIt"的屬性。</span><span class="sxs-lookup"><span data-stu-id="62622-145">Set the <xref:System.Windows.Window.Title%2A> property to "ExpenseIt".</span></span>
 
-    - <span data-ttu-id="0d49c-146">設定<xref:System.Windows.FrameworkElement.Width%2A>500 像素為單位的屬性。</span><span class="sxs-lookup"><span data-stu-id="0d49c-146">Set the <xref:System.Windows.FrameworkElement.Width%2A> property to 500 pixels.</span></span>
+    - <span data-ttu-id="62622-146">設定<xref:System.Windows.FrameworkElement.Width%2A>500 像素為單位的屬性。</span><span class="sxs-lookup"><span data-stu-id="62622-146">Set the <xref:System.Windows.FrameworkElement.Width%2A> property to 500 pixels.</span></span>
 
-    - <span data-ttu-id="0d49c-147">設定<xref:System.Windows.FrameworkElement.Height%2A>350 像素為單位的屬性。</span><span class="sxs-lookup"><span data-stu-id="0d49c-147">Set the <xref:System.Windows.FrameworkElement.Height%2A> property to 350 pixels.</span></span>
+    - <span data-ttu-id="62622-147">設定<xref:System.Windows.FrameworkElement.Height%2A>350 像素為單位的屬性。</span><span class="sxs-lookup"><span data-stu-id="62622-147">Set the <xref:System.Windows.FrameworkElement.Height%2A> property to 350 pixels.</span></span>
 
-    - <span data-ttu-id="0d49c-148">移除<xref:System.Windows.Controls.Grid>之間的項目<xref:System.Windows.Navigation.NavigationWindow>標記。</span><span class="sxs-lookup"><span data-stu-id="0d49c-148">Remove the <xref:System.Windows.Controls.Grid> elements between the <xref:System.Windows.Navigation.NavigationWindow> tags.</span></span>
+    - <span data-ttu-id="62622-148">移除<xref:System.Windows.Controls.Grid>之間的項目<xref:System.Windows.Navigation.NavigationWindow>標記。</span><span class="sxs-lookup"><span data-stu-id="62622-148">Remove the <xref:System.Windows.Controls.Grid> elements between the <xref:System.Windows.Navigation.NavigationWindow> tags.</span></span>
 
-    <span data-ttu-id="0d49c-149">在 Visual Basic 中，XAML 應該看起來如下：</span><span class="sxs-lookup"><span data-stu-id="0d49c-149">Your XAML should look like this in Visual Basic:</span></span>
+    <span data-ttu-id="62622-149">在 Visual Basic 中，XAML 應該看起來如下：</span><span class="sxs-lookup"><span data-stu-id="62622-149">Your XAML should look like this in Visual Basic:</span></span>
 
     [!code-xaml[ExpenseIt#2_A](../../../../samples/snippets/visualbasic/VS_Snippets_Wpf/ExpenseIt/VB/ExpenseIt/MainWindow.xaml#2_a)]
 
-    <span data-ttu-id="0d49c-150">或在 C# 中如下所示：</span><span class="sxs-lookup"><span data-stu-id="0d49c-150">Or like this in C#:</span></span>
+    <span data-ttu-id="62622-150">或在 C# 中如下所示：</span><span class="sxs-lookup"><span data-stu-id="62622-150">Or like this in C#:</span></span>
 
     [!code-xaml[ExpenseIt#2](../../../../samples/snippets/csharp/VS_Snippets_Wpf/ExpenseIt/CSharp/ExpenseIt/MainWindow.xaml#2)]
 
-6. <span data-ttu-id="0d49c-151">開啟*MainWindow.xaml.vb*或*MainWindow.xaml.cs*。</span><span class="sxs-lookup"><span data-stu-id="0d49c-151">Open *MainWindow.xaml.vb* or *MainWindow.xaml.cs*.</span></span>
+6. <span data-ttu-id="62622-151">開啟*MainWindow.xaml.vb*或*MainWindow.xaml.cs*。</span><span class="sxs-lookup"><span data-stu-id="62622-151">Open *MainWindow.xaml.vb* or *MainWindow.xaml.cs*.</span></span>
 
-    <span data-ttu-id="0d49c-152">這個檔案是包含程式碼來處理的事件宣告中的程式碼後置檔案*MainWindow.xaml*。</span><span class="sxs-lookup"><span data-stu-id="0d49c-152">This file is a code-behind file that contains code to handle the events declared in *MainWindow.xaml*.</span></span> <span data-ttu-id="0d49c-153">這個檔案包含 XAML 中定義之視窗的部分類別。</span><span class="sxs-lookup"><span data-stu-id="0d49c-153">This file contains a partial class for the window defined in XAML.</span></span>
+    <span data-ttu-id="62622-152">這個檔案是包含程式碼來處理的事件宣告中的程式碼後置檔案*MainWindow.xaml*。</span><span class="sxs-lookup"><span data-stu-id="62622-152">This file is a code-behind file that contains code to handle the events declared in *MainWindow.xaml*.</span></span> <span data-ttu-id="62622-153">這個檔案包含 XAML 中定義之視窗的部分類別。</span><span class="sxs-lookup"><span data-stu-id="62622-153">This file contains a partial class for the window defined in XAML.</span></span>
 
-7. <span data-ttu-id="0d49c-154">如果您使用的 C#，變更`MainWindow`類別衍生自<xref:System.Windows.Navigation.NavigationWindow>。</span><span class="sxs-lookup"><span data-stu-id="0d49c-154">If you are using C#, change the `MainWindow` class to derive from <xref:System.Windows.Navigation.NavigationWindow>.</span></span> <span data-ttu-id="0d49c-155">（在 Visual Basic 中，這會自動變更 XAML 中的視窗。）</span><span class="sxs-lookup"><span data-stu-id="0d49c-155">(In Visual Basic, this happens automatically when you change the window in XAML.)</span></span>
+7. <span data-ttu-id="62622-154">如果您使用的 C#，變更`MainWindow`類別衍生自<xref:System.Windows.Navigation.NavigationWindow>。</span><span class="sxs-lookup"><span data-stu-id="62622-154">If you are using C#, change the `MainWindow` class to derive from <xref:System.Windows.Navigation.NavigationWindow>.</span></span> <span data-ttu-id="62622-155">（在 Visual Basic 中，這會自動變更 XAML 中的視窗。）</span><span class="sxs-lookup"><span data-stu-id="62622-155">(In Visual Basic, this happens automatically when you change the window in XAML.)</span></span>
 
-   <span data-ttu-id="0d49c-156">您的程式碼看起來應該像這樣：</span><span class="sxs-lookup"><span data-stu-id="0d49c-156">Your code should look like this:</span></span>
+   <span data-ttu-id="62622-156">您的程式碼看起來應該像這樣：</span><span class="sxs-lookup"><span data-stu-id="62622-156">Your code should look like this:</span></span>
 
    [!code-csharp[ExpenseIt#3](../../../../samples/snippets/csharp/VS_Snippets_Wpf/ExpenseIt/CSharp/ExpenseIt/MainWindow.xaml.cs#3)]
    [!code-vb[ExpenseIt#3](../../../../samples/snippets/visualbasic/VS_Snippets_Wpf/ExpenseIt/VB/ExpenseIt1_A/MainWindow.xaml.vb#3)]
 
    > [!TIP]
-   > <span data-ttu-id="0d49c-157">您可以切換之間 C# 和 Visual Basic 中的範例程式碼的程式碼語言**語言**右側上方的這篇文章的下拉式清單。</span><span class="sxs-lookup"><span data-stu-id="0d49c-157">You can toggle the code language of the sample code between C# and Visual Basic in the **Language** drop-down on the upper right side of this article.</span></span>
+   > <span data-ttu-id="62622-157">您可以切換之間 C# 和 Visual Basic 中的範例程式碼的程式碼語言**語言**右側上方的這篇文章的下拉式清單。</span><span class="sxs-lookup"><span data-stu-id="62622-157">You can toggle the code language of the sample code between C# and Visual Basic in the **Language** drop-down on the upper right side of this article.</span></span>
 
-## <a name="add-files-to-the-application"></a><span data-ttu-id="0d49c-158">將檔案新增至應用程式</span><span class="sxs-lookup"><span data-stu-id="0d49c-158">Add files to the application</span></span>
+## <a name="add-files-to-the-application"></a><span data-ttu-id="62622-158">將檔案新增至應用程式</span><span class="sxs-lookup"><span data-stu-id="62622-158">Add files to the application</span></span>
 
-<span data-ttu-id="0d49c-159">在本節中，您要在應用程式中加入兩頁網頁和一個影像。</span><span class="sxs-lookup"><span data-stu-id="0d49c-159">In this section, you'll add two pages and an image to the application.</span></span>
+<span data-ttu-id="62622-159">在本節中，您要在應用程式中加入兩頁網頁和一個影像。</span><span class="sxs-lookup"><span data-stu-id="62622-159">In this section, you'll add two pages and an image to the application.</span></span>
 
-1. <span data-ttu-id="0d49c-160">將新的 WPF 頁面加入至專案，並將其命名*ExpenseItHome.xaml*:</span><span class="sxs-lookup"><span data-stu-id="0d49c-160">Add a new WPF page to the project, and name it *ExpenseItHome.xaml*:</span></span>
+1. <span data-ttu-id="62622-160">將新的 WPF 頁面加入至專案，並將其命名*ExpenseItHome.xaml*:</span><span class="sxs-lookup"><span data-stu-id="62622-160">Add a new WPF page to the project, and name it *ExpenseItHome.xaml*:</span></span>
 
-   1. <span data-ttu-id="0d49c-161">在**方案總管] 中**，以滑鼠右鍵按一下**ExpenseIt**專案節點，然後選擇 [**新增** > **頁面**。</span><span class="sxs-lookup"><span data-stu-id="0d49c-161">In **Solution Explorer**, right-click on the **ExpenseIt** project node and choose **Add** > **Page**.</span></span>
+   1. <span data-ttu-id="62622-161">在**方案總管] 中**，以滑鼠右鍵按一下**ExpenseIt**專案節點，然後選擇 [**新增** > **頁面**。</span><span class="sxs-lookup"><span data-stu-id="62622-161">In **Solution Explorer**, right-click on the **ExpenseIt** project node and choose **Add** > **Page**.</span></span>
 
-   1. <span data-ttu-id="0d49c-162">在**加入新項目** 對話方塊中，**頁面 (WPF)** 已選取範本。</span><span class="sxs-lookup"><span data-stu-id="0d49c-162">In the **Add New Item** dialog, the **Page (WPF)** template is already selected.</span></span> <span data-ttu-id="0d49c-163">輸入名稱**ExpenseItHome**，然後選取**新增**。</span><span class="sxs-lookup"><span data-stu-id="0d49c-163">Enter the name **ExpenseItHome**, and then select **Add**.</span></span>
+   1. <span data-ttu-id="62622-162">在**加入新項目** 對話方塊中，**頁面 (WPF)** 已選取範本。</span><span class="sxs-lookup"><span data-stu-id="62622-162">In the **Add New Item** dialog, the **Page (WPF)** template is already selected.</span></span> <span data-ttu-id="62622-163">輸入名稱**ExpenseItHome**，然後選取**新增**。</span><span class="sxs-lookup"><span data-stu-id="62622-163">Enter the name **ExpenseItHome**, and then select **Add**.</span></span>
 
-    <span data-ttu-id="0d49c-164">此頁面是第一頁的應用程式啟動時顯示。</span><span class="sxs-lookup"><span data-stu-id="0d49c-164">This page is the first page that's displayed when the application is launched.</span></span> <span data-ttu-id="0d49c-165">它會顯示從，選取要顯示的經費支出報表的人員清單。</span><span class="sxs-lookup"><span data-stu-id="0d49c-165">It will show a list of people to select from, to show an expense report for.</span></span>
+    <span data-ttu-id="62622-164">此頁面是第一頁的應用程式啟動時顯示。</span><span class="sxs-lookup"><span data-stu-id="62622-164">This page is the first page that's displayed when the application is launched.</span></span> <span data-ttu-id="62622-165">它會顯示從，選取要顯示的經費支出報表的人員清單。</span><span class="sxs-lookup"><span data-stu-id="62622-165">It will show a list of people to select from, to show an expense report for.</span></span>
 
-2. <span data-ttu-id="0d49c-166">開啟 *ExpenseItHome.xaml*。</span><span class="sxs-lookup"><span data-stu-id="0d49c-166">Open *ExpenseItHome.xaml*.</span></span>
+2. <span data-ttu-id="62622-166">開啟 *ExpenseItHome.xaml*。</span><span class="sxs-lookup"><span data-stu-id="62622-166">Open *ExpenseItHome.xaml*.</span></span>
 
-3. <span data-ttu-id="0d49c-167">設定<xref:System.Windows.Controls.Page.Title%2A>至 「 ExpenseIt-首頁 」。</span><span class="sxs-lookup"><span data-stu-id="0d49c-167">Set the <xref:System.Windows.Controls.Page.Title%2A> to "ExpenseIt - Home".</span></span>
+3. <span data-ttu-id="62622-167">設定<xref:System.Windows.Controls.Page.Title%2A>至 「 ExpenseIt-首頁 」。</span><span class="sxs-lookup"><span data-stu-id="62622-167">Set the <xref:System.Windows.Controls.Page.Title%2A> to "ExpenseIt - Home".</span></span>
 
-    <span data-ttu-id="0d49c-168">在 Visual Basic 中，XAML 應該看起來如下：</span><span class="sxs-lookup"><span data-stu-id="0d49c-168">Your XAML should look like this in Visual Basic:</span></span>
+    <span data-ttu-id="62622-168">在 Visual Basic 中，XAML 應該看起來如下：</span><span class="sxs-lookup"><span data-stu-id="62622-168">Your XAML should look like this in Visual Basic:</span></span>
 
     [!code-xaml[ExpenseIt#6_A](../../../../samples/snippets/visualbasic/VS_Snippets_Wpf/ExpenseIt/VB/ExpenseIt1_A/ExpenseItHome.xaml#6_a)]
 
-    <span data-ttu-id="0d49c-169">或在 C# 中如下所示：</span><span class="sxs-lookup"><span data-stu-id="0d49c-169">Or this in C#:</span></span>
+    <span data-ttu-id="62622-169">或在 C# 中如下所示：</span><span class="sxs-lookup"><span data-stu-id="62622-169">Or this in C#:</span></span>
 
     [!code-xaml[ExpenseIt#6](../../../../samples/snippets/csharp/VS_Snippets_Wpf/ExpenseIt/CSharp/ExpenseIt2/ExpenseItHome.xaml#6)]
 
-4. <span data-ttu-id="0d49c-170">開啟*MainWindow.xaml*。</span><span class="sxs-lookup"><span data-stu-id="0d49c-170">Open *MainWindow.xaml*.</span></span>
+4. <span data-ttu-id="62622-170">開啟*MainWindow.xaml*。</span><span class="sxs-lookup"><span data-stu-id="62622-170">Open *MainWindow.xaml*.</span></span>
 
-5. <span data-ttu-id="0d49c-171">設定<xref:System.Windows.Navigation.NavigationWindow.Source%2A>屬性<xref:System.Windows.Navigation.NavigationWindow>至 「 ExpenseItHome.xaml"。</span><span class="sxs-lookup"><span data-stu-id="0d49c-171">Set the <xref:System.Windows.Navigation.NavigationWindow.Source%2A> property on the <xref:System.Windows.Navigation.NavigationWindow> to "ExpenseItHome.xaml".</span></span>
+5. <span data-ttu-id="62622-171">設定<xref:System.Windows.Navigation.NavigationWindow.Source%2A>屬性<xref:System.Windows.Navigation.NavigationWindow>至 「 ExpenseItHome.xaml"。</span><span class="sxs-lookup"><span data-stu-id="62622-171">Set the <xref:System.Windows.Navigation.NavigationWindow.Source%2A> property on the <xref:System.Windows.Navigation.NavigationWindow> to "ExpenseItHome.xaml".</span></span>
 
-    <span data-ttu-id="0d49c-172">這會將 *ExpenseItHome.xaml* 設成應用程式啟動時開啟的第一個頁面。</span><span class="sxs-lookup"><span data-stu-id="0d49c-172">This sets *ExpenseItHome.xaml* to be the first page opened when the application starts.</span></span> <span data-ttu-id="0d49c-173">在 Visual Basic 中，XAML 應該看起來如下：</span><span class="sxs-lookup"><span data-stu-id="0d49c-173">Your XAML should look like this in Visual Basic:</span></span>
+    <span data-ttu-id="62622-172">這會將 *ExpenseItHome.xaml* 設成應用程式啟動時開啟的第一個頁面。</span><span class="sxs-lookup"><span data-stu-id="62622-172">This sets *ExpenseItHome.xaml* to be the first page opened when the application starts.</span></span> <span data-ttu-id="62622-173">在 Visual Basic 中，XAML 應該看起來如下：</span><span class="sxs-lookup"><span data-stu-id="62622-173">Your XAML should look like this in Visual Basic:</span></span>
 
     [!code-xaml[ExpenseIt#7_A](../../../../samples/snippets/visualbasic/VS_Snippets_Wpf/ExpenseIt/VB/ExpenseIt1_A/MainWindow.xaml#7_a)]
 
-    <span data-ttu-id="0d49c-174">或在 C# 中如下所示：</span><span class="sxs-lookup"><span data-stu-id="0d49c-174">Or this in C#:</span></span>
+    <span data-ttu-id="62622-174">或在 C# 中如下所示：</span><span class="sxs-lookup"><span data-stu-id="62622-174">Or this in C#:</span></span>
 
     [!code-xaml[ExpenseIt#7](../../../../samples/snippets/csharp/VS_Snippets_Wpf/ExpenseIt/CSharp/ExpenseIt2/MainWindow.xaml#7)]
 
    > [!TIP]
-   > <span data-ttu-id="0d49c-175">您也可以設定**來源**屬性**其他**分類**屬性**視窗。</span><span class="sxs-lookup"><span data-stu-id="0d49c-175">You can also set the **Source** property in the **Miscellaneous** category of the **Properties** window.</span></span>
+   > <span data-ttu-id="62622-175">您也可以設定**來源**屬性**其他**分類**屬性**視窗。</span><span class="sxs-lookup"><span data-stu-id="62622-175">You can also set the **Source** property in the **Miscellaneous** category of the **Properties** window.</span></span>
    >
    > ![在 [屬性] 視窗中的來源屬性](media/properties-source.png)
 
-6. <span data-ttu-id="0d49c-177">將另一個新的 WPF 頁面加入至專案，並將其命名*ExpenseReportPage.xaml*::</span><span class="sxs-lookup"><span data-stu-id="0d49c-177">Add another new WPF page to the project, and name it *ExpenseReportPage.xaml*::</span></span>
+6. <span data-ttu-id="62622-177">將另一個新的 WPF 頁面加入至專案，並將其命名*ExpenseReportPage.xaml*::</span><span class="sxs-lookup"><span data-stu-id="62622-177">Add another new WPF page to the project, and name it *ExpenseReportPage.xaml*::</span></span>
 
-   1. <span data-ttu-id="0d49c-178">在**方案總管] 中**，以滑鼠右鍵按一下**ExpenseIt**專案節點，然後選擇 [**新增** > **頁面**。</span><span class="sxs-lookup"><span data-stu-id="0d49c-178">In **Solution Explorer**, right-click on the **ExpenseIt** project node and choose **Add** > **Page**.</span></span>
+   1. <span data-ttu-id="62622-178">在**方案總管] 中**，以滑鼠右鍵按一下**ExpenseIt**專案節點，然後選擇 [**新增** > **頁面**。</span><span class="sxs-lookup"><span data-stu-id="62622-178">In **Solution Explorer**, right-click on the **ExpenseIt** project node and choose **Add** > **Page**.</span></span>
 
-   1. <span data-ttu-id="0d49c-179">在**加入新項目** 對話方塊中，**頁面 (WPF)** 已選取範本。</span><span class="sxs-lookup"><span data-stu-id="0d49c-179">In the **Add New Item** dialog, the **Page (WPF)** template is already selected.</span></span> <span data-ttu-id="0d49c-180">輸入名稱**ExpenseReportPage**，然後選取**新增**。</span><span class="sxs-lookup"><span data-stu-id="0d49c-180">Enter the name **ExpenseReportPage**, and then select **Add**.</span></span>
+   1. <span data-ttu-id="62622-179">在**加入新項目** 對話方塊中，**頁面 (WPF)** 已選取範本。</span><span class="sxs-lookup"><span data-stu-id="62622-179">In the **Add New Item** dialog, the **Page (WPF)** template is already selected.</span></span> <span data-ttu-id="62622-180">輸入名稱**ExpenseReportPage**，然後選取**新增**。</span><span class="sxs-lookup"><span data-stu-id="62622-180">Enter the name **ExpenseReportPage**, and then select **Add**.</span></span>
 
-    <span data-ttu-id="0d49c-181">此頁面會顯示在所選取之人員的經費支出報表**ExpenseItHome**頁面。</span><span class="sxs-lookup"><span data-stu-id="0d49c-181">This page will show the expense report for the person that is selected on the **ExpenseItHome** page.</span></span>
+    <span data-ttu-id="62622-181">此頁面會顯示在所選取之人員的經費支出報表**ExpenseItHome**頁面。</span><span class="sxs-lookup"><span data-stu-id="62622-181">This page will show the expense report for the person that is selected on the **ExpenseItHome** page.</span></span>
 
-7. <span data-ttu-id="0d49c-182">開啟 *ExpenseReportPage.xaml*。</span><span class="sxs-lookup"><span data-stu-id="0d49c-182">Open *ExpenseReportPage.xaml*.</span></span>
+7. <span data-ttu-id="62622-182">開啟 *ExpenseReportPage.xaml*。</span><span class="sxs-lookup"><span data-stu-id="62622-182">Open *ExpenseReportPage.xaml*.</span></span>
 
-8. <span data-ttu-id="0d49c-183">設定<xref:System.Windows.Controls.Page.Title%2A>至 「 ExpenseIt-檢視費用報表 」。</span><span class="sxs-lookup"><span data-stu-id="0d49c-183">Set the <xref:System.Windows.Controls.Page.Title%2A> to "ExpenseIt - View Expense".</span></span>
+8. <span data-ttu-id="62622-183">設定<xref:System.Windows.Controls.Page.Title%2A>至 「 ExpenseIt-檢視費用報表 」。</span><span class="sxs-lookup"><span data-stu-id="62622-183">Set the <xref:System.Windows.Controls.Page.Title%2A> to "ExpenseIt - View Expense".</span></span>
 
-    <span data-ttu-id="0d49c-184">在 Visual Basic 中，XAML 應該看起來如下：</span><span class="sxs-lookup"><span data-stu-id="0d49c-184">Your XAML should look like this in Visual Basic:</span></span>
+    <span data-ttu-id="62622-184">在 Visual Basic 中，XAML 應該看起來如下：</span><span class="sxs-lookup"><span data-stu-id="62622-184">Your XAML should look like this in Visual Basic:</span></span>
 
     [!code-xaml[ExpenseIt#4_A](../../../../samples/snippets/visualbasic/VS_Snippets_Wpf/ExpenseIt/VB/ExpenseIt1_A/ExpenseReportPage.xaml#4_a)]
 
-    <span data-ttu-id="0d49c-185">或在 C# 中如下所示：</span><span class="sxs-lookup"><span data-stu-id="0d49c-185">Or this in C#:</span></span>
+    <span data-ttu-id="62622-185">或在 C# 中如下所示：</span><span class="sxs-lookup"><span data-stu-id="62622-185">Or this in C#:</span></span>
 
     [!code-xaml[ExpenseIt#4](../../../../samples/snippets/csharp/VS_Snippets_Wpf/ExpenseIt/CSharp/ExpenseIt/ExpenseReportPage.xaml#4)]
 
-9. <span data-ttu-id="0d49c-186">開啟*Expenseithome.xaml.cs*和*ExpenseReportPage.xaml.vb*，或*ExpenseItHome.xaml.cs*和*ExpenseReportPage.xaml.cs*.</span><span class="sxs-lookup"><span data-stu-id="0d49c-186">Open *ExpenseItHome.xaml.vb* and *ExpenseReportPage.xaml.vb*, or *ExpenseItHome.xaml.cs* and *ExpenseReportPage.xaml.cs*.</span></span>
+9. <span data-ttu-id="62622-186">開啟*Expenseithome.xaml.cs*和*ExpenseReportPage.xaml.vb*，或*ExpenseItHome.xaml.cs*和*ExpenseReportPage.xaml.cs*.</span><span class="sxs-lookup"><span data-stu-id="62622-186">Open *ExpenseItHome.xaml.vb* and *ExpenseReportPage.xaml.vb*, or *ExpenseItHome.xaml.cs* and *ExpenseReportPage.xaml.cs*.</span></span>
 
-    <span data-ttu-id="0d49c-187">當您建立新的分頁檔時，Visual Studio 會自動建立*程式碼後置*檔案。</span><span class="sxs-lookup"><span data-stu-id="0d49c-187">When you create a new Page file, Visual Studio automatically creates a *code-behind* file.</span></span> <span data-ttu-id="0d49c-188">這些程式碼後置檔案會處理用於回應使用者輸入的邏輯。</span><span class="sxs-lookup"><span data-stu-id="0d49c-188">These code-behind files handle the logic for responding to user input.</span></span>
+    <span data-ttu-id="62622-187">當您建立新的分頁檔時，Visual Studio 會自動建立*程式碼後置*檔案。</span><span class="sxs-lookup"><span data-stu-id="62622-187">When you create a new Page file, Visual Studio automatically creates a *code-behind* file.</span></span> <span data-ttu-id="62622-188">這些程式碼後置檔案會處理用於回應使用者輸入的邏輯。</span><span class="sxs-lookup"><span data-stu-id="62622-188">These code-behind files handle the logic for responding to user input.</span></span>
 
-    <span data-ttu-id="0d49c-189">您的程式碼應該看起來像這樣的**ExpenseItHome**:</span><span class="sxs-lookup"><span data-stu-id="0d49c-189">Your code should look like this for **ExpenseItHome**:</span></span>
+    <span data-ttu-id="62622-189">您的程式碼應該看起來像這樣的**ExpenseItHome**:</span><span class="sxs-lookup"><span data-stu-id="62622-189">Your code should look like this for **ExpenseItHome**:</span></span>
 
     [!code-csharp[ExpenseIt#2_5](../../../../samples/snippets/csharp/VS_Snippets_Wpf/ExpenseIt/CSharp/ExpenseIt2/ExpenseItHome.xaml.cs#2_5)]
     [!code-vb[ExpenseIt#2_5](../../../../samples/snippets/visualbasic/VS_Snippets_Wpf/ExpenseIt/VB/ExpenseIt1_A/ExpenseItHome.xaml.vb#2_5)]
 
-    <span data-ttu-id="0d49c-190">和像這樣的**ExpenseReport**:</span><span class="sxs-lookup"><span data-stu-id="0d49c-190">And like this for **ExpenseReport**:</span></span>
+    <span data-ttu-id="62622-190">和像這樣的**ExpenseReportPage**:</span><span class="sxs-lookup"><span data-stu-id="62622-190">And like this for **ExpenseReportPage**:</span></span>
 
     [!code-csharp[ExpenseIt#5](../../../../samples/snippets/csharp/VS_Snippets_Wpf/ExpenseIt/CSharp/ExpenseIt/ExpenseReportPage.xaml.cs#5)]
     [!code-vb[ExpenseIt#5](../../../../samples/snippets/visualbasic/VS_Snippets_Wpf/ExpenseIt/VB/ExpenseIt1_A/ExpenseReportPage.xaml.vb#5)]
 
-10. <span data-ttu-id="0d49c-191">加入名為影像*watermark.png*至專案。</span><span class="sxs-lookup"><span data-stu-id="0d49c-191">Add an image named *watermark.png* to the project.</span></span> <span data-ttu-id="0d49c-192">您可以建立自己的映像、 將檔案複製範例程式碼，或取得它[這裡](https://github.com/dotnet/docs/blob/master/docs/framework/wpf/getting-started/media/watermark.png)。</span><span class="sxs-lookup"><span data-stu-id="0d49c-192">You can create your own image, copy the file from the sample code, or get it [here](https://github.com/dotnet/docs/blob/master/docs/framework/wpf/getting-started/media/watermark.png).</span></span>
+10. <span data-ttu-id="62622-191">加入名為影像*watermark.png*至專案。</span><span class="sxs-lookup"><span data-stu-id="62622-191">Add an image named *watermark.png* to the project.</span></span> <span data-ttu-id="62622-192">您可以建立自己的映像、 將檔案複製範例程式碼，或取得它[這裡](https://github.com/dotnet/docs/blob/master/docs/framework/wpf/getting-started/media/watermark.png)。</span><span class="sxs-lookup"><span data-stu-id="62622-192">You can create your own image, copy the file from the sample code, or get it [here](https://github.com/dotnet/docs/blob/master/docs/framework/wpf/getting-started/media/watermark.png).</span></span>
 
-   1. <span data-ttu-id="0d49c-193">以滑鼠右鍵按一下專案節點，然後選取**新增** > **現有項目**，或按**Shift**+**Alt**+ **A**。</span><span class="sxs-lookup"><span data-stu-id="0d49c-193">Right-click on the project node and select **Add** > **Existing Item**, or press **Shift**+**Alt**+**A**.</span></span>
+   1. <span data-ttu-id="62622-193">以滑鼠右鍵按一下專案節點，然後選取**新增** > **現有項目**，或按**Shift**+**Alt**+ **A**。</span><span class="sxs-lookup"><span data-stu-id="62622-193">Right-click on the project node and select **Add** > **Existing Item**, or press **Shift**+**Alt**+**A**.</span></span>
 
-   2. <span data-ttu-id="0d49c-194">在**加入現有項目**] 對話方塊中，瀏覽至您想要使用，然後選取 [映像檔**新增**。</span><span class="sxs-lookup"><span data-stu-id="0d49c-194">In the **Add Existing Item** dialog, browse to the image file you want to use, and then select **Add**.</span></span>
+   2. <span data-ttu-id="62622-194">在**加入現有項目**] 對話方塊中，瀏覽至您想要使用，然後選取 [映像檔**新增**。</span><span class="sxs-lookup"><span data-stu-id="62622-194">In the **Add Existing Item** dialog, browse to the image file you want to use, and then select **Add**.</span></span>
 
-## <a name="build-and-run-the-application"></a><span data-ttu-id="0d49c-195">建立和執行應用程式</span><span class="sxs-lookup"><span data-stu-id="0d49c-195">Build and run the application</span></span>
+## <a name="build-and-run-the-application"></a><span data-ttu-id="62622-195">建立和執行應用程式</span><span class="sxs-lookup"><span data-stu-id="62622-195">Build and run the application</span></span>
 
-1. <span data-ttu-id="0d49c-196">若要建置並執行應用程式，請按**F5**或選取**開始偵錯**從**偵錯**功能表。</span><span class="sxs-lookup"><span data-stu-id="0d49c-196">To build and run the application, press **F5** or select **Start Debugging** from the **Debug** menu.</span></span>
+1. <span data-ttu-id="62622-196">若要建置並執行應用程式，請按**F5**或選取**開始偵錯**從**偵錯**功能表。</span><span class="sxs-lookup"><span data-stu-id="62622-196">To build and run the application, press **F5** or select **Start Debugging** from the **Debug** menu.</span></span>
 
-    <span data-ttu-id="0d49c-197">下圖顯示應用程式與<xref:System.Windows.Navigation.NavigationWindow>按鈕：</span><span class="sxs-lookup"><span data-stu-id="0d49c-197">The following illustration shows the application with the <xref:System.Windows.Navigation.NavigationWindow> buttons:</span></span>
+    <span data-ttu-id="62622-197">下圖顯示應用程式與<xref:System.Windows.Navigation.NavigationWindow>按鈕：</span><span class="sxs-lookup"><span data-stu-id="62622-197">The following illustration shows the application with the <xref:System.Windows.Navigation.NavigationWindow> buttons:</span></span>
 
     ![ExpenseIt 範例螢幕擷取畫面](../../../../docs/framework/wpf/getting-started/media/gettingstartedfigure1.png)
 
-2. <span data-ttu-id="0d49c-199">關閉應用程式以返回 Visual Studio。</span><span class="sxs-lookup"><span data-stu-id="0d49c-199">Close the application to return to Visual Studio.</span></span>
+2. <span data-ttu-id="62622-199">關閉應用程式以返回 Visual Studio。</span><span class="sxs-lookup"><span data-stu-id="62622-199">Close the application to return to Visual Studio.</span></span>
 
-## <a name="create-the-layout"></a><span data-ttu-id="0d49c-200">建立版面配置</span><span class="sxs-lookup"><span data-stu-id="0d49c-200">Create the layout</span></span>
+## <a name="create-the-layout"></a><span data-ttu-id="62622-200">建立版面配置</span><span class="sxs-lookup"><span data-stu-id="62622-200">Create the layout</span></span>
 
-<span data-ttu-id="0d49c-201">版面配置會按照的順序放置 UI 項目，以及管理的大小和位置，這些元件的 UI 重新調整大小。</span><span class="sxs-lookup"><span data-stu-id="0d49c-201">Layout provides an ordered way to place UI elements, and also manages the size and position of those elements when a UI is resized.</span></span> <span data-ttu-id="0d49c-202">您通常會建立具有下列其中一個版面配置控制項的版面配置：</span><span class="sxs-lookup"><span data-stu-id="0d49c-202">You typically create a layout with one of the following layout controls:</span></span>
+<span data-ttu-id="62622-201">版面配置會按照的順序放置 UI 項目，以及管理的大小和位置，這些元件的 UI 重新調整大小。</span><span class="sxs-lookup"><span data-stu-id="62622-201">Layout provides an ordered way to place UI elements, and also manages the size and position of those elements when a UI is resized.</span></span> <span data-ttu-id="62622-202">您通常會建立具有下列其中一個版面配置控制項的版面配置：</span><span class="sxs-lookup"><span data-stu-id="62622-202">You typically create a layout with one of the following layout controls:</span></span>
 
 - <xref:System.Windows.Controls.Canvas>
 - <xref:System.Windows.Controls.DockPanel>
@@ -234,284 +228,284 @@ ms.lasthandoff: 04/18/2018
 - <xref:System.Windows.Controls.VirtualizingStackPanel>
 - <xref:System.Windows.Controls.WrapPanel>
 
-<span data-ttu-id="0d49c-203">這些版面配置控制項都支援其子元素的特殊版面配置類型。</span><span class="sxs-lookup"><span data-stu-id="0d49c-203">Each of these layout controls supports a special type of layout for its child elements.</span></span> <span data-ttu-id="0d49c-204">ExpenseIt 頁面可以調整大小，而且每個頁面都有元素會沿著其他元素水平和垂直排列。</span><span class="sxs-lookup"><span data-stu-id="0d49c-204">ExpenseIt pages can be resized, and each page has elements that are arranged horizontally and vertically alongside other elements.</span></span> <span data-ttu-id="0d49c-205">因此，<xref:System.Windows.Controls.Grid>為應用程式的理想的版面配置項目。</span><span class="sxs-lookup"><span data-stu-id="0d49c-205">Consequently, the <xref:System.Windows.Controls.Grid> is the ideal layout element for the application.</span></span>
+<span data-ttu-id="62622-203">這些版面配置控制項都支援其子元素的特殊版面配置類型。</span><span class="sxs-lookup"><span data-stu-id="62622-203">Each of these layout controls supports a special type of layout for its child elements.</span></span> <span data-ttu-id="62622-204">ExpenseIt 頁面可以調整大小，而且每個頁面都有元素會沿著其他元素水平和垂直排列。</span><span class="sxs-lookup"><span data-stu-id="62622-204">ExpenseIt pages can be resized, and each page has elements that are arranged horizontally and vertically alongside other elements.</span></span> <span data-ttu-id="62622-205">因此，<xref:System.Windows.Controls.Grid>為應用程式的理想的版面配置項目。</span><span class="sxs-lookup"><span data-stu-id="62622-205">Consequently, the <xref:System.Windows.Controls.Grid> is the ideal layout element for the application.</span></span>
 
 > [!TIP]
-> <span data-ttu-id="0d49c-206">如需有關<xref:System.Windows.Controls.Panel>項目，請參閱[面板概觀](../../../../docs/framework/wpf/controls/panels-overview.md)。</span><span class="sxs-lookup"><span data-stu-id="0d49c-206">For more information about <xref:System.Windows.Controls.Panel> elements, see [Panels overview](../../../../docs/framework/wpf/controls/panels-overview.md).</span></span> <span data-ttu-id="0d49c-207">如需有關配置的詳細資訊，請參閱[配置](../../../../docs/framework/wpf/advanced/layout.md)。</span><span class="sxs-lookup"><span data-stu-id="0d49c-207">For more information about layout, see [Layout](../../../../docs/framework/wpf/advanced/layout.md).</span></span>
+> <span data-ttu-id="62622-206">如需有關<xref:System.Windows.Controls.Panel>項目，請參閱[面板概觀](../../../../docs/framework/wpf/controls/panels-overview.md)。</span><span class="sxs-lookup"><span data-stu-id="62622-206">For more information about <xref:System.Windows.Controls.Panel> elements, see [Panels overview](../../../../docs/framework/wpf/controls/panels-overview.md).</span></span> <span data-ttu-id="62622-207">如需有關配置的詳細資訊，請參閱[配置](../../../../docs/framework/wpf/advanced/layout.md)。</span><span class="sxs-lookup"><span data-stu-id="62622-207">For more information about layout, see [Layout](../../../../docs/framework/wpf/advanced/layout.md).</span></span>
 
-<span data-ttu-id="0d49c-208">在區段中，您建立單一資料行的資料表具有三個資料列和 10 個像素邊界藉由新增資料行和資料列定義，以<xref:System.Windows.Controls.Grid>中*ExpenseItHome.xaml*。</span><span class="sxs-lookup"><span data-stu-id="0d49c-208">In the section, you create a single-column table with three rows and a 10-pixel margin by adding column and row definitions to the <xref:System.Windows.Controls.Grid> in *ExpenseItHome.xaml*.</span></span>
+<span data-ttu-id="62622-208">在區段中，您建立單一資料行的資料表具有三個資料列和 10 個像素邊界藉由新增資料行和資料列定義，以<xref:System.Windows.Controls.Grid>中*ExpenseItHome.xaml*。</span><span class="sxs-lookup"><span data-stu-id="62622-208">In the section, you create a single-column table with three rows and a 10-pixel margin by adding column and row definitions to the <xref:System.Windows.Controls.Grid> in *ExpenseItHome.xaml*.</span></span>
 
-1. <span data-ttu-id="0d49c-209">開啟 *ExpenseItHome.xaml*。</span><span class="sxs-lookup"><span data-stu-id="0d49c-209">Open *ExpenseItHome.xaml*.</span></span>
+1. <span data-ttu-id="62622-209">開啟 *ExpenseItHome.xaml*。</span><span class="sxs-lookup"><span data-stu-id="62622-209">Open *ExpenseItHome.xaml*.</span></span>
 
-2. <span data-ttu-id="0d49c-210">設定<xref:System.Windows.FrameworkElement.Margin%2A>屬性<xref:System.Windows.Controls.Grid>"10,0,10,10"，其對應到左框線、 頂端、 右側和底部邊界的項目：</span><span class="sxs-lookup"><span data-stu-id="0d49c-210">Set the <xref:System.Windows.FrameworkElement.Margin%2A> property on the <xref:System.Windows.Controls.Grid> element to "10,0,10,10", which corresponds to left, top, right and bottom margins:</span></span>
+2. <span data-ttu-id="62622-210">設定<xref:System.Windows.FrameworkElement.Margin%2A>屬性<xref:System.Windows.Controls.Grid>"10,0,10,10"，其對應到左框線、 頂端、 右側和底部邊界的項目：</span><span class="sxs-lookup"><span data-stu-id="62622-210">Set the <xref:System.Windows.FrameworkElement.Margin%2A> property on the <xref:System.Windows.Controls.Grid> element to "10,0,10,10", which corresponds to left, top, right and bottom margins:</span></span>
 
    ```xaml
    <Grid Margin="10,0,10,10">
    ```
 
    > [!TIP]
-   > <span data-ttu-id="0d49c-211">您也可以設定**邊界**值**屬性**視窗底下**配置**類別：</span><span class="sxs-lookup"><span data-stu-id="0d49c-211">You can also set the **Margin** values in the **Properties** window, under the **Layout** category:</span></span>
+   > <span data-ttu-id="62622-211">您也可以設定**邊界**值**屬性**視窗底下**配置**類別：</span><span class="sxs-lookup"><span data-stu-id="62622-211">You can also set the **Margin** values in the **Properties** window, under the **Layout** category:</span></span>
    >
    > ![在 [屬性] 視窗中的邊界值](media/properties-margin.png)
 
-3. <span data-ttu-id="0d49c-213">加入下列 XAML 之間<xref:System.Windows.Controls.Grid>標籤來建立資料列和資料行定義：</span><span class="sxs-lookup"><span data-stu-id="0d49c-213">Add the following XAML between the <xref:System.Windows.Controls.Grid> tags to create the row and column definitions:</span></span>
+3. <span data-ttu-id="62622-213">加入下列 XAML 之間<xref:System.Windows.Controls.Grid>標籤來建立資料列和資料行定義：</span><span class="sxs-lookup"><span data-stu-id="62622-213">Add the following XAML between the <xref:System.Windows.Controls.Grid> tags to create the row and column definitions:</span></span>
 
     [!code-xaml[ExpenseIt#8](../../../../samples/snippets/csharp/VS_Snippets_Wpf/ExpenseIt/CSharp/ExpenseIt3/ExpenseItHome.xaml#8)]
 
-    <span data-ttu-id="0d49c-214"><xref:System.Windows.Controls.RowDefinition.Height%2A>兩個資料列設<xref:System.Windows.GridLength.Auto%2A>，表示已調整大小之資料列的基礎資料列中的內容。</span><span class="sxs-lookup"><span data-stu-id="0d49c-214">The <xref:System.Windows.Controls.RowDefinition.Height%2A> of two rows is set to <xref:System.Windows.GridLength.Auto%2A>, which means that the rows are sized base on the content in the rows.</span></span> <span data-ttu-id="0d49c-215">預設值<xref:System.Windows.Controls.RowDefinition.Height%2A>是<xref:System.Windows.GridUnitType.Star>調整大小，這表示資料列高度的加權的比例的可用空間。</span><span class="sxs-lookup"><span data-stu-id="0d49c-215">The default <xref:System.Windows.Controls.RowDefinition.Height%2A> is <xref:System.Windows.GridUnitType.Star> sizing, which means that the row height is a weighted proportion of the available space.</span></span> <span data-ttu-id="0d49c-216">例如，如果兩個資料列有<xref:System.Windows.Controls.RowDefinition.Height%2A>的"\*"，它們都各自具有高度的一半的可用空間。</span><span class="sxs-lookup"><span data-stu-id="0d49c-216">For example if two rows each have a <xref:System.Windows.Controls.RowDefinition.Height%2A> of "\*", they each have a height that is half of the available space.</span></span>
+    <span data-ttu-id="62622-214"><xref:System.Windows.Controls.RowDefinition.Height%2A>兩個資料列設<xref:System.Windows.GridLength.Auto%2A>，表示已調整大小之資料列的基礎資料列中的內容。</span><span class="sxs-lookup"><span data-stu-id="62622-214">The <xref:System.Windows.Controls.RowDefinition.Height%2A> of two rows is set to <xref:System.Windows.GridLength.Auto%2A>, which means that the rows are sized base on the content in the rows.</span></span> <span data-ttu-id="62622-215">預設值<xref:System.Windows.Controls.RowDefinition.Height%2A>是<xref:System.Windows.GridUnitType.Star>調整大小，這表示資料列高度的加權的比例的可用空間。</span><span class="sxs-lookup"><span data-stu-id="62622-215">The default <xref:System.Windows.Controls.RowDefinition.Height%2A> is <xref:System.Windows.GridUnitType.Star> sizing, which means that the row height is a weighted proportion of the available space.</span></span> <span data-ttu-id="62622-216">例如，如果兩個資料列有<xref:System.Windows.Controls.RowDefinition.Height%2A>的"\*"，它們都各自具有高度的一半的可用空間。</span><span class="sxs-lookup"><span data-stu-id="62622-216">For example if two rows each have a <xref:System.Windows.Controls.RowDefinition.Height%2A> of "\*", they each have a height that is half of the available space.</span></span>
 
-    <span data-ttu-id="0d49c-217">您<xref:System.Windows.Controls.Grid>現在應該看起來像下列 XAML:</span><span class="sxs-lookup"><span data-stu-id="0d49c-217">Your <xref:System.Windows.Controls.Grid> should now look like the following XAML:</span></span>
+    <span data-ttu-id="62622-217">您<xref:System.Windows.Controls.Grid>現在應該看起來像下列 XAML:</span><span class="sxs-lookup"><span data-stu-id="62622-217">Your <xref:System.Windows.Controls.Grid> should now look like the following XAML:</span></span>
 
     [!code-xaml[ExpenseIt#9](../../../../samples/snippets/csharp/VS_Snippets_Wpf/ExpenseIt/CSharp/ExpenseIt3/ExpenseItHome.xaml#9)]
 
-## <a name="add-controls"></a><span data-ttu-id="0d49c-218">加入控制項</span><span class="sxs-lookup"><span data-stu-id="0d49c-218">Add controls</span></span>
+## <a name="add-controls"></a><span data-ttu-id="62622-218">加入控制項</span><span class="sxs-lookup"><span data-stu-id="62622-218">Add controls</span></span>
 
-<span data-ttu-id="0d49c-219">在本節中，您要更新 UI，讓使用者可以從選取要顯示的經費支出報表的人員清單中的 [首頁] 頁面。</span><span class="sxs-lookup"><span data-stu-id="0d49c-219">In this section, you'll update the home page UI to show a list of people that a user can select from to show the expense report for.</span></span> <span data-ttu-id="0d49c-220">控制項是可讓使用者與您應用程式互動的 UI 物件。</span><span class="sxs-lookup"><span data-stu-id="0d49c-220">Controls are UI objects that allow users to interact with your application.</span></span> <span data-ttu-id="0d49c-221">如需詳細資訊，請參閱 [控制項](../../../../docs/framework/wpf/controls/index.md)。</span><span class="sxs-lookup"><span data-stu-id="0d49c-221">For more information, see [Controls](../../../../docs/framework/wpf/controls/index.md).</span></span>
+<span data-ttu-id="62622-219">在本節中，您要更新 UI，讓使用者可以從選取要顯示的經費支出報表的人員清單中的 [首頁] 頁面。</span><span class="sxs-lookup"><span data-stu-id="62622-219">In this section, you'll update the home page UI to show a list of people that a user can select from to show the expense report for.</span></span> <span data-ttu-id="62622-220">控制項是可讓使用者與您應用程式互動的 UI 物件。</span><span class="sxs-lookup"><span data-stu-id="62622-220">Controls are UI objects that allow users to interact with your application.</span></span> <span data-ttu-id="62622-221">如需詳細資訊，請參閱 [控制項](../../../../docs/framework/wpf/controls/index.md)。</span><span class="sxs-lookup"><span data-stu-id="62622-221">For more information, see [Controls](../../../../docs/framework/wpf/controls/index.md).</span></span>
 
-<span data-ttu-id="0d49c-222">若要建立此 UI，您將新增下列項目來*ExpenseItHome.xaml*:</span><span class="sxs-lookup"><span data-stu-id="0d49c-222">To create this UI, you'll add the following elements to *ExpenseItHome.xaml*:</span></span>
+<span data-ttu-id="62622-222">若要建立此 UI，您將新增下列項目來*ExpenseItHome.xaml*:</span><span class="sxs-lookup"><span data-stu-id="62622-222">To create this UI, you'll add the following elements to *ExpenseItHome.xaml*:</span></span>
 
-- <span data-ttu-id="0d49c-223"><xref:System.Windows.Controls.ListBox> （適用於的人員清單）。</span><span class="sxs-lookup"><span data-stu-id="0d49c-223"><xref:System.Windows.Controls.ListBox> (for the list of people).</span></span>
-- <span data-ttu-id="0d49c-224"><xref:System.Windows.Controls.Label> （適用於清單標頭）。</span><span class="sxs-lookup"><span data-stu-id="0d49c-224"><xref:System.Windows.Controls.Label> (for the list header).</span></span>
-- <span data-ttu-id="0d49c-225"><xref:System.Windows.Controls.Button> （可以按一下清單中選取的人員檢視經費支出報表）。</span><span class="sxs-lookup"><span data-stu-id="0d49c-225"><xref:System.Windows.Controls.Button> (to click to view the expense report for the person that is selected in the list).</span></span>
+- <span data-ttu-id="62622-223"><xref:System.Windows.Controls.ListBox> （適用於的人員清單）。</span><span class="sxs-lookup"><span data-stu-id="62622-223"><xref:System.Windows.Controls.ListBox> (for the list of people).</span></span>
+- <span data-ttu-id="62622-224"><xref:System.Windows.Controls.Label> （適用於清單標頭）。</span><span class="sxs-lookup"><span data-stu-id="62622-224"><xref:System.Windows.Controls.Label> (for the list header).</span></span>
+- <span data-ttu-id="62622-225"><xref:System.Windows.Controls.Button> （可以按一下清單中選取的人員檢視經費支出報表）。</span><span class="sxs-lookup"><span data-stu-id="62622-225"><xref:System.Windows.Controls.Button> (to click to view the expense report for the person that is selected in the list).</span></span>
 
-<span data-ttu-id="0d49c-226">中的資料列位於每個控制項<xref:System.Windows.Controls.Grid>藉由設定<xref:System.Windows.Controls.Grid.Row%2A?displayProperty=nameWithType>附加屬性。</span><span class="sxs-lookup"><span data-stu-id="0d49c-226">Each control is placed in a row of the <xref:System.Windows.Controls.Grid> by setting the <xref:System.Windows.Controls.Grid.Row%2A?displayProperty=nameWithType> attached property.</span></span> <span data-ttu-id="0d49c-227">如需附加屬性的詳細資訊，請參閱[附加屬性概觀](../../../../docs/framework/wpf/advanced/attached-properties-overview.md)。</span><span class="sxs-lookup"><span data-stu-id="0d49c-227">For more information about attached properties, see [Attached Properties Overview](../../../../docs/framework/wpf/advanced/attached-properties-overview.md).</span></span>
+<span data-ttu-id="62622-226">中的資料列位於每個控制項<xref:System.Windows.Controls.Grid>藉由設定<xref:System.Windows.Controls.Grid.Row%2A?displayProperty=nameWithType>附加屬性。</span><span class="sxs-lookup"><span data-stu-id="62622-226">Each control is placed in a row of the <xref:System.Windows.Controls.Grid> by setting the <xref:System.Windows.Controls.Grid.Row%2A?displayProperty=nameWithType> attached property.</span></span> <span data-ttu-id="62622-227">如需附加屬性的詳細資訊，請參閱[附加屬性概觀](../../../../docs/framework/wpf/advanced/attached-properties-overview.md)。</span><span class="sxs-lookup"><span data-stu-id="62622-227">For more information about attached properties, see [Attached Properties Overview](../../../../docs/framework/wpf/advanced/attached-properties-overview.md).</span></span>
 
-1. <span data-ttu-id="0d49c-228">開啟 *ExpenseItHome.xaml*。</span><span class="sxs-lookup"><span data-stu-id="0d49c-228">Open *ExpenseItHome.xaml*.</span></span>
+1. <span data-ttu-id="62622-228">開啟 *ExpenseItHome.xaml*。</span><span class="sxs-lookup"><span data-stu-id="62622-228">Open *ExpenseItHome.xaml*.</span></span>
 
-2. <span data-ttu-id="0d49c-229">加入下列 XAML 某處之間<xref:System.Windows.Controls.Grid>標記：</span><span class="sxs-lookup"><span data-stu-id="0d49c-229">Add the following XAML somewhere between the <xref:System.Windows.Controls.Grid> tags:</span></span>
+2. <span data-ttu-id="62622-229">加入下列 XAML 某處之間<xref:System.Windows.Controls.Grid>標記：</span><span class="sxs-lookup"><span data-stu-id="62622-229">Add the following XAML somewhere between the <xref:System.Windows.Controls.Grid> tags:</span></span>
 
    [!code-xaml[ExpenseIt#10](../../../../samples/snippets/csharp/VS_Snippets_Wpf/ExpenseIt/CSharp/ExpenseIt4/ExpenseItHome.xaml#10)]
 
    > [!TIP]
-   > <span data-ttu-id="0d49c-230">您也可以建立將控制項拖曳的方式從**工具箱**視窗拖曳至 [設計] 視窗和中，然後設定其屬性**屬性**視窗。</span><span class="sxs-lookup"><span data-stu-id="0d49c-230">You can also create the controls by dragging them from the **Toolbox** window onto the design window, and then setting their properties in the **Properties** window.</span></span>
+   > <span data-ttu-id="62622-230">您也可以建立將控制項拖曳的方式從**工具箱**視窗拖曳至 [設計] 視窗和中，然後設定其屬性**屬性**視窗。</span><span class="sxs-lookup"><span data-stu-id="62622-230">You can also create the controls by dragging them from the **Toolbox** window onto the design window, and then setting their properties in the **Properties** window.</span></span>
 
-3. <span data-ttu-id="0d49c-231">建置並執行應用程式。</span><span class="sxs-lookup"><span data-stu-id="0d49c-231">Build and run the application.</span></span>
+3. <span data-ttu-id="62622-231">建置並執行應用程式。</span><span class="sxs-lookup"><span data-stu-id="62622-231">Build and run the application.</span></span>
 
-<span data-ttu-id="0d49c-232">下圖將顯示您剛才建立的控制項：</span><span class="sxs-lookup"><span data-stu-id="0d49c-232">The following illustration shows the controls you just created:</span></span>
+<span data-ttu-id="62622-232">下圖將顯示您剛才建立的控制項：</span><span class="sxs-lookup"><span data-stu-id="62622-232">The following illustration shows the controls you just created:</span></span>
 
 ![ExpenseIt 範例螢幕擷取畫面](../../../../docs/framework/wpf/getting-started/media/gettingstartedfigure2.png)
 
-## <a name="add-an-image-and-a-title"></a><span data-ttu-id="0d49c-234">加入影像和標題</span><span class="sxs-lookup"><span data-stu-id="0d49c-234">Add an image and a title</span></span>
+## <a name="add-an-image-and-a-title"></a><span data-ttu-id="62622-234">加入影像和標題</span><span class="sxs-lookup"><span data-stu-id="62622-234">Add an image and a title</span></span>
 
-<span data-ttu-id="0d49c-235">在本節中，您會更新在首頁 UI 的映像和頁面標題。</span><span class="sxs-lookup"><span data-stu-id="0d49c-235">In this section, you'll update the home page UI with an image and a page title.</span></span>
+<span data-ttu-id="62622-235">在本節中，您會更新在首頁 UI 的映像和頁面標題。</span><span class="sxs-lookup"><span data-stu-id="62622-235">In this section, you'll update the home page UI with an image and a page title.</span></span>
 
-1. <span data-ttu-id="0d49c-236">開啟 *ExpenseItHome.xaml*。</span><span class="sxs-lookup"><span data-stu-id="0d49c-236">Open *ExpenseItHome.xaml*.</span></span>
+1. <span data-ttu-id="62622-236">開啟 *ExpenseItHome.xaml*。</span><span class="sxs-lookup"><span data-stu-id="62622-236">Open *ExpenseItHome.xaml*.</span></span>
 
-2. <span data-ttu-id="0d49c-237">加入另一個資料行，<xref:System.Windows.Controls.Grid.ColumnDefinitions%2A>固定<xref:System.Windows.Controls.ColumnDefinition.Width%2A>230 個像素的：</span><span class="sxs-lookup"><span data-stu-id="0d49c-237">Add another column to the <xref:System.Windows.Controls.Grid.ColumnDefinitions%2A> with a fixed <xref:System.Windows.Controls.ColumnDefinition.Width%2A> of 230 pixels:</span></span>
+2. <span data-ttu-id="62622-237">加入另一個資料行，<xref:System.Windows.Controls.Grid.ColumnDefinitions%2A>固定<xref:System.Windows.Controls.ColumnDefinition.Width%2A>230 個像素的：</span><span class="sxs-lookup"><span data-stu-id="62622-237">Add another column to the <xref:System.Windows.Controls.Grid.ColumnDefinitions%2A> with a fixed <xref:System.Windows.Controls.ColumnDefinition.Width%2A> of 230 pixels:</span></span>
 
     [!code-xaml[ExpenseIt#11](../../../../samples/snippets/csharp/VS_Snippets_Wpf/ExpenseIt/CSharp/ExpenseIt5/ExpenseItHome.xaml#11)]
 
-3. <span data-ttu-id="0d49c-238">加入至另一個資料列<xref:System.Windows.Controls.Grid.RowDefinitions%2A>，總共有四個資料列：</span><span class="sxs-lookup"><span data-stu-id="0d49c-238">Add another row to the <xref:System.Windows.Controls.Grid.RowDefinitions%2A>, for a total of four rows:</span></span>
+3. <span data-ttu-id="62622-238">加入至另一個資料列<xref:System.Windows.Controls.Grid.RowDefinitions%2A>，總共有四個資料列：</span><span class="sxs-lookup"><span data-stu-id="62622-238">Add another row to the <xref:System.Windows.Controls.Grid.RowDefinitions%2A>, for a total of four rows:</span></span>
 
     [!code-xaml[ExpenseIt#11b](../../../../samples/snippets/csharp/VS_Snippets_Wpf/ExpenseIt/CSharp/ExpenseIt5/ExpenseItHome.xaml#11b)]
 
-4. <span data-ttu-id="0d49c-239">將控制項移到第二個資料行中，藉由設定<xref:System.Windows.Controls.Grid.Column%2A?displayProperty=nameWithType>屬性設為 1，在每個三個控制項 （框線、 清單方塊中和按鈕）。</span><span class="sxs-lookup"><span data-stu-id="0d49c-239">Move the controls to the second column by setting the <xref:System.Windows.Controls.Grid.Column%2A?displayProperty=nameWithType> property to 1 in each of the three controls (Border, ListBox, and Button).</span></span>
+4. <span data-ttu-id="62622-239">將控制項移到第二個資料行中，藉由設定<xref:System.Windows.Controls.Grid.Column%2A?displayProperty=nameWithType>屬性設為 1，在每個三個控制項 （框線、 清單方塊中和按鈕）。</span><span class="sxs-lookup"><span data-stu-id="62622-239">Move the controls to the second column by setting the <xref:System.Windows.Controls.Grid.Column%2A?displayProperty=nameWithType> property to 1 in each of the three controls (Border, ListBox, and Button).</span></span>
 
-5. <span data-ttu-id="0d49c-240">每個控制項將向下移動一個資料列中，遞增其<xref:System.Windows.Controls.Grid.Row%2A?displayProperty=nameWithType>值加 1。</span><span class="sxs-lookup"><span data-stu-id="0d49c-240">Move each control down a row, by incrementing its <xref:System.Windows.Controls.Grid.Row%2A?displayProperty=nameWithType> value by 1.</span></span>
+5. <span data-ttu-id="62622-240">每個控制項將向下移動一個資料列中，遞增其<xref:System.Windows.Controls.Grid.Row%2A?displayProperty=nameWithType>值加 1。</span><span class="sxs-lookup"><span data-stu-id="62622-240">Move each control down a row, by incrementing its <xref:System.Windows.Controls.Grid.Row%2A?displayProperty=nameWithType> value by 1.</span></span>
 
-   <span data-ttu-id="0d49c-241">適用於三個控制項的 XAML 現在看起來像這樣：</span><span class="sxs-lookup"><span data-stu-id="0d49c-241">The XAML for the three controls now looks like this:</span></span>
+   <span data-ttu-id="62622-241">適用於三個控制項的 XAML 現在看起來像這樣：</span><span class="sxs-lookup"><span data-stu-id="62622-241">The XAML for the three controls now looks like this:</span></span>
 
     [!code-xaml[ExpenseIt#12](../../../../samples/snippets/csharp/VS_Snippets_Wpf/ExpenseIt/CSharp/ExpenseIt5/ExpenseItHome.xaml#12)]
 
-6. <span data-ttu-id="0d49c-242">設定<xref:System.Windows.Controls.Panel.Background%2A>的<xref:System.Windows.Controls.Grid>是*watermark.png*映像檔，加入下列 XAML 某處之間`<Grid>`和`<\/Grid>`標記：</span><span class="sxs-lookup"><span data-stu-id="0d49c-242">Set the <xref:System.Windows.Controls.Panel.Background%2A> of the <xref:System.Windows.Controls.Grid> to be the *watermark.png* image file, by adding the following XAML somewhere between the `<Grid>` and `<\/Grid>` tags:</span></span>
+6. <span data-ttu-id="62622-242">設定<xref:System.Windows.Controls.Panel.Background%2A>的<xref:System.Windows.Controls.Grid>是*watermark.png*映像檔，加入下列 XAML 某處之間`<Grid>`和`<\/Grid>`標記：</span><span class="sxs-lookup"><span data-stu-id="62622-242">Set the <xref:System.Windows.Controls.Panel.Background%2A> of the <xref:System.Windows.Controls.Grid> to be the *watermark.png* image file, by adding the following XAML somewhere between the `<Grid>` and `<\/Grid>` tags:</span></span>
 
     [!code-xaml[ExpenseIt#14](../../../../samples/snippets/csharp/VS_Snippets_Wpf/ExpenseIt/CSharp/ExpenseIt5/ExpenseItHome.xaml#14)]
 
-7. <span data-ttu-id="0d49c-243">之前<xref:System.Windows.Controls.Border>項目，加入<xref:System.Windows.Controls.Label>內容 [檢視費用報表]。</span><span class="sxs-lookup"><span data-stu-id="0d49c-243">Before the <xref:System.Windows.Controls.Border> element, add a <xref:System.Windows.Controls.Label> with the content "View Expense Report".</span></span> <span data-ttu-id="0d49c-244">這是網頁的標題。</span><span class="sxs-lookup"><span data-stu-id="0d49c-244">This is the title of the page.</span></span>
+7. <span data-ttu-id="62622-243">之前<xref:System.Windows.Controls.Border>項目，加入<xref:System.Windows.Controls.Label>內容 [檢視費用報表]。</span><span class="sxs-lookup"><span data-stu-id="62622-243">Before the <xref:System.Windows.Controls.Border> element, add a <xref:System.Windows.Controls.Label> with the content "View Expense Report".</span></span> <span data-ttu-id="62622-244">這是網頁的標題。</span><span class="sxs-lookup"><span data-stu-id="62622-244">This is the title of the page.</span></span>
 
     [!code-xaml[ExpenseIt#13](../../../../samples/snippets/csharp/VS_Snippets_Wpf/ExpenseIt/CSharp/ExpenseIt5/ExpenseItHome.xaml#13)]
 
-8. <span data-ttu-id="0d49c-245">建置並執行應用程式。</span><span class="sxs-lookup"><span data-stu-id="0d49c-245">Build and run the application.</span></span>
+8. <span data-ttu-id="62622-245">建置並執行應用程式。</span><span class="sxs-lookup"><span data-stu-id="62622-245">Build and run the application.</span></span>
 
-<span data-ttu-id="0d49c-246">下圖顯示您剛才加入的結果：</span><span class="sxs-lookup"><span data-stu-id="0d49c-246">The following illustration shows the results of what you just added:</span></span>
+<span data-ttu-id="62622-246">下圖顯示您剛才加入的結果：</span><span class="sxs-lookup"><span data-stu-id="62622-246">The following illustration shows the results of what you just added:</span></span>
 
 ![ExpenseIt 範例螢幕擷取畫面](../../../../docs/framework/wpf/getting-started/media/gettingstartedfigure3.png)
 
-## <a name="add-code-to-handle-events"></a><span data-ttu-id="0d49c-248">加入程式碼來處理事件</span><span class="sxs-lookup"><span data-stu-id="0d49c-248">Add code to handle events</span></span>
+## <a name="add-code-to-handle-events"></a><span data-ttu-id="62622-248">加入程式碼來處理事件</span><span class="sxs-lookup"><span data-stu-id="62622-248">Add code to handle events</span></span>
 
-1. <span data-ttu-id="0d49c-249">開啟 *ExpenseItHome.xaml*。</span><span class="sxs-lookup"><span data-stu-id="0d49c-249">Open *ExpenseItHome.xaml*.</span></span>
+1. <span data-ttu-id="62622-249">開啟 *ExpenseItHome.xaml*。</span><span class="sxs-lookup"><span data-stu-id="62622-249">Open *ExpenseItHome.xaml*.</span></span>
 
-2. <span data-ttu-id="0d49c-250">新增<xref:System.Windows.Controls.Primitives.ButtonBase.Click>事件處理常式來<xref:System.Windows.Controls.Button>項目。</span><span class="sxs-lookup"><span data-stu-id="0d49c-250">Add a <xref:System.Windows.Controls.Primitives.ButtonBase.Click> event handler to the <xref:System.Windows.Controls.Button> element.</span></span> <span data-ttu-id="0d49c-251">如需詳細資訊，請參閱[How to： 建立簡單事件處理常式](http://msdn.microsoft.com/library/b1456e07-9dec-4354-99cf-18666b64f480)。</span><span class="sxs-lookup"><span data-stu-id="0d49c-251">For more information, see [How to: Create a simple event handler](http://msdn.microsoft.com/library/b1456e07-9dec-4354-99cf-18666b64f480).</span></span>
+2. <span data-ttu-id="62622-250">新增<xref:System.Windows.Controls.Primitives.ButtonBase.Click>事件處理常式來<xref:System.Windows.Controls.Button>項目。</span><span class="sxs-lookup"><span data-stu-id="62622-250">Add a <xref:System.Windows.Controls.Primitives.ButtonBase.Click> event handler to the <xref:System.Windows.Controls.Button> element.</span></span> <span data-ttu-id="62622-251">如需詳細資訊，請參閱[How to： 建立簡單事件處理常式](http://msdn.microsoft.com/library/b1456e07-9dec-4354-99cf-18666b64f480)。</span><span class="sxs-lookup"><span data-stu-id="62622-251">For more information, see [How to: Create a simple event handler](http://msdn.microsoft.com/library/b1456e07-9dec-4354-99cf-18666b64f480).</span></span>
 
     [!code-xaml[ExpenseIt#15](../../../../samples/snippets/csharp/VS_Snippets_Wpf/ExpenseIt/CSharp/ExpenseIt6/ExpenseItHome.xaml#15)]
 
-3. <span data-ttu-id="0d49c-252">開啟 *ExpenseItHome.xaml.cs* 或 *ExpenseItHome.xaml.vb*。</span><span class="sxs-lookup"><span data-stu-id="0d49c-252">Open *ExpenseItHome.xaml.vb* or *ExpenseItHome.xaml.cs*.</span></span>
+3. <span data-ttu-id="62622-252">開啟 *ExpenseItHome.xaml.cs* 或 *ExpenseItHome.xaml.vb*。</span><span class="sxs-lookup"><span data-stu-id="62622-252">Open *ExpenseItHome.xaml.vb* or *ExpenseItHome.xaml.cs*.</span></span>
 
-4. <span data-ttu-id="0d49c-253">將下列程式碼加入`ExpenseItHome`類別加入的按鈕 click 事件處理常式。</span><span class="sxs-lookup"><span data-stu-id="0d49c-253">Add the following code to the `ExpenseItHome` class to add a button click event handler.</span></span> <span data-ttu-id="0d49c-254">此事件處理常式會開啟**ExpenseReportPage**頁面。</span><span class="sxs-lookup"><span data-stu-id="0d49c-254">The event handler opens the **ExpenseReportPage** page.</span></span>
+4. <span data-ttu-id="62622-253">將下列程式碼加入`ExpenseItHome`類別加入的按鈕 click 事件處理常式。</span><span class="sxs-lookup"><span data-stu-id="62622-253">Add the following code to the `ExpenseItHome` class to add a button click event handler.</span></span> <span data-ttu-id="62622-254">此事件處理常式會開啟**ExpenseReportPage**頁面。</span><span class="sxs-lookup"><span data-stu-id="62622-254">The event handler opens the **ExpenseReportPage** page.</span></span>
 
     [!code-csharp[ExpenseIt#16](../../../../samples/snippets/csharp/VS_Snippets_Wpf/ExpenseIt/CSharp/ExpenseIt6/ExpenseItHome.xaml.cs#16)]
     [!code-vb[ExpenseIt#16](../../../../samples/snippets/visualbasic/VS_Snippets_Wpf/ExpenseIt/VB/ExpenseIt6/ExpenseItHome.xaml.vb#16)]
 
-## <a name="create-the-ui-for-expensereportpage"></a><span data-ttu-id="0d49c-255">ExpenseReportPage 建立 UI</span><span class="sxs-lookup"><span data-stu-id="0d49c-255">Create the UI for ExpenseReportPage</span></span>
+## <a name="create-the-ui-for-expensereportpage"></a><span data-ttu-id="62622-255">ExpenseReportPage 建立 UI</span><span class="sxs-lookup"><span data-stu-id="62622-255">Create the UI for ExpenseReportPage</span></span>
 
-<span data-ttu-id="0d49c-256">*ExpenseReportPage.xaml*經費支出報表顯示在所選取的人員**ExpenseItHome**頁面。</span><span class="sxs-lookup"><span data-stu-id="0d49c-256">*ExpenseReportPage.xaml* displays the expense report for the person that's selected on the **ExpenseItHome** page.</span></span> <span data-ttu-id="0d49c-257">在本節中，將控制項和建立的 UI **ExpenseReportPage**。</span><span class="sxs-lookup"><span data-stu-id="0d49c-257">In this section, you'll controls and create the UI for **ExpenseReportPage**.</span></span> <span data-ttu-id="0d49c-258">您也將加入背景，並填滿之各種 UI 元素的色彩。</span><span class="sxs-lookup"><span data-stu-id="0d49c-258">You'll also add background and fill colors to the various UI elements.</span></span>
+<span data-ttu-id="62622-256">*ExpenseReportPage.xaml*經費支出報表顯示在所選取的人員**ExpenseItHome**頁面。</span><span class="sxs-lookup"><span data-stu-id="62622-256">*ExpenseReportPage.xaml* displays the expense report for the person that's selected on the **ExpenseItHome** page.</span></span> <span data-ttu-id="62622-257">在本節中，將控制項和建立的 UI **ExpenseReportPage**。</span><span class="sxs-lookup"><span data-stu-id="62622-257">In this section, you'll controls and create the UI for **ExpenseReportPage**.</span></span> <span data-ttu-id="62622-258">您也將加入背景，並填滿之各種 UI 元素的色彩。</span><span class="sxs-lookup"><span data-stu-id="62622-258">You'll also add background and fill colors to the various UI elements.</span></span>
 
-1. <span data-ttu-id="0d49c-259">開啟 *ExpenseReportPage.xaml*。</span><span class="sxs-lookup"><span data-stu-id="0d49c-259">Open *ExpenseReportPage.xaml*.</span></span>
+1. <span data-ttu-id="62622-259">開啟 *ExpenseReportPage.xaml*。</span><span class="sxs-lookup"><span data-stu-id="62622-259">Open *ExpenseReportPage.xaml*.</span></span>
 
-2. <span data-ttu-id="0d49c-260">加入下列 XAML 之間<xref:System.Windows.Controls.Grid>標記：</span><span class="sxs-lookup"><span data-stu-id="0d49c-260">Add the following XAML between the <xref:System.Windows.Controls.Grid> tags:</span></span>
+2. <span data-ttu-id="62622-260">加入下列 XAML 之間<xref:System.Windows.Controls.Grid>標記：</span><span class="sxs-lookup"><span data-stu-id="62622-260">Add the following XAML between the <xref:System.Windows.Controls.Grid> tags:</span></span>
 
     [!code-xaml[ExpenseIt#17](../../../../samples/snippets/csharp/VS_Snippets_Wpf/ExpenseIt/CSharp/ExpenseIt6/ExpenseReportPage.xaml#17)]
 
-    <span data-ttu-id="0d49c-261">此 UI 很類似*ExpenseItHome.xaml*報表資料會顯示在之外， <xref:System.Windows.Controls.DataGrid>。</span><span class="sxs-lookup"><span data-stu-id="0d49c-261">This UI is similar to *ExpenseItHome.xaml*, except the report data is displayed in a <xref:System.Windows.Controls.DataGrid>.</span></span>
+    <span data-ttu-id="62622-261">此 UI 很類似*ExpenseItHome.xaml*報表資料會顯示在之外， <xref:System.Windows.Controls.DataGrid>。</span><span class="sxs-lookup"><span data-stu-id="62622-261">This UI is similar to *ExpenseItHome.xaml*, except the report data is displayed in a <xref:System.Windows.Controls.DataGrid>.</span></span>
 
-3. <span data-ttu-id="0d49c-262">建置並執行應用程式。</span><span class="sxs-lookup"><span data-stu-id="0d49c-262">Build and run the application.</span></span>
+3. <span data-ttu-id="62622-262">建置並執行應用程式。</span><span class="sxs-lookup"><span data-stu-id="62622-262">Build and run the application.</span></span>
 
     > [!NOTE]
-    > <span data-ttu-id="0d49c-263">如果您收到錯誤，<xref:System.Windows.Controls.DataGrid>找不到或不存在，請確定您的專案以.NET Framework 4 或更新版本為目標。</span><span class="sxs-lookup"><span data-stu-id="0d49c-263">If you get an error that the <xref:System.Windows.Controls.DataGrid> was not found or does not exist, make sure that your project targets the .NET Framework 4 or later.</span></span> <span data-ttu-id="0d49c-264">如需詳細資訊，請參閱[如何：以 .NET Framework 版本為目標](/visualstudio/ide/how-to-target-a-version-of-the-dotnet-framework)。</span><span class="sxs-lookup"><span data-stu-id="0d49c-264">For more information, see [How to: Target a Version of the .NET Framework](/visualstudio/ide/how-to-target-a-version-of-the-dotnet-framework).</span></span>
+    > <span data-ttu-id="62622-263">如果您收到錯誤，<xref:System.Windows.Controls.DataGrid>找不到或不存在，請確定您的專案以.NET Framework 4 或更新版本為目標。</span><span class="sxs-lookup"><span data-stu-id="62622-263">If you get an error that the <xref:System.Windows.Controls.DataGrid> was not found or does not exist, make sure that your project targets the .NET Framework 4 or later.</span></span> <span data-ttu-id="62622-264">如需詳細資訊，請參閱[如何：以 .NET Framework 版本為目標](/visualstudio/ide/how-to-target-a-version-of-the-dotnet-framework)。</span><span class="sxs-lookup"><span data-stu-id="62622-264">For more information, see [How to: Target a Version of the .NET Framework](/visualstudio/ide/how-to-target-a-version-of-the-dotnet-framework).</span></span>
 
-4. <span data-ttu-id="0d49c-265">選取**檢視** 按鈕。</span><span class="sxs-lookup"><span data-stu-id="0d49c-265">Select the **View** button.</span></span>
+4. <span data-ttu-id="62622-265">選取**檢視** 按鈕。</span><span class="sxs-lookup"><span data-stu-id="62622-265">Select the **View** button.</span></span>
 
-    <span data-ttu-id="0d49c-266">報表頁面隨即出現。</span><span class="sxs-lookup"><span data-stu-id="0d49c-266">The expense report page appears.</span></span> <span data-ttu-id="0d49c-267">也請注意向後巡覽按鈕已啟用。</span><span class="sxs-lookup"><span data-stu-id="0d49c-267">Also notice that the back navigation button is enabled.</span></span>
+    <span data-ttu-id="62622-266">報表頁面隨即出現。</span><span class="sxs-lookup"><span data-stu-id="62622-266">The expense report page appears.</span></span> <span data-ttu-id="62622-267">也請注意向後巡覽按鈕已啟用。</span><span class="sxs-lookup"><span data-stu-id="62622-267">Also notice that the back navigation button is enabled.</span></span>
 
-<span data-ttu-id="0d49c-268">下圖顯示加入至 UI 項目*ExpenseReportPage.xaml*。</span><span class="sxs-lookup"><span data-stu-id="0d49c-268">The following illustration shows the UI elements added to *ExpenseReportPage.xaml*.</span></span>
+<span data-ttu-id="62622-268">下圖顯示加入至 UI 項目*ExpenseReportPage.xaml*。</span><span class="sxs-lookup"><span data-stu-id="62622-268">The following illustration shows the UI elements added to *ExpenseReportPage.xaml*.</span></span>
 
 ![ExpenseIt 範例螢幕擷取畫面](../../../../docs/framework/wpf/getting-started/media/gettingstartedfigure4.png)
 
-## <a name="style-controls"></a><span data-ttu-id="0d49c-270">樣式控制項</span><span class="sxs-lookup"><span data-stu-id="0d49c-270">Style controls</span></span>
+## <a name="style-controls"></a><span data-ttu-id="62622-270">樣式控制項</span><span class="sxs-lookup"><span data-stu-id="62622-270">Style controls</span></span>
 
-<span data-ttu-id="0d49c-271">各種項目的外觀通常是相同的 UI 中相同類型的所有項目。</span><span class="sxs-lookup"><span data-stu-id="0d49c-271">The appearance of various elements is often the same for all elements of the same type in a UI.</span></span> <span data-ttu-id="0d49c-272">UI 使用[樣式](../../../../docs/framework/wpf/controls/styling-and-templating.md)進行外觀可重複使用多個項目。</span><span class="sxs-lookup"><span data-stu-id="0d49c-272">UI uses [styles](../../../../docs/framework/wpf/controls/styling-and-templating.md) to make appearances reusable across multiple elements.</span></span> <span data-ttu-id="0d49c-273">重複使用性的樣式，有助於簡化 XAML 建立和管理。</span><span class="sxs-lookup"><span data-stu-id="0d49c-273">The reusability of styles helps to simplify XAML creation and management.</span></span> <span data-ttu-id="0d49c-274">本節會將先前步驟中定義的個別元素屬性 (Attribute) 取代為樣式。</span><span class="sxs-lookup"><span data-stu-id="0d49c-274">This section replaces the per-element attributes that were defined in previous steps with styles.</span></span>
+<span data-ttu-id="62622-271">各種項目的外觀通常是相同的 UI 中相同類型的所有項目。</span><span class="sxs-lookup"><span data-stu-id="62622-271">The appearance of various elements is often the same for all elements of the same type in a UI.</span></span> <span data-ttu-id="62622-272">UI 使用[樣式](../../../../docs/framework/wpf/controls/styling-and-templating.md)進行外觀可重複使用多個項目。</span><span class="sxs-lookup"><span data-stu-id="62622-272">UI uses [styles](../../../../docs/framework/wpf/controls/styling-and-templating.md) to make appearances reusable across multiple elements.</span></span> <span data-ttu-id="62622-273">重複使用性的樣式，有助於簡化 XAML 建立和管理。</span><span class="sxs-lookup"><span data-stu-id="62622-273">The reusability of styles helps to simplify XAML creation and management.</span></span> <span data-ttu-id="62622-274">本節會將先前步驟中定義的個別元素屬性 (Attribute) 取代為樣式。</span><span class="sxs-lookup"><span data-stu-id="62622-274">This section replaces the per-element attributes that were defined in previous steps with styles.</span></span>
 
-1. <span data-ttu-id="0d49c-275">開啟*Application.xaml*或*App.xaml*。</span><span class="sxs-lookup"><span data-stu-id="0d49c-275">Open *Application.xaml* or *App.xaml*.</span></span>
+1. <span data-ttu-id="62622-275">開啟*Application.xaml*或*App.xaml*。</span><span class="sxs-lookup"><span data-stu-id="62622-275">Open *Application.xaml* or *App.xaml*.</span></span>
 
-2. <span data-ttu-id="0d49c-276">加入下列 XAML 之間<xref:System.Windows.Application.Resources%2A?displayProperty=nameWithType>標記：</span><span class="sxs-lookup"><span data-stu-id="0d49c-276">Add the following XAML between the <xref:System.Windows.Application.Resources%2A?displayProperty=nameWithType> tags:</span></span>
+2. <span data-ttu-id="62622-276">加入下列 XAML 之間<xref:System.Windows.Application.Resources%2A?displayProperty=nameWithType>標記：</span><span class="sxs-lookup"><span data-stu-id="62622-276">Add the following XAML between the <xref:System.Windows.Application.Resources%2A?displayProperty=nameWithType> tags:</span></span>
 
     [!code-xaml[ExpenseIt#18](../../../../samples/snippets/csharp/VS_Snippets_Wpf/ExpenseIt/CSharp/ExpenseIt7/App.xaml#18)]
 
-    <span data-ttu-id="0d49c-277">這個 XAML 會加入下列樣式：</span><span class="sxs-lookup"><span data-stu-id="0d49c-277">This XAML adds the following styles:</span></span>
+    <span data-ttu-id="62622-277">這個 XAML 會加入下列樣式：</span><span class="sxs-lookup"><span data-stu-id="62622-277">This XAML adds the following styles:</span></span>
 
-    - <span data-ttu-id="0d49c-278">`headerTextStyle`：格式化頁面標題 <xref:System.Windows.Controls.Label>。</span><span class="sxs-lookup"><span data-stu-id="0d49c-278">`headerTextStyle`: To format the page title <xref:System.Windows.Controls.Label>.</span></span>
+    - <span data-ttu-id="62622-278">`headerTextStyle`：格式化頁面標題 <xref:System.Windows.Controls.Label>。</span><span class="sxs-lookup"><span data-stu-id="62622-278">`headerTextStyle`: To format the page title <xref:System.Windows.Controls.Label>.</span></span>
 
-    - <span data-ttu-id="0d49c-279">`labelStyle`：格式化 <xref:System.Windows.Controls.Label> 控制項。</span><span class="sxs-lookup"><span data-stu-id="0d49c-279">`labelStyle`: To format the <xref:System.Windows.Controls.Label> controls.</span></span>
+    - <span data-ttu-id="62622-279">`labelStyle`：格式化 <xref:System.Windows.Controls.Label> 控制項。</span><span class="sxs-lookup"><span data-stu-id="62622-279">`labelStyle`: To format the <xref:System.Windows.Controls.Label> controls.</span></span>
 
-    - <span data-ttu-id="0d49c-280">`columnHeaderStyle`：格式化 <xref:System.Windows.Controls.Primitives.DataGridColumnHeader>。</span><span class="sxs-lookup"><span data-stu-id="0d49c-280">`columnHeaderStyle`: To format the <xref:System.Windows.Controls.Primitives.DataGridColumnHeader>.</span></span>
+    - <span data-ttu-id="62622-280">`columnHeaderStyle`：格式化 <xref:System.Windows.Controls.Primitives.DataGridColumnHeader>。</span><span class="sxs-lookup"><span data-stu-id="62622-280">`columnHeaderStyle`: To format the <xref:System.Windows.Controls.Primitives.DataGridColumnHeader>.</span></span>
 
-    - <span data-ttu-id="0d49c-281">`listHeaderStyle`：格式化清單標頭 <xref:System.Windows.Controls.Border> 控制項。</span><span class="sxs-lookup"><span data-stu-id="0d49c-281">`listHeaderStyle`: To format the list header <xref:System.Windows.Controls.Border> controls.</span></span>
+    - <span data-ttu-id="62622-281">`listHeaderStyle`：格式化清單標頭 <xref:System.Windows.Controls.Border> 控制項。</span><span class="sxs-lookup"><span data-stu-id="62622-281">`listHeaderStyle`: To format the list header <xref:System.Windows.Controls.Border> controls.</span></span>
 
-    - <span data-ttu-id="0d49c-282">`listHeaderTextStyle`： 若要格式化清單標頭<xref:System.Windows.Controls.Label>。</span><span class="sxs-lookup"><span data-stu-id="0d49c-282">`listHeaderTextStyle`: To format the list header <xref:System.Windows.Controls.Label>.</span></span>
+    - <span data-ttu-id="62622-282">`listHeaderTextStyle`： 若要格式化清單標頭<xref:System.Windows.Controls.Label>。</span><span class="sxs-lookup"><span data-stu-id="62622-282">`listHeaderTextStyle`: To format the list header <xref:System.Windows.Controls.Label>.</span></span>
 
-    - <span data-ttu-id="0d49c-283">`buttonStyle`： 若要格式化<xref:System.Windows.Controls.Button>ExpenseItHome.xaml 上。</span><span class="sxs-lookup"><span data-stu-id="0d49c-283">`buttonStyle`: To format the <xref:System.Windows.Controls.Button> on ExpenseItHome.xaml.</span></span>
+    - <span data-ttu-id="62622-283">`buttonStyle`： 若要格式化<xref:System.Windows.Controls.Button>ExpenseItHome.xaml 上。</span><span class="sxs-lookup"><span data-stu-id="62622-283">`buttonStyle`: To format the <xref:System.Windows.Controls.Button> on ExpenseItHome.xaml.</span></span>
 
-    <span data-ttu-id="0d49c-284">請注意，樣式資源和子系<xref:System.Windows.Application.Resources%2A?displayProperty=nameWithType>屬性項目。</span><span class="sxs-lookup"><span data-stu-id="0d49c-284">Notice that the styles are resources and children of the <xref:System.Windows.Application.Resources%2A?displayProperty=nameWithType> property element.</span></span> <span data-ttu-id="0d49c-285">在這裡，樣式會套用至應用程式中的所有元素。</span><span class="sxs-lookup"><span data-stu-id="0d49c-285">In this location, the styles are applied to all the elements in an application.</span></span> <span data-ttu-id="0d49c-286">如需.NET Framework 應用程式中使用的資源的範例，請參閱[使用應用程式資源](../../../../docs/framework/wpf/advanced/how-to-use-application-resources.md)。</span><span class="sxs-lookup"><span data-stu-id="0d49c-286">For an example of using resources in a .NET Framework application, see [Use Application Resources](../../../../docs/framework/wpf/advanced/how-to-use-application-resources.md).</span></span>
+    <span data-ttu-id="62622-284">請注意，樣式資源和子系<xref:System.Windows.Application.Resources%2A?displayProperty=nameWithType>屬性項目。</span><span class="sxs-lookup"><span data-stu-id="62622-284">Notice that the styles are resources and children of the <xref:System.Windows.Application.Resources%2A?displayProperty=nameWithType> property element.</span></span> <span data-ttu-id="62622-285">在這裡，樣式會套用至應用程式中的所有元素。</span><span class="sxs-lookup"><span data-stu-id="62622-285">In this location, the styles are applied to all the elements in an application.</span></span> <span data-ttu-id="62622-286">如需.NET Framework 應用程式中使用的資源的範例，請參閱[使用應用程式資源](../../../../docs/framework/wpf/advanced/how-to-use-application-resources.md)。</span><span class="sxs-lookup"><span data-stu-id="62622-286">For an example of using resources in a .NET Framework application, see [Use Application Resources](../../../../docs/framework/wpf/advanced/how-to-use-application-resources.md).</span></span>
 
-3. <span data-ttu-id="0d49c-287">開啟 *ExpenseItHome.xaml*。</span><span class="sxs-lookup"><span data-stu-id="0d49c-287">Open *ExpenseItHome.xaml*.</span></span>
+3. <span data-ttu-id="62622-287">開啟 *ExpenseItHome.xaml*。</span><span class="sxs-lookup"><span data-stu-id="62622-287">Open *ExpenseItHome.xaml*.</span></span>
 
-4. <span data-ttu-id="0d49c-288">取代之間的所有內容<xref:System.Windows.Controls.Grid>以下列 XAML 項目：</span><span class="sxs-lookup"><span data-stu-id="0d49c-288">Replace everything between the <xref:System.Windows.Controls.Grid> elements with the following XAML:</span></span>
+4. <span data-ttu-id="62622-288">取代之間的所有內容<xref:System.Windows.Controls.Grid>以下列 XAML 項目：</span><span class="sxs-lookup"><span data-stu-id="62622-288">Replace everything between the <xref:System.Windows.Controls.Grid> elements with the following XAML:</span></span>
 
     [!code-xaml[ExpenseIt#19](../../../../samples/snippets/csharp/VS_Snippets_Wpf/ExpenseIt/CSharp/ExpenseIt7/ExpenseItHome.xaml#19)]
 
-    <span data-ttu-id="0d49c-289">套用樣式會移除並取代諸如 <xref:System.Windows.VerticalAlignment> 和 <xref:System.Windows.Media.FontFamily> 這類會定義每個控制項外觀的屬性。</span><span class="sxs-lookup"><span data-stu-id="0d49c-289">The properties such as <xref:System.Windows.VerticalAlignment> and <xref:System.Windows.Media.FontFamily> that define the look of each control are removed and replaced by applying the styles.</span></span> <span data-ttu-id="0d49c-290">例如，`headerTextStyle`套用至 [檢視費用報表] <xref:System.Windows.Controls.Label>。</span><span class="sxs-lookup"><span data-stu-id="0d49c-290">For example, the `headerTextStyle` is applied to the "View Expense Report" <xref:System.Windows.Controls.Label>.</span></span>
+    <span data-ttu-id="62622-289">套用樣式會移除並取代諸如 <xref:System.Windows.VerticalAlignment> 和 <xref:System.Windows.Media.FontFamily> 這類會定義每個控制項外觀的屬性。</span><span class="sxs-lookup"><span data-stu-id="62622-289">The properties such as <xref:System.Windows.VerticalAlignment> and <xref:System.Windows.Media.FontFamily> that define the look of each control are removed and replaced by applying the styles.</span></span> <span data-ttu-id="62622-290">例如，`headerTextStyle`套用至 [檢視費用報表] <xref:System.Windows.Controls.Label>。</span><span class="sxs-lookup"><span data-stu-id="62622-290">For example, the `headerTextStyle` is applied to the "View Expense Report" <xref:System.Windows.Controls.Label>.</span></span>
 
-5. <span data-ttu-id="0d49c-291">開啟 *ExpenseReportPage.xaml*。</span><span class="sxs-lookup"><span data-stu-id="0d49c-291">Open *ExpenseReportPage.xaml*.</span></span>
+5. <span data-ttu-id="62622-291">開啟 *ExpenseReportPage.xaml*。</span><span class="sxs-lookup"><span data-stu-id="62622-291">Open *ExpenseReportPage.xaml*.</span></span>
 
-6. <span data-ttu-id="0d49c-292">取代之間的所有內容<xref:System.Windows.Controls.Grid>以下列 XAML 項目：</span><span class="sxs-lookup"><span data-stu-id="0d49c-292">Replace everything between the <xref:System.Windows.Controls.Grid> elements with the following XAML:</span></span>
+6. <span data-ttu-id="62622-292">取代之間的所有內容<xref:System.Windows.Controls.Grid>以下列 XAML 項目：</span><span class="sxs-lookup"><span data-stu-id="62622-292">Replace everything between the <xref:System.Windows.Controls.Grid> elements with the following XAML:</span></span>
 
     [!code-xaml[ExpenseIt#20](../../../../samples/snippets/csharp/VS_Snippets_Wpf/ExpenseIt/CSharp/ExpenseIt7/ExpenseReportPage.xaml#20)]
 
-    <span data-ttu-id="0d49c-293">這樣會將樣式加入 <xref:System.Windows.Controls.Label> 和 <xref:System.Windows.Controls.Border> 項目。</span><span class="sxs-lookup"><span data-stu-id="0d49c-293">This adds styles to the <xref:System.Windows.Controls.Label> and <xref:System.Windows.Controls.Border> elements.</span></span>
+    <span data-ttu-id="62622-293">這樣會將樣式加入 <xref:System.Windows.Controls.Label> 和 <xref:System.Windows.Controls.Border> 項目。</span><span class="sxs-lookup"><span data-stu-id="62622-293">This adds styles to the <xref:System.Windows.Controls.Label> and <xref:System.Windows.Controls.Border> elements.</span></span>
 
-## <a name="bind-data-to-a-control"></a><span data-ttu-id="0d49c-294">將資料繫結至控制項</span><span class="sxs-lookup"><span data-stu-id="0d49c-294">Bind data to a control</span></span>
+## <a name="bind-data-to-a-control"></a><span data-ttu-id="62622-294">將資料繫結至控制項</span><span class="sxs-lookup"><span data-stu-id="62622-294">Bind data to a control</span></span>
 
-<span data-ttu-id="0d49c-295">在本節中，您將建立 XML 資料繫結至不同的控制項。</span><span class="sxs-lookup"><span data-stu-id="0d49c-295">In this section, you'll create the XML data that is bound to various controls.</span></span>
+<span data-ttu-id="62622-295">在本節中，您將建立 XML 資料繫結至不同的控制項。</span><span class="sxs-lookup"><span data-stu-id="62622-295">In this section, you'll create the XML data that is bound to various controls.</span></span>
 
-1. <span data-ttu-id="0d49c-296">開啟 *ExpenseItHome.xaml*。</span><span class="sxs-lookup"><span data-stu-id="0d49c-296">Open *ExpenseItHome.xaml*.</span></span>
+1. <span data-ttu-id="62622-296">開啟 *ExpenseItHome.xaml*。</span><span class="sxs-lookup"><span data-stu-id="62622-296">Open *ExpenseItHome.xaml*.</span></span>
 
-2. <span data-ttu-id="0d49c-297">在開啟之後<xref:System.Windows.Controls.Grid>項目，加入下列 XAML 建立<xref:System.Windows.Data.XmlDataProvider>包含每位人員資料：</span><span class="sxs-lookup"><span data-stu-id="0d49c-297">After the opening <xref:System.Windows.Controls.Grid> element, add the following XAML to create an <xref:System.Windows.Data.XmlDataProvider> that contains the data for each person:</span></span>
+2. <span data-ttu-id="62622-297">在開啟之後<xref:System.Windows.Controls.Grid>項目，加入下列 XAML 建立<xref:System.Windows.Data.XmlDataProvider>包含每位人員資料：</span><span class="sxs-lookup"><span data-stu-id="62622-297">After the opening <xref:System.Windows.Controls.Grid> element, add the following XAML to create an <xref:System.Windows.Data.XmlDataProvider> that contains the data for each person:</span></span>
 
     [!code-xaml[ExpenseIt#21](../../../../samples/snippets/csharp/VS_Snippets_Wpf/ExpenseIt/CSharp/ExpenseIt8/ExpenseItHome.xaml#21)]
     [!code-xaml[ExpenseIt#23](../../../../samples/snippets/csharp/VS_Snippets_Wpf/ExpenseIt/CSharp/ExpenseIt8/ExpenseItHome.xaml#23)]
     [!code-xaml[ExpenseIt#22](../../../../samples/snippets/csharp/VS_Snippets_Wpf/ExpenseIt/CSharp/ExpenseIt8/ExpenseItHome.xaml#22)]
 
-    <span data-ttu-id="0d49c-298">資料會建立為<xref:System.Windows.Controls.Grid>資源。</span><span class="sxs-lookup"><span data-stu-id="0d49c-298">The data is created as a <xref:System.Windows.Controls.Grid> resource.</span></span> <span data-ttu-id="0d49c-299">這通常會載入為檔案，但為求簡化會內嵌資料。</span><span class="sxs-lookup"><span data-stu-id="0d49c-299">Normally this would be loaded as a file, but for simplicity the data is added inline.</span></span>
+    <span data-ttu-id="62622-298">資料會建立為<xref:System.Windows.Controls.Grid>資源。</span><span class="sxs-lookup"><span data-stu-id="62622-298">The data is created as a <xref:System.Windows.Controls.Grid> resource.</span></span> <span data-ttu-id="62622-299">這通常會載入為檔案，但為求簡化會內嵌資料。</span><span class="sxs-lookup"><span data-stu-id="62622-299">Normally this would be loaded as a file, but for simplicity the data is added inline.</span></span>
 
-3. <span data-ttu-id="0d49c-300">內`<Grid.Resources>`項目，加入下列<xref:System.Windows.DataTemplate>，而後者可定義如何顯示資料的<xref:System.Windows.Controls.ListBox>:</span><span class="sxs-lookup"><span data-stu-id="0d49c-300">Within the `<Grid.Resources>` element, add the following <xref:System.Windows.DataTemplate>, which defines how to display the data in the <xref:System.Windows.Controls.ListBox>:</span></span>
+3. <span data-ttu-id="62622-300">內`<Grid.Resources>`項目，加入下列<xref:System.Windows.DataTemplate>，而後者可定義如何顯示資料的<xref:System.Windows.Controls.ListBox>:</span><span class="sxs-lookup"><span data-stu-id="62622-300">Within the `<Grid.Resources>` element, add the following <xref:System.Windows.DataTemplate>, which defines how to display the data in the <xref:System.Windows.Controls.ListBox>:</span></span>
 
     [!code-xaml[ExpenseIt#21](../../../../samples/snippets/csharp/VS_Snippets_Wpf/ExpenseIt/CSharp/ExpenseIt8/ExpenseItHome.xaml#21)]
     [!code-xaml[ExpenseIt#24](../../../../samples/snippets/csharp/VS_Snippets_Wpf/ExpenseIt/CSharp/ExpenseIt8/ExpenseItHome.xaml#24)]
     [!code-xaml[ExpenseIt#22](../../../../samples/snippets/csharp/VS_Snippets_Wpf/ExpenseIt/CSharp/ExpenseIt8/ExpenseItHome.xaml#22)]
 
-    <span data-ttu-id="0d49c-301">如需詳細資料範本的詳細資訊，請參閱[資料範本化概觀](../../../../docs/framework/wpf/data/data-templating-overview.md)。</span><span class="sxs-lookup"><span data-stu-id="0d49c-301">For more information about data templates, see [Data templating overview](../../../../docs/framework/wpf/data/data-templating-overview.md).</span></span>
+    <span data-ttu-id="62622-301">如需詳細資料範本的詳細資訊，請參閱[資料範本化概觀](../../../../docs/framework/wpf/data/data-templating-overview.md)。</span><span class="sxs-lookup"><span data-stu-id="62622-301">For more information about data templates, see [Data templating overview](../../../../docs/framework/wpf/data/data-templating-overview.md).</span></span>
 
-4. <span data-ttu-id="0d49c-302">取代現有<xref:System.Windows.Controls.ListBox>以下列 XAML:</span><span class="sxs-lookup"><span data-stu-id="0d49c-302">Replace the existing <xref:System.Windows.Controls.ListBox> with the following XAML:</span></span>
+4. <span data-ttu-id="62622-302">取代現有<xref:System.Windows.Controls.ListBox>以下列 XAML:</span><span class="sxs-lookup"><span data-stu-id="62622-302">Replace the existing <xref:System.Windows.Controls.ListBox> with the following XAML:</span></span>
 
     [!code-xaml[ExpenseIt#25](../../../../samples/snippets/csharp/VS_Snippets_Wpf/ExpenseIt/CSharp/ExpenseIt8/ExpenseItHome.xaml#25)]
 
-    <span data-ttu-id="0d49c-303">這個 XAML 會繫結<xref:System.Windows.Controls.ItemsControl.ItemsSource%2A>屬性<xref:System.Windows.Controls.ListBox>到資料來源，並套用資料範本做為<xref:System.Windows.Controls.ItemsControl.ItemTemplate%2A>。</span><span class="sxs-lookup"><span data-stu-id="0d49c-303">This XAML binds the <xref:System.Windows.Controls.ItemsControl.ItemsSource%2A> property of the <xref:System.Windows.Controls.ListBox> to the data source and applies the data template as the <xref:System.Windows.Controls.ItemsControl.ItemTemplate%2A>.</span></span>
+    <span data-ttu-id="62622-303">這個 XAML 會繫結<xref:System.Windows.Controls.ItemsControl.ItemsSource%2A>屬性<xref:System.Windows.Controls.ListBox>到資料來源，並套用資料範本做為<xref:System.Windows.Controls.ItemsControl.ItemTemplate%2A>。</span><span class="sxs-lookup"><span data-stu-id="62622-303">This XAML binds the <xref:System.Windows.Controls.ItemsControl.ItemsSource%2A> property of the <xref:System.Windows.Controls.ListBox> to the data source and applies the data template as the <xref:System.Windows.Controls.ItemsControl.ItemTemplate%2A>.</span></span>
 
-## <a name="connect-data-to-controls"></a><span data-ttu-id="0d49c-304">資料連接至控制項</span><span class="sxs-lookup"><span data-stu-id="0d49c-304">Connect data to controls</span></span>
+## <a name="connect-data-to-controls"></a><span data-ttu-id="62622-304">資料連接至控制項</span><span class="sxs-lookup"><span data-stu-id="62622-304">Connect data to controls</span></span>
 
-<span data-ttu-id="0d49c-305">接下來，您要在其中加入程式碼，以擷取在所選取名稱**ExpenseItHome**頁面上，並將它傳遞給建構函式的**ExpenseReportPage**。</span><span class="sxs-lookup"><span data-stu-id="0d49c-305">Next, you'll add code to retrieve the name that's selected on the **ExpenseItHome** page and pass it to the constructor of **ExpenseReportPage**.</span></span> <span data-ttu-id="0d49c-306">**ExpenseReportPage**設定其資料內容，與傳遞的項目，它是由控制項的定義中*ExpenseReportPage.xaml*繫結。</span><span class="sxs-lookup"><span data-stu-id="0d49c-306">**ExpenseReportPage** sets its data context with the passed item, which is what the controls defined in *ExpenseReportPage.xaml* bind to.</span></span>
+<span data-ttu-id="62622-305">接下來，您要在其中加入程式碼，以擷取在所選取名稱**ExpenseItHome**頁面上，並將它傳遞給建構函式的**ExpenseReportPage**。</span><span class="sxs-lookup"><span data-stu-id="62622-305">Next, you'll add code to retrieve the name that's selected on the **ExpenseItHome** page and pass it to the constructor of **ExpenseReportPage**.</span></span> <span data-ttu-id="62622-306">**ExpenseReportPage**設定其資料內容，與傳遞的項目，它是由控制項的定義中*ExpenseReportPage.xaml*繫結。</span><span class="sxs-lookup"><span data-stu-id="62622-306">**ExpenseReportPage** sets its data context with the passed item, which is what the controls defined in *ExpenseReportPage.xaml* bind to.</span></span>
 
-1. <span data-ttu-id="0d49c-307">開啟 *ExpenseReportPage.xaml.vb* 或 *ExpenseReportPage.xaml.cs*。</span><span class="sxs-lookup"><span data-stu-id="0d49c-307">Open *ExpenseReportPage.xaml.vb* or *ExpenseReportPage.xaml.cs*.</span></span>
+1. <span data-ttu-id="62622-307">開啟 *ExpenseReportPage.xaml.vb* 或 *ExpenseReportPage.xaml.cs*。</span><span class="sxs-lookup"><span data-stu-id="62622-307">Open *ExpenseReportPage.xaml.vb* or *ExpenseReportPage.xaml.cs*.</span></span>
 
-2. <span data-ttu-id="0d49c-308">加入一個可接受物件的建構函式，如此您就可以傳遞選取之人員的費用報表資料。</span><span class="sxs-lookup"><span data-stu-id="0d49c-308">Add a constructor that takes an object so you can pass the expense report data of the selected person.</span></span>
+2. <span data-ttu-id="62622-308">加入一個可接受物件的建構函式，如此您就可以傳遞選取之人員的費用報表資料。</span><span class="sxs-lookup"><span data-stu-id="62622-308">Add a constructor that takes an object so you can pass the expense report data of the selected person.</span></span>
 
     [!code-csharp[ExpenseIt#26](../../../../samples/snippets/csharp/VS_Snippets_Wpf/ExpenseIt/CSharp/ExpenseIt8/ExpenseReportPage.xaml.cs#26)]
     [!code-vb[ExpenseIt#26](../../../../samples/snippets/visualbasic/VS_Snippets_Wpf/ExpenseIt/VB/ExpenseIt8/ExpenseReportPage.xaml.vb#26)]
 
-3. <span data-ttu-id="0d49c-309">開啟 *ExpenseItHome.xaml.cs* 或 *ExpenseItHome.xaml.vb*。</span><span class="sxs-lookup"><span data-stu-id="0d49c-309">Open *ExpenseItHome.xaml.vb* or *ExpenseItHome.xaml.cs*.</span></span>
+3. <span data-ttu-id="62622-309">開啟 *ExpenseItHome.xaml.cs* 或 *ExpenseItHome.xaml.vb*。</span><span class="sxs-lookup"><span data-stu-id="62622-309">Open *ExpenseItHome.xaml.vb* or *ExpenseItHome.xaml.cs*.</span></span>
 
-4. <span data-ttu-id="0d49c-310">變更<xref:System.Windows.Controls.Primitives.ButtonBase.Click>事件處理常式呼叫新的建構函式傳遞所選人員的經費支出報表資料。</span><span class="sxs-lookup"><span data-stu-id="0d49c-310">Change the <xref:System.Windows.Controls.Primitives.ButtonBase.Click> event handler to call the new constructor passing the expense report data of the selected person.</span></span>
+4. <span data-ttu-id="62622-310">變更<xref:System.Windows.Controls.Primitives.ButtonBase.Click>事件處理常式呼叫新的建構函式傳遞所選人員的經費支出報表資料。</span><span class="sxs-lookup"><span data-stu-id="62622-310">Change the <xref:System.Windows.Controls.Primitives.ButtonBase.Click> event handler to call the new constructor passing the expense report data of the selected person.</span></span>
 
     [!code-csharp[ExpenseIt#27](../../../../samples/snippets/csharp/VS_Snippets_Wpf/ExpenseIt/CSharp/ExpenseIt8/ExpenseItHome.xaml.cs#27)]
     [!code-vb[ExpenseIt#27](../../../../samples/snippets/visualbasic/VS_Snippets_Wpf/ExpenseIt/VB/ExpenseIt8/ExpenseItHome.xaml.vb#27)]
 
-## <a name="style-data-with-data-templates"></a><span data-ttu-id="0d49c-311">使用資料範本樣式的資料</span><span class="sxs-lookup"><span data-stu-id="0d49c-311">Style data with data templates</span></span>
+## <a name="style-data-with-data-templates"></a><span data-ttu-id="62622-311">使用資料範本樣式的資料</span><span class="sxs-lookup"><span data-stu-id="62622-311">Style data with data templates</span></span>
 
-<span data-ttu-id="0d49c-312">在本節中，您要使用資料範本更新 UI 的資料繫結清單中的每個項目。</span><span class="sxs-lookup"><span data-stu-id="0d49c-312">In this section, you'll update the UI for each item in the data-bound lists by using data templates.</span></span>
+<span data-ttu-id="62622-312">在本節中，您要使用資料範本更新 UI 的資料繫結清單中的每個項目。</span><span class="sxs-lookup"><span data-stu-id="62622-312">In this section, you'll update the UI for each item in the data-bound lists by using data templates.</span></span>
 
-1. <span data-ttu-id="0d49c-313">開啟 *ExpenseReportPage.xaml*。</span><span class="sxs-lookup"><span data-stu-id="0d49c-313">Open *ExpenseReportPage.xaml*.</span></span>
+1. <span data-ttu-id="62622-313">開啟 *ExpenseReportPage.xaml*。</span><span class="sxs-lookup"><span data-stu-id="62622-313">Open *ExpenseReportPage.xaml*.</span></span>
 
-2. <span data-ttu-id="0d49c-314">繫結內容的 「 名稱 」 和 「 部門 」<xref:System.Windows.Controls.Label>項目以適當的資料來源屬性。</span><span class="sxs-lookup"><span data-stu-id="0d49c-314">Bind the content of the "Name" and "Department" <xref:System.Windows.Controls.Label> elements to the appropriate data source property.</span></span> <span data-ttu-id="0d49c-315">如需資料繫結的詳細資訊，請參閱[資料繫結概觀](../../../../docs/framework/wpf/data/data-binding-overview.md)。</span><span class="sxs-lookup"><span data-stu-id="0d49c-315">For more information about data binding, see [Data binding overview](../../../../docs/framework/wpf/data/data-binding-overview.md).</span></span>
+2. <span data-ttu-id="62622-314">繫結內容的 「 名稱 」 和 「 部門 」<xref:System.Windows.Controls.Label>項目以適當的資料來源屬性。</span><span class="sxs-lookup"><span data-stu-id="62622-314">Bind the content of the "Name" and "Department" <xref:System.Windows.Controls.Label> elements to the appropriate data source property.</span></span> <span data-ttu-id="62622-315">如需資料繫結的詳細資訊，請參閱[資料繫結概觀](../../../../docs/framework/wpf/data/data-binding-overview.md)。</span><span class="sxs-lookup"><span data-stu-id="62622-315">For more information about data binding, see [Data binding overview](../../../../docs/framework/wpf/data/data-binding-overview.md).</span></span>
 
     [!code-xaml[ExpenseIt#31](../../../../samples/snippets/csharp/VS_Snippets_Wpf/ExpenseIt/CSharp/ExpenseIt9/ExpenseReportPage.xaml#31)]
 
-3. <span data-ttu-id="0d49c-316">在開啟之後<xref:System.Windows.Controls.Grid>項目，加入下列的資料範本，其中定義要顯示的經費支出報表資料的方式：</span><span class="sxs-lookup"><span data-stu-id="0d49c-316">After the opening <xref:System.Windows.Controls.Grid> element, add the following data templates, which define how to display the expense report data:</span></span>
+3. <span data-ttu-id="62622-316">在開啟之後<xref:System.Windows.Controls.Grid>項目，加入下列的資料範本，其中定義要顯示的經費支出報表資料的方式：</span><span class="sxs-lookup"><span data-stu-id="62622-316">After the opening <xref:System.Windows.Controls.Grid> element, add the following data templates, which define how to display the expense report data:</span></span>
 
     [!code-xaml[ExpenseIt#30](../../../../samples/snippets/csharp/VS_Snippets_Wpf/ExpenseIt/CSharp/ExpenseIt9/ExpenseReportPage.xaml#30)]
 
-4. <span data-ttu-id="0d49c-317">將範本套用至<xref:System.Windows.Controls.DataGrid>資料行，顯示 費用報表資料。</span><span class="sxs-lookup"><span data-stu-id="0d49c-317">Apply the templates to the <xref:System.Windows.Controls.DataGrid> columns that display the expense report data.</span></span>
+4. <span data-ttu-id="62622-317">將範本套用至<xref:System.Windows.Controls.DataGrid>資料行，顯示 費用報表資料。</span><span class="sxs-lookup"><span data-stu-id="62622-317">Apply the templates to the <xref:System.Windows.Controls.DataGrid> columns that display the expense report data.</span></span>
 
     [!code-xaml[ExpenseIt#32](../../../../samples/snippets/csharp/VS_Snippets_Wpf/ExpenseIt/CSharp/ExpenseIt9/ExpenseReportPage.xaml#32)]
 
-5. <span data-ttu-id="0d49c-318">建置並執行應用程式。</span><span class="sxs-lookup"><span data-stu-id="0d49c-318">Build and run the application.</span></span>
+5. <span data-ttu-id="62622-318">建置並執行應用程式。</span><span class="sxs-lookup"><span data-stu-id="62622-318">Build and run the application.</span></span>
 
-6. <span data-ttu-id="0d49c-319">選取 人員，然後選取**檢視** 按鈕。</span><span class="sxs-lookup"><span data-stu-id="0d49c-319">Select a person and then select the **View** button.</span></span>
+6. <span data-ttu-id="62622-319">選取 人員，然後選取**檢視** 按鈕。</span><span class="sxs-lookup"><span data-stu-id="62622-319">Select a person and then select the **View** button.</span></span>
 
-<span data-ttu-id="0d49c-320">下圖顯示使用控制項、 版面配置、 樣式、 資料繫結和套用資料範本的 ExpenseIt 應用程式的兩個頁面：</span><span class="sxs-lookup"><span data-stu-id="0d49c-320">The following illustration shows both pages of the ExpenseIt application with controls, layout, styles, data binding, and data templates applied:</span></span>
+<span data-ttu-id="62622-320">下圖顯示使用控制項、 版面配置、 樣式、 資料繫結和套用資料範本的 ExpenseIt 應用程式的兩個頁面：</span><span class="sxs-lookup"><span data-stu-id="62622-320">The following illustration shows both pages of the ExpenseIt application with controls, layout, styles, data binding, and data templates applied:</span></span>
 
 ![ExpenseIt 範例螢幕擷取畫面](../../../../docs/framework/wpf/getting-started/media/gettingstartedfigure5.png)
 
 > [!NOTE]
-> <span data-ttu-id="0d49c-322">這個範例示範 WPF 的特定功能，並不會遵循針對等安全性、 當地語系化和協助工具的所有最佳作法。</span><span class="sxs-lookup"><span data-stu-id="0d49c-322">This sample demonstrates a specific feature of WPF and doesn't follow all best practices for things like security, localization, and accessibility.</span></span> <span data-ttu-id="0d49c-323">WPF 和.NET Framework 應用程式開發的最佳作法的完整討論，請參閱下列主題：</span><span class="sxs-lookup"><span data-stu-id="0d49c-323">For comprehensive coverage of WPF and the .NET Framework application development best practices, see the following topics:</span></span>
+> <span data-ttu-id="62622-322">這個範例示範 WPF 的特定功能，並不會遵循針對等安全性、 當地語系化和協助工具的所有最佳作法。</span><span class="sxs-lookup"><span data-stu-id="62622-322">This sample demonstrates a specific feature of WPF and doesn't follow all best practices for things like security, localization, and accessibility.</span></span> <span data-ttu-id="62622-323">WPF 和.NET Framework 應用程式開發的最佳作法的完整討論，請參閱下列主題：</span><span class="sxs-lookup"><span data-stu-id="62622-323">For comprehensive coverage of WPF and the .NET Framework application development best practices, see the following topics:</span></span>
 >
-> - [<span data-ttu-id="0d49c-324">協助工具選項</span><span class="sxs-lookup"><span data-stu-id="0d49c-324">Accessibility</span></span>](../../../../docs/framework/ui-automation/accessibility-best-practices.md)
+> - [<span data-ttu-id="62622-324">協助工具選項</span><span class="sxs-lookup"><span data-stu-id="62622-324">Accessibility</span></span>](../../../../docs/framework/ui-automation/accessibility-best-practices.md)
 >
-> - [<span data-ttu-id="0d49c-325">安全性</span><span class="sxs-lookup"><span data-stu-id="0d49c-325">Security</span></span>](../../../../docs/framework/wpf/security-wpf.md)
+> - [<span data-ttu-id="62622-325">安全性</span><span class="sxs-lookup"><span data-stu-id="62622-325">Security</span></span>](../../../../docs/framework/wpf/security-wpf.md)
 >
-> - [<span data-ttu-id="0d49c-326">WPF 全球化和當地語系化</span><span class="sxs-lookup"><span data-stu-id="0d49c-326">WPF globalization and localization</span></span>](../../../../docs/framework/wpf/advanced/wpf-globalization-and-localization-overview.md)
+> - [<span data-ttu-id="62622-326">WPF 全球化和當地語系化</span><span class="sxs-lookup"><span data-stu-id="62622-326">WPF globalization and localization</span></span>](../../../../docs/framework/wpf/advanced/wpf-globalization-and-localization-overview.md)
 >
-> - [<span data-ttu-id="0d49c-327">WPF 效能</span><span class="sxs-lookup"><span data-stu-id="0d49c-327">WPF performance</span></span>](../../../../docs/framework/wpf/advanced/optimizing-wpf-application-performance.md)
+> - [<span data-ttu-id="62622-327">WPF 效能</span><span class="sxs-lookup"><span data-stu-id="62622-327">WPF performance</span></span>](../../../../docs/framework/wpf/advanced/optimizing-wpf-application-performance.md)
 
-## <a name="next-steps"></a><span data-ttu-id="0d49c-328">後續步驟</span><span class="sxs-lookup"><span data-stu-id="0d49c-328">Next steps</span></span>
+## <a name="next-steps"></a><span data-ttu-id="62622-328">後續步驟</span><span class="sxs-lookup"><span data-stu-id="62622-328">Next steps</span></span>
 
-<span data-ttu-id="0d49c-329">在本逐步解說中，您學會多種技術來建立使用 Windows Presentation Foundation (WPF) UI。</span><span class="sxs-lookup"><span data-stu-id="0d49c-329">In this walkthrough you learned a number of techniques for creating a UI using Windows Presentation Foundation (WPF).</span></span> <span data-ttu-id="0d49c-330">您現在應該有基本了解的資料繫結的.NET Framework 應用程式的建置組塊。</span><span class="sxs-lookup"><span data-stu-id="0d49c-330">You should now have a basic understanding of the building blocks of a data-bound, .NET Framework application.</span></span> <span data-ttu-id="0d49c-331">如需 WPF 架構和程式設計模型的詳細資訊，請參閱下列主題：</span><span class="sxs-lookup"><span data-stu-id="0d49c-331">For more information about the WPF architecture and programming models, see the following topics:</span></span>
+<span data-ttu-id="62622-329">在本逐步解說中，您學會多種技術來建立使用 Windows Presentation Foundation (WPF) UI。</span><span class="sxs-lookup"><span data-stu-id="62622-329">In this walkthrough you learned a number of techniques for creating a UI using Windows Presentation Foundation (WPF).</span></span> <span data-ttu-id="62622-330">您現在應該有基本了解的資料繫結的.NET Framework 應用程式的建置組塊。</span><span class="sxs-lookup"><span data-stu-id="62622-330">You should now have a basic understanding of the building blocks of a data-bound, .NET Framework application.</span></span> <span data-ttu-id="62622-331">如需 WPF 架構和程式設計模型的詳細資訊，請參閱下列主題：</span><span class="sxs-lookup"><span data-stu-id="62622-331">For more information about the WPF architecture and programming models, see the following topics:</span></span>
 
-- [<span data-ttu-id="0d49c-332">WPF 架構</span><span class="sxs-lookup"><span data-stu-id="0d49c-332">WPF architecture</span></span>](../../../../docs/framework/wpf/advanced/wpf-architecture.md)
-- [<span data-ttu-id="0d49c-333">XAML 概觀 (WPF)</span><span class="sxs-lookup"><span data-stu-id="0d49c-333">XAML overview (WPF)</span></span>](../../../../docs/framework/wpf/advanced/xaml-overview-wpf.md)
-- [<span data-ttu-id="0d49c-334">相依性屬性概觀</span><span class="sxs-lookup"><span data-stu-id="0d49c-334">Dependency properties overview</span></span>](../../../../docs/framework/wpf/advanced/dependency-properties-overview.md)
-- [<span data-ttu-id="0d49c-335">版面配置</span><span class="sxs-lookup"><span data-stu-id="0d49c-335">Layout</span></span>](../../../../docs/framework/wpf/advanced/layout.md)
+- [<span data-ttu-id="62622-332">WPF 架構</span><span class="sxs-lookup"><span data-stu-id="62622-332">WPF architecture</span></span>](../../../../docs/framework/wpf/advanced/wpf-architecture.md)
+- [<span data-ttu-id="62622-333">XAML 概觀 (WPF)</span><span class="sxs-lookup"><span data-stu-id="62622-333">XAML overview (WPF)</span></span>](../../../../docs/framework/wpf/advanced/xaml-overview-wpf.md)
+- [<span data-ttu-id="62622-334">相依性屬性概觀</span><span class="sxs-lookup"><span data-stu-id="62622-334">Dependency properties overview</span></span>](../../../../docs/framework/wpf/advanced/dependency-properties-overview.md)
+- [<span data-ttu-id="62622-335">版面配置</span><span class="sxs-lookup"><span data-stu-id="62622-335">Layout</span></span>](../../../../docs/framework/wpf/advanced/layout.md)
 
-<span data-ttu-id="0d49c-336">如需建立應用程式的詳細資訊，請參閱下列主題：</span><span class="sxs-lookup"><span data-stu-id="0d49c-336">For more information about creating applications, see the following topics:</span></span>
+<span data-ttu-id="62622-336">如需建立應用程式的詳細資訊，請參閱下列主題：</span><span class="sxs-lookup"><span data-stu-id="62622-336">For more information about creating applications, see the following topics:</span></span>
 
-- [<span data-ttu-id="0d49c-337">應用程式開發</span><span class="sxs-lookup"><span data-stu-id="0d49c-337">Application development</span></span>](../../../../docs/framework/wpf/app-development/index.md)
-- [<span data-ttu-id="0d49c-338">控制項</span><span class="sxs-lookup"><span data-stu-id="0d49c-338">Controls</span></span>](../../../../docs/framework/wpf/controls/index.md)
-- [<span data-ttu-id="0d49c-339">資料繫結概觀</span><span class="sxs-lookup"><span data-stu-id="0d49c-339">Data binding overview</span></span>](../../../../docs/framework/wpf/data/data-binding-overview.md)
-- [<span data-ttu-id="0d49c-340">圖形和多媒體</span><span class="sxs-lookup"><span data-stu-id="0d49c-340">Graphics and multimedia</span></span>](../../../../docs/framework/wpf/graphics-multimedia/index.md)
-- [<span data-ttu-id="0d49c-341">WPF 中的文件</span><span class="sxs-lookup"><span data-stu-id="0d49c-341">Documents in WPF</span></span>](../../../../docs/framework/wpf/advanced/documents-in-wpf.md)
+- [<span data-ttu-id="62622-337">應用程式開發</span><span class="sxs-lookup"><span data-stu-id="62622-337">Application development</span></span>](../../../../docs/framework/wpf/app-development/index.md)
+- [<span data-ttu-id="62622-338">控制項</span><span class="sxs-lookup"><span data-stu-id="62622-338">Controls</span></span>](../../../../docs/framework/wpf/controls/index.md)
+- [<span data-ttu-id="62622-339">資料繫結概觀</span><span class="sxs-lookup"><span data-stu-id="62622-339">Data binding overview</span></span>](../../../../docs/framework/wpf/data/data-binding-overview.md)
+- [<span data-ttu-id="62622-340">圖形和多媒體</span><span class="sxs-lookup"><span data-stu-id="62622-340">Graphics and multimedia</span></span>](../../../../docs/framework/wpf/graphics-multimedia/index.md)
+- [<span data-ttu-id="62622-341">WPF 中的文件</span><span class="sxs-lookup"><span data-stu-id="62622-341">Documents in WPF</span></span>](../../../../docs/framework/wpf/advanced/documents-in-wpf.md)
 
-## <a name="see-also"></a><span data-ttu-id="0d49c-342">另請參閱</span><span class="sxs-lookup"><span data-stu-id="0d49c-342">See also</span></span>
+## <a name="see-also"></a><span data-ttu-id="62622-342">另請參閱</span><span class="sxs-lookup"><span data-stu-id="62622-342">See also</span></span>
 
-- [<span data-ttu-id="0d49c-343">概觀面板</span><span class="sxs-lookup"><span data-stu-id="0d49c-343">Panels overview</span></span>](../../../../docs/framework/wpf/controls/panels-overview.md)
-- [<span data-ttu-id="0d49c-344">資料範本化概觀</span><span class="sxs-lookup"><span data-stu-id="0d49c-344">Data templating overview</span></span>](../../../../docs/framework/wpf/data/data-templating-overview.md)
-- [<span data-ttu-id="0d49c-345">建置 WPF 應用程式</span><span class="sxs-lookup"><span data-stu-id="0d49c-345">Build a WPF application</span></span>](../../../../docs/framework/wpf/app-development/building-a-wpf-application-wpf.md)
-- [<span data-ttu-id="0d49c-346">樣式和範本</span><span class="sxs-lookup"><span data-stu-id="0d49c-346">Styles and templates</span></span>](../../../../docs/framework/wpf/controls/styles-and-templates.md)
+- [<span data-ttu-id="62622-343">概觀面板</span><span class="sxs-lookup"><span data-stu-id="62622-343">Panels overview</span></span>](../../../../docs/framework/wpf/controls/panels-overview.md)
+- [<span data-ttu-id="62622-344">資料範本化概觀</span><span class="sxs-lookup"><span data-stu-id="62622-344">Data templating overview</span></span>](../../../../docs/framework/wpf/data/data-templating-overview.md)
+- [<span data-ttu-id="62622-345">建置 WPF 應用程式</span><span class="sxs-lookup"><span data-stu-id="62622-345">Build a WPF application</span></span>](../../../../docs/framework/wpf/app-development/building-a-wpf-application-wpf.md)
+- [<span data-ttu-id="62622-346">樣式和範本</span><span class="sxs-lookup"><span data-stu-id="62622-346">Styles and templates</span></span>](../../../../docs/framework/wpf/controls/styles-and-templates.md)

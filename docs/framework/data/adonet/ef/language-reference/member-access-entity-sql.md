@@ -1,45 +1,33 @@
 ---
-title: "。 (成員存取) (Entity SQL)"
-ms.custom: 
+title: 。 (成員存取) (Entity SQL)
 ms.date: 03/30/2017
-ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.technology: dotnet-ado
-ms.tgt_pltfrm: 
-ms.topic: article
 ms.assetid: 4733e3b2-3efa-4b96-b591-ac31350e96ad
-caps.latest.revision: "2"
-author: douglaslMS
-ms.author: douglasl
-manager: craigg
-ms.workload: dotnet
-ms.openlocfilehash: c90c908e567ac05f344292411978ff0c80919a65
-ms.sourcegitcommit: ed26cfef4e18f6d93ab822d8c29f902cff3519d1
+ms.openlocfilehash: fdcd026d245b3f6d6ecaccc0f828f3d77fd6ce1a
+ms.sourcegitcommit: 11f11ca6cefe555972b3a5c99729d1a7523d8f50
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 01/17/2018
+ms.lasthandoff: 05/03/2018
 ---
-# <a name="-member-access-entity-sql"></a><span data-ttu-id="f95bc-103">。</span><span class="sxs-lookup"><span data-stu-id="f95bc-103">.</span></span> <span data-ttu-id="f95bc-104">(成員存取) (Entity SQL)</span><span class="sxs-lookup"><span data-stu-id="f95bc-104">(Member Access) (Entity SQL)</span></span>
-<span data-ttu-id="f95bc-105">點運算子 （.） 是[!INCLUDE[esql](../../../../../../includes/esql-md.md)]成員存取運算子。</span><span class="sxs-lookup"><span data-stu-id="f95bc-105">The dot operator (.) is the [!INCLUDE[esql](../../../../../../includes/esql-md.md)] member access operator.</span></span> <span data-ttu-id="f95bc-106">使用成員存取運算子可產生結構化概念模型型別執行個體之屬性或欄位的值。</span><span class="sxs-lookup"><span data-stu-id="f95bc-106">You use the member access operator to yield the value of a property or field of an instance of structural conceptual model type.</span></span>  
+# <a name="-member-access-entity-sql"></a><span data-ttu-id="55ad2-103">。</span><span class="sxs-lookup"><span data-stu-id="55ad2-103">.</span></span> <span data-ttu-id="55ad2-104">(成員存取) (Entity SQL)</span><span class="sxs-lookup"><span data-stu-id="55ad2-104">(Member Access) (Entity SQL)</span></span>
+<span data-ttu-id="55ad2-105">點運算子 （.） 是[!INCLUDE[esql](../../../../../../includes/esql-md.md)]成員存取運算子。</span><span class="sxs-lookup"><span data-stu-id="55ad2-105">The dot operator (.) is the [!INCLUDE[esql](../../../../../../includes/esql-md.md)] member access operator.</span></span> <span data-ttu-id="55ad2-106">使用成員存取運算子可產生結構化概念模型型別執行個體之屬性或欄位的值。</span><span class="sxs-lookup"><span data-stu-id="55ad2-106">You use the member access operator to yield the value of a property or field of an instance of structural conceptual model type.</span></span>  
   
-## <a name="syntax"></a><span data-ttu-id="f95bc-107">語法</span><span class="sxs-lookup"><span data-stu-id="f95bc-107">Syntax</span></span>  
+## <a name="syntax"></a><span data-ttu-id="55ad2-107">語法</span><span class="sxs-lookup"><span data-stu-id="55ad2-107">Syntax</span></span>  
   
 ```  
 expression.identifier  
 ```  
   
-## <a name="arguments"></a><span data-ttu-id="f95bc-108">引數</span><span class="sxs-lookup"><span data-stu-id="f95bc-108">Arguments</span></span>  
+## <a name="arguments"></a><span data-ttu-id="55ad2-108">引數</span><span class="sxs-lookup"><span data-stu-id="55ad2-108">Arguments</span></span>  
  `expression`  
- <span data-ttu-id="f95bc-109">結構化概念模型型別的執行個體。</span><span class="sxs-lookup"><span data-stu-id="f95bc-109">An instance of a structural conceptual model type.</span></span>  
+ <span data-ttu-id="55ad2-109">結構化概念模型型別的執行個體。</span><span class="sxs-lookup"><span data-stu-id="55ad2-109">An instance of a structural conceptual model type.</span></span>  
   
  `identifier`  
- <span data-ttu-id="f95bc-110">屬於物件執行個體的屬性或欄位。</span><span class="sxs-lookup"><span data-stu-id="f95bc-110">A property or field that belongs to an object instance.</span></span>  
+ <span data-ttu-id="55ad2-110">屬於物件執行個體的屬性或欄位。</span><span class="sxs-lookup"><span data-stu-id="55ad2-110">A property or field that belongs to an object instance.</span></span>  
   
-## <a name="remarks"></a><span data-ttu-id="f95bc-111">備註</span><span class="sxs-lookup"><span data-stu-id="f95bc-111">Remarks</span></span>  
- <span data-ttu-id="f95bc-112">點 (.) 運算子可以用來從記錄擷取欄位，就像是擷取複雜或實體類型的屬性。</span><span class="sxs-lookup"><span data-stu-id="f95bc-112">The dot (.) operator may be used to extract fields from a record, similar to extracting properties of a complex or entity type.</span></span> <span data-ttu-id="f95bc-113">舉例來講，假設 Name 型別的 n 是 Person 型別的成員，且 p 是 Person 型別的執行個體，則 p.n 便是產生 Name 型別值的合法成員存取運算式。</span><span class="sxs-lookup"><span data-stu-id="f95bc-113">For example, if n of type Name is a member of type Person, and p is an instance of type Person, then p.n is a legal member access expression that yields a value of type Name.</span></span>  
+## <a name="remarks"></a><span data-ttu-id="55ad2-111">備註</span><span class="sxs-lookup"><span data-stu-id="55ad2-111">Remarks</span></span>  
+ <span data-ttu-id="55ad2-112">點 (.) 運算子可以用來從記錄擷取欄位，就像是擷取複雜或實體類型的屬性。</span><span class="sxs-lookup"><span data-stu-id="55ad2-112">The dot (.) operator may be used to extract fields from a record, similar to extracting properties of a complex or entity type.</span></span> <span data-ttu-id="55ad2-113">舉例來講，假設 Name 型別的 n 是 Person 型別的成員，且 p 是 Person 型別的執行個體，則 p.n 便是產生 Name 型別值的合法成員存取運算式。</span><span class="sxs-lookup"><span data-stu-id="55ad2-113">For example, if n of type Name is a member of type Person, and p is an instance of type Person, then p.n is a legal member access expression that yields a value of type Name.</span></span>  
   
  `select p.Name.FirstName from LOB.Person as p`  
   
-## <a name="see-also"></a><span data-ttu-id="f95bc-114">請參閱</span><span class="sxs-lookup"><span data-stu-id="f95bc-114">See Also</span></span>  
- [<span data-ttu-id="f95bc-115">Entity SQL 參考</span><span class="sxs-lookup"><span data-stu-id="f95bc-115">Entity SQL Reference</span></span>](../../../../../../docs/framework/data/adonet/ef/language-reference/entity-sql-reference.md)
+## <a name="see-also"></a><span data-ttu-id="55ad2-114">另請參閱</span><span class="sxs-lookup"><span data-stu-id="55ad2-114">See Also</span></span>  
+ [<span data-ttu-id="55ad2-115">Entity SQL 參考</span><span class="sxs-lookup"><span data-stu-id="55ad2-115">Entity SQL Reference</span></span>](../../../../../../docs/framework/data/adonet/ef/language-reference/entity-sql-reference.md)

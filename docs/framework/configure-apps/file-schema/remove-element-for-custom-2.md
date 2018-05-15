@@ -1,10 +1,6 @@
 ---
-title: "&lt;移除&gt;NameValueSectionHandler DictionarySectionHandler 的項目"
+title: '&lt;移除&gt;NameValueSectionHandler DictionarySectionHandler 的項目'
 ms.date: 05/01/2017
-ms.prod: .net-framework
-ms.technology:
-- dotnet-clr
-ms.topic: article
 f1_keywords:
 - http://schemas.microsoft.com/.NetConfiguration/v2.0#configuration/sectionName/remove
 helpviewer_keywords:
@@ -13,54 +9,51 @@ helpviewer_keywords:
 ms.assetid: 8d8af7f5-26c9-4db9-bbe4-b2a4e6949568
 author: guardrex
 ms.author: mairaw
-manager: wpickett
-ms.workload:
-- dotnet
-ms.openlocfilehash: 27b01120cb279dc23b3b081e35f17addc6d1897d
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.openlocfilehash: 61f1c98d3f12b5aa1d25595ca28328602683b073
+ms.sourcegitcommit: 11f11ca6cefe555972b3a5c99729d1a7523d8f50
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 05/03/2018
 ---
-# <a name="remove-element-for-namevaluesectionhandler-and-dictionarysectionhandler"></a><span data-ttu-id="f30fc-102">\<移除 > NameValueSectionHandler DictionarySectionHandler 的項目</span><span class="sxs-lookup"><span data-stu-id="f30fc-102">\<remove> element for NameValueSectionHandler and DictionarySectionHandler</span></span>
+# <a name="remove-element-for-namevaluesectionhandler-and-dictionarysectionhandler"></a><span data-ttu-id="73a4e-102">\<移除 > NameValueSectionHandler DictionarySectionHandler 的項目</span><span class="sxs-lookup"><span data-stu-id="73a4e-102">\<remove> element for NameValueSectionHandler and DictionarySectionHandler</span></span>
 
-<span data-ttu-id="f30fc-103">移除先前定義的設定。</span><span class="sxs-lookup"><span data-stu-id="f30fc-103">Removes a previously defined setting.</span></span>
+<span data-ttu-id="73a4e-103">移除先前定義的設定。</span><span class="sxs-lookup"><span data-stu-id="73a4e-103">Removes a previously defined setting.</span></span>
 
-<span data-ttu-id="f30fc-104">[**\<configuration>**](~/docs/framework/configure-apps/file-schema/configuration-element.md) </span><span class="sxs-lookup"><span data-stu-id="f30fc-104">[**\<configuration>**](~/docs/framework/configure-apps/file-schema/configuration-element.md) </span></span>  
-<span data-ttu-id="f30fc-105">&nbsp;&nbsp;[**\<sectionName >**](~/docs/framework/configure-apps/file-schema/custom-element-2.md) </span><span class="sxs-lookup"><span data-stu-id="f30fc-105">&nbsp;&nbsp;[**\<sectionName>**](~/docs/framework/configure-apps/file-schema/custom-element-2.md) </span></span>  
-<span data-ttu-id="f30fc-106">&nbsp;&nbsp;&nbsp;&nbsp;**\<移除 >**</span><span class="sxs-lookup"><span data-stu-id="f30fc-106">&nbsp;&nbsp;&nbsp;&nbsp;**\<remove>**</span></span>
+<span data-ttu-id="73a4e-104">[**\<configuration>**](~/docs/framework/configure-apps/file-schema/configuration-element.md) </span><span class="sxs-lookup"><span data-stu-id="73a4e-104">[**\<configuration>**](~/docs/framework/configure-apps/file-schema/configuration-element.md) </span></span>  
+<span data-ttu-id="73a4e-105">&nbsp;&nbsp;[**\<sectionName >**](~/docs/framework/configure-apps/file-schema/custom-element-2.md) </span><span class="sxs-lookup"><span data-stu-id="73a4e-105">&nbsp;&nbsp;[**\<sectionName>**](~/docs/framework/configure-apps/file-schema/custom-element-2.md) </span></span>  
+<span data-ttu-id="73a4e-106">&nbsp;&nbsp;&nbsp;&nbsp;**\<移除 >**</span><span class="sxs-lookup"><span data-stu-id="73a4e-106">&nbsp;&nbsp;&nbsp;&nbsp;**\<remove>**</span></span>
 
-## <a name="syntax"></a><span data-ttu-id="f30fc-107">語法</span><span class="sxs-lookup"><span data-stu-id="f30fc-107">Syntax</span></span>
+## <a name="syntax"></a><span data-ttu-id="73a4e-107">語法</span><span class="sxs-lookup"><span data-stu-id="73a4e-107">Syntax</span></span>
 
 ```xml
 <add remove="key" />
 ```
 
-## <a name="attribute"></a><span data-ttu-id="f30fc-108">屬性</span><span class="sxs-lookup"><span data-stu-id="f30fc-108">Attribute</span></span>
+## <a name="attribute"></a><span data-ttu-id="73a4e-108">屬性</span><span class="sxs-lookup"><span data-stu-id="73a4e-108">Attribute</span></span>
 
-|           | <span data-ttu-id="f30fc-109">描述</span><span class="sxs-lookup"><span data-stu-id="f30fc-109">Description</span></span> |
+|           | <span data-ttu-id="73a4e-109">描述</span><span class="sxs-lookup"><span data-stu-id="73a4e-109">Description</span></span> |
 | --------- | ----------- |
-| <span data-ttu-id="f30fc-110">**key**</span><span class="sxs-lookup"><span data-stu-id="f30fc-110">**key**</span></span>   | <span data-ttu-id="f30fc-111">必要屬性。</span><span class="sxs-lookup"><span data-stu-id="f30fc-111">Required attribute.</span></span><br><br><span data-ttu-id="f30fc-112">指定要移除之設定的名稱。</span><span class="sxs-lookup"><span data-stu-id="f30fc-112">Specifies the name of the setting to remove.</span></span> |
+| <span data-ttu-id="73a4e-110">**key**</span><span class="sxs-lookup"><span data-stu-id="73a4e-110">**key**</span></span>   | <span data-ttu-id="73a4e-111">必要屬性。</span><span class="sxs-lookup"><span data-stu-id="73a4e-111">Required attribute.</span></span><br><br><span data-ttu-id="73a4e-112">指定要移除之設定的名稱。</span><span class="sxs-lookup"><span data-stu-id="73a4e-112">Specifies the name of the setting to remove.</span></span> |
 
-## <a name="parent-element"></a><span data-ttu-id="f30fc-113">父項目</span><span class="sxs-lookup"><span data-stu-id="f30fc-113">Parent element</span></span>
+## <a name="parent-element"></a><span data-ttu-id="73a4e-113">父項目</span><span class="sxs-lookup"><span data-stu-id="73a4e-113">Parent element</span></span>
 
-| <span data-ttu-id="f30fc-114">元素</span><span class="sxs-lookup"><span data-stu-id="f30fc-114">Element</span></span> | <span data-ttu-id="f30fc-115">描述</span><span class="sxs-lookup"><span data-stu-id="f30fc-115">Description</span></span> |
+| <span data-ttu-id="73a4e-114">項目</span><span class="sxs-lookup"><span data-stu-id="73a4e-114">Element</span></span> | <span data-ttu-id="73a4e-115">描述</span><span class="sxs-lookup"><span data-stu-id="73a4e-115">Description</span></span> |
 | ------- | ------------|
-| [<span data-ttu-id="f30fc-116">**\<sectionName >**項目</span><span class="sxs-lookup"><span data-stu-id="f30fc-116">**\<sectionName>** Element</span></span>](~/docs/framework/configure-apps/file-schema/custom-element-2.md) | <span data-ttu-id="f30fc-117">定義自訂組態區段，使用設定<xref:System.Configuration.NameValueSectionHandler>和<xref:System.Configuration.DictionarySectionHandler>類別。</span><span class="sxs-lookup"><span data-stu-id="f30fc-117">Defines settings for custom configuration sections that use the <xref:System.Configuration.NameValueSectionHandler> and <xref:System.Configuration.DictionarySectionHandler> classes.</span></span> |
+| [<span data-ttu-id="73a4e-116">**\<sectionName >** 項目</span><span class="sxs-lookup"><span data-stu-id="73a4e-116">**\<sectionName>** Element</span></span>](~/docs/framework/configure-apps/file-schema/custom-element-2.md) | <span data-ttu-id="73a4e-117">定義自訂組態區段，使用設定<xref:System.Configuration.NameValueSectionHandler>和<xref:System.Configuration.DictionarySectionHandler>類別。</span><span class="sxs-lookup"><span data-stu-id="73a4e-117">Defines settings for custom configuration sections that use the <xref:System.Configuration.NameValueSectionHandler> and <xref:System.Configuration.DictionarySectionHandler> classes.</span></span> |
 
-## <a name="child-elements"></a><span data-ttu-id="f30fc-118">子元素</span><span class="sxs-lookup"><span data-stu-id="f30fc-118">Child elements</span></span>
+## <a name="child-elements"></a><span data-ttu-id="73a4e-118">子元素</span><span class="sxs-lookup"><span data-stu-id="73a4e-118">Child elements</span></span>
 
-<span data-ttu-id="f30fc-119">無</span><span class="sxs-lookup"><span data-stu-id="f30fc-119">None</span></span>
+<span data-ttu-id="73a4e-119">無</span><span class="sxs-lookup"><span data-stu-id="73a4e-119">None</span></span>
 
-## <a name="remarks"></a><span data-ttu-id="f30fc-120">備註</span><span class="sxs-lookup"><span data-stu-id="f30fc-120">Remarks</span></span>
+## <a name="remarks"></a><span data-ttu-id="73a4e-120">備註</span><span class="sxs-lookup"><span data-stu-id="73a4e-120">Remarks</span></span>
 
-<span data-ttu-id="f30fc-121">您可以使用**\<移除 >**項目移除您已在組態檔階層架構中較高層級定義的應用程式的設定。</span><span class="sxs-lookup"><span data-stu-id="f30fc-121">You can use the **\<remove>** element to remove settings from your application that were defined at a higher level in the configuration file hierarchy.</span></span>
+<span data-ttu-id="73a4e-121">您可以使用**\<移除 >** 項目移除您已在組態檔階層架構中較高層級定義的應用程式的設定。</span><span class="sxs-lookup"><span data-stu-id="73a4e-121">You can use the **\<remove>** element to remove settings from your application that were defined at a higher level in the configuration file hierarchy.</span></span>
 
-## <a name="example"></a><span data-ttu-id="f30fc-122">範例</span><span class="sxs-lookup"><span data-stu-id="f30fc-122">Example</span></span>
+## <a name="example"></a><span data-ttu-id="73a4e-122">範例</span><span class="sxs-lookup"><span data-stu-id="73a4e-122">Example</span></span>
 
-<span data-ttu-id="f30fc-123">下列範例示範如何使用**\<移除 >**應用程式組態檔中移除電腦組態檔中預先定義的設定項目。</span><span class="sxs-lookup"><span data-stu-id="f30fc-123">The following example shows how to use the **\<remove>** element in an application configuration file to remove settings previously defined in the machine configuration file.</span></span>
+<span data-ttu-id="73a4e-123">下列範例示範如何使用**\<移除 >** 應用程式組態檔中移除電腦組態檔中預先定義的設定項目。</span><span class="sxs-lookup"><span data-stu-id="73a4e-123">The following example shows how to use the **\<remove>** element in an application configuration file to remove settings previously defined in the machine configuration file.</span></span>
 
-<span data-ttu-id="f30fc-124">下列的機器組態檔案程式碼會宣告區段 **\<mySection >** ，並將兩項設定，`key1`和`key2`，它：</span><span class="sxs-lookup"><span data-stu-id="f30fc-124">The following machine configuration file code declares the section **\<mySection>** and adds two settings, `key1` and `key2`, to it:</span></span>
+<span data-ttu-id="73a4e-124">下列的機器組態檔案程式碼會宣告區段 **\<mySection >** ，並將兩項設定，`key1`和`key2`，它：</span><span class="sxs-lookup"><span data-stu-id="73a4e-124">The following machine configuration file code declares the section **\<mySection>** and adds two settings, `key1` and `key2`, to it:</span></span>
 
 ```xml
 <!-- Machine.config file -->
@@ -75,7 +68,7 @@ ms.lasthandoff: 12/22/2017
 </configuration>
 ```
 
-<span data-ttu-id="f30fc-125">下列應用程式組態檔程式碼會移除`key2`從設定 **\<mySection >**:</span><span class="sxs-lookup"><span data-stu-id="f30fc-125">The following application configuration file code removes the `key2` setting from **\<mySection>**:</span></span>
+<span data-ttu-id="73a4e-125">下列應用程式組態檔程式碼會移除`key2`從設定 **\<mySection >**:</span><span class="sxs-lookup"><span data-stu-id="73a4e-125">The following application configuration file code removes the `key2` setting from **\<mySection>**:</span></span>
 
 ```xml
 <!--Application configuration file -->
@@ -86,10 +79,10 @@ ms.lasthandoff: 12/22/2017
 </configuration>
 ```
 
-## <a name="configuration-file"></a><span data-ttu-id="f30fc-126">組態檔</span><span class="sxs-lookup"><span data-stu-id="f30fc-126">Configuration file</span></span>
+## <a name="configuration-file"></a><span data-ttu-id="73a4e-126">組態檔</span><span class="sxs-lookup"><span data-stu-id="73a4e-126">Configuration file</span></span>
 
-<span data-ttu-id="f30fc-127">此項目可以用於應用程式組態檔中，電腦組態檔 (*Machine.config*)，和*Web.config*不在應用程式目錄層級的檔案。</span><span class="sxs-lookup"><span data-stu-id="f30fc-127">This element can be used in the application configuration file, machine configuration file (*Machine.config*), and *Web.config* files that are not at the application directory level.</span></span>
+<span data-ttu-id="73a4e-127">此項目可以用於應用程式組態檔中，電腦組態檔 (*Machine.config*)，和*Web.config*不在應用程式目錄層級的檔案。</span><span class="sxs-lookup"><span data-stu-id="73a4e-127">This element can be used in the application configuration file, machine configuration file (*Machine.config*), and *Web.config* files that are not at the application directory level.</span></span>
 
-## <a name="see-also"></a><span data-ttu-id="f30fc-128">另請參閱</span><span class="sxs-lookup"><span data-stu-id="f30fc-128">See also</span></span>
+## <a name="see-also"></a><span data-ttu-id="73a4e-128">另請參閱</span><span class="sxs-lookup"><span data-stu-id="73a4e-128">See also</span></span>
 
-[<span data-ttu-id="f30fc-129">適用於.NET Framework 組態檔結構描述</span><span class="sxs-lookup"><span data-stu-id="f30fc-129">Configuration file schema for the .NET Framework</span></span>](~/docs/framework/configure-apps/file-schema/index.md)
+[<span data-ttu-id="73a4e-129">適用於.NET Framework 組態檔結構描述</span><span class="sxs-lookup"><span data-stu-id="73a4e-129">Configuration file schema for the .NET Framework</span></span>](~/docs/framework/configure-apps/file-schema/index.md)

@@ -1109,4 +1109,15 @@
 
 <!-- End of VB Content -->
 
+<!-- ML.NET Content -->
+# [ML.NET 指南](machine-learning/index.md)
+## [教學課程](machine-learning/tutorials/index.md)
+### [情感分析 (分類)](machine-learning/tutorials/sentiment-analysis.md)
+### [計程車車費預測工具 (迴歸)](machine-learning/tutorials/taxi-fare.md)
+## [資源](machine-learning/resources/index.md)
+### [機器學習服務字彙](machine-learning/resources/glossary.md)
+### [機器學習基本概念](machine-learning/resources/basics.md)
+
+<!-- End ML.NET Content -->
+
 # [範例和教學課程](samples-and-tutorials/index.md)

@@ -1,38 +1,26 @@
 ---
-title: "&lt;allowedAudienceUris&gt; 的 &lt;add&gt;"
-ms.custom: 
+title: '&lt;allowedAudienceUris&gt; 的 &lt;add&gt;'
 ms.date: 03/30/2017
-ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.technology: dotnet-clr
-ms.tgt_pltfrm: 
-ms.topic: article
 ms.assetid: 4e7b7637-e0ea-4a91-988f-6b6ef28d9fc3
-caps.latest.revision: "6"
-author: dotnet-bot
-ms.author: dotnetcontent
-manager: wpickett
-ms.workload: dotnet
-ms.openlocfilehash: 8b10a0ef5718197464ffa40126f0a013d82256dc
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.openlocfilehash: cfd18d6af5248e680b9520069fb34c412ee12b3f
+ms.sourcegitcommit: 11f11ca6cefe555972b3a5c99729d1a7523d8f50
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 05/03/2018
 ---
-# <a name="ltaddgt-of-ltallowedaudienceurisgt"></a><span data-ttu-id="26763-102">&lt;allowedAudienceUris&gt; 的 &lt;add&gt;</span><span class="sxs-lookup"><span data-stu-id="26763-102">&lt;add&gt; of &lt;allowedAudienceUris&gt;</span></span>
-<span data-ttu-id="26763-103">加入目標 URI，<xref:System.IdentityModel.Tokens.SamlSecurityToken> 安全性權杖會以其為目標，這樣 <xref:System.IdentityModel.Selectors.SamlSecurityTokenAuthenticator> 執行個體才會將其視為有效。</span><span class="sxs-lookup"><span data-stu-id="26763-103">Adds a target Uri for which the <xref:System.IdentityModel.Tokens.SamlSecurityToken> security token can be targeted for in order to be considered valid by a <xref:System.IdentityModel.Selectors.SamlSecurityTokenAuthenticator> instance.</span></span>  
+# <a name="ltaddgt-of-ltallowedaudienceurisgt"></a><span data-ttu-id="8e03a-102">&lt;allowedAudienceUris&gt; 的 &lt;add&gt;</span><span class="sxs-lookup"><span data-stu-id="8e03a-102">&lt;add&gt; of &lt;allowedAudienceUris&gt;</span></span>
+<span data-ttu-id="8e03a-103">加入目標 URI，<xref:System.IdentityModel.Tokens.SamlSecurityToken> 安全性權杖會以其為目標，這樣 <xref:System.IdentityModel.Selectors.SamlSecurityTokenAuthenticator> 執行個體才會將其視為有效。</span><span class="sxs-lookup"><span data-stu-id="8e03a-103">Adds a target Uri for which the <xref:System.IdentityModel.Tokens.SamlSecurityToken> security token can be targeted for in order to be considered valid by a <xref:System.IdentityModel.Selectors.SamlSecurityTokenAuthenticator> instance.</span></span>  
   
- <span data-ttu-id="26763-104">\<系統。ServiceModel ></span><span class="sxs-lookup"><span data-stu-id="26763-104">\<system.ServiceModel></span></span>  
-<span data-ttu-id="26763-105">\<行為 ></span><span class="sxs-lookup"><span data-stu-id="26763-105">\<behaviors></span></span>  
-<span data-ttu-id="26763-106">\<serviceBehaviors ></span><span class="sxs-lookup"><span data-stu-id="26763-106">\<serviceBehaviors></span></span>  
-<span data-ttu-id="26763-107">\<行為 ></span><span class="sxs-lookup"><span data-stu-id="26763-107">\<behavior></span></span>  
-<span data-ttu-id="26763-108">\<serviceCredentials ></span><span class="sxs-lookup"><span data-stu-id="26763-108">\<serviceCredentials></span></span>  
-<span data-ttu-id="26763-109">\<issuedTokenAuthentication ></span><span class="sxs-lookup"><span data-stu-id="26763-109">\<issuedTokenAuthentication></span></span>  
-<span data-ttu-id="26763-110">\<a d d ></span><span class="sxs-lookup"><span data-stu-id="26763-110">\<allowedAudienceUris></span></span>  
-<span data-ttu-id="26763-111">\<新增 > 項目\<a d d ></span><span class="sxs-lookup"><span data-stu-id="26763-111">\<add> element for \<allowedAudienceUris></span></span>  
+ <span data-ttu-id="8e03a-104">\<system.ServiceModel></span><span class="sxs-lookup"><span data-stu-id="8e03a-104">\<system.ServiceModel></span></span>  
+<span data-ttu-id="8e03a-105">\<行為 ></span><span class="sxs-lookup"><span data-stu-id="8e03a-105">\<behaviors></span></span>  
+<span data-ttu-id="8e03a-106">\<serviceBehaviors></span><span class="sxs-lookup"><span data-stu-id="8e03a-106">\<serviceBehaviors></span></span>  
+<span data-ttu-id="8e03a-107">\<行為 ></span><span class="sxs-lookup"><span data-stu-id="8e03a-107">\<behavior></span></span>  
+<span data-ttu-id="8e03a-108">\<serviceCredentials></span><span class="sxs-lookup"><span data-stu-id="8e03a-108">\<serviceCredentials></span></span>  
+<span data-ttu-id="8e03a-109">\<issuedTokenAuthentication ></span><span class="sxs-lookup"><span data-stu-id="8e03a-109">\<issuedTokenAuthentication></span></span>  
+<span data-ttu-id="8e03a-110">\<a d d ></span><span class="sxs-lookup"><span data-stu-id="8e03a-110">\<allowedAudienceUris></span></span>  
+<span data-ttu-id="8e03a-111">\<新增 > 項目\<a d d ></span><span class="sxs-lookup"><span data-stu-id="8e03a-111">\<add> element for \<allowedAudienceUris></span></span>  
   
-## <a name="syntax"></a><span data-ttu-id="26763-112">語法</span><span class="sxs-lookup"><span data-stu-id="26763-112">Syntax</span></span>  
+## <a name="syntax"></a><span data-ttu-id="8e03a-112">語法</span><span class="sxs-lookup"><span data-stu-id="8e03a-112">Syntax</span></span>  
   
 ```xml  
 <allowedAudienceUris>   
@@ -40,36 +28,36 @@ ms.lasthandoff: 12/22/2017
 </allowedAudienceUris>  
 ```  
   
-## <a name="attributes-and-elements"></a><span data-ttu-id="26763-113">屬性和項目</span><span class="sxs-lookup"><span data-stu-id="26763-113">Attributes and Elements</span></span>  
- <span data-ttu-id="26763-114">下列章節說明屬性、子項目和父項目。</span><span class="sxs-lookup"><span data-stu-id="26763-114">The following sections describe attributes, child elements, and parent elements.</span></span>  
+## <a name="attributes-and-elements"></a><span data-ttu-id="8e03a-113">屬性和項目</span><span class="sxs-lookup"><span data-stu-id="8e03a-113">Attributes and Elements</span></span>  
+ <span data-ttu-id="8e03a-114">下列各節描述屬性、子項目和父項目。</span><span class="sxs-lookup"><span data-stu-id="8e03a-114">The following sections describe attributes, child elements, and parent elements.</span></span>  
   
-### <a name="attributes"></a><span data-ttu-id="26763-115">屬性</span><span class="sxs-lookup"><span data-stu-id="26763-115">Attributes</span></span>  
+### <a name="attributes"></a><span data-ttu-id="8e03a-115">屬性</span><span class="sxs-lookup"><span data-stu-id="8e03a-115">Attributes</span></span>  
   
-|<span data-ttu-id="26763-116">屬性</span><span class="sxs-lookup"><span data-stu-id="26763-116">Attribute</span></span>|<span data-ttu-id="26763-117">描述</span><span class="sxs-lookup"><span data-stu-id="26763-117">Description</span></span>|  
+|<span data-ttu-id="8e03a-116">屬性</span><span class="sxs-lookup"><span data-stu-id="8e03a-116">Attribute</span></span>|<span data-ttu-id="8e03a-117">描述</span><span class="sxs-lookup"><span data-stu-id="8e03a-117">Description</span></span>|  
 |---------------|-----------------|  
-|<span data-ttu-id="26763-118">allowedAudienceUri</span><span class="sxs-lookup"><span data-stu-id="26763-118">allowedAudienceUri</span></span>|<span data-ttu-id="26763-119">包含目標 URI 的字串，<xref:System.IdentityModel.Tokens.SamlSecurityToken> 安全性權杖會以該目標 URI 為目標，這樣 <xref:System.IdentityModel.Selectors.SamlSecurityTokenAuthenticator> 執行個體才會將其視為有效。</span><span class="sxs-lookup"><span data-stu-id="26763-119">A string that contains a target Uri for which the <xref:System.IdentityModel.Tokens.SamlSecurityToken> security token can be targeted for in order to be considered valid by a <xref:System.IdentityModel.Selectors.SamlSecurityTokenAuthenticator> instance.</span></span>|  
+|<span data-ttu-id="8e03a-118">allowedAudienceUri</span><span class="sxs-lookup"><span data-stu-id="8e03a-118">allowedAudienceUri</span></span>|<span data-ttu-id="8e03a-119">包含目標 URI 的字串，<xref:System.IdentityModel.Tokens.SamlSecurityToken> 安全性權杖會以該目標 URI 為目標，這樣 <xref:System.IdentityModel.Selectors.SamlSecurityTokenAuthenticator> 執行個體才會將其視為有效。</span><span class="sxs-lookup"><span data-stu-id="8e03a-119">A string that contains a target Uri for which the <xref:System.IdentityModel.Tokens.SamlSecurityToken> security token can be targeted for in order to be considered valid by a <xref:System.IdentityModel.Selectors.SamlSecurityTokenAuthenticator> instance.</span></span>|  
   
-### <a name="child-elements"></a><span data-ttu-id="26763-120">子元素</span><span class="sxs-lookup"><span data-stu-id="26763-120">Child Elements</span></span>  
- <span data-ttu-id="26763-121">無。</span><span class="sxs-lookup"><span data-stu-id="26763-121">None.</span></span>  
+### <a name="child-elements"></a><span data-ttu-id="8e03a-120">子項目</span><span class="sxs-lookup"><span data-stu-id="8e03a-120">Child Elements</span></span>  
+ <span data-ttu-id="8e03a-121">無。</span><span class="sxs-lookup"><span data-stu-id="8e03a-121">None.</span></span>  
   
-### <a name="parent-elements"></a><span data-ttu-id="26763-122">父項目</span><span class="sxs-lookup"><span data-stu-id="26763-122">Parent Elements</span></span>  
+### <a name="parent-elements"></a><span data-ttu-id="8e03a-122">父項目</span><span class="sxs-lookup"><span data-stu-id="8e03a-122">Parent Elements</span></span>  
   
-|<span data-ttu-id="26763-123">項目</span><span class="sxs-lookup"><span data-stu-id="26763-123">Element</span></span>|<span data-ttu-id="26763-124">描述</span><span class="sxs-lookup"><span data-stu-id="26763-124">Description</span></span>|  
+|<span data-ttu-id="8e03a-123">項目</span><span class="sxs-lookup"><span data-stu-id="8e03a-123">Element</span></span>|<span data-ttu-id="8e03a-124">描述</span><span class="sxs-lookup"><span data-stu-id="8e03a-124">Description</span></span>|  
 |-------------|-----------------|  
-|[<span data-ttu-id="26763-125">\<a d d ></span><span class="sxs-lookup"><span data-stu-id="26763-125">\<allowedAudienceUris></span></span>](../../../../../docs/framework/configure-apps/file-schema/wcf/allowedaudienceuris.md)|<span data-ttu-id="26763-126">表示目標 URI 的集合，<xref:System.IdentityModel.Tokens.SamlSecurityToken> 安全性權杖會以其為目標，這樣 <xref:System.IdentityModel.Selectors.SamlSecurityTokenAuthenticator> 執行個體才會將其視為有效。</span><span class="sxs-lookup"><span data-stu-id="26763-126">Represents a collection of target URIs for which the <xref:System.IdentityModel.Tokens.SamlSecurityToken> security token can be targeted for in order to be considered valid by a <xref:System.IdentityModel.Selectors.SamlSecurityTokenAuthenticator> instance.</span></span>|  
+|[<span data-ttu-id="8e03a-125">\<a d d ></span><span class="sxs-lookup"><span data-stu-id="8e03a-125">\<allowedAudienceUris></span></span>](../../../../../docs/framework/configure-apps/file-schema/wcf/allowedaudienceuris.md)|<span data-ttu-id="8e03a-126">表示目標 URI 的集合，<xref:System.IdentityModel.Tokens.SamlSecurityToken> 安全性權杖會以其為目標，這樣 <xref:System.IdentityModel.Selectors.SamlSecurityTokenAuthenticator> 執行個體才會將其視為有效。</span><span class="sxs-lookup"><span data-stu-id="8e03a-126">Represents a collection of target URIs for which the <xref:System.IdentityModel.Tokens.SamlSecurityToken> security token can be targeted for in order to be considered valid by a <xref:System.IdentityModel.Selectors.SamlSecurityTokenAuthenticator> instance.</span></span>|  
   
-## <a name="remarks"></a><span data-ttu-id="26763-127">備註</span><span class="sxs-lookup"><span data-stu-id="26763-127">Remarks</span></span>  
- <span data-ttu-id="26763-128">您應該在利用會發行 <xref:System.IdentityModel.Tokens.SamlSecurityToken> 安全性權杖之安全權杖服務 (Security Token Service，STS) 的聯合應用程式中使用這個集合。</span><span class="sxs-lookup"><span data-stu-id="26763-128">You should use this collection in a federated application that utilizes a security token service (STS) that issues <xref:System.IdentityModel.Tokens.SamlSecurityToken> security tokens.</span></span> <span data-ttu-id="26763-129">當 STS 發出安全性權杖時，它可以將 <xref:System.IdentityModel.Tokens.SamlAudienceRestrictionCondition> 加入至安全性權杖中，以便指定此安全性權杖適用之 Web 服務的 URI。</span><span class="sxs-lookup"><span data-stu-id="26763-129">When the STS issues the security token, it can specify the URI of the Web services for which the security token is intended by adding a <xref:System.IdentityModel.Tokens.SamlAudienceRestrictionCondition> to the security token.</span></span> <span data-ttu-id="26763-130">如此便可讓接收端 Web 服務的 <xref:System.IdentityModel.Selectors.SamlSecurityTokenAuthenticator> 驗證發出的安全性權杖是否適用於此 Web 服務，而驗證的方法則是指定這項檢查應該透過執行下列動作來進行：</span><span class="sxs-lookup"><span data-stu-id="26763-130">That allows the <xref:System.IdentityModel.Selectors.SamlSecurityTokenAuthenticator> for the recipient Web service to verify that the issued security token is intended for this Web service by specifying that this check should happen by doing the following:</span></span>  
+## <a name="remarks"></a><span data-ttu-id="8e03a-127">備註</span><span class="sxs-lookup"><span data-stu-id="8e03a-127">Remarks</span></span>  
+ <span data-ttu-id="8e03a-128">您應該在利用會發行 <xref:System.IdentityModel.Tokens.SamlSecurityToken> 安全性權杖之安全權杖服務 (Security Token Service，STS) 的聯合應用程式中使用這個集合。</span><span class="sxs-lookup"><span data-stu-id="8e03a-128">You should use this collection in a federated application that utilizes a security token service (STS) that issues <xref:System.IdentityModel.Tokens.SamlSecurityToken> security tokens.</span></span> <span data-ttu-id="8e03a-129">當 STS 發出安全性權杖時，它可以將 <xref:System.IdentityModel.Tokens.SamlAudienceRestrictionCondition> 加入至安全性權杖中，以便指定此安全性權杖適用之 Web 服務的 URI。</span><span class="sxs-lookup"><span data-stu-id="8e03a-129">When the STS issues the security token, it can specify the URI of the Web services for which the security token is intended by adding a <xref:System.IdentityModel.Tokens.SamlAudienceRestrictionCondition> to the security token.</span></span> <span data-ttu-id="8e03a-130">如此便可讓接收端 Web 服務的 <xref:System.IdentityModel.Selectors.SamlSecurityTokenAuthenticator> 驗證發出的安全性權杖是否適用於此 Web 服務，而驗證的方法則是指定這項檢查應該透過執行下列動作來進行：</span><span class="sxs-lookup"><span data-stu-id="8e03a-130">That allows the <xref:System.IdentityModel.Selectors.SamlSecurityTokenAuthenticator> for the recipient Web service to verify that the issued security token is intended for this Web service by specifying that this check should happen by doing the following:</span></span>  
   
--   <span data-ttu-id="26763-131">將 `audienceUriMode` 的 `<issuedTokenAuthentication>` 屬性設定為 <xref:System.IdentityModel.Selectors.AudienceUriMode.Always> 或 <xref:System.IdentityModel.Selectors.AudienceUriMode.BearerKeyOnly>。</span><span class="sxs-lookup"><span data-stu-id="26763-131">Set the `audienceUriMode` attribute of `<issuedTokenAuthentication>` to <xref:System.IdentityModel.Selectors.AudienceUriMode.Always> or <xref:System.IdentityModel.Selectors.AudienceUriMode.BearerKeyOnly>.</span></span>  
+-   <span data-ttu-id="8e03a-131">將 `audienceUriMode` 的 `<issuedTokenAuthentication>` 屬性設定為 <xref:System.IdentityModel.Selectors.AudienceUriMode.Always> 或 <xref:System.IdentityModel.Selectors.AudienceUriMode.BearerKeyOnly>。</span><span class="sxs-lookup"><span data-stu-id="8e03a-131">Set the `audienceUriMode` attribute of `<issuedTokenAuthentication>` to <xref:System.IdentityModel.Selectors.AudienceUriMode.Always> or <xref:System.IdentityModel.Selectors.AudienceUriMode.BearerKeyOnly>.</span></span>  
   
--   <span data-ttu-id="26763-132">將 URI 加入此集合，以指定有效的 URI 集合。</span><span class="sxs-lookup"><span data-stu-id="26763-132">Specify the set of valid URIs, by adding the URIs to this collection.</span></span>  
+-   <span data-ttu-id="8e03a-132">將 URI 加入此集合，以指定有效的 URI 集合。</span><span class="sxs-lookup"><span data-stu-id="8e03a-132">Specify the set of valid URIs, by adding the URIs to this collection.</span></span>  
   
- <span data-ttu-id="26763-133">如需詳細資訊，請參閱<xref:System.IdentityModel.Selectors.SamlSecurityTokenAuthenticator>。</span><span class="sxs-lookup"><span data-stu-id="26763-133">For more information, see <xref:System.IdentityModel.Selectors.SamlSecurityTokenAuthenticator>.</span></span>  
+ <span data-ttu-id="8e03a-133">如需詳細資訊，請參閱<xref:System.IdentityModel.Selectors.SamlSecurityTokenAuthenticator>。</span><span class="sxs-lookup"><span data-stu-id="8e03a-133">For more information, see <xref:System.IdentityModel.Selectors.SamlSecurityTokenAuthenticator>.</span></span>  
   
- <span data-ttu-id="26763-134">如需有關如何使用這個組態項目的詳細資訊，請參閱[How to： 設定聯合服務的認證](../../../../../docs/framework/wcf/feature-details/how-to-configure-credentials-on-a-federation-service.md)。</span><span class="sxs-lookup"><span data-stu-id="26763-134">For more information on using this configuration element, see [How to: Configure Credentials on a Federation Service](../../../../../docs/framework/wcf/feature-details/how-to-configure-credentials-on-a-federation-service.md).</span></span>  
+ <span data-ttu-id="8e03a-134">如需有關如何使用這個組態項目的詳細資訊，請參閱[How to： 設定聯合服務的認證](../../../../../docs/framework/wcf/feature-details/how-to-configure-credentials-on-a-federation-service.md)。</span><span class="sxs-lookup"><span data-stu-id="8e03a-134">For more information on using this configuration element, see [How to: Configure Credentials on a Federation Service](../../../../../docs/framework/wcf/feature-details/how-to-configure-credentials-on-a-federation-service.md).</span></span>  
   
-## <a name="see-also"></a><span data-ttu-id="26763-135">請參閱</span><span class="sxs-lookup"><span data-stu-id="26763-135">See Also</span></span>  
+## <a name="see-also"></a><span data-ttu-id="8e03a-135">另請參閱</span><span class="sxs-lookup"><span data-stu-id="8e03a-135">See Also</span></span>  
  <xref:System.IdentityModel.Selectors.SamlSecurityTokenAuthenticator>  
  <xref:System.IdentityModel.Selectors.SamlSecurityTokenAuthenticator.AllowedAudienceUris%2A>  
  <xref:System.IdentityModel.Selectors.SamlSecurityTokenAuthenticator.AudienceUriMode%2A>  
@@ -77,8 +65,8 @@ ms.lasthandoff: 12/22/2017
  <xref:System.ServiceModel.Configuration.AllowedAudienceUriElementCollection>  
  <xref:System.ServiceModel.Configuration.AllowedAudienceUriElement>  
  <xref:System.ServiceModel.Security.IssuedTokenServiceCredential.AllowedAudienceUris%2A>  
- [<span data-ttu-id="26763-136">\<a d d ></span><span class="sxs-lookup"><span data-stu-id="26763-136">\<allowedAudienceUris></span></span>](../../../../../docs/framework/configure-apps/file-schema/wcf/allowedaudienceuris.md)  
- [<span data-ttu-id="26763-137">\<issuedTokenAuthentication ></span><span class="sxs-lookup"><span data-stu-id="26763-137">\<issuedTokenAuthentication></span></span>](../../../../../docs/framework/configure-apps/file-schema/wcf/issuedtokenauthentication-of-servicecredentials.md)  
- [<span data-ttu-id="26763-138">安全性行為</span><span class="sxs-lookup"><span data-stu-id="26763-138">Security Behaviors</span></span>](../../../../../docs/framework/wcf/feature-details/security-behaviors-in-wcf.md)  
- [<span data-ttu-id="26763-139">保護服務和用戶端的安全</span><span class="sxs-lookup"><span data-stu-id="26763-139">Securing Services and Clients</span></span>](../../../../../docs/framework/wcf/feature-details/securing-services-and-clients.md)  
- [<span data-ttu-id="26763-140">如何：設定同盟服務的認證</span><span class="sxs-lookup"><span data-stu-id="26763-140">How to: Configure Credentials on a Federation Service</span></span>](../../../../../docs/framework/wcf/feature-details/how-to-configure-credentials-on-a-federation-service.md)
+ [<span data-ttu-id="8e03a-136">\<a d d ></span><span class="sxs-lookup"><span data-stu-id="8e03a-136">\<allowedAudienceUris></span></span>](../../../../../docs/framework/configure-apps/file-schema/wcf/allowedaudienceuris.md)  
+ [<span data-ttu-id="8e03a-137">\<issuedTokenAuthentication ></span><span class="sxs-lookup"><span data-stu-id="8e03a-137">\<issuedTokenAuthentication></span></span>](../../../../../docs/framework/configure-apps/file-schema/wcf/issuedtokenauthentication-of-servicecredentials.md)  
+ [<span data-ttu-id="8e03a-138">安全性行為</span><span class="sxs-lookup"><span data-stu-id="8e03a-138">Security Behaviors</span></span>](../../../../../docs/framework/wcf/feature-details/security-behaviors-in-wcf.md)  
+ [<span data-ttu-id="8e03a-139">保護服務和用戶端的安全</span><span class="sxs-lookup"><span data-stu-id="8e03a-139">Securing Services and Clients</span></span>](../../../../../docs/framework/wcf/feature-details/securing-services-and-clients.md)  
+ [<span data-ttu-id="8e03a-140">如何：設定同盟服務的認證</span><span class="sxs-lookup"><span data-stu-id="8e03a-140">How to: Configure Credentials on a Federation Service</span></span>](../../../../../docs/framework/wcf/feature-details/how-to-configure-credentials-on-a-federation-service.md)

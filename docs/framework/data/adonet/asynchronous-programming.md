@@ -1,29 +1,19 @@
 ---
 title: 非同步程式設計
 ms.date: 03/30/2017
-ms.prod: .net-framework
-ms.technology:
-- dotnet-ado
-ms.topic: article
 ms.assetid: 85da7447-7125-426e-aa5f-438a290d1f77
-caps.latest.revision: 30
-author: douglaslMS
-ms.author: douglasl
-manager: craigg
-ms.workload:
-- dotnet
-ms.openlocfilehash: 7dbc106b96e4e695108b6178951e3d43078467bc
-ms.sourcegitcommit: 86adcc06e35390f13c1e372c36d2e044f1fc31ef
+ms.openlocfilehash: 29324a07ffdaf99d1b7631ad8e94e773ed509fcc
+ms.sourcegitcommit: 11f11ca6cefe555972b3a5c99729d1a7523d8f50
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/26/2018
+ms.lasthandoff: 05/03/2018
 ---
-# <a name="asynchronous-programming"></a><span data-ttu-id="d3122-102">非同步程式設計</span><span class="sxs-lookup"><span data-stu-id="d3122-102">Asynchronous Programming</span></span>
+# <a name="asynchronous-programming"></a><span data-ttu-id="ce5b4-102">非同步程式設計</span><span class="sxs-lookup"><span data-stu-id="ce5b4-102">Asynchronous Programming</span></span>
 
-<span data-ttu-id="d3122-103">本主題討論中非同步程式設計的支援[!INCLUDE[dnprdnshort](../../../../includes/dnprdnshort-md.md)]包括可支援非同步程式設計功能而引進的增強功能的 Data Provider for SQL Server (SqlClient) [!INCLUDE[net_v45](../../../../includes/net-v45-md.md)]。</span><span class="sxs-lookup"><span data-stu-id="d3122-103">This topic discusses support for asynchronous programming in the [!INCLUDE[dnprdnshort](../../../../includes/dnprdnshort-md.md)] Data Provider for SQL Server (SqlClient) including enhancements made to support asynchronous programming functionality that was introduced in [!INCLUDE[net_v45](../../../../includes/net-v45-md.md)].</span></span>  
+<span data-ttu-id="ce5b4-103">本主題討論中非同步程式設計的支援[!INCLUDE[dnprdnshort](../../../../includes/dnprdnshort-md.md)]包括可支援非同步程式設計功能而引進的增強功能的 Data Provider for SQL Server (SqlClient) [!INCLUDE[net_v45](../../../../includes/net-v45-md.md)]。</span><span class="sxs-lookup"><span data-stu-id="ce5b4-103">This topic discusses support for asynchronous programming in the [!INCLUDE[dnprdnshort](../../../../includes/dnprdnshort-md.md)] Data Provider for SQL Server (SqlClient) including enhancements made to support asynchronous programming functionality that was introduced in [!INCLUDE[net_v45](../../../../includes/net-v45-md.md)].</span></span>  
   
-## <a name="legacy-asynchronous-programming"></a><span data-ttu-id="d3122-104">傳統非同步程式設計</span><span class="sxs-lookup"><span data-stu-id="d3122-104">Legacy Asynchronous Programming</span></span>  
- <span data-ttu-id="d3122-105">在 [!INCLUDE[net_v45](../../../../includes/net-v45-md.md)] 之前，是使用下列方法和 `Asynchronous Processing=true` 連接屬性完成 SqlClient 非同步程式設計：</span><span class="sxs-lookup"><span data-stu-id="d3122-105">Prior to [!INCLUDE[net_v45](../../../../includes/net-v45-md.md)], asynchronous programming with SqlClient was done with the following methods and the `Asynchronous Processing=true` connection property:</span></span>  
+## <a name="legacy-asynchronous-programming"></a><span data-ttu-id="ce5b4-104">傳統非同步程式設計</span><span class="sxs-lookup"><span data-stu-id="ce5b4-104">Legacy Asynchronous Programming</span></span>  
+ <span data-ttu-id="ce5b4-105">在 [!INCLUDE[net_v45](../../../../includes/net-v45-md.md)] 之前，是使用下列方法和 `Asynchronous Processing=true` 連接屬性完成 SqlClient 非同步程式設計：</span><span class="sxs-lookup"><span data-stu-id="ce5b4-105">Prior to [!INCLUDE[net_v45](../../../../includes/net-v45-md.md)], asynchronous programming with SqlClient was done with the following methods and the `Asynchronous Processing=true` connection property:</span></span>  
   
 1.  <xref:System.Data.SqlClient.SqlCommand.BeginExecuteNonQuery%2A?displayProperty=nameWithType>  
   
@@ -31,35 +21,35 @@ ms.lasthandoff: 04/26/2018
   
 3.  <xref:System.Data.SqlClient.SqlCommand.BeginExecuteXmlReader%2A?displayProperty=nameWithType>  
   
- <span data-ttu-id="d3122-106">[!INCLUDE[net_v45](../../../../includes/net-v45-md.md)] 中的 SqlClient 仍保留此功能。</span><span class="sxs-lookup"><span data-stu-id="d3122-106">This functionality remains in SqlClient in [!INCLUDE[net_v45](../../../../includes/net-v45-md.md)].</span></span>  
+ <span data-ttu-id="ce5b4-106">[!INCLUDE[net_v45](../../../../includes/net-v45-md.md)] 中的 SqlClient 仍保留此功能。</span><span class="sxs-lookup"><span data-stu-id="ce5b4-106">This functionality remains in SqlClient in [!INCLUDE[net_v45](../../../../includes/net-v45-md.md)].</span></span>  
   
- <span data-ttu-id="d3122-107">從 [!INCLUDE[net_v45](../../../../includes/net-v45-md.md)] 開始，這些方法不再需要連接字串中的 `Asynchronous Processing=true`。</span><span class="sxs-lookup"><span data-stu-id="d3122-107">Beginning in the [!INCLUDE[net_v45](../../../../includes/net-v45-md.md)], these methods no longer require `Asynchronous Processing=true` in the connection string.</span></span>  
+ <span data-ttu-id="ce5b4-107">從 [!INCLUDE[net_v45](../../../../includes/net-v45-md.md)] 開始，這些方法不再需要連接字串中的 `Asynchronous Processing=true`。</span><span class="sxs-lookup"><span data-stu-id="ce5b4-107">Beginning in the [!INCLUDE[net_v45](../../../../includes/net-v45-md.md)], these methods no longer require `Asynchronous Processing=true` in the connection string.</span></span>  
   
-## <a name="asynchronous-programming-features-added-in-includenetv45includesnet-v45-mdmd"></a><span data-ttu-id="d3122-108">在 [!INCLUDE[net_v45](../../../../includes/net-v45-md.md)] 中新增的非同步程式設計功能</span><span class="sxs-lookup"><span data-stu-id="d3122-108">Asynchronous Programming Features Added in [!INCLUDE[net_v45](../../../../includes/net-v45-md.md)]</span></span>  
- <span data-ttu-id="d3122-109">新的非同步程式設計功能提供了一些簡單的技巧，可以使程式碼非同步。</span><span class="sxs-lookup"><span data-stu-id="d3122-109">The new asynchronous programming feature provides a simple technique to make code asynchronous.</span></span>  
+## <a name="asynchronous-programming-features-added-in-includenetv45includesnet-v45-mdmd"></a><span data-ttu-id="ce5b4-108">在 [!INCLUDE[net_v45](../../../../includes/net-v45-md.md)] 中新增的非同步程式設計功能</span><span class="sxs-lookup"><span data-stu-id="ce5b4-108">Asynchronous Programming Features Added in [!INCLUDE[net_v45](../../../../includes/net-v45-md.md)]</span></span>  
+ <span data-ttu-id="ce5b4-109">新的非同步程式設計功能提供了一些簡單的技巧，可以使程式碼非同步。</span><span class="sxs-lookup"><span data-stu-id="ce5b4-109">The new asynchronous programming feature provides a simple technique to make code asynchronous.</span></span>  
   
- <span data-ttu-id="d3122-110">如需 [!INCLUDE[net_v45](../../../../includes/net-v45-md.md)] 中引進的非同步程式設計功能詳細資訊，請參閱：</span><span class="sxs-lookup"><span data-stu-id="d3122-110">For more information about the asynchronous programming feature that was introduced in [!INCLUDE[net_v45](../../../../includes/net-v45-md.md)], see:</span></span>  
+ <span data-ttu-id="ce5b4-110">如需 [!INCLUDE[net_v45](../../../../includes/net-v45-md.md)] 中引進的非同步程式設計功能詳細資訊，請參閱：</span><span class="sxs-lookup"><span data-stu-id="ce5b4-110">For more information about the asynchronous programming feature that was introduced in [!INCLUDE[net_v45](../../../../includes/net-v45-md.md)], see:</span></span>  
   
-- [<span data-ttu-id="d3122-111">在 C# 中的非同步程式設計</span><span class="sxs-lookup"><span data-stu-id="d3122-111">Asynchronous programming in C#</span></span>](../../../csharp/async.md)
+- [<span data-ttu-id="ce5b4-111">在 C# 中的非同步程式設計</span><span class="sxs-lookup"><span data-stu-id="ce5b4-111">Asynchronous programming in C#</span></span>](../../../csharp/async.md)
 
-- [<span data-ttu-id="d3122-112">使用 Async 和 Await 進行非同步程式設計 (Visual Basic)</span><span class="sxs-lookup"><span data-stu-id="d3122-112">Asynchronous Programming with Async and Await (Visual Basic)</span></span>](../../../visual-basic/programming-guide/concepts/async/index.md)
+- [<span data-ttu-id="ce5b4-112">使用 Async 和 Await 進行非同步程式設計 (Visual Basic)</span><span class="sxs-lookup"><span data-stu-id="ce5b4-112">Asynchronous Programming with Async and Await (Visual Basic)</span></span>](../../../visual-basic/programming-guide/concepts/async/index.md)
 
-- [<span data-ttu-id="d3122-113">.Net 4.5 (第 1 部分) 中使用 SqlDataReader 的新非同步方法</span><span class="sxs-lookup"><span data-stu-id="d3122-113">Using SqlDataReader’s new async methods in .Net 4.5 (Part 1)</span></span>](https://blogs.msdn.microsoft.com/adonet/2012/04/20/using-sqldatareaders-new-async-methods-in-net-4-5/)
+- [<span data-ttu-id="ce5b4-113">.Net 4.5 (第 1 部分) 中使用 SqlDataReader 的新非同步方法</span><span class="sxs-lookup"><span data-stu-id="ce5b4-113">Using SqlDataReader’s new async methods in .Net 4.5 (Part 1)</span></span>](https://blogs.msdn.microsoft.com/adonet/2012/04/20/using-sqldatareaders-new-async-methods-in-net-4-5/)
 
-- [<span data-ttu-id="d3122-114">.Net 4.5 (第 2 部分) 中使用 SqlDataReader 的新非同步方法</span><span class="sxs-lookup"><span data-stu-id="d3122-114">Using SqlDataReader’s new async methods in .Net 4.5 (Part 2)</span></span>](https://blogs.msdn.microsoft.com/adonet/2012/07/15/using-sqldatareaders-new-async-methods-in-net-4-5-part-2-examples/)
+- [<span data-ttu-id="ce5b4-114">.Net 4.5 (第 2 部分) 中使用 SqlDataReader 的新非同步方法</span><span class="sxs-lookup"><span data-stu-id="ce5b4-114">Using SqlDataReader’s new async methods in .Net 4.5 (Part 2)</span></span>](https://blogs.msdn.microsoft.com/adonet/2012/07/15/using-sqldatareaders-new-async-methods-in-net-4-5-part-2-examples/)
  
- <span data-ttu-id="d3122-115">當您的使用者介面沒有回應或不能擴充伺服器時，您可能就需要使程式碼更加非同步。</span><span class="sxs-lookup"><span data-stu-id="d3122-115">When your user interface is unresponsive or your server does not scale, it is likely that you need your code to be more asynchronous.</span></span>  <span data-ttu-id="d3122-116">傳統的非同步程式碼編寫涉及安裝回呼 (也稱為接續)，以表示非同步作業完成後發生的邏輯。</span><span class="sxs-lookup"><span data-stu-id="d3122-116">Writing asynchronous code has traditionally involved installing a callback (also called continuation) to express the logic that occurs after the asynchronous operation finishes.</span></span> <span data-ttu-id="d3122-117">這會使非同步程式碼的結構比同步程式碼更複雜。</span><span class="sxs-lookup"><span data-stu-id="d3122-117">This complicates the structure of asynchronous code as compared with synchronous code.</span></span>  
+ <span data-ttu-id="ce5b4-115">當您的使用者介面沒有回應或不能擴充伺服器時，您可能就需要使程式碼更加非同步。</span><span class="sxs-lookup"><span data-stu-id="ce5b4-115">When your user interface is unresponsive or your server does not scale, it is likely that you need your code to be more asynchronous.</span></span>  <span data-ttu-id="ce5b4-116">傳統的非同步程式碼編寫涉及安裝回呼 (也稱為接續)，以表示非同步作業完成後發生的邏輯。</span><span class="sxs-lookup"><span data-stu-id="ce5b4-116">Writing asynchronous code has traditionally involved installing a callback (also called continuation) to express the logic that occurs after the asynchronous operation finishes.</span></span> <span data-ttu-id="ce5b4-117">這會使非同步程式碼的結構比同步程式碼更複雜。</span><span class="sxs-lookup"><span data-stu-id="ce5b4-117">This complicates the structure of asynchronous code as compared with synchronous code.</span></span>  
   
- <span data-ttu-id="d3122-118">您現在不需使用回呼即可呼叫非同步方法內部，並且不需跨多個方法或 Lambda 運算式分割程式碼。</span><span class="sxs-lookup"><span data-stu-id="d3122-118">You can now call into asynchronous methods without using callbacks, and without splitting your code across multiple methods or lambda expressions.</span></span>  
+ <span data-ttu-id="ce5b4-118">您現在不需使用回呼即可呼叫非同步方法內部，並且不需跨多個方法或 Lambda 運算式分割程式碼。</span><span class="sxs-lookup"><span data-stu-id="ce5b4-118">You can now call into asynchronous methods without using callbacks, and without splitting your code across multiple methods or lambda expressions.</span></span>  
   
- <span data-ttu-id="d3122-119">`async` 修飾詞，指定方法為非同步方法。</span><span class="sxs-lookup"><span data-stu-id="d3122-119">The `async` modifier specifies that a method is asynchronous.</span></span> <span data-ttu-id="d3122-120">呼叫 `async` 方法時會傳回工作。</span><span class="sxs-lookup"><span data-stu-id="d3122-120">When calling an `async` method, a task is returned.</span></span> <span data-ttu-id="d3122-121">當`await`運算子套用至工作，會立即結束目前的方法。</span><span class="sxs-lookup"><span data-stu-id="d3122-121">When the `await` operator is applied to a task, the current method exits immediately.</span></span> <span data-ttu-id="d3122-122">當工作完成時，會以相同的方法繼續執行。</span><span class="sxs-lookup"><span data-stu-id="d3122-122">When the task finishes, execution resumes in the same method.</span></span>
+ <span data-ttu-id="ce5b4-119">`async` 修飾詞，指定方法為非同步方法。</span><span class="sxs-lookup"><span data-stu-id="ce5b4-119">The `async` modifier specifies that a method is asynchronous.</span></span> <span data-ttu-id="ce5b4-120">呼叫 `async` 方法時會傳回工作。</span><span class="sxs-lookup"><span data-stu-id="ce5b4-120">When calling an `async` method, a task is returned.</span></span> <span data-ttu-id="ce5b4-121">當`await`運算子套用至工作，會立即結束目前的方法。</span><span class="sxs-lookup"><span data-stu-id="ce5b4-121">When the `await` operator is applied to a task, the current method exits immediately.</span></span> <span data-ttu-id="ce5b4-122">當工作完成時，會以相同的方法繼續執行。</span><span class="sxs-lookup"><span data-stu-id="ce5b4-122">When the task finishes, execution resumes in the same method.</span></span>
   
 > [!WARNING]
->  <span data-ttu-id="d3122-123">如果應用程式也使用 `Context Connection` 連接字串關鍵字，則不支援非同步呼叫。</span><span class="sxs-lookup"><span data-stu-id="d3122-123">Asynchronous calls are not supported if an application also uses the `Context Connection` connection string keyword.</span></span>  
+>  <span data-ttu-id="ce5b4-123">如果應用程式也使用 `Context Connection` 連接字串關鍵字，則不支援非同步呼叫。</span><span class="sxs-lookup"><span data-stu-id="ce5b4-123">Asynchronous calls are not supported if an application also uses the `Context Connection` connection string keyword.</span></span>  
   
- <span data-ttu-id="d3122-124">呼叫 `async` 方法不會配置任何額外的執行緒。</span><span class="sxs-lookup"><span data-stu-id="d3122-124">Calling an `async` method does not allocate any additional threads.</span></span> <span data-ttu-id="d3122-125">它可能會在結尾處簡短地使用現有的 I/O 完成執行緒。</span><span class="sxs-lookup"><span data-stu-id="d3122-125">It may use the existing I/O completion thread briefly at the end.</span></span>  
+ <span data-ttu-id="ce5b4-124">呼叫 `async` 方法不會配置任何額外的執行緒。</span><span class="sxs-lookup"><span data-stu-id="ce5b4-124">Calling an `async` method does not allocate any additional threads.</span></span> <span data-ttu-id="ce5b4-125">它可能會在結尾處簡短地使用現有的 I/O 完成執行緒。</span><span class="sxs-lookup"><span data-stu-id="ce5b4-125">It may use the existing I/O completion thread briefly at the end.</span></span>  
   
- <span data-ttu-id="d3122-126">[!INCLUDE[net_v45](../../../../includes/net-v45-md.md)] 中新增下列方法以支援非同步程式設計：</span><span class="sxs-lookup"><span data-stu-id="d3122-126">The following methods were added in [!INCLUDE[net_v45](../../../../includes/net-v45-md.md)] to support asynchronous programming:</span></span>  
+ <span data-ttu-id="ce5b4-126">[!INCLUDE[net_v45](../../../../includes/net-v45-md.md)] 中新增下列方法以支援非同步程式設計：</span><span class="sxs-lookup"><span data-stu-id="ce5b4-126">The following methods were added in [!INCLUDE[net_v45](../../../../includes/net-v45-md.md)] to support asynchronous programming:</span></span>  
   
 -   <xref:System.Data.Common.DbConnection.OpenAsync%2A?displayProperty=nameWithType>  
   
@@ -95,10 +85,10 @@ ms.lasthandoff: 04/26/2018
   
 -   <xref:System.Data.SqlClient.SqlBulkCopy.WriteToServerAsync%2A?displayProperty=nameWithType>  
   
- <span data-ttu-id="d3122-127">已加入其他非同步成員，以支援[SqlClient 串流支援](../../../../docs/framework/data/adonet/sqlclient-streaming-support.md)。</span><span class="sxs-lookup"><span data-stu-id="d3122-127">Other asynchronous members were added to support [SqlClient Streaming Support](../../../../docs/framework/data/adonet/sqlclient-streaming-support.md).</span></span>  
+ <span data-ttu-id="ce5b4-127">已加入其他非同步成員，以支援[SqlClient 串流支援](../../../../docs/framework/data/adonet/sqlclient-streaming-support.md)。</span><span class="sxs-lookup"><span data-stu-id="ce5b4-127">Other asynchronous members were added to support [SqlClient Streaming Support](../../../../docs/framework/data/adonet/sqlclient-streaming-support.md).</span></span>  
   
-### <a name="synchronous-to-asynchronous-connection-open"></a><span data-ttu-id="d3122-128">開啟同步與非同步的連接</span><span class="sxs-lookup"><span data-stu-id="d3122-128">Synchronous to Asynchronous Connection Open</span></span>  
- <span data-ttu-id="d3122-129">您可以升級現有的應用程式以使用新的非同步功能。</span><span class="sxs-lookup"><span data-stu-id="d3122-129">You can upgrade an existing application to use the new asynchronous feature.</span></span> <span data-ttu-id="d3122-130">例如，假設應用程式具有同步連接演算法，並且會在每次連接至資料庫時封鎖 UI 執行緒，則一旦連接後，該應用程式就會呼叫預存程序，提示其他使用者方才有使用者登入。</span><span class="sxs-lookup"><span data-stu-id="d3122-130">For example, assume an application has a synchronous connection algorithm and blocks the UI thread every time it connects to the database and, once connected, the application calls a stored procedure that signals other users of the one who just signed in.</span></span>  
+### <a name="synchronous-to-asynchronous-connection-open"></a><span data-ttu-id="ce5b4-128">開啟同步與非同步的連接</span><span class="sxs-lookup"><span data-stu-id="ce5b4-128">Synchronous to Asynchronous Connection Open</span></span>  
+ <span data-ttu-id="ce5b4-129">您可以升級現有的應用程式以使用新的非同步功能。</span><span class="sxs-lookup"><span data-stu-id="ce5b4-129">You can upgrade an existing application to use the new asynchronous feature.</span></span> <span data-ttu-id="ce5b4-130">例如，假設應用程式具有同步連接演算法，並且會在每次連接至資料庫時封鎖 UI 執行緒，則一旦連接後，該應用程式就會呼叫預存程序，提示其他使用者方才有使用者登入。</span><span class="sxs-lookup"><span data-stu-id="ce5b4-130">For example, assume an application has a synchronous connection algorithm and blocks the UI thread every time it connects to the database and, once connected, the application calls a stored procedure that signals other users of the one who just signed in.</span></span>  
   
 ```csharp
 using SqlConnection conn = new SqlConnection("…");  
@@ -111,7 +101,7 @@ using SqlConnection conn = new SqlConnection("…");
 }  
 ```  
   
- <span data-ttu-id="d3122-131">將程式轉換為使用新的非同步功能時，其看起來應類似：</span><span class="sxs-lookup"><span data-stu-id="d3122-131">When converted to use the new asynchronous functionality, the program would look like:</span></span>  
+ <span data-ttu-id="ce5b4-131">將程式轉換為使用新的非同步功能時，其看起來應類似：</span><span class="sxs-lookup"><span data-stu-id="ce5b4-131">When converted to use the new asynchronous functionality, the program would look like:</span></span>  
   
 ```csharp
 using System;  
@@ -140,8 +130,8 @@ class A {
 }  
 ```  
   
-### <a name="adding-the-new-asynchronous-feature-in-an-existing-application-mixing-old-and-new-patterns"></a><span data-ttu-id="d3122-132">在現有的應用程式 (混合舊的和新的模式) 中新增非同步功能</span><span class="sxs-lookup"><span data-stu-id="d3122-132">Adding the New Asynchronous Feature in an Existing Application (Mixing Old and New Patterns)</span></span>  
- <span data-ttu-id="d3122-133">您也可以在不變更現有非同步邏輯的情況下，新增非同步功能 (SqlConnection::OpenAsync)。</span><span class="sxs-lookup"><span data-stu-id="d3122-133">It is also possible to add new asynchronous capability (SqlConnection::OpenAsync) without changing the existing asynchronous logic.</span></span> <span data-ttu-id="d3122-134">例如，如果應用程式目前使用：</span><span class="sxs-lookup"><span data-stu-id="d3122-134">For example, if an application currently uses:</span></span>  
+### <a name="adding-the-new-asynchronous-feature-in-an-existing-application-mixing-old-and-new-patterns"></a><span data-ttu-id="ce5b4-132">在現有的應用程式 (混合舊的和新的模式) 中新增非同步功能</span><span class="sxs-lookup"><span data-stu-id="ce5b4-132">Adding the New Asynchronous Feature in an Existing Application (Mixing Old and New Patterns)</span></span>  
+ <span data-ttu-id="ce5b4-133">您也可以在不變更現有非同步邏輯的情況下，新增非同步功能 (SqlConnection::OpenAsync)。</span><span class="sxs-lookup"><span data-stu-id="ce5b4-133">It is also possible to add new asynchronous capability (SqlConnection::OpenAsync) without changing the existing asynchronous logic.</span></span> <span data-ttu-id="ce5b4-134">例如，如果應用程式目前使用：</span><span class="sxs-lookup"><span data-stu-id="ce5b4-134">For example, if an application currently uses:</span></span>  
   
 ```csharp
 AsyncCallback productList = new AsyncCallback(ProductList);  
@@ -151,7 +141,7 @@ SqlCommand cmd = new SqlCommand("SELECT * FROM [Current Product List]", conn);
 IAsyncResult ia = cmd.BeginExecuteReader(productList, cmd);  
 ```  
   
- <span data-ttu-id="d3122-135">您可以開始使用新的非同步模式，而不需大幅變更現有的演算法。</span><span class="sxs-lookup"><span data-stu-id="d3122-135">You can begin to use the new asynchronous pattern without substantially changing the existing algorithm.</span></span>  
+ <span data-ttu-id="ce5b4-135">您可以開始使用新的非同步模式，而不需大幅變更現有的演算法。</span><span class="sxs-lookup"><span data-stu-id="ce5b4-135">You can begin to use the new asynchronous pattern without substantially changing the existing algorithm.</span></span>  
   
 ```csharp
 using System;  
@@ -178,10 +168,10 @@ class A {
 }  
 ```  
   
-### <a name="using-the-base-provider-model-and-the-new-asynchronous-feature"></a><span data-ttu-id="d3122-136">使用基礎提供者模型和新的非同步功能</span><span class="sxs-lookup"><span data-stu-id="d3122-136">Using the Base Provider Model and the New Asynchronous Feature</span></span>  
- <span data-ttu-id="d3122-137">您可能需要建立能夠連接到不同的資料庫並執行查詢的工具。</span><span class="sxs-lookup"><span data-stu-id="d3122-137">You may need to create a tool that is able to connect to different databases and execute queries.</span></span> <span data-ttu-id="d3122-138">您可以使用基礎提供者模型和新的非同步功能。</span><span class="sxs-lookup"><span data-stu-id="d3122-138">You can use the base provider model and the new asynchronous feature.</span></span>  
+### <a name="using-the-base-provider-model-and-the-new-asynchronous-feature"></a><span data-ttu-id="ce5b4-136">使用基礎提供者模型和新的非同步功能</span><span class="sxs-lookup"><span data-stu-id="ce5b4-136">Using the Base Provider Model and the New Asynchronous Feature</span></span>  
+ <span data-ttu-id="ce5b4-137">您可能需要建立能夠連接到不同的資料庫並執行查詢的工具。</span><span class="sxs-lookup"><span data-stu-id="ce5b4-137">You may need to create a tool that is able to connect to different databases and execute queries.</span></span> <span data-ttu-id="ce5b4-138">您可以使用基礎提供者模型和新的非同步功能。</span><span class="sxs-lookup"><span data-stu-id="ce5b4-138">You can use the base provider model and the new asynchronous feature.</span></span>  
   
- <span data-ttu-id="d3122-139">您必須啟用伺服器上的「Microsoft 分散式異動控制器」(MSDTC)，才能使用分散式異動。</span><span class="sxs-lookup"><span data-stu-id="d3122-139">The Microsoft Distributed Transaction Controller (MSDTC) must be enabled on the server to use distributed transactions.</span></span> <span data-ttu-id="d3122-140">如需如何啟用 MSDTC 的資訊，請參閱[如何啟用網頁伺服器上的 MSDTC](http://msdn.microsoft.com/library/dd327979.aspx)。</span><span class="sxs-lookup"><span data-stu-id="d3122-140">For information on how to enable MSDTC, see [How to Enable MSDTC on a Web Server](http://msdn.microsoft.com/library/dd327979.aspx).</span></span>  
+ <span data-ttu-id="ce5b4-139">您必須啟用伺服器上的「Microsoft 分散式異動控制器」(MSDTC)，才能使用分散式異動。</span><span class="sxs-lookup"><span data-stu-id="ce5b4-139">The Microsoft Distributed Transaction Controller (MSDTC) must be enabled on the server to use distributed transactions.</span></span> <span data-ttu-id="ce5b4-140">如需如何啟用 MSDTC 的資訊，請參閱[如何啟用網頁伺服器上的 MSDTC](http://msdn.microsoft.com/library/dd327979.aspx)。</span><span class="sxs-lookup"><span data-stu-id="ce5b4-140">For information on how to enable MSDTC, see [How to Enable MSDTC on a Web Server](http://msdn.microsoft.com/library/dd327979.aspx).</span></span>  
   
 ```csharp
 using System;  
@@ -226,7 +216,7 @@ class A {
 }  
 ```  
   
-### <a name="using-sql-transactions-and-the-new-asynchronous-feature"></a><span data-ttu-id="d3122-141">使用 SQL 交易和新的非同步功能</span><span class="sxs-lookup"><span data-stu-id="d3122-141">Using SQL Transactions and the New Asynchronous Feature</span></span>  
+### <a name="using-sql-transactions-and-the-new-asynchronous-feature"></a><span data-ttu-id="ce5b4-141">使用 SQL 交易和新的非同步功能</span><span class="sxs-lookup"><span data-stu-id="ce5b4-141">Using SQL Transactions and the New Asynchronous Feature</span></span>  
   
 ```csharp
 using System;  
@@ -292,8 +282,8 @@ class Program {
 }  
 ```  
   
-### <a name="using-sql-transactions-and-the-new-asynchronous-feature"></a><span data-ttu-id="d3122-142">使用 SQL 交易和新的非同步功能</span><span class="sxs-lookup"><span data-stu-id="d3122-142">Using SQL Transactions and the New Asynchronous Feature</span></span>  
- <span data-ttu-id="d3122-143">在企業應用程式中，您可能需在某些情況下新增分散式交易，以啟用多個資料庫伺服器之間的交易。</span><span class="sxs-lookup"><span data-stu-id="d3122-143">In an enterprise application, you may need to add distributed transactions in some scenarios, to enable transactions between multiple database servers.</span></span> <span data-ttu-id="d3122-144">您可以使用 System.Transactions 命名空間並登記分散式交易，如下所示：</span><span class="sxs-lookup"><span data-stu-id="d3122-144">You can use the System.Transactions namespace and enlist a distributed transaction, as follows:</span></span>  
+### <a name="using-sql-transactions-and-the-new-asynchronous-feature"></a><span data-ttu-id="ce5b4-142">使用 SQL 交易和新的非同步功能</span><span class="sxs-lookup"><span data-stu-id="ce5b4-142">Using SQL Transactions and the New Asynchronous Feature</span></span>  
+ <span data-ttu-id="ce5b4-143">在企業應用程式中，您可能需在某些情況下新增分散式交易，以啟用多個資料庫伺服器之間的交易。</span><span class="sxs-lookup"><span data-stu-id="ce5b4-143">In an enterprise application, you may need to add distributed transactions in some scenarios, to enable transactions between multiple database servers.</span></span> <span data-ttu-id="ce5b4-144">您可以使用 System.Transactions 命名空間並登記分散式交易，如下所示：</span><span class="sxs-lookup"><span data-stu-id="ce5b4-144">You can use the System.Transactions namespace and enlist a distributed transaction, as follows:</span></span>  
   
 ```csharp
 using System;  
@@ -353,8 +343,8 @@ class Program {
 }  
 ```  
   
-### <a name="cancelling-an-asynchronous-operation"></a><span data-ttu-id="d3122-145">取消非同步作業</span><span class="sxs-lookup"><span data-stu-id="d3122-145">Cancelling an Asynchronous Operation</span></span>  
- <span data-ttu-id="d3122-146">您可以使用 <xref:System.Threading.CancellationToken> 取消非同步要求。</span><span class="sxs-lookup"><span data-stu-id="d3122-146">You can cancel an asynchronous request by using the <xref:System.Threading.CancellationToken>.</span></span>  
+### <a name="cancelling-an-asynchronous-operation"></a><span data-ttu-id="ce5b4-145">取消非同步作業</span><span class="sxs-lookup"><span data-stu-id="ce5b4-145">Cancelling an Asynchronous Operation</span></span>  
+ <span data-ttu-id="ce5b4-146">您可以使用 <xref:System.Threading.CancellationToken> 取消非同步要求。</span><span class="sxs-lookup"><span data-stu-id="ce5b4-146">You can cancel an asynchronous request by using the <xref:System.Threading.CancellationToken>.</span></span>  
   
 ```csharp
 using System;  
@@ -393,8 +383,8 @@ namespace Samples {
 }  
 ```  
   
-### <a name="asynchronous-operations-with-sqlbulkcopy"></a><span data-ttu-id="d3122-147">使用 SqlBulkCopy 的非同步作業</span><span class="sxs-lookup"><span data-stu-id="d3122-147">Asynchronous Operations with SqlBulkCopy</span></span>  
- <span data-ttu-id="d3122-148">使用 <xref:System.Data.SqlClient.SqlBulkCopy?displayProperty=nameWithType> 的 <xref:System.Data.SqlClient.SqlBulkCopy.WriteToServerAsync%2A?displayProperty=nameWithType> 中也新增了非同步功能。</span><span class="sxs-lookup"><span data-stu-id="d3122-148">Asynchronous capabilities were also added to <xref:System.Data.SqlClient.SqlBulkCopy?displayProperty=nameWithType> with <xref:System.Data.SqlClient.SqlBulkCopy.WriteToServerAsync%2A?displayProperty=nameWithType>.</span></span>  
+### <a name="asynchronous-operations-with-sqlbulkcopy"></a><span data-ttu-id="ce5b4-147">使用 SqlBulkCopy 的非同步作業</span><span class="sxs-lookup"><span data-stu-id="ce5b4-147">Asynchronous Operations with SqlBulkCopy</span></span>  
+ <span data-ttu-id="ce5b4-148">使用 <xref:System.Data.SqlClient.SqlBulkCopy?displayProperty=nameWithType> 的 <xref:System.Data.SqlClient.SqlBulkCopy.WriteToServerAsync%2A?displayProperty=nameWithType> 中也新增了非同步功能。</span><span class="sxs-lookup"><span data-stu-id="ce5b4-148">Asynchronous capabilities were also added to <xref:System.Data.SqlClient.SqlBulkCopy?displayProperty=nameWithType> with <xref:System.Data.SqlClient.SqlBulkCopy.WriteToServerAsync%2A?displayProperty=nameWithType>.</span></span>  
   
 ```csharp
 using System;  
@@ -635,11 +625,11 @@ namespace SqlBulkCopyAsyncCodeSample {
 }  
 ```  
   
-## <a name="asynchronously-using-multiple-commands-with-mars"></a><span data-ttu-id="d3122-149">非同步使用多個命令與 MARS</span><span class="sxs-lookup"><span data-stu-id="d3122-149">Asynchronously Using Multiple Commands with MARS</span></span>  
- <span data-ttu-id="d3122-150">範例會開啟的單一連接**AdventureWorks**資料庫。</span><span class="sxs-lookup"><span data-stu-id="d3122-150">The example opens a single connection to the **AdventureWorks** database.</span></span> <span data-ttu-id="d3122-151">使用 <xref:System.Data.SqlClient.SqlCommand> 物件，會建立 <xref:System.Data.SqlClient.SqlDataReader>。</span><span class="sxs-lookup"><span data-stu-id="d3122-151">Using a <xref:System.Data.SqlClient.SqlCommand> object, a <xref:System.Data.SqlClient.SqlDataReader> is created.</span></span> <span data-ttu-id="d3122-152">當使用該讀取器時，會開啟第二個 <xref:System.Data.SqlClient.SqlDataReader>，使用來自第一個 <xref:System.Data.SqlClient.SqlDataReader> 的資料做為第二個讀取器之 WHERE 子句的輸入。</span><span class="sxs-lookup"><span data-stu-id="d3122-152">As the reader is used, a second <xref:System.Data.SqlClient.SqlDataReader> is opened, using data from the first <xref:System.Data.SqlClient.SqlDataReader> as input to the WHERE clause for the second reader.</span></span>  
+## <a name="asynchronously-using-multiple-commands-with-mars"></a><span data-ttu-id="ce5b4-149">非同步使用多個命令與 MARS</span><span class="sxs-lookup"><span data-stu-id="ce5b4-149">Asynchronously Using Multiple Commands with MARS</span></span>  
+ <span data-ttu-id="ce5b4-150">範例會開啟的單一連接**AdventureWorks**資料庫。</span><span class="sxs-lookup"><span data-stu-id="ce5b4-150">The example opens a single connection to the **AdventureWorks** database.</span></span> <span data-ttu-id="ce5b4-151">使用 <xref:System.Data.SqlClient.SqlCommand> 物件，會建立 <xref:System.Data.SqlClient.SqlDataReader>。</span><span class="sxs-lookup"><span data-stu-id="ce5b4-151">Using a <xref:System.Data.SqlClient.SqlCommand> object, a <xref:System.Data.SqlClient.SqlDataReader> is created.</span></span> <span data-ttu-id="ce5b4-152">當使用該讀取器時，會開啟第二個 <xref:System.Data.SqlClient.SqlDataReader>，使用來自第一個 <xref:System.Data.SqlClient.SqlDataReader> 的資料做為第二個讀取器之 WHERE 子句的輸入。</span><span class="sxs-lookup"><span data-stu-id="ce5b4-152">As the reader is used, a second <xref:System.Data.SqlClient.SqlDataReader> is opened, using data from the first <xref:System.Data.SqlClient.SqlDataReader> as input to the WHERE clause for the second reader.</span></span>  
   
 > [!NOTE]
->  <span data-ttu-id="d3122-153">下列範例使用範例**AdventureWorks**隨附於 SQL Server 資料庫。</span><span class="sxs-lookup"><span data-stu-id="d3122-153">The following example uses the sample **AdventureWorks** database included with SQL Server.</span></span> <span data-ttu-id="d3122-154">範例程式碼中提供的連接字串假設本機電腦已安裝並可使用資料庫。</span><span class="sxs-lookup"><span data-stu-id="d3122-154">The connection string provided in the sample code assumes that the database is installed and available on the local computer.</span></span> <span data-ttu-id="d3122-155">視環境需要修改連接字串。</span><span class="sxs-lookup"><span data-stu-id="d3122-155">Modify the connection string as necessary for your environment.</span></span>  
+>  <span data-ttu-id="ce5b4-153">下列範例使用範例**AdventureWorks**隨附於 SQL Server 資料庫。</span><span class="sxs-lookup"><span data-stu-id="ce5b4-153">The following example uses the sample **AdventureWorks** database included with SQL Server.</span></span> <span data-ttu-id="ce5b4-154">範例程式碼中提供的連接字串假設本機電腦已安裝並可使用資料庫。</span><span class="sxs-lookup"><span data-stu-id="ce5b4-154">The connection string provided in the sample code assumes that the database is installed and available on the local computer.</span></span> <span data-ttu-id="ce5b4-155">視環境需要修改連接字串。</span><span class="sxs-lookup"><span data-stu-id="ce5b4-155">Modify the connection string as necessary for your environment.</span></span>  
   
 ```csharp
 using System;  
@@ -705,13 +695,13 @@ class Class1 {
 }  
 ```  
   
-## <a name="asynchronously-reading-and-updating-data-with-mars"></a><span data-ttu-id="d3122-156">使用 MARS 非同步讀取及更新資料</span><span class="sxs-lookup"><span data-stu-id="d3122-156">Asynchronously Reading and Updating Data with MARS</span></span>  
- <span data-ttu-id="d3122-157">MARS 允許將連接用於讀取作業及資料操作語言 (DML) 作業 (具有多個暫止作業)。</span><span class="sxs-lookup"><span data-stu-id="d3122-157">MARS allows a connection to be used for both read operations and data manipulation language (DML) operations with more than one pending operation.</span></span> <span data-ttu-id="d3122-158">使用此功能，應用程式即無需處理連接繁忙錯誤。</span><span class="sxs-lookup"><span data-stu-id="d3122-158">This feature eliminates the need for an application to deal with connection-busy errors.</span></span> <span data-ttu-id="d3122-159">此外，您可以使用 MARS 代替通常會消耗更多資源的伺服器端游標。</span><span class="sxs-lookup"><span data-stu-id="d3122-159">In addition, MARS can replace the user of server-side cursors, which generally consume more resources.</span></span> <span data-ttu-id="d3122-160">最後，多個作業可在單一連接上進行操作，因為它們可共用相同的交易內容，因而不須使用**sp_getbindtoken**和**sp_bindsession**系統預存程序。</span><span class="sxs-lookup"><span data-stu-id="d3122-160">Finally, because multiple operations can operate on a single connection, they can share the same transaction context, eliminating the need to use **sp_getbindtoken** and **sp_bindsession** system stored procedures.</span></span>  
+## <a name="asynchronously-reading-and-updating-data-with-mars"></a><span data-ttu-id="ce5b4-156">使用 MARS 非同步讀取及更新資料</span><span class="sxs-lookup"><span data-stu-id="ce5b4-156">Asynchronously Reading and Updating Data with MARS</span></span>  
+ <span data-ttu-id="ce5b4-157">MARS 允許將連接用於讀取作業及資料操作語言 (DML) 作業 (具有多個暫止作業)。</span><span class="sxs-lookup"><span data-stu-id="ce5b4-157">MARS allows a connection to be used for both read operations and data manipulation language (DML) operations with more than one pending operation.</span></span> <span data-ttu-id="ce5b4-158">使用此功能，應用程式即無需處理連接繁忙錯誤。</span><span class="sxs-lookup"><span data-stu-id="ce5b4-158">This feature eliminates the need for an application to deal with connection-busy errors.</span></span> <span data-ttu-id="ce5b4-159">此外，您可以使用 MARS 代替通常會消耗更多資源的伺服器端游標。</span><span class="sxs-lookup"><span data-stu-id="ce5b4-159">In addition, MARS can replace the user of server-side cursors, which generally consume more resources.</span></span> <span data-ttu-id="ce5b4-160">最後，多個作業可在單一連接上進行操作，因為它們可共用相同的交易內容，因而不須使用**sp_getbindtoken**和**sp_bindsession**系統預存程序。</span><span class="sxs-lookup"><span data-stu-id="ce5b4-160">Finally, because multiple operations can operate on a single connection, they can share the same transaction context, eliminating the need to use **sp_getbindtoken** and **sp_bindsession** system stored procedures.</span></span>  
   
- <span data-ttu-id="d3122-161">下列主控台應用程式示範如何使用具有三個 <xref:System.Data.SqlClient.SqlDataReader> 物件的兩個 <xref:System.Data.SqlClient.SqlCommand> 物件，及啟用 MARS 的單一 <xref:System.Data.SqlClient.SqlConnection> 物件。</span><span class="sxs-lookup"><span data-stu-id="d3122-161">The following Console application demonstrates how to use two <xref:System.Data.SqlClient.SqlDataReader> objects with three <xref:System.Data.SqlClient.SqlCommand> objects and a single <xref:System.Data.SqlClient.SqlConnection> object with MARS enabled.</span></span> <span data-ttu-id="d3122-162">第一個命令物件會擷取信用評等為 5 的廠商清單。</span><span class="sxs-lookup"><span data-stu-id="d3122-162">The first command object retrieves a list of vendors whose credit rating is 5.</span></span> <span data-ttu-id="d3122-163">第二個命令物件會使用 <xref:System.Data.SqlClient.SqlDataReader> 提供的廠商 ID，以載入第二個 <xref:System.Data.SqlClient.SqlDataReader> 及該特定廠商的所有產品。</span><span class="sxs-lookup"><span data-stu-id="d3122-163">The second command object uses the vendor ID provided from a <xref:System.Data.SqlClient.SqlDataReader> to load the second <xref:System.Data.SqlClient.SqlDataReader> with all of the products for the particular vendor.</span></span> <span data-ttu-id="d3122-164">第二個 <xref:System.Data.SqlClient.SqlDataReader> 會造訪每個產品記錄。</span><span class="sxs-lookup"><span data-stu-id="d3122-164">Each product record is visited by the second <xref:System.Data.SqlClient.SqlDataReader>.</span></span> <span data-ttu-id="d3122-165">會執行計算以決定新**OnOrderQty**應該是。</span><span class="sxs-lookup"><span data-stu-id="d3122-165">A calculation is performed to determine what the new **OnOrderQty** should be.</span></span> <span data-ttu-id="d3122-166">第三個命令物件然後用來更新**ProductVendor**以新值的資料表。</span><span class="sxs-lookup"><span data-stu-id="d3122-166">The third command object is then used to update the **ProductVendor** table with the new value.</span></span> <span data-ttu-id="d3122-167">這整個處理序會在單一異動中發生，並在結束時復原。</span><span class="sxs-lookup"><span data-stu-id="d3122-167">This entire process takes place within a single transaction, which is rolled back at the end.</span></span>  
+ <span data-ttu-id="ce5b4-161">下列主控台應用程式示範如何使用具有三個 <xref:System.Data.SqlClient.SqlDataReader> 物件的兩個 <xref:System.Data.SqlClient.SqlCommand> 物件，及啟用 MARS 的單一 <xref:System.Data.SqlClient.SqlConnection> 物件。</span><span class="sxs-lookup"><span data-stu-id="ce5b4-161">The following Console application demonstrates how to use two <xref:System.Data.SqlClient.SqlDataReader> objects with three <xref:System.Data.SqlClient.SqlCommand> objects and a single <xref:System.Data.SqlClient.SqlConnection> object with MARS enabled.</span></span> <span data-ttu-id="ce5b4-162">第一個命令物件會擷取信用評等為 5 的廠商清單。</span><span class="sxs-lookup"><span data-stu-id="ce5b4-162">The first command object retrieves a list of vendors whose credit rating is 5.</span></span> <span data-ttu-id="ce5b4-163">第二個命令物件會使用 <xref:System.Data.SqlClient.SqlDataReader> 提供的廠商 ID，以載入第二個 <xref:System.Data.SqlClient.SqlDataReader> 及該特定廠商的所有產品。</span><span class="sxs-lookup"><span data-stu-id="ce5b4-163">The second command object uses the vendor ID provided from a <xref:System.Data.SqlClient.SqlDataReader> to load the second <xref:System.Data.SqlClient.SqlDataReader> with all of the products for the particular vendor.</span></span> <span data-ttu-id="ce5b4-164">第二個 <xref:System.Data.SqlClient.SqlDataReader> 會造訪每個產品記錄。</span><span class="sxs-lookup"><span data-stu-id="ce5b4-164">Each product record is visited by the second <xref:System.Data.SqlClient.SqlDataReader>.</span></span> <span data-ttu-id="ce5b4-165">會執行計算以決定新**OnOrderQty**應該是。</span><span class="sxs-lookup"><span data-stu-id="ce5b4-165">A calculation is performed to determine what the new **OnOrderQty** should be.</span></span> <span data-ttu-id="ce5b4-166">第三個命令物件然後用來更新**ProductVendor**以新值的資料表。</span><span class="sxs-lookup"><span data-stu-id="ce5b4-166">The third command object is then used to update the **ProductVendor** table with the new value.</span></span> <span data-ttu-id="ce5b4-167">這整個處理序會在單一異動中發生，並在結束時復原。</span><span class="sxs-lookup"><span data-stu-id="ce5b4-167">This entire process takes place within a single transaction, which is rolled back at the end.</span></span>  
   
 > [!NOTE]
->  <span data-ttu-id="d3122-168">下列範例使用範例**AdventureWorks**隨附於 SQL Server 資料庫。</span><span class="sxs-lookup"><span data-stu-id="d3122-168">The following example uses the sample **AdventureWorks** database included with SQL Server.</span></span> <span data-ttu-id="d3122-169">範例程式碼中提供的連接字串假設本機電腦已安裝並可使用資料庫。</span><span class="sxs-lookup"><span data-stu-id="d3122-169">The connection string provided in the sample code assumes that the database is installed and available on the local computer.</span></span> <span data-ttu-id="d3122-170">視環境需要修改連接字串。</span><span class="sxs-lookup"><span data-stu-id="d3122-170">Modify the connection string as necessary for your environment.</span></span>  
+>  <span data-ttu-id="ce5b4-168">下列範例使用範例**AdventureWorks**隨附於 SQL Server 資料庫。</span><span class="sxs-lookup"><span data-stu-id="ce5b4-168">The following example uses the sample **AdventureWorks** database included with SQL Server.</span></span> <span data-ttu-id="ce5b4-169">範例程式碼中提供的連接字串假設本機電腦已安裝並可使用資料庫。</span><span class="sxs-lookup"><span data-stu-id="ce5b4-169">The connection string provided in the sample code assumes that the database is installed and available on the local computer.</span></span> <span data-ttu-id="ce5b4-170">視環境需要修改連接字串。</span><span class="sxs-lookup"><span data-stu-id="ce5b4-170">Modify the connection string as necessary for your environment.</span></span>  
   
 ```csharp
 using System;  
@@ -821,5 +811,5 @@ class Program {
 }  
 ```  
   
-## <a name="see-also"></a><span data-ttu-id="d3122-171">另請參閱</span><span class="sxs-lookup"><span data-stu-id="d3122-171">See Also</span></span>  
- [<span data-ttu-id="d3122-172">在 ADO.NET 中擷取和修改資料</span><span class="sxs-lookup"><span data-stu-id="d3122-172">Retrieving and Modifying Data in ADO.NET</span></span>](../../../../docs/framework/data/adonet/retrieving-and-modifying-data.md)
+## <a name="see-also"></a><span data-ttu-id="ce5b4-171">另請參閱</span><span class="sxs-lookup"><span data-stu-id="ce5b4-171">See Also</span></span>  
+ [<span data-ttu-id="ce5b4-172">在 ADO.NET 中擷取和修改資料</span><span class="sxs-lookup"><span data-stu-id="ce5b4-172">Retrieving and Modifying Data in ADO.NET</span></span>](../../../../docs/framework/data/adonet/retrieving-and-modifying-data.md)

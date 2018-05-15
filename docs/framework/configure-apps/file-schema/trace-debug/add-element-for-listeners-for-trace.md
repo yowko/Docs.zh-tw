@@ -1,14 +1,6 @@
 ---
-title: "&lt;新增&gt;元素&lt;接聽程式&gt;如&lt;追蹤&gt;"
-ms.custom: 
+title: '&lt;新增&gt;元素&lt;接聽程式&gt;如&lt;追蹤&gt;'
 ms.date: 03/30/2017
-ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.technology:
-- dotnet-clr
-ms.tgt_pltfrm: 
-ms.topic: article
 f1_keywords:
 - http://schemas.microsoft.com/.NetConfiguration/v2.0#configuration/system.diagnostics/trace/listeners/add
 helpviewer_keywords:
@@ -16,28 +8,25 @@ helpviewer_keywords:
 - <add> element for <listeners>
 - add element for <listeners>
 ms.assetid: 81e804a3-ef11-4d39-bbde-bfa012c179e2
-caps.latest.revision: 
 author: mcleblanc
 ms.author: markl
 manager: markl
-ms.workload:
-- dotnet
-ms.openlocfilehash: eb624052c3638cb49abe143ebd4173a5ee85a054
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.openlocfilehash: e27187c05b49b7f73ef19243a3286e8c1de71579
+ms.sourcegitcommit: 11f11ca6cefe555972b3a5c99729d1a7523d8f50
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 05/03/2018
 ---
-# <a name="ltaddgt-element-for-ltlistenersgt-for-lttracegt"></a><span data-ttu-id="95268-102">&lt;新增&gt;元素&lt;接聽程式&gt;如&lt;追蹤&gt;</span><span class="sxs-lookup"><span data-stu-id="95268-102">&lt;add&gt; Element for &lt;listeners&gt; for &lt;trace&gt;</span></span>
-<span data-ttu-id="95268-103">加入至接聽程式**接聽程式**集合。</span><span class="sxs-lookup"><span data-stu-id="95268-103">Adds a listener to the **Listeners** collection.</span></span>  
+# <a name="ltaddgt-element-for-ltlistenersgt-for-lttracegt"></a><span data-ttu-id="b932e-102">&lt;新增&gt;元素&lt;接聽程式&gt;如&lt;追蹤&gt;</span><span class="sxs-lookup"><span data-stu-id="b932e-102">&lt;add&gt; Element for &lt;listeners&gt; for &lt;trace&gt;</span></span>
+<span data-ttu-id="b932e-103">加入至接聽程式**接聽程式**集合。</span><span class="sxs-lookup"><span data-stu-id="b932e-103">Adds a listener to the **Listeners** collection.</span></span>  
   
- <span data-ttu-id="95268-104">\<configuration></span><span class="sxs-lookup"><span data-stu-id="95268-104">\<configuration></span></span>  
-<span data-ttu-id="95268-105">\<system.diagnostics ></span><span class="sxs-lookup"><span data-stu-id="95268-105">\<system.diagnostics></span></span>  
-<span data-ttu-id="95268-106">\<追蹤 ></span><span class="sxs-lookup"><span data-stu-id="95268-106">\<trace></span></span>  
-<span data-ttu-id="95268-107">\<接聽項 ></span><span class="sxs-lookup"><span data-stu-id="95268-107">\<listeners></span></span>  
-<span data-ttu-id="95268-108">\<add></span><span class="sxs-lookup"><span data-stu-id="95268-108">\<add></span></span>  
+ <span data-ttu-id="b932e-104">\<configuration></span><span class="sxs-lookup"><span data-stu-id="b932e-104">\<configuration></span></span>  
+<span data-ttu-id="b932e-105">\<system.diagnostics ></span><span class="sxs-lookup"><span data-stu-id="b932e-105">\<system.diagnostics></span></span>  
+<span data-ttu-id="b932e-106">\<追蹤 ></span><span class="sxs-lookup"><span data-stu-id="b932e-106">\<trace></span></span>  
+<span data-ttu-id="b932e-107">\<接聽項 ></span><span class="sxs-lookup"><span data-stu-id="b932e-107">\<listeners></span></span>  
+<span data-ttu-id="b932e-108">\<add></span><span class="sxs-lookup"><span data-stu-id="b932e-108">\<add></span></span>  
   
-## <a name="syntax"></a><span data-ttu-id="95268-109">語法</span><span class="sxs-lookup"><span data-stu-id="95268-109">Syntax</span></span>  
+## <a name="syntax"></a><span data-ttu-id="b932e-109">語法</span><span class="sxs-lookup"><span data-stu-id="b932e-109">Syntax</span></span>  
   
 ```xml  
 <add name="name"   
@@ -45,58 +34,58 @@ ms.lasthandoff: 12/22/2017
      initializeData="data"/>  
 ```  
   
-## <a name="attributes-and-elements"></a><span data-ttu-id="95268-110">屬性和項目</span><span class="sxs-lookup"><span data-stu-id="95268-110">Attributes and Elements</span></span>  
- <span data-ttu-id="95268-111">下列章節說明屬性、子項目和父項目。</span><span class="sxs-lookup"><span data-stu-id="95268-111">The following sections describe attributes, child elements, and parent elements.</span></span>  
+## <a name="attributes-and-elements"></a><span data-ttu-id="b932e-110">屬性和項目</span><span class="sxs-lookup"><span data-stu-id="b932e-110">Attributes and Elements</span></span>  
+ <span data-ttu-id="b932e-111">下列各節描述屬性、子項目和父項目。</span><span class="sxs-lookup"><span data-stu-id="b932e-111">The following sections describe attributes, child elements, and parent elements.</span></span>  
   
-### <a name="attributes"></a><span data-ttu-id="95268-112">屬性</span><span class="sxs-lookup"><span data-stu-id="95268-112">Attributes</span></span>  
+### <a name="attributes"></a><span data-ttu-id="b932e-112">屬性</span><span class="sxs-lookup"><span data-stu-id="b932e-112">Attributes</span></span>  
   
-|<span data-ttu-id="95268-113">屬性</span><span class="sxs-lookup"><span data-stu-id="95268-113">Attribute</span></span>|<span data-ttu-id="95268-114">描述</span><span class="sxs-lookup"><span data-stu-id="95268-114">Description</span></span>|  
+|<span data-ttu-id="b932e-113">屬性</span><span class="sxs-lookup"><span data-stu-id="b932e-113">Attribute</span></span>|<span data-ttu-id="b932e-114">描述</span><span class="sxs-lookup"><span data-stu-id="b932e-114">Description</span></span>|  
 |---------------|-----------------|  
-|<span data-ttu-id="95268-115">**type**</span><span class="sxs-lookup"><span data-stu-id="95268-115">**type**</span></span>|<span data-ttu-id="95268-116">必要屬性。</span><span class="sxs-lookup"><span data-stu-id="95268-116">Required attribute.</span></span><br /><br /> <span data-ttu-id="95268-117">指定接聽程式的類型。</span><span class="sxs-lookup"><span data-stu-id="95268-117">Specifies the type of the listener.</span></span> <span data-ttu-id="95268-118">您必須使用符合在指定之需求的字串[指定限定的型別名稱](../../../../../docs/framework/reflection-and-codedom/specifying-fully-qualified-type-names.md)。</span><span class="sxs-lookup"><span data-stu-id="95268-118">You must use a string that meets the requirements specified in [Specifying Fully Qualified Type Names](../../../../../docs/framework/reflection-and-codedom/specifying-fully-qualified-type-names.md).</span></span>|  
-|<span data-ttu-id="95268-119">**initializeData**</span><span class="sxs-lookup"><span data-stu-id="95268-119">**initializeData**</span></span>|<span data-ttu-id="95268-120">選擇性屬性。</span><span class="sxs-lookup"><span data-stu-id="95268-120">Optional attribute.</span></span><br /><br /> <span data-ttu-id="95268-121">指定的類別傳遞至建構函式的字串。</span><span class="sxs-lookup"><span data-stu-id="95268-121">The string passed to the constructor for the specified class.</span></span>|  
-|<span data-ttu-id="95268-122">**name**</span><span class="sxs-lookup"><span data-stu-id="95268-122">**name**</span></span>|<span data-ttu-id="95268-123">選擇性屬性。</span><span class="sxs-lookup"><span data-stu-id="95268-123">Optional attribute.</span></span><br /><br /> <span data-ttu-id="95268-124">指定的接聽程式名稱。</span><span class="sxs-lookup"><span data-stu-id="95268-124">Specifies the name of the listener.</span></span>|  
+|<span data-ttu-id="b932e-115">**type**</span><span class="sxs-lookup"><span data-stu-id="b932e-115">**type**</span></span>|<span data-ttu-id="b932e-116">必要屬性。</span><span class="sxs-lookup"><span data-stu-id="b932e-116">Required attribute.</span></span><br /><br /> <span data-ttu-id="b932e-117">指定接聽程式的類型。</span><span class="sxs-lookup"><span data-stu-id="b932e-117">Specifies the type of the listener.</span></span> <span data-ttu-id="b932e-118">您必須使用符合在指定之需求的字串[指定限定的型別名稱](../../../../../docs/framework/reflection-and-codedom/specifying-fully-qualified-type-names.md)。</span><span class="sxs-lookup"><span data-stu-id="b932e-118">You must use a string that meets the requirements specified in [Specifying Fully Qualified Type Names](../../../../../docs/framework/reflection-and-codedom/specifying-fully-qualified-type-names.md).</span></span>|  
+|<span data-ttu-id="b932e-119">**initializeData**</span><span class="sxs-lookup"><span data-stu-id="b932e-119">**initializeData**</span></span>|<span data-ttu-id="b932e-120">選擇性屬性。</span><span class="sxs-lookup"><span data-stu-id="b932e-120">Optional attribute.</span></span><br /><br /> <span data-ttu-id="b932e-121">指定的類別傳遞至建構函式的字串。</span><span class="sxs-lookup"><span data-stu-id="b932e-121">The string passed to the constructor for the specified class.</span></span>|  
+|<span data-ttu-id="b932e-122">**name**</span><span class="sxs-lookup"><span data-stu-id="b932e-122">**name**</span></span>|<span data-ttu-id="b932e-123">選擇性屬性。</span><span class="sxs-lookup"><span data-stu-id="b932e-123">Optional attribute.</span></span><br /><br /> <span data-ttu-id="b932e-124">指定的接聽程式名稱。</span><span class="sxs-lookup"><span data-stu-id="b932e-124">Specifies the name of the listener.</span></span>|  
   
-### <a name="child-elements"></a><span data-ttu-id="95268-125">子元素</span><span class="sxs-lookup"><span data-stu-id="95268-125">Child Elements</span></span>  
+### <a name="child-elements"></a><span data-ttu-id="b932e-125">子項目</span><span class="sxs-lookup"><span data-stu-id="b932e-125">Child Elements</span></span>  
   
-|<span data-ttu-id="95268-126">項目</span><span class="sxs-lookup"><span data-stu-id="95268-126">Element</span></span>|<span data-ttu-id="95268-127">描述</span><span class="sxs-lookup"><span data-stu-id="95268-127">Description</span></span>|  
+|<span data-ttu-id="b932e-126">項目</span><span class="sxs-lookup"><span data-stu-id="b932e-126">Element</span></span>|<span data-ttu-id="b932e-127">描述</span><span class="sxs-lookup"><span data-stu-id="b932e-127">Description</span></span>|  
 |-------------|-----------------|  
-|[<span data-ttu-id="95268-128">\<filter></span><span class="sxs-lookup"><span data-stu-id="95268-128">\<filter></span></span>](../../../../../docs/framework/configure-apps/file-schema/trace-debug/filter-element-for-add-for-listeners-for-trace.md)|<span data-ttu-id="95268-129">將篩選加入至接聽程式在`Listeners`追蹤的集合。</span><span class="sxs-lookup"><span data-stu-id="95268-129">Adds a filter to a listener in the `Listeners` collection for a trace.</span></span>|  
+|[<span data-ttu-id="b932e-128">\<filter></span><span class="sxs-lookup"><span data-stu-id="b932e-128">\<filter></span></span>](../../../../../docs/framework/configure-apps/file-schema/trace-debug/filter-element-for-add-for-listeners-for-trace.md)|<span data-ttu-id="b932e-129">將篩選加入至接聽程式在`Listeners`追蹤的集合。</span><span class="sxs-lookup"><span data-stu-id="b932e-129">Adds a filter to a listener in the `Listeners` collection for a trace.</span></span>|  
   
-### <a name="parent-elements"></a><span data-ttu-id="95268-130">父項目</span><span class="sxs-lookup"><span data-stu-id="95268-130">Parent Elements</span></span>  
+### <a name="parent-elements"></a><span data-ttu-id="b932e-130">父項目</span><span class="sxs-lookup"><span data-stu-id="b932e-130">Parent Elements</span></span>  
   
-|<span data-ttu-id="95268-131">項目</span><span class="sxs-lookup"><span data-stu-id="95268-131">Element</span></span>|<span data-ttu-id="95268-132">描述</span><span class="sxs-lookup"><span data-stu-id="95268-132">Description</span></span>|  
+|<span data-ttu-id="b932e-131">項目</span><span class="sxs-lookup"><span data-stu-id="b932e-131">Element</span></span>|<span data-ttu-id="b932e-132">描述</span><span class="sxs-lookup"><span data-stu-id="b932e-132">Description</span></span>|  
 |-------------|-----------------|  
-|`configuration`|<span data-ttu-id="95268-133">通用語言執行平台和 .NET Framework 應用程式所使用之每個組態檔中的根項目。</span><span class="sxs-lookup"><span data-stu-id="95268-133">The root element in every configuration file used by the common language runtime and .NET Framework applications.</span></span>|  
-|`listeners`|<span data-ttu-id="95268-134">指定的接聽程式會收集，存放區，並將訊息路由。</span><span class="sxs-lookup"><span data-stu-id="95268-134">Specifies a listener that collects, stores, and routes messages.</span></span> <span data-ttu-id="95268-135">接聽程式將追蹤輸出導向至適當的目標。</span><span class="sxs-lookup"><span data-stu-id="95268-135">Listeners direct the tracing output to an appropriate target.</span></span>|  
-|`system.diagnostics`|<span data-ttu-id="95268-136">指定 ASP.NET 組態區段的根項目。</span><span class="sxs-lookup"><span data-stu-id="95268-136">Specifies the root element for the ASP.NET configuration section.</span></span>|  
-|`trace`|<span data-ttu-id="95268-137">包含用於收集、儲存及路由傳送追蹤訊息的接聽項。</span><span class="sxs-lookup"><span data-stu-id="95268-137">Contains listeners that collect, store, and route tracing messages.</span></span>|  
+|`configuration`|<span data-ttu-id="b932e-133">通用語言執行平台和 .NET Framework 應用程式所使用之每個組態檔中的根項目。</span><span class="sxs-lookup"><span data-stu-id="b932e-133">The root element in every configuration file used by the common language runtime and .NET Framework applications.</span></span>|  
+|`listeners`|<span data-ttu-id="b932e-134">指定的接聽程式會收集，存放區，並將訊息路由。</span><span class="sxs-lookup"><span data-stu-id="b932e-134">Specifies a listener that collects, stores, and routes messages.</span></span> <span data-ttu-id="b932e-135">接聽程式將追蹤輸出導向至適當的目標。</span><span class="sxs-lookup"><span data-stu-id="b932e-135">Listeners direct the tracing output to an appropriate target.</span></span>|  
+|`system.diagnostics`|<span data-ttu-id="b932e-136">指定 ASP.NET 組態區段的根項目。</span><span class="sxs-lookup"><span data-stu-id="b932e-136">Specifies the root element for the ASP.NET configuration section.</span></span>|  
+|`trace`|<span data-ttu-id="b932e-137">包含用於收集、儲存及路由傳送追蹤訊息的接聽項。</span><span class="sxs-lookup"><span data-stu-id="b932e-137">Contains listeners that collect, store, and route tracing messages.</span></span>|  
   
-## <a name="remarks"></a><span data-ttu-id="95268-138">備註</span><span class="sxs-lookup"><span data-stu-id="95268-138">Remarks</span></span>  
- <span data-ttu-id="95268-139"><xref:System.Diagnostics.Debug>和<xref:System.Diagnostics.Trace>類別共用相同**接聽程式**集合。</span><span class="sxs-lookup"><span data-stu-id="95268-139">The <xref:System.Diagnostics.Debug> and <xref:System.Diagnostics.Trace> classes share the same **Listeners** collection.</span></span> <span data-ttu-id="95268-140">如果您將接聽程式物件加入至集合中的其中一個這些類別，另一個類別會使用相同的接聽程式。</span><span class="sxs-lookup"><span data-stu-id="95268-140">If you add a listener object to the collection in one of these classes, the other class uses the same listener.</span></span> <span data-ttu-id="95268-141">接聽程式的類別衍生自<xref:System.Diagnostics.TraceListener>。</span><span class="sxs-lookup"><span data-stu-id="95268-141">The listener classes derive from the <xref:System.Diagnostics.TraceListener>.</span></span>  
+## <a name="remarks"></a><span data-ttu-id="b932e-138">備註</span><span class="sxs-lookup"><span data-stu-id="b932e-138">Remarks</span></span>  
+ <span data-ttu-id="b932e-139"><xref:System.Diagnostics.Debug>和<xref:System.Diagnostics.Trace>類別共用相同**接聽程式**集合。</span><span class="sxs-lookup"><span data-stu-id="b932e-139">The <xref:System.Diagnostics.Debug> and <xref:System.Diagnostics.Trace> classes share the same **Listeners** collection.</span></span> <span data-ttu-id="b932e-140">如果您將接聽程式物件加入至集合中的其中一個這些類別，另一個類別會使用相同的接聽程式。</span><span class="sxs-lookup"><span data-stu-id="b932e-140">If you add a listener object to the collection in one of these classes, the other class uses the same listener.</span></span> <span data-ttu-id="b932e-141">接聽程式的類別衍生自<xref:System.Diagnostics.TraceListener>。</span><span class="sxs-lookup"><span data-stu-id="b932e-141">The listener classes derive from the <xref:System.Diagnostics.TraceListener>.</span></span>  
   
- <span data-ttu-id="95268-142">如果您未指定`name`屬性的追蹤接聽項，<xref:System.Diagnostics.TraceListener.Name%2A>的追蹤接聽程式的預設值為空字串 ("")。</span><span class="sxs-lookup"><span data-stu-id="95268-142">If you do not specify the `name` attribute of the trace listener, the <xref:System.Diagnostics.TraceListener.Name%2A> of the trace listener defaults to an empty string ("").</span></span> <span data-ttu-id="95268-143">如果應用程式只能有一個接聽程式，您可以加入不含指定名稱，並移除藉由指定名稱為空字串。</span><span class="sxs-lookup"><span data-stu-id="95268-143">If your application has only one listener, you can add it without specifying a name, and remove it by specifying an empty string for the name.</span></span> <span data-ttu-id="95268-144">不過，如果您的應用程式有多個接聽程式，您應該指定每個追蹤接聽程式，可讓您識別及管理個別的追蹤接聽程式內的唯一名稱<xref:System.Diagnostics.Debug.Listeners%2A>和<xref:System.Diagnostics.Trace.Listeners%2A>集合。</span><span class="sxs-lookup"><span data-stu-id="95268-144">However, if your application has more than one listener, you should specify unique names for each trace listener, which allows you to identify and manage individual trace listeners within the <xref:System.Diagnostics.Debug.Listeners%2A> and <xref:System.Diagnostics.Trace.Listeners%2A> collections.</span></span>  
+ <span data-ttu-id="b932e-142">如果您未指定`name`屬性的追蹤接聽項，<xref:System.Diagnostics.TraceListener.Name%2A>的追蹤接聽程式的預設值為空字串 ("")。</span><span class="sxs-lookup"><span data-stu-id="b932e-142">If you do not specify the `name` attribute of the trace listener, the <xref:System.Diagnostics.TraceListener.Name%2A> of the trace listener defaults to an empty string ("").</span></span> <span data-ttu-id="b932e-143">如果應用程式只能有一個接聽程式，您可以加入不含指定名稱，並移除藉由指定名稱為空字串。</span><span class="sxs-lookup"><span data-stu-id="b932e-143">If your application has only one listener, you can add it without specifying a name, and remove it by specifying an empty string for the name.</span></span> <span data-ttu-id="b932e-144">不過，如果您的應用程式有多個接聽程式，您應該指定每個追蹤接聽程式，可讓您識別及管理個別的追蹤接聽程式內的唯一名稱<xref:System.Diagnostics.Debug.Listeners%2A>和<xref:System.Diagnostics.Trace.Listeners%2A>集合。</span><span class="sxs-lookup"><span data-stu-id="b932e-144">However, if your application has more than one listener, you should specify unique names for each trace listener, which allows you to identify and manage individual trace listeners within the <xref:System.Diagnostics.Debug.Listeners%2A> and <xref:System.Diagnostics.Trace.Listeners%2A> collections.</span></span>  
   
 > [!NOTE]
->  <span data-ttu-id="95268-145">加入一個以上的追蹤接聽程式相同的型別且具有相同名稱只能有一個追蹤接聽項中的該類型的結果和名稱新增至`Listeners`集合。</span><span class="sxs-lookup"><span data-stu-id="95268-145">Adding more than one trace listener of the same type and with the same name results in only one trace listener of that type and name being added to the `Listeners` collection.</span></span> <span data-ttu-id="95268-146">不過，您可以程式設計方式加入至多個相同的接聽程式`Listeners`集合。</span><span class="sxs-lookup"><span data-stu-id="95268-146">However, you can programmatically add multiple identical listeners to the `Listeners` collection.</span></span>  
+>  <span data-ttu-id="b932e-145">加入一個以上的追蹤接聽程式相同的型別且具有相同名稱只能有一個追蹤接聽項中的該類型的結果和名稱新增至`Listeners`集合。</span><span class="sxs-lookup"><span data-stu-id="b932e-145">Adding more than one trace listener of the same type and with the same name results in only one trace listener of that type and name being added to the `Listeners` collection.</span></span> <span data-ttu-id="b932e-146">不過，您可以程式設計方式加入至多個相同的接聽程式`Listeners`集合。</span><span class="sxs-lookup"><span data-stu-id="b932e-146">However, you can programmatically add multiple identical listeners to the `Listeners` collection.</span></span>  
   
- <span data-ttu-id="95268-147">值**initializeData**屬性取決於您所建立的接聽程式的類型。</span><span class="sxs-lookup"><span data-stu-id="95268-147">The value for the **initializeData** attribute depends on the type of listener you create.</span></span> <span data-ttu-id="95268-148">並非所有的追蹤接聽程式會要求您指定**initializeData**。</span><span class="sxs-lookup"><span data-stu-id="95268-148">Not all trace listeners require that you specify **initializeData**.</span></span>  
+ <span data-ttu-id="b932e-147">值**initializeData**屬性取決於您所建立的接聽程式的類型。</span><span class="sxs-lookup"><span data-stu-id="b932e-147">The value for the **initializeData** attribute depends on the type of listener you create.</span></span> <span data-ttu-id="b932e-148">並非所有的追蹤接聽程式會要求您指定**initializeData**。</span><span class="sxs-lookup"><span data-stu-id="b932e-148">Not all trace listeners require that you specify **initializeData**.</span></span>  
   
 > [!NOTE]
->  <span data-ttu-id="95268-149">當您使用`initializeData`屬性，可能會遇到的編譯器警告"未宣告 'initializeData' 屬性。 」</span><span class="sxs-lookup"><span data-stu-id="95268-149">When you use the `initializeData` attribute, you may get the compiler warning "The 'initializeData' attribute is not declared."</span></span> <span data-ttu-id="95268-150">發生這個警告是因為組態設定會根據抽象基底類別來驗證<xref:System.Diagnostics.TraceListener>，其無法辨識`initializeData`屬性。</span><span class="sxs-lookup"><span data-stu-id="95268-150">This warning occurs because the configuration settings are validated against the abstract base class <xref:System.Diagnostics.TraceListener>, which does not recognize the `initializeData` attribute.</span></span> <span data-ttu-id="95268-151">一般而言，您可以忽略此警告具有參數的建構函式的追蹤接聽程式實作。</span><span class="sxs-lookup"><span data-stu-id="95268-151">Typically, you can ignore this warning for trace listener implementations that have a constructor that takes a parameter.</span></span>  
+>  <span data-ttu-id="b932e-149">當您使用`initializeData`屬性，可能會遇到的編譯器警告"未宣告 'initializeData' 屬性。 」</span><span class="sxs-lookup"><span data-stu-id="b932e-149">When you use the `initializeData` attribute, you may get the compiler warning "The 'initializeData' attribute is not declared."</span></span> <span data-ttu-id="b932e-150">發生這個警告是因為組態設定會根據抽象基底類別來驗證<xref:System.Diagnostics.TraceListener>，其無法辨識`initializeData`屬性。</span><span class="sxs-lookup"><span data-stu-id="b932e-150">This warning occurs because the configuration settings are validated against the abstract base class <xref:System.Diagnostics.TraceListener>, which does not recognize the `initializeData` attribute.</span></span> <span data-ttu-id="b932e-151">一般而言，您可以忽略此警告具有參數的建構函式的追蹤接聽程式實作。</span><span class="sxs-lookup"><span data-stu-id="b932e-151">Typically, you can ignore this warning for trace listener implementations that have a constructor that takes a parameter.</span></span>  
   
- <span data-ttu-id="95268-152">下表顯示隨附於.NET Framework 追蹤接聽項，並描述的值及其**initializeData**屬性。</span><span class="sxs-lookup"><span data-stu-id="95268-152">The following table shows the trace listeners that are included with the .NET Framework and describes the value of their **initializeData** attributes.</span></span>  
+ <span data-ttu-id="b932e-152">下表顯示隨附於.NET Framework 追蹤接聽項，並描述的值及其**initializeData**屬性。</span><span class="sxs-lookup"><span data-stu-id="b932e-152">The following table shows the trace listeners that are included with the .NET Framework and describes the value of their **initializeData** attributes.</span></span>  
   
-|<span data-ttu-id="95268-153">追蹤接聽程式類別</span><span class="sxs-lookup"><span data-stu-id="95268-153">Trace listener class</span></span>|<span data-ttu-id="95268-154">initializeData 屬性值</span><span class="sxs-lookup"><span data-stu-id="95268-154">initializeData attribute value</span></span>|  
+|<span data-ttu-id="b932e-153">追蹤接聽程式類別</span><span class="sxs-lookup"><span data-stu-id="b932e-153">Trace listener class</span></span>|<span data-ttu-id="b932e-154">initializeData 屬性值</span><span class="sxs-lookup"><span data-stu-id="b932e-154">initializeData attribute value</span></span>|  
 |--------------------------|------------------------------------|  
-|<xref:System.Diagnostics.ConsoleTraceListener?displayProperty=nameWithType>|<span data-ttu-id="95268-155">`useErrorStream`值<xref:System.Diagnostics.ConsoleTraceListener.%23ctor%2A>建構函式。</span><span class="sxs-lookup"><span data-stu-id="95268-155">The `useErrorStream` value for the <xref:System.Diagnostics.ConsoleTraceListener.%23ctor%2A> constructor.</span></span>  <span data-ttu-id="95268-156">設定`initializeData`屬性設定為"`true`"來寫入追蹤和偵錯輸出至<xref:System.Console.Error%2A?displayProperty=nameWithType>;「`false`"寫入<xref:System.Console.Out%2A?displayProperty=nameWithType>。</span><span class="sxs-lookup"><span data-stu-id="95268-156">Set the `initializeData` attribute to "`true`" to write trace and debug output to <xref:System.Console.Error%2A?displayProperty=nameWithType>; "`false`" to write to <xref:System.Console.Out%2A?displayProperty=nameWithType>.</span></span>|  
-|<xref:System.Diagnostics.DelimitedListTraceListener?displayProperty=nameWithType>|<span data-ttu-id="95268-157">檔案的名稱<xref:System.Diagnostics.DelimitedListTraceListener>寫入。</span><span class="sxs-lookup"><span data-stu-id="95268-157">The name of the file the <xref:System.Diagnostics.DelimitedListTraceListener> writes to.</span></span>|  
-|<xref:System.Diagnostics.EventLogTraceListener?displayProperty=nameWithType>|<span data-ttu-id="95268-158">現有的事件記錄檔來源名稱的名稱。</span><span class="sxs-lookup"><span data-stu-id="95268-158">The name of the name of an existing event log source.</span></span>|  
-|<xref:System.Diagnostics.EventSchemaTraceListener?displayProperty=nameWithType>|<span data-ttu-id="95268-159">檔案的名稱，<xref:System.Diagnostics.EventSchemaTraceListener>寫入。</span><span class="sxs-lookup"><span data-stu-id="95268-159">The name of the file that the <xref:System.Diagnostics.EventSchemaTraceListener> writes to.</span></span>|  
-|<xref:System.Diagnostics.TextWriterTraceListener?displayProperty=nameWithType>|<span data-ttu-id="95268-160">檔案的名稱，<xref:System.Diagnostics.TextWriterTraceListener>寫入。</span><span class="sxs-lookup"><span data-stu-id="95268-160">The name of the file that the <xref:System.Diagnostics.TextWriterTraceListener> writes to.</span></span>|  
-|<xref:System.Diagnostics.XmlWriterTraceListener?displayProperty=nameWithType>|<span data-ttu-id="95268-161">檔案的名稱，<xref:System.Diagnostics.XmlWriterTraceListener>寫入。</span><span class="sxs-lookup"><span data-stu-id="95268-161">The name of the file that the <xref:System.Diagnostics.XmlWriterTraceListener> writes to.</span></span>|  
+|<xref:System.Diagnostics.ConsoleTraceListener?displayProperty=nameWithType>|<span data-ttu-id="b932e-155">`useErrorStream`值<xref:System.Diagnostics.ConsoleTraceListener.%23ctor%2A>建構函式。</span><span class="sxs-lookup"><span data-stu-id="b932e-155">The `useErrorStream` value for the <xref:System.Diagnostics.ConsoleTraceListener.%23ctor%2A> constructor.</span></span>  <span data-ttu-id="b932e-156">設定`initializeData`屬性設定為"`true`"來寫入追蹤和偵錯輸出至<xref:System.Console.Error%2A?displayProperty=nameWithType>;「`false`"寫入<xref:System.Console.Out%2A?displayProperty=nameWithType>。</span><span class="sxs-lookup"><span data-stu-id="b932e-156">Set the `initializeData` attribute to "`true`" to write trace and debug output to <xref:System.Console.Error%2A?displayProperty=nameWithType>; "`false`" to write to <xref:System.Console.Out%2A?displayProperty=nameWithType>.</span></span>|  
+|<xref:System.Diagnostics.DelimitedListTraceListener?displayProperty=nameWithType>|<span data-ttu-id="b932e-157">檔案的名稱<xref:System.Diagnostics.DelimitedListTraceListener>寫入。</span><span class="sxs-lookup"><span data-stu-id="b932e-157">The name of the file the <xref:System.Diagnostics.DelimitedListTraceListener> writes to.</span></span>|  
+|<xref:System.Diagnostics.EventLogTraceListener?displayProperty=nameWithType>|<span data-ttu-id="b932e-158">現有的事件記錄檔來源名稱的名稱。</span><span class="sxs-lookup"><span data-stu-id="b932e-158">The name of the name of an existing event log source.</span></span>|  
+|<xref:System.Diagnostics.EventSchemaTraceListener?displayProperty=nameWithType>|<span data-ttu-id="b932e-159">檔案的名稱，<xref:System.Diagnostics.EventSchemaTraceListener>寫入。</span><span class="sxs-lookup"><span data-stu-id="b932e-159">The name of the file that the <xref:System.Diagnostics.EventSchemaTraceListener> writes to.</span></span>|  
+|<xref:System.Diagnostics.TextWriterTraceListener?displayProperty=nameWithType>|<span data-ttu-id="b932e-160">檔案的名稱，<xref:System.Diagnostics.TextWriterTraceListener>寫入。</span><span class="sxs-lookup"><span data-stu-id="b932e-160">The name of the file that the <xref:System.Diagnostics.TextWriterTraceListener> writes to.</span></span>|  
+|<xref:System.Diagnostics.XmlWriterTraceListener?displayProperty=nameWithType>|<span data-ttu-id="b932e-161">檔案的名稱，<xref:System.Diagnostics.XmlWriterTraceListener>寫入。</span><span class="sxs-lookup"><span data-stu-id="b932e-161">The name of the file that the <xref:System.Diagnostics.XmlWriterTraceListener> writes to.</span></span>|  
   
-## <a name="example"></a><span data-ttu-id="95268-162">範例</span><span class="sxs-lookup"><span data-stu-id="95268-162">Example</span></span>  
- <span data-ttu-id="95268-163">下列範例示範如何使用**\<新增 >**項目將接聽項`MyListener`和`MyEventListener`至**接聽程式**集合。</span><span class="sxs-lookup"><span data-stu-id="95268-163">The following example shows how to use **\<add>** elements to add the listeners `MyListener` and `MyEventListener` to the **Listeners** collection.</span></span> <span data-ttu-id="95268-164">`MyListener`建立名為的檔案`MyListener.log`並將輸出寫入檔案。</span><span class="sxs-lookup"><span data-stu-id="95268-164">`MyListener` creates a file called `MyListener.log` and writes the output to the file.</span></span> <span data-ttu-id="95268-165">`MyEventListener`事件記錄檔中建立項目。</span><span class="sxs-lookup"><span data-stu-id="95268-165">`MyEventListener` creates an entry in the event log.</span></span>  
+## <a name="example"></a><span data-ttu-id="b932e-162">範例</span><span class="sxs-lookup"><span data-stu-id="b932e-162">Example</span></span>  
+ <span data-ttu-id="b932e-163">下列範例示範如何使用**\<新增 >** 項目將接聽項`MyListener`和`MyEventListener`至**接聽程式**集合。</span><span class="sxs-lookup"><span data-stu-id="b932e-163">The following example shows how to use **\<add>** elements to add the listeners `MyListener` and `MyEventListener` to the **Listeners** collection.</span></span> <span data-ttu-id="b932e-164">`MyListener` 建立名為的檔案`MyListener.log`並將輸出寫入檔案。</span><span class="sxs-lookup"><span data-stu-id="b932e-164">`MyListener` creates a file called `MyListener.log` and writes the output to the file.</span></span> <span data-ttu-id="b932e-165">`MyEventListener` 事件記錄檔中建立項目。</span><span class="sxs-lookup"><span data-stu-id="b932e-165">`MyEventListener` creates an entry in the event log.</span></span>  
   
 ```xml  
 <configuration>  
@@ -114,11 +103,11 @@ ms.lasthandoff: 12/22/2017
 </configuration>  
 ```  
   
-## <a name="see-also"></a><span data-ttu-id="95268-166">請參閱</span><span class="sxs-lookup"><span data-stu-id="95268-166">See Also</span></span>  
+## <a name="see-also"></a><span data-ttu-id="b932e-166">另請參閱</span><span class="sxs-lookup"><span data-stu-id="b932e-166">See Also</span></span>  
  <xref:System.Diagnostics.Trace>  
  <xref:System.Diagnostics.Debug>  
  <xref:System.Diagnostics.EventLogTraceListener>  
  <xref:System.Diagnostics.ConsoleTraceListener>  
  <xref:System.Diagnostics.TextWriterTraceListener>  
- [<span data-ttu-id="95268-167">追蹤和偵錯設定結構描述</span><span class="sxs-lookup"><span data-stu-id="95268-167">Trace and Debug Settings Schema</span></span>](../../../../../docs/framework/configure-apps/file-schema/trace-debug/index.md)  
- [<span data-ttu-id="95268-168">追蹤接聽項</span><span class="sxs-lookup"><span data-stu-id="95268-168">Trace Listeners</span></span>](../../../../../docs/framework/debug-trace-profile/trace-listeners.md)
+ [<span data-ttu-id="b932e-167">追蹤和偵錯設定結構描述</span><span class="sxs-lookup"><span data-stu-id="b932e-167">Trace and Debug Settings Schema</span></span>](../../../../../docs/framework/configure-apps/file-schema/trace-debug/index.md)  
+ [<span data-ttu-id="b932e-168">追蹤接聽項</span><span class="sxs-lookup"><span data-stu-id="b932e-168">Trace Listeners</span></span>](../../../../../docs/framework/debug-trace-profile/trace-listeners.md)
