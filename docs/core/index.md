@@ -4,11 +4,11 @@ description: .NET Core 是 .NET 的模組化、高效能實作，可用於建立
 author: richlander
 ms.author: mairaw
 ms.date: 06/20/2016
-ms.openlocfilehash: 7a2548a177f6e62e9c76c336c6e270a139d9fce0
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: 1f413e4efa8b33877917330855f4881c3fbf0854
+ms.sourcegitcommit: 88f251b08bf0718ce119f3d7302f514b74895038
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/04/2018
+ms.lasthandoff: 05/10/2018
 ---
 # <a name="net-core-guide"></a>.NET Core 指南
 
@@ -31,14 +31,14 @@ ms.lasthandoff: 05/04/2018
 
 - 一個 [.NET 執行階段](https://github.com/dotnet/coreclr)，提供類型系統、組件載入、記憶體回收行程、原生 Interop 及其他基本服務。 
 - 一組 [Framework 程式庫](https://github.com/dotnet/corefx)，提供基本資料類型、應用程式組合類型及基本的公用程式。 
-- [SDK 工具組](https://github.com/dotnet/cli)及[語言編譯器](https://github.com/dotnet/roslyn)，提供基本的開發人員體驗，可在 [.NET Core SDK](sdk.md) 中取得。
+- [SDK 工具組](https://github.com/dotnet/cli)及語言編譯器 ([Roslyn](https://github.com/dotnet/roslyn) 與 [F#](https://github.com/microsoft/visualfsharp))，提供基本的開發人員體驗，可在 [.NET Core SDK](sdk.md) 中取得。
 - 'Dotnet' 應用程式主機，用來啟動 .NET Core 應用程式。 它會選取執行階段及裝載執行階段、提供組件載入原則，然後啟動應用程式。 您也可以差不多的方式用相同的主機啟動 SDK 工具。
 
 ### <a name="languages"></a>語言
 
 C#、Visual Basic 和 F# 語言可以用來撰寫 .NET Core 應用程式和程式庫。 在 .NET Core 上執行的編譯器，讓您在可以執行 .NET Core 的任何地方進行開發。 一般情況下，您不會直接使用編譯器，而是使用 SDK 工具間接使用它。
 
-C#、Visual Basic 和 F# 編譯器以及 .NET Core 工具已或可以整合至數個文字編輯器和 IDE 中，包括 Visual Studio、[Visual Studio Code](https://marketplace.visualstudio.com/items?itemName=ms-vscode.csharp)、Sublime Text 和 Vim，讓 .NET Core 開發成為您最愛的編碼環境和作業系統的選項。 這項整合有部分是由 [OmniSharp 專案](http://www.omnisharp.net/)的熱心人士提供。
+C#、Visual Basic 和 F# 編譯器以及 .NET Core 工具已或可以整合至數個文字編輯器和 IDE 中，包括 Visual Studio、[Visual Studio Code](https://marketplace.visualstudio.com/items?itemName=ms-vscode.csharp)、Sublime Text 和 Vim，讓 .NET Core 開發成為您最愛的編碼環境和作業系統的選項。 這項整合有部分是由 [OmniSharp 專案](http://www.omnisharp.net/)與 [Ionide](http://ionide.io) 的熱心人士提供。
 
 ### <a name="net-apis-and-compatibility"></a>.NET API 和相容性
 

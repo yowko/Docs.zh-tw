@@ -8,11 +8,11 @@ helpviewer_keywords:
 - Help, Visual C# documentation
 - C# language
 - Visual C#
-ms.openlocfilehash: 598ddfbe16a1a09326d811b4eafcf87f3ca6e971
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: 4d349f8aff5e3d48a2bc738e848d2a251805e260
+ms.sourcegitcommit: ff1d40507b3eb6e2185478e37c66c66be6de46f1
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/04/2018
+ms.lasthandoff: 05/11/2018
 ---
 # <a name="c-guide"></a>C# 指南
 
@@ -43,8 +43,8 @@ C# 指南含有數個章節。 您可以按順序閱讀，或直接跳至您最�
 * [C# 的教學課程](tour-of-csharp/index.md)
   * 本節提供了此語言的摡觀。 課程涵蓋組成 C# 程式的元素以及此語言的功能。 課程將顯示 C# 所有語法元素的小型範例，以及對於主要 C# 語言主題的討論。
 
-* [最新功能](whats-new/index.md)
-  * 了解此語言的新功能。 了解像是 C# Interactive (C# 的 REPL) 的新工具以及 .NET 編譯器平台 SDK。 本節說明該語言的發展方向，以及新工具如何讓您更具生產力。
+* [C# 的新功能](whats-new/index.md)
+  * 提供在最新的語言版本中加入的新功能和歷程記錄的 C# 語言的概觀。
 
 <!--
 * [.NET Compiler Platform SDK](roslyn-sdk/index.md)
