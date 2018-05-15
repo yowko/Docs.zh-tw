@@ -1,13 +1,6 @@
 ---
 title: 宣告項目名稱 (Visual Basic)
-ms.custom: ''
 ms.date: 07/20/2015
-ms.prod: .net
-ms.reviewer: ''
-ms.suite: ''
-ms.technology:
-- devlang-visual-basic
-ms.topic: article
 helpviewer_keywords:
 - declared elements [Visual Basic], case sensitivity
 - names [Visual Basic], Visual Basic rules
@@ -30,38 +23,35 @@ helpviewer_keywords:
 - names [Visual Basic], naming conventions
 - identifiers [Visual Basic], elements
 ms.assetid: 09d8843b-c0dc-4afe-9dab-87c439a69e66
-caps.latest.revision: 27
-author: dotnet-bot
-ms.author: dotnetcontent
-ms.openlocfilehash: ad883dd8e1de419c74b5bcdb8762994e762b4cf7
-ms.sourcegitcommit: 86adcc06e35390f13c1e372c36d2e044f1fc31ef
+ms.openlocfilehash: 2f48f885b66f99ecc8c6c7e13fea7e75f0e3d24a
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/26/2018
+ms.lasthandoff: 05/04/2018
 ---
-# <a name="declared-element-names-visual-basic"></a><span data-ttu-id="506fd-102">宣告項目名稱 (Visual Basic)</span><span class="sxs-lookup"><span data-stu-id="506fd-102">Declared Element Names (Visual Basic)</span></span>
-<span data-ttu-id="506fd-103">每個宣告的項目都有名稱，也稱為*識別碼*，這是程式碼會使用來參考它。</span><span class="sxs-lookup"><span data-stu-id="506fd-103">Every declared element has a name, also called an *identifier*, which is what the code uses to refer to it.</span></span>  
+# <a name="declared-element-names-visual-basic"></a><span data-ttu-id="e8767-102">宣告項目名稱 (Visual Basic)</span><span class="sxs-lookup"><span data-stu-id="e8767-102">Declared Element Names (Visual Basic)</span></span>
+<span data-ttu-id="e8767-103">每個宣告的項目都有名稱，也稱為*識別碼*，這是程式碼會使用來參考它。</span><span class="sxs-lookup"><span data-stu-id="e8767-103">Every declared element has a name, also called an *identifier*, which is what the code uses to refer to it.</span></span>  
   
-## <a name="rules"></a><span data-ttu-id="506fd-104">規則</span><span class="sxs-lookup"><span data-stu-id="506fd-104">Rules</span></span>  
- <span data-ttu-id="506fd-105">在 Visual Basic 中的元素名稱必須遵守下列規則：</span><span class="sxs-lookup"><span data-stu-id="506fd-105">An element name in Visual Basic must observe the following rules:</span></span>  
+## <a name="rules"></a><span data-ttu-id="e8767-104">規則</span><span class="sxs-lookup"><span data-stu-id="e8767-104">Rules</span></span>  
+ <span data-ttu-id="e8767-105">在 Visual Basic 中的元素名稱必須遵守下列規則：</span><span class="sxs-lookup"><span data-stu-id="e8767-105">An element name in Visual Basic must observe the following rules:</span></span>  
   
--   <span data-ttu-id="506fd-106">它必須以字母字元或底線開頭 (`_`)。</span><span class="sxs-lookup"><span data-stu-id="506fd-106">It must begin with an alphabetic character or an underscore (`_`).</span></span>  
+-   <span data-ttu-id="e8767-106">它必須以字母字元或底線開頭 (`_`)。</span><span class="sxs-lookup"><span data-stu-id="e8767-106">It must begin with an alphabetic character or an underscore (`_`).</span></span>  
   
--   <span data-ttu-id="506fd-107">它只能包含英數字元、 十進位數字和底線。</span><span class="sxs-lookup"><span data-stu-id="506fd-107">It must only contain alphabetic characters, decimal digits, and underscores.</span></span>  
+-   <span data-ttu-id="e8767-107">它只能包含英數字元、 十進位數字和底線。</span><span class="sxs-lookup"><span data-stu-id="e8767-107">It must only contain alphabetic characters, decimal digits, and underscores.</span></span>  
   
--   <span data-ttu-id="506fd-108">如果它是以底線開頭，它必須包含至少一個字母字元或十進位數字。</span><span class="sxs-lookup"><span data-stu-id="506fd-108">It must contain at least one alphabetic character or decimal digit if it begins with an underscore.</span></span>  
+-   <span data-ttu-id="e8767-108">如果它是以底線開頭，它必須包含至少一個字母字元或十進位數字。</span><span class="sxs-lookup"><span data-stu-id="e8767-108">It must contain at least one alphabetic character or decimal digit if it begins with an underscore.</span></span>  
   
--   <span data-ttu-id="506fd-109">它不得為長度超過 1023 個字元。</span><span class="sxs-lookup"><span data-stu-id="506fd-109">It must not be more than 1023 characters long.</span></span>  
+-   <span data-ttu-id="e8767-109">它不得為長度超過 1023 個字元。</span><span class="sxs-lookup"><span data-stu-id="e8767-109">It must not be more than 1023 characters long.</span></span>  
   
- <span data-ttu-id="506fd-110">1023 個字元的長度限制也適用於整個字串的完整限定名稱，例如`outerNamespace.middleNamespace.innerNamespace.thisClass.thisElement`。</span><span class="sxs-lookup"><span data-stu-id="506fd-110">The length limit of 1023 characters also applies to the entire string of a fully qualified name, such as `outerNamespace.middleNamespace.innerNamespace.thisClass.thisElement`.</span></span>  
+ <span data-ttu-id="e8767-110">1023 個字元的長度限制也適用於整個字串的完整限定名稱，例如`outerNamespace.middleNamespace.innerNamespace.thisClass.thisElement`。</span><span class="sxs-lookup"><span data-stu-id="e8767-110">The length limit of 1023 characters also applies to the entire string of a fully qualified name, such as `outerNamespace.middleNamespace.innerNamespace.thisClass.thisElement`.</span></span>  
   
- <span data-ttu-id="506fd-111">下列範例顯示一些有效的項目名稱。</span><span class="sxs-lookup"><span data-stu-id="506fd-111">The following example shows some valid element names.</span></span>  
+ <span data-ttu-id="e8767-111">下列範例顯示一些有效的項目名稱。</span><span class="sxs-lookup"><span data-stu-id="e8767-111">The following example shows some valid element names.</span></span>  
   
  `aB123__45`  
   
  `_567`  
   
- <span data-ttu-id="506fd-112">下列範例示範一些無效的項目名稱。</span><span class="sxs-lookup"><span data-stu-id="506fd-112">The following example shows some invalid element names.</span></span> <span data-ttu-id="506fd-113">第一個包含只底線、 十進位數字，開頭為第二個和第三個包含無效的字元 （$）。</span><span class="sxs-lookup"><span data-stu-id="506fd-113">The first contains only an underscore, the second begins with a decimal digit, and the third contains an invalid character ($).</span></span>  
+ <span data-ttu-id="e8767-112">下列範例示範一些無效的項目名稱。</span><span class="sxs-lookup"><span data-stu-id="e8767-112">The following example shows some invalid element names.</span></span> <span data-ttu-id="e8767-113">第一個包含只底線、 十進位數字，開頭為第二個和第三個包含無效的字元 （$）。</span><span class="sxs-lookup"><span data-stu-id="e8767-113">The first contains only an underscore, the second begins with a decimal digit, and the third contains an invalid character ($).</span></span>  
   
  `' Three INVALID element names`  
   
@@ -72,34 +62,34 @@ ms.lasthandoff: 04/26/2018
  `xyz$wv`  
   
 > [!CAUTION]
->  <span data-ttu-id="506fd-114">項目名稱以底線開頭 (`_`) 不屬於[語言獨立性以及與語言無關的元件](../../../../standard/language-independence-and-language-independent-components.md)（cls） 標準，所以符合 CLS 標準的程式碼不能使用的元件，定義這類名稱。</span><span class="sxs-lookup"><span data-stu-id="506fd-114">Element names starting with an underscore (`_`) are not part of the [Language Independence and Language-Independent Components](../../../../standard/language-independence-and-language-independent-components.md) (CLS), so CLS-compliant code cannot use a component that defines such names.</span></span> <span data-ttu-id="506fd-115">不過，在項目名稱中的其他任何位置底線是符合 CLS 標準。</span><span class="sxs-lookup"><span data-stu-id="506fd-115">However, an underscore in any other position in an element name is CLS-compliant.</span></span>  
+>  <span data-ttu-id="e8767-114">項目名稱以底線開頭 (`_`) 不屬於[語言獨立性以及與語言無關的元件](../../../../standard/language-independence-and-language-independent-components.md)（cls） 標準，所以符合 CLS 標準的程式碼不能使用的元件，定義這類名稱。</span><span class="sxs-lookup"><span data-stu-id="e8767-114">Element names starting with an underscore (`_`) are not part of the [Language Independence and Language-Independent Components](../../../../standard/language-independence-and-language-independent-components.md) (CLS), so CLS-compliant code cannot use a component that defines such names.</span></span> <span data-ttu-id="e8767-115">不過，在項目名稱中的其他任何位置底線是符合 CLS 標準。</span><span class="sxs-lookup"><span data-stu-id="e8767-115">However, an underscore in any other position in an element name is CLS-compliant.</span></span>  
   
-### <a name="name-length-guidelines"></a><span data-ttu-id="506fd-116">名稱長度指導方針</span><span class="sxs-lookup"><span data-stu-id="506fd-116">Name Length Guidelines</span></span>  
- <span data-ttu-id="506fd-117">事實上，您的名稱應該越短越好但仍可清楚識別的項目。</span><span class="sxs-lookup"><span data-stu-id="506fd-117">As a practical matter, your name should be as short as possible while still clearly identifying the nature of the element.</span></span> <span data-ttu-id="506fd-118">這可改善程式碼的可讀性，並減少線條長度和原始程式檔的大小。</span><span class="sxs-lookup"><span data-stu-id="506fd-118">This improves the readability of your code and reduces line length and source-file size.</span></span>  
+### <a name="name-length-guidelines"></a><span data-ttu-id="e8767-116">名稱長度指導方針</span><span class="sxs-lookup"><span data-stu-id="e8767-116">Name Length Guidelines</span></span>  
+ <span data-ttu-id="e8767-117">事實上，您的名稱應該越短越好但仍可清楚識別的項目。</span><span class="sxs-lookup"><span data-stu-id="e8767-117">As a practical matter, your name should be as short as possible while still clearly identifying the nature of the element.</span></span> <span data-ttu-id="e8767-118">這可改善程式碼的可讀性，並減少線條長度和原始程式檔的大小。</span><span class="sxs-lookup"><span data-stu-id="e8767-118">This improves the readability of your code and reduces line length and source-file size.</span></span>  
   
- <span data-ttu-id="506fd-119">相反地，您的名稱不應該短，無法適當地描述項目所代表的意義和您的程式碼如何使用它。</span><span class="sxs-lookup"><span data-stu-id="506fd-119">On the other hand, your name should not be so short that it does not adequately describe what the element represents and how your code uses it.</span></span> <span data-ttu-id="506fd-120">這是很重要的程式碼的可讀性。</span><span class="sxs-lookup"><span data-stu-id="506fd-120">This is important for the readability of your code.</span></span> <span data-ttu-id="506fd-121">如果其他人嘗試了解它，或您自己想要在您撰寫之後很長的時間，適當的項目名稱可以節省相當多的時間。</span><span class="sxs-lookup"><span data-stu-id="506fd-121">If somebody else is trying to understand it, or if you yourself are looking at it a long time after you wrote it, suitable element names can save a considerable amount of time.</span></span>  
+ <span data-ttu-id="e8767-119">相反地，您的名稱不應該短，無法適當地描述項目所代表的意義和您的程式碼如何使用它。</span><span class="sxs-lookup"><span data-stu-id="e8767-119">On the other hand, your name should not be so short that it does not adequately describe what the element represents and how your code uses it.</span></span> <span data-ttu-id="e8767-120">這是很重要的程式碼的可讀性。</span><span class="sxs-lookup"><span data-stu-id="e8767-120">This is important for the readability of your code.</span></span> <span data-ttu-id="e8767-121">如果其他人嘗試了解它，或您自己想要在您撰寫之後很長的時間，適當的項目名稱可以節省相當多的時間。</span><span class="sxs-lookup"><span data-stu-id="e8767-121">If somebody else is trying to understand it, or if you yourself are looking at it a long time after you wrote it, suitable element names can save a considerable amount of time.</span></span>  
   
-## <a name="escaped-names"></a><span data-ttu-id="506fd-122">逸出的名稱</span><span class="sxs-lookup"><span data-stu-id="506fd-122">Escaped Names</span></span>  
- <span data-ttu-id="506fd-123">通常，項目名稱必須符合任何所保留的關鍵字 Visual Basic 中，例如`Case`或`Friend`。</span><span class="sxs-lookup"><span data-stu-id="506fd-123">Generally, an element name must not match any of the keywords reserved by Visual Basic, such as `Case` or `Friend`.</span></span> <span data-ttu-id="506fd-124">不過，您可以定義*逸出名稱*，這以方括號 (`[ ]`)。</span><span class="sxs-lookup"><span data-stu-id="506fd-124">However, you can define an *escaped name*, which is enclosed by brackets (`[ ]`).</span></span> <span data-ttu-id="506fd-125">逸出的名稱可以比對任何 Visual Basic 關鍵字，在方括號會移除任何模稜兩可。</span><span class="sxs-lookup"><span data-stu-id="506fd-125">An escaped name can match any Visual Basic keyword, since the brackets remove any ambiguity.</span></span> <span data-ttu-id="506fd-126">當您稍後在程式碼中參考名稱時，也會使用方括號。</span><span class="sxs-lookup"><span data-stu-id="506fd-126">You also use the brackets when you refer to the name later in your code.</span></span>  
+## <a name="escaped-names"></a><span data-ttu-id="e8767-122">逸出的名稱</span><span class="sxs-lookup"><span data-stu-id="e8767-122">Escaped Names</span></span>  
+ <span data-ttu-id="e8767-123">通常，項目名稱必須符合任何所保留的關鍵字 Visual Basic 中，例如`Case`或`Friend`。</span><span class="sxs-lookup"><span data-stu-id="e8767-123">Generally, an element name must not match any of the keywords reserved by Visual Basic, such as `Case` or `Friend`.</span></span> <span data-ttu-id="e8767-124">不過，您可以定義*逸出名稱*，這以方括號 (`[ ]`)。</span><span class="sxs-lookup"><span data-stu-id="e8767-124">However, you can define an *escaped name*, which is enclosed by brackets (`[ ]`).</span></span> <span data-ttu-id="e8767-125">逸出的名稱可以比對任何 Visual Basic 關鍵字，在方括號會移除任何模稜兩可。</span><span class="sxs-lookup"><span data-stu-id="e8767-125">An escaped name can match any Visual Basic keyword, since the brackets remove any ambiguity.</span></span> <span data-ttu-id="e8767-126">當您稍後在程式碼中參考名稱時，也會使用方括號。</span><span class="sxs-lookup"><span data-stu-id="e8767-126">You also use the brackets when you refer to the name later in your code.</span></span>  
   
- <span data-ttu-id="506fd-127">一般情況下，您應該使用逸出的名稱時，才：</span><span class="sxs-lookup"><span data-stu-id="506fd-127">In general, you should use escaped names only when:</span></span>  
+ <span data-ttu-id="e8767-127">一般情況下，您應該使用逸出的名稱時，才：</span><span class="sxs-lookup"><span data-stu-id="e8767-127">In general, you should use escaped names only when:</span></span>  
   
--   <span data-ttu-id="506fd-128">您的程式碼移轉自舊版的 Visual Basic 沒有不使用保留關鍵字做為名稱。或</span><span class="sxs-lookup"><span data-stu-id="506fd-128">Your code has migrated from a previous version of Visual Basic that did not reserve the keyword being used as a name; or</span></span>  
+-   <span data-ttu-id="e8767-128">您的程式碼移轉自舊版的 Visual Basic 沒有不使用保留關鍵字做為名稱。或</span><span class="sxs-lookup"><span data-stu-id="e8767-128">Your code has migrated from a previous version of Visual Basic that did not reserve the keyword being used as a name; or</span></span>  
   
--   <span data-ttu-id="506fd-129">您正在使用不會保留給定的關鍵字是另一種語言撰寫的程式碼。</span><span class="sxs-lookup"><span data-stu-id="506fd-129">You are working with code written in another language in which the given keyword is not reserved.</span></span>  
+-   <span data-ttu-id="e8767-129">您正在使用不會保留給定的關鍵字是另一種語言撰寫的程式碼。</span><span class="sxs-lookup"><span data-stu-id="e8767-129">You are working with code written in another language in which the given keyword is not reserved.</span></span>  
   
- <span data-ttu-id="506fd-130">否則，您應該考慮重新命名項目，如果其名稱與關鍵字衝突。</span><span class="sxs-lookup"><span data-stu-id="506fd-130">Otherwise, you should consider renaming the element if its name conflicts with a keyword.</span></span> <span data-ttu-id="506fd-131">整合式的開發環境 (IDE) 提供簡單的方法。</span><span class="sxs-lookup"><span data-stu-id="506fd-131">The integrated development environment (IDE) provides an easy way to do this.</span></span> <span data-ttu-id="506fd-132">如需詳細資訊，請參閱[重構](/visualstudio/vb-ide/refactoring-vb)。</span><span class="sxs-lookup"><span data-stu-id="506fd-132">For more information, see [Refactoring](/visualstudio/vb-ide/refactoring-vb).</span></span>  
+ <span data-ttu-id="e8767-130">否則，您應該考慮重新命名項目，如果其名稱與關鍵字衝突。</span><span class="sxs-lookup"><span data-stu-id="e8767-130">Otherwise, you should consider renaming the element if its name conflicts with a keyword.</span></span> <span data-ttu-id="e8767-131">整合式的開發環境 (IDE) 提供簡單的方法。</span><span class="sxs-lookup"><span data-stu-id="e8767-131">The integrated development environment (IDE) provides an easy way to do this.</span></span> <span data-ttu-id="e8767-132">如需詳細資訊，請參閱[重構](/visualstudio/vb-ide/refactoring-vb)。</span><span class="sxs-lookup"><span data-stu-id="e8767-132">For more information, see [Refactoring](/visualstudio/vb-ide/refactoring-vb).</span></span>  
   
-## <a name="case-sensitivity-in-names"></a><span data-ttu-id="506fd-133">在名稱中的區分大小寫</span><span class="sxs-lookup"><span data-stu-id="506fd-133">Case Sensitivity in Names</span></span>  
- <span data-ttu-id="506fd-134">在 Visual Basic 中的項目名稱不區分大小寫。</span><span class="sxs-lookup"><span data-stu-id="506fd-134">Element names in Visual Basic are case-insensitive.</span></span> <span data-ttu-id="506fd-135">這表示，當編譯器比較兩個字母大小寫不同的名稱，它會將它們解譯成相同的名稱。</span><span class="sxs-lookup"><span data-stu-id="506fd-135">This means that when the compiler compares two names that differ in alphabetic case only, it interprets them as the same name.</span></span> <span data-ttu-id="506fd-136">例如，它會將 `ABC` 和 `abc` 視為相同的宣告元素。</span><span class="sxs-lookup"><span data-stu-id="506fd-136">For example, it considers `ABC` and `abc` to refer to the same declared element.</span></span>  
+## <a name="case-sensitivity-in-names"></a><span data-ttu-id="e8767-133">在名稱中的區分大小寫</span><span class="sxs-lookup"><span data-stu-id="e8767-133">Case Sensitivity in Names</span></span>  
+ <span data-ttu-id="e8767-134">在 Visual Basic 中的項目名稱不區分大小寫。</span><span class="sxs-lookup"><span data-stu-id="e8767-134">Element names in Visual Basic are case-insensitive.</span></span> <span data-ttu-id="e8767-135">這表示，當編譯器比較兩個字母大小寫不同的名稱，它會將它們解譯成相同的名稱。</span><span class="sxs-lookup"><span data-stu-id="e8767-135">This means that when the compiler compares two names that differ in alphabetic case only, it interprets them as the same name.</span></span> <span data-ttu-id="e8767-136">例如，它會將 `ABC` 和 `abc` 視為相同的宣告元素。</span><span class="sxs-lookup"><span data-stu-id="e8767-136">For example, it considers `ABC` and `abc` to refer to the same declared element.</span></span>  
   
- <span data-ttu-id="506fd-137">不過，common language runtime (CLR) 使用區分大小寫的繫結。</span><span class="sxs-lookup"><span data-stu-id="506fd-137">However, the common language runtime (CLR) uses case-sensitive binding.</span></span> <span data-ttu-id="506fd-138">因此，當您產生一個組件或 DLL 並讓其他組件使用時，您的名稱將會區分大小寫。</span><span class="sxs-lookup"><span data-stu-id="506fd-138">Therefore, when you produce an assembly or a DLL and make it available to other assemblies, your names are no longer case-insensitive.</span></span> <span data-ttu-id="506fd-139">例如，如果您使用名為 `ABC`的元素來定義類別，而其他組件透過 Common Language Runtime 使用您的類別，則這些組件必須以 `ABC`來表示該元素。</span><span class="sxs-lookup"><span data-stu-id="506fd-139">For example, if you define a class with an element called `ABC`, and other assemblies make use of your class through the common language runtime, they must refer to the element as `ABC`.</span></span> <span data-ttu-id="506fd-140">如果您隨後重新編譯類別，並變更的項目名稱以`abc`，則使用您的類別的組件就無法再存取該元素。</span><span class="sxs-lookup"><span data-stu-id="506fd-140">If you subsequently recompile your class and change the element's name to `abc`, the other assemblies using your class could no longer access that element.</span></span> <span data-ttu-id="506fd-141">因此，當您發行組件的更新版本時，不應該變更任何公用元素的字母大小寫。</span><span class="sxs-lookup"><span data-stu-id="506fd-141">Therefore, when you release an updated version of an assembly, you should not change the alphabetic case of any public elements.</span></span>  
+ <span data-ttu-id="e8767-137">不過，common language runtime (CLR) 使用區分大小寫的繫結。</span><span class="sxs-lookup"><span data-stu-id="e8767-137">However, the common language runtime (CLR) uses case-sensitive binding.</span></span> <span data-ttu-id="e8767-138">因此，當您產生一個組件或 DLL 並讓其他組件使用時，您的名稱將會區分大小寫。</span><span class="sxs-lookup"><span data-stu-id="e8767-138">Therefore, when you produce an assembly or a DLL and make it available to other assemblies, your names are no longer case-insensitive.</span></span> <span data-ttu-id="e8767-139">例如，如果您使用名為 `ABC`的元素來定義類別，而其他組件透過 Common Language Runtime 使用您的類別，則這些組件必須以 `ABC`來表示該元素。</span><span class="sxs-lookup"><span data-stu-id="e8767-139">For example, if you define a class with an element called `ABC`, and other assemblies make use of your class through the common language runtime, they must refer to the element as `ABC`.</span></span> <span data-ttu-id="e8767-140">如果您隨後重新編譯類別，並變更的項目名稱以`abc`，則使用您的類別的組件就無法再存取該元素。</span><span class="sxs-lookup"><span data-stu-id="e8767-140">If you subsequently recompile your class and change the element's name to `abc`, the other assemblies using your class could no longer access that element.</span></span> <span data-ttu-id="e8767-141">因此，當您發行組件的更新版本時，不應該變更任何公用元素的字母大小寫。</span><span class="sxs-lookup"><span data-stu-id="e8767-141">Therefore, when you release an updated version of an assembly, you should not change the alphabetic case of any public elements.</span></span>  
   
-## <a name="names-and-locales"></a><span data-ttu-id="506fd-142">名稱和地區設定</span><span class="sxs-lookup"><span data-stu-id="506fd-142">Names and Locales</span></span>  
- <span data-ttu-id="506fd-143">比較名稱與地區設定無關。</span><span class="sxs-lookup"><span data-stu-id="506fd-143">Comparison of names is independent of locale.</span></span> <span data-ttu-id="506fd-144">如果兩個名稱符合一個地區設定中，保證在所有地區設定中比對。</span><span class="sxs-lookup"><span data-stu-id="506fd-144">If two names match in one locale, they are guaranteed to match in all locales.</span></span>  
+## <a name="names-and-locales"></a><span data-ttu-id="e8767-142">名稱和地區設定</span><span class="sxs-lookup"><span data-stu-id="e8767-142">Names and Locales</span></span>  
+ <span data-ttu-id="e8767-143">比較名稱與地區設定無關。</span><span class="sxs-lookup"><span data-stu-id="e8767-143">Comparison of names is independent of locale.</span></span> <span data-ttu-id="e8767-144">如果兩個名稱符合一個地區設定中，保證在所有地區設定中比對。</span><span class="sxs-lookup"><span data-stu-id="e8767-144">If two names match in one locale, they are guaranteed to match in all locales.</span></span>  
   
-## <a name="see-also"></a><span data-ttu-id="506fd-145">另請參閱</span><span class="sxs-lookup"><span data-stu-id="506fd-145">See Also</span></span>  
- [<span data-ttu-id="506fd-146">宣告項目</span><span class="sxs-lookup"><span data-stu-id="506fd-146">Declared Elements</span></span>](../../../../visual-basic/programming-guide/language-features/declared-elements/index.md)  
- [<span data-ttu-id="506fd-147">宣告項目特性</span><span class="sxs-lookup"><span data-stu-id="506fd-147">Declared Element Characteristics</span></span>](../../../../visual-basic/programming-guide/language-features/declared-elements/declared-element-characteristics.md)  
- [<span data-ttu-id="506fd-148">對已宣告項目的參考</span><span class="sxs-lookup"><span data-stu-id="506fd-148">References to Declared Elements</span></span>](../../../../visual-basic/programming-guide/language-features/declared-elements/references-to-declared-elements.md)  
- [<span data-ttu-id="506fd-149">陳述式</span><span class="sxs-lookup"><span data-stu-id="506fd-149">Statements</span></span>](../../../../visual-basic/language-reference/statements/index.md)
+## <a name="see-also"></a><span data-ttu-id="e8767-145">另請參閱</span><span class="sxs-lookup"><span data-stu-id="e8767-145">See Also</span></span>  
+ [<span data-ttu-id="e8767-146">宣告項目</span><span class="sxs-lookup"><span data-stu-id="e8767-146">Declared Elements</span></span>](../../../../visual-basic/programming-guide/language-features/declared-elements/index.md)  
+ [<span data-ttu-id="e8767-147">宣告項目特性</span><span class="sxs-lookup"><span data-stu-id="e8767-147">Declared Element Characteristics</span></span>](../../../../visual-basic/programming-guide/language-features/declared-elements/declared-element-characteristics.md)  
+ [<span data-ttu-id="e8767-148">對已宣告項目的參考</span><span class="sxs-lookup"><span data-stu-id="e8767-148">References to Declared Elements</span></span>](../../../../visual-basic/programming-guide/language-features/declared-elements/references-to-declared-elements.md)  
+ [<span data-ttu-id="e8767-149">陳述式</span><span class="sxs-lookup"><span data-stu-id="e8767-149">Statements</span></span>](../../../../visual-basic/language-reference/statements/index.md)
