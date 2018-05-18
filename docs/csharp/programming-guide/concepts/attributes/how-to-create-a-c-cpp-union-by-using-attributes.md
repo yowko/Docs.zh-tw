@@ -1,21 +1,12 @@
 ---
-title: "如何：使用屬性建立 C-C++ 等位 (C#)"
-ms.custom: 
+title: 如何：使用屬性建立 C-C++ 等位 (C#)
 ms.date: 07/20/2015
-ms.prod: .net
-ms.reviewer: 
-ms.suite: 
-ms.technology: devlang-csharp
-ms.topic: article
 ms.assetid: 85f35e56-26e0-4d31-9f3a-89bd4005e71a
-caps.latest.revision: "3"
-author: BillWagner
-ms.author: wiwagn
-ms.openlocfilehash: e9274b585c2fecf53b94d94f9bdfdaf4a47f1041
-ms.sourcegitcommit: 685143b62385500f59bc36274b8adb191f573a16
+ms.openlocfilehash: 30a8be9021495aa4cf61010508762999cdf91ff4
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 12/09/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="how-to-create-a-cc-union-by-using-attributes-c"></a>如何：使用屬性建立 C/C++ 等位 (C#)
 您可以使用屬性，自訂如何在記憶體中配置結構。 例如，您可以使用 `StructLayout(LayoutKind.Explicit)` 和 `FieldOffset` 屬性，以 C/C++ 建立所謂的等位。  
@@ -74,7 +65,7 @@ ms.lasthandoff: 12/09/2017
   
  `i1` 和 `i2` 這兩個整數欄位和 `lg` 共用相同的記憶體位置。 使用平台叫用時，這種結構配置控制項很有用。  
   
-## <a name="see-also"></a>另請參閱  
+## <a name="see-also"></a>請參閱  
  <xref:System.Reflection>  
  <xref:System.Attribute>  
  [C# 程式設計指南](../../../../csharp/programming-guide/index.md)  

@@ -1,31 +1,20 @@
 ---
-title: "執行緒區域儲存區：執行緒相關的靜態欄位和資料位置"
-ms.custom: 
+title: 執行緒區域儲存區：執行緒相關的靜態欄位和資料位置
 ms.date: 03/30/2017
-ms.prod: .net
-ms.reviewer: 
-ms.suite: 
 ms.technology: dotnet-standard
-ms.tgt_pltfrm: 
-ms.topic: article
 helpviewer_keywords:
 - threading [.NET Framework], local storage
 - threading [.NET Framework], thread-relative static fields
 - local thread storage
 - TLS
 ms.assetid: c633a4dc-a790-4ed1-96b5-f72bd968b284
-caps.latest.revision: 
 author: rpetrusha
 ms.author: ronpet
-manager: wpickett
-ms.workload:
-- dotnet
-- dotnetcore
-ms.openlocfilehash: 127f7ea9bb6a6bf91547d049f582439882d2fb6e
-ms.sourcegitcommit: e7f04439d78909229506b56935a1105a4149ff3d
+ms.openlocfilehash: a17bc509c8c82bfb30811ec3511207ca2d823e5b
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 12/23/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="thread-local-storage-thread-relative-static-fields-and-data-slots"></a>執行緒區域儲存區：執行緒相關的靜態欄位和資料位置
 您可以使用受控執行緒區域儲存區 (TLS) 來儲存對執行緒和應用程式定義域而言是唯一的資料。 .NET Framework 提供兩種方式來使用受控 TLS：執行緒相關的靜態欄位和資料插槽。  
@@ -67,7 +56,7 @@ ms.lasthandoff: 12/23/2017
   
  具名插槽很方便，因為當您需要擷取該插槽時，您可以透過將其名稱傳遞至 <xref:System.Threading.Thread.GetNamedDataSlot%2A> 方法來完成，而不需維護未命名插槽的參考。 不過，如果另一個元件針對其執行緒相關儲存區使用相同名稱，而且執行緒會執行來自您的元件和另一個元件的程式碼，則這兩個元件可能會損毀彼此的資料 (此案例假設這兩個元件正在相同的應用程式定義域中執行，而且它們並未設計來共用相同資料)。  
   
-## <a name="see-also"></a>另請參閱  
+## <a name="see-also"></a>請參閱  
  <xref:System.ContextStaticAttribute>  
  <xref:System.Threading.Thread.GetNamedDataSlot%2A?displayProperty=nameWithType>  
  <xref:System.ThreadStaticAttribute>  

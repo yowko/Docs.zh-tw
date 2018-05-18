@@ -1,24 +1,15 @@
 ---
-title: "存取應用程式設定 (Visual Basic)"
-ms.custom: 
+title: 存取應用程式設定 (Visual Basic)
 ms.date: 07/20/2015
-ms.prod: .net
-ms.reviewer: 
-ms.suite: 
-ms.technology: devlang-visual-basic
-ms.topic: article
 helpviewer_keywords:
 - My.Settings object [Visual Basic], application settings
 - examples [Visual Basic], application settings
 ms.assetid: e38d0cc7-247a-46ca-ba04-f2913f0adb2e
-caps.latest.revision: "15"
-author: dotnet-bot
-ms.author: dotnetcontent
-ms.openlocfilehash: ea87d6a1d20a7d85b063990f6e401f90548627be
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.openlocfilehash: 3b933287d18a2519969852117fc6f847e9ead461
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="accessing-application-settings-visual-basic"></a>存取應用程式設定 (Visual Basic)
 本節包含描述可讓您完成的 `My.Settings` 物件和工作的主題。  
@@ -38,6 +29,6 @@ ms.lasthandoff: 11/21/2017
 |儲存已更新的使用者設定值|[如何：保存 Visual Basic 中的使用者設定](../../../../visual-basic/developing-apps/programming/app-settings/how-to-persist-user-settings.md)|  
 |判斷使用者設定的值|[如何：在 Visual Basic 中讀取應用程式設定](../../../../visual-basic/developing-apps/programming/app-settings/how-to-read-application-settings.md)|  
   
-## <a name="see-also"></a>請參閱  
+## <a name="see-also"></a>另請參閱  
  [管理應用程式設定 (.NET)](/visualstudio/ide/managing-application-settings-dotnet)  
  [My.Settings 物件](../../../../visual-basic/language-reference/objects/my-settings-object.md)

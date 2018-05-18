@@ -1,28 +1,19 @@
 ---
-title: "處理 XML 命名空間 (C#)"
-ms.custom: 
+title: 處理 XML 命名空間 (C#)
 ms.date: 07/20/2015
-ms.prod: .net
-ms.reviewer: 
-ms.suite: 
-ms.technology: devlang-csharp
-ms.topic: article
 ms.assetid: 05cf4dc7-7b25-40f0-abc9-1bc35de4b48a
-caps.latest.revision: "4"
-author: BillWagner
-ms.author: wiwagn
-ms.openlocfilehash: 6257f924cfcaa3b9f16dd5ed12b8ef7970fde20c
-ms.sourcegitcommit: bd1ef61f4bb794b25383d3d72e71041a5ced172e
+ms.openlocfilehash: e00886281fbccd0e10706575483dd174d7d53052
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/18/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="working-with-xml-namespaces-c"></a>處理 XML 命名空間 (C#)
 本節中的主題描述 [!INCLUDE[sqltecxlinq](~/includes/sqltecxlinq-md.md)] 如何支援命名空間。  
   
-## <a name="in-this-section"></a>本章節內容  
+## <a name="in-this-section"></a>本節內容  
   
-|主題|說明|  
+|主題|描述|  
 |-----------|-----------------|  
 |[命名空間概觀 (LINQ to XML)](../../../../csharp/programming-guide/concepts/linq/namespaces-overview-linq-to-xml.md)|本主題說明命名空間 <xref:System.Xml.Linq.XName> 類別與 <xref:System.Xml.Linq.XNamespace> 類別。|  
 |[如何：建立包含命名空間的文件 (C#) (LINQ to XML)](../../../../csharp/programming-guide/concepts/linq/how-to-create-a-document-with-namespaces-linq-to-xml.md)|顯示如何利用命名空間建立文件。|  
@@ -30,5 +21,5 @@ ms.lasthandoff: 10/18/2017
 |[C# 中的預設命名空間範圍](../../../../csharp/programming-guide/concepts/linq/scope-of-default-namespaces.md)|示範在預設的命名空間中，撰寫 XML 之查詢的適當方式。|  
 |[如何：針對命名空間中的 XML 撰寫查詢 (C#)](../../../../csharp/programming-guide/concepts/linq/how-to-write-queries-on-xml-in-namespaces.md)|示範如何在 C# LINQ to XML 查詢中指定 XML 命名空間。|  
   
-## <a name="see-also"></a>另請參閱  
+## <a name="see-also"></a>請參閱  
  [程式設計手冊 (LINQ to XML) (C#)](../../../../csharp/programming-guide/concepts/linq/programming-guide-linq-to-xml.md)

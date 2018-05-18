@@ -1,12 +1,6 @@
 ---
-title: "如何：使用 WebRequest 類別要求資料"
-ms.custom: 
+title: 如何：使用 WebRequest 類別要求資料
 ms.date: 03/30/2017
-ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.tgt_pltfrm: 
-ms.topic: article
 dev_langs:
 - csharp
 - vb
@@ -17,17 +11,14 @@ helpviewer_keywords:
 - receiving data, using WebRequest class
 - Internet, requesting data
 ms.assetid: 368b8d0f-dc5e-4469-a8b8-b2adbf5dd800
-caps.latest.revision: 
 author: mcleblanc
 ms.author: markl
 manager: markl
-ms.workload:
-- dotnet
-ms.openlocfilehash: 463a59444d3f93e5560e149033fd845ac8cbe62d
-ms.sourcegitcommit: 15316053918995cc1380163a7d7e7edd5c44e6d7
-ms.translationtype: MT
+ms.openlocfilehash: e02ad4772d3ba84a2735a2e146a9979862d75989
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 03/19/2018
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="how-to-request-data-using-the-webrequest-class"></a>如何：使用 WebRequest 類別要求資料
 下列程序描述用來向伺服器要求資源的步驟 ，例如網頁或檔案。 資源必須是以 URI 識別。  
@@ -183,7 +174,7 @@ Namespace Examples.System.Net
 End Namespace  
 ```  
   
-## <a name="see-also"></a>另請參閱  
+## <a name="see-also"></a>請參閱  
  [建立網際網路要求](../../../docs/framework/network-programming/creating-internet-requests.md)  
  [在網路上使用資料流](../../../docs/framework/network-programming/using-streams-on-the-network.md)  
  [透過 Proxy 存取網際網路](../../../docs/framework/network-programming/accessing-the-internet-through-a-proxy.md)  

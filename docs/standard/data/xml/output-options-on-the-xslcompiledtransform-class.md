@@ -1,26 +1,15 @@
 ---
-title: "XslCompiledTransform 類別的輸出選項"
-ms.custom: 
+title: XslCompiledTransform 類別的輸出選項
 ms.date: 03/30/2017
-ms.prod: .net
-ms.reviewer: 
-ms.suite: 
 ms.technology: dotnet-standard
-ms.tgt_pltfrm: 
-ms.topic: article
 ms.assetid: 91ce8cba-386c-411e-bb38-0891a0393c0a
-caps.latest.revision: 
 author: mairaw
 ms.author: mairaw
-manager: wpickett
-ms.workload:
-- dotnet
-- dotnetcore
-ms.openlocfilehash: 84171c92a56a9970b5ffc16ce8f30c85d61cc678
-ms.sourcegitcommit: e7f04439d78909229506b56935a1105a4149ff3d
+ms.openlocfilehash: aa1049528458d558409ac1ace215c7d5b10f520e
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 12/23/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="output-options-on-the-xslcompiledtransform-class"></a>XslCompiledTransform 類別的輸出選項
 本主題討論可用的 XSLT 輸出選項。 您可以指定樣式表中或 <xref:System.Xml.Xsl.XslCompiledTransform.Transform%2A> 方法上的輸出選項。  

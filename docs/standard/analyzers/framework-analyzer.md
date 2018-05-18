@@ -1,19 +1,15 @@
 ---
 title: .NET Security Analyzer - .NET
-description: "了解如何使用 .NET Framework Analyzers 套件中的 .NET Security Analyzer 來尋找和解決安全性風險"
-keywords: .NET, .NET Core
+description: 了解如何使用 .NET Framework Analyzers 套件中的 .NET Security Analyzer 來尋找和解決安全性風險
 author: billwagner
 ms.author: billwagner
 ms.date: 01/25/2018
-ms.topic: article
-ms.prod: .net
 ms.technology: dotnet-standard
-ms.devlang: dotnet
-ms.openlocfilehash: 06a387d72d06609182c8894dd874b241a5d7b69c
-ms.sourcegitcommit: 3a96c706e4dbb4667bf3bf37edac9e1666646f93
+ms.openlocfilehash: 904218c177ea45f82a73b4532ce3230af954aa85
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 02/27/2018
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="the-net-framework-analyzer"></a>.NET Framework Analyzer
 
@@ -50,7 +46,7 @@ ms.lasthandoff: 02/27/2018
 
 您不應該直接衍生自 .NET Framework 中的少數類型。 
 
-**類別：**設計
+**類別：** 設計
 
 **嚴重性：** 警告
 
@@ -60,7 +56,7 @@ ms.lasthandoff: 02/27/2018
 
 攔截損毀狀態例外可能會遮罩錯誤 (例如存取違規)，導致不一致的執行狀態，或讓攻擊者更容易危害系統。 相反地，會攔截並處理一組更具體的例外狀況類型，或重新擲回例外狀況
 
-**類別：**安全性
+**類別：** 安全性
 
 **嚴重性：** 警告
 
@@ -81,7 +77,7 @@ public class MyItemType
 }
 ```
 
-**類別：**使用方式
+**類別：** 使用方式
 
 **嚴重性：** 警告
 
@@ -91,7 +87,7 @@ public class MyItemType
 
 可序列化之類型中所宣告之類型的執行個體 (Instance) 欄位是不可序列化的。 您必須明確地以 <xref:System.NonSerializedAttribute> 標記該欄位，來修正這個警告。
 
-**類別：**使用方式
+**類別：** 使用方式
 
 **嚴重性：** 警告
 
@@ -101,7 +97,7 @@ public class MyItemType
 
 若要讓通用語言執行平台辨識為可序列化，即使類型透過實作 <xref:System.Runtime.Serialization.ISerializable> 介面來使用自訂序列化常式，仍然必須使用 <xref:System.SerializableAttribute> 屬性來標記類型。
 
-**類別：**使用方式
+**類別：** 使用方式
 
 **嚴重性：** 警告
 
@@ -111,7 +107,7 @@ public class MyItemType
 
 如果您使用不安全的 <xref:System.Xml.XmlReaderSettings.DtdProcessing%2A> 執行個體或參考外部實體來源，剖析器可能會接受未受信任的輸入，而將機密資訊洩漏給攻擊者。  
 
-**類別：**安全性
+**類別：** 安全性
 
 **嚴重性：** 警告
 
@@ -122,7 +118,7 @@ public class MyItemType
 
 攻擊變得更為進階時，密碼編譯演算法的強度會在一段時間後下降。 根據此密碼編譯演算法的類型和應用程式，其密碼編譯強度的進一步下降可能可讓攻擊者讀取已譯成密碼的訊息、竄改已譯成密碼的訊息、偽造數位簽章、竄改雜湊內容，或根據此演算法洩露任何加密系統。 針對加密，使用金鑰長度大於或等於 128 位元的 AES 演算法 (可接受 AES-256、AES-192 和 AES-128)。 針對雜湊，在 SHA-2 系列 (例如 SHA-2 512、SHA-2 384 或 SHA-2 256) 中使用雜湊函式。
 
-**類別：**安全性
+**類別：** 安全性
 
 **嚴重性：** 警告
 
@@ -132,7 +128,7 @@ public class MyItemType
 
 具有可透過運算方式中斷這個演算法的攻擊。 這可讓攻擊者中斷設計成提供的密碼編譯保證。 根據此密碼編譯演算法的類型和應用程式，這可能可讓攻擊者讀取已譯成密碼的訊息、竄改已譯成密碼的訊息、偽造數位簽章、竄改雜湊內容，或根據此演算法洩露任何加密系統。 針對加密，使用金鑰長度大於或等於 128 位元的 AES 演算法 (可接受 AES-256、AES-192 和 AES-128)。 針對雜湊，在 SHA-2 系列 (例如 SHA512、SHA384 或 SHA256) 中使用雜湊函式。 針對數位簽章，使用金鑰長度大於或等於 2048 位元的 RSA，或金鑰長度大於或等於 256 位元的 ECDSA。
 
-**類別：**安全性
+**類別：** 安全性
 
 **嚴重性：** 警告
 

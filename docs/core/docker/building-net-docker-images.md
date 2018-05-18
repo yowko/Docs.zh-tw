@@ -5,18 +5,12 @@ author: jralexander
 ms.author: johalex
 ms.date: 11/06/2017
 ms.topic: tutorial
-ms.prod: dotnet-core
-ms.technology: dotnet-docker
-ms.devlang: dotnet
 ms.custom: mvc
-manager: wpickett
-ms.workload:
-- dotnetcore
-ms.openlocfilehash: c1983be59b4a961cabd94915852e0cab7811682c
-ms.sourcegitcommit: 03ee570f6f528a7d23a4221dcb26a9498edbdf8c
+ms.openlocfilehash: f539efe15ce68a77890538430a170da64ff325e0
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/28/2018
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="building-docker-images-for-net-core-applications"></a>建置 .NET Core 應用程式的 Docker 映像
 
@@ -41,11 +35,11 @@ ms.lasthandoff: 04/28/2018
 為何是三個映像？
 在開發、建置和執行容器化應用程式時，我們有不同的優先考量。
 
-* **開發︰**優先順序快速聚焦於逐一查看變更以及偵錯變更的能力。 映像大小不那麼重要，而是變更及查看程式碼的速度。
+* **開發︰** 優先順序快速聚焦於逐一查看變更以及偵錯變更的能力。 映像大小不那麼重要，而是變更及查看程式碼的速度。
 
-* **建置：**此映像包含編譯您應用程式所需的所有項目，其中包含編譯器以及最佳化二進位檔的任何其他相依性。  您可以使用組建映像來建立您放入生產映像的資產。 組建映像將用於持續整合或組建環境。 此方法可讓組建代理程式在組建映像執行個體中編譯和建置應用程式 (含所有必要相依性)。 組建代理程式只需要知道如何執行此 Docker 映像。
+* **建置：** 此映像包含編譯您應用程式所需的所有項目，其中包含編譯器以及最佳化二進位檔的任何其他相依性。  您可以使用組建映像來建立您放入生產映像的資產。 組建映像將用於持續整合或組建環境。 此方法可讓組建代理程式在組建映像執行個體中編譯和建置應用程式 (含所有必要相依性)。 組建代理程式只需要知道如何執行此 Docker 映像。
 
-* **生產︰**多快可以部署和啟動映像？ 此映像很小，因此最小化從 Docker 登錄到 Docker 主機的網路效能。 準備好執行的內容可用最短的時間完成 Docker 執行到處理結果。 在 Docker 模型中，不需要動態程式碼編譯。 您放置在此映像中的內容會限於執行應用程式所需的二進位檔和內容。
+* **生產︰** 多快可以部署和啟動映像？ 此映像很小，因此最小化從 Docker 登錄到 Docker 主機的網路效能。 準備好執行的內容可用最短的時間完成 Docker 執行到處理結果。 在 Docker 模型中，不需要動態程式碼編譯。 您放置在此映像中的內容會限於執行應用程式所需的二進位檔和內容。
 
     例如，`dotnet publish` 輸出包含：
 

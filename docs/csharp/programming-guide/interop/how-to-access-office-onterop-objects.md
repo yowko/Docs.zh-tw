@@ -1,10 +1,6 @@
 ---
-title: "如何：使用 Visual C# 功能存取 Office Interop 物件 (C# 程式設計指南)"
+title: 如何：使用 Visual C# 功能存取 Office Interop 物件 (C# 程式設計指南)
 ms.date: 07/20/2015
-ms.prod: .net
-ms.technology:
-- devlang-csharp
-ms.topic: article
 helpviewer_keywords:
 - optional parameters [C#], Office programming
 - named and optional arguments [C#], Office programming
@@ -13,14 +9,11 @@ helpviewer_keywords:
 - named arguments [C#], Office programming
 - Office programming [C#]
 ms.assetid: 041b25c2-3512-4e0f-a4ea-ceb2999e4d5e
-caps.latest.revision: 
-author: BillWagner
-ms.author: wiwagn
-ms.openlocfilehash: 751e8240c9385f516315ff3b53221d1e1348ae58
-ms.sourcegitcommit: d2da0142247ef42a219a5d2907f153e62dc6ea0d
+ms.openlocfilehash: 4e2599f34e80f70a36d6f497f908887aa6853121
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 02/01/2018
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="how-to-access-office-interop-objects-by-using-visual-c-features-c-programming-guide"></a>如何：使用 Visual C# 功能存取 Office Interop 物件 (C# 程式設計指南)
 Visual C# 的功能可以簡化 Office API 物件存取。 新功能包括具名引數和選擇性引數、稱為 `dynamic` 的新類型，以及傳遞引數以像是實值參數的形式，參考 COM 方法中參數的能力。  
@@ -45,7 +38,7 @@ Visual C# 的功能可以簡化 Office API 物件存取。 新功能包括具名
   
 5.  按一下 [範本] 窗格中的 [主控台應用程式]。  
   
-6.  在 [名稱] 欄位中輸入專案的名稱。  
+6.  在 [名稱] 欄位中鍵入專案的名稱。  
   
 7.  按一下 [確定 **Deploying Office Solutions**]。  
   
@@ -101,7 +94,7 @@ Visual C# 的功能可以簡化 Office API 物件存取。 新功能包括具名
   
      [!code-csharp[csProgGuideOfficeHowTo#14](../../../csharp/programming-guide/interop/codesnippet/CSharp/how-to-access-office-onterop-objects_8.cs)]  
   
-     [!INCLUDE[csharp_dev10_long](~/includes/csharp-dev10-long-md.md)]如果 [/link](../../../csharp/language-reference/compiler-options/link-compiler-option.md) 編譯器選項參考組件；或者，同樣地，如果 Excel **內嵌 Interop 型別**屬性設定為 true，更新版本會自動將傳回的 `Object` 轉換為 `dynamic`。 這個屬性的預設值為 True。  
+     如果 [/link](../../../csharp/language-reference/compiler-options/link-compiler-option.md) 編譯器選項參考組件；或者，同樣地，如果 Excel **內嵌 Interop 類型**屬性設定為 true，則 [!INCLUDE[csharp_dev10_long](~/includes/csharp-dev10-long-md.md)] 和更新版本會自動將傳回的 `Object` 轉換為 `dynamic`。 這個屬性的預設值為 True。  
   
 ### <a name="to-run-the-project"></a>執行專案  
   
@@ -178,7 +171,7 @@ Visual C# 的功能可以簡化 Office API 物件存取。 新功能包括具名
   
  [!code-csharp[csProgGuideOfficeHowTo#18](../../../csharp/programming-guide/interop/codesnippet/CSharp/how-to-access-office-onterop-objects_17.cs)]  
   
-## <a name="see-also"></a>另請參閱  
+## <a name="see-also"></a>請參閱  
  <xref:System.Type.Missing?displayProperty=nameWithType>  
  [dynamic](../../../csharp/language-reference/keywords/dynamic.md)  
  [使用動態型別](../../../csharp/programming-guide/types/using-type-dynamic.md)  

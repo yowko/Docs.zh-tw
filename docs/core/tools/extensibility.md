@@ -4,17 +4,11 @@ description: 了解如何擴充命令列介面 (CLI) 工具。
 author: blackdwarf
 ms.author: mairaw
 ms.date: 04/12/2017
-ms.topic: conceptual
-ms.prod: dotnet-core
-ms.technology: dotnet-cli
-ms.devlang: dotnet
-ms.workload:
-- dotnetcore
-ms.openlocfilehash: 11cf9843f5c10ed7114d45a8c6be0ffeff2b6bad
-ms.sourcegitcommit: 03ee570f6f528a7d23a4221dcb26a9498edbdf8c
+ms.openlocfilehash: 6cabd3959a29878788916ae26589be408c12e0ca
+ms.sourcegitcommit: 88f251b08bf0718ce119f3d7302f514b74895038
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/28/2018
+ms.lasthandoff: 05/10/2018
 ---
 # <a name="net-core-cli-tools-extensibility-model"></a>.NET Core CLI 工具擴充性模型
 
@@ -26,15 +20,15 @@ CLI 工具可以透過三種主要方式進行擴充：
 
 1. [透過個別專案的 NuGet 套件](#per-project-based-extensibility)
 
-  個別專案工具都包含在專案內容內，但允許透過還原輕鬆地進行安裝。
+   個別專案工具都包含在專案內容內，但允許透過還原輕鬆地進行安裝。
 
 2. [透過具有自訂目標的 NuGet 套件](#custom-targets)
 
-  自訂目標可讓您輕鬆地透過自訂工作擴充建置程序。
+   自訂目標可讓您輕鬆地透過自訂工作擴充建置程序。
 
 3. [透過系統的 PATH](#path-based-extensibility)
 
-  PATH 工具適用於可在單一電腦上使用的一般跨專案工具。
+   PATH 工具適用於可在單一電腦上使用的一般跨專案工具。
 
 上述這三種擴充性機制都不是專用的。 您可以使用其中一個、全部或其組合。 選擇哪一個主要取決於您嘗試使用延伸模組達成的目標。
 

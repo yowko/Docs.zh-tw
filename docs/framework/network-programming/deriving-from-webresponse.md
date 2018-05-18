@@ -1,26 +1,17 @@
 ---
-title: "衍生自 WebResponse"
-ms.custom: 
+title: 衍生自 WebResponse
 ms.date: 03/30/2017
-ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.tgt_pltfrm: 
-ms.topic: article
 helpviewer_keywords:
 - Deriving from WebResponse
 ms.assetid: f11d4866-a199-4087-9306-a5a4c18b13db
-caps.latest.revision: 
 author: mcleblanc
 ms.author: markl
 manager: markl
-ms.workload:
-- dotnet
-ms.openlocfilehash: 2c0c70719e3f149ddf1f1e22cee8158e31fccf3c
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
-ms.translationtype: MT
+ms.openlocfilehash: 14a1260bf67469e792439985fec43ac44c6f0c9f
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="deriving-from-webresponse"></a>衍生自 WebResponse
 <xref:System.Net.WebResponse> 類別是抽象的基底類別，提供基本的方法和屬性以建立有特定通訊協定回應，符合 .NET Framework 插入式通訊協定模型的處理常式。 使用 <xref:System.Net.WebRequest> 類別向資源要求資料的應用程式，會收到 **WebResponse** 的回應。 通訊協定特定的 **WebResponse** 子代必須實作 **WebResponse** 類別的抽象成員。  

@@ -1,20 +1,13 @@
 ---
 title: 在 Docker 中裝載的微服務 - C#
 description: 了解如何建立在 Docker 容器中執行的 ASP.NET Core 服務
-keywords: .NET, .NET Core, Docker, C#, ASP.NET, 微服務
-author: BillWagner
-ms.author: wiwagn
 ms.date: 02/03/2017
-ms.topic: article
-ms.prod: .net-core
-ms.technology: dotnet-docker
-ms.devlang: csharp
 ms.assetid: 87e93838-a363-4813-b859-7356023d98ed
-ms.openlocfilehash: 253b622618ef62c28ac13a287c34b9d9049dd066
-ms.sourcegitcommit: b750a8e3979749b214e7e10c82efb0a0524dfcb1
+ms.openlocfilehash: eacfa87e465e5f7737dbd2bfc4c6a77ffc5531c3
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/09/2018
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="microservices-hosted-in-docker"></a>在 Docker 中裝載的微服務
 

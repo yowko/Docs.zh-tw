@@ -1,26 +1,15 @@
 ---
 title: 將現有節點從一個文件複製到另一個文件
-ms.custom: ''
 ms.date: 03/30/2017
-ms.prod: .net
-ms.reviewer: ''
-ms.suite: ''
 ms.technology: dotnet-standard
-ms.tgt_pltfrm: ''
-ms.topic: article
 ms.assetid: 3caa78c1-3448-4b7b-b83c-228ee857635e
-caps.latest.revision: ''
 author: mairaw
 ms.author: mairaw
-manager: wpickett
-ms.workload:
-- dotnet
-- dotnetcore
-ms.openlocfilehash: 958dccfc184857b0edd12cd1d9afe7b3b468b1e6
-ms.sourcegitcommit: c883637b41ee028786edceece4fa872939d2e64c
-ms.translationtype: MT
+ms.openlocfilehash: ca36ffdd2eb5eb3acfbacbd543eebf17cfffb5d3
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 03/26/2018
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="copying-existing-nodes-from-one-document-to-another"></a>將現有節點從一個文件複製到另一個文件
 **ImportNode** 方法是一種機制，藉由這個機制，節點或整個節點樹狀子目錄會從一個 **XmlDocument** 複製到另一個。 從呼叫傳回的節點是來自來源文件的節點複本，包括屬性值、節點名稱、節點型別和所有與命名空間相關的屬性，例如前置詞、區域名稱和命名空間統一資源識別元 (URI)。 來源文件不會變更。 在匯入節點之後，您仍然必須使用用於插入節點的其中一種方法將它加入至樹狀結構。  
@@ -38,7 +27,7 @@ ms.lasthandoff: 03/26/2018
 |XmlComment|複製節點，包含其資料。|複製節點，包含其資料。|  
 |XmlDocumentFragment|來源節點的子代會遞迴匯入，而且產生的節點會重組以形成對應的樹狀子目錄。|會建立空白的 **XmlDocumentFragment**。|  
 |XmlDocumentType|複製節點，包含其 data.*|複製節點，包含其 data.*|  
-|XmlElement|來源項目的子代會遞迴匯入，而且產生的節點會重組以形成對應的樹狀子目錄。 **注意：**不會複製預設屬性。 如果要匯入的文件定義這個項目名稱的預設屬性，就會指派這些屬性。|來源項目的指定屬性節點會匯入，而且產生的 **XmlAttribute** 節點會附加至新項目。 不會複製子代節點。 **注意：**不會複製預設屬性。 如果要匯入的文件定義這個項目名稱的預設屬性，就會指派這些屬性。|  
+|XmlElement|來源項目的子代會遞迴匯入，而且產生的節點會重組以形成對應的樹狀子目錄。 **注意：** 不會複製預設屬性。 如果要匯入的文件定義這個項目名稱的預設屬性，就會指派這些屬性。|來源項目的指定屬性節點會匯入，而且產生的 **XmlAttribute** 節點會附加至新項目。 不會複製子代節點。 **注意：** 不會複製預設屬性。 如果要匯入的文件定義這個項目名稱的預設屬性，就會指派這些屬性。|  
 |XmlEntityReference|因為來源和目的文件可以擁有定義不同的實體，這個方法只會複製 **XmlEntityReference** 節點。 不包括取代文字。 如果目的文件有定義的實體，就會指派它的值。|因為來源和目的文件可以擁有定義不同的實體，這個方法只會複製 **XmlEntityReference** 節點。 不包括取代文字。 如果目的文件有定義的實體，就會指派它的值。|  
 |XmlProcessingInstruction|從匯入的節點複製目標和資料值。|從匯入的節點複製目標和資料值。|  
 |XmlText|複製節點，包含其資料。|複製節點，包含其資料。|  
@@ -50,5 +39,5 @@ ms.lasthandoff: 03/26/2018
 > [!NOTE]
 >  雖然 DocumentType 節點可以匯入，但是一份文件只能有一個 DocumentType。 因此，當您匯入文件型別之後，在將它插入樹狀之前，您必須確定文件中有文件型別。 如需移除節點的資訊，請參閱[從 XML 文件移除節點、內容和值](../../../../docs/standard/data/xml/removing-nodes-content-and-values-from-an-xml-document.md)。  
   
-## <a name="see-also"></a>另請參閱  
+## <a name="see-also"></a>請參閱  
  [XML 文件物件模型 (DOM)](../../../../docs/standard/data/xml/xml-document-object-model-dom.md)

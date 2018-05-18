@@ -4,17 +4,12 @@ description: 描述 .NET 架構元件，例如 .NET Standard、.NET 實作、.NE
 author: cartermp
 ms.author: mairaw
 ms.date: 08/23/2017
-ms.topic: article
-ms.prod: .net
 ms.technology: dotnet-standard
-ms.workload:
-- dotnet
-- dotnetcore
-ms.openlocfilehash: 51e6779d63cdaccc5633c9e81f97471d71099653
-ms.sourcegitcommit: 2e8acae16ae802f2d6d04e3ce0a6dbf04e476513
+ms.openlocfilehash: 2415f0c360118389bc7a3ae3aaf74ca8daf24422
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/18/2018
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="net-architectural-components"></a>.NET 架構元件
 

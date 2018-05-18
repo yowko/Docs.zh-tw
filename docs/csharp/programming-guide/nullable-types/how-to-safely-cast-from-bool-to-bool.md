@@ -1,21 +1,15 @@
 ---
-title: "如何：從 bool? 安全轉型到 bool (C# 程式設計手冊)"
+title: 如何：從 bool? 安全轉型到 bool (C# 程式設計手冊)
 ms.date: 07/20/2015
-ms.prod: .net
-ms.technology: devlang-csharp
-ms.topic: article
 helpviewer_keywords:
 - casting [C#], nullable types
 - nullable types [C#], casting bool? to bool
 ms.assetid: e06e4274-a443-422d-8ef1-9dbf9df55237
-caps.latest.revision: "9"
-author: BillWagner
-ms.author: wiwagn
-ms.openlocfilehash: 1a6fa65c15bb5f1da9960dbc17bd25b4087ab862
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.openlocfilehash: 18f44018621182427199dee56146f29b8d3068f4
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="how-to-safely-cast-from-bool-to-bool-c-programming-guide"></a>如何：從 bool? 安全轉型到 bool (C# 程式設計手冊)
 `bool?` 可為 Null 的型別可以包含三個不同的值︰`true`、`false` 和 `null`。 因此，`bool?` 類型不能用在有 `if`、`for` 或 `while` 的條件中。 例如，下列程式碼會導致編譯器錯誤。  
@@ -47,7 +41,7 @@ if((bool)test) //now this cast is safe
 }  
 ```  
   
-## <a name="see-also"></a>另請參閱  
+## <a name="see-also"></a>請參閱  
  [C# 程式設計指南](../../../csharp/programming-guide/index.md)  
  [常值關鍵字](../../../csharp/language-reference/keywords/literal-keywords.md)  
  [可為 Null 的型別](../../../csharp/programming-guide/nullable-types/index.md)  

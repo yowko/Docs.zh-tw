@@ -1,26 +1,17 @@
 ---
-title: "進階查詢技術 (LINQ to XML) (C#)"
-ms.custom: 
+title: 進階查詢技術 (LINQ to XML) (C#)
 ms.date: 07/20/2015
-ms.prod: .net
-ms.reviewer: 
-ms.suite: 
-ms.technology: devlang-csharp
-ms.topic: article
 ms.assetid: 028d978e-215b-4d50-ba70-adce0659386d
-caps.latest.revision: "3"
-author: BillWagner
-ms.author: wiwagn
-ms.openlocfilehash: 5898813d5773f13fa2c969b065e5ab1412726e9e
-ms.sourcegitcommit: bd1ef61f4bb794b25383d3d72e71041a5ced172e
+ms.openlocfilehash: b1045308d18afb46c5f3bb0da9d02b07f17db95e
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/18/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="advanced-query-techniques-linq-to-xml-c"></a>進階查詢技術 (LINQ to XML) (C#)
 本節提供更進階的 [!INCLUDE[sqltecxlinq](~/includes/sqltecxlinq-md.md)] 查詢技術範例。  
   
-## <a name="in-this-section"></a>本章節內容  
+## <a name="in-this-section"></a>本節內容  
   
 |主題|描述|  
 |-----------|-----------------|  
@@ -34,5 +25,5 @@ ms.lasthandoff: 10/18/2017
 |[如何：修改 Office Open XML 文件 (C#)](../../../../csharp/programming-guide/concepts/linq/how-to-modify-an-office-open-xml-document.md)|呈現會開啟、修改與儲存 Office Open XML 文件的程式碼。|  
 |[如何：從檔案系統填入 XML 樹狀結構 (C#)](../../../../csharp/programming-guide/concepts/linq/how-to-populate-an-xml-tree-from-the-file-system.md)|呈現從檔案系統建立 XML 樹狀結構的程式碼。|  
   
-## <a name="see-also"></a>另請參閱  
+## <a name="see-also"></a>請參閱  
  [查詢 XML 樹狀結構 (C#)](../../../../csharp/programming-guide/concepts/linq/querying-xml-trees.md)

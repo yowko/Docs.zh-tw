@@ -1,23 +1,15 @@
 ---
-title: "對等網路案例"
-ms.custom: 
+title: 對等網路案例
 ms.date: 03/30/2017
-ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.tgt_pltfrm: 
-ms.topic: article
 ms.assetid: d23b1a64-2e08-4014-882a-c1dd766bdcc2
-caps.latest.revision: "4"
 author: mcleblanc
 ms.author: markl
 manager: markl
-ms.workload: dotnet
-ms.openlocfilehash: 5f7da4f1587eb0029cafb482bc2c60f5b19f23f8
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
-ms.translationtype: MT
+ms.openlocfilehash: d0a6bcbacf18d9f70f9fde69d2249d1e12653cb3
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="peer-to-peer-networking-scenarios"></a>對等網路案例
 對等網路可啟用或增強下列案例：  

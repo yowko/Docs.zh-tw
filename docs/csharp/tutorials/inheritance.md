@@ -1,20 +1,15 @@
 ---
-title: "C# 中的繼承"
-description: "了解如何使用 C# 程式庫和應用程式中的繼承。"
-keywords: "繼承 (C#), 基底類別, 衍生類別, 抽象基底類別"
+title: C# 中的繼承
+description: 了解如何使用 C# 程式庫和應用程式中的繼承。
 author: rpetrusha
-manager: wpickett
 ms.author: ronpet
 ms.date: 08/16/2017
-ms.topic: article
-ms.prod: .net
-ms.technology: devlang-csharp
 ms.assetid: aeb68c74-0ea0-406f-9fbe-2ce02d47ef31
-ms.openlocfilehash: 39de8879fd902c714a58cf59c70f0a4914b2ff6e
-ms.sourcegitcommit: 9bee08539b1886c9d57fa3d5bd8a58dfdd7cad94
+ms.openlocfilehash: 1476425594e55531fdb56de531ee61808dccd7db
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 12/12/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="inheritance-in-c-and-net"></a>C# 和 .NET 中的繼承
 
@@ -299,7 +294,7 @@ public struct ValueStructure : ValueType // Generates CS0527.
 
 [!code-csharp[Inheritance](../../../samples/snippets/csharp/tutorials/inheritance/shape.cs#3)]
 
-## <a name="see-also"></a>請參閱
+## <a name="see-also"></a>另請參閱
 
 [類別與物件](../tour-of-csharp/classes-and-objects.md)   
 [繼承 (C# 程式設計指南)](../programming-guide/classes-and-structs/inheritance.md)

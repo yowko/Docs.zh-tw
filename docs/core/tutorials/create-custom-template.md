@@ -4,16 +4,11 @@ description: 了解如何在此好玩的教學課程中建立 dotnet new 命令�
 author: guardrex
 ms.author: mairaw
 ms.date: 08/12/2017
-ms.topic: conceptual
-ms.prod: dotnet-core
-ms.devlang: dotnet
-ms.workload:
-- dotnetcore
-ms.openlocfilehash: 9ff58634daa6d51c10df9a3c9a1af0fd6420c69c
-ms.sourcegitcommit: 03ee570f6f528a7d23a4221dcb26a9498edbdf8c
+ms.openlocfilehash: fee2709f54395b9926dae904a448cb92aafb5172
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/28/2018
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="create-a-custom-template-for-dotnet-new"></a>建立 dotnet new 的自訂範本
 

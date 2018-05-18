@@ -1,19 +1,12 @@
 ---
 title: 物件導向程式設計 (C#)
 ms.date: 07/20/2015
-ms.prod: .net
-ms.technology:
-- devlang-csharp
-ms.topic: article
 ms.assetid: 89574786-65ef-4335-88bc-fbacd094f183
-caps.latest.revision: ''
-author: BillWagner
-ms.author: wiwagn
-ms.openlocfilehash: 6da28e97a33e962d4926a3b65d0fdf388c252d9a
-ms.sourcegitcommit: c883637b41ee028786edceece4fa872939d2e64c
+ms.openlocfilehash: 0dee6edf966e8e2a3e430e60f1c3d51354d08bf3
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 03/23/2018
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="object-oriented-programming-c"></a>物件導向程式設計 (C#)
 C# 為包括封裝、繼承和多型在內的物件導向程式設計提供完整支援。  

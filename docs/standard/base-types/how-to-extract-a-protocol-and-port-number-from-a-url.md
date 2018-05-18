@@ -1,13 +1,7 @@
 ---
-title: "如何：從 URL 擷取通訊協定和通訊埠編號"
-ms.custom: 
+title: 如何：從 URL 擷取通訊協定和通訊埠編號
 ms.date: 03/30/2017
-ms.prod: .net
-ms.reviewer: 
-ms.suite: 
 ms.technology: dotnet-standard
-ms.tgt_pltfrm: 
-ms.topic: article
 dev_langs:
 - csharp
 - vb
@@ -19,18 +13,13 @@ helpviewer_keywords:
 - regular expressions [.NET Framework], examples
 - pattern-matching with regular expressions, examples
 ms.assetid: ab7f62b3-6d2c-4efb-8ac6-28600df5fd5c
-caps.latest.revision: 
 author: rpetrusha
 ms.author: ronpet
-manager: wpickett
-ms.workload:
-- dotnet
-- dotnetcore
-ms.openlocfilehash: 62931273acd41768d131c08510e14ff187d64296
-ms.sourcegitcommit: e7f04439d78909229506b56935a1105a4149ff3d
+ms.openlocfilehash: ffb31030a2e29458165ae6615a51685ed163fbac
+ms.sourcegitcommit: 11f11ca6cefe555972b3a5c99729d1a7523d8f50
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 12/23/2017
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="how-to-extract-a-protocol-and-port-number-from-a-url"></a>如何：從 URL 擷取通訊協定和通訊埠編號
 下列範例會從 URL 擷取通訊協定和連接埠號碼。  

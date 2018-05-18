@@ -1,29 +1,18 @@
 ---
-title: "排程執行緒"
-ms.custom: 
+title: 排程執行緒
 ms.date: 03/30/2017
-ms.prod: .net
-ms.reviewer: 
-ms.suite: 
 ms.technology: dotnet-standard
-ms.tgt_pltfrm: 
-ms.topic: article
 helpviewer_keywords:
 - threading [.NET Framework], scheduling
 - scheduling threads
 ms.assetid: 67e4a0eb-3095-4ea7-b20f-908faa476277
-caps.latest.revision: 
 author: rpetrusha
 ms.author: ronpet
-manager: wpickett
-ms.workload:
-- dotnet
-- dotnetcore
-ms.openlocfilehash: 6bb715c11cc0d9b07e4ea8805ace7680ca92097c
-ms.sourcegitcommit: e7f04439d78909229506b56935a1105a4149ff3d
+ms.openlocfilehash: 794dfe3dc8e8cded9f7008300351598bbd1dee07
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 12/23/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="scheduling-threads"></a>排程執行緒
 每個執行緒都擁有一個指派的執行緒優先權。 Common Language Runtime 中建立的執行緒，一開始會被指派優先權 **ThreadPriority.Normal**。 建立在執行階段之外的執行緒，在它們進入受控環境之前，會保留它們所擁有的優先權。 您可以使用 **Thread.Priority** 屬性取得或設定任何執行緒的優先權。  

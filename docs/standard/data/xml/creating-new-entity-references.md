@@ -1,26 +1,15 @@
 ---
-title: "建立新實體參考"
-ms.custom: 
+title: 建立新實體參考
 ms.date: 03/30/2017
-ms.prod: .net
-ms.reviewer: 
-ms.suite: 
 ms.technology: dotnet-standard
-ms.tgt_pltfrm: 
-ms.topic: article
 ms.assetid: a42f81b3-0403-4e34-b346-7d2129804e54
-caps.latest.revision: 
 author: mairaw
 ms.author: mairaw
-manager: wpickett
-ms.workload:
-- dotnet
-- dotnetcore
-ms.openlocfilehash: 76093fbe7095c2aae7caa69147f6181c292ca734
-ms.sourcegitcommit: e7f04439d78909229506b56935a1105a4149ff3d
+ms.openlocfilehash: 0fefea6f8dfd74dfd31c7c07a158e4935ab0e02c
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 12/23/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="creating-new-entity-references"></a>建立新實體參考
 **CreateEntityReference** 方法建立新 **XmlEntityReference** 節點。 XML 文件物件模型 (DOM) 會查看所要參考的實體名稱是否已進行宣告。 如果是，**XmlEntityReference** 節點的子節點會從實體宣告節點複製。 如果沒有符合的實體宣告，會將空白文字節點當成實體參考節點的唯一子代附加上去。 因為 **XmlEntityReference** 節點的子節點是其他節點的複本，因此這些子節點是唯讀的而且無法修改。  

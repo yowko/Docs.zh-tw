@@ -1,13 +1,6 @@
 ---
-title: "應用程式定義域"
-ms.custom: 
+title: 應用程式定義域
 ms.date: 03/30/2017
-ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.technology: dotnet-bcl
-ms.tgt_pltfrm: 
-ms.topic: article
 helpviewer_keywords:
 - process boundaries for isolation
 - application isolation
@@ -19,16 +12,13 @@ helpviewer_keywords:
 - code, verification process
 - verification testing code
 ms.assetid: 113a8bbf-6875-4a72-a49d-ca2d92e19cc8
-caps.latest.revision: "18"
 author: rpetrusha
 ms.author: ronpet
-manager: wpickett
-ms.workload: dotnet
-ms.openlocfilehash: fe2d8ea8be2781e747398e18cc99cc6ce6cf6dc5
-ms.sourcegitcommit: c0dd436f6f8f44dc80dc43b07f6841a00b74b23f
+ms.openlocfilehash: 04028a2b350493a3cc8f2c92bafafd9658fc7c58
+ms.sourcegitcommit: 11f11ca6cefe555972b3a5c99729d1a7523d8f50
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 01/19/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="application-domains"></a>應用程式定義域
 作業系統和執行階段環境通常會在應用程式之間提供某種形式的隔離。 例如，Windows 會使用處理序來隔離應用程式。 這種隔離確保在某一應用程式中執行之程式碼不會對其他不相關應用程式造成負面影響。  

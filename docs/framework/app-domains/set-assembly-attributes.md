@@ -1,13 +1,6 @@
 ---
-title: "設定組件屬性"
-ms.custom: 
+title: 設定組件屬性
 ms.date: 03/30/2017
-ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.technology: dotnet-bcl
-ms.tgt_pltfrm: 
-ms.topic: article
 dev_langs:
 - csharp
 - vb
@@ -17,16 +10,13 @@ helpviewer_keywords:
 - assembly binding, attributes
 - assembly manifest, attributes
 ms.assetid: 36a98a81-b5b5-4c19-912a-11f91eff7f4e
-caps.latest.revision: "13"
 author: rpetrusha
 ms.author: ronpet
-manager: wpickett
-ms.workload: dotnet
-ms.openlocfilehash: f95d8c5f78dfa9ec388cfa63b81857ffe580abf3
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.openlocfilehash: af1db244f02701e6da1604ec406f4fb2940f8f78
+ms.sourcegitcommit: 11f11ca6cefe555972b3a5c99729d1a7523d8f50
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="setting-assembly-attributes"></a>設定組件屬性
 組件屬性是提供組件相關資訊的值。 屬性可分成下列幾組資訊：  
@@ -46,9 +36,9 @@ ms.lasthandoff: 12/22/2017
   
 |組件識別屬性|描述|  
 |---------------------------------|-----------------|  
-|<xref:System.Reflection.AssemblyCultureAttribute>|列舉的欄位，會指出組件所支援的文化特性。 組件也可以指定文化特性獨立性，表示其包含預設文化特性的資源。 **注意：**執行階段會將任何未將文化特性屬性設為 null 的組件作為附屬組件。 這類組件會受限於附屬組件繫結規則。 如需詳細資訊，請參閱 [執行階段如何找出組件](../../../docs/framework/deployment/how-the-runtime-locates-assemblies.md)。|  
+|<xref:System.Reflection.AssemblyCultureAttribute>|列舉的欄位，會指出組件所支援的文化特性。 組件也可以指定文化特性獨立性，表示其包含預設文化特性的資源。 **注意：** 執行階段會將任何未將文化特性屬性設為 null 的組件作為附屬組件。 這類組件會受限於附屬組件繫結規則。 如需詳細資訊，請參閱 [執行階段如何找出組件](../../../docs/framework/deployment/how-the-runtime-locates-assemblies.md)。|  
 |<xref:System.Reflection.AssemblyFlagsAttribute>|此值用以設定組件屬性，例如組件是否可並存執行。|  
-|<xref:System.Reflection.AssemblyVersionAttribute>|格式為 *major*.*minor*.*build*.*revision* 的數值 (例如 2.4.0.0)。 通用語言執行平台會使用此值來執行強式名稱組件中的繫結作業。 **注意：**如果 <xref:System.Reflection.AssemblyInformationalVersionAttribute> 屬性未套用到組件，則 <xref:System.Reflection.AssemblyVersionAttribute> 屬性所指定的版本號碼會由 <xref:System.Windows.Forms.Application.ProductVersion%2A?displayProperty=nameWithType>、<xref:System.Windows.Forms.Application.UserAppDataPath%2A?displayProperty=nameWithType> 與 <xref:System.Windows.Forms.Application.UserAppDataRegistry%2A?displayProperty=nameWithType> 屬性所使用。|  
+|<xref:System.Reflection.AssemblyVersionAttribute>|格式為 *major*.*minor*.*build*.*revision* 的數值 (例如 2.4.0.0)。 通用語言執行平台會使用此值來執行強式名稱組件中的繫結作業。 **注意：** 如果 <xref:System.Reflection.AssemblyInformationalVersionAttribute> 屬性未套用到組件，則 <xref:System.Reflection.AssemblyVersionAttribute> 屬性所指定的版本號碼會由 <xref:System.Windows.Forms.Application.ProductVersion%2A?displayProperty=nameWithType>、<xref:System.Windows.Forms.Application.UserAppDataPath%2A?displayProperty=nameWithType> 與 <xref:System.Windows.Forms.Application.UserAppDataRegistry%2A?displayProperty=nameWithType> 屬性所使用。|  
   
  下列程式碼範例顯示如何將版本與文化特性屬性套用至組件。  
   
@@ -64,7 +54,7 @@ ms.lasthandoff: 12/22/2017
 |<xref:System.Reflection.AssemblyCompanyAttribute>|此字串值指定公司名稱。|  
 |<xref:System.Reflection.AssemblyCopyrightAttribute>|此字串值指定著作權資訊。|  
 |<xref:System.Reflection.AssemblyFileVersionAttribute>|此字串值指定 Win32 檔案版本號碼。 這通常會預設為組件版本。|  
-|<xref:System.Reflection.AssemblyInformationalVersionAttribute>|此字串值指定的版本資訊不為通用語言執行平台所用，例如完整的產品版本號碼。 **注意：**如果這個屬性會套用至組件，則其所指定的字串可以在執行階段透過使用 <xref:System.Windows.Forms.Application.ProductVersion%2A?displayProperty=nameWithType> 屬性加以取得。 字串也會在 <xref:System.Windows.Forms.Application.UserAppDataPath%2A?displayProperty=nameWithType> 與 <xref:System.Windows.Forms.Application.UserAppDataRegistry%2A?displayProperty=nameWithType> 屬性所提供的路徑及登錄機碼中使用。|  
+|<xref:System.Reflection.AssemblyInformationalVersionAttribute>|此字串值指定的版本資訊不為通用語言執行平台所用，例如完整的產品版本號碼。 **注意：** 如果這個屬性會套用至組件，則其所指定的字串可以在執行階段透過使用 <xref:System.Windows.Forms.Application.ProductVersion%2A?displayProperty=nameWithType> 屬性加以取得。 字串也會在 <xref:System.Windows.Forms.Application.UserAppDataPath%2A?displayProperty=nameWithType> 與 <xref:System.Windows.Forms.Application.UserAppDataRegistry%2A?displayProperty=nameWithType> 屬性所提供的路徑及登錄機碼中使用。|  
 |<xref:System.Reflection.AssemblyProductAttribute>|此字串值指定產品資訊。|  
 |<xref:System.Reflection.AssemblyTrademarkAttribute>|此字串值指定商標資訊。|  
   

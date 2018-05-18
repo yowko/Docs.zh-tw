@@ -1,20 +1,13 @@
 ---
-title: "處理查詢運算式中的例外狀況"
-description: "如何處理查詢運算式中的例外狀況。"
-keywords: .NET, .NET Core, C#
-author: BillWagner
-manager: wpickett
-ms.author: wiwagn
+title: 處理查詢運算式中的例外狀況
+description: 如何處理查詢運算式中的例外狀況。
 ms.date: 12/1/2016
-ms.topic: article
-ms.prod: .net
-ms.technology: devlang-csharp
 ms.assetid: 2bf0c397-13fb-4f68-bc2b-531c6c88a167
-ms.openlocfilehash: 376bd461bfeb51653471fd374a2215aa15872976
-ms.sourcegitcommit: 7e99f66ef09d2903e22c789c67ff5a10aa953b2f
+ms.openlocfilehash: 691373fabeb3934ecc454cbc3b36a5f7bf477bee
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 11/18/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="handle-exceptions-in-query-expressions"></a>處理查詢運算式中的例外狀況
 
@@ -37,5 +30,5 @@ ms.lasthandoff: 11/18/2017
  [!code-csharp[csProgGuideLINQ#12](../../../samples/snippets/csharp/concepts/linq/how-to-handle-exceptions-in-query-expressions_2.cs)]  
   
 
-## <a name="see-also"></a>另請參閱  
+## <a name="see-also"></a>請參閱  
  [LINQ 查詢運算式](index.md)

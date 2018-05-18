@@ -10,11 +10,11 @@ helpviewer_keywords:
 - templates [WPF], data
 - data templates [WPF]
 ms.assetid: 0f4d9f8c-0230-4013-bd7b-e8e7fed01b4a
-ms.openlocfilehash: feed791ac876c13dbd637f0455d3cfdd83a86e05
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: 7aed418fe5e2c7d8a217f3016655f39c99300d53
+ms.sourcegitcommit: 89c93d05c2281b4c834f48f6c8df1047e1410980
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/04/2018
+ms.lasthandoff: 05/15/2018
 ---
 # <a name="data-templating-overview"></a>資料範本化概觀
 WPF 資料範本化模型對於資料呈現方式的定義，具有相當大的彈性。 WPF 控制項的內建功能支援自訂資料呈現方式。 本主題首先會示範如何定義<xref:System.Windows.DataTemplate>和再導入了其他的資料範本化功能，例如根據自訂邏輯以及支援的階層式資料的顯示範本選擇。  
@@ -132,7 +132,8 @@ WPF 資料範本化模型對於資料呈現方式的定義，具有相當大的�
   
 <a name="what_belongs_in_datatemplate"></a>   
 ### <a name="what-belongs-in-a-datatemplate"></a>哪些內容屬於 DataTemplate 的範圍  
- 在上述範例中，我們放在觸發程序<xref:System.Windows.DataTemplate>使用<xref:System.Windows.DataTemplate>。<xref:System.Windows.DataTemplate.Triggers%2A> 屬性。 <xref:System.Windows.Setter>觸發程序的設定項目屬性的值 (<xref:System.Windows.Controls.Border>項目) 裡<xref:System.Windows.DataTemplate>。 不過，如果屬性，您`Setters`注重不會在目前的項目屬性<xref:System.Windows.DataTemplate>，可能是更適合用來設定屬性使用<xref:System.Windows.Style>這適用於<xref:System.Windows.Controls.ListBoxItem>類別 (如果您要繫結的控制項是<xref:System.Windows.Controls.ListBox>)。 例如，如果您想要您<xref:System.Windows.Trigger>以動畫方式顯示<xref:System.Windows.UIElement.Opacity%2A>值的項目時滑鼠指向某個項目，您會定義觸發程序內<xref:System.Windows.Controls.ListBoxItem>樣式。 如需範例，請參閱[樣式設定和範本化範例的簡介](http://go.microsoft.com/fwlink/?LinkID=160010)。  
+
+在上述範例中，我們放在觸發程序<xref:System.Windows.DataTemplate>使用<xref:System.Windows.DataTemplate>。<xref:System.Windows.DataTemplate.Triggers%2A> 屬性。 <xref:System.Windows.Setter>觸發程序的設定項目屬性的值 (<xref:System.Windows.Controls.Border>項目) 裡<xref:System.Windows.DataTemplate>。 不過，如果屬性，您`Setters`注重不會在目前的項目屬性<xref:System.Windows.DataTemplate>，可能是更適合用來設定屬性使用<xref:System.Windows.Style>這適用於<xref:System.Windows.Controls.ListBoxItem>類別 (如果您要繫結的控制項是<xref:System.Windows.Controls.ListBox>)。 例如，如果您想要您<xref:System.Windows.Trigger>以動畫方式顯示<xref:System.Windows.UIElement.Opacity%2A>值的項目時滑鼠指向某個項目，您會定義觸發程序內<xref:System.Windows.Controls.ListBoxItem>樣式。 如需範例，請參閱[樣式設定和範本化範例的簡介](https://github.com/Microsoft/WPF-Samples/tree/master/Styles%20&%20Templates/IntroToStylingAndTemplating)。
   
  一般情況下，請注意，<xref:System.Windows.DataTemplate>套用至每個產生<xref:System.Windows.Controls.ListBoxItem>(如需如何及在何處實際套用的詳細資訊，請參閱<xref:System.Windows.Controls.ItemsControl.ItemTemplate%2A>頁面。)。 您<xref:System.Windows.DataTemplate>擔心只有簡報和資料物件的外觀。 在大部分情況下，所有其他層面簡報，例如何種項目時看起來像加以選取或如何<xref:System.Windows.Controls.ListBox>奠定出的項目，定義中不屬於<xref:System.Windows.DataTemplate>。 如需範例，請參閱 [ItemsControl 的樣式設定和範本化](#DataTemplating_ItemsControl)一節。  
   
@@ -164,9 +165,9 @@ WPF 資料範本化模型對於資料呈現方式的定義，具有相當大的�
  範本中的選取器的位置，與<xref:System.Windows.Controls.ListBox>現在會出現，如下所示：  
   
  ![資料範本化範例螢幕擷取畫面](../../../../docs/framework/wpf/data/media/datatemplatingintro-fig7.png "DataTemplatingIntro_fig7")  
-  
- 這個範例的討論到此結束。 如需完整範例，請參閱[資料範本化範例簡介](http://go.microsoft.com/fwlink/?LinkID=160009)。  
-  
+
+這個範例的討論到此結束。 如需完整範例，請參閱[資料範本化範例簡介](https://github.com/Microsoft/WPF-Samples/tree/master/Data%20Binding/DataTemplatingIntro)。
+
 <a name="DataTemplating_ItemsControl"></a>   
 ## <a name="styling-and-templating-an-itemscontrol"></a>ItemsControl 的樣式設定和範本化  
  即使<xref:System.Windows.Controls.ItemsControl>不是唯一的控制項類型，您可以使用<xref:System.Windows.DataTemplate>，是很常見的案例來繫結<xref:System.Windows.Controls.ItemsControl>至集合。 中[什麼屬於 DataTemplate](#what_belongs_in_datatemplate) > 一節所討論，定義您<xref:System.Windows.DataTemplate>應該只考量資料的呈現方式。 若要知道當不適合使用<xref:System.Windows.DataTemplate>請務必了解所提供的不同樣式和樣板屬性<xref:System.Windows.Controls.ItemsControl>。 下列範例是設計來說明每個屬性的功能。 <xref:System.Windows.Controls.ItemsControl>在此範例中會繫結至相同`Tasks`集合，如先前範例所示。 為方便示範，這個範例中的樣式和範本都是內嵌宣告的。  

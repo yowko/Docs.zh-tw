@@ -1,20 +1,13 @@
 ---
-title: "建立巢狀群組"
-description: "如何建立巢狀群組。"
-keywords: ".NET、.NET Core、C#"
-author: BillWagner
-manager: wpickett
-ms.author: wiwagn
+title: 建立巢狀群組
+description: 如何建立巢狀群組。
 ms.date: 12/1/2016
-ms.topic: article
-ms.prod: .net
-ms.technology: devlang-csharp
 ms.assetid: e9f00708-362e-4d13-98c5-d77549347ba0
-ms.openlocfilehash: 232aa46d975d7c338bbc776e3867f2e566601fde
-ms.sourcegitcommit: 7e99f66ef09d2903e22c789c67ff5a10aa953b2f
+ms.openlocfilehash: dd1158bfa1456342fe8967aed5e02ecebae591c1
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 11/18/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="create-a-nested-group"></a>建立巢狀群組
 
@@ -29,5 +22,5 @@ ms.lasthandoff: 11/18/2017
   
  請注意，需要有三個巢狀 `foreach` 迴圈，才能逐一查看巢狀群組的內部項目。  
   
-## <a name="see-also"></a>請參閱  
+## <a name="see-also"></a>另請參閱  
  [LINQ 查詢運算式](index.md)

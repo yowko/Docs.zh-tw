@@ -1,21 +1,14 @@
 ---
-title: "利用 Polly 使用指數輪詢來實作 HTTP 呼叫重試"
-description: "容器化 .NET 應用程式的 .NET 微服務架構 | 利用 Polly 使用指數輪詢來實作 HTTP 呼叫重試"
-keywords: "Docker, 微服務, ASP.NET, 容器"
+title: 利用 Polly 使用指數輪詢來實作 HTTP 呼叫重試
+description: 容器化 .NET 應用程式的 .NET 微服務架構 | 利用 Polly 使用指數輪詢來實作 HTTP 呼叫重試
 author: CESARDELATORRE
 ms.author: wiwagn
 ms.date: 05/26/2017
-ms.prod: .net-core
-ms.technology: dotnet-docker
-ms.topic: article
-ms.workload:
-- dotnet
-- dotnetcore
-ms.openlocfilehash: 122f617874188d3bffe689d6b3cf7d7249c59c3b
-ms.sourcegitcommit: e7f04439d78909229506b56935a1105a4149ff3d
+ms.openlocfilehash: 66ac57fc824e01f96d6584ab86bb95ba1b0174a3
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 12/23/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="implementing-http-call-retries-with-exponential-backoff-with-polly"></a>利用 Polly 使用指數輪詢來實作 HTTP 呼叫重試
 

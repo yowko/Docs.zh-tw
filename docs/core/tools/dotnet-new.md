@@ -4,16 +4,11 @@ description: dotnet new 命令會根據指定的範本建立新的 .NET Core 專
 author: mairaw
 ms.author: mairaw
 ms.date: 03/26/2018
-ms.topic: conceptual
-ms.prod: dotnet-core
-ms.technology: dotnet-cli
-ms.workload:
-- dotnetcore
-ms.openlocfilehash: ab8d6f779a428aab7bd2739105dcf08b51d14ab9
-ms.sourcegitcommit: 03ee570f6f528a7d23a4221dcb26a9498edbdf8c
+ms.openlocfilehash: 5ebf77377360662242fbf345d9fe76eee7a1316f
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/28/2018
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="dotnet-new"></a>dotnet new
 

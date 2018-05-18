@@ -1,22 +1,15 @@
 ---
 title: .NET 字彙表
 description: 了解 .NET 文件中所使用之特定詞彙的意義。
-keywords: .NET 字彙表, .NET 字典, .NET 術語, .NET 平台, .NET Framework, .NET 執行階段
 author: tdykstra
 ms.author: tdykstra
 ms.date: 07/08/2017
-ms.topic: article
-ms.prod: .net
 ms.technology: dotnet-standard
-ms.devlang: dotnet
-ms.workload:
-- dotnet
-- dotnetcore
-ms.openlocfilehash: 7e9732fb6eaef240d08449635697ba6b8ad9c510
-ms.sourcegitcommit: 2e8acae16ae802f2d6d04e3ce0a6dbf04e476513
+ms.openlocfilehash: 195fbb799432b9d01a5faf301c9f8f2d1edfa1ff
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/18/2018
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="net-glossary"></a>.NET 字彙表
 

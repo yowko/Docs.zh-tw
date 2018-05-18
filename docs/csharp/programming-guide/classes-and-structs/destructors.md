@@ -1,22 +1,16 @@
 ---
-title: "完成項 (C# 程式設計手冊)"
+title: 完成項 (C# 程式設計手冊)
 ms.date: 05/10/2017
-ms.prod: .net
-ms.technology: devlang-csharp
-ms.topic: article
 helpviewer_keywords:
 - ~ [C#], in finalizers
 - C# language, finalizers
 - finalizers [C#]
 ms.assetid: 1ae6e46d-a4b1-4a49-abe5-b97f53d9e049
-caps.latest.revision: "24"
-author: BillWagner
-ms.author: wiwagn
-ms.openlocfilehash: b1efe92c371e44eb2d650eb07facc3e7030e9766
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.openlocfilehash: fc15818883736015419f8599d482185bbab5120a
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="finalizers-c-programming-guide"></a>完成項 (C# 程式設計手冊)
 完成項是用來解構類別的執行個體。  
@@ -88,7 +82,7 @@ protected override void Finalize()
 ## <a name="c-language-specification"></a>C# 語言規格  
  [!INCLUDE[CSharplangspec](~/includes/csharplangspec-md.md)]  
   
-## <a name="see-also"></a>另請參閱  
+## <a name="see-also"></a>請參閱  
  <xref:System.IDisposable>  
  [C# 程式設計指南](../../../csharp/programming-guide/index.md)  
  [建構函式](../../../csharp/programming-guide/classes-and-structs/constructors.md)  

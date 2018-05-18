@@ -1,31 +1,20 @@
 ---
 title: PLINQ 中的合併選項
-ms.custom: ''
 ms.date: 03/30/2017
-ms.prod: .net
-ms.reviewer: ''
-ms.suite: ''
 ms.technology: dotnet-standard
-ms.tgt_pltfrm: ''
-ms.topic: article
 dev_langs:
 - csharp
 - vb
 helpviewer_keywords:
 - PLINQ queries, merge options
 ms.assetid: e8f7be3b-88de-4f33-ab14-dc008e76c1ba
-caps.latest.revision: 10
 author: rpetrusha
 ms.author: ronpet
-manager: wpickett
-ms.workload:
-- dotnet
-- dotnetcore
-ms.openlocfilehash: 9e155ee8de2846fc3c8c767a77f365127923f757
-ms.sourcegitcommit: 86adcc06e35390f13c1e372c36d2e044f1fc31ef
+ms.openlocfilehash: 7df080185db9631e47bb7a886f6e0db894974a6b
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/26/2018
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="merge-options-in-plinq"></a>PLINQ 中的合併選項
 當查詢平行執行時，PLINQ 會分割來源序列，讓多個執行緒可以在不同的組件上同時工作，通常是在個別的執行緒上。 如果結果是在一個執行緒上使用，例如在 `foreach` (Visual Basic 中的 `For Each`) 迴圈中，則必須將每個執行緒中的結果合併回單一序列。 PLINQ 執行的合併類型，取決於存在查詢中的運算子。 比方說，對結果強制執行新順序的運算子，必須緩衝所有執行緒中的所有元素。 就使用執行緒的角度而言 (也是應用程式使用者的觀點)，完整緩衝的查詢在產生其第一個結果前可能會執行不算短的一段時間。 其他運算子預設會部分進行緩衝；會批次產生其結果。 有一個運算子 (<xref:System.Linq.ParallelEnumerable.ForAll%2A>) 預設不會進行緩衝。 它會立即產生所有執行緒中的所有元素。  

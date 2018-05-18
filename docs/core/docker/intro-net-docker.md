@@ -4,19 +4,12 @@ description: 了解 Docker 和 .NET Core
 author: jralexander
 ms.author: johalex
 ms.date: 11/06/2017
-ms.topic: conceptual
-ms.prod: dotnet-core
-ms.technology: dotnet-docker
-ms.devlang: dotnet
-manager: wpickett
 ms.custom: mvc
-ms.workload:
-- dotnetcore
-ms.openlocfilehash: 3ceeead391c3e64db6849236a0f6821eb03abc3c
-ms.sourcegitcommit: 03ee570f6f528a7d23a4221dcb26a9498edbdf8c
+ms.openlocfilehash: bc652a375abd03bbc70f055b34d6ecea4d9fc374
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/28/2018
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="introduction-to-net-and-docker"></a>.NET 和 Docker 簡介
 

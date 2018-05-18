@@ -1,21 +1,14 @@
 ---
-title: "在微服務中使用 IHostedService 和 BackgroundService 類別實作背景工作"
-description: "容器化 .NET 應用程式的 .NET 微服務架構 | 在微服務中使用 IHostedService 和 BackgroundService 類別實作背景工作"
-keywords: "Docker, 微服務, ASP.NET, 容器"
+title: 在微服務中使用 IHostedService 和 BackgroundService 類別實作背景工作
+description: 容器化 .NET 應用程式的 .NET 微服務架構 | 在微服務中使用 IHostedService 和 BackgroundService 類別實作背景工作
 author: CESARDELATORRE
 ms.author: wiwagn
 ms.date: 12/11/2017
-ms.prod: .net-core
-ms.technology: dotnet-docker
-ms.topic: article
-ms.workload:
-- dotnet
-- dotnetcore
-ms.openlocfilehash: d60a4590682b79a9f8ac57afee09884b7edd1f98
-ms.sourcegitcommit: e7f04439d78909229506b56935a1105a4149ff3d
+ms.openlocfilehash: 083d2a8c6a0d1649f8bfb2c21a92fb43381fe9ad
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 12/23/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="implement-background-tasks-in-microservices-with-ihostedservice-and-the-backgroundservice-class"></a>在微服務中使用 IHostedService 和 BackgroundService 類別實作背景工作
 

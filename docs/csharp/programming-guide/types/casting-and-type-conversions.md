@@ -1,9 +1,6 @@
 ---
-title: "轉型和類型轉換 (C# 程式設計手冊)"
+title: 轉型和類型轉換 (C# 程式設計手冊)
 ms.date: 07/20/2015
-ms.prod: .net
-ms.technology: devlang-csharp
-ms.topic: article
 helpviewer_keywords:
 - type conversion [C#]
 - data type conversion [C#]
@@ -12,14 +9,11 @@ helpviewer_keywords:
 - casting [C#]
 - converting types [C#]
 ms.assetid: 568df58a-d292-4b55-93ba-601578722878
-caps.latest.revision: "52"
-author: BillWagner
-ms.author: wiwagn
-ms.openlocfilehash: 1361a7f115e2bae4b2d1f6271fa9020706581691
-ms.sourcegitcommit: c0dd436f6f8f44dc80dc43b07f6841a00b74b23f
+ms.openlocfilehash: 0c17fc89d93bdbb01bdef7935e72f8a7d96b0a55
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 01/19/2018
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="casting-and-type-conversions-c-programming-guide"></a>轉型和類型轉換 (C# 程式設計手冊)
 因為 C# 在編譯時期是靜態類型，所以宣告變數之後，除非該類型可轉換為變數的類型，否則無法再次宣告或用來儲存另一個類型的值。 例如，沒有從整數到任何任意字串的轉換。 因此，將 `i` 宣告為整數之後，無法對其指派字串 "Hello"，如下列程式碼所示。  

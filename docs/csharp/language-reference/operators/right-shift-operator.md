@@ -1,24 +1,17 @@
 ---
 title: '&gt;&gt; 運算子 (C# 參考)'
 ms.date: 07/20/2015
-ms.prod: .net
-ms.technology:
-- devlang-csharp
-ms.topic: article
 f1_keywords:
 - '>>_CSharpKeyword'
 helpviewer_keywords:
 - '>> operator [C#]'
 - right shift operator (>>) [C#]
 ms.assetid: a07f8679-d318-4ef8-b38b-65903efb8056
-caps.latest.revision: 15
-author: BillWagner
-ms.author: wiwagn
-ms.openlocfilehash: 7c2eddf06d7b8417c9fcb0fed395b2bf51e07144
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.openlocfilehash: 061a69250ef5524fa6b5f7bb4b9527057dd86e05
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="gtgt-operator-c-reference"></a>&gt;&gt; 運算子 (C# 參考)
 右移運算子 (`>>`) 會向其第一個運算元右移第二個運算元所指定的位元數。  
@@ -35,7 +28,7 @@ ms.lasthandoff: 11/21/2017
 ## <a name="example"></a>範例  
  [!code-csharp[csRefOperators#26](../../../csharp/language-reference/operators/codesnippet/CSharp/right-shift-operator_1.cs)]  
   
-## <a name="see-also"></a>另請參閱  
+## <a name="see-also"></a>請參閱  
  [C# 參考](../../../csharp/language-reference/index.md)  
  [C# 程式設計指南](../../../csharp/programming-guide/index.md)  
  [C# 運算子](../../../csharp/language-reference/operators/index.md)

@@ -1,26 +1,17 @@
 ---
-title: "剖析 XML (C#)"
-ms.custom: 
+title: 剖析 XML (C#)
 ms.date: 07/20/2015
-ms.prod: .net
-ms.reviewer: 
-ms.suite: 
-ms.technology: devlang-csharp
-ms.topic: article
 ms.assetid: 7ea83f83-a779-423a-9875-4ea4e51f97fc
-caps.latest.revision: "3"
-author: BillWagner
-ms.author: wiwagn
-ms.openlocfilehash: 3d262fd2177ac77ab5109362f94cc51d03c9563c
-ms.sourcegitcommit: bd1ef61f4bb794b25383d3d72e71041a5ced172e
+ms.openlocfilehash: 876cfdf7bd5a82aba75d456d6d5cda57e080fdf0
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/18/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="parsing-xml-c"></a>剖析 XML (C#)
 本節中的主題描述如何剖析 XML 文件。  
   
-## <a name="in-this-section"></a>本章節內容  
+## <a name="in-this-section"></a>本節內容  
   
 |主題|描述|  
 |-----------|-----------------|  
@@ -31,5 +22,5 @@ ms.lasthandoff: 10/18/2017
 |[如何：從 XmlReader 建立樹狀結構 (C#)](../../../../csharp/programming-guide/concepts/linq/how-to-create-a-tree-from-an-xmlreader.md)|顯示如何從 <xref:System.Xml.XmlReader> 直接建立 XML 樹狀結構。|  
 |[如何：從 XmlReader 串流 XML 片段 (C#)](../../../../csharp/programming-guide/concepts/linq/how-to-stream-xml-fragments-from-an-xmlreader.md)|顯示如何使用 <xref:System.Xml.XmlReader> 串流 XML 片段。<br /><br /> 當您必須處理非常大的 XML 檔案時，可能無法將整個 XML 樹狀結構載入記憶體中。 但是，您可以串流 XML 片段。|  
   
-## <a name="see-also"></a>另請參閱  
+## <a name="see-also"></a>請參閱  
  [建立 XML 樹狀結構 (C#)](../../../../csharp/programming-guide/concepts/linq/creating-xml-trees.md)

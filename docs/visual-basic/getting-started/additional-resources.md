@@ -2,10 +2,6 @@
 title: Visual Basic 程式設計人員的其他資源
 description: 探索網路上的資源，以學習、詢問問題及了解有關 Visual Basic 的更多資訊。
 ms.date: 02/21/2018
-ms.prod: .net
-ms.technology:
-- devlang-visual-basic
-ms.topic: article
 helpviewer_keywords:
 - Visual Basic, additional resources
 - resources [Visual Basic], additional
@@ -14,11 +10,11 @@ helpviewer_keywords:
 ms.assetid: 9bfb42e9-327f-439b-935e-8884f6aca80c
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: 10fe7506f2112ef15566a35c1c330a25024744f8
-ms.sourcegitcommit: b750a8e3979749b214e7e10c82efb0a0524dfcb1
+ms.openlocfilehash: f82ed592a78bb2d13000216cda8ce8334d1f3c83
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/09/2018
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="additional-resources"></a>其他資源
 

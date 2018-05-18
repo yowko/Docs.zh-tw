@@ -2,9 +2,7 @@
 title: 如何：將字串轉換成 DateTime
 description: 了解剖析表示日期與時間的字串，以從日期與時間字串建立 DateTime 的技術。
 ms.date: 02/15/2018
-ms.prod: .net
 ms.technology: dotnet-standard
-ms.topic: article
 dev_langs:
 - csharp
 - vb
@@ -18,15 +16,11 @@ helpviewer_keywords:
 - time strings
 author: rpetrusha
 ms.author: ronpet
-manager: wpickett
-ms.workload:
-- dotnet
-- dotnetcore
-ms.openlocfilehash: 6912109c11039c311067f330c3af71b15cbadc7a
-ms.sourcegitcommit: b750a8e3979749b214e7e10c82efb0a0524dfcb1
+ms.openlocfilehash: 4c093f22f77284d15e56c8f1d4a95afbeb75202d
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/09/2018
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="parsing-date-and-time-strings-in-net"></a>在 .NET 中剖析日期和時間字串
 

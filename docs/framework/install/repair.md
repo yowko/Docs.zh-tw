@@ -1,19 +1,14 @@
 ---
-title: "修復 .NET Framework"
-description: "了解如何修復 .NET Framework"
+title: 修復 .NET Framework
+description: 了解如何修復 .NET Framework
 author: rlander
 ms.author: mairaw
-keywords: ".NET Framework, 安裝"
 ms.date: 08/03/2017
-ms.topic: article
-ms.prod: .net-framework
-ms.devlang: dotnet
-ms.workload: dotnet
-ms.openlocfilehash: 72d004bac36c0c9f0ddad55aa62429c7a0944349
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.openlocfilehash: f22ab8b551c5f6a91cba92d76b38c998ccc09882
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="repair-the-net-framework"></a>修復 .NET Framework
 

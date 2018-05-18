@@ -1,9 +1,6 @@
 ---
-title: "from 子句 (C# 參考)"
+title: from 子句 (C# 參考)
 ms.date: 07/20/2015
-ms.prod: .net
-ms.technology: devlang-csharp
-ms.topic: article
 f1_keywords:
 - from_CSharpKeyword
 - from
@@ -11,14 +8,11 @@ helpviewer_keywords:
 - from clause [C#]
 - from keyword [C#]
 ms.assetid: 1aefd18c-1314-47f8-99ec-9bcefb09e699
-caps.latest.revision: "27"
-author: BillWagner
-ms.author: wiwagn
-ms.openlocfilehash: f718f50d2b8d6f5c612113414a2106fed37fe0fa
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.openlocfilehash: 21f7cf15de621bf862dedb82e87177900506a728
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="from-clause-c-reference"></a>from 子句 (C# 參考)
 查詢運算式的開頭必須是 `from` 子句。 此外，查詢運算式可以包含子查詢，也是以 `from` 子句開頭。 `from` 子句指定下列內容：  
@@ -54,6 +48,6 @@ ms.lasthandoff: 11/21/2017
   
  如需使用多個 `from` 子句的聯結作業詳細資訊，請參閱[如何：執行自訂聯結作業](../../../csharp/programming-guide/linq-query-expressions/how-to-perform-custom-join-operations.md)。  
   
-## <a name="see-also"></a>另請參閱  
+## <a name="see-also"></a>請參閱  
  [查詢關鍵字 (LINQ)](../../../csharp/language-reference/keywords/query-keywords.md)  
  [LINQ 查詢運算式](../../../csharp/programming-guide/linq-query-expressions/index.md)

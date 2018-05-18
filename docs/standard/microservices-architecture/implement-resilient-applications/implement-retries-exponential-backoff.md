@@ -1,21 +1,14 @@
 ---
-title: "使用指數輪詢來實作重試"
-description: "容器化 .NET 應用程式的 .NET 微服務架構 | 使用指數輪詢來實作重試"
-keywords: "Docker, 微服務, ASP.NET, 容器"
+title: 使用指數輪詢來實作重試
+description: 容器化 .NET 應用程式的 .NET 微服務架構 | 使用指數輪詢來實作重試
 author: CESARDELATORRE
 ms.author: wiwagn
 ms.date: 05/26/2017
-ms.prod: .net-core
-ms.technology: dotnet-docker
-ms.topic: article
-ms.workload:
-- dotnet
-- dotnetcore
-ms.openlocfilehash: 7ed97b750d6e3f2aa5def72e90e070a49a7c0e63
-ms.sourcegitcommit: e7f04439d78909229506b56935a1105a4149ff3d
+ms.openlocfilehash: 7f909c6f81abce80bfdf118112271f1f87254793
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 12/23/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="implementing-retries-with-exponential-backoff"></a>使用指數輪詢來實作重試
 

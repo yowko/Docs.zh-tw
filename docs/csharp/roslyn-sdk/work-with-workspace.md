@@ -1,18 +1,13 @@
 ---
 title: 使用 .NET Compiler Platform SDK 工作區模型
 description: 此概觀可讓您了解用來查詢與管理程式碼之工作區和專案的類型。
-author: billwagner
-ms.author: wiwagn
 ms.date: 10/15/2017
-ms.topic: conceptual
-ms.prod: .net
-ms.devlang: devlang-csharp
 ms.custom: mvc
-ms.openlocfilehash: c42795346c505f925c0b4cb232325085fa065201
-ms.sourcegitcommit: b750a8e3979749b214e7e10c82efb0a0524dfcb1
+ms.openlocfilehash: 7d450b31cbf2c83c79552d1ace3a1ae692bfdd88
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/09/2018
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="work-with-a-workspace"></a>使用工作區
 

@@ -1,23 +1,16 @@
 ---
-title: "Framework 程式庫"
-description: "了解這些程式庫如何提供許多一般和應用程式特定類型、演算法，以及公用程式功能的實作。"
-keywords: .NET, .NET Core
+title: Framework 程式庫
+description: 了解這些程式庫如何提供許多一般和應用程式特定類型、演算法，以及公用程式功能的實作。
 author: richlander
 ms.author: ronpet
 ms.date: 06/20/2016
-ms.topic: article
-ms.prod: .net
 ms.technology: dotnet-standard
-ms.devlang: dotnet
 ms.assetid: 7b77b6c1-8367-4602-bff3-91e4c05ac643
-ms.workload:
-- dotnet
-- dotnetcore
-ms.openlocfilehash: 9e792eefa551dacda7c01bb03a6035647de04a35
-ms.sourcegitcommit: e7f04439d78909229506b56935a1105a4149ff3d
+ms.openlocfilehash: dd8baa481e51aa44c4c884b4b165bdf319ac1c4d
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 12/23/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="framework-libraries"></a>Framework 程式庫
 

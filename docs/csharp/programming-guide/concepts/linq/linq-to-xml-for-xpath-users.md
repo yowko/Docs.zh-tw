@@ -1,25 +1,19 @@
 ---
-title: "XPath 使用者適用的 LINQ to XML (C#)"
+title: XPath 使用者適用的 LINQ to XML (C#)
 ms.date: 07/20/2015
-ms.prod: .net
-ms.technology: devlang-csharp
-ms.topic: article
 ms.assetid: 91774511-1dca-4f06-ac0b-913746f104fe
-caps.latest.revision: "3"
-author: BillWagner
-ms.author: wiwagn
-ms.openlocfilehash: 69109cc8541970695d463e6163bf4d63925ca5bb
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.openlocfilehash: e55e763db2169b704b0b1fcc72e21d9e339b01f6
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="linq-to-xml-for-xpath-users-c"></a>XPath 使用者適用的 LINQ to XML (C#)
 這組主題顯示多個 XPath 運算式及其 [!INCLUDE[sqltecxlinq](~/includes/sqltecxlinq-md.md)] 對等用法。  
   
  所有範例都使用 [!INCLUDE[sqltecxlinq](~/includes/sqltecxlinq-md.md)] 中，<xref:System.Xml.XPath.Extensions?displayProperty=nameWithType> 的擴充方法所提供的 XPath 功能。 這些範例會同時執行 XPath 運算式與 [!INCLUDE[sqltecxlinq](~/includes/sqltecxlinq-md.md)] 運算式。 接著，每個範例都會比較兩個查詢的結果，以驗證 XPath 運算式在功能上等同於 [!INCLUDE[sqltecxlinq](~/includes/sqltecxlinq-md.md)] 查詢。 由於兩種類型的查詢都會從相同的 XML 樹狀結構傳回節點，因此會使用參考識別進行查詢結果比較。  
   
-## <a name="in-this-section"></a>本章節內容  
+## <a name="in-this-section"></a>本節內容  
   
 |主題|描述|  
 |-----------|-----------------|  
@@ -41,7 +35,7 @@ ms.lasthandoff: 11/21/2017
 |[如何：根據位置尋找子項目 (XPath-LINQ to XML) (C#)](../../../../csharp/programming-guide/concepts/linq/how-to-find-child-elements-based-on-position-xpath-linq-to-xml.md)|比較如何使用 XPath 和 [!INCLUDE[sqltecxlinq](~/includes/sqltecxlinq-md.md)]，根據其相對位置尋找項目。<br /><br /> 相關聯的 XPath 運算式為：`"Test[position() >= 2 and position() <= 4]"`|  
 |[如何：尋找正前面的同層級項目 (XPath-LINQ to XML) (C#)](../../../../csharp/programming-guide/concepts/linq/how-to-find-the-immediate-preceding-sibling-xpath-linq-to-xml.md)|比較如何使用 XPath 和 [!INCLUDE[sqltecxlinq](~/includes/sqltecxlinq-md.md)] 尋找節點正前面的同層級。<br /><br /> 相關聯的 XPath 運算式為：`"preceding-sibling::*[1]"`|  
   
-## <a name="see-also"></a>另請參閱  
+## <a name="see-also"></a>請參閱  
  <xref:System.Xml.XPath?displayProperty=nameWithType>  
  [查詢 XML 樹狀結構 (C#)](../../../../csharp/programming-guide/concepts/linq/querying-xml-trees.md)  
  [使用 XPath 資料模型處理 XML 資料](../../../../standard/data/xml/process-xml-data-using-the-xpath-data-model.md)

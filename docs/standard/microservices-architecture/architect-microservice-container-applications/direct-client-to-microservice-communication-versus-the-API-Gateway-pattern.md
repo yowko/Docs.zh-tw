@@ -1,21 +1,14 @@
 ---
 title: 直接用戶端與微服務通訊與 API 閘道模式
 description: 容器化 .NET 應用程式的 .NET 微服務架構 | 直接用戶端與微服務通訊與 API 閘道模式
-keywords: Docker, 微服務, ASP.NET, 容器, API 閘道
 author: CESARDELATORRE
 ms.author: wiwagn
 ms.date: 10/18/2017
-ms.prod: .net-core
-ms.technology: dotnet-docker
-ms.topic: article
-ms.workload:
-- dotnet
-- dotnetcore
-ms.openlocfilehash: fa3f4bb97cf942ee7698b1efa1dcd09b3f2ca571
-ms.sourcegitcommit: 2e8acae16ae802f2d6d04e3ce0a6dbf04e476513
+ms.openlocfilehash: 40accd8e881c9667f69a61c98da1d013d28e7da6
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/18/2018
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="direct-client-to-microservice-communication-versus-the-api-gateway-pattern"></a>直接用戶端與微服務通訊與 API 閘道模式
 

@@ -1,22 +1,15 @@
 ---
 title: 如何：遞增和遞減指標 (C# 程式設計手冊)
 ms.date: 07/20/2015
-ms.prod: .net
-ms.technology:
-- devlang-csharp
-ms.topic: article
 helpviewer_keywords:
 - pointers [C#], increment and decrement
 - pointer expressions [C#], increment and decrement
 ms.assetid: 1b8b9281-44ee-485a-9045-3db38a4b4b89
-caps.latest.revision: ''
-author: BillWagner
-ms.author: wiwagn
-ms.openlocfilehash: 2c8efc6d0844d867ad6eebccf3bb22c03e6d5020
-ms.sourcegitcommit: c883637b41ee028786edceece4fa872939d2e64c
-ms.translationtype: MT
+ms.openlocfilehash: e1c3ac12a126450781d0ce78e788f39c740b5279
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 03/26/2018
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="how-to-increment-and-decrement-pointers-c-programming-guide"></a>如何：遞增和遞減指標 (C# 程式設計手冊)
 使用遞增和遞減運算子 (`++` 和 `--`)，依指標類型的類型指標的 [sizeof](../../../csharp/language-reference/keywords/sizeof.md) (`pointer-type`) 變更指標位置*。 遞增和遞減運算式的格式如下：  
@@ -48,7 +41,7 @@ p--;
 **Value:2 @ Address:12860280**  
 **Value:3 @ Address:12860284**  
 **Value:4 @ Address:12860288**   
-## <a name="see-also"></a>另請參閱  
+## <a name="see-also"></a>請參閱  
  [C# 程式設計指南](../../../csharp/programming-guide/index.md)  
  [指標運算式](../../../csharp/programming-guide/unsafe-code-pointers/pointer-expressions.md)  
  [C# 運算子](../../../csharp/language-reference/operators/index.md)  

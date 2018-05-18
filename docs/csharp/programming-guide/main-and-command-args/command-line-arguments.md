@@ -1,21 +1,14 @@
 ---
-title: "命令列引數 (C# 程式設計手冊)"
+title: 命令列引數 (C# 程式設計手冊)
 ms.date: 07/20/2015
-ms.prod: .net
-ms.technology:
-- devlang-csharp
-ms.topic: article
 helpviewer_keywords:
 - command-line arguments [C#]
 ms.assetid: 0e597e0d-ea7a-41ba-a38a-0198122f3c26
-caps.latest.revision: 
-author: BillWagner
-ms.author: wiwagn
-ms.openlocfilehash: 025ed2c451c0a657ce71db56df603302097fc7ee
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.openlocfilehash: 92b3f916b58f72ab2f2f542d3a611d35861afebe
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="command-line-arguments-c-programming-guide"></a>命令列引數 (C# 程式設計手冊)
 您可以使用下列其中一種方式，透過定義方法以將引數傳送給 `Main` 方法：  
@@ -79,7 +72,7 @@ long num = Convert.ToInt64(s);
   
  如需如何使用命令列引數的其他範例，請參閱[如何：使用命令列建立和使用組件](http://msdn.microsoft.com/library/70f65026-3687-4e9c-ab79-c18b97dd8be4)。  
   
-## <a name="see-also"></a>另請參閱  
+## <a name="see-also"></a>請參閱  
  <xref:System.Environment?displayProperty=nameWithType>  
  [C# 程式設計指南](../../../csharp/programming-guide/index.md)  
  [Main() 和命令列引數](../../../csharp/programming-guide/main-and-command-args/index.md)  

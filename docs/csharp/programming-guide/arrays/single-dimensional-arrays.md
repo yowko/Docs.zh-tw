@@ -1,21 +1,15 @@
 ---
-title: "一維陣列 (C# 程式設計手冊)"
+title: 一維陣列 (C# 程式設計手冊)
 ms.date: 07/20/2015
-ms.prod: .net
-ms.technology: devlang-csharp
-ms.topic: article
 helpviewer_keywords:
 - single-dimensional arrays [C#]
 - arrays [C#], single-dimensional
 ms.assetid: 2cec1196-1de0-49d2-baf2-c607c33310e8
-caps.latest.revision: "18"
-author: BillWagner
-ms.author: wiwagn
-ms.openlocfilehash: fed9042ba37164927bb8073bc669fafeb5d40598
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.openlocfilehash: 2f5dcb032c5dea764cdd212bbcd02e1640089d96
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="single-dimensional-arrays-c-programming-guide"></a>一維陣列 (C# 程式設計手冊)
 您可以宣告五個整數的一維陣列，如下列範例所示：  
@@ -56,7 +50,7 @@ ms.lasthandoff: 11/21/2017
   
  如需實值型別和參考型別的詳細資訊，請參閱[類型](../../../csharp/language-reference/keywords/types.md)。  
   
-## <a name="see-also"></a>另請參閱  
+## <a name="see-also"></a>請參閱  
  <xref:System.Array>  
  [C# 程式設計指南](../../../csharp/programming-guide/index.md)  
  [陣列](../../../csharp/programming-guide/arrays/index.md)  

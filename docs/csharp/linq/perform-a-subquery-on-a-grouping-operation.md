@@ -1,20 +1,13 @@
 ---
-title: "在分組作業上執行子查詢"
-description: "如何在分組作業上執行子查詢。"
-keywords: ".NET、.NET Core、C#"
-author: BillWagner
-manager: wpickett
-ms.author: wiwagn
+title: 在分組作業上執行子查詢
+description: 如何在分組作業上執行子查詢。
 ms.date: 12/1/2016
-ms.topic: article
-ms.prod: .net
-ms.technology: devlang-csharp
 ms.assetid: d75a588e-9b6f-4f37-b195-f99ec8503855
-ms.openlocfilehash: f638b8a679a15891d04e02f1597d6bf7934a9e74
-ms.sourcegitcommit: 7e99f66ef09d2903e22c789c67ff5a10aa953b2f
+ms.openlocfilehash: 209d05c2fe8719fa9116061d199272366146f465
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 11/18/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="perform-a-subquery-on-a-grouping-operation"></a>在分組作業上執行子查詢
 
@@ -31,5 +24,5 @@ ms.lasthandoff: 11/18/2017
 
  [!code-csharp[csProgGuideLINQ#23](../../../samples/snippets/csharp/concepts/linq/how-to-perform-a-subquery-on-a-grouping-operation_1.cs)]  
    
-## <a name="see-also"></a>請參閱  
+## <a name="see-also"></a>另請參閱  
  [LINQ 查詢運算式](index.md)

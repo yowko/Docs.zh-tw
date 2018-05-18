@@ -1,14 +1,6 @@
 ---
 title: Caspol.exe (程式碼存取安全性原則工具)
-ms.custom: ''
 ms.date: 03/30/2017
-ms.prod: .net-framework
-ms.reviewer: ''
-ms.suite: ''
-ms.technology:
-- dotnet-clr
-ms.tgt_pltfrm: ''
-ms.topic: article
 helpviewer_keywords:
 - permission sets, modifying security policy
 - security policy [.NET Framework], Code Access Security Policy tool
@@ -23,17 +15,13 @@ helpviewer_keywords:
 - security policy [.NET Framework], modifying
 - manually editing security configuration files
 ms.assetid: d2bf6123-7b0c-4e60-87ad-a39a1c3eb2e0
-caps.latest.revision: ''
 author: rpetrusha
 ms.author: ronpet
-manager: wpickett
-ms.workload:
-- dotnet
-ms.openlocfilehash: 6ab363e833ecde86a17d9adea3fcd26351725868
-ms.sourcegitcommit: c883637b41ee028786edceece4fa872939d2e64c
-ms.translationtype: MT
+ms.openlocfilehash: f2306d51d88ab2d3b74ed6381a6de0acebf1e62c
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 03/26/2018
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="caspolexe-code-access-security-policy-tool"></a>Caspol.exe (程式碼存取安全性原則工具)
 程式碼存取安全性 (CAS) 原則工具 (Caspol.exe) 可以讓使用者和系統管理員修改電腦原則層級、使用者原則層級和企業原則層級的安全性原則。  
@@ -58,7 +46,7 @@ caspol [options]
   
 |選項|描述|  
 |------------|-----------------|  
-|**-addfulltrust** *assembly_file*<br /><br /> 或<br /><br /> **-af** *assembly_file*|將實作自訂安全物件 (例如，自訂授權或自訂成員資格條件) 的組件加入至特定原則層級的完全信任組件清單。 *assembly_file* 引數會指定要新增的組件。 此檔案必須使用[強式名稱](../../../docs/framework/app-domains/strong-named-assemblies.md)簽署。 您可以使用[強式名稱工具 (Sn.exe)](../../../docs/framework/tools/sn-exe-strong-name-tool.md)，以強式名稱來簽署組件。<br /><br /> 只要將包含自訂權限的權限集合加入至原則，就必須將實作自訂權限的組件加入至該原則層級的完全信任清單。 實作安全性原則 (例如，電腦原則) 中所使用之自訂安全性物件 (例如自訂程式碼群組或成員資格條件) 的組件，應一律加入至完全信任組件清單。 **注意：**如果實作自訂安全性物件的組件有參考其他組件，您就必須先將參考的組件新增至完全信任組件清單中。 使用 Visual Basic、C++ 和 JScript 建立的自訂安全性物件會分別參考 Microsoft.VisualBasic.dll、Microsoft.VisualC.dll 或 Microsoft.JScript.dll。 依預設，這些組件不在完全信任組件清單中。 您必須在加入自訂安全性物件之前，先將適當的組件加入至完全信任清單中， 否則將會破壞安全性系統，造成所有的組件都無法載入。 在這種情況下，Caspol.exe **-all -reset** 選項將不會修復安全性。 若要修復安全性，您必須手動編輯安全性檔案，以移除自訂安全性物件。|  
+|**-addfulltrust** *assembly_file*<br /><br /> 或<br /><br /> **-af** *assembly_file*|將實作自訂安全物件 (例如，自訂授權或自訂成員資格條件) 的組件加入至特定原則層級的完全信任組件清單。 *assembly_file* 引數會指定要新增的組件。 此檔案必須使用[強式名稱](../../../docs/framework/app-domains/strong-named-assemblies.md)簽署。 您可以使用[強式名稱工具 (Sn.exe)](../../../docs/framework/tools/sn-exe-strong-name-tool.md)，以強式名稱來簽署組件。<br /><br /> 只要將包含自訂權限的權限集合加入至原則，就必須將實作自訂權限的組件加入至該原則層級的完全信任清單。 實作安全性原則 (例如，電腦原則) 中所使用之自訂安全性物件 (例如自訂程式碼群組或成員資格條件) 的組件，應一律加入至完全信任組件清單。 **注意：** 如果實作自訂安全性物件的組件有參考其他組件，您就必須先將參考的組件新增至完全信任組件清單中。 使用 Visual Basic、C++ 和 JScript 建立的自訂安全性物件會分別參考 Microsoft.VisualBasic.dll、Microsoft.VisualC.dll 或 Microsoft.JScript.dll。 依預設，這些組件不在完全信任組件清單中。 您必須在加入自訂安全性物件之前，先將適當的組件加入至完全信任清單中， 否則將會破壞安全性系統，造成所有的組件都無法載入。 在這種情況下，Caspol.exe **-all -reset** 選項將不會修復安全性。 若要修復安全性，您必須手動編輯安全性檔案，以移除自訂安全性物件。|  
 |**-addgroup** {*parent_label &#124; parent_name*} *mship pset_name* [*flags*]<br /><br /> 或<br /><br /> **-ag** {*parent_label &#124; parent_name*} *mship pset_name* [*flags*]|將新的程式碼群組加入至程式碼群組階層架構。 您可以指定 *parent_label* 或 *parent_name*。 *parent_label* 引數會指定所新增程式碼群組之父代的程式碼群組標籤 (例如 1. 或 1.1.)。 *parent_name* 引數會指定要新增之程式碼群組父代的程式碼群組名稱。 由於 *parent_label* 和 *parent_name* 可以交替使用，所以 Caspol.exe 必須能夠區分這兩者。 因此，*parent_name* 不能以數字開頭。 此外，*parent_name* 只能包含 A-Z、0-9 以及底線字元。<br /><br /> *mship* 引數會指定新程式碼群組的成員資格條件。 如需詳細資訊，請參閱本節稍後的 *mship* 引數表。<br /><br /> *pset_name* 引數是權限集合的名稱，其會與新的程式碼群組產生關聯。 您也可以為新群組設定一個或多個 *flags*。 如需詳細資訊，請參閱本節稍後的 *flags* 引數表。|  
 |**-addpset** {*psfile* &#124; *psfile* p*set_name*}<br /><br /> 或<br /><br /> **-ap** {*named*_*psfile* &#124; *psfile* *pset_name*}|將新的具名權限集合加入至原則。 權限集合必須以 XML 撰寫並儲存於 .xml 檔案中。 如果 XML 檔案包含權限集合的名稱，則只會指定該檔案 (*psfile*)。 如果 XML 檔案未包含權限集合名稱，則必須同時指定 XML 檔案名稱 (*psfile*) 和權限集合名稱 (*pset_name*)。<br /><br /> 請注意，權限集合中使用的所有權限都必須在全域組件快取內含的組件中定義。|  
 |**-a**[**ll**]|指出這個選項之後的所有選項都會套用至電腦、使用者和企業原則。 **-all** 選項一律會參考目前已登入使用者的原則。 若要參考目前使用者以外的使用者原則，請參閱 **-customall** 選項。|  
@@ -67,7 +55,7 @@ caspol [options]
 |**-customall**  *path*<br /><br /> 或<br /><br /> **-ca**  *path*|指出這個選項之後的所有選項都會套用至電腦、企業和指定的自訂使用者原則。 您必須使用 *path* 引數來指定自訂使用者的安全性組態檔位置。|  
 |**-cu**[**stomuser**] *path*|允許管理不屬於目前執行 Caspol.exe 之使用者的自訂使用者原則。 您必須使用 *path* 引數來指定自訂使用者的安全性組態檔位置。|  
 |**-enterprise**<br /><br /> 或<br /><br /> **-en**|指出這個選項之後的所有選項都會套用至企業層級原則。 不是企業系統管理員的使用者沒有足夠的權限可修改企業原則，但是可以檢視原則。 在非企業情節中，這個原則預設不會與電腦和使用者原則牴觸。|  
-|**-e**[**xecution**] {**on** &#124; **off**}|開啟或關閉在程式碼開始執行前檢查要執行之權限的機制。 **注意：**這個參數已在 [!INCLUDE[net_v40_short](../../../includes/net-v40-short-md.md)] 和更新版本中移除。 如需詳細資訊，請參閱[安全性變更](../../../docs/framework/security/security-changes.md)。|  
+|**-e**[**xecution**] {**on** &#124; **off**}|開啟或關閉在程式碼開始執行前檢查要執行之權限的機制。 **注意：** 這個參數已在 [!INCLUDE[net_v40_short](../../../includes/net-v40-short-md.md)] 和更新版本中移除。 如需詳細資訊，請參閱[安全性變更](../../../docs/framework/security/security-changes.md)。|  
 |**-f**[**orce**]|抑制工具的自行解構測試，並依照使用者指定的方式變更原則。 一般來說，Caspol.exe 會檢查是否有造成 Caspol.exe 本身無法正常執行的任何原則變更，如果有的話，Caspol.exe 不會儲存該原則變更，而且會印出錯誤訊息。 若要強制 Caspol.exe 變更原則 (即使這個原則會造成 Caspol.exe 本身無法執行)，請使用 **–force** 選項。|  
 |**-h**[**elp**]|顯示 Caspol.exe 的命令語法和選項。|  
 |**-l**[**ist**]|列出程式碼群組階層架構以及所指定電腦、使用者、企業或所有原則層級的權限集合。 Caspol.exe 會先顯示程式碼群組的標籤，後面接著名稱 (如果不是 null 的話)。|  
@@ -86,7 +74,7 @@ caspol [options]
 |**-resetlockdown**<br /><br /> 或<br /><br /> **-rsld**|將原則回復為預設狀態的更嚴格版本並將它保存至磁碟，建立先前電腦原則的備份並將它保存至稱為 `security.config.bac` 的檔案。  鎖定原則類似於預設原則，差別在於鎖定原則不會授與可從 `Local Intranet`、`Trusted Sites` 和 `Internet` 區域撰寫程式碼的權限，而且對應的程式碼群組沒有子程式碼群組。|  
 |**-resolvegroup** *assembly_file*<br /><br /> 或<br /><br /> **-rsg**  *assembly_file*|顯示特定組件 (*assembly_file*) 所屬的程式碼群組。 根據預設，這個選項會顯示組件所屬的電腦、使用者和企業原則層級。 若只要檢視一個原則層級，請搭配使用這個選項與 **-machine**、**-user** 或 **-enterprise** 選項。|  
 |**-resolveperm** *assembly_file*<br /><br /> 或<br /><br /> **-rsp** *assembly_file*|在允許組件執行的情況下，顯示指定 (或預設) 的安全性原則層級會授與該組件的所有權限。 *assembly_file* 引數會指定組件。 如果指定 **-all** 選項，Caspol.exe 會根據使用者、電腦和企業原則計算組件的權限；若未指定，則會套用預設行為規則。|  
-|**-s**[**ecurity**] {**on** &#124; **off**}|開啟或關閉程式碼存取安全性。 指定 **-s off** 選項時，並不會停用以角色為基礎的安全性。 **注意：**這個參數已在 [!INCLUDE[net_v40_short](../../../includes/net-v40-short-md.md)] 和更新版本中移除。 如需詳細資訊，請參閱[安全性變更](../../../docs/framework/security/security-changes.md)。 **注意：**停用程式碼存取安全性時，所有的程式碼存取要求都會成功。 停用程式碼存取安全性會讓系統容易受惡意程式碼的攻擊，如病毒和破壞程式。 關閉安全性可獲得額外的效能，但是只有在已採取其他安全措施來協助確保整體系統安全性沒有漏洞的情況下，才可以這樣做。 其他安全性措施的範例，包括從公用網路中斷連結、用實際方法保全電腦等等。|  
+|**-s**[**ecurity**] {**on** &#124; **off**}|開啟或關閉程式碼存取安全性。 指定 **-s off** 選項時，並不會停用以角色為基礎的安全性。 **注意：** 這個參數已在 [!INCLUDE[net_v40_short](../../../includes/net-v40-short-md.md)] 和更新版本中移除。 如需詳細資訊，請參閱[安全性變更](../../../docs/framework/security/security-changes.md)。 **注意：** 停用程式碼存取安全性時，所有的程式碼存取要求都會成功。 停用程式碼存取安全性會讓系統容易受惡意程式碼的攻擊，如病毒和破壞程式。 關閉安全性可獲得額外的效能，但是只有在已採取其他安全措施來協助確保整體系統安全性沒有漏洞的情況下，才可以這樣做。 其他安全性措施的範例，包括從公用網路中斷連結、用實際方法保全電腦等等。|  
 |**-u**[**ser**]|指出這個選項之後的所有選項都會套用至執行 Caspol.exe 之使用者的使用者層級原則。 對於非系統管理使用者，**-user** 是預設值。|  
 |**-?**|顯示 Caspol.exe 的命令語法和選項。|  
   
@@ -101,7 +89,7 @@ caspol [options]
 |**-pub** { **-cert** *cert_file_name* &#124;<br /><br /> **-file** *signed_file_name* &#124; **-hex**  *hex_string* }|指定具有所指軟體發行者的程式碼，該發行者的表示方式為憑證檔、檔案上的簽章或 X509 憑證的十六進位表示。 如需這個成員資格條件的詳細資訊，請參閱 <xref:System.Security.Policy.PublisherMembershipCondition>。|  
 |**-site** *website*|指定具有所指來源網站的程式碼。 例如: <br /><br /> **-site** www.proseware.com<br /><br /> 如需這個成員資格條件的詳細資訊，請參閱 <xref:System.Security.Policy.SiteMembershipCondition>。|  
 |**-strong -file** *file_name* {*name* &#124; **-noname**} {*version* &#124; **-noversion**}|可指定具有特定強式名稱的程式碼，該名稱的指定方式為檔案名稱、組件名稱 (字串形式)，以及格式為 *major*.*minor*.*build*.*revision* 的組件版本。 例如: <br /><br /> **-strong -file** myAssembly.exe myAssembly 1.2.3.4<br /><br /> 如需這個成員資格條件的詳細資訊，請參閱 <xref:System.Security.Policy.StrongNameMembershipCondition>。|  
-|**-url** *URL*|指定來自所指 URL 的程式碼。 這個 URL 必須包括通訊協定，例如 http:// 或 ftp://。 此外，您可以使用萬用字元 (\*) 指定來自特定 URL 的多個組件。 **注意：**因為 URL 可以使用多個名稱來識別，所以將 URL 作為成員資格條件來確定程式碼識別並不安全。 請盡可能使用強式名稱 (Strong Name) 成員資格條件、發行者成員資格條件或雜湊成員資格條件。 <br /><br /> 如需這個成員資格條件的詳細資訊，請參閱 <xref:System.Security.Policy.UrlMembershipCondition>。|  
+|**-url** *URL*|指定來自所指 URL 的程式碼。 這個 URL 必須包括通訊協定，例如 http:// 或 ftp://。 此外，您可以使用萬用字元 (\*) 指定來自特定 URL 的多個組件。 **注意：** 因為 URL 可以使用多個名稱來識別，所以將 URL 作為成員資格條件來確定程式碼識別並不安全。 請盡可能使用強式名稱 (Strong Name) 成員資格條件、發行者成員資格條件或雜湊成員資格條件。 <br /><br /> 如需這個成員資格條件的詳細資訊，請參閱 <xref:System.Security.Policy.UrlMembershipCondition>。|  
 |**-zone** *zonename*|指定具有所指原始區域的程式碼。 *zonename* 引數可以是下列其中一個值：**MyComputer**、**Intranet**、**Trusted**、**Internet** 或 **Untrusted**。 如需這個成員資格條件的詳細資訊，請參閱 <xref:System.Security.Policy.ZoneMembershipCondition> 類別。|  
   
  *flags* 引數是使用下列其中一種方式指定，並且可以搭配 **–addgroup** 和 **–chggroup** 選項使用。  
@@ -257,6 +245,6 @@ caspol -customall "c:\config_test\security.config" -resolvegroup myassembly
 caspol -all -resolveperm testassembly  
 ```  
   
-## <a name="see-also"></a>另請參閱  
+## <a name="see-also"></a>請參閱  
  [工具](../../../docs/framework/tools/index.md)  
  [命令提示字元](../../../docs/framework/tools/developer-command-prompt-for-vs.md)

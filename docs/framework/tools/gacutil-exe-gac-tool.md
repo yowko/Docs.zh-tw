@@ -1,13 +1,6 @@
 ---
-title: "Gacutil.exe (全域組件快取工具)"
-ms.custom: 
+title: Gacutil.exe (全域組件快取工具)
 ms.date: 03/30/2017
-ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.technology: dotnet-clr
-ms.tgt_pltfrm: 
-ms.topic: article
 helpviewer_keywords:
 - assemblies [.NET Framework], global assembly cache
 - global assembly cache, viewing contents
@@ -24,21 +17,18 @@ helpviewer_keywords:
 - global assembly cache, Gacutil.exe
 - Global Assembly Cache tool
 ms.assetid: 4c7be9c8-72ae-481f-a01c-1a4716806e99
-caps.latest.revision: "17"
 author: rpetrusha
 ms.author: ronpet
-manager: wpickett
-ms.workload: dotnet
-ms.openlocfilehash: f802abf6ed90a60b057b01589dcf32c2aa495676
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.openlocfilehash: 98423e6c103f7eb93b4bfa35ef19b6551c0df0e0
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="gacutilexe-global-assembly-cache-tool"></a>Gacutil.exe (全域組件快取工具)
 全域組件快取工具可以讓您檢視和操作全域組件快取和下載快取的內容。  
   
- 此工具會自動與 Visual Studio 一起安裝。 若要執行此工具，請使用 [開發人員命令提示字元] (或 Windows 7 中的 [Visual Studio 命令提示字元])。 如需詳細資訊，請參閱[命令提示字元](../../../docs/framework/tools/developer-command-prompt-for-vs.md)。  
+ 此工具會自動與 Visual Studio 一起安裝。 若要執行此工具，請使用 [開發人員命令提示字元] \(或 Windows 7 中的 [Visual Studio 命令提示字元])。 如需詳細資訊，請參閱[命令提示字元](../../../docs/framework/tools/developer-command-prompt-for-vs.md)。  
   
  在命令提示字元下輸入下列命令：  
   
@@ -72,9 +62,9 @@ gacutil [options] [assemblyName | assemblyPath | assemblyListFile]
 |**/r** [*assemblyName &#124; assemblyPath*]<br /><br /> *scheme*<br /><br /> *id*<br /><br /> *description*|指定要安裝或解除安裝之組件的追蹤參考。 請使用 **/i**、**/il**、**/u** 或 **/ul** 選項指定這個選項。<br /><br /> 若要安裝組件，請使用這個選項指定 *assemblyPath*、*scheme*、*id* 及 *description* 參數。 若要解除安裝組件，請指定 *assemblyName*、*scheme*、*id* 和 *description* 參數。<br /><br /> 若要移除組件的參考，您必須在指定安裝組件時使用與 */i* 和 */r* (或 */ir*) 選項指定的相同 **scheme**、**id** 和 **description** 參數。 如果您正在解除安裝組件，並且這個組件是最後要移除的參考，且 Windows Installer 沒有這個組件的未解決參考，這個工具也會從全域組件快取中移除這個組件。<br /><br /> *scheme* 參數指定安裝配置的類型。 您可以指定下列其中一個值：<br /><br /> -   UNINSTALL_KEY：如果安裝程式將應用程式加入至 Microsoft Windows 中的 [新增或移除程式]，則指定這個值。 應用程式會將一個登錄機碼加入 HKLM\Software\Microsoft\Windows\CurrentVersion，以將其本身加入至 [新增或移除程式] 中。<br />-   FILEPATH：如果安裝程式沒有將應用程式加入至 [新增或移除程式] 中，則指定這個值。<br />-   OPAQUE：如果提供登錄機碼或檔案路徑不適用於您的安裝情節，則指定這個值。 這個值允許您對 *id* 參數指定自訂資訊。<br /><br /> 要對 *id* 參數指定的值取決於對 *scheme* 參數指定的值：<br /><br /> 如果您對 *scheme* 參數指定 UNINSTALL_KEY，請在 HKLM\Software\Microsoft\Windows\CurrentVersion 登錄機碼中指定應用程式集的名稱。 例如，如果登錄機碼是 HKLM\Software\Microsoft\Windows\CurrentVersion\MyApp，請對 *id* 參數指定 MyApp。<br />-   如果您對 *scheme* 參數指定 FILEPATH，請將安裝組件之可執行檔的完整路徑指定為 *id* 參數。<br />-   如果您對 *scheme* 參數指定 OPAQUE，則可以提供任何資料片段做為 *id* 參數。 您所指定的資料必須包含在引號 ("") 中。<br /><br /> *description* 參數允許您指定與要安裝之應用程式有關的描述文字。 這項資訊會在列舉參考時顯示。|  
 |**/silent**|隱藏所有輸出的顯示。|  
 |**/u**  *assemblyName*|解除安裝全域組件快取中的單一組件。|  
-|**/uf**  *assemblyName*|移除組件的所有參考，強制解除安裝指定的組件。<br /><br /> 指定這個選項相當於同時指定 **/u** 和 **/f** 選項。 **注意：**您無法使用這個選項移除使用 Microsoft Windows Installer 所安裝的組件。 如果您嘗試這項作業，工具就會顯示錯誤訊息。|  
+|**/uf**  *assemblyName*|移除組件的所有參考，強制解除安裝指定的組件。<br /><br /> 指定這個選項相當於同時指定 **/u** 和 **/f** 選項。 **注意：** 您無法使用這個選項移除使用 Microsoft Windows Installer 所安裝的組件。 如果您嘗試這項作業，工具就會顯示錯誤訊息。|  
 |**/ul** *assemblyListFile*|從全域組件快取中解除安裝 *assemblyListFile* 中指定的一或多個組件。|  
-|**/u**[**ngen**] *assemblyName*|從全域組件快取解除安裝指定的組件。 如果指定的組件具有現存的參考計數，工具就會顯示參考計數，並且不會從全域組件快取中移除組件。 **注意：**在 .NET Framework 2.0 版中不支援 `/ungen`。 請改用 [Ngen.exe (原生映像產生器)](../../../docs/framework/tools/ngen-exe-native-image-generator.md) 的 `uninstall` 命令。 <br /><br /> 在 .NET Framework 1.0 和 1.1 版中，指定 **/ungen** 會使 Gacutil.exe 移除原生映像快取中的組件。 這個快取儲存了使用 [Ngen.exe (原生映像產生器)](../../../docs/framework/tools/ngen-exe-native-image-generator.md) 建立之組件的原生映像。|  
+|**/u**[**ngen**] *assemblyName*|從全域組件快取解除安裝指定的組件。 如果指定的組件具有現存的參考計數，工具就會顯示參考計數，並且不會從全域組件快取中移除組件。 **注意：** 在 .NET Framework 2.0 版中不支援 `/ungen`。 請改用 [Ngen.exe (原生映像產生器)](../../../docs/framework/tools/ngen-exe-native-image-generator.md) 的 `uninstall` 命令。 <br /><br /> 在 .NET Framework 1.0 和 1.1 版中，指定 **/ungen** 會使 Gacutil.exe 移除原生映像快取中的組件。 這個快取儲存了使用 [Ngen.exe (原生映像產生器)](../../../docs/framework/tools/ngen-exe-native-image-generator.md) 建立之組件的原生映像。|  
 |**/ur**  *assemblyName*<br /><br /> *scheme*<br /><br /> *id*<br /><br /> *description*|從全域組件快取解除安裝指定之組件的參考。 若要移除組件的參考，您必須在指定安裝組件時使用與 */i* 和 */r* (或 */ir*) 選項指定的相同 **scheme**、**id** 和 **description** 參數。 如需可以為這些參數指定之有效值的描述，請參閱 **/r** 選項。<br /><br /> 指定這個選項相當於同時指定 **/u** 和 **/r** 選項。|  
 |**/?**|顯示工具的命令語法和選項。|  
   

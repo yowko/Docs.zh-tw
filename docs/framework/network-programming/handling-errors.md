@@ -1,12 +1,6 @@
 ---
-title: "處理錯誤"
-ms.custom: 
+title: 處理錯誤
 ms.date: 03/30/2017
-ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.tgt_pltfrm: 
-ms.topic: article
 dev_langs:
 - csharp
 - vb
@@ -37,16 +31,14 @@ helpviewer_keywords:
 - ConnectionClosed enumeration member
 - SecureChannelFailure enumeration member
 ms.assetid: 657141cd-5cf5-4fdb-a4b2-4c040eba84b5
-caps.latest.revision: "12"
 author: mcleblanc
 ms.author: markl
 manager: markl
-ms.workload: dotnet
-ms.openlocfilehash: c7d9c08e38c2d82381c94e8813ef0312806bd010
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
-ms.translationtype: MT
+ms.openlocfilehash: 8020a92345ba85a99c0b46b2d4247d677defd054
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="handling-errors"></a>處理錯誤
 <xref:System.Net.WebRequest> 和 <xref:System.Net.WebResponse> 類別會擲回兩個系統例外狀況 (例如 <xref:System.ArgumentException>) 和 Web 特定例外狀況 (這些是 <xref:System.Net.WebRequest.GetResponse%2A> 方法所擲回的 <xref:System.Net.WebException>)。  
@@ -71,7 +63,7 @@ ms.lasthandoff: 12/22/2017
 |等候逾時|在針對要求所設定的逾時內未收到任何回應。|  
 |TrustFailure|無法驗證伺服器憑證。|  
 |MessageLengthLimitExceeded|從伺服器傳送要求或接收回應時，收到超過指定限制的訊息。|  
-|暫止|內部非同步要求正在擱置中。|  
+|擱置|內部非同步要求正在擱置中。|  
 |PipelineFailure|此值支援 .NET Framework 基礎結構，但不能直接用於您的程式碼中。|  
 |ProxyNameResolutionFailure|名稱解析服務無法解析 Proxy 主機名稱。|  
 |UnknownError|發生未知類型的例外狀況。|  

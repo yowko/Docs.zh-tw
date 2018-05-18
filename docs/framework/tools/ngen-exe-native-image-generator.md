@@ -1,14 +1,6 @@
 ---
 title: Ngen.exe (原生映像產生器)
-ms.custom: ''
 ms.date: 03/30/2017
-ms.prod: .net-framework
-ms.reviewer: ''
-ms.suite: ''
-ms.technology:
-- dotnet-clr
-ms.tgt_pltfrm: ''
-ms.topic: article
 dev_langs:
 - csharp
 - vb
@@ -26,17 +18,13 @@ helpviewer_keywords:
 - BypassNGenAttribute
 - System.Runtime.BypassNGenAttribute
 ms.assetid: 44bf97aa-a9a4-4eba-9a0d-cfaa6fc53a66
-caps.latest.revision: ''
 author: rpetrusha
 ms.author: ronpet
-manager: wpickett
-ms.workload:
-- dotnet
-ms.openlocfilehash: 20c120323356171d78da35a490488f4654baece6
-ms.sourcegitcommit: c883637b41ee028786edceece4fa872939d2e64c
-ms.translationtype: MT
+ms.openlocfilehash: f0811e32a9483238d1cd15084c19951075c8a36a
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 03/26/2018
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="ngenexe-native-image-generator"></a>Ngen.exe (原生映像產生器)
 原生映像產生器 (Ngen.exe) 是一種可以增進 Managed 應用程式效能的工具。 Ngen.exe 會建立原生映像，也就是包含已編譯之處理器特定機器碼的檔案，然後將原生映像安裝到本機電腦上的原生映像快取中。 執行階段就可以從快取中使用原生映像，而不是使用 Just-In-Time (JIT) 編譯器來編譯原始組件。  
@@ -86,7 +74,7 @@ ngen /? | /help
 |動作|描述|  
 |------------|-----------------|  
 |`install` [`assemblyName` &#124; `assemblyPath`] [`scenarios`] [`config`] [`/queue`[`:`{`1`&#124;`2`&#124;`3`}]]|產生組件的原生映像及其相依性，並在原生映像快取中安裝映像。<br /><br /> 如果已指定 `/queue`，原生映像服務的動作就會排入佇列。 預設優先權為 3。 請參閱[優先權層級](#PriorityTable)表格。|  
-|`uninstall` [`assemblyName` &#124; `assemblyPath`] [`scenarios`] [`config`]|從原生映像快取中刪除組件的原生映像和其相依性。<br /><br /> 若要解除安裝單一映像和其相依性，請使用安裝影像時所用的相同命令列引數。 **附註：**從 [!INCLUDE[net_v40_long](../../../includes/net-v40-long-md.md)] 開始，不再支援 `uninstall`動作。*|  
+|`uninstall` [`assemblyName` &#124; `assemblyPath`] [`scenarios`] [`config`]|從原生映像快取中刪除組件的原生映像和其相依性。<br /><br /> 若要解除安裝單一映像和其相依性，請使用安裝影像時所用的相同命令列引數。 **附註：** 從 [!INCLUDE[net_v40_long](../../../includes/net-v40-long-md.md)] 開始，不再支援 `uninstall`動作。*|  
 |`update` [`/queue`]|更新已經變成無效的原生映像。<br /><br /> 如果已指定 `/queue`，原生映像服務的更新動作就會排入佇列。 更新動作一律會排在優先權 3，因此會在電腦為閒置時才執行。|  
 |`display` [`assemblyName` &#124; `assemblyPath`]|顯示組件的原生映像狀態和其相依性。<br /><br /> 如果沒有提供任何引數，將顯示原生映像快取中的每個項目。|  
 |`executeQueuedItems` [<code>1&#124;2&#124;3</code>]<br /><br /> -或-<br /><br /> `eqi` [1&#124;2&#124;3]|執行排入佇列的編譯工作。<br /><br /> 如果已指定優先權，就會執行具有較大或相同優先權的編譯工作。 如果沒有指定優先權，將會執行所有排入佇列的編譯工作。|  
@@ -97,7 +85,7 @@ ngen /? | /help
   
 |引數|描述|  
 |--------------|-----------------|  
-|`assemblyName`|組件的完整顯示名稱。 例如，`"myAssembly, Version=2.0.0.0, Culture=neutral, PublicKeyToken=0038abc9deabfle5"`。 **附註：**您可以提供組件的部分名稱 (例如 `myAssembly`) 以進行 `display` 和 `uninstall` 動作。 <br /><br /> 每一個 Ngen.exe 命令列只能指定一個組件。|  
+|`assemblyName`|組件的完整顯示名稱。 例如，`"myAssembly, Version=2.0.0.0, Culture=neutral, PublicKeyToken=0038abc9deabfle5"`。 **附註：** 您可以提供組件的部分名稱 (例如 `myAssembly`) 以進行 `display` 和 `uninstall` 動作。 <br /><br /> 每一個 Ngen.exe 命令列只能指定一個組件。|  
 |`assemblyPath`|組件的明確路徑。 您可以指定完整或相對路徑。<br /><br /> 如果指定檔案名稱但沒有指定路徑，則組件必須位於目前的目錄中。<br /><br /> 每一個 Ngen.exe 命令列只能指定一個組件。|  
   
 <a name="PriorityTable"></a>   
@@ -133,7 +121,7 @@ ngen /? | /help
 |------------|-----------------|  
 |`/nologo`|隱藏 Microsoft 程式啟始資訊的顯示。|  
 |`/silent`|隱藏成功訊息的顯示。|  
-|`/verbose`|顯示用來偵錯的詳細資訊。 **注意：**由於作業系統限制的關係，這個選項在 Windows 98 和 Windows Millennium Edition 上不會顯示那麼多詳細資訊。|  
+|`/verbose`|顯示用來偵錯的詳細資訊。 **注意：** 由於作業系統限制的關係，這個選項在 Windows 98 和 Windows Millennium Edition 上不會顯示那麼多詳細資訊。|  
 |`/help`, `/?`|顯示目前版本的命令語法和選項。|  
   
 ## <a name="remarks"></a>備註  
@@ -430,7 +418,7 @@ ngen install c:\myfiles\MyLib.dll /ExeConfig:c:\myapps\MyApp.exe
 ngen uninstall c:\myfiles\MyLib.dll /ExeConfig:c:\myapps\MyApp.exe  
 ```  
   
- 若要在全域組件快取中建立組件的原生映像，請使用組件的顯示名稱。 例如：  
+ 若要在全域組件快取中建立組件的原生映像，請使用組件的顯示名稱。 例如:   
   
 ```  
 ngen install "ClientApp, Version=1.0.0.0, Culture=neutral,   
@@ -531,8 +519,8 @@ ngen uninstall "ClientApp, Version=1.0.0.0, Culture=neutral,
   
 |工作名稱|32 位元電腦|64 位元電腦|  
 |---------------|----------------------|----------------------|  
-|NET Framework NGEN v4.0.30319|是|是|  
-|NET Framework NGEN v4.0.30319 64|否|是|  
+|NET Framework NGEN v4.0.30319|[是]|[是]|  
+|NET Framework NGEN v4.0.30319 64|否|[是]|  
   
  在 Windows 8 或更新版本上執行時，可在 .NET Framework 4.5 和更新版本中使用原生映像工作。 在舊版 Windows 中，.NET Framework 會使用 [原生映像服務][Native Image Service]。  
   
@@ -595,7 +583,7 @@ ngen executeQueuedItems
 ### <a name="service-interaction-with-clients"></a>服務與用戶端互動  
  在 .NET Framework 2.0 版中，與原生映像服務的唯一互動，是透過命令列工具 Ngen.exe。 在安裝指令碼中使用命令列工具，將原生映像服務的動作加入佇列中，並與服務互動。  
   
-## <a name="see-also"></a>另請參閱  
+## <a name="see-also"></a>請參閱  
  [工具](../../../docs/framework/tools/index.md)  
  [Managed 執行程序](../../../docs/standard/managed-execution-process.md)  
  [執行階段如何找出組件](../../../docs/framework/deployment/how-the-runtime-locates-assemblies.md)  

@@ -1,21 +1,12 @@
 ---
-title: "如何：尋找具有特定屬性的項目 (C#)"
-ms.custom: 
+title: 如何：尋找具有特定屬性的項目 (C#)
 ms.date: 07/20/2015
-ms.prod: .net
-ms.reviewer: 
-ms.suite: 
-ms.technology: devlang-csharp
-ms.topic: article
 ms.assetid: b92591aa-3cfb-490e-99f6-da8de335e362
-caps.latest.revision: "3"
-author: BillWagner
-ms.author: wiwagn
-ms.openlocfilehash: 4fc7fd7986b79109038bb4f653131d5256c14f04
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.openlocfilehash: 53296b2ace23bbc57deb0f5e7c0b23ebfc9613d1
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="how-to-find-an-element-with-a-specific-attribute-c"></a>如何：尋找具有特定屬性的項目 (C#)
 這個主題顯示如何尋找其屬性具有特定值的項目。  
@@ -77,7 +68,7 @@ foreach (XElement el in address)
 </aw:Address>  
 ```  
   
-## <a name="see-also"></a>另請參閱  
+## <a name="see-also"></a>請參閱  
  <xref:System.Xml.Linq.XElement.Attribute%2A>  
  <xref:System.Xml.Linq.XContainer.Elements%2A>  
  [基本查詢 (LINQ to XML) (C#)](../../../../csharp/programming-guide/concepts/linq/basic-queries-linq-to-xml.md)  

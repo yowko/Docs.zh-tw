@@ -1,13 +1,6 @@
 ---
-title: "如何：參考強式名稱簽署組件"
-ms.custom: 
+title: 如何：參考強式名稱簽署組件
 ms.date: 03/30/2017
-ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.technology: dotnet-bcl
-ms.tgt_pltfrm: 
-ms.topic: article
 dev_langs:
 - csharp
 - vb
@@ -18,16 +11,13 @@ helpviewer_keywords:
 - assemblies [.NET Framework], strong-named
 - assembly binding, strong-named
 ms.assetid: 4c6a406a-b5eb-44fa-b4ed-4e95bb95a813
-caps.latest.revision: "14"
 author: rpetrusha
 ms.author: ronpet
-manager: wpickett
-ms.workload: dotnet
-ms.openlocfilehash: a5934f67387e29bfbd4f011ad2ba47f50d81b983
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.openlocfilehash: 7f78fff50d1a227061076790ad77f17debe3f690
+ms.sourcegitcommit: 11f11ca6cefe555972b3a5c99729d1a7523d8f50
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="how-to-reference-a-strong-named-assembly"></a>如何：參考強式名稱簽署組件
 參考強式名稱組件中類型或資源的程序通常十分簡單。 您可以在編譯時間 (早期繫結) 或執行階段進行參考。  
@@ -73,11 +63,11 @@ csc /t:library myAssembly.cs /reference:myLibAssembly.dll
   
  您可以使用下列[強式名稱 (Sn.exe)](../../../docs/framework/tools/sn-exe-strong-name-tool.md) 命令，列印特定組件之公開金鑰和公開金鑰權杖的十六進位格式：  
   
- **sn -Tp \<**組件**>**  
+ **sn -Tp \<** 組件**>**  
   
  如果您有公開金鑰檔案，則可以改用下列命令 (請注意命令列選項上的大小寫差異)：  
   
- **sn -tp \<**組件**>**  
+ **sn -tp \<** 組件**>**  
   
 ## <a name="see-also"></a>請參閱  
  [建立和使用強式名稱的組件](../../../docs/framework/app-domains/create-and-use-strong-named-assemblies.md)

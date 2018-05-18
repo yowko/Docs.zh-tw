@@ -1,26 +1,19 @@
 ---
 title: 編譯器所產生的例外狀況 (C# 程式設計手冊)
 ms.date: 07/20/2015
-ms.prod: .net
-ms.technology:
-- devlang-csharp
-ms.topic: article
 helpviewer_keywords:
 - exceptions [C#], compiler-generated
 ms.assetid: 53b52f97-b366-4ed7-b05b-9eb78096b7f9
-caps.latest.revision: 13
-author: BillWagner
-ms.author: wiwagn
-ms.openlocfilehash: d1417e42f588978d5fc1beca4ad55463502ee219
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.openlocfilehash: a1746a492685cf25869bd06935bfd056de257fea
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="compiler-generated-exceptions-c-programming-guide"></a>編譯器所產生的例外狀況 (C# 程式設計手冊)
 基本作業失敗時，.NET Framework 的 Common Language Runtime (CLR) 會自動擲回一些例外狀況。 下表列出這些例外狀況和其錯誤條件。  
   
-|例外狀況|說明|  
+|例外|描述|  
 |---------------|-----------------|  
 |<xref:System.ArithmeticException>|在算術運算期間所發生的例外狀況 (例如 <xref:System.DivideByZeroException> 和 <xref:System.OverflowException>) 的基底類別。|  
 |<xref:System.ArrayTypeMismatchException>|陣列因項目的實際類型與陣列的實際類型不相容而無法儲存指定的項目時擲回。|  
@@ -33,7 +26,7 @@ ms.lasthandoff: 11/21/2017
 |<xref:System.StackOverflowException>|在因太多暫止方法呼叫而耗盡執行堆疊時擲回；通常表示非常深或無限遞迴。|  
 |<xref:System.TypeInitializationException>|在靜態建構函式擲回例外狀況而且沒有相容的 `catch` 子句可攔截它時擲回。|  
   
-## <a name="see-also"></a>另請參閱  
+## <a name="see-also"></a>請參閱  
  [C# 程式設計指南](../../../csharp/programming-guide/index.md)  
  [例外狀況和例外狀況處理](../../../csharp/programming-guide/exceptions/index.md)  
  [例外狀況處理](../../../csharp/programming-guide/exceptions/exception-handling.md)  

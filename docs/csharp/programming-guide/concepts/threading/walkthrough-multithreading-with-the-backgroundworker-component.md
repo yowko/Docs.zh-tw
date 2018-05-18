@@ -1,21 +1,12 @@
 ---
-title: "逐步解說：使用 BackgroundWorker 元件進行多執行緒處理 (C#)"
-ms.custom: 
+title: 逐步解說：使用 BackgroundWorker 元件進行多執行緒處理 (C#)
 ms.date: 07/20/2015
-ms.prod: .net
-ms.reviewer: 
-ms.suite: 
-ms.technology: devlang-csharp
-ms.topic: article
 ms.assetid: ff670fbf-a0ac-40c1-ab08-9ed53768f880
-caps.latest.revision: "3"
-author: BillWagner
-ms.author: wiwagn
-ms.openlocfilehash: 72d6e9ab42ca270ebe0691be23ebe181b973620d
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.openlocfilehash: bc334261dbea7759d1bb571cc61a5f00f84531a4
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="walkthrough-multithreading-with-the-backgroundworker-component-c"></a>逐步解說：使用 BackgroundWorker 元件進行多執行緒處理 (C#)
 本逐步解說示範如何建立多執行緒的 Windows Forms 應用程式，以搜尋文字檔案中某個文字的出現次數。 其會示範：  
@@ -47,7 +38,7 @@ ms.lasthandoff: 11/21/2017
   
 4.  將標籤新增至每個文字方塊旁。 依照下表所示的方式，設定每個標籤的 `Text` 屬性。  
   
-    |物件|屬性|設定|  
+    |Object|屬性|設定|  
     |------------|--------------|-------------|  
     |第一個標籤|`Text`|原始程式檔|  
     |第二個標籤|`Text`|比較字串|  
@@ -282,6 +273,6 @@ ms.lasthandoff: 11/21/2017
 ## <a name="next-steps"></a>後續步驟  
  此應用程式包含一些基本錯誤處理。 它會偵測空白的搜尋字串。 您可以藉由處理其他錯誤 (例如計算超過上限的文字或行數)，讓此程式更穩固。  
   
-## <a name="see-also"></a>另請參閱  
+## <a name="see-also"></a>請參閱  
  [執行緒 (C#)](../../../../csharp/programming-guide/concepts/threading/index.md)  
  [如何：訂閱及取消訂閱事件](../../../../csharp/programming-guide/events/how-to-subscribe-to-and-unsubscribe-from-events.md)

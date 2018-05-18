@@ -1,20 +1,13 @@
 ---
-title: "結構 - C# 手冊"
-description: "了解結構類型和其建立方式"
-keywords: .NET, .NET Core, C#
-author: BillWagner
-ms.author: wiwagn
+title: 結構 - C# 手冊
+description: 了解結構類型和其建立方式
 ms.date: 10/12/2016
-ms.topic: article
-ms.prod: .net
-ms.technology: devlang-csharp
-ms.devlang: csharp
 ms.assetid: a7094b8c-7229-4b6f-82fc-824d0ea0ec40
-ms.openlocfilehash: 4c12e886ec388671fc47f08f8df6d6f2af8aac62
-ms.sourcegitcommit: bbde43da655ae7bea1977f7af7345eb87bd7fd5f
+ms.openlocfilehash: 9fe4e0278ecf46f762a93aa489030c0a9e5563b3
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/21/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="structs"></a>結構
 *struct* 是實值型別。 建立結構時，指派結構的變數會保留結構的實際資料。 將結構指派至新的變數時，將會複製結構。 因此，新的變數和原始變數會各自包含一份相同的資料。 針對其中一個複本所做的變更，並不會影響到另一個複本。
@@ -69,9 +62,9 @@ ms.lasthandoff: 10/21/2017
 第二個示範「二進位常值」，可讓您直接指定位元模式，而不是使用十六進位標記法。
 
 ## <a name="nullable-types"></a>可為 Null 的型別  
-一般實值型別的值不能為 [null](./language-reference/keywords/null.md)。 不過，您可以在該類型後面添加 **?**，建立可為 Null 的實值型別 。 例如，**int?** 是也能具有 [null](./language-reference/keywords/null.md) 值的 **int** 類型。 在 CTS 中，可為 Null 的型別是泛型結構類型 <xref:System.Nullable%601> 的執行個體。 當您要在資料庫之間來回傳遞的資料數值可能為 Null 時，可為 Null 的型別特別有用。 如需詳細資訊，請參閱[可為 Null 的型別 (C# 程式設計手冊)](./programming-guide/nullable-types/index.md)。
+一般實值型別的值不能為 [null](./language-reference/keywords/null.md)。 不過，您可以在該類型後面添加 **?**，建立可為 Null 的實值型別 。 例如，**int?** 是也能具有 [null](./language-reference/keywords/null.md) 值的 **int** 類型。 在 CTS 中，可為 Null 的型別是泛型結構類型 <xref:System.Nullable%601> 的執行個體。 當您要在資料庫之間來回傳遞的資料數值可能為 Null 時，可為 Null 的型別會特別有用。 如需詳細資訊，請參閱[可為 Null 的型別 (C# 程式設計手冊)](./programming-guide/nullable-types/index.md)。
 
-## <a name="see-also"></a>請參閱
+## <a name="see-also"></a>另請參閱
 [類別](classes.md)
 
 [基本類型](basic-types.md)

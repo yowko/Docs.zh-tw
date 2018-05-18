@@ -1,23 +1,15 @@
 ---
-title: "對等名稱發佈和解析"
-ms.custom: 
+title: 對等名稱發佈和解析
 ms.date: 03/30/2017
-ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.tgt_pltfrm: 
-ms.topic: article
 ms.assetid: f0370e08-9fa6-4ee5-ab78-9a58a20a7da2
-caps.latest.revision: "5"
 author: mcleblanc
 ms.author: markl
 manager: markl
-ms.workload: dotnet
-ms.openlocfilehash: 76201cc1b84e2bbcee35768781f3bae1ac38e14b
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
-ms.translationtype: MT
+ms.openlocfilehash: 4e64f1293da18823166883a869ac6377908c9e72
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="peer-name-publication-and-resolution"></a>對等名稱發佈和解析
 ## <a name="publishing-a-peer-name"></a>發行對等名稱  

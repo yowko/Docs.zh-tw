@@ -1,20 +1,13 @@
 ---
-title: "在執行階段動態指定述詞篩選"
-description: "如何在執行階段動態指定述詞篩選。"
-keywords: .NET, .NET Core, C#
-author: BillWagner
-manager: wpickett
-ms.author: wiwagn
+title: 在執行階段動態指定述詞篩選
+description: 如何在執行階段動態指定述詞篩選。
 ms.date: 12/1/2016
-ms.topic: article
-ms.prod: .net
-ms.technology: devlang-csharp
 ms.assetid: 90238470-0767-497c-916c-52d0d16845e0
-ms.openlocfilehash: 06bc594ac1357e7dca6c182fa28310559a79875c
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.openlocfilehash: fa3426a513758d8c30bf381ec480b9b8d12a5f81
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="dynamically-specify-predicate-filters-at-runtime"></a>在執行階段動態指定述詞篩選
 
@@ -75,6 +68,6 @@ ms.lasthandoff: 11/21/2017
 4.  以 1 到 4 之間整數值的命令列引數執行專案。  
   
  
-## <a name="see-also"></a>另請參閱  
+## <a name="see-also"></a>請參閱  
  [LINQ 查詢運算式](index.md)  
  [where 子句](../language-reference/keywords/where-clause.md)

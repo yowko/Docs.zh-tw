@@ -1,13 +1,7 @@
 ---
-title: "記憶體回收告知"
-ms.custom: 
+title: 記憶體回收告知
 ms.date: 03/30/2017
-ms.prod: .net
-ms.reviewer: 
-ms.suite: 
 ms.technology: dotnet-standard
-ms.tgt_pltfrm: 
-ms.topic: article
 dev_langs:
 - csharp
 - vb
@@ -15,21 +9,16 @@ dev_langs:
 helpviewer_keywords:
 - garbage collection, notifications
 ms.assetid: e12d8e74-31e3-4035-a87d-f3e66f0a9b89
-caps.latest.revision: 
 author: rpetrusha
 ms.author: ronpet
-manager: wpickett
-ms.workload:
-- dotnet
-- dotnetcore
-ms.openlocfilehash: ac951ad1f89d058b06280bc176ca7928a1dc65bf
-ms.sourcegitcommit: e7f04439d78909229506b56935a1105a4149ff3d
+ms.openlocfilehash: d3470ebdd55adc97a60f07228c441cb7c94a53e6
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 12/23/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="garbage-collection-notifications"></a>記憶體回收告知
-在某些情況下，通用語言執行平台 (CLR) 所執行的完整記憶體回收 (也就是層代 2 回收) 可能會使得效能降低。 這是一個問題，特別會發生在處理大量要求的伺服器上；在此情況下，完整記憶體回收可能會導致要求逾時。若要避免在關鍵期間發生完整回收，您可以在接近完整記憶體回收時收到通知，然後採取行動將工作負載重新導向至另一個伺服器執行個體。 您也可以自行引發回收，前提是目前的伺服器執行個體不需要處理要求。  
+在某些情況下，通用語言執行平台 (CLR) 所執行的完整記憶體回收 (也就是層代 2 回收) 可能會降低效能。 這是一個問題，特別會發生在處理大量要求的伺服器上；在此情況下，完整記憶體回收可能會導致要求逾時。若要避免在關鍵期間發生完整回收，您可以在接近完整記憶體回收時收到通知，然後採取行動將工作負載重新導向至另一個伺服器執行個體。 您也可以自行引發回收，前提是目前的伺服器執行個體不需要處理要求。  
   
  <xref:System.GC.RegisterForFullGCNotification%2A> 方法會註冊一個當執行階段偵測到接近完整記憶體回收時要引發的通知。 通知有兩個部分：當接近完整記憶體回收時，以及當完整記憶體回收完成時。  
   
@@ -132,5 +121,5 @@ ms.lasthandoff: 12/23/2017
  [!code-csharp[GCNotification#1](../../../samples/snippets/csharp/VS_Snippets_CLR/GCNotification/cs/Program.cs#1)]
  [!code-vb[GCNotification#1](../../../samples/snippets/visualbasic/VS_Snippets_CLR/GCNotification/vb/program.vb#1)]  
   
-## <a name="see-also"></a>另請參閱  
+## <a name="see-also"></a>請參閱  
  [記憶體回收](../../../docs/standard/garbage-collection/index.md)

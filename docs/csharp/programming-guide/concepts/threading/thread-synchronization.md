@@ -1,21 +1,12 @@
 ---
-title: "執行緒同步處理 (C#)"
-ms.custom: 
+title: 執行緒同步處理 (C#)
 ms.date: 07/20/2015
-ms.prod: .net
-ms.reviewer: 
-ms.suite: 
-ms.technology: devlang-csharp
-ms.topic: article
 ms.assetid: e42b1be6-c93c-479f-a148-be0759f1a4e1
-caps.latest.revision: "3"
-author: BillWagner
-ms.author: wiwagn
-ms.openlocfilehash: 2b51775eac5221ec8c723d89323d1f4f542d2453
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.openlocfilehash: 138b94ef8ae5fc54e42277127f9b22f88803457f
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="thread-synchronization-c"></a>執行緒同步處理 (C#)
 下列各節描述可用來同步處理多執行緒應用程式中資源存取的功能和類別。  
@@ -150,7 +141,7 @@ class ThreadingExample
 ## <a name="deadlocks"></a>死結  
  執行緒同步處理是多執行緒應用程式中十分寶貴的功能，但建立 `deadlock` 一律有其危險性；在其中，多個執行緒將等候彼此，而應用程式就像停止一樣。 死結類似汽車停在四方停車再開的位置，而每個人都在等候其他人先離開。 避免死結十分重要；關鍵在於仔細規劃。 在開始撰寫程式碼之前，先將多執行緒應用程式圖表化，通常就可以預測死結狀況。  
   
-## <a name="see-also"></a>另請參閱  
+## <a name="see-also"></a>請參閱  
  <xref:System.Threading.Thread>  
  <xref:System.Threading.WaitHandle.WaitOne%2A>  
  <xref:System.Threading.WaitHandle.WaitAny%2A>  

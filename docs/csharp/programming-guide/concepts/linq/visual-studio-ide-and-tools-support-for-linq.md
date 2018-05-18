@@ -1,21 +1,12 @@
 ---
-title: "LINQ 的 Visual Studio IDE 和工具支援 (C#)"
-ms.custom: 
+title: LINQ 的 Visual Studio IDE 和工具支援 (C#)
 ms.date: 07/20/2015
-ms.prod: .net
-ms.reviewer: 
-ms.suite: 
-ms.technology: devlang-csharp
-ms.topic: article
 ms.assetid: c1f6cfdf-c96f-417f-acc8-4a049772ead3
-caps.latest.revision: "3"
-author: BillWagner
-ms.author: wiwagn
-ms.openlocfilehash: 577338cc70bf9c335b162ca32bb3fc026addd49e
-ms.sourcegitcommit: 685143b62385500f59bc36274b8adb191f573a16
+ms.openlocfilehash: 866b8938d127bf20314bb13d2951e0aa5f666094
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 12/09/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="visual-studio-ide-and-tools-support-for-linq-c"></a>LINQ 的 Visual Studio IDE 和工具支援 (C#)
 Visual Studio 整合式開發環境 (IDE) 提供支援 LINQ 應用程式開發的下列功能：  
@@ -32,5 +23,5 @@ Visual Studio 整合式開發環境 (IDE) 提供支援 LINQ 應用程式開發�
 ## <a name="visual-studio-debugger-support"></a>Visual Studio 偵錯工具的支援  
  Visual Studio 偵錯工具支援查詢運算式的偵錯。 如需詳細資訊，請參閱[偵錯 LINQ](/visualstudio/debugger/debugging-linq)。  
   
-## <a name="see-also"></a>另請參閱  
+## <a name="see-also"></a>請參閱  
  [Language-Integrated Query (LINQ) (C#)](../../../../csharp/programming-guide/concepts/linq/index.md)

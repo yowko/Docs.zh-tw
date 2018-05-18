@@ -4,16 +4,11 @@ description: 本文件提供使用 Visual Studio Code 建立 .NET Core 方案的
 author: bleroy
 ms.author: mairaw
 ms.date: 03/23/2017
-ms.topic: get-started-article
-ms.prod: dotnet-core
-ms.devlang: dotnet
-ms.workload:
-- dotnetcore
-ms.openlocfilehash: 18f825e75e7d32198a52a091948bc9dd064dacbd
-ms.sourcegitcommit: 03ee570f6f528a7d23a4221dcb26a9498edbdf8c
+ms.openlocfilehash: 5a4b2734137f59b29535f302dd17fb94329d676f
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/28/2018
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="getting-started-with-net-core-on-macos"></a>在 macOS 上開始使用 .NET Core
 

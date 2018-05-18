@@ -1,26 +1,17 @@
 ---
-title: "進階 LINQ to XML 程式設計 (C#)"
-ms.custom: 
+title: 進階 LINQ to XML 程式設計 (C#)
 ms.date: 07/20/2015
-ms.prod: .net
-ms.reviewer: 
-ms.suite: 
-ms.technology: devlang-csharp
-ms.topic: article
 ms.assetid: 2e012d40-532b-49ea-b1fc-152e616bdfa3
-caps.latest.revision: "3"
-author: BillWagner
-ms.author: wiwagn
-ms.openlocfilehash: 0f451700dbd2bf9f924eacf6c3685b88ff2c8849
-ms.sourcegitcommit: bd1ef61f4bb794b25383d3d72e71041a5ced172e
+ms.openlocfilehash: e455b2b579c56632d5e06b4da5c44a71ea150416
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/18/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="advanced-linq-to-xml-programming-c"></a>進階 LINQ to XML 程式設計 (C#)
 本節提供的資訊將僅適用於某些 [!INCLUDE[sqltecxlinq](~/includes/sqltecxlinq-md.md)] 案例中的進階開發人員。  
   
-## <a name="in-this-section"></a>本章節內容  
+## <a name="in-this-section"></a>本節內容  
   
 |主題|描述|  
 |-----------|-----------------|  
@@ -36,5 +27,5 @@ ms.lasthandoff: 10/18/2017
 |[序列化包含 XElement 物件的物件圖形 (C#)](../../../../csharp/programming-guide/concepts/linq/serializing-object-graphs-that-contain-xelement-objects.md)|描述如何序列化包含 <xref:System.Xml.Linq.XElement> 和 <xref:System.Xml.Linq.XDocument> 物件的物件圖形。|  
 |[WPF 資料繫結與 LINQ to XML](/visualstudio/designers/wpf-data-binding-with-linq-to-xml)|描述如何使用 LINQ to XML 做為 Windows Presentation Foundation 應用程式中資料繫結的資料來源。|  
   
-## <a name="see-also"></a>另請參閱  
+## <a name="see-also"></a>請參閱  
  [程式設計手冊 (LINQ to XML) (C#)](../../../../csharp/programming-guide/concepts/linq/programming-guide-linq-to-xml.md)

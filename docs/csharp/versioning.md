@@ -1,20 +1,13 @@
 ---
-title: "C# 版本控制 - C# 手冊"
-description: "了解 C# 和 .NET 的版本控制運作方式"
-keywords: ".NET、.NET Core、C#"
-author: BillWagner
-manager: wpickett
+title: C# 版本控制 - C# 手冊
+description: 了解 C# 和 .NET 的版本控制運作方式
 ms.date: 01/08/2017
-ms.topic: article
-ms.prod: visual-studio-dev-14
-ms.technology: devlang-csharp
-ms.devlang: csharp
 ms.assetid: aa8732d7-5cd0-46e1-994a-78017f20d861
-ms.openlocfilehash: 153e7d115b34e6659f6a8ca23014441b86847796
-ms.sourcegitcommit: c0dd436f6f8f44dc80dc43b07f6841a00b74b23f
+ms.openlocfilehash: 4dc8e7e521bf209d6ca69a84534d277fb8a93ea8
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 01/19/2018
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="versioning-in-c"></a>C# 中的版本控制 #
 

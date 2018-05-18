@@ -1,21 +1,15 @@
 ---
-title: "修飾詞 (C# 參考)"
+title: 修飾詞 (C# 參考)
 ms.date: 07/20/2015
-ms.prod: .net
-ms.technology: devlang-csharp
-ms.topic: article
 helpviewer_keywords:
 - keywords [C#], modifiers
 - modifiers [C#]
 ms.assetid: c96691dd-b357-49ec-b5ae-03ca214fadfb
-caps.latest.revision: "18"
-author: BillWagner
-ms.author: wiwagn
-ms.openlocfilehash: 31bdfb74c5803e0108aab5b7733ea7b725f7ef3c
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.openlocfilehash: 241cbc767a3d094d664cf77f488e4154812d7516
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="modifiers-c-reference"></a>修飾詞 (C# 參考)
 修飾詞用來修飾類型和類型成員的宣告。 本節將介紹 C# 修飾詞。  
@@ -38,7 +32,7 @@ ms.lasthandoff: 11/21/2017
 |[virtual](../../../csharp/language-reference/keywords/virtual.md)|宣告方法或存取子的實作可藉由覆寫衍生類別中的成員變更。|  
 |[volatile](../../../csharp/language-reference/keywords/volatile.md)|表示欄位可以在程式中藉由像是作業系統、硬體或是同時執行的執行緒進行修改。|  
   
-## <a name="see-also"></a>另請參閱  
+## <a name="see-also"></a>請參閱  
  [C# 參考](../../../csharp/language-reference/index.md)  
  [C# 程式設計指南](../../../csharp/programming-guide/index.md)  
  [C# 關鍵字](../../../csharp/language-reference/keywords/index.md)

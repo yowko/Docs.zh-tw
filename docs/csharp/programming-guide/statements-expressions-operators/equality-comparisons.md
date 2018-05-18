@@ -1,21 +1,14 @@
 ---
-title: "相等比較 (C# 程式設計手冊)"
+title: 相等比較 (C# 程式設計手冊)
 ms.date: 07/20/2015
-ms.prod: .net
-ms.technology:
-- devlang-csharp
-ms.topic: article
 helpviewer_keywords:
 - object equality [C#]
 ms.assetid: 10b865ea-4e7b-4127-9242-c9b8f57d9f04
-caps.latest.revision: 
-author: BillWagner
-ms.author: wiwagn
-ms.openlocfilehash: 199257b1fe371dea3e4ee1eedcf11f3bdce02366
-ms.sourcegitcommit: 7e99f66ef09d2903e22c789c67ff5a10aa953b2f
+ms.openlocfilehash: c1abee8636cf540d42d92eb7496fb078f06e6e0f
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 11/18/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="equality-comparisons-c-programming-guide"></a>相等比較 (C# 程式設計手冊)
 有時候需要比較兩個值是否相等。 在某些情況下，您要測試「值是否相等」 (也稱為「等價」，表示兩個變數所含的值相等。 在其他情況下，您必須判斷兩個變數是否參照記憶體中的相同基礎物件。 這類型的相等稱為「參考相等」或「識別」。 本主題描述這兩種相等，並提供其他主題的連結以取得詳細資訊。  
@@ -52,12 +45,12 @@ if( b == a)
   
 ## <a name="related-topics"></a>相關主題  
   
-|標題|說明|  
+|標題|描述|  
 |-----------|-----------------|  
 |[如何：參考相等 (識別) 的測試](../../../csharp/programming-guide/statements-expressions-operators/how-to-test-for-reference-equality-identity.md)|描述如何判斷兩個變數是否具有參考相等。|  
 |[如何：定義型別的實值相等](../../../csharp/programming-guide/statements-expressions-operators/how-to-define-value-equality-for-a-type.md)|描述如何提供類型實值相等的自訂定義。|  
 |[C# 程式設計指南](../../../csharp/programming-guide/index.md)|提供重要 C# 語言功能以及可透過 .NET Framework 以 C# 取得之功能的詳細資訊連結。|  
 |[型別](../../../csharp/programming-guide/types/index.md)|提供 C# 類型系統的相關資訊以及其他資訊的連結。|  
   
-## <a name="see-also"></a>另請參閱  
+## <a name="see-also"></a>請參閱  
  [C# 程式設計指南](../../../csharp/programming-guide/index.md)

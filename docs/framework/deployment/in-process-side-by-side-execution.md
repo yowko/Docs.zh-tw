@@ -1,27 +1,17 @@
 ---
-title: "同處理序並存執行"
-ms.custom: 
+title: 同處理序並存執行
 ms.date: 03/30/2017
-ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.technology: dotnet-clr
-ms.tgt_pltfrm: 
-ms.topic: article
 helpviewer_keywords:
 - in-process side-by-side execution
 - side-by-side execution, in-process
 ms.assetid: 18019342-a810-4986-8ec2-b933a17c2267
-caps.latest.revision: "25"
 author: mairaw
 ms.author: mairaw
-manager: wpickett
-ms.workload: dotnet
-ms.openlocfilehash: 023a8db1e34498c4c2cbe741225d218280c04e41
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.openlocfilehash: ee9eb30d6966d8162b29286140c068d854f7911c
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="in-process-side-by-side-execution"></a>同處理序並存執行
 從 [!INCLUDE[net_v40_long](../../../includes/net-v40-long-md.md)] 開始，您可以使用同處理序並存裝載，在單一處理序中執行多個 Common Language Runtime (CLR) 版本。 根據預設，Managed COM 元件會與建置它們的 .NET Framework 版本一起執行，不論針對程序所載入的 .NET Framework 版本為何。  
@@ -59,7 +49,7 @@ ms.lasthandoff: 12/22/2017
 <a name="scenarios"></a>   
 ## <a name="common-side-by-side-hosting-scenarios"></a>常見並存裝載案例  
   
--   **情節 1：**使用舊版 .NET Framework 所建置之 COM 元件的原生應用程式。  
+-   **情節 1：** 使用舊版 .NET Framework 所建置之 COM 元件的原生應用程式。  
   
      已安裝的 .NET Framework 版本：[!INCLUDE[net_v40_short](../../../includes/net-v40-short-md.md)] 以及 COM 元件所使用的所有其他 .NET Framework 版本。  
   
@@ -80,7 +70,7 @@ ms.lasthandoff: 12/22/2017
     </configuration>  
     ```  
   
--   **情節 3：**使用舊版 .NET Framework 所建置之 COM 元件的原生應用程式，您想要將它與 [!INCLUDE[net_v40_short](../../../includes/net-v40-short-md.md)] 一起執行。  
+-   **情節 3：** 使用舊版 .NET Framework 所建置之 COM 元件的原生應用程式，您想要將它與 [!INCLUDE[net_v40_short](../../../includes/net-v40-short-md.md)] 一起執行。  
   
      已安裝的 .NET Framework 版本：[!INCLUDE[net_v40_short](../../../includes/net-v40-short-md.md)]。  
   

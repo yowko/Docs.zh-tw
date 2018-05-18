@@ -1,13 +1,7 @@
 ---
-title: "在 .NET 中建立新字串"
-ms.custom: 
+title: 在 .NET 中建立新字串
 ms.date: 03/30/2017
-ms.prod: .net
-ms.reviewer: 
-ms.suite: 
 ms.technology: dotnet-standard
-ms.tgt_pltfrm: 
-ms.topic: article
 dev_langs:
 - csharp
 - vb
@@ -19,18 +13,13 @@ helpviewer_keywords:
 - strings [.NET Framework], creating
 - Insert method
 ms.assetid: 06fdf123-2fac-4459-8904-eb48ab908a30
-caps.latest.revision: 
 author: rpetrusha
 ms.author: ronpet
-manager: wpickett
-ms.workload:
-- dotnet
-- dotnetcore
-ms.openlocfilehash: 3ba91b42bc9815b1b12fdc761882741b11790060
-ms.sourcegitcommit: e7f04439d78909229506b56935a1105a4149ff3d
+ms.openlocfilehash: f9f0c487d3d04af998fb1c3339d736e9bb043374
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 12/23/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="creating-new-strings-in-net"></a>在 .NET 中建立新字串
 [!INCLUDE[dnprdnshort](../../../includes/dnprdnshort-md.md)] 允許使用簡單指派來建立字串，並且還可以多載類別建構函式，以支援使用多個不同參數來建立字串。 [!INCLUDE[dnprdnshort](../../../includes/dnprdnshort-md.md)] 也會在 <xref:System.String?displayProperty=nameWithType> 類別中提供數個方法，藉由組合多個字串、字串陣列或物件來建立新的字串物件。  

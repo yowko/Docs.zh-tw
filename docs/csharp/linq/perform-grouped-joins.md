@@ -1,20 +1,13 @@
 ---
-title: "執行群組聯結"
-description: "如何執行群組聯結。"
-keywords: ".NET、.NET Core、C#"
-author: BillWagner
-manager: wpickett
-ms.author: wiwagn
+title: 執行群組聯結
+description: 如何執行群組聯結。
 ms.date: 12/1/2016
-ms.topic: article
-ms.prod: .net
-ms.technology: devlang-csharp
 ms.assetid: 9667daf9-a5fd-4b43-a5c4-a9c2b744000e
-ms.openlocfilehash: 5e26473e19a5b6107d7aceea5e9829b48aa522b4
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.openlocfilehash: fbdb1a69fa2f3b171935fa3a58cf9a045be0a494
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="perform-grouped-joins"></a>執行群組聯結
 
@@ -41,7 +34,7 @@ ms.lasthandoff: 11/21/2017
   
  [!code-csharp[CsLINQProgJoining#6](../../../samples/snippets/csharp/concepts/linq/how-to-perform-grouped-joins_2.cs)]  
  
-## <a name="see-also"></a>請參閱  
+## <a name="see-also"></a>另請參閱  
  <xref:System.Linq.Enumerable.Join%2A>  
  <xref:System.Linq.Enumerable.GroupJoin%2A>  
  [執行內部聯結](perform-inner-joins.md)  

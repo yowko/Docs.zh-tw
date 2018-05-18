@@ -1,29 +1,23 @@
 ---
-title: "C# 逐步解說"
+title: C# 逐步解說
 ms.date: 07/20/2015
-ms.prod: .net
-ms.technology: devlang-csharp
-ms.topic: article
 helpviewer_keywords:
 - walkthroughs [C#]
 - walkthroughs [Visual Studio], Visual C#
 - Visual C#, walkthroughs
 ms.assetid: 2d07b972-ef69-4676-9aef-e1784728e1ff
-caps.latest.revision: "28"
-author: BillWagner
-ms.author: wiwagn
-ms.openlocfilehash: 92aef08636b7bba3a61367f8a707c82c75f8d3d3
-ms.sourcegitcommit: 685143b62385500f59bc36274b8adb191f573a16
+ms.openlocfilehash: aaf57e666faf18010c7f267f96e6958c73e58bcf
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 12/09/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="c-walkthroughs"></a>C# 逐步解說
 逐步解說提供常見情節的逐步指示，使其成為開始學習產品或特定功能區域的最佳去處。  
   
  本節包含 C# 程式設計逐步解說連結。  
   
-## <a name="in-this-section"></a>本章節內容  
+## <a name="in-this-section"></a>本節內容  
 
  [使用 Async 和 Await 存取 Web](./programming-guide/concepts/async/walkthrough-accessing-the-web-by-using-async-and-await.md)  
  說明如何使用 [async](../csharp/language-reference/keywords/async.md) 和 [await](../csharp/language-reference/keywords/await.md) 建立非同步解決方案。  
@@ -74,6 +68,6 @@ ms.lasthandoff: 12/09/2017
  [部署範例和逐步解說](/visualstudio/deployment/clickonce-deployment-samples-and-walkthroughs)  
  提供通用部署情節的逐步範例。  
   
-## <a name="see-also"></a>另請參閱  
+## <a name="see-also"></a>請參閱  
  [C# 程式設計指南](../csharp/programming-guide/index.md)  
  [Visual Studio 範例](/visualstudio/ide/visual-studio-samples)

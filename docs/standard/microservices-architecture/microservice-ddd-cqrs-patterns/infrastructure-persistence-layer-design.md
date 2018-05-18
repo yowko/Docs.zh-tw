@@ -1,21 +1,14 @@
 ---
 title: 設計基礎結構持續性層
 description: 容器化 .NET 應用程式的 .NET 微服務架構 | 設計基礎結構持續性層
-keywords: Docker, 微服務, ASP.NET, 容器
 author: CESARDELATORRE
 ms.author: wiwagn
 ms.date: 11/08/2017
-ms.prod: .net-core
-ms.technology: dotnet-docker
-ms.topic: article
-ms.workload:
-- dotnet
-- dotnetcore
-ms.openlocfilehash: cab12426308be258134e0385c5a6eb6cdb5d544b
-ms.sourcegitcommit: 2e8acae16ae802f2d6d04e3ce0a6dbf04e476513
+ms.openlocfilehash: 2b15fcaeaa8934caceaeab963123650354abf291
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/18/2018
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="designing-the-infrastructure-persistence-layer"></a>設計基礎結構持續性層
 
@@ -132,7 +125,7 @@ public interface ISpecification<T>
 
 在接下來的章節中，將會說明如何使用 Entity Framework Core 2.0 來實作規格模式，以及如何從任何儲存機制類別來使用它。
 
-**重要事項：**規格模式是可透過許多不同方式實作的舊模式，如下列其他資源所示。 作為模式/概念，較舊的方法比較容易了解，但請注意，較舊的實作不會利用 Linq 和運算式等現代語言功能。
+**重要事項：** 規格模式是可透過許多不同方式實作的舊模式，如下列其他資源所示。 作為模式/概念，較舊的方法比較容易了解，但請注意，較舊的實作不會利用 Linq 和運算式等現代語言功能。
 
 ## <a name="additional-resources"></a>其他資源
 

@@ -1,13 +1,7 @@
 ---
 title: 如何：從檔案讀取文字
-ms.custom: ''
 ms.date: 03/30/2017
-ms.prod: .net
-ms.reviewer: ''
-ms.suite: ''
 ms.technology: dotnet-standard
-ms.tgt_pltfrm: ''
-ms.topic: article
 dev_langs:
 - csharp
 - vb
@@ -18,18 +12,13 @@ helpviewer_keywords:
 - data streams, reading text from files
 - I/O [.NET Framework], reading text from files
 ms.assetid: ed180baa-dfc6-4c69-a725-46e87edafb27
-caps.latest.revision: 23
 author: mairaw
 ms.author: mairaw
-manager: wpickett
-ms.workload:
-- dotnet
-- dotnetcore
-ms.openlocfilehash: e1058879d4af8aac12baf24d10a0c22894351e6f
-ms.sourcegitcommit: 2e8acae16ae802f2d6d04e3ce0a6dbf04e476513
+ms.openlocfilehash: 0bb37c5beaaa529ea09fa23f31b55a0d6bc6d510
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/18/2018
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="how-to-read-text-from-a-file"></a>如何：從檔案讀取文字
 下列範例將示範如何以同步和非同步方式，從使用適用於桌面應用程式的 .NET 之文字檔讀取文字。 在這兩個範例中，當您建立 <xref:System.IO.StreamReader> 類別的執行個體時，會提供檔案的相對路徑或絕對路徑。 下列範例會假設名為 TestFile.txt 的檔案與應用程式位於相同資料夾中。  
@@ -61,4 +50,4 @@ ms.lasthandoff: 04/18/2018
  [如何：將文字寫入檔案](../../../docs/standard/io/how-to-write-text-to-a-file.md)  
  [如何：從字串中讀取字元](../../../docs/standard/io/how-to-read-characters-from-a-string.md)  
  [如何：將字元寫入至字串](../../../docs/standard/io/how-to-write-characters-to-a-string.md)  
- [檔案和資料流 I-O](../../../docs/standard/io/index.md)
+ [檔案和資料流 I/O](../../../docs/standard/io/index.md)

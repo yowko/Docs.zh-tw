@@ -1,21 +1,14 @@
 ---
 title: 實作值物件
 description: 容器化 .NET 應用程式的 .NET 微服務架構 | 實作值物件
-keywords: Docker, 微服務, ASP.NET, 容器
 author: CESARDELATORRE
 ms.author: wiwagn
 ms.date: 12/12/2017
-ms.prod: .net-core
-ms.technology: dotnet-docker
-ms.topic: article
-ms.workload:
-- dotnet
-- dotnetcore
-ms.openlocfilehash: 4406cf68ab6c6d01845fa8b3c77e071732819894
-ms.sourcegitcommit: 935d5267c44f9bce801468ef95f44572f1417e8c
+ms.openlocfilehash: 04a0def5fbadcc39220d9dc8daa9c9341fe66b26
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 03/28/2018
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="implementing-value-objects"></a>實作值物件
 

@@ -5,19 +5,17 @@ metadata:
   description: 在本快速入門中，您將使用瀏覽器以互動方式學習有關 C# 的分支和迴圈。 您將會撰寫 C# 程式碼，並直接在瀏覽器中查看編譯和執行程式碼的結果。
   audience: Developer
   level: Beginner
+  ms.topic: quickstart
   ms.custom: mvc
-  ms.prod: .net
-  ms.technology: devlang-csharp
-  ms.topic: get-started-article
   displayType: two-column
   interactive: csharp
-  nextTutorialHref: interpolated-strings
+  nextTutorialHref: interpolated-strings.yml
   nextTutorialTitle: C# 中的字串插補
-  ms.openlocfilehash: 2b04d2ca42906302f4191b618198d7aeb58b83a6
-  ms.sourcegitcommit: 2e8acae16ae802f2d6d04e3ce0a6dbf04e476513
+  ms.openlocfilehash: 787ea7c8eb7724fba82bf40621bde429450b1850
+  ms.sourcegitcommit: 15109844229ade1c6449f48f3834db1b26907824
   ms.translationtype: HT
   ms.contentlocale: zh-TW
-  ms.lasthandoff: 04/18/2018
+  ms.lasthandoff: 05/07/2018
 items:
 - durationInMinutes: 1
   content: >

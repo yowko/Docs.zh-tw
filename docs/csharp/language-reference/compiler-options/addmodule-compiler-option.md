@@ -1,10 +1,6 @@
 ---
-title: "-addmodule (C# 編譯器選項)"
+title: -addmodule (C# 編譯器選項)
 ms.date: 07/20/2015
-ms.prod: .net
-ms.technology:
-- devlang-csharp
-ms.topic: article
 f1_keywords:
 - /addmodule
 helpviewer_keywords:
@@ -12,14 +8,11 @@ helpviewer_keywords:
 - -addmodule compiler option [C#]
 - addmodule compiler option [C#]
 ms.assetid: ed604546-0dc2-4bd4-9a3e-610a8d973e58
-caps.latest.revision: 
-author: BillWagner
-ms.author: wiwagn
-ms.openlocfilehash: db440b58862e372e443c9c51961b0c3cc2dd211e
-ms.sourcegitcommit: c0dd436f6f8f44dc80dc43b07f6841a00b74b23f
+ms.openlocfilehash: a5b0824774dabd4e0dd26dd1753eaba658299fbc
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 01/19/2018
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="-addmodule-c-compiler-options"></a>-addmodule (C# 編譯器選項)
 此選項會將使用 target:module 參數所建立的模組新增至目前的編譯。  

@@ -1,13 +1,7 @@
 ---
-title: "以工作為基礎的非同步模式 (TAP)"
-ms.custom: 
+title: 以工作為基礎的非同步模式 (TAP)
 ms.date: 03/30/2017
-ms.prod: .net
-ms.reviewer: 
-ms.suite: 
 ms.technology: dotnet-standard
-ms.tgt_pltfrm: 
-ms.topic: article
 dev_langs:
 - csharp
 - vb
@@ -18,18 +12,13 @@ helpviewer_keywords:
 - Task-based Asynchronous Pattern, .NET Framework support for
 - .NET Framework, asynchronous design patterns
 ms.assetid: 8cef1fcf-6f9f-417c-b21f-3fd8bac75007
-caps.latest.revision: 
 author: rpetrusha
 ms.author: ronpet
-manager: wpickett
-ms.workload:
-- dotnet
-- dotnetcore
-ms.openlocfilehash: 3c3d768414a5cd8a8a9fd4a7e120f74d70827729
-ms.sourcegitcommit: e7f04439d78909229506b56935a1105a4149ff3d
+ms.openlocfilehash: fe69943a6f87bbbb7f29d1e4d6d30c26709725d8
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 12/23/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="task-based-asynchronous-pattern-tap"></a>以工作為基礎的非同步模式 (TAP)
 工作式非同步模式 (TAP) 是以 <xref:System.Threading.Tasks.Task?displayProperty=nameWithType> 命名空間中的 <xref:System.Threading.Tasks.Task%601?displayProperty=nameWithType> 和 <xref:System.Threading.Tasks?displayProperty=nameWithType> 類型為基礎，這兩種類別用於表示任意非同步作業。 TAP 是進行新的開發工作時，建議使用的非同步設計模式。  

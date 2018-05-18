@@ -1,21 +1,14 @@
 ---
 title: new 運算子 (C# 參考)
 ms.date: 03/15/2018
-ms.prod: .net
-ms.technology:
-- devlang-csharp
-ms.topic: article
 helpviewer_keywords:
 - new operator keyword [C#]
 ms.assetid: a212b697-a79b-4105-9923-1f7b108036e8
-caps.latest.revision: ''
-author: BillWagner
-ms.author: wiwagn
-ms.openlocfilehash: ab582cd14bc649ca8d1678a583a8f95e78c6bf7e
-ms.sourcegitcommit: 32172ca05d5dcce7ef3d327b9c8639c736e0fe2b
+ms.openlocfilehash: 2ba3c574897ae5f1ec66e3810e23f0af74bd8872
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 03/20/2018
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="new-operator-c-reference"></a>new 運算子 (C# 參考)
 用以建立物件及叫用建構函式。 例如:   

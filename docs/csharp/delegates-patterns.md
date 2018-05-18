@@ -1,24 +1,17 @@
 ---
-title: "委派的一般模式"
-description: "了解在程式碼中使用委派，以避免元件之間強式結合的一般模式。"
-keywords: .NET, .NET Core
-author: BillWagner
-ms.author: wiwagn
+title: 委派的一般模式
+description: 了解在程式碼中使用委派，以避免元件之間強式結合的一般模式。
 ms.date: 06/20/2016
-ms.topic: article
-ms.prod: .net
-ms.technology: devlang-csharp
-ms.devlang: csharp
 ms.assetid: 0ff8fdfd-6a11-4327-b061-0f2526f35b43
-ms.openlocfilehash: 83214800fb997e9274cacfd1bae85ab07c4515a2
-ms.sourcegitcommit: bd1ef61f4bb794b25383d3d72e71041a5ced172e
+ms.openlocfilehash: fceab2b9c6bbd1d687566820366459ec57ae7a2d
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/18/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="common-patterns-for-delegates"></a>委派的一般模式
 
-[上一個](delegates-strongly-typed.md)
+[上一步](delegates-strongly-typed.md)
 
 委派會提供一種機制，啟用與元件之間最小結合程度有關的軟體設計。
 
@@ -242,4 +235,4 @@ public static void LogMessage(string msg)
 
 記錄器類別可以進行任意數目的增強或變更，而不需要中斷變更。 與任何類別一樣，修改公用 API 會有中斷變更的風險。 但是，因為記錄器與任何輸出引擎之間的結合程度只能透過委派，所以不會包含其他類型 (例如介面或基底類別)。 結合程度越小越好。
 
-[下一個](events-overview.md)
+[下一步](events-overview.md)

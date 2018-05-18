@@ -1,24 +1,15 @@
 ---
-title: "如何：在 Visual Basic 中建立目錄"
-ms.custom: 
+title: 如何：在 Visual Basic 中建立目錄
 ms.date: 07/20/2015
-ms.prod: .net
-ms.reviewer: 
-ms.suite: 
-ms.technology: devlang-visual-basic
-ms.topic: article
 helpviewer_keywords:
 - directories [Visual Basic], creating
 - folders [Visual Basic], creating
 ms.assetid: 0351a2ca-24d8-43b5-bb39-9b99e6401cff
-caps.latest.revision: "19"
-author: dotnet-bot
-ms.author: dotnetcontent
-ms.openlocfilehash: 2e4cd94113d77b2f4ff8127c80174107966ef360
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.openlocfilehash: ec9ee01e17f116e80708dbcb34e4d804bf3d7a6e
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="how-to-create-a-directory-in-visual-basic"></a>如何：在 Visual Basic 中建立目錄
 使用 `My.Computer.FileSystem` 物件的 `CreateDirectory` 方法來建立目錄。  
@@ -48,6 +39,6 @@ ms.lasthandoff: 11/21/2017
   
 -   使用者在部分信任狀況下的權限不足 (<xref:System.Security.SecurityException>)。  
   
-## <a name="see-also"></a>另請參閱  
+## <a name="see-also"></a>請參閱  
  <xref:Microsoft.VisualBasic.FileIO.FileSystem.CreateDirectory%2A>  
  [建立、刪除和移動檔案和目錄](../../../../visual-basic/developing-apps/programming/drives-directories-files/creating-deleting-and-moving-files-and-directories.md)

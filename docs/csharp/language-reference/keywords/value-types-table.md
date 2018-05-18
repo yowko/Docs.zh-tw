@@ -1,23 +1,17 @@
 ---
-title: "實值類型表 (C# 參考)"
+title: 實值類型表 (C# 參考)
 ms.date: 07/20/2015
-ms.prod: .net
-ms.technology: devlang-csharp
-ms.topic: article
 helpviewer_keywords:
 - value types [C#], table
 - Visual C#, types
 - types [C#], value types
 - types [C#], suffixes
 ms.assetid: 67d8f631-b6e3-4d83-9910-5ec497f8c5f3
-caps.latest.revision: "11"
-author: BillWagner
-ms.author: wiwagn
-ms.openlocfilehash: 49ada8d7c006808077b5a7c93175a143932bf277
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.openlocfilehash: a3979a9c269c6268ef679d0494cf4da501201c97
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="value-types-table-c-reference"></a>實值類型表 (C# 參考)
 下表依類別列出 C# 實值型別。  
@@ -40,7 +34,7 @@ ms.lasthandoff: 11/21/2017
 |[ulong](../../../csharp/language-reference/keywords/ulong.md)|不帶正負號, 數值, 整數|UL 或 ul|  
 |[ushort](../../../csharp/language-reference/keywords/ushort.md)|不帶正負號, 數值, 整數||  
   
-## <a name="see-also"></a>另請參閱  
+## <a name="see-also"></a>請參閱  
  [C# 參考](../../../csharp/language-reference/index.md)  
  [C# 程式設計指南](../../../csharp/programming-guide/index.md)  
  [預設值表](../../../csharp/language-reference/keywords/default-values-table.md)  

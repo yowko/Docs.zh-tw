@@ -1,21 +1,14 @@
 ---
 title: 傳遞陣列當做引數 (C# 程式設計手冊)
 ms.date: 07/20/2015
-ms.prod: .net
-ms.technology:
-- devlang-csharp
-ms.topic: article
 helpviewer_keywords:
 - arrays [C#], passing as arguments
 ms.assetid: f3a0971e-c87c-4a1f-8262-bc0a3b712772
-caps.latest.revision: 21
-author: BillWagner
-ms.author: wiwagn
-ms.openlocfilehash: f152173b747a171052ab99f261ed91ced9465fdc
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.openlocfilehash: d863cdc33a8a1a844aabbea9ba5876614e6e8dba
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="passing-arrays-as-arguments-c-programming-guide"></a>傳遞陣列當做引數 (C# 程式設計手冊)
 陣列可以作為引數傳遞至方法參數。 因為陣列是參考型別，所以方法可以變更項目的值。  
@@ -62,7 +55,7 @@ ms.lasthandoff: 11/21/2017
 ### <a name="code"></a>程式碼  
  [!code-csharp[csProgGuideArrays#31](../../../csharp/programming-guide/arrays/codesnippet/CSharp/passing-arrays-as-arguments_8.cs)]  
   
-## <a name="see-also"></a>另請參閱  
+## <a name="see-also"></a>請參閱  
  [C# 程式設計指南](../../../csharp/programming-guide/index.md)  
  [陣列](../../../csharp/programming-guide/arrays/index.md)  
  [一維陣列](../../../csharp/programming-guide/arrays/single-dimensional-arrays.md)  

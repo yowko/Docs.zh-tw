@@ -1,29 +1,18 @@
 ---
-title: "根據名稱或索引擷取的未排序節點"
-ms.custom: 
+title: 根據名稱或索引擷取的未排序節點
 ms.date: 03/30/2017
-ms.prod: .net
-ms.reviewer: 
-ms.suite: 
 ms.technology: dotnet-standard
-ms.tgt_pltfrm: 
-ms.topic: article
 dev_langs:
 - csharp
 - vb
 ms.assetid: 2038a90b-92af-4a0a-baaa-08e688d95194
-caps.latest.revision: 
 author: mairaw
 ms.author: mairaw
-manager: wpickett
-ms.workload:
-- dotnet
-- dotnetcore
-ms.openlocfilehash: b80f48d425623c9e6cdf1431ceb4a37efe7f2465
-ms.sourcegitcommit: e7f04439d78909229506b56935a1105a4149ff3d
+ms.openlocfilehash: 785a609455a35dd87a9593f00b58fd160ac708e9
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 12/23/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="unordered-node-retrieval-by-name-or-index"></a>根據名稱或索引擷取的未排序節點
 根據全球資訊網協會 (W3C) 規格中的說明，**XmlNamedNodeMap** 是一種 NamedNodeMap，若要處理的是未排序節點集，則必須使用它，因為它可以根據名稱或索引而參考節點。 存取 **XmlNamedNodeMap** 的唯一方法，是當 **XmlNamedNodeMap** 經由方法或屬性傳回時。 有三種方法或屬性會傳回 **XmlNamedNodeMap**：  
@@ -36,7 +25,7 @@ ms.lasthandoff: 12/23/2017
   
  例如，**XmlDocumentType.Entities** 屬性會取得文件類型宣告中宣告的 **XmlEntity** 節點之集合。 這個集合會以 **XmlNamedNodeMap** 傳回，而且您可以使用 **Count** 屬性重複集合並且顯示實體資訊。 如需重複 **XmlNamedNodeMap** 的範例，請參閱 <xref:System.Xml.XmlDocumentType.Entities%2A>。  
   
- **XmlAttributeCollection** 衍生自 **XmlNamedNodeMap** 而且只有其屬性可以修改，標記法和實體則是唯讀。 您可以使用屬性的 **XmlNamedNodeMap**，根據其 XML 名稱取得這些屬性的節點。 這提供簡單的方法來管理元素節點上的屬性集合。 這與直接使用 **XmlNodeList** 相反，後者也實作 **IEnumerable** 介面，但是是使用索引存取子 (Accessor) 而不是字串。 **RemoveNamedItem** 與 **SetNamedItem** 方法只能用於 **XmlAttributeCollection**。 從屬性集合加入或移除，無論是使用 **AttributeCollection** 或 **XmlNamedNodeMap** 實作，都會在元素上修改屬性集合。 下列程式碼範例將說明如何移動屬性及建立新屬性。  
+ **XmlAttributeCollection** 衍生自 **XmlNamedNodeMap** 而且只有其屬性可以修改，標記法和實體則是唯讀。 您可以使用屬性的 **XmlNamedNodeMap**，根據其 XML 名稱取得這些屬性的節點。 這提供簡單的方法來管理項目節點上的屬性集合。 這與直接使用 **XmlNodeList** 相反，後者也實作 **IEnumerable** 介面，但是是使用索引存取子 (Accessor) 而不是字串。 **RemoveNamedItem** 與 **SetNamedItem** 方法只能用於 **XmlAttributeCollection**。 從屬性集合加入或移除，無論是使用 **AttributeCollection** 或 **XmlNamedNodeMap** 實作，都會在元素上修改屬性集合。 下列程式碼範例將說明如何移動屬性及建立新屬性。  
   
 ```vb  
 Imports System  

@@ -1,23 +1,15 @@
 ---
-title: "啟用和停用 IPv6"
-ms.custom: 
+title: 啟用和停用 IPv6
 ms.date: 03/30/2017
-ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.tgt_pltfrm: 
-ms.topic: article
 ms.assetid: 6408d3ef-c9ba-49d9-b15e-fe74bd3ef031
-caps.latest.revision: "9"
 author: mcleblanc
 ms.author: markl
 manager: markl
-ms.workload: dotnet
-ms.openlocfilehash: 9304487963b3df4a3c2870399c474a431deb43b4
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
-ms.translationtype: MT
+ms.openlocfilehash: b018d646816bda96945a440a890da20b81b1cbbc
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="enabling-and-disabling-ipv6"></a>啟用和停用 IPv6
 若要使用 IPv6 通訊協定，請確定您執行的作業系統版本支援 IPv6，並確認已正確設定作業系統和網路類別。  
@@ -28,9 +20,9 @@ ms.lasthandoff: 12/22/2017
 |作業系統是否啟用 IPv6？|網路類別是否啟用 IPv6？|描述|  
 |-------------------------------------|---------------------------------------|-----------------|  
 |否|否|可以剖析 IPv6 位址。|  
-|否|是|可以剖析 IPv6 位址。|  
-|是|否|使用未標記為已淘汰的名稱解析方法，可以剖析 IPv6 位址並解析 IPv6 位址。|  
-|是|是|使用所有的方法，包括標記為已淘汰的在內，可以剖析和解析 IPv6 位址。|  
+|否|[是]|可以剖析 IPv6 位址。|  
+|[是]|否|使用未標記為已淘汰的名稱解析方法，可以剖析 IPv6 位址並解析 IPv6 位址。|  
+|[是]|[是]|使用所有的方法，包括標記為已淘汰的在內，可以剖析和解析 IPv6 位址。|  
   
  請注意，若要在 System.Net 命名空間中啟用所有類別的 IPv6 支援，您必須修改電腦組態檔或應用程式的組態檔。 應用程式組態檔的優先順序高於電腦組態檔。  
   

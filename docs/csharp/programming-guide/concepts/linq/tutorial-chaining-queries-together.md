@@ -1,28 +1,19 @@
 ---
-title: "教學課程：將查詢鏈結在一起 (C#)"
-ms.custom: 
+title: 教學課程：將查詢鏈結在一起 (C#)
 ms.date: 07/20/2015
-ms.prod: .net
-ms.reviewer: 
-ms.suite: 
-ms.technology: devlang-csharp
-ms.topic: article
 ms.assetid: 44f54444-c4c5-4c23-9d19-986b957b8eda
-caps.latest.revision: "3"
-author: BillWagner
-ms.author: wiwagn
-ms.openlocfilehash: 08196f4780e566cc05e36b6cfe78caad3e9c96a1
-ms.sourcegitcommit: bd1ef61f4bb794b25383d3d72e71041a5ced172e
+ms.openlocfilehash: 8411d8577c192e2aa1a43bea47644fe6bdc09e88
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/18/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="tutorial-chaining-queries-together-c"></a>教學課程：將查詢鏈結在一起 (C#)
 此教學課程說明將查詢鏈結在一起時的處理模型。 將查詢鏈結在一起是撰寫功能性轉換的重要部分。 確實了解鏈結的查詢如何運作相當重要。  
   
  處理 Office Open XML 文件的查詢會廣泛使用這個技術。  
   
-## <a name="in-this-section"></a>本章節內容  
+## <a name="in-this-section"></a>本節內容  
   
 |主題|描述|  
 |-----------|-----------------|  
@@ -32,5 +23,5 @@ ms.lasthandoff: 10/18/2017
 |[中繼具體化 (C#)](../../../../csharp/programming-guide/concepts/linq/intermediate-materialization.md)|識別並說明中繼具體化的語意 (Semantics)。|  
 |[將標準查詢運算子鏈結在一起 (C#)](../../../../csharp/programming-guide/concepts/linq/chaining-standard-query-operators-together.md)|描述標準查詢運算子的延遲語意。|  
   
-## <a name="see-also"></a>另請參閱  
+## <a name="see-also"></a>請參閱  
  [XML 純功能性轉換 (C#)](../../../../csharp/programming-guide/concepts/linq/pure-functional-transformations-of-xml.md)

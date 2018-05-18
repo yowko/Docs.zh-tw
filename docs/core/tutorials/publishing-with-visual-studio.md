@@ -4,17 +4,11 @@ description: 發行會建立一組執行您的應用程式所需的檔案。
 author: BillWagner
 ms.author: wiwagn
 ms.date: 10/05/2017
-ms.topic: conceptual
-ms.prod: dotnet-core
-ms.technology: devlang-csharp
-ms.devlang: csharp
-ms.workload:
-- dotnetcore
-ms.openlocfilehash: f3cecbd39ee557a620cd779bdff6b630642e7f56
-ms.sourcegitcommit: 03ee570f6f528a7d23a4221dcb26a9498edbdf8c
+ms.openlocfilehash: 11421c8820dd562ba1dbb5900ba1e9bf944b45d2
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/28/2018
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="publish-your-hello-world-application-with-visual-studio-2017"></a>使用 Visual Studio 2017 發行您的 Hello World 應用程式
 

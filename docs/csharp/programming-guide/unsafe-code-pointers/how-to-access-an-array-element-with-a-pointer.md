@@ -1,21 +1,14 @@
 ---
 title: 如何：使用指標存取陣列元素 (C# 程式設計手冊)
 ms.date: 07/20/2015
-ms.prod: .net
-ms.technology:
-- devlang-csharp
-ms.topic: article
 helpviewer_keywords:
 - pointers [C#], array access
 ms.assetid: 6c46f2af-a730-4855-8638-f136d9abaa12
-caps.latest.revision: 16
-author: BillWagner
-ms.author: wiwagn
-ms.openlocfilehash: 737c1d7fc0bc0a739de5c0a6cbc5dc09f813133e
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.openlocfilehash: 92eb7a79c0e7522d1474537aeefbfdb083a11dc2
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="how-to-access-an-array-element-with-a-pointer-c-programming-guide"></a>如何：使用指標存取陣列元素 (C# 程式設計手冊)
 在不安全的內容中，您可以使用指標元素存取來存取記憶體中的元素，如下例所示：  
@@ -43,7 +36,7 @@ for (int i = 65; i < 123; i++)
 **ABCDEFGHIJKLMNOPQRSTUVWXYZ**  
 **小寫字母：**  
 **abcdefghijklmnopqrstuvwxyz**   
-## <a name="see-also"></a>另請參閱  
+## <a name="see-also"></a>請參閱  
  [C# 程式設計指南](../../../csharp/programming-guide/index.md)  
  [指標運算式](../../../csharp/programming-guide/unsafe-code-pointers/pointer-expressions.md)  
  [指標型別](../../../csharp/programming-guide/unsafe-code-pointers/pointer-types.md)  

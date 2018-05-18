@@ -1,9 +1,6 @@
 ---
-title: "繼承 (C# 程式設計手冊)"
+title: 繼承 (C# 程式設計手冊)
 ms.date: 07/20/2015
-ms.prod: .net
-ms.technology: devlang-csharp
-ms.topic: article
 helpviewer_keywords:
 - abstract methods [C#]
 - abstract classes [C#]
@@ -12,14 +9,11 @@ helpviewer_keywords:
 - virtual methods [C#]
 - C# language, inheritance
 ms.assetid: 81d64ee4-50f9-4d6c-a8dc-257c348d2eea
-caps.latest.revision: "38"
-author: BillWagner
-ms.author: wiwagn
-ms.openlocfilehash: dc3d448d311fe0a67839757fa43a209d92141214
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.openlocfilehash: 6294669a05f5cc6c52de5164d89e29062ceb6bdd
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="inheritance-c-programming-guide"></a>繼承 (C# 程式設計手冊)
 
@@ -58,7 +52,7 @@ ms.lasthandoff: 11/21/2017
 ## <a name="derived-class-hiding-of-base-class-members"></a>衍生類別隱藏基底類別成員  
  衍生類別可藉由以相同的名稱和簽章宣告基底類別成員，來隱藏這些成員。 您可以使用 [new](../../../csharp/language-reference/keywords/new.md) 修飾詞，明確指示成員不是用於基底成員的覆寫。 您不一定要使用 [new](../../../csharp/language-reference/keywords/new.md)，但如果未使用 [new](../../../csharp/language-reference/keywords/new.md)，則會產生編譯器警告。 如需詳細資訊，請參閱[使用 Override 和 New 關鍵字進行版本控制](../../../csharp/programming-guide/classes-and-structs/versioning-with-the-override-and-new-keywords.md)和[了解使用 Override 和 New 關鍵字的時機](../../../csharp/programming-guide/classes-and-structs/knowing-when-to-use-override-and-new-keywords.md)。  
   
-## <a name="see-also"></a>另請參閱  
+## <a name="see-also"></a>請參閱  
  [C# 程式設計指南](../../../csharp/programming-guide/index.md)  
  [類別和結構](../../../csharp/programming-guide/classes-and-structs/index.md)  
  [class](../../../csharp/language-reference/keywords/class.md)  

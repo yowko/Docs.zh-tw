@@ -1,23 +1,17 @@
 ---
-title: "-refout (C# 編譯器選項)"
+title: -refout (C# 編譯器選項)
 ms.date: 08/08/2017
-ms.prod: .net
-ms.technology:
-- devlang-csharp
-ms.topic: article
 f1_keywords:
 - /refout
 helpviewer_keywords:
 - refout compiler option [C#]
 - /refout compiler option [C#]
 - -refout compiler option [C#]
-author: BillWagner
-ms.author: wiwagn
-ms.openlocfilehash: fbae6f461304c37ba2ef10da16b5d520377bb225
-ms.sourcegitcommit: c0dd436f6f8f44dc80dc43b07f6841a00b74b23f
+ms.openlocfilehash: cb0e26b03841c093f223b3013a0d3c52ffd914c5
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 01/19/2018
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="-refout-c-compiler-options"></a>-refout (C# 編譯器選項)
 

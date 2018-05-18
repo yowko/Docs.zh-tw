@@ -1,20 +1,14 @@
 ---
 title: 屬性 - C#
 description: 了解 C# 中屬性的運作方式。
-keywords: .NET, .NET Core, C#, 屬性
 author: mgroves
-ms.author: wiwagn
 ms.date: 03/06/2017
-ms.topic: article
-ms.prod: .net
-ms.technology: devlang-csharp
-ms.devlang: csharp
 ms.assetid: b152cf36-76e4-43a5-b805-1a1952e53b79
-ms.openlocfilehash: dad02c64d22fe0f127057202c082680f13261d7b
-ms.sourcegitcommit: bd1ef61f4bb794b25383d3d72e71041a5ced172e
+ms.openlocfilehash: db6db50ac59e804225bdc11c435fef3d53fa685e
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/18/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="using-attributes-in-c"></a>在 C# 中使用屬性 #
 
@@ -88,14 +82,14 @@ ms.lasthandoff: 10/18/2017
 * Assembly
 * 類別
 * 建構函式
-* 委派
+* Delegate - 委派
 * 列舉
-* 事件
+* Event - 事件
 * 欄位
 * GenericParameter
 * 介面
 * 方法
-* 模組
+* Module
 * 參數
 * 屬性
 * ReturnValue

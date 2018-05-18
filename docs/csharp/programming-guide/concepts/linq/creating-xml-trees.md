@@ -1,21 +1,12 @@
 ---
-title: "建立 XML 樹狀結構 (C#)"
-ms.custom: 
+title: 建立 XML 樹狀結構 (C#)
 ms.date: 07/20/2015
-ms.prod: .net
-ms.reviewer: 
-ms.suite: 
-ms.technology: devlang-csharp
-ms.topic: article
 ms.assetid: bccc3e0a-c08c-468e-9d30-e075670fdace
-caps.latest.revision: "3"
-author: BillWagner
-ms.author: wiwagn
-ms.openlocfilehash: 23b19593774b5a010b453e3fe755e21386afd015
-ms.sourcegitcommit: bd1ef61f4bb794b25383d3d72e71041a5ced172e
+ms.openlocfilehash: f9367cd795104020c88c40e820c6af15054e38be
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/18/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="creating-xml-trees-c"></a>建立 XML 樹狀結構 (C#)
 其中一個最常見的 XML 工做為建構 XML 樹狀結構。 本節描述數種建立這些樹狀結構的方式。  
@@ -32,5 +23,5 @@ ms.lasthandoff: 10/18/2017
 |[如何：使用 XSD 進行驗證 (LINQ to XML) (C#)](../../../../csharp/programming-guide/concepts/linq/how-to-validate-using-xsd-linq-to-xml.md)|顯示如何使用 XSD 驗證 XML 樹狀。|  
 |[XElement 和 XDocument 物件的有效內容](../../../../csharp/programming-guide/concepts/linq/valid-content-of-xelement-and-xdocument-objects3.md)|說明可以傳遞給用於將內容加入至項目和文件之建構函式和方法的有效引數。|  
   
-## <a name="see-also"></a>另請參閱  
+## <a name="see-also"></a>請參閱  
  [程式設計手冊 (LINQ to XML) (C#)](../../../../csharp/programming-guide/concepts/linq/programming-guide-linq-to-xml.md)

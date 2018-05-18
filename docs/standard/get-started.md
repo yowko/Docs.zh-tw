@@ -1,23 +1,16 @@
 ---
-title: "開始使用 .NET"
-description: "從語言與平台觀點，列出各種開始使用 .NET 的文章。"
-keywords: ".NET, 開始使用, C#, F#, Visual Basic"
+title: 開始使用 .NET
+description: 從語言與平台觀點，列出各種開始使用 .NET 的文章。
 author: cartermp
 ms.author: mairaw
 ms.date: 05/01/2017
-ms.topic: article
-ms.prod: .net
 ms.technology: dotnet-standard
-ms.devlang: dotnet
 ms.assetid: 81c07080-acdf-4aef-a66d-0ab52fab2c04
-ms.workload:
-- dotnet
-- dotnetcore
-ms.openlocfilehash: 8b394b9b176b95aeb658b97e6b18b99f7750b8ee
-ms.sourcegitcommit: e7f04439d78909229506b56935a1105a4149ff3d
+ms.openlocfilehash: 341cea349984afd404c2a3b79e864e016fc6a95c
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 12/23/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="get-started"></a>開始使用
 

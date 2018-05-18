@@ -3,17 +3,11 @@ title: .NET Core 命令列工具架構
 description: 深入了解 .NET Core 工具層級，以及最新版本中已變更的內容。
 author: blackdwarf
 ms.date: 03/06/2017
-ms.topic: conceptual
-ms.prod: dotnet-core
-ms.technology: dotnet-cli
-ms.devlang: dotnet
-ms.workload:
-- dotnetcore
-ms.openlocfilehash: 909e3ba088a3eabededf008fa07a51ac7d677fa2
-ms.sourcegitcommit: 03ee570f6f528a7d23a4221dcb26a9498edbdf8c
+ms.openlocfilehash: 50ccaa490f079c62901c57eb9cf91690ee655bf2
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/28/2018
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="high-level-overview-of-changes-in-the-net-core-tools"></a>.NET Core 工具中變更的高階概觀
 

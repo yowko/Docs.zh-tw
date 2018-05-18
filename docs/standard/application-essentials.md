@@ -1,28 +1,17 @@
 ---
-title: ".NET Framework 應用程式基本概念"
-ms.custom: 
+title: .NET Framework 應用程式基本概念
 ms.date: 03/30/2017
-ms.prod: .net
-ms.reviewer: 
-ms.suite: 
 ms.technology: dotnet-standard
-ms.tgt_pltfrm: 
-ms.topic: article
 helpviewer_keywords:
 - .NET Framework development
 ms.assetid: 653da4ba-3752-4d1f-a08a-de017dc86ecc
-caps.latest.revision: 
 author: rpetrusha
 ms.author: ronpet
-manager: wpickett
-ms.workload:
-- dotnet
-- dotnetcore
-ms.openlocfilehash: f830064c585e1024bdc304c6356327ddc8c059f3
-ms.sourcegitcommit: e7f04439d78909229506b56935a1105a4149ff3d
+ms.openlocfilehash: f05f66af71b86ccaefe19c0ddce2bfe7572f1084
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 12/23/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="net-framework-application-essentials"></a>.NET Framework 應用程式基本概念
 這部分的 .NET Framework 說明文件提供 .NET Framework 中基本應用程式開發工作的相關資訊。  
@@ -46,7 +35,7 @@ ms.lasthandoff: 12/23/2017
  [例外狀況](../../docs/standard/exceptions/index.md)  
  說明 .NET Framework 提供的錯誤處理機制，以及處理例外狀況的基礎。  
   
- [檔案和資料流 I-O](../../docs/standard/io/index.md)  
+ [檔案和資料流 I/O](../../docs/standard/io/index.md)  
  說明如何執行同步和非同步檔案及資料流存取，以及如何使用隔離儲存區 (Isolated Storage)。  
   
  [日期、時間和時區](../../docs/standard/datetime/index.md)  

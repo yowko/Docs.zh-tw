@@ -1,31 +1,20 @@
 ---
-title: "如何：使用 SpinWait 實作兩階段等候作業"
-ms.custom: 
+title: 如何：使用 SpinWait 實作兩階段等候作業
 ms.date: 03/30/2017
-ms.prod: .net
-ms.reviewer: 
-ms.suite: 
 ms.technology: dotnet-standard
-ms.tgt_pltfrm: 
-ms.topic: article
 dev_langs:
 - csharp
 - vb
 helpviewer_keywords:
 - SpinWait, how to synchronize two-phase wait
 ms.assetid: b2ac4e4a-051a-4f65-b4b9-f8e103aff195
-caps.latest.revision: 
 author: rpetrusha
 ms.author: ronpet
-manager: wpickett
-ms.workload:
-- dotnet
-- dotnetcore
-ms.openlocfilehash: 63e4ea5c1c1d6143f1b6daa0312fa32b52af5787
-ms.sourcegitcommit: e7f04439d78909229506b56935a1105a4149ff3d
+ms.openlocfilehash: af6e4e8d0d754b97478788422b4dd84eeddc6491
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 12/23/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="how-to-use-spinwait-to-implement-a-two-phase-wait-operation"></a>如何：使用 SpinWait 實作兩階段等候作業
 下列範例示範如何使用 <xref:System.Threading.SpinWait?displayProperty=nameWithType> 物件來實作兩階段等候作業。 在第一個階段中，同步處理物件 `Latch` 會在它檢查鎖定是否已變成可用時，進行數個週期的微調。 在第二個階段中，如果鎖定已變成可用，則 `Wait` 方法會傳回，而不需使用 <xref:System.Threading.ManualResetEvent?displayProperty=nameWithType> 來執行等候；否則 `Wait` 會執行等候。  

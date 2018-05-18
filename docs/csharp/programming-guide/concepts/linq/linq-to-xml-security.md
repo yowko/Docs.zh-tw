@@ -1,21 +1,12 @@
 ---
-title: "LINQ to XML 安全性 (C#)"
-ms.custom: 
+title: LINQ to XML 安全性 (C#)
 ms.date: 07/20/2015
-ms.prod: .net
-ms.reviewer: 
-ms.suite: 
-ms.technology: devlang-csharp
-ms.topic: article
 ms.assetid: ef2c0dc9-ecf9-4c17-b24e-144184ab725f
-caps.latest.revision: "3"
-author: BillWagner
-ms.author: wiwagn
-ms.openlocfilehash: 281f979d0c7df2538f664199e4444db5166ba55e
-ms.sourcegitcommit: bd1ef61f4bb794b25383d3d72e71041a5ced172e
+ms.openlocfilehash: f51c256091d503a34caadbdf46d08e05c3122238
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/18/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="linq-to-xml-security-c"></a>LINQ to XML 安全性 (C#)
 這個主題描述與 LINQ to XML 相關聯的安全性問題。 此外，還提供減少暴露安全性的部分指引。  
@@ -107,5 +98,5 @@ ms.lasthandoff: 10/18/2017
   
  有些安全性是由 Common Language Runtime (CLR) 提供。 例如，不包含私用類別的元件無法存取透過該類別輸入的附註。 不過，無法讀取附註的元件可以刪除這些附註。 這可以當做竄改攻擊使用。  
   
-## <a name="see-also"></a>另請參閱  
+## <a name="see-also"></a>請參閱  
  [程式設計手冊 (LINQ to XML) (C#)](../../../../csharp/programming-guide/concepts/linq/programming-guide-linq-to-xml.md)

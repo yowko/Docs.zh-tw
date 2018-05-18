@@ -1,21 +1,14 @@
 ---
 title: 指標轉換 (C# 程式設計手冊)
 ms.date: 07/20/2015
-ms.prod: .net
-ms.technology:
-- devlang-csharp
-ms.topic: article
 helpviewer_keywords:
 - pointers [C#], conversions
 ms.assetid: f0e87502-477a-4ede-a31f-7a3e262e46fb
-caps.latest.revision: 17
-author: BillWagner
-ms.author: wiwagn
-ms.openlocfilehash: 36589d139c91e04d9e3d8b31281a91c26b85a5d5
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.openlocfilehash: e0c3a409d76468a6e214a96e8bb326a9d906fe18
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="pointer-conversions-c-programming-guide"></a>指標轉換 (C# 程式設計手冊)
 下表顯示預先定義的隱含指標轉換。 在許多情況下可能會發生隱含轉換，包括方法叫用和指派陳述式。  
@@ -44,7 +37,7 @@ ms.lasthandoff: 11/21/2017
   
  [!code-csharp[csProgGuidePointers#4](../../../csharp/programming-guide/unsafe-code-pointers/codesnippet/CSharp/pointer-conversions_2.cs)]  
   
-## <a name="see-also"></a>另請參閱  
+## <a name="see-also"></a>請參閱  
  [C# 程式設計指南](../../../csharp/programming-guide/index.md)  
  [指標運算式](../../../csharp/programming-guide/unsafe-code-pointers/pointer-expressions.md)  
  [指標型別](../../../csharp/programming-guide/unsafe-code-pointers/pointer-types.md)  

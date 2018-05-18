@@ -1,23 +1,15 @@
 ---
-title: "具有延伸保護的整合式 Windows 驗證"
-ms.custom: 
+title: 具有延伸保護的整合式 Windows 驗證
 ms.date: 03/30/2017
-ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.tgt_pltfrm: 
-ms.topic: article
 ms.assetid: 81731998-d5e7-49e4-ad38-c8e6d01689d0
-caps.latest.revision: "13"
 author: mcleblanc
 ms.author: markl
 manager: markl
-ms.workload: dotnet
-ms.openlocfilehash: a453a2142ee8c3d1ab8d8d00e84e1ead60c46d91
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
-ms.translationtype: MT
+ms.openlocfilehash: 88170162e4149580d532129666348d226540aced
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="integrated-windows-authentication-with-extended-protection"></a>具有延伸保護的整合式 Windows 驗證
 已建立的增強功能會影響 <xref:System.Net> 中的 <xref:System.Net.HttpWebRequest>、<xref:System.Net.HttpListener>、<xref:System.Net.Mail.SmtpClient>、<xref:System.Net.Security.SslStream>、<xref:System.Net.Security.NegotiateStream> 和相關類別以及相關命名空間處理整合式 Windows 驗證的方式。 為加強安全性，擴充保護已新增支援。  
@@ -28,7 +20,7 @@ ms.lasthandoff: 12/22/2017
   
  支援擴充保護的變更僅供 Windows 7 和 Windows Server 2008 R2 的應用程式使用。 舊版 Windows 無法使用擴充保護的功能。  
   
-## <a name="overview"></a>概觀  
+## <a name="overview"></a>總覽  
  整合式 Windows 驗證的設計可讓某些認證的挑戰回應成為通用的，這表示可以重複使用或轉寄它們。 挑戰回應至少應該使用目標特定資訊建構，最好也能使用某些通道特定資訊。 服務隨後可以提供擴充保護，確保認證的挑戰回應包含服務特定資訊，例如服務主體名稱 (SPN)。 在認證交換時利用此資訊，服務就能進一步免於惡意使用可能未正確使用的認證挑戰回應。  
   
  擴充保護旨在增強驗證通訊協定，以強化其降低驗證轉送攻擊的功能。 它會圍繞著通道和服務繫結資訊的概念打轉。  

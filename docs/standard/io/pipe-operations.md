@@ -1,31 +1,20 @@
 ---
-title: ".NET Framework 中的管道作業"
-ms.custom: 
+title: .NET Framework 中的管道作業
 ms.date: 03/30/2017
-ms.prod: .net
-ms.reviewer: 
-ms.suite: 
 ms.technology: dotnet-standard
-ms.tgt_pltfrm: 
-ms.topic: article
 helpviewer_keywords:
 - pipes [.NET Framework]
 - pipe operations [.NET Framework]
 - interprocess communication [.NET Framework], pipes
 - I/O [.NET Framework], pipes
 ms.assetid: 7b964ebd-7a4f-4d28-8194-7841f9e4c702
-caps.latest.revision: 
 author: mairaw
 ms.author: mairaw
-manager: wpickett
-ms.workload:
-- dotnet
-- dotnetcore
-ms.openlocfilehash: 68c1ad34952ee4d20dbf56aa8ca437a3f99db751
-ms.sourcegitcommit: e7f04439d78909229506b56935a1105a4149ff3d
+ms.openlocfilehash: 1e0d2747abbacf766ddeda6f41404d8701cbc273
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 12/23/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="pipe-operations-in-the-net-framework"></a>.NET Framework 中的管道作業
 管道會提供一種處理序間通訊的方法。 管道有兩種類型：  
@@ -47,6 +36,6 @@ ms.lasthandoff: 12/23/2017
      請參閱[操作說明：使用具名管道進行網路處理序間通訊](../../../docs/standard/io/how-to-use-named-pipes-for-network-interprocess-communication.md)。  
   
 ## <a name="see-also"></a>請參閱  
- [檔案和資料流 I-O](../../../docs/standard/io/index.md)  
+ [檔案和資料流 I/O](../../../docs/standard/io/index.md)  
  [操作說明：使用匿名管道進行本機處理序間通訊](../../../docs/standard/io/how-to-use-anonymous-pipes-for-local-interprocess-communication.md)  
  [操作說明：使用具名管道進行網路處理序間通訊](../../../docs/standard/io/how-to-use-named-pipes-for-network-interprocess-communication.md)

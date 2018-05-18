@@ -1,13 +1,6 @@
 ---
-title: "Ilasm.exe (IL 組譯工具)"
-ms.custom: 
+title: Ilasm.exe (IL 組譯工具)
 ms.date: 03/30/2017
-ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.technology: dotnet-clr
-ms.tgt_pltfrm: 
-ms.topic: article
 helpviewer_keywords:
 - MSIL generators
 - metadata, MSIL Assembler
@@ -18,22 +11,19 @@ helpviewer_keywords:
 - Ilasm.exe
 - verifying MSIL performance
 ms.assetid: 4ca3a4f0-4400-47ce-8936-8e219961c76f
-caps.latest.revision: "41"
 author: rpetrusha
 ms.author: ronpet
-manager: wpickett
-ms.workload: dotnet
-ms.openlocfilehash: 2507acc7ddf41d921af0b86622b1e85208191767
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.openlocfilehash: 4009fe4910af81c685ee015c7801b040a90c25aa
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="ilasmexe-il-assembler"></a>Ilasm.exe (IL 組譯工具)
 
 IL Assembler 可從中繼語言 (IL) 中產生可攜式執行檔 (PE) (如需 IL 的詳細資訊，請參閱 [Managed 執行程序](../../../docs/standard/managed-execution-process.md))。您可以執行產生的可執行檔 (包含 IL 和所需的中繼資料)，來判斷 IL 是否如預期般地執行。
 
-此工具會自動與 Visual Studio 一起安裝。 若要執行此工具，請使用 [開發人員命令提示字元] (或 Windows 7 中的 [Visual Studio 命令提示字元])。 如需詳細資訊，請參閱[命令提示字元](../../../docs/framework/tools/developer-command-prompt-for-vs.md)。
+此工具會自動與 Visual Studio 一起安裝。 若要執行此工具，請使用 [開發人員命令提示字元] \(或 Windows 7 中的 [Visual Studio 命令提示字元])。 如需詳細資訊，請參閱[命令提示字元](../../../docs/framework/tools/developer-command-prompt-for-vs.md)。
 
 在命令提示字元下輸入下列命令：
 
@@ -47,7 +37,7 @@ ilasm [options] filename [[options]filename...]
 
 | 引數 | 描述 |
 | -------- | ----------- |
-|`filename`|.il 原始程式檔的名稱。 這個檔案由中繼資料宣告指示詞和符號 IL 指令組成。 您可以提供多個來源檔案引數來使用 *Ilasm.exe* 產生單一 PE 檔。 **注意：**請確認 .il 原始程式檔的最後一行有後置空白字元或行結尾字元。|
+|`filename`|.il 原始程式檔的名稱。 這個檔案由中繼資料宣告指示詞和符號 IL 指令組成。 您可以提供多個來源檔案引數來使用 *Ilasm.exe* 產生單一 PE 檔。 **注意：** 請確認 .il 原始程式檔的最後一行有後置空白字元或行結尾字元。|
 
 | 選項 | 描述 |
 | ------ | ----------- |
@@ -57,7 +47,7 @@ ilasm [options] filename [[options]filename...]
 |**/arm**|指定進階 RISC 機器 (ARM) 為目標處理器。<br /><br /> 如果沒有指定映像位元，則預設為 **/32bitpreferred**。|
 |**/base:** `integer`|將 ImageBase 設定為 NT Optional 標頭中 `integer` 指定的值。 如果在檔案中指定了 .imagebase IL 指示詞，這個選項會覆寫它。|
 |**/clock**|對指定的 .il 原始程式檔以毫秒為單位測量並且報告下列編譯時間：<br /><br /> **總共執行**：執行所有緊接在後之特定作業所花費的總時間。<br /><br /> **啟動**：載入和開啟檔案。<br /><br /> **發出 MD**：發出中繼資料。<br /><br /> **定義參考解析**：解析檔案中的定義參考。<br /><br /> **產生 CEE 檔案**：在記憶體中產生檔案映像。<br /><br /> **撰寫 PE 檔案**：撰寫 PE 檔案的映像。|
-|**/debug**[:**IMPL**&#124;**OPT**]|包含偵錯資訊 (區域變數和引數名稱以及行號)。 建立 PDB 檔案。<br /><br /> 不帶其他值的**/debug** 會停用 JIT 最佳化，並使用 PDB 檔案的序列點。<br /><br /> **IMPL** 會停用 JIT 最佳化，並使用隱含序列點。<br /><br /> **OPT** 會啟用 JIT 最佳化，並使用隱含序列點。|
+|**/debug**[:**IMPL**&#124;**OPT**]|包含偵錯資訊 (區域變數和引數名稱以及行號)。 建立 PDB 檔案。<br /><br /> 不帶其他值的 **/debug** 會停用 JIT 最佳化，並使用 PDB 檔案的序列點。<br /><br /> **IMPL** 會停用 JIT 最佳化，並使用隱含序列點。<br /><br /> **OPT** 會啟用 JIT 最佳化，並使用隱含序列點。|
 |**/dll**|產生 *.dll* 檔案作為輸出。|
 |**/enc:** `file`|從指定的原始程式檔建立編輯後繼續差異。<br /><br /> 這個引數僅供教育使用，而不支援商業用途。|
 |**/exe**|產生可執行檔做為輸出。 這是預設值。|
@@ -74,7 +64,7 @@ ilasm [options] filename [[options]filename...]
 |**/noautoinherit**|沒有指定基底類別時，停用 <xref:System.Object> 的預設繼承。|
 |**/nocorstub**|隱藏 CORExeMain 虛設常式 (Stub) 的產生。|
 |**/nologo**|隱藏 Microsoft 程式啟始資訊顯示。|
-|**/output:** `file.ext`|指定輸出檔的名稱和副檔名。 依預設值，輸出檔的名稱和第一個原始程式檔的名稱相同。 預設副檔名是 *.exe*。 如果指定 **/dll** 選項，則預設副檔名會是 *.dll*。 **注意：**指定 **/output**:myfile.dll 並不會設定 **/dll** 選項。 如果沒有指定 **/dll**，結果將會是名稱為 *myfile.dll* 的可執行檔。|
+|**/output:** `file.ext`|指定輸出檔的名稱和副檔名。 依預設值，輸出檔的名稱和第一個原始程式檔的名稱相同。 預設副檔名是 *.exe*。 如果指定 **/dll** 選項，則預設副檔名會是 *.dll*。 **注意：** 指定 **/output**:myfile.dll 並不會設定 **/dll** 選項。 如果沒有指定 **/dll**，結果將會是名稱為 *myfile.dll* 的可執行檔。|
 |**/optimize**|將長指令最佳化為短指令。 例如， `br` 變成 `br.s`。|
 |**/pe64**|建立 64 位元的映像 (PE32+)。<br /><br /> 如果沒有指定目標處理器，則預設為 `/itanium`。|
 |**/pdb**|在不啟用偵錯資訊追蹤的情況下建立 PDB 檔案。|

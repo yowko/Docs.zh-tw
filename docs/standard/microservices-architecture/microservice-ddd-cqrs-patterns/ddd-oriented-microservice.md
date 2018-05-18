@@ -1,21 +1,14 @@
 ---
 title: 設計 DDD 導向微服務
 description: 容器化 .NET 應用程式的 .NET 微服務架構 | 設計 DDD 導向微服務
-keywords: Docker, 微服務, ASP.NET, 容器
 author: CESARDELATORRE
 ms.author: wiwagn
 ms.date: 11/06/2017
-ms.prod: .net-core
-ms.technology: dotnet-docker
-ms.topic: article
-ms.workload:
-- dotnet
-- dotnetcore
-ms.openlocfilehash: d2d07abe55f30e0b12a7f0cba937abd1b7e32629
-ms.sourcegitcommit: 2e8acae16ae802f2d6d04e3ce0a6dbf04e476513
+ms.openlocfilehash: 520f2928eb0d300ab0dc2d328d974455e102e4d7
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/18/2018
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="designing-a-ddd-oriented-microservice"></a>設計 DDD 導向微服務
 
@@ -77,7 +70,7 @@ Eric Evans 的優良書籍 [Domain Driven Design (領域驅動設計)](https://d
 
 接下來移動到應用程式層，我們可以再次引用 Eric Evan 的書籍 [Domain Driven Design (領域驅動設計)](https://domainlanguage.com/ddd/)：
 
-**應用程式層：**定義軟體應執行的工作，並指示表達性領域物件解決問題。 此層負責的工作對於商務來說是有意義的，或是對與其他系統應用程式層進行的互動來說是必要的。 此圖層會保持精簡。 它並不會包含商務規則或知識，而只負責協調工作並將工作委派給下一層領域物件的共同作業。 它不具有反映商務情況的狀態，但可以擁有反映使用者或程式工作進度的狀態。
+**應用程式層：** 定義軟體應執行的工作，並指示表達性領域物件解決問題。 此層負責的工作對於商務來說是有意義的，或是對與其他系統應用程式層進行的互動來說是必要的。 此圖層會保持精簡。 它並不會包含商務規則或知識，而只負責協調工作並將工作委派給下一層領域物件的共同作業。 它不具有反映商務情況的狀態，但可以擁有反映使用者或程式工作進度的狀態。
 
 .NET 中微服務的應用程式層通常會編碼為 ASP.NET Core Web API 專案。 專案會實作微服務的互動、遠端網路存取，以及 UI 或用戶端應用程式使用的外部 Web API。 若使用的是 CQRS 方法，它便會包含查詢、微服務接受的命令，甚至是微服務之間的事件驅動通訊 (整合事件)。 代表應用程式層的 ASP.NET Core Web API 不可包含商務規則或領域知識 (尤其是交易或更新的領域規則)。這些內容應該由領域模型類別庫擁有。 應用程式層應僅負責協調工作，而不可保有或定義任何領域狀態 (領域模型)。 它會將商務規則的執行委派給領域模型類別自身 (彙總根及領域實體)，而後者最後便會在那些領域實體中更新資料。
 

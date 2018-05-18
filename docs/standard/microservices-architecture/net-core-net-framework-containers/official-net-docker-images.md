@@ -1,21 +1,14 @@
 ---
 title: 官方 .NET Docker 映像
 description: 容器化 .NET 應用程式的 .NET 微服務架構 | 官方 .NET Docker 映像
-keywords: Docker, 微服務, ASP.NET, 容器
 author: CESARDELATORRE
 ms.author: wiwagn
 ms.date: 10/18/2017
-ms.prod: .net-core
-ms.technology: dotnet-docker
-ms.topic: article
-ms.workload:
-- dotnet
-- dotnetcore
-ms.openlocfilehash: adbe63a2d2f93819b5b29c6dd8d8089cd35ad2f3
-ms.sourcegitcommit: 86adcc06e35390f13c1e372c36d2e044f1fc31ef
+ms.openlocfilehash: d2105603fe1fcbacd995710c9b365ec406bad255
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/26/2018
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="official-net-docker-images"></a>官方 .NET Docker 映像
 

@@ -1,20 +1,13 @@
 ---
-title: "C# 陳述式 - C# 語言教學課程"
-description: "您將使用陳述式來建立 C# 程式的動作"
-keywords: ".NET, csharp, 陳述式, 語法"
-author: BillWagner
-ms.author: wiwagn
+title: C# 陳述式 - C# 語言教學課程
+description: 您將使用陳述式來建立 C# 程式的動作
 ms.date: 11/06/2016
-ms.topic: article
-ms.prod: .net
-ms.technology: devlang-csharp
-ms.devlang: csharp
 ms.assetid: 5409c379-5622-4fae-88b5-1654276ea8d4
-ms.openlocfilehash: 99ec2489daf89926da9b8c4e148965412826a8a6
-ms.sourcegitcommit: bd1ef61f4bb794b25383d3d72e71041a5ced172e
+ms.openlocfilehash: 2f25c07ccc0af27a503465b9414bf607c61d1b2e
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/18/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="statements"></a>陳述式
 

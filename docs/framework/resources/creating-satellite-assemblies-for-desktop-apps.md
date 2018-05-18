@@ -1,14 +1,6 @@
 ---
 title: 建立桌面應用程式的附屬組件
-ms.custom: ''
 ms.date: 03/30/2017
-ms.prod: .net-framework
-ms.reviewer: ''
-ms.suite: ''
-ms.technology:
-- dotnet-bcl
-ms.tgt_pltfrm: ''
-ms.topic: article
 dev_langs:
 - csharp
 - vb
@@ -31,17 +23,13 @@ helpviewer_keywords:
 - compiling satellite assemblies
 - re-signing assemblies
 ms.assetid: 8d5c6044-2919-41d2-8321-274706b295ac
-caps.latest.revision: ''
 author: rpetrusha
 ms.author: ronpet
-manager: wpickett
-ms.workload:
-- dotnet
-ms.openlocfilehash: 2f75da3332c8172a6a888e6f40c66383866799ea
-ms.sourcegitcommit: 498799639937c89de777361aab74261efe7b79ea
+ms.openlocfilehash: c308c7e16f106d00e5fd1b5ad820f8b330f4bbbf
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 03/22/2018
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="creating-satellite-assemblies-for-desktop-apps"></a>建立桌面應用程式的附屬組件
 資源檔在當地語系化的應用程式中扮演重要角色。 它們可讓應用程式以使用者自己的語言和文化特性顯示字串、影像和其他資料，以及在使用者自己的語言或文化特性的資源無法使用時提供替代資料。 .NET Framework 會使用中樞和支點模型來尋找並擷取當地語系化的資源。 中樞是主要組件，其中包含未當地語系化的可執行程式碼以及稱為中性或預設文化特性之單一文化特性的資源。 預設文化特性是應用程式的後援文化特性；當地語系化的資源無法使用時會使用它。 您使用 <xref:System.Resources.NeutralResourcesLanguageAttribute> 屬性來指定應用程式之預設文化特性的文化特性。 每個支點都會連線至附屬組件，其中包含單一當地語系化文化特性但未包含任何程式碼的資源。 因為附屬組件不是主要組件的一部分，所以您可以輕鬆地更新或取代對應至特定文化特性的資源，而不需要取代應用程式的主要組件。  
@@ -87,11 +75,11 @@ al -target:lib -embed:strings.de.resources -culture:de -out:Example.resources.dl
   
 |選項|描述|  
 |------------|-----------------|  
-|**-target:**lib|指定將附屬組件編譯成程式庫 (.dll) 檔案。 因為附屬組件未包含可執行程式碼，而且不是應用程式的主要組件，所以您必須將附屬組件儲存為 DLL。|  
-|**-embed:**strings.de.resources|指定要在 Al.exe 編譯組件時內嵌的資源檔名稱。 您可以在附屬組件中內嵌多個 .resources 檔案；但是，如果您遵循中樞和支點模型，則必須為每個文化特性編譯一個附屬組件。 不過，您可以為字串和物件建立個別的 .resources 檔案。|  
-|**-culture:**de|指定要編譯之資源的文化特性。 Common Language Runtime 在搜尋所指定文化特性的資源時會使用這項資訊。 如果您省略這個選項，Al.exe 還是會編譯資源，但執行階段在使用者要求資源時會找不到。|  
-|**-out:**Example.resources.dll|指定輸出檔案的名稱。 名稱必須遵循命名標準 <基底名稱>.resources.<副檔名>，其中 <基底名稱> 為主要組件的名稱，<副檔名> 則為有效的副檔名 (例如 .dll)。 請注意，執行階段無法根據輸出檔名稱來判斷附屬組件的文化特性；您必須使用 **/culture** 選項來指定它。|  
-|**-template:**Example.dll|指定附屬組件要從中繼承所有組件中繼資料的組件，但不包括文化特性欄位。 只有在您指定的組件具有[強式名稱](../../../docs/framework/app-domains/strong-named-assemblies.md)時，此選項才會影響附屬組件。|  
+|**-target:** lib|指定將附屬組件編譯成程式庫 (.dll) 檔案。 因為附屬組件未包含可執行程式碼，而且不是應用程式的主要組件，所以您必須將附屬組件儲存為 DLL。|  
+|**-embed:** strings.de.resources|指定要在 Al.exe 編譯組件時內嵌的資源檔名稱。 您可以在附屬組件中內嵌多個 .resources 檔案；但是，如果您遵循中樞和支點模型，則必須為每個文化特性編譯一個附屬組件。 不過，您可以為字串和物件建立個別的 .resources 檔案。|  
+|**-culture:** de|指定要編譯之資源的文化特性。 Common Language Runtime 在搜尋所指定文化特性的資源時會使用這項資訊。 如果您省略這個選項，Al.exe 還是會編譯資源，但執行階段在使用者要求資源時會找不到。|  
+|**-out:** Example.resources.dll|指定輸出檔案的名稱。 名稱必須遵循命名標準 <基底名稱>.resources.<副檔名>，其中 <基底名稱> 為主要組件的名稱，<副檔名> 則為有效的副檔名 (例如 .dll)。 請注意，執行階段無法根據輸出檔名稱來判斷附屬組件的文化特性；您必須使用 **/culture** 選項來指定它。|  
+|**-template:** Example.dll|指定附屬組件要從中繼承所有組件中繼資料的組件，但不包括文化特性欄位。 只有在您指定的組件具有[強式名稱](../../../docs/framework/app-domains/strong-named-assemblies.md)時，此選項才會影響附屬組件。|  
   
  如需 Al.exe 的完整可用選項清單，請參閱[組件連結器 (Al.exe)](../../../docs/framework/tools/al-exe-assembly-linker.md)。  
   

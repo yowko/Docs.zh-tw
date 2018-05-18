@@ -1,30 +1,19 @@
 ---
-title: "編輯 XML 結構描述"
-ms.custom: 
+title: 編輯 XML 結構描述
 ms.date: 03/30/2017
-ms.prod: .net
-ms.reviewer: 
-ms.suite: 
 ms.technology: dotnet-standard
-ms.tgt_pltfrm: 
-ms.topic: article
 dev_langs:
 - csharp
 - vb
 - cpp
 ms.assetid: fa09c8e5-c2b9-49d2-bb0d-40330cd13e4d
-caps.latest.revision: 
 author: mairaw
 ms.author: mairaw
-manager: wpickett
-ms.workload:
-- dotnet
-- dotnetcore
-ms.openlocfilehash: dd2c5a0e4625a348daad9eccb7bae0e4788cab71
-ms.sourcegitcommit: e7f04439d78909229506b56935a1105a4149ff3d
+ms.openlocfilehash: 38519ee90578d0bc13689216fb5674653ead4c19
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 12/23/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="editing-xml-schemas"></a>編輯 XML 結構描述
 編輯 XML 結構描述是結構描述物件模型 (SOM) 的其中一項最重要功能。 SOM 的所有前結構描述編譯屬性都可用於變更 XML 結構描述中的現有值。 然後可重新編譯該 XML 結構描述以反映這些變更。  

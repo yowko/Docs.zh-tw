@@ -4,16 +4,11 @@ description: 了解如何在 C# 中使用 Visual Studio Code 建立並偵錯您�
 author: kendrahavens
 ms.author: mairaw
 ms.date: 09/27/2017
-ms.topic: conceptual
-ms.prod: .net
-ms.technology: devlang-csharp
-ms.workload:
-- dotnetcore
-ms.openlocfilehash: d4ee1c9ef66ef61156453786f65d16470d7a5ea2
-ms.sourcegitcommit: 03ee570f6f528a7d23a4221dcb26a9498edbdf8c
+ms.openlocfilehash: 8958c39ba16cadbfab95e35fa36e8e85ce0a4ab8
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/28/2018
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="get-started-with-c-and-visual-studio-code"></a>C# 與 Visual Studio Code 使用者入門
 

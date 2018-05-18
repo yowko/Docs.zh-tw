@@ -1,26 +1,15 @@
 ---
-title: "DOM 中的命名空間和 DTD"
-ms.custom: 
+title: DOM 中的命名空間和 DTD
 ms.date: 03/30/2017
-ms.prod: .net
-ms.reviewer: 
-ms.suite: 
 ms.technology: dotnet-standard
-ms.tgt_pltfrm: 
-ms.topic: article
 ms.assetid: 1e9b55c4-76ad-4f54-8d96-7ce4b4cf1e05
-caps.latest.revision: 
 author: mairaw
 ms.author: mairaw
-manager: wpickett
-ms.workload:
-- dotnet
-- dotnetcore
-ms.openlocfilehash: cf085cf866ea6034679230115e588024fcd79a11
-ms.sourcegitcommit: e7f04439d78909229506b56935a1105a4149ff3d
+ms.openlocfilehash: 92d7a50d2db25f5e4d32734d550ce2d55a02e3c9
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 12/23/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="namespaces-and-dtds-in-the-dom"></a>DOM 中的命名空間和 DTD
 文件類型定義 (DTD) 會使命名空間支援較為複雜。 例如，下列 XML 包含名稱中有冒號的預設屬性。  

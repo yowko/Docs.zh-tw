@@ -1,23 +1,16 @@
 ---
-title: "委派和 Lambda"
-description: "了解委派如何定義指定特定方法簽章的類型，可直接呼叫，或傳遞至另一個方法，再進行呼叫。"
-keywords: .NET, .NET Core
+title: 委派和 Lambda
+description: 了解委派如何定義指定特定方法簽章的類型，可直接呼叫，或傳遞至另一個方法，再進行呼叫。
 author: richlander
 ms.author: wiwagn
 ms.date: 06/20/2016
-ms.topic: article
-ms.prod: .net
 ms.technology: dotnet-standard
-ms.devlang: dotnet
 ms.assetid: fe2e4b4c-6483-4106-a4b4-a33e2e306591
-ms.workload:
-- dotnet
-- dotnetcore
-ms.openlocfilehash: d418733ada67a1cb751bbfa74afee2eeeee04976
-ms.sourcegitcommit: e7f04439d78909229506b56935a1105a4149ff3d
+ms.openlocfilehash: f8184b87fc62f378fe72138733f87de924da60f6
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 12/23/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="delegates-and-lambdas"></a>委派和 Lambda
 
@@ -106,7 +99,7 @@ public class Program
 }
 ```
 
-注意醒目提示的程式碼行。 如您所見，委派的主體只是一組運算式，與任何其他委派相同。 但這並不是不同的定義，而是當做_「臨機操作」_ 引入 `List<T>` 類型的 `FindAll()` 方法呼叫中。
+注意醒目提示的程式碼行。 如您所見，委派的主體只是一組運算式，與任何其他委派相同。 但這並不是不同的定義，而是當做 _「臨機操作」_ 引入 `List<T>` 類型的 `FindAll()` 方法呼叫中。
 
 不過，即使使用此方法，還是有許多程式碼可以捨棄。 此時就需要 **Lambda 運算式**。
 

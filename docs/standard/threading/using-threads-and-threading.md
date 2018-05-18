@@ -1,29 +1,18 @@
 ---
-title: "使用執行緒和執行緒處理"
-ms.custom: 
+title: 使用執行緒和執行緒處理
 ms.date: 03/30/2017
-ms.prod: .net
-ms.reviewer: 
-ms.suite: 
 ms.technology: dotnet-standard
-ms.tgt_pltfrm: 
-ms.topic: article
 helpviewer_keywords:
 - threading [.NET Framework], about threading
 - managed threading
 ms.assetid: 9b5ec2cd-121b-4d49-b075-222cf26f2344
-caps.latest.revision: 
 author: rpetrusha
 ms.author: ronpet
-manager: wpickett
-ms.workload:
-- dotnet
-- dotnetcore
-ms.openlocfilehash: 5bed13950a29cfa787ef8c9eb2608c6d74dfd49f
-ms.sourcegitcommit: e7f04439d78909229506b56935a1105a4149ff3d
+ms.openlocfilehash: 725a47cae6e3e91cf9e7385427bceece81f3c918
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 12/23/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="using-threads-and-threading"></a>使用執行緒和執行緒處理
 本節中的主題將討論受控執行緒的建立和管理、如何將資料傳遞至受控執行緒並取得結果，以及如何終結執行緒和處理 <xref:System.Threading.ThreadAbortException>。  

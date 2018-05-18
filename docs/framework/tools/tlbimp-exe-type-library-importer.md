@@ -1,10 +1,6 @@
 ---
 title: Tlbimp.exe (類型程式庫匯入工具)
 ms.date: 03/30/2017
-ms.prod: .net-framework
-ms.technology:
-- dotnet-clr
-ms.topic: article
 helpviewer_keywords:
 - type libraries [.NET Framework], importing
 - importing type library
@@ -16,14 +12,11 @@ helpviewer_keywords:
 ms.assetid: ec0a8d63-11b3-4acd-b398-da1e37e97382
 author: rpetrusha
 ms.author: ronpet
-manager: wpickett
-ms.workload:
-- dotnet
-ms.openlocfilehash: 9591c9ced836a98c5843f5fb53809903f72c73f3
-ms.sourcegitcommit: 9a4fe1a1c37b26532654b4bbe22d702237950009
+ms.openlocfilehash: d28c5e817e415e08c3a58c840e52cdfcbe286997
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/16/2018
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="tlbimpexe-type-library-importer"></a>Tlbimp.exe (類型程式庫匯入工具)
 類型程式庫匯入工具會將 COM 類型程式庫中找到的類型定義轉換為通用語言執行平台組件中的對等定義。 Tlbimp.exe 的輸出是二進位檔案 (組件)，它包含原始類型程式庫中所定義類型的執行階段中繼資料。 您可以使用像是 [Ildasm.exe](ildasm-exe-il-disassembler.md) 這類工具來檢查這個檔案。  
@@ -64,7 +57,7 @@ tlbimp tlbFile [options]
 |**/publickey:** *filename*|指定包含公開金鑰的檔案，用來簽署產生的組件。 如果您指定 **/keyfile:** 或 **/keycontainer:** 選項而不是 **/publickey:**，Tlbimp.exe 將會從 **/keyfile:** 或 **/keycontainer:** 提供的公開/私密金鑰組產生公開金鑰。 **/publickey:** 選項支援測試金鑰和延遲簽署情節。 檔案會採用 Sn.exe 產生的格式。 如需詳細資訊，請參閱[強式名稱工具 (Sn.exe)](sn-exe-strong-name-tool.md) 中 Sn.exe 的 **-p** 選項。|  
 |**/reference:** *filename*|指定組件檔案，用來解析在目前類型程式庫外定義之類型的參考。 如果您未指定 **/reference** 選項，Tlbimp.exe 會自動以遞迴方式匯入所匯入之類型程式庫參考的任何外部類型程式庫。 如果您指定 **/reference** 選項，則工具在匯入其他類型程式庫之前，會先嘗試解析所參考組件中的外部類型。|  
 |**/silence:** `warningnumber`|隱藏顯示指定的警告。 此選項無法搭配 **/silent** 使用。|  
-|**/silent**|隱藏顯示成功訊息。 此選項無法搭配**/silence** 使用。|  
+|**/silent**|隱藏顯示成功訊息。 此選項無法搭配 **/silence** 使用。|  
 |**/strictref**|如果工具無法解析目前組件中、以 **/reference** 選項指定的組件中，或是已登錄的主要 Interop 組件 (PIA) 中的所有參考，則不匯入類型程式庫。|  
 |**/strictref:nopia**|與 **/strictref** 相同，但是會忽略 PIA。|  
 |**/sysarray**|指定由這個工具匯入 COM 樣式的 SafeArray 作為 Managed <xref:System.Array> 類型。|  

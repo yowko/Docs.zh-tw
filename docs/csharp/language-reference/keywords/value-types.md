@@ -1,10 +1,6 @@
 ---
-title: "實值型別 (C# 參考)"
+title: 實值型別 (C# 參考)
 ms.date: 07/20/2015
-ms.prod: .net
-ms.technology:
-- devlang-csharp
-ms.topic: article
 f1_keywords:
 - cs.valuetypes
 helpviewer_keywords:
@@ -12,14 +8,11 @@ helpviewer_keywords:
 - types [C#], value types
 - C# language, value types
 ms.assetid: 471eb994-2958-49d5-a6be-19b4313f80a3
-caps.latest.revision: 
-author: BillWagner
-ms.author: wiwagn
-ms.openlocfilehash: 281b811f2a8a1f2c364405b563f9f103899b492c
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.openlocfilehash: fdda6942c6883baaaea5e305a1e699a01e707d2b
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="value-types-c-reference"></a>實值型別 (C# 參考)
 實值型別包含兩種主要類別：  
@@ -105,7 +98,7 @@ Point p = new Point(); // Invoke default constructor for the struct.
   
  如需格式化數值類型輸出的資訊，請參閱[格式化數值結果表](../../../csharp/language-reference/keywords/formatting-numeric-results-table.md)。  
   
-## <a name="see-also"></a>另請參閱  
+## <a name="see-also"></a>請參閱  
  [C# 參考](../../../csharp/language-reference/index.md)  
  [C# 程式設計指南](../../../csharp/programming-guide/index.md)  
  [C# 關鍵字](../../../csharp/language-reference/keywords/index.md)  

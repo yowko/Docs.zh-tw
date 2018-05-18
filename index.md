@@ -5,11 +5,11 @@ hide_bc: true
 title: .NET 文件
 description: 了解如何使用 C#、Visual Basic 及 F#，在任何平台上使用 .NET 建立各種應用程式。 瀏覽 API 參考、範例程式碼、教學課程及更多資源。
 ms.custom: updateeachrelease
-ms.openlocfilehash: 3a2501d4eb0e40930bb119fb27f9cb630bc2a884
-ms.sourcegitcommit: 88f251b08bf0718ce119f3d7302f514b74895038
+ms.openlocfilehash: f5967e21fcda580635dd53f976e2e5dabc0fbce8
+ms.sourcegitcommit: ff1d40507b3eb6e2185478e37c66c66be6de46f1
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/10/2018
+ms.lasthandoff: 05/11/2018
 ---
 <div id="main" class="v2">
     <div class="container">
@@ -643,7 +643,7 @@ ms.lasthandoff: 05/10/2018
                                             <div class="cardText">
                                                 <a href="http://www.monogame.net/documentation/?page=main">
                                                     <h3>MonoGame</h3>
-                                                    <p>透過 MonoGame 文件庫文件中樞的教學課程及設定指示，以 C# 建置遊戲。</p>
+                                                    <p>利用 MonoGame 程式庫文件中心的教學課程與設定指示，以 C# 建置遊戲。</p>
                                                 </a>
                                             </div>
                                         </div>

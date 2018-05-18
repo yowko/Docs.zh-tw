@@ -1,10 +1,6 @@
 ---
 title: switch 關鍵字 (C# 參考)
 ms.date: 03/07/2017
-ms.prod: .net
-ms.technology:
-- devlang-csharp
-ms.topic: article
 f1_keywords:
 - switch_CSharpKeyword
 - switch
@@ -16,14 +12,11 @@ helpviewer_keywords:
 - case statement [C#]
 - default keyword [C#]
 ms.assetid: 44bae8b8-8841-4d85-826b-8a94277daecb
-caps.latest.revision: 47
-author: BillWagner
-ms.author: wiwagn
-ms.openlocfilehash: 6506278edb782f61b83cecfccba3126282c0ecf8
-ms.sourcegitcommit: 86adcc06e35390f13c1e372c36d2e044f1fc31ef
+ms.openlocfilehash: 4e21700b36437bf9bd60bb4f33e2833819333f1e
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/26/2018
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="switch-c-reference"></a>switch (C# 參考)
 `switch` 是一個選取範圍陳述式，可根據使用「比對運算式」的模式比對，從候選項清單中選擇要執行的單一「參數區段」。 
@@ -86,7 +79,7 @@ switch (caseSwitch)
 
 ## <a name="case-labels"></a>case 標籤
 
- 每個 case 標籤都會指定要與比對運算式比較的模式 (先前範例中的 `caseSwitch` 變數)。 如果相符，控制權會轉移至 **「第一個」**相符 case 標籤的參數區段。 若無任何 case 標籤模式符合比對運算式，會將控制權轉移到具有 `default` case 標籤的區段 (如有此標籤)。 如果沒有 `default` case，則不會執行任何參數區段中的陳述式，而且控制權會轉移到 `switch` 陳述式外部。
+ 每個 case 標籤都會指定要與比對運算式比較的模式 (先前範例中的 `caseSwitch` 變數)。 如果相符，控制權會轉移至 **「第一個」** 相符 case 標籤的參數區段。 若無任何 case 標籤模式符合比對運算式，會將控制權轉移到具有 `default` case 標籤的區段 (如有此標籤)。 如果沒有 `default` case，則不會執行任何參數區段中的陳述式，而且控制權會轉移到 `switch` 陳述式外部。
 
  如需 `switch` 陳述式和模式比對的資訊，請參閱[模式比對與 `switch` 陳述式](#pattern)一節。
 

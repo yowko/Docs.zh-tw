@@ -1,13 +1,7 @@
 ---
 title: 如何：將文字寫入檔案
-ms.custom: ''
 ms.date: 03/30/2017
-ms.prod: .net
-ms.reviewer: ''
-ms.suite: ''
 ms.technology: dotnet-standard
-ms.tgt_pltfrm: ''
-ms.topic: article
 dev_langs:
 - csharp
 - vb
@@ -17,18 +11,13 @@ helpviewer_keywords:
 - streams, writing text to files
 - data streams, writing text to files
 ms.assetid: 060cbe06-2adf-4337-9e7b-961a5c840208
-caps.latest.revision: 29
 author: mairaw
 ms.author: mairaw
-manager: wpickett
-ms.workload:
-- dotnet
-- dotnetcore
-ms.openlocfilehash: 926dfe1ea254fdb6460c835f58721f54609ddc90
-ms.sourcegitcommit: 86adcc06e35390f13c1e372c36d2e044f1fc31ef
+ms.openlocfilehash: 13fa71487f143b1054cd2014fa74a1c7245ab31b
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/26/2018
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="how-to-write-text-to-a-file"></a>如何：將文字寫入檔案
 本主題示範可針對 .NET Framework 應用程式或 [!INCLUDE[win8_appname_long](../../../includes/win8-appname-long-md.md)] 應用程式，將文字寫入至檔案的幾種不同方式。 通常會使用下列類別和方法，將文字寫入至檔案：  
@@ -104,4 +93,4 @@ ms.lasthandoff: 04/26/2018
  [操作說明：讀取和寫入新建立的資料檔案](../../../docs/standard/io/how-to-read-and-write-to-a-newly-created-data-file.md)  
  [如何：開啟並附加至記錄檔](../../../docs/standard/io/how-to-open-and-append-to-a-log-file.md)  
  [如何：從檔案讀取文字](../../../docs/standard/io/how-to-read-text-from-a-file.md)  
- [檔案和資料流 I-O](../../../docs/standard/io/index.md)
+ [檔案和資料流 I/O](../../../docs/standard/io/index.md)

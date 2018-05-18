@@ -1,12 +1,6 @@
 ---
-title: "在 Visual Basic 中建立、刪除和移動檔案和目錄"
-ms.custom: 
+title: 在 Visual Basic 中建立、刪除和移動檔案和目錄
 ms.date: 07/20/2015
-ms.prod: .net
-ms.reviewer: 
-ms.suite: 
-ms.technology: devlang-visual-basic
-ms.topic: article
 helpviewer_keywords:
 - examples [Visual Basic], moving files and directories
 - I/O [Visual Basic], deleting folders
@@ -28,19 +22,16 @@ helpviewer_keywords:
 - I/O [Visual Basic], renaming folders
 - I/O [Visual Basic], moving files
 ms.assetid: 8f814fcc-4c42-4dbb-a131-005ec445ac9e
-caps.latest.revision: "14"
-author: dotnet-bot
-ms.author: dotnetcontent
-ms.openlocfilehash: 388d8567235230003f0b770c2266e4a4d77ca754
-ms.sourcegitcommit: bd1ef61f4bb794b25383d3d72e71041a5ced172e
+ms.openlocfilehash: 8b734b553e0ef4c14e372892e53b1184798390e6
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/18/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="creating-deleting-and-moving-files-and-directories-in-visual-basic"></a>在 Visual Basic 中建立、刪除和移動檔案和目錄
 本節會列出在 Visual Basic 中與建立、刪除、移動和重新命名檔案及目錄建立關聯的工作。  
   
-## <a name="in-this-section"></a>本章節內容  
+## <a name="in-this-section"></a>本節內容  
  [如何：將具有特定模式的檔案複製到目錄](../../../../visual-basic/developing-apps/programming/drives-directories-files/how-to-copy-files-with-a-specific-pattern-to-a-directory.md)  
  示範如何將有特定檔名模式的檔案，例如僅 .txt 檔案，複製到目錄。  
   

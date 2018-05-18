@@ -1,23 +1,14 @@
 ---
-title: "自動記憶體管理和記憶體回收"
-description: "了解自動記憶體管理如何是 Common Language Runtime 在受控執行期間所提供的一項服務。"
-keywords: .NET, .NET Core
-author: dotnet-bot
-ms.author: dotnetcontent
+title: 自動記憶體管理和記憶體回收
+description: 了解自動記憶體管理如何是 Common Language Runtime 在受控執行期間所提供的一項服務。
 ms.date: 07/22/2016
-ms.topic: article
-ms.prod: .net
 ms.technology: dotnet-standard
-ms.devlang: dotnet
 ms.assetid: d095b0b6-2454-4e23-80b4-c9e8a447116c
-ms.workload:
-- dotnet
-- dotnetcore
-ms.openlocfilehash: a99d849cc1092e36181da7b7ab767a41ff5ef234
-ms.sourcegitcommit: e7f04439d78909229506b56935a1105a4149ff3d
+ms.openlocfilehash: b9ce8b1fec5c6fc0808b86f06408c3f5d612e492
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 12/23/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="automatic-memory-management-and-garbage-collection"></a>自動記憶體管理和記憶體回收
 

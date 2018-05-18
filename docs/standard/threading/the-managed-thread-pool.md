@@ -1,13 +1,7 @@
 ---
-title: "Managed 執行緒集區"
-ms.custom: 
+title: Managed 執行緒集區
 ms.date: 03/30/2017
-ms.prod: .net
-ms.reviewer: 
-ms.suite: 
 ms.technology: dotnet-standard
-ms.tgt_pltfrm: 
-ms.topic: article
 dev_langs:
 - csharp
 - vb
@@ -18,18 +12,13 @@ helpviewer_keywords:
 - threading [.NET Framework], thread pool
 - threading [.NET Framework], pooling
 ms.assetid: 2be05b06-a42e-4c9d-a739-96c21d673927
-caps.latest.revision: 
 author: rpetrusha
 ms.author: ronpet
-manager: wpickett
-ms.workload:
-- dotnet
-- dotnetcore
-ms.openlocfilehash: e50fd66096d6bd58fb7db692449e7f8654b5ca76
-ms.sourcegitcommit: e7f04439d78909229506b56935a1105a4149ff3d
+ms.openlocfilehash: 3894229ff5561e50d42a36f576a89ee7bf01c067
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 12/23/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="the-managed-thread-pool"></a>Managed 執行緒集區
 <xref:System.Threading.ThreadPool> 類別為您的應用程式提供了受到系統管理的背景工作執行緒集區，讓您專注於應用程式工作上，而不是執行緒的管理。 如果您有需要在背景處理的簡短工作，Managed 執行緒集區是利用多重執行緒的一個簡單方式。 例如，從 [!INCLUDE[net_v40_long](../../../includes/net-v40-long-md.md)] 開始，您可以建立 <xref:System.Threading.Tasks.Task> 和 <xref:System.Threading.Tasks.Task%601> 物件，這兩個物件會在執行緒集區執行緒上執行非同步工作。  

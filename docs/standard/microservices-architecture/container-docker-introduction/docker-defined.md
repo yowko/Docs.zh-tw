@@ -1,21 +1,14 @@
 ---
-title: "什麼是 Docker？"
-description: "容器化 .NET 應用程式的 .NET 微服務架構 | 什麼是 Docker？"
-keywords: "Docker, 微服務, ASP.NET, 容器"
+title: 什麼是 Docker？
+description: 容器化 .NET 應用程式的 .NET 微服務架構 | 什麼是 Docker？
 author: CESARDELATORRE
 ms.author: wiwagn
 ms.date: 05/26/2017
-ms.prod: .net-core
-ms.technology: dotnet-docker
-ms.topic: article
-ms.workload:
-- dotnet
-- dotnetcore
-ms.openlocfilehash: a079a3303d1e1fed9a8df2dca2c5627beb0c672d
-ms.sourcegitcommit: e7f04439d78909229506b56935a1105a4149ff3d
+ms.openlocfilehash: fadd2611283f0a7dadbf1734fe48f7d1a13096ef
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 12/23/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="what-is-docker"></a>什麼是 Docker？
 

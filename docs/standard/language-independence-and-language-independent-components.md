@@ -1,13 +1,7 @@
 ---
 title: 語言獨立性以及與語言無關的元件
-ms.custom: ''
 ms.date: 03/30/2017
-ms.prod: .net
-ms.reviewer: ''
-ms.suite: ''
 ms.technology: dotnet-standard
-ms.tgt_pltfrm: ''
-ms.topic: article
 dev_langs:
 - csharp
 - vb
@@ -19,18 +13,13 @@ helpviewer_keywords:
 - runtime, language interoperability
 - common language runtime, language interoperability
 ms.assetid: 4f0b77d0-4844-464f-af73-6e06bedeafc6
-caps.latest.revision: 35
 author: rpetrusha
 ms.author: ronpet
-manager: wpickett
-ms.workload:
-- dotnet
-- dotnetcore
-ms.openlocfilehash: f64f39f91ccea7319f395e852b4535f5cba6b0a6
-ms.sourcegitcommit: 2e8acae16ae802f2d6d04e3ce0a6dbf04e476513
+ms.openlocfilehash: bf18fb7238eb35b5ceb1624c14b83486485ddc1b
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/18/2018
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="language-independence-and-language-independent-components"></a>語言獨立性以及與語言無關的元件
 .NET Framework 是與語言無關的。 這表示，身為開發人員，您可以用目標為 .NET Framework 的許多語言之一進行開發，例如 C#、C++/CLI、Eiffel、F#、IronPython、IronRuby、PowerBuilder、Visual Basic、Visual COBOL 和 Windows PowerShell。 您可以存取為 .NET Framework 開發的類別庫的類型和成員，而不需要知道最初的寫入語言，也不需遵循任何原始語言的語言慣例。 如果您是元件開發人員，則不論其語言為何，元件都可以由任何 .NET Framework 應用程式存取。  
@@ -38,7 +27,7 @@ ms.lasthandoff: 04/18/2018
 > [!NOTE]
 >  本文第一個部分將討論建立和語言無關的元件，也就是以任何語言撰寫的應用程式都可以使用這些元件。 您也可以從以多種語言撰寫的原始程式碼建立單一元件或應用程式。請參閱本文第二部分的[跨語言互通性](#CrossLang)。  
   
- 若要充分與其他以任何語言撰寫的物件互動，這些物件必須只向呼叫端公開所有語言通用的功能。 這一組通用的功能是由 Common Language Specification (CLS) 所定義，CLS 是套用至所產生之組件的一組規則。 Common Language Specification 是定義在 [ECMA-335 Standard: Common Language Infrastructure](http://go.microsoft.com/fwlink/?LinkID=116487) 的第一篇條款 7 到 11。  
+ 若要充分與其他以任何語言撰寫的物件互動，這些物件必須只向呼叫端公開所有語言通用的功能。 這一組通用的功能是由 Common Language Specification (CLS) 所定義，CLS 是套用至所產生之組件的一組規則。 Common Language Specification 是定義在 [ECMA-335 Standard: Common Language Infrastructure](https://www.ecma-international.org/publications/standards/Ecma-335.htm) 的第一篇條款 7 到 11。  
   
  如果您的元件符合 Common Language Specification，則保證其符合 CLS 標準，而且可以從支援 CLS 之任何程式語言所撰寫的組件中的程式碼來加以存取。 您可以在編譯時期將 <xref:System.CLSCompliantAttribute> 屬性套用至您的原始程式碼，判斷您的元件是否符合 Common Language Specification。 如需詳細資訊，請參閱 [CLSCompliantAttribute 屬性](#CLSAttribute)。  
   
@@ -82,7 +71,7 @@ ms.lasthandoff: 04/18/2018
   
 <a name="Rules"></a>   
 ## <a name="cls-compliance-rules"></a>CLS 符合性規則  
- 本節討論建立符合 CLS 標準的元件的規則。 如需規則的完整清單，請參閱 [ECMA-335 Standard: Common Language Infrastructure](http://go.microsoft.com/fwlink/?LinkID=116487) 的第一篇條款 11。  
+ 本節討論建立符合 CLS 標準的元件的規則。 如需規則的完整清單，請參閱 [ECMA-335 Standard: Common Language Infrastructure](https://www.ecma-international.org/publications/standards/Ecma-335.htm) 的第一篇條款 11。  
   
 > [!NOTE]
 >  Common Language Specification 所討論的是適用於下列各項的 CLS 符合性的每個規則：消費者 (以程式設計方式存取符合 CLS 標準之元件的開發人員)、架構 (使用語言編譯器建立符合 CLS 標準之程式庫的開發人員) 和擴充項 (建立工具 (例如可建立符合 CLS 標準之元件的語言編譯器或程式碼剖析器) 的開發人員)。 本文旨在討論適用於架構的規則。 請注意，話雖如此，適用於擴充項的某些規則可能也適用於使用 Reflection.Emit 建立的組件。  
@@ -110,7 +99,7 @@ ms.lasthandoff: 04/18/2018
   
 -   公用類別之公用方法的參數和傳回類型，以及衍生類別可存取之方法的參數和傳回類型。  
   
- 下表列出 CLS 符合性的規則。 這些規則的英文是一字不差地擷取自 [ECMA-335 Standard: Common Language Infrastructure](http://go.microsoft.com/fwlink/?LinkID=116487) (Copyright 2012 by Ecma International)，然後再翻譯成繁體中文。 這些規則的其他詳細資訊可在下列章節中找到。  
+ 下表列出 CLS 符合性的規則。 這些規則的英文是一字不差地擷取自 [ECMA-335 Standard: Common Language Infrastructure](https://www.ecma-international.org/publications/standards/Ecma-335.htm) (Copyright 2012 by Ecma International)，然後再翻譯成繁體中文。 這些規則的其他詳細資訊可在下列章節中找到。  
   
 |分類|請參閱|規則|規則編號|  
 |--------------|---------|----------|-----------------|  

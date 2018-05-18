@@ -1,22 +1,17 @@
 ---
 title: 進一步閱讀 (平行程式設計)
 ms.date: 04/26/2018
-ms.prod: .net
 ms.technology: dotnet-standard
-ms.topic: article
 helpviewer_keywords:
 - tasks, further reading
+ms.assetid: 98aee307-dde6-4cad-bb58-078497b8064f
 author: rpetrusha
 ms.author: ronpet
-manager: wpickett
-ms.workload:
-- dotnet
-- dotnetcore
-ms.openlocfilehash: 87106f1d9b75775dd401cd856ccb50ceb733b944
-ms.sourcegitcommit: 03ee570f6f528a7d23a4221dcb26a9498edbdf8c
+ms.openlocfilehash: e5cde1af00fb10f7a2ec7dd340575b3cfb4814f6
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/28/2018
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="for-further-reading-parallel-programming"></a>進一步閱讀 (平行程式設計)
 

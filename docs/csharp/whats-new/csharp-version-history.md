@@ -1,19 +1,13 @@
 ---
 title: C# 的歷史 - C# 指南
 description: 最早的語言版本有哪些內容，而在之後有什麼演變？
-keywords: C#, .NET, .NET Core, 新增功能, C# 歷史
 author: erikdietrich
-ms.author: wiwagn
 ms.date: 09/20/2017
-ms.topic: article
-ms.prod: .net
-ms.technology: devlang-csharp
-ms.devlang: csharp
-ms.openlocfilehash: 0a24e8cf22bb8350777879a3adfd2757b89cd305
-ms.sourcegitcommit: 86adcc06e35390f13c1e372c36d2e044f1fc31ef
+ms.openlocfilehash: 1c7b91a3a5c77059ca8d7acef95252b4a3557b28
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/26/2018
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="the-history-of-c"></a>C# 的歷史 #
 

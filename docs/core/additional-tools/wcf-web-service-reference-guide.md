@@ -2,19 +2,14 @@
 title: Microsoft WCF Web Service Reference Provider 工具
 description: 新增 .NET Core 和 ASP.NET Core 專案功能的 Microsoft WCF Web Service Reference Provider 工具概觀，與 .NET Framework 專案的「新增服務參考」類似。
 author: mlacouture
-manager: wpickett
 ms.author: johalex
 ms.date: 04/19/2018
-ms.topic: conceptual
-ms.prod: dotnet-core
 ms.custom: mvc
-ms.workload:
-- dotnetcore
-ms.openlocfilehash: 34d46130e25af6f264ea842072b96bbb6d46cc78
-ms.sourcegitcommit: 03ee570f6f528a7d23a4221dcb26a9498edbdf8c
+ms.openlocfilehash: 416ca4dbedcf6e610aa5307c87934c0cb18be749
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/28/2018
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="microsoft-wcf-web-service-reference-provider-tool"></a>Microsoft WCF Web Service Reference Provider 工具
 

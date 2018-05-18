@@ -1,21 +1,15 @@
 ---
-title: "介面屬性 (C# 程式設計手冊)"
+title: 介面屬性 (C# 程式設計手冊)
 ms.date: 07/20/2015
-ms.prod: .net
-ms.technology: devlang-csharp
-ms.topic: article
 helpviewer_keywords:
 - properties [C#], on interfaces
 - interfaces [C#], properties
 ms.assetid: 6503e9ed-33d7-44ec-b4c1-cc16c084b795
-caps.latest.revision: "13"
-author: BillWagner
-ms.author: wiwagn
-ms.openlocfilehash: 1da48adf73cccb28d9cff641948db52b40b8c1bb
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.openlocfilehash: bfa03c7ebe82f3f6a03666d908a5fa9d4e386172
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="interface-properties-c-programming-guide"></a>介面屬性 (C# 程式設計手冊)
 屬性可以宣告於 [interface](../../../csharp/language-reference/keywords/interface.md) 上。 介面索引子存取子的範例如下：  
@@ -55,7 +49,7 @@ ms.lasthandoff: 11/21/2017
   
  `Employee name: Hazem Abolrous`  
   
-## <a name="see-also"></a>另請參閱  
+## <a name="see-also"></a>請參閱  
  [C# 程式設計指南](../../../csharp/programming-guide/index.md)  
  [屬性](../../../csharp/programming-guide/classes-and-structs/properties.md)  
  [使用屬性](../../../csharp/programming-guide/classes-and-structs/using-properties.md)  

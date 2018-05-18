@@ -1,20 +1,13 @@
 ---
-title: "標準的 .NET 事件模式"
-description: "了解 .NET 事件模式、如何建立標準事件來源，以及如何訂閱和處理程式碼中的標準事件。"
-keywords: .NET, .NET Core
-author: BillWagner
-ms.author: wiwagn
+title: 標準的 .NET 事件模式
+description: 了解 .NET 事件模式、如何建立標準事件來源，以及如何訂閱和處理程式碼中的標準事件。
 ms.date: 06/20/2016
-ms.topic: article
-ms.prod: .net
-ms.technology: devlang-csharp
-ms.devlang: csharp
 ms.assetid: 8a3133d6-4ef2-46f9-9c8d-a8ea8898e4c9
-ms.openlocfilehash: ff36438ab02ae6822d7df8425a615aef2ddbf2f2
-ms.sourcegitcommit: ed26cfef4e18f6d93ab822d8c29f902cff3519d1
+ms.openlocfilehash: 633a90062f2d068cfa050c0aa151885608cc4172
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 01/17/2018
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="standard-net-event-patterns"></a>標準的 .NET 事件模式
 

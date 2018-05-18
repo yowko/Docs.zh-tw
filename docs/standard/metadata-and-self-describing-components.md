@@ -1,13 +1,7 @@
 ---
-title: "中繼資料和自我描述元件"
-ms.custom: 
+title: 中繼資料和自我描述元件
 ms.date: 03/30/2017
-ms.prod: .net
-ms.reviewer: 
-ms.suite: 
 ms.technology: dotnet-standard
-ms.tgt_pltfrm: 
-ms.topic: article
 dev_langs:
 - csharp
 - vb
@@ -21,18 +15,13 @@ helpviewer_keywords:
 - PE files, metadata
 - components [.NET Framework], metadata
 ms.assetid: 3dd13c5d-a508-455b-8dce-0a852882a5a7
-caps.latest.revision: 
 author: rpetrusha
 ms.author: ronpet
-manager: wpickett
-ms.workload:
-- dotnet
-- dotnetcore
-ms.openlocfilehash: ac08dcf305e8cc0c1a3be3b8300ed9981e7d84d4
-ms.sourcegitcommit: e7f04439d78909229506b56935a1105a4149ff3d
+ms.openlocfilehash: 3bc603d90ae4636ac50ab9cbabf7d176309498b4
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 12/23/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="metadata-and-self-describing-components"></a>中繼資料和自我描述元件
 在過去，以一種語言撰寫的軟體元件 (.exe 或 .dll) 不容易使用以另一種語言所撰寫的軟體元件。 COM 對這個問題提供了進一步的解決方式。 .NET Framework 允許編譯器 (Compiler) 發出額外的宣告資訊至所有模組和組件中，使元件的互通性更為容易。 這個資訊，稱為中繼資料 (Metadata)，能幫助元件順暢地互動。  

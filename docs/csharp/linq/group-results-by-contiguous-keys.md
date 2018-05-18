@@ -1,20 +1,13 @@
 ---
-title: "以相鄰索引鍵將結果分組"
-description: "如何以相鄰索引鍵將結果分組。"
-keywords: .NET, .NET Core, C#
-author: BillWagner
-manager: wpickett
-ms.author: wiwagn
+title: 以相鄰索引鍵將結果分組
+description: 如何以相鄰索引鍵將結果分組。
 ms.date: 12/1/2016
-ms.topic: article
-ms.prod: .net
-ms.technology: devlang-csharp
 ms.assetid: cbda9c08-151b-4c9e-82f7-c3d7f3dac66b
-ms.openlocfilehash: cdd06a6fad037291bbc5aa011b47bb668fa2f062
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.openlocfilehash: a8d6ac133932a12154d5b23454065144c7652067
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="group-results-by-contiguous-keys"></a>以相鄰索引鍵將結果分組
 
@@ -26,7 +19,7 @@ ms.lasthandoff: 11/21/2017
 |A|think|  
 |A|that|  
 |B|Linq|  
-|C|is|  
+|C|是|  
 |A|really|  
 |B|cool|  
 |B|!|  
@@ -54,6 +47,6 @@ ms.lasthandoff: 11/21/2017
   
  若要在專案中使用擴充方法，請將 `MyExtensions` 靜態類別複製到新的或現有的來源程式碼檔案，如有需要，在命名空間所在新增其 `using` 指示詞。  
   
-## <a name="see-also"></a>請參閱  
+## <a name="see-also"></a>另請參閱  
  [LINQ 查詢運算式](index.md)  
  

@@ -1,21 +1,12 @@
 ---
-title: "如何：執行運算式樹狀架構 (C#)"
-ms.custom: 
+title: 如何：執行運算式樹狀架構 (C#)
 ms.date: 07/20/2015
-ms.prod: .net
-ms.reviewer: 
-ms.suite: 
-ms.technology: devlang-csharp
-ms.topic: get-started-article
 ms.assetid: b8c40db5-2464-4bb9-9001-8c2bc7f006c5
-caps.latest.revision: "3"
-author: BillWagner
-ms.author: wiwagn
-ms.openlocfilehash: 9a87c9893de2b70c47f0ed78a92adc6bce10db7b
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.openlocfilehash: 0ebdcb603a1adf3602e897db284faa2f75b7de7a
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="how-to-execute-expression-trees-c"></a>如何：執行運算式樹狀架構 (C#)
 本主題示範如何執行運算式樹狀架構。 執行運算式樹狀架構可能會傳回一個值，或者只是執行某個動作，例如呼叫方法。  
@@ -56,6 +47,6 @@ Console.WriteLine(result);
   
 -   加入 System.Linq.Expressions 命名空間。  
   
-## <a name="see-also"></a>另請參閱  
+## <a name="see-also"></a>請參閱  
  [運算式樹狀結構 (C#)](../../../../csharp/programming-guide/concepts/expression-trees/index.md)  
  [如何：修改運算式樹狀架構 (C#)](../../../../csharp/programming-guide/concepts/expression-trees/how-to-modify-expression-trees.md)

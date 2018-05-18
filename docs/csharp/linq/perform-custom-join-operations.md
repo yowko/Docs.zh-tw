@@ -1,20 +1,13 @@
 ---
-title: "執行自訂的聯結作業"
-description: "如何執行自訂的聯結作業。"
-keywords: ".NET、.NET Core、C#"
-author: BillWagner
-manager: wpickett
-ms.author: wiwagn
+title: 執行自訂的聯結作業
+description: 如何執行自訂的聯結作業。
 ms.date: 12/1/2016
-ms.topic: article
-ms.prod: .net
-ms.technology: devlang-csharp
 ms.assetid: 56a2a4a5-7299-497d-b3c3-23c848678911
-ms.openlocfilehash: fef146c92a5cbbf21f8f1688f221c2bd45c99de7
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.openlocfilehash: df80f4382ad5fa96fcdc41b338cbb53a3d8e6cb9
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="perform-custom-join-operations"></a>執行自訂的聯結作業
 
@@ -45,7 +38,7 @@ ms.lasthandoff: 11/21/2017
   
  [!code-csharp[csProgGuideLINQ#13](../../../samples/snippets/csharp/concepts/linq/how-to-perform-custom-join-operations_2.cs)]  
   
-## <a name="see-also"></a>請參閱  
+## <a name="see-also"></a>另請參閱  
  [LINQ 查詢運算式](index.md)  
  [join 子句](../language-reference/keywords/join-clause.md)  
  [排序 Join 子句的結果](order-the-results-of-a-join-clause.md)

@@ -1,12 +1,6 @@
 ---
-title: "如何：在 Visual Basic 中以多種格式從文字檔讀取"
-ms.custom: 
+title: 如何：在 Visual Basic 中以多種格式從文字檔讀取
 ms.date: 07/20/2015
-ms.prod: .net
-ms.reviewer: 
-ms.suite: 
-ms.technology: devlang-visual-basic
-ms.topic: article
 helpviewer_keywords:
 - TextFieldParser object, reading from a file
 - TextFieldType enumeration
@@ -17,14 +11,11 @@ helpviewer_keywords:
 - I/O [Visual Basic], reading text files
 - text files [Visual Basic], reading
 ms.assetid: 8d185eb2-79ca-42cd-95a7-d3ff44a5a0f8
-caps.latest.revision: "17"
-author: dotnet-bot
-ms.author: dotnetcontent
-ms.openlocfilehash: 12362f932561bf16412e5beb364f785778c58814
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.openlocfilehash: 2c67e358e418ed8cbfddd9a8e7b03a60e46d6356
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="how-to-read-from-text-files-with-multiple-formats-in-visual-basic"></a>如何：在 Visual Basic 中以多種格式從文字檔讀取
 <xref:Microsoft.VisualBasic.FileIO.TextFieldParser> 物件可讓您輕鬆有效率地剖析結構化文字檔，例如記錄檔。 您可以使用 `PeekChars` 方法來處理具有多種格式的檔案，以在剖析整個檔案時判斷每行格式。  
@@ -76,7 +67,7 @@ ms.lasthandoff: 11/21/2017
   
 -   使用者沒有足夠權限以存取檔案 (<xref:System.UnauthorizedAccessException>)。  
   
-## <a name="see-also"></a>另請參閱  
+## <a name="see-also"></a>請參閱  
  <xref:Microsoft.VisualBasic.FileIO.TextFieldParser?displayProperty=nameWithType>  
  <xref:Microsoft.VisualBasic.FileIO.TextFieldParser.PeekChars%2A>  
  <xref:Microsoft.VisualBasic.FileIO.MalformedLineException>  

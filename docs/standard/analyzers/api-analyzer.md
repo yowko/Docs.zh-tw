@@ -1,17 +1,15 @@
 ---
-title: ".NET API 分析器"
-description: "了解「.NET API 分析器」如何協助偵測已被取代的 API 及平台相容性問題。"
+title: .NET API 分析器
+description: 了解「.NET API 分析器」如何協助偵測已被取代的 API 及平台相容性問題。
 author: oliag
 ms.author: mairaw
 ms.date: 01/30/2018
-ms.topic: article
-ms.prod: .net
 ms.technology: dotnet-standard
-ms.openlocfilehash: 81ab7e32b2af6048d822243226f1054ebd1ca419
-ms.sourcegitcommit: cf22b29db780e532e1090c6e755aa52d28273fa6
+ms.openlocfilehash: ac0e777e1df837ff7e9fbe185c462f56765e47bf
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 02/01/2018
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="net-api-analyzer"></a>.NET API 分析器
 

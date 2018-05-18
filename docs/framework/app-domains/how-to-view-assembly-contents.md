@@ -1,13 +1,6 @@
 ---
-title: "如何：檢視組件內容"
-ms.custom: 
+title: 如何：檢視組件內容
 ms.date: 03/30/2017
-ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.technology: dotnet-bcl
-ms.tgt_pltfrm: 
-ms.topic: article
 dev_langs:
 - csharp
 - vb
@@ -21,16 +14,13 @@ helpviewer_keywords:
 - MSIL
 - viewing MSIL information
 ms.assetid: fb7baaab-4c0d-47ad-8fd3-4591cf834709
-caps.latest.revision: "11"
 author: rpetrusha
 ms.author: ronpet
-manager: wpickett
-ms.workload: dotnet
-ms.openlocfilehash: b9c12c4811e8b23e86fca3960acdb4da06e38fbe
-ms.sourcegitcommit: c0dd436f6f8f44dc80dc43b07f6841a00b74b23f
+ms.openlocfilehash: eadc320483d46503e7331ef57b0cc29b08f13f4c
+ms.sourcegitcommit: 11f11ca6cefe555972b3a5c99729d1a7523d8f50
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 01/19/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="how-to-view-assembly-contents"></a>如何：檢視組件內容
 您可以使用 [Ildasm.exe (IL 反組譯工具)](../../../docs/framework/tools/ildasm-exe-il-disassembler.md) 來檢視檔案中的 Microsoft 中繼語言 (MSIL) 資訊。 如果所檢查的檔案是組件，這項資訊可以包括組件的屬性，以及其他模組和組件的參考。 這項資訊可能有助於判斷檔案是組件還是組件的一部分，以及檔案是否有其他模組或組件的參考。  
@@ -85,14 +75,14 @@ ms.lasthandoff: 01/19/2018
   
 |指示詞|描述|  
 |---------------|-----------------|  
-|**.assembly extern \<**組件名稱**>**|指定另一個組件，其中包含目前模組所參考的項目 (在此範例中為 `mscorlib`)。|  
-|**.publickeytoken \<**權杖**>**|指定所參考組件之實際金鑰的權杖。|  
-|**.ver \<**版本號碼**>**|指定所參考組件的版本號碼。|  
-|**.assembly \<**組件名稱**>**|指定組件名稱。|  
-|**.hash algorithm \<**int32 值**>**|指定使用的雜湊演算法。|  
-|**.ver \<**版本號碼**>**|指定組件的版本號碼。|  
-|**.module \<**檔案名稱**>**|指定構成組件之模組的名稱。 在此範例中，組件只包含一個檔案。|  
-|**.subsystem \<**值**>**|指定程式所需的應用程式環境。 在此範例中，值 3 指出從主控台執行這個可執行檔。|  
+|**.assembly extern \<** 組件名稱**>**|指定另一個組件，其中包含目前模組所參考的項目 (在此範例中為 `mscorlib`)。|  
+|**.publickeytoken \<** 權杖**>**|指定所參考組件之實際金鑰的權杖。|  
+|**.ver \<** 版本號碼**>**|指定所參考組件的版本號碼。|  
+|**.assembly \<** 組件名稱**>**|指定組件名稱。|  
+|**.hash algorithm \<** int32 值**>**|指定使用的雜湊演算法。|  
+|**.ver \<** 版本號碼**>**|指定組件的版本號碼。|  
+|**.module \<** 檔案名稱**>**|指定構成組件之模組的名稱。 在此範例中，組件只包含一個檔案。|  
+|**.subsystem \<** 值**>**|指定程式所需的應用程式環境。 在此範例中，值 3 指出從主控台執行這個可執行檔。|  
 |**.corflags**|中繼資料中目前保留的欄位。|  
   
  根據組件的內容，組件資訊清單可以包含許多不同的指示詞。 如需組件資訊清單中的指示詞延伸清單，請參閱 ECMA 文件，特別是 "Partition II: Metadata Definition and Semantics" (分割 II：中繼資料定義和語意) 和 "Partition III: CIL Instruction Set" (分割 III：CIL 指令集)。 您可以線上取得這份文件；請參閱 MSDN 上的 [ECMA C# 和通用語言基礎結構標準](http://go.microsoft.com/fwlink/?LinkID=99212)，以及 Ecma International 網站上的[標準 ECMA-335 - 通用語言基礎結構 (CLI)](http://go.microsoft.com/fwlink/?LinkID=65552)。  

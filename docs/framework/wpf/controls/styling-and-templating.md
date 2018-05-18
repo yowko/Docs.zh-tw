@@ -15,11 +15,11 @@ helpviewer_keywords:
 - styles [WPF], triggers
 - styles [WPF], event triggers
 ms.assetid: 481765e5-5467-4a75-9f7b-e10e2ac410d9
-ms.openlocfilehash: e39afea9fe11cdab9e5a6623499a96468aa9d091
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: 85911647c089d51bafe2d65d1c5db907599b06d4
+ms.sourcegitcommit: 89c93d05c2281b4c834f48f6c8df1047e1410980
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/04/2018
+ms.lasthandoff: 05/15/2018
 ---
 # <a name="styling-and-templating"></a>樣式設定和範本化
 [!INCLUDE[TLA#tla_winclient](../../../../includes/tlasharptla-winclient-md.md)] 樣式設定和範本化係指一套功能 (樣式、範本、觸發程序及分鏡腳本)，可讓開發人員和設計人員創造引人注目的效果，並為其產品建立一致的外觀。 雖然開發人員和 (或) 設計人員可以依個別應用程式廣泛地自訂外觀，但強大的樣式設定和範本化模型仍有其必要性，這可允許在應用程式內或應用程式之間維護及共用外觀。 [!INCLUDE[TLA#tla_winclient](../../../../includes/tlasharptla-winclient-md.md)] 便有提供該模型。  
@@ -38,7 +38,7 @@ ms.lasthandoff: 05/04/2018
   
  ![已設定樣式的 ListView](../../../../docs/framework/wpf/controls/media/stylingintro-triggers.png "StylingIntro_triggers")  
   
- 這個簡單的相片範例使用樣式設定和範本化，來創造引人注目的使用者體驗。 這個範例有兩個<xref:System.Windows.Controls.TextBlock>項目和<xref:System.Windows.Controls.ListBox>控制項繫結至映像清單。 如需完整範例，請參閱[樣式設定和範本化範例簡介 (英文)](http://go.microsoft.com/fwlink/?LinkID=160010)。  
+ 這個簡單的相片範例使用樣式設定和範本化，來創造引人注目的使用者體驗。 這個範例有兩個<xref:System.Windows.Controls.TextBlock>項目和<xref:System.Windows.Controls.ListBox>控制項繫結至映像清單。 如需完整範例，請參閱[樣式設定和範本化範例簡介 (英文)](https://github.com/Microsoft/WPF-Samples/tree/master/Styles%20&%20Templates/IntroToStylingAndTemplating)。  
   
 <a name="styling_basics"></a>   
 ## <a name="style-basics"></a>樣式基本概念  

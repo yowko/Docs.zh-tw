@@ -1,9 +1,6 @@
 ---
-title: "&lt;c&gt; (C# 程式設計手冊)"
+title: '&lt;c&gt; (C# 程式設計手冊)'
 ms.date: 07/20/2015
-ms.prod: .net
-ms.technology: devlang-csharp
-ms.topic: article
 f1_keywords:
 - c
 - <c>
@@ -13,14 +10,11 @@ helpviewer_keywords:
 - c C# XML tag
 - <c> C# XML tag
 ms.assetid: aad5b16e-a29e-445e-bd0d-eea0b138d7b2
-caps.latest.revision: "12"
-author: BillWagner
-ms.author: wiwagn
-ms.openlocfilehash: 21c7830c03b0b93e3597835954ac9e7d2feb49e9
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.openlocfilehash: 623412bae7d2bf58e53dd8290108773d157dd747
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="ltcgt-c-programming-guide"></a>&lt;c&gt; (C# 程式設計手冊)
 ## <a name="syntax"></a>語法  
@@ -41,6 +35,6 @@ ms.lasthandoff: 11/21/2017
 ## <a name="example"></a>範例  
  [!code-csharp[csProgGuideDocComments#2](../../../csharp/programming-guide/xmldoc/codesnippet/CSharp/code-inline_1.cs)]  
   
-## <a name="see-also"></a>另請參閱  
+## <a name="see-also"></a>請參閱  
  [C# 程式設計指南](../../../csharp/programming-guide/index.md)  
  [建議使用的文件註解標籤](../../../csharp/programming-guide/xmldoc/recommended-tags-for-documentation-comments.md)

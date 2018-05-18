@@ -1,9 +1,6 @@
 ---
-title: "select 子句 (C# 參考)"
+title: select 子句 (C# 參考)
 ms.date: 07/20/2015
-ms.prod: .net
-ms.technology: devlang-csharp
-ms.topic: article
 f1_keywords:
 - select_CSharpKeyword
 - select
@@ -11,14 +8,11 @@ helpviewer_keywords:
 - select keyword [C#]
 - select clause [C#]
 ms.assetid: df01e266-5781-4aaa-80c4-67cf28ea093f
-caps.latest.revision: "19"
-author: BillWagner
-ms.author: wiwagn
-ms.openlocfilehash: f40bc26d1812e76ac618c5a0ddf23c4cef2700d0
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.openlocfilehash: 6e7277b5d714e48059fe1ed7e8b85e46a14a840c
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="select-clause-c-reference"></a>select 子句 (C# 參考)
 在查詢運算式中，`select` 子句指定將在執行查詢時產生之值的類型。 結果是根據評估所有先前子句以及 `select` 子句本身中的任何運算式而來。 查詢運算式必須以 `select` 子句或 [group](../../../csharp/language-reference/keywords/group-clause.md) 子句來終止。  
@@ -39,11 +33,11 @@ ms.lasthandoff: 11/21/2017
 ## <a name="remarks"></a>備註  
  在編譯時間，`select` 子句會轉譯為 <xref:System.Linq.Enumerable.Select%2A> 標準查詢運算子的方法呼叫。  
   
-## <a name="see-also"></a>另請參閱  
+## <a name="see-also"></a>請參閱  
  [C# 參考](../../../csharp/language-reference/index.md)  
  [查詢關鍵字 (LINQ)](../../../csharp/language-reference/keywords/query-keywords.md)  
  [from 子句](../../../csharp/language-reference/keywords/from-clause.md)  
- [partial （方法） （C# 參考）](../../../csharp/language-reference/keywords/partial-method.md)  
+ [partial (方法) (C# 參考)](../../../csharp/language-reference/keywords/partial-method.md)  
  [匿名類型](../../../csharp/programming-guide/classes-and-structs/anonymous-types.md)  
  [LINQ 查詢運算式](../../../csharp/programming-guide/linq-query-expressions/index.md)  
  [開始使用 C# 中的 LINQ](../../../csharp/programming-guide/concepts/linq/getting-started-with-linq.md)

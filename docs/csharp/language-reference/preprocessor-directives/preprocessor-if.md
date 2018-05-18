@@ -1,22 +1,16 @@
 ---
-title: "#if 前置處理器指示詞 (C# 參考)"
+title: '#if 前置處理器指示詞 (C# 參考)'
 ms.date: 02/13/2017
-ms.prod: .net
-ms.technology:
-- devlang-csharp
-ms.topic: article
 f1_keywords:
 - '#if'
 helpviewer_keywords:
 - '#if directive [C#]'
 ms.assetid: 48cabbff-ca82-491f-a56a-eeccd528c7c2
-author: BillWagner
-ms.author: wiwagn
-ms.openlocfilehash: 710452d6fddea239cb2e65901fd5ce56d6be699f
-ms.sourcegitcommit: 08684dd61444c2f072b89b926370f750e456fca1
+ms.openlocfilehash: 2ae0af6971dbf549b52e8168e035d8582bdab61d
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 02/14/2018
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="if-c-reference"></a>#if (C# 參考)
 

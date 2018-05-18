@@ -1,31 +1,20 @@
 ---
-title: "如何：列舉目錄和檔案"
-ms.custom: 
+title: 如何：列舉目錄和檔案
 ms.date: 03/30/2017
-ms.prod: .net
-ms.reviewer: 
-ms.suite: 
 ms.technology: dotnet-standard
-ms.tgt_pltfrm: 
-ms.topic: article
 dev_langs:
 - csharp
 - vb
 helpviewer_keywords:
 - I/O [.NET Framework], enumerating directories and files
 ms.assetid: 86b69a08-3bfa-4e5f-b4e1-3b7cb8478215
-caps.latest.revision: 
 author: mairaw
 ms.author: mairaw
-manager: wpickett
-ms.workload:
-- dotnet
-- dotnetcore
-ms.openlocfilehash: 5d0f22853210144881e49c4192ea38a5c3e57cda
-ms.sourcegitcommit: e7f04439d78909229506b56935a1105a4149ff3d
+ms.openlocfilehash: 4cd7b7542e5cf9352e965717368399dcf4a9ecd2
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 12/23/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="how-to-enumerate-directories-and-files"></a>如何：列舉目錄和檔案
 您可以使用能夠傳回可列舉其名稱字串集合的方法來列舉目錄和檔案。 您也可以使用傳回可列舉 <xref:System.IO.DirectoryInfo>、<xref:System.IO.FileInfo> 或 <xref:System.IO.FileSystemInfo> 物件集合的方法。 當您使用目錄和檔案的大型集合時，相較於陣列，可列舉的集合會提供更佳的效能。  
@@ -76,4 +65,4 @@ ms.lasthandoff: 12/23/2017
      [!code-vb[System.IO.DirectoryInfo.EnumerateDirectories#1](../../../samples/snippets/visualbasic/VS_Snippets_CLR_System/system.io.directoryinfo.enumeratedirectories/vb/program.vb#1)]  
   
 ## <a name="see-also"></a>請參閱  
- [檔案和資料流 I-O](../../../docs/standard/io/index.md)
+ [檔案和資料流 I/O](../../../docs/standard/io/index.md)

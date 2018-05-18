@@ -1,21 +1,14 @@
 ---
 title: 如何：使用集合初始設定式來初始化字典 (C# 程式設計手冊)
 ms.date: 07/20/2015
-ms.prod: .net
-ms.technology:
-- devlang-csharp
-ms.topic: article
 helpviewer_keywords:
 - collection initializers [C#], with Dictionary
 ms.assetid: 25283922-f8ee-40dc-a639-fac30804ec71
-caps.latest.revision: 10
-author: BillWagner
-ms.author: wiwagn
-ms.openlocfilehash: 9f014e92167d92f7daebcfb4c2e1d54f69ee2575
-ms.sourcegitcommit: 86adcc06e35390f13c1e372c36d2e044f1fc31ef
+ms.openlocfilehash: b8c44ebbdc89d72398c3380d708b45d0b7dfdad3
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/26/2018
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="how-to-initialize-a-dictionary-with-a-collection-initializer-c-programming-guide"></a>如何：使用集合初始設定式來初始化字典 (C# 程式設計手冊)
 <xref:System.Collections.Generic.Dictionary`2> 包含索引鍵/值組的集合。 其 <xref:System.Collections.Generic.Dictionary`2.Add*> 方法採用兩個參數，其中之一供索引鍵之用，而另一個則供值之用。 若要初始化 <xref:System.Collections.Generic.Dictionary`2> 或任何其 `Add` 方法採用多重參數的所有集合，請將每個參數集以括號括住，如下列範例所示。  

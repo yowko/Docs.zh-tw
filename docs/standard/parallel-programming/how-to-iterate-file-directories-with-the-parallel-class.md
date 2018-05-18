@@ -1,31 +1,20 @@
 ---
 title: 如何：使用平行類別逐一查看檔案目錄
-ms.custom: ''
 ms.date: 03/30/2017
-ms.prod: .net
-ms.reviewer: ''
-ms.suite: ''
 ms.technology: dotnet-standard
-ms.tgt_pltfrm: ''
-ms.topic: article
 dev_langs:
 - csharp
 - vb
 helpviewer_keywords:
 - parallel loops, how to iterate directories
 ms.assetid: 555e9f48-f53d-4774-9bcf-3e965c732ec5
-caps.latest.revision: 8
 author: rpetrusha
 ms.author: ronpet
-manager: wpickett
-ms.workload:
-- dotnet
-- dotnetcore
-ms.openlocfilehash: 449f7c9e3dfd4c74ad67cea9cbc08104f07bc680
-ms.sourcegitcommit: 2e8acae16ae802f2d6d04e3ce0a6dbf04e476513
+ms.openlocfilehash: 43a7ac57e90b60679f29e9a5635be6ee8b8f8d93
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/18/2018
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="how-to-iterate-file-directories-with-the-parallel-class"></a>如何：使用平行類別逐一查看檔案目錄
 在許多情況下，檔案反覆運算是一項可以輕鬆平行處理的作業。 [如何：使用 PLINQ 逐一查看檔案目錄](../../../docs/standard/parallel-programming/how-to-iterate-file-directories-with-plinq.md)這個主題示範針對許多案例執行此工作的最簡單方式。 不過，當您的程式碼需要處理在存取檔案系統時可能會出現的許多類型例外狀況時，便會提升此工作的複雜性。 下列範例會示範處理該問題的其中一種方式。 它會使用以堆疊為基礎的反覆運算來周遊位於特定目錄底下的所有檔案和資料夾，並能使程式碼能夠攔截並處理各種不同的例外狀況。 當然，要如何處理例外狀況仍然取決於您。  

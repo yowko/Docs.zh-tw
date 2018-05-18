@@ -1,30 +1,19 @@
 ---
 title: 執行緒和執行緒處理
-ms.custom: ''
 ms.date: 03/30/2017
-ms.prod: .net
-ms.reviewer: ''
-ms.suite: ''
 ms.technology: dotnet-standard
-ms.tgt_pltfrm: ''
-ms.topic: article
 helpviewer_keywords:
 - multiple threads
 - threading [.NET Framework]
 - threading [.NET Framework], multiple threads
 ms.assetid: 5baac3aa-e603-4fa6-9f89-0f2c1084e6b1
-caps.latest.revision: 14
 author: rpetrusha
 ms.author: ronpet
-manager: wpickett
-ms.workload:
-- dotnet
-- dotnetcore
-ms.openlocfilehash: 02c676e3bb6c0dcc9e65858367d13f41adc797e8
-ms.sourcegitcommit: 2e8acae16ae802f2d6d04e3ce0a6dbf04e476513
+ms.openlocfilehash: 4380c509a08ebe59f9561a9e6fc596458768917f
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/18/2018
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="threads-and-threading"></a>執行緒和執行緒處理
 作業系統會使用處理序來分隔它們所執行的各種不同應用程式。 執行緒是作業系統配置處理器時間的基本單位，而在該處理序內可以有多個執行緒執行程式碼。 每個執行緒都保有例外處理常式、排程優先順序，以及系統用來儲存執行緒內容直到執行緒被排定為止的一組結構。 執行緒內容包括執行緒在執行緒主機處理序的位址空間中順暢繼續執行所需的所有資訊，包括執行緒的一組 CPU 暫存器和堆疊。  

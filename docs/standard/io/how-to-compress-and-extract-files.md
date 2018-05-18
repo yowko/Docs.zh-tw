@@ -1,13 +1,7 @@
 ---
-title: "如何：壓縮與解壓縮檔案"
-ms.custom: 
+title: 如何：壓縮與解壓縮檔案
 ms.date: 03/30/2017
-ms.prod: .net
-ms.reviewer: 
-ms.suite: 
 ms.technology: dotnet-standard
-ms.tgt_pltfrm: 
-ms.topic: article
 dev_langs:
 - csharp
 - vb
@@ -16,18 +10,13 @@ helpviewer_keywords:
 - compression
 - compress files
 ms.assetid: e9876165-3c60-4c84-a272-513e47acf579
-caps.latest.revision: 
 author: mairaw
 ms.author: mairaw
-manager: wpickett
-ms.workload:
-- dotnet
-- dotnetcore
-ms.openlocfilehash: 33c9249692998aea8c22ddbf75a5a9b7bdf28708
-ms.sourcegitcommit: e7f04439d78909229506b56935a1105a4149ff3d
+ms.openlocfilehash: f3e535e13fe91e1a5cb9c868428f5edbb9eac03f
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 12/23/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="how-to-compress-and-extract-files"></a>如何：壓縮與解壓縮檔案
 <xref:System.IO.Compression> 命名空間包含壓縮及解壓縮檔案和資料流的下列類型。 您也可以使用這些類型讀取和修改壓縮檔案的內容：  
@@ -74,4 +63,4 @@ ms.lasthandoff: 12/23/2017
  <xref:System.IO.Compression.ZipArchiveEntry>  
  <xref:System.IO.Compression.DeflateStream>  
  <xref:System.IO.Compression.GZipStream>  
- [檔案和資料流 I-O](../../../docs/standard/io/index.md)
+ [檔案和資料流 I/O](../../../docs/standard/io/index.md)
