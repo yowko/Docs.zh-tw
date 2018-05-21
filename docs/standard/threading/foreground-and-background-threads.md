@@ -1,48 +1,37 @@
 ---
-title: "前景和背景執行緒"
-ms.custom: 
+title: 前景和背景執行緒
 ms.date: 03/30/2017
-ms.prod: .net
-ms.reviewer: 
-ms.suite: 
 ms.technology: dotnet-standard
-ms.tgt_pltfrm: 
-ms.topic: article
 helpviewer_keywords:
 - threading [.NET Framework], foreground
 - threading [.NET Framework], background
 - foreground threads
 - background threads
 ms.assetid: cfe0d632-dd35-47e0-91ad-f742a444005e
-caps.latest.revision: 
 author: rpetrusha
 ms.author: ronpet
-manager: wpickett
-ms.workload:
-- dotnet
-- dotnetcore
-ms.openlocfilehash: 83022bd27379e1ee34197af4897a5c809f495f48
-ms.sourcegitcommit: e7f04439d78909229506b56935a1105a4149ff3d
+ms.openlocfilehash: 476dc75a569224db405eb7498ecb35eb6bda24d8
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 12/23/2017
+ms.lasthandoff: 05/04/2018
 ---
-# <a name="foreground-and-background-threads"></a><span data-ttu-id="039bf-102">前景和背景執行緒</span><span class="sxs-lookup"><span data-stu-id="039bf-102">Foreground and Background Threads</span></span>
-<span data-ttu-id="039bf-103">受控執行緒可以是背景執行緒或前景執行緒。</span><span class="sxs-lookup"><span data-stu-id="039bf-103">A managed thread is either a background thread or a foreground thread.</span></span> <span data-ttu-id="039bf-104">背景執行緒與前景執行緒完全相同，但有一個例外：背景執行緒不會讓受控的執行環境保持執行狀態。</span><span class="sxs-lookup"><span data-stu-id="039bf-104">Background threads are identical to foreground threads with one exception: a background thread does not keep the managed execution environment running.</span></span> <span data-ttu-id="039bf-105">一旦受控處理序 (其中的 .exe 檔案為受控組件) 的所有前景執行緒都已停止之後，系統就會停止所有背景執行緒並關閉。</span><span class="sxs-lookup"><span data-stu-id="039bf-105">Once all foreground threads have been stopped in a managed process (where the .exe file is a managed assembly), the system stops all background threads and shuts down.</span></span>  
+# <a name="foreground-and-background-threads"></a><span data-ttu-id="96483-102">前景和背景執行緒</span><span class="sxs-lookup"><span data-stu-id="96483-102">Foreground and Background Threads</span></span>
+<span data-ttu-id="96483-103">受控執行緒可以是背景執行緒或前景執行緒。</span><span class="sxs-lookup"><span data-stu-id="96483-103">A managed thread is either a background thread or a foreground thread.</span></span> <span data-ttu-id="96483-104">背景執行緒與前景執行緒完全相同，但有一個例外：背景執行緒不會讓受控的執行環境保持執行狀態。</span><span class="sxs-lookup"><span data-stu-id="96483-104">Background threads are identical to foreground threads with one exception: a background thread does not keep the managed execution environment running.</span></span> <span data-ttu-id="96483-105">一旦受控處理序 (其中的 .exe 檔案為受控組件) 的所有前景執行緒都已停止之後，系統就會停止所有背景執行緒並關閉。</span><span class="sxs-lookup"><span data-stu-id="96483-105">Once all foreground threads have been stopped in a managed process (where the .exe file is a managed assembly), the system stops all background threads and shuts down.</span></span>  
   
 > [!NOTE]
->  <span data-ttu-id="039bf-106">當執行階段因為處理序正在關閉而停止背景執行緒時，執行緒中不會擲回任何例外狀況。</span><span class="sxs-lookup"><span data-stu-id="039bf-106">When the runtime stops a background thread because the process is shutting down, no exception is thrown in the thread.</span></span> <span data-ttu-id="039bf-107">不過，當執行緒因為 <xref:System.AppDomain.Unload%2A?displayProperty=nameWithType> 方法卸載應用程式定義域而停止時，前景和背景執行緒中都會擲回 <xref:System.Threading.ThreadAbortException>。</span><span class="sxs-lookup"><span data-stu-id="039bf-107">However, when threads are stopped because the <xref:System.AppDomain.Unload%2A?displayProperty=nameWithType> method unloads the application domain, a <xref:System.Threading.ThreadAbortException> is thrown in both foreground and background threads.</span></span>  
+>  <span data-ttu-id="96483-106">當執行階段因為處理序正在關閉而停止背景執行緒時，執行緒中不會擲回任何例外狀況。</span><span class="sxs-lookup"><span data-stu-id="96483-106">When the runtime stops a background thread because the process is shutting down, no exception is thrown in the thread.</span></span> <span data-ttu-id="96483-107">不過，當執行緒因為 <xref:System.AppDomain.Unload%2A?displayProperty=nameWithType> 方法卸載應用程式定義域而停止時，前景和背景執行緒中都會擲回 <xref:System.Threading.ThreadAbortException>。</span><span class="sxs-lookup"><span data-stu-id="96483-107">However, when threads are stopped because the <xref:System.AppDomain.Unload%2A?displayProperty=nameWithType> method unloads the application domain, a <xref:System.Threading.ThreadAbortException> is thrown in both foreground and background threads.</span></span>  
   
- <span data-ttu-id="039bf-108">使用 <xref:System.Threading.Thread.IsBackground%2A?displayProperty=nameWithType> 屬性，來判斷執行緒是否為背景或前景執行緒，或變更其狀態。</span><span class="sxs-lookup"><span data-stu-id="039bf-108">Use the <xref:System.Threading.Thread.IsBackground%2A?displayProperty=nameWithType> property to determine whether a thread is a background or a foreground thread, or to change its status.</span></span> <span data-ttu-id="039bf-109">您隨時都能藉由將執行緒的 <xref:System.Threading.Thread.IsBackground%2A> 屬性設為 `true`，來將其變更為背景執行緒。</span><span class="sxs-lookup"><span data-stu-id="039bf-109">A thread can be changed to a background thread at any time by setting its <xref:System.Threading.Thread.IsBackground%2A> property to `true`.</span></span>  
+ <span data-ttu-id="96483-108">使用 <xref:System.Threading.Thread.IsBackground%2A?displayProperty=nameWithType> 屬性，來判斷執行緒是否為背景或前景執行緒，或變更其狀態。</span><span class="sxs-lookup"><span data-stu-id="96483-108">Use the <xref:System.Threading.Thread.IsBackground%2A?displayProperty=nameWithType> property to determine whether a thread is a background or a foreground thread, or to change its status.</span></span> <span data-ttu-id="96483-109">您隨時都能藉由將執行緒的 <xref:System.Threading.Thread.IsBackground%2A> 屬性設為 `true`，來將其變更為背景執行緒。</span><span class="sxs-lookup"><span data-stu-id="96483-109">A thread can be changed to a background thread at any time by setting its <xref:System.Threading.Thread.IsBackground%2A> property to `true`.</span></span>  
   
 > [!IMPORTANT]
->  <span data-ttu-id="039bf-110">執行緒的前景或背景狀態不會影響執行緒中未處理的例外狀況結果。</span><span class="sxs-lookup"><span data-stu-id="039bf-110">The foreground or background status of a thread does not affect the outcome of an unhandled exception in the thread.</span></span> <span data-ttu-id="039bf-111">在 .NET Framework 2.0 版中，前景或背景執行緒中未處理的例外狀況會導致應用程式終止。</span><span class="sxs-lookup"><span data-stu-id="039bf-111">In the .NET Framework version 2.0, an unhandled exception in either foreground or background threads results in termination of the application.</span></span> <span data-ttu-id="039bf-112">請參閱[受控執行緒中的例外狀況](../../../docs/standard/threading/exceptions-in-managed-threads.md)。</span><span class="sxs-lookup"><span data-stu-id="039bf-112">See [Exceptions in Managed Threads](../../../docs/standard/threading/exceptions-in-managed-threads.md).</span></span>  
+>  <span data-ttu-id="96483-110">執行緒的前景或背景狀態不會影響執行緒中未處理的例外狀況結果。</span><span class="sxs-lookup"><span data-stu-id="96483-110">The foreground or background status of a thread does not affect the outcome of an unhandled exception in the thread.</span></span> <span data-ttu-id="96483-111">在 .NET Framework 2.0 版中，前景或背景執行緒中未處理的例外狀況會導致應用程式終止。</span><span class="sxs-lookup"><span data-stu-id="96483-111">In the .NET Framework version 2.0, an unhandled exception in either foreground or background threads results in termination of the application.</span></span> <span data-ttu-id="96483-112">請參閱[受控執行緒中的例外狀況](../../../docs/standard/threading/exceptions-in-managed-threads.md)。</span><span class="sxs-lookup"><span data-stu-id="96483-112">See [Exceptions in Managed Threads](../../../docs/standard/threading/exceptions-in-managed-threads.md).</span></span>  
   
- <span data-ttu-id="039bf-113">屬於受控執行緒集區的執行緒 (也就是其 <xref:System.Threading.Thread.IsThreadPoolThread%2A> 屬性為 `true` 的執行緒) 是背景執行緒。</span><span class="sxs-lookup"><span data-stu-id="039bf-113">Threads that belong to the managed thread pool (that is, threads whose <xref:System.Threading.Thread.IsThreadPoolThread%2A> property is `true`) are background threads.</span></span> <span data-ttu-id="039bf-114">從非受控碼進入受控執行環境的所有執行緒都會標示為背景執行緒。</span><span class="sxs-lookup"><span data-stu-id="039bf-114">All threads that enter the managed execution environment from unmanaged code are marked as background threads.</span></span> <span data-ttu-id="039bf-115">藉由建立並啟動新 <xref:System.Threading.Thread> 物件而產生的所有執行緒預設均為前景執行緒。</span><span class="sxs-lookup"><span data-stu-id="039bf-115">All threads generated by creating and starting a new <xref:System.Threading.Thread> object are by default foreground threads.</span></span>  
+ <span data-ttu-id="96483-113">屬於受控執行緒集區的執行緒 (也就是其 <xref:System.Threading.Thread.IsThreadPoolThread%2A> 屬性為 `true` 的執行緒) 是背景執行緒。</span><span class="sxs-lookup"><span data-stu-id="96483-113">Threads that belong to the managed thread pool (that is, threads whose <xref:System.Threading.Thread.IsThreadPoolThread%2A> property is `true`) are background threads.</span></span> <span data-ttu-id="96483-114">從非受控碼進入受控執行環境的所有執行緒都會標示為背景執行緒。</span><span class="sxs-lookup"><span data-stu-id="96483-114">All threads that enter the managed execution environment from unmanaged code are marked as background threads.</span></span> <span data-ttu-id="96483-115">藉由建立並啟動新 <xref:System.Threading.Thread> 物件而產生的所有執行緒預設均為前景執行緒。</span><span class="sxs-lookup"><span data-stu-id="96483-115">All threads generated by creating and starting a new <xref:System.Threading.Thread> object are by default foreground threads.</span></span>  
   
- <span data-ttu-id="039bf-116">如果您使用執行緒來監視活動 (例如通訊端連線)，請將它的 <xref:System.Threading.Thread.IsBackground%2A> 屬性設為 `true`，讓執行緒不會阻止您的處理序終止。</span><span class="sxs-lookup"><span data-stu-id="039bf-116">If you use a thread to monitor an activity, such as a socket connection, set its <xref:System.Threading.Thread.IsBackground%2A> property to `true` so that the thread does not prevent your process from terminating.</span></span>  
+ <span data-ttu-id="96483-116">如果您使用執行緒來監視活動 (例如通訊端連線)，請將它的 <xref:System.Threading.Thread.IsBackground%2A> 屬性設為 `true`，讓執行緒不會阻止您的處理序終止。</span><span class="sxs-lookup"><span data-stu-id="96483-116">If you use a thread to monitor an activity, such as a socket connection, set its <xref:System.Threading.Thread.IsBackground%2A> property to `true` so that the thread does not prevent your process from terminating.</span></span>  
   
-## <a name="see-also"></a><span data-ttu-id="039bf-117">請參閱</span><span class="sxs-lookup"><span data-stu-id="039bf-117">See Also</span></span>  
+## <a name="see-also"></a><span data-ttu-id="96483-117">請參閱</span><span class="sxs-lookup"><span data-stu-id="96483-117">See Also</span></span>  
  <xref:System.Threading.Thread.IsBackground%2A?displayProperty=nameWithType>  
  <xref:System.Threading.Thread>  
  <xref:System.Threading.ThreadAbortException>

@@ -1,12 +1,6 @@
 ---
-title: "如何：在 Visual Basic 中下載檔案"
-ms.custom: 
+title: 如何：在 Visual Basic 中下載檔案
 ms.date: 07/20/2015
-ms.prod: .net
-ms.reviewer: 
-ms.suite: 
-ms.technology: devlang-visual-basic
-ms.topic: article
 helpviewer_keywords:
 - downloading Internet resources [Visual Basic], files
 - downloading files [Visual Basic]
@@ -14,56 +8,53 @@ helpviewer_keywords:
 - files [Visual Basic], downloading
 - files [Visual Basic], transferring
 ms.assetid: ac479f81-c0e2-4b99-af73-217f446b73da
-caps.latest.revision: "22"
-author: dotnet-bot
-ms.author: dotnetcontent
-ms.openlocfilehash: dc67d28b870f86c6464e86f7682f71e6e36ea9e7
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.openlocfilehash: b0dc95674e17a7aba9b04a8b7e0b82c9c97c4180
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 05/04/2018
 ---
-# <a name="how-to-download-a-file-in-visual-basic"></a><span data-ttu-id="7654d-102">如何：在 Visual Basic 中下載檔案</span><span class="sxs-lookup"><span data-stu-id="7654d-102">How to: Download a File in Visual Basic</span></span>
-<span data-ttu-id="7654d-103"><xref:Microsoft.VisualBasic.Devices.Network.DownloadFile%2A> 方法可以用來下載遠端檔案，並將它儲存到特定位置。</span><span class="sxs-lookup"><span data-stu-id="7654d-103">The <xref:Microsoft.VisualBasic.Devices.Network.DownloadFile%2A> method can be used to download a remote file and store it to a specific location.</span></span> <span data-ttu-id="7654d-104">如果 `ShowUI` 參數設定為 `True`，則會顯示對話方塊以顯示下載進度，並允許使用者取消作業。</span><span class="sxs-lookup"><span data-stu-id="7654d-104">If the `ShowUI` parameter is set to `True`, a dialog box is displayed showing the progress of the download and allowing users to cancel the operation.</span></span> <span data-ttu-id="7654d-105">根據預設，不會覆寫具有相同名稱的現有檔案；如果您想要覆寫現有檔案，請將 `overwrite` 參數設定為 `True`。</span><span class="sxs-lookup"><span data-stu-id="7654d-105">By default, existing files having the same name are not overwritten; if you want to overwrite existing files, set the `overwrite` parameter to `True`.</span></span>  
+# <a name="how-to-download-a-file-in-visual-basic"></a><span data-ttu-id="4fef5-102">如何：在 Visual Basic 中下載檔案</span><span class="sxs-lookup"><span data-stu-id="4fef5-102">How to: Download a File in Visual Basic</span></span>
+<span data-ttu-id="4fef5-103"><xref:Microsoft.VisualBasic.Devices.Network.DownloadFile%2A> 方法可以用來下載遠端檔案，並將它儲存到特定位置。</span><span class="sxs-lookup"><span data-stu-id="4fef5-103">The <xref:Microsoft.VisualBasic.Devices.Network.DownloadFile%2A> method can be used to download a remote file and store it to a specific location.</span></span> <span data-ttu-id="4fef5-104">如果 `ShowUI` 參數設定為 `True`，則會顯示對話方塊以顯示下載進度，並允許使用者取消作業。</span><span class="sxs-lookup"><span data-stu-id="4fef5-104">If the `ShowUI` parameter is set to `True`, a dialog box is displayed showing the progress of the download and allowing users to cancel the operation.</span></span> <span data-ttu-id="4fef5-105">根據預設，不會覆寫具有相同名稱的現有檔案；如果您想要覆寫現有檔案，請將 `overwrite` 參數設定為 `True`。</span><span class="sxs-lookup"><span data-stu-id="4fef5-105">By default, existing files having the same name are not overwritten; if you want to overwrite existing files, set the `overwrite` parameter to `True`.</span></span>  
   
- <span data-ttu-id="7654d-106">以下條件可能會造成例外狀況：</span><span class="sxs-lookup"><span data-stu-id="7654d-106">The following conditions may cause an exception:</span></span>  
+ <span data-ttu-id="4fef5-106">以下條件可能會造成例外狀況：</span><span class="sxs-lookup"><span data-stu-id="4fef5-106">The following conditions may cause an exception:</span></span>  
   
--   <span data-ttu-id="7654d-107">磁碟機名稱無效 (<xref:System.ArgumentException>)。</span><span class="sxs-lookup"><span data-stu-id="7654d-107">Drive name is not valid (<xref:System.ArgumentException>).</span></span>  
+-   <span data-ttu-id="4fef5-107">磁碟機名稱無效 (<xref:System.ArgumentException>)。</span><span class="sxs-lookup"><span data-stu-id="4fef5-107">Drive name is not valid (<xref:System.ArgumentException>).</span></span>  
   
--   <span data-ttu-id="7654d-108">未提供必要驗證 (<xref:System.UnauthorizedAccessException> 或 <xref:System.Security.SecurityException>)。</span><span class="sxs-lookup"><span data-stu-id="7654d-108">Necessary authentication has not been supplied (<xref:System.UnauthorizedAccessException> or <xref:System.Security.SecurityException>).</span></span>  
+-   <span data-ttu-id="4fef5-108">未提供必要驗證 (<xref:System.UnauthorizedAccessException> 或 <xref:System.Security.SecurityException>)。</span><span class="sxs-lookup"><span data-stu-id="4fef5-108">Necessary authentication has not been supplied (<xref:System.UnauthorizedAccessException> or <xref:System.Security.SecurityException>).</span></span>  
   
--   <span data-ttu-id="7654d-109">伺服器在指定的 `connectionTimeout` 內沒有回應 (<xref:System.TimeoutException>)。</span><span class="sxs-lookup"><span data-stu-id="7654d-109">The server does not respond within the specified `connectionTimeout` (<xref:System.TimeoutException>).</span></span>  
+-   <span data-ttu-id="4fef5-109">伺服器在指定的 `connectionTimeout` 內沒有回應 (<xref:System.TimeoutException>)。</span><span class="sxs-lookup"><span data-stu-id="4fef5-109">The server does not respond within the specified `connectionTimeout` (<xref:System.TimeoutException>).</span></span>  
   
--   <span data-ttu-id="7654d-110">要求被網站拒絕 (<xref:System.Net.WebException>)。</span><span class="sxs-lookup"><span data-stu-id="7654d-110">The request is denied by the Web site (<xref:System.Net.WebException>).</span></span>  
+-   <span data-ttu-id="4fef5-110">要求被網站拒絕 (<xref:System.Net.WebException>)。</span><span class="sxs-lookup"><span data-stu-id="4fef5-110">The request is denied by the Web site (<xref:System.Net.WebException>).</span></span>  
   
 [!INCLUDE[note_settings_general](~/includes/note-settings-general-md.md)]  
   
 > [!IMPORTANT]
->  <span data-ttu-id="7654d-111">請勿根據檔案名稱來判斷檔案內容。</span><span class="sxs-lookup"><span data-stu-id="7654d-111">Do not make decisions about the contents of the file based on the name of the file.</span></span> <span data-ttu-id="7654d-112">例如，檔案 Form1.vb 可能不是 Visual Basic 來源檔案。</span><span class="sxs-lookup"><span data-stu-id="7654d-112">For example, the file Form1.vb may not be a Visual Basic source file.</span></span> <span data-ttu-id="7654d-113">在應用程式中使用這些資料之前，請先驗證所有輸入值。</span><span class="sxs-lookup"><span data-stu-id="7654d-113">Verify all inputs before using the data in your application.</span></span> <span data-ttu-id="7654d-114">檔案內容可能與預期不同，並從檔案讀取資料的方法會失敗。</span><span class="sxs-lookup"><span data-stu-id="7654d-114">The contents of the file may not be what is expected, and methods to read from the file may fail.</span></span>  
+>  <span data-ttu-id="4fef5-111">請勿根據檔案名稱來判斷檔案內容。</span><span class="sxs-lookup"><span data-stu-id="4fef5-111">Do not make decisions about the contents of the file based on the name of the file.</span></span> <span data-ttu-id="4fef5-112">例如，檔案 Form1.vb 可能不是 Visual Basic 來源檔案。</span><span class="sxs-lookup"><span data-stu-id="4fef5-112">For example, the file Form1.vb may not be a Visual Basic source file.</span></span> <span data-ttu-id="4fef5-113">在應用程式中使用這些資料之前，請先驗證所有輸入值。</span><span class="sxs-lookup"><span data-stu-id="4fef5-113">Verify all inputs before using the data in your application.</span></span> <span data-ttu-id="4fef5-114">檔案內容可能與預期不同，並從檔案讀取資料的方法會失敗。</span><span class="sxs-lookup"><span data-stu-id="4fef5-114">The contents of the file may not be what is expected, and methods to read from the file may fail.</span></span>  
   
-### <a name="to-download-a-file"></a><span data-ttu-id="7654d-115">下載檔案</span><span class="sxs-lookup"><span data-stu-id="7654d-115">To download a file</span></span>  
+### <a name="to-download-a-file"></a><span data-ttu-id="4fef5-115">下載檔案</span><span class="sxs-lookup"><span data-stu-id="4fef5-115">To download a file</span></span>  
   
--   <span data-ttu-id="7654d-116">使用 `DownloadFile` 方法下載檔案，並以字串或 URI 形式指定目標檔案的位置，以及指定要儲存檔案的位置。</span><span class="sxs-lookup"><span data-stu-id="7654d-116">Use the `DownloadFile` method to download the file, specifying the target file's location as a string or URI and specifying the location at which to store the file.</span></span> <span data-ttu-id="7654d-117">此範例會從 `http://www.cohowinery.com/downloads` 下載 `WineList.txt` 檔案，然後將它儲存至 `C:\Documents and Settings\All Users\Documents`：</span><span class="sxs-lookup"><span data-stu-id="7654d-117">This example downloads the file `WineList.txt` from `http://www.cohowinery.com/downloads` and saves it to `C:\Documents and Settings\All Users\Documents`:</span></span>  
+-   <span data-ttu-id="4fef5-116">使用 `DownloadFile` 方法下載檔案，並以字串或 URI 形式指定目標檔案的位置，以及指定要儲存檔案的位置。</span><span class="sxs-lookup"><span data-stu-id="4fef5-116">Use the `DownloadFile` method to download the file, specifying the target file's location as a string or URI and specifying the location at which to store the file.</span></span> <span data-ttu-id="4fef5-117">此範例會從 `http://www.cohowinery.com/downloads` 下載 `WineList.txt` 檔案，然後將它儲存至 `C:\Documents and Settings\All Users\Documents`：</span><span class="sxs-lookup"><span data-stu-id="4fef5-117">This example downloads the file `WineList.txt` from `http://www.cohowinery.com/downloads` and saves it to `C:\Documents and Settings\All Users\Documents`:</span></span>  
   
      [!code-vb[VbResourceTasks#9](../../../../visual-basic/developing-apps/programming/computer-resources/codesnippet/VisualBasic/how-to-download-a-file_1.vb)]  
   
-### <a name="to-download-a-file-specifying-a-time-out-interval"></a><span data-ttu-id="7654d-118">下載檔案並指定逾時間隔</span><span class="sxs-lookup"><span data-stu-id="7654d-118">To download a file, specifying a time-out interval</span></span>  
+### <a name="to-download-a-file-specifying-a-time-out-interval"></a><span data-ttu-id="4fef5-118">下載檔案並指定逾時間隔</span><span class="sxs-lookup"><span data-stu-id="4fef5-118">To download a file, specifying a time-out interval</span></span>  
   
--   <span data-ttu-id="7654d-119">使用 `DownloadFile` 方法下載檔案，並以字串或 URI 形式指定目標檔案的位置、指定要儲存檔案的位置，以及指定以毫秒為單位的逾時間隔 (預設值為 1000)。</span><span class="sxs-lookup"><span data-stu-id="7654d-119">Use the `DownloadFile` method to download the file, specifying the target file's location as a string or URI, specifying the location at which to store the file, and specifying the time-out interval in milliseconds (the default is 1000).</span></span> <span data-ttu-id="7654d-120">此範例會從 `http://www.cohowinery.com/downloads` 下載 `WineList.txt` 檔案，然後將它儲存至 `C:\Documents and Settings\All Users\Documents`，並指定 500 毫秒的逾時間隔：</span><span class="sxs-lookup"><span data-stu-id="7654d-120">This example downloads the file `WineList.txt` from `http://www.cohowinery.com/downloads` and saves it to `C:\Documents and Settings\All Users\Documents`, specifying a time-out interval of 500 milliseconds:</span></span>  
+-   <span data-ttu-id="4fef5-119">使用 `DownloadFile` 方法下載檔案，並以字串或 URI 形式指定目標檔案的位置、指定要儲存檔案的位置，以及指定以毫秒為單位的逾時間隔 (預設值為 1000)。</span><span class="sxs-lookup"><span data-stu-id="4fef5-119">Use the `DownloadFile` method to download the file, specifying the target file's location as a string or URI, specifying the location at which to store the file, and specifying the time-out interval in milliseconds (the default is 1000).</span></span> <span data-ttu-id="4fef5-120">此範例會從 `http://www.cohowinery.com/downloads` 下載 `WineList.txt` 檔案，然後將它儲存至 `C:\Documents and Settings\All Users\Documents`，並指定 500 毫秒的逾時間隔：</span><span class="sxs-lookup"><span data-stu-id="4fef5-120">This example downloads the file `WineList.txt` from `http://www.cohowinery.com/downloads` and saves it to `C:\Documents and Settings\All Users\Documents`, specifying a time-out interval of 500 milliseconds:</span></span>  
   
      [!code-vb[VbResourceTasks#10](../../../../visual-basic/developing-apps/programming/computer-resources/codesnippet/VisualBasic/how-to-download-a-file_2.vb)]  
   
-### <a name="to-download-a-file-supplying-a-user-name-and-password"></a><span data-ttu-id="7654d-121">下載檔案並提供使用者名稱和密碼</span><span class="sxs-lookup"><span data-stu-id="7654d-121">To download a file, supplying a user name and password</span></span>  
+### <a name="to-download-a-file-supplying-a-user-name-and-password"></a><span data-ttu-id="4fef5-121">下載檔案並提供使用者名稱和密碼</span><span class="sxs-lookup"><span data-stu-id="4fef5-121">To download a file, supplying a user name and password</span></span>  
   
--   <span data-ttu-id="7654d-122">使用 `DownLoadFile` 方法下載檔案，並以字串或 URI 形式指定目標檔案的位置，以及指定要儲存檔案、使用者名稱和密碼的位置。</span><span class="sxs-lookup"><span data-stu-id="7654d-122">Use the `DownLoadFile` method to download the file, specifying the target file's location as a string or URI and specifying the location at which to store the file, the user name, and the password.</span></span> <span data-ttu-id="7654d-123">此範例會從 `http://www.cohowinery.com/downloads` 下載 `WineList.txt` 檔案，然後將它儲存至具有使用者名稱 `anonymous` 和空白密碼的 `C:\Documents and Settings\All Users\Documents`。</span><span class="sxs-lookup"><span data-stu-id="7654d-123">This example downloads the file `WineList.txt` from `http://www.cohowinery.com/downloads` and saves it to `C:\Documents and Settings\All Users\Documents`, with the user name `anonymous` and a blank password.</span></span>  
+-   <span data-ttu-id="4fef5-122">使用 `DownLoadFile` 方法下載檔案，並以字串或 URI 形式指定目標檔案的位置，以及指定要儲存檔案、使用者名稱和密碼的位置。</span><span class="sxs-lookup"><span data-stu-id="4fef5-122">Use the `DownLoadFile` method to download the file, specifying the target file's location as a string or URI and specifying the location at which to store the file, the user name, and the password.</span></span> <span data-ttu-id="4fef5-123">此範例會從 `http://www.cohowinery.com/downloads` 下載 `WineList.txt` 檔案，然後將它儲存至具有使用者名稱 `anonymous` 和空白密碼的 `C:\Documents and Settings\All Users\Documents`。</span><span class="sxs-lookup"><span data-stu-id="4fef5-123">This example downloads the file `WineList.txt` from `http://www.cohowinery.com/downloads` and saves it to `C:\Documents and Settings\All Users\Documents`, with the user name `anonymous` and a blank password.</span></span>  
   
      [!code-vb[VbResourceTasks#11](../../../../visual-basic/developing-apps/programming/computer-resources/codesnippet/VisualBasic/how-to-download-a-file_3.vb)]  
   
     > [!IMPORTANT]
-    >  <span data-ttu-id="7654d-124">`DownLoadFile` 方法所使用的 FTP 通訊協定會以純文字傳送資訊 (包括密碼)，不應用於傳輸機密資訊。</span><span class="sxs-lookup"><span data-stu-id="7654d-124">The FTP protocol used by the `DownLoadFile` method sends information, including passwords, in plain text and should not be used for transmitting sensitive information.</span></span>  
+    >  <span data-ttu-id="4fef5-124">`DownLoadFile` 方法所使用的 FTP 通訊協定會以純文字傳送資訊 (包括密碼)，不應用於傳輸機密資訊。</span><span class="sxs-lookup"><span data-stu-id="4fef5-124">The FTP protocol used by the `DownLoadFile` method sends information, including passwords, in plain text and should not be used for transmitting sensitive information.</span></span>  
   
-## <a name="see-also"></a><span data-ttu-id="7654d-125">另請參閱</span><span class="sxs-lookup"><span data-stu-id="7654d-125">See Also</span></span>  
+## <a name="see-also"></a><span data-ttu-id="4fef5-125">請參閱</span><span class="sxs-lookup"><span data-stu-id="4fef5-125">See Also</span></span>  
  <xref:Microsoft.VisualBasic.Devices.Network>  
  <xref:Microsoft.VisualBasic.Devices.Network.DownloadFile%2A>  
- [<span data-ttu-id="7654d-126">如何：上傳檔案</span><span class="sxs-lookup"><span data-stu-id="7654d-126">How to: Upload a File</span></span>](../../../../visual-basic/developing-apps/programming/computer-resources/how-to-upload-a-file.md)  
- [<span data-ttu-id="7654d-127">如何：剖析檔案路徑</span><span class="sxs-lookup"><span data-stu-id="7654d-127">How to: Parse File Paths</span></span>](../../../../visual-basic/developing-apps/programming/drives-directories-files/how-to-parse-file-paths.md)
+ [<span data-ttu-id="4fef5-126">如何：上傳檔案</span><span class="sxs-lookup"><span data-stu-id="4fef5-126">How to: Upload a File</span></span>](../../../../visual-basic/developing-apps/programming/computer-resources/how-to-upload-a-file.md)  
+ [<span data-ttu-id="4fef5-127">如何：剖析檔案路徑</span><span class="sxs-lookup"><span data-stu-id="4fef5-127">How to: Parse File Paths</span></span>](../../../../visual-basic/developing-apps/programming/drives-directories-files/how-to-parse-file-paths.md)

@@ -1,49 +1,38 @@
 ---
-title: "PLINQ 資料範例"
-ms.custom: 
+title: PLINQ 資料範例
 ms.date: 03/30/2017
-ms.prod: .net
-ms.reviewer: 
-ms.suite: 
 ms.technology: dotnet-standard
-ms.tgt_pltfrm: 
-ms.topic: article
 dev_langs:
 - csharp
 - vb
 helpviewer_keywords:
 - PLINQ queries, sample data
 ms.assetid: 4fccbb35-eaa5-44e9-a252-a5c3d4bc7604
-caps.latest.revision: 
 author: rpetrusha
 ms.author: ronpet
-manager: wpickett
-ms.workload:
-- dotnet
-- dotnetcore
-ms.openlocfilehash: 4b1aaa6f3027283ff20088d6122f9b4ec4bb1111
-ms.sourcegitcommit: e7f04439d78909229506b56935a1105a4149ff3d
+ms.openlocfilehash: 3dd16f46b7d7eb80021a67583f51feae182a2cc9
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 12/23/2017
+ms.lasthandoff: 05/04/2018
 ---
-# <a name="plinq-data-sample"></a><span data-ttu-id="e9f3c-102">PLINQ 資料範例</span><span class="sxs-lookup"><span data-stu-id="e9f3c-102">PLINQ Data Sample</span></span>
-<span data-ttu-id="e9f3c-103">此範例包含 .csv 格式的範例資料，以及將它轉換成記憶體中客戶、產品、訂單及訂單詳細資料集合的方法。</span><span class="sxs-lookup"><span data-stu-id="e9f3c-103">This sample contains example data in .csv format, together with methods that transform it into in-memory collections of Customers, Products, Orders, and Order Details.</span></span> <span data-ttu-id="e9f3c-104">若要使用 PLINQ 進一步實驗，您可以將其他主題中的程式碼範例貼到本主題的程式碼中，並從 `Main` 方法叫用它。</span><span class="sxs-lookup"><span data-stu-id="e9f3c-104">To further experiment with PLINQ, you can paste code examples from certain other topics into the code in this topic and invoke it from the `Main` method.</span></span> <span data-ttu-id="e9f3c-105">您也可以搭配您自己的 PLINQ 查詢使用這項資料。</span><span class="sxs-lookup"><span data-stu-id="e9f3c-105">You can also use this data with your own PLINQ queries.</span></span>  
+# <a name="plinq-data-sample"></a><span data-ttu-id="1c096-102">PLINQ 資料範例</span><span class="sxs-lookup"><span data-stu-id="1c096-102">PLINQ Data Sample</span></span>
+<span data-ttu-id="1c096-103">此範例包含 .csv 格式的範例資料，以及將它轉換成記憶體中客戶、產品、訂單及訂單詳細資料集合的方法。</span><span class="sxs-lookup"><span data-stu-id="1c096-103">This sample contains example data in .csv format, together with methods that transform it into in-memory collections of Customers, Products, Orders, and Order Details.</span></span> <span data-ttu-id="1c096-104">若要使用 PLINQ 進一步實驗，您可以將其他主題中的程式碼範例貼到本主題的程式碼中，並從 `Main` 方法叫用它。</span><span class="sxs-lookup"><span data-stu-id="1c096-104">To further experiment with PLINQ, you can paste code examples from certain other topics into the code in this topic and invoke it from the `Main` method.</span></span> <span data-ttu-id="1c096-105">您也可以搭配您自己的 PLINQ 查詢使用這項資料。</span><span class="sxs-lookup"><span data-stu-id="1c096-105">You can also use this data with your own PLINQ queries.</span></span>  
   
- <span data-ttu-id="e9f3c-106">此資料代表 Northwind 資料庫的子集。</span><span class="sxs-lookup"><span data-stu-id="e9f3c-106">The data represents a subset of the Northwind database.</span></span> <span data-ttu-id="e9f3c-107">其中包含五十 (50) 筆客戶記錄，但不包含所有欄位。</span><span class="sxs-lookup"><span data-stu-id="e9f3c-107">Fifty (50) customer records are included, but not all fields.</span></span> <span data-ttu-id="e9f3c-108">其中包含每位客戶的訂單和對應之 Order_Detail 資料的資料列子集。</span><span class="sxs-lookup"><span data-stu-id="e9f3c-108">A subset of the rows from the Orders and corresponding Order_Detail data for every Customer is included.</span></span> <span data-ttu-id="e9f3c-109">其中包含所有產品。</span><span class="sxs-lookup"><span data-stu-id="e9f3c-109">All Products are included.</span></span>  
+ <span data-ttu-id="1c096-106">此資料代表 Northwind 資料庫的子集。</span><span class="sxs-lookup"><span data-stu-id="1c096-106">The data represents a subset of the Northwind database.</span></span> <span data-ttu-id="1c096-107">其中包含五十 (50) 筆客戶記錄，但不包含所有欄位。</span><span class="sxs-lookup"><span data-stu-id="1c096-107">Fifty (50) customer records are included, but not all fields.</span></span> <span data-ttu-id="1c096-108">其中包含每位客戶的訂單和對應之 Order_Detail 資料的資料列子集。</span><span class="sxs-lookup"><span data-stu-id="1c096-108">A subset of the rows from the Orders and corresponding Order_Detail data for every Customer is included.</span></span> <span data-ttu-id="1c096-109">其中包含所有產品。</span><span class="sxs-lookup"><span data-stu-id="1c096-109">All Products are included.</span></span>  
   
 > [!NOTE]
->  <span data-ttu-id="e9f3c-110">資料集不夠大，無法證明 PLINQ 對只包含基本 `where` 和 `select` 子句之查詢的執行速度較 LINQ to Objects 快。</span><span class="sxs-lookup"><span data-stu-id="e9f3c-110">The data set is not large enough to demonstrate that PLINQ is faster than LINQ to Objects for queries that contain just basic `where` and `select` clauses.</span></span> <span data-ttu-id="e9f3c-111">如果要觀察這類小型資料集的加速情況，請在資料集的每個元素中使用含高度耗費資源之作業的查詢。</span><span class="sxs-lookup"><span data-stu-id="e9f3c-111">To observe speed increases for small data sets such as this, use queries that contain computationally expensive operations on every element in the data set.</span></span>  
+>  <span data-ttu-id="1c096-110">資料集不夠大，無法證明 PLINQ 對只包含基本 `where` 和 `select` 子句之查詢的執行速度較 LINQ to Objects 快。</span><span class="sxs-lookup"><span data-stu-id="1c096-110">The data set is not large enough to demonstrate that PLINQ is faster than LINQ to Objects for queries that contain just basic `where` and `select` clauses.</span></span> <span data-ttu-id="1c096-111">如果要觀察這類小型資料集的加速情況，請在資料集的每個元素中使用含高度耗費資源之作業的查詢。</span><span class="sxs-lookup"><span data-stu-id="1c096-111">To observe speed increases for small data sets such as this, use queries that contain computationally expensive operations on every element in the data set.</span></span>  
   
-### <a name="to-set-up-this-sample"></a><span data-ttu-id="e9f3c-112">若要安裝這個範例</span><span class="sxs-lookup"><span data-stu-id="e9f3c-112">To set up this sample</span></span>  
+### <a name="to-set-up-this-sample"></a><span data-ttu-id="1c096-112">若要安裝這個範例</span><span class="sxs-lookup"><span data-stu-id="1c096-112">To set up this sample</span></span>  
   
-1.  <span data-ttu-id="e9f3c-113">建立 Visual Basic 或 Visual C# 主控台應用程式專案。</span><span class="sxs-lookup"><span data-stu-id="e9f3c-113">Create a Visual Basic or Visual C# console application project.</span></span>  
+1.  <span data-ttu-id="1c096-113">建立 Visual Basic 或 Visual C# 主控台應用程式專案。</span><span class="sxs-lookup"><span data-stu-id="1c096-113">Create a Visual Basic or Visual C# console application project.</span></span>  
   
-2.  <span data-ttu-id="e9f3c-114">使用這些步驟之後的程式碼取代 Module1.vb 或 Program.cs 的內容。</span><span class="sxs-lookup"><span data-stu-id="e9f3c-114">Replace the contents of Module1.vb or Program.cs by using the code that follows these steps.</span></span>  
+2.  <span data-ttu-id="1c096-114">使用這些步驟之後的程式碼取代 Module1.vb 或 Program.cs 的內容。</span><span class="sxs-lookup"><span data-stu-id="1c096-114">Replace the contents of Module1.vb or Program.cs by using the code that follows these steps.</span></span>  
   
-3.  <span data-ttu-id="e9f3c-115">在 [專案]  功能表中，按一下 [加入新項目] 。</span><span class="sxs-lookup"><span data-stu-id="e9f3c-115">On the **Project** menu, click **Add New Item**.</span></span> <span data-ttu-id="e9f3c-116">選取 [文字檔]，然後按一下 [確定]。</span><span class="sxs-lookup"><span data-stu-id="e9f3c-116">Select **Text File** and then click **OK**.</span></span> <span data-ttu-id="e9f3c-117">複製本主題中的資料，然後將它貼到新的文字檔中。</span><span class="sxs-lookup"><span data-stu-id="e9f3c-117">Copy the data in this topic and then paste it in the new text file.</span></span> <span data-ttu-id="e9f3c-118">在 [檔案] 功能表上，按一下 [儲存]，將檔案命名為 Plinqdata.csv，然後將它儲存在包含原始程式碼檔案的資料夾。</span><span class="sxs-lookup"><span data-stu-id="e9f3c-118">On the **File** menu, click **Save**, name the file Plinqdata.csv, and then save it in the folder that contains your source code files.</span></span>  
+3.  <span data-ttu-id="1c096-115">在 [專案]  功能表中，按一下 [加入新項目] 。</span><span class="sxs-lookup"><span data-stu-id="1c096-115">On the **Project** menu, click **Add New Item**.</span></span> <span data-ttu-id="1c096-116">選取 [文字檔]，然後按一下 [確定]。</span><span class="sxs-lookup"><span data-stu-id="1c096-116">Select **Text File** and then click **OK**.</span></span> <span data-ttu-id="1c096-117">複製本主題中的資料，然後將它貼到新的文字檔中。</span><span class="sxs-lookup"><span data-stu-id="1c096-117">Copy the data in this topic and then paste it in the new text file.</span></span> <span data-ttu-id="1c096-118">在 [檔案] 功能表上，按一下 [儲存]，將檔案命名為 Plinqdata.csv，然後將它儲存在包含原始程式碼檔案的資料夾。</span><span class="sxs-lookup"><span data-stu-id="1c096-118">On the **File** menu, click **Save**, name the file Plinqdata.csv, and then save it in the folder that contains your source code files.</span></span>  
   
-4.  <span data-ttu-id="e9f3c-119">按 F5 鍵，確認專案正確地建置和執行。</span><span class="sxs-lookup"><span data-stu-id="e9f3c-119">Press F5 to verify that the project builds and runs correctly.</span></span> <span data-ttu-id="e9f3c-120">主控台視窗中應該會顯示以下輸出。</span><span class="sxs-lookup"><span data-stu-id="e9f3c-120">The following output should be displayed in the console window.</span></span>  
+4.  <span data-ttu-id="1c096-119">按 F5 鍵，確認專案正確地建置和執行。</span><span class="sxs-lookup"><span data-stu-id="1c096-119">Press F5 to verify that the project builds and runs correctly.</span></span> <span data-ttu-id="1c096-120">主控台視窗中應該會顯示以下輸出。</span><span class="sxs-lookup"><span data-stu-id="1c096-120">The following output should be displayed in the console window.</span></span>  
   
     ```  
     Customer count: 50  
@@ -56,7 +45,7 @@ ms.lasthandoff: 12/23/2017
  [!code-csharp[PLINQ#50](../../../samples/snippets/csharp/VS_Snippets_Misc/plinq/cs/plinqsamples.cs#50)]
  [!code-vb[PLINQ#50](../../../samples/snippets/visualbasic/VS_Snippets_Misc/plinq/vb/plinqsnippets1.vb#50)]  
   
-## <a name="data"></a><span data-ttu-id="e9f3c-121">資料</span><span class="sxs-lookup"><span data-stu-id="e9f3c-121">Data</span></span>  
+## <a name="data"></a><span data-ttu-id="1c096-121">資料</span><span class="sxs-lookup"><span data-stu-id="1c096-121">Data</span></span>  
   
 ```  
 CUSTOMERS  
@@ -872,5 +861,5 @@ PRODUCTS
 END PRODUCTS  
 ```  
   
-## <a name="see-also"></a><span data-ttu-id="e9f3c-122">請參閱</span><span class="sxs-lookup"><span data-stu-id="e9f3c-122">See Also</span></span>  
- [<span data-ttu-id="e9f3c-123">平行 LINQ (PLINQ)</span><span class="sxs-lookup"><span data-stu-id="e9f3c-123">Parallel LINQ (PLINQ)</span></span>](../../../docs/standard/parallel-programming/parallel-linq-plinq.md)
+## <a name="see-also"></a><span data-ttu-id="1c096-122">請參閱</span><span class="sxs-lookup"><span data-stu-id="1c096-122">See Also</span></span>  
+ [<span data-ttu-id="1c096-123">平行 LINQ (PLINQ)</span><span class="sxs-lookup"><span data-stu-id="1c096-123">Parallel LINQ (PLINQ)</span></span>](../../../docs/standard/parallel-programming/parallel-linq-plinq.md)

@@ -1,36 +1,29 @@
 ---
-title: "服務導向架構"
-description: "容器化 .NET 應用程式的 .NET 微服務架構 | 服務導向架構"
-keywords: "Docker, 微服務, ASP.NET, 容器"
+title: 服務導向架構
+description: 容器化 .NET 應用程式的 .NET 微服務架構 | 服務導向架構
 author: CESARDELATORRE
 ms.author: wiwagn
 ms.date: 05/26/2017
-ms.prod: .net-core
-ms.technology: dotnet-docker
-ms.topic: article
-ms.workload:
-- dotnet
-- dotnetcore
-ms.openlocfilehash: 6a5f0f53f4208c9944adea33fe1aa3f35fed81ab
-ms.sourcegitcommit: e7f04439d78909229506b56935a1105a4149ff3d
+ms.openlocfilehash: ce4addefc7b6b1cf82551bf8304b7f06f1614796
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 12/23/2017
+ms.lasthandoff: 05/04/2018
 ---
-# <a name="service-oriented-architecture"></a><span data-ttu-id="74a9a-104">服務導向架構</span><span class="sxs-lookup"><span data-stu-id="74a9a-104">Service-oriented architecture</span></span> 
+# <a name="service-oriented-architecture"></a><span data-ttu-id="a699f-103">服務導向架構</span><span class="sxs-lookup"><span data-stu-id="a699f-103">Service-oriented architecture</span></span> 
 
-<span data-ttu-id="74a9a-105">服務導向架構 (SOA) 是過度使用的詞彙，而且對不同的人有不同的意義。</span><span class="sxs-lookup"><span data-stu-id="74a9a-105">Service-oriented architecture (SOA) was an overused term and has meant different things to different people.</span></span> <span data-ttu-id="74a9a-106">但作為共同點，SOA 表示您透過將應用程式分解為多個服務 (通常是 HTTP 服務) 來建構應用程式，而服務可以分類為不同的型別 (例如子系統或層級)。</span><span class="sxs-lookup"><span data-stu-id="74a9a-106">But as a common denominator, SOA means that you structure your application by decomposing it into multiple services (most commonly as HTTP services) that can be classified as different types like subsystems or tiers.</span></span>
+<span data-ttu-id="a699f-104">服務導向架構 (SOA) 是過度使用的詞彙，而且對不同的人有不同的意義。</span><span class="sxs-lookup"><span data-stu-id="a699f-104">Service-oriented architecture (SOA) was an overused term and has meant different things to different people.</span></span> <span data-ttu-id="a699f-105">但作為共同點，SOA 表示您透過將應用程式分解為多個服務 (通常是 HTTP 服務) 來建構應用程式，而服務可以分類為不同的型別 (例如子系統或層級)。</span><span class="sxs-lookup"><span data-stu-id="a699f-105">But as a common denominator, SOA means that you structure your application by decomposing it into multiple services (most commonly as HTTP services) that can be classified as different types like subsystems or tiers.</span></span>
 
-<span data-ttu-id="74a9a-107">這些服務現在可以部署為 Docker 容器以解決部署問題，因為容器映像包含所有相依性。</span><span class="sxs-lookup"><span data-stu-id="74a9a-107">Those services can now be deployed as Docker containers, which solves deployment issues, because all the dependencies are included in the container image.</span></span> <span data-ttu-id="74a9a-108">不過，當您需要相應增加 SOA 應用程式時，如果要根據單一 Docker 主機進行部署，則可能會有延展性和可用性挑戰。</span><span class="sxs-lookup"><span data-stu-id="74a9a-108">However, when you need to scale up SOA applications, you might have scalability and availability challenges if you are deploying based on single Docker hosts.</span></span> <span data-ttu-id="74a9a-109">這是 Docker 叢集軟體或協調器幫助您的位置，如我們描述微服務部署方法的後續各節所述。</span><span class="sxs-lookup"><span data-stu-id="74a9a-109">This is where Docker clustering software or an orchestrator will help you out, as explained in later sections where we describe deployment approaches for microservices.</span></span>
+<span data-ttu-id="a699f-106">這些服務現在可以部署為 Docker 容器以解決部署問題，因為容器映像包含所有相依性。</span><span class="sxs-lookup"><span data-stu-id="a699f-106">Those services can now be deployed as Docker containers, which solves deployment issues, because all the dependencies are included in the container image.</span></span> <span data-ttu-id="a699f-107">不過，當您需要相應增加 SOA 應用程式時，如果要根據單一 Docker 主機進行部署，則可能會有延展性和可用性挑戰。</span><span class="sxs-lookup"><span data-stu-id="a699f-107">However, when you need to scale up SOA applications, you might have scalability and availability challenges if you are deploying based on single Docker hosts.</span></span> <span data-ttu-id="a699f-108">這是 Docker 叢集軟體或協調器幫助您的位置，如我們描述微服務部署方法的後續各節所述。</span><span class="sxs-lookup"><span data-stu-id="a699f-108">This is where Docker clustering software or an orchestrator will help you out, as explained in later sections where we describe deployment approaches for microservices.</span></span>
 
-<span data-ttu-id="74a9a-110">Docker 容器十分適用 (但不是必要) 於傳統服務導向架構和更進階的微服務架構。</span><span class="sxs-lookup"><span data-stu-id="74a9a-110">Docker containers are useful (but not required) for both traditional service-oriented architectures and the more advanced microservices architectures.</span></span>
+<span data-ttu-id="a699f-109">Docker 容器十分適用 (但不是必要) 於傳統服務導向架構和更進階的微服務架構。</span><span class="sxs-lookup"><span data-stu-id="a699f-109">Docker containers are useful (but not required) for both traditional service-oriented architectures and the more advanced microservices architectures.</span></span>
 
-<span data-ttu-id="74a9a-111">微服務衍生自 SOA，但 SOA 與微服務架構不同。</span><span class="sxs-lookup"><span data-stu-id="74a9a-111">Microservices derive from SOA, but SOA is different from microservices architecture.</span></span> <span data-ttu-id="74a9a-112">SOA 一般會提供大型中央訊息代理程式、組織層級中央協調器和 [Enterprise Service Bus (ESB)](https://en.wikipedia.org/wiki/Enterprise_service_bus) 這類功能。</span><span class="sxs-lookup"><span data-stu-id="74a9a-112">Features like big central brokers, central orchestrators at the organization level, and the [Enterprise Service Bus (ESB)](https://en.wikipedia.org/wiki/Enterprise_service_bus) are typical in SOA.</span></span> <span data-ttu-id="74a9a-113">但在大部分情況下，這些是微服務社群中的反向模式。</span><span class="sxs-lookup"><span data-stu-id="74a9a-113">But in most cases, these are anti-patterns in the microservice community.</span></span> <span data-ttu-id="74a9a-114">事實上，有些人認為「微服務架構就是 SOA。」</span><span class="sxs-lookup"><span data-stu-id="74a9a-114">In fact, some people argue that “The microservice architecture is SOA done right.”</span></span>
+<span data-ttu-id="a699f-110">微服務衍生自 SOA，但 SOA 與微服務架構不同。</span><span class="sxs-lookup"><span data-stu-id="a699f-110">Microservices derive from SOA, but SOA is different from microservices architecture.</span></span> <span data-ttu-id="a699f-111">SOA 一般會提供大型中央訊息代理程式、組織層級中央協調器和 [Enterprise Service Bus (ESB)](https://en.wikipedia.org/wiki/Enterprise_service_bus) 這類功能。</span><span class="sxs-lookup"><span data-stu-id="a699f-111">Features like big central brokers, central orchestrators at the organization level, and the [Enterprise Service Bus (ESB)](https://en.wikipedia.org/wiki/Enterprise_service_bus) are typical in SOA.</span></span> <span data-ttu-id="a699f-112">但在大部分情況下，這些是微服務社群中的反向模式。</span><span class="sxs-lookup"><span data-stu-id="a699f-112">But in most cases, these are anti-patterns in the microservice community.</span></span> <span data-ttu-id="a699f-113">事實上，有些人認為「微服務架構就是 SOA。」</span><span class="sxs-lookup"><span data-stu-id="a699f-113">In fact, some people argue that “The microservice architecture is SOA done right.”</span></span>
 
-<span data-ttu-id="74a9a-115">本指南著重在微服務，因為 SOA 方法與微服務架構中所使用的需求和技術相較之下較不精準。</span><span class="sxs-lookup"><span data-stu-id="74a9a-115">This guide focuses on microservices, because a SOA approach is less prescriptive than the requirements and techniques used in a microservice architecture.</span></span> <span data-ttu-id="74a9a-116">如果您知道如何建置微服務應用程式，則也會知道如何建置較簡單的服務導向應用程式。</span><span class="sxs-lookup"><span data-stu-id="74a9a-116">If you know how to build a microservice-based application, you also know how to build a simpler service-oriented application.</span></span>
+<span data-ttu-id="a699f-114">本指南著重在微服務，因為 SOA 方法與微服務架構中所使用的需求和技術相較之下較不精準。</span><span class="sxs-lookup"><span data-stu-id="a699f-114">This guide focuses on microservices, because a SOA approach is less prescriptive than the requirements and techniques used in a microservice architecture.</span></span> <span data-ttu-id="a699f-115">如果您知道如何建置微服務應用程式，則也會知道如何建置較簡單的服務導向應用程式。</span><span class="sxs-lookup"><span data-stu-id="a699f-115">If you know how to build a microservice-based application, you also know how to build a simpler service-oriented application.</span></span>
 
 
 
 
 >[!div class="step-by-step"]
-<span data-ttu-id="74a9a-117">[上一個] (docker-application-state-data.md) [下一個] (microservices-architecture.md)</span><span class="sxs-lookup"><span data-stu-id="74a9a-117">[Previous] (docker-application-state-data.md) [Next] (microservices-architecture.md)</span></span>
+<span data-ttu-id="a699f-116">[上一個] (docker-application-state-data.md) [下一個] (microservices-architecture.md)</span><span class="sxs-lookup"><span data-stu-id="a699f-116">[Previous] (docker-application-state-data.md) [Next] (microservices-architecture.md)</span></span>
