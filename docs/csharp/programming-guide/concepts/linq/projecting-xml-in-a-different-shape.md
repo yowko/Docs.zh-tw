@@ -1,33 +1,24 @@
 ---
-title: "以不同的組織結構投影 XML (C#)"
-ms.custom: 
+title: 以不同的組織結構投影 XML (C#)
 ms.date: 07/20/2015
-ms.prod: .net
-ms.reviewer: 
-ms.suite: 
-ms.technology: devlang-csharp
-ms.topic: article
 ms.assetid: 4cb6b14a-32dc-4a2a-813e-bf9368fa8d86
-caps.latest.revision: "3"
-author: BillWagner
-ms.author: wiwagn
-ms.openlocfilehash: 54eb890e37634362af715c132bfe43b7addb20b4
-ms.sourcegitcommit: bd1ef61f4bb794b25383d3d72e71041a5ced172e
+ms.openlocfilehash: e9d555dadea1ddd8720ef2548136f9bf9fb833c9
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/18/2017
+ms.lasthandoff: 05/04/2018
 ---
-# <a name="projecting-xml-in-a-different-shape-c"></a><span data-ttu-id="d279e-102">以不同的組織結構投影 XML (C#)</span><span class="sxs-lookup"><span data-stu-id="d279e-102">Projecting XML in a Different Shape (C#)</span></span>
-<span data-ttu-id="d279e-103">本主題顯示以不同於來源 XML 的組織結構規劃 XML 的範例。</span><span class="sxs-lookup"><span data-stu-id="d279e-103">This topic shows an example of projecting XML that is in a different shape than the source XML.</span></span>  
+# <a name="projecting-xml-in-a-different-shape-c"></a><span data-ttu-id="ad2f1-102">以不同的組織結構投影 XML (C#)</span><span class="sxs-lookup"><span data-stu-id="ad2f1-102">Projecting XML in a Different Shape (C#)</span></span>
+<span data-ttu-id="ad2f1-103">本主題顯示以不同於來源 XML 的組織結構規劃 XML 的範例。</span><span class="sxs-lookup"><span data-stu-id="ad2f1-103">This topic shows an example of projecting XML that is in a different shape than the source XML.</span></span>  
   
- <span data-ttu-id="d279e-104">許多典型的 XML 轉換都包含鏈結的查詢，如此範例中所示。</span><span class="sxs-lookup"><span data-stu-id="d279e-104">Many typical XML transformations consist of chained queries, as in this example.</span></span> <span data-ttu-id="d279e-105">常見的狀況是，從特定格式的 XML 開始，將中繼結果規劃為匿名型別或具名型別的集合，最後再將結果規劃回完全不同於來源 XML 之組織結構的 XML。</span><span class="sxs-lookup"><span data-stu-id="d279e-105">It is common to start with some form of XML, project intermediate results as collections of anonymous types or named types, and then finally to project the results back into XML that is in an entirely different shape than the source XML.</span></span>  
+ <span data-ttu-id="ad2f1-104">許多典型的 XML 轉換都包含鏈結的查詢，如此範例中所示。</span><span class="sxs-lookup"><span data-stu-id="ad2f1-104">Many typical XML transformations consist of chained queries, as in this example.</span></span> <span data-ttu-id="ad2f1-105">常見的狀況是，從特定格式的 XML 開始，將中繼結果規劃為匿名型別或具名型別的集合，最後再將結果規劃回完全不同於來源 XML 之組織結構的 XML。</span><span class="sxs-lookup"><span data-stu-id="ad2f1-105">It is common to start with some form of XML, project intermediate results as collections of anonymous types or named types, and then finally to project the results back into XML that is in an entirely different shape than the source XML.</span></span>  
   
-## <a name="example"></a><span data-ttu-id="d279e-106">範例</span><span class="sxs-lookup"><span data-stu-id="d279e-106">Example</span></span>  
- <span data-ttu-id="d279e-107">此範例會處理 WordprocessingML 文件，並從 WordprocessingML 文件擷取段落節點。</span><span class="sxs-lookup"><span data-stu-id="d279e-107">This example processes a WordprocessingML document, retrieving the paragraph nodes from a WordprocessingML document.</span></span> <span data-ttu-id="d279e-108">它也可以識別每個段落的樣式和文字。</span><span class="sxs-lookup"><span data-stu-id="d279e-108">It also identifies the style and text of each paragraph.</span></span> <span data-ttu-id="d279e-109">最後，此範例會使用不同的組織結構規劃 XML。</span><span class="sxs-lookup"><span data-stu-id="d279e-109">Finally, the example projects XML with a different shape.</span></span> <span data-ttu-id="d279e-110">此範例在這個教學課程中，會在先前的範例上建置。</span><span class="sxs-lookup"><span data-stu-id="d279e-110">This example builds on the previous examples in this tutorial.</span></span> <span data-ttu-id="d279e-111">進行規劃的新陳述式會在以下程式碼的註解中叫出。</span><span class="sxs-lookup"><span data-stu-id="d279e-111">The new statement that does the projection is called out in comments in the code below.</span></span>  
+## <a name="example"></a><span data-ttu-id="ad2f1-106">範例</span><span class="sxs-lookup"><span data-stu-id="ad2f1-106">Example</span></span>  
+ <span data-ttu-id="ad2f1-107">此範例會處理 WordprocessingML 文件，並從 WordprocessingML 文件擷取段落節點。</span><span class="sxs-lookup"><span data-stu-id="ad2f1-107">This example processes a WordprocessingML document, retrieving the paragraph nodes from a WordprocessingML document.</span></span> <span data-ttu-id="ad2f1-108">它也可以識別每個段落的樣式和文字。</span><span class="sxs-lookup"><span data-stu-id="ad2f1-108">It also identifies the style and text of each paragraph.</span></span> <span data-ttu-id="ad2f1-109">最後，此範例會使用不同的組織結構規劃 XML。</span><span class="sxs-lookup"><span data-stu-id="ad2f1-109">Finally, the example projects XML with a different shape.</span></span> <span data-ttu-id="ad2f1-110">此範例在這個教學課程中，會在先前的範例上建置。</span><span class="sxs-lookup"><span data-stu-id="ad2f1-110">This example builds on the previous examples in this tutorial.</span></span> <span data-ttu-id="ad2f1-111">進行規劃的新陳述式會在以下程式碼的註解中叫出。</span><span class="sxs-lookup"><span data-stu-id="ad2f1-111">The new statement that does the projection is called out in comments in the code below.</span></span>  
   
- <span data-ttu-id="d279e-112">如需建立此範例之來源文件的指示，請參閱[建立來源 Office Open XML 文件 (C#)](../../../../csharp/programming-guide/concepts/linq/creating-the-source-office-open-xml-document.md)。</span><span class="sxs-lookup"><span data-stu-id="d279e-112">For instructions for creating the source document for this example, see [Creating the Source Office Open XML Document (C#)](../../../../csharp/programming-guide/concepts/linq/creating-the-source-office-open-xml-document.md).</span></span>  
+ <span data-ttu-id="ad2f1-112">如需建立此範例之來源文件的指示，請參閱[建立來源 Office Open XML 文件 (C#)](../../../../csharp/programming-guide/concepts/linq/creating-the-source-office-open-xml-document.md)。</span><span class="sxs-lookup"><span data-stu-id="ad2f1-112">For instructions for creating the source document for this example, see [Creating the Source Office Open XML Document (C#)](../../../../csharp/programming-guide/concepts/linq/creating-the-source-office-open-xml-document.md).</span></span>  
   
- <span data-ttu-id="d279e-113">這個範例會使用 WindowsBase 組件的類別。</span><span class="sxs-lookup"><span data-stu-id="d279e-113">This example uses classes from the WindowsBase assembly.</span></span> <span data-ttu-id="d279e-114">它會使用 <xref:System.IO.Packaging?displayProperty=nameWithType> 命名空間中的型別。</span><span class="sxs-lookup"><span data-stu-id="d279e-114">It uses types in the <xref:System.IO.Packaging?displayProperty=nameWithType> namespace.</span></span>  
+ <span data-ttu-id="ad2f1-113">這個範例會使用 WindowsBase 組件的類別。</span><span class="sxs-lookup"><span data-stu-id="ad2f1-113">This example uses classes from the WindowsBase assembly.</span></span> <span data-ttu-id="ad2f1-114">它會使用 <xref:System.IO.Packaging?displayProperty=nameWithType> 命名空間中的型別。</span><span class="sxs-lookup"><span data-stu-id="ad2f1-114">It uses types in the <xref:System.IO.Packaging?displayProperty=nameWithType> namespace.</span></span>  
   
 ```csharp  
 public static class LocalExtensions  
@@ -171,7 +162,7 @@ class Program
 }  
 ```  
   
- <span data-ttu-id="d279e-115">這個範例會產生下列輸出：</span><span class="sxs-lookup"><span data-stu-id="d279e-115">This example produces the following output:</span></span>  
+ <span data-ttu-id="ad2f1-115">這個範例會產生下列輸出：</span><span class="sxs-lookup"><span data-stu-id="ad2f1-115">This example produces the following output:</span></span>  
   
 ```xml  
 <Root>  
@@ -238,10 +229,10 @@ class Program
 </Root>  
 ```  
   
-## <a name="next-steps"></a><span data-ttu-id="d279e-116">後續步驟</span><span class="sxs-lookup"><span data-stu-id="d279e-116">Next Steps</span></span>  
- <span data-ttu-id="d279e-117">在下一個範例中，您將在 Word 文件中進行查詢以尋找所有文字：</span><span class="sxs-lookup"><span data-stu-id="d279e-117">In the next example, you'll query to find all the text in a Word document:</span></span>  
+## <a name="next-steps"></a><span data-ttu-id="ad2f1-116">後續步驟</span><span class="sxs-lookup"><span data-stu-id="ad2f1-116">Next Steps</span></span>  
+ <span data-ttu-id="ad2f1-117">在下一個範例中，您將在 Word 文件中進行查詢以尋找所有文字：</span><span class="sxs-lookup"><span data-stu-id="ad2f1-117">In the next example, you'll query to find all the text in a Word document:</span></span>  
   
--   [<span data-ttu-id="d279e-118">尋找 Word 文件中的文字 (C#)</span><span class="sxs-lookup"><span data-stu-id="d279e-118">Finding Text in Word Documents (C#)</span></span>](../../../../csharp/programming-guide/concepts/linq/finding-text-in-word-documents.md)  
+-   [<span data-ttu-id="ad2f1-118">尋找 Word 文件中的文字 (C#)</span><span class="sxs-lookup"><span data-stu-id="ad2f1-118">Finding Text in Word Documents (C#)</span></span>](../../../../csharp/programming-guide/concepts/linq/finding-text-in-word-documents.md)  
   
-## <a name="see-also"></a><span data-ttu-id="d279e-119">另請參閱</span><span class="sxs-lookup"><span data-stu-id="d279e-119">See Also</span></span>  
- [<span data-ttu-id="d279e-120">教學課程：管理 WordprocessingML 文件中的內容 (C#)</span><span class="sxs-lookup"><span data-stu-id="d279e-120">Tutorial: Manipulating Content in a WordprocessingML Document (C#)</span></span>](../../../../csharp/programming-guide/concepts/linq/tutorial-manipulating-content-in-a-wordprocessingml-document.md)
+## <a name="see-also"></a><span data-ttu-id="ad2f1-119">請參閱</span><span class="sxs-lookup"><span data-stu-id="ad2f1-119">See Also</span></span>  
+ [<span data-ttu-id="ad2f1-120">教學課程：管理 WordprocessingML 文件中的內容 (C#)</span><span class="sxs-lookup"><span data-stu-id="ad2f1-120">Tutorial: Manipulating Content in a WordprocessingML Document (C#)</span></span>](../../../../csharp/programming-guide/concepts/linq/tutorial-manipulating-content-in-a-wordprocessingml-document.md)

@@ -1,47 +1,37 @@
 ---
 title: 處理非同步應用程式中的重新進入 (C#)
-ms.custom: ''
 ms.date: 07/20/2015
-ms.prod: .net
-ms.reviewer: ''
-ms.suite: ''
-ms.technology:
-- devlang-csharp
-ms.topic: article
 ms.assetid: 47c5075e-c448-45ce-9155-ed4e7e98c677
-caps.latest.revision: 3
-author: BillWagner
-ms.author: wiwagn
-ms.openlocfilehash: 0f0b6ba1985ab3cbbcc3490ae9b2ffcceb88f873
-ms.sourcegitcommit: b750a8e3979749b214e7e10c82efb0a0524dfcb1
+ms.openlocfilehash: f2b43bd982b7dcd1f4641ae55f95595d14d70b0b
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/10/2018
+ms.lasthandoff: 05/04/2018
 ---
-# <a name="handling-reentrancy-in-async-apps-c"></a><span data-ttu-id="f38a3-102">處理非同步應用程式中的重新進入 (C#)</span><span class="sxs-lookup"><span data-stu-id="f38a3-102">Handling Reentrancy in Async Apps (C#)</span></span>
-<span data-ttu-id="f38a3-103">當您將非同步程式碼納入您的應用程式時，應該考慮並防止可能發生的重新進入，也就是在完成前重新進入的非同步作業。</span><span class="sxs-lookup"><span data-stu-id="f38a3-103">When you include asynchronous code in your app, you should consider and possibly prevent reentrancy, which refers to reentering an asynchronous operation before it has completed.</span></span> <span data-ttu-id="f38a3-104">如果您不找出並處理重新進入的可能性，它可能會導致非預期的結果。</span><span class="sxs-lookup"><span data-stu-id="f38a3-104">If you don't identify and handle possibilities for reentrancy, it can cause unexpected results.</span></span>  
+# <a name="handling-reentrancy-in-async-apps-c"></a><span data-ttu-id="01457-102">處理非同步應用程式中的重新進入 (C#)</span><span class="sxs-lookup"><span data-stu-id="01457-102">Handling Reentrancy in Async Apps (C#)</span></span>
+<span data-ttu-id="01457-103">當您將非同步程式碼納入您的應用程式時，應該考慮並防止可能發生的重新進入，也就是在完成前重新進入的非同步作業。</span><span class="sxs-lookup"><span data-stu-id="01457-103">When you include asynchronous code in your app, you should consider and possibly prevent reentrancy, which refers to reentering an asynchronous operation before it has completed.</span></span> <span data-ttu-id="01457-104">如果您不找出並處理重新進入的可能性，它可能會導致非預期的結果。</span><span class="sxs-lookup"><span data-stu-id="01457-104">If you don't identify and handle possibilities for reentrancy, it can cause unexpected results.</span></span>  
   
- <span data-ttu-id="f38a3-105">**本主題內容**</span><span class="sxs-lookup"><span data-stu-id="f38a3-105">**In this topic**</span></span>  
+ <span data-ttu-id="01457-105">**本主題內容**</span><span class="sxs-lookup"><span data-stu-id="01457-105">**In this topic**</span></span>  
   
--   [<span data-ttu-id="f38a3-106">辨識重新進入</span><span class="sxs-lookup"><span data-stu-id="f38a3-106">Recognizing Reentrancy</span></span>](#BKMK_RecognizingReentrancy)  
+-   [<span data-ttu-id="01457-106">辨識重新進入</span><span class="sxs-lookup"><span data-stu-id="01457-106">Recognizing Reentrancy</span></span>](#BKMK_RecognizingReentrancy)  
   
--   [<span data-ttu-id="f38a3-107">處理重新進入</span><span class="sxs-lookup"><span data-stu-id="f38a3-107">Handling Reentrancy</span></span>](#BKMK_HandlingReentrancy)  
+-   [<span data-ttu-id="01457-107">處理重新進入</span><span class="sxs-lookup"><span data-stu-id="01457-107">Handling Reentrancy</span></span>](#BKMK_HandlingReentrancy)  
   
-    -   [<span data-ttu-id="f38a3-108">停用開始按鈕</span><span class="sxs-lookup"><span data-stu-id="f38a3-108">Disable the Start Button</span></span>](#BKMK_DisableTheStartButton)  
+    -   [<span data-ttu-id="01457-108">停用開始按鈕</span><span class="sxs-lookup"><span data-stu-id="01457-108">Disable the Start Button</span></span>](#BKMK_DisableTheStartButton)  
   
-    -   [<span data-ttu-id="f38a3-109">取消後再重新啟動作業</span><span class="sxs-lookup"><span data-stu-id="f38a3-109">Cancel and Restart the Operation</span></span>](#BKMK_CancelAndRestart)  
+    -   [<span data-ttu-id="01457-109">取消後再重新啟動作業</span><span class="sxs-lookup"><span data-stu-id="01457-109">Cancel and Restart the Operation</span></span>](#BKMK_CancelAndRestart)  
   
-    -   [<span data-ttu-id="f38a3-110">執行多個作業並將輸出加入佇列</span><span class="sxs-lookup"><span data-stu-id="f38a3-110">Run Multiple Operations and Queue the Output</span></span>](#BKMK_RunMultipleOperations)  
+    -   [<span data-ttu-id="01457-110">執行多個作業並將輸出加入佇列</span><span class="sxs-lookup"><span data-stu-id="01457-110">Run Multiple Operations and Queue the Output</span></span>](#BKMK_RunMultipleOperations)  
   
--   [<span data-ttu-id="f38a3-111">檢閱及執行範例應用程式</span><span class="sxs-lookup"><span data-stu-id="f38a3-111">Reviewing and Running the Example App</span></span>](#BKMD_SettingUpTheExample)  
+-   [<span data-ttu-id="01457-111">檢閱及執行範例應用程式</span><span class="sxs-lookup"><span data-stu-id="01457-111">Reviewing and Running the Example App</span></span>](#BKMD_SettingUpTheExample)  
   
 > [!NOTE]
->  <span data-ttu-id="f38a3-112">若要執行範例，您必須在電腦上安裝 Visual Studio 2012 或更新版本以及 .NET Framework 4.5 或更新版本。</span><span class="sxs-lookup"><span data-stu-id="f38a3-112">To run the example, you must have Visual Studio 2012 or newer and the .NET Framework 4.5 or newer installed on your computer.</span></span>  
+>  <span data-ttu-id="01457-112">若要執行範例，您必須在電腦上安裝 Visual Studio 2012 或更新版本以及 .NET Framework 4.5 或更新版本。</span><span class="sxs-lookup"><span data-stu-id="01457-112">To run the example, you must have Visual Studio 2012 or newer and the .NET Framework 4.5 or newer installed on your computer.</span></span>  
   
-##  <a name="BKMK_RecognizingReentrancy"></a> <span data-ttu-id="f38a3-113">辨識重新進入</span><span class="sxs-lookup"><span data-stu-id="f38a3-113">Recognizing Reentrancy</span></span>  
- <span data-ttu-id="f38a3-114">在本主題的範例中，使用者選擇 [開始] 按鈕來起始非同步應用程式，該應用程式會下載一系列網站，並計算下載的位元組總數。</span><span class="sxs-lookup"><span data-stu-id="f38a3-114">In the example in this topic, users choose a **Start** button to initiate an asynchronous app that downloads a series of websites and calculates the total number of bytes that are downloaded.</span></span> <span data-ttu-id="f38a3-115">此範例的同步版本會回應相同的方式，不論使用者選擇按鈕的次數為何，因為在第一次之後，UI 執行緒會忽略這些事件，直到應用程式完成執行為止。</span><span class="sxs-lookup"><span data-stu-id="f38a3-115">A synchronous version of the example would respond the same way regardless of how many times a user chooses the button because, after the first time, the UI thread ignores those events until the app finishes running.</span></span> <span data-ttu-id="f38a3-116">但在非同步應用程式中，UI 執行緒會繼續回應，而且您可能在它完成之前重新進入非同步作業。</span><span class="sxs-lookup"><span data-stu-id="f38a3-116">In an asynchronous app, however, the UI thread continues to respond, and you might reenter the asynchronous operation before it has completed.</span></span>  
+##  <a name="BKMK_RecognizingReentrancy"></a> <span data-ttu-id="01457-113">辨識重新進入</span><span class="sxs-lookup"><span data-stu-id="01457-113">Recognizing Reentrancy</span></span>  
+ <span data-ttu-id="01457-114">在本主題的範例中，使用者選擇 [開始] 按鈕來起始非同步應用程式，該應用程式會下載一系列網站，並計算下載的位元組總數。</span><span class="sxs-lookup"><span data-stu-id="01457-114">In the example in this topic, users choose a **Start** button to initiate an asynchronous app that downloads a series of websites and calculates the total number of bytes that are downloaded.</span></span> <span data-ttu-id="01457-115">此範例的同步版本會回應相同的方式，不論使用者選擇按鈕的次數為何，因為在第一次之後，UI 執行緒會忽略這些事件，直到應用程式完成執行為止。</span><span class="sxs-lookup"><span data-stu-id="01457-115">A synchronous version of the example would respond the same way regardless of how many times a user chooses the button because, after the first time, the UI thread ignores those events until the app finishes running.</span></span> <span data-ttu-id="01457-116">但在非同步應用程式中，UI 執行緒會繼續回應，而且您可能在它完成之前重新進入非同步作業。</span><span class="sxs-lookup"><span data-stu-id="01457-116">In an asynchronous app, however, the UI thread continues to respond, and you might reenter the asynchronous operation before it has completed.</span></span>  
   
- <span data-ttu-id="f38a3-117">如果使用者只選擇一次 [開始] 按鈕，則下列範例會顯示預期的輸出。</span><span class="sxs-lookup"><span data-stu-id="f38a3-117">The following example shows the expected output if the user chooses the **Start** button only once.</span></span> <span data-ttu-id="f38a3-118">下載的網站清單會顯示每個網站的大小 (以位元組為單位)。</span><span class="sxs-lookup"><span data-stu-id="f38a3-118">A list of the downloaded websites appears with the size, in bytes, of each site.</span></span> <span data-ttu-id="f38a3-119">結尾會出現位元組總數。</span><span class="sxs-lookup"><span data-stu-id="f38a3-119">The total number of bytes appears at the end.</span></span>  
+ <span data-ttu-id="01457-117">如果使用者只選擇一次 [開始] 按鈕，則下列範例會顯示預期的輸出。</span><span class="sxs-lookup"><span data-stu-id="01457-117">The following example shows the expected output if the user chooses the **Start** button only once.</span></span> <span data-ttu-id="01457-118">下載的網站清單會顯示每個網站的大小 (以位元組為單位)。</span><span class="sxs-lookup"><span data-stu-id="01457-118">A list of the downloaded websites appears with the size, in bytes, of each site.</span></span> <span data-ttu-id="01457-119">結尾會出現位元組總數。</span><span class="sxs-lookup"><span data-stu-id="01457-119">The total number of bytes appears at the end.</span></span>  
   
 ```  
 1. msdn.microsoft.com/library/hh191443.aspx                83732  
@@ -56,7 +46,7 @@ ms.lasthandoff: 04/10/2018
 TOTAL bytes returned:  890591  
 ```  
   
- <span data-ttu-id="f38a3-120">不過，如果使用者選擇按鈕多次，則會重複叫用事件處理常式，且每次都會重新進入下載程序。</span><span class="sxs-lookup"><span data-stu-id="f38a3-120">However, if the user chooses the button more than once, the event handler is invoked repeatedly, and the download process is reentered each time.</span></span> <span data-ttu-id="f38a3-121">如此一來，同時會執行數個非同步作業，輸出會與結果交錯，且導出令人困惑的位元組總數。</span><span class="sxs-lookup"><span data-stu-id="f38a3-121">As a result, several asynchronous operations are running at the same time, the output interleaves the results, and the total number of bytes is confusing.</span></span>  
+ <span data-ttu-id="01457-120">不過，如果使用者選擇按鈕多次，則會重複叫用事件處理常式，且每次都會重新進入下載程序。</span><span class="sxs-lookup"><span data-stu-id="01457-120">However, if the user chooses the button more than once, the event handler is invoked repeatedly, and the download process is reentered each time.</span></span> <span data-ttu-id="01457-121">如此一來，同時會執行數個非同步作業，輸出會與結果交錯，且導出令人困惑的位元組總數。</span><span class="sxs-lookup"><span data-stu-id="01457-121">As a result, several asynchronous operations are running at the same time, the output interleaves the results, and the total number of bytes is confusing.</span></span>  
   
 ```  
 1. msdn.microsoft.com/library/hh191443.aspx                83732  
@@ -93,27 +83,27 @@ TOTAL bytes returned:  890591
 TOTAL bytes returned:  890591  
 ```  
   
- <span data-ttu-id="f38a3-122">您可以捲動到本主題的結尾來檢閱產生此輸出的程式碼。</span><span class="sxs-lookup"><span data-stu-id="f38a3-122">You can review the code that produces this output by scrolling to the end of this topic.</span></span> <span data-ttu-id="f38a3-123">您可以將方案下載到本機電腦，然後執行 WebsiteDownload 專案；或使用本主題結尾的程式碼來建立您自己的專案，以實驗程式碼。</span><span class="sxs-lookup"><span data-stu-id="f38a3-123">You can experiment with the code by downloading the solution to your local computer and then running the WebsiteDownload project or by using the code at the end of this topic to create your own project.</span></span> <span data-ttu-id="f38a3-124">如需詳細資訊和指示，請參閱[檢閱及執行範例應用程式](#BKMD_SettingUpTheExample)。</span><span class="sxs-lookup"><span data-stu-id="f38a3-124">For more information and instructions, see [Reviewing and Running the Example App](#BKMD_SettingUpTheExample).</span></span>  
+ <span data-ttu-id="01457-122">您可以捲動到本主題的結尾來檢閱產生此輸出的程式碼。</span><span class="sxs-lookup"><span data-stu-id="01457-122">You can review the code that produces this output by scrolling to the end of this topic.</span></span> <span data-ttu-id="01457-123">您可以將方案下載到本機電腦，然後執行 WebsiteDownload 專案；或使用本主題結尾的程式碼來建立您自己的專案，以實驗程式碼。</span><span class="sxs-lookup"><span data-stu-id="01457-123">You can experiment with the code by downloading the solution to your local computer and then running the WebsiteDownload project or by using the code at the end of this topic to create your own project.</span></span> <span data-ttu-id="01457-124">如需詳細資訊和指示，請參閱[檢閱及執行範例應用程式](#BKMD_SettingUpTheExample)。</span><span class="sxs-lookup"><span data-stu-id="01457-124">For more information and instructions, see [Reviewing and Running the Example App](#BKMD_SettingUpTheExample).</span></span>  
   
-##  <a name="BKMK_HandlingReentrancy"></a><span data-ttu-id="f38a3-125">處理重新進入</span><span class="sxs-lookup"><span data-stu-id="f38a3-125">Handling Reentrancy</span></span>  
- <span data-ttu-id="f38a3-126">您可以各種不同的方式重新進入，視您要應用程式執行的工作而定。</span><span class="sxs-lookup"><span data-stu-id="f38a3-126">You can handle reentrancy in a variety of ways, depending on what you want your app to do.</span></span> <span data-ttu-id="f38a3-127">本主題提供下列範例：</span><span class="sxs-lookup"><span data-stu-id="f38a3-127">This topic presents the following examples:</span></span>  
+##  <a name="BKMK_HandlingReentrancy"></a><span data-ttu-id="01457-125">處理重新進入</span><span class="sxs-lookup"><span data-stu-id="01457-125">Handling Reentrancy</span></span>  
+ <span data-ttu-id="01457-126">您可以各種不同的方式重新進入，視您要應用程式執行的工作而定。</span><span class="sxs-lookup"><span data-stu-id="01457-126">You can handle reentrancy in a variety of ways, depending on what you want your app to do.</span></span> <span data-ttu-id="01457-127">本主題提供下列範例：</span><span class="sxs-lookup"><span data-stu-id="01457-127">This topic presents the following examples:</span></span>  
   
--   [<span data-ttu-id="f38a3-128">停用開始按鈕</span><span class="sxs-lookup"><span data-stu-id="f38a3-128">Disable the Start Button</span></span>](#BKMK_DisableTheStartButton)  
+-   [<span data-ttu-id="01457-128">停用開始按鈕</span><span class="sxs-lookup"><span data-stu-id="01457-128">Disable the Start Button</span></span>](#BKMK_DisableTheStartButton)  
   
-     <span data-ttu-id="f38a3-129">在執行作業時停用 [開始] 按鈕，讓使用者無法中斷它。</span><span class="sxs-lookup"><span data-stu-id="f38a3-129">Disable the **Start** button while the operation is running so that the user can't interrupt it.</span></span>  
+     <span data-ttu-id="01457-129">在執行作業時停用 [開始] 按鈕，讓使用者無法中斷它。</span><span class="sxs-lookup"><span data-stu-id="01457-129">Disable the **Start** button while the operation is running so that the user can't interrupt it.</span></span>  
   
--   [<span data-ttu-id="f38a3-130">取消後再重新啟動作業</span><span class="sxs-lookup"><span data-stu-id="f38a3-130">Cancel and Restart the Operation</span></span>](#BKMK_CancelAndRestart)  
+-   [<span data-ttu-id="01457-130">取消後再重新啟動作業</span><span class="sxs-lookup"><span data-stu-id="01457-130">Cancel and Restart the Operation</span></span>](#BKMK_CancelAndRestart)  
   
-     <span data-ttu-id="f38a3-131">當使用者再次選擇 [開始] 按鈕，然後讓最近要求的作業繼續進行時，取消仍在執行的任何作業。</span><span class="sxs-lookup"><span data-stu-id="f38a3-131">Cancel any operation that is still running when the user chooses the **Start** button again, and then let the most recently requested operation continue.</span></span>  
+     <span data-ttu-id="01457-131">當使用者再次選擇 [開始] 按鈕，然後讓最近要求的作業繼續進行時，取消仍在執行的任何作業。</span><span class="sxs-lookup"><span data-stu-id="01457-131">Cancel any operation that is still running when the user chooses the **Start** button again, and then let the most recently requested operation continue.</span></span>  
   
--   [<span data-ttu-id="f38a3-132">執行多個作業並將輸出加入佇列</span><span class="sxs-lookup"><span data-stu-id="f38a3-132">Run Multiple Operations and Queue the Output</span></span>](#BKMK_RunMultipleOperations)  
+-   [<span data-ttu-id="01457-132">執行多個作業並將輸出加入佇列</span><span class="sxs-lookup"><span data-stu-id="01457-132">Run Multiple Operations and Queue the Output</span></span>](#BKMK_RunMultipleOperations)  
   
-     <span data-ttu-id="f38a3-133">允許所有要求的作業以非同步方式執行，但協調輸出的顯示，以一起並循序顯示每個作業的結果。</span><span class="sxs-lookup"><span data-stu-id="f38a3-133">Allow all requested operations to run asynchronously, but coordinate the display of output so that the results from each operation appear together and in order.</span></span>  
+     <span data-ttu-id="01457-133">允許所有要求的作業以非同步方式執行，但協調輸出的顯示，以一起並循序顯示每個作業的結果。</span><span class="sxs-lookup"><span data-stu-id="01457-133">Allow all requested operations to run asynchronously, but coordinate the display of output so that the results from each operation appear together and in order.</span></span>  
   
-###  <a name="BKMK_DisableTheStartButton"></a> <span data-ttu-id="f38a3-134">停用 [開始] 按鈕</span><span class="sxs-lookup"><span data-stu-id="f38a3-134">Disable the Start Button</span></span>  
- <span data-ttu-id="f38a3-135">您可以停用 `StartButton_Click` 事件處理常式頂端的按鈕，以便在執行作業時封鎖 [開始] 按鈕。</span><span class="sxs-lookup"><span data-stu-id="f38a3-135">You can block the **Start** button while an operation is running by disabling the button at the top of the `StartButton_Click` event handler.</span></span> <span data-ttu-id="f38a3-136">作業完成時，您可以在 `finally` 區塊中重新啟用按鈕，讓使用者可再次執行應用程式。</span><span class="sxs-lookup"><span data-stu-id="f38a3-136">You can then reenable the button from within a  `finally` block when the operation finishes so that users can run the app again.</span></span>  
+###  <a name="BKMK_DisableTheStartButton"></a> <span data-ttu-id="01457-134">停用 [開始] 按鈕</span><span class="sxs-lookup"><span data-stu-id="01457-134">Disable the Start Button</span></span>  
+ <span data-ttu-id="01457-135">您可以停用 `StartButton_Click` 事件處理常式頂端的按鈕，以便在執行作業時封鎖 [開始] 按鈕。</span><span class="sxs-lookup"><span data-stu-id="01457-135">You can block the **Start** button while an operation is running by disabling the button at the top of the `StartButton_Click` event handler.</span></span> <span data-ttu-id="01457-136">作業完成時，您可以在 `finally` 區塊中重新啟用按鈕，讓使用者可再次執行應用程式。</span><span class="sxs-lookup"><span data-stu-id="01457-136">You can then reenable the button from within a  `finally` block when the operation finishes so that users can run the app again.</span></span>  
   
- <span data-ttu-id="f38a3-137">若要設定此案例，請對[檢閱及執行範例應用程式](#BKMD_SettingUpTheExample)中提供的基本程式碼進行下列變更。</span><span class="sxs-lookup"><span data-stu-id="f38a3-137">To set up this scenario, make the following changes to the basic code that is provided in [Reviewing and Running the Example App](#BKMD_SettingUpTheExample).</span></span> <span data-ttu-id="f38a3-138">您也可以從[非同步範例︰重新進入 .NET 桌面應用程式](https://code.msdn.microsoft.com/Async-Sample-Preventing-a8489f06)下載完成的應用程式。</span><span class="sxs-lookup"><span data-stu-id="f38a3-138">You also can download the finished app from [Async Samples: Reentrancy in .NET Desktop Apps](https://code.msdn.microsoft.com/Async-Sample-Preventing-a8489f06).</span></span> <span data-ttu-id="f38a3-139">專案名稱是 DisableStartButton。</span><span class="sxs-lookup"><span data-stu-id="f38a3-139">The name of the project is DisableStartButton.</span></span>  
+ <span data-ttu-id="01457-137">若要設定此案例，請對[檢閱及執行範例應用程式](#BKMD_SettingUpTheExample)中提供的基本程式碼進行下列變更。</span><span class="sxs-lookup"><span data-stu-id="01457-137">To set up this scenario, make the following changes to the basic code that is provided in [Reviewing and Running the Example App](#BKMD_SettingUpTheExample).</span></span> <span data-ttu-id="01457-138">您也可以從[非同步範例︰重新進入 .NET 桌面應用程式](https://code.msdn.microsoft.com/Async-Sample-Preventing-a8489f06)下載完成的應用程式。</span><span class="sxs-lookup"><span data-stu-id="01457-138">You also can download the finished app from [Async Samples: Reentrancy in .NET Desktop Apps](https://code.msdn.microsoft.com/Async-Sample-Preventing-a8489f06).</span></span> <span data-ttu-id="01457-139">專案名稱是 DisableStartButton。</span><span class="sxs-lookup"><span data-stu-id="01457-139">The name of the project is DisableStartButton.</span></span>  
   
 ```csharp  
 private async void StartButton_Click(object sender, RoutedEventArgs e)  
@@ -140,16 +130,16 @@ private async void StartButton_Click(object sender, RoutedEventArgs e)
 }  
 ```  
   
- <span data-ttu-id="f38a3-140">因為變更，按鈕不會在 `AccessTheWebAsync` 正在下載網站時反應，因此程序將無法重新進入。</span><span class="sxs-lookup"><span data-stu-id="f38a3-140">As a result of the changes, the button doesn't respond while `AccessTheWebAsync` is downloading the websites, so the process can’t be reentered.</span></span>  
+ <span data-ttu-id="01457-140">因為變更，按鈕不會在 `AccessTheWebAsync` 正在下載網站時反應，因此程序將無法重新進入。</span><span class="sxs-lookup"><span data-stu-id="01457-140">As a result of the changes, the button doesn't respond while `AccessTheWebAsync` is downloading the websites, so the process can’t be reentered.</span></span>  
   
-###  <a name="BKMK_CancelAndRestart"></a> <span data-ttu-id="f38a3-141">取消後再重新啟動作業</span><span class="sxs-lookup"><span data-stu-id="f38a3-141">Cancel and Restart the Operation</span></span>  
- <span data-ttu-id="f38a3-142">您不必停用 [開始] 按鈕，您可以讓按鈕保持作用中，但如果使用者再次選擇該按鈕，請取消已在執行的作業，並讓最近啟動的作業繼續執行。</span><span class="sxs-lookup"><span data-stu-id="f38a3-142">Instead of disabling the **Start** button, you can keep the button active but, if the user chooses that button again, cancel the operation that's already running and let the most recently started operation continue.</span></span>  
+###  <a name="BKMK_CancelAndRestart"></a> <span data-ttu-id="01457-141">取消後再重新啟動作業</span><span class="sxs-lookup"><span data-stu-id="01457-141">Cancel and Restart the Operation</span></span>  
+ <span data-ttu-id="01457-142">您不必停用 [開始] 按鈕，您可以讓按鈕保持作用中，但如果使用者再次選擇該按鈕，請取消已在執行的作業，並讓最近啟動的作業繼續執行。</span><span class="sxs-lookup"><span data-stu-id="01457-142">Instead of disabling the **Start** button, you can keep the button active but, if the user chooses that button again, cancel the operation that's already running and let the most recently started operation continue.</span></span>  
   
- <span data-ttu-id="f38a3-143">如需取消的詳細資訊，請參閱[微調非同步應用程式 (C#)](../../../../csharp/programming-guide/concepts/async/fine-tuning-your-async-application.md)。</span><span class="sxs-lookup"><span data-stu-id="f38a3-143">For more information about cancellation, see [Fine-Tuning Your Async Application (C#)](../../../../csharp/programming-guide/concepts/async/fine-tuning-your-async-application.md).</span></span>  
+ <span data-ttu-id="01457-143">如需取消的詳細資訊，請參閱[微調非同步應用程式 (C#)](../../../../csharp/programming-guide/concepts/async/fine-tuning-your-async-application.md)。</span><span class="sxs-lookup"><span data-stu-id="01457-143">For more information about cancellation, see [Fine-Tuning Your Async Application (C#)](../../../../csharp/programming-guide/concepts/async/fine-tuning-your-async-application.md).</span></span>  
   
- <span data-ttu-id="f38a3-144">若要設定此案例，請對[檢閱及執行範例應用程式](#BKMD_SettingUpTheExample)中提供的基本程式碼進行下列變更。</span><span class="sxs-lookup"><span data-stu-id="f38a3-144">To set up this scenario, make the following changes to the basic code that is provided in [Reviewing and Running the Example App](#BKMD_SettingUpTheExample).</span></span> <span data-ttu-id="f38a3-145">您也可以從[非同步範例︰重新進入 .NET 桌面應用程式](https://code.msdn.microsoft.com/Async-Sample-Preventing-a8489f06)下載完成的應用程式。</span><span class="sxs-lookup"><span data-stu-id="f38a3-145">You also can download the finished app from [Async Samples: Reentrancy in .NET Desktop Apps](https://code.msdn.microsoft.com/Async-Sample-Preventing-a8489f06).</span></span> <span data-ttu-id="f38a3-146">專案名稱是 CancelAndRestart。</span><span class="sxs-lookup"><span data-stu-id="f38a3-146">The name of the project is CancelAndRestart.</span></span>  
+ <span data-ttu-id="01457-144">若要設定此案例，請對[檢閱及執行範例應用程式](#BKMD_SettingUpTheExample)中提供的基本程式碼進行下列變更。</span><span class="sxs-lookup"><span data-stu-id="01457-144">To set up this scenario, make the following changes to the basic code that is provided in [Reviewing and Running the Example App](#BKMD_SettingUpTheExample).</span></span> <span data-ttu-id="01457-145">您也可以從[非同步範例︰重新進入 .NET 桌面應用程式](https://code.msdn.microsoft.com/Async-Sample-Preventing-a8489f06)下載完成的應用程式。</span><span class="sxs-lookup"><span data-stu-id="01457-145">You also can download the finished app from [Async Samples: Reentrancy in .NET Desktop Apps](https://code.msdn.microsoft.com/Async-Sample-Preventing-a8489f06).</span></span> <span data-ttu-id="01457-146">專案名稱是 CancelAndRestart。</span><span class="sxs-lookup"><span data-stu-id="01457-146">The name of the project is CancelAndRestart.</span></span>  
   
-1.  <span data-ttu-id="f38a3-147">宣告 <xref:System.Threading.CancellationTokenSource> 變數 `cts`，這是在所有方法的範圍內。</span><span class="sxs-lookup"><span data-stu-id="f38a3-147">Declare a <xref:System.Threading.CancellationTokenSource> variable, `cts`, that’s in scope for all methods.</span></span>  
+1.  <span data-ttu-id="01457-147">宣告 <xref:System.Threading.CancellationTokenSource> 變數 `cts`，這是在所有方法的範圍內。</span><span class="sxs-lookup"><span data-stu-id="01457-147">Declare a <xref:System.Threading.CancellationTokenSource> variable, `cts`, that’s in scope for all methods.</span></span>  
   
     ```csharp  
     public partial class MainWindow : Window   // Or class MainPage  
@@ -158,7 +148,7 @@ private async void StartButton_Click(object sender, RoutedEventArgs e)
         CancellationTokenSource cts;  
     ```  
   
-2.  <span data-ttu-id="f38a3-148">在 `StartButton_Click` 中，判定作業是否已在進行中。</span><span class="sxs-lookup"><span data-stu-id="f38a3-148">In `StartButton_Click`, determine whether an operation is already underway.</span></span> <span data-ttu-id="f38a3-149">如果 `cts` 值為Null，則沒有已在使用中的作業。</span><span class="sxs-lookup"><span data-stu-id="f38a3-149">If the value of `cts` is null, no operation is already active.</span></span> <span data-ttu-id="f38a3-150">如果此值不是 null，則表示已取消已在執行的作業。</span><span class="sxs-lookup"><span data-stu-id="f38a3-150">If the value isn't null, the operation that is already running is canceled.</span></span>  
+2.  <span data-ttu-id="01457-148">在 `StartButton_Click` 中，判定作業是否已在進行中。</span><span class="sxs-lookup"><span data-stu-id="01457-148">In `StartButton_Click`, determine whether an operation is already underway.</span></span> <span data-ttu-id="01457-149">如果 `cts` 值為Null，則沒有已在使用中的作業。</span><span class="sxs-lookup"><span data-stu-id="01457-149">If the value of `cts` is null, no operation is already active.</span></span> <span data-ttu-id="01457-150">如果此值不是 null，則表示已取消已在執行的作業。</span><span class="sxs-lookup"><span data-stu-id="01457-150">If the value isn't null, the operation that is already running is canceled.</span></span>  
   
     ```csharp  
     // *** If a download process is already underway, cancel it.  
@@ -168,7 +158,7 @@ private async void StartButton_Click(object sender, RoutedEventArgs e)
     }  
     ```  
   
-3.  <span data-ttu-id="f38a3-151">將 `cts` 設為代表目前程序的不同值。</span><span class="sxs-lookup"><span data-stu-id="f38a3-151">Set `cts` to a different value that represents the current process.</span></span>  
+3.  <span data-ttu-id="01457-151">將 `cts` 設為代表目前程序的不同值。</span><span class="sxs-lookup"><span data-stu-id="01457-151">Set `cts` to a different value that represents the current process.</span></span>  
   
     ```csharp  
     // *** Now set cts to a new value that you can use to cancel the current process  
@@ -177,7 +167,7 @@ private async void StartButton_Click(object sender, RoutedEventArgs e)
     cts = newCTS;  
     ```  
   
-4.  <span data-ttu-id="f38a3-152">在 `StartButton_Click` 的結尾、目前的程序已完成，因此將 `cts` 的值設回 null。</span><span class="sxs-lookup"><span data-stu-id="f38a3-152">At the end of `StartButton_Click`, the current process is complete, so set the value of `cts` back to null.</span></span>  
+4.  <span data-ttu-id="01457-152">在 `StartButton_Click` 的結尾、目前的程序已完成，因此將 `cts` 的值設回 null。</span><span class="sxs-lookup"><span data-stu-id="01457-152">At the end of `StartButton_Click`, the current process is complete, so set the value of `cts` back to null.</span></span>  
   
     ```csharp  
     // *** When the process is complete, signal that another process can begin.  
@@ -185,7 +175,7 @@ private async void StartButton_Click(object sender, RoutedEventArgs e)
         cts = null;  
     ```  
   
- <span data-ttu-id="f38a3-153">下列程式碼顯示 `StartButton_Click` 中的所有變更。</span><span class="sxs-lookup"><span data-stu-id="f38a3-153">The following code shows all the changes in `StartButton_Click`.</span></span> <span data-ttu-id="f38a3-154">新增的項目會以星號標記。</span><span class="sxs-lookup"><span data-stu-id="f38a3-154">The additions are marked with asterisks.</span></span>  
+ <span data-ttu-id="01457-153">下列程式碼顯示 `StartButton_Click` 中的所有變更。</span><span class="sxs-lookup"><span data-stu-id="01457-153">The following code shows all the changes in `StartButton_Click`.</span></span> <span data-ttu-id="01457-154">新增的項目會以星號標記。</span><span class="sxs-lookup"><span data-stu-id="01457-154">The additions are marked with asterisks.</span></span>  
   
 ```csharp  
 private async void StartButton_Click(object sender, RoutedEventArgs e)  
@@ -224,15 +214,15 @@ private async void StartButton_Click(object sender, RoutedEventArgs e)
 }  
 ```  
   
- <span data-ttu-id="f38a3-155">在 `AccessTheWebAsync` 中進行下列變更。</span><span class="sxs-lookup"><span data-stu-id="f38a3-155">In `AccessTheWebAsync`, make the following changes.</span></span>  
+ <span data-ttu-id="01457-155">在 `AccessTheWebAsync` 中進行下列變更。</span><span class="sxs-lookup"><span data-stu-id="01457-155">In `AccessTheWebAsync`, make the following changes.</span></span>  
   
--   <span data-ttu-id="f38a3-156">加入參數以接受來自 `StartButton_Click` 的取消語彙基元。</span><span class="sxs-lookup"><span data-stu-id="f38a3-156">Add a parameter to accept the cancellation token from `StartButton_Click`.</span></span>  
+-   <span data-ttu-id="01457-156">加入參數以接受來自 `StartButton_Click` 的取消語彙基元。</span><span class="sxs-lookup"><span data-stu-id="01457-156">Add a parameter to accept the cancellation token from `StartButton_Click`.</span></span>  
   
--   <span data-ttu-id="f38a3-157">使用 <xref:System.Net.Http.HttpClient.GetAsync%2A> 方法來下載網站，因為 `GetAsync` 接受 <xref:System.Threading.CancellationToken> 引數。</span><span class="sxs-lookup"><span data-stu-id="f38a3-157">Use the <xref:System.Net.Http.HttpClient.GetAsync%2A> method to download the websites because `GetAsync` accepts a <xref:System.Threading.CancellationToken> argument.</span></span>  
+-   <span data-ttu-id="01457-157">使用 <xref:System.Net.Http.HttpClient.GetAsync%2A> 方法來下載網站，因為 `GetAsync` 接受 <xref:System.Threading.CancellationToken> 引數。</span><span class="sxs-lookup"><span data-stu-id="01457-157">Use the <xref:System.Net.Http.HttpClient.GetAsync%2A> method to download the websites because `GetAsync` accepts a <xref:System.Threading.CancellationToken> argument.</span></span>  
   
--   <span data-ttu-id="f38a3-158">在呼叫 `DisplayResults` 顯示每個下載網站的結果前，請檢查 `ct` 以確認目前的作業尚未取消。</span><span class="sxs-lookup"><span data-stu-id="f38a3-158">Before calling `DisplayResults` to display the results for each downloaded website, check `ct` to verify that the current operation hasn’t been canceled.</span></span>  
+-   <span data-ttu-id="01457-158">在呼叫 `DisplayResults` 顯示每個下載網站的結果前，請檢查 `ct` 以確認目前的作業尚未取消。</span><span class="sxs-lookup"><span data-stu-id="01457-158">Before calling `DisplayResults` to display the results for each downloaded website, check `ct` to verify that the current operation hasn’t been canceled.</span></span>  
   
- <span data-ttu-id="f38a3-159">下列程式碼會顯示這些變更 (以星號標記)。</span><span class="sxs-lookup"><span data-stu-id="f38a3-159">The following code shows these changes, which are marked with asterisks.</span></span>  
+ <span data-ttu-id="01457-159">下列程式碼會顯示這些變更 (以星號標記)。</span><span class="sxs-lookup"><span data-stu-id="01457-159">The following code shows these changes, which are marked with asterisks.</span></span>  
   
 ```csharp  
 // *** Provide a parameter for the CancellationToken from StartButton_Click.  
@@ -272,7 +262,7 @@ async Task AccessTheWebAsync(CancellationToken ct)
 }     
 ```  
   
- <span data-ttu-id="f38a3-160">如果在這個應用程式正在執行時選擇 [開始] 按鈕多次，則應該會產生類似下列的輸出結果。</span><span class="sxs-lookup"><span data-stu-id="f38a3-160">If you choose the **Start** button several times while this app is running, it should produce results that resemble the following output.</span></span>  
+ <span data-ttu-id="01457-160">如果在這個應用程式正在執行時選擇 [開始] 按鈕多次，則應該會產生類似下列的輸出結果。</span><span class="sxs-lookup"><span data-stu-id="01457-160">If you choose the **Start** button several times while this app is running, it should produce results that resemble the following output.</span></span>  
   
 ```  
 1. msdn.microsoft.com/library/hh191443.aspx                83732  
@@ -300,16 +290,16 @@ Download canceled.
 TOTAL bytes returned:  890591  
 ```  
   
- <span data-ttu-id="f38a3-161">若要排除部分清單，請取消註解 `StartButton_Click` 中程式碼的第一行，以清除每次使用者重新啟動作業時出現的文字方塊。</span><span class="sxs-lookup"><span data-stu-id="f38a3-161">To eliminate the partial lists, uncomment the first line of code in `StartButton_Click` to clear the text box each time the user restarts the operation.</span></span>  
+ <span data-ttu-id="01457-161">若要排除部分清單，請取消註解 `StartButton_Click` 中程式碼的第一行，以清除每次使用者重新啟動作業時出現的文字方塊。</span><span class="sxs-lookup"><span data-stu-id="01457-161">To eliminate the partial lists, uncomment the first line of code in `StartButton_Click` to clear the text box each time the user restarts the operation.</span></span>  
   
-###  <a name="BKMK_RunMultipleOperations"></a> <span data-ttu-id="f38a3-162">執行多個作業並將輸出加入佇列</span><span class="sxs-lookup"><span data-stu-id="f38a3-162">Run Multiple Operations and Queue the Output</span></span>  
- <span data-ttu-id="f38a3-163">此第三個範例是最複雜的，因為每當使用者選擇 [開始] 按鈕時，應用程式就會啟動另一個非同步作業，而且所有作業都會執行到完成為止。</span><span class="sxs-lookup"><span data-stu-id="f38a3-163">This third example is the most complicated in that the app starts another asynchronous operation each time that the user chooses the **Start** button, and all the operations run to completion.</span></span> <span data-ttu-id="f38a3-164">所有要求的作業會以非同步方式從清單下載網站，但作業的輸出會以循序方式呈現。</span><span class="sxs-lookup"><span data-stu-id="f38a3-164">All the requested operations download websites from the list asynchronously, but the output from the operations is presented sequentially.</span></span> <span data-ttu-id="f38a3-165">也就是隨[辨識重新進入](#BKMK_RecognizingReentrancy)顯示輸出，實際的下載活動會交錯進行，但每個群組的結果清單會循序呈現。</span><span class="sxs-lookup"><span data-stu-id="f38a3-165">That is, the actual downloading activity is interleaved, as the output in [Recognizing Reentrancy](#BKMK_RecognizingReentrancy) shows, but the list of results for each group is presented separately.</span></span>  
+###  <a name="BKMK_RunMultipleOperations"></a> <span data-ttu-id="01457-162">執行多個作業並將輸出加入佇列</span><span class="sxs-lookup"><span data-stu-id="01457-162">Run Multiple Operations and Queue the Output</span></span>  
+ <span data-ttu-id="01457-163">此第三個範例是最複雜的，因為每當使用者選擇 [開始] 按鈕時，應用程式就會啟動另一個非同步作業，而且所有作業都會執行到完成為止。</span><span class="sxs-lookup"><span data-stu-id="01457-163">This third example is the most complicated in that the app starts another asynchronous operation each time that the user chooses the **Start** button, and all the operations run to completion.</span></span> <span data-ttu-id="01457-164">所有要求的作業會以非同步方式從清單下載網站，但作業的輸出會以循序方式呈現。</span><span class="sxs-lookup"><span data-stu-id="01457-164">All the requested operations download websites from the list asynchronously, but the output from the operations is presented sequentially.</span></span> <span data-ttu-id="01457-165">也就是隨[辨識重新進入](#BKMK_RecognizingReentrancy)顯示輸出，實際的下載活動會交錯進行，但每個群組的結果清單會循序呈現。</span><span class="sxs-lookup"><span data-stu-id="01457-165">That is, the actual downloading activity is interleaved, as the output in [Recognizing Reentrancy](#BKMK_RecognizingReentrancy) shows, but the list of results for each group is presented separately.</span></span>  
   
- <span data-ttu-id="f38a3-166">作業會共用全域 <xref:System.Threading.Tasks.Task>，`pendingWork`，做為顯示程序的閘道管理員。</span><span class="sxs-lookup"><span data-stu-id="f38a3-166">The operations share a global <xref:System.Threading.Tasks.Task>, `pendingWork`, which serves as a gatekeeper for the display process.</span></span>  
+ <span data-ttu-id="01457-166">作業會共用全域 <xref:System.Threading.Tasks.Task>，`pendingWork`，做為顯示程序的閘道管理員。</span><span class="sxs-lookup"><span data-stu-id="01457-166">The operations share a global <xref:System.Threading.Tasks.Task>, `pendingWork`, which serves as a gatekeeper for the display process.</span></span>  
 
- <span data-ttu-id="f38a3-167">若要設定此案例，請對[檢閱及執行範例應用程式](#BKMD_SettingUpTheExample)中提供的基本程式碼進行下列變更。</span><span class="sxs-lookup"><span data-stu-id="f38a3-167">To set up this scenario, make the following changes to the basic code that is provided in [Reviewing and Running the Example App](#BKMD_SettingUpTheExample).</span></span> <span data-ttu-id="f38a3-168">您也可以從[非同步範例︰重新進入 .NET 桌面應用程式](https://code.msdn.microsoft.com/Async-Sample-Preventing-a8489f06)下載完成的應用程式。</span><span class="sxs-lookup"><span data-stu-id="f38a3-168">You also can download the finished app from [Async Samples: Reentrancy in .NET Desktop Apps](https://code.msdn.microsoft.com/Async-Sample-Preventing-a8489f06).</span></span> <span data-ttu-id="f38a3-169">專案名稱是 QueueResults。</span><span class="sxs-lookup"><span data-stu-id="f38a3-169">The name of the project is QueueResults.</span></span>  
+ <span data-ttu-id="01457-167">若要設定此案例，請對[檢閱及執行範例應用程式](#BKMD_SettingUpTheExample)中提供的基本程式碼進行下列變更。</span><span class="sxs-lookup"><span data-stu-id="01457-167">To set up this scenario, make the following changes to the basic code that is provided in [Reviewing and Running the Example App](#BKMD_SettingUpTheExample).</span></span> <span data-ttu-id="01457-168">您也可以從[非同步範例︰重新進入 .NET 桌面應用程式](https://code.msdn.microsoft.com/Async-Sample-Preventing-a8489f06)下載完成的應用程式。</span><span class="sxs-lookup"><span data-stu-id="01457-168">You also can download the finished app from [Async Samples: Reentrancy in .NET Desktop Apps](https://code.msdn.microsoft.com/Async-Sample-Preventing-a8489f06).</span></span> <span data-ttu-id="01457-169">專案名稱是 QueueResults。</span><span class="sxs-lookup"><span data-stu-id="01457-169">The name of the project is QueueResults.</span></span>  
    
- <span data-ttu-id="f38a3-170">下列輸出顯示當使用者只選擇 [開始] 按鈕一次時的結果。</span><span class="sxs-lookup"><span data-stu-id="f38a3-170">The following output shows the result if the user chooses the **Start** button only once.</span></span> <span data-ttu-id="f38a3-171">字母標籤 A，表示第一次選擇 [開始] 按鈕時的結果。</span><span class="sxs-lookup"><span data-stu-id="f38a3-171">The letter label, A, indicates that the result is from the first time the **Start** button is chosen.</span></span> <span data-ttu-id="f38a3-172">數字顯示下載目標清單中的 URL 順序。</span><span class="sxs-lookup"><span data-stu-id="f38a3-172">The numbers show the order of the URLs in the list of download targets.</span></span>  
+ <span data-ttu-id="01457-170">下列輸出顯示當使用者只選擇 [開始] 按鈕一次時的結果。</span><span class="sxs-lookup"><span data-stu-id="01457-170">The following output shows the result if the user chooses the **Start** button only once.</span></span> <span data-ttu-id="01457-171">字母標籤 A，表示第一次選擇 [開始] 按鈕時的結果。</span><span class="sxs-lookup"><span data-stu-id="01457-171">The letter label, A, indicates that the result is from the first time the **Start** button is chosen.</span></span> <span data-ttu-id="01457-172">數字顯示下載目標清單中的 URL 順序。</span><span class="sxs-lookup"><span data-stu-id="01457-172">The numbers show the order of the URLs in the list of download targets.</span></span>  
   
 ```  
 #Starting group A.  
@@ -329,7 +319,7 @@ TOTAL bytes returned:  918876
 #Group A is complete.  
 ```  
   
- <span data-ttu-id="f38a3-173">如果使用者選擇 [開始] 按鈕三次，應用程式會產生類似下列幾行的輸出。</span><span class="sxs-lookup"><span data-stu-id="f38a3-173">If the user chooses the **Start** button three times, the app produces output that resembles the following lines.</span></span> <span data-ttu-id="f38a3-174">以井字號 (#) 開頭的資訊行會追蹤應用程式的進度。</span><span class="sxs-lookup"><span data-stu-id="f38a3-174">The information lines that start with a pound sign (#) trace the progress of the application.</span></span>  
+ <span data-ttu-id="01457-173">如果使用者選擇 [開始] 按鈕三次，應用程式會產生類似下列幾行的輸出。</span><span class="sxs-lookup"><span data-stu-id="01457-173">If the user chooses the **Start** button three times, the app produces output that resembles the following lines.</span></span> <span data-ttu-id="01457-174">以井字號 (#) 開頭的資訊行會追蹤應用程式的進度。</span><span class="sxs-lookup"><span data-stu-id="01457-174">The information lines that start with a pound sign (#) trace the progress of the application.</span></span>  
   
 ```  
 #Starting group A.  
@@ -385,12 +375,12 @@ TOTAL bytes returned:  920526
 #Group C is complete.  
 ```  
   
- <span data-ttu-id="f38a3-175">群組 B 和 C 在群組 A 完成前啟動，但每個群組的輸出會單獨顯示。</span><span class="sxs-lookup"><span data-stu-id="f38a3-175">Groups B and C start before group A has finished, but the output for the each group appears separately.</span></span> <span data-ttu-id="f38a3-176">先顯示群組 A 的所有輸出，接著是群組 B 的所有輸出，然後是群組 C 的所有輸出。應用程式一律依序顯示群組，且對每個群組，一律會根據 URL 在 URL 清單中的出現順序，顯示個別網站的相關資訊。</span><span class="sxs-lookup"><span data-stu-id="f38a3-176">All the output for group A appears first, followed by all the output for group B, and then all the output for group C. The app always displays the groups in order and, for each group, always displays the information about the individual websites in the order that the URLs appear in the list of URLs.</span></span>  
+ <span data-ttu-id="01457-175">群組 B 和 C 在群組 A 完成前啟動，但每個群組的輸出會單獨顯示。</span><span class="sxs-lookup"><span data-stu-id="01457-175">Groups B and C start before group A has finished, but the output for the each group appears separately.</span></span> <span data-ttu-id="01457-176">先顯示群組 A 的所有輸出，接著是群組 B 的所有輸出，然後是群組 C 的所有輸出。應用程式一律依序顯示群組，且對每個群組，一律會根據 URL 在 URL 清單中的出現順序，顯示個別網站的相關資訊。</span><span class="sxs-lookup"><span data-stu-id="01457-176">All the output for group A appears first, followed by all the output for group B, and then all the output for group C. The app always displays the groups in order and, for each group, always displays the information about the individual websites in the order that the URLs appear in the list of URLs.</span></span>  
   
- <span data-ttu-id="f38a3-177">不過，您無法預測實際的下載順序。</span><span class="sxs-lookup"><span data-stu-id="f38a3-177">However, you can't predict the order in which the downloads actually happen.</span></span> <span data-ttu-id="f38a3-178">啟動多個群組之後，它們產生的下載工作會全部啟用。</span><span class="sxs-lookup"><span data-stu-id="f38a3-178">After multiple groups have been started, the download tasks that they generate are all active.</span></span> <span data-ttu-id="f38a3-179">您不能假設 A-1 將在 B-1 之前下載，也不能假設 A-1 將在 A-2 之前下載。</span><span class="sxs-lookup"><span data-stu-id="f38a3-179">You can't assume that A-1 will be downloaded before B-1, and you can't assume that A-1 will be downloaded before A-2.</span></span>  
+ <span data-ttu-id="01457-177">不過，您無法預測實際的下載順序。</span><span class="sxs-lookup"><span data-stu-id="01457-177">However, you can't predict the order in which the downloads actually happen.</span></span> <span data-ttu-id="01457-178">啟動多個群組之後，它們產生的下載工作會全部啟用。</span><span class="sxs-lookup"><span data-stu-id="01457-178">After multiple groups have been started, the download tasks that they generate are all active.</span></span> <span data-ttu-id="01457-179">您不能假設 A-1 將在 B-1 之前下載，也不能假設 A-1 將在 A-2 之前下載。</span><span class="sxs-lookup"><span data-stu-id="01457-179">You can't assume that A-1 will be downloaded before B-1, and you can't assume that A-1 will be downloaded before A-2.</span></span>  
   
-#### <a name="global-definitions"></a><span data-ttu-id="f38a3-180">全域定義</span><span class="sxs-lookup"><span data-stu-id="f38a3-180">Global Definitions</span></span>  
- <span data-ttu-id="f38a3-181">範例程式碼包含所有方法都會看見的下列兩個全域宣告。</span><span class="sxs-lookup"><span data-stu-id="f38a3-181">The sample code contains the following two global declarations that are visible from all methods.</span></span>  
+#### <a name="global-definitions"></a><span data-ttu-id="01457-180">全域定義</span><span class="sxs-lookup"><span data-stu-id="01457-180">Global Definitions</span></span>  
+ <span data-ttu-id="01457-181">範例程式碼包含所有方法都會看見的下列兩個全域宣告。</span><span class="sxs-lookup"><span data-stu-id="01457-181">The sample code contains the following two global declarations that are visible from all methods.</span></span>  
   
 ```csharp  
 public partial class MainWindow : Window  // Class MainPage in Windows Store app.  
@@ -400,10 +390,10 @@ public partial class MainWindow : Window  // Class MainPage in Windows Store app
     private char group = (char)('A' - 1);  
 ```  
   
- <span data-ttu-id="f38a3-182">`Task` 變數 `pendingWork` 會監督顯示程序，並防止任何群組中斷另一個群組的顯示作業。</span><span class="sxs-lookup"><span data-stu-id="f38a3-182">The `Task` variable, `pendingWork`, oversees the display process and prevents any group from interrupting another group's display operation.</span></span> <span data-ttu-id="f38a3-183">字元變數 `group` 會標示不同群組的輸出，確認以預期的順序顯示結果。</span><span class="sxs-lookup"><span data-stu-id="f38a3-183">The character variable, `group`, labels the output from different groups to verify that results appear in the expected order.</span></span>  
+ <span data-ttu-id="01457-182">`Task` 變數 `pendingWork` 會監督顯示程序，並防止任何群組中斷另一個群組的顯示作業。</span><span class="sxs-lookup"><span data-stu-id="01457-182">The `Task` variable, `pendingWork`, oversees the display process and prevents any group from interrupting another group's display operation.</span></span> <span data-ttu-id="01457-183">字元變數 `group` 會標示不同群組的輸出，確認以預期的順序顯示結果。</span><span class="sxs-lookup"><span data-stu-id="01457-183">The character variable, `group`, labels the output from different groups to verify that results appear in the expected order.</span></span>  
   
-#### <a name="the-click-event-handler"></a><span data-ttu-id="f38a3-184">Click 事件處理常式</span><span class="sxs-lookup"><span data-stu-id="f38a3-184">The Click Event Handler</span></span>  
- <span data-ttu-id="f38a3-185">每當使用者選擇 [開始] 按鈕，事件處理常式 `StartButton_Click` 就會增加群組字母。</span><span class="sxs-lookup"><span data-stu-id="f38a3-185">The event handler, `StartButton_Click`, increments the group letter each time the user chooses the **Start** button.</span></span> <span data-ttu-id="f38a3-186">處理常式接著會呼叫 `AccessTheWebAsync` 來執行下載作業。</span><span class="sxs-lookup"><span data-stu-id="f38a3-186">Then the handler calls `AccessTheWebAsync` to run the downloading operation.</span></span>  
+#### <a name="the-click-event-handler"></a><span data-ttu-id="01457-184">Click 事件處理常式</span><span class="sxs-lookup"><span data-stu-id="01457-184">The Click Event Handler</span></span>  
+ <span data-ttu-id="01457-185">每當使用者選擇 [開始] 按鈕，事件處理常式 `StartButton_Click` 就會增加群組字母。</span><span class="sxs-lookup"><span data-stu-id="01457-185">The event handler, `StartButton_Click`, increments the group letter each time the user chooses the **Start** button.</span></span> <span data-ttu-id="01457-186">處理常式接著會呼叫 `AccessTheWebAsync` 來執行下載作業。</span><span class="sxs-lookup"><span data-stu-id="01457-186">Then the handler calls `AccessTheWebAsync` to run the downloading operation.</span></span>  
   
 ```csharp  
 private async void StartButton_Click(object sender, RoutedEventArgs e)  
@@ -429,12 +419,12 @@ private async void StartButton_Click(object sender, RoutedEventArgs e)
 }  
 ```  
   
-#### <a name="the-accessthewebasync-method"></a><span data-ttu-id="f38a3-187">AccessTheWebAsync 方法</span><span class="sxs-lookup"><span data-stu-id="f38a3-187">The AccessTheWebAsync Method</span></span>  
- <span data-ttu-id="f38a3-188">此範例會將 `AccessTheWebAsync` 分為兩個方法。</span><span class="sxs-lookup"><span data-stu-id="f38a3-188">This example splits `AccessTheWebAsync` into two methods.</span></span> <span data-ttu-id="f38a3-189">第一種方法為 `AccessTheWebAsync`，可啟動群組的所有下載工作，並且設定 `pendingWork` 來控制顯示程序。</span><span class="sxs-lookup"><span data-stu-id="f38a3-189">The first method, `AccessTheWebAsync`, starts all the download tasks for a group and sets up `pendingWork` to control the display process.</span></span> <span data-ttu-id="f38a3-190">此方法會使用 Language Integrated Query (LINQ 查詢) 和 <xref:System.Linq.Enumerable.ToArray%2A> 來同時啟動所有下載工作。</span><span class="sxs-lookup"><span data-stu-id="f38a3-190">The method uses a Language Integrated Query (LINQ query) and <xref:System.Linq.Enumerable.ToArray%2A> to start all the download tasks at the same time.</span></span>  
+#### <a name="the-accessthewebasync-method"></a><span data-ttu-id="01457-187">AccessTheWebAsync 方法</span><span class="sxs-lookup"><span data-stu-id="01457-187">The AccessTheWebAsync Method</span></span>  
+ <span data-ttu-id="01457-188">此範例會將 `AccessTheWebAsync` 分為兩個方法。</span><span class="sxs-lookup"><span data-stu-id="01457-188">This example splits `AccessTheWebAsync` into two methods.</span></span> <span data-ttu-id="01457-189">第一種方法為 `AccessTheWebAsync`，可啟動群組的所有下載工作，並且設定 `pendingWork` 來控制顯示程序。</span><span class="sxs-lookup"><span data-stu-id="01457-189">The first method, `AccessTheWebAsync`, starts all the download tasks for a group and sets up `pendingWork` to control the display process.</span></span> <span data-ttu-id="01457-190">此方法會使用 Language Integrated Query (LINQ 查詢) 和 <xref:System.Linq.Enumerable.ToArray%2A> 來同時啟動所有下載工作。</span><span class="sxs-lookup"><span data-stu-id="01457-190">The method uses a Language Integrated Query (LINQ query) and <xref:System.Linq.Enumerable.ToArray%2A> to start all the download tasks at the same time.</span></span>  
   
- <span data-ttu-id="f38a3-191">`AccessTheWebAsync` 接著呼叫 `FinishOneGroupAsync` 來等候每個下載完成，並顯示它的長度。</span><span class="sxs-lookup"><span data-stu-id="f38a3-191">`AccessTheWebAsync` then calls `FinishOneGroupAsync` to await the completion of each download and display its length.</span></span>  
+ <span data-ttu-id="01457-191">`AccessTheWebAsync` 接著呼叫 `FinishOneGroupAsync` 來等候每個下載完成，並顯示它的長度。</span><span class="sxs-lookup"><span data-stu-id="01457-191">`AccessTheWebAsync` then calls `FinishOneGroupAsync` to await the completion of each download and display its length.</span></span>  
   
- <span data-ttu-id="f38a3-192">`FinishOneGroupAsync` 傳回工作，該工作指派給 `AccessTheWebAsync` 中的 `pendingWork`。</span><span class="sxs-lookup"><span data-stu-id="f38a3-192">`FinishOneGroupAsync` returns a task that's assigned to `pendingWork` in `AccessTheWebAsync`.</span></span> <span data-ttu-id="f38a3-193">在工作完成前，該值會防止另一項作業中斷該工作。</span><span class="sxs-lookup"><span data-stu-id="f38a3-193">That value prevents interruption by another operation before the task is complete.</span></span>  
+ <span data-ttu-id="01457-192">`FinishOneGroupAsync` 傳回工作，該工作指派給 `AccessTheWebAsync` 中的 `pendingWork`。</span><span class="sxs-lookup"><span data-stu-id="01457-192">`FinishOneGroupAsync` returns a task that's assigned to `pendingWork` in `AccessTheWebAsync`.</span></span> <span data-ttu-id="01457-193">在工作完成前，該值會防止另一項作業中斷該工作。</span><span class="sxs-lookup"><span data-stu-id="01457-193">That value prevents interruption by another operation before the task is complete.</span></span>  
   
 ```csharp  
 private async Task<char> AccessTheWebAsync(char grp)  
@@ -461,10 +451,10 @@ private async Task<char> AccessTheWebAsync(char grp)
 }  
 ```  
   
-#### <a name="the-finishonegroupasync-method"></a><span data-ttu-id="f38a3-194">FinishOneGroupAsync 方法</span><span class="sxs-lookup"><span data-stu-id="f38a3-194">The FinishOneGroupAsync Method</span></span>  
- <span data-ttu-id="f38a3-195">這個方法不斷循環群組中的下載工作，等待每一項、顯示下載網站的長度，並將長度加總到總計。</span><span class="sxs-lookup"><span data-stu-id="f38a3-195">This method cycles through the download tasks in a group, awaiting each one, displaying the length of the downloaded website, and adding the length to the total.</span></span>  
+#### <a name="the-finishonegroupasync-method"></a><span data-ttu-id="01457-194">FinishOneGroupAsync 方法</span><span class="sxs-lookup"><span data-stu-id="01457-194">The FinishOneGroupAsync Method</span></span>  
+ <span data-ttu-id="01457-195">這個方法不斷循環群組中的下載工作，等待每一項、顯示下載網站的長度，並將長度加總到總計。</span><span class="sxs-lookup"><span data-stu-id="01457-195">This method cycles through the download tasks in a group, awaiting each one, displaying the length of the downloaded website, and adding the length to the total.</span></span>  
   
- <span data-ttu-id="f38a3-196">`FinishOneGroupAsync` 中的第一個陳述式使用 `pendingWork`，確保進入方法不會干擾已在顯示程序中的作業，或已在等候的作業。</span><span class="sxs-lookup"><span data-stu-id="f38a3-196">The first statement in `FinishOneGroupAsync` uses `pendingWork` to make sure that entering the method doesn't interfere with an operation that is already in the display process or that's already waiting.</span></span> <span data-ttu-id="f38a3-197">如果這類作業正在進行，進入作業必須等候。</span><span class="sxs-lookup"><span data-stu-id="f38a3-197">If such an operation is in progress, the entering operation must wait its turn.</span></span>  
+ <span data-ttu-id="01457-196">`FinishOneGroupAsync` 中的第一個陳述式使用 `pendingWork`，確保進入方法不會干擾已在顯示程序中的作業，或已在等候的作業。</span><span class="sxs-lookup"><span data-stu-id="01457-196">The first statement in `FinishOneGroupAsync` uses `pendingWork` to make sure that entering the method doesn't interfere with an operation that is already in the display process or that's already waiting.</span></span> <span data-ttu-id="01457-197">如果這類作業正在進行，進入作業必須等候。</span><span class="sxs-lookup"><span data-stu-id="01457-197">If such an operation is in progress, the entering operation must wait its turn.</span></span>  
   
 ```csharp  
 private async Task FinishOneGroupAsync(List<string> urls, Task<byte[]>[] contentTasks, char grp)  
@@ -491,12 +481,12 @@ private async Task FinishOneGroupAsync(List<string> urls, Task<byte[]>[] content
 ```  
   
    
-#### <a name="points-of-interest"></a><span data-ttu-id="f38a3-198">參考資訊</span><span class="sxs-lookup"><span data-stu-id="f38a3-198">Points of Interest</span></span>  
- <span data-ttu-id="f38a3-199">在輸出中以井字號 (#) 開頭的資訊行會釐清此範例的運作方式。</span><span class="sxs-lookup"><span data-stu-id="f38a3-199">The information lines that start with a pound sign (#) in the output clarify how this example works.</span></span>  
+#### <a name="points-of-interest"></a><span data-ttu-id="01457-198">參考資訊</span><span class="sxs-lookup"><span data-stu-id="01457-198">Points of Interest</span></span>  
+ <span data-ttu-id="01457-199">在輸出中以井字號 (#) 開頭的資訊行會釐清此範例的運作方式。</span><span class="sxs-lookup"><span data-stu-id="01457-199">The information lines that start with a pound sign (#) in the output clarify how this example works.</span></span>  
   
- <span data-ttu-id="f38a3-200">輸出會顯示下列模式。</span><span class="sxs-lookup"><span data-stu-id="f38a3-200">The output shows the following patterns.</span></span>  
+ <span data-ttu-id="01457-200">輸出會顯示下列模式。</span><span class="sxs-lookup"><span data-stu-id="01457-200">The output shows the following patterns.</span></span>  
   
--   <span data-ttu-id="f38a3-201">當前一個群組顯示其輸出時，就可以啟動一個群組，但不會中斷前一個群組的輸出顯示。</span><span class="sxs-lookup"><span data-stu-id="f38a3-201">A group can be started while a previous group is displaying its output, but the display of the previous group's output isn't interrupted.</span></span>  
+-   <span data-ttu-id="01457-201">當前一個群組顯示其輸出時，就可以啟動一個群組，但不會中斷前一個群組的輸出顯示。</span><span class="sxs-lookup"><span data-stu-id="01457-201">A group can be started while a previous group is displaying its output, but the display of the previous group's output isn't interrupted.</span></span>  
   
     ```  
     #Starting group A.  
@@ -532,61 +522,61 @@ private async Task FinishOneGroupAsync(List<string> urls, Task<byte[]>[] content
     TOTAL bytes returned:  915908  
     ```  
   
--   <span data-ttu-id="f38a3-202">只有針對群組 A 啟動 `FinishOneGroupAsync` 時 (先啟動)，`pendingWork` 工作才是 Null。</span><span class="sxs-lookup"><span data-stu-id="f38a3-202">The `pendingWork` task is null  at the start of `FinishOneGroupAsync` only for group A, which started first.</span></span> <span data-ttu-id="f38a3-203">當群組 A 到達 `FinishOneGroupAsync` 時，它尚未完成 await 運算式。</span><span class="sxs-lookup"><span data-stu-id="f38a3-203">Group A hasn’t yet completed an await expression when it reaches `FinishOneGroupAsync`.</span></span> <span data-ttu-id="f38a3-204">因此，尚未將控制項返回 `AccessTheWebAsync`，且尚未針對 `pendingWork` 進行第一次指派。</span><span class="sxs-lookup"><span data-stu-id="f38a3-204">Therefore, control hasn't returned to `AccessTheWebAsync`, and the first assignment to `pendingWork` hasn't occurred.</span></span>  
+-   <span data-ttu-id="01457-202">只有針對群組 A 啟動 `FinishOneGroupAsync` 時 (先啟動)，`pendingWork` 工作才是 Null。</span><span class="sxs-lookup"><span data-stu-id="01457-202">The `pendingWork` task is null  at the start of `FinishOneGroupAsync` only for group A, which started first.</span></span> <span data-ttu-id="01457-203">當群組 A 到達 `FinishOneGroupAsync` 時，它尚未完成 await 運算式。</span><span class="sxs-lookup"><span data-stu-id="01457-203">Group A hasn’t yet completed an await expression when it reaches `FinishOneGroupAsync`.</span></span> <span data-ttu-id="01457-204">因此，尚未將控制項返回 `AccessTheWebAsync`，且尚未針對 `pendingWork` 進行第一次指派。</span><span class="sxs-lookup"><span data-stu-id="01457-204">Therefore, control hasn't returned to `AccessTheWebAsync`, and the first assignment to `pendingWork` hasn't occurred.</span></span>  
   
--   <span data-ttu-id="f38a3-205">下列兩行一律會在輸出中一起出現。</span><span class="sxs-lookup"><span data-stu-id="f38a3-205">The following two lines always appear together in the output.</span></span> <span data-ttu-id="f38a3-206">在 `StartButton_Click` 中啟動群組的作業，與將群組的工作指派給 `pendingWork` 之間，程式碼永遠不會中斷</span><span class="sxs-lookup"><span data-stu-id="f38a3-206">The code is never interrupted between starting a group's operation in `StartButton_Click` and assigning a task for the group to `pendingWork`.</span></span>  
+-   <span data-ttu-id="01457-205">下列兩行一律會在輸出中一起出現。</span><span class="sxs-lookup"><span data-stu-id="01457-205">The following two lines always appear together in the output.</span></span> <span data-ttu-id="01457-206">在 `StartButton_Click` 中啟動群組的作業，與將群組的工作指派給 `pendingWork` 之間，程式碼永遠不會中斷</span><span class="sxs-lookup"><span data-stu-id="01457-206">The code is never interrupted between starting a group's operation in `StartButton_Click` and assigning a task for the group to `pendingWork`.</span></span>  
   
     ```  
     #Starting group B.  
     #Task assigned for group B. Download tasks are active.  
     ```  
   
-     <span data-ttu-id="f38a3-207">在群組進入 `StartButton_Click` 後，作業尚未完成 await 運算式，需直到作業進入 `FinishOneGroupAsync` 為止。</span><span class="sxs-lookup"><span data-stu-id="f38a3-207">After a group enters `StartButton_Click`, the operation doesn't complete an await expression until the operation enters `FinishOneGroupAsync`.</span></span> <span data-ttu-id="f38a3-208">因此，沒有其他作業可在該程式碼區段的過程中取得控制項。</span><span class="sxs-lookup"><span data-stu-id="f38a3-208">Therefore, no other operation can gain control during that segment of code.</span></span>  
+     <span data-ttu-id="01457-207">在群組進入 `StartButton_Click` 後，作業尚未完成 await 運算式，需直到作業進入 `FinishOneGroupAsync` 為止。</span><span class="sxs-lookup"><span data-stu-id="01457-207">After a group enters `StartButton_Click`, the operation doesn't complete an await expression until the operation enters `FinishOneGroupAsync`.</span></span> <span data-ttu-id="01457-208">因此，沒有其他作業可在該程式碼區段的過程中取得控制項。</span><span class="sxs-lookup"><span data-stu-id="01457-208">Therefore, no other operation can gain control during that segment of code.</span></span>  
   
-##  <a name="BKMD_SettingUpTheExample"></a> <span data-ttu-id="f38a3-209">檢閱及執行範例應用程式</span><span class="sxs-lookup"><span data-stu-id="f38a3-209">Reviewing and Running the Example App</span></span>  
- <span data-ttu-id="f38a3-210">若要進一步了解範例應用程式，您可以下載它、自行建置它，或檢閱本主題結尾的程式碼而不必實作應用程式。</span><span class="sxs-lookup"><span data-stu-id="f38a3-210">To better understand the example app, you can download it, build it yourself, or review the code at the end of this topic without implementing the app.</span></span>  
+##  <a name="BKMD_SettingUpTheExample"></a> <span data-ttu-id="01457-209">檢閱及執行範例應用程式</span><span class="sxs-lookup"><span data-stu-id="01457-209">Reviewing and Running the Example App</span></span>  
+ <span data-ttu-id="01457-210">若要進一步了解範例應用程式，您可以下載它、自行建置它，或檢閱本主題結尾的程式碼而不必實作應用程式。</span><span class="sxs-lookup"><span data-stu-id="01457-210">To better understand the example app, you can download it, build it yourself, or review the code at the end of this topic without implementing the app.</span></span>  
   
 > [!NOTE]
->  <span data-ttu-id="f38a3-211">若要執行範例作為 Windows Presentation Foundation (WPF) 傳統型應用程式，您必須在電腦上安裝 Visual Studio 2012 或更新版本以及 .NET Framework 4.5 或更新版本。</span><span class="sxs-lookup"><span data-stu-id="f38a3-211">To run the example as a Windows Presentation Foundation (WPF) desktop app, you must have Visual Studio 2012 or newer and the .NET Framework 4.5 or newer installed on your computer.</span></span>  
+>  <span data-ttu-id="01457-211">若要執行範例作為 Windows Presentation Foundation (WPF) 傳統型應用程式，您必須在電腦上安裝 Visual Studio 2012 或更新版本以及 .NET Framework 4.5 或更新版本。</span><span class="sxs-lookup"><span data-stu-id="01457-211">To run the example as a Windows Presentation Foundation (WPF) desktop app, you must have Visual Studio 2012 or newer and the .NET Framework 4.5 or newer installed on your computer.</span></span>  
   
-###  <a name="BKMK_DownloadingTheApp"></a> <span data-ttu-id="f38a3-212">下載應用程式</span><span class="sxs-lookup"><span data-stu-id="f38a3-212">Downloading the App</span></span>  
+###  <a name="BKMK_DownloadingTheApp"></a> <span data-ttu-id="01457-212">下載應用程式</span><span class="sxs-lookup"><span data-stu-id="01457-212">Downloading the App</span></span>  
   
-1.  <span data-ttu-id="f38a3-213">從[非同步範例︰重新進入 .NET 桌面應用程式](https://code.msdn.microsoft.com/Async-Sample-Preventing-a8489f06)下載壓縮檔案。</span><span class="sxs-lookup"><span data-stu-id="f38a3-213">Download the compressed file from [Async Samples: Reentrancy in .NET Desktop Apps](https://code.msdn.microsoft.com/Async-Sample-Preventing-a8489f06).</span></span>  
+1.  <span data-ttu-id="01457-213">從[非同步範例︰重新進入 .NET 桌面應用程式](https://code.msdn.microsoft.com/Async-Sample-Preventing-a8489f06)下載壓縮檔案。</span><span class="sxs-lookup"><span data-stu-id="01457-213">Download the compressed file from [Async Samples: Reentrancy in .NET Desktop Apps](https://code.msdn.microsoft.com/Async-Sample-Preventing-a8489f06).</span></span>  
   
-2.  <span data-ttu-id="f38a3-214">解壓縮您下載的檔案，然後啟動 Visual Studio。</span><span class="sxs-lookup"><span data-stu-id="f38a3-214">Decompress the file that you downloaded, and then start Visual Studio.</span></span>  
+2.  <span data-ttu-id="01457-214">解壓縮您下載的檔案，然後啟動 Visual Studio。</span><span class="sxs-lookup"><span data-stu-id="01457-214">Decompress the file that you downloaded, and then start Visual Studio.</span></span>  
   
-3.  <span data-ttu-id="f38a3-215">在功能表列上，依序選擇 [檔案] 、[開啟舊檔] 及 [專案/方案] 。</span><span class="sxs-lookup"><span data-stu-id="f38a3-215">On the menu bar, choose **File**, **Open**, **Project/Solution**.</span></span>  
+3.  <span data-ttu-id="01457-215">在功能表列上，依序選擇 [檔案] 、[開啟舊檔] 及 [專案/方案] 。</span><span class="sxs-lookup"><span data-stu-id="01457-215">On the menu bar, choose **File**, **Open**, **Project/Solution**.</span></span>  
   
-4.  <span data-ttu-id="f38a3-216">導覽至保存解壓縮之範例程式碼的資料夾，然後開啟方案 (.sln) 檔案。</span><span class="sxs-lookup"><span data-stu-id="f38a3-216">Navigate to the folder that holds the decompressed sample code, and then open the solution (.sln) file.</span></span>  
+4.  <span data-ttu-id="01457-216">導覽至保存解壓縮之範例程式碼的資料夾，然後開啟方案 (.sln) 檔案。</span><span class="sxs-lookup"><span data-stu-id="01457-216">Navigate to the folder that holds the decompressed sample code, and then open the solution (.sln) file.</span></span>  
   
-5.  <span data-ttu-id="f38a3-217">在方案總管中，開啟要執行之專案的捷徑功能表，然後選擇 [設定為啟始專案]。</span><span class="sxs-lookup"><span data-stu-id="f38a3-217">In **Solution Explorer**, open the shortcut menu for the project that you want to run, and then choose **Set as StartUpProject**.</span></span>  
+5.  <span data-ttu-id="01457-217">在方案總管中，開啟要執行之專案的捷徑功能表，然後選擇 [設定為啟始專案]。</span><span class="sxs-lookup"><span data-stu-id="01457-217">In **Solution Explorer**, open the shortcut menu for the project that you want to run, and then choose **Set as StartUpProject**.</span></span>  
   
-6.  <span data-ttu-id="f38a3-218">選擇 CTRL + F5 鍵以建置並執行專案。</span><span class="sxs-lookup"><span data-stu-id="f38a3-218">Choose the CTRL+F5 keys to build and run the project.</span></span>  
+6.  <span data-ttu-id="01457-218">選擇 CTRL + F5 鍵以建置並執行專案。</span><span class="sxs-lookup"><span data-stu-id="01457-218">Choose the CTRL+F5 keys to build and run the project.</span></span>  
   
-###  <a name="BKMK_BuildingTheApp"></a> <span data-ttu-id="f38a3-219">建置應用程式</span><span class="sxs-lookup"><span data-stu-id="f38a3-219">Building the App</span></span>  
- <span data-ttu-id="f38a3-220">下節提供將範例建置為 WPF 應用程式的程式碼。</span><span class="sxs-lookup"><span data-stu-id="f38a3-220">The following section provides the code to build the example as a WPF app.</span></span>  
+###  <a name="BKMK_BuildingTheApp"></a> <span data-ttu-id="01457-219">建置應用程式</span><span class="sxs-lookup"><span data-stu-id="01457-219">Building the App</span></span>  
+ <span data-ttu-id="01457-220">下節提供將範例建置為 WPF 應用程式的程式碼。</span><span class="sxs-lookup"><span data-stu-id="01457-220">The following section provides the code to build the example as a WPF app.</span></span>  
   
-##### <a name="to-build-a-wpf-app"></a><span data-ttu-id="f38a3-221">若要建置 WPF 應用程式</span><span class="sxs-lookup"><span data-stu-id="f38a3-221">To build a WPF app</span></span>  
+##### <a name="to-build-a-wpf-app"></a><span data-ttu-id="01457-221">若要建置 WPF 應用程式</span><span class="sxs-lookup"><span data-stu-id="01457-221">To build a WPF app</span></span>  
   
-1.  <span data-ttu-id="f38a3-222">啟動 Visual Studio。</span><span class="sxs-lookup"><span data-stu-id="f38a3-222">Start Visual Studio.</span></span>  
+1.  <span data-ttu-id="01457-222">啟動 Visual Studio。</span><span class="sxs-lookup"><span data-stu-id="01457-222">Start Visual Studio.</span></span>  
   
-2.  <span data-ttu-id="f38a3-223">在功能表列上，選擇 [檔案] 、[新增] 、[專案] 。</span><span class="sxs-lookup"><span data-stu-id="f38a3-223">On the menu bar, choose **File**, **New**, **Project**.</span></span>  
+2.  <span data-ttu-id="01457-223">在功能表列上，選擇 [檔案] 、[新增] 、[專案] 。</span><span class="sxs-lookup"><span data-stu-id="01457-223">On the menu bar, choose **File**, **New**, **Project**.</span></span>  
   
-     <span data-ttu-id="f38a3-224">[ **新增專案** ] 對話方塊隨即開啟。</span><span class="sxs-lookup"><span data-stu-id="f38a3-224">The **New Project** dialog box opens.</span></span>  
+     <span data-ttu-id="01457-224">[ **新增專案** ] 對話方塊隨即開啟。</span><span class="sxs-lookup"><span data-stu-id="01457-224">The **New Project** dialog box opens.</span></span>  
   
-3.  <span data-ttu-id="f38a3-225">在 [安裝的範本] 窗格中，依序展開 [Visual C#] 及 [Windows]。</span><span class="sxs-lookup"><span data-stu-id="f38a3-225">In the **Installed Templates** pane, expand **Visual C#**, and then expand **Windows**.</span></span>  
+3.  <span data-ttu-id="01457-225">在 [安裝的範本] 窗格中，依序展開 [Visual C#] 及 [Windows]。</span><span class="sxs-lookup"><span data-stu-id="01457-225">In the **Installed Templates** pane, expand **Visual C#**, and then expand **Windows**.</span></span>  
   
-4.  <span data-ttu-id="f38a3-226">在專案類型清單中，選擇 [WPF 應用程式]。</span><span class="sxs-lookup"><span data-stu-id="f38a3-226">In the list of project types, choose **WPF Application**.</span></span>  
+4.  <span data-ttu-id="01457-226">在專案類型清單中，選擇 [WPF 應用程式]。</span><span class="sxs-lookup"><span data-stu-id="01457-226">In the list of project types, choose **WPF Application**.</span></span>  
   
-5.  <span data-ttu-id="f38a3-227">將專案命名為 `WebsiteDownloadWPF`，然後選擇 [確定] 按鈕。</span><span class="sxs-lookup"><span data-stu-id="f38a3-227">Name the project `WebsiteDownloadWPF`, and then choose the **OK** button.</span></span>  
+5.  <span data-ttu-id="01457-227">將專案命名為 `WebsiteDownloadWPF`，然後選擇 [確定] 按鈕。</span><span class="sxs-lookup"><span data-stu-id="01457-227">Name the project `WebsiteDownloadWPF`, and then choose the **OK** button.</span></span>  
   
-     <span data-ttu-id="f38a3-228">新的專案隨即會出現在方案總管中。</span><span class="sxs-lookup"><span data-stu-id="f38a3-228">The new project appears in **Solution Explorer**.</span></span>  
+     <span data-ttu-id="01457-228">新的專案隨即會出現在方案總管中。</span><span class="sxs-lookup"><span data-stu-id="01457-228">The new project appears in **Solution Explorer**.</span></span>  
   
-6.  <span data-ttu-id="f38a3-229">在 Visual Studio 程式碼編輯器中，選擇 [ **MainWindow.xaml** ] 索引標籤。</span><span class="sxs-lookup"><span data-stu-id="f38a3-229">In the Visual Studio Code Editor, choose the **MainWindow.xaml** tab.</span></span>  
+6.  <span data-ttu-id="01457-229">在 Visual Studio 程式碼編輯器中，選擇 [ **MainWindow.xaml** ] 索引標籤。</span><span class="sxs-lookup"><span data-stu-id="01457-229">In the Visual Studio Code Editor, choose the **MainWindow.xaml** tab.</span></span>  
   
-     <span data-ttu-id="f38a3-230">如未顯示索引標籤，請在方案總管中開啟 MainWindow.xaml 的捷徑功能表，然後選擇 [檢視程式碼]。</span><span class="sxs-lookup"><span data-stu-id="f38a3-230">If the tab isn’t visible, open the shortcut menu for MainWindow.xaml in **Solution Explorer**, and then choose **View Code**.</span></span>  
+     <span data-ttu-id="01457-230">如未顯示索引標籤，請在方案總管中開啟 MainWindow.xaml 的捷徑功能表，然後選擇 [檢視程式碼]。</span><span class="sxs-lookup"><span data-stu-id="01457-230">If the tab isn’t visible, open the shortcut menu for MainWindow.xaml in **Solution Explorer**, and then choose **View Code**.</span></span>  
   
-7.  <span data-ttu-id="f38a3-231">在 MainWindow.xaml 的 [XAML] 檢視中，以下列程式碼取代程式碼。</span><span class="sxs-lookup"><span data-stu-id="f38a3-231">In the **XAML** view of MainWindow.xaml, replace the code with the following code.</span></span>  
+7.  <span data-ttu-id="01457-231">在 MainWindow.xaml 的 [XAML] 檢視中，以下列程式碼取代程式碼。</span><span class="sxs-lookup"><span data-stu-id="01457-231">In the **XAML** view of MainWindow.xaml, replace the code with the following code.</span></span>  
   
     ```csharp  
     <Window x:Class="WebsiteDownloadWPF.MainWindow"  
@@ -604,13 +594,13 @@ private async Task FinishOneGroupAsync(List<string> urls, Task<byte[]>[] content
     </Window>  
     ```  
   
-     <span data-ttu-id="f38a3-232">包含文字方塊和按鈕的簡易視窗會出現在 MainWindow.xaml 的 [設計] 檢視中。</span><span class="sxs-lookup"><span data-stu-id="f38a3-232">A simple window that contains a text box and a button appears in the **Design** view of MainWindow.xaml.</span></span>  
+     <span data-ttu-id="01457-232">包含文字方塊和按鈕的簡易視窗會出現在 MainWindow.xaml 的 [設計] 檢視中。</span><span class="sxs-lookup"><span data-stu-id="01457-232">A simple window that contains a text box and a button appears in the **Design** view of MainWindow.xaml.</span></span>  
   
-8.  <span data-ttu-id="f38a3-233">加入 <xref:System.Net.Http> 的參考。</span><span class="sxs-lookup"><span data-stu-id="f38a3-233">Add a reference for <xref:System.Net.Http>.</span></span>  
+8.  <span data-ttu-id="01457-233">加入 <xref:System.Net.Http> 的參考。</span><span class="sxs-lookup"><span data-stu-id="01457-233">Add a reference for <xref:System.Net.Http>.</span></span>  
   
-9. <span data-ttu-id="f38a3-234">在方案總管中，開啟 MainWindow.xaml.cs 的捷徑功能表，然後選擇 [檢視程式碼]。</span><span class="sxs-lookup"><span data-stu-id="f38a3-234">In **Solution Explorer**, open the shortcut menu for MainWindow.xaml.cs, and then choose **View Code**.</span></span>  
+9. <span data-ttu-id="01457-234">在方案總管中，開啟 MainWindow.xaml.cs 的捷徑功能表，然後選擇 [檢視程式碼]。</span><span class="sxs-lookup"><span data-stu-id="01457-234">In **Solution Explorer**, open the shortcut menu for MainWindow.xaml.cs, and then choose **View Code**.</span></span>  
   
-10. <span data-ttu-id="f38a3-235">將 MainWindow.xaml.cs 中的程式碼更換為下列程式碼。</span><span class="sxs-lookup"><span data-stu-id="f38a3-235">In MainWindow.xaml.cs, replace the code with the following code.</span></span>  
+10. <span data-ttu-id="01457-235">將 MainWindow.xaml.cs 中的程式碼更換為下列程式碼。</span><span class="sxs-lookup"><span data-stu-id="01457-235">In MainWindow.xaml.cs, replace the code with the following code.</span></span>  
   
     ```csharp  
     using System;  
@@ -715,10 +705,10 @@ private async Task FinishOneGroupAsync(List<string> urls, Task<byte[]>[] content
     }  
     ```  
   
-11. <span data-ttu-id="f38a3-236">選擇 CTRL+F5 鍵以執行程式，然後選擇 [開始] 按鈕數次。</span><span class="sxs-lookup"><span data-stu-id="f38a3-236">Choose the CTRL+F5 keys to run the program, and then choose the **Start** button several times.</span></span>  
+11. <span data-ttu-id="01457-236">選擇 CTRL+F5 鍵以執行程式，然後選擇 [開始] 按鈕數次。</span><span class="sxs-lookup"><span data-stu-id="01457-236">Choose the CTRL+F5 keys to run the program, and then choose the **Start** button several times.</span></span>  
   
-12. <span data-ttu-id="f38a3-237">從[停用開始按鈕](#BKMK_DisableTheStartButton)、[取消後再重新啟動作業](#BKMK_CancelAndRestart)或[執行多個作業並將輸出加入佇列](#BKMK_RunMultipleOperations)進行變更以處理重新進入。</span><span class="sxs-lookup"><span data-stu-id="f38a3-237">Make the changes from [Disable the Start Button](#BKMK_DisableTheStartButton), [Cancel and Restart the Operation](#BKMK_CancelAndRestart), or [Run Multiple Operations and Queue the Output](#BKMK_RunMultipleOperations) to handle the reentrancy.</span></span>  
+12. <span data-ttu-id="01457-237">從[停用開始按鈕](#BKMK_DisableTheStartButton)、[取消後再重新啟動作業](#BKMK_CancelAndRestart)或[執行多個作業並將輸出加入佇列](#BKMK_RunMultipleOperations)進行變更以處理重新進入。</span><span class="sxs-lookup"><span data-stu-id="01457-237">Make the changes from [Disable the Start Button](#BKMK_DisableTheStartButton), [Cancel and Restart the Operation](#BKMK_CancelAndRestart), or [Run Multiple Operations and Queue the Output](#BKMK_RunMultipleOperations) to handle the reentrancy.</span></span>  
   
-## <a name="see-also"></a><span data-ttu-id="f38a3-238">請參閱</span><span class="sxs-lookup"><span data-stu-id="f38a3-238">See Also</span></span>  
- [<span data-ttu-id="f38a3-239">逐步解說：使用 async 和 await 存取 Web (C#)</span><span class="sxs-lookup"><span data-stu-id="f38a3-239">Walkthrough: Accessing the Web by Using async and await (C#)</span></span>](../../../../csharp/programming-guide/concepts/async/walkthrough-accessing-the-web-by-using-async-and-await.md)  
- [<span data-ttu-id="f38a3-240">使用 async 和 await 進行非同步程式設計 (C#)</span><span class="sxs-lookup"><span data-stu-id="f38a3-240">Asynchronous Programming with async and await (C#)</span></span>](../../../../csharp/programming-guide/concepts/async/index.md)
+## <a name="see-also"></a><span data-ttu-id="01457-238">請參閱</span><span class="sxs-lookup"><span data-stu-id="01457-238">See Also</span></span>  
+ [<span data-ttu-id="01457-239">逐步解說：使用 async 和 await 存取 Web (C#)</span><span class="sxs-lookup"><span data-stu-id="01457-239">Walkthrough: Accessing the Web by Using async and await (C#)</span></span>](../../../../csharp/programming-guide/concepts/async/walkthrough-accessing-the-web-by-using-async-and-await.md)  
+ [<span data-ttu-id="01457-240">使用 async 和 await 進行非同步程式設計 (C#)</span><span class="sxs-lookup"><span data-stu-id="01457-240">Asynchronous Programming with async and await (C#)</span></span>](../../../../csharp/programming-guide/concepts/async/index.md)

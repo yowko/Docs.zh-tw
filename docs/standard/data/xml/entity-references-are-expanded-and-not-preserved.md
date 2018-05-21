@@ -1,54 +1,43 @@
 ---
-title: "實體參考是可擴充且沒有保留"
-ms.custom: 
+title: 實體參考是可擴充且沒有保留
 ms.date: 03/30/2017
-ms.prod: .net
-ms.reviewer: 
-ms.suite: 
 ms.technology: dotnet-standard
-ms.tgt_pltfrm: 
-ms.topic: article
 ms.assetid: ffd97806-ab43-4538-8de2-5828bfbbde57
-caps.latest.revision: 
 author: mairaw
 ms.author: mairaw
-manager: wpickett
-ms.workload:
-- dotnet
-- dotnetcore
-ms.openlocfilehash: 00b997865c614756ea5fd9567ded3baa469f4c62
-ms.sourcegitcommit: e7f04439d78909229506b56935a1105a4149ff3d
+ms.openlocfilehash: aa03532200a89aa164648c1278c9dbafc2aee214
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 12/23/2017
+ms.lasthandoff: 05/04/2018
 ---
-# <a name="entity-references-are-expanded-and-not-preserved"></a><span data-ttu-id="e4468-102">實體參考是可擴充且沒有保留</span><span class="sxs-lookup"><span data-stu-id="e4468-102">Entity References are Expanded and Not Preserved</span></span>
-<span data-ttu-id="e4468-103">當實體參考擴充並且由它所表示的文字所取代時，就不會建立 **XmlEntityReference** 節點。</span><span class="sxs-lookup"><span data-stu-id="e4468-103">When the entity reference is expanded and replaced by the text it represents, the **XmlEntityReference** node is not created.</span></span> <span data-ttu-id="e4468-104">相反的，實體宣告會剖析，而從宣告中之內容建立的節點會複製到 **XmlEntityReference** 的位置。</span><span class="sxs-lookup"><span data-stu-id="e4468-104">Instead, the entity declaration is parsed, and nodes created from the content in the declaration are copied in the place of the **XmlEntityReference**.</span></span> <span data-ttu-id="e4468-105">因此，在 `&publisher;` 範例中，不會儲存 `&publisher;`，但會建立 **XmlText** 節點。</span><span class="sxs-lookup"><span data-stu-id="e4468-105">Therefore, in the `&publisher;` example, the `&publisher;` is not saved, but instead, an **XmlText** node is created.</span></span>  
+# <a name="entity-references-are-expanded-and-not-preserved"></a><span data-ttu-id="9d604-102">實體參考是可擴充且沒有保留</span><span class="sxs-lookup"><span data-stu-id="9d604-102">Entity References are Expanded and Not Preserved</span></span>
+<span data-ttu-id="9d604-103">當實體參考擴充並且由它所表示的文字所取代時，就不會建立 **XmlEntityReference** 節點。</span><span class="sxs-lookup"><span data-stu-id="9d604-103">When the entity reference is expanded and replaced by the text it represents, the **XmlEntityReference** node is not created.</span></span> <span data-ttu-id="9d604-104">相反的，實體宣告會剖析，而從宣告中之內容建立的節點會複製到 **XmlEntityReference** 的位置。</span><span class="sxs-lookup"><span data-stu-id="9d604-104">Instead, the entity declaration is parsed, and nodes created from the content in the declaration are copied in the place of the **XmlEntityReference**.</span></span> <span data-ttu-id="9d604-105">因此，在 `&publisher;` 範例中，不會儲存 `&publisher;`，但會建立 **XmlText** 節點。</span><span class="sxs-lookup"><span data-stu-id="9d604-105">Therefore, in the `&publisher;` example, the `&publisher;` is not saved, but instead, an **XmlText** node is created.</span></span>  
   
- <span data-ttu-id="e4468-106">![擴充樹狀結構](../../../../docs/standard/data/xml/media/xmlentityref-expanded-nodes.gif "xmlentityref_expanded_nodes")</span><span class="sxs-lookup"><span data-stu-id="e4468-106">![expanded tree structure](../../../../docs/standard/data/xml/media/xmlentityref-expanded-nodes.gif "xmlentityref_expanded_nodes")</span></span>  
-<span data-ttu-id="e4468-107">擴充之實體參考的樹狀</span><span class="sxs-lookup"><span data-stu-id="e4468-107">Tree structure for entity references that are expanded</span></span>  
+ <span data-ttu-id="9d604-106">![擴充樹狀結構](../../../../docs/standard/data/xml/media/xmlentityref-expanded-nodes.gif "xmlentityref_expanded_nodes")</span><span class="sxs-lookup"><span data-stu-id="9d604-106">![expanded tree structure](../../../../docs/standard/data/xml/media/xmlentityref-expanded-nodes.gif "xmlentityref_expanded_nodes")</span></span>  
+<span data-ttu-id="9d604-107">擴充之實體參考的樹狀</span><span class="sxs-lookup"><span data-stu-id="9d604-107">Tree structure for entity references that are expanded</span></span>  
   
- <span data-ttu-id="e4468-108">字元實體 (例如 `B` 或 `<`) 不會予以保留。</span><span class="sxs-lookup"><span data-stu-id="e4468-108">Character entities such as `B` or `<` are not preserved.</span></span> <span data-ttu-id="e4468-109">相反的，它們一定會擴充且以文字節點表示。</span><span class="sxs-lookup"><span data-stu-id="e4468-109">Instead, they are always expanded and represented as text nodes.</span></span>  
+ <span data-ttu-id="9d604-108">字元實體 (例如 `B` 或 `<`) 不會予以保留。</span><span class="sxs-lookup"><span data-stu-id="9d604-108">Character entities such as `B` or `<` are not preserved.</span></span> <span data-ttu-id="9d604-109">相反的，它們一定會擴充且以文字節點表示。</span><span class="sxs-lookup"><span data-stu-id="9d604-109">Instead, they are always expanded and represented as text nodes.</span></span>  
   
- <span data-ttu-id="e4468-110">若要保留 **XmlEntityReference** 節點，以及附加的實體參考子節點，請將 **EntityHandling** 旗標設為 **ExpandCharEntities**。</span><span class="sxs-lookup"><span data-stu-id="e4468-110">To preserve **XmlEntityReference** nodes and child nodes of the entity reference attached to it, set the **EntityHandling** flag to **ExpandCharEntities**.</span></span> <span data-ttu-id="e4468-111">否則，保留 **EntityHandling** 旗標為預設值，就是 **ExpandEntities**。</span><span class="sxs-lookup"><span data-stu-id="e4468-111">Otherwise, leave the **EntityHandling** flag at the default, which is to **ExpandEntities**.</span></span> <span data-ttu-id="e4468-112">在這個範例中，您不會看到 DOM 中的實體參考節點。</span><span class="sxs-lookup"><span data-stu-id="e4468-112">In this case, you will not see entity reference nodes in the DOM.</span></span> <span data-ttu-id="e4468-113">節點會被實體宣告的子節點複本的節點取代。</span><span class="sxs-lookup"><span data-stu-id="e4468-113">The nodes are replaced by the nodes that are copies of the child nodes of the entity declaration.</span></span>  
+ <span data-ttu-id="9d604-110">若要保留 **XmlEntityReference** 節點，以及附加的實體參考子節點，請將 **EntityHandling** 旗標設為 **ExpandCharEntities**。</span><span class="sxs-lookup"><span data-stu-id="9d604-110">To preserve **XmlEntityReference** nodes and child nodes of the entity reference attached to it, set the **EntityHandling** flag to **ExpandCharEntities**.</span></span> <span data-ttu-id="9d604-111">否則，保留 **EntityHandling** 旗標為預設值，就是 **ExpandEntities**。</span><span class="sxs-lookup"><span data-stu-id="9d604-111">Otherwise, leave the **EntityHandling** flag at the default, which is to **ExpandEntities**.</span></span> <span data-ttu-id="9d604-112">在這個範例中，您不會看到 DOM 中的實體參考節點。</span><span class="sxs-lookup"><span data-stu-id="9d604-112">In this case, you will not see entity reference nodes in the DOM.</span></span> <span data-ttu-id="9d604-113">節點會被實體宣告的子節點複本的節點取代。</span><span class="sxs-lookup"><span data-stu-id="9d604-113">The nodes are replaced by the nodes that are copies of the child nodes of the entity declaration.</span></span>  
   
- <span data-ttu-id="e4468-114">沒有保留實體參考的其中一項副作用是當文件儲存並且傳入另一個應用程式時，接收的應用程式不知道節點是由實體參考產生。</span><span class="sxs-lookup"><span data-stu-id="e4468-114">One side effect of not preserving entity references is that when the document is saved and passed on to another application, the receiving application does not know that the nodes were generated by an entity reference.</span></span> <span data-ttu-id="e4468-115">但當實體參考保留時，接收應用程式將可看見實體參考，並可讀取子節點。</span><span class="sxs-lookup"><span data-stu-id="e4468-115">However, when entity references are preserved, a receiving application sees an entity reference and reads the child nodes.</span></span> <span data-ttu-id="e4468-116">顯然子節點會呈現先前位於實體宣告中的資訊。</span><span class="sxs-lookup"><span data-stu-id="e4468-116">It is apparent that the child nodes represent the information that was in the entity declaration.</span></span> <span data-ttu-id="e4468-117">例如，如果實體參考是保留的，DOM 理論上會有下列結構。</span><span class="sxs-lookup"><span data-stu-id="e4468-117">For example, the DOM theoretically has the following structure if entity references are preserved.</span></span>  
+ <span data-ttu-id="9d604-114">沒有保留實體參考的其中一項副作用是當文件儲存並且傳入另一個應用程式時，接收的應用程式不知道節點是由實體參考產生。</span><span class="sxs-lookup"><span data-stu-id="9d604-114">One side effect of not preserving entity references is that when the document is saved and passed on to another application, the receiving application does not know that the nodes were generated by an entity reference.</span></span> <span data-ttu-id="9d604-115">但當實體參考保留時，接收應用程式將可看見實體參考，並可讀取子節點。</span><span class="sxs-lookup"><span data-stu-id="9d604-115">However, when entity references are preserved, a receiving application sees an entity reference and reads the child nodes.</span></span> <span data-ttu-id="9d604-116">顯然子節點會呈現先前位於實體宣告中的資訊。</span><span class="sxs-lookup"><span data-stu-id="9d604-116">It is apparent that the child nodes represent the information that was in the entity declaration.</span></span> <span data-ttu-id="9d604-117">例如，如果實體參考是保留的，DOM 理論上會有下列結構。</span><span class="sxs-lookup"><span data-stu-id="9d604-117">For example, the DOM theoretically has the following structure if entity references are preserved.</span></span>  
   
- <span data-ttu-id="e4468-118">XmlElement: publisher</span><span class="sxs-lookup"><span data-stu-id="e4468-118">XmlElement: publisher</span></span>  
+ <span data-ttu-id="9d604-118">XmlElement: publisher</span><span class="sxs-lookup"><span data-stu-id="9d604-118">XmlElement: publisher</span></span>  
   
- <span data-ttu-id="e4468-119">XmlEntityReference: `&publisher;`</span><span class="sxs-lookup"><span data-stu-id="e4468-119">XmlEntityReference: `&publisher;`</span></span>  
+ <span data-ttu-id="9d604-119">XmlEntityReference: `&publisher;`</span><span class="sxs-lookup"><span data-stu-id="9d604-119">XmlEntityReference: `&publisher;`</span></span>  
   
- <span data-ttu-id="e4468-120">XmlText: Microsoft Press</span><span class="sxs-lookup"><span data-stu-id="e4468-120">XmlText: Microsoft Press</span></span>  
+ <span data-ttu-id="9d604-120">XmlText: Microsoft Press</span><span class="sxs-lookup"><span data-stu-id="9d604-120">XmlText: Microsoft Press</span></span>  
   
- <span data-ttu-id="e4468-121">如果實體參考在 DOM 中擴充 (這是預設方法)，此結構擁有這種樹狀結構類型：</span><span class="sxs-lookup"><span data-stu-id="e4468-121">If entity references are expanded in the DOM, which is the default method, the structure has this type of tree:</span></span>  
+ <span data-ttu-id="9d604-121">如果實體參考在 DOM 中擴充 (這是預設方法)，此結構擁有這種樹狀結構類型：</span><span class="sxs-lookup"><span data-stu-id="9d604-121">If entity references are expanded in the DOM, which is the default method, the structure has this type of tree:</span></span>  
   
- <span data-ttu-id="e4468-122">XmlElement: publisher</span><span class="sxs-lookup"><span data-stu-id="e4468-122">XmlElement: publisher</span></span>  
+ <span data-ttu-id="9d604-122">XmlElement: publisher</span><span class="sxs-lookup"><span data-stu-id="9d604-122">XmlElement: publisher</span></span>  
   
- <span data-ttu-id="e4468-123">XmlText: Microsoft Press</span><span class="sxs-lookup"><span data-stu-id="e4468-123">XmlText: Microsoft Press</span></span>  
+ <span data-ttu-id="9d604-123">XmlText: Microsoft Press</span><span class="sxs-lookup"><span data-stu-id="9d604-123">XmlText: Microsoft Press</span></span>  
   
- <span data-ttu-id="e4468-124">請注意，當實體參考節點消失時，接收的應用程式無法分辨包含 "Microsoft Press" 的 **XmlText** 節點是從實體宣告建立。</span><span class="sxs-lookup"><span data-stu-id="e4468-124">Notice that the entity reference node is gone, and the receiving application cannot tell that the **XmlText** node containing "Microsoft Press" was created from an entity declaration.</span></span>  
+ <span data-ttu-id="9d604-124">請注意，當實體參考節點消失時，接收的應用程式無法分辨包含 "Microsoft Press" 的 **XmlText** 節點是從實體宣告建立。</span><span class="sxs-lookup"><span data-stu-id="9d604-124">Notice that the entity reference node is gone, and the receiving application cannot tell that the **XmlText** node containing "Microsoft Press" was created from an entity declaration.</span></span>  
   
- <span data-ttu-id="e4468-125">如果您使用無法解析實體的讀取器，當 **Load** 方法遇到實體參考時，會擲回例外狀況。</span><span class="sxs-lookup"><span data-stu-id="e4468-125">If you use a reader that cannot resolve entities, the **Load** method throws an exception when it encounters an entity reference.</span></span>  
+ <span data-ttu-id="9d604-125">如果您使用無法解析實體的讀取器，當 **Load** 方法遇到實體參考時，會擲回例外狀況。</span><span class="sxs-lookup"><span data-stu-id="9d604-125">If you use a reader that cannot resolve entities, the **Load** method throws an exception when it encounters an entity reference.</span></span>  
   
-## <a name="see-also"></a><span data-ttu-id="e4468-126">請參閱</span><span class="sxs-lookup"><span data-stu-id="e4468-126">See Also</span></span>  
- [<span data-ttu-id="e4468-127">XML 文件物件模型 (DOM)</span><span class="sxs-lookup"><span data-stu-id="e4468-127">XML Document Object Model (DOM)</span></span>](../../../../docs/standard/data/xml/xml-document-object-model-dom.md)
+## <a name="see-also"></a><span data-ttu-id="9d604-126">請參閱</span><span class="sxs-lookup"><span data-stu-id="9d604-126">See Also</span></span>  
+ [<span data-ttu-id="9d604-127">XML 文件物件模型 (DOM)</span><span class="sxs-lookup"><span data-stu-id="9d604-127">XML Document Object Model (DOM)</span></span>](../../../../docs/standard/data/xml/xml-document-object-model-dom.md)

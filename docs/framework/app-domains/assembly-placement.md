@@ -1,37 +1,27 @@
 ---
-title: "組件定位"
-ms.custom: 
+title: 組件定位
 ms.date: 03/30/2017
-ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.technology: dotnet-bcl
-ms.tgt_pltfrm: 
-ms.topic: article
 helpviewer_keywords:
 - <codeBase> element
 - locating assemblies
 - assemblies [.NET Framework], placement
 - assemblies [.NET Framework], location
 ms.assetid: ff8d48bc-f606-484f-9fe1-d0af264269fb
-caps.latest.revision: "9"
 author: rpetrusha
 ms.author: ronpet
-manager: wpickett
-ms.workload: dotnet
-ms.openlocfilehash: 6e52845cad283a643e12deb9c80a1f436840d6bb
-ms.sourcegitcommit: c0dd436f6f8f44dc80dc43b07f6841a00b74b23f
+ms.openlocfilehash: c6a10a896494304b9c3c17bc320464a8273e430d
+ms.sourcegitcommit: 11f11ca6cefe555972b3a5c99729d1a7523d8f50
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 01/19/2018
+ms.lasthandoff: 05/03/2018
 ---
-# <a name="assembly-placement"></a><span data-ttu-id="b2d07-102">組件定位</span><span class="sxs-lookup"><span data-stu-id="b2d07-102">Assembly Placement</span></span>
-<span data-ttu-id="b2d07-103">對於大部分 .NET Framework 應用程式，您可以將構成該應用程式的組件放置在應用程式的目錄、應用程式目錄的子目錄或全域組件快取 (如果該組件是共用的) 中。</span><span class="sxs-lookup"><span data-stu-id="b2d07-103">For most .NET Framework applications, you locate assemblies that make up an application in the application's directory, in a subdirectory of the application's directory, or in the global assembly cache (if the assembly is shared).</span></span> <span data-ttu-id="b2d07-104">您可以使用組態檔中的 [\<codeBase> 項目](../../../docs/framework/configure-apps/file-schema/runtime/codebase-element.md)來覆寫 Common Language Runtime 尋找組件的位置。</span><span class="sxs-lookup"><span data-stu-id="b2d07-104">You can override where the common language runtime looks for an assembly by using the [\<codeBase> Element](../../../docs/framework/configure-apps/file-schema/runtime/codebase-element.md) in a configuration file.</span></span> <span data-ttu-id="b2d07-105">如果組件不具有強式名稱，就會將使用 [\<codeBase> 項目](../../../docs/framework/configure-apps/file-schema/runtime/codebase-element.md)所指定的位置限制為應用程式目錄或子目錄。</span><span class="sxs-lookup"><span data-stu-id="b2d07-105">If the assembly does not have a strong name, the location specified using the [\<codeBase> Element](../../../docs/framework/configure-apps/file-schema/runtime/codebase-element.md) is restricted to the application directory or a subdirectory.</span></span> <span data-ttu-id="b2d07-106">如果組件具有強式名稱，[\<codeBase> 項目](../../../docs/framework/configure-apps/file-schema/runtime/codebase-element.md)即可以指定電腦或網路上的任何位置。</span><span class="sxs-lookup"><span data-stu-id="b2d07-106">If the assembly has a strong name, the [\<codeBase> Element](../../../docs/framework/configure-apps/file-schema/runtime/codebase-element.md) can specify any location on the computer or on a network.</span></span>  
+# <a name="assembly-placement"></a><span data-ttu-id="749ae-102">組件定位</span><span class="sxs-lookup"><span data-stu-id="749ae-102">Assembly Placement</span></span>
+<span data-ttu-id="749ae-103">對於大部分 .NET Framework 應用程式，您可以將構成該應用程式的組件放置在應用程式的目錄、應用程式目錄的子目錄或全域組件快取 (如果該組件是共用的) 中。</span><span class="sxs-lookup"><span data-stu-id="749ae-103">For most .NET Framework applications, you locate assemblies that make up an application in the application's directory, in a subdirectory of the application's directory, or in the global assembly cache (if the assembly is shared).</span></span> <span data-ttu-id="749ae-104">您可以使用組態檔中的 [\<codeBase> 項目](../../../docs/framework/configure-apps/file-schema/runtime/codebase-element.md)來覆寫 Common Language Runtime 尋找組件的位置。</span><span class="sxs-lookup"><span data-stu-id="749ae-104">You can override where the common language runtime looks for an assembly by using the [\<codeBase> Element](../../../docs/framework/configure-apps/file-schema/runtime/codebase-element.md) in a configuration file.</span></span> <span data-ttu-id="749ae-105">如果組件不具有強式名稱，就會將使用 [\<codeBase> 項目](../../../docs/framework/configure-apps/file-schema/runtime/codebase-element.md)所指定的位置限制為應用程式目錄或子目錄。</span><span class="sxs-lookup"><span data-stu-id="749ae-105">If the assembly does not have a strong name, the location specified using the [\<codeBase> Element](../../../docs/framework/configure-apps/file-schema/runtime/codebase-element.md) is restricted to the application directory or a subdirectory.</span></span> <span data-ttu-id="749ae-106">如果組件具有強式名稱，[\<codeBase> 項目](../../../docs/framework/configure-apps/file-schema/runtime/codebase-element.md)即可以指定電腦或網路上的任何位置。</span><span class="sxs-lookup"><span data-stu-id="749ae-106">If the assembly has a strong name, the [\<codeBase> Element](../../../docs/framework/configure-apps/file-schema/runtime/codebase-element.md) can specify any location on the computer or on a network.</span></span>  
   
- <span data-ttu-id="b2d07-107">使用 Unmanaged 程式碼或 COM Interop 應用程式時，可套用類似的規則來尋找組件：如果將會有多個應用程式共用這個組件，應該將它安裝在全域組件快取中。</span><span class="sxs-lookup"><span data-stu-id="b2d07-107">Similar rules apply to locating assemblies when working with unmanaged code or COM interop applications: if the assembly will be shared by multiple applications, it should be installed into the global assembly cache.</span></span> <span data-ttu-id="b2d07-108">配合 Unmanaged 程式碼使用的組件必須匯出為型別程式庫並且加以註冊。</span><span class="sxs-lookup"><span data-stu-id="b2d07-108">Assemblies used with unmanaged code must be exported as a type library and registered.</span></span> <span data-ttu-id="b2d07-109">COM Interop 所使用的組件必須在資料庫目錄 (Catalog) 中註冊，不過在某些狀況下這項註冊會自動進行。</span><span class="sxs-lookup"><span data-stu-id="b2d07-109">Assemblies used by COM interop must be registered in the catalog, although in some cases this registration occurs automatically.</span></span>  
+ <span data-ttu-id="749ae-107">使用 Unmanaged 程式碼或 COM Interop 應用程式時，可套用類似的規則來尋找組件：如果將會有多個應用程式共用這個組件，應該將它安裝在全域組件快取中。</span><span class="sxs-lookup"><span data-stu-id="749ae-107">Similar rules apply to locating assemblies when working with unmanaged code or COM interop applications: if the assembly will be shared by multiple applications, it should be installed into the global assembly cache.</span></span> <span data-ttu-id="749ae-108">配合 Unmanaged 程式碼使用的組件必須匯出為型別程式庫並且加以註冊。</span><span class="sxs-lookup"><span data-stu-id="749ae-108">Assemblies used with unmanaged code must be exported as a type library and registered.</span></span> <span data-ttu-id="749ae-109">COM Interop 所使用的組件必須在資料庫目錄 (Catalog) 中註冊，不過在某些狀況下這項註冊會自動進行。</span><span class="sxs-lookup"><span data-stu-id="749ae-109">Assemblies used by COM interop must be registered in the catalog, although in some cases this registration occurs automatically.</span></span>  
   
-## <a name="see-also"></a><span data-ttu-id="b2d07-110">請參閱</span><span class="sxs-lookup"><span data-stu-id="b2d07-110">See Also</span></span>  
- [<span data-ttu-id="b2d07-111">執行階段如何找出組件</span><span class="sxs-lookup"><span data-stu-id="b2d07-111">How the Runtime Locates Assemblies</span></span>](../../../docs/framework/deployment/how-the-runtime-locates-assemblies.md)  
- [<span data-ttu-id="b2d07-112">設定應用程式</span><span class="sxs-lookup"><span data-stu-id="b2d07-112">Configuring Apps</span></span>](../../../docs/framework/configure-apps/index.md)  
- [<span data-ttu-id="b2d07-113">進階 COM 互通性</span><span class="sxs-lookup"><span data-stu-id="b2d07-113">Advanced COM Interoperability</span></span>](http://msdn.microsoft.com/library/3ada36e5-2390-4d70-b490-6ad8de92f2fb)  
- [<span data-ttu-id="b2d07-114">Common Language Runtime 中的組件</span><span class="sxs-lookup"><span data-stu-id="b2d07-114">Assemblies in the Common Language Runtime</span></span>](../../../docs/framework/app-domains/assemblies-in-the-common-language-runtime.md)
+## <a name="see-also"></a><span data-ttu-id="749ae-110">請參閱</span><span class="sxs-lookup"><span data-stu-id="749ae-110">See Also</span></span>  
+ [<span data-ttu-id="749ae-111">執行階段如何找出組件</span><span class="sxs-lookup"><span data-stu-id="749ae-111">How the Runtime Locates Assemblies</span></span>](../../../docs/framework/deployment/how-the-runtime-locates-assemblies.md)  
+ [<span data-ttu-id="749ae-112">設定應用程式</span><span class="sxs-lookup"><span data-stu-id="749ae-112">Configuring Apps</span></span>](../../../docs/framework/configure-apps/index.md)  
+ [<span data-ttu-id="749ae-113">進階 COM 互通性</span><span class="sxs-lookup"><span data-stu-id="749ae-113">Advanced COM Interoperability</span></span>](http://msdn.microsoft.com/library/3ada36e5-2390-4d70-b490-6ad8de92f2fb)  
+ [<span data-ttu-id="749ae-114">Common Language Runtime 中的組件</span><span class="sxs-lookup"><span data-stu-id="749ae-114">Assemblies in the Common Language Runtime</span></span>](../../../docs/framework/app-domains/assemblies-in-the-common-language-runtime.md)

@@ -1,28 +1,19 @@
 ---
-title: "如何：從不同的檔案聯結內容 (LINQ) (C#)"
-ms.custom: 
+title: 如何：從不同的檔案聯結內容 (LINQ) (C#)
 ms.date: 07/20/2015
-ms.prod: .net
-ms.reviewer: 
-ms.suite: 
-ms.technology: devlang-csharp
-ms.topic: article
 ms.assetid: aa2d12a6-70a9-492f-a6db-b2b850d46811
-caps.latest.revision: "3"
-author: BillWagner
-ms.author: wiwagn
-ms.openlocfilehash: ac5c9f2037e3254c6262efe00fcbff31664dcd70
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.openlocfilehash: c6af2c0f90d3ebb69438b670a4f0cecb10d8d2fc
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 05/04/2018
 ---
-# <a name="how-to-join-content-from-dissimilar-files-linq-c"></a><span data-ttu-id="c60ee-102">如何：從不同的檔案聯結內容 (LINQ) (C#)</span><span class="sxs-lookup"><span data-stu-id="c60ee-102">How to: Join Content from Dissimilar Files (LINQ) (C#)</span></span>
-<span data-ttu-id="c60ee-103">此範例示範如何將兩個逗號分隔檔案中資料的共同值當做相符的索引鍵，聯結這兩個檔案中的資料。</span><span class="sxs-lookup"><span data-stu-id="c60ee-103">This example shows how to join data from two comma-delimited files that share a common value that is used as a matching key.</span></span> <span data-ttu-id="c60ee-104">如果您必須將兩個試算表中的資料，或一個試算表和一個不同格式之檔案中的資料合併為新的檔案，這個方法就很有用。</span><span class="sxs-lookup"><span data-stu-id="c60ee-104">This technique can be useful if you have to combine data from two spreadsheets, or from a spreadsheet and from a file that has another format, into a new file.</span></span> <span data-ttu-id="c60ee-105">您可以修改範例，以搭配任何類型的結構化文字使用。</span><span class="sxs-lookup"><span data-stu-id="c60ee-105">You can modify the example to work with any kind of structured text.</span></span>  
+# <a name="how-to-join-content-from-dissimilar-files-linq-c"></a><span data-ttu-id="50f2d-102">如何：從不同的檔案聯結內容 (LINQ) (C#)</span><span class="sxs-lookup"><span data-stu-id="50f2d-102">How to: Join Content from Dissimilar Files (LINQ) (C#)</span></span>
+<span data-ttu-id="50f2d-103">此範例示範如何將兩個逗號分隔檔案中資料的共同值當做相符的索引鍵，聯結這兩個檔案中的資料。</span><span class="sxs-lookup"><span data-stu-id="50f2d-103">This example shows how to join data from two comma-delimited files that share a common value that is used as a matching key.</span></span> <span data-ttu-id="50f2d-104">如果您必須將兩個試算表中的資料，或一個試算表和一個不同格式之檔案中的資料合併為新的檔案，這個方法就很有用。</span><span class="sxs-lookup"><span data-stu-id="50f2d-104">This technique can be useful if you have to combine data from two spreadsheets, or from a spreadsheet and from a file that has another format, into a new file.</span></span> <span data-ttu-id="50f2d-105">您可以修改範例，以搭配任何類型的結構化文字使用。</span><span class="sxs-lookup"><span data-stu-id="50f2d-105">You can modify the example to work with any kind of structured text.</span></span>  
   
-### <a name="to-create-the-data-files"></a><span data-ttu-id="c60ee-106">建立資料檔</span><span class="sxs-lookup"><span data-stu-id="c60ee-106">To create the data files</span></span>  
+### <a name="to-create-the-data-files"></a><span data-ttu-id="50f2d-106">建立資料檔</span><span class="sxs-lookup"><span data-stu-id="50f2d-106">To create the data files</span></span>  
   
-1.  <span data-ttu-id="c60ee-107">將下列各行複製到名為 scores.csv 的檔案中，然後將該檔案儲存至您的專案資料夾。</span><span class="sxs-lookup"><span data-stu-id="c60ee-107">Copy the following lines into a file that is named scores.csv and save it to your project folder.</span></span> <span data-ttu-id="c60ee-108">該檔案代表試算表資料。</span><span class="sxs-lookup"><span data-stu-id="c60ee-108">The file represents spreadsheet data.</span></span> <span data-ttu-id="c60ee-109">第 1 欄是學生的學號，第 2 欄到第 5 欄則是測驗分數。</span><span class="sxs-lookup"><span data-stu-id="c60ee-109">Column 1 is the student's ID, and columns 2 through 5 are test scores.</span></span>  
+1.  <span data-ttu-id="50f2d-107">將下列各行複製到名為 scores.csv 的檔案中，然後將該檔案儲存至您的專案資料夾。</span><span class="sxs-lookup"><span data-stu-id="50f2d-107">Copy the following lines into a file that is named scores.csv and save it to your project folder.</span></span> <span data-ttu-id="50f2d-108">該檔案代表試算表資料。</span><span class="sxs-lookup"><span data-stu-id="50f2d-108">The file represents spreadsheet data.</span></span> <span data-ttu-id="50f2d-109">第 1 欄是學生的學號，第 2 欄到第 5 欄則是測驗分數。</span><span class="sxs-lookup"><span data-stu-id="50f2d-109">Column 1 is the student's ID, and columns 2 through 5 are test scores.</span></span>  
   
     ```  
     111, 97, 92, 81, 60  
@@ -39,7 +30,7 @@ ms.lasthandoff: 11/21/2017
     122, 94, 92, 91, 91  
     ```  
   
-2.  <span data-ttu-id="c60ee-110">將下列各行複製到名為 names.csv 的檔案中，然後將該檔案儲存至您的專案資料夾。</span><span class="sxs-lookup"><span data-stu-id="c60ee-110">Copy the following lines into a file that is named names.csv and save it to your project folder.</span></span> <span data-ttu-id="c60ee-111">該檔案代表內含學生姓氏、名字和學號的試算表。</span><span class="sxs-lookup"><span data-stu-id="c60ee-111">The file represents a spreadsheet that contains the student's last name, first name, and student ID.</span></span>  
+2.  <span data-ttu-id="50f2d-110">將下列各行複製到名為 names.csv 的檔案中，然後將該檔案儲存至您的專案資料夾。</span><span class="sxs-lookup"><span data-stu-id="50f2d-110">Copy the following lines into a file that is named names.csv and save it to your project folder.</span></span> <span data-ttu-id="50f2d-111">該檔案代表內含學生姓氏、名字和學號的試算表。</span><span class="sxs-lookup"><span data-stu-id="50f2d-111">The file represents a spreadsheet that contains the student's last name, first name, and student ID.</span></span>  
   
     ```  
     Omelchenko,Svetlana,111  
@@ -56,7 +47,7 @@ ms.lasthandoff: 11/21/2017
     Tucker,Michael,122  
     ```  
   
-## <a name="example"></a><span data-ttu-id="c60ee-112">範例</span><span class="sxs-lookup"><span data-stu-id="c60ee-112">Example</span></span>  
+## <a name="example"></a><span data-ttu-id="50f2d-112">範例</span><span class="sxs-lookup"><span data-stu-id="50f2d-112">Example</span></span>  
   
 ```csharp  
 class JoinStrings  
@@ -127,9 +118,9 @@ Zabokritski, 96, 85, 91, 60
  */  
 ```  
   
-## <a name="compiling-the-code"></a><span data-ttu-id="c60ee-113">編譯程式碼</span><span class="sxs-lookup"><span data-stu-id="c60ee-113">Compiling the Code</span></span>  
- <span data-ttu-id="c60ee-114">建立以 .NET Framework 3.5 版或更新版本為目標的專案，該專案包含 System.Core.dll 的參考，以及 System.Linq 和 System.IO 命名空間的 `using` 指示詞。</span><span class="sxs-lookup"><span data-stu-id="c60ee-114">Create a project that targets the .NET Framework  version 3.5 or higher, with a reference to System.Core.dll and `using` directives for the System.Linq and System.IO namespaces.</span></span>  
+## <a name="compiling-the-code"></a><span data-ttu-id="50f2d-113">編譯程式碼</span><span class="sxs-lookup"><span data-stu-id="50f2d-113">Compiling the Code</span></span>  
+ <span data-ttu-id="50f2d-114">建立以 .NET Framework 3.5 版或更新版本為目標的專案，該專案包含 System.Core.dll 的參考，以及 System.Linq 和 System.IO 命名空間的 `using` 指示詞。</span><span class="sxs-lookup"><span data-stu-id="50f2d-114">Create a project that targets the .NET Framework  version 3.5 or higher, with a reference to System.Core.dll and `using` directives for the System.Linq and System.IO namespaces.</span></span>  
   
-## <a name="see-also"></a><span data-ttu-id="c60ee-115">另請參閱</span><span class="sxs-lookup"><span data-stu-id="c60ee-115">See Also</span></span>  
- [<span data-ttu-id="c60ee-116">LINQ 和字串 (C#)</span><span class="sxs-lookup"><span data-stu-id="c60ee-116">LINQ and Strings (C#)</span></span>](../../../../csharp/programming-guide/concepts/linq/linq-and-strings.md)  
- [<span data-ttu-id="c60ee-117">LINQ 和檔案目錄 (C#)</span><span class="sxs-lookup"><span data-stu-id="c60ee-117">LINQ and File Directories (C#)</span></span>](../../../../csharp/programming-guide/concepts/linq/linq-and-file-directories.md)
+## <a name="see-also"></a><span data-ttu-id="50f2d-115">請參閱</span><span class="sxs-lookup"><span data-stu-id="50f2d-115">See Also</span></span>  
+ [<span data-ttu-id="50f2d-116">LINQ 和字串 (C#)</span><span class="sxs-lookup"><span data-stu-id="50f2d-116">LINQ and Strings (C#)</span></span>](../../../../csharp/programming-guide/concepts/linq/linq-and-strings.md)  
+ [<span data-ttu-id="50f2d-117">LINQ 和檔案目錄 (C#)</span><span class="sxs-lookup"><span data-stu-id="50f2d-117">LINQ and File Directories (C#)</span></span>](../../../../csharp/programming-guide/concepts/linq/linq-and-file-directories.md)

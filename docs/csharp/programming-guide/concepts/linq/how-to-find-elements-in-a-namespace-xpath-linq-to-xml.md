@@ -1,31 +1,22 @@
 ---
-title: "如何：尋找命名空間中的項目 (XPath-LINQ to XML) (C#)"
-ms.custom: 
+title: 如何：尋找命名空間中的項目 (XPath-LINQ to XML) (C#)
 ms.date: 07/20/2015
-ms.prod: .net
-ms.reviewer: 
-ms.suite: 
-ms.technology: devlang-csharp
-ms.topic: article
 ms.assetid: cae1c4ac-6cd5-46cf-9b1c-bd85bc9b7ea9
-caps.latest.revision: "3"
-author: BillWagner
-ms.author: wiwagn
-ms.openlocfilehash: f1804731a39eebce74a38a4e8b296747e535c0b8
-ms.sourcegitcommit: bd1ef61f4bb794b25383d3d72e71041a5ced172e
+ms.openlocfilehash: 5c5c8e20195bf7c676b9df7e9db54e79bbb0ca06
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/18/2017
+ms.lasthandoff: 05/04/2018
 ---
-# <a name="how-to-find-elements-in-a-namespace-xpath-linq-to-xml-c"></a><span data-ttu-id="36b6d-102">如何：尋找命名空間中的項目 (XPath-LINQ to XML) (C#)</span><span class="sxs-lookup"><span data-stu-id="36b6d-102">How to: Find Elements in a Namespace (XPath-LINQ to XML) (C#)</span></span>
-<span data-ttu-id="36b6d-103">XPath 運算式可以在特定的命名空間中尋找節點。</span><span class="sxs-lookup"><span data-stu-id="36b6d-103">XPath expressions can find nodes in a particular namespace.</span></span> <span data-ttu-id="36b6d-104">XPath 運算式使用命名空間前置詞來指定命名空間。</span><span class="sxs-lookup"><span data-stu-id="36b6d-104">XPath expressions use namespace prefixes for specifying namespaces.</span></span> <span data-ttu-id="36b6d-105">若要剖析包含命名空間前置詞的 XPath 運算式，您必須將物件傳遞到實作 <xref:System.Xml.IXmlNamespaceResolver> 的 XPath 方法。</span><span class="sxs-lookup"><span data-stu-id="36b6d-105">To parse an XPath expression that contains namespace prefixes, you must pass an object to the XPath methods that implements <xref:System.Xml.IXmlNamespaceResolver>.</span></span> <span data-ttu-id="36b6d-106">這個範例會使用 <xref:System.Xml.XmlNamespaceManager>。</span><span class="sxs-lookup"><span data-stu-id="36b6d-106">This example uses <xref:System.Xml.XmlNamespaceManager>.</span></span>  
+# <a name="how-to-find-elements-in-a-namespace-xpath-linq-to-xml-c"></a><span data-ttu-id="bd061-102">如何：尋找命名空間中的項目 (XPath-LINQ to XML) (C#)</span><span class="sxs-lookup"><span data-stu-id="bd061-102">How to: Find Elements in a Namespace (XPath-LINQ to XML) (C#)</span></span>
+<span data-ttu-id="bd061-103">XPath 運算式可以在特定的命名空間中尋找節點。</span><span class="sxs-lookup"><span data-stu-id="bd061-103">XPath expressions can find nodes in a particular namespace.</span></span> <span data-ttu-id="bd061-104">XPath 運算式使用命名空間前置詞來指定命名空間。</span><span class="sxs-lookup"><span data-stu-id="bd061-104">XPath expressions use namespace prefixes for specifying namespaces.</span></span> <span data-ttu-id="bd061-105">若要剖析包含命名空間前置詞的 XPath 運算式，您必須將物件傳遞到實作 <xref:System.Xml.IXmlNamespaceResolver> 的 XPath 方法。</span><span class="sxs-lookup"><span data-stu-id="bd061-105">To parse an XPath expression that contains namespace prefixes, you must pass an object to the XPath methods that implements <xref:System.Xml.IXmlNamespaceResolver>.</span></span> <span data-ttu-id="bd061-106">這個範例會使用 <xref:System.Xml.XmlNamespaceManager>。</span><span class="sxs-lookup"><span data-stu-id="bd061-106">This example uses <xref:System.Xml.XmlNamespaceManager>.</span></span>  
   
- <span data-ttu-id="36b6d-107">XPath 運算式為：</span><span class="sxs-lookup"><span data-stu-id="36b6d-107">The XPath expression is:</span></span>  
+ <span data-ttu-id="bd061-107">XPath 運算式為：</span><span class="sxs-lookup"><span data-stu-id="bd061-107">The XPath expression is:</span></span>  
   
  `./aw:*`  
   
-## <a name="example"></a><span data-ttu-id="36b6d-108">範例</span><span class="sxs-lookup"><span data-stu-id="36b6d-108">Example</span></span>  
- <span data-ttu-id="36b6d-109">下列範例會讀取包含兩個命名空間的 XML 樹狀。</span><span class="sxs-lookup"><span data-stu-id="36b6d-109">The following example reads an XML tree that contains two namespaces.</span></span> <span data-ttu-id="36b6d-110">該範例會使用 <xref:System.Xml.XmlReader> 來讀取 XML 文件。</span><span class="sxs-lookup"><span data-stu-id="36b6d-110">It uses an <xref:System.Xml.XmlReader> to read the XML document.</span></span> <span data-ttu-id="36b6d-111">接著，它會從 <xref:System.Xml.XmlNameTable> 取得 <xref:System.Xml.XmlReader>，並從 <xref:System.Xml.XmlNamespaceManager> 取得 <xref:System.Xml.XmlNameTable>。</span><span class="sxs-lookup"><span data-stu-id="36b6d-111">It then gets an <xref:System.Xml.XmlNameTable> from the <xref:System.Xml.XmlReader>, and an <xref:System.Xml.XmlNamespaceManager> from the <xref:System.Xml.XmlNameTable>.</span></span> <span data-ttu-id="36b6d-112">選取項目時，它會使用 <xref:System.Xml.XmlNamespaceManager>。</span><span class="sxs-lookup"><span data-stu-id="36b6d-112">It uses the <xref:System.Xml.XmlNamespaceManager> when selecting elements.</span></span>  
+## <a name="example"></a><span data-ttu-id="bd061-108">範例</span><span class="sxs-lookup"><span data-stu-id="bd061-108">Example</span></span>  
+ <span data-ttu-id="bd061-109">下列範例會讀取包含兩個命名空間的 XML 樹狀。</span><span class="sxs-lookup"><span data-stu-id="bd061-109">The following example reads an XML tree that contains two namespaces.</span></span> <span data-ttu-id="bd061-110">該範例會使用 <xref:System.Xml.XmlReader> 來讀取 XML 文件。</span><span class="sxs-lookup"><span data-stu-id="bd061-110">It uses an <xref:System.Xml.XmlReader> to read the XML document.</span></span> <span data-ttu-id="bd061-111">接著，它會從 <xref:System.Xml.XmlNameTable> 取得 <xref:System.Xml.XmlReader>，並從 <xref:System.Xml.XmlNamespaceManager> 取得 <xref:System.Xml.XmlNameTable>。</span><span class="sxs-lookup"><span data-stu-id="bd061-111">It then gets an <xref:System.Xml.XmlNameTable> from the <xref:System.Xml.XmlReader>, and an <xref:System.Xml.XmlNamespaceManager> from the <xref:System.Xml.XmlNameTable>.</span></span> <span data-ttu-id="bd061-112">選取項目時，它會使用 <xref:System.Xml.XmlNamespaceManager>。</span><span class="sxs-lookup"><span data-stu-id="bd061-112">It uses the <xref:System.Xml.XmlNamespaceManager> when selecting elements.</span></span>  
   
 ```csharp  
 XmlReader reader = XmlReader.Create("ConsolidatedPurchaseOrders.xml");  
@@ -47,7 +38,7 @@ foreach (XElement el in list2)
     Console.WriteLine(el);  
 ```  
   
- <span data-ttu-id="36b6d-113">這個範例會產生下列輸出：</span><span class="sxs-lookup"><span data-stu-id="36b6d-113">This example produces the following output:</span></span>  
+ <span data-ttu-id="bd061-113">這個範例會產生下列輸出：</span><span class="sxs-lookup"><span data-stu-id="bd061-113">This example produces the following output:</span></span>  
   
 ```  
 Results are identical  
@@ -82,5 +73,5 @@ Results are identical
   </aw:PurchaseOrder>  
 ```  
   
-## <a name="see-also"></a><span data-ttu-id="36b6d-114">另請參閱</span><span class="sxs-lookup"><span data-stu-id="36b6d-114">See Also</span></span>  
- [<span data-ttu-id="36b6d-115">XPath 使用者適用的 LINQ to XML (C#)</span><span class="sxs-lookup"><span data-stu-id="36b6d-115">LINQ to XML for XPath Users (C#)</span></span>](../../../../csharp/programming-guide/concepts/linq/linq-to-xml-for-xpath-users.md)
+## <a name="see-also"></a><span data-ttu-id="bd061-114">請參閱</span><span class="sxs-lookup"><span data-stu-id="bd061-114">See Also</span></span>  
+ [<span data-ttu-id="bd061-115">XPath 使用者適用的 LINQ to XML (C#)</span><span class="sxs-lookup"><span data-stu-id="bd061-115">LINQ to XML for XPath Users (C#)</span></span>](../../../../csharp/programming-guide/concepts/linq/linq-to-xml-for-xpath-users.md)

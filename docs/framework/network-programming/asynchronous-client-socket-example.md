@@ -1,12 +1,6 @@
 ---
-title: "非同步用戶端通訊端範例"
-ms.custom: 
+title: 非同步用戶端通訊端範例
 ms.date: 03/30/2017
-ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.tgt_pltfrm: 
-ms.topic: article
 dev_langs:
 - csharp
 - vb
@@ -15,19 +9,17 @@ helpviewer_keywords:
 - sockets, code examples
 - sockets, asynchronous client sockets
 ms.assetid: d4ac53a0-b50b-4232-9726-d47d25fcc38a
-caps.latest.revision: "8"
 author: mcleblanc
 ms.author: markl
 manager: markl
-ms.workload: dotnet
-ms.openlocfilehash: 323250f7aae44d07aed8e79654335f29e53438bd
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
-ms.translationtype: MT
+ms.openlocfilehash: d295841173ee2f3bf018a2058b4eac1629c4828f
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 05/04/2018
 ---
-# <a name="asynchronous-client-socket-example"></a><span data-ttu-id="daeea-102">非同步用戶端通訊端範例</span><span class="sxs-lookup"><span data-stu-id="daeea-102">Asynchronous Client Socket Example</span></span>
-<span data-ttu-id="daeea-103">下列範例程式會建立連線到伺服器的用戶端。</span><span class="sxs-lookup"><span data-stu-id="daeea-103">The following example program creates a client that connects to a server.</span></span> <span data-ttu-id="daeea-104">伺服器已內建非同步通訊端，因此在伺服器傳回回應時，不會暫停執行用戶端應用程式。</span><span class="sxs-lookup"><span data-stu-id="daeea-104">The client is built with an asynchronous socket, so execution of the client application is not suspended while the server returns a response.</span></span> <span data-ttu-id="daeea-105">應用程式會將字串傳送到伺服器，然後在主控台上顯示伺服器所傳回的字串。</span><span class="sxs-lookup"><span data-stu-id="daeea-105">The application sends a string to the server and then displays the string returned by the server on the console.</span></span>  
+# <a name="asynchronous-client-socket-example"></a><span data-ttu-id="206f8-102">非同步用戶端通訊端範例</span><span class="sxs-lookup"><span data-stu-id="206f8-102">Asynchronous Client Socket Example</span></span>
+<span data-ttu-id="206f8-103">下列範例程式會建立連線到伺服器的用戶端。</span><span class="sxs-lookup"><span data-stu-id="206f8-103">The following example program creates a client that connects to a server.</span></span> <span data-ttu-id="206f8-104">伺服器已內建非同步通訊端，因此在伺服器傳回回應時，不會暫停執行用戶端應用程式。</span><span class="sxs-lookup"><span data-stu-id="206f8-104">The client is built with an asynchronous socket, so execution of the client application is not suspended while the server returns a response.</span></span> <span data-ttu-id="206f8-105">應用程式會將字串傳送到伺服器，然後在主控台上顯示伺服器所傳回的字串。</span><span class="sxs-lookup"><span data-stu-id="206f8-105">The application sends a string to the server and then displays the string returned by the server on the console.</span></span>  
   
 ```vb  
 Imports System  
@@ -331,7 +323,7 @@ public class AsynchronousClient {
 }  
 ```  
   
-## <a name="see-also"></a><span data-ttu-id="daeea-106">請參閱</span><span class="sxs-lookup"><span data-stu-id="daeea-106">See Also</span></span>  
- [<span data-ttu-id="daeea-107">非同步伺服器通訊端範例</span><span class="sxs-lookup"><span data-stu-id="daeea-107">Asynchronous Server Socket Example</span></span>](../../../docs/framework/network-programming/asynchronous-server-socket-example.md)  
- [<span data-ttu-id="daeea-108">使用同步伺服器通訊端</span><span class="sxs-lookup"><span data-stu-id="daeea-108">Using a Synchronous Server Socket</span></span>](../../../docs/framework/network-programming/using-a-synchronous-server-socket.md)  
- [<span data-ttu-id="daeea-109">通訊端程式碼範例</span><span class="sxs-lookup"><span data-stu-id="daeea-109">Socket Code Examples</span></span>](../../../docs/framework/network-programming/socket-code-examples.md)
+## <a name="see-also"></a><span data-ttu-id="206f8-106">請參閱</span><span class="sxs-lookup"><span data-stu-id="206f8-106">See Also</span></span>  
+ [<span data-ttu-id="206f8-107">非同步伺服器通訊端範例</span><span class="sxs-lookup"><span data-stu-id="206f8-107">Asynchronous Server Socket Example</span></span>](../../../docs/framework/network-programming/asynchronous-server-socket-example.md)  
+ [<span data-ttu-id="206f8-108">使用同步伺服器通訊端</span><span class="sxs-lookup"><span data-stu-id="206f8-108">Using a Synchronous Server Socket</span></span>](../../../docs/framework/network-programming/using-a-synchronous-server-socket.md)  
+ [<span data-ttu-id="206f8-109">通訊端程式碼範例</span><span class="sxs-lookup"><span data-stu-id="206f8-109">Socket Code Examples</span></span>](../../../docs/framework/network-programming/socket-code-examples.md)

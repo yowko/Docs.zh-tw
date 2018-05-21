@@ -4,84 +4,79 @@ description: dotnet nuget locals 命令會清除或列出本機 NuGet 資源，�
 author: karann-msft
 ms.author: mairaw
 ms.date: 08/14/2017
-ms.topic: conceptual
-ms.prod: dotnet-core
-ms.technology: dotnet-cli
-ms.workload:
-- dotnetcore
-ms.openlocfilehash: 1dfa50ff0971a82b3f6aafd86492fd57d8cf6a82
-ms.sourcegitcommit: 03ee570f6f528a7d23a4221dcb26a9498edbdf8c
+ms.openlocfilehash: d0c900a06b00fd5e6b7ad66527c6582483222c45
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/28/2018
+ms.lasthandoff: 05/04/2018
 ---
-# <a name="dotnet-nuget-locals"></a><span data-ttu-id="76b03-103">dotnet nuget locals</span><span class="sxs-lookup"><span data-stu-id="76b03-103">dotnet nuget locals</span></span>
+# <a name="dotnet-nuget-locals"></a><span data-ttu-id="9ab08-103">dotnet nuget locals</span><span class="sxs-lookup"><span data-stu-id="9ab08-103">dotnet nuget locals</span></span>
 
 [!INCLUDE [topic-appliesto-net-core-all](../../../includes/topic-appliesto-net-core-all.md)]
 
-## <a name="name"></a><span data-ttu-id="76b03-104">名稱</span><span class="sxs-lookup"><span data-stu-id="76b03-104">Name</span></span>
+## <a name="name"></a><span data-ttu-id="9ab08-104">名稱</span><span class="sxs-lookup"><span data-stu-id="9ab08-104">Name</span></span>
 
-<span data-ttu-id="76b03-105">`dotnet nuget locals` - 清除或列出本機 NuGet 資源。</span><span class="sxs-lookup"><span data-stu-id="76b03-105">`dotnet nuget locals` - Clears or lists local NuGet resources.</span></span>
+<span data-ttu-id="9ab08-105">`dotnet nuget locals` - 清除或列出本機 NuGet 資源。</span><span class="sxs-lookup"><span data-stu-id="9ab08-105">`dotnet nuget locals` - Clears or lists local NuGet resources.</span></span>
 
-## <a name="synopsis"></a><span data-ttu-id="76b03-106">概要</span><span class="sxs-lookup"><span data-stu-id="76b03-106">Synopsis</span></span>
+## <a name="synopsis"></a><span data-ttu-id="9ab08-106">概要</span><span class="sxs-lookup"><span data-stu-id="9ab08-106">Synopsis</span></span>
 
 `dotnet nuget locals <CACHE_LOCATION> [(-c|--clear)|(-l|--list)] [--force-english-output] [-h|--help]`
 
-## <a name="description"></a><span data-ttu-id="76b03-107">描述</span><span class="sxs-lookup"><span data-stu-id="76b03-107">Description</span></span>
+## <a name="description"></a><span data-ttu-id="9ab08-107">描述</span><span class="sxs-lookup"><span data-stu-id="9ab08-107">Description</span></span>
 
-<span data-ttu-id="76b03-108">`dotnet nuget locals` 命令會清除或列出 http-request 快取、暫時快取，或整部電腦全域套件資料夾中的本機 NuGet 資源。</span><span class="sxs-lookup"><span data-stu-id="76b03-108">The `dotnet nuget locals` command clears or lists local NuGet resources in the http-request cache, temporary cache, or machine-wide global packages folder.</span></span>
+<span data-ttu-id="9ab08-108">`dotnet nuget locals` 命令會清除或列出 http-request 快取、暫時快取，或整部電腦全域套件資料夾中的本機 NuGet 資源。</span><span class="sxs-lookup"><span data-stu-id="9ab08-108">The `dotnet nuget locals` command clears or lists local NuGet resources in the http-request cache, temporary cache, or machine-wide global packages folder.</span></span>
 
-## <a name="arguments"></a><span data-ttu-id="76b03-109">引數</span><span class="sxs-lookup"><span data-stu-id="76b03-109">Arguments</span></span>
+## <a name="arguments"></a><span data-ttu-id="9ab08-109">引數</span><span class="sxs-lookup"><span data-stu-id="9ab08-109">Arguments</span></span>
 
 `CACHE_LOCATION`
 
-<span data-ttu-id="76b03-110">下列其中一個值：</span><span class="sxs-lookup"><span data-stu-id="76b03-110">One of the following values:</span></span>
+<span data-ttu-id="9ab08-110">下列其中一個值：</span><span class="sxs-lookup"><span data-stu-id="9ab08-110">One of the following values:</span></span>
 
-* <span data-ttu-id="76b03-111">`all` - 指出指定的作業會套用至所有快取類型：http-request 快取、全域套件快取和暫時快取。</span><span class="sxs-lookup"><span data-stu-id="76b03-111">`all` - Indicates that the specified operation is applied to all cache types: http-request cache, global packages cache, and the temporary cache.</span></span>
-* <span data-ttu-id="76b03-112">`http-cache` - 指出指定的作業只套用至 http-request 快取。</span><span class="sxs-lookup"><span data-stu-id="76b03-112">`http-cache` - Indicates that the specified operation is applied only to the http-request cache.</span></span> <span data-ttu-id="76b03-113">其他快取位置不受影響。</span><span class="sxs-lookup"><span data-stu-id="76b03-113">The other cache locations are not affected.</span></span>
-* <span data-ttu-id="76b03-114">`global-packages` - 指出指定的作業只套用至全域套件快取。</span><span class="sxs-lookup"><span data-stu-id="76b03-114">`global-packages` - Indicates that the specified operation is applied only to the global packages cache.</span></span> <span data-ttu-id="76b03-115">其他快取位置不受影響。</span><span class="sxs-lookup"><span data-stu-id="76b03-115">The other cache locations are not affected.</span></span>
-* <span data-ttu-id="76b03-116">`temp` - 指出指定的作業只套用至暫時快取。</span><span class="sxs-lookup"><span data-stu-id="76b03-116">`temp` - Indicates that the specified operation is applied only to the temporary cache.</span></span> <span data-ttu-id="76b03-117">其他快取位置不受影響。</span><span class="sxs-lookup"><span data-stu-id="76b03-117">The other cache locations are not affected.</span></span>
+* <span data-ttu-id="9ab08-111">`all` - 指出指定的作業會套用至所有快取類型：http-request 快取、全域套件快取和暫時快取。</span><span class="sxs-lookup"><span data-stu-id="9ab08-111">`all` - Indicates that the specified operation is applied to all cache types: http-request cache, global packages cache, and the temporary cache.</span></span>
+* <span data-ttu-id="9ab08-112">`http-cache` - 指出指定的作業只套用至 http-request 快取。</span><span class="sxs-lookup"><span data-stu-id="9ab08-112">`http-cache` - Indicates that the specified operation is applied only to the http-request cache.</span></span> <span data-ttu-id="9ab08-113">其他快取位置不受影響。</span><span class="sxs-lookup"><span data-stu-id="9ab08-113">The other cache locations are not affected.</span></span>
+* <span data-ttu-id="9ab08-114">`global-packages` - 指出指定的作業只套用至全域套件快取。</span><span class="sxs-lookup"><span data-stu-id="9ab08-114">`global-packages` - Indicates that the specified operation is applied only to the global packages cache.</span></span> <span data-ttu-id="9ab08-115">其他快取位置不受影響。</span><span class="sxs-lookup"><span data-stu-id="9ab08-115">The other cache locations are not affected.</span></span>
+* <span data-ttu-id="9ab08-116">`temp` - 指出指定的作業只套用至暫時快取。</span><span class="sxs-lookup"><span data-stu-id="9ab08-116">`temp` - Indicates that the specified operation is applied only to the temporary cache.</span></span> <span data-ttu-id="9ab08-117">其他快取位置不受影響。</span><span class="sxs-lookup"><span data-stu-id="9ab08-117">The other cache locations are not affected.</span></span>
 
-## <a name="options"></a><span data-ttu-id="76b03-118">選項</span><span class="sxs-lookup"><span data-stu-id="76b03-118">Options</span></span>
+## <a name="options"></a><span data-ttu-id="9ab08-118">選項</span><span class="sxs-lookup"><span data-stu-id="9ab08-118">Options</span></span>
 
 `-h|--help`
 
-<span data-ttu-id="76b03-119">印出命令的簡短說明。</span><span class="sxs-lookup"><span data-stu-id="76b03-119">Prints out a short help for the command.</span></span>
+<span data-ttu-id="9ab08-119">印出命令的簡短說明。</span><span class="sxs-lookup"><span data-stu-id="9ab08-119">Prints out a short help for the command.</span></span>
 
 `-c|--clear`
 
-<span data-ttu-id="76b03-120">清除選項會針對指定的快取類型執行清除作業。</span><span class="sxs-lookup"><span data-stu-id="76b03-120">The clear option performs a clear operation on the specified cache type.</span></span> <span data-ttu-id="76b03-121">系統會以遞迴方式刪除快取目錄的內容。</span><span class="sxs-lookup"><span data-stu-id="76b03-121">The contents of the cache directories are deleted recursively.</span></span> <span data-ttu-id="76b03-122">執行的使用者/群組必須具有快取目錄中檔案的權限。</span><span class="sxs-lookup"><span data-stu-id="76b03-122">The executing user/group must have permission to the files in the cache directories.</span></span> <span data-ttu-id="76b03-123">如果沒有權限，則會顯示錯誤，指出尚未清除的檔案/資料夾。</span><span class="sxs-lookup"><span data-stu-id="76b03-123">If not, an error is displayed indicating the files/folders which were not cleared.</span></span>
+<span data-ttu-id="9ab08-120">清除選項會針對指定的快取類型執行清除作業。</span><span class="sxs-lookup"><span data-stu-id="9ab08-120">The clear option performs a clear operation on the specified cache type.</span></span> <span data-ttu-id="9ab08-121">系統會以遞迴方式刪除快取目錄的內容。</span><span class="sxs-lookup"><span data-stu-id="9ab08-121">The contents of the cache directories are deleted recursively.</span></span> <span data-ttu-id="9ab08-122">執行的使用者/群組必須具有快取目錄中檔案的權限。</span><span class="sxs-lookup"><span data-stu-id="9ab08-122">The executing user/group must have permission to the files in the cache directories.</span></span> <span data-ttu-id="9ab08-123">如果沒有權限，則會顯示錯誤，指出尚未清除的檔案/資料夾。</span><span class="sxs-lookup"><span data-stu-id="9ab08-123">If not, an error is displayed indicating the files/folders which were not cleared.</span></span>
 
 `-l|--list`
 
-<span data-ttu-id="76b03-124">list 選項是用來顯示指定之快取類型的位置。</span><span class="sxs-lookup"><span data-stu-id="76b03-124">The list option is used to display the location of the specified cache type.</span></span> 
+<span data-ttu-id="9ab08-124">list 選項是用來顯示指定之快取類型的位置。</span><span class="sxs-lookup"><span data-stu-id="9ab08-124">The list option is used to display the location of the specified cache type.</span></span> 
 
 `--force-english-output`
 
-<span data-ttu-id="76b03-125">強制命令列輸出採用英文。</span><span class="sxs-lookup"><span data-stu-id="76b03-125">Forces command-line output in English.</span></span>
+<span data-ttu-id="9ab08-125">強制命令列輸出採用英文。</span><span class="sxs-lookup"><span data-stu-id="9ab08-125">Forces command-line output in English.</span></span>
 
-## <a name="examples"></a><span data-ttu-id="76b03-126">範例</span><span class="sxs-lookup"><span data-stu-id="76b03-126">Examples</span></span>
+## <a name="examples"></a><span data-ttu-id="9ab08-126">範例</span><span class="sxs-lookup"><span data-stu-id="9ab08-126">Examples</span></span>
 
-<span data-ttu-id="76b03-127">顯示所有本機快取目錄的路徑 (http-cache 目錄、global-packages 快取目錄及暫時快取目錄)：</span><span class="sxs-lookup"><span data-stu-id="76b03-127">Displays the paths of all the local cache directories (http-cache directory, global-packages cache directory, and temporary cache directory):</span></span>
+<span data-ttu-id="9ab08-127">顯示所有本機快取目錄的路徑 (http-cache 目錄、global-packages 快取目錄及暫時快取目錄)：</span><span class="sxs-lookup"><span data-stu-id="9ab08-127">Displays the paths of all the local cache directories (http-cache directory, global-packages cache directory, and temporary cache directory):</span></span>
 
 `dotnet nuget locals –l all`
 
-<span data-ttu-id="76b03-128">顯示本機 http-cache 目錄的路徑：</span><span class="sxs-lookup"><span data-stu-id="76b03-128">Displays the path for the local http-cache directory:</span></span>
+<span data-ttu-id="9ab08-128">顯示本機 http-cache 目錄的路徑：</span><span class="sxs-lookup"><span data-stu-id="9ab08-128">Displays the path for the local http-cache directory:</span></span>
 
 `dotnet nuget locals --list http-cache`
 
-<span data-ttu-id="76b03-129">清除所有本機快取目錄的所有檔案 (http-cache 目錄、global-packages 快取目錄及暫時快取目錄)：</span><span class="sxs-lookup"><span data-stu-id="76b03-129">Clears all files from all local cache directories (http-cache directory, global-packages cache directory, and temporary cache directory):</span></span>
+<span data-ttu-id="9ab08-129">清除所有本機快取目錄的所有檔案 (http-cache 目錄、global-packages 快取目錄及暫時快取目錄)：</span><span class="sxs-lookup"><span data-stu-id="9ab08-129">Clears all files from all local cache directories (http-cache directory, global-packages cache directory, and temporary cache directory):</span></span>
 
 `dotnet nuget locals --clear all`
 
-<span data-ttu-id="76b03-130">清除本機 global-packages 快取目錄中的所有檔案：</span><span class="sxs-lookup"><span data-stu-id="76b03-130">Clears all files in local global-packages cache directory:</span></span>
+<span data-ttu-id="9ab08-130">清除本機 global-packages 快取目錄中的所有檔案：</span><span class="sxs-lookup"><span data-stu-id="9ab08-130">Clears all files in local global-packages cache directory:</span></span>
 
 `dotnet nuget locals -c global-packages`
 
-<span data-ttu-id="76b03-131">清除本機暫時快取目錄中的所有檔案：</span><span class="sxs-lookup"><span data-stu-id="76b03-131">Clears all files in local temporary cache directory:</span></span>
+<span data-ttu-id="9ab08-131">清除本機暫時快取目錄中的所有檔案：</span><span class="sxs-lookup"><span data-stu-id="9ab08-131">Clears all files in local temporary cache directory:</span></span>
 
 `dotnet nuget locals -c temp`
 
-## <a name="troubleshooting"></a><span data-ttu-id="76b03-132">疑難排解</span><span class="sxs-lookup"><span data-stu-id="76b03-132">Troubleshooting</span></span>
+## <a name="troubleshooting"></a><span data-ttu-id="9ab08-132">疑難排解</span><span class="sxs-lookup"><span data-stu-id="9ab08-132">Troubleshooting</span></span>
 
-<span data-ttu-id="76b03-133">如需使用 `dotnet nuget locals` 命令時常見的問題與錯誤資訊，請參閱[管理 NuGet 快取](/nuget/consume-packages/managing-the-nuget-cache)。</span><span class="sxs-lookup"><span data-stu-id="76b03-133">For information on common problems and errors while using the `dotnet nuget locals` command, see [Managing the NuGet cache](/nuget/consume-packages/managing-the-nuget-cache).</span></span>
+<span data-ttu-id="9ab08-133">如需使用 `dotnet nuget locals` 命令時常見的問題與錯誤資訊，請參閱[管理 NuGet 快取](/nuget/consume-packages/managing-the-nuget-cache)。</span><span class="sxs-lookup"><span data-stu-id="9ab08-133">For information on common problems and errors while using the `dotnet nuget locals` command, see [Managing the NuGet cache](/nuget/consume-packages/managing-the-nuget-cache).</span></span>

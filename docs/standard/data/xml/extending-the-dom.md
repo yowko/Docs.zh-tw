@@ -1,45 +1,34 @@
 ---
-title: "擴充 DOM"
-ms.custom: 
+title: 擴充 DOM
 ms.date: 03/30/2017
-ms.prod: .net
-ms.reviewer: 
-ms.suite: 
 ms.technology: dotnet-standard
-ms.tgt_pltfrm: 
-ms.topic: article
 dev_langs:
 - csharp
 - vb
 ms.assetid: b5489c96-4afd-439a-a25d-fc82eb4a148d
-caps.latest.revision: 
 author: mairaw
 ms.author: mairaw
-manager: wpickett
-ms.workload:
-- dotnet
-- dotnetcore
-ms.openlocfilehash: 06cac8d76b17f3ef32931ea21d0556085f05d7b1
-ms.sourcegitcommit: e7f04439d78909229506b56935a1105a4149ff3d
+ms.openlocfilehash: 93821b844d35f005afa1702e4f7922ca1320c962
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 12/23/2017
+ms.lasthandoff: 05/04/2018
 ---
-# <a name="extending-the-dom"></a><span data-ttu-id="cfef5-102">擴充 DOM</span><span class="sxs-lookup"><span data-stu-id="cfef5-102">Extending the DOM</span></span>
-<span data-ttu-id="cfef5-103">Microsoft .NET Framework 含有可提供 XML 文件物件模型 (DOM) 之實作的基底類別組。</span><span class="sxs-lookup"><span data-stu-id="cfef5-103">The Microsoft .NET Framework includes a base set of classes that provides an implementation of the XML Document Object Model (DOM).</span></span> <span data-ttu-id="cfef5-104"><xref:System.Xml.XmlNode> 及其衍生類別會提供方法和屬性，讓您巡覽、查詢和修改 XML 文件的內容和結構。</span><span class="sxs-lookup"><span data-stu-id="cfef5-104">The <xref:System.Xml.XmlNode>, and its derived classes, provides methods and properties that allow you to navigate, query, and modify the content and structure of an XML document.</span></span>  
+# <a name="extending-the-dom"></a><span data-ttu-id="d7e9f-102">擴充 DOM</span><span class="sxs-lookup"><span data-stu-id="d7e9f-102">Extending the DOM</span></span>
+<span data-ttu-id="d7e9f-103">Microsoft .NET Framework 含有可提供 XML 文件物件模型 (DOM) 之實作的基底類別組。</span><span class="sxs-lookup"><span data-stu-id="d7e9f-103">The Microsoft .NET Framework includes a base set of classes that provides an implementation of the XML Document Object Model (DOM).</span></span> <span data-ttu-id="d7e9f-104"><xref:System.Xml.XmlNode> 及其衍生類別會提供方法和屬性，讓您巡覽、查詢和修改 XML 文件的內容和結構。</span><span class="sxs-lookup"><span data-stu-id="d7e9f-104">The <xref:System.Xml.XmlNode>, and its derived classes, provides methods and properties that allow you to navigate, query, and modify the content and structure of an XML document.</span></span>  
   
- <span data-ttu-id="cfef5-105">當 XML 內容載入使用 DOM 的記憶體時，建立的節點包含資訊，例如節點名稱、節點型別等等。</span><span class="sxs-lookup"><span data-stu-id="cfef5-105">When XML content is loaded into memory using the DOM, the nodes created contain information such as node name, node type, and so on.</span></span> <span data-ttu-id="cfef5-106">有時您可能會需要基底類別所沒有提供的特定節點資訊。</span><span class="sxs-lookup"><span data-stu-id="cfef5-106">There may be occasions where you require specific node information that the base classes do not provide.</span></span> <span data-ttu-id="cfef5-107">例如，您可能想要查看節點的行號和位置。</span><span class="sxs-lookup"><span data-stu-id="cfef5-107">For example, you may want to see the line number and position of the node.</span></span> <span data-ttu-id="cfef5-108">在這個案例中，您可以從現有 DOM 類別衍生新類別並且加入其他功能。</span><span class="sxs-lookup"><span data-stu-id="cfef5-108">In this case, you can derive new classes from the existing DOM classes and add additional functionality.</span></span>  
+ <span data-ttu-id="d7e9f-105">當 XML 內容載入使用 DOM 的記憶體時，建立的節點包含資訊，例如節點名稱、節點型別等等。</span><span class="sxs-lookup"><span data-stu-id="d7e9f-105">When XML content is loaded into memory using the DOM, the nodes created contain information such as node name, node type, and so on.</span></span> <span data-ttu-id="d7e9f-106">有時您可能會需要基底類別所沒有提供的特定節點資訊。</span><span class="sxs-lookup"><span data-stu-id="d7e9f-106">There may be occasions where you require specific node information that the base classes do not provide.</span></span> <span data-ttu-id="d7e9f-107">例如，您可能想要查看節點的行號和位置。</span><span class="sxs-lookup"><span data-stu-id="d7e9f-107">For example, you may want to see the line number and position of the node.</span></span> <span data-ttu-id="d7e9f-108">在這個案例中，您可以從現有 DOM 類別衍生新類別並且加入其他功能。</span><span class="sxs-lookup"><span data-stu-id="d7e9f-108">In this case, you can derive new classes from the existing DOM classes and add additional functionality.</span></span>  
   
- <span data-ttu-id="cfef5-109">衍生新類別時有兩個一般方針：</span><span class="sxs-lookup"><span data-stu-id="cfef5-109">There are two general guidelines when deriving new classes:</span></span>  
+ <span data-ttu-id="d7e9f-109">衍生新類別時有兩個一般方針：</span><span class="sxs-lookup"><span data-stu-id="d7e9f-109">There are two general guidelines when deriving new classes:</span></span>  
   
--   <span data-ttu-id="cfef5-110">建議您絕不要從 <xref:System.Xml.XmlNode> 類別中進行衍生。</span><span class="sxs-lookup"><span data-stu-id="cfef5-110">It is recommended that you never derive from the <xref:System.Xml.XmlNode> class.</span></span> <span data-ttu-id="cfef5-111">建議您從感興趣之節點型別的對應類別來衍生類別。</span><span class="sxs-lookup"><span data-stu-id="cfef5-111">Instead, it is recommended that you derive classes from the class corresponding to the node type that you are interested in.</span></span> <span data-ttu-id="cfef5-112">例如，如果您要傳回屬性節點的其他資訊，則可以從 <xref:System.Xml.XmlAttribute> 類別加以衍生。</span><span class="sxs-lookup"><span data-stu-id="cfef5-112">For example, if you want to return additional information on attribute nodes, you can derive from the <xref:System.Xml.XmlAttribute> class.</span></span>  
+-   <span data-ttu-id="d7e9f-110">建議您絕不要從 <xref:System.Xml.XmlNode> 類別中進行衍生。</span><span class="sxs-lookup"><span data-stu-id="d7e9f-110">It is recommended that you never derive from the <xref:System.Xml.XmlNode> class.</span></span> <span data-ttu-id="d7e9f-111">建議您從感興趣之節點型別的對應類別來衍生類別。</span><span class="sxs-lookup"><span data-stu-id="d7e9f-111">Instead, it is recommended that you derive classes from the class corresponding to the node type that you are interested in.</span></span> <span data-ttu-id="d7e9f-112">例如，如果您要傳回屬性節點的其他資訊，則可以從 <xref:System.Xml.XmlAttribute> 類別加以衍生。</span><span class="sxs-lookup"><span data-stu-id="d7e9f-112">For example, if you want to return additional information on attribute nodes, you can derive from the <xref:System.Xml.XmlAttribute> class.</span></span>  
   
--   <span data-ttu-id="cfef5-113">除了節點建立方法之外，建議在覆寫函式時，您一定要呼叫函式的基底版本，然後加入其他任何的處理。</span><span class="sxs-lookup"><span data-stu-id="cfef5-113">Except for the node creation methods, it is recommended that when overriding a function, you should always call the base version of the function and then add any additional processing.</span></span>  
+-   <span data-ttu-id="d7e9f-113">除了節點建立方法之外，建議在覆寫函式時，您一定要呼叫函式的基底版本，然後加入其他任何的處理。</span><span class="sxs-lookup"><span data-stu-id="d7e9f-113">Except for the node creation methods, it is recommended that when overriding a function, you should always call the base version of the function and then add any additional processing.</span></span>  
   
-## <a name="creating-your-own-node-instances"></a><span data-ttu-id="cfef5-114">建立您自己的節點執行個體</span><span class="sxs-lookup"><span data-stu-id="cfef5-114">Creating Your Own Node Instances</span></span>  
- <span data-ttu-id="cfef5-115"><xref:System.Xml.XmlDocument> 類別包含節點建立方法。</span><span class="sxs-lookup"><span data-stu-id="cfef5-115">The <xref:System.Xml.XmlDocument> class contains node creation methods.</span></span> <span data-ttu-id="cfef5-116">當 XML 檔載入時，會呼叫這些方法來建立節點。</span><span class="sxs-lookup"><span data-stu-id="cfef5-116">When an XML file is loaded, these methods are called to create the nodes.</span></span> <span data-ttu-id="cfef5-117">您可以覆寫這些方法，這樣就會在文件載入時建立您的節點執行個體。</span><span class="sxs-lookup"><span data-stu-id="cfef5-117">You can override these methods so that your node instances are created when a document is loaded.</span></span> <span data-ttu-id="cfef5-118">例如，如果擴充了 <xref:System.Xml.XmlElement> 類別，則會繼承 <xref:System.Xml.XmlDocument> 類別，並覆寫 <xref:System.Xml.XmlDocument.CreateElement%2A> 方法。</span><span class="sxs-lookup"><span data-stu-id="cfef5-118">For example, if you have extended the <xref:System.Xml.XmlElement> class, you would inherit the <xref:System.Xml.XmlDocument> class and override the <xref:System.Xml.XmlDocument.CreateElement%2A> method.</span></span>  
+## <a name="creating-your-own-node-instances"></a><span data-ttu-id="d7e9f-114">建立您自己的節點執行個體</span><span class="sxs-lookup"><span data-stu-id="d7e9f-114">Creating Your Own Node Instances</span></span>  
+ <span data-ttu-id="d7e9f-115"><xref:System.Xml.XmlDocument> 類別包含節點建立方法。</span><span class="sxs-lookup"><span data-stu-id="d7e9f-115">The <xref:System.Xml.XmlDocument> class contains node creation methods.</span></span> <span data-ttu-id="d7e9f-116">當 XML 檔載入時，會呼叫這些方法來建立節點。</span><span class="sxs-lookup"><span data-stu-id="d7e9f-116">When an XML file is loaded, these methods are called to create the nodes.</span></span> <span data-ttu-id="d7e9f-117">您可以覆寫這些方法，這樣就會在文件載入時建立您的節點執行個體。</span><span class="sxs-lookup"><span data-stu-id="d7e9f-117">You can override these methods so that your node instances are created when a document is loaded.</span></span> <span data-ttu-id="d7e9f-118">例如，如果擴充了 <xref:System.Xml.XmlElement> 類別，則會繼承 <xref:System.Xml.XmlDocument> 類別，並覆寫 <xref:System.Xml.XmlDocument.CreateElement%2A> 方法。</span><span class="sxs-lookup"><span data-stu-id="d7e9f-118">For example, if you have extended the <xref:System.Xml.XmlElement> class, you would inherit the <xref:System.Xml.XmlDocument> class and override the <xref:System.Xml.XmlDocument.CreateElement%2A> method.</span></span>  
   
- <span data-ttu-id="cfef5-119">下列範例顯示如何覆寫 <xref:System.Xml.XmlDocument.CreateElement%2A> 方法，以傳回 <xref:System.Xml.XmlElement> 類別的實作。</span><span class="sxs-lookup"><span data-stu-id="cfef5-119">The following example shows how to override the <xref:System.Xml.XmlDocument.CreateElement%2A> method to return your implementation of the <xref:System.Xml.XmlElement> class.</span></span>  
+ <span data-ttu-id="d7e9f-119">下列範例顯示如何覆寫 <xref:System.Xml.XmlDocument.CreateElement%2A> 方法，以傳回 <xref:System.Xml.XmlElement> 類別的實作。</span><span class="sxs-lookup"><span data-stu-id="d7e9f-119">The following example shows how to override the <xref:System.Xml.XmlDocument.CreateElement%2A> method to return your implementation of the <xref:System.Xml.XmlElement> class.</span></span>  
   
 ```vb  
 Class LineInfoDocument  
@@ -59,10 +48,10 @@ class LineInfoDocument : XmlDocument {
   }  
 ```  
   
-## <a name="extending-a-class"></a><span data-ttu-id="cfef5-120">擴充類別</span><span class="sxs-lookup"><span data-stu-id="cfef5-120">Extending a Class</span></span>  
- <span data-ttu-id="cfef5-121">若要擴充類別，請從其中一個現有的 DOM 類別衍生您的類別。</span><span class="sxs-lookup"><span data-stu-id="cfef5-121">To extend a class, derive your class from one of the existing DOM classes.</span></span> <span data-ttu-id="cfef5-122">接著您可以覆寫基底類別中的虛擬方法或屬性，或加入您自己的方法或屬性。</span><span class="sxs-lookup"><span data-stu-id="cfef5-122">You can then override any of the virtual methods or properties in the base class, or add your own.</span></span>  
+## <a name="extending-a-class"></a><span data-ttu-id="d7e9f-120">擴充類別</span><span class="sxs-lookup"><span data-stu-id="d7e9f-120">Extending a Class</span></span>  
+ <span data-ttu-id="d7e9f-121">若要擴充類別，請從其中一個現有的 DOM 類別衍生您的類別。</span><span class="sxs-lookup"><span data-stu-id="d7e9f-121">To extend a class, derive your class from one of the existing DOM classes.</span></span> <span data-ttu-id="d7e9f-122">接著您可以覆寫基底類別中的虛擬方法或屬性，或加入您自己的方法或屬性。</span><span class="sxs-lookup"><span data-stu-id="d7e9f-122">You can then override any of the virtual methods or properties in the base class, or add your own.</span></span>  
   
- <span data-ttu-id="cfef5-123">在下列範例中會建立新類別，此新類別會實作 <xref:System.Xml.XmlElement> 類別和 <xref:System.Xml.IXmlLineInfo> 介面。</span><span class="sxs-lookup"><span data-stu-id="cfef5-123">In the following example, a new class is created, which implements the <xref:System.Xml.XmlElement> class and the <xref:System.Xml.IXmlLineInfo> interface.</span></span> <span data-ttu-id="cfef5-124">其他的方法和屬性會定義何者可讓使用者獲得指令行資訊。</span><span class="sxs-lookup"><span data-stu-id="cfef5-124">Additional methods and properties are defined which allows users to gather line information.</span></span>  
+ <span data-ttu-id="d7e9f-123">在下列範例中會建立新類別，此新類別會實作 <xref:System.Xml.XmlElement> 類別和 <xref:System.Xml.IXmlLineInfo> 介面。</span><span class="sxs-lookup"><span data-stu-id="d7e9f-123">In the following example, a new class is created, which implements the <xref:System.Xml.XmlElement> class and the <xref:System.Xml.IXmlLineInfo> interface.</span></span> <span data-ttu-id="d7e9f-124">其他的方法和屬性會定義何者可讓使用者獲得指令行資訊。</span><span class="sxs-lookup"><span data-stu-id="d7e9f-124">Additional methods and properties are defined which allows users to gather line information.</span></span>  
   
 ```vb  
 Class LineInfoElement  
@@ -126,8 +115,8 @@ class LineInfoElement : XmlElement, IXmlLineInfo {
 } // End LineInfoElement class.  
 ```  
   
-### <a name="example"></a><span data-ttu-id="cfef5-125">範例</span><span class="sxs-lookup"><span data-stu-id="cfef5-125">Example</span></span>  
- <span data-ttu-id="cfef5-126">下列範例計算 XML 文件中項目的數目。</span><span class="sxs-lookup"><span data-stu-id="cfef5-126">The following example counts the number of elements in an XML document.</span></span>  
+### <a name="example"></a><span data-ttu-id="d7e9f-125">範例</span><span class="sxs-lookup"><span data-stu-id="d7e9f-125">Example</span></span>  
+ <span data-ttu-id="d7e9f-126">下列範例計算 XML 文件中項目的數目。</span><span class="sxs-lookup"><span data-stu-id="d7e9f-126">The following example counts the number of elements in an XML document.</span></span>  
   
 ```vb  
 Imports System  
@@ -229,8 +218,8 @@ public class Test {
 }   
 ```  
   
-##### <a name="input"></a><span data-ttu-id="cfef5-127">輸入</span><span class="sxs-lookup"><span data-stu-id="cfef5-127">Input</span></span>  
- <span data-ttu-id="cfef5-128">book.xml</span><span class="sxs-lookup"><span data-stu-id="cfef5-128">book.xml</span></span>  
+##### <a name="input"></a><span data-ttu-id="d7e9f-127">輸入</span><span class="sxs-lookup"><span data-stu-id="d7e9f-127">Input</span></span>  
+ <span data-ttu-id="d7e9f-128">book.xml</span><span class="sxs-lookup"><span data-stu-id="d7e9f-128">book.xml</span></span>  
   
 ```xml  
 <!--sample XML fragment-->  
@@ -240,23 +229,23 @@ public class Test {
 </book>  
 ```  
   
-##### <a name="output"></a><span data-ttu-id="cfef5-129">輸出</span><span class="sxs-lookup"><span data-stu-id="cfef5-129">Output</span></span>  
+##### <a name="output"></a><span data-ttu-id="d7e9f-129">輸出</span><span class="sxs-lookup"><span data-stu-id="d7e9f-129">Output</span></span>  
   
 ```  
 Number of elements in book.xml: 3  
 ```  
   
- <span data-ttu-id="cfef5-130">如需顯示如何擴充 XML DOM 類別 (System.Xml) 的範例，請參閱 www.gotdotnet.com/userfiles/XMLDom/extendDOM.zip。</span><span class="sxs-lookup"><span data-stu-id="cfef5-130">For an example showing how to extend the XML DOM classes (System.Xml), see www.gotdotnet.com/userfiles/XMLDom/extendDOM.zip.</span></span>  
+ <span data-ttu-id="d7e9f-130">如需顯示如何擴充 XML DOM 類別 (System.Xml) 的範例，請參閱 www.gotdotnet.com/userfiles/XMLDom/extendDOM.zip。</span><span class="sxs-lookup"><span data-stu-id="d7e9f-130">For an example showing how to extend the XML DOM classes (System.Xml), see www.gotdotnet.com/userfiles/XMLDom/extendDOM.zip.</span></span>  
   
-## <a name="node-event-handler"></a><span data-ttu-id="cfef5-131">節點事件處理常式</span><span class="sxs-lookup"><span data-stu-id="cfef5-131">Node Event Handler</span></span>  
- <span data-ttu-id="cfef5-132">DOM 的 .NET Framework 實作也包含一個事件系統，當 XML 文件中的節點變更時，可以讓您接收和處理事件。</span><span class="sxs-lookup"><span data-stu-id="cfef5-132">The .NET Framework implementation of the DOM also includes an event system that enables you to receive and handle events when nodes in an XML document change.</span></span> <span data-ttu-id="cfef5-133">使用 <xref:System.Xml.XmlNodeChangedEventHandler> 和 <xref:System.Xml.XmlNodeChangedEventArgs> 類別，您可以擷取 `NodeChanged`、`NodeChanging`、`NodeInserted`、`NodeInserting`、`NodeRemoved` 和 `NodeRemoving` 事件。</span><span class="sxs-lookup"><span data-stu-id="cfef5-133">Using the <xref:System.Xml.XmlNodeChangedEventHandler> and <xref:System.Xml.XmlNodeChangedEventArgs> classes, you can capture `NodeChanged`, `NodeChanging`, `NodeInserted`, `NodeInserting`, `NodeRemoved`, and `NodeRemoving` events.</span></span>  
+## <a name="node-event-handler"></a><span data-ttu-id="d7e9f-131">節點事件處理常式</span><span class="sxs-lookup"><span data-stu-id="d7e9f-131">Node Event Handler</span></span>  
+ <span data-ttu-id="d7e9f-132">DOM 的 .NET Framework 實作也包含一個事件系統，當 XML 文件中的節點變更時，可以讓您接收和處理事件。</span><span class="sxs-lookup"><span data-stu-id="d7e9f-132">The .NET Framework implementation of the DOM also includes an event system that enables you to receive and handle events when nodes in an XML document change.</span></span> <span data-ttu-id="d7e9f-133">使用 <xref:System.Xml.XmlNodeChangedEventHandler> 和 <xref:System.Xml.XmlNodeChangedEventArgs> 類別，您可以擷取 `NodeChanged`、`NodeChanging`、`NodeInserted`、`NodeInserting`、`NodeRemoved` 和 `NodeRemoving` 事件。</span><span class="sxs-lookup"><span data-stu-id="d7e9f-133">Using the <xref:System.Xml.XmlNodeChangedEventHandler> and <xref:System.Xml.XmlNodeChangedEventArgs> classes, you can capture `NodeChanged`, `NodeChanging`, `NodeInserted`, `NodeInserting`, `NodeRemoved`, and `NodeRemoving` events.</span></span>  
   
- <span data-ttu-id="cfef5-134">事件處理程序在衍生類別中的執行方式，與在原始 DOM 類別中的執行方式相同。</span><span class="sxs-lookup"><span data-stu-id="cfef5-134">The event-handling process works exactly the same in derived classes as it would in the original DOM classes.</span></span>  
+ <span data-ttu-id="d7e9f-134">事件處理程序在衍生類別中的執行方式，與在原始 DOM 類別中的執行方式相同。</span><span class="sxs-lookup"><span data-stu-id="d7e9f-134">The event-handling process works exactly the same in derived classes as it would in the original DOM classes.</span></span>  
   
- <span data-ttu-id="cfef5-135">如需有關節點事件處理的詳細資訊，請參閱[事件](../../../../docs/standard/events/index.md)和 <xref:System.Xml.XmlNodeChangedEventHandler>。</span><span class="sxs-lookup"><span data-stu-id="cfef5-135">For more information regarding node event handling, see [Events](../../../../docs/standard/events/index.md) and <xref:System.Xml.XmlNodeChangedEventHandler>.</span></span>  
+ <span data-ttu-id="d7e9f-135">如需有關節點事件處理的詳細資訊，請參閱[事件](../../../../docs/standard/events/index.md)和 <xref:System.Xml.XmlNodeChangedEventHandler>。</span><span class="sxs-lookup"><span data-stu-id="d7e9f-135">For more information regarding node event handling, see [Events](../../../../docs/standard/events/index.md) and <xref:System.Xml.XmlNodeChangedEventHandler>.</span></span>  
   
-## <a name="default-attributes-and-the-createelement-method"></a><span data-ttu-id="cfef5-136">預設屬性和 CreateElement 方法</span><span class="sxs-lookup"><span data-stu-id="cfef5-136">Default Attributes and the CreateElement Method</span></span>  
- <span data-ttu-id="cfef5-137">如果要在衍生類別中覆寫 <xref:System.Xml.XmlDocument.CreateElement%2A> 方法，則編輯文件而建立新項目時，將不會加入預設屬性。</span><span class="sxs-lookup"><span data-stu-id="cfef5-137">If you are overriding the <xref:System.Xml.XmlDocument.CreateElement%2A> method in a derived class, default attributes are not added when you are creating new elements while editing the document.</span></span> <span data-ttu-id="cfef5-138">這只是在編輯時才會發生的問題。</span><span class="sxs-lookup"><span data-stu-id="cfef5-138">This is only an issue while editing.</span></span> <span data-ttu-id="cfef5-139">因為 <xref:System.Xml.XmlDocument.CreateElement%2A> 方法負責將預設屬性加入 <xref:System.Xml.XmlDocument>，所以您必須將此功能以程式碼編寫在 <xref:System.Xml.XmlDocument.CreateElement%2A> 方法中。</span><span class="sxs-lookup"><span data-stu-id="cfef5-139">Because the <xref:System.Xml.XmlDocument.CreateElement%2A> method is responsible for adding default attributes to an <xref:System.Xml.XmlDocument>, you must code this functionality in the <xref:System.Xml.XmlDocument.CreateElement%2A> method.</span></span> <span data-ttu-id="cfef5-140">如果載入含有預設屬性的 <xref:System.Xml.XmlDocument>，則會正確處理它們。</span><span class="sxs-lookup"><span data-stu-id="cfef5-140">If you are loading an <xref:System.Xml.XmlDocument> that includes default attributes, they will be handled correctly.</span></span> <span data-ttu-id="cfef5-141">如需有關預設屬性的詳細資訊，請參閱[為 DOM 中的項目建立新屬性](../../../../docs/standard/data/xml/creating-new-attributes-for-elements-in-the-dom.md)。</span><span class="sxs-lookup"><span data-stu-id="cfef5-141">For more information on default attributes, see [Creating New Attributes for Elements in the DOM](../../../../docs/standard/data/xml/creating-new-attributes-for-elements-in-the-dom.md).</span></span>  
+## <a name="default-attributes-and-the-createelement-method"></a><span data-ttu-id="d7e9f-136">預設屬性和 CreateElement 方法</span><span class="sxs-lookup"><span data-stu-id="d7e9f-136">Default Attributes and the CreateElement Method</span></span>  
+ <span data-ttu-id="d7e9f-137">如果要在衍生類別中覆寫 <xref:System.Xml.XmlDocument.CreateElement%2A> 方法，則編輯文件而建立新項目時，將不會加入預設屬性。</span><span class="sxs-lookup"><span data-stu-id="d7e9f-137">If you are overriding the <xref:System.Xml.XmlDocument.CreateElement%2A> method in a derived class, default attributes are not added when you are creating new elements while editing the document.</span></span> <span data-ttu-id="d7e9f-138">這只是在編輯時才會發生的問題。</span><span class="sxs-lookup"><span data-stu-id="d7e9f-138">This is only an issue while editing.</span></span> <span data-ttu-id="d7e9f-139">因為 <xref:System.Xml.XmlDocument.CreateElement%2A> 方法負責將預設屬性加入 <xref:System.Xml.XmlDocument>，所以您必須將此功能以程式碼編寫在 <xref:System.Xml.XmlDocument.CreateElement%2A> 方法中。</span><span class="sxs-lookup"><span data-stu-id="d7e9f-139">Because the <xref:System.Xml.XmlDocument.CreateElement%2A> method is responsible for adding default attributes to an <xref:System.Xml.XmlDocument>, you must code this functionality in the <xref:System.Xml.XmlDocument.CreateElement%2A> method.</span></span> <span data-ttu-id="d7e9f-140">如果載入含有預設屬性的 <xref:System.Xml.XmlDocument>，則會正確處理它們。</span><span class="sxs-lookup"><span data-stu-id="d7e9f-140">If you are loading an <xref:System.Xml.XmlDocument> that includes default attributes, they will be handled correctly.</span></span> <span data-ttu-id="d7e9f-141">如需有關預設屬性的詳細資訊，請參閱[為 DOM 中的項目建立新屬性](../../../../docs/standard/data/xml/creating-new-attributes-for-elements-in-the-dom.md)。</span><span class="sxs-lookup"><span data-stu-id="d7e9f-141">For more information on default attributes, see [Creating New Attributes for Elements in the DOM](../../../../docs/standard/data/xml/creating-new-attributes-for-elements-in-the-dom.md).</span></span>  
   
-## <a name="see-also"></a><span data-ttu-id="cfef5-142">請參閱</span><span class="sxs-lookup"><span data-stu-id="cfef5-142">See Also</span></span>  
- [<span data-ttu-id="cfef5-143">XML 文件物件模型 (DOM)</span><span class="sxs-lookup"><span data-stu-id="cfef5-143">XML Document Object Model (DOM)</span></span>](../../../../docs/standard/data/xml/xml-document-object-model-dom.md)
+## <a name="see-also"></a><span data-ttu-id="d7e9f-142">請參閱</span><span class="sxs-lookup"><span data-stu-id="d7e9f-142">See Also</span></span>  
+ [<span data-ttu-id="d7e9f-143">XML 文件物件模型 (DOM)</span><span class="sxs-lookup"><span data-stu-id="d7e9f-143">XML Document Object Model (DOM)</span></span>](../../../../docs/standard/data/xml/xml-document-object-model-dom.md)

@@ -1,26 +1,19 @@
 ---
 title: '#line (C# 參考)'
 ms.date: 07/20/2015
-ms.prod: .net
-ms.technology:
-- devlang-csharp
-ms.topic: article
 f1_keywords:
 - '#line'
 helpviewer_keywords:
 - '#line directive [C#]'
 ms.assetid: 6439e525-5dd5-4acb-b8ea-efabb32ff95b
-caps.latest.revision: 13
-author: BillWagner
-ms.author: wiwagn
-ms.openlocfilehash: 3d2f42915d214349eebff40949482d7f603c0c2c
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.openlocfilehash: 08ba94ec3f1799f858e098bd2c0e059b7f45af2e
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 05/04/2018
 ---
-# <a name="line-c-reference"></a><span data-ttu-id="c8da0-102">#line (C# 參考)</span><span class="sxs-lookup"><span data-stu-id="c8da0-102">#line (C# Reference)</span></span>
-<span data-ttu-id="c8da0-103">`#line` 可讓您修改編譯器的行號以及 (選擇性) 錯誤和警告的檔案名稱輸出。</span><span class="sxs-lookup"><span data-stu-id="c8da0-103">`#line` lets you modify the compiler's line number and (optionally) the file name output for errors and warnings.</span></span> <span data-ttu-id="c8da0-104">此範例示範如何報告兩個與行號建立關聯的警告。</span><span class="sxs-lookup"><span data-stu-id="c8da0-104">This example shows how to report two warnings associated with line numbers.</span></span> <span data-ttu-id="c8da0-105">`#line 200` 指示詞會將行號強制為 200 (但預設值為 #7)，而且在下一個 #line 指示詞之前，檔案名稱將會回報為 "Special"。</span><span class="sxs-lookup"><span data-stu-id="c8da0-105">The `#line 200` directive forces the line number to be 200 (although the default is #7) and until the next #line directive, the filename will be reported as "Special".</span></span> <span data-ttu-id="c8da0-106">#line 預設指示詞會將行編號還原為其預設編號，這會計算已由先前的指示詞重新編號的行。</span><span class="sxs-lookup"><span data-stu-id="c8da0-106">The #line default directive returns the line numbering to its default numbering, which counts the lines that were renumbered by the previous directive.</span></span>  
+# <a name="line-c-reference"></a><span data-ttu-id="2b371-102">#line (C# 參考)</span><span class="sxs-lookup"><span data-stu-id="2b371-102">#line (C# Reference)</span></span>
+<span data-ttu-id="2b371-103">`#line` 可讓您修改編譯器的行號以及 (選擇性) 錯誤和警告的檔案名稱輸出。</span><span class="sxs-lookup"><span data-stu-id="2b371-103">`#line` lets you modify the compiler's line number and (optionally) the file name output for errors and warnings.</span></span> <span data-ttu-id="2b371-104">此範例示範如何報告兩個與行號建立關聯的警告。</span><span class="sxs-lookup"><span data-stu-id="2b371-104">This example shows how to report two warnings associated with line numbers.</span></span> <span data-ttu-id="2b371-105">`#line 200` 指示詞會將行號強制為 200 (但預設值為 #7)，而且在下一個 #line 指示詞之前，檔案名稱將會回報為 "Special"。</span><span class="sxs-lookup"><span data-stu-id="2b371-105">The `#line 200` directive forces the line number to be 200 (although the default is #7) and until the next #line directive, the filename will be reported as "Special".</span></span> <span data-ttu-id="2b371-106">#line 預設指示詞會將行編號還原為其預設編號，這會計算已由先前的指示詞重新編號的行。</span><span class="sxs-lookup"><span data-stu-id="2b371-106">The #line default directive returns the line numbering to its default numbering, which counts the lines that were renumbered by the previous directive.</span></span>  
   
 ```csharp
 class MainClass  
@@ -40,19 +33,19 @@ class MainClass
 }  
 ```  
   
-## <a name="remarks"></a><span data-ttu-id="c8da0-107">備註</span><span class="sxs-lookup"><span data-stu-id="c8da0-107">Remarks</span></span>  
- <span data-ttu-id="c8da0-108">`#line` 指示詞可以用於建置程序中的自動化中繼步驟。</span><span class="sxs-lookup"><span data-stu-id="c8da0-108">The `#line` directive might be used in an automated, intermediate step in the build process.</span></span> <span data-ttu-id="c8da0-109">例如，如果已從原始程式碼檔中移除行，但您仍然想要編譯器根據檔案中的原始行編號來產生輸出，則可以移除行，然後模擬具有 `#line` 的原始行編號。</span><span class="sxs-lookup"><span data-stu-id="c8da0-109">For example, if lines were removed from the original source code file, but you still wanted the compiler to generate output based on the original line numbering in the file, you could remove lines and then simulate the original line numbering with `#line`.</span></span>  
+## <a name="remarks"></a><span data-ttu-id="2b371-107">備註</span><span class="sxs-lookup"><span data-stu-id="2b371-107">Remarks</span></span>  
+ <span data-ttu-id="2b371-108">`#line` 指示詞可以用於建置程序中的自動化中繼步驟。</span><span class="sxs-lookup"><span data-stu-id="2b371-108">The `#line` directive might be used in an automated, intermediate step in the build process.</span></span> <span data-ttu-id="2b371-109">例如，如果已從原始程式碼檔中移除行，但您仍然想要編譯器根據檔案中的原始行編號來產生輸出，則可以移除行，然後模擬具有 `#line` 的原始行編號。</span><span class="sxs-lookup"><span data-stu-id="2b371-109">For example, if lines were removed from the original source code file, but you still wanted the compiler to generate output based on the original line numbering in the file, you could remove lines and then simulate the original line numbering with `#line`.</span></span>  
   
- <span data-ttu-id="c8da0-110">`#line hidden` 指示詞會隱藏偵錯工具中的後續行，如此一來，開發人員逐步執行程式碼時，會逐步執行 `#line hidden` 與下一個 `#line` 指示詞 (假設它不是另一個 `#line hidden` 指示詞) 之間的任何行。</span><span class="sxs-lookup"><span data-stu-id="c8da0-110">The `#line hidden` directive hides the successive lines from the debugger, such that when the developer steps through the code, any lines between a `#line hidden` and the next `#line` directive (assuming that it is not another `#line hidden` directive) will be stepped over.</span></span> <span data-ttu-id="c8da0-111">此選項也可用來讓 ASP.NET 區分使用者定義的程式碼與電腦產生的程式碼。</span><span class="sxs-lookup"><span data-stu-id="c8da0-111">This option can also be used to allow ASP.NET to differentiate between user-defined and machine-generated code.</span></span> <span data-ttu-id="c8da0-112">雖然 ASP.NET 是這項功能的主要取用者，但是可能會有更多來源產生器利用它。</span><span class="sxs-lookup"><span data-stu-id="c8da0-112">Although ASP.NET is the primary consumer of this feature, it is likely that more source generators will make use of it.</span></span>  
+ <span data-ttu-id="2b371-110">`#line hidden` 指示詞會隱藏偵錯工具中的後續行，如此一來，開發人員逐步執行程式碼時，會逐步執行 `#line hidden` 與下一個 `#line` 指示詞 (假設它不是另一個 `#line hidden` 指示詞) 之間的任何行。</span><span class="sxs-lookup"><span data-stu-id="2b371-110">The `#line hidden` directive hides the successive lines from the debugger, such that when the developer steps through the code, any lines between a `#line hidden` and the next `#line` directive (assuming that it is not another `#line hidden` directive) will be stepped over.</span></span> <span data-ttu-id="2b371-111">此選項也可用來讓 ASP.NET 區分使用者定義的程式碼與電腦產生的程式碼。</span><span class="sxs-lookup"><span data-stu-id="2b371-111">This option can also be used to allow ASP.NET to differentiate between user-defined and machine-generated code.</span></span> <span data-ttu-id="2b371-112">雖然 ASP.NET 是這項功能的主要取用者，但是可能會有更多來源產生器利用它。</span><span class="sxs-lookup"><span data-stu-id="2b371-112">Although ASP.NET is the primary consumer of this feature, it is likely that more source generators will make use of it.</span></span>  
   
- <span data-ttu-id="c8da0-113">`#line hidden` 指示詞不會影響錯誤報告中的檔案名稱或行號。</span><span class="sxs-lookup"><span data-stu-id="c8da0-113">A `#line hidden` directive does not affect file names or line numbers in error reporting.</span></span> <span data-ttu-id="c8da0-114">也就是說，如果隱藏區塊中發生錯誤，則編譯器會報告錯誤的目前檔案名稱和行號。</span><span class="sxs-lookup"><span data-stu-id="c8da0-114">That is, if an error is encountered in a hidden block, the compiler will report the current file name and line number of the error.</span></span>  
+ <span data-ttu-id="2b371-113">`#line hidden` 指示詞不會影響錯誤報告中的檔案名稱或行號。</span><span class="sxs-lookup"><span data-stu-id="2b371-113">A `#line hidden` directive does not affect file names or line numbers in error reporting.</span></span> <span data-ttu-id="2b371-114">也就是說，如果隱藏區塊中發生錯誤，則編譯器會報告錯誤的目前檔案名稱和行號。</span><span class="sxs-lookup"><span data-stu-id="2b371-114">That is, if an error is encountered in a hidden block, the compiler will report the current file name and line number of the error.</span></span>  
   
- <span data-ttu-id="c8da0-115">`#line filename` 指示詞指定您想要在編譯器輸出中顯示的檔案名稱。</span><span class="sxs-lookup"><span data-stu-id="c8da0-115">The `#line filename` directive specifies the file name you want to appear in the compiler output.</span></span> <span data-ttu-id="c8da0-116">預設會使用原始程式碼檔的實際名稱。</span><span class="sxs-lookup"><span data-stu-id="c8da0-116">By default, the actual name of the source code file is used.</span></span> <span data-ttu-id="c8da0-117">檔案名稱必須以雙引號 ("") 括住，而且前面必須有行號。</span><span class="sxs-lookup"><span data-stu-id="c8da0-117">The file name must be in double quotation marks ("") and must be preceded by a line number.</span></span>  
+ <span data-ttu-id="2b371-115">`#line filename` 指示詞指定您想要在編譯器輸出中顯示的檔案名稱。</span><span class="sxs-lookup"><span data-stu-id="2b371-115">The `#line filename` directive specifies the file name you want to appear in the compiler output.</span></span> <span data-ttu-id="2b371-116">預設會使用原始程式碼檔的實際名稱。</span><span class="sxs-lookup"><span data-stu-id="2b371-116">By default, the actual name of the source code file is used.</span></span> <span data-ttu-id="2b371-117">檔案名稱必須以雙引號 ("") 括住，而且前面必須有行號。</span><span class="sxs-lookup"><span data-stu-id="2b371-117">The file name must be in double quotation marks ("") and must be preceded by a line number.</span></span>  
   
- <span data-ttu-id="c8da0-118">原始程式碼檔可以有任意數目的 `#line` 指示詞。</span><span class="sxs-lookup"><span data-stu-id="c8da0-118">A source code file can have any number of `#line` directives.</span></span>  
+ <span data-ttu-id="2b371-118">原始程式碼檔可以有任意數目的 `#line` 指示詞。</span><span class="sxs-lookup"><span data-stu-id="2b371-118">A source code file can have any number of `#line` directives.</span></span>  
   
-## <a name="example-1"></a><span data-ttu-id="c8da0-119">範例 1</span><span class="sxs-lookup"><span data-stu-id="c8da0-119">Example 1</span></span>  
- <span data-ttu-id="c8da0-120">下列範例示範偵錯工具如何忽略程式碼中的隱藏行。</span><span class="sxs-lookup"><span data-stu-id="c8da0-120">The following example shows how the debugger ignores the hidden lines in the code.</span></span> <span data-ttu-id="c8da0-121">當您執行範例時，會顯示三行文字。</span><span class="sxs-lookup"><span data-stu-id="c8da0-121">When you run the example, it will display three lines of text.</span></span> <span data-ttu-id="c8da0-122">不過，如果您設定中斷點 (如此範例所示)，並按 F10 逐步執行程式碼，則會注意到偵錯工具忽略隱藏行。</span><span class="sxs-lookup"><span data-stu-id="c8da0-122">However, when you set a break point, as shown in the example, and hit F10 to step through the code, you will notice that the debugger ignores the hidden line.</span></span> <span data-ttu-id="c8da0-123">另請注意，即使您在隱藏行設定中斷點，偵錯工具仍然會忽略它。</span><span class="sxs-lookup"><span data-stu-id="c8da0-123">Notice also that even if you set a break point at the hidden line, the debugger will still ignore it.</span></span>  
+## <a name="example-1"></a><span data-ttu-id="2b371-119">範例 1</span><span class="sxs-lookup"><span data-stu-id="2b371-119">Example 1</span></span>  
+ <span data-ttu-id="2b371-120">下列範例示範偵錯工具如何忽略程式碼中的隱藏行。</span><span class="sxs-lookup"><span data-stu-id="2b371-120">The following example shows how the debugger ignores the hidden lines in the code.</span></span> <span data-ttu-id="2b371-121">當您執行範例時，會顯示三行文字。</span><span class="sxs-lookup"><span data-stu-id="2b371-121">When you run the example, it will display three lines of text.</span></span> <span data-ttu-id="2b371-122">不過，如果您設定中斷點 (如此範例所示)，並按 F10 逐步執行程式碼，則會注意到偵錯工具忽略隱藏行。</span><span class="sxs-lookup"><span data-stu-id="2b371-122">However, when you set a break point, as shown in the example, and hit F10 to step through the code, you will notice that the debugger ignores the hidden line.</span></span> <span data-ttu-id="2b371-123">另請注意，即使您在隱藏行設定中斷點，偵錯工具仍然會忽略它。</span><span class="sxs-lookup"><span data-stu-id="2b371-123">Notice also that even if you set a break point at the hidden line, the debugger will still ignore it.</span></span>  
   
 ```csharp
 // preprocessor_linehidden.cs  
@@ -70,7 +63,7 @@ class MainClass
 }  
 ```  
   
-## <a name="see-also"></a><span data-ttu-id="c8da0-124">另請參閱</span><span class="sxs-lookup"><span data-stu-id="c8da0-124">See Also</span></span>  
- [<span data-ttu-id="c8da0-125">C# 參考</span><span class="sxs-lookup"><span data-stu-id="c8da0-125">C# Reference</span></span>](../../../csharp/language-reference/index.md)  
- [<span data-ttu-id="c8da0-126">C# 程式設計指南</span><span class="sxs-lookup"><span data-stu-id="c8da0-126">C# Programming Guide</span></span>](../../../csharp/programming-guide/index.md)  
- [<span data-ttu-id="c8da0-127">C# 前置處理器指示詞</span><span class="sxs-lookup"><span data-stu-id="c8da0-127">C# Preprocessor Directives</span></span>](../../../csharp/language-reference/preprocessor-directives/index.md)
+## <a name="see-also"></a><span data-ttu-id="2b371-124">請參閱</span><span class="sxs-lookup"><span data-stu-id="2b371-124">See Also</span></span>  
+ [<span data-ttu-id="2b371-125">C# 參考</span><span class="sxs-lookup"><span data-stu-id="2b371-125">C# Reference</span></span>](../../../csharp/language-reference/index.md)  
+ [<span data-ttu-id="2b371-126">C# 程式設計指南</span><span class="sxs-lookup"><span data-stu-id="2b371-126">C# Programming Guide</span></span>](../../../csharp/programming-guide/index.md)  
+ [<span data-ttu-id="2b371-127">C# 前置處理器指示詞</span><span class="sxs-lookup"><span data-stu-id="2b371-127">C# Preprocessor Directives</span></span>](../../../csharp/language-reference/preprocessor-directives/index.md)

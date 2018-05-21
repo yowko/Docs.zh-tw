@@ -1,42 +1,33 @@
 ---
-title: "設定網路應用程式的快取功能"
-ms.custom: 
+title: 設定網路應用程式的快取功能
 ms.date: 03/30/2017
-ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.tgt_pltfrm: 
-ms.topic: article
 helpviewer_keywords:
 - cache [.NET Framework], configuring
 ms.assetid: 3f694a1c-de5d-47cf-a6eb-cfc369fb8a9f
-caps.latest.revision: 
 author: mcleblanc
 ms.author: markl
 manager: markl
-ms.workload:
-- dotnet
-ms.openlocfilehash: fe70c8952451f5af8ac46549919ca164816819e5
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
-ms.translationtype: MT
+ms.openlocfilehash: 2213b5401c7b82771dcf7a1c982f1b3d0f347832
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 05/04/2018
 ---
-# <a name="configuring-caching-in-network-applications"></a><span data-ttu-id="0d162-102">設定網路應用程式的快取功能</span><span class="sxs-lookup"><span data-stu-id="0d162-102">Configuring Caching in Network Applications</span></span>
-<span data-ttu-id="0d162-103">若要設定快取，您必須指定應用程式或 <xref:System.Net.WebRequest> 層級的快取原則。</span><span class="sxs-lookup"><span data-stu-id="0d162-103">To configure caching, you must specify a cache policy at the application or <xref:System.Net.WebRequest> level.</span></span> <span data-ttu-id="0d162-104">下列主題所提供的程式碼範例示範如何設定應用程式和要求來使用快取。</span><span class="sxs-lookup"><span data-stu-id="0d162-104">The following topics provide code examples that demonstrate configuring applications and requests to use caching.</span></span>  
+# <a name="configuring-caching-in-network-applications"></a><span data-ttu-id="263da-102">設定網路應用程式的快取功能</span><span class="sxs-lookup"><span data-stu-id="263da-102">Configuring Caching in Network Applications</span></span>
+<span data-ttu-id="263da-103">若要設定快取，您必須指定應用程式或 <xref:System.Net.WebRequest> 層級的快取原則。</span><span class="sxs-lookup"><span data-stu-id="263da-103">To configure caching, you must specify a cache policy at the application or <xref:System.Net.WebRequest> level.</span></span> <span data-ttu-id="263da-104">下列主題所提供的程式碼範例示範如何設定應用程式和要求來使用快取。</span><span class="sxs-lookup"><span data-stu-id="263da-104">The following topics provide code examples that demonstrate configuring applications and requests to use caching.</span></span>  
   
--   [<span data-ttu-id="0d162-105">如何：為應用程式設定以位置為基礎的快取原則</span><span class="sxs-lookup"><span data-stu-id="0d162-105">How to: Set a Location-Based Cache Policy for an Application</span></span>](../../../docs/framework/network-programming/how-to-set-a-location-based-cache-policy-for-an-application.md)  
+-   [<span data-ttu-id="263da-105">如何：為應用程式設定以位置為基礎的快取原則</span><span class="sxs-lookup"><span data-stu-id="263da-105">How to: Set a Location-Based Cache Policy for an Application</span></span>](../../../docs/framework/network-programming/how-to-set-a-location-based-cache-policy-for-an-application.md)  
   
--   [<span data-ttu-id="0d162-106">如何：為應用程式設定以時間為基礎的預設快取原則</span><span class="sxs-lookup"><span data-stu-id="0d162-106">How to: Set the Default Time-Based Cache Policy for an Application</span></span>](../../../docs/framework/network-programming/how-to-set-the-default-time-based-cache-policy-for-an-application.md)  
+-   [<span data-ttu-id="263da-106">如何：為應用程式設定以時間為基礎的預設快取原則</span><span class="sxs-lookup"><span data-stu-id="263da-106">How to: Set the Default Time-Based Cache Policy for an Application</span></span>](../../../docs/framework/network-programming/how-to-set-the-default-time-based-cache-policy-for-an-application.md)  
   
--   [<span data-ttu-id="0d162-107">如何：自訂以時間為基礎的快取原則</span><span class="sxs-lookup"><span data-stu-id="0d162-107">How to: Customize a Time-Based Cache Policy</span></span>](../../../docs/framework/network-programming/how-to-customize-a-time-based-cache-policy.md)  
+-   [<span data-ttu-id="263da-107">如何：自訂以時間為基礎的快取原則</span><span class="sxs-lookup"><span data-stu-id="263da-107">How to: Customize a Time-Based Cache Policy</span></span>](../../../docs/framework/network-programming/how-to-customize-a-time-based-cache-policy.md)  
   
--   [<span data-ttu-id="0d162-108">如何：設定要求的快取原則</span><span class="sxs-lookup"><span data-stu-id="0d162-108">How to: Set Cache Policy for a Request</span></span>](../../../docs/framework/network-programming/how-to-set-cache-policy-for-a-request.md)  
+-   [<span data-ttu-id="263da-108">如何：設定要求的快取原則</span><span class="sxs-lookup"><span data-stu-id="263da-108">How to: Set Cache Policy for a Request</span></span>](../../../docs/framework/network-programming/how-to-set-cache-policy-for-a-request.md)  
   
- <span data-ttu-id="0d162-109">您也可以設定使用應用程式或電腦組態檔的快取原則。</span><span class="sxs-lookup"><span data-stu-id="0d162-109">You can also configure cache policy using application or machine configuration files.</span></span> <span data-ttu-id="0d162-110">如需詳細資訊，請參閱 [\<requestCaching> 項目 (網路設定)](../../../docs/framework/configure-apps/file-schema/network/requestcaching-element-network-settings.md)。</span><span class="sxs-lookup"><span data-stu-id="0d162-110">For more information, see &#124; [\<requestCaching> Element (Network Settings)](../../../docs/framework/configure-apps/file-schema/network/requestcaching-element-network-settings.md).</span></span>  
+ <span data-ttu-id="263da-109">您也可以設定使用應用程式或電腦組態檔的快取原則。</span><span class="sxs-lookup"><span data-stu-id="263da-109">You can also configure cache policy using application or machine configuration files.</span></span> <span data-ttu-id="263da-110">如需詳細資訊，請參閱 [\<requestCaching> 項目 (網路設定)](../../../docs/framework/configure-apps/file-schema/network/requestcaching-element-network-settings.md)。</span><span class="sxs-lookup"><span data-stu-id="263da-110">For more information, see &#124; [\<requestCaching> Element (Network Settings)](../../../docs/framework/configure-apps/file-schema/network/requestcaching-element-network-settings.md).</span></span>  
   
-## <a name="see-also"></a><span data-ttu-id="0d162-111">請參閱</span><span class="sxs-lookup"><span data-stu-id="0d162-111">See Also</span></span>  
- [<span data-ttu-id="0d162-112">網路應用程式的快取管理</span><span class="sxs-lookup"><span data-stu-id="0d162-112">Cache Management for Network Applications</span></span>](../../../docs/framework/network-programming/cache-management-for-network-applications.md)  
- [<span data-ttu-id="0d162-113">快取原則</span><span class="sxs-lookup"><span data-stu-id="0d162-113">Cache Policy</span></span>](../../../docs/framework/network-programming/cache-policy.md)  
- [<span data-ttu-id="0d162-114">以位置為基礎的快取原則</span><span class="sxs-lookup"><span data-stu-id="0d162-114">Location-Based Cache Policies</span></span>](../../../docs/framework/network-programming/location-based-cache-policies.md)  
- [<span data-ttu-id="0d162-115">以時間為基礎的快取原則</span><span class="sxs-lookup"><span data-stu-id="0d162-115">Time-Based Cache Policies</span></span>](../../../docs/framework/network-programming/time-based-cache-policies.md)
+## <a name="see-also"></a><span data-ttu-id="263da-111">請參閱</span><span class="sxs-lookup"><span data-stu-id="263da-111">See Also</span></span>  
+ [<span data-ttu-id="263da-112">網路應用程式的快取管理</span><span class="sxs-lookup"><span data-stu-id="263da-112">Cache Management for Network Applications</span></span>](../../../docs/framework/network-programming/cache-management-for-network-applications.md)  
+ [<span data-ttu-id="263da-113">快取原則</span><span class="sxs-lookup"><span data-stu-id="263da-113">Cache Policy</span></span>](../../../docs/framework/network-programming/cache-policy.md)  
+ [<span data-ttu-id="263da-114">以位置為基礎的快取原則</span><span class="sxs-lookup"><span data-stu-id="263da-114">Location-Based Cache Policies</span></span>](../../../docs/framework/network-programming/location-based-cache-policies.md)  
+ [<span data-ttu-id="263da-115">以時間為基礎的快取原則</span><span class="sxs-lookup"><span data-stu-id="263da-115">Time-Based Cache Policies</span></span>](../../../docs/framework/network-programming/time-based-cache-policies.md)
