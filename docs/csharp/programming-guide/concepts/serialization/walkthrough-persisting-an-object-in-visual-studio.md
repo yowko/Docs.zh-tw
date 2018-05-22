@@ -1,225 +1,102 @@
 ---
-title: "逐步解說：在 Visual Studio 中保存物件 (#C)"
-ms.custom: 
-ms.date: 07/20/2015
-ms.prod: .net
-ms.reviewer: 
-ms.suite: 
-ms.technology: devlang-csharp
-ms.topic: get-started-article
-ms.assetid: a544ce46-ee25-49da-afd4-457a3d59bf63
-caps.latest.revision: "3"
-author: BillWagner
-ms.author: wiwagn
-ms.openlocfilehash: 7b1a3fc377875ee25baa0718a25b5ac509822154
-ms.sourcegitcommit: c0dd436f6f8f44dc80dc43b07f6841a00b74b23f
+title: 逐步解說：使用 C# 保存物件
+ms.date: 04/26/2018
+ms.openlocfilehash: 6c9719dc3aaf997ea144515a553f787450e54041
+ms.sourcegitcommit: 88f251b08bf0718ce119f3d7302f514b74895038
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 01/19/2018
+ms.lasthandoff: 05/10/2018
 ---
-# <a name="walkthrough-persisting-an-object-in-visual-studio-c"></a><span data-ttu-id="990d9-102">逐步解說：在 Visual Studio 中保存物件 (#C)</span><span class="sxs-lookup"><span data-stu-id="990d9-102">Walkthrough: Persisting an Object in Visual Studio (C#)</span></span>
-<span data-ttu-id="990d9-103">雖然您可以在設計階段將物件的屬性設為預設值，但當物件終結時，於執行階段輸入的任何值都會遺失。</span><span class="sxs-lookup"><span data-stu-id="990d9-103">Although you can set an object's properties to default values at design time, any values entered at run time are lost when the object is destroyed.</span></span> <span data-ttu-id="990d9-104">您可以使用序列化來保存執行個體之間的物件資料，藉此儲存值，並在下次將物件具現化時加以擷取。</span><span class="sxs-lookup"><span data-stu-id="990d9-104">You can use serialization to persist an object's data between instances, which enables you to store values and retrieve them the next time that the object is instantiated.</span></span>  
-  
- <span data-ttu-id="990d9-105">在本逐步解說中，您將建立簡單的 `Loan` 物件，並將其資料保存至檔案。</span><span class="sxs-lookup"><span data-stu-id="990d9-105">In this walkthrough, you will create a simple `Loan` object and persist its data to a file.</span></span> <span data-ttu-id="990d9-106">當您重新建立物件時，即會從檔案擷取資料。</span><span class="sxs-lookup"><span data-stu-id="990d9-106">You will then retrieve the data from the file when you re-create the object.</span></span>  
-  
+# <a name="walkthrough-persisting-an-object-using-c"></a><span data-ttu-id="fb9fe-102">逐步解說：使用 C# 保存物件</span><span class="sxs-lookup"><span data-stu-id="fb9fe-102">Walkthrough: persisting an object using C#</span></span> #
+
+<span data-ttu-id="fb9fe-103">您可以使用序列化來保存執行個體之間的物件資料，藉此儲存值，並在下次將物件具現化時加以擷取。</span><span class="sxs-lookup"><span data-stu-id="fb9fe-103">You can use serialization to persist an object's data between instances, which enables you to store values and retrieve them the next time that the object is instantiated.</span></span>
+
+<span data-ttu-id="fb9fe-104">在本逐步解說中，您將建立基本的 `Loan` 物件，並將其資料保存至檔案。</span><span class="sxs-lookup"><span data-stu-id="fb9fe-104">In this walkthrough, you will create a basic `Loan` object and persist its data to a file.</span></span> <span data-ttu-id="fb9fe-105">當您重新建立物件時，即會從檔案擷取資料。</span><span class="sxs-lookup"><span data-stu-id="fb9fe-105">You will then retrieve the data from the file when you re-create the object.</span></span>
+
 > [!IMPORTANT]
->  <span data-ttu-id="990d9-107">如果檔案不存在，此範例就會建立新的檔案。</span><span class="sxs-lookup"><span data-stu-id="990d9-107">This example creates a new file if the file does not already exist.</span></span> <span data-ttu-id="990d9-108">如果應用程式需要建立檔案，該應用程式就必須具有 `Create` 資料夾的權限。</span><span class="sxs-lookup"><span data-stu-id="990d9-108">If an application must create a file, that application must `Create` permission for the folder.</span></span> <span data-ttu-id="990d9-109">您可以使用存取控制清單來設定權限。</span><span class="sxs-lookup"><span data-stu-id="990d9-109">Permissions are set by using access control lists.</span></span> <span data-ttu-id="990d9-110">如果檔案已經存在，則應用程式只需要 `Write` 權限，這是較小的權限。</span><span class="sxs-lookup"><span data-stu-id="990d9-110">If the file already exists, the application needs only `Write` permission, a lesser permission.</span></span> <span data-ttu-id="990d9-111">若有可能，更為安全的做法是在部署期間建立檔案，並只授與單一檔案的 `Read` 權限 (而不是資料夾的 Create 權限)。</span><span class="sxs-lookup"><span data-stu-id="990d9-111">Where possible, it is more secure to create the file during deployment, and only grant `Read` permissions to a single file (instead of Create permissions for a folder).</span></span> <span data-ttu-id="990d9-112">此外，將資料寫入使用者資料夾，而不是根資料夾或 Program Files 資料夾，也更加安全。</span><span class="sxs-lookup"><span data-stu-id="990d9-112">Also, it is more secure to write data to user folders than to the root folder or the Program Files folder.</span></span>  
-  
+> <span data-ttu-id="fb9fe-106">如果檔案不存在，此範例就會建立新的檔案。</span><span class="sxs-lookup"><span data-stu-id="fb9fe-106">This example creates a new file if the file does not already exist.</span></span> <span data-ttu-id="fb9fe-107">如果應用程式需要建立檔案，該應用程式就必須具有資料夾的 `Create` 權限。</span><span class="sxs-lookup"><span data-stu-id="fb9fe-107">If an application must create a file, that application must have `Create` permission for the folder.</span></span> <span data-ttu-id="fb9fe-108">您可以使用存取控制清單來設定權限。</span><span class="sxs-lookup"><span data-stu-id="fb9fe-108">Permissions are set by using access control lists.</span></span> <span data-ttu-id="fb9fe-109">如果檔案已經存在，則應用程式只需要 `Write` 權限，這是較小的權限。</span><span class="sxs-lookup"><span data-stu-id="fb9fe-109">If the file already exists, the application needs only `Write` permission, a lesser permission.</span></span> <span data-ttu-id="fb9fe-110">若有可能，更為安全的做法是在部署期間建立檔案，並只授與單一檔案的 `Read` 權限 (而不是資料夾的 Create 權限)。</span><span class="sxs-lookup"><span data-stu-id="fb9fe-110">Where possible, it's more secure to create the file during deployment and only grant `Read` permissions to a single file (instead of Create permissions for a folder).</span></span> <span data-ttu-id="fb9fe-111">此外，將資料寫入使用者資料夾，而不是根資料夾或 Program Files 資料夾，也更加安全。</span><span class="sxs-lookup"><span data-stu-id="fb9fe-111">Also, it's more secure to write data to user folders than to the root folder or the Program Files folder.</span></span>
+
 > [!IMPORTANT]
->  <span data-ttu-id="990d9-113">這個範例會使用二進位格式檔案來儲存資料。</span><span class="sxs-lookup"><span data-stu-id="990d9-113">This example stores data in a binary format file.</span></span> <span data-ttu-id="990d9-114">這些格式不適用於敏感性資料，例如密碼或信用卡資訊。</span><span class="sxs-lookup"><span data-stu-id="990d9-114">These formats should not be used for sensitive data, such as passwords or credit-card information.</span></span>  
-  
-> [!NOTE]
->  <span data-ttu-id="990d9-115">根據您目前使用的設定或版本，您所看到的對話方塊與功能表命令可能會與 [說明] 中描述的不同。</span><span class="sxs-lookup"><span data-stu-id="990d9-115">The dialog boxes and menu commands you see might differ from those described in Help depending on your active settings or edition.</span></span> <span data-ttu-id="990d9-116">若要變更設定，請在 [工具]  功能表上按一下 [匯入和匯出設定]  。</span><span class="sxs-lookup"><span data-stu-id="990d9-116">To change your settings, click **Import and Export Settings** on the **Tools** menu.</span></span> <span data-ttu-id="990d9-117">如需詳細資訊，請參閱 [在 Visual Studio 中自訂開發設定](http://msdn.microsoft.com/library/22c4debb-4e31-47a8-8f19-16f328d7dcd3)</span><span class="sxs-lookup"><span data-stu-id="990d9-117">For more information, see [Customizing Development Settings in Visual Studio](http://msdn.microsoft.com/library/22c4debb-4e31-47a8-8f19-16f328d7dcd3).</span></span>  
-  
-## <a name="creating-the-loan-object"></a><span data-ttu-id="990d9-118">建立 Loan 物件</span><span class="sxs-lookup"><span data-stu-id="990d9-118">Creating the Loan Object</span></span>  
- <span data-ttu-id="990d9-119">第一個步驟是建立 `Loan` 類別，以及使用該類別的測試應用程式。</span><span class="sxs-lookup"><span data-stu-id="990d9-119">The first step is to create a `Loan` class and a test application that uses the class.</span></span>  
-  
-### <a name="to-create-the-loan-class"></a><span data-ttu-id="990d9-120">若要建立 Loan 類別</span><span class="sxs-lookup"><span data-stu-id="990d9-120">To create the Loan class</span></span>  
-  
-1.  <span data-ttu-id="990d9-121">建立新的類別庫專案，並將它命名為 "LoanClass"。</span><span class="sxs-lookup"><span data-stu-id="990d9-121">Create a new Class Library project and name it "LoanClass".</span></span> <span data-ttu-id="990d9-122">如需詳細資訊，請參閱[建立方案與專案](/visualstudio/ide/creating-solutions-and-projects)。</span><span class="sxs-lookup"><span data-stu-id="990d9-122">For more information, see [Creating Solutions and Projects](/visualstudio/ide/creating-solutions-and-projects).</span></span>  
-  
-2.  <span data-ttu-id="990d9-123">在方案總管中，開啟 Class1 檔案的捷徑功能表，然後選擇 [重新命名] 。</span><span class="sxs-lookup"><span data-stu-id="990d9-123">In **Solution Explorer**, open the shortcut menu for the Class1 file and choose **Rename**.</span></span> <span data-ttu-id="990d9-124">將檔案重新命名為 `Loan`，然後按 ENTER。</span><span class="sxs-lookup"><span data-stu-id="990d9-124">Rename the file to `Loan` and press ENTER.</span></span> <span data-ttu-id="990d9-125">重新命名檔案時，也會將類別重新命名為 `Loan`。</span><span class="sxs-lookup"><span data-stu-id="990d9-125">Renaming the file will also rename the class to `Loan`.</span></span>  
-  
-3.  <span data-ttu-id="990d9-126">將下列 Public 成員新增至類別：</span><span class="sxs-lookup"><span data-stu-id="990d9-126">Add the following public members to the class:</span></span>  
-  
-    ```csharp  
-    public class Loan : System.ComponentModel.INotifyPropertyChanged  
-    {  
-        public double LoanAmount {get; set;}  
-        public double InterestRate {get; set;}  
-        public int Term {get; set;}  
-  
-        private string p_Customer;  
-        public string Customer  
-        {  
-            get { return p_Customer; }  
-            set   
-            {  
-                p_Customer = value;  
-                PropertyChanged(this,  
-                  new System.ComponentModel.PropertyChangedEventArgs("Customer"));  
-            }  
-        }  
-  
-        public event System.ComponentModel.PropertyChangedEventHandler PropertyChanged;  
-  
-        public Loan(double loanAmount,  
-                    double interestRate,  
-                    int term,  
-                    string customer)  
-        {  
-            this.LoanAmount = loanAmount;  
-            this.InterestRate = interestRate;  
-            this.Term = term;  
-            p_Customer = customer;  
-        }  
-    }  
-    ```  
-  
- <span data-ttu-id="990d9-127">您還必須建立使用 `Loan` 類別的簡單應用程式。</span><span class="sxs-lookup"><span data-stu-id="990d9-127">You will also have to create a simple application that uses the `Loan` class.</span></span>  
-  
-### <a name="to-create-a-test-application"></a><span data-ttu-id="990d9-128">若要建立測試應用程式</span><span class="sxs-lookup"><span data-stu-id="990d9-128">To create a test application</span></span>  
-  
-1.  <span data-ttu-id="990d9-129">若要將 Windows Forms 應用程式專案新增至方案，請在 [檔案] 功能表上，選擇 [新增專案]。</span><span class="sxs-lookup"><span data-stu-id="990d9-129">To add a Windows Forms Application project to your solution, on the **File** menu, choose **Add**, **New Project**.</span></span>  
-  
-2.  <span data-ttu-id="990d9-130">在 [新增專案] 對話方塊中，選擇 [Windows Forms 應用程式]，並輸入 `LoanApp` 作為專案名稱，然後按一下 [確定] 以關閉對話方塊。</span><span class="sxs-lookup"><span data-stu-id="990d9-130">In the **Add New Project** dialog box, choose **Windows Forms Application**, and enter `LoanApp` as the name of the project, and then click **OK** to close the dialog box.</span></span>  
-  
-3.  <span data-ttu-id="990d9-131">在方案總管中，選擇 LoanApp 專案。</span><span class="sxs-lookup"><span data-stu-id="990d9-131">In **Solution Explorer**, choose the LoanApp project.</span></span>  
-  
-4.  <span data-ttu-id="990d9-132">在 [專案] 功能表上，選擇 [設定為啟始專案]。</span><span class="sxs-lookup"><span data-stu-id="990d9-132">On the **Project** menu, choose **Set as StartUp Project**.</span></span>  
-  
-5.  <span data-ttu-id="990d9-133">在 [專案]  功能表上，選擇 [加入參考] 。</span><span class="sxs-lookup"><span data-stu-id="990d9-133">On the **Project** menu, choose **Add Reference**.</span></span>  
-  
-6.  <span data-ttu-id="990d9-134">在 [新增參考] 對話方塊中，依序選擇 [專案] 索引標籤和 LoanClass 專案。</span><span class="sxs-lookup"><span data-stu-id="990d9-134">In the **Add Reference** dialog box, choose the **Projects** tab and then choose the LoanClass project.</span></span>  
-  
-7.  <span data-ttu-id="990d9-135">按一下 [確定]  關閉對話方塊。</span><span class="sxs-lookup"><span data-stu-id="990d9-135">Click **OK** to close the dialog box.</span></span>  
-  
-8.  <span data-ttu-id="990d9-136">在設計工具中，將四個 <xref:System.Windows.Forms.TextBox> 控制項加入表單。</span><span class="sxs-lookup"><span data-stu-id="990d9-136">In the designer, add four <xref:System.Windows.Forms.TextBox> controls to the form.</span></span>  
-  
-9. <span data-ttu-id="990d9-137">在程式碼編輯器中，加入下列程式碼：</span><span class="sxs-lookup"><span data-stu-id="990d9-137">In the Code Editor, add the following code:</span></span>  
-  
-    ```csharp  
-    private LoanClass.Loan TestLoan = new LoanClass.Loan(10000.0, 0.075, 36, "Neil Black");  
-  
-    private void Form1_Load(object sender, EventArgs e)  
-    {  
-        textBox1.Text = TestLoan.LoanAmount.ToString();  
-        textBox2.Text = TestLoan.InterestRate.ToString();  
-        textBox3.Text = TestLoan.Term.ToString();  
-        textBox4.Text = TestLoan.Customer;  
-    }  
-    ```  
-  
-10. <span data-ttu-id="990d9-138">使用下列程式碼，將 `PropertyChanged` 事件的事件處理常式新增至表單：</span><span class="sxs-lookup"><span data-stu-id="990d9-138">Add an event handler for the `PropertyChanged` event to the form by using the following code:</span></span>  
-  
-    ```csharp  
-    private void CustomerPropertyChanged(object sender,   
-        System.ComponentModel.PropertyChangedEventArgs e)  
-    {  
-        MessageBox.Show(e.PropertyName + " has been changed.");  
-    }  
-    ```  
-  
- <span data-ttu-id="990d9-139">您現在可以建置並執行應用程式。</span><span class="sxs-lookup"><span data-stu-id="990d9-139">At this point, you can build and run the application.</span></span> <span data-ttu-id="990d9-140">請注意，文字方塊中會顯示來自 `Loan` 類別的預設值。</span><span class="sxs-lookup"><span data-stu-id="990d9-140">Note that the default values from the `Loan` class appear in the text boxes.</span></span> <span data-ttu-id="990d9-141">您可嘗試將 7.5 的利率值變更為 7.1，然後關閉應用程式，再執行一次；該值即會還原成預設值 7.5。</span><span class="sxs-lookup"><span data-stu-id="990d9-141">Try to change the interest-rate value from 7.5 to 7.1, and then close the application and run it again—the value reverts to the default of 7.5.</span></span>  
-  
- <span data-ttu-id="990d9-142">在現實生活中，利率會定期變更，但不一定每次都需要執行應用程式。</span><span class="sxs-lookup"><span data-stu-id="990d9-142">In the real world, interest rates change periodically, but not necessarily every time that the application is run.</span></span> <span data-ttu-id="990d9-143">與其讓使用者每次都隨著應用程式執行時間來更新利率，較好的做法是保存應用程式執行個體之間的最新利率。</span><span class="sxs-lookup"><span data-stu-id="990d9-143">Rather than making the user update the interest rate every time that the application runs, it is better to preserve the most recent interest rate between instances of the application.</span></span> <span data-ttu-id="990d9-144">在下一個步驟中，您會將序列化新增至 Loan 類別以進行上述作業。</span><span class="sxs-lookup"><span data-stu-id="990d9-144">In the next step, you will do just that by adding serialization to the Loan class.</span></span>  
-  
-## <a name="using-serialization-to-persist-the-object"></a><span data-ttu-id="990d9-145">使用序列化來保存物件</span><span class="sxs-lookup"><span data-stu-id="990d9-145">Using Serialization to Persist the Object</span></span>  
- <span data-ttu-id="990d9-146">為了保存 Loan 類別的值，您必須先使用 `Serializable` 屬性來標示類別。</span><span class="sxs-lookup"><span data-stu-id="990d9-146">In order to persist the values for the Loan class, you must first mark the class with the `Serializable` attribute.</span></span>  
-  
-### <a name="to-mark-a-class-as-serializable"></a><span data-ttu-id="990d9-147">若要將類別標示為可序列化</span><span class="sxs-lookup"><span data-stu-id="990d9-147">To mark a class as serializable</span></span>  
-  
--   <span data-ttu-id="990d9-148">變更 Loan 類別的類別宣告，如下所示：</span><span class="sxs-lookup"><span data-stu-id="990d9-148">Change the class declaration for the Loan class as follows:</span></span>  
-  
-    ```csharp  
-    [Serializable()]  
-    public class Loan : System.ComponentModel.INotifyPropertyChanged  
-    {  
-    ```  
-  
- <span data-ttu-id="990d9-149">編譯器接收到 `Serializable` 屬性時，即會了解類別中的所有項目皆可保存至檔案。</span><span class="sxs-lookup"><span data-stu-id="990d9-149">The `Serializable` attribute tells the compiler that everything in the class can be persisted to a file.</span></span> <span data-ttu-id="990d9-150">`PropertyChanged` 事件是由 Windows Form 物件處理，因此無法序列化。</span><span class="sxs-lookup"><span data-stu-id="990d9-150">Because the `PropertyChanged` event is handled by a Windows Form object, it cannot be serialized.</span></span> <span data-ttu-id="990d9-151">`NonSerialized` 屬性可以用來標示不應保存的類別成員。</span><span class="sxs-lookup"><span data-stu-id="990d9-151">The `NonSerialized` attribute can be used to mark class members that should not be persisted.</span></span>  
-  
-### <a name="to-prevent-a-member-from-being-serialized"></a><span data-ttu-id="990d9-152">若要避免將成員序列化</span><span class="sxs-lookup"><span data-stu-id="990d9-152">To prevent a member from being serialized</span></span>  
-  
--   <span data-ttu-id="990d9-153">變更 `PropertyChanged` 事件的宣告，如下所示：</span><span class="sxs-lookup"><span data-stu-id="990d9-153">Change the declaration for the `PropertyChanged` event as follows:</span></span>  
-  
-    ```csharp  
-    [field: NonSerialized()]  
-    public event System.ComponentModel.PropertyChangedEventHandler PropertyChanged;  
-    ```  
-  
- <span data-ttu-id="990d9-154">下一個步驟是將序列化程式碼新增至 LoanApp 應用程式。</span><span class="sxs-lookup"><span data-stu-id="990d9-154">The next step is to add the serialization code to the LoanApp application.</span></span> <span data-ttu-id="990d9-155">若要序列化類別並將它寫入檔案，您必須使用 <xref:System.IO> 和 <xref:System.Xml.Serialization> 命名空間。</span><span class="sxs-lookup"><span data-stu-id="990d9-155">In order to serialize the class and write it to a file, you will use the <xref:System.IO> and <xref:System.Xml.Serialization> namespaces.</span></span> <span data-ttu-id="990d9-156">若要避免輸入完整的名稱，您可以新增必要類別庫的參考。</span><span class="sxs-lookup"><span data-stu-id="990d9-156">To avoid typing the fully qualified names, you can add references to the necessary class libraries.</span></span>  
-  
-### <a name="to-add-references-to-namespaces"></a><span data-ttu-id="990d9-157">若要新增命名空間的參考</span><span class="sxs-lookup"><span data-stu-id="990d9-157">To add references to namespaces</span></span>  
-  
--   <span data-ttu-id="990d9-158">在 `Form1` 類別最上方新增下列陳述式：</span><span class="sxs-lookup"><span data-stu-id="990d9-158">Add the following statements to the top of the `Form1` class:</span></span>  
-  
-    ```csharp  
-    using System.IO;  
-    using System.Runtime.Serialization.Formatters.Binary;  
-    ```  
-  
-     <span data-ttu-id="990d9-159">在此情況下，您會使用二進位格式器，將物件儲存為二進位格式。</span><span class="sxs-lookup"><span data-stu-id="990d9-159">In this case, you are using a binary formatter to save the object in a binary format.</span></span>  
-  
- <span data-ttu-id="990d9-160">下一個步驟是新增程式碼，以在建立物件時，從檔案還原序列化物件。</span><span class="sxs-lookup"><span data-stu-id="990d9-160">The next step is to add code to deserialize the object from the file when the object is created.</span></span>  
-  
-### <a name="to-deserialize-an-object"></a><span data-ttu-id="990d9-161">還原序列化物件</span><span class="sxs-lookup"><span data-stu-id="990d9-161">To deserialize an object</span></span>  
-  
-1.  <span data-ttu-id="990d9-162">將常數新增至已序列化資料檔案名稱的類別。</span><span class="sxs-lookup"><span data-stu-id="990d9-162">Add a constant to the class for the serialized data's file name.</span></span>  
-  
-    ```csharp  
-    const string FileName = @"..\..\SavedLoan.bin";  
-    ```  
-  
-2.  <span data-ttu-id="990d9-163">修改 `Form1_Load` 事件程序中的程式碼，如下所示：</span><span class="sxs-lookup"><span data-stu-id="990d9-163">Modify the code in the `Form1_Load` event procedure as follows:</span></span>  
-  
-    ```csharp  
-    private LoanClass.Loan TestLoan = new LoanClass.Loan(10000.0, 0.075, 36, "Neil Black");  
-  
-    private void Form1_Load(object sender, EventArgs e)  
-    {  
-        if (File.Exists(FileName))  
-        {  
-            Stream TestFileStream = File.OpenRead(FileName);  
-            BinaryFormatter deserializer = new BinaryFormatter();  
-            TestLoan = (LoanClass.Loan)deserializer.Deserialize(TestFileStream);  
-            TestFileStream.Close();  
-        }  
-  
-        TestLoan.PropertyChanged += this.CustomerPropertyChanged;  
-  
-        textBox1.Text = TestLoan.LoanAmount.ToString();  
-        textBox2.Text = TestLoan.InterestRate.ToString();  
-        textBox3.Text = TestLoan.Term.ToString();  
-        textBox4.Text = TestLoan.Customer;  
-    }  
-    ```  
-  
-     <span data-ttu-id="990d9-164">請注意，您必須先檢查檔案是否存在。</span><span class="sxs-lookup"><span data-stu-id="990d9-164">Note that you first must check that the file exists.</span></span> <span data-ttu-id="990d9-165">如果存在的話，請建立 <xref:System.IO.Stream> 類別以讀取二進位檔案，並建立 <xref:System.Runtime.Serialization.Formatters.Binary.BinaryFormatter> 類別來轉譯該檔案。</span><span class="sxs-lookup"><span data-stu-id="990d9-165">If it exists, create a <xref:System.IO.Stream> class to read the binary file and a <xref:System.Runtime.Serialization.Formatters.Binary.BinaryFormatter> class to translate the file.</span></span> <span data-ttu-id="990d9-166">您也需要將資料流類型轉換成 Loan 物件類型。</span><span class="sxs-lookup"><span data-stu-id="990d9-166">You also need to convert from the stream type to the Loan object type.</span></span>  
-  
- <span data-ttu-id="990d9-167">然後，您必須新增程式碼，以將文字方塊中輸入的資料儲存到 `Loan` 類別，接著必須將類別序列化至檔案。</span><span class="sxs-lookup"><span data-stu-id="990d9-167">Next you must add code to save the data entered in the text boxes to the `Loan` class, and then you must serialize the class to a file.</span></span>  
-  
-### <a name="to-save-the-data-and-serialize-the-class"></a><span data-ttu-id="990d9-168">若要儲存資料以及序列化類別</span><span class="sxs-lookup"><span data-stu-id="990d9-168">To save the data and serialize the class</span></span>  
-  
--   <span data-ttu-id="990d9-169">將下列程式碼新增至 `Form1_FormClosing` 事件程序中：</span><span class="sxs-lookup"><span data-stu-id="990d9-169">Add the following code to the `Form1_FormClosing` event procedure:</span></span>  
-  
-    ```csharp  
-    private void Form1_FormClosing(object sender, FormClosingEventArgs e)  
-    {  
-        TestLoan.LoanAmount = Convert.ToDouble(textBox1.Text);  
-        TestLoan.InterestRate = Convert.ToDouble(textBox2.Text);  
-        TestLoan.Term = Convert.ToInt32(textBox3.Text);  
-        TestLoan.Customer = textBox4.Text;  
-  
-        Stream TestFileStream = File.Create(FileName);  
-        BinaryFormatter serializer = new BinaryFormatter();  
-        serializer.Serialize(TestFileStream, TestLoan);  
-        TestFileStream.Close();  
-    }  
-    ```  
-  
- <span data-ttu-id="990d9-170">您現在可以再次建置並執行應用程式。</span><span class="sxs-lookup"><span data-stu-id="990d9-170">At this point, you can again build and run the application.</span></span> <span data-ttu-id="990d9-171">一開始，文字方塊中會顯示預設值。</span><span class="sxs-lookup"><span data-stu-id="990d9-171">Initially, the default values appear in the text boxes.</span></span> <span data-ttu-id="990d9-172">請嘗試變更值，並在第四個文字方塊中輸入名稱。</span><span class="sxs-lookup"><span data-stu-id="990d9-172">Try to change the values and enter a name in the fourth text box.</span></span> <span data-ttu-id="990d9-173">關閉應用程式，然後再重新執行。</span><span class="sxs-lookup"><span data-stu-id="990d9-173">Close the application and then run it again.</span></span> <span data-ttu-id="990d9-174">請注意，現在文字方塊中會出現新的值。</span><span class="sxs-lookup"><span data-stu-id="990d9-174">Note that the new values now appear in the text boxes.</span></span>  
-  
-## <a name="see-also"></a><span data-ttu-id="990d9-175">請參閱</span><span class="sxs-lookup"><span data-stu-id="990d9-175">See Also</span></span>  
- [<span data-ttu-id="990d9-176">序列化 (C# )</span><span class="sxs-lookup"><span data-stu-id="990d9-176">Serialization (C# )</span></span>](../../../../csharp/programming-guide/concepts/serialization/index.md)  
- [<span data-ttu-id="990d9-177">C# 程式設計指南</span><span class="sxs-lookup"><span data-stu-id="990d9-177">C# Programming Guide</span></span>](../../../../csharp/programming-guide/index.md)
+> <span data-ttu-id="fb9fe-112">這個範例會使用二進位格式檔案來儲存資料。</span><span class="sxs-lookup"><span data-stu-id="fb9fe-112">This example stores data in a binary format file.</span></span> <span data-ttu-id="fb9fe-113">這些格式不適用於敏感性資料，例如密碼或信用卡資訊。</span><span class="sxs-lookup"><span data-stu-id="fb9fe-113">These formats should not be used for sensitive data, such as passwords or credit-card information.</span></span>
+
+## <a name="prerequisites"></a><span data-ttu-id="fb9fe-114">必要條件</span><span class="sxs-lookup"><span data-stu-id="fb9fe-114">Prerequisites</span></span>
+
+* <span data-ttu-id="fb9fe-115">若要建置並執行，請安裝 [.NET Core SDK](https://www.microsoft.com/net/core)。</span><span class="sxs-lookup"><span data-stu-id="fb9fe-115">To build and run, install the [.NET Core SDK](https://www.microsoft.com/net/core).</span></span>
+
+* <span data-ttu-id="fb9fe-116">如果您還沒有這麼做，請安裝您慣用的程式碼編輯器。</span><span class="sxs-lookup"><span data-stu-id="fb9fe-116">Install your favorite code editor, if you haven't already.</span></span>
+
+> [!TIP]
+> <span data-ttu-id="fb9fe-117">需要安裝程式碼編輯器嗎？</span><span class="sxs-lookup"><span data-stu-id="fb9fe-117">Need to install a code editor?</span></span> <span data-ttu-id="fb9fe-118">試用 [Visual Studio](https://visualstudio.com/downloads)！</span><span class="sxs-lookup"><span data-stu-id="fb9fe-118">Try [Visual Studio](https://visualstudio.com/downloads)!</span></span>
+
+<span data-ttu-id="fb9fe-119">您可以在 [.NET 範例 GitHub 存放庫](https://github.com/dotnet/samples/tree/master/csharp/serialization) (英文) 線上檢查範例程式程。</span><span class="sxs-lookup"><span data-stu-id="fb9fe-119">You can examine the sample code online [at the .NET samples GitHub repository](https://github.com/dotnet/samples/tree/master/csharp/serialization).</span></span>
+
+## <a name="creating-the-loan-object"></a><span data-ttu-id="fb9fe-120">建立 Loan 物件</span><span class="sxs-lookup"><span data-stu-id="fb9fe-120">Creating the loan object</span></span>
+
+<span data-ttu-id="fb9fe-121">第一個步驟是建立 `Loan` 類別，以及使用該類別的主控台應用程式：</span><span class="sxs-lookup"><span data-stu-id="fb9fe-121">The first step is to create a `Loan` class and a console application that uses the class:</span></span>
+
+1. <span data-ttu-id="fb9fe-122">建立新的應用程式。</span><span class="sxs-lookup"><span data-stu-id="fb9fe-122">Create a new application.</span></span> <span data-ttu-id="fb9fe-123">輸入 `dotnet new console -o serialization`，在名為 `serialization` 的子目錄中建立新的主控台應用程式。</span><span class="sxs-lookup"><span data-stu-id="fb9fe-123">Type `dotnet new console -o serialization` to create a new console application in a subdirectory named `serialization`.</span></span>
+1. <span data-ttu-id="fb9fe-124">在編輯器中開啟應用程式，並新增名為 `Loan.cs` 的新類別。</span><span class="sxs-lookup"><span data-stu-id="fb9fe-124">Open the application in your editor, and add a new class named `Loan.cs`.</span></span>
+1. <span data-ttu-id="fb9fe-125">將下列程式碼新增至 `Loan` 類別：</span><span class="sxs-lookup"><span data-stu-id="fb9fe-125">Add the following code to your `Loan` class:</span></span>
+
+[!code-csharp[Loan class definition](../../../../../samples/csharp/serialization/Loan.cs#1)]
+
+<span data-ttu-id="fb9fe-126">您還必須建立使用 `Loan` 類別的應用程式。</span><span class="sxs-lookup"><span data-stu-id="fb9fe-126">You will also have to create an application that uses the `Loan` class.</span></span>
+
+## <a name="serialize-the-loan-object"></a><span data-ttu-id="fb9fe-127">序列化 Loan 物件</span><span class="sxs-lookup"><span data-stu-id="fb9fe-127">Serialize the loan object</span></span>
+
+1. <span data-ttu-id="fb9fe-128">開啟 `Program.cs`。</span><span class="sxs-lookup"><span data-stu-id="fb9fe-128">Open `Program.cs`.</span></span> <span data-ttu-id="fb9fe-129">加入下列程式碼：</span><span class="sxs-lookup"><span data-stu-id="fb9fe-129">Add the following code:</span></span>
+
+[!code-csharp[Create a loan object](../../../../../samples/csharp/serialization/Program.cs#1)]
+
+<span data-ttu-id="fb9fe-130">為 `PropertyChanged` 事件新增事件處理常式，並新增幾行來修改 `Loan` 物件和顯示所做的變更。</span><span class="sxs-lookup"><span data-stu-id="fb9fe-130">Add an event handler for the `PropertyChanged` event, and a few lines to modify the `Loan` object and display the changes.</span></span> <span data-ttu-id="fb9fe-131">您可以在下列程式碼中看到新增的項目：</span><span class="sxs-lookup"><span data-stu-id="fb9fe-131">You can see the additions in the following code:</span></span>
+
+[!code-csharp[Listening for the PropertyChanged event](../../../../../samples/csharp/serialization/Program.cs#2)]
+
+<span data-ttu-id="fb9fe-132">此時，您可以執行該程式碼，並查看目前的輸出：</span><span class="sxs-lookup"><span data-stu-id="fb9fe-132">At this point, you can run the code, and see the current output:</span></span>
+
+```console
+New customer value: Henry Clay
+7.5
+7.1
+```
+
+<span data-ttu-id="fb9fe-133">執行此應用程式一律會重複寫入相同的值。</span><span class="sxs-lookup"><span data-stu-id="fb9fe-133">Running this application repeatedly always writes the same values.</span></span> <span data-ttu-id="fb9fe-134">每次您執行程式時，就會建立一個新的 Loan 物件。</span><span class="sxs-lookup"><span data-stu-id="fb9fe-134">A new Loan object is created every time you run the program.</span></span> <span data-ttu-id="fb9fe-135">在現實生活中，利率會定期變更，但不一定每次都需要執行應用程式。</span><span class="sxs-lookup"><span data-stu-id="fb9fe-135">In the real world, interest rates change periodically, but not necessarily every time that the application is run.</span></span> <span data-ttu-id="fb9fe-136">序列化程式碼表示您要保存應用程式執行個體之間的最近利率。</span><span class="sxs-lookup"><span data-stu-id="fb9fe-136">Serialization code means you preserve the most recent interest rate between instances of the application.</span></span> <span data-ttu-id="fb9fe-137">在下一個步驟中，您會將序列化新增至 Loan 類別以進行上述作業。</span><span class="sxs-lookup"><span data-stu-id="fb9fe-137">In the next step, you will do just that by adding serialization to the Loan class.</span></span>
+
+## <a name="using-serialization-to-persist-the-object"></a><span data-ttu-id="fb9fe-138">使用序列化來保存物件</span><span class="sxs-lookup"><span data-stu-id="fb9fe-138">Using Serialization to Persist the Object</span></span>
+
+<span data-ttu-id="fb9fe-139">為了保存 Loan 類別的值，您必須先使用 `Serializable` 屬性來標示類別。</span><span class="sxs-lookup"><span data-stu-id="fb9fe-139">In order to persist the values for the Loan class, you must first mark the class with the `Serializable` attribute.</span></span> <span data-ttu-id="fb9fe-140">在 Loan 類別定義之上新增下列程式碼：</span><span class="sxs-lookup"><span data-stu-id="fb9fe-140">Add the following code above the Loan class definition:</span></span>
+
+[!code-csharp[Loan class definition](../../../../../samples/csharp/serialization/Loan.cs#2)]
+
+<span data-ttu-id="fb9fe-141">編譯器接收到 <xref:System.SerializableAttribute> 時，即會了解類別中的所有項目皆可保存至檔案。</span><span class="sxs-lookup"><span data-stu-id="fb9fe-141">The <xref:System.SerializableAttribute> tells the compiler that everything in the class can be persisted to a file.</span></span> <span data-ttu-id="fb9fe-142">因為 `PropertyChanged` 事件不代表應儲存之物件圖形的一部分，所以它不應該被序列化。</span><span class="sxs-lookup"><span data-stu-id="fb9fe-142">Because the `PropertyChanged` event does not represent part of the object graph that should be stored, it should not be serialized.</span></span> <span data-ttu-id="fb9fe-143">這樣做會序列化附加至該事件的所有物件。</span><span class="sxs-lookup"><span data-stu-id="fb9fe-143">Doing so would serialize all objects that are attached to that event.</span></span> <span data-ttu-id="fb9fe-144">您可以將 <xref:System.NonSerializedAttribute> 新增至 `PropertyChanged` 事件處理常式的欄位宣告。</span><span class="sxs-lookup"><span data-stu-id="fb9fe-144">You can add the <xref:System.NonSerializedAttribute> to the field declaration for the `PropertyChanged` event handler.</span></span>
+
+[!code-csharp[Disable serialization for the event handler](../../../../../samples/csharp/serialization/Loan.cs#3)]
+
+<span data-ttu-id="fb9fe-145">從 C# 7.3 開始，您可以使用 `field` 目標值，將屬性 (attribute) 附加至使用自動實作屬性 (property) 的支援欄位。</span><span class="sxs-lookup"><span data-stu-id="fb9fe-145">Beginning with C# 7.3, you can attach attributes to the backing field of an auto-implemented property using the `field` target value.</span></span> <span data-ttu-id="fb9fe-146">下列程式碼會新增 `TimeLastLoaded` 屬性，並將它標示為不可序列化：</span><span class="sxs-lookup"><span data-stu-id="fb9fe-146">The following code adds a `TimeLastLoaded` property and marks it as not serializable:</span></span>
+
+[!code-csharp[Disable serialization for an auto-implemented property](../../../../../samples/csharp/serialization/Loan.cs#4)]
+
+<span data-ttu-id="fb9fe-147">下一個步驟是將序列化程式碼新增至 LoanApp 應用程式。</span><span class="sxs-lookup"><span data-stu-id="fb9fe-147">The next step is to add the serialization code to the LoanApp application.</span></span> <span data-ttu-id="fb9fe-148">若要序列化類別並將它寫入檔案，您必須使用 <xref:System.IO> 和 <xref:System.Runtime.Serialization.Formatters.Binary> 命名空間。</span><span class="sxs-lookup"><span data-stu-id="fb9fe-148">In order to serialize the class and write it to a file, you use the <xref:System.IO> and <xref:System.Runtime.Serialization.Formatters.Binary> namespaces.</span></span> <span data-ttu-id="fb9fe-149">若要避免輸入完整的名稱，您可以新增必要命名空間的參考，如下列程式碼所示：</span><span class="sxs-lookup"><span data-stu-id="fb9fe-149">To avoid typing the fully qualified names, you can add references to the necessary namespaces as shown in the following code:</span></span>
+
+[!code-csharp[Adding namespaces for serialization](../../../../../samples/csharp/serialization/Program.cs#3)]
+
+<span data-ttu-id="fb9fe-150">下一個步驟是新增程式碼，以在建立物件時，從檔案還原序列化物件。</span><span class="sxs-lookup"><span data-stu-id="fb9fe-150">The next step is to add code to deserialize the object from the file when the object is created.</span></span> <span data-ttu-id="fb9fe-151">將常數新增至已序列化資料檔案名稱的類別，如下列程式碼所示：</span><span class="sxs-lookup"><span data-stu-id="fb9fe-151">Add a constant to the class for the serialized data's file name as shown in the following code:</span></span>
+
+[!code-csharp[Define the name of the saved file](../../../../../samples/csharp/serialization/Program.cs#4)]
+
+<span data-ttu-id="fb9fe-152">接下來，在建立 `TestLoan` 物件這一行之後新增下列程式碼：</span><span class="sxs-lookup"><span data-stu-id="fb9fe-152">Next, add the following code after the line that creates the `TestLoan` object:</span></span>
+
+[!code-csharp[Read from a file if it exists](../../../../../samples/csharp/serialization/Program.cs#5)]
+
+<span data-ttu-id="fb9fe-153">您必須先檢查檔案是否存在。</span><span class="sxs-lookup"><span data-stu-id="fb9fe-153">You first must check that the file exists.</span></span> <span data-ttu-id="fb9fe-154">如果存在的話，請建立 <xref:System.IO.Stream> 類別以讀取二進位檔案，並建立 <xref:System.Runtime.Serialization.Formatters.Binary.BinaryFormatter> 類別來轉譯該檔案。</span><span class="sxs-lookup"><span data-stu-id="fb9fe-154">If it exists, create a <xref:System.IO.Stream> class to read the binary file and a <xref:System.Runtime.Serialization.Formatters.Binary.BinaryFormatter> class to translate the file.</span></span> <span data-ttu-id="fb9fe-155">您也需要將資料流類型轉換成 Loan 物件類型。</span><span class="sxs-lookup"><span data-stu-id="fb9fe-155">You also need to convert from the stream type to the Loan object type.</span></span>
+
+<span data-ttu-id="fb9fe-156">接下來，您必須新增程式碼，將類別序列化為檔案。</span><span class="sxs-lookup"><span data-stu-id="fb9fe-156">Next you must add code to serialize the class to a file.</span></span> <span data-ttu-id="fb9fe-157">在 `Main` 方法的現有程式碼之後，新增下列程式碼：</span><span class="sxs-lookup"><span data-stu-id="fb9fe-157">Add the following code after the existing code in the `Main` method:</span></span>
+
+[!code-csharp[Save the existing Loan object](../../../../../samples/csharp/serialization/Program.cs#6)]
+
+<span data-ttu-id="fb9fe-158">您現在可以再次建置並執行應用程式。</span><span class="sxs-lookup"><span data-stu-id="fb9fe-158">At this point, you can again build and run the application.</span></span> <span data-ttu-id="fb9fe-159">第一次執行時，請注意利率會從 7.5 開始，然後變更為 7.1。</span><span class="sxs-lookup"><span data-stu-id="fb9fe-159">The first time it runs, notice that the interest rates starts at 7.5, and then changes to 7.1.</span></span> <span data-ttu-id="fb9fe-160">關閉應用程式，然後再重新執行。</span><span class="sxs-lookup"><span data-stu-id="fb9fe-160">Close the application and then run it again.</span></span> <span data-ttu-id="fb9fe-161">現在，應用程式會列印訊息，表示它已讀取儲存的檔案，而利率即使在變更它的程式碼之前也是 7.1。</span><span class="sxs-lookup"><span data-stu-id="fb9fe-161">Now, the application prints the message that it has read the saved file, and the interest rate is 7.1 even before the code that changes it.</span></span>
+
+## <a name="see-also"></a><span data-ttu-id="fb9fe-162">另請參閱</span><span class="sxs-lookup"><span data-stu-id="fb9fe-162">See also</span></span>
+
+ [<span data-ttu-id="fb9fe-163">序列化 (C# )</span><span class="sxs-lookup"><span data-stu-id="fb9fe-163">Serialization (C# )</span></span>](index.md)  
+ [<span data-ttu-id="fb9fe-164">C# 程式設計指南</span><span class="sxs-lookup"><span data-stu-id="fb9fe-164">C# Programming Guide</span></span>](../..//index.md)  
