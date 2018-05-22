@@ -1,6 +1,6 @@
 ---
 title: Dim 陳述式 (Visual Basic)
-ms.date: 07/20/2015
+ms.date: 05/12/2018
 f1_keywords:
 - vb.Dim
 - Dim
@@ -29,11 +29,11 @@ helpviewer_keywords:
 - Dim statement [Visual Basic], syntax
 - variables [Visual Basic], member and local
 ms.assetid: fae3eca1-f0b2-4400-994b-7aa58a848448
-ms.openlocfilehash: c051572e83b915346d48ec12fb5d97f77b47e4c6
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: b3384b771748a1f2c9e841407042f81ce6ebe76d
+ms.sourcegitcommit: 22c3c8f74eaa138dbbbb02eb7d720fce87fc30a9
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/04/2018
+ms.lasthandoff: 05/17/2018
 ---
 # <a name="dim-statement-visual-basic"></a>Dim 陳述式 (Visual Basic)
 宣告，並針對一個或多個變數配置儲存空間。  
@@ -63,8 +63,10 @@ Dim [ WithEvents ] variablelist
   
     -   [Private](../../../visual-basic/language-reference/modifiers/private.md)  
   
-    -   `Protected Friend`  
-  
+    -   [Protected 的 Friend](../../language-reference/modifiers/protected-friend.md)
+    
+    - [受保護的私用](../../language-reference/modifiers/private-protected.md)
+
      請參閱[存取 Visual Basic 中的層級](../../../visual-basic/programming-guide/language-features/declared-elements/access-levels.md)。  
   
 -   `Shared`  

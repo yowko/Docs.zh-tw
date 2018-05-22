@@ -8,11 +8,11 @@ helpviewer_keywords:
 - types [C#], value types
 - C# language, value types
 ms.assetid: 471eb994-2958-49d5-a6be-19b4313f80a3
-ms.openlocfilehash: fdda6942c6883baaaea5e305a1e699a01e707d2b
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: 49043a9fe9eabbb54176a0106007ef0d26ed795f
+ms.sourcegitcommit: 89c93d05c2281b4c834f48f6c8df1047e1410980
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/04/2018
+ms.lasthandoff: 05/15/2018
 ---
 # <a name="value-types-c-reference"></a>實值型別 (C# 參考)
 實值型別包含兩種主要類別：  
@@ -56,31 +56,31 @@ ms.lasthandoff: 05/04/2018
 ## <a name="initializing-value-types"></a>初始化實值型別  
  必須先初始化 C# 中的區域變數，再使用它們。 例如，您可以宣告區域變數，而不進行初始化，如下列範例所示：  
   
-```  
+```csharp  
 int myInt;  
 ```  
   
  您不能先使用它，再將它初始化。 您可以使用下列陳述式來初始化執行個體：  
   
-```  
+```csharp  
 myInt = new int();  // Invoke default constructor for int type.  
 ```  
   
  這個陳述式相當於下列陳述式：  
   
-```  
+```csharp  
 myInt = 0;         // Assign an initial value, 0 in this example.  
 ```  
   
  當然，您可以有相同陳述式中的宣告和初始化，如下列範例所示：  
   
-```  
+```csharp  
 int myInt = new int();  
 ```  
   
  -或-  
   
-```  
+```csharp  
 int myInt = 0;  
 ```  
   
@@ -88,7 +88,7 @@ int myInt = 0;
   
  如果要使用使用者定義型別，請使用 [new](../../../csharp/language-reference/keywords/new.md) 來叫用預設建構函式。 例如，下列陳述式會叫用 `Point` 結構的預設建構函式：  
   
-```  
+```csharp  
 Point p = new Point(); // Invoke default constructor for the struct.  
 ```  
   

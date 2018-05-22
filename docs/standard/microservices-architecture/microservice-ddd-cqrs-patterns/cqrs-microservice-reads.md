@@ -1,21 +1,14 @@
 ---
-title: "在 CQRS 微服務中實作讀取/查詢"
-description: "容器化 .NET 應用程式的 .NET 微服務架構 | 在 CQRS 微服務中實作讀取/查詢"
-keywords: "Docker, 微服務, ASP.NET, 容器"
+title: 在 CQRS 微服務中實作讀取/查詢
+description: 容器化 .NET 應用程式的 .NET 微服務架構 | 在 CQRS 微服務中實作讀取/查詢
 author: CESARDELATORRE
 ms.author: wiwagn
 ms.date: 11/02/2017
-ms.prod: .net-core
-ms.technology: dotnet-docker
-ms.topic: article
-ms.workload:
-- dotnet
-- dotnetcore
-ms.openlocfilehash: ca9bcefb317d2b3c7c225b773918ca4a2484cb8f
-ms.sourcegitcommit: e7f04439d78909229506b56935a1105a4149ff3d
+ms.openlocfilehash: 8eca01acc2308097d1684be8bdb0f07edd86832f
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 12/23/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="implementing-readsqueries-in-a-cqrs-microservice"></a>在 CQRS 微服務中實作讀取/查詢
 

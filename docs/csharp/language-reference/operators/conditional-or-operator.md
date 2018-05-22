@@ -8,11 +8,11 @@ helpviewer_keywords:
 - conditional-OR operator (||) [C#]
 - '|| operator [C#]'
 ms.assetid: 7d442d8e-400d-421f-b4d2-034bf82bcbdc
-ms.openlocfilehash: ce0834874f9c5b4c5154a798492600d6ac45a4c6
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: d22e57d097edb0fe52b604e9c6431e167c410f0b
+ms.sourcegitcommit: 89c93d05c2281b4c834f48f6c8df1047e1410980
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/04/2018
+ms.lasthandoff: 05/15/2018
 ---
 # <a name="-operator-c-reference"></a>|| 運算子 (C# 參考)
 條件式 OR 運算子 (`||`) 會執行其 `bool` 運算元的邏輯 OR。 如果第一個運算元評估值為 `true`，就不會評估第二個運算元。 如果第一個運算元評估值為 `false`，第二個運算子會判斷整個 OR 運算式是評估為`true` 或 `false`。  
@@ -20,13 +20,13 @@ ms.lasthandoff: 05/04/2018
 ## <a name="remarks"></a>備註  
  作業  
   
-```  
+```csharp  
 x || y  
 ```  
   
  對應至作業  
   
-```  
+```csharp  
 x | y  
 ```  
   

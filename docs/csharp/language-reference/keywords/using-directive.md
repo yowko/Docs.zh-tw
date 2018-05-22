@@ -1,21 +1,14 @@
 ---
 title: using 指示詞 (C# 參考)
 ms.date: 07/20/2015
-ms.prod: .net
-ms.technology:
-- devlang-csharp
-ms.topic: article
 helpviewer_keywords:
 - using directive [C#]
 ms.assetid: b42b8e61-5e7e-439c-bb71-370094b44ae8
-caps.latest.revision: 31
-author: BillWagner
-ms.author: wiwagn
-ms.openlocfilehash: 02c50b1e7a54d776985b60570c898e7d0739c44c
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.openlocfilehash: 180c038987e7de6b39a8eae0e86871eea41a40bb
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="using-directive-c-reference"></a>using 指示詞 (C# 參考)
 `using` 指示詞有三個用途：  
@@ -64,9 +57,9 @@ class Program
   
  建立 `using` 指示詞，以在命名空間中使用類型，而無需指定命名空間。 `using` 指示詞不會授予巢狀於您指定的命名空間中的任何命名空間的存取權。  
   
- 命名空間有兩種類型：使用者定義和系統定義。 使用者定義的命名空間是在程式碼中定義的命名空間。 如需系統定義的命名空間的清單，請參閱[.NET Framework 類別庫概觀](../../../standard/class-library-overview.md)。  
+ 命名空間有兩種類型：使用者定義和系統定義。 使用者定義的命名空間是在程式碼中定義的命名空間。 如需系統定義之命名空間的清單，請參閱 [.NET Framework 類別庫概觀](../../../standard/class-library-overview.md)。  
   
- 如需參考其他組件中的方法的範例，請參閱[建立和使用組件使用命令列](../../programming-guide/concepts/assemblies-gac/how-to-create-and-use-assemblies-using-the-command-line.md)。  
+ 如需參考其他組件中的方法的範例，請參閱[以命令列建立和使用組件](../../programming-guide/concepts/assemblies-gac/how-to-create-and-use-assemblies-using-the-command-line.md)。  
   
 ## <a name="example-1"></a>範例 1  
   
@@ -85,7 +78,7 @@ class Program
 ## <a name="c-language-specification"></a>C# 語言規格  
  [!INCLUDE[CSharplangspec](~/includes/csharplangspec-md.md)]  
   
-## <a name="see-also"></a>另請參閱  
+## <a name="see-also"></a>請參閱  
  [C# 參考](../../../csharp/language-reference/index.md)  
  [C# 程式設計指南](../../../csharp/programming-guide/index.md)  
  [使用命名空間](../../../csharp/programming-guide/namespaces/using-namespaces.md)  

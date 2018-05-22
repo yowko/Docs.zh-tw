@@ -1,155 +1,89 @@
 ---
 title: AttributeUsage (C#)
-ms.custom: 
-ms.date: 07/20/2015
-ms.prod: .net
-ms.reviewer: 
-ms.suite: 
-ms.technology: devlang-csharp
-ms.topic: article
-ms.assetid: 22c45568-9a6a-4c2f-8480-f38c1caa0a99
-caps.latest.revision: "3"
-author: BillWagner
-ms.author: wiwagn
-ms.openlocfilehash: e9351ee10b523145ace1249bf17388da0cdba277
-ms.sourcegitcommit: 685143b62385500f59bc36274b8adb191f573a16
+ms.date: 04/25/2018
+ms.openlocfilehash: 869e6509e55268767915a783a8652f7f950d7137
+ms.sourcegitcommit: 88f251b08bf0718ce119f3d7302f514b74895038
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 12/09/2017
+ms.lasthandoff: 05/10/2018
 ---
 # <a name="attributeusage-c"></a>AttributeUsage (C#)
-決定如何使用自訂屬性類別。 `AttributeUsage` 是一個屬性，可套用至自訂屬性定義來控制如何套用新屬性。 明確套用時，預設設定看起來會像這樣︰  
-  
-```csharp  
-[System.AttributeUsage(System.AttributeTargets.All,  
-                   AllowMultiple = false,  
-                   Inherited = true)]  
-class NewAttribute : System.Attribute { }  
-```  
-  
- 在此範例中，`NewAttribute` 類別可以套用至任何可屬性化的程式碼實體，但只能對每個實體套用一次。 當套用至基底類別時，其由衍生類別所繼承。  
-  
- `AllowMultiple` 和 `Inherited` 是選擇性引數，因此這個程式碼具有相同的效果︰  
-  
-```csharp  
-[System.AttributeUsage(System.AttributeTargets.All)]  
-class NewAttribute : System.Attribute { }  
-```  
-  
- 第一個 `AttributeUsage` 引數必須是 <xref:System.AttributeTargets> 列舉的一或多個元素。 您可以使用 OR 運算子來連結多個目標類型，與下面類似：  
-  
-```csharp  
-using System;  
 
-[AttributeUsage(AttributeTargets.Property | AttributeTargets.Field)]  
-class NewPropertyOrFieldAttribute : Attribute { }  
-```  
-  
- 如果 `AllowMultiple` 引數設為 `true`，則可以將產生的屬性多次套用至單一實體，與下面類似：  
-  
-```csharp  
-using System;  
+決定如何使用自訂屬性類別。 <xref:System.AttributeUsageAttribute> 是您套用至自訂屬性定義的屬性。 `AttributeUsage` 屬性可讓您控制：
 
-[AttributeUsage(AttributeTargets.Class, AllowMultiple = true)]  
-class MultiUseAttr : Attribute { }  
-  
-[MultiUseAttr]  
-[MultiUseAttr]  
-class Class1 { }  
-  
-[MultiUseAttr, MultiUseAttr]  
-class Class2 { }  
-```  
-  
- 在此情況下，因為 `AllowMultiple` 設為 `true`，所以可以重複套用 `MultiUseAttr`。 套用多個屬性所顯示的兩種格式都有效。  
-  
- 如果 `Inherited` 設為 `false`，則衍生自已屬性化類別的類別不會繼承屬性。 例如:   
-  
-```csharp  
-using System;  
+- 屬性可能套用至哪些程式元素。 除非您限制使用方式，否則屬性可能會套用至下列任一程式元素：
+  - 組件
+  - name
+  - Field - 欄位
+  - Event - 事件
+  - 方法
+  - param
+  - 屬性
+  - return
+  - 類型
+- 屬性是否可以套用至單一程式元素多次。
+- 衍生類別是否會繼承屬性。
 
-[AttributeUsage(AttributeTargets.Class, Inherited = false)]  
-class Attr1 : Attribute { }  
-  
-[Attr1]  
-class BClass { }  
-  
-class DClass : BClass { }  
-```  
-  
- 在此情況下，不會透過繼承將 `Attr1` 套用至 `DClass`。  
-  
-## <a name="remarks"></a>備註  
- `AttributeUsage` 屬性是單次使用的屬性--它無法多次套用至相同的類別。 `AttributeUsage` 是 <xref:System.AttributeUsageAttribute> 的別名。  
-  
- 如需詳細資訊，請參閱[使用反映存取屬性 (C#)](../../../../csharp/programming-guide/concepts/attributes/accessing-attributes-by-using-reflection.md)。  
-  
-## <a name="example"></a>範例  
- 下列範例示範 `AttributeUsage` 屬性的 `Inherited` 和 `AllowMultiple` 引數的效果，以及如何列舉套用至類別的自訂屬性。  
-  
-```csharp  
-using System;  
+明確套用時，預設設定看起來像下列範例：
 
-// Create some custom attributes:  
-[AttributeUsage(System.AttributeTargets.Class, Inherited = false)]  
-class A1 : System.Attribute { }  
-  
-[AttributeUsage(System.AttributeTargets.Class)]  
-class A2 : System.Attribute { }  
-  
-[AttributeUsage(System.AttributeTargets.Class, AllowMultiple = true)]  
-class A3 : System.Attribute { }  
-  
-// Apply custom attributes to classes:  
-[A1, A2]  
-class BaseClass { }  
-  
-[A3, A3]  
-class DerivedClass : BaseClass { }  
-  
-public class TestAttributeUsage  
-{  
-    static void Main()  
-    {  
-        BaseClass b = new BaseClass();  
-        DerivedClass d = new DerivedClass();  
-  
-        // Display custom attributes for each class.  
-        Console.WriteLine("Attributes on Base Class:");  
-        object[] attrs = b.GetType().GetCustomAttributes(true);  
-        foreach (Attribute attr in attrs)  
-        {  
-            Console.WriteLine(attr);  
-        }  
-  
-        Console.WriteLine("Attributes on Derived Class:");  
-        attrs = d.GetType().GetCustomAttributes(true);  
-        foreach (Attribute attr in attrs)  
-        {  
-            Console.WriteLine(attr);  
-        }  
-    }  
-}  
-```  
-  
-## <a name="sample-output"></a>範例輸出  
-  
-```  
-Attributes on Base Class:  
-A1  
-A2  
-Attributes on Derived Class:  
-A3  
-A3  
-A2  
-```  
-  
-## <a name="see-also"></a>另請參閱  
+[!code-csharp[Define a new attribute](../../../../../samples/snippets/csharp/attributes/NewAttribute.cs#1)]
+
+在此範例中，`NewAttribute`　類別可套用至任何支援的程式元素。 但是，它只能套用至每個實體一次。 屬性在套用至基底類別時，會由衍生類別所繼承。
+
+<xref:System.AttributeUsageAttribute.AllowMultiple> 和 <xref:System.AttributeUsageAttribute.Inherited> 是選擇性引數，因此下列程式碼具有相同的效果：
+
+[!code-csharp[Omit optional attributes](../../../../../samples/snippets/csharp/attributes/NewAttribute.cs#2)]
+
+第一個 <xref:System.AttributeUsageAttribute> 引數必須是 <xref:System.AttributeTargets> 列舉的一或多個元素。 您可以使用 OR 運算子來連結多個目標類型，如下列範例所示：
+
+[!code-csharp[Create an attribute for fields or properties](../../../../../samples/snippets/csharp/attributes/NewPropertyOrFieldAttribute.cs#1)]
+
+從 C# 7.3 開始，屬性 (attribute) 可以套用至屬性 (property) 或自動實作屬性 (property) 的支援欄位。 除非您在屬性 (attribute) 上指定 `field` 指定名稱，否則屬性 (attribute) 會套用至屬性 (property)。 下列範例會顯示這兩者：
+
+[!code-csharp[Create an attribute for fields or properties](../../../../../samples/snippets/csharp/attributes/NewPropertyOrFieldAttribute.cs#2)]
+
+如果 <xref:System.AttributeUsageAttribute.AllowMultiple> 引數為 `true`，則可以將產生的屬性多次套用至單一實體，如下列範例所示：
+
+[!code-csharp[Create and use an attribute that can be applied multiple times](../../../../../samples/snippets/csharp/attributes/MultiUseAttribute.cs#1)]
+
+在此情況下，因為 `AllowMultiple` 設為 `true`，所以可以重複套用 `MultiUseAttribute`。 套用多個屬性所顯示的兩種格式都有效。
+
+如果 <xref:System.AttributeUsageAttribute.Inherited> 為 `false`，則衍生自屬性化類別的類別不會繼承此屬性。 例如: 
+
+[!code-csharp[Create and use an attribute that can be applied multiple times](../../../../../samples/snippets/csharp/attributes/NonInheritedAttribute.cs#1)]
+
+在此情況下，不會透過繼承將 `NonInheritedAttribute` 套用至 `DClass`。
+
+## <a name="remarks"></a>備註
+
+`AttributeUsage` 屬性是單次使用的屬性--它無法多次套用至相同的類別。 `AttributeUsage` 是 <xref:System.AttributeUsageAttribute> 的別名。
+
+如需詳細資訊，請參閱[使用反映存取屬性 (C#)](accessing-attributes-by-using-reflection.md)。
+
+## <a name="example"></a>範例
+
+下列範例示範 <xref:System.AttributeUsageAttribute> 屬性的 <xref:System.AttributeUsageAttribute.Inherited> 和 <xref:System.AttributeUsageAttribute.AllowMultiple> 引數的效果，以及如何列舉套用至類別的自訂屬性。
+
+[!code-csharp[Applying and querying attributes](../../../../../samples/snippets/csharp/attributes/Program.cs#1)]
+
+## <a name="sample-output"></a>範例輸出
+
+```text
+Attributes on Base Class:
+FirstAttribute
+SecondAttribute
+Attributes on Derived Class:
+ThirdAttribute
+ThirdAttribute
+SecondAttribute
+```
+
+## <a name="see-also"></a>請參閱
  <xref:System.Attribute>  
  <xref:System.Reflection>  
- [C# 程式設計指南](../../../../csharp/programming-guide/index.md)  
- [屬性](../../../../../docs/standard/attributes/index.md)  
- [反映 (C#)](../../../../csharp/programming-guide/concepts/reflection.md)  
- [屬性](../../../../csharp/programming-guide/concepts/attributes/index.md)  
- [建立自訂屬性 (C#)](../../../../csharp/programming-guide/concepts/attributes/creating-custom-attributes.md)  
- [使用反射存取屬性 (C#)](../../../../csharp/programming-guide/concepts/attributes/accessing-attributes-by-using-reflection.md)
+ [C# 程式設計指南](../..//index.md)  
+ [屬性](../../../..//standard/attributes/index.md)  
+ [反映 (C#)](../reflection.md)  
+ [屬性](index.md)  
+ [建立自訂屬性 (C#)](creating-custom-attributes.md)  
+ [使用反射存取屬性 (C#)](accessing-attributes-by-using-reflection.md)

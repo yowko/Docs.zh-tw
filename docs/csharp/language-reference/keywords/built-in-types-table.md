@@ -5,11 +5,11 @@ helpviewer_keywords:
 - types [C#], built-in
 - built-in C# types
 ms.assetid: 54f901f2-bf2f-472c-ae8d-73e8ecfc57fe
-ms.openlocfilehash: 7407d18c58dd3d12337c6845627d83f02eaf7fa0
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: 120347e5bff7f0d6c7120af0cb250936ca39ea16
+ms.sourcegitcommit: 89c93d05c2281b4c834f48f6c8df1047e1410980
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/04/2018
+ms.lasthandoff: 05/15/2018
 ---
 # <a name="built-in-types-table-c-reference"></a>內建類型資料表 (C# 參考)
 下表顯示內建 C# 型別的關鍵字，這些是 <xref:System> 命名空間中預先定義型別的別名。  
@@ -37,14 +37,14 @@ ms.lasthandoff: 05/04/2018
   
  C# 型別關鍵字和它們的別名都可互換。 例如，您可以使用下列任一個宣告來宣告整數變數：  
   
-```  
+```csharp  
 int x = 123;  
 System.Int32 x = 123;  
 ```  
   
  若要顯示任何 C# 型別的實際型別，請使用 `GetType()` 系統方法。 例如，下列陳述式顯示代表 `myVariable` 型別的系統別名：  
   
-```  
+```csharp  
 Console.WriteLine(myVariable.GetType());  
 ```  
   

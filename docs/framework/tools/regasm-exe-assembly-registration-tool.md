@@ -1,34 +1,24 @@
 ---
-title: "Regasm.exe (組件登錄工具)"
-ms.custom: 
+title: Regasm.exe (組件登錄工具)
 ms.date: 03/30/2017
-ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.technology: dotnet-clr
-ms.tgt_pltfrm: 
-ms.topic: article
 helpviewer_keywords:
 - Assembly Registration tool
 - assemblies [.NET Framework], registering
 - Regasm.exe
 - registering assemblies
 ms.assetid: e190e342-36ef-4651-a0b4-0e8c2c0281cb
-caps.latest.revision: "20"
 author: rpetrusha
 ms.author: ronpet
-manager: wpickett
-ms.workload: dotnet
-ms.openlocfilehash: b2762080c66c3c9451e7c7c3d4621d8cb9d4846e
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.openlocfilehash: 11ccdb4c75af2b37595d9be977f2ab881ebe1184
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="regasmexe-assembly-registration-tool"></a>Regasm.exe (組件登錄工具)
 組件註冊工具會讀取組件內的中繼資料，並將必要的項目加入至登錄，這樣可讓 COM 用戶端順利地建立 .NET Framework 類別。 註冊類別之後，任何 COM 用戶端都可以將它當做 COM 類別使用。 類別只會在安裝組件時註冊一次。 在實際註冊類別之後，才能從 COM 建立組件內類別的執行個體。  
   
- 若要執行此工具，請使用 [開發人員命令提示字元] (或 Windows 7 中的 [Visual Studio 命令提示字元])。 如需詳細資訊，請參閱[命令提示字元](../../../docs/framework/tools/developer-command-prompt-for-vs.md)。  
+ 若要執行此工具，請使用 [開發人員命令提示字元] \(或 Windows 7 中的 [Visual Studio 命令提示字元])。 如需詳細資訊，請參閱[命令提示字元](../../../docs/framework/tools/developer-command-prompt-for-vs.md)。  
   
  在命令提示字元下輸入下列命令：  
   

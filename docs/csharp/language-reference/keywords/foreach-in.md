@@ -1,9 +1,6 @@
 ---
-title: "foreach、in (C# 參考)"
+title: foreach、in (C# 參考)
 ms.date: 10/11/2017
-ms.prod: .net
-ms.technology: devlang-csharp
-ms.topic: article
 f1_keywords:
 - foreach
 - foreach_CSharpKeyword
@@ -12,14 +9,11 @@ helpviewer_keywords:
 - foreach statement [C#]
 - in keyword [C#]
 ms.assetid: 5a9c5ddc-5fd3-457a-9bb6-9abffcd874ec
-caps.latest.revision: "29"
-author: BillWagner
-ms.author: wiwagn
-ms.openlocfilehash: d5601682d53a01ff07aba7e416aa81ded4c03e4e
-ms.sourcegitcommit: bd1ef61f4bb794b25383d3d72e71041a5ced172e
+ms.openlocfilehash: f00ae873e615f653d3e760f82b157a57fdaef6ed
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/18/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="foreach-in-c-reference"></a>foreach、in (C# 參考)
 `foreach` 陳述式會為陣列或物件集合中每個實作 <xref:System.Collections.IEnumerable?displayProperty=nameWithType> 或 <xref:System.Collections.Generic.IEnumerable%601?displayProperty=nameWithType> 介面的每個元素，重複一組內嵌陳述式。 `foreach` 陳述式可用來逐一查看集合，以取得所需的資訊，但不能用來新增或移除來源集合中的項目，以避免無法預期的副作用。 如果您必須新增或移除來源集合中的項目，請使用 [for](for.md) 迴圈。
@@ -40,7 +34,7 @@ ms.lasthandoff: 10/18/2017
  下列程式碼顯示三個範例。
 
 > [!TIP]
-> 您可以修改範例，以試驗語法，並再試一次不同更類似於使用案例的使用方式。 請按 [執行] 以執行程式碼，然後編輯並再按 [執行]。
+> 您可以修改範例，以試驗語法，並嘗試更類似於您的使用案例的不同使用方式。 請按 [執行] 以執行程式碼，然後編輯並再按一次 [執行]。
 
 -   顯示整數陣列內容的一般 `foreach` 迴圈
 
@@ -57,7 +51,7 @@ ms.lasthandoff: 10/18/2017
 ## <a name="c-language-specification"></a>C# 語言規格
 [!INCLUDE[CSharplangspec](~/includes/csharplangspec-md.md)]
 
-## <a name="see-also"></a>另請參閱  
+## <a name="see-also"></a>請參閱  
 
 [C# 參考](../index.md)
 

@@ -27,11 +27,11 @@ helpviewer_keywords:
 - Visual Basic code, Sub procedures
 - Function procedures [Visual Basic], declaring
 ms.assetid: d3f21fb0-b804-4c99-97ed-583b23894cf1
-ms.openlocfilehash: bc6949c7b52e87b7b39dd2690cac915a5f0d15aa
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: 75d41883aefbaa54eb836d89bbfc034d99b7bba0
+ms.sourcegitcommit: 22c3c8f74eaa138dbbbb02eb7d720fce87fc30a9
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/04/2018
+ms.lasthandoff: 05/17/2018
 ---
 # <a name="declare-statement"></a>Declare Statement
 宣告實作的外部檔案中的程序的參考。  
@@ -53,7 +53,7 @@ Declare [ charsetmodifier ] [ Function ] name Lib "libname" _
 |詞彙|定義|  
 |---|---|  
 |`attributelist`|選擇性。 請參閱[屬性清單](../../../visual-basic/language-reference/statements/attribute-list.md)。|  
-|`accessmodifier`|選擇性。 可以是下列其中一項：<br /><br /> -   [公用](../../../visual-basic/language-reference/modifiers/public.md)<br />-   [受保護](../../../visual-basic/language-reference/modifiers/protected.md)<br />-   [Friend](../../../visual-basic/language-reference/modifiers/friend.md)<br />-   [私用](../../../visual-basic/language-reference/modifiers/private.md)<br />-   `Protected Friend`<br /><br /> 請參閱[存取 Visual Basic 中的層級](../../../visual-basic/programming-guide/language-features/declared-elements/access-levels.md)。|  
+|`accessmodifier`|選擇性。 可以是下列其中一項：<br /><br /> -   [公用](../../../visual-basic/language-reference/modifiers/public.md)<br />-   [受保護](../../../visual-basic/language-reference/modifiers/protected.md)<br />-   [Friend](../../../visual-basic/language-reference/modifiers/friend.md)<br />-   [私用](../../../visual-basic/language-reference/modifiers/private.md)<br />- [Protected 的 Friend](../../language-reference/modifiers/protected-friend.md)<br />- [受保護的私用](../../language-reference/modifiers/private-protected.md)<br /><br /> 請參閱[存取 Visual Basic 中的層級](../../../visual-basic/programming-guide/language-features/declared-elements/access-levels.md)。|  
 |`Shadows`|選擇性。 請參閱[陰影](../../../visual-basic/language-reference/modifiers/shadows.md)。|  
 |`charsetmodifier`|選擇性。 指定字元集和檔案資訊中搜尋。 可以是下列其中一項：<br /><br /> -   [Ansi](../../../visual-basic/language-reference/modifiers/ansi.md) （預設值）<br />-   [Unicode](../../../visual-basic/language-reference/modifiers/unicode.md)<br />-   [自動](../../../visual-basic/language-reference/modifiers/auto.md)|  
 |`Sub`|選擇性，但請`Sub`或`Function`必須出現。 表示外部程序不會傳回值。|  

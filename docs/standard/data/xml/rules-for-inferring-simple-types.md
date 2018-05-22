@@ -1,26 +1,15 @@
 ---
-title: "推斷簡單型別的規則"
-ms.custom: 
+title: 推斷簡單型別的規則
 ms.date: 03/30/2017
-ms.prod: .net
-ms.reviewer: 
-ms.suite: 
 ms.technology: dotnet-standard
-ms.tgt_pltfrm: 
-ms.topic: article
 ms.assetid: 394624d6-4da0-430a-8a88-46efe40f14de
-caps.latest.revision: 
 author: mairaw
 ms.author: mairaw
-manager: wpickett
-ms.workload:
-- dotnet
-- dotnetcore
-ms.openlocfilehash: c3e6c24fafdd79676e68fa9dd06cf399fc09d5ea
-ms.sourcegitcommit: 15316053918995cc1380163a7d7e7edd5c44e6d7
-ms.translationtype: MT
+ms.openlocfilehash: d265d9247d00a20770d401d62fd1e065e2ef1627
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 03/19/2018
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="rules-for-inferring-simple-types"></a>推斷簡單型別的規則
 說明 <xref:System.Xml.Schema.XmlSchemaInference> 類別如何推斷屬性和項目的資料型別。  
@@ -54,7 +43,7 @@ ms.lasthandoff: 03/19/2018
 |時間|W3C 時間格式。|  
 |date|年份值限定於 0001 與 9999 之間。|  
 |gYearMonth|W3C 的西曆月份與年份格式。|  
-|string|一或多個 Unicode 字元。|  
+|字串|一或多個 Unicode 字元。|  
   
 ## <a name="type-promotion"></a>類型提升  
  <xref:System.Xml.Schema.XmlSchemaInference> 類別會逐一檢查屬性與項目的值。 若發現任何值，就會推斷最嚴格且不帶正負號的型別。 若在推斷屬性或項目的型別後，發現新的值不符合目前推斷的型別，則推斷的型別會提升為目前推斷型別與新值均適用的新型別。 <xref:System.Xml.Schema.XmlSchemaInference> 類別在提升推斷的型別時，會考量先前的值。  
@@ -75,7 +64,7 @@ ms.lasthandoff: 03/19/2018
   
  當發現第一個 `attr2` 值時，會根據 `attr2` 的值將 `unsignedByte` 的型別推斷為 `0`。 當發現第二個 `attr2` 時，此型別會根據目前推斷型別 `string` 和目前的 `unsignedByte` 值提升為 `true`，因為在提升推斷型別時，<xref:System.Xml.Schema.XmlSchemaInference> 類別會考量之前的值。 然而，若不是像上述範例一樣在兩個不同的 XML 文件中發現兩個 `attr2`，而是在相同的 XML 文件中發現時，`attr2` 將會被推斷為 `boolean`。  
   
-### <a name="ignored-attributes-from-the-httpwwww3org2001xmlschema-instance-namespace"></a>忽略屬性http://www.w3.org/2001/XMLSchema-instance命名空間  
+### <a name="ignored-attributes-from-the-httpwwww3org2001xmlschema-instance-namespace"></a>http://www.w3.org/2001/XMLSchema-instance 命名空間的被忽略屬性  
  下列結構描述定義的屬性會在結構描述推斷期間遭到忽略。  
   
 |屬性|描述|  
@@ -85,7 +74,7 @@ ms.lasthandoff: 03/19/2018
 |`xsi:schemaLocation`|如果發現 `xsi:schemaLocation`，則會加以忽略。|  
 |`xsi:noNamespaceSchemaLocation`|如果發現 `xsi:noNamespaceSchemaLocation`，則會加以忽略。|  
   
-## <a name="see-also"></a>另請參閱  
+## <a name="see-also"></a>請參閱  
  [XML 結構描述物件模型 (SOM)](../../../../docs/standard/data/xml/xml-schema-object-model-som.md)  
  [從 XML 文件推斷結構描述](../../../../docs/standard/data/xml/inferring-schemas-from-xml-documents.md)  
  [推斷結構描述節點類型和結構的規則](../../../../docs/standard/data/xml/rules-for-inferring-schema-node-types-and-structure.md)

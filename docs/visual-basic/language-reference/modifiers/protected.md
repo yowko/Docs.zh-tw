@@ -10,24 +10,27 @@ helpviewer_keywords:
 - Protected access modifier
 - Protected keyword [Visual Basic]
 ms.assetid: 74ad3d56-309f-49d2-b60c-1d0157d010e8
-ms.openlocfilehash: 3866e7dd72b9e7145cf76f480bb5ffc6239a775e
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: 5f279ed0a33840bb1f2321c17a1ffba412837c07
+ms.sourcegitcommit: 22c3c8f74eaa138dbbbb02eb7d720fce87fc30a9
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/04/2018
+ms.lasthandoff: 05/17/2018
 ---
 # <a name="protected-visual-basic"></a>Protected (Visual Basic)
-指定的一或多個宣告的程式設計項目都可以存取只會從他們自己的類別或從衍生類別中。  
+成員存取修飾詞，指定一或多個宣告的程式設計項目都可存取只會從他們自己的類別或從衍生類別中。  
   
 ## <a name="remarks"></a>備註  
  有時類別中宣告的程式設計項目包含機密資料或受限制的程式碼，而且您想要限制存取的項目。 不過，如果是繼承的類別，而您預期的衍生類別階層架構，它可能需要針對這些衍生的類別，以存取資料或程式碼。 在這種情況下，您會想要存取的基底類別和所有衍生類別的項目。 若要限制存取，這種方式中的項目，您可以將它與宣告`Protected`。  
+
+> [!NOTE]
+> `Protected`存取修飾詞可以結合兩個其他修飾詞：
+> - [Protected Friend](protected-friend.md)修飾詞讓從該類別衍生的類別，並從類別定義所在的相同組件中存取類別成員。 
+> - [受保護的私用](private-protected.md)修飾詞讓類別成員存取的衍生類型，但只在其包含的組件。
   
 ## <a name="rules"></a>規則  
   
 -   **宣告內容。** 您可以使用`Protected`只能在類別層級。 這表示宣告內容`Protected`項目必須是類別，且不能原始程式檔、 命名空間、 介面、 模組、 結構或程序。  
-  
--   **結合的修飾詞。** 您可以使用`Protected`修飾詞搭配[Friend](../../../visual-basic/language-reference/modifiers/friend.md)相同宣告中的修飾詞。 這種組合可讓您可以從相同組件，從其自己的類別和衍生類別的任何位置存取宣告的項目。 您可以指定`Protected Friend`只能在類別成員上。  
-  
+
 ## <a name="behavior"></a>行為  
   
 -   **存取層級。** 類別中的所有程式碼可以存取其項目。 任何衍生自基底類別的類別中的程式碼可以存取所有`Protected`基底類別的項目。 這是衍生的所有層代，則為 true。 這表示類別可以存取`Protected`基底類別的基底類別等的項目。  
@@ -66,6 +69,8 @@ ms.lasthandoff: 05/04/2018
  [Public](../../../visual-basic/language-reference/modifiers/public.md)  
  [Friend](../../../visual-basic/language-reference/modifiers/friend.md)  
  [Private](../../../visual-basic/language-reference/modifiers/private.md)  
+ [受保護的私用](private-protected.md)   
+ [Protected 的 Friend](protected-friend.md)   
  [在 Visual Basic 中的存取層級](../../../visual-basic/programming-guide/language-features/declared-elements/access-levels.md)  
  [程序](../../../visual-basic/programming-guide/language-features/procedures/index.md)  
  [結構](../../../visual-basic/programming-guide/language-features/data-types/structures.md)  

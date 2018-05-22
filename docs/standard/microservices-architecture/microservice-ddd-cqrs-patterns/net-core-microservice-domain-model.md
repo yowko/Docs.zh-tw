@@ -1,21 +1,14 @@
 ---
-title: "使用 .NET Core 實作微服務領域模型"
-description: "容器化 .NET 應用程式的 .NET 微服務架構 | 使用 .NET Core 實作微服務領域模型"
-keywords: "Docker, 微服務, ASP.NET, 容器"
+title: 使用 .NET Core 實作微服務領域模型
+description: 容器化 .NET 應用程式的 .NET 微服務架構 | 使用 .NET Core 實作微服務領域模型
 author: CESARDELATORRE
 ms.author: wiwagn
 ms.date: 11/09/2017
-ms.prod: .net-core
-ms.technology: dotnet-docker
-ms.topic: article
-ms.workload:
-- dotnet
-- dotnetcore
-ms.openlocfilehash: 0b954efffe2ee7e3e2bdaa49bd1057d72d69088c
-ms.sourcegitcommit: 96cc82cac4650adfb65ba351506d8a8fbcd17b5c
+ms.openlocfilehash: e0c931405b8b7e3b52bdcbd511737b449dc74273
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 02/19/2018
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="implementing-a-microservice-domain-model-with-net-core"></a>使用 .NET Core 實作微服務領域模型 
 
@@ -178,10 +171,10 @@ myOrder.AddOrderItem(productId, productName, pictureUrl, unitPrice, discount, un
 -   **Vaughn Vernon：使用 DDD 及 Entity Framework 為彙總建立模型** 請注意，這*並非* Entity Framework Core。
     [*https://vaughnvernon.co/?p=879*](https://vaughnvernon.co/?p=879)
 
--   **Julie Lerman。Coding for Domain-Driven Design: Tips for Data-Focused Devs (為領域驅動設計撰寫程式碼：給專精於資料之開發人員的提示)**
+-   **Julie Lerman。Coding for Domain-Driven Design: Tips for Data-Focused Devs (針對領域導向設計撰寫程式碼：給專精於資料之開發人員的提示)**
     [*https://msdn.microsoft.com/en-us/magazine/dn342868.aspx*](https://msdn.microsoft.com/en-us/magazine/dn342868.aspx)
 
--   **Udi Dahan。How to create fully encapsulated Domain Models (如何建立完全封裝的領域模型)**
+-   **Udi Dahan.如何建立完整封裝式領域模型**
     [*http://udidahan.com/2008/02/29/how-to-create-fully-encapsulated-domain-models/*](http://udidahan.com/2008/02/29/how-to-create-fully-encapsulated-domain-models/)
 
 

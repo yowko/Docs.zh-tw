@@ -1,6 +1,6 @@
 ---
 title: Class 陳述式 (Visual Basic)
-ms.date: 07/20/2015
+ms.date: 05/12/2018
 f1_keywords:
 - vb.Class
 helpviewer_keywords:
@@ -13,11 +13,11 @@ helpviewer_keywords:
 - classes [Visual Basic], data members
 - data members [Visual Basic], of classes
 ms.assetid: f2664f38-eb5a-4d4b-a374-1d041521fb6c
-ms.openlocfilehash: 2346823e7b774c21171bd81023cc5b920d34d19a
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: 1d81ce148e237df6997934f70c294630f6cc7b8d
+ms.sourcegitcommit: 22c3c8f74eaa138dbbbb02eb7d720fce87fc30a9
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/04/2018
+ms.lasthandoff: 05/17/2018
 ---
 # <a name="class-statement-visual-basic"></a>Class 陳述式 (Visual Basic)
 宣告類別的名稱，並導入的變數、 屬性、 事件和類別包含的程序定義。  
@@ -38,7 +38,7 @@ End Class
 |詞彙|定義|  
 |---|---|  
 |`attributelist`|選擇性。 請參閱[屬性清單](../../../visual-basic/language-reference/statements/attribute-list.md)。|  
-|`accessmodifier`|選擇性。 可以是下列其中一項：<br /><br /> -   [公用](../../../visual-basic/language-reference/modifiers/public.md)<br />-   [受保護](../../../visual-basic/language-reference/modifiers/protected.md)<br />-   [Friend](../../../visual-basic/language-reference/modifiers/friend.md)<br />-   [私用](../../../visual-basic/language-reference/modifiers/private.md)<br />-   `Protected Friend`<br /><br /> 請參閱[存取 Visual Basic 中的層級](../../../visual-basic/programming-guide/language-features/declared-elements/access-levels.md)。|  
+|`accessmodifier`|選擇性。 可以是下列其中一項：<br /><br /> -   [公用](../../../visual-basic/language-reference/modifiers/public.md)<br />-   [受保護](../../../visual-basic/language-reference/modifiers/protected.md)<br />-   [Friend](../../../visual-basic/language-reference/modifiers/friend.md)<br />-   [私用](../../../visual-basic/language-reference/modifiers/private.md)<br />-   [Protected 的 Friend](../../language-reference/modifiers/protected-friend.md)<br />- [受保護的私用](../../language-reference/modifiers/private-protected.md)<br/><br/> 請參閱[存取 Visual Basic 中的層級](../../../visual-basic/programming-guide/language-features/declared-elements/access-levels.md)。|  
 |`Shadows`|選擇性。 請參閱[陰影](../../../visual-basic/language-reference/modifiers/shadows.md)。|  
 |`MustInherit`|選擇性。 請參閱[MustInherit](../../../visual-basic/language-reference/modifiers/mustinherit.md)。|  
 |`NotInheritable`|選擇性。 請參閱[NotInheritable](../../../visual-basic/language-reference/modifiers/notinheritable.md)。|  

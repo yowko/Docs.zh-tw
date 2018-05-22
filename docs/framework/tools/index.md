@@ -9,16 +9,16 @@ helpviewer_keywords:
 ms.assetid: a2ca532d-91f7-426a-9303-417c2ee1247c
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: 65614d906abc2dec5dc5891b16b595cf9ef9d56f
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: a8ec8a5b1f665196fee62a4556e59201f45a6bff
+ms.sourcegitcommit: 895c7602386a6dfe7ca4facce3d965b27e5c6e87
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/04/2018
+ms.lasthandoff: 05/19/2018
 ---
 # <a name="net-framework-tools"></a>.NET Framework 工具
 .NET Framework 工具可讓您更輕鬆地建立、部署和管理以 .NET Framework 為目標的應用程式和元件。  
   
- 本節提及的大部分 .NET Framework 工具會隨 Visual Studio 自動安裝  (如需安裝資訊，請參閱 [Visual Studio 下載](http://go.microsoft.com/fwlink/?LinkID=325532))。  
+本節提及的大部分 .NET Framework 工具會隨 Visual Studio 自動安裝  若要下載 Visual Studio，請前往 [Visual Studio 下載](https://www.visualstudio.com/downloads/?utm_medium=microsoft&utm_source=docs.microsoft.com&utm_campaign=button+cta&utm_content=download+vs2017)頁面。
   
  除了組件快取檢視器 (Shfusion.dll) 之外，您可以從命令列執行所有的工具。 您必須從 [檔案總管] 存取 Shfusion.dll。  
   

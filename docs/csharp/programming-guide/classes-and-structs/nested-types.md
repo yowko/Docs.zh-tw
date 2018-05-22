@@ -1,21 +1,14 @@
 ---
 title: 巢狀類型 (C# 程式設計手冊)
 ms.date: 07/10/2017
-ms.prod: .net
-ms.technology:
-- devlang-csharp
-ms.topic: article
 helpviewer_keywords:
 - nested types [C#]
 ms.assetid: f2e1b315-e3d1-48ce-977f-7bae0960ba99
-caps.latest.revision: 13
-author: BillWagner
-ms.author: wiwagn
-ms.openlocfilehash: ab13c68b638062ab89c90dbfc51b51b8d72d3bde
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.openlocfilehash: 57356fbf4bff218932d1f1b4c62532f10c175757
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="nested-types-c-programming-guide"></a>巢狀類型 (C# 程式設計手冊)
 在 [class](../../../csharp/language-reference/keywords/class.md) 或 [struct](../../../csharp/language-reference/keywords/struct.md) 內定義的類型稱為巢狀型別。 例如:   
@@ -26,9 +19,9 @@ ms.lasthandoff: 11/21/2017
 
 您也可以指定[存取修飾詞](../../language-reference/keywords/access-modifiers.md)來定義巢狀型別的存取範圍，如下所示：
 
-- 巢狀類型的**類別**可以[公用](../../../csharp/language-reference/keywords/public.md)，[保護](../../../csharp/language-reference/keywords/protected.md)，[內部](../../../csharp/language-reference/keywords/internal.md)，[保護內部](../../../csharp/language-reference/keywords/protected-internal.md)，[私人](../../../csharp/language-reference/keywords/private.md)或[受保護的私用](../../../csharp/language-reference/keywords/private-protected.md)。 
+- **類別**的巢狀型別可以是 [public](../../../csharp/language-reference/keywords/public.md)、[protected](../../../csharp/language-reference/keywords/protected.md)、[internal](../../../csharp/language-reference/keywords/internal.md)、[protected internal](../../../csharp/language-reference/keywords/protected-internal.md)、[private](../../../csharp/language-reference/keywords/private.md) 或 [private protected](../../../csharp/language-reference/keywords/private-protected.md)。 
 
-   不過，定義`protected`，`protected internal`或`private protected`巢狀類別內[密封類別](../../language-reference/keywords/sealed.md)會產生編譯器警告[CS0628](../../misc/cs0628.md)，「 新的 protected 的成員宣告在密封類別中 」。
+   不過，在 [sealed 類別](../../language-reference/keywords/sealed.md)內部定義 `protected`、`protected internal` 或 `private protected` 巢狀類別會產生編譯器警告 [CS0628](../../misc/cs0628.md)「在 sealed 類別中已宣告新的 protected 成員」。
   
 - **struct** 的巢狀型別可以是 [public](../../../csharp/language-reference/keywords/public.md)、[internal](../../../csharp/language-reference/keywords/internal.md) 或 [private](../../../csharp/language-reference/keywords/private.md)。
   
@@ -46,7 +39,7 @@ ms.lasthandoff: 11/21/2017
   
  [!code-csharp[csProgGuideObjects#71](../../../csharp/programming-guide/classes-and-structs/codesnippet/CSharp/nested-types_4.cs)]  
   
-## <a name="see-also"></a>另請參閱  
+## <a name="see-also"></a>請參閱  
  [C# 程式設計指南](../../../csharp/programming-guide/index.md)  
  [類別和結構](../../../csharp/programming-guide/classes-and-structs/index.md)  
  [存取修飾詞](../../../csharp/programming-guide/classes-and-structs/access-modifiers.md)  

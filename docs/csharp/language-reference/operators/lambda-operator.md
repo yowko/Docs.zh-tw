@@ -1,31 +1,25 @@
 ---
 title: =&gt; 運算子 (C# 參考)
 ms.date: 10/02/2017
-ms.prod: .net
-ms.technology:
-- devlang-csharp
-ms.topic: article
 f1_keywords:
 - =>_CSharpKeyword
 helpviewer_keywords:
 - lambda operator [C#]
 - => operator [C#]
 - lambda expressions [C#], => operator
-author: BillWagner
-ms.author: wiwagn
-ms.openlocfilehash: 44cb0485aefa8b0ab10a00ae0525180020ce436d
-ms.sourcegitcommit: bd1ef61f4bb794b25383d3d72e71041a5ced172e
+ms.openlocfilehash: d1565e262fbd3ebcee2d1576a2a0c8ed3ba8ce38
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/18/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="gt-operator-c-reference"></a>=&gt; 運算子 (C# 參考)
 
-`=>`運算子可以用於 C# 中的兩種方式：
+`=>` 運算子在 C# 中有兩種用法：
 
-- 做為[lambda 運算子](#lamba-operator)中[lambda 運算式](../../lambda-expressions.md)，分開 lambda 主體輸入的變數。
+- 作為 [Lambda 運算式](../../lambda-expressions.md)中的 [Lambda 運算子](#lamba-operator)，它會分開輸入變數與 Lambda 主體。
  
-- 在[運算式主體定義](#expression-body-definition)，其會為成員名稱來區分成員實作。 
+- 在[運算式主體定義](#expression-body-definition)中，它會分開成員名稱與成員實作。 
 
 ## <a name="lambda-operator"></a>Lambda 運算子
 
@@ -90,22 +84,22 @@ static void Main(string[] args)
 ```  
 ## <a name="expression-body-definition"></a>運算式主體定義
 
-運算式主體定義提供高度壓縮，可讀取表單中的成員實作。 它有下列一般語法：
+運算式主體定義以極為簡潔且可讀的形式提供成員的實作。 它有下列一般語法：
 
 ```csharp
 member => expression;
 ```
-其中 *expression* 是有效的運算式。 請注意，*運算式*可以*陳述式運算式*只有在成員的傳回型別`void`，或如果成員是建構函式或完成項。
+其中 *expression* 是有效的運算式。 請注意，只有在成員的傳回型別為 `void` 時，或成員為建構函式或完成項時，*expression* 才可以是「陳述式運算式」。
 
-開頭為 C# 6 支援的方法和屬性的 get 陳述式的運算式主體定義。 運算式主體定義的建構函式、 完成項，屬性的 set 陳述式，以及 C# 7 支援索引子。
+從 C# 6 開始支援方法和 property get 陳述式的運算式主體定義。 從 C# 7 開始支援建構函式、完成項、property set 陳述式和索引子的運算式主體定義。
 
-下列為運算式主體定義`Person.ToString`方法：
+`Person.ToString` 方法的運算式主體定義如下︰
 
 ```csharp
 public override string ToString() => $"{fname} {lname}".Trim();
 ```
 
-它是下列的方法定義的簡短版：
+它是下列方法定義的簡短版：
 
 ```csharp
 public override string ToString()
@@ -113,10 +107,10 @@ public override string ToString()
    return $"{fname} {lname}".Trim();
 }
 ```
-如需詳細運算式主體定義的詳細資訊，請參閱[運算式主體的成員](../../programming-guide/statements-expressions-operators/expression-bodied-members.md)。
+如需運算式主體定義的詳細資訊，請參閱[運算式主體成員](../../programming-guide/statements-expressions-operators/expression-bodied-members.md)。
 
-## <a name="see-also"></a>另請參閱  
+## <a name="see-also"></a>請參閱  
 [C# 參考](../../../csharp/language-reference/index.md)   
-[C# 程式設計手冊](../../../csharp/programming-guide/index.md)   
+[C# 程式設計指南](../../../csharp/programming-guide/index.md)   
 [Lambda 運算式](../../../csharp/programming-guide/statements-expressions-operators/lambda-expressions.md)   
-[運算式主體的成員](../../programming-guide/statements-expressions-operators/expression-bodied-members.md)。
+[運算式主體成員](../../programming-guide/statements-expressions-operators/expression-bodied-members.md)。

@@ -1,52 +1,49 @@
 ---
-title: "在 Windows 10 上安裝 .NET Framework"
-description: "了解如何在 Windows 10 或 Windows Server 2016 上安裝 .NET Framework。"
+title: 在 Windows 10 上安裝 .NET Framework
+description: 了解如何在 Windows 10 或 Windows Server 2016 上安裝 .NET Framework。
 author: rlander
 ms.author: mairaw
-keywords: ".NET Framework, 安裝"
-ms.date: 12/20/2017
-ms.topic: article
+ms.date: 04/10/2018
 ms.custom: updateeachrelease
-ms.prod: .net-framework
-ms.workload: dotnet
-ms.openlocfilehash: bd588dff62e5d4ac1c1059e697a07598ba272042
-ms.sourcegitcommit: 2142a4732bb4ff519b9817db4c24a237b9810d4b
+ms.openlocfilehash: f069686866c4fd0e8e380af3ef448d282df34801
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 01/05/2018
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="install-the-net-framework-on-windows-10-and-windows-server-2016"></a>在 Windows 10 和 Windows Server 2016 上安裝 .NET Framework
 
-在 Windows 上執行許多應用程式時需要 .NET Framework。 本文中的指示可協助您安裝所需的 .NET Framework 版本。 [.NET Framework 4.7.1](https://www.microsoft.com/download/details.aspx?id=56115&desc=dotnet47) 是提供的最新版本。
+在 Windows 上執行許多應用程式時需要 .NET Framework。 本文中的指示可協助您安裝所需的 .NET Framework 版本。 [.NET Framework 4.7.2](http://go.microsoft.com/fwlink/?LinkID=863255) 是提供的最新版本。
 
 嘗試執行應用程式之後可能會進入此頁面，並會於您的電腦上看到類似如下的對話方塊：
 
 ![無法啟動這個應用程式](./media/this-application-could-not-be-started.png)
 
-## <a name="net-framework-471"></a>.NET Framework 4.7.1
+## <a name="net-framework-472"></a>.NET Framework 4.7.2
 
-.NET Framework 4.7.1 隨附於下列項目中：
+.NET Framework 4.7.2 隨附於下列項目中：
 
-* [Windows 10 Fall Creators Update (版本 1709)](https://www.microsoft.com/software-download/windows10)
-* [Windows Server，1709 版](https://docs.microsoft.com/windows-server/get-started/get-started-with-1709)
+* [Windows 10 2018 4 月更新](https://www.microsoft.com/software-download/windows10)
 
 > [!div class="button"]
-[下載 .NET Framework 4.7.1](https://www.microsoft.com/net/download/thank-you/net471?utm_source=ms-docs&utm_medium=referral)
+[下載 .NET Framework 4.7.2](https://www.microsoft.com/net/download/thank-you/net472?utm_source=ms-docs&utm_medium=referral)
 
-[.NET Framework 4.7.1](https://www.microsoft.com/download/details.aspx?id=56115&desc=dotnet47) 可用於執行專為 .NET Framework 4.0 到 4.7.1 建置的應用程式。
+[.NET Framework 4.7.2](http://go.microsoft.com/fwlink/?LinkID=863255) 可用於執行專為 .NET Framework 4.0 到 4.7.1 建置的應用程式。
 
-您可將 [.NET Framework 4.7.1](https://www.microsoft.com/en-us/download/details.aspx?id=56115&desc=dotnet47) 安裝於：
+您可將 [.NET Framework 4.7.2](http://go.microsoft.com/fwlink/?LinkID=863255) 安裝於：
 
+* Windows 10 Fall Creators Update (版本 1709)
 * Windows 10 Creators Update (版本 1703)
 * Windows 10 年度更新版 (版本 1607)
+* Windows Server，版本 1709
 * Windows Server 2016
 
-以下項目不支援 .NET Framework 4.7.1：
+以下項目不支援 .NET Framework 4.7.2：
 
 * Windows 10 1507
 * Windows 10 1511
 
-若目前使用 Windows 10 1507 或 1511，且希望安裝.NET Framework 4.7.1，即必須先升級至更新版的 Windows 10。
+若目前使用 Windows 10 1507 或 1511，且希望安裝.NET Framework 4.7.2，即必須先升級至更新版的 Windows 10。
 
 ## <a name="net-framework-462"></a>.NET Framework 4.6.2
 

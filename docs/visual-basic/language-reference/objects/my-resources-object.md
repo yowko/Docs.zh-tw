@@ -1,11 +1,6 @@
 ---
-title: "My.Resources 物件"
+title: My.Resources 物件
 ms.date: 07/20/2015
-ms.prod: .net
-ms.suite: 
-ms.technology:
-- devlang-visual-basic
-ms.topic: article
 f1_keywords:
 - My.Resources
 - My.Resources.MyResources.ResourceManager
@@ -13,14 +8,11 @@ f1_keywords:
 helpviewer_keywords:
 - My.Resources object
 ms.assetid: 34c3f2dc-7b87-432c-9d5f-17ea666bb266
-caps.latest.revision: 
-author: dotnet-bot
-ms.author: dotnetcontent
-ms.openlocfilehash: 96e5b909d9945ed631cebe07e4cfc7d5dc2e019f
-ms.sourcegitcommit: 34ec7753acf76f90a0fa845235ef06663dc9e36e
+ms.openlocfilehash: 9fd23cb119ff9148a45d32ec70ccc4dad08ab876
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="myresources-object"></a>My.Resources 物件
 提供屬性和類別來存取應用程式的資源。  
@@ -35,7 +27,7 @@ ms.lasthandoff: 12/21/2017
 ## <a name="properties"></a>屬性  
  內容`My.Resources`物件提供唯讀存取您的應用程式資源。 若要新增或移除資源，使用**專案設計工具**。 您可以存取資源，透過新增**專案設計工具**使用`My.Resources.``resourceName`。  
   
- 您也可以新增或移除選取的專案中的資源檔**方案總管 中**按一下**加入新項目**或**加入現有項目**從**專案**功能表。 您可以存取資源利用這個方式加入`My.Resources.``resourceFileName`。`resourceName`。  
+ 您也可以新增或移除選取的專案中的資源檔**方案總管 中**按一下**加入新項目**或**加入現有項目**從**專案**功能表。 您可以存取資源利用這個方式加入`My.Resources.``resourceFileName`、`resourceName`。  
   
  每個資源都有名稱、 類別目錄和值，以及這些資源的設定會決定要存取資源的屬性會出現在`My.Resources`物件。 資源中加入**專案設計工具**:  
   
@@ -50,8 +42,8 @@ ms.lasthandoff: 12/21/2017
 |**字串**|[String](../../../visual-basic/language-reference/data-types/string-data-type.md)|  
 |**影像**|<xref:System.Drawing.Bitmap>|  
 |**圖示**|<xref:System.Drawing.Icon>|  
-|**音訊**|<xref:System.IO.UnmanagedMemoryStream><br /><br /> <xref:System.IO.UnmanagedMemoryStream>類別衍生自<xref:System.IO.Stream>類別中，因此它可以搭配這些方法會採用資料流，例如<xref:Microsoft.VisualBasic.Devices.Audio.Play%2A>方法。|  
-|**檔案**|-   [字串](../../../visual-basic/language-reference/data-types/string-data-type.md)文字檔案。<br />-   <xref:System.Drawing.Bitmap>映像檔案。<br />-   <xref:System.Drawing.Icon>圖示檔案。<br />-   <xref:System.IO.UnmanagedMemoryStream>音效檔。|  
+|**音效**|<xref:System.IO.UnmanagedMemoryStream><br /><br /> <xref:System.IO.UnmanagedMemoryStream>類別衍生自<xref:System.IO.Stream>類別中，因此它可以搭配這些方法會採用資料流，例如<xref:Microsoft.VisualBasic.Devices.Audio.Play%2A>方法。|  
+|**檔案**|-   [字串](../../../visual-basic/language-reference/data-types/string-data-type.md)文字檔案。<br />-   <xref:System.Drawing.Bitmap> 映像檔案。<br />-   <xref:System.Drawing.Icon> 圖示檔案。<br />-   <xref:System.IO.UnmanagedMemoryStream> 音效檔。|  
 |**其他**|在設計工具中的資訊來決定**類型**資料行。|  
   
 ## <a name="classes"></a>類別  
@@ -84,7 +76,7 @@ ms.lasthandoff: 12/21/2017
   
  [!code-vb[VbVbalrMyResources#10](../../../visual-basic/developing-apps/programming/app-settings/codesnippet/VisualBasic/my-resources-object_5.vb)]  
   
-## <a name="see-also"></a>請參閱  
+## <a name="see-also"></a>另請參閱  
  [管理應用程式資源 (.NET)](/visualstudio/ide/managing-application-resources-dotnet)  
  [桌面應用程式中的資源](../../../framework/resources/index.md)  
 

@@ -1,20 +1,13 @@
 ---
-title: "C# 陣列 - C# 語言教學課程"
-description: "陣列是在 C# 語言中最基本的集合型別"
-keywords: ".NET, csharp, 陣列, 集合"
-author: BillWagner
-ms.author: wiwagn
+title: C# 陣列 - C# 語言教學課程
+description: 陣列是 C# 語言中最基本的集合類型
 ms.date: 08/10/2016
-ms.topic: article
-ms.prod: .net
-ms.technology: devlang-csharp
-ms.devlang: csharp
 ms.assetid: a440704c-9e88-4c75-97dd-bfe30ca0fb97
-ms.openlocfilehash: d7d5ae9f99ba1629a6f0aec57bebf74853cab27f
-ms.sourcegitcommit: a19548e5167cbe7e9e58df4ffd8c3b23f17d5c7a
+ms.openlocfilehash: c0fe65348ab2d41852ed9150571dcb0e5b8553f2
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 11/02/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="arrays"></a>陣列
 

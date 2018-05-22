@@ -1,30 +1,25 @@
 ---
 title: .NET Framework 開發人員部署手冊
 ms.custom: updateeachrelease
-ms.date: 12/14/2017
-ms.prod: .net-framework
-ms.technology:
-- dotnet-clr
-ms.topic: article
+ms.date: 04/10/2018
 helpviewer_keywords:
 - developer's guide, deploying .NET Framework
 - deployment [.NET Framework], developer's guide
 ms.assetid: 094d043e-33c4-40ba-a503-e0b20b55f4cf
 author: rpetrusha
 ms.author: ronpet
-manager: wpickett
-ms.workload:
-- dotnet
-ms.openlocfilehash: 6b2083efabd6c16bafd8b241980c4cd413258ae5
-ms.sourcegitcommit: c883637b41ee028786edceece4fa872939d2e64c
-ms.translationtype: MT
+ms.openlocfilehash: 14bb5cd242a45b98a23a9d807b22aa4487d2591e
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 03/26/2018
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="net-framework-deployment-guide-for-developers"></a>.NET Framework 開發人員部署手冊
 開發人員若要讓自己的應用程式一起安裝從 .NET Framework 4.5 至 [!INCLUDE[net_current](../../../includes/net-current-version.md)] 的任何 .NET Framework 版本，可參考本主題提供的資訊。
 
 如需下載連結，請參閱[可轉散發套件](#redistributable-packages)一節。 您也可以從下列 Microsoft 下載中心頁面下載可轉散發套件和語言套件：
+
+- 適用於所有作業系統的 .NET Framework 4.7.2 ([Web 安裝程式](http://go.microsoft.com/fwlink/?LinkId=863262)或[離線安裝程式](http://go.microsoft.com/fwlink/p/?LinkId=863265))
 
 - 適用於所有作業系統的 .NET Framework 4.7.1 ([Web 安裝程式](http://go.microsoft.com/fwlink/?LinkId=852095) 或 [離線安裝程式](http://go.microsoft.com/fwlink/p/?LinkId=852107))
 
@@ -55,7 +50,7 @@ ms.lasthandoff: 03/26/2018
 
 - 您必須具有系統管理員權限才能安裝 [!INCLUDE[net_v45](../../../includes/net-v45-md.md)] 及其點發行版本。
 
-- [!INCLUDE[net_v45](../../../includes/net-v45-md.md)] 會隨 [!INCLUDE[win8](../../../includes/win8-md.md)] 和 [!INCLUDE[winserver8](../../../includes/winserver8-md.md)]提供，因此在這些作業系統上不需要隨您的應用程式再次部署它。 同樣地， [!INCLUDE[net_v451](../../../includes/net-v451-md.md)] 會隨 [!INCLUDE[win81](../../../includes/win81-md.md)] 和 Windows Server 2012 R2 提供。 所有作業系統中都不包含 .NET Framework 4.5.2。 [!INCLUDE[net_v46](../../../includes/net-v46-md.md)] 包含在 Windows 10 中， [!INCLUDE[net_v461](../../../includes/net-v461-md.md)] 包含在 Windows 10 年 11 月更新中，而 [!INCLUDE[net_v462](../../../includes/net-v462-md.md)] 則包含在 Windows 10 年度更新版中。  .NET Framework 4.7 隨附於 Windows 10 Creators Update 中，而 .NET Framework 4.7.1 隨附於 Windows 10 Fall Creators Update 中。 如需硬體和軟體需求的完整清單，請參閱[系統需求](../../../docs/framework/get-started/system-requirements.md)。
+- [!INCLUDE[net_v45](../../../includes/net-v45-md.md)] 會隨 [!INCLUDE[win8](../../../includes/win8-md.md)] 和 [!INCLUDE[winserver8](../../../includes/winserver8-md.md)]提供，因此在這些作業系統上不需要隨您的應用程式再次部署它。 同樣地， [!INCLUDE[net_v451](../../../includes/net-v451-md.md)] 會隨 [!INCLUDE[win81](../../../includes/win81-md.md)] 和 Windows Server 2012 R2 提供。 所有作業系統中都不包含 .NET Framework 4.5.2。 [!INCLUDE[net_v46](../../../includes/net-v46-md.md)] 包含在 Windows 10 中， [!INCLUDE[net_v461](../../../includes/net-v461-md.md)] 包含在 Windows 10 年 11 月更新中，而 [!INCLUDE[net_v462](../../../includes/net-v462-md.md)] 則包含在 Windows 10 年度更新版中。  .NET Framework 4.7 隨附於 Windows 10 Creators Update 中，.NET Framework 4.7.1 隨附於 Windows 10 Fall Creators Update 中，.NET Framework 4.7.2 則隨附於 Windows 10 2018 4 月更新中。 如需硬體和軟體需求的完整清單，請參閱[系統需求](../../../docs/framework/get-started/system-requirements.md)。
 
 - 從 [!INCLUDE[net_v45](../../../includes/net-v45-md.md)]開始，您的使用者可以在安裝過程中檢視執行中的 .NET Framework 應用程式清單，並輕鬆地將它們關閉。 這有助於避免系統因安裝 .NET Framework 而重新啟動。 請參閱 [減少系統重新啟動](../../../docs/framework/deployment/reducing-system-restarts.md)。
 
@@ -79,8 +74,8 @@ ms.lasthandoff: 03/26/2018
 
 ||Web 安裝程式|離線安裝程式|
 |-|-------------------|-----------------------|
-|下載檔案|.NET Framework 4.7.1： <br/>[NDP471-KB4033344-Web.exe](http://go.microsoft.com/fwlink/?LinkId=852092)<br/><br/>.NET Framework 4.7： <br />[NDP47-KB3186500-Web.exe](http://go.microsoft.com/fwlink/?LinkId=825298) <br /><br />[!INCLUDE[net_v462](../../../includes/net-v462-md.md)]： <br />[NDP462-KB3151802-Web.exe](http://go.microsoft.com/fwlink/?LinkId=780596)<br /><br /> [!INCLUDE[net_v461](../../../includes/net-v461-md.md)]：<br />[NDP461-KB3102438-Web.exe](http://go.microsoft.com/fwlink/?LinkId=671728)<br /><br /> [!INCLUDE[net_v46](../../../includes/net-v46-md.md)]：<br />[NDP46-KB3045560-Web.exe](http://go.microsoft.com/fwlink/?LinkId=528222)<br /><br /> .NET Framework 4.5.2： <br />[NDP452-KB2901954-Web.exe](http://go.microsoft.com/fwlink/?LinkId=397707)<br /><br /> [!INCLUDE[net_v451](../../../includes/net-v451-md.md)]： <br />[NDP451-KB2859818-Web.exe](http://go.microsoft.com/fwlink/?LinkId=322115)<br /><br /> [!INCLUDE[net_v45](../../../includes/net-v45-md.md)]： <br />[dotNetFx45_Full_setup.exe](http://go.microsoft.com/fwlink/?LinkId=225704)|.NET Framework 4.7.1： <br />[NDP471-KB4033342-x86-x64-AllOS-ENU.exe](http://go.microsoft.com/fwlink/?LinkId=852104) <br /><br />.NET Framework 4.7： <br />[NDP47-KB3186497-x86-x64-AllOS-ENU.exe](http://go.microsoft.com/fwlink/?LinkId=825302) <br /><br />[!INCLUDE[net_v462](../../../includes/net-v462-md.md)]： <br />[NDP462-KB3151800-x86-x64-AllOS-ENU.exe](http://go.microsoft.com/fwlink/?LinkId=780600)<br /><br /> [!INCLUDE[net_v461](../../../includes/net-v461-md.md)]： <br />[NDP461-KB3102436-x86-x64-AllOS-ENU.exe](http://go.microsoft.com/fwlink/?LinkId=671743)<br /><br /> [!INCLUDE[net_v46](../../../includes/net-v46-md.md)]： <br />[NDP46-KB3045557-x86-x64-AllOS-ENU.exe](http://go.microsoft.com/fwlink/?LinkId=528232)<br /><br /> .NET Framework 4.5.2： <br />[NDP452-KB2901907-x86-x64-AllOS-ENU.exe](http://go.microsoft.com/fwlink/?LinkId=397708)<br /><br /> [!INCLUDE[net_v451](../../../includes/net-v451-md.md)]： <br />[NDP451-KB2858728-x86-x64-AllOS-ENU.exe](http://go.microsoft.com/fwlink/?LinkId=322116)<br /><br /> [!INCLUDE[net_v45](../../../includes/net-v45-md.md)]： <br />[dotNetFx45_Full_x86_x64.exe](http://go.microsoft.com/fwlink/?LinkId=225702)|
-|是否需要網際網路連線？|是|否|
+|下載檔案|.NET Framework 4.7.2： <br/>[NDP472-KB4054531-Web.exe](http://go.microsoft.com/fwlink/?LinkId=863262)<br/><br/>.NET Framework 4.7.1： <br/>[NDP471-KB4033344-Web.exe](http://go.microsoft.com/fwlink/?LinkId=852092)<br/><br/>.NET Framework 4.7： <br />[NDP47-KB3186500-Web.exe](http://go.microsoft.com/fwlink/?LinkId=825298) <br /><br />[!INCLUDE[net_v462](../../../includes/net-v462-md.md)]： <br />[NDP462-KB3151802-Web.exe](http://go.microsoft.com/fwlink/?LinkId=780596)<br /><br /> [!INCLUDE[net_v461](../../../includes/net-v461-md.md)]：<br />[NDP461-KB3102438-Web.exe](http://go.microsoft.com/fwlink/?LinkId=671728)<br /><br /> [!INCLUDE[net_v46](../../../includes/net-v46-md.md)]：<br />[NDP46-KB3045560-Web.exe](http://go.microsoft.com/fwlink/?LinkId=528222)<br /><br /> .NET Framework 4.5.2： <br />[NDP452-KB2901954-Web.exe](http://go.microsoft.com/fwlink/?LinkId=397707)<br /><br /> [!INCLUDE[net_v451](../../../includes/net-v451-md.md)]： <br />[NDP451-KB2859818-Web.exe](http://go.microsoft.com/fwlink/?LinkId=322115)<br /><br /> [!INCLUDE[net_v45](../../../includes/net-v45-md.md)]： <br />[dotNetFx45_Full_setup.exe](http://go.microsoft.com/fwlink/?LinkId=225704)|.NET Framework 4.7.2： <br/>[NDP472-KB4054530-x86-x64-AllOS-ENU.exe](http://go.microsoft.com/fwlink/?LinkId=863265)<br/><br/>.NET Framework 4.7.1： <br />[NDP471-KB4033342-x86-x64-AllOS-ENU.exe](http://go.microsoft.com/fwlink/?LinkId=852104) <br /><br />.NET Framework 4.7： <br />[NDP47-KB3186497-x86-x64-AllOS-ENU.exe](http://go.microsoft.com/fwlink/?LinkId=825302) <br /><br />[!INCLUDE[net_v462](../../../includes/net-v462-md.md)]： <br />[NDP462-KB3151800-x86-x64-AllOS-ENU.exe](http://go.microsoft.com/fwlink/?LinkId=780600)<br /><br /> [!INCLUDE[net_v461](../../../includes/net-v461-md.md)]： <br />[NDP461-KB3102436-x86-x64-AllOS-ENU.exe](http://go.microsoft.com/fwlink/?LinkId=671743)<br /><br /> [!INCLUDE[net_v46](../../../includes/net-v46-md.md)]： <br />[NDP46-KB3045557-x86-x64-AllOS-ENU.exe](http://go.microsoft.com/fwlink/?LinkId=528232)<br /><br /> .NET Framework 4.5.2： <br />[NDP452-KB2901907-x86-x64-AllOS-ENU.exe](http://go.microsoft.com/fwlink/?LinkId=397708)<br /><br /> [!INCLUDE[net_v451](../../../includes/net-v451-md.md)]： <br />[NDP451-KB2858728-x86-x64-AllOS-ENU.exe](http://go.microsoft.com/fwlink/?LinkId=322116)<br /><br /> [!INCLUDE[net_v45](../../../includes/net-v45-md.md)]： <br />[dotNetFx45_Full_x86_x64.exe](http://go.microsoft.com/fwlink/?LinkId=225702)|
+|是否需要網際網路連線？|[是]|否|
 |下載大小|較小 (僅包含目標平台的安裝程式)*|較大*|
 |語言套件|包含**|除非您使用以所有作業系統為目標的套件，否則必須 [單獨安裝](#chain_langpack)。|
 |部署方法|支援所有方法：<br /><br />- [ClickOnce](#clickonce-deployment)<br />- [InstallAware](#installaware-deployment)<br />- [InstallShield](#installshield-deployment)<br />- [Windows Installer XML (WiX)](#wix)<br />- [手動安裝](#installing_manually)<br />- [自訂安裝 (鏈結)](#chaining)|支援所有方法：<br /><br /> - [ClickOnce](#clickonce-deployment)<br />- [InstallAware](#installaware-deployment)<br />- [InstallShield](#installshield-deployment)<br />- [Windows Installer XML (WiX)](#wix)<br />- [手動安裝](#installing_manually)<br />- [自訂安裝 (鏈結)](#chaining)|
@@ -196,7 +191,7 @@ InstallAware 可以從單一來源來建立 Windows 應用程式 (APPX)、Window
 dotNetFx45_Full_x86_x64.exe /q /norestart /ChainingPackage Contoso
 ```
 
- 您可以使用其他命令列選項自訂安裝。 例如：
+ 您可以使用其他命令列選項自訂安裝。 例如: 
 
 - 若要提供一種方法讓使用者關閉執行中的 .NET Framework 應用程式，以減少系統重新啟動的次數，可設定被動模式並使用 `/showrmui` 選項，如下所示：
 
@@ -251,6 +246,8 @@ dotNetFx45_Full_x86_x64.exe /q /norestart /ChainingPackage Contoso
 
 |版本|Release DWORD 的值|
 |-------------|--------------------------------|
+|Windows 10 2018 4 月更新上安裝的 .NET Framework 4.7.2|461808|
+|.NET Framework 4.7.2 安裝在 Windows 10 2018 4 月更新以外的所有作業系統版本|461814|
 |.NET Framework 4.7.1 安裝於 Windows 10 Fall Creators Update|461308|
 |.NET Framework 4.7.1 安裝於 Windows 10 Fall Creators Update 以外的所有作業系統版本|461310|
 |Windows 10 Creators Update 上安裝的 .NET Framework 4.7|460798|
@@ -277,11 +274,13 @@ Name: Release
 Type: DWORD
 ```
 
- 若要判斷是否已針對 [!INCLUDE[net_v45](../../../includes/net-v45-md.md)]、4.5.1、4.5.2、4.6、4.6.1、4.6.2、4.7 或 4.7.1 安裝語言套件的最終發行版本，請檢查 RELEASE 機碼 DWORD 的值，如前一節[偵測 .NET Framework](#detect_net) 中所述。
+ 若要判斷是否已針對 .NET Framework 從 4.5 到 4.7.2 的特定版本安裝語言套件的最終發行版本，請檢查 RELEASE 機碼 DWORD 的值，如前一節[偵測 .NET Framework](#detect_net) 中所述。
 
 <a name="chain_langpack"></a> 
 ### <a name="chaining-the-language-packs-to-your-app-setup"></a>將語言套件鏈結至您的應用程式安裝
  .NET Framework 提供了一組獨立的語言套件可執行檔，其中包含特定文化特性的當地語系化資源。 語言套件可從 Microsoft 下載中心取得：
+
+- [.NET Framework 4.7.2 語言套件](http://go.microsoft.com/fwlink/p/?LinkId=863258)
 
 - [.NET Framework 4.7.1 語言套件](http://go.microsoft.com/fwlink/p/?LinkId=852090)
 
@@ -348,7 +347,7 @@ NDP451-KB2858728-x86-x64-AllOS-JPN.exe/q /norestart /ChainingPackage <ProductNam
  從 [!INCLUDE[win8](../../../includes/win8-md.md)] 開始，您可以使用 [控制台] 中的 [開啟或關閉 Windows 功能]，將 [!INCLUDE[net_v45](../../../includes/net-v45-md.md)] 或其小數點版本解除安裝。 在舊版 Windows 中，您可以使用 [控制台] 中的 [新增或移除程式]，將 [!INCLUDE[net_v45](../../../includes/net-v45-md.md)] 或其小數點版本解除安裝。
 
 > [!IMPORTANT]
-> 在 Windows 7 和舊版作業系統上，將 [!INCLUDE[net_v451](../../../includes/net-v451-md.md)]、4.5.2、4.6、4.6.1、4.6.2、4.7 或 4.7.1 解除安裝並不會還原 [!INCLUDE[net_v45](../../../includes/net-v45-md.md)] 檔案，而將 [!INCLUDE[net_v45](../../../includes/net-v45-md.md)] 解除安裝也不會還原 [!INCLUDE[net_v40_short](../../../includes/net-v40-short-md.md)] 檔案。 如果您想要還原為舊版，則必須重新安裝舊版及其所有更新。
+> 在 Windows 7 和舊版作業系統上，將 [!INCLUDE[net_v451](../../../includes/net-v451-md.md)]、4.5.2、4.6、4.6.1、4.6.2、4.7、4.7.1 或 4.7.2 解除安裝並不會還原 [!INCLUDE[net_v45](../../../includes/net-v45-md.md)] 檔案，而將 [!INCLUDE[net_v45](../../../includes/net-v45-md.md)] 解除安裝也不會還原 [!INCLUDE[net_v40_short](../../../includes/net-v40-short-md.md)] 檔案。 如果您想要還原為舊版，則必須重新安裝舊版及其所有更新。
 
 ## <a name="appendix"></a>附錄
 
@@ -359,7 +358,7 @@ NDP451-KB2858728-x86-x64-AllOS-JPN.exe/q /norestart /ChainingPackage <ProductNam
 |------------|-----------------|
 |**/CEIPConsent**|覆寫預設的行為並傳送匿名意見給 Microsoft 以協助改善未來的部署經驗。 只有當安裝程式提示同意，同時使用者授與權限傳送匿名意見給 Microsoft 時，才能使用此選項。|
 |**/chainingpackage** `packageName`|指定執行鏈結之可執行檔的名稱。 此資訊會以匿名意見的形式傳送給 Microsoft 以協助改善未來的部署經驗。<br /><br /> 如果封裝名稱包含空格，請使用雙引號做為分隔符號，例如： **/chainingpackage "Lucerne Publishing"**。 如需鏈結套件的範例，請參閱 MSDN Library 中的 [從安裝套件取得進度資訊](http://go.microsoft.com/fwlink/?LinkId=181926) 。|
-|**/LCID**  `LCID`<br /><br /> 其中， `LCID` 可指定地區設定識別碼 (請參閱 [支援的語言](#supported-languages))。|安裝 `LCID` 指定的語言套件並強制以該語言顯示 UI (除非已設定無訊息模式)。<br /><br /> 對於 Web 安裝程式，此選項會從 Web 鏈結安裝語言套件。 **注意：**此選項只適用於 Web 安裝程式。|
+|**/LCID**  `LCID`<br /><br /> 其中， `LCID` 可指定地區設定識別碼 (請參閱 [支援的語言](#supported-languages))。|安裝 `LCID` 指定的語言套件並強制以該語言顯示 UI (除非已設定無訊息模式)。<br /><br /> 對於 Web 安裝程式，此選項會從 Web 鏈結安裝語言套件。 **注意：** 此選項只適用於 Web 安裝程式。|
 |**/log** `file` &#124; `folder`|指定記錄檔的位置。 預設為程序的暫存資料夾，而預設檔案名稱將會根據套件。 如果副檔名是 .txt，則會產生文字記錄檔。 如果您指定其他副檔名或未指定副檔名，則會建立 HTML 記錄檔。|
 |**/msioptions**|指定針對 .msi 和 .msp 項目傳遞的選項，例如： `/msioptions "PROPERTY1='Value'"`。|
 |**/norestart**|避免安裝程式自動重新開機。 如果您使用此選項，則鏈結應用程式必須擷取傳回碼並處理重新開機 (請參閱 MSDN Library 中的 [從安裝套件取得進度資訊](http://go.microsoft.com/fwlink/?LinkId=179606) )。|
@@ -392,7 +391,7 @@ NDP451-KB2858728-x86-x64-AllOS-JPN.exe/q /norestart /ChainingPackage <ProductNam
 |1041|日文|ja|
 |1042|韓文|ko|
 |1043|荷蘭文 – 荷蘭|nl|
-|1044|挪威文 (巴克摩)|no|
+|1044|挪威文 (巴克摩)|否|
 |1045|波蘭文|pl|
 |1046|葡萄牙文 – 巴西|pt-BR|
 |1049|俄文|ru|

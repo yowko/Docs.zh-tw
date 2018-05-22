@@ -11,11 +11,11 @@ helpviewer_keywords:
 - variables [Visual Basic], enumeration
 - constants [Visual Basic], enumerated
 ms.assetid: a45e51f1-65ff-48e1-bf32-79130f137377
-ms.openlocfilehash: 89de51f2551437d102ccdc5a0f1ff5f23b53e47f
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: 7cac4d5bde9ec617a1877a0605dc6dbab67ddf7f
+ms.sourcegitcommit: 22c3c8f74eaa138dbbbb02eb7d720fce87fc30a9
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/04/2018
+ms.lasthandoff: 05/17/2018
 ---
 # <a name="enum-statement-visual-basic"></a>Enum 陳述式 (Visual Basic)
 宣告列舉，並定義其成員的值。  
@@ -49,8 +49,10 @@ End Enum
   
     -   [Private](../../../visual-basic/language-reference/modifiers/private.md)  
   
-     您可以指定`Protected``Friend`允許從列舉型別的類別，衍生的類別或相同組件內的程式碼存取。  
-  
+    - [Protected 的 Friend](../../language-reference/modifiers/protected-friend.md)
+    
+    - [受保護的私用](../../language-reference/modifiers/private-protected.md)
+
 -   `Shadows`  
   
      選擇性。 指定此列舉型別會重新宣告並隱藏相同具名的程式設計項目或基底類別中的多載項目集。 您可以指定[陰影](../../../visual-basic/language-reference/modifiers/shadows.md)只列舉型別本身，而非它的任何成員。  

@@ -1,21 +1,14 @@
 ---
-title: "在 eShopOnContainers 的 DDD 微服務中套用 CQRS 和 CQS 方法"
-description: "容器化 .NET 應用程式的 .NET 微服務架構 | 在 eShopOnContainers 的 DDD 微服務中套用 CQRS 和 CQS 方法"
-keywords: "Docker, 微服務, ASP.NET, 容器"
+title: 在 eShopOnContainers 的 DDD 微服務中套用 CQRS 和 CQS 方法
+description: 容器化 .NET 應用程式的 .NET 微服務架構 | 在 eShopOnContainers 的 DDD 微服務中套用 CQRS 和 CQS 方法
 author: CESARDELATORRE
 ms.author: wiwagn
 ms.date: 05/26/2017
-ms.prod: .net-core
-ms.technology: dotnet-docker
-ms.topic: article
-ms.workload:
-- dotnet
-- dotnetcore
-ms.openlocfilehash: 63e61a93aa2a162d7b48e0d423dab99dcea9d020
-ms.sourcegitcommit: e7f04439d78909229506b56935a1105a4149ff3d
+ms.openlocfilehash: 6be8b52f42e3e37ff03e561af45c46f4dd283d9e
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 12/23/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="applying-cqrs-and-cqs-approaches-in-a-ddd-microservice-in-eshoponcontainers"></a>在 eShopOnContainers 的 DDD 微服務中套用 CQRS 和 CQS 方法
 
@@ -53,19 +46,19 @@ eShopOnContainers 參考應用程式中訂購微服務的設計是基於 CQRS �
 -   **Greg Young。CQS 與CQRS**
     [*http://codebetter.com/gregyoung/2009/08/13/command-query-separation/*](http://codebetter.com/gregyoung/2009/08/13/command-query-separation/)
 
--   **Greg Young。CQRS Documents (CQRS 文件)**
+-   **Greg Young。CQRS Documents**
     [*https://cqrs.files.wordpress.com/2010/11/cqrs\_documents.pdf*](https://cqrs.files.wordpress.com/2010/11/cqrs_documents.pdf)
 
--   **Greg Young。CQRS, Task Based UIs and Event Sourcing (CQRS，工作式 UI 和事件來源)**
+-   **Greg Young。CQRS，以工作為基礎的 UI 和事件來源**
     [*http://codebetter.com/gregyoung/2010/02/16/cqrs-task-based-uis-event-sourcing-agh/*](http://codebetter.com/gregyoung/2010/02/16/cqrs-task-based-uis-event-sourcing-agh/)
 
--   **Udi Dahan。Clarified CQRS (釐清 CQRS)**
+-   **Udi Dahan.已釐清的 CQRS**
     [*http://udidahan.com/2009/12/09/clarified-cqrs/*](http://udidahan.com/2009/12/09/clarified-cqrs/)
 
 -   **CQRS**
     [*http://udidahan.com/2009/12/09/clarified-cqrs/*](http://udidahan.com/2009/12/09/clarified-cqrs/)
 
--   **Event-Sourcing (ES) (事件來源)**
+-   **事件來源 (ES)**
     [*http://codebetter.com/gregyoung/2010/02/20/why-use-event-sourcing/*](http://codebetter.com/gregyoung/2010/02/20/why-use-event-sourcing/)
 
 

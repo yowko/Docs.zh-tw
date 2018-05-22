@@ -1,35 +1,24 @@
 ---
-title: "XslCompiledTransform 類別的輸入"
-ms.custom: 
+title: XslCompiledTransform 類別的輸入
 ms.date: 03/30/2017
-ms.prod: .net
-ms.reviewer: 
-ms.suite: 
 ms.technology: dotnet-standard
-ms.tgt_pltfrm: 
-ms.topic: article
 dev_langs:
 - csharp
 - vb
 ms.assetid: 834049f1-ab41-449e-9f10-4a1d0701bc48
-caps.latest.revision: 
 author: mairaw
 ms.author: mairaw
-manager: wpickett
-ms.workload:
-- dotnet
-- dotnetcore
-ms.openlocfilehash: 7aac1e85bdc27c9c8394eadcae841069115b369d
-ms.sourcegitcommit: e7f04439d78909229506b56935a1105a4149ff3d
+ms.openlocfilehash: bc909b666b90d8c8825e7dbef33e48b6126bd7c2
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 12/23/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="inputs-to-the-xslcompiledtransform-class"></a>XslCompiledTransform 類別的輸入
 <xref:System.Xml.Xsl.XslCompiledTransform.Transform%2A> 方法可接受來源文件的三種輸入型別：實作 <xref:System.Xml.XPath.IXPathNavigable> 介面的物件、讀取來源文件的 <xref:System.Xml.XmlReader> 物件，或是字串 URI。  
   
 > [!NOTE]
->  依預設，<xref:System.Xml.Xsl.XslCompiledTransform> 類別會保留泛空白字元。 這符合 W3C XSLT 1.0 版建議事項的 3.4 節 (3.4 節，http://www.w3.org/TR/xslt.html#strip)。  
+>  依預設，<xref:System.Xml.Xsl.XslCompiledTransform> 類別會保留泛空白字元。 這符合 W3C XSLT 1.0 版建議事項的 3.4 節 (3.4 節，http://www.w3.org/TR/xslt.html#strip))。  
   
 ## <a name="ixpathnavigable-interface"></a>IXPathNavigable 介面  
  <xref:System.Xml.XPath.IXPathNavigable> 介面是在 <xref:System.Xml.XmlNode> 及 <xref:System.Xml.XPath.XPathDocument> 類別中實作的。 這些類別代表 XML 資料的記憶體中快取。  

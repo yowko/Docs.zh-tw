@@ -2,11 +2,11 @@
 title: 'F # 樣式指南'
 description: '了解五個很好的 F # 程式碼的原則。'
 ms.date: 05/14/2018
-ms.openlocfilehash: 317fc2c101449b0500a54dd9fea3d426757af5cd
-ms.sourcegitcommit: 89c93d05c2281b4c834f48f6c8df1047e1410980
-ms.translationtype: HT
+ms.openlocfilehash: 6d8c1336ca991040a8f6e13290d209cb3b70054d
+ms.sourcegitcommit: 22c3c8f74eaa138dbbbb02eb7d720fce87fc30a9
+ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/15/2018
+ms.lasthandoff: 05/17/2018
 ---
 # <a name="f-style-guide"></a>F # 樣式指南
 
@@ -40,8 +40,8 @@ ms.lasthandoff: 05/15/2018
 
 ## <a name="next-steps"></a>後續步驟
 
-[F # 格式指導方針](formatting.md)提供如何格式化程式碼，使其更易讀的指引。
+[F # 程式碼格式化方針](formatting.md)提供如何格式化程式碼，使其更易讀的指引。
 
 [F # 編碼慣例](conventions.md)F # 的程式設計語言，有助於長期維護較大的 F # 程式碼基底提供指引。
 
-[F # 元件的設計指導方針](component-design-guidelines.md)是一組完整的指導方針撰寫 F # 元件，例如文件庫。
+[F # 元件的設計指導方針](component-design-guidelines.md)提供指導方針撰寫 F # 元件，例如文件庫。

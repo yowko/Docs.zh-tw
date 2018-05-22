@@ -1,24 +1,17 @@
 ---
 title: 類別 (C# 參考)
 ms.date: 07/18/2017
-ms.prod: .net
-ms.technology:
-- devlang-csharp
-ms.topic: article
 f1_keywords:
 - class_CSharpKeyword
 - class
 helpviewer_keywords:
 - class keyword [C#]
 ms.assetid: b95d8815-de18-4c3f-a8cc-a0a53bdf8690
-caps.latest.revision: 30
-author: BillWagner
-ms.author: wiwagn
-ms.openlocfilehash: ae4b019ee88b6f331a76c750ab94fc76a3343adb
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.openlocfilehash: 20968d2f72195db6d16de1b726c6e946b91ffcd5
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="class-c-reference"></a>類別 (C# 參考)
 
@@ -44,7 +37,7 @@ class TestClass
 
 直接在命名空間內宣告的類別 (未巢狀在其他類別內) 可以是 [public](../../../csharp/language-reference/keywords/public.md) 或 [internal](../../../csharp/language-reference/keywords/internal.md)。 類別預設為 `internal`。
 
-類別成員，包括巢狀的類別，可以是[公用](../../../csharp/language-reference/keywords/public.md)， `protected internal`，[保護](../../../csharp/language-reference/keywords/protected.md)，[內部](../../../csharp/language-reference/keywords/internal.md)，[私人](../../../csharp/language-reference/keywords/private.md)，或`private protected`. 成員預設為 [private](../../../csharp/language-reference/keywords/private.md)。
+類別成員 (包括巢狀類別) 可以是 [public](../../../csharp/language-reference/keywords/public.md)、`protected internal`、[protected](../../../csharp/language-reference/keywords/protected.md)、[internal](../../../csharp/language-reference/keywords/internal.md)、[private](../../../csharp/language-reference/keywords/private.md) 或 `private protected`。 成員預設為 [private](../../../csharp/language-reference/keywords/private.md)。
 
 如需詳細資訊，請參閱[存取修飾詞](../../../csharp/programming-guide/classes-and-structs/access-modifiers.md)。
 
@@ -99,7 +92,7 @@ Console.Write(child1.name);   // Error
 ## <a name="c-language-specification"></a>C# 語言規格
 [!INCLUDE[CSharplangspec](~/includes/csharplangspec-md.md)]
 
-## <a name="see-also"></a>另請參閱
+## <a name="see-also"></a>請參閱
  [C# 參考](../../../csharp/language-reference/index.md)  
  [C# 程式設計指南](../../../csharp/programming-guide/index.md)  
  [C# 關鍵字](../../../csharp/language-reference/keywords/index.md)  

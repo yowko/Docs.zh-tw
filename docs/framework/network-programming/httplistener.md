@@ -1,26 +1,17 @@
 ---
 title: HttpListener
-ms.custom: 
 ms.date: 03/30/2017
-ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.tgt_pltfrm: 
-ms.topic: article
 helpviewer_keywords:
 - HTTP
 ms.assetid: 5b89d3fb-3c9a-49e2-af1f-c34c020c68ac
-caps.latest.revision: 
 author: mcleblanc
 ms.author: markl
 manager: markl
-ms.workload:
-- dotnet
-ms.openlocfilehash: b4b8c1e916aa9382d156a197fa15c2e72e900a1c
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
-ms.translationtype: MT
+ms.openlocfilehash: db2c42dab15b4282c5474c50f970ffe47a101215
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="httplistener"></a>HttpListener
 <xref:System.Net.HttpListener> 類別提供以程式設計方式控制的 HTTP 通訊協定接聽程式。 此接聽程式可在 <xref:System.Net.HttpListener> 物件的存留期內作用，並且在您的應用程式中執行。  
@@ -33,7 +24,7 @@ ms.lasthandoff: 12/22/2017
  <xref:System.Net.HttpWebRequest>  
  <xref:System.Net.HttpWebResponse>  
  [HTTP 伺服器](http://go.microsoft.com/fwlink/?LinkID=178285)  
- [在 網際網路資訊的安全性增強功能](http://go.microsoft.com/fwlink/?LinkID=178286)  
+ [網際網路資訊中的安全性增強功能](http://go.microsoft.com/fwlink/?LinkID=178286)  
  [HttpListener ASPX 主機應用程式範例](http://go.microsoft.com/fwlink/?LinkID=179560)  
  [HttpListener 技術範例](http://go.microsoft.com/fwlink/?LinkID=179558)  
  [網路程式設計範例](../../../docs/framework/network-programming/network-programming-samples.md)

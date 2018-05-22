@@ -1,10 +1,6 @@
 ---
 title: event (C# 參考)
 ms.date: 07/20/2015
-ms.prod: .net
-ms.technology:
-- devlang-csharp
-ms.topic: article
 f1_keywords:
 - event
 - remove
@@ -13,14 +9,11 @@ f1_keywords:
 helpviewer_keywords:
 - event keyword [C#]
 ms.assetid: 7858fd85-153b-4259-85d0-6aa13c35f174
-caps.latest.revision: 28
-author: BillWagner
-ms.author: wiwagn
-ms.openlocfilehash: f7e7f9f96714f8988eb91d77c63cc4f017d040f5
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.openlocfilehash: b58e06c87ebf601daf231c83993ebe512f51ecd9
+ms.sourcegitcommit: 88f251b08bf0718ce119f3d7302f514b74895038
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 05/10/2018
 ---
 # <a name="event-c-reference"></a>event (C# 參考)
 `event` 關鍵字用來在發行者類別中宣告事件。  
@@ -28,11 +21,11 @@ ms.lasthandoff: 11/21/2017
 ## <a name="example"></a>範例  
  下例範例示範如何宣告及引發使用 <xref:System.EventHandler> 作為基礎委派類型的事件。 如需同時示範如何使用泛型 <xref:System.EventHandler%601> 委派類型，以及如何訂閱事件並建立事件處理常式方法的完整程式碼範例，請參閱[如何：發行符合 .NET Framework 方針的事件](../../../csharp/programming-guide/events/how-to-publish-events-that-conform-to-net-framework-guidelines.md)。  
   
- [!code-csharp[csrefKeywordsModifiers#7](../../../csharp/language-reference/keywords/codesnippet/CSharp/event_1.cs)]  
+ [!code-csharp[csrefKeywordsModifiers#7](~/samples/snippets/csharp/VS_Snippets_VBCSharp/csrefKeywordsModifiers/CS/csrefKeywordsModifiers.cs#7)]
   
  事件是一種特殊的多點傳送委派，只能從宣告委派的類別或結構內叫用 (發行者類別)。 如果其他類別或結構訂閱了事件，當發行者類別引發事件時，就會呼叫其事件處理常式方法。 如需詳細資訊與程式碼範例，請參閱[事件](../../../csharp/programming-guide/events/index.md)及[委派](../../../csharp/programming-guide/delegates/index.md)。  
   
- 事件可以標示為[公用](../../../csharp/language-reference/keywords/public.md)，[私人](../../../csharp/language-reference/keywords/private.md)，[保護](../../../csharp/language-reference/keywords/protected.md)，[內部](../../../csharp/language-reference/keywords/internal.md)，[保護內部](../../../csharp/language-reference/keywords/protected-internal.md)或[受保護的私用](../../../csharp/language-reference/keywords/private-protected.md)。 這些存取修飾詞定義類別使用者如何存取事件。 如需詳細資訊，請參閱[存取修飾詞](../../../csharp/programming-guide/classes-and-structs/access-modifiers.md)。  
+ 事件可以標記為 [public](../../../csharp/language-reference/keywords/public.md)、[private](../../../csharp/language-reference/keywords/private.md)、[protected](../../../csharp/language-reference/keywords/protected.md)、[internal](../../../csharp/language-reference/keywords/internal.md)、[protected internal](../../../csharp/language-reference/keywords/protected-internal.md) 或 [private protected](../../../csharp/language-reference/keywords/private-protected.md)。 這些存取修飾詞定義類別使用者如何存取事件。 如需詳細資訊，請參閱[存取修飾詞](../../../csharp/programming-guide/classes-and-structs/access-modifiers.md)。  
   
 ## <a name="keywords-and-events"></a>關鍵字和事件  
  下列關鍵字適用於事件。  
@@ -51,7 +44,7 @@ ms.lasthandoff: 11/21/2017
 ## <a name="c-language-specification"></a>C# 語言規格  
  [!INCLUDE[CSharplangspec](~/includes/csharplangspec-md.md)]  
   
-## <a name="see-also"></a>另請參閱  
+## <a name="see-also"></a>請參閱  
  [C# 參考](../../../csharp/language-reference/index.md)  
  [C# 程式設計指南](../../../csharp/programming-guide/index.md)  
  [C# 關鍵字](../../../csharp/language-reference/keywords/index.md)  

@@ -1,14 +1,6 @@
 ---
-title: "Tlbexp.exe (類型程式庫匯出工具)"
-ms.custom: 
+title: Tlbexp.exe (類型程式庫匯出工具)
 ms.date: 03/30/2017
-ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.technology:
-- dotnet-clr
-ms.tgt_pltfrm: 
-ms.topic: article
 helpviewer_keywords:
 - exporting type library [.NET Framework]
 - exporter tool [.NET Framework]
@@ -16,17 +8,13 @@ helpviewer_keywords:
 - Type Library Exporter
 - type libraries [.NET Framework], exporting
 ms.assetid: a487d61b-d166-467b-a7ca-d8b52fbff42d
-caps.latest.revision: 
 author: rpetrusha
 ms.author: ronpet
-manager: wpickett
-ms.workload:
-- dotnet
-ms.openlocfilehash: 47710b81de79a9dfbb6bddd39035be2986350b0e
-ms.sourcegitcommit: c0dd436f6f8f44dc80dc43b07f6841a00b74b23f
+ms.openlocfilehash: 3fa942af6558c16431cd716e3dd1ea1271fabab6
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 01/19/2018
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="tlbexpexe-type-library-exporter"></a>Tlbexp.exe (類型程式庫匯出工具)
 類型程式庫匯出工具可以產生類型程式庫，這個類型程式庫描述定義在通用語言執行平台組件中的類型。  
@@ -56,7 +44,7 @@ tlbexp assemblyName [options]
 |**/oldnames**|在發生類型名稱衝突時，強制 Tlbexp.exe 匯出裝飾類型名稱。 請注意，此為 .NET Framework 2.0 版之前版本中的預設行為。|  
 |**/out:** *file*|指定要產生的類型程式庫檔案的名稱。 如果省略這個選項，Tlbexp.exe 會產生一個與組件名稱 (指實際組件名稱，不一定和包含組件的檔案同名) 相同的類型程式庫和 .tlb 副檔名。|  
 |**/silence:** `warningnumber`|隱藏顯示指定的警告。 此選項無法搭配 **/silent** 使用。|  
-|**/silent**|隱藏顯示成功訊息。 此選項無法搭配**/silence** 使用。|  
+|**/silent**|隱藏顯示成功訊息。 此選項無法搭配 **/silence** 使用。|  
 |**/tlbreference:** *typelibraryname*|強制 Tlbexp.exe 明確解析類型程式庫參考，而不需查閱登錄。 例如，如果組件 B 參考組件 A，您就可以使用這個選項提供明確的類型程式庫參考，而不需依賴登錄中所指定的類型程式庫。 Tlbexp.exe 會執行版本檢查，以確定類型程式庫版本是否與組件版本相符；如果不符，便會產生錯誤。<br /><br /> 請注意，如果將 <xref:System.Runtime.InteropServices.ComImportAttribute> 屬性套用至介面，然後又由其他類型實作，則 **tlbreference** 選項仍然會查閱登錄。|  
 |**/tlbrefpath:** *path*|參考類型程式庫的完整路徑。|  
 |**/win32**|在 64 位元電腦上編譯時，這個選項會指定 Tlbexp.exe 產生 32 位元的類型程式庫。|  
@@ -65,7 +53,7 @@ tlbexp assemblyName [options]
 |**/?**|顯示工具的命令語法和選項。|  
   
 > [!NOTE]
->  Tlbexp.exe 的命令列選項不區分大小寫，而且可以依任何順序提供。 您只需要指定足夠的選項來唯一識別它。 例如，**/n** 相當於 **/nologo**，而 **/o:** *outfile.tlb* 相當於 **/out:** *outfile.tlb*。  
+>  Tlbexp.exe 的命令列選項不區分大小寫，而且可以依任何順序提供。 您只需要指定足夠的選項來唯一識別它。 例如，**/n** 相當於 **/nologo**，且 **/o:** *outfile.tlb* 相當於 **/out:** *outfile.tlb*。  
   
 ## <a name="remarks"></a>備註  
  Tlbexp.exe 會產生一個類型程式庫，其含有組件中所定義的類型定義。 應用程式 (例如 Visual Basic 6.0) 可以使用產生的類型程式庫來繫結至組件中所定義的 .NET 類型。  

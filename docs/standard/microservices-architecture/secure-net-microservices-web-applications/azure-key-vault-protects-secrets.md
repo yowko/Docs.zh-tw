@@ -1,21 +1,14 @@
 ---
-title: "使用 Azure Key Vault 以在生產階段保護密碼"
-description: "容器化 .NET 應用程式的 .NET 微服務架構 | 使用 Azure Key Vault 以在生產階段保護密碼"
-keywords: "Docker, 微服務, ASP.NET, 容器"
+title: 使用 Azure Key Vault 以在生產階段保護密碼
+description: 容器化 .NET 應用程式的 .NET 微服務架構 | 使用 Azure Key Vault 以在生產階段保護密碼
 author: mjrousos
 ms.author: wiwagn
 ms.date: 05/26/2017
-ms.prod: .net-core
-ms.technology: dotnet-docker
-ms.topic: article
-ms.workload:
-- dotnet
-- dotnetcore
-ms.openlocfilehash: cb289c7361362c225eac8b9898bac276c4b623b4
-ms.sourcegitcommit: e7f04439d78909229506b56935a1105a4149ff3d
+ms.openlocfilehash: 5ad5686909c29eba5916cbcc4b7115a16108a004
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 12/23/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="using-azure-key-vault-to-protect-secrets-at-production-time"></a>使用 Azure Key Vault 以在生產階段保護密碼
 
@@ -65,10 +58,10 @@ var kvClient = new KeyVaultClient(new KeyVaultClient.AuthenticationCallback(asyn
 
 ## <a name="additional-resources"></a>其他資源
 
--   **使用 Azure Key Vault 保護應用程式密碼**
+-   **使用 Azure Key Vault 來保護應用程式祕密**
     [*https://docs.microsoft.com/azure/guidance/guidance-multitenant-identity-keyvault*](https://docs.microsoft.com/azure/guidance/guidance-multitenant-identity-keyvault)
 
--   **在開發期間安全儲存應用程式密碼**
+-   **在開發期間安全儲存應用程式祕密**
     [*https://docs.microsoft.com/aspnet/core/security/app-secrets*](https://docs.microsoft.com/aspnet/core/security/app-secrets)
 
 -   **設定資料保護**

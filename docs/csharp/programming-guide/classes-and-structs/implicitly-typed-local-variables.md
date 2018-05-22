@@ -5,11 +5,11 @@ helpviewer_keywords:
 - implicitly-typed local variables [C#]
 - var [C#]
 ms.assetid: b9218fb2-ef5d-4814-8a8e-2bc29b0bbc9b
-ms.openlocfilehash: a3cb2490247a6e9fdb51b73d405173d29263393c
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: c6c2bae39764e78fad2510bbc8937b0ac790bef5
+ms.sourcegitcommit: 89c93d05c2281b4c834f48f6c8df1047e1410980
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/04/2018
+ms.lasthandoff: 05/15/2018
 ---
 # <a name="implicitly-typed-local-variables-c-programming-guide"></a>隱含類型區域變數 (C# 程式設計手冊)
 您可以宣告區域變數而不提供明確類型。 `var` 關鍵字會指示編譯器從初始化陳述式右側的運算式推斷變數的類型。 推斷類型可能是內建類型、匿名型別、使用者定義型別，或 .NET Framework 類別庫中定義的類型。 如需如何使用 `var` 初始化陣列的詳細資訊，請參閱[隱含型別陣列](../../../csharp/programming-guide/arrays/implicitly-typed-arrays.md)。  
@@ -26,19 +26,19 @@ ms.lasthandoff: 05/04/2018
   
 -   在 [for](../../../csharp/language-reference/keywords/for.md) 初始化陳述式中。  
   
-    ```  
+    ```csharp  
     for(var x = 1; x < 10; x++)  
     ```  
   
 -   在 [foreach](../../../csharp/language-reference/keywords/foreach-in.md) 初始化陳述式中。  
   
-    ```  
+    ```csharp  
     foreach(var item in list){...}  
     ```  
   
 -   在 [using](../../../csharp/language-reference/keywords/using-statement.md) 陳述式中。  
   
-    ```  
+    ```csharp  
     using (var file = new StreamReader("C:\\myfile.txt")) {...}  
     ```  
   

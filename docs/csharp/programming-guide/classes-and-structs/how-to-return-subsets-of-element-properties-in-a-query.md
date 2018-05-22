@@ -4,11 +4,11 @@ ms.date: 07/20/2015
 helpviewer_keywords:
 - anonymous types [C#], for subsets of element properties
 ms.assetid: fabdf349-f443-4e3f-8368-6c471be1dd7b
-ms.openlocfilehash: f6ec0067cf993018cf58f397e2ad06939852a952
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: 3b43e7e3aafda5ee5b6a49f271f725fb8eeeca59
+ms.sourcegitcommit: 89c93d05c2281b4c834f48f6c8df1047e1410980
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/04/2018
+ms.lasthandoff: 05/15/2018
 ---
 # <a name="how-to-return-subsets-of-element-properties-in-a-query-c-programming-guide"></a>如何：在查詢中傳回項目屬性的子集 (C# 程式設計手冊)
 如果下列兩個條件都成立，請在查詢運算式中使用匿名型別：  
@@ -36,7 +36,7 @@ select new { First = student.FirstName, Last = student.LastName };
   
  如果您在上述範例中嘗試這樣做，則必須同時變更 `Console.WriteLine` 陳述式：  
   
-```  
+```csharp  
 Console.WriteLine(student.First + " " + student.Last);  
 ```  
   

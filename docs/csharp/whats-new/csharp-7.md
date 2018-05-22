@@ -1,20 +1,13 @@
 ---
 title: C# 7.0 的新功能 - C# 指南
 description: 取得 C# 語言未來版本 7 的新功能概觀。
-keywords: C#, .NET, .NET Core, 最新功能, 新功能
-author: BillWagner
-ms.author: wiwagn
 ms.date: 12/21/2016
-ms.topic: article
-ms.prod: .net
-ms.technology: devlang-csharp
-ms.devlang: csharp
 ms.assetid: fd41596d-d0c2-4816-b94d-c4d00a5d0243
-ms.openlocfilehash: 1951c60ee11d0d5c4856f5f92eee8ba690b11f8d
-ms.sourcegitcommit: 86adcc06e35390f13c1e372c36d2e044f1fc31ef
+ms.openlocfilehash: a78b30411d734d6dadc52b7dbd402763d4eb7f5e
+ms.sourcegitcommit: 88f251b08bf0718ce119f3d7302f514b74895038
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/26/2018
+ms.lasthandoff: 05/10/2018
 ---
 # <a name="whats-new-in-c-70"></a>C# 7.0 的新功能
 
@@ -91,7 +84,7 @@ C# 為類別和結構提供豐富的語法，可用來解釋您的設計目的�
 > Tuple 在 C# 7.0 之前即可使用，但效率不彰且沒有語言支援。
 > 這表示元組元素只能參考為 `Item1`及 `Item2` 等等。 C# 7.0 加入了 Tuple 的語言支援，讓 Tuple 欄位的語意名稱能使用全新且更具效率的 Tuple 型別。
 
-您可以指派每個成員到一個值，以建立 Tuple︰
+您可以為每個成員指派一個值，以建立 Tuple：
 
 [!code-csharp[UnnamedTuple](../../../samples/snippets/csharp/new-in-7/program.cs#04_UnnamedTuple "Unnamed tuple")]
 
@@ -136,7 +129,7 @@ C# 為類別和結構提供豐富的語法，可用來解釋您的設計目的�
 
 [!code-csharp[PointWithDeconstruction](../../../samples/snippets/csharp/new-in-7/point.cs#11_PointWithDeconstruction "Point with deconstruction method")]
  
-您可以藉由指派 Tuple 至 `Point` 來擷取個別的欄位：
+您可以藉由將 `Point` 指派給 Tuple 來擷取個別的欄位：
 
 [!code-csharp[DeconstructPoint](../../../samples/snippets/csharp/new-in-7/program.cs#12_DeconstructPoint "Deconstruct a point")]
 

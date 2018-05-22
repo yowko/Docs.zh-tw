@@ -1,10 +1,6 @@
 ---
-title: "實作以工作為基礎的非同步模式"
+title: 實作以工作為基礎的非同步模式
 ms.date: 06/14/2017
-ms.prod: .net
-ms.technology:
-- dotnet-clr
-ms.topic: article
 dev_langs:
 - csharp
 - vb
@@ -15,18 +11,13 @@ helpviewer_keywords:
 - Task-based Asynchronous Pattern, .NET Framework support for
 - .NET Framework, asynchronous design patterns
 ms.assetid: fab6bd41-91bd-44ad-86f9-d8319988aa78
-caps.latest.revision: 
 author: rpetrusha
 ms.author: ronpet
-manager: wpickett
-ms.workload:
-- dotnet
-- dotnetcore
-ms.openlocfilehash: 238f164fec78fe5e6dae9e7880fabc0a386bf399
-ms.sourcegitcommit: e7f04439d78909229506b56935a1105a4149ff3d
+ms.openlocfilehash: 0ed73e8d7279d5371c305e7bd29c08ac00f6a329
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 12/23/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="implementing-the-task-based-asynchronous-pattern"></a>實作以工作為基礎的非同步模式
 您可以採用三種方式實作工作式非同步模式 (TAP)：使用 Visual Studio 中的 C# 和 Visual Basic 編譯器、手動，或是透過編譯器和手動方法的組合。 下列章節詳細討論每一種方法。 您可以使用 TAP 方法實作計算繫結和 I/O 繫結的非同步作業。 [工作負載](#workloads)一節討論每種作業類型。
@@ -51,7 +42,7 @@ ms.lasthandoff: 12/23/2017
  這類委派的另一種實用情況是在您實作快速路徑最佳化，而且想要傳回快取工作之時。
 
 ## <a name="workloads"></a>工作負載
-您可以將計算繫結和 I/O 繫結的非同步作業都實作為 TAP 方法。 不過，當 TAP 方法從程式庫公開時，它們只應該提供給牽涉到 I/O 繫結操作 (它們可能也牽涉到計算，但不應該完全只有計算) 的工作負載。 如果是單純的計算繫結方法，則只可將它當做同步實作公開。 使用該方法的程式碼就可以選擇是否在工作中包裝該同步方法的引動過程，以便將工作卸載至另一個執行緒或實現平行處理。 而且，如果是 IO 繫結方法，則只可將它當做非同步實作公開。
+您可以將計算繫結和 I/O 繫結的非同步作業都實作為 TAP 方法。 不過，當 TAP 方法從程式庫公開時，它們只應該提供給牽涉到 I/O 繫結操作 (它們可能也牽涉到計算，但不應該完全只有計算) 的工作負載。 如果是單純的計算繫結方法，則只可將它當做同步實作公開。 使用該方法的程式碼就可以選擇是否在工作中包裝該同步方法的引動過程，以便將工作卸載至另一個執行緒或實現平行處理。 而且，如果是 I/O 繫結方法，則只可將它當作非同步實作公開。
 
 ### <a name="compute-bound-tasks"></a>計算繫結工作
 <xref:System.Threading.Tasks.Task?displayProperty=nameWithType> 類別非常適合代表耗用大量運算資源的作業。 根據預設，它會利用 <xref:System.Threading.ThreadPool> 類別內的特殊支援提供有效率的執行，而且它也提供對要於何時、何處、及如何執行非同步計算的重大控制。

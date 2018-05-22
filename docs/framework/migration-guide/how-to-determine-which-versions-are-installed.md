@@ -1,10 +1,6 @@
 ---
 title: 如何：判斷安裝的 .NET Framework 版本
-ms.date: 01/24/2018
-ms.prod: .net-framework
-ms.technology:
-- dotnet-clr
-ms.topic: article
+ms.date: 04/10/2018
 dev_langs:
 - csharp
 - vb
@@ -15,14 +11,11 @@ helpviewer_keywords:
 ms.assetid: 40a67826-e4df-4f59-a651-d9eb0fdc755d
 author: rpetrusha
 ms.author: ronpet
-manager: wpickett
-ms.workload:
-- dotnet
-ms.openlocfilehash: edf1e5a53f6f578f943cf8775a798b5681d2d9dd
-ms.sourcegitcommit: b750a8e3979749b214e7e10c82efb0a0524dfcb1
+ms.openlocfilehash: 3677ff7cc27847d56802206c793a574d61b1464c
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/09/2018
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="how-to-determine-which-net-framework-versions-are-installed"></a>如何：判斷安裝的 .NET Framework 版本
 
@@ -98,11 +91,12 @@ ms.lasthandoff: 04/09/2018
     |378675|隨 Windows 8.1 或 Windows Server 2012 R2 安裝的 .NET Framework 4.5.1|
     |378758|Windows 8、Windows 7 SP1 或 Windows Vista SP2 上安裝的 .NET Framework 4.5.1|
     |379893|.NET Framework 4.5.2|
-    |Windows 10 系統：393295<br /><br /> 所有其他作業系統版本：393297|[!INCLUDE[net_v46](../../../includes/net-v46-md.md)]|
-    |Windows 10 11 月更新系統：394254<br /><br /> 所有其他作業系統版本：394271|[!INCLUDE[net_v461](../../../includes/net-v461-md.md)]|
-    |Windows 10 年度更新版：394802<br /><br /> 所有其他作業系統版本：394806|[!INCLUDE[net_v462](../../../includes/net-v462-md.md)]| 
-    |Windows 10 Creators Update：460798<br/><br/> 所有其他作業系統版本：460805 | .NET Framework 4.7 |
-    |Windows 10 Fall Creators Update：461308<br/><br/> 所有其他作業系統版本：461310 | .NET Framework 4.7.1 |
+    |僅限 Windows 10 系統：393295<br /><br /> 所有其他作業系統版本：393297|[!INCLUDE[net_v46](../../../includes/net-v46-md.md)]|
+    |僅限 Windows 10 11 月更新系統：394254<br /><br /> 所有其他作業系統版本：394271|[!INCLUDE[net_v461](../../../includes/net-v461-md.md)]|
+    |僅限 Windows 10 年度更新版：394802<br /><br /> 所有其他作業系統版本：394806|[!INCLUDE[net_v462](../../../includes/net-v462-md.md)]| 
+    |僅限 Windows 10 Creators Update：460798<br/><br/> 所有其他作業系統版本：460805 | .NET Framework 4.7 |
+    |僅限 Windows 10 Fall Creators Update：461308<br/><br/> 所有其他作業系統版本：461310 | .NET Framework 4.7.1 |
+    |僅限 Windows 10 2018 4 月更新：461808<br/><br/> 所有其他作業系統版本：461814| .NET Framework 4.7.2 |
     
 <a name="net_c"></a> 
 ## <a name="to-find-net-framework-versions-by-querying-the-registry-in-code-net-framework-1-4"></a>藉由查詢程式碼中的登錄尋找 .NET Framework 版本 (.NET Framework 1-4)
@@ -153,7 +147,9 @@ ms.lasthandoff: 04/09/2018
     |所有其他 Windows 作業系統版本上安裝的 .NET Framework 4.7|460805|
     |.NET Framework 4.7.1 安裝於 Windows 10 Fall Creators Update|461308|
     |所有其他 Windows 作業系統版本上安裝的 .NET Framework 4.7.1|461310|
-
+    |Windows 10 2018 4 月更新上安裝的 .NET Framework 4.7.2|461808|
+    |所有其他 Windows 作業系統版本上安裝的 .NET Framework 4.7.2|461814|
+    
      下列範例會檢查登錄中的 `Release` 值，以判斷是否安裝 .NET Framework 的 [!INCLUDE[net_v45](../../../includes/net-v45-md.md)] 或更新版本。
 
      [!code-csharp[ListVersions#5](../../../samples/snippets/csharp/framework/migration-guide/versions-installed3.cs)]
@@ -186,7 +182,8 @@ ms.lasthandoff: 04/09/2018
     |[!INCLUDE[net_v462](../../../includes/net-v462-md.md)]|394802|
     |.NET Framework 4.7|460798|
     |.NET Framework 4.7.1|461308|
-    
+    |.NET Framework 4.7.2|461808|
+
 <a name="clr_a"></a> 
 ## <a name="to-find-the-current-runtime-version-by-using-the-clrver-tool"></a>使用 Clrver 工具尋找目前的執行階段版本
 

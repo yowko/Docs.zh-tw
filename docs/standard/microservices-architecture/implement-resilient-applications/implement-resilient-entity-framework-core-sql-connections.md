@@ -1,21 +1,14 @@
 ---
-title: "實作具有恢復功能的 Entity Framework Core SQL 連接"
-description: "容器化 .NET 應用程式的 .NET 微服務架構 | 實作具有恢復功能的 Entity Framework Core SQL 連接"
-keywords: "Docker, 微服務, ASP.NET, 容器"
+title: 實作具有恢復功能的 Entity Framework Core SQL 連接
+description: 容器化 .NET 應用程式的 .NET 微服務架構 | 實作具有恢復功能的 Entity Framework Core SQL 連接
 author: CESARDELATORRE
 ms.author: wiwagn
 ms.date: 05/26/2017
-ms.prod: .net-core
-ms.technology: dotnet-docker
-ms.topic: article
-ms.workload:
-- dotnet
-- dotnetcore
-ms.openlocfilehash: b37d2c5683aff44165d0330c8d42fc881effbb76
-ms.sourcegitcommit: e7f04439d78909229506b56935a1105a4149ff3d
+ms.openlocfilehash: 54d0df517514c359c155de35d34e1e0f56eed4eb
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 12/23/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="implementing-resilient-entity-framework-core-sql-connections"></a>實作具有恢復功能的 Entity Framework Core SQL 連接
 
@@ -91,7 +84,7 @@ public async Task<IActionResult> UpdateProduct([FromBody]CatalogItem
 
 ## <a name="additional-resources"></a>其他資源
 
--   **使用 Entity Framework 來恢復連接和攔截命令**
+-   **Connection Resiliency and Command Interception with the Entity Framework (使用 Entity Framework 來恢復連接和攔截命令)**
     [*https://docs.microsoft.com/azure/architecture/patterns/category/resiliency*](https://docs.microsoft.com/azure/architecture/patterns/category/resiliency)
 
 -   **Cesar de la Torre：Using Resilient Entity Framework Core Sql Connections and Transactions (使用具有恢復功能的 Entity Framework Core SQL 連接和異動)**

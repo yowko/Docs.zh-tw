@@ -1,20 +1,13 @@
 ---
-title: "使用 XML 註解記錄您的程式碼"
-description: "了解如何使用 XML 文件註解記錄您的程式碼，並在編譯時期產生 XML 文件檔案。"
-keywords: .NET, .NET Core
-author: BillWagner
-ms.author: wiwagn
+title: 使用 XML 註解記錄您的程式碼
+description: 了解如何使用 XML 文件註解記錄您的程式碼，並在編譯時期產生 XML 文件檔案。
 ms.date: 02/14/2017
-ms.topic: article
-ms.prod: .net
-ms.technology: devlang-csharp
-ms.devlang: csharp
 ms.assetid: 8e75e317-4a55-45f2-a866-e76124171838
-ms.openlocfilehash: 709ef2ba2202e69ba35834789ad6e743a0f6b719
-ms.sourcegitcommit: bd1ef61f4bb794b25383d3d72e71041a5ced172e
+ms.openlocfilehash: 1284f179c7debb323ea3bbd302df1f02bf8b31b1
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/18/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="documenting-your-code-with-xml-comments"></a>使用 XML 註解記錄您的程式碼
 
@@ -25,7 +18,7 @@ XML 文件註解是一種特殊類型的註解，新增於任何使用者定義�
 
 您可以執行下列其中一項動作，以在編譯時期產生 XML 檔案︰
 
-- 如果您正在從命令列使用 .NET Core 開發應用程式，則可以將 [DocumentationFile 項目](http://docs.microsoft.com/visualstudio/msbuild/common-msbuild-project-properties)新增至 .csproj 專案檔的 `<PropertyGroup>` 區段。 下列範例會使用相同的根檔案名稱的組件的專案目錄中產生 XML 檔案：
+- 如果您正在從命令列使用 .NET Core 開發應用程式，則可以將 [DocumentationFile 項目](http://docs.microsoft.com/visualstudio/msbuild/common-msbuild-project-properties)新增至 .csproj 專案檔的 `<PropertyGroup>` 區段。 下列範例會在根檔案名稱與組件相同的專案目錄中產生 XML 檔案：
 
    ```xml
    <DocumentationFile>bin\$(Configuration)\$(TargetFramework)\$(AssemblyName).xml</DocumentationFile>
@@ -222,7 +215,7 @@ Sandcastle 這類工具會支援 [`<event>`](http://ewsoftware.github.io/XMLComm
 * 編譯器會驗證 `<exception>`、`<include>`、`<param>`、`<see>`、`<seealso>` 和 `<typeparam>` 標記的語法。
 - 編譯器會驗證包含程式碼其他部分的檔案路徑和參考的參數。
 
-## <a name="see-also"></a>請參閱
+## <a name="see-also"></a>另請參閱
 [XML 文件註解 (C# 程式設計手冊)](programming-guide/xmldoc/xml-documentation-comments.md)
 
 [建議使用的文件註解標記 (C# 程式設計手冊)](programming-guide/xmldoc/recommended-tags-for-documentation-comments.md)

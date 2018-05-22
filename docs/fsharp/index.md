@@ -3,11 +3,11 @@ title: F# 指南
 description: '本指南提供各種學習材料 F #，功能性執行.net 程式語言的概觀。'
 author: jackfoxy
 ms.date: 03/19/2018
-ms.openlocfilehash: 393214a5da7445d8ee3dced844da8592f4ca6d31
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: cb829e904c006467e1470752b4fe8757ca694b05
+ms.sourcegitcommit: 895c7602386a6dfe7ca4facce3d965b27e5c6e87
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/04/2018
+ms.lasthandoff: 05/19/2018
 ---
 # <a name="f-guide"></a>F# 指南
 
@@ -49,6 +49,8 @@ F # 是關於在其核心的產能。 無所不在和進階功能的完整 F # �
 [開始使用 F # 和.NET 核心 CLI](get-started/get-started-command-line.md)如果您想要使用命令列工具。
 
 [開始使用 F # 和 Xamarin](https://docs.microsoft.com/xamarin/cross-platform/platform/fsharp/)行動 F # 的程式設計。
+
+[F # Azure 筆記本的](https://notebooks.azure.com/Microsoft/libraries/samples/html/FSharp%20for%20Azure%20Notebooks.ipynb)是了解 F # 中可用、 託管 Jupyter 筆記本教學課程。
 
 ## <a name="references"></a>參考
 

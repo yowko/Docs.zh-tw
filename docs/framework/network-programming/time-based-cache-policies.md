@@ -1,12 +1,6 @@
 ---
-title: "以時間為基礎的快取原則"
-ms.custom: 
+title: 以時間為基礎的快取原則
 ms.date: 03/30/2017
-ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.tgt_pltfrm: 
-ms.topic: article
 helpviewer_keywords:
 - time-based cache policies
 - cache synchronization date policy
@@ -23,19 +17,17 @@ helpviewer_keywords:
 - minimum freshness policy
 - age of cached resources
 ms.assetid: 74f0bcaf-5c95-40c1-9967-f3bbf1d2360a
-caps.latest.revision: "11"
 author: mcleblanc
 ms.author: markl
 manager: markl
-ms.workload: dotnet
-ms.openlocfilehash: f712f223ef5787e50ef6a0c26949ff99c13dee33
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
-ms.translationtype: MT
+ms.openlocfilehash: f25f04a144fa806297b018bf3548b8feb506f67d
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="time-based-cache-policies"></a>以時間為基礎的快取原則
-以時間為基礎的快取原則會使用擷取資源的時間、與資源一起傳回的標頭，以及目前時間，定義快取項目的有效期限。 設定以時間為基礎的快取原則時，您可以使用 <xref:System.Net.Cache.HttpRequestCacheLevel.Default> 時間基礎原則，或建立自訂的時間基礎原則。 為使用超文字傳輸通訊協定 (HTTP) 取得的資源，使用以時間為基礎的預設原則時，確切的快取行為是由快取回應中包含的標頭，以及 RFC 2616 的 13 與 14 一節中所指定的行為來，RFC 2616 可在 [http://www.ietf.org](http://www.ietf.org/) 取得。如需示範如何為 HTTP 資源設定以時間為基礎之預設原則的程式碼範例，請參閱[如何：為應用程式設定以時間為基礎的預設快取原則](../../../docs/framework/network-programming/how-to-set-the-default-time-based-cache-policy-for-an-application.md)。 如需示範如何建立和使用快取原則的程式碼範例，請參閱[設定網路應用程式的快取功能](../../../docs/framework/network-programming/configuring-caching-in-network-applications.md)。  
+以時間為基礎的快取原則會使用擷取資源的時間、與資源一起傳回的標頭，以及目前時間，定義快取項目的有效期限。 設定以時間為基礎的快取原則時，您可以使用 <xref:System.Net.Cache.HttpRequestCacheLevel.Default> 時間基礎原則，或建立自訂的時間基礎原則。 為使用超文字傳輸通訊協定 (HTTP) 取得的資源，使用以時間為基礎的預設原則時，確切的快取行為是由快取回應中包含的標頭，以及 RFC 2616 的 13 與 14 一節中所指定的行為來決定，RFC 2616 可在 [http://www.ietf.org](http://www.ietf.org/) 中取得。如需示範如何為 HTTP 資源設定以時間為基礎之預設原則的程式碼範例，請參閱[如何：為應用程式設定以時間為基礎的預設快取原則](../../../docs/framework/network-programming/how-to-set-the-default-time-based-cache-policy-for-an-application.md)。 如需示範如何建立和使用快取原則的程式碼範例，請參閱[設定網路應用程式的快取功能](../../../docs/framework/network-programming/configuring-caching-in-network-applications.md)。  
   
 ## <a name="criteria-to-determine-freshness-of-cached-entries"></a>判斷快取項目有效期限的準則  
  若要自訂以時間為基礎的快取原則，您可以指定要使用下列一或多個準則來判斷快取項目的有效期限：  

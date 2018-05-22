@@ -1,24 +1,17 @@
 ---
-title: "強類型委派"
-description: "了解如何在建立需要委派的功能時，使用泛型委派類型來宣告自訂類型。"
-keywords: .NET, .NET Core
-author: BillWagner
-ms.author: wiwagn
+title: 強類型委派
+description: 了解如何在建立需要委派的功能時，使用泛型委派類型來宣告自訂類型。
 ms.date: 06/20/2016
-ms.topic: article
-ms.prod: .net
-ms.technology: devlang-csharp
-ms.devlang: csharp
 ms.assetid: 564a683d-352b-4e57-8bac-b466529daf6b
-ms.openlocfilehash: 467ba18f8e032b9b3b8f480d4b10c92d0d7ba3b9
-ms.sourcegitcommit: bbde43da655ae7bea1977f7af7345eb87bd7fd5f
+ms.openlocfilehash: 2e4cc1c7bfa0aaa90f3aaefa0da64c5486a9d10f
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/21/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="strongly-typed-delegates"></a>強類型委派
 
-[上一個](delegate-class.md)
+[上一步](delegate-class.md)
 
 在前一篇文章中，您看到您使用 `delegate` 關鍵字來建立特定委派類型。 
 
@@ -39,7 +32,7 @@ public delegate void Action<in T1, in T2>(T1 arg1, T2 arg2);
 
 有關共變數的文章涵蓋泛型型別引數上的 `in` 修飾詞。
 
-有多種變化`Action`委派，其中包含最多 16 個引數，例如<xref:System.Action%6016>。
+最多包含 16 個引數的 `Action` 委派有多種變化，例如 <xref:System.Action%6016>。
 這些定義一定要為每個委派引數使用不同的泛型引數：這讓您擁有最大的彈性。 方法引數不需要但可以是相同的類型。
 
 針對任何具有 void 傳回型別的委派類型，使用其中一個 `Action` 類型。
@@ -55,12 +48,12 @@ public delegate TResult Func<in T1, in T2, out TResult>(T1 arg1, T2 arg2);
 
 有關共變數的文章涵蓋結果泛型型別引數上的 `out` 修飾詞。
 
-有多種變化`Func`這類最多 16 個輸入引數與委派<xref:System.Func%6017>。
+最多有 16 個輸入引數的 `Func` 委派有多種變化，例如 <xref:System.Func%6017>。
 依照慣例，結果的類型一律是所有 `Func` 宣告中的最後一個型別參數。
 
 針對任何傳回值的委派類型，使用其中一個 `Func` 類型。
 
-沒有也特殊<xref:System.Predicate%601>委派，會傳回單一值的測試類型：
+針對在單一值上傳回測試的委派，也有特殊的 <xref:System.Predicate%601> 類型：
 
 ```csharp
 public delegate bool Predicate<in T>(T obj);
@@ -82,4 +75,4 @@ Predicate<string> AnotherTestForString;
 
 在下一篇文章中，您將看到實際使用委派的數個常見模式。
 
-[下一個](delegates-patterns.md)
+[下一步](delegates-patterns.md)

@@ -8,11 +8,11 @@ helpviewer_keywords:
 ms.assetid: c693fd34-88fe-4d90-b332-19eeadf3b7e7
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: d62ae73c9a2789087785e1fba6b227245ee08a10
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: 1ecac9d30b390be886e9d81f11623070301f7d38
+ms.sourcegitcommit: 895c7602386a6dfe7ca4facce3d965b27e5c6e87
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/04/2018
+ms.lasthandoff: 05/19/2018
 ---
 # <a name="get-started-with-the-net-framework"></a>.NET Framework 使用者入門
 
@@ -70,7 +70,7 @@ ms.lasthandoff: 05/04/2018
 
 2. 選取您要用來開發應用程式且 .NET Framework 也支援的語言。 有多種語言可供選擇，包括 Microsoft 的 [Visual Basic](../../visual-basic/index.md)、[C#](../../csharp/index.md)、[F#](../../fsharp/index.md) 和 C++/CLI。 (可讓您開發 .NET Framework 應用程式的程式設計語言會遵循[通用語言基礎結構 (CLI) 規格](http://go.microsoft.com/fwlink/?LinkId=199862))。
 
-3. 選取並安裝要用來建立應用程式，且支援所選程式設計語言的開發環境。 適用於 .NET Framework 應用程式的 Microsoft 整合式開發環境 (IDE) 為 [Visual Studio](http://go.microsoft.com/fwlink/?LinkId=325532)。 並有多個版本可供使用。
+3. 選取並安裝要用來建立應用程式，且支援所選程式設計語言的開發環境。 適用於 .NET Framework 應用程式的 Microsoft 整合式開發環境 (IDE) 為 [Visual Studio](https://www.visualstudio.com/downloads/?utm_medium=microsoft&utm_source=docs.microsoft.com&utm_campaign=button+cta&utm_content=download+vs2017)。 並有多個版本可供使用。
 
 如需開發以 .NET Framework 為目標之應用程式的詳細資訊，請參閱[開發指南](../../../docs/framework/development-guide.md)。
 

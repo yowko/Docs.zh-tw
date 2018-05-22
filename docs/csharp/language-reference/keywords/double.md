@@ -1,24 +1,17 @@
 ---
-title: "double (C# 參考)"
+title: double (C# 參考)
 ms.date: 07/20/2015
-ms.prod: .net
-ms.technology:
-- devlang-csharp
-ms.topic: article
 f1_keywords:
 - double
 - double_CSharpKeyword
 helpviewer_keywords:
 - double data type [C#]
 ms.assetid: 0980e11b-6004-4102-abcf-cfc280fc6991
-caps.latest.revision: 
-author: BillWagner
-ms.author: wiwagn
-ms.openlocfilehash: 232dd97e152f943137604074f24b5de779168e59
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.openlocfilehash: 3683b51dfd0ef653ab8bfff6705b96a37e21a10a
+ms.sourcegitcommit: 89c93d05c2281b4c834f48f6c8df1047e1410980
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 05/15/2018
 ---
 # <a name="double-c-reference"></a>double (C# 參考)
 `double` 關鍵字表示儲存 64 位元浮點值的簡單類型。 下表顯示 `double` 類型的精確度和大概範圍。  
@@ -30,7 +23,7 @@ ms.lasthandoff: 11/21/2017
 ## <a name="literals"></a>常值  
  根據預設，指派運算子右邊的實數常值會視為 `double`。 不過，如果您希望整數被視為 `double`，請使用後置字元 d 或 D，例如︰  
   
-```  
+```csharp  
 double x = 3D;  
 ```  
   
@@ -61,7 +54,7 @@ double x = 3D;
 ## <a name="c-language-specification"></a>C# 語言規格  
  [!INCLUDE[CSharplangspec](~/includes/csharplangspec-md.md)]  
   
-## <a name="see-also"></a>另請參閱  
+## <a name="see-also"></a>請參閱  
  [C# 參考](../../../csharp/language-reference/index.md)  
  [C# 程式設計指南](../../../csharp/programming-guide/index.md)  
  [C# 關鍵字](../../../csharp/language-reference/keywords/index.md)  

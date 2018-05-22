@@ -1,13 +1,7 @@
 ---
-title: "如何：以前置字元零來填補數字"
-ms.custom: 
+title: 如何：以前置字元零來填補數字
 ms.date: 03/30/2017
-ms.prod: .net
-ms.reviewer: 
-ms.suite: 
 ms.technology: dotnet-standard
-ms.tgt_pltfrm: 
-ms.topic: article
 dev_langs:
 - csharp
 - vb
@@ -17,18 +11,13 @@ helpviewer_keywords:
 - number formatting [.NET Framework]
 - numbers [.NET Framework], format strings
 ms.assetid: 0b2c2cb5-c580-4891-8d81-cb632f5ec384
-caps.latest.revision: 
 author: rpetrusha
 ms.author: ronpet
-manager: wpickett
-ms.workload:
-- dotnet
-- dotnetcore
-ms.openlocfilehash: 7ea854f69e59c614d03f10ff546bd3181f5b51ff
-ms.sourcegitcommit: e7f04439d78909229506b56935a1105a4149ff3d
+ms.openlocfilehash: 8ce3b59db027ffebf616a035b018629cb7aed30c
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 12/23/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="how-to-pad-a-number-with-leading-zeros"></a>如何：以前置字元零來填補數字
 如果整數要加上前置零，您可以使用具有精確度規範的 "D" [標準數值格式字串](../../../docs/standard/base-types/standard-numeric-format-strings.md)。 如果整數和浮點數都要加上前置零，您可以使用[自訂數值格式字串](../../../docs/standard/base-types/custom-numeric-format-strings.md)。 此主題示範如何使用這兩種方法，以前置零填補數值。  
@@ -39,9 +28,9 @@ ms.lasthandoff: 12/23/2017
   
 2.  決定要將整數顯示為十進位值或十六進位值。  
   
-    -   若要將整數顯示為十進位值，呼叫它的 `ToString(String)` 方法，然後傳遞字串 "D*n*" 作為 `format` 參數的值，其中 *n* 代表字串的最小長度。  
+    -   若要將整數顯示為十進位值，請呼叫其 `ToString(String)` 方法，然後傳遞字串 "D*n*" 以作為 `format` 參數的值，其中 *n* 代表字串的長度下限。  
   
-    -   若要將整數顯示為十六進位值，呼叫它的 `ToString(String)` 方法，然後傳遞字串 "X*n*" 作為 `format` 參數的值，其中 *n* 代表字串的最小長度。  
+    -   若要將整數顯示為十六進位值，請呼叫其 `ToString(String)` 方法，然後傳遞字串 "X*n*" 以作為 `format` 參數的值，其中 *n* 代表字串的長度下限。  
   
      您也可以在使用[複合格式](../../../docs/standard/base-types/composite-formatting.md)的方法 (例如 <xref:System.String.Format%2A> 或 <xref:System.Console.WriteLine%2A>) 中使用格式字串。  
   
@@ -60,7 +49,7 @@ ms.lasthandoff: 12/23/2017
   
 4.  將您想要包含在格式化字串中的前置零個數，加入至未填補之數值字串的長度。 這會定義填補字串的總長度。  
   
-5.  呼叫整數值的 `ToString(String)` 方法，然後為十進位字串傳遞字串 "D*n*"，以及為十六進位字串傳遞 "X*n*"，其中 *n* 代表填補字串的總長度。 您也可以在支援複合格式的方法中，使用 "D*n*" 或 "X*n*" 格式字串。  
+5.  呼叫整數值的 `ToString(String)` 方法，針對十進位字串，請傳遞字串 "D*n*"，針對十六進位字串，請傳遞 "X*n*"，其中 *n* 代表填補字串的總長度。 您也可以在支援複合格式的方法中，使用 "D*n*" 或 "X*n*" 格式字串。  
   
  下列範例會以五個前置零填補整數值。  
   

@@ -3,11 +3,11 @@ title: 委派的一般模式
 description: 了解在程式碼中使用委派，以避免元件之間強式結合的一般模式。
 ms.date: 06/20/2016
 ms.assetid: 0ff8fdfd-6a11-4327-b061-0f2526f35b43
-ms.openlocfilehash: fceab2b9c6bbd1d687566820366459ec57ae7a2d
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: b9762841656aa362589d01ed011407aeedfe4a20
+ms.sourcegitcommit: 22c3c8f74eaa138dbbbb02eb7d720fce87fc30a9
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/04/2018
+ms.lasthandoff: 05/17/2018
 ---
 # <a name="common-patterns-for-delegates"></a>委派的一般模式
 
@@ -27,7 +27,7 @@ var smallNumbers = numbers.Where(n => n < 10);
 Where 方法的原型是︰
 
 ```csharp
-public static IEnumerable<TSource> Where<in TSource> (IEnumerable<TSource> source, Func<TSource, bool> predicate);
+public static IEnumerable<TSource> Where<TSource> (this IEnumerable<TSource> source, Func<TSource, bool> predicate);
 ```
 
 這個範例會重複使用為 LINQ 一部分的所有方法。 它們全都依賴管理特定查詢之程式碼的委派。 此 API 設計模式是一種要學習和了解之功能強大的模式。

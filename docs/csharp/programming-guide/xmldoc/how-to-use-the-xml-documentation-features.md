@@ -1,21 +1,15 @@
 ---
-title: "如何：使用 XML 文件功能 (C# 程式設計手冊)"
+title: 如何：使用 XML 文件功能 (C# 程式設計手冊)
 ms.date: 07/20/2015
-ms.prod: .net
-ms.technology: devlang-csharp
-ms.topic: article
 helpviewer_keywords:
 - XML documentation [C#]
 - C# language, XML documentation features
 ms.assetid: 8f33917b-9577-4c9a-818a-640dbbb0b399
-caps.latest.revision: "19"
-author: BillWagner
-ms.author: wiwagn
-ms.openlocfilehash: eb647a275a5cd5fac2316706591440d9792861b3
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.openlocfilehash: 6c7e30d23868959145e8941057f1c633fe6e374e
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="how-to-use-the-xml-documentation-features-c-programming-guide"></a>如何：使用 XML 文件功能 (C# 程式設計手冊)
 下列範例提供已記載之類型的基本概觀。  
@@ -34,7 +28,7 @@ ms.lasthandoff: 11/21/2017
  **\<summary>**  
  **類別層級摘要文件在此處出現。\</summary>**  
  **\<remarks>**  
- **較長的註解可以是類型或成員相關聯**  
+ **可以將較長的註解經由備註標記**  
  **和類型或成員產生關聯\</remarks>**  
  **\</member>**  
  **\<member name="F:SomeClass.m_Name">**  
@@ -42,14 +36,14 @@ ms.lasthandoff: 11/21/2017
  **Name 屬性的存放區\</summary>**  
  **\</member>**  
  **\<member name="M:SomeClass.#ctor">**  
- **\<摘要 > 的類別建構函式。\<摘要/>**  
+ **\<summary>類別建構函式。\</summary>**  
  **\</member>**  
  **\<member name="M:SomeClass.SomeMethod(System.String)">**  
  **\<summary>**  
  **SomeMethod 的描述。\</summary>**  
  **\<param name="s"> s 的參數描述在此處出現\</param>**  
  **\<seealso cref="T:System.String">**  
- **您也可以任何標記上使用的 cref 屬性，參考類型或成員**  
+ **您可以使用任何標記上的 cref 屬性來參考類型或成員**  
  **而編譯器會檢查這個參考是否存在。\</seealso>**  
  **\</member>**  
  **\<member name="M:SomeClass.SomeOtherMethod">**  
@@ -97,7 +91,7 @@ ms.lasthandoff: 11/21/2017
         > [!NOTE]
         >  XML 檔案不會提供類型和成員的完整資訊 (例如，它不會包含任何類型資訊)。 若要取得類型或成員的完整資訊，文件檔案在使用時必須能夠反映實際類型或成員。  
   
-## <a name="see-also"></a>另請參閱  
+## <a name="see-also"></a>請參閱  
  [C# 程式設計指南](../../../csharp/programming-guide/index.md)  
- [/doc （C# 編譯器選項）](../../../csharp/language-reference/compiler-options/doc-compiler-option.md)  
+ [/doc (C# 編譯器選項)](../../../csharp/language-reference/compiler-options/doc-compiler-option.md)  
  [XML 文件註解](../../../csharp/programming-guide/xmldoc/xml-documentation-comments.md)

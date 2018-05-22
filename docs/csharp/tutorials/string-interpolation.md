@@ -1,125 +1,113 @@
 ---
-title: 字串插補 - C#
-description: 了解字串插補在 C# 6 中如何運作
-keywords: .NET, .NET Core, C#, 字串
-author: mgroves
-ms.author: wiwagn
-ms.date: 03/06/2017
-ms.topic: article
-ms.prod: .net
-ms.technology: devlang-csharp
-ms.devlang: csharp
-ms.assetid: f8806f6b-3ac7-4ee6-9b3e-c524d5301ae9
-ms.openlocfilehash: a9578d006861b987871071961437345c378a5b58
-ms.sourcegitcommit: 935d5267c44f9bce801468ef95f44572f1417e8c
+title: C# 中的字串插補
+description: 了解如何使用字串插補，在 C# 的結果字串中包含已格式化的運算式結果。
+author: pkulikov
+ms.date: 05/09/2018
+ms.openlocfilehash: 447e87cd4aae49896f0efbb8ece6097181079266
+ms.sourcegitcommit: ff1d40507b3eb6e2185478e37c66c66be6de46f1
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 03/28/2018
+ms.lasthandoff: 05/11/2018
 ---
-# <a name="string-interpolation-in-c"></a>C# 中的字串插值 #
+# <a name="string-interpolation-in-c"></a>C# 中的字串插補 #
 
-「字串插補」是以字串變數的值取代字串中預留位置的方式。 在 C# 6 之前，是透過 <xref:System.String.Format%2A?displayProperty=nameWithType> 來執行這項操作。 這個運作方式還行，但由於它使用已編號的預留位置，因此更難以閱讀也更冗長。
+本教學課程會示範如何使用[字串插補](../language-reference/tokens/interpolated.md)進行格式化，並將運算式結果包含在結果字串中。 這些範例假設您熟悉 C# 基本概念和 .NET 類型格式設定。 如果您不熟悉字串插補或 .NET 類型格式設定，請先參閱[互動式字串插補快速入門](../quick-starts/interpolated-strings.yml)。 如需在 .NET 中格式化類型的詳細資訊，請參閱[在 .NET 中格式化類型](../../standard/base-types/formatting-types.md)主題。
 
-其他程式設計語言已經在語言中內建字串插補有一段時間。 例如，在 PHP 中：
+[!INCLUDE[interactive-note](~/includes/csharp-interactive-note.md)]
 
-```php
-$name = "Jonas";
-echo "My name is $name.";
-// This will output "My name is Jonas."
-```
+## <a name="introduction"></a>簡介
 
-在 C# 6 中，我們終於也有該樣式的字串插補。 您可以在字串前使用 `$` 來指出它應該以變數/運算式來替代其值。
+[字串插補](../language-reference/tokens/interpolated.md)功能是以[複合格式](../../standard/base-types/composite-formatting.md)功能為基礎建置而成，可提供更容易理解且方便的語法，在結果字串中包含已格式化的運算式結果。
 
-## <a name="prerequisites"></a>必要條件
-您將必須設定電腦以執行 .NET Core。 您可以在 [.NET Core (英文)](https://www.microsoft.com/net/core) 頁面找到安裝指示。
-您可以在 Windows、Ubuntu Linux、macOS 或是 Docker 容器中執行此應用程式。 您將必須安裝慣用的程式碼編輯器。 以下說明使用 [Visual Studio Code (英文)](https://code.visualstudio.com/)，這是開放原始碼的跨平台編輯器。 不過，您可以使用您熟悉的任何工具。
+若要將字串常值識別為插入字串，請在其前面加上 `$` 符號。 您可以內嵌任何有效的 C# 運算式，以在插入字串中傳回值。 在下列範例中，只要評估運算式，其結果即會轉換成字串，並包含在結果字串中：
 
-## <a name="create-the-application"></a>建立應用程式
+[!code-csharp-interactive[string interpolation example](~/samples/snippets/csharp/tutorials/string-interpolation/Program.cs#1)]
 
-現在您已安裝完所有工具，請建立新的 .NET Core 應用程式。 若要使用命令列產生器，請為您的專案建立一個目錄 (例如 `interpolated`)，然後在您慣用的殼層中執行下列命令︰
+如範例所示，藉由用括號括住運算式，即可在插入字串中包含運算式：
 
 ```
-dotnet new console
+{<interpolatedExpression>}
 ```
 
-此命令會建立一個含有 *interpolated.csproj* 專案檔和 *Program.cs* 原始程式碼檔的準 .NET Core 專案。 您將必須執行 `dotnet restore` 以還原編譯此專案所需的相依性。
+在編譯時期，插入字串通常會轉換成 <xref:System.String.Format%2A?displayProperty=nameWithType> 方法呼叫。 這也可讓[字串複合格式](../../standard/base-types/composite-formatting.md)功能的所有功能供您與插入字串一起使用。
 
-[!INCLUDE[DotNet Restore Note](~/includes/dotnet-restore-note.md)]
+## <a name="how-to-specify-a-format-string-for-an-interpolated-expression"></a>如何指定插入運算式的格式字串
 
-若要執行這個程式，請使用 `dotnet run`。 您應該會在主控台看到 "Hello, World" 輸出。
-
-
-
-## <a name="intro-to-string-interpolation"></a>字串插補簡介
-
-使用 <xref:System.String.Format%2A?displayProperty=nameWithType> 時，您需要指定要由字串後的引數所取代字串中的「預留位置」。 若是執行個體：
-
-[!code-csharp[String.Format example](../../../samples/snippets/csharp/new-in-6/string-interpolation.cs#StringFormatExample)]  
-
-此範例將會輸出 "My name is Matt Groves"。
-
-在 C# 6 中，您將不使用 `String.Format`，而是藉由在插補字串前加上 `$` 符號，然後直接在該字串中使用變數，來定義插捕字串。 若是執行個體：
-
-[!code-csharp[Interpolation example](../../../samples/snippets/csharp/new-in-6/string-interpolation.cs#InterpolationExample)]  
-
-您不必只使用變數。 您可以在括弧內使用任何運算式。 若是執行個體：
-
-[!code-csharp[Interpolation expression example](../../../samples/snippets/csharp/new-in-6/string-interpolation.cs#InterpolationExpressionExample)]  
-
-這會輸出：
+在插入運算式後面接著冒號 (":") 和格式字串，即可指定運算式結果類型所支援的格式字串：
 
 ```
-This is line number 1
-This is line number 2
-This is line number 3
-This is line number 4
-This is line number 5
+{<interpolatedExpression>:<formatString>}
 ```
 
-## <a name="how-string-interpolation-works"></a>字串插補如何運作
+下列範例會示範如何針對產生日期與時間或數值結果的運算式，指定標準和自訂的格式字串：
 
-在幕後，編譯器會將這個字串插補語法轉譯為 `String.Format`。 因此，您可以執行[之前對 `String.Format` 所進行的相同類型操作](../../standard/base-types/formatting-types.md)。
+[!code-csharp-interactive[format string example](~/samples/snippets/csharp/tutorials/string-interpolation/Program.cs#2)]
 
-例如，您可以新增填補和設定數字格式：
+如需詳細資訊，請參閱[複合格式](../../standard/base-types/composite-formatting.md)主題的[格式字串元件](../../standard/base-types/composite-formatting.md#format-string-component)一節。 該節中提供了一些主題連結，以描述 .NET 基底類型所支援的標準和自訂格式字串。
 
-[!code-csharp[Interpolation formatting example](../../../samples/snippets/csharp/new-in-6/string-interpolation.cs#InterpolationFormattingExample)]  
+## <a name="how-to-control-the-field-width-and-alignment-of-the-formatted-interpolated-expression"></a>如何控制已格式化之插入運算式的欄位寬度和對齊
 
-上述範例會產生類似以下的輸出：
+在插入運算式後面接著逗號 (",") 和常數運算式，即可指定已格式化之運算式結果的最小欄位寬度和對齊：
 
 ```
-998        5,177.67
-999        6,719.30
-1000       9,910.61
-1001       529.34
-1002       1,349.86
-1003       2,660.82
-1004       6,227.77
+{<interpolatedExpression>,<alignment>}
 ```
 
-如果找不到變數名稱，則會產生編譯階段錯誤。
+如果 *alignment* 值是正數，已格式化的運算式結果為靠右對齊；如果是負數，則是靠左對齊。
 
-若是執行個體：
+如果您需要指定對齊和格式字串，請從對齊元件開始：
 
-```csharp
-var animal = "fox";
-var localizeMe = $"The {adj} brown {animal} jumped over the lazy {otheranimal}";
-var adj = "quick";
-Console.WriteLine(localizeMe);
+```
+{<interpolatedExpression>,<alignment>:<formatString>}
 ```
 
-如果您編譯它，則會收到錯誤：
- 
-* `Cannot use local variable 'adj' before it is declared` - 在插補字串「之後」才宣告 `adj` 變數。
-* `The name 'otheranimal' does not exist in the current context` - 從未宣告名為 `otheranimal` 的變數
+下列範例會示範如何指定對齊，並使用管道字元 ("|") 來分隔文字欄位：
 
-## <a name="localization-and-internationalization"></a>當地語系化和國際化
+[!code-csharp-interactive[alignment example](~/samples/snippets/csharp/tutorials/string-interpolation/Program.cs#3)]
 
-插補字串支援 <xref:System.IFormattable?displayProperty=nameWithType> 和 <xref:System.FormattableString?displayProperty=nameWithType>，這對國際化相當有用。
+如範例輸出所示，如果已格式化的運算式結果長度超過指定的欄位寬度，則會忽略 *alignment* 值。
 
-插補字串預設會使用目前的文化特性 (Culture)。 若要使用不同的文化特性，請將字串插值轉換為 `IFormattable`。 若是執行個體：
+如需詳細資訊，請參閱[複合格式](../../standard/base-types/composite-formatting.md)主題的[對齊元件](../../standard/base-types/composite-formatting.md#alignment-component)一節。
 
-[!code-csharp[Interpolation internationalization example](../../../samples/snippets/csharp/new-in-6/string-interpolation.cs#InterpolationInternationalizationExample)]  
+## <a name="how-to-use-escape-sequences-in-an-interpolated-string"></a>如何在插入字串中使用逸出序列
 
-## <a name="conclusion"></a>結論 
+插入字串支援可用於一般字串常值中所有逸出序列。 如需詳細資訊，請參閱[字串逸出序列](../programming-guide/strings/index.md#string-escape-sequences)。
 
-在本教學課程中，您已了解如何使用 C# 6 的字串插補功能。 它基本上是一個撰寫簡單 `String.Format` 陳述式的更簡潔方式，但針對較進階的用法有一些注意事項。 如需詳細資訊，請參閱[字串內插補點](../../csharp//language-reference/tokens/interpolated.md)主題。
+若要逐字解譯逸出序列，請使用[逐字](../language-reference/tokens/verbatim.md)字串常值。 逐字插入字串以 `$` 字元為開頭，後面接著 `@` 字元。
+
+若要在結果字串中包含大括號 "{" 或 "}"，請使用兩個大括號 "{{" 或 "}}"。 如需詳細資訊，請參閱[複合格式](../../standard/base-types/composite-formatting.md)主題的[逸出大括號](../../standard/base-types/composite-formatting.md#escaping-braces)一節。
+
+下列範例會示範如何在結果字串中包含大括號，並建構逐字插入字串：
+
+[!code-csharp-interactive[escape sequence example](~/samples/snippets/csharp/tutorials/string-interpolation/Program.cs#4)]
+
+## <a name="how-to-use-a-ternary-conditional-operator--in-an-interpolated-expression"></a>如何在插入運算式中使用三元條件運算子 `?:`
+
+因為冒號 (":") 在插入運算式的項目中具有特殊意義，為了在運算式中使用[條件運算子](../language-reference/operators/conditional-operator.md)，請用括號括住運算式，如下列範例所示：
+
+[!code-csharp-interactive[conditional operator example](~/samples/snippets/csharp/tutorials/string-interpolation/Program.cs#5)]
+
+## <a name="how-to-create-a-culture-specific-result-string-with-string-interpolation"></a>如何使用字串插補建立文化特性特有的結果字串
+
+根據預設，插入字串會使用 <xref:System.Globalization.CultureInfo.CurrentCulture?displayProperty=nameWithType> 屬性針對所有格式設定作業所定義的目前文化特性。 請使用插入字串到 <xref:System.FormattableString?displayProperty=nameWithType> 執行個體的隱含轉換，並呼叫其 <xref:System.FormattableString.ToString(System.IFormatProvider)> 方法來建立文化特性特有的結果字串。 下列範例顯示如何執行該項工作：
+
+[!code-csharp-interactive[specify different cultures](~/samples/snippets/csharp/tutorials/string-interpolation/Program.cs#6)]
+
+如範例所示，您可以使用一個 <xref:System.FormattableString> 執行個體，針對各種文化特性產生多個結果字串。
+
+## <a name="how-to-create-a-result-string-using-the-invariant-culture"></a>如何建立使用不因文化特性而異的結果字串
+
+除了 <xref:System.FormattableString.ToString(System.IFormatProvider)?displayProperty=nameWithType> 方法之外，您還可以使用靜態 <xref:System.FormattableString.Invariant%2A?displayProperty=nameWithType> 方法將插入字串解析為 <xref:System.Globalization.CultureInfo.InvariantCulture> 的結果字串。 下列範例顯示如何執行該項工作：
+
+[!code-csharp-interactive[format with invariant culture](~/samples/snippets/csharp/tutorials/string-interpolation/Program.cs#7)]
+
+## <a name="conclusion"></a>結論
+
+本教學課程描述了使用字串插補的常見案例。 如需字串插補的詳細資訊，請參閱[字串插補](../language-reference/tokens/interpolated.md)主題。 如需在 .NET 中格式化類型的詳細資訊，請參閱[在 .NET 中格式化類型](../../standard/base-types/formatting-types.md)和[複合格式](../../standard/base-types/composite-formatting.md)主題。
+
+## <a name="see-also"></a>另請參閱
+
+<xref:System.String.Format%2A?displayProperty=nameWithType>  
+<xref:System.FormattableString?displayProperty=nameWithType>  
+<xref:System.IFormattable?displayProperty=nameWithType>  
+[字串](../programming-guide/strings/index.md)  

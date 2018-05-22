@@ -1,21 +1,14 @@
 ---
-title: "使用作為容器執行的資料庫伺服器"
-description: "容器化 .NET 應用程式的 .NET 微服務架構 | 使用作為容器執行的資料庫伺服器"
-keywords: "Docker, 微服務, ASP.NET, 容器"
+title: 使用作為容器執行的資料庫伺服器
+description: 容器化 .NET 應用程式的 .NET 微服務架構 | 使用作為容器執行的資料庫伺服器
 author: CESARDELATORRE
 ms.author: wiwagn
 ms.date: 10/30/2017
-ms.prod: .net-core
-ms.technology: dotnet-docker
-ms.topic: article
-ms.workload:
-- dotnet
-- dotnetcore
-ms.openlocfilehash: 70dd3686519fc38ae35910284948ccf95e743ef7
-ms.sourcegitcommit: e7f04439d78909229506b56935a1105a4149ff3d
+ms.openlocfilehash: 8ff6afbe9618df918e0a965fa1202bbb999eee5c
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 12/23/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="using-a-database-server-running-as-a-container"></a>使用作為容器執行的資料庫伺服器
 
@@ -57,7 +50,7 @@ eShopOnContainers 應用程式會在啟動時，將範例資料與資料一起�
 -   **在 Linux、Mac 或 Windows 上執行 SQL Server Docker 映像**
     [*https://docs.microsoft.com/sql/linux/sql-server-linux-setup-docker*](https://docs.microsoft.com/sql/linux/sql-server-linux-setup-docker)
 
--   **在 Linux 上使用 sqlcmd 連線與查詢 SQL Server**
+-   **使用 sqlcmd 連線及查詢 Linux 上的 SQL Server**
     [*https://docs.microsoft.com/sql/linux/sql-server-linux-connect-and-query-sqlcmd*](https://docs.microsoft.com/sql/linux/sql-server-linux-connect-and-query-sqlcmd)
 
 ### <a name="seeding-with-test-data-on-web-application-startup"></a>在 Web 應用程式啟動時植入測試資料

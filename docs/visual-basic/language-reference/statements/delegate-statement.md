@@ -7,11 +7,11 @@ helpviewer_keywords:
 - delegate keyword [Visual Basic]
 - Delegate statement [Visual Basic]
 ms.assetid: f799c518-0817-40cc-ad0b-4da846fdba57
-ms.openlocfilehash: fb9d8b2c2647ba8fd3b7cee4781f1574b6679b0f
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: 3965dc2d71ec9356cdb38d5ddcd4e00f9259951a
+ms.sourcegitcommit: 22c3c8f74eaa138dbbbb02eb7d720fce87fc30a9
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/04/2018
+ms.lasthandoff: 05/17/2018
 ---
 # <a name="delegate-statement"></a>Delegate 陳述式
 用來宣告委派。 委派是參考類型，這是指`Shared`方法的型別或物件的執行個體方法。 任何具有相符的參數和傳回型別程序可以用來建立這個委派類別的執行個體。 此程序可然後稍後會透過叫用委派執行個體。  
@@ -28,7 +28,7 @@ ms.lasthandoff: 05/04/2018
 |詞彙|定義|  
 |---|---|  
 |`attrlist`|選擇性。 這個委派所套用的屬性清單。 以逗號分隔多個屬性。 您必須將[屬性清單](../../../visual-basic/language-reference/statements/attribute-list.md)在角括號 ("`<`"和"`>`")。|  
-|`accessmodifier`|選擇性。 指定哪些程式碼可以存取的委派。 可以是下列其中一項：<br /><br /> -   [公用](../../../visual-basic/language-reference/modifiers/public.md)。 任何可以存取宣告的委派之項目的程式碼可以存取它。<br />-   [受保護的](../../../visual-basic/language-reference/modifiers/protected.md)。 只有在委派的類別或衍生的類別中的程式碼可以存取它。<br />-   [Friend](../../../visual-basic/language-reference/modifiers/friend.md)。 相同的組件中的程式碼可以存取的委派。<br />-   [私用](../../../visual-basic/language-reference/modifiers/private.md)。 宣告委派的項目內的程式碼可以存取它。<br /><br /> 您可以指定`Protected Friend`來啟用從委派類別，衍生的類別或相同組件內的程式碼存取。|  
+|`accessmodifier`|選擇性。 指定哪些程式碼可以存取的委派。 可以是下列其中一項：<br /><br /> - [公用](../../../visual-basic/language-reference/modifiers/public.md)。 任何可以存取宣告的委派之項目的程式碼可以存取它。<br />-   [受保護的](../../../visual-basic/language-reference/modifiers/protected.md)。 只有在委派的類別或衍生的類別中的程式碼可以存取它。<br />-   [Friend](../../../visual-basic/language-reference/modifiers/friend.md)。 相同的組件中的程式碼可以存取的委派。<br />- [私用](../../../visual-basic/language-reference/modifiers/private.md)。 宣告委派的項目內的程式碼可以存取它。<br /><br /> - [Protected Friend](../../language-reference/modifiers/protected-friend.md)只有委派類別，衍生的類別或相同組件內的程式碼可以存取的委派。 <br />- [私用受保護](../../language-reference/modifiers/private-protected.md)只有內委派的類別或衍生類別中相同的組件中的程式碼可以存取的委派。 |  
 |`Shadows`|選擇性。 表示此委派會重新宣告並隱藏相同具名的程式設計項目或基底類別中的多載項目集。 您可以使用任何其他類型遮蔽任何一種已宣告的項目。<br /><br /> 無法從遮蔽項目的衍生類別內使用遮蔽的項目，除了從無法存取遮蔽項目的位置以外。 例如，如果`Private`項目會遮蔽基底類別項目，並沒有存取權限的程式碼`Private`元素改為存取基底類別項目。|  
 |`Sub`|選擇性，但請`Sub`或`Function`必須出現。 將此程序的委派宣告`Sub`沒有傳回值的程序。|  
 |`Function`|選擇性，但請`Sub`或`Function`必須出現。 將此程序的委派宣告`Function`傳回值的程序。|  

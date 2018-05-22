@@ -1,16 +1,16 @@
 ---
 title: Const 陳述式 (Visual Basic)
-ms.date: 07/20/2015
+ms.date: 05/12/2018
 f1_keywords:
 - vb.Const
 helpviewer_keywords:
 - Const statement [Visual Basic]
 ms.assetid: 495b318d-b7c5-4198-94f8-0790a541b07a
-ms.openlocfilehash: bb4c524fa5c29efbcbe485fb5e86c8cf0fa432e8
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: a5842e284eaa858e7a66160060123edc21858a3a
+ms.sourcegitcommit: 22c3c8f74eaa138dbbbb02eb7d720fce87fc30a9
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/04/2018
+ms.lasthandoff: 05/17/2018
 ---
 # <a name="const-statement-visual-basic"></a>Const 陳述式 (Visual Basic)
 宣告並定義一或多個常數。  
@@ -27,7 +27,7 @@ Const constantlist
  選擇性。 此陳述式中宣告的屬性套用至所有常數清單。 請參閱[屬性清單](../../../visual-basic/language-reference/statements/attribute-list.md)在角括號 ("`<`"和"`>`")。  
   
  `accessmodifier`  
- 選擇性。 使用此選項來指定哪些程式碼可以存取這些常數。 可以是[公用](../../../visual-basic/language-reference/modifiers/public.md)，[保護](../../../visual-basic/language-reference/modifiers/protected.md)， [Friend](../../../visual-basic/language-reference/modifiers/friend.md)， `Protected Friend`，或[私人](../../../visual-basic/language-reference/modifiers/private.md)。  
+ 選擇性。 使用此選項來指定哪些程式碼可以存取這些常數。 可以是[公用](../../../visual-basic/language-reference/modifiers/public.md)，[保護](../../../visual-basic/language-reference/modifiers/protected.md)， [Friend](../../../visual-basic/language-reference/modifiers/friend.md)， [Protected Friend](../modifiers/protected-friend.md)，[私人](../../../visual-basic/language-reference/modifiers/private.md)，或[受保護的私用](../../language-reference/modifiers/private-protected.md)。
   
  `Shadows`  
  選擇性。 使用此選項，重新宣告並隱藏基底類別中的程式設計項目。 請參閱[陰影](../../../visual-basic/language-reference/modifiers/shadows.md)。  

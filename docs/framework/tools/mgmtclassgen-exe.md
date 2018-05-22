@@ -1,13 +1,6 @@
 ---
-title: "Mgmtclassgen.exe (管理強類型類別產生器)"
-ms.custom: 
+title: Mgmtclassgen.exe (管理強類型類別產生器)
 ms.date: 03/30/2017
-ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.technology: dotnet-clr
-ms.tgt_pltfrm: 
-ms.topic: article
 dev_langs:
 - csharp
 - vb
@@ -18,16 +11,13 @@ helpviewer_keywords:
 - Mgmtclassgen.exe
 - early-bound managed classes
 ms.assetid: 02ce6699-49b5-4a0b-b0d5-1003c491232e
-caps.latest.revision: "21"
 author: rpetrusha
 ms.author: ronpet
-manager: wpickett
-ms.workload: dotnet
-ms.openlocfilehash: 05ab4874d025eff3eb1aba6b7a336f562159b6ad
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.openlocfilehash: 282d6376b434121ed6d59297be2ce36ce361c589
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="mgmtclassgenexe-management-strongly-typed-class-generator"></a>Mgmtclassgen.exe (管理強類型類別產生器)
 [管理強類型類別產生器] 工具可快速地為指定的 Windows Management Instrumentation (WMI) 類別產生早期繫結 Managed 類別。 產生的類別會將為存取 WMI 類別之執行個體所撰寫的程式碼加以簡化。  
@@ -47,7 +37,7 @@ WMIClass [options]
 |------------|-----------------|  
 |**/l**  *language*|指定要用來產生早期繫結 Managed 類別的語言。 您可以指定 **CS** (C#，預設)、**VB** (Visual Basic)、**MC** (C++) 或 **JS** (JScript) 作為語言引數。|  
 |**/m**  <電腦>|指定要連接的電腦，其中內含 WMI 類別。 預設為本機電腦。|  
-|**/n**  <路徑>|指定包含 WMI 類別之 WMI 命名空間的路徑。 如果沒有指定這個選項，則工具預設會產生 **Root\cimv2** 命名空間之 *WMIClass* 的程式碼。|  
+|**/n**  *path*|指定包含 WMI 類別之 WMI 命名空間的路徑。 如果沒有指定這個選項，則工具預設會產生 **Root\cimv2** 命名空間之 *WMIClass* 的程式碼。|  
 |**/o**  <類別命名空間>|指定要產生 Managed 程式碼類別的 .NET 命名空間。 如果沒有指定這個選項，則工具會產生使用 WMI 命名空間和結構描述前置詞的命名空間。 結構描述前置詞是位在底線字元前之類別名稱的一部分。 例如，針對 **Root\cimv2** 命名空間中的 **Win32_OperatingSystem** 類別，工具會在 **ROOT.CIMV2.Win32** 中產生類別。|  
 |**/p**  <檔案路徑>|指定用來儲存所產生之程式碼的檔案路徑。 如果沒有指定這個選項，工具會將檔案建立在目前的目錄下。 工具會使用 *WMIClass* 引數來為其產生類別的類別和檔案命名。 類別和檔案的名稱和 *WMIClass.* 的名稱一樣。 如果 *WMIClass* 內含一個底線字元，工具會使用底線字元之後的類別名稱部分。 例如，如果 *WMIClass* 名稱的格式為 **Win32_LogicalDisk**，則產生的類別和檔案將會命名為 "logicaldisk"。 如果檔案已存在，工具會覆寫現有的檔案。|  
 |**/pw**  <密碼>|透過 **/m** 選項指定登入電腦時要使用的密碼。|  

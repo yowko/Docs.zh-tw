@@ -1,12 +1,6 @@
 ---
-title: "網際網路通訊協定第 6 版"
-ms.custom: 
+title: 網際網路通訊協定第 6 版
 ms.date: 03/30/2017
-ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.tgt_pltfrm: 
-ms.topic: article
 helpviewer_keywords:
 - IPv6, improvements
 - IPv4
@@ -14,16 +8,14 @@ helpviewer_keywords:
 - Internet Protocol version 6, improvements
 - Internet Protocol version 6
 ms.assetid: e6fa8ebd-010a-4c48-a5ec-a5102c53c06f
-caps.latest.revision: "11"
 author: mcleblanc
 ms.author: markl
 manager: markl
-ms.workload: dotnet
-ms.openlocfilehash: 333fbb452cb1f24b5e62d1106eff4560b26267b6
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
-ms.translationtype: MT
+ms.openlocfilehash: 995bc2075a7df5c9a37cc68e812f62c9de2e53c0
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="internet-protocol-version-6"></a>網際網路通訊協定第 6 版
 網際網路通訊協定第 6 版 (IPv6) 是網際網路網路層級的新標準通訊協定套件。 IPv6 旨在解決網際網路通訊協定當前版本 (稱為 IPv4) 有關位址耗竭、安全性、自動組態和擴充性等等的許多問題。 IPv6 展開網際網路的功能，以啟用新種類的應用程式，包括點對點與行動應用程式。 以下是目前 IPv4 通訊協定的主要問題：  

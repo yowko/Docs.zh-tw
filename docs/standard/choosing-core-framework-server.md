@@ -4,11 +4,11 @@ description: 本指南說明您在 .NET 中建置伺服器應用程式時應考�
 author: cartermp
 ms.author: mairaw
 ms.date: 03/15/2018
-ms.openlocfilehash: 1bed9bd2ed709907323123ad6658bbf0503ff1fb
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: 5626c6c1687fe0b8d558df8772fc69c32981787c
+ms.sourcegitcommit: 22c3c8f74eaa138dbbbb02eb7d720fce87fc30a9
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/04/2018
+ms.lasthandoff: 05/17/2018
 ---
 # <a name="choosing-between-net-core-and-net-framework-for-server-apps"></a>針對伺服器應用程式在 .NET Core 和 .NET Framework 之間進行選擇
 
@@ -93,8 +93,6 @@ ms.lasthandoff: 05/04/2018
 * WCF 服務實作。 即使已有 [WCF 用戶端程式庫](https://github.com/dotnet/wcf) 可從 .NET Core 取用 WCF 服務，但 WCF 伺服器實作目前只能在 .NET Framework 中使用。 此案例不是 .NET Core 目前計劃的一部分，但未來會納入考慮。
 
 * 工作流程相關的服務︰Windows Workflow Foundation (WF)、工作流程服務 (WCF + 單一服務中的 WF) 和 WCF Data Services (先前稱為 "ADO.NET Data Services") 僅適用於 .NET Framework。  目前並未規劃將 WF/WCF+WF/WCF Data Services 帶入 .NET Core。
-
-* Windows Presentation Foundation (WPF) 和 Windows Forms：WPF 與 Windows Forms 應用程式只能在 .NET Framework 中使用。 沒有計畫要將它們移植到 .NET Core。
 
 * 語言支援：.NET Core 目前支援 Visual Basic 和 F #，但不是所有專案類型都提供支援。 如需支援的專案範本清單，請參閱 [dotnet new 的範本選項](../core/tools/dotnet-new.md#arguments)。
 

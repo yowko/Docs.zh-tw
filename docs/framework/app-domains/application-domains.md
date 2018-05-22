@@ -14,11 +14,11 @@ helpviewer_keywords:
 ms.assetid: 113a8bbf-6875-4a72-a49d-ca2d92e19cc8
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 04028a2b350493a3cc8f2c92bafafd9658fc7c58
-ms.sourcegitcommit: 11f11ca6cefe555972b3a5c99729d1a7523d8f50
+ms.openlocfilehash: 811443dbd8e2483f7fc1b0f8c44afb4ebcd9efcf
+ms.sourcegitcommit: 22c3c8f74eaa138dbbbb02eb7d720fce87fc30a9
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 05/18/2018
 ---
 # <a name="application-domains"></a>應用程式定義域
 作業系統和執行階段環境通常會在應用程式之間提供某種形式的隔離。 例如，Windows 會使用處理序來隔離應用程式。 這種隔離確保在某一應用程式中執行之程式碼不會對其他不相關應用程式造成負面影響。  
@@ -74,11 +74,11 @@ ms.lasthandoff: 05/03/2018
   
  載入定義域中性組件的選項有三種：  
   
--   除了永遠以定義域中性方式載入的 Mscorlib 之外，<xref:System.LoaderOptimization> 不會以定義域中性方式載入任何組件。 這種設定稱為單一定義域，因為它通常使用於裝載程式只在處理序中執行單一應用程式的情況。  
-  
--   <xref:System.LoaderOptimization> 會將所有組件都以定義域中性方式載入。 處理序中有多個應用程式定義域，而且它們全部都執行相同的程式碼時，請使用這種設定。  
-  
--   如果強式名稱組件及其所有相依性項目都已安裝在全域組件快取中，<xref:System.LoaderOptimization> 便會以定義域中性方式載入這些組件。 其他組件都會分別載入並針對載入組件的每個應用程式定義域進行 JIT 編譯，因此這些組件都可以從處理序中卸載。 在相同處理序中執行多個應用程式時，或是有許多應用程式定義域及組件 (需要從處理序卸載) 共用的混合組件時，請使用這項設定。  
+- 除了永遠以定義域中性方式載入的 Mscorlib 之外，<xref:System.LoaderOptimization.SingleDomain?displayProperty=nameWithType> 不會以定義域中性方式載入任何組件。 這種設定稱為單一定義域，因為它通常使用於裝載程式只在處理序中執行單一應用程式的情況。
+
+- <xref:System.LoaderOptimization.MultiDomain?displayProperty=nameWithType> 會將所有組件都以定義域中性方式載入。 處理序中有多個應用程式定義域，而且它們全部都執行相同的程式碼時，請使用這種設定。
+
+- 如果強式名稱組件及其所有相依性項目都已安裝在全域組件快取中，<xref:System.LoaderOptimization.MultiDomainHost?displayProperty=nameWithType> 便會以定義域中性方式載入這些組件。 其他組件都會分別載入並針對載入組件的每個應用程式定義域進行 JIT 編譯，因此這些組件都可以從處理序中卸載。 在相同處理序中執行多個應用程式時，或是有許多應用程式定義域及組件 (需要從處理序卸載) 共用的混合組件時，請使用這項設定。
   
  對於使用 <xref:System.Reflection.Assembly.LoadFrom%2A> 類別 (Class) 的 <xref:System.Reflection.Assembly> 方法將載入內容載入的組件，以及使用指定位元組陣列之 <xref:System.Reflection.Assembly.Load%2A> 方法的多載而自影像載入組件，都無法共用 JIT 編譯程式碼。  
   

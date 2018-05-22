@@ -1,28 +1,20 @@
 ---
-title: "3.5 SP1 版中 HttpWebRequest 之 NTLM 驗證的變更"
-ms.custom: 
+title: 3.5 SP1 版中 HttpWebRequest 之 NTLM 驗證的變更
 ms.date: 03/30/2017
-ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.tgt_pltfrm: 
-ms.topic: article
 ms.assetid: 8bf0b428-5a21-4299-8d6e-bf8251fd978a
-caps.latest.revision: "8"
 author: mcleblanc
 ms.author: markl
 manager: markl
-ms.workload: dotnet
-ms.openlocfilehash: 239834a732fe3bc1cb3e8e7f1d126d26c210d1f6
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
-ms.translationtype: MT
+ms.openlocfilehash: f5affc15607ddae76ec90a90928cb42fa0ad49e1
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="changes-to-ntlm-authentication-for-httpwebrequest-in-version-35-sp1"></a>3.5 SP1 版中 HttpWebRequest 之 NTLM 驗證的變更
 已在 .NET Framework 版本 3.5 SP1 和更新版本中進行安全性變更，這些變更會影響 <xref:System.Net.HttpWebRequest>、<xref:System.Net.HttpListener>、<xref:System.Net.Security.NegotiateStream> 以及 System.Net 命名空間中的相關類別處理整合式 Windows 驗證的方式。 這些變更可能會影響使用這些類別提出 Web 要求並接收回應的應用程式，而且其中使用根據 NTLM 的整合式 Windows 驗證。 這項變更可能會影響設定成使用整合式 Windows 驗證的網頁伺服器和用戶端應用程式。  
   
-## <a name="overview"></a>概觀  
+## <a name="overview"></a>總覽  
  整合式 Windows 驗證的設計可讓某些認證回應成為通用，這表示可以重複使用或轉寄它們。 如果不需要此特定設計功能，則驗證通訊協定應該執行目標特定資訊，以及通道特定資訊。 服務隨後可以提供延伸保護，確保認證回應包含服務特定資訊 (例如服務主體名稱 (SPN))。 在認證交換時利用此資訊，服務就能進一步免於惡意使用可能未正確取得的認證回應。  
   
  <xref:System.Net> 和 <xref:System.Net.Security> 命名空間中的多個元件都會代表呼叫端應用程式執行整合式 Windows 驗證。 本節描述在使用整合式 Windows 驗證時新增擴充保護的 System.Net 元件變更。  

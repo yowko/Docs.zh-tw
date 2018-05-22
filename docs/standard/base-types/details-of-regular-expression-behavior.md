@@ -1,13 +1,7 @@
 ---
-title: "規則運算式行為的詳細資訊"
-ms.custom: 
+title: 規則運算式行為的詳細資訊
 ms.date: 03/30/2017
-ms.prod: .net
-ms.reviewer: 
-ms.suite: 
 ms.technology: dotnet-standard
-ms.tgt_pltfrm: 
-ms.topic: article
 dev_langs:
 - csharp
 - vb
@@ -15,18 +9,13 @@ helpviewer_keywords:
 - regular expressions, behavior
 - .NET Framework regular expressions, behavior
 ms.assetid: 0ee1a6b8-caac-41d2-917f-d35570021b10
-caps.latest.revision: 
 author: rpetrusha
 ms.author: ronpet
-manager: wpickett
-ms.workload:
-- dotnet
-- dotnetcore
-ms.openlocfilehash: 5b471cd8e934880fc8095fbad68b460174ec338c
-ms.sourcegitcommit: 3a96c706e4dbb4667bf3bf37edac9e1666646f93
+ms.openlocfilehash: bc4d8fdc39153f227e8344ea1da52a0dba2688d0
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 02/27/2018
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="details-of-regular-expression-behavior"></a>規則運算式行為的詳細資訊
 .NET Framework 規則運算式引擎是回溯規則運算式比對器，它結合了傳統的非決定性有限自動化 (NFA) 引擎，例如 Perl、Python、Emacs 和 Tcl 所使用的引擎。 這使得它與較快速、但限制較多的純規則運算式決定性有限自動化 (DFA) 引擎有所區別，例如 awk、egrep 或 lex 中的引擎。 這也和標準的但較緩慢的 POSIX NFA 有差異。 下節描述這三種規則運算式引擎，並說明為何要在 .NET Framework 中使用傳統 NFA 引擎來實作規則運算式。  

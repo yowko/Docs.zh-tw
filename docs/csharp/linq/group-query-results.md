@@ -1,20 +1,13 @@
 ---
-title: "將查詢結果分組"
-description: "如何分組結果。"
-keywords: ".NET、.NET Core、C#"
-author: BillWagner
-manager: wpickett
-ms.author: wiwagn
+title: 將查詢結果分組
+description: 如何分組結果。
 ms.date: 12/1/2016
-ms.topic: article
-ms.prod: .net
-ms.technology: devlang-csharp
 ms.assetid: 2e4ec27f-06fb-4de7-8973-0189906d4520
-ms.openlocfilehash: ca68cf96a2c27bbd1999d5445c14fc93e8e2566c
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.openlocfilehash: cb7808bfdd86dd23882d0722b87b1e013a84141e
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="group-query-results"></a>將查詢結果分組
 
@@ -74,12 +67,12 @@ ms.lasthandoff: 11/21/2017
   
  [!code-csharp[csProgGuideLINQ#21](../../../samples/snippets/csharp/concepts/linq/how-to-group-query-results_7.cs)]  
   
-## <a name="see-also"></a>請參閱  
+## <a name="see-also"></a>另請參閱  
  <xref:System.Linq.Enumerable.GroupBy%2A>  
  <xref:System.Linq.IGrouping%602>  
  [LINQ 查詢運算式](index.md)  
  [group 子句](../language-reference/keywords/group-clause.md)  
  [匿名類型](../programming-guide/classes-and-structs/anonymous-types.md)  
  [在分組作業上執行子查詢](perform-a-subquery-on-a-grouping-operation.md)  
- [建立巢狀的群組](create-a-nested-group.md)  
+ [建立巢狀群組](create-a-nested-group.md)  
  [分組資料](../programming-guide/concepts/linq/grouping-data.md)

@@ -287,7 +287,7 @@
 ### [開始使用 .NET Core CLI](fsharp/get-started/get-started-command-line.md)
 
 ## [F# 樣式指南](fsharp/style-guide/index.md)
-### [F# 格式化方針](fsharp/style-guide/formatting.md)
+### [F# 程式碼格式化方針](fsharp/style-guide/formatting.md)
 ### [F# 程式碼慣例](fsharp/style-guide/conventions.md)
 ### [F# 元件設計方針](fsharp/style-guide/component-design-guidelines.md)
 

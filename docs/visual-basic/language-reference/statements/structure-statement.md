@@ -1,6 +1,6 @@
 ---
 title: Structure 陳述式
-ms.date: 07/20/2015
+ms.date: 05/12/2018
 f1_keywords:
 - vb.Structure
 - Structure
@@ -12,11 +12,11 @@ helpviewer_keywords:
 - UDT (user-defined types)
 - types [Visual Basic], user-defined
 ms.assetid: 9bd1deea-2a89-4cdc-812c-6dcbb947c391
-ms.openlocfilehash: 6a3626706b226b0be253fd35fa60b33a71b86007
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: 6fdc4f1d2fbd40689c76a15a5a35b25522138be6
+ms.sourcegitcommit: 22c3c8f74eaa138dbbbb02eb7d720fce87fc30a9
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/04/2018
+ms.lasthandoff: 05/17/2018
 ---
 # <a name="structure-statement"></a>Structure 陳述式
 宣告結構的名稱，並導入的變數、 屬性、 事件和結構包含的程序定義。  
@@ -37,7 +37,7 @@ End Structure
 |詞彙|定義|  
 |---|---|  
 |`attributelist`|選擇性。 請參閱[屬性清單](../../../visual-basic/language-reference/statements/attribute-list.md)。|  
-|`accessmodifier`|選擇性。 可以是下列其中一項：<br /><br /> -   [公用](../../../visual-basic/language-reference/modifiers/public.md)<br />-   [受保護](../../../visual-basic/language-reference/modifiers/protected.md)<br />-   [Friend](../../../visual-basic/language-reference/modifiers/friend.md)<br />-   [私用](../../../visual-basic/language-reference/modifiers/private.md)<br />-   `Protected Friend`<br /><br /> 請參閱[存取 Visual Basic 中的層級](../../../visual-basic/programming-guide/language-features/declared-elements/access-levels.md)。|  
+|`accessmodifier`|選擇性。 可以是下列其中一項：<br /><br /> -   [公用](../../../visual-basic/language-reference/modifiers/public.md)<br />-   [受保護](../../../visual-basic/language-reference/modifiers/protected.md)<br />-   [Friend](../../../visual-basic/language-reference/modifiers/friend.md)<br />-   [私用](../../../visual-basic/language-reference/modifiers/private.md)<br />- [Protected 的 Friend](../../language-reference/modifiers/protected-friend.md)<br/>- [受保護的私用](../../language-reference/modifiers/private-protected.md) <br /><br /> 請參閱[存取 Visual Basic 中的層級](../../../visual-basic/programming-guide/language-features/declared-elements/access-levels.md)。|  
 |`Shadows`|選擇性。 請參閱[陰影](../../../visual-basic/language-reference/modifiers/shadows.md)。|  
 |`Partial`|選擇性。 指出此結構的部分定義。 請參閱[部分](../../../visual-basic/language-reference/modifiers/partial.md)。|  
 |`name`|必要。 此結構的名稱。 請參閱[宣告項目名稱](../../../visual-basic/programming-guide/language-features/declared-elements/declared-element-names.md)。|  

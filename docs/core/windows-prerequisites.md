@@ -4,15 +4,11 @@ description: 了解在 Windows 電腦上開發及執行 .NET Core 應用程式�
 author: JRAlexander
 ms.author: johalex
 ms.date: 04/24/2018
-ms.topic: conceptual
-ms.prod: dotnet-core
-ms.workload:
-- dotnetcore
-ms.openlocfilehash: 6f2ba8540a38f8e30d3d968f5e2c891c850053aa
-ms.sourcegitcommit: 03ee570f6f528a7d23a4221dcb26a9498edbdf8c
+ms.openlocfilehash: 7c6f39f004ebc39ca714ce419a38d842fcf8f0cb
+ms.sourcegitcommit: ff1d40507b3eb6e2185478e37c66c66be6de46f1
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/28/2018
+ms.lasthandoff: 05/11/2018
 ---
 # <a name="prerequisites-for-net-core-on-windows"></a>Windows 上 .NET Core 的必要條件
 
@@ -50,7 +46,7 @@ ms.lasthandoff: 04/28/2018
 * 透過 *.zip* 檔案安裝 .NET Core。 這可以包含組建/CI/CD 伺服器。
 
 > [!NOTE]
-> Windows 8.1 和舊版或 Windows Server 2012 R2 和舊版：請確定您的 Windows 安裝為最新狀態，而且包含已透過 Windows Update 安裝的 [KB2999226](https://support.microsoft.com/en-us/help/2999226/update-for-universal-c-runtime-in-windows)。 如果沒有安裝此更新，當您如下所示啟動 .NET Core 應用程式時，將會看到錯誤：`The program can't start because api-ms-win-crt-runtime-1-1-0.dll is missing from your computer. Try reinstalling the program to fix this problem.`。
+> Windows 8.1 和舊版或 Windows Server 2012 R2 和舊版：請確定您的 Windows 安裝為最新狀態，而且包含已透過 Windows Update 安裝的 [KB2999226](https://support.microsoft.com/en-us/help/2999226/update-for-universal-c-runtime-in-windows)。 如果沒有安裝此更新，當您如下所示啟動 .NET Core 應用程式時，將會看到錯誤：`The program can't start because api-ms-win-crt-runtime-1-1-0.dll is missing from your computer. Try reinstalling the program to fix this problem.`
 
 ## <a name="prerequisites-with-visual-studio-2017"></a>使用 Visual Studio 2017 的必要條件
 

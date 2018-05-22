@@ -1,33 +1,26 @@
 ---
 title: private (C# 參考)
 ms.date: 07/20/2015
-ms.prod: .net
-ms.technology:
-- devlang-csharp
-ms.topic: article
 f1_keywords:
 - private_CSharpKeyword
 - private
 helpviewer_keywords:
 - private keyword [C#]
 ms.assetid: 654c0bb8-e6ac-4086-bf96-7474fa6aa1c8
-caps.latest.revision: 17
-author: BillWagner
-ms.author: wiwagn
-ms.openlocfilehash: d9cc8f86166888b47a758e200182d319c68ca6d4
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.openlocfilehash: 89bc23e91bf693f0a95b75dffe2399cb7e865b50
+ms.sourcegitcommit: 89c93d05c2281b4c834f48f6c8df1047e1410980
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 05/15/2018
 ---
 # <a name="private-c-reference"></a>private (C# 參考)
 `private` 關鍵字是成員存取修飾詞。 
    
- > 此頁面都涵蓋`private`存取。 `private`關鍵字也是屬於[ `private protected` ](./private-protected.md)存取修飾詞。
+ > 此頁面涵蓋 `private` 存取。 `private` 關鍵字也是屬於 [`private protected`](./private-protected.md) 存取修飾詞。
   
 私用存取是最嚴格的存取層級。 私用成員只能在宣告它們的類別主體或結構主體內存取，如本範例所示：  
   
-```  
+```csharp  
 class Employee  
 {  
     private int i;  
@@ -49,7 +42,7 @@ class Employee
 ## <a name="c-language-specification"></a>C# 語言規格  
  [!INCLUDE[CSharplangspec](~/includes/csharplangspec-md.md)]  
   
-## <a name="see-also"></a>另請參閱  
+## <a name="see-also"></a>請參閱  
  [C# 參考](../../../csharp/language-reference/index.md)  
  [C# 程式設計指南](../../../csharp/programming-guide/index.md)  
  [C# 關鍵字](../../../csharp/language-reference/keywords/index.md)  

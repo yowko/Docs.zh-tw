@@ -10,11 +10,11 @@ helpviewer_keywords:
 ms.assetid: 1d971dd7-10fc-4692-8dac-30ca308fc0fa
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: c6d12740333d869b2fd43914437a6f5b5f62f843
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: 1c0f831426762ddcb21e4c1c1191e20435a13deb
+ms.sourcegitcommit: 22c3c8f74eaa138dbbbb02eb7d720fce87fc30a9
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/04/2018
+ms.lasthandoff: 05/17/2018
 ---
 # <a name="whats-new-in-the-net-framework"></a>.NET Framework 中的新功能
 <a name="introduction"></a> 此文章摘要說明下列 .NET Framework 版本的重要新功能和改進：  
@@ -49,7 +49,7 @@ ms.lasthandoff: 05/04/2018
 
 .NET Framework 4.7.2 可以安裝在 Windows 10、Windows 8.1、Windows 7 SP1，以及自 Windows Server 2008 R2 SP1 起的相對應伺服器平台上。 您可以使用 Web 安裝程式或離線安裝程式來安裝 .NET Framework 4.7.2。 針對大部分的使用者，我們建議使用 Web 安裝程式。
 
-透過安裝 [.NET Framework 4.7.2 開發人員套件](http://go.microsoft.com/fwlink/?LinkId=863261)，即能以 Visual Studio 2012 或更新版本中的 .NET Framework 4.7.2 為目標。 
+透過安裝 [.NET Framework 4.7.2 開發人員套件](http://go.microsoft.com/fwlink/?LinkId=874338)，即能以 Visual Studio 2012 或更新版本中的 .NET Framework 4.7.2 為目標。 
 
 ### <a name="whats-new-in-the-net-framework-472"></a>.NET Framework 4.7.2 的新功能
 

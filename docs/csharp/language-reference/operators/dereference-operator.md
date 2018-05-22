@@ -7,11 +7,11 @@ helpviewer_keywords:
 - member access operator (->) [C#]
 - -> operator [C#]
 ms.assetid: e39ccdc1-f1ff-4a92-bf1d-ac2c8c11316a
-ms.openlocfilehash: 09d67b8386da371f7d98a8171f60298b316091ea
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: 037229b2081a43077cb4b5d02a8929b06ba9e077
+ms.sourcegitcommit: 89c93d05c2281b4c834f48f6c8df1047e1410980
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/04/2018
+ms.lasthandoff: 05/15/2018
 ---
 # <a name="-gt-operator-c-reference"></a>-&gt; 運算子 (C# 參考)
 `->` 運算子結合了指標取值和成員存取。  
@@ -19,13 +19,13 @@ ms.lasthandoff: 05/04/2018
 ## <a name="remarks"></a>備註  
  以下格式的運算式：  
   
-```  
+```csharp  
 x->y  
 ```  
   
  (其中 `x` 是類型 `T*` 的指標，而 `y` 是 `T` 的成員) 相當於：  
   
-```  
+```csharp  
 (*x).y  
 ```  
   

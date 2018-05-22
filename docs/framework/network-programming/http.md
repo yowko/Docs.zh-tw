@@ -1,12 +1,6 @@
 ---
 title: HTTP
-ms.custom: 
 ms.date: 03/30/2017
-ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.tgt_pltfrm: 
-ms.topic: article
 helpviewer_keywords:
 - protocols, HTTP
 - sending data, HTTP
@@ -19,19 +13,17 @@ helpviewer_keywords:
 - HTTP, about HTTP
 - HttpWebRequest class, sending and receiving data
 ms.assetid: 985fe5d8-eb71-4024-b361-41fbdc1618d8
-caps.latest.revision: "10"
 author: mcleblanc
 ms.author: markl
 manager: markl
-ms.workload: dotnet
-ms.openlocfilehash: f72a77e19d04c0dd55887628033f7c975ac3ff25
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
-ms.translationtype: MT
+ms.openlocfilehash: ed61a8addd204320560c773e917613c52e56bff4
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="http"></a>HTTP
-.NET Framework 提供完整支援 HTTP 通訊協定，與組成的所有網際網路流量，大部分<xref:System.Net.HttpWebRequest>和<xref:System.Net.HttpWebResponse>類別。 這些類別衍生自 <xref:System.Net.WebRequest> 和 <xref:System.Net.WebResponse>，每當靜態方法 <xref:System.Net.WebRequest.Create%2A?displayProperty=nameWithType> 碰到以 "http" 或 "https" 開頭的 URI 時，預設會傳回這些類別。 在大部分情況下，**WebRequest** 和 **WebResponse** 類別提供了提出要求所需的一切功能，但是如果您需要存取以屬性方式公開的 HTTP 特定功能，則可以將這些類別轉型為 **HttpWebRequest** 或 **HttpWebResponse**。  
+.NET Framework 可透過 <xref:System.Net.HttpWebRequest> 和 <xref:System.Net.HttpWebResponse> 類別，對於佔據所有網際網路流量絕大部分的 HTTP 通訊協定提供全面的支援。 這些類別衍生自 <xref:System.Net.WebRequest> 和 <xref:System.Net.WebResponse>，每當靜態方法 <xref:System.Net.WebRequest.Create%2A?displayProperty=nameWithType> 碰到以 "http" 或 "https" 開頭的 URI 時，預設會傳回這些類別。 在大部分情況下，**WebRequest** 和 **WebResponse** 類別提供了提出要求所需的一切功能，但是如果您需要存取以屬性方式公開的 HTTP 特定功能，則可以將這些類別轉型為 **HttpWebRequest** 或 **HttpWebResponse**。  
   
  **HttpWebRequest** 和 **HttpWebResponse** 封裝了標準的 HTTP 要求與回應交易，並提供對一般 HTTP 標頭的存取。 這些類別也支援大部分的 HTTP 1.1 功能，包括管線操作、以區塊方式傳送和接收資料 、驗證、預先驗證、加密、Proxy 支援、伺服器憑證驗證，以及連線管理。 自訂標頭和未透過屬性提供的標頭則可透過 **Headers** 屬性來儲存和存取。  
   

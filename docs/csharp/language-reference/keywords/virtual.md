@@ -1,29 +1,22 @@
 ---
 title: virtual (C# 參考)
 ms.date: 07/20/2015
-ms.prod: .net
-ms.technology:
-- devlang-csharp
-ms.topic: article
 f1_keywords:
 - virtual_CSharpKeyword
 - virtual
 helpviewer_keywords:
 - virtual keyword [C#]
 ms.assetid: 5da9abae-bc1e-434f-8bea-3601b8dcb3b2
-caps.latest.revision: 26
-author: BillWagner
-ms.author: wiwagn
-ms.openlocfilehash: dce3333646bca6f558e3760849b6cffdb34a6c0b
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.openlocfilehash: 5a188e9a7cbb7a1c497d577039c2b2578eaa7526
+ms.sourcegitcommit: 89c93d05c2281b4c834f48f6c8df1047e1410980
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 05/15/2018
 ---
 # <a name="virtual-c-reference"></a>virtual (C# 參考)
 `virtual` 關鍵字可用來修改方法、屬性、索引子或事件宣告，並可在衍生類別中受到覆寫。 例如，繼承這個方法的任何類別均可將其覆寫：  
   
-```  
+```csharp  
 public virtual double Area()   
 {  
     return x * y;  
@@ -37,7 +30,7 @@ public virtual double Area()
   
  此方法預設為非虛擬的方法。 您無法覆寫非虛擬的方法。  
   
- 您無法使用`virtual`修飾詞與`static`， `abstract`， `private`，或`override`修飾詞。 下列範例說明虛擬屬性：  
+ 您不能搭配使用 `virtual` 修飾詞和 `static`、`abstract`、`private` 或 `override` 修飾詞。 下列範例說明虛擬屬性：  
   
  [!code-csharp[csrefKeywordsModifiers#26](../../../csharp/language-reference/keywords/codesnippet/CSharp/virtual_1.cs)]  
   
@@ -52,7 +45,7 @@ public virtual double Area()
   
  請注意，`Circle`、`Sphere` 和 `Cylinder` 繼承類別都會使用建構函式來初始化基底類別，如下列宣告所示。  
   
-```  
+```csharp  
 public Cylinder(double r, double h): base(r, h) {}  
 ```  
   
@@ -63,7 +56,7 @@ public Cylinder(double r, double h): base(r, h) {}
 ## <a name="c-language-specification"></a>C# 語言規格  
  [!INCLUDE[CSharplangspec](~/includes/csharplangspec-md.md)]  
   
-## <a name="see-also"></a>另請參閱  
+## <a name="see-also"></a>請參閱  
  [C# 參考](../../../csharp/language-reference/index.md)  
  [C# 程式設計指南](../../../csharp/programming-guide/index.md)  
  [修飾詞](../../../csharp/language-reference/keywords/modifiers.md)  

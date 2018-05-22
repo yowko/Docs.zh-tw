@@ -7,11 +7,11 @@ f1_keywords:
 helpviewer_keywords:
 - enum keyword [C#]
 ms.assetid: bbeb9a0f-e9b3-41ab-b0a6-c41b1a08974c
-ms.openlocfilehash: 72feb6ee25070a6930b01b69e0a726041d34b0c7
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: 9714277f87095b709e37b582cd3435374d9a1555
+ms.sourcegitcommit: 89c93d05c2281b4c834f48f6c8df1047e1410980
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/04/2018
+ms.lasthandoff: 05/15/2018
 ---
 # <a name="enum-c-reference"></a>enum (C# 參考)
 `enum` 關鍵字用來宣告列舉，是包含一組稱為列舉程式清單之具名常數的不同類型。  
@@ -20,13 +20,13 @@ ms.lasthandoff: 05/04/2018
   
  根據預設，第一個列舉程式的值是 0，而每個後續列舉程式的值會遞增 1。 例如，在下列的列舉中， `Sat` 是 `0`， `Sun` 是 `1`， `Mon` 是 `2`，依此類推。  
   
-```  
+```csharp  
 enum Day {Sat, Sun, Mon, Tue, Wed, Thu, Fri};  
 ```  
   
  列舉程式可使用初始設定式覆寫預設值，如下列範例所示。  
   
-```  
+```csharp  
 enum Day {Sat=1, Sun, Mon, Tue, Wed, Thu, Fri};  
 ```  
   
@@ -34,7 +34,7 @@ enum Day {Sat=1, Sun, Mon, Tue, Wed, Thu, Fri};
   
  每個列舉類型都具有基礎類型，可以是任何整數類型，但 [char](../../../csharp/language-reference/keywords/char.md) 除外。 預設基礎列舉項目類型是 [int](../../../csharp/language-reference/keywords/int.md)。若要宣告另一個整數類型的列舉，例如 [byte](../../../csharp/language-reference/keywords/byte.md)，請在識別項後使用冒號，後面接著類型，如下列範例所示。  
   
-```  
+```csharp  
 enum Day : byte {Sat=1, Sun, Mon, Tue, Wed, Thu, Fri};  
 ```  
   
@@ -49,7 +49,7 @@ enum Day : byte {Sat=1, Sun, Mon, Tue, Wed, Thu, Fri};
   
  基礎類型指定為每個列舉程式配置的儲存體數量。 不過，從 `enum` 類型轉換為整數類型需要明確轉換。 例如，下列陳述式會指派列舉程式 `Sun` 為 [int](../../../csharp/language-reference/keywords/int.md) 類型的變數，方法是使用轉換從 `enum` 轉換成 `int`。  
   
-```  
+```csharp  
 int x = (int)Day.Sun;  
 ```  
   

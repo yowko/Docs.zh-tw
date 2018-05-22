@@ -1,33 +1,26 @@
 ---
 title: internal (C# 參考)
 ms.date: 07/20/2015
-ms.prod: .net
-ms.technology:
-- devlang-csharp
-ms.topic: article
 f1_keywords:
 - internal_CSharpKeyword
 - internal
 helpviewer_keywords:
 - internal keyword [C#]
 ms.assetid: 6ee0785c-d7c8-49b8-bb72-0a4dfbcb6461
-caps.latest.revision: 23
-author: BillWagner
-ms.author: wiwagn
-ms.openlocfilehash: a3b115022ed2b38dfcfbbfad3c5fc00e0203b255
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.openlocfilehash: d2fcc19bb7bc6de373412e7728f3025647c0435d
+ms.sourcegitcommit: 89c93d05c2281b4c834f48f6c8df1047e1410980
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 05/15/2018
 ---
 # <a name="internal-c-reference"></a>internal (C# 參考)
 `internal` 關鍵字是類型和類型成員的[存取修飾詞](../../../csharp/language-reference/keywords/access-modifiers.md)。 
   
- > 此頁面都涵蓋`internal`存取。 `internal`關鍵字也是屬於[ `protected internal` ](./protected-internal.md)存取修飾詞。
+ > 此頁面涵蓋 `internal` 存取。 `internal` 關鍵字也是屬於 [`protected internal`](./protected-internal.md) 存取修飾詞。
   
 內部類型或成員只能在相同組件的檔案內存取，如下列範例所示：  
   
-```  
+```csharp  
 public class BaseClass   
 {  
     // Only accessible within the same assembly  
@@ -46,7 +39,7 @@ public class BaseClass
 ## <a name="example"></a>範例  
  此範例包含兩個檔案：`Assembly1.cs` 和 `Assembly1_a.cs`。 第一個檔案包含內部基底類別 `BaseClass`。 在第二個檔案中，嘗試具現化 `BaseClass` 會產生錯誤。  
   
-```  
+```csharp  
 // Assembly1.cs  
 // Compile with: /target:library  
 internal class BaseClass   
@@ -55,7 +48,7 @@ internal class BaseClass
 }  
 ```  
   
-```  
+```csharp  
 // Assembly1_a.cs  
 // Compile with: /reference:Assembly1.dll  
 class TestAccess   
@@ -70,7 +63,7 @@ class TestAccess
 ## <a name="example"></a>範例  
  在此範例中，請使用您在範例 1 中所用的相同檔案，並將 `BaseClass` 的存取範圍層級變更為 `public`。 同時將成員 `IntM` 的存取範圍層級變更為 `internal`。 在此情況下，您可以具現化類別，但無法存取內部成員。  
   
-```  
+```csharp  
 // Assembly2.cs  
 // Compile with: /target:library  
 public class BaseClass   
@@ -79,7 +72,7 @@ public class BaseClass
 }  
 ```  
   
-```  
+```csharp  
 // Assembly2_a.cs  
 // Compile with: /reference:Assembly1.dll  
 public class TestAccess   
@@ -95,7 +88,7 @@ public class TestAccess
 ## <a name="c-language-specification"></a>C# 語言規格  
  [!INCLUDE[CSharplangspec](~/includes/csharplangspec-md.md)]  
   
-## <a name="see-also"></a>另請參閱  
+## <a name="see-also"></a>請參閱  
  [C# 參考](../../../csharp/language-reference/index.md)  
  [C# 程式設計指南](../../../csharp/programming-guide/index.md)  
  [C# 關鍵字](../../../csharp/language-reference/keywords/index.md)  

@@ -1,31 +1,20 @@
 ---
-title: "PLINQ 中的順序保留"
-ms.custom: 
+title: PLINQ 中的順序保留
 ms.date: 03/30/2017
-ms.prod: .net
-ms.reviewer: 
-ms.suite: 
 ms.technology: dotnet-standard
-ms.tgt_pltfrm: 
-ms.topic: article
 dev_langs:
 - csharp
 - vb
 helpviewer_keywords:
 - PLINQ queries, order preservation
 ms.assetid: 10d202bc-19e1-4b5c-bbf1-9a977322a9ca
-caps.latest.revision: 
 author: rpetrusha
 ms.author: ronpet
-manager: wpickett
-ms.workload:
-- dotnet
-- dotnetcore
-ms.openlocfilehash: 164dce7c58e1ce44972e0e390e4f0bf2be8de548
-ms.sourcegitcommit: e7f04439d78909229506b56935a1105a4149ff3d
+ms.openlocfilehash: 0b98fdcd425ae62aca0149df5136c28edc023bf0
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 12/23/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="order-preservation-in-plinq"></a>PLINQ 中的順序保留
 在 PLINQ 中，目標是在達到最佳效能的同時維持正確性。 查詢應以最快的速度執行，但仍應產生正確的結果。 在某些情況下，需要保留來源序列的順序以保持正確性；不過，排序可能需要大量計算。 因此，根據預設，PLINQ 不會保留來源序列的順序。 在這方面，PLINQ 類似於 [!INCLUDE[vbtecdlinq](../../../includes/vbtecdlinq-md.md)]，但是有別於會保留順序的 LINQ to Objects。  

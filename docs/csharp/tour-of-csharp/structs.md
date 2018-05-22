@@ -1,20 +1,13 @@
 ---
-title: "C# 結構 - C# 語言教學課程"
-description: "了解 C# 實值型別 (稱為結構) 的基本概念"
-keywords: ".NET, C#, 結構, 實值型別"
-author: BillWagner
-ms.author: wiwagn
+title: C# 結構 - C# 語言教學課程
+description: 了解 C# 實值型別 (稱為結構) 的基本概念
 ms.date: 08/10/2016
-ms.topic: article
-ms.prod: .net
-ms.technology: devlang-csharp
-ms.devlang: csharp
 ms.assetid: 88a74571-f741-4a31-a2b5-1ccf165535b8
-ms.openlocfilehash: fa840d80bba98889f75863db2612f196d78bd3c5
-ms.sourcegitcommit: 83dd5ec003e788ccb3e33f3412a7af39ae347646
+ms.openlocfilehash: dac0952e6a55a16ecefec79f9789f9e2d44aada1
+ms.sourcegitcommit: ff1d40507b3eb6e2185478e37c66c66be6de46f1
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 03/15/2018
+ms.lasthandoff: 05/11/2018
 ---
 # <a name="structs"></a>結構
 
@@ -30,7 +23,7 @@ ms.lasthandoff: 03/15/2018
 
 現在，只有一個物件會具現化 — 代表陣列的物件 — 而 `Point` 執行個體會以內嵌方式儲存在陣列中。
 
-結構建構函式使用新的運算子叫用，但並不代表會配置記憶體。 結構建構函式只會傳回結構值本身 (通常是在堆疊上的暫存位置)，然後再視需要複製此值，而不是動態配置一個物件並傳回該物件的參考。
+結構建構函式使用 `new` 運算子叫用，但並不代表會配置記憶體。 結構建構函式只會傳回結構值本身 (通常是在堆疊上的暫存位置)，然後再視需要複製此值，而不是動態配置一個物件並傳回該物件的參考。
 
 使用類別時，這兩種變數可以參考相同的物件，因此對其中一個變數進行的作業可能會影響另一個變數參考的物件。 使用結構時，變數各有自己的資料複本，因此在某一個變數上進行的作業不可能會影響其他變數。 例如，下列程式碼片段所產生的輸出取決於點是類別或結構。
 

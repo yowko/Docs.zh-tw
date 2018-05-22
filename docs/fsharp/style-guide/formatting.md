@@ -1,12 +1,12 @@
 ---
-title: 'F # 程式碼的 formattin 指導方針'
+title: 'F # 程式碼格式化方針'
 description: '了解 F # 程式碼格式化方針。'
 ms.date: 05/14/2018
-ms.openlocfilehash: e5c700ca9ae3968243f11c1237b9e4b26e580dcf
-ms.sourcegitcommit: 89c93d05c2281b4c834f48f6c8df1047e1410980
-ms.translationtype: HT
+ms.openlocfilehash: 1433b6891a6a0ddcdc082c141365ae54fa40c27b
+ms.sourcegitcommit: 22c3c8f74eaa138dbbbb02eb7d720fce87fc30a9
+ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/15/2018
+ms.lasthandoff: 05/17/2018
 ---
 # <a name="f-code-formatting-guidelines"></a>F # 程式碼格式化方針
 
@@ -324,19 +324,10 @@ let function1 arg1 arg2 arg3 arg4 =
 
 ### <a name="formatting-pipeline-operators"></a>格式設定管線運算子
 
-管線`|>`應該出現在正下方的運算式所操作的一行的開頭：
+管線`|>`運算子都應之下操作的運算式。
 
 ```fsharp
-// OK
-let methods2 = System.AppDomain.CurrentDomain.GetAssemblies()
-               |> List.ofArray
-               |> List.map (fun assm -> assm.GetTypes())
-               |> Array.concat
-               |> List.ofArray
-               |> List.map (fun t -> t.GetMethods())
-               |> Array.concat
-
-// OK, but prefer previous
+// Preferred approach
 let methods2 =
     System.AppDomain.CurrentDomain.GetAssemblies()
     |> List.ofArray
@@ -481,6 +472,56 @@ CamelCase 用於私用模組繫結值，如下所示：
 let emailMyBossTheLatestResults =
     ...
 ```
+
+### <a name="use-camelcase-for-parameters"></a>使用 camelCase 參數
+
+所有參數都應該都使用 camelCase 根據.NET 命名慣例。
+
+```fsharp
+module MyModule =
+    let myFunction paramOne paramTwo = ...
+
+type MyClass() =
+    member this.MyMethod(paramOne, paramTwo) = ...
+```
+
+### <a name="use-pascalcase-for-modules"></a>使用 PascalCase 模組
+
+（最上層、 內部、 私用、 巢狀） 的所有模組都應該都使用 PascalCase。
+
+```fsharp
+module MyTopLevelModule
+
+module Helpers =
+    module private SuperHelpers =
+        ...
+
+    ...
+```
+
+### <a name="use-pascalcase-for-type-declarations-members-and-labels"></a>PascalCase 用於宣告類型、 成員和標籤
+
+類別、 介面、 結構、 列舉型別、 委派、 記錄和差別聯的集應該全部是名為 PascalCase。 型別和記錄和差別聯的集的標籤內的成員也應該使用 PascalCase。
+
+```fsharp
+type IMyInterface =
+    abstract Something: int
+
+type MyClass() =
+    member this.MyMethod(x, y) = x + y
+
+type MyRecord = { IntVal: int; StringVal: string }
+
+type SchoolPerson =
+    | Professor
+    | Student
+    | Advisor
+    | Administrator
+```
+
+### <a name="use-pascalcase-for-constructs-intrinsic-to-net"></a>PascalCase 用於建構內建的.NET
+
+命名空間、 例外狀況、 事件和專案 /`.dll`名稱也應該使用 PascalCase。 不僅這樣做耗用量其他.NET 語言的感覺更自然的取用者，也是.NET 命名慣例，系統可能會遇到與一致。
 
 ### <a name="avoid-underscores-in-names"></a>避免在名稱中的底線
 

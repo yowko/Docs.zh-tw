@@ -7,11 +7,11 @@ helpviewer_keywords:
 - division assignment operator (/=) [C#]
 - /= (division assignment operator) [C#]
 ms.assetid: 50fc02b0-ee9c-4c3e-b58d-d591282caf1c
-ms.openlocfilehash: 1d9b918c66ce361067d906a055df5adb25a5a308
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: c31ff374e6af4c08c329a971fdd8af169e239395
+ms.sourcegitcommit: 89c93d05c2281b4c834f48f6c8df1047e1410980
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/04/2018
+ms.lasthandoff: 05/15/2018
 ---
 # <a name="-operator-c-reference"></a>/= 運算子 (C# 參考)
 除法指派運算子。  
@@ -19,13 +19,13 @@ ms.lasthandoff: 05/04/2018
 ## <a name="remarks"></a>備註  
  使用 `/=` 指派運算子的運算式，例如  
   
-```  
+```csharp  
 x /= y  
 ```  
   
  相當於  
   
-```  
+```csharp  
 x = x / y  
 ```  
   

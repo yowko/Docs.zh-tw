@@ -2,11 +2,11 @@
 title: 'F # 編碼慣例'
 description: '撰寫 F # 程式碼時，了解一般方針和慣例。'
 ms.date: 05/14/2018
-ms.openlocfilehash: 4db1e2b4fef97fc060f717a080cd762f9fe08ee0
-ms.sourcegitcommit: 89c93d05c2281b4c834f48f6c8df1047e1410980
+ms.openlocfilehash: adb2189540496046ccf6e392bd45807860e13520
+ms.sourcegitcommit: 22c3c8f74eaa138dbbbb02eb7d720fce87fc30a9
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/15/2018
+ms.lasthandoff: 05/17/2018
 ---
 # <a name="f-coding-conventions"></a>F # 編碼慣例
 
@@ -108,12 +108,11 @@ open System.IO
 open System.Reflection
 open System.Text
 
-open Microsoft.FSharp.Core.Printf
 open Microsoft.FSharp.Compiler
 open Microsoft.FSharp.Compiler.AbstractIL
+open Microsoft.FSharp.Compiler.AbstractIL.Diagnostics
 open Microsoft.FSharp.Compiler.AbstractIL.IL
 open Microsoft.FSharp.Compiler.AbstractIL.ILBinaryReader
-open Microsoft.FSharp.Compiler.AbstractIL.Diagnostics
 open Microsoft.FSharp.Compiler.AbstractIL.Internal
 open Microsoft.FSharp.Compiler.AbstractIL.Internal.Library
 
@@ -123,24 +122,23 @@ open Microsoft.FSharp.Compiler.CompileOps
 open Microsoft.FSharp.Compiler.CompileOptions
 open Microsoft.FSharp.Compiler.Driver
 open Microsoft.FSharp.Compiler.ErrorLogger
+open Microsoft.FSharp.Compiler.Infos
+open Microsoft.FSharp.Compiler.InfoReader
+open Microsoft.FSharp.Compiler.Lexhelp
+open Microsoft.FSharp.Compiler.Layout
 open Microsoft.FSharp.Compiler.Lib
+open Microsoft.FSharp.Compiler.NameResolution
 open Microsoft.FSharp.Compiler.PrettyNaming
 open Microsoft.FSharp.Compiler.Parser
 open Microsoft.FSharp.Compiler.Range
-open Microsoft.FSharp.Compiler.Lexhelp
-open Microsoft.FSharp.Compiler.Layout
 open Microsoft.FSharp.Compiler.Tast
 open Microsoft.FSharp.Compiler.Tastops
 open Microsoft.FSharp.Compiler.TcGlobals
-open Microsoft.FSharp.Compiler.Infos
-open Microsoft.FSharp.Compiler.InfoReader
-open Microsoft.FSharp.Compiler.NameResolution
 open Microsoft.FSharp.Compiler.TypeChecker
 open Microsoft.FSharp.Compiler.SourceCodeServices.SymbolHelpers
 
 open Internal.Utilities
 open Internal.Utilities.Collections
-open Microsoft.FSharp.Compiler.Layout.TaggedTextOps
 ```
 
 請注意分行符號分隔拓樸的圖層，與正在排序文數字順序之後的每個圖層。 這完全沒有不小心遮蔽值組織程式碼。
@@ -318,7 +316,7 @@ let tryReadAllTextIfPresent (path : string) =
 
 ## <a name="partial-application-and-point-free-programming"></a>部分應用程式和無點的程式設計
 
-F # 支援部分的應用程式，因此程式的各種方式點可用樣式。 這可能會很有用的模組或某樣東西，實作內重複使用程式碼，但它通常不是可公開公開。 一般情況下，無點的程式設計 virtue 本身，並不可以加入認知一道重大障礙人士不 immersed 樣式。 點可用在 F # 的程式設計是基本的訓練有素數學家，但可能難以供不熟悉 lambda 微積分的人員。
+F # 支援部分的應用程式，因此程式的各種方式點可用樣式。 這可能會很有用的模組或某樣東西，實作內重複使用程式碼，但它通常不是可公開公開。 一般情況下，無點的程式設計 virtue 本身，並不可以加入認知一道重大障礙人士不 immersed 樣式。
 
 ### <a name="do-not-use-partial-application-and-currying-in-public-apis"></a>請勿使用部分的應用程式和對在公用 Api
 

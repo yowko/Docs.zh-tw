@@ -1,28 +1,16 @@
 ---
-title: "如何：使用設計工具加入或移除 ImageList 影像"
-ms.custom: 
+title: 如何：使用設計工具加入或移除 ImageList 影像
 ms.date: 03/30/2017
-ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.technology: dotnet-winforms
-ms.tgt_pltfrm: 
-ms.topic: article
 helpviewer_keywords:
 - ImageList component [Windows Forms], adding images
 - ImageList component [Windows Forms], removing images
 - images [Windows Forms], adding to ImageList component
 ms.assetid: 5699b244-e37c-4d20-bc35-7441e55c1e3a
-caps.latest.revision: "7"
-author: dotnet-bot
-ms.author: dotnetcontent
-manager: wpickett
-ms.workload: dotnet
-ms.openlocfilehash: ce14d6f060482eb521e9812a127c6b27431121c0
-ms.sourcegitcommit: c0dd436f6f8f44dc80dc43b07f6841a00b74b23f
+ms.openlocfilehash: c85e55b6aef45eea65e6f82269375f80acf71017
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 01/19/2018
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="how-to-add-or-remove-imagelist-images-with-the-designer"></a>如何：使用設計工具加入或移除 ImageList 影像
 您可以將映像以<xref:System.Windows.Forms.ImageList>元件數個不同的方式。 您可以將影像加入使用智慧標籤相關聯的非常快速地<xref:System.Windows.Forms.ImageList>，或如果您要設定其他幾個屬性上<xref:System.Windows.Forms.ImageList>，可能會發現更方便地加入 [屬性] 視窗的影像。 您也可以使用程式碼，以新增映像。 如需如何新增程式碼的映像的詳細資訊，請參閱[如何： 加入或移除映像使用 Windows Form ImageList 元件](../../../../docs/framework/winforms/controls/how-to-add-or-remove-images-with-the-windows-forms-imagelist-component.md)。 通常您填入<xref:System.Windows.Forms.ImageList>映像之前相關聯的控制項，但這不是必要元件。  
@@ -34,7 +22,7 @@ ms.lasthandoff: 01/19/2018
   
 1.  選取<xref:System.Windows.Forms.ImageList>元件，或加入至表單。  
   
-2.  在 [屬性] 視窗中，按一下省略符號按鈕 (![VisualStudioEllipsesButton 螢幕擷取畫面](../../../../docs/framework/winforms/media/vbellipsesbutton.png "vbEllipsesButton")) 旁邊<xref:System.Windows.Forms.ImageList.Images%2A>屬性。  
+2.  在 [屬性] 視窗中，按一下 省略符號按鈕 (![VisualStudioEllipsesButton 螢幕擷取畫面](../../../../docs/framework/winforms/media/vbellipsesbutton.png "vbEllipsesButton")) 旁邊<xref:System.Windows.Forms.ImageList.Images%2A>屬性。  
   
 3.  在**影像集合編輯器**，按一下 **新增**或**移除**新增或移除清單中的映像。  
   
@@ -48,7 +36,7 @@ ms.lasthandoff: 01/19/2018
   
 4.  在**影像集合編輯器**按一下**新增**或**移除**新增或移除清單中的映像。  
   
-## <a name="see-also"></a>請參閱  
+## <a name="see-also"></a>另請參閱  
  [影像、點陣圖和中繼檔](../../../../docs/framework/winforms/advanced/images-bitmaps-and-metafiles.md)  
  [逐步解說：使用 Windows Forms 控制項中的智慧標籤執行一般工作](../../../../docs/framework/winforms/controls/performing-common-tasks-using-smart-tags-on-wf-controls.md)  
  [ImageList 元件](../../../../docs/framework/winforms/controls/imagelist-component-windows-forms.md)

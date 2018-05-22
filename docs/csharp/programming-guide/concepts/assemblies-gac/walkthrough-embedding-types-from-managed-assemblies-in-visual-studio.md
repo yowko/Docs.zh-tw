@@ -1,21 +1,12 @@
 ---
-title: "逐步解說：在 Visual Studio 中內嵌來自 Managed 組件的型別 (C#)"
-ms.custom: 
+title: 逐步解說：在 Visual Studio 中內嵌來自 Managed 組件的型別 (C#)
 ms.date: 07/20/2015
-ms.prod: .net
-ms.reviewer: 
-ms.suite: 
-ms.technology: devlang-csharp
-ms.topic: article
 ms.assetid: 55ed13c9-c5bb-4bc2-bcd8-0587eb568864
-caps.latest.revision: "3"
-author: BillWagner
-ms.author: wiwagn
-ms.openlocfilehash: 5b07b940d6287de0caf41c7d15f3036ad4041ad0
-ms.sourcegitcommit: 8ed4ebc15b5ef89d06a7507dc9d5e306e30accf7
+ms.openlocfilehash: 90bb523e3eb42cea2cd0a9d1e753e4d9b9873c0c
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 12/14/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="walkthrough-embedding-types-from-managed-assemblies-in-visual-studio-c"></a>逐步解說：在 Visual Studio 中內嵌來自 Managed 組件的型別 (C#)
 若要內嵌來自強式名稱 Managed 組件的類型資訊，您可以鬆散地結合應用程式中的類型以確保版本獨立。 也就是說，您可以撰寫程式來使用 Managed 程式庫多個版本的類型，而不需重新編譯每個版本。  
@@ -68,7 +59,7 @@ ms.lasthandoff: 12/14/2017
   
 4.  以滑鼠右鍵按一下 TypeEquivalenceInterface 專案，然後按一下 [屬性]。 按一下 [建置] 索引標籤。將輸出路徑設為開發電腦上的有效位置，例如 `C:\TypeEquivalenceSample`。 這個位置也會用於本逐步解說稍後的步驟。  
   
-5.  在編輯專案屬性期間，按一下 [簽署] 索引標籤。選取 [簽署組件] 選項。 在 [選擇強式名稱金鑰檔案] 清單中，按一下 [<新增...>]。 在 [金鑰檔案名稱] 方塊中，輸入 `key.snk`。 清除 [以密碼保護我的金鑰檔] 核取方塊。 按一下 [確定]。  
+5.  在編輯專案屬性期間，按一下 [簽署] 索引標籤。選取 [簽署組件] 選項。 在 [選擇強式名稱金鑰檔案] 清單中，按一下 [<新增...>]。 在 [金鑰檔案名稱] 方塊中，輸入 `key.snk`。 清除 [以密碼保護我的金鑰檔] 核取方塊。 按一下 [確定 **Deploying Office Solutions**]。  
   
 6.  開啟 ISampleInterface.cs 檔案。 將下列程式碼加入 ISampleInterface 類別檔案，以建立 ISampleInterface 介面。  
   
@@ -90,7 +81,7 @@ ms.lasthandoff: 12/14/2017
   
 7.  在 [工具] 功能表上，按一下 [建立 GUID]。 在 [建立 GUID] 對話方塊中，依序按一下 [登錄格式] 和 [複製]。 按一下 [結束] 。  
   
-8.  刪除 `Guid` 屬性中的範例 GUID，然後貼上您從 [建立 GUID] 對話方塊所複製的 GUID。 移除已複製 GUID 的大括號 ({})。  
+8.  刪除 `Guid` 屬性中的範例 GUID，然後貼上您從 [建立 GUID] 對話方塊所複製的 GUID。 移除已複製 GUID 的大括弧 ({})。  
   
 9. 展開方案總管中的 [屬性] 資料夾。 按兩下 AssemblyInfo.cs 檔案。 將下列屬性加入檔案中。  
   
@@ -116,7 +107,7 @@ ms.lasthandoff: 12/14/2017
   
 4.  以滑鼠右鍵按一下 TypeEquivalenceRuntime 專案，然後按一下 [屬性]。 按一下 [建置] 索引標籤。將輸出路徑設為您在 TypeEquivalenceInterface 專案中使用的相同位置，例如 `C:\TypeEquivalenceSample`。  
   
-5.  在編輯專案屬性期間，按一下 [簽署] 索引標籤。選取 [簽署組件] 選項。 在 [選擇強式名稱金鑰檔案] 清單中，按一下 [<新增...>]。 在 [金鑰檔案名稱] 方塊中，輸入 `key.snk`。 清除 [以密碼保護我的金鑰檔] 核取方塊。 按一下 [確定]。  
+5.  在編輯專案屬性期間，按一下 [簽署] 索引標籤。選取 [簽署組件] 選項。 在 [選擇強式名稱金鑰檔案] 清單中，按一下 [<新增...>]。 在 [金鑰檔案名稱] 方塊中，輸入 `key.snk`。 清除 [以密碼保護我的金鑰檔] 核取方塊。 按一下 [確定 **Deploying Office Solutions**]。  
   
 6.  以滑鼠右鍵按一下 TypeEquivalenceRuntime 專案，然後按一下 [加入參考]。 按一下 [瀏覽] 索引標籤，並瀏覽至輸出路徑資料夾。 選取 TypeEquivalenceInterface.dll 檔案，然後按一下 [確定]。  
   
@@ -240,7 +231,7 @@ ms.lasthandoff: 12/14/2017
   
 6.  在檔案總管中，開啟輸出路徑資料夾 (例如 C:\TypeEquivalenceSample)。 按兩下 TypeEquivalenceClient.exe 以執行程式。 程式即會反映新版本的 TypeEquivalenceRuntime 組件，而不需重新編譯。  
   
-## <a name="see-also"></a>另請參閱  
+## <a name="see-also"></a>請參閱  
  [/link (C# 編譯器選項)](../../../../csharp/language-reference/compiler-options/link-compiler-option.md)  
  [C# 程式設計指南](../../../../csharp/programming-guide/index.md)  
  [使用組件設計程式](../../../../framework/app-domains/programming-with-assemblies.md)  

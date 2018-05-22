@@ -1,21 +1,14 @@
 ---
 title: 設計微服務領域模型
 description: 容器化 .NET 應用程式的 .NET 微服務架構 | 設計微服務領域模型
-keywords: Docker, 微服務, ASP.NET, 容器
 author: CESARDELATORRE
 ms.author: wiwagn
 ms.date: 11/09/2017
-ms.prod: .net-core
-ms.technology: dotnet-docker
-ms.topic: article
-ms.workload:
-- dotnet
-- dotnetcore
-ms.openlocfilehash: 752c4cceada2bf0649facbfd46c36c26dc666d29
-ms.sourcegitcommit: c883637b41ee028786edceece4fa872939d2e64c
-ms.translationtype: MT
+ms.openlocfilehash: 2776412b96d4ed141f48814d19d2deaa1a71520d
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 03/26/2018
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="designing-a-microservice-domain-model"></a>設計微服務領域模型
 
@@ -63,10 +56,10 @@ Anemic 領域模型只是程序樣式設計。 Anemic 實體物件不是真正�
 
 #### <a name="additional-resources"></a>其他資源
 
--   **DevIQ。網域實體**
+-   **DevIQ。Domain Entity (網域實體)**
     [*http://deviq.com/entity/*](http://deviq.com/entity/)
 
--   **Martin Fowler：網域模型**
+-   **Martin Fowler：The Domain Model (網域模型)**
     [*https://martinfowler.com/eaaCatalog/domainModel.html*](https://martinfowler.com/eaaCatalog/domainModel.html)
 
 -   **Martin Fowler：The Anemic Domain Model (Anemic 領域模型)**
@@ -87,14 +80,14 @@ Eric Evans 提到，「許多物件沒有概念性身分識別。 這些物件�
 
 #### <a name="additional-resources"></a>其他資源
 
--   **Martin Fowler：值物件的模式**
+-   **Martin Fowler：Value Object pattern (值物件模式)**
     [*https://martinfowler.com/bliki/ValueObject.html*](https://martinfowler.com/bliki/ValueObject.html)
 
--   **值物件**
+-   **Value Object (值物件)**
     [*http://deviq.com/value-object/*](http://deviq.com/value-object/)
 
--   **值物件中有如開發**
-    [*https://leanpub.com/tdd-ebook/read\#leanpub 自動值的物件*](https://leanpub.com/tdd-ebook/read#leanpub-auto-value-objects)
+-   **Value Objects in Test-Driven Development (測試導向開發中的值物件)**
+    [*https://leanpub.com/tdd-ebook/read\#leanpub-auto-value-objects*](https://leanpub.com/tdd-ebook/read#leanpub-auto-value-objects)
 
 -   **Eric Evans：Domain-Driven Design: Tackling Complexity in the Heart of Software.** (書籍；包括值物件的探討) [*https://www.amazon.com/Domain-Driven-Design-Tackling-Complexity-Software/dp/0321125215/*](https://www.amazon.com/Domain-Driven-Design-Tackling-Complexity-Software/dp/0321125215/)
 
@@ -139,22 +132,22 @@ public class Order : Entity, IAggregateRoot
 
 #### <a name="additional-resources"></a>其他資源
 
--   **Vaughn Vernon：有效的彙總設計的第一部份： 模型的單一彙總**
-    [*https://vaughnvernon.co/wordpress/wp-content/uploads/2014/10/DDD\_社群\_短文\_彙總\_組件\_1.pdf*](https://vaughnvernon.co/wordpress/wp-content/uploads/2014/10/DDD_COMMUNITY_ESSAY_AGGREGATES_PART_1.pdf)
+-   **Vaughn Vernon：Effective Aggregate Design - Part I: Modeling a Single Aggregate (有效彙總設計 - 第一部分：建立單一彙總模型)**
+    [*https://vaughnvernon.co/wordpress/wp-content/uploads/2014/10/DDD\_COMMUNITY\_ESSAY\_AGGREGATES\_PART\_1.pdf*](https://vaughnvernon.co/wordpress/wp-content/uploads/2014/10/DDD_COMMUNITY_ESSAY_AGGREGATES_PART_1.pdf)
 
--   **Vaughn Vernon：有效彙總設計-第 2 部分： 進行彙總可共同運作，**
+-   **Vaughn Vernon：Effective Aggregate Design - Part II: Making Aggregates Work Together (有效彙總設計 - 第二部分：使彙總共同作業)**
     *<https://vaughnvernon.co/wordpress/wp-content/uploads/2014/10/DDD_COMMUNITY_ESSAY_AGGREGATES_PART_2.pdf> *
 
--   **Vaughn Vernon：透過探索的有效彙總設計-第 3 篇： 取得深入資訊**
+-   **Vaughn Vernon：Effective Aggregate Design - Part III: Gaining Insight Through Discovery (有效彙總設計 - 第三部分：透過探索取得深入解析)**
     *<https://vaughnvernon.co/wordpress/wp-content/uploads/2014/10/DDD_COMMUNITY_ESSAY_AGGREGATES_PART_3.pdf> *
 
--   **Sergey Grybniak：DDD 戰術設計模式**
+-   **Sergey Grybniak：DDD Tactical Design Patterns (DDD 戰術設計模式)**
     [*https://www.codeproject.com/Articles/1164363/Domain-Driven-Design-Tactical-Design-Patterns-Part*](https://www.codeproject.com/Articles/1164363/Domain-Driven-Design-Tactical-Design-Patterns-Part)
 
--   **Chris Richardson：開發使用彙總的交易式 Microservices**
+-   **Chris Richardson：Developing Transactional Microservices Using Aggregates (使用彙總開發交易微服務)**
     [*https://www.infoq.com/articles/microservices-aggregates-events-cqrs-part-1-richardson*](https://www.infoq.com/articles/microservices-aggregates-events-cqrs-part-1-richardson)
 
--   **DevIQ。彙總模式**
+-   **DevIQ。The Aggregate pattern (彙總模式)**
     [*http://deviq.com/aggregate-pattern/*](http://deviq.com/aggregate-pattern/)
 
 

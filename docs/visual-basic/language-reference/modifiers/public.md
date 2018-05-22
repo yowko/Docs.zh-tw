@@ -8,11 +8,11 @@ helpviewer_keywords:
 - Public keyword [Visual Basic], syntax
 - Public access modifier
 ms.assetid: 284c9e1b-ed23-499b-9bc9-ad87c11485a5
-ms.openlocfilehash: f6c18ecb748f62dd47a9689edb23089ca306dbe2
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: a5e9161132ba6d571daa30ce82e1bfb1dd2b064f
+ms.sourcegitcommit: 22c3c8f74eaa138dbbbb02eb7d720fce87fc30a9
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/04/2018
+ms.lasthandoff: 05/17/2018
 ---
 # <a name="public-visual-basic"></a>Public (Visual Basic)
 指定一或多個宣告的程式設計項目有沒有存取限制。  
@@ -68,6 +68,8 @@ ms.lasthandoff: 05/04/2018
  [Protected](../../../visual-basic/language-reference/modifiers/protected.md)  
  [Friend](../../../visual-basic/language-reference/modifiers/friend.md)  
  [Private](../../../visual-basic/language-reference/modifiers/private.md)  
+ [受保護的私用](private-protected.md)   
+ [Protected 的 Friend](protected-friend.md)   
  [在 Visual Basic 中的存取層級](../../../visual-basic/programming-guide/language-features/declared-elements/access-levels.md)  
  [程序](../../../visual-basic/programming-guide/language-features/procedures/index.md)  
  [結構](../../../visual-basic/programming-guide/language-features/data-types/structures.md)  

@@ -1,12 +1,6 @@
 ---
-title: "如何：設定網路追蹤"
-ms.custom: 
+title: 如何：設定網路追蹤
 ms.date: 03/30/2017
-ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.tgt_pltfrm: 
-ms.topic: article
 helpviewer_keywords:
 - formatting [.NET Framework], network tracing
 - network tracing, configuring
@@ -17,21 +11,19 @@ helpviewer_keywords:
 - application configuration files, network tracing
 - sockets, trace output
 ms.assetid: 5ef9fe4b-8d3d-490e-9259-1d014b2181af
-caps.latest.revision: "23"
 author: mcleblanc
 ms.author: markl
 manager: markl
-ms.workload: dotnet
-ms.openlocfilehash: b58887dc2614ab31a422eb74ce8d0805cf8153bf
-ms.sourcegitcommit: c0dd436f6f8f44dc80dc43b07f6841a00b74b23f
-ms.translationtype: MT
+ms.openlocfilehash: 77eb199e5e8bbfb0874f8189a8daa2904b31d48e
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 01/19/2018
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="how-to-configure-network-tracing"></a>如何：設定網路追蹤
 應用程式或電腦組態檔都會保存可決定網路追蹤格式和內容的設定。 在執行這個程序之前，請確認已啟用追蹤。 如需啟用追蹤的詳細資訊，請參閱[啟用網路追蹤](../../../docs/framework/network-programming/enabling-network-tracing.md)。  
   
- 電腦組態檔 (machine.config) 是儲存在 Windows 安裝目錄中的 %Windir%\Microsoft.NET\Framework 資料夾下。 （例如，C:\WINDOWS\Microsoft.NET\Framework\v2.0.50727\machine.config 或 C:\Windows\ 在電腦上安裝的.NET Framework 的每個版本的 %Windir%\Microsoft.NET\Framework 資料夾中沒有一個 machine.config 檔案Microsoft.NET\Framework64\v4.0.30319\Config\machine.config。)。  
+ 電腦組態檔 (machine.config) 是儲存在 Windows 安裝目錄中的 %Windir%\Microsoft.NET\Framework 資料夾下。 另外還有一個 machine.config 檔案，位於電腦上所安裝的每個 .NET Framework 版本之 %Windir%\Microsoft.NET\Framework 下的資料夾中 (例如，C:\WINDOWS\Microsoft.NET\Framework\v2.0.50727\machine.config 或 C:\Windows\Microsoft.NET\Framework64\v4.0.30319\Config\machine.config)。  
   
  您也可以在應用程式的組態檔中進行這些設定，它的優先順序高於電腦組態檔。  
   

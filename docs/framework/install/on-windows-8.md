@@ -1,20 +1,15 @@
 ---
-title: "在 Windows 8 上安裝 .NET Framework"
+title: 在 Windows 8 上安裝 .NET Framework
 ms.custom: updateeachrelease
-description: "了解如何在 Windows 8 上安裝 .NET Framework"
+description: 了解如何在 Windows 8 上安裝 .NET Framework
 author: rlander
 ms.author: mairaw
-keywords: ".NET Framework, 安裝"
-ms.date: 10/17/2017
-ms.topic: article
-ms.prod: .net-framework
-ms.devlang: dotnet
-ms.workload: dotnet
-ms.openlocfilehash: 5a8ecaddf50969275e7de03f9b108019f423c23e
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.date: 04/10/2018
+ms.openlocfilehash: f912013773759c6c8f52734f74bdca867f60e7a6
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="install-the-net-framework-on-windows-8-and-windows-server-2012"></a>在 Windows 8 和 Windows Server 2012 上安裝 .NET Framework
 
@@ -22,15 +17,16 @@ ms.lasthandoff: 12/22/2017
 
 ![無法啟動這個應用程式](./media/this-application-could-not-be-started.png)
 
-這些指令將協助您安裝所需的 .NET Framework 版本。 [.NET Framework 4.7.1](https://www.microsoft.com/en-us/download/details.aspx?id=56115&desc=dotnet47) 是最新版本。 Windows 8 不予支援。 它隨附於 [Windows 10 Fall Creators Update](https://www.microsoft.com/software-download/windows10) 和 [Windows Server 2016 Version 1709](https://docs.microsoft.com/windows-server/get-started/get-started-with-1709)。
+這些指令將協助您安裝所需的 .NET Framework 版本。 [.NET Framework 4.7.2](http://go.microsoft.com/fwlink/?LinkID=863255) 是最新版本。 在 Windows Server 2012 上支援，但 Windows 8 則不予支援。 其隨附於 [Windows 10 2018 4 月更新](https://www.microsoft.com/software-download/windows10)。
 
-## <a name="net-framework-471"></a>.NET Framework 4.7.1
+## <a name="net-framework-472"></a>.NET Framework 4.7.2
 
-* [下載 .NET Framework 4.7.1](https://www.microsoft.com/net/framework/versions/net471?utm_source=ms-docs&utm_medium=referral)
+> [!div class="button"]
+[下載 .NET Framework 4.7.2](https://www.microsoft.com/net/download/thank-you/net472?utm_source=ms-docs&utm_medium=referral)
 
-Windows Server 2012 支援 .NET Framework 4.7.1。 Windows 8 不予支援。
+Windows Server 2012 支援 .NET Framework 4.7.2。 Windows 8 不予支援。
 
-[.NET Framework 4.7.1](https://www.microsoft.com/en-us/download/details.aspx?id=56115&desc=dotnet47) 可用來執行針對 .NET Framework 4.0 或更新版本建置的應用程式。
+[.NET Framework 4.7.2](http://go.microsoft.com/fwlink/?LinkID=863255) 可用來執行針對 .NET Framework 4.0 或更新版本建置的應用程式。
 
 ## <a name="net-framework-46"></a>.NET Framework 4.6
 

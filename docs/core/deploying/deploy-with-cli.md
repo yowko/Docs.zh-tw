@@ -4,16 +4,11 @@ description: 了解使用命令列介面 (CLI) 工具的 .NET Core 應用程式�
 author: rpetrusha
 ms.author: ronpet
 ms.date: 04/18/2017
-ms.topic: conceptual
-ms.prod: dotnet-core
-ms.devlang: dotnet
-ms.workload:
-- dotnetcore
-ms.openlocfilehash: 21e824e6092b0d30e0499ff05c5471a291c8d269
-ms.sourcegitcommit: 03ee570f6f528a7d23a4221dcb26a9498edbdf8c
+ms.openlocfilehash: 7b009068422686442ebff83b9400c365f34a3154
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/28/2018
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="deploying-net-core-apps-with-command-line-interface-cli-tools"></a>使用命令列介面 (CLI) 工具部署 .NET Core 應用程式
 
@@ -61,13 +56,17 @@ ms.lasthandoff: 04/28/2018
       ```console
       dotnet publish -f netcoreapp1.1 -c Release
       ```
-   這會建立應用程式的發行 (而非偵錯) 版本。 產生的檔案會放在名為 *publish* 的目錄中，而該目錄位於您專案的之 *bin* 目錄的子目錄中。
+   這會建立應用程式的發行 (而非偵錯) 版本。 產生的檔案會放在名為 *publish* 的目錄中，而該目錄位於您專案之 *bin* 目錄的子目錄中。
 
-隨著應用程式檔案一起，發佈程序會發出程式資料庫 (.pdb) 檔案，其中包含應用程式的偵錯資訊。 該檔案主要是用於例外狀況偵錯。 您可以選擇不與您的應用程式檔案一起散發它。 不過，如果您要對應用程式的發行組建進行偵錯，則應該將其儲存。
+   隨著應用程式檔案一起，發佈程序會發出程式資料庫 (.pdb) 檔案，其中包含應用程式的偵錯資訊。 該檔案主要是用於例外狀況偵錯。 您可以選擇不與您的應用程式檔案一起散發它。 不過，如果您要對應用程式的發行組建進行偵錯，則應該將其儲存。
 
-您可以使用任何您想要的方式，部署整組應用程式檔案。 例如，您可以使用簡單的 `copy` 命令將它們封裝在 ZIP 檔案中，或與您選擇的任何安裝套件一起部署。 安裝之後，使用者可以使用 `dotnet` 命令並提供應用程式的檔名 (例如，`dotnet fdd.dll`)，來執行您的應用程式。
+   您可以使用任何您想要的方式，部署整組應用程式檔案。 例如，您可以使用簡單的 `copy` 命令將它們封裝在 ZIP 檔案中，或與您選擇的任何安裝套件一起部署。
 
-除了應用程式二進位檔之外，安裝程式也應該配套共用的 Framework 安裝程式，，或勾選為必要條件當成應用程式安裝的一部分。  共用的 Framwork 安裝需要系統管理員/根目錄存取權。
+1. 執行應用程式
+
+   安裝之後，使用者可以使用 `dotnet` 命令並提供應用程式的檔名 (例如，`dotnet fdd.dll`)，來執行您的應用程式。
+
+   除了應用程式二進位檔之外，安裝程式也應該配套共用的 Framework 安裝程式，，或勾選為必要條件當成應用程式安裝的一部分。  共用的 Framwork 安裝需要系統管理員/根目錄存取權。
 
 ## <a name="framework-dependent-deployment-with-third-party-dependencies"></a>有協力廠商相依性的 Framework 相依部署
 

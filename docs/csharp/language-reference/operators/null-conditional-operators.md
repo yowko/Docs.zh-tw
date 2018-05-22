@@ -1,10 +1,6 @@
 ---
 title: Null 條件運算子 (C# 和 Visual Basic)
 ms.date: 04/03/2015
-ms.prod: .net
-ms.technology:
-- devlang-csharp
-ms.topic: article
 dev_langs:
 - csharp
 - vb
@@ -16,17 +12,16 @@ helpviewer_keywords:
 - ?[] operator [C#]
 - ?[] operator [Visual Basic]
 ms.assetid: 9c7b2c8f-a785-44ca-836c-407bfb6d27f5
-caps.latest.revision: 3
-author: BillWagner
-ms.author: wiwagn
-ms.openlocfilehash: 3ffeaa3c2088d0bb2c000704cfe312b0f9453b68
-ms.sourcegitcommit: b750a8e3979749b214e7e10c82efb0a0524dfcb1
+ms.openlocfilehash: da771fa4a2a89dca308508ea81ef8e0060efa7f0
+ms.sourcegitcommit: e5bb395ec86f536e114314184288f40a8c745e2e
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/09/2018
+ms.lasthandoff: 05/12/2018
 ---
 # <a name="-and--null-conditional-operators-c-and-visual-basic"></a>?. and ?[] Null 條件運算子 (C# 和 Visual Basic)
-在執行成員存取 (`?.`) 或對 (`?[]`) 作業編製索引之前，可用來測試是否為 Null。  這些運算子可協助您撰寫較少的程式碼來處理 Null 檢查，特別是遞減至資料結構。  
+在執行成員存取 (`?.`) 或索引 (`?[]`) 運算之前，測試左運算元的值是否為 null；如果左運算元評估為 `null`，則傳回 `null`。 
+
+這些運算子可協助您撰寫較少的程式碼來處理 Null 檢查，特別是遞減至資料結構。  
   
 ```csharp  
 int? length = customers?.Length; // null if customers is null   
@@ -69,16 +64,14 @@ If handler IsNot Nothing
  新方法則更簡單：  
   
 ```csharp
-PropertyChanged?.Invoke(e)  
+PropertyChanged?.Invoke(…)  
 ```  
 
 ```vb
-PropertyChanged?.Invoke(e)
+PropertyChanged?.Invoke(…)
 ```  
   
- 新的方法可以保障執行緒安全，因為編譯器產生的程式碼只會評估 `PropertyChanged` 一次，並將結果保留在暫存變數中。  
-  
- 由於沒有 Null 條件式委派引動過程語法 `PropertyChanged?(e)`，因此您必須明確呼叫 `Invoke` 方法。  
+ 新的方法可以保障執行緒安全，因為編譯器產生的程式碼只會評估 `PropertyChanged` 一次，並將結果保留在暫存變數中。 由於沒有 Null 條件式委派引動過程語法 `PropertyChanged?(e)`，因此您必須明確呼叫 `Invoke` 方法。  
   
 ## <a name="language-specifications"></a>語言規格  
  [!INCLUDE[CSharplangspec](~/includes/csharplangspec-md.md)]  
@@ -89,5 +82,4 @@ PropertyChanged?.Invoke(e)
  [?? (Null 聯合運算子)](null-conditional-operator.md)  
  [C# 參考](../../../csharp/language-reference/index.md)  
  [C# 程式設計指南](../../../csharp/programming-guide/index.md)  
- [Visual Basic 語言參考](../../../visual-basic/language-reference/index.md)  
  [Visual Basic 程式設計手冊](../../../visual-basic/programming-guide/index.md)

@@ -1,6 +1,6 @@
 ---
 title: Function 陳述式 (Visual Basic)
-ms.date: 07/20/2015
+ms.date: 05/12/2018
 f1_keywords:
 - vb.Function
 helpviewer_keywords:
@@ -28,11 +28,11 @@ helpviewer_keywords:
 - End keyword [Visual Basic], Function statements
 - Handles keyword [Visual Basic], Function statements
 ms.assetid: a4497077-0f46-4ede-a27f-9e8670df52b9
-ms.openlocfilehash: b4a0c33d6d466975ca5dde1bd20ad2e1a9f560e4
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: 908aa594ecbdd8ae2ec5a06de8181a1b16bb7e40
+ms.sourcegitcommit: 22c3c8f74eaa138dbbbb02eb7d720fce87fc30a9
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/04/2018
+ms.lasthandoff: 05/17/2018
 ---
 # <a name="function-statement-visual-basic"></a>Function 陳述式 (Visual Basic)
 名稱、 參數和定義的程式碼會宣告`Function`程序。  
@@ -66,7 +66,9 @@ End Function
   
     -   [Private](../../../visual-basic/language-reference/modifiers/private.md)  
   
-    -   `Protected Friend`  
+    -   [Protected 的 Friend](../../language-reference/modifiers/protected-friend.md)
+
+    - [受保護的私用](../../language-reference/modifiers/private-protected.md)  
   
      請參閱[存取 Visual Basic 中的層級](../../../visual-basic/programming-guide/language-features/declared-elements/access-levels.md)。  
   

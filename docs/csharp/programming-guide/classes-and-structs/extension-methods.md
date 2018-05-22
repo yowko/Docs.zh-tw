@@ -6,11 +6,11 @@ helpviewer_keywords:
 - extension methods [C#]
 - methods [C#], extension
 ms.assetid: 175ce3ff-9bbf-4e64-8421-faeb81a0bb51
-ms.openlocfilehash: bf25ddda2c7e381f0b43798b28179b18338d71cb
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: e2e63953e130dc83ce83bcdd2f8e9a2ffc7fe5f3
+ms.sourcegitcommit: 89c93d05c2281b4c834f48f6c8df1047e1410980
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/04/2018
+ms.lasthandoff: 05/15/2018
 ---
 # <a name="extension-methods-c-programming-guide"></a>擴充方法 (C# 程式設計手冊)
 擴充方法可讓您在現有類型中「加入」方法，而不需要建立新的衍生類型、重新編譯，或是修改原始類型。 擴充方法是一種特殊的靜態方法，但是會將它們當成擴充類型上的執行個體方法來呼叫。 對於以 C#、F# 和 Visual Basic 撰寫的用戶端程式碼，呼叫擴充方法或是在類型中實際定義的方法，兩者之間並沒有明顯的差別。  
@@ -29,13 +29,13 @@ ms.lasthandoff: 05/04/2018
   
  使用這個 `WordCount` 指示詞就可以將 `using` 擴充方法帶入範圍中：  
   
-```  
+```csharp  
 using ExtensionMethods;  
 ```  
   
  而使用下列語法，就可以從應用程式中呼叫它：  
   
-```  
+```csharp  
 string s = "Hello Extension Methods";  
 int i = s.WordCount();  
 ```  
@@ -46,7 +46,7 @@ int i = s.WordCount();
   
  一般而言，您呼叫擴充方法的頻率將遠高於實作自己的方法。 因為擴充方法是使用執行個體方法語法進行呼叫，所以不需要任何特殊知識就可以從用戶端程式碼使用它們。 若要啟用特定類型的擴充方法，只要針對定義這些方法所在的命名空間加入 `using` 指示詞即可。 例如，若要使用標準查詢運算子，請將下面這個 `using` 指示詞加入至程式碼：  
   
-```  
+```csharp  
 using System.Linq;  
 ```  
   

@@ -1,13 +1,6 @@
 ---
-title: "發出動態方法和組件"
-ms.custom: 
+title: 發出動態方法和組件
 ms.date: 08/30/2017
-ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.technology: dotnet-clr
-ms.tgt_pltfrm: 
-ms.topic: article
 helpviewer_keywords:
 - reflection emit
 - dynamic assemblies
@@ -16,13 +9,11 @@ helpviewer_keywords:
 - assemblies [.NET Framework], emitting dynamic assemblies
 author: rpetrusha
 ms.author: ronpet
-manager: wpickett
-ms.workload: dotnet
-ms.openlocfilehash: c724620c987b2ee871dc282bca0dd3da1a5031bf
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.openlocfilehash: 527da43807a0dbba8f5365c92f566053f10d49f5
+ms.sourcegitcommit: c03eef711abe961a85db2b4d0715257d1524aef6
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 05/08/2018
 ---
 # <a name="emitting-dynamic-methods-and-assemblies"></a>發出動態方法和組件
 本節說明 <xref:System.Reflection.Emit> 命名空間中的一組 Managed 類型，它可讓編譯器或工具在執行階段發出中繼資料和 Microsoft 中繼語言 (MSIL)，以及選擇性地在磁碟上產生可攜式執行檔 (PE)。 指令碼引擎和編譯器是此命名空間的主要使用者。 在本節中，<xref:System.Reflection.Emit> 命名空間所提供的功能稱為反映發出。  

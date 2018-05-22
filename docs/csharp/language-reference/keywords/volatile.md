@@ -1,24 +1,17 @@
 ---
 title: volatile (C# 參考)
 ms.date: 07/20/2015
-ms.prod: .net
-ms.technology:
-- devlang-csharp
-ms.topic: article
 f1_keywords:
 - volatile_CSharpKeyword
 - volatile
 helpviewer_keywords:
 - volatile keyword [C#]
 ms.assetid: 78089bc7-7b38-4cfd-9e49-87ac036af009
-caps.latest.revision: 29
-author: BillWagner
-ms.author: wiwagn
-ms.openlocfilehash: 1cefa39313c3c551e8d05fbc31e528b86c6888d9
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.openlocfilehash: 7f3aafc1255667f2a3917c6e171ce4ddf0343b41
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="volatile-c-reference"></a>volatile (C# 參考)
 `volatile` 關鍵字指出某個欄位可能是由同時執行的多個執行緒所修改。 宣告 `volatile` 的欄位並不適用編譯器最佳化，因為編譯器最佳化是假設由單一執行緒進行存取。 這樣可確保欄位中永遠出現最新的值。  
@@ -47,14 +40,14 @@ ms.lasthandoff: 11/21/2017
  [!code-csharp[csrefKeywordsModifiers#24](../../../csharp/language-reference/keywords/codesnippet/CSharp/volatile_1.cs)]  
   
 ## <a name="example"></a>範例  
- 下列範例示範如何建立和使用輔助或背景工作執行緒，以運用主執行緒的輔助或背景工作執行緒來執行平行處理。 如需多執行緒的背景資訊，請參閱 [Managed 執行緒處理](../../../standard/threading/index.md)和[執行緒](../../programming-guide/concepts/threading/index.md)。  
+ 下列範例示範如何建立和使用輔助或背景工作執行緒，以運用主執行緒的輔助或背景工作執行緒來執行平行處理。 如需多執行緒的背景資訊，請參閱[執行緒處理 (C#)](../../../standard/threading/index.md) 和[控執行緒處理](../../programming-guide/concepts/threading/index.md)。  
   
  [!code-csharp[csProgGuideThreading#1](../../../csharp/language-reference/keywords/codesnippet/CSharp/volatile_2.cs)]  
   
 ## <a name="c-language-specification"></a>C# 語言規格  
  [!INCLUDE[CSharplangspec](~/includes/csharplangspec-md.md)]  
   
-## <a name="see-also"></a>另請參閱  
+## <a name="see-also"></a>請參閱  
  [C# 參考](../../../csharp/language-reference/index.md)  
  [C# 程式設計指南](../../../csharp/programming-guide/index.md)  
  [C# 關鍵字](../../../csharp/language-reference/keywords/index.md)  

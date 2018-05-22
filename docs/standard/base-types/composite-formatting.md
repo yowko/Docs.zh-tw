@@ -1,13 +1,7 @@
 ---
 title: 複合格式
-ms.custom: ''
 ms.date: 03/30/2017
-ms.prod: .net
-ms.reviewer: ''
-ms.suite: ''
 ms.technology: dotnet-standard
-ms.tgt_pltfrm: ''
-ms.topic: article
 dev_langs:
 - csharp
 - vb
@@ -19,18 +13,13 @@ helpviewer_keywords:
 - composite formatting
 - objects [.NET Framework], formatting multiple objects
 ms.assetid: 87b7d528-73f6-43c6-b71a-f23043039a49
-caps.latest.revision: 36
 author: rpetrusha
 ms.author: ronpet
-manager: wpickett
-ms.workload:
-- dotnet
-- dotnetcore
-ms.openlocfilehash: 473669b4aaa0782fec32fb0e2d89875c4ab7a838
-ms.sourcegitcommit: 94d33cadc5ff81d2ac389bf5f26422c227832052
+ms.openlocfilehash: 4922470633f3dec8e2e2f898bdf544f5aa4deded
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/30/2018
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="composite-formatting"></a>複合格式
 .NET 複合格式功能會採用物件清單和複合格式字串作為輸入。 複合格式字串是由混合索引替代符號 (Placeholder) 的固定文字所組成 (這些符號稱為對應至清單內物件的格式項目)。 格式作業產生的結果字串是由原始固定文字所組成，這些固定文字混合了清單中代表物件的字串。  
@@ -123,13 +112,13 @@ ms.lasthandoff: 04/30/2018
  [!code-vb[Formatting.Composite#2](../../../samples/snippets/visualbasic/VS_Snippets_CLR/Formatting.Composite/vb/Escaping1.vb#2)]  
   
 ### <a name="processing-order"></a>處理順序  
- 如果對複合格式方法的呼叫包含的 <xref:System.IFormatProvider> 引數其值不是 `null`，則執行階段會呼叫其 <xref:System.IFormatProvider.GetFormat%2A?displayProperty=nameWithType> 方法要求 <xref:System.ICustomFormatter> 實作。 如果方法能夠傳回 <xref:System.ICustomFormatter> 實作，則會將它快取以供日後使用。  
+ 如果對複合格式方法的呼叫包含的 <xref:System.IFormatProvider> 引數其值不是 `null`，則執行階段會呼叫其 <xref:System.IFormatProvider.GetFormat%2A?displayProperty=nameWithType> 方法要求 <xref:System.ICustomFormatter> 實作。 如果該方法能夠傳回 <xref:System.ICustomFormatter> 實作，它會快取長達複合格式方法的呼叫持續時間。
   
- 參數清單中每個對應至格式項目的值都會藉由執行下列步驟轉換為字串。 如果在前三個步驟中有任何條件成立，則會在該步驟傳回值的字串表示，而不會再執行後續步驟。  
+ 參數清單中每個對應於格式項目的值都會轉換為字串，如下所示：  
   
-1.  如果要格式化的值是 `null`，則會傳回空字串 ("")。  
+1.  如果要格式化的值是 `null`，則會傳回空字串 <xref:System.String.Empty?displayProperty=nameWithType>。  
   
-2.  如果可以使用 <xref:System.ICustomFormatter> 實作，則執行階段會呼叫其 <xref:System.ICustomFormatter.Format%2A> 方法。 它會將格式項目的 *formatString<xref:System.IFormatProvider> 值 (如果有的話) 傳遞給方法；如果沒有，則會將*  連同 `null` 實作一起傳遞。  
+2.  如果可以使用 <xref:System.ICustomFormatter> 實作，則執行階段會呼叫其 <xref:System.ICustomFormatter.Format%2A> 方法。 它會將格式項目的 *formatString* 值 (如果有的話) 傳遞給方法；如果沒有，則會將 `null` 連同 <xref:System.IFormatProvider> 實作一起傳遞。 如果 <xref:System.ICustomFormatter.Format%2A?displayProperty=nameWithType> 方法呼叫傳回 `null`，則會繼續執行到下一個步驟；否則，會傳回 <xref:System.ICustomFormatter.Format%2A?displayProperty=nameWithType> 呼叫的結果。
   
 3.  如果值實作 <xref:System.IFormattable> 介面，則會呼叫介面的 <xref:System.IFormattable.ToString%28System.String%2CSystem.IFormatProvider%29> 方法。 如果格式項目中有 *formatString* 值的話，就會將該值傳遞給方法；如果沒有的話，則會傳遞 `null`。 <xref:System.IFormatProvider> 引數的判斷如下：  
   

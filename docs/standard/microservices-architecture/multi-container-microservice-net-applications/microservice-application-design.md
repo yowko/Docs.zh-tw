@@ -1,21 +1,14 @@
 ---
 title: 設計微服務導向應用程式
 description: 容器化 .NET 應用程式的 .NET 微服務架構 | 設計微服務導向應用程式
-keywords: Docker, 微服務, ASP.NET, 容器
 author: CESARDELATORRE
 ms.author: wiwagn
 ms.date: 05/26/2017
-ms.prod: .net-core
-ms.technology: dotnet-docker
-ms.topic: article
-ms.workload:
-- dotnet
-- dotnetcore
-ms.openlocfilehash: 116ddb44655f0a9708a6496cbe7fb4fbc608300b
-ms.sourcegitcommit: c883637b41ee028786edceece4fa872939d2e64c
-ms.translationtype: MT
+ms.openlocfilehash: a5107e979dc2101380cf848dc574033caf750fd9
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 03/26/2018
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="designing-a-microservice-oriented-application"></a>設計微服務導向應用程式
 
@@ -85,7 +78,7 @@ ms.lasthandoff: 03/26/2018
 
 -   非同步事件型通訊。 這會透過事件匯流排來進行，以在微服務之間傳播更新或與外部應用程式整合。 事件匯流排可以使用任何傳訊代理程式基礎結構技術 (例如 RabbitMQ)，或使用高階服務匯流排 (例如 Azure 服務匯流排、NServiceBus、MassTransit 或 Brighter) 來實作。
 
-應用程式會部署為一組容器形式的微服務。 用戶端應用程式可以與這些容器通訊，也可以在微服務之間通訊。 如前所述，此初始架構使用用戶端與微服務直接通訊架構，這表示用戶端應用程式可以對每個微服務直接提出要求。 每個微服務都有公用端點，例如 https://servicename.applicationname.companyname。 如有需要，每個微服務可以使用不同的 TCP 連接埠。 在生產環境中，該 URL 會對應至微服務的負載平衡器，這會在可用的微服務執行個體之間散發要求。
+應用程式會部署為一組容器形式的微服務。 用戶端應用程式可以與這些容器通訊，也可以在微服務之間通訊。 如前所述，此初始架構使用用戶端與微服務直接通訊架構，這表示用戶端應用程式可以對每個微服務直接提出要求。 每個微服務都有一個公用端點，例如 https://servicename.applicationname.companyname。 如有需要，每個微服務可以使用不同的 TCP 連接埠。 在生產環境中，該 URL 會對應至微服務的負載平衡器，這會在可用的微服務執行個體之間散發要求。
 
 **eShopOnContainers 中的 API 閘道與直接通訊的重要注意事項。** 如本指南的＜架構＞一節中所述，當您建置大型且複雜的微服務架構應用程式時，用戶端與微服務直接通訊架構可能會有缺點。 但它對小型應用程式可能就已足夠 (例如在 eShopOnContainers 應用程式中)，其目標主要在於更輕鬆開始使用 Docker 容器應用程式，而且不想要建立可能會影響微服務開發自主性的單一整合型 API 閘道。
 

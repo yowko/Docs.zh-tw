@@ -1,24 +1,17 @@
 ---
 title: 格式化數值結果表 (C# 參考)
 ms.date: 07/20/2015
-ms.prod: .net
-ms.technology:
-- devlang-csharp
-ms.topic: article
 helpviewer_keywords:
 - formatting [C#]
 - numeric formatting [C#]
 - String.Format method
 - Console.Write method
 ms.assetid: 120ba537-4448-4c62-8676-7a8fdd98f496
-caps.latest.revision: 14
-author: BillWagner
-ms.author: wiwagn
-ms.openlocfilehash: d389703c2d82d74760b99059201cb634849aa433
-ms.sourcegitcommit: 935d5267c44f9bce801468ef95f44572f1417e8c
+ms.openlocfilehash: cc215971d63a0ee61eb25ac45834a81fbbc50b96
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 03/28/2018
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="formatting-numeric-results-table-c-reference"></a>格式化數值結果表 (C# 參考)
 您可以使用 <xref:System.String.Format%2A?displayProperty=nameWithType> 方法、透過會呼叫 `String.Format` 的 <xref:System.Console.Write%2A?displayProperty=nameWithType> 或 <xref:System.Console.WriteLine%2A?displayProperty=nameWithType> 方法，或使用[字串內插補點](../tokens/interpolated.md)來格式化數值結果。 使用格式字串來指定格式。 下表包含支援的標準格式字串。 格式字串的格式如下︰`Axx`，其中 `A` 是格式規範，而 `xx` 是有效位數規範。 格式規範控制套用到數值之格式的類型，而有效位數規範控制格式化輸出的有效位數或小數位數。 有效位數規範的值範圍是從 0 到 99。  

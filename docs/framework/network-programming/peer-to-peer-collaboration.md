@@ -1,27 +1,18 @@
 ---
-title: "對等共同作業"
-ms.custom: 
+title: 對等共同作業
 ms.date: 03/30/2017
-ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.tgt_pltfrm: 
-ms.topic: article
 ms.assetid: b6216d88-bccb-4a59-9f1c-9f751708e811
-caps.latest.revision: 
 author: mcleblanc
 ms.author: markl
 manager: markl
-ms.workload:
-- dotnet
-ms.openlocfilehash: 5060e12fb6a9fcc1bac1dfe6ccdcbaea9f2e6385
-ms.sourcegitcommit: cf22b29db780e532e1090c6e755aa52d28273fa6
-ms.translationtype: MT
+ms.openlocfilehash: a933c81105399a9411fcb749a06e47bf769cf532
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 02/01/2018
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="peer-to-peer-collaboration"></a>對等共同作業
-對等網路使用功能相當強大的電腦 (個人電腦)，而這些電腦存在於網際網路邊緣，並且不只是用於進行用戶端運算工作。 現代的個人電腦 （電腦） 有非常快速的處理器、 大量的記憶體和大型硬碟，而這些做完全利用執行常見的運算工作，例如電子郵件及網頁瀏覽時。 現代電腦可以輕鬆地作為許多類型之應用程式的用戶端和伺服器 (對等)。  
+對等網路使用功能相當強大的電腦 (個人電腦)，而這些電腦存在於網際網路邊緣，並且不只是用於進行用戶端運算工作。 現代個人電腦 (PC) 具有極快速的處理器、大量記憶體和大型硬碟，但在執行電子郵件和網頁瀏覽這類常見運算工作時並未完全利用到它們。 現代電腦可以輕鬆地作為許多類型之應用程式的用戶端和伺服器 (對等)。  
   
 -   對等共同作業基礎結構是簡化的 Microsoft Windows 對等基礎結構實作，其利用 Windows Vista 和更新版本的平台中的「近端分享」服務。 雖然它也可以服務網際網路端點或連絡人，但最適合用於「近端分享」服務在其上運作之子網路內具對等功能的應用程式。 它會合併 Live Messenger 和其他 Live 感知應用程式所使用的常見連絡人管理員，以判斷連絡端點、可用性和目前狀態。  
   

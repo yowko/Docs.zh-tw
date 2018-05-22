@@ -1,24 +1,17 @@
 ---
-title: "System.Delegate 和 `delegate` 關鍵字"
-description: "了解 .NET Framework 中支援委派的類別，以及這些類別與 'delegate' 關鍵字的對應關係。"
-keywords: .NET, .NET Core
-author: BillWagner
-ms.author: wiwagn
+title: System.Delegate 和 `delegate` 關鍵字
+description: 了解 .NET Framework 中支援委派的類別，以及這些類別與 'delegate' 關鍵字的對應關係。
 ms.date: 06/20/2016
-ms.topic: article
-ms.prod: .net
-ms.technology: devlang-csharp
-ms.devlang: csharp
 ms.assetid: f3742fda-13c2-4283-8966-9e21c2674393
-ms.openlocfilehash: 09c7da7c780389d3819cf23a533cc425b43ad5ff
-ms.sourcegitcommit: bbde43da655ae7bea1977f7af7345eb87bd7fd5f
+ms.openlocfilehash: 2265d081b884a19cda6fc9d80a0f621a30c87e2a
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/21/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="systemdelegate-and-the-delegate-keyword"></a>System.Delegate 和 `delegate` 關鍵字
 
-[上一個](delegates-overview.md)
+[上一步](delegates-overview.md)
 
 本文將介紹 .NET Framework 中支援委派的類別，以及這些類別與 `delegate` 關鍵字的對應關係。
 
@@ -120,7 +113,7 @@ Sort() 範例通常會將單一的目標方法附加至委派。 即便如此，
 
 ## <a name="delegate-and-multicastdelegate-classes"></a>Delegate 和 MulticastDelegate 類別
 
-上述語言支援提供使用委派時通常需要的功能與支援。 這些功能會根據.NET Core framework 中的兩個類別：<xref:System.Delegate>和<xref:System.MulticastDelegate>。
+上述語言支援提供使用委派時通常需要的功能與支援。 這些功能都是建置在 .NET Core Framework 的 <xref:System.Delegate> 和 <xref:System.MulticastDelegate> 兩個類別之上。
 
 `System.Delegate` 類別和其單一的直接子類別 `System.MulticastDelegate` 提供的架構支援，可用來建立委派、將方法註冊為委派目標，以及叫用註冊為委派目標的所有方法。 
 

@@ -1,21 +1,14 @@
 ---
-title: "設計領域模型層中的驗證"
-description: "容器化 .NET 應用程式的 .NET 微服務架構 | 設計領域模型層中的驗證"
-keywords: "Docker, 微服務, ASP.NET, 容器"
+title: 設計領域模型層中的驗證
+description: 容器化 .NET 應用程式的 .NET 微服務架構 | 設計領域模型層中的驗證
 author: CESARDELATORRE
 ms.author: wiwagn
 ms.date: 05/26/2017
-ms.prod: .net-core
-ms.technology: dotnet-docker
-ms.topic: article
-ms.workload:
-- dotnet
-- dotnetcore
-ms.openlocfilehash: e7a111ce20039f8c87d3c3d63efdeaf38a4e1e96
-ms.sourcegitcommit: e7f04439d78909229506b56935a1105a4149ff3d
+ms.openlocfilehash: ce3cb0c79cbd492224ce1d4ecb25cd02062f11cd
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 12/23/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="designing-validations-in-the-domain-model-layer"></a>設計領域模型層中的驗證
 
@@ -121,20 +114,20 @@ public class Product : Entity
 -   **Rick Anderson，新增驗證**
     [*https://docs.microsoft.com/aspnet/core/tutorials/first-mvc-app/validation*](https://docs.microsoft.com/aspnet/core/tutorials/first-mvc-app/validation)
 
--   **Martin Fowler：Replacing Throwing Exceptions with Notification in Validations**
-    [*https://martinfowler.com/articles/replaceThrowWithNotification.html*](https://martinfowler.com/articles/replaceThrowWithNotification.html) (在驗證中將擲回例外狀況取代為通知)
+-   **Martin Fowler：在驗證中將擲回例外狀況取代為通知**
+    [*https://martinfowler.com/articles/replaceThrowWithNotification.html*](https://martinfowler.com/articles/replaceThrowWithNotification.html)
 
--   **Specification and Notification Patterns**
-    [*https://www.codeproject.com/Tips/790758/Specification-and-Notification-Patterns*](https://www.codeproject.com/Tips/790758/Specification-and-Notification-Patterns) (規格和通知模式)
+-   **規格和通知模式**
+    [*https://www.codeproject.com/Tips/790758/Specification-and-Notification-Patterns*](https://www.codeproject.com/Tips/790758/Specification-and-Notification-Patterns)
 
--   **Lev Gorodinski：Validation in Domain-Driven Design (DDD)**
-    [*http://gorodinski.com/blog/2012/05/19/validation-in-domain-driven-design-ddd/*](http://gorodinski.com/blog/2012/05/19/validation-in-domain-driven-design-ddd/) (領域驅動設計 (DDD) 中的驗證)
+-   **Lev Gorodinski：網域導向設計 (DDD) 中的驗證**
+    [*http://gorodinski.com/blog/2012/05/19/validation-in-domain-driven-design-ddd/*](http://gorodinski.com/blog/2012/05/19/validation-in-domain-driven-design-ddd/)
 
--   **Colin Jack：Domain Model Validation**
-    [*http://colinjack.blogspot.com/2008/03/domain-model-validation.html*](http://colinjack.blogspot.com/2008/03/domain-model-validation.html) (領域模型驗證)
+-   **Colin Jack：領域模型驗證**
+    [*http://colinjack.blogspot.com/2008/03/domain-model-validation.html*](http://colinjack.blogspot.com/2008/03/domain-model-validation.html)
 
--   **Jimmy Bogard：Validation in a DDD world**
-    [*https://lostechies.com/jimmybogard/2009/02/15/validation-in-a-ddd-world/*](https://lostechies.com/jimmybogard/2009/02/15/validation-in-a-ddd-world/) (DDD 世界中的驗證)
+-   **Jimmy Bogard：DDD 世界中的驗證**
+    [*https://lostechies.com/jimmybogard/2009/02/15/validation-in-a-ddd-world/*](https://lostechies.com/jimmybogard/2009/02/15/validation-in-a-ddd-world/)
 
 
 >[!div class="step-by-step"]

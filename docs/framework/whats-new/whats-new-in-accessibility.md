@@ -1,11 +1,7 @@
 ---
-title: ".NET Framework 協助工具的新功能"
+title: .NET Framework 協助工具的新功能
 ms.custom: updateeachrelease
-ms.date: 10/13/2017
-ms.prod: .net-framework
-ms.technology:
-- dotnet-clr
-ms.topic: article
+ms.date: 04/10/2018
 dev_langs:
 - csharp
 - vb
@@ -13,20 +9,28 @@ helpviewer_keywords:
 - what's new [.NET Framework]
 author: rpetrusha
 ms.author: ronpet
-manager: wpickett
-ms.workload:
-- dotnet
-ms.openlocfilehash: 5f17550bc0cc4919f00dc93c8e92d258b38c4f76
-ms.sourcegitcommit: 1c0b0f082b3f300e54b4d069b317ac724c88ddc3
+ms.openlocfilehash: 7fe7e15e482028b9988d7e560b98be19b6c07427
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 03/16/2018
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="whats-new-in-accessibility-in-the-net-framework"></a>.NET Framework 協助工具的新功能
 
 .NET Framework 的目標在於讓使用者更容易存取應用程式。 協助工具功能可讓應用程式提供適當的輔助技術使用者體驗。 從 .NET Framework 4.7.1 開始，.NET Framework 包含大量協助工具改善，可讓開發人員建立可存取的應用程式。 
 
-針對以 .NET Framework 4.7.1 或更新版本為目標的應用程式，預設會啟用新的協助工具功能。 此外，以舊版 .NET Framework 為目標但在 .NET Framework 4.7.1 或更新版本上執行的應用程式可以退出舊版協助工具行為 (進而加入 .NET Framework 4.7.1 中的協助工具改善)，方法是將下列參數新增至應用程式組態檔之 [`<runtime>`](~/docs/framework/configure-apps/file-schema/runtime/index.md) 區段中的 [`<AppContextSwitchOverrides>`](~/docs/framework/configure-apps/file-schema/runtime/appcontextswitchoverrides-element.md) 項目。 
+## <a name="accessibility-switches"></a>協助工具參數
+
+您可以設定您的應用程式，以選擇加入協助工具功能，如果它以 .NET Framework 4.7 或較早版本為目標但是在 .NET Framework 4.7.1 或更新版本上執行的話。 您也可以設定應用程式以使用舊版的功能 (且不利用協助工具功能)，如果它以 .NET Framework 4.7.1 或更新版本為目標的話。 包含協助工具功能的每個 .NET Framework 版本都有版本特定的協助工具參數，您可以新增到應用程式組態檔 [`<runtime>`](~/docs/framework/configure-apps/file-schema/runtime/index.md) 區段中的 [`<AppContextSwitchOverrides>` ](~/docs/framework/configure-apps/file-schema/runtime/appcontextswitchoverrides-element.md) 項目。 以下是支援的參數：
+
+|版本|參數|
+|---|---|
+|.NET Framework 4.7.1|"Switch.UseLegacyAccessibilityFeatures"|
+|.NET Framework 4.7.2|"Switch.UseLegacyAccessibilityFeatures.2"|
+
+### <a name="taking-advantage-of-accessibility-enhancements"></a>利用協助工具增強功能
+
+針對以 .NET Framework 4.7.1 或更新版本為目標的應用程式，預設會啟用新的協助工具功能。 此外，以舊版 .NET Framework 為目標但在 .NET Framework 4.7.1 或更新版本上執行的應用程式可以退出舊版協助工具行為 (進而利用協助工具增強功能)，方法是新增參數至應用程式組態檔之 [`<runtime>`](~/docs/framework/configure-apps/file-schema/runtime/index.md) 區段中的 [`<AppContextSwitchOverrides>`](~/docs/framework/configure-apps/file-schema/runtime/appcontextswitchoverrides-element.md) 項目，並將其值設定為 `false`。 以下顯示如何加入 .NET Framework 4.7.1 中引進的協助工具增強功能：
 
 ```xml
 <runtime>
@@ -35,23 +39,117 @@ ms.lasthandoff: 03/16/2018
 </runtime>
 ```
 
-同樣地，以開頭為 4.7.1 的 .NET Framework 版本為目標的應用程式可以停用協助工具功能，方法是將下列參數新增至應用程式組態檔之 [`<runtime>`](~/docs/framework/configure-apps/file-schema/runtime/index.md) 區段中的 [`<AppContextSwitchOverrides>`](~/docs/framework/configure-apps/file-schema/runtime/appcontextswitchoverrides-element.md) 項目。 
+如果您選擇加入 .NET Framework 較新版本中的協助工具功能，您必須同時明確加入來自舊版 .NET Framework 的功能。 設定您的應用程式以同時利用 .NET Framework 4.7.1 和 4.7.2 的協助工具改善功能，需要下列 [`<AppContextSwitchOverrides>` ](~/docs/framework/configure-apps/file-schema/runtime/appcontextswitchoverrides-element.md) 項目：
 
 ```xml
 <runtime>
     <!-- AppContextSwitchOverrides value attribute is in the form of 'key1=true|false;key2=true|false  -->
-    <AppContextSwitchOverrides value="Switch.UseLegacyAccessibilityFeatures=true" />
+    <AppContextSwitchOverrides value="Switch.UseLegacyAccessibilityFeatures=false;Switch.UseLegacyAccessibilityFeatures.2=false" />
 </runtime>
 ```
+
+### <a name="restoring-legacy-behavior"></a>還原舊版行為
+
+以從 4.7.1 開始的 .NET Framework 版本為目標的應用程式，可以停用協助工具功能，方法是新增參數至應用程式組態檔之 [`<runtime>`](~/docs/framework/configure-apps/file-schema/runtime/index.md) 區段中的 [`<AppContextSwitchOverrides>`](~/docs/framework/configure-apps/file-schema/runtime/appcontextswitchoverrides-element.md) 項目，並將其值設定為 `true`。 例如，下列組態會選擇退出 .NET Framework 4.7.2 中引進的協助工具功能：  
+
+```xml
+<runtime>
+    <!-- AppContextSwitchOverrides value attribute is in the form of 'key1=true|false;key2=true|false  -->
+    <AppContextSwitchOverrides value="Switch.UseLegacyAccessibilityFeatures.2=true" />
+</runtime>
+```
+
+## <a name="whats-new-in-accessibility-in-the-net-framework-472"></a>.NET Framework 4.7.2 協助工具的新功能
+
+.NET Framework 4.7.2 包含下列領域的新協助工具功能：
+
+- [Windows Forms](#winforms472)
+
+- [Windows Presentation Foundation (WPF)](#wpf472)
+
+<a name="winforms472"></a>
+### <a name="windows-forms"></a>Windows Forms
+
+**高對比佈景主題中的作業系統定義色彩**
+
+從 .NET Framework 4.7.2 開始，Windows Forms 在高對比佈景主題中使用作業系統所定義的色彩。 這會影響下列控制項：
+
+- <xref:System.Windows.Forms.ToolStripDropDownButton> 控制項的下拉式箭號。
+
+- <xref:System.Windows.Forms.ButtonBase.FlatStyle> 設成 <xref:System.Windows.Forms.FlatStyle.Flat?displayProperty=nameWithType> 或 <xref:System.Windows.Forms.FlatStyle.Popup?displayProperty=nameWithType> 的 <xref:System.Windows.Forms.Button>、<xref:System.Windows.Forms.RadioButton> 和 <xref:System.Windows.Forms.CheckBox>。 以往，選取的文字和背景色彩不會呈現對比，因此難以閱讀。
+
+- 包含在 <xref:System.Windows.Forms.GroupBox> 內的控制項，且其 <xref:System.Windows.Forms.Control.Enabled> 屬性設定為 `false`。
+ 
+- <xref:System.Windows.Forms.ToolStripButton>、<xref:System.Windows.Forms.ToolStripComboBox> 和 <xref:System.Windows.Forms.ToolStripDropDownButton> 控制項，它們在高對比模式下有更高的亮度對比率。
+
+- <xref:System.Windows.Forms.DataGridViewLinkCell> 的 <xref:System.Windows.Forms.DataGridViewLinkCell.LinkColor> 屬性。
+
+**朗讀程式增強功能**
+
+從 .NET Framework 4.7.2 開始，朗讀程式的支援增強功能如下：
+
+- 在播報 <xref:System.Windows.Forms.ToolStripMenuItem> 的文字時，現已會播報 <xref:System.Windows.Forms.ToolStripMenuItem.ShortcutKeys?displayProperty=nameWithType> 屬性的值。 
+
+- 當 <xref:System.Windows.Forms.ToolStripMenuItem> 的 <xref:System.Windows.Forms.Control.Enabled> 屬性設定為 `false` 時，會指明該情況。
+
+- 當 <xref:System.Windows.Forms.ListView.CheckBoxes?displayProperty=nameWithType> 屬性設定為 `true` 時，會提供核取方塊狀態的回應。
+
+- 朗讀程式掃描模式的焦點順序，與 ClickOnce 下載對話視窗中所看見的控制項順序已一致。
+
+**DataGridView 改善**
+
+從 .NET Framework 4.7.2 開始，<xref:System.Windows.Forms.DataGridView> 控制項已經引進下列協助工具改善：
+
+- 資料列可使用鍵盤排序。 使用者可使用 F3 鍵，依目前的資料行排序。
+
+- 當 <xref:System.Windows.Forms.DataGridView.SelectionMode?displayProperty=nameWithType> 設定為 <xref:System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect?displayProperty=nameWithType> 時，資料行標頭會變更色彩，以在目前的資料列中指出使用者滑過儲存格時所在的資料行位置。
+
+- <xref:System.Windows.Forms.DataGridViewLinkCell.DataGridViewLinkCellAccessibleObject?displayProperty=nameWithType> 的 <xref:System.Windows.Forms.AccessibleObject.Parent?displayProperty=nameWithType> 屬性會傳回正確的父控制項。
+
+**改善的視覺提示**
+
+- <xref:System.Windows.Forms.ButtonBase.Text> 屬性為空白的控制項 <xref:System.Windows.Forms.RadioButton> 與 <xref:System.Windows.Forms.CheckBox>，會於接收到焦點時顯示焦點指標。
+
+**已改進屬性方格支援**
+
+- <xref:System.Windows.Forms.PropertyGrid> 控制項子項目現在只有在已啟用 PropertyGrid 項目的情況下，才會傳回 <xref:System.Windows.Automation.ValuePattern.IsReadOnlyProperty> 屬性的 `true`。
+
+- <xref:System.Windows.Forms.PropertyGrid> 控制項子項目只有在使用者可變更 PropertyGrid 項目的情況下，才會傳回 <xref:System.Windows.Automation.AutomationElement.IsEnabledProperty> 屬性的 `false`。
+
+**改善的鍵盤導覽**
+
+- <xref:System.Windows.Forms.ToolStripPanel.TabStop> 屬性設定為 `true` 的 <xref:System.Windows.Forms.ToolStripPanel> 內含焦點時，<xref:System.Windows.Forms.ToolStripButton> 控制項允許焦點
+
+<a name="wpf472"></a>
+### <a name="windows-presentation-foundation-wpf"></a>Windows Presentation Foundation (WPF)
+
+**CheckBox 和 RadioButton 控制項的變更**
+
+在 .NET Framework 4.7.1 和舊版的傳統和高對比佈景主題中，WPF <xref:System.Windows.Controls.CheckBox?displayProperty=nameWIthType> 和 <xref:System.Windows.Controls.RadioButton?displayProperty=nameWIthType> 控制項的焦點視覺效果不一致且不正確。  當控制項沒有任何內容集時，會發生上述問題。  這可能會讓人混淆佈景主題之間的轉換，也看不清楚焦點視覺效果。
+
+現在，.NET Framework 4.7.2 的這些視覺效果在各佈景主題之間會更一致；在傳統和高對比佈景主題中也可以看得更清楚。
+
+**裝載於 WPF 應用程式的 WinForms 控制項**
+
+對於 .NET Framework 4.7.1 和舊版中，裝載於 WPF 應用程式的 WinForms 控制項，使用者無法按 Tab 鍵移出 WinForms 層，如果該層的第一個或最後一個控制項是 WPF <xref:System.Windows.Forms.Integration.ElementHost> 控制項。 在 .NET Framework 4.7.2 中，使用者現在能按 Tab 鍵移出 WinForms 層。
+
+不過，依賴焦點絕不會逸出 WinForms 層的自動化應用程式可能不再如預期運作。
 
 ## <a name="whats-new-in-accessibility-in-the-net-framework-471"></a>.NET Framework 4.7.1 協助工具的新功能
 
 .NET Framework 4.7.1 包含下列領域的新協助工具功能：
 
-- [Windows Presentation Foundation (WPF)](#windows-presentation-foundation-wpf)
+- [Windows Presentation Foundation (WPF)](#wpf471)
 
-- [Windows Forms](#windows-forms-accessibility-improvements)
+- [Windows Forms](#winforms471)
 
+- [ASP.NET Web 控制項](#aspnet471)
+
+- [.NET SDK 工具](#tools471)
+
+- [Windows Workflow Foundation (WF) 工作流程設計工具](#wf471)
+
+<a name="wpf471"></a>
 ### <a name="windows-presentation-foundation-wpf"></a>Windows Presentation Foundation (WPF)
 
 **螢幕助讀程式改善**
@@ -64,7 +162,7 @@ ms.lasthandoff: 03/16/2018
  
 - 從 .NET Framework 4.7.1 開始，螢幕助讀程式會宣告可編輯 <xref:System.Windows.Controls.ComboBox> 的名稱。
 
-- 在 .NET Framework 4.7 和舊版本中，<xref:System.Windows.Controls.PasswordBox> 控制項已宣告為「檢視中沒有項目」或具有不正確的行為。 從 .NET Framework 4.7.1 開始，已修正此問題。     
+- 在 .NET Framework 4.7 和舊版本中，<xref:System.Windows.Controls.PasswordBox> 控制項已宣告為「檢視中沒有項目」或具有不正確的行為。 從 .NET Framework 4.7.1 開始，已修正此問題。
 
 **UIAutomation LiveRegion 支援**
 
@@ -192,6 +290,7 @@ peer.RaiseAutomationEvent(AutomationEvents.LiveRegionChanged)
 
 如需 .NET Framework 4.7.1 中 WPF 協助工具改善的詳細資訊；請參閱 [WPF 中的協助工具改善](../migration-guide/retargeting/4.7-4.7.1.md#accessibility-improvements-in-wpf)。
 
+<a name="winforms471"></a>
 ## <a name="windows-forms-accessibility-improvements"></a>Windows Forms 協助工具改善
 
 在 .NET Framework 4.7.1 中，Windows Forms (WinForms) 包含下列領域的協助工具變更。
@@ -257,6 +356,89 @@ peer.RaiseAutomationEvent(AutomationEvents.LiveRegionChanged)
 - 更適當地報告控制項類型。
 - 改善的朗讀程式行為。
  
+<a name="aspnet471"></a>
+## <a name="aspnet-web-controls"></a>ASP.NET Web 控制項
+
+從 .NET Framework 4.7.1 和 Visual Studio 2017 15.3 開始，ASP.NET 已經改善 ASP.NET Web 控制項如何搭配 Visual Studio 中的協助工具技術。 變更包括下列項目：
+
+- 在控制項中，實作遺漏 UI 協助工具模式的變更，例如在 [詳細資料檢視精靈] 的 [新增欄位] 對話方塊或 [ListView 精靈] 的 [設定 ListView] 對話方塊。
+
+- 改善高對比模式顯示的變更，例如**資料頁面巡覽區欄位編輯器**。
+
+- 改善控制項鍵盤瀏覽體驗的變更，例如 DataPager 控制項 [編輯頁面巡覽區欄位精靈] 的 [欄位] 對話方塊、[設定 ObjectContext] 對話方塊，或 [設定資料來源精靈] 的 [設定資料選取項目] 對話方塊。
+
+<a name="tools471"></a>
+## <a name="net-sdk-tools"></a>.NET SDK 工具
+
+[組態編輯器工具 (SvcConfigEditor.exe)](../wcf/configuration-editor-tool-svcconfigeditor-exe.md) 和[服務追蹤檢視器工具 (SvcTraceViewer.exe)](../wcf/service-trace-viewer-tool-svctraceviewer-exe.md) 藉由修正各種協助工具問題來改善。 其中大部分是小問題，例如未定義名稱，或未正確實作某些 UI 自動化模式。 雖然許多使用者並未注意到這些不正確的值，但使用螢幕助讀程式等輔助技術的客戶會發現這些 SDK 工具更易於存取。 
+
+這些增強功能變更一些先前的行為，例如鍵盤焦點的順序。
+
+<a name="wf471"></a>
+## <a name="windows-workflow-foundation-wf-workflow-designer"></a>Windows Workflow Foundation (WF) 工作流程設計工具
+
+在工作流程設計工具中的協助工具變更包括下列各項：
+
+- 在某些控制項中，定位順序變更為由左至右及由上至下：
+
+  - 設定 <xref:System.ServiceModel.Activities.InitializeCorrelation> 活動之關聯性資料的初始化關聯性視窗。
+
+  - <xref:System.ServiceModel.Activities.Receive>、<xref:System.ServiceModel.Activities.Send>、<xref:System.ServiceModel.Activities.SendReply> 和 <xref:System.ServiceModel.Activities.ReceiveReply> 活動的內容定義視窗。
+
+- 可透過鍵盤使用多個功能：
+
+  - 編輯活動的屬性時，如果第一次將焦點放在屬性群組，可以透過鍵盤將其摺疊。
+
+  - 可透過鍵盤存取警告圖示。
+
+  - 可透過鍵盤存取 [屬性] 視窗中的 [其他屬性] 按鈕。
+
+  - 鍵盤使用者可以存取工作流程設計工具之 [引數] 和 [變數] 窗格中的標頭項目。
+
+- 在以下這類情況發生時，已改善具有焦點之項目的可見性：
+
+  - 在工作流程設計工具與活動設計工具所使用的資料格中新增資料列。
+
+  - 使用 Tab 鍵循環顯示 <xref:System.ServiceModel.Activities.ReceiveReply> 和 <xref:System.ServiceModel.Activities.SendReply> 活動的欄位。
+
+  - 設定變數或引數的預設值
+
+- 螢幕助讀程式現在可以正確辨識：
+
+  - 工作流程設計工具中設定的中斷點。
+
+  - <xref:System.Activities.Statements.FlowSwitch%601>、<xref:System.Activities.Statements.FlowDecision> 和 <xref:System.ServiceModel.Activities.CorrelationScope> 活動。
+  - <xref:System.ServiceModel.Activities.Receive> 活動的內容。
+
+  - <xref:System.Activities.Statements.InvokeMethod> 活動的目標類型。
+
+  - <xref:System.Activities.Statements.TryCatch> 活動中的例外狀況下拉式方塊和 Finally 區段。
+
+  - 傳訊活動 (<xref:System.ServiceModel.Activities.Receive>、<xref:System.ServiceModel.Activities.Send>、<xref:System.ServiceModel.Activities.SendReply> 和 <xref:System.ServiceModel.Activities.ReceiveReply>) 中的 [訊息類型] 下拉式方塊、[新增關聯性初始設定式] 視窗、[內容定義] 視窗和 [CorrelatesOn 定義] 視窗。
+
+  - 狀態機器轉換和轉換目的地。
+
+  - <xref:System.Activities.Statements.FlowDecision> 活動的註釋和連接器。
+
+  - 活動的操作 (右鍵) 功能表。
+
+  - 屬性方格中的屬性值編輯器、[清除搜尋] 按鈕、[依分類] 及 [字母順序] 排序按鈕和 [運算式編輯器] 對話方塊。
+
+  - 工作流程設計工具中的顯示比例百分比。
+
+  - <xref:System.Activities.Statements.Parallel> 和 <xref:System.Activities.Statements.Pick> 活動中的分隔符號。
+
+  - <xref:System.Activities.Statements.InvokeDelegate> 活動。
+
+  - 字典活動 (`Microsoft.Activities.AddToDictionary<TKey,TValue>`、`Microsoft.Activities.RemoveFromDictionary<TKey,TValue>` 等) 的 [選取類型] 視窗。
+
+  - [瀏覽並選取 .NET 類型] 視窗。
+
+  - 工作流程設計工具中的階層連結。
+
+- 選擇高對比佈景主題的使用者會看到工作流程設計工具和其控制項在可見性方面的許多改善，例如項目之間的更佳對比比例以及用於焦點項目的更明顯選取方塊。
+
 ## <a name="see-also"></a>請參閱
-[.NET Framework 的新功能](whats-new.md)   
+
+[.NET Framework 的新功能](whats-new.md)
  

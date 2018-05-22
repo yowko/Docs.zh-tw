@@ -1,8 +1,6 @@
 ---
-title: "網路程式設計-.NET Framework 中的安全性"
+title: 網路程式設計的安全性 - .NET Framework
 ms.date: 03/14/2018
-ms.prod: .net-framework
-ms.topic: article
 helpviewer_keywords:
 - sending data, Internet security
 - protocols, Internet security
@@ -17,22 +15,20 @@ ms.assetid: afb07899-2707-49ab-a57f-e0caf20d0171
 author: mcleblanc
 ms.author: markl
 manager: markl
-ms.workload:
-- dotnet
-ms.openlocfilehash: 2dd4133c31cf0595c06485a76490d78d469a0d38
-ms.sourcegitcommit: 1c0b0f082b3f300e54b4d069b317ac724c88ddc3
-ms.translationtype: MT
+ms.openlocfilehash: a684fd1a7ce8cce52e00511b114cb4905ed0a42b
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 03/16/2018
+ms.lasthandoff: 05/04/2018
 ---
-# <a name="security-in-network-programming"></a>網路程式設計中的安全性
+# <a name="security-in-network-programming"></a>網路程式設計的安全性
 
 .NET Framework <xref:System.Net> 命名空間類別會提供常用網際網路應用程式驗證機制和 .NET Framework 程式碼存取權限的內建支援。  
   
 ## <a name="in-this-section"></a>本節內容
 
-[傳輸層安全性 (TLS) 以.NET Framework 的最佳作法](tls.md)  
-說明使用.NET Framwork TLS 最佳作法。
+[.NET Framework 的傳輸層安全性 (TLS) 最佳做法](tls.md)  
+描述 .NET Framwork 的 TLS 最佳做法。
  
 [使用安全通訊端層](../../../docs/framework/network-programming/using-secure-sockets-layer.md)  
 描述如何使用安全通訊端層 (SSL) 連線。  

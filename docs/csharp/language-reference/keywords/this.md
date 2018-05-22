@@ -8,11 +8,11 @@ f1_keywords:
 helpviewer_keywords:
 - this keyword [C#]
 ms.assetid: d4f827fe-4710-410b-89b8-867dad44b8a3
-ms.openlocfilehash: d26ad1565dc6faf8aba6c971b3a0023bac886775
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: 04496079114be45388926993b67e8f1d3f2e9f15
+ms.sourcegitcommit: 89c93d05c2281b4c834f48f6c8df1047e1410980
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/04/2018
+ms.lasthandoff: 05/15/2018
 ---
 # <a name="this-c-reference"></a>this (C# 參考)
 `this` 關鍵字指的是類別的目前執行個體，也用作擴充方法第一個參數的修飾詞。  
@@ -28,7 +28,7 @@ ms.lasthandoff: 05/04/2018
   
 -   傳遞物件作為其他方法的參數，例如：  
   
-    ```  
+    ```csharp  
     CalcTax(this);  
     ```  
   

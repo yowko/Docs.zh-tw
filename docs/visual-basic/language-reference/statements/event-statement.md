@@ -1,6 +1,6 @@
 ---
 title: Event 陳述式
-ms.date: 07/20/2015
+ms.date: 05/12/2018
 f1_keywords:
 - vb.Event
 - vb.Custom
@@ -18,11 +18,11 @@ helpviewer_keywords:
 - ByRef keyword [Visual Basic], Event statements
 - declaring user-defined events
 ms.assetid: 306ff8ed-74dd-4b6a-bd2f-e91b17474042
-ms.openlocfilehash: 967eedcf1f4d0c9a19775f294167b915cca25a9c
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: d59dc8e7b01612af0e4c8f6c1018269580284c46
+ms.sourcegitcommit: 22c3c8f74eaa138dbbbb02eb7d720fce87fc30a9
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/04/2018
+ms.lasthandoff: 05/17/2018
 ---
 # <a name="event-statement"></a>Event 陳述式
 宣告使用者定義的事件。  
@@ -58,7 +58,7 @@ End Event
 |組件|描述|  
 |---|---|  
 |`attrlist`|選擇性。 套用至此事件的屬性清單。 以逗號分隔多個屬性。 您必須將[屬性清單](../../../visual-basic/language-reference/statements/attribute-list.md)在角括號 ("`<`"和"`>`")。|  
-|`accessmodifier`|選擇性。 指定哪些程式碼可以存取此事件。 可以是下列其中一項：<br /><br /> -   [公用](../../../visual-basic/language-reference/modifiers/public.md)— 任何可以存取宣告它之項目的程式碼可以存取它。<br />-   [受保護的](../../../visual-basic/language-reference/modifiers/protected.md)— 只有在其類別或衍生的類別中的程式碼可以存取它。<br />-   [Friend](../../../visual-basic/language-reference/modifiers/friend.md)— 只有在相同的組件中的程式碼可以存取它。<br />-   [私用](../../../visual-basic/language-reference/modifiers/private.md)— 只有在宣告它的項目中的程式碼可以存取它。<br /><br /> 您可以指定 `Protected Friend` 以存取事件類別、衍生類別或相同組件中的程式碼。|  
+|`accessmodifier`|選擇性。 指定哪些程式碼可以存取此事件。 可以是下列其中一項：<br /><br /> -   [公用](../../../visual-basic/language-reference/modifiers/public.md)— 任何可以存取宣告它之項目的程式碼可以存取它。<br />-   [受保護的](../../../visual-basic/language-reference/modifiers/protected.md)— 只有在其類別或衍生的類別中的程式碼可以存取它。<br />-   [Friend](../../../visual-basic/language-reference/modifiers/friend.md)— 只有在相同的組件中的程式碼可以存取它。<br />-   [私用](../../../visual-basic/language-reference/modifiers/private.md)— 只有在宣告它的項目中的程式碼可以存取它。<br /> -   [Protected Friend](../../language-reference/modifiers/protected-friend.md)-只有事件類別、 衍生的類別或相同組件中的程式碼可以存取它。 <br />- [私用受保護](../../language-reference/modifiers/private-protected.md)-只有事件類別或衍生的類別中相同的組件中的程式碼可以存取它。|  
 |`Shared`|選擇性。 指定此事件與類別或結構的特定執行個體不相關。|  
 |`Shadows`|選擇性。 指出這個事件會在基底類別中重新宣告並隱藏相同名稱的程式設計項目，或一組多載項目。 您可以使用任何其他類型遮蔽任何一種已宣告的項目。<br /><br /> 無法從遮蔽項目的衍生類別內使用遮蔽的項目，除了從無法存取遮蔽項目的位置以外。 例如，如果 `Private` 項目會遮蔽基底類別項目，沒有 `Private` 項目存取權限的程式碼會改為存取基底類別項目。|  
 |`eventname`|必要。 事件的名稱；依照標準變數命名慣例。|  

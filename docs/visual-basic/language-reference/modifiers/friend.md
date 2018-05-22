@@ -10,11 +10,11 @@ helpviewer_keywords:
 - Protected Friend keyword combination
 - Friend keyword [Visual Basic], and Protected
 ms.assetid: b664605e-1c79-4728-b996-aa59c50846bc
-ms.openlocfilehash: 756a18da74ff49cbefaf6a63980302bbcb141713
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: d906fc8ada19f22059da44acbd76dd07dacd4801
+ms.sourcegitcommit: 22c3c8f74eaa138dbbbb02eb7d720fce87fc30a9
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/04/2018
+ms.lasthandoff: 05/17/2018
 ---
 # <a name="friend-visual-basic"></a>Friend (Visual Basic)
 指定一或多個宣告的程式設計項目只能從包含其宣告的組件內存取。  
@@ -27,9 +27,10 @@ ms.lasthandoff: 05/04/2018
  `Friend` 存取通常是慣用的應用程式的程式設計項目層級和`Friend`是介面、 模組、 類別或結構的層級的預設存取權。  
   
  您可以使用`Friend`只在模組、 介面或命名空間層級。 因此，宣告內容`Friend`項目必須是原始程式檔、 命名空間、 介面、 模組、 類別或結構，不能在程序。  
-  
- 您可以使用`Friend`修飾詞搭配[保護](../../../visual-basic/language-reference/modifiers/protected.md)相同宣告中的修飾詞。 這個組合會授與兩者`Friend`存取，以及上宣告的項目，這樣就可從相同組件，從其自己的類別和衍生類別中的任何位置存取受保護的存取。 您可以指定`Protected Friend`只能在類別成員上。  
-  
+
+> [!NOTE]
+> 您也可以使用[Protected Friend](protected-friend.md)存取修飾詞，讓從該類別衍生的類別，並從類別定義所在的相同組件中存取類別成員。 若要限制存取的成員在其類別和衍生類別中相同的組件，您使用[受保護的私用](private-protected.md)存取修飾詞。
+
  如需的比較`Friend`和其他存取修飾詞，請參閱[存取 Visual Basic 中的層級](../../../visual-basic/programming-guide/language-features/declared-elements/access-levels.md)。  
   
 > [!NOTE]
@@ -74,6 +75,8 @@ ms.lasthandoff: 05/04/2018
  [Public](../../../visual-basic/language-reference/modifiers/public.md)  
  [Protected](../../../visual-basic/language-reference/modifiers/protected.md)  
  [Private](../../../visual-basic/language-reference/modifiers/private.md)  
+ [受保護的私用](./private-protected.md)   
+ [Protected 的 Friend](./protected-friend.md)   
  [在 Visual Basic 中的存取層級](../../../visual-basic/programming-guide/language-features/declared-elements/access-levels.md)  
  [程序](../../../visual-basic/programming-guide/language-features/procedures/index.md)  
  [結構](../../../visual-basic/programming-guide/language-features/data-types/structures.md)  
