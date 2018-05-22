@@ -1,31 +1,24 @@
 ---
-title: "使用作為容器執行的資料庫伺服器"
-description: "容器化 .NET 應用程式的 .NET 微服務架構 | 使用作為容器執行的資料庫伺服器"
-keywords: "Docker, 微服務, ASP.NET, 容器"
+title: 使用作為容器執行的資料庫伺服器
+description: 容器化 .NET 應用程式的 .NET 微服務架構 | 使用作為容器執行的資料庫伺服器
 author: CESARDELATORRE
 ms.author: wiwagn
 ms.date: 10/30/2017
-ms.prod: .net-core
-ms.technology: dotnet-docker
-ms.topic: article
-ms.workload:
-- dotnet
-- dotnetcore
-ms.openlocfilehash: 70dd3686519fc38ae35910284948ccf95e743ef7
-ms.sourcegitcommit: e7f04439d78909229506b56935a1105a4149ff3d
+ms.openlocfilehash: 8ff6afbe9618df918e0a965fa1202bbb999eee5c
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 12/23/2017
+ms.lasthandoff: 05/04/2018
 ---
-# <a name="using-a-database-server-running-as-a-container"></a><span data-ttu-id="25a59-104">使用作為容器執行的資料庫伺服器</span><span class="sxs-lookup"><span data-stu-id="25a59-104">Using a database server running as a container</span></span>
+# <a name="using-a-database-server-running-as-a-container"></a><span data-ttu-id="8fd9c-103">使用作為容器執行的資料庫伺服器</span><span class="sxs-lookup"><span data-stu-id="8fd9c-103">Using a database server running as a container</span></span>
 
-<span data-ttu-id="25a59-105">您可將資料庫 (SQL Server、PostgreSQL、MySQL 等等) 放在一般的獨立伺服器、內部部署叢集，或如 Azure SQL DB 等雲端 PaaS 服務上。</span><span class="sxs-lookup"><span data-stu-id="25a59-105">You can have your databases (SQL Server, PostgreSQL, MySQL, etc.) on regular standalone servers, in on-premises clusters, or in PaaS services in the cloud like Azure SQL DB.</span></span> <span data-ttu-id="25a59-106">不過，若為開發和測試環境，將資料庫執行為容器會很方便，因為您沒有任何外部相依性，只要執行 docker-compose 命令即可啟動整個應用程式。</span><span class="sxs-lookup"><span data-stu-id="25a59-106">However, for development and test environments, having your databases running as containers is convenient, because you do not have any external dependency, and simply running the docker-compose command starts the whole application.</span></span> <span data-ttu-id="25a59-107">將這些資料庫當作容器也非常適合整合測試，因為資料庫是在容器中啟動，而且一律填入相同的範例資料，所以測試會更容易預測。</span><span class="sxs-lookup"><span data-stu-id="25a59-107">Having those databases as containers is also great for integration tests, because the database is started in the container and is always populated with the same sample data, so tests can be more predictable.</span></span>
+<span data-ttu-id="8fd9c-104">您可將資料庫 (SQL Server、PostgreSQL、MySQL 等等) 放在一般的獨立伺服器、內部部署叢集，或如 Azure SQL DB 等雲端 PaaS 服務上。</span><span class="sxs-lookup"><span data-stu-id="8fd9c-104">You can have your databases (SQL Server, PostgreSQL, MySQL, etc.) on regular standalone servers, in on-premises clusters, or in PaaS services in the cloud like Azure SQL DB.</span></span> <span data-ttu-id="8fd9c-105">不過，若為開發和測試環境，將資料庫執行為容器會很方便，因為您沒有任何外部相依性，只要執行 docker-compose 命令即可啟動整個應用程式。</span><span class="sxs-lookup"><span data-stu-id="8fd9c-105">However, for development and test environments, having your databases running as containers is convenient, because you do not have any external dependency, and simply running the docker-compose command starts the whole application.</span></span> <span data-ttu-id="8fd9c-106">將這些資料庫當作容器也非常適合整合測試，因為資料庫是在容器中啟動，而且一律填入相同的範例資料，所以測試會更容易預測。</span><span class="sxs-lookup"><span data-stu-id="8fd9c-106">Having those databases as containers is also great for integration tests, because the database is started in the container and is always populated with the same sample data, so tests can be more predictable.</span></span>
 
-### <a name="sql-server-running-as-a-container-with-a-microservice-related-database"></a><span data-ttu-id="25a59-108">SQL Server 執行為附微服務相關資料庫的容器</span><span class="sxs-lookup"><span data-stu-id="25a59-108">SQL Server running as a container with a microservice-related database</span></span>
+### <a name="sql-server-running-as-a-container-with-a-microservice-related-database"></a><span data-ttu-id="8fd9c-107">SQL Server 執行為附微服務相關資料庫的容器</span><span class="sxs-lookup"><span data-stu-id="8fd9c-107">SQL Server running as a container with a microservice-related database</span></span>
 
-<span data-ttu-id="25a59-109">eShopOnContainers 中有個容器名為 sql.data，在 [docker-compose.yml](https://github.com/dotnet-architecture/eShopOnContainers/blob/master/docker-compose.yml) 檔案中定義，此檔案執行 SQL Server for Linux 及微服務需要的所有 SQL Server 資料庫。</span><span class="sxs-lookup"><span data-stu-id="25a59-109">In eShopOnContainers, there is a container named sql.data defined in the [docker-compose.yml](https://github.com/dotnet-architecture/eShopOnContainers/blob/master/docker-compose.yml) file that runs SQL Server for Linux with all the SQL Server databases needed for the microservices.</span></span> <span data-ttu-id="25a59-110">(您也可以每個資料庫各一個 SQL Server 容器，但這樣就需要指派更多的記憶體給 Docker。)微服務有一個重點是每項微服務擁有自己的相關資料，在本例中為其相關的 SQL 資料庫。</span><span class="sxs-lookup"><span data-stu-id="25a59-110">(You could also have one SQL Server container for each database, but that would require more memory assigned to Docker.) The important point in microservices is that each microservice owns its related data, therefore its related SQL database in this case.</span></span> <span data-ttu-id="25a59-111">但是這些資料庫可以位在任何位置。</span><span class="sxs-lookup"><span data-stu-id="25a59-111">But the databases can be anywhere.</span></span>
+<span data-ttu-id="8fd9c-108">eShopOnContainers 中有個容器名為 sql.data，在 [docker-compose.yml](https://github.com/dotnet-architecture/eShopOnContainers/blob/master/docker-compose.yml) 檔案中定義，此檔案執行 SQL Server for Linux 及微服務需要的所有 SQL Server 資料庫。</span><span class="sxs-lookup"><span data-stu-id="8fd9c-108">In eShopOnContainers, there is a container named sql.data defined in the [docker-compose.yml](https://github.com/dotnet-architecture/eShopOnContainers/blob/master/docker-compose.yml) file that runs SQL Server for Linux with all the SQL Server databases needed for the microservices.</span></span> <span data-ttu-id="8fd9c-109">(您也可以每個資料庫各一個 SQL Server 容器，但這樣就需要指派更多的記憶體給 Docker。)微服務有一個重點是每項微服務擁有自己的相關資料，在本例中為其相關的 SQL 資料庫。</span><span class="sxs-lookup"><span data-stu-id="8fd9c-109">(You could also have one SQL Server container for each database, but that would require more memory assigned to Docker.) The important point in microservices is that each microservice owns its related data, therefore its related SQL database in this case.</span></span> <span data-ttu-id="8fd9c-110">但是這些資料庫可以位在任何位置。</span><span class="sxs-lookup"><span data-stu-id="8fd9c-110">But the databases can be anywhere.</span></span>
 
-<span data-ttu-id="25a59-112">範例應用程式中的 SQL Server 容器，是在 docker-compose.yml 檔案中使用下列 YAML 程式碼設定，它會在您啟動 Docker Compose 時執行。</span><span class="sxs-lookup"><span data-stu-id="25a59-112">The SQL Server container in the sample application is configured with the following YAML code in the docker-compose.yml file, which is executed when you run docker-compose up.</span></span> <span data-ttu-id="25a59-113">請注意 YAML 程式碼已合併來自泛型 docker-compose.yml 檔案和 docker-compose.override.yml 檔案的組態資訊。</span><span class="sxs-lookup"><span data-stu-id="25a59-113">Note that the YAML code has consolidated configuration information from the generic docker-compose.yml file and the docker-compose.override.yml file.</span></span> <span data-ttu-id="25a59-114">(通常您會將環境設定從 SQL Server 映像相關的基底或靜態資訊中分離出來。)</span><span class="sxs-lookup"><span data-stu-id="25a59-114">(Usually you would separate the environment settings from the base or static information related to the SQL Server image.)</span></span>
+<span data-ttu-id="8fd9c-111">範例應用程式中的 SQL Server 容器，是在 docker-compose.yml 檔案中使用下列 YAML 程式碼設定，它會在您啟動 Docker Compose 時執行。</span><span class="sxs-lookup"><span data-stu-id="8fd9c-111">The SQL Server container in the sample application is configured with the following YAML code in the docker-compose.yml file, which is executed when you run docker-compose up.</span></span> <span data-ttu-id="8fd9c-112">請注意 YAML 程式碼已合併來自泛型 docker-compose.yml 檔案和 docker-compose.override.yml 檔案的組態資訊。</span><span class="sxs-lookup"><span data-stu-id="8fd9c-112">Note that the YAML code has consolidated configuration information from the generic docker-compose.yml file and the docker-compose.override.yml file.</span></span> <span data-ttu-id="8fd9c-113">(通常您會將環境設定從 SQL Server 映像相關的基底或靜態資訊中分離出來。)</span><span class="sxs-lookup"><span data-stu-id="8fd9c-113">(Usually you would separate the environment settings from the base or static information related to the SQL Server image.)</span></span>
 
 ```yml
   sql.data:
@@ -38,33 +31,33 @@ ms.lasthandoff: 12/23/2017
       - "5434:1433"
 ```
 
-<span data-ttu-id="25a59-115">以類似的方式，而不是使用 `docker-compose`，下列 `docker run` 命令可以執行該容器：</span><span class="sxs-lookup"><span data-stu-id="25a59-115">In a similar way, instead of using `docker-compose`, the following `docker run` command can run that container:</span></span>
+<span data-ttu-id="8fd9c-114">以類似的方式，而不是使用 `docker-compose`，下列 `docker run` 命令可以執行該容器：</span><span class="sxs-lookup"><span data-stu-id="8fd9c-114">In a similar way, instead of using `docker-compose`, the following `docker run` command can run that container:</span></span>
 
 ```
   docker run -e 'ACCEPT_EULA=Y' -e 'SA_PASSWORD= your@password' -p 1433:1433 -d microsoft/mssql-server-linux
 ```
 
-<span data-ttu-id="25a59-116">不過，如果您要部署多容器應用程式，例如 eShopOnContainers，使用 docker-compose up 命令會更方便，以部署應用程式需要的所有容器。</span><span class="sxs-lookup"><span data-stu-id="25a59-116">However, if you are deploying a multi-container application like eShopOnContainers, it is more convenient to use the docker-compose up command so that it deploys all the required containers for the application.</span></span>
+<span data-ttu-id="8fd9c-115">不過，如果您要部署多容器應用程式，例如 eShopOnContainers，使用 docker-compose up 命令會更方便，以部署應用程式需要的所有容器。</span><span class="sxs-lookup"><span data-stu-id="8fd9c-115">However, if you are deploying a multi-container application like eShopOnContainers, it is more convenient to use the docker-compose up command so that it deploys all the required containers for the application.</span></span>
 
-<span data-ttu-id="25a59-117">當您第一次啟動此 SQL Server 容器時，容器會使用您提供的密碼初始化 SQL Server。</span><span class="sxs-lookup"><span data-stu-id="25a59-117">When you start this SQL Server container for the first time, the container initializes SQL Server with the password that you provide.</span></span> <span data-ttu-id="25a59-118">一旦 SQL Server 執行為容器，您就可以透過任何一般 SQL 連線來連線至資料庫來加以更新，例如從 SQL Server Management Studio、Visual Studio 或 C\# 程式碼。</span><span class="sxs-lookup"><span data-stu-id="25a59-118">Once SQL Server is running as a container, you can update the database by connecting through any regular SQL connection, such as from SQL Server Management Studio, Visual Studio, or C\# code.</span></span>
+<span data-ttu-id="8fd9c-116">當您第一次啟動此 SQL Server 容器時，容器會使用您提供的密碼初始化 SQL Server。</span><span class="sxs-lookup"><span data-stu-id="8fd9c-116">When you start this SQL Server container for the first time, the container initializes SQL Server with the password that you provide.</span></span> <span data-ttu-id="8fd9c-117">一旦 SQL Server 執行為容器，您就可以透過任何一般 SQL 連線來連線至資料庫來加以更新，例如從 SQL Server Management Studio、Visual Studio 或 C\# 程式碼。</span><span class="sxs-lookup"><span data-stu-id="8fd9c-117">Once SQL Server is running as a container, you can update the database by connecting through any regular SQL connection, such as from SQL Server Management Studio, Visual Studio, or C\# code.</span></span>
 
-<span data-ttu-id="25a59-119">eShopOnContainers 應用程式會在啟動時，將範例資料與資料一起植入，再用它初始化每個微服務資料庫，如下節所述。</span><span class="sxs-lookup"><span data-stu-id="25a59-119">The eShopOnContainers application initializes each microservice database with sample data by seeding it with data on startup, as explained in the following section.</span></span>
+<span data-ttu-id="8fd9c-118">eShopOnContainers 應用程式會在啟動時，將範例資料與資料一起植入，再用它初始化每個微服務資料庫，如下節所述。</span><span class="sxs-lookup"><span data-stu-id="8fd9c-118">The eShopOnContainers application initializes each microservice database with sample data by seeding it with data on startup, as explained in the following section.</span></span>
 
-<span data-ttu-id="25a59-120">將 SQL Server 執行為容器，不僅適合您可能無法存取 SQL Server 執行個體的示範；</span><span class="sxs-lookup"><span data-stu-id="25a59-120">Having SQL Server running as a container is not just useful for a demo where you might not have access to an instance of SQL Server.</span></span> <span data-ttu-id="25a59-121">如前所述，也非常適合開發和測試環境，讓您植入新的範例資料，從全新的 SQL Server 映像和已知資料，輕鬆執行整合測試。</span><span class="sxs-lookup"><span data-stu-id="25a59-121">As noted, it is also great for development and testing environments so that you can easily run integration tests starting from a clean SQL Server image and known data by seeding new sample data.</span></span>
+<span data-ttu-id="8fd9c-119">將 SQL Server 執行為容器，不僅適合您可能無法存取 SQL Server 執行個體的示範；</span><span class="sxs-lookup"><span data-stu-id="8fd9c-119">Having SQL Server running as a container is not just useful for a demo where you might not have access to an instance of SQL Server.</span></span> <span data-ttu-id="8fd9c-120">如前所述，也非常適合開發和測試環境，讓您植入新的範例資料，從全新的 SQL Server 映像和已知資料，輕鬆執行整合測試。</span><span class="sxs-lookup"><span data-stu-id="8fd9c-120">As noted, it is also great for development and testing environments so that you can easily run integration tests starting from a clean SQL Server image and known data by seeding new sample data.</span></span>
 
-#### <a name="additional-resources"></a><span data-ttu-id="25a59-122">其他資源</span><span class="sxs-lookup"><span data-stu-id="25a59-122">Additional resources</span></span>
+#### <a name="additional-resources"></a><span data-ttu-id="8fd9c-121">其他資源</span><span class="sxs-lookup"><span data-stu-id="8fd9c-121">Additional resources</span></span>
 
--   <span data-ttu-id="25a59-123">**在 Linux、Mac 或 Windows 上執行 SQL Server Docker 映像**
-    [*https://docs.microsoft.com/sql/linux/sql-server-linux-setup-docker*](https://docs.microsoft.com/sql/linux/sql-server-linux-setup-docker)</span><span class="sxs-lookup"><span data-stu-id="25a59-123">**Run the SQL Server Docker image on Linux, Mac, or Windows**
+-   <span data-ttu-id="8fd9c-122">**在 Linux、Mac 或 Windows 上執行 SQL Server Docker 映像**
+    [*https://docs.microsoft.com/sql/linux/sql-server-linux-setup-docker*](https://docs.microsoft.com/sql/linux/sql-server-linux-setup-docker)</span><span class="sxs-lookup"><span data-stu-id="8fd9c-122">**Run the SQL Server Docker image on Linux, Mac, or Windows**
 [*https://docs.microsoft.com/sql/linux/sql-server-linux-setup-docker*](https://docs.microsoft.com/sql/linux/sql-server-linux-setup-docker)</span></span>
 
--   <span data-ttu-id="25a59-124">**在 Linux 上使用 sqlcmd 連線與查詢 SQL Server**
-    [*https://docs.microsoft.com/sql/linux/sql-server-linux-connect-and-query-sqlcmd*](https://docs.microsoft.com/sql/linux/sql-server-linux-connect-and-query-sqlcmd)</span><span class="sxs-lookup"><span data-stu-id="25a59-124">**Connect and query SQL Server on Linux with sqlcmd**
+-   <span data-ttu-id="8fd9c-123">**使用 sqlcmd 連線及查詢 Linux 上的 SQL Server**
+    [*https://docs.microsoft.com/sql/linux/sql-server-linux-connect-and-query-sqlcmd*](https://docs.microsoft.com/sql/linux/sql-server-linux-connect-and-query-sqlcmd)</span><span class="sxs-lookup"><span data-stu-id="8fd9c-123">**Connect and query SQL Server on Linux with sqlcmd**
 [*https://docs.microsoft.com/sql/linux/sql-server-linux-connect-and-query-sqlcmd*](https://docs.microsoft.com/sql/linux/sql-server-linux-connect-and-query-sqlcmd)</span></span>
 
-### <a name="seeding-with-test-data-on-web-application-startup"></a><span data-ttu-id="25a59-125">在 Web 應用程式啟動時植入測試資料</span><span class="sxs-lookup"><span data-stu-id="25a59-125">Seeding with test data on Web application startup</span></span>
+### <a name="seeding-with-test-data-on-web-application-startup"></a><span data-ttu-id="8fd9c-124">在 Web 應用程式啟動時植入測試資料</span><span class="sxs-lookup"><span data-stu-id="8fd9c-124">Seeding with test data on Web application startup</span></span>
 
-<span data-ttu-id="25a59-126">若要在應用程式啟動時將資料新增至資料庫，您可將與下列類似的程式碼新增至 Web API 專案之啟動類別的 Configure 方法：</span><span class="sxs-lookup"><span data-stu-id="25a59-126">To add data to the database when the application starts up, you can add code like the following to the Configure method in the Startup class of the Web API project:</span></span>
+<span data-ttu-id="8fd9c-125">若要在應用程式啟動時將資料新增至資料庫，您可將與下列類似的程式碼新增至 Web API 專案之啟動類別的 Configure 方法：</span><span class="sxs-lookup"><span data-stu-id="8fd9c-125">To add data to the database when the application starts up, you can add code like the following to the Configure method in the Startup class of the Web API project:</span></span>
 
 ```csharp
 public class Startup
@@ -83,7 +76,7 @@ public class Startup
 }
 ```
 
-<span data-ttu-id="25a59-127">下列自訂 CatalogContextSeed 類別中的程式碼會填入資料。</span><span class="sxs-lookup"><span data-stu-id="25a59-127">The following code in the custom CatalogContextSeed class populates the data.</span></span>
+<span data-ttu-id="8fd9c-126">下列自訂 CatalogContextSeed 類別中的程式碼會填入資料。</span><span class="sxs-lookup"><span data-stu-id="8fd9c-126">The following code in the custom CatalogContextSeed class populates the data.</span></span>
 
 ```csharp
 public class CatalogContextSeed
@@ -134,11 +127,11 @@ public class CatalogContextSeed
 }
 ```
 
-<span data-ttu-id="25a59-128">當您執行整合測試時，能夠產生與整合測試一致的資料會很有用。</span><span class="sxs-lookup"><span data-stu-id="25a59-128">When you run integration tests, having a way to generate data consistent with your integration tests is useful.</span></span> <span data-ttu-id="25a59-129">能夠重新建立所有項目，包括在容器上執行的 SQL Server 執行個體，非常適合測試環境。</span><span class="sxs-lookup"><span data-stu-id="25a59-129">Being able to create everything from scratch, including an instance of SQL Server running on a container, is great for test environments.</span></span>
+<span data-ttu-id="8fd9c-127">當您執行整合測試時，能夠產生與整合測試一致的資料會很有用。</span><span class="sxs-lookup"><span data-stu-id="8fd9c-127">When you run integration tests, having a way to generate data consistent with your integration tests is useful.</span></span> <span data-ttu-id="8fd9c-128">能夠重新建立所有項目，包括在容器上執行的 SQL Server 執行個體，非常適合測試環境。</span><span class="sxs-lookup"><span data-stu-id="8fd9c-128">Being able to create everything from scratch, including an instance of SQL Server running on a container, is great for test environments.</span></span>
 
-### <a name="ef-core-inmemory-database-versus-sql-server-running-as-a-container"></a><span data-ttu-id="25a59-130">EF Core InMemory 資料庫與當作容器執行的 SQL Server</span><span class="sxs-lookup"><span data-stu-id="25a59-130">EF Core InMemory database versus SQL Server running as a container</span></span>
+### <a name="ef-core-inmemory-database-versus-sql-server-running-as-a-container"></a><span data-ttu-id="8fd9c-129">EF Core InMemory 資料庫與當作容器執行的 SQL Server</span><span class="sxs-lookup"><span data-stu-id="8fd9c-129">EF Core InMemory database versus SQL Server running as a container</span></span>
 
-<span data-ttu-id="25a59-131">執行測試時另一個不錯的選擇，是使用 Entity Framework InMemory 資料庫提供者。</span><span class="sxs-lookup"><span data-stu-id="25a59-131">Another good choice when running tests is to use the Entity Framework InMemory database provider.</span></span> <span data-ttu-id="25a59-132">您可以在自己的 Web API 專案之啟動類別的 ConfigureServices 方法中指定該組態：</span><span class="sxs-lookup"><span data-stu-id="25a59-132">You can specify that configuration in the ConfigureServices method of the Startup class in your Web API project:</span></span>
+<span data-ttu-id="8fd9c-130">執行測試時另一個不錯的選擇，是使用 Entity Framework InMemory 資料庫提供者。</span><span class="sxs-lookup"><span data-stu-id="8fd9c-130">Another good choice when running tests is to use the Entity Framework InMemory database provider.</span></span> <span data-ttu-id="8fd9c-131">您可以在自己的 Web API 專案之啟動類別的 ConfigureServices 方法中指定該組態：</span><span class="sxs-lookup"><span data-stu-id="8fd9c-131">You can specify that configuration in the ConfigureServices method of the Startup class in your Web API project:</span></span>
 
 ```csharp
 public class Startup
@@ -162,29 +155,29 @@ public class Startup
 }
 ```
 
-<span data-ttu-id="25a59-133">雖然有重要的 Catch。</span><span class="sxs-lookup"><span data-stu-id="25a59-133">There is an important catch, though.</span></span> <span data-ttu-id="25a59-134">記憶體內部資料庫不支援專門針對特定資料庫的多個限制式。</span><span class="sxs-lookup"><span data-stu-id="25a59-134">The in-memory database does not support many constraints that are specific to a particular database.</span></span> <span data-ttu-id="25a59-135">例如，您可能會在您 EF Core 模型的資料行中新增唯一索引，並針對記憶體內部資料庫撰寫測試，確認它不會讓您新增重複的值。</span><span class="sxs-lookup"><span data-stu-id="25a59-135">For instance, you might add a unique index on a column in your EF Core model and write a test against your in-memory database to check that it does not let you add a duplicate value.</span></span> <span data-ttu-id="25a59-136">但當您在使用記憶體內部資料庫時，您無法處理資料行的唯一索引。</span><span class="sxs-lookup"><span data-stu-id="25a59-136">But when you are using the in-memory database, you cannot handle unique indexes on a column.</span></span> <span data-ttu-id="25a59-137">因此，記憶體內部資料庫的行為和實際 SQL Server 資料庫的行為不會一模一樣，它不會模擬資料庫特定的限制式。</span><span class="sxs-lookup"><span data-stu-id="25a59-137">Therefore, the in-memory database does not behave exactly the same as a real SQL Server database—it does not emulate database-specific constraints.</span></span>
+<span data-ttu-id="8fd9c-132">雖然有重要的 Catch。</span><span class="sxs-lookup"><span data-stu-id="8fd9c-132">There is an important catch, though.</span></span> <span data-ttu-id="8fd9c-133">記憶體內部資料庫不支援專門針對特定資料庫的多個限制式。</span><span class="sxs-lookup"><span data-stu-id="8fd9c-133">The in-memory database does not support many constraints that are specific to a particular database.</span></span> <span data-ttu-id="8fd9c-134">例如，您可能會在您 EF Core 模型的資料行中新增唯一索引，並針對記憶體內部資料庫撰寫測試，確認它不會讓您新增重複的值。</span><span class="sxs-lookup"><span data-stu-id="8fd9c-134">For instance, you might add a unique index on a column in your EF Core model and write a test against your in-memory database to check that it does not let you add a duplicate value.</span></span> <span data-ttu-id="8fd9c-135">但當您在使用記憶體內部資料庫時，您無法處理資料行的唯一索引。</span><span class="sxs-lookup"><span data-stu-id="8fd9c-135">But when you are using the in-memory database, you cannot handle unique indexes on a column.</span></span> <span data-ttu-id="8fd9c-136">因此，記憶體內部資料庫的行為和實際 SQL Server 資料庫的行為不會一模一樣，它不會模擬資料庫特定的限制式。</span><span class="sxs-lookup"><span data-stu-id="8fd9c-136">Therefore, the in-memory database does not behave exactly the same as a real SQL Server database—it does not emulate database-specific constraints.</span></span>
 
-<span data-ttu-id="25a59-138">即便如此，記憶體內部資料庫對測試與建立原型仍很有用。</span><span class="sxs-lookup"><span data-stu-id="25a59-138">Even so, an in-memory database is still useful for testing and prototyping.</span></span> <span data-ttu-id="25a59-139">但如果您想要建立精確的整合測試，將特定資料庫的實作行為納入考量，您必須使用實際的資料庫，例如 SQL Server。</span><span class="sxs-lookup"><span data-stu-id="25a59-139">But if you want to create accurate integration tests that take into account the behavior of a specific database implementation, you need to use a real database like SQL Server.</span></span> <span data-ttu-id="25a59-140">基於這個目的，在容器中執行 SQL Server 是非常好的選擇，而且會比 EF Core InMemory 資料庫提供者更精確。</span><span class="sxs-lookup"><span data-stu-id="25a59-140">For that purpose, running SQL Server in a container is a great choice and more accurate than the EF Core InMemory database provider.</span></span>
+<span data-ttu-id="8fd9c-137">即便如此，記憶體內部資料庫對測試與建立原型仍很有用。</span><span class="sxs-lookup"><span data-stu-id="8fd9c-137">Even so, an in-memory database is still useful for testing and prototyping.</span></span> <span data-ttu-id="8fd9c-138">但如果您想要建立精確的整合測試，將特定資料庫的實作行為納入考量，您必須使用實際的資料庫，例如 SQL Server。</span><span class="sxs-lookup"><span data-stu-id="8fd9c-138">But if you want to create accurate integration tests that take into account the behavior of a specific database implementation, you need to use a real database like SQL Server.</span></span> <span data-ttu-id="8fd9c-139">基於這個目的，在容器中執行 SQL Server 是非常好的選擇，而且會比 EF Core InMemory 資料庫提供者更精確。</span><span class="sxs-lookup"><span data-stu-id="8fd9c-139">For that purpose, running SQL Server in a container is a great choice and more accurate than the EF Core InMemory database provider.</span></span>
 
-### <a name="using-a-redis-cache-service-running-in-a-container"></a><span data-ttu-id="25a59-141">使用在容器中執行的 Redis 快取服務</span><span class="sxs-lookup"><span data-stu-id="25a59-141">Using a Redis cache service running in a container</span></span>
+### <a name="using-a-redis-cache-service-running-in-a-container"></a><span data-ttu-id="8fd9c-140">使用在容器中執行的 Redis 快取服務</span><span class="sxs-lookup"><span data-stu-id="8fd9c-140">Using a Redis cache service running in a container</span></span>
 
-<span data-ttu-id="25a59-142">您可以在容器上執行 Redis，特別是針對開發和測試以及概念證明案例。</span><span class="sxs-lookup"><span data-stu-id="25a59-142">You can run Redis on a container, especially for development and testing and for proof-of-concept scenarios.</span></span> <span data-ttu-id="25a59-143">本案例很方便，因為您可以在容器上執行所有的相依性，不只適用於您的本機開發機器，還適用於您在 CI/CD 管線中的測試環境。</span><span class="sxs-lookup"><span data-stu-id="25a59-143">This scenario is convenient, because you can have all your dependencies running on containers—not just for your local development machines, but for your testing environments in your CI/CD pipelines.</span></span>
+<span data-ttu-id="8fd9c-141">您可以在容器上執行 Redis，特別是針對開發和測試以及概念證明案例。</span><span class="sxs-lookup"><span data-stu-id="8fd9c-141">You can run Redis on a container, especially for development and testing and for proof-of-concept scenarios.</span></span> <span data-ttu-id="8fd9c-142">本案例很方便，因為您可以在容器上執行所有的相依性，不只適用於您的本機開發機器，還適用於您在 CI/CD 管線中的測試環境。</span><span class="sxs-lookup"><span data-stu-id="8fd9c-142">This scenario is convenient, because you can have all your dependencies running on containers—not just for your local development machines, but for your testing environments in your CI/CD pipelines.</span></span>
 
-<span data-ttu-id="25a59-144">不過，當您在生產環境中執行 Redis 時，最好是尋找執行為 PaaS (平台即服務) 的高可用性方案，例如 Redis Microsoft Azure。</span><span class="sxs-lookup"><span data-stu-id="25a59-144">However, when you run Redis in production, it is better to look for a high-availability solution like Redis Microsoft Azure, which runs as a PaaS (Platform as a Service).</span></span> <span data-ttu-id="25a59-145">在您的程式碼中，您只需要變更連接字串即可。</span><span class="sxs-lookup"><span data-stu-id="25a59-145">In your code, you just need to change your connection strings.</span></span>
+<span data-ttu-id="8fd9c-143">不過，當您在生產環境中執行 Redis 時，最好是尋找執行為 PaaS (平台即服務) 的高可用性方案，例如 Redis Microsoft Azure。</span><span class="sxs-lookup"><span data-stu-id="8fd9c-143">However, when you run Redis in production, it is better to look for a high-availability solution like Redis Microsoft Azure, which runs as a PaaS (Platform as a Service).</span></span> <span data-ttu-id="8fd9c-144">在您的程式碼中，您只需要變更連接字串即可。</span><span class="sxs-lookup"><span data-stu-id="8fd9c-144">In your code, you just need to change your connection strings.</span></span>
 
-<span data-ttu-id="25a59-146">Redis 提供使用 Redis 的 Docker 映像。</span><span class="sxs-lookup"><span data-stu-id="25a59-146">Redis provides a Docker image with Redis.</span></span> <span data-ttu-id="25a59-147">該映像可從位於此 URL 的 Docker Hub 取得：</span><span class="sxs-lookup"><span data-stu-id="25a59-147">That image is available from Docker Hub at this URL:</span></span>
+<span data-ttu-id="8fd9c-145">Redis 提供使用 Redis 的 Docker 映像。</span><span class="sxs-lookup"><span data-stu-id="8fd9c-145">Redis provides a Docker image with Redis.</span></span> <span data-ttu-id="8fd9c-146">該映像可從位於此 URL 的 Docker Hub 取得：</span><span class="sxs-lookup"><span data-stu-id="8fd9c-146">That image is available from Docker Hub at this URL:</span></span>
 
-<span data-ttu-id="25a59-148"><https://hub.docker.com/_/redis/></span><span class="sxs-lookup"><span data-stu-id="25a59-148"><https://hub.docker.com/_/redis/></span></span>
+<https://hub.docker.com/_/redis/>
 
-<span data-ttu-id="25a59-149">您可以在命令提示字元中執行下列 Docker CLI 命令，直接執行 Docker Redis 容器：</span><span class="sxs-lookup"><span data-stu-id="25a59-149">You can directly run a Docker Redis container by executing the following Docker CLI command in your command prompt:</span></span>
+<span data-ttu-id="8fd9c-147">您可以在命令提示字元中執行下列 Docker CLI 命令，直接執行 Docker Redis 容器：</span><span class="sxs-lookup"><span data-stu-id="8fd9c-147">You can directly run a Docker Redis container by executing the following Docker CLI command in your command prompt:</span></span>
 
 ```
   docker run --name some-redis -d redis
 ```
 
-<span data-ttu-id="25a59-150">Redis 映像包括 expose:6379 (Redis 使用的連接埠)，因此標準容器連結會自動將它提供給已連結的容器。</span><span class="sxs-lookup"><span data-stu-id="25a59-150">The Redis image includes expose:6379 (the port used by Redis), so standard container linking will make it automatically available to the linked containers.</span></span>
+<span data-ttu-id="8fd9c-148">Redis 映像包括 expose:6379 (Redis 使用的連接埠)，因此標準容器連結會自動將它提供給已連結的容器。</span><span class="sxs-lookup"><span data-stu-id="8fd9c-148">The Redis image includes expose:6379 (the port used by Redis), so standard container linking will make it automatically available to the linked containers.</span></span>
 
-<span data-ttu-id="25a59-151">在 eShopOnContainers 中，basket.api 微服務會使用當作容器執行的 Redis 快取。</span><span class="sxs-lookup"><span data-stu-id="25a59-151">In eShopOnContainers, the basket.api microservice uses a Redis cache running as a container.</span></span> <span data-ttu-id="25a59-152">該 basket.data 容器會定義為多容器 docker-compose.yml 檔案的一部分，如下列範例所示：</span><span class="sxs-lookup"><span data-stu-id="25a59-152">That basket.data container is defined as part of the multi-container docker-compose.yml file, as shown in the following example:</span></span>
+<span data-ttu-id="8fd9c-149">在 eShopOnContainers 中，basket.api 微服務會使用當作容器執行的 Redis 快取。</span><span class="sxs-lookup"><span data-stu-id="8fd9c-149">In eShopOnContainers, the basket.api microservice uses a Redis cache running as a container.</span></span> <span data-ttu-id="8fd9c-150">該 basket.data 容器會定義為多容器 docker-compose.yml 檔案的一部分，如下列範例所示：</span><span class="sxs-lookup"><span data-stu-id="8fd9c-150">That basket.data container is defined as part of the multi-container docker-compose.yml file, as shown in the following example:</span></span>
 
 ```yml
 #docker-compose.yml file
@@ -195,9 +188,9 @@ public class Startup
       - "6379"
 ```
 
-<span data-ttu-id="25a59-153">docker-compose.yml 的這段程式碼會根據 redis 映像，定義名為 basket.data 的容器，並在內部發佈連接埠 6379，表示它只能從在 Docker 主機中執行的其他容器存取。</span><span class="sxs-lookup"><span data-stu-id="25a59-153">This code in the docker-compose.yml defines a container named basket.data based on the redis image and publishing the port 6379 internally, meaning that it will be accessible only from other containers running within the Docker host.</span></span>
+<span data-ttu-id="8fd9c-151">docker-compose.yml 的這段程式碼會根據 redis 映像，定義名為 basket.data 的容器，並在內部發佈連接埠 6379，表示它只能從在 Docker 主機中執行的其他容器存取。</span><span class="sxs-lookup"><span data-stu-id="8fd9c-151">This code in the docker-compose.yml defines a container named basket.data based on the redis image and publishing the port 6379 internally, meaning that it will be accessible only from other containers running within the Docker host.</span></span>
 
-<span data-ttu-id="25a59-154">最後，在 docker-compose.override.yml 檔案中，eShopOnContainers 範例的 basket.api 微服務會定義要用於該 Redis 容器的連接字串：</span><span class="sxs-lookup"><span data-stu-id="25a59-154">Finally, in the docker-compose.override.yml file, the basket.api microservice for the eShopOnContainers sample defines the connection string to use for that Redis container:</span></span>
+<span data-ttu-id="8fd9c-152">最後，在 docker-compose.override.yml 檔案中，eShopOnContainers 範例的 basket.api 微服務會定義要用於該 Redis 容器的連接字串：</span><span class="sxs-lookup"><span data-stu-id="8fd9c-152">Finally, in the docker-compose.override.yml file, the basket.api microservice for the eShopOnContainers sample defines the connection string to use for that Redis container:</span></span>
 
 ```yml
   basket.api:
@@ -209,4 +202,4 @@ public class Startup
 
 
 >[!div class="step-by-step"]
-<span data-ttu-id="25a59-155">[上一頁] (multi-container-applications-docker-compose.md) [下一頁] (integration-event-based-microservice-communications.md)</span><span class="sxs-lookup"><span data-stu-id="25a59-155">[Previous] (multi-container-applications-docker-compose.md) [Next] (integration-event-based-microservice-communications.md)</span></span>
+<span data-ttu-id="8fd9c-153">[上一頁] (multi-container-applications-docker-compose.md) [下一頁] (integration-event-based-microservice-communications.md)</span><span class="sxs-lookup"><span data-stu-id="8fd9c-153">[Previous] (multi-container-applications-docker-compose.md) [Next] (integration-event-based-microservice-communications.md)</span></span>
