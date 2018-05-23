@@ -6,11 +6,11 @@ helpviewer_keywords:
 - compiler options [C#], listed by category
 - Visual C#, compiler options listed by category
 ms.assetid: 96437ecc-6502-4cd3-b070-e9386a298e83
-ms.openlocfilehash: a3352b9f929382c7d5b7d0c62ef4022560caf371
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: f02ae84544a60a992177332d528dd7970f84bf3f
+ms.sourcegitcommit: 895c7602386a6dfe7ca4facce3d965b27e5c6e87
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/04/2018
+ms.lasthandoff: 05/19/2018
 ---
 # <a name="c-compiler-options-listed-by-category"></a>依分類列出的 C# 編譯器選項
 下列編譯器選項會依類別排序。 如需依字母順序排列的清單，請參閱[依字母順序列出的 C# 編譯器選項](listed-alphabetically.md)。  
@@ -91,7 +91,7 @@ ms.lasthandoff: 05/04/2018
 |[-codepage](codepage-compiler-option.md)|指定編譯過程中所有原始程式碼檔使用的字碼頁。|  
 |[-help](help-compiler-option.md)|將編譯器選項列出至 stdout。|  
 |[-highentropyva](highentropyva-compiler-option.md)|指定可執行檔支援位址空間配置隨機載入 (ASLR)。|  
-|[-langversion](langversion-compiler-option.md)|指定語言版本模式：Default、ISO-1、ISO-2、3、4、5、6、7、7.1 或 Latest |  
+|[-langversion](langversion-compiler-option.md)|指定語言版本：Default、ISO-1、ISO-2、3、4、5、6、7、7.1、7.2、7.3 或 Latest |  
 |[-main](main-compiler-option.md)|指定 **Main** 方法的位置。|  
 |[-noconfig](noconfig-compiler-option.md)|指示編譯器不要使用 csc.rsp 進行編譯。|  
 |[-nologo](nologo-compiler-option.md)|隱藏編譯器橫幅資訊。|  
@@ -100,7 +100,7 @@ ms.lasthandoff: 05/04/2018
 |[-unsafe](unsafe-compiler-option.md)|啟用使用 [unsafe](../../../csharp/language-reference/keywords/unsafe.md) 關鍵字的程式碼編譯。|  
 |[-utf8output](utf8output-compiler-option.md)|使用 UTF-8 編碼顯示編譯器輸出。|  
 |-parallel[+&#124;-]|指定是否要使用並行組建 (+)。|  
-|-checksumalgorithm:\<alg>|指定用於計算儲存在 PDB 的來源檔案總和檢查碼的演算法。  支援的值為：SHA1 (預設值) 或 SHA256。|  
+|-checksumalgorithm:\<alg>|針對儲存在 PDB 中的來源檔案總和檢查碼，指定計算所用的演算法。  支援的值為：SHA1 (預設值) 或 SHA256。|  
   
 ## <a name="obsolete-options"></a>過時的選項  
   

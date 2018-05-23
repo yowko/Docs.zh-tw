@@ -4,15 +4,15 @@ ms.date: 03/06/2018
 helpviewer_keywords:
 - parameters [C#], in
 - in parameters [C#]
-ms.openlocfilehash: aa6720430a1d93d7eacb098962c09efad09a179f
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: 58500cf2caa1446af6b663f1b765c0be92309f1d
+ms.sourcegitcommit: 895c7602386a6dfe7ca4facce3d965b27e5c6e87
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/04/2018
+ms.lasthandoff: 05/19/2018
 ---
 # <a name="in-parameter-modifier-c-reference"></a>in 參數修飾詞 (C# 參考)
 
-`in` 關鍵字會導致引數由參考傳遞。 這和 [ref](ref.md) 或 [out](out-parameter-modifier.md) 關鍵字類似同，但 `in` 引數無法由呼叫的方法加以修改，而是可以修改 `ref` 引數。`out` 引數必須由呼叫端修改，而這些修改內容可於呼叫內容中查看。
+`in` 關鍵字會導致引數由參考傳遞。 它就像 [ref](ref.md) 或 [out](out-parameter-modifier.md) 關鍵字，不同的是 `in` 引數不能被呼叫的方法修改。 鑑於 `ref` 引數可能會被修改，`out` 引數必須由呼叫者修改，且這些修改在呼叫的內容中是可觀察的。
 
 [!code-csharp-interactive[cs-in-keyword](../../../../samples/snippets/csharp/language-reference/keywords/in-ref-out-modifier/InParameterModifier.cs#1)]  
 
@@ -49,7 +49,7 @@ class InOverloads
 
 您可以透過了解 `in` 引數的動機，來了解傳值方式與 `in` 引數的方法多載解析規則。 使用 `in` 參數定義方法可能會使效能最佳化。 某些 `struct` 型別引數可能大小很大，在緊密迴圈或關鍵程式碼路徑中呼叫方法時，複製那些結構的成本便很重要。 方法會宣告 `in` 參數，以指定可以用傳址方式安全地傳遞引數，因為被呼叫的方法不會修改該引數的狀態。 以傳址方式傳遞那些引數，可避免 (可能) 相當耗費資源的複製。 
 
-在呼叫位置的引數上指定 `in` 通常是選擇性的。 以傳值方式傳遞引數，和使用 `in` 修飾詞以傳址方式傳遞引數，兩者之間沒有語意差異。 呼叫位置的 `in` 修飾詞是選擇性的，因為您不需要指出引數的值可能會變更。 在呼叫位置明確地新增 `in` 修飾詞，可以確保引數是以傳址方式傳遞，而非以傳值方式傳遞。 明確地使用 `in` 有兩個效果：
+針對呼叫位置的引數指定 `in` 通常是選擇性的。 以傳值方式傳遞引數，和使用 `in` 修飾詞以傳址方式傳遞引數，兩者之間沒有語意差異。 呼叫位置的 `in` 修飾詞是選擇性的，因為您不需要指出引數的值可能會變更。 在呼叫位置明確地新增 `in` 修飾詞，可以確保引數是以傳址方式傳遞，而非以傳值方式傳遞。 明確地使用 `in` 有下列兩個效果：
 
 首先，在呼叫位置指定 `in` 會強制編譯器選取定義了符合之 `in` 參數的方法。 否則，當兩個方法的差異只在於 `in` 是否存在時，傳值方式的多載是較佳的相符項目。
 

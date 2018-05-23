@@ -6,11 +6,11 @@ helpviewer_keywords:
 - classes [C#]
 - C# language, classes
 ms.assetid: e8848524-7273-429f-8aba-c658d5eff5ad
-ms.openlocfilehash: 808e25315b0010fd55112f2ed237485c3d0c40d4
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: 688736aa8556719789b02d7db25858f442b4309e
+ms.sourcegitcommit: 895c7602386a6dfe7ca4facce3d965b27e5c6e87
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/04/2018
+ms.lasthandoff: 05/19/2018
 ---
 # <a name="classes-c-programming-guide"></a>類別 (C# 程式設計手冊)
 「類別」是一種建構，可讓您將其他類型、方法和事件的變數群組在一起，以建立您自己的自訂類型。 類別就像藍圖。 它會定義類型的資料和行為。 如果類別未宣告為靜態，則用戶端程式碼可以建立它的「執行個體」。 這些執行個體是指派給變數的「物件」。 除非類別的執行個體的所有參考都超出範圍，否則變數會保留在記憶體中。 此時，CLR 會將它標記為適合進行記憶體回收。 如果類別宣告為 [static](../../../csharp/language-reference/keywords/static.md)，則您無法建立執行個體，而且用戶端程式碼只能透過類別本身存取它。 如需詳細資訊，請參閱[靜態類別和靜態類別成員](../../../csharp/programming-guide/classes-and-structs/static-classes-and-static-class-members.md)。  
@@ -83,10 +83,9 @@ MyClass mc2 = mc;
   
  類別定義可以在不同的原始程式檔之間進行分割。 如需詳細資訊，請參閱[部分類別和方法](../../../csharp/programming-guide/classes-and-structs/partial-classes-and-methods.md)。  
   
-## <a name="description"></a>描述  
- 在下列範例中，定義包含單一欄位、方法以及稱為建構函式之特殊方法的公用類別。 如需詳細資訊，請參閱[建構函式](../../../csharp/programming-guide/classes-and-structs/constructors.md)。 然後使用 `new` 關鍵字具現化類別。  
-  
 ## <a name="example"></a>範例  
+ 下列範例定義了一個公用類別，其中包含[自動實作屬性](auto-implemented-properties.md)、方法以及稱為建構函式的特殊方法。 如需詳細資訊，請參閱[屬性](properties.md)，[方法](methods.md)和[建構函式](constructors.md)主題。 然後使用 `new` 關鍵字具現化類別的執行個體。  
+  
  [!code-csharp[Class Example](~/samples/snippets/csharp/programming-guide/classes-and-structs/class-example.cs)] 
   
 ## <a name="c-language-specification"></a>C# 語言規格  
