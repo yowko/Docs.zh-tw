@@ -1,14 +1,6 @@
 ---
-title: "如何：實作回呼函式"
-ms.custom: 
+title: 如何：實作回呼函式
 ms.date: 03/30/2017
-ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.technology:
-- dotnet-clr
-ms.tgt_pltfrm: 
-ms.topic: article
 dev_langs:
 - csharp
 - vb
@@ -16,42 +8,38 @@ dev_langs:
 helpviewer_keywords:
 - callback function, implementing
 ms.assetid: e55b3712-b9ea-4453-bd9a-ad5cfa2f6bfa
-caps.latest.revision: 
 author: rpetrusha
 ms.author: ronpet
-manager: wpickett
-ms.workload:
-- dotnet
-ms.openlocfilehash: 819861f9bf13f9af3fab7a1ea7ffc697c1d98926
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
-ms.translationtype: MT
+ms.openlocfilehash: e081347129ce367cf6b46ca29c07a016bb64ab95
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 05/04/2018
 ---
-# <a name="how-to-implement-callback-functions"></a><span data-ttu-id="97970-102">如何：實作回呼函式</span><span class="sxs-lookup"><span data-stu-id="97970-102">How to: Implement Callback Functions</span></span>
-<span data-ttu-id="97970-103">下列程序及範例示範 Managed 應用程式 (使用平台叫用) 如何將每個視窗的控制碼值列印到本機電腦上。</span><span class="sxs-lookup"><span data-stu-id="97970-103">The following procedure and example demonstrate how a managed application, using platform invoke, can print the handle value for each window on the local computer.</span></span> <span data-ttu-id="97970-104">具體而言，程序和範例會使用 **EnumWindows** 函式以逐步執行視窗的清單，並使用 Managed 回呼函式 (具名回呼) 以列印視窗控制代碼的值。</span><span class="sxs-lookup"><span data-stu-id="97970-104">Specifically, the procedure and example use the **EnumWindows** function to step through the list of windows and a managed callback function (named CallBack) to print the value of the window handle.</span></span>  
+# <a name="how-to-implement-callback-functions"></a><span data-ttu-id="b51bf-102">如何：實作回呼函式</span><span class="sxs-lookup"><span data-stu-id="b51bf-102">How to: Implement Callback Functions</span></span>
+<span data-ttu-id="b51bf-103">下列程序及範例示範 Managed 應用程式 (使用平台叫用) 如何將每個視窗的控制碼值列印到本機電腦上。</span><span class="sxs-lookup"><span data-stu-id="b51bf-103">The following procedure and example demonstrate how a managed application, using platform invoke, can print the handle value for each window on the local computer.</span></span> <span data-ttu-id="b51bf-104">具體而言，程序和範例會使用 **EnumWindows** 函式以逐步執行視窗的清單，並使用 Managed 回呼函式 (具名回呼) 以列印視窗控制代碼的值。</span><span class="sxs-lookup"><span data-stu-id="b51bf-104">Specifically, the procedure and example use the **EnumWindows** function to step through the list of windows and a managed callback function (named CallBack) to print the value of the window handle.</span></span>  
   
-### <a name="to-implement-a-callback-function"></a><span data-ttu-id="97970-105">若要實作回撥函式</span><span class="sxs-lookup"><span data-stu-id="97970-105">To implement a callback function</span></span>  
+### <a name="to-implement-a-callback-function"></a><span data-ttu-id="b51bf-105">若要實作回撥函式</span><span class="sxs-lookup"><span data-stu-id="b51bf-105">To implement a callback function</span></span>  
   
-1.  <span data-ttu-id="97970-106">進一步進行實作前，請先查看 **EnumWindows** 函式的簽章。</span><span class="sxs-lookup"><span data-stu-id="97970-106">Look at the signature for the **EnumWindows** function before going further with the implementation.</span></span> <span data-ttu-id="97970-107">**EnumWindows** 具有下列簽章：</span><span class="sxs-lookup"><span data-stu-id="97970-107">**EnumWindows** has the following signature:</span></span>  
+1.  <span data-ttu-id="b51bf-106">進一步進行實作前，請先查看 **EnumWindows** 函式的簽章。</span><span class="sxs-lookup"><span data-stu-id="b51bf-106">Look at the signature for the **EnumWindows** function before going further with the implementation.</span></span> <span data-ttu-id="b51bf-107">**EnumWindows** 具有下列簽章：</span><span class="sxs-lookup"><span data-stu-id="b51bf-107">**EnumWindows** has the following signature:</span></span>  
   
     ```  
     BOOL EnumWindows(WNDENUMPROC lpEnumFunc, LPARAM lParam)  
     ```  
   
-     <span data-ttu-id="97970-108">此函式需要進行回呼的一個線索在於 **lpEnumFunc** 引數。</span><span class="sxs-lookup"><span data-stu-id="97970-108">One clue that this function requires a callback is the presence of the **lpEnumFunc** argument.</span></span> <span data-ttu-id="97970-109">**lp** (長度指標) 前置詞與 **Func** 後置詞的結合出現在引數名稱中的情況相當普遍，其會將指標帶到回呼函式。</span><span class="sxs-lookup"><span data-stu-id="97970-109">It is common to see the **lp** (long pointer) prefix combined with the **Func** suffix in the name of arguments that take a pointer to a callback function.</span></span> <span data-ttu-id="97970-110">如需 Win32 函式的相關文件，請參閱 Microsoft Platform SDK。</span><span class="sxs-lookup"><span data-stu-id="97970-110">For documentation about Win32 functions, see the Microsoft Platform SDK.</span></span>  
+     <span data-ttu-id="b51bf-108">此函式需要進行回呼的一個線索在於 **lpEnumFunc** 引數。</span><span class="sxs-lookup"><span data-stu-id="b51bf-108">One clue that this function requires a callback is the presence of the **lpEnumFunc** argument.</span></span> <span data-ttu-id="b51bf-109">**lp** (長度指標) 前置詞與 **Func** 後置詞的結合出現在引數名稱中的情況相當普遍，其會將指標帶到回呼函式。</span><span class="sxs-lookup"><span data-stu-id="b51bf-109">It is common to see the **lp** (long pointer) prefix combined with the **Func** suffix in the name of arguments that take a pointer to a callback function.</span></span> <span data-ttu-id="b51bf-110">如需 Win32 函式的相關文件，請參閱 Microsoft Platform SDK。</span><span class="sxs-lookup"><span data-stu-id="b51bf-110">For documentation about Win32 functions, see the Microsoft Platform SDK.</span></span>  
   
-2.  <span data-ttu-id="97970-111">建立 Managed 回撥函式。</span><span class="sxs-lookup"><span data-stu-id="97970-111">Create the managed callback function.</span></span> <span data-ttu-id="97970-112">此範例會宣告稱為 `CallBack` 的委派型別，其採用兩個引數 (**hwnd** 和 **lparam**)。</span><span class="sxs-lookup"><span data-stu-id="97970-112">The example declares a delegate type, called `CallBack`, which takes two arguments (**hwnd** and **lparam**).</span></span> <span data-ttu-id="97970-113">第一個引數是視窗的控制代碼；第二個引數則由應用程式定義。</span><span class="sxs-lookup"><span data-stu-id="97970-113">The first argument is a handle to the window; the second argument is application-defined.</span></span> <span data-ttu-id="97970-114">在此版本中，兩個引數都必須是整數。</span><span class="sxs-lookup"><span data-stu-id="97970-114">In this release, both arguments must be integers.</span></span>  
+2.  <span data-ttu-id="b51bf-111">建立 Managed 回撥函式。</span><span class="sxs-lookup"><span data-stu-id="b51bf-111">Create the managed callback function.</span></span> <span data-ttu-id="b51bf-112">此範例會宣告稱為 `CallBack` 的委派型別，其採用兩個引數 (**hwnd** 和 **lparam**)。</span><span class="sxs-lookup"><span data-stu-id="b51bf-112">The example declares a delegate type, called `CallBack`, which takes two arguments (**hwnd** and **lparam**).</span></span> <span data-ttu-id="b51bf-113">第一個引數是視窗的控制代碼；第二個引數則由應用程式定義。</span><span class="sxs-lookup"><span data-stu-id="b51bf-113">The first argument is a handle to the window; the second argument is application-defined.</span></span> <span data-ttu-id="b51bf-114">在此版本中，兩個引數都必須是整數。</span><span class="sxs-lookup"><span data-stu-id="b51bf-114">In this release, both arguments must be integers.</span></span>  
   
-     <span data-ttu-id="97970-115">回撥函式通常傳回非零值即表示成功，傳回零則表示失敗。</span><span class="sxs-lookup"><span data-stu-id="97970-115">Callback functions generally return nonzero values to indicate success and zero to indicate failure.</span></span> <span data-ttu-id="97970-116">此範例將傳回的值明確設定為 **true** 以繼續列舉。</span><span class="sxs-lookup"><span data-stu-id="97970-116">This example explicitly sets the return value to **true** to continue the enumeration.</span></span>  
+     <span data-ttu-id="b51bf-115">回撥函式通常傳回非零值即表示成功，傳回零則表示失敗。</span><span class="sxs-lookup"><span data-stu-id="b51bf-115">Callback functions generally return nonzero values to indicate success and zero to indicate failure.</span></span> <span data-ttu-id="b51bf-116">此範例將傳回的值明確設定為 **true** 以繼續列舉。</span><span class="sxs-lookup"><span data-stu-id="b51bf-116">This example explicitly sets the return value to **true** to continue the enumeration.</span></span>  
   
-3.  <span data-ttu-id="97970-117">建立委派，並將其以引數方式傳遞至 **EnumWindows** 函式。</span><span class="sxs-lookup"><span data-stu-id="97970-117">Create a delegate and pass it as an argument to the **EnumWindows** function.</span></span> <span data-ttu-id="97970-118">平台叫用會自動將委派轉換成熟悉的回撥格式。</span><span class="sxs-lookup"><span data-stu-id="97970-118">Platform invoke converts the delegate to a familiar callback format automatically.</span></span>  
+3.  <span data-ttu-id="b51bf-117">建立委派，並將其以引數方式傳遞至 **EnumWindows** 函式。</span><span class="sxs-lookup"><span data-stu-id="b51bf-117">Create a delegate and pass it as an argument to the **EnumWindows** function.</span></span> <span data-ttu-id="b51bf-118">平台叫用會自動將委派轉換成熟悉的回撥格式。</span><span class="sxs-lookup"><span data-stu-id="b51bf-118">Platform invoke converts the delegate to a familiar callback format automatically.</span></span>  
   
-4.  <span data-ttu-id="97970-119">請確定記憶體回收行程不會在回撥函式完成其工作前，回收該委派。</span><span class="sxs-lookup"><span data-stu-id="97970-119">Ensure that the garbage collector does not reclaim the delegate before the callback function completes its work.</span></span> <span data-ttu-id="97970-120">當您將委派以參數 (或結構中的欄位) 方式傳遞時，其將在呼叫期間保持為未回收。</span><span class="sxs-lookup"><span data-stu-id="97970-120">When you pass a delegate as a parameter, or pass a delegate contained as a field in a structure, it remains uncollected for the duration of the call.</span></span> <span data-ttu-id="97970-121">因此，在以下列舉範例中，回撥函式在呼叫傳回前即會完成該工作，且不需要 Managed 呼叫端進行額外的動作。</span><span class="sxs-lookup"><span data-stu-id="97970-121">So, as is the case in the following enumeration example, the callback function completes its work before the call returns and requires no additional action by the managed caller.</span></span>  
+4.  <span data-ttu-id="b51bf-119">請確定記憶體回收行程不會在回撥函式完成其工作前，回收該委派。</span><span class="sxs-lookup"><span data-stu-id="b51bf-119">Ensure that the garbage collector does not reclaim the delegate before the callback function completes its work.</span></span> <span data-ttu-id="b51bf-120">當您將委派以參數 (或結構中的欄位) 方式傳遞時，其將在呼叫期間保持為未回收。</span><span class="sxs-lookup"><span data-stu-id="b51bf-120">When you pass a delegate as a parameter, or pass a delegate contained as a field in a structure, it remains uncollected for the duration of the call.</span></span> <span data-ttu-id="b51bf-121">因此，在以下列舉範例中，回撥函式在呼叫傳回前即會完成該工作，且不需要 Managed 呼叫端進行額外的動作。</span><span class="sxs-lookup"><span data-stu-id="b51bf-121">So, as is the case in the following enumeration example, the callback function completes its work before the call returns and requires no additional action by the managed caller.</span></span>  
   
-     <span data-ttu-id="97970-122">但是，如果呼叫傳回後仍然可以叫用回撥函式，則 Managed 呼叫端必須採取步驟，以確保在回撥函式結束前，委派仍保持未回收。</span><span class="sxs-lookup"><span data-stu-id="97970-122">If, however, the callback function can be invoked after the call returns, the managed caller must take steps to ensure that the delegate remains uncollected until the callback function finishes.</span></span> <span data-ttu-id="97970-123">如需避免記憶體回收的詳細資訊，請參閱含有平台叫用的 [Interop 封送處理](../../../docs/framework/interop/interop-marshaling.md)。</span><span class="sxs-lookup"><span data-stu-id="97970-123">For detailed information about preventing garbage collection, see [Interop Marshaling](../../../docs/framework/interop/interop-marshaling.md) with Platform Invoke.</span></span>  
+     <span data-ttu-id="b51bf-122">但是，如果呼叫傳回後仍然可以叫用回撥函式，則 Managed 呼叫端必須採取步驟，以確保在回撥函式結束前，委派仍保持未回收。</span><span class="sxs-lookup"><span data-stu-id="b51bf-122">If, however, the callback function can be invoked after the call returns, the managed caller must take steps to ensure that the delegate remains uncollected until the callback function finishes.</span></span> <span data-ttu-id="b51bf-123">如需避免記憶體回收的詳細資訊，請參閱含有平台叫用的 [Interop 封送處理](../../../docs/framework/interop/interop-marshaling.md)。</span><span class="sxs-lookup"><span data-stu-id="b51bf-123">For detailed information about preventing garbage collection, see [Interop Marshaling](../../../docs/framework/interop/interop-marshaling.md) with Platform Invoke.</span></span>  
   
-## <a name="example"></a><span data-ttu-id="97970-124">範例</span><span class="sxs-lookup"><span data-stu-id="97970-124">Example</span></span>  
+## <a name="example"></a><span data-ttu-id="b51bf-124">範例</span><span class="sxs-lookup"><span data-stu-id="b51bf-124">Example</span></span>  
   
 ```vb  
 Imports System  
@@ -140,6 +128,6 @@ int main()
 }  
 ```  
   
-## <a name="see-also"></a><span data-ttu-id="97970-125">請參閱</span><span class="sxs-lookup"><span data-stu-id="97970-125">See Also</span></span>  
- [<span data-ttu-id="97970-126">回呼函式</span><span class="sxs-lookup"><span data-stu-id="97970-126">Callback Functions</span></span>](../../../docs/framework/interop/callback-functions.md)  
- [<span data-ttu-id="97970-127">呼叫 DLL 函式</span><span class="sxs-lookup"><span data-stu-id="97970-127">Calling a DLL Function</span></span>](../../../docs/framework/interop/calling-a-dll-function.md)
+## <a name="see-also"></a><span data-ttu-id="b51bf-125">請參閱</span><span class="sxs-lookup"><span data-stu-id="b51bf-125">See Also</span></span>  
+ [<span data-ttu-id="b51bf-126">回呼函式</span><span class="sxs-lookup"><span data-stu-id="b51bf-126">Callback Functions</span></span>](../../../docs/framework/interop/callback-functions.md)  
+ [<span data-ttu-id="b51bf-127">呼叫 DLL 函式</span><span class="sxs-lookup"><span data-stu-id="b51bf-127">Calling a DLL Function</span></span>](../../../docs/framework/interop/calling-a-dll-function.md)
