@@ -39,5 +39,5 @@
 ## [<<= 運算子](left-shift-assignment-operator.md)
 ## [>>= 運算子](right-shift-assignment-operator.md)
 ## [-> 運算子](dereference-operator.md)
-## [??運算子](null-conditional-operator.md)
+## [??運算子](null-coalescing-operator.md)
 ## [=> 運算子](lambda-operator.md)
