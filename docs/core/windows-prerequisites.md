@@ -3,12 +3,12 @@ title: Windows 上 .NET Core 的必要條件
 description: 了解在 Windows 電腦上開發及執行 .NET Core 應用程式時，您需要哪些相依性。
 author: JRAlexander
 ms.author: johalex
-ms.date: 04/24/2018
-ms.openlocfilehash: 7c6f39f004ebc39ca714ce419a38d842fcf8f0cb
-ms.sourcegitcommit: ff1d40507b3eb6e2185478e37c66c66be6de46f1
+ms.date: 05/18/2018
+ms.openlocfilehash: 3d172c83f0a79744afbaeeff52d7fea62d9b98b6
+ms.sourcegitcommit: 895c7602386a6dfe7ca4facce3d965b27e5c6e87
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/11/2018
+ms.lasthandoff: 05/19/2018
 ---
 # <a name="prerequisites-for-net-core-on-windows"></a>Windows 上 .NET Core 的必要條件
 
@@ -28,11 +28,13 @@ ms.lasthandoff: 05/11/2018
 * Windows Server 2008 R2 SP1 (完整伺服器或 Server Core)
 * Windows Server 2012 SP1 (完整伺服器或 Server Core)
 * Windows Server 2012 R2 (完整伺服器或 Server Core)
-* Windows Server 2016 (完整伺服器、Server Core 或 Nano Server)
+* Windows Server 2016 或更新版本 (完整伺服器、Server Core 或 Nano Server)
 
-如需 .NET Core 2.x 支援的作業系統完整清單，請參閱 [.NET Core 2.x - 支援的作業系統版本](https://github.com/dotnet/core/blob/master/release-notes/2.0/2.0-supported-os.md)。
+以下文件有 .NET Core 所支援每個版本作業系統的完整清單：
 
-如需 .NET Core 1.x 支援的作業系統完整清單，請參閱 [.NET Core 1.x 支援的作業系統版本](https://github.com/dotnet/core/blob/master/release-notes/1.0/1.0-supported-os.md)。
+* [.NET core 2.1 - 支援的 OS 版本](https://github.com/dotnet/core/blob/master/release-notes/2.1/2.1-supported-os.md) \(英文\)
+* [.NET core 2.0 - 支援的 OS 版本](https://github.com/dotnet/core/blob/master/release-notes/2.0/2.0-supported-os.md) \(英文\)
+* [.NET core 1.x - 支援的 OS 版本](https://github.com/dotnet/core/blob/master/release-notes/1.0/1.0-supported-os.md) \(英文\)
 
 ## <a name="net-core-dependencies"></a>.NET Core 的相依性
 
@@ -46,7 +48,13 @@ ms.lasthandoff: 05/11/2018
 * 透過 *.zip* 檔案安裝 .NET Core。 這可以包含組建/CI/CD 伺服器。
 
 > [!NOTE]
-> Windows 8.1 和舊版或 Windows Server 2012 R2 和舊版：請確定您的 Windows 安裝為最新狀態，而且包含已透過 Windows Update 安裝的 [KB2999226](https://support.microsoft.com/en-us/help/2999226/update-for-universal-c-runtime-in-windows)。 如果沒有安裝此更新，當您如下所示啟動 .NET Core 應用程式時，將會看到錯誤：`The program can't start because api-ms-win-crt-runtime-1-1-0.dll is missing from your computer. Try reinstalling the program to fix this problem.`
+> **適用於 Windows 8.1 和更早版本，或 Windows Server 2012 R2 和更早版本：**
+>
+> 請確定您的 Windows 安裝處於最新狀態，且包含 [KB2999226](https://support.microsoft.com/en-us/help/2999226/update-for-universal-c-runtime-in-windows) \(機器翻譯\) (可透過 Windows Update 安裝)。 如果沒有安裝此更新，當您啟動 .NET Core 應用程式時，將會看到如下的錯誤：`The program can't start because api-ms-win-crt-runtime-1-1-0.dll is missing from your computer. Try reinstalling the program to fix this problem.`
+>
+> **適用於 Windows 7 或 Windows Server 2008 R2：**
+>
+> 除了 KB2999226，請確定您也已經安裝 [KB2533623](https://support.microsoft.com/en-us/help/2533623/microsoft-security-advisory-insecure-library-loading-could-allow-remot)。 如果沒有安裝此更新，當您啟動 .NET Core 應用程式時，將會看到如下的錯誤：`The library hostfxr.dll was found, but loading it from C:\<path_to_app>\hostfxr.dll failed`。
 
 ## <a name="prerequisites-with-visual-studio-2017"></a>使用 Visual Studio 2017 的必要條件
 
@@ -96,6 +104,6 @@ ms.lasthandoff: 05/11/2018
 >
 > * 在 **[說明]** 功能表上，選擇 **[關於 Microsoft Visual Studio]**。
 > * 在 [關於 Microsoft Visual Studio] 對話方塊中，確認版本號碼。
->   * 若為 .NET Core 2.1 預覽 1 應用程式，需要 Visual Studio 2017 版本 15.6 預覽 6 或更高版本。
+>   * 對於 .NET Core 2.1 RC 應用程式，需要 Visual Studio 2017 15.7 版或更高版本。
 >   * 若為 .NET Core 2.0 應用程式，需要 Visual Studio 2017 版本 15.3 或更高版本。
 >   * 若為 .NET Core 1.x 應用程式，需要 Visual Studio 2017 版本 15.0 或更高版本。

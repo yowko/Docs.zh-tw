@@ -4,11 +4,11 @@ ms.date: 03/30/2017
 ms.assetid: 123457ac-4223-4273-bb58-3bc0e4957e9d
 author: BillWagner
 ms.author: wiwagn
-ms.openlocfilehash: 51b4758690257b999cce51f3e80fd263a6d5e275
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: 846d41c31687df98b019f103e42cf586a23d8ff1
+ms.sourcegitcommit: 43924acbdbb3981d103e11049bbe460457d42073
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/04/2018
+ms.lasthandoff: 05/23/2018
 ---
 # <a name="writing-large-responsive-net-framework-apps"></a>撰寫大型、可回應的 .NET Framework 應用程式
 本文針對大型 .NET Framework 應用程式或處理大量資料 (例如檔案或資料庫) 的應用程式，提供可提升其效能的提示。 這些提示來自於以 Managed 程式碼重寫 C# 和 Visual Basic 編譯器，本文包含數個 C# 編譯器的實際範例。  
@@ -433,7 +433,7 @@ class Compilation { /*...*/
 }  
 ```  
   
- 此程式碼將 `cachedResult` 的類型變更為 `Task<SyntaxTree>`，並採用 `async` Helper 函式來保存 `GetSyntaxTreeAsync()` 中的原始程式碼。  `GetSyntaxTreeAsync()` 現在使用 [null 聯合運算子](~/docs/csharp/language-reference/operators/null-conditional-operator.md)來傳回 `cachedResult` (如果不是 null)。  如果 `cachedResult` 為 null，則 `GetSyntaxTreeAsync()` 會呼叫 `GetSyntaxTreeUncachedAsync()` 並快取結果。  請注意，`GetSyntaxTreeAsync()` 不會像是程式碼的一般運作方式一樣，等候對 `GetSyntaxTreeUncachedAsync()` 的呼叫。  不使用 await 表示當 `GetSyntaxTreeUncachedAsync()` 傳回其 <xref:System.Threading.Tasks.Task> 物件時，`GetSyntaxTreeAsync()` 會立即傳回 <xref:System.Threading.Tasks.Task>。  現在，快取的結果是 <xref:System.Threading.Tasks.Task>，因此不會有傳回快取結果的配置。  
+ 此程式碼將 `cachedResult` 的類型變更為 `Task<SyntaxTree>`，並採用 `async` Helper 函式來保存 `GetSyntaxTreeAsync()` 中的原始程式碼。  `GetSyntaxTreeAsync()` 現在使用 [null 聯合運算子](../../csharp/language-reference/operators/null-coalescing-operator.md)來傳回 `cachedResult` (如果不是 null)。  如果 `cachedResult` 為 null，則 `GetSyntaxTreeAsync()` 會呼叫 `GetSyntaxTreeUncachedAsync()` 並快取結果。  請注意，`GetSyntaxTreeAsync()` 不會像是程式碼的一般運作方式一樣，等候對 `GetSyntaxTreeUncachedAsync()` 的呼叫。  不使用 await 表示當 `GetSyntaxTreeUncachedAsync()` 傳回其 <xref:System.Threading.Tasks.Task> 物件時，`GetSyntaxTreeAsync()` 會立即傳回 <xref:System.Threading.Tasks.Task>。  現在，快取的結果是 <xref:System.Threading.Tasks.Task>，因此不會有傳回快取結果的配置。  
   
 ### <a name="additional-considerations"></a>其他考量  
  以下是有關大型應用程式或處理大量資料的應用程式可能發生之問題的一些重點。  

@@ -18,11 +18,11 @@ helpviewer_keywords:
 - keywords [C#], operators
 - arithmetic operators [C#]
 ms.assetid: 0301e31f-22ad-49af-ac3c-d5eae7f0ac43
-ms.openlocfilehash: d4b570c93b4bf5f612a74de80fc2cceea2063cc0
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: 2b0441dfebb6692cbea0d1ab7909d7b8f04490cb
+ms.sourcegitcommit: 43924acbdbb3981d103e11049bbe460457d42073
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/04/2018
+ms.lasthandoff: 05/23/2018
 ---
 # <a name="c-operators"></a>C# 運算子
 C# 提供許多運算子，也就是指定要在運算式中執行哪些作業 (數學、索引化、函式呼叫等) 的符號。 您可以[多載](../../../csharp/programming-guide/statements-expressions-operators/overloadable-operators.md)許多運算子，以便在套用至使用者定義型別時變更它們的意義。  
@@ -160,7 +160,7 @@ C# 提供許多運算子，也就是指定要在運算式中執行哪些作業 (
 ## <a name="null-coalescing-operator"></a>Null 聯合運算子  
  此運算子具有的優先順序高於下一個區段且低於前一個區段。  
   
- [x ?? y](../../../csharp/language-reference/operators/null-conditional-operator.md) – 如果非 `null` 則傳回 `x`，否則會傳回 `y`。  
+ [x ?? y](../../../csharp/language-reference/operators/null-coalescing-operator.md) – 如果非 `null` 則傳回 `x`，否則會傳回 `y`。  
   
 ## <a name="conditional-operator"></a>條件運算子  
  此運算子具有的優先順序高於下一個區段且低於前一個區段。  

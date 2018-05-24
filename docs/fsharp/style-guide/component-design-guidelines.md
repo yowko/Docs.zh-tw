@@ -4,7 +4,7 @@ description: '了解撰寫 F # 預定由其他呼叫端元件的指導方針。'
 ms.date: 05/14/2018
 ms.openlocfilehash: 7859baac76be01b2cfbdc8602b6cc417cfe5106f
 ms.sourcegitcommit: 89c93d05c2281b4c834f48f6c8df1047e1410980
-ms.translationtype: MT
+ms.translationtype: HT
 ms.contentlocale: zh-TW
 ms.lasthandoff: 05/15/2018
 ---

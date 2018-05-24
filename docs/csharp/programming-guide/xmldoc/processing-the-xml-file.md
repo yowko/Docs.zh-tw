@@ -5,11 +5,11 @@ helpviewer_keywords:
 - XML processing [C#]
 - XML [C#], processing
 ms.assetid: 60c71193-9dac-4cd3-98c5-100bd0edcc42
-ms.openlocfilehash: b95101d2f8e12f7c6fee5b410e7801f9d890182d
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: ca70f0c8237a5d9cc4ad9e0bb8c1947c871ce064
+ms.sourcegitcommit: 895c7602386a6dfe7ca4facce3d965b27e5c6e87
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/04/2018
+ms.lasthandoff: 05/19/2018
 ---
 # <a name="processing-the-xml-file-c-programming-guide"></a>處理 XML 檔案 (C# 程式設計手冊)
 編譯器會針對程式碼中，標記為要產生文件的每個建構產生識別碼字串。 (如需如何標記程式碼的相關資訊，請參閱[建議使用的文件註解標籤](../../../csharp/programming-guide/xmldoc/recommended-tags-for-documentation-comments.md))。識別碼字串可唯一識別此建構。 處理 XML 檔案的程式可以使用識別碼字串，來識別對應該識別碼且適用於該文件的 .NET Framework 中繼資料/反映項目。  
@@ -42,7 +42,7 @@ ms.lasthandoff: 05/04/2018
   
     -   ELEMENT_TYPE_PTR 會表示為 '*'，緊接在已修改的類型之後。  
   
-    -   ELEMENT_TYPE_BYREF 會表示為 '@'，緊接在已修改的類型之後。  
+    -   ELEMENT_TYPE_BYREF 會表示為 '\@'，緊接在已修改的類型之後。  
   
     -   ELEMENT_TYPE_PINNED 會表示為 '^'，緊接在已修改的類型之後。 C# 編譯器永遠都不會產生這個。  
   

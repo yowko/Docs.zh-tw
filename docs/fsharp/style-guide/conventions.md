@@ -2,11 +2,11 @@
 title: 'F # 編碼慣例'
 description: '撰寫 F # 程式碼時，了解一般方針和慣例。'
 ms.date: 05/14/2018
-ms.openlocfilehash: adb2189540496046ccf6e392bd45807860e13520
-ms.sourcegitcommit: 22c3c8f74eaa138dbbbb02eb7d720fce87fc30a9
-ms.translationtype: HT
+ms.openlocfilehash: f3d16f735ddc1901aeaa5ebb39e2fa2b70a3d836
+ms.sourcegitcommit: 43924acbdbb3981d103e11049bbe460457d42073
+ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/17/2018
+ms.lasthandoff: 05/23/2018
 ---
 # <a name="f-coding-conventions"></a>F # 編碼慣例
 
@@ -91,7 +91,7 @@ let parsed = StringTokenization.parse s // Must qualify to use 'parse'
 
 F # 中宣告的順序很重要，包括具有`open`陳述式。 這是不同於 C# 中，其中的效果`using`和`using static`無關的檔案中的這些陳述式的順序。
 
-在 F # 中，因為開啟進入範圍內的項目可以遮蔽其他人已經存在。 這表示該重新排列`open`陳述式可以修改程式碼的意義。 如此一來，排序文數字順序 （或 pseudorandomly） 通常不建議，能產生您所預期的不同行為。
+在 F # 中，開啟進入範圍內的項目可以遮蔽其他人已經存在。 這表示該重新排列`open`陳述式無法變更程式碼的意義。 如此一來，所有排序任何任意`open`陳述式 （例如，文數字順序） 通常不建議，能產生您所預期的不同行為。
 
 相反地，我們建議您排序它們[拓撲](https://en.wikipedia.org/wiki/Topological_sorting); 也就是排序您`open`陳述式中的順序_層_定義您的系統。 英數字元的排序不同拓撲的圖層內也列入考量。
 
@@ -152,7 +152,9 @@ open Internal.Utilities.Collections
 module MyApi =
     let dep1 = File.ReadAllText "/Users/{your name}/connectionstring.txt"
     let dep2 = Environment.GetEnvironmentVariable "DEP_2"
-    let dep3 = Random().Next() // Random is not thread-safe
+
+    let private r = Random()
+    let dep3() = r.Next() // Problematic if multiple threads use this
 
     let function1 arg = doStuffWith dep1 dep2 dep3 arg
     let function2 arg = doSutffWith dep1 dep2 dep3 arg
@@ -160,7 +162,9 @@ module MyApi =
 
 通常是個好主意有幾個原因：
 
-首先，它會 API 本身相依於共用狀態。 例如，多個呼叫的執行緒可能會嘗試以存取`dep3`值 （而不是安全執行緒）。 其次，它將應用程式設定推入本身程式碼基底。 這是難以維護的較大程式碼基底。
+首先，應用程式設定都會被推送至與程式碼基底`dep1`和`dep2`。 這是不易維護中較大程式碼基底。
+
+第二個，以靜態方式初始化的資料不應該包含不具備執行緒安全，如果您的元件將本身使用多個執行緒的值。 這清楚地違反`dep3`。
 
 最後，模組初始化會編譯成靜態建構函式的整個編譯單元。 如果該模組中的 let 繫結值初始化發生任何錯誤時，它都會顯示`TypeInitializationException`，然後快取的應用程式的整個存留期間。 這很難進行診斷。 通常是內部例外狀況，您可以嘗試理解，但如果沒有，就沒有通知的根本原因為何。
 

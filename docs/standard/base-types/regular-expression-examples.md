@@ -9,11 +9,11 @@ helpviewer_keywords:
 ms.assetid: e9fd53f2-ed56-4b09-b2ea-e9bc9d65e6d6
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 8fb58f8e7a1fef711de28534fbe53dfc9d7084ac
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: ee4d884a0efbeb6e57ed727396bf3bcb39979774
+ms.sourcegitcommit: 89c93d05c2281b4c834f48f6c8df1047e1410980
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/04/2018
+ms.lasthandoff: 05/15/2018
 ---
 # <a name="regular-expression-examples"></a>規則運算式範例
 本節包含程式碼範例，說明規則運算式在常見應用程式中的使用方式。  
@@ -35,7 +35,7 @@ ms.lasthandoff: 05/04/2018
  提供從字串中刪除無效非英數字元的範例。  
   
  [操作說明：確認字串是否為有效的電子郵件格式](../../../docs/standard/base-types/how-to-verify-that-strings-are-in-valid-email-format.md)  
- 提供可用來驗證字串是否為有效電子郵件格式的範例。  
+ 提供驗證字串為有效的電子郵件格式的範例。  
   
 ## <a name="reference"></a>參考資料  
  <xref:System.Text.RegularExpressions>  

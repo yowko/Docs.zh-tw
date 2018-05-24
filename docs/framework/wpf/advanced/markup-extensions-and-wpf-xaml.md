@@ -15,11 +15,11 @@ helpviewer_keywords:
 - characters [WPF], curly brace
 - DynamicResource markup extensions [WPF]
 ms.assetid: 618dc745-8b14-4886-833f-486d2254bb78
-ms.openlocfilehash: f18a369157c1e37411a3c8d8b6dfcce99bc347c6
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: e2fb1e64f957b49743d8dfb19091bca50303e2d2
+ms.sourcegitcommit: 43924acbdbb3981d103e11049bbe460457d42073
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/04/2018
+ms.lasthandoff: 05/23/2018
 ---
 # <a name="markup-extensions-and-wpf-xaml"></a>標記延伸和 WPF XAML
 本主題介紹 XAML 標記延伸模組概念，包括其語法規則、用途，以及其根據的類別物件模型。 標記延伸模組是 XAML 語言的一般功能，以及 XAML 服務之 .NET 實作的一般功能。 本主題會具體詳述 WPF XAML 中所使用的標記延伸模組。  
@@ -64,7 +64,7 @@ ms.lasthandoff: 05/04/2018
   
 -   `RelativeSource` 提供的來源資訊<xref:System.Windows.Data.Binding>，可以瀏覽數個可能的關聯性在執行階段物件樹狀目錄中。 這會提供在多用途範本中所建立或使用程式碼所建立之繫結的特殊化來源，而不需要完全了解周圍物件樹狀結構。 如需詳細資訊，請參閱 [RelativeSource 標記延伸模組](../../../../docs/framework/wpf/advanced/relativesource-markupextension.md)。  
   
--   `TemplateBinding` 可讓控制項範本使用範本屬性的值，而範本屬性來自將使用範本之類別的物件模型定義屬性。 換句話說，範本定義內的屬性可以存取只在套用範本後存在的內容。 如需詳細資訊，請參閱 [TemplateBinding 標記延伸模組](../../../../docs/framework/wpf/advanced/templatebinding-markup-extension.md)。 如需 `TemplateBinding` 實際使用的詳細資訊，請參閱 [Styling with ControlTemplates Sample](http://go.microsoft.com/fwlink/?LinkID=160041) (使用 ControlTemplates 設定樣式範例)。  
+-   `TemplateBinding` 可讓控制項範本使用範本屬性的值，而範本屬性來自將使用範本之類別的物件模型定義屬性。 換句話說，範本定義內的屬性可以存取只在套用範本後存在的內容。 如需詳細資訊，請參閱 [TemplateBinding 標記延伸模組](../../../../docs/framework/wpf/advanced/templatebinding-markup-extension.md)。 如需 `TemplateBinding` 實際使用的詳細資訊，請參閱 [Styling with ControlTemplates Sample](https://github.com/Microsoft/WPF-Samples/tree/master/Styles%20&%20Templates/IntroToStylingAndTemplating) (使用 ControlTemplates 設定樣式範例)。  
   
 -   `ColorConvertedBitmap` 支援一個相當進階的影像處理案例。 如需詳細資訊，請參閱 [ColorConvertedBitmap 標記延伸模組](../../../../docs/framework/wpf/advanced/colorconvertedbitmap-markup-extension.md)。  
   

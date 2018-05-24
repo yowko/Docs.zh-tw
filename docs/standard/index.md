@@ -1,16 +1,16 @@
 ---
-title: .NET 平台指南
-description: 了解 .NET 平台。
+title: .NET 指南
+description: 了解 .NET。
 author: cartermp
 ms.author: ronpet
 ms.date: 05/02/2017
 ms.technology: dotnet-standard
 ms.assetid: bbfe6465-329d-4982-869d-472e7ef85d93
-ms.openlocfilehash: 26c3d58a9a0c62d45a6cd8298746ca09be4d372c
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: 01eb2e94b57da5e5dad0fa355246bcbcbc153dab
+ms.sourcegitcommit: 43924acbdbb3981d103e11049bbe460457d42073
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/04/2018
+ms.lasthandoff: 05/23/2018
 ---
 # <a name="net-guide"></a>.NET 指南
 
