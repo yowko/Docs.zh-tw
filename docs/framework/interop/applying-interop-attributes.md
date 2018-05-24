@@ -17,7 +17,7 @@ author: rpetrusha
 ms.author: ronpet
 ms.openlocfilehash: 554ea7c54973852510e539000baf03bdce8e7bcf
 ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
-ms.translationtype: MT
+ms.translationtype: HT
 ms.contentlocale: zh-TW
 ms.lasthandoff: 05/04/2018
 ---
@@ -66,7 +66,7 @@ ms.lasthandoff: 05/04/2018
 |<xref:System.Runtime.InteropServices.TypeLibTypeAttribute>|含有原來針對這個類型從 COM 型別程式庫匯入的 **TYPEFLAGS**。|  
 |<xref:System.Runtime.InteropServices.TypeLibVarAttribute>|含有原來針對這個變數從 COM 類型程式庫匯入的 **VARFLAGS**。|  
   
-## <a name="see-also"></a>另請參閱  
+## <a name="see-also"></a>請參閱  
  <xref:System.Runtime.InteropServices>  
  [將 .NET Framework 元件公開給 COM](../../../docs/framework/interop/exposing-dotnet-components-to-com.md)  
  [屬性](../../../docs/standard/attributes/index.md)  

@@ -10,11 +10,11 @@ helpviewer_keywords:
 - Visual C# compiler
 - Visual C#, compiler options
 ms.assetid: d3403556-1816-4546-a782-e8223a772e44
-ms.openlocfilehash: a305daee2349341527b529c7556cc6fa84cc9fd2
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: a0affaf3691d2392c9f8d7502204d0122f2ea428
+ms.sourcegitcommit: 77d9a94dac4c05827ed0663d95e0f9ad35d6682e
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/04/2018
+ms.lasthandoff: 05/24/2018
 ---
 # <a name="c-compiler-options"></a>C# 編譯器選項
 編譯器會產生可執行檔 (.exe)、動態連結程式庫 (.dll) 或程式碼模組 (.netmodule)。  
@@ -24,16 +24,16 @@ ms.lasthandoff: 05/04/2018
  在 Visual Studio 中，您可以在 web.config 檔案中設定編譯器選項。 如需詳細資訊，請參閱 [\<compiler> 元素](../../../framework/configure-apps/file-schema/compiler/compiler-element.md)。  
   
 ## <a name="in-this-section"></a>本節內容  
- [使用 csc.exe 建置命令列](../../../csharp/language-reference/compiler-options/command-line-building-with-csc-exe.md)  
+ [使用 csc.exe 建置命令列](command-line-building-with-csc-exe.md)  
  有關從命令列建置 Visual C# 應用程式的資訊。  
   
- [如何：為 Visual Studio 命令列設定環境變數](../../../csharp/language-reference/compiler-options/how-to-set-environment-variables-for-the-visual-studio-command-line.md)  
+ [如何：為 Visual Studio 命令列設定環境變數](how-to-set-environment-variables-for-the-visual-studio-command-line.md)  
  提供執行 vsvars32.bat 來啟用命令列建置的步驟。  
   
- [依分類列出的 C# 編譯器選項](../../../csharp/language-reference/compiler-options/listed-by-category.md)  
+ [依分類列出的 C# 編譯器選項](listed-by-category.md)  
  依分類列出編譯器選項。  
   
- [依字母順序列出 C# 編譯器選項](../../../csharp/language-reference/compiler-options/listed-alphabetically.md)  
+ [依字母順序列出 C# 編譯器選項](listed-alphabetically.md)  
  依字母順序列出編譯器選項。  
   
 ## <a name="related-sections"></a>相關章節  

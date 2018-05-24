@@ -15,7 +15,7 @@ author: rpetrusha
 ms.author: ronpet
 ms.openlocfilehash: 0d9825deae22e856cf520e6173d53278539c576c
 ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
-ms.translationtype: MT
+ms.translationtype: HT
 ms.contentlocale: zh-TW
 ms.lasthandoff: 05/04/2018
 ---
@@ -141,6 +141,6 @@ CMyClass::MethodThatThrows
   
  如 **Message**、**Source** 和 **StackTrace** 之類的例外狀況欄位，並不適用於 **StackOverflowException**。  
   
-## <a name="see-also"></a>另請參閱  
+## <a name="see-also"></a>請參閱  
  [進階 COM 互通性](https://msdn.microsoft.com/library/3ada36e5-2390-4d70-b490-6ad8de92f2fb(v=vs.100))  
  [例外狀況](../../standard/exceptions/index.md)

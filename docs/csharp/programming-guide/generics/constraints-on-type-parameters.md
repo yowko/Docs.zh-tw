@@ -6,11 +6,11 @@ helpviewer_keywords:
 - type constraints [C#]
 - type parameters [C#], constraints
 - unbound type parameter [C#]
-ms.openlocfilehash: 1d6487f4136b5a3f8bfc2e1721ae268e06f5ba98
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: b5ad639309238912aa27b58c95466b4f37052699
+ms.sourcegitcommit: 43924acbdbb3981d103e11049bbe460457d42073
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/04/2018
+ms.lasthandoff: 05/23/2018
 ---
 # <a name="constraints-on-type-parameters-c-programming-guide"></a>型別參數的條件約束 (C# 程式設計手冊)
 
@@ -18,7 +18,7 @@ ms.lasthandoff: 05/04/2018
 
 |條件約束|描述|
 |----------------|-----------------|
-|`where T: struct`|型別引數必須是實值型別。 您可以指定 <xref:System.Nullable> 以外的任何實值型別。 如需詳細資訊，請參閱[可為 Null 的型別](../nullable-types/using-nullable-types.md)。|
+|`where T : struct`|型別引數必須是實值型別。 您可以指定 <xref:System.Nullable> 以外的任何實值型別。 如需詳細資訊，請參閱[可為 Null 的型別](../nullable-types/using-nullable-types.md)。|
 |`where T : class`|型別引數必須是參考型別。 此條件約束也適用於任何類別、介面、委派或陣列型別。|
 |`where T : unmanaged`|型別引數不得是參考型別，也不得包含任何巢狀層級的任何參考型別成員。|
 |`where T : new()`|型別引數必須有公用無參數建構函式。 與其他條件約束搭配使用時，`new()` 條件約束必須是最後一個指定的。|

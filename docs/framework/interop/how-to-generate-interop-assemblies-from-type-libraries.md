@@ -12,7 +12,7 @@ author: rpetrusha
 ms.author: ronpet
 ms.openlocfilehash: aea23daff28b50678b9fa7902857fc302494c4a7
 ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
-ms.translationtype: MT
+ms.translationtype: HT
 ms.contentlocale: zh-TW
 ms.lasthandoff: 05/04/2018
 ---
@@ -40,6 +40,6 @@ tlbimp Loanlib.dll
 tlbimp LoanLib.dll /out: LOANLib.dll  
 ```  
   
-## <a name="see-also"></a>另請參閱  
+## <a name="see-also"></a>請參閱  
  [匯入類型程式庫做為組件](../../../docs/framework/interop/importing-a-type-library-as-an-assembly.md)  
  [將 COM 元件公開給 .NET Framework](../../../docs/framework/interop/exposing-com-components.md)

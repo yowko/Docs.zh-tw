@@ -1,6 +1,6 @@
 ---
 title: Winres.exe (Windows Form 資源編輯器)
-ms.date: 05/21/2018
+ms.date: 03/30/2017
 helpviewer_keywords:
 - Winres.exe
 - Windows Forms Resource Editor
@@ -12,20 +12,17 @@ helpviewer_keywords:
 ms.assetid: cb8bc835-9221-4888-af53-1a4f5fad6c48
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: 14e90916261250452c1f07e66a46bee400da0428
-ms.sourcegitcommit: 895c7602386a6dfe7ca4facce3d965b27e5c6e87
+ms.openlocfilehash: 69ba816e5b7cf05ef094153b7ff044d573ac1760
+ms.sourcegitcommit: 77d9a94dac4c05827ed0663d95e0f9ad35d6682e
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/19/2018
+ms.lasthandoff: 05/24/2018
 ---
 # <a name="winresexe-windows-forms-resource-editor"></a>Winres.exe (Windows Form 資源編輯器)
 Windows Form 資源編輯器 (Winres.exe) 是一項視覺化配置工具，可以幫助當地語系化專家將表單所使用的 Windows Form 使用者介面 (UI) 資源當地語系化。 做為 Winres.exe 輸入內容的 .resx 或 .resources 檔案，可以利用視覺化設計環境 (例如 Microsoft Visual Studio) 建立。 如需在 .NET Framework 應用程式中部署資源的資訊，請參閱[桌面應用程式中的資源](../../../docs/framework/resources/index.md)。  
   
  此工具會自動與 Visual Studio 一起安裝。 若要執行此工具，請使用 [開發人員命令提示字元] \(或 Windows 7 中的 [Visual Studio 命令提示字元])。 如需詳細資訊，請參閱[命令提示字元](../../../docs/framework/tools/developer-command-prompt-for-vs.md)。  
-
-> [!IMPORTANT]
-> 您應該只載入和使用來自信任來源的 .resx 檔案。 ResX 檔案可包含可執行程式碼，因此從安全性觀點而言，應視為可執行檔 (.exe)。
-
+  
  在命令提示字元下輸入下列命令：  
   
 ## <a name="syntax"></a>語法  

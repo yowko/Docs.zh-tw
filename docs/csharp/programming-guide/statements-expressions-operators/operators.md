@@ -6,11 +6,11 @@ helpviewer_keywords:
 - C# language, operators
 - operators [C#], about operators
 ms.assetid: 214e7b83-1a41-4f7c-9867-64e9c0bab39f
-ms.openlocfilehash: d2eace5782b3a070a22acf751fd68340fa939a0b
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: 76371985e340945793310247ec48d9b0cb747aed
+ms.sourcegitcommit: 43924acbdbb3981d103e11049bbe460457d42073
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/04/2018
+ms.lasthandoff: 05/23/2018
 ---
 # <a name="operators-c-programming-guide"></a>運算子 (C# 程式設計手冊)
 在 C# 中，「 *運算子* 」(Operator) 是程式的元素，這類元素會套用至運算式或陳述式中的一個或多個「 *運算元* 」(Operand)。 只使用一個運算元的運算子稱為`++`「一元」 `new`(Unary) 運算子，例如遞增運算子 ( *) 或* 。 使用兩個運算元的運算子稱為`+`「二元」`-`(Binary) 運算子，例如算術運算子 (`*`、`/`、 *及* )。 還有一種運算子稱為條件運算子 (`?:`)，它會使用三個運算元而且是 C# 中唯一的三元運算子。  
@@ -114,7 +114,7 @@ ms.lasthandoff: 05/04/2018
 |邏輯 OR|x [&#124;](../../../csharp/language-reference/operators/or-operator.md) y|整數位元 OR、布林邏輯 OR|  
 |條件式 AND|x [&&](../../../csharp/language-reference/operators/conditional-and-operator.md) y|只有在 x 為 true 時評估 y|  
 |條件式 OR|x [&#124;&#124;](../../../csharp/language-reference/operators/conditional-or-operator.md) y|只有在 x 為 false 時評估 y|  
-|Null 聯合|x [??](../../../csharp/language-reference/operators/null-conditional-operator.md) Y|如果 x 為 null 則判斷值為 y，否則判斷值為 x|  
+|Null 聯合|x [??](../../../csharp/language-reference/operators/null-coalescing-operator.md) Y|如果 x 為 null 則判斷值為 y，否則判斷值為 x|  
 |條件式|x [?](../../../csharp/language-reference/operators/conditional-operator.md) y : z|如果 x 為 true 則判斷值為 y；如果 x 為 false 則判斷值為 z|  
   
  **指派和匿名運算子**  

@@ -6,7 +6,7 @@ author: mairaw
 ms.author: mairaw
 ms.openlocfilehash: 187bff7c75ba2a0887e3c5728a484a9231936511
 ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
-ms.translationtype: MT
+ms.translationtype: HT
 ms.contentlocale: zh-TW
 ms.lasthandoff: 05/04/2018
 ---
@@ -420,7 +420,7 @@ if (sessionBoundObject.GetCurrentValue() == "Hello")
 }  
 ```  
   
-## <a name="see-also"></a>另請參閱  
+## <a name="see-also"></a>請參閱  
  [基本 WCF 程式設計](../../../docs/framework/wcf/basic-wcf-programming.md)  
  [設計與實作服務](../../../docs/framework/wcf/designing-and-implementing-services.md)  
  [建置用戶端](../../../docs/framework/wcf/building-clients.md)  
