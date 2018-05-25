@@ -1,12 +1,12 @@
 ---
 title: 在 SQL Server 中進行驗證
-ms.date: 03/30/2017
+ms.date: 05/22/2018
 ms.assetid: 646ddbf5-dd4e-4285-8e4a-f565f666c5cc
-ms.openlocfilehash: 8fc6f17cd008fe24e041c52b4e5ee8fd4d261f40
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: f2d290d22d27c43cf7fb3250bf7898e8260dce2b
+ms.sourcegitcommit: 77d9a94dac4c05827ed0663d95e0f9ad35d6682e
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/04/2018
+ms.lasthandoff: 05/24/2018
 ---
 # <a name="authentication-in-sql-server"></a>在 SQL Server 中進行驗證
 SQL Server 支援兩種驗證模式：Windows 驗證模式和混合模式。  
@@ -16,7 +16,7 @@ SQL Server 支援兩種驗證模式：Windows 驗證模式和混合模式。
 -   混合模式支援 Windows 和 SQL Server 提供的驗證。 使用者名稱和密碼組會在 SQL Server 內進行維護。  
   
 > [!IMPORTANT]
->  建議盡量使用「Windows 驗證」。 Windows 驗證會使用一系列的加密訊息在 SQL Server 中驗證使用者。 使用 SQL Server 登入時，SQL Server 登入名稱及密碼會透過網路傳遞，因而降低其安全性。  
+>  建議盡量使用「Windows 驗證」。 Windows 驗證會使用一系列的加密訊息在 SQL Server 中驗證使用者。 SQL Server 登入使用時，SQL Server 登入名稱和加密的密碼會透過網路，使其成為較不安全傳遞。  
   
  使用 Windows 驗證的好處是因為使用者已登入 Windows，所以不必再另行登入 SQL Server。 下列 `SqlConnection.ConnectionString` 可指定 Windows 驗證，且不需要使用者名稱或密碼。  
   
