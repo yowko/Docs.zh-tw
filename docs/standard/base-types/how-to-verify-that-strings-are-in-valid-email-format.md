@@ -20,14 +20,17 @@ helpviewer_keywords:
 ms.assetid: 7536af08-4e86-4953-98a1-a8298623df92
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 573a3e954bf15bdbcf8b1885c10f68a222329ac1
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: 02c942dea3314581ce8f758bb9ed3ce88c2fe150
+ms.sourcegitcommit: 89c93d05c2281b4c834f48f6c8df1047e1410980
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/04/2018
+ms.lasthandoff: 05/15/2018
 ---
 # <a name="how-to-verify-that-strings-are-in-valid-email-format"></a>如何：確認字串是否為有效的電子郵件格式
 下列範例會使用規則運算式來確認字串是否為有效的電子郵件格式。  
+
+> [!NOTE]
+>  建議您使用 <xref:System.Net.Mail.MailAddress?displayProperty=nameWithType> 類別來檢查字串是否使用有效的電子郵件地址格式。 若要這樣做，請將電子郵件地址字串傳遞給 <xref:System.Net.Mail.MailAddress.%23ctor%28System.String%29?displayProperty=nameWithType> 類別建構函式，這會在無法辨識字串的格式時，擲回 <xref:System.FormatException>。  
   
 ## <a name="example"></a>範例  
  此範例會定義 `IsValidEmail` 方法，如果字串包含有效的電子郵件地址，則這個方法會傳回 `true` ，否則會傳回 `false` ，但不會採取其他任何動作。  
@@ -67,9 +70,6 @@ ms.lasthandoff: 05/04/2018
 |<code>&#124;(([0-9a-z][-0-9a-z]*[0-9a-z]*\.)+</code>|如果 @ 後面的字元不是左括號，則比對一個值為 A-Z、a-z 或 0-9 的英數字元，該英數字元後面接著零或多個連字號，再接著值為 A-Z、a-z 或 0-9 的零或一個英數字元，最後接著句點。 此模式可以重複一或多次，且後面必須接最上層網域名稱。|  
 |`[a-z0-9][\-a-z0-9]{0,22}[a-z0-9]))`|最上層網域名稱必須以英數字元 (a-z、A-Z 和 0-9) 開頭和結尾。 其中也可以包含零到 22 個 ASCII 字元，英數字元或連字號皆可。|  
 |`$`|在字串的結尾結束比對。|  
-  
-> [!NOTE]
->  如果不使用規則運算式來驗證電子郵件地址，您可以改用 <xref:System.Net.Mail.MailAddress?displayProperty=nameWithType> 類別。 若要判定電子郵件地址是否有效，請將電子郵件地址傳遞至 <xref:System.Net.Mail.MailAddress.%23ctor%28System.String%29?displayProperty=nameWithType> 類別建構函式。  
   
 ## <a name="compiling-the-code"></a>編譯程式碼  
  `IsValidEmail` 和 `DomainMapper` 方法可以包含在規則運算式公用程式方法的程式庫中，或是做為私用的靜態或執行個體方法包含在應用程式類別中。  
