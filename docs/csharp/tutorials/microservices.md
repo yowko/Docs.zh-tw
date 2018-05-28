@@ -3,11 +3,11 @@ title: 在 Docker 中裝載的微服務 - C#
 description: 了解如何建立在 Docker 容器中執行的 ASP.NET Core 服務
 ms.date: 02/03/2017
 ms.assetid: 87e93838-a363-4813-b859-7356023d98ed
-ms.openlocfilehash: eacfa87e465e5f7737dbd2bfc4c6a77ffc5531c3
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: 7428051c1d9a29ba98ca1f28288b3c50ea36ae1a
+ms.sourcegitcommit: 54231aa56fca059e9297888a96fbca1d4cf3746c
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/04/2018
+ms.lasthandoff: 05/25/2018
 ---
 # <a name="microservices-hosted-in-docker"></a>在 Docker 中裝載的微服務
 
@@ -237,7 +237,7 @@ WORKDIR /app
 
 # copy csproj and restore as distinct layers
 
-COPY WeatherMicroservice.csproj .
+COPY WeatherMicroService.csproj .
 RUN dotnet restore 
 
 # copy and build everything else
@@ -255,7 +255,7 @@ RUN dotnet publish -c Release -o out
 此檔案的最後一行會執行該應用程式︰
 
 ```
-ENTRYPOINT ["dotnet", "out/WeatherMicroservice.dll", "--server.urls", "http://0.0.0.0:5000"]
+ENTRYPOINT ["dotnet", "out/WeatherMicroService.dll", "--server.urls", "http://0.0.0.0:5000"]
 ```
 
 此設定的連接埠是參考 Dockerfile 最後一行 `dotnet` 的 `--server.urls` 引數。 `ENTRYPOINT` 命令會通知 Docker 哪些命令和命令列選項啟動該服務。 

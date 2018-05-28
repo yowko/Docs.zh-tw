@@ -2,11 +2,11 @@
 title: 集合 (C#)
 ms.date: 07/20/2015
 ms.assetid: 317d7dc3-8587-4873-8b3e-556f86497939
-ms.openlocfilehash: 85cbabf74a702a4d6442a29c3cf3d7b726ab38da
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: 7400d4eee4df99cb1e255e428f83028fddf481f4
+ms.sourcegitcommit: 54231aa56fca059e9297888a96fbca1d4cf3746c
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/04/2018
+ms.lasthandoff: 05/25/2018
 ---
 # <a name="collections-c"></a>集合 (C#)
 在許多應用程式中，您想要建立和管理相關物件的群組。 有兩種方式可以群組物件：建立物件的陣列和建立物件的集合。  
@@ -460,7 +460,7 @@ public class Car : IComparable<Car>
   
 <a name="BKMK_CustomCollection"></a>
 ## <a name="defining-a-custom-collection"></a>定義自訂集合  
- 您可以透過實作 <xref:System.Collections.Generic.IEnumerable%601> 或 <xref:System.Collections.IEnumerable> 介面來定義集合。 如需其他資訊，請參閱[如何：使用 foreach 存取集合類別](../../../csharp/programming-guide/classes-and-structs/how-to-access-a-collection-class-with-foreach.md)。  
+ 您可以透過實作 <xref:System.Collections.Generic.IEnumerable%601> 或 <xref:System.Collections.IEnumerable> 介面來定義集合。  
   
  雖然您可以定義自訂集合，但是使用包含在 .NET Framework 中的集合 (本主題稍早在[集合的種類](#BKMK_KindsOfCollections)中所述) 通常會比較好。  
   
@@ -585,4 +585,3 @@ private static IEnumerable<int> EvenSequence(
  [選取集合類別](../../../standard/collections/selecting-a-collection-class.md)  
  [在集合內比較和排序](../../../standard/collections/comparisons-and-sorts-within-collections.md)  
  [何時使用泛型集合](../../../standard/collections/when-to-use-generic-collections.md)  
- [如何：使用 foreach 存取集合類別](../../../csharp/programming-guide/classes-and-structs/how-to-access-a-collection-class-with-foreach.md)

@@ -1,6 +1,6 @@
 ---
 title: -keycontainer (C# 編譯器選項)
-ms.date: 07/20/2015
+ms.date: 05/16/2018
 f1_keywords:
 - /keycontainer
 helpviewer_keywords:
@@ -8,11 +8,11 @@ helpviewer_keywords:
 - keycontainer compiler option [C#]
 - -keycontainer compiler option [C#]
 ms.assetid: b3982b6d-2382-4f7e-bebd-ce98eaa30763
-ms.openlocfilehash: edb50dafa376abe55fbeeb312ca5bb8f34c83e7f
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: 5a7b378cad7a1df9249fcbefa28bb9aa9a6a3da4
+ms.sourcegitcommit: 77d9a94dac4c05827ed0663d95e0f9ad35d6682e
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/04/2018
+ms.lasthandoff: 05/24/2018
 ---
 # <a name="-keycontainer-c-compiler-options"></a>-keycontainer (C# 編譯器選項)
 指定密碼編譯金鑰容器的名稱。  
@@ -28,7 +28,7 @@ ms.lasthandoff: 05/04/2018
  強式名稱金鑰容器的名稱。  
   
 ## <a name="remarks"></a>備註  
- 使用 **-keycontainer** 選項時，編譯器會將公開金鑰從指定的容器插入至資訊清單，並使用私密金鑰簽署最終組件，藉此建立可共用的元件。 若要產生金鑰檔，請在命令列鍵入 sn -k `file`。 sn-i 會將金鑰組安裝在容器中。  
+ 使用 **-keycontainer** 選項時，編譯器會建立可共用的元件。 編譯器會從指定的容器將公開金鑰插入至組件資訊清單，然後使用私密金鑰簽署最終組件。 若要產生金鑰檔，請在命令列中輸入 `sn -k file`。 `sn -i` 會將金鑰組安裝於容器中。 當編譯器在 CoreCLR 上執行時，不支援此選項。 若要在 CoreCLR 上建置時簽署組件，請使用 [-keyfile](keyfile-compiler-option.md) 選項。
   
  如果您使用 [-target:module](../../../csharp/language-reference/compiler-options/target-module-compiler-option.md) 進行編譯，則在使用 [-addmodule](../../../csharp/language-reference/compiler-options/addmodule-compiler-option.md) 將這個模組編譯為組件時，金鑰檔的名稱會保留在模組中並併入組件。  
   
@@ -45,5 +45,5 @@ ms.lasthandoff: 05/04/2018
  您可以使用 <xref:VSLangProj.ProjectProperties.AssemblyKeyContainerName%2A>，以程式設計方式存取這個編譯器選項。  
   
 ## <a name="see-also"></a>請參閱  
- [C# 編譯器選項](../../../csharp/language-reference/compiler-options/index.md)  
+ [C# 編譯器 -keyfile 選項](keyfile-compiler-option.md) [C# 編譯器選項](index.md)  
  [管理專案和方案屬性](/visualstudio/ide/managing-project-and-solution-properties)
