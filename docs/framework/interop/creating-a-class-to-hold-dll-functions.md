@@ -14,7 +14,7 @@ author: rpetrusha
 ms.author: ronpet
 ms.openlocfilehash: 09088d1ac0a8312ee5832a5f3bc0547e6654de93
 ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
-ms.translationtype: MT
+ms.translationtype: HT
 ms.contentlocale: zh-TW
 ms.lasthandoff: 05/04/2018
 ---
@@ -23,7 +23,7 @@ ms.lasthandoff: 05/04/2018
   
  在類別內，您可以為每個您想要呼叫的 DLL 函式定義靜態方法。 定義可以包含其他資訊，例如傳遞方法引數時所使用的字元集或呼叫慣例；略過這項資訊，即可選取預設設定。 如需宣告選項和其預設設定的完整清單，請參閱[在 Managed 程式碼中建立原型](../../../docs/framework/interop/creating-prototypes-in-managed-code.md)。  
   
- 在包裝之後，您可以呼叫方法，在類別上時，就可以呼叫靜態方法上的任何其他類別即可。 平台叫用會自動處理基礎匯出的函式。  
+ 包裝之後，即可在對任何其他類別呼叫靜態方法時，於類別上呼叫方法。 平台叫用會自動處理基礎匯出的函式。  
   
  設計平台叫用的 Managed 類別時，請考慮類別與 DLL 函式之間的關聯性。 例如，您可以：  
   
@@ -35,7 +35,7 @@ ms.lasthandoff: 05/04/2018
   
  您可以依需要命名類別和其方法。 如需示範如何建構要與平台叫用搭配使用之 .NET 型宣告的範例，請參閱[使用平台叫用封送處理資料](../../../docs/framework/interop/marshaling-data-with-platform-invoke.md)。  
   
-## <a name="see-also"></a>另請參閱  
+## <a name="see-also"></a>請參閱  
  [使用 Unmanaged DLL 函式](../../../docs/framework/interop/consuming-unmanaged-dll-functions.md)  
  [識別 DLL 中的函式](../../../docs/framework/interop/identifying-functions-in-dlls.md)  
  [在 Managed 程式碼中建立原型](../../../docs/framework/interop/creating-prototypes-in-managed-code.md)  

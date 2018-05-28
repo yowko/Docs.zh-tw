@@ -2,11 +2,11 @@
 title: 操作說明文章 (C# 指南)
 description: 集結了快速提示與簡要的程式碼範例
 ms.date: 12/20/2017
-ms.openlocfilehash: b8164abd84647fc9118acc6e0b84e7fd46838fe9
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: 209af8858de1a791997d254f5a2ddd5dd1803bff
+ms.sourcegitcommit: 54231aa56fca059e9297888a96fbca1d4cf3746c
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/04/2018
+ms.lasthandoff: 05/25/2018
 ---
 # <a name="how-to-c"></a>操作說明 (C#)
 
@@ -43,9 +43,8 @@ ms.lasthandoff: 05/04/2018
 這些文章有助您使用資料集合。
 
 - [使用集合初始設定式將字典初始化](../programming-guide/classes-and-structs/how-to-initialize-a-dictionary-with-a-collection-initializer.md)。
-- [使用 `foreach` 存取集合中的所有元素](../programming-guide/classes-and-structs/how-to-access-a-collection-class-with-foreach.md)。
 
-## <a name="strings"></a>字串
+## <a name="working-with-strings"></a>使用字串
 
 字串是用來顯示或操作文字的基本資料類型。 這些文章會示範字串的常見做法。
 

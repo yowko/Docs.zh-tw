@@ -5,11 +5,11 @@ helpviewer_keywords:
 - XML processing [C#]
 - XML [C#], processing
 ms.assetid: 60c71193-9dac-4cd3-98c5-100bd0edcc42
-ms.openlocfilehash: ca70f0c8237a5d9cc4ad9e0bb8c1947c871ce064
-ms.sourcegitcommit: 895c7602386a6dfe7ca4facce3d965b27e5c6e87
+ms.openlocfilehash: 659562864ad323162f15351aa960c2a54164c77d
+ms.sourcegitcommit: 43924acbdbb3981d103e11049bbe460457d42073
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/19/2018
+ms.lasthandoff: 05/23/2018
 ---
 # <a name="processing-the-xml-file-c-programming-guide"></a>處理 XML 檔案 (C# 程式設計手冊)
 編譯器會針對程式碼中，標記為要產生文件的每個建構產生識別碼字串。 (如需如何標記程式碼的相關資訊，請參閱[建議使用的文件註解標籤](../../../csharp/programming-guide/xmldoc/recommended-tags-for-documentation-comments.md))。識別碼字串可唯一識別此建構。 處理 XML 檔案的程式可以使用識別碼字串，來識別對應該識別碼且適用於該文件的 .NET Framework 中繼資料/反映項目。  
@@ -40,7 +40,7 @@ ms.lasthandoff: 05/19/2018
   
     -   內建類型 (例如，ELEMENT_TYPE_I4、ELEMENT_TYPE_OBJECT、ELEMENT_TYPE_STRING、ELEMENT_TYPE_TYPEDBYREF 和 ELEMENT_TYPE_VOID) 會表示為對應之完整類型的完整名稱。 例如，System.Int32 或 System.TypedReference。  
   
-    -   ELEMENT_TYPE_PTR 會表示為 '*'，緊接在已修改的類型之後。  
+    -   ELEMENT_TYPE_PTR 會表示為 '\*'，緊接在已修改的類型之後。  
   
     -   ELEMENT_TYPE_BYREF 會表示為 '\@'，緊接在已修改的類型之後。  
   
@@ -68,11 +68,11 @@ ms.lasthandoff: 05/19/2018
   
 -   僅針對轉換運算子 (op_Implicit 和 op_Explicit)，此方法的傳回值會編碼為 ' ~'，後面接著傳回類型，如上述編碼所示。  
   
--   針對泛型類型，類型的名稱後面將接著反引號，然後是表示泛型類型參數數目的數字。  例如，套用至物件的  
+-   針對泛型類型，類型的名稱後面會接著反引號，然後是表示泛型類型參數數目的數字。 例如: 
   
      ``<member name="T:SampleClass`2">`` 是類型的標籤，定義為 `public class SampleClass<T, U>`。  
   
-     針對接受泛型類型做為參數的方法，會將泛型類型參數指定為前面加上反引號的數字 (例如\`0、`1)。  每個數字都表示類型泛型參數之以零為起始的陣列標記法。  
+     針對接受泛型類型作為參數的方法，會將泛型類型參數指定為前面加上反引號的數字 (例如\`0、\`1)。 每個數字都表示類型泛型參數之以零為起始的陣列標記法。  
   
 ## <a name="examples"></a>範例  
  下列範例顯示針對類別及其成員產生識別碼字串的方式：  

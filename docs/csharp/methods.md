@@ -3,13 +3,13 @@ title: 方法 - C# 手冊
 description: 方法、方法參數和方法傳回值的概觀
 author: rpetrusha
 ms.author: ronpet
-ms.date: 10/26/2016
+ms.date: 05/21/2018
 ms.assetid: 577a8527-1081-4b36-9b9e-0685b6553c6e
-ms.openlocfilehash: 6a99ccc0157b044eb1a9ed7189de94ca69225d1b
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: a9d78ecfc3911cf959333c098a66614239609c4e
+ms.sourcegitcommit: 43924acbdbb3981d103e11049bbe460457d42073
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/04/2018
+ms.lasthandoff: 05/23/2018
 ---
 # <a name="methods"></a>方法 #
 
@@ -80,7 +80,7 @@ ms.lasthandoff: 05/04/2018
 [!code-csharp[csSnippets.Methods#46](../../samples/snippets/csharp/concepts/methods/named2.cs#46)]
 
  <a name="inherited"></a>
- ##<a name="inherited-and-overridden-methods"></a>繼承和覆寫方法 ##
+ ## <a name="inherited-and-overridden-methods"></a>繼承和覆寫方法 ##
 
 除了在型別中明確定義的成員外，型別會繼承在其基底類別中定義的成員。 因為受管理的類型系統中之所有類型，都是直接或間接繼承自 <xref:System.Object> 類別，所以所有的類型都會繼承其成員，例如 <xref:System.Object.Equals(System.Object)>、<xref:System.Object.GetType> 及 <xref:System.Object.ToString>。 下例定義 `Person` 類別、具現化兩個 `Person` 物件，並呼叫 `Person.Equals` 方法以判斷兩個物件是否相等。 但是 `Equals` 方法不是在 `Person` 類別中定義，它繼承自 <xref:System.Object>。
 
@@ -258,7 +258,7 @@ if (person != null)
 > [!NOTE]
 > 非同步方法會在遇到第一個未完成的等候物件或是到達非同步方法的結尾時 (以先發生者為準)，傳回呼叫者
 
-非同步方法可以有 <xref:System.Threading.Tasks.Task%601>、<xref:System.Threading.Tasks.Task> 或 `void` 的傳回類型。 `void` 傳回型別主要用於定義需要 `void` 傳回型別的事件處理常式。 傳回 `void` 的非同步方法無法等候，而且 void 傳回方法的呼叫端無法攔截方法擲回的例外狀況。 釋放 C# 7.0 時會放開此限制，允許非同步方法[傳回任何類似工作的型別](https://github.com/ljw1004/roslyn/blob/features/async-return/docs/specs/feature%20-%20arbitrary%20async%20returns.md)。
+非同步方法可以有 <xref:System.Threading.Tasks.Task%601>、<xref:System.Threading.Tasks.Task> 或 `void` 的傳回類型。 `void` 傳回型別主要用於定義需要 `void` 傳回型別的事件處理常式。 傳回 `void` 的非同步方法無法等候，而且 void 傳回方法的呼叫端無法攔截方法擲回的例外狀況。 從 C# 7.0 開始，非同步方法可具備[任何類似工作的傳回類型](./whats-new/csharp-7.md#generalized-async-return-types)。
 
 在下例中，`DelayAsync` 是包含會傳回整數之 return 陳述式的非同步方法。 因為它是非同步方法，所以其方法宣告必須有傳回型別 `Task<int>`。 因為傳回型別是 `Task<int>`，所以 `DoSomethingAsync` 中 `await` 運算式的評估會產生整數，如下列 `int result = await delayTask` 陳述式所示。
 

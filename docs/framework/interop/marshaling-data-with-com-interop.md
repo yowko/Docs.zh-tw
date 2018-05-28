@@ -8,7 +8,7 @@ author: rpetrusha
 ms.author: ronpet
 ms.openlocfilehash: d0d94223223568efe921af3a340815a966cc6c6f
 ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
-ms.translationtype: MT
+ms.translationtype: HT
 ms.contentlocale: zh-TW
 ms.lasthandoff: 05/04/2018
 ---
@@ -21,21 +21,21 @@ COM Interop 同時提供使用來自 Managed 程式碼之 COM 物件的支援和
   
 -   [型別程式庫匯出工具 (Tlbexp.exe)](../../../docs/framework/tools/tlbexp-exe-type-library-exporter.md)，這會從組件產生 COM 型別程式庫，並產生在方法呼叫期間執行封送處理的包裝函式。  
   
- 下列各節將說明您可以 （或必須） 提供具有其他類型資訊的封送處理器時，自訂 interop 包裝函式的處理程序的主題連結。  
+ 下列各節會連結到各個主題，以描述當您可以 (或必須) 提供具有其他類型資訊的封送處理器時，自訂 Interop 包裝函式的程序。  
   
 ## <a name="in-this-section"></a>本節內容  
-[如何： 手動建立包裝函式](how-to-create-wrappers-manually.md)   
-描述如何在 managed 的原始程式碼中手動建立 COM 包裝函式。 
+[如何：手動建立包裝函式](how-to-create-wrappers-manually.md)   
+描述如何在受控原始程式碼中手動建立 COM 包裝函式。 
  
  [如何：將 Managed 程式碼 DCOM 移轉至 WCF](../../../docs/framework/interop/how-to-migrate-managed-code-dcom-to-wcf.md)  
- 描述如何將 managed 的 DCOM 程式碼移轉至 WCF 的最安全的解決方案。  
+ 描述如何將受控的 DCOM 程式碼移轉至 WCF 的最安全解決方案。  
   
 ## <a name="related-sections"></a>相關章節  
  [COM 資料類型](https://msdn.microsoft.com/library/sak564ww(v=vs.100).aspx)  
  提供對應的 Managed 和 Unmanaged 資料類型。  
   
  [自訂 COM 可呼叫包裝函式](https://msdn.microsoft.com/library/3bwc828w(v=vs.100).aspx)  
- 描述如何明確封送處理資料型別使用<xref:System.Runtime.InteropServices.MarshalAsAttribute>在設計階段屬性。  
+ 描述如何在設計階段使用 <xref:System.Runtime.InteropServices.MarshalAsAttribute> 屬性明確封送處理資料類型。  
   
  [自訂執行階段可呼叫包裝函式](https://msdn.microsoft.com/library/e753eftz(v=vs.100).aspx)  
  描述如何調整 Interop 組件中的類型封送處理行為，以及描述如何以手動方式定義 COM 類型。  

@@ -9,75 +9,75 @@ author: ghogen
 manager: douge
 ms.openlocfilehash: 3c8382d2e425d11dc8aa8b22e361b3cc5637744f
 ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
-ms.translationtype: MT
+ms.translationtype: HT
 ms.contentlocale: zh-TW
 ms.lasthandoff: 05/04/2018
 ---
 # <a name="how-to-start-services"></a>如何：啟動服務
-安裝服務之後，它必須啟動。 開始呼叫<xref:System.ServiceProcess.ServiceBase.OnStart%2A>服務類別上的方法。 通常，<xref:System.ServiceProcess.ServiceBase.OnStart%2A>方法來定義服務將會執行實際工作。 服務啟動之後，它會保持有效，直到以手動方式暫停或停止。  
+安裝服務之後，必須加以啟動。 從呼叫服務類別上的 <xref:System.ServiceProcess.ServiceBase.OnStart%2A> 方法開始。 通常，<xref:System.ServiceProcess.ServiceBase.OnStart%2A> 方法會定義服務將執行的有用工作。 服務啟動之後，即會保持作用中，直到您以手動方式暫停或停止它為止。  
   
- 服務可以設定要自動或手動啟動。 安裝所在的電腦已重新開機，或第一次開啟時，將會啟動時自動啟動服務。 使用者必須啟動服務，以手動方式啟動。  
+ 服務可以設定為自動或手動啟動。 自動啟動的服務將在其安裝所在的電腦重新開機或第一次開啟時啟動。 使用者必須啟動以手動方式啟動的服務。  
   
 > [!NOTE]
->  根據預設，使用 Visual Studio 建立的服務會設定為手動啟動。  
+>  根據預設，使用 Visual Studio 建立的服務均會設定為以手動方式啟動。  
   
- 有數種方式，您可以手動啟動服務，從**伺服器總管**，從**服務控制管理員**，或從程式碼使用的元件呼叫<xref:System.ServiceProcess.ServiceController>。  
+ 有數種方式可讓您以手動方法啟動服務：從 [伺服器總管]、從 [服務控制管理員]，或從程式碼使用稱為 <xref:System.ServiceProcess.ServiceController> 的元件。  
   
- 您設定<xref:System.ServiceProcess.ServiceInstaller.StartType%2A>屬性<xref:System.ServiceProcess.ServiceInstaller>類別以決定服務是否應該在手動或自動啟動。  
+ 您會設定 <xref:System.ServiceProcess.ServiceInstaller> 類別上的 <xref:System.ServiceProcess.ServiceInstaller.StartType%2A> 屬性，以決定服務應手動或自動啟動。  
   
-### <a name="to-specify-how-a-service-should-start"></a>若要指定服務應該啟動的方式  
+### <a name="to-specify-how-a-service-should-start"></a>指定啟動服務的方式  
   
-1.  建立您的服務之後, 加入必要的安裝它。 如需詳細資訊，請參閱[如何： 加入至您的服務應用程式的安裝程式](../../../docs/framework/windows-services/how-to-add-installers-to-your-service-application.md)。  
+1.  建立服務之後，為其加入必要的安裝程式。 如需詳細資訊，請參閱[如何：將安裝程式加入服務應用程式](../../../docs/framework/windows-services/how-to-add-installers-to-your-service-application.md)。  
   
-2.  在設計工具中，按一下您要使用服務的服務安裝程式。  
+2.  在設計工具中，按一下所要使用服務的服務安裝程式。  
   
-3.  在**屬性**視窗中，將<xref:System.ServiceProcess.ServiceInstaller.StartType%2A>屬性，以下列其中之一：  
+3.  在 [屬性] 視窗中，將 <xref:System.ServiceProcess.ServiceInstaller.StartType%2A> 屬性設定為下列其中一項：  
   
-    |若要讓安裝程式服務|將此值設定|  
+    |若要安裝服務|設定此值|  
     |----------------------------------|--------------------|  
-    |重新啟動電腦|**自動**|  
-    |當明確的使用者動作啟動服務|**手動**|  
+    |當電腦重新開機時|**自動**|  
+    |當明確的使用者動作啟動服務時|**Manual**|  
   
     > [!TIP]
-    >  若要避免您的服務所完全啟動，您可以設定<xref:System.ServiceProcess.ServiceInstaller.StartType%2A>屬性**已停用**。 如果您要將伺服器重新開機多次，而且想要節省時間而導致無法正常啟動正在啟動服務，您可以這樣做。  
+    >  若不要讓服務啟動，可以將 <xref:System.ServiceProcess.ServiceInstaller.StartType%2A> 屬性設定為 **Disabled**。 如果您要將伺服器重新開機多次，而且想要防止要正常啟動的服務被啟動，藉以節省時間，則可以這樣做。  
   
     > [!NOTE]
-    >  之後安裝您的服務，可以變更這些屬性和其他屬性。  
+    >  您可以在安裝服務之後變更這些屬性和其他屬性。  
   
-     有數種方式，您可以啟動的服務具有其<xref:System.ServiceProcess.ServiceInstaller.StartType%2A>程序設定為**手動**— 從**伺服器總管**，從**Windows 服務控制管理員**，或從程式碼。 請務必注意所有這些方法實際上的內容中啟動服務**服務控制管理員**;**伺服器總管**和以程式設計方式啟動服務的實際管理控制站。  
+     有數種方式可讓您啟動要將其 <xref:System.ServiceProcess.ServiceInstaller.StartType%2A> 處理序設定為 **Manual** 的服務：從 [伺服器總管]、從 [Windows 服務控制管理員] 或從程式碼。 請務必注意，並非所有的這些方法都會在**服務控制管理員**的內容中實際啟動服務；**伺服器總管**和以程式設計方式啟動服務的方法會實際操作該控制程式。  
   
-### <a name="to-manually-start-a-service-from-server-explorer"></a>若要從 [伺服器總管] 中手動啟動服務  
+### <a name="to-manually-start-a-service-from-server-explorer"></a>以手動方式從伺服器總管啟動服務  
   
-1.  在**伺服器總管**，新增您想如果未列出的伺服器。 如需詳細資訊，請參閱 < 如何： 存取及初始化伺服器總管資料庫總管。  
+1.  在 [伺服器總管] 中，加入您所需的伺服器 (如果尚未列出該伺服器)。 如需詳細資訊，請參閱＜如何：存取及初始化伺服器總管/資料庫總管＞。  
   
-2.  展開**服務** 節點，然後找出您想要啟動的服務。  
+2.  展開 [服務] 節點，然後找出您想要啟動的服務。  
   
-3.  以滑鼠右鍵按一下服務名稱，然後按一下**啟動**。  
+3.  在服務名稱上按一下滑鼠右鍵，然後按一下 [啟動]。  
   
-### <a name="to-manually-start-a-service-from-services-control-manager"></a>若要手動啟動服務從服務控制管理員  
+### <a name="to-manually-start-a-service-from-services-control-manager"></a>以手動方式從服務控制管理員啟動服務  
   
-1.  開啟**服務控制管理員**由下列其中一項動作：  
+1.  執行下列其中一個動作來開啟 [服務控制管理員]：  
   
-    -   在 Windows XP 和 2000 Professional，以滑鼠右鍵按一下**我的電腦**桌面，然後按一下**管理**。 在出現的對話方塊中，依序展開**服務和應用程式**節點。  
+    -   在 Windows XP 和 2000 Professional 中，以滑鼠右鍵按一下桌面上的 [我的電腦]，然後按一下 [管理]。 在出現的對話方塊中，展開 [服務與應用程式] 節點。  
   
          \-或-  
   
-    -   在 Windows Server 2003 和 Windows 2000 Server 中，按一下 **啟動**，指向 **程式**，按一下**系統管理工具**，然後按一下 **服務**.  
+    -   在 Windows Server 2003 和 Windows 2000 Server 中，按一下 [啟動]、指向 [程式集]、按一下 [系統管理工具]，然後按一下 [服務]。  
   
         > [!NOTE]
-        >  在 Windows NT 4.0 版，您可以開啟此對話方塊中，從**控制台**。  
+        >  在 Windows NT 4.0 版中，您可以從 [控制台] 開啟此對話方塊。  
   
-     您現在應該會看到您的服務中所列**服務**視窗的區段。  
+     現在您應該會看到服務列於這個視窗的 [服務] 區段中。  
   
-2.  清單中選取您的服務，以滑鼠右鍵按一下，然後按**啟動**。  
+2.  從清單中選取您的服務，以滑鼠右鍵按一下該服務，然後按一下 [啟動]。  
   
-### <a name="to-manually-start-a-service-from-code"></a>若要從程式碼中手動啟動服務  
+### <a name="to-manually-start-a-service-from-code"></a>以手動方式從程式碼啟動服務  
   
-1.  建立的執行個體<xref:System.ServiceProcess.ServiceController>類別，並將它設定為與您想要管理的服務互動。  
+1.  建立 <xref:System.ServiceProcess.ServiceController> 類別的執行個體，並將它設定為與您想要管理的服務互動。  
   
 2.  呼叫 <xref:System.ServiceProcess.ServiceController.Start%2A> 方法啟動服務。  
   
-## <a name="see-also"></a>另請參閱  
+## <a name="see-also"></a>請參閱  
  [Windows 服務應用程式簡介](../../../docs/framework/windows-services/introduction-to-windows-service-applications.md)  
  [如何：建立 Windows 服務](../../../docs/framework/windows-services/how-to-create-windows-services.md)  
  [如何：將 Installer 新增至服務應用程式](../../../docs/framework/windows-services/how-to-add-installers-to-your-service-application.md)

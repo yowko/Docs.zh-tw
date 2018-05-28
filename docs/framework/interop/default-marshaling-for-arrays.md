@@ -12,7 +12,7 @@ author: rpetrusha
 ms.author: ronpet
 ms.openlocfilehash: b05ac1016710109110c3ff9d0d318a71fe0827f1
 ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
-ms.translationtype: MT
+ms.translationtype: HT
 ms.contentlocale: zh-TW
 ms.lasthandoff: 05/04/2018
 ---
@@ -41,9 +41,9 @@ ms.lasthandoff: 05/04/2018
   
 |Managed 陣列類型|項目類型|順位|下限|簽章標記法|  
 |------------------------|------------------|----------|-----------------|------------------------|  
-|**ELEMENT_TYPE_ARRAY**|依類型指定。|依順位指定。|選擇性依界限指定。|*型別* **[** *n*，*m* **]**|  
+|**ELEMENT_TYPE_ARRAY**|依類型指定。|依順位指定。|選擇性依界限指定。|*type* **[** *n*,*m* **]**|  
 |**ELEMENT_TYPE_CLASS**|不明|不明|不明|**System.Array**|  
-|**ELEMENT_TYPE_SZARRAY**|依類型指定。|1|0|*型別* **[** *n* **]**|  
+|**ELEMENT_TYPE_SZARRAY**|依類型指定。|1|0|*type* **[** *n* **]**|  
   
 <a name="cpcondefaultmarshalingforarraysanchor2"></a>   
 ## <a name="unmanaged-arrays"></a>Unmanaged 陣列  
@@ -371,7 +371,7 @@ public struct MyStruct {
 }  
 ```  
   
-## <a name="see-also"></a>另請參閱  
+## <a name="see-also"></a>請參閱  
  [預設的封送處理行為](default-marshaling-behavior.md)  
  [Blittable 和非 Blittable 類型](blittable-and-non-blittable-types.md)  
  [方向屬性](https://msdn.microsoft.com/library/241ac5b5-928e-4969-8f58-1dbc048f9ea2(v=vs.100))  

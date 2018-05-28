@@ -25,62 +25,62 @@ author: ghogen
 manager: douge
 ms.openlocfilehash: e0720b90d89e5117cbac15ce7e38a41071f1c13e
 ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
-ms.translationtype: MT
+ms.translationtype: HT
 ms.contentlocale: zh-TW
 ms.lasthandoff: 05/04/2018
 ---
 # <a name="introduction-to-windows-service-applications"></a>Windows 服務應用程式簡介
-Microsoft Windows 服務，之前稱為 NT 服務可讓您建立自己的 Windows 工作階段中執行的長時間執行可執行應用程式。 當電腦開機時，自動啟動這些服務也可以暫停或重新啟動，且並未顯示任何使用者介面。 這些功能可讓服務特別適用於在伺服器上，或者每當您需要長時間執行的功能，不會干擾正在同一部電腦的其他使用者。 您也可以在不同於登入使用者的特定使用者帳戶或預設電腦帳戶的安全性內容中執行服務。 如需有關服務和 Windows 工作階段的詳細資訊，請參閱 Windows SDK 的文件。  
+Microsoft Windows 服務 (以前稱為 NT 服務) 讓您能夠建立長時間執行的應用程式，並使其在自己的 Windows 工作階段中執行。 這些服務可以在電腦開機時自動啟動、可以暫停和重新啟動，而且不會顯示任何使用者介面。 這些功能讓服務非常適合在伺服器上使用，或者，當您需要不會干擾其他在同一部電腦上工作的使用者且又長時間執行的功能時使用。 您也可以在特定使用者帳戶的安全性內容中執行服務，此使用者帳戶不同於登入的使用者帳戶或預設電腦帳戶。 如需服務和 Windows 工作階段的詳細資訊，請參閱 Windows SDK 文件。  
   
- 您可以建立的應用程式，安裝為服務，輕鬆建立服務。 例如，假設您想要監視的效能計數器資料，並反應臨界值。 您無法撰寫 Windows 服務應用程式所接聽的效能計數器資料、 部署應用程式，以及開始收集和分析資料。  
+ 您可以藉由建立要安裝為服務的應用程式，輕鬆地建立服務。 例如，假設您想要監視效能計數器資料並回應閾值。 您可以撰寫 Windows 服務應用程式來接聽效能計數器資料、部署應用程式，然後開始收集和分析資料。  
   
- 您建立您的服務，為 Microsoft Visual Studio 專案時，定義在其中控制哪些命令的程式碼可以傳送到服務，並會在收到這些命令時，應該採取什麼動作。 可以傳送至服務的命令包括啟動、 暫停、 繼續和停止服務。您也可以執行自訂命令。  
+ 您會以 Microsoft Visual Studio 專案來建立服務，在其中定義程式碼來控制可以傳送到服務的命令，以及在收到命令時應該採取的動作。 可傳送到服務的命令包括啟動、暫停、繼續和停止服務；您也可以執行自訂命令。  
   
- 您建立並建置應用程式之後，您可以以執行 InstallUtil.exe 的命令列公用程式，並將路徑傳遞至服務的可執行檔來進行安裝。 然後您可以使用**服務控制管理員**來啟動、 停止、 暫停、 繼續及設定您的服務。 您也可以完成相同工作中的許多**服務**節點**伺服器總管**或使用<xref:System.ServiceProcess.ServiceController>類別。  
+ 當您建立和建置應用程式之後，可執行命令列公用程式 InstallUtil.exe，並傳入服務可執行檔的路徑來進行安裝。 您接著可以使用**服務控制管理員**來啟動、停止、暫停、繼續及設定服務。 您也可以在 [伺服器總管] 的 [服務] 節點中完成這其中許多相同的工作，或是使用 <xref:System.ServiceProcess.ServiceController> 類別來完成。  
   
-## <a name="service-applications-vs-other-visual-studio-applications"></a>服務應用程式與Visual Studio 中的其他應用程式  
- 服務應用程式仍可與幾種方式的許多其他專案類型不同：  
+## <a name="service-applications-vs-other-visual-studio-applications"></a>服務應用程式相較於其他 Visual Studio 應用程式  
+ 服務應用程式的運作在某些方面有別於許多其他專案類型：  
   
--   建立服務應用程式專案的已編譯可執行檔必須安裝在伺服器上，然後專案可以有意義的方式運作。 您無法偵錯或執行服務應用程式，按下 F5 或 F11;其程式碼，您無法立即執行的服務或步驟。 相反地，您必須安裝並啟動您的服務並再將偵錯工具附加至服務的程序。 如需詳細資訊，請參閱[如何： 偵錯 Windows 服務應用程式](../../../docs/framework/windows-services/how-to-debug-windows-service-applications.md)。  
+-   服務應用程式專案所建立的已編譯可執行檔必須先安裝在伺服器上，然後專案才能正常地運作。 您無法按 F5 鍵或 F11 鍵來偵錯或執行服務應用程式；您無法立即執行服務或逐步執行其程式碼。 反之，您必須安裝並啟動服務，然後將偵錯工具附加到服務的處理序。 如需詳細資訊，請參閱[如何：偵錯 Windows 服務應用程式](../../../docs/framework/windows-services/how-to-debug-windows-service-applications.md)。  
   
--   不同於某些類型的專案，您必須建立服務應用程式的安裝元件。 安裝元件安裝和註冊的伺服器上的服務，並建立您的服務項目，使用 Windows**服務控制管理員**。 如需詳細資訊，請參閱[如何： 加入至您的服務應用程式的安裝程式](../../../docs/framework/windows-services/how-to-add-installers-to-your-service-application.md)。  
+-   不同於某些類型的專案，您必須為服務應用程式建立安裝元件。 安裝元件會在伺服器上安裝並註冊服務，以及使用 Windows **服務控制管理員**來建立服務項目。 如需詳細資訊，請參閱[如何：將安裝程式加入服務應用程式](../../../docs/framework/windows-services/how-to-add-installers-to-your-service-application.md)。  
   
--   `Main`方法的服務應用程式必須發行服務的 [執行] 命令專案包含。 `Run`方法會為服務載入**服務控制管理員**適當伺服器上。 如果您使用**Windows 服務**專案範本，這個方法會為您自動寫入。 請注意，載入服務無法啟動服務相同的動作。 「 服務的存留期 」 下面的如需詳細資訊，請參閱。  
+-   服務應用程式的 `Main` 方法必須針對專案所包含的服務發出 Run 命令。 `Run` 方法會將服務載入到適當伺服器上的**服務控制管理員**。 如果您使用 **Windows 服務**專案範本，即會自動撰寫這個方法。 請注意，載入服務與啟動服務不同。 如需詳細資訊，請參閱下方的「服務存留期」。  
   
--   在不同的視窗工作站比互動式登入使用者的工作站中，執行 Windows 服務應用程式。 視窗工作站是安全的物件，其中包含剪貼簿、 一組通用的元素和桌面的物件群組。 Windows 服務的站台不是互動式的站台，因為對話方塊所產生的一種 Windows 服務應用程式不會看到，並可能會造成程式停止回應。 同樣地，錯誤訊息應該登入 Windows 事件記錄檔，而使用者介面中引發。  
+-   Windows 服務應用程式執行所在的視窗工作站，不同於登入使用者的互動式工作站。 視窗工作站是一個安全的物件，其中包含剪貼簿、一組通用元素，以及一個桌面物件群組。 由於 Windows 服務的工作站不是互動式工作站，因此看不到從 Windows 服務應用程式內引發的對話方塊，因而可能造成程式停止回應。 同樣地，錯誤訊息應該記錄於 Windows 事件記錄檔中，而不應在使用者介面中引發。  
   
-     .NET Framework 所支援的 Windows 服務類別不支援互動式電台，也就是登入的使用者互動。 .NET Framework 也不包含代表站台和桌上型電腦的類別。 如果您的 Windows 服務必須與其他站台互動，您必須存取不受管理的 Windows API。 如需詳細資訊，請參閱 Windows SDK 的文件。  
+     .NET Framework 所支援的 Windows 服務類別不支援與互動式工作站 (也就是登入的使用者) 進行互動。 .NET Framework 也不會包含代表工作站和桌面的類別。 如果您的 Windows 服務必須與其他工作站互動，您將需要存取非受控的 Windows API。 如需詳細資訊，請參閱 Windows SDK 文件。  
   
-     與使用者或其他站台的服務必須仔細地設計以包含這類案例那里沒有登入的使用者或使用者具有未預期的桌面物件組之 windows 互動。 在某些情況下，它可能會更加適合撰寫 Windows 應用程式之使用者的控制下執行的程式碼。  
+     Windows 服務與使用者或其他工作站的互動必須經過精心設計以包含如下的案例：沒有登入的使用者，或者使用者具備一組未預期的桌面物件。 在某些情況下，撰寫由使用者控制的 Windows 應用程式可能更為合適。  
   
--   Windows 服務應用程式在使用者的安全性內容中執行，並啟動之前在使用者登入安裝所在的 Windows 電腦。 您應該仔細地規劃哪些使用者帳戶，來執行; 內的服務在系統帳戶下執行的服務有多個權限和權限與使用者帳戶。  
+-   Windows 服務應用程式會在自己的安全性內容中執行，並在使用者登入安裝應用程式所在的 Windows 電腦之前便啟動。 您應該仔細規劃要在哪些使用者帳戶內執行服務；在系統帳戶下執行的服務，其權限會高於在使用者帳戶下執行的服務。  
   
-## <a name="service-lifetime"></a>服務的存留期  
- 服務會在其存留期間經歷數個內部狀態。 首先，它會在其執行的系統上安裝此服務。 此程序執行的安裝程式服務專案，並載入到服務**服務控制管理員**該電腦。 **服務控制管理員**是中央管理服務的 Windows 所提供的公用程式。  
+## <a name="service-lifetime"></a>服務存留期  
+ 服務會在其存留期中會經歷數個內部狀態。 首先，服務會安裝於執行所在的系統上。 此流程會針對服務專案執行安裝程式，並將服務載入該電腦的**服務控制管理員**。 **服務控制管理員**是由 Windows 提供來管理服務的重要公用程式。  
   
- 已載入該服務之後，它必須啟動。 正在啟動服務，可讓它開始運作。 您可以啟動服務，以從**服務控制管理員**，從**伺服器總管**，藉由呼叫的程式碼之間來回<xref:System.ServiceProcess.ServiceController.Start%2A>方法。 <xref:System.ServiceProcess.ServiceController.Start%2A>方法會處理傳遞至應用程式的<xref:System.ServiceProcess.ServiceBase.OnStart%2A>方法並處理您已那里定義任何程式碼。  
+ 載入服務之後，必須加以啟動。 啟動服務即可讓它開始運作。 啟動服務的方式有三種：從**服務控制管理員**、從**伺服器總管**，或從程式碼中呼叫 <xref:System.ServiceProcess.ServiceController.Start%2A> 方法。 <xref:System.ServiceProcess.ServiceController.Start%2A> 方法會將處理傳遞到應用程式的 <xref:System.ServiceProcess.ServiceBase.OnStart%2A> 方法，並處理您在該處定義的任何程式碼。  
   
- 執行中服務的存在處於此狀態中，直到它停止或暫停，或是直到電腦關機。 服務可以存在於三個基本狀態之一： <xref:System.ServiceProcess.ServiceControllerStatus.Running>， <xref:System.ServiceProcess.ServiceControllerStatus.Paused>，或<xref:System.ServiceProcess.ServiceControllerStatus.Stopped>。 服務也可以報告的暫止命令的狀態： <xref:System.ServiceProcess.ServiceControllerStatus.ContinuePending>， <xref:System.ServiceProcess.ServiceControllerStatus.PausePending>， <xref:System.ServiceProcess.ServiceControllerStatus.StartPending>，或<xref:System.ServiceProcess.ServiceControllerStatus.StopPending>。 這些狀態會指出命令已發出，例如命令，以暫停執行中的服務，但有不執行。 您可以查詢<xref:System.ServiceProcess.ServiceController.Status%2A>判斷何種狀態服務是在中，或使用<xref:System.ServiceProcess.ServiceController.WaitForStatus%2A>執行動作，任何這兩種狀態時，就會發生。  
+ 執行中的服務可以此狀態無限期存在，直到它停止或暫停，或是直到電腦關機為止。 服務可以下列三種基本狀態之一存在：<xref:System.ServiceProcess.ServiceControllerStatus.Running>、<xref:System.ServiceProcess.ServiceControllerStatus.Paused> 或 <xref:System.ServiceProcess.ServiceControllerStatus.Stopped>。 服務也可以報告擱置命令的狀態：<xref:System.ServiceProcess.ServiceControllerStatus.ContinuePending>、<xref:System.ServiceProcess.ServiceControllerStatus.PausePending>、<xref:System.ServiceProcess.ServiceControllerStatus.StartPending> 或 <xref:System.ServiceProcess.ServiceControllerStatus.StopPending>。 這些狀態指出已發出命令 (例如要暫停執行中服務的命令)，但尚未執行。 您可以查詢 <xref:System.ServiceProcess.ServiceController.Status%2A> 以判斷服務處於何種狀態，或者使用 <xref:System.ServiceProcess.ServiceController.WaitForStatus%2A> 在發生這其中任一種狀態時執行動作。  
   
- 您可以暫停、 停止或繼續從服務**服務控制管理員**，從**伺服器總管**，或藉由在程式碼中呼叫方法。 每個動作可以在服務中呼叫相關聯的程序 (<xref:System.ServiceProcess.ServiceBase.OnStop%2A>， <xref:System.ServiceProcess.ServiceBase.OnPause%2A>，或<xref:System.ServiceProcess.ServiceBase.OnContinue%2A>)，您可以定義服務的狀態變更時所要執行額外的處理中。  
+ 暫停、停止或繼續執行服務的方式有三種：從**服務控制管理員**、從**伺服器總管**，或在程式碼中呼叫方法。 這其中的每個動作都可在服務中呼叫相關聯的程序 (<xref:System.ServiceProcess.ServiceBase.OnStop%2A>、<xref:System.ServiceProcess.ServiceBase.OnPause%2A> 或 <xref:System.ServiceProcess.ServiceBase.OnContinue%2A>)，而您可以在其中定義要在服務變更狀態時所執行的額外處理。  
   
-## <a name="types-of-services"></a>類型的服務  
- 有兩種類型的服務，您可以使用.NET Framework 的 Visual Studio 中建立。 會指派給服務的處理程序中唯一的服務類型<xref:System.ServiceProcess.ServiceType.Win32OwnProcess>。 會指派給另一個服務共用處理序的服務類型<xref:System.ServiceProcess.ServiceType.Win32ShareProcess>。 您可以藉由查詢擷取的服務類型<xref:System.ServiceProcess.ServiceController.ServiceType%2A>屬性。  
+## <a name="types-of-services"></a>服務的類型  
+ 在 Visual Studio 中，使用 .NET Framework 可建立兩種類型的服務。 若服務是處理序中的唯一服務，即會為其指派 <xref:System.ServiceProcess.ServiceType.Win32OwnProcess> 類型。 若服務會與其他服務共用處理序，則會為其指派 <xref:System.ServiceProcess.ServiceType.Win32ShareProcess> 類型。 您可以藉由查詢 <xref:System.ServiceProcess.ServiceController.ServiceType%2A> 屬性來擷取服務類型。  
   
- 如果查詢未建立 Visual Studio 中的現有服務，有時可能會看到其他服務類型。 如需這些的詳細資訊，請參閱<xref:System.ServiceProcess.ServiceType>。  
+ 如果您查詢尚未在 Visual Studio 中建立的現有服務，則可能會看到其他服務類型。 如需詳細資訊，請參閱 <xref:System.ServiceProcess.ServiceType>。  
   
 ## <a name="services-and-the-servicecontroller-component"></a>服務和 ServiceController 元件  
- <xref:System.ServiceProcess.ServiceController>元件是用來連接到已安裝的服務和操作其狀態，使用<xref:System.ServiceProcess.ServiceController>元件，啟動和停止服務、 暫停和繼續其正常運作，即可將自訂命令傳送至服務。 不過，您不需要使用<xref:System.ServiceProcess.ServiceController>當您建立服務應用程式的元件。 事實上，在大部分情況下您<xref:System.ServiceProcess.ServiceController>元件應存在於不同的應用程式定義服務的 Windows 服務應用程式。  
+ <xref:System.ServiceProcess.ServiceController> 元件可用來連線到已安裝的服務並操控其狀態；使用 <xref:System.ServiceProcess.ServiceController> 元件可啟動和停止服務、暫停和繼續其運作，以及將自訂命令傳送到服務。 不過，當您建立服務應用程式時，不需要使用 <xref:System.ServiceProcess.ServiceController> 元件。 事實上，在大部分情況下，<xref:System.ServiceProcess.ServiceController> 元件所存在的應用程式，應該有別於定義服務的 Windows 服務應用程式。  
   
  如需詳細資訊，請參閱<xref:System.ServiceProcess.ServiceController>。  
   
 ## <a name="requirements"></a>需求  
   
--   服務也必須在建立**Windows 服務**應用程式專案或其他.NET Framework 功能，以建立.exe 檔建置時，並繼承自專案<xref:System.ServiceProcess.ServiceBase>類別。  
+-   服務必須建立於 **Windows 服務**應用程式專案或其他已啟用 .NET Framework 的專案中，以便在建置時建立 .exe 檔並繼承自 <xref:System.ServiceProcess.ServiceBase> 類別。  
   
--   專案包含 Windows 服務必須有專案和其服務的安裝元件。 這可以輕鬆地完成從**屬性**視窗。 如需詳細資訊，請參閱[如何： 加入至您的服務應用程式的安裝程式](../../../docs/framework/windows-services/how-to-add-installers-to-your-service-application.md)。  
+-   包含 Windows 服務的專案必須具備專案及其服務的安裝元件。 這可輕鬆地從 [屬性] 視窗來完成。 如需詳細資訊，請參閱[如何：將安裝程式加入服務應用程式](../../../docs/framework/windows-services/how-to-add-installers-to-your-service-application.md)。  
   
-## <a name="see-also"></a>另請參閱  
+## <a name="see-also"></a>請參閱  
  [Windows 服務應用程式](../../../docs/framework/windows-services/index.md)  
  [服務應用程式的程式設計架構](../../../docs/framework/windows-services/service-application-programming-architecture.md)  
  [如何：建立 Windows 服務](../../../docs/framework/windows-services/how-to-create-windows-services.md)  

@@ -18,7 +18,7 @@ author: rpetrusha
 ms.author: ronpet
 ms.openlocfilehash: d4689c52dee84e2a310f0ddb39d0874c273081bb
 ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
-ms.translationtype: MT
+ms.translationtype: HT
 ms.contentlocale: zh-TW
 ms.lasthandoff: 05/04/2018
 ---
@@ -45,8 +45,8 @@ Interop 應用程式通常包含 .NET 用戶端組件、代表各種不同 COM �
 ### <a name="shared-assemblies"></a>共用組件  
  多個應用程式共用的組件應該安裝在稱為全域組件快取的集中式存放庫中。 .NET 用戶端可以存取相同的 Interop 組件複本，它是簽署並安裝在全域組件快取中。 如需產生和使用主要 Interop 組件的詳細資訊，請參閱[主要 Interop 組件](https://msdn.microsoft.com/library/b977a8be-59a0-40a0-a806-b11ffba5c080(v=vs.100))。  
   
-## <a name="see-also"></a>另請參閱  
+## <a name="see-also"></a>請參閱  
  [將 COM 元件公開給 .NET Framework](exposing-com-components.md)  
  [匯入類型程式庫做為組件](importing-a-type-library-as-an-assembly.md)  
- [在 Managed 程式碼中使用 COM 類型](https://msdn.microsoft.com/library/1a95a8ca-c8b8-4464-90b0-5ee1a1135b66(v=vs.100))  
+ [在受控程式碼中使用 COM 類型](https://msdn.microsoft.com/library/1a95a8ca-c8b8-4464-90b0-5ee1a1135b66(v=vs.100))  
  [編譯 Interop 專案](compiling-an-interop-project.md)

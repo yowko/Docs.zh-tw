@@ -12,7 +12,7 @@ author: rpetrusha
 ms.author: ronpet
 ms.openlocfilehash: 744ce1f2810eee025f071cafaa71e473b6ed4c50
 ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
-ms.translationtype: MT
+ms.translationtype: HT
 ms.contentlocale: zh-TW
 ms.lasthandoff: 05/04/2018
 ---
@@ -36,7 +36,7 @@ ms.lasthandoff: 05/04/2018
     <assembly xmlns="urn:schemas-microsoft-com:asm.v1" manifestVersion="1.0">  
     ```  
   
-     資訊清單的項目和其屬性的相關資訊，請參閱[應用程式資訊清單](https://msdn.microsoft.com/library/windows/desktop/aa374191.aspx)。  
+     如需資訊清單元素及其屬性的相關資訊，請參閱[應用程式資訊清單](https://msdn.microsoft.com/library/windows/desktop/aa374191.aspx) \(英文\)。  
   
 3.  識別資訊清單的擁有者。 在下列範例中，`myComApp` 第 1 版擁有資訊清單檔。  
   
@@ -76,7 +76,7 @@ ms.lasthandoff: 05/04/2018
   
 5.  儲存並命名資訊清單檔。 應用程式資訊清單的名稱就是後接 .manifest 副檔名的組件可執行檔名稱。 例如，myComApp.exe 的應用程式資訊清單檔案名稱是 myComApp.exe.manifest。  
   
- 您可以在與 COM 應用程式相同的目錄中安裝應用程式資訊清單。 或者，您可以將它當成資源新增至應用程式的.exe 檔案。 如需詳細資訊，如需詳細資訊，請參閱[-並存組件的相關](https://msdn.microsoft.com/library/windows/desktop/ff951640.aspx)。  
+ 您可以在與 COM 應用程式相同的目錄中安裝應用程式資訊清單。 或者，您可以將它當成資源新增至應用程式的.exe 檔案。 如需詳細資訊，請參閱[關於並存組件](https://msdn.microsoft.com/library/windows/desktop/ff951640.aspx) \(英文\)。  
   
 #### <a name="to-create-a-component-manifest"></a>建立元件資訊清單  
   
@@ -171,8 +171,8 @@ ms.lasthandoff: 05/04/2018
   
      同樣地，`myresource.res` 是包含內嵌資源之資源檔的名稱。  
   
-## <a name="see-also"></a>另請參閱  
+## <a name="see-also"></a>請參閱  
  [免註冊的 COM Interop](registration-free-com-interop.md)  
- [免註冊 COM Interop 的需求](https://msdn.microsoft.com/library/0c43bc57-eecf-4e6c-8114-490141cce4da(v=vs.100)))  
- [設定 COM 元件，免註冊啟動](https://msdn.microsoft.com/library/bfe9b02f-d964-4784-960e-a1f94692fbfe(v=vs.100)))  
+ [免註冊的 COM Interop 需求](https://msdn.microsoft.com/library/0c43bc57-eecf-4e6c-8114-490141cce4da(v=vs.100))  
+ [設定免註冊啟動的 COM 元件](https://msdn.microsoft.com/library/bfe9b02f-d964-4784-960e-a1f94692fbfe(v=vs.100))  
  [免註冊啟用 .NET 元件：逐步解說](https://msdn.microsoft.com/library/ms973915.aspx)

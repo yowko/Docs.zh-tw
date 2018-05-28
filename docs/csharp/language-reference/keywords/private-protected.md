@@ -2,14 +2,17 @@
 title: private protected (C# 參考)
 ms.date: 11/15/2017
 author: sputier
-ms.openlocfilehash: ee36cc713dd5fdb90ae20ef992f8e75eca09597d
-ms.sourcegitcommit: 89c93d05c2281b4c834f48f6c8df1047e1410980
+ms.openlocfilehash: 0d511f55f44511590fbe92a98cef118e0cb482e2
+ms.sourcegitcommit: 43924acbdbb3981d103e11049bbe460457d42073
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/15/2018
+ms.lasthandoff: 05/23/2018
 ---
 # <a name="private-protected-c-reference"></a>private protected (C# 參考)
 `private protected` 關鍵字組合是成員存取修飾詞。 從包含類別衍生的類型可以存取 private protected 成員，但只能在其包含的組件內存取。 如需 `private protected` 和其他存取修飾詞的比較，請參閱[存取範圍層級](../../../csharp/language-reference/keywords/accessibility-levels.md)。 
+
+> [!NOTE]
+> `private protected` 存取修飾詞適用於 C# 7.2 版及更新版本。
    
 ## <a name="example"></a>範例  
  只有當變數的靜態類型是在衍生的類別類型時，才能從包含組件的衍生類型中存取基底類別的 private protected 成員。 例如，請考慮下列程式碼區段：  

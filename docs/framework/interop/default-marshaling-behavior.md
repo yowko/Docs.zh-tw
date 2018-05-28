@@ -13,7 +13,7 @@ author: rpetrusha
 ms.author: ronpet
 ms.openlocfilehash: f5fef84250f9dbc10a921a6844f7020c72835cea
 ms.sourcegitcommit: 43924acbdbb3981d103e11049bbe460457d42073
-ms.translationtype: MT
+ms.translationtype: HT
 ms.contentlocale: zh-TW
 ms.lasthandoff: 05/23/2018
 ---
@@ -43,7 +43,7 @@ BSTR MethodOne (BSTR b) {
  執行階段一律會使用 **CoTaskMemFree** 方法來釋放記憶體。 如果您正在使用的記憶體不是使用 **CoTaskMemAlloc** 方法配置，則必須使用 **IntPtr**，並使用適當方法手動釋放記憶體。 同樣地，您可以在絕不應該釋放記憶體的情況下避免自動釋放記憶體；例如，從 Kernel32.dll 使用 **GetCommandLine** 函式，該函式會傳回核心記憶體的指標。 如需手動釋放記憶體的詳細資訊，請參閱[緩衝區範例](http://msdn.microsoft.com/library/e30d36e8-d7c4-4936-916a-8fdbe4d9ffd5(v=vs.100))。  
   
 ## <a name="default-marshaling-for-classes"></a>類別的預設封送處理  
- 類別只能由 COM Interop 封送處理，並且一律會封送處理為介面。 在某些情況下，用來封送處理類別的介面就是所謂的類別介面。 如需覆寫類別介面的介面，您所選擇的相關資訊，請參閱[類別介面簡介](com-callable-wrapper.md#introducing-the-class-interface)。  
+ 類別只能由 COM Interop 封送處理，並且一律會封送處理為介面。 在某些情況下，用來封送處理類別的介面就是所謂的類別介面。 如需以您選擇的介面來覆寫類別介面的相關資訊，請參閱[類別介面簡介](com-callable-wrapper.md#introducing-the-class-interface)。  
   
 ### <a name="passing-classes-to-com"></a>將類別傳遞給 COM  
  將 Managed 類別傳遞給 COM 時，Interop 封送處理器會自動使用 COM Proxy 來包裝類別，並將 Proxy 產生的類別介面傳遞給 COM 方法呼叫。 Proxy 接著會將類別介面上的所有呼叫重新委派給 Managed 物件。 Proxy 也會公開類別未明確實作的其他介面。 Proxy 會代表類別自動實作 **IUnknown** 和 **IDispatch** 這類介面。  
@@ -345,7 +345,7 @@ interface _Graphics {
 }  
 ```  
   
- 當透過 COM 介面進行封送處理時，會使用與封送處理平台叫用呼叫的值和參考時相同的規則。 例如，將 `Point` 實值類型的執行個體從 .NET Framework 傳遞至 COM 時，會以傳值方式傳遞 `Point`。 如果以傳址方式傳遞 `Point` 實值類型，則會在堆疊上傳遞 `Point` 的指標。 Interop 封送處理器不支援更高層級的間接取值 (**點** \* \*) 任一方向。  
+ 當透過 COM 介面進行封送處理時，會使用與封送處理平台叫用呼叫的值和參考時相同的規則。 例如，將 `Point` 實值類型的執行個體從 .NET Framework 傳遞至 COM 時，會以傳值方式傳遞 `Point`。 如果以傳址方式傳遞 `Point` 實值類型，則會在堆疊上傳遞 `Point` 的指標。 Interop 封送處理器不支援任一方向中更高層級的間接取值 (**Point** \*\*)。  
   
 > [!NOTE]
 >  由於匯出的型別程式庫無法表示明確的配置，因此不可在 COM Interop 中使用將 <xref:System.Runtime.InteropServices.LayoutKind> 列舉值設定為 [明確] 的結構。  
@@ -437,7 +437,7 @@ interface IValueTypes : IDispatch {
 };  
 ```  
   
-## <a name="see-also"></a>另請參閱  
+## <a name="see-also"></a>請參閱  
  [Blittable 和非 Blittable 類型](blittable-and-non-blittable-types.md)  
  [複製和 Pin](copying-and-pinning.md)  
  [陣列的預設封送處理](default-marshaling-for-arrays.md)  

@@ -4,11 +4,11 @@ description: dotnet publish 命令會將 .NET Core 專案發行到目錄中。
 author: mairaw
 ms.author: mairaw
 ms.date: 03/10/2018
-ms.openlocfilehash: f4c422eab20f5fe2d1b0c09133953f22a539474e
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: 5e7ce5ce1240f03f53f6e120dfce53d15917425f
+ms.sourcegitcommit: 77d9a94dac4c05827ed0663d95e0f9ad35d6682e
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/04/2018
+ms.lasthandoff: 05/24/2018
 ---
 # <a name="dotnet-publish"></a>dotnet publish
 
@@ -89,8 +89,8 @@ dotnet publish [-h|--help]
 
 `-o|--output <OUTPUT_DIRECTORY>`
 
-指定輸出目錄的路徑。 如果未指定，則預設為 *./bin/[configuration]/[framework]/* (與 Framework 相依的部署) 或 *./bin/[configuration]/[framework]/[runtime]* (獨立部署)。
-如果提供相對路徑，則產生的輸出目錄會相對於專案檔案位置，而不是目前的工作目錄。
+指定輸出目錄的路徑。 如果未指定，預設為 *./bin/[configuration]/[framework]/publish/* (適用於架構相依的部署) 或 *./bin/[configuration]/[framework]/[runtime]/publish/* (適用於獨立部署)。
+如果路徑是相對的，則產生的輸出目錄會相對於專案檔案位置，而不是目前的工作目錄。
 
 `--self-contained`
 
@@ -128,8 +128,8 @@ dotnet publish [-h|--help]
 
 `-o|--output <OUTPUT_DIRECTORY>`
 
-指定輸出目錄的路徑。 如果未指定，則預設為 *./bin/[configuration]/[framework]/* (與 Framework 相依的部署) 或 *./bin/[configuration]/[framework]/[runtime]* (獨立部署)。
-如果提供相對路徑，則產生的輸出目錄會相對於專案檔案位置，而不是目前的工作目錄。
+指定輸出目錄的路徑。 如果未指定，預設為 *./bin/[configuration]/[framework]/publish/* (適用於架構相依的部署) 或 *./bin/[configuration]/[framework]/[runtime]/publish/* (適用於獨立部署)。
+如果路徑是相對的，則產生的輸出目錄會相對於專案檔案位置，而不是目前的工作目錄。
 
 `-r|--runtime <RUNTIME_IDENTIFIER>`
 

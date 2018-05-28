@@ -21,7 +21,7 @@ author: rpetrusha
 ms.author: ronpet
 ms.openlocfilehash: b305158ac87f01044bae5455cea07ca3b3a2e491
 ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
-ms.translationtype: MT
+ms.translationtype: HT
 ms.contentlocale: zh-TW
 ms.lasthandoff: 05/04/2018
 ---
@@ -82,7 +82,7 @@ using namespace System::Runtime::InteropServices;
 |-----------|-----------------|  
 |<xref:System.Runtime.InteropServices.DllImportAttribute.BestFitMapping>|啟用或停用自動調整對應。|  
 |<xref:System.Runtime.InteropServices.DllImportAttribute.CallingConvention>|指定用來傳遞方法引數的呼叫慣例。 預設值是 `WinAPI` ，它對應至適用於 32 位元 Intel 平台的 `__stdcall` 。|  
-|<xref:System.Runtime.InteropServices.DllImportAttribute.CharSet>|控制項名稱的損害以及字串引數的方式應該封送處理至函式。 預設值為 `CharSet.Ansi`。|  
+|<xref:System.Runtime.InteropServices.DllImportAttribute.CharSet>|控制項名稱的損害以及字串引數的方式應該封送處理至函式。 預設為 `CharSet.Ansi`。|  
 |<xref:System.Runtime.InteropServices.DllImportAttribute.EntryPoint>|指定要呼叫 DLL 進入點。|  
 |<xref:System.Runtime.InteropServices.DllImportAttribute.ExactSpelling>|控制是否應修改進入點以對應至字元集。 預設值依程式語言而異。|  
 |<xref:System.Runtime.InteropServices.DllImportAttribute.PreserveSig>|控制是否應將 Managed 方法簽章轉換成 Unmanaged 簽章，其會傳回 HRESULT 且傳回值會有額外的 [out, retval] 引數。<br /><br /> 預設值是 `true` (簽章不應該轉換)。|  
@@ -97,7 +97,7 @@ using namespace System::Runtime::InteropServices;
 ### <a name="platform-invoke-examples"></a>平台叫用範例  
  本節中的平台叫用範例將說明如何使用具有堆疊查核行程修飾詞的  `RegistryPermission` 屬性。  
   
- 在下列程式碼範例中， <xref:System.Security.Permissions.SecurityAction> `Assert`， `Deny`，和`PermitOnly`修飾詞會被忽略。  
+ 在下列程式碼範例中，<xref:System.Security.Permissions.SecurityAction>`Assert`、`Deny` 和 `PermitOnly` 修飾詞會被忽略。  
   
 ```  
 [DllImport("MyClass.dll", EntryPoint = "CallRegistryPermission")]  
@@ -220,12 +220,12 @@ interface IDemandStubsItf
 }  
 ```  
   
-## <a name="see-also"></a>另請參閱  
+## <a name="see-also"></a>請參閱  
  [使用 Unmanaged DLL 函式](consuming-unmanaged-dll-functions.md)  
  [指定進入點](specifying-an-entry-point.md)  
  [指定字元集](specifying-a-character-set.md)  
  [平台叫用範例](platform-invoke-examples.md)  
- [平台叫用的安全性考量](https://msdn.microsoft.com/library/bbcc67f7-50b5-4917-88ed-cb15470409fb(v=vs.100))  
+ [平台叫用安全性考量](https://msdn.microsoft.com/library/bbcc67f7-50b5-4917-88ed-cb15470409fb(v=vs.100))  
  [識別 DLL 中的函式](identifying-functions-in-dlls.md)  
  [建立類別以包裝 DLL 函式](creating-a-class-to-hold-dll-functions.md)  
  [呼叫 DLL 函式](calling-a-dll-function.md)

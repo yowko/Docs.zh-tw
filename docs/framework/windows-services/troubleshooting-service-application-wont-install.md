@@ -1,5 +1,5 @@
 ---
-title: 疑難排解： 服務應用程式成交&#39;t 安裝
+title: 疑難排解：無法安裝服務應用程式
 ms.date: 03/30/2017
 helpviewer_keywords:
 - troubleshooting service applications
@@ -13,17 +13,17 @@ author: ghogen
 manager: douge
 ms.openlocfilehash: 1f3e5674f9a52627efdc24d6c70c0ab16dcdbbbd
 ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
-ms.translationtype: MT
+ms.translationtype: HT
 ms.contentlocale: zh-TW
 ms.lasthandoff: 05/04/2018
 ---
-# <a name="troubleshooting-service-application-won39t-install"></a>疑難排解： 服務應用程式成交&#39;t 安裝
-如果您的服務應用程式將無法正確安裝，請檢查並確定<xref:System.ServiceProcess.ServiceBase.ServiceName%2A>該服務的安裝程式中所顯示的服務類別的屬性設定為相同的值。 值必須是相同的兩個執行個體，為了讓您的服務已正確安裝。  
+# <a name="troubleshooting-service-application-won39t-install"></a>疑難排解：無法安裝服務應用程式
+如果您的服務應用程式無法正確安裝，請檢查以確定會將服務類別的 <xref:System.ServiceProcess.ServiceBase.ServiceName%2A> 屬性設定為與該服務安裝程式中所示相同的值。 此值在這兩個執行個體中必須一樣，才能正確安裝您的服務。  
   
 > [!NOTE]
->  您也可以查看安裝記錄檔以取得安裝程序的回饋意見。  
+>  您也可以查看安裝記錄以取得關於安裝程序的回饋意見。  
   
- 您也應該檢查以判斷您是否有另一個服務，已安裝相同的名稱。 服務名稱必須是唯一的才能成功安裝。  
+ 您也應該檢查以判斷是否已經安裝另一個具有相同名稱的服務。 服務名稱必須是唯一的，才能成功安裝。  
   
-## <a name="see-also"></a>另請參閱  
+## <a name="see-also"></a>請參閱  
  [Windows 服務應用程式簡介](../../../docs/framework/windows-services/introduction-to-windows-service-applications.md)

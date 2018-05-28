@@ -10,7 +10,7 @@ author: rpetrusha
 ms.author: ronpet
 ms.openlocfilehash: 6851ac334d439f2e5c0f6056f5226e3faa1503d5
 ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
-ms.translationtype: MT
+ms.translationtype: HT
 ms.contentlocale: zh-TW
 ms.lasthandoff: 05/04/2018
 ---
@@ -19,7 +19,7 @@ ms.lasthandoff: 05/04/2018
   
 <a name="getting_mefx"></a>   
 ## <a name="getting-mefx"></a>取得 Mefx  
- Mefx 可在 GitHub 上[Managed Extensibility Framework](https://github.com/MicrosoftArchive/mef/releases/tag/4.0)。 只要下載並解壓縮工具即可。  
+ Mefx 可從 GitHub 上的 [Managed Extensibility Framework](https://github.com/MicrosoftArchive/mef/releases/tag/4.0) \(英文\) 中取得。 只要下載並解壓縮工具即可。  
   
 <a name="basic_syntax"></a>   
 ## <a name="basic-syntax"></a>基本語法  

@@ -14,53 +14,53 @@ author: ghogen
 manager: douge
 ms.openlocfilehash: faece1d7ee752e4c17f39027ff8a97fc95ed451b
 ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
-ms.translationtype: MT
+ms.translationtype: HT
 ms.contentlocale: zh-TW
 ms.lasthandoff: 05/04/2018
 ---
 # <a name="how-to-add-installers-to-your-service-application"></a>如何：加入 Installer 至服務應用程式
-Visual Studio 隨附安裝的元件，可將其與您的服務應用程式相關聯的資源。 安裝元件登錄的方法，它可以安裝，並讓服務控制管理員知道服務存在於的系統上的個別服務。 當您使用的服務應用程式時，您可以自動將適當的安裝程式新增至您的專案屬性 視窗中選取的連結。  
+Visual Studio 隨附安裝元件，可安裝與您服務應用程式相關聯的資源。 安裝元件會在其安裝所在的系統上註冊個別服務，並讓服務控制管理員知道服務的存在。 當您使用服務應用程式時，可以選取 [屬性] 視窗中的連結，以便自動將適當的安裝程式加入您的專案。  
   
 > [!NOTE]
->  您的服務的屬性值是從服務類別複製到安裝程式類別。 如果您更新服務類別上的屬性值，它們不會自動更新的安裝程式中。  
+>  適用於服務的屬性值會從服務類別複製到安裝程式類別。 如果您更新服務類別上的屬性值，不會在安裝程式中自動更新它們。  
   
- 當您將安裝程式加入您的專案，新的類別 (其中，根據預設，名為`ProjectInstaller`) 專案和適當的安裝，在其中建立元件的執行個體中建立。 所有安裝元件的中心點的這個類別是您的專案需要。 例如，如果您將第二個服務加入至您的應用程式，然後按一下 加入安裝程式連結，第二個安裝程式無法建立類別;相反地，第二個服務需要額外的安裝元件會加入至現有的類別。  
+ 當您將安裝程式加入至專案時，新的類別 (預設命名為 `ProjectInstaller`) 會建立於專案中，並在其中建立適當安裝元件的執行個體。 此類別可用來作為專案所需全部安裝元件的中心點。 例如，如果您將第二個服務加入至應用程式，然後按一下 [加入安裝程式] 連結，並不會建立第二個安裝程式類別；而是要將第二個服務所需的額外安裝元件加入至現有類別。  
   
- 您不需要任何特殊的安裝程式正確安裝程式服務中編碼方式。 不過，您偶爾可能需要以修改安裝程式的內容，如果您需要加入特殊功能的安裝程序。  
+ 您不需要在安裝程式內進行任何特殊編碼，即可正確安裝您的服務。 不過，如果您需要將特殊功能加入至安裝程序，偶爾可能需要修改安裝程式的內容。  
   
 > [!NOTE]
 >  根據您目前使用的設定或版本，您所看到的對話方塊與功能表命令可能會與 [說明] 中描述的不同。 若要變更設定，請從 [ **工具** ] 功能表中選取 [ **匯入和匯出設定** ]。 如需詳細資訊，請參閱 [在 Visual Studio 中自訂開發設定](http://msdn.microsoft.com/library/22c4debb-4e31-47a8-8f19-16f328d7dcd3)  
   
-### <a name="to-add-installers-to-your-service-application"></a>若要加入 installer 至服務應用程式  
+### <a name="to-add-installers-to-your-service-application"></a>將安裝程式加入服務應用程式  
   
-1.  在**方案總管 中**，存取**設計**檢視您要將安裝元件服務。  
+1.  在 [方案總管] 中，針對您想要加入安裝元件的服務，存取服務的 [設計] 檢視。  
   
-2.  本身，而不是它的任何內容，請按一下設計工具，以選取服務的背景。  
+2.  按一下設計工具的背景以選取服務本身，而不是它的任何內容。  
   
-3.  與設計工具取得焦點時，按一下滑鼠右鍵，然後按一下**加入安裝程式**。  
+3.  當設計工具取得焦點時，以滑鼠右鍵按一下，然後按一下 [加入安裝程式]。  
   
-     新的類別， `ProjectInstaller`，和兩個安裝元件，<xref:System.ServiceProcess.ServiceProcessInstaller>和<xref:System.ServiceProcess.ServiceInstaller>，元件會複製到服務，會加入至您的專案，並屬性值。  
+     隨即會在您的專案中加入一個新類別 (`ProjectInstaller`) 和兩個安裝元件 (<xref:System.ServiceProcess.ServiceProcessInstaller> 與 <xref:System.ServiceProcess.ServiceInstaller>)，並將服務的屬性值複製到元件。  
   
-4.  按一下<xref:System.ServiceProcess.ServiceInstaller>元件，並確認值<xref:System.ServiceProcess.ServiceInstaller.ServiceName%2A>屬性設定為相同的值<xref:System.ServiceProcess.ServiceInstaller.ServiceName%2A>本身在服務上的屬性。  
+4.  按一下 <xref:System.ServiceProcess.ServiceInstaller> 元件，並確認已將 <xref:System.ServiceProcess.ServiceInstaller.ServiceName%2A> 屬性的值設定為與服務本身 <xref:System.ServiceProcess.ServiceInstaller.ServiceName%2A> 屬性相同的值。  
   
-5.  若要判斷您的服務啟動的方式，請按一下<xref:System.ServiceProcess.ServiceInstaller>元件並設定<xref:System.ServiceProcess.ServiceInstaller.StartType%2A>屬性設為適當值。  
+5.  若要決定服務啟動方式，按一下 <xref:System.ServiceProcess.ServiceInstaller> 元件，並將 <xref:System.ServiceProcess.ServiceInstaller.StartType%2A> 屬性設定為適當的值。  
   
     |值|結果|  
     |-----------|------------|  
-    |<xref:System.ServiceProcess.ServiceStartMode.Manual>|安裝之後，必須手動啟動服務。 如需詳細資訊，請參閱[如何： 啟動服務](../../../docs/framework/windows-services/how-to-start-services.md)。|  
-    |<xref:System.ServiceProcess.ServiceStartMode.Automatic>|服務將會自行啟動時重新啟動電腦。|  
+    |<xref:System.ServiceProcess.ServiceStartMode.Manual>|服務必須在安裝之後手動啟動。 如需詳細資訊，請參閱[如何：啟動服務](../../../docs/framework/windows-services/how-to-start-services.md)。|  
+    |<xref:System.ServiceProcess.ServiceStartMode.Automatic>|服務將在電腦重新開機時自行啟動。|  
     |<xref:System.ServiceProcess.ServiceStartMode.Disabled>|無法啟動服務。|  
   
-6.  若要判斷您的服務將在其中執行的安全性內容，請按一下<xref:System.ServiceProcess.ServiceProcessInstaller>元件，並設定適當的屬性值。 如需詳細資訊，請參閱[How to： 指定服務的安全性內容](../../../docs/framework/windows-services/how-to-specify-the-security-context-for-services.md)。  
+6.  若要決定服務將在其中執行的安全性內容，按一下 <xref:System.ServiceProcess.ServiceProcessInstaller> 元件，並設定適當的屬性值。 如需詳細資訊，請參閱[如何：指定服務的安全性內容](../../../docs/framework/windows-services/how-to-specify-the-security-context-for-services.md)。  
   
-7.  覆寫任何您要執行自訂處理的方法。  
+7.  覆寫任何您需要為其執行自訂處理的方法。  
   
-8.  在您的專案中每個其他服務執行步驟 1 到 7。  
+8.  針對專案中的每個額外服務執行步驟 1 到 7。  
   
     > [!NOTE]
-    >  針對每個專案中的其他服務，您必須加入額外<xref:System.ServiceProcess.ServiceInstaller>元件在專案的`ProjectInstaller`類別。 <xref:System.ServiceProcess.ServiceProcessInstaller>三個步驟中加入元件適用於所有專案中的個別服務安裝程式。  
+    >  針對專案中的每個額外服務，您必須在專案的 `ProjectInstaller` 類別中加入額外的 <xref:System.ServiceProcess.ServiceInstaller> 元件。 在步驟三加入的 <xref:System.ServiceProcess.ServiceProcessInstaller> 元件適用於專案中所有的個別服務安裝程式。  
   
-## <a name="see-also"></a>另請參閱  
+## <a name="see-also"></a>請參閱  
  [Windows 服務應用程式簡介](../../../docs/framework/windows-services/introduction-to-windows-service-applications.md)  
  [如何：安裝和解除安裝服務](../../../docs/framework/windows-services/how-to-install-and-uninstall-services.md)  
  [如何：啟動服務](../../../docs/framework/windows-services/how-to-start-services.md)  

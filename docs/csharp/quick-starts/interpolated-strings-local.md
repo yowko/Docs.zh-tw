@@ -5,11 +5,11 @@ author: rpetrusha
 ms.author: ronpet
 ms.date: 04/14/2018
 ms.custom: mvc
-ms.openlocfilehash: 314626e276f50178e2855b8c8a1edc104546d574
-ms.sourcegitcommit: 88f251b08bf0718ce119f3d7302f514b74895038
+ms.openlocfilehash: 80b7a2c39094f1101e714b47f0e77f0a7c4907f2
+ms.sourcegitcommit: 77d9a94dac4c05827ed0663d95e0f9ad35d6682e
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/10/2018
+ms.lasthandoff: 05/24/2018
 ---
 # <a name="string-interpolation"></a>字串插補
 
@@ -48,13 +48,13 @@ Console.WriteLine($"Hello, {name}. It's a pleasure to meet you!");
 
 在上節中，您使用字串插補將某個字串插入至另一個字串內部。 不過，插入運算式的結果可以是任意資料類型。 請包含插入字串中各種資料類型的值。
 
-在下列範例中，首先，我們定義具有 `Name` [屬性](../properties.md) 和 `ToString` 方法的自訂資料類型 `Vegetable`。 用戶端程式碼可以使用該方法取得 `Vegetable` 執行個體的字串表示。 在範例中，`Vegetable.ToString` 方法傳回 `Name` 屬性的值，而此屬性是在 `Vegetable` 建構函式初始化：
+在下列範例中，首先，定義具有 `Name` [屬性](../properties.md)和 `ToString` [方法](../methods.md)的[類別](../programming-guide/classes-and-structs/classes.md)資料類型 `Vegetable`，其會[覆寫](../language-reference/keywords/override.md) <xref:System.Object.ToString?displayProperty=nameWithType> 方法的行為。 [`public` 存取修飾詞](../language-reference/keywords/public.md)會使該方法可用於取得任何用戶端程式碼，以取得 `Vegetable` 執行個體的字串表示。 在此範例中，`Vegetable.ToString` 方法會傳回 `Name` 屬性的值，此屬性會在 `Vegetable` [建構函式](../programming-guide/classes-and-structs/constructors.md)中初始化：
 
 ```csharp
 public Vegetable(string name) => Name = name;
 ```
 
-我們使用 `new` 關鍵字並提供 `Vegetable` 建構函式的 name 參數，來建立 `Vegetable` 型別執行個體：
+接著，使用 [`new` 關鍵字](../language-reference/keywords/new-operator.md)並提供 `Vegetable` 建構函式的 name 參數，來建立 `Vegetable` 類別的執行個體：
 
 ```csharp
 var item = new Vegetable("eggplant");
@@ -93,7 +93,7 @@ public class Program
 
 - 如果插入運算式評估為 `null`，則會使用空字串 (""，或 <xref:System.String.Empty?displayProperty=nameWithType>)。
 
-- 如果插入運算式未評估為 `null`，一般會呼叫結果類型的 `ToString` 方法。 測試這項作業的方式是更新 `Vegetable.ToString` 方法的實作。 您甚至可能未實作 `ToString` 方法，因為每種 C# 資料類型都有這個方法的某種實作。 若要測試該作業，請註銷範例中 `Vegetable.ToString` 方法的定義 (作法是在其前面放置註解符號 (`//`)。 在輸出中，字串 "eggplant" 會取代為完整類型名稱 (在此範例中，為 "Vegetable")，這是 <xref:System.Object.ToString?displayProperty=nameWithType> 方法的預設行為。 列舉型別之 `ToString` 方法的預設行為是傳回定義列舉時所使用值的字串表示。
+- 如果插入運算式未評估為 `null`，一般會呼叫結果類型的 `ToString` 方法。 測試這項作業的方式是更新 `Vegetable.ToString` 方法的實作。 您甚至可能不需要實作 `ToString` 方法，因為每個類型都有這個方法的某種實作。 若要測試此作業，請將範例中 `Vegetable.ToString` 方法的定義註解化 (作法是在其前面放置註解符號 `//`)。 在輸出中，字串 "eggplant" 會取代為完整類型名稱 (在此範例中，為 "Vegetable")，這是 <xref:System.Object.ToString?displayProperty=nameWithType> 方法的預設行為。 列舉值 `ToString` 方法的預設行為是傳回該值的字串表示。
 
 在此範例的輸出中，日期太過精確 (eggplant 價格不會因第二個而變更)，而價格值未指出貨幣單位。 在下節中，您將學習如何控制運算式結果的字串表示格式來修正這些問題。
 

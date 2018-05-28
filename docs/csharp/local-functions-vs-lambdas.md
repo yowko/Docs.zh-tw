@@ -3,11 +3,11 @@ title: 區域函式與 Lambda 運算式的比較
 description: 了解區域函式可能比 Lambda 運算式更適用的原因。
 ms.date: 06/27/2016
 ms.assetid: 368d1752-3659-489a-97b4-f15d87e49ae3
-ms.openlocfilehash: 0dfd34c5637bb4b8ae64a66e1ca1164fddec2cd7
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: 4fb8ea78b783871a19a8d5578d571e00da37642a
+ms.sourcegitcommit: 77d9a94dac4c05827ed0663d95e0f9ad35d6682e
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/04/2018
+ms.lasthandoff: 05/24/2018
 ---
 # <a name="local-functions-compared-to-lambda-expressions"></a>區域函式與 Lambda 運算式的比較
 
@@ -26,7 +26,7 @@ ms.lasthandoff: 05/04/2018
 區域函式的明確指派規則與 Lambda 運算式不同。 您可以從所在範圍的任何程式碼位置參考區域函式宣告。 Lambda 運算式必須指派給委派變數，才能提供存取 (或透過參考 Lambda 運算式的委派進行呼叫)。請注意，若為使用 Lambda 運算式的版本，則必須在定義 Lambda 運算式 `nthFactorial` 之前，將其宣告和初始化。 如果沒有這麼做的話，系統會在指派 `nthFactorial` 之前就加以參考，而導致編譯時期錯誤。
 這些差異表示使用區域函式時，您可以更輕鬆地建立遞迴演算法。 您可以宣告並定義呼叫其本身的區域函式。 Lambda 運算式必須加以宣告並指派預設值，才可以重新指派給參考相同 Lambda 運算式的主體。
 
-明確指派規則也會影響區域函式或 Lamdba 運算式所擷取的任何變數。 區域函式和 Lambda 運算式規則都要求在將區域函式或 Lambda 運算式轉換成委派時，明確指派任何擷取的變數。 差別在於 Lambda 運算式會在宣告時會轉換成委派。 區域函式只會在用作委派時，才會轉換成委派。 如果您宣告區域函式，並只透過類似方法的呼叫方式來參考它，則不會轉換成委派。 該規則可讓您在區域函式之封入範圍內的任何便利位置宣告區域函式。 通常會在父方法結尾的任何傳回陳述式之後宣告區域函式。
+明確指派規則也會影響區域函式或 Lambda 運算式所擷取的任何變數。 區域函式和 Lambda 運算式規則都要求在將區域函式或 Lambda 運算式轉換成委派時，明確指派任何擷取的變數。 差別在於 Lambda 運算式會在宣告時會轉換成委派。 區域函式只會在用作委派時，才會轉換成委派。 如果您宣告區域函式，並只透過類似方法的呼叫方式來參考它，則不會轉換成委派。 該規則可讓您在區域函式之封入範圍內的任何便利位置宣告區域函式。 通常會在父方法結尾的任何傳回陳述式之後宣告區域函式。
 
 第三，編譯器可以執行靜態分析，讓區域函式明確指派封入範圍內所擷取的變數。 請考量以下範例：
 

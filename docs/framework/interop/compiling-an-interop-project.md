@@ -13,7 +13,7 @@ author: rpetrusha
 ms.author: ronpet
 ms.openlocfilehash: 8a6099764fb98604726da99ef71b9c82e9a931bd
 ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
-ms.translationtype: MT
+ms.translationtype: HT
 ms.contentlocale: zh-TW
 ms.lasthandoff: 05/04/2018
 ---
@@ -37,10 +37,10 @@ ms.lasthandoff: 05/04/2018
   
  若要在部署包含主要 Interop 組件的應用程式時進行編譯，請使用 **/reference** 編譯器參數，並指定 Interop 組件的名稱。  
   
-## <a name="see-also"></a>另請參閱  
+## <a name="see-also"></a>請參閱  
  [將 COM 元件公開給 .NET Framework](exposing-com-components.md)  
  [語言獨立性以及與語言無關的元件](../../standard/language-independence-and-language-independent-components.md)  
- [在 Managed 程式碼中使用 COM 類型](https://msdn.microsoft.com/library/1a95a8ca-c8b8-4464-90b0-5ee1a1135b66(v=vs.100))  
+ [在受控程式碼中使用 COM 類型](https://msdn.microsoft.com/library/1a95a8ca-c8b8-4464-90b0-5ee1a1135b66(v=vs.100))  
  [逐步解說：從 Microsoft Office 組件內嵌類型資訊](https://msdn.microsoft.com/library/85b55e05-bc5e-4665-b6ae-e1ada9299fd3(v=vs.100))  
  [逐步解說：從 Managed 組件內嵌類型](https://msdn.microsoft.com/library/b28ec92c-1867-4847-95c0-61adfe095e21)  
  [匯入類型程式庫做為組件](importing-a-type-library-as-an-assembly.md)

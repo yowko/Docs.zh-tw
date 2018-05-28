@@ -5,69 +5,72 @@ helpviewer_keywords:
 - XML documentation [C#]
 - C# language, XML documentation features
 ms.assetid: 8f33917b-9577-4c9a-818a-640dbbb0b399
-ms.openlocfilehash: 6c7e30d23868959145e8941057f1c633fe6e374e
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: d7f1f51040033cf25f7f1aefb04d249e6e028ca3
+ms.sourcegitcommit: 77d9a94dac4c05827ed0663d95e0f9ad35d6682e
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/04/2018
+ms.lasthandoff: 05/24/2018
 ---
 # <a name="how-to-use-the-xml-documentation-features-c-programming-guide"></a>如何：使用 XML 文件功能 (C# 程式設計手冊)
 下列範例提供已記載之類型的基本概觀。  
   
 ## <a name="example"></a>範例  
  [!code-csharp[csProgGuideDocComments#15](../../../csharp/programming-guide/xmldoc/codesnippet/CSharp/how-to-use-the-xml-documentation-features_1.cs)]  
-  
- **// 此 .xml 檔案是透過上述程式碼範例所產生。**  
-**\<?xml version="1.0"?>**  
-**\<doc>**  
- **\<assembly>**  
- **\<name>xmlsample\</name>**  
- **\</assembly>**  
- **\<members>**  
- **\<member name="T:SomeClass">**  
- **\<summary>**  
- **類別層級摘要文件在此處出現。\</summary>**  
- **\<remarks>**  
- **可以將較長的註解經由備註標記**  
- **和類型或成員產生關聯\</remarks>**  
- **\</member>**  
- **\<member name="F:SomeClass.m_Name">**  
- **\<summary>**  
- **Name 屬性的存放區\</summary>**  
- **\</member>**  
- **\<member name="M:SomeClass.#ctor">**  
- **\<summary>類別建構函式。\</summary>**  
- **\</member>**  
- **\<member name="M:SomeClass.SomeMethod(System.String)">**  
- **\<summary>**  
- **SomeMethod 的描述。\</summary>**  
- **\<param name="s"> s 的參數描述在此處出現\</param>**  
- **\<seealso cref="T:System.String">**  
- **您可以使用任何標記上的 cref 屬性來參考類型或成員**  
- **而編譯器會檢查這個參考是否存在。\</seealso>**  
- **\</member>**  
- **\<member name="M:SomeClass.SomeOtherMethod">**  
- **\<summary>**  
- **一些其他方法。\</summary>**  
- **\<returns>**  
- **傳回結果是透過傳回標記描述。\</returns>**  
- **\<seealso cref="M:SomeClass.SomeMethod(System.String)">**  
- **請注意使用 cref 屬性來參考特定的方法 \</seealso>**  
- **\</member>**  
- **\<member name="M:SomeClass.Main(System.String[])">**  
- **\<summary>**  
- **應用程式的進入點。**  
- **\</summary>**  
- **\<param name="args"> 命令列引數清單\</param>**  
- **\</member>**  
- **\<member name="P:SomeClass.Name">**  
- **\<summary>**  
- **Name 屬性 \</summary>**  
- **\<value>**  
- **值的標記被用來描述這個屬性值\</value>**  
- **\</member>**  
- **\</members>**  
-**\</doc>**   
+
+這個範例會產生具有下列內容的 .xml 檔案：
+
+```xml  
+<?xml version="1.0"?>  
+<doc>  
+ <assembly>  
+ <name>xmlsample</name>  
+ </assembly>  
+ <members>  
+ <member name="T:SomeClass">  
+ <summary>  
+ Class level summary documentation goes here.</summary>  
+ <remarks>  
+ Longer comments can be associated with a type or member  
+ through the remarks tag</remarks>  
+ </member>  
+ <member name="F:SomeClass.m_Name">  
+ <summary>  
+ Store for the name property</summary>  
+ </member>  
+ <member name="M:SomeClass.#ctor">  
+ <summary>The class constructor.</summary>  
+ </member>  
+ <member name="M:SomeClass.SomeMethod(System.String)">  
+ <summary>  
+ Description for SomeMethod.</summary>  
+ <param name="s"> Parameter description for s goes here</param>  
+ <seealso cref="T:System.String">  
+ You can use the cref attribute on any tag to reference a type or member  
+ and the compiler will check that the reference exists. </seealso>  
+ </member>  
+ <member name="M:SomeClass.SomeOtherMethod">  
+ <summary>  
+ Some other method. </summary>  
+ <returns>  
+ Return results are described through the returns tag.</returns>  
+ <seealso cref="M:SomeClass.SomeMethod(System.String)">  
+ Notice the use of the cref attribute to reference a specific method </seealso>  
+ </member>  
+ <member name="M:SomeClass.Main(System.String[])">  
+ <summary>  
+ The entry point for the application.  
+ </summary>  
+ <param name="args"> A list of command line arguments</param>  
+ </member>  
+ <member name="P:SomeClass.Name">  
+ <summary>  
+ Name property </summary>  
+ <value>A value tag is used to describe the property value</value>  
+ </member>  
+ </members>  
+</doc>   
+```
+
 ## <a name="compiling-the-code"></a>編譯程式碼  
  若要編譯範例，請輸入下列命令列：  
   
@@ -80,7 +83,7 @@ ms.lasthandoff: 05/04/2018
   
 -   文件必須是語式正確的 XML。 如果 XML 的語式不正確，則會產生警告，而且文件檔案會包含註解，指出發生錯誤。  
   
--   開發人員可以自由建立自己的標記集合。 有建議的標記集合 (請參閱＜進一步閱讀＞一節)。 其中一些建議的標記具有特殊意義：  
+-   開發人員可以自由建立自己的標記集合。 有一組建議使用的標記 (請參閱[建議使用的文件註解標記](recommended-tags-for-documentation-comments.md))。 其中一些建議的標記具有特殊意義：  
   
     -   \<param> 標記是用來描述參數。 如果使用，編譯器會驗證參數存在，而且所有參數在文件中都有描述。 如果驗證失敗，編譯器會發出警告。  
   

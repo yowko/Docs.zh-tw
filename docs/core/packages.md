@@ -4,11 +4,11 @@ description: 了解套件、中繼套件和架構的術語。
 author: richlander
 ms.author: mairaw
 ms.date: 06/20/2016
-ms.openlocfilehash: 915ccadbb4d2cca50fd1caa53d90aa05d83d9378
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: f10965a8f5f2848f2b942b92577adf3185d8bd3c
+ms.sourcegitcommit: 77d9a94dac4c05827ed0663d95e0f9ad35d6682e
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/04/2018
+ms.lasthandoff: 05/24/2018
 ---
 # <a name="packages-metapackages-and-frameworks"></a>套件、中繼套件和架構
 
@@ -96,9 +96,10 @@ ms.lasthandoff: 05/04/2018
 
 關聯性的第二個部分是資產的選取項目。 套件可以包含多個架構的資產。 參考一組套件及/或中繼套件時，需要依據架構來判斷應該選取哪些資產，例如 `net46` 或 `netstandard1.3`。 請務必選取正確的資產。 例如，`net46` 資產不太可能相容於 .NET Framework 4.0 或 .NET Core 1.0。
 
-![以套件為基礎的架構組合](./media/packages/package-framework.png)
 
-您可以在上面的影像中看到此關聯性。 *API* 會以「架構」為目標，並加以定義。 「架構」可用來「選取資產」。 「資產」可提供 API。
+您可以在下圖中看到此關聯性。 *API* 會以「架構」為目標，並加以定義。 「架構」可用來「選取資產」。 「資產」可提供 API。
+
+![以套件為基礎的架構組合](./media/packages/package-framework.png)
 
 搭配 .NET Core 使用的主要套件型架構有以下兩個：
 

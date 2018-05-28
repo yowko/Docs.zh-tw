@@ -15,7 +15,7 @@ author: rpetrusha
 ms.author: ronpet
 ms.openlocfilehash: 52a78e0c3969e879bf2fd1b1f5c41b2caac2ba11
 ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
-ms.translationtype: MT
+ms.translationtype: HT
 ms.contentlocale: zh-TW
 ms.lasthandoff: 05/04/2018
 ---
@@ -37,7 +37,7 @@ ms.lasthandoff: 05/04/2018
 |作為傳值字串陣列。|建立以傳值方式傳遞的字串陣列。|[陣列](marshaling-different-types-of-arrays.md)|  
 |作為包含傳值字串的結構陣列。|建立包含字串的結構陣列，並以傳值方式傳遞該陣列。|[陣列](marshaling-different-types-of-arrays.md)|  
   
-## <a name="see-also"></a>另請參閱  
+## <a name="see-also"></a>請參閱  
  [使用平台叫用封送處理資料](marshaling-data-with-platform-invoke.md)  
  [平台叫用資料類型](https://msdn.microsoft.com/library/16014d9f-d6bd-481e-83f0-df11377c550f(v=vs.100))  
  [封送處理類別、結構和等位](marshaling-classes-structures-and-unions.md)  

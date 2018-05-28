@@ -19,7 +19,7 @@ author: rpetrusha
 ms.author: ronpet
 ms.openlocfilehash: 89479ca4a41f761d4aacaf6d8d962bfba62be811
 ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
-ms.translationtype: MT
+ms.translationtype: HT
 ms.contentlocale: zh-TW
 ms.lasthandoff: 05/04/2018
 ---
@@ -69,13 +69,13 @@ COM 類型定義通常位於型別程式庫中。 反之，符合 CLS 的編譯�
   
  如需 COM Interop 匯入處理序的詳細資訊，請參閱[型別程式庫至組件轉換的摘要](https://msdn.microsoft.com/library/bf3f90c5-4770-4ab8-895c-3ba1055cc958(v=vs.100))。  
   
-## <a name="see-also"></a>另請參閱  
+## <a name="see-also"></a>請參閱  
  <xref:System.Runtime.InteropServices.TypeLibConverter>  
  [將 COM 元件公開給 .NET Framework](../../../docs/framework/interop/exposing-com-components.md)  
  [型別程式庫至組件轉換的摘要](https://msdn.microsoft.com/library/bf3f90c5-4770-4ab8-895c-3ba1055cc958(v=vs.100))  
  [Tlbimp.exe (類型程式庫匯入工具)](../../../docs/framework/tools/tlbimp-exe-type-library-importer.md)  
  [自訂標準包裝函式](https://msdn.microsoft.com/library/c40d089b-6a3c-41b5-a20d-d760c215e49d(v=vs.100))  
- [在 Managed 程式碼中使用 COM 類型](https://msdn.microsoft.com/library/1a95a8ca-c8b8-4464-90b0-5ee1a1135b66(v=vs.100))  
+ [在受控程式碼中使用 COM 類型](https://msdn.microsoft.com/library/1a95a8ca-c8b8-4464-90b0-5ee1a1135b66(v=vs.100))  
  [編譯 Interop 專案](../../../docs/framework/interop/compiling-an-interop-project.md)  
  [部署 Interop 應用程式](../../../docs/framework/interop/deploying-an-interop-application.md)  
  [如何：將參考加入至類型程式庫](../../../docs/framework/interop/how-to-add-references-to-type-libraries.md)  

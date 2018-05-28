@@ -3,11 +3,11 @@ title: 類別簡介教學課程 - C# 本機快速入門
 description: 建立您的第一個 C# 程式並探索物件導向概念
 ms.date: 10/11/2017
 ms.custom: mvc
-ms.openlocfilehash: 5d3363a34fb684985b3b060dce2784090f25a1b9
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: a951c84396e187b5ef1a832705b7722f818c990b
+ms.sourcegitcommit: 43924acbdbb3981d103e11049bbe460457d42073
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/04/2018
+ms.lasthandoff: 05/23/2018
 ---
 # <a name="introduction-to-classes"></a>類別簡介
 
@@ -72,7 +72,7 @@ namespace classes
 
 在繼續之前，讓我們先查看您所建置的內容。  `namespace` 宣告能提供以邏輯方式組織程式碼的方式。 此快速入門的規模相對較小，所以您會將所有程式碼置於一個命名空間。 
 
-`public class BankAccount` 能定義您要建立的類別 (或類型)。 類別宣告後面的 `{` 和 `}` 之內的所有內容，皆定義該類別的行為。 `BankAccount` 類別有五個***成員***。 前三個為***屬性***。 屬性是資料元素，且可以具有強制執行驗證或其他規則的程式碼。 後兩個為***方法***。 方法是執行單一功能的程式碼區塊。 閱讀每個成員的名稱，應該能提供足夠的資訊，以供您或其他開發人員了解該類別的功能。
+`public class BankAccount` 能定義您要建立的類別 (或類型)。 類別宣告後面的 `{` 和 `}` 之內的所有內容，皆定義該類別的行為。 `BankAccount` 類別有五個***成員***。 前三個為***屬性***。 屬性是資料元素，且可以具有強制執行驗證或其他規則的程式碼。 後兩個為***方法***。 方法是執行單一函式的程式碼區塊。 閱讀每個成員的名稱，應該能提供足夠的資訊，以供您或其他開發人員了解該類別的功能。
 
 ## <a name="open-a-new-account"></a>開啟新帳戶
 

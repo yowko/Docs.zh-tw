@@ -13,7 +13,7 @@ author: rpetrusha
 ms.author: ronpet
 ms.openlocfilehash: 57483f099bb71a1ab685cedf148d4343c12983dd
 ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
-ms.translationtype: MT
+ms.translationtype: HT
 ms.contentlocale: zh-TW
 ms.lasthandoff: 05/04/2018
 ---
@@ -33,7 +33,7 @@ COM 包裝函式概觀
   
  在大部分情況下，執行階段所產生的標準 RCW 或 CCW 提供呼叫的足夠封送處理，而這些呼叫跨越 COM 與 .NET Framework 之間的界限。 使用自訂屬性，您可以選擇性地調整執行階段呈現 Managed 和 Unmanaged 程式碼的方式。  
   
-## <a name="see-also"></a>另請參閱  
+## <a name="see-also"></a>請參閱  
  [進階 COM 互通性](https://msdn.microsoft.com/library/3ada36e5-2390-4d70-b490-6ad8de92f2fb(v=vs.100))  
  [執行階段可呼叫包裝函式](runtime-callable-wrapper.md)  
  [COM 可呼叫包裝函式](com-callable-wrapper.md)  

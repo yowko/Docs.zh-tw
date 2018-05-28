@@ -9,7 +9,7 @@ author: rpetrusha
 ms.author: ronpet
 ms.openlocfilehash: 1f54d77be130d57c39319e81d58ad5af7815e548
 ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
-ms.translationtype: MT
+ms.translationtype: HT
 ms.contentlocale: zh-TW
 ms.lasthandoff: 05/04/2018
 ---
@@ -47,7 +47,7 @@ ms.lasthandoff: 05/04/2018
 regasm CompanyA.UtilLib.dll  
 ```  
   
-## <a name="see-also"></a>另請參閱  
+## <a name="see-also"></a>請參閱  
  [使用主要 Interop 組件設計程式](https://msdn.microsoft.com/library/306fa1d6-0703-4004-9e93-d0a57f1be81e(v=vs.100))  
- [尋找主要 Interop 組件](https://msdn.microsoft.com/library/d6768e4b-cd80-414d-a4f8-05d979eb393b(v=vs.100))  
+ [找出主要 Interop 組件](https://msdn.microsoft.com/library/d6768e4b-cd80-414d-a4f8-05d979eb393b(v=vs.100))  
  [轉散發主要 Interop 組件](https://msdn.microsoft.com/library/e76384f0-d631-474c-bdbd-13884cba0265(v=vs.100))

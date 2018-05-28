@@ -16,7 +16,7 @@ author: rpetrusha
 ms.author: ronpet
 ms.openlocfilehash: 21f7b0d56a788b4161fb7e99899b4dd15a434152
 ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
-ms.translationtype: MT
+ms.translationtype: HT
 ms.contentlocale: zh-TW
 ms.lasthandoff: 05/04/2018
 ---
@@ -38,7 +38,7 @@ ms.lasthandoff: 05/04/2018
   
 ## <a name="simulating-com-interfaces"></a>模擬 COM 介面
 
-CCW 會公開所有公用、 COM 可見介面、 資料類型，以及對 COM 用戶端與 COM 的介面為基礎的互動強制一致的方式傳回的值。 對於 COM 用戶端而言，在 .NET Framework 物件上叫用方法與在 COM 物件上叫用方法相同。  
+CCW 會以與 COM 強制進行介面型互動一致的方式，向 COM 用戶端公開所有公用且 COM 可見的介面、資料類型和傳回值。 對於 COM 用戶端而言，在 .NET Framework 物件上叫用方法與在 COM 物件上叫用方法相同。  
   
  為了建立這種無縫式的方法，CCW 會製造傳統 COM 介面，例如 **IUnknown** 和 **IDispatch**。 如下圖所示，CCW 會維護對其所包裝之 .NET 物件的單一參考。 COM 用戶端和 .NET 物件會透過 Proxy 和 CCW 虛設常式建構彼此互動。  
   
@@ -60,15 +60,15 @@ COM 介面與 COM 可呼叫包裝函式
   
 |介面|描述|  
 |---------------|-----------------|  
-|(\_*Classname*) 類別介面|由執行階段公開且未明確定義的介面，它會公開所有公用介面、方法、屬性和 Managed 物件上明確公開的欄位。|  
+|(\_*classname*) 類別介面|由執行階段公開且未明確定義的介面，它會公開所有公用介面、方法、屬性和 Managed 物件上明確公開的欄位。|  
 |**IConnectionPoint** 和 **IconnectionPointContainer**|來源為以委派為基礎之事件的物件介面 (註冊事件訂閱者用的介面)。|  
 |**IdispatchEx**|如果類別實作 **IExpando**，則為執行階段提供的介面。 **IDispatchEx** 介面是 **IDispatch** 介面的延伸模組，它不同於 **IDispatch**，可進行成員的列舉、新增、刪除和區分大小寫的呼叫。|  
 |**IEnumVARIANT**|集合類型類別的介面，如果類別實作 **IEnumerable**，它會列舉集合中的物件。|  
   
 ## <a name="introducing-the-class-interface"></a>類別介面簡介  
- 類別介面未在 Managed 程式碼中明確定義，它是公開所有公用方法、屬性、欄位和 .NET 物件上明確公開之事件的介面。 這個介面可以是雙重介面或僅分派介面。 類別介面會接收 .NET 類別的名稱本身，前面加上底線。 例如，對於類別 Mammal，類別介面是\_Mammal。  
+ 類別介面未在 Managed 程式碼中明確定義，它是公開所有公用方法、屬性、欄位和 .NET 物件上明確公開之事件的介面。 這個介面可以是雙重介面或僅分派介面。 類別介面會接收 .NET 類別的名稱本身，前面加上底線。 例如，對於類別 Mammal，類別介面是 \_Mammal。  
   
- 對於衍生類別，類別介面也會公開和基底類別的所有公用方法、屬性欄位。 衍生類別也會為每個基底類別公開類別介面。 例如，如果類別 Mammal 延伸了類別 MammalSuperclass，而其本身延伸了 System.Object，對 COM 用戶端.NET 物件會公開三個類別介面，名稱為\_Mammal， \_MammalSuperclass，和\_物件。  
+ 對於衍生類別，類別介面也會公開和基底類別的所有公用方法、屬性欄位。 衍生類別也會為每個基底類別公開類別介面。 例如，如果類別 Mammal 會延伸類別 MammalSuperclass，而 MammalSuperclass 本身會延伸 System.Object，則 .NET 物件會向 COM 用戶端公開三個類別介面，名稱分別為 \_Mammal、\_MammalSuperclass 及 \_Object。  
   
  例如，請參考下列 .NET 類別：  
   
@@ -147,7 +147,7 @@ public class LoanApp : IExplicit {
   
  **ClassInterfaceType.None** 值可防止在類別中繼資料匯出至型別程式庫時產生類別介面。 在上述範例中，COM 用戶端只能透過 `IExplicit` 介面存取 `LoanApp` 類別。  
   
-### <a name="avoid-caching-dispatch-identifiers-dispids"></a>避免快取分派識別項 (Dispid)
+### <a name="avoid-caching-dispatch-identifiers-dispids"></a>避免快取分派識別碼 (DispId)
  使用類別介面對於指令碼式用戶端、Microsoft Visual Basic 6.0 用戶端，或不會快取介面成員 DispId 的任何晚期繫結用戶端而言，是可接受的選項。 DispId 可識別介面成員以啟用晚期繫結。  
   
  對於類別介面，DispId 的產生是根據成員在介面中的位置。 如果您變更成員的順序，並將類別匯出至類型程式庫，您會修改在類別介面中產生的 DispId。  
@@ -176,7 +176,7 @@ public class LoanApp : IAnother {
   
  自動產生的雙重介面可能適合於少數情況，不過，通常它會造成與版本相關的複雜性。 例如，使用衍生類別之類別介面的 COM 用戶端，可能會因為對基底類別的變更而輕易地中斷。 當協力廠商提供基底類別時，類別介面的配置會超出您的控制。 此外，不同於僅分派介面，雙重介面 (**ClassInterface.AutoDual**) 在匯出的型別程式庫中提供類別介面的描述。 這類描述鼓勵晚期繫結的用戶端在執行階段快取 DispId。  
   
-## <a name="see-also"></a>另請參閱  
+## <a name="see-also"></a>請參閱  
  <xref:System.Runtime.InteropServices.ClassInterfaceAttribute>  
  [COM 包裝函式](com-wrappers.md)  
  [將 .NET Framework 元件公開給 COM](exposing-dotnet-components-to-com.md)  

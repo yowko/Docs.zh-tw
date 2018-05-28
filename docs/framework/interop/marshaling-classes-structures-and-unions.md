@@ -22,7 +22,7 @@ author: rpetrusha
 ms.author: ronpet
 ms.openlocfilehash: be4c15f1093f359eeb9e742464b9d9e1dd5c756e
 ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
-ms.translationtype: MT
+ms.translationtype: HT
 ms.contentlocale: zh-TW
 ms.lasthandoff: 05/04/2018
 ---
@@ -287,7 +287,7 @@ typedef struct _MYSTRSTRUCT2
  [!code-csharp[Conceptual.Interop.Marshaling#21](../../../samples/snippets/csharp/VS_Snippets_CLR/conceptual.interop.marshaling/cs/outarrayofstructs.cs#21)]
  [!code-vb[Conceptual.Interop.Marshaling#21](../../../samples/snippets/visualbasic/VS_Snippets_CLR/conceptual.interop.marshaling/vb/outarrayofstructs.vb#21)]  
   
-## <a name="see-also"></a>另請參閱  
+## <a name="see-also"></a>請參閱  
  [使用平台叫用封送處理資料](marshaling-data-with-platform-invoke.md)  
  [平台叫用資料類型](https://msdn.microsoft.com/library/16014d9f-d6bd-481e-83f0-df11377c550f(v=vs.100))  
  [封送處理字串](marshaling-strings.md)  

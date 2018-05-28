@@ -12,7 +12,7 @@ author: rpetrusha
 ms.author: ronpet
 ms.openlocfilehash: 94377fb2079689e7b6af2c94fa24ca2214a5c729
 ms.sourcegitcommit: 895c7602386a6dfe7ca4facce3d965b27e5c6e87
-ms.translationtype: MT
+ms.translationtype: HT
 ms.contentlocale: zh-TW
 ms.lasthandoff: 05/19/2018
 ---
@@ -329,7 +329,7 @@ mo.SetVariant(new CurrencyWrapper(new Decimal(5.25)));
 |**Variant**  *v* **(VT_BYREF** *&#124;* **VT_\*)**|**物件**  *o*|永不|  
 |**Variant**  *v* **(VT_BYREF** *&#124;* **VT_)**|**Ref 物件**  *o*|只有當類型不變更時。|  
   
-## <a name="see-also"></a>另請參閱  
+## <a name="see-also"></a>請參閱  
  [預設的封送處理行為](default-marshaling-behavior.md)  
  [Blittable 和非 Blittable 類型](blittable-and-non-blittable-types.md)  
  [方向屬性](https://msdn.microsoft.com/library/241ac5b5-928e-4969-8f58-1dbc048f9ea2(v=vs.100))  

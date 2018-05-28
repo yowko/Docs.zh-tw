@@ -20,7 +20,7 @@ author: rpetrusha
 ms.author: ronpet
 ms.openlocfilehash: f2906159c7474b42f81bdf066855072466b6be63
 ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
-ms.translationtype: MT
+ms.translationtype: HT
 ms.contentlocale: zh-TW
 ms.lasthandoff: 05/04/2018
 ---
@@ -37,7 +37,7 @@ COM 開發人員可以獲益於他們要併入其應用程式之 Managed 類型�
   
      可實作類別介面 (COM Interop 產生的介面) 的 Managed 類別受到版本設定限制。  
   
-     如需使用類別介面的指導方針，請參閱[類別介面簡介](com-callable-wrapper.md#introducing-the-class-interface)。  
+     如需使用類別介面的方針，請參閱[類別介面簡介](com-callable-wrapper.md#introducing-the-class-interface)。  
   
 -   部署指示  
   
@@ -79,7 +79,7 @@ COM 開發人員可以獲益於他們要併入其應用程式之 Managed 類型�
 ## <a name="net-services-installation-tool"></a>.NET 服務安裝工具  
  [.NET 服務安裝工具 (Regsvcs.exe)](../tools/regsvcs-exe-net-services-installation-tool.md) 會將 Managed 類別新增至 Windows 2000 元件服務，並將數項工作合併到單一工具。 除了載入和註冊組件之外，Regsvcs.exe 還可以在現有 COM+ 1.0 應用程式中產生、註冊和安裝型別程式庫。  
   
-## <a name="see-also"></a>另請參閱  
+## <a name="see-also"></a>請參閱  
  <xref:System.Runtime.InteropServices.TypeLibConverter>  
  <xref:System.Runtime.InteropServices.ITypeLibConverter>  
  [將 .NET Framework 元件公開給 COM](exposing-dotnet-components-to-com.md)  

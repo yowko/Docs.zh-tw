@@ -11,7 +11,7 @@ author: rpetrusha
 ms.author: ronpet
 ms.openlocfilehash: 503ef7066b5d66b05c1642512ab8d59a2b1d3f9a
 ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
-ms.translationtype: MT
+ms.translationtype: HT
 ms.contentlocale: zh-TW
 ms.lasthandoff: 05/04/2018
 ---
@@ -76,8 +76,8 @@ ms.lasthandoff: 05/04/2018
   
  以傳值方式傳遞 <xref:System.Text.StringBuilder?displayProperty=nameWithType> 時，封送處理器會直接將 **StringBuilder** 的內部緩衝區參考傳遞給呼叫者。 呼叫者和被呼叫者必須同意緩衝區的大小。 呼叫者負責建立長度足夠的 **StringBuilder**。 被呼叫者必須採取必要的預防措施，確保緩衝區未溢位。 **StringBuilder** 是規則的例外狀況，而此規則預設會將以傳值方式傳遞的參考型別傳遞為 In 參數。 它一律會傳遞為 In/Out。  
   
-## <a name="see-also"></a>另請參閱  
+## <a name="see-also"></a>請參閱  
  [預設的封送處理行為](default-marshaling-behavior.md)  
- [使用 Interop 封送處理器進行記憶體管理](https://msdn.microsoft.com/library/417206ce-ee3e-4619-9529-0c0b686c7bee(v=vs.100))  
+ [使用 Interop 封送處理器的記憶體管理](https://msdn.microsoft.com/library/417206ce-ee3e-4619-9529-0c0b686c7bee(v=vs.100))  
  [方向屬性](https://msdn.microsoft.com/library/241ac5b5-928e-4969-8f58-1dbc048f9ea2(v=vs.100))  
  [Interop 封送處理](interop-marshaling.md)

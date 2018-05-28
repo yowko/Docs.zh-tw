@@ -14,7 +14,7 @@ author: rpetrusha
 ms.author: ronpet
 ms.openlocfilehash: 32ee3babe054d55a45cc8826843252dba6aa2be7
 ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
-ms.translationtype: MT
+ms.translationtype: HT
 ms.contentlocale: zh-TW
 ms.lasthandoff: 05/04/2018
 ---
@@ -44,14 +44,14 @@ ms.lasthandoff: 05/04/2018
   
 ### <a name="configuring-com-components-for-registration-free-activation"></a>設定適用於免註冊啟動的 COM 元件  
   
-1.  若要讓 COM 元件參與免註冊啟動，必須將其部署為並存組件。 並存組件是 Unmanaged 組件。  如需詳細資訊，請參閱[使用-並存組件](https://msdn.microsoft.com/library/windows/desktop/aa376618.aspx)。  
+1.  若要讓 COM 元件參與免註冊啟動，必須將其部署為並存組件。 並存組件是 Unmanaged 組件。  如需詳細資訊，請參閱[使用並存組件](https://msdn.microsoft.com/library/windows/desktop/aa376618.aspx) \(英文\)。  
   
      若要使用 COM 並存組件，.NET 架構應用程式開發人員必須提供應用程式資訊清單，其中包含繫結和啟動資訊。 對 Unmanaged 並存組件的支援內建在 Windows XP 作業系統中。 當所要啟動的元件不在登錄中時，COM 執行階段 (作業系統可支援) 會掃描應用程式資訊清單，以取得啟動資訊。  
   
-     針對安裝在 Windows XP 上的 COM 元件，免註冊啟動是選擇性的。 如需將-並存組件加入至應用程式的詳細指示，請參閱[使用-並存組件](https://msdn.microsoft.com/library/windows/desktop/aa376618.aspx)。  
+     針對安裝在 Windows XP 上的 COM 元件，免註冊啟動是選擇性的。 如需將並存組件加入至應用程式的詳細指示，請參閱[使用並存組件](https://msdn.microsoft.com/library/windows/desktop/aa376618.aspx) \(英文\)。  
   
     > [!NOTE]
     >  並存執行是 .NET Framework 的功能，可讓多版執行階段，以及使用某版執行階段的多版應用程式和元件，同時在同一部電腦上執行。 並存執行和並存組件是提供並行功能的不同機制。  
   
-## <a name="see-also"></a>另請參閱  
+## <a name="see-also"></a>請參閱  
  [如何：設定免註冊啟用的 .NET Framework 架構 COM 元件](../../../docs/framework/interop/configure-net-framework-based-com-components-for-reg.md)

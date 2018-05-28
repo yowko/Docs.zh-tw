@@ -17,14 +17,14 @@ author: rpetrusha
 ms.author: ronpet
 ms.openlocfilehash: 3166d6c95532706781188da0c56ebf9022038a50
 ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
-ms.translationtype: MT
+ms.translationtype: HT
 ms.contentlocale: zh-TW
 ms.lasthandoff: 05/04/2018
 ---
 # <a name="consuming-unmanaged-dll-functions"></a>使用 Unmanaged DLL 函式
 平台叫用服務，可讓 Managed 程式碼呼叫 Unmanaged 函式在動態連結程式庫 (DLL) 中實作，例如 Win32 API 中。 它會找出並叫用匯出的函式，並且在需要的時候於交互操作界限之間封送處理其引數 (整數、 字串、 陣列、 結構和其他) 。  
   
- 本節將介紹與使用 unmanaged 的 DLL 函式相關聯的工作，並提供叫用平台的詳細資訊。 除了下列工作之外，還有一般考量以及提供其他資訊和範例的連結。  
+ 本節將介紹與取用非受控 DLL 函式相關聯的工作，並提供關於平台叫用的詳細資訊。 除了下列工作之外，還有一般考量以及提供其他資訊和範例的連結。  
   
 #### <a name="to-consume-exported-dll-functions"></a>使用匯出的 DLL 函式  
   
@@ -71,7 +71,7 @@ ms.lasthandoff: 05/04/2018
   
  平台叫用會擲回由 Unmanaged 函式產生的例外狀況給 Managed 呼叫端。  
   
-## <a name="see-also"></a>另請參閱  
+## <a name="see-also"></a>請參閱  
  [與 Unmanaged 程式碼互通](../../../docs/framework/interop/index.md)  
  [平台叫用範例](../../../docs/framework/interop/platform-invoke-examples.md)  
  [Interop 封送處理](../../../docs/framework/interop/interop-marshaling.md)  

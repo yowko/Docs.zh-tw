@@ -13,7 +13,7 @@ author: rpetrusha
 ms.author: ronpet
 ms.openlocfilehash: baa5b9f250fe7117838f936b09b050ba500b7209
 ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
-ms.translationtype: MT
+ms.translationtype: HT
 ms.contentlocale: zh-TW
 ms.lasthandoff: 05/04/2018
 ---
@@ -22,9 +22,9 @@ ms.lasthandoff: 05/04/2018
   
 -   類別應該明確地實作介面。  
   
-     雖然 COM Interop 提供機制來自動產生包含類別之所有成員和其基底類別成員的介面，最好是目前提供明確的介面。但是最好是提供明確介面。 自動產生的介面稱為類別介面。 如需指導方針，請參閱[類別介面簡介](com-callable-wrapper.md#introducing-the-class-interface)。  
+     雖然 COM Interop 提供機制來自動產生包含類別之所有成員和其基底類別成員的介面，最好是目前提供明確的介面。但是最好是提供明確介面。 自動產生的介面稱為類別介面。 如需方針，請參閱[類別介面簡介](com-callable-wrapper.md#introducing-the-class-interface)。  
   
-     您可以使用 Visual Basic、 C# 和 c + + 程式碼，而不需使用介面定義語言 (IDL) 或其對等項目中加入介面定義。 如需語法詳細資訊，請參閱您的語言文件。  
+     您可以使用 Visual Basic、C# 和 C++ 在程式碼中併入介面定義，而不需使用介面定義語言 (IDL) 或其對等項目。 如需語法詳細資訊，請參閱您的語言文件。  
   
 -   Managed 類型必須是公用的。  
   
@@ -46,7 +46,7 @@ ms.lasthandoff: 05/04/2018
   
  匯出至 COM 時，會壓平合併 Managed 類型的繼承階層。 Managed 與 Unmanaged 環境之間的版本設定不同。 向 COM 公開之類型與其他 Managed 類型的版本設定特性不同。  
   
-## <a name="see-also"></a>另請參閱  
+## <a name="see-also"></a>請參閱  
  <xref:System.Runtime.InteropServices.ComVisibleAttribute>  
  [將 .NET Framework 元件公開給 COM](../../../docs/framework/interop/exposing-dotnet-components-to-com.md)  
  [類別介面簡介](com-callable-wrapper.md#introducing-the-class-interface)  

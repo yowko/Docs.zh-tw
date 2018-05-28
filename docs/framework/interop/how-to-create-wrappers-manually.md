@@ -8,7 +8,7 @@ author: rpetrusha
 ms.author: ronpet
 ms.openlocfilehash: d61095e4e8c7f9b3795b751a5894de99d6ce8f99
 ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
-ms.translationtype: MT
+ms.translationtype: HT
 ms.contentlocale: zh-TW
 ms.lasthandoff: 05/04/2018
 ---
@@ -98,10 +98,10 @@ namespace SAServer
 }  
 ```  
   
-## <a name="see-also"></a>另請參閱  
+## <a name="see-also"></a>請參閱  
  [自訂執行階段可呼叫包裝函式](https://msdn.microsoft.com/library/4652beaf-77d0-4f37-9687-ca193288c0be(v=vs.100))  
  [COM 資料類型](https://msdn.microsoft.com/library/f93ae35d-a416-4218-8700-c8218cc90061(v=vs.100))  
- [如何： 編輯 Interop 組件](https://msdn.microsoft.com/library/16aacb20-2269-42bf-a812-b6a7df17e277(v=vs.100))  
+ [如何：編輯 Interop 組件](https://msdn.microsoft.com/library/16aacb20-2269-42bf-a812-b6a7df17e277(v=vs.100))  
  [型別程式庫至組件轉換的摘要](https://msdn.microsoft.com/library/bf3f90c5-4770-4ab8-895c-3ba1055cc958(v=vs.100))  
  [Tlbimp.exe (類型程式庫匯入工具)](../tools/tlbimp-exe-type-library-importer.md)  
  [Tlbexp.exe (類型程式庫匯出工具)](../tools/tlbexp-exe-type-library-exporter.md)

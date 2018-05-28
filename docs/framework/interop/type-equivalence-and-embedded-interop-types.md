@@ -1,5 +1,5 @@
 ---
-title: 類型等價和內嵌 interop 類型
+title: 類型等價和內嵌 Interop 類型
 ms.date: 03/30/2017
 helpviewer_keywords:
 - type equivalence
@@ -11,11 +11,11 @@ author: rpetrusha
 ms.author: ronpet
 ms.openlocfilehash: e3eeba609349bb9d5b7c68e15e0e0e6ff3f1b7ea
 ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
-ms.translationtype: MT
+ms.translationtype: HT
 ms.contentlocale: zh-TW
 ms.lasthandoff: 05/04/2018
 ---
-# <a name="type-equivalence-and-embedded-interop-types"></a>類型等價和內嵌 interop 類型
+# <a name="type-equivalence-and-embedded-interop-types"></a>類型等價和內嵌 Interop 類型
 
 從 [!INCLUDE[net_v40_long](../../../includes/net-v40-long-md.md)] 開始，通用語言執行平台支援將 COM 類型的類型資訊直接內嵌到 Managed 組件，而不需要 Managed 組件從 Interop 組件取得 COM 類型的類型資訊。 因為內嵌類型資訊僅包含 Managed 組件實際所使用的類型和成員，所以兩個 Managed 組件可能對於相同的 COM 類型會有非常不同的檢視。 每個 Managed 組件有不同的 <xref:System.Type> 物件以代表其 COM 類型檢視。 通用語言執行平台支援介面、結構、列舉和委派等這些不同檢視之間的類型等價。
 
@@ -32,9 +32,9 @@ ms.lasthandoff: 05/04/2018
 
 - 類型具有相同的身分識別，如下一節中所述。
 
-- 中所述，這兩種類型是否適合類型等價，[標示 COM 類型的類型等價](#marking-com-types-for-type-equivalence)> 一節。
+- 這兩個類型都適合類型等價，如[標記類型等價的 COM 類型](#marking-com-types-for-type-equivalence)一節中所述。
 
-### <a name="type-identity"></a>型別身分識別
+### <a name="type-identity"></a>類型身分識別
 
 當兩個類型的範圍和身分識別相符時，會判斷它們具有相同的身分識別；換句話說，如果它們都有 <xref:System.Runtime.InteropServices.TypeIdentifierAttribute> 屬性，且兩個屬性都有相符的 <xref:System.Runtime.InteropServices.TypeIdentifierAttribute.Scope%2A> 和 <xref:System.Runtime.InteropServices.TypeIdentifierAttribute.Identifier%2A> 屬性。 <xref:System.Runtime.InteropServices.TypeIdentifierAttribute.Scope%2A> 的比較不區分大小寫。
 
@@ -44,7 +44,7 @@ ms.lasthandoff: 05/04/2018
 
 - 對於結構、列舉和委派，會使用包含組件的 <xref:System.Runtime.InteropServices.GuidAttribute>而非 <xref:System.Runtime.InteropServices.TypeIdentifierAttribute.Scope%2A> 屬性，而且會使用 <xref:System.Type.FullName%2A?displayProperty=nameWithType> 屬性，而非 <xref:System.Runtime.InteropServices.TypeIdentifierAttribute.Identifier%2A> 屬性。
 
-### <a name="marking-com-types-for-type-equivalence"></a>標記類型等價的 COM 型別
+### <a name="marking-com-types-for-type-equivalence"></a>標記類型等價的 COM 類型
 
  您可以將類型標記為適合類型等價，有兩種方法：
 
@@ -55,5 +55,5 @@ ms.lasthandoff: 05/04/2018
 ## <a name="see-also"></a>另請參閱
 
 <xref:System.Type.IsEquivalentTo%2A>  
-[在 Managed 程式碼中使用 COM 類型](https://msdn.microsoft.com/library/1a95a8ca-c8b8-4464-90b0-5ee1a1135b66(v=vs.100))  
+[在受控程式碼中使用 COM 類型](https://msdn.microsoft.com/library/1a95a8ca-c8b8-4464-90b0-5ee1a1135b66(v=vs.100))  
 [匯入類型程式庫做為組件](importing-a-type-library-as-an-assembly.md)  

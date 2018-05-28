@@ -10,7 +10,7 @@ author: rpetrusha
 ms.author: ronpet
 ms.openlocfilehash: 1995c367039591c086054a086f2107e4a88ecefb
 ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
-ms.translationtype: MT
+ms.translationtype: HT
 ms.contentlocale: zh-TW
 ms.lasthandoff: 05/04/2018
 ---
@@ -101,7 +101,7 @@ ms.lasthandoff: 05/04/2018
   
 <a name="marshaling_remote_calls"></a>   
 ## <a name="marshaling-remote-calls"></a>封送處理遠端呼叫  
- 如同跨 Apartment 封送處理，當物件位於不同的處理序時，在 Managed 和 Unmanaged 程式碼之間的每一個呼叫都需要 COM 封送處理。 例如：  
+ 如同跨 Apartment 封送處理，當物件位於不同的處理序時，在 Managed 和 Unmanaged 程式碼之間的每一個呼叫都需要 COM 封送處理。 例如:   
   
 -   在遠端主機上叫用 Managed 伺服器的 COM 用戶端會使用分散式 COM (DCOM)。  
   
@@ -135,7 +135,7 @@ ms.lasthandoff: 05/04/2018
  ![SOAP 或 TcpChannel](./media/interopremotesoap.gif "interopremotesoap")  
 使用 SOAP 或 TcpChannel 類別跨防火牆進行遠端呼叫  
   
- 某些 unmanaged 的呼叫可以透過 SOAP 進行傳送，例如之間 serviced 的元件及 COM 的呼叫  
+ 某些非受控的呼叫可經由 SOAP 導引，例如 Serviced 元件和 COM 之間的呼叫。  
   
  [回到頁首](#top)  
   

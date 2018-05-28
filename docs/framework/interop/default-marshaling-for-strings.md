@@ -12,7 +12,7 @@ author: rpetrusha
 ms.author: ronpet
 ms.openlocfilehash: 88604058bd460d80214be6051abef7dc561c7710
 ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
-ms.translationtype: MT
+ms.translationtype: HT
 ms.contentlocale: zh-TW
 ms.lasthandoff: 05/04/2018
 ---
@@ -262,7 +262,7 @@ public class Window {
 }  
 ```  
   
-## <a name="see-also"></a>另請參閱  
+## <a name="see-also"></a>請參閱  
  [預設的封送處理行為](default-marshaling-behavior.md)  
  [Blittable 和非 Blittable 類型](blittable-and-non-blittable-types.md)  
  [方向屬性](https://msdn.microsoft.com/library/241ac5b5-928e-4969-8f58-1dbc048f9ea2(v=vs.100))  

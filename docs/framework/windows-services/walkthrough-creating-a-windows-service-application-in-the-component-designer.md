@@ -12,7 +12,7 @@ author: ghogen
 manager: douge
 ms.openlocfilehash: c33b8badcacd4e228d70f8e770d4bf27144c29eb
 ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
-ms.translationtype: MT
+ms.translationtype: HT
 ms.contentlocale: zh-TW
 ms.lasthandoff: 05/04/2018
 ---
@@ -56,7 +56,7 @@ ms.lasthandoff: 05/04/2018
   
      專案範本會自動加入繼承自 `Service1` 且名稱為 <xref:System.ServiceProcess.ServiceBase?displayProperty=nameWithType> 的元件類別。  
   
-3.  在 [編輯]  功能表上，依序選擇 [尋找和取代] 、[檔案中尋找]  \(鍵盤：CTRL+SHIFT+F)。 將所有 `Service1` 的出現變更為 `MyNewService`。 Service1.cs、Program.cs 和 Service1.Designer.cs (或它們的 .vb 對應項) 中可找到這些情況。  
+3.  在 [編輯]  功能表上，依序選擇 [尋找和取代] 、[檔案中尋找]  (鍵盤：CTRL+SHIFT+F)。 將所有 `Service1` 的出現變更為 `MyNewService`。 Service1.cs、Program.cs 和 Service1.Designer.cs (或它們的 .vb 對應項) 中可找到這些情況。  
   
 4.  在 **Service1.cs [Design]** 或 **Service1.vb [Design]** 的 [屬性] 視窗中，設定 <xref:System.ServiceProcess.ServiceBase.ServiceName%2A> 並將 **的** (Name) `Service1` 屬性變更為 **MyNewService**(若尚未進行此設定)。  
   
@@ -108,7 +108,7 @@ ms.lasthandoff: 05/04/2018
     AddHandler timer.Elapsed, AddressOf Me.OnTimer  
     timer.Start()  
     ```  
-     將成員變數加入至類別。 它會包含在事件記錄檔中寫入下一個事件的識別項。
+     將成員變數加入至類別。 針對下一個要寫入事件記錄檔的事件，它將包含事件的識別碼。
 
     ```csharp
     private int eventId = 1;
@@ -296,7 +296,7 @@ ms.lasthandoff: 05/04/2018
   
 8.  將 <xref:System.ServiceProcess.ServiceInstaller.StartType%2A> 屬性設定為 <xref:System.ServiceProcess.ServiceStartMode.Automatic>。  
   
-     ![Installer 屬性以供 Windows 服務](../../../docs/framework/windows-services/media/windowsservice-installerproperties.PNG "WindowsService_InstallerProperties")  
+     ![Windows 服務的安裝程式屬性](../../../docs/framework/windows-services/media/windowsservice-installerproperties.PNG "WindowsService_InstallerProperties")  
   
 9. 在設計工具中，選擇 **serviceProcessInstaller1** (針對 Visual C# 專案) 或 **ServiceProcessInstaller1** (針對 Visual Basic 專案)。 將 <xref:System.ServiceProcess.ServiceProcessInstaller.Account%2A> 屬性設定為 <xref:System.ServiceProcess.ServiceAccount.LocalSystem>。 如此會使服務安裝並在本機服務帳戶上執行。  
   
@@ -429,7 +429,7 @@ End Sub
   
      如果成功安裝服務，installutil.exe 就會報告安裝成功。 如果系統找不到 InstallUtil.exe，請確定它存在於您的電腦中。 此工具透過 .NET Framework 安裝至資料夾 `%WINDIR%\Microsoft.NET\Framework[64]\`*framework_version*。 例如，32 位元版本的 .NET Framework 4、4.5、4.5.1 和 4.5.2 的預設路徑是 `C:\Windows\Microsoft.NET\Framework\v4.0.30319\InstallUtil.exe`。  
   
-     如果 installutil.exe 程序回報失敗，請檢查安裝記錄檔以找出原因。 根據預設，記錄檔與服務可執行檔位於相同的資料夾。 如果安裝可能會失敗<xref:System.ComponentModel.RunInstallerAttribute>類別 」 不存在於`ProjectInstaller`類別，或是不要屬性未設定為`true`，或者`ProjectInstaller`類別不是`public`。  
+     如果 installutil.exe 程序回報失敗，請檢查安裝記錄檔以找出原因。 根據預設，記錄檔與服務可執行檔位於相同的資料夾。 若 `ProjectInstaller` 類別中沒有 <xref:System.ComponentModel.RunInstallerAttribute> 類別、或是未將屬性設為 `true`，或 `ProjectInstaller` 類別不是 `public`，則安裝可能會失敗。  
   
      如需詳細資訊，請參閱 [How to: Install and Uninstall Services](../../../docs/framework/windows-services/how-to-install-and-uninstall-services.md)。  
   
@@ -456,7 +456,7 @@ End Sub
   
 2.  找出 **MyNewLog** 的清單 (或 **MyLogFile1**，如果您使用選擇性程序加入命令列引數)，並加以展開。 您應該會看到服務已執行兩個動作 (啟動和停止) 的項目。  
   
-     ![使用事件檢視器查看事件記錄項目。] (../../../docs/framework/windows-services/media/windowsservices-eventviewer.PNG "WindowsServices_EventViewer")  
+     ![使用事件檢視器查看事件記錄檔項目。](../../../docs/framework/windows-services/media/windowsservices-eventviewer.PNG "WindowsServices_EventViewer")  
   
 <a name="BK_Uninstall"></a>   
 ## <a name="uninstalling-a-windows-service"></a>解除安裝 Windows 服務  
@@ -482,8 +482,8 @@ End Sub
   
  您可以使用安裝程式，在安裝應用程式時建立事件記錄檔，而不是在應用程式執行時才建立事件記錄檔。 此外在應用程式解除安裝時，安裝程式會刪除事件記錄檔。 如需詳細資訊，請參閱 <xref:System.Diagnostics.EventLogInstaller> 參考頁面。  
   
-## <a name="see-also"></a>另請參閱  
+## <a name="see-also"></a>請參閱  
  [Windows 服務應用程式](../../../docs/framework/windows-services/index.md)  
  [Windows 服務應用程式簡介](../../../docs/framework/windows-services/introduction-to-windows-service-applications.md)  
  [如何：偵錯 Windows 服務應用程式](../../../docs/framework/windows-services/how-to-debug-windows-service-applications.md)  
- [服務 (Windows)](http://msdn.microsoft.com/library/windows/desktop/ms685141.aspx)
+ [服務 (Windows)](http://msdn.microsoft.com/library/windows/desktop/ms685141.aspx) \(英文\)

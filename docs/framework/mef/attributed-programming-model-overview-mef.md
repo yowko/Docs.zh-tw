@@ -12,7 +12,7 @@ author: rpetrusha
 ms.author: ronpet
 ms.openlocfilehash: baa66f11404e2cee83b4d4b32ba02544c9438d7f
 ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
-ms.translationtype: MT
+ms.translationtype: HT
 ms.contentlocale: zh-TW
 ms.lasthandoff: 05/04/2018
 ---
@@ -955,6 +955,6 @@ public class PartSeven
   
  `IPartImportsSatisfiedNotification` 包含一個名為 `OnImportsSatisfied`的方法。 當組合完成且組件的匯入可開始使用時，組合容器會對任何實作介面的組件呼叫這個方法。 組合引擎會建立組件，以填入其他組件的匯入。 設定組件的匯入之前，您無法在組件建構函式中執行任何依賴或操作匯入值的初始設定，除非已使用 `ImportingConstructor` 屬性指定這些值做為必要條件。 這通常是比較好的方法，但在某些情況下，可能無法插入建構函式。 在這些情況下，您可以在 `OnImportsSatisfied`中執行初始設定，並且組件應該實作 `IPartImportsSatisfiedNotification`。  
   
-## <a name="see-also"></a>另請參閱  
- [Channel 9 影片： Managed 的 Extensibility Framework 的應用程式開啟](http://channel9.msdn.com/events/TechEd/NorthAmerica/2009/DTL328)  
- [Channel 9 影片： Managed 的 Extensibility Framework (MEF) 2.0](http://channel9.msdn.com/posts/NET-45-Oleg-Lvovitch-and-Kevin-Ransom-Managed-Extensibility-Framework-MEF-20)
+## <a name="see-also"></a>請參閱  
+ [Channel 9 影片：透過 Managed Extensibility Framework 擴充應用程式](http://channel9.msdn.com/events/TechEd/NorthAmerica/2009/DTL328) \(英文\)  
+ [Channel 9 影片：Managed Extensibility Framework (MEF) 2.0](http://channel9.msdn.com/posts/NET-45-Oleg-Lvovitch-and-Kevin-Ransom-Managed-Extensibility-Framework-MEF-20) \(英文\)

@@ -11,7 +11,7 @@ author: rpetrusha
 ms.author: ronpet
 ms.openlocfilehash: b92f36488dec113dcffffac3e6cdc0c26a690b5b
 ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
-ms.translationtype: MT
+ms.translationtype: HT
 ms.contentlocale: zh-TW
 ms.lasthandoff: 05/04/2018
 ---
@@ -42,8 +42,8 @@ ms.lasthandoff: 05/04/2018
   
  針對 `InprocServer32` 索引鍵，Mscoree.dll 的參考會取代傳統 COM 型別程式庫，以指出 Common Language Runtime 建立 Managed 物件。  
   
-## <a name="see-also"></a>另請參閱  
+## <a name="see-also"></a>請參閱  
  [將 .NET Framework 元件公開給 COM](exposing-dotnet-components-to-com.md)  
  [如何：參考 COM 的 .NET 類型](how-to-reference-net-types-from-com.md)  
- [呼叫.NET 物件](https://msdn.microsoft.com/library/40c9626c-aea6-4bad-b8f0-c1de462efd33(v=vs.100))  
+ [呼叫 .NET 物件](https://msdn.microsoft.com/library/40c9626c-aea6-4bad-b8f0-c1de462efd33(v=vs.100)) \(機器翻譯\)  
  [部署供 COM 存取的應用程式](https://msdn.microsoft.com/library/fb63564c-c1b9-4655-a094-a235625882ce(v=vs.100))

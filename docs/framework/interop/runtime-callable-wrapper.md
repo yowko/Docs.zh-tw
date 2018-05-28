@@ -12,7 +12,7 @@ author: rpetrusha
 ms.author: ronpet
 ms.openlocfilehash: 7366bfd6459a9387e8c57092ba85cac5f4da125b
 ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
-ms.translationtype: MT
+ms.translationtype: HT
 ms.contentlocale: zh-TW
 ms.lasthandoff: 05/04/2018
 ---
@@ -55,7 +55,7 @@ COM 介面與執行階段可呼叫包裝函式
 |**IDispatchEx**|如果類別實作 **IDispatchEx**，RCW 就會實作 **IExpando**。 **IDispatchEx** 介面是 **IDispatch** 介面的延伸，它不同於 **IDispatch**，可進行成員的列舉、新增、刪除和區分大小寫呼叫。|  
 |**IEnumVARIANT**|可讓支援列舉的 COM 類型被視為集合來處理。|  
   
-## <a name="see-also"></a>另請參閱  
+## <a name="see-also"></a>請參閱  
  [COM 包裝函式](com-wrappers.md)  
  [封送處理選取的介面](https://msdn.microsoft.com/library/fdb97fd0-f694-4832-bf15-a4e7cf413840(v=vs.100))  
  [COM 可呼叫包裝函式](com-callable-wrapper.md)  
