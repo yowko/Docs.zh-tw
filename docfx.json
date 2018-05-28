@@ -109,6 +109,9 @@
       },
     "externalReference": [],
     "globalMetadata": {
+      "feedback_system": "GitHub",
+      "feedback_github_repo": "dotnet/docs.zh-tw",
+      "feedback_product_url": "https://developercommunity.visualstudio.com/spaces/61/index.html" 
       "breadcrumb_path": "/dotnet/breadcrumb/toc.json",
       "_displayLangs": [
         "csharp"
@@ -122,6 +125,9 @@
       "apiPlatform": "dotnet"
     },
     "fileMetadata": {
+      "feedback_product_url": {
+        "docs/fsharp/**/**.md": "https://github.com/Microsoft/visualfsharp"
+      },
       "ms.prod": {
         "api/**.yml": ".net",
         "_csharplang/spec/*.md": ".net",
