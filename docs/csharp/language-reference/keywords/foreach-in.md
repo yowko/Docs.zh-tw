@@ -1,6 +1,6 @@
 ---
 title: foreach、in (C# 參考)
-ms.date: 10/11/2017
+ms.date: 05/24/2018
 f1_keywords:
 - foreach
 - foreach_CSharpKeyword
@@ -9,61 +9,44 @@ helpviewer_keywords:
 - foreach statement [C#]
 - in keyword [C#]
 ms.assetid: 5a9c5ddc-5fd3-457a-9bb6-9abffcd874ec
-ms.openlocfilehash: c0b1481988a2e3199fc6d06ca30cb5194ab2f44c
-ms.sourcegitcommit: 22c3c8f74eaa138dbbbb02eb7d720fce87fc30a9
+ms.openlocfilehash: b6b7dc0a4d3970ddfbbb6635ccebbbd5b75671e4
+ms.sourcegitcommit: 54231aa56fca059e9297888a96fbca1d4cf3746c
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/18/2018
+ms.lasthandoff: 05/25/2018
+ms.locfileid: "34549372"
 ---
 # <a name="foreach-in-c-reference"></a>foreach、in (C# 參考)
 
-`foreach` 陳述式會為陣列或物件集合中每個實作 <xref:System.Collections.IEnumerable?displayProperty=nameWithType> 或 <xref:System.Collections.Generic.IEnumerable%601?displayProperty=nameWithType> 介面的每個元素，重複一組內嵌陳述式。 [foreach 陳述式](/dotnet/csharp/language-reference/language-specification/statements#the-foreach-statement)可用來逐一查看集合，以取得所需的資訊，但不能用來新增或移除來源集合中的項目，以避免無法預期的副作用。 如果您必須新增或移除來源集合中的項目，請使用 [for](for.md) 迴圈。
-  
- 內嵌陳述式會針對陣列或集合中的每個元素繼續執行。 在完成集合中所有元素的反覆運算之後，控制權會轉移到 `foreach` 區塊之後的下一個陳述式。
-  
- 您可以在 `foreach` 區塊內的任何位置，使用 [break](break.md) 關鍵字跳出迴圈，或使用 [continue](continue.md) 關鍵字逐步執行到迴圈中的下一個反覆運算。
+`foreach` 陳述式會針對在型別實作 <xref:System.Collections.IEnumerable?displayProperty=nameWithType> 或 <xref:System.Collections.Generic.IEnumerable%601?displayProperty=nameWithType> 介面的執行個體中每個元素，執行其中的陳述式或陳述式區塊。 `foreach` 陳述式不限於那些型別，並且適用於滿足下列條件的任何型別執行個體：
 
- `foreach` 迴圈也可以透過 [goto](goto.md)、[return](return.md) 或 [throw](throw.md) 陳述式結束。
+- 具有公用無參數的 `GetEnumerator` 方法，其傳回型別為類別、結構或介面型別。
+- `GetEnumerator` 方法的傳回型別具有公用的 `Current` 屬性，且公用無參數的 `MoveNext` 方法的傳回型別為 <xref:System.Boolean>。
 
- 如需 `foreach` 關鍵字和程式碼範例的詳細資訊，請參閱下列主題：  
+您可以在 `foreach` 陳述式區塊內的任何位置，使用 [break](break.md) 關鍵字跳出迴圈，或使用 [continue](continue.md) 關鍵字逐步執行到迴圈中的下一個反覆運算。 您也可以使用 [goto](goto.md)、[return](return.md) 或 [throw](throw.md) 陳述式結束 `foreach` 迴圈。
 
- [搭配陣列使用 foreach](../../programming-guide/arrays/using-foreach-with-arrays.md)  
+## <a name="examples"></a>範例
 
- [如何：使用 foreach 存取集合類別](../../programming-guide/classes-and-structs/how-to-access-a-collection-class-with-foreach.md)  
+[!INCLUDE[interactive-note](~/includes/csharp-interactive-note.md)]
 
-## <a name="example"></a>範例
+下面範例針對實作 <xref:System.Collections.Generic.IEnumerable%601> 介面的 <xref:System.Collections.Generic.List%601> 型別執行個體，示範搭配 `foreach` 陳述式時的使用方式：
 
-下列程式碼顯示三個範例：
+[!code-csharp-interactive[list example](~/samples/snippets/csharp/keywords/IterationKeywordsExamples.cs#1)]
 
-> [!TIP]
-> 您可以修改範例，以試驗語法，並嘗試更類似於您的使用案例的不同使用方式。 請按 [執行] 以執行程式碼，然後編輯並再按一次 [執行]。
+下一個範例使用 `foreach` 陳述式搭配不實作任何介面的 <xref:System.Span%601?displayProperty=nameWithType> 型別執行個體：
 
--   顯示整數陣列內容的一般 `foreach` 迴圈
+[!code-csharp-interactive[span example](~/samples/snippets/csharp/keywords/IterationKeywordsExamples.cs#2)]
 
-[!code-csharp-interactive[csrefKeywordsIteration#4](./codesnippet/CSharp/foreach-in_1.cs#L12-L26)]
-
--   執行相同動作的 [for](../../../csharp/language-reference/keywords/for.md) 迴圈
-
-[!code-csharp-interactive[csrefKeywordsIteration#4](./codesnippet/CSharp/foreach-in_1.cs#L31-L46)]
-
--   維護陣列中元素數目計數的 `foreach` 迴圈
-
-[!code-csharp-interactive[csrefKeywordsIteration#4](./codesnippet/CSharp/foreach-in_1.cs#L51-L69)]
- 
 ## <a name="c-language-specification"></a>C# 語言規格
 
 [!INCLUDE[CSharplangspec](~/includes/csharplangspec-md.md)]
 
-## <a name="see-also"></a>請參閱  
+## <a name="see-also"></a>另請參閱
 
-[foreach 陳述式 (C# 語言規格)](/dotnet/csharp/language-reference/language-specification/statements#the-foreach-statement)
-
-[C# 參考](../index.md)
-
-[C# 程式設計指南](../../programming-guide/index.md)
-
-[C# 關鍵字](index.md)
-
-[反覆運算陳述式](iteration-statements.md)
-
-[for](for.md)
+[foreach 陳述式 (C# 語言規格)](/dotnet/csharp/language-reference/language-specification/statements#the-foreach-statement)  
+[搭配陣列使用 foreach](../../programming-guide/arrays/using-foreach-with-arrays.md)  
+[for](for.md)  
+[反覆運算陳述式](iteration-statements.md)  
+[C# 關鍵字](index.md)  
+[C# 參考](../index.md)  
+[C# 程式設計指南](../../programming-guide/index.md)  

@@ -9,6 +9,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: HT
 ms.contentlocale: zh-TW
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33592518"
 ---
 # <a name="working-with-data-in-aspnet-core-apps"></a>使用 ASP.NET Core 應用程式中的資料
 
@@ -436,4 +437,4 @@ _cache.Get<CancellationTokenSource>("cts").Cancel();
 ```
 
 >[!div class="step-by-step"]
-[上一頁] (develop-asp-net-core-mvc-apps.md) [上一頁] (test-asp-net-core-mvc-apps.md)
+[上一頁] (develop-asp-net-core-mvc-apps.md) [下一頁] (test-asp-net-core-mvc-apps.md)

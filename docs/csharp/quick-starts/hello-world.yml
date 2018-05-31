@@ -11,11 +11,12 @@ metadata:
   displayType: two-column
   interactive: csharp
   ms.custom: mvc
-  ms.openlocfilehash: e1fb89d06896a61560a8638415b992236a5461e6
-  ms.sourcegitcommit: 15109844229ade1c6449f48f3834db1b26907824
+  ms.openlocfilehash: 395ed81b5845047063d84469d91e3d03f17f12ae
+  ms.sourcegitcommit: 54231aa56fca059e9297888a96fbca1d4cf3746c
   ms.translationtype: HT
   ms.contentlocale: zh-TW
-  ms.lasthandoff: 05/07/2018
+  ms.lasthandoff: 05/25/2018
+  ms.locfileid: "34549668"
 items:
 - durationInMinutes: 1
   content: >
@@ -103,4 +104,4 @@ items:
 
     有關處理 `string` 型別，您可以在 [C# 程式設計手冊](../programming-guide/index.md)的[字串](../programming-guide/strings/index.md)主題中深入了解。
 
-    [字串的做法提示](../how-to/index.md#strings)。
+    [使用字串的做法提示](../how-to/index.md#working-with-strings)。

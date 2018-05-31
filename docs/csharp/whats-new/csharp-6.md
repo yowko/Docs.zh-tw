@@ -3,11 +3,12 @@ title: C# 6 的新功能 - C# 指南
 description: 了解 C# 第 6 版的新功能
 ms.date: 09/22/2016
 ms.assetid: 4d879f69-f889-4d3f-a781-75194e143400
-ms.openlocfilehash: d9f5c5ca94c04a873e4e98863f9fea3b8f477c1c
-ms.sourcegitcommit: 43924acbdbb3981d103e11049bbe460457d42073
+ms.openlocfilehash: c23d4f45441451fbf8a2ad2f939bdb1ed6144154
+ms.sourcegitcommit: b7763f3435635850a76d4cbcf09bdce6c019208a
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/23/2018
+ms.lasthandoff: 05/25/2018
+ms.locfileid: "34483485"
 ---
 # <a name="whats-new-in-c-6"></a>C# 6 的新功能
 
@@ -341,11 +342,11 @@ C# 5 對於您可以放置 `await` 運算式的位置有數個限制。
 
 ## <a name="index-initializers"></a>索引初始設定式
 
-「索引初始設定式」是讓集合初始設定式更一致的兩個功能之一。 在舊版的 C# 中，您使用「集合初始設定式」只能搭配序列樣式集合︰
+「索引初始設定式」是讓集合初始設定式與索引使用方式更一致的兩個功能之一。 在舊版的 C# 中，您可以只搭配序列樣式集合來使用「集合初始設定式」，包括在索引鍵值/組前後加上大括號的 <xref:System.Collections.Generic.Dictionary%602>：
 
 [!code-csharp[ListInitializer](../../../samples/snippets/csharp/new-in-6/initializers.cs#ListInitializer)]
 
-現在，您也可以使用它們來搭配 <xref:System.Collections.Generic.Dictionary%602> 集合與類似的類型︰
+現在，您可以使用它們來搭配 <xref:System.Collections.Generic.Dictionary%602> 集合與類似的型別。 新的語法支援使用集合中的索引進行指派：
 
 [!code-csharp[DictionaryInitializer](../../../samples/snippets/csharp/new-in-6/initializers.cs#DictionaryInitializer)]
 

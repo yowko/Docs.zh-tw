@@ -4,11 +4,12 @@ description: 支援的 Linux 版本和 .NET Core 的相依性，以在 Linux 電
 author: jralexander
 ms.author: johalex
 ms.date: 05/08/2018
-ms.openlocfilehash: 41656bf8f18c2b66c35f0a65e4af0949db4464f9
-ms.sourcegitcommit: 88f251b08bf0718ce119f3d7302f514b74895038
+ms.openlocfilehash: 4890f682ee2d0b55dc5059d8f1d3091def07a8a5
+ms.sourcegitcommit: b7763f3435635850a76d4cbcf09bdce6c019208a
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/10/2018
+ms.lasthandoff: 05/25/2018
+ms.locfileid: "34483498"
 ---
 # <a name="prerequisites-for-net-core-on-linux"></a>Linux 上 .NET Core 的必要條件
 
@@ -65,29 +66,36 @@ ms.lasthandoff: 05/10/2018
 
 Ubuntu 發行版本需要安裝下列程式庫：
 
-* libunwind8
 * liblttng-ust0
 * libcurl3
 * libssl1.0.0
-* libuuid1
 * libkrb5-3
 * zlib1g
 * libicu52 (適用於 14.x)
 * libicu55 (適用於 16.x)
 * libicu57 (適用於 17.x)
+* libicu60 (適用於 18.x)
+
+針對 .NET Core 2.1 之前的版本，還需要下列的相依性：
+
+* libunwind8
+* libuuid1
 
 ### <a name="centos"></a>CentOS
 
 CentOS 發行版本需要安裝下列程式庫：
 
-* libunwind
 * lttng-ust
 * libcurl
 * openssl-libs
-* libuuid
 * krb5-libs
 * libicu
 * zlib
+
+針對 .NET Core 2.1 之前的版本，還需要下列的相依性：
+
+* libunwind
+* libuuid
 
 如需有關相依性的詳細資訊，請參閱[獨立式 Linux 應用程式](https://github.com/dotnet/core/blob/master/Documentation/self-contained-linux-apps.md) \(英文\)。
 
