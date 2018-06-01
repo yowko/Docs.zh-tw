@@ -7,18 +7,19 @@ dev_langs:
 helpviewer_keywords:
 - certificates [WCF]
 ms.assetid: 6ffb8682-8f07-4a45-afbb-8d2487e9dbc3
-ms.openlocfilehash: f5566eacaabb5d3eb5579d015fad8149a2ed4f3c
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
-ms.translationtype: MT
+ms.openlocfilehash: 62bf3ce4bc7a0ff8109ec34fba77dd854c7679b8
+ms.sourcegitcommit: 3540f614fc94f77ca4ab58df66db2d0f4d52dfee
+ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/04/2018
+ms.lasthandoff: 06/01/2018
+ms.locfileid: "34697114"
 ---
 # <a name="working-with-certificates"></a>使用憑證
 若要程式設計 Windows Communication Foundation (WCF) 安全性 X.509 數位憑證通常可用來驗證用戶端與伺服器、 加密和數位簽章訊息。 本主題簡要說明 X.509 數位憑證功能及如何在 WCF 中，使用它們，並包含連結，說明這些概念的進一步示範如何完成使用 WCF 和憑證的一般工作。  
   
- 簡單地說，數位憑證是屬於*公開金鑰基礎結構*(PKI)，這是數位憑證、 憑證授權單位，與其他註冊授權單位，並驗證有效性的系統每個參與電子異動使用公開金鑰加密的合作對象。 憑證授權單位發出憑證，而每個憑證具有一組欄位，其中包含資料，例如*主旨*（發行憑證的實體），有效日期 （當憑證是有效的），(的簽發者實體發出憑證），與公開金鑰。 在 WCF 中，每一個屬性以處理<xref:System.IdentityModel.Claims.Claim>，而每個宣告進一步分成兩種類型： 身分識別和權限。 如需 X.509 憑證，請參閱[X.509 公用金鑰憑證](http://go.microsoft.com/fwlink/?LinkId=209952)如需有關宣告和授權中，請參閱 WCF[管理宣告和授權的方式識別模型](../../../../docs/framework/wcf/feature-details/managing-claims-and-authorization-with-the-identity-model.md). 如需實作 PKI 的詳細資訊，請參閱[Windows Server 2008 R2 憑證服務](http://go.microsoft.com/fwlink/?LinkId=209949)。  
+ 簡單地說，數位憑證是屬於*公開金鑰基礎結構*(PKI)，這是數位憑證、 憑證授權單位，與其他註冊授權單位，並驗證有效性的系統每個參與電子異動使用公開金鑰加密的合作對象。 憑證授權單位發出憑證，而每個憑證具有一組欄位，其中包含資料，例如*主旨*（發行憑證的實體），有效日期 （當憑證是有效的），(的簽發者實體發出憑證），與公開金鑰。 在 WCF 中，每一個屬性以處理<xref:System.IdentityModel.Claims.Claim>，而每個宣告進一步分成兩種類型： 身分識別和權限。 如需 X.509 憑證，請參閱[X.509 公用金鑰憑證](http://go.microsoft.com/fwlink/?LinkId=209952)。 如需宣告和 WCF 的授權詳細資訊，請參閱[管理宣告和授權的方式識別模型](../../../../docs/framework/wcf/feature-details/managing-claims-and-authorization-with-the-identity-model.md)。 如需實作 PKI 的詳細資訊，請參閱[Windows Server 2008 R2 憑證服務](http://go.microsoft.com/fwlink/?LinkId=209949)。  
   
- 憑證的主要功能就是向其他人驗證憑證擁有者的身分識別。 憑證包含*公開金鑰*的擁有者，而擁有者本身則保留私密金鑰。 公開金鑰可以用來加密傳送給憑證擁有者的訊息。 只有擁有者才能存取私密金鑰，因此只有擁有者可以解密這些訊息。  
+ 憑證的主要功能是驗證憑證給其他人的擁有者的身分識別。 憑證包含*公開金鑰*的擁有者，而擁有者本身則保留私密金鑰。 公開金鑰可以用來加密傳送給憑證擁有者的訊息。 只有擁有者才能存取私密金鑰，因此只有擁有者可以解密這些訊息。  
   
  憑證必須由憑證授權單位發行，此單位通常是憑證的協力廠商簽發者。 在 Windows 網域中，會包含憑證授權單位以便用來對網域中的電腦發行憑證。  
   

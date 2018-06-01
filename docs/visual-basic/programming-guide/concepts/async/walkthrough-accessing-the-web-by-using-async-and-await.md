@@ -2,11 +2,12 @@
 title: 逐步解說：使用 Async 和 Await 存取 Web (Visual Basic)
 ms.date: 07/20/2015
 ms.assetid: 84fd047f-fab8-4d89-8ced-104fb7310a91
-ms.openlocfilehash: 7154ea12f2660074e3ad8251b9baaa3eeb3d453c
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: 535b431fcf8ab5dafa134b8a3c1e2f7eacd6b427
+ms.sourcegitcommit: 3540f614fc94f77ca4ab58df66db2d0f4d52dfee
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/04/2018
+ms.lasthandoff: 06/01/2018
+ms.locfileid: "34696503"
 ---
 # <a name="walkthrough-accessing-the-web-by-using-async-and-await-visual-basic"></a>逐步解說：使用 Async 和 Await 存取 Web (Visual Basic)
 您可以使用 async/await 功能，以更容易且直觀的方式撰寫非同步程式。 您可以撰寫非同步程式碼，使其看起來像是同步程式碼，讓編譯器處理困難的回呼函式和非同步程式碼通常需要的接續。  
@@ -15,7 +16,7 @@ ms.lasthandoff: 05/04/2018
   
  本逐步解說從同步化 Windows Presentation Foundation (WPF) 應用程式開始，該應用程式會加總網站清單中的位元組數目。 然後逐步解說會藉由使用新功能，將應用程式轉換為非同步解決方案。  
   
- 如果您不想要自行建置應用程式，可以從[開發人員程式碼範例](http://go.microsoft.com/fwlink/?LinkId=255191)下載「非同步範例：存取 Web 逐步解說 (C# 和 Visual Basic)」。  
+ 如果您不想要自行建置應用程式，可以從[開發人員程式碼範例](https://code.msdn.microsoft.com/Async-Sample-Accessing-the-9c10497f)下載「非同步範例：存取 Web 逐步解說 (C# 和 Visual Basic)」。  
   
  在這個逐步解說中，您將完成下列工作：  
   
@@ -673,7 +674,7 @@ End Class
 ```  
   
 ## <a name="see-also"></a>另請參閱  
- [Async Sample: Accessing the Web Walkthrough (C# and Visual Basic)](http://go.microsoft.com/fwlink/?LinkId=255191) (非同步範例：存取 Web 逐步解說 (C# 和 Visual Basic))  
+ [Async Sample: Accessing the Web Walkthrough (C# and Visual Basic)](https://code.msdn.microsoft.com/Async-Sample-Accessing-the-9c10497f) (非同步範例：存取 Web 逐步解說 (C# 和 Visual Basic))  
  [Await 運算子](../../../../visual-basic/language-reference/operators/await-operator.md)  
  [Async](../../../../visual-basic/language-reference/modifiers/async.md)  
  [使用 Async 和 Await 進行非同步程式設計 (Visual Basic)](../../../../visual-basic/programming-guide/concepts/async/index.md)  

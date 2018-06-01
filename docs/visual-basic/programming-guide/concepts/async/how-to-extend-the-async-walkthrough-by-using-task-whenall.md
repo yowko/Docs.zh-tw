@@ -2,11 +2,12 @@
 title: 如何： 使用 Task.WhenAll (Visual Basic) 擴充非同步逐步解說
 ms.date: 07/20/2015
 ms.assetid: c06d386d-e996-4da9-bf3d-05a3b6c0a258
-ms.openlocfilehash: 918a02eadde367d870df4c51bccadf86c04eeb02
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: 12d195caa11cd33b4e450e5a57699da4037ed4a2
+ms.sourcegitcommit: 3540f614fc94f77ca4ab58df66db2d0f4d52dfee
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/04/2018
+ms.lasthandoff: 06/01/2018
+ms.locfileid: "34696347"
 ---
 # <a name="how-to-extend-the-async-walkthrough-by-using-taskwhenall-visual-basic"></a>如何： 使用 Task.WhenAll (Visual Basic) 擴充非同步逐步解說
 您可以改善效能中的非同步方案[逐步解說： 存取使用 Async 和 Await (Visual Basic) 的 Web](../../../../visual-basic/programming-guide/concepts/async/walkthrough-accessing-the-web-by-using-async-and-await.md)使用<xref:System.Threading.Tasks.Task.WhenAll%2A?displayProperty=nameWithType>方法。 此方法會以非同步方式等候多個非同步作業進行，這些作業是以工作集合來表示。  
@@ -16,7 +17,7 @@ ms.lasthandoff: 05/04/2018
  您可以將 `Task.WhenAll` 方法套用至工作集合。 套用 `WhenAll` 會傳回未完成的單一工作，直到集合中的所有工作都完成為止。 工作似乎會平行執行，但不會建立其他任何執行緒。 工作可以依任何順序完成。  
   
 > [!IMPORTANT]
->  下列程序描述擴充功能的非同步應用程式都是以開發[逐步解說： 存取使用 Async 和 Await (Visual Basic) 的 Web](../../../../visual-basic/programming-guide/concepts/async/walkthrough-accessing-the-web-by-using-async-and-await.md)。 您可以藉由完成此逐步解說，或從[開發人員程式碼範例](http://go.microsoft.com/fwlink/?LinkId=255191)下載程式碼，來開發應用程式。  
+>  下列程序描述擴充功能的非同步應用程式都是以開發[逐步解說： 存取使用 Async 和 Await (Visual Basic) 的 Web](../../../../visual-basic/programming-guide/concepts/async/walkthrough-accessing-the-web-by-using-async-and-await.md)。 您可以藉由完成此逐步解說，或從[開發人員程式碼範例](https://code.msdn.microsoft.com/Async-Sample-Accessing-the-9c10497f)下載程式碼，來開發應用程式。  
 >   
 >  若要執行範例，您必須在電腦上安裝 Visual Studio 2012 或更新版本。  
   
@@ -24,7 +25,7 @@ ms.lasthandoff: 05/04/2018
   
 1.  新增`ProcessURLAsync`開發中的第一個應用程式的方法[逐步解說： 存取使用 Async 和 Await (Visual Basic) 的 Web](../../../../visual-basic/programming-guide/concepts/async/walkthrough-accessing-the-web-by-using-async-and-await.md)。  
   
-    -   如果您已下載的程式碼[開發人員程式碼範例](http://go.microsoft.com/fwlink/?LinkId=255191)、 開啟 AsyncWalkthrough 專案，然後再將`ProcessURLAsync`MainWindow.xaml.vb 檔案。  
+    -   如果您已下載的程式碼[開發人員程式碼範例](https://code.msdn.microsoft.com/Async-Sample-Accessing-the-9c10497f)、 開啟 AsyncWalkthrough 專案，然後再將`ProcessURLAsync`MainWindow.xaml.vb 檔案。  
   
     -   如果您藉由完成此逐步解說來開發程式碼，請將 `ProcessURLAsync` 新增至包含 `GetURLContentsAsync` 方法的應用程式。 此應用程式的 MainWindow.xaml.vb 檔是 「 完整程式碼範例從逐步解說 > 一節中的第一個範例。  
   
@@ -97,7 +98,7 @@ ms.lasthandoff: 05/04/2018
   
 1.  加入下列版本`ProcessURLAsync`開發中的第二個應用程式[逐步解說： 存取使用 Async 和 Await (Visual Basic) 的 Web](../../../../visual-basic/programming-guide/concepts/async/walkthrough-accessing-the-web-by-using-async-and-await.md)。  
   
-    -   如果您已下載的程式碼[開發人員程式碼範例](http://go.microsoft.com/fwlink/?LinkId=255191)、 開啟位於 AsyncWalkthrough_HttpClient 專案，然後再將`ProcessURLAsync`MainWindow.xaml.vb 檔案。  
+    -   如果您已下載的程式碼[開發人員程式碼範例](https://code.msdn.microsoft.com/Async-Sample-Accessing-the-9c10497f)、 開啟位於 AsyncWalkthrough_HttpClient 專案，然後再將`ProcessURLAsync`MainWindow.xaml.vb 檔案。  
   
     -   如果您藉由完成此逐步解說來開發程式碼，請將 `ProcessURLAsync` 新增至使用 `HttpClient.GetByteArrayAsync` 方法的應用程式。 此應用程式的 MainWindow.xaml.vb 檔是 「 完整程式碼範例從逐步解說 > 一節中的第二個範例。  
   

@@ -2,11 +2,12 @@
 title: 運算式樹狀架構 (Visual Basic)
 ms.date: 07/20/2015
 ms.assetid: 8bbbb02d-7ffc-476b-8c25-118d82bf5d46
-ms.openlocfilehash: ac37dd63041ba0a0a8ee08651fe62334c3c30049
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: babee41f7df48f270d0c56cb2af91e463407d5c1
+ms.sourcegitcommit: 3540f614fc94f77ca4ab58df66db2d0f4d52dfee
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/04/2018
+ms.lasthandoff: 06/01/2018
+ms.locfileid: "34696938"
 ---
 # <a name="expression-trees-visual-basic"></a>運算式樹狀架構 (Visual Basic)
 運算式樹狀架構代表類似樹狀目錄之資料結構中的程式碼，其中，每個節點都是一個運算式，例如，方法呼叫或二進位運算 (如 `x < y`)。  
@@ -84,7 +85,7 @@ Console.WriteLine(factorial)
 ' Prints 120.  
 ```
 
-如需詳細資訊，請參閱[在 Visual Studio 2010 中使用運算式樹狀架構產生動態方法 (英文)](http://go.microsoft.com/fwlink/p/?LinkId=169513)，這也適用於更新版本的 Visual Studio。
+如需詳細資訊，請參閱[在 Visual Studio 2010 中使用運算式樹狀架構產生動態方法 (英文)](https://blogs.msdn.microsoft.com/csharpfaq/2009/09/14/generating-dynamic-methods-with-expression-trees-in-visual-studio-2010)，這也適用於更新版本的 Visual Studio。
   
 ## <a name="parsing-expression-trees"></a>剖析運算式樹狀架構  
  下列程式碼範例示範如何將代表 Lambda 運算式 `Function(num) num < 5` 的運算式樹狀架構分解成各部組件。  

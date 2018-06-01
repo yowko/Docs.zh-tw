@@ -2,11 +2,12 @@
 title: 處理非同步應用程式 (Visual Basic) 中的重新進入
 ms.date: 07/20/2015
 ms.assetid: ef3dc73d-13fb-4c5f-a686-6b84148bbffe
-ms.openlocfilehash: bf4794385019e91a25026b0d2b3c1839fc77869a
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: 4b899a695fef0e626eb9db3d376a74acba17b086
+ms.sourcegitcommit: 3540f614fc94f77ca4ab58df66db2d0f4d52dfee
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/04/2018
+ms.lasthandoff: 06/01/2018
+ms.locfileid: "34697153"
 ---
 # <a name="handling-reentrancy-in-async-apps-visual-basic"></a>處理非同步應用程式 (Visual Basic) 中的重新進入
 當您將非同步程式碼納入您的應用程式時，應該考慮並防止可能發生的重新進入，也就是在完成前重新進入的非同步作業。 如果您不找出並處理重新進入的可能性，它可能會導致非預期的結果。  
@@ -103,7 +104,7 @@ TOTAL bytes returned:  890591
 ###  <a name="BKMK_DisableTheStartButton"></a> 停用 [開始] 按鈕  
  您可以停用 `StartButton_Click` 事件處理常式頂端的按鈕，以便在執行作業時封鎖 [開始] 按鈕。 作業完成時，您可以在 `Finally` 區塊中重新啟用按鈕，讓使用者可再次執行應用程式。  
   
- 下列程式碼會顯示這些變更 (以星號標記)。 您可以新增本主題結尾程式碼的變更，或者從[非同步範例︰重新進入 .NET 桌面應用程式](http://go.microsoft.com/fwlink/?LinkId=266571)下載完成的應用程式。 專案名稱是 DisableStartButton。  
+ 下列程式碼會顯示這些變更 (以星號標記)。 您可以新增本主題結尾程式碼的變更，或者從[非同步範例︰重新進入 .NET 桌面應用程式](https://code.msdn.microsoft.com/Async-Sample-Preventing-a8489f06)下載完成的應用程式。 專案名稱是 DisableStartButton。  
   
 ```vb  
 Private Async Sub StartButton_Click(sender As Object, e As RoutedEventArgs)  
@@ -133,7 +134,7 @@ End Sub
   
  如需取消的詳細資訊，請參閱[微調非同步應用程式 (Visual Basic)](../../../../visual-basic/programming-guide/concepts/async/fine-tuning-your-async-application.md)。  
   
- 若要設定此案例，請對[檢閱及執行範例應用程式](http://msdn.microsoft.com/library/5b54de66-6be3-459e-b869-65070b020645)中提供的基本程式碼進行下列變更。 您也可以從[非同步範例︰重新進入 .NET 桌面應用程式](http://go.microsoft.com/fwlink/?LinkId=266571)下載完成的應用程式。 此專案的名稱是 CancelAndRestart。  
+ 若要設定此案例，請對[檢閱及執行範例應用程式](http://msdn.microsoft.com/library/5b54de66-6be3-459e-b869-65070b020645)中提供的基本程式碼進行下列變更。 您也可以從[非同步範例︰重新進入 .NET 桌面應用程式](https://code.msdn.microsoft.com/Async-Sample-Preventing-a8489f06)下載完成的應用程式。 此專案的名稱是 CancelAndRestart。  
   
 1.  宣告 <xref:System.Threading.CancellationTokenSource> 變數 `cts`，這是在所有方法的範圍內。  
   
@@ -534,7 +535,7 @@ End Function
   
 ###  <a name="BKMK_DownloadingTheApp"></a> 下載應用程式  
   
-1.  從[非同步範例︰重新進入 .NET 桌面應用程式](http://go.microsoft.com/fwlink/?LinkId=266571)下載壓縮檔案。  
+1.  從[非同步範例︰重新進入 .NET 桌面應用程式](https://code.msdn.microsoft.com/Async-Sample-Preventing-a8489f06)下載壓縮檔案。  
   
 2.  解壓縮您下載的檔案，然後啟動 Visual Studio。  
   
