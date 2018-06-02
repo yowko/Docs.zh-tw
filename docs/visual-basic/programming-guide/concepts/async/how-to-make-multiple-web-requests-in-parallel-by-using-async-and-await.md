@@ -2,11 +2,12 @@
 title: 如何： 同時發出多個 Web 要求使用 Async 和 Await (Visual Basic)
 ms.date: 07/20/2015
 ms.assetid: a894b99b-7cfd-4a38-adfb-20d24f986730
-ms.openlocfilehash: 1b98a0f29409fa49af1c9c8f7c91f2170981f7cc
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: 4d4ccda6657dd4d889e8495fa000715c1f7a5ba6
+ms.sourcegitcommit: bbf70abe6b46073148f78cbf0619de6092b5800c
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/04/2018
+ms.lasthandoff: 06/02/2018
+ms.locfileid: "34728439"
 ---
 # <a name="how-to-make-multiple-web-requests-in-parallel-by-using-async-and-await-visual-basic"></a>如何： 同時發出多個 Web 要求使用 Async 和 Await (Visual Basic)
 在非同步方法中，工作會在建立後啟動。 [Await](../../../../visual-basic/language-reference/operators/await-operator.md)運算子會套用至其中程序無法繼續直到完成工作的方法中的點工作。 通常，工作會在建立後等候完成，如下列範例所示。  
@@ -39,7 +40,7 @@ Dim result = Await myTask
   
  如需同時啟動多個工作的其他範例，請參閱[如何： 擴充非同步逐步解說使用 task.whenall (Visual Basic)](../../../../visual-basic/programming-guide/concepts/async/how-to-extend-the-async-walkthrough-by-using-task-whenall.md)。  
   
- 您可以從[開發人員程式碼範例](http://go.microsoft.com/fwlink/?LinkId=254906)下載此範例的程式碼。  
+ 您可以從[開發人員程式碼範例](https://code.msdn.microsoft.com/Async-Make-Multiple-Web-49adb82e)下載此範例的程式碼。  
   
 ### <a name="to-set-up-the-project"></a>若要設定專案  
   

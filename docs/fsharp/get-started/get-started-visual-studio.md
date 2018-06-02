@@ -2,11 +2,12 @@
 title: '開始使用 F # Visual Studio 中'
 description: '了解如何使用 F # 與 Visual Studio。'
 ms.date: 02/13/2017
-ms.openlocfilehash: d392e3a93d5b13206f654e35a266e9d9569942fc
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: 22fbe8086ec133605e1d9b4b28e524fe2ed8ac28
+ms.sourcegitcommit: bbf70abe6b46073148f78cbf0619de6092b5800c
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/04/2018
+ms.lasthandoff: 06/02/2018
+ms.locfileid: "34728530"
 ---
 # <a name="get-started-with-f-in-visual-studio"></a>開始使用 F # Visual Studio 中
 
@@ -71,58 +72,6 @@ val square: x:int -> int
 ```
 
 恭喜您！  您在 Visual Studio 中建立第一個 F # 專案、 撰寫 F # 函式列印呼叫此函式的結果並執行專案，以查看一些結果。
-
-## <a name="using-f-interactive"></a>使用 F # Interactive
-
-F # Interactive 視窗的最佳功能的 Visual F # 工具在 Visual Studio 中的其中一個。  它可讓您透過的程式碼傳送至處理序，您可以在此呼叫該程式碼，並以互動方式查看結果。
-
-若要開始使用它，反白顯示`square`程式碼中定義的函式。  接下來，保存**Alt**鍵並按下**Enter**。  這是 F # Interactive 視窗中執行程式碼。  您應該會看到 F # 互動式視窗會出現在它為下列：
-
-```
->
-
-val square : x:int -> int
-
->
-```
-
-這會顯示為相同的函式簽章`square`函式，當您暫留在進入函式之前看到。  因為`square`是定義在 F # 互動式處理序中，現在可以呼叫具有不同值：
-
-```
-> square 12;;
-val it : int = 144
->square 13;;
-val it : int = 169
-```
-
-這會執行函式，請將結果繫結至新的名稱`it`，並顯示類型和值`it`。  請注意，您必須終止與每一行`;;`。  這是如何 F # Interactive 知道函式呼叫完成時。  您也可以定義新的函式 F # Interactive 中：
-
-```
-> let isOdd x = x % 2 <> 0;;
-
-val isOdd : x:int -> bool
-
-> isOdd 12;;
-val it : bool = false
-```
-
-上述定義新的函式， `isOdd`，這個方法會接受`int`和檢查，以查看是否為奇數 ！ 您可以呼叫此函式，以查看它傳回以不同的輸入。  您可以呼叫函式呼叫中的函式：
-
-```
-> isOdd (square 15);;
-val it : bool = true
-```
-
-您也可以使用[管道正運算子](../language-reference/symbol-and-operator-reference/index.md)值導入兩個函式：
-
-```
-> 15 |> square |> isOdd;;
-val it : bool = true
-```
-
-管道正運算子和詳細資訊，之後的教學課程所述。
-
-這是一窺成您可以使用 F # Interactive 執行。 若要進一步了解，請參閱[使用 F # 互動式程式設計](../tutorials/fsharp-interactive/index.md)。
 
 ## <a name="next-steps"></a>後續步驟
 
