@@ -15,11 +15,12 @@ helpviewer_keywords:
 ms.assetid: fae2c15b-7adf-4b15-b118-58eb3906994f
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 9df41a404c091bb76490d762b55580c36cf33f62
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: b270559e9e73e18bebb29e36b815268d5426a940
+ms.sourcegitcommit: bbf70abe6b46073148f78cbf0619de6092b5800c
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/04/2018
+ms.lasthandoff: 06/04/2018
+ms.locfileid: "34728676"
 ---
 # <a name="regular-expression-example-scanning-for-hrefs"></a>規則運算式範例：掃描 HREF
 下列範例將搜尋輸入字串，並顯示所有 href="..." 值和它們在字串中的位置。  
@@ -43,9 +44,9 @@ ms.lasthandoff: 05/04/2018
 |`\s*`|比對零個以上的空白字元。|  
 |`=`|比對等號。|  
 |`\s*`|比對零個以上的空白字元。|  
-|<code>(?:\["'\](?<1>\[^"'\]*)"&#124;(?<1>\S+))</code>|比對下列其中一項，而不將結果指派給擷取的群組：<br /> <ul><li><p>引號 (或單引號)，後面加上零個或多個引號 (或單引號) 以外的任何字元，再加上引號 (或單引號)。 此模式中包含名為 `1` 的群組。</p></li><li><p>一個或多個非空白字元。 此模式中包含名為 `1` 的群組。</p></li></ul>|  
+|<code>(?:\["'\](?<1>\[^"'\]*)["']&#124;(?<1>\S+))</code>|比對下列其中一項，而不將結果指派給擷取的群組：<br /> <ul><li><p>引號 (或單引號)，後面加上零個或多個引號 (或單引號) 以外的任何字元，再加上引號 (或單引號)。 此模式中包含名為 `1` 的群組。</p></li><li><p>一個或多個非空白字元。 此模式中包含名為 `1` 的群組。</p></li></ul>|  
 |`(?<1>[^"']*)`|將零個或多個引號 (或單引號) 以外的任何字元指派給名為 `1` 的擷取端群組。|  
-|`"(?<1>\S+)`|將一或多個非空白字元指派給名為 `1` 的擷取群組。|  
+|`(?<1>\S+)`|將一或多個非空白字元指派給名為 `1` 的擷取群組。|  
   
 ## <a name="match-result-class"></a>比對結果類別  
  搜尋的結果會儲存在 <xref:System.Text.RegularExpressions.Match> 類別中，可讓您存取搜尋擷取的所有子字串。 它也會記住要搜尋的字串與所用的規則運算式，使其能呼叫 <xref:System.Text.RegularExpressions.Match.NextMatch%2A?displayProperty=nameWithType> 方法，從最後一個搜尋結束的位置開始執行其他搜尋。  
