@@ -1,4 +1,4 @@
-﻿---
+---
 title: '&amp;&amp; 運算子 (C# 參考)'
 ms.date: 07/20/2015
 f1_keywords:
@@ -12,9 +12,10 @@ ms.sourcegitcommit: 89c93d05c2281b4c834f48f6c8df1047e1410980
 ms.translationtype: HT
 ms.contentlocale: zh-TW
 ms.lasthandoff: 05/15/2018
+ms.locfileid: "34171911"
 ---
 # <a name="ampamp-operator-c-reference"></a>&amp;&amp; 運算子 (C# 參考)
-條件式 AND 運算子 (`&&`) 會執行其 `bool` 運算元的邏輯 AND，但只有在必要時才會評估其第二個運算元。  
+條件式 AND 運算子 (`&&`) 會執行其 `bool` 運算元的邏輯 AND，但只有在必要時才會評估其第二個運算元。  
   
 ## <a name="remarks"></a>備註  
  作業  
