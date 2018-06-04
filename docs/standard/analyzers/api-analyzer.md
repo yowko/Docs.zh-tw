@@ -3,13 +3,14 @@ title: .NET API 分析器
 description: 了解「.NET API 分析器」如何協助偵測已被取代的 API 及平台相容性問題。
 author: oliag
 ms.author: mairaw
-ms.date: 01/30/2018
+ms.date: 05/31/2018
 ms.technology: dotnet-standard
-ms.openlocfilehash: ac0e777e1df837ff7e9fbe185c462f56765e47bf
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: 4394bc77b499db1960d61bad5e828f77f1144c65
+ms.sourcegitcommit: bbf70abe6b46073148f78cbf0619de6092b5800c
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/04/2018
+ms.lasthandoff: 06/04/2018
+ms.locfileid: "34696880"
 ---
 # <a name="net-api-analyzer"></a>.NET API 分析器
 
@@ -70,11 +71,11 @@ ms.lasthandoff: 05/04/2018
 
 ## <a name="discovering-cross-platform-issues"></a>探索跨平台問題
 
-與已被取代的 API 類似，分析器會識別所有不是跨平台的 API。 例如，<xref:System.Console.WindowWidth?displayProperty=nameWithType>可在 Windows 上運作，但無法在 Linux 和 macOS 上運作。 診斷識別碼會顯示在 [錯誤清單] 視窗中。 您可以按一下滑鼠右鍵並選取 [快速動作與重構] 來隱藏該警示。 與有兩個選項 (繼續使用已被取代的成員並隱藏警告，或完全不使用它) 的取代案例不同，在這裡，如果您僅針對特定平台來開發程式碼，就可以隱藏您不打算用來執行程式碼之所有其他平台的所有警告。 若要這樣做，您只需編輯專案檔，然後新增 `PlatformCompatIgnore` 屬性來列出所有要忽略的平台即可。 接受的值包括：`Linux`、`MacOSX` 及 `Windows`。
+與已被取代的 API 類似，分析器會識別所有不是跨平台的 API。 例如，<xref:System.Console.WindowWidth?displayProperty=nameWithType>可在 Windows 上運作，但無法在 Linux 和 macOS 上運作。 診斷識別碼會顯示在 [錯誤清單] 視窗中。 您可以按一下滑鼠右鍵並選取 [快速動作與重構] 來隱藏該警示。 與有兩個選項 (繼續使用已被取代的成員並隱藏警告，或完全不使用它) 的取代案例不同，在這裡，如果您僅針對特定平台來開發程式碼，就可以隱藏您不打算用來執行程式碼之所有其他平台的所有警告。 若要這樣做，您只需編輯專案檔，然後新增 `PlatformCompatIgnore` 屬性來列出所有要忽略的平台即可。 接受的值包括：`Linux`、`macOS` 及 `Windows`。
 
 ```xml
 <PropertyGroup>
-    <PlatformCompatIgnore>Linux;MacOS</PlatformCompatIgnore>
+    <PlatformCompatIgnore>Linux;macOS</PlatformCompatIgnore>
 </PropertyGroup>
 ```
 

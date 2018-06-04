@@ -3,11 +3,12 @@ title: 分支和迴圈教學課程 - C# 本機快速入門
 description: 在這個關於分支和迴圈的快速入門中，您將會撰寫 C# 程式碼以探索支援條件式分支和迴圈的語言語法，以重複執行陳述式。
 ms.date: 10/31/2017
 ms.custom: mvc
-ms.openlocfilehash: a25ea7f266405a017f6f4576659195b2ac1afbf4
-ms.sourcegitcommit: 43924acbdbb3981d103e11049bbe460457d42073
+ms.openlocfilehash: 4324e8b4704682f128e3122661fb6a0eddfe158b
+ms.sourcegitcommit: bbf70abe6b46073148f78cbf0619de6092b5800c
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/23/2018
+ms.lasthandoff: 06/04/2018
+ms.locfileid: "34566133"
 ---
 # <a name="branches-and-loops"></a>分支和迴圈
 
@@ -28,7 +29,7 @@ if (a + b > 10)
     Console.WriteLine("The answer is greater than 10.");
 ```
 
-在主控台視窗中輸入 `dotnet run` 來嘗試此程式碼。 您應該會看見訊息 "The answer is greater than 10" 顯示於主控台中。
+在主控台視窗中鍵入 `dotnet run` 來嘗試此程式碼。 您應該會看見訊息 "The answer is greater than 10" 顯示於主控台中。
 
 修改 `b` 的宣告，讓總和小於 10： 
 

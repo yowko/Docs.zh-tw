@@ -4,17 +4,18 @@ description: 了解 Windows 相容性套件，以及如何使用它將現有的 
 author: terrajobst
 ms.author: mairaw
 ms.date: 11/13/2017
-ms.openlocfilehash: 6b25a2d5c197a6c9b0a7ead18370870ddc091e1c
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: 51b96d7828285964c1b0cbb835b8eb5ed92c47d6
+ms.sourcegitcommit: bbf70abe6b46073148f78cbf0619de6092b5800c
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/04/2018
+ms.lasthandoff: 06/04/2018
+ms.locfileid: "34566169"
 ---
 # <a name="using-the-windows-compatibility-pack"></a>使用 Windows 相容性套件
 
 開發人員將其現有的程式碼移植到 .NET Core 時最常面對的問題之一，是他依賴的 API 和技術只存在於 .NET Framework 中。 「Windows 相容性套件」即將提供許多這些技術，以便使用現有程式碼來建置 .NET Core 應用程式以及 .NET Standard 程式庫更為可行。
 
-此套件是邏輯的 [.NET Standard 2.0 延伸模組](../whats-new/index.md#api-changes-and-library-support)，可大幅增加 API 集和現有的程式碼編譯，幾乎不需要修改。 但為信守 .NET Standard 的承諾 (「它是所有 .NET 實作提供的 API 集」)，這不包括無法跨所有平台的技術，例如登錄、Windows Management Instrumentation (WMI) 或反映發出 API。
+此套件是邏輯的 [.NET Standard 2.0 延伸模組](../whats-new/dotnet-core-2-0.md#api-changes-and-library-support)，可大幅增加 API 集和現有的程式碼編譯，幾乎不需要修改。 但為信守 .NET Standard 的承諾 (「它是所有 .NET 實作提供的 API 集」)，這不包括無法跨所有平台的技術，例如登錄、Windows Management Instrumentation (WMI) 或反映發出 API。
 
 「Windows 相容性套件」位階高於 .NET Standard，並提供存取僅限 Windows 的技術。 它特別適合想要移至 .NET Core，但第一個步驟計劃停留在 Windows 的客戶。 在這種情況下，無法使用僅限 Windows 技術只是無架構優勢的移轉障礙。
 

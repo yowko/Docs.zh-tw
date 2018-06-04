@@ -3,12 +3,13 @@ title: dotnet add package 命令 - .NET Core CLI
 description: "'dotnet add package' 命令提供方便的選項，將 NuGet 套件參考新增至專案。"
 author: mairaw
 ms.author: mairaw
-ms.date: 08/11/2017
-ms.openlocfilehash: fd3704bbb941835421d78e19f196fa52b3767c34
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.date: 05/25/2018
+ms.openlocfilehash: 31dda9dbb101238b3a33d8b0d9a17765744480e0
+ms.sourcegitcommit: bbf70abe6b46073148f78cbf0619de6092b5800c
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/04/2018
+ms.lasthandoff: 06/04/2018
+ms.locfileid: "34696295"
 ---
 # <a name="dotnet-add-package"></a>dotnet add package
 
@@ -20,7 +21,7 @@ ms.lasthandoff: 05/04/2018
 
 ## <a name="synopsis"></a>概要
 
-`dotnet add [<PROJECT>] package <PACKAGE_NAME> [-h|--help] [-v|--version] [-f|--framework] [-n|--no-restore] [-s|--source] [--package-directory]`
+`dotnet add [<PROJECT>] package <PACKAGE_NAME> [-h|--help] [-f|--framework] [-n|--no-restore] [--package-directory] [-s|--source] [-v|--version]`
 
 ## <a name="description"></a>描述
 
@@ -30,7 +31,7 @@ ms.lasthandoff: 05/04/2018
 
 例如，將 `Newtonsoft.Json` 新增至 *ToDo.csproj* 會產生類似下例的輸出：
 
-```
+```console
   Writing C:\Users\mairaw\AppData\Local\Temp\tmp95A8.tmp
 info : Adding PackageReference for package 'Newtonsoft.Json' into project 'C:\projects\ToDo\ToDo.csproj'.
 log  : Restoring packages for C:\projects\ToDo\ToDo.csproj...
@@ -62,10 +63,6 @@ info : PackageReference for package 'Newtonsoft.Json' version '10.0.3' added to 
 
 印出命令的簡短說明。
 
-`-v|--version <VERSION>`
-
-套件的版本。
-
 `-f|--framework <FRAMEWORK>`
 
 只有在以特定[架構](../../standard/frameworks.md)為目標時，才能新增套件參考。
@@ -74,13 +71,17 @@ info : PackageReference for package 'Newtonsoft.Json' version '10.0.3' added to 
 
 新增套件參考，而不執行還原預覽和相容性檢查。
 
+`--package-directory <PACKAGE_DIRECTORY>`
+
+將套件還原至指定的目錄。
+
 `-s|--source <SOURCE>`
 
 在還原作業期間，使用特定 NuGet 套件來源。
 
-`--package-directory <PACKAGE_DIRECTORY>`
+`-v|--version <VERSION>`
 
-將套件還原至指定的目錄。
+套件的版本。
 
 ## <a name="examples"></a>範例
 

@@ -3,14 +3,15 @@ title: 目標 Framework
 description: 了解 .NET Core 應用程式和程式庫的目標 Framework。
 author: richlander
 ms.author: mairaw
-ms.date: 04/16/2018
+ms.date: 05/31/2018
 ms.custom: updateeachrelease
 ms.technology: dotnet-standard
-ms.openlocfilehash: fa8049c9e33f0f6b2f16fd8572d6500ba1860c2e
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: 346eece8fdb391fd62b369db6ef65964fcd6e67a
+ms.sourcegitcommit: bbf70abe6b46073148f78cbf0619de6092b5800c
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/04/2018
+ms.lasthandoff: 06/04/2018
+ms.locfileid: "34728312"
 ---
 # <a name="target-frameworks"></a>目標 Framework
 
@@ -31,7 +32,7 @@ ms.lasthandoff: 05/04/2018
 | 目標 Framework      | Latest <br/> 穩定版本 | Target Framework Moniker (TFM) | 已實作 <br/> .NET Standard 版本 |
 | :-------------------: | :-------------------------: | :----------------------------: | :-------------------------------------: |
 | .NET Standard         | 2.0                         | netstandard2.0                 | N/A                                     |
-| .NET Core 應用程式 | 2.0                         | netcoreapp2.0                  | 2.0                                     |
+| .NET Core             | 2.1                         | netcoreapp2.1                  | 2.0                                     |
 | .NET Framework        | 4.7.2                       | net472                         | 2.0                                     |
 
 ## <a name="supported-target-framework-versions"></a>支援的目標 Framework 版本
