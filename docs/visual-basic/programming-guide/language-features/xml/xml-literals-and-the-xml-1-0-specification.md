@@ -4,14 +4,15 @@ ms.date: 07/20/2015
 helpviewer_keywords:
 - XML literals [Visual Basic], XML 1.0 specification
 ms.assetid: 46f046e5-293c-41a3-b893-4e5f6e32e78a
-ms.openlocfilehash: 12a25d727aae09bc523f47e25b280c5c3ebb47d6
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: b871a7edd8285c26148cf1393c53f537dfd40c56
+ms.sourcegitcommit: d8bf4976eafe3289275be3811e7cb721bfff7e1e
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/04/2018
+ms.lasthandoff: 06/04/2018
+ms.locfileid: "34753266"
 ---
 # <a name="xml-literals-and-the-xml-10-specification-visual-basic"></a>XML 常值和 XML 1.0 規格 (Visual Basic)
-在 Visual Basic XML 常值的語法支援大部分的可延伸標記語言 (XML) 1.0 規格。 如需有關 XML 1.0 規格的詳細資訊，請參閱[可延伸標記語言 (XML) 1.0](http://go.microsoft.com/fwlink/?LinkId=73927) W3C 網站上。  
+在 Visual Basic XML 常值的語法支援大部分的可延伸標記語言 (XML) 1.0 規格。 如需有關 XML 1.0 規格的詳細資訊，請參閱[可延伸標記語言 (XML) 1.0](https://www.w3.org/TR/xml) W3C 網站上。  
   
 ## <a name="what-visual-basic-does-not-support"></a>Visual Basic 不支援是什麼  
   

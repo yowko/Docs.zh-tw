@@ -6,7 +6,7 @@ ms.openlocfilehash: 4d4ccda6657dd4d889e8495fa000715c1f7a5ba6
 ms.sourcegitcommit: bbf70abe6b46073148f78cbf0619de6092b5800c
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/02/2018
+ms.lasthandoff: 06/04/2018
 ms.locfileid: "34728439"
 ---
 # <a name="how-to-make-multiple-web-requests-in-parallel-by-using-async-and-await-visual-basic"></a>如何： 同時發出多個 Web 要求使用 Async 和 Await (Visual Basic)
