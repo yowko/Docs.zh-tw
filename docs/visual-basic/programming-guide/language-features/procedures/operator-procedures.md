@@ -11,11 +11,12 @@ helpviewer_keywords:
 - operator overloading
 - operator procedures
 ms.assetid: 8c513d38-246b-4fb7-8b75-29e1364e555b
-ms.openlocfilehash: 63a16163900f1b4dc7dadef6a227f56b89f4e820
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: 5b4641ce8509e3111a11ed803d36194d5a301bce
+ms.sourcegitcommit: fc70fcb9c789b6a4aefcdace46f3643fd076450f
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/04/2018
+ms.lasthandoff: 06/06/2018
+ms.locfileid: "34805707"
 ---
 # <a name="operator-procedures-visual-basic"></a>運算子程序 (Visual Basic)
 運算子程序是一系列的 Visual Basic 陳述式，定義標準的運算子的行為 (例如`*`， `<>`，或`And`) 上的類別或您已定義的結構。 這也稱為*運算子多載*。  
@@ -43,7 +44,7 @@ ms.lasthandoff: 05/04/2018
 ## <a name="declaration-syntax"></a>宣告語法  
  宣告運算子程序的語法如下所示：  
   
- `Public Shared`   `[Widening | Narrowing]`   `Operator`  *運算子符號*`(` *operand1*`[,`*operand2* `]) As`*資料類型*   
+ `Public Shared`   `[Widening | Narrowing]`   `Operator`  *運算子符號*`(` *operand1*`[,`*operand2* `]) As`*資料類型*  
   
  `' Statements of the operator procedure.`  
   
@@ -67,7 +68,7 @@ ms.lasthandoff: 05/04/2018
   
  `Dim testStruct As`  *結構名稱*  
   
- `Dim testNewStruct As`  *結構名稱*`= testStruct`*運算子符號*   `10`  
+ `Dim testNewStruct As`  *結構名稱*`= testStruct`*運算子符號*  `10`  
   
 ### <a name="illustration-of-declaration-and-call"></a>宣告和呼叫的圖例  
  下列結構的構成的高序位和低序位組件以儲存 128 位元帶正負號的整數值。 它會定義`+`運算子，將兩個`veryLong`值，並產生產生`veryLong`值。  
@@ -78,7 +79,7 @@ ms.lasthandoff: 05/04/2018
   
  [!code-vb[VbVbcnProcedures#24](./codesnippet/VisualBasic/operator-procedures_2.vb)]  
   
- 如需詳細資訊和範例，請參閱 [Operator Overloading in Visual Basic 2005](http://go.microsoft.com/fwlink/?LinkId=101703) (Visual Basic 2005 中的運算子多載)。  
+ 如需詳細資訊和範例，請參閱 [Operator Overloading in Visual Basic 2005](https://msdn.microsoft.com/library/ms379613(v=vs.80).aspx) (Visual Basic 2005 中的運算子多載)。  
   
 ## <a name="see-also"></a>另請參閱  
  [程序](./index.md)  

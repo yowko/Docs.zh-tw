@@ -12,11 +12,12 @@ helpviewer_keywords:
 - deferred execution
 - iteration variables [Visual Basic]
 ms.assetid: 3047d86e-0d49-40e2-928b-dc02e46c7984
-ms.openlocfilehash: ae59cb4d6b812ba956ce55723e034f381db14aa1
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: 7e6d299bafff2a5a34a8f0942ba6dc9c25fcdd83
+ms.sourcegitcommit: fc70fcb9c789b6a4aefcdace46f3643fd076450f
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/04/2018
+ms.lasthandoff: 06/06/2018
+ms.locfileid: "34805733"
 ---
 # <a name="introduction-to-linq-in-visual-basic"></a>Visual Basic 中的 LINQ 簡介
 Language Integrated Query (LINQ) 將查詢功能加入至 Visual Basic，並提供簡單且功能強大的功能，當您使用所有類型的資料。 而不是將查詢傳送至資料庫加以處理，或您要搜尋的資料每一種不同的查詢語法，使用 LINQ 導入了查詢做為 Visual Basic 語言的一部分。 它使用統一的語法，不論資料類型為何。  
@@ -189,7 +190,7 @@ Language Integrated Query (LINQ) 將查詢功能加入至 Visual Basic，並提�
  [如何： 指派預存程序來執行更新、 插入和刪除 （O/R 設計工具）](http://msdn.microsoft.com/library/e88224ab-ff61-4a3a-b6b8-6f3694546cac)  
   
 ## <a name="featured-book-chapters"></a>精選書籍章節  
- [第 17 章： LINQ](http://go.microsoft.com/fwlink/?LinkId=195277)中[Visual Basic 2008 程式設計](http://go.microsoft.com/fwlink/?LinkId=195383)  
+ [第 17 章： LINQ](https://docs.microsoft.com/previous-versions/visualstudio/visual-studio-2008/ff652502(v=orm.10))中[Visual Basic 2008 程式設計](https://docs.microsoft.com/previous-versions/visualstudio/visual-studio-2008/ff652504(v=orm.10))  
   
 ## <a name="see-also"></a>另請參閱  
  [LINQ (Language-Integrated Query)](http://msdn.microsoft.com/library/a73c4aec-5d15-4e98-b962-1274021ea93d)  

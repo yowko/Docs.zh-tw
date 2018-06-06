@@ -7,11 +7,12 @@ helpviewer_keywords:
 - Await operator [Visual Basic]
 - Await [Visual Basic]
 ms.assetid: 6b1ce283-e92b-4ba7-b081-7be7b3d37af9
-ms.openlocfilehash: b24b637969ced9b30644abda022db086dc91c1e3
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: 8e1462c7e0097bb2f04c6833a1bb279611b24133
+ms.sourcegitcommit: fc70fcb9c789b6a4aefcdace46f3643fd076450f
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/04/2018
+ms.lasthandoff: 06/06/2018
+ms.locfileid: "34805506"
 ---
 # <a name="await-operator-visual-basic"></a>Await 運算子 (Visual Basic)
 您在非同步方法或 Lambda 運算式的運算元中套用 `Await` 運算子，讓方法暫停執行，直到等候的工作完成。 工作代表進行中的工作。  
@@ -42,7 +43,7 @@ End Function
 ```  
   
 > [!IMPORTANT]
->  如需完整範例，請參閱[逐步解說：使用 async 和 await 存取 Web](../../../visual-basic/programming-guide/concepts/async/walkthrough-accessing-the-web-by-using-async-and-await.md)。 您可以從 Microsoft 網站的[開發人員程式碼範例](http://go.microsoft.com/fwlink/?LinkID=255191&clcid=0x409) 下載此範例。 此範例位於 AsyncWalkthrough_HttpClient 專案中。  
+>  如需完整範例，請參閱[逐步解說：使用 async 和 await 存取 Web](../../../visual-basic/programming-guide/concepts/async/walkthrough-accessing-the-web-by-using-async-and-await.md)。 您可以從 Microsoft 網站的[開發人員程式碼範例](https://code.msdn.microsoft.com/Async-Sample-Accessing-the-9c10497f) 下載此範例。 此範例位於 AsyncWalkthrough_HttpClient 專案中。  
   
  如果將 `Await` 套用至傳回 `Task(Of TResult)` 之方法呼叫的結果，則 `Await` 運算式的類型為 TResult。 如果 `Await` 套用至傳回 `Task` 之方法呼叫的結果，則 `Await` 運算式不會傳回值。 下列範例會說明其間的差異。  
   
