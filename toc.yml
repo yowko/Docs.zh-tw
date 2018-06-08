@@ -216,7 +216,7 @@
               topicHref: /dotnet/framework/performance/index
             - name: 在 .NET Framework 中進行動態程式設計
               tocHref: /dotnet/framework/reflection-and-codedom/
-              topicHref: /dotnet/framework/framework/reflection-and-codedom/index
+              topicHref: /dotnet/framework/reflection-and-codedom/index
             - name: 桌面應用程式中的資源
               tocHref: /dotnet/framework/resources/
               topicHref: /dotnet/framework/resources/index
