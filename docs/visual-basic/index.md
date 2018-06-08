@@ -6,11 +6,12 @@ helpviewer_keywords:
 - Visual Basic
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: ce1c9aa868636181a8dd4e59e61d3ed82c89c217
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: 03c9c118104f6fe3196d0a4bb13d28a6a122d859
+ms.sourcegitcommit: fc70fcb9c789b6a4aefcdace46f3643fd076450f
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/04/2018
+ms.lasthandoff: 06/06/2018
+ms.locfileid: "34805538"
 ---
 # <a name="visual-basic-guide"></a>Visual Basic 指南
 
@@ -51,5 +52,5 @@ Visual Basic 設計用來有效率地建置型別安全且以物件為導向的�
  [Visual Studio 使用者開發入門](/visualstudio/ide/get-started-developing-with-visual-studio)  
  提供主題連結，協助您了解 Visual Studio 的基本概念。  
   
- [.NET Framework 類別庫](http://go.microsoft.com/fwlink/?LinkID=227195)  
+ [.NET API 瀏覽器](../../api/index.md)  
  讓您使用程式庫，內含 Microsoft [!INCLUDE[dnprdnshort](~/includes/dnprdnshort-md.md)] SDK 中的類別、介面和實值類型。
