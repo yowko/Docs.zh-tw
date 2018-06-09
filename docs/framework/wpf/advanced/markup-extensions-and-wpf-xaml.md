@@ -15,11 +15,12 @@ helpviewer_keywords:
 - characters [WPF], curly brace
 - DynamicResource markup extensions [WPF]
 ms.assetid: 618dc745-8b14-4886-833f-486d2254bb78
-ms.openlocfilehash: e2fb1e64f957b49743d8dfb19091bca50303e2d2
-ms.sourcegitcommit: 43924acbdbb3981d103e11049bbe460457d42073
+ms.openlocfilehash: 907d5dcaae8f6e09902c2b3548d5ba8ac9a2b077
+ms.sourcegitcommit: 6c480773ae896f45af4671fb3e26611a50e4dd81
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/23/2018
+ms.lasthandoff: 06/09/2018
+ms.locfileid: "35251164"
 ---
 # <a name="markup-extensions-and-wpf-xaml"></a>標記延伸和 WPF XAML
 本主題介紹 XAML 標記延伸模組概念，包括其語法規則、用途，以及其根據的類別物件模型。 標記延伸模組是 XAML 語言的一般功能，以及 XAML 服務之 .NET 實作的一般功能。 本主題會具體詳述 WPF XAML 中所使用的標記延伸模組。  
@@ -88,7 +89,7 @@ ms.lasthandoff: 05/23/2018
 -   如果個別分隔的語彙基元未包含任何等號，則會將每個語彙基元視為建構函式引數。 每個建構函式參數都必須指定為該簽章所預期的類型，並且為該簽章所預期的適當順序。  
   
     > [!NOTE]
-    >  XAML 處理器必須呼叫建構函式，以與配對數目的引數計數相符。 因此，如果您要實作自訂標記延伸模組，請不要提供多個具有相同引數計數的參數。 有多個具有相同參數計數的標記延伸模組建構函式路徑時，未定義 XAML 處理器運作方式的行為，但您應該預期在標記延伸模組類型定義發生此情況時，允許 XAML 處理器擲回用法例外狀況。  
+    >  XAML 處理器必須呼叫建構函式，以與配對數目的引數計數相符。 基於這個理由，如果您實作自訂標記延伸時，不會提供多個建構函式具有相同的引數計數。 有多個具有相同參數計數的標記延伸模組建構函式路徑時，未定義 XAML 處理器運作方式的行為，但您應該預期在標記延伸模組類型定義發生此情況時，允許 XAML 處理器擲回用法例外狀況。  
   
 -   如果個別的分隔語彙基元包含等號，則 XAML 處理器會先呼叫標記延伸模組的預設建構函式。 則每個「名稱=值」配對都會解譯為標記延伸模組上的屬性名稱，以及要指派給該屬性的值。  
   

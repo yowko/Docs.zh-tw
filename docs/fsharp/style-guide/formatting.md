@@ -2,11 +2,12 @@
 title: 'F # 程式碼格式化方針'
 description: '了解 F # 程式碼格式化方針。'
 ms.date: 05/14/2018
-ms.openlocfilehash: 1433b6891a6a0ddcdc082c141365ae54fa40c27b
-ms.sourcegitcommit: 22c3c8f74eaa138dbbbb02eb7d720fce87fc30a9
+ms.openlocfilehash: 6c8e4059fd4bf1e7450118a6df02609217c4f4db
+ms.sourcegitcommit: 2ad7d06f4f469b5d8a5280ac0e0289a81867fc8e
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/17/2018
+ms.lasthandoff: 06/08/2018
+ms.locfileid: "35231500"
 ---
 # <a name="f-code-formatting-guidelines"></a>F # 程式碼格式化方針
 
@@ -29,6 +30,177 @@ F # 預設會使用空白字元。 下列指導方針均提供指導方針來選
 **我們建議您縮排每 4 個空格。**
 
 話雖如此，縮排程式是主觀。 變化 [確定]，但是您應該遵循的第一個規則*縮排的一致性*。 選擇公認的縮排樣式，並在整個程式碼基底有系統地使用它。
+
+## <a name="formatting-blank-lines"></a>格式化空白行
+
+* 個別最上層函式和類別定義具有兩個空白的行。
+* 在類別內的方法定義會以單一的空白列分隔。
+* 額外的空白的線條可能謹慎 （） 來分隔的相關函式群組。 一堆相關 one-liners （例如，一組虛擬實作） 之間，可能會省略空白的行。
+* 用於空白的行在函數中，謹慎使用，表示邏輯區段。
+
+## <a name="formatting-comments"></a>格式化的註解
+
+通常，而不用多個雙斜線註解 ML 樣式區塊註解。
+
+```fsharp
+// Prefer this style of comments when you want
+// to express written ideas on multiple lines.
+
+(*
+    ML-style comments are fine, but not a .NET-ism.
+    They are useful when needing to modify multi-line comments, though.
+*)
+```
+
+內嵌註解應該將第一個字母變成大寫。
+
+```fsharp
+let f x = x + 1 // Increment by one.
+```
+
+## <a name="naming-conventions"></a>命名規範
+
+### <a name="use-camelcase-for-class-bound-expression-bound-and-pattern-bound-values-and-functions"></a>使用 camelCase 類別繫結、 運算式繫結和繫結模式值和函式
+
+它通常會和接受的 F # 樣式 camelCase 用於所有名稱繫結，做為本機變數，或在模式比對和函式定義中。
+
+```fsharp
+// OK
+let addIAndJ i j = i + j
+
+// Bad
+let addIAndJ I J = I+J
+
+// Bad
+let AddIAndJ i j = i + j
+```
+
+本機繫結類別中的函式也應該使用 camelCase。
+
+```fsharp
+type MyClass() =
+
+    let doSomething () =
+
+    let firstResult = ...
+
+    let secondResult = ...
+
+    member x.Result = doSomething()
+```
+
+### <a name="use-camelcase-for-module-bound-public-functions"></a>CamelCase 用於繫結模組的公用函式
+
+當模組繫結函式是公用 API 的一部分時，它應該使用 camelCase:
+
+```fsharp
+module MyAPI =
+    let publicFunctionOne param1 param2 param2 = ...
+
+    let publicFunctionTwo param1 param2 param3 = ...
+```
+
+### <a name="use-camelcase-for-internal-and-private-module-bound-values-and-functions"></a>CamelCase 用於內部及私人模組繫結值和函式
+
+CamelCase 用於私用模組繫結值，如下所示：
+
+* 臨機操作指令碼中的函式
+
+* 構成模組或類型的內部實作的值
+
+```fsharp
+let emailMyBossTheLatestResults =
+    ...
+```
+
+### <a name="use-camelcase-for-parameters"></a>使用 camelCase 參數
+
+所有參數都應該都使用 camelCase 根據.NET 命名慣例。
+
+```fsharp
+module MyModule =
+    let myFunction paramOne paramTwo = ...
+
+type MyClass() =
+    member this.MyMethod(paramOne, paramTwo) = ...
+```
+
+### <a name="use-pascalcase-for-modules"></a>使用 PascalCase 模組
+
+（最上層、 內部、 私用、 巢狀） 的所有模組都應該都使用 PascalCase。
+
+```fsharp
+module MyTopLevelModule
+
+module Helpers =
+    module private SuperHelpers =
+        ...
+
+    ...
+```
+
+### <a name="use-pascalcase-for-type-declarations-members-and-labels"></a>PascalCase 用於宣告類型、 成員和標籤
+
+類別、 介面、 結構、 列舉型別、 委派、 記錄和差別聯的集應該全部是名為 PascalCase。 型別和記錄和差別聯的集的標籤內的成員也應該使用 PascalCase。
+
+```fsharp
+type IMyInterface =
+    abstract Something: int
+
+type MyClass() =
+    member this.MyMethod(x, y) = x + y
+
+type MyRecord = { IntVal: int; StringVal: string }
+
+type SchoolPerson =
+    | Professor
+    | Student
+    | Advisor
+    | Administrator
+```
+
+### <a name="use-pascalcase-for-constructs-intrinsic-to-net"></a>PascalCase 用於建構內建的.NET
+
+命名空間、 例外狀況、 事件和專案 /`.dll`名稱也應該使用 PascalCase。 不僅這樣做耗用量其他.NET 語言的感覺更自然的取用者，也是.NET 命名慣例，系統可能會遇到與一致。
+
+### <a name="avoid-underscores-in-names"></a>避免在名稱中的底線
+
+在過去，有些 F # 程式庫名稱中使用底線。 不過，這是不再被廣泛接受，這是因為它與.NET 的命名慣例發生衝突。 話雖如此，某些 F # 程式設計人員使用底線有很大，部分由於歷史原因，並容忍度及方面很重要。 不過，請注意樣式通常 disliked 其他人可以選擇要使用它。
+
+有些例外狀況包含間的互通性與原生元件，其中底線很常見。
+
+### <a name="use-standard-f-operators"></a>使用標準的 F # 運算子
+
+下列運算子定義在 F # 標準程式庫，而且應該用於而不是定義對等項目。 因為它會使程式碼更容易讀取與慣用語，被建議使用這些運算子。 具有背景 OCaml 或其他功能的程式設計語言的開發人員可能會不同語言的習慣。 下列清單摘要說明建議的 F # 運算子。
+
+```fsharp
+x |> f // Forward pipeline
+f >> g // Forward composition
+x |> ignore // Discard away a value
+x + y // Overloaded addition (including string concatenation)
+x - y // Overloaded subtraction
+x * y // Overloaded multiplication
+x / y // Overloaded division
+x % y // Overloaded modulus
+x && y // Lazy/short-cut "and"
+x || y // Lazy/short-cut "or"
+x <<< y // Bitwise left shift
+x >>> y // Bitwise right shift
+x ||| y // Bitwise or, also for working with “flags” enumeration
+x &&& y // Bitwise and, also for working with “flags” enumeration
+x ^^^ y // Bitwise xor, also for working with “flags” enumeration
+```
+
+### <a name="use-prefix-syntax-for-generics-foot-in-preference-to-postfix-syntax-t-foo"></a>使用泛型的前置詞的語法 (`Foo<T>`) 而非後置語法 (`T Foo`)
+
+F # 繼承這兩個的後置 ML 樣式命名泛型型別 (比方說， `int list`) 以及.NET 樣式的前置詞 (例如， `list<int>`)。 偏好的.NET 樣式，除了特定的四種類型：
+
+1. F # 列出，請使用後置格式：`int list`而不是`list<int>`。
+2. 使用 F # 選項，請使用 後置格式：`int option`而不是`option<int>`。
+3. F # 陣列，使用的語法名稱`int[]`而`int array`或`array<int>`。
+4. 參考儲存格，使用`int ref`而`ref<int>`或`Ref<int>`。
+
+對於所有其他類型，使用的前置格式。
 
 ## <a name="formatting-discriminated-union-declarations"></a>格式化差別等位宣告
 
@@ -198,7 +370,7 @@ else e4
 
 ### <a name="pattern-matching-constructs"></a>模式比對的建構
 
-使用`|`相符項目的每個子句不縮排。 如果運算式是短，您可以使用單行。
+使用`|`相符項目的每個子句不縮排。 如果運算式是短，您可以考慮使用單一行，如果每一個子運算式也很簡單。
 
 ```fsharp
 // OK
@@ -212,9 +384,6 @@ match l with
     | { him = x; her = "Posh" } :: tail -> _
     | _ :: tail -> findDavid tail
     | [] -> failwith "Couldn't find David"
-
-// OK
-match l with [] -> false | _ :: _ -> true
 ```
 
 如果在模式比對箭號右邊的運算式太大，將它移至下列的行縮排一個步驟，從`match` / `|`。
@@ -291,20 +460,23 @@ let printVolumes x =
         (convertVolumeImperialPint x)
 ```
 
-匿名函式引數可以是下一行，或使用懸空`fun`引數的一行：
+函式引數的 lambda 運算式套用相同的指導方針。 如果 lambda 運算式主體的主體可以有另一條，縮排一個領域
 
 ```fsharp
-// OK
 let printListWithOffset a list1 =
-    List.iter (fun elem ->
-        printfn "%d" (a + elem)) list1
+    List.iter
+        (fun elem -> printfn "%d" (a + elem))
+        list1
 
-// OK, but prefer previous
+// OK if lambda body is long enough
 let printListWithOffset a list1 =
-    List.iter (
-        fun elem ->
-            printfn "%d" (a + elem)) list1
+    List.iter
+        (fun elem ->
+            printfn "%d" (a + elem))
+        list1
 ```
+
+不過，如果是多行 lambda 運算式的主體，請考慮將它分解成個別的函式而非保有套用為單一引數的函式的多行建構。
 
 ### <a name="formatting-infix-operators"></a>格式化的中置運算子
 
@@ -402,162 +574,3 @@ let makeStreamReader x = new System.IO.StreamReader(path=x)
 // Not OK
 let makeStreamReader x = new System.IO.StreamReader(path = x)
 ```
-
-## <a name="formatting-blank-lines"></a>格式化空白行
-
-* 個別最上層函式和類別定義具有兩個空白的行。
-* 在類別內的方法定義會以單一的空白列分隔。
-* 額外的空白的線條可能謹慎 （） 來分隔的相關函式群組。 一堆相關 one-liners （例如，一組虛擬實作） 之間，可能會省略空白的行。
-* 用於空白的行在函數中，謹慎使用，表示邏輯區段。
-
-## <a name="formatting-comments"></a>格式化的註解
-
-通常，而不用多個雙斜線註解 ML 樣式區塊註解。
-
-```fsharp
-// Prefer this style of comments when you want
-// to express written ideas on multiple lines.
-
-(*
-    Generally avoid these kinds of comments.
-*)
-```
-
-內嵌註解應該將第一個字母變成大寫。
-
-```fsharp
-let f x = x + 1 // Increment by one.
-```
-
-## <a name="naming-conventions"></a>命名規範
-
-### <a name="use-camelcase-for-class-bound-expression-bound-and-pattern-bound-values-and-functions"></a>使用 camelCase 類別繫結、 運算式繫結和繫結模式值和函式
-
-它通常會和接受的 F # 樣式 camelCase 用於所有名稱繫結，做為本機變數，或在模式比對和函式定義中。
-
-```fsharp
-// OK
-let addIAndJ i j = i + j
-
-// Bad
-let addIAndJ I J = I+J
-
-// Bad
-let AddIAndJ i j = i + j
-```
-
-本機繫結類別中的函式也應該使用 camelCase。
-
-```fsharp
-type MyClass() =
-
-    let doSomething () =
-
-    let firstResult = ...
-
-    let secondResult = ...
-
-    member x.Result = doSomething()
-```
-
-### <a name="use-camelcase-for-internal-and-private-module-bound-values-and-functions"></a>CamelCase 用於內部及私人模組繫結值和函式
-
-CamelCase 用於私用模組繫結值，如下所示：
-
-* 臨機操作指令碼中的函式
-
-* 構成模組或類型的內部實作的值
-
-```fsharp
-let emailMyBossTheLatestResults =
-    ...
-```
-
-### <a name="use-camelcase-for-parameters"></a>使用 camelCase 參數
-
-所有參數都應該都使用 camelCase 根據.NET 命名慣例。
-
-```fsharp
-module MyModule =
-    let myFunction paramOne paramTwo = ...
-
-type MyClass() =
-    member this.MyMethod(paramOne, paramTwo) = ...
-```
-
-### <a name="use-pascalcase-for-modules"></a>使用 PascalCase 模組
-
-（最上層、 內部、 私用、 巢狀） 的所有模組都應該都使用 PascalCase。
-
-```fsharp
-module MyTopLevelModule
-
-module Helpers =
-    module private SuperHelpers =
-        ...
-
-    ...
-```
-
-### <a name="use-pascalcase-for-type-declarations-members-and-labels"></a>PascalCase 用於宣告類型、 成員和標籤
-
-類別、 介面、 結構、 列舉型別、 委派、 記錄和差別聯的集應該全部是名為 PascalCase。 型別和記錄和差別聯的集的標籤內的成員也應該使用 PascalCase。
-
-```fsharp
-type IMyInterface =
-    abstract Something: int
-
-type MyClass() =
-    member this.MyMethod(x, y) = x + y
-
-type MyRecord = { IntVal: int; StringVal: string }
-
-type SchoolPerson =
-    | Professor
-    | Student
-    | Advisor
-    | Administrator
-```
-
-### <a name="use-pascalcase-for-constructs-intrinsic-to-net"></a>PascalCase 用於建構內建的.NET
-
-命名空間、 例外狀況、 事件和專案 /`.dll`名稱也應該使用 PascalCase。 不僅這樣做耗用量其他.NET 語言的感覺更自然的取用者，也是.NET 命名慣例，系統可能會遇到與一致。
-
-### <a name="avoid-underscores-in-names"></a>避免在名稱中的底線
-
-在過去，有些 F # 程式庫名稱中使用底線。 不過，這是不再被廣泛接受，這是因為它與.NET 的命名慣例發生衝突。 話雖如此，某些 F # 程式設計人員使用底線有很大，部分由於歷史原因，並容忍度及方面很重要。 不過，請注意樣式通常 disliked 其他人可以選擇要使用它。
-
-有些例外狀況包含間的互通性與原生元件，其中底線很常見。
-
-### <a name="use-standard-f-operators"></a>使用標準的 F # 運算子
-
-下列運算子定義在 F # 標準程式庫，而且應該用於而不是定義對等項目。 因為它會使程式碼更容易讀取與慣用語，被建議使用這些運算子。 具有背景 OCaml 或其他功能的程式設計語言的開發人員可能會不同語言的習慣。 下列清單摘要說明建議的 F # 運算子。
-
-```fsharp
-x |> f // Forward pipeline
-f >> g // Forward composition
-x |> ignore // Throwing away a value
-x + y // Overloaded addition (including string concatenation)
-x - y // Overloaded subtraction
-x * y // Overloaded multiplication
-x / y // Overloaded division
-x % y // Overloaded modulus
-x && y // Lazy/short-cut "and"
-x || y // Lazy/short-cut "or"
-x <<< y // Bitwise left shift
-x >>> y // Bitwise right shift
-x ||| y // Bitwise or, also for working with “flags” enumeration
-x &&& y // Bitwise and, also for working with “flags” enumeration
-x ^^^ y // Bitwise xor, also for working with “flags” enumeration
-```
-
-### <a name="use-prefix-syntax-for-generics-foot-in-preference-to-postfix-syntax-t-foo"></a>使用泛型的前置詞的語法 (`Foo<T>`) 而非後置語法 (`T Foo`)
-
-F # 繼承這兩個的後置 ML 樣式命名泛型型別 (比方說， `int list`) 以及.NET 樣式的前置詞 (例如， `list<int>`)。 偏好的.NET 樣式，除了特定的四種類型：
-
-1. F # 列出，請使用後置格式：`int list`而不是`list<int>`。
-2. 使用 F # 選項，請使用 後置格式：`int option`而不是`option<int>`。
-3. F # 陣列，使用的語法名稱`int[]`而`int array`或`array<int>`。
-4. 參考儲存格，使用`int ref`而`ref<int>`或`Ref<int>`。
-
-對於所有其他類型，使用的前置格式。
