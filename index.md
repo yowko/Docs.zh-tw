@@ -5,12 +5,12 @@ hide_bc: true
 title: .NET 文件
 description: 了解如何使用 C#、Visual Basic 及 F#，在任何平台上使用 .NET 建立各種應用程式。 瀏覽 API 參考、範例程式碼、教學課程及更多資源。
 ms.custom: updateeachrelease
-ms.openlocfilehash: 25f01910ba6f004cafbe8b981e4a986791044ded
-ms.sourcegitcommit: d955cb4c681d68cf301d410925d83f25172ece86
+ms.openlocfilehash: 0914320c18818fb9d69fb1e0dbd89c0ec78acd61
+ms.sourcegitcommit: 2ad7d06f4f469b5d8a5280ac0e0289a81867fc8e
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/07/2018
-ms.locfileid: "34826980"
+ms.lasthandoff: 06/08/2018
+ms.locfileid: "35231537"
 ---
 <div id="main" class="v2">
     <div class="container">
@@ -34,7 +34,7 @@ ms.locfileid: "34826980"
                 </a>
             </li>
             <li>
-                <a href="/dotnet/api/?view=netcore-2.0">
+                <a href="/dotnet/api/?view=netcore-2.1">
                     <div class="cardSize">
                         <div class="cardPadding">
                             <div class="card">
