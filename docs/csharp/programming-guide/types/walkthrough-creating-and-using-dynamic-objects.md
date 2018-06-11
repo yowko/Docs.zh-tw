@@ -9,11 +9,12 @@ helpviewer_keywords:
 - dynamic objects
 - dynamic objects [C#]
 ms.assetid: 568f1645-1305-4906-8625-5d77af81e04f
-ms.openlocfilehash: 4d19e5e1d36dda4212b1c8561bd63c6b98d4bf1f
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: f315b6500e68812863da722791d257930e190602
+ms.sourcegitcommit: 6c480773ae896f45af4671fb3e26611a50e4dd81
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/04/2018
+ms.lasthandoff: 06/09/2018
+ms.locfileid: "35251138"
 ---
 # <a name="walkthrough-creating-and-using-dynamic-objects-c-and-visual-basic"></a>逐步解說：建立和使用動態物件 (C# 和 Visual Basic)
 
@@ -36,10 +37,11 @@ ms.lasthandoff: 05/04/2018
   
 [!INCLUDE[note_settings_general](~/includes/note-settings-general-md.md)]  
   
-## <a name="creating-a-custom-dynamic-object"></a>建立自訂的動態物件  
- 您在本逐步解說中建立的第一個專案，會定義自訂的動態物件，以搜尋文字檔的內容。 動態屬性的名稱可指定要搜尋的文字。 例如，如果呼叫程式碼指定 `dynamicFile.Sample`，動態類別會傳回字串的泛型清單，其中包含檔案中開頭為 "Sample" 的所有行。 搜尋不區分大小寫。 動態類別也支援兩個選擇性引數。 第一個引數是搜尋選項列舉值，其指定動態類別應該在行開頭、行結尾或行的任何位置，搜尋相符項目。 第二個引數指定動態類別應該先修剪文字的前置和後端空格，再進行搜尋。 例如，如果呼叫程式碼指定 `dynamicFile.Sample(StringSearchOption.Contains)`，動態類別即會在行的任何位置搜尋 "Sample"。 如果呼叫程式碼指定 `dynamicFile.Sample(StringSearchOption.StartsWith, false)`，則動態類別會在每一行開頭搜尋 "Sample"，且不會移除前置和後端空格。 動態類別的預設行為是在每一行開頭搜尋相符項目，並移除前置和後端空格。  
+## <a name="creating-a-custom-dynamic-object"></a>建立自訂的動態物件
+
+您在本逐步解說中建立的第一個專案，會定義自訂的動態物件，以搜尋文字檔的內容。 動態屬性的名稱可指定要搜尋的文字。 例如，如果呼叫程式碼指定 `dynamicFile.Sample`，動態類別會傳回字串的泛型清單，其中包含檔案中開頭為 "Sample" 的所有行。 搜尋不區分大小寫。 動態類別也支援兩個選擇性引數。 第一個引數是搜尋選項列舉值，其指定動態類別應該在行開頭、行結尾或行的任何位置，搜尋相符項目。 第二個引數指定動態類別應該先修剪文字的前置和後端空格，再進行搜尋。 例如，如果呼叫程式碼指定 `dynamicFile.Sample(StringSearchOption.Contains)`，動態類別即會在行的任何位置搜尋 "Sample"。 如果呼叫程式碼指定 `dynamicFile.Sample(StringSearchOption.StartsWith, false)`，則動態類別會在每一行開頭搜尋 "Sample"，且不會移除前置和後端空格。 動態類別的預設行為是在每一行開頭搜尋相符項目，並移除前置和後端空格。  
   
-#### <a name="to-create-a-custom-dynamic-class"></a>若要建立自訂動態類別  
+### <a name="to-create-a-custom-dynamic-class"></a>若要建立自訂動態類別  
   
 1.  啟動 Visual Studio。  
   
@@ -50,48 +52,41 @@ ms.lasthandoff: 05/04/2018
 4.  以滑鼠右鍵按一下 DynamicSample 專案，再指向 [新增]，然後按一下 [類別]。 在 [名稱] 方塊中，輸入 `ReadOnlyFile` 並按一下 [確定]。 隨即新增檔案，其中包含 ReadOnlyFile 類別。  
   
 5.  在 ReadOnlyFile.cs 或 ReadOnlyFile.vb 檔案頂端，新增下列程式碼以匯入 <xref:System.IO?displayProperty=nameWithType> 和 <xref:System.Dynamic?displayProperty=nameWithType> 命名空間。  
-  
-     [!code-csharp[VbDynamicWalkthrough#1](../../../csharp/programming-guide/types/codesnippet/CSharp/walkthrough-creating-and-using-dynamic-objects_1.cs)]
 
-     [!code-vb[VbDynamicWalkthrough#1](../../../csharp/programming-guide/types/codesnippet/VisualBasic/walkthrough-creating-and-using-dynamic-objects_1.vb)]  
-  
+    [!code-csharp[VbDynamicWalkthrough#1](~/samples/snippets/csharp/VS_Snippets_VBCSharp/vbdynamicwalkthrough/cs/readonlyfile.cs#1)]
+    [!code-vb[VbDynamicWalkthrough#1](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/vbdynamicwalkthrough/vb/readonlyfile.vb#1)]  
+
 6.  自訂動態物件會使用列舉，來判斷搜尋準則。 在 class 陳述式之前，加入下列列舉定義。  
   
-     [!code-csharp[VbDynamicWalkthrough#2](../../../csharp/programming-guide/types/codesnippet/CSharp/walkthrough-creating-and-using-dynamic-objects_2.cs)]
-
-     [!code-vb[VbDynamicWalkthrough#2](../../../csharp/programming-guide/types/codesnippet/VisualBasic/walkthrough-creating-and-using-dynamic-objects_2.vb)]  
+    [!code-csharp[VbDynamicWalkthrough#2](~/samples/snippets/csharp/VS_Snippets_VBCSharp/vbdynamicwalkthrough/cs/readonlyfile.cs#2)]
+    [!code-vb[VbDynamicWalkthrough#2](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/vbdynamicwalkthrough/vb/readonlyfile.vb#2)]
   
 7.  如下列程式碼範例所示，更新繼承 `DynamicObject` 類別的 class 陳述式。  
   
-     [!code-csharp[VbDynamicWalkthrough#3](../../../csharp/programming-guide/types/codesnippet/CSharp/walkthrough-creating-and-using-dynamic-objects_3.cs)]
+    [!code-csharp[VbDynamicWalkthrough#3](~/samples/snippets/csharp/VS_Snippets_VBCSharp/vbdynamicwalkthrough/cs/readonlyfile.cs#3)]
+    [!code-vb[VbDynamicWalkthrough#3](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/vbdynamicwalkthrough/vb/readonlyfile.vb#3)]
 
-     [!code-vb[VbDynamicWalkthrough#3](../../../csharp/programming-guide/types/codesnippet/VisualBasic/walkthrough-creating-and-using-dynamic-objects_3.vb)]  
-  
 8.  將下列程式碼新增至 `ReadOnlyFile` 類別，以定義檔案路徑的私用欄位和 `ReadOnlyFile` 類別的建構函式。  
   
-     [!code-csharp[VbDynamicWalkthrough#4](../../../csharp/programming-guide/types/codesnippet/CSharp/walkthrough-creating-and-using-dynamic-objects_4.cs)]
-     
-     [!code-vb[VbDynamicWalkthrough#4](../../../csharp/programming-guide/types/codesnippet/VisualBasic/walkthrough-creating-and-using-dynamic-objects_4.vb)]  
+    [!code-csharp[VbDynamicWalkthrough#4](~/samples/snippets/csharp/VS_Snippets_VBCSharp/vbdynamicwalkthrough/cs/readonlyfile.cs#4)]
+    [!code-vb[VbDynamicWalkthrough#4](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/vbdynamicwalkthrough/vb/readonlyfile.vb#4)]
   
 9. 將下列 `GetPropertyValue` 方法加入至 `ReadOnlyFile` 類別。 `GetPropertyValue` 方法會以輸入形式採用搜尋準則，並傳回文字檔中符合搜尋條件的幾行內容。 `ReadOnlyFile` 類別所提供的動態方法會呼叫 `GetPropertyValue` 方法，以擷取其各自的結果。  
   
-     [!code-csharp[VbDynamicWalkthrough#5](../../../csharp/programming-guide/types/codesnippet/CSharp/walkthrough-creating-and-using-dynamic-objects_5.cs)]
-     
-     [!code-vb[VbDynamicWalkthrough#5](../../../csharp/programming-guide/types/codesnippet/VisualBasic/walkthrough-creating-and-using-dynamic-objects_5.vb)]  
+    [!code-csharp[VbDynamicWalkthrough#5](~/samples/snippets/csharp/VS_Snippets_VBCSharp/vbdynamicwalkthrough/cs/readonlyfile.cs#5)]
+    [!code-vb[VbDynamicWalkthrough#5](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/vbdynamicwalkthrough/vb/readonlyfile.vb#5)]  
   
 10. 在 `GetPropertyValue` 方法後面，新增下面程式碼以覆寫 <xref:System.Dynamic.DynamicObject> 類別的 <xref:System.Dynamic.DynamicObject.TryGetMember%2A> 方法。 如果系統要求動態類別的成員，但未指定任何參數，則會呼叫 <xref:System.Dynamic.DynamicObject.TryGetMember%2A> 方法。 `binder` 引數包含參考成員的相關資訊，而 `result` 引數會參考指定成員傳回的結果。 <xref:System.Dynamic.DynamicObject.TryGetMember%2A> 方法會傳回布林值：如果要求的成員存在，該值會傳回 `true`；否則會傳回 `false`。  
   
-     [!code-csharp[VbDynamicWalkthrough#6](../../../csharp/programming-guide/types/codesnippet/CSharp/walkthrough-creating-and-using-dynamic-objects_6.cs)]
-     
-     [!code-vb[VbDynamicWalkthrough#6](../../../csharp/programming-guide/types/codesnippet/VisualBasic/walkthrough-creating-and-using-dynamic-objects_6.vb)]  
+    [!code-csharp[VbDynamicWalkthrough#6](~/samples/snippets/csharp/VS_Snippets_VBCSharp/vbdynamicwalkthrough/cs/readonlyfile.cs#6)]
+    [!code-vb[VbDynamicWalkthrough#6](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/vbdynamicwalkthrough/vb/readonlyfile.vb#6)]
   
 11. 在 `TryGetMember` 方法後面，新增下面程式碼以覆寫 <xref:System.Dynamic.DynamicObject> 類別的 <xref:System.Dynamic.DynamicObject.TryInvokeMember%2A> 方法。 如果系統要求具有引數的動態類別成員，則會呼叫 <xref:System.Dynamic.DynamicObject.TryInvokeMember%2A> 方法。 `binder` 引數包含參考成員的相關資訊，而 `result` 引數會參考指定成員傳回的結果。 `args` 引數包含傳遞給該成員的引數陣列。 <xref:System.Dynamic.DynamicObject.TryInvokeMember%2A> 方法會傳回布林值：如果要求的成員存在，該值會傳回 `true`；否則會傳回 `false`。  
   
-     自訂版 `TryInvokeMember` 方法需要的第一個引數，是來自上一個步驟所定義的 `StringSearchOption` 列舉。 `TryInvokeMember` 方法需要的第二個引數是布林值。 如果這兩個引數有一個或兩個是有效的值，即會將其傳遞給 `GetPropertyValue` 方法以擷取結果。  
+    自訂版 `TryInvokeMember` 方法需要的第一個引數，是來自上一個步驟所定義的 `StringSearchOption` 列舉。 `TryInvokeMember` 方法需要的第二個引數是布林值。 如果這兩個引數有一個或兩個是有效的值，即會將其傳遞給 `GetPropertyValue` 方法以擷取結果。  
   
-     [!code-csharp[VbDynamicWalkthrough#7](../../../csharp/programming-guide/types/codesnippet/CSharp/walkthrough-creating-and-using-dynamic-objects_7.cs)]
-     
-     [!code-vb[VbDynamicWalkthrough#7](../../../csharp/programming-guide/types/codesnippet/VisualBasic/walkthrough-creating-and-using-dynamic-objects_7.vb)]  
+    [!code-csharp[VbDynamicWalkthrough#7](~/samples/snippets/csharp/VS_Snippets_VBCSharp/vbdynamicwalkthrough/cs/readonlyfile.cs#7)]
+    [!code-vb[VbDynamicWalkthrough#7](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/vbdynamicwalkthrough/vb/readonlyfile.vb#7)]
   
 12. 儲存並關閉檔案。  
   
@@ -124,9 +119,8 @@ ms.lasthandoff: 05/04/2018
   
 2.  將下列程式碼加入 Main 程序，以為 TextFile1.txt 檔案建立 `ReadOnlyFile` 類別的執行個體。 程式碼會使用晚期繫結呼叫動態成員，並擷取包含字串 "Customer" 的文字行。  
   
-     [!code-csharp[VbDynamicWalkthrough#8](../../../csharp/programming-guide/types/codesnippet/CSharp/walkthrough-creating-and-using-dynamic-objects_8.cs)]
-     
-     [!code-vb[VbDynamicWalkthrough#8](../../../csharp/programming-guide/types/codesnippet/VisualBasic/walkthrough-creating-and-using-dynamic-objects_8.vb)]  
+     [!code-csharp[VbDynamicWalkthrough#8](~/samples/snippets/csharp/VS_Snippets_VBCSharp/vbdynamicwalkthrough/cs/program.cs#8)]
+     [!code-vb[VbDynamicWalkthrough#8](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/vbdynamicwalkthrough/vb/module1.vb#8)]
   
 3.  儲存檔案，並按 CTRL+F5 建置及執行應用程式。  
   
@@ -134,7 +128,7 @@ ms.lasthandoff: 05/04/2018
 
 您在本逐步解說中建立的下一個專案，會存取以動態語言 IronPython 撰寫的程式庫。
   
-#### <a name="to-create-a-custom-dynamic-class"></a>若要建立自訂動態類別  
+### <a name="to-create-a-custom-dynamic-class"></a>若要建立自訂動態類別
   
 1.  在 Visual Studio 的 [檔案] 功能表上，指向 [新增]，然後按一下 [專案]。  
   
@@ -148,21 +142,18 @@ ms.lasthandoff: 05/04/2018
   
 6.  在檔案頂端，加入下列程式碼以匯入來自 IronPython 程式庫的 `Microsoft.Scripting.Hosting` 和 `IronPython.Hosting` 命名空間。  
   
-     [!code-csharp[VbDynamicWalkthroughIronPython#1](../../../csharp/programming-guide/types/codesnippet/CSharp/walkthrough-creating-and-using-dynamic-objects_9.cs)]
-     
-     [!code-vb[VbDynamicWalkthroughIronPython#1](../../../csharp/programming-guide/types/codesnippet/VisualBasic/walkthrough-creating-and-using-dynamic-objects_9.vb)]  
+    [!code-csharp[VbDynamicWalkthroughIronPython#1](~/samples/snippets/csharp/VS_Snippets_VBCSharp/vbdynamicwalkthroughironpython/cs/program.cs#1)]
+    [!code-vb[VbDynamicWalkthroughIronPython#1](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/vbdynamicwalkthroughironpython/vb/module1.vb#1)]
   
 7.  在 Main 方法中加入下列程式碼，以建立裝載 IronPython 程式庫的新 `Microsoft.Scripting.Hosting.ScriptRuntime` 物件。 `ScriptRuntime` 物件會載入 IronPython 程式庫模組 random.py。  
   
-     [!code-csharp[VbDynamicWalkthroughIronPython#2](../../../csharp/programming-guide/types/codesnippet/CSharp/walkthrough-creating-and-using-dynamic-objects_10.cs)]
-     
-     [!code-vb[VbDynamicWalkthroughIronPython#2](../../../csharp/programming-guide/types/codesnippet/VisualBasic/walkthrough-creating-and-using-dynamic-objects_10.vb)]  
+     [!code-csharp[VbDynamicWalkthroughIronPython#2](~/samples/snippets/csharp/VS_Snippets_VBCSharp/vbdynamicwalkthroughironpython/cs/program.cs#2)]
+     [!code-vb[VbDynamicWalkthroughIronPython#2](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/vbdynamicwalkthroughironpython/vb/module1.vb#2)]
   
 8.  在程式碼載入 random.py 模組之後，請加入下列程式碼以建立整數陣列。 系統會將陣列傳遞給 random.py 模組的 `shuffle` 方法，其會隨機排序陣列中的值。  
   
-     [!code-csharp[VbDynamicWalkthroughIronPython#3](../../../csharp/programming-guide/types/codesnippet/CSharp/walkthrough-creating-and-using-dynamic-objects_11.cs)]
-     
-     [!code-vb[VbDynamicWalkthroughIronPython#3](../../../csharp/programming-guide/types/codesnippet/VisualBasic/walkthrough-creating-and-using-dynamic-objects_11.vb)]  
+     [!code-csharp[VbDynamicWalkthroughIronPython#3](~/samples/snippets/csharp/VS_Snippets_VBCSharp/vbdynamicwalkthroughironpython/cs/program.cs#3)]
+     [!code-vb[VbDynamicWalkthroughIronPython#3](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/vbdynamicwalkthroughironpython/vb/module1.vb#3)]
   
 9. 儲存檔案，並按 CTRL+F5 建置及執行應用程式。  
   
