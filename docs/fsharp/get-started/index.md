@@ -14,8 +14,8 @@ ms.lasthandoff: 05/04/2018
 
 | 作業系統 | 偏好 Visual Studio | 偏好 Visual Studio 程式碼 | 偏好使用命令列 |
 | -- |------------------------|--------------------------|-----------------------------|-------------------------|
-| Windows | [開始使用 Visual Studio](get-started-visual-studio.md) | [開始使用 VSCode 和 Ionide](get-started-vscode.md) | [開始使用.NET 核心 CLI](get-started-command-line.md) |
-| macOS | [開始使用 VS for Mac](get-started-with-visual-studio-for-mac.md) | [開始使用 VSCode 和 Ionide](get-started-vscode.md) | [開始使用.NET 核心 CLI](get-started-command-line.md) |
-| Linux | N/A | [開始使用 VSCode 和 Ionide](get-started-vscode.md) | [開始使用.NET 核心 CLI](get-started-command-line.md) |
+| Windows | [開始使用 Visual Studio](get-started-visual-studio.md) | [開始使用 VSCode 和 Ionide](get-started-vscode.md) | [開始使用.NET Core CLI](get-started-command-line.md) |
+| macOS | [開始使用 VS for Mac](get-started-with-visual-studio-for-mac.md) | [開始使用 VSCode 和 Ionide](get-started-vscode.md) | [開始使用.NET Core CLI](get-started-command-line.md) |
+| Linux | N/A | [開始使用 VSCode 和 Ionide](get-started-vscode.md) | [開始使用.NET Core CLI](get-started-command-line.md) |
 
 一般情況下，沒有任何特定方法來開始這可能會優於其他。  我們建議您嘗試使用 F # 在電腦上以查看您喜歡哪一點的所有方式最佳 ！

@@ -1158,7 +1158,7 @@ SqlClient 現在會自動提供更快的 AlwaysOn 可用性群組 (AG) 連線。
 
 <a name="v46"></a> 
 ## <a name="whats-new-in-net-2015"></a>.NET 2015 的新功能
- .NET 2015 導入了 [!INCLUDE[net_v46](../../../includes/net-v46-md.md)] 和 .NET 核心。 其中一些新功能適用於兩者，另一些功能則專屬於 [!INCLUDE[net_v46](../../../includes/net-v46-md.md)] 或 [!INCLUDE[net_core](../../../includes/net-core-md.md)]。
+ .NET 2015 導入了 [!INCLUDE[net_v46](../../../includes/net-v46-md.md)] 和 .NET Core。 其中一些新功能適用於兩者，另一些功能則專屬於 [!INCLUDE[net_v46](../../../includes/net-v46-md.md)] 或 [!INCLUDE[net_core](../../../includes/net-core-md.md)]。
 
 - **ASP.NET 5**
 

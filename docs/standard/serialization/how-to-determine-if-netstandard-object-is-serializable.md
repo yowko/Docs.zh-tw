@@ -18,7 +18,7 @@ ms.lasthandoff: 05/04/2018
 ---
 # <a name="how-to-determine-if-a-net-standard-object-is-serializable"></a>如何： 判斷是否可序列化的.NET 標準物件
 
-.NET 標準是定義的類型和成員必須要有特定的.NET 實作符合標準的該版本上的規格。 不過，.NET 標準並未定義是否可序列化類型。 .NET 的標準程式庫中定義的類型未標示有<xref:System.SerializableAttribute>屬性。 相反地，.NET 特定的實作，例如.NET Framework 和.NET 核心，可用來判斷特定的型別是否可序列化。 
+.NET 標準是定義的類型和成員必須要有特定的.NET 實作符合標準的該版本上的規格。 不過，.NET 標準並未定義是否可序列化類型。 .NET 的標準程式庫中定義的類型未標示有<xref:System.SerializableAttribute>屬性。 相反地，.NET 特定的實作，例如.NET Framework 和.NET Core，可用來判斷特定的型別是否可序列化。 
 
 如果您已開發目標的.NET 標準程式庫，您的程式庫可供任何支援.NET 標準的.NET 實作。 這表示，您無法事先知道特定的型別是否可序列化。您只可以判斷它是否可序列化在執行階段。
 

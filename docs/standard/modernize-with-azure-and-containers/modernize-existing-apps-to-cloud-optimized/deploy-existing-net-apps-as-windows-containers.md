@@ -66,7 +66,7 @@ Docker 容器 (為了簡單起見，*容器*) 可以原生 Linux 及 Windows 上
 
 使用 Windows 容器的優點基本上都是相同的優點，您通常從容器取得。 使用 Windows 容器是關於大幅改善靈活度、 可攜性，以及控制項。
 
-現有的.NET 應用程式是指使用.NET Framework 所建立的那些應用程式。 例如，它們可能是傳統的 ASP.NET web 應用程式-不使用.NET 核心的較新，並可執行跨平台上 Linux、 Windows 和 MacOS。
+現有的.NET 應用程式是指使用.NET Framework 所建立的那些應用程式。 例如，它們可能是傳統的 ASP.NET web 應用程式-不使用.NET Core 的較新，並可執行跨平台上 Linux、 Windows 和 MacOS。
 
 .NET Framework 中主要的相依性是 Windows。 它也會有次要相依性，例如 IIS 和 System.Web 在傳統的 ASP.NET。
 

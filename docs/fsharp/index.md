@@ -46,7 +46,7 @@ F # 是關於在其核心的產能。 無所不在和進階功能的完整 F # �
 
 [開始使用 F # Visual Studio 程式碼中](get-started/get-started-vscode.md)如果您想要跨平台的輕量型和功能的 IDE 體驗。
 
-[開始使用 F # 和.NET 核心 CLI](get-started/get-started-command-line.md)如果您想要使用命令列工具。
+[開始使用 F # 和.NET Core CLI](get-started/get-started-command-line.md)如果您想要使用命令列工具。
 
 [開始使用 F # 和 Xamarin](https://docs.microsoft.com/xamarin/cross-platform/platform/fsharp/)行動 F # 的程式設計。
 
