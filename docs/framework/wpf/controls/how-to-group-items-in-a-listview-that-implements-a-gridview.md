@@ -11,6 +11,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: zh-TW
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33551904"
 ---
 # <a name="how-to-group-items-in-a-listview-that-implements-a-gridview"></a>如何：實作 GridView 的 ListView 中的群組項目
 這個範例示範如何顯示群組中的項目<xref:System.Windows.Controls.GridView>檢視模式<xref:System.Windows.Controls.ListView>控制項。  

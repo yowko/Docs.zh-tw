@@ -14,6 +14,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: zh-TW
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33520379"
 ---
 # <a name="antialiasing-with-lines-and-curves"></a>線條和曲線的反鋸齒功能
 當您使用[!INCLUDE[ndptecgdiplus](../../../../includes/ndptecgdiplus-md.md)]繪製一條線，您提供的起點和結束點的行，但您沒有提供在列上的任何資訊的個別像素。 [!INCLUDE[ndptecgdiplus](../../../../includes/ndptecgdiplus-md.md)] 顯示驅動程式軟體，以判斷哪一個像素為單位將會開啟以特定顯示裝置上顯示線與搭配運作。  

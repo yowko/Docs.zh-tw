@@ -12,6 +12,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: zh-TW
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33523964"
 ---
 # <a name="multiple-document-interface-mdi-applications"></a>多重文件介面 (MDI) 應用程式
 多重文件介面 (MDI) 應用程式可讓您在相同的時間，顯示多個文件，與它自己的視窗中顯示每個文件。 MDI 應用程式通常具有視窗功能表項目具有子功能表視窗或文件之間切換。  

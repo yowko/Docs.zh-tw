@@ -9,6 +9,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: zh-TW
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33557988"
 ---
 # <a name="walkthrough-create-a-button-by-using-xaml"></a>逐步解說：使用 XAML 建立按鈕
 本逐步解說的目標是了解如何在 Windows Presentation Foundation (WPF) 應用程式中建立的動畫的按鈕，供使用。 本逐步解說會使用樣式和範本建立自訂的按鈕的資源，讓重複使用程式碼，以及從按鈕宣告按鈕邏輯分離。 這個逐步解說完全在撰寫[!INCLUDE[TLA#tla_xaml](../../../../includes/tlasharptla-xaml-md.md)]。  
@@ -27,9 +28,9 @@ ms.lasthandoff: 05/04/2018
   
 1.  啟動 Visual Studio。  
   
-2.  **建立新的 WPF 專案：**上**檔案**功能表上，指向**新增**，然後按一下 **專案**。 尋找**Windows 應用程式 (WPF)** 範本和名稱"AnimatedButton"的專案。 這會建立應用程式的基本架構。  
+2.  **建立新的 WPF 專案：** 上**檔案**功能表上，指向**新增**，然後按一下 **專案**。 尋找**Windows 應用程式 (WPF)** 範本和名稱"AnimatedButton"的專案。 這會建立應用程式的基本架構。  
   
-3.  **新增基本的預設按鈕：**範本會提供本逐步解說所需的所有檔案。 按兩下 [方案總管] 中開啟 Window1.xaml 檔案。 根據預設，沒有<xref:System.Windows.Controls.Grid>Window1.xaml 中的項目。 移除<xref:System.Windows.Controls.Grid>元素並加入一些按鈕，[!INCLUDE[TLA#tla_xaml](../../../../includes/tlasharptla-xaml-md.md)]輸入或複製並貼上下列反白顯示的程式碼，以 Window1.xaml 頁面：  
+3.  **新增基本的預設按鈕：** 範本會提供本逐步解說所需的所有檔案。 按兩下 [方案總管] 中開啟 Window1.xaml 檔案。 根據預設，沒有<xref:System.Windows.Controls.Grid>Window1.xaml 中的項目。 移除<xref:System.Windows.Controls.Grid>元素並加入一些按鈕，[!INCLUDE[TLA#tla_xaml](../../../../includes/tlasharptla-xaml-md.md)]輸入或複製並貼上下列反白顯示的程式碼，以 Window1.xaml 頁面：  
   
     ```xaml  
     <Window x:Class="AnimatedButton.Window1"  
@@ -52,7 +53,7 @@ ms.lasthandoff: 05/04/2018
   
 #### <a name="to-use-styles-to-set-basic-properties-on-the-buttons"></a>若要使用樣式設定按鈕上的基本內容  
   
-1.  **定義 Application.Resources 區塊：**開啟 app.xaml 並加入下列反白顯示的標記，如果它已經不存在：  
+1.  **定義 Application.Resources 區塊：** 開啟 app.xaml 並加入下列反白顯示的標記，如果它已經不存在：  
   
     ```xaml  
     <Application x:Class="AnimatedButton.App"  
@@ -68,7 +69,7 @@ ms.lasthandoff: 05/04/2018
   
      資源範圍取決於您用來定義資源。 定義中的資源`Application.Resources`app.xaml 檔案可讓要從任何地方使用應用程式的資源。 若要深入了解定義資源的範圍，請參閱[XAML 資源](../../../../docs/framework/wpf/advanced/xaml-resources.md)。  
   
-2.  **建立樣式，並定義與它的基本屬性值：**加入下列標記以`Application.Resources`區塊。 這個標記會建立<xref:System.Windows.Style>可套用至應用程式設定中的所有按鈕<xref:System.Windows.FrameworkElement.Width%2A>為 90 的按鈕和<xref:System.Windows.FrameworkElement.Margin%2A>為 10:  
+2.  **建立樣式，並定義與它的基本屬性值：** 加入下列標記以`Application.Resources`區塊。 這個標記會建立<xref:System.Windows.Style>可套用至應用程式設定中的所有按鈕<xref:System.Windows.FrameworkElement.Width%2A>為 90 的按鈕和<xref:System.Windows.FrameworkElement.Margin%2A>為 10:  
   
     ```xaml  
     <Application.Resources>  
@@ -85,7 +86,7 @@ ms.lasthandoff: 05/04/2018
   
      還有更多您可以使用樣式，包括各種微調哪些物件為目標的方法、 指定複雜的屬性值，以及其他樣式甚至使用做為輸入的樣式。 如需詳細資訊，請參閱 [設定樣式和範本](../../../../docs/framework/wpf/controls/styling-and-templating.md)。  
   
-3.  **樣式屬性值設定為資源：**資源可讓重複使用一般定義的物件和值的簡單方法。 它特別適合用於定義複雜的值使用，讓程式碼更模組化的資源。 App.xaml 中加入下列反白顯示的標記。  
+3.  **樣式屬性值設定為資源：** 資源可讓重複使用一般定義的物件和值的簡單方法。 它特別適合用於定義複雜的值使用，讓程式碼更模組化的資源。 App.xaml 中加入下列反白顯示的標記。  
   
     ```xaml  
     <Application.Resources>  
@@ -115,7 +116,7 @@ ms.lasthandoff: 05/04/2018
   
 #### <a name="to-use-the-template-to-define-the-look-of-the-button"></a>若要使用範本來定義按鈕的外觀  
   
-1.  **設定範本：**因為控制項喜歡<xref:System.Windows.Controls.Button>有<xref:System.Windows.Controls.Control.Template%2A>屬性，您可以定義範本的屬性值，就像其他我們已在中設定的屬性值一樣<xref:System.Windows.Style>使用<xref:System.Windows.Setter>。 將下列反白顯示的標記加入至按鈕樣式。  
+1.  **設定範本：** 因為控制項喜歡<xref:System.Windows.Controls.Button>有<xref:System.Windows.Controls.Control.Template%2A>屬性，您可以定義範本的屬性值，就像其他我們已在中設定的屬性值一樣<xref:System.Windows.Style>使用<xref:System.Windows.Setter>。 將下列反白顯示的標記加入至按鈕樣式。  
   
     ```xaml
     <Application.Resources>  
@@ -138,7 +139,7 @@ ms.lasthandoff: 05/04/2018
     </Application.Resources>  
     ```  
   
-2.  **Alter 按鈕簡報：**此時，您需要定義範本。 加入下列反白顯示的標記。 這個標記可以指定兩個<xref:System.Windows.Shapes.Rectangle>具有圓角邊緣、 項目後面<xref:System.Windows.Controls.DockPanel>。 <xref:System.Windows.Controls.DockPanel>用來裝載<xref:System.Windows.Controls.ContentPresenter> 按鈕。 A<xref:System.Windows.Controls.ContentPresenter>顯示按鈕的內容。 本逐步解說的內容是文字 （"按鈕 1 」、 「 按鈕 2 」、 「 按鈕 3 」）。 所有範本元件 (矩形和<xref:System.Windows.Controls.DockPanel>) 內的配置<xref:System.Windows.Controls.Grid>。  
+2.  **Alter 按鈕簡報：** 此時，您需要定義範本。 加入下列反白顯示的標記。 這個標記可以指定兩個<xref:System.Windows.Shapes.Rectangle>具有圓角邊緣、 項目後面<xref:System.Windows.Controls.DockPanel>。 <xref:System.Windows.Controls.DockPanel>用來裝載<xref:System.Windows.Controls.ContentPresenter> 按鈕。 A<xref:System.Windows.Controls.ContentPresenter>顯示按鈕的內容。 本逐步解說的內容是文字 （"按鈕 1 」、 「 按鈕 2 」、 「 按鈕 3 」）。 所有範本元件 (矩形和<xref:System.Windows.Controls.DockPanel>) 內的配置<xref:System.Windows.Controls.Grid>。  
   
     ```xaml  
     <Setter.Value>  
@@ -210,7 +211,7 @@ ms.lasthandoff: 05/04/2018
   
 #### <a name="to-create-button-interactivity"></a>若要建立按鈕互動性  
   
-1.  **新增範本觸發程序：**將反白顯示的標記加入至您的範本。  
+1.  **新增範本觸發程序：** 將反白顯示的標記加入至您的範本。  
   
     ```  
     <Setter.Value>  
@@ -275,7 +276,7 @@ ms.lasthandoff: 05/04/2018
     </Setter.Value>  
     ```  
   
-2.  **加入屬性觸發程序：**新增的反白顯示的標記`ControlTemplate.Triggers`區塊：  
+2.  **加入屬性觸發程序：** 新增的反白顯示的標記`ControlTemplate.Triggers`區塊：  
   
     ```  
     <ControlTemplate.Triggers>  
@@ -287,7 +288,7 @@ ms.lasthandoff: 05/04/2018
   
      按 F5 執行應用程式，並查看其效果的按鈕執行滑鼠指標。  
   
-3.  **將焦點觸發程序：**接下來，我們要在其中加入一些類似的 setter，以處理的情況時 （例如，在使用者按一下它之後） 的焦點按鈕的。  
+3.  **將焦點觸發程序：** 接下來，我們要在其中加入一些類似的 setter，以處理的情況時 （例如，在使用者按一下它之後） 的焦點按鈕的。  
   
     ```  
     <ControlTemplate.Triggers>  
@@ -355,7 +356,7 @@ ms.lasthandoff: 05/04/2018
   
      第二個事件觸發程序 (<xref:System.Windows.UIElement.MouseLeave>) 只會停止的第一個。 當您停止<xref:System.Windows.Media.Animation.Storyboard>，所有動畫的屬性會傳回成為其預設值。 因此，當使用者移出按鈕的指標，按鈕回到前滑鼠指標移至按鈕上方的方式。 如需動畫的詳細資訊，請參閱[動畫概觀](../../../../docs/framework/wpf/graphics-multimedia/animation-overview.md)。  
   
-5.  **加入按一下按鈕時的動畫：**最後一個步驟是加入當使用者按一下按鈕的觸發程序。 加入下列任何位置內的標記`ControlTemplate.Triggers`區塊：  
+5.  **加入按一下按鈕時的動畫：** 最後一個步驟是加入當使用者按一下按鈕的觸發程序。 加入下列任何位置內的標記`ControlTemplate.Triggers`區塊：  
   
     ```  
     <!-- Animation fires when button is clicked, causing glass to spin.  -->  

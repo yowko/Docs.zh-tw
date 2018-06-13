@@ -15,6 +15,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: zh-TW
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33522342"
 ---
 # <a name="how-to-use-a-color-matrix-to-set-alpha-values-in-images"></a>如何：使用色彩矩陣設定影像中的 Alpha 值
 <xref:System.Drawing.Bitmap>類別 (繼承自<xref:System.Drawing.Image>類別) 和<xref:System.Drawing.Imaging.ImageAttributes>類別提供取得和設定像素值的功能。 您可以使用<xref:System.Drawing.Imaging.ImageAttributes>類別來修改 alpha 值整個影像，或您可以呼叫<xref:System.Drawing.Bitmap.SetPixel%2A>方法<xref:System.Drawing.Bitmap>類別以修改個別像素值。  

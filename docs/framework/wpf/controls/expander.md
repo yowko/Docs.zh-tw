@@ -15,6 +15,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: zh-TW
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33551963"
 ---
 # <a name="expander"></a>展開工具
 <xref:System.Windows.Controls.Expander>允許使用者檢視標頭，然後展開該標頭可查看進一步的詳細資訊，或若要摺疊至標頭區段。  

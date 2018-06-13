@@ -19,6 +19,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: zh-TW
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33521537"
 ---
 # <a name="how-to-draw-vertical-text-on-a-windows-form"></a>如何：在 Windows Form 上繪製直排文字
 下列程式碼範例示範如何使用在表單上繪製垂直文字<xref:System.Drawing.Graphics.DrawString%2A>方法<xref:System.Drawing.Graphics>。  

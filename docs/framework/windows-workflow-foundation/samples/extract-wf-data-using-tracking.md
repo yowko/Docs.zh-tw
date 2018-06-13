@@ -7,6 +7,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: zh-TW
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33519869"
 ---
 # <a name="extract-wf-data-using-tracking"></a>使用追蹤擷取 WF 資料
 此範例會示範如何使用工作流程追蹤，從活動中擷取工作流程變數和引數。 也會示範如何加入追蹤記錄的註釋，以及在自訂追蹤記錄內擷取資料裝載。 此範例會使用 Windows 事件追蹤 (ETW) 追蹤參與者，從工作流程中擷取資料。  

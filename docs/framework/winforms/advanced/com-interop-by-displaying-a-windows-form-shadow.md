@@ -13,6 +13,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: zh-TW
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33519713"
 ---
 # <a name="how-to-support-com-interop-by-displaying-a-windows-form-with-the-showdialog-method"></a>如何：顯示 Windows Form 和 ShowDialog 方法以支援 COM Interop
 您可以藉由在 [!INCLUDE[dnprdnshort](../../../../includes/dnprdnshort-md.md)] 訊息迴圈上顯示 Windows Forms 來解決元件物件模型 (COM) 互通性問題，而此訊息迴圈是使用 <xref:System.Windows.Forms.Application.Run%2A?displayProperty=nameWithType> 方法建立而成。  

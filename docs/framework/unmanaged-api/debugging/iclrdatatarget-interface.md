@@ -18,9 +18,10 @@ author: rpetrusha
 ms.author: ronpet
 ms.openlocfilehash: b0a5abe8877c8414443fadc00e223df240721132
 ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
-ms.translationtype: MT
+ms.translationtype: HT
 ms.contentlocale: zh-TW
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33410438"
 ---
 # <a name="iclrdatatarget-interface"></a>ICLRDataTarget 介面
 提供 common language runtime (CLR) 的目標項目互動的方法。  
@@ -45,7 +46,7 @@ ms.lasthandoff: 05/04/2018
  API 用戶端 （也就是偵錯工具） 必須實作此介面適用於特定的目標項目。 例如，即時處理序的實作與記憶體傾印的實作不同。  
   
 ## <a name="requirements"></a>需求  
- **平台：**看到[系統需求](../../../../docs/framework/get-started/system-requirements.md)。  
+ **平台：** 看到[系統需求](../../../../docs/framework/get-started/system-requirements.md)。  
   
  **標頭：** ClrData.idl、 ClrData.h  
   

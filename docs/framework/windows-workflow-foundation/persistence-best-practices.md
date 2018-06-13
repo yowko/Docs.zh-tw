@@ -7,6 +7,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: zh-TW
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33520184"
 ---
 # <a name="persistence-best-practices"></a>持續性的最佳作法
 本文件包含與工作流程持續性相關之工作流程設計與組態的最佳作法。  

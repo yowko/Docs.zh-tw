@@ -15,6 +15,7 @@ ms.sourcegitcommit: 11f11ca6cefe555972b3a5c99729d1a7523d8f50
 ms.translationtype: HT
 ms.contentlocale: zh-TW
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32742240"
 ---
 # <a name="type-forwarding-in-the-common-language-runtime"></a>Common Language Runtime 中的類型轉送
 型別轉送可讓您將型別移至另一個組件，而無須重新編譯使用原始組件的應用程式。  

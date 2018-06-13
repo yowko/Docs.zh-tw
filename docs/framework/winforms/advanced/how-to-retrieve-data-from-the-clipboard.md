@@ -13,6 +13,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: zh-TW
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33524075"
 ---
 # <a name="how-to-retrieve-data-from-the-clipboard"></a>如何：從剪貼簿擷取資料
 <xref:System.Windows.Forms.Clipboard>類別提供可用來與 Windows 作業系統的剪貼簿功能互動的方法。 許多應用程式的資料做為暫存的儲存機制使用剪貼簿。 例如，文書處理器會使用剪貼簿剪下和貼上作業期間。 也適用於將資訊傳送到另一個應用程式從剪貼簿。  

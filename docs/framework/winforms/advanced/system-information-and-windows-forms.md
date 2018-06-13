@@ -15,6 +15,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: zh-TW
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33524111"
 ---
 # <a name="system-information-and-windows-forms"></a>系統資訊和 Windows Form
 有時則需要收集您的應用程式執行才能做出的決策，在程式碼中的電腦的相關資訊。 例如，您可能只是適用於連線到特定的網路網域; 函式在此情況下，您必須能夠判斷的網域，並停用此函式，如果網域不存在。  

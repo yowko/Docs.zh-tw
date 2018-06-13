@@ -12,6 +12,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: zh-TW
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33552892"
 ---
 # <a name="progressbar"></a>進度列
 A<xref:System.Windows.Controls.ProgressBar>指出作業的進度。 <xref:System.Windows.Controls.ProgressBar>控制項所組成的視窗，隨著作業的進度填滿系統的醒目提示色彩。  

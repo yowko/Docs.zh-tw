@@ -12,6 +12,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: zh-TW
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33566596"
 ---
 # <a name="wpf-brushes-overview"></a>WPF 筆刷概觀
 螢幕上看見的項目是可見的因為它已繪製的筆刷。 例如，筆刷用來描述的按鈕、 文字、 前景和填滿圖形的背景。 本主題介紹的概念與繪製[!INCLUDE[TLA#tla_winclient](../../../../includes/tlasharptla-winclient-md.md)]筆刷，並提供範例。 筆刷可讓您以任何項目 (從簡單的純色到複雜的圖樣和影像集) 繪製 [!INCLUDE[TLA#tla_ui](../../../../includes/tlasharptla-ui-md.md)] 物件。  

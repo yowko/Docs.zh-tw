@@ -11,6 +11,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: zh-TW
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33521774"
 ---
 # <a name="coordinate-systems-and-transformations"></a>座標系統和轉換
 [!INCLUDE[ndptecgdiplus](../../../../includes/ndptecgdiplus-md.md)] 提供自然變換和頁面轉換，以便您可以將轉換 （旋轉、 縮放、 轉譯，等等） 繪製的項目。 在兩次轉換也可讓您能夠以各種不同的座標系統。  

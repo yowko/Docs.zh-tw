@@ -10,6 +10,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: zh-TW
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33519515"
 ---
 # <a name="how-to-run-a-workflow"></a>HOW TO：執行工作流程
 本主題將延續 Windows Workflow Foundation 快速入門教學課程，並討論如何建立工作流程主機以及執行上一個 [How to: Create a Workflow](../../../docs/framework/windows-workflow-foundation/how-to-create-a-workflow.md) 主題中定義的工作流程。  

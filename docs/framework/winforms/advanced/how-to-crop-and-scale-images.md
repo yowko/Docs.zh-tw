@@ -13,6 +13,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: zh-TW
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33521634"
 ---
 # <a name="how-to-crop-and-scale-images"></a>如何：裁剪和縮放影像
 <xref:System.Drawing.Graphics>類別提供幾種<xref:System.Drawing.Graphics.DrawImage%2A>方法，其中有些具有來源和目的地矩形參數可用來裁剪和縮放影像。  

@@ -9,6 +9,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: zh-TW
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33519843"
 ---
 # <a name="using-and-creating-activities"></a>使用與建立活動
 本節中的主題描述可用的 Windows Workflow Foundation (WF) 的系統提供活動。  

@@ -15,6 +15,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: zh-TW
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33523217"
 ---
 # <a name="how-to-draw-a-line-with-line-caps"></a>如何：繪製包含線條帽緣的線條
 您可以繪製開頭或行尾的其中一種稱為線條頭尾圖案的數個圖形。 [!INCLUDE[ndptecgdiplus](../../../../includes/ndptecgdiplus-md.md)] 支援數個線條頭尾圖案，例如循、 正方形、 菱形和箭頭。  

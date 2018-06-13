@@ -12,6 +12,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: zh-TW
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33551976"
 ---
 # <a name="how-to-get-or-set-canvas-positioning-properties"></a>如何：取得或設定 Canvas 定位屬性
 這個範例示範如何使用定位方法<xref:System.Windows.Controls.Canvas>，將子內容項目。 這個範例會使用中的內容<xref:System.Windows.Controls.ListBoxItem>來代表定位值，並將值的執行個體轉換為<xref:System.Double>，這是必要的引數的位置。 值是再轉換回字串，並且顯示為文字中<xref:System.Windows.Controls.TextBlock>所使用的項目<xref:System.Windows.Controls.Canvas.GetLeft%2A>方法。  

@@ -9,6 +9,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: HT
 ms.contentlocale: zh-TW
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33217164"
 ---
 # <a name="access-modifiers-c-reference"></a>存取修飾詞 (C# 參考)
 存取修飾詞是用來指定成員或類型的宣告存取範圍的關鍵字。 本節將介紹四種存取修飾詞：  

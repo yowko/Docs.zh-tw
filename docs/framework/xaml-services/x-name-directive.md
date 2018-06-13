@@ -15,6 +15,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: zh-TW
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33565846"
 ---
 # <a name="xname-directive"></a>x:Name 指示詞
 可唯一識別已定義 XAML 的 XAML 名稱範圍中的項目。 XAML 名稱範圍和其唯一性模型可以套用至具現化物件，架構會提供 Api，或實作行為，在執行階段存取 XAML 建立的物件圖形時。  

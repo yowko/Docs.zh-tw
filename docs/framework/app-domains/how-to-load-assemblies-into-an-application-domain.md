@@ -16,6 +16,7 @@ ms.sourcegitcommit: 11f11ca6cefe555972b3a5c99729d1a7523d8f50
 ms.translationtype: HT
 ms.contentlocale: zh-TW
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32741902"
 ---
 # <a name="how-to-load-assemblies-into-an-application-domain"></a>如何：將組件載入應用程式定義域
 有數種方式可以將組件載入應用程式定義域。 建議的方法是使用 <xref:System.Reflection.Assembly?displayProperty=nameWithType> 類別的 `static` (在 Visual Basic 中為 `Shared`) <xref:System.Reflection.Assembly.Load%2A> 方法。 其他可以載入組件的方式包括：  

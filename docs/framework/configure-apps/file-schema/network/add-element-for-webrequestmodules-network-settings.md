@@ -18,6 +18,7 @@ ms.sourcegitcommit: 11f11ca6cefe555972b3a5c99729d1a7523d8f50
 ms.translationtype: MT
 ms.contentlocale: zh-TW
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32742786"
 ---
 # <a name="ltaddgt-element-for-webrequestmodules-network-settings"></a>&lt;新增&gt;webRequestModules （網路設定） 的項目
 將自訂的 Web 要求模組加入至應用程式。  

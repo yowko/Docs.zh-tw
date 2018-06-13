@@ -10,6 +10,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: zh-TW
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33520327"
 ---
 # <a name="how-to-create-and-run-a-long-running-workflow"></a>How to: Create and Run a Long Running Workflow
 其中一個核心功能的 Windows Workflow Foundation (WF) 是保存及卸載閒置的工作流程，以資料庫的執行階段的能力。 中的步驟[如何： 執行工作流程](../../../docs/framework/windows-workflow-foundation/how-to-run-a-workflow.md)所示範的工作流程主機使用的主控台應用程式基本概念。 範例包括啟動工作流程、工作流程開發週期處理常式，以及繼續使用書籤。 為有效示範工作流程持續性，必須要有較複雜的工作流程主機，以支援啟動與繼續使用多個工作流程執行個體。 教學課程中的這個步驟，示範如何建立 Windows 表單主應用程式，以支援啟動與繼續使用多個工作流程執行個體、工作流程持續性，並且為後續教學課程步驟中示範的追蹤和版本設定等進階功能提供基礎。  
@@ -44,7 +45,7 @@ ms.lasthandoff: 05/04/2018
   
 ###  <a name="BKMK_CreatePersistenceDatabase"></a> 若要建立持續性資料庫  
   
-1.  開啟 SQL Server Management Studio 並連接到本機伺服器，例如**。 \SQLEXPRESS**。 以滑鼠右鍵按一下**資料庫**本機伺服器，然後選取節點**新資料庫**。 將新資料庫命名**WF45GettingStartedTutorial**，接受所有其他值，然後選取**確定**。  
+1.  開啟 SQL Server Management Studio 並連接到本機伺服器，例如 **。 \SQLEXPRESS**。 以滑鼠右鍵按一下**資料庫**本機伺服器，然後選取節點**新資料庫**。 將新資料庫命名**WF45GettingStartedTutorial**，接受所有其他值，然後選取**確定**。  
   
     > [!NOTE]
     >  請確定您有**Create Database**本機伺服器上的權限，才能建立資料庫。  
