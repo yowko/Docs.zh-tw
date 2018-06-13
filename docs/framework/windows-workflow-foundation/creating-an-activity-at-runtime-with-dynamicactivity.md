@@ -1,49 +1,39 @@
 ---
-title: "使用 DynamicActivity 在執行階段建立活動"
-ms.custom: 
+title: 使用 DynamicActivity 在執行階段建立活動
 ms.date: 03/30/2017
-ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.tgt_pltfrm: 
-ms.topic: article
 ms.assetid: 1af85cc6-912d-449e-90c5-c5db3eca5ace
-caps.latest.revision: "9"
-author: dotnet-bot
-ms.author: dotnetcontent
-manager: wpickett
-ms.workload: dotnet
-ms.openlocfilehash: ebbd6e77c2c47754054a81f4b07d3d845cdcac00
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.openlocfilehash: 0450a56059083f355f3fd71d95c83bf8dd1cf0e2
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 05/04/2018
+ms.locfileid: "33515170"
 ---
-# <a name="creating-an-activity-at-runtime-with-dynamicactivity"></a><span data-ttu-id="e7cc7-102">使用 DynamicActivity 在執行階段建立活動</span><span class="sxs-lookup"><span data-stu-id="e7cc7-102">Creating an Activity at Runtime with DynamicActivity</span></span>
-<span data-ttu-id="e7cc7-103"><xref:System.Activities.DynamicActivity> 是含公用建構函式的具體密封類別。</span><span class="sxs-lookup"><span data-stu-id="e7cc7-103"><xref:System.Activities.DynamicActivity> is a concrete, sealed class with a public constructor.</span></span> <span data-ttu-id="e7cc7-104"><xref:System.Activities.DynamicActivity> 可在執行階段中使用活動 DOM 來組合活動功能。</span><span class="sxs-lookup"><span data-stu-id="e7cc7-104"><xref:System.Activities.DynamicActivity> can be used to assemble activity functionality at runtime using an activity DOM.</span></span>  
+# <a name="creating-an-activity-at-runtime-with-dynamicactivity"></a><span data-ttu-id="cde92-102">使用 DynamicActivity 在執行階段建立活動</span><span class="sxs-lookup"><span data-stu-id="cde92-102">Creating an Activity at Runtime with DynamicActivity</span></span>
+<span data-ttu-id="cde92-103"><xref:System.Activities.DynamicActivity> 是含公用建構函式的具體密封類別。</span><span class="sxs-lookup"><span data-stu-id="cde92-103"><xref:System.Activities.DynamicActivity> is a concrete, sealed class with a public constructor.</span></span> <span data-ttu-id="cde92-104"><xref:System.Activities.DynamicActivity> 可在執行階段中使用活動 DOM 來組合活動功能。</span><span class="sxs-lookup"><span data-stu-id="cde92-104"><xref:System.Activities.DynamicActivity> can be used to assemble activity functionality at runtime using an activity DOM.</span></span>  
   
-## <a name="dynamicactivity-features"></a><span data-ttu-id="e7cc7-105">DynamicActivity 功能</span><span class="sxs-lookup"><span data-stu-id="e7cc7-105">DynamicActivity Features</span></span>  
- <span data-ttu-id="e7cc7-106"><xref:System.Activities.DynamicActivity> 可以存取執行屬性、引數和變數，但不可以存取執行階段服務，例如排定子活動或追蹤。</span><span class="sxs-lookup"><span data-stu-id="e7cc7-106"><xref:System.Activities.DynamicActivity> has access to execution properties, arguments and variables, but no access to run-time services such as scheduling child activities or tracking.</span></span>  
+## <a name="dynamicactivity-features"></a><span data-ttu-id="cde92-105">DynamicActivity 功能</span><span class="sxs-lookup"><span data-stu-id="cde92-105">DynamicActivity Features</span></span>  
+ <span data-ttu-id="cde92-106"><xref:System.Activities.DynamicActivity> 可以存取執行屬性、引數和變數，但不可以存取執行階段服務，例如排定子活動或追蹤。</span><span class="sxs-lookup"><span data-stu-id="cde92-106"><xref:System.Activities.DynamicActivity> has access to execution properties, arguments and variables, but no access to run-time services such as scheduling child activities or tracking.</span></span>  
   
- <span data-ttu-id="e7cc7-107">最上層的屬性可以使用工作流程 <xref:System.Activities.Argument> 物件來設定。</span><span class="sxs-lookup"><span data-stu-id="e7cc7-107">Top-level properties can be set using workflow <xref:System.Activities.Argument> objects.</span></span> <span data-ttu-id="e7cc7-108">在命令式程式碼中，這些引數是使用新型別的 CLR 屬性建立的。</span><span class="sxs-lookup"><span data-stu-id="e7cc7-108">In imperative code, these arguments are created using CLR properties on a new type.</span></span> <span data-ttu-id="e7cc7-109">在 XAML 中，這些引數則是使用 `x:Class` 和 `x:Member` 標籤宣告的。</span><span class="sxs-lookup"><span data-stu-id="e7cc7-109">In XAML, they are declared using `x:Class` and `x:Member` tags.</span></span>  
+ <span data-ttu-id="cde92-107">最上層的屬性可以使用工作流程 <xref:System.Activities.Argument> 物件來設定。</span><span class="sxs-lookup"><span data-stu-id="cde92-107">Top-level properties can be set using workflow <xref:System.Activities.Argument> objects.</span></span> <span data-ttu-id="cde92-108">在命令式程式碼中，這些引數是使用新型別的 CLR 屬性建立的。</span><span class="sxs-lookup"><span data-stu-id="cde92-108">In imperative code, these arguments are created using CLR properties on a new type.</span></span> <span data-ttu-id="cde92-109">在 XAML 中，這些引數則是使用 `x:Class` 和 `x:Member` 標籤宣告的。</span><span class="sxs-lookup"><span data-stu-id="cde92-109">In XAML, they are declared using `x:Class` and `x:Member` tags.</span></span>  
   
- <span data-ttu-id="e7cc7-110">使用 <xref:System.Activities.DynamicActivity> 介面建構的活動，此介面具有使用 <xref:System.ComponentModel.ICustomTypeDescriptor> 的設計工具。</span><span class="sxs-lookup"><span data-stu-id="e7cc7-110">Activities constructed using <xref:System.Activities.DynamicActivity> interface with the designer using <xref:System.ComponentModel.ICustomTypeDescriptor>.</span></span> <span data-ttu-id="e7cc7-111">在設計工具中建立的活動可使用 <xref:System.Activities.XamlIntegration.ActivityXamlServices.Load%2A> 動態載入，如下列程序中的示範。</span><span class="sxs-lookup"><span data-stu-id="e7cc7-111">Activities created in the designer can be loaded dynamically using <xref:System.Activities.XamlIntegration.ActivityXamlServices.Load%2A>, as demonstrated in the following procedure.</span></span>  
+ <span data-ttu-id="cde92-110">使用 <xref:System.Activities.DynamicActivity> 介面建構的活動，此介面具有使用 <xref:System.ComponentModel.ICustomTypeDescriptor> 的設計工具。</span><span class="sxs-lookup"><span data-stu-id="cde92-110">Activities constructed using <xref:System.Activities.DynamicActivity> interface with the designer using <xref:System.ComponentModel.ICustomTypeDescriptor>.</span></span> <span data-ttu-id="cde92-111">在設計工具中建立的活動可使用 <xref:System.Activities.XamlIntegration.ActivityXamlServices.Load%2A> 動態載入，如下列程序中的示範。</span><span class="sxs-lookup"><span data-stu-id="cde92-111">Activities created in the designer can be loaded dynamically using <xref:System.Activities.XamlIntegration.ActivityXamlServices.Load%2A>, as demonstrated in the following procedure.</span></span>  
   
-#### <a name="to-create-an-activity-at-runtime-using-imperative-code"></a><span data-ttu-id="e7cc7-112">若要使用命令式程式碼在執行階段建立活動</span><span class="sxs-lookup"><span data-stu-id="e7cc7-112">To create an activity at runtime using imperative code</span></span>  
+#### <a name="to-create-an-activity-at-runtime-using-imperative-code"></a><span data-ttu-id="cde92-112">若要使用命令式程式碼在執行階段建立活動</span><span class="sxs-lookup"><span data-stu-id="cde92-112">To create an activity at runtime using imperative code</span></span>  
   
-1.  <span data-ttu-id="e7cc7-113">開啟 [!INCLUDE[vs2010](../../../includes/vs2010-md.md)]。</span><span class="sxs-lookup"><span data-stu-id="e7cc7-113">Open[!INCLUDE[vs2010](../../../includes/vs2010-md.md)].</span></span>  
+1.  <span data-ttu-id="cde92-113">開啟 [!INCLUDE[vs2010](../../../includes/vs2010-md.md)]。</span><span class="sxs-lookup"><span data-stu-id="cde92-113">Open[!INCLUDE[vs2010](../../../includes/vs2010-md.md)].</span></span>  
   
-2.  <span data-ttu-id="e7cc7-114">選取**檔案**，**新**，**專案**。</span><span class="sxs-lookup"><span data-stu-id="e7cc7-114">Select **File**, **New**, **Project**.</span></span> <span data-ttu-id="e7cc7-115">選取**Workflow 4.0**下**Visual C#**中**專案類型**視窗，並選取**v2010**節點。</span><span class="sxs-lookup"><span data-stu-id="e7cc7-115">Select **Workflow 4.0** under **Visual C#** in the **Project Types** window, and select the **v2010** node.</span></span> <span data-ttu-id="e7cc7-116">選取**循序工作流程主控台應用程式**中**範本**視窗。</span><span class="sxs-lookup"><span data-stu-id="e7cc7-116">Select **Sequential Workflow Console Application** in the **Templates** window.</span></span> <span data-ttu-id="e7cc7-117">將新專案命名為 DynamicActivitySample。</span><span class="sxs-lookup"><span data-stu-id="e7cc7-117">Name the new project DynamicActivitySample.</span></span>  
+2.  <span data-ttu-id="cde92-114">選取**檔案**，**新**，**專案**。</span><span class="sxs-lookup"><span data-stu-id="cde92-114">Select **File**, **New**, **Project**.</span></span> <span data-ttu-id="cde92-115">選取**Workflow 4.0**下**Visual C#** 中**專案類型**視窗，並選取**v2010**節點。</span><span class="sxs-lookup"><span data-stu-id="cde92-115">Select **Workflow 4.0** under **Visual C#** in the **Project Types** window, and select the **v2010** node.</span></span> <span data-ttu-id="cde92-116">選取**循序工作流程主控台應用程式**中**範本**視窗。</span><span class="sxs-lookup"><span data-stu-id="cde92-116">Select **Sequential Workflow Console Application** in the **Templates** window.</span></span> <span data-ttu-id="cde92-117">將新專案命名為 DynamicActivitySample。</span><span class="sxs-lookup"><span data-stu-id="cde92-117">Name the new project DynamicActivitySample.</span></span>  
   
-3.  <span data-ttu-id="e7cc7-118">以滑鼠右鍵按一下 HelloActivity 專案中的 Workflow1.xaml，然後選取**刪除**。</span><span class="sxs-lookup"><span data-stu-id="e7cc7-118">Right-click Workflow1.xaml in the HelloActivity project and select **Delete**.</span></span>  
+3.  <span data-ttu-id="cde92-118">以滑鼠右鍵按一下 HelloActivity 專案中的 Workflow1.xaml，然後選取**刪除**。</span><span class="sxs-lookup"><span data-stu-id="cde92-118">Right-click Workflow1.xaml in the HelloActivity project and select **Delete**.</span></span>  
   
-4.  <span data-ttu-id="e7cc7-119">開啟 Program.cs。</span><span class="sxs-lookup"><span data-stu-id="e7cc7-119">Open Program.cs.</span></span> <span data-ttu-id="e7cc7-120">將下列指示詞加入至檔案的頂端。</span><span class="sxs-lookup"><span data-stu-id="e7cc7-120">Add the following directive to the top of the file.</span></span>  
+4.  <span data-ttu-id="cde92-119">開啟 Program.cs。</span><span class="sxs-lookup"><span data-stu-id="cde92-119">Open Program.cs.</span></span> <span data-ttu-id="cde92-120">將下列指示詞加入至檔案的頂端。</span><span class="sxs-lookup"><span data-stu-id="cde92-120">Add the following directive to the top of the file.</span></span>  
   
     ```  
     using System.Collections.Generic;  
     ```  
   
-5.  <span data-ttu-id="e7cc7-121">以下列程式碼取代 `Main` 方法的內容，此程式碼會建立 <xref:System.Activities.Statements.Sequence> 活動 (包含單一 <xref:System.Activities.Statements.WriteLine> 活動)，並將該活動指派至新的動態活動之 <xref:System.Activities.DynamicActivity.Implementation%2A> 屬性。</span><span class="sxs-lookup"><span data-stu-id="e7cc7-121">Replace the contents of the `Main` method with the following code, which creates a <xref:System.Activities.Statements.Sequence> activity that contains a single <xref:System.Activities.Statements.WriteLine> activity and assigns it to the <xref:System.Activities.DynamicActivity.Implementation%2A> property of a new dynamic activity.</span></span>  
+5.  <span data-ttu-id="cde92-121">以下列程式碼取代 `Main` 方法的內容，此程式碼會建立 <xref:System.Activities.Statements.Sequence> 活動 (包含單一 <xref:System.Activities.Statements.WriteLine> 活動)，並將該活動指派至新的動態活動之 <xref:System.Activities.DynamicActivity.Implementation%2A> 屬性。</span><span class="sxs-lookup"><span data-stu-id="cde92-121">Replace the contents of the `Main` method with the following code, which creates a <xref:System.Activities.Statements.Sequence> activity that contains a single <xref:System.Activities.Statements.WriteLine> activity and assigns it to the <xref:System.Activities.DynamicActivity.Implementation%2A> property of a new dynamic activity.</span></span>  
   
     ```csharp  
     //Define the input argument for the activity  
@@ -76,25 +66,25 @@ ms.lasthandoff: 12/22/2017
                 Console.ReadLine();  
     ```  
   
-6.  <span data-ttu-id="e7cc7-122">執行應用程式。</span><span class="sxs-lookup"><span data-stu-id="e7cc7-122">Execute the application.</span></span> <span data-ttu-id="e7cc7-123">主控台視窗中，以文字"Hello World ！"</span><span class="sxs-lookup"><span data-stu-id="e7cc7-123">A console window with the text "Hello World!"</span></span> <span data-ttu-id="e7cc7-124">會顯示。</span><span class="sxs-lookup"><span data-stu-id="e7cc7-124">displays.</span></span>  
+6.  <span data-ttu-id="cde92-122">執行應用程式。</span><span class="sxs-lookup"><span data-stu-id="cde92-122">Execute the application.</span></span> <span data-ttu-id="cde92-123">主控台視窗中，以文字"Hello World ！"</span><span class="sxs-lookup"><span data-stu-id="cde92-123">A console window with the text "Hello World!"</span></span> <span data-ttu-id="cde92-124">會顯示。</span><span class="sxs-lookup"><span data-stu-id="cde92-124">displays.</span></span>  
   
-#### <a name="to-create-an-activity-at-runtime-using-xaml"></a><span data-ttu-id="e7cc7-125">若要使用 XAML 在執行階段建立活動</span><span class="sxs-lookup"><span data-stu-id="e7cc7-125">To create an activity at runtime using XAML</span></span>  
+#### <a name="to-create-an-activity-at-runtime-using-xaml"></a><span data-ttu-id="cde92-125">若要使用 XAML 在執行階段建立活動</span><span class="sxs-lookup"><span data-stu-id="cde92-125">To create an activity at runtime using XAML</span></span>  
   
-1.  <span data-ttu-id="e7cc7-126">開啟 [!INCLUDE[vs2010](../../../includes/vs2010-md.md)]。</span><span class="sxs-lookup"><span data-stu-id="e7cc7-126">Open [!INCLUDE[vs2010](../../../includes/vs2010-md.md)].</span></span>  
+1.  <span data-ttu-id="cde92-126">開啟 [!INCLUDE[vs2010](../../../includes/vs2010-md.md)]。</span><span class="sxs-lookup"><span data-stu-id="cde92-126">Open [!INCLUDE[vs2010](../../../includes/vs2010-md.md)].</span></span>  
   
-2.  <span data-ttu-id="e7cc7-127">選取**檔案**，**新**，**專案**。</span><span class="sxs-lookup"><span data-stu-id="e7cc7-127">Select **File**, **New**, **Project**.</span></span> <span data-ttu-id="e7cc7-128">選取**Workflow 4.0**下**Visual C#**中**專案類型**視窗，並選取**v2010**節點。</span><span class="sxs-lookup"><span data-stu-id="e7cc7-128">Select **Workflow 4.0** under **Visual C#** in the **Project Types** window, and select the **v2010** node.</span></span> <span data-ttu-id="e7cc7-129">選取**工作流程主控台應用程式**中**範本**視窗。</span><span class="sxs-lookup"><span data-stu-id="e7cc7-129">Select  **Workflow Console Application** in the **Templates** window.</span></span> <span data-ttu-id="e7cc7-130">將新專案命名為 DynamicActivitySample。</span><span class="sxs-lookup"><span data-stu-id="e7cc7-130">Name the new project DynamicActivitySample.</span></span>  
+2.  <span data-ttu-id="cde92-127">選取**檔案**，**新**，**專案**。</span><span class="sxs-lookup"><span data-stu-id="cde92-127">Select **File**, **New**, **Project**.</span></span> <span data-ttu-id="cde92-128">選取**Workflow 4.0**下**Visual C#** 中**專案類型**視窗，並選取**v2010**節點。</span><span class="sxs-lookup"><span data-stu-id="cde92-128">Select **Workflow 4.0** under **Visual C#** in the **Project Types** window, and select the **v2010** node.</span></span> <span data-ttu-id="cde92-129">選取**工作流程主控台應用程式**中**範本**視窗。</span><span class="sxs-lookup"><span data-stu-id="cde92-129">Select  **Workflow Console Application** in the **Templates** window.</span></span> <span data-ttu-id="cde92-130">將新專案命名為 DynamicActivitySample。</span><span class="sxs-lookup"><span data-stu-id="cde92-130">Name the new project DynamicActivitySample.</span></span>  
   
-3.  <span data-ttu-id="e7cc7-131">開啟 HelloActivity 專案中的 Workflow1.xaml。</span><span class="sxs-lookup"><span data-stu-id="e7cc7-131">Open Workflow1.xaml in the HelloActivity project.</span></span> <span data-ttu-id="e7cc7-132">按一下**引數**在設計工具底部的選項。</span><span class="sxs-lookup"><span data-stu-id="e7cc7-132">Click the **Arguments** option at the bottom of the designer.</span></span> <span data-ttu-id="e7cc7-133">建立新的 `In` 引數，其名稱為 `TextToWrite`、型別為 `String`。</span><span class="sxs-lookup"><span data-stu-id="e7cc7-133">Create a new `In` argument called `TextToWrite` of type `String`.</span></span>  
+3.  <span data-ttu-id="cde92-131">開啟 HelloActivity 專案中的 Workflow1.xaml。</span><span class="sxs-lookup"><span data-stu-id="cde92-131">Open Workflow1.xaml in the HelloActivity project.</span></span> <span data-ttu-id="cde92-132">按一下**引數**在設計工具底部的選項。</span><span class="sxs-lookup"><span data-stu-id="cde92-132">Click the **Arguments** option at the bottom of the designer.</span></span> <span data-ttu-id="cde92-133">建立新的 `In` 引數，其名稱為 `TextToWrite`、型別為 `String`。</span><span class="sxs-lookup"><span data-stu-id="cde92-133">Create a new `In` argument called `TextToWrite` of type `String`.</span></span>  
   
-4.  <span data-ttu-id="e7cc7-134">拖曳**WriteLine**活動從**基本型別**區段的 [工具箱] 拖曳至設計工具介面上。</span><span class="sxs-lookup"><span data-stu-id="e7cc7-134">Drag a **WriteLine** activity from the **Primitives** section of the toolbox onto the designer surface.</span></span> <span data-ttu-id="e7cc7-135">將值指派`TextToWrite`至**文字**活動的屬性。</span><span class="sxs-lookup"><span data-stu-id="e7cc7-135">Assign the value `TextToWrite` to the **Text** property of the activity.</span></span>  
+4.  <span data-ttu-id="cde92-134">拖曳**WriteLine**活動從**基本型別**區段的 [工具箱] 拖曳至設計工具介面上。</span><span class="sxs-lookup"><span data-stu-id="cde92-134">Drag a **WriteLine** activity from the **Primitives** section of the toolbox onto the designer surface.</span></span> <span data-ttu-id="cde92-135">將值指派`TextToWrite`至**文字**活動的屬性。</span><span class="sxs-lookup"><span data-stu-id="cde92-135">Assign the value `TextToWrite` to the **Text** property of the activity.</span></span>  
   
-5.  <span data-ttu-id="e7cc7-136">開啟 Program.cs。</span><span class="sxs-lookup"><span data-stu-id="e7cc7-136">Open Program.cs.</span></span> <span data-ttu-id="e7cc7-137">將下列指示詞加入至檔案的頂端。</span><span class="sxs-lookup"><span data-stu-id="e7cc7-137">Add the following directive to the top of the file.</span></span>  
+5.  <span data-ttu-id="cde92-136">開啟 Program.cs。</span><span class="sxs-lookup"><span data-stu-id="cde92-136">Open Program.cs.</span></span> <span data-ttu-id="cde92-137">將下列指示詞加入至檔案的頂端。</span><span class="sxs-lookup"><span data-stu-id="cde92-137">Add the following directive to the top of the file.</span></span>  
   
     ```  
     using System.Activities.XamlIntegration;  
     ```  
   
-6.  <span data-ttu-id="e7cc7-138">以下列程式碼取代 `Main` 方法的內容。</span><span class="sxs-lookup"><span data-stu-id="e7cc7-138">Replace the contents of the `Main` method with the following code.</span></span>  
+6.  <span data-ttu-id="cde92-138">以下列程式碼取代 `Main` 方法的內容。</span><span class="sxs-lookup"><span data-stu-id="cde92-138">Replace the contents of the `Main` method with the following code.</span></span>  
   
     ```  
     Activity act2 = ActivityXamlServices.Load(@"Workflow1.xaml");  
@@ -102,10 +92,10 @@ ms.lasthandoff: 12/22/2017
     Console.ReadLine();  
     ```  
   
-7.  <span data-ttu-id="e7cc7-139">執行應用程式。</span><span class="sxs-lookup"><span data-stu-id="e7cc7-139">Execute the application.</span></span> <span data-ttu-id="e7cc7-140">主控台視窗中，以文字"Hello World ！"</span><span class="sxs-lookup"><span data-stu-id="e7cc7-140">A console window with the text "Hello World!"</span></span> <span data-ttu-id="e7cc7-141">隨即出現。</span><span class="sxs-lookup"><span data-stu-id="e7cc7-141">appears.</span></span>  
+7.  <span data-ttu-id="cde92-139">執行應用程式。</span><span class="sxs-lookup"><span data-stu-id="cde92-139">Execute the application.</span></span> <span data-ttu-id="cde92-140">主控台視窗中，以文字"Hello World ！"</span><span class="sxs-lookup"><span data-stu-id="cde92-140">A console window with the text "Hello World!"</span></span> <span data-ttu-id="cde92-141">隨即出現。</span><span class="sxs-lookup"><span data-stu-id="cde92-141">appears.</span></span>  
   
-8.  <span data-ttu-id="e7cc7-142">以滑鼠右鍵按一下中的 workflow1.xaml**方案總管 中**選取**檢視程式碼**。</span><span class="sxs-lookup"><span data-stu-id="e7cc7-142">Right-click the Workflow1.xaml file in the **Solution Explorer** and select **View Code**.</span></span> <span data-ttu-id="e7cc7-143">請注意，活動類別是以 `x:Class` 建立的，而屬性則是以 `x:Property` 建立的。</span><span class="sxs-lookup"><span data-stu-id="e7cc7-143">Note that the activity class is created with `x:Class` and the property is created with `x:Property`.</span></span>  
+8.  <span data-ttu-id="cde92-142">以滑鼠右鍵按一下中的 workflow1.xaml**方案總管 中**選取**檢視程式碼**。</span><span class="sxs-lookup"><span data-stu-id="cde92-142">Right-click the Workflow1.xaml file in the **Solution Explorer** and select **View Code**.</span></span> <span data-ttu-id="cde92-143">請注意，活動類別是以 `x:Class` 建立的，而屬性則是以 `x:Property` 建立的。</span><span class="sxs-lookup"><span data-stu-id="cde92-143">Note that the activity class is created with `x:Class` and the property is created with `x:Property`.</span></span>  
   
-## <a name="see-also"></a><span data-ttu-id="e7cc7-144">請參閱</span><span class="sxs-lookup"><span data-stu-id="e7cc7-144">See Also</span></span>  
- [<span data-ttu-id="e7cc7-145">使用命令式程式碼撰寫工作流程、活動與運算式</span><span class="sxs-lookup"><span data-stu-id="e7cc7-145">Authoring Workflows, Activities, and Expressions Using Imperative Code</span></span>](../../../docs/framework/windows-workflow-foundation/authoring-workflows-activities-and-expressions-using-imperative-code.md)  
- [<span data-ttu-id="e7cc7-146">DynamicActivity 建立</span><span class="sxs-lookup"><span data-stu-id="e7cc7-146">DynamicActivity Creation</span></span>](../../../docs/framework/windows-workflow-foundation/samples/dynamicactivity-creation.md)
+## <a name="see-also"></a><span data-ttu-id="cde92-144">另請參閱</span><span class="sxs-lookup"><span data-stu-id="cde92-144">See Also</span></span>  
+ [<span data-ttu-id="cde92-145">使用命令式程式碼撰寫工作流程、活動與運算式</span><span class="sxs-lookup"><span data-stu-id="cde92-145">Authoring Workflows, Activities, and Expressions Using Imperative Code</span></span>](../../../docs/framework/windows-workflow-foundation/authoring-workflows-activities-and-expressions-using-imperative-code.md)  
+ [<span data-ttu-id="cde92-146">DynamicActivity 建立</span><span class="sxs-lookup"><span data-stu-id="cde92-146">DynamicActivity Creation</span></span>](../../../docs/framework/windows-workflow-foundation/samples/dynamicactivity-creation.md)

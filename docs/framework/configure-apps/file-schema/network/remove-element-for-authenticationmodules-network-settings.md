@@ -18,6 +18,7 @@ ms.sourcegitcommit: 11f11ca6cefe555972b3a5c99729d1a7523d8f50
 ms.translationtype: MT
 ms.contentlocale: zh-TW
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32742386"
 ---
 # <a name="ltremovegt-element-for-authenticationmodules-network-settings"></a><span data-ttu-id="5cd5e-102">&lt;移除&gt;authenticationModules （網路設定） 的項目</span><span class="sxs-lookup"><span data-stu-id="5cd5e-102">&lt;remove&gt; Element for authenticationModules (Network Settings)</span></span>
 <span data-ttu-id="5cd5e-103">移除應用程式中的驗證模組。</span><span class="sxs-lookup"><span data-stu-id="5cd5e-103">Removes an authentication module from the application.</span></span>  

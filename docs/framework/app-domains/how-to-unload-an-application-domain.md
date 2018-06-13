@@ -17,6 +17,7 @@ ms.sourcegitcommit: 11f11ca6cefe555972b3a5c99729d1a7523d8f50
 ms.translationtype: HT
 ms.contentlocale: zh-TW
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32742084"
 ---
 # <a name="how-to-unload-an-application-domain"></a><span data-ttu-id="29077-102">如何：卸載應用程式定義域</span><span class="sxs-lookup"><span data-stu-id="29077-102">How to: Unload an Application Domain</span></span>
 <span data-ttu-id="29077-103">當您完成使用應用程式定義域時，請使用 <xref:System.AppDomain.Unload%2A?displayProperty=nameWithType> 方法將它卸載。</span><span class="sxs-lookup"><span data-stu-id="29077-103">When you have finished using an application domain, unload it using the <xref:System.AppDomain.Unload%2A?displayProperty=nameWithType> method.</span></span> <span data-ttu-id="29077-104">**Unload** 方法會依正常程序關閉指定的應用程式定義域。</span><span class="sxs-lookup"><span data-stu-id="29077-104">The **Unload** method gracefully shuts down the specified application domain.</span></span> <span data-ttu-id="29077-105">在卸載過程中，任何新的執行緒皆不得存取應用程式定義域，且系統會將所有應用程式定義域特定的資料結構釋放出來，</span><span class="sxs-lookup"><span data-stu-id="29077-105">During the unloading process, no new threads can access the application domain, and all application domain–specific data structures are freed.</span></span>  

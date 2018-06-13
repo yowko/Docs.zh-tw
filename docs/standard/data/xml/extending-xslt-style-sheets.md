@@ -10,6 +10,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: HT
 ms.contentlocale: zh-TW
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33568819"
 ---
 # <a name="extending-xslt-style-sheets"></a><span data-ttu-id="0411b-102">延伸 XSLT 樣式表</span><span class="sxs-lookup"><span data-stu-id="0411b-102">Extending XSLT Style Sheets</span></span>
 <span data-ttu-id="0411b-103">本節說明擴充 XSLT 功能的不同方法。</span><span class="sxs-lookup"><span data-stu-id="0411b-103">This section describes the different methods of extending the XSLT functionality.</span></span> <span data-ttu-id="0411b-104">您可使用 <xref:System.Xml.Xsl.XsltArgumentList> 類別，加入擴充物件或參數。</span><span class="sxs-lookup"><span data-stu-id="0411b-104">You can add extension objects or parameters using the <xref:System.Xml.Xsl.XsltArgumentList> class.</span></span> <span data-ttu-id="0411b-105">然後可從樣式表呼叫該擴充物件或參數。</span><span class="sxs-lookup"><span data-stu-id="0411b-105">The extension objects or parameters can then be called from the style sheet.</span></span> <span data-ttu-id="0411b-106">此外，您還可使用 `msxsl:script` 項目將指令碼區塊嵌入樣式表中。</span><span class="sxs-lookup"><span data-stu-id="0411b-106">In addition, you can also embed script blocks into the style sheet by using the `msxsl:script` element.</span></span>  

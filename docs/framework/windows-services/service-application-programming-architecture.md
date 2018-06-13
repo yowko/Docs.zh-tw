@@ -21,6 +21,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: HT
 ms.contentlocale: zh-TW
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33516103"
 ---
 # <a name="service-application-programming-architecture"></a><span data-ttu-id="68a11-102">服務應用程式的程式設計架構</span><span class="sxs-lookup"><span data-stu-id="68a11-102">Service Application Programming Architecture</span></span>
 <span data-ttu-id="68a11-103">Windows 服務應用程式會以繼承自 <xref:System.ServiceProcess.ServiceBase?displayProperty=nameWithType> 類別的類別為基礎。</span><span class="sxs-lookup"><span data-stu-id="68a11-103">Windows Service applications are based on a class that inherits from the <xref:System.ServiceProcess.ServiceBase?displayProperty=nameWithType> class.</span></span> <span data-ttu-id="68a11-104">您會覆寫來自這個類別的方法，並定義適用於它們的功能以決定服務的行為方式。</span><span class="sxs-lookup"><span data-stu-id="68a11-104">You override methods from this class and define functionality for them to determine how your service behaves.</span></span>  

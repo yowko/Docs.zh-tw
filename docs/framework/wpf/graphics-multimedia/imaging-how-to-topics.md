@@ -12,6 +12,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: zh-TW
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33563369"
 ---
 # <a name="imaging-how-to-topics"></a><span data-ttu-id="33b7d-102">影像處理 HOW TO 主題</span><span class="sxs-lookup"><span data-stu-id="33b7d-102">Imaging How-to Topics</span></span>
 <span data-ttu-id="33b7d-103">此章節的主題示範如何使用[!INCLUDE[TLA#tla_winclient](../../../../includes/tlasharptla-winclient-md.md)]才能顯示或修改點陣圖影像。</span><span class="sxs-lookup"><span data-stu-id="33b7d-103">The topics in this section demonstrate how to use [!INCLUDE[TLA#tla_winclient](../../../../includes/tlasharptla-winclient-md.md)] in order to display or alter bitmap images.</span></span>  

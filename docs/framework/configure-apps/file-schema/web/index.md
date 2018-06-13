@@ -17,6 +17,7 @@ ms.sourcegitcommit: 11f11ca6cefe555972b3a5c99729d1a7523d8f50
 ms.translationtype: MT
 ms.contentlocale: zh-TW
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32767475"
 ---
 # <a name="web-settings-schema"></a><span data-ttu-id="8aff7-102">Web 設定結構描述</span><span class="sxs-lookup"><span data-stu-id="8aff7-102">Web Settings Schema</span></span>
 <span data-ttu-id="8aff7-103">Web 設定會指定 CPU 和執行層級 ASP.NET 設定，這些設定將套用至 ASP.NET 裝載層管理的整個處理序行為。</span><span class="sxs-lookup"><span data-stu-id="8aff7-103">Web settings specify CPU and execution-level ASP.NET settings that apply to process-wide behavior managed by the ASP.NET hosting layer.</span></span> <span data-ttu-id="8aff7-104">這些設定不同於 ASP.NET 應用程式之 Web.config 檔中所指定的應用程式定義域類型設定。</span><span class="sxs-lookup"><span data-stu-id="8aff7-104">These settings differ from application domain-type settings that are specified in the Web.config file of an ASP.NET application.</span></span>  

@@ -15,6 +15,7 @@ ms.sourcegitcommit: 11f11ca6cefe555972b3a5c99729d1a7523d8f50
 ms.translationtype: MT
 ms.contentlocale: zh-TW
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32743117"
 ---
 # <a name="assemblybinding-element-for-configuration"></a><span data-ttu-id="b03b2-102">\<assemblyBinding > 項目\<設定 ></span><span class="sxs-lookup"><span data-stu-id="b03b2-102">\<assemblyBinding> element for \<configuration></span></span>
 

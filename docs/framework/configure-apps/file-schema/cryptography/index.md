@@ -18,6 +18,7 @@ ms.sourcegitcommit: 11f11ca6cefe555972b3a5c99729d1a7523d8f50
 ms.translationtype: MT
 ms.contentlocale: zh-TW
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32742870"
 ---
 # <a name="cryptography-settings-schema"></a><span data-ttu-id="84474-102">密碼編譯設定結構描述</span><span class="sxs-lookup"><span data-stu-id="84474-102">Cryptography Settings Schema</span></span>
 <span data-ttu-id="84474-103">密碼編譯設定結構描述包含指定如何將易記的演算法名稱對應至實作密碼編譯演算法之類別的項目。</span><span class="sxs-lookup"><span data-stu-id="84474-103">The cryptography settings schema contains elements that specify how to map friendly algorithm names to classes that implement cryptography algorithms.</span></span>  

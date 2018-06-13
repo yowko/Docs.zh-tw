@@ -12,6 +12,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: HT
 ms.contentlocale: zh-TW
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33517858"
 ---
 # <a name="how-to-create-windows-services"></a><span data-ttu-id="7b70c-102">如何：建立 Windows 服務</span><span class="sxs-lookup"><span data-stu-id="7b70c-102">How to: Create Windows Services</span></span>
 <span data-ttu-id="7b70c-103">當您建立服務時，可以使用稱為 **Windows 服務**的 Visual Studio 專案範本。</span><span class="sxs-lookup"><span data-stu-id="7b70c-103">When you create a service, you can use a Visual Studio project template called **Windows Service**.</span></span> <span data-ttu-id="7b70c-104">這個範本會透過參考適當的類別和命名空間、設定繼承自服務的基底類別，以及覆寫您可能想要覆寫的其中幾個方法，來自動為您執行大部分的工作。</span><span class="sxs-lookup"><span data-stu-id="7b70c-104">This template automatically does much of the work for you by referencing the appropriate classes and namespaces, setting up the inheritance from the base class for services, and overriding several of the methods you're likely to want to override.</span></span>  

@@ -13,6 +13,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: HT
 ms.contentlocale: zh-TW
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33569755"
 ---
 # <a name="resolving-external-resources-during-xslt-processing"></a><span data-ttu-id="c895b-102">XSLT 處理期間解析外部資源</span><span class="sxs-lookup"><span data-stu-id="c895b-102">Resolving External Resources During XSLT Processing</span></span>
 <span data-ttu-id="c895b-103">在 XSLT 轉換期間，您可能需要進行數次外部資源解析。</span><span class="sxs-lookup"><span data-stu-id="c895b-103">There are several times during an XSLT transformation when you may need to resolve external resources.</span></span>  

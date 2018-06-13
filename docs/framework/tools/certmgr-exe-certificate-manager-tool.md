@@ -20,6 +20,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: HT
 ms.contentlocale: zh-TW
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33409915"
 ---
 # <a name="certmgrexe-certificate-manager-tool"></a><span data-ttu-id="b1c7f-102">Certmgr.exe (憑證管理員工具)</span><span class="sxs-lookup"><span data-stu-id="b1c7f-102">Certmgr.exe (Certificate Manager Tool)</span></span>
 <span data-ttu-id="b1c7f-103">憑證管理員工具 (Certmgr.exe) 可以管理憑證、憑證信任清單 (CTL) 和憑證撤銷清單 (CRL)。</span><span class="sxs-lookup"><span data-stu-id="b1c7f-103">The Certificate Manager tool (Certmgr.exe) manages certificates, certificate trust lists (CTLs), and certificate revocation lists (CRLs).</span></span>  
