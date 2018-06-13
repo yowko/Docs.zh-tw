@@ -7,6 +7,7 @@ ms.sourcegitcommit: 11f11ca6cefe555972b3a5c99729d1a7523d8f50
 ms.translationtype: MT
 ms.contentlocale: zh-TW
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32761034"
 ---
 # <a name="entity-sql-language"></a><span data-ttu-id="e116e-102">Entity SQL 語言</span><span class="sxs-lookup"><span data-stu-id="e116e-102">Entity SQL Language</span></span>
 <span data-ttu-id="e116e-103">Entity SQL 是與儲存體無關的查詢語言，與 SQL 類似。</span><span class="sxs-lookup"><span data-stu-id="e116e-103">Entity SQL is a storage-independent query language that is similar to SQL.</span></span> <span data-ttu-id="e116e-104">Entity SQL 可讓您查詢實體資料 (無論以物件形式或在表格式資料表中)。</span><span class="sxs-lookup"><span data-stu-id="e116e-104">Entity SQL allows you to query entity data, either as objects or in a tabular form.</span></span> <span data-ttu-id="e116e-105">在下列情況下，您可以考慮使用 Entity SQL：</span><span class="sxs-lookup"><span data-stu-id="e116e-105">You should consider using Entity SQL in the following cases:</span></span>  

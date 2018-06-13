@@ -16,6 +16,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: zh-TW
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33603635"
 ---
 # <a name="new-operator-visual-basic"></a><span data-ttu-id="1f759-102">New 運算子 (Visual Basic)</span><span class="sxs-lookup"><span data-stu-id="1f759-102">New Operator (Visual Basic)</span></span>
 <span data-ttu-id="1f759-103">導入了`New`子句來建立新的物件執行個體，指定型別參數的建構函式條件約束，或識別`Sub`與類別建構函式的程序。</span><span class="sxs-lookup"><span data-stu-id="1f759-103">Introduces a `New` clause to create a new object instance, specifies a constructor constraint on a type parameter, or identifies a `Sub` procedure as a class constructor.</span></span>  

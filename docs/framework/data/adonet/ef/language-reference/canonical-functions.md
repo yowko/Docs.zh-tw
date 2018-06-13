@@ -7,6 +7,7 @@ ms.sourcegitcommit: 11f11ca6cefe555972b3a5c99729d1a7523d8f50
 ms.translationtype: MT
 ms.contentlocale: zh-TW
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32760930"
 ---
 # <a name="canonical-functions"></a><span data-ttu-id="3a5f8-102">標準函式</span><span class="sxs-lookup"><span data-stu-id="3a5f8-102">Canonical Functions</span></span>
 <span data-ttu-id="3a5f8-103">本節討論所有資料提供者都支援，而且可由所有查詢技術使用的標準函式。</span><span class="sxs-lookup"><span data-stu-id="3a5f8-103">This section discusses canonical functions that are supported by all data providers, and can be used by all querying technologies.</span></span> <span data-ttu-id="3a5f8-104">標準函式無法由提供者擴允。</span><span class="sxs-lookup"><span data-stu-id="3a5f8-104">Canonical functions cannot be extended by a provider.</span></span>  

@@ -7,6 +7,7 @@ ms.sourcegitcommit: 11f11ca6cefe555972b3a5c99729d1a7523d8f50
 ms.translationtype: MT
 ms.contentlocale: zh-TW
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32760189"
 ---
 # <a name="generating-sql-from-command-trees---best-practices"></a><span data-ttu-id="297b5-102">從命令樹產生 SQL - 最佳作法</span><span class="sxs-lookup"><span data-stu-id="297b5-102">Generating SQL from Command Trees - Best Practices</span></span>
 <span data-ttu-id="297b5-103">輸出查詢命令樹會仔細地建立可用 SQL 表示之查詢的模型。</span><span class="sxs-lookup"><span data-stu-id="297b5-103">Output query command trees closely model queries expressible in SQL.</span></span> <span data-ttu-id="297b5-104">不過，從輸出命令樹產生 SQL 時，提供者寫入器會面臨某些常見的挑戰。</span><span class="sxs-lookup"><span data-stu-id="297b5-104">However, there are certain common challenges for provider writers when generating SQL from an output command tree.</span></span> <span data-ttu-id="297b5-105">本主題將討論這些挑戰。</span><span class="sxs-lookup"><span data-stu-id="297b5-105">This topic discusses these challenges.</span></span> <span data-ttu-id="297b5-106">在下一個主題中，範例提供者將示範如何處理這些挑戰。</span><span class="sxs-lookup"><span data-stu-id="297b5-106">In the next topic, the sample provider shows how to address these challenges.</span></span>  

@@ -10,6 +10,7 @@ ms.sourcegitcommit: 11f11ca6cefe555972b3a5c99729d1a7523d8f50
 ms.translationtype: MT
 ms.contentlocale: zh-TW
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32758025"
 ---
 # <a name="generating-strongly-typed-datasets"></a><span data-ttu-id="f54ec-102">產生強類型資料集</span><span class="sxs-lookup"><span data-stu-id="f54ec-102">Generating Strongly Typed DataSets</span></span>
 <span data-ttu-id="f54ec-103">如果 XML 結構描述是採用 XML 結構描述定義語言 (XSD) 標準進行編譯，則可以使用 <xref:System.Data.DataSet> 所提供的 XSD.exe 工具產生強型別 [!INCLUDE[winsdklong](../../../../../includes/winsdklong-md.md)]。</span><span class="sxs-lookup"><span data-stu-id="f54ec-103">Given an XML Schema that complies with the XML Schema definition language (XSD) standard, you can generate a strongly typed <xref:System.Data.DataSet> using the XSD.exe tool provided with the [!INCLUDE[winsdklong](../../../../../includes/winsdklong-md.md)].</span></span>  

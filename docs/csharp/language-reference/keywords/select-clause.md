@@ -13,6 +13,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: HT
 ms.contentlocale: zh-TW
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33279980"
 ---
 # <a name="select-clause-c-reference"></a><span data-ttu-id="0f2d1-102">select 子句 (C# 參考)</span><span class="sxs-lookup"><span data-stu-id="0f2d1-102">select clause (C# Reference)</span></span>
 <span data-ttu-id="0f2d1-103">在查詢運算式中，`select` 子句指定將在執行查詢時產生之值的類型。</span><span class="sxs-lookup"><span data-stu-id="0f2d1-103">In a query expression, the `select` clause specifies the type of values that will be produced when the query is executed.</span></span> <span data-ttu-id="0f2d1-104">結果是根據評估所有先前子句以及 `select` 子句本身中的任何運算式而來。</span><span class="sxs-lookup"><span data-stu-id="0f2d1-104">The result is based on the evaluation of all the previous clauses and on any expressions in the `select` clause itself.</span></span> <span data-ttu-id="0f2d1-105">查詢運算式必須以 `select` 子句或 [group](../../../csharp/language-reference/keywords/group-clause.md) 子句來終止。</span><span class="sxs-lookup"><span data-stu-id="0f2d1-105">A query expression must terminate with either a `select` clause or a [group](../../../csharp/language-reference/keywords/group-clause.md) clause.</span></span>  

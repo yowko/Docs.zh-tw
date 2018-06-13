@@ -12,6 +12,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: HT
 ms.contentlocale: zh-TW
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33275060"
 ---
 # <a name="-operator-c-reference"></a><span data-ttu-id="24fcf-102">++ 運算子 (C# 參考)</span><span class="sxs-lookup"><span data-stu-id="24fcf-102">++ Operator (C# Reference)</span></span>
 <span data-ttu-id="24fcf-103">遞增運算子 (`++`) 的運算元遞增量為 1。</span><span class="sxs-lookup"><span data-stu-id="24fcf-103">The increment operator (`++`) increments its operand by 1.</span></span> <span data-ttu-id="24fcf-104">遞增運算子可以出現在其運算元的前後： `++variable` 和 `variable++`。</span><span class="sxs-lookup"><span data-stu-id="24fcf-104">The increment operator can appear before or after its operand: `++variable` and `variable++`.</span></span>  
