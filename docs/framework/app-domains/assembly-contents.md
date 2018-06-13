@@ -14,6 +14,7 @@ ms.sourcegitcommit: 11f11ca6cefe555972b3a5c99729d1a7523d8f50
 ms.translationtype: HT
 ms.contentlocale: zh-TW
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32741824"
 ---
 # <a name="assembly-contents"></a><span data-ttu-id="4bdb2-102">組件內容</span><span class="sxs-lookup"><span data-stu-id="4bdb2-102">Assembly Contents</span></span>
 <span data-ttu-id="4bdb2-103">一般而言，靜態組件可包含四個項目：</span><span class="sxs-lookup"><span data-stu-id="4bdb2-103">In general, a static assembly can consist of four elements:</span></span>  

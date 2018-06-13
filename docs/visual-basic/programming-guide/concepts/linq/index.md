@@ -7,6 +7,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: zh-TW
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33645963"
 ---
 # <a name="language-integrated-query-linq-visual-basic"></a><span data-ttu-id="baa03-102">Language-Integrated Query (LINQ) (Visual Basic)</span><span class="sxs-lookup"><span data-stu-id="baa03-102">Language-Integrated Query (LINQ) (Visual Basic)</span></span>
 <span data-ttu-id="baa03-103">LINQ 是可將強大查詢功能擴充至 Visual Basic 語言語法的一組功能。</span><span class="sxs-lookup"><span data-stu-id="baa03-103">LINQ is a set of features that extends powerful query capabilities to the language syntax of Visual Basic.</span></span> <span data-ttu-id="baa03-104">LINQ 推出標準且容易學習的資料查詢與更新模式，而且這項技術可擴充為支援幾乎所有類型的資料存放區。</span><span class="sxs-lookup"><span data-stu-id="baa03-104">LINQ introduces standard, easily-learned patterns for querying and updating data, and the technology can be extended to support potentially any kind of data store.</span></span>  <span data-ttu-id="baa03-105">.NET Framework 包括 LINQ 提供者組件，可讓您使用 LINQ 搭配 .NET Framework 集合、SQL Server 資料庫、ADO.NET 資料集和 XML 文件。</span><span class="sxs-lookup"><span data-stu-id="baa03-105">The .NET Framework includes LINQ provider assemblies that enable the use of LINQ with .NET Framework collections, SQL Server databases, ADO.NET Datasets, and XML documents.</span></span>  

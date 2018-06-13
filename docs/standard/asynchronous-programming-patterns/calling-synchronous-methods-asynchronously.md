@@ -27,6 +27,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: HT
 ms.contentlocale: zh-TW
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33575488"
 ---
 # <a name="calling-synchronous-methods-asynchronously"></a><span data-ttu-id="22330-102">以非同步的方式呼叫同步方法</span><span class="sxs-lookup"><span data-stu-id="22330-102">Calling Synchronous Methods Asynchronously</span></span>
 <span data-ttu-id="22330-103">.NET Framework 可讓您以非同步方式呼叫任何方法。</span><span class="sxs-lookup"><span data-stu-id="22330-103">The .NET Framework enables you to call any method asynchronously.</span></span> <span data-ttu-id="22330-104">若要這樣做，您使用相同簽章定義委派，做為您要呼叫的方法；Common Language Runtime 則會自動以適當簽章定義此委派的 `BeginInvoke` 和 `EndInvoke` 方法。</span><span class="sxs-lookup"><span data-stu-id="22330-104">To do this you define a delegate with the same signature as the method you want to call; the common language runtime automatically defines `BeginInvoke` and `EndInvoke` methods for this delegate, with the appropriate signatures.</span></span>  

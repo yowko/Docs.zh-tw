@@ -22,6 +22,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: HT
 ms.contentlocale: zh-TW
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33572323"
 ---
 # <a name="how-to-delete-stores-in-isolated-storage"></a><span data-ttu-id="34fca-102">如何：刪除隔離儲存區中的存放區</span><span class="sxs-lookup"><span data-stu-id="34fca-102">How to: Delete Stores in Isolated Storage</span></span>
 <span data-ttu-id="34fca-103"><xref:System.IO.IsolatedStorage.IsolatedStorageFile> 類別提供兩種方法來刪除隔離儲存區檔案：</span><span class="sxs-lookup"><span data-stu-id="34fca-103">The <xref:System.IO.IsolatedStorage.IsolatedStorageFile> class supplies two methods for deleting isolated storage files:</span></span>  

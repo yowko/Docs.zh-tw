@@ -13,6 +13,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: HT
 ms.contentlocale: zh-TW
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33576575"
 ---
 # <a name="converting-strings-to-net-framework-data-types"></a><span data-ttu-id="f30a1-102">將字串轉換成 .NET Framework 資料型別</span><span class="sxs-lookup"><span data-stu-id="f30a1-102">Converting Strings to .NET Framework Data Types</span></span>
 <span data-ttu-id="f30a1-103">若要將一個字串轉換成 .NET Framework 資料型別，請使用符合應用程式需求的 **XmlConvert** 方法。</span><span class="sxs-lookup"><span data-stu-id="f30a1-103">If you want to convert a string to a .NET Framework data type, use the **XmlConvert** method that fits the application requirements.</span></span> <span data-ttu-id="f30a1-104">如需所有可用於 **XmlConvert** 類別的轉換方法清單，請參閱 <xref:System.Xml.XmlConvert>。</span><span class="sxs-lookup"><span data-stu-id="f30a1-104">For a list of all conversion methods available in the **XmlConvert** class, see <xref:System.Xml.XmlConvert>.</span></span>  

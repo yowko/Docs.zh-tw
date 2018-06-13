@@ -11,6 +11,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: zh-TW
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33654212"
 ---
 # <a name="collection-initializers-visual-basic"></a><span data-ttu-id="c942e-102">集合初始設定式 (Visual Basic)</span><span class="sxs-lookup"><span data-stu-id="c942e-102">Collection Initializers (Visual Basic)</span></span>
 <span data-ttu-id="c942e-103">「集合初始設定式」提供簡短的語法，以讓您建立集合，並填入一組初始值。</span><span class="sxs-lookup"><span data-stu-id="c942e-103">*Collection initializers* provide a shortened syntax that enables you to create a collection and populate it with an initial set of values.</span></span> <span data-ttu-id="c942e-104">當您透過一組已知值來建立集合時，集合初始設定式十分有用，例如，一份功能表選項或類別清單、一組初始數值、一份日期或月份名稱這類靜態字串清單，或用於驗證的這類省市清單的地理位置。</span><span class="sxs-lookup"><span data-stu-id="c942e-104">Collection initializers are useful when you are creating a collection from a set of known values, for example, a list of menu options or categories, an initial set of numeric values, a static list of strings such as day or month names, or geographic locations such as a list of states that is used for validation.</span></span>  

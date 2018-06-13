@@ -12,6 +12,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: HT
 ms.contentlocale: zh-TW
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33216161"
 ---
 # <a name="equals-c-reference"></a><span data-ttu-id="78586-102">equals (C# 參考)</span><span class="sxs-lookup"><span data-stu-id="78586-102">equals (C# Reference)</span></span>
 <span data-ttu-id="78586-103">`equals` 內容關鍵字可用於查詢運算式的 `join` 子句，以比較兩個序列的元素。</span><span class="sxs-lookup"><span data-stu-id="78586-103">The `equals` contextual keyword is used in a `join` clause in a query expression to compare the elements of two sequences.</span></span> <span data-ttu-id="78586-104">如需詳細資訊，請參閱 [join 子句](../../../csharp/language-reference/keywords/join-clause.md)。</span><span class="sxs-lookup"><span data-stu-id="78586-104">For more information, see [join clause](../../../csharp/language-reference/keywords/join-clause.md).</span></span>  

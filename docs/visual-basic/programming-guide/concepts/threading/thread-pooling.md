@@ -7,6 +7,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: zh-TW
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33647829"
 ---
 # <a name="thread-pooling-visual-basic"></a><span data-ttu-id="4ace1-102">執行緒共用 (Visual Basic)</span><span class="sxs-lookup"><span data-stu-id="4ace1-102">Thread Pooling (Visual Basic)</span></span>
 <span data-ttu-id="4ace1-103">「執行緒集區」是可用來在背景執行數項工作的執行緒集合。</span><span class="sxs-lookup"><span data-stu-id="4ace1-103">A *thread pool* is a collection of threads that can be used to perform several tasks in the background.</span></span> <span data-ttu-id="4ace1-104">(請參閱[執行緒 (Visual Basic)](../../../../visual-basic/programming-guide/concepts/threading/index.md)背景資訊。)這可讓主要執行緒非同步地執行其他工作。</span><span class="sxs-lookup"><span data-stu-id="4ace1-104">(See [Threading (Visual Basic)](../../../../visual-basic/programming-guide/concepts/threading/index.md) for background information.) This leaves the primary thread free to perform other tasks asynchronously.</span></span>  

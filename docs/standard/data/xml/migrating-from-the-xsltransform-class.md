@@ -13,6 +13,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: HT
 ms.contentlocale: zh-TW
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33577394"
 ---
 # <a name="migrating-from-the-xsltransform-class"></a><span data-ttu-id="fe9f1-102">從 XslTransform 類別移轉</span><span class="sxs-lookup"><span data-stu-id="fe9f1-102">Migrating From the XslTransform Class</span></span>
 <span data-ttu-id="fe9f1-103">XSLT 架構已在 [!INCLUDE[vsprvslong](../../../../includes/vsprvslong-md.md)] 版本中重新設計。</span><span class="sxs-lookup"><span data-stu-id="fe9f1-103">The XSLT architecture was redesigned in the [!INCLUDE[vsprvslong](../../../../includes/vsprvslong-md.md)] release.</span></span> <span data-ttu-id="fe9f1-104"><xref:System.Xml.Xsl.XslTransform> 類別取代了 <xref:System.Xml.Xsl.XslCompiledTransform> 類別。</span><span class="sxs-lookup"><span data-stu-id="fe9f1-104">The <xref:System.Xml.Xsl.XslTransform> class has been replaced by the <xref:System.Xml.Xsl.XslCompiledTransform> class.</span></span>  

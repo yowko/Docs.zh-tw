@@ -20,6 +20,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: HT
 ms.contentlocale: zh-TW
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33573603"
 ---
 # <a name="performing-culture-insensitive-string-comparisons"></a><span data-ttu-id="41b32-102">執行不區分文化特性的字串比較</span><span class="sxs-lookup"><span data-stu-id="41b32-102">Performing Culture-Insensitive String Comparisons</span></span>
 <span data-ttu-id="41b32-103">根據預設，<xref:System.String.Compare%2A?displayProperty=nameWithType> 方法會執行區分文化特性和區分大小寫的比較。</span><span class="sxs-lookup"><span data-stu-id="41b32-103">By default, the <xref:System.String.Compare%2A?displayProperty=nameWithType> method performs culture-sensitive and case-sensitive comparisons.</span></span> <span data-ttu-id="41b32-104">這個方法也包含幾個多載，這些多載會提供 `culture` 參數 (讓您指定要使用的文化特性) 及 `comparisonType` 參數 (讓您指定要使用的比較規則)。</span><span class="sxs-lookup"><span data-stu-id="41b32-104">This method also includes several overloads that provide a `culture` parameter that lets you specify the culture to use, and a `comparisonType` parameter that lets you specify the comparison rules to use.</span></span> <span data-ttu-id="41b32-105">呼叫這些方法 (而不是預設多載) 會消除有關特定方法呼叫中使用之規則的任何模稜兩可情況，而且可以釐清特定比較是否區分文化特性。</span><span class="sxs-lookup"><span data-stu-id="41b32-105">Calling these methods instead of the default overload removes any ambiguity about the rules used in a particular method call, and makes it clear whether a particular comparison is culture-sensitive or culture-insensitive.</span></span>  

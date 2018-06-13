@@ -14,6 +14,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: zh-TW
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33650146"
 ---
 # <a name="-baseaddress"></a><span data-ttu-id="4104a-102">-baseaddress</span><span class="sxs-lookup"><span data-stu-id="4104a-102">-baseaddress</span></span>
 <span data-ttu-id="4104a-103">建立 DLL 時，請指定預設基底地址。</span><span class="sxs-lookup"><span data-stu-id="4104a-103">Specifies a default base address when creating a DLL.</span></span>  

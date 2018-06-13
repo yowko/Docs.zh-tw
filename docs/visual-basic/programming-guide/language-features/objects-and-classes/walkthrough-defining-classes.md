@@ -20,6 +20,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: zh-TW
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33650637"
 ---
 # <a name="walkthrough-defining-classes-visual-basic"></a><span data-ttu-id="47c8d-102">逐步解說：定義類別 (Visual Basic)</span><span class="sxs-lookup"><span data-stu-id="47c8d-102">Walkthrough: Defining Classes (Visual Basic)</span></span>
 

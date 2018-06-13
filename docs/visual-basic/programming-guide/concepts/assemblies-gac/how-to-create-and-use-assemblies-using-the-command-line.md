@@ -1,34 +1,28 @@
 ---
 title: 如何： 建立和使用組件使用命令列 (Visual Basic)
-ms.custom: ''
 ms.date: 03/14/2018
-ms.prod: .net
-ms.suite: ''
-ms.technology:
-- devlang-visual-basic
-ms.tgt_pltfrm: ''
-ms.topic: article
 ms.assetid: 229ff9fb-1bd1-403b-946b-526104864c60
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: b39648107697cdbaa8856705f44df605efda11fa
-ms.sourcegitcommit: 498799639937c89de777361aab74261efe7b79ea
+ms.openlocfilehash: c02f694da4e03b666fa88ea6db8ddb2db4c9637d
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 03/22/2018
+ms.lasthandoff: 05/04/2018
+ms.locfileid: "33643285"
 ---
-# <a name="how-to-create-and-use-assemblies-using-the-command-line-visual-basic"></a><span data-ttu-id="386dc-102">如何： 建立和使用組件使用命令列 (Visual Basic)</span><span class="sxs-lookup"><span data-stu-id="386dc-102">How to: Create and Use Assemblies Using the Command Line (Visual Basic)</span></span>
-<span data-ttu-id="386dc-103">組件又稱為動態連結程式庫 (DLL)，會在執行階段連結到您的程式。</span><span class="sxs-lookup"><span data-stu-id="386dc-103">An assembly, or a dynamic linking library (DLL), is linked to your program at run time.</span></span> <span data-ttu-id="386dc-104">為了示範如何建立和使用 DLL，請考慮下列案例：</span><span class="sxs-lookup"><span data-stu-id="386dc-104">To demonstrate building and using a DLL, consider the following scenario:</span></span>  
+# <a name="how-to-create-and-use-assemblies-using-the-command-line-visual-basic"></a><span data-ttu-id="06a56-102">如何： 建立和使用組件使用命令列 (Visual Basic)</span><span class="sxs-lookup"><span data-stu-id="06a56-102">How to: Create and Use Assemblies Using the Command Line (Visual Basic)</span></span>
+<span data-ttu-id="06a56-103">組件又稱為動態連結程式庫 (DLL)，會在執行階段連結到您的程式。</span><span class="sxs-lookup"><span data-stu-id="06a56-103">An assembly, or a dynamic linking library (DLL), is linked to your program at run time.</span></span> <span data-ttu-id="06a56-104">為了示範如何建立和使用 DLL，請考慮下列案例：</span><span class="sxs-lookup"><span data-stu-id="06a56-104">To demonstrate building and using a DLL, consider the following scenario:</span></span>  
   
--   <span data-ttu-id="386dc-105">`MathLibrary.DLL`︰包含要在執行階段呼叫之方法的程式庫檔案。</span><span class="sxs-lookup"><span data-stu-id="386dc-105">`MathLibrary.DLL`: The library file that contains the methods to be called at run time.</span></span> <span data-ttu-id="386dc-106">在此範例中，DLL 包含兩個方法︰`Add` 和 `Multiply`。</span><span class="sxs-lookup"><span data-stu-id="386dc-106">In this example, the DLL contains two methods, `Add` and `Multiply`.</span></span>  
+-   <span data-ttu-id="06a56-105">`MathLibrary.DLL`︰包含要在執行階段呼叫之方法的程式庫檔案。</span><span class="sxs-lookup"><span data-stu-id="06a56-105">`MathLibrary.DLL`: The library file that contains the methods to be called at run time.</span></span> <span data-ttu-id="06a56-106">在此範例中，DLL 包含兩個方法︰`Add` 和 `Multiply`。</span><span class="sxs-lookup"><span data-stu-id="06a56-106">In this example, the DLL contains two methods, `Add` and `Multiply`.</span></span>  
   
--   <span data-ttu-id="386dc-107">`Add`：包含 `Add` 方法的原始程式檔。</span><span class="sxs-lookup"><span data-stu-id="386dc-107">`Add`: The source file that contains the method `Add`.</span></span> <span data-ttu-id="386dc-108">它會傳回其參數的總和。</span><span class="sxs-lookup"><span data-stu-id="386dc-108">It returns the sum of its parameters.</span></span> <span data-ttu-id="386dc-109">包含 `Add` 方法的 `AddClass` 類別是命名空間 `UtilityMethods` 的成員。</span><span class="sxs-lookup"><span data-stu-id="386dc-109">The class `AddClass` that contains the method `Add` is a member of the namespace `UtilityMethods`.</span></span>  
+-   <span data-ttu-id="06a56-107">`Add`：包含 `Add` 方法的原始程式檔。</span><span class="sxs-lookup"><span data-stu-id="06a56-107">`Add`: The source file that contains the method `Add`.</span></span> <span data-ttu-id="06a56-108">它會傳回其參數的總和。</span><span class="sxs-lookup"><span data-stu-id="06a56-108">It returns the sum of its parameters.</span></span> <span data-ttu-id="06a56-109">包含 `Add` 方法的 `AddClass` 類別是命名空間 `UtilityMethods` 的成員。</span><span class="sxs-lookup"><span data-stu-id="06a56-109">The class `AddClass` that contains the method `Add` is a member of the namespace `UtilityMethods`.</span></span>  
   
--   <span data-ttu-id="386dc-110">`Mult`：包含 `Multiply` 方法的原始程式碼。</span><span class="sxs-lookup"><span data-stu-id="386dc-110">`Mult`: The source code that contains the method `Multiply`.</span></span> <span data-ttu-id="386dc-111">它會傳回其參數的乘積。</span><span class="sxs-lookup"><span data-stu-id="386dc-111">It returns the product of its parameters.</span></span> <span data-ttu-id="386dc-112">包含 `Multiply` 方法的 `MultiplyClass` 類別也是命名空間 `UtilityMethods` 的成員。</span><span class="sxs-lookup"><span data-stu-id="386dc-112">The class `MultiplyClass` that contains the method `Multiply` is also a member of the namespace `UtilityMethods`.</span></span>  
+-   <span data-ttu-id="06a56-110">`Mult`：包含 `Multiply` 方法的原始程式碼。</span><span class="sxs-lookup"><span data-stu-id="06a56-110">`Mult`: The source code that contains the method `Multiply`.</span></span> <span data-ttu-id="06a56-111">它會傳回其參數的乘積。</span><span class="sxs-lookup"><span data-stu-id="06a56-111">It returns the product of its parameters.</span></span> <span data-ttu-id="06a56-112">包含 `Multiply` 方法的 `MultiplyClass` 類別也是命名空間 `UtilityMethods` 的成員。</span><span class="sxs-lookup"><span data-stu-id="06a56-112">The class `MultiplyClass` that contains the method `Multiply` is also a member of the namespace `UtilityMethods`.</span></span>  
   
--   <span data-ttu-id="386dc-113">`TestCode`：包含 `Main` 方法的檔案。</span><span class="sxs-lookup"><span data-stu-id="386dc-113">`TestCode`: The file that contains the `Main` method.</span></span> <span data-ttu-id="386dc-114">它使用 DLL 檔案中的方法來計算執行階段引數的總和與乘積。</span><span class="sxs-lookup"><span data-stu-id="386dc-114">It uses the methods in the DLL file to calculate the sum and the product of the run-time arguments.</span></span>  
+-   <span data-ttu-id="06a56-113">`TestCode`：包含 `Main` 方法的檔案。</span><span class="sxs-lookup"><span data-stu-id="06a56-113">`TestCode`: The file that contains the `Main` method.</span></span> <span data-ttu-id="06a56-114">它使用 DLL 檔案中的方法來計算執行階段引數的總和與乘積。</span><span class="sxs-lookup"><span data-stu-id="06a56-114">It uses the methods in the DLL file to calculate the sum and the product of the run-time arguments.</span></span>  
   
-## <a name="example"></a><span data-ttu-id="386dc-115">範例</span><span class="sxs-lookup"><span data-stu-id="386dc-115">Example</span></span>  
+## <a name="example"></a><span data-ttu-id="06a56-115">範例</span><span class="sxs-lookup"><span data-stu-id="06a56-115">Example</span></span>  
   
 ```vb  
 ' File: Add.vb   
@@ -87,45 +81,45 @@ End Module
 ' 1234 * 5678 = 7006652  
 ```  
   
- <span data-ttu-id="386dc-116">此檔案包含使用 DLL 方法 `Add` 和 `Multiply` 的演算法。</span><span class="sxs-lookup"><span data-stu-id="386dc-116">This file contains the algorithm that uses the DLL methods, `Add` and `Multiply`.</span></span> <span data-ttu-id="386dc-117">一開始會剖析從命令列輸入的引數 `num1` 和 `num2`。</span><span class="sxs-lookup"><span data-stu-id="386dc-117">It starts with parsing the arguments entered from the command line, `num1` and `num2`.</span></span> <span data-ttu-id="386dc-118">然後會使用 `AddClass` 類別中的 `Add` 方法計算總和，並使用 `MultiplyClass` 類別中的 `Multiply` 方法計算乘積。</span><span class="sxs-lookup"><span data-stu-id="386dc-118">Then it calculates the sum by using the `Add` method on the `AddClass` class, and the product by using the `Multiply` method on the `MultiplyClass` class.</span></span>  
+ <span data-ttu-id="06a56-116">此檔案包含使用 DLL 方法 `Add` 和 `Multiply` 的演算法。</span><span class="sxs-lookup"><span data-stu-id="06a56-116">This file contains the algorithm that uses the DLL methods, `Add` and `Multiply`.</span></span> <span data-ttu-id="06a56-117">一開始會剖析從命令列輸入的引數 `num1` 和 `num2`。</span><span class="sxs-lookup"><span data-stu-id="06a56-117">It starts with parsing the arguments entered from the command line, `num1` and `num2`.</span></span> <span data-ttu-id="06a56-118">然後會使用 `AddClass` 類別中的 `Add` 方法計算總和，並使用 `MultiplyClass` 類別中的 `Multiply` 方法計算乘積。</span><span class="sxs-lookup"><span data-stu-id="06a56-118">Then it calculates the sum by using the `Add` method on the `AddClass` class, and the product by using the `Multiply` method on the `MultiplyClass` class.</span></span>  
   
- <span data-ttu-id="386dc-119">請注意，`Imports`檔案的開頭的陳述式可讓您使用未限定的類別名稱，如下所示，在編譯時期參考 DLL 方法：</span><span class="sxs-lookup"><span data-stu-id="386dc-119">Notice that the  `Imports` statement at the beginning of the file enables you to use the unqualified class names to reference the DLL methods at compile time, as follows:</span></span>  
+ <span data-ttu-id="06a56-119">請注意，`Imports`檔案的開頭的陳述式可讓您使用未限定的類別名稱，如下所示，在編譯時期參考 DLL 方法：</span><span class="sxs-lookup"><span data-stu-id="06a56-119">Notice that the  `Imports` statement at the beginning of the file enables you to use the unqualified class names to reference the DLL methods at compile time, as follows:</span></span>  
   
 ```vb  
 MultiplyClass.Multiply(num1, num2)  
 ```  
   
- <span data-ttu-id="386dc-120">否則，您必須使用完整名稱，如下所示：</span><span class="sxs-lookup"><span data-stu-id="386dc-120">Otherwise, you have to use the fully qualified names, as follows:</span></span>  
+ <span data-ttu-id="06a56-120">否則，您必須使用完整名稱，如下所示：</span><span class="sxs-lookup"><span data-stu-id="06a56-120">Otherwise, you have to use the fully qualified names, as follows:</span></span>  
   
 ```vb  
 UtilityMethods.MultiplyClass.Multiply(num1, num2)  
 ```  
   
-## <a name="execution"></a><span data-ttu-id="386dc-121">執行</span><span class="sxs-lookup"><span data-stu-id="386dc-121">Execution</span></span>  
- <span data-ttu-id="386dc-122">若要執行此程式，請輸入 EXE 檔案的名稱，後面接著兩個數字，如下所示：</span><span class="sxs-lookup"><span data-stu-id="386dc-122">To run the program, enter the name of the EXE file, followed by two numbers, as follows:</span></span>  
+## <a name="execution"></a><span data-ttu-id="06a56-121">執行</span><span class="sxs-lookup"><span data-stu-id="06a56-121">Execution</span></span>  
+ <span data-ttu-id="06a56-122">若要執行此程式，請輸入 EXE 檔案的名稱，後面接著兩個數字，如下所示：</span><span class="sxs-lookup"><span data-stu-id="06a56-122">To run the program, enter the name of the EXE file, followed by two numbers, as follows:</span></span>  
   
  `TestCode 1234 5678`  
   
-## <a name="compiling-the-code"></a><span data-ttu-id="386dc-123">編譯程式碼</span><span class="sxs-lookup"><span data-stu-id="386dc-123">Compiling the Code</span></span>  
- <span data-ttu-id="386dc-124">若要建立 `MathLibrary.DLL` 檔案，請使用下列命令列編譯 `Add` 和 `Mult` 這兩個檔案。</span><span class="sxs-lookup"><span data-stu-id="386dc-124">To build the file `MathLibrary.DLL`, compile the two files `Add` and `Mult` by using the following command line.</span></span>  
+## <a name="compiling-the-code"></a><span data-ttu-id="06a56-123">編譯程式碼</span><span class="sxs-lookup"><span data-stu-id="06a56-123">Compiling the Code</span></span>  
+ <span data-ttu-id="06a56-124">若要建立 `MathLibrary.DLL` 檔案，請使用下列命令列編譯 `Add` 和 `Mult` 這兩個檔案。</span><span class="sxs-lookup"><span data-stu-id="06a56-124">To build the file `MathLibrary.DLL`, compile the two files `Add` and `Mult` by using the following command line.</span></span>  
   
 ```console  
 vbc -target:library -out:MathLibrary.DLL Add.vb Mult.vb  
 ```  
   
- <span data-ttu-id="386dc-125">[-目標 (Visual Basic)](../../../../visual-basic/reference/command-line-compiler/target.md)編譯器選項會告訴編譯器輸出的 DLL，而不是 EXE 檔案。</span><span class="sxs-lookup"><span data-stu-id="386dc-125">The [-target (Visual Basic)](../../../../visual-basic/reference/command-line-compiler/target.md) compiler option tells the compiler to output a DLL instead of an EXE file.</span></span> <span data-ttu-id="386dc-126">[-Out (Visual Basic)](../../../../visual-basic/reference/command-line-compiler/out.md)編譯器選項後面加上檔案名稱用來指定 DLL 的檔案名稱。</span><span class="sxs-lookup"><span data-stu-id="386dc-126">The [-out (Visual Basic)](../../../../visual-basic/reference/command-line-compiler/out.md) compiler option followed by a file name is used to specify the DLL file name.</span></span> <span data-ttu-id="386dc-127">否則，編譯器會使用第一個檔案 (`Add.vb`) 作為 DLL 的名稱。</span><span class="sxs-lookup"><span data-stu-id="386dc-127">Otherwise, the compiler uses the first file (`Add.vb`) as the name of the DLL.</span></span>  
+ <span data-ttu-id="06a56-125">[-目標 (Visual Basic)](../../../../visual-basic/reference/command-line-compiler/target.md)編譯器選項會告訴編譯器輸出的 DLL，而不是 EXE 檔案。</span><span class="sxs-lookup"><span data-stu-id="06a56-125">The [-target (Visual Basic)](../../../../visual-basic/reference/command-line-compiler/target.md) compiler option tells the compiler to output a DLL instead of an EXE file.</span></span> <span data-ttu-id="06a56-126">[-Out (Visual Basic)](../../../../visual-basic/reference/command-line-compiler/out.md)編譯器選項後面加上檔案名稱用來指定 DLL 的檔案名稱。</span><span class="sxs-lookup"><span data-stu-id="06a56-126">The [-out (Visual Basic)](../../../../visual-basic/reference/command-line-compiler/out.md) compiler option followed by a file name is used to specify the DLL file name.</span></span> <span data-ttu-id="06a56-127">否則，編譯器會使用第一個檔案 (`Add.vb`) 作為 DLL 的名稱。</span><span class="sxs-lookup"><span data-stu-id="06a56-127">Otherwise, the compiler uses the first file (`Add.vb`) as the name of the DLL.</span></span>  
   
- <span data-ttu-id="386dc-128">若要建立可執行檔 `TestCode.exe`，請使用下列命令列：</span><span class="sxs-lookup"><span data-stu-id="386dc-128">To build the executable file, `TestCode.exe`, use the following command line:</span></span>  
+ <span data-ttu-id="06a56-128">若要建立可執行檔 `TestCode.exe`，請使用下列命令列：</span><span class="sxs-lookup"><span data-stu-id="06a56-128">To build the executable file, `TestCode.exe`, use the following command line:</span></span>  
   
 ```console  
 vbc -out:TestCode.exe -reference:MathLibrary.DLL TestCode.vb  
 ```  
   
- <span data-ttu-id="386dc-129">**-Out**編譯器選項會指示編譯器輸出的 EXE 檔案，並指定輸出檔的名稱 (`TestCode.exe`)。</span><span class="sxs-lookup"><span data-stu-id="386dc-129">The **-out** compiler option tells the compiler to output an EXE file and specifies the name of the output file (`TestCode.exe`).</span></span> <span data-ttu-id="386dc-130">這個編譯器選項是選擇性的。</span><span class="sxs-lookup"><span data-stu-id="386dc-130">This compiler option is optional.</span></span> <span data-ttu-id="386dc-131">[-參考 (Visual Basic)](../../../../visual-basic/reference/command-line-compiler/reference.md)編譯器選項會指定此程式所使用的 DLL 檔案。</span><span class="sxs-lookup"><span data-stu-id="386dc-131">The [-reference (Visual Basic)](../../../../visual-basic/reference/command-line-compiler/reference.md) compiler option specifies the DLL file or files that this program uses.</span></span>  
+ <span data-ttu-id="06a56-129">**-Out**編譯器選項會指示編譯器輸出的 EXE 檔案，並指定輸出檔的名稱 (`TestCode.exe`)。</span><span class="sxs-lookup"><span data-stu-id="06a56-129">The **-out** compiler option tells the compiler to output an EXE file and specifies the name of the output file (`TestCode.exe`).</span></span> <span data-ttu-id="06a56-130">這個編譯器選項是選擇性的。</span><span class="sxs-lookup"><span data-stu-id="06a56-130">This compiler option is optional.</span></span> <span data-ttu-id="06a56-131">[-參考 (Visual Basic)](../../../../visual-basic/reference/command-line-compiler/reference.md)編譯器選項會指定此程式所使用的 DLL 檔案。</span><span class="sxs-lookup"><span data-stu-id="06a56-131">The [-reference (Visual Basic)](../../../../visual-basic/reference/command-line-compiler/reference.md) compiler option specifies the DLL file or files that this program uses.</span></span>  
   
- <span data-ttu-id="386dc-132">如需從命令列建置的詳細資訊，請參閱和[從命令列建置](../../../../visual-basic/reference/command-line-compiler/building-from-the-command-line.md)。</span><span class="sxs-lookup"><span data-stu-id="386dc-132">For more information about building from the command line, see  and [Building from the Command Line](../../../../visual-basic/reference/command-line-compiler/building-from-the-command-line.md).</span></span>  
+ <span data-ttu-id="06a56-132">如需從命令列建置的詳細資訊，請參閱和[從命令列建置](../../../../visual-basic/reference/command-line-compiler/building-from-the-command-line.md)。</span><span class="sxs-lookup"><span data-stu-id="06a56-132">For more information about building from the command line, see  and [Building from the Command Line](../../../../visual-basic/reference/command-line-compiler/building-from-the-command-line.md).</span></span>  
   
-## <a name="see-also"></a><span data-ttu-id="386dc-133">另請參閱</span><span class="sxs-lookup"><span data-stu-id="386dc-133">See Also</span></span>  
- [<span data-ttu-id="386dc-134">程式設計概念</span><span class="sxs-lookup"><span data-stu-id="386dc-134">Programming Concepts</span></span>](../../../../visual-basic/programming-guide/concepts/index.md)  
- [<span data-ttu-id="386dc-135">組件和全域組件快取 (Visual Basic)</span><span class="sxs-lookup"><span data-stu-id="386dc-135">Assemblies and the Global Assembly Cache (Visual Basic)</span></span>](../../../../visual-basic/programming-guide/concepts/assemblies-gac/index.md)  
- [<span data-ttu-id="386dc-136">建立類別以包裝 DLL 函式</span><span class="sxs-lookup"><span data-stu-id="386dc-136">Creating a Class to Hold DLL Functions</span></span>](../../../../framework/interop/creating-a-class-to-hold-dll-functions.md)
+## <a name="see-also"></a><span data-ttu-id="06a56-133">另請參閱</span><span class="sxs-lookup"><span data-stu-id="06a56-133">See Also</span></span>  
+ [<span data-ttu-id="06a56-134">程式設計概念</span><span class="sxs-lookup"><span data-stu-id="06a56-134">Programming Concepts</span></span>](../../../../visual-basic/programming-guide/concepts/index.md)  
+ [<span data-ttu-id="06a56-135">組件和全域組件快取 (Visual Basic)</span><span class="sxs-lookup"><span data-stu-id="06a56-135">Assemblies and the Global Assembly Cache (Visual Basic)</span></span>](../../../../visual-basic/programming-guide/concepts/assemblies-gac/index.md)  
+ [<span data-ttu-id="06a56-136">建立類別以包裝 DLL 函式</span><span class="sxs-lookup"><span data-stu-id="06a56-136">Creating a Class to Hold DLL Functions</span></span>](../../../../framework/interop/creating-a-class-to-hold-dll-functions.md)

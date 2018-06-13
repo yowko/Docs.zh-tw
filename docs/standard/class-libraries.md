@@ -11,6 +11,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: HT
 ms.contentlocale: zh-TW
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33570594"
 ---
 # <a name="net-class-libraries"></a><span data-ttu-id="a403f-103">.NET 類別庫</span><span class="sxs-lookup"><span data-stu-id="a403f-103">.NET Class Libraries</span></span>
 

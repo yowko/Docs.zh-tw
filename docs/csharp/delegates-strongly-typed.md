@@ -8,6 +8,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: HT
 ms.contentlocale: zh-TW
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33215160"
 ---
 # <a name="strongly-typed-delegates"></a><span data-ttu-id="a67a9-103">強類型委派</span><span class="sxs-lookup"><span data-stu-id="a67a9-103">Strongly Typed Delegates</span></span>
 

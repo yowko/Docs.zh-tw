@@ -16,6 +16,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: zh-TW
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33574104"
 ---
 # <a name="using-portable-class-library-with-model-view-view-model"></a><span data-ttu-id="de223-102">搭配 Model-View-View 模型使用可攜式類別庫</span><span class="sxs-lookup"><span data-stu-id="de223-102">Using Portable Class Library with Model-View-View Model</span></span>
 <span data-ttu-id="de223-103">您可以使用.NET Framework[可攜式類別庫](../../../docs/standard/cross-platform/cross-platform-development-with-the-portable-class-library.md)實作模型檢視 View Model (MVVM) 模式，並且跨多平台共用組件。</span><span class="sxs-lookup"><span data-stu-id="de223-103">You can use the .NET Framework [Portable Class Library](../../../docs/standard/cross-platform/cross-platform-development-with-the-portable-class-library.md) to implement the Model-View-View Model (MVVM) pattern and share assemblies across multiple platforms.</span></span>  

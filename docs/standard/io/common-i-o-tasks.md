@@ -12,6 +12,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: HT
 ms.contentlocale: zh-TW
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33577651"
 ---
 # <a name="common-io-tasks"></a><span data-ttu-id="4fcac-102">一般 I/O 工作</span><span class="sxs-lookup"><span data-stu-id="4fcac-102">Common I/O Tasks</span></span>
 <span data-ttu-id="4fcac-103"><xref:System.IO> 命名空間 (Namespace) 提供了幾個允許可在檔案、目錄和資料流上執行各種動作 (例如讀取和寫入) 的類別。</span><span class="sxs-lookup"><span data-stu-id="4fcac-103">The <xref:System.IO> namespace provides several classes that allow for various actions, such as reading and writing, to be performed on files, directories, and streams.</span></span> <span data-ttu-id="4fcac-104">如需詳細資訊，請參閱[檔案和資料流 I/O](../../../docs/standard/io/index.md)。</span><span class="sxs-lookup"><span data-stu-id="4fcac-104">For more information, see [File and Stream I/O](../../../docs/standard/io/index.md).</span></span>  

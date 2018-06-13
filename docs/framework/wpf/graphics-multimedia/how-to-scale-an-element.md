@@ -10,6 +10,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: zh-TW
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33562163"
 ---
 # <a name="how-to-scale-an-element"></a><span data-ttu-id="29cc1-102">操作說明：縮放元素</span><span class="sxs-lookup"><span data-stu-id="29cc1-102">How to: Scale an Element</span></span>
 <span data-ttu-id="29cc1-103">這個範例示範如何使用<xref:System.Windows.Media.ScaleTransform>調整項目。</span><span class="sxs-lookup"><span data-stu-id="29cc1-103">This example shows how to use a <xref:System.Windows.Media.ScaleTransform> to scale an element.</span></span>  

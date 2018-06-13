@@ -9,6 +9,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: zh-TW
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33648381"
 ---
 # <a name="constants-overview-visual-basic"></a><span data-ttu-id="26cdd-102">常數的概觀 (Visual Basic)</span><span class="sxs-lookup"><span data-stu-id="26cdd-102">Constants Overview (Visual Basic)</span></span>
 <span data-ttu-id="26cdd-103">常數是有意義的名稱來取代數字或字串，不會變更。</span><span class="sxs-lookup"><span data-stu-id="26cdd-103">A constant is a meaningful name that takes the place of a number or string that does not change.</span></span> <span data-ttu-id="26cdd-104">常數用來儲存值，正如其名，維持不變，整個應用程式執行。</span><span class="sxs-lookup"><span data-stu-id="26cdd-104">Constants store values that, as the name implies, remain the same throughout the execution of an application.</span></span> <span data-ttu-id="26cdd-105">您可以大幅改善您的程式碼的可讀性，並更輕鬆地維護藉由使用常數。</span><span class="sxs-lookup"><span data-stu-id="26cdd-105">You can greatly improve the readability of your code and make it easier to maintain by using constants.</span></span> <span data-ttu-id="26cdd-106">在包含的值會重複出現的程式碼中使用它們，或相依於某些很難記住，或沒有明顯意義的數字。</span><span class="sxs-lookup"><span data-stu-id="26cdd-106">Use them in code that contains values that reappear or that depends on certain numbers that are difficult to remember or have no obvious meaning.</span></span>  

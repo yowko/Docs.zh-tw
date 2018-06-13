@@ -10,6 +10,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: HT
 ms.contentlocale: zh-TW
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33215374"
 ---
 # <a name="microsoft-wcf-web-service-reference-provider-tool"></a><span data-ttu-id="d57a6-103">Microsoft WCF Web Service Reference Provider 工具</span><span class="sxs-lookup"><span data-stu-id="d57a6-103">Microsoft WCF Web Service Reference Provider Tool</span></span>
 

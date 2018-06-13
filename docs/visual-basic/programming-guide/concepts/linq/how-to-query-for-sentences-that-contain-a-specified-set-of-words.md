@@ -7,6 +7,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: zh-TW
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33643164"
 ---
 # <a name="how-to-query-for-sentences-that-contain-a-specified-set-of-words-linq-visual-basic"></a><span data-ttu-id="770e0-102">如何：查詢包含指定字組的句子 (LINQ) (Visual Basic)</span><span class="sxs-lookup"><span data-stu-id="770e0-102">How to: Query for Sentences that Contain a Specified Set of Words (LINQ) (Visual Basic)</span></span>
 <span data-ttu-id="770e0-103">此範例示範如何在文字檔中尋找含有每個指定字組之相符項目的句子。</span><span class="sxs-lookup"><span data-stu-id="770e0-103">This example shows how to find sentences in a text file that contain matches for each of a specified set of words.</span></span> <span data-ttu-id="770e0-104">雖然此範例硬式編碼了搜尋字詞的陣列，但也可以在執行階段將它動態填入。</span><span class="sxs-lookup"><span data-stu-id="770e0-104">Although the array of search terms is hard-coded in this example, it could also be populated dynamically at runtime.</span></span> <span data-ttu-id="770e0-105">在此範例中，查詢會傳回包含 "Historically"、"data" 和 "integrated" 等字的句子。</span><span class="sxs-lookup"><span data-stu-id="770e0-105">In this example, the query returns the sentences that contain the words "Historically," "data," and "integrated."</span></span>  

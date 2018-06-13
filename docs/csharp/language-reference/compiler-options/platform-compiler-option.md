@@ -13,6 +13,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: HT
 ms.contentlocale: zh-TW
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33216508"
 ---
 # <a name="-platform-c-compiler-options"></a><span data-ttu-id="d1007-102">-platform (C# 編譯器選項)</span><span class="sxs-lookup"><span data-stu-id="d1007-102">-platform (C# Compiler Options)</span></span>
 <span data-ttu-id="d1007-103">指定哪個 Common Language Runtime (CLR) 版本可以執行組件。</span><span class="sxs-lookup"><span data-stu-id="d1007-103">Specifies which version of the Common Language Runtime (CLR) can run the assembly.</span></span>  

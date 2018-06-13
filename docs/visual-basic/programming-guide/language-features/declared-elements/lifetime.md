@@ -15,6 +15,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: zh-TW
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33654225"
 ---
 # <a name="lifetime-in-visual-basic"></a><span data-ttu-id="a90ff-102">Visual Basic 中的存留期</span><span class="sxs-lookup"><span data-stu-id="a90ff-102">Lifetime in Visual Basic</span></span>
 <span data-ttu-id="a90ff-103">*存留期*的宣告的項目是一段時間期間它是可供使用。</span><span class="sxs-lookup"><span data-stu-id="a90ff-103">The *lifetime* of a declared element is the period of time during which it is available for use.</span></span> <span data-ttu-id="a90ff-104">變數是唯一的項目存留期的。</span><span class="sxs-lookup"><span data-stu-id="a90ff-104">Variables are the only elements that have lifetime.</span></span> <span data-ttu-id="a90ff-105">基於此目的，編譯器會將程序參數和函式會傳回做為變數的特殊案例。</span><span class="sxs-lookup"><span data-stu-id="a90ff-105">For this purpose, the compiler treats procedure parameters and function returns as special cases of variables.</span></span> <span data-ttu-id="a90ff-106">變數的存留期代表一段時間期間中，它能容納的值。</span><span class="sxs-lookup"><span data-stu-id="a90ff-106">The lifetime of a variable represents the period of time during which it can hold a value.</span></span> <span data-ttu-id="a90ff-107">其值可以變更其存留期，但它永遠會保留一些值。</span><span class="sxs-lookup"><span data-stu-id="a90ff-107">Its value can change over its lifetime, but it always holds some value.</span></span>  

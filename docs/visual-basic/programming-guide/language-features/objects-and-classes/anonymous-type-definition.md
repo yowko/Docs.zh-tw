@@ -9,6 +9,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: zh-TW
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33649616"
 ---
 # <a name="anonymous-type-definition-visual-basic"></a><span data-ttu-id="516df-102">匿名類型定義 (Visual Basic)</span><span class="sxs-lookup"><span data-stu-id="516df-102">Anonymous Type Definition (Visual Basic)</span></span>
 <span data-ttu-id="516df-103">為了回應執行個體的匿名類型宣告，編譯器會建立新的類別定義，其中包含指定的屬性類型。</span><span class="sxs-lookup"><span data-stu-id="516df-103">In response to the declaration of an instance of an anonymous type, the compiler creates a new class definition that contains the specified properties for the type.</span></span>  

@@ -19,6 +19,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: HT
 ms.contentlocale: zh-TW
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33574046"
 ---
 # <a name="culture-insensitive-string-operations"></a><span data-ttu-id="11cab-102">不區分文化特性的字串作業</span><span class="sxs-lookup"><span data-stu-id="11cab-102">Culture-Insensitive String Operations</span></span>
 <span data-ttu-id="11cab-103">如果您建立的應用程式會根據個別文化特性對使用者顯示結果，區分文化特性字串作業將有所助益。</span><span class="sxs-lookup"><span data-stu-id="11cab-103">Culture-sensitive string operations can be an advantage if you are creating applications designed to display results to users on a per-culture basis.</span></span> <span data-ttu-id="11cab-104">根據預設，區分文化特性的方法會從目前執行緒的 <xref:System.Globalization.CultureInfo.CurrentCulture%2A> 屬性取得要使用的文化特性。</span><span class="sxs-lookup"><span data-stu-id="11cab-104">By default, culture-sensitive methods obtain the culture to use from the <xref:System.Globalization.CultureInfo.CurrentCulture%2A> property for the current thread.</span></span>  

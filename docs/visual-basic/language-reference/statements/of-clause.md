@@ -22,6 +22,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: zh-TW
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33603947"
 ---
 # <a name="of-clause-visual-basic"></a><span data-ttu-id="178c5-102">Of 子句 (Visual Basic)</span><span class="sxs-lookup"><span data-stu-id="178c5-102">Of Clause (Visual Basic)</span></span>
 <span data-ttu-id="178c5-103">導入了`Of`子句，用來識別*型別參數*上*泛型*類別、 結構、 介面、 委派或程序。</span><span class="sxs-lookup"><span data-stu-id="178c5-103">Introduces an `Of` clause, which identifies a *type parameter* on a *generic* class, structure, interface, delegate, or procedure.</span></span> <span data-ttu-id="178c5-104">在泛型類型上的資訊，請參閱[Visual Basic 中的泛型類型](../../../visual-basic/programming-guide/language-features/data-types/generic-types.md)。</span><span class="sxs-lookup"><span data-stu-id="178c5-104">For information on generic types, see [Generic Types in Visual Basic](../../../visual-basic/programming-guide/language-features/data-types/generic-types.md).</span></span>  
