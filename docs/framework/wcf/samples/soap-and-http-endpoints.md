@@ -7,6 +7,7 @@ ms.sourcegitcommit: 15109844229ade1c6449f48f3834db1b26907824
 ms.translationtype: MT
 ms.contentlocale: zh-TW
 ms.lasthandoff: 05/07/2018
+ms.locfileid: "33809514"
 ---
 # <a name="soap-and-http-endpoints"></a><span data-ttu-id="f3e4d-102">SOAP 及 HTTP 端點</span><span class="sxs-lookup"><span data-stu-id="f3e4d-102">SOAP and HTTP Endpoints</span></span>
 <span data-ttu-id="f3e4d-103">這個範例示範如何實作以 RPC 為基礎的服務，並將它公開在 SOAP 格式和"Plain Old XML"(POX) 格式使用 WCF Web 程式設計模型。</span><span class="sxs-lookup"><span data-stu-id="f3e4d-103">This sample demonstrates how to implement an RPC-based service and expose it in the SOAP format and the "Plain Old XML" (POX) format using the WCF Web Programming model.</span></span> <span data-ttu-id="f3e4d-104">請參閱[基本 HTTP 服務](../../../../docs/framework/wcf/samples/basic-http-service.md)服務的 HTTP 繫結的更多詳細的範例。</span><span class="sxs-lookup"><span data-stu-id="f3e4d-104">See the [Basic HTTP Service](../../../../docs/framework/wcf/samples/basic-http-service.md) sample for more details about the HTTP binding for the service.</span></span> <span data-ttu-id="f3e4d-105">這個範例的重點在於，使用不同繫結透過 SOAP 和 HTTP 公開相同服務的相關詳細資料。</span><span class="sxs-lookup"><span data-stu-id="f3e4d-105">This sample focuses on the details that pertain to exposing the same service over SOAP and HTTP using different bindings.</span></span>  

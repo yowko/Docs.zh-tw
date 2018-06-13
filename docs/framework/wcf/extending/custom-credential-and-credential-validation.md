@@ -13,6 +13,7 @@ ms.sourcegitcommit: 15109844229ade1c6449f48f3834db1b26907824
 ms.translationtype: MT
 ms.contentlocale: zh-TW
 ms.lasthandoff: 05/07/2018
+ms.locfileid: "33803449"
 ---
 # <a name="custom-credential-and-credential-validation"></a><span data-ttu-id="09476-102">自訂認證與認證驗證</span><span class="sxs-lookup"><span data-stu-id="09476-102">Custom Credential and Credential Validation</span></span>
 <span data-ttu-id="09476-103">Windows Communication Foundation (WCF) 安全性為基礎的服務和用戶端之間的認證交換。</span><span class="sxs-lookup"><span data-stu-id="09476-103">Security in Windows Communication Foundation (WCF) is based on the exchange of credentials between services and clients.</span></span> <span data-ttu-id="09476-104">使用一般認證類型就可滿足大多數安全性案例，例如 Windows (Kerberos)、使用者名稱和密碼以及憑證。</span><span class="sxs-lookup"><span data-stu-id="09476-104">Most security scenarios can be satisfied using common credential types, such as Windows (Kerberos), username and passwords, and certificates.</span></span> <span data-ttu-id="09476-105">不過，如果需要新的認證類型，可在本節的各主題中找到如何處理及驗證新類型的方法。</span><span class="sxs-lookup"><span data-stu-id="09476-105">However, if a new type of credential is required, the topics in this section explain how to handle and validate new types.</span></span>  

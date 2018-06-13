@@ -12,6 +12,7 @@ ms.sourcegitcommit: 15109844229ade1c6449f48f3834db1b26907824
 ms.translationtype: MT
 ms.contentlocale: zh-TW
 ms.lasthandoff: 05/07/2018
+ms.locfileid: "33808588"
 ---
 # <a name="using-sessions"></a><span data-ttu-id="81805-102">使用工作階段</span><span class="sxs-lookup"><span data-stu-id="81805-102">Using Sessions</span></span>
 <span data-ttu-id="81805-103">Windows Communication Foundation (WCF) 應用程式中，*工作階段*將一組訊息相互關聯為對話。</span><span class="sxs-lookup"><span data-stu-id="81805-103">In Windows Communication Foundation (WCF) applications, a *session* correlates a group of messages into a conversation.</span></span> <span data-ttu-id="81805-104">WCF 工作階段是不同於中可用的工作階段物件[!INCLUDE[vstecasp](../../../includes/vstecasp-md.md)]應用程式，支援不同的行為，而控制不同的方式。</span><span class="sxs-lookup"><span data-stu-id="81805-104">WCF sessions are different than the session object available in [!INCLUDE[vstecasp](../../../includes/vstecasp-md.md)] applications, support different behaviors, and are controlled in different ways.</span></span> <span data-ttu-id="81805-105">本主題說明在 WCF 中的工作階段啟用功能的應用程式，以及如何使用它們。</span><span class="sxs-lookup"><span data-stu-id="81805-105">This topic describes the features that sessions enable in WCF applications and how to use them.</span></span>  

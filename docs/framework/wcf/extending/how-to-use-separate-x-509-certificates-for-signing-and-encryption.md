@@ -14,6 +14,7 @@ ms.sourcegitcommit: 15109844229ade1c6449f48f3834db1b26907824
 ms.translationtype: MT
 ms.contentlocale: zh-TW
 ms.lasthandoff: 05/07/2018
+ms.locfileid: "33806178"
 ---
 # <a name="how-to-use-separate-x509-certificates-for-signing-and-encryption"></a><span data-ttu-id="5b0cd-102">HOW TO：使用個別 X.509 憑證簽署與加密</span><span class="sxs-lookup"><span data-stu-id="5b0cd-102">How to: Use Separate X.509 Certificates for Signing and Encryption</span></span>
 <span data-ttu-id="5b0cd-103">本主題說明如何設定 Windows Communication Foundation (WCF) 訊息簽署和加密用戶端和服務上的使用不同的憑證。</span><span class="sxs-lookup"><span data-stu-id="5b0cd-103">This topic shows how to configure Windows Communication Foundation (WCF) to use different certificates for message signing and encryption on both the client and service.</span></span>  

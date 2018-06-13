@@ -18,6 +18,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: zh-TW
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33655580"
 ---
 # <a name="arithmetic-operators-in-visual-basic"></a><span data-ttu-id="6507f-102">Visual Basic 的算術運算子</span><span class="sxs-lookup"><span data-stu-id="6507f-102">Arithmetic Operators in Visual Basic</span></span>
 <span data-ttu-id="6507f-103">算術運算子可用來執行許多熟悉的算術運算涉及數值常值、 變數、 其他運算式、 函式和屬性呼叫和常數所代表的計算。</span><span class="sxs-lookup"><span data-stu-id="6507f-103">Arithmetic operators are used to perform many of the familiar arithmetic operations that involve the calculation of numeric values represented by literals, variables, other expressions, function and property calls, and constants.</span></span> <span data-ttu-id="6507f-104">搭配算術運算子也分類為位元移位運算子會在一個運算元的個別位元層級執行動作，並向左或向右移位的位元模式。</span><span class="sxs-lookup"><span data-stu-id="6507f-104">Also classified with arithmetic operators are the bit-shift operators, which act at the level of the individual bits of the operands and shift their bit patterns to the left or right.</span></span>  

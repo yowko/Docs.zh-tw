@@ -7,6 +7,7 @@ ms.sourcegitcommit: 15109844229ade1c6449f48f3834db1b26907824
 ms.translationtype: MT
 ms.contentlocale: zh-TW
 ms.lasthandoff: 05/07/2018
+ms.locfileid: "33807547"
 ---
 # <a name="durable-issued-token-provider"></a><span data-ttu-id="0d941-102">永久性發行權杖提供者</span><span class="sxs-lookup"><span data-stu-id="0d941-102">Durable Issued Token Provider</span></span>
 <span data-ttu-id="0d941-103">這個範例示範如何實作自訂用戶端發行的權杖提供者。</span><span class="sxs-lookup"><span data-stu-id="0d941-103">This sample demonstrates how to implement a custom client issued token provider.</span></span>  

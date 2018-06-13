@@ -9,6 +9,7 @@ ms.sourcegitcommit: 15109844229ade1c6449f48f3834db1b26907824
 ms.translationtype: MT
 ms.contentlocale: zh-TW
 ms.lasthandoff: 05/07/2018
+ms.locfileid: "33810209"
 ---
 # <a name="cryptographic-agility-in-wcf-security"></a><span data-ttu-id="ef935-102">WCF 安全性中的加密彈性</span><span class="sxs-lookup"><span data-stu-id="ef935-102">Cryptographic Agility in WCF Security</span></span>
 <span data-ttu-id="ef935-103">這個範例示範如何在標準/自訂演算法，以提供密碼編譯的敏捷式軟體開發實作 Windows Communication Foundation (WCF) 用戶端與服務中指定。</span><span class="sxs-lookup"><span data-stu-id="ef935-103">This sample shows how to specify in a standard/custom algorithm to provide a cryptographic agile implementation in a Windows Communication Foundation (WCF) client and service.</span></span> <span data-ttu-id="ef935-104">此範例是由下列專案所組成：</span><span class="sxs-lookup"><span data-stu-id="ef935-104">The sample is composed of the following projects:</span></span>  

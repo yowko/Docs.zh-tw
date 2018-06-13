@@ -9,6 +9,7 @@ ms.sourcegitcommit: 15109844229ade1c6449f48f3834db1b26907824
 ms.translationtype: MT
 ms.contentlocale: zh-TW
 ms.lasthandoff: 05/07/2018
+ms.locfileid: "33803276"
 ---
 # <a name="configuring-services"></a><span data-ttu-id="3a63a-102">設定服務</span><span class="sxs-lookup"><span data-stu-id="3a63a-102">Configuring Services</span></span>
 <span data-ttu-id="3a63a-103">在設計並實作您的服務合約之後，就可開始設定您的服務。</span><span class="sxs-lookup"><span data-stu-id="3a63a-103">Once you have designed and implemented your service contract, you are ready to configure your service.</span></span> <span data-ttu-id="3a63a-104">您可在此處定義及自訂向用戶端公開服務的方式，包括指定所在的位址、用於傳送及接收訊息的傳輸和訊息編碼，以及所需要的安全性類型。</span><span class="sxs-lookup"><span data-stu-id="3a63a-104">This is where you define and customize how your service is exposed to clients, including specifying the address where it can be found, the transport and message encoding it uses to send and receive messages, and the type of security it requires.</span></span>  

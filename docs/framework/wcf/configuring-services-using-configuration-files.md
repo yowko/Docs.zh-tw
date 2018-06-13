@@ -9,6 +9,7 @@ ms.sourcegitcommit: 15109844229ade1c6449f48f3834db1b26907824
 ms.translationtype: MT
 ms.contentlocale: zh-TW
 ms.lasthandoff: 05/07/2018
+ms.locfileid: "33807429"
 ---
 # <a name="configuring-services-using-configuration-files"></a><span data-ttu-id="311b7-102">使用組態檔設定服務</span><span class="sxs-lookup"><span data-stu-id="311b7-102">Configuring Services Using Configuration Files</span></span>
 <span data-ttu-id="311b7-103">使用組態檔設定 Windows Communication Foundation (WCF) 服務可讓您彈性提供端點和服務行為資料在部署而不是在設計階段。</span><span class="sxs-lookup"><span data-stu-id="311b7-103">Configuring a Windows Communication Foundation (WCF) service with a configuration file gives you the flexibility of providing endpoint and service behavior data at the point of deployment instead of at design time.</span></span> <span data-ttu-id="311b7-104">本主題概要說明可用的主要技巧。</span><span class="sxs-lookup"><span data-stu-id="311b7-104">This topic outlines the primary techniques available.</span></span>  

@@ -7,6 +7,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: zh-TW
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33655454"
 ---
 # <a name="linq-to-xml-security-visual-basic"></a><span data-ttu-id="575dd-102">LINQ to XML 安全性 (Visual Basic)</span><span class="sxs-lookup"><span data-stu-id="575dd-102">LINQ to XML Security (Visual Basic)</span></span>
 <span data-ttu-id="575dd-103">這個主題描述與 LINQ to XML 相關聯的安全性問題。</span><span class="sxs-lookup"><span data-stu-id="575dd-103">This topic describes security issues associated with LINQ to XML.</span></span> <span data-ttu-id="575dd-104">此外，還提供減少暴露安全性的部分指引。</span><span class="sxs-lookup"><span data-stu-id="575dd-104">In addition, it provides some guidance for mitigating security exposure.</span></span>  

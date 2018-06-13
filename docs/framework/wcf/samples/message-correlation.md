@@ -7,6 +7,7 @@ ms.sourcegitcommit: 15109844229ade1c6449f48f3834db1b26907824
 ms.translationtype: MT
 ms.contentlocale: zh-TW
 ms.lasthandoff: 05/07/2018
+ms.locfileid: "33806587"
 ---
 # <a name="message-correlation"></a><span data-ttu-id="37779-102">訊息相互關聯</span><span class="sxs-lookup"><span data-stu-id="37779-102">Message Correlation</span></span>
 <span data-ttu-id="37779-103">這個範例示範訊息佇列 (MSMQ) 應用程式如何將 MSMQ 訊息傳送至 Windows Communication Foundation (WCF) 服務，以及如何訊息可以相互關聯的要求/回應案例中的傳送者與接收者應用程式之間。</span><span class="sxs-lookup"><span data-stu-id="37779-103">This sample demonstrates how a Message Queuing (MSMQ) application can send an MSMQ message to a Windows Communication Foundation (WCF) service and how messages can be correlated between sender and receiver applications in a request/response scenario.</span></span> <span data-ttu-id="37779-104">這個範例會使用 msmqIntegrationBinding 繫結。</span><span class="sxs-lookup"><span data-stu-id="37779-104">This sample uses the msmqIntegrationBinding binding.</span></span> <span data-ttu-id="37779-105">本實例中的服務是自我裝載的主控台應用程式，可讓您觀察接收佇列訊息的服務。</span><span class="sxs-lookup"><span data-stu-id="37779-105">The service in this case is a self-hosted console application to allow you to observe the service that receives queued messages.</span></span> <span data-ttu-id="37779-106">K</span><span class="sxs-lookup"><span data-stu-id="37779-106">k</span></span>  

@@ -14,6 +14,7 @@ ms.sourcegitcommit: 15109844229ade1c6449f48f3834db1b26907824
 ms.translationtype: MT
 ms.contentlocale: zh-TW
 ms.lasthandoff: 05/07/2018
+ms.locfileid: "33808958"
 ---
 # <a name="how-to-create-a-custom-security-token-provider"></a><span data-ttu-id="1156f-102">HOW TO：建立自訂安全性權杖提供者</span><span class="sxs-lookup"><span data-stu-id="1156f-102">How to: Create a Custom Security Token Provider</span></span>
 <span data-ttu-id="1156f-103">這個主題會說明如何以自訂安全性權杖提供者建立新的權杖型別，以及如何整合提供者和自訂安全性權杖管理員。</span><span class="sxs-lookup"><span data-stu-id="1156f-103">This topic shows how to create new token types with a custom security token provider and how to integrate the provider with a custom security token manager.</span></span>  

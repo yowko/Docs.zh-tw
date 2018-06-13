@@ -9,6 +9,7 @@ ms.sourcegitcommit: 15109844229ade1c6449f48f3834db1b26907824
 ms.translationtype: MT
 ms.contentlocale: zh-TW
 ms.lasthandoff: 05/07/2018
+ms.locfileid: "33803867"
 ---
 # <a name="security-in-wcf"></a><span data-ttu-id="a17eb-102">WCF 的安全性</span><span class="sxs-lookup"><span data-stu-id="a17eb-102">Security in WCF</span></span>
 <span data-ttu-id="a17eb-103">本節包含關於 Windows Communication Foundation (WCF) 安全性的範例。</span><span class="sxs-lookup"><span data-stu-id="a17eb-103">This section contains samples relating to Windows Communication Foundation (WCF) security.</span></span>  

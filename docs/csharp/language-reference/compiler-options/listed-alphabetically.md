@@ -12,6 +12,7 @@ ms.sourcegitcommit: 77d9a94dac4c05827ed0663d95e0f9ad35d6682e
 ms.translationtype: HT
 ms.contentlocale: zh-TW
 ms.lasthandoff: 05/24/2018
+ms.locfileid: "34472486"
 ---
 # <a name="c-compiler-options-listed-alphabetically"></a><span data-ttu-id="9abd6-102">依字母順序列出 C# 編譯器選項</span><span class="sxs-lookup"><span data-stu-id="9abd6-102">C# Compiler Options Listed Alphabetically</span></span>
 

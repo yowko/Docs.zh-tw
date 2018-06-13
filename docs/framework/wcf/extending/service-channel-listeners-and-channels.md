@@ -7,6 +7,7 @@ ms.sourcegitcommit: 15109844229ade1c6449f48f3834db1b26907824
 ms.translationtype: MT
 ms.contentlocale: zh-TW
 ms.lasthandoff: 05/07/2018
+ms.locfileid: "33809647"
 ---
 # <a name="service-channel-listeners-and-channels"></a><span data-ttu-id="b84b2-102">服務：通道接聽程式與通道</span><span class="sxs-lookup"><span data-stu-id="b84b2-102">Service: Channel Listeners and Channels</span></span>
 <span data-ttu-id="b84b2-103">通道物件共有下列三種類別：通道、通道接聽程式和通道處理站。</span><span class="sxs-lookup"><span data-stu-id="b84b2-103">There are three categories of channel objects: channels, channel listeners and channel factories.</span></span> <span data-ttu-id="b84b2-104">通道是介於應用程式與通道堆疊之間的介面。</span><span class="sxs-lookup"><span data-stu-id="b84b2-104">Channels are the interface between the application and the channel stack.</span></span> <span data-ttu-id="b84b2-105">通道接聽程式負責建立接收 (或接聽) 端的通道，一般用來回應新傳入的訊息或連線。</span><span class="sxs-lookup"><span data-stu-id="b84b2-105">Channel listeners are responsible for creating channels on the receive (or listen) side, typically in response to a new incoming message or connection.</span></span> <span data-ttu-id="b84b2-106">通道處理站負責建立傳送端的通道，以初始化與端點的通訊。</span><span class="sxs-lookup"><span data-stu-id="b84b2-106">Channel factories are responsible for creating channels on the send side to initiate communication with an endpoint.</span></span>  

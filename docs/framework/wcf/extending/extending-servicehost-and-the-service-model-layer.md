@@ -9,6 +9,7 @@ ms.sourcegitcommit: 15109844229ade1c6449f48f3834db1b26907824
 ms.translationtype: MT
 ms.contentlocale: zh-TW
 ms.lasthandoff: 05/07/2018
+ms.locfileid: "33803472"
 ---
 # <a name="extending-servicehost-and-the-service-model-layer"></a><span data-ttu-id="5ae8e-102">擴充 ServiceHost 與服務模型層</span><span class="sxs-lookup"><span data-stu-id="5ae8e-102">Extending ServiceHost and the Service Model Layer</span></span>
 <span data-ttu-id="5ae8e-103">服務模型層負責從基礎通道提取傳入訊息，將它們以應用程式碼轉譯成方法叫用，然後將結果傳回給呼叫者。</span><span class="sxs-lookup"><span data-stu-id="5ae8e-103">The service model layer is responsible for pulling incoming messages out of the underlying channels, translating them into method invocations in application code, and sending the results back to the caller.</span></span> <span data-ttu-id="5ae8e-104">服務模型延伸會修改或實作涉及用戶端或發送器功能、自訂行為、訊息與參數攔截以及其他擴充性功能的執行或通訊行為與功能。</span><span class="sxs-lookup"><span data-stu-id="5ae8e-104">Service model extensions modify or implement execution or communication behavior and features involving client or dispatcher functionality, custom behaviors, message and parameter interception, and other extensibility functionality.</span></span>  

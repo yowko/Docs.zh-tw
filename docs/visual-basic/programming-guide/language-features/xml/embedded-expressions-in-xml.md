@@ -13,6 +13,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: zh-TW
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33653516"
 ---
 # <a name="embedded-expressions-in-xml-visual-basic"></a><span data-ttu-id="973f3-102">XML 中內嵌的運算式 (Visual Basic)</span><span class="sxs-lookup"><span data-stu-id="973f3-102">Embedded Expressions in XML (Visual Basic)</span></span>
 <span data-ttu-id="973f3-103">內嵌的運算式可讓您建立 XML 常值包含在執行階段所評估的運算式。</span><span class="sxs-lookup"><span data-stu-id="973f3-103">Embedded expressions enable you to create XML literals that contain expressions that are evaluated at run time.</span></span> <span data-ttu-id="973f3-104">內嵌運算式的語法是`<%=` `expression` `%>`，這會是相同的語法中所使用[!INCLUDE[vstecasp](~/includes/vstecasp-md.md)]。</span><span class="sxs-lookup"><span data-stu-id="973f3-104">The syntax for an embedded expression is `<%=` `expression` `%>`, which is the same as the syntax used in [!INCLUDE[vstecasp](~/includes/vstecasp-md.md)].</span></span>  

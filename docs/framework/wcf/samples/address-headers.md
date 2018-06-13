@@ -7,6 +7,7 @@ ms.sourcegitcommit: 15109844229ade1c6449f48f3834db1b26907824
 ms.translationtype: MT
 ms.contentlocale: zh-TW
 ms.lasthandoff: 05/07/2018
+ms.locfileid: "33803786"
 ---
 # <a name="address-headers"></a><span data-ttu-id="0a3f2-102">位址標頭</span><span class="sxs-lookup"><span data-stu-id="0a3f2-102">Address Headers</span></span>
 <span data-ttu-id="0a3f2-103">位址標頭範例會示範用戶端如何參考參數傳遞給使用 Windows Communication Foundation (WCF) 服務。</span><span class="sxs-lookup"><span data-stu-id="0a3f2-103">The Address Headers sample demonstrates how clients can pass reference parameters to a service using Windows Communication Foundation (WCF).</span></span>  

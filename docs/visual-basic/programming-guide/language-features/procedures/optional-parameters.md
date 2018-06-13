@@ -17,6 +17,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: zh-TW
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33651605"
 ---
 # <a name="optional-parameters-visual-basic"></a><span data-ttu-id="c66c1-102">選擇性參數 (Visual Basic)</span><span class="sxs-lookup"><span data-stu-id="c66c1-102">Optional Parameters (Visual Basic)</span></span>
 <span data-ttu-id="c66c1-103">您可以將程序參數指定為選擇項，當該程序被呼叫時就不必提供引數。</span><span class="sxs-lookup"><span data-stu-id="c66c1-103">You can specify that a procedure parameter is optional and no argument has to be supplied for it when the procedure is called.</span></span> <span data-ttu-id="c66c1-104">*選擇性參數*以`Optional`程序定義中的關鍵字。</span><span class="sxs-lookup"><span data-stu-id="c66c1-104">*Optional parameters* are indicated by the `Optional` keyword in the procedure definition.</span></span> <span data-ttu-id="c66c1-105">可套用下列規則：</span><span class="sxs-lookup"><span data-stu-id="c66c1-105">The following rules apply:</span></span>  

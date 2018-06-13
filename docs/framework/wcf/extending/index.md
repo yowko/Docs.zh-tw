@@ -11,6 +11,7 @@ ms.sourcegitcommit: 15109844229ade1c6449f48f3834db1b26907824
 ms.translationtype: MT
 ms.contentlocale: zh-TW
 ms.lasthandoff: 05/07/2018
+ms.locfileid: "33803701"
 ---
 # <a name="extending-wcf"></a><span data-ttu-id="c0760-102">延伸 WCF</span><span class="sxs-lookup"><span data-stu-id="c0760-102">Extending WCF</span></span>
 <span data-ttu-id="c0760-103">Windows Communication Foundation (WCF) 可讓您修改和擴充執行的階段元件，以精確地控制及延伸服務應用程式。</span><span class="sxs-lookup"><span data-stu-id="c0760-103">Windows Communication Foundation (WCF) allows you to modify and extend run time components to precisely control and extend service-based applications.</span></span> <span data-ttu-id="c0760-104">本節中的主題將深入說明延伸性結構。</span><span class="sxs-lookup"><span data-stu-id="c0760-104">The topics in this section go in depth about the extensibility architecture.</span></span> <span data-ttu-id="c0760-105">如需基本程式設計的詳細資訊，請參閱[基本 WCF 程式設計](../../../../docs/framework/wcf/basic-wcf-programming.md)。</span><span class="sxs-lookup"><span data-stu-id="c0760-105">For more information about basic programming, see [Basic WCF Programming](../../../../docs/framework/wcf/basic-wcf-programming.md).</span></span>  

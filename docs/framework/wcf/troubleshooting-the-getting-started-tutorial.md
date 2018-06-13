@@ -7,6 +7,7 @@ ms.sourcegitcommit: 15109844229ade1c6449f48f3834db1b26907824
 ms.translationtype: MT
 ms.contentlocale: zh-TW
 ms.lasthandoff: 05/07/2018
+ms.locfileid: "33807784"
 ---
 # <a name="troubleshooting-the-getting-started-tutorial"></a><span data-ttu-id="80b06-102">使用者入門教學課程疑難排解</span><span class="sxs-lookup"><span data-stu-id="80b06-102">Troubleshooting the Getting Started Tutorial</span></span>
 <span data-ttu-id="80b06-103">本主題列出在進行使用者入門教學課程時遇到的最常見問題，以及如何解決這些問題的方式。</span><span class="sxs-lookup"><span data-stu-id="80b06-103">This topic lists the most common problems encountered when working through the Getting Started Tutorial and how to resolve them.</span></span>  

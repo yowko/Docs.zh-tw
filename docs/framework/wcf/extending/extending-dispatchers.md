@@ -9,6 +9,7 @@ ms.sourcegitcommit: 15109844229ade1c6449f48f3834db1b26907824
 ms.translationtype: MT
 ms.contentlocale: zh-TW
 ms.lasthandoff: 05/07/2018
+ms.locfileid: "33808234"
 ---
 # <a name="extending-dispatchers"></a><span data-ttu-id="bcc39-102">擴充發送器</span><span class="sxs-lookup"><span data-stu-id="bcc39-102">Extending Dispatchers</span></span>
 <span data-ttu-id="bcc39-103">發送器負責從基礎通道提取傳入訊息，將訊息轉譯成應用程式程式碼中的方法叫用，然後將結果傳回給呼叫者。</span><span class="sxs-lookup"><span data-stu-id="bcc39-103">Dispatchers are responsible for pulling incoming messages out of the underlying channels, translating them into method invocations in application code, and sending the results back to the caller.</span></span> <span data-ttu-id="bcc39-104">發送器擴充可讓您修改這個處理。</span><span class="sxs-lookup"><span data-stu-id="bcc39-104">Dispatcher extensions allow you to modify this processing.</span></span>  <span data-ttu-id="bcc39-105">您可以實作可檢查或修改訊息或參數之內容的訊息或參數偵測器。</span><span class="sxs-lookup"><span data-stu-id="bcc39-105">You can implement message or parameter inspectors that inspect or modify the contents of messages or parameters.</span></span>  <span data-ttu-id="bcc39-106">您可以變更訊息路由傳送到作業的方式，或提供其他特定功能。</span><span class="sxs-lookup"><span data-stu-id="bcc39-106">You can change the way messages are routed to operations or provide some other functionality.</span></span>  

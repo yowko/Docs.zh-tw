@@ -9,6 +9,7 @@ ms.sourcegitcommit: 15109844229ade1c6449f48f3834db1b26907824
 ms.translationtype: MT
 ms.contentlocale: zh-TW
 ms.lasthandoff: 05/07/2018
+ms.locfileid: "33808633"
 ---
 # <a name="analytic-trace-event-reference"></a><span data-ttu-id="a547a-102">分析的追蹤事件參考</span><span class="sxs-lookup"><span data-stu-id="a547a-102">Analytic Trace Event Reference</span></span>
 <span data-ttu-id="a547a-103">下表定義事件層級、 識別碼和與 WCF 分析追蹤關聯的訊息。</span><span class="sxs-lookup"><span data-stu-id="a547a-103">The following table defines the event levels, identifiers, and messages associated with the WCF Analytic Tracing.</span></span>  

@@ -7,6 +7,7 @@ ms.sourcegitcommit: 15109844229ade1c6449f48f3834db1b26907824
 ms.translationtype: MT
 ms.contentlocale: zh-TW
 ms.lasthandoff: 05/07/2018
+ms.locfileid: "33808737"
 ---
 # <a name="custom-message-encoder-compression-encoder"></a><span data-ttu-id="88539-102">自訂訊息編碼器：壓縮編碼器</span><span class="sxs-lookup"><span data-stu-id="88539-102">Custom Message Encoder: Compression Encoder</span></span>
 <span data-ttu-id="88539-103">這個範例示範如何實作自訂編碼器使用的 Windows Communication Foundation (WCF) 平台。</span><span class="sxs-lookup"><span data-stu-id="88539-103">This sample demonstrates how to implement a custom encoder using the Windows Communication Foundation (WCF) platform.</span></span>  

@@ -7,6 +7,7 @@ ms.sourcegitcommit: 15109844229ade1c6449f48f3834db1b26907824
 ms.translationtype: MT
 ms.contentlocale: zh-TW
 ms.lasthandoff: 05/07/2018
+ms.locfileid: "33805820"
 ---
 # <a name="expected-exceptions"></a><span data-ttu-id="e38a7-102">預期的例外狀況</span><span class="sxs-lookup"><span data-stu-id="e38a7-102">Expected Exceptions</span></span>
 <span data-ttu-id="e38a7-103">此範例示範如何在使用型別用戶端時，攔截預期的例外狀況。</span><span class="sxs-lookup"><span data-stu-id="e38a7-103">This sample demonstrates how to catch expected exceptions when using a typed client.</span></span> <span data-ttu-id="e38a7-104">這個範例根據[入門](../../../../docs/framework/wcf/samples/getting-started-sample.md)，用來實作計算機服務。</span><span class="sxs-lookup"><span data-stu-id="e38a7-104">This sample is based on the [Getting Started](../../../../docs/framework/wcf/samples/getting-started-sample.md) that implements a calculator service.</span></span> <span data-ttu-id="e38a7-105">在這個範例中，用戶端是主控台應用程式 (.exe)，而服務則是由網際網路資訊服務 (IIS) 所裝載。</span><span class="sxs-lookup"><span data-stu-id="e38a7-105">In this sample, the client is a console application (.exe) and the service is hosted by Internet Information Services (IIS).</span></span>  

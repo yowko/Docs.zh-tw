@@ -10,6 +10,7 @@ ms.sourcegitcommit: 15109844229ade1c6449f48f3834db1b26907824
 ms.translationtype: MT
 ms.contentlocale: zh-TW
 ms.lasthandoff: 05/07/2018
+ms.locfileid: "33806640"
 ---
 # <a name="how-to-specify-client-credential-values"></a><span data-ttu-id="7690b-102">HOW TO：指定用戶端認證值</span><span class="sxs-lookup"><span data-stu-id="7690b-102">How to: Specify Client Credential Values</span></span>
 <span data-ttu-id="7690b-103">使用 Windows Communication Foundation (WCF)，服務可以指定用戶端驗證服務的方式。</span><span class="sxs-lookup"><span data-stu-id="7690b-103">Using Windows Communication Foundation (WCF), the service can specify how a client is authenticated to the service.</span></span> <span data-ttu-id="7690b-104">例如，服務可以規定用戶端必須出示憑證交付驗證。</span><span class="sxs-lookup"><span data-stu-id="7690b-104">For example, a service can stipulate that the client be authenticated with a certificate.</span></span>  

@@ -7,6 +7,7 @@ ms.sourcegitcommit: 15109844229ade1c6449f48f3834db1b26907824
 ms.translationtype: MT
 ms.contentlocale: zh-TW
 ms.lasthandoff: 05/07/2018
+ms.locfileid: "33809790"
 ---
 # <a name="message-flow-overview"></a><span data-ttu-id="7831a-102">訊息流程概觀</span><span class="sxs-lookup"><span data-stu-id="7831a-102">Message Flow Overview</span></span>
 <span data-ttu-id="7831a-103">在包含互連服務的分散式系統中，您必須判斷服務之間的因果關係。</span><span class="sxs-lookup"><span data-stu-id="7831a-103">In a distributed system containing interconnected services, it is necessary to determine causal relationships between the services.</span></span> <span data-ttu-id="7831a-104">請務必了解屬於要求流程一部分的各種元件，以便支援重要案例，例如健康監視、疑難排解和根本原因分析。</span><span class="sxs-lookup"><span data-stu-id="7831a-104">It is important to understand the various components that were part of a request flow to support critical scenarios such as health monitoring, troubleshooting, and root cause analysis.</span></span> <span data-ttu-id="7831a-105">為了讓各種服務之間的追蹤相互關聯，我們透過下列功能，在 .NET Framework 4 中加入了支援：</span><span class="sxs-lookup"><span data-stu-id="7831a-105">To enable the correlation of traces between various services, in the .NET Framework 4 we added support through the following features:</span></span>  

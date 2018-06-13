@@ -7,6 +7,7 @@ ms.sourcegitcommit: 77d9a94dac4c05827ed0663d95e0f9ad35d6682e
 ms.translationtype: MT
 ms.contentlocale: zh-TW
 ms.lasthandoff: 05/24/2018
+ms.locfileid: "34472383"
 ---
 # <a name="authentication-in-sql-server"></a><span data-ttu-id="668fa-102">在 SQL Server 中進行驗證</span><span class="sxs-lookup"><span data-stu-id="668fa-102">Authentication in SQL Server</span></span>
 <span data-ttu-id="668fa-103">SQL Server 支援兩種驗證模式：Windows 驗證模式和混合模式。</span><span class="sxs-lookup"><span data-stu-id="668fa-103">SQL Server supports two authentication modes, Windows authentication mode and mixed mode.</span></span>  

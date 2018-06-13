@@ -9,6 +9,7 @@ ms.sourcegitcommit: 15109844229ade1c6449f48f3834db1b26907824
 ms.translationtype: MT
 ms.contentlocale: zh-TW
 ms.lasthandoff: 05/07/2018
+ms.locfileid: "33807521"
 ---
 # <a name="load-balancing"></a><span data-ttu-id="d0f55-102">負載平衡</span><span class="sxs-lookup"><span data-stu-id="d0f55-102">Load Balancing</span></span>
 <span data-ttu-id="d0f55-103">以增加容量的 Windows Communication Foundation (WCF) 應用程式的方法之一是調整排除這些程式部署到負載平衡的伺服器陣列。</span><span class="sxs-lookup"><span data-stu-id="d0f55-103">One way to increase the capacity of Windows Communication Foundation (WCF) applications is to scale them out by deploying them into a load-balanced server farm.</span></span> <span data-ttu-id="d0f55-104">WCF 應用程式可以進行負載平衡使用標準負載平衡技術，包括 Windows 網路負載平衡等軟體負載平衡器，以及硬體架構的負載平衡裝置。</span><span class="sxs-lookup"><span data-stu-id="d0f55-104">WCF applications can be load balanced using standard load balancing techniques, including software load balancers such as Windows Network Load Balancing as well as hardware-based load balancing appliances.</span></span>  

@@ -7,6 +7,7 @@ ms.sourcegitcommit: 15109844229ade1c6449f48f3834db1b26907824
 ms.translationtype: MT
 ms.contentlocale: zh-TW
 ms.lasthandoff: 05/07/2018
+ms.locfileid: "33806535"
 ---
 # <a name="how-to-lock-down-endpoints-in-the-enterprise"></a><span data-ttu-id="f3a36-102">HOW TO：鎖定企業的端點</span><span class="sxs-lookup"><span data-stu-id="f3a36-102">How to: Lock Down Endpoints in the Enterprise</span></span>
 <span data-ttu-id="f3a36-103">大型企業通常需要在遵循企業安全性原則的環境中開發應用程式。</span><span class="sxs-lookup"><span data-stu-id="f3a36-103">Large enterprises often require that applications are developed in compliance with enterprise security policies.</span></span> <span data-ttu-id="f3a36-104">下列主題討論如何開發與安裝用戶端端點驗證器，可以用來驗證所有安裝在電腦上的 Windows Communication Foundation (WCF) 用戶端應用程式。</span><span class="sxs-lookup"><span data-stu-id="f3a36-104">The following topic discusses how to develop and install a client endpoint validator that can be used to validate all Windows Communication Foundation (WCF) client applications installed on computers.</span></span>  

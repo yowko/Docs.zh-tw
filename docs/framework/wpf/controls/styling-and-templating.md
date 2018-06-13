@@ -20,6 +20,7 @@ ms.sourcegitcommit: 43924acbdbb3981d103e11049bbe460457d42073
 ms.translationtype: MT
 ms.contentlocale: zh-TW
 ms.lasthandoff: 05/23/2018
+ms.locfileid: "34457754"
 ---
 # <a name="styling-and-templating"></a><span data-ttu-id="091c7-102">樣式設定和範本化</span><span class="sxs-lookup"><span data-stu-id="091c7-102">Styling and Templating</span></span>
 [!INCLUDE[TLA#tla_winclient](../../../../includes/tlasharptla-winclient-md.md)]<span data-ttu-id="091c7-103"> 樣式設定和範本化係指一套功能 (樣式、範本、觸發程序及分鏡腳本)，可讓開發人員和設計人員創造引人注目的效果，並為其產品建立一致的外觀。</span><span class="sxs-lookup"><span data-stu-id="091c7-103"> styling and templating refer to a suite of features (styles, templates, triggers, and storyboards) that allow developers and designers to create visually compelling effects and to create a consistent appearance for their product.</span></span> <span data-ttu-id="091c7-104">雖然開發人員和 (或) 設計人員可以依個別應用程式廣泛地自訂外觀，但強大的樣式設定和範本化模型仍有其必要性，這可允許在應用程式內或應用程式之間維護及共用外觀。</span><span class="sxs-lookup"><span data-stu-id="091c7-104">Although developers and or designers can customize the appearance extensively on an application-by-application basis, a strong styling and templating model is necessary to allow maintenance and sharing of the appearance within and among applications.</span></span> [!INCLUDE[TLA#tla_winclient](../../../../includes/tlasharptla-winclient-md.md)]<span data-ttu-id="091c7-105"> 便有提供該模型。</span><span class="sxs-lookup"><span data-stu-id="091c7-105"> provides that model.</span></span>  

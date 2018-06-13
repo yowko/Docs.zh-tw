@@ -7,6 +7,7 @@ ms.sourcegitcommit: 15109844229ade1c6449f48f3834db1b26907824
 ms.translationtype: MT
 ms.contentlocale: zh-TW
 ms.lasthandoff: 05/07/2018
+ms.locfileid: "33805404"
 ---
 # <a name="aspnet-caching-integration"></a><span data-ttu-id="0f824-102">ASP.NET 快取整合</span><span class="sxs-lookup"><span data-stu-id="0f824-102">ASP.NET Caching Integration</span></span>
 <span data-ttu-id="0f824-103">這個範例示範如何使用 ASP.NET 輸出快取搭配 WCF WEB HTTP 程式設計模型。</span><span class="sxs-lookup"><span data-stu-id="0f824-103">This sample demonstrates how to utilize the ASP.NET output cache with the WCF WEB HTTP programming model.</span></span> <span data-ttu-id="0f824-104">請參閱[基本資源服務](../../../../docs/framework/wcf/samples/basic-resource-service.md)之自我裝載的版本，討論深度的服務實作此案例的範例。</span><span class="sxs-lookup"><span data-stu-id="0f824-104">Please see the [Basic Resource Service](../../../../docs/framework/wcf/samples/basic-resource-service.md) sample for a self-hosted version of this scenario that discusses the service implementation in depth.</span></span> <span data-ttu-id="0f824-105">本主題著重在 ASP.NET 輸出快取整合功能。</span><span class="sxs-lookup"><span data-stu-id="0f824-105">This topic focuses on the ASP.NET output cache integration feature.</span></span>  

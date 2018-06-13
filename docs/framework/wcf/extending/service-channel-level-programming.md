@@ -10,6 +10,7 @@ ms.sourcegitcommit: 15109844229ade1c6449f48f3834db1b26907824
 ms.translationtype: MT
 ms.contentlocale: zh-TW
 ms.lasthandoff: 05/07/2018
+ms.locfileid: "33805856"
 ---
 # <a name="service-channel-level-programming"></a><span data-ttu-id="07415-102">服務通道層級的程式設計</span><span class="sxs-lookup"><span data-stu-id="07415-102">Service Channel-Level Programming</span></span>
 <span data-ttu-id="07415-103">本主題說明如何撰寫 Windows Communication Foundation (WCF) 服務應用程式，而不使用<xref:System.ServiceModel.ServiceHost?displayProperty=nameWithType>和其相關聯的物件模型。</span><span class="sxs-lookup"><span data-stu-id="07415-103">This topic describes how to write a Windows Communication Foundation (WCF) service application without using the <xref:System.ServiceModel.ServiceHost?displayProperty=nameWithType> and its associated object model.</span></span>  

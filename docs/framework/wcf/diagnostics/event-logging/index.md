@@ -9,6 +9,7 @@ ms.sourcegitcommit: 15109844229ade1c6449f48f3834db1b26907824
 ms.translationtype: MT
 ms.contentlocale: zh-TW
 ms.lasthandoff: 05/07/2018
+ms.locfileid: "33804935"
 ---
 # <a name="event-logging-in-wcf"></a><span data-ttu-id="09c68-102">WCF 的事件記錄</span><span class="sxs-lookup"><span data-stu-id="09c68-102">Event Logging in WCF</span></span>
 <span data-ttu-id="09c68-103">Windows Communication Foundation (WCF) 會追蹤 Windows 事件記錄檔中的內部事件。</span><span class="sxs-lookup"><span data-stu-id="09c68-103">Windows Communication Foundation (WCF) traces internal events in the Windows event log.</span></span>  

@@ -7,6 +7,7 @@ ms.sourcegitcommit: 15109844229ade1c6449f48f3834db1b26907824
 ms.translationtype: MT
 ms.contentlocale: zh-TW
 ms.lasthandoff: 05/07/2018
+ms.locfileid: "33808604"
 ---
 # <a name="durable-instance-context"></a><span data-ttu-id="fff26-102">永久性執行個體內容</span><span class="sxs-lookup"><span data-stu-id="fff26-102">Durable Instance Context</span></span>
 <span data-ttu-id="fff26-103">這個範例示範如何自訂 Windows Communication Foundation (WCF) 執行階段，以啟用永久性執行個體內容。</span><span class="sxs-lookup"><span data-stu-id="fff26-103">This sample demonstrates how to customize the Windows Communication Foundation (WCF) runtime to enable durable instance contexts.</span></span> <span data-ttu-id="fff26-104">它會使用 SQL Server 2005 做為備份存放區 (在此例中為 SQL Server 2005 Express)。</span><span class="sxs-lookup"><span data-stu-id="fff26-104">It uses SQL Server 2005 as its backing store (SQL Server 2005 Express in this case).</span></span> <span data-ttu-id="fff26-105">不過，也會提供存取自訂儲存機制的方法。</span><span class="sxs-lookup"><span data-stu-id="fff26-105">However, it also provides a way to access custom storage mechanisms.</span></span>  

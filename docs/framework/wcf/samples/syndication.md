@@ -7,6 +7,7 @@ ms.sourcegitcommit: 15109844229ade1c6449f48f3834db1b26907824
 ms.translationtype: MT
 ms.contentlocale: zh-TW
 ms.lasthandoff: 05/07/2018
+ms.locfileid: "33804511"
 ---
 # <a name="syndication"></a><span data-ttu-id="86b03-102">新聞訂閱</span><span class="sxs-lookup"><span data-stu-id="86b03-102">Syndication</span></span>
 <span data-ttu-id="86b03-103">本節包含示範 Windows Communication Foundation (WCF) 的新聞訂閱的範例。</span><span class="sxs-lookup"><span data-stu-id="86b03-103">This section contains samples that demonstrate Windows Communication Foundation (WCF) syndication.</span></span>  

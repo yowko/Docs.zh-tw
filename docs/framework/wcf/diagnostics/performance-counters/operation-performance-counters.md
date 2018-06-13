@@ -7,6 +7,7 @@ ms.sourcegitcommit: 15109844229ade1c6449f48f3834db1b26907824
 ms.translationtype: MT
 ms.contentlocale: zh-TW
 ms.lasthandoff: 05/07/2018
+ms.locfileid: "33804413"
 ---
 # <a name="operation-performance-counters"></a><span data-ttu-id="b88bd-102">作業效能計數器</span><span class="sxs-lookup"><span data-stu-id="b88bd-102">Operation Performance Counters</span></span>
 <span data-ttu-id="b88bd-103">當使用效能監視器 (Perfmon.exe) 檢視時，您可以在 `ServiceModelOperation 4.0.0.0` 效能物件中找到作業效能計數器。</span><span class="sxs-lookup"><span data-stu-id="b88bd-103">Operation performance counters are found under the `ServiceModelOperation 4.0.0.0` performance object when viewing with the Performance Monitor (Perfmon.exe).</span></span> <span data-ttu-id="b88bd-104">每個作業都有個別的執行個體。</span><span class="sxs-lookup"><span data-stu-id="b88bd-104">Each operation has an individual instance.</span></span> <span data-ttu-id="b88bd-105">也就是，如果指定的合約有 10 個作業，就會有 10 個作業計數器執行個體與該合約產生關聯。</span><span class="sxs-lookup"><span data-stu-id="b88bd-105">That is, if a given contract has 10 operations, 10 operation counter instances are associated with that contract.</span></span> <span data-ttu-id="b88bd-106">物件執行個體會使用以下模式來命名：</span><span class="sxs-lookup"><span data-stu-id="b88bd-106">The object instances are named using the following pattern:</span></span>  

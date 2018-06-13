@@ -7,6 +7,7 @@ ms.sourcegitcommit: 15109844229ade1c6449f48f3834db1b26907824
 ms.translationtype: MT
 ms.contentlocale: zh-TW
 ms.lasthandoff: 05/07/2018
+ms.locfileid: "33809686"
 ---
 # <a name="service-versioning"></a><span data-ttu-id="42802-102">服務版本控制</span><span class="sxs-lookup"><span data-stu-id="42802-102">Service Versioning</span></span>
 <span data-ttu-id="42802-103">在初始部署以及存留期間可能的數次部署之後，服務 (以及公開的端點) 可能因各種不同的原因而需要變更，例如變更業務需要、資訊技術需求，或解決其他問題等。</span><span class="sxs-lookup"><span data-stu-id="42802-103">After initial deployment, and potentially several times during their lifetime, services (and the endpoints they expose) may need to be changed for a variety of reasons, such as changing business needs, information technology requirements, or to address other issues.</span></span> <span data-ttu-id="42802-104">每個變更都會產生新的服務版本。</span><span class="sxs-lookup"><span data-stu-id="42802-104">Each change introduces a new version of the service.</span></span> <span data-ttu-id="42802-105">本主題說明如何考量版本控制中 Windows Communication Foundation (WCF)。</span><span class="sxs-lookup"><span data-stu-id="42802-105">This topic explains how to consider versioning in Windows Communication Foundation (WCF).</span></span>  

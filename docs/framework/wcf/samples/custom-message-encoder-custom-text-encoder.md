@@ -7,6 +7,7 @@ ms.sourcegitcommit: 15109844229ade1c6449f48f3834db1b26907824
 ms.translationtype: MT
 ms.contentlocale: zh-TW
 ms.lasthandoff: 05/07/2018
+ms.locfileid: "33808061"
 ---
 # <a name="custom-message-encoder-custom-text-encoder"></a><span data-ttu-id="6e4ee-102">自訂訊息編碼器：自訂文字編碼器</span><span class="sxs-lookup"><span data-stu-id="6e4ee-102">Custom Message Encoder: Custom Text Encoder</span></span>
 <span data-ttu-id="6e4ee-103">這個範例示範如何實作自訂文字訊息編碼器使用 Windows Communication Foundation (WCF)。</span><span class="sxs-lookup"><span data-stu-id="6e4ee-103">This sample demonstrates how to implement a custom text message encoder using Windows Communication Foundation (WCF).</span></span>  

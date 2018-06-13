@@ -16,6 +16,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: zh-TW
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33652164"
 ---
 # <a name="how-to-control-the-availability-of-a-variable-visual-basic"></a><span data-ttu-id="a7307-102">如何：控制變數的可用性 (Visual Basic)</span><span class="sxs-lookup"><span data-stu-id="a7307-102">How to: Control the Availability of a Variable (Visual Basic)</span></span>
 <span data-ttu-id="a7307-103">指定控制變數的可用性其*存取層級*。</span><span class="sxs-lookup"><span data-stu-id="a7307-103">You control the availability of a variable by specifying its *access level*.</span></span> <span data-ttu-id="a7307-104">存取層級決定何種程式碼有權讀取或寫入的變數。</span><span class="sxs-lookup"><span data-stu-id="a7307-104">The access level determines what code has permission to read or write to the variable.</span></span>  

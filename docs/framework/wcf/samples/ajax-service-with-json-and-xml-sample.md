@@ -7,6 +7,7 @@ ms.sourcegitcommit: 15109844229ade1c6449f48f3834db1b26907824
 ms.translationtype: MT
 ms.contentlocale: zh-TW
 ms.lasthandoff: 05/07/2018
+ms.locfileid: "33807341"
 ---
 # <a name="ajax-service-with-json-and-xml-sample"></a><span data-ttu-id="5e235-102">含 JSON 和 XML 的 AJAX 服務範例</span><span class="sxs-lookup"><span data-stu-id="5e235-102">AJAX Service with JSON and XML Sample</span></span>
 <span data-ttu-id="5e235-103">這個範例示範如何使用 Windows Communication Foundation (WCF) 建立傳回 JavaScript 物件標記法 (JSON) 或 XML 資料的 Asynchronous JavaScript and XML (AJAX) 服務。</span><span class="sxs-lookup"><span data-stu-id="5e235-103">This sample demonstrates how to use Windows Communication Foundation (WCF) to create an Asynchronous JavaScript and XML (AJAX) service that returns either JavaScript Object Notation (JSON) or XML data.</span></span> <span data-ttu-id="5e235-104">您可以從 Web 瀏覽器用戶端使用 JavaScript 程式碼存取 AJAX 服務。</span><span class="sxs-lookup"><span data-stu-id="5e235-104">You can access an AJAX service by using JavaScript code from a Web browser client.</span></span> <span data-ttu-id="5e235-105">這個範例是根據[基本 AJAX 服務](../../../../docs/framework/wcf/samples/basic-ajax-service.md)範例。</span><span class="sxs-lookup"><span data-stu-id="5e235-105">This sample builds on the [Basic AJAX Service](../../../../docs/framework/wcf/samples/basic-ajax-service.md) sample.</span></span>  

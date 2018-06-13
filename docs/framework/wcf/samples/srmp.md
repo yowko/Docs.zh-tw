@@ -7,6 +7,7 @@ ms.sourcegitcommit: 15109844229ade1c6449f48f3834db1b26907824
 ms.translationtype: MT
 ms.contentlocale: zh-TW
 ms.lasthandoff: 05/07/2018
+ms.locfileid: "33805495"
 ---
 # <a name="srmp"></a><span data-ttu-id="ac6f7-102">SRMP</span><span class="sxs-lookup"><span data-stu-id="ac6f7-102">SRMP</span></span>
 <span data-ttu-id="ac6f7-103">這個範例示範如何使用訊息佇列 (MSMQ)，透過 HTTP 來執行交易佇列通訊。</span><span class="sxs-lookup"><span data-stu-id="ac6f7-103">This sample demonstrates how to perform transacted queued communication by using Message Queuing (MSMQ) over HTTP.</span></span>  

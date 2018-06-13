@@ -7,6 +7,7 @@ ms.sourcegitcommit: 15109844229ade1c6449f48f3834db1b26907824
 ms.translationtype: MT
 ms.contentlocale: zh-TW
 ms.lasthandoff: 05/07/2018
+ms.locfileid: "33809423"
 ---
 # <a name="durable-duplex"></a><span data-ttu-id="ae234-102">永久性雙工</span><span class="sxs-lookup"><span data-stu-id="ae234-102">Durable Duplex</span></span>
 <span data-ttu-id="ae234-103">這個範例示範如何安裝及設定使用訊息活動中 Windows Workflow Foundation (WF) 的永久性雙工訊息交換。</span><span class="sxs-lookup"><span data-stu-id="ae234-103">This sample demonstrates how to set up and configure durable duplex message exchange using the messaging activities in Windows Workflow Foundation (WF).</span></span> <span data-ttu-id="ae234-104">永久性的雙工訊息交換是長時間進行的雙向訊息交換。</span><span class="sxs-lookup"><span data-stu-id="ae234-104">A durable duplex message exchange is a two-way message exchange that takes place over a long period of time.</span></span> <span data-ttu-id="ae234-105">此訊息交換的存留期間可能比通訊通道的存留期間以及服務執行個體的記憶體中存留期間還要長。</span><span class="sxs-lookup"><span data-stu-id="ae234-105">The lifetime of the message exchange may be longer than the lifetime of the communication channel and the in-memory lifetime of the service instances.</span></span>  

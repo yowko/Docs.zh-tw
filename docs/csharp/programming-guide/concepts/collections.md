@@ -7,6 +7,7 @@ ms.sourcegitcommit: 54231aa56fca059e9297888a96fbca1d4cf3746c
 ms.translationtype: HT
 ms.contentlocale: zh-TW
 ms.lasthandoff: 05/25/2018
+ms.locfileid: "34549616"
 ---
 # <a name="collections-c"></a><span data-ttu-id="5954a-102">集合 (C#)</span><span class="sxs-lookup"><span data-stu-id="5954a-102">Collections (C#)</span></span>
 <span data-ttu-id="5954a-103">在許多應用程式中，您想要建立和管理相關物件的群組。</span><span class="sxs-lookup"><span data-stu-id="5954a-103">For many applications, you want to create and manage groups of related objects.</span></span> <span data-ttu-id="5954a-104">有兩種方式可以群組物件：建立物件的陣列和建立物件的集合。</span><span class="sxs-lookup"><span data-stu-id="5954a-104">There are two ways to group objects: by creating arrays of objects, and by creating collections of objects.</span></span>  

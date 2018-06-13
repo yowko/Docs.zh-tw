@@ -7,6 +7,7 @@ ms.sourcegitcommit: 15109844229ade1c6449f48f3834db1b26907824
 ms.translationtype: MT
 ms.contentlocale: zh-TW
 ms.lasthandoff: 05/07/2018
+ms.locfileid: "33806093"
 ---
 # <a name="services"></a><span data-ttu-id="77f72-102">服務</span><span class="sxs-lookup"><span data-stu-id="77f72-102">Services</span></span>
 <span data-ttu-id="77f72-103">本節包含示範 Windows Communication Foundation (WCF) 服務的範例。</span><span class="sxs-lookup"><span data-stu-id="77f72-103">This section contains samples that demonstrate Windows Communication Foundation (WCF) services.</span></span>  

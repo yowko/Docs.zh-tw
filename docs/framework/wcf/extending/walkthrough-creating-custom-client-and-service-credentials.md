@@ -10,6 +10,7 @@ ms.sourcegitcommit: 15109844229ade1c6449f48f3834db1b26907824
 ms.translationtype: MT
 ms.contentlocale: zh-TW
 ms.lasthandoff: 05/07/2018
+ms.locfileid: "33808480"
 ---
 # <a name="walkthrough-creating-custom-client-and-service-credentials"></a><span data-ttu-id="83ea1-102">逐步解說：建立自訂用戶端與服務認證</span><span class="sxs-lookup"><span data-stu-id="83ea1-102">Walkthrough: Creating Custom Client and Service Credentials</span></span>
 <span data-ttu-id="83ea1-103">此主題顯示如何實作自訂用戶端和服務認證，以及如何使用來自應用程式碼的自訂認證。</span><span class="sxs-lookup"><span data-stu-id="83ea1-103">This topic shows how to implement custom client and service credentials and how to use custom credentials from application code.</span></span>  

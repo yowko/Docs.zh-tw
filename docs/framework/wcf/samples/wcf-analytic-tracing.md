@@ -7,6 +7,7 @@ ms.sourcegitcommit: 15109844229ade1c6449f48f3834db1b26907824
 ms.translationtype: MT
 ms.contentlocale: zh-TW
 ms.lasthandoff: 05/07/2018
+ms.locfileid: "33807094"
 ---
 # <a name="wcf-analytic-tracing"></a><span data-ttu-id="4d9b8-102">WCF 分析追蹤</span><span class="sxs-lookup"><span data-stu-id="4d9b8-102">WCF Analytic Tracing</span></span>
 <span data-ttu-id="4d9b8-103">這個範例會示範如何將您自己的追蹤事件加入至 Windows Communication Foundation (WCF) 寫入至 ETW 的分析追蹤的資料流[!INCLUDE[netfx_current_long](../../../../includes/netfx-current-long-md.md)]。</span><span class="sxs-lookup"><span data-stu-id="4d9b8-103">This sample demonstrates how to add your own tracing events into the stream of analytic traces that Windows Communication Foundation (WCF) writes to ETW in [!INCLUDE[netfx_current_long](../../../../includes/netfx-current-long-md.md)].</span></span> <span data-ttu-id="4d9b8-104">分析追蹤的用意在於輕鬆取得服務的可視性，而不必付出高效能的代價。</span><span class="sxs-lookup"><span data-stu-id="4d9b8-104">Analytic traces are meant to make it easy to get visibility into your services without paying a high performance penalty.</span></span> <span data-ttu-id="4d9b8-105">這個範例示範如何使用<xref:System.Diagnostics.Eventing?displayProperty=nameWithType>Api 與 WCF 服務整合的寫入事件。</span><span class="sxs-lookup"><span data-stu-id="4d9b8-105">This sample shows how to use the <xref:System.Diagnostics.Eventing?displayProperty=nameWithType> APIs to write events that integrate with WCF services.</span></span>  

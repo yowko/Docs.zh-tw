@@ -7,6 +7,7 @@ ms.sourcegitcommit: 15109844229ade1c6449f48f3834db1b26907824
 ms.translationtype: MT
 ms.contentlocale: zh-TW
 ms.lasthandoff: 05/07/2018
+ms.locfileid: "33806028"
 ---
 # <a name="custom-stream-upgrades"></a><span data-ttu-id="2f639-102">自訂資料流升級</span><span class="sxs-lookup"><span data-stu-id="2f639-102">Custom Stream Upgrades</span></span>
 <span data-ttu-id="2f639-103">以資料流為導向的傳輸 (例如 TCP 和具名管道) 會在用戶端和伺服器之間的連續位元組資料流上進行作業。</span><span class="sxs-lookup"><span data-stu-id="2f639-103">Stream-oriented transports such as TCP and Named Pipes operate on a continuous stream of bytes between the client and server.</span></span> <span data-ttu-id="2f639-104">透過 <xref:System.IO.Stream> 物件即可實現此資料流。</span><span class="sxs-lookup"><span data-stu-id="2f639-104">This stream is realized by a  <xref:System.IO.Stream> object.</span></span> <span data-ttu-id="2f639-105">在資料流升級中，用戶端會想將選用通訊協定層新增至通道堆疊，並也要求其他通訊通道端也這樣執行。</span><span class="sxs-lookup"><span data-stu-id="2f639-105">In a stream upgrade, the client wants to add an optional protocol layer to the channel stack, and asks the other end of the communication channel to do so.</span></span> <span data-ttu-id="2f639-106">資料流升級包含使用升級的物件取代原始的 <xref:System.IO.Stream> 物件。</span><span class="sxs-lookup"><span data-stu-id="2f639-106">The stream upgrade consists in replacing the original <xref:System.IO.Stream> object with an upgraded one.</span></span>  

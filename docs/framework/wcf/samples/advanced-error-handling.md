@@ -7,6 +7,7 @@ ms.sourcegitcommit: 15109844229ade1c6449f48f3834db1b26907824
 ms.translationtype: MT
 ms.contentlocale: zh-TW
 ms.lasthandoff: 05/07/2018
+ms.locfileid: "33810079"
 ---
 # <a name="advanced-error-handling"></a><span data-ttu-id="e31a8-102">進階的錯誤處理</span><span class="sxs-lookup"><span data-stu-id="e31a8-102">Advanced Error Handling</span></span>
 <span data-ttu-id="e31a8-103">這個範例會示範 Windows Communication Foundation (WCF) 路由服務。</span><span class="sxs-lookup"><span data-stu-id="e31a8-103">This sample demonstrates the Windows Communication Foundation (WCF) routing service.</span></span> <span data-ttu-id="e31a8-104">路由服務是 WCF 元件，以簡化應用程式中加入內容架構的路由器。</span><span class="sxs-lookup"><span data-stu-id="e31a8-104">The routing service is a WCF component that makes it easy to include a content-based router in your application.</span></span> <span data-ttu-id="e31a8-105">此範例示範路由服務如何使用異動和其他更複雜的訊息處理概念，例如多點傳送，以聰明的方式從錯誤中復原。</span><span class="sxs-lookup"><span data-stu-id="e31a8-105">This sample shows how the routing service intelligently recovers from errors, using transactions and other more complex messaging concepts such as multicasting.</span></span>  
