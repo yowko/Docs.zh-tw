@@ -17,6 +17,7 @@ ms.sourcegitcommit: 11f11ca6cefe555972b3a5c99729d1a7523d8f50
 ms.translationtype: MT
 ms.contentlocale: zh-TW
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32745675"
 ---
 # <a name="ltdisablecachingbindingfailuresgt-element"></a><span data-ttu-id="190b2-102">&lt;disableCachingBindingFailures&gt;項目</span><span class="sxs-lookup"><span data-stu-id="190b2-102">&lt;disableCachingBindingFailures&gt; Element</span></span>
 <span data-ttu-id="190b2-103">指定是否要停用的繫結失敗發生因為由探查找不到組件快取。</span><span class="sxs-lookup"><span data-stu-id="190b2-103">Specifies whether to disable the caching of binding failures that occur because the assembly was not found by probing.</span></span>  

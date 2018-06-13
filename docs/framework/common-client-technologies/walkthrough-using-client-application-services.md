@@ -13,6 +13,7 @@ ms.sourcegitcommit: 11f11ca6cefe555972b3a5c99729d1a7523d8f50
 ms.translationtype: HT
 ms.contentlocale: zh-TW
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32745366"
 ---
 # <a name="walkthrough-using-client-application-services"></a><span data-ttu-id="7a86c-102">逐步解說：使用用戶端應用程式服務</span><span class="sxs-lookup"><span data-stu-id="7a86c-102">Walkthrough: Using Client Application Services</span></span>
 <span data-ttu-id="7a86c-103">本主題說明如何建立使用用戶端應用程式服務驗證使用者，以及擷取使用者角色和設定的 Windows 應用程式。</span><span class="sxs-lookup"><span data-stu-id="7a86c-103">This topic describes how to create a Windows application that uses client application services to authenticate users and retrieve user roles and settings.</span></span>  

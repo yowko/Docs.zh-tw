@@ -10,6 +10,7 @@ ms.sourcegitcommit: 11f11ca6cefe555972b3a5c99729d1a7523d8f50
 ms.translationtype: MT
 ms.contentlocale: zh-TW
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32755961"
 ---
 # <a name="creating-a-dataset"></a><span data-ttu-id="7659f-102">建立資料集</span><span class="sxs-lookup"><span data-stu-id="7659f-102">Creating a DataSet</span></span>
 <span data-ttu-id="7659f-103">您可呼叫 <xref:System.Data.DataSet> 建構函式 (Constructor) 來建立 <xref:System.Data.DataSet> 的執行個體 (Instance)。</span><span class="sxs-lookup"><span data-stu-id="7659f-103">You create an instance of a <xref:System.Data.DataSet> by calling the <xref:System.Data.DataSet> constructor.</span></span> <span data-ttu-id="7659f-104">選擇性地指定名稱引數。</span><span class="sxs-lookup"><span data-stu-id="7659f-104">Optionally specify a name argument.</span></span> <span data-ttu-id="7659f-105">如果您不指定 <xref:System.Data.DataSet> 的名稱，則名稱會設定為 "NewDataSet"。</span><span class="sxs-lookup"><span data-stu-id="7659f-105">If you do not specify a name for the <xref:System.Data.DataSet>, the name is set to "NewDataSet".</span></span>  

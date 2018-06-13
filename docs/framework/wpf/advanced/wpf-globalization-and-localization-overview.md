@@ -10,6 +10,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: zh-TW
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33549613"
 ---
 # <a name="wpf-globalization-and-localization-overview"></a><span data-ttu-id="d9c68-102">WPF 全球化和當地語系化概觀</span><span class="sxs-lookup"><span data-stu-id="d9c68-102">WPF Globalization and Localization Overview</span></span>
 <span data-ttu-id="d9c68-103">當您限制只有一種語言可以使用您的產品時，就是將潛在客戶群限制為全世界 65 億人口的一小部分。</span><span class="sxs-lookup"><span data-stu-id="d9c68-103">When you limit your product's availability to only one language, you limit your potential customer base to a fraction of our world’s 6.5 billion population.</span></span> <span data-ttu-id="d9c68-104">如果您想要全球對象都可以使用應用程式，則具成本效益的產品當地語系化是更多客戶可以使用的一種最佳且最經濟的方法。</span><span class="sxs-lookup"><span data-stu-id="d9c68-104">If you want your applications to reach a global audience, cost-effective localization of your product is one of the best and most economical ways to reach more customers.</span></span>  

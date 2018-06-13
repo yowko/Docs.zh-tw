@@ -13,6 +13,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: HT
 ms.contentlocale: zh-TW
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33218981"
 ---
 # <a name="-errorreport-c-compiler-options"></a><span data-ttu-id="a4695-102">-errorreport (C# 編譯器選項)</span><span class="sxs-lookup"><span data-stu-id="a4695-102">-errorreport (C# Compiler Options)</span></span>
 <span data-ttu-id="a4695-103">此選項提供將 C# 編譯器內部錯誤回報給 Microsoft 的便利方式。</span><span class="sxs-lookup"><span data-stu-id="a4695-103">This option provides a convenient way to report a C# internal compiler error to Microsoft.</span></span>  

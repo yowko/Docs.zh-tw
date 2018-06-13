@@ -9,6 +9,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: HT
 ms.contentlocale: zh-TW
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33218699"
 ---
 # <a name="runtime-package-store"></a><span data-ttu-id="5648b-103">執行階段套件存放區</span><span class="sxs-lookup"><span data-stu-id="5648b-103">Runtime package store</span></span>
 

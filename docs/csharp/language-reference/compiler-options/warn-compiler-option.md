@@ -17,6 +17,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: HT
 ms.contentlocale: zh-TW
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33218867"
 ---
 # <a name="-warn-c-compiler-options"></a><span data-ttu-id="6454a-102">-warn (C# 編譯器選項)</span><span class="sxs-lookup"><span data-stu-id="6454a-102">-warn (C# Compiler Options)</span></span>
 <span data-ttu-id="6454a-103">**-warn** 選項指定要針對編譯器顯示的警告層級。</span><span class="sxs-lookup"><span data-stu-id="6454a-103">The **-warn** option specifies the warning level for the compiler to display.</span></span>  

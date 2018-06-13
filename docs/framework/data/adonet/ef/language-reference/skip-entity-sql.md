@@ -7,6 +7,7 @@ ms.sourcegitcommit: 11f11ca6cefe555972b3a5c99729d1a7523d8f50
 ms.translationtype: MT
 ms.contentlocale: zh-TW
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32766578"
 ---
 # <a name="skip-entity-sql"></a><span data-ttu-id="44e5d-102">SKIP (Entity SQL)</span><span class="sxs-lookup"><span data-stu-id="44e5d-102">SKIP (Entity SQL)</span></span>
 <span data-ttu-id="44e5d-103">您可以在 ORDER BY 子句中使用 SKIP 子句執行實際分頁。</span><span class="sxs-lookup"><span data-stu-id="44e5d-103">You can perform physical paging by using the SKIP sub-clause in the ORDER BY clause.</span></span> <span data-ttu-id="44e5d-104">SKIP 不可單獨使用於 ORDER BY 子句之外。</span><span class="sxs-lookup"><span data-stu-id="44e5d-104">SKIP cannot be used separately from the ORDER BY clause.</span></span>  

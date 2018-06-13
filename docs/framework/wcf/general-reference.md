@@ -1,28 +1,17 @@
 ---
-title: "一般參考"
-ms.custom: 
+title: 一般參考
 ms.date: 03/30/2017
-ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.technology: dotnet-clr
-ms.tgt_pltfrm: 
-ms.topic: article
 helpviewer_keywords:
 - general reference [WCF]
 - Windows Communication Foundation, general reference
 - WCF, general reference
 ms.assetid: b1a21e93-4700-46e6-88ca-bd7a50e19a16
-caps.latest.revision: "6"
-author: dotnet-bot
-ms.author: dotnetcontent
-manager: wpickett
-ms.workload: dotnet
-ms.openlocfilehash: a73f1aa4e55181bb52bfe2d389feec2a0464cd6a
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.openlocfilehash: 5494716f52c3d604fb010c602389930c71a8ea40
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 05/04/2018
+ms.locfileid: "33498224"
 ---
-# <a name="general-reference"></a><span data-ttu-id="f7ca1-102">一般參考</span><span class="sxs-lookup"><span data-stu-id="f7ca1-102">General Reference</span></span>
-<span data-ttu-id="f7ca1-103">區段[ \<system.serviceModel >](../../../docs/framework/configure-apps/file-schema/wcf/system-servicemodel.md)說明用來設定的項目[!INCLUDE[indigo1](../../../includes/indigo1-md.md)]用戶端和服務。</span><span class="sxs-lookup"><span data-stu-id="f7ca1-103">The section [\<system.serviceModel>](../../../docs/framework/configure-apps/file-schema/wcf/system-servicemodel.md) describes the elements that are used to configure [!INCLUDE[indigo1](../../../includes/indigo1-md.md)] clients and services.</span></span>
+# <a name="general-reference"></a><span data-ttu-id="63c16-102">一般參考</span><span class="sxs-lookup"><span data-stu-id="63c16-102">General Reference</span></span>
+<span data-ttu-id="63c16-103">區段[ \<system.serviceModel >](../../../docs/framework/configure-apps/file-schema/wcf/system-servicemodel.md)說明可用來設定 Windows Communication Foundation (WCF) 用戶端和服務的項目。</span><span class="sxs-lookup"><span data-stu-id="63c16-103">The section [\<system.serviceModel>](../../../docs/framework/configure-apps/file-schema/wcf/system-servicemodel.md) describes the elements that are used to configure Windows Communication Foundation (WCF) clients and services.</span></span>

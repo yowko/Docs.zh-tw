@@ -7,6 +7,7 @@ ms.sourcegitcommit: 11f11ca6cefe555972b3a5c99729d1a7523d8f50
 ms.translationtype: MT
 ms.contentlocale: zh-TW
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32746653"
 ---
 # <a name="ltpersistenceprovidergt"></a><span data-ttu-id="c5a7f-102">&lt;persistenceProvider&gt;</span><span class="sxs-lookup"><span data-stu-id="c5a7f-102">&lt;persistenceProvider&gt;</span></span>
 <span data-ttu-id="c5a7f-103">指定要使用的持續性提供者實作型別，以及持續性作業所使用的逾時。</span><span class="sxs-lookup"><span data-stu-id="c5a7f-103">Specifies the type of the persistence provider implementation to use, as well as the time-out to use for persistence operations.</span></span>  

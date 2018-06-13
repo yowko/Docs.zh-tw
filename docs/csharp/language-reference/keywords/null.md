@@ -12,6 +12,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: HT
 ms.contentlocale: zh-TW
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33268116"
 ---
 # <a name="null-c-reference"></a><span data-ttu-id="e2360-102">null (C# 參考)</span><span class="sxs-lookup"><span data-stu-id="e2360-102">null (C# Reference)</span></span>
 <span data-ttu-id="e2360-103">`null` 關鍵字是表示 Null 參考的常值，不參考任何物件的值。</span><span class="sxs-lookup"><span data-stu-id="e2360-103">The `null` keyword is a literal that represents a null reference, one that does not refer to any object.</span></span> <span data-ttu-id="e2360-104">`null` 是參考型別變數的預設值。</span><span class="sxs-lookup"><span data-stu-id="e2360-104">`null` is the default value of reference-type variables.</span></span> <span data-ttu-id="e2360-105">一般的實值型別不可為 Null。</span><span class="sxs-lookup"><span data-stu-id="e2360-105">Ordinary value types cannot be null.</span></span> <span data-ttu-id="e2360-106">不過，C# 2.0 引入了可為 Null 的實值型別。</span><span class="sxs-lookup"><span data-stu-id="e2360-106">However, C# 2.0 introduced nullable value types.</span></span> <span data-ttu-id="e2360-107">請參閱[可為 Null 的型別](../../../csharp/programming-guide/nullable-types/index.md)。</span><span class="sxs-lookup"><span data-stu-id="e2360-107">See [Nullable Types](../../../csharp/programming-guide/nullable-types/index.md).</span></span>  

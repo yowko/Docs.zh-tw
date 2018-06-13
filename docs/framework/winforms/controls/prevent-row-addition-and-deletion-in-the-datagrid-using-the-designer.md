@@ -1,46 +1,33 @@
 ---
-title: "如何：使用設計工具防止在 Windows Form DataGridView 控制項中新增和刪除資料列"
-ms.custom: 
+title: 如何：使用設計工具防止在 Windows Form DataGridView 控制項中新增和刪除資料列
 ms.date: 03/30/2017
-ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.technology:
-- dotnet-winforms
-ms.tgt_pltfrm: 
-ms.topic: article
 helpviewer_keywords:
 - DataGridView control [Windows Forms], preventing row addition or deletion
 ms.assetid: a17722bd-9400-41e6-8dcc-c9c151f0a749
-caps.latest.revision: 
-author: dotnet-bot
-ms.author: dotnetcontent
-manager: wpickett
-ms.workload:
-- dotnet
-ms.openlocfilehash: 029eb160545164535b8b5ae058cdc7ad85d69ab9
-ms.sourcegitcommit: c0dd436f6f8f44dc80dc43b07f6841a00b74b23f
+ms.openlocfilehash: 7479b486a0a130a95aa6dcecd5480e216bc13be2
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 01/19/2018
+ms.lasthandoff: 05/04/2018
+ms.locfileid: "33536660"
 ---
-# <a name="how-to-prevent-row-addition-and-deletion-in-the-windows-forms-datagridview-control-using-the-designer"></a><span data-ttu-id="04d3c-102">如何：使用設計工具防止在 Windows Form DataGridView 控制項中新增和刪除資料列</span><span class="sxs-lookup"><span data-stu-id="04d3c-102">How to: Prevent Row Addition and Deletion in the Windows Forms DataGridView Control Using the Designer</span></span>
-<span data-ttu-id="04d3c-103">有時候您會想要防止使用者在您的 <xref:System.Windows.Forms.DataGridView> 控制項中輸入新的資料列或刪除現有的資料列。</span><span class="sxs-lookup"><span data-stu-id="04d3c-103">Sometimes you will want to prevent users from entering new rows of data or deleting existing rows in your <xref:System.Windows.Forms.DataGridView> control.</span></span> <span data-ttu-id="04d3c-104">在控制項底部的新記錄是特殊的資料列中輸入新資料列。</span><span class="sxs-lookup"><span data-stu-id="04d3c-104">New rows are entered in the special row for new records at the bottom of the control.</span></span> <span data-ttu-id="04d3c-105">當您停用資料列新增時，不會顯示為新的記錄資料列。</span><span class="sxs-lookup"><span data-stu-id="04d3c-105">When you disable row addition, the row for new records is not displayed.</span></span> <span data-ttu-id="04d3c-106">接著您可以控制完全唯讀停用資料列的刪除和編輯儲存格。</span><span class="sxs-lookup"><span data-stu-id="04d3c-106">You can then make the control entirely read-only by disabling row deletion and cell editing.</span></span>  
+# <a name="how-to-prevent-row-addition-and-deletion-in-the-windows-forms-datagridview-control-using-the-designer"></a><span data-ttu-id="0d29c-102">如何：使用設計工具防止在 Windows Form DataGridView 控制項中新增和刪除資料列</span><span class="sxs-lookup"><span data-stu-id="0d29c-102">How to: Prevent Row Addition and Deletion in the Windows Forms DataGridView Control Using the Designer</span></span>
+<span data-ttu-id="0d29c-103">有時候您會想要防止使用者在您的 <xref:System.Windows.Forms.DataGridView> 控制項中輸入新的資料列或刪除現有的資料列。</span><span class="sxs-lookup"><span data-stu-id="0d29c-103">Sometimes you will want to prevent users from entering new rows of data or deleting existing rows in your <xref:System.Windows.Forms.DataGridView> control.</span></span> <span data-ttu-id="0d29c-104">在控制項底部的新記錄是特殊的資料列中輸入新資料列。</span><span class="sxs-lookup"><span data-stu-id="0d29c-104">New rows are entered in the special row for new records at the bottom of the control.</span></span> <span data-ttu-id="0d29c-105">當您停用資料列新增時，不會顯示為新的記錄資料列。</span><span class="sxs-lookup"><span data-stu-id="0d29c-105">When you disable row addition, the row for new records is not displayed.</span></span> <span data-ttu-id="0d29c-106">接著您可以控制完全唯讀停用資料列的刪除和編輯儲存格。</span><span class="sxs-lookup"><span data-stu-id="0d29c-106">You can then make the control entirely read-only by disabling row deletion and cell editing.</span></span>  
   
- <span data-ttu-id="04d3c-107">下列程序需要**Windows 應用程式**表單，其中包含與專案<xref:System.Windows.Forms.DataGridView>控制項。</span><span class="sxs-lookup"><span data-stu-id="04d3c-107">The following procedure requires a **Windows Application** project with a form containing a <xref:System.Windows.Forms.DataGridView> control.</span></span> <span data-ttu-id="04d3c-108">設定這類專案的詳細資訊，請參閱[How to： 建立 Windows 應用程式專案](http://msdn.microsoft.com/library/b2f93fed-c635-4705-8d0e-cf079a264efa)和[How to： 將控制項加入 Windows Form](../../../../docs/framework/winforms/controls/how-to-add-controls-to-windows-forms.md)。</span><span class="sxs-lookup"><span data-stu-id="04d3c-108">For information about setting up such a project, see [How to: Create a Windows Application Project](http://msdn.microsoft.com/library/b2f93fed-c635-4705-8d0e-cf079a264efa) and [How to: Add Controls to Windows Forms](../../../../docs/framework/winforms/controls/how-to-add-controls-to-windows-forms.md).</span></span>  
+ <span data-ttu-id="0d29c-107">下列程序需要**Windows 應用程式**表單，其中包含與專案<xref:System.Windows.Forms.DataGridView>控制項。</span><span class="sxs-lookup"><span data-stu-id="0d29c-107">The following procedure requires a **Windows Application** project with a form containing a <xref:System.Windows.Forms.DataGridView> control.</span></span> <span data-ttu-id="0d29c-108">設定這類專案的詳細資訊，請參閱[How to： 建立 Windows 應用程式專案](http://msdn.microsoft.com/library/b2f93fed-c635-4705-8d0e-cf079a264efa)和[How to： 將控制項加入 Windows Form](../../../../docs/framework/winforms/controls/how-to-add-controls-to-windows-forms.md)。</span><span class="sxs-lookup"><span data-stu-id="0d29c-108">For information about setting up such a project, see [How to: Create a Windows Application Project](http://msdn.microsoft.com/library/b2f93fed-c635-4705-8d0e-cf079a264efa) and [How to: Add Controls to Windows Forms](../../../../docs/framework/winforms/controls/how-to-add-controls-to-windows-forms.md).</span></span>  
   
 > [!NOTE]
->  <span data-ttu-id="04d3c-109">根據您目前使用的設定或版本，您所看到的對話方塊與功能表命令可能會與 [說明] 中描述的不同。</span><span class="sxs-lookup"><span data-stu-id="04d3c-109">The dialog boxes and menu commands you see might differ from those described in Help depending on your active settings or edition.</span></span> <span data-ttu-id="04d3c-110">若要變更設定，請從 [ **工具** ] 功能表中選取 [ **匯入和匯出設定** ]。</span><span class="sxs-lookup"><span data-stu-id="04d3c-110">To change your settings, choose **Import and Export Settings** on the **Tools** menu.</span></span> <span data-ttu-id="04d3c-111">如需詳細資訊，請參閱 [在 Visual Studio 中自訂開發設定](http://msdn.microsoft.com/library/22c4debb-4e31-47a8-8f19-16f328d7dcd3)</span><span class="sxs-lookup"><span data-stu-id="04d3c-111">For more information, see [Customizing Development Settings in Visual Studio](http://msdn.microsoft.com/library/22c4debb-4e31-47a8-8f19-16f328d7dcd3).</span></span>  
+>  <span data-ttu-id="0d29c-109">根據您目前使用的設定或版本，您所看到的對話方塊與功能表命令可能會與 [說明] 中描述的不同。</span><span class="sxs-lookup"><span data-stu-id="0d29c-109">The dialog boxes and menu commands you see might differ from those described in Help depending on your active settings or edition.</span></span> <span data-ttu-id="0d29c-110">若要變更設定，請從 [ **工具** ] 功能表中選取 [ **匯入和匯出設定** ]。</span><span class="sxs-lookup"><span data-stu-id="0d29c-110">To change your settings, choose **Import and Export Settings** on the **Tools** menu.</span></span> <span data-ttu-id="0d29c-111">如需詳細資訊，請參閱 [在 Visual Studio 中自訂開發設定](http://msdn.microsoft.com/library/22c4debb-4e31-47a8-8f19-16f328d7dcd3)</span><span class="sxs-lookup"><span data-stu-id="0d29c-111">For more information, see [Customizing Development Settings in Visual Studio](http://msdn.microsoft.com/library/22c4debb-4e31-47a8-8f19-16f328d7dcd3).</span></span>  
   
-### <a name="to-prevent-row-addition-and-deletion"></a><span data-ttu-id="04d3c-112">若要避免資料列新增和刪除</span><span class="sxs-lookup"><span data-stu-id="04d3c-112">To prevent row addition and deletion</span></span>  
+### <a name="to-prevent-row-addition-and-deletion"></a><span data-ttu-id="0d29c-112">若要避免資料列新增和刪除</span><span class="sxs-lookup"><span data-stu-id="0d29c-112">To prevent row addition and deletion</span></span>  
   
--   <span data-ttu-id="04d3c-113">按一下智慧標籤圖像 (![智慧標籤圖像](../../../../docs/framework/winforms/controls/media/vs-winformsmttagglyph.gif "VS_WinFormSmtTagGlyph")) 上的右上角<xref:System.Windows.Forms.DataGridView>控制項，然後再清除**啟用加入**和**啟用刪除**核取方塊。</span><span class="sxs-lookup"><span data-stu-id="04d3c-113">Click the smart tag glyph (![Smart Tag Glyph](../../../../docs/framework/winforms/controls/media/vs-winformsmttagglyph.gif "VS_WinFormSmtTagGlyph")) on the upper-right corner of the <xref:System.Windows.Forms.DataGridView> control, and then clear the **Enable Adding** and **Enable Deleting** check boxes.</span></span>  
+-   <span data-ttu-id="0d29c-113">按一下智慧標籤圖像 (![智慧標籤圖像](../../../../docs/framework/winforms/controls/media/vs-winformsmttagglyph.gif "VS_WinFormSmtTagGlyph")) 上的右上角<xref:System.Windows.Forms.DataGridView>控制項，然後再清除**啟用加入**和**啟用刪除**核取方塊。</span><span class="sxs-lookup"><span data-stu-id="0d29c-113">Click the smart tag glyph (![Smart Tag Glyph](../../../../docs/framework/winforms/controls/media/vs-winformsmttagglyph.gif "VS_WinFormSmtTagGlyph")) on the upper-right corner of the <xref:System.Windows.Forms.DataGridView> control, and then clear the **Enable Adding** and **Enable Deleting** check boxes.</span></span>  
   
     > [!NOTE]
-    >  <span data-ttu-id="04d3c-114">若要使控制項為完全唯讀，清除**啟用編輯**核取方塊。</span><span class="sxs-lookup"><span data-stu-id="04d3c-114">To make the control entirely read-only, clear the **Enable Editing** check box as well.</span></span>  
+    >  <span data-ttu-id="0d29c-114">若要使控制項為完全唯讀，清除**啟用編輯**核取方塊。</span><span class="sxs-lookup"><span data-stu-id="0d29c-114">To make the control entirely read-only, clear the **Enable Editing** check box as well.</span></span>  
   
-## <a name="see-also"></a><span data-ttu-id="04d3c-115">請參閱</span><span class="sxs-lookup"><span data-stu-id="04d3c-115">See Also</span></span>  
+## <a name="see-also"></a><span data-ttu-id="0d29c-115">另請參閱</span><span class="sxs-lookup"><span data-stu-id="0d29c-115">See Also</span></span>  
  <xref:System.Windows.Forms.DataGridView>  
  <xref:System.Windows.Forms.DataGridView.AllowUserToAddRows%2A?displayProperty=nameWithType>  
- [<span data-ttu-id="04d3c-116">如何： 建立 Windows 應用程式專案</span><span class="sxs-lookup"><span data-stu-id="04d3c-116">How to: Create a Windows Application Project</span></span>](http://msdn.microsoft.com/library/b2f93fed-c635-4705-8d0e-cf079a264efa)  
- [<span data-ttu-id="04d3c-117">操作說明：將控制項新增至 Windows Forms</span><span class="sxs-lookup"><span data-stu-id="04d3c-117">How to: Add Controls to Windows Forms</span></span>](../../../../docs/framework/winforms/controls/how-to-add-controls-to-windows-forms.md)
+ [<span data-ttu-id="0d29c-116">如何： 建立 Windows 應用程式專案</span><span class="sxs-lookup"><span data-stu-id="0d29c-116">How to: Create a Windows Application Project</span></span>](http://msdn.microsoft.com/library/b2f93fed-c635-4705-8d0e-cf079a264efa)  
+ [<span data-ttu-id="0d29c-117">操作說明：將控制項新增至 Windows Forms</span><span class="sxs-lookup"><span data-stu-id="0d29c-117">How to: Add Controls to Windows Forms</span></span>](../../../../docs/framework/winforms/controls/how-to-add-controls-to-windows-forms.md)

@@ -13,6 +13,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: zh-TW
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33543617"
 ---
 # <a name="how-to-obtain-a-writable-copy-of-a-read-only-freezable"></a><span data-ttu-id="f692c-102">如何：取得唯讀 Freezable 的可寫入複本</span><span class="sxs-lookup"><span data-stu-id="f692c-102">How to: Obtain a Writable Copy of a Read-Only Freezable</span></span>
 <span data-ttu-id="f692c-103">這個範例示範如何使用<xref:System.Windows.Freezable.Clone%2A>方法來建立唯讀的可寫入副本<xref:System.Windows.Freezable>。</span><span class="sxs-lookup"><span data-stu-id="f692c-103">This example shows how to use the <xref:System.Windows.Freezable.Clone%2A> method to create a writable copy of a read-only <xref:System.Windows.Freezable>.</span></span>  
