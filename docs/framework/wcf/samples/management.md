@@ -7,6 +7,7 @@ ms.sourcegitcommit: 15109844229ade1c6449f48f3834db1b26907824
 ms.translationtype: MT
 ms.contentlocale: zh-TW
 ms.lasthandoff: 05/07/2018
+ms.locfileid: "33809962"
 ---
 # <a name="management"></a><span data-ttu-id="98522-102">管理</span><span class="sxs-lookup"><span data-stu-id="98522-102">Management</span></span>
 <span data-ttu-id="98522-103">本節包含示範 Windows Communication Foundation (WCF) 管理的範例。</span><span class="sxs-lookup"><span data-stu-id="98522-103">This section contains samples that demonstrate Windows Communication Foundation (WCF) management.</span></span>  

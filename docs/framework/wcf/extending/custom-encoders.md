@@ -7,6 +7,7 @@ ms.sourcegitcommit: 15109844229ade1c6449f48f3834db1b26907824
 ms.translationtype: MT
 ms.contentlocale: zh-TW
 ms.lasthandoff: 05/07/2018
+ms.locfileid: "33809273"
 ---
 # <a name="custom-encoders"></a><span data-ttu-id="21ba9-102">自訂編碼器</span><span class="sxs-lookup"><span data-stu-id="21ba9-102">Custom Encoders</span></span>
 <span data-ttu-id="21ba9-103">本主題討論如何建立自訂編碼器。</span><span class="sxs-lookup"><span data-stu-id="21ba9-103">This topic discusses how to create custom encoders.</span></span>  

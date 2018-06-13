@@ -7,6 +7,7 @@ ms.sourcegitcommit: 15109844229ade1c6449f48f3834db1b26907824
 ms.translationtype: MT
 ms.contentlocale: zh-TW
 ms.lasthandoff: 05/07/2018
+ms.locfileid: "33809446"
 ---
 # <a name="basic"></a><span data-ttu-id="444e2-102">基本</span><span class="sxs-lookup"><span data-stu-id="444e2-102">Basic</span></span>
 <span data-ttu-id="444e2-103">本節包含示範基本的 Windows Communication Foundation (WCF) 功能的範例的章節。</span><span class="sxs-lookup"><span data-stu-id="444e2-103">This section includes sections of samples that demonstrate basic Windows Communication Foundation (WCF)functionality.</span></span>  

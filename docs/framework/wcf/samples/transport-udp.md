@@ -7,6 +7,7 @@ ms.sourcegitcommit: 15109844229ade1c6449f48f3834db1b26907824
 ms.translationtype: MT
 ms.contentlocale: zh-TW
 ms.lasthandoff: 05/07/2018
+ms.locfileid: "33808412"
 ---
 # <a name="transport-udp"></a><span data-ttu-id="8eeb2-102">傳輸：UDP</span><span class="sxs-lookup"><span data-stu-id="8eeb2-102">Transport: UDP</span></span>
 <span data-ttu-id="8eeb2-103">UDP 傳輸範例示範如何實作 UDP 單點傳播與多點傳送做為自訂的 Windows Communication Foundation (WCF) 傳輸。</span><span class="sxs-lookup"><span data-stu-id="8eeb2-103">The UDP Transport sample demonstrates how to implement UDP unicast and multicast as a custom Windows Communication Foundation (WCF) transport.</span></span> <span data-ttu-id="8eeb2-104">此範例描述，以建立自訂傳輸在 WCF 中，使用通道架構並遵循 WCF 最佳作法建議的程序。</span><span class="sxs-lookup"><span data-stu-id="8eeb2-104">The sample describes the recommended procedure for creating a custom transport in WCF, by using the channel framework and following WCF best practices.</span></span> <span data-ttu-id="8eeb2-105">建立自訂傳輸的步驟如下：</span><span class="sxs-lookup"><span data-stu-id="8eeb2-105">The steps to create a custom transport are as follows:</span></span>  

@@ -12,6 +12,7 @@ ms.sourcegitcommit: 15109844229ade1c6449f48f3834db1b26907824
 ms.translationtype: MT
 ms.contentlocale: zh-TW
 ms.lasthandoff: 05/07/2018
+ms.locfileid: "33809166"
 ---
 # <a name="endpoint-creation-overview"></a><span data-ttu-id="1a91a-102">端點建立概觀</span><span class="sxs-lookup"><span data-stu-id="1a91a-102">Endpoint Creation Overview</span></span>
 <span data-ttu-id="1a91a-103">所有與 Windows Communication Foundation (WCF) 服務的通訊會透過*端點*的服務。</span><span class="sxs-lookup"><span data-stu-id="1a91a-103">All communication with a Windows Communication Foundation (WCF) service occurs through the *endpoints* of the service.</span></span> <span data-ttu-id="1a91a-104">端點可讓用戶端存取 WCF 服務提供的功能。</span><span class="sxs-lookup"><span data-stu-id="1a91a-104">Endpoints provide the clients access to the functionality that a WCF service offers.</span></span> <span data-ttu-id="1a91a-105">本章節說明端點的結構，並且摘要說明如何透過組態與程式碼來定義端點。</span><span class="sxs-lookup"><span data-stu-id="1a91a-105">This section describes the structure of an endpoint and outlines how to define an endpoint in configuration and in code.</span></span>  

@@ -10,6 +10,7 @@ ms.sourcegitcommit: 15109844229ade1c6449f48f3834db1b26907824
 ms.translationtype: MT
 ms.contentlocale: zh-TW
 ms.lasthandoff: 05/07/2018
+ms.locfileid: "33810053"
 ---
 # <a name="building-clients"></a><span data-ttu-id="54a74-102">建置用戶端</span><span class="sxs-lookup"><span data-stu-id="54a74-102">Building Clients</span></span>
 <span data-ttu-id="54a74-103">本節中的主題將示範如何建立和使用 Windows Communication Foundation (WCF) 用戶端。</span><span class="sxs-lookup"><span data-stu-id="54a74-103">The topics in this section demonstrate how to create and use a Windows Communication Foundation (WCF) client.</span></span>  
