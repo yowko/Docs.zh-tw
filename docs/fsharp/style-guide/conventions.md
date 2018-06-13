@@ -7,6 +7,7 @@ ms.sourcegitcommit: 43924acbdbb3981d103e11049bbe460457d42073
 ms.translationtype: MT
 ms.contentlocale: zh-TW
 ms.lasthandoff: 05/23/2018
+ms.locfileid: "34457978"
 ---
 # <a name="f-coding-conventions"></a><span data-ttu-id="d5a36-103">F # 編碼慣例</span><span class="sxs-lookup"><span data-stu-id="d5a36-103">F# coding conventions</span></span>
 

@@ -15,6 +15,7 @@ ms.sourcegitcommit: 43924acbdbb3981d103e11049bbe460457d42073
 ms.translationtype: HT
 ms.contentlocale: zh-TW
 ms.lasthandoff: 05/23/2018
+ms.locfileid: "34458017"
 ---
 # <a name="whats-new-in-the-net-framework"></a><span data-ttu-id="bd32a-102">.NET Framework 中的新功能</span><span class="sxs-lookup"><span data-stu-id="bd32a-102">What's new in the .NET Framework</span></span>
 <a name="introduction"></a> <span data-ttu-id="bd32a-103">此文章摘要說明下列 .NET Framework 版本的重要新功能和改進：</span><span class="sxs-lookup"><span data-stu-id="bd32a-103">This article summarizes key new features and improvements in the following versions of the .NET Framework:</span></span>  

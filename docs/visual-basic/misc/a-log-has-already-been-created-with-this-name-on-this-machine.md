@@ -1,33 +1,28 @@
 ---
-title: "已在這部電腦上建立具有這個名稱的記錄檔。"
+title: 已在這部電腦上建立具有這個名稱的記錄檔。
 ms.date: 07/20/2015
-ms.prod: .net
-ms.technology: devlang-visual-basic
-ms.topic: article
 ms.assetid: 3dd78d9f-890e-4409-bebb-048fdf34711b
-caps.latest.revision: "10"
-author: dotnet-bot
-ms.author: dotnetcontent
-ms.openlocfilehash: f2052fd81fa5856914a676aa6985eeb51c892788
-ms.sourcegitcommit: 34ec7753acf76f90a0fa845235ef06663dc9e36e
+ms.openlocfilehash: e433c2fa5c6d4b815819a72fb8116ca9f1a89f62
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/04/2018
+ms.locfileid: "33603426"
 ---
-# <a name="a-log-has-already-been-created-with-this-name-on-this-machine"></a><span data-ttu-id="30078-102">已在這部電腦上建立具有這個名稱的記錄檔。</span><span class="sxs-lookup"><span data-stu-id="30078-102">A log has already been created with this name on this machine</span></span>
-<span data-ttu-id="30078-103">嘗試使用已在使用的名稱來建立記錄檔。</span><span class="sxs-lookup"><span data-stu-id="30078-103">An attempt has been made to create a log with a name that is already in use.</span></span>  
+# <a name="a-log-has-already-been-created-with-this-name-on-this-machine"></a><span data-ttu-id="3e30d-102">已在這部電腦上建立具有這個名稱的記錄檔。</span><span class="sxs-lookup"><span data-stu-id="3e30d-102">A log has already been created with this name on this machine</span></span>
+<span data-ttu-id="3e30d-103">嘗試使用已在使用的名稱來建立記錄檔。</span><span class="sxs-lookup"><span data-stu-id="3e30d-103">An attempt has been made to create a log with a name that is already in use.</span></span>  
   
-## <a name="to-correct-this-error"></a><span data-ttu-id="30078-104">更正這個錯誤</span><span class="sxs-lookup"><span data-stu-id="30078-104">To correct this error</span></span>  
+## <a name="to-correct-this-error"></a><span data-ttu-id="3e30d-104">更正這個錯誤</span><span class="sxs-lookup"><span data-stu-id="3e30d-104">To correct this error</span></span>  
   
--   <span data-ttu-id="30078-105">移除衝突的記錄檔。</span><span class="sxs-lookup"><span data-stu-id="30078-105">Remove the conflicting log.</span></span>  
+-   <span data-ttu-id="3e30d-105">移除衝突的記錄檔。</span><span class="sxs-lookup"><span data-stu-id="3e30d-105">Remove the conflicting log.</span></span>  
   
--   <span data-ttu-id="30078-106">使用不同的記錄檔名稱。</span><span class="sxs-lookup"><span data-stu-id="30078-106">Use a different name for the log.</span></span>  
+-   <span data-ttu-id="3e30d-106">使用不同的記錄檔名稱。</span><span class="sxs-lookup"><span data-stu-id="3e30d-106">Use a different name for the log.</span></span>  
   
-## <a name="see-also"></a><span data-ttu-id="30078-107">請參閱</span><span class="sxs-lookup"><span data-stu-id="30078-107">See Also</span></span>  
- [<span data-ttu-id="30078-108">My.Application.Log</span><span class="sxs-lookup"><span data-stu-id="30078-108">My.Application.Log</span></span>](xref:Microsoft.VisualBasic.ApplicationServices.ApplicationBase.Log)  
- [<span data-ttu-id="30078-109">如何：寫入記錄檔訊息</span><span class="sxs-lookup"><span data-stu-id="30078-109">How to: Write Log Messages</span></span>](../../visual-basic/developing-apps/programming/log-info/how-to-write-log-messages.md)  
- [<span data-ttu-id="30078-110">如何：在應用程式啟動或關閉時記錄訊息</span><span class="sxs-lookup"><span data-stu-id="30078-110">How to: Log Messages When the Application Starts or Shuts Down</span></span>](../../visual-basic/developing-apps/programming/log-info/how-to-log-messages-when-the-application-starts-or-shuts-down.md)  
- [<span data-ttu-id="30078-111">如何：寫入應用程式事件記錄檔</span><span class="sxs-lookup"><span data-stu-id="30078-111">How to: Write to an Application Event Log</span></span>](../../visual-basic/developing-apps/programming/log-info/how-to-write-to-an-application-event-log.md)  
- [<span data-ttu-id="30078-112">使用應用程式記錄檔</span><span class="sxs-lookup"><span data-stu-id="30078-112">Working with Application Logs</span></span>](../../visual-basic/developing-apps/programming/log-info/working-with-application-logs.md)  
- [<span data-ttu-id="30078-113">逐步解說：判斷 My.Application.Log 寫入資訊的位置</span><span class="sxs-lookup"><span data-stu-id="30078-113">Walkthrough: Determining Where My.Application.Log Writes Information</span></span>](../../visual-basic/developing-apps/programming/log-info/walkthrough-determining-where-my-application-log-writes-information.md)  
- [<span data-ttu-id="30078-114">逐步解說：變更 My.Application.Log 寫入資訊的位置</span><span class="sxs-lookup"><span data-stu-id="30078-114">Walkthrough: Changing Where My.Application.Log Writes Information</span></span>](../../visual-basic/developing-apps/programming/log-info/walkthrough-changing-where-my-application-log-writes-information.md)
+## <a name="see-also"></a><span data-ttu-id="3e30d-107">另請參閱</span><span class="sxs-lookup"><span data-stu-id="3e30d-107">See Also</span></span>  
+ [<span data-ttu-id="3e30d-108">My.Application.Log</span><span class="sxs-lookup"><span data-stu-id="3e30d-108">My.Application.Log</span></span>](xref:Microsoft.VisualBasic.ApplicationServices.ApplicationBase.Log)  
+ [<span data-ttu-id="3e30d-109">如何：寫入記錄檔訊息</span><span class="sxs-lookup"><span data-stu-id="3e30d-109">How to: Write Log Messages</span></span>](../../visual-basic/developing-apps/programming/log-info/how-to-write-log-messages.md)  
+ [<span data-ttu-id="3e30d-110">如何：在應用程式啟動或關閉時記錄訊息</span><span class="sxs-lookup"><span data-stu-id="3e30d-110">How to: Log Messages When the Application Starts or Shuts Down</span></span>](../../visual-basic/developing-apps/programming/log-info/how-to-log-messages-when-the-application-starts-or-shuts-down.md)  
+ [<span data-ttu-id="3e30d-111">如何：寫入應用程式事件記錄檔</span><span class="sxs-lookup"><span data-stu-id="3e30d-111">How to: Write to an Application Event Log</span></span>](../../visual-basic/developing-apps/programming/log-info/how-to-write-to-an-application-event-log.md)  
+ [<span data-ttu-id="3e30d-112">使用應用程式記錄檔</span><span class="sxs-lookup"><span data-stu-id="3e30d-112">Working with Application Logs</span></span>](../../visual-basic/developing-apps/programming/log-info/working-with-application-logs.md)  
+ [<span data-ttu-id="3e30d-113">逐步解說：判斷 My.Application.Log 寫入資訊的位置</span><span class="sxs-lookup"><span data-stu-id="3e30d-113">Walkthrough: Determining Where My.Application.Log Writes Information</span></span>](../../visual-basic/developing-apps/programming/log-info/walkthrough-determining-where-my-application-log-writes-information.md)  
+ [<span data-ttu-id="3e30d-114">逐步解說：變更 My.Application.Log 寫入資訊的位置</span><span class="sxs-lookup"><span data-stu-id="3e30d-114">Walkthrough: Changing Where My.Application.Log Writes Information</span></span>](../../visual-basic/developing-apps/programming/log-info/walkthrough-changing-where-my-application-log-writes-information.md)
