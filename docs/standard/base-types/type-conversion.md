@@ -31,6 +31,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: HT
 ms.contentlocale: zh-TW
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33579479"
 ---
 # <a name="type-conversion-in-the-net-framework"></a>.NET Framework 中的類型轉換
 <a name="top"></a>每個值都有相關聯的類型，該類型定義屬性，例如配置給值的空間量、能夠擁有的可能值範圍，以及提供的成員。 許多值都可以表示成多種類型。 例如，數值 4 就可以表示成整數值或浮點 (Floating-Point) 值。 類型轉換會建立新類型的值，與舊類型的值相等，但是不一定會保留原始物件的識別 (或實際的值)。  

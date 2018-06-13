@@ -12,6 +12,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: zh-TW
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33596680"
 ---
 # <a name="statement-cannot-end-a-block-outside-of-a-line-39if39-statement"></a>陳述式不能在之外結束區塊一條線&#39;如果&#39;陳述式
 單行`If`陳述式包含以冒號 （:），其中一項分隔的數個陳述式`End`控制區塊之外單行陳述式`If`。 單行`If`陳述式就不會使用`End If`陳述式。  

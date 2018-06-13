@@ -19,9 +19,10 @@ author: mairaw
 ms.author: mairaw
 ms.openlocfilehash: fd1e5daada8793e94980afc5f0cf509915bd288e
 ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
-ms.translationtype: MT
+ms.translationtype: HT
 ms.contentlocale: zh-TW
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33450924"
 ---
 # <a name="icorprofilercallbackappdomainshutdownstarted-method"></a>ICorProfilerCallback::AppDomainShutdownStarted 方法
 通知分析工具，應用程式定義域正在卸載的處理程序。  
@@ -41,7 +42,7 @@ HRESULT AppDomainShutdownStarted(
  值`appDomainId`不是有效的任何資訊的要求之後`AppDomainShutdownStarted`方法會傳回-這是程式碼剖析工具來取得這個應用程式定義域的相關資訊的最後機會。  
   
 ## <a name="requirements"></a>需求  
- **平台：**看到[系統需求](../../../../docs/framework/get-started/system-requirements.md)。  
+ **平台：** 看到[系統需求](../../../../docs/framework/get-started/system-requirements.md)。  
   
  **標頭：** CorProf.idl、CorProf.h  
   

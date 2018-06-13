@@ -18,9 +18,10 @@ author: mairaw
 ms.author: mairaw
 ms.openlocfilehash: d79249a2540adbd7f1b7e9bf36c899ba94d71e2e
 ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
-ms.translationtype: MT
+ms.translationtype: HT
 ms.contentlocale: zh-TW
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33452386"
 ---
 # <a name="functionenter2-function"></a>FunctionEnter2 函式
 控制項傳遞至函式，並提供堆疊的相關資訊框架和函式的引數，請通知分析工具。 這個函數會取代[FunctionEnter](../../../../docs/framework/unmanaged-api/profiling/functionenter-function.md)函式。  
@@ -69,7 +70,7 @@ void __stdcall FunctionEnter2 (
  此外，`FunctionEnter2`函式不可以呼叫至 managed 程式碼或任何方式發生原因的 managed 的記憶體配置。  
   
 ## <a name="requirements"></a>需求  
- **平台：**看到[系統需求](../../../../docs/framework/get-started/system-requirements.md)。  
+ **平台：** 看到[系統需求](../../../../docs/framework/get-started/system-requirements.md)。  
   
  **標頭：** CorProf.idl  
   

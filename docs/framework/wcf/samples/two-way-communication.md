@@ -7,6 +7,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: zh-TW
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33508341"
 ---
 # <a name="two-way-communication"></a>雙向通訊
 這個範例會示範如何透過 MSMQ 來執行交易雙向佇列通訊。 這個範例會使用 `netMsmqBinding` 繫結。 在此範例中，服務是自我裝載的主控台應用程式，可讓您觀察接收佇列訊息的服務。  

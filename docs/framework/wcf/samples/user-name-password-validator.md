@@ -7,6 +7,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: zh-TW
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33508315"
 ---
 # <a name="user-name-password-validator"></a>使用者名稱密碼驗證程式
 這個範例會示範如何實作自訂的 UserNamePassword 驗證程式。 當內建 UserNamePassword 驗證模式都不符合應用程式需求時，這個驗證程式就很有用；例如，當使用者名稱/密碼組儲存在某些外部存放區時，例如資料庫中。 這個範例示範的服務具有可檢查兩組特定使用者名稱/密碼組的自訂驗證程式。 用戶端會使用這些使用者名稱/密碼組來向服務驗證。  

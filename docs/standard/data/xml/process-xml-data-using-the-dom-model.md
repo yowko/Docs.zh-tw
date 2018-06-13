@@ -10,6 +10,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: HT
 ms.contentlocale: zh-TW
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33570343"
 ---
 # <a name="process-xml-data-using-the-dom-model"></a>使用 DOM 模型處理 XML 資料
 XML 文件物件模型 (DOM) 會將 XML 資料視為一組標準物件來處理，可用於處理記憶體中的 XML 資料。 `System.Xml` 命名空間提供以程式設計方式表示的 XML 文件、片段、節點或節點集。 它是以全球資訊網協會 (W3C) DOM 層級 1 核心及 DOM 層級 2 核心建議事項為基礎。  

@@ -18,9 +18,10 @@ author: rpetrusha
 ms.author: ronpet
 ms.openlocfilehash: 1b6760a6418533f5c8f6cec815d86b4cff68aab1
 ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
-ms.translationtype: MT
+ms.translationtype: HT
 ms.contentlocale: zh-TW
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33460076"
 ---
 # <a name="strongnamekeyinstall-function"></a>StrongNameKeyInstall 函式
 匯入容器的公開/私密金鑰組。  
@@ -60,7 +61,7 @@ BOOLEAN StrongNameKeyInstall (
   
  **標頭：** StrongName.h  
   
- **程式庫：**包含做為 MsCorEE.dll 中的資源  
+ **程式庫：** 包含做為 MsCorEE.dll 中的資源  
   
  **.NET framework 版本：** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
   

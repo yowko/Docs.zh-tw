@@ -32,6 +32,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: HT
 ms.contentlocale: zh-TW
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33579843"
 ---
 # <a name="formatting-types-in-net"></a>在 .NET 中將類型格式化
 <a name="Introduction"></a> 格式化是將類別、結構或列舉值的執行個體轉換成字串表示的過程，通常是為了將結果字串展示予使用者，或是為了將字串藉還原序列化方式還原成原始的資料類型。 這種轉換可能面臨幾項挑戰：  

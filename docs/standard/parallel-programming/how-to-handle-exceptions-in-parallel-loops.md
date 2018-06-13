@@ -15,6 +15,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: HT
 ms.contentlocale: zh-TW
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33580545"
 ---
 # <a name="how-to-handle-exceptions-in-parallel-loops"></a>如何：處理平行迴圈中的例外狀況
 <xref:System.Threading.Tasks.Parallel.For%2A?displayProperty=nameWithType> 和 <xref:System.Threading.Tasks.Parallel.ForEach%2A?displayProperty=nameWithType> 多載沒有任何特殊機制可用來處理可能擲回的例外狀況。 它們在這一方面類似於一般 `for` 和 `foreach` 迴圈 (在 Visual Basic 中為 `For` 和 `For Each`)；未處理的例外狀況會導致此迴圈立即終止。  

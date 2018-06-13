@@ -12,6 +12,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: zh-TW
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33595132"
 ---
 # <a name="type-parameters-cannot-be-used-as-qualifiers"></a>型別參數不能當做限定詞使用
 程式設計項目是使用限定性條件字串，其中包含的型別參數人選。  

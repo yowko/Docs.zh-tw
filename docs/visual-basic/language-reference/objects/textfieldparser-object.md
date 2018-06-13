@@ -11,6 +11,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: zh-TW
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33596563"
 ---
 # <a name="textfieldparser-object"></a>TextFieldParser Object
 提供用於剖析結構化文字檔的方法和屬性。  

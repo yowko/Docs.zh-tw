@@ -19,9 +19,10 @@ author: mairaw
 ms.author: mairaw
 ms.openlocfilehash: 5d5b3c60845fce39ce7f904c6871e7feb16e8970
 ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
-ms.translationtype: MT
+ms.translationtype: HT
 ms.contentlocale: zh-TW
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33429810"
 ---
 # <a name="isymunmanagedwriterdefinefield-method"></a>ISymUnmanagedWriter::DefineField 方法
 定義單一變數不是在方法中。 這個方法是使用特定類別中的欄位、 位元欄位等等。  
@@ -73,7 +74,7 @@ HRESULT DefineField(
  如果方法成功則為 S_OK否則，E_FAIL 或其他錯誤程式碼。  
   
 ## <a name="requirements"></a>需求  
- **標頭：**於 CorSym.idl、 CorSym.h  
+ **標頭：** 於 CorSym.idl、 CorSym.h  
   
 ## <a name="see-also"></a>另請參閱  
  [ISymUnmanagedWriter 介面](../../../../docs/framework/unmanaged-api/diagnostics/isymunmanagedwriter-interface.md)

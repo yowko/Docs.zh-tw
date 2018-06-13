@@ -19,9 +19,10 @@ author: mairaw
 ms.author: mairaw
 ms.openlocfilehash: 4037ca42c5a66f075e949cd2035c1e7db510bb8e
 ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
-ms.translationtype: MT
+ms.translationtype: HT
 ms.contentlocale: zh-TW
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33448904"
 ---
 # <a name="imetadataimportgetmethodprops-method"></a>IMetaDataImport::GetMethodProps 方法
 取得與指定 MethodDef 語彙基元所參考方法相關聯的中繼資料。  
@@ -75,11 +76,11 @@ HRESULT GetMethodProps (
  [out]任何方法的實作旗標指標。  
   
 ## <a name="requirements"></a>需求  
- **平台：**看到[系統需求](../../../../docs/framework/get-started/system-requirements.md)。  
+ **平台：** 看到[系統需求](../../../../docs/framework/get-started/system-requirements.md)。  
   
  **標頭：** Cor.h  
   
- **程式庫：**包含做為 MsCorEE.dll 中的資源  
+ **程式庫：** 包含做為 MsCorEE.dll 中的資源  
   
  **.NET framework 版本：** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
   

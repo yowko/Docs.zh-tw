@@ -15,6 +15,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: zh-TW
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33579303"
 ---
 # <a name="operator-overloads"></a>運算子多載
 運算子多載可讓架構類型顯示為像是內建的語言基本類型。  

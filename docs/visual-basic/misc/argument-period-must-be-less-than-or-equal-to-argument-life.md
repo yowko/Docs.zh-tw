@@ -9,6 +9,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: zh-TW
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33599027"
 ---
 # <a name="argument-39period39-must-be-less-than-or-equal-to-argument-39life39"></a>引數&#39;期間&#39;必須小於或等於引數&#39;生命週期&#39;
 `Period` 引數 (指定計算資產折舊期間) 的值大於 `Life` 引數的值。  

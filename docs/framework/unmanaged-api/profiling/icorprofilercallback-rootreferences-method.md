@@ -19,9 +19,10 @@ author: mairaw
 ms.author: mairaw
 ms.openlocfilehash: 467d065ab4d47e698c7043697ebe2ccf5f98a3cf
 ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
-ms.translationtype: MT
+ms.translationtype: HT
 ms.contentlocale: zh-TW
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33452581"
 ---
 # <a name="icorprofilercallbackrootreferences-method"></a>ICorProfilerCallback::RootReferences 方法
 通知分析工具的記憶體回收之後根參考的相關資訊。  
@@ -49,7 +50,7 @@ HRESULT RootReferences(
  所傳回的物件識別碼`RootReferences`不自行，回呼期間有效，因為記憶體回收可能正在將物件從舊位址移到新的位址。 因此，分析工具必須不嘗試期間檢查物件`RootReferences`呼叫。 當[icorprofilercallback2:: Garbagecollectionfinished](../../../../docs/framework/unmanaged-api/profiling/icorprofilercallback2-garbagecollectionfinished-method.md)是呼叫，所有物件都已移至其新位置並且可以安全地進行檢查。  
   
 ## <a name="requirements"></a>需求  
- **平台：**看到[系統需求](../../../../docs/framework/get-started/system-requirements.md)。  
+ **平台：** 看到[系統需求](../../../../docs/framework/get-started/system-requirements.md)。  
   
  **標頭：** CorProf.idl、CorProf.h  
   

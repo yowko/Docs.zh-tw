@@ -7,6 +7,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: zh-TW
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33474216"
 ---
 # <a name="end-to-end-tracing"></a>端對端追蹤
 端對端 (e2e) 追蹤可讓開發人員的 Windows Communication Foundation (WCF) 基礎結構，以便調查程式碼路徑失敗的原因，或是提供針對容量規劃與效能分析詳細的追蹤中的程式碼執行。 Windows Communication Foundation (WCF) 提供三種相互關聯機制，可協助您診斷錯誤的原因： 活動、 傳輸和傳播。  

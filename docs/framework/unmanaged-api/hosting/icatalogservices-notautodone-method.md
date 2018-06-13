@@ -19,9 +19,10 @@ author: rpetrusha
 ms.author: ronpet
 ms.openlocfilehash: 3c872f8e1316c735d3b717cbea6e995b14ca0133
 ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
-ms.translationtype: MT
+ms.translationtype: HT
 ms.contentlocale: zh-TW
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33431245"
 ---
 # <a name="icatalogservicesnotautodone-method"></a>ICatalogServices::NotAutodone 方法
 此方法支援 .NET Framework 結構而且並非設計直接從程式碼使用。  

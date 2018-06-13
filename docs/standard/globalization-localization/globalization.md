@@ -20,6 +20,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: HT
 ms.contentlocale: zh-TW
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33579570"
 ---
 # <a name="globalization"></a>全球化
 全球化涉及設計和開發世界性的應用程式，該類應用程式支援當地語系化的介面和地區資料，可供多種文化特性的使用者使用。 在開始設計階段之前，您應該先決定您的應用程式要支援哪些文化特性。 雖然應用程式將單一文化特性或區域作為預設，您仍可加以設計及撰寫，使其可輕易延伸至其他文化特性或地區的使用者。  

@@ -7,6 +7,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: zh-TW
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33505703"
 ---
 # <a name="one-way"></a>單向
 這個範例示範具有單向服務作業的服務合約。 與雙向服務作業的情況不同，用戶端不會等候服務作業完成。 這個範例根據[入門](../../../../docs/framework/wcf/samples/getting-started-sample.md)並用`wsHttpBinding`繫結。 這個範例中的服務是自我裝載的主控台應用程式，您可以用來觀察接收和處理要求的服務。 用戶端也是主控台應用程式。  

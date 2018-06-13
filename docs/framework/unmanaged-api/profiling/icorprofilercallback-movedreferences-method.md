@@ -19,9 +19,10 @@ author: mairaw
 ms.author: mairaw
 ms.openlocfilehash: 28fa18535cce50a62f6aca7ae6f013628698c6dc
 ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
-ms.translationtype: MT
+ms.translationtype: HT
 ms.contentlocale: zh-TW
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33455529"
 ---
 # <a name="icorprofilercallbackmovedreferences-method"></a>ICorProfilerCallback::MovedReferences 方法
 呼叫以報告壓縮記憶體回收造成的堆積中物件的新配置。  
@@ -79,7 +80,7 @@ HRESULT MovedReferences(
  `MovedReferences` 方法在自行回呼期間所傳遞的 `ObjectID` 值都無效，因為記憶體回收可能正在將物件從舊位置移至新位置。 因此，分析工具不應嘗試在 `MovedReferences` 呼叫期間檢查物件。 A [icorprofilercallback2:: Garbagecollectionfinished](../../../../docs/framework/unmanaged-api/profiling/icorprofilercallback2-garbagecollectionfinished-method.md)回呼表示所有物件都已都移至其新位置，而且可以執行檢查。  
   
 ## <a name="requirements"></a>需求  
- **平台：**看到[系統需求](../../../../docs/framework/get-started/system-requirements.md)。  
+ **平台：** 看到[系統需求](../../../../docs/framework/get-started/system-requirements.md)。  
   
  **標頭：** CorProf.idl、CorProf.h  
   
