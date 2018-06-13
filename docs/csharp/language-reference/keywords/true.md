@@ -12,6 +12,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: HT
 ms.contentlocale: zh-TW
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33265255"
 ---
 # <a name="true-c-reference"></a><span data-ttu-id="a2614-102">true (C# 參考)</span><span class="sxs-lookup"><span data-stu-id="a2614-102">true (C# Reference)</span></span>
 <span data-ttu-id="a2614-103">用作多載的運算子或常值：</span><span class="sxs-lookup"><span data-stu-id="a2614-103">Used as an overloaded operator or as a literal:</span></span>  

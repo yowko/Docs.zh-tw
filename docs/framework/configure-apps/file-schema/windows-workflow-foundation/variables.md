@@ -8,6 +8,7 @@ ms.sourcegitcommit: 11f11ca6cefe555972b3a5c99729d1a7523d8f50
 ms.translationtype: MT
 ms.contentlocale: zh-TW
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32756575"
 ---
 # <a name="ltvariablesgt"></a><span data-ttu-id="25e67-102">&lt;變數&gt;</span><span class="sxs-lookup"><span data-stu-id="25e67-102">&lt;variables&gt;</span></span>
 <span data-ttu-id="25e67-103">代表與此活動查詢相關聯之變數的集合。</span><span class="sxs-lookup"><span data-stu-id="25e67-103">Represents a collection of variables associated with this activity query.</span></span>  

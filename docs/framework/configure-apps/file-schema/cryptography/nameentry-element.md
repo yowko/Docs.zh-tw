@@ -16,6 +16,7 @@ ms.sourcegitcommit: 11f11ca6cefe555972b3a5c99729d1a7523d8f50
 ms.translationtype: MT
 ms.contentlocale: zh-TW
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32743049"
 ---
 # <a name="ltnameentrygt-element"></a><span data-ttu-id="a07fb-102">&lt;nameEntry&gt;項目</span><span class="sxs-lookup"><span data-stu-id="a07fb-102">&lt;nameEntry&gt; Element</span></span>
 <span data-ttu-id="a07fb-103">將類別名稱對應至易記的演算法名稱，允許一個類別有許多易記名稱。</span><span class="sxs-lookup"><span data-stu-id="a07fb-103">Maps a class name to a friendly algorithm name, which allows one class to have many friendly names.</span></span>  

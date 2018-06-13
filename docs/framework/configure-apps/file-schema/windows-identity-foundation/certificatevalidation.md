@@ -9,6 +9,7 @@ ms.sourcegitcommit: 11f11ca6cefe555972b3a5c99729d1a7523d8f50
 ms.translationtype: MT
 ms.contentlocale: zh-TW
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32756055"
 ---
 # <a name="ltcertificatevalidationgt"></a><span data-ttu-id="94a58-102">&lt;certificateValidation&gt;</span><span class="sxs-lookup"><span data-stu-id="94a58-102">&lt;certificateValidation&gt;</span></span>
 <span data-ttu-id="94a58-103">控制權杖處理常式用來驗證憑證的設定。</span><span class="sxs-lookup"><span data-stu-id="94a58-103">Controls the settings that token handlers use to validate certificates.</span></span> <span data-ttu-id="94a58-104">如果它自己的驗證程式以設定特定的處理常式，會覆寫這些設定。</span><span class="sxs-lookup"><span data-stu-id="94a58-104">These settings are overridden if a specific handler is configured with its own validator.</span></span>  

@@ -7,6 +7,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: zh-TW
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33563691"
 ---
 # <a name="xproperty-directive"></a><span data-ttu-id="4f49a-102">x:Property 指示詞</span><span class="sxs-lookup"><span data-stu-id="4f49a-102">x:Property Directive</span></span>
 <span data-ttu-id="4f49a-103">在標記中宣告 XAML 屬性。</span><span class="sxs-lookup"><span data-stu-id="4f49a-103">Declares a XAML property in markup.</span></span>  

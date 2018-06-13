@@ -13,6 +13,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: HT
 ms.contentlocale: zh-TW
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33276015"
 ---
 # <a name="namespace-c-reference"></a><span data-ttu-id="23def-102">namespace (C# 參考)</span><span class="sxs-lookup"><span data-stu-id="23def-102">namespace (C# Reference)</span></span>
 <span data-ttu-id="23def-103">`namespace` 關鍵字用來宣告包含一組相關物件的範圍。</span><span class="sxs-lookup"><span data-stu-id="23def-103">The `namespace` keyword is used to declare a scope that contains a set of related objects.</span></span> <span data-ttu-id="23def-104">您可以使用命名空間來組織程式碼項目，並建立全域唯一的型別。</span><span class="sxs-lookup"><span data-stu-id="23def-104">You can use a namespace to organize code elements and to create globally unique types.</span></span>  

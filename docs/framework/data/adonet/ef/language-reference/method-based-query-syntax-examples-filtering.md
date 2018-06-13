@@ -10,6 +10,7 @@ ms.sourcegitcommit: 11f11ca6cefe555972b3a5c99729d1a7523d8f50
 ms.translationtype: MT
 ms.contentlocale: zh-TW
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32764407"
 ---
 # <a name="method-based-query-syntax-examples-filtering"></a><span data-ttu-id="c6048-102">以方法為基礎的查詢語法範例：篩選</span><span class="sxs-lookup"><span data-stu-id="c6048-102">Method-Based Query Syntax Examples: Filtering</span></span>
 <span data-ttu-id="c6048-103">本主題中的範例將示範如何使用`Where`和`Where…Contains`方法來查詢[AdventureWorks Sales Model](http://msdn.microsoft.com/library/f16cd988-673f-4376-b034-129ca93c7832)使用以方法為基礎的查詢語法。</span><span class="sxs-lookup"><span data-stu-id="c6048-103">The examples in this topic demonstrate how to use the `Where` and `Where…Contains` methods to query the [AdventureWorks Sales Model](http://msdn.microsoft.com/library/f16cd988-673f-4376-b034-129ca93c7832) using method-based query syntax.</span></span> <span data-ttu-id="c6048-104">請注意，其中...`Contains`</span><span class="sxs-lookup"><span data-stu-id="c6048-104">Note, Where…`Contains`</span></span> <span data-ttu-id="c6048-105">無法使用的一部分[已編譯查詢](../../../../../../docs/framework/data/adonet/ef/language-reference/compiled-queries-linq-to-entities.md)。</span><span class="sxs-lookup"><span data-stu-id="c6048-105">cannot be used as a part of a [compiled query](../../../../../../docs/framework/data/adonet/ef/language-reference/compiled-queries-linq-to-entities.md).</span></span>  

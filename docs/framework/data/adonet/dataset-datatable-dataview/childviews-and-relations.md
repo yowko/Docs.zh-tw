@@ -10,6 +10,7 @@ ms.sourcegitcommit: 11f11ca6cefe555972b3a5c99729d1a7523d8f50
 ms.translationtype: MT
 ms.contentlocale: zh-TW
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32755379"
 ---
 # <a name="childviews-and-relations"></a><span data-ttu-id="7ff2a-102">子檢視和關聯</span><span class="sxs-lookup"><span data-stu-id="7ff2a-102">ChildViews and Relations</span></span>
 <span data-ttu-id="7ff2a-103">如果 <xref:System.Data.DataSet> 的資料表之間存在關聯性，則可以使用 <xref:System.Data.DataView> 的 <xref:System.Data.DataRowView.CreateChildView%2A> 方法，為父資料表的資料列建立 <xref:System.Data.DataRowView> (其包含來自相關子資料表的資料列)。</span><span class="sxs-lookup"><span data-stu-id="7ff2a-103">If a relationship exists between tables in a <xref:System.Data.DataSet>, you can create a <xref:System.Data.DataView> containing rows from the related child table by using the <xref:System.Data.DataRowView.CreateChildView%2A> method of the <xref:System.Data.DataRowView> for the rows in the parent table.</span></span> <span data-ttu-id="7ff2a-104">例如，下列程式碼顯示**類別**及其相關**產品**字母順序排序**CategoryName**和**ProductName**.</span><span class="sxs-lookup"><span data-stu-id="7ff2a-104">For example, the following code displays **Categories** and their related **Products** in alphabetical order sorted by **CategoryName** and **ProductName**.</span></span>  

@@ -9,6 +9,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: HT
 ms.contentlocale: zh-TW
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33332035"
 ---
 # <a name="how-to-access-an-array-element-with-a-pointer-c-programming-guide"></a><span data-ttu-id="a48ec-102">如何：使用指標存取陣列元素 (C# 程式設計手冊)</span><span class="sxs-lookup"><span data-stu-id="a48ec-102">How to: Access an Array Element with a Pointer (C# Programming Guide)</span></span>
 <span data-ttu-id="a48ec-103">在不安全的內容中，您可以使用指標元素存取來存取記憶體中的元素，如下例所示：</span><span class="sxs-lookup"><span data-stu-id="a48ec-103">In an unsafe context, you can access an element in memory by using pointer element access, as shown in the following example:</span></span>  

@@ -7,6 +7,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: zh-TW
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33640213"
 ---
 # <a name="equality-operations-visual-basic"></a><span data-ttu-id="20da1-102">等號比較作業 (Visual Basic)</span><span class="sxs-lookup"><span data-stu-id="20da1-102">Equality Operations (Visual Basic)</span></span>
 <span data-ttu-id="20da1-103">對應項目相等且具有相同數目項目的兩個序列，會視為相等。</span><span class="sxs-lookup"><span data-stu-id="20da1-103">Two sequences whose corresponding elements are equal and which have the same number of elements are considered equal.</span></span>  

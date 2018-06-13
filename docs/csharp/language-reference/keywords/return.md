@@ -13,6 +13,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: HT
 ms.contentlocale: zh-TW
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33266106"
 ---
 # <a name="return-c-reference"></a><span data-ttu-id="1650d-102">return (C# 參考)</span><span class="sxs-lookup"><span data-stu-id="1650d-102">return (C# Reference)</span></span>
 <span data-ttu-id="1650d-103">`return` 陳述式會終止執行在其中出現的方法，並且將控制權傳回給呼叫方法。</span><span class="sxs-lookup"><span data-stu-id="1650d-103">The `return` statement terminates execution of the method in which it appears and returns control to the calling method.</span></span> <span data-ttu-id="1650d-104">它也可以傳回選擇性值。</span><span class="sxs-lookup"><span data-stu-id="1650d-104">It can also return an optional value.</span></span> <span data-ttu-id="1650d-105">如果方法是 `void` 類型，則可以省略 `return` 陳述式。</span><span class="sxs-lookup"><span data-stu-id="1650d-105">If the method is a `void` type, the `return` statement can be omitted.</span></span>  

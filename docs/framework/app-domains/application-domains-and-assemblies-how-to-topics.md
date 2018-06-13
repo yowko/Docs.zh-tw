@@ -12,6 +12,7 @@ ms.sourcegitcommit: 11f11ca6cefe555972b3a5c99729d1a7523d8f50
 ms.translationtype: HT
 ms.contentlocale: zh-TW
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32743091"
 ---
 # <a name="application-domains-and-assemblies-how-to-topics"></a><span data-ttu-id="251b2-102">應用程式定義域和組件 HOW TO 主題</span><span class="sxs-lookup"><span data-stu-id="251b2-102">Application Domains and Assemblies How-to Topics</span></span>
 <span data-ttu-id="251b2-103">下列各節包含使用應用程式定義域和組件設計程式之概念文件中所有「如何」主題的連結。</span><span class="sxs-lookup"><span data-stu-id="251b2-103">The following sections contain links to all How-to topics found in the conceptual documentation for programming with application domains and assemblies.</span></span>  

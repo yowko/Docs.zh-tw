@@ -7,6 +7,7 @@ ms.sourcegitcommit: 11f11ca6cefe555972b3a5c99729d1a7523d8f50
 ms.translationtype: MT
 ms.contentlocale: zh-TW
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32756692"
 ---
 # <a name="map-relations-specified-for-nested-elements"></a><span data-ttu-id="1394e-102">針對巢狀項目指定的關聯進行對應</span><span class="sxs-lookup"><span data-stu-id="1394e-102">Map Relations Specified for Nested Elements</span></span>
 <span data-ttu-id="1394e-103">結構描述可以包含**msdata: relationship**註解明確指定結構描述中任何兩個項目之間的對應。</span><span class="sxs-lookup"><span data-stu-id="1394e-103">A schema can include an **msdata:Relationship** annotation to explicitly specify the mapping between any two elements in the schema.</span></span> <span data-ttu-id="1394e-104">在指定的兩個項目**msdata: relationship**可以巢狀結構描述，但沒有為。</span><span class="sxs-lookup"><span data-stu-id="1394e-104">The two elements specified in **msdata:Relationship** can be nested in the schema, but do not have to be.</span></span> <span data-ttu-id="1394e-105">對應處理會使用**msdata: relationship**結構描述產生的主索引鍵/外部索引鍵關聯性之間的兩個資料行中。</span><span class="sxs-lookup"><span data-stu-id="1394e-105">The mapping process uses **msdata:Relationship** in the schema to generate the primary key/foreign key relationship between the two columns.</span></span>  

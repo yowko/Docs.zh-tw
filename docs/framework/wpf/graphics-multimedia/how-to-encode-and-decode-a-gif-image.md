@@ -18,6 +18,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: zh-TW
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33558703"
 ---
 # <a name="how-to-encode-and-decode-a-gif-image"></a><span data-ttu-id="69efb-102">操作說明：編碼和解碼 GIF 影像</span><span class="sxs-lookup"><span data-stu-id="69efb-102">How to: Encode and Decode a GIF Image</span></span>
 <span data-ttu-id="69efb-103">下列範例示範如何解碼和編碼[!INCLUDE[TLA#tla_gif](../../../../includes/tlasharptla-gif-md.md)]映像使用特定<xref:System.Windows.Media.Imaging.GifBitmapDecoder>和<xref:System.Windows.Media.Imaging.GifBitmapEncoder>物件。</span><span class="sxs-lookup"><span data-stu-id="69efb-103">The following examples show how to decode and encode a [!INCLUDE[TLA#tla_gif](../../../../includes/tlasharptla-gif-md.md)] image using the specific <xref:System.Windows.Media.Imaging.GifBitmapDecoder> and <xref:System.Windows.Media.Imaging.GifBitmapEncoder> objects.</span></span>  

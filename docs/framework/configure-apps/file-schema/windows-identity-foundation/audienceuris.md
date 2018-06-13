@@ -9,6 +9,7 @@ ms.sourcegitcommit: 11f11ca6cefe555972b3a5c99729d1a7523d8f50
 ms.translationtype: MT
 ms.contentlocale: zh-TW
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32755990"
 ---
 # <a name="ltaudienceurisgt"></a><span data-ttu-id="3c49c-102">&lt;audienceUris&gt;</span><span class="sxs-lookup"><span data-stu-id="3c49c-102">&lt;audienceUris&gt;</span></span>
 <span data-ttu-id="3c49c-103">指定是可接受的識別項的信賴憑證者的合作對象 (RP) 的 Uri 的集合。</span><span class="sxs-lookup"><span data-stu-id="3c49c-103">Specifies the set of URIs that are acceptable identifiers of the relying party (RP).</span></span> <span data-ttu-id="3c49c-104">除非它們適用其中一個允許的 audience Uri，將不會接受權杖。</span><span class="sxs-lookup"><span data-stu-id="3c49c-104">Tokens will not be accepted unless they are scoped for one of the allowed audience URIs.</span></span>  

@@ -7,6 +7,7 @@ ms.sourcegitcommit: 11f11ca6cefe555972b3a5c99729d1a7523d8f50
 ms.translationtype: MT
 ms.contentlocale: zh-TW
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32761203"
 ---
 # <a name="other-canonical-functions"></a><span data-ttu-id="f678c-102">其他標準函式</span><span class="sxs-lookup"><span data-stu-id="f678c-102">Other Canonical Functions</span></span>
 [!INCLUDE[esql](../../../../../../includes/esql-md.md)]<span data-ttu-id="f678c-103"> 包括一些未分類為位元運算、彙總、數學、日期/時間或字串的標準函式。</span><span class="sxs-lookup"><span data-stu-id="f678c-103"> includes canonical functions not classified as bitwise, aggregate, math, date/time, or string.</span></span>  

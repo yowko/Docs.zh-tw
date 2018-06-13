@@ -15,6 +15,7 @@ ms.sourcegitcommit: 11f11ca6cefe555972b3a5c99729d1a7523d8f50
 ms.translationtype: HT
 ms.contentlocale: zh-TW
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32744352"
 ---
 # <a name="assembly-versioning"></a><span data-ttu-id="8f4d4-102">組件版本控制</span><span class="sxs-lookup"><span data-stu-id="8f4d4-102">Assembly Versioning</span></span>
 <span data-ttu-id="8f4d4-103">使用 Common Language Runtime 之組件的所有版本控制都是在組件層級進行的。</span><span class="sxs-lookup"><span data-stu-id="8f4d4-103">All versioning of assemblies that use the common language runtime is done at the assembly level.</span></span> <span data-ttu-id="8f4d4-104">組件的特定版本和相依組件的版本是記錄在組件的資訊清單中。</span><span class="sxs-lookup"><span data-stu-id="8f4d4-104">The specific version of an assembly and the versions of dependent assemblies are recorded in the assembly's manifest.</span></span> <span data-ttu-id="8f4d4-105">Runtime 的預設版本原則為，除非被組態檔 (應用程式組態檔、發行者原則檔和電腦的系統管理員組態檔) 中的明確版本原則強制取代，否則應用程式只能搭配用來建置和測試它們的版本執行。</span><span class="sxs-lookup"><span data-stu-id="8f4d4-105">The default version policy for the runtime is that applications run only with the versions they were built and tested with, unless overridden by explicit version policy in configuration files (the application configuration file, the publisher policy file, and the computer's administrator configuration file).</span></span>  

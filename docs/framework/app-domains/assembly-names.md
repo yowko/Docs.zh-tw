@@ -12,6 +12,7 @@ ms.sourcegitcommit: 11f11ca6cefe555972b3a5c99729d1a7523d8f50
 ms.translationtype: HT
 ms.contentlocale: zh-TW
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32744131"
 ---
 # <a name="assembly-names"></a><span data-ttu-id="31e6f-102">組件名稱</span><span class="sxs-lookup"><span data-stu-id="31e6f-102">Assembly Names</span></span>
 <span data-ttu-id="31e6f-103">組件的名稱儲存在中繼資料內，而且對組件範圍具有重大影響，並供應用程式使用。</span><span class="sxs-lookup"><span data-stu-id="31e6f-103">An assembly's name is stored in metadata and has a significant impact on the assembly's scope and use by an application.</span></span> <span data-ttu-id="31e6f-104">強式名稱組件的完整名稱包括組件的名稱、文化特性、公開金鑰和版本號碼。</span><span class="sxs-lookup"><span data-stu-id="31e6f-104">A strong-named assembly has a fully qualified name that includes the assembly's name, culture, public key, and version number.</span></span> <span data-ttu-id="31e6f-105">這通常稱為顯示名稱，以及可以使用 <xref:System.Reflection.Assembly.FullName%2A> 屬性取得載入的組件。</span><span class="sxs-lookup"><span data-stu-id="31e6f-105">This is frequently referred to as the display name, and for loaded assemblies can be obtained by using the <xref:System.Reflection.Assembly.FullName%2A> property.</span></span>  

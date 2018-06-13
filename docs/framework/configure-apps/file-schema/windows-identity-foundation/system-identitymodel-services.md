@@ -9,6 +9,7 @@ ms.sourcegitcommit: 11f11ca6cefe555972b3a5c99729d1a7523d8f50
 ms.translationtype: MT
 ms.contentlocale: zh-TW
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32757043"
 ---
 # <a name="ltsystemidentitymodelservicesgt"></a><span data-ttu-id="992f0-102">&lt;system.identityModel.services&gt;</span><span class="sxs-lookup"><span data-stu-id="992f0-102">&lt;system.identityModel.services&gt;</span></span>
 <span data-ttu-id="992f0-103">使用 WS-同盟通訊協定進行驗證的組態區段。</span><span class="sxs-lookup"><span data-stu-id="992f0-103">Configuration section for authentication using the WS-Federation protocol.</span></span>  

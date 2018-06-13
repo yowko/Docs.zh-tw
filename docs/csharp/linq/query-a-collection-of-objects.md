@@ -8,6 +8,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: HT
 ms.contentlocale: zh-TW
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33282388"
 ---
 # <a name="query-a-collection-of-objects"></a><span data-ttu-id="ec293-103">查詢物件的集合</span><span class="sxs-lookup"><span data-stu-id="ec293-103">Query a collection of objects</span></span>
 <span data-ttu-id="ec293-104">這個範例示範如何對 `Student` 物件清單執行簡單查詢。</span><span class="sxs-lookup"><span data-stu-id="ec293-104">This example shows how to perform a simple query over a list of `Student` objects.</span></span> <span data-ttu-id="ec293-105">每個 `Student` 物件都包含學生的一些基本資訊，以及一份代表學生四次考試分數的清單。</span><span class="sxs-lookup"><span data-stu-id="ec293-105">Each `Student` object contains some basic information about the student, and a list that represents the student's scores on four examinations.</span></span>  

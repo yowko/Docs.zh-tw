@@ -7,6 +7,7 @@ ms.sourcegitcommit: 11f11ca6cefe555972b3a5c99729d1a7523d8f50
 ms.translationtype: MT
 ms.contentlocale: zh-TW
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32757238"
 ---
 # <a name="model-declared-function"></a><span data-ttu-id="3e9b7-102">模型宣告函式</span><span class="sxs-lookup"><span data-stu-id="3e9b7-102">model-declared function</span></span>
 <span data-ttu-id="3e9b7-103">A*模型宣告函式*的函式的宣告在概念模型中，但未定義該概念模型中。</span><span class="sxs-lookup"><span data-stu-id="3e9b7-103">A *model-declared function* is a function that is declared in a conceptual model, but is not defined in that conceptual model.</span></span> <span data-ttu-id="3e9b7-104">該函式可能是在裝載或儲存環境中定義的。</span><span class="sxs-lookup"><span data-stu-id="3e9b7-104">The function might be defined in the hosting or storage environment.</span></span> <span data-ttu-id="3e9b7-105">例如，模型宣告函式可能對應到在資料庫中定義的函式，因而在概念模型中公開伺服器端的功能。</span><span class="sxs-lookup"><span data-stu-id="3e9b7-105">For example, a model-declared function might be mapped to a function that is defined in a database, thus exposing server-side functionality in the conceptual model.</span></span>  

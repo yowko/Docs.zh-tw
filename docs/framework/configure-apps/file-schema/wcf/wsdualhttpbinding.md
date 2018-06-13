@@ -9,6 +9,7 @@ ms.sourcegitcommit: 11f11ca6cefe555972b3a5c99729d1a7523d8f50
 ms.translationtype: MT
 ms.contentlocale: zh-TW
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32758967"
 ---
 # <a name="ltwsdualhttpbindinggt"></a><span data-ttu-id="9297a-102">&lt;wsDualHttpBinding&gt;</span><span class="sxs-lookup"><span data-stu-id="9297a-102">&lt;wsDualHttpBinding&gt;</span></span>
 <span data-ttu-id="9297a-103">定義安全、可靠且互通的繫結，且這個繫結適用於雙工服務合約或透過 SOAP 媒介的通訊。</span><span class="sxs-lookup"><span data-stu-id="9297a-103">Defines a secure, reliable and interoperable binding that is suitable for duplex service contracts or communication through SOAP intermediaries.</span></span>  

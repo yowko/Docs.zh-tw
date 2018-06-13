@@ -7,6 +7,7 @@ ms.sourcegitcommit: 11f11ca6cefe555972b3a5c99729d1a7523d8f50
 ms.translationtype: MT
 ms.contentlocale: zh-TW
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32761723"
 ---
 # <a name="-add"></a><span data-ttu-id="1cea5-102">+ (加號)</span><span class="sxs-lookup"><span data-stu-id="1cea5-102">+ (Add)</span></span>
 <span data-ttu-id="1cea5-103">將兩個數字相加。</span><span class="sxs-lookup"><span data-stu-id="1cea5-103">Adds two numbers.</span></span>  

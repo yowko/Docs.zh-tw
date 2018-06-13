@@ -7,6 +7,7 @@ ms.sourcegitcommit: 11f11ca6cefe555972b3a5c99729d1a7523d8f50
 ms.translationtype: MT
 ms.contentlocale: zh-TW
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32760137"
 ---
 # <a name="calling-functions-in-linq-to-entities-queries"></a><span data-ttu-id="ed8d0-102">在 LINQ to Entities 查詢中呼叫函式</span><span class="sxs-lookup"><span data-stu-id="ed8d0-102">Calling Functions in LINQ to Entities Queries</span></span>
 <span data-ttu-id="ed8d0-103">本章節的主題描述如何使用呼叫 LINQ to Entities 查詢中的函式。</span><span class="sxs-lookup"><span data-stu-id="ed8d0-103">The topics in this section describe how to call functions in LINQ to Entities queries.</span></span>  

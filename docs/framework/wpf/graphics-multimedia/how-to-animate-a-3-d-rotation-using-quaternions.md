@@ -11,6 +11,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: zh-TW
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33556935"
 ---
 # <a name="how-to-animate-a-3-d-rotation-using-quaternions"></a><span data-ttu-id="50d53-102">如何：使用四元數建立立體旋轉的動畫</span><span class="sxs-lookup"><span data-stu-id="50d53-102">How to: Animate a 3-D Rotation Using Quaternions</span></span>
 <span data-ttu-id="50d53-103">這個範例示範如何建立動畫的 3d 物件使用四元數旋轉。</span><span class="sxs-lookup"><span data-stu-id="50d53-103">This example shows how to animate a rotation of a 3-D object using quaternions.</span></span>  

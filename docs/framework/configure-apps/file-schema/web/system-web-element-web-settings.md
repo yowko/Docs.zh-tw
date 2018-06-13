@@ -16,6 +16,7 @@ ms.sourcegitcommit: 11f11ca6cefe555972b3a5c99729d1a7523d8f50
 ms.translationtype: MT
 ms.contentlocale: zh-TW
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32755158"
 ---
 # <a name="ltsystemwebgt-element-web-settings"></a><span data-ttu-id="56fbb-102">&lt;system.web&gt;項目 （Web 設定）</span><span class="sxs-lookup"><span data-stu-id="56fbb-102">&lt;system.web&gt; Element (Web Settings)</span></span>
 <span data-ttu-id="56fbb-103">包含 ASP.NET 裝載層如何管理整個處理序行為的詳細資訊。</span><span class="sxs-lookup"><span data-stu-id="56fbb-103">Contains information about how the ASP.NET hosting layer manages process-wide behavior.</span></span>  

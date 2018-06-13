@@ -9,6 +9,7 @@ ms.sourcegitcommit: 11f11ca6cefe555972b3a5c99729d1a7523d8f50
 ms.translationtype: MT
 ms.contentlocale: zh-TW
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32758369"
 ---
 # <a name="ltchunkedcookiehandlergt"></a><span data-ttu-id="72a32-102">&lt;chunkedCookieHandler&gt;</span><span class="sxs-lookup"><span data-stu-id="72a32-102">&lt;chunkedCookieHandler&gt;</span></span>
 <span data-ttu-id="72a32-103">設定<xref:System.IdentityModel.Services.ChunkedCookieHandler>。</span><span class="sxs-lookup"><span data-stu-id="72a32-103">Configures the <xref:System.IdentityModel.Services.ChunkedCookieHandler>.</span></span> <span data-ttu-id="72a32-104">這個項目可能只會存在於如果`mode`屬性`<cookieHandler>`元素是 「 預設 」 或 「 區塊 」。</span><span class="sxs-lookup"><span data-stu-id="72a32-104">This element may only be present if the `mode` attribute of the `<cookieHandler>` element is "Default" or "Chunked".</span></span>  

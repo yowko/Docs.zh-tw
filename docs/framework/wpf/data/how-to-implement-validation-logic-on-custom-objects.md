@@ -15,6 +15,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: zh-TW
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33555960"
 ---
 # <a name="how-to-implement-validation-logic-on-custom-objects"></a><span data-ttu-id="eccf1-102">如何：對自訂物件實作驗證邏輯</span><span class="sxs-lookup"><span data-stu-id="eccf1-102">How to: Implement Validation Logic on Custom Objects</span></span>
 <span data-ttu-id="eccf1-103">這個範例示範如何實作驗證邏輯的自訂物件，然後再繫結到它。</span><span class="sxs-lookup"><span data-stu-id="eccf1-103">This example shows how to implement validation logic on a custom object and then bind to it.</span></span>  

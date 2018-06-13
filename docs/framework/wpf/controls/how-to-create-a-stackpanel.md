@@ -1,38 +1,25 @@
 ---
-title: "操作說明：建立 StackPanel"
-ms.custom: 
+title: 操作說明：建立 StackPanel
 ms.date: 03/30/2017
-ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.technology:
-- dotnet-wpf
-ms.tgt_pltfrm: 
-ms.topic: article
 helpviewer_keywords:
 - StackPanel control [WPF], creating
 ms.assetid: e7ce65cb-720a-4bb6-95b6-286b74488a58
-caps.latest.revision: 
-author: dotnet-bot
-ms.author: dotnetcontent
-manager: wpickett
-ms.workload:
-- dotnet
-ms.openlocfilehash: 9226ac10e4f221cc381b7c59179b2667e20aa757
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.openlocfilehash: 30f24d8dba7c09271a5957822439af6b64e05aca
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 05/04/2018
+ms.locfileid: "33553023"
 ---
-# <a name="how-to-create-a-stackpanel"></a><span data-ttu-id="96adc-102">操作說明：建立 StackPanel</span><span class="sxs-lookup"><span data-stu-id="96adc-102">How to: Create a StackPanel</span></span>
-<span data-ttu-id="96adc-103">這個範例示範如何建立<xref:System.Windows.Controls.StackPanel>。</span><span class="sxs-lookup"><span data-stu-id="96adc-103">This example shows how to create a <xref:System.Windows.Controls.StackPanel>.</span></span>  
+# <a name="how-to-create-a-stackpanel"></a><span data-ttu-id="692ce-102">操作說明：建立 StackPanel</span><span class="sxs-lookup"><span data-stu-id="692ce-102">How to: Create a StackPanel</span></span>
+<span data-ttu-id="692ce-103">這個範例示範如何建立<xref:System.Windows.Controls.StackPanel>。</span><span class="sxs-lookup"><span data-stu-id="692ce-103">This example shows how to create a <xref:System.Windows.Controls.StackPanel>.</span></span>  
   
-## <a name="example"></a><span data-ttu-id="96adc-104">範例</span><span class="sxs-lookup"><span data-stu-id="96adc-104">Example</span></span>  
- <span data-ttu-id="96adc-105">A<xref:System.Windows.Controls.StackPanel>可讓您在堆疊中指定方向的項目。</span><span class="sxs-lookup"><span data-stu-id="96adc-105">A <xref:System.Windows.Controls.StackPanel> allows you to stack elements in a specified direction.</span></span> <span data-ttu-id="96adc-106">藉由使用屬性上定義之<xref:System.Windows.Controls.StackPanel>，內容可以垂直兩者，這是預設的設定，或以水平方式。</span><span class="sxs-lookup"><span data-stu-id="96adc-106">By using properties that are defined on <xref:System.Windows.Controls.StackPanel>, content can flow both vertically, which is the default setting, or horizontally.</span></span>  
+## <a name="example"></a><span data-ttu-id="692ce-104">範例</span><span class="sxs-lookup"><span data-stu-id="692ce-104">Example</span></span>  
+ <span data-ttu-id="692ce-105">A<xref:System.Windows.Controls.StackPanel>可讓您在堆疊中指定方向的項目。</span><span class="sxs-lookup"><span data-stu-id="692ce-105">A <xref:System.Windows.Controls.StackPanel> allows you to stack elements in a specified direction.</span></span> <span data-ttu-id="692ce-106">藉由使用屬性上定義之<xref:System.Windows.Controls.StackPanel>，內容可以垂直兩者，這是預設的設定，或以水平方式。</span><span class="sxs-lookup"><span data-stu-id="692ce-106">By using properties that are defined on <xref:System.Windows.Controls.StackPanel>, content can flow both vertically, which is the default setting, or horizontally.</span></span>  
   
- <span data-ttu-id="96adc-107">下列範例中，垂直堆疊五個<xref:System.Windows.Controls.TextBlock>控制項，各有不同<xref:System.Windows.Controls.Border>和<xref:System.Windows.Controls.Border.Background%2A>，使用<xref:System.Windows.Controls.StackPanel>。</span><span class="sxs-lookup"><span data-stu-id="96adc-107">The following example vertically stacks five <xref:System.Windows.Controls.TextBlock> controls, each with a different <xref:System.Windows.Controls.Border> and <xref:System.Windows.Controls.Border.Background%2A>, by using <xref:System.Windows.Controls.StackPanel>.</span></span> <span data-ttu-id="96adc-108">沒有指定任何子項目<xref:System.Windows.FrameworkElement.Width%2A>伸展以填滿的父視窗; 然而，子元素具有指定<xref:System.Windows.FrameworkElement.Width%2A>，置中對齊視窗內。</span><span class="sxs-lookup"><span data-stu-id="96adc-108">The child elements that have no specified <xref:System.Windows.FrameworkElement.Width%2A> stretch to fill the parent window; however, the child elements that have a specified <xref:System.Windows.FrameworkElement.Width%2A>, are centered within the window.</span></span>  
+ <span data-ttu-id="692ce-107">下列範例中，垂直堆疊五個<xref:System.Windows.Controls.TextBlock>控制項，各有不同<xref:System.Windows.Controls.Border>和<xref:System.Windows.Controls.Border.Background%2A>，使用<xref:System.Windows.Controls.StackPanel>。</span><span class="sxs-lookup"><span data-stu-id="692ce-107">The following example vertically stacks five <xref:System.Windows.Controls.TextBlock> controls, each with a different <xref:System.Windows.Controls.Border> and <xref:System.Windows.Controls.Border.Background%2A>, by using <xref:System.Windows.Controls.StackPanel>.</span></span> <span data-ttu-id="692ce-108">沒有指定任何子項目<xref:System.Windows.FrameworkElement.Width%2A>伸展以填滿的父視窗; 然而，子元素具有指定<xref:System.Windows.FrameworkElement.Width%2A>，置中對齊視窗內。</span><span class="sxs-lookup"><span data-stu-id="692ce-108">The child elements that have no specified <xref:System.Windows.FrameworkElement.Width%2A> stretch to fill the parent window; however, the child elements that have a specified <xref:System.Windows.FrameworkElement.Width%2A>, are centered within the window.</span></span>  
   
- <span data-ttu-id="96adc-109">預設的堆疊方向中<xref:System.Windows.Controls.StackPanel>是垂直。</span><span class="sxs-lookup"><span data-stu-id="96adc-109">The default stack direction in a <xref:System.Windows.Controls.StackPanel> is vertical.</span></span> <span data-ttu-id="96adc-110">中的控制內容流程<xref:System.Windows.Controls.StackPanel>，使用<xref:System.Windows.Controls.StackPanel.Orientation%2A>屬性。</span><span class="sxs-lookup"><span data-stu-id="96adc-110">To control content flow in a <xref:System.Windows.Controls.StackPanel>, use the <xref:System.Windows.Controls.StackPanel.Orientation%2A> property.</span></span> <span data-ttu-id="96adc-111">您可以使用，以控制水平對齊方式<xref:System.Windows.FrameworkElement.HorizontalAlignment%2A>屬性。</span><span class="sxs-lookup"><span data-stu-id="96adc-111">You can control horizontal alignment by using the <xref:System.Windows.FrameworkElement.HorizontalAlignment%2A> property.</span></span>  
+ <span data-ttu-id="692ce-109">預設的堆疊方向中<xref:System.Windows.Controls.StackPanel>是垂直。</span><span class="sxs-lookup"><span data-stu-id="692ce-109">The default stack direction in a <xref:System.Windows.Controls.StackPanel> is vertical.</span></span> <span data-ttu-id="692ce-110">中的控制內容流程<xref:System.Windows.Controls.StackPanel>，使用<xref:System.Windows.Controls.StackPanel.Orientation%2A>屬性。</span><span class="sxs-lookup"><span data-stu-id="692ce-110">To control content flow in a <xref:System.Windows.Controls.StackPanel>, use the <xref:System.Windows.Controls.StackPanel.Orientation%2A> property.</span></span> <span data-ttu-id="692ce-111">您可以使用，以控制水平對齊方式<xref:System.Windows.FrameworkElement.HorizontalAlignment%2A>屬性。</span><span class="sxs-lookup"><span data-stu-id="692ce-111">You can control horizontal alignment by using the <xref:System.Windows.FrameworkElement.HorizontalAlignment%2A> property.</span></span>  
   
 ```xaml  
 <Page xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation" WindowTitle="StackPanel Sample">  
@@ -56,7 +43,7 @@ ms.lasthandoff: 12/22/2017
 </Page>  
 ```  
   
-## <a name="see-also"></a><span data-ttu-id="96adc-112">請參閱</span><span class="sxs-lookup"><span data-stu-id="96adc-112">See Also</span></span>  
+## <a name="see-also"></a><span data-ttu-id="692ce-112">另請參閱</span><span class="sxs-lookup"><span data-stu-id="692ce-112">See Also</span></span>  
  <xref:System.Windows.Controls.StackPanel>  
- [<span data-ttu-id="96adc-113">面板概觀</span><span class="sxs-lookup"><span data-stu-id="96adc-113">Panels Overview</span></span>](../../../../docs/framework/wpf/controls/panels-overview.md)  
- [<span data-ttu-id="96adc-114">HOW-TO 主題</span><span class="sxs-lookup"><span data-stu-id="96adc-114">How-to Topics</span></span>](../../../../docs/framework/wpf/controls/stackpanel-how-to-topics.md)
+ [<span data-ttu-id="692ce-113">面板概觀</span><span class="sxs-lookup"><span data-stu-id="692ce-113">Panels Overview</span></span>](../../../../docs/framework/wpf/controls/panels-overview.md)  
+ [<span data-ttu-id="692ce-114">HOW-TO 主題</span><span class="sxs-lookup"><span data-stu-id="692ce-114">How-to Topics</span></span>](../../../../docs/framework/wpf/controls/stackpanel-how-to-topics.md)

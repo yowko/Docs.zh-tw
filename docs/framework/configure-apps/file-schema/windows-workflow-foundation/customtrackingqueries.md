@@ -8,6 +8,7 @@ ms.sourcegitcommit: 11f11ca6cefe555972b3a5c99729d1a7523d8f50
 ms.translationtype: MT
 ms.contentlocale: zh-TW
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32755886"
 ---
 # <a name="ltcustomtrackingqueriesgt"></a><span data-ttu-id="cf42b-102">&lt;customTrackingQueries&gt;</span><span class="sxs-lookup"><span data-stu-id="cf42b-102">&lt;customTrackingQueries&gt;</span></span>
 <span data-ttu-id="cf42b-103">代表查詢的集合，這個集合可用來追蹤程式碼活動中定義的事件。</span><span class="sxs-lookup"><span data-stu-id="cf42b-103">Represents a collection of queries that are used to track events that you define in your code activities.</span></span> <span data-ttu-id="cf42b-104">追蹤參與者必須要具備查詢，才能訂閱自訂追蹤記錄。</span><span class="sxs-lookup"><span data-stu-id="cf42b-104">The query is necessary for a tracking participant to subscribe to custom tracking records.</span></span>  
