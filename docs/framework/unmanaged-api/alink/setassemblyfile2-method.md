@@ -1,14 +1,6 @@
 ---
-title: "SetAssemblyFile2 方法"
-ms.custom: 
+title: SetAssemblyFile2 方法
 ms.date: 03/30/2017
-ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.technology:
-- dotnet-clr
-ms.tgt_pltfrm: 
-ms.topic: reference
 api_name:
 - IALink2.SetAssemblyFile2
 api_location:
@@ -22,22 +14,19 @@ helpviewer_keywords:
 ms.assetid: eedb9125-1ef1-4000-abfc-7de86e5a1f17
 topic_type:
 - apiref
-caps.latest.revision: 
 author: mairaw
 ms.author: mairaw
-manager: wpickett
-ms.workload:
-- dotnet
-ms.openlocfilehash: 671fb857015a5babd388366066d282cb87462c18
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
-ms.translationtype: MT
+ms.openlocfilehash: ade568889d1c0203115f160d855de8c598798196
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 05/04/2018
+ms.locfileid: "33403353"
 ---
-# <a name="setassemblyfile2-method"></a><span data-ttu-id="792a1-102">SetAssemblyFile2 方法</span><span class="sxs-lookup"><span data-stu-id="792a1-102">SetAssemblyFile2 Method</span></span>
-<span data-ttu-id="792a1-103">設定的名稱和新的組件的選項。</span><span class="sxs-lookup"><span data-stu-id="792a1-103">Sets the name of and options for a new assembly.</span></span> <span data-ttu-id="792a1-104">當您產生未繫結的模組時，請勿呼叫這個方法。</span><span class="sxs-lookup"><span data-stu-id="792a1-104">Do not call this method when you produce unbound modules.</span></span>  
+# <a name="setassemblyfile2-method"></a><span data-ttu-id="1e90c-102">SetAssemblyFile2 方法</span><span class="sxs-lookup"><span data-stu-id="1e90c-102">SetAssemblyFile2 Method</span></span>
+<span data-ttu-id="1e90c-103">設定的名稱和新的組件的選項。</span><span class="sxs-lookup"><span data-stu-id="1e90c-103">Sets the name of and options for a new assembly.</span></span> <span data-ttu-id="1e90c-104">當您產生未繫結的模組時，請勿呼叫這個方法。</span><span class="sxs-lookup"><span data-stu-id="1e90c-104">Do not call this method when you produce unbound modules.</span></span>  
   
-## <a name="syntax"></a><span data-ttu-id="792a1-105">語法</span><span class="sxs-lookup"><span data-stu-id="792a1-105">Syntax</span></span>  
+## <a name="syntax"></a><span data-ttu-id="1e90c-105">語法</span><span class="sxs-lookup"><span data-stu-id="1e90c-105">Syntax</span></span>  
   
 ```  
 HRESULT SetAssemblyFile2(  
@@ -48,26 +37,26 @@ HRESULT SetAssemblyFile2(
 ) PURE;  
 ```  
   
-#### <a name="parameters"></a><span data-ttu-id="792a1-106">參數</span><span class="sxs-lookup"><span data-stu-id="792a1-106">Parameters</span></span>  
+#### <a name="parameters"></a><span data-ttu-id="1e90c-106">參數</span><span class="sxs-lookup"><span data-stu-id="1e90c-106">Parameters</span></span>  
  `pszFilename`  
- <span data-ttu-id="792a1-107">資訊清單檔案的名稱。</span><span class="sxs-lookup"><span data-stu-id="792a1-107">Name of manifest file.</span></span>  
+ <span data-ttu-id="1e90c-107">資訊清單檔案的名稱。</span><span class="sxs-lookup"><span data-stu-id="1e90c-107">Name of manifest file.</span></span>  
   
  `pEmitter`  
- <span data-ttu-id="792a1-108">[IMetaDataEmit2 介面](../../../../docs/framework/unmanaged-api/metadata/imetadataemit2-interface.md)介面，此檔案。</span><span class="sxs-lookup"><span data-stu-id="792a1-108">[IMetaDataEmit2 Interface](../../../../docs/framework/unmanaged-api/metadata/imetadataemit2-interface.md) interface for this file.</span></span>  
+ <span data-ttu-id="1e90c-108">[IMetaDataEmit2 介面](../../../../docs/framework/unmanaged-api/metadata/imetadataemit2-interface.md)介面，此檔案。</span><span class="sxs-lookup"><span data-stu-id="1e90c-108">[IMetaDataEmit2 Interface](../../../../docs/framework/unmanaged-api/metadata/imetadataemit2-interface.md) interface for this file.</span></span>  
   
  `afFlags`  
- <span data-ttu-id="792a1-109">選項由[AssemblyFlags 列舉](../../../../docs/framework/unmanaged-api/metadata/assemblyflags-enumeration.md)。</span><span class="sxs-lookup"><span data-stu-id="792a1-109">Options represented by [AssemblyFlags Enumeration](../../../../docs/framework/unmanaged-api/metadata/assemblyflags-enumeration.md).</span></span>  
+ <span data-ttu-id="1e90c-109">選項由[AssemblyFlags 列舉](../../../../docs/framework/unmanaged-api/metadata/assemblyflags-enumeration.md)。</span><span class="sxs-lookup"><span data-stu-id="1e90c-109">Options represented by [AssemblyFlags Enumeration](../../../../docs/framework/unmanaged-api/metadata/assemblyflags-enumeration.md).</span></span>  
   
  `pAssemblyID`  
- <span data-ttu-id="792a1-110">正在建構的組件所收到的唯一識別碼。</span><span class="sxs-lookup"><span data-stu-id="792a1-110">Receives unique ID for the assembly being constructed.</span></span>  
+ <span data-ttu-id="1e90c-110">正在建構的組件所收到的唯一識別碼。</span><span class="sxs-lookup"><span data-stu-id="1e90c-110">Receives unique ID for the assembly being constructed.</span></span>  
   
-## <a name="return-value"></a><span data-ttu-id="792a1-111">傳回值</span><span class="sxs-lookup"><span data-stu-id="792a1-111">Return Value</span></span>  
- <span data-ttu-id="792a1-112">如果方法成功則傳回 S_OK。</span><span class="sxs-lookup"><span data-stu-id="792a1-112">Returns S_OK if the method succeeds.</span></span>  
+## <a name="return-value"></a><span data-ttu-id="1e90c-111">傳回值</span><span class="sxs-lookup"><span data-stu-id="1e90c-111">Return Value</span></span>  
+ <span data-ttu-id="1e90c-112">如果方法成功則傳回 S_OK。</span><span class="sxs-lookup"><span data-stu-id="1e90c-112">Returns S_OK if the method succeeds.</span></span>  
   
-## <a name="requirements"></a><span data-ttu-id="792a1-113">需求</span><span class="sxs-lookup"><span data-stu-id="792a1-113">Requirements</span></span>  
- <span data-ttu-id="792a1-114">需要 alink.h。</span><span class="sxs-lookup"><span data-stu-id="792a1-114">Requires alink.h.</span></span>  
+## <a name="requirements"></a><span data-ttu-id="1e90c-113">需求</span><span class="sxs-lookup"><span data-stu-id="1e90c-113">Requirements</span></span>  
+ <span data-ttu-id="1e90c-114">需要 alink.h。</span><span class="sxs-lookup"><span data-stu-id="1e90c-114">Requires alink.h.</span></span>  
   
-## <a name="see-also"></a><span data-ttu-id="792a1-115">請參閱</span><span class="sxs-lookup"><span data-stu-id="792a1-115">See Also</span></span>  
- [<span data-ttu-id="792a1-116">IALink2 介面</span><span class="sxs-lookup"><span data-stu-id="792a1-116">IALink2 Interface</span></span>](../../../../docs/framework/unmanaged-api/alink/ialink2-interface.md)  
- [<span data-ttu-id="792a1-117">IALink 介面</span><span class="sxs-lookup"><span data-stu-id="792a1-117">IALink Interface</span></span>](../../../../docs/framework/unmanaged-api/alink/ialink-interface.md)  
- [<span data-ttu-id="792a1-118">ALink API</span><span class="sxs-lookup"><span data-stu-id="792a1-118">ALink API</span></span>](../../../../docs/framework/unmanaged-api/alink/index.md)
+## <a name="see-also"></a><span data-ttu-id="1e90c-115">另請參閱</span><span class="sxs-lookup"><span data-stu-id="1e90c-115">See Also</span></span>  
+ [<span data-ttu-id="1e90c-116">IALink2 介面</span><span class="sxs-lookup"><span data-stu-id="1e90c-116">IALink2 Interface</span></span>](../../../../docs/framework/unmanaged-api/alink/ialink2-interface.md)  
+ [<span data-ttu-id="1e90c-117">IALink 介面</span><span class="sxs-lookup"><span data-stu-id="1e90c-117">IALink Interface</span></span>](../../../../docs/framework/unmanaged-api/alink/ialink-interface.md)  
+ [<span data-ttu-id="1e90c-118">ALink API</span><span class="sxs-lookup"><span data-stu-id="1e90c-118">ALink API</span></span>](../../../../docs/framework/unmanaged-api/alink/index.md)

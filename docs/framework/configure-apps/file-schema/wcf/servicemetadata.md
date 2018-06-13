@@ -7,6 +7,7 @@ ms.sourcegitcommit: 11f11ca6cefe555972b3a5c99729d1a7523d8f50
 ms.translationtype: MT
 ms.contentlocale: zh-TW
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32751770"
 ---
 # <a name="ltservicemetadatagt"></a><span data-ttu-id="6d2a4-102">&lt;serviceMetadata&gt;</span><span class="sxs-lookup"><span data-stu-id="6d2a4-102">&lt;serviceMetadata&gt;</span></span>
 <span data-ttu-id="6d2a4-103">指定服務中繼資料和相關資訊的發行。</span><span class="sxs-lookup"><span data-stu-id="6d2a4-103">Specifies the publication of service metadata and associated information.</span></span>  

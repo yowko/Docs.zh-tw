@@ -8,6 +8,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: HT
 ms.contentlocale: zh-TW
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33349765"
 ---
 # <a name="structs"></a><span data-ttu-id="1d276-103">結構</span><span class="sxs-lookup"><span data-stu-id="1d276-103">Structs</span></span>
 <span data-ttu-id="1d276-104">*struct* 是實值型別。</span><span class="sxs-lookup"><span data-stu-id="1d276-104">A *struct* is a value type.</span></span> <span data-ttu-id="1d276-105">建立結構時，指派結構的變數會保留結構的實際資料。</span><span class="sxs-lookup"><span data-stu-id="1d276-105">When a struct is created, the variable to which the struct is assigned holds the struct's actual data.</span></span> <span data-ttu-id="1d276-106">將結構指派至新的變數時，將會複製結構。</span><span class="sxs-lookup"><span data-stu-id="1d276-106">When the struct is assigned to a new variable, it is copied.</span></span> <span data-ttu-id="1d276-107">因此，新的變數和原始變數會各自包含一份相同的資料。</span><span class="sxs-lookup"><span data-stu-id="1d276-107">The new variable and the original variable therefore contain two separate copies of the same data.</span></span> <span data-ttu-id="1d276-108">針對其中一個複本所做的變更，並不會影響到另一個複本。</span><span class="sxs-lookup"><span data-stu-id="1d276-108">Changes made to one copy do not affect the other copy.</span></span>

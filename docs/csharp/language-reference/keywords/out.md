@@ -13,6 +13,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: HT
 ms.contentlocale: zh-TW
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33266577"
 ---
 # <a name="out-c-reference"></a><span data-ttu-id="204e6-102">out (C# 參考)</span><span class="sxs-lookup"><span data-stu-id="204e6-102">out (C# Reference)</span></span>
 <span data-ttu-id="204e6-103">您可以在兩個內容中使用 `out` 關鍵字︰</span><span class="sxs-lookup"><span data-stu-id="204e6-103">You can use the `out` keyword in two contexts:</span></span>

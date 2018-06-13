@@ -7,6 +7,7 @@ ms.sourcegitcommit: 11f11ca6cefe555972b3a5c99729d1a7523d8f50
 ms.translationtype: MT
 ms.contentlocale: zh-TW
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32751824"
 ---
 # <a name="ltnetnamedpipebindinggt"></a><span data-ttu-id="ce8a4-102">&lt;netNamedPipeBinding&gt;</span><span class="sxs-lookup"><span data-stu-id="ce8a4-102">&lt;netNamedPipeBinding&gt;</span></span>
 <span data-ttu-id="ce8a4-103">為電腦上跨處理序通訊定義安全、可靠且經過最佳化的繫結。</span><span class="sxs-lookup"><span data-stu-id="ce8a4-103">Defines a binding that is secure, reliable, optimized for on-machine cross process communication.</span></span> <span data-ttu-id="ce8a4-104">根據預設，這個繫結會產生一個執行階段通訊堆疊，並且具備 WS-ReliableMessaging (提供可靠性)、傳輸安全性、具名管道 (用於訊息傳遞) 和二進位訊息編碼。</span><span class="sxs-lookup"><span data-stu-id="ce8a4-104">By default, it generates a runtime communication stack with WS-ReliableMessaging for reliability, transport security for transfer security, named pipes for message delivery, and binary message encoding.</span></span>  

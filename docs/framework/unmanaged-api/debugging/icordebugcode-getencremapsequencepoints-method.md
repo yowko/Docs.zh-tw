@@ -1,14 +1,6 @@
 ---
-title: "ICorDebugCode::GetEnCRemapSequencePoints 方法"
-ms.custom: 
+title: ICorDebugCode::GetEnCRemapSequencePoints 方法
 ms.date: 03/30/2017
-ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.technology:
-- dotnet-clr
-ms.tgt_pltfrm: 
-ms.topic: reference
 api_name:
 - ICorDebugCode.GetEnCRemapSequencePoints
 api_location:
@@ -23,22 +15,19 @@ helpviewer_keywords:
 ms.assetid: 8463a98a-de4a-418e-beb0-9611885ae6b0
 topic_type:
 - apiref
-caps.latest.revision: 
 author: rpetrusha
 ms.author: ronpet
-manager: wpickett
-ms.workload:
-- dotnet
-ms.openlocfilehash: 508979a63c2ab25ee3478dde490a5c3f7df14c73
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
-ms.translationtype: MT
+ms.openlocfilehash: fd0607f2523e6f05065acc0078f4cb2848afd928
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 05/04/2018
+ms.locfileid: "33403740"
 ---
-# <a name="icordebugcodegetencremapsequencepoints-method"></a><span data-ttu-id="4af37-102">ICorDebugCode::GetEnCRemapSequencePoints 方法</span><span class="sxs-lookup"><span data-stu-id="4af37-102">ICorDebugCode::GetEnCRemapSequencePoints Method</span></span>
-<span data-ttu-id="4af37-103">在目前版本的.NET framework 不實作這個方法。</span><span class="sxs-lookup"><span data-stu-id="4af37-103">This method is not implemented in the current version of the .NET Framework.</span></span>  
+# <a name="icordebugcodegetencremapsequencepoints-method"></a><span data-ttu-id="cdbcb-102">ICorDebugCode::GetEnCRemapSequencePoints 方法</span><span class="sxs-lookup"><span data-stu-id="cdbcb-102">ICorDebugCode::GetEnCRemapSequencePoints Method</span></span>
+<span data-ttu-id="cdbcb-103">在目前版本的.NET framework 不實作這個方法。</span><span class="sxs-lookup"><span data-stu-id="cdbcb-103">This method is not implemented in the current version of the .NET Framework.</span></span>  
   
-## <a name="syntax"></a><span data-ttu-id="4af37-104">語法</span><span class="sxs-lookup"><span data-stu-id="4af37-104">Syntax</span></span>  
+## <a name="syntax"></a><span data-ttu-id="cdbcb-104">語法</span><span class="sxs-lookup"><span data-stu-id="cdbcb-104">Syntax</span></span>  
   
 ```  
 HRESULT GetEnCRemapSequencePoints(  
@@ -49,5 +38,5 @@ HRESULT GetEnCRemapSequencePoints(
 );  
 ```  
   
-## <a name="see-also"></a><span data-ttu-id="4af37-105">請參閱</span><span class="sxs-lookup"><span data-stu-id="4af37-105">See Also</span></span>  
+## <a name="see-also"></a><span data-ttu-id="cdbcb-105">另請參閱</span><span class="sxs-lookup"><span data-stu-id="cdbcb-105">See Also</span></span>  
  
