@@ -13,6 +13,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: HT
 ms.contentlocale: zh-TW
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33388218"
 ---
 # <a name="exposing-com-components-to-the-net-framework"></a><span data-ttu-id="49eab-102">將 COM 元件公開給 .NET Framework</span><span class="sxs-lookup"><span data-stu-id="49eab-102">Exposing COM Components to the .NET Framework</span></span>
 <span data-ttu-id="49eab-103">本節摘要說明向 Managed 程式碼公開現有 COM 元件所需要的程序。</span><span class="sxs-lookup"><span data-stu-id="49eab-103">This section summarizes the process needed to expose an existing COM component to managed code.</span></span> <span data-ttu-id="49eab-104">如需撰寫與 .NET Framework 緊密整合的 COM 伺服器的詳細資訊，請參閱[交互操作的設計考量](https://msdn.microsoft.com/library/b59637f6-fe35-40d6-ae72-901e7a707689(v=vs.100))。</span><span class="sxs-lookup"><span data-stu-id="49eab-104">For details about writing COM servers that tightly integrate with the .NET Framework, see [Design Considerations for Interoperation](https://msdn.microsoft.com/library/b59637f6-fe35-40d6-ae72-901e7a707689(v=vs.100)).</span></span>

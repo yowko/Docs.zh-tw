@@ -20,6 +20,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: HT
 ms.contentlocale: zh-TW
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33410143"
 ---
 # <a name="installutilexe-installer-tool"></a><span data-ttu-id="9f74f-102">Installutil.exe (安裝程式工具)</span><span class="sxs-lookup"><span data-stu-id="9f74f-102">Installutil.exe (Installer Tool)</span></span>
 <span data-ttu-id="9f74f-103">安裝程式工具是一種命令列公用程式，可讓您透過執行指定之組件中的安裝程式元件，來安裝和解除安裝伺服器資源。</span><span class="sxs-lookup"><span data-stu-id="9f74f-103">The Installer tool is a command-line utility that allows you to install and uninstall server resources by executing the installer components in specified assemblies.</span></span> <span data-ttu-id="9f74f-104">這個工具可以與 <xref:System.Configuration.Install> 命名空間中的類別一起使用。</span><span class="sxs-lookup"><span data-stu-id="9f74f-104">This tool works in conjunction with classes in the <xref:System.Configuration.Install> namespace.</span></span>  

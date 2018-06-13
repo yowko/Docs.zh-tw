@@ -9,6 +9,7 @@ ms.sourcegitcommit: 88f251b08bf0718ce119f3d7302f514b74895038
 ms.translationtype: MT
 ms.contentlocale: zh-TW
 ms.lasthandoff: 05/10/2018
+ms.locfileid: "33957898"
 ---
 # <a name="modernize-your-apps-lifecycle-with-cicd-pipelines-and-devops-tools-in-the-cloud"></a><span data-ttu-id="911ed-103">現代化雲端中的 DevOps 工具 CI/CD 管線與您的應用程式生命週期</span><span class="sxs-lookup"><span data-stu-id="911ed-103">Modernize your app's lifecycle with CI/CD pipelines and DevOps tools in the cloud</span></span>
 
