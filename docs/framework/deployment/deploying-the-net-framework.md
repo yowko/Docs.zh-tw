@@ -12,6 +12,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: HT
 ms.contentlocale: zh-TW
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33391403"
 ---
 # <a name="deploying-the-net-framework"></a>部署 .NET Framework
 本節 .NET Framework 文件為想要與應用程式一起安裝 .NET Framework 的開發人員，和想要在網路上部署 .NET Framework 系統管理員提供資訊。 它也討論與部署相關的啟用及重新啟動問題，以及如何監視 .NET Framework 安裝進度。  

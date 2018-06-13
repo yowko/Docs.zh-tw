@@ -23,6 +23,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: HT
 ms.contentlocale: zh-TW
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33392392"
 ---
 # <a name="packaging-an-assembly-for-com"></a>封裝 COM 的組件
 COM 開發人員可以獲益於他們要併入其應用程式之 Managed 類型的下列資訊：  

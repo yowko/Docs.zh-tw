@@ -17,6 +17,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: zh-TW
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33393720"
 ---
 # <a name="releasehandlefailed-mda"></a>releaseHandleFailed MDA
 當衍生自 <xref:System.Runtime.InteropServices.SafeHandle> 或 <xref:System.Runtime.InteropServices.CriticalHandle> 之類別的 <xref:System.Runtime.InteropServices.SafeHandle.ReleaseHandle%2A> 方法傳回 `false` 時，會啟動 `releaseHandleFailed` Managed 偵錯助理 (MDA) 來通知開發人員。  

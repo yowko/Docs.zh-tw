@@ -10,6 +10,7 @@ ms.sourcegitcommit: 11f11ca6cefe555972b3a5c99729d1a7523d8f50
 ms.translationtype: MT
 ms.contentlocale: zh-TW
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32757290"
 ---
 # <a name="copying-dataset-contents"></a>複製資料集內容
 您可以建立一份<xref:System.Data.DataSet>，讓您可以使用資料，而不會影響原始資料，或處理的資料子集**資料集**。 當複製**資料集**，您可以：  

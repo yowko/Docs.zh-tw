@@ -14,6 +14,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: zh-TW
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33539513"
 ---
 # <a name="mouse-pointers-in-windows-forms"></a>Windows Form 中的滑鼠指標
 滑鼠*指標*，這有時也稱為資料指標，是指定婧鎏鶗懘為使用者輸入，使用滑鼠在螢幕的點陣圖。 本主題提供滑鼠指標在 Windows Form 中的概觀，並描述的數種方式來修改和控制滑鼠指標。  

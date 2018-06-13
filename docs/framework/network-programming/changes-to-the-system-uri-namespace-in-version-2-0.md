@@ -10,6 +10,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: HT
 ms.contentlocale: zh-TW
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33392444"
 ---
 # <a name="changes-to-the-systemuri-namespace-in-version-20"></a>2.0 版之 System.Uri 命名空間的變更
 已對 <xref:System.Uri?displayProperty=nameWithType> 類別進行數項變更。 這些變更已修正不正確的行為、增強可用性和增強式安全性。  

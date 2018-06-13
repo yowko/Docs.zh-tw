@@ -12,6 +12,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: HT
 ms.contentlocale: zh-TW
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33391029"
 ---
 # <a name="guidelines-for-creating-components-for-side-by-side-execution"></a>建立並存執行元件的方針
 請遵循這些一般方針建立為並存執行而設計的 Managed 應用程式或元件：  

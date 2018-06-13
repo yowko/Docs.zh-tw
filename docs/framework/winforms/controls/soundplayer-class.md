@@ -11,6 +11,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: zh-TW
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33538806"
 ---
 # <a name="soundplayer-class"></a>SoundPlayer 類別
 `SoundPlayer` 類別可讓您輕鬆地在應用程式中包含音效。  

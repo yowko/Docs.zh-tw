@@ -13,6 +13,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: zh-TW
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33565009"
 ---
 # <a name="xarray-markup-extension"></a>x:Array 標記延伸
 提供一般支援用於在 XAML 中透過標記延伸的物件陣列。 這會對應至`x:ArrayExtension`[MS-XAML] 中的 XAML 型別。  

@@ -14,6 +14,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: HT
 ms.contentlocale: zh-TW
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33391504"
 ---
 # <a name="passing-structures"></a>傳遞結構
 許多 Unmanaged 函式都需要您將其傳遞為函式的參數、結構成員 (Visual Basic 中的使用者定義型別) 或使用 Managed 程式碼所定義類別的成員。 使用平台叫用將結構或類別傳遞至 Unmanaged 程式碼時，您必須提供其他資訊來保留原始配置和對齊方式。 本主題介紹用來定義格式化類型的 <xref:System.Runtime.InteropServices.StructLayoutAttribute> 屬性。 針對 Managed 結構和類別，您可以從 **LayoutKind** 列舉所提供的數個可預測配置行為中進行選取。  

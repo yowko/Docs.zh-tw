@@ -15,6 +15,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: HT
 ms.contentlocale: zh-TW
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33389551"
 ---
 # <a name="com-interop-sample-com-client-and-net-server"></a>COM Interop 範例：COM 用戶端與 .NET 伺服器
 此範例示範執行貸款計算之 [COM 用戶端](#cpconcominteropsamplecomclientnetserveranchor1)與 [.NET 伺服器](#cpconcominteropsamplecomclientnetserveranchor2)的交互操作。 在此範例中，用戶端會建立和呼叫 Managed `Loan` 類別的執行個體，並將四個引數 (這四個的其中一個等於零) 傳遞給執行個體，然後顯示運算。 這個範例的程式碼範例會出現在本節中。  

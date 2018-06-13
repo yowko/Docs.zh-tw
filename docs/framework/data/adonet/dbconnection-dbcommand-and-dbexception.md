@@ -10,6 +10,7 @@ ms.sourcegitcommit: 11f11ca6cefe555972b3a5c99729d1a7523d8f50
 ms.translationtype: MT
 ms.contentlocale: zh-TW
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32757121"
 ---
 # <a name="dbconnection-dbcommand-and-dbexception"></a>DbConnection、DbCommand 和 DbException
 在建立 <xref:System.Data.Common.DbProviderFactory> 和 <xref:System.Data.Common.DbConnection> 之後，接著就可以使用命令和資料讀取器從資料來源擷取資料。  

@@ -12,6 +12,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: HT
 ms.contentlocale: zh-TW
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33393812"
 ---
 # <a name="migrating-from-the-net-framework-11"></a>從 .NET Framework 1.1 移轉
 [!INCLUDE[win7](../../../includes/win7-md.md)] 和更新版本的 Windows 作業系統不支援 [!INCLUDE[net_v11_long](../../../includes/net-v11-long-md.md)]。 因此，以 [!INCLUDE[net_v11_short](../../../includes/net-v11-short-md.md)] 為目標的應用程式一定要在 [!INCLUDE[win7](../../../includes/win7-md.md)] 或更新版本的作業系統上修改才能執行。 本主題討論在 [!INCLUDE[win7](../../../includes/win7-md.md)] 和更新版本的 Windows 作業系統底下執行以 [!INCLUDE[net_v11_short](../../../includes/net-v11-short-md.md)] 為目標的應用程式時所需的步驟。 如需有關 [!INCLUDE[net_v11_long](../../../includes/net-v11-long-md.md)] 和 [!INCLUDE[win8](../../../includes/win8-md.md)] 的詳細資訊，請參閱[在 Windows 8 及更新版本上執行 .NET Framework 1.1 應用程式](../../../docs/framework/install/run-net-framework-1-1-apps.md)。  
