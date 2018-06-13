@@ -12,6 +12,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: HT
 ms.contentlocale: zh-TW
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33271064"
 ---
 # <a name="-operator-c-reference"></a><span data-ttu-id="025ba-102">% 運算子 (C# 參考)</span><span class="sxs-lookup"><span data-stu-id="025ba-102">% Operator (C# Reference)</span></span>
 <span data-ttu-id="025ba-103">remainder 運算子 (`%`) 會計算其第一個運算元除以第二個運算元之後的餘數。</span><span class="sxs-lookup"><span data-stu-id="025ba-103">The remainder operator (`%`) computes the remainder after dividing its first operand by its second.</span></span> <span data-ttu-id="025ba-104">所有數值類型都有預先定義的餘數運算子。</span><span class="sxs-lookup"><span data-stu-id="025ba-104">All numeric types have predefined remainder operators.</span></span> 

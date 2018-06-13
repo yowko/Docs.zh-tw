@@ -12,6 +12,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: HT
 ms.contentlocale: zh-TW
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33266067"
 ---
 # <a name="new-c-reference"></a><span data-ttu-id="1711f-102">new (C# 參考)</span><span class="sxs-lookup"><span data-stu-id="1711f-102">new (C# Reference)</span></span>
 <span data-ttu-id="1711f-103">在 C# 中，`new` 關鍵字可用來當作運算子、修飾詞或條件約束。</span><span class="sxs-lookup"><span data-stu-id="1711f-103">In C#, the `new` keyword can be used as an operator, a modifier, or a constraint.</span></span>  

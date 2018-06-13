@@ -7,6 +7,7 @@ ms.sourcegitcommit: 11f11ca6cefe555972b3a5c99729d1a7523d8f50
 ms.translationtype: MT
 ms.contentlocale: zh-TW
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32756419"
 ---
 # <a name="lttransportgt-of-ltpeertransportgt"></a><span data-ttu-id="78174-102">&lt;peerTransport&gt; 的 &lt;transport&gt;</span><span class="sxs-lookup"><span data-stu-id="78174-102">&lt;transport&gt; of &lt;peerTransport&gt;</span></span>
 <span data-ttu-id="78174-103">指定使用這個繫結設定之對等所傳送安全訊息的傳輸類型。</span><span class="sxs-lookup"><span data-stu-id="78174-103">Specifies the transport type for secured messages sent by peers configured with this binding.</span></span>  

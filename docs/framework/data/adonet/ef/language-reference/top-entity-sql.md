@@ -7,6 +7,7 @@ ms.sourcegitcommit: 11f11ca6cefe555972b3a5c99729d1a7523d8f50
 ms.translationtype: MT
 ms.contentlocale: zh-TW
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32764654"
 ---
 # <a name="top-entity-sql"></a><span data-ttu-id="1b55b-102">TOP (Entity SQL)</span><span class="sxs-lookup"><span data-stu-id="1b55b-102">TOP (Entity SQL)</span></span>
 <span data-ttu-id="1b55b-103">SELECT 子句在選擇性 ALL/DISTINCT 修飾詞之後可以有選擇性 TOP 子項子句。</span><span class="sxs-lookup"><span data-stu-id="1b55b-103">The SELECT clause can have an optional TOP sub-clause following the optional ALL/DISTINCT modifier.</span></span> <span data-ttu-id="1b55b-104">TOP 子項子句指定只會從查詢結果傳回第一組資料列。</span><span class="sxs-lookup"><span data-stu-id="1b55b-104">The TOP sub-clause specifies that only the first set of rows will be returned from the query result.</span></span>  

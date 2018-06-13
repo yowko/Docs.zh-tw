@@ -16,6 +16,7 @@ ms.sourcegitcommit: 11f11ca6cefe555972b3a5c99729d1a7523d8f50
 ms.translationtype: MT
 ms.contentlocale: zh-TW
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32754154"
 ---
 # <a name="ltperformancecountersgt-element"></a><span data-ttu-id="49a50-102">&lt;performanceCounters&gt;項目</span><span class="sxs-lookup"><span data-stu-id="49a50-102">&lt;performanceCounters&gt; Element</span></span>
 <span data-ttu-id="49a50-103">指定效能計數器共用之全域記憶體的大小。</span><span class="sxs-lookup"><span data-stu-id="49a50-103">Specifies the size of the global memory shared by performance counters.</span></span>  

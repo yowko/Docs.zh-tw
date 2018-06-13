@@ -7,6 +7,7 @@ ms.sourcegitcommit: 11f11ca6cefe555972b3a5c99729d1a7523d8f50
 ms.translationtype: MT
 ms.contentlocale: zh-TW
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32751304"
 ---
 # <a name="ltnethttpsbindinggt"></a><span data-ttu-id="6007d-102">&lt;netHttpsBinding&gt;</span><span class="sxs-lookup"><span data-stu-id="6007d-102">&lt;netHttpsBinding&gt;</span></span>
 <span data-ttu-id="6007d-103">表示 Windows Communication Foundation (WCF) 服務可用來設定和公開能夠透過 HTTPS 進行通訊之端點的繫結。</span><span class="sxs-lookup"><span data-stu-id="6007d-103">Represents a binding that a Windows Communication Foundation (WCF) service can use to configure and expose endpoints that are able to communicate over HTTPS.</span></span> <span data-ttu-id="6007d-104">與雙工合約搭配使用時，將會使用 Web 通訊端，否則使用 HTTPS。</span><span class="sxs-lookup"><span data-stu-id="6007d-104">When used with a duplex contract, Web Sockets will be used, otherwise HTTPS will be used.</span></span>  

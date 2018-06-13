@@ -7,6 +7,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: HT
 ms.contentlocale: zh-TW
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33340589"
 ---
 # <a name="object-oriented-programming-c"></a><span data-ttu-id="17cef-102">物件導向程式設計 (C#)</span><span class="sxs-lookup"><span data-stu-id="17cef-102">Object-Oriented Programming (C#)</span></span>
 <span data-ttu-id="17cef-103">C# 為包括封裝、繼承和多型在內的物件導向程式設計提供完整支援。</span><span class="sxs-lookup"><span data-stu-id="17cef-103">C# provides full support for object-oriented programming including encapsulation, inheritance, and polymorphism.</span></span>  

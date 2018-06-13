@@ -9,6 +9,7 @@ ms.sourcegitcommit: 11f11ca6cefe555972b3a5c99729d1a7523d8f50
 ms.translationtype: MT
 ms.contentlocale: zh-TW
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32755756"
 ---
 # <a name="ltservicetokenresolvergt"></a><span data-ttu-id="f7efc-102">&lt;serviceTokenResolver&gt;</span><span class="sxs-lookup"><span data-stu-id="f7efc-102">&lt;serviceTokenResolver&gt;</span></span>
 <span data-ttu-id="f7efc-103">註冊由權杖處理常式集合中的處理常式的服務權杖解析程式。</span><span class="sxs-lookup"><span data-stu-id="f7efc-103">Registers the service token resolver that is used by handlers in the token handler collection.</span></span> <span data-ttu-id="f7efc-104">服務語彙基元解析程式用來解析連入權杖和訊息上的加密語彙基元。</span><span class="sxs-lookup"><span data-stu-id="f7efc-104">The service token resolver is used to resolve the encryption token on incoming tokens and messages.</span></span>  

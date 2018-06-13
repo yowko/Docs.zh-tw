@@ -7,6 +7,7 @@ ms.sourcegitcommit: 11f11ca6cefe555972b3a5c99729d1a7523d8f50
 ms.translationtype: MT
 ms.contentlocale: zh-TW
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32757940"
 ---
 # <a name="adonet-overview"></a><span data-ttu-id="0aac6-102">ADO.NET 概觀</span><span class="sxs-lookup"><span data-stu-id="0aac6-102">ADO.NET Overview</span></span>
 <span data-ttu-id="0aac6-103">ADO.NET 可讓您以一致的方式存取資料來源 (例如 SQL Server 與 XML)，以及透過 OLE DB 和 ODBC 所公開的資料來源。</span><span class="sxs-lookup"><span data-stu-id="0aac6-103">ADO.NET provides consistent access to data sources such as SQL Server and XML, and to data sources exposed through OLE DB and ODBC.</span></span> <span data-ttu-id="0aac6-104">資料共用的消費者應用程式可使用 ADO.NET 來連接至這些資料來源，並且擷取、處理及更新其中所含的資料。</span><span class="sxs-lookup"><span data-stu-id="0aac6-104">Data-sharing consumer applications can use ADO.NET to connect to these data sources and retrieve, handle, and update the data that they contain.</span></span>  

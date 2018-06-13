@@ -7,6 +7,7 @@ ms.sourcegitcommit: 11f11ca6cefe555972b3a5c99729d1a7523d8f50
 ms.translationtype: MT
 ms.contentlocale: zh-TW
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32766032"
 ---
 # <a name="the-shape-of-the-command-trees"></a><span data-ttu-id="0bac5-102">命令樹的形狀</span><span class="sxs-lookup"><span data-stu-id="0bac5-102">The Shape of the Command Trees</span></span>
 <span data-ttu-id="0bac5-103">SQL 產生模組負責根據給定輸入查詢命令樹運算式，產生後端特定的 SQL 查詢。</span><span class="sxs-lookup"><span data-stu-id="0bac5-103">The SQL generation module is responsible for generating a backend specific SQL query based on a given input query command tree expression.</span></span> <span data-ttu-id="0bac5-104">本章節將討論查詢命令樹的特性、屬性和結構。</span><span class="sxs-lookup"><span data-stu-id="0bac5-104">This section discusses the characteristics, properties, and structure of the query command trees.</span></span>  

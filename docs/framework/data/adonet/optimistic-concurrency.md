@@ -10,6 +10,7 @@ ms.sourcegitcommit: 11f11ca6cefe555972b3a5c99729d1a7523d8f50
 ms.translationtype: MT
 ms.contentlocale: zh-TW
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32766224"
 ---
 # <a name="optimistic-concurrency"></a><span data-ttu-id="425f7-102">開放式並行存取</span><span class="sxs-lookup"><span data-stu-id="425f7-102">Optimistic Concurrency</span></span>
 <span data-ttu-id="425f7-103">在多使用者環境中，更新資料庫中的資料時，有兩種模型可供使用：開放式並行存取和封閉式並行存取。</span><span class="sxs-lookup"><span data-stu-id="425f7-103">In a multiuser environment, there are two models for updating data in a database: optimistic concurrency and pessimistic concurrency.</span></span> <span data-ttu-id="425f7-104"><xref:System.Data.DataSet> 物件的設計是要鼓勵使用者在進行長時間的活動 (如遠端處理資料以及與資料進行互動) 時，採用開放式同步存取。</span><span class="sxs-lookup"><span data-stu-id="425f7-104">The <xref:System.Data.DataSet> object is designed to encourage the use of optimistic concurrency for long-running activities, such as remoting data and interacting with data.</span></span>  

@@ -15,6 +15,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: HT
 ms.contentlocale: zh-TW
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33393146"
 ---
 # <a name="default-marshaling-for-arrays"></a><span data-ttu-id="873b6-102">陣列的預設封送處理</span><span class="sxs-lookup"><span data-stu-id="873b6-102">Default Marshaling for Arrays</span></span>
 <span data-ttu-id="873b6-103">在包含整個 Managed 程式碼的應用程式中，Common Language Runtime 會將陣列類型傳遞為 In/Out 參數。</span><span class="sxs-lookup"><span data-stu-id="873b6-103">In an application consisting entirely of managed code, the common language runtime passes array types as In/Out parameters.</span></span> <span data-ttu-id="873b6-104">相較之下，Interop 封送處理器預設會將陣列傳遞為 In 參數。</span><span class="sxs-lookup"><span data-stu-id="873b6-104">In contrast, the interop marshaler passes an array as In parameters by default.</span></span>  
