@@ -17,6 +17,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: HT
 ms.contentlocale: zh-TW
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33567841"
 ---
 # <a name="performing-formatting-operations"></a><span data-ttu-id="993f1-102">執行格式化作業</span><span class="sxs-lookup"><span data-stu-id="993f1-102">Performing Formatting Operations</span></span>
 <span data-ttu-id="993f1-103">下列主題提供執行特定格式設定作業的逐步指示。</span><span class="sxs-lookup"><span data-stu-id="993f1-103">The following topics provide step-by-step instructions for performing specific formatting operations.</span></span>  

@@ -20,6 +20,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: HT
 ms.contentlocale: zh-TW
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33568026"
 ---
 # <a name="parsing-other-strings-in-net"></a><span data-ttu-id="26ca5-102">在 .NET 中剖析其他字串</span><span class="sxs-lookup"><span data-stu-id="26ca5-102">Parsing Other Strings in .NET</span></span>
 <span data-ttu-id="26ca5-103">除了數值和 <xref:System.DateTime> 字串，您也可以將表示 <xref:System.Char>、<xref:System.Boolean> 和 <xref:System.Enum> 類型的字串剖析為資料類型。</span><span class="sxs-lookup"><span data-stu-id="26ca5-103">In addition to numeric and <xref:System.DateTime> strings, you can also parse strings that represent the types <xref:System.Char>, <xref:System.Boolean>, and <xref:System.Enum> into data types.</span></span>  

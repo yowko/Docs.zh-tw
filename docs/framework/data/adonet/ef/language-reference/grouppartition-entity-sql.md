@@ -7,6 +7,7 @@ ms.sourcegitcommit: 11f11ca6cefe555972b3a5c99729d1a7523d8f50
 ms.translationtype: MT
 ms.contentlocale: zh-TW
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32760904"
 ---
 # <a name="grouppartition-entity-sql"></a><span data-ttu-id="33192-102">GROUPPARTITION (Entity SQL)</span><span class="sxs-lookup"><span data-stu-id="33192-102">GROUPPARTITION (Entity SQL)</span></span>
 <span data-ttu-id="33192-103">傳回引數值的集合，該集合會將目前的群組分割投影至其相關的彙總。</span><span class="sxs-lookup"><span data-stu-id="33192-103">Returns a collection of argument values that are projected off the current group partition to which the aggregate is related.</span></span> <span data-ttu-id="33192-104">`GroupPartition` 彙總是以群組為基礎的彙總，不具有以集合為基礎的形式。</span><span class="sxs-lookup"><span data-stu-id="33192-104">The `GroupPartition` aggregate is a group-based aggregate and has no collection-based form.</span></span>  

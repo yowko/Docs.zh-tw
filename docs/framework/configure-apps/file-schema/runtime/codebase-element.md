@@ -17,6 +17,7 @@ ms.sourcegitcommit: 11f11ca6cefe555972b3a5c99729d1a7523d8f50
 ms.translationtype: MT
 ms.contentlocale: zh-TW
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32745990"
 ---
 # <a name="ltcodebasegt-element"></a><span data-ttu-id="eafca-102">&lt;程式碼基底&gt;項目</span><span class="sxs-lookup"><span data-stu-id="eafca-102">&lt;codeBase&gt; Element</span></span>
 <span data-ttu-id="eafca-103">指定 common language runtime 可以找到組件的位置。</span><span class="sxs-lookup"><span data-stu-id="eafca-103">Specifies where the common language runtime can find an assembly.</span></span>  

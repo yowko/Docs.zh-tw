@@ -15,6 +15,7 @@ ms.sourcegitcommit: 11f11ca6cefe555972b3a5c99729d1a7523d8f50
 ms.translationtype: HT
 ms.contentlocale: zh-TW
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32744300"
 ---
 # <a name="working-with-assemblies-and-the-global-assembly-cache"></a><span data-ttu-id="5df23-102">使用組件和全域組件快取</span><span class="sxs-lookup"><span data-stu-id="5df23-102">Working with Assemblies and the Global Assembly Cache</span></span>
 <span data-ttu-id="5df23-103">如果您想要在數個應用程式之間共用組件，可以將它安裝到全域組件快取。</span><span class="sxs-lookup"><span data-stu-id="5df23-103">If you intend to share an assembly among several applications, you can install it into the global assembly cache.</span></span> <span data-ttu-id="5df23-104">每部安裝 Common Language Runtime 的電腦都有這個全機器程式碼快取。</span><span class="sxs-lookup"><span data-stu-id="5df23-104">Each computer where the common language runtime is installed has this machine-wide code cache.</span></span> <span data-ttu-id="5df23-105">全域組件快取會儲存特別指定為由電腦上數個應用程式共用的組件。</span><span class="sxs-lookup"><span data-stu-id="5df23-105">The global assembly cache stores assemblies specifically designated to be shared by several applications on the computer.</span></span> <span data-ttu-id="5df23-106">組件必須有強式名稱，才能安裝在全域組件快取中。</span><span class="sxs-lookup"><span data-stu-id="5df23-106">An assembly must have a strong name to be installed in the global assembly cache.</span></span>  

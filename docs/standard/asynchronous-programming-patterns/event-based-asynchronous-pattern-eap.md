@@ -14,6 +14,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: HT
 ms.contentlocale: zh-TW
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33567802"
 ---
 # <a name="event-based-asynchronous-pattern-eap"></a><span data-ttu-id="b84f1-102">事件架構非同步模式 (EAP)</span><span class="sxs-lookup"><span data-stu-id="b84f1-102">Event-based Asynchronous Pattern (EAP)</span></span>
 <span data-ttu-id="b84f1-103">將非同步功能公開到用戶端程式碼的方式有許多種；</span><span class="sxs-lookup"><span data-stu-id="b84f1-103">There are a number of ways to expose asynchronous features to client code.</span></span> <span data-ttu-id="b84f1-104">事件架構非同步模式會針對要呈現非同步行為之類別指示一個方法。</span><span class="sxs-lookup"><span data-stu-id="b84f1-104">The Event-based Asynchronous Pattern prescribes one way for classes to present asynchronous behavior.</span></span>  

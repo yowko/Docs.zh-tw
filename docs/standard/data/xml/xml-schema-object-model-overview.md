@@ -10,6 +10,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: HT
 ms.contentlocale: zh-TW
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33572105"
 ---
 # <a name="xml-schema-object-model-overview"></a><span data-ttu-id="8c750-102">XML 結構描述物件模型概觀</span><span class="sxs-lookup"><span data-stu-id="8c750-102">XML Schema Object Model Overview</span></span>
 <span data-ttu-id="8c750-103">Microsoft .NET Framework 中的結構描述物件模型 (SOM) 是一個豐富的 API，可讓您以程式設計的方式建立、編輯及驗證結構描述。</span><span class="sxs-lookup"><span data-stu-id="8c750-103">The Schema Object Model (SOM) in the Microsoft .NET Framework is a rich API that allows you to create, edit, and validate schemas programmatically.</span></span> <span data-ttu-id="8c750-104">SOM 在 XML 結構描述文件上的運作方式，與文件物件模型 (DOM) 在 XML 文件上的運作方式相似。</span><span class="sxs-lookup"><span data-stu-id="8c750-104">The SOM operates on XML schema documents similarly to the way the Document Object Model (DOM) operates on XML documents.</span></span> <span data-ttu-id="8c750-105">XML 結構描述文件是有效的 XML 檔案，當它載入 SOM 後，便可傳達符合該結構描述之其他 XML 文件結構及有效性的意義。</span><span class="sxs-lookup"><span data-stu-id="8c750-105">XML schema documents are valid XML files that, once loaded into the SOM, convey meaning about the structure and validity of other XML documents which conform to the schema.</span></span>  

@@ -16,6 +16,7 @@ ms.sourcegitcommit: 11f11ca6cefe555972b3a5c99729d1a7523d8f50
 ms.translationtype: HT
 ms.contentlocale: zh-TW
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32744063"
 ---
 # <a name="how-to-obtain-type-and-member-information-from-an-assembly"></a><span data-ttu-id="3af30-102">如何：從組件中取得類型和成員資訊</span><span class="sxs-lookup"><span data-stu-id="3af30-102">How to: Obtain Type and Member Information from an Assembly</span></span>
 <span data-ttu-id="3af30-103"><xref:System.Reflection> 命名空間包含許多方法可以從組件中取得資訊。</span><span class="sxs-lookup"><span data-stu-id="3af30-103">The <xref:System.Reflection> namespace contains many methods for obtaining information from an assembly.</span></span> <span data-ttu-id="3af30-104">本節示範其中一種方法。</span><span class="sxs-lookup"><span data-stu-id="3af30-104">This section demonstrates one of these methods.</span></span> <span data-ttu-id="3af30-105">如需詳細資訊，請參閱[反映概觀](../../../docs/framework/reflection-and-codedom/reflection.md)。</span><span class="sxs-lookup"><span data-stu-id="3af30-105">For additional information, see [Reflection Overview](../../../docs/framework/reflection-and-codedom/reflection.md).</span></span>  

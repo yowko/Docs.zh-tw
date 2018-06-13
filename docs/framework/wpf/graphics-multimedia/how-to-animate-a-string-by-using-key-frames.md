@@ -1,45 +1,34 @@
 ---
-title: "使用主要畫面格建立字串的動畫"
-ms.custom: 
+title: 使用主要畫面格建立字串的動畫
 ms.date: 03/30/2017
-ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.technology: dotnet-wpf
-ms.tgt_pltfrm: 
-ms.topic: article
 helpviewer_keywords:
 - animation [WPF], strings with key frames
 - strings [WPF], animating with key frames
 - key frames [WPF], animating strings with
 ms.assetid: c62bc9fd-c09a-4227-bce0-0a1ab82049dd
-caps.latest.revision: "9"
-author: dotnet-bot
-ms.author: dotnetcontent
-manager: wpickett
-ms.workload: dotnet
-ms.openlocfilehash: 1692777a97754fb7f6481b2d9cb8942dcb62df77
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.openlocfilehash: 5219ce11667c84d3ceca380d5a4ddd52695736b9
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 05/04/2018
+ms.locfileid: "33561055"
 ---
-# <a name="how-to-animate-a-string-by-using-key-frames"></a><span data-ttu-id="74d80-102">使用主要畫面格建立字串的動畫</span><span class="sxs-lookup"><span data-stu-id="74d80-102">How to: Animate a String by Using Key Frames</span></span>
-<span data-ttu-id="74d80-103">此範例示範如何以動畫方式顯示的字串，在此範例中是<xref:System.Windows.Controls.ContentControl.Content%2A>屬性<xref:System.Windows.Controls.Button>控制項，使用主要畫面格。</span><span class="sxs-lookup"><span data-stu-id="74d80-103">This example shows how to animate a string, which in this example is the <xref:System.Windows.Controls.ContentControl.Content%2A> property of a <xref:System.Windows.Controls.Button> control, by using key frames.</span></span>  
+# <a name="how-to-animate-a-string-by-using-key-frames"></a><span data-ttu-id="27599-102">使用主要畫面格建立字串的動畫</span><span class="sxs-lookup"><span data-stu-id="27599-102">How to: Animate a String by Using Key Frames</span></span>
+<span data-ttu-id="27599-103">此範例示範如何以動畫方式顯示的字串，在此範例中是<xref:System.Windows.Controls.ContentControl.Content%2A>屬性<xref:System.Windows.Controls.Button>控制項，使用主要畫面格。</span><span class="sxs-lookup"><span data-stu-id="27599-103">This example shows how to animate a string, which in this example is the <xref:System.Windows.Controls.ContentControl.Content%2A> property of a <xref:System.Windows.Controls.Button> control, by using key frames.</span></span>  
   
-## <a name="example"></a><span data-ttu-id="74d80-104">範例</span><span class="sxs-lookup"><span data-stu-id="74d80-104">Example</span></span>  
- <span data-ttu-id="74d80-105">下列範例會使用<xref:System.Windows.Media.Animation.StringAnimationUsingKeyFrames>類別以動畫方式顯示<xref:System.Windows.Controls.ContentControl.Content%2A>屬性<xref:System.Windows.Controls.Button>。</span><span class="sxs-lookup"><span data-stu-id="74d80-105">The following example uses the <xref:System.Windows.Media.Animation.StringAnimationUsingKeyFrames> class to animate the <xref:System.Windows.Controls.ContentControl.Content%2A> property of a <xref:System.Windows.Controls.Button>.</span></span>  
+## <a name="example"></a><span data-ttu-id="27599-104">範例</span><span class="sxs-lookup"><span data-stu-id="27599-104">Example</span></span>  
+ <span data-ttu-id="27599-105">下列範例會使用<xref:System.Windows.Media.Animation.StringAnimationUsingKeyFrames>類別以動畫方式顯示<xref:System.Windows.Controls.ContentControl.Content%2A>屬性<xref:System.Windows.Controls.Button>。</span><span class="sxs-lookup"><span data-stu-id="27599-105">The following example uses the <xref:System.Windows.Media.Animation.StringAnimationUsingKeyFrames> class to animate the <xref:System.Windows.Controls.ContentControl.Content%2A> property of a <xref:System.Windows.Controls.Button>.</span></span>  
   
- <span data-ttu-id="74d80-106">在此範例中的所有主要畫面格使用的執行個體<xref:System.Windows.Media.Animation.DiscreteStringKeyFrame>類別，因為字串動畫主要畫面格用來建立僅可以使用獨立的主要畫面格。</span><span class="sxs-lookup"><span data-stu-id="74d80-106">All the key frames in this example use an instance of the <xref:System.Windows.Media.Animation.DiscreteStringKeyFrame> class because a string animation that is created with key frames can only use discrete key frames.</span></span> <span data-ttu-id="74d80-107">獨立的主要畫面格喜歡<xref:System.Windows.Media.Animation.DiscreteStringKeyFrame>建立突然跳躍點之間的值，也就是，請至動畫的變更很快且不細微。</span><span class="sxs-lookup"><span data-stu-id="74d80-107">Discrete key frames like <xref:System.Windows.Media.Animation.DiscreteStringKeyFrame> create sudden jumps between values, that is, changes to the animation occur quickly and are not subtle.</span></span>  
+ <span data-ttu-id="27599-106">在此範例中的所有主要畫面格使用的執行個體<xref:System.Windows.Media.Animation.DiscreteStringKeyFrame>類別，因為字串動畫主要畫面格用來建立僅可以使用獨立的主要畫面格。</span><span class="sxs-lookup"><span data-stu-id="27599-106">All the key frames in this example use an instance of the <xref:System.Windows.Media.Animation.DiscreteStringKeyFrame> class because a string animation that is created with key frames can only use discrete key frames.</span></span> <span data-ttu-id="27599-107">獨立的主要畫面格喜歡<xref:System.Windows.Media.Animation.DiscreteStringKeyFrame>建立突然跳躍點之間的值，也就是，請至動畫的變更很快且不細微。</span><span class="sxs-lookup"><span data-stu-id="27599-107">Discrete key frames like <xref:System.Windows.Media.Animation.DiscreteStringKeyFrame> create sudden jumps between values, that is, changes to the animation occur quickly and are not subtle.</span></span>  
   
  [!code-xaml[keyframes_snip#StringAnimationUsingKeyFramesWholePage](../../../../samples/snippets/xaml/VS_Snippets_Wpf/keyframes_snip/XAML/StringAnimationUsingKeyFramesExample.xaml#stringanimationusingkeyframeswholepage)]  
   
- <span data-ttu-id="74d80-108">如需完整的範例，請參閱[主要畫面格動畫範例](http://go.microsoft.com/fwlink/?LinkID=160012)。</span><span class="sxs-lookup"><span data-stu-id="74d80-108">For the complete sample, see [KeyFrame Animation Sample](http://go.microsoft.com/fwlink/?LinkID=160012).</span></span>  
+ <span data-ttu-id="27599-108">如需完整的範例，請參閱[主要畫面格動畫範例](http://go.microsoft.com/fwlink/?LinkID=160012)。</span><span class="sxs-lookup"><span data-stu-id="27599-108">For the complete sample, see [KeyFrame Animation Sample](http://go.microsoft.com/fwlink/?LinkID=160012).</span></span>  
   
-## <a name="see-also"></a><span data-ttu-id="74d80-109">請參閱</span><span class="sxs-lookup"><span data-stu-id="74d80-109">See Also</span></span>  
+## <a name="see-also"></a><span data-ttu-id="27599-109">另請參閱</span><span class="sxs-lookup"><span data-stu-id="27599-109">See Also</span></span>  
  <xref:System.Windows.Media.Animation.StringAnimationUsingKeyFrames>  
  <xref:System.Windows.Controls.ContentControl.Content%2A>  
  <xref:System.Windows.Controls.Button>  
  <xref:System.Windows.Media.Animation.DiscreteStringKeyFrame>  
- [<span data-ttu-id="74d80-110">主要畫面格動畫概觀</span><span class="sxs-lookup"><span data-stu-id="74d80-110">Key-Frame Animations Overview</span></span>](../../../../docs/framework/wpf/graphics-multimedia/key-frame-animations-overview.md)  
- [<span data-ttu-id="74d80-111">主要畫面格操作說明主題</span><span class="sxs-lookup"><span data-stu-id="74d80-111">Key-Frame How-to Topics</span></span>](../../../../docs/framework/wpf/graphics-multimedia/key-frame-animation-how-to-topics.md)
+ [<span data-ttu-id="27599-110">主要畫面格動畫概觀</span><span class="sxs-lookup"><span data-stu-id="27599-110">Key-Frame Animations Overview</span></span>](../../../../docs/framework/wpf/graphics-multimedia/key-frame-animations-overview.md)  
+ [<span data-ttu-id="27599-111">主要畫面格操作說明主題</span><span class="sxs-lookup"><span data-stu-id="27599-111">Key-Frame How-to Topics</span></span>](../../../../docs/framework/wpf/graphics-multimedia/key-frame-animation-how-to-topics.md)

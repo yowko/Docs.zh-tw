@@ -17,6 +17,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: HT
 ms.contentlocale: zh-TW
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33574929"
 ---
 # <a name="selecting-a-collection-class"></a><span data-ttu-id="eda3a-102">選取集合類別</span><span class="sxs-lookup"><span data-stu-id="eda3a-102">Selecting a Collection Class</span></span>
 <span data-ttu-id="eda3a-103">請務必謹慎選擇您的集合類別。</span><span class="sxs-lookup"><span data-stu-id="eda3a-103">Be sure to choose your collection class carefully.</span></span> <span data-ttu-id="eda3a-104">使用錯誤的類型可能會限制您使用集合。</span><span class="sxs-lookup"><span data-stu-id="eda3a-104">Using the wrong type can restrict your use of the collection.</span></span> <span data-ttu-id="eda3a-105">一般而言，除非您特別以 .NET Framework 1.1 版為目標，否則請避免使用 <xref:System.Collections> 命名空間中的類型。</span><span class="sxs-lookup"><span data-stu-id="eda3a-105">In general, avoid using the types in the <xref:System.Collections> namespace unless you are specifically targeting .NET Framework version 1.1.</span></span> <span data-ttu-id="eda3a-106">由於泛型和並行版本的集合類型較安全，並且提供其他增強功能，因此會優先使用這些版本。</span><span class="sxs-lookup"><span data-stu-id="eda3a-106">The generic and concurrent versions of the collections are to be preferred because of their greater type safety and other improvements.</span></span>  

@@ -10,6 +10,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: HT
 ms.contentlocale: zh-TW
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33575436"
 ---
 # <a name="xslt-compiler-xsltcexe"></a><span data-ttu-id="8cd74-102">XSLT 編譯器 (xsltc.exe)</span><span class="sxs-lookup"><span data-stu-id="8cd74-102">XSLT Compiler (xsltc.exe)</span></span>
 <span data-ttu-id="8cd74-103">XSLT 編譯器 (xsltc.exe) 會編譯 XSLT 樣式表並產生組件。</span><span class="sxs-lookup"><span data-stu-id="8cd74-103">The XSLT compiler (xsltc.exe) compiles XSLT style sheets and generates an assembly.</span></span> <span data-ttu-id="8cd74-104">然後編譯的樣式表可以直接傳遞到新的 <xref:System.Xml.Xsl.XslCompiledTransform.Load%28System.Type%29?displayProperty=nameWithType> 方法中。</span><span class="sxs-lookup"><span data-stu-id="8cd74-104">The compiled style sheet can then be passed directly into the <xref:System.Xml.Xsl.XslCompiledTransform.Load%28System.Type%29?displayProperty=nameWithType> method.</span></span> <span data-ttu-id="8cd74-105">您無法使用 xsltc.exe 產生簽署的組件。</span><span class="sxs-lookup"><span data-stu-id="8cd74-105">You cannot generate signed assemblies with xsltc.exe.</span></span>  

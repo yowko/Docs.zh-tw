@@ -9,6 +9,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: HT
 ms.contentlocale: zh-TW
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33387334"
 ---
 # <a name="mitigation-wpf-layout"></a><span data-ttu-id="a747b-102">風險降低：WPF 版面配置</span><span class="sxs-lookup"><span data-stu-id="a747b-102">Mitigation: WPF Layout</span></span>
 <span data-ttu-id="a747b-103">WPF 控制項的版面配置可能略有不同。</span><span class="sxs-lookup"><span data-stu-id="a747b-103">The layout of WPF controls can change slightly.</span></span>  

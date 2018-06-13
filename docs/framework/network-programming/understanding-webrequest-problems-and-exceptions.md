@@ -10,6 +10,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: HT
 ms.contentlocale: zh-TW
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33398062"
 ---
 # <a name="understanding-webrequest-problems-and-exceptions"></a><span data-ttu-id="7d62d-102">了解 WebRequest 問題和例外狀況</span><span class="sxs-lookup"><span data-stu-id="7d62d-102">Understanding WebRequest Problems and Exceptions</span></span>
 <span data-ttu-id="7d62d-103"><xref:System.Net.WebRequest> 和其衍生的類別 (<xref:System.Net.HttpWebRequest>、<xref:System.Net.FtpWebRequest>和 <xref:System.Net.FileWebRequest>) 會擲回例外狀況，以表示發生異常狀況。</span><span class="sxs-lookup"><span data-stu-id="7d62d-103"><xref:System.Net.WebRequest> and its derived classes (<xref:System.Net.HttpWebRequest>, <xref:System.Net.FtpWebRequest>, and <xref:System.Net.FileWebRequest>) throw exceptions to signal an abnormal condition.</span></span> <span data-ttu-id="7d62d-104">有時候這些問題的解決方式並不明顯。</span><span class="sxs-lookup"><span data-stu-id="7d62d-104">Sometimes the resolution of these problems is not obvious.</span></span>  

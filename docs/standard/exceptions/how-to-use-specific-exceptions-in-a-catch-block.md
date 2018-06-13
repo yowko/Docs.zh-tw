@@ -18,6 +18,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: HT
 ms.contentlocale: zh-TW
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33571794"
 ---
 # <a name="how-to-use-specific-exceptions-in-a-catch-block"></a><span data-ttu-id="b2b5f-102">如何使用 Catch 區塊中的特定例外狀況</span><span class="sxs-lookup"><span data-stu-id="b2b5f-102">How to use specific exceptions in a catch block</span></span>
 

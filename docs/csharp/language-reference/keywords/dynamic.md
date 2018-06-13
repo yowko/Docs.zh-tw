@@ -1,78 +1,72 @@
 ---
-title: "dynamic (C# 參考)"
+title: dynamic (C# 參考)
 ms.date: 07/20/2015
-ms.prod: .net
-ms.technology:
-- devlang-csharp
-ms.topic: article
 f1_keywords:
 - dynamic_CSharpKeyword
 helpviewer_keywords:
 - dynamic [C#]
 - dynamic keyword [C#]
 ms.assetid: 9e797102-cc83-4964-bf58-afe4f54d16bc
-caps.latest.revision: 
-author: BillWagner
-ms.author: wiwagn
-ms.openlocfilehash: e3bf51ab62e195f7a5d1f0641f62380977c731ce
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.openlocfilehash: 59957ce6b2a26c1d24dc1178630eef8551db3340
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 05/04/2018
+ms.locfileid: "33217135"
 ---
-# <a name="dynamic-c-reference"></a><span data-ttu-id="0f2bc-102">dynamic (C# 參考)</span><span class="sxs-lookup"><span data-stu-id="0f2bc-102">dynamic (C# Reference)</span></span>
-<span data-ttu-id="0f2bc-103">`dynamic` 類型可讓發生它的作業略過編譯時期類型檢查。</span><span class="sxs-lookup"><span data-stu-id="0f2bc-103">The `dynamic` type enables the operations in which it occurs to bypass compile-time type checking.</span></span> <span data-ttu-id="0f2bc-104">相反地，這些作業會在執行階段解決。</span><span class="sxs-lookup"><span data-stu-id="0f2bc-104">Instead, these operations are resolved at run time.</span></span> <span data-ttu-id="0f2bc-105">`dynamic` 類型會簡化 Office Automation API 這類 COM API 的存取、IronPython 程式庫這類動態 API 的存取，以及 HTML 文件物件模型 (DOM) 的存取。</span><span class="sxs-lookup"><span data-stu-id="0f2bc-105">The `dynamic` type simplifies access to COM APIs such as the Office Automation APIs, and also to dynamic APIs such as IronPython libraries, and to the HTML Document Object Model (DOM).</span></span>  
+# <a name="dynamic-c-reference"></a><span data-ttu-id="50863-102">dynamic (C# 參考)</span><span class="sxs-lookup"><span data-stu-id="50863-102">dynamic (C# Reference)</span></span>
+<span data-ttu-id="50863-103">`dynamic` 類型可讓發生它的作業略過編譯時期類型檢查。</span><span class="sxs-lookup"><span data-stu-id="50863-103">The `dynamic` type enables the operations in which it occurs to bypass compile-time type checking.</span></span> <span data-ttu-id="50863-104">相反地，這些作業會在執行階段解決。</span><span class="sxs-lookup"><span data-stu-id="50863-104">Instead, these operations are resolved at run time.</span></span> <span data-ttu-id="50863-105">`dynamic` 類型會簡化 Office Automation API 這類 COM API 的存取、IronPython 程式庫這類動態 API 的存取，以及 HTML 文件物件模型 (DOM) 的存取。</span><span class="sxs-lookup"><span data-stu-id="50863-105">The `dynamic` type simplifies access to COM APIs such as the Office Automation APIs, and also to dynamic APIs such as IronPython libraries, and to the HTML Document Object Model (DOM).</span></span>  
   
- <span data-ttu-id="0f2bc-106">在大多數情況下，`dynamic` 類型的行為與 `object` 類型類似。</span><span class="sxs-lookup"><span data-stu-id="0f2bc-106">Type `dynamic` behaves like type `object` in most circumstances.</span></span> <span data-ttu-id="0f2bc-107">不過，不會解決包含 `dynamic` 類型之運算式的作業，或編譯器不會對其進行類型檢查。</span><span class="sxs-lookup"><span data-stu-id="0f2bc-107">However, operations that contain expressions of type `dynamic` are not resolved or type checked by the compiler.</span></span> <span data-ttu-id="0f2bc-108">編譯器會將作業資訊封裝在一起，而且稍後在執行階段會使用這項資訊來評估作業。</span><span class="sxs-lookup"><span data-stu-id="0f2bc-108">The compiler packages together information about the operation, and that information is later used to evaluate the operation at run time.</span></span> <span data-ttu-id="0f2bc-109">在此程序期間，會將 `dynamic` 類型的變數編譯為 `object` 類型的變數。</span><span class="sxs-lookup"><span data-stu-id="0f2bc-109">As part of the process, variables of type `dynamic` are compiled into variables of type `object`.</span></span> <span data-ttu-id="0f2bc-110">因此，`dynamic` 類型只存在於編譯時期，而非執行階段。</span><span class="sxs-lookup"><span data-stu-id="0f2bc-110">Therefore, type `dynamic` exists only at compile time, not at run time.</span></span>  
+ <span data-ttu-id="50863-106">在大多數情況下，`dynamic` 類型的行為與 `object` 類型類似。</span><span class="sxs-lookup"><span data-stu-id="50863-106">Type `dynamic` behaves like type `object` in most circumstances.</span></span> <span data-ttu-id="50863-107">不過，不會解決包含 `dynamic` 類型之運算式的作業，或編譯器不會對其進行類型檢查。</span><span class="sxs-lookup"><span data-stu-id="50863-107">However, operations that contain expressions of type `dynamic` are not resolved or type checked by the compiler.</span></span> <span data-ttu-id="50863-108">編譯器會將作業資訊封裝在一起，而且稍後在執行階段會使用這項資訊來評估作業。</span><span class="sxs-lookup"><span data-stu-id="50863-108">The compiler packages together information about the operation, and that information is later used to evaluate the operation at run time.</span></span> <span data-ttu-id="50863-109">在此程序期間，會將 `dynamic` 類型的變數編譯為 `object` 類型的變數。</span><span class="sxs-lookup"><span data-stu-id="50863-109">As part of the process, variables of type `dynamic` are compiled into variables of type `object`.</span></span> <span data-ttu-id="50863-110">因此，`dynamic` 類型只存在於編譯時期，而非執行階段。</span><span class="sxs-lookup"><span data-stu-id="50863-110">Therefore, type `dynamic` exists only at compile time, not at run time.</span></span>  
   
- <span data-ttu-id="0f2bc-111">下列範例會對照 `dynamic` 類型的變數與 `object` 類型的變數。</span><span class="sxs-lookup"><span data-stu-id="0f2bc-111">The following example contrasts a variable of type `dynamic` to a variable of type `object`.</span></span> <span data-ttu-id="0f2bc-112">若要在編譯時期驗證每個變數的類型，請將滑鼠指標放在 `WriteLine` 陳述式中的 `dyn` 或 `obj` 上方。</span><span class="sxs-lookup"><span data-stu-id="0f2bc-112">To verify the type of each variable at compile time, place the mouse pointer over `dyn` or `obj` in the `WriteLine` statements.</span></span> <span data-ttu-id="0f2bc-113">IntelliSense 會顯示「動態」來表示 `dyn`，並顯示「物件」來表示 `obj`。</span><span class="sxs-lookup"><span data-stu-id="0f2bc-113">IntelliSense shows **dynamic** for `dyn` and **object** for `obj`.</span></span>  
+ <span data-ttu-id="50863-111">下列範例會對照 `dynamic` 類型的變數與 `object` 類型的變數。</span><span class="sxs-lookup"><span data-stu-id="50863-111">The following example contrasts a variable of type `dynamic` to a variable of type `object`.</span></span> <span data-ttu-id="50863-112">若要在編譯時期驗證每個變數的類型，請將滑鼠指標放在 `WriteLine` 陳述式中的 `dyn` 或 `obj` 上方。</span><span class="sxs-lookup"><span data-stu-id="50863-112">To verify the type of each variable at compile time, place the mouse pointer over `dyn` or `obj` in the `WriteLine` statements.</span></span> <span data-ttu-id="50863-113">IntelliSense 會顯示「動態」來表示 `dyn`，並顯示「物件」來表示 `obj`。</span><span class="sxs-lookup"><span data-stu-id="50863-113">IntelliSense shows **dynamic** for `dyn` and **object** for `obj`.</span></span>  
   
  [!code-csharp[csrefKeywordsTypes#21](../../../csharp/language-reference/keywords/codesnippet/CSharp/dynamic_1.cs)]  
   
- <span data-ttu-id="0f2bc-114">`WriteLine` 陳述式會顯示執行階段類型 `dyn` 和 `obj`。</span><span class="sxs-lookup"><span data-stu-id="0f2bc-114">The `WriteLine` statements display the run-time types of `dyn` and `obj`.</span></span> <span data-ttu-id="0f2bc-115">此時，兩者都有相同的類型：整數。</span><span class="sxs-lookup"><span data-stu-id="0f2bc-115">At that point, both have the same type, integer.</span></span> <span data-ttu-id="0f2bc-116">會產生下列輸出：</span><span class="sxs-lookup"><span data-stu-id="0f2bc-116">The following output is produced:</span></span>  
+ <span data-ttu-id="50863-114">`WriteLine` 陳述式會顯示執行階段類型 `dyn` 和 `obj`。</span><span class="sxs-lookup"><span data-stu-id="50863-114">The `WriteLine` statements display the run-time types of `dyn` and `obj`.</span></span> <span data-ttu-id="50863-115">此時，兩者都有相同的類型：整數。</span><span class="sxs-lookup"><span data-stu-id="50863-115">At that point, both have the same type, integer.</span></span> <span data-ttu-id="50863-116">會產生下列輸出：</span><span class="sxs-lookup"><span data-stu-id="50863-116">The following output is produced:</span></span>  
   
  `System.Int32`  
   
  `System.Int32`  
   
- <span data-ttu-id="0f2bc-117">若要查看 `dyn` 與 `obj` 在編譯時期的差異，請在上述範例的宣告與 `WriteLine` 陳述式之間新增下列兩行。</span><span class="sxs-lookup"><span data-stu-id="0f2bc-117">To see the difference between `dyn` and `obj` at compile time, add the following two lines between the declarations and the `WriteLine` statements in the previous example.</span></span>  
+ <span data-ttu-id="50863-117">若要查看 `dyn` 與 `obj` 在編譯時期的差異，請在上述範例的宣告與 `WriteLine` 陳述式之間新增下列兩行。</span><span class="sxs-lookup"><span data-stu-id="50863-117">To see the difference between `dyn` and `obj` at compile time, add the following two lines between the declarations and the `WriteLine` statements in the previous example.</span></span>  
   
 ```csharp  
 dyn = dyn + 3;  
 obj = obj + 3;  
 ```  
   
- <span data-ttu-id="0f2bc-118">嘗試新增運算式 `obj + 3` 中的整數和物件時報告編譯器錯誤。</span><span class="sxs-lookup"><span data-stu-id="0f2bc-118">A compiler error is reported for the attempted addition of an integer and an object in expression `obj + 3`.</span></span> <span data-ttu-id="0f2bc-119">不過，不會回報 `dyn + 3` 的錯誤。</span><span class="sxs-lookup"><span data-stu-id="0f2bc-119">However, no error is reported for `dyn + 3`.</span></span> <span data-ttu-id="0f2bc-120">在編譯時期不會檢查包含 `dyn` 的運算式，因為 `dyn` 的類型是 `dynamic`。</span><span class="sxs-lookup"><span data-stu-id="0f2bc-120">The expression that contains `dyn` is not checked at compile time because the type of `dyn` is `dynamic`.</span></span>  
+ <span data-ttu-id="50863-118">嘗試新增運算式 `obj + 3` 中的整數和物件時報告編譯器錯誤。</span><span class="sxs-lookup"><span data-stu-id="50863-118">A compiler error is reported for the attempted addition of an integer and an object in expression `obj + 3`.</span></span> <span data-ttu-id="50863-119">不過，不會回報 `dyn + 3` 的錯誤。</span><span class="sxs-lookup"><span data-stu-id="50863-119">However, no error is reported for `dyn + 3`.</span></span> <span data-ttu-id="50863-120">在編譯時期不會檢查包含 `dyn` 的運算式，因為 `dyn` 的類型是 `dynamic`。</span><span class="sxs-lookup"><span data-stu-id="50863-120">The expression that contains `dyn` is not checked at compile time because the type of `dyn` is `dynamic`.</span></span>  
   
-## <a name="context"></a><span data-ttu-id="0f2bc-121">內容</span><span class="sxs-lookup"><span data-stu-id="0f2bc-121">Context</span></span>  
- <span data-ttu-id="0f2bc-122">在下列情況下，`dynamic` 關鍵字可能會直接出現，或作為建構類型的元件︰</span><span class="sxs-lookup"><span data-stu-id="0f2bc-122">The `dynamic` keyword can appear directly or as a component of a constructed type in the following situations:</span></span>  
+## <a name="context"></a><span data-ttu-id="50863-121">內容</span><span class="sxs-lookup"><span data-stu-id="50863-121">Context</span></span>  
+ <span data-ttu-id="50863-122">在下列情況下，`dynamic` 關鍵字可能會直接出現，或作為建構類型的元件︰</span><span class="sxs-lookup"><span data-stu-id="50863-122">The `dynamic` keyword can appear directly or as a component of a constructed type in the following situations:</span></span>  
   
--   <span data-ttu-id="0f2bc-123">在宣告中，作為屬性、欄位、索引子、參數、傳回值、區域變數或類型條件約束的類型。</span><span class="sxs-lookup"><span data-stu-id="0f2bc-123">In declarations, as the type of a property, field, indexer, parameter, return value, local variable, or type constraint.</span></span> <span data-ttu-id="0f2bc-124">下列類別定義在數個不同宣告中使用 `dynamic`。</span><span class="sxs-lookup"><span data-stu-id="0f2bc-124">The following class definition uses `dynamic` in several different declarations.</span></span>  
+-   <span data-ttu-id="50863-123">在宣告中，作為屬性、欄位、索引子、參數、傳回值、區域變數或類型條件約束的類型。</span><span class="sxs-lookup"><span data-stu-id="50863-123">In declarations, as the type of a property, field, indexer, parameter, return value, local variable, or type constraint.</span></span> <span data-ttu-id="50863-124">下列類別定義在數個不同宣告中使用 `dynamic`。</span><span class="sxs-lookup"><span data-stu-id="50863-124">The following class definition uses `dynamic` in several different declarations.</span></span>  
   
      [!code-csharp[csrefKeywordsTypes#22](../../../csharp/language-reference/keywords/codesnippet/CSharp/dynamic_2.cs)]  
   
--   <span data-ttu-id="0f2bc-125">在明確類型轉換中，作為轉換的目標類型。</span><span class="sxs-lookup"><span data-stu-id="0f2bc-125">In explicit type conversions, as the target type of a conversion.</span></span>  
+-   <span data-ttu-id="50863-125">在明確類型轉換中，作為轉換的目標類型。</span><span class="sxs-lookup"><span data-stu-id="50863-125">In explicit type conversions, as the target type of a conversion.</span></span>  
   
      [!code-csharp[csrefKeywordsTypes#23](../../../csharp/language-reference/keywords/codesnippet/CSharp/dynamic_3.cs)]  
   
--   <span data-ttu-id="0f2bc-126">在任何內容中，其中類型作為值 (例如 `is` 運算子或 `as` 運算子右側) 或作為部分建構類型之 `typeof` 的引數。</span><span class="sxs-lookup"><span data-stu-id="0f2bc-126">In any context where types serve as values, such as on the right side of an `is` operator or an `as` operator, or as the argument to `typeof` as part of a constructed type.</span></span> <span data-ttu-id="0f2bc-127">例如，`dynamic` 可以用於下列運算式中。</span><span class="sxs-lookup"><span data-stu-id="0f2bc-127">For example, `dynamic` can be used in the following expressions.</span></span>  
+-   <span data-ttu-id="50863-126">在任何內容中，其中類型作為值 (例如 `is` 運算子或 `as` 運算子右側) 或作為部分建構類型之 `typeof` 的引數。</span><span class="sxs-lookup"><span data-stu-id="50863-126">In any context where types serve as values, such as on the right side of an `is` operator or an `as` operator, or as the argument to `typeof` as part of a constructed type.</span></span> <span data-ttu-id="50863-127">例如，`dynamic` 可以用於下列運算式中。</span><span class="sxs-lookup"><span data-stu-id="50863-127">For example, `dynamic` can be used in the following expressions.</span></span>  
   
      [!code-csharp[csrefKeywordsTypes#24](../../../csharp/language-reference/keywords/codesnippet/CSharp/dynamic_4.cs)]  
   
-## <a name="example"></a><span data-ttu-id="0f2bc-128">範例</span><span class="sxs-lookup"><span data-stu-id="0f2bc-128">Example</span></span>  
- <span data-ttu-id="0f2bc-129">下列範例會在數個宣告中使用 `dynamic`。</span><span class="sxs-lookup"><span data-stu-id="0f2bc-129">The following example uses `dynamic` in several declarations.</span></span> <span data-ttu-id="0f2bc-130">`Main` 方法也會對照編譯時期類型檢查與執行階段類型檢查。</span><span class="sxs-lookup"><span data-stu-id="0f2bc-130">The `Main` method also contrasts compile-time type checking with run-time type checking.</span></span>  
+## <a name="example"></a><span data-ttu-id="50863-128">範例</span><span class="sxs-lookup"><span data-stu-id="50863-128">Example</span></span>  
+ <span data-ttu-id="50863-129">下列範例會在數個宣告中使用 `dynamic`。</span><span class="sxs-lookup"><span data-stu-id="50863-129">The following example uses `dynamic` in several declarations.</span></span> <span data-ttu-id="50863-130">`Main` 方法也會對照編譯時期類型檢查與執行階段類型檢查。</span><span class="sxs-lookup"><span data-stu-id="50863-130">The `Main` method also contrasts compile-time type checking with run-time type checking.</span></span>  
   
  [!code-csharp[csrefKeywordsTypes#25](../../../csharp/language-reference/keywords/codesnippet/CSharp/dynamic_5.cs)]  
   
- <span data-ttu-id="0f2bc-131">如需詳細資訊和範例，請參閱[使用動態類型](../../../csharp/programming-guide/types/using-type-dynamic.md)。</span><span class="sxs-lookup"><span data-stu-id="0f2bc-131">For more information and examples, see [Using Type dynamic](../../../csharp/programming-guide/types/using-type-dynamic.md).</span></span>  
+ <span data-ttu-id="50863-131">如需詳細資訊和範例，請參閱[使用動態類型](../../../csharp/programming-guide/types/using-type-dynamic.md)。</span><span class="sxs-lookup"><span data-stu-id="50863-131">For more information and examples, see [Using Type dynamic](../../../csharp/programming-guide/types/using-type-dynamic.md).</span></span>  
   
-## <a name="see-also"></a><span data-ttu-id="0f2bc-132">另請參閱</span><span class="sxs-lookup"><span data-stu-id="0f2bc-132">See Also</span></span>  
+## <a name="see-also"></a><span data-ttu-id="50863-132">請參閱</span><span class="sxs-lookup"><span data-stu-id="50863-132">See Also</span></span>  
  <xref:System.Dynamic.ExpandoObject?displayProperty=nameWithType>  
  <xref:System.Dynamic.DynamicObject?displayProperty=nameWithType>  
- [<span data-ttu-id="0f2bc-133">使用動態型別</span><span class="sxs-lookup"><span data-stu-id="0f2bc-133">Using Type dynamic</span></span>](../../../csharp/programming-guide/types/using-type-dynamic.md)  
- [<span data-ttu-id="0f2bc-134">object</span><span class="sxs-lookup"><span data-stu-id="0f2bc-134">object</span></span>](../../../csharp/language-reference/keywords/object.md)  
- [<span data-ttu-id="0f2bc-135">is</span><span class="sxs-lookup"><span data-stu-id="0f2bc-135">is</span></span>](../../../csharp/language-reference/keywords/is.md)  
- [<span data-ttu-id="0f2bc-136">as</span><span class="sxs-lookup"><span data-stu-id="0f2bc-136">as</span></span>](../../../csharp/language-reference/keywords/as.md)  
- [<span data-ttu-id="0f2bc-137">typeof</span><span class="sxs-lookup"><span data-stu-id="0f2bc-137">typeof</span></span>](../../../csharp/language-reference/keywords/typeof.md)  
- [<span data-ttu-id="0f2bc-138">如何：使用 as 和 is 運算子進行安全轉換</span><span class="sxs-lookup"><span data-stu-id="0f2bc-138">How to: Safely Cast by Using as and is Operators</span></span>](../../../csharp/programming-guide/types/how-to-safely-cast-by-using-as-and-is-operators.md)  
- [<span data-ttu-id="0f2bc-139">逐步解說：建立和使用動態物件</span><span class="sxs-lookup"><span data-stu-id="0f2bc-139">Walkthrough: Creating and Using Dynamic Objects</span></span>](../../../csharp/programming-guide/types/walkthrough-creating-and-using-dynamic-objects.md)
+ [<span data-ttu-id="50863-133">使用動態型別</span><span class="sxs-lookup"><span data-stu-id="50863-133">Using Type dynamic</span></span>](../../../csharp/programming-guide/types/using-type-dynamic.md)  
+ [<span data-ttu-id="50863-134">object</span><span class="sxs-lookup"><span data-stu-id="50863-134">object</span></span>](../../../csharp/language-reference/keywords/object.md)  
+ [<span data-ttu-id="50863-135">is</span><span class="sxs-lookup"><span data-stu-id="50863-135">is</span></span>](../../../csharp/language-reference/keywords/is.md)  
+ [<span data-ttu-id="50863-136">as</span><span class="sxs-lookup"><span data-stu-id="50863-136">as</span></span>](../../../csharp/language-reference/keywords/as.md)  
+ [<span data-ttu-id="50863-137">typeof</span><span class="sxs-lookup"><span data-stu-id="50863-137">typeof</span></span>](../../../csharp/language-reference/keywords/typeof.md)  
+ [<span data-ttu-id="50863-138">如何：使用 as 和 is 運算子進行安全轉換</span><span class="sxs-lookup"><span data-stu-id="50863-138">How to: Safely Cast by Using as and is Operators</span></span>](../../../csharp/programming-guide/types/how-to-safely-cast-by-using-as-and-is-operators.md)  
+ [<span data-ttu-id="50863-139">逐步解說：建立和使用動態物件</span><span class="sxs-lookup"><span data-stu-id="50863-139">Walkthrough: Creating and Using Dynamic Objects</span></span>](../../../csharp/programming-guide/types/walkthrough-creating-and-using-dynamic-objects.md)

@@ -1,37 +1,27 @@
 ---
-title: "使用 XmlSchemaCollection 進行 XML 結構描述 (XSD) 驗證"
-ms.custom: 
+title: 使用 XmlSchemaCollection 進行 XML 結構描述 (XSD) 驗證
 ms.date: 03/30/2017
-ms.prod: .net
-ms.reviewer: 
-ms.suite: 
 ms.technology: dotnet-standard
-ms.tgt_pltfrm: 
-ms.topic: article
 dev_langs:
 - csharp
 - vb
 ms.assetid: ad0b5717-3d32-41ad-a4d7-072c3e492b82
-caps.latest.revision: 
 author: mairaw
 ms.author: mairaw
-manager: wpickett
-ms.workload:
-- dotnet
-- dotnetcore
-ms.openlocfilehash: c7af29acd33ff3909f0d82e3ef7f7027dc5e44aa
-ms.sourcegitcommit: e7f04439d78909229506b56935a1105a4149ff3d
+ms.openlocfilehash: 6505229d96c6f27452776403a6e1f997dc5a8b10
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 12/23/2017
+ms.lasthandoff: 05/04/2018
+ms.locfileid: "33572193"
 ---
-# <a name="xml-schema-xsd-validation-with-xmlschemacollection"></a><span data-ttu-id="4427b-102">使用 XmlSchemaCollection 進行 XML 結構描述 (XSD) 驗證</span><span class="sxs-lookup"><span data-stu-id="4427b-102">XML Schema (XSD) Validation with XmlSchemaCollection</span></span>
-<span data-ttu-id="4427b-103">您可以使用 <xref:System.Xml.Schema.XmlSchemaCollection>，依據 XML 結構描述定義語言 (XSD) 結構描述來驗證 XML 文件。</span><span class="sxs-lookup"><span data-stu-id="4427b-103">You can use the <xref:System.Xml.Schema.XmlSchemaCollection> to validate an XML document against XML Schema definition language (XSD) schemas.</span></span> <span data-ttu-id="4427b-104"><xref:System.Xml.Schema.XmlSchemaCollection> 可以提升效能，其方法是將結構描述儲存於集合中，而不用在每次執行驗證時，都要將其載入記憶體。</span><span class="sxs-lookup"><span data-stu-id="4427b-104">The <xref:System.Xml.Schema.XmlSchemaCollection> improves performance by storing schemas in the collection so they are not loaded into memory each time validation occurs.</span></span> <span data-ttu-id="4427b-105">如果結構描述存在於結構描述集合中，則 `schemaLocation` 屬性可用於查詢集合中的結構描述。</span><span class="sxs-lookup"><span data-stu-id="4427b-105">If the schema exists in the schema collection, the `schemaLocation` attribute is used to look up the schema in the collection.</span></span>  
+# <a name="xml-schema-xsd-validation-with-xmlschemacollection"></a><span data-ttu-id="b1d16-102">使用 XmlSchemaCollection 進行 XML 結構描述 (XSD) 驗證</span><span class="sxs-lookup"><span data-stu-id="b1d16-102">XML Schema (XSD) Validation with XmlSchemaCollection</span></span>
+<span data-ttu-id="b1d16-103">您可以使用 <xref:System.Xml.Schema.XmlSchemaCollection>，依據 XML 結構描述定義語言 (XSD) 結構描述來驗證 XML 文件。</span><span class="sxs-lookup"><span data-stu-id="b1d16-103">You can use the <xref:System.Xml.Schema.XmlSchemaCollection> to validate an XML document against XML Schema definition language (XSD) schemas.</span></span> <span data-ttu-id="b1d16-104"><xref:System.Xml.Schema.XmlSchemaCollection> 可以提升效能，其方法是將結構描述儲存於集合中，而不用在每次執行驗證時，都要將其載入記憶體。</span><span class="sxs-lookup"><span data-stu-id="b1d16-104">The <xref:System.Xml.Schema.XmlSchemaCollection> improves performance by storing schemas in the collection so they are not loaded into memory each time validation occurs.</span></span> <span data-ttu-id="b1d16-105">如果結構描述存在於結構描述集合中，則 `schemaLocation` 屬性可用於查詢集合中的結構描述。</span><span class="sxs-lookup"><span data-stu-id="b1d16-105">If the schema exists in the schema collection, the `schemaLocation` attribute is used to look up the schema in the collection.</span></span>  
   
 > [!IMPORTANT]
->  <span data-ttu-id="4427b-106"><xref:System.Xml.Schema.XmlSchemaCollection> 類別目前已過時，並已由 <xref:System.Xml.Schema.XmlSchemaSet> 類別取代。</span><span class="sxs-lookup"><span data-stu-id="4427b-106">The <xref:System.Xml.Schema.XmlSchemaCollection> class is now obsolete and has been replaced with the <xref:System.Xml.Schema.XmlSchemaSet> class.</span></span> <span data-ttu-id="4427b-107">如需有關 <xref:System.Xml.Schema.XmlSchemaSet> 類別的詳細資訊，請參閱[用於結構描述編譯的 XmlSchemaSet](../../../../docs/standard/data/xml/xmlschemaset-for-schema-compilation.md)。</span><span class="sxs-lookup"><span data-stu-id="4427b-107">For more information about the <xref:System.Xml.Schema.XmlSchemaSet> class see, [XmlSchemaSet for Schema Compilation](../../../../docs/standard/data/xml/xmlschemaset-for-schema-compilation.md).</span></span>  
+>  <span data-ttu-id="b1d16-106"><xref:System.Xml.Schema.XmlSchemaCollection> 類別目前已過時，並已由 <xref:System.Xml.Schema.XmlSchemaSet> 類別取代。</span><span class="sxs-lookup"><span data-stu-id="b1d16-106">The <xref:System.Xml.Schema.XmlSchemaCollection> class is now obsolete and has been replaced with the <xref:System.Xml.Schema.XmlSchemaSet> class.</span></span> <span data-ttu-id="b1d16-107">如需有關 <xref:System.Xml.Schema.XmlSchemaSet> 類別的詳細資訊，請參閱[用於結構描述編譯的 XmlSchemaSet](../../../../docs/standard/data/xml/xmlschemaset-for-schema-compilation.md)。</span><span class="sxs-lookup"><span data-stu-id="b1d16-107">For more information about the <xref:System.Xml.Schema.XmlSchemaSet> class see, [XmlSchemaSet for Schema Compilation](../../../../docs/standard/data/xml/xmlschemaset-for-schema-compilation.md).</span></span>  
   
- <span data-ttu-id="4427b-108">下列範例顯示資料檔案的根項目。</span><span class="sxs-lookup"><span data-stu-id="4427b-108">The following example shows the root element of a data file.</span></span>  
+ <span data-ttu-id="b1d16-108">下列範例顯示資料檔案的根項目。</span><span class="sxs-lookup"><span data-stu-id="b1d16-108">The following example shows the root element of a data file.</span></span>  
   
 ```xml  
 <xs:schema xmlns:xs="http://www.w3.org/2001/XMLSchema"  
@@ -40,9 +30,9 @@ ms.lasthandoff: 12/23/2017
     targetNamespace="urn:bookstore-schema">  
 ```  
   
- <span data-ttu-id="4427b-109">針對此範例，`targetNamespace` 屬性的值為 `urn:bookstore-schema`，其與將結構描述加入至 <xref:System.Xml.Schema.XmlSchemaCollection> 時所使用的命名空間相同。</span><span class="sxs-lookup"><span data-stu-id="4427b-109">For this example, the value of the `targetNamespace` attribute is `urn:bookstore-schema`, which is the same namespace that is used when adding the schema to the <xref:System.Xml.Schema.XmlSchemaCollection>.</span></span>  
+ <span data-ttu-id="b1d16-109">針對此範例，`targetNamespace` 屬性的值為 `urn:bookstore-schema`，其與將結構描述加入至 <xref:System.Xml.Schema.XmlSchemaCollection> 時所使用的命名空間相同。</span><span class="sxs-lookup"><span data-stu-id="b1d16-109">For this example, the value of the `targetNamespace` attribute is `urn:bookstore-schema`, which is the same namespace that is used when adding the schema to the <xref:System.Xml.Schema.XmlSchemaCollection>.</span></span>  
   
- <span data-ttu-id="4427b-110">下列程式碼範例會將 XML 結構描述加入至 <xref:System.Xml.Schema.XmlSchemaCollection>。</span><span class="sxs-lookup"><span data-stu-id="4427b-110">The following code example adds an XML Schema to the <xref:System.Xml.Schema.XmlSchemaCollection>.</span></span>  
+ <span data-ttu-id="b1d16-110">下列程式碼範例會將 XML 結構描述加入至 <xref:System.Xml.Schema.XmlSchemaCollection>。</span><span class="sxs-lookup"><span data-stu-id="b1d16-110">The following code example adds an XML Schema to the <xref:System.Xml.Schema.XmlSchemaCollection>.</span></span>  
   
 ```vb  
 Dim xsc As New XmlSchemaCollection()  
@@ -62,9 +52,9 @@ vreader = new XmlValidatingReader (reader);
 vreader.Schemas.Add(xsc);  
 ```  
   
- <span data-ttu-id="4427b-111">當在 `targetNamespace` 的 `namespaceURI` 方法中加入 <xref:System.Xml.Schema.XmlSchemaCollection.Add%2A> 屬性時，一般會使用 <xref:System.Xml.Schema.XmlSchemaCollection> 屬性。</span><span class="sxs-lookup"><span data-stu-id="4427b-111">The `targetNamespace` attribute is generally used when you add the `namespaceURI` property in the <xref:System.Xml.Schema.XmlSchemaCollection.Add%2A> method for the <xref:System.Xml.Schema.XmlSchemaCollection>.</span></span> <span data-ttu-id="4427b-112">您可以指定 Null 參考，再將結構描述加入至 <xref:System.Xml.Schema.XmlSchemaCollection>。</span><span class="sxs-lookup"><span data-stu-id="4427b-112">You can specify a null reference before adding the schema to the <xref:System.Xml.Schema.XmlSchemaCollection>.</span></span> <span data-ttu-id="4427b-113">針對不具命名空間的結構描述，應使用空字串 ("")。</span><span class="sxs-lookup"><span data-stu-id="4427b-113">An empty string ("") should be used for schemas without a namespace.</span></span> <span data-ttu-id="4427b-114"><xref:System.Xml.Schema.XmlSchemaCollection> 僅可有一個不具命名空間的結構描述。</span><span class="sxs-lookup"><span data-stu-id="4427b-114">The <xref:System.Xml.Schema.XmlSchemaCollection> can have only one schema without a namespace.</span></span>  
+ <span data-ttu-id="b1d16-111">當在 `targetNamespace` 的 `namespaceURI` 方法中加入 <xref:System.Xml.Schema.XmlSchemaCollection.Add%2A> 屬性時，一般會使用 <xref:System.Xml.Schema.XmlSchemaCollection> 屬性。</span><span class="sxs-lookup"><span data-stu-id="b1d16-111">The `targetNamespace` attribute is generally used when you add the `namespaceURI` property in the <xref:System.Xml.Schema.XmlSchemaCollection.Add%2A> method for the <xref:System.Xml.Schema.XmlSchemaCollection>.</span></span> <span data-ttu-id="b1d16-112">您可以指定 Null 參考，再將結構描述加入至 <xref:System.Xml.Schema.XmlSchemaCollection>。</span><span class="sxs-lookup"><span data-stu-id="b1d16-112">You can specify a null reference before adding the schema to the <xref:System.Xml.Schema.XmlSchemaCollection>.</span></span> <span data-ttu-id="b1d16-113">針對不具命名空間的結構描述，應使用空字串 ("")。</span><span class="sxs-lookup"><span data-stu-id="b1d16-113">An empty string ("") should be used for schemas without a namespace.</span></span> <span data-ttu-id="b1d16-114"><xref:System.Xml.Schema.XmlSchemaCollection> 僅可有一個不具命名空間的結構描述。</span><span class="sxs-lookup"><span data-stu-id="b1d16-114">The <xref:System.Xml.Schema.XmlSchemaCollection> can have only one schema without a namespace.</span></span>  
   
- <span data-ttu-id="4427b-115">下列程式碼範例會將 XML 結構描述 ( HeadCount.xsd) 加入至 <xref:System.Xml.Schema.XmlSchemaCollection>，並驗證 HeadCount.xml。</span><span class="sxs-lookup"><span data-stu-id="4427b-115">The following code example adds an XML Schema, HeadCount.xsd, to the <xref:System.Xml.Schema.XmlSchemaCollection> and validates HeadCount.xml.</span></span>  
+ <span data-ttu-id="b1d16-115">下列程式碼範例會將 XML 結構描述 ( HeadCount.xsd) 加入至 <xref:System.Xml.Schema.XmlSchemaCollection>，並驗證 HeadCount.xml。</span><span class="sxs-lookup"><span data-stu-id="b1d16-115">The following code example adds an XML Schema, HeadCount.xsd, to the <xref:System.Xml.Schema.XmlSchemaCollection> and validates HeadCount.xml.</span></span>  
   
 ```vb  
 Imports System  
@@ -135,7 +125,7 @@ namespace ValidationSample
 }  
 ```  
   
- <span data-ttu-id="4427b-116">以下列出了要進行驗證的輸入檔 (HeadCount.xml) 內容。</span><span class="sxs-lookup"><span data-stu-id="4427b-116">The following outlines the contents of the input file, HeadCount.xml, to be validated.</span></span>  
+ <span data-ttu-id="b1d16-116">以下列出了要進行驗證的輸入檔 (HeadCount.xml) 內容。</span><span class="sxs-lookup"><span data-stu-id="b1d16-116">The following outlines the contents of the input file, HeadCount.xml, to be validated.</span></span>  
   
 ```xml  
 <!--Load HeadCount.xsd in SchemaCollection for Validation-->  
@@ -145,7 +135,7 @@ namespace ValidationSample
 </hc:HeadCount>  
 ```  
   
- <span data-ttu-id="4427b-117">以下列出了要進行驗證 XML 結構描述檔案 (HeadCount.xsd) 的內容。</span><span class="sxs-lookup"><span data-stu-id="4427b-117">The following outlines the contents of the XML Schema file, HeadCount.xsd, to be validated against.</span></span>  
+ <span data-ttu-id="b1d16-117">以下列出了要進行驗證 XML 結構描述檔案 (HeadCount.xsd) 的內容。</span><span class="sxs-lookup"><span data-stu-id="b1d16-117">The following outlines the contents of the XML Schema file, HeadCount.xsd, to be validated against.</span></span>  
   
 ```xml  
 <xs:schema xmlns="xsdHeadCount" targetNamespace="xsdHeadCount" xmlns:xs="http://www.w3.org/2001/XMLSchema">  
@@ -159,7 +149,7 @@ namespace ValidationSample
 </xs:schema>  
 ```  
   
- <span data-ttu-id="4427b-118">下列程式碼範例會建立 <xref:System.Xml.XmlValidatingReader>，它會使用 <xref:System.Xml.XmlTextReader>。</span><span class="sxs-lookup"><span data-stu-id="4427b-118">The following code example creates an <xref:System.Xml.XmlValidatingReader> that takes an <xref:System.Xml.XmlTextReader>.</span></span> <span data-ttu-id="4427b-119">輸入檔 sample4.xml 會針對 XML 結構描述 sample4.xsd 進行驗證。</span><span class="sxs-lookup"><span data-stu-id="4427b-119">The input file, sample4.xml, is validated against the XML Schema, sample4.xsd.</span></span>  
+ <span data-ttu-id="b1d16-118">下列程式碼範例會建立 <xref:System.Xml.XmlValidatingReader>，它會使用 <xref:System.Xml.XmlTextReader>。</span><span class="sxs-lookup"><span data-stu-id="b1d16-118">The following code example creates an <xref:System.Xml.XmlValidatingReader> that takes an <xref:System.Xml.XmlTextReader>.</span></span> <span data-ttu-id="b1d16-119">輸入檔 sample4.xml 會針對 XML 結構描述 sample4.xsd 進行驗證。</span><span class="sxs-lookup"><span data-stu-id="b1d16-119">The input file, sample4.xml, is validated against the XML Schema, sample4.xsd.</span></span>  
   
 ```vb  
 Dim tr As New XmlTextReader("sample4.xml")  
@@ -183,7 +173,7 @@ while(vr.Read()) {
     }  
 ```  
   
- <span data-ttu-id="4427b-120">以下列出了要驗證之輸入檔 (sample4.xml) 的內容。</span><span class="sxs-lookup"><span data-stu-id="4427b-120">The following outlines the contents of the input file, sample4.xml, to be validated.</span></span>  
+ <span data-ttu-id="b1d16-120">以下列出了要驗證之輸入檔 (sample4.xml) 的內容。</span><span class="sxs-lookup"><span data-stu-id="b1d16-120">The following outlines the contents of the input file, sample4.xml, to be validated.</span></span>  
   
 ```xml  
 <datatypes xmlns="datatypesTest">  
@@ -193,7 +183,7 @@ while(vr.Read()) {
 </datatypes>  
 ```  
   
- <span data-ttu-id="4427b-121">以下列出了要據以驗證之 XML 結構描述檔案 (sample4.xsd) 的內容。</span><span class="sxs-lookup"><span data-stu-id="4427b-121">The following outlines the contents of the XML Schema file, sample4.xsd, to be validated against.</span></span>  
+ <span data-ttu-id="b1d16-121">以下列出了要據以驗證之 XML 結構描述檔案 (sample4.xsd) 的內容。</span><span class="sxs-lookup"><span data-stu-id="b1d16-121">The following outlines the contents of the XML Schema file, sample4.xsd, to be validated against.</span></span>  
   
 ```xml  
 <xs:schema   
@@ -218,8 +208,8 @@ while(vr.Read()) {
 </xs:schema>  
 ```  
   
-## <a name="see-also"></a><span data-ttu-id="4427b-122">請參閱</span><span class="sxs-lookup"><span data-stu-id="4427b-122">See Also</span></span>  
+## <a name="see-also"></a><span data-ttu-id="b1d16-122">請參閱</span><span class="sxs-lookup"><span data-stu-id="b1d16-122">See Also</span></span>  
  <xref:System.Xml.XmlParserContext>  
  <xref:System.Xml.XmlValidatingReader.ValidationEventHandler?displayProperty=nameWithType>  
  <xref:System.Xml.XmlValidatingReader.Schemas%2A?displayProperty=nameWithType>  
- [<span data-ttu-id="4427b-123">XmlSchemaCollection 結構描述編譯</span><span class="sxs-lookup"><span data-stu-id="4427b-123">XmlSchemaCollection Schema Compilation</span></span>](../../../../docs/standard/data/xml/xmlschemacollection-schema-compilation.md)
+ [<span data-ttu-id="b1d16-123">XmlSchemaCollection 結構描述編譯</span><span class="sxs-lookup"><span data-stu-id="b1d16-123">XmlSchemaCollection Schema Compilation</span></span>](../../../../docs/standard/data/xml/xmlschemacollection-schema-compilation.md)

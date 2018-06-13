@@ -9,6 +9,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: HT
 ms.contentlocale: zh-TW
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33574942"
 ---
 # <a name="implementing-custom-http-call-retries-with-exponential-backoff"></a><span data-ttu-id="41838-103">使用指數輪詢來實作自訂 HTTP 呼叫重試</span><span class="sxs-lookup"><span data-stu-id="41838-103">Implementing custom HTTP call retries with exponential backoff</span></span>
 

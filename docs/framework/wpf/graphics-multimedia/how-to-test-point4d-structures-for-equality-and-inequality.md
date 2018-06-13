@@ -1,13 +1,6 @@
 ---
-title: "如何：測試 Point4D 結構是否相等和不相等"
-ms.custom: 
+title: 如何：測試 Point4D 結構是否相等和不相等
 ms.date: 03/30/2017
-ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.technology: dotnet-wpf
-ms.tgt_pltfrm: 
-ms.topic: article
 helpviewer_keywords:
 - inequality [WPF], testing Point4D structures for
 - equality [WPF], testing Point4D structures for
@@ -16,26 +9,22 @@ helpviewer_keywords:
 - testing [WPF], Point4D structures for inequality
 - Point4D structures [WPF], testing for equality
 ms.assetid: e004a67e-db7f-4af8-a31f-e6b2a44ccf34
-caps.latest.revision: "8"
-author: dotnet-bot
-ms.author: dotnetcontent
-manager: wpickett
-ms.workload: dotnet
-ms.openlocfilehash: ac69ec232485ebd3097f2db3b31d3fd43d0ccc99
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.openlocfilehash: 1ec844c8fb0aceaaec6030c2e9d5cb30cf984f43
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 05/04/2018
+ms.locfileid: "33559810"
 ---
-# <a name="how-to-test-point4d-structures-for-equality-and-inequality"></a><span data-ttu-id="2e86d-102">如何：測試 Point4D 結構是否相等和不相等</span><span class="sxs-lookup"><span data-stu-id="2e86d-102">How to: Test Point4D structures for equality and inequality</span></span>
-<span data-ttu-id="2e86d-103">這個範例示範如何測試<xref:System.Windows.Media.Media3D.Point4D>結構相等和不等。</span><span class="sxs-lookup"><span data-stu-id="2e86d-103">This example shows how to test <xref:System.Windows.Media.Media3D.Point4D> structures for equality and inequality.</span></span>  
+# <a name="how-to-test-point4d-structures-for-equality-and-inequality"></a><span data-ttu-id="19080-102">如何：測試 Point4D 結構是否相等和不相等</span><span class="sxs-lookup"><span data-stu-id="19080-102">How to: Test Point4D structures for equality and inequality</span></span>
+<span data-ttu-id="19080-103">這個範例示範如何測試<xref:System.Windows.Media.Media3D.Point4D>結構相等和不等。</span><span class="sxs-lookup"><span data-stu-id="19080-103">This example shows how to test <xref:System.Windows.Media.Media3D.Point4D> structures for equality and inequality.</span></span>  
   
- <span data-ttu-id="2e86d-104">下列程式碼說明如何測試<xref:System.Windows.Media.Media3D.Point4D>結構進行相等和不等比較使用<xref:System.Windows.Media.Media3D.Point4D>等號比較方法。</span><span class="sxs-lookup"><span data-stu-id="2e86d-104">The following code illustrates how to test <xref:System.Windows.Media.Media3D.Point4D> structures for equality and inequality using the <xref:System.Windows.Media.Media3D.Point4D> equality methods.</span></span>  <span data-ttu-id="2e86d-105"><xref:System.Windows.Media.Media3D.Point4D>結構的測試方式，使用多載等號比較是否相等 (`==`) 運算子，然後使用多載不等比較的不等比較 (`!=`) 運算子，最後再<xref:System.Windows.Media.Media3D.Point3D>結構和<xref:System.Windows.Media.Media3D.Point4D>結構會檢查是否有使用靜態等號比較<xref:System.Windows.Media.Media3D.Point4D.Equals%2A>方法。</span><span class="sxs-lookup"><span data-stu-id="2e86d-105">The <xref:System.Windows.Media.Media3D.Point4D> structures are tested for equality using the overloaded equality (`==`) operator, then for inequality using the overloaded inequality (`!=`) operator, and finally a <xref:System.Windows.Media.Media3D.Point3D> structure and a <xref:System.Windows.Media.Media3D.Point4D> structure are checked for equality using the static <xref:System.Windows.Media.Media3D.Point4D.Equals%2A> method.</span></span>  
+ <span data-ttu-id="19080-104">下列程式碼說明如何測試<xref:System.Windows.Media.Media3D.Point4D>結構進行相等和不等比較使用<xref:System.Windows.Media.Media3D.Point4D>等號比較方法。</span><span class="sxs-lookup"><span data-stu-id="19080-104">The following code illustrates how to test <xref:System.Windows.Media.Media3D.Point4D> structures for equality and inequality using the <xref:System.Windows.Media.Media3D.Point4D> equality methods.</span></span>  <span data-ttu-id="19080-105"><xref:System.Windows.Media.Media3D.Point4D>結構的測試方式，使用多載等號比較是否相等 (`==`) 運算子，然後使用多載不等比較的不等比較 (`!=`) 運算子，最後再<xref:System.Windows.Media.Media3D.Point3D>結構和<xref:System.Windows.Media.Media3D.Point4D>結構會檢查是否有使用靜態等號比較<xref:System.Windows.Media.Media3D.Point4D.Equals%2A>方法。</span><span class="sxs-lookup"><span data-stu-id="19080-105">The <xref:System.Windows.Media.Media3D.Point4D> structures are tested for equality using the overloaded equality (`==`) operator, then for inequality using the overloaded inequality (`!=`) operator, and finally a <xref:System.Windows.Media.Media3D.Point3D> structure and a <xref:System.Windows.Media.Media3D.Point4D> structure are checked for equality using the static <xref:System.Windows.Media.Media3D.Point4D.Equals%2A> method.</span></span>  
   
-## <a name="example"></a><span data-ttu-id="2e86d-106">範例</span><span class="sxs-lookup"><span data-stu-id="2e86d-106">Example</span></span>  
+## <a name="example"></a><span data-ttu-id="19080-106">範例</span><span class="sxs-lookup"><span data-stu-id="19080-106">Example</span></span>  
  [!code-csharp[3DGallery_procedural_snip#Point4DEqualityExample_csharp](../../../../samples/snippets/csharp/VS_Snippets_Wpf/3DGallery_procedural_snip/CSharp/Misc3DOperationsExample.cs#point4dequalityexample_csharp)]  
   
-## <a name="see-also"></a><span data-ttu-id="2e86d-107">請參閱</span><span class="sxs-lookup"><span data-stu-id="2e86d-107">See Also</span></span>  
+## <a name="see-also"></a><span data-ttu-id="19080-107">另請參閱</span><span class="sxs-lookup"><span data-stu-id="19080-107">See Also</span></span>  
  <xref:System.Windows.Media.Media3D.Point4D.op_Equality%2A>  
  <xref:System.Windows.Media.Media3D.Point4D.op_Inequality%2A>  
  <xref:System.Windows.Media.Media3D.Point4D.Equals%2A>

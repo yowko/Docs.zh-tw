@@ -14,6 +14,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: zh-TW
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33555811"
 ---
 # <a name="bitmap-effects"></a><span data-ttu-id="f70cc-102">點陣圖效果</span><span class="sxs-lookup"><span data-stu-id="f70cc-102">Bitmap Effects</span></span>
 <span data-ttu-id="f70cc-103">本節中的主題描述如何將視覺效果套用至點陣圖影像使用[!INCLUDE[TLA#tla_winclient](../../../../includes/tlasharptla-winclient-md.md)]。</span><span class="sxs-lookup"><span data-stu-id="f70cc-103">The topics in this section describe how to apply visual effects to bitmap images using [!INCLUDE[TLA#tla_winclient](../../../../includes/tlasharptla-winclient-md.md)].</span></span>  

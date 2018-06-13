@@ -20,6 +20,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: HT
 ms.contentlocale: zh-TW
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33571910"
 ---
 # <a name="how-to-convert-numeric-user-input-in-web-controls-to-numbers"></a><span data-ttu-id="018f8-102">如何：將使用者輸入 Web 控制項的數值轉換成數字</span><span class="sxs-lookup"><span data-stu-id="018f8-102">How to: Convert Numeric User Input in Web Controls to Numbers</span></span>
 <span data-ttu-id="018f8-103">由於網頁可在世界上的任何角落顯示，所以，使用者可以幾乎不限數量的格式來將數值資料輸入至 <xref:System.Web.UI.WebControls.TextBox> 控制項。</span><span class="sxs-lookup"><span data-stu-id="018f8-103">Because a Web page can be displayed anywhere in the world, users can input numeric data into a <xref:System.Web.UI.WebControls.TextBox> control in an almost unlimited number of formats.</span></span> <span data-ttu-id="018f8-104">因此，判斷網頁使用者的地區設定和文化特性就變得非常重要。</span><span class="sxs-lookup"><span data-stu-id="018f8-104">As a result, it is very important to determine the locale and culture of the Web page's user.</span></span> <span data-ttu-id="018f8-105">當您剖析使用者輸入時，可以接著套用使用者地區設定和文化特性所定義的格式設定慣例。</span><span class="sxs-lookup"><span data-stu-id="018f8-105">When you parse user input, you can then apply the formatting conventions defined by the user's locale and culture.</span></span>  

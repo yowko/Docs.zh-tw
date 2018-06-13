@@ -16,6 +16,7 @@ ms.sourcegitcommit: 11f11ca6cefe555972b3a5c99729d1a7523d8f50
 ms.translationtype: MT
 ms.contentlocale: zh-TW
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32743325"
 ---
 # <a name="ltauthenticationmodulesgt-element-network-settings"></a><span data-ttu-id="bcc37-102">&lt;authenticationModules&gt;項目 （網路設定）</span><span class="sxs-lookup"><span data-stu-id="bcc37-102">&lt;authenticationModules&gt; Element (Network Settings)</span></span>
 <span data-ttu-id="bcc37-103">指定用來驗證網路要求的模組。</span><span class="sxs-lookup"><span data-stu-id="bcc37-103">Specifies modules used to authenticate network requests.</span></span>  

@@ -13,6 +13,7 @@ ms.sourcegitcommit: 11f11ca6cefe555972b3a5c99729d1a7523d8f50
 ms.translationtype: HT
 ms.contentlocale: zh-TW
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32743949"
 ---
 # <a name="shadow-copying-assemblies"></a><span data-ttu-id="3dfa6-102">陰影複製組件</span><span class="sxs-lookup"><span data-stu-id="3dfa6-102">Shadow Copying Assemblies</span></span>
 <span data-ttu-id="3dfa6-103">陰影複製可讓應用程式定義域中使用的組件更新，而不需卸載應用程式定義域。</span><span class="sxs-lookup"><span data-stu-id="3dfa6-103">Shadow copying enables assemblies that are used in an application domain to be updated without unloading the application domain.</span></span> <span data-ttu-id="3dfa6-104">這對必須連續運作的應用程式特別有用，例如 ASP.NET 網站。</span><span class="sxs-lookup"><span data-stu-id="3dfa6-104">This is particularly useful for applications that must be available continuously, such as ASP.NET sites.</span></span>  

@@ -13,6 +13,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: HT
 ms.contentlocale: zh-TW
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33569499"
 ---
 # <a name="how-to-perform-an-xslt-transformation-by-using-an-assembly"></a><span data-ttu-id="66c5f-102">HOW TO：使用組件執行 XSLT 轉換</span><span class="sxs-lookup"><span data-stu-id="66c5f-102">How to: Perform an XSLT Transformation by Using an Assembly</span></span>
 <span data-ttu-id="66c5f-103">XSLT 編譯器 (xsltc.exe) 會編譯 XSLT 樣式表並產生組件。</span><span class="sxs-lookup"><span data-stu-id="66c5f-103">The XSLT compiler (xsltc.exe) compiles XSLT style sheets and generates an assembly.</span></span> <span data-ttu-id="66c5f-104">然後此組件可以直接傳遞到 <xref:System.Xml.Xsl.XslCompiledTransform.Load%28System.Type%29?displayProperty=nameWithType> 方法中。</span><span class="sxs-lookup"><span data-stu-id="66c5f-104">The assembly can be passed directly into the <xref:System.Xml.Xsl.XslCompiledTransform.Load%28System.Type%29?displayProperty=nameWithType> method.</span></span>  

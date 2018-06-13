@@ -18,6 +18,7 @@ ms.sourcegitcommit: 11f11ca6cefe555972b3a5c99729d1a7523d8f50
 ms.translationtype: MT
 ms.contentlocale: zh-TW
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32741980"
 ---
 # <a name="ltcleargt-element-for-connectionmanagement-network-settings"></a><span data-ttu-id="fe2e6-102">&lt;清除&gt;connectionManagement （網路設定） 的項目</span><span class="sxs-lookup"><span data-stu-id="fe2e6-102">&lt;clear&gt; Element for connectionManagement (Network Settings)</span></span>
 <span data-ttu-id="fe2e6-103">清除連線管理清單中。</span><span class="sxs-lookup"><span data-stu-id="fe2e6-103">Clears the connection management list.</span></span>  

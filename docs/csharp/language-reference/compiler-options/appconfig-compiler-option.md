@@ -13,6 +13,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: HT
 ms.contentlocale: zh-TW
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33214766"
 ---
 # <a name="-appconfig-c-compiler-options"></a><span data-ttu-id="fe14b-102">-appconfig (C# 編譯器選項)</span><span class="sxs-lookup"><span data-stu-id="fe14b-102">-appconfig (C# Compiler Options)</span></span>
 <span data-ttu-id="fe14b-103">**-appconfig** 編譯器選項可讓 C# 應用程式將組件應用程式組態檔 (app.config) 的位置指定到組件繫結時間的通用語言執行平台 (CLR)。</span><span class="sxs-lookup"><span data-stu-id="fe14b-103">The **-appconfig** compiler option enables a C# application to specify the location of an assembly's application configuration (app.config) file to the common language runtime (CLR) at assembly binding time.</span></span>  
