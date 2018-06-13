@@ -13,6 +13,7 @@ ms.sourcegitcommit: 11f11ca6cefe555972b3a5c99729d1a7523d8f50
 ms.translationtype: MT
 ms.contentlocale: zh-TW
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32747612"
 ---
 # <a name="ltdeclaredtypesgt"></a><span data-ttu-id="317c5-102">&lt;declaredTypes&gt;</span><span class="sxs-lookup"><span data-stu-id="317c5-102">&lt;declaredTypes&gt;</span></span>
 <span data-ttu-id="317c5-103">包含還原序列化時，<xref:System.Runtime.Serialization.DataContractSerializer> 使用的已知型別。</span><span class="sxs-lookup"><span data-stu-id="317c5-103">Contains the known types that the <xref:System.Runtime.Serialization.DataContractSerializer> uses when deserializing.</span></span>  

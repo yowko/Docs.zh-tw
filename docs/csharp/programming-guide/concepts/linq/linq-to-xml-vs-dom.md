@@ -7,6 +7,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: HT
 ms.contentlocale: zh-TW
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33333228"
 ---
 # <a name="linq-to-xml-vs-dom-c"></a><span data-ttu-id="37575-102">LINQ to XML 比較DOM (C#)</span><span class="sxs-lookup"><span data-stu-id="37575-102">LINQ to XML vs. DOM (C#)</span></span>
 <span data-ttu-id="37575-103">本節描述 [!INCLUDE[sqltecxlinq](~/includes/sqltecxlinq-md.md)] 和目前主流的 XML 程式設計 API (也就是 W3C 文件物件模型 (DOM)) 之間的一些主要差異。</span><span class="sxs-lookup"><span data-stu-id="37575-103">This section describes some key differences between [!INCLUDE[sqltecxlinq](~/includes/sqltecxlinq-md.md)] and the current predominant XML programming API, the W3C Document Object Model (DOM).</span></span>  

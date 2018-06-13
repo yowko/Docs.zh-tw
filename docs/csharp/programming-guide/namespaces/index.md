@@ -10,6 +10,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: HT
 ms.contentlocale: zh-TW
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33334346"
 ---
 # <a name="namespaces-c-programming-guide"></a><span data-ttu-id="73d99-102">命名空間 (C# 程式設計手冊)</span><span class="sxs-lookup"><span data-stu-id="73d99-102">Namespaces (C# Programming Guide)</span></span>
 <span data-ttu-id="73d99-103">C# 程式設計大量使用命名空間的原因有兩個。</span><span class="sxs-lookup"><span data-stu-id="73d99-103">Namespaces are heavily used in C# programming in two ways.</span></span> <span data-ttu-id="73d99-104">首先，.NET Framework 會使用命名空間組織其多種類別，如下所示：</span><span class="sxs-lookup"><span data-stu-id="73d99-104">First, the .NET Framework uses namespaces to organize its many classes, as follows:</span></span>  

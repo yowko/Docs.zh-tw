@@ -7,6 +7,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: HT
 ms.contentlocale: zh-TW
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33336618"
 ---
 # <a name="control-flow-in-async-programs-c"></a><span data-ttu-id="f5df5-102">非同步程式中的控制流程 (C#)</span><span class="sxs-lookup"><span data-stu-id="f5df5-102">Control Flow in Async Programs (C#)</span></span>
 <span data-ttu-id="f5df5-103">您可以使用 `async` 和 `await` 關鍵字更輕鬆地撰寫和維護非同步程式。</span><span class="sxs-lookup"><span data-stu-id="f5df5-103">You can write and maintain asynchronous programs more easily by using the `async` and `await` keywords.</span></span> <span data-ttu-id="f5df5-104">不過，如果您不了解程式的運作方式，則結果可能會讓您大吃一驚。</span><span class="sxs-lookup"><span data-stu-id="f5df5-104">However, the results might surprise you if you don't understand how your program operates.</span></span> <span data-ttu-id="f5df5-105">本主題透過簡單非同步程式來追蹤控制流程，以顯示控制何時從某個方法移至另一個方法以及每次傳輸的資訊。</span><span class="sxs-lookup"><span data-stu-id="f5df5-105">This topic traces the flow of control through a simple async program to show you when control moves from one method to another and what information is transferred each time.</span></span>  

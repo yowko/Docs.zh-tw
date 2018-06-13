@@ -18,6 +18,7 @@ ms.sourcegitcommit: 11f11ca6cefe555972b3a5c99729d1a7523d8f50
 ms.translationtype: HT
 ms.contentlocale: zh-TW
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32744625"
 ---
 # <a name="how-to-sign-an-assembly-with-a-strong-name"></a><span data-ttu-id="fe9a3-102">如何：使用強式名稱簽署組件</span><span class="sxs-lookup"><span data-stu-id="fe9a3-102">How to: Sign an Assembly with a Strong Name</span></span>
 <span data-ttu-id="fe9a3-103">以下是幾種以強式名稱簽署組件的方式：</span><span class="sxs-lookup"><span data-stu-id="fe9a3-103">There are a number of ways to sign an assembly with a strong name:</span></span>  

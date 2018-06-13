@@ -1,14 +1,6 @@
 ---
-title: "ICorDebugEnum::Reset 方法"
-ms.custom: 
+title: ICorDebugEnum::Reset 方法
 ms.date: 03/30/2017
-ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.technology:
-- dotnet-clr
-ms.tgt_pltfrm: 
-ms.topic: reference
 api_name:
 - ICorDebugEnum.Reset
 api_location:
@@ -23,35 +15,32 @@ helpviewer_keywords:
 ms.assetid: ab03dcb8-ceed-4f7a-abf8-9d31604bf90c
 topic_type:
 - apiref
-caps.latest.revision: 
 author: rpetrusha
 ms.author: ronpet
-manager: wpickett
-ms.workload:
-- dotnet
-ms.openlocfilehash: df84855ec385975645868559487d21ae5b3be866
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
-ms.translationtype: MT
+ms.openlocfilehash: dde1f8f0325bfe501c2b1ebf034cc1fe68cda4e6
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 05/04/2018
+ms.locfileid: "33412788"
 ---
-# <a name="icordebugenumreset-method"></a><span data-ttu-id="54872-102">ICorDebugEnum::Reset 方法</span><span class="sxs-lookup"><span data-stu-id="54872-102">ICorDebugEnum::Reset Method</span></span>
-<span data-ttu-id="54872-103">將游標移至列舉的開頭。</span><span class="sxs-lookup"><span data-stu-id="54872-103">Moves the cursor to the beginning of the enumeration.</span></span>  
+# <a name="icordebugenumreset-method"></a><span data-ttu-id="bc8ec-102">ICorDebugEnum::Reset 方法</span><span class="sxs-lookup"><span data-stu-id="bc8ec-102">ICorDebugEnum::Reset Method</span></span>
+<span data-ttu-id="bc8ec-103">將游標移至列舉的開頭。</span><span class="sxs-lookup"><span data-stu-id="bc8ec-103">Moves the cursor to the beginning of the enumeration.</span></span>  
   
-## <a name="syntax"></a><span data-ttu-id="54872-104">語法</span><span class="sxs-lookup"><span data-stu-id="54872-104">Syntax</span></span>  
+## <a name="syntax"></a><span data-ttu-id="bc8ec-104">語法</span><span class="sxs-lookup"><span data-stu-id="bc8ec-104">Syntax</span></span>  
   
 ```  
 HRESULT Reset ();  
 ```  
   
-## <a name="requirements"></a><span data-ttu-id="54872-105">需求</span><span class="sxs-lookup"><span data-stu-id="54872-105">Requirements</span></span>  
- <span data-ttu-id="54872-106">**平台：**看到[系統需求](../../../../docs/framework/get-started/system-requirements.md)。</span><span class="sxs-lookup"><span data-stu-id="54872-106">**Platforms:** See [System Requirements](../../../../docs/framework/get-started/system-requirements.md).</span></span>  
+## <a name="requirements"></a><span data-ttu-id="bc8ec-105">需求</span><span class="sxs-lookup"><span data-stu-id="bc8ec-105">Requirements</span></span>  
+ <span data-ttu-id="bc8ec-106">**平台：** 看到[系統需求](../../../../docs/framework/get-started/system-requirements.md)。</span><span class="sxs-lookup"><span data-stu-id="bc8ec-106">**Platforms:** See [System Requirements](../../../../docs/framework/get-started/system-requirements.md).</span></span>  
   
- <span data-ttu-id="54872-107">**標頭：** CorDebug.idl、 CorDebug.h</span><span class="sxs-lookup"><span data-stu-id="54872-107">**Header:** CorDebug.idl, CorDebug.h</span></span>  
+ <span data-ttu-id="bc8ec-107">**標頭：** CorDebug.idl、 CorDebug.h</span><span class="sxs-lookup"><span data-stu-id="bc8ec-107">**Header:** CorDebug.idl, CorDebug.h</span></span>  
   
- <span data-ttu-id="54872-108">**程式庫：** CorGuids.lib</span><span class="sxs-lookup"><span data-stu-id="54872-108">**Library:** CorGuids.lib</span></span>  
+ <span data-ttu-id="bc8ec-108">**程式庫：** CorGuids.lib</span><span class="sxs-lookup"><span data-stu-id="bc8ec-108">**Library:** CorGuids.lib</span></span>  
   
- <span data-ttu-id="54872-109">**.NET framework 版本：**[!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]</span><span class="sxs-lookup"><span data-stu-id="54872-109">**.NET Framework Versions:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]</span></span>  
+ <span data-ttu-id="bc8ec-109">**.NET framework 版本：** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]</span><span class="sxs-lookup"><span data-stu-id="bc8ec-109">**.NET Framework Versions:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]</span></span>  
   
-## <a name="see-also"></a><span data-ttu-id="54872-110">請參閱</span><span class="sxs-lookup"><span data-stu-id="54872-110">See Also</span></span>  
- [<span data-ttu-id="54872-111">ICorDebugEnum 介面 1</span><span class="sxs-lookup"><span data-stu-id="54872-111">ICorDebugEnum Interface1</span></span>](../../../../docs/framework/unmanaged-api/debugging/icordebugenum-interface1.md)
+## <a name="see-also"></a><span data-ttu-id="bc8ec-110">另請參閱</span><span class="sxs-lookup"><span data-stu-id="bc8ec-110">See Also</span></span>  
+ [<span data-ttu-id="bc8ec-111">ICorDebugEnum 介面 1</span><span class="sxs-lookup"><span data-stu-id="bc8ec-111">ICorDebugEnum Interface1</span></span>](../../../../docs/framework/unmanaged-api/debugging/icordebugenum-interface1.md)

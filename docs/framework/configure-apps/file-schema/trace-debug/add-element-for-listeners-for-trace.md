@@ -16,6 +16,7 @@ ms.sourcegitcommit: 11f11ca6cefe555972b3a5c99729d1a7523d8f50
 ms.translationtype: MT
 ms.contentlocale: zh-TW
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32747342"
 ---
 # <a name="ltaddgt-element-for-ltlistenersgt-for-lttracegt"></a><span data-ttu-id="b932e-102">&lt;新增&gt;元素&lt;接聽程式&gt;如&lt;追蹤&gt;</span><span class="sxs-lookup"><span data-stu-id="b932e-102">&lt;add&gt; Element for &lt;listeners&gt; for &lt;trace&gt;</span></span>
 <span data-ttu-id="b932e-103">加入至接聽程式**接聽程式**集合。</span><span class="sxs-lookup"><span data-stu-id="b932e-103">Adds a listener to the **Listeners** collection.</span></span>  

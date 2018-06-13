@@ -1,14 +1,6 @@
 ---
-title: "ICorDebugThread::GetID 方法"
-ms.custom: 
+title: ICorDebugThread::GetID 方法
 ms.date: 03/30/2017
-ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.technology:
-- dotnet-clr
-ms.tgt_pltfrm: 
-ms.topic: reference
 api_name:
 - ICorDebugThread.GetID
 api_location:
@@ -23,22 +15,19 @@ helpviewer_keywords:
 ms.assetid: f1de4584-92df-42f3-9da4-fca03a1c6821
 topic_type:
 - apiref
-caps.latest.revision: 
 author: rpetrusha
 ms.author: ronpet
-manager: wpickett
-ms.workload:
-- dotnet
-ms.openlocfilehash: cab889761c204204e7eda46fde0df42f31b89fbc
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
-ms.translationtype: MT
+ms.openlocfilehash: 52962ea7d2cf3dd1822b1a36cc6cfcb56bc427f4
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 05/04/2018
+ms.locfileid: "33417189"
 ---
-# <a name="icordebugthreadgetid-method"></a><span data-ttu-id="37d14-102">ICorDebugThread::GetID 方法</span><span class="sxs-lookup"><span data-stu-id="37d14-102">ICorDebugThread::GetID Method</span></span>
-<span data-ttu-id="37d14-103">取得此 ICorDebugThread 的使用中部分的目前作業系統識別項。</span><span class="sxs-lookup"><span data-stu-id="37d14-103">Gets the current operating system identifier of the active part of this ICorDebugThread.</span></span>  
+# <a name="icordebugthreadgetid-method"></a><span data-ttu-id="4a576-102">ICorDebugThread::GetID 方法</span><span class="sxs-lookup"><span data-stu-id="4a576-102">ICorDebugThread::GetID Method</span></span>
+<span data-ttu-id="4a576-103">取得此 ICorDebugThread 的使用中部分的目前作業系統識別項。</span><span class="sxs-lookup"><span data-stu-id="4a576-103">Gets the current operating system identifier of the active part of this ICorDebugThread.</span></span>  
   
-## <a name="syntax"></a><span data-ttu-id="37d14-104">語法</span><span class="sxs-lookup"><span data-stu-id="37d14-104">Syntax</span></span>  
+## <a name="syntax"></a><span data-ttu-id="4a576-104">語法</span><span class="sxs-lookup"><span data-stu-id="4a576-104">Syntax</span></span>  
   
 ```  
 HRESULT GetID (  
@@ -46,18 +35,18 @@ HRESULT GetID (
 );  
 ```  
   
-#### <a name="parameters"></a><span data-ttu-id="37d14-105">參數</span><span class="sxs-lookup"><span data-stu-id="37d14-105">Parameters</span></span>  
+#### <a name="parameters"></a><span data-ttu-id="4a576-105">參數</span><span class="sxs-lookup"><span data-stu-id="4a576-105">Parameters</span></span>  
  `pdwThreadId`  
- <span data-ttu-id="37d14-106">[out]執行緒的識別項。</span><span class="sxs-lookup"><span data-stu-id="37d14-106">[out] The identifier of the thread.</span></span>  
+ <span data-ttu-id="4a576-106">[out]執行緒的識別項。</span><span class="sxs-lookup"><span data-stu-id="4a576-106">[out] The identifier of the thread.</span></span>  
   
-## <a name="remarks"></a><span data-ttu-id="37d14-107">備註</span><span class="sxs-lookup"><span data-stu-id="37d14-107">Remarks</span></span>  
- <span data-ttu-id="37d14-108">作業系統識別項期間執行的處理序中，有可能變更，而且可以對不同的執行緒不同的值。</span><span class="sxs-lookup"><span data-stu-id="37d14-108">The operating system identifier can potentially change during execution of a process, and can be a different value for different parts of the thread.</span></span>  
+## <a name="remarks"></a><span data-ttu-id="4a576-107">備註</span><span class="sxs-lookup"><span data-stu-id="4a576-107">Remarks</span></span>  
+ <span data-ttu-id="4a576-108">作業系統識別項期間執行的處理序中，有可能變更，而且可以對不同的執行緒不同的值。</span><span class="sxs-lookup"><span data-stu-id="4a576-108">The operating system identifier can potentially change during execution of a process, and can be a different value for different parts of the thread.</span></span>  
   
-## <a name="requirements"></a><span data-ttu-id="37d14-109">需求</span><span class="sxs-lookup"><span data-stu-id="37d14-109">Requirements</span></span>  
- <span data-ttu-id="37d14-110">**平台：**看到[系統需求](../../../../docs/framework/get-started/system-requirements.md)。</span><span class="sxs-lookup"><span data-stu-id="37d14-110">**Platforms:** See [System Requirements](../../../../docs/framework/get-started/system-requirements.md).</span></span>  
+## <a name="requirements"></a><span data-ttu-id="4a576-109">需求</span><span class="sxs-lookup"><span data-stu-id="4a576-109">Requirements</span></span>  
+ <span data-ttu-id="4a576-110">**平台：** 看到[系統需求](../../../../docs/framework/get-started/system-requirements.md)。</span><span class="sxs-lookup"><span data-stu-id="4a576-110">**Platforms:** See [System Requirements](../../../../docs/framework/get-started/system-requirements.md).</span></span>  
   
- <span data-ttu-id="37d14-111">**標頭：** CorDebug.idl、 CorDebug.h</span><span class="sxs-lookup"><span data-stu-id="37d14-111">**Header:** CorDebug.idl, CorDebug.h</span></span>  
+ <span data-ttu-id="4a576-111">**標頭：** CorDebug.idl、 CorDebug.h</span><span class="sxs-lookup"><span data-stu-id="4a576-111">**Header:** CorDebug.idl, CorDebug.h</span></span>  
   
- <span data-ttu-id="37d14-112">**程式庫：** CorGuids.lib</span><span class="sxs-lookup"><span data-stu-id="37d14-112">**Library:** CorGuids.lib</span></span>  
+ <span data-ttu-id="4a576-112">**程式庫：** CorGuids.lib</span><span class="sxs-lookup"><span data-stu-id="4a576-112">**Library:** CorGuids.lib</span></span>  
   
- <span data-ttu-id="37d14-113">**.NET framework 版本：**[!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]</span><span class="sxs-lookup"><span data-stu-id="37d14-113">**.NET Framework Versions:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]</span></span>
+ <span data-ttu-id="4a576-113">**.NET framework 版本：** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]</span><span class="sxs-lookup"><span data-stu-id="4a576-113">**.NET Framework Versions:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]</span></span>
