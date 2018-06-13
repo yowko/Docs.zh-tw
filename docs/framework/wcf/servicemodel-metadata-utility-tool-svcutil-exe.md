@@ -12,6 +12,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: zh-TW
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33509145"
 ---
 # <a name="servicemodel-metadata-utility-tool-svcutilexe"></a>ServiceModel 中繼資料公用程式工具 (Svcutil.exe)
 ServiceModel 中繼資料公用程式工具用於從中繼資料文件產生服務模型程式碼，以及從服務模型程式碼產生中繼資料文件。  
@@ -85,10 +86,10 @@ ServiceModel 中繼資料公用程式工具用於從中繼資料文件產生服�
 |/excludeType:\<type>|指定要從參考的合約類型排除的完整型別名稱或組件限定型別名稱。<br /><br /> 將這個參數與個別 DLL 的 `/r` 一起使用時，會參考 XSD 類別的完整名稱。<br /><br /> 簡短形式：`/et`|  
 |/importXmlTypes|設定資料合約序列化程式，將非資料合約類型匯入為 IXmlSerializable 類型。|  
 |/internal|產生標示為內部的類別。 預設：只產生公用類別。<br /><br /> 簡短形式：`/i`|  
-|/language:\<語言 >|指定要用於產生程式碼的程式語言。 您應提供在 Machine.config 檔案中註冊的語言名稱，或繼承自 <xref:System.CodeDom.Compiler.CodeDomProvider> 之類別的完整名稱。<br /><br /> 值：c#、cs、csharp、vb、visualbasic、c++、cpp<br /><br /> 預設：csharp<br /><br /> 簡短形式： `/l` **附註：**此參數只支援 c + + 程式碼提供者隨附於 Visual Studio 2005 SP1。|  
+|/language:\<語言 >|指定要用於產生程式碼的程式語言。 您應提供在 Machine.config 檔案中註冊的語言名稱，或繼承自 <xref:System.CodeDom.Compiler.CodeDomProvider> 之類別的完整名稱。<br /><br /> 值：c#、cs、csharp、vb、visualbasic、c++、cpp<br /><br /> 預設：csharp<br /><br /> 簡短形式： `/l` **附註：** 此參數只支援 c + + 程式碼提供者隨附於 Visual Studio 2005 SP1。|  
 |/mergeConfig|將產生的組態合併至現有檔案，而非覆寫現有檔案。|  
 |/messageContract|產生「訊息合約」類型。<br /><br /> 簡短形式：`/mc`|  
-|/namespace:\<字串、 字串 >|指定從 WSDL 或 XML 結構描述 targetNamespace 到 CLR 命名空間的對應。 使用 '\*' 的目標命名空間對應所有的 Targetnamespace，而不會明確對應至該 CLR 命名空間。<br /><br /> 為了確保訊息合約名稱不會與作業名稱衝突，您應該以 `::` 限定型別參考，或確定是唯一的名稱。<br /><br /> 預設：自資料合約的結構描述文件之目標命名空間衍生而來。 預設命名空間用於所有其他產生的型別。<br /><br /> 簡短形式： `/n` **附註：**當產生的型別使用 XmlSerializer，就會支援單一命名空間對應。 所有產生的型別會在預設的命名空間或所指定的命名空間是 ' *'。|  
+|/namespace:\<字串、 字串 >|指定從 WSDL 或 XML 結構描述 targetNamespace 到 CLR 命名空間的對應。 使用 '\*' 的目標命名空間對應所有的 Targetnamespace，而不會明確對應至該 CLR 命名空間。<br /><br /> 為了確保訊息合約名稱不會與作業名稱衝突，您應該以 `::` 限定型別參考，或確定是唯一的名稱。<br /><br /> 預設：自資料合約的結構描述文件之目標命名空間衍生而來。 預設命名空間用於所有其他產生的型別。<br /><br /> 簡短形式： `/n` **附註：** 當產生的型別使用 XmlSerializer，就會支援單一命名空間對應。 所有產生的型別會在預設的命名空間或所指定的命名空間是 ' *'。|  
 |/noConfig|不要產生組態檔。|  
 |/noStdLib|不引用標準程式庫。<br /><br /> 預設：引用 Mscorlib.dll 和 System.servicemodel.dll。|  
 |/out:\<檔案 >|指定產生之程式碼的檔案名稱。<br /><br /> 預設：衍生自 WSDL 定義名稱、WSDL 服務名稱，或其中一個結構描述的目標命名空間。<br /><br /> 簡短形式：`/o`|  

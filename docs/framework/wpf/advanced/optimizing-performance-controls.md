@@ -11,6 +11,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: zh-TW
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33549259"
 ---
 # <a name="optimizing-performance-controls"></a>最佳化效能：控制項
 [!INCLUDE[TLA#tla_winclient](../../../../includes/tlasharptla-winclient-md.md)] 包含許多可用於大多數 Windows 應用程式的通用使用者介面 (UI) 元件。 本主題包含提升 UI 效能的技巧。  
@@ -39,7 +40,7 @@ ms.lasthandoff: 05/04/2018
   
 <a name="Container"></a>   
 ## <a name="container-recycling"></a>容器回收  
- 在.NET Framework 3.5 SP1，繼承的控制項加入 UI 虛擬化的最佳化<xref:System.Windows.Controls.ItemsControl>是*容器回收、*也可以改善捲動的效能。  當<xref:System.Windows.Controls.ItemsControl>，使用 UI 虛擬化會擴展，它會建立每個項目捲動到檢視，並終結的項目容器，每個項目捲動超出檢視的項目容器。 *容器回收*可讓控制項重複使用現有的項目容器的不同資料的項目，使項目容器不會持續建立和終結捲動<xref:System.Windows.Controls.ItemsControl>。 您可以選擇啟用回收藉由設定項目<xref:System.Windows.Controls.VirtualizingPanel.VirtualizationMode%2A>附加屬性<xref:System.Windows.Controls.VirtualizationMode.Recycling>。  
+ 在.NET Framework 3.5 SP1，繼承的控制項加入 UI 虛擬化的最佳化<xref:System.Windows.Controls.ItemsControl>是*容器回收、* 也可以改善捲動的效能。  當<xref:System.Windows.Controls.ItemsControl>，使用 UI 虛擬化會擴展，它會建立每個項目捲動到檢視，並終結的項目容器，每個項目捲動超出檢視的項目容器。 *容器回收*可讓控制項重複使用現有的項目容器的不同資料的項目，使項目容器不會持續建立和終結捲動<xref:System.Windows.Controls.ItemsControl>。 您可以選擇啟用回收藉由設定項目<xref:System.Windows.Controls.VirtualizingPanel.VirtualizationMode%2A>附加屬性<xref:System.Windows.Controls.VirtualizationMode.Recycling>。  
   
  任何<xref:System.Windows.Controls.ItemsControl>虛擬化可以使用容器回收的支援。  如需如何啟用容器回收上的範例<xref:System.Windows.Controls.ListBox>，請參閱[改善捲動的效能 ListBox](../../../../docs/framework/wpf/controls/how-to-improve-the-scrolling-performance-of-a-listbox.md)。  
   

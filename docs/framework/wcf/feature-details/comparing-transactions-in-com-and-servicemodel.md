@@ -7,6 +7,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: zh-TW
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33488643"
 ---
 # <a name="comparing-transactions-in-com-and-servicemodel"></a>比較 COM+ 與 ServiceModel 的異動
 本主題討論如何模擬異動式 COM + 服務使用 Windows Communication Foundation (WCF) 屬性的行為<xref:System.ServiceModel>命名空間提供。  

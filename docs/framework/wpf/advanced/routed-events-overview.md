@@ -20,6 +20,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: zh-TW
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33549759"
 ---
 # <a name="routed-events-overview"></a>路由事件概觀
 本主題說明 [!INCLUDE[TLA#tla_winclient](../../../../includes/tlasharptla-winclient-md.md)] 中路由事件的概念。 本主題會定義路由事件的術語、說明如何透過元素的樹狀結構路由傳送路由事件、摘要說明如何處理路由事件，以及介紹如何建立您自己的自訂路由事件。
@@ -57,14 +58,14 @@ ms.lasthandoff: 05/04/2018
   
  **控制項組合和封裝︰**[!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] 中的各種控制項具有豐富的內容模型。 例如，您可以在其中放置內的映像<xref:System.Windows.Controls.Button>，來有效地擴充按鈕的視覺化樹狀結構。 不過，加入的影像必須不中斷的點擊測試行為造成的按鈕，以回應<xref:System.Windows.Controls.Primitives.ButtonBase.Click>其內容，即使使用者在技術上屬於映像的像素為單位。  
   
- **單一處理常式附加點︰**在 [!INCLUDE[TLA#tla_winforms](../../../../includes/tlasharptla-winforms-md.md)] 中，您必須多次附加相同的處理常式，以處理可從多個元素引發的事件。 路由事件可讓您只需附加該處理常式一次 (如上一個範例中所示)，然後就能視需要使用處理常式邏輯判斷此事件來自何處。 例如，這可能是先前所示之 [!INCLUDE[TLA2#tla_xaml](../../../../includes/tla2sharptla-xaml-md.md)] 的處理常式：  
+ **單一處理常式附加點︰** 在 [!INCLUDE[TLA#tla_winforms](../../../../includes/tlasharptla-winforms-md.md)] 中，您必須多次附加相同的處理常式，以處理可從多個元素引發的事件。 路由事件可讓您只需附加該處理常式一次 (如上一個範例中所示)，然後就能視需要使用處理常式邏輯判斷此事件來自何處。 例如，這可能是先前所示之 [!INCLUDE[TLA2#tla_xaml](../../../../includes/tla2sharptla-xaml-md.md)] 的處理常式：  
   
  [!code-csharp[EventOvwSupport#GroupButtonCodeBehind](../../../../samples/snippets/csharp/VS_Snippets_Wpf/EventOvwSupport/CSharp/default.xaml.cs#groupbuttoncodebehind)]
  [!code-vb[EventOvwSupport#GroupButtonCodeBehind](../../../../samples/snippets/visualbasic/VS_Snippets_Wpf/EventOvwSupport/visualbasic/default.xaml.vb#groupbuttoncodebehind)]  
   
- **類別處理：**路由事件允許類別所定義的靜態處理常式。 這個類別處理常式有機會在任何附加的執行個體處理常式之前處理事件。  
+ **類別處理：** 路由事件允許類別所定義的靜態處理常式。 這個類別處理常式有機會在任何附加的執行個體處理常式之前處理事件。  
   
- **參考事件，但不使用反射：**特定程式碼和標記技術需要識別特定事件的方式。 路由的事件建立<xref:System.Windows.RoutedEvent>欄位做為識別項提供了強固的事件識別技巧，不需要靜態或執行階段反映。  
+ **參考事件，但不使用反射：** 特定程式碼和標記技術需要識別特定事件的方式。 路由的事件建立<xref:System.Windows.RoutedEvent>欄位做為識別項提供了強固的事件識別技巧，不需要靜態或執行階段反映。  
   
 ### <a name="how-routed-events-are-implemented"></a>路由事件的實作方式  
  路由的事件是[!INCLUDE[TLA2#tla_clr](../../../../includes/tla2sharptla-clr-md.md)]的執行個體所支援的事件<xref:System.Windows.RoutedEvent>類別，並向[!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)]事件系統。 <xref:System.Windows.RoutedEvent>從登錄取得執行個體通常會被保留為`public` `static` `readonly`欄位成員之類別的註冊，並因此 「 擁有 」 路由的事件。 與名稱完全相同之 [!INCLUDE[TLA2#tla_clr](../../../../includes/tla2sharptla-clr-md.md)] 事件 (有時稱為「包裝函式」事件) 的關聯，可藉由覆寫 [!INCLUDE[TLA2#tla_clr](../../../../includes/tla2sharptla-clr-md.md)] 事件的 `add` 和 `remove` 實作來完成。 一般而言，`add` 和 `remove` 會保留為隱含的預設值，以使用適當的語言特定事件語法來加入和移除該事件的處理常式。 路由的事件的支援和連線機制在概念上類似的相依性屬性的方式[!INCLUDE[TLA2#tla_clr](../../../../includes/tla2sharptla-clr-md.md)]屬性，並受到<xref:System.Windows.DependencyProperty>類別，並向[!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)]屬性系統。  
@@ -85,11 +86,11 @@ ms.lasthandoff: 05/04/2018
 ## <a name="routing-strategies"></a>路由傳送策略  
  路由事件會使用下列其中一個路由傳送策略：  
   
--   **事件反昇︰**會叫用事件來源上的事件處理常式。 路由事件接著會路由傳送到後續的父元素，直到其到達元素樹狀結構的根元素為止。 大部分的路由事件會使用事件反昇路由傳送策略。 事件反昇的路由事件通常是用來報告來自不同控制項或其他 UI 元素的輸入或狀態變更。  
+-   **事件反昇︰** 會叫用事件來源上的事件處理常式。 路由事件接著會路由傳送到後續的父元素，直到其到達元素樹狀結構的根元素為止。 大部分的路由事件會使用事件反昇路由傳送策略。 事件反昇的路由事件通常是用來報告來自不同控制項或其他 UI 元素的輸入或狀態變更。  
   
--   **直接︰**只有來源元素本身有機會叫用處理常式來回應。 這類似於 [!INCLUDE[TLA#tla_winforms](../../../../includes/tlasharptla-winforms-md.md)] 針對事件所使用的「路由傳送」。 不過，不同於標準[!INCLUDE[TLA2#tla_clr](../../../../includes/tla2sharptla-clr-md.md)]事件，直接路由的事件的支援類別處理 （類別處理將在後續的章節中說明），而且可以供<xref:System.Windows.EventSetter>和<xref:System.Windows.EventTrigger>。  
+-   **直接︰** 只有來源元素本身有機會叫用處理常式來回應。 這類似於 [!INCLUDE[TLA#tla_winforms](../../../../includes/tlasharptla-winforms-md.md)] 針對事件所使用的「路由傳送」。 不過，不同於標準[!INCLUDE[TLA2#tla_clr](../../../../includes/tla2sharptla-clr-md.md)]事件，直接路由的事件的支援類別處理 （類別處理將在後續的章節中說明），而且可以供<xref:System.Windows.EventSetter>和<xref:System.Windows.EventTrigger>。  
   
--   **通道︰**一開始會叫用元素樹狀結構根元素上的事件處理常式。 路由事件接著會在路由中朝向屬於路由事件來源的節點元素 (會引發路由事件的元素) 移動，以透過後續的子元素周遊該路由。 通道路由事件時常會做為複合控制項的一部分來使用或處理，這類來自複合組件的事件可利用專用於該完整控制項的事件來刻意隱藏或取代。 [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] 中提供的輸入事件通常會實作為成對的通道/事件反昇組合。 由於用於配對的命名慣例，通道事件有時也稱為預覽事件。  
+-   **通道︰** 一開始會叫用元素樹狀結構根元素上的事件處理常式。 路由事件接著會在路由中朝向屬於路由事件來源的節點元素 (會引發路由事件的元素) 移動，以透過後續的子元素周遊該路由。 通道路由事件時常會做為複合控制項的一部分來使用或處理，這類來自複合組件的事件可利用專用於該完整控制項的事件來刻意隱藏或取代。 [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] 中提供的輸入事件通常會實作為成對的通道/事件反昇組合。 由於用於配對的命名慣例，通道事件有時也稱為預覽事件。  
   
 <a name="why_use"></a>   
 ## <a name="why-use-routed-events"></a>為什麼要使用路由事件？  

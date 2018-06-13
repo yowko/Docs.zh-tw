@@ -19,9 +19,10 @@ author: rpetrusha
 ms.author: ronpet
 ms.openlocfilehash: 6cd5dbc27376f8cd391f9ecc006c04d9a3a1eea8
 ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
-ms.translationtype: MT
+ms.translationtype: HT
 ms.contentlocale: zh-TW
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33419740"
 ---
 # <a name="icordebugprocessenumnext-method"></a>ICorDebugProcessEnum::Next 方法
 取得 ICorDebugProcess 執行個體的指定的數目從列舉型別，從目前位置開始。  
@@ -48,7 +49,7 @@ HRESULT Next (
  [out]指標的數目`ICorDebugProcess`實際傳回的執行個體。 這個值可以是 null 如果`celt`是其中一個。  
   
 ## <a name="requirements"></a>需求  
- **平台：**看到[系統需求](../../../../docs/framework/get-started/system-requirements.md)。  
+ **平台：** 看到[系統需求](../../../../docs/framework/get-started/system-requirements.md)。  
   
  **標頭：** CorDebug.idl、 CorDebug.h  
   

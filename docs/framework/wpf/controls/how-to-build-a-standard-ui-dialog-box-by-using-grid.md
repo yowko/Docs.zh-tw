@@ -13,6 +13,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: zh-TW
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33551878"
 ---
 # <a name="how-to-build-a-standard-ui-dialog-box-by-using-grid"></a>如何：使用 Grid 建置標準 UI 對話方塊
 這個範例示範如何建立標準[!INCLUDE[TLA#tla_ui](../../../../includes/tlasharptla-ui-md.md)]對話方塊使用<xref:System.Windows.Controls.Grid>項目。  

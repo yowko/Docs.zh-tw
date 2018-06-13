@@ -11,9 +11,10 @@ author: rpetrusha
 ms.author: ronpet
 ms.openlocfilehash: 1f6c20a69894c95086dbd813601ac8811ab4f337
 ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
-ms.translationtype: MT
+ms.translationtype: HT
 ms.contentlocale: zh-TW
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33429220"
 ---
 # <a name="deprecated-clr-hosting-interfaces-and-coclasses"></a>已被取代的 CLR 裝載介面和 Coclass
 本節描述 unmanaged 介面主機可以使用整合 common language runtime (CLR) 在.NET framework 1.0 和 1.1 版中將其應用程式。 這些介面提供主應用程式設定和執行階段載入處理序的方法。  

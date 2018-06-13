@@ -9,6 +9,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: zh-TW
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33547481"
 ---
 # <a name="how-to-handle-the-contextmenuopening-event"></a>如何：處理 ContextMenuOpening 事件
 <xref:System.Windows.FrameworkElement.ContextMenuOpening>可以處理事件，或是調整現有內容功能表之前，顯示或隱藏的功能表會顯示藉由設定應用程式中<xref:System.Windows.RoutedEventArgs.Handled%2A>屬性`true`事件資料。 設定的一般原因<xref:System.Windows.RoutedEventArgs.Handled%2A>至`true`在事件資料的取代完全與新的功能表<xref:System.Windows.Controls.ContextMenu>物件，有時需要取消作業並啟動新的開啟。 如果您撰寫處理常式<xref:System.Windows.FrameworkElement.ContextMenuOpening>事件，您應該留意之間的時間問題<xref:System.Windows.Controls.ContextMenu>控制項和服務負責開啟並定位操作功能表控制項的一般情況下。 本主題說明一些不同的內容功能表開啟案例的程式碼技術，並將說明其中時間問題派上用場的情況。  

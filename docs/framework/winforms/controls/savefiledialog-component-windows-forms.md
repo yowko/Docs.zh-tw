@@ -10,6 +10,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: zh-TW
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33537134"
 ---
 # <a name="savefiledialog-component-windows-forms"></a>SaveFileDialog 元件 (Windows Form)
 Windows Form <xref:System.Windows.Forms.SaveFileDialog> 元件是預先設定的對話方塊， 與 Windows 所使用的標準 [儲存檔案] 對話方塊相同。 它繼承自 <xref:System.Windows.Forms.CommonDialog> 類別。  

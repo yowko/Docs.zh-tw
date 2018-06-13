@@ -11,6 +11,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: zh-TW
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33537956"
 ---
 # <a name="toolstripstatuslabel-control"></a>ToolStripStatusLabel 控制項
 <xref:System.Windows.Forms.ToolStripStatusLabel>提供中的顯示區域<xref:System.Windows.Forms.StatusStrip>文字、 影像，或兩者。  

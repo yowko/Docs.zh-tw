@@ -12,6 +12,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: zh-TW
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33551683"
 ---
 # <a name="listbox"></a>ListBox
 A<xref:System.Windows.Controls.ListBox>控制項可讓使用者可選取的項目清單。  

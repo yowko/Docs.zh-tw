@@ -11,9 +11,10 @@ author: mairaw
 ms.author: mairaw
 ms.openlocfilehash: 2e7bd0fabcd4838990ae8704de4f83e9677dbc08
 ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
-ms.translationtype: MT
+ms.translationtype: HT
 ms.contentlocale: zh-TW
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33426233"
 ---
 # <a name="diagnostics-symbol-store-structures"></a>診斷符號存放區結構
 本主題描述診斷符號存放區應用程式開發介面使用的 unmanaged 的結構。  
