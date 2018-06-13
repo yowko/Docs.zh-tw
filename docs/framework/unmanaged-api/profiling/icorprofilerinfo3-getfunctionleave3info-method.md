@@ -1,14 +1,6 @@
 ---
-title: "ICorProfilerInfo3::GetFunctionLeave3Info 方法"
-ms.custom: 
+title: ICorProfilerInfo3::GetFunctionLeave3Info 方法
 ms.date: 03/30/2017
-ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.technology:
-- dotnet-clr
-ms.tgt_pltfrm: 
-ms.topic: reference
 api_name:
 - ICorProfilerInfo3.GetFunctionLeave3Info Method
 api_location:
@@ -23,22 +15,19 @@ helpviewer_keywords:
 ms.assetid: df7083d2-fd43-44c7-9ce5-912c25cef0ff
 topic_type:
 - apiref
-caps.latest.revision: 
 author: mairaw
 ms.author: mairaw
-manager: wpickett
-ms.workload:
-- dotnet
-ms.openlocfilehash: 5cbd73b6bfe89bec50eff0e09ec078db912adf25
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
-ms.translationtype: MT
+ms.openlocfilehash: 70fdc548c02015f0950f009abe94652795cba568
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 05/04/2018
+ms.locfileid: "33459789"
 ---
-# <a name="icorprofilerinfo3getfunctionleave3info-method"></a><span data-ttu-id="72428-102">ICorProfilerInfo3::GetFunctionLeave3Info 方法</span><span class="sxs-lookup"><span data-stu-id="72428-102">ICorProfilerInfo3::GetFunctionLeave3Info Method</span></span>
-<span data-ttu-id="72428-103">提供的堆疊框架和傳回值的函式報告給分析工具所[FunctionLeave3WithInfo 函式](../../../../docs/framework/unmanaged-api/profiling/functionleave3withinfo-function.md)函式。</span><span class="sxs-lookup"><span data-stu-id="72428-103">Provides the stack frame and return value of the function that is being reported to the profiler by the [FunctionLeave3WithInfo function](../../../../docs/framework/unmanaged-api/profiling/functionleave3withinfo-function.md) function.</span></span> <span data-ttu-id="72428-104">只能在 `FunctionLeave3WithInfo` 回呼期間呼叫這個方法。</span><span class="sxs-lookup"><span data-stu-id="72428-104">This method can be called only during the `FunctionLeave3WithInfo` callback.</span></span>  
+# <a name="icorprofilerinfo3getfunctionleave3info-method"></a><span data-ttu-id="c0ee9-102">ICorProfilerInfo3::GetFunctionLeave3Info 方法</span><span class="sxs-lookup"><span data-stu-id="c0ee9-102">ICorProfilerInfo3::GetFunctionLeave3Info Method</span></span>
+<span data-ttu-id="c0ee9-103">提供的堆疊框架和傳回值的函式報告給分析工具所[FunctionLeave3WithInfo 函式](../../../../docs/framework/unmanaged-api/profiling/functionleave3withinfo-function.md)函式。</span><span class="sxs-lookup"><span data-stu-id="c0ee9-103">Provides the stack frame and return value of the function that is being reported to the profiler by the [FunctionLeave3WithInfo function](../../../../docs/framework/unmanaged-api/profiling/functionleave3withinfo-function.md) function.</span></span> <span data-ttu-id="c0ee9-104">只能在 `FunctionLeave3WithInfo` 回呼期間呼叫這個方法。</span><span class="sxs-lookup"><span data-stu-id="c0ee9-104">This method can be called only during the `FunctionLeave3WithInfo` callback.</span></span>  
   
-## <a name="syntax"></a><span data-ttu-id="72428-105">語法</span><span class="sxs-lookup"><span data-stu-id="72428-105">Syntax</span></span>  
+## <a name="syntax"></a><span data-ttu-id="c0ee9-105">語法</span><span class="sxs-lookup"><span data-stu-id="c0ee9-105">Syntax</span></span>  
   
 ```  
 HRESULT GetFunctionLeave3Info(  
@@ -48,34 +37,34 @@ HRESULT GetFunctionLeave3Info(
             [out] COR_PRF_FUNCTION_ARGUMENT_RANGE *pRetvalRange);  
 ```  
   
-#### <a name="parameters"></a><span data-ttu-id="72428-106">參數</span><span class="sxs-lookup"><span data-stu-id="72428-106">Parameters</span></span>  
+#### <a name="parameters"></a><span data-ttu-id="c0ee9-106">參數</span><span class="sxs-lookup"><span data-stu-id="c0ee9-106">Parameters</span></span>  
  `functionId`  
- <span data-ttu-id="72428-107">[in]`FunctionID`函式傳回。</span><span class="sxs-lookup"><span data-stu-id="72428-107">[in] The `FunctionID` of the function that is returning.</span></span>  
+ <span data-ttu-id="c0ee9-107">[in]`FunctionID`函式傳回。</span><span class="sxs-lookup"><span data-stu-id="c0ee9-107">[in] The `FunctionID` of the function that is returning.</span></span>  
   
  `eltInfo`  
- <span data-ttu-id="72428-108">[in] 代表特定堆疊框架之資訊的不透明控制代碼。</span><span class="sxs-lookup"><span data-stu-id="72428-108">[in] An opaque handle that represents information about a given stack frame.</span></span> <span data-ttu-id="72428-109">程式碼剖析工具應該提供相同`eltInfo`所提供的程式碼剖析工具[FunctionLeave3WithInfo](../../../../docs/framework/unmanaged-api/profiling/functionleave3withinfo-function.md)函式。</span><span class="sxs-lookup"><span data-stu-id="72428-109">The profiler should provide the same `eltInfo` that was given to the profiler by the [FunctionLeave3WithInfo](../../../../docs/framework/unmanaged-api/profiling/functionleave3withinfo-function.md) function.</span></span>  
+ <span data-ttu-id="c0ee9-108">[in] 代表特定堆疊框架之資訊的不透明控制代碼。</span><span class="sxs-lookup"><span data-stu-id="c0ee9-108">[in] An opaque handle that represents information about a given stack frame.</span></span> <span data-ttu-id="c0ee9-109">程式碼剖析工具應該提供相同`eltInfo`所提供的程式碼剖析工具[FunctionLeave3WithInfo](../../../../docs/framework/unmanaged-api/profiling/functionleave3withinfo-function.md)函式。</span><span class="sxs-lookup"><span data-stu-id="c0ee9-109">The profiler should provide the same `eltInfo` that was given to the profiler by the [FunctionLeave3WithInfo](../../../../docs/framework/unmanaged-api/profiling/functionleave3withinfo-function.md) function.</span></span>  
   
  `pFrameInfo`  
- <span data-ttu-id="72428-110">[out] 代表特定堆疊框架之泛型資訊的不透明控制代碼。</span><span class="sxs-lookup"><span data-stu-id="72428-110">[out] An opaque handle that represents generics information about a given stack frame.</span></span> <span data-ttu-id="72428-111">此控制代碼只有在程式碼剖析工具呼叫 `GetFunctionLeave3Info` 方法的 `FunctionLeave3WithInfo` 回呼中有效。</span><span class="sxs-lookup"><span data-stu-id="72428-111">This handle is valid only during the `FunctionLeave3WithInfo` callback in which the profiler called the `GetFunctionLeave3Info` method.</span></span>  
+ <span data-ttu-id="c0ee9-110">[out] 代表特定堆疊框架之泛型資訊的不透明控制代碼。</span><span class="sxs-lookup"><span data-stu-id="c0ee9-110">[out] An opaque handle that represents generics information about a given stack frame.</span></span> <span data-ttu-id="c0ee9-111">此控制代碼只有在程式碼剖析工具呼叫 `GetFunctionLeave3Info` 方法的 `FunctionLeave3WithInfo` 回呼中有效。</span><span class="sxs-lookup"><span data-stu-id="c0ee9-111">This handle is valid only during the `FunctionLeave3WithInfo` callback in which the profiler called the `GetFunctionLeave3Info` method.</span></span>  
   
  `pRetvalRange`  
- <span data-ttu-id="72428-112">[out]指標[COR_PRF_FUNCTION_ARGUMENT_RANGE](../../../../docs/framework/unmanaged-api/profiling/cor-prf-function-argument-range-structure.md)結構，其中包含從函數傳回的值。</span><span class="sxs-lookup"><span data-stu-id="72428-112">[out] A pointer to a [COR_PRF_FUNCTION_ARGUMENT_RANGE](../../../../docs/framework/unmanaged-api/profiling/cor-prf-function-argument-range-structure.md) structure that contains the value that is returned from the function.</span></span> <span data-ttu-id="72428-113">若要存取傳回值資訊`COR_PRF_ENABLE_FUNCTION_RETVAL`旗標必須設定。</span><span class="sxs-lookup"><span data-stu-id="72428-113">To access return value information, the `COR_PRF_ENABLE_FUNCTION_RETVAL` flag must be set.</span></span> <span data-ttu-id="72428-114">分析工具可以使用[icorprofilerinfo:: Seteventmask 方法](../../../../docs/framework/unmanaged-api/profiling/icorprofilerinfo-seteventmask-method.md)來設定事件旗標。</span><span class="sxs-lookup"><span data-stu-id="72428-114">The profiler can use the [ICorProfilerInfo::SetEventMask method](../../../../docs/framework/unmanaged-api/profiling/icorprofilerinfo-seteventmask-method.md) to set the event flags.</span></span>  
+ <span data-ttu-id="c0ee9-112">[out]指標[COR_PRF_FUNCTION_ARGUMENT_RANGE](../../../../docs/framework/unmanaged-api/profiling/cor-prf-function-argument-range-structure.md)結構，其中包含從函數傳回的值。</span><span class="sxs-lookup"><span data-stu-id="c0ee9-112">[out] A pointer to a [COR_PRF_FUNCTION_ARGUMENT_RANGE](../../../../docs/framework/unmanaged-api/profiling/cor-prf-function-argument-range-structure.md) structure that contains the value that is returned from the function.</span></span> <span data-ttu-id="c0ee9-113">若要存取傳回值資訊`COR_PRF_ENABLE_FUNCTION_RETVAL`旗標必須設定。</span><span class="sxs-lookup"><span data-stu-id="c0ee9-113">To access return value information, the `COR_PRF_ENABLE_FUNCTION_RETVAL` flag must be set.</span></span> <span data-ttu-id="c0ee9-114">分析工具可以使用[icorprofilerinfo:: Seteventmask 方法](../../../../docs/framework/unmanaged-api/profiling/icorprofilerinfo-seteventmask-method.md)來設定事件旗標。</span><span class="sxs-lookup"><span data-stu-id="c0ee9-114">The profiler can use the [ICorProfilerInfo::SetEventMask method](../../../../docs/framework/unmanaged-api/profiling/icorprofilerinfo-seteventmask-method.md) to set the event flags.</span></span>  
   
-## <a name="remarks"></a><span data-ttu-id="72428-115">備註</span><span class="sxs-lookup"><span data-stu-id="72428-115">Remarks</span></span>  
+## <a name="remarks"></a><span data-ttu-id="c0ee9-115">備註</span><span class="sxs-lookup"><span data-stu-id="c0ee9-115">Remarks</span></span>  
   
-## <a name="requirements"></a><span data-ttu-id="72428-116">需求</span><span class="sxs-lookup"><span data-stu-id="72428-116">Requirements</span></span>  
- <span data-ttu-id="72428-117">**平台：**看到[系統需求](../../../../docs/framework/get-started/system-requirements.md)。</span><span class="sxs-lookup"><span data-stu-id="72428-117">**Platforms:** See [System Requirements](../../../../docs/framework/get-started/system-requirements.md).</span></span>  
+## <a name="requirements"></a><span data-ttu-id="c0ee9-116">需求</span><span class="sxs-lookup"><span data-stu-id="c0ee9-116">Requirements</span></span>  
+ <span data-ttu-id="c0ee9-117">**平台：** 看到[系統需求](../../../../docs/framework/get-started/system-requirements.md)。</span><span class="sxs-lookup"><span data-stu-id="c0ee9-117">**Platforms:** See [System Requirements](../../../../docs/framework/get-started/system-requirements.md).</span></span>  
   
- <span data-ttu-id="72428-118">**標頭：** CorProf.idl、CorProf.h</span><span class="sxs-lookup"><span data-stu-id="72428-118">**Header:** CorProf.idl, CorProf.h</span></span>  
+ <span data-ttu-id="c0ee9-118">**標頭：** CorProf.idl、CorProf.h</span><span class="sxs-lookup"><span data-stu-id="c0ee9-118">**Header:** CorProf.idl, CorProf.h</span></span>  
   
- <span data-ttu-id="72428-119">**程式庫：** CorGuids.lib</span><span class="sxs-lookup"><span data-stu-id="72428-119">**Library:** CorGuids.lib</span></span>  
+ <span data-ttu-id="c0ee9-119">**程式庫：** CorGuids.lib</span><span class="sxs-lookup"><span data-stu-id="c0ee9-119">**Library:** CorGuids.lib</span></span>  
   
- <span data-ttu-id="72428-120">**.NET framework 版本：**[!INCLUDE[net_current_v40plus](../../../../includes/net-current-v40plus-md.md)]</span><span class="sxs-lookup"><span data-stu-id="72428-120">**.NET Framework Versions:** [!INCLUDE[net_current_v40plus](../../../../includes/net-current-v40plus-md.md)]</span></span>  
+ <span data-ttu-id="c0ee9-120">**.NET framework 版本：** [!INCLUDE[net_current_v40plus](../../../../includes/net-current-v40plus-md.md)]</span><span class="sxs-lookup"><span data-stu-id="c0ee9-120">**.NET Framework Versions:** [!INCLUDE[net_current_v40plus](../../../../includes/net-current-v40plus-md.md)]</span></span>  
   
-## <a name="see-also"></a><span data-ttu-id="72428-121">請參閱</span><span class="sxs-lookup"><span data-stu-id="72428-121">See Also</span></span>  
- [<span data-ttu-id="72428-122">FunctionEnter3WithInfo</span><span class="sxs-lookup"><span data-stu-id="72428-122">FunctionEnter3WithInfo</span></span>](../../../../docs/framework/unmanaged-api/profiling/functionenter3withinfo-function.md)  
- [<span data-ttu-id="72428-123">FunctionLeave3WithInfo</span><span class="sxs-lookup"><span data-stu-id="72428-123">FunctionLeave3WithInfo</span></span>](../../../../docs/framework/unmanaged-api/profiling/functionleave3withinfo-function.md)  
- [<span data-ttu-id="72428-124">FunctionTailcall3WithInfo</span><span class="sxs-lookup"><span data-stu-id="72428-124">FunctionTailcall3WithInfo</span></span>](../../../../docs/framework/unmanaged-api/profiling/functiontailcall3withinfo-function.md)  
- [<span data-ttu-id="72428-125">ICorProfilerInfo3 介面</span><span class="sxs-lookup"><span data-stu-id="72428-125">ICorProfilerInfo3 Interface</span></span>](../../../../docs/framework/unmanaged-api/profiling/icorprofilerinfo3-interface.md)  
- [<span data-ttu-id="72428-126">分析介面</span><span class="sxs-lookup"><span data-stu-id="72428-126">Profiling Interfaces</span></span>](../../../../docs/framework/unmanaged-api/profiling/profiling-interfaces.md)  
- [<span data-ttu-id="72428-127">程式碼剖析</span><span class="sxs-lookup"><span data-stu-id="72428-127">Profiling</span></span>](../../../../docs/framework/unmanaged-api/profiling/index.md)
+## <a name="see-also"></a><span data-ttu-id="c0ee9-121">另請參閱</span><span class="sxs-lookup"><span data-stu-id="c0ee9-121">See Also</span></span>  
+ [<span data-ttu-id="c0ee9-122">FunctionEnter3WithInfo</span><span class="sxs-lookup"><span data-stu-id="c0ee9-122">FunctionEnter3WithInfo</span></span>](../../../../docs/framework/unmanaged-api/profiling/functionenter3withinfo-function.md)  
+ [<span data-ttu-id="c0ee9-123">FunctionLeave3WithInfo</span><span class="sxs-lookup"><span data-stu-id="c0ee9-123">FunctionLeave3WithInfo</span></span>](../../../../docs/framework/unmanaged-api/profiling/functionleave3withinfo-function.md)  
+ [<span data-ttu-id="c0ee9-124">FunctionTailcall3WithInfo</span><span class="sxs-lookup"><span data-stu-id="c0ee9-124">FunctionTailcall3WithInfo</span></span>](../../../../docs/framework/unmanaged-api/profiling/functiontailcall3withinfo-function.md)  
+ [<span data-ttu-id="c0ee9-125">ICorProfilerInfo3 介面</span><span class="sxs-lookup"><span data-stu-id="c0ee9-125">ICorProfilerInfo3 Interface</span></span>](../../../../docs/framework/unmanaged-api/profiling/icorprofilerinfo3-interface.md)  
+ [<span data-ttu-id="c0ee9-126">分析介面</span><span class="sxs-lookup"><span data-stu-id="c0ee9-126">Profiling Interfaces</span></span>](../../../../docs/framework/unmanaged-api/profiling/profiling-interfaces.md)  
+ [<span data-ttu-id="c0ee9-127">程式碼剖析</span><span class="sxs-lookup"><span data-stu-id="c0ee9-127">Profiling</span></span>](../../../../docs/framework/unmanaged-api/profiling/index.md)
