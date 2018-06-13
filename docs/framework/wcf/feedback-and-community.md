@@ -10,6 +10,7 @@ ms.sourcegitcommit: 15109844229ade1c6449f48f3834db1b26907824
 ms.translationtype: MT
 ms.contentlocale: zh-TW
 ms.lasthandoff: 05/07/2018
+ms.locfileid: "33810157"
 ---
 # <a name="feedback-and-community"></a>意見與社群
 我們非常感謝您的意見與問題相關 Windows Communication Foundation (WCF) 或[!INCLUDE[infocard](../../../includes/infocard-md.md)]文件。 在 SDK 中每一頁的底部都有一句「請將您對這個主題的意見傳送至 Microsoft」。 請按一下 [意見] 連結，提供您對於特定主題的看法或建議。  

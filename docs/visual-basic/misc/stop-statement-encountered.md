@@ -9,6 +9,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: zh-TW
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33640315"
 ---
 # <a name="stop-statement-encountered"></a>出現 Stop 陳述式
 遇到暫停執行的 `Stop` 陳述式。  

@@ -9,6 +9,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: zh-TW
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33636587"
 ---
 # <a name="myapplicationlog-cannot-determine-the-amount-of-free-disk-space"></a>My.Application.Log 無法判定可用磁碟空間量
 <xref:Microsoft.VisualBasic.Logging.FileLogTraceListener> 類別無法判定可用磁碟空間量。  

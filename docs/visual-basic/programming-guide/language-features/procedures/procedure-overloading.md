@@ -22,6 +22,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: zh-TW
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33653910"
 ---
 # <a name="procedure-overloading-visual-basic"></a>程序多載化 (Visual Basic)
 *多載*程序會表示定義在多個版本中，使用相同名稱但不同參數清單。 多載的用途是定義程序的數個密切相關的版本，而不需要加以區分名稱。 您可以不同的參數清單。  

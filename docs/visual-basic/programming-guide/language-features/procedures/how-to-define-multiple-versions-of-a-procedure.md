@@ -13,6 +13,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: zh-TW
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33649808"
 ---
 # <a name="how-to-define-multiple-versions-of-a-procedure-visual-basic"></a>如何：定義程序的多個版本 (Visual Basic)
 您可以定義程序中由多個版本*多載*它使用相同名稱但不同的參數清單，每個版本。 多載的用途是定義程序的數個密切相關的版本，而不需要加以區分名稱。  

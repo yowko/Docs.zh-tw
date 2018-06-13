@@ -7,6 +7,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: zh-TW
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33645573"
 ---
 # <a name="sample-xml-file-multiple-purchase-orders-in-a-namespace"></a>範例 XML 檔：命名空間中的多份採購訂單
 下列 XML 檔案用於 [!INCLUDE[sqltecxlinq](~/includes/sqltecxlinq-md.md)] 文件的各種範例中。 這個檔案包含數個採購訂單。 XML 位於命名空間中。  

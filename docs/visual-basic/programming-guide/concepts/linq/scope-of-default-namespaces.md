@@ -7,6 +7,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: zh-TW
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33645739"
 ---
 # <a name="scope-of-default-namespaces-in-visual-basic"></a>在 Visual Basic 中的預設命名空間的範圍
 在 XML 樹狀結構中表示的預設命名空間不在查詢的範圍內。 如果您擁有的 XML 位於預設命名空間中，您仍然必須宣告 <xref:System.Xml.Linq.XNamespace> 變數，然後將它與區域名稱結合，讓限定名稱 (Qualified Name) 得以用於查詢中。  

@@ -7,6 +7,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: zh-TW
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33478676"
 ---
 # <a name="systemservicemodelchannelspeerneighbornotfound"></a>System.ServiceModel.Channels.PeerNeighborNotFound
 在芳鄰清單上找不到這個芳鄰，因此無法執行該芳鄰上的作業。  

@@ -27,6 +27,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: zh-TW
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33655898"
 ---
 # <a name="object-lifetime-how-objects-are-created-and-destroyed-visual-basic"></a>物件存留期：物件的建立和終結 (Visual Basic)
 您可以使用 `New` 關鍵字來建立類別的執行個體，即物件。 在使用新物件之前，經常必須在新物件上執行初始設定工作。 常見的初始設定工作包括開啟檔案、連線到資料庫，以及讀取登錄機碼的值。 Visual Basic 控制項的新物件使用呼叫的程序初始化*建構函式*（允許控制初始設定的特殊方法）。  

@@ -13,6 +13,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: zh-TW
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33649259"
 ---
 # <a name="how-to-create-a-procedure-visual-basic"></a>如何：建立程序 (Visual Basic)
 您將開始的宣告陳述式之間的程序 (`Sub`或`Function`) 和結束的宣告陳述式 (`End Sub`或`End Function`)。 所有程序的程式碼都位於這些陳述式之間。  

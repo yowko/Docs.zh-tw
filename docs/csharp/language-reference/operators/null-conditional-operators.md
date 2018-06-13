@@ -17,6 +17,7 @@ ms.sourcegitcommit: 43924acbdbb3981d103e11049bbe460457d42073
 ms.translationtype: HT
 ms.contentlocale: zh-TW
 ms.lasthandoff: 05/23/2018
+ms.locfileid: "34457796"
 ---
 # <a name="-and--null-conditional-operators-c-and-visual-basic"></a>?. and ?[] Null 條件運算子 (C# 和 Visual Basic)
 在執行成員存取 (`?.`) 或索引 (`?[]`) 運算之前，測試左運算元的值是否為 null；如果左運算元評估為 `null`，則傳回 `null`。 

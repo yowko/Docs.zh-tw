@@ -7,6 +7,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: zh-TW
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33643480"
 ---
 # <a name="how-to-filter-on-an-optional-element-visual-basic"></a>如何： 篩選選擇性項目 (Visual Basic)
 有時候即使您不確定項目是否存在於 XML 文件中，您都會想要針對該項目進行篩選。 搜尋應該會執行，因此，如果特定的項目沒有子項目，您就不會篩選該項目來觸發 Null 參考例外狀況。 在下列範例中，`Child5` 項目沒有 `Type` 子項目，但查詢仍會正確執行。  

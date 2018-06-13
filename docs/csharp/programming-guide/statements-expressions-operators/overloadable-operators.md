@@ -10,6 +10,7 @@ ms.sourcegitcommit: 43924acbdbb3981d103e11049bbe460457d42073
 ms.translationtype: HT
 ms.contentlocale: zh-TW
 ms.lasthandoff: 05/23/2018
+ms.locfileid: "34457653"
 ---
 # <a name="overloadable-operators-c-programming-guide"></a>可多載的運算子 (C# 程式設計手冊)
 

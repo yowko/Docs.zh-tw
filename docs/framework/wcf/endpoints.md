@@ -9,6 +9,7 @@ ms.sourcegitcommit: 15109844229ade1c6449f48f3834db1b26907824
 ms.translationtype: MT
 ms.contentlocale: zh-TW
 ms.lasthandoff: 05/07/2018
+ms.locfileid: "33803390"
 ---
 # <a name="windows-communication-foundation-endpoints"></a>Windows Communication Foundation 端點
 所有與 Windows Communication Foundation (WCF) 服務的通訊會透過*端點*的服務。 端點可讓用戶端存取 WCF 服務提供的功能。  

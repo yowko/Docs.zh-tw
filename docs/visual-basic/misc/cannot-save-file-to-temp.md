@@ -9,6 +9,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: zh-TW
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33637878"
 ---
 # <a name="cannot-save-file-to-temp"></a>無法將檔案儲存至 TEMP
 元件找不到名為 TEMP 的目錄，或包含 TEMP 目錄的磁碟機或磁碟分割的空間不足，無法儲存資訊。  

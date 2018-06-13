@@ -7,6 +7,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: zh-TW
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33642636"
 ---
 # <a name="how-to-find-a-union-of-two-location-paths-xpath-linq-to-xml-visual-basic"></a>如何： 尋找兩個位置路徑 (XPATH-LINQ to XML) 的聯集 (Visual Basic)
 XPath 可讓您尋找兩個 XPath 位置路徑結果的等位。  
