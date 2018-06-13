@@ -19,9 +19,10 @@ author: mairaw
 ms.author: mairaw
 ms.openlocfilehash: f046fb51753bfa79d333d465e8850794ecc73973
 ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
-ms.translationtype: MT
+ms.translationtype: HT
 ms.contentlocale: zh-TW
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33453534"
 ---
 # <a name="icorprofilerinfo2getboxclasslayout-method"></a>ICorProfilerInfo2::GetBoxClassLayout 方法
 取得指定實值類型所在的位置時，它會進行 boxed 處理的相關資訊。  
@@ -45,7 +46,7 @@ HRESULT GetBoxClassLayout(
  `pBufferOffset`值是在中之值型別的位置。 之後`pBufferOffset`會套用至的 boxed 物件，值類型的類別配置可以用來解譯此物件的值。  
   
 ## <a name="requirements"></a>需求  
- **平台：**看到[系統需求](../../../../docs/framework/get-started/system-requirements.md)。  
+ **平台：** 看到[系統需求](../../../../docs/framework/get-started/system-requirements.md)。  
   
  **標頭：** CorProf.idl、CorProf.h  
   

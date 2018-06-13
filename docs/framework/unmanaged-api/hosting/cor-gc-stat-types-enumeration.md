@@ -18,9 +18,10 @@ author: rpetrusha
 ms.author: ronpet
 ms.openlocfilehash: eac378a48900d5820ad35587a6d269648ef99a77
 ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
-ms.translationtype: MT
+ms.translationtype: HT
 ms.contentlocale: zh-TW
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33428895"
 ---
 # <a name="corgcstattypes-enumeration"></a>COR_GC_STAT_TYPES 列舉
 指定要記錄的回收統計資料。  
@@ -45,7 +46,7 @@ typedef enum {
 |`COR_GC_MEMORYUSAGE`|記錄的記憶體使用量和記憶體回收集合大小的統計資料。|  
   
 ## <a name="requirements"></a>需求  
- **平台：**看到[系統需求](../../../../docs/framework/get-started/system-requirements.md)。  
+ **平台：** 看到[系統需求](../../../../docs/framework/get-started/system-requirements.md)。  
   
  **標頭：** GCHost.idl、 GCHost.h  
   

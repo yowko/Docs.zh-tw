@@ -7,6 +7,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: zh-TW
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33517504"
 ---
 # <a name="constraint-types"></a>Constraint 型別
 這個範例示範兩種不同的方式將條件約束套用至工作流程：一個是從活動中 (建置)，另一個是從活動外部 (原則)。 在這個案例中，活動作者 (來自協力軟體廠商) 想要驗證兩個引數之間的關聯性。 在此情況下，成本應該小於或等於價格。 這是一般驗證建置條件約束。  

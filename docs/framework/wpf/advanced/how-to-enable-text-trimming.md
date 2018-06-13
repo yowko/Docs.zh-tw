@@ -14,6 +14,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: zh-TW
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33543536"
 ---
 # <a name="how-to-enable-text-trimming"></a>如何：啟用文字修剪
 此範例示範的使用方式和中的可用值的效果<xref:System.Windows.TextTrimming>列舉型別。  

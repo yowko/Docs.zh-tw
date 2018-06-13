@@ -11,6 +11,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: zh-TW
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33518809"
 ---
 # <a name="about-gdi-managed-code"></a>關於 GDI+ Managed 程式碼
 [!INCLUDE[ndptecgdiplus](../../../../includes/ndptecgdiplus-md.md)] 是 Windows 作業系統提供二維向量圖形、影像處理和印刷樣式的部分。 藉由加入新功能，以及最佳化現有的功能，[!INCLUDE[ndptecgdiplus](../../../../includes/ndptecgdiplus-md.md)] 改善了 [!INCLUDE[ndptecgdi](../../../../includes/ndptecgdi-md.md)] (包含在較早版本 Windows 的圖形裝置介面)。  

@@ -17,6 +17,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: zh-TW
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33533737"
 ---
 # <a name="how-to-set-the-image-displayed-by-a-windows-forms-control"></a>如何：設定由 Windows Form 控制項所顯示的影像
 數個 Windows Form 控制項可以顯示影像。 這些映像可以是用途的控制項，例如按鈕，表示磁碟片圖示的圖示**儲存**命令。 或者，圖示可以提供控制項的外觀和行為，您想要的背景影像。  

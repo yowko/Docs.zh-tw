@@ -10,6 +10,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: zh-TW
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33365744"
 ---
 # <a name="systemtransactions-integration-with-sql-server"></a>System.Transactions 與 SQL Server 整合
 [!INCLUDE[dnprdnshort](../../../../includes/dnprdnshort-md.md)] 2.0 版導入了新的交易架構，可透過 <xref:System.Transactions> 命名空間 (Namespace) 進行存取。 此架構以完全整合到 [!INCLUDE[dnprdnshort](../../../../includes/dnprdnshort-md.md)] (包括 [!INCLUDE[vstecado](../../../../includes/vstecado-md.md)]) 中的方式來公開交易。  

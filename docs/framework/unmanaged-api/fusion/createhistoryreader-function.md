@@ -18,9 +18,10 @@ author: rpetrusha
 ms.author: ronpet
 ms.openlocfilehash: f3a3cc21dbbcfa99ddcecb534bd2e337da005597
 ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
-ms.translationtype: MT
+ms.translationtype: HT
 ms.contentlocale: zh-TW
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33431174"
 ---
 # <a name="createhistoryreader-function"></a>CreateHistoryReader 函式
 建立指定的檔案歷程記錄讀取器。  
@@ -50,7 +51,7 @@ HRESULT CreateHistoryReader (
 |E_INVALIDARG|表示`wzFilePath`或`ppHistoryReader`會設為 null 參考。|  
   
 ## <a name="requirements"></a>需求  
- **平台：**看到[系統需求](../../../../docs/framework/get-started/system-requirements.md)。  
+ **平台：** 看到[系統需求](../../../../docs/framework/get-started/system-requirements.md)。  
   
  **程式庫：** Fusion.dll  
   

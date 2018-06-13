@@ -18,9 +18,10 @@ author: rpetrusha
 ms.author: ronpet
 ms.openlocfilehash: 5c884d07fa35c053b1a3b65c04426ac0e3712621
 ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
-ms.translationtype: MT
+ms.translationtype: HT
 ms.contentlocale: zh-TW
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33429669"
 ---
 # <a name="flockclrversioncallback-function-pointer"></a>FLockClrVersionCallback 函式指標
 指向以 common language runtime (CLR) 呼叫表示初始設定已啟動，或是已完成的函式。  
@@ -37,7 +38,7 @@ typedef HRESULT (__stdcall *FLockClrVersionCallback) ( );
  此函式是由主機實作。  
   
 ## <a name="requirements"></a>需求  
- **平台：**看到[系統需求](../../../../docs/framework/get-started/system-requirements.md)。  
+ **平台：** 看到[系統需求](../../../../docs/framework/get-started/system-requirements.md)。  
   
  **標頭：** MSCorEE.h  
   

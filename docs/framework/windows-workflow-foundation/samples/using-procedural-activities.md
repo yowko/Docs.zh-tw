@@ -7,6 +7,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: zh-TW
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33516005"
 ---
 # <a name="using-procedural-activities"></a>使用程序性活動
 這個範例會使用 <xref:System.Activities.Statements.Sequence>、<xref:System.Activities.Statements.Assign>、<xref:System.Activities.Statements.If>、<xref:System.Activities.Statements.While>、<xref:System.Activities.Statements.Switch%601>、<xref:System.Activities.Statements.TryCatch> 和 <xref:System.Activities.Statements.WriteLine> 活動實作猜測遊戲。 猜測遊戲會選取一個隨機數字，而玩家必須猜測該數字。 當玩家送出不正確的猜測時，工作流程會提供一個提示，告訴玩家應該猜大一點或小一點的數字。 如果玩家在 7 次內猜到數字，則會對使用者顯示特別的恭賀畫面。  

@@ -7,6 +7,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: zh-TW
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33518534"
 ---
 # <a name="workflowapplication-readline-host"></a>WorkflowApplication ReadLine 主機
 這個範例為泛型 ReadLine 主機。 您可以使用包含的 `ReadLine` 活動來載入及執行任何工作流程 (或是與它類似的其他活動，從使用字串繼續的書籤中取得資料)。 來自 `WriteLine` 活動的輸出或是寫入 <xref:System.Activities.Statements.WriteLine.TextWriter%2A> 延伸模組的任何內容都會導向主機視窗。 當執行個體閒置時，該執行個體可用的書籤會出現在下拉式方塊中。 選取書籤、輸入某些文字並按下繼續書籤按鈕，將會繼續執行工作流程。 您也可以取消、中止或終止選取的工作流程。 預設會啟用持續性，您可以關閉主機並將它開啟，執行個體清單就會填入資料庫內所存放的執行個體。 追蹤是用來將 <xref:System.Activities.WorkflowApplication> 層級的事件輸出到主機，而且包含了加入活動層級之詳細追蹤的選項。  

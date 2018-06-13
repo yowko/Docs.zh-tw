@@ -18,9 +18,10 @@ author: rpetrusha
 ms.author: ronpet
 ms.openlocfilehash: 8c1d83b32402343f3cd2b5403e328698abd6a930
 ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
-ms.translationtype: MT
+ms.translationtype: HT
 ms.contentlocale: zh-TW
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33436211"
 ---
 # <a name="corbindtoruntimehost-function"></a>CorBindToRuntimeHost 函式
 可讓主機處理程序中載入指定的 common language runtime (CLR) 版本。  
@@ -79,7 +80,7 @@ HRESULT CorBindToRuntimeHost (
  [out]新版執行階段載入的介面指標。  
   
 ## <a name="requirements"></a>需求  
- **平台：**看到[系統需求](../../../../docs/framework/get-started/system-requirements.md)。  
+ **平台：** 看到[系統需求](../../../../docs/framework/get-started/system-requirements.md)。  
   
  **標頭：** MSCorEE.idl  
   

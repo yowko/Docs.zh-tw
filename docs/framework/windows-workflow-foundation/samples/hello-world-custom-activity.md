@@ -7,6 +7,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: zh-TW
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33515835"
 ---
 # <a name="hello-world-custom-activity"></a>Hello World 自訂活動
 這個範例會示範數個關鍵功能的 Windows Workflow Foundation (WF)，包括如何建立簡單的自訂活動。 這個範例中示範的部分功能是以 C# 建立自訂活動，以及使用 `in` 和 `out` 引數 (<xref:System.Activities.InArgument> 和 <xref:System.Activities.OutArgument>)。  

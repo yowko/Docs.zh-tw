@@ -18,9 +18,10 @@ author: rpetrusha
 ms.author: ronpet
 ms.openlocfilehash: 4ebc9fe36955bac8b93ec95e9a55fc8ac1197d9a
 ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
-ms.translationtype: MT
+ms.translationtype: HT
 ms.contentlocale: zh-TW
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33429117"
 ---
 # <a name="ienumreferenceidentity-interface"></a>IEnumReferenceIdentity 介面
 做為集合的列舉值`IReferenceIdentity`物件。  
@@ -35,7 +36,7 @@ ms.lasthandoff: 05/04/2018
 |`IEnumReferenceIdentity::Skip`|將指令指標向前移以指定的項目，從目前位置開始。|  
   
 ## <a name="requirements"></a>需求  
- **平台：**看到[系統需求](../../../../docs/framework/get-started/system-requirements.md)。  
+ **平台：** 看到[系統需求](../../../../docs/framework/get-started/system-requirements.md)。  
   
  **標頭：** Isolation.h  
   

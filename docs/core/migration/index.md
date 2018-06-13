@@ -9,6 +9,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: HT
 ms.contentlocale: zh-TW
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33217177"
 ---
 # <a name="migrating-net-core-projects-to-the-csproj-format"></a>將 .NET Core 專案移轉至 .csproj 格式
 

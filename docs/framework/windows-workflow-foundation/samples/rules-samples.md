@@ -7,6 +7,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: zh-TW
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33516242"
 ---
 # <a name="rules-samples"></a>規則範例
 本章節包含的範例將示範如何使用 [!INCLUDE[netfx35_long](../../../../includes/netfx35-long-md.md)] 中的工作流程規則引擎。  

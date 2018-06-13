@@ -20,9 +20,10 @@ author: rpetrusha
 ms.author: ronpet
 ms.openlocfilehash: 42bae646b0b1cdd451e01d55ed5b218f3660bb5a
 ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
-ms.translationtype: MT
+ms.translationtype: HT
 ms.contentlocale: zh-TW
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33429474"
 ---
 # <a name="getcachepath-function"></a>GetCachePath 函式
 取得使用指定的旗標的快取組件的路徑。  
@@ -48,7 +49,7 @@ HRESULT GetCachePath (
  [in、 out]所要求的最大長度的`pwzCachePath`，並在傳回時，實際長度後`pwzCachePath`。  
   
 ## <a name="requirements"></a>需求  
- **平台：**看到[系統需求](../../../../docs/framework/get-started/system-requirements.md)。  
+ **平台：** 看到[系統需求](../../../../docs/framework/get-started/system-requirements.md)。  
   
  **標頭：** Fusion.h  
   

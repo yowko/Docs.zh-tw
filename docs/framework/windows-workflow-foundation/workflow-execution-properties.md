@@ -7,6 +7,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: zh-TW
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33518640"
 ---
 # <a name="workflow-execution-properties"></a>工作流程執行屬性
 CLR 會透過執行緒區域儲存區 (TLS) 維護每個執行緒的執行內容。 這個執行內容會管理眾所周知的執行緒屬性，例如執行緒識別、環境交易和目前的權限集，以及使用者定義的執行緒屬性，例如具名位置。  

@@ -7,6 +7,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: zh-TW
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33515564"
 ---
 # <a name="bookmarks"></a>書籤
 書籤是一種可讓活動被動等候輸入而不需保存工作流程執行緒的機制。 活動發出等候刺激的訊號時，就可以建立書籤。 此動作可讓執行階段知道，即使目前執行中的方法 (此方法建立了 <xref:System.Activities.Bookmark>) 傳回，也不應將活動的執行視為已完成。  

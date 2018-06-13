@@ -11,6 +11,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: zh-TW
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33515684"
 ---
 # <a name="windows-workflow-foundation-programming"></a>Windows Workflow Foundation 程式設計
 本節包含的入門主題集，您應該了解變得非常熟悉的 Windows Workflow Foundation (WF) 程式設計。  

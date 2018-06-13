@@ -7,6 +7,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: zh-TW
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33511611"
 ---
 # <a name="flowchart-activities-in-wf"></a>WF 中的流程圖活動
 [!INCLUDE[netfx_current_long](../../../includes/netfx-current-long-md.md)] 提供數種系統供應式活動，可用於控制流程圖內的執行與分支。  

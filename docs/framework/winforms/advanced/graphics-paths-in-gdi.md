@@ -15,6 +15,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: zh-TW
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33523884"
 ---
 # <a name="graphics-paths-in-gdi"></a>GDI+ 中的圖形路徑
 路徑格式結合線條、 矩形和簡單的曲線。 回想一下[向量圖形概觀](../../../../docs/framework/winforms/advanced/vector-graphics-overview.md)下列的基本建置組塊經證實繪製圖片時最有用：  

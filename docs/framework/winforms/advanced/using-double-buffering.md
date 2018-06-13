@@ -12,6 +12,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: zh-TW
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33523906"
 ---
 # <a name="using-double-buffering"></a>雙重緩衝的使用
 若要減少重繪閃動在包含複雜繪製作業的應用程式中，您可以使用雙重緩衝的圖形。 .NET Framework 包含雙重緩衝的內建支援，或您可以管理，並手動呈現圖形。  

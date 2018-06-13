@@ -7,6 +7,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: zh-TW
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33518707"
 ---
 # <a name="buffered-receive"></a>緩衝的接收
 這個範例示範如何安裝及設定緩衝的接收功能在 Windows Workflow Foundation (WF)。 緩衝接收可讓工作流程作者建立工作流程時不必擔心接收訊息的順序。 緩衝接收功能會在本機緩衝處理訊息，並在工作流程準備要接收訊息時傳遞訊息。  

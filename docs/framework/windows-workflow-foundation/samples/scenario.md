@@ -7,6 +7,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: zh-TW
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33514604"
 ---
 # <a name="scenario"></a>情節
 本節包含 Windows Workflow Foundation (WF) 案例的範例。  

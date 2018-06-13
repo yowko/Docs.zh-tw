@@ -7,6 +7,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: zh-TW
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33516158"
 ---
 # <a name="how-to-query-for-non-persisted-instances"></a>HOW TO：非保存執行個體的查詢
 當建立服務的新執行個體且服務已定義 SQL 工作流程執行個體存放區行為時，服務主機會在執行個體存放區中為該服務執行個體建立初始項目。 接著在初次保存服務執行個體時，SQL 工作流程執行個體存放區行為會保存目前的執行個體狀態，連同啟動、復原和控制所需的其他資料。  

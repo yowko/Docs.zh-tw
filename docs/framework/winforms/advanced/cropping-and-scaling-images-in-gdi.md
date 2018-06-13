@@ -20,6 +20,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: zh-TW
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33521550"
 ---
 # <a name="cropping-and-scaling-images-in-gdi"></a>在 GDI+ 中裁剪和縮放影像
 您可以使用<xref:System.Drawing.Graphics.DrawImage%2A>方法<xref:System.Drawing.Graphics>繪製及定位向量影像和點陣影像的類別。 <xref:System.Drawing.Graphics.DrawImage%2A> 是多載的方法，因此沒有提供引數的數種方式。  

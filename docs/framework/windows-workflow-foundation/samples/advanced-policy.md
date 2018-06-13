@@ -7,6 +7,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: zh-TW
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33515551"
 ---
 # <a name="advanced-policy"></a>進階原則
 這個範例會延續簡單原則範例。 除了簡單原則範例的住家折扣和商務折扣規則外，還新增數個規則。  

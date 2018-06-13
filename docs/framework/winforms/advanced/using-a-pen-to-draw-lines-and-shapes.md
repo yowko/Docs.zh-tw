@@ -12,6 +12,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: zh-TW
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33524338"
 ---
 # <a name="using-a-pen-to-draw-lines-and-shapes"></a>使用畫筆繪製線條和形狀
 使用[!INCLUDE[ndptecgdiplus](../../../../includes/ndptecgdiplus-md.md)]`Pen`繪製直線線段、 曲線和形狀框線的物件。 在本節中，*列*指的是這些項目，除非另有指定，意指只直線線段。 設定的畫筆用來控制色彩、 寬度、 對齊方式和使用該畫筆繪製的直線樣式屬性。  
