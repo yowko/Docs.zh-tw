@@ -1,27 +1,18 @@
 ---
-title: "範例 XML 檔： 多份採購訂單中 Namespace3"
-ms.custom: 
+title: 範例 XML 檔： 多份採購訂單中 Namespace3
 ms.date: 07/20/2015
-ms.prod: .net
-ms.reviewer: 
-ms.suite: 
-ms.technology: devlang-visual-basic
-ms.tgt_pltfrm: 
-ms.topic: article
 ms.assetid: 03f754c6-89f7-4143-8456-4963044be7e5
-caps.latest.revision: "3"
-author: dotnet-bot
-ms.author: dotnetcontent
-ms.openlocfilehash: 72da7e088f7c00ffedc1fb648db97d290343a2e3
-ms.sourcegitcommit: bd1ef61f4bb794b25383d3d72e71041a5ced172e
+ms.openlocfilehash: 20d1807b58e0cf9302413cf9007c62d0fbec9c16
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/18/2017
+ms.lasthandoff: 05/04/2018
+ms.locfileid: "33645573"
 ---
-# <a name="sample-xml-file-multiple-purchase-orders-in-a-namespace"></a><span data-ttu-id="d8000-102">範例 XML 檔：命名空間中的多份採購訂單</span><span class="sxs-lookup"><span data-stu-id="d8000-102">Sample XML File: Multiple Purchase Orders in a Namespace</span></span>
-<span data-ttu-id="d8000-103">下列 XML 檔案用於 [!INCLUDE[sqltecxlinq](~/includes/sqltecxlinq-md.md)] 文件的各種範例中。</span><span class="sxs-lookup"><span data-stu-id="d8000-103">The following XML file is used in various examples in the [!INCLUDE[sqltecxlinq](~/includes/sqltecxlinq-md.md)] documentation.</span></span> <span data-ttu-id="d8000-104">這個檔案包含數個採購訂單。</span><span class="sxs-lookup"><span data-stu-id="d8000-104">This file contains several purchase orders.</span></span> <span data-ttu-id="d8000-105">XML 位於命名空間中。</span><span class="sxs-lookup"><span data-stu-id="d8000-105">The XML is in a namespace.</span></span>  
+# <a name="sample-xml-file-multiple-purchase-orders-in-a-namespace"></a><span data-ttu-id="be0f4-102">範例 XML 檔：命名空間中的多份採購訂單</span><span class="sxs-lookup"><span data-stu-id="be0f4-102">Sample XML File: Multiple Purchase Orders in a Namespace</span></span>
+<span data-ttu-id="be0f4-103">下列 XML 檔案用於 [!INCLUDE[sqltecxlinq](~/includes/sqltecxlinq-md.md)] 文件的各種範例中。</span><span class="sxs-lookup"><span data-stu-id="be0f4-103">The following XML file is used in various examples in the [!INCLUDE[sqltecxlinq](~/includes/sqltecxlinq-md.md)] documentation.</span></span> <span data-ttu-id="be0f4-104">這個檔案包含數個採購訂單。</span><span class="sxs-lookup"><span data-stu-id="be0f4-104">This file contains several purchase orders.</span></span> <span data-ttu-id="be0f4-105">XML 位於命名空間中。</span><span class="sxs-lookup"><span data-stu-id="be0f4-105">The XML is in a namespace.</span></span>  
   
-## <a name="purchaseordersinnamespacexml"></a><span data-ttu-id="d8000-106">PurchaseOrdersInNamespace.xml</span><span class="sxs-lookup"><span data-stu-id="d8000-106">PurchaseOrdersInNamespace.xml</span></span>  
+## <a name="purchaseordersinnamespacexml"></a><span data-ttu-id="be0f4-106">PurchaseOrdersInNamespace.xml</span><span class="sxs-lookup"><span data-stu-id="be0f4-106">PurchaseOrdersInNamespace.xml</span></span>  
   
 ```xml  
 <?xml version="1.0" encoding="utf-8"?>  
@@ -118,5 +109,5 @@ ms.lasthandoff: 10/18/2017
 </aw:PurchaseOrders>  
 ```  
   
-## <a name="see-also"></a><span data-ttu-id="d8000-107">另請參閱</span><span class="sxs-lookup"><span data-stu-id="d8000-107">See Also</span></span>  
- [<span data-ttu-id="d8000-108">範例 XML 文件 (LINQ to XML)</span><span class="sxs-lookup"><span data-stu-id="d8000-108">Sample XML Documents (LINQ to XML)</span></span>](../../../../visual-basic/programming-guide/concepts/linq/sample-xml-documents-linq-to-xml.md)
+## <a name="see-also"></a><span data-ttu-id="be0f4-107">另請參閱</span><span class="sxs-lookup"><span data-stu-id="be0f4-107">See Also</span></span>  
+ [<span data-ttu-id="be0f4-108">範例 XML 文件 (LINQ to XML)</span><span class="sxs-lookup"><span data-stu-id="be0f4-108">Sample XML Documents (LINQ to XML)</span></span>](../../../../visual-basic/programming-guide/concepts/linq/sample-xml-documents-linq-to-xml.md)

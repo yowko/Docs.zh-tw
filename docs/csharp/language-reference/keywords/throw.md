@@ -16,6 +16,7 @@ ms.sourcegitcommit: 43924acbdbb3981d103e11049bbe460457d42073
 ms.translationtype: HT
 ms.contentlocale: zh-TW
 ms.lasthandoff: 05/23/2018
+ms.locfileid: "34457474"
 ---
 # <a name="throw-c-reference"></a><span data-ttu-id="a8716-102">throw (C# 參考)</span><span class="sxs-lookup"><span data-stu-id="a8716-102">throw (C# Reference)</span></span>
 <span data-ttu-id="a8716-103">在程式執行期間發出出現例外狀況的訊號。</span><span class="sxs-lookup"><span data-stu-id="a8716-103">Signals the occurrence of an exception during program execution.</span></span>  

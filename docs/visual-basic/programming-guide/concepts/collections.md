@@ -7,6 +7,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: zh-TW
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33644312"
 ---
 # <a name="collections-visual-basic"></a><span data-ttu-id="52535-102">集合 (Visual Basic)</span><span class="sxs-lookup"><span data-stu-id="52535-102">Collections (Visual Basic)</span></span>
 <span data-ttu-id="52535-103">在許多應用程式中，您想要建立和管理相關物件的群組。</span><span class="sxs-lookup"><span data-stu-id="52535-103">For many applications, you want to create and manage groups of related objects.</span></span> <span data-ttu-id="52535-104">有兩種方式可以群組物件：建立物件的陣列和建立物件的集合。</span><span class="sxs-lookup"><span data-stu-id="52535-104">There are two ways to group objects: by creating arrays of objects, and by creating collections of objects.</span></span>  

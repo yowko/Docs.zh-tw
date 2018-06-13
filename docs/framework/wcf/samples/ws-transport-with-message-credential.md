@@ -7,6 +7,7 @@ ms.sourcegitcommit: 15109844229ade1c6449f48f3834db1b26907824
 ms.translationtype: MT
 ms.contentlocale: zh-TW
 ms.lasthandoff: 05/07/2018
+ms.locfileid: "33810144"
 ---
 # <a name="ws-transport-with-message-credential"></a><span data-ttu-id="15927-102">使用訊息認證的 WS 傳輸</span><span class="sxs-lookup"><span data-stu-id="15927-102">WS Transport With Message Credential</span></span>
 <span data-ttu-id="15927-103">這個範例會示範結合訊息中傳遞的用戶端認證來使用 SSL 傳輸安全性。</span><span class="sxs-lookup"><span data-stu-id="15927-103">This sample demonstrates the use of SSL transport security in combination with client credential being carried in the message.</span></span> <span data-ttu-id="15927-104">這個範例會使用 `wsHttpBinding` 繫結。</span><span class="sxs-lookup"><span data-stu-id="15927-104">This sample uses the `wsHttpBinding` binding.</span></span>  

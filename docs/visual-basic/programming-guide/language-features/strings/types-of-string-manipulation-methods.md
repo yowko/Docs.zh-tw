@@ -10,6 +10,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: zh-TW
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33648690"
 ---
 # <a name="types-of-string-manipulation-methods-in-visual-basic"></a><span data-ttu-id="de58f-102">Visual Basic 中字串管理方法的類型</span><span class="sxs-lookup"><span data-stu-id="de58f-102">Types of String Manipulation Methods in Visual Basic</span></span>
 <span data-ttu-id="de58f-103">有幾種不同方式來分析和操作字串。</span><span class="sxs-lookup"><span data-stu-id="de58f-103">There are several different ways to analyze and manipulate your strings.</span></span> <span data-ttu-id="de58f-104">某些方法屬於的 Visual Basic 語言，而其他可能是固有`String`類別。</span><span class="sxs-lookup"><span data-stu-id="de58f-104">Some of the methods are a part of the Visual Basic language, and others are inherent in the `String` class.</span></span>  

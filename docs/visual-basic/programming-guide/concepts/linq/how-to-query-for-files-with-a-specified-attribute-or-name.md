@@ -7,6 +7,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: zh-TW
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33642905"
 ---
 # <a name="how-to-query-for-files-with-a-specified-attribute-or-name-visual-basic"></a><span data-ttu-id="f27d6-102">如何： 查詢的檔案與指定的屬性或名稱 (Visual Basic)</span><span class="sxs-lookup"><span data-stu-id="f27d6-102">How to: Query for Files with a Specified Attribute or Name (Visual Basic)</span></span>
 <span data-ttu-id="f27d6-103">這個範例示範如何在指定的樹狀目錄中尋找所有具有指定副檔名 (例如 ".txt") 的檔案。</span><span class="sxs-lookup"><span data-stu-id="f27d6-103">This example shows how to find all files that have a specified file name extension (for example ".txt") in a specified directory tree.</span></span> <span data-ttu-id="f27d6-104">它也會示範如何根據建立時間來傳回樹狀結構中的最新或最舊檔案。</span><span class="sxs-lookup"><span data-stu-id="f27d6-104">It also shows how to return either the newest or oldest file in the tree based on the creation time.</span></span>  

@@ -7,6 +7,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: zh-TW
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33640364"
 ---
 # <a name="the-source-folder-does-not-exist"></a><span data-ttu-id="a9e2e-102">來源資料夾不存在</span><span class="sxs-lookup"><span data-stu-id="a9e2e-102">The source folder does not exist</span></span>
 <span data-ttu-id="a9e2e-103">您嘗試執行參考不存在之來源資料夾的作業。</span><span class="sxs-lookup"><span data-stu-id="a9e2e-103">You attempted an operation that references a source folder that does not exist.</span></span> <span data-ttu-id="a9e2e-104">這可能是提供不正確檔案路徑的結果。</span><span class="sxs-lookup"><span data-stu-id="a9e2e-104">This may be the result of supplying an incorrect file path.</span></span>  

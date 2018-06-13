@@ -13,6 +13,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: zh-TW
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33649259"
 ---
 # <a name="how-to-create-a-procedure-visual-basic"></a><span data-ttu-id="dd7c0-102">如何：建立程序 (Visual Basic)</span><span class="sxs-lookup"><span data-stu-id="dd7c0-102">How to: Create a Procedure (Visual Basic)</span></span>
 <span data-ttu-id="dd7c0-103">您將開始的宣告陳述式之間的程序 (`Sub`或`Function`) 和結束的宣告陳述式 (`End Sub`或`End Function`)。</span><span class="sxs-lookup"><span data-stu-id="dd7c0-103">You enclose a procedure between a starting declaration statement (`Sub` or `Function`) and an ending declaration statement (`End Sub` or `End Function`).</span></span> <span data-ttu-id="dd7c0-104">所有程序的程式碼都位於這些陳述式之間。</span><span class="sxs-lookup"><span data-stu-id="dd7c0-104">All the procedure's code lies between these statements.</span></span>  

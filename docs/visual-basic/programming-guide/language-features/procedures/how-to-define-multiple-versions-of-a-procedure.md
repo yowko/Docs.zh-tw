@@ -13,6 +13,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: zh-TW
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33649808"
 ---
 # <a name="how-to-define-multiple-versions-of-a-procedure-visual-basic"></a><span data-ttu-id="88746-102">如何：定義程序的多個版本 (Visual Basic)</span><span class="sxs-lookup"><span data-stu-id="88746-102">How to: Define Multiple Versions of a Procedure (Visual Basic)</span></span>
 <span data-ttu-id="88746-103">您可以定義程序中由多個版本*多載*它使用相同名稱但不同的參數清單，每個版本。</span><span class="sxs-lookup"><span data-stu-id="88746-103">You can define a procedure in multiple versions by *overloading* it, using the same name but a different parameter list for each version.</span></span> <span data-ttu-id="88746-104">多載的用途是定義程序的數個密切相關的版本，而不需要加以區分名稱。</span><span class="sxs-lookup"><span data-stu-id="88746-104">The purpose of overloading is to define several closely related versions of a procedure without having to differentiate them by name.</span></span>  

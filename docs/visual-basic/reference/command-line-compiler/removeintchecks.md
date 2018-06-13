@@ -16,6 +16,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: zh-TW
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33656122"
 ---
 # <a name="-removeintchecks"></a><span data-ttu-id="4a9cb-102">-removeintchecks</span><span class="sxs-lookup"><span data-stu-id="4a9cb-102">-removeintchecks</span></span>
 <span data-ttu-id="4a9cb-103">開啟溢位錯誤檢查適用於整數作業開啟或關閉。</span><span class="sxs-lookup"><span data-stu-id="4a9cb-103">Turns overflow-error checking for integer operations on or off.</span></span>  

@@ -7,6 +7,7 @@ ms.sourcegitcommit: 15109844229ade1c6449f48f3834db1b26907824
 ms.translationtype: MT
 ms.contentlocale: zh-TW
 ms.lasthandoff: 05/07/2018
+ms.locfileid: "33805378"
 ---
 # <a name="extensibility"></a><span data-ttu-id="2b404-102">擴充性</span><span class="sxs-lookup"><span data-stu-id="2b404-102">Extensibility</span></span>
 <span data-ttu-id="2b404-103">本節範例將自訂擴充性和其他功能的 Windows Communication Foundation (WCF) 處理。</span><span class="sxs-lookup"><span data-stu-id="2b404-103">This section contains samples that deal with custom extensibility and other features of Windows Communication Foundation (WCF).</span></span>  

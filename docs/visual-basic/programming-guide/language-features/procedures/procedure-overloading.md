@@ -22,6 +22,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: zh-TW
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33653910"
 ---
 # <a name="procedure-overloading-visual-basic"></a><span data-ttu-id="f2d9e-102">程序多載化 (Visual Basic)</span><span class="sxs-lookup"><span data-stu-id="f2d9e-102">Procedure Overloading (Visual Basic)</span></span>
 <span data-ttu-id="f2d9e-103">*多載*程序會表示定義在多個版本中，使用相同名稱但不同參數清單。</span><span class="sxs-lookup"><span data-stu-id="f2d9e-103">*Overloading* a procedure means defining it in multiple versions, using the same name but different parameter lists.</span></span> <span data-ttu-id="f2d9e-104">多載的用途是定義程序的數個密切相關的版本，而不需要加以區分名稱。</span><span class="sxs-lookup"><span data-stu-id="f2d9e-104">The purpose of overloading is to define several closely related versions of a procedure without having to differentiate them by name.</span></span> <span data-ttu-id="f2d9e-105">您可以不同的參數清單。</span><span class="sxs-lookup"><span data-stu-id="f2d9e-105">You do this by varying the parameter list.</span></span>  

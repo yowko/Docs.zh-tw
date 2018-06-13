@@ -9,6 +9,7 @@ ms.sourcegitcommit: 88f251b08bf0718ce119f3d7302f514b74895038
 ms.translationtype: MT
 ms.contentlocale: zh-TW
 ms.lasthandoff: 05/10/2018
+ms.locfileid: "33957958"
 ---
 # <a name="when-not-to-deploy-to-windows-containers"></a><span data-ttu-id="e7b8f-103">不要將部署到 Windows 容器的時機</span><span class="sxs-lookup"><span data-stu-id="e7b8f-103">When not to deploy to Windows Containers</span></span>
 

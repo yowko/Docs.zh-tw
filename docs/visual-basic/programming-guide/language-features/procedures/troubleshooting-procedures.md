@@ -13,6 +13,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: zh-TW
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33655515"
 ---
 # <a name="troubleshooting-procedures-visual-basic"></a><span data-ttu-id="1bd8d-102">疑難排解程序 (Visual Basic)</span><span class="sxs-lookup"><span data-stu-id="1bd8d-102">Troubleshooting Procedures (Visual Basic)</span></span>
 <span data-ttu-id="1bd8d-103">此頁面會列出處理程序時，可能會發生的一些常見問題。</span><span class="sxs-lookup"><span data-stu-id="1bd8d-103">This page lists some common problems that can occur when working with procedures.</span></span>  

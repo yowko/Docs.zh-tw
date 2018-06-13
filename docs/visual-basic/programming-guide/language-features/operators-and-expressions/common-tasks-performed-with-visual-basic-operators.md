@@ -18,6 +18,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: zh-TW
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33654722"
 ---
 # <a name="common-tasks-performed-with-visual-basic-operators"></a><span data-ttu-id="00aff-102">與 Visual Basic 運算子一起執行的一般工作</span><span class="sxs-lookup"><span data-stu-id="00aff-102">Common Tasks Performed with Visual Basic Operators</span></span>
 <span data-ttu-id="00aff-103">運算子會執行許多常見的工作包含一個或多個運算式呼叫*運算元*。</span><span class="sxs-lookup"><span data-stu-id="00aff-103">Operators perform many common tasks involving one or more expressions called *operands*.</span></span>  

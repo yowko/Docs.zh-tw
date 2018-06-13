@@ -12,6 +12,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: zh-TW
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33655280"
 ---
 # <a name="extension-methods-visual-basic"></a><span data-ttu-id="ca746-102">擴充方法 (Visual Basic)</span><span class="sxs-lookup"><span data-stu-id="ca746-102">Extension Methods (Visual Basic)</span></span>
 <span data-ttu-id="ca746-103">擴充方法可讓開發人員將自訂功能加入至已定義而不需要建立新的衍生的類型的資料類型。</span><span class="sxs-lookup"><span data-stu-id="ca746-103">Extension methods enable developers to add custom functionality to data types that are already defined without creating a new derived type.</span></span> <span data-ttu-id="ca746-104">擴充方法可讓撰寫方法，這個方法，就好像現有類型的執行個體方法呼叫。</span><span class="sxs-lookup"><span data-stu-id="ca746-104">Extension methods make it possible to write a method that can be called as if it were an instance method of the existing type.</span></span>  
