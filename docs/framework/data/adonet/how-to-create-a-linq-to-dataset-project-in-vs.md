@@ -7,6 +7,7 @@ ms.sourcegitcommit: 11f11ca6cefe555972b3a5c99729d1a7523d8f50
 ms.translationtype: MT
 ms.contentlocale: zh-TW
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32758863"
 ---
 # <a name="how-to-create-a-linq-to-dataset-project-in-visual-studio"></a>如何：在 Visual Studio 中建立 LINQ to DataSet 專案
 不同的 [!INCLUDE[vbteclinq](../../../../includes/vbteclinq-md.md)] 專案類型需要特定匯入的命名空間 (Namespace) (Visual Basic) 或 `using` 指示詞 (C#) 和參考。 最小需求是 System.Core.dll 的參考和 `using` 的 <xref:System.Linq> 指示詞。 根據預設，如果您建立新的 [!INCLUDE[csharp_orcas_long](../../../../includes/csharp-orcas-long-md.md)] 專案，系統就會提供這些項目。 [!INCLUDE[linq_dataset](../../../../includes/linq-dataset-md.md)] 也需要 System.Data.dll 和 System.Data.DataSetExtensions.dll 的參考以及 `Imports` (Visual Basic) 或 `using` (C#) 指示詞。  
@@ -26,7 +27,7 @@ ms.lasthandoff: 05/03/2018
   
 3.  Visual Basic 專案，請按一下**專案**功能表，然後再按一下**屬性**。  
   
-    1.  在**編譯**屬性頁上，按一下 **進階編譯選項**，然後選取 在.NET Framework 3.5**目標 Framework （所有組態）**下拉式清單。  
+    1.  在**編譯**屬性頁上，按一下 **進階編譯選項**，然後選取 在.NET Framework 3.5**目標 Framework （所有組態）** 下拉式清單。  
   
 4.  在**專案**功能表上，按一下 **加入參考**，按一下  **.NET**索引標籤上，向下捲動至**System.Core**，按一下它，然後按  **確定**。  
   
