@@ -11,6 +11,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: zh-TW
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33539899"
 ---
 # <a name="dialog-boxes-in-windows-forms"></a>Windows Form 中的對話方塊
 對話方塊用來與使用者互動，並擷取資訊。 簡單地說，對話方塊是一個其 <xref:System.Windows.Forms.FormBorderStyle> 列舉屬性設定為 `FixedDialog` 的表單。 您可以使用 Visual Studio 中的 Windows Form 設計工具來建構您自己的自訂對話方塊。 加入控制項，例如加入 `Label`、`Textbox` 和 `Button` 來依據您特定需求自訂對話方塊。 [!INCLUDE[dnprdnshort](../../../includes/dnprdnshort-md.md)]也包含預先定義的對話方塊，例如**開啟舊檔**和訊息方塊，您可以調整您的應用程式。 如需詳細資訊，請參閱[對話方塊控制項和元件](../../../docs/framework/winforms/controls/dialog-box-controls-and-components-windows-forms.md)。  

@@ -19,9 +19,10 @@ author: rpetrusha
 ms.author: ronpet
 ms.openlocfilehash: 13e4119da7af4c54387c24ee576ff9577da56ca9
 ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
-ms.translationtype: MT
+ms.translationtype: HT
 ms.contentlocale: zh-TW
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33438037"
 ---
 # <a name="iclrtaskswitchin-method"></a>ICLRTask::SwitchIn 方法
 會告知 common language runtime (CLR) 的工作，目前[ICLRTask](../../../../docs/framework/unmanaged-api/hosting/iclrtask-interface.md)執行個體表示現在處於運作狀態。  
@@ -57,11 +58,11 @@ HRESULT SwitchIn (
 >  呼叫`SwitchIn`之前呼叫沒有`SwitchOut`因 HOST_E_INVALIDOPERATION 的 HRESULT 值。  
   
 ## <a name="requirements"></a>需求  
- **平台：**看到[系統需求](../../../../docs/framework/get-started/system-requirements.md)。  
+ **平台：** 看到[系統需求](../../../../docs/framework/get-started/system-requirements.md)。  
   
  **標頭：** MSCorEE.h  
   
- **程式庫：**包含做為 MSCorEE.dll 中的資源  
+ **程式庫：** 包含做為 MSCorEE.dll 中的資源  
   
  **.NET framework 版本：** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]  
   

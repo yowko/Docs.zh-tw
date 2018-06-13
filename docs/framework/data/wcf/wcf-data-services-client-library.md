@@ -11,6 +11,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: zh-TW
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33365510"
 ---
 # <a name="wcf-data-services-client-library"></a>WCF 資料服務用戶端程式庫
 任何可以傳送 HTTP 要求並處理資料服務傳回之 [!INCLUDE[ssODataFull](../../../../includes/ssodatafull-md.md)] 摘要的應用程式，都可以與 [!INCLUDE[ssODataShort](../../../../includes/ssodatashort-md.md)] 型資料服務互動。 這個互通性可讓您存取許多 Web 架構應用程式的 [!INCLUDE[ssODataShort](../../../../includes/ssodatashort-md.md)] 型服務。 [!INCLUDE[ssAstoria](../../../../includes/ssastoria-md.md)] 包含提供更豐富的程式設計體驗，當您使用的用戶端程式庫[!INCLUDE[ssODataShort](../../../../includes/ssodatashort-md.md)]從.NET Framework 或 Silverlight 架構應用程式摘要。  

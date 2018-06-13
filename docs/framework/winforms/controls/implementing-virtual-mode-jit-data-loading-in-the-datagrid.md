@@ -17,6 +17,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: zh-TW
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33540913"
 ---
 # <a name="implementing-virtual-mode-with-just-in-time-data-loading-in-the-windows-forms-datagridview-control"></a>在 Windows Form DataGridView 控制項中以 Just-In-Time 資料載入方式實作虛擬模式
 若要實作中的虛擬模式的其中一個原因<xref:System.Windows.Forms.DataGridView>控制項是只有在需要時才擷取資料。 這稱為*以 just-in-time 資料載入*。  

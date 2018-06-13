@@ -11,6 +11,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: zh-TW
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33363560"
 ---
 # <a name="exposing-your-data-as-a-service-wcf-data-services"></a>將資料當做服務公開 (WCF 資料服務)
 [!INCLUDE[ssAstoria](../../../../includes/ssastoria-md.md)] 使用 Visual Studio 可讓您更輕鬆地定義服務，您將資料公開為整合[!INCLUDE[ssODataFull](../../../../includes/ssodatafull-md.md)]摘要。 建立資料服務會公開[!INCLUDE[ssODataShort](../../../../includes/ssodatashort-md.md)]摘要包含下列基本步驟：  

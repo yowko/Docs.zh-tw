@@ -11,6 +11,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: zh-TW
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33536978"
 ---
 # <a name="performance-tuning-in-the-windows-forms-datagridview-control"></a>Windows Form DataGridView 控制項中的效能微調
 當使用大量的資料，`DataGridView`控制會消耗大量的記憶體中負擔，除非您小心使用。 在用戶端具有有限的記憶體，您可以避免此額外負荷的某些避免有大量記憶體的功能。 您也可以管理部分或所有資料維護和擷取工作自己使用的虛擬模式也可以自訂用於您案例的記憶體使用量。  

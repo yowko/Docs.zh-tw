@@ -15,6 +15,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: zh-TW
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33538300"
 ---
 # <a name="how-to-wrap-a-windows-forms-control-with-toolstripcontrolhost"></a>如何：使用 ToolStripControlHost 為 Windows Form 控制項換行
 藉由使用 <xref:System.Windows.Forms.ToolStripControlHost> 建構函式或擴充 <xref:System.Windows.Forms.ToolStripControlHost> 本身，<xref:System.Windows.Forms.ToolStripControlHost> 設計來啟用任意 Windows Form 控制項的裝載。 藉由擴充 <xref:System.Windows.Forms.ToolStripControlHost> 及實作屬性和方法 (這些會公開控制項經常使用的屬性和方法)，包裝控制項變得更容易。 您也可以公開在 <xref:System.Windows.Forms.ToolStripControlHost> 層級的控制項事件。  

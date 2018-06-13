@@ -7,6 +7,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: zh-TW
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33365224"
 ---
 # <a name="managing-the-data-service-context-wcf-data-services"></a>管理資料服務內容 (WCF Data Services)
 <xref:System.Data.Services.Client.DataServiceContext> 類別會封裝針對特定資料服務支援的作業。 雖然 [!INCLUDE[ssODataShort](../../../../includes/ssodatashort-md.md)] 服務沒有狀態，但是內容具有狀態。 因此，您可以使用<xref:System.Data.Services.Client.DataServiceContext>類別上的用戶端以支援資料服務互動之間維護狀態的功能變更管理之類。 這個類別也可以管理識別及追蹤變更。  

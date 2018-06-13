@@ -9,6 +9,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: zh-TW
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33365024"
 ---
 # <a name="entity-framework-provider-wcf-data-services"></a>Entity Framework 提供者 (WCF 資料服務)
 如同 [!INCLUDE[ssAstoria](../../../../includes/ssastoria-md.md)] 一般，ADO.NET Entity Framework 是以實體資料模型為基礎 (實體資料模型是一種實體關聯模型)。 Entity Framework 將針對實體資料模型，也就所謂的其實作的作業轉譯*概念模型*，到針對資料來源的同等運算。 因此，Entity Framework 非常適合做為以關聯式資料為基礎之資料服務的提供者，而且只要資料庫具有支援 Entity Framework 的資料提供者，皆可與 [!INCLUDE[ssAstoria](../../../../includes/ssastoria-md.md)] 搭配使用。 如需目前支援 Entity Framework 的資料來源的清單，請參閱[Entity framework 協力廠商提供者](http://go.microsoft.com/fwlink/?LinkId=143699)。  

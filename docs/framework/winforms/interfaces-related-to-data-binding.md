@@ -17,6 +17,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: zh-TW
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33541842"
 ---
 # <a name="interfaces-related-to-data-binding"></a>與資料繫結相關的介面
 透過 [!INCLUDE[vstecado](../../../includes/vstecado-md.md)]，您可以建立許多不同的資料結構，以滿足您正在使用之應用程式和資料的繫結需求。 您或許會想要建立自有類別以在 Windows Forms 中提供或取用資料。 這些物件可以提供不同程度的功能和複雜度，從基本的資料繫結，到提供設計階段支援、錯誤檢查、變更通知，或甚至對資料本身所做變更的結構化回復支援。  

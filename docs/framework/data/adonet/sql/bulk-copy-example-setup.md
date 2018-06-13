@@ -7,6 +7,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: zh-TW
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33362435"
 ---
 # <a name="bulk-copy-example-setup"></a>大量複製範例設定
 <xref:System.Data.SqlClient.SqlBulkCopy> 類別可用於僅將資料寫入 SQL Server 資料表。 本主題中所顯示的程式碼範例使用 SQL Server 範例資料庫， **AdventureWorks**。 為了避免變更現有資料表的程式碼範例，請將資料寫入您必須先建立的資料表中。  

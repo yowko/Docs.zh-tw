@@ -14,6 +14,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: zh-TW
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33542047"
 ---
 # <a name="toolstrip-control-overview-windows-forms"></a>ToolStrip 控制項概觀 (Windows Form)
 Windows Form<xref:System.Windows.Forms.ToolStrip>控制項以及與其相關聯的類別提供一般架構合併工具列、 狀態列和功能表的使用者介面項目。 <xref:System.Windows.Forms.ToolStrip> 控制項提供豐富的設計階段經驗，包括在就地啟用和編輯、 自訂配置] 和 [浮動定位，這是工具列共用水平或垂直空間的能力。  

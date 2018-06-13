@@ -14,6 +14,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: zh-TW
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33543415"
 ---
 # <a name="how-to-determine-if-a-data-format-is-present-in-a-data-object"></a>如何：判斷資料格式是否出現在資料物件中
 下列範例示範如何使用各種<xref:System.Windows.DataObject.GetDataPresent%2A>方法是否出現在 資料物件中特定的資料格式多載來查詢。  

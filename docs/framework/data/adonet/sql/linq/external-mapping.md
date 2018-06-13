@@ -7,6 +7,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: zh-TW
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33365211"
 ---
 # <a name="external-mapping"></a>外部對應
 [!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)] 支援*外部對應*，處理程序，您必須使用個別的 XML 檔案來指定資料模型的資料庫和物件模型之間的對應。 使用外部對應檔案的好處如下：  

@@ -14,6 +14,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: zh-TW
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33542258"
 ---
 # <a name="using-keyboard-events"></a>使用鍵盤事件
 大部分的 Windows Form 程式藉由處理鍵盤事件來處理鍵盤輸入。 本主題提供鍵盤事件的概觀，包含何時使用每個事件的詳細資訊，以及提供給每個事件的資料。  另請參閱[事件處理常式概觀 (Windows Form)](http://msdn.microsoft.com/library/be6fx1bb\(v=vs.110\))，[事件概觀 (Windows Form)](http://msdn.microsoft.com/library/1h12f09z\(v=vs.110\))。  

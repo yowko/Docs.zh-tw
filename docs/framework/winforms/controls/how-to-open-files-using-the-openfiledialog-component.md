@@ -15,6 +15,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: zh-TW
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33542271"
 ---
 # <a name="how-to-open-files-using-the-openfiledialog-component"></a>如何：使用 OpenFileDialog 元件開啟檔案
 <xref:System.Windows.Forms.OpenFileDialog>元件可讓使用者瀏覽其電腦或網路上的任何電腦的資料夾，然後選取一或多個要開啟的檔案。 對話方塊會傳回使用者在對話方塊中所選取之檔案的路徑和名稱。  

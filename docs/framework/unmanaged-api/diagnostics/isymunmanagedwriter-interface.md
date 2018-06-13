@@ -18,9 +18,10 @@ author: mairaw
 ms.author: mairaw
 ms.openlocfilehash: 86aa8d3d23d82d51cfe4e6ce6b15b554704ad41c
 ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
-ms.translationtype: MT
+ms.translationtype: HT
 ms.contentlocale: zh-TW
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33435468"
 ---
 # <a name="isymunmanagedwriter-interface"></a>ISymUnmanagedWriter 介面
 代表符號寫入器，並提供方法來定義文件，序列點、 語彙範圍和變數。  
@@ -55,7 +56,7 @@ ms.lasthandoff: 05/04/2018
 |[UsingNamespace 方法](../../../../docs/framework/unmanaged-api/diagnostics/isymunmanagedwriter-usingnamespace-method.md)|指定確認目前開啟的語彙範圍內使用指定的完整命名空間名稱。|  
   
 ## <a name="requirements"></a>需求  
- **標頭：**於 CorSym.idl、 CorSym.h  
+ **標頭：** 於 CorSym.idl、 CorSym.h  
   
 ## <a name="see-also"></a>另請參閱  
  [診斷符號存放區介面](../../../../docs/framework/unmanaged-api/diagnostics/diagnostics-symbol-store-interfaces.md)  

@@ -13,6 +13,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: zh-TW
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33365848"
 ---
 # <a name="service-operations-wcf-data-services"></a>服務作業 (WCF 資料服務)
 [!INCLUDE[ssAstoria](../../../../includes/ssastoria-md.md)] 可以讓您定義資料服務上的服務作業，以公開伺服器上的方法。 如同其他資料服務資源，服務作業依 URI 定址。 服務作業可讓您公開資料服務中的業務邏輯，例如實作驗證邏輯、套用以角色為基礎的安全性，或公開特殊的查詢功能。 服務作業是加入至資料服務類別的方法，衍生自 <xref:System.Data.Services.DataService%601>。 如同所有其他資料服務資源，您可以將參數提供給服務作業方法。 例如，下列服務作業的 URI (根據[快速入門](../../../../docs/framework/data/wcf/quickstart-wcf-data-services.md)資料服務) 會將值傳遞`London`至`city`參數：  

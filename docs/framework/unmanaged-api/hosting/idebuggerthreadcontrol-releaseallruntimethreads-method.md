@@ -19,9 +19,10 @@ author: rpetrusha
 ms.author: ronpet
 ms.openlocfilehash: 5b3623c886a48cc938be017f955fbdac1df3f10f
 ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
-ms.translationtype: MT
+ms.translationtype: HT
 ms.contentlocale: zh-TW
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33437631"
 ---
 # <a name="idebuggerthreadcontrolreleaseallruntimethreads-method"></a>IDebuggerThreadControl::ReleaseAllRuntimeThreads 方法
 通知主機有偵錯服務即將要釋放所有的執行緒所封鎖。  
@@ -36,11 +37,11 @@ HRESULT ReleaseAllRuntimeThreads ( );
  `ReleaseAllRuntimeThreads`絕不會在執行階段執行緒上呼叫方法。 如果主機已封鎖在執行階段執行緒，則它應該立即放開。  
   
 ## <a name="requirements"></a>需求  
- **平台：**看到[系統需求](../../../../docs/framework/get-started/system-requirements.md)。  
+ **平台：** 看到[系統需求](../../../../docs/framework/get-started/system-requirements.md)。  
   
  **標頭：** MSCorEE.h  
   
- **程式庫：**包含做為 MSCorEE.dll 中的資源  
+ **程式庫：** 包含做為 MSCorEE.dll 中的資源  
   
  **.NET framework 版本：** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]  
   

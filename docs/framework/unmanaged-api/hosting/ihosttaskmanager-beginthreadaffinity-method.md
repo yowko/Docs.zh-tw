@@ -19,9 +19,10 @@ author: rpetrusha
 ms.author: ronpet
 ms.openlocfilehash: 6a94797e6279a1f1d419b977c22d73ca41bbafc9
 ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
-ms.translationtype: MT
+ms.translationtype: HT
 ms.contentlocale: zh-TW
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33443369"
 ---
 # <a name="ihosttaskmanagerbeginthreadaffinity-method"></a>IHostTaskManager::BeginThreadAffinity 方法
 通知主機 managed 程式碼會進入目前的工作不會移至另一個作業系統執行緒的週期。  
@@ -47,11 +48,11 @@ HRESULT BeginThreadAffinity ();
  CLR 通常會呼叫`IHostTaskManager::BeginThreadAffinity`呼叫內容中<xref:System.Threading.Thread.BeginThreadAffinity%2A?displayProperty=nameWithType>。 必須不重新排程目前的工作，直到進行對應的呼叫，以[ihosttaskmanager:: Endthreadaffinity](../../../../docs/framework/unmanaged-api/hosting/ihosttaskmanager-endthreadaffinity-method.md)。 工作可以要切換移出，但時還是會切換回，則必須指派相同的作業系統執行緒從中它們已切換移出。巢狀呼叫`BeginThreadAffinity`不有任何作用，因為呼叫參考到目前的工作。  
   
 ## <a name="requirements"></a>需求  
- **平台：**看到[系統需求](../../../../docs/framework/get-started/system-requirements.md)。  
+ **平台：** 看到[系統需求](../../../../docs/framework/get-started/system-requirements.md)。  
   
  **標頭：** MSCorEE.h  
   
- **程式庫：**包含做為 MSCorEE.dll 中的資源  
+ **程式庫：** 包含做為 MSCorEE.dll 中的資源  
   
  **.NET framework 版本：** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]  
   

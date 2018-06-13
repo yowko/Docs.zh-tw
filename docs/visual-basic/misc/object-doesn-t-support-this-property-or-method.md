@@ -9,6 +9,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: zh-TW
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33638709"
 ---
 # <a name="object-doesn39t-support-this-property-or-method-visual-basic"></a>物件不&#39;支援此屬性或方法 (Visual Basic)
 您指定的方法或屬性對於此自動化物件不存在。  

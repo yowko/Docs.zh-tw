@@ -14,6 +14,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: zh-TW
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33542193"
 ---
 # <a name="user-drawn-controls"></a>使用者自訂描繪控制項
 .NET Framework 會提供您能夠輕鬆地開發您自己的控制項。 您可以建立使用者控制項，也就是一組標準的控制項繫結在一起的程式碼，或您可以設計自己的控制項，從頭組成。 您甚至可以使用繼承建立繼承自現有的控制項的控制項，並將新增到其繼承的功能。 方法使用時，.NET Framework 提供的功能，以繪製自訂的圖形化介面，任何您所建立的控制項。  

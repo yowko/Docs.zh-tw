@@ -18,9 +18,10 @@ author: rpetrusha
 ms.author: ronpet
 ms.openlocfilehash: 7247dddc2d3313948fe6f49fbaa1440b141c4cf3
 ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
-ms.translationtype: MT
+ms.translationtype: HT
 ms.contentlocale: zh-TW
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33440761"
 ---
 # <a name="ihostpolicymanager-interface"></a>IHostPolicyManager 介面
 提供方法，通知主應用程式中的案例中的 common language runtime (CLR) 執行的動作會中止，逾時或失敗。  
@@ -34,11 +35,11 @@ ms.lasthandoff: 05/04/2018
 |[OnTimeout 方法](../../../../docs/framework/unmanaged-api/hosting/ihostpolicymanager-ontimeout-method.md)|通知主機在 CLR 即將採取的動作呼叫所指定[iclrpolicymanager:: Setactionontimeout](../../../../docs/framework/unmanaged-api/hosting/iclrpolicymanager-setactionontimeout-method.md)回應逾時。|  
   
 ## <a name="requirements"></a>需求  
- **平台：**看到[系統需求](../../../../docs/framework/get-started/system-requirements.md)。  
+ **平台：** 看到[系統需求](../../../../docs/framework/get-started/system-requirements.md)。  
   
  **標頭：** MSCorEE.h  
   
- **程式庫：**包含做為 MSCorEE.dll 中的資源  
+ **程式庫：** 包含做為 MSCorEE.dll 中的資源  
   
  **.NET framework 版本：** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]  
   

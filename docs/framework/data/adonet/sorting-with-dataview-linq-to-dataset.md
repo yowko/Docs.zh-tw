@@ -10,6 +10,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: zh-TW
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33365900"
 ---
 # <a name="sorting-with-dataview-linq-to-dataset"></a>使用 DataView 進行排序 (LINQ to DataSet)
 根據特定準則來排序資料，然後透過 UI 控制項呈現資料給用戶端的功能是資料繫結的重要層面。 <xref:System.Data.DataView> 提供了許多方式來排序資料並傳回依據特定排序準則所排序的資料列。 除了以字串為基礎的排序功能以外，<xref:System.Data.DataView>也可讓您使用[!INCLUDE[vbteclinqext](../../../../includes/vbteclinqext-md.md)]排序準則的運算式。 [!INCLUDE[vbteclinq](../../../../includes/vbteclinq-md.md)] 允許更複雜且功能強大的排序作業，比字串為基礎的排序運算式。 本主題將說明兩種使用 <xref:System.Data.DataView> 進行排序的方法。  

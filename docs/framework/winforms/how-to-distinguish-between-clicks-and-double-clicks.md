@@ -15,6 +15,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: zh-TW
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33539720"
 ---
 # <a name="how-to-distinguish-between-clicks-and-double-clicks"></a>如何：區分按一下和按兩下
 一般而言，單一「按一下」(click) 會啟始使用者介面 (UI) 動作，而「按兩下」(double-click) 會擴充此動作。 例如，按一下通常會選取項目，而按兩下可編輯選取的項目。 不過，Windows Form Click 事件並不輕易滿足按一下和按兩下會執行不相容動作的案例，因為會先執行與 <xref:System.Windows.Forms.Control.Click> 或 <xref:System.Windows.Forms.Control.MouseClick> 事件相關的動作，之後此動作才會與 <xref:System.Windows.Forms.Control.DoubleClick> 或 <xref:System.Windows.Forms.Control.MouseDoubleClick> 事件相關。 本主題會示範兩種解決這個問題的方案。 一個解決方案是處理按兩下事件，並復原處理 Click 事件的動作。 在罕見的情況下您可能需要處理 <xref:System.Windows.Forms.Control.MouseDown> 事件並使用 <xref:System.Windows.Forms.SystemInformation> 類別的 <xref:System.Windows.Forms.SystemInformation.DoubleClickTime%2A> 和 <xref:System.Windows.Forms.SystemInformation.DoubleClickSize%2A> 屬性來模擬按一下和按兩下行為。 您可測量點擊間隔時間，如果第二個點擊在達到 <xref:System.Windows.Forms.SystemInformation.DoubleClickTime%2A> 的值之前就先發生，且該點擊位於由 <xref:System.Windows.Forms.SystemInformation.DoubleClickSize%2A> 所定義的矩形內，則執行按兩下動作；否則執行按一下動作。  

@@ -7,6 +7,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: zh-TW
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33492283"
 ---
 # <a name="configuring-discovery-in-a-configuration-file"></a>在組態檔中設定探索
 探索中使用四個主要的組態設定群組。 本主題將簡要說明各群組，並且顯示如何設定這些群組的範例。 各節後面會有一個連結，可提供與各領域更為深入的文件。  

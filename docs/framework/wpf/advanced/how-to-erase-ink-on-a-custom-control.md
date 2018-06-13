@@ -13,6 +13,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: zh-TW
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33543243"
 ---
 # <a name="how-to-erase-ink-on-a-custom-control"></a>如何：清除自訂控制項上的筆墨
 <xref:System.Windows.Ink.IncrementalStrokeHitTester>決定目前繪製的筆劃是否與另一個筆觸有交集。  建立控制項可讓使用者清除筆觸的組件，這非常有用，方式上的使用者可以<xref:System.Windows.Controls.InkCanvas>時<xref:System.Windows.Controls.InkCanvas.EditingMode%2A>設<xref:System.Windows.Controls.InkCanvasEditingMode.EraseByPoint>。  

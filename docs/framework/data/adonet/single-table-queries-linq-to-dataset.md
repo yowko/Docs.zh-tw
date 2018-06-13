@@ -10,6 +10,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: zh-TW
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33360474"
 ---
 # <a name="single-table-queries-linq-to-dataset"></a>單一資料表查詢 (LINQ to DataSet)
 [!INCLUDE[vbteclinqext](../../../../includes/vbteclinqext-md.md)] 實作的資料來源上的查詢運作<xref:System.Collections.Generic.IEnumerable%601>介面或<xref:System.Linq.IQueryable%601>介面。 <xref:System.Data.DataTable>類別未實作任何一種介面，因此您必須呼叫<xref:System.Data.DataTableExtensions.AsEnumerable%2A>方法，如果您想要使用<xref:System.Data.DataTable>中作為來源`From`子句[!INCLUDE[vbteclinq](../../../../includes/vbteclinq-md.md)]查詢。  

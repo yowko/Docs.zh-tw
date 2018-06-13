@@ -10,6 +10,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: zh-TW
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33364499"
 ---
 # <a name="group-elements-in-a-sequence"></a>在序列中群組項目
 <xref:System.Linq.Enumerable.GroupBy%2A> 運算子會分組序列中的項目。 下列範例使用 Northwind 資料庫。  

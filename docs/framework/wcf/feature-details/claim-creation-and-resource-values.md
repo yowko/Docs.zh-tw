@@ -9,6 +9,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: zh-TW
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33488048"
 ---
 # <a name="claim-creation-and-resource-values"></a>宣告建立與資源值
 <xref:System.IdentityModel.Claims.Claim> 類別提供幾種建立內建宣告類型之執行個體的方法。 這些方法的下列幾項不會對提供的資源執行語意或格式檢查：  

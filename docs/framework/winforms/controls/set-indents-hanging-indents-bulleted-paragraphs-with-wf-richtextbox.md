@@ -18,6 +18,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: zh-TW
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33537683"
 ---
 # <a name="how-to-set-indents-hanging-indents-and-bulleted-paragraphs-with-the-windows-forms-richtextbox-control"></a>如何：使用 Windows Form RichTextBox 控制項設定縮排、首行縮排和分項段落
 Windows Form<xref:System.Windows.Forms.RichTextBox>控制項有許多選項可以格式化所顯示的文字。 您也可以設定為項目符號清單格式化選取的段落<xref:System.Windows.Forms.RichTextBox.SelectionBullet%2A>屬性。 您也可以使用<xref:System.Windows.Forms.RichTextBox.SelectionIndent%2A>， <xref:System.Windows.Forms.RichTextBox.SelectionRightIndent%2A>，和<xref:System.Windows.Forms.RichTextBox.SelectionHangingIndent%2A>屬性可用來設定段落相對於左和右邊緣的控制項，以及其他行文字的左邊的緣的縮排。  

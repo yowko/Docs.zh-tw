@@ -16,6 +16,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: zh-TW
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33540364"
 ---
 # <a name="how-to-navigate-data-in-windows-forms"></a>如何：巡覽 Windows Form 中的資料
 在 Windows 應用程式中，瀏覽資料來源中的記錄最簡單方式是將繫結<xref:System.Windows.Forms.BindingSource>元件至資料來源，然後將控制項繫結至<xref:System.Windows.Forms.BindingSource>。 然後您可以使用內建瀏覽方法上<xref:System.Windows.Forms.BindingSource>這類<xref:System.Windows.Forms.BindingSource.MoveNext%2A>， <xref:System.Windows.Forms.BindingSource.MoveLast%2A>，<xref:System.Windows.Forms.BindingSource.MovePrevious%2A>和<xref:System.Windows.Forms.BindingSource.MoveFirst%2A>。 使用這些方法將會調整<xref:System.Windows.Forms.BindingSource.Position%2A>和<xref:System.Windows.Forms.BindingSource.Current%2A>屬性<xref:System.Windows.Forms.BindingSource>適當。 您也可以尋找項目，並將它設為目前的項目中，藉由設定<xref:System.Windows.Forms.BindingSource.Position%2A>屬性。  

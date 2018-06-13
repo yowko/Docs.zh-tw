@@ -9,6 +9,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: zh-TW
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33485774"
 ---
 # <a name="extending-bindings"></a>擴充繫結
 繫結會指定連接端點所需的傳輸、編碼和通訊協定。 繫結延伸和自訂繫結會實作所需的自訂通訊功能，以支援應用程式功能。  

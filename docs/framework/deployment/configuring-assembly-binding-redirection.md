@@ -12,6 +12,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: HT
 ms.contentlocale: zh-TW
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33387181"
 ---
 # <a name="configuring-assembly-binding-redirection"></a>設定組件繫結重新導向
 根據預設，應用程式會使用執行階段版本 (用來編譯應用程式) 隨附的 .NET Framework 組件集。 您可以使用應用程式組態檔中 [\<assemblyBinding>](../../../docs/framework/configure-apps/file-schema/runtime/assemblybinding-element-for-runtime.md) 項目上的 **appliesTo** 屬性，來重新導向組件繫結參考至特定版本的 .NET Framework 組件。 這個選擇性屬性會使用 .NET Framework 版本號碼，以表示它會套用至哪一個版本。 如果未指定 **appliesTo** 屬性，則 **\<assemblyBinding>** 項目會套用至所有的 .NET Framework 版本。  

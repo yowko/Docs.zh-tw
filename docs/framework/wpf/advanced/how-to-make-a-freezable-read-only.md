@@ -12,6 +12,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: zh-TW
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33543428"
 ---
 # <a name="how-to-make-a-freezable-read-only"></a>如何：建立 Freezable 唯讀
 這個範例示範如何讓<xref:System.Windows.Freezable>唯讀藉由呼叫其<xref:System.Windows.Freezable.Freeze%2A>方法。  

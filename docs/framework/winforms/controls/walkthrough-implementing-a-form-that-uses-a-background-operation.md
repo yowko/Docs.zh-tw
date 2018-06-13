@@ -20,6 +20,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: zh-TW
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33542076"
 ---
 # <a name="walkthrough-implementing-a-form-that-uses-a-background-operation"></a>逐步解說：實作使用背景作業的表單
 如果您有要花費很長的時間才能完成，作業和不想使用者介面 (UI) 停止回應或 「 擱置 」，您可以使用<xref:System.ComponentModel.BackgroundWorker>類別，以另一個執行緒上執行作業。  

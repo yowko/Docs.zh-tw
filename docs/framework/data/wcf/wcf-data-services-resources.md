@@ -9,6 +9,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: zh-TW
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33364442"
 ---
 # <a name="wcf-data-services-resources"></a>WCF 資料服務資源
 下列位置可以找到 [!INCLUDE[ssAstoria](../../../../includes/ssastoria-md.md)] 的簡介主題。 這些主題中有許多也包含其中含有詳細資訊的相關主題連結。  
