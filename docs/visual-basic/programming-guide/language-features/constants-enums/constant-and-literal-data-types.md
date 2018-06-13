@@ -14,6 +14,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: zh-TW
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33649844"
 ---
 # <a name="constant-and-literal-data-types-visual-basic"></a><span data-ttu-id="e8249-102">常數和常值資料類型 (Visual Basic)</span><span class="sxs-lookup"><span data-stu-id="e8249-102">Constant and Literal Data Types (Visual Basic)</span></span>
 <span data-ttu-id="e8249-103">常值是值，表示為本身，而不是做為變數的值或運算式，例如數字 3 或字串"Hello"的結果。</span><span class="sxs-lookup"><span data-stu-id="e8249-103">A literal is a value that is expressed as itself rather than as a variable's value or the result of an expression, such as the number 3 or the string "Hello".</span></span> <span data-ttu-id="e8249-104">常數是有意義的名稱，會取代常值，並維持相同的值在整個程式，而不是變數，其值可能會變更。</span><span class="sxs-lookup"><span data-stu-id="e8249-104">A constant is a meaningful name that takes the place of a literal and retains this same value throughout the program, as opposed to a variable, whose value may change.</span></span>  

@@ -7,6 +7,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: zh-TW
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33645651"
 ---
 # <a name="projecting-xml-in-a-different-shape-visual-basic"></a><span data-ttu-id="c4e72-102">不同的組織結構 (Visual Basic) 的組織結構規劃 XML</span><span class="sxs-lookup"><span data-stu-id="c4e72-102">Projecting XML in a Different Shape (Visual Basic)</span></span>
 <span data-ttu-id="c4e72-103">本主題顯示以不同於來源 XML 的組織結構規劃 XML 的範例。</span><span class="sxs-lookup"><span data-stu-id="c4e72-103">This topic shows an example of projecting XML that is in a different shape than the source XML.</span></span>  

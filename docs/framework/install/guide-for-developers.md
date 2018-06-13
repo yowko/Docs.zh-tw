@@ -15,6 +15,7 @@ ms.sourcegitcommit: 895c7602386a6dfe7ca4facce3d965b27e5c6e87
 ms.translationtype: HT
 ms.contentlocale: zh-TW
 ms.lasthandoff: 05/19/2018
+ms.locfileid: "34312192"
 ---
 # <a name="install-the-net-framework-for-developers"></a><span data-ttu-id="ef57e-102">安裝適用於開發人員的 .NET Framework</span><span class="sxs-lookup"><span data-stu-id="ef57e-102">Install the .NET Framework for developers</span></span>
 

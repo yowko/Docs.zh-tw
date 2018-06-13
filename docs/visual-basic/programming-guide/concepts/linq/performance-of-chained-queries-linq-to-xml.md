@@ -7,6 +7,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: zh-TW
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33645703"
 ---
 # <a name="performance-of-chained-queries-linq-to-xml-visual-basic"></a><span data-ttu-id="31464-102">鏈結的查詢 (LINQ to XML) 的效能 (Visual Basic)</span><span class="sxs-lookup"><span data-stu-id="31464-102">Performance of Chained Queries (LINQ to XML) (Visual Basic)</span></span>
 <span data-ttu-id="31464-103">LINQ (和 LINQ to XML) 其中一個最重要的優點在於，鏈結查詢的執行效能就如同單一較大且更複雜的查詢。</span><span class="sxs-lookup"><span data-stu-id="31464-103">One of the most important benefits of LINQ (and LINQ to XML) is that chained queries can perform as well as a single larger, more complicated query.</span></span>  
