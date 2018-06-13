@@ -9,6 +9,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: zh-TW
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33636089"
 ---
 # <a name="cast-from-type-39lttypename1gt39-to-type-39lttypename2gt39-is-not-valid"></a><span data-ttu-id="b9fdc-102">從型別轉型&#39; &lt;typename1&gt; &#39;輸入&#39; &lt;2>&gt; &#39;無效</span><span class="sxs-lookup"><span data-stu-id="b9fdc-102">Cast from type &#39;&lt;typename1&gt;&#39; to type &#39;&lt;typename2&gt;&#39; is not valid</span></span>
 <span data-ttu-id="b9fdc-103">嘗試將變數從一種類型轉換成另一種類型不正確。</span><span class="sxs-lookup"><span data-stu-id="b9fdc-103">An attempt to convert a variable from one type to another is not valid.</span></span>  

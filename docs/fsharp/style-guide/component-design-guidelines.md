@@ -7,6 +7,7 @@ ms.sourcegitcommit: 43924acbdbb3981d103e11049bbe460457d42073
 ms.translationtype: MT
 ms.contentlocale: zh-TW
 ms.lasthandoff: 05/23/2018
+ms.locfileid: "34458082"
 ---
 # <a name="f-component-design-guidelines"></a><span data-ttu-id="24275-103">F # 元件的設計指導方針</span><span class="sxs-lookup"><span data-stu-id="24275-103">F# component design guidelines</span></span>
 

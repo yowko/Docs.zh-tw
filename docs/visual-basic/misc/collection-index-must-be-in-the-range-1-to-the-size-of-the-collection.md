@@ -9,6 +9,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: zh-TW
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33637004"
 ---
 # <a name="collection-index-must-be-in-the-range-1-to-the-size-of-the-collection"></a><span data-ttu-id="189b2-102">集合索引必須在 1 到集合大小的範圍間</span><span class="sxs-lookup"><span data-stu-id="189b2-102">Collection index must be in the range 1 to the size of the collection</span></span>
 <span data-ttu-id="189b2-103">提供的索引值超出 1 到集合大小的有效範圍。</span><span class="sxs-lookup"><span data-stu-id="189b2-103">The supplied index value falls outside the valid range, which is 1 to the size of the collection.</span></span>  

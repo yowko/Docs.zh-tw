@@ -1,30 +1,24 @@
 ---
-title: "無法將轉換類型 &#39; 的開始的值&lt;type1&gt;&#39; 和間距值的類型 &#39;&lt;type2&gt;&#39; 成一般類型"
+title: 無法轉換類型的起始值&#39; &lt;type1&gt; &#39;和間距值型別的&#39; &lt;type2&gt; &#39;成一般類型
 ms.date: 07/20/2015
-ms.prod: .net
-ms.technology:
-- devlang-visual-basic
-ms.topic: article
 f1_keywords:
 - vbrForLoop_CommonType2
 ms.assetid: ce400fe1-5edd-4aee-94d8-530be03cfd9a
-caps.latest.revision: 
-author: dotnet-bot
-ms.author: dotnetcontent
-ms.openlocfilehash: c2636b2a94bea4a83e35865d73e0eaa2b2afed35
-ms.sourcegitcommit: c0dd436f6f8f44dc80dc43b07f6841a00b74b23f
+ms.openlocfilehash: 91580faa6172abc8d9b4d6d2d3e04293b6ae8245
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 01/19/2018
+ms.lasthandoff: 05/04/2018
+ms.locfileid: "33637062"
 ---
-# <a name="cannot-convert-start-value-of-type-39lttype1gt39-and-step-value-of-type-39lttype2gt39-to-a-common-type"></a><span data-ttu-id="889e2-102">無法將轉換類型 &#39; 的開始的值&lt;type1&gt;&#39; 和間距值的類型 &#39;&lt;type2&gt;&#39; 成一般類型</span><span class="sxs-lookup"><span data-stu-id="889e2-102">Cannot convert start value of type &#39;&lt;type1&gt;&#39; and step value of type &#39;&lt;type2&gt;&#39; to a common type</span></span>
-<span data-ttu-id="889e2-103">指定的 `For...Next` 控制項值具有不同的類型，因此無效，因為它們無法轉換成一般類型。</span><span class="sxs-lookup"><span data-stu-id="889e2-103">The specified `For...Next` control values have different types, and therefore are not valid because they cannot be converted to a common type.</span></span>  
+# <a name="cannot-convert-start-value-of-type-39lttype1gt39-and-step-value-of-type-39lttype2gt39-to-a-common-type"></a><span data-ttu-id="8ba93-102">無法轉換類型的起始值&#39; &lt;type1&gt; &#39;和間距值型別的&#39; &lt;type2&gt; &#39;成一般類型</span><span class="sxs-lookup"><span data-stu-id="8ba93-102">Cannot convert start value of type &#39;&lt;type1&gt;&#39; and step value of type &#39;&lt;type2&gt;&#39; to a common type</span></span>
+<span data-ttu-id="8ba93-103">指定的 `For...Next` 控制項值具有不同的類型，因此無效，因為它們無法轉換成一般類型。</span><span class="sxs-lookup"><span data-stu-id="8ba93-103">The specified `For...Next` control values have different types, and therefore are not valid because they cannot be converted to a common type.</span></span>  
   
-## <a name="to-correct-this-error"></a><span data-ttu-id="889e2-104">更正這個錯誤</span><span class="sxs-lookup"><span data-stu-id="889e2-104">To correct this error</span></span>  
+## <a name="to-correct-this-error"></a><span data-ttu-id="8ba93-104">更正這個錯誤</span><span class="sxs-lookup"><span data-stu-id="8ba93-104">To correct this error</span></span>  
   
-1.  <span data-ttu-id="889e2-105">請變更一個或多個值的類型，以將所有的值轉換成一般類型。</span><span class="sxs-lookup"><span data-stu-id="889e2-105">Change the type of one or more of the values so that all values can be converted to a common type.</span></span>  
+1.  <span data-ttu-id="8ba93-105">請變更一個或多個值的類型，以將所有的值轉換成一般類型。</span><span class="sxs-lookup"><span data-stu-id="8ba93-105">Change the type of one or more of the values so that all values can be converted to a common type.</span></span>  
   
-## <a name="see-also"></a><span data-ttu-id="889e2-106">請參閱</span><span class="sxs-lookup"><span data-stu-id="889e2-106">See Also</span></span>  
- [<span data-ttu-id="889e2-107">使用偵錯工具巡覽程式碼</span><span class="sxs-lookup"><span data-stu-id="889e2-107">Navigating through Code with the Debugger</span></span>](/visualstudio/debugger/navigating-through-code-with-the-debugger)  
- [<span data-ttu-id="889e2-108">偵錯在 Visual Basic.NET 中的變更</span><span class="sxs-lookup"><span data-stu-id="889e2-108">Debugging Changes in Visual Basic .NET</span></span>](http://msdn.microsoft.com/library/0e82bb0d-8bb2-4fe8-87d1-75f24c7cfd75)  
- [<span data-ttu-id="889e2-109">For...Next 陳述式</span><span class="sxs-lookup"><span data-stu-id="889e2-109">For...Next Statement</span></span>](../../visual-basic/language-reference/statements/for-next-statement.md)
+## <a name="see-also"></a><span data-ttu-id="8ba93-106">另請參閱</span><span class="sxs-lookup"><span data-stu-id="8ba93-106">See Also</span></span>  
+ [<span data-ttu-id="8ba93-107">使用偵錯工具巡覽程式碼</span><span class="sxs-lookup"><span data-stu-id="8ba93-107">Navigating through Code with the Debugger</span></span>](/visualstudio/debugger/navigating-through-code-with-the-debugger)  
+ [<span data-ttu-id="8ba93-108">偵錯在 Visual Basic.NET 中的變更</span><span class="sxs-lookup"><span data-stu-id="8ba93-108">Debugging Changes in Visual Basic .NET</span></span>](http://msdn.microsoft.com/library/0e82bb0d-8bb2-4fe8-87d1-75f24c7cfd75)  
+ [<span data-ttu-id="8ba93-109">For...Next 陳述式</span><span class="sxs-lookup"><span data-stu-id="8ba93-109">For...Next Statement</span></span>](../../visual-basic/language-reference/statements/for-next-statement.md)

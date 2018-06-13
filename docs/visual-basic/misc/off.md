@@ -12,6 +12,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: zh-TW
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33637413"
 ---
 # <a name="off-visual-basic"></a><span data-ttu-id="75b4d-102">Off (Visual Basic)</span><span class="sxs-lookup"><span data-stu-id="75b4d-102">Off (Visual Basic)</span></span>
 <span data-ttu-id="75b4d-103">關閉編譯器選項。</span><span class="sxs-lookup"><span data-stu-id="75b4d-103">Turns a compiler option off.</span></span>  
