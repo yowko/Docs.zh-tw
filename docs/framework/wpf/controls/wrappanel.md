@@ -13,6 +13,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: zh-TW
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33554024"
 ---
 # <a name="wrappanel"></a>WrapPanel
 <xref:System.Windows.Controls.WrapPanel>元素的從左到右，從內容換至下一行，其包含的方塊邊緣的連續位置放置子項目。  

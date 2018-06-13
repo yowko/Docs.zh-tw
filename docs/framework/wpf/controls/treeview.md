@@ -13,6 +13,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: zh-TW
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33556249"
 ---
 # <a name="treeview"></a>TreeView
 <xref:System.Windows.Controls.TreeView>控制項可以顯示階層式結構中使用可摺疊的節點。  
