@@ -11,6 +11,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: zh-TW
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33650820"
 ---
 # <a name="relaxed-delegate-conversion-visual-basic"></a>寬鬆委派轉換 (Visual Basic)
 寬鬆的委派轉換可讓您將訂閱和函式指派給處理常式或委派，即使它們的簽章不相同。 因此，委派繫結可與已經達到所允許的方法引動過程的繫結一致。  

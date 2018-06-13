@@ -20,6 +20,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: zh-TW
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33656291"
 ---
 # <a name="scope-in-visual-basic"></a>Visual Basic 中的範圍
 *範圍*的宣告的項目是 所有程式碼，而不需要限定其名稱，或透過參考一組[Imports 陳述式 （.NET 命名空間和類型）](../../../../visual-basic/language-reference/statements/imports-statement-net-namespace-and-type.md)。 元素可以有範圍，在下列層級的其中一個：  

@@ -9,6 +9,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: zh-TW
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33636649"
 ---
 # <a name="file-already-exists"></a>檔案已經存在
 如果將新的檔案命名為現有檔案的名稱，或使用 [另存新檔]  命令將目前載入的專案儲存為已存在的名稱，則會發生這個錯誤。  

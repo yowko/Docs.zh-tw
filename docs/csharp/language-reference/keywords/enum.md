@@ -12,6 +12,7 @@ ms.sourcegitcommit: 89c93d05c2281b4c834f48f6c8df1047e1410980
 ms.translationtype: HT
 ms.contentlocale: zh-TW
 ms.lasthandoff: 05/15/2018
+ms.locfileid: "34172224"
 ---
 # <a name="enum-c-reference"></a>enum (C# 參考)
 `enum` 關鍵字用來宣告列舉，是包含一組稱為列舉程式清單之具名常數的不同類型。  

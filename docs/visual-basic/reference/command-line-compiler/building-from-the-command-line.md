@@ -18,6 +18,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: zh-TW
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33654131"
 ---
 # <a name="building-from-the-command-line-visual-basic"></a>從命令列建置 (Visual Basic)
 Visual Basic 專案是由一或多個不同的來源檔案所組成。 在稱為編譯過程中，這些檔案會回到一起成單一套件，可以為應用程式執行單一可執行檔。  

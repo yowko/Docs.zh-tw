@@ -13,6 +13,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: zh-TW
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33652678"
 ---
 # <a name="how-to-call-an-event-handler-in-visual-basic"></a>如何：在 Visual Basic 中呼叫事件處理常式
 *事件*是動作或狀況，例如滑鼠點選或信用限制，或是超過 — 辨認某個程式元件，而且您可以撰寫程式碼回應。 *事件處理常式*是您撰寫來回應事件的程式碼。  

@@ -28,6 +28,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: zh-TW
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33654199"
 ---
 # <a name="numeric-data-types-visual-basic"></a>數字資料類型 (Visual Basic)
 Visual Basic 提供數個*數值資料型別*來處理各種表示相互轉換的數字。 *整數類資料*類型表示只有整數 （正數、 負數和零），和*整數*類型與整數和分數部分代表數字。  

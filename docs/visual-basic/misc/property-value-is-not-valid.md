@@ -9,6 +9,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: zh-TW
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33635938"
 ---
 # <a name="property-value-is-not-valid"></a>屬性值無效
 物件或控制項的其中一個屬性已設定為超出其範圍外部的值。  

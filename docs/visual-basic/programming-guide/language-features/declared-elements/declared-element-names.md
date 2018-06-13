@@ -28,6 +28,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: zh-TW
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33651475"
 ---
 # <a name="declared-element-names-visual-basic"></a>宣告項目名稱 (Visual Basic)
 每個宣告的項目都有名稱，也稱為*識別碼*，這是程式碼會使用來參考它。  

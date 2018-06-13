@@ -14,6 +14,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: zh-TW
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33651752"
 ---
 # <a name="array-dimensions-in-visual-basic"></a>Array Dimensions in Visual Basic
 A*維度*是的方向，在其中您可以不同的陣列項目的規格。 保留每一天的月份的銷售總額陣列都有一個維度 （月份的天數）。 保留每個月份的天數部門銷售總額的陣列具有兩個維度 （的部門編號及月份天數）。 陣列的維度的數目會呼叫其*陣序規範*。  

@@ -11,6 +11,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: zh-TW
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33653477"
 ---
 # <a name="-keyfile"></a>-keyfile
 指定一個檔案，其中包含可為組件提供強式名稱的金鑰或金鑰組。  

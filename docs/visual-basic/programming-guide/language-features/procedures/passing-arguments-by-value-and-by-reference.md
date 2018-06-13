@@ -14,6 +14,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: zh-TW
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33654173"
 ---
 # <a name="passing-arguments-by-value-and-by-reference-visual-basic"></a>以傳值和傳址方式傳遞引數 (Visual Basic)
 在 Visual Basic 中，您可以將引數傳遞至程序*值*或*傳*。 這稱為*傳遞機制*，且它會判斷該程序是否可以修改呼叫程式碼中的引數的基礎的程式設計項目。 程序宣告指定決定每個參數的傳遞機制[ByVal](../../../../visual-basic/language-reference/modifiers/byval.md)或[ByRef](../../../../visual-basic/language-reference/modifiers/byref.md)關鍵字。  

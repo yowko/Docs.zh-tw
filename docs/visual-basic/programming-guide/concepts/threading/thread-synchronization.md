@@ -7,6 +7,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: zh-TW
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33655087"
 ---
 # <a name="thread-synchronization-visual-basic"></a>執行緒同步處理 (Visual Basic)
 下列各節描述可用來同步處理多執行緒應用程式中資源存取的功能和類別。  

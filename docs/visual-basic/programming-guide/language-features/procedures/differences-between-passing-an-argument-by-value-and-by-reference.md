@@ -13,6 +13,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: zh-TW
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33651651"
 ---
 # <a name="differences-between-passing-an-argument-by-value-and-by-reference-visual-basic"></a>以傳值或傳址方式傳遞引數的差別 (Visual Basic)
 當您將一或多個引數傳遞至程序時，每個引數會對應至基礎的程式設計項目，呼叫程式碼中。 您可以將這個基礎元素的值，或者是它的參考傳遞。 這稱為*傳遞機制*。  

@@ -13,6 +13,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: zh-TW
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33651236"
 ---
 # <a name="support-for-reference-return-values-visual-basic"></a>如需參考傳回值 (Visual Basic) 的支援
 

@@ -12,6 +12,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: zh-TW
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33656214"
 ---
 # <a name="how-to-invoke-the-command-line-compiler-visual-basic"></a>如何：叫用命令列編譯器 (Visual Basic)
 您可以在命令列中，也稱為 MS-DOS 命令提示字元中輸入可執行檔的名稱來叫用命令列編譯器。 如果您從預設 Windows 命令提示字元進行編譯，您必須輸入的可執行檔的完整的路徑。 若要覆寫此預設行為，您可以使用 Visual Studio 命令提示字元中，或修改 PATH 環境變數。 兩者都可讓您只要輸入編譯器名稱從任何目錄進行編譯。  

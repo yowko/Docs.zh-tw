@@ -18,6 +18,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: zh-TW
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33654938"
 ---
 # <a name="program-structure-and-code-conventions-visual-basic"></a>程式結構和程式碼慣例 (Visual Basic)
 本節介紹典型的 Visual Basic 程式結構，提供簡單的 Visual Basic 程式，"Hello，World"，並討論 Visual Basic 程式碼慣例。 程式碼慣例是將焦點放不上程式邏輯，但其實體結構和外觀上的建議。 後面，可讓您的程式碼容易閱讀、 了解和維護。 包括程式碼慣例，和其他項目：  

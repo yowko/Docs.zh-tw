@@ -9,6 +9,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: zh-TW
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33635602"
 ---
 # <a name="code-resource-lock-error"></a>程式碼資源鎖定錯誤
 已發出程式碼資源中的程序呼叫。 已找到程式碼的資源，但嘗試鎖定該資源時發生錯誤，可能是因為它正在使用中。  

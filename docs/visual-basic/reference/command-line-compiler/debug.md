@@ -14,6 +14,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: zh-TW
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33654144"
 ---
 # <a name="-debug-visual-basic"></a>-偵錯 (Visual Basic)
 讓編譯器產生偵錯資訊，並將它放入輸出檔案。  

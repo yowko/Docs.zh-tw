@@ -14,6 +14,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: zh-TW
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33654790"
 ---
 # <a name="lambda-expressions-visual-basic"></a>Lambda 運算式 (Visual Basic)
 A *lambda 運算式*函式或副程式沒有可用於委派是有效的名稱。 Lambda 運算式可以是函式或副程式，而且可以是單行或多行。 您可以在 lambda 運算式，從目前的範圍傳遞值。  

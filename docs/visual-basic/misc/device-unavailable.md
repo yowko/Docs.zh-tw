@@ -9,6 +9,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: zh-TW
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33634842"
 ---
 # <a name="device-unavailable"></a>裝置無法使用
 您的網路連線已遺失，或是您嘗試存取的裝置離線或不存在。  

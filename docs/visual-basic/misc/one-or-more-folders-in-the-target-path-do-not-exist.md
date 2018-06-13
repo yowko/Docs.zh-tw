@@ -7,6 +7,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: zh-TW
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33636711"
 ---
 # <a name="one-or-more-folders-in-the-target-path-do-not-exist"></a>目標路徑中的一或多個資料夾不存在
 目標路徑中所提供的一或多個目錄不存在。 這可能是不正確剖析路徑的結果，特別是提供相對路徑時。  

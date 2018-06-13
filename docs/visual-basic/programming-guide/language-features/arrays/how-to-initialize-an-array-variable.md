@@ -12,6 +12,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: zh-TW
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33651566"
 ---
 # <a name="how-to-initialize-an-array-variable-in-visual-basic"></a>如何：在 Visual Basic 中初始化陣列變數
 包括陣列常值中初始化陣列變數`New`子句，並指定陣列的初始值。 您可以指定類型，或讓它從陣列常值中的值推斷。 如需如何推斷的類型的詳細資訊，請參閱"填入陣列與初始值"[陣列](../../../../visual-basic/programming-guide/language-features/arrays/index.md)。  

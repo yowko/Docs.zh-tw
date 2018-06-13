@@ -9,6 +9,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: zh-TW
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33636737"
 ---
 # <a name="object-doesn39t-support-named-arguments"></a>物件不&#39;t 支援具名引數
 您嘗試存取的物件具有不支援具名引數的方法。  
