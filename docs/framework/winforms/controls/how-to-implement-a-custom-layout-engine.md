@@ -16,6 +16,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: zh-TW
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33531293"
 ---
 # <a name="how-to-implement-a-custom-layout-engine"></a>如何：實作自訂配置引擎
 下列程式碼範例示範如何建立會執行簡單的流程版面配置的自訂版面配置引擎。 它會實作名為 panel 控制項`DemoFlowPanel`，它會覆寫<xref:System.Windows.Forms.Control.LayoutEngine%2A>屬性提供的執行個體`DemoFlowLayout`類別。  

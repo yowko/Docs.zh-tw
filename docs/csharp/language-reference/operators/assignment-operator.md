@@ -11,6 +11,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: HT
 ms.contentlocale: zh-TW
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33269276"
 ---
 # <a name="-operator-c-reference"></a>= 運算子 (C# 參考)
 指派運算子 (`=`) 將右方運算元的值儲存在儲存體位置，即由左方運算元表示的屬性或索引子，然後傳回值做為其結果。 運算元必須是相同的類型 (或右方運算元必須隱含轉換成左方運算元類型)。  

@@ -7,6 +7,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: zh-TW
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33356733"
 ---
 # <a name="oracletypes"></a>OracleType
 Oracle 的 .NET Framework 資料提供者包括數個可讓您使用 Oracle 資料型別的結構。 這些結構包括 <xref:System.Data.OracleClient.OracleNumber> 及 <xref:System.Data.OracleClient.OracleString>。  

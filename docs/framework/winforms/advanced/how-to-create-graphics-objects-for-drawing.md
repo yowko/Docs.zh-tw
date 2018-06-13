@@ -15,6 +15,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: zh-TW
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33526484"
 ---
 # <a name="how-to-create-graphics-objects-for-drawing"></a>如何：建立繪製的圖形物件
 您可以繪製線條或圖形之前，呈現文字，或顯示和操作的影像[!INCLUDE[ndptecgdiplus](../../../../includes/ndptecgdiplus-md.md)]，您必須建立<xref:System.Drawing.Graphics>物件。 <xref:System.Drawing.Graphics>物件代表[!INCLUDE[ndptecgdiplus](../../../../includes/ndptecgdiplus-md.md)]繪圖介面，而是用來建立圖形化的映像的物件。  

@@ -10,6 +10,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: zh-TW
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33363389"
 ---
 # <a name="polling-in-console-applications"></a>在主控台應用程式中輪詢
 ADO.NET 中的非同步作業可讓您在另一個執行緒上執行其他工作的同時，在一個執行緒上起始耗時的資料庫工作。 不過，在大多數案例中，最後仍會形成資料庫作業若未完成，則應用程式將無法繼續的狀況。 對於這些狀況，輪詢非同步作業以判定作業是否完成是很有用的。  

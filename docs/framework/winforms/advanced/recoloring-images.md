@@ -11,6 +11,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: zh-TW
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33525950"
 ---
 # <a name="recoloring-images"></a>將影像重新著色
 重新著色，以便是調整影像色彩的程序。 重新著色的一些範例會變更為另一個，調整相對於另一種色彩的色彩濃度、 調整亮度或對比的所有色彩，以及將色彩轉換成灰階的一種色彩。  

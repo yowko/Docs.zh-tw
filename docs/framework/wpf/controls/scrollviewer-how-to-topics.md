@@ -12,6 +12,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: zh-TW
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33555344"
 ---
 # <a name="scrollviewer-how-to-topics"></a>ScrollViewer HOW TO 主題
 此章節的主題示範如何使用<xref:System.Windows.Controls.ScrollViewer>在您的應用程式建立可捲動區域的項目。  

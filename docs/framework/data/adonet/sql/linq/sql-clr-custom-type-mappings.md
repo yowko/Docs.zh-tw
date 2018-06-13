@@ -7,6 +7,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: zh-TW
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33359659"
 ---
 # <a name="sql-clr-custom-type-mappings"></a>SQL-CLR 自訂類型對應
 當您使用 SQLMetal 命令列工具或物件關聯式設計工具 (O/R 設計工具) 時，系統就會自動指定 SQL Server 與 Common Language Runtime (CLR) 之間的型別對應。  

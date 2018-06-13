@@ -7,6 +7,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: zh-TW
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33362158"
 ---
 # <a name="how-to-validate-dbml-and-external-mapping-files"></a>如何：驗證 DBML 和外部對應檔
 如果修改外部對應檔案和 .dbml 檔案，則必須根據它們各自的結構描述定義進行驗證。 本主題提供的步驟來實作驗證流程的 Visual Studio 使用者。  

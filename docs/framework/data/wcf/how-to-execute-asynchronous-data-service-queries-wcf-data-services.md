@@ -13,6 +13,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: zh-TW
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33358709"
 ---
 # <a name="how-to-execute-asynchronous-data-service-queries-wcf-data-services"></a>如何：執行非同步資料服務查詢 (WCF 資料服務)
 透過使用 [!INCLUDE[ssAstoria](../../../../includes/ssastoria-md.md)] 用戶端程式庫，您可以透過非同步的方式執行用戶端伺服器作業，例如執行查詢和儲存變更。 如需詳細資訊，請參閱[非同步作業](../../../../docs/framework/data/wcf/asynchronous-operations-wcf-data-services.md)。  

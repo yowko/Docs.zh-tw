@@ -14,6 +14,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: zh-TW
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33535853"
 ---
 # <a name="numericupdown-control-windows-forms"></a>NumericUpDown 控制項 (Windows Form)
 Windows Forms `NumericUpDown` 控制項看起來就像一個文字方塊與一對箭號的組合，而使用者可以按一下這個組合來調整值。 這個控制項會從選擇清單中顯示和設定單一數值。 使用者可以按一下向上和向下按鈕、按向上鍵和向下鍵，或輸入數字，來增加和減少數字。 按一下向上鍵將值移往其最大值；按一下向下鍵將位置移往最小值。 這類控制項可能有用的範例是針對音樂播放器的音量控制項。 數值上下按鈕控制項用於部分 Windows 控制台應用程式中。  

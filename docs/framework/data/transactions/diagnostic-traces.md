@@ -7,6 +7,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: zh-TW
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33363463"
 ---
 # <a name="diagnostic-traces"></a>診斷追蹤
 追蹤就是在應用程式執行期間，所產生的特定訊息之發行動作。 使用追蹤功能時，您必須具有收集和記錄所傳送訊息的機制。 追蹤訊息由「接聽項」負責接收。 接聽項的用途是收集、儲存和傳送追蹤訊息。 接聽項會將追蹤輸出導向至適當的目標，例如記錄檔、視窗或文字檔。  

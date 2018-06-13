@@ -12,6 +12,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: zh-TW
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33356507"
 ---
 # <a name="how-to-add-modify-and-delete-entities-wcf-data-services"></a>如何：新增、修改和刪除實體 (WCF 資料服務)
 與[!INCLUDE[ssAstoria](../../../../includes/ssastoria-md.md)]用戶端程式庫，您可以建立、 更新和刪除資料服務中的實體資料中的物件上執行相同的動作<xref:System.Data.Services.Client.DataServiceContext>。 如需詳細資訊，請參閱[更新資料服務](../../../../docs/framework/data/wcf/updating-the-data-service-wcf-data-services.md)。  

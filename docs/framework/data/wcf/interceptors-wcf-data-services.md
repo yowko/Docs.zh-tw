@@ -13,6 +13,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: zh-TW
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33363796"
 ---
 # <a name="interceptors-wcf-data-services"></a>攔截器 (WCF 資料服務)
 [!INCLUDE[ssAstoria](../../../../includes/ssastoria-md.md)] 讓應用程式攔截要求訊息，您可以將自訂邏輯加入作業。 您可以使用這個自訂邏輯驗證傳入訊息中的資料。 您還可以使用它進一步限制查詢要求的範圍，例如，以根據要求來插入自訂授權原則。  

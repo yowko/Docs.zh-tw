@@ -7,6 +7,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: HT
 ms.contentlocale: zh-TW
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33340108"
 ---
 # <a name="tutorial-manipulating-content-in-a-wordprocessingml-document-c"></a>教學課程：管理 WordprocessingML 文件中的內容 (C#)
 本教學課程顯示如何應用功能性轉換方法與 LINQ to XML 來管理 XML 文件。 C# 範例會查詢並管理 Microsoft Word 所儲存之 Office Open XML WordprocessingML 文件中的資訊。  

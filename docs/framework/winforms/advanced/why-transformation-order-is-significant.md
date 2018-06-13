@@ -12,6 +12,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: zh-TW
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33526073"
 ---
 # <a name="why-transformation-order-is-significant"></a>為何轉換順序很重要
 單一<xref:System.Drawing.Drawing2D.Matrix>物件可儲存單一轉換的序列。 後者稱為複合轉換。 取得複合的轉換矩陣乘以個別轉換的矩陣。  

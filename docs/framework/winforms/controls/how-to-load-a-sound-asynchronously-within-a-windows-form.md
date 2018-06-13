@@ -14,6 +14,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: zh-TW
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33533565"
 ---
 # <a name="how-to-load-a-sound-asynchronously-within-a-windows-form"></a>如何：在 Windows Form 中非同步地載入音效
 下列程式碼範例會以非同步方式從 URL 載入音效，然後在新的執行緒上播放。  

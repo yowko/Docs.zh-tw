@@ -7,6 +7,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: zh-TW
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33357656"
 ---
 # <a name="walkthrough-manipulating-data-c"></a>逐步解說：操作資料 (C#)
 本逐步解說針對加入、修改和刪除資料庫中的資料，提供基本的端對端 [!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)] 案例。 您將使用範例 Northwind 資料庫的複本來加入客戶、變更客戶名稱，以及刪除訂單。  

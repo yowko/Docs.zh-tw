@@ -17,6 +17,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: zh-TW
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33541657"
 ---
 # <a name="data-binding-and-windows-forms"></a>資料繫結和 Windows Form
 在 Windows Forms 中，您不只可以繫結至傳統的資料來源，也能繫結至幾乎任何包含資料的結構。 您可以繫結至執行階段計算、從檔案讀取，或衍生自其他控制項之值的值陣列。  

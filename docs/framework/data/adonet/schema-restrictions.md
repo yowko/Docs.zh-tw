@@ -10,6 +10,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: zh-TW
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33357253"
 ---
 # <a name="schema-restrictions"></a>結構描述限制
 第二個選擇性參數**GetSchema**方法會傳回用來限制的結構描述資訊量的限制，並將它傳遞至**GetSchema**方法的字串陣列. 陣列中的位置決定您可以傳遞的值，它相當於限制號碼。  

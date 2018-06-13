@@ -15,6 +15,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: zh-TW
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33353888"
 ---
 # <a name="how-to-project-query-results-wcf-data-services"></a>如何：投影查詢結果(WCF 資料服務)
 投影提供一種機制，可藉由指定回應中僅傳回特定實體屬性的方式降低查詢傳回的資料量。 您可以執行預測的結果[!INCLUDE[ssAstoria](../../../../includes/ssastoria-md.md)]查詢使用`$select`查詢選項或使用[選取](~/docs/csharp/language-reference/keywords/select-clause.md)子句 ([選取](~/docs/visual-basic/language-reference/queries/select-clause.md)在 Visual Basic 中) 中的 LINQ 查詢。 如需詳細資訊，請參閱[查詢資料服務](../../../../docs/framework/data/wcf/querying-the-data-service-wcf-data-services.md)。  

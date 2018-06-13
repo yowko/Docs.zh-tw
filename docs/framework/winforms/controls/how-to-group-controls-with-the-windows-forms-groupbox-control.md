@@ -11,6 +11,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: zh-TW
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33531920"
 ---
 # <a name="how-to-group-controls-with-the-windows-forms-groupbox-control"></a>如何：以 Windows Form GroupBox 控制項來群組控制項
 Windows Form<xref:System.Windows.Forms.GroupBox>控制項可用來將其他控制項組成群組。 群組控制項的三個原因有：  

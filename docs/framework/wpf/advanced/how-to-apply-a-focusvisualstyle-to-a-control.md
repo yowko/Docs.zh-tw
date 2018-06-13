@@ -10,6 +10,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: zh-TW
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33543728"
 ---
 # <a name="how-to-apply-a-focusvisualstyle-to-a-control"></a>如何：對控制項套用 FocusVisualStyle
 此範例將示範如何建立資源中的焦點視覺化樣式，並套用樣式至控制項，使用<xref:System.Windows.FrameworkElement.FocusVisualStyle%2A>屬性。  

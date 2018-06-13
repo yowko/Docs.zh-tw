@@ -15,6 +15,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: zh-TW
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33356195"
 ---
 # <a name="httpwebrequestcoreresponse-field"></a>HttpWebRequest。\_CoreResponse 欄位
 
@@ -35,6 +36,6 @@ private object _CoreResponse
 
 **命名空間：** <xref:System.Net>
 
-**組件：**系統 （在 System.dll)
+**組件：** 系統 （在 System.dll)
 
-**.NET framework 版本：**自 2.0 起可用。
+**.NET framework 版本：** 自 2.0 起可用。

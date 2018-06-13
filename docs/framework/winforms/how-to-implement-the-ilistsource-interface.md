@@ -13,6 +13,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: zh-TW
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33539412"
 ---
 # <a name="how-to-implement-the-ilistsource-interface"></a>如何：實作 IListSource 介面
 實作<xref:System.ComponentModel.IListSource>介面來建立可繫結的類別未實作<xref:System.Collections.IList>但會提供來自另一個位置的清單。  

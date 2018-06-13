@@ -7,6 +7,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: zh-TW
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33353363"
 ---
 # <a name="property"></a>屬性
 *屬性*是基本建置組塊的[實體類型](../../../../docs/framework/data/adonet/entity-type.md)和[複雜型別](../../../../docs/framework/data/adonet/complex-type.md)。 屬性可定義實體類型執行個體或複雜類型執行個體將包含的資料圖案和特性。 概念模型中的屬性類似類別中定義的屬性。 如同類別上的屬性可定義類別的圖形並包含關於物件的資訊，概念模型的屬性可定義實體類別的圖形，並包含關於實體類型執行個體的資訊。  

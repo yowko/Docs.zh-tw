@@ -10,6 +10,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: HT
 ms.contentlocale: zh-TW
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33569527"
 ---
 # <a name="entity-references-are-expanded-and-not-preserved"></a>實體參考是可擴充且沒有保留
 當實體參考擴充並且由它所表示的文字所取代時，就不會建立 **XmlEntityReference** 節點。 相反的，實體宣告會剖析，而從宣告中之內容建立的節點會複製到 **XmlEntityReference** 的位置。 因此，在 `&publisher;` 範例中，不會儲存 `&publisher;`，但會建立 **XmlText** 節點。  

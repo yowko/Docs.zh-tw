@@ -7,6 +7,7 @@ ms.sourcegitcommit: 11f11ca6cefe555972b3a5c99729d1a7523d8f50
 ms.translationtype: MT
 ms.contentlocale: zh-TW
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32764212"
 ---
 # <a name="null-literals-and-type-inference-entity-sql"></a>Null 常值和類型推斷 (Entity SQL)
 Null 常值與 [!INCLUDE[esql](../../../../../../includes/esql-md.md)] 型別系統中的任何型別都相容。 不過，對於 null 常值是否正確，推斷的型別[!INCLUDE[esql](../../../../../../includes/esql-md.md)]會加諸特定限制上可以使用 null 常值的地方。  

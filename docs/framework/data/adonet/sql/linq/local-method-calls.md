@@ -10,6 +10,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: zh-TW
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33352434"
 ---
 # <a name="local-method-calls"></a>區域方法呼叫
 區域方法呼叫就是在物件模型 (Object Model) 內執行的呼叫。 遠端方法呼叫則是 [!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)] 轉譯為 SQL 並傳輸給資料庫引擎進行執行的呼叫。 需要區域方法呼叫時[!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)]無法轉譯成 SQL 呼叫。 否則，<xref:System.InvalidOperationException>就會擲回。  
