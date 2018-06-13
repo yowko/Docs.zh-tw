@@ -7,6 +7,7 @@ ms.sourcegitcommit: 11f11ca6cefe555972b3a5c99729d1a7523d8f50
 ms.translationtype: MT
 ms.contentlocale: zh-TW
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32750683"
 ---
 # <a name="ltmessagelogginggt"></a>&lt;messageLogging&gt;
 這個項目會定義 Windows Communication Foundation (WCF) 的訊息記錄功能設定。  

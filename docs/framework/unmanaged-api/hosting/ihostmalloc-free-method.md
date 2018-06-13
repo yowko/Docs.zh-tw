@@ -19,9 +19,10 @@ author: rpetrusha
 ms.author: ronpet
 ms.openlocfilehash: a8bd7b16f06433970d1222dbeaa843e187715faa
 ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
-ms.translationtype: MT
+ms.translationtype: HT
 ms.contentlocale: zh-TW
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33438993"
 ---
 # <a name="ihostmallocfree-method"></a>IHostMAlloc::Free 方法
 釋放記憶體取消配置使用[配置](../../../../docs/framework/unmanaged-api/hosting/ihostmalloc-alloc-method.md)函式。  
@@ -54,11 +55,11 @@ HRESULT Free (
  如果`pMem`參數是指使用的呼叫未配置的記憶體區域`Alloc`，主應用程式應該傳回 HOST_E_INVALIDOPERATION。  
   
 ## <a name="requirements"></a>需求  
- **平台：**看到[系統需求](../../../../docs/framework/get-started/system-requirements.md)。  
+ **平台：** 看到[系統需求](../../../../docs/framework/get-started/system-requirements.md)。  
   
  **標頭：** MSCorEE.h  
   
- **程式庫：**包含做為 MSCorEE.dll 中的資源  
+ **程式庫：** 包含做為 MSCorEE.dll 中的資源  
   
  **.NET framework 版本：** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]  
   

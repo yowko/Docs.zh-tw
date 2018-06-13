@@ -7,6 +7,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: zh-TW
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33497187"
 ---
 # <a name="how-to-create-a-workflow-service-that-calls-another-workflow-service"></a>HOW TO：建立會呼叫其他工作流程服務的工作流程服務
 有時工作流程服務需要從另一個工作流程服務取得資訊。  本主題示範如何從另一個工作流程服務呼叫某個工作流程服務。 在本主題中，我們會建立兩個工作流程服務，其中一個服務的方法會反轉輸入字串，而另一個服務則會在反轉使用第一個服務的字串之後，將輸入字串轉換成大寫。  

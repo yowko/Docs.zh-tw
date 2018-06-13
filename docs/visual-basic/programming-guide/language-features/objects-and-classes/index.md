@@ -10,6 +10,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: zh-TW
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33655859"
 ---
 # <a name="objects-and-classes-in-visual-basic"></a>Visual Basic 中的物件和類別
 「物件」是可視為一個單位的程式碼和資料組合。 物件可以是應用程式的一部分，例如控制項或表單。 整個應用程式也可以是一個物件。

@@ -13,6 +13,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: zh-TW
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33499085"
 ---
 # <a name="windows-communication-foundation-security"></a>Windows Communication Foundation 安全性
 本節主題說明 Windows Communication Foundation (WCF) 安全性功能，以及如何使用它們來保護訊息。  

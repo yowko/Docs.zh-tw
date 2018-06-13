@@ -25,6 +25,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: zh-TW
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33656161"
 ---
 # <a name="implicit-and-explicit-conversions-visual-basic"></a>隱含和明確轉換 (Visual Basic)
 *隱含轉換*不需要任何特殊的語法，在原始程式碼中。 在下列範例中，Visual Basic 將隱含轉換的值`k`的單精確度浮點值，然後再將它指派給`q`。  

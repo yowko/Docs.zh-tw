@@ -10,6 +10,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: zh-TW
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33497148"
 ---
 # <a name="nettcp-port-sharing"></a>Net.TCP Port Sharing
 Windows Communication Foundation (WCF) 會將新的 TCP 架構網路通訊協定 (net.tcp://) 提供高效能通訊。 WCF 還導入了新的系統元件，可讓多個使用者處理序共用 net.tcp 連接埠的 Net.TCP Port Sharing Service。  

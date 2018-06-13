@@ -15,6 +15,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: zh-TW
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33604090"
 ---
 # <a name="-operator-visual-basic"></a>/= 運算子 (Visual Basic)
 將運算式的值的變數或屬性的值除以和浮點結果指派給變數或屬性。  
