@@ -15,6 +15,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: zh-TW
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33526510"
 ---
 # <a name="how-to-align-a-control-to-the-edges-of-forms"></a>如何：將控制項和表單邊緣對齊
 您可設定 <xref:System.Windows.Forms.Control.Dock%2A> 屬性讓控制項對齊表單邊緣。 這個屬性會指定您的控制項在表單中的位置。 可將 <xref:System.Windows.Forms.Control.Dock%2A> 屬性設為下列值：  

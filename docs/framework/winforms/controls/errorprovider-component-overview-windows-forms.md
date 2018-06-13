@@ -13,6 +13,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: zh-TW
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33528882"
 ---
 # <a name="errorprovider-component-overview-windows-forms"></a>ErrorProvider 元件概觀 (Windows Form)
 Windows Form [ErrorProvider](../../../../docs/framework/winforms/controls/errorprovider-component-windows-forms.md)元件可用來驗證使用者輸入表單或控制項上的。 通常用於搭配驗證表單上的使用者輸入或顯示資料集內的錯誤。 錯誤提供者是較佳的替代方式比在訊息方塊中，顯示一則錯誤訊息，因為一旦關閉訊息方塊，錯誤訊息不再顯示。 <xref:System.Windows.Forms.ErrorProvider>元件會顯示錯誤圖示 (![ErrorProvider 圖示](../../../../docs/framework/winforms/controls/media/vberrorprovidericon.gif "vbErrorProviderIcon")) 相關的控制項，例如文字方塊; 當使用者透過將滑鼠指標旁邊錯誤圖示，工具提示隨即出現，顯示錯誤訊息字串。  

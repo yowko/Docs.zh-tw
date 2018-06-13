@@ -19,6 +19,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: zh-TW
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33529467"
 ---
 # <a name="how-to-add-controls-without-a-user-interface-to-windows-forms"></a>如何：將沒有使用者介面的控制項加入至 Windows Form
 隱藏式控制項 （或元件） 提供您的應用程式的功能。 不像其他控制項，並不提供給使用者的使用者介面元件，並因此不需要在 Windows Form 設計工具介面上顯示。 當元件加入至表單時，Windows Form 設計工具會顯示可調整大小的紙匣底端的表單顯示所有元件的位置。 一旦已將控制項加入至元件匣中，您可以選取的元件，並設定其屬性，就像處理任何其他控制項在表單上。  

@@ -11,6 +11,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: zh-TW
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33561580"
 ---
 # <a name="how-to-create-a-composite-drawing"></a>如何：建立複合圖形
 這個範例示範如何使用<xref:System.Windows.Media.DrawingGroup>結合以建立複雜的繪圖多<xref:System.Windows.Media.Drawing>變成單一的複合繪圖的物件。  

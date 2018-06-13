@@ -12,6 +12,7 @@ ms.sourcegitcommit: 11f11ca6cefe555972b3a5c99729d1a7523d8f50
 ms.translationtype: MT
 ms.contentlocale: zh-TW
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32754284"
 ---
 # <a name="ltforceperformancecounteruniquesharedmemoryreadsgt-element"></a>&lt;forcePerformanceCounterUniqueSharedMemoryReads&gt;項目
 指定 PerfCounter.dll 是否在 .NET Framework 1.1 版的應用程式中使用 CategoryOptions 登錄設定，以決定要從類別特定共用記憶體或從全域記憶體載入效能計數器資料。  

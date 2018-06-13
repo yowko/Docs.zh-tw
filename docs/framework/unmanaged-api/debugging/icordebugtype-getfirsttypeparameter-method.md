@@ -19,9 +19,10 @@ author: rpetrusha
 ms.author: ronpet
 ms.openlocfilehash: 6d6754d7a8224249582df56ab674932f065f581d
 ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
-ms.translationtype: MT
+ms.translationtype: HT
 ms.contentlocale: zh-TW
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33421667"
 ---
 # <a name="icordebugtypegetfirsttypeparameter-method"></a>ICorDebugType::GetFirstTypeParameter 方法
 取得的介面指標來代表第一個 ICorDebugType<xref:System.Type>參數所表示之型別的`ICorDebugType`。  
@@ -42,7 +43,7 @@ HRESULT GetFirstTypeParameter (
  `GetFirstTypeParameter` 可以呼叫在其中類型相關的其他資訊涉及，最多的情況下一個型別參數。 特別是，它可以做為 ELEMENT_TYPE_ARRAY、 ELEMENT_TYPE_SZARRAY、 ELEMENT_TYPE_BYREF 或 ELEMENT_TYPE_PTR，該類型時所指定[icordebugtype:: Gettype](../../../../docs/framework/unmanaged-api/debugging/icordebugtype-gettype-method.md)方法。  
   
 ## <a name="requirements"></a>需求  
- **平台：**看到[系統需求](../../../../docs/framework/get-started/system-requirements.md)。  
+ **平台：** 看到[系統需求](../../../../docs/framework/get-started/system-requirements.md)。  
   
  **標頭：** CorDebug.idl、 CorDebug.h  
   

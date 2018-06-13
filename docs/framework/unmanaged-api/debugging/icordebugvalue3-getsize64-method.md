@@ -19,9 +19,10 @@ author: rpetrusha
 ms.author: ronpet
 ms.openlocfilehash: c5d3925741e9777e4fcd1752d8e24bf71ad1579f
 ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
-ms.translationtype: MT
+ms.translationtype: HT
 ms.contentlocale: zh-TW
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33422633"
 ---
 # <a name="icordebugvalue3getsize64-method"></a>ICorDebugValue3::GetSize64 方法
 取得以位元組為單位，這個大小， [ICorDebugValue3](../../../../docs/framework/unmanaged-api/debugging/icordebugvalue3-interface.md)物件。  
@@ -44,7 +45,7 @@ HRESULT GetSize64(
  `ICorDebugValue3::GetSize`方法不同於[icordebugvalue:: Getsize](../../../../docs/framework/unmanaged-api/debugging/icordebugvalue-getsize-method.md)其輸出參數的型別中的方法。 在[icordebugvalue:: Getsize](../../../../docs/framework/unmanaged-api/debugging/icordebugvalue-getsize-method.md)，輸出參數是`ULONG32`; 在`ICorDebugValue3::GetSize`，它是`ULONG64`。 這可讓[ICorDebugValue3](../../../../docs/framework/unmanaged-api/debugging/icordebugvalue3-interface.md)介面的報表大小超過 2 GB 的陣列。  
   
 ## <a name="requirements"></a>需求  
- **平台：**看到[系統需求](../../../../docs/framework/get-started/system-requirements.md)。  
+ **平台：** 看到[系統需求](../../../../docs/framework/get-started/system-requirements.md)。  
   
  **標頭：** CorDebug.idl、 CorDebug.h  
   

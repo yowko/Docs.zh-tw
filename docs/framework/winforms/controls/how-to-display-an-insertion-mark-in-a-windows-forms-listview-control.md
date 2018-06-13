@@ -16,6 +16,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: zh-TW
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33532908"
 ---
 # <a name="how-to-display-an-insertion-mark-in-a-windows-forms-listview-control"></a>如何：在 Windows Forms ListView 控制項中顯示插入標記
 <xref:System.Windows.Forms.ListView> 控制項中的插入標記會向使用者顯示將會插入拖曳項目的點。 當使用者將項目拖曳至另外兩個項目之間的某個點時，插入標記會顯示該項目的預期新位置。  

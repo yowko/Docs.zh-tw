@@ -7,6 +7,7 @@ ms.sourcegitcommit: 11f11ca6cefe555972b3a5c99729d1a7523d8f50
 ms.translationtype: MT
 ms.contentlocale: zh-TW
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32761164"
 ---
 # <a name="map-unique-xml-schema-xsd-constraints-to-dataset-constraints"></a>將 unique XML 結構描述 (XSD) 條件約束對應至資料集條件約束
 中的 XML 結構描述定義語言 (XSD) 結構描述**唯一**項目會指定元素或屬性上條件約束的唯一性。 在將 XML 結構描述轉譯到關聯式結構描述的處理序中，會將 XML 結構描述內項目或屬性上指定的唯一的條件約束 (Constraint)，對應到所產生的對應 <xref:System.Data.DataTable> 內 <xref:System.Data.DataSet> 的唯一的條件約束。  

@@ -7,6 +7,7 @@ ms.sourcegitcommit: 11f11ca6cefe555972b3a5c99729d1a7523d8f50
 ms.translationtype: MT
 ms.contentlocale: zh-TW
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32754076"
 ---
 # <a name="ltallowedaudienceurisgt"></a>&lt;a d d&gt;
 表示目標 URI 的集合，<xref:System.IdentityModel.Tokens.SamlSecurityToken> 安全性權杖會以其為目標，這樣 <xref:System.IdentityModel.Selectors.SamlSecurityTokenAuthenticator> 執行個體才會將其視為有效。  

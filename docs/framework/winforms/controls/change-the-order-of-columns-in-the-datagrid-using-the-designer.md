@@ -12,6 +12,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: zh-TW
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33525761"
 ---
 # <a name="how-to-change-the-order-of-columns-in-the-windows-forms-datagridview-control-using-the-designer"></a>如何：使用設計工具變更 Windows Form DataGridView 控制項中資料行的順序
 當您繫結 Windows Form<xref:System.Windows.Forms.DataGridView>控制項至資料來源，會自動產生的資料行的顯示順序取決於資料來源。 如果此順序是不是您所喜好，您可以變更使用設計工具的資料行的順序。 您也可以將未繫結的資料行加入至控制項，並變更其顯示順序。 如需如何以程式設計方式變更的資料行順序的資訊，請參閱[如何： 變更 Windows Form DataGridView 控制項中的資料行順序](../../../../docs/framework/winforms/controls/how-to-change-the-order-of-columns-in-the-windows-forms-datagridview-control.md)。  
