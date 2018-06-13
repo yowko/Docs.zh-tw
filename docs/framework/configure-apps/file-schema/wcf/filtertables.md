@@ -7,6 +7,7 @@ ms.sourcegitcommit: 11f11ca6cefe555972b3a5c99729d1a7523d8f50
 ms.translationtype: MT
 ms.contentlocale: zh-TW
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32753410"
 ---
 # <a name="ltfiltertablesgt"></a><span data-ttu-id="1e237-102">&lt;filterTables&gt;</span><span class="sxs-lookup"><span data-stu-id="1e237-102">&lt;filterTables&gt;</span></span>
 <span data-ttu-id="1e237-103">代表定義路由表的組態區段，該路由表包含當篩選條件符合時，路由篩選條件與訊息傳送目標端點之間的對應。</span><span class="sxs-lookup"><span data-stu-id="1e237-103">Represents a configuration section for defining routing tables that contain mappings between the routing filters and the target endpoints to send messages to when the filter matches.</span></span>  

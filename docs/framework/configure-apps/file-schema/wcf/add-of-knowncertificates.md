@@ -7,6 +7,7 @@ ms.sourcegitcommit: 11f11ca6cefe555972b3a5c99729d1a7523d8f50
 ms.translationtype: MT
 ms.contentlocale: zh-TW
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32752984"
 ---
 # <a name="ltaddgt-of-ltknowncertificatesgt"></a><span data-ttu-id="fef86-102">&lt;knownCertificates&gt; 的 &lt;add&gt;</span><span class="sxs-lookup"><span data-stu-id="fef86-102">&lt;add&gt; of &lt;knownCertificates&gt;</span></span>
 <span data-ttu-id="fef86-103">將 X.509 憑證加入至已知憑證的集合。</span><span class="sxs-lookup"><span data-stu-id="fef86-103">Adds an X.509 certificate to the collection of known certificates.</span></span>  

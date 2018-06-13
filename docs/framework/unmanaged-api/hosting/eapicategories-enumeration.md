@@ -1,14 +1,6 @@
 ---
-title: "EApiCategories 列舉"
-ms.custom: 
+title: EApiCategories 列舉
 ms.date: 03/30/2017
-ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.technology:
-- dotnet-clr
-ms.tgt_pltfrm: 
-ms.topic: reference
 api_name:
 - EApiCategories
 api_location:
@@ -22,22 +14,19 @@ helpviewer_keywords:
 ms.assetid: 3c4a8a5a-8a46-4ac9-947f-4959bc9d6ac6
 topic_type:
 - apiref
-caps.latest.revision: 
 author: rpetrusha
 ms.author: ronpet
-manager: wpickett
-ms.workload:
-- dotnet
-ms.openlocfilehash: 630a3048072ed7b19b3250e75aca3b31e4dd7df7
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
-ms.translationtype: MT
+ms.openlocfilehash: f25348410387a7b0e03ef897e8534336baeb126a
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 05/04/2018
+ms.locfileid: "33432205"
 ---
-# <a name="eapicategories-enumeration"></a><span data-ttu-id="abb07-102">EApiCategories 列舉</span><span class="sxs-lookup"><span data-stu-id="abb07-102">EApiCategories Enumeration</span></span>
-<span data-ttu-id="abb07-103">描述分類的主機可以封鎖無法在部分信任程式碼中執行的功能。</span><span class="sxs-lookup"><span data-stu-id="abb07-103">Describes the categories of capabilities that the host can block from running in partially trusted code.</span></span>  
+# <a name="eapicategories-enumeration"></a><span data-ttu-id="14b3d-102">EApiCategories 列舉</span><span class="sxs-lookup"><span data-stu-id="14b3d-102">EApiCategories Enumeration</span></span>
+<span data-ttu-id="14b3d-103">描述分類的主機可以封鎖無法在部分信任程式碼中執行的功能。</span><span class="sxs-lookup"><span data-stu-id="14b3d-103">Describes the categories of capabilities that the host can block from running in partially trusted code.</span></span>  
   
-## <a name="syntax"></a><span data-ttu-id="abb07-104">語法</span><span class="sxs-lookup"><span data-stu-id="abb07-104">Syntax</span></span>  
+## <a name="syntax"></a><span data-ttu-id="14b3d-104">語法</span><span class="sxs-lookup"><span data-stu-id="14b3d-104">Syntax</span></span>  
   
 ```  
 typedef enum {  
@@ -55,36 +44,36 @@ typedef enum {
 } EHostProtectionCategories;  
 ```  
   
-## <a name="members"></a><span data-ttu-id="abb07-105">成員</span><span class="sxs-lookup"><span data-stu-id="abb07-105">Members</span></span>  
+## <a name="members"></a><span data-ttu-id="14b3d-105">成員</span><span class="sxs-lookup"><span data-stu-id="14b3d-105">Members</span></span>  
   
-|<span data-ttu-id="abb07-106">成員</span><span class="sxs-lookup"><span data-stu-id="abb07-106">Member</span></span>|<span data-ttu-id="abb07-107">描述</span><span class="sxs-lookup"><span data-stu-id="abb07-107">Description</span></span>|  
+|<span data-ttu-id="14b3d-106">成員</span><span class="sxs-lookup"><span data-stu-id="14b3d-106">Member</span></span>|<span data-ttu-id="14b3d-107">描述</span><span class="sxs-lookup"><span data-stu-id="14b3d-107">Description</span></span>|  
 |------------|-----------------|  
-|`eAll`|<span data-ttu-id="abb07-108">指定所有 managed 類別和成員，涵蓋的其他`EApiCategories`欄位遭到封鎖而無法在部分信任程式碼中執行。</span><span class="sxs-lookup"><span data-stu-id="abb07-108">Specifies that all managed classes and members that are covered by other `EApiCategories` fields be blocked from running in partially trusted code.</span></span>|  
-|`eExternalProcessMgmt`|<span data-ttu-id="abb07-109">指定封鎖受管理的類別和成員，可讓建立、 管理和解構的外部處理序在部分信任程式碼中執行。</span><span class="sxs-lookup"><span data-stu-id="abb07-109">Specifies that managed classes and members that allow the creation, manipulation, and destruction of external processes be blocked from running in partially trusted code.</span></span>|  
-|`eExternalThreading`|<span data-ttu-id="abb07-110">指定封鎖受管理的類別和成員，可讓建立、 管理和解構的外部執行緒在部分信任程式碼中執行。</span><span class="sxs-lookup"><span data-stu-id="abb07-110">Specifies that managed classes and members that allow the creation, manipulation, and destruction of external threads be blocked from running in partially trusted code.</span></span>|  
-|`eMayLeakOnAbort`|<span data-ttu-id="abb07-111">指定封鎖無法可能遺漏記憶體中止的 managed 的類型和成員在部分信任程式碼中執行。</span><span class="sxs-lookup"><span data-stu-id="abb07-111">Specifies that managed types and members that could potentially leak memory on abort be blocked from running in partially trusted code.</span></span>|  
-|`eNoCategory`|<span data-ttu-id="abb07-112">指定無法在部分信任程式碼中執行封鎖的任何 managed 程式碼的類別。</span><span class="sxs-lookup"><span data-stu-id="abb07-112">Specifies that no managed code categories be blocked from running in partially trusted code.</span></span>|  
-|`eSecurityInfrastructure`|<span data-ttu-id="abb07-113">指定 common language runtime (CLR) 安全性基礎結構遭到封鎖而無法由部分信任程式碼。</span><span class="sxs-lookup"><span data-stu-id="abb07-113">Specifies that the common language runtime (CLR) security infrastructure be blocked from being used by partially trusted code.</span></span>|  
-|`eSelfAffectingProcessMgmt`|<span data-ttu-id="abb07-114">指定封鎖受管理的類別和其功能可能會影響受主控的處理序的成員在部分信任程式碼中執行。</span><span class="sxs-lookup"><span data-stu-id="abb07-114">Specifies that managed classes and members whose capabilities can affect the hosted process be blocked from running in partially trusted code.</span></span>|  
-|`eSelfAffectingThreading`|<span data-ttu-id="abb07-115">指定封鎖受管理的類別和其功能可能會影響裝載處理序中的執行緒的成員在部分信任程式碼中執行。</span><span class="sxs-lookup"><span data-stu-id="abb07-115">Specifies that managed classes and members whose capabilities can affect threads in the hosted process be blocked from running in partially trusted code.</span></span>|  
-|`eSharedState`|<span data-ttu-id="abb07-116">指定封鎖受管理的類別和成員公開共用的狀態的部分信任程式碼中執行。</span><span class="sxs-lookup"><span data-stu-id="abb07-116">Specifies that managed classes and members that expose shared state be blocked from running in partially trusted code.</span></span>|  
-|`eSynchronization`|<span data-ttu-id="abb07-117">指定封鎖 common language runtime 類別和成員，可讓使用者程式碼保留鎖定在部分信任程式碼中執行。</span><span class="sxs-lookup"><span data-stu-id="abb07-117">Specifies that common language runtime classes and members that allow user code to hold locks be blocked from running in partially trusted code.</span></span>|  
-|`eUI`|<span data-ttu-id="abb07-118">指定封鎖受管理的類別和成員允許或需要人為互動在部分信任程式碼中執行。</span><span class="sxs-lookup"><span data-stu-id="abb07-118">Specifies that managed classes and members that allow or require human interaction be blocked from running in partially trusted code.</span></span>|  
+|`eAll`|<span data-ttu-id="14b3d-108">指定所有 managed 類別和成員，涵蓋的其他`EApiCategories`欄位遭到封鎖而無法在部分信任程式碼中執行。</span><span class="sxs-lookup"><span data-stu-id="14b3d-108">Specifies that all managed classes and members that are covered by other `EApiCategories` fields be blocked from running in partially trusted code.</span></span>|  
+|`eExternalProcessMgmt`|<span data-ttu-id="14b3d-109">指定封鎖受管理的類別和成員，可讓建立、 管理和解構的外部處理序在部分信任程式碼中執行。</span><span class="sxs-lookup"><span data-stu-id="14b3d-109">Specifies that managed classes and members that allow the creation, manipulation, and destruction of external processes be blocked from running in partially trusted code.</span></span>|  
+|`eExternalThreading`|<span data-ttu-id="14b3d-110">指定封鎖受管理的類別和成員，可讓建立、 管理和解構的外部執行緒在部分信任程式碼中執行。</span><span class="sxs-lookup"><span data-stu-id="14b3d-110">Specifies that managed classes and members that allow the creation, manipulation, and destruction of external threads be blocked from running in partially trusted code.</span></span>|  
+|`eMayLeakOnAbort`|<span data-ttu-id="14b3d-111">指定封鎖無法可能遺漏記憶體中止的 managed 的類型和成員在部分信任程式碼中執行。</span><span class="sxs-lookup"><span data-stu-id="14b3d-111">Specifies that managed types and members that could potentially leak memory on abort be blocked from running in partially trusted code.</span></span>|  
+|`eNoCategory`|<span data-ttu-id="14b3d-112">指定無法在部分信任程式碼中執行封鎖的任何 managed 程式碼的類別。</span><span class="sxs-lookup"><span data-stu-id="14b3d-112">Specifies that no managed code categories be blocked from running in partially trusted code.</span></span>|  
+|`eSecurityInfrastructure`|<span data-ttu-id="14b3d-113">指定 common language runtime (CLR) 安全性基礎結構遭到封鎖而無法由部分信任程式碼。</span><span class="sxs-lookup"><span data-stu-id="14b3d-113">Specifies that the common language runtime (CLR) security infrastructure be blocked from being used by partially trusted code.</span></span>|  
+|`eSelfAffectingProcessMgmt`|<span data-ttu-id="14b3d-114">指定封鎖受管理的類別和其功能可能會影響受主控的處理序的成員在部分信任程式碼中執行。</span><span class="sxs-lookup"><span data-stu-id="14b3d-114">Specifies that managed classes and members whose capabilities can affect the hosted process be blocked from running in partially trusted code.</span></span>|  
+|`eSelfAffectingThreading`|<span data-ttu-id="14b3d-115">指定封鎖受管理的類別和其功能可能會影響裝載處理序中的執行緒的成員在部分信任程式碼中執行。</span><span class="sxs-lookup"><span data-stu-id="14b3d-115">Specifies that managed classes and members whose capabilities can affect threads in the hosted process be blocked from running in partially trusted code.</span></span>|  
+|`eSharedState`|<span data-ttu-id="14b3d-116">指定封鎖受管理的類別和成員公開共用的狀態的部分信任程式碼中執行。</span><span class="sxs-lookup"><span data-stu-id="14b3d-116">Specifies that managed classes and members that expose shared state be blocked from running in partially trusted code.</span></span>|  
+|`eSynchronization`|<span data-ttu-id="14b3d-117">指定封鎖 common language runtime 類別和成員，可讓使用者程式碼保留鎖定在部分信任程式碼中執行。</span><span class="sxs-lookup"><span data-stu-id="14b3d-117">Specifies that common language runtime classes and members that allow user code to hold locks be blocked from running in partially trusted code.</span></span>|  
+|`eUI`|<span data-ttu-id="14b3d-118">指定封鎖受管理的類別和成員允許或需要人為互動在部分信任程式碼中執行。</span><span class="sxs-lookup"><span data-stu-id="14b3d-118">Specifies that managed classes and members that allow or require human interaction be blocked from running in partially trusted code.</span></span>|  
   
-## <a name="remarks"></a><span data-ttu-id="abb07-119">備註</span><span class="sxs-lookup"><span data-stu-id="abb07-119">Remarks</span></span>  
- <span data-ttu-id="abb07-120">[Iclrhostprotectionmanager:: Setprotectedcategories](../../../../docs/framework/unmanaged-api/hosting/iclrhostprotectionmanager-setprotectedcategories-method.md)方法使用的型別參數`EApiCategories`。</span><span class="sxs-lookup"><span data-stu-id="abb07-120">The [ICLRHostProtectionManager::SetProtectedCategories](../../../../docs/framework/unmanaged-api/hosting/iclrhostprotectionmanager-setprotectedcategories-method.md) method takes a parameter of type `EApiCategories`.</span></span>  
+## <a name="remarks"></a><span data-ttu-id="14b3d-119">備註</span><span class="sxs-lookup"><span data-stu-id="14b3d-119">Remarks</span></span>  
+ <span data-ttu-id="14b3d-120">[Iclrhostprotectionmanager:: Setprotectedcategories](../../../../docs/framework/unmanaged-api/hosting/iclrhostprotectionmanager-setprotectedcategories-method.md)方法使用的型別參數`EApiCategories`。</span><span class="sxs-lookup"><span data-stu-id="14b3d-120">The [ICLRHostProtectionManager::SetProtectedCategories](../../../../docs/framework/unmanaged-api/hosting/iclrhostprotectionmanager-setprotectedcategories-method.md) method takes a parameter of type `EApiCategories`.</span></span>  
   
- <span data-ttu-id="abb07-121">`EApiCategories`列舉型別和`SetProtectedCategories`方法直接相關的 managed<xref:System.Security.Permissions.HostProtectionAttribute?displayProperty=nameWithType>類別。</span><span class="sxs-lookup"><span data-stu-id="abb07-121">The `EApiCategories` enumeration and the `SetProtectedCategories` method are directly related to the managed <xref:System.Security.Permissions.HostProtectionAttribute?displayProperty=nameWithType> class.</span></span> <span data-ttu-id="abb07-122">Managed 的類別會搭配<xref:System.Security.Permissions.HostProtectionResource?displayProperty=nameWithType>列舉型別，其值會直接對應`EApiCategories`值，將 managed 型別和成員，將功能對應至所描述的類別公開`EApiCategories`。</span><span class="sxs-lookup"><span data-stu-id="abb07-122">The managed class is used with the <xref:System.Security.Permissions.HostProtectionResource?displayProperty=nameWithType> enumeration, whose values correspond directly to the `EApiCategories` values, to mark managed types and members that expose capabilities corresponding to the categories described by `EApiCategories`.</span></span>  
+ <span data-ttu-id="14b3d-121">`EApiCategories`列舉型別和`SetProtectedCategories`方法直接相關的 managed<xref:System.Security.Permissions.HostProtectionAttribute?displayProperty=nameWithType>類別。</span><span class="sxs-lookup"><span data-stu-id="14b3d-121">The `EApiCategories` enumeration and the `SetProtectedCategories` method are directly related to the managed <xref:System.Security.Permissions.HostProtectionAttribute?displayProperty=nameWithType> class.</span></span> <span data-ttu-id="14b3d-122">Managed 的類別會搭配<xref:System.Security.Permissions.HostProtectionResource?displayProperty=nameWithType>列舉型別，其值會直接對應`EApiCategories`值，將 managed 型別和成員，將功能對應至所描述的類別公開`EApiCategories`。</span><span class="sxs-lookup"><span data-stu-id="14b3d-122">The managed class is used with the <xref:System.Security.Permissions.HostProtectionResource?displayProperty=nameWithType> enumeration, whose values correspond directly to the `EApiCategories` values, to mark managed types and members that expose capabilities corresponding to the categories described by `EApiCategories`.</span></span>  
   
-## <a name="requirements"></a><span data-ttu-id="abb07-123">需求</span><span class="sxs-lookup"><span data-stu-id="abb07-123">Requirements</span></span>  
- <span data-ttu-id="abb07-124">**平台：**看到[系統需求](../../../../docs/framework/get-started/system-requirements.md)。</span><span class="sxs-lookup"><span data-stu-id="abb07-124">**Platforms:** See [System Requirements](../../../../docs/framework/get-started/system-requirements.md).</span></span>  
+## <a name="requirements"></a><span data-ttu-id="14b3d-123">需求</span><span class="sxs-lookup"><span data-stu-id="14b3d-123">Requirements</span></span>  
+ <span data-ttu-id="14b3d-124">**平台：** 看到[系統需求](../../../../docs/framework/get-started/system-requirements.md)。</span><span class="sxs-lookup"><span data-stu-id="14b3d-124">**Platforms:** See [System Requirements](../../../../docs/framework/get-started/system-requirements.md).</span></span>  
   
- <span data-ttu-id="abb07-125">**標頭：** MSCorEE.h</span><span class="sxs-lookup"><span data-stu-id="abb07-125">**Header:** MSCorEE.h</span></span>  
+ <span data-ttu-id="14b3d-125">**標頭：** MSCorEE.h</span><span class="sxs-lookup"><span data-stu-id="14b3d-125">**Header:** MSCorEE.h</span></span>  
   
- <span data-ttu-id="abb07-126">**程式庫：** MSCorEE.dll</span><span class="sxs-lookup"><span data-stu-id="abb07-126">**Library:** MSCorEE.dll</span></span>  
+ <span data-ttu-id="14b3d-126">**程式庫：** MSCorEE.dll</span><span class="sxs-lookup"><span data-stu-id="14b3d-126">**Library:** MSCorEE.dll</span></span>  
   
- <span data-ttu-id="abb07-127">**.NET framework 版本：**[!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]</span><span class="sxs-lookup"><span data-stu-id="abb07-127">**.NET Framework Versions:** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]</span></span>  
+ <span data-ttu-id="14b3d-127">**.NET framework 版本：** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]</span><span class="sxs-lookup"><span data-stu-id="14b3d-127">**.NET Framework Versions:** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]</span></span>  
   
-## <a name="see-also"></a><span data-ttu-id="abb07-128">請參閱</span><span class="sxs-lookup"><span data-stu-id="abb07-128">See Also</span></span>  
- [<span data-ttu-id="abb07-129">ICLRHostProtectionManager 介面</span><span class="sxs-lookup"><span data-stu-id="abb07-129">ICLRHostProtectionManager Interface</span></span>](../../../../docs/framework/unmanaged-api/hosting/iclrhostprotectionmanager-interface.md)  
- [<span data-ttu-id="abb07-130">裝載列舉</span><span class="sxs-lookup"><span data-stu-id="abb07-130">Hosting Enumerations</span></span>](../../../../docs/framework/unmanaged-api/hosting/hosting-enumerations.md)
+## <a name="see-also"></a><span data-ttu-id="14b3d-128">另請參閱</span><span class="sxs-lookup"><span data-stu-id="14b3d-128">See Also</span></span>  
+ [<span data-ttu-id="14b3d-129">ICLRHostProtectionManager 介面</span><span class="sxs-lookup"><span data-stu-id="14b3d-129">ICLRHostProtectionManager Interface</span></span>](../../../../docs/framework/unmanaged-api/hosting/iclrhostprotectionmanager-interface.md)  
+ [<span data-ttu-id="14b3d-130">裝載列舉</span><span class="sxs-lookup"><span data-stu-id="14b3d-130">Hosting Enumerations</span></span>](../../../../docs/framework/unmanaged-api/hosting/hosting-enumerations.md)
