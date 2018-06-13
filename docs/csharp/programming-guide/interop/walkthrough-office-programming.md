@@ -14,6 +14,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: HT
 ms.contentlocale: zh-TW
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33338633"
 ---
 # <a name="walkthrough-office-programming-c-and-visual-basic"></a><span data-ttu-id="99bf1-102">逐步解說：Office 程式設計 (C# 和 Visual Basic)</span><span class="sxs-lookup"><span data-stu-id="99bf1-102">Walkthrough: Office Programming (C# and Visual Basic)</span></span>
 <span data-ttu-id="99bf1-103">Visual Studio 在 C# 和 Visual Basic 中提供可改善 Microsoft Office 程式設計的功能。</span><span class="sxs-lookup"><span data-stu-id="99bf1-103">Visual Studio offers features in C# and Visual Basic that improve Microsoft Office programming.</span></span> <span data-ttu-id="99bf1-104">有助益的 C# 功能包括具名和選擇性引數以及類型為 `dynamic` 的傳回值。</span><span class="sxs-lookup"><span data-stu-id="99bf1-104">Helpful C# features include named and optional arguments and return values of type `dynamic`.</span></span> <span data-ttu-id="99bf1-105">在 COM 程式設計中，您可以省略 `ref` 關鍵字並存取索引的屬性。</span><span class="sxs-lookup"><span data-stu-id="99bf1-105">In COM programming, you can omit the `ref` keyword and gain access to indexed properties.</span></span> <span data-ttu-id="99bf1-106">Visual Basic 中的功能包含自動實作的屬性、Lambda 運算式中的陳述式，以及集合初始設定式。</span><span class="sxs-lookup"><span data-stu-id="99bf1-106">Features in Visual Basic include auto-implemented properties, statements in lambda expressions, and collection initializers.</span></span>

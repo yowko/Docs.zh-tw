@@ -9,6 +9,7 @@ ms.sourcegitcommit: 88f251b08bf0718ce119f3d7302f514b74895038
 ms.translationtype: MT
 ms.contentlocale: zh-TW
 ms.lasthandoff: 05/10/2018
+ms.locfileid: "33958168"
 ---
 # <a name="when-to-deploy-windows-containers-to-azure-container-service-that-is-kubernetes"></a><span data-ttu-id="0dac8-103">當 Azure 容器服務 (也就是 Kubernetes) 部署 Windows 容器</span><span class="sxs-lookup"><span data-stu-id="0dac8-103">When to deploy Windows Containers to Azure Container Service (that is, Kubernetes)</span></span>
 

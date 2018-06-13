@@ -9,6 +9,7 @@ ms.sourcegitcommit: 88f251b08bf0718ce119f3d7302f514b74895038
 ms.translationtype: HT
 ms.contentlocale: zh-TW
 ms.lasthandoff: 05/10/2018
+ms.locfileid: "33956251"
 ---
 # <a name="net-core-guide"></a><span data-ttu-id="3b95c-104">.NET Core 指南</span><span class="sxs-lookup"><span data-stu-id="3b95c-104">.NET Core Guide</span></span>
 

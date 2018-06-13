@@ -7,6 +7,7 @@ ms.sourcegitcommit: 11f11ca6cefe555972b3a5c99729d1a7523d8f50
 ms.translationtype: MT
 ms.contentlocale: zh-TW
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32767137"
 ---
 # <a name="provider-manifest-specification"></a><span data-ttu-id="408ff-102">提供者資訊清單規格</span><span class="sxs-lookup"><span data-stu-id="408ff-102">Provider Manifest Specification</span></span>
 <span data-ttu-id="408ff-103">本節將討論資料存放區提供者如何支援資料存放區中的型別與函式。</span><span class="sxs-lookup"><span data-stu-id="408ff-103">This section discusses how a data store provider can support the types and functions in the data store.</span></span>  

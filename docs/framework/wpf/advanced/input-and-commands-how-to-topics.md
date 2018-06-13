@@ -12,6 +12,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: zh-TW
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33544284"
 ---
 # <a name="input-and-commands-how-to-topics"></a><span data-ttu-id="6e83c-102">輸入和命令 HOW TO 主題</span><span class="sxs-lookup"><span data-stu-id="6e83c-102">Input and Commands How-to Topics</span></span>
 <span data-ttu-id="6e83c-103">本節中的主題描述如何使用 Windows Presentation Foundation (WPF) 中的輸入和命令的基礎結構。</span><span class="sxs-lookup"><span data-stu-id="6e83c-103">The topics in this section describe how to use the input and commanding infrastructure in Windows Presentation Foundation (WPF).</span></span>  

@@ -9,6 +9,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: HT
 ms.contentlocale: zh-TW
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33210249"
 ---
 # <a name="test-published-output-with-dotnet-vstest"></a><span data-ttu-id="a2d7b-103">使用 dotnet vstest 測試已發行的輸出</span><span class="sxs-lookup"><span data-stu-id="a2d7b-103">Test published output with dotnet vstest</span></span>
 

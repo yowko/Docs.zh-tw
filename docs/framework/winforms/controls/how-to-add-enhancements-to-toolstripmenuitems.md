@@ -29,6 +29,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: zh-TW
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33529712"
 ---
 # <a name="how-to-add-enhancements-to-toolstripmenuitems"></a><span data-ttu-id="e9f2d-102">如何：加強 ToolStripMenuItems 的功能</span><span class="sxs-lookup"><span data-stu-id="e9f2d-102">How to: Add Enhancements to ToolStripMenuItems</span></span>
 <span data-ttu-id="e9f2d-103">您可以加強的可用性<xref:System.Windows.Forms.MenuStrip>和<xref:System.Windows.Forms.ContextMenuStrip>控制項如下：</span><span class="sxs-lookup"><span data-stu-id="e9f2d-103">You can enhance the usability of <xref:System.Windows.Forms.MenuStrip> and <xref:System.Windows.Forms.ContextMenuStrip> controls in the following ways:</span></span>  

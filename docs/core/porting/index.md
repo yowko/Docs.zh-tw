@@ -9,6 +9,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: HT
 ms.contentlocale: zh-TW
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33210078"
 ---
 # <a name="porting-to-net-core-from-net-framework"></a><span data-ttu-id="bc55b-103">從 .NET Framework 移轉到 .NET Core</span><span class="sxs-lookup"><span data-stu-id="bc55b-103">Porting to .NET Core from .NET Framework</span></span>
 

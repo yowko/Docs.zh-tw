@@ -9,6 +9,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: HT
 ms.contentlocale: zh-TW
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33339926"
 ---
 # <a name="how-to-implement-user-defined-conversions-between-structs-c-programming-guide"></a><span data-ttu-id="ddc80-102">如何：在結構之間實作使用者定義的轉換 (C# 程式設計手冊)</span><span class="sxs-lookup"><span data-stu-id="ddc80-102">How to: Implement User-Defined Conversions Between Structs (C# Programming Guide)</span></span>
 <span data-ttu-id="ddc80-103">這個範例會定義兩個結構 `RomanNumeral` 和 `BinaryNumeral`，並示範它們的轉換。</span><span class="sxs-lookup"><span data-stu-id="ddc80-103">This example defines two structs, `RomanNumeral` and `BinaryNumeral`, and demonstrates conversions between them.</span></span>  

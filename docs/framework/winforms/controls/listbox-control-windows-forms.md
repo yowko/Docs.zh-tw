@@ -1,13 +1,6 @@
 ---
-title: "ListBox 控制項 (Windows Form)"
-ms.custom: 
+title: ListBox 控制項 (Windows Form)
 ms.date: 03/30/2017
-ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.technology: dotnet-winforms
-ms.tgt_pltfrm: 
-ms.topic: article
 helpviewer_keywords:
 - ListBox control [Windows Forms]
 - list controls [Windows Forms], Windows Forms
@@ -16,28 +9,24 @@ helpviewer_keywords:
 - list items [Windows Forms], Windows Forms controls that display
 - list boxes
 ms.assetid: b0172473-c5f2-411e-aaa4-c8f17cb5eed4
-caps.latest.revision: "13"
-author: dotnet-bot
-ms.author: dotnetcontent
-manager: wpickett
-ms.workload: dotnet
-ms.openlocfilehash: fdeea9139500ff9d521a722ef6bb9dac1954dd1c
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.openlocfilehash: 363fb4d79cf3fab1cdd814e6cf22d399a27864da
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 05/04/2018
+ms.locfileid: "33534192"
 ---
-# <a name="listbox-control-windows-forms"></a><span data-ttu-id="36d95-102">ListBox 控制項 (Windows Form)</span><span class="sxs-lookup"><span data-stu-id="36d95-102">ListBox Control (Windows Forms)</span></span>
-<span data-ttu-id="36d95-103">Windows Form`ListBox`控制項顯示的使用者可以從中選取一或多個項目清單。</span><span class="sxs-lookup"><span data-stu-id="36d95-103">A Windows Forms `ListBox` control displays a list of items from which the user can select one or more.</span></span>  
+# <a name="listbox-control-windows-forms"></a><span data-ttu-id="55c6f-102">ListBox 控制項 (Windows Form)</span><span class="sxs-lookup"><span data-stu-id="55c6f-102">ListBox Control (Windows Forms)</span></span>
+<span data-ttu-id="55c6f-103">Windows Form`ListBox`控制項顯示的使用者可以從中選取一或多個項目清單。</span><span class="sxs-lookup"><span data-stu-id="55c6f-103">A Windows Forms `ListBox` control displays a list of items from which the user can select one or more.</span></span>  
   
-## <a name="in-this-section"></a><span data-ttu-id="36d95-104">本節內容</span><span class="sxs-lookup"><span data-stu-id="36d95-104">In This Section</span></span>  
- [<span data-ttu-id="36d95-105">ListBox 控制項概觀</span><span class="sxs-lookup"><span data-stu-id="36d95-105">ListBox Control Overview</span></span>](../../../../docs/framework/winforms/controls/listbox-control-overview-windows-forms.md)  
- <span data-ttu-id="36d95-106">說明此控制項是什麼，並說明其重要功能與屬性。</span><span class="sxs-lookup"><span data-stu-id="36d95-106">Explains what this control is and its key features and properties.</span></span>  
+## <a name="in-this-section"></a><span data-ttu-id="55c6f-104">本節內容</span><span class="sxs-lookup"><span data-stu-id="55c6f-104">In This Section</span></span>  
+ [<span data-ttu-id="55c6f-105">ListBox 控制項概觀</span><span class="sxs-lookup"><span data-stu-id="55c6f-105">ListBox Control Overview</span></span>](../../../../docs/framework/winforms/controls/listbox-control-overview-windows-forms.md)  
+ <span data-ttu-id="55c6f-106">說明此控制項是什麼，並說明其重要功能與屬性。</span><span class="sxs-lookup"><span data-stu-id="55c6f-106">Explains what this control is and its key features and properties.</span></span>  
   
-## <a name="reference"></a><span data-ttu-id="36d95-107">參考資料</span><span class="sxs-lookup"><span data-stu-id="36d95-107">Reference</span></span>  
- <span data-ttu-id="36d95-108"><xref:System.Windows.Forms.ListBox> 類別</span><span class="sxs-lookup"><span data-stu-id="36d95-108"><xref:System.Windows.Forms.ListBox> class</span></span>  
- <span data-ttu-id="36d95-109">描述這個類別，並且提供其所有成員的連結。</span><span class="sxs-lookup"><span data-stu-id="36d95-109">Describes this class and has links to all its members.</span></span>  
+## <a name="reference"></a><span data-ttu-id="55c6f-107">參考資料</span><span class="sxs-lookup"><span data-stu-id="55c6f-107">Reference</span></span>  
+ <span data-ttu-id="55c6f-108"><xref:System.Windows.Forms.ListBox> 類別</span><span class="sxs-lookup"><span data-stu-id="55c6f-108"><xref:System.Windows.Forms.ListBox> class</span></span>  
+ <span data-ttu-id="55c6f-109">描述這個類別，並且提供其所有成員的連結。</span><span class="sxs-lookup"><span data-stu-id="55c6f-109">Describes this class and has links to all its members.</span></span>  
   
-## <a name="related-sections"></a><span data-ttu-id="36d95-110">相關章節</span><span class="sxs-lookup"><span data-stu-id="36d95-110">Related Sections</span></span>  
- [<span data-ttu-id="36d95-111">用來列出選項的 Windows Forms 控制項</span><span class="sxs-lookup"><span data-stu-id="36d95-111">Windows Forms Controls Used to List Options</span></span>](../../../../docs/framework/winforms/controls/windows-forms-controls-used-to-list-options.md)  
- <span data-ttu-id="36d95-112">提供一份使用清單方塊、 下拉式方塊和選取的清單方塊可以執行的作業。</span><span class="sxs-lookup"><span data-stu-id="36d95-112">Provides a list of things you can do with list boxes, combo boxes, and checked list boxes.</span></span>
+## <a name="related-sections"></a><span data-ttu-id="55c6f-110">相關章節</span><span class="sxs-lookup"><span data-stu-id="55c6f-110">Related Sections</span></span>  
+ [<span data-ttu-id="55c6f-111">用來列出選項的 Windows Forms 控制項</span><span class="sxs-lookup"><span data-stu-id="55c6f-111">Windows Forms Controls Used to List Options</span></span>](../../../../docs/framework/winforms/controls/windows-forms-controls-used-to-list-options.md)  
+ <span data-ttu-id="55c6f-112">提供一份使用清單方塊、 下拉式方塊和選取的清單方塊可以執行的作業。</span><span class="sxs-lookup"><span data-stu-id="55c6f-112">Provides a list of things you can do with list boxes, combo boxes, and checked list boxes.</span></span>

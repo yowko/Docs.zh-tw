@@ -11,6 +11,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: HT
 ms.contentlocale: zh-TW
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33340121"
 ---
 # <a name="how-to-obtain-the-address-of-a-variable-c-programming-guide"></a><span data-ttu-id="dd2eb-102">如何：取得變數位址 (C# 程式設計手冊)</span><span class="sxs-lookup"><span data-stu-id="dd2eb-102">How to: Obtain the Address of a Variable (C# Programming Guide)</span></span>
 <span data-ttu-id="dd2eb-103">若要取得評估為固定變數之一元運算式的位址，請使用傳址運算子 `&`：</span><span class="sxs-lookup"><span data-stu-id="dd2eb-103">To obtain the address of a unary expression, which evaluates to a fixed variable, use the address-of operator `&`:</span></span>  

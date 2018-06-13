@@ -12,6 +12,7 @@ ms.sourcegitcommit: 89c93d05c2281b4c834f48f6c8df1047e1410980
 ms.translationtype: HT
 ms.contentlocale: zh-TW
 ms.lasthandoff: 05/15/2018
+ms.locfileid: "34171617"
 ---
 # <a name="-operator-c-reference"></a><span data-ttu-id="a08bd-102">/= 運算子 (C# 參考)</span><span class="sxs-lookup"><span data-stu-id="a08bd-102">/= Operator (C# Reference)</span></span>
 <span data-ttu-id="a08bd-103">除法指派運算子。</span><span class="sxs-lookup"><span data-stu-id="a08bd-103">The division assignment operator.</span></span>  

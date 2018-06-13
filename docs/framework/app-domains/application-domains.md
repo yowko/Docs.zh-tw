@@ -19,6 +19,7 @@ ms.sourcegitcommit: 22c3c8f74eaa138dbbbb02eb7d720fce87fc30a9
 ms.translationtype: HT
 ms.contentlocale: zh-TW
 ms.lasthandoff: 05/18/2018
+ms.locfileid: "34233947"
 ---
 # <a name="application-domains"></a><span data-ttu-id="4f56d-102">應用程式定義域</span><span class="sxs-lookup"><span data-stu-id="4f56d-102">Application Domains</span></span>
 <span data-ttu-id="4f56d-103">作業系統和執行階段環境通常會在應用程式之間提供某種形式的隔離。</span><span class="sxs-lookup"><span data-stu-id="4f56d-103">Operating systems and runtime environments typically provide some form of isolation between applications.</span></span> <span data-ttu-id="4f56d-104">例如，Windows 會使用處理序來隔離應用程式。</span><span class="sxs-lookup"><span data-stu-id="4f56d-104">For example, Windows uses processes to isolate applications.</span></span> <span data-ttu-id="4f56d-105">這種隔離確保在某一應用程式中執行之程式碼不會對其他不相關應用程式造成負面影響。</span><span class="sxs-lookup"><span data-stu-id="4f56d-105">This isolation is necessary to ensure that code running in one application cannot adversely affect other, unrelated applications.</span></span>  

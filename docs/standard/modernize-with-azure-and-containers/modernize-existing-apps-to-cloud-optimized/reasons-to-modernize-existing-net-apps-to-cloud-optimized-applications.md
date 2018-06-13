@@ -9,6 +9,7 @@ ms.sourcegitcommit: 88f251b08bf0718ce119f3d7302f514b74895038
 ms.translationtype: MT
 ms.contentlocale: zh-TW
 ms.lasthandoff: 05/10/2018
+ms.locfileid: "33957978"
 ---
 # <a name="reasons-to-modernize-existing-net-apps-to-cloud-optimized-applications"></a><span data-ttu-id="a723d-103">現代化雲端最佳化應用程式現有的.NET 應用程式的原因</span><span class="sxs-lookup"><span data-stu-id="a723d-103">Reasons to modernize existing .NET apps to Cloud-Optimized applications</span></span>
 
