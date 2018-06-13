@@ -7,6 +7,7 @@ ms.sourcegitcommit: 11f11ca6cefe555972b3a5c99729d1a7523d8f50
 ms.translationtype: MT
 ms.contentlocale: zh-TW
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32750397"
 ---
 # <a name="ltservicecredentialsgt"></a><span data-ttu-id="1bbe5-102">&lt;serviceCredentials&gt;</span><span class="sxs-lookup"><span data-stu-id="1bbe5-102">&lt;serviceCredentials&gt;</span></span>
 <span data-ttu-id="1bbe5-103">指定要用於驗證 (Authenticate) 服務的認證，以及用戶端認證的驗證 (Validation) 相關設定。</span><span class="sxs-lookup"><span data-stu-id="1bbe5-103">Specifies the credential to be used in authenticating the service and the client credential validation-related settings.</span></span>  

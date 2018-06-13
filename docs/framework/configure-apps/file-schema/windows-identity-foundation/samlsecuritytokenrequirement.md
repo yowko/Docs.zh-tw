@@ -9,6 +9,7 @@ ms.sourcegitcommit: 11f11ca6cefe555972b3a5c99729d1a7523d8f50
 ms.translationtype: MT
 ms.contentlocale: zh-TW
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32756523"
 ---
 # <a name="ltsamlsecuritytokenrequirementgt"></a><span data-ttu-id="769ae-102">&lt;samlSecurityTokenRequirement&gt;</span><span class="sxs-lookup"><span data-stu-id="769ae-102">&lt;samlSecurityTokenRequirement&gt;</span></span>
 <span data-ttu-id="769ae-103">提供組態<xref:System.IdentityModel.Tokens.SamlSecurityTokenHandler>類別<xref:System.IdentityModel.Tokens.Saml2SecurityTokenHandler>類別或衍生的類別中的這些類別的其中一個。</span><span class="sxs-lookup"><span data-stu-id="769ae-103">Provides configuration for the <xref:System.IdentityModel.Tokens.SamlSecurityTokenHandler> class, the <xref:System.IdentityModel.Tokens.Saml2SecurityTokenHandler> class, or a derived class of either of these classes.</span></span> <span data-ttu-id="769ae-104">由<xref:System.IdentityModel.Tokens.SamlSecurityTokenRequirement>類別。</span><span class="sxs-lookup"><span data-stu-id="769ae-104">Represented by the <xref:System.IdentityModel.Tokens.SamlSecurityTokenRequirement> class.</span></span>  

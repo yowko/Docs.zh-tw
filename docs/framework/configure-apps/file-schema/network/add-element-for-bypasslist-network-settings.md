@@ -18,6 +18,7 @@ ms.sourcegitcommit: 11f11ca6cefe555972b3a5c99729d1a7523d8f50
 ms.translationtype: MT
 ms.contentlocale: zh-TW
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32754515"
 ---
 # <a name="ltaddgt-element-for-bypasslist-network-settings"></a><span data-ttu-id="3af08-102">&lt;新增&gt;bypasslist （網路設定） 的項目</span><span class="sxs-lookup"><span data-stu-id="3af08-102">&lt;add&gt; Element for bypasslist (Network Settings)</span></span>
 <span data-ttu-id="3af08-103">將 proxy 略過清單中的 IP 位址或 DNS 名稱。</span><span class="sxs-lookup"><span data-stu-id="3af08-103">Adds an IP address or DNS name to the proxy bypass list.</span></span>  

@@ -1,14 +1,6 @@
 ---
-title: "如何：判斷按下哪個 TreeView 節點 (Windows Form)"
-ms.custom: 
+title: 如何：判斷按下哪個 TreeView 節點 (Windows Form)
 ms.date: 03/30/2017
-ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.technology:
-- dotnet-winforms
-ms.tgt_pltfrm: 
-ms.topic: article
 dev_langs:
 - csharp
 - vb
@@ -20,26 +12,21 @@ helpviewer_keywords:
 - tree nodes in TreeView control [Windows Forms], determining node clicked
 - TreeView control [Windows Forms], determining node clicked
 ms.assetid: 06a4a191-d918-42af-9f49-956c93eff261
-caps.latest.revision: 
-author: dotnet-bot
-ms.author: dotnetcontent
-manager: wpickett
-ms.workload:
-- dotnet
-ms.openlocfilehash: 2671d2790b3c5e476513cd5932d4684838aeceb6
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.openlocfilehash: d1e9df6a928f1ea60e4663c78d204ec2b16baf23
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 05/04/2018
+ms.locfileid: "33530623"
 ---
-# <a name="how-to-determine-which-treeview-node-was-clicked-windows-forms"></a><span data-ttu-id="977f7-102">如何：判斷按下哪個 TreeView 節點 (Windows Form)</span><span class="sxs-lookup"><span data-stu-id="977f7-102">How to: Determine Which TreeView Node Was Clicked (Windows Forms)</span></span>
-<span data-ttu-id="977f7-103">使用 Windows Form 時<xref:System.Windows.Forms.TreeView>控制，常見的工作是要判斷哪一個節點已按下，並適當地回應。</span><span class="sxs-lookup"><span data-stu-id="977f7-103">When working with the Windows Forms <xref:System.Windows.Forms.TreeView> control, a common task is to determine which node was clicked, and respond appropriately.</span></span>  
+# <a name="how-to-determine-which-treeview-node-was-clicked-windows-forms"></a><span data-ttu-id="97382-102">如何：判斷按下哪個 TreeView 節點 (Windows Form)</span><span class="sxs-lookup"><span data-stu-id="97382-102">How to: Determine Which TreeView Node Was Clicked (Windows Forms)</span></span>
+<span data-ttu-id="97382-103">使用 Windows Form 時<xref:System.Windows.Forms.TreeView>控制，常見的工作是要判斷哪一個節點已按下，並適當地回應。</span><span class="sxs-lookup"><span data-stu-id="97382-103">When working with the Windows Forms <xref:System.Windows.Forms.TreeView> control, a common task is to determine which node was clicked, and respond appropriately.</span></span>  
   
-### <a name="to-determine-which-treeview-node-was-clicked"></a><span data-ttu-id="977f7-104">若要判斷已按下哪個 TreeView 節點</span><span class="sxs-lookup"><span data-stu-id="977f7-104">To determine which TreeView node was clicked</span></span>  
+### <a name="to-determine-which-treeview-node-was-clicked"></a><span data-ttu-id="97382-104">若要判斷已按下哪個 TreeView 節點</span><span class="sxs-lookup"><span data-stu-id="97382-104">To determine which TreeView node was clicked</span></span>  
   
-1.  <span data-ttu-id="977f7-105">使用<xref:System.EventArgs>按下的節點物件將參照傳回的物件。</span><span class="sxs-lookup"><span data-stu-id="977f7-105">Use the <xref:System.EventArgs> object to return a reference to the clicked node object.</span></span>  
+1.  <span data-ttu-id="97382-105">使用<xref:System.EventArgs>按下的節點物件將參照傳回的物件。</span><span class="sxs-lookup"><span data-stu-id="97382-105">Use the <xref:System.EventArgs> object to return a reference to the clicked node object.</span></span>  
   
-2.  <span data-ttu-id="977f7-106">判斷哪一個節點已按下藉由檢查<xref:System.Windows.Forms.TreeViewEventArgs>類別，其中包含與事件相關的資料。</span><span class="sxs-lookup"><span data-stu-id="977f7-106">Determine which node was clicked by checking the <xref:System.Windows.Forms.TreeViewEventArgs> class, which contains data related to the event.</span></span>  
+2.  <span data-ttu-id="97382-106">判斷哪一個節點已按下藉由檢查<xref:System.Windows.Forms.TreeViewEventArgs>類別，其中包含與事件相關的資料。</span><span class="sxs-lookup"><span data-stu-id="97382-106">Determine which node was clicked by checking the <xref:System.Windows.Forms.TreeViewEventArgs> class, which contains data related to the event.</span></span>  
   
     ```vb  
     Private Sub TreeView1_AfterSelect(ByVal sender As System.Object, _  
@@ -69,7 +56,7 @@ ms.lasthandoff: 12/22/2017
     ```  
   
     > [!NOTE]
-    >  <span data-ttu-id="977f7-107">或者，您可以使用<xref:System.Windows.Forms.MouseEventArgs>的<xref:System.Windows.Forms.Control.MouseDown>或<xref:System.Windows.Forms.Control.MouseUp>事件，以取得<xref:System.Drawing.Point.X%2A>和<xref:System.Drawing.Point.Y%2A>座標的值<xref:System.Drawing.Point>發生按一下。</span><span class="sxs-lookup"><span data-stu-id="977f7-107">As an alternative, you can use the <xref:System.Windows.Forms.MouseEventArgs> of the <xref:System.Windows.Forms.Control.MouseDown> or <xref:System.Windows.Forms.Control.MouseUp> event to get the <xref:System.Drawing.Point.X%2A> and <xref:System.Drawing.Point.Y%2A> coordinate values of the <xref:System.Drawing.Point> where the click occurred.</span></span> <span data-ttu-id="977f7-108">然後，使用<xref:System.Windows.Forms.TreeView>控制項的<xref:System.Windows.Forms.TreeView.GetNodeAt%2A>方法來判斷已按下哪個節點。</span><span class="sxs-lookup"><span data-stu-id="977f7-108">Then, use the <xref:System.Windows.Forms.TreeView> control's <xref:System.Windows.Forms.TreeView.GetNodeAt%2A> method to determine which node was clicked.</span></span>  
+    >  <span data-ttu-id="97382-107">或者，您可以使用<xref:System.Windows.Forms.MouseEventArgs>的<xref:System.Windows.Forms.Control.MouseDown>或<xref:System.Windows.Forms.Control.MouseUp>事件，以取得<xref:System.Drawing.Point.X%2A>和<xref:System.Drawing.Point.Y%2A>座標的值<xref:System.Drawing.Point>發生按一下。</span><span class="sxs-lookup"><span data-stu-id="97382-107">As an alternative, you can use the <xref:System.Windows.Forms.MouseEventArgs> of the <xref:System.Windows.Forms.Control.MouseDown> or <xref:System.Windows.Forms.Control.MouseUp> event to get the <xref:System.Drawing.Point.X%2A> and <xref:System.Drawing.Point.Y%2A> coordinate values of the <xref:System.Drawing.Point> where the click occurred.</span></span> <span data-ttu-id="97382-108">然後，使用<xref:System.Windows.Forms.TreeView>控制項的<xref:System.Windows.Forms.TreeView.GetNodeAt%2A>方法來判斷已按下哪個節點。</span><span class="sxs-lookup"><span data-stu-id="97382-108">Then, use the <xref:System.Windows.Forms.TreeView> control's <xref:System.Windows.Forms.TreeView.GetNodeAt%2A> method to determine which node was clicked.</span></span>  
   
-## <a name="see-also"></a><span data-ttu-id="977f7-109">請參閱</span><span class="sxs-lookup"><span data-stu-id="977f7-109">See Also</span></span>  
- [<span data-ttu-id="977f7-110">TreeView 控制項</span><span class="sxs-lookup"><span data-stu-id="977f7-110">TreeView Control</span></span>](../../../../docs/framework/winforms/controls/treeview-control-windows-forms.md)
+## <a name="see-also"></a><span data-ttu-id="97382-109">另請參閱</span><span class="sxs-lookup"><span data-stu-id="97382-109">See Also</span></span>  
+ [<span data-ttu-id="97382-110">TreeView 控制項</span><span class="sxs-lookup"><span data-stu-id="97382-110">TreeView Control</span></span>](../../../../docs/framework/winforms/controls/treeview-control-windows-forms.md)

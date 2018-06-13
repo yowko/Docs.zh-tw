@@ -10,6 +10,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: HT
 ms.contentlocale: zh-TW
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33410386"
 ---
 # <a name="mageexe-manifest-generation-and-editing-tool"></a><span data-ttu-id="fb9fd-102">Mage.exe (資訊清單產生和編輯工具)</span><span class="sxs-lookup"><span data-stu-id="fb9fd-102">Mage.exe (Manifest Generation and Editing Tool)</span></span>
 <span data-ttu-id="fb9fd-103">「資訊清單產生和編輯工具」(Mage.exe) 是命令列工具，可支援建立和編輯應用程式與部署資訊清單。</span><span class="sxs-lookup"><span data-stu-id="fb9fd-103">The Manifest Generation and Editing Tool (Mage.exe) is a command-line tool that supports the creation and editing of application and deployment manifests.</span></span> <span data-ttu-id="fb9fd-104">由於 Mage.exe 是命令列工具，因此可以從批次指令碼及其他 Windows 架構應用程式 (包括 [!INCLUDE[vstecasp](../../../includes/vstecasp-md.md)] 應用程式) 中執行。</span><span class="sxs-lookup"><span data-stu-id="fb9fd-104">As a command-line tool, Mage.exe can be run from both batch scripts and other Windows-based applications, including [!INCLUDE[vstecasp](../../../includes/vstecasp-md.md)] applications.</span></span>  

@@ -7,6 +7,7 @@ ms.sourcegitcommit: 11f11ca6cefe555972b3a5c99729d1a7523d8f50
 ms.translationtype: MT
 ms.contentlocale: zh-TW
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32762383"
 ---
 # <a name="nullable-structured-types-entity-sql"></a><span data-ttu-id="f977e-102">可為 Null 的結構類型 (Entity SQL)</span><span class="sxs-lookup"><span data-stu-id="f977e-102">Nullable Structured Types (Entity SQL)</span></span>
 <span data-ttu-id="f977e-103">結構化型別的 `null` 執行個體是不存在的執行個體。</span><span class="sxs-lookup"><span data-stu-id="f977e-103">A `null` instance of a structured type is an instance that does not exist.</span></span> <span data-ttu-id="f977e-104">這與現有的執行個體 (所有的屬性都有 `null` 值) 不同。</span><span class="sxs-lookup"><span data-stu-id="f977e-104">This is different from an existing instance in which all properties have `null` values.</span></span>  

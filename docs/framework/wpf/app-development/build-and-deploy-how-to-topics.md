@@ -12,6 +12,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: zh-TW
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33548334"
 ---
 # <a name="build-and-deploy-how-to-topics"></a><span data-ttu-id="ed2e7-102">建置和部署 HOW TO 主題</span><span class="sxs-lookup"><span data-stu-id="ed2e7-102">Build and Deploy How-to Topics</span></span>
 <span data-ttu-id="ed2e7-103">下列主題示範如何建立各種專案檔[!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)]應用程式類型。</span><span class="sxs-lookup"><span data-stu-id="ed2e7-103">The following topics show how to create project files for the various [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] application types.</span></span>  

@@ -7,6 +7,7 @@ ms.sourcegitcommit: 11f11ca6cefe555972b3a5c99729d1a7523d8f50
 ms.translationtype: MT
 ms.contentlocale: zh-TW
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32755844"
 ---
 # <a name="ltworkflowruntimegt"></a><span data-ttu-id="7fc11-102">&lt;workflowRuntime&gt;</span><span class="sxs-lookup"><span data-stu-id="7fc11-102">&lt;workflowRuntime&gt;</span></span>
 <span data-ttu-id="7fc11-103">指定的執行個體設定<xref:System.Workflow.Runtime.WorkflowRuntime>裝載工作流程為基礎的 Windows Communication Foundation (WCF) 服務。</span><span class="sxs-lookup"><span data-stu-id="7fc11-103">Specifies settings for an instance of <xref:System.Workflow.Runtime.WorkflowRuntime> for hosting workflow-based Windows Communication Foundation (WCF) services.</span></span>  

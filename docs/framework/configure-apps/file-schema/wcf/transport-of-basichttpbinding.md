@@ -7,6 +7,7 @@ ms.sourcegitcommit: 11f11ca6cefe555972b3a5c99729d1a7523d8f50
 ms.translationtype: MT
 ms.contentlocale: zh-TW
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32751265"
 ---
 # <a name="lttransportgt-of-ltbasichttpbindinggt"></a><span data-ttu-id="cbced-102">&lt;basicHttpBinding&gt; 的 &lt;transport&gt;</span><span class="sxs-lookup"><span data-stu-id="cbced-102">&lt;transport&gt; of &lt;basicHttpBinding&gt;</span></span>
 <span data-ttu-id="cbced-103">定義可控制 HTTP 傳輸之驗證參數的屬性。</span><span class="sxs-lookup"><span data-stu-id="cbced-103">Defines properties that control authentication parameters for the HTTP transport.</span></span>  
