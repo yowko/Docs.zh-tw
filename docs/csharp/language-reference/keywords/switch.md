@@ -17,6 +17,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: HT
 ms.contentlocale: zh-TW
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33288888"
 ---
 # <a name="switch-c-reference"></a><span data-ttu-id="fe1d4-102">switch (C# 參考)</span><span class="sxs-lookup"><span data-stu-id="fe1d4-102">switch (C# Reference)</span></span>
 <span data-ttu-id="fe1d4-103">`switch` 是一個選取範圍陳述式，可根據使用「比對運算式」的模式比對，從候選項清單中選擇要執行的單一「參數區段」。</span><span class="sxs-lookup"><span data-stu-id="fe1d4-103">`switch` is a selection statement that chooses a single *switch section* to execute from a list of candidates based on a pattern match with the *match expression*.</span></span> 

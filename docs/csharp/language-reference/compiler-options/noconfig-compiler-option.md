@@ -14,6 +14,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: HT
 ms.contentlocale: zh-TW
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33214438"
 ---
 # <a name="-noconfig-c-compiler-options"></a><span data-ttu-id="26919-102">-noconfig (C# 編譯器選項)</span><span class="sxs-lookup"><span data-stu-id="26919-102">-noconfig (C# Compiler Options)</span></span>
 <span data-ttu-id="26919-103">**-noconfig** 選項會指示編譯器不要使用 csc.rsp 檔案，該檔案位於與 csc.exe 檔案相同的目錄並從中載入。</span><span class="sxs-lookup"><span data-stu-id="26919-103">The **-noconfig** option tells the compiler not to compile with the csc.rsp file, which is located in and loaded from the same directory as the csc.exe file.</span></span>  

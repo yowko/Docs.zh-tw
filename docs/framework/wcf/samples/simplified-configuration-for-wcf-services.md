@@ -1,29 +1,18 @@
 ---
-title: "WCF 服務的簡化組態"
-ms.custom: 
+title: WCF 服務的簡化組態
 ms.date: 03/30/2017
-ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.technology: dotnet-clr
-ms.tgt_pltfrm: 
-ms.topic: article
 ms.assetid: 1e39ec25-18a3-4fdc-b6a3-9dfafbd60112
-caps.latest.revision: "11"
-author: dotnet-bot
-ms.author: dotnetcontent
-manager: wpickett
-ms.workload: dotnet
-ms.openlocfilehash: 02611dc44b98c1b8b5ef5ae74559f9f370483792
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.openlocfilehash: 80e2ac83ec0e07176d6afe6d34c63fb4d8e836d1
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 05/04/2018
+ms.locfileid: "33502260"
 ---
-# <a name="simplified-configuration-for-wcf-services"></a><span data-ttu-id="e97e4-102">WCF 服務的簡化組態</span><span class="sxs-lookup"><span data-stu-id="e97e4-102">Simplified Configuration for WCF Services</span></span>
-<span data-ttu-id="e97e4-103">此範例示範如何使用 [!INCLUDE[indigo1](../../../../includes/indigo1-md.md)] 實作與設定一般服務和用戶端。</span><span class="sxs-lookup"><span data-stu-id="e97e4-103">This sample demonstrates how to implement and configure a typical service and client using [!INCLUDE[indigo1](../../../../includes/indigo1-md.md)].</span></span> <span data-ttu-id="e97e4-104">這個範例是所有其他基本技術範例的基礎。</span><span class="sxs-lookup"><span data-stu-id="e97e4-104">This sample is the basis for all other basic technology samples.</span></span>  
+# <a name="simplified-configuration-for-wcf-services"></a><span data-ttu-id="c0c5d-102">WCF 服務的簡化組態</span><span class="sxs-lookup"><span data-stu-id="c0c5d-102">Simplified Configuration for WCF Services</span></span>
+<span data-ttu-id="c0c5d-103">這個範例示範如何實作與設定一般服務和用戶端會使用 Windows Communication Foundation (WCF)。</span><span class="sxs-lookup"><span data-stu-id="c0c5d-103">This sample demonstrates how to implement and configure a typical service and client using Windows Communication Foundation (WCF).</span></span> <span data-ttu-id="c0c5d-104">這個範例是所有其他基本技術範例的基礎。</span><span class="sxs-lookup"><span data-stu-id="c0c5d-104">This sample is the basis for all other basic technology samples.</span></span>  
   
- <span data-ttu-id="e97e4-105">公開端點以便與服務進行通訊的這個服務會在 [!INCLUDE[netfx40_long](../../../../includes/netfx40-long-md.md)] 中使用簡化的組態。</span><span class="sxs-lookup"><span data-stu-id="e97e4-105">This service, which exposes an endpoint for communicating with the service, uses the simplified configuration in [!INCLUDE[netfx40_long](../../../../includes/netfx40-long-md.md)].</span></span> <span data-ttu-id="e97e4-106">在 [!INCLUDE[netfx40_short](../../../../includes/netfx40-short-md.md)] 之前，端點通常是在組態檔 (Web.config) 中定義的，如下列範例組態程式碼所示。</span><span class="sxs-lookup"><span data-stu-id="e97e4-106">Prior to [!INCLUDE[netfx40_short](../../../../includes/netfx40-short-md.md)], the endpoint is typically defined in a configuration file (Web.config), as shown in the following example configuration code.</span></span>  
+ <span data-ttu-id="c0c5d-105">公開端點以便與服務進行通訊的這個服務會在 [!INCLUDE[netfx40_long](../../../../includes/netfx40-long-md.md)] 中使用簡化的組態。</span><span class="sxs-lookup"><span data-stu-id="c0c5d-105">This service, which exposes an endpoint for communicating with the service, uses the simplified configuration in [!INCLUDE[netfx40_long](../../../../includes/netfx40-long-md.md)].</span></span> <span data-ttu-id="c0c5d-106">在 [!INCLUDE[netfx40_short](../../../../includes/netfx40-short-md.md)] 之前，端點通常是在組態檔 (Web.config) 中定義的，如下列範例組態程式碼所示。</span><span class="sxs-lookup"><span data-stu-id="c0c5d-106">Prior to [!INCLUDE[netfx40_short](../../../../includes/netfx40-short-md.md)], the endpoint is typically defined in a configuration file (Web.config), as shown in the following example configuration code.</span></span>  
   
 ```xml  
 <?xml version="1.0" encoding="utf-8" ?>  
@@ -48,7 +37,7 @@ ms.lasthandoff: 12/22/2017
 </configuration>  
 ```  
   
- <span data-ttu-id="e97e4-107">在 [!INCLUDE[netfx40_short](../../../../includes/netfx40-short-md.md)] 中，`<service>` 項目是選用的。</span><span class="sxs-lookup"><span data-stu-id="e97e4-107">In [!INCLUDE[netfx40_short](../../../../includes/netfx40-short-md.md)], the `<service>` element is optional.</span></span> <span data-ttu-id="e97e4-108">當服務沒有定義任何端點時，每個基底位址的端點和實作的合約都會加入到服務中。</span><span class="sxs-lookup"><span data-stu-id="e97e4-108">When a service does not define any endpoints, an endpoint for each base address and contract implemented are added to the service.</span></span> <span data-ttu-id="e97e4-109">基底位址會附加到合約名稱以判斷端點，而繫結則取決於位址配置。</span><span class="sxs-lookup"><span data-stu-id="e97e4-109">The base address is appended to the contract name to determine the endpoint and the binding is determined by the address scheme.</span></span> <span data-ttu-id="e97e4-110">下列程式碼範例示範簡化的組態檔。</span><span class="sxs-lookup"><span data-stu-id="e97e4-110">The following code example demonstrates a simplified configuration file.</span></span> <span data-ttu-id="e97e4-111">在設定之後，位在相同電腦上的用戶端便可存取在 http://localhost/servicemodelsamples/service.svc 上的服務。</span><span class="sxs-lookup"><span data-stu-id="e97e4-111">As configured, the service can be accessed at http://localhost/servicemodelsamples/service.svc by a client on the same computer.</span></span> <span data-ttu-id="e97e4-112">為了讓遠端電腦上的用戶端存取服務，這時必須指定完整網域名稱，而不要指定 localhost。</span><span class="sxs-lookup"><span data-stu-id="e97e4-112">For clients on remote computers to access the service, a fully-qualified domain name must be specified instead of localhost.</span></span> <span data-ttu-id="e97e4-113">根據預設，此服務不會公開任何中繼資料。</span><span class="sxs-lookup"><span data-stu-id="e97e4-113">The service does not expose metadata by default.</span></span> <span data-ttu-id="e97e4-114">因此，服務會開啟 <xref:System.ServiceModel.Description.ServiceMetadataBehavior> 行為。</span><span class="sxs-lookup"><span data-stu-id="e97e4-114">As such, the service turns on the <xref:System.ServiceModel.Description.ServiceMetadataBehavior> behavior.</span></span>  
+ <span data-ttu-id="c0c5d-107">在 [!INCLUDE[netfx40_short](../../../../includes/netfx40-short-md.md)] 中，`<service>` 項目是選用的。</span><span class="sxs-lookup"><span data-stu-id="c0c5d-107">In [!INCLUDE[netfx40_short](../../../../includes/netfx40-short-md.md)], the `<service>` element is optional.</span></span> <span data-ttu-id="c0c5d-108">當服務沒有定義任何端點時，每個基底位址的端點和實作的合約都會加入到服務中。</span><span class="sxs-lookup"><span data-stu-id="c0c5d-108">When a service does not define any endpoints, an endpoint for each base address and contract implemented are added to the service.</span></span> <span data-ttu-id="c0c5d-109">基底位址會附加到合約名稱以判斷端點，而繫結則取決於位址配置。</span><span class="sxs-lookup"><span data-stu-id="c0c5d-109">The base address is appended to the contract name to determine the endpoint and the binding is determined by the address scheme.</span></span> <span data-ttu-id="c0c5d-110">下列程式碼範例示範簡化的組態檔。</span><span class="sxs-lookup"><span data-stu-id="c0c5d-110">The following code example demonstrates a simplified configuration file.</span></span> <span data-ttu-id="c0c5d-111">在設定，可以存取的服務在http://localhost/servicemodelsamples/service.svc在同一部電腦上的用戶端。</span><span class="sxs-lookup"><span data-stu-id="c0c5d-111">As configured, the service can be accessed at http://localhost/servicemodelsamples/service.svc by a client on the same computer.</span></span> <span data-ttu-id="c0c5d-112">為了讓遠端電腦上的用戶端存取服務，這時必須指定完整網域名稱，而不要指定 localhost。</span><span class="sxs-lookup"><span data-stu-id="c0c5d-112">For clients on remote computers to access the service, a fully-qualified domain name must be specified instead of localhost.</span></span> <span data-ttu-id="c0c5d-113">根據預設，此服務不會公開任何中繼資料。</span><span class="sxs-lookup"><span data-stu-id="c0c5d-113">The service does not expose metadata by default.</span></span> <span data-ttu-id="c0c5d-114">因此，服務會開啟 <xref:System.ServiceModel.Description.ServiceMetadataBehavior> 行為。</span><span class="sxs-lookup"><span data-stu-id="c0c5d-114">As such, the service turns on the <xref:System.ServiceModel.Description.ServiceMetadataBehavior> behavior.</span></span>  
   
 ```xml  
 <?xml version="1.0" encoding="utf-8" ?>  
@@ -66,29 +55,29 @@ ms.lasthandoff: 12/22/2017
 </configuration>  
 ```  
   
-### <a name="to-use-this-sample"></a><span data-ttu-id="e97e4-115">若要使用這個範例</span><span class="sxs-lookup"><span data-stu-id="e97e4-115">To use this sample</span></span>  
+### <a name="to-use-this-sample"></a><span data-ttu-id="c0c5d-115">若要使用這個範例</span><span class="sxs-lookup"><span data-stu-id="c0c5d-115">To use this sample</span></span>  
   
-1.  <span data-ttu-id="e97e4-116">請確定您已執行[的 Windows Communication Foundation 範例的單次安裝程序](../../../../docs/framework/wcf/samples/one-time-setup-procedure-for-the-wcf-samples.md)。</span><span class="sxs-lookup"><span data-stu-id="e97e4-116">Ensure that you have performed the [One-Time Setup Procedure for the Windows Communication Foundation Samples](../../../../docs/framework/wcf/samples/one-time-setup-procedure-for-the-wcf-samples.md).</span></span>  
+1.  <span data-ttu-id="c0c5d-116">請確定您已執行[的 Windows Communication Foundation 範例的單次安裝程序](../../../../docs/framework/wcf/samples/one-time-setup-procedure-for-the-wcf-samples.md)。</span><span class="sxs-lookup"><span data-stu-id="c0c5d-116">Ensure that you have performed the [One-Time Setup Procedure for the Windows Communication Foundation Samples](../../../../docs/framework/wcf/samples/one-time-setup-procedure-for-the-wcf-samples.md).</span></span>  
   
-2.  <span data-ttu-id="e97e4-117">若要建置此方案，請依照中的指示[建置 Windows Communication Foundation 範例](../../../../docs/framework/wcf/samples/building-the-samples.md)。</span><span class="sxs-lookup"><span data-stu-id="e97e4-117">To build the solution, follow the instructions in [Building the Windows Communication Foundation Samples](../../../../docs/framework/wcf/samples/building-the-samples.md).</span></span>  
+2.  <span data-ttu-id="c0c5d-117">若要建置此方案，請依照中的指示[建置 Windows Communication Foundation 範例](../../../../docs/framework/wcf/samples/building-the-samples.md)。</span><span class="sxs-lookup"><span data-stu-id="c0c5d-117">To build the solution, follow the instructions in [Building the Windows Communication Foundation Samples](../../../../docs/framework/wcf/samples/building-the-samples.md).</span></span>  
   
-3.  <span data-ttu-id="e97e4-118">遵循下列步驟執行範例：</span><span class="sxs-lookup"><span data-stu-id="e97e4-118">Run the sample by following these steps:</span></span>  
+3.  <span data-ttu-id="c0c5d-118">遵循下列步驟執行範例：</span><span class="sxs-lookup"><span data-stu-id="c0c5d-118">Run the sample by following these steps:</span></span>  
   
-    1.  <span data-ttu-id="e97e4-119">以滑鼠右鍵按一下**服務**專案，然後選取**設定為啟始專案**，然後按下**Ctrl + F5**。</span><span class="sxs-lookup"><span data-stu-id="e97e4-119">Right click the **Service** project and select **Set as StartUp project**, then press **Ctrl+F5**.</span></span>  
+    1.  <span data-ttu-id="c0c5d-119">以滑鼠右鍵按一下**服務**專案，然後選取**設定為啟始專案**，然後按下**Ctrl + F5**。</span><span class="sxs-lookup"><span data-stu-id="c0c5d-119">Right click the **Service** project and select **Set as StartUp project**, then press **Ctrl+F5**.</span></span>  
   
-    2.  <span data-ttu-id="e97e4-120">等待主控台輸出確認服務已啟動且在執行中。</span><span class="sxs-lookup"><span data-stu-id="e97e4-120">Wait for the console output confirming that the service is up and running.</span></span>  
+    2.  <span data-ttu-id="c0c5d-120">等待主控台輸出確認服務已啟動且在執行中。</span><span class="sxs-lookup"><span data-stu-id="c0c5d-120">Wait for the console output confirming that the service is up and running.</span></span>  
   
-    3.  <span data-ttu-id="e97e4-121">以滑鼠右鍵按一下**用戶端**專案，然後選取**設定為啟始專案**，然後按下**Ctrl + F5**。</span><span class="sxs-lookup"><span data-stu-id="e97e4-121">Right click the **Client** project and select **Set as StartUp project**, then press **Ctrl+F5**.</span></span>  
+    3.  <span data-ttu-id="c0c5d-121">以滑鼠右鍵按一下**用戶端**專案，然後選取**設定為啟始專案**，然後按下**Ctrl + F5**。</span><span class="sxs-lookup"><span data-stu-id="c0c5d-121">Right click the **Client** project and select **Set as StartUp project**, then press **Ctrl+F5**.</span></span>  
   
 > [!IMPORTANT]
->  <span data-ttu-id="e97e4-122">這些範例可能已安裝在您的電腦上。</span><span class="sxs-lookup"><span data-stu-id="e97e4-122">The samples may already be installed on your computer.</span></span> <span data-ttu-id="e97e4-123">請先檢查下列 (預設) 目錄，然後再繼續。</span><span class="sxs-lookup"><span data-stu-id="e97e4-123">Check for the following (default) directory before continuing.</span></span>  
+>  <span data-ttu-id="c0c5d-122">這些範例可能已安裝在您的電腦上。</span><span class="sxs-lookup"><span data-stu-id="c0c5d-122">The samples may already be installed on your computer.</span></span> <span data-ttu-id="c0c5d-123">請先檢查下列 (預設) 目錄，然後再繼續。</span><span class="sxs-lookup"><span data-stu-id="c0c5d-123">Check for the following (default) directory before continuing.</span></span>  
 >   
 >  `<InstallDrive>:\WF_WCF_Samples`  
 >   
->  <span data-ttu-id="e97e4-124">如果此目錄不存在，請移至 [Windows Communication Foundation (WCF) and Windows Workflow Foundation (WF) Samples for .NET Framework 4  (適用於 .NET Framework 4 的 Windows Communication Foundation (WCF) 與 Windows Workflow Foundation (WF) 範例)](http://go.microsoft.com/fwlink/?LinkId=150780) ，以下載所有 [!INCLUDE[indigo1](../../../../includes/indigo1-md.md)] 和 [!INCLUDE[wf1](../../../../includes/wf1-md.md)] 範例。</span><span class="sxs-lookup"><span data-stu-id="e97e4-124">If this directory does not exist, go to [Windows Communication Foundation (WCF) and Windows Workflow Foundation (WF) Samples for .NET Framework 4](http://go.microsoft.com/fwlink/?LinkId=150780) to download all [!INCLUDE[indigo1](../../../../includes/indigo1-md.md)] and [!INCLUDE[wf1](../../../../includes/wf1-md.md)] samples.</span></span> <span data-ttu-id="e97e4-125">此範例位於下列目錄。</span><span class="sxs-lookup"><span data-stu-id="e97e4-125">This sample is located in the following directory.</span></span>  
+>  <span data-ttu-id="c0c5d-124">如果此目錄不存在，請移至[Windows Communication Foundation (WCF) 和適用於.NET Framework 4 的 Windows Workflow Foundation (WF) 範例](http://go.microsoft.com/fwlink/?LinkId=150780)下載所有 Windows Communication Foundation (WCF) 和[!INCLUDE[wf1](../../../../includes/wf1-md.md)]範例。</span><span class="sxs-lookup"><span data-stu-id="c0c5d-124">If this directory does not exist, go to [Windows Communication Foundation (WCF) and Windows Workflow Foundation (WF) Samples for .NET Framework 4](http://go.microsoft.com/fwlink/?LinkId=150780) to download all Windows Communication Foundation (WCF) and [!INCLUDE[wf1](../../../../includes/wf1-md.md)] samples.</span></span> <span data-ttu-id="c0c5d-125">此範例位於下列目錄。</span><span class="sxs-lookup"><span data-stu-id="c0c5d-125">This sample is located in the following directory.</span></span>  
 >   
 >  `<InstallDrive>:\WF_WCF_Samples\WCF\Basic\Services\ConfigSimplificationIn40`  
   
-## <a name="see-also"></a><span data-ttu-id="e97e4-126">請參閱</span><span class="sxs-lookup"><span data-stu-id="e97e4-126">See Also</span></span>  
- [<span data-ttu-id="e97e4-127">AppFabric 管理範例</span><span class="sxs-lookup"><span data-stu-id="e97e4-127">AppFabric Management Samples</span></span>](http://go.microsoft.com/fwlink/?LinkId=193960)  
- [<span data-ttu-id="e97e4-128">簡化設定</span><span class="sxs-lookup"><span data-stu-id="e97e4-128">Simplified Configuration</span></span>](../../../../docs/framework/wcf/simplified-configuration.md)
+## <a name="see-also"></a><span data-ttu-id="c0c5d-126">另請參閱</span><span class="sxs-lookup"><span data-stu-id="c0c5d-126">See Also</span></span>  
+ [<span data-ttu-id="c0c5d-127">AppFabric 管理範例</span><span class="sxs-lookup"><span data-stu-id="c0c5d-127">AppFabric Management Samples</span></span>](http://go.microsoft.com/fwlink/?LinkId=193960)  
+ [<span data-ttu-id="c0c5d-128">簡化設定</span><span class="sxs-lookup"><span data-stu-id="c0c5d-128">Simplified Configuration</span></span>](../../../../docs/framework/wcf/simplified-configuration.md)

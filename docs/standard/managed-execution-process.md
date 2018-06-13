@@ -17,6 +17,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: HT
 ms.contentlocale: zh-TW
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33578972"
 ---
 # <a name="managed-execution-process"></a><span data-ttu-id="04c5b-102">Managed 執行程序</span><span class="sxs-lookup"><span data-stu-id="04c5b-102">Managed Execution Process</span></span>
 <a name="introduction"></a> <span data-ttu-id="04c5b-103">Managed 執行處理序包含下列步驟，將於本主題中稍後詳細討論：</span><span class="sxs-lookup"><span data-stu-id="04c5b-103">The managed execution process includes the following steps, which are discussed in detail later in this topic:</span></span>  

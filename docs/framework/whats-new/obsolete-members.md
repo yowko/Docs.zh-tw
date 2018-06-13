@@ -14,6 +14,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: HT
 ms.contentlocale: zh-TW
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33508770"
 ---
 # <a name="obsolete-members-in-the-net-framework"></a><span data-ttu-id="a5106-102">.NET Framework 中過時的成員</span><span class="sxs-lookup"><span data-stu-id="a5106-102">Obsolete Members in the .NET Framework</span></span>
 <span data-ttu-id="a5106-103">本文中的表格列出 .NET Framework 4.5 和更新版本中依組件分組的已淘汰類型成員。</span><span class="sxs-lookup"><span data-stu-id="a5106-103">The tables in this article list the type members that are obsolete in the .NET Framework 4.5 and later versions organized by assembly.</span></span> <span data-ttu-id="a5106-104">請使用下列連結，查看每個組件中過時的成員和建議的替代做法清單。</span><span class="sxs-lookup"><span data-stu-id="a5106-104">Use the following links to see a list of the obsolete members and the recommended alternatives in each assembly.</span></span> <span data-ttu-id="a5106-105">本主題不會列出過時的類型成員。</span><span class="sxs-lookup"><span data-stu-id="a5106-105">This topic doesn't list the members of obsolete types.</span></span> <span data-ttu-id="a5106-106">如需過時的型別清單，請參閱[已淘汰類型](../../../docs/framework/whats-new/obsolete-types.md)。</span><span class="sxs-lookup"><span data-stu-id="a5106-106">For a list of obsolete types, see [Obsolete Types](../../../docs/framework/whats-new/obsolete-types.md).</span></span>  

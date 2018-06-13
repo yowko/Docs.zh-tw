@@ -1,32 +1,21 @@
 ---
-title: "HOW TO：建立通道處理站並使用它來建立與管理通道"
-ms.custom: 
+title: HOW TO：建立通道處理站並使用它來建立與管理通道
 ms.date: 03/30/2017
-ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.technology: dotnet-clr
-ms.tgt_pltfrm: 
-ms.topic: article
 ms.assetid: 018dcc30-9f61-419e-af8e-412a85e8d282
-caps.latest.revision: "4"
-author: dotnet-bot
-ms.author: dotnetcontent
-manager: wpickett
-ms.workload: dotnet
-ms.openlocfilehash: d41dfc85df1b706028fd95465596a980c040d512
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.openlocfilehash: f0855da00a70dff3ef7ffdb85b2011a9bda00688
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 05/04/2018
+ms.locfileid: "33489966"
 ---
-# <a name="how-to-create-a-channel-factory-and-use-it-to-create-and-manage-channels"></a><span data-ttu-id="49c26-102">HOW TO：建立通道處理站並使用它來建立與管理通道</span><span class="sxs-lookup"><span data-stu-id="49c26-102">How to: Create a Channel Factory and Use it to Create and Manage Channels</span></span>
-<span data-ttu-id="49c26-103">針對可供用戶端用來傳送與接收在服務端點之間往返之訊息的不同雙工通道類型，<xref:System.ServiceModel.DuplexChannelFactory%601> 類別提供了這些雙工通道的建立與管理方式。</span><span class="sxs-lookup"><span data-stu-id="49c26-103">The <xref:System.ServiceModel.DuplexChannelFactory%601> class provides the means to create and manage duplex channels of different types that clients use to send and receive messages to and from service endpoints.</span></span>  
+# <a name="how-to-create-a-channel-factory-and-use-it-to-create-and-manage-channels"></a><span data-ttu-id="68dca-102">HOW TO：建立通道處理站並使用它來建立與管理通道</span><span class="sxs-lookup"><span data-stu-id="68dca-102">How to: Create a Channel Factory and Use it to Create and Manage Channels</span></span>
+<span data-ttu-id="68dca-103">針對可供用戶端用來傳送與接收在服務端點之間往返之訊息的不同雙工通道類型，<xref:System.ServiceModel.DuplexChannelFactory%601> 類別提供了這些雙工通道的建立與管理方式。</span><span class="sxs-lookup"><span data-stu-id="68dca-103">The <xref:System.ServiceModel.DuplexChannelFactory%601> class provides the means to create and manage duplex channels of different types that clients use to send and receive messages to and from service endpoints.</span></span>  
   
-## <a name="example"></a><span data-ttu-id="49c26-104">範例</span><span class="sxs-lookup"><span data-stu-id="49c26-104">Example</span></span>  
- <span data-ttu-id="49c26-105">下列程式碼會顯示如何建立通道處理站，並使用它建立並管理通道。</span><span class="sxs-lookup"><span data-stu-id="49c26-105">The following code shows how to create a channel factory and use it to create and manage channels.</span></span>  
+## <a name="example"></a><span data-ttu-id="68dca-104">範例</span><span class="sxs-lookup"><span data-stu-id="68dca-104">Example</span></span>  
+ <span data-ttu-id="68dca-105">下列程式碼會顯示如何建立通道處理站，並使用它建立並管理通道。</span><span class="sxs-lookup"><span data-stu-id="68dca-105">The following code shows how to create a channel factory and use it to create and manage channels.</span></span>  
   
  [!code-csharp[S_CustomAuthentication#1](../../../../samples/snippets/csharp/VS_Snippets_CFX/s_customauthentication/cs/instance.cs#1)]  
   
-## <a name="see-also"></a><span data-ttu-id="49c26-106">請參閱</span><span class="sxs-lookup"><span data-stu-id="49c26-106">See Also</span></span>  
+## <a name="see-also"></a><span data-ttu-id="68dca-106">另請參閱</span><span class="sxs-lookup"><span data-stu-id="68dca-106">See Also</span></span>  
  <xref:System.ServiceModel.DuplexChannelFactory%601>

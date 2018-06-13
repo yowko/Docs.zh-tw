@@ -10,6 +10,7 @@ ms.sourcegitcommit: 11f11ca6cefe555972b3a5c99729d1a7523d8f50
 ms.translationtype: MT
 ms.contentlocale: zh-TW
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32742675"
 ---
 # <a name="ltschemesettingsgt-element-uri-settings"></a><span data-ttu-id="8d8c8-102">&lt;schemeSettings&gt;項目 （Uri 設定）</span><span class="sxs-lookup"><span data-stu-id="8d8c8-102">&lt;schemeSettings&gt; Element (Uri Settings)</span></span>
 <span data-ttu-id="8d8c8-103">指定如何針對特定配置剖析 <xref:System.Uri>。</span><span class="sxs-lookup"><span data-stu-id="8d8c8-103">Specifies how a <xref:System.Uri> will be parsed for specific schemes.</span></span>  

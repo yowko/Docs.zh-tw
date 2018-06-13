@@ -13,6 +13,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: HT
 ms.contentlocale: zh-TW
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33271025"
 ---
 # <a name="-operator-c-reference"></a><span data-ttu-id="8a924-103">。</span><span class="sxs-lookup"><span data-stu-id="8a924-103">.</span></span> <span data-ttu-id="8a924-104">運算子 (C# 參考)</span><span class="sxs-lookup"><span data-stu-id="8a924-104">Operator (C# Reference)</span></span>
 <span data-ttu-id="8a924-105">點運算子 (`.`) 是用於成員存取。</span><span class="sxs-lookup"><span data-stu-id="8a924-105">The dot operator (`.`) is used for member access.</span></span> <span data-ttu-id="8a924-106">點運算子可指定型別或命名空間的成員。</span><span class="sxs-lookup"><span data-stu-id="8a924-106">The dot operator specifies a member of a type or namespace.</span></span> <span data-ttu-id="8a924-107">例如，點運算子可用來存取 .NET Framework 類別庫中的特定方法：</span><span class="sxs-lookup"><span data-stu-id="8a924-107">For example, the dot operator is used to access specific methods within the .NET Framework class libraries:</span></span>  

@@ -21,6 +21,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: HT
 ms.contentlocale: zh-TW
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33579804"
 ---
 # <a name="standard-date-and-time-format-strings"></a><span data-ttu-id="ba9c1-102">標準日期和時間格式字串</span><span class="sxs-lookup"><span data-stu-id="ba9c1-102">Standard Date and Time Format Strings</span></span>
 <span data-ttu-id="ba9c1-103">標準日期和時間格式字串使用單一格式規範，定義日期和時間值的文字表示。</span><span class="sxs-lookup"><span data-stu-id="ba9c1-103">A standard date and time format string uses a single format specifier to define the text representation of a date and time value.</span></span> <span data-ttu-id="ba9c1-104">任何包含一個以上字元 (包括空白字元) 的日期和時間格式字串都會解譯為自訂日期和時間格式字串；如需詳細資訊，請參閱[自訂日期和時間格式字串](../../../docs/standard/base-types/custom-date-and-time-format-strings.md)。</span><span class="sxs-lookup"><span data-stu-id="ba9c1-104">Any date and time format string that contains more than one character, including white space, is interpreted as a custom date and time format string; for more information, see [Custom Date and Time Format Strings](../../../docs/standard/base-types/custom-date-and-time-format-strings.md).</span></span> <span data-ttu-id="ba9c1-105">標準或自訂格式字串有兩種使用方式：</span><span class="sxs-lookup"><span data-stu-id="ba9c1-105">A standard or custom format string can be used in two ways:</span></span>  

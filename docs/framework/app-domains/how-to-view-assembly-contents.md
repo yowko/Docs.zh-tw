@@ -21,6 +21,7 @@ ms.sourcegitcommit: 11f11ca6cefe555972b3a5c99729d1a7523d8f50
 ms.translationtype: HT
 ms.contentlocale: zh-TW
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32742831"
 ---
 # <a name="how-to-view-assembly-contents"></a><span data-ttu-id="d2db6-102">如何：檢視組件內容</span><span class="sxs-lookup"><span data-stu-id="d2db6-102">How to: View Assembly Contents</span></span>
 <span data-ttu-id="d2db6-103">您可以使用 [Ildasm.exe (IL 反組譯工具)](../../../docs/framework/tools/ildasm-exe-il-disassembler.md) 來檢視檔案中的 Microsoft 中繼語言 (MSIL) 資訊。</span><span class="sxs-lookup"><span data-stu-id="d2db6-103">You can use the [Ildasm.exe (IL Disassembler)](../../../docs/framework/tools/ildasm-exe-il-disassembler.md) to view Microsoft intermediate language (MSIL) information in a file.</span></span> <span data-ttu-id="d2db6-104">如果所檢查的檔案是組件，這項資訊可以包括組件的屬性，以及其他模組和組件的參考。</span><span class="sxs-lookup"><span data-stu-id="d2db6-104">If the file being examined is an assembly, this information can include the assembly's attributes, as well as references to other modules and assemblies.</span></span> <span data-ttu-id="d2db6-105">這項資訊可能有助於判斷檔案是組件還是組件的一部分，以及檔案是否有其他模組或組件的參考。</span><span class="sxs-lookup"><span data-stu-id="d2db6-105">This information can be helpful in determining whether a file is an assembly or part of an assembly, and whether the file has references to other modules or assemblies.</span></span>  
