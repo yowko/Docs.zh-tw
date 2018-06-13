@@ -7,6 +7,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: HT
 ms.contentlocale: zh-TW
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33320673"
 ---
 # <a name="how-to-project-an-anonymous-type-c"></a><span data-ttu-id="e2d3d-102">如何：投影匿名型別 (C#)</span><span class="sxs-lookup"><span data-stu-id="e2d3d-102">How to: Project an Anonymous Type (C#)</span></span>
 <span data-ttu-id="e2d3d-103">在某些情況下，即使您知道您只會短期使用新型別，您可能還是想要將查詢規劃為該型別。</span><span class="sxs-lookup"><span data-stu-id="e2d3d-103">In some cases you might want to project a query to a new type, even though you know you will only use this type for a short while.</span></span> <span data-ttu-id="e2d3d-104">建立新型別只用於這個規劃太費工。</span><span class="sxs-lookup"><span data-stu-id="e2d3d-104">It is a lot of extra work to create a new type just to use in the projection.</span></span> <span data-ttu-id="e2d3d-105">在此情況下，較有效率的方法為規劃匿名型別。</span><span class="sxs-lookup"><span data-stu-id="e2d3d-105">A more efficient approach in this case is to project to an anonymous type.</span></span> <span data-ttu-id="e2d3d-106">匿名型別可讓您定義類別，然後宣告並初始化該類別的物件，而不用提供類別一個名稱。</span><span class="sxs-lookup"><span data-stu-id="e2d3d-106">Anonymous types allow you to define a class, then declare and initialize an object of that class, without giving the class a name.</span></span>  

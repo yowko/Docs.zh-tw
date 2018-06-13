@@ -7,6 +7,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: HT
 ms.contentlocale: zh-TW
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33325028"
 ---
 # <a name="how-to-stream-xml-fragments-with-access-to-header-information-c"></a><span data-ttu-id="2b0d7-102">如何：串流 XML 片段並存取標頭資訊 (C#)</span><span class="sxs-lookup"><span data-stu-id="2b0d7-102">How to: Stream XML Fragments with Access to Header Information (C#)</span></span>
 <span data-ttu-id="2b0d7-103">有時候您必須讀取任意大的 XML 檔案並撰寫您的應用程式，讓應用程式的記憶體使用量可以預測。</span><span class="sxs-lookup"><span data-stu-id="2b0d7-103">Sometimes you have to read arbitrarily large XML files, and write your application so that the memory footprint of the application is predictable.</span></span> <span data-ttu-id="2b0d7-104">如果您嘗試使用大型 XML 檔案填入 XML 樹狀結構，您的記憶體使用量將與檔案大小成正比，也就是，變成過度。</span><span class="sxs-lookup"><span data-stu-id="2b0d7-104">If you attempt to populate an XML tree with a large XML file, your memory usage will be proportional to the size of the file—that is, excessive.</span></span> <span data-ttu-id="2b0d7-105">因此，您應該改用資料流技術。</span><span class="sxs-lookup"><span data-stu-id="2b0d7-105">Therefore, you should use a streaming technique instead.</span></span>  

@@ -9,6 +9,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: HT
 ms.contentlocale: zh-TW
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33314323"
 ---
 # <a name="fields-c-programming-guide"></a><span data-ttu-id="995b5-102">欄位 (C# 程式設計手冊)</span><span class="sxs-lookup"><span data-stu-id="995b5-102">Fields (C# Programming Guide)</span></span>
 <span data-ttu-id="995b5-103">「欄位」是任意類型的變數，可在[類別](../../../csharp/language-reference/keywords/class.md)或[結構](../../../csharp/language-reference/keywords/struct.md)中直接宣告。</span><span class="sxs-lookup"><span data-stu-id="995b5-103">A *field* is a variable of any type that is declared directly in a [class](../../../csharp/language-reference/keywords/class.md) or [struct](../../../csharp/language-reference/keywords/struct.md).</span></span> <span data-ttu-id="995b5-104">欄位是其包含類型的「成員」。</span><span class="sxs-lookup"><span data-stu-id="995b5-104">Fields are *members* of their containing type.</span></span>  

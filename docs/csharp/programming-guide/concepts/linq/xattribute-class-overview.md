@@ -7,6 +7,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: HT
 ms.contentlocale: zh-TW
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33324414"
 ---
 # <a name="xattribute-class-overview-c"></a><span data-ttu-id="80522-102">XAttribute 類別概觀 (C#)</span><span class="sxs-lookup"><span data-stu-id="80522-102">XAttribute Class Overview (C#)</span></span>
 <span data-ttu-id="80522-103">屬性是與項目相關聯的成對名稱/值。</span><span class="sxs-lookup"><span data-stu-id="80522-103">Attributes are name/value pairs that are associated with an element.</span></span> <span data-ttu-id="80522-104"><xref:System.Xml.Linq.XAttribute> 類別表示 XML 屬性。</span><span class="sxs-lookup"><span data-stu-id="80522-104">The <xref:System.Xml.Linq.XAttribute> class represents XML attributes.</span></span>  

@@ -7,6 +7,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: HT
 ms.contentlocale: zh-TW
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33332526"
 ---
 # <a name="common-attributes-c"></a><span data-ttu-id="3c5df-102">常見屬性 (C#)</span><span class="sxs-lookup"><span data-stu-id="3c5df-102">Common Attributes (C#)</span></span>
 <span data-ttu-id="3c5df-103">本主題描述最常在 C# 程式中使用的屬性。</span><span class="sxs-lookup"><span data-stu-id="3c5df-103">This topic describes the attributes that are most commonly used in C# programs.</span></span>  

@@ -7,6 +7,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: HT
 ms.contentlocale: zh-TW
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33330092"
 ---
 # <a name="scope-of-default-namespaces-in-c"></a><span data-ttu-id="ba5be-102">C# 中的預設命名空間範圍</span><span class="sxs-lookup"><span data-stu-id="ba5be-102">Scope of Default Namespaces in C#</span></span>
 <span data-ttu-id="ba5be-103">在 XML 樹狀結構中表示的預設命名空間不在查詢的範圍內。</span><span class="sxs-lookup"><span data-stu-id="ba5be-103">Default namespaces as represented in the XML tree are not in scope for queries.</span></span> <span data-ttu-id="ba5be-104">如果您擁有的 XML 位於預設命名空間中，您仍然必須宣告 <xref:System.Xml.Linq.XNamespace> 變數，然後將它與區域名稱結合，讓限定名稱 (Qualified Name) 得以用於查詢中。</span><span class="sxs-lookup"><span data-stu-id="ba5be-104">If you have XML that is in a default namespace, you still must declare an <xref:System.Xml.Linq.XNamespace> variable, and combine it with the local name to make a qualified name to be used in the query.</span></span>  

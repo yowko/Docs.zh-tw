@@ -11,6 +11,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: HT
 ms.contentlocale: zh-TW
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33332750"
 ---
 # <a name="expression-bodied-members-c-programming-guide"></a><span data-ttu-id="0eba4-102">運算式主體成員 (C# 程式設計手冊)</span><span class="sxs-lookup"><span data-stu-id="0eba4-102">Expression-bodied members (C# programming guide)</span></span>
 <span data-ttu-id="0eba4-103">運算式主體定義可讓您以極為簡潔且可讀的形式提供成員的實作。</span><span class="sxs-lookup"><span data-stu-id="0eba4-103">Expression body definitions let you provide a member's implementation in a very concise, readable form.</span></span> <span data-ttu-id="0eba4-104">只要任何所支援成員 (例如方法或屬性) 的邏輯包含單一運算式，就可以使用運算式主體定義。</span><span class="sxs-lookup"><span data-stu-id="0eba4-104">You can use an expression body definition whenever the logic for any supported member, such as a method or property, consists of a single expression.</span></span> <span data-ttu-id="0eba4-105">運算式主體定義的一般語法如下︰</span><span class="sxs-lookup"><span data-stu-id="0eba4-105">An expression body definition has the following general syntax:</span></span>

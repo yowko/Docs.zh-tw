@@ -7,6 +7,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: HT
 ms.contentlocale: zh-TW
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33328210"
 ---
 # <a name="functional-vs-procedural-programming-linq-to-xml-c"></a><span data-ttu-id="8b762-102">功能性與程序性程式設計的比較 (LINQ to XML) (C#)</span><span class="sxs-lookup"><span data-stu-id="8b762-102">Functional vs. Procedural Programming (LINQ to XML) (C#)</span></span>
 <span data-ttu-id="8b762-103">XML 應用程式有很多種：</span><span class="sxs-lookup"><span data-stu-id="8b762-103">There are various types of XML applications:</span></span>  

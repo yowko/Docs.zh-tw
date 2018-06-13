@@ -7,6 +7,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: HT
 ms.contentlocale: zh-TW
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33320921"
 ---
 # <a name="assemblies-and-the-global-assembly-cache-c"></a><span data-ttu-id="91dce-102">組件和全域組件快取 (C#)</span><span class="sxs-lookup"><span data-stu-id="91dce-102">Assemblies and the Global Assembly Cache (C#)</span></span>
 <span data-ttu-id="91dce-103">組件會構成 .NET 型應用程式之部署、版本控制、重複使用、啟動範圍和安全性權限的基本單位。</span><span class="sxs-lookup"><span data-stu-id="91dce-103">Assemblies form the fundamental unit of deployment, version control, reuse, activation scoping, and security permissions for a .NET-based application.</span></span> <span data-ttu-id="91dce-104">組件會採用可執行檔 (.exe) 或動態連結程式庫 (.dll) 的格式，而且是 .NET Framework 的建置組塊。</span><span class="sxs-lookup"><span data-stu-id="91dce-104">Assemblies take the form of an executable (.exe) file or dynamic link library (.dll) file, and are the building blocks of the .NET Framework.</span></span> <span data-ttu-id="91dce-105">它們為通用語言執行平台提供了感知型別實作所需的資訊。</span><span class="sxs-lookup"><span data-stu-id="91dce-105">They provide the common language runtime with the information it needs to be aware of type implementations.</span></span> <span data-ttu-id="91dce-106">您可以將組件視為型別和資源的集合，其構成功能的邏輯單元，而且是為了共同運作而建置。</span><span class="sxs-lookup"><span data-stu-id="91dce-106">You can think of an assembly as a collection of types and resources that form a logical unit of functionality and are built to work together.</span></span>  

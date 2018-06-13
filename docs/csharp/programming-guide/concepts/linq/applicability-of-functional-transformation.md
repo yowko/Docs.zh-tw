@@ -7,6 +7,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: HT
 ms.contentlocale: zh-TW
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33319146"
 ---
 # <a name="applicability-of-functional-transformation-c"></a><span data-ttu-id="1a6c3-102">功能性轉換的適用性 (C#)</span><span class="sxs-lookup"><span data-stu-id="1a6c3-102">Applicability of Functional Transformation (C#)</span></span>
 <span data-ttu-id="1a6c3-103">純功能性轉換適用於各種情況。</span><span class="sxs-lookup"><span data-stu-id="1a6c3-103">Pure functional transformations are applicable in a wide variety of situations.</span></span>  

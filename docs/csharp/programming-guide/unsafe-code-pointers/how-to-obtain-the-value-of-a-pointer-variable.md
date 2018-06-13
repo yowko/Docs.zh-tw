@@ -12,6 +12,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: HT
 ms.contentlocale: zh-TW
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33322948"
 ---
 # <a name="how-to-obtain-the-value-of-a-pointer-variable-c-programming-guide"></a><span data-ttu-id="7117d-102">如何：取得指標變數值 (C# 程式設計手冊)</span><span class="sxs-lookup"><span data-stu-id="7117d-102">How to: Obtain the Value of a Pointer Variable (C# Programming Guide)</span></span>
 <span data-ttu-id="7117d-103">您可以使用指標間接運算子來取得指標所指向位置的變數。</span><span class="sxs-lookup"><span data-stu-id="7117d-103">Use the pointer indirection operator to obtain the variable at the location pointed to by a pointer.</span></span> <span data-ttu-id="7117d-104">運算式會採用下列格式，其中 `p` 是指標類型：</span><span class="sxs-lookup"><span data-stu-id="7117d-104">The expression takes the following form, where `p` is a pointer type:</span></span>  

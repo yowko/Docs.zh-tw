@@ -10,6 +10,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: HT
 ms.contentlocale: zh-TW
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33330368"
 ---
 # <a name="comparison-between-properties-and-indexers-c-programming-guide"></a><span data-ttu-id="1757b-102">屬性與索引子之間的比較 (C# 程式設計手冊)</span><span class="sxs-lookup"><span data-stu-id="1757b-102">Comparison Between Properties and Indexers (C# Programming Guide)</span></span>
 <span data-ttu-id="1757b-103">索引子就像是屬性。</span><span class="sxs-lookup"><span data-stu-id="1757b-103">Indexers are like properties.</span></span> <span data-ttu-id="1757b-104">除了下表所列的差異外，所有為屬性存取子定義的規則也適用於索引子存取子。</span><span class="sxs-lookup"><span data-stu-id="1757b-104">Except for the differences shown in the following table, all the rules that are defined for property accessors apply to indexer accessors also.</span></span>  

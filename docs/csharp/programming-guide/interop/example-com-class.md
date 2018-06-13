@@ -10,6 +10,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: HT
 ms.contentlocale: zh-TW
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33322270"
 ---
 # <a name="example-com-class-c-programming-guide"></a><span data-ttu-id="291c2-102">範例 COM 類別 (C# 程式設計手冊)</span><span class="sxs-lookup"><span data-stu-id="291c2-102">Example COM Class (C# Programming Guide)</span></span>
 <span data-ttu-id="291c2-103">以下是公開為 COM 物件類別的範例。</span><span class="sxs-lookup"><span data-stu-id="291c2-103">The following is an example of a class that you would expose as a COM object.</span></span> <span data-ttu-id="291c2-104">在此程式碼放入 .cs 檔案並新增至專案之後，將**註冊 COM Interop** 屬性設定為 **True**。</span><span class="sxs-lookup"><span data-stu-id="291c2-104">After this code has been placed in a .cs file and added to your project, set the **Register for COM Interop** property to **True**.</span></span> <span data-ttu-id="291c2-105">如需詳細資訊，請參閱 [NIB：如何：登錄 COM Interop 元件](http://msdn.microsoft.com/library/4de7d474-56e8-4027-994d-d47ca4725c5e)。</span><span class="sxs-lookup"><span data-stu-id="291c2-105">For more information, see [NIB: How to: Register a Component for COM Interop](http://msdn.microsoft.com/library/4de7d474-56e8-4027-994d-d47ca4725c5e).</span></span>  

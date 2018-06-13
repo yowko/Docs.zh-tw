@@ -7,6 +7,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: HT
 ms.contentlocale: zh-TW
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33333293"
 ---
 # <a name="how-to-find-a-union-of-two-location-paths-xpath-linq-to-xml-c"></a><span data-ttu-id="bad07-102">如何：尋找兩個位置路徑的聯集 (XPath-LINQ to XML) (C#)</span><span class="sxs-lookup"><span data-stu-id="bad07-102">How to: Find a Union of Two Location Paths (XPath-LINQ to XML) (C#)</span></span>
 <span data-ttu-id="bad07-103">XPath 可讓您尋找兩個 XPath 位置路徑結果的等位。</span><span class="sxs-lookup"><span data-stu-id="bad07-103">XPath allows you to find the union of the results of two XPath location paths.</span></span>  

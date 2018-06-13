@@ -13,6 +13,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: HT
 ms.contentlocale: zh-TW
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33288290"
 ---
 # <a name="try-finally-c-reference"></a><span data-ttu-id="02cb1-102">try-finally (C# 參考)</span><span class="sxs-lookup"><span data-stu-id="02cb1-102">try-finally (C# Reference)</span></span>
 <span data-ttu-id="02cb1-103">使用 `finally` 區塊，即可清除 [try](../../../csharp/language-reference/keywords/try-catch.md) 區塊中所配置的任何資源，以及執行程式碼，即使 `try` 區塊中發生例外狀況也是一樣。</span><span class="sxs-lookup"><span data-stu-id="02cb1-103">By using a `finally` block, you can clean up any resources that are allocated in a [try](../../../csharp/language-reference/keywords/try-catch.md) block, and you can run code even if an exception occurs in the `try` block.</span></span> <span data-ttu-id="02cb1-104">一般而言，會在控制權離開 `try` 陳述式時，執行 `finally` 區塊的陳述式。</span><span class="sxs-lookup"><span data-stu-id="02cb1-104">Typically, the statements of a `finally` block run when control leaves a `try` statement.</span></span> <span data-ttu-id="02cb1-105">控制權轉移可能是正常執行、執行 `break`、`continue`、`goto` 或 `return` 陳述式，或是傳播 `try` 陳述式的例外狀況所造成。</span><span class="sxs-lookup"><span data-stu-id="02cb1-105">The transfer of control can occur as a result of normal execution, of execution of a `break`, `continue`, `goto`, or `return` statement, or of propagation of an exception out of the `try` statement.</span></span>  

@@ -7,6 +7,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: HT
 ms.contentlocale: zh-TW
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33319763"
 ---
 # <a name="how-to-sort-elements-c"></a><span data-ttu-id="836ce-102">如何：排序項目 (C#)</span><span class="sxs-lookup"><span data-stu-id="836ce-102">How to: Sort Elements (C#)</span></span>
 <span data-ttu-id="836ce-103">此範例顯示如何撰寫排序其結果的查詢。</span><span class="sxs-lookup"><span data-stu-id="836ce-103">This example shows how to write a query that sorts its results.</span></span>  

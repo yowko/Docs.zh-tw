@@ -9,6 +9,7 @@ ms.sourcegitcommit: 11f11ca6cefe555972b3a5c99729d1a7523d8f50
 ms.translationtype: MT
 ms.contentlocale: zh-TW
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32757524"
 ---
 # <a name="ltissuernameregistrygt"></a><span data-ttu-id="cd293-102">&lt;issuerNameRegistry&gt;</span><span class="sxs-lookup"><span data-stu-id="cd293-102">&lt;issuerNameRegistry&gt;</span></span>
 <span data-ttu-id="cd293-103">設定簽發者名稱登錄，由權杖處理常式集合中的處理常式。</span><span class="sxs-lookup"><span data-stu-id="cd293-103">Configures the issuer name registry that is used by handlers in the token handler collection.</span></span>  

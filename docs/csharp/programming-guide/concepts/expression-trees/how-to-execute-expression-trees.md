@@ -7,6 +7,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: HT
 ms.contentlocale: zh-TW
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33322087"
 ---
 # <a name="how-to-execute-expression-trees-c"></a><span data-ttu-id="cc432-102">如何：執行運算式樹狀架構 (C#)</span><span class="sxs-lookup"><span data-stu-id="cc432-102">How to: Execute Expression Trees (C#)</span></span>
 <span data-ttu-id="cc432-103">本主題示範如何執行運算式樹狀架構。</span><span class="sxs-lookup"><span data-stu-id="cc432-103">This topic shows you how to execute an expression tree.</span></span> <span data-ttu-id="cc432-104">執行運算式樹狀架構可能會傳回一個值，或者只是執行某個動作，例如呼叫方法。</span><span class="sxs-lookup"><span data-stu-id="cc432-104">Executing an expression tree may return a value, or it may just perform an action such as calling a method.</span></span>  

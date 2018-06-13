@@ -7,6 +7,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: HT
 ms.contentlocale: zh-TW
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33320862"
 ---
 # <a name="friend-assemblies-c"></a><span data-ttu-id="04044-102">Friend 組件 (C#)</span><span class="sxs-lookup"><span data-stu-id="04044-102">Friend Assemblies (C#)</span></span>
 <span data-ttu-id="04044-103">「friend 組件」是可以存取另一個組件的[內部](../../../../csharp/language-reference/keywords/internal.md)類型和成員的組件。</span><span class="sxs-lookup"><span data-stu-id="04044-103">A *friend assembly* is an assembly that can access another assembly's [internal](../../../../csharp/language-reference/keywords/internal.md) types and members.</span></span> <span data-ttu-id="04044-104">如果將組件指定為 friend 組件，就不再需要將類型和成員標記為 public，以供其他組件存取。</span><span class="sxs-lookup"><span data-stu-id="04044-104">If you identify an assembly as a friend assembly, you no longer have to mark types and members as public in order for them to be accessed by other assemblies.</span></span> <span data-ttu-id="04044-105">這在下列情況下特別方便：</span><span class="sxs-lookup"><span data-stu-id="04044-105">This is especially convenient in the following scenarios:</span></span>  

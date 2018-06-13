@@ -10,6 +10,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: HT
 ms.contentlocale: zh-TW
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33313845"
 ---
 # <a name="multidimensional-arrays-c-programming-guide"></a><span data-ttu-id="815e5-102">多維陣列 (C# 程式設計手冊)</span><span class="sxs-lookup"><span data-stu-id="815e5-102">Multidimensional Arrays (C# Programming Guide)</span></span>
 <span data-ttu-id="815e5-103">陣列可以有多個維度。</span><span class="sxs-lookup"><span data-stu-id="815e5-103">Arrays can have more than one dimension.</span></span> <span data-ttu-id="815e5-104">例如，下列宣告會建立具有四個資料列和兩個資料行的二維陣列。</span><span class="sxs-lookup"><span data-stu-id="815e5-104">For example, the following declaration creates a two-dimensional array of four rows and two columns.</span></span>  

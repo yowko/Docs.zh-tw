@@ -9,6 +9,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: HT
 ms.contentlocale: zh-TW
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33335244"
 ---
 # <a name="equality-comparisons-c-programming-guide"></a><span data-ttu-id="3620d-102">相等比較 (C# 程式設計手冊)</span><span class="sxs-lookup"><span data-stu-id="3620d-102">Equality Comparisons (C# Programming Guide)</span></span>
 <span data-ttu-id="3620d-103">有時候需要比較兩個值是否相等。</span><span class="sxs-lookup"><span data-stu-id="3620d-103">It is sometimes necessary to compare two values for equality.</span></span> <span data-ttu-id="3620d-104">在某些情況下，您要測試「值是否相等」 (也稱為「等價」，表示兩個變數所含的值相等。</span><span class="sxs-lookup"><span data-stu-id="3620d-104">In some cases, you are testing for *value equality*, also known as *equivalence*, which means that the values that are contained by the two variables are equal.</span></span> <span data-ttu-id="3620d-105">在其他情況下，您必須判斷兩個變數是否參照記憶體中的相同基礎物件。</span><span class="sxs-lookup"><span data-stu-id="3620d-105">In other cases, you have to determine whether two variables refer to the same underlying object in memory.</span></span> <span data-ttu-id="3620d-106">這類型的相等稱為「參考相等」或「識別」。</span><span class="sxs-lookup"><span data-stu-id="3620d-106">This type of equality is called *reference equality*, or *identity*.</span></span> <span data-ttu-id="3620d-107">本主題描述這兩種相等，並提供其他主題的連結以取得詳細資訊。</span><span class="sxs-lookup"><span data-stu-id="3620d-107">This topic describes these two kinds of equality and provides links to other topics for more information.</span></span>  

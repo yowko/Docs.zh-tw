@@ -7,6 +7,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: HT
 ms.contentlocale: zh-TW
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33325431"
 ---
 # <a name="how-to-find-elements-in-a-namespace-xpath-linq-to-xml-c"></a><span data-ttu-id="bd061-102">如何：尋找命名空間中的項目 (XPath-LINQ to XML) (C#)</span><span class="sxs-lookup"><span data-stu-id="bd061-102">How to: Find Elements in a Namespace (XPath-LINQ to XML) (C#)</span></span>
 <span data-ttu-id="bd061-103">XPath 運算式可以在特定的命名空間中尋找節點。</span><span class="sxs-lookup"><span data-stu-id="bd061-103">XPath expressions can find nodes in a particular namespace.</span></span> <span data-ttu-id="bd061-104">XPath 運算式使用命名空間前置詞來指定命名空間。</span><span class="sxs-lookup"><span data-stu-id="bd061-104">XPath expressions use namespace prefixes for specifying namespaces.</span></span> <span data-ttu-id="bd061-105">若要剖析包含命名空間前置詞的 XPath 運算式，您必須將物件傳遞到實作 <xref:System.Xml.IXmlNamespaceResolver> 的 XPath 方法。</span><span class="sxs-lookup"><span data-stu-id="bd061-105">To parse an XPath expression that contains namespace prefixes, you must pass an object to the XPath methods that implements <xref:System.Xml.IXmlNamespaceResolver>.</span></span> <span data-ttu-id="bd061-106">這個範例會使用 <xref:System.Xml.XmlNamespaceManager>。</span><span class="sxs-lookup"><span data-stu-id="bd061-106">This example uses <xref:System.Xml.XmlNamespaceManager>.</span></span>  

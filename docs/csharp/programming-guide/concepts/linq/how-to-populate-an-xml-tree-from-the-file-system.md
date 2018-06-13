@@ -7,6 +7,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: HT
 ms.contentlocale: zh-TW
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33328171"
 ---
 # <a name="how-to-populate-an-xml-tree-from-the-file-system-c"></a><span data-ttu-id="62a58-102">如何：從檔案系統填入 XML 樹狀結構 (C#)</span><span class="sxs-lookup"><span data-stu-id="62a58-102">How to: Populate an XML Tree from the File System (C#)</span></span>
 <span data-ttu-id="62a58-103">XML 樹狀的常用與實用應用為當做階層式名稱/值資料存放區使用。</span><span class="sxs-lookup"><span data-stu-id="62a58-103">A common and useful application of XML trees is as a hierarchical name/value data store.</span></span> <span data-ttu-id="62a58-104">您可以利用階層式資料填入 XML 樹狀結構，然後進行查詢、轉換，並在必要時，進行序列化。</span><span class="sxs-lookup"><span data-stu-id="62a58-104">You can populate an XML tree with hierarchical data, and then query it, transform it, and if necessary, serialize it.</span></span> <span data-ttu-id="62a58-105">在這個使用案例中，許多 XML 專用語意 (Semantics) (例如，命名空間與空白字元行為) 都不重要。</span><span class="sxs-lookup"><span data-stu-id="62a58-105">In this usage scenario, many of the XML specific semantics, such as namespaces and white space behavior, are not important.</span></span> <span data-ttu-id="62a58-106">反之，您會使用 XML 樹狀當做記憶體中的小型單一使用者階層式資料庫。</span><span class="sxs-lookup"><span data-stu-id="62a58-106">Instead, you are using the XML tree as a small, in memory, single user hierarchical database.</span></span>  

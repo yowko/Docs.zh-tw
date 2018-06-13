@@ -7,6 +7,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: HT
 ms.contentlocale: zh-TW
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33321284"
 ---
 # <a name="how-to-retrieve-a-single-attribute-linq-to-xml-c"></a><span data-ttu-id="8caf6-102">如何：擷取單一屬性 (LINQ to XML) (C#)</span><span class="sxs-lookup"><span data-stu-id="8caf6-102">How to: Retrieve a Single Attribute (LINQ to XML) (C#)</span></span>
 <span data-ttu-id="8caf6-103">這個主題會說明如何擷取項目的單一屬性 (如果有屬性名稱)。</span><span class="sxs-lookup"><span data-stu-id="8caf6-103">This topic explains how to retrieve a single attribute of an element, given the attribute name.</span></span> <span data-ttu-id="8caf6-104">這在撰寫您要尋找具有特定屬性之項目的查詢運算式時，相當實用。</span><span class="sxs-lookup"><span data-stu-id="8caf6-104">This is useful for writing query expressions where you want to find an element that has a particular attribute.</span></span>  

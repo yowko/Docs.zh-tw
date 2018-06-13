@@ -7,6 +7,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: HT
 ms.contentlocale: zh-TW
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33326715"
 ---
 # <a name="details-of-office-open-xml-wordprocessingml-documents-c"></a><span data-ttu-id="32c07-102">Office Open XML WordprocessingML 文件的詳細資料 (C#)</span><span class="sxs-lookup"><span data-stu-id="32c07-102">Details of Office Open XML WordprocessingML Documents (C#)</span></span>
 <span data-ttu-id="32c07-103">本節提供 Office Open XML WordprocessingML 文件詳細資料的相關資訊。</span><span class="sxs-lookup"><span data-stu-id="32c07-103">This section provides information about the details of Office Open XML WordprocessingML documents.</span></span> <span data-ttu-id="32c07-104">它會顯示 Open XML 文件之文件部分和樣式部分的範例。</span><span class="sxs-lookup"><span data-stu-id="32c07-104">It shows examples of the document and style parts of an Open XML document.</span></span>  

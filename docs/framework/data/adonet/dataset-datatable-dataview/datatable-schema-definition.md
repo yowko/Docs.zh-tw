@@ -7,6 +7,7 @@ ms.sourcegitcommit: 11f11ca6cefe555972b3a5c99729d1a7523d8f50
 ms.translationtype: MT
 ms.contentlocale: zh-TW
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32757758"
 ---
 # <a name="datatable-schema-definition"></a><span data-ttu-id="e0779-102">DataTable 結構描述定義</span><span class="sxs-lookup"><span data-stu-id="e0779-102">DataTable Schema Definition</span></span>
 <span data-ttu-id="e0779-103">資料表的結構描述 (或結構) 是由資料行或條件約束來表示。</span><span class="sxs-lookup"><span data-stu-id="e0779-103">The schema, or structure, of a table is represented by columns and constraints.</span></span> <span data-ttu-id="e0779-104">您可以使用 <xref:System.Data.DataTable> 物件以及 <xref:System.Data.DataColumn> 和 <xref:System.Data.ForeignKeyConstraint> 物件來定義 <xref:System.Data.UniqueConstraint> 的結構描述。</span><span class="sxs-lookup"><span data-stu-id="e0779-104">You define the schema of a <xref:System.Data.DataTable> using <xref:System.Data.DataColumn> objects as well as <xref:System.Data.ForeignKeyConstraint> and <xref:System.Data.UniqueConstraint> objects.</span></span> <span data-ttu-id="e0779-105">資料表的資料行可對應到資料來源中的資料行、包含運算式所得的值、自動累加其值或包含主索引鍵值。</span><span class="sxs-lookup"><span data-stu-id="e0779-105">The columns in a table can map to columns in a data source, contain calculated values from expressions, automatically increment their values, or contain primary key values.</span></span>  

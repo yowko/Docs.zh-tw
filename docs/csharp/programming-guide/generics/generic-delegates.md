@@ -10,6 +10,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: HT
 ms.contentlocale: zh-TW
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33332903"
 ---
 # <a name="generic-delegates-c-programming-guide"></a><span data-ttu-id="976ed-102">泛型委派 (C# 程式設計手冊)</span><span class="sxs-lookup"><span data-stu-id="976ed-102">Generic Delegates (C# Programming Guide)</span></span>
 <span data-ttu-id="976ed-103">[委派](../../../csharp/language-reference/keywords/delegate.md)可以定義自己的型別參數。</span><span class="sxs-lookup"><span data-stu-id="976ed-103">A [delegate](../../../csharp/language-reference/keywords/delegate.md) can define its own type parameters.</span></span> <span data-ttu-id="976ed-104">參考泛型委派的程式碼，可以指定型別引數建立封閉式建構類型，就像在具現化泛型類別或呼叫泛型方法時一樣，如下列範例所示：</span><span class="sxs-lookup"><span data-stu-id="976ed-104">Code that references the generic delegate can specify the type argument to create a closed constructed type, just like when instantiating a generic class or calling a generic method, as shown in the following example:</span></span>  

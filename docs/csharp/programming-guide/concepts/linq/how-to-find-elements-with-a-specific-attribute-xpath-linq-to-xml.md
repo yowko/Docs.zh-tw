@@ -7,6 +7,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: HT
 ms.contentlocale: zh-TW
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33318083"
 ---
 # <a name="how-to-find-elements-with-a-specific-attribute-xpath-linq-to-xml-c"></a><span data-ttu-id="de08c-102">如何：尋找具有特定屬性的項目 (XPath-LINQ to XML) (C#)</span><span class="sxs-lookup"><span data-stu-id="de08c-102">How to: Find Elements with a Specific Attribute (XPath-LINQ to XML) (C#)</span></span>
 <span data-ttu-id="de08c-103">有時候您會想要尋找具有特定屬性的所有項目。</span><span class="sxs-lookup"><span data-stu-id="de08c-103">Sometimes you want to find all elements that have a specific attribute.</span></span> <span data-ttu-id="de08c-104">您並不關心屬性的內容。</span><span class="sxs-lookup"><span data-stu-id="de08c-104">You are not concerned about the contents of the attribute.</span></span> <span data-ttu-id="de08c-105">但是，您想要根據屬性的存在與否來選擇。</span><span class="sxs-lookup"><span data-stu-id="de08c-105">Instead, you want to select based on the existence of the attribute.</span></span>  

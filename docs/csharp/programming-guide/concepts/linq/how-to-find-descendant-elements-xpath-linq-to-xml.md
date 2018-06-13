@@ -7,6 +7,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: HT
 ms.contentlocale: zh-TW
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33320985"
 ---
 # <a name="how-to-find-descendant-elements-xpath-linq-to-xml-c"></a><span data-ttu-id="4f268-102">如何：尋找子系項目 (XPath-LINQ to XML) (C#)</span><span class="sxs-lookup"><span data-stu-id="4f268-102">How to: Find Descendant Elements (XPath-LINQ to XML) (C#)</span></span>
 <span data-ttu-id="4f268-103">本主題顯示如何利用特定名稱取得子代項目。</span><span class="sxs-lookup"><span data-stu-id="4f268-103">This topic shows how to get the descendant elements with a particular name.</span></span>  

@@ -14,6 +14,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: HT
 ms.contentlocale: zh-TW
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33286025"
 ---
 # <a name="-operator-c-reference"></a><span data-ttu-id="a108b-102">[] 運算子 (C# 參考)</span><span class="sxs-lookup"><span data-stu-id="a108b-102">[] Operator (C# Reference)</span></span>
 <span data-ttu-id="a108b-103">方括號 (`[]`) 可用於陣列、索引子和屬性，</span><span class="sxs-lookup"><span data-stu-id="a108b-103">Square brackets (`[]`) are used for arrays, indexers, and attributes.</span></span> <span data-ttu-id="a108b-104">也可與指標搭配使用。</span><span class="sxs-lookup"><span data-stu-id="a108b-104">They can also be used with pointers.</span></span>  

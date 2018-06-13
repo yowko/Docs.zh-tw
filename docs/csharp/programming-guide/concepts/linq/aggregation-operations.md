@@ -7,6 +7,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: HT
 ms.contentlocale: zh-TW
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33319546"
 ---
 # <a name="aggregation-operations-c"></a><span data-ttu-id="f2b06-102">彙總作業 (C#)</span><span class="sxs-lookup"><span data-stu-id="f2b06-102">Aggregation Operations (C#)</span></span>
 <span data-ttu-id="f2b06-103">彙總運算會計算值集合中的單一值。</span><span class="sxs-lookup"><span data-stu-id="f2b06-103">An aggregation operation computes a single value from a collection of values.</span></span> <span data-ttu-id="f2b06-104">彙總運算的一個範例是，當您使用一個月中每天的溫度值來計算每天平均溫度時。</span><span class="sxs-lookup"><span data-stu-id="f2b06-104">An example of an aggregation operation is calculating the average daily temperature from a month's worth of daily temperature values.</span></span>  

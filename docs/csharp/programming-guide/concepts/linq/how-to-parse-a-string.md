@@ -7,6 +7,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: HT
 ms.contentlocale: zh-TW
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33320140"
 ---
 # <a name="how-to-parse-a-string-c"></a><span data-ttu-id="a4799-102">如何：剖析字串 (C#)</span><span class="sxs-lookup"><span data-stu-id="a4799-102">How to: Parse a String (C#)</span></span>
 <span data-ttu-id="a4799-103">本主題示範如何剖析字串以便在 C# 中建立 XML 樹狀結構。</span><span class="sxs-lookup"><span data-stu-id="a4799-103">This topic shows how to parse a string to create an XML tree in C#.</span></span>  

@@ -7,6 +7,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: HT
 ms.contentlocale: zh-TW
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33331486"
 ---
 # <a name="linq-to-xml-axes-c"></a><span data-ttu-id="f743e-102">LINQ to XML 座標軸 (C#)</span><span class="sxs-lookup"><span data-stu-id="f743e-102">LINQ to XML Axes (C#)</span></span>
 <span data-ttu-id="f743e-103">建立 XML 樹狀結構，或將 XML 文件載入到 XML 樹狀結構後，您可以進行查詢以尋找項目和屬性並擷取其值。</span><span class="sxs-lookup"><span data-stu-id="f743e-103">After you have created an XML tree or loaded an XML document into an XML tree, you can query it to find elements and attributes and retrieve their values.</span></span>  

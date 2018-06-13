@@ -9,6 +9,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: HT
 ms.contentlocale: zh-TW
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33333969"
 ---
 # <a name="how-to-declare-instantiate-and-use-a-delegate-c-programming-guide"></a><span data-ttu-id="17203-102">如何：宣告、產生和使用委派 (C# 程式設計手冊)</span><span class="sxs-lookup"><span data-stu-id="17203-102">How to: Declare, Instantiate, and Use a Delegate (C# Programming Guide)</span></span>
 <span data-ttu-id="17203-103">在 C# 1.0 和更新版本中，宣告委派的方式如下列範例所示。</span><span class="sxs-lookup"><span data-stu-id="17203-103">In C# 1.0 and later, delegates can be declared as shown in the following example.</span></span>  

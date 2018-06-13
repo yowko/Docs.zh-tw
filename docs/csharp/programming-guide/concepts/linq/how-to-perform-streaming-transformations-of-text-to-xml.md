@@ -7,6 +7,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: HT
 ms.contentlocale: zh-TW
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33328184"
 ---
 # <a name="how-to-perform-streaming-transformations-of-text-to-xml-c"></a><span data-ttu-id="0df4f-102">如何：執行文字到 XML 的串流轉換 (C#)</span><span class="sxs-lookup"><span data-stu-id="0df4f-102">How to: Perform Streaming Transformations of Text to XML (C#)</span></span>
 <span data-ttu-id="0df4f-103">處理文字檔的其中一個方法是撰寫擴充方法，該方法會使用 `yield return` 建構將文字檔一次串流一行。</span><span class="sxs-lookup"><span data-stu-id="0df4f-103">One approach to processing a text file is to write an extension method that streams the text file a line at a time using the `yield return` construct.</span></span> <span data-ttu-id="0df4f-104">然後您可以撰寫利用延後的方式處理文字檔的 LINQ 查詢。</span><span class="sxs-lookup"><span data-stu-id="0df4f-104">You then can write a LINQ query that processes the text file in a lazy deferred fashion.</span></span> <span data-ttu-id="0df4f-105">如果您接著使用 <xref:System.Xml.Linq.XStreamingElement> 串流輸出，您就可以使用最少量的記憶體建立文字檔到 XML 的轉換，而不必在乎來源文字檔的大小。</span><span class="sxs-lookup"><span data-stu-id="0df4f-105">If you then use <xref:System.Xml.Linq.XStreamingElement> to stream output, you then can create a transformation from the text file to XML that uses a minimal amount of memory, regardless of the size of the source text file.</span></span>  

@@ -10,6 +10,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: HT
 ms.contentlocale: zh-TW
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33313497"
 ---
 # <a name="arrays-c-programming-guide"></a><span data-ttu-id="bfa0f-102">陣列 (C# 程式設計手冊)</span><span class="sxs-lookup"><span data-stu-id="bfa0f-102">Arrays (C# Programming Guide)</span></span>
 <span data-ttu-id="bfa0f-103">您可以在陣列資料結構中儲存相同類型的多個變數。</span><span class="sxs-lookup"><span data-stu-id="bfa0f-103">You can store multiple variables of the same type in an array data structure.</span></span> <span data-ttu-id="bfa0f-104">您可以指定陣列元素的類型來宣告陣列。</span><span class="sxs-lookup"><span data-stu-id="bfa0f-104">You declare an array by specifying the type of its elements.</span></span>  

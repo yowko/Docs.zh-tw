@@ -12,6 +12,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: HT
 ms.contentlocale: zh-TW
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33313910"
 ---
 # <a name="abstract-and-sealed-classes-and-class-members-c-programming-guide"></a><span data-ttu-id="4b79f-102">抽象和密封類別以及類別成員 (C# 程式設計手冊)</span><span class="sxs-lookup"><span data-stu-id="4b79f-102">Abstract and Sealed Classes and Class Members (C# Programming Guide)</span></span>
 <span data-ttu-id="4b79f-103">[abstract](../../../csharp/language-reference/keywords/abstract.md) 關鍵字可讓您建立類別和[類別](../../../csharp/language-reference/keywords/class.md)成員，這些類別和成員並不完整，因此必須在衍生類別中實作。</span><span class="sxs-lookup"><span data-stu-id="4b79f-103">The [abstract](../../../csharp/language-reference/keywords/abstract.md) keyword enables you to create classes and [class](../../../csharp/language-reference/keywords/class.md) members that are incomplete and must be implemented in a derived class.</span></span>  

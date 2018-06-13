@@ -7,6 +7,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: HT
 ms.contentlocale: zh-TW
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33320966"
 ---
 # <a name="sample-xml-file-multiple-purchase-orders-linq-to-xml"></a><span data-ttu-id="2dbfb-102">範例 XML 檔：多份採購訂單 (LINQ to XML)</span><span class="sxs-lookup"><span data-stu-id="2dbfb-102">Sample XML File: Multiple Purchase Orders (LINQ to XML)</span></span>
 <span data-ttu-id="2dbfb-103">下列 XML 檔案用於 [!INCLUDE[sqltecxlinq](~/includes/sqltecxlinq-md.md)] 文件的各種範例中。</span><span class="sxs-lookup"><span data-stu-id="2dbfb-103">The following XML file is used in various examples in the [!INCLUDE[sqltecxlinq](~/includes/sqltecxlinq-md.md)] documentation.</span></span> <span data-ttu-id="2dbfb-104">這個檔案包含數個採購訂單。</span><span class="sxs-lookup"><span data-stu-id="2dbfb-104">This file contains several purchase orders.</span></span>  

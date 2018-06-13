@@ -7,6 +7,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: HT
 ms.contentlocale: zh-TW
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33324807"
 ---
 # <a name="how-to-write-queries-with-complex-filtering-c"></a><span data-ttu-id="015c5-102">如何：撰寫具有複雜篩選功能的查詢 (C#)</span><span class="sxs-lookup"><span data-stu-id="015c5-102">How to: Write Queries with Complex Filtering (C#)</span></span>
 <span data-ttu-id="015c5-103">有時候您會想要利用複雜篩選撰寫 LINQ to XML 查詢。</span><span class="sxs-lookup"><span data-stu-id="015c5-103">Sometimes you want to write LINQ to XML queries with complex filters.</span></span> <span data-ttu-id="015c5-104">例如，您可能必須尋找其子項目包含特定名稱和值的所有項目。</span><span class="sxs-lookup"><span data-stu-id="015c5-104">For example, you might have to find all elements that have a child element with a particular name and value.</span></span> <span data-ttu-id="015c5-105">本主題提供利用複雜篩選撰寫查詢的範例。</span><span class="sxs-lookup"><span data-stu-id="015c5-105">This topic gives an example of writing a query with complex filtering.</span></span>  

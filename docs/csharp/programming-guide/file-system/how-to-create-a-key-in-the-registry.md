@@ -11,6 +11,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: HT
 ms.contentlocale: zh-TW
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33331463"
 ---
 # <a name="how-to-create-a-key-in-the-registry-visual-c"></a><span data-ttu-id="16b8e-102">如何：在登錄中建立機碼 (Visual C#)</span><span class="sxs-lookup"><span data-stu-id="16b8e-102">How to: Create a Key In the Registry (Visual C#)</span></span>
 <span data-ttu-id="16b8e-103">本範例會將 "Name" 和 "Isabella" 的值組新增至目前使用者之登錄的 "Names" 索引鍵下。</span><span class="sxs-lookup"><span data-stu-id="16b8e-103">This example adds the value pair, "Name" and "Isabella", to the current user's registry, under the key "Names".</span></span>  

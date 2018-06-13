@@ -7,6 +7,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: HT
 ms.contentlocale: zh-TW
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33321060"
 ---
 # <a name="how-to-stream-xml-fragments-from-an-xmlreader-c"></a><span data-ttu-id="26992-102">如何：從 XmlReader 串流 XML 片段 (C#)</span><span class="sxs-lookup"><span data-stu-id="26992-102">How to: Stream XML Fragments from an XmlReader (C#)</span></span>
 <span data-ttu-id="26992-103">當您必須處理大型 XML 檔案時，可能無法將整個 XML 樹狀載入記憶體中。</span><span class="sxs-lookup"><span data-stu-id="26992-103">When you have to process large XML files, it might not be feasible to load the whole XML tree into memory.</span></span> <span data-ttu-id="26992-104">這個主題顯示如何使用 <xref:System.Xml.XmlReader> 串流片段。</span><span class="sxs-lookup"><span data-stu-id="26992-104">This topic shows how to stream fragments using an <xref:System.Xml.XmlReader>.</span></span>  

@@ -7,6 +7,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: HT
 ms.contentlocale: zh-TW
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33322467"
 ---
 # <a name="how-to-query-for-the-total-number-of-bytes-in-a-set-of-folders-linq-c"></a><span data-ttu-id="d540f-102">如何：查詢一組資料夾中的位元組總數 (LINQ) (C#)</span><span class="sxs-lookup"><span data-stu-id="d540f-102">How to: Query for the Total Number of Bytes in a Set of Folders (LINQ) (C#)</span></span>
 <span data-ttu-id="d540f-103">此範例示範如何擷取所指定資料夾及其所有子資料夾中之所有檔案使用的位元組總數。</span><span class="sxs-lookup"><span data-stu-id="d540f-103">This example shows how to retrieve the total number of bytes used by all the files in a specified folder and all its subfolders.</span></span>  

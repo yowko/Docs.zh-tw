@@ -10,6 +10,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: HT
 ms.contentlocale: zh-TW
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33322984"
 ---
 # <a name="structs-c-programming-guide"></a><span data-ttu-id="31e45-102">結構 (C# 程式設計手冊)</span><span class="sxs-lookup"><span data-stu-id="31e45-102">Structs (C# Programming Guide)</span></span>
 <span data-ttu-id="31e45-103">您可以使用 [struct](../../../csharp/language-reference/keywords/struct.md) 關鍵字來定義結構，例如：</span><span class="sxs-lookup"><span data-stu-id="31e45-103">Structs are defined by using the [struct](../../../csharp/language-reference/keywords/struct.md) keyword, for example:</span></span>  

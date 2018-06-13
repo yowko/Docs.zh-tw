@@ -8,6 +8,7 @@ ms.sourcegitcommit: 11f11ca6cefe555972b3a5c99729d1a7523d8f50
 ms.translationtype: MT
 ms.contentlocale: zh-TW
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32757966"
 ---
 # <a name="ltbehaviorgt-of-ltservicebehaviorsgt-of-workflow"></a><span data-ttu-id="7b903-102">工作流程 &lt;serviceBehaviors&gt; 的 &lt;behavior&gt;</span><span class="sxs-lookup"><span data-stu-id="7b903-102">&lt;behavior&gt; of &lt;serviceBehaviors&gt; of workflow</span></span>
 <span data-ttu-id="7b903-103">**行為**項目包含服務行為之設定的集合。</span><span class="sxs-lookup"><span data-stu-id="7b903-103">The **behavior** element contains a collection of settings for the behavior of a service.</span></span> <span data-ttu-id="7b903-104">每個行為都會依建立索引及其**名稱**。</span><span class="sxs-lookup"><span data-stu-id="7b903-104">Each behavior is indexed by its **name**.</span></span> <span data-ttu-id="7b903-105">服務可以連結至每個行為，透過使用此名稱**behaviorConfiguration**屬性[\<端點 >](../../../../../docs/framework/configure-apps/file-schema/wcf/endpoint-element.md)項目。</span><span class="sxs-lookup"><span data-stu-id="7b903-105">Services can link to each behavior through this name using the **behaviorConfiguration**attribute of the [\<endpoint>](../../../../../docs/framework/configure-apps/file-schema/wcf/endpoint-element.md) element.</span></span> <span data-ttu-id="7b903-106">如此可允許端點共用通用行為組態，而不用重新定義設定。</span><span class="sxs-lookup"><span data-stu-id="7b903-106">This allows endpoints to share common behavior configurations without redefining the settings.</span></span>  
