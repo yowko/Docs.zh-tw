@@ -10,6 +10,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: HT
 ms.contentlocale: zh-TW
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33335182"
 ---
 # <a name="generics-and-reflection-c-programming-guide"></a><span data-ttu-id="d48e4-102">泛型和反映 (C# 程式設計手冊)</span><span class="sxs-lookup"><span data-stu-id="d48e4-102">Generics and Reflection (C# Programming Guide)</span></span>
 <span data-ttu-id="d48e4-103">由於 Common Language Runtime (CLR) 可在執行階段存取泛型型別資訊，因此您可以使用反映取得泛型型別的相關資訊，方法和取得非泛型型別的資訊相同。</span><span class="sxs-lookup"><span data-stu-id="d48e4-103">Because the Common Language Runtime (CLR) has access to generic type information at run time, you can use reflection to obtain information about generic types in the same way as for non-generic types.</span></span> <span data-ttu-id="d48e4-104">如需詳細資訊，請參閱[執行階段中的泛型](../../../csharp/programming-guide/generics/generics-in-the-run-time.md)。</span><span class="sxs-lookup"><span data-stu-id="d48e4-104">For more information, see [Generics in the Run Time](../../../csharp/programming-guide/generics/generics-in-the-run-time.md).</span></span>  

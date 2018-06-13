@@ -7,6 +7,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: HT
 ms.contentlocale: zh-TW
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33320326"
 ---
 # <a name="how-to-write-queries-on-xml-in-namespaces-c"></a><span data-ttu-id="0d50f-102">如何：針對命名空間中的 XML 撰寫查詢 (C#)</span><span class="sxs-lookup"><span data-stu-id="0d50f-102">How to: Write Queries on XML in Namespaces (C#)</span></span>
 <span data-ttu-id="0d50f-103">若要撰寫命名空間 (Namespace) 中的 XML 查詢，您必須使用具有正確命名空間的 <xref:System.Xml.Linq.XName> 物件。</span><span class="sxs-lookup"><span data-stu-id="0d50f-103">To write a query on XML that is in a namespace, you must use <xref:System.Xml.Linq.XName> objects that have the correct namespace.</span></span>  

@@ -10,6 +10,7 @@ ms.sourcegitcommit: 11f11ca6cefe555972b3a5c99729d1a7523d8f50
 ms.translationtype: MT
 ms.contentlocale: zh-TW
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32758151"
 ---
 # <a name="modifying-data-with-stored-procedures"></a><span data-ttu-id="9e9ba-102">使用預存程序修改資料</span><span class="sxs-lookup"><span data-stu-id="9e9ba-102">Modifying Data with Stored Procedures</span></span>
 <span data-ttu-id="9e9ba-103">預存程序 (Stored Procedure) 可以接受資料做為輸入參數，也可以將資料以輸出參數、結果集 (Result Set) 或傳回值的形式傳回。</span><span class="sxs-lookup"><span data-stu-id="9e9ba-103">Stored procedures can accept data as input parameters and can return data as output parameters, result sets, or return values.</span></span> <span data-ttu-id="9e9ba-104">下列範例說明 ADO.NET 如何傳送及接收輸入參數、輸出參數和傳回值。</span><span class="sxs-lookup"><span data-stu-id="9e9ba-104">The sample below illustrates how ADO.NET sends and receives input parameters, output parameters, and return values.</span></span> <span data-ttu-id="9e9ba-105">此範例會將新記錄插入資料表 (該資料表的主索引鍵資料行是 SQL Server 資料庫中的識別欄位)。</span><span class="sxs-lookup"><span data-stu-id="9e9ba-105">The example inserts a new record into a table where the primary key column is an identity column in a SQL Server database.</span></span>  

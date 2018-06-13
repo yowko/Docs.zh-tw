@@ -10,6 +10,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: HT
 ms.contentlocale: zh-TW
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33330703"
 ---
 # <a name="how-to-override-the-tostring-method-c-programming-guide"></a><span data-ttu-id="ecb90-102">如何：覆寫 ToString 方法 (C# 程式設計手冊)</span><span class="sxs-lookup"><span data-stu-id="ecb90-102">How to: Override the ToString Method (C# Programming Guide)</span></span>
 <span data-ttu-id="ecb90-103">C# 中的每個類別或結構都會隱含地繼承 <xref:System.Object> 類別。</span><span class="sxs-lookup"><span data-stu-id="ecb90-103">Every class or struct in C# implicitly inherits the <xref:System.Object> class.</span></span> <span data-ttu-id="ecb90-104">因此，C# 中的每個物件都會取得 <xref:System.Object.ToString%2A> 方法，以傳回該物件的字串表示。</span><span class="sxs-lookup"><span data-stu-id="ecb90-104">Therefore, every object in C# gets the <xref:System.Object.ToString%2A> method, which returns a string representation of that object.</span></span> <span data-ttu-id="ecb90-105">例如，所有 `int` 類型的變數都有 `ToString` 方法，並讓它們以字串傳回其內容︰</span><span class="sxs-lookup"><span data-stu-id="ecb90-105">For example, all variables of type `int` have a `ToString` method, which enables them to return their contents as a string:</span></span>  
