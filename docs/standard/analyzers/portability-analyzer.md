@@ -11,6 +11,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: HT
 ms.contentlocale: zh-TW
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33567558"
 ---
 # <a name="the-net-portability-analyzer"></a><span data-ttu-id="733d7-103">.NET Portability Analyzer</span><span class="sxs-lookup"><span data-stu-id="733d7-103">The .NET Portability Analyzer</span></span>
 

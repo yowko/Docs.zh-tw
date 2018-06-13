@@ -7,6 +7,7 @@ ms.sourcegitcommit: 11f11ca6cefe555972b3a5c99729d1a7523d8f50
 ms.translationtype: MT
 ms.contentlocale: zh-TW
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32748343"
 ---
 # <a name="ltcompositeduplexgt"></a><span data-ttu-id="89040-102">&lt;compositeDuplex&gt;</span><span class="sxs-lookup"><span data-stu-id="89040-102">&lt;compositeDuplex&gt;</span></span>
 <span data-ttu-id="89040-103">定義繫結項目，這是當用戶端必須公開 (Expose) 服務的端點才能將訊息傳回用戶端時所使用的項目。</span><span class="sxs-lookup"><span data-stu-id="89040-103">Defines the binding element that is used when the client must expose an endpoint for the service to send messages back to the client.</span></span>  

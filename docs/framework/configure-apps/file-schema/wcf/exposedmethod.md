@@ -7,6 +7,7 @@ ms.sourcegitcommit: 11f11ca6cefe555972b3a5c99729d1a7523d8f50
 ms.translationtype: MT
 ms.contentlocale: zh-TW
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32747378"
 ---
 # <a name="ltexposedmethodgt"></a><span data-ttu-id="0ab93-102">&lt;exposedMethod&gt;</span><span class="sxs-lookup"><span data-stu-id="0ab93-102">&lt;exposedMethod&gt;</span></span>
 <span data-ttu-id="0ab93-103">表示 COM+ 方法，這個方法會在 COM+ 元件上的介面公開為 Web 服務時公開。</span><span class="sxs-lookup"><span data-stu-id="0ab93-103">Represents a COM+ method that is exposed when the interface on a COM+ component is exposed as a Web service.</span></span>  

@@ -7,6 +7,7 @@ ms.sourcegitcommit: 11f11ca6cefe555972b3a5c99729d1a7523d8f50
 ms.translationtype: MT
 ms.contentlocale: zh-TW
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32747745"
 ---
 # <a name="ltbindingelementextensionsgt"></a><span data-ttu-id="67b02-102">&lt;bindingElementExtensions&gt;</span><span class="sxs-lookup"><span data-stu-id="67b02-102">&lt;bindingElementExtensions&gt;</span></span>
 <span data-ttu-id="67b02-103">這個區段會啟用電腦或應用程式組態檔中自訂繫結項目的使用。</span><span class="sxs-lookup"><span data-stu-id="67b02-103">This section enables the use of a custom binding element from a machine or application configuration file.</span></span> <span data-ttu-id="67b02-104">您可以透過使用 `add` 關鍵字，將項目的 `type` 屬性設定為繫結項目延伸，以及將 `name` 屬性設定為自訂繫結項目，來將自訂繫結項目加入至這個集合。</span><span class="sxs-lookup"><span data-stu-id="67b02-104">You can add a custom binding element to this collection by using the `add` keyword, and setting the `type` attribute of the element to a binding element extension, as well as the `name` attribute to the custom binding element.</span></span>  

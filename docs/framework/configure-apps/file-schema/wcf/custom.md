@@ -7,6 +7,7 @@ ms.sourcegitcommit: 11f11ca6cefe555972b3a5c99729d1a7523d8f50
 ms.translationtype: MT
 ms.contentlocale: zh-TW
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32748356"
 ---
 # <a name="ltcustomgt"></a><span data-ttu-id="7cea4-102">&lt;custom&gt;</span><span class="sxs-lookup"><span data-stu-id="7cea4-102">&lt;custom&gt;</span></span>
 <span data-ttu-id="7cea4-103">指定自訂對等解析程式服務的設定。</span><span class="sxs-lookup"><span data-stu-id="7cea4-103">Specifies settings for a custom peer resolver service.</span></span>  

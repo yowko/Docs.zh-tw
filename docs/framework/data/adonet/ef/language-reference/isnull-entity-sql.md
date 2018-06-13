@@ -7,6 +7,7 @@ ms.sourcegitcommit: 11f11ca6cefe555972b3a5c99729d1a7523d8f50
 ms.translationtype: MT
 ms.contentlocale: zh-TW
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32763237"
 ---
 # <a name="isnull-entity-sql"></a><span data-ttu-id="bd554-102">ISNULL (Entity SQL)</span><span class="sxs-lookup"><span data-stu-id="bd554-102">ISNULL (Entity SQL)</span></span>
 <span data-ttu-id="bd554-103">判斷查詢運算式是否為 null。</span><span class="sxs-lookup"><span data-stu-id="bd554-103">Determines if a query expression is null.</span></span>  

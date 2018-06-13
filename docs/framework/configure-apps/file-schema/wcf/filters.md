@@ -7,6 +7,7 @@ ms.sourcegitcommit: 11f11ca6cefe555972b3a5c99729d1a7523d8f50
 ms.translationtype: MT
 ms.contentlocale: zh-TW
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32749185"
 ---
 # <a name="ltfiltersgt"></a><span data-ttu-id="3ccd1-102">&lt;篩選器&gt;</span><span class="sxs-lookup"><span data-stu-id="3ccd1-102">&lt;filters&gt;</span></span>
 

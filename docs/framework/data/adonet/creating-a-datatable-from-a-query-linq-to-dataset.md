@@ -10,6 +10,7 @@ ms.sourcegitcommit: 11f11ca6cefe555972b3a5c99729d1a7523d8f50
 ms.translationtype: MT
 ms.contentlocale: zh-TW
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32758824"
 ---
 # <a name="creating-a-datatable-from-a-query-linq-to-dataset"></a><span data-ttu-id="ab96e-102">從查詢建立 DataTable (LINQ to DataSet)</span><span class="sxs-lookup"><span data-stu-id="ab96e-102">Creating a DataTable From a Query (LINQ to DataSet)</span></span>
 <span data-ttu-id="ab96e-103">資料繫結 (Data Binding) 是 <xref:System.Data.DataTable> 物件的常見用法。</span><span class="sxs-lookup"><span data-stu-id="ab96e-103">Data binding is a common use of <xref:System.Data.DataTable> object.</span></span> <span data-ttu-id="ab96e-104"><xref:System.Data.DataTableExtensions.CopyToDataTable%2A> 方法會採用查詢的結果並將資料複製到 <xref:System.Data.DataTable> 中，然後此物件便可用於資料繫結。</span><span class="sxs-lookup"><span data-stu-id="ab96e-104">The <xref:System.Data.DataTableExtensions.CopyToDataTable%2A> method takes the results of a query and copies the data into a <xref:System.Data.DataTable>, which can then be used for data binding.</span></span> <span data-ttu-id="ab96e-105">執行了資料作業之後，新的 <xref:System.Data.DataTable> 就會合併回來源 <xref:System.Data.DataTable> 中。</span><span class="sxs-lookup"><span data-stu-id="ab96e-105">When the data operations have been performed, the new <xref:System.Data.DataTable> is merged back into the source <xref:System.Data.DataTable>.</span></span>  

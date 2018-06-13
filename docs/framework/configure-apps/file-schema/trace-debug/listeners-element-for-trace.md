@@ -15,6 +15,7 @@ ms.sourcegitcommit: 11f11ca6cefe555972b3a5c99729d1a7523d8f50
 ms.translationtype: MT
 ms.contentlocale: zh-TW
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32748135"
 ---
 # <a name="ltlistenersgt-element-for-lttracegt"></a><span data-ttu-id="17605-102">&lt;接聽程式&gt;元素&lt;追蹤&gt;</span><span class="sxs-lookup"><span data-stu-id="17605-102">&lt;listeners&gt; Element for &lt;trace&gt;</span></span>
 <span data-ttu-id="17605-103">指定的接聽程式會收集，存放區，並將訊息路由。</span><span class="sxs-lookup"><span data-stu-id="17605-103">Specifies a listener that collects, stores, and routes messages.</span></span> <span data-ttu-id="17605-104">接聽程式將追蹤輸出導向至適當的目標。</span><span class="sxs-lookup"><span data-stu-id="17605-104">Listeners direct the tracing output to an appropriate target.</span></span>  

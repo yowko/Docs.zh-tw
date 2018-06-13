@@ -14,6 +14,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: HT
 ms.contentlocale: zh-TW
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33333267"
 ---
 # <a name="c-programming-guide"></a><span data-ttu-id="c86c3-102">C# 程式設計手冊</span><span class="sxs-lookup"><span data-stu-id="c86c3-102">C# programming guide</span></span>
 <span data-ttu-id="c86c3-103">本節提供可透過 .NET Framework 存取 C# 的重要 C# 語言特性與功能的詳細資訊。</span><span class="sxs-lookup"><span data-stu-id="c86c3-103">This section provides detailed information on key C# language features and features accessible to C# through the .NET Framework.</span></span>  

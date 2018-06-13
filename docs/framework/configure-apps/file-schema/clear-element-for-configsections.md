@@ -14,6 +14,7 @@ ms.sourcegitcommit: 11f11ca6cefe555972b3a5c99729d1a7523d8f50
 ms.translationtype: MT
 ms.contentlocale: zh-TW
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32752243"
 ---
 # <a name="clear-element-for-configsections"></a><span data-ttu-id="c3c5e-102">\<清除 > 項目\<c ></span><span class="sxs-lookup"><span data-stu-id="c3c5e-102">\<clear> element for \<configSections></span></span>
 

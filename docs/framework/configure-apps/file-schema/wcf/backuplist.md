@@ -7,6 +7,7 @@ ms.sourcegitcommit: 11f11ca6cefe555972b3a5c99729d1a7523d8f50
 ms.translationtype: MT
 ms.contentlocale: zh-TW
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32747290"
 ---
 # <a name="ltbackuplistgt"></a><span data-ttu-id="7ae6c-102">&lt;a d d&gt;</span><span class="sxs-lookup"><span data-stu-id="7ae6c-102">&lt;backupList&gt;</span></span>
 <span data-ttu-id="7ae6c-103">表示定義備份清單會列舉您希望路由服務在使用中無法連上主要端點的端點的一組的組態區段。</span><span class="sxs-lookup"><span data-stu-id="7ae6c-103">Represents a configuration section for defining a backup list that enumerates a set of endpoints that you would like the Routing Service to use in case the primary endpoint can't be reached.</span></span> <span data-ttu-id="7ae6c-104">如果清單中的第一個端點關閉，路由服務將自動容錯移轉至清單中的下一個端點。</span><span class="sxs-lookup"><span data-stu-id="7ae6c-104">If the first endpoint in the list is down, the Routing Service will automatically fail-over to the next one in the list.</span></span>  <span data-ttu-id="7ae6c-105">如此可提供您快速提升應用程式可靠性的方式，而不需教導用戶端應用程式如何處理複雜的模式以及部署所有服務的位置。</span><span class="sxs-lookup"><span data-stu-id="7ae6c-105">This gives you a quick way to add reliability to your application without having to teach your client application how to handle complex patterns or where all of your services are deployed.</span></span>  

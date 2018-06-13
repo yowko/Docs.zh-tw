@@ -7,6 +7,7 @@ ms.sourcegitcommit: 11f11ca6cefe555972b3a5c99729d1a7523d8f50
 ms.translationtype: MT
 ms.contentlocale: zh-TW
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32757108"
 ---
 # <a name="connecting-to-a-data-source-in-adonet"></a><span data-ttu-id="19a65-102">在 ADO.NET 中連接至資料來源</span><span class="sxs-lookup"><span data-stu-id="19a65-102">Connecting to a Data Source in ADO.NET</span></span>
 <span data-ttu-id="19a65-103">在 ADO.NET 中使用**連接**物件連接至特定資料來源，藉由提供連接字串中的必要的驗證資訊。</span><span class="sxs-lookup"><span data-stu-id="19a65-103">In ADO.NET you use a **Connection** object to connect to a specific data source by supplying necessary authentication information in a connection string.</span></span> <span data-ttu-id="19a65-104">**連接**的資料來源類型取決於您使用的物件。</span><span class="sxs-lookup"><span data-stu-id="19a65-104">The **Connection** object you use depends on the type of data source.</span></span>  

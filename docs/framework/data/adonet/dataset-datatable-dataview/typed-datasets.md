@@ -7,6 +7,7 @@ ms.sourcegitcommit: 11f11ca6cefe555972b3a5c99729d1a7523d8f50
 ms.translationtype: MT
 ms.contentlocale: zh-TW
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32762451"
 ---
 # <a name="typed-datasets"></a><span data-ttu-id="f2f0b-102">具類型資料集</span><span class="sxs-lookup"><span data-stu-id="f2f0b-102">Typed DataSets</span></span>
 <span data-ttu-id="f2f0b-103"><xref:System.Data.DataSet> 可透過弱型別變數，使用晚期繫結存取值，也可透過強型別變數存取資料。</span><span class="sxs-lookup"><span data-stu-id="f2f0b-103">Along with late bound access to values through weakly typed variables, the <xref:System.Data.DataSet> provides access to data through a strongly typed metaphor.</span></span> <span data-ttu-id="f2f0b-104">資料表和資料行屬於**資料集**可以使用好記的名稱來存取和強型別變數。</span><span class="sxs-lookup"><span data-stu-id="f2f0b-104">Tables and columns that are part of the **DataSet** can be accessed using user-friendly names and strongly typed variables.</span></span>  

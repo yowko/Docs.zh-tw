@@ -7,6 +7,7 @@ ms.sourcegitcommit: 11f11ca6cefe555972b3a5c99729d1a7523d8f50
 ms.translationtype: MT
 ms.contentlocale: zh-TW
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32765070"
 ---
 # <a name="parameters-entity-sql"></a><span data-ttu-id="0b174-102">參數 (Entity SQL)</span><span class="sxs-lookup"><span data-stu-id="0b174-102">Parameters (Entity SQL)</span></span>
 <span data-ttu-id="0b174-103">參數是定義在 [!INCLUDE[esql](../../../../../../includes/esql-md.md)] 外部的變數，通常是透過主應用程式語言使用的繫結 API 來定義。</span><span class="sxs-lookup"><span data-stu-id="0b174-103">Parameters are variables that are defined outside [!INCLUDE[esql](../../../../../../includes/esql-md.md)], usually through a binding API that is used by a host language.</span></span> <span data-ttu-id="0b174-104">每一個參數都有一個名稱和型別，</span><span class="sxs-lookup"><span data-stu-id="0b174-104">Each parameter has a name and a type.</span></span> <span data-ttu-id="0b174-105">使用查詢運算式中所定義的參數名稱在 (@) 符號做為前置詞。</span><span class="sxs-lookup"><span data-stu-id="0b174-105">Parameter names are defined in query expressions with the at (@) symbol as a prefix.</span></span> <span data-ttu-id="0b174-106">這樣可讓它們避免與屬性名稱或查詢內定義的其他名稱混淆。</span><span class="sxs-lookup"><span data-stu-id="0b174-106">This disambiguates them from the names of properties or other names that are defined in the query.</span></span>  

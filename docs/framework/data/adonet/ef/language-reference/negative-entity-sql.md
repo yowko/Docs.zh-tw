@@ -7,6 +7,7 @@ ms.sourcegitcommit: 11f11ca6cefe555972b3a5c99729d1a7523d8f50
 ms.translationtype: MT
 ms.contentlocale: zh-TW
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32765148"
 ---
 # <a name="--negative-entity-sql"></a><span data-ttu-id="47eac-102">- (負號) (Entity SQL)</span><span class="sxs-lookup"><span data-stu-id="47eac-102">- (Negative) (Entity SQL)</span></span>
 <span data-ttu-id="47eac-103">傳回數值運算式的負值。</span><span class="sxs-lookup"><span data-stu-id="47eac-103">Returns the negative of the value of a numeric expression.</span></span>  

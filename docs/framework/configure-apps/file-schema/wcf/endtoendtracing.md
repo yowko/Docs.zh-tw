@@ -7,6 +7,7 @@ ms.sourcegitcommit: 11f11ca6cefe555972b3a5c99729d1a7523d8f50
 ms.translationtype: MT
 ms.contentlocale: zh-TW
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32753465"
 ---
 # <a name="ltendtoendtracinggt"></a><span data-ttu-id="a6cf7-102">&lt;endToEndTracing&gt;</span><span class="sxs-lookup"><span data-stu-id="a6cf7-102">&lt;endToEndTracing&gt;</span></span>
 <span data-ttu-id="a6cf7-103">組態檔項目，此項目可讓您啟用與停用執行服務應用程式期間不同層面的端對端追蹤。</span><span class="sxs-lookup"><span data-stu-id="a6cf7-103">A configuration element that allows you to enable and disable different aspects of end-to-end tracing during the running of a service application.</span></span>  

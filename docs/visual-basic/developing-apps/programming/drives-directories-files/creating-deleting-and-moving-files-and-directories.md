@@ -27,6 +27,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: HT
 ms.contentlocale: zh-TW
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33590942"
 ---
 # <a name="creating-deleting-and-moving-files-and-directories-in-visual-basic"></a><span data-ttu-id="43dde-102">在 Visual Basic 中建立、刪除和移動檔案和目錄</span><span class="sxs-lookup"><span data-stu-id="43dde-102">Creating, Deleting, and Moving Files and Directories in Visual Basic</span></span>
 <span data-ttu-id="43dde-103">本節會列出在 Visual Basic 中與建立、刪除、移動和重新命名檔案及目錄建立關聯的工作。</span><span class="sxs-lookup"><span data-stu-id="43dde-103">This section lists tasks associated with creating, deleting, moving, and renaming files and directories in Visual Basic.</span></span>  

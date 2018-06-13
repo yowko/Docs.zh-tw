@@ -7,6 +7,7 @@ ms.sourcegitcommit: 11f11ca6cefe555972b3a5c99729d1a7523d8f50
 ms.translationtype: MT
 ms.contentlocale: zh-TW
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32753478"
 ---
 # <a name="lttextmessageencodinggt"></a><span data-ttu-id="fdfc1-102">&lt;textMessageEncoding&gt;</span><span class="sxs-lookup"><span data-stu-id="fdfc1-102">&lt;textMessageEncoding&gt;</span></span>
 <span data-ttu-id="fdfc1-103">指定字元編碼和訊息版本處理，用於文字 XML 訊息。</span><span class="sxs-lookup"><span data-stu-id="fdfc1-103">Specifies the character encoding and message versioning used for text-based XML messages.</span></span>  

@@ -16,6 +16,7 @@ ms.sourcegitcommit: 11f11ca6cefe555972b3a5c99729d1a7523d8f50
 ms.translationtype: MT
 ms.contentlocale: zh-TW
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32750332"
 ---
 # <a name="ltsystemdiagnosticsgt-element"></a><span data-ttu-id="8d297-102">&lt;system.diagnostics&gt;項目</span><span class="sxs-lookup"><span data-stu-id="8d297-102">&lt;system.diagnostics&gt; Element</span></span>
 <span data-ttu-id="8d297-103">指定用於收集、儲存及路由傳送訊息的追蹤接聽項，以及設定追蹤參數的層級。</span><span class="sxs-lookup"><span data-stu-id="8d297-103">Specifies trace listeners that collect, store, and route messages and the level where a trace switch is set.</span></span>  

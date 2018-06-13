@@ -7,6 +7,7 @@ ms.sourcegitcommit: 11f11ca6cefe555972b3a5c99729d1a7523d8f50
 ms.translationtype: MT
 ms.contentlocale: zh-TW
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32748009"
 ---
 # <a name="ltclaimtyperequirementsgt-element"></a><span data-ttu-id="fcf30-102">&lt;claimTypeRequirements&gt; 項目</span><span class="sxs-lookup"><span data-stu-id="fcf30-102">&lt;claimTypeRequirements&gt; element</span></span>
 <span data-ttu-id="fcf30-103">指定必要宣告型別的集合。</span><span class="sxs-lookup"><span data-stu-id="fcf30-103">Specifies a collection of required claim types.</span></span>  

@@ -7,6 +7,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: HT
 ms.contentlocale: zh-TW
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33329851"
 ---
 # <a name="functional-construction-linq-to-xml-c"></a><span data-ttu-id="e7513-102">函數式建構 (LINQ to XML) (C#)</span><span class="sxs-lookup"><span data-stu-id="e7513-102">Functional Construction (LINQ to XML) (C#)</span></span>
 [!INCLUDE[sqltecxlinq](~/includes/sqltecxlinq-md.md)]<span data-ttu-id="e7513-103"> 提供一種強大的方式來建立 XML 元素，稱為「函數式建構」。</span><span class="sxs-lookup"><span data-stu-id="e7513-103"> provides a powerful way to create XML elements called *functional construction*.</span></span> <span data-ttu-id="e7513-104">功能結構是在單一陳述式中建立 XML 樹狀結構的能力。</span><span class="sxs-lookup"><span data-stu-id="e7513-104">Functional construction is the ability to create an XML tree in a single statement.</span></span>  

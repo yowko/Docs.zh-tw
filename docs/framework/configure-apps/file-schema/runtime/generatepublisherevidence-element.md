@@ -12,6 +12,7 @@ ms.sourcegitcommit: 11f11ca6cefe555972b3a5c99729d1a7523d8f50
 ms.translationtype: MT
 ms.contentlocale: zh-TW
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32746016"
 ---
 # <a name="ltgeneratepublisherevidencegt-element"></a><span data-ttu-id="0b74a-102">&lt;generatePublisherEvidence&gt;項目</span><span class="sxs-lookup"><span data-stu-id="0b74a-102">&lt;generatePublisherEvidence&gt; Element</span></span>
 <span data-ttu-id="0b74a-103">指定執行階段是否會建立<xref:System.Security.Policy.Publisher>用於程式碼存取安全性 (CAS) 的辨識項。</span><span class="sxs-lookup"><span data-stu-id="0b74a-103">Specifies whether the runtime creates <xref:System.Security.Policy.Publisher> evidence for code access security (CAS).</span></span>  

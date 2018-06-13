@@ -7,6 +7,7 @@ ms.sourcegitcommit: 11f11ca6cefe555972b3a5c99729d1a7523d8f50
 ms.translationtype: MT
 ms.contentlocale: zh-TW
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32750865"
 ---
 # <a name="ltservicecertificategt-of-ltservicecredentialsgt"></a><span data-ttu-id="c153a-102">&lt;serviceCredentials&gt; 的 &lt;serviceCertificate&gt; </span><span class="sxs-lookup"><span data-stu-id="c153a-102">&lt;serviceCertificate&gt; of &lt;serviceCredentials&gt;</span></span>
 <span data-ttu-id="c153a-103">指定 X.509 憑證，而此憑證將用以驗證使用訊息安全性模式的用戶端服務。</span><span class="sxs-lookup"><span data-stu-id="c153a-103">Specify an X.509 certificate that will be used to authenticate the service to clients using Message security mode.</span></span>  

@@ -9,6 +9,7 @@ ms.sourcegitcommit: 11f11ca6cefe555972b3a5c99729d1a7523d8f50
 ms.translationtype: MT
 ms.contentlocale: zh-TW
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32762256"
 ---
 # <a name="ltwshttpbindinggt"></a><span data-ttu-id="c9932-102">&lt;wsHttpBinding&gt;</span><span class="sxs-lookup"><span data-stu-id="c9932-102">&lt;wsHttpBinding&gt;</span></span>
 <span data-ttu-id="c9932-103">為非雙工服務合約定義安全、可靠且互通的繫結。</span><span class="sxs-lookup"><span data-stu-id="c9932-103">Defines a secure, reliable, interoperable binding suitable for non-duplex service contracts.</span></span> <span data-ttu-id="c9932-104">此繫結會實作下列規格：WS-Reliable 訊息用於可靠性以及 WS-Security 用於訊息安全性和驗證。</span><span class="sxs-lookup"><span data-stu-id="c9932-104">The binding implements the following specifications: WS-Reliable Messaging for reliability, and WS-Security for message security and authentication.</span></span> <span data-ttu-id="c9932-105">傳輸是 HTTP，而訊息編碼是 Text/XML 編碼。</span><span class="sxs-lookup"><span data-stu-id="c9932-105">The transport is HTTP, and message encoding is Text/XML encoding.</span></span>  

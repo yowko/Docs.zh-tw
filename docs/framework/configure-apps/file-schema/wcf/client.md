@@ -10,6 +10,7 @@ ms.sourcegitcommit: 11f11ca6cefe555972b3a5c99729d1a7523d8f50
 ms.translationtype: MT
 ms.contentlocale: zh-TW
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32752633"
 ---
 # <a name="ltclientgt"></a><span data-ttu-id="2dc79-102">&lt;用戶端&gt;</span><span class="sxs-lookup"><span data-stu-id="2dc79-102">&lt;client&gt;</span></span>
 <span data-ttu-id="2dc79-103">`client` 項目會定義用戶端可連線的端點清單。</span><span class="sxs-lookup"><span data-stu-id="2dc79-103">The `client` element defines a list of endpoints that a client can connect to.</span></span>  

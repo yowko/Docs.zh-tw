@@ -7,6 +7,7 @@ ms.sourcegitcommit: 11f11ca6cefe555972b3a5c99729d1a7523d8f50
 ms.translationtype: MT
 ms.contentlocale: zh-TW
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32758096"
 ---
 # <a name="dataadapters-and-datareaders"></a><span data-ttu-id="df5ed-102">DataAdapter 和 DataReader</span><span class="sxs-lookup"><span data-stu-id="df5ed-102">DataAdapters and DataReaders</span></span>
 <span data-ttu-id="df5ed-103">您可以使用 ADO.NET **DataReader**從資料庫擷取資料的唯讀、 順向資料流。</span><span class="sxs-lookup"><span data-stu-id="df5ed-103">You can use the ADO.NET **DataReader** to retrieve a read-only, forward-only stream of data from a database.</span></span> <span data-ttu-id="df5ed-104">時會傳回結果的查詢會執行，而且會儲存在用戶端上的網路緩衝區中，直到您提出要求時使用**讀取**方法**DataReader**。</span><span class="sxs-lookup"><span data-stu-id="df5ed-104">Results are returned as the query executes, and are stored in the network buffer on the client until you request them using the **Read** method of the **DataReader**.</span></span> <span data-ttu-id="df5ed-105">使用**DataReader**可以提高應用程式效能，並使用，以擷取資料及 （依預設） 只有一個資料列一次將儲存在記憶體中，可降低系統額外負荷。</span><span class="sxs-lookup"><span data-stu-id="df5ed-105">Using the **DataReader** can increase application performance both by retrieving data as soon as it is available, and (by default) storing only one row at a time in memory, reducing system overhead.</span></span>  

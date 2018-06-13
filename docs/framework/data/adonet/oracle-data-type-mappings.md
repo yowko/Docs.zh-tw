@@ -7,6 +7,7 @@ ms.sourcegitcommit: 11f11ca6cefe555972b3a5c99729d1a7523d8f50
 ms.translationtype: MT
 ms.contentlocale: zh-TW
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32759617"
 ---
 # <a name="oracle-data-type-mappings"></a><span data-ttu-id="7be29-102">Oracle 資料類型對應</span><span class="sxs-lookup"><span data-stu-id="7be29-102">Oracle Data Type Mappings</span></span>
 <span data-ttu-id="7be29-103">下表列出 Oracle 資料型別及其與 <xref:System.Data.OracleClient.OracleDataReader> 的對應。</span><span class="sxs-lookup"><span data-stu-id="7be29-103">The following table lists Oracle data types and their mappings to the <xref:System.Data.OracleClient.OracleDataReader>.</span></span>  

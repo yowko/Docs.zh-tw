@@ -16,6 +16,7 @@ ms.sourcegitcommit: 11f11ca6cefe555972b3a5c99729d1a7523d8f50
 ms.translationtype: MT
 ms.contentlocale: zh-TW
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32754258"
 ---
 # <a name="ltqualifyassemblygt-element"></a><span data-ttu-id="1ec2a-102">&lt;qualifyAssembly&gt;項目</span><span class="sxs-lookup"><span data-stu-id="1ec2a-102">&lt;qualifyAssembly&gt; Element</span></span>
 <span data-ttu-id="1ec2a-103">指定應該在使用部分名稱時以動態方式載入的組件的完整名稱。</span><span class="sxs-lookup"><span data-stu-id="1ec2a-103">Specifies the full name of the assembly that should be dynamically loaded when a partial name is used.</span></span>  

@@ -10,6 +10,7 @@ ms.sourcegitcommit: 11f11ca6cefe555972b3a5c99729d1a7523d8f50
 ms.translationtype: MT
 ms.contentlocale: zh-TW
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32762776"
 ---
 # <a name="dataview-performance"></a><span data-ttu-id="fed5d-102">DataView 效能</span><span class="sxs-lookup"><span data-stu-id="fed5d-102">DataView Performance</span></span>
 <span data-ttu-id="fed5d-103">本主題將討論使用 <xref:System.Data.DataView.Find%2A> 類別 (Class) 之 <xref:System.Data.DataView.FindRows%2A> 和 <xref:System.Data.DataView> 方法以及在 Web 應用程式中快取 <xref:System.Data.DataView> 的效能提升。</span><span class="sxs-lookup"><span data-stu-id="fed5d-103">This topic discusses the performance benefits of using the <xref:System.Data.DataView.Find%2A> and <xref:System.Data.DataView.FindRows%2A> methods of the <xref:System.Data.DataView> class, and of caching a <xref:System.Data.DataView> in a Web application.</span></span>  

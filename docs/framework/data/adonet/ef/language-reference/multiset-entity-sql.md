@@ -7,6 +7,7 @@ ms.sourcegitcommit: 11f11ca6cefe555972b3a5c99729d1a7523d8f50
 ms.translationtype: MT
 ms.contentlocale: zh-TW
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32762919"
 ---
 # <a name="multiset-entity-sql"></a><span data-ttu-id="3cc77-102">MULTISET (Entity SQL)</span><span class="sxs-lookup"><span data-stu-id="3cc77-102">MULTISET (Entity SQL)</span></span>
 <span data-ttu-id="3cc77-103">從值清單建立多重集的執行個體。</span><span class="sxs-lookup"><span data-stu-id="3cc77-103">Creates an instance of a multiset from a list of values.</span></span> <span data-ttu-id="3cc77-104">MULTISET 建構函式 (Constructor) 中的所有值都必須是相容型別 `T`。</span><span class="sxs-lookup"><span data-stu-id="3cc77-104">All the values in the MULTISET constructor must be of a compatible type `T`.</span></span> <span data-ttu-id="3cc77-105">不允許空的多重集建構函式。</span><span class="sxs-lookup"><span data-stu-id="3cc77-105">Empty multiset constructors are not allowed.</span></span>  

@@ -10,6 +10,7 @@ ms.sourcegitcommit: 11f11ca6cefe555972b3a5c99729d1a7523d8f50
 ms.translationtype: MT
 ms.contentlocale: zh-TW
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32757901"
 ---
 # <a name="managing-dataviews"></a><span data-ttu-id="5d5f9-102">管理 DataView</span><span class="sxs-lookup"><span data-stu-id="5d5f9-102">Managing DataViews</span></span>
 <span data-ttu-id="5d5f9-103">您可以使用 <xref:System.Data.DataViewManager> 管理 <xref:System.Data.DataView> 內所有資料表的檢視設定。</span><span class="sxs-lookup"><span data-stu-id="5d5f9-103">You can use a <xref:System.Data.DataViewManager> to manage view settings for all the tables in a <xref:System.Data.DataView>.</span></span> <span data-ttu-id="5d5f9-104">如果您有想要繫結至多個資料表的控制項，例如方格的巡覽關聯性**DataViewManager**時非常有用。</span><span class="sxs-lookup"><span data-stu-id="5d5f9-104">If you have a control that you want to bind to multiple tables, such as a grid that navigates relationships, a **DataViewManager** is ideal.</span></span>  

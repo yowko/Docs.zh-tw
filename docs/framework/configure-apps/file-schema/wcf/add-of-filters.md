@@ -7,6 +7,7 @@ ms.sourcegitcommit: 11f11ca6cefe555972b3a5c99729d1a7523d8f50
 ms.translationtype: MT
 ms.contentlocale: zh-TW
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32754606"
 ---
 # <a name="ltaddgt-of-ltfiltersgt"></a><span data-ttu-id="4a907-102">&lt;filters&gt; 的 &lt;add&gt;</span><span class="sxs-lookup"><span data-stu-id="4a907-102">&lt;add&gt; of &lt;filters&gt;</span></span>
 <span data-ttu-id="4a907-103">XPath 篩選條件，指定要記錄的訊息類型。</span><span class="sxs-lookup"><span data-stu-id="4a907-103">A XPath filter that specifies the kind of message to be logged.</span></span>  

@@ -10,6 +10,7 @@ ms.sourcegitcommit: 11f11ca6cefe555972b3a5c99729d1a7523d8f50
 ms.translationtype: MT
 ms.contentlocale: zh-TW
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32759136"
 ---
 # <a name="adonet-code-examples"></a><span data-ttu-id="6f32e-102">ADO.NET 程式碼範例</span><span class="sxs-lookup"><span data-stu-id="6f32e-102">ADO.NET code examples</span></span>
 <span data-ttu-id="6f32e-103">本主題的程式碼清單示範如何使用下列 ADO.NET 技術來擷取資料庫中的資料：</span><span class="sxs-lookup"><span data-stu-id="6f32e-103">The code listings in this topic demonstrate how to retrieve data from a database by using the following ADO.NET technologies:</span></span>

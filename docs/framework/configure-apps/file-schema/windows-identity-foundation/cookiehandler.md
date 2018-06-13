@@ -9,6 +9,7 @@ ms.sourcegitcommit: 11f11ca6cefe555972b3a5c99729d1a7523d8f50
 ms.translationtype: MT
 ms.contentlocale: zh-TW
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32758135"
 ---
 # <a name="ltcookiehandlergt"></a><span data-ttu-id="c2d5b-102">&lt;Requiressl&gt;</span><span class="sxs-lookup"><span data-stu-id="c2d5b-102">&lt;cookieHandler&gt;</span></span>
 <span data-ttu-id="c2d5b-103">設定<xref:System.IdentityModel.Services.CookieHandler>， <xref:System.IdentityModel.Services.SessionAuthenticationModule> (SAM) 用來讀取和寫入 cookie。</span><span class="sxs-lookup"><span data-stu-id="c2d5b-103">Configures the <xref:System.IdentityModel.Services.CookieHandler> that the <xref:System.IdentityModel.Services.SessionAuthenticationModule> (SAM) uses to read and write cookies.</span></span>  

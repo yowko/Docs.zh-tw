@@ -13,6 +13,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: HT
 ms.contentlocale: zh-TW
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33567584"
 ---
 # <a name="manipulating-strings-in-net"></a><span data-ttu-id="8a521-102">在 .NET 中操作字串</span><span class="sxs-lookup"><span data-stu-id="8a521-102">Manipulating Strings in .NET</span></span>
 <span data-ttu-id="8a521-103">.NET 提供大量的常式集合，讓您能夠有效率建立、比較和修改字串，並迅速剖析大量文字和資料以搜尋、移除和取代文字模式。</span><span class="sxs-lookup"><span data-stu-id="8a521-103">.NET provides an extensive set of routines that enable you to efficiently create, compare, and modify strings as well as rapidly parse large amounts of text and data to search for, remove, and replace text patterns.</span></span>  

@@ -7,6 +7,7 @@ ms.sourcegitcommit: 11f11ca6cefe555972b3a5c99729d1a7523d8f50
 ms.translationtype: MT
 ms.contentlocale: zh-TW
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32747121"
 ---
 # <a name="ltcleargt-of-ltclaimtyperequirementsgt-element"></a><span data-ttu-id="aa77e-102">&lt;claimTypeRequirements&gt; 項目的 &lt;clear&gt;</span><span class="sxs-lookup"><span data-stu-id="aa77e-102">&lt;clear&gt; of &lt;claimTypeRequirements&gt; element</span></span>
 <span data-ttu-id="aa77e-103">指定移除聯合認證中的所有宣告型別。</span><span class="sxs-lookup"><span data-stu-id="aa77e-103">Specifies that all the claim types to be removed in the federated credential.</span></span> <span data-ttu-id="aa77e-104">這個動作可確保集合啟動時是空的。</span><span class="sxs-lookup"><span data-stu-id="aa77e-104">This ensures that the collection starts empty.</span></span>  

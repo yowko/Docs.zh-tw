@@ -7,6 +7,7 @@ ms.sourcegitcommit: 11f11ca6cefe555972b3a5c99729d1a7523d8f50
 ms.translationtype: MT
 ms.contentlocale: zh-TW
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32761764"
 ---
 # <a name="between-entity-sql"></a><span data-ttu-id="5a3ed-102">BETWEEN (Entity SQL)</span><span class="sxs-lookup"><span data-stu-id="5a3ed-102">BETWEEN (Entity SQL)</span></span>
 <span data-ttu-id="5a3ed-103">判斷運算式是否會產生所指定範圍內的值。</span><span class="sxs-lookup"><span data-stu-id="5a3ed-103">Determines whether an expression results in a value in a specified range.</span></span> <span data-ttu-id="5a3ed-104">[!INCLUDE[esql](../../../../../../includes/esql-md.md)] BETWEEN 運算式的 於 TRANSACT-SQL BETWEEN 運算式相同的功能。</span><span class="sxs-lookup"><span data-stu-id="5a3ed-104">The [!INCLUDE[esql](../../../../../../includes/esql-md.md)] BETWEEN expression has the same functionality as the Transact-SQL BETWEEN expression.</span></span>  

@@ -7,6 +7,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: HT
 ms.contentlocale: zh-TW
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33334570"
 ---
 # <a name="style-part-of-a-wordprocessingml-document"></a><span data-ttu-id="c9982-102">WordprocessingML 文件的樣式部分</span><span class="sxs-lookup"><span data-stu-id="c9982-102">Style Part of a WordprocessingML Document</span></span>
 <span data-ttu-id="c9982-103">這個主題顯示 Office Open XML WordprocessingML 文件樣式部分的範例。</span><span class="sxs-lookup"><span data-stu-id="c9982-103">This topic shows an example of the style part of the Office Open XML WordprocessingML document.</span></span>  

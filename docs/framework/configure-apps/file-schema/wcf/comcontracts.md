@@ -7,6 +7,7 @@ ms.sourcegitcommit: 11f11ca6cefe555972b3a5c99729d1a7523d8f50
 ms.translationtype: MT
 ms.contentlocale: zh-TW
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32746406"
 ---
 # <a name="ltcomcontractsgt"></a><span data-ttu-id="a333d-102">&lt;comContracts&gt;</span><span class="sxs-lookup"><span data-stu-id="a333d-102">&lt;comContracts&gt;</span></span>
 <span data-ttu-id="a333d-103">`comContracts` 組態區段包含的項目可讓您指定 COM+ 整合服務合約的各種屬性。</span><span class="sxs-lookup"><span data-stu-id="a333d-103">The `comContracts` configuration section contains elements that allow you to specify various properties of a COM+ integration service contract.</span></span>  

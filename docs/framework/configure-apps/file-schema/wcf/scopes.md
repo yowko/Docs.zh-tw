@@ -7,6 +7,7 @@ ms.sourcegitcommit: 11f11ca6cefe555972b3a5c99729d1a7523d8f50
 ms.translationtype: MT
 ms.contentlocale: zh-TW
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32749617"
 ---
 # <a name="ltscopesgt"></a><span data-ttu-id="24c1f-102">&lt;範圍&gt;</span><span class="sxs-lookup"><span data-stu-id="24c1f-102">&lt;scopes&gt;</span></span>
 <span data-ttu-id="24c1f-103">包含組態項目的集合，這些項目會指定可用於在查詢期間篩選服務端點的自訂範圍 URI。</span><span class="sxs-lookup"><span data-stu-id="24c1f-103">Contains a collection of configuration elements that specify custom scope Uris that can be used to filter service endpoints during query.</span></span>  

@@ -7,6 +7,7 @@ ms.sourcegitcommit: 11f11ca6cefe555972b3a5c99729d1a7523d8f50
 ms.translationtype: MT
 ms.contentlocale: zh-TW
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32750241"
 ---
 # <a name="ltservicecertificategt-of-ltclientcredentialsgt-element"></a><span data-ttu-id="3de38-102">&lt;clientCredentials&gt; 的 &lt;serviceCertificate&gt; 項目</span><span class="sxs-lookup"><span data-stu-id="3de38-102">&lt;serviceCertificate&gt; of &lt;clientCredentials&gt; Element</span></span>
 <span data-ttu-id="3de38-103">指定對用戶端驗證服務時所使用的憑證。</span><span class="sxs-lookup"><span data-stu-id="3de38-103">Specifies a certificate to use when authenticating a service to the client.</span></span>  

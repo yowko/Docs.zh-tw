@@ -10,6 +10,7 @@ ms.sourcegitcommit: 11f11ca6cefe555972b3a5c99729d1a7523d8f50
 ms.translationtype: MT
 ms.contentlocale: zh-TW
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32758150"
 ---
 # <a name="connection-events"></a><span data-ttu-id="49d76-102">Connection 的事件</span><span class="sxs-lookup"><span data-stu-id="49d76-102">Connection Events</span></span>
 <span data-ttu-id="49d76-103">所有.NET Framework 資料提供者都有**連接**物件具有兩個事件可讓您擷取從資料來源的參考用訊息，或決定是否狀態**連接**具有變更。</span><span class="sxs-lookup"><span data-stu-id="49d76-103">All of the .NET Framework data providers have **Connection** objects with two events that you can use to retrieve informational messages from a data source or to determine if the state of a **Connection** has changed.</span></span> <span data-ttu-id="49d76-104">下表描述的事件**連接**物件。</span><span class="sxs-lookup"><span data-stu-id="49d76-104">The following table describes the events of the **Connection** object.</span></span>  

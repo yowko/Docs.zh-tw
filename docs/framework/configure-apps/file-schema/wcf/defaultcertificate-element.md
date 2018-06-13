@@ -7,6 +7,7 @@ ms.sourcegitcommit: 11f11ca6cefe555972b3a5c99729d1a7523d8f50
 ms.translationtype: MT
 ms.contentlocale: zh-TW
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32751008"
 ---
 # <a name="ltdefaultcertificategt-element"></a><span data-ttu-id="5f84e-102">&lt;defaultCertificate&gt; 項目</span><span class="sxs-lookup"><span data-stu-id="5f84e-102">&lt;defaultCertificate&gt; Element</span></span>
 <span data-ttu-id="5f84e-103">指定服務或 STS 不透過交涉通訊協定提供憑證時要使用的 X.509 憑證。</span><span class="sxs-lookup"><span data-stu-id="5f84e-103">Specifies an X.509 certificate to be used when a service or STS does not provide one via a negotiation protocol.</span></span>  

@@ -9,6 +9,7 @@ ms.sourcegitcommit: 11f11ca6cefe555972b3a5c99729d1a7523d8f50
 ms.translationtype: MT
 ms.contentlocale: zh-TW
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32752789"
 ---
 # <a name="ltsecuritygt-of-ltnetnamedpipebindinggt"></a><span data-ttu-id="5cf8f-102">&lt;netNamedPipeBinding&gt; 的 &lt;security&gt;</span><span class="sxs-lookup"><span data-stu-id="5cf8f-102">&lt;security&gt; of &lt;netNamedPipeBinding&gt;</span></span>
 <span data-ttu-id="5cf8f-103">定義繫結的安全性設定。</span><span class="sxs-lookup"><span data-stu-id="5cf8f-103">Defines the security settings for a binding.</span></span>  

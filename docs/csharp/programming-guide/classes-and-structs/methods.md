@@ -10,6 +10,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: HT
 ms.contentlocale: zh-TW
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33336394"
 ---
 # <a name="methods-c-programming-guide"></a><span data-ttu-id="426e3-102">方法 (C# 程式設計手冊)</span><span class="sxs-lookup"><span data-stu-id="426e3-102">Methods (C# Programming Guide)</span></span>
 <span data-ttu-id="426e3-103">方法是包含一系列陳述式的程式碼區塊。</span><span class="sxs-lookup"><span data-stu-id="426e3-103">A method is a code block that contains a series of statements.</span></span> <span data-ttu-id="426e3-104">程式會造成呼叫方法並指定任何所需的方法引數來執行陳述式。</span><span class="sxs-lookup"><span data-stu-id="426e3-104">A program causes the statements to be executed by calling the method and specifying any required method arguments.</span></span> <span data-ttu-id="426e3-105">在 C# 中，每個執行的指示是在方法的內容中執行。</span><span class="sxs-lookup"><span data-stu-id="426e3-105">In C#, every executed instruction is performed in the context of a method.</span></span> <span data-ttu-id="426e3-106">Main 方法是每個 C# 應用程式的進入點，而且它是由 Common Language Runtime (CLR) 啟動程式時呼叫。</span><span class="sxs-lookup"><span data-stu-id="426e3-106">The Main method is the entry point for every C# application and it is called by the common language runtime (CLR) when the program is started.</span></span>  

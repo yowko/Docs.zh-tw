@@ -23,6 +23,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: HT
 ms.contentlocale: zh-TW
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33394929"
 ---
 # <a name="web-and-socket-permissions"></a><span data-ttu-id="93e27-102">Web 和通訊端權限</span><span class="sxs-lookup"><span data-stu-id="93e27-102">Web and Socket Permissions</span></span>
 <span data-ttu-id="93e27-103">使用 <xref:System.Net> 命名空間之應用程式的網際網路安全性是透過 <xref:System.Net.WebPermission> 和 <xref:System.Net.SocketPermission> 類別提供。</span><span class="sxs-lookup"><span data-stu-id="93e27-103">Internet security for applications using the <xref:System.Net> namespace is provided by the <xref:System.Net.WebPermission> and <xref:System.Net.SocketPermission> classes.</span></span> <span data-ttu-id="93e27-104">**WebPermission** 類別可控制應用程式向 URI 要求資料，或提供 URI 給網際網路的權限。</span><span class="sxs-lookup"><span data-stu-id="93e27-104">The **WebPermission** class controls an application's right to request data from a URI or to serve a URI to the Internet.</span></span> <span data-ttu-id="93e27-105">**SocketPermission** 類別則可控制應用程式根據通訊端的主機、連接埠編號和傳輸通訊協定，使用 <xref:System.Net.Sockets.Socket> 在本機連接埠上接受資料，或使用另一個位址上的傳輸通訊協定連絡遠端裝置的權限。</span><span class="sxs-lookup"><span data-stu-id="93e27-105">The **SocketPermission** class controls an application's right to use a <xref:System.Net.Sockets.Socket> to accept data on a local port or to contact remote devices using a transport protocol at another address, based on the host, port number, and transport protocol of the socket.</span></span>  

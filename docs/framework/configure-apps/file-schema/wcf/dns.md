@@ -7,6 +7,7 @@ ms.sourcegitcommit: 11f11ca6cefe555972b3a5c99729d1a7523d8f50
 ms.translationtype: MT
 ms.contentlocale: zh-TW
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32746731"
 ---
 # <a name="ltdnsgt"></a><span data-ttu-id="2b1f7-102">&lt;Dns&gt;</span><span class="sxs-lookup"><span data-stu-id="2b1f7-102">&lt;dns&gt;</span></span>
 <span data-ttu-id="2b1f7-103">指定伺服器的預期身分識別。</span><span class="sxs-lookup"><span data-stu-id="2b1f7-103">Specifies the expected identity of the server.</span></span> <span data-ttu-id="2b1f7-104">如果伺服器的憑證包含具有相同值的 DNS，這個身分識別對於 X509 憑證驗證模式是有效的。</span><span class="sxs-lookup"><span data-stu-id="2b1f7-104">This identity is valid for X509 Certificate authentication mode if the server’s certificate contains a DNS with the same value.</span></span> <span data-ttu-id="2b1f7-105">如果 SPN 具有相同的值，則對於 Windows 驗證模式也是有效的。</span><span class="sxs-lookup"><span data-stu-id="2b1f7-105">It is also valid for Windows authentication mode if the SPN has the same value.</span></span>  

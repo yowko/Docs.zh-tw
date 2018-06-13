@@ -15,6 +15,7 @@ ms.sourcegitcommit: 11f11ca6cefe555972b3a5c99729d1a7523d8f50
 ms.translationtype: MT
 ms.contentlocale: zh-TW
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32746172"
 ---
 # <a name="ltassemblybindinggt-element-for-ltruntimegt"></a><span data-ttu-id="54820-102">&lt;assemblyBinding&gt;元素&lt;執行階段&gt;</span><span class="sxs-lookup"><span data-stu-id="54820-102">&lt;assemblyBinding&gt; Element for &lt;runtime&gt;</span></span>
 <span data-ttu-id="54820-103">包含有關組件版本重新導向和組件位置的資訊。</span><span class="sxs-lookup"><span data-stu-id="54820-103">Contains information about assembly version redirection and the locations of assemblies.</span></span>  

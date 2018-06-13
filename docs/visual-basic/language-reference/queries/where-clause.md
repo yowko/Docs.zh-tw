@@ -13,6 +13,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: zh-TW
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33604038"
 ---
 # <a name="where-clause-visual-basic"></a><span data-ttu-id="64e38-102">Where 子句 (Visual Basic)</span><span class="sxs-lookup"><span data-stu-id="64e38-102">Where Clause (Visual Basic)</span></span>
 <span data-ttu-id="64e38-103">指定查詢的篩選條件。</span><span class="sxs-lookup"><span data-stu-id="64e38-103">Specifies the filtering condition for a query.</span></span>  

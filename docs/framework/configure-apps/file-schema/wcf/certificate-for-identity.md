@@ -7,6 +7,7 @@ ms.sourcegitcommit: 11f11ca6cefe555972b3a5c99729d1a7523d8f50
 ms.translationtype: MT
 ms.contentlocale: zh-TW
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32749279"
 ---
 # <a name="ltcertificategt-for-ltidentitygt"></a><span data-ttu-id="41c29-102">&lt;identity&gt; 的 &lt;certificate&gt;</span><span class="sxs-lookup"><span data-stu-id="41c29-102">&lt;certificate&gt; for &lt;identity&gt;</span></span>
 <span data-ttu-id="41c29-103">指定向用戶端驗證伺服器時使用的 X.509 憑證。</span><span class="sxs-lookup"><span data-stu-id="41c29-103">Specifies an X.509 certificate used to validate a server to a client.</span></span>  

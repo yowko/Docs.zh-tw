@@ -7,6 +7,7 @@ ms.sourcegitcommit: 11f11ca6cefe555972b3a5c99729d1a7523d8f50
 ms.translationtype: MT
 ms.contentlocale: zh-TW
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32753270"
 ---
 # <a name="ltbytestreammessageencodinggt"></a><span data-ttu-id="8ecfb-102">&lt;byteStreamMessageEncoding&gt;</span><span class="sxs-lookup"><span data-stu-id="8ecfb-102">&lt;byteStreamMessageEncoding&gt;</span></span>
 <span data-ttu-id="8ecfb-103">將訊息編碼指定為位元組資料流，且含有指定字元編碼的選項。</span><span class="sxs-lookup"><span data-stu-id="8ecfb-103">Specifies the message encoding as a stream of bytes, with the option to specify the character encoding.</span></span>  

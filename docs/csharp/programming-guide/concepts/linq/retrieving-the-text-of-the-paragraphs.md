@@ -7,6 +7,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: HT
 ms.contentlocale: zh-TW
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33327154"
 ---
 # <a name="retrieving-the-text-of-the-paragraphs-c"></a><span data-ttu-id="8c22e-102">擷取段落的文字 (C#)</span><span class="sxs-lookup"><span data-stu-id="8c22e-102">Retrieving the Text of the Paragraphs (C#)</span></span>
 <span data-ttu-id="8c22e-103">這個範例是根據上述範例 ([擷取段落及其樣式 (C#)](../../../../csharp/programming-guide/concepts/linq/retrieving-the-paragraphs-and-their-styles.md)) 所建置。</span><span class="sxs-lookup"><span data-stu-id="8c22e-103">This example builds on the previous example, [Retrieving the Paragraphs and Their Styles (C#)](../../../../csharp/programming-guide/concepts/linq/retrieving-the-paragraphs-and-their-styles.md).</span></span> <span data-ttu-id="8c22e-104">這個新的範例會將每個段落的文字當做字串擷取。</span><span class="sxs-lookup"><span data-stu-id="8c22e-104">This new example retrieves the text of each paragraph as a string.</span></span>  

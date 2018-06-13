@@ -7,6 +7,7 @@ ms.sourcegitcommit: 11f11ca6cefe555972b3a5c99729d1a7523d8f50
 ms.translationtype: MT
 ms.contentlocale: zh-TW
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32762334"
 ---
 # <a name="using-entity-sql"></a><span data-ttu-id="806e5-102">USING (Entity SQL)</span><span class="sxs-lookup"><span data-stu-id="806e5-102">USING (Entity SQL)</span></span>
 <span data-ttu-id="806e5-103">指定查詢運算式中使用的命名空間 (Namespace)。</span><span class="sxs-lookup"><span data-stu-id="806e5-103">Specifies namespaces used in a query expression.</span></span>  

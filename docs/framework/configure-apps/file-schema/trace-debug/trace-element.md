@@ -18,6 +18,7 @@ ms.sourcegitcommit: 11f11ca6cefe555972b3a5c99729d1a7523d8f50
 ms.translationtype: MT
 ms.contentlocale: zh-TW
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32746055"
 ---
 # <a name="lttracegt-element"></a><span data-ttu-id="12af9-102">&lt;追蹤&gt;項目</span><span class="sxs-lookup"><span data-stu-id="12af9-102">&lt;trace&gt; Element</span></span>
 <span data-ttu-id="12af9-103">包含用於收集、儲存及路由傳送追蹤訊息的接聽項。</span><span class="sxs-lookup"><span data-stu-id="12af9-103">Contains listeners that collect, store, and route tracing messages.</span></span>  

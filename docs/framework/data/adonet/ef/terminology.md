@@ -7,6 +7,7 @@ ms.sourcegitcommit: 11f11ca6cefe555972b3a5c99729d1a7523d8f50
 ms.translationtype: MT
 ms.contentlocale: zh-TW
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32766523"
 ---
 # <a name="entity-framework-terminology"></a><span data-ttu-id="1e787-102">Entity Framework 詞彙</span><span class="sxs-lookup"><span data-stu-id="1e787-102">Entity Framework Terminology</span></span>
 <span data-ttu-id="1e787-103">本主題定義中最常參考的詞彙[!INCLUDE[adonet_ef](../../../../../includes/adonet-ef-md.md)]文件。</span><span class="sxs-lookup"><span data-stu-id="1e787-103">This topic defines terms frequently referenced in [!INCLUDE[adonet_ef](../../../../../includes/adonet-ef-md.md)] documentation.</span></span> <span data-ttu-id="1e787-104">而為相關主題提供的連結表示有其他可用的資訊。</span><span class="sxs-lookup"><span data-stu-id="1e787-104">Links are provided to relevant topics where additional information is available.</span></span>  

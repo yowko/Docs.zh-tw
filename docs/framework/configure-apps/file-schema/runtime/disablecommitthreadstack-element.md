@@ -15,6 +15,7 @@ ms.sourcegitcommit: 11f11ca6cefe555972b3a5c99729d1a7523d8f50
 ms.translationtype: MT
 ms.contentlocale: zh-TW
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32752659"
 ---
 # <a name="ltdisablecommitthreadstackgt-element"></a><span data-ttu-id="62f12-102">&lt;disableCommitThreadStack&gt;項目</span><span class="sxs-lookup"><span data-stu-id="62f12-102">&lt;disableCommitThreadStack&gt; Element</span></span>
 <span data-ttu-id="62f12-103">指定是否在執行緒啟動時認可完整執行緒堆疊。</span><span class="sxs-lookup"><span data-stu-id="62f12-103">Specifies whether the full thread stack is committed when a thread is started.</span></span>  

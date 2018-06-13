@@ -9,6 +9,7 @@ ms.sourcegitcommit: 11f11ca6cefe555972b3a5c99729d1a7523d8f50
 ms.translationtype: MT
 ms.contentlocale: zh-TW
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32755041"
 ---
 # <a name="ltsessionsecuritytokencachegt"></a><span data-ttu-id="97dfa-102">&lt;sessionSecurityTokenCache&gt;</span><span class="sxs-lookup"><span data-stu-id="97dfa-102">&lt;sessionSecurityTokenCache&gt;</span></span>
 <span data-ttu-id="97dfa-103">使用的服務或安全性權杖處理常式集合中註冊一份快取工作階段權杖。</span><span class="sxs-lookup"><span data-stu-id="97dfa-103">Registers a cache for session tokens with a service or a security token handler collection.</span></span>  

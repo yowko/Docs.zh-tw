@@ -7,6 +7,7 @@ ms.sourcegitcommit: 11f11ca6cefe555972b3a5c99729d1a7523d8f50
 ms.translationtype: MT
 ms.contentlocale: zh-TW
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32760046"
 ---
 # <a name="inference-limitations"></a><span data-ttu-id="a5d7b-102">推斷限制</span><span class="sxs-lookup"><span data-stu-id="a5d7b-102">Inference Limitations</span></span>
 <span data-ttu-id="a5d7b-103">根據每份文件的 XML 項目，當您執行從 XML 推斷 <xref:System.Data.DataSet> 結構描述的處理序時，可能會得到不同的結構描述。</span><span class="sxs-lookup"><span data-stu-id="a5d7b-103">The process of inferring a <xref:System.Data.DataSet> schema from XML can result in different schemas depending on the XML elements in each document.</span></span> <span data-ttu-id="a5d7b-104">例如，請考量下列 XML 文件。</span><span class="sxs-lookup"><span data-stu-id="a5d7b-104">For example, consider the following XML documents.</span></span>  

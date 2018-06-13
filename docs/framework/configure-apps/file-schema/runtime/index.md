@@ -13,6 +13,7 @@ ms.sourcegitcommit: 11f11ca6cefe555972b3a5c99729d1a7523d8f50
 ms.translationtype: MT
 ms.contentlocale: zh-TW
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32747942"
 ---
 # <a name="runtime-settings-schema"></a><span data-ttu-id="1d6be-102">執行階段設定結構描述</span><span class="sxs-lookup"><span data-stu-id="1d6be-102">Runtime Settings Schema</span></span>
 <span data-ttu-id="1d6be-103">執行階段設定會由通用語言執行平台使用，以設定目標是 .NET Framework 的應用程式。</span><span class="sxs-lookup"><span data-stu-id="1d6be-103">Runtime settings are used by the common language runtime to configure applications that target the .NET Framework.</span></span>  

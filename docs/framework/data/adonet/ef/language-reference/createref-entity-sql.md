@@ -7,6 +7,7 @@ ms.sourcegitcommit: 11f11ca6cefe555972b3a5c99729d1a7523d8f50
 ms.translationtype: MT
 ms.contentlocale: zh-TW
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32761333"
 ---
 # <a name="createref-entity-sql"></a><span data-ttu-id="6ee18-102">CREATEREF (Entity SQL)</span><span class="sxs-lookup"><span data-stu-id="6ee18-102">CREATEREF (Entity SQL)</span></span>
 <span data-ttu-id="6ee18-103">建立實體集中實體的參考。</span><span class="sxs-lookup"><span data-stu-id="6ee18-103">Fabricates references to an entity in an entityset.</span></span>  

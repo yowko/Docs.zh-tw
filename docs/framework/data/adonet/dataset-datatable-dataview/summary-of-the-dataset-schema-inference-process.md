@@ -7,6 +7,7 @@ ms.sourcegitcommit: 11f11ca6cefe555972b3a5c99729d1a7523d8f50
 ms.translationtype: MT
 ms.contentlocale: zh-TW
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32760267"
 ---
 # <a name="summary-of-the-dataset-schema-inference-process"></a><span data-ttu-id="c4c8e-102">資料集結構描述推斷程序摘要</span><span class="sxs-lookup"><span data-stu-id="c4c8e-102">Summary of the DataSet Schema Inference Process</span></span>
 <span data-ttu-id="c4c8e-103">推斷程序首先會決定要將 XML 文件的哪個項目推斷為資料表，</span><span class="sxs-lookup"><span data-stu-id="c4c8e-103">The inference process first determines, from the XML document, which elements will be inferred as tables.</span></span> <span data-ttu-id="c4c8e-104">再從剩餘的 XML 決定這些資料表的資料行，</span><span class="sxs-lookup"><span data-stu-id="c4c8e-104">From the remaining XML, the inference process determines the columns for those tables.</span></span> <span data-ttu-id="c4c8e-105">若為巢狀資料表，推斷程序會產生巢狀的 <xref:System.Data.DataRelation> 和 <xref:System.Data.ForeignKeyConstraint> 物件。</span><span class="sxs-lookup"><span data-stu-id="c4c8e-105">For nested tables, the inference process generates nested <xref:System.Data.DataRelation> and <xref:System.Data.ForeignKeyConstraint> objects.</span></span>  

@@ -7,6 +7,7 @@ ms.sourcegitcommit: 11f11ca6cefe555972b3a5c99729d1a7523d8f50
 ms.translationtype: MT
 ms.contentlocale: zh-TW
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32759903"
 ---
 # <a name="asynchronous-programming"></a><span data-ttu-id="ce5b4-102">非同步程式設計</span><span class="sxs-lookup"><span data-stu-id="ce5b4-102">Asynchronous Programming</span></span>
 

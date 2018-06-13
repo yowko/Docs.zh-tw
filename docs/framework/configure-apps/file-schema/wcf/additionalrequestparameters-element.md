@@ -7,6 +7,7 @@ ms.sourcegitcommit: 11f11ca6cefe555972b3a5c99729d1a7523d8f50
 ms.translationtype: MT
 ms.contentlocale: zh-TW
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32746523"
 ---
 # <a name="ltadditionalrequestparametersgt-element"></a><span data-ttu-id="fec2c-102">&lt;additionalRequestParameters&gt; 項目</span><span class="sxs-lookup"><span data-stu-id="fec2c-102">&lt;additionalRequestParameters&gt; element</span></span>
 <span data-ttu-id="fec2c-103">這會包含指定其他要求參數的組態項目集合。</span><span class="sxs-lookup"><span data-stu-id="fec2c-103">This contains a collection of configuration elements that specify additional request parameters.</span></span>  

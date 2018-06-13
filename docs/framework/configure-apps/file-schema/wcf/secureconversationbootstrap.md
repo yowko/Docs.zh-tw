@@ -9,6 +9,7 @@ ms.sourcegitcommit: 11f11ca6cefe555972b3a5c99729d1a7523d8f50
 ms.translationtype: MT
 ms.contentlocale: zh-TW
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32751593"
 ---
 # <a name="ltsecureconversationbootstrapgt"></a><span data-ttu-id="f3553-102">&lt;secureConversationBootstrap&gt;</span><span class="sxs-lookup"><span data-stu-id="f3553-102">&lt;secureConversationBootstrap&gt;</span></span>
 <span data-ttu-id="f3553-103">指定用於啟始安全對話服務的預設值。</span><span class="sxs-lookup"><span data-stu-id="f3553-103">Specifies the default values used for initiating a secure conversation service.</span></span>  

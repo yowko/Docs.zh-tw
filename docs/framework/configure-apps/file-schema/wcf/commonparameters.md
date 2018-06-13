@@ -7,6 +7,7 @@ ms.sourcegitcommit: 11f11ca6cefe555972b3a5c99729d1a7523d8f50
 ms.translationtype: MT
 ms.contentlocale: zh-TW
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32749435"
 ---
 # <a name="ltcommonparametersgt"></a><span data-ttu-id="deff0-102">&lt;commonParameters&gt;</span><span class="sxs-lookup"><span data-stu-id="deff0-102">&lt;commonParameters&gt;</span></span>
 <span data-ttu-id="deff0-103">代表參數集合，這些參數可跨多項服務全域使用。</span><span class="sxs-lookup"><span data-stu-id="deff0-103">Represents a collection of parameters that are used globally across multiple services.</span></span> <span data-ttu-id="deff0-104">這個集合通常會包含資料庫連線字串，這個字串可能會由長期服務所共用。</span><span class="sxs-lookup"><span data-stu-id="deff0-104">This collection will typically include the database connection string that might be shared by durable services.</span></span>  

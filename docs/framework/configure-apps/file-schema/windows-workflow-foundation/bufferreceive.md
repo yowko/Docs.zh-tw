@@ -8,6 +8,7 @@ ms.sourcegitcommit: 11f11ca6cefe555972b3a5c99729d1a7523d8f50
 ms.translationtype: MT
 ms.contentlocale: zh-TW
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32766832"
 ---
 # <a name="ltbufferreceivegt"></a><span data-ttu-id="f8366-102">&lt;bufferReceive&gt;</span><span class="sxs-lookup"><span data-stu-id="f8366-102">&lt;bufferReceive&gt;</span></span>
 <span data-ttu-id="f8366-103">讓服務可以使用緩衝接收處理的服務行為，該處理可讓工作流程服務處理失序的訊息。</span><span class="sxs-lookup"><span data-stu-id="f8366-103">A service behavior that enables a service to use buffered receive processing, which enables a workflow service to process out-of-order messages.</span></span>  

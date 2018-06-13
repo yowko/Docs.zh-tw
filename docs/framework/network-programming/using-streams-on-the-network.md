@@ -25,6 +25,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: HT
 ms.contentlocale: zh-TW
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33397542"
 ---
 # <a name="using-streams-on-the-network"></a><span data-ttu-id="60564-102">在網路上使用資料流</span><span class="sxs-lookup"><span data-stu-id="60564-102">Using Streams on the Network</span></span>
 <span data-ttu-id="60564-103">網路資源在 .NET Framework 中是以資料流的形式呈現。</span><span class="sxs-lookup"><span data-stu-id="60564-103">Network resources are represented in the .NET Framework as streams.</span></span> <span data-ttu-id="60564-104">因為對資料流沒有任何特殊待遇，.NET Framework 提供下列功能：</span><span class="sxs-lookup"><span data-stu-id="60564-104">By treating streams generically, the .NET Framework offers the following capabilities:</span></span>  

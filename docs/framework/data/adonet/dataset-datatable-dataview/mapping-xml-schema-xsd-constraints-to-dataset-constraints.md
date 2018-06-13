@@ -7,6 +7,7 @@ ms.sourcegitcommit: 11f11ca6cefe555972b3a5c99729d1a7523d8f50
 ms.translationtype: MT
 ms.contentlocale: zh-TW
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32760982"
 ---
 # <a name="mapping-xml-schema-xsd-constraints-to-dataset-constraints"></a><span data-ttu-id="110e9-102">將 XML 結構描述 (XSD) 條件約束對應至資料集條件約束</span><span class="sxs-lookup"><span data-stu-id="110e9-102">Mapping XML Schema (XSD) Constraints to DataSet Constraints</span></span>
 <span data-ttu-id="110e9-103">XML 結構描述定義語言 (XSD) 允許在其定義的項目和屬性上指定條件約束。</span><span class="sxs-lookup"><span data-stu-id="110e9-103">The XML Schema definition language (XSD) allows constraints to be specified on the elements and attributes it defines.</span></span> <span data-ttu-id="110e9-104">對應到關聯式結構描述中的 XML 結構描述時<xref:System.Data.DataSet>，XML 結構描述條件約束會對應至適當的資料表與資料行內的關聯式條件約束**資料集**。</span><span class="sxs-lookup"><span data-stu-id="110e9-104">When mapping an XML Schema to relational schema in a <xref:System.Data.DataSet>, XML Schema constraints are mapped to appropriate relational constraints on the tables and columns within the **DataSet**.</span></span>  

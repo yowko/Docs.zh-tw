@@ -10,6 +10,7 @@ ms.sourcegitcommit: 11f11ca6cefe555972b3a5c99729d1a7523d8f50
 ms.translationtype: MT
 ms.contentlocale: zh-TW
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32761502"
 ---
 # <a name="comparison-expressions"></a><span data-ttu-id="b93fd-102">比較運算式</span><span class="sxs-lookup"><span data-stu-id="b93fd-102">Comparison Expressions</span></span>
 <span data-ttu-id="b93fd-103">比較運算式會檢查常數值、屬性值或方法結果是否等於、不等於、大於或小於另一個值。</span><span class="sxs-lookup"><span data-stu-id="b93fd-103">A comparison expression checks whether a constant value, property value, or method result is equal, not equal, greater than, or less than another value.</span></span> <span data-ttu-id="b93fd-104">如果特定比較對於 [!INCLUDE[linq_entities](../../../../../../includes/linq-entities-md.md)] 無效，將會擲回例外狀況。</span><span class="sxs-lookup"><span data-stu-id="b93fd-104">If a particular comparison is not valid for [!INCLUDE[linq_entities](../../../../../../includes/linq-entities-md.md)], an exception will be thrown.</span></span> <span data-ttu-id="b93fd-105">所有的比較 (隱含和明確) 都會要求所有元件在資料來源內都是可以比較的。</span><span class="sxs-lookup"><span data-stu-id="b93fd-105">All comparisons, both implicit and explicit, require that all components are comparable in the data source.</span></span> <span data-ttu-id="b93fd-106">`Where` 子句中經常會使用比較運算式來限制查詢結果。</span><span class="sxs-lookup"><span data-stu-id="b93fd-106">Comparison expressions are frequently used in `Where` clauses for restricting the query results.</span></span>  

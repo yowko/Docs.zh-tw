@@ -14,6 +14,7 @@ ms.sourcegitcommit: 11f11ca6cefe555972b3a5c99729d1a7523d8f50
 ms.translationtype: MT
 ms.contentlocale: zh-TW
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32752074"
 ---
 # <a name="configsections-element-for-configuration"></a><span data-ttu-id="64f96-102">\<c > 項目\<設定 ></span><span class="sxs-lookup"><span data-stu-id="64f96-102">\<configSections> element for \<configuration></span></span>
 

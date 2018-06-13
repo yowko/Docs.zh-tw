@@ -7,6 +7,7 @@ ms.sourcegitcommit: 11f11ca6cefe555972b3a5c99729d1a7523d8f50
 ms.translationtype: MT
 ms.contentlocale: zh-TW
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32760202"
 ---
 # <a name="except-entity-sql"></a><span data-ttu-id="af501-102">EXCEPT (Entity SQL)</span><span class="sxs-lookup"><span data-stu-id="af501-102">EXCEPT (Entity SQL)</span></span>
 <span data-ttu-id="af501-103">從 EXCEPT 運算元左側的查詢運算式傳回任何相異值集合，這些相異值是 EXCEPT 運算元右側的查詢運算式沒有傳回的。</span><span class="sxs-lookup"><span data-stu-id="af501-103">Returns a collection of any distinct values from the query expression to the left of the EXCEPT operand that are not also returned from the query expression to the right of the EXCEPT operand.</span></span> <span data-ttu-id="af501-104">所有運算式都必須具有與 `expression`相同的型別或是共同基底型別或衍生型別。</span><span class="sxs-lookup"><span data-stu-id="af501-104">All expressions must be of the same type or of a common base or derived type as `expression`.</span></span>  

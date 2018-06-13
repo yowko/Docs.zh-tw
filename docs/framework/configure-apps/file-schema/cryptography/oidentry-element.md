@@ -16,6 +16,7 @@ ms.sourcegitcommit: 11f11ca6cefe555972b3a5c99729d1a7523d8f50
 ms.translationtype: MT
 ms.contentlocale: zh-TW
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32746351"
 ---
 # <a name="ltoidentrygt-element"></a><span data-ttu-id="81389-102">&lt;oidEntry&gt;項目</span><span class="sxs-lookup"><span data-stu-id="81389-102">&lt;oidEntry&gt; Element</span></span>
 <span data-ttu-id="81389-103">將 ASN.1 物件識別碼 (OID) 對應至易記名稱。</span><span class="sxs-lookup"><span data-stu-id="81389-103">Maps an ASN.1 object identifier (OID) to a friendly name.</span></span>  

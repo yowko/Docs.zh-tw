@@ -7,6 +7,7 @@ ms.sourcegitcommit: 11f11ca6cefe555972b3a5c99729d1a7523d8f50
 ms.translationtype: MT
 ms.contentlocale: zh-TW
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32763770"
 ---
 # <a name="model-defined-function"></a><span data-ttu-id="cfd9c-102">模型定義函式</span><span class="sxs-lookup"><span data-stu-id="cfd9c-102">model-defined function</span></span>
 <span data-ttu-id="cfd9c-103">A*模型定義函式*是概念模型中所定義的函式。</span><span class="sxs-lookup"><span data-stu-id="cfd9c-103">A *model-defined function* is a function that is defined in a conceptual model.</span></span> <span data-ttu-id="cfd9c-104">模型定義函式的主體以表示[Entity SQL](../../../../docs/framework/data/adonet/ef/language-reference/entity-sql-language.md)、 表示之外，獨立函式可讓規則或資料來源中支援的語言。</span><span class="sxs-lookup"><span data-stu-id="cfd9c-104">The body of a model-defined function is expressed in [Entity SQL](../../../../docs/framework/data/adonet/ef/language-reference/entity-sql-language.md), which allows for the function to be expressed independently of rules or languages supported in the data source.</span></span>  

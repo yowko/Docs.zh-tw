@@ -7,6 +7,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: HT
 ms.contentlocale: zh-TW
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33330652"
 ---
 # <a name="how-to-find-related-elements-xpath-linq-to-xml-c"></a><span data-ttu-id="44a0c-102">如何：尋找相關項目 (XPath-LINQ to XML) (C#)</span><span class="sxs-lookup"><span data-stu-id="44a0c-102">How to: Find Related Elements (XPath-LINQ to XML) (C#)</span></span>
 <span data-ttu-id="44a0c-103">本主題顯示如何取得在其他項目值所參考的屬性上選取的項目。</span><span class="sxs-lookup"><span data-stu-id="44a0c-103">This topic shows how to get an element selecting on an attribute that is referred to by the value of another element.</span></span>  

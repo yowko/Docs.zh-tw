@@ -7,6 +7,7 @@ ms.sourcegitcommit: 11f11ca6cefe555972b3a5c99729d1a7523d8f50
 ms.translationtype: MT
 ms.contentlocale: zh-TW
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32748707"
 ---
 # <a name="lttransactionflowgt"></a><span data-ttu-id="da926-102">&lt;transactionFlow&gt;</span><span class="sxs-lookup"><span data-stu-id="da926-102">&lt;transactionFlow&gt;</span></span>
 <span data-ttu-id="da926-103">指定自訂繫結程序的異動流程支援。</span><span class="sxs-lookup"><span data-stu-id="da926-103">Specifies transaction flow support for the custom binding.</span></span>  

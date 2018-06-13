@@ -7,6 +7,7 @@ ms.sourcegitcommit: 11f11ca6cefe555972b3a5c99729d1a7523d8f50
 ms.translationtype: MT
 ms.contentlocale: zh-TW
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32745795"
 ---
 # <a name="ltaddgt-of-ltscopesgt"></a><span data-ttu-id="2823f-102">&lt;scopes&gt; 的 &lt;add&gt;</span><span class="sxs-lookup"><span data-stu-id="2823f-102">&lt;add&gt; of &lt;scopes&gt;</span></span>
 <span data-ttu-id="2823f-103">加入自訂的範圍 URI，這個 URI 可用於在查詢期間篩選服務端點。</span><span class="sxs-lookup"><span data-stu-id="2823f-103">Adds a custom scope Uri that can be used to filter service endpoints during query.</span></span>  

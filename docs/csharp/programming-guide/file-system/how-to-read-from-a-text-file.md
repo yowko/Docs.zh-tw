@@ -14,6 +14,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: HT
 ms.contentlocale: zh-TW
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33331668"
 ---
 # <a name="how-to-read-from-a-text-file-c-programming-guide"></a><span data-ttu-id="55f38-102">如何：從文字檔讀取 (C# 程式設計手冊)</span><span class="sxs-lookup"><span data-stu-id="55f38-102">How to: Read From a Text File (C# Programming Guide)</span></span>
 <span data-ttu-id="55f38-103">這個範例會使用 <xref:System.IO.File?displayProperty=nameWithType> 類別中的靜態方法 <xref:System.IO.File.ReadAllText%2A> 和 <xref:System.IO.File.ReadAllLines%2A>，來讀取文字檔的內容。</span><span class="sxs-lookup"><span data-stu-id="55f38-103">This example reads the contents of a text file by using the static methods <xref:System.IO.File.ReadAllText%2A> and <xref:System.IO.File.ReadAllLines%2A> from the <xref:System.IO.File?displayProperty=nameWithType> class.</span></span>  
