@@ -20,6 +20,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: zh-TW
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33644117"
 ---
 # <a name="basic-query-operations-visual-basic"></a><span data-ttu-id="e987c-102">基本查詢作業 (Visual Basic)</span><span class="sxs-lookup"><span data-stu-id="e987c-102">Basic Query Operations (Visual Basic)</span></span>
 <span data-ttu-id="e987c-103">本主題提供簡介[!INCLUDE[vbteclinqext](~/includes/vbteclinqext-md.md)]運算式在 Visual Basic 中，並且一些您在查詢中執行的作業一般類型。</span><span class="sxs-lookup"><span data-stu-id="e987c-103">This topic provides a brief introduction to [!INCLUDE[vbteclinqext](~/includes/vbteclinqext-md.md)] expressions in Visual Basic, and to some of the typical kinds of operations that you perform in a query.</span></span> <span data-ttu-id="e987c-104">如需詳細資訊，請參閱下列主題：</span><span class="sxs-lookup"><span data-stu-id="e987c-104">For more information, see the following topics:</span></span>  

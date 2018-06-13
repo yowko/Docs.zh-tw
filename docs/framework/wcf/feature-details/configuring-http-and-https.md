@@ -9,6 +9,7 @@ ms.sourcegitcommit: 88f251b08bf0718ce119f3d7302f514b74895038
 ms.translationtype: MT
 ms.contentlocale: zh-TW
 ms.lasthandoff: 05/10/2018
+ms.locfileid: "33956482"
 ---
 # <a name="configuring-http-and-https"></a><span data-ttu-id="9354f-102">設定 HTTP 和 HTTPS</span><span class="sxs-lookup"><span data-stu-id="9354f-102">Configuring HTTP and HTTPS</span></span>
 <span data-ttu-id="9354f-103">WCF 服務與用戶端可以透過 HTTP 和 HTTPS 進行通訊。</span><span class="sxs-lookup"><span data-stu-id="9354f-103">WCF services and clients can communicate over HTTP and HTTPS.</span></span> <span data-ttu-id="9354f-104">HTTP/HTTPS 設定是使用 Internet Information Services (IIS)，或使用命令列工具設定。</span><span class="sxs-lookup"><span data-stu-id="9354f-104">The HTTP/HTTPS settings are configured by using Internet Information Services (IIS) or through the use of a command-line tool.</span></span> <span data-ttu-id="9354f-105">在 IIS HTTP 或 HTTPS 之下裝載 WCF 服務時，設定可以在 IIS (使用 inetmgr.exe 工具) 內進行。</span><span class="sxs-lookup"><span data-stu-id="9354f-105">When a WCF service is hosted under IIS HTTP or HTTPS settings can be configured within IIS (using the inetmgr.exe tool).</span></span> <span data-ttu-id="9354f-106">如果是自我裝載的 WCF 服務，可以使用命令列工具設定 HTTP 或 HTTPS 設定。</span><span class="sxs-lookup"><span data-stu-id="9354f-106">If a WCF service is self-hosted, HTTP or HTTPS settings are configured by using a command-line tool.</span></span>  

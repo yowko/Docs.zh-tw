@@ -7,6 +7,7 @@ ms.sourcegitcommit: e5bb395ec86f536e114314184288f40a8c745e2e
 ms.translationtype: MT
 ms.contentlocale: zh-TW
 ms.lasthandoff: 05/12/2018
+ms.locfileid: "34149071"
 ---
 # <a name="discriminated-unions"></a><span data-ttu-id="a86e2-103">已區分的聯集</span><span class="sxs-lookup"><span data-stu-id="a86e2-103">Discriminated Unions</span></span>
 

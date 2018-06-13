@@ -15,6 +15,7 @@ ms.sourcegitcommit: 89c93d05c2281b4c834f48f6c8df1047e1410980
 ms.translationtype: MT
 ms.contentlocale: zh-TW
 ms.lasthandoff: 05/15/2018
+ms.locfileid: "34172486"
 ---
 # <a name="data-templating-overview"></a><span data-ttu-id="9e6e0-102">資料範本化概觀</span><span class="sxs-lookup"><span data-stu-id="9e6e0-102">Data Templating Overview</span></span>
 <span data-ttu-id="9e6e0-103">WPF 資料範本化模型對於資料呈現方式的定義，具有相當大的彈性。</span><span class="sxs-lookup"><span data-stu-id="9e6e0-103">The WPF data templating model provides you with great flexibility to define the presentation of your data.</span></span> <span data-ttu-id="9e6e0-104">WPF 控制項的內建功能支援自訂資料呈現方式。</span><span class="sxs-lookup"><span data-stu-id="9e6e0-104">WPF controls have built-in functionality to support the customization of data presentation.</span></span> <span data-ttu-id="9e6e0-105">本主題首先會示範如何定義<xref:System.Windows.DataTemplate>和再導入了其他的資料範本化功能，例如根據自訂邏輯以及支援的階層式資料的顯示範本選擇。</span><span class="sxs-lookup"><span data-stu-id="9e6e0-105">This topic first demonstrates how to define a <xref:System.Windows.DataTemplate> and then introduces other data templating features, such as the selection of templates based on custom logic and the support for the display of hierarchical data.</span></span>  
