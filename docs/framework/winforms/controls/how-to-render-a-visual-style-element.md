@@ -15,6 +15,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: zh-TW
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33537614"
 ---
 # <a name="how-to-render-a-visual-style-element"></a>如何：呈現視覺化樣式項目
 <xref:System.Windows.Forms.VisualStyles?displayProperty=nameWithType>命名空間會公開<xref:System.Windows.Forms.VisualStyles.VisualStyleElement>物件，表示 Windows 使用者介面 (UI) 項目支援視覺化樣式。 本主題示範如何使用<xref:System.Windows.Forms.VisualStyles.VisualStyleRenderer>類別來呈現<xref:System.Windows.Forms.VisualStyles.VisualStyleElement>表示**登出**和**關機**[開始] 功能表按鈕。  

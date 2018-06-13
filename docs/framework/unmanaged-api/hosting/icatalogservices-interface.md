@@ -18,9 +18,10 @@ author: rpetrusha
 ms.author: ronpet
 ms.openlocfilehash: 078fac7f21ac31b21e5ac442ef81a1c0f496db93
 ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
-ms.translationtype: MT
+ms.translationtype: HT
 ms.contentlocale: zh-TW
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33430398"
 ---
 # <a name="icatalogservices-interface"></a>ICatalogServices 介面
 提供方法來分類的服務。  

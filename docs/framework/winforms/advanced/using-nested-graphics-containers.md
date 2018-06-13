@@ -14,6 +14,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: zh-TW
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33529057"
 ---
 # <a name="using-nested-graphics-containers"></a>使用巢狀圖形容器
 [!INCLUDE[ndptecgdiplus](../../../../includes/ndptecgdiplus-md.md)] 提供可用來暫時取代或擴充部分的狀態中的容器<xref:System.Drawing.Graphics>物件。 您可以建立一個容器呼叫<xref:System.Drawing.Graphics.BeginContainer%2A>方法<xref:System.Drawing.Graphics>物件。 您可以呼叫<xref:System.Drawing.Graphics.BeginContainer%2A>重複，以形成巢狀的容器。 每次呼叫<xref:System.Drawing.Graphics.BeginContainer%2A>必須搭配呼叫<xref:System.Drawing.Graphics.EndContainer%2A>。  

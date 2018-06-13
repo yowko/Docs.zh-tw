@@ -7,6 +7,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: zh-TW
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33642125"
 ---
 # <a name="deferred-execution-example-visual-basic"></a>延後的執行範例 (Visual Basic)
 本主題顯示延後執行與延遲評估如何影響您 LINQ to XML 查詢的執行。  

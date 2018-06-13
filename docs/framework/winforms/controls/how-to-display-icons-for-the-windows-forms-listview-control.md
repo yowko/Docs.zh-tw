@@ -16,6 +16,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: zh-TW
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33533600"
 ---
 # <a name="how-to-display-icons-for-the-windows-forms-listview-control"></a>如何：顯示 Windows Form ListView 控制項的圖示
 Windows Form<xref:System.Windows.Forms.ListView>控制項可以顯示三個影像清單中的圖示。 清單、 詳細資料，以及 SmallIcon 檢視會顯示從影像清單中指定的映像<xref:System.Windows.Forms.ListView.SmallImageList%2A>屬性。 使用 LargeIcon 檢視會顯示從影像清單中指定的映像<xref:System.Windows.Forms.ListView.LargeImageList%2A>屬性。 清單檢視也可以顯示一組額外的設定的圖示<xref:System.Windows.Forms.ListView.StateImageList%2A>大型或小型圖示旁邊的屬性。 如需影像清單的詳細資訊，請參閱[ImageList 元件](../../../../docs/framework/winforms/controls/imagelist-component-windows-forms.md)和[如何： 加入或移除映像使用 Windows Form ImageList 元件](../../../../docs/framework/winforms/controls/how-to-add-or-remove-images-with-the-windows-forms-imagelist-component.md)。  

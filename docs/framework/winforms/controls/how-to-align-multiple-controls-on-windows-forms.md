@@ -12,6 +12,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: zh-TW
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33528586"
 ---
 # <a name="how-to-align-multiple-controls-on-windows-forms"></a>如何：對齊 Windows Form 上的多個控制項
 若要標準化 Windows 架構應用程式的使用者介面 (UI) 的配置，您可以放置之控制項的單一命令的群組。  

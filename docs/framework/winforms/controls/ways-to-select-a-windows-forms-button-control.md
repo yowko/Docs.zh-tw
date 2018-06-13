@@ -9,6 +9,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: zh-TW
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33536324"
 ---
 # <a name="ways-to-select-a-windows-forms-button-control"></a>選取 Windows Form Button 控制項的方法
 以下列方式，可以選取 Windows Form 按鈕：  

@@ -11,6 +11,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: zh-TW
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33534634"
 ---
 # <a name="splitter-control-windows-forms"></a>Splitter 控制項 (Windows Form)
 Windows Form`Splitter`控制項可用來在執行階段調整停駐的控制項的大小。 `Splitter`控制項通常用於與各種長度的資料來呈現，如 Windows 檔案總管，其資料窗格會包含在不同時間資訊的變動寬度的控制項的表單上。  

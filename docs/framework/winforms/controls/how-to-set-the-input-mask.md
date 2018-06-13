@@ -11,6 +11,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: zh-TW
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33537037"
 ---
 # <a name="how-to-set-the-input-mask"></a>如何：設定輸入遮罩
 遮罩的文字方塊控制項接受或拒絕使用者輸入支援的宣告式語法增強的文字方塊控制項。 藉由設定 [遮罩] 屬性，您可以指定允許使用者輸入，而不需要撰寫任何自訂驗證邏輯應用程式中。 如需詳細資訊，請參閱 < 備註 > 一節<xref:System.Windows.Forms.MaskedTextBox>類別。  

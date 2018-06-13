@@ -16,6 +16,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: zh-TW
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33535265"
 ---
 # <a name="notifyicon-component-windows-forms"></a>NotifyIcon 元件 (Windows Form)
 Windows Form`NotifyIcon`元件會顯示圖示在工作列的狀態通知區域中的處理程序在背景中執行，否則不會擁有使用者介面。 防毒保護程式即為一例，您可以在工作列的狀態通知區域中，按一下圖示來存取這個程式。  

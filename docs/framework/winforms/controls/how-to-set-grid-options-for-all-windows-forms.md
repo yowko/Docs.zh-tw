@@ -13,6 +13,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: zh-TW
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33535021"
 ---
 # <a name="how-to-set-grid-options-for-all-windows-forms"></a>如何：為所有 Windows Form 設定格線選項
 您會使用 Visual Studio 開發環境中運作，您可以在 Windows Form 設計工具設定喜好設定的所有表單和您使用的專案。  

@@ -14,6 +14,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: zh-TW
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33529157"
 ---
 # <a name="how-to-create-a-path-gradient"></a>如何：建立路徑漸層
 <xref:System.Drawing.Drawing2D.PathGradientBrush>類別可讓您自訂您漸層色彩填滿圖形的方式。 比方說，您可以指定一個色彩為路徑的中央和路徑的界限的另一種色彩。 您也可以指定不同的色彩，每個界限的幾個點的路徑。  

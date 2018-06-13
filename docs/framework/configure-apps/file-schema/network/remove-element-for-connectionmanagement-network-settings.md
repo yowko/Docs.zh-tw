@@ -18,6 +18,7 @@ ms.sourcegitcommit: 11f11ca6cefe555972b3a5c99729d1a7523d8f50
 ms.translationtype: MT
 ms.contentlocale: zh-TW
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32754476"
 ---
 # <a name="ltremovegt-element-for-connectionmanagement-network-settings"></a>&lt;移除&gt;connectionManagement （網路設定） 的項目
 從連線管理清單中移除 IP 位址或 DNS 名稱。  

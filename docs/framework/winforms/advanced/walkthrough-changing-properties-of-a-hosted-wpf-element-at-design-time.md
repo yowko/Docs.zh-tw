@@ -12,6 +12,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: zh-TW
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33529817"
 ---
 # <a name="walkthrough-changing-properties-of-a-hosted-wpf-element-at-design-time"></a>逐步解說：在設計階段變更已裝載之 WPF 項目的屬性
 本逐步解說示範如何變更 Windows Form 上裝載的 Windows Presentation Foundation (WPF) 控制項的屬性值。  

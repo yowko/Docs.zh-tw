@@ -7,6 +7,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: zh-TW
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33642775"
 ---
 # <a name="how-to-generate-text-files-from-xml-visual-basic"></a>如何： 產生文字檔案，從 XML (Visual Basic)
 此範例顯示如何從 XML 檔案產生以逗號分隔的 (CSV) 檔案。  

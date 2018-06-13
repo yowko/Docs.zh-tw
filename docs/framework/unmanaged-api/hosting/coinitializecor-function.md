@@ -18,9 +18,10 @@ author: rpetrusha
 ms.author: ronpet
 ms.openlocfilehash: 91315e8af0cc46a3450a7515b885988cffe34927
 ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
-ms.translationtype: MT
+ms.translationtype: HT
 ms.contentlocale: zh-TW
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33429984"
 ---
 # <a name="coinitializecor-function"></a>CoInitializeCor 函式
 `CoInitializeCor` 已經過時。  
