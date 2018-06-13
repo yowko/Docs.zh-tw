@@ -7,6 +7,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: zh-TW
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33639659"
 ---
 # <a name="you-must-specify-a-name"></a>您必須指定名稱
 執行重新命名檔案等檔案作業時，您必須指定名稱。  

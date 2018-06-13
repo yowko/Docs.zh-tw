@@ -17,6 +17,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: zh-TW
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33653114"
 ---
 # <a name="how-to-hide-a-variable-with-the-same-name-as-your-variable-visual-basic"></a>如何：隱藏與您的變數名稱相同的變數 (Visual Basic)
 您可以隱藏變數*遮蔽*它，也就是來重新定義具有相同名稱的變數。 您可以遮蔽的變數，您想要隱藏兩種方式：  

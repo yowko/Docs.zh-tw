@@ -15,6 +15,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: zh-TW
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33651914"
 ---
 # <a name="visual-basic-naming-conventions"></a>Visual Basic 命名慣例
 當您在 Visual Basic 應用程式命名項目時，該名稱的第一個字元必須是英數字元或底線。 不過請注意，以底線開頭的名稱不符合[語言獨立性以及與語言無關的元件](../../../standard/language-independence-and-language-independent-components.md)（cls） 標準。  

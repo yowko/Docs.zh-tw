@@ -9,6 +9,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: zh-TW
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33638371"
 ---
 # <a name="class-not-registered-on-local-machine"></a>尚未在本機電腦上登錄類別
 這個錯誤通常是檔案損毀所造成。 您可能需要重新安裝 Visual Studio。  
