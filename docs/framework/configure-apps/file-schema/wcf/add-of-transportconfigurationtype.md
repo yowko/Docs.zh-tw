@@ -7,6 +7,7 @@ ms.sourcegitcommit: 11f11ca6cefe555972b3a5c99729d1a7523d8f50
 ms.translationtype: MT
 ms.contentlocale: zh-TW
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32749630"
 ---
 # <a name="ltaddgt-of-lttransportconfigurationtypegt"></a><span data-ttu-id="8847b-102">&lt;transportConfigurationType&gt; 的 &lt;add&gt;</span><span class="sxs-lookup"><span data-stu-id="8847b-102">&lt;add&gt; of &lt;transportConfigurationType&gt;</span></span>
 <span data-ttu-id="8847b-103">此項目是索引鍵/值組，可用來識別特定傳輸的型別。</span><span class="sxs-lookup"><span data-stu-id="8847b-103">This element is a key/value pair, which identifies the type of a particular transport.</span></span>  

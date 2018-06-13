@@ -18,6 +18,7 @@ ms.sourcegitcommit: 11f11ca6cefe555972b3a5c99729d1a7523d8f50
 ms.translationtype: HT
 ms.contentlocale: zh-TW
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32753725"
 ---
 # <a name="how-to-remove-an-assembly-from-the-global-assembly-cache"></a><span data-ttu-id="5432e-102">如何：從全域組件快取移除組件</span><span class="sxs-lookup"><span data-stu-id="5432e-102">How to: Remove an Assembly from the Global Assembly Cache</span></span>
 <span data-ttu-id="5432e-103">從全域組件快取 (GAC) 移除組件的方式有兩種：</span><span class="sxs-lookup"><span data-stu-id="5432e-103">There are two ways to remove an assembly from the global assembly cache (GAC):</span></span>  

@@ -7,6 +7,7 @@ ms.sourcegitcommit: 11f11ca6cefe555972b3a5c99729d1a7523d8f50
 ms.translationtype: MT
 ms.contentlocale: zh-TW
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32747482"
 ---
 # <a name="ltbaseaddressesgt"></a><span data-ttu-id="ffcd5-102">&lt;baseAddresses&gt;</span><span class="sxs-lookup"><span data-stu-id="ffcd5-102">&lt;baseAddresses&gt;</span></span>
 <span data-ttu-id="ffcd5-103">代表 `baseAddress` 項目的集合，這些項目是自我裝載環境中之服務主機的基底位址。</span><span class="sxs-lookup"><span data-stu-id="ffcd5-103">Represents a collection of `baseAddress` elements, which are base addresses for a service host in a self-hosted environment.</span></span> <span data-ttu-id="ffcd5-104">如果基底位址存在，即可以相對於基底位址的位址設定端點。</span><span class="sxs-lookup"><span data-stu-id="ffcd5-104">If a base address is present, endpoints can be configured with addresses relative to the base address.</span></span>  

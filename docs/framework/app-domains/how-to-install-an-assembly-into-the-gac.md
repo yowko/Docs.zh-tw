@@ -15,6 +15,7 @@ ms.sourcegitcommit: 11f11ca6cefe555972b3a5c99729d1a7523d8f50
 ms.translationtype: HT
 ms.contentlocale: zh-TW
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32744378"
 ---
 # <a name="how-to-install-an-assembly-into-the-global-assembly-cache"></a><span data-ttu-id="b9f24-102">如何：將組件安裝到全域組件快取</span><span class="sxs-lookup"><span data-stu-id="b9f24-102">How to: Install an Assembly into the Global Assembly Cache</span></span>
 <span data-ttu-id="b9f24-103">有兩種方式可以將強式名稱組件安裝到全域組件快取 (GAC) 中：</span><span class="sxs-lookup"><span data-stu-id="b9f24-103">There are two ways to install a strong-named assembly into the global assembly cache (GAC):</span></span>  

@@ -17,6 +17,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: HT
 ms.contentlocale: zh-TW
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33339575"
 ---
 # <a name="type-relationships-in-linq-query-operations-c"></a><span data-ttu-id="5e997-102">LINQ 查詢作業中的類型關聯性 (C#)</span><span class="sxs-lookup"><span data-stu-id="5e997-102">Type Relationships in LINQ Query Operations (C#)</span></span>
 <span data-ttu-id="5e997-103">若要有效地撰寫查詢，您應該了解完整查詢作業中的變數類型如何彼此相關。</span><span class="sxs-lookup"><span data-stu-id="5e997-103">To write queries effectively, you should understand how types of the variables in a complete query operation all relate to each other.</span></span> <span data-ttu-id="5e997-104">如果您了解這些關聯性，則可更輕鬆地理解文件中的 [!INCLUDE[vbteclinq](~/includes/vbteclinq-md.md)] 範例和程式碼範例。</span><span class="sxs-lookup"><span data-stu-id="5e997-104">If you understand these relationships you will more easily comprehend the [!INCLUDE[vbteclinq](~/includes/vbteclinq-md.md)] samples and code examples in the documentation.</span></span> <span data-ttu-id="5e997-105">此外，您將了解使用 `var` 讓變數成為隱含類型時的幕後作業。</span><span class="sxs-lookup"><span data-stu-id="5e997-105">Furthermore, you will understand what occurs behind the scenes when variables are implicitly typed by using `var`.</span></span>  

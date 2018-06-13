@@ -15,6 +15,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: HT
 ms.contentlocale: zh-TW
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33331600"
 ---
 # <a name="unsafe-code-and-pointers-c-programming-guide"></a><span data-ttu-id="b4c89-102">Unsafe 程式碼和指標 (C# 程式設計手冊)</span><span class="sxs-lookup"><span data-stu-id="b4c89-102">Unsafe Code and Pointers (C# Programming Guide)</span></span>
 <span data-ttu-id="b4c89-103">為了維護型別安全和安全性，C# 預設不支援指標算術。</span><span class="sxs-lookup"><span data-stu-id="b4c89-103">To maintain type safety and security, C# does not support pointer arithmetic, by default.</span></span> <span data-ttu-id="b4c89-104">不過，藉由使用 [unsafe](../../../csharp/language-reference/keywords/unsafe.md) 關鍵字，即可定義能在其中使用指標的不安全內容。</span><span class="sxs-lookup"><span data-stu-id="b4c89-104">However, by using the [unsafe](../../../csharp/language-reference/keywords/unsafe.md) keyword, you can define an unsafe context in which pointers can be used.</span></span> <span data-ttu-id="b4c89-105">如需指標的詳細資訊，請參閱[指標類型](../../../csharp/programming-guide/unsafe-code-pointers/pointer-types.md)主題。</span><span class="sxs-lookup"><span data-stu-id="b4c89-105">For more information about pointers, see the topic [Pointer types](../../../csharp/programming-guide/unsafe-code-pointers/pointer-types.md).</span></span>  

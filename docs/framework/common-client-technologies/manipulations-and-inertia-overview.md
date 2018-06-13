@@ -7,6 +7,7 @@ ms.sourcegitcommit: 11f11ca6cefe555972b3a5c99729d1a7523d8f50
 ms.translationtype: HT
 ms.contentlocale: zh-TW
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32744391"
 ---
 # <a name="manipulations-and-inertia-overview"></a><span data-ttu-id="84e7d-102">操作和慣性概觀</span><span class="sxs-lookup"><span data-stu-id="84e7d-102">Manipulations and Inertia Overview</span></span>
 <span data-ttu-id="84e7d-103">「操作」可讓使用者使用「操作工具」來移動、旋轉和調整使用者介面 (UI) 項目大小。</span><span class="sxs-lookup"><span data-stu-id="84e7d-103">*Manipulations* enable users to move, rotate, and resize user interface (UI) elements by using *manipulators*.</span></span> <span data-ttu-id="84e7d-104">操作工具代表滑鼠或 (在觸控式的情況下) 手寫筆或手指。</span><span class="sxs-lookup"><span data-stu-id="84e7d-104">A manipulator represents a mouse or (in a touch-enabled scenario) a stylus or a finger.</span></span>  

@@ -9,6 +9,7 @@ ms.sourcegitcommit: 11f11ca6cefe555972b3a5c99729d1a7523d8f50
 ms.translationtype: MT
 ms.contentlocale: zh-TW
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32750566"
 ---
 # <a name="ltsecuritygt-of-ltmsmqintegrationbindinggt"></a><span data-ttu-id="48e3e-102">&lt;msmqIntegrationBinding&gt; 的 &lt;security&gt;</span><span class="sxs-lookup"><span data-stu-id="48e3e-102">&lt;security&gt; of &lt;msmqIntegrationBinding&gt;</span></span>
 <span data-ttu-id="48e3e-103">定義訊息佇列 (MSMQ) 整合通道的傳輸安全性設定。</span><span class="sxs-lookup"><span data-stu-id="48e3e-103">Defines the transport security settings for the Message Queuing (MSMQ) integration channel.</span></span>  

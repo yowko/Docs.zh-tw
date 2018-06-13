@@ -7,6 +7,7 @@ ms.sourcegitcommit: 11f11ca6cefe555972b3a5c99729d1a7523d8f50
 ms.translationtype: MT
 ms.contentlocale: zh-TW
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32753998"
 ---
 # <a name="ltfaultpropagationqueriesgt-of-wcf"></a><span data-ttu-id="52a96-102">WCF 的 &lt;faultPropagationQueries&gt;</span><span class="sxs-lookup"><span data-stu-id="52a96-102">&lt;faultPropagationQueries&gt; of WCF</span></span>
 <span data-ttu-id="52a96-103">代表查詢的集合，這些查詢可用來追蹤活動內發生之錯誤的處理。</span><span class="sxs-lookup"><span data-stu-id="52a96-103">Represents a collection of queries that are used to track the handling of faults that occur within an activity.</span></span>  <span data-ttu-id="52a96-104">每當 FaultHandler 處理錯誤時，都會發生這個事件。</span><span class="sxs-lookup"><span data-stu-id="52a96-104">This event occurs each time a FaultHandler processes a fault.</span></span> <span data-ttu-id="52a96-105">您應該使用這種查詢來追蹤活動中發生的錯誤處理。</span><span class="sxs-lookup"><span data-stu-id="52a96-105">You should use such query to track the handling of faults that occur within an activity.</span></span> <span data-ttu-id="52a96-106">追蹤參與者必須要具備查詢，才能訂閱錯誤傳播記錄。</span><span class="sxs-lookup"><span data-stu-id="52a96-106">The query is necessary for a  tracking participant to subscribe to fault propagation records.</span></span>  

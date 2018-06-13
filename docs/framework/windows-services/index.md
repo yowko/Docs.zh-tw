@@ -17,6 +17,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: HT
 ms.contentlocale: zh-TW
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33512264"
 ---
 # <a name="developing-windows-service-applications"></a><span data-ttu-id="367e3-102">開發 Windows 服務應用程式</span><span class="sxs-lookup"><span data-stu-id="367e3-102">Developing Windows Service Applications</span></span>
 <span data-ttu-id="367e3-103">您可以使用 Microsoft Visual Studio 或 Microsoft [!INCLUDE[dnprdnshort](../../../includes/dnprdnshort-md.md)] SDK，藉由建立要安裝為服務的應用程式，以輕鬆地建立服務。</span><span class="sxs-lookup"><span data-stu-id="367e3-103">Using Microsoft Visual Studio or the Microsoft [!INCLUDE[dnprdnshort](../../../includes/dnprdnshort-md.md)] SDK, you can easily create services by creating an application that is installed as a service.</span></span> <span data-ttu-id="367e3-104">這種類型的應用程式稱為 Windows 服務。</span><span class="sxs-lookup"><span data-stu-id="367e3-104">This type of application is called a Windows service.</span></span> <span data-ttu-id="367e3-105">您可以使用架構功能，以建立服務、安裝服務，以及啟動、停止及控制服務的行為。</span><span class="sxs-lookup"><span data-stu-id="367e3-105">With framework features, you can create services, install them, and start, stop, and otherwise control their behavior.</span></span>  

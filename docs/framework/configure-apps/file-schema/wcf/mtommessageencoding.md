@@ -7,6 +7,7 @@ ms.sourcegitcommit: 11f11ca6cefe555972b3a5c99729d1a7523d8f50
 ms.translationtype: MT
 ms.contentlocale: zh-TW
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32746811"
 ---
 # <a name="ltmtommessageencodinggt"></a><span data-ttu-id="36131-102">&lt;mtomMessageEncoding&gt;</span><span class="sxs-lookup"><span data-stu-id="36131-102">&lt;mtomMessageEncoding&gt;</span></span>
 <span data-ttu-id="36131-103">指定編碼和訊息版本處理，用於 SOAP 訊息傳輸最佳化機制 (Message Transmission Optimization Mechanism，MTOM) 的訊息。</span><span class="sxs-lookup"><span data-stu-id="36131-103">Specifies the encoding and message versioning used for SOAP Message Transmission Optimization Mechanism (MTOM) based messages.</span></span>  

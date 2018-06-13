@@ -7,6 +7,7 @@ ms.sourcegitcommit: 11f11ca6cefe555972b3a5c99729d1a7523d8f50
 ms.translationtype: MT
 ms.contentlocale: zh-TW
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32754050"
 ---
 # <a name="ltparametergt"></a><span data-ttu-id="ec9e5-102">&lt;parameter&gt;</span><span class="sxs-lookup"><span data-stu-id="ec9e5-102">&lt;parameter&gt;</span></span>
 <span data-ttu-id="ec9e5-103">指定當宣告型別為泛型型別時的泛型參數。</span><span class="sxs-lookup"><span data-stu-id="ec9e5-103">Specifies the generic parameter when a declared type is a generic type.</span></span>  

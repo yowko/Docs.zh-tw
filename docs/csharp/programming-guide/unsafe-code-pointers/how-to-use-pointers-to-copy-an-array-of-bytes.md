@@ -10,6 +10,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: HT
 ms.contentlocale: zh-TW
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33331197"
 ---
 # <a name="how-to-use-pointers-to-copy-an-array-of-bytes--c-programming-guide"></a><span data-ttu-id="cca14-102">如何：使用指標複製位元組陣列 (C# 程式設計手冊)</span><span class="sxs-lookup"><span data-stu-id="cca14-102">How to: Use Pointers to Copy an Array of Bytes  (C# Programming Guide)</span></span>
 

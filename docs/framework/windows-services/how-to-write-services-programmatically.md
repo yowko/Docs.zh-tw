@@ -15,6 +15,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: HT
 ms.contentlocale: zh-TW
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33513282"
 ---
 # <a name="how-to-write-services-programmatically"></a><span data-ttu-id="a1bc0-102">如何：以程式設計方式撰寫服務</span><span class="sxs-lookup"><span data-stu-id="a1bc0-102">How to: Write Services Programmatically</span></span>
 <span data-ttu-id="a1bc0-103">如果您選擇不使用 Windows 服務專案範本，則可以藉由自行設定繼承和其他基礎結構元素來撰寫自己的服務。</span><span class="sxs-lookup"><span data-stu-id="a1bc0-103">If you choose not to use the Windows Service project template, you can write your own services by setting up the inheritance and other infrastructure elements yourself.</span></span> <span data-ttu-id="a1bc0-104">當您以程式設計方式建立服務時，必須執行範本會為您處理的數個步驟：</span><span class="sxs-lookup"><span data-stu-id="a1bc0-104">When you create a service programmatically, you must perform several steps that the template would otherwise handle for you:</span></span>  

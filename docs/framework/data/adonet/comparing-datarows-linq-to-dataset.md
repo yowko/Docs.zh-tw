@@ -10,6 +10,7 @@ ms.sourcegitcommit: 11f11ca6cefe555972b3a5c99729d1a7523d8f50
 ms.translationtype: MT
 ms.contentlocale: zh-TW
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32756276"
 ---
 # <a name="comparing-datarows-linq-to-dataset"></a><span data-ttu-id="0ce82-102">比較 DataRow (LINQ to DataSet)</span><span class="sxs-lookup"><span data-stu-id="0ce82-102">Comparing DataRows (LINQ to DataSet)</span></span>
 [!INCLUDE[vbteclinqext](../../../../includes/vbteclinqext-md.md)]<span data-ttu-id="0ce82-103"> 定義了許多設定運算子，可比較來源項目以便查看它們是否相等。</span><span class="sxs-lookup"><span data-stu-id="0ce82-103"> defines various set operators to compare source elements to see if they are equal.</span></span> [!INCLUDE[vbteclinq](../../../../includes/vbteclinq-md.md)]<span data-ttu-id="0ce82-104"> 會提供下列設定運算子：</span><span class="sxs-lookup"><span data-stu-id="0ce82-104"> provides the following set operators:</span></span>  

@@ -1,32 +1,22 @@
 ---
-title: "HOW TO：在重新裝載的設計工具中顯示驗證錯誤"
-ms.custom: 
+title: HOW TO：在重新裝載的設計工具中顯示驗證錯誤
 ms.date: 03/30/2017
-ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.tgt_pltfrm: 
-ms.topic: article
 ms.assetid: 5aa8fb53-8f75-433b-bc06-7c7d33583d5d
-caps.latest.revision: "4"
-author: dotnet-bot
-ms.author: dotnetcontent
-manager: wpickett
-ms.workload: dotnet
-ms.openlocfilehash: f08d920b59d163b23aff63dfa7ced869048e73cd
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.openlocfilehash: 8f70b190042d167741bbadc4e1645756fe5b830d
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 05/04/2018
+ms.locfileid: "33512563"
 ---
-# <a name="how-to-display-validation-errors-in-a-rehosted-designer"></a><span data-ttu-id="e0223-102">HOW TO：在重新裝載的設計工具中顯示驗證錯誤</span><span class="sxs-lookup"><span data-stu-id="e0223-102">How to: Display Validation Errors in a Rehosted Designer</span></span>
-<span data-ttu-id="e0223-103">本主題描述如何擷取及發行 [!INCLUDE[wfd1](../../../includes/wfd1-md.md)] 中的驗證錯誤。</span><span class="sxs-lookup"><span data-stu-id="e0223-103">This topic describes how to retrieve and publish validation errors in a rehosted [!INCLUDE[wfd1](../../../includes/wfd1-md.md)].</span></span> <span data-ttu-id="e0223-104">這提供確認重新裝載設計工具中工作流程是否有效的程序。</span><span class="sxs-lookup"><span data-stu-id="e0223-104">This provides us with a procedure to confirm that a workflow in a rehosted designer is valid.</span></span>  
+# <a name="how-to-display-validation-errors-in-a-rehosted-designer"></a><span data-ttu-id="8114c-102">HOW TO：在重新裝載的設計工具中顯示驗證錯誤</span><span class="sxs-lookup"><span data-stu-id="8114c-102">How to: Display Validation Errors in a Rehosted Designer</span></span>
+<span data-ttu-id="8114c-103">本主題描述如何擷取及發行 [!INCLUDE[wfd1](../../../includes/wfd1-md.md)] 中的驗證錯誤。</span><span class="sxs-lookup"><span data-stu-id="8114c-103">This topic describes how to retrieve and publish validation errors in a rehosted [!INCLUDE[wfd1](../../../includes/wfd1-md.md)].</span></span> <span data-ttu-id="8114c-104">這提供確認重新裝載設計工具中工作流程是否有效的程序。</span><span class="sxs-lookup"><span data-stu-id="8114c-104">This provides us with a procedure to confirm that a workflow in a rehosted designer is valid.</span></span>  
   
- <span data-ttu-id="e0223-105">這個工作分為兩個部分。</span><span class="sxs-lookup"><span data-stu-id="e0223-105">This task has two parts.</span></span> <span data-ttu-id="e0223-106">第一個部分是提供 <xref:System.Activities.Presentation.Validation.IValidationErrorService> 的實作。</span><span class="sxs-lookup"><span data-stu-id="e0223-106">The first is to provide an implementation <xref:System.Activities.Presentation.Validation.IValidationErrorService>.</span></span>  <span data-ttu-id="e0223-107">這個介面有要實作一個重要方法 <xref:System.Activities.Presentation.Validation.IValidationErrorService.ShowValidationErrors%2A>，這個方法會將包含錯誤資訊的 <xref:System.Activities.Presentation.Validation.ValidationErrorInfo> 物件清單傳遞至偵錯記錄檔。</span><span class="sxs-lookup"><span data-stu-id="e0223-107">There is one critical method to implement on this interface, <xref:System.Activities.Presentation.Validation.IValidationErrorService.ShowValidationErrors%2A> which will pass you a list of <xref:System.Activities.Presentation.Validation.ValidationErrorInfo> objects containing information about the errors to the debug log.</span></span>  <span data-ttu-id="e0223-108">在實作此介面之後，您可以將該實作的執行個體發行至編輯內容，藉此擷取錯誤資訊。</span><span class="sxs-lookup"><span data-stu-id="e0223-108">After implementing the interface, you retrieve the error information by publishing an instance of that implementation to the editing context.</span></span>  
+ <span data-ttu-id="8114c-105">這個工作分為兩個部分。</span><span class="sxs-lookup"><span data-stu-id="8114c-105">This task has two parts.</span></span> <span data-ttu-id="8114c-106">第一個部分是提供 <xref:System.Activities.Presentation.Validation.IValidationErrorService> 的實作。</span><span class="sxs-lookup"><span data-stu-id="8114c-106">The first is to provide an implementation <xref:System.Activities.Presentation.Validation.IValidationErrorService>.</span></span>  <span data-ttu-id="8114c-107">這個介面有要實作一個重要方法 <xref:System.Activities.Presentation.Validation.IValidationErrorService.ShowValidationErrors%2A>，這個方法會將包含錯誤資訊的 <xref:System.Activities.Presentation.Validation.ValidationErrorInfo> 物件清單傳遞至偵錯記錄檔。</span><span class="sxs-lookup"><span data-stu-id="8114c-107">There is one critical method to implement on this interface, <xref:System.Activities.Presentation.Validation.IValidationErrorService.ShowValidationErrors%2A> which will pass you a list of <xref:System.Activities.Presentation.Validation.ValidationErrorInfo> objects containing information about the errors to the debug log.</span></span>  <span data-ttu-id="8114c-108">在實作此介面之後，您可以將該實作的執行個體發行至編輯內容，藉此擷取錯誤資訊。</span><span class="sxs-lookup"><span data-stu-id="8114c-108">After implementing the interface, you retrieve the error information by publishing an instance of that implementation to the editing context.</span></span>  
   
-### <a name="implement-the-ivalidationerrorservice-interface"></a><span data-ttu-id="e0223-109">實作 IValidationErrorService 介面</span><span class="sxs-lookup"><span data-stu-id="e0223-109">Implement the IValidationErrorService Interface</span></span>  
+### <a name="implement-the-ivalidationerrorservice-interface"></a><span data-ttu-id="8114c-109">實作 IValidationErrorService 介面</span><span class="sxs-lookup"><span data-stu-id="8114c-109">Implement the IValidationErrorService Interface</span></span>  
   
-1.  <span data-ttu-id="e0223-110">以下是將驗證錯誤寫出至偵錯記錄檔的簡單實作程式碼範例。</span><span class="sxs-lookup"><span data-stu-id="e0223-110">Here is a code sample for a simple implementation that will write out the validation errors to the debug log.</span></span>  
+1.  <span data-ttu-id="8114c-110">以下是將驗證錯誤寫出至偵錯記錄檔的簡單實作程式碼範例。</span><span class="sxs-lookup"><span data-stu-id="8114c-110">Here is a code sample for a simple implementation that will write out the validation errors to the debug log.</span></span>  
   
     ```  
     using System.Activities.Presentation.Validation;  
@@ -46,9 +36,9 @@ ms.lasthandoff: 12/22/2017
     }  
     ```  
   
-### <a name="publishing-to-the-editing-context"></a><span data-ttu-id="e0223-111">發行至編輯內容</span><span class="sxs-lookup"><span data-stu-id="e0223-111">Publishing to the Editing Context</span></span>  
+### <a name="publishing-to-the-editing-context"></a><span data-ttu-id="8114c-111">發行至編輯內容</span><span class="sxs-lookup"><span data-stu-id="8114c-111">Publishing to the Editing Context</span></span>  
   
-1.  <span data-ttu-id="e0223-112">以下用來發行至編輯內容的程式碼。</span><span class="sxs-lookup"><span data-stu-id="e0223-112">Here is the code that will publish this to the editing context.</span></span>  
+1.  <span data-ttu-id="8114c-112">以下用來發行至編輯內容的程式碼。</span><span class="sxs-lookup"><span data-stu-id="8114c-112">Here is the code that will publish this to the editing context.</span></span>  
   
     ```  
     wd.Context.Services.Publish<IValidationErrorService>(new DebugValidationErrorService());  

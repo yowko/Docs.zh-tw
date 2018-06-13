@@ -7,6 +7,7 @@ ms.sourcegitcommit: 11f11ca6cefe555972b3a5c99729d1a7523d8f50
 ms.translationtype: MT
 ms.contentlocale: zh-TW
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32748275"
 ---
 # <a name="ltheadersgt-element"></a><span data-ttu-id="1b0ee-102">&lt;headers&gt; 項目</span><span class="sxs-lookup"><span data-stu-id="1b0ee-102">&lt;headers&gt; element</span></span>
 <span data-ttu-id="1b0ee-103">這個項目包含為了可正確定址本機簽發者而需要使用的位址標頭集合。</span><span class="sxs-lookup"><span data-stu-id="1b0ee-103">This contains a collection of address headers that are required in order to correctly address the local issuer.</span></span> <span data-ttu-id="1b0ee-104">您可以使用 `add` 關鍵字將標頭加入這個集合。</span><span class="sxs-lookup"><span data-stu-id="1b0ee-104">You can use the `add` keyword to add a header to this collection.</span></span>  
