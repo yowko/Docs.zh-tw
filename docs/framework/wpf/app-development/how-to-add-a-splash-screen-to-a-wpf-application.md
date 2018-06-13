@@ -1,64 +1,53 @@
 ---
-title: "如何：在 WPF 應用程式中加入啟動顯示畫面"
-ms.custom: 
+title: 如何：在 WPF 應用程式中加入啟動顯示畫面
 ms.date: 03/30/2017
-ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.technology: dotnet-wpf
-ms.tgt_pltfrm: 
-ms.topic: article
 helpviewer_keywords:
 - WPF [WPF], splash screen
 - startup window [WPF]
 - SplashScreen class [WPF]
 - splash screen [WPF]
 ms.assetid: d70a25c4-5fb9-4c27-b01d-b1b8ef39b3fd
-caps.latest.revision: "14"
-author: dotnet-bot
-ms.author: dotnetcontent
-manager: wpickett
-ms.workload: dotnet
-ms.openlocfilehash: 121cbc1c07ea8f6458df81d861aea3f8e1f91086
-ms.sourcegitcommit: c0dd436f6f8f44dc80dc43b07f6841a00b74b23f
+ms.openlocfilehash: 06d6cb7c5a5081d3b6c4979ab50e1caaa726acbe
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 01/19/2018
+ms.lasthandoff: 05/04/2018
+ms.locfileid: "33546997"
 ---
-# <a name="how-to-add-a-splash-screen-to-a-wpf-application"></a><span data-ttu-id="3bd29-102">如何：在 WPF 應用程式中加入啟動顯示畫面</span><span class="sxs-lookup"><span data-stu-id="3bd29-102">How to: Add a Splash Screen to a WPF Application</span></span>
-<span data-ttu-id="3bd29-103">本主題說明如何新增到 [啟動] 視窗或*啟動顯示畫面*，Windows Presentation Foundation (WPF) 應用程式。</span><span class="sxs-lookup"><span data-stu-id="3bd29-103">This topic shows how to add a startup window, or *splash screen*, to a Windows Presentation Foundation (WPF) application.</span></span>  
+# <a name="how-to-add-a-splash-screen-to-a-wpf-application"></a><span data-ttu-id="5893b-102">如何：在 WPF 應用程式中加入啟動顯示畫面</span><span class="sxs-lookup"><span data-stu-id="5893b-102">How to: Add a Splash Screen to a WPF Application</span></span>
+<span data-ttu-id="5893b-103">本主題說明如何新增到 [啟動] 視窗或*啟動顯示畫面*，Windows Presentation Foundation (WPF) 應用程式。</span><span class="sxs-lookup"><span data-stu-id="5893b-103">This topic shows how to add a startup window, or *splash screen*, to a Windows Presentation Foundation (WPF) application.</span></span>  
   
-### <a name="to-add-an-existing-image-as-a-splash-screen"></a><span data-ttu-id="3bd29-104">將現有的映像新增為啟動顯示畫面</span><span class="sxs-lookup"><span data-stu-id="3bd29-104">To add an existing image as a splash screen</span></span>  
+### <a name="to-add-an-existing-image-as-a-splash-screen"></a><span data-ttu-id="5893b-104">將現有的映像新增為啟動顯示畫面</span><span class="sxs-lookup"><span data-stu-id="5893b-104">To add an existing image as a splash screen</span></span>  
   
-1.  <span data-ttu-id="3bd29-105">建立或尋找您想要使用的啟動顯示畫面影像。</span><span class="sxs-lookup"><span data-stu-id="3bd29-105">Create or find an image that you want to use for the splash screen.</span></span> <span data-ttu-id="3bd29-106">您可以使用任何支援 Windows 影像處理元件 (WIC) 的映像格式。</span><span class="sxs-lookup"><span data-stu-id="3bd29-106">You can use any image format that is supported by the Windows Imaging Component (WIC).</span></span> <span data-ttu-id="3bd29-107">例如，您可以使用 BMP、 GIF、 JPEG、 PNG 或 TIFF 格式。</span><span class="sxs-lookup"><span data-stu-id="3bd29-107">For example, you can use the BMP, GIF, JPEG, PNG, or TIFF format.</span></span>  
+1.  <span data-ttu-id="5893b-105">建立或尋找您想要使用的啟動顯示畫面影像。</span><span class="sxs-lookup"><span data-stu-id="5893b-105">Create or find an image that you want to use for the splash screen.</span></span> <span data-ttu-id="5893b-106">您可以使用任何支援 Windows 影像處理元件 (WIC) 的映像格式。</span><span class="sxs-lookup"><span data-stu-id="5893b-106">You can use any image format that is supported by the Windows Imaging Component (WIC).</span></span> <span data-ttu-id="5893b-107">例如，您可以使用 BMP、 GIF、 JPEG、 PNG 或 TIFF 格式。</span><span class="sxs-lookup"><span data-stu-id="5893b-107">For example, you can use the BMP, GIF, JPEG, PNG, or TIFF format.</span></span>  
   
-2.  <span data-ttu-id="3bd29-108">將影像檔加入至 WPF 應用程式專案。</span><span class="sxs-lookup"><span data-stu-id="3bd29-108">Add the image file to the WPF Application project.</span></span> <span data-ttu-id="3bd29-109">如需詳細資訊，請參閱[NIB： 如何： 加入現有項目加入至專案](http://msdn.microsoft.com/library/15f4cfb7-78ab-457f-9f14-099a25a6a2d3)。</span><span class="sxs-lookup"><span data-stu-id="3bd29-109">For more information, see [NIB:How to: Add Existing Items to a Project](http://msdn.microsoft.com/library/15f4cfb7-78ab-457f-9f14-099a25a6a2d3).</span></span>  
+2.  <span data-ttu-id="5893b-108">將影像檔加入至 WPF 應用程式專案。</span><span class="sxs-lookup"><span data-stu-id="5893b-108">Add the image file to the WPF Application project.</span></span> <span data-ttu-id="5893b-109">如需詳細資訊，請參閱[NIB： 如何： 加入現有項目加入至專案](http://msdn.microsoft.com/library/15f4cfb7-78ab-457f-9f14-099a25a6a2d3)。</span><span class="sxs-lookup"><span data-stu-id="5893b-109">For more information, see [NIB:How to: Add Existing Items to a Project](http://msdn.microsoft.com/library/15f4cfb7-78ab-457f-9f14-099a25a6a2d3).</span></span>  
   
-3.  <span data-ttu-id="3bd29-110">在 [方案總管] 中選取的映像。</span><span class="sxs-lookup"><span data-stu-id="3bd29-110">In Solution Explorer, select the image.</span></span>  
+3.  <span data-ttu-id="5893b-110">在 [方案總管] 中選取的映像。</span><span class="sxs-lookup"><span data-stu-id="5893b-110">In Solution Explorer, select the image.</span></span>  
   
-4.  <span data-ttu-id="3bd29-111">在 [屬性] 視窗中，按一下下拉式箭號**建置動作**屬性。</span><span class="sxs-lookup"><span data-stu-id="3bd29-111">In the Properties window, click the drop-down arrow for the **Build Action** property.</span></span>  
+4.  <span data-ttu-id="5893b-111">在 [屬性] 視窗中，按一下下拉式箭號**建置動作**屬性。</span><span class="sxs-lookup"><span data-stu-id="5893b-111">In the Properties window, click the drop-down arrow for the **Build Action** property.</span></span>  
   
-5.  <span data-ttu-id="3bd29-112">選取**啟動顯示畫面**從下拉式清單。</span><span class="sxs-lookup"><span data-stu-id="3bd29-112">Select **SplashScreen** from the drop-down list.</span></span>  
+5.  <span data-ttu-id="5893b-112">選取**啟動顯示畫面**從下拉式清單。</span><span class="sxs-lookup"><span data-stu-id="5893b-112">Select **SplashScreen** from the drop-down list.</span></span>  
   
     > [!NOTE]
-    >  <span data-ttu-id="3bd29-113">如果您沒有看到**啟動顯示畫面**選項，請務必檢查您使用[!INCLUDE[vs_orcas_long](../../../../includes/vs-orcas-long-md.md)]SP1 或更新版本。</span><span class="sxs-lookup"><span data-stu-id="3bd29-113">If you do not see the **SplashScreen** option, be sure to check that you are using [!INCLUDE[vs_orcas_long](../../../../includes/vs-orcas-long-md.md)] SP1 or later.</span></span>  
+    >  <span data-ttu-id="5893b-113">如果您沒有看到**啟動顯示畫面**選項，請務必檢查您使用[!INCLUDE[vs_orcas_long](../../../../includes/vs-orcas-long-md.md)]SP1 或更新版本。</span><span class="sxs-lookup"><span data-stu-id="5893b-113">If you do not see the **SplashScreen** option, be sure to check that you are using [!INCLUDE[vs_orcas_long](../../../../includes/vs-orcas-long-md.md)] SP1 or later.</span></span>  
   
-6.  <span data-ttu-id="3bd29-114">按 F5 鍵建置並執行應用程式。</span><span class="sxs-lookup"><span data-stu-id="3bd29-114">Press F5 to build and run the application.</span></span>  
+6.  <span data-ttu-id="5893b-114">按 F5 鍵建置並執行應用程式。</span><span class="sxs-lookup"><span data-stu-id="5893b-114">Press F5 to build and run the application.</span></span>  
   
-     <span data-ttu-id="3bd29-115">啟動顯示畫面影像出現在螢幕的中央，並再讓主應用程式視窗出現時。</span><span class="sxs-lookup"><span data-stu-id="3bd29-115">The splash screen image appears in the center of the screen, and then fades when the main application window appears.</span></span>  
+     <span data-ttu-id="5893b-115">啟動顯示畫面影像出現在螢幕的中央，並再讓主應用程式視窗出現時。</span><span class="sxs-lookup"><span data-stu-id="5893b-115">The splash screen image appears in the center of the screen, and then fades when the main application window appears.</span></span>  
   
-### <a name="to-remove-the-splash-screen-from-an-application"></a><span data-ttu-id="3bd29-116">若要移除應用程式的啟動顯示畫面</span><span class="sxs-lookup"><span data-stu-id="3bd29-116">To remove the splash screen from an application</span></span>  
+### <a name="to-remove-the-splash-screen-from-an-application"></a><span data-ttu-id="5893b-116">若要移除應用程式的啟動顯示畫面</span><span class="sxs-lookup"><span data-stu-id="5893b-116">To remove the splash screen from an application</span></span>  
   
-1.  <span data-ttu-id="3bd29-117">在 方案總管 中，選取 啟動顯示畫面影像。</span><span class="sxs-lookup"><span data-stu-id="3bd29-117">In Solution Explorer, select the splash screen image.</span></span>  
+1.  <span data-ttu-id="5893b-117">在 方案總管 中，選取 啟動顯示畫面影像。</span><span class="sxs-lookup"><span data-stu-id="5893b-117">In Solution Explorer, select the splash screen image.</span></span>  
   
-2.  <span data-ttu-id="3bd29-118">在 [屬性] 視窗中，設定**建置動作**至**無**。</span><span class="sxs-lookup"><span data-stu-id="3bd29-118">In the Properties window, set the **Build Action** to **None**.</span></span>  
+2.  <span data-ttu-id="5893b-118">在 [屬性] 視窗中，設定**建置動作**至**無**。</span><span class="sxs-lookup"><span data-stu-id="5893b-118">In the Properties window, set the **Build Action** to **None**.</span></span>  
   
-### <a name="to-remove-the-splash-screen-from-an-application"></a><span data-ttu-id="3bd29-119">若要移除應用程式的啟動顯示畫面</span><span class="sxs-lookup"><span data-stu-id="3bd29-119">To remove the splash screen from an application</span></span>  
+### <a name="to-remove-the-splash-screen-from-an-application"></a><span data-ttu-id="5893b-119">若要移除應用程式的啟動顯示畫面</span><span class="sxs-lookup"><span data-stu-id="5893b-119">To remove the splash screen from an application</span></span>  
   
--   <span data-ttu-id="3bd29-120">在 方案總管刪除啟動顯示畫面影像。</span><span class="sxs-lookup"><span data-stu-id="3bd29-120">In Solution Explorer, delete the splash screen image.</span></span>  
+-   <span data-ttu-id="5893b-120">在 方案總管刪除啟動顯示畫面影像。</span><span class="sxs-lookup"><span data-stu-id="5893b-120">In Solution Explorer, delete the splash screen image.</span></span>  
   
--   <span data-ttu-id="3bd29-121">從專案排除啟動顯示畫面影像。</span><span class="sxs-lookup"><span data-stu-id="3bd29-121">Exclude the splash screen image from the project.</span></span>  
+-   <span data-ttu-id="5893b-121">從專案排除啟動顯示畫面影像。</span><span class="sxs-lookup"><span data-stu-id="5893b-121">Exclude the splash screen image from the project.</span></span>  
   
-## <a name="see-also"></a><span data-ttu-id="3bd29-122">請參閱</span><span class="sxs-lookup"><span data-stu-id="3bd29-122">See Also</span></span>  
+## <a name="see-also"></a><span data-ttu-id="5893b-122">另請參閱</span><span class="sxs-lookup"><span data-stu-id="5893b-122">See Also</span></span>  
  <xref:System.Windows.SplashScreen>  
- [<span data-ttu-id="3bd29-123">NIB： 如何： 將現有的項目加入至專案</span><span class="sxs-lookup"><span data-stu-id="3bd29-123">NIB:How to: Add Existing Items to a Project</span></span>](http://msdn.microsoft.com/library/15f4cfb7-78ab-457f-9f14-099a25a6a2d3)
+ [<span data-ttu-id="5893b-123">NIB： 如何： 將現有的項目加入至專案</span><span class="sxs-lookup"><span data-stu-id="5893b-123">NIB:How to: Add Existing Items to a Project</span></span>](http://msdn.microsoft.com/library/15f4cfb7-78ab-457f-9f14-099a25a6a2d3)

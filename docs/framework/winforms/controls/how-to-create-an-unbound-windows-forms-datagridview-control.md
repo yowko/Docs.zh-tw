@@ -14,6 +14,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: zh-TW
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33531062"
 ---
 # <a name="how-to-create-an-unbound-windows-forms-datagridview-control"></a><span data-ttu-id="6c5aa-102">如何：建立未繫結的 Windows Form DataGridView 控制項</span><span class="sxs-lookup"><span data-stu-id="6c5aa-102">How to: Create an Unbound Windows Forms DataGridView Control</span></span>
 <span data-ttu-id="6c5aa-103">下列程式碼範例示範如何以程式設計方式填入 <xref:System.Windows.Forms.DataGridView> 控制項，而不用將這個控制項繫結至資料來源。</span><span class="sxs-lookup"><span data-stu-id="6c5aa-103">The following code example demonstrates how to populate a <xref:System.Windows.Forms.DataGridView> control programmatically without binding it to a data source.</span></span> <span data-ttu-id="6c5aa-104">當您擁有想以資料表格式來顯示的少量資料時，這將會非常有用。</span><span class="sxs-lookup"><span data-stu-id="6c5aa-104">This is useful when you have a small amount of data that you want to display in a table format.</span></span>  

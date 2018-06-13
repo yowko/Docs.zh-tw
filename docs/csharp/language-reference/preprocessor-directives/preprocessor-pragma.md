@@ -11,6 +11,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: HT
 ms.contentlocale: zh-TW
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33278805"
 ---
 # <a name="pragma-c-reference"></a><span data-ttu-id="15260-102">#pragma (C# 參考)</span><span class="sxs-lookup"><span data-stu-id="15260-102">#pragma (C# Reference)</span></span>
 <span data-ttu-id="15260-103">`#pragma` 將編譯編譯器所在檔案的特殊指示提供給編譯器。</span><span class="sxs-lookup"><span data-stu-id="15260-103">`#pragma` gives the compiler special instructions for the compilation of the file in which it appears.</span></span> <span data-ttu-id="15260-104">編譯器必須支援指示。</span><span class="sxs-lookup"><span data-stu-id="15260-104">The instructions must be supported by the compiler.</span></span> <span data-ttu-id="15260-105">換句話說，您不能使用 `#pragma` 來建立自訂前置處理指示。</span><span class="sxs-lookup"><span data-stu-id="15260-105">In other words, you cannot use `#pragma` to create custom preprocessing instructions.</span></span> <span data-ttu-id="15260-106">Microsoft C# 編譯器支援下列兩個 `#pragma` 指示：</span><span class="sxs-lookup"><span data-stu-id="15260-106">The Microsoft C# compiler supports the following two `#pragma` instructions:</span></span>  

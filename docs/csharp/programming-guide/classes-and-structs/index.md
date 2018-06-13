@@ -15,6 +15,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: HT
 ms.contentlocale: zh-TW
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33327355"
 ---
 # <a name="classes-and-structs-c-programming-guide"></a><span data-ttu-id="bce2f-103">類別和結構 (C# 程式設計手冊)</span><span class="sxs-lookup"><span data-stu-id="bce2f-103">Classes and Structs (C# Programming Guide)</span></span>
 <span data-ttu-id="bce2f-104">類別和結構是 .NET Framework 中一般型別系統的兩個基本建構。</span><span class="sxs-lookup"><span data-stu-id="bce2f-104">Classes and structs are two of the basic constructs of the common type system in the .NET Framework.</span></span> <span data-ttu-id="bce2f-105">每一個基本上都是封裝一組屬於相同邏輯單元之資料和行為的資料結構。</span><span class="sxs-lookup"><span data-stu-id="bce2f-105">Each is essentially a data structure that encapsulates a set of data and behaviors that belong together as a logical unit.</span></span> <span data-ttu-id="bce2f-106">資料和行為是類別或結構的「成員」，它們包含類別或結構的方法、屬性和事件等，如本主題稍後所列。</span><span class="sxs-lookup"><span data-stu-id="bce2f-106">The data and behaviors are the *members* of the class or struct, and they include its methods, properties, and events, and so on, as listed later in this topic.</span></span>  

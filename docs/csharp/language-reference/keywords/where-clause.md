@@ -12,6 +12,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: HT
 ms.contentlocale: zh-TW
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33284299"
 ---
 # <a name="where-clause-c-reference"></a><span data-ttu-id="e607e-102">where 子句 (C# 參考)</span><span class="sxs-lookup"><span data-stu-id="e607e-102">where clause (C# Reference)</span></span>
 <span data-ttu-id="e607e-103">`where` 子句用於查詢運算式中，以指定將在查詢運算式中傳回資料來源中的項目。</span><span class="sxs-lookup"><span data-stu-id="e607e-103">The `where` clause is used in a query expression to specify which elements from the data source will be returned in the query expression.</span></span> <span data-ttu-id="e607e-104">它會將布林值條件 (*predicate*) 套用到每個來源項目 (透過範圍變數所參考)，並傳回所指定條件為 true 的項目。</span><span class="sxs-lookup"><span data-stu-id="e607e-104">It applies a Boolean condition (*predicate*) to each source element (referenced by the range variable) and returns those for which the specified condition is true.</span></span> <span data-ttu-id="e607e-105">單一查詢運算式可能會包含多個 `where` 子句，而單一子句可能會包含多個述詞子運算式。</span><span class="sxs-lookup"><span data-stu-id="e607e-105">A single query expression may contain multiple `where` clauses and a single clause may contain multiple predicate subexpressions.</span></span>  

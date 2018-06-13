@@ -7,6 +7,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: HT
 ms.contentlocale: zh-TW
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33326754"
 ---
 # <a name="variance-in-generic-interfaces-c"></a><span data-ttu-id="b75a9-102">泛型介面中的差異 (C#)</span><span class="sxs-lookup"><span data-stu-id="b75a9-102">Variance in Generic Interfaces (C#)</span></span>
 <span data-ttu-id="b75a9-103">.NET Framework 4 針對數個現有泛型介面推出了差異支援。</span><span class="sxs-lookup"><span data-stu-id="b75a9-103">.NET Framework 4 introduced variance support for several existing generic interfaces.</span></span> <span data-ttu-id="b75a9-104">差異支援可讓實作這些介面的類別以隱含方式轉換。</span><span class="sxs-lookup"><span data-stu-id="b75a9-104">Variance support enables implicit conversion of classes that implement these interfaces.</span></span> <span data-ttu-id="b75a9-105">下列介面現在都是 Variant︰</span><span class="sxs-lookup"><span data-stu-id="b75a9-105">The following interfaces are now variant:</span></span>  

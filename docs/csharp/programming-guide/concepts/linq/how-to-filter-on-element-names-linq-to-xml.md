@@ -7,6 +7,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: HT
 ms.contentlocale: zh-TW
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33323257"
 ---
 # <a name="how-to-filter-on-element-names-linq-to-xml-c"></a><span data-ttu-id="8484b-102">如何：篩選項目名稱 (LINQ to XML) (C#)</span><span class="sxs-lookup"><span data-stu-id="8484b-102">How to: Filter on Element Names (LINQ to XML) (C#)</span></span>
 <span data-ttu-id="8484b-103">當您呼叫可傳回 <xref:System.Collections.Generic.IEnumerable%601> 之 <xref:System.Xml.Linq.XElement> 的其中一個方法時，您可以篩選項目名稱。</span><span class="sxs-lookup"><span data-stu-id="8484b-103">When you call one of the methods that return <xref:System.Collections.Generic.IEnumerable%601> of <xref:System.Xml.Linq.XElement>, you can filter on the element name.</span></span>  
