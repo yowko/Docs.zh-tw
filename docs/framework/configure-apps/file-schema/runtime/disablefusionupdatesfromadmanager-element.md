@@ -12,6 +12,7 @@ ms.sourcegitcommit: 11f11ca6cefe555972b3a5c99729d1a7523d8f50
 ms.translationtype: MT
 ms.contentlocale: zh-TW
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32745886"
 ---
 # <a name="ltdisablefusionupdatesfromadmanagergt-element"></a><span data-ttu-id="dde00-102">&lt;disableFusionUpdatesFromADManager&gt;項目</span><span class="sxs-lookup"><span data-stu-id="dde00-102">&lt;disableFusionUpdatesFromADManager&gt; Element</span></span>
 <span data-ttu-id="dde00-103">指定是否停用預設行為 (亦即允許執行階段主機覆寫應用程式網域的組態設定)。</span><span class="sxs-lookup"><span data-stu-id="dde00-103">Specifies whether the default behavior, which is to allow the runtime host to override configuration settings for an application domain, is disabled.</span></span>  

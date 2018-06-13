@@ -7,6 +7,7 @@ ms.sourcegitcommit: 11f11ca6cefe555972b3a5c99729d1a7523d8f50
 ms.translationtype: MT
 ms.contentlocale: zh-TW
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32745405"
 ---
 # <a name="ltaddgt-of-ltclaimtyperequirementsgt-element"></a><span data-ttu-id="04b1a-102">&lt;claimTypeRequirements&gt; 項目的 &lt;add&gt;</span><span class="sxs-lookup"><span data-stu-id="04b1a-102">&lt;add&gt; of &lt;claimTypeRequirements&gt; element</span></span>
 <span data-ttu-id="04b1a-103">指定必須在聯合認證中出現的必要及選擇性宣告型別。</span><span class="sxs-lookup"><span data-stu-id="04b1a-103">Specifies the types of required and optional claims expected to appear in the federated credential.</span></span> <span data-ttu-id="04b1a-104">例如，服務說明傳入認證必須處理特定的一組宣告型別。</span><span class="sxs-lookup"><span data-stu-id="04b1a-104">For example, services state the requirements on incoming credentials, which must possess a certain set of claim types.</span></span>  

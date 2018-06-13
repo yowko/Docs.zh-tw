@@ -12,6 +12,7 @@ ms.sourcegitcommit: 11f11ca6cefe555972b3a5c99729d1a7523d8f50
 ms.translationtype: MT
 ms.contentlocale: zh-TW
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32743572"
 ---
 # <a name="ltappdomainresourcemonitoringgt-element"></a><span data-ttu-id="2c191-102">&lt;appDomainResourceMonitoring&gt;項目</span><span class="sxs-lookup"><span data-stu-id="2c191-102">&lt;appDomainResourceMonitoring&gt; Element</span></span>
 <span data-ttu-id="2c191-103">針對處理序存留期間，指示執行階段收集處理序中所有應用程式網域的統計資料。</span><span class="sxs-lookup"><span data-stu-id="2c191-103">Instructs the runtime to collect statistics on all application domains in the process for the life of the process.</span></span>  

@@ -16,6 +16,7 @@ ms.sourcegitcommit: 11f11ca6cefe555972b3a5c99729d1a7523d8f50
 ms.translationtype: MT
 ms.contentlocale: zh-TW
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32744443"
 ---
 # <a name="ltproxygt-element-network-settings"></a><span data-ttu-id="d999a-102">&lt;proxy&gt;項目 （網路設定）</span><span class="sxs-lookup"><span data-stu-id="d999a-102">&lt;proxy&gt; Element (Network Settings)</span></span>
 <span data-ttu-id="d999a-103">定義 Proxy 伺服器。</span><span class="sxs-lookup"><span data-stu-id="d999a-103">Defines a proxy server.</span></span>  

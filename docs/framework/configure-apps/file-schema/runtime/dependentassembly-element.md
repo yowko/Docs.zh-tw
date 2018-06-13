@@ -16,6 +16,7 @@ ms.sourcegitcommit: 11f11ca6cefe555972b3a5c99729d1a7523d8f50
 ms.translationtype: MT
 ms.contentlocale: zh-TW
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32744908"
 ---
 # <a name="ltdependentassemblygt-element"></a><span data-ttu-id="a0144-102">&lt;dependentAssembly&gt;項目</span><span class="sxs-lookup"><span data-stu-id="a0144-102">&lt;dependentAssembly&gt; Element</span></span>
 <span data-ttu-id="a0144-103">封裝每一個組件的繫結原則和組件位置。</span><span class="sxs-lookup"><span data-stu-id="a0144-103">Encapsulates binding policy and assembly location for each assembly.</span></span> <span data-ttu-id="a0144-104">使用其中一個`dependentAssembly`每個組件的項目。</span><span class="sxs-lookup"><span data-stu-id="a0144-104">Use one `dependentAssembly` element for each assembly.</span></span>  

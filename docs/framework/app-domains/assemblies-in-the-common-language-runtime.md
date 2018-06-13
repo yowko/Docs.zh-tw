@@ -19,6 +19,7 @@ ms.sourcegitcommit: 11f11ca6cefe555972b3a5c99729d1a7523d8f50
 ms.translationtype: HT
 ms.contentlocale: zh-TW
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32744326"
 ---
 # <a name="assemblies-in-the-common-language-runtime"></a><span data-ttu-id="1304c-102">Common Language Runtime 中的組件</span><span class="sxs-lookup"><span data-stu-id="1304c-102">Assemblies in the Common Language Runtime</span></span>
 <span data-ttu-id="1304c-103">組件是 .NET Framework 應用程式的建置組塊；它們構成部署、版本控制、重複使用、啟用範圍和安全性權限的基礎單位。</span><span class="sxs-lookup"><span data-stu-id="1304c-103">Assemblies are the building blocks of .NET Framework applications; they form the fundamental unit of deployment, version control, reuse, activation scoping, and security permissions.</span></span> <span data-ttu-id="1304c-104">組件是建置來共同運作及構成一個功能邏輯單位的型別與資源集合。</span><span class="sxs-lookup"><span data-stu-id="1304c-104">An assembly is a collection of types and resources that are built to work together and form a logical unit of functionality.</span></span> <span data-ttu-id="1304c-105">組件為通用語言執行平台提供了感知型別實作所需的資訊。</span><span class="sxs-lookup"><span data-stu-id="1304c-105">An assembly provides the common language runtime with the information it needs to be aware of type implementations.</span></span> <span data-ttu-id="1304c-106">對於執行階段而言，型別不會存在於組件的內容以外。</span><span class="sxs-lookup"><span data-stu-id="1304c-106">To the runtime, a type does not exist outside the context of an assembly.</span></span>  

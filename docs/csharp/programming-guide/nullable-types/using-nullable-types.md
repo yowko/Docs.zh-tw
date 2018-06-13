@@ -9,6 +9,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: HT
 ms.contentlocale: zh-TW
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33336917"
 ---
 # <a name="using-nullable-types-c-programming-guide"></a><span data-ttu-id="a1f8d-102">使用可為 Null 的類型 (C# 程式設計手冊)</span><span class="sxs-lookup"><span data-stu-id="a1f8d-102">Using Nullable Types (C# Programming Guide)</span></span>
 <span data-ttu-id="a1f8d-103">可為 Null 的型別能代表基礎類型的所有值，以及額外的 [null](../../../csharp/language-reference/keywords/null.md) 值。</span><span class="sxs-lookup"><span data-stu-id="a1f8d-103">Nullable types can represent all the values of an underlying type, and an additional [null](../../../csharp/language-reference/keywords/null.md) value.</span></span> <span data-ttu-id="a1f8d-104">可為 Null 的型別會以下列兩種方法之一宣告︰</span><span class="sxs-lookup"><span data-stu-id="a1f8d-104">Nullable types are declared in one of two ways:</span></span>  

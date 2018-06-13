@@ -13,6 +13,7 @@ ms.sourcegitcommit: 11f11ca6cefe555972b3a5c99729d1a7523d8f50
 ms.translationtype: MT
 ms.contentlocale: zh-TW
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32743260"
 ---
 # <a name="assembly-binding-redirection-security-permission"></a><span data-ttu-id="90da0-102">組件繫結重新導向安全性使用權限</span><span class="sxs-lookup"><span data-stu-id="90da0-102">Assembly Binding Redirection Security Permission</span></span>
 <span data-ttu-id="90da0-103">在應用程式組態檔中進行明確的組件繫結重新導向必須擁有安全性權限。</span><span class="sxs-lookup"><span data-stu-id="90da0-103">Explicit assembly binding redirection in an application configuration file requires a security permission.</span></span> <span data-ttu-id="90da0-104">這適用於 .NET Framework 組件和協力廠商組件的重新導向。</span><span class="sxs-lookup"><span data-stu-id="90da0-104">This applies to redirection of .NET Framework assemblies and assemblies from third parties.</span></span> <span data-ttu-id="90da0-105">藉由設定授與權<xref:System.Security.Permissions.SecurityPermissionFlag>加上旗標上<xref:System.Security.Permissions.SecurityPermission>。</span><span class="sxs-lookup"><span data-stu-id="90da0-105">The permission is granted by setting the <xref:System.Security.Permissions.SecurityPermissionFlag> flag on the <xref:System.Security.Permissions.SecurityPermission>.</span></span> <span data-ttu-id="90da0-106">根據預設，managed 組件具有任何權限。</span><span class="sxs-lookup"><span data-stu-id="90da0-106">Managed assemblies have no permissions by default.</span></span>  

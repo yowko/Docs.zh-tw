@@ -15,6 +15,7 @@ ms.sourcegitcommit: 11f11ca6cefe555972b3a5c99729d1a7523d8f50
 ms.translationtype: MT
 ms.contentlocale: zh-TW
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32745704"
 ---
 # <a name="ltcompatsortnlsversiongt-element"></a><span data-ttu-id="d85ea-102">&lt;CompatSortNLSVersion&gt;項目</span><span class="sxs-lookup"><span data-stu-id="d85ea-102">&lt;CompatSortNLSVersion&gt; Element</span></span>
 <span data-ttu-id="d85ea-103">指定執行階段在執行字串比較時，應使用舊版排序次序。</span><span class="sxs-lookup"><span data-stu-id="d85ea-103">Specifies that the runtime should use legacy sort orders when performing string comparisons.</span></span>  
