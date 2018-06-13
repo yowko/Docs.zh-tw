@@ -18,9 +18,10 @@ author: mairaw
 ms.author: mairaw
 ms.openlocfilehash: 63f6ea4a348b3035a1f0b1d3e00f61f689915fa2
 ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
-ms.translationtype: MT
+ms.translationtype: HT
 ms.contentlocale: zh-TW
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33450095"
 ---
 # <a name="corprfgcreason-enumeration"></a>COR_PRF_GC_REASON 列舉
 指出正在發生之記憶體回收的原因。  
@@ -42,7 +43,7 @@ typedef enum {
 |`COR_PRF_GC_OTHER`|未指定原因。|  
   
 ## <a name="requirements"></a>需求  
- **平台：**看到[系統需求](../../../../docs/framework/get-started/system-requirements.md)。  
+ **平台：** 看到[系統需求](../../../../docs/framework/get-started/system-requirements.md)。  
   
  **標頭：** CorProf.idl、CorProf.h  
   

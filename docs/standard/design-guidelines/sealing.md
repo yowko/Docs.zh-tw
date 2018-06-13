@@ -15,6 +15,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: zh-TW
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33573732"
 ---
 # <a name="sealing"></a>密封
 物件導向架構的功能之一是開發人員可以擴充並自訂架構設計人員所預期的方式。 這是設計的電源和可延伸的危險。 當您設計您的架構時，它是，因此，它需要時，小心設計擴充性，並限制危險時的擴充性非常重要。  

@@ -17,6 +17,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: zh-TW
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33556753"
 ---
 # <a name="how-to-sort-data-in-a-view"></a>如何：排序檢視中的資料
 這個範例說明如何在檢視中排序資料。  

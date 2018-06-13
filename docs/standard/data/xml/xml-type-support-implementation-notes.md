@@ -10,6 +10,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: HT
 ms.contentlocale: zh-TW
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33571406"
 ---
 # <a name="xml-type-support-implementation-notes"></a>XML 型別支援實作注意事項
 本主題說明一些您想要知道的實作詳細資料。  

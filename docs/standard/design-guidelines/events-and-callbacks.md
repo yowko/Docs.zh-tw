@@ -15,6 +15,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: zh-TW
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33573629"
 ---
 # <a name="events-and-callbacks"></a>事件和回呼
 回呼是延伸點，可允許呼叫委派透過使用者程式碼的架構。 這些委派通常會透過方法的參數傳遞給架構。  

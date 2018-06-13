@@ -13,6 +13,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: zh-TW
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33559470"
 ---
 # <a name="how-to-create-a-new-bitmapsource"></a>如何：建立新的 BitmapSource
 這個範例示範如何使用<xref:System.Windows.Media.Imaging.BitmapSource.Create%2A>方法<xref:System.Windows.Media.Imaging.BitmapSource>來建立新的<xref:System.Windows.Media.Imaging.BitmapSource>物件。  

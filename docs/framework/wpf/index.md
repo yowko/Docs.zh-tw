@@ -19,6 +19,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: zh-TW
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33561718"
 ---
 # <a name="windows-presentation-foundation"></a>Windows Presentation Foundation
 Windows Presentation Foundation (WPF) 在 Visual Studio 中開發人員提供了統一的程式設計模型建置在 Windows 上的特定業務桌面應用程式。  
