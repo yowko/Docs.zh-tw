@@ -7,6 +7,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: zh-TW
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33638779"
 ---
 # <a name="the-input-path-refers-to-a-file-but-ends-with-a-directory-separator-character"></a>輸入的路徑參考到檔案，但結果卻是目錄分隔符號字元
 嘗試執行的作業需要提供檔名，但提供的名稱結果卻是目錄分隔符號字元 (`\`)。 這可能是檔案路徑剖析錯誤的結果。  

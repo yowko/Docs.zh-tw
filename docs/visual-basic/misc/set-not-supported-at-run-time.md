@@ -9,6 +9,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: zh-TW
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33638339"
 ---
 # <a name="set-not-supported-at-run-time"></a>在執行階段不支援 Set
 您嘗試設定或變更其值只能在設計階段設定的屬性。  

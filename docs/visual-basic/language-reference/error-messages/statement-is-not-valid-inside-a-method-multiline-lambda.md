@@ -12,6 +12,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: zh-TW
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33598851"
 ---
 # <a name="statement-is-not-valid-inside-a-methodmultiline-lambda"></a>陳述式在方法/多行 Lambda 內無效
 陳述式內無效`Sub`， `Function`，屬性`Get`，或屬性`Set`程序。 某些陳述式可以放在模組或類別層級。 其他項目，例如`Option Strict`，必須是在命名空間層級，而且在所有其他宣告之前。  

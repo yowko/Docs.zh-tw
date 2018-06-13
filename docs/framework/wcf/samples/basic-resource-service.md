@@ -7,6 +7,7 @@ ms.sourcegitcommit: 15109844229ade1c6449f48f3834db1b26907824
 ms.translationtype: MT
 ms.contentlocale: zh-TW
 ms.lasthandoff: 05/07/2018
+ms.locfileid: "33803724"
 ---
 # <a name="basic-resource-service"></a>基本資源服務
 這個範例示範如何實作以 HTTP 為基礎的服務使用 Windows Communication Foundation (WCF) REST 程式設計模型會公開客戶的一組支援擷取、 加入、 刪除和取代作業。 此範例包含 2-自我裝載的 WCF HTTP 服務 (Service.cs) 和元件的主控台應用程式 (program.cs) 建立服務並呼叫它。  

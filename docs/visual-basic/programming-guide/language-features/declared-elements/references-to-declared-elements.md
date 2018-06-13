@@ -11,6 +11,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: zh-TW
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33655807"
 ---
 # <a name="references-to-declared-elements-visual-basic"></a>已宣告之項目的參考 (Visual Basic)
 當您的程式碼參考宣告的項目時，Visual Basic 編譯器符合您對適當的宣告，該名稱的參考中的名稱。 如果具有相同名稱宣告一個以上的項目，您可以控制的項目會以供參考*合格*其名稱。  

@@ -9,6 +9,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: zh-TW
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33637500"
 ---
 # <a name="no-default-member-found-for-type-39lttypenamegt39"></a>沒有預設成員找到型別的&#39;&lt;類型名稱&gt;&#39;
 已嘗試晚期繫結索引 `Get` 或 `Set` 呼叫。  

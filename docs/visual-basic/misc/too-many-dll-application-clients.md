@@ -9,6 +9,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: zh-TW
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33639636"
 ---
 # <a name="too-many-dll-application-clients"></a>太多 DLL 應用程式用戶端
 Visual basic 中的動態連結程式庫 (DLL) 只能容納有限數目的主應用程式的存取。 所有嘗試同時存取 Visual Basic DLL 應用程式與其他應用程式的 Visual Basic （其中有些可能存取您的應用程式） 的主機。  
