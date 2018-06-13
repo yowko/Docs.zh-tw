@@ -7,6 +7,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: zh-TW
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33493291"
 ---
 # <a name="how-to-dynamic-update"></a>HOW TO：動態更新
 本主題概要說明建立和動態更新路由組態所需的基本步驟。 在此範例中，初始路由組態是從組態檔取得，並且會將所有訊息路由傳送至 regularCalc 計算機服務。不過，該組態接著會以程式設計的方式更新，以變更 roundingCalc 服務的目的端點。  

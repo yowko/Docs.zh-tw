@@ -14,6 +14,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: zh-TW
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33493702"
 ---
 # <a name="how-to-make-x509-certificates-accessible-to-wcf"></a>HOW TO：讓 WCF 能夠存取 X.509 憑證
 若要讓 Windows Communication Foundation (WCF) 存取 X.509 憑證，應用程式程式碼必須指定憑證存放區名稱和位置。 在某些狀況下，處理序身分識別必須能夠存取包含與 X.509 憑證相關聯之私密金鑰的檔案。 若要取得相關聯的憑證存放區中 X.509 憑證的私密金鑰，WCF 必須有權限，若要這樣做。 根據預設，只有擁有人和系統帳戶能夠存取憑證的私密金鑰。  

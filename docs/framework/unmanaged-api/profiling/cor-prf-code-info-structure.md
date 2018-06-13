@@ -18,9 +18,10 @@ author: mairaw
 ms.author: mairaw
 ms.openlocfilehash: 852e6cbd666441b92afb583b15b72d50d26eff8c
 ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
-ms.translationtype: MT
+ms.translationtype: HT
 ms.contentlocale: zh-TW
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33449780"
 ---
 # <a name="corprfcodeinfo-structure"></a>COR_PRF_CODE_INFO 結構
 代表儲存在記憶體中的一個機器碼連續區塊。  
@@ -42,7 +43,7 @@ typedef struct _COR_PRF_CODE_INFO {
 |`size`|區塊的大小。|  
   
 ## <a name="requirements"></a>需求  
- **平台：**看到[系統需求](../../../../docs/framework/get-started/system-requirements.md)。  
+ **平台：** 看到[系統需求](../../../../docs/framework/get-started/system-requirements.md)。  
   
  **標頭：** CorProf.idl  
   

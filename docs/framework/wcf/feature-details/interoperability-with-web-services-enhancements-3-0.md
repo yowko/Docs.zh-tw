@@ -7,6 +7,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: zh-TW
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33490915"
 ---
 # <a name="interoperability-with-web-services-enhancements-30"></a>與 Web Services Enhancements 3.0 的互通性
 Windows Communication Foundation (WCF) 用戶端和服務會與 Web Services Enhancements 3.0 for Microsoft.NET (WSE) 用戶端和服務的連線層級相容 WCF 用戶端和服務設定為使用 August 2004 版本時Ws-addressing 規格。  

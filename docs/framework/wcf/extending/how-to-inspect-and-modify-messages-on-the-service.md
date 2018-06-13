@@ -10,6 +10,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: zh-TW
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33488071"
 ---
 # <a name="how-to-inspect-and-modify-messages-on-the-service"></a>HOW TO：檢查及修改服務中的訊息
 您可以檢查或修改整個 Windows Communication Foundation (WCF) 用戶端的傳入或傳出訊息，藉由實作<xref:System.ServiceModel.Dispatcher.IDispatchMessageInspector?displayProperty=nameWithType>並將它插入服務執行階段。 如需詳細資訊，請參閱[擴充發送器](../../../../docs/framework/wcf/extending/extending-dispatchers.md)。 服務上對等的功能為 <xref:System.ServiceModel.Dispatcher.IClientMessageInspector?displayProperty=nameWithType>。  

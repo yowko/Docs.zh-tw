@@ -13,6 +13,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: zh-TW
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33523679"
 ---
 # <a name="using-the-world-transformation"></a>使用全局轉換
 全局轉換是屬性的<xref:System.Drawing.Graphics>類別。 指定全局轉換的數字會儲存在<xref:System.Drawing.Drawing2D.Matrix>物件，代表 3 × 3 矩陣。 <xref:System.Drawing.Drawing2D.Matrix>和<xref:System.Drawing.Graphics>類別有數種方法來設定數字的自然變換矩陣中。  
