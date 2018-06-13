@@ -18,6 +18,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: HT
 ms.contentlocale: zh-TW
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33218172"
 ---
 # <a name="-reference-c-compiler-options"></a>-reference (C# 編譯器選項)
 **-reference** 選項可讓編譯器將指定檔案的 [public](../../../csharp/language-reference/keywords/public.md) 類型資訊匯入至目前的專案，以讓您透過指定的組件檔案來參考中繼資料。  

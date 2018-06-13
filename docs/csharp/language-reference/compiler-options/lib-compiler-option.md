@@ -13,6 +13,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: HT
 ms.contentlocale: zh-TW
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33216852"
 ---
 # <a name="-lib-c-compiler-options"></a>-lib (C# 編譯器選項)
 **-lib** 選項會使用 [-reference (C# 編譯器選項)](../../../csharp/language-reference/compiler-options/reference-compiler-option.md) 選項，來指定參考的組件位置。  

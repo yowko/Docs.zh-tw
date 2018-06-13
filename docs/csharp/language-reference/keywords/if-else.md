@@ -15,6 +15,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: HT
 ms.contentlocale: zh-TW
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33218739"
 ---
 # <a name="if-else-c-reference"></a>if-else (C# 參考)
 `if` 陳述式會根據運算式的 `Boolean` 值識別要執行的陳述式。 在下列範例中， `Boolean` 變數 `result` 設為 `true` ，然後以 `if` 陳述式進行檢查。 輸出為 `The condition is true`。  

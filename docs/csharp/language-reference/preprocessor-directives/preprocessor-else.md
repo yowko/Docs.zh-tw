@@ -11,6 +11,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: HT
 ms.contentlocale: zh-TW
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33269151"
 ---
 # <a name="else-c-reference"></a>#else (C# 參考)
 `#else` 可讓您建立複合條件指示詞，如此，如果前面的 [#if](../../../csharp/language-reference/preprocessor-directives/preprocessor-if.md) 或 (選擇性) [#elif](../../../csharp/language-reference/preprocessor-directives/preprocessor-elif.md) 指示詞中沒有運算式為 `true`，則編譯器會評估 `#else` 與後續 `#endif` 之間的所有程式碼。  

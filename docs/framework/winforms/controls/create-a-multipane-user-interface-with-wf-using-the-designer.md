@@ -11,6 +11,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: zh-TW
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33529856"
 ---
 # <a name="how-to-create-a-multipane-user-interface-with-windows-forms-using-the-designer"></a>如何：使用設計工具，以 Windows Form 建立多窗格使用者介面
 在下列程序中，您將建立類似搭配使用 Microsoft Outlook 中的多窗格使用者介面**資料夾** 清單中，**訊息** 窗格中，與**預覽**窗格。 這種排列方式被達成透過停駐控制項的表單來達成。  

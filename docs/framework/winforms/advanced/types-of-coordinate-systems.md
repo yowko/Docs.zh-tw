@@ -20,6 +20,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: zh-TW
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33529749"
 ---
 # <a name="types-of-coordinate-systems"></a>座標系統類型
 [!INCLUDE[ndptecgdiplus](../../../../includes/ndptecgdiplus-md.md)] 會使用三種座標空間： world、 頁面和裝置。 全局座標是用來建立模型特定的圖形範圍的座標，您將傳遞至方法在.NET Framework 中的座標。 頁面座標是指繪圖介面，例如表單或控制項所使用的座標系統。 裝置座標是實體裝置，例如螢幕或紙張繪製所使用的座標。 當您進行的呼叫`myGraphics.DrawLine(myPen, 0, 0, 160, 80)`，傳遞至的點<xref:System.Drawing.Graphics.DrawLine%2A>方法-`(0, 0)`和`(160, 80)`— 中全局座標空間。 之前[!INCLUDE[ndptecgdiplus](../../../../includes/ndptecgdiplus-md.md)]可以在螢幕上繪製線條，通過一連串的轉換的座標。 一個轉換，稱為全局轉換，將全局座標轉換為頁面座標和另一個轉換，稱為 「 頁面 」 轉換，將頁面座標轉換為裝置座標。  

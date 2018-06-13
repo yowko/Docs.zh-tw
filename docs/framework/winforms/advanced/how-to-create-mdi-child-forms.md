@@ -14,6 +14,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: zh-TW
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33527495"
 ---
 # <a name="how-to-create-mdi-child-forms"></a>如何：建立 MDI 子表單
 MDI 子表單是不可或缺的要素的[多重文件介面 (MDI) 應用程式](../../../../docs/framework/winforms/advanced/multiple-document-interface-mdi-applications.md)，如下列形式會與使用者互動的中心。  

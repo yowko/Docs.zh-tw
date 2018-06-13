@@ -13,6 +13,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: HT
 ms.contentlocale: zh-TW
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33217480"
 ---
 # <a name="group-clause-c-reference"></a>group 子句 (C# 參考)
 `group` 子句會傳回一系列的 <xref:System.Linq.IGrouping%602> 物件，而這些物件包含符合群組之索引鍵值的零或多個項目。 例如，您可以根據每個字串中的第一個字母來分組一序列的字串。 在此情況下，第一個字母是索引鍵、具有類型 [char](../../../csharp/language-reference/keywords/char.md)，並儲存在每個 <xref:System.Linq.IGrouping%602> 物件的 `Key` 屬性中。 編譯器會推斷索引鍵類型。  

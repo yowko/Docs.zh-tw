@@ -10,6 +10,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: zh-TW
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33525879"
 ---
 # <a name="events-in-windows-forms-controls"></a>Windows Form 控制項中的事件
 Windows Form 控制項繼承來自多個六十事件<xref:System.Windows.Forms.Control?displayProperty=nameWithType>。 這些包括<xref:System.Windows.Forms.Control.Paint>會導致要繪製控制項的事件，例如顯示視窗，與相關的事件<xref:System.Windows.Forms.Control.Resize>和<xref:System.Windows.Forms.Control.Layout>事件，以及低階滑鼠和鍵盤事件。 某些低階事件，可由合成<xref:System.Windows.Forms.Control>成語意的事件，例如<xref:System.Windows.Forms.Control.Click>和<xref:System.Windows.Forms.Control.DoubleClick>。 如需繼承的事件的詳細資訊，請參閱<xref:System.Windows.Forms.Control>。  

@@ -13,6 +13,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: HT
 ms.contentlocale: zh-TW
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33216934"
 ---
 # <a name="async-c-reference"></a>async (C# 參考)
 使用 `async` 修飾詞可將方法、[Lambda 運算式](../../../csharp/programming-guide/statements-expressions-operators/lambda-expressions.md)或[匿名方法](../../../csharp/programming-guide/statements-expressions-operators/anonymous-methods.md)指定為非同步。 如果您在方法或運算式上使用這個修飾詞，則它是指「非同步方法」。 下例定義名為 `ExampleMethodAsync` 的非同步方法： 

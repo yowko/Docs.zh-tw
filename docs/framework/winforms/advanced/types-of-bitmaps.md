@@ -25,6 +25,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: zh-TW
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33529021"
 ---
 # <a name="types-of-bitmaps"></a>點陣圖類型
 點陣圖是指定的每個像素色彩的像素矩形陣列中的位元陣列。 組成個別像素的位元數目會決定可以指派給該像素的色彩數目。 比方說，如果以 4 位元表示每個像素，然後指定像素可以指派其中 16 個不同的色彩 (2 ^4 = 16)。 下表顯示的一些範例可以指派給像素，以表示所指定的位元數的色彩數目。  

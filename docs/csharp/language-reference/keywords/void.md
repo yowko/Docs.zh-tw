@@ -12,6 +12,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: HT
 ms.contentlocale: zh-TW
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33267283"
 ---
 # <a name="void-c-reference"></a>void (C# 參考)
 當 `void` 作為方法的傳回型別時，其可指定方法不要傳回值。

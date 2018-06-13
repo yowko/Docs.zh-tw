@@ -16,6 +16,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: HT
 ms.contentlocale: zh-TW
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33219176"
 ---
 # <a name="-linkresource-c-compiler-options"></a>-linkresource (C# 編譯器選項)
 在輸出檔中建立 .NET Framework 資源連結。 資源檔不會新增至輸出檔。 這點與 [-resource](../../../csharp/language-reference/compiler-options/resource-compiler-option.md) 選項不同；後者會將資源檔內嵌在輸出檔案中。  

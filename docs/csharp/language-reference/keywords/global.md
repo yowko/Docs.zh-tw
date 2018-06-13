@@ -12,6 +12,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: HT
 ms.contentlocale: zh-TW
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33216015"
 ---
 # <a name="global-c-reference"></a>global (C# 參考)
 當 `global` 內容關鍵字出現在 [:: 運算子](../../../csharp/language-reference/operators/namespace-alias-qualifer.md) 之前時，是指全域命名空間，這是所有 C# 程式的預設命名空間，不然就是不具名。 如需詳細資訊，請參閱[如何：使用全域命名空間別名](../../../csharp/programming-guide/namespaces/how-to-use-the-global-namespace-alias.md)。  

@@ -7,6 +7,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: HT
 ms.contentlocale: zh-TW
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33216735"
 ---
 # <a name="-targetappcontainerexe-c-compiler-options"></a>-target:appcontainerexe (C# 編譯器選項)
 如果您使用 **-target:appcontainerexe** 編譯器選項，編譯器會建立一個必須在應用程式容器中執行的 Windows 可執行檔 (.exe)。 這個選項相當於 [-target:winexe](../../../csharp/language-reference/compiler-options/target-winexe-compiler-option.md)，但是專為 [!INCLUDE[win8_appname_long](~/includes/win8-appname-long-md.md)] 應用程式所設計。  

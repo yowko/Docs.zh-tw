@@ -9,6 +9,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: HT
 ms.contentlocale: zh-TW
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33266151"
 ---
 # <a name="namespace-keywords-c-reference"></a>命名空間關鍵字 (C# 參考)
 本節說明與使用命名空間相關聯的關鍵字和運算子︰  

@@ -10,6 +10,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: HT
 ms.contentlocale: zh-TW
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33269657"
 ---
 # <a name="statement-keywords-c-reference"></a>陳述式關鍵字 (C# 參考)
 陳述式是程式指示。 除了下表中所參考主題所述的項目之外，會依序執行陳述式。 下表列出 C# 陳述式關鍵字。 如需未使用任何關鍵字表示之陳述式的詳細資訊，請參閱[陳述式](../../../csharp/programming-guide/statements-expressions-operators/statements.md)。  

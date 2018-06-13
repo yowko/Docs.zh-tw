@@ -12,6 +12,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: HT
 ms.contentlocale: zh-TW
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33272567"
 ---
 # <a name="-operator-c-reference"></a>/ 運算子 (C# 參考)
 除法運算子 (`/`) 會將它的第一個運算元除以第二個運算元。 所有數字類型都有預先定義的除法運算子。

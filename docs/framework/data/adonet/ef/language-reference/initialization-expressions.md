@@ -10,6 +10,7 @@ ms.sourcegitcommit: 11f11ca6cefe555972b3a5c99729d1a7523d8f50
 ms.translationtype: MT
 ms.contentlocale: zh-TW
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32762204"
 ---
 # <a name="initialization-expressions"></a>初始化運算式
 初始化運算式會初始化新的物件。 大多數的初始化運算式都有支援，包括最新的 C# 3.0 和 Visual Basic 9.0 初始化運算式。 以下是可由 LINQ to Entities 查詢初始化及傳回的型別：  

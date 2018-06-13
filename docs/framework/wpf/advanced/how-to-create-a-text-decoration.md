@@ -21,6 +21,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: zh-TW
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33545405"
 ---
 # <a name="how-to-create-a-text-decoration"></a>如何：建立文字裝飾
 A<xref:System.Windows.TextDecoration>物件是視覺裝飾，您可以加入文字。 文字裝飾的四種類型： 底線、 基準、 刪除線和頂線。 下列範例顯示相對於文字的文字裝飾的位置。  

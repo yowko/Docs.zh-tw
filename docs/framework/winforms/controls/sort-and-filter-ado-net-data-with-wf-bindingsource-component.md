@@ -18,6 +18,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: zh-TW
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33538060"
 ---
 # <a name="how-to-sort-and-filter-adonet-data-with-the-windows-forms-bindingsource-component"></a>如何：使用 Windows Form BindingSource 元件排序和篩選 ADO.NET 資料
 您可以排序和篩選功能來公開<xref:System.Windows.Forms.BindingSource>透過控制<xref:System.Windows.Forms.BindingSource.Sort%2A>和<xref:System.Windows.Forms.BindingSource.Filter%2A>屬性。 您可以套用簡單排序基礎資料來源時<xref:System.ComponentModel.IBindingList>，您可以套用篩選和進階資料來源時排序<xref:System.ComponentModel.IBindingListView>。 <xref:System.Windows.Forms.BindingSource.Sort%2A>屬性需要標準[!INCLUDE[vstecado](../../../../includes/vstecado-md.md)]語法： 字串，表示資料來源中的資料行的名稱後面加上`ASC`或`DESC`，表示是否應該以遞增或遞減順序排序清單。 您可以設定進階排序，或多個資料行排序逗號分隔符號以區隔每個資料行。 <xref:System.Windows.Forms.BindingSource.Filter%2A>屬性會接受字串運算式。  

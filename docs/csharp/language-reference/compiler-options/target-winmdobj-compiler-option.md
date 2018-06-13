@@ -7,6 +7,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: HT
 ms.contentlocale: zh-TW
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33218654"
 ---
 # <a name="-targetwinmdobj-c-compiler-options"></a>-target:winmdobj (C# 編譯器選項)
 如果您使用 **-target:winmdobj** 編譯器選項，編譯器會建立一個可轉換成 Windows 執行階段二進位檔案 (.winmd) 的中繼 .winmdobj 檔案。 除了 Managed 語言程式之外，JavaScript 和 C++ 程式也可以使用 .winmd 檔案。  

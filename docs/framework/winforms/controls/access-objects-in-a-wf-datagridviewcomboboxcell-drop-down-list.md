@@ -14,6 +14,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: zh-TW
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33529398"
 ---
 # <a name="how-to-access-objects-in-a-windows-forms-datagridviewcomboboxcell-drop-down-list"></a>如何：存取 Windows Form DataGridViewComboBoxCell 下拉式清單中的物件
 像<xref:System.Windows.Forms.ComboBox>控制項，<xref:System.Windows.Forms.DataGridViewComboBoxColumn>和<xref:System.Windows.Forms.DataGridViewComboBoxCell>類型可讓您將任意的物件加入至他們的下拉式清單。 利用此功能，您可以表示複雜下拉式清單中的狀態而不需要對應的物件儲存在不同的集合。  

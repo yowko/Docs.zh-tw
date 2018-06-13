@@ -12,6 +12,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: HT
 ms.contentlocale: zh-TW
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33219332"
 ---
 # <a name="decimal-c-reference"></a>decimal (C# 參考)
 `decimal` 關鍵字表示 128 位元的資料類型。 相較於其他浮點類型，`decimal` 類型的精確度較高且範圍較小，因此非常適合財務和金融計算。 下表顯示 `decimal` 類型的大概範圍和精確度。  
