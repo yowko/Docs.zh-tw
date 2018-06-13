@@ -13,6 +13,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: HT
 ms.contentlocale: zh-TW
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33271769"
 ---
 # <a name="-operator-c-reference"></a><span data-ttu-id="ec411-102">:: 運算子 (C# 參考)</span><span class="sxs-lookup"><span data-stu-id="ec411-102">:: Operator (C# Reference)</span></span>
 <span data-ttu-id="ec411-103">命名空間別名限定詞 (`::`) 用來查閱識別碼。</span><span class="sxs-lookup"><span data-stu-id="ec411-103">The namespace alias qualifier (`::`) is used to look up identifiers.</span></span> <span data-ttu-id="ec411-104">它一律位在兩個識別碼之間，如下例所示︰</span><span class="sxs-lookup"><span data-stu-id="ec411-104">It is always positioned between two identifiers, as in this example:</span></span>  

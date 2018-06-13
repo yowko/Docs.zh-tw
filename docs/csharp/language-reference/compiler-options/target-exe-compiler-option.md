@@ -13,6 +13,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: HT
 ms.contentlocale: zh-TW
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33218825"
 ---
 # <a name="-targetexe-c-compiler-options"></a><span data-ttu-id="1443a-102">-target:exe (C# 編譯器選項)</span><span class="sxs-lookup"><span data-stu-id="1443a-102">-target:exe (C# Compiler Options)</span></span>
 <span data-ttu-id="1443a-103">**-target:exe** 選項可讓編譯器建立可執行檔 (EXE)：主控台應用程式。</span><span class="sxs-lookup"><span data-stu-id="1443a-103">The **-target:exe** option causes the compiler to create an executable (EXE), console application.</span></span>  

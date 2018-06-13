@@ -9,6 +9,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: HT
 ms.contentlocale: zh-TW
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33273964"
 ---
 # <a name="new-modifier-c-reference"></a><span data-ttu-id="26650-102">new 修飾詞 (C# 參考)</span><span class="sxs-lookup"><span data-stu-id="26650-102">new Modifier (C# Reference)</span></span>
 <span data-ttu-id="26650-103">`new` 關鍵字做為宣告修飾詞使用時，會明確隱藏繼承自基底類別的成員。</span><span class="sxs-lookup"><span data-stu-id="26650-103">When used as a declaration modifier, the `new` keyword explicitly hides a member that is inherited from a base class.</span></span> <span data-ttu-id="26650-104">當您隱藏繼承的成員時，該成員的衍生版本就會取代基底類別版本。</span><span class="sxs-lookup"><span data-stu-id="26650-104">When you hide an inherited member, the derived version of the member replaces the base class version.</span></span> <span data-ttu-id="26650-105">雖然您可以在不使用 `new` 修飾詞的情況下隱藏成員，但是編譯器會發出警告。</span><span class="sxs-lookup"><span data-stu-id="26650-105">Although you can hide members without using the `new` modifier, you get a compiler warning.</span></span> <span data-ttu-id="26650-106">如果您使用 `new` 明確隱藏成員，它會隱藏這個警告。</span><span class="sxs-lookup"><span data-stu-id="26650-106">If you use `new` to explicitly hide a member, it suppresses this warning.</span></span>  

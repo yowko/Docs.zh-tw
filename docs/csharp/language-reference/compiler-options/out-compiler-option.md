@@ -13,6 +13,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: HT
 ms.contentlocale: zh-TW
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33218744"
 ---
 # <a name="-out-c-compiler-options"></a><span data-ttu-id="ad386-102">-out (C# 編譯器選項)</span><span class="sxs-lookup"><span data-stu-id="ad386-102">-out (C# Compiler Options)</span></span>
 <span data-ttu-id="ad386-103">**-out** 選項指定輸出檔案的名稱。</span><span class="sxs-lookup"><span data-stu-id="ad386-103">The **-out** option specifies the name of the output file.</span></span>  

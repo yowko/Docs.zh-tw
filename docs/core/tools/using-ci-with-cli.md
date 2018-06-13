@@ -9,6 +9,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: HT
 ms.contentlocale: zh-TW
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33216813"
 ---
 # <a name="using-net-core-sdk-and-tools-in-continuous-integration-ci"></a><span data-ttu-id="3a0a3-103">在持續整合 (CI) 中使用 .NET Core SDK 和工具</span><span class="sxs-lookup"><span data-stu-id="3a0a3-103">Using .NET Core SDK and tools in Continuous Integration (CI)</span></span>
 

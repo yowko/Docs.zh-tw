@@ -7,6 +7,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: HT
 ms.contentlocale: zh-TW
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33218654"
 ---
 # <a name="-targetwinmdobj-c-compiler-options"></a><span data-ttu-id="c72b4-102">-target:winmdobj (C# 編譯器選項)</span><span class="sxs-lookup"><span data-stu-id="c72b4-102">-target:winmdobj (C# Compiler Options)</span></span>
 <span data-ttu-id="c72b4-103">如果您使用 **-target:winmdobj** 編譯器選項，編譯器會建立一個可轉換成 Windows 執行階段二進位檔案 (.winmd) 的中繼 .winmdobj 檔案。</span><span class="sxs-lookup"><span data-stu-id="c72b4-103">If you use the **-target:winmdobj** compiler option, the compiler creates an intermediate .winmdobj file that you can convert to a Windows Runtime binary (.winmd) file.</span></span> <span data-ttu-id="c72b4-104">除了 Managed 語言程式之外，JavaScript 和 C++ 程式也可以使用 .winmd 檔案。</span><span class="sxs-lookup"><span data-stu-id="c72b4-104">The .winmd file can then be consumed by JavaScript and C++ programs, in addition to managed language programs.</span></span>  

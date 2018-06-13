@@ -17,6 +17,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: HT
 ms.contentlocale: zh-TW
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33216144"
 ---
 # <a name="-doc-c-compiler-options"></a><span data-ttu-id="9843f-102">-doc (C# 編譯器選項)</span><span class="sxs-lookup"><span data-stu-id="9843f-102">-doc (C# Compiler Options)</span></span>
 <span data-ttu-id="9843f-103">**-doc** 選項可讓您在 XML 檔案中放入文件註解。</span><span class="sxs-lookup"><span data-stu-id="9843f-103">The **-doc** option allows you to place documentation comments in an XML file.</span></span>  

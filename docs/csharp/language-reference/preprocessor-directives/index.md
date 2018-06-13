@@ -12,6 +12,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: HT
 ms.contentlocale: zh-TW
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33279915"
 ---
 # <a name="c-preprocessor-directives"></a><span data-ttu-id="7b664-102">C# 前置處理器指示詞</span><span class="sxs-lookup"><span data-stu-id="7b664-102">C# preprocessor directives</span></span>
 <span data-ttu-id="7b664-103">本節包含下列 C# 前置處理器指示詞的相關資訊：</span><span class="sxs-lookup"><span data-stu-id="7b664-103">This section contains information about the following C# preprocessor directives:</span></span>

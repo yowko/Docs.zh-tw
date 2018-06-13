@@ -1,9 +1,6 @@
 ---
-title: "try-catch-finally (C# 參考)"
+title: try-catch-finally (C# 參考)
 ms.date: 07/20/2015
-ms.prod: .net
-ms.technology: devlang-csharp
-ms.topic: article
 f1_keywords:
 - catch-finally_CSharpKeyword
 - catch-finally
@@ -11,32 +8,30 @@ helpviewer_keywords:
 - finally blocks [C#]
 - try-catch statement [C#]
 ms.assetid: a1b443b0-ff7a-43ab-b835-0cc9bfbd15ca
-caps.latest.revision: "21"
-author: BillWagner
-ms.author: wiwagn
-ms.openlocfilehash: 0861cdb6a08c9ada9c6903be536b1fd5eef16579
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.openlocfilehash: fc37201ccc3040266c04e3ee208f50690006304a
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 05/04/2018
+ms.locfileid: "33265797"
 ---
-# <a name="try-catch-finally-c-reference"></a><span data-ttu-id="9e300-102">try-catch-finally (C# 參考)</span><span class="sxs-lookup"><span data-stu-id="9e300-102">try-catch-finally (C# Reference)</span></span>
-<span data-ttu-id="9e300-103">常見的搭配使用 `catch` 與 `finally` 是要取得和使用 `try` 區塊中的資源、處理 `catch` 區塊中的例外情況，以及釋放 `finally` 區塊中的資源。</span><span class="sxs-lookup"><span data-stu-id="9e300-103">A common usage of `catch` and `finally` together is to obtain and use resources in a `try` block, deal with exceptional circumstances in a `catch` block, and release the resources in the `finally` block.</span></span>  
+# <a name="try-catch-finally-c-reference"></a><span data-ttu-id="d1f05-102">try-catch-finally (C# 參考)</span><span class="sxs-lookup"><span data-stu-id="d1f05-102">try-catch-finally (C# Reference)</span></span>
+<span data-ttu-id="d1f05-103">常見的搭配使用 `catch` 與 `finally` 是要取得和使用 `try` 區塊中的資源、處理 `catch` 區塊中的例外情況，以及釋放 `finally` 區塊中的資源。</span><span class="sxs-lookup"><span data-stu-id="d1f05-103">A common usage of `catch` and `finally` together is to obtain and use resources in a `try` block, deal with exceptional circumstances in a `catch` block, and release the resources in the `finally` block.</span></span>  
   
- <span data-ttu-id="9e300-104">如需重新擲回例外狀況的詳細資訊和範例，請參閱 [try-catch](../../../csharp/language-reference/keywords/try-catch.md) 和[擲回例外狀況](../../../standard/exceptions/index.md)。</span><span class="sxs-lookup"><span data-stu-id="9e300-104">For more information and examples on re-throwing exceptions, see [try-catch](../../../csharp/language-reference/keywords/try-catch.md) and [Throwing Exceptions](../../../standard/exceptions/index.md).</span></span> <span data-ttu-id="9e300-105">如需 `finally` 區塊的詳細資訊，請參閱 [try-finally](../../../csharp/language-reference/keywords/try-finally.md)。</span><span class="sxs-lookup"><span data-stu-id="9e300-105">For more information about the `finally` block, see [try-finally](../../../csharp/language-reference/keywords/try-finally.md).</span></span>  
+ <span data-ttu-id="d1f05-104">如需重新擲回例外狀況的詳細資訊和範例，請參閱 [try-catch](../../../csharp/language-reference/keywords/try-catch.md) 和[擲回例外狀況](../../../standard/exceptions/index.md)。</span><span class="sxs-lookup"><span data-stu-id="d1f05-104">For more information and examples on re-throwing exceptions, see [try-catch](../../../csharp/language-reference/keywords/try-catch.md) and [Throwing Exceptions](../../../standard/exceptions/index.md).</span></span> <span data-ttu-id="d1f05-105">如需 `finally` 區塊的詳細資訊，請參閱 [try-finally](../../../csharp/language-reference/keywords/try-finally.md)。</span><span class="sxs-lookup"><span data-stu-id="d1f05-105">For more information about the `finally` block, see [try-finally](../../../csharp/language-reference/keywords/try-finally.md).</span></span>  
   
-## <a name="example"></a><span data-ttu-id="9e300-106">範例</span><span class="sxs-lookup"><span data-stu-id="9e300-106">Example</span></span>  
+## <a name="example"></a><span data-ttu-id="d1f05-106">範例</span><span class="sxs-lookup"><span data-stu-id="d1f05-106">Example</span></span>  
  [!code-csharp[csrefKeywordsExceptions#1](../../../csharp/language-reference/keywords/codesnippet/CSharp/try-catch-finally_1.cs)]  
   
-## <a name="c-language-specification"></a><span data-ttu-id="9e300-107">C# 語言規格</span><span class="sxs-lookup"><span data-stu-id="9e300-107">C# Language Specification</span></span>  
+## <a name="c-language-specification"></a><span data-ttu-id="d1f05-107">C# 語言規格</span><span class="sxs-lookup"><span data-stu-id="d1f05-107">C# Language Specification</span></span>  
  [!INCLUDE[CSharplangspec](~/includes/csharplangspec-md.md)]  
   
-## <a name="see-also"></a><span data-ttu-id="9e300-108">另請參閱</span><span class="sxs-lookup"><span data-stu-id="9e300-108">See Also</span></span>  
- [<span data-ttu-id="9e300-109">C# 參考</span><span class="sxs-lookup"><span data-stu-id="9e300-109">C# Reference</span></span>](../../../csharp/language-reference/index.md)  
- [<span data-ttu-id="9e300-110">C# 程式設計指南</span><span class="sxs-lookup"><span data-stu-id="9e300-110">C# Programming Guide</span></span>](../../../csharp/programming-guide/index.md)  
- [<span data-ttu-id="9e300-111">C# 關鍵字</span><span class="sxs-lookup"><span data-stu-id="9e300-111">C# Keywords</span></span>](../../../csharp/language-reference/keywords/index.md)  
- [<span data-ttu-id="9e300-112">try、throw 和 catch 陳述式 (C++)</span><span class="sxs-lookup"><span data-stu-id="9e300-112">try, throw, and catch Statements (C++)</span></span>](/cpp/cpp/try-throw-and-catch-statements-cpp)  
- [<span data-ttu-id="9e300-113">例外狀況處理陳述式</span><span class="sxs-lookup"><span data-stu-id="9e300-113">Exception Handling Statements</span></span>](../../../csharp/language-reference/keywords/exception-handling-statements.md)  
- [<span data-ttu-id="9e300-114">throw</span><span class="sxs-lookup"><span data-stu-id="9e300-114">throw</span></span>](../../../csharp/language-reference/keywords/throw.md)  
- [<span data-ttu-id="9e300-115">操作說明：明確擲回例外狀況</span><span class="sxs-lookup"><span data-stu-id="9e300-115">How to: Explicitly Throw Exceptions</span></span>](../../../standard/exceptions/how-to-explicitly-throw-exceptions.md)  
- [<span data-ttu-id="9e300-116">using 陳述式</span><span class="sxs-lookup"><span data-stu-id="9e300-116">using Statement</span></span>](../../../csharp/language-reference/keywords/using-statement.md)
+## <a name="see-also"></a><span data-ttu-id="d1f05-108">請參閱</span><span class="sxs-lookup"><span data-stu-id="d1f05-108">See Also</span></span>  
+ [<span data-ttu-id="d1f05-109">C# 參考</span><span class="sxs-lookup"><span data-stu-id="d1f05-109">C# Reference</span></span>](../../../csharp/language-reference/index.md)  
+ [<span data-ttu-id="d1f05-110">C# 程式設計指南</span><span class="sxs-lookup"><span data-stu-id="d1f05-110">C# Programming Guide</span></span>](../../../csharp/programming-guide/index.md)  
+ [<span data-ttu-id="d1f05-111">C# 關鍵字</span><span class="sxs-lookup"><span data-stu-id="d1f05-111">C# Keywords</span></span>](../../../csharp/language-reference/keywords/index.md)  
+ [<span data-ttu-id="d1f05-112">try、throw 和 catch 陳述式 (C++)</span><span class="sxs-lookup"><span data-stu-id="d1f05-112">try, throw, and catch Statements (C++)</span></span>](/cpp/cpp/try-throw-and-catch-statements-cpp)  
+ [<span data-ttu-id="d1f05-113">例外狀況處理陳述式</span><span class="sxs-lookup"><span data-stu-id="d1f05-113">Exception Handling Statements</span></span>](../../../csharp/language-reference/keywords/exception-handling-statements.md)  
+ [<span data-ttu-id="d1f05-114">throw</span><span class="sxs-lookup"><span data-stu-id="d1f05-114">throw</span></span>](../../../csharp/language-reference/keywords/throw.md)  
+ [<span data-ttu-id="d1f05-115">操作說明：明確擲回例外狀況</span><span class="sxs-lookup"><span data-stu-id="d1f05-115">How to: Explicitly Throw Exceptions</span></span>](../../../standard/exceptions/how-to-explicitly-throw-exceptions.md)  
+ [<span data-ttu-id="d1f05-116">using 陳述式</span><span class="sxs-lookup"><span data-stu-id="d1f05-116">using Statement</span></span>](../../../csharp/language-reference/keywords/using-statement.md)

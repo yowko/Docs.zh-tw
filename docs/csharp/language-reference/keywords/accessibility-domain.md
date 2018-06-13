@@ -1,44 +1,38 @@
 ---
 title: 存取範圍定義域 (C# 參考)
 ms.date: 07/20/2015
-ms.prod: .net
-ms.technology:
-- devlang-csharp
-ms.topic: article
 helpviewer_keywords:
 - accessibility domain [C#]
 ms.assetid: 8af779c1-275b-44be-a864-9edfbca71bcc
-caps.latest.revision: 17
-author: BillWagner
-ms.author: wiwagn
-ms.openlocfilehash: 127bacda4bf8363fccff3dd3ef6770ad50984cfb
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.openlocfilehash: 20489f399dd2baa9c30c7277adc9fe4b7e7fce19
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 05/04/2018
+ms.locfileid: "33217957"
 ---
-# <a name="accessibility-domain-c-reference"></a><span data-ttu-id="f8518-102">存取範圍定義域 (C# 參考)</span><span class="sxs-lookup"><span data-stu-id="f8518-102">Accessibility Domain (C# Reference)</span></span>
-<span data-ttu-id="f8518-103">成員的存取範圍定義域指定可參考成員的程式區段。</span><span class="sxs-lookup"><span data-stu-id="f8518-103">The accessibility domain of a member specifies in which program sections a member can be referenced.</span></span> <span data-ttu-id="f8518-104">如果成員巢狀在另一個類型內，則其存取範圍定義域是由成員的[存取範圍層級](../../../csharp/language-reference/keywords/accessibility-levels.md)和立即包含類型的存取範圍定義域所決定。</span><span class="sxs-lookup"><span data-stu-id="f8518-104">If the member is nested within another type, its accessibility domain is determined by both the [accessibility level](../../../csharp/language-reference/keywords/accessibility-levels.md) of the member and the accessibility domain of the immediately containing type.</span></span>  
+# <a name="accessibility-domain-c-reference"></a><span data-ttu-id="6f106-102">存取範圍定義域 (C# 參考)</span><span class="sxs-lookup"><span data-stu-id="6f106-102">Accessibility Domain (C# Reference)</span></span>
+<span data-ttu-id="6f106-103">成員的存取範圍定義域指定可參考成員的程式區段。</span><span class="sxs-lookup"><span data-stu-id="6f106-103">The accessibility domain of a member specifies in which program sections a member can be referenced.</span></span> <span data-ttu-id="6f106-104">如果成員巢狀在另一個類型內，則其存取範圍定義域是由成員的[存取範圍層級](../../../csharp/language-reference/keywords/accessibility-levels.md)和立即包含類型的存取範圍定義域所決定。</span><span class="sxs-lookup"><span data-stu-id="6f106-104">If the member is nested within another type, its accessibility domain is determined by both the [accessibility level](../../../csharp/language-reference/keywords/accessibility-levels.md) of the member and the accessibility domain of the immediately containing type.</span></span>  
   
- <span data-ttu-id="f8518-105">最上層類型的存取範圍定義域是至少在其中宣告之專案的程式文字。</span><span class="sxs-lookup"><span data-stu-id="f8518-105">The accessibility domain of a top-level type is at least the program text of the project that it is declared in.</span></span> <span data-ttu-id="f8518-106">亦即，定義域包括此專案的所有原始程式檔。</span><span class="sxs-lookup"><span data-stu-id="f8518-106">That is, the domain includes all of the source files of this project.</span></span> <span data-ttu-id="f8518-107">巢狀型別的存取範圍定義域是至少在其中宣告之類型的程式文字。</span><span class="sxs-lookup"><span data-stu-id="f8518-107">The accessibility domain of a nested type is at least the program text of the type in which it is declared.</span></span> <span data-ttu-id="f8518-108">亦即，定義域是包括所有巢狀型別的類型主體。</span><span class="sxs-lookup"><span data-stu-id="f8518-108">That is, the domain is the type body, which includes all nested types.</span></span> <span data-ttu-id="f8518-109">巢狀型別的存取範圍定義域絕不會超過包含類型的存取範圍定義域。</span><span class="sxs-lookup"><span data-stu-id="f8518-109">The accessibility domain of a nested type never exceeds that of the containing type.</span></span> <span data-ttu-id="f8518-110">下列範例示範這些概念。</span><span class="sxs-lookup"><span data-stu-id="f8518-110">These concepts are demonstrated in the following example.</span></span>  
+ <span data-ttu-id="6f106-105">最上層類型的存取範圍定義域是至少在其中宣告之專案的程式文字。</span><span class="sxs-lookup"><span data-stu-id="6f106-105">The accessibility domain of a top-level type is at least the program text of the project that it is declared in.</span></span> <span data-ttu-id="6f106-106">亦即，定義域包括此專案的所有原始程式檔。</span><span class="sxs-lookup"><span data-stu-id="6f106-106">That is, the domain includes all of the source files of this project.</span></span> <span data-ttu-id="6f106-107">巢狀型別的存取範圍定義域是至少在其中宣告之類型的程式文字。</span><span class="sxs-lookup"><span data-stu-id="6f106-107">The accessibility domain of a nested type is at least the program text of the type in which it is declared.</span></span> <span data-ttu-id="6f106-108">亦即，定義域是包括所有巢狀型別的類型主體。</span><span class="sxs-lookup"><span data-stu-id="6f106-108">That is, the domain is the type body, which includes all nested types.</span></span> <span data-ttu-id="6f106-109">巢狀型別的存取範圍定義域絕不會超過包含類型的存取範圍定義域。</span><span class="sxs-lookup"><span data-stu-id="6f106-109">The accessibility domain of a nested type never exceeds that of the containing type.</span></span> <span data-ttu-id="6f106-110">下列範例示範這些概念。</span><span class="sxs-lookup"><span data-stu-id="6f106-110">These concepts are demonstrated in the following example.</span></span>  
   
-## <a name="example"></a><span data-ttu-id="f8518-111">範例</span><span class="sxs-lookup"><span data-stu-id="f8518-111">Example</span></span>  
- <span data-ttu-id="f8518-112">這個範例包含最上層類型 `T1` 以及兩個巢狀類別 `M1` 和 `M2`。</span><span class="sxs-lookup"><span data-stu-id="f8518-112">This example contains a top-level type, `T1`, and two nested classes, `M1` and `M2`.</span></span> <span data-ttu-id="f8518-113">這些類別包含具有不同已宣告存取範圍的欄位。</span><span class="sxs-lookup"><span data-stu-id="f8518-113">The classes contain fields that have different declared accessibilities.</span></span> <span data-ttu-id="f8518-114">在 `Main` 方法中，註解在每個陳述式的後面，表示每個成員的存取領域。</span><span class="sxs-lookup"><span data-stu-id="f8518-114">In the `Main` method, a comment follows each statement to indicate the accessibility domain of each member.</span></span> <span data-ttu-id="f8518-115">請注意，會註解化嘗試參考無法存取成員的陳述式。如果您想要查看因參考無法存取的成員而造成的編譯器錯誤，請一次移除一個註解。</span><span class="sxs-lookup"><span data-stu-id="f8518-115">Notice that the statements that try to reference the inaccessible members are commented out. If you want to see the compiler errors caused by referencing an inaccessible member, remove the comments one at a time.</span></span>  
+## <a name="example"></a><span data-ttu-id="6f106-111">範例</span><span class="sxs-lookup"><span data-stu-id="6f106-111">Example</span></span>  
+ <span data-ttu-id="6f106-112">這個範例包含最上層類型 `T1` 以及兩個巢狀類別 `M1` 和 `M2`。</span><span class="sxs-lookup"><span data-stu-id="6f106-112">This example contains a top-level type, `T1`, and two nested classes, `M1` and `M2`.</span></span> <span data-ttu-id="6f106-113">這些類別包含具有不同已宣告存取範圍的欄位。</span><span class="sxs-lookup"><span data-stu-id="6f106-113">The classes contain fields that have different declared accessibilities.</span></span> <span data-ttu-id="6f106-114">在 `Main` 方法中，註解在每個陳述式的後面，表示每個成員的存取領域。</span><span class="sxs-lookup"><span data-stu-id="6f106-114">In the `Main` method, a comment follows each statement to indicate the accessibility domain of each member.</span></span> <span data-ttu-id="6f106-115">請注意，會註解化嘗試參考無法存取成員的陳述式。如果您想要查看因參考無法存取的成員而造成的編譯器錯誤，請一次移除一個註解。</span><span class="sxs-lookup"><span data-stu-id="6f106-115">Notice that the statements that try to reference the inaccessible members are commented out. If you want to see the compiler errors caused by referencing an inaccessible member, remove the comments one at a time.</span></span>  
   
  [!code-csharp[csrefKeywordsModifiers#4](../../../csharp/language-reference/keywords/codesnippet/CSharp/accessibility-domain_1.cs)]  
   
-## <a name="c-language-specification"></a><span data-ttu-id="f8518-116">C# 語言規格</span><span class="sxs-lookup"><span data-stu-id="f8518-116">C# Language Specification</span></span>  
+## <a name="c-language-specification"></a><span data-ttu-id="6f106-116">C# 語言規格</span><span class="sxs-lookup"><span data-stu-id="6f106-116">C# Language Specification</span></span>  
  [!INCLUDE[CSharplangspec](~/includes/csharplangspec-md.md)]  
   
-## <a name="see-also"></a><span data-ttu-id="f8518-117">另請參閱</span><span class="sxs-lookup"><span data-stu-id="f8518-117">See Also</span></span>  
- [<span data-ttu-id="f8518-118">C# 參考</span><span class="sxs-lookup"><span data-stu-id="f8518-118">C# Reference</span></span>](../../../csharp/language-reference/index.md)  
- [<span data-ttu-id="f8518-119">C# 程式設計指南</span><span class="sxs-lookup"><span data-stu-id="f8518-119">C# Programming Guide</span></span>](../../../csharp/programming-guide/index.md)  
- [<span data-ttu-id="f8518-120">C# 關鍵字</span><span class="sxs-lookup"><span data-stu-id="f8518-120">C# Keywords</span></span>](../../../csharp/language-reference/keywords/index.md)  
- [<span data-ttu-id="f8518-121">存取修飾詞</span><span class="sxs-lookup"><span data-stu-id="f8518-121">Access Modifiers</span></span>](../../../csharp/language-reference/keywords/access-modifiers.md)  
- [<span data-ttu-id="f8518-122">存取範圍層級</span><span class="sxs-lookup"><span data-stu-id="f8518-122">Accessibility Levels</span></span>](../../../csharp/language-reference/keywords/accessibility-levels.md)  
- [<span data-ttu-id="f8518-123">使用存取範圍層級的限制</span><span class="sxs-lookup"><span data-stu-id="f8518-123">Restrictions on Using Accessibility Levels</span></span>](../../../csharp/language-reference/keywords/restrictions-on-using-accessibility-levels.md)  
- [<span data-ttu-id="f8518-124">存取修飾詞</span><span class="sxs-lookup"><span data-stu-id="f8518-124">Access Modifiers</span></span>](../../../csharp/programming-guide/classes-and-structs/access-modifiers.md)  
- [<span data-ttu-id="f8518-125">public</span><span class="sxs-lookup"><span data-stu-id="f8518-125">public</span></span>](../../../csharp/language-reference/keywords/public.md)  
- [<span data-ttu-id="f8518-126">private</span><span class="sxs-lookup"><span data-stu-id="f8518-126">private</span></span>](../../../csharp/language-reference/keywords/private.md)  
- [<span data-ttu-id="f8518-127">protected</span><span class="sxs-lookup"><span data-stu-id="f8518-127">protected</span></span>](../../../csharp/language-reference/keywords/protected.md)  
- [<span data-ttu-id="f8518-128">internal</span><span class="sxs-lookup"><span data-stu-id="f8518-128">internal</span></span>](../../../csharp/language-reference/keywords/internal.md)
+## <a name="see-also"></a><span data-ttu-id="6f106-117">請參閱</span><span class="sxs-lookup"><span data-stu-id="6f106-117">See Also</span></span>  
+ [<span data-ttu-id="6f106-118">C# 參考</span><span class="sxs-lookup"><span data-stu-id="6f106-118">C# Reference</span></span>](../../../csharp/language-reference/index.md)  
+ [<span data-ttu-id="6f106-119">C# 程式設計指南</span><span class="sxs-lookup"><span data-stu-id="6f106-119">C# Programming Guide</span></span>](../../../csharp/programming-guide/index.md)  
+ [<span data-ttu-id="6f106-120">C# 關鍵字</span><span class="sxs-lookup"><span data-stu-id="6f106-120">C# Keywords</span></span>](../../../csharp/language-reference/keywords/index.md)  
+ [<span data-ttu-id="6f106-121">存取修飾詞</span><span class="sxs-lookup"><span data-stu-id="6f106-121">Access Modifiers</span></span>](../../../csharp/language-reference/keywords/access-modifiers.md)  
+ [<span data-ttu-id="6f106-122">存取範圍層級</span><span class="sxs-lookup"><span data-stu-id="6f106-122">Accessibility Levels</span></span>](../../../csharp/language-reference/keywords/accessibility-levels.md)  
+ [<span data-ttu-id="6f106-123">使用存取範圍層級的限制</span><span class="sxs-lookup"><span data-stu-id="6f106-123">Restrictions on Using Accessibility Levels</span></span>](../../../csharp/language-reference/keywords/restrictions-on-using-accessibility-levels.md)  
+ [<span data-ttu-id="6f106-124">存取修飾詞</span><span class="sxs-lookup"><span data-stu-id="6f106-124">Access Modifiers</span></span>](../../../csharp/programming-guide/classes-and-structs/access-modifiers.md)  
+ [<span data-ttu-id="6f106-125">public</span><span class="sxs-lookup"><span data-stu-id="6f106-125">public</span></span>](../../../csharp/language-reference/keywords/public.md)  
+ [<span data-ttu-id="6f106-126">private</span><span class="sxs-lookup"><span data-stu-id="6f106-126">private</span></span>](../../../csharp/language-reference/keywords/private.md)  
+ [<span data-ttu-id="6f106-127">protected</span><span class="sxs-lookup"><span data-stu-id="6f106-127">protected</span></span>](../../../csharp/language-reference/keywords/protected.md)  
+ [<span data-ttu-id="6f106-128">internal</span><span class="sxs-lookup"><span data-stu-id="6f106-128">internal</span></span>](../../../csharp/language-reference/keywords/internal.md)

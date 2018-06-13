@@ -18,6 +18,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: HT
 ms.contentlocale: zh-TW
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33218172"
 ---
 # <a name="-reference-c-compiler-options"></a><span data-ttu-id="15630-102">-reference (C# 編譯器選項)</span><span class="sxs-lookup"><span data-stu-id="15630-102">-reference (C# Compiler Options)</span></span>
 <span data-ttu-id="15630-103">**-reference** 選項可讓編譯器將指定檔案的 [public](../../../csharp/language-reference/keywords/public.md) 類型資訊匯入至目前的專案，以讓您透過指定的組件檔案來參考中繼資料。</span><span class="sxs-lookup"><span data-stu-id="15630-103">The **-reference** option causes the compiler to import [public](../../../csharp/language-reference/keywords/public.md) type information in the specified file into the current project, thus enabling you to reference metadata from the specified assembly files.</span></span>  

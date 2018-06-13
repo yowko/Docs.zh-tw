@@ -12,6 +12,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: HT
 ms.contentlocale: zh-TW
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33267944"
 ---
 # <a name="operator-c-reference"></a><span data-ttu-id="7d1fe-102">operator (C# 參考)</span><span class="sxs-lookup"><span data-stu-id="7d1fe-102">operator (C# Reference)</span></span>
 <span data-ttu-id="7d1fe-103">使用 `operator` 關鍵字多載內建運算子，或在類別或結構宣告中提供使用者定義的轉換。</span><span class="sxs-lookup"><span data-stu-id="7d1fe-103">Use the `operator` keyword to overload a built-in operator or to provide a user-defined conversion in a class or struct declaration.</span></span>  

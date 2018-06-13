@@ -10,6 +10,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: HT
 ms.contentlocale: zh-TW
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33273311"
 ---
 # <a name="operator-keywords-c-reference"></a><span data-ttu-id="afa4d-102">運算子關鍵字 (C# 參考)</span><span class="sxs-lookup"><span data-stu-id="afa4d-102">Operator Keywords (C# Reference)</span></span>
 <span data-ttu-id="afa4d-103">用來執行其他動作，例如建立物件、檢查物件的執行階段類型，取得類型的大小和其他動作。</span><span class="sxs-lookup"><span data-stu-id="afa4d-103">Used to perform miscellaneous actions such as creating objects, checking the run-time type of an object, obtaining the size of a type, and other actions.</span></span> <span data-ttu-id="afa4d-104">本節將介紹下列關鍵字：</span><span class="sxs-lookup"><span data-stu-id="afa4d-104">This section introduces the following keywords:</span></span>  

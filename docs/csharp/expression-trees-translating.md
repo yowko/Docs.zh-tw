@@ -8,6 +8,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: HT
 ms.contentlocale: zh-TW
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33217112"
 ---
 # <a name="translating-expression-trees"></a><span data-ttu-id="21d4b-103">轉譯運算式樹狀架構</span><span class="sxs-lookup"><span data-stu-id="21d4b-103">Translating Expression Trees</span></span>
 

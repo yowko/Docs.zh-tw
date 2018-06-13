@@ -9,6 +9,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: HT
 ms.contentlocale: zh-TW
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33219075"
 ---
 # <a name="prerequisites-for-net-core-on-macos"></a><span data-ttu-id="8fc7b-103">macOS 上 .NET Core 的先決條件</span><span class="sxs-lookup"><span data-stu-id="8fc7b-103">Prerequisites for .NET Core on macOS</span></span>
 

@@ -12,6 +12,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: HT
 ms.contentlocale: zh-TW
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33216800"
 ---
 # <a name="goto-c-reference"></a><span data-ttu-id="62dfa-102">goto (C# 參考)</span><span class="sxs-lookup"><span data-stu-id="62dfa-102">goto (C# Reference)</span></span>
 <span data-ttu-id="62dfa-103">`goto` 陳述式會將程式控制權直接轉移到標記陳述式。</span><span class="sxs-lookup"><span data-stu-id="62dfa-103">The `goto` statement transfers the program control directly to a labeled statement.</span></span>  

@@ -9,6 +9,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: HT
 ms.contentlocale: zh-TW
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33216016"
 ---
 # <a name="access-keywords-c-reference"></a><span data-ttu-id="382ce-102">存取關鍵字 (C# 參考)</span><span class="sxs-lookup"><span data-stu-id="382ce-102">Access Keywords (C# Reference)</span></span>
 <span data-ttu-id="382ce-103">本節將介紹下列存取關鍵字：</span><span class="sxs-lookup"><span data-stu-id="382ce-103">This section introduces the following access keywords:</span></span>  

@@ -11,6 +11,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: HT
 ms.contentlocale: zh-TW
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33269395"
 ---
 # <a name="error-c-reference"></a><span data-ttu-id="0f361-102">#error (C# 參考)</span><span class="sxs-lookup"><span data-stu-id="0f361-102">#error (C# Reference)</span></span>
 <span data-ttu-id="0f361-103">`#error` 可讓您從程式碼中的特定位置產生錯誤。</span><span class="sxs-lookup"><span data-stu-id="0f361-103">`#error` lets you generate an error from a specific location in your code.</span></span> <span data-ttu-id="0f361-104">例如: </span><span class="sxs-lookup"><span data-stu-id="0f361-104">For example:</span></span>  

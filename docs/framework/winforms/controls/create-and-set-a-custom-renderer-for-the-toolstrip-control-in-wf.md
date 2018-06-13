@@ -15,6 +15,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: zh-TW
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33527170"
 ---
 # <a name="how-to-create-and-set-a-custom-renderer-for-the-toolstrip-control-in-windows-forms"></a><span data-ttu-id="da222-102">如何：建立和設定 Windows Form 中的 ToolStrip 控制項自訂產生器</span><span class="sxs-lookup"><span data-stu-id="da222-102">How to: Create and Set a Custom Renderer for the ToolStrip Control in Windows Forms</span></span>
 <span data-ttu-id="da222-103"><xref:System.Windows.Forms.ToolStrip> 控制項讓您輕鬆支援佈景主題和樣式。</span><span class="sxs-lookup"><span data-stu-id="da222-103"><xref:System.Windows.Forms.ToolStrip> controls give easy support to themes and styles.</span></span> <span data-ttu-id="da222-104">您可以達到完全自訂的外觀和行為 （外觀及操作） 設定<xref:System.Windows.Forms.ToolStrip.Renderer%2A?displayProperty=nameWithType>屬性或<xref:System.Windows.Forms.ToolStripManager.Renderer%2A?displayProperty=nameWithType>自訂轉譯器的屬性。</span><span class="sxs-lookup"><span data-stu-id="da222-104">You can achieve completely custom appearance and behavior (look and feel) by setting either the <xref:System.Windows.Forms.ToolStrip.Renderer%2A?displayProperty=nameWithType> property or the <xref:System.Windows.Forms.ToolStripManager.Renderer%2A?displayProperty=nameWithType> property to a custom renderer.</span></span>  

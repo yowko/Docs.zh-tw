@@ -10,6 +10,7 @@ ms.sourcegitcommit: 11f11ca6cefe555972b3a5c99729d1a7523d8f50
 ms.translationtype: MT
 ms.contentlocale: zh-TW
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32762204"
 ---
 # <a name="initialization-expressions"></a><span data-ttu-id="7c6d3-102">初始化運算式</span><span class="sxs-lookup"><span data-stu-id="7c6d3-102">Initialization Expressions</span></span>
 <span data-ttu-id="7c6d3-103">初始化運算式會初始化新的物件。</span><span class="sxs-lookup"><span data-stu-id="7c6d3-103">An initialization expression initializes a new object.</span></span> <span data-ttu-id="7c6d3-104">大多數的初始化運算式都有支援，包括最新的 C# 3.0 和 Visual Basic 9.0 初始化運算式。</span><span class="sxs-lookup"><span data-stu-id="7c6d3-104">Most initialization expressions are supported, including most new C# 3.0 and Visual Basic 9.0 initialization expressions.</span></span> <span data-ttu-id="7c6d3-105">以下是可由 LINQ to Entities 查詢初始化及傳回的型別：</span><span class="sxs-lookup"><span data-stu-id="7c6d3-105">The following types can be initialized and returned by a LINQ to Entities query:</span></span>  

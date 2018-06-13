@@ -13,6 +13,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: HT
 ms.contentlocale: zh-TW
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33272435"
 ---
 # <a name="-operator-c-reference"></a><span data-ttu-id="f63d8-102">!= 運算子 (C# 參考)</span><span class="sxs-lookup"><span data-stu-id="f63d8-102">!= Operator (C# Reference)</span></span>
 <span data-ttu-id="f63d8-103">不等比較運算子 (`!=`) 會在其運算元相等時傳回 false，否則傳回 true。</span><span class="sxs-lookup"><span data-stu-id="f63d8-103">The inequality operator (`!=`) returns false if its operands are equal, true otherwise.</span></span> <span data-ttu-id="f63d8-104">所有類型 (包括字串和物件) 已預先定義不等比較運算子。</span><span class="sxs-lookup"><span data-stu-id="f63d8-104">Inequality operators are predefined for all types, including string and object.</span></span> <span data-ttu-id="f63d8-105">使用者定義型別可以多載 `!=` 運算子。</span><span class="sxs-lookup"><span data-stu-id="f63d8-105">User-defined types can overload the `!=` operator.</span></span>  

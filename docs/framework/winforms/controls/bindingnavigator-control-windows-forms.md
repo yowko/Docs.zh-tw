@@ -11,6 +11,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: zh-TW
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33526060"
 ---
 # <a name="bindingnavigator-control-windows-forms"></a><span data-ttu-id="62b3e-102">BindingNavigator 控制項 (Windows Form)</span><span class="sxs-lookup"><span data-stu-id="62b3e-102">BindingNavigator Control (Windows Forms)</span></span>
 <span data-ttu-id="62b3e-103">`BindingNavigator`控制項是繫結至資料之控制項的瀏覽和操作使用者介面 (UI)。</span><span class="sxs-lookup"><span data-stu-id="62b3e-103">The `BindingNavigator` control is the navigation and manipulation user interface (UI) for controls that are bound to data.</span></span> <span data-ttu-id="62b3e-104">`BindingNavigator` 控制項可讓使用者巡覽和操作 Windows Form 上的資料。</span><span class="sxs-lookup"><span data-stu-id="62b3e-104">The `BindingNavigator` control enables users to navigate through and manipulate data on a Windows Form.</span></span>  

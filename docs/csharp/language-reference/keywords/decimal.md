@@ -12,6 +12,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: HT
 ms.contentlocale: zh-TW
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33219332"
 ---
 # <a name="decimal-c-reference"></a><span data-ttu-id="39c42-102">decimal (C# 參考)</span><span class="sxs-lookup"><span data-stu-id="39c42-102">decimal (C# Reference)</span></span>
 <span data-ttu-id="39c42-103">`decimal` 關鍵字表示 128 位元的資料類型。</span><span class="sxs-lookup"><span data-stu-id="39c42-103">The `decimal` keyword indicates a 128-bit data type.</span></span> <span data-ttu-id="39c42-104">相較於其他浮點類型，`decimal` 類型的精確度較高且範圍較小，因此非常適合財務和金融計算。</span><span class="sxs-lookup"><span data-stu-id="39c42-104">Compared to other floating-point types, the `decimal` type has more precision and a smaller range, which makes it appropriate for financial and monetary calculations.</span></span> <span data-ttu-id="39c42-105">下表顯示 `decimal` 類型的大概範圍和精確度。</span><span class="sxs-lookup"><span data-stu-id="39c42-105">The approximate range and precision for the `decimal` type are shown in the following table.</span></span>  

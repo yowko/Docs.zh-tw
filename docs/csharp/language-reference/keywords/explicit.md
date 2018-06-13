@@ -12,6 +12,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: HT
 ms.contentlocale: zh-TW
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33216473"
 ---
 # <a name="explicit-c-reference"></a><span data-ttu-id="88cce-102">explicit (C# 參考)</span><span class="sxs-lookup"><span data-stu-id="88cce-102">explicit (C# Reference)</span></span>
 <span data-ttu-id="88cce-103">`explicit` 關鍵字會宣告必須使用轉換叫用的使用者定義型別轉換運算子。</span><span class="sxs-lookup"><span data-stu-id="88cce-103">The `explicit` keyword declares a user-defined type conversion operator that must be invoked with a cast.</span></span> <span data-ttu-id="88cce-104">例如，此運算子會將稱為華氏的類別轉換成稱為攝氏的類別︰</span><span class="sxs-lookup"><span data-stu-id="88cce-104">For example, this operator converts from a class called Fahrenheit to a class called Celsius:</span></span>  
