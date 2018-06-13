@@ -7,6 +7,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: zh-TW
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33494224"
 ---
 # <a name="how-to-use-metadataexchangeclient-to-retrieve-metadata"></a>HOW TO：使用 MetadataExchangeClient 來擷取中繼資料
 使用 <xref:System.ServiceModel.Description.MetadataExchangeClient> 類別，即可使用 WS-MetadataExchange (MEX) 通訊協定來下載中繼資料。 所擷取的中繼資料檔案會當做 <xref:System.ServiceModel.Description.MetadataSet> 物件傳回。 傳回的 <xref:System.ServiceModel.Description.MetadataSet> 物件包含 <xref:System.ServiceModel.Description.MetadataSection> 物件的集合，其中每一個都會包含特定的中繼資料方言和識別項。 您可以將傳回的中繼資料寫入至檔案，或者當傳回的中繼資料含有 Web 服務描述語言 (WSDL) 文件時，您便可以使用 <xref:System.ServiceModel.Description.WsdlImporter> 來匯入中繼資料。  
