@@ -1,14 +1,6 @@
 ---
-title: "COR_ARRAY_LAYOUT 結構"
-ms.custom: 
+title: COR_ARRAY_LAYOUT 結構
 ms.date: 03/30/2017
-ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.technology:
-- dotnet-clr
-ms.tgt_pltfrm: 
-ms.topic: reference
 api_name:
 - COR_ARRAY_LAYOUT
 api_location:
@@ -22,22 +14,19 @@ helpviewer_keywords:
 ms.assetid: aa20ac3d-6f60-4aa2-91c5-f3a86f82eba8
 topic_type:
 - apiref
-caps.latest.revision: 
 author: rpetrusha
 ms.author: ronpet
-manager: wpickett
-ms.workload:
-- dotnet
-ms.openlocfilehash: b936b1b2187ec68db7f5fdecb0344e6cac211ab1
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
-ms.translationtype: MT
+ms.openlocfilehash: 7a96542ab5113311bba79cc552afd7f29e6eafa2
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 05/04/2018
+ms.locfileid: "33406392"
 ---
-# <a name="corarraylayout-structure"></a><span data-ttu-id="ced33-102">COR_ARRAY_LAYOUT 結構</span><span class="sxs-lookup"><span data-stu-id="ced33-102">COR_ARRAY_LAYOUT Structure</span></span>
-<span data-ttu-id="ced33-103">提供記憶體中陣列物件配置的相關資訊。</span><span class="sxs-lookup"><span data-stu-id="ced33-103">Provides information about the layout of an array object in memory.</span></span>  
+# <a name="corarraylayout-structure"></a><span data-ttu-id="449db-102">COR_ARRAY_LAYOUT 結構</span><span class="sxs-lookup"><span data-stu-id="449db-102">COR_ARRAY_LAYOUT Structure</span></span>
+<span data-ttu-id="449db-103">提供記憶體中陣列物件配置的相關資訊。</span><span class="sxs-lookup"><span data-stu-id="449db-103">Provides information about the layout of an array object in memory.</span></span>  
   
-## <a name="syntax"></a><span data-ttu-id="ced33-104">語法</span><span class="sxs-lookup"><span data-stu-id="ced33-104">Syntax</span></span>  
+## <a name="syntax"></a><span data-ttu-id="449db-104">語法</span><span class="sxs-lookup"><span data-stu-id="449db-104">Syntax</span></span>  
   
 ```  
 typedef struct COR_ARRAY_LAYOUT {  
@@ -52,33 +41,33 @@ typedef struct COR_ARRAY_LAYOUT {
 } COR_ARRAY_LAYOUT;  
 ```  
   
-## <a name="members"></a><span data-ttu-id="ced33-105">成員</span><span class="sxs-lookup"><span data-stu-id="ced33-105">Members</span></span>  
+## <a name="members"></a><span data-ttu-id="449db-105">成員</span><span class="sxs-lookup"><span data-stu-id="449db-105">Members</span></span>  
   
-|<span data-ttu-id="ced33-106">成員</span><span class="sxs-lookup"><span data-stu-id="ced33-106">Member</span></span>|<span data-ttu-id="ced33-107">描述</span><span class="sxs-lookup"><span data-stu-id="ced33-107">Description</span></span>|  
+|<span data-ttu-id="449db-106">成員</span><span class="sxs-lookup"><span data-stu-id="449db-106">Member</span></span>|<span data-ttu-id="449db-107">描述</span><span class="sxs-lookup"><span data-stu-id="449db-107">Description</span></span>|  
 |------------|-----------------|  
-|`componentID`|<span data-ttu-id="ced33-108">此陣列中包含的物件類型識別項。</span><span class="sxs-lookup"><span data-stu-id="ced33-108">The identifier of the type of objects that the array contains.</span></span>|  
-|`componentType`|<span data-ttu-id="ced33-109">CorElementType 列舉值，指出元件是否記憶體回收集合參考、 實值類別或基本型別。</span><span class="sxs-lookup"><span data-stu-id="ced33-109">A CorElementType enumeration value that indicates whether the component is a garbage collection reference, a value class, or a primitive.</span></span>|  
-|`firstElementOffset`|<span data-ttu-id="ced33-110">要在陣列中的第一個元素的位移。</span><span class="sxs-lookup"><span data-stu-id="ced33-110">The offset to the first element in the array.</span></span>|  
-|`elementSize`|<span data-ttu-id="ced33-111">每個項目的大小。</span><span class="sxs-lookup"><span data-stu-id="ced33-111">The size of each element.</span></span>|  
-|`countOffset`|<span data-ttu-id="ced33-112">要在陣列中的項目數的位移。</span><span class="sxs-lookup"><span data-stu-id="ced33-112">The offset to the number of elements in the array.</span></span>|  
-|`rankSize`|<span data-ttu-id="ced33-113">陣序規範，以位元組為單位的大小。</span><span class="sxs-lookup"><span data-stu-id="ced33-113">The size of the rank, in bytes.</span></span>|  
-|`numRanks`|<span data-ttu-id="ced33-114">陣列的排列次序數目。</span><span class="sxs-lookup"><span data-stu-id="ced33-114">The number of ranks in the array.</span></span>|  
-|`rankOffset`|<span data-ttu-id="ced33-115">順位的開始位移。</span><span class="sxs-lookup"><span data-stu-id="ced33-115">The offset at which the ranks start.</span></span>|  
+|`componentID`|<span data-ttu-id="449db-108">此陣列中包含的物件類型識別項。</span><span class="sxs-lookup"><span data-stu-id="449db-108">The identifier of the type of objects that the array contains.</span></span>|  
+|`componentType`|<span data-ttu-id="449db-109">CorElementType 列舉值，指出元件是否記憶體回收集合參考、 實值類別或基本型別。</span><span class="sxs-lookup"><span data-stu-id="449db-109">A CorElementType enumeration value that indicates whether the component is a garbage collection reference, a value class, or a primitive.</span></span>|  
+|`firstElementOffset`|<span data-ttu-id="449db-110">要在陣列中的第一個元素的位移。</span><span class="sxs-lookup"><span data-stu-id="449db-110">The offset to the first element in the array.</span></span>|  
+|`elementSize`|<span data-ttu-id="449db-111">每個項目的大小。</span><span class="sxs-lookup"><span data-stu-id="449db-111">The size of each element.</span></span>|  
+|`countOffset`|<span data-ttu-id="449db-112">要在陣列中的項目數的位移。</span><span class="sxs-lookup"><span data-stu-id="449db-112">The offset to the number of elements in the array.</span></span>|  
+|`rankSize`|<span data-ttu-id="449db-113">陣序規範，以位元組為單位的大小。</span><span class="sxs-lookup"><span data-stu-id="449db-113">The size of the rank, in bytes.</span></span>|  
+|`numRanks`|<span data-ttu-id="449db-114">陣列的排列次序數目。</span><span class="sxs-lookup"><span data-stu-id="449db-114">The number of ranks in the array.</span></span>|  
+|`rankOffset`|<span data-ttu-id="449db-115">順位的開始位移。</span><span class="sxs-lookup"><span data-stu-id="449db-115">The offset at which the ranks start.</span></span>|  
   
-## <a name="remarks"></a><span data-ttu-id="ced33-116">備註</span><span class="sxs-lookup"><span data-stu-id="ced33-116">Remarks</span></span>  
- <span data-ttu-id="ced33-117">`rankSize`欄位多維陣列中指定的陣序規範的大小。</span><span class="sxs-lookup"><span data-stu-id="ced33-117">The `rankSize` field specifies the size of a rank in a multi-dimensional array.</span></span> <span data-ttu-id="ced33-118">它是正確的單一維度的陣列。</span><span class="sxs-lookup"><span data-stu-id="ced33-118">It is accurate for single-dimensional arrays as well.</span></span>  
+## <a name="remarks"></a><span data-ttu-id="449db-116">備註</span><span class="sxs-lookup"><span data-stu-id="449db-116">Remarks</span></span>  
+ <span data-ttu-id="449db-117">`rankSize`欄位多維陣列中指定的陣序規範的大小。</span><span class="sxs-lookup"><span data-stu-id="449db-117">The `rankSize` field specifies the size of a rank in a multi-dimensional array.</span></span> <span data-ttu-id="449db-118">它是正確的單一維度的陣列。</span><span class="sxs-lookup"><span data-stu-id="449db-118">It is accurate for single-dimensional arrays as well.</span></span>  
   
- <span data-ttu-id="ced33-119">值`numRanks`為一維陣列的 1 和`N`多維陣列的`N`維度。</span><span class="sxs-lookup"><span data-stu-id="ced33-119">The value of `numRanks` is 1 for a single-dimensional array and `N` for a multi-dimensional array of `N` dimensions.</span></span>  
+ <span data-ttu-id="449db-119">值`numRanks`為一維陣列的 1 和`N`多維陣列的`N`維度。</span><span class="sxs-lookup"><span data-stu-id="449db-119">The value of `numRanks` is 1 for a single-dimensional array and `N` for a multi-dimensional array of `N` dimensions.</span></span>  
   
-## <a name="requirements"></a><span data-ttu-id="ced33-120">需求</span><span class="sxs-lookup"><span data-stu-id="ced33-120">Requirements</span></span>  
- <span data-ttu-id="ced33-121">**平台：**看到[系統需求](../../../../docs/framework/get-started/system-requirements.md)。</span><span class="sxs-lookup"><span data-stu-id="ced33-121">**Platforms:** See [System Requirements](../../../../docs/framework/get-started/system-requirements.md).</span></span>  
+## <a name="requirements"></a><span data-ttu-id="449db-120">需求</span><span class="sxs-lookup"><span data-stu-id="449db-120">Requirements</span></span>  
+ <span data-ttu-id="449db-121">**平台：** 看到[系統需求](../../../../docs/framework/get-started/system-requirements.md)。</span><span class="sxs-lookup"><span data-stu-id="449db-121">**Platforms:** See [System Requirements](../../../../docs/framework/get-started/system-requirements.md).</span></span>  
   
- <span data-ttu-id="ced33-122">**標頭：** CorDebug.idl、 CorDebug.h</span><span class="sxs-lookup"><span data-stu-id="ced33-122">**Header:** CorDebug.idl, CorDebug.h</span></span>  
+ <span data-ttu-id="449db-122">**標頭：** CorDebug.idl、 CorDebug.h</span><span class="sxs-lookup"><span data-stu-id="449db-122">**Header:** CorDebug.idl, CorDebug.h</span></span>  
   
- <span data-ttu-id="ced33-123">**程式庫：** CorGuids.lib</span><span class="sxs-lookup"><span data-stu-id="ced33-123">**Library:** CorGuids.lib</span></span>  
+ <span data-ttu-id="449db-123">**程式庫：** CorGuids.lib</span><span class="sxs-lookup"><span data-stu-id="449db-123">**Library:** CorGuids.lib</span></span>  
   
- <span data-ttu-id="ced33-124">**.NET framework 版本：**[!INCLUDE[net_current_v45plus](../../../../includes/net-current-v45plus-md.md)]</span><span class="sxs-lookup"><span data-stu-id="ced33-124">**.NET Framework Versions:** [!INCLUDE[net_current_v45plus](../../../../includes/net-current-v45plus-md.md)]</span></span>  
+ <span data-ttu-id="449db-124">**.NET framework 版本：** [!INCLUDE[net_current_v45plus](../../../../includes/net-current-v45plus-md.md)]</span><span class="sxs-lookup"><span data-stu-id="449db-124">**.NET Framework Versions:** [!INCLUDE[net_current_v45plus](../../../../includes/net-current-v45plus-md.md)]</span></span>  
   
-## <a name="see-also"></a><span data-ttu-id="ced33-125">請參閱</span><span class="sxs-lookup"><span data-stu-id="ced33-125">See Also</span></span>  
- [<span data-ttu-id="ced33-126">偵錯結構</span><span class="sxs-lookup"><span data-stu-id="ced33-126">Debugging Structures</span></span>](../../../../docs/framework/unmanaged-api/debugging/debugging-structures.md)  
- [<span data-ttu-id="ced33-127">偵錯</span><span class="sxs-lookup"><span data-stu-id="ced33-127">Debugging</span></span>](../../../../docs/framework/unmanaged-api/debugging/index.md)
+## <a name="see-also"></a><span data-ttu-id="449db-125">另請參閱</span><span class="sxs-lookup"><span data-stu-id="449db-125">See Also</span></span>  
+ [<span data-ttu-id="449db-126">偵錯結構</span><span class="sxs-lookup"><span data-stu-id="449db-126">Debugging Structures</span></span>](../../../../docs/framework/unmanaged-api/debugging/debugging-structures.md)  
+ [<span data-ttu-id="449db-127">偵錯</span><span class="sxs-lookup"><span data-stu-id="449db-127">Debugging</span></span>](../../../../docs/framework/unmanaged-api/debugging/index.md)

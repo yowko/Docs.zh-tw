@@ -7,6 +7,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: HT
 ms.contentlocale: zh-TW
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33317082"
 ---
 # <a name="how-to-query-linq-to-xml-using-xpath-c"></a><span data-ttu-id="dcd71-102">如何：使用 XPath 查詢 LINQ to XML (C#)</span><span class="sxs-lookup"><span data-stu-id="dcd71-102">How to: Query LINQ to XML Using XPath (C#)</span></span>
 <span data-ttu-id="dcd71-103">本主題說明可讓您使用 XPath 查詢 XML 樹狀結構的擴充方法。</span><span class="sxs-lookup"><span data-stu-id="dcd71-103">This topic introduces the extension methods that enable you to query an XML tree by using XPath.</span></span> <span data-ttu-id="dcd71-104">如需有關使用這些擴充方法的詳細資訊，請參閱 <xref:System.Xml.XPath.Extensions?displayProperty=nameWithType>。</span><span class="sxs-lookup"><span data-stu-id="dcd71-104">For detailed information about using these extension methods, see <xref:System.Xml.XPath.Extensions?displayProperty=nameWithType>.</span></span>  

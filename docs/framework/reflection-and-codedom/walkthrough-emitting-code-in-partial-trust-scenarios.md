@@ -21,6 +21,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: HT
 ms.contentlocale: zh-TW
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33399752"
 ---
 # <a name="walkthrough-emitting-code-in-partial-trust-scenarios"></a><span data-ttu-id="ec90d-102">逐步解說：在部分信任案例中發出程式碼</span><span class="sxs-lookup"><span data-stu-id="ec90d-102">Walkthrough: Emitting Code in Partial Trust Scenarios</span></span>
 <span data-ttu-id="ec90d-103">反映發出在完整或部分信任中使用相同的 API 集合，但在部分信任程式碼中，有些功能需要特殊權限。</span><span class="sxs-lookup"><span data-stu-id="ec90d-103">Reflection emit uses the same API set in full or partial trust, but some features require special permissions in partially trusted code.</span></span> <span data-ttu-id="ec90d-104">此外，反映發出還有一項匿名裝載動態方法的功能，設計搭配部分信任使用並可供安全性透明組件使用。</span><span class="sxs-lookup"><span data-stu-id="ec90d-104">In addition, reflection emit has a feature, anonymously hosted dynamic methods, that is designed to be used with partial trust and by security-transparent assemblies.</span></span>  

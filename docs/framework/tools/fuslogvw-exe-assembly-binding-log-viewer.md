@@ -16,6 +16,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: HT
 ms.contentlocale: zh-TW
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33400207"
 ---
 # <a name="fuslogvwexe-assembly-binding-log-viewer"></a><span data-ttu-id="7f9a8-102">Fuslogvw.exe (組件繫結記錄檔檢視器)</span><span class="sxs-lookup"><span data-stu-id="7f9a8-102">Fuslogvw.exe (Assembly Binding Log Viewer)</span></span>
 <span data-ttu-id="7f9a8-103">組件繫結記錄檔檢視器會顯示組件繫結的詳細資料。</span><span class="sxs-lookup"><span data-stu-id="7f9a8-103">The Assembly Binding Log Viewer displays details for assembly binds.</span></span> <span data-ttu-id="7f9a8-104">這項資訊有助於診斷 .NET Framework 為何無法在執行階段找到組件。</span><span class="sxs-lookup"><span data-stu-id="7f9a8-104">This information helps you diagnose why the .NET Framework cannot locate an assembly at run time.</span></span> <span data-ttu-id="7f9a8-105">這類失敗通常是因為組件部署至不正確的位置、原生映像已失效，或版本號碼或文化特定不符所致。</span><span class="sxs-lookup"><span data-stu-id="7f9a8-105">These failures are usually the result of an assembly deployed to the wrong location, a native image that is no longer valid, or a mismatch in version numbers or cultures.</span></span> <span data-ttu-id="7f9a8-106">通用語言執行平台找不到組件，通常在應用程式中會顯示為 <xref:System.TypeLoadException>。</span><span class="sxs-lookup"><span data-stu-id="7f9a8-106">The common language runtime's failure to locate an assembly typically shows up as a <xref:System.TypeLoadException> in your application.</span></span>  

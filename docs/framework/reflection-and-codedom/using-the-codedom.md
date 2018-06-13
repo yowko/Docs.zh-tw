@@ -27,6 +27,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: HT
 ms.contentlocale: zh-TW
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33399015"
 ---
 # <a name="using-the-codedom"></a><span data-ttu-id="3ef47-102">使用 CodeDOM</span><span class="sxs-lookup"><span data-stu-id="3ef47-102">Using the CodeDOM</span></span>
 <span data-ttu-id="3ef47-103">CodeDOM 提供的類型代表許多常見的原始程式碼項目類型。</span><span class="sxs-lookup"><span data-stu-id="3ef47-103">The CodeDOM provides types that represent many common types of source code elements.</span></span> <span data-ttu-id="3ef47-104">您可以設計程式，建置使用 CodeDOM 項目的原始程式碼模型，組合物件圖形。</span><span class="sxs-lookup"><span data-stu-id="3ef47-104">You can design a program that builds a source code model using CodeDOM elements to assemble an object graph.</span></span> <span data-ttu-id="3ef47-105">此物件圖形可以轉譯成使用 CodeDOM 程式碼產生器的原始程式碼，處理受支援的程式設計語言。</span><span class="sxs-lookup"><span data-stu-id="3ef47-105">This object graph can be rendered as source code using a CodeDOM code generator for a supported programming language.</span></span> <span data-ttu-id="3ef47-106">您也可以使用 CodeDOM 將原始程式碼編譯成二進位組件。</span><span class="sxs-lookup"><span data-stu-id="3ef47-106">The CodeDOM can also be used to compile source code into a binary assembly.</span></span>  

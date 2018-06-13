@@ -17,6 +17,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: HT
 ms.contentlocale: zh-TW
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33402024"
 ---
 # <a name="developer-command-prompt-for-visual-studio"></a><span data-ttu-id="f6de8-102">Visual Studio 的開發人員命令提示字元</span><span class="sxs-lookup"><span data-stu-id="f6de8-102">Developer Command Prompt for Visual Studio</span></span>
 <span data-ttu-id="f6de8-103">「Visual Studio 開發人員命令提示字元」會自動設定環境變數，讓您能夠輕鬆使用 .NET Framework 工具。</span><span class="sxs-lookup"><span data-stu-id="f6de8-103">The Developer Command Prompt for Visual Studio automatically sets the environment variables that enable you to easily use .NET Framework tools.</span></span> <span data-ttu-id="f6de8-104">開發人員命令提示字元會隨 Visual Studio 的完整版本或 Community Edition 一起安裝，</span><span class="sxs-lookup"><span data-stu-id="f6de8-104">The Developer Command Prompt is installed with full or community editions of Visual Studio.</span></span> <span data-ttu-id="f6de8-105">但無法隨 Visual Studio 的 Express 版本一起安裝。</span><span class="sxs-lookup"><span data-stu-id="f6de8-105">It is not installed with the Express versions of Visual Studio.</span></span>  

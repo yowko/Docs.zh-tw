@@ -25,6 +25,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: HT
 ms.contentlocale: zh-TW
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33399536"
 ---
 # <a name="ngenexe-native-image-generator"></a><span data-ttu-id="2e1b5-102">Ngen.exe (原生映像產生器)</span><span class="sxs-lookup"><span data-stu-id="2e1b5-102">Ngen.exe (Native Image Generator)</span></span>
 <span data-ttu-id="2e1b5-103">原生映像產生器 (Ngen.exe) 是一種可以增進 Managed 應用程式效能的工具。</span><span class="sxs-lookup"><span data-stu-id="2e1b5-103">The Native Image Generator (Ngen.exe) is a tool that improves the performance of managed applications.</span></span> <span data-ttu-id="2e1b5-104">Ngen.exe 會建立原生映像，也就是包含已編譯之處理器特定機器碼的檔案，然後將原生映像安裝到本機電腦上的原生映像快取中。</span><span class="sxs-lookup"><span data-stu-id="2e1b5-104">Ngen.exe creates native images, which are files containing compiled processor-specific machine code, and installs them into the native image cache on the local computer.</span></span> <span data-ttu-id="2e1b5-105">執行階段就可以從快取中使用原生映像，而不是使用 Just-In-Time (JIT) 編譯器來編譯原始組件。</span><span class="sxs-lookup"><span data-stu-id="2e1b5-105">The runtime can use native images from the cache instead of using the just-in-time (JIT) compiler to compile the original assembly.</span></span>  

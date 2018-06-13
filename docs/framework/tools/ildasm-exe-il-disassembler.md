@@ -16,6 +16,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: HT
 ms.contentlocale: zh-TW
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33409106"
 ---
 # <a name="ildasmexe-il-disassembler"></a><span data-ttu-id="9a34d-102">Ildasm.exe (IL 反組譯工具)</span><span class="sxs-lookup"><span data-stu-id="9a34d-102">Ildasm.exe (IL Disassembler)</span></span>
 

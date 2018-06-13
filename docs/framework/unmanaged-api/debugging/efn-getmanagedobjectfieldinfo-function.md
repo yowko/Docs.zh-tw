@@ -1,14 +1,6 @@
 ---
-title: "_EFN_GetManagedObjectFieldInfo 函式"
-ms.custom: 
+title: _EFN_GetManagedObjectFieldInfo 函式
 ms.date: 03/30/2017
-ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.technology:
-- dotnet-clr
-ms.tgt_pltfrm: 
-ms.topic: reference
 api_name:
 - _EFN_GetManagedObjectFieldInfo
 api_location:
@@ -22,22 +14,19 @@ helpviewer_keywords:
 ms.assetid: 3b93bcff-62a4-47b2-babc-6bcf4216119a
 topic_type:
 - apiref
-caps.latest.revision: 
 author: rpetrusha
 ms.author: ronpet
-manager: wpickett
-ms.workload:
-- dotnet
-ms.openlocfilehash: 4822cab8816e97bd1d13c36ea7b63dc9a6f679d0
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
-ms.translationtype: MT
+ms.openlocfilehash: c6195d9666afa8fba3f77322366e4709634e53bb
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 05/04/2018
+ms.locfileid: "33405240"
 ---
-# <a name="efngetmanagedobjectfieldinfo-function"></a><span data-ttu-id="1aecd-102">_EFN_GetManagedObjectFieldInfo 函式</span><span class="sxs-lookup"><span data-stu-id="1aecd-102">_EFN_GetManagedObjectFieldInfo Function</span></span>
-<span data-ttu-id="1aecd-103">使用所提供的物件指標和欄位名稱來取得從物件開始到欄位的位移以及欄位的值。</span><span class="sxs-lookup"><span data-stu-id="1aecd-103">Gets the offset from the start of an object to a field and the field's value, using the provided object pointer and field name.</span></span>  
+# <a name="efngetmanagedobjectfieldinfo-function"></a><span data-ttu-id="7df99-102">_EFN_GetManagedObjectFieldInfo 函式</span><span class="sxs-lookup"><span data-stu-id="7df99-102">_EFN_GetManagedObjectFieldInfo Function</span></span>
+<span data-ttu-id="7df99-103">使用所提供的物件指標和欄位名稱來取得從物件開始到欄位的位移以及欄位的值。</span><span class="sxs-lookup"><span data-stu-id="7df99-103">Gets the offset from the start of an object to a field and the field's value, using the provided object pointer and field name.</span></span>  
   
-## <a name="syntax"></a><span data-ttu-id="1aecd-104">語法</span><span class="sxs-lookup"><span data-stu-id="1aecd-104">Syntax</span></span>  
+## <a name="syntax"></a><span data-ttu-id="7df99-104">語法</span><span class="sxs-lookup"><span data-stu-id="7df99-104">Syntax</span></span>  
   
 ```  
 HRESULT _EFN_GetManagedObjectFieldInfo(  
@@ -49,33 +38,33 @@ HRESULT _EFN_GetManagedObjectFieldInfo(
 );  
 ```  
   
-#### <a name="parameters"></a><span data-ttu-id="1aecd-105">參數</span><span class="sxs-lookup"><span data-stu-id="1aecd-105">Parameters</span></span>  
+#### <a name="parameters"></a><span data-ttu-id="7df99-105">參數</span><span class="sxs-lookup"><span data-stu-id="7df99-105">Parameters</span></span>  
  `Client`  
- <span data-ttu-id="1aecd-106">[in]偵錯用戶端指標。</span><span class="sxs-lookup"><span data-stu-id="1aecd-106">[in] A pointer to the debug client.</span></span>  
+ <span data-ttu-id="7df99-106">[in]偵錯用戶端指標。</span><span class="sxs-lookup"><span data-stu-id="7df99-106">[in] A pointer to the debug client.</span></span>  
   
  `objAddr`  
- <span data-ttu-id="1aecd-107">[in]Managed 的物件指標。</span><span class="sxs-lookup"><span data-stu-id="1aecd-107">[in] A managed object pointer.</span></span>  
+ <span data-ttu-id="7df99-107">[in]Managed 的物件指標。</span><span class="sxs-lookup"><span data-stu-id="7df99-107">[in] A managed object pointer.</span></span>  
   
- <span data-ttu-id="1aecd-108">szFieldName</span><span class="sxs-lookup"><span data-stu-id="1aecd-108">szFieldName</span></span>  
- <span data-ttu-id="1aecd-109">[in]Managed 的物件指標的欄位名稱。</span><span class="sxs-lookup"><span data-stu-id="1aecd-109">[in] A managed object pointer to the field name.</span></span>  
+ <span data-ttu-id="7df99-108">szFieldName</span><span class="sxs-lookup"><span data-stu-id="7df99-108">szFieldName</span></span>  
+ <span data-ttu-id="7df99-109">[in]Managed 的物件指標的欄位名稱。</span><span class="sxs-lookup"><span data-stu-id="7df99-109">[in] A managed object pointer to the field name.</span></span>  
   
  `pValue`  
- <span data-ttu-id="1aecd-110">[out]欄位值。</span><span class="sxs-lookup"><span data-stu-id="1aecd-110">[out] The field value.</span></span> <span data-ttu-id="1aecd-111">此參數可以是 null。</span><span class="sxs-lookup"><span data-stu-id="1aecd-111">This parameter can be null.</span></span>  
+ <span data-ttu-id="7df99-110">[out]欄位值。</span><span class="sxs-lookup"><span data-stu-id="7df99-110">[out] The field value.</span></span> <span data-ttu-id="7df99-111">此參數可以是 null。</span><span class="sxs-lookup"><span data-stu-id="7df99-111">This parameter can be null.</span></span>  
   
  `pOffset`  
- <span data-ttu-id="1aecd-112">[out]從位移`objAddr`的欄位。</span><span class="sxs-lookup"><span data-stu-id="1aecd-112">[out] The offset from `objAddr` to the field.</span></span> <span data-ttu-id="1aecd-113">此參數可以是 null。</span><span class="sxs-lookup"><span data-stu-id="1aecd-113">This parameter can be null.</span></span>  
+ <span data-ttu-id="7df99-112">[out]從位移`objAddr`的欄位。</span><span class="sxs-lookup"><span data-stu-id="7df99-112">[out] The offset from `objAddr` to the field.</span></span> <span data-ttu-id="7df99-113">此參數可以是 null。</span><span class="sxs-lookup"><span data-stu-id="7df99-113">This parameter can be null.</span></span>  
   
-## <a name="remarks"></a><span data-ttu-id="1aecd-114">備註</span><span class="sxs-lookup"><span data-stu-id="1aecd-114">Remarks</span></span>  
- <span data-ttu-id="1aecd-115">如果位移為 0，不會寫入位移。</span><span class="sxs-lookup"><span data-stu-id="1aecd-115">If the offset is 0, no offset is written.</span></span>  
+## <a name="remarks"></a><span data-ttu-id="7df99-114">備註</span><span class="sxs-lookup"><span data-stu-id="7df99-114">Remarks</span></span>  
+ <span data-ttu-id="7df99-115">如果位移為 0，不會寫入位移。</span><span class="sxs-lookup"><span data-stu-id="7df99-115">If the offset is 0, no offset is written.</span></span>  
   
- <span data-ttu-id="1aecd-116">如果沒有任何 managed 程式碼的執行緒上目前內容中，函數會傳回 HRESULT SOS_E_NOMANAGEDCODE 0xa0 設備值與 0x1000 錯誤碼。</span><span class="sxs-lookup"><span data-stu-id="1aecd-116">If there is no managed code on the thread currently in context, the function returns HRESULT SOS_E_NOMANAGEDCODE with a facility value of 0xa0 and an error code of 0x1000.</span></span>  
+ <span data-ttu-id="7df99-116">如果沒有任何 managed 程式碼的執行緒上目前內容中，函數會傳回 HRESULT SOS_E_NOMANAGEDCODE 0xa0 設備值與 0x1000 錯誤碼。</span><span class="sxs-lookup"><span data-stu-id="7df99-116">If there is no managed code on the thread currently in context, the function returns HRESULT SOS_E_NOMANAGEDCODE with a facility value of 0xa0 and an error code of 0x1000.</span></span>  
   
-## <a name="requirements"></a><span data-ttu-id="1aecd-117">需求</span><span class="sxs-lookup"><span data-stu-id="1aecd-117">Requirements</span></span>  
- <span data-ttu-id="1aecd-118">**平台：**看到[系統需求](../../../../docs/framework/get-started/system-requirements.md)。</span><span class="sxs-lookup"><span data-stu-id="1aecd-118">**Platforms:** See [System Requirements](../../../../docs/framework/get-started/system-requirements.md).</span></span>  
+## <a name="requirements"></a><span data-ttu-id="7df99-117">需求</span><span class="sxs-lookup"><span data-stu-id="7df99-117">Requirements</span></span>  
+ <span data-ttu-id="7df99-118">**平台：** 看到[系統需求](../../../../docs/framework/get-started/system-requirements.md)。</span><span class="sxs-lookup"><span data-stu-id="7df99-118">**Platforms:** See [System Requirements](../../../../docs/framework/get-started/system-requirements.md).</span></span>  
   
- <span data-ttu-id="1aecd-119">**標頭：** SOS_Stacktrace.h</span><span class="sxs-lookup"><span data-stu-id="1aecd-119">**Header:** SOS_Stacktrace.h</span></span>  
+ <span data-ttu-id="7df99-119">**標頭：** SOS_Stacktrace.h</span><span class="sxs-lookup"><span data-stu-id="7df99-119">**Header:** SOS_Stacktrace.h</span></span>  
   
- <span data-ttu-id="1aecd-120">**.NET framework 版本：**[!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]</span><span class="sxs-lookup"><span data-stu-id="1aecd-120">**.NET Framework Version:** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]</span></span>  
+ <span data-ttu-id="7df99-120">**.NET framework 版本：** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]</span><span class="sxs-lookup"><span data-stu-id="7df99-120">**.NET Framework Version:** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]</span></span>  
   
-## <a name="see-also"></a><span data-ttu-id="1aecd-121">請參閱</span><span class="sxs-lookup"><span data-stu-id="1aecd-121">See Also</span></span>  
- [<span data-ttu-id="1aecd-122">偵錯全域靜態函式</span><span class="sxs-lookup"><span data-stu-id="1aecd-122">Debugging Global Static Functions</span></span>](../../../../docs/framework/unmanaged-api/debugging/debugging-global-static-functions.md)
+## <a name="see-also"></a><span data-ttu-id="7df99-121">另請參閱</span><span class="sxs-lookup"><span data-stu-id="7df99-121">See Also</span></span>  
+ [<span data-ttu-id="7df99-122">偵錯全域靜態函式</span><span class="sxs-lookup"><span data-stu-id="7df99-122">Debugging Global Static Functions</span></span>](../../../../docs/framework/unmanaged-api/debugging/debugging-global-static-functions.md)

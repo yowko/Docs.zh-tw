@@ -7,6 +7,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: HT
 ms.contentlocale: zh-TW
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33316877"
 ---
 # <a name="how-to-find-preceding-siblings-xpath-linq-to-xml-c"></a><span data-ttu-id="9a9af-102">如何：尋找前面同層級項目 (XPath-LINQ to XML) (C#)</span><span class="sxs-lookup"><span data-stu-id="9a9af-102">How to: Find Preceding Siblings (XPath-LINQ to XML) (C#)</span></span>
 <span data-ttu-id="9a9af-103">這個主題會比較 XPath `preceding-sibling` 座標軸與 [!INCLUDE[sqltecxlinq](~/includes/sqltecxlinq-md.md)] 子系 <xref:System.Xml.Linq.XNode.ElementsBeforeSelf%2A?displayProperty=nameWithType> 座標軸。</span><span class="sxs-lookup"><span data-stu-id="9a9af-103">This topic compares the XPath `preceding-sibling` axis to the [!INCLUDE[sqltecxlinq](~/includes/sqltecxlinq-md.md)] child <xref:System.Xml.Linq.XNode.ElementsBeforeSelf%2A?displayProperty=nameWithType> axis.</span></span>  

@@ -22,6 +22,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: HT
 ms.contentlocale: zh-TW
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33399700"
 ---
 # <a name="reflection-and-generic-types"></a><span data-ttu-id="491a9-102">反映和泛用類型</span><span class="sxs-lookup"><span data-stu-id="491a9-102">Reflection and Generic Types</span></span>
 <a name="top"></a> <span data-ttu-id="491a9-103">從反映的的觀點來看，泛型類型與一般類型間的差異在於泛型類型具有與其相關聯的一組類型參數 (若其定義為泛型類型) 或類型引數 (若其為建構類型)。</span><span class="sxs-lookup"><span data-stu-id="491a9-103">From the point of view of reflection, the difference between a generic type and an ordinary type is that a generic type has associated with it a set of type parameters (if it is a generic type definition) or type arguments (if it is a constructed type).</span></span> <span data-ttu-id="491a9-104">泛型方法與一般方法的差異也如同上述。</span><span class="sxs-lookup"><span data-stu-id="491a9-104">A generic method differs from an ordinary method in the same way.</span></span>  

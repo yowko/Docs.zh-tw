@@ -1,14 +1,6 @@
 ---
-title: "ICorDebugChain::GetActiveFrame 方法"
-ms.custom: 
+title: ICorDebugChain::GetActiveFrame 方法
 ms.date: 03/30/2017
-ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.technology:
-- dotnet-clr
-ms.tgt_pltfrm: 
-ms.topic: reference
 api_name:
 - ICorDebugChain.GetActiveFrame
 api_location:
@@ -23,22 +15,19 @@ helpviewer_keywords:
 ms.assetid: 36887017-670b-4f21-b406-8fab956f84a3
 topic_type:
 - apiref
-caps.latest.revision: 
 author: rpetrusha
 ms.author: ronpet
-manager: wpickett
-ms.workload:
-- dotnet
-ms.openlocfilehash: 7498e031b74bd904b908342b663e4421432e6d95
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
-ms.translationtype: MT
+ms.openlocfilehash: a104d4d3cc74a6c1cb343818c9b0b3e8978b97df
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 05/04/2018
+ms.locfileid: "33402795"
 ---
-# <a name="icordebugchaingetactiveframe-method"></a><span data-ttu-id="ad3d6-102">ICorDebugChain::GetActiveFrame 方法</span><span class="sxs-lookup"><span data-stu-id="ad3d6-102">ICorDebugChain::GetActiveFrame Method</span></span>
-<span data-ttu-id="ad3d6-103">取得作用中 (也就是最新) 鏈結上的框架。</span><span class="sxs-lookup"><span data-stu-id="ad3d6-103">Gets the active (that is, most recent) frame on the chain.</span></span>  
+# <a name="icordebugchaingetactiveframe-method"></a><span data-ttu-id="b3400-102">ICorDebugChain::GetActiveFrame 方法</span><span class="sxs-lookup"><span data-stu-id="b3400-102">ICorDebugChain::GetActiveFrame Method</span></span>
+<span data-ttu-id="b3400-103">取得作用中 (也就是最新) 鏈結上的框架。</span><span class="sxs-lookup"><span data-stu-id="b3400-103">Gets the active (that is, most recent) frame on the chain.</span></span>  
   
-## <a name="syntax"></a><span data-ttu-id="ad3d6-104">語法</span><span class="sxs-lookup"><span data-stu-id="ad3d6-104">Syntax</span></span>  
+## <a name="syntax"></a><span data-ttu-id="b3400-104">語法</span><span class="sxs-lookup"><span data-stu-id="b3400-104">Syntax</span></span>  
   
 ```  
 HRESULT GetActiveFrame (  
@@ -46,20 +35,20 @@ HRESULT GetActiveFrame (
 );  
 ```  
   
-#### <a name="parameters"></a><span data-ttu-id="ad3d6-105">參數</span><span class="sxs-lookup"><span data-stu-id="ad3d6-105">Parameters</span></span>  
+#### <a name="parameters"></a><span data-ttu-id="b3400-105">參數</span><span class="sxs-lookup"><span data-stu-id="b3400-105">Parameters</span></span>  
  `ppFrame`  
- <span data-ttu-id="ad3d6-106">[out]ICorDebugFrame 物件，表示使用中的位址指標 (也就是最新) 鏈結上的框架。</span><span class="sxs-lookup"><span data-stu-id="ad3d6-106">[out] A pointer to the address of an ICorDebugFrame object that represents the active (that is, most recent) frame on the chain.</span></span>  
+ <span data-ttu-id="b3400-106">[out]ICorDebugFrame 物件，表示使用中的位址指標 (也就是最新) 鏈結上的框架。</span><span class="sxs-lookup"><span data-stu-id="b3400-106">[out] A pointer to the address of an ICorDebugFrame object that represents the active (that is, most recent) frame on the chain.</span></span>  
   
-## <a name="remarks"></a><span data-ttu-id="ad3d6-107">備註</span><span class="sxs-lookup"><span data-stu-id="ad3d6-107">Remarks</span></span>  
- <span data-ttu-id="ad3d6-108">如果沒有受管理的堆疊框架，則`ppFrame`設為 null。</span><span class="sxs-lookup"><span data-stu-id="ad3d6-108">If no managed stack frame is available, `ppFrame` is set to null.</span></span>  
+## <a name="remarks"></a><span data-ttu-id="b3400-107">備註</span><span class="sxs-lookup"><span data-stu-id="b3400-107">Remarks</span></span>  
+ <span data-ttu-id="b3400-108">如果沒有受管理的堆疊框架，則`ppFrame`設為 null。</span><span class="sxs-lookup"><span data-stu-id="b3400-108">If no managed stack frame is available, `ppFrame` is set to null.</span></span>  
   
- <span data-ttu-id="ad3d6-109">如果找不到使用中畫面格，則呼叫會成功並`ppFrame`將會是 null。</span><span class="sxs-lookup"><span data-stu-id="ad3d6-109">If the active frame is not available, the call will succeed and `ppFrame` will be null.</span></span> <span data-ttu-id="ad3d6-110">使用中框架將會無法使用鏈結 CHAIN_ENTER_UNMANAGED，因為起始，因為 CHAIN_CLASS_INIT 起始部分鏈結。</span><span class="sxs-lookup"><span data-stu-id="ad3d6-110">Active frames will not be available for chains initiated due to CHAIN_ENTER_UNMANAGED, and for some chains initiated due to CHAIN_CLASS_INIT.</span></span> <span data-ttu-id="ad3d6-111">請參閱 CorDebugChainReason 列舉。</span><span class="sxs-lookup"><span data-stu-id="ad3d6-111">See the CorDebugChainReason enumeration.</span></span>  
+ <span data-ttu-id="b3400-109">如果找不到使用中畫面格，則呼叫會成功並`ppFrame`將會是 null。</span><span class="sxs-lookup"><span data-stu-id="b3400-109">If the active frame is not available, the call will succeed and `ppFrame` will be null.</span></span> <span data-ttu-id="b3400-110">使用中框架將會無法使用鏈結 CHAIN_ENTER_UNMANAGED，因為起始，因為 CHAIN_CLASS_INIT 起始部分鏈結。</span><span class="sxs-lookup"><span data-stu-id="b3400-110">Active frames will not be available for chains initiated due to CHAIN_ENTER_UNMANAGED, and for some chains initiated due to CHAIN_CLASS_INIT.</span></span> <span data-ttu-id="b3400-111">請參閱 CorDebugChainReason 列舉。</span><span class="sxs-lookup"><span data-stu-id="b3400-111">See the CorDebugChainReason enumeration.</span></span>  
   
-## <a name="requirements"></a><span data-ttu-id="ad3d6-112">需求</span><span class="sxs-lookup"><span data-stu-id="ad3d6-112">Requirements</span></span>  
- <span data-ttu-id="ad3d6-113">**平台：**看到[系統需求](../../../../docs/framework/get-started/system-requirements.md)。</span><span class="sxs-lookup"><span data-stu-id="ad3d6-113">**Platforms:** See [System Requirements](../../../../docs/framework/get-started/system-requirements.md).</span></span>  
+## <a name="requirements"></a><span data-ttu-id="b3400-112">需求</span><span class="sxs-lookup"><span data-stu-id="b3400-112">Requirements</span></span>  
+ <span data-ttu-id="b3400-113">**平台：** 看到[系統需求](../../../../docs/framework/get-started/system-requirements.md)。</span><span class="sxs-lookup"><span data-stu-id="b3400-113">**Platforms:** See [System Requirements](../../../../docs/framework/get-started/system-requirements.md).</span></span>  
   
- <span data-ttu-id="ad3d6-114">**標頭：** CorDebug.idl、 CorDebug.h</span><span class="sxs-lookup"><span data-stu-id="ad3d6-114">**Header:** CorDebug.idl, CorDebug.h</span></span>  
+ <span data-ttu-id="b3400-114">**標頭：** CorDebug.idl、 CorDebug.h</span><span class="sxs-lookup"><span data-stu-id="b3400-114">**Header:** CorDebug.idl, CorDebug.h</span></span>  
   
- <span data-ttu-id="ad3d6-115">**程式庫：** CorGuids.lib</span><span class="sxs-lookup"><span data-stu-id="ad3d6-115">**Library:** CorGuids.lib</span></span>  
+ <span data-ttu-id="b3400-115">**程式庫：** CorGuids.lib</span><span class="sxs-lookup"><span data-stu-id="b3400-115">**Library:** CorGuids.lib</span></span>  
   
- <span data-ttu-id="ad3d6-116">**.NET framework 版本：**[!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]</span><span class="sxs-lookup"><span data-stu-id="ad3d6-116">**.NET Framework Versions:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]</span></span>
+ <span data-ttu-id="b3400-116">**.NET framework 版本：** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]</span><span class="sxs-lookup"><span data-stu-id="b3400-116">**.NET Framework Versions:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]</span></span>

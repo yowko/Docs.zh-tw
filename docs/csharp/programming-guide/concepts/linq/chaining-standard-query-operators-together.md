@@ -7,6 +7,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: HT
 ms.contentlocale: zh-TW
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33326146"
 ---
 # <a name="chaining-standard-query-operators-together-c"></a><span data-ttu-id="e645b-102">將標準查詢運算子鏈結在一起 (C#)</span><span class="sxs-lookup"><span data-stu-id="e645b-102">Chaining Standard Query Operators Together (C#)</span></span>
 <span data-ttu-id="e645b-103">這是[教學課程：將查詢鏈結在一起 (C#)](../../../../csharp/programming-guide/concepts/linq/tutorial-chaining-queries-together.md) 教學課程中的最後一個主題。</span><span class="sxs-lookup"><span data-stu-id="e645b-103">This is the final topic in the [Tutorial: Chaining Queries Together (C#)](../../../../csharp/programming-guide/concepts/linq/tutorial-chaining-queries-together.md) tutorial.</span></span>  

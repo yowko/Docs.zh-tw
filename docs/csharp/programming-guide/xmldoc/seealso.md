@@ -17,6 +17,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: HT
 ms.contentlocale: zh-TW
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33349131"
 ---
 # <a name="ltseealsogt-c-programming-guide"></a><span data-ttu-id="c1946-102">&lt;seealso&gt; (C# 程式設計手冊)</span><span class="sxs-lookup"><span data-stu-id="c1946-102">&lt;seealso&gt; (C# Programming Guide)</span></span>
 ## <a name="syntax"></a><span data-ttu-id="c1946-103">語法</span><span class="sxs-lookup"><span data-stu-id="c1946-103">Syntax</span></span>  

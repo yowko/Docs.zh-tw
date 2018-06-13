@@ -10,6 +10,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: HT
 ms.contentlocale: zh-TW
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33323634"
 ---
 # <a name="generic-interfaces-c-programming-guide"></a><span data-ttu-id="9e458-102">泛型介面 (C# 程式設計手冊)</span><span class="sxs-lookup"><span data-stu-id="9e458-102">Generic Interfaces (C# Programming Guide)</span></span>
 <span data-ttu-id="9e458-103">定義表示集合中項目的泛型集合類別或泛型類別的介面，通常會很有用。</span><span class="sxs-lookup"><span data-stu-id="9e458-103">It is often useful to define interfaces either for generic collection classes, or for the generic classes that represent items in the collection.</span></span> <span data-ttu-id="9e458-104">泛型類別的喜好設定會使用泛型介面，例如 <xref:System.IComparable%601> 而不是 <xref:System.IComparable>，以避免實值型別的 boxing 和 unboxing 作業。</span><span class="sxs-lookup"><span data-stu-id="9e458-104">The preference for generic classes is to use generic interfaces, such as <xref:System.IComparable%601> rather than <xref:System.IComparable>, in order to avoid boxing and unboxing operations on value types.</span></span> <span data-ttu-id="9e458-105">.NET Framework 類別庫會定義數個泛型介面，搭配 <xref:System.Collections.Generic> 命名空間中的集合類別使用。</span><span class="sxs-lookup"><span data-stu-id="9e458-105">The .NET Framework class library defines several generic interfaces for use with the collection classes in the <xref:System.Collections.Generic> namespace.</span></span>  

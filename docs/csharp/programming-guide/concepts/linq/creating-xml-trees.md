@@ -7,6 +7,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: HT
 ms.contentlocale: zh-TW
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33318584"
 ---
 # <a name="creating-xml-trees-c"></a><span data-ttu-id="2aabe-102">建立 XML 樹狀結構 (C#)</span><span class="sxs-lookup"><span data-stu-id="2aabe-102">Creating XML Trees (C#)</span></span>
 <span data-ttu-id="2aabe-103">其中一個最常見的 XML 工做為建構 XML 樹狀結構。</span><span class="sxs-lookup"><span data-stu-id="2aabe-103">One of the most common XML tasks is constructing an XML tree.</span></span> <span data-ttu-id="2aabe-104">本節描述數種建立這些樹狀結構的方式。</span><span class="sxs-lookup"><span data-stu-id="2aabe-104">This section describes several ways to create them.</span></span>  

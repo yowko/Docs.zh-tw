@@ -17,6 +17,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: HT
 ms.contentlocale: zh-TW
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33401117"
 ---
 # <a name="snexe-strong-name-tool"></a><span data-ttu-id="48e22-102">Sn.exe (強式名稱工具)</span><span class="sxs-lookup"><span data-stu-id="48e22-102">Sn.exe (Strong Name Tool)</span></span>
 <span data-ttu-id="48e22-103">強式名稱工具 (Sn.exe) 可幫助您使用[強式名稱](../../../docs/framework/app-domains/strong-named-assemblies.md)簽署組件。</span><span class="sxs-lookup"><span data-stu-id="48e22-103">The Strong Name tool (Sn.exe) helps sign assemblies with [strong names](../../../docs/framework/app-domains/strong-named-assemblies.md).</span></span> <span data-ttu-id="48e22-104">Sn.exe 提供了金鑰管理、簽章產生和簽章驗證的選項。</span><span class="sxs-lookup"><span data-stu-id="48e22-104">Sn.exe provides options for key management, signature generation, and signature verification.</span></span>  
