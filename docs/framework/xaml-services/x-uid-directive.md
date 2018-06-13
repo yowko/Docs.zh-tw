@@ -12,6 +12,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: zh-TW
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33561832"
 ---
 # <a name="xuid-directive"></a><span data-ttu-id="10a2f-102">x:Uid 指示詞</span><span class="sxs-lookup"><span data-stu-id="10a2f-102">x:Uid Directive</span></span>
 <span data-ttu-id="10a2f-103">提供唯一的識別項的標記項目。</span><span class="sxs-lookup"><span data-stu-id="10a2f-103">Provides a unique identifier for markup elements.</span></span> <span data-ttu-id="10a2f-104">在許多案例中，這個唯一識別碼使用 XAML 當地語系化程序和工具。</span><span class="sxs-lookup"><span data-stu-id="10a2f-104">In many scenarios, this unique identifier is used by XAML localization processes and tools.</span></span>  

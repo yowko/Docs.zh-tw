@@ -17,6 +17,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: HT
 ms.contentlocale: zh-TW
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33578153"
 ---
 # <a name="how-to-display-localized-date-and-time-information-to-web-users"></a><span data-ttu-id="5940f-102">如何：對 Web 使用者顯示當地語系化的日期和時間資訊</span><span class="sxs-lookup"><span data-stu-id="5940f-102">How to: Display Localized Date and Time Information to Web Users</span></span>
 <span data-ttu-id="5940f-103">由於網頁可在世界的任何一個角落顯示，負責剖析及格式化日期和時間值的作業在與使用者互動時，並不應該仰賴單一的預設格式 (這通常是網頁伺服器當地文化特性的格式)。</span><span class="sxs-lookup"><span data-stu-id="5940f-103">Because a Web page can be displayed anywhere in the world, operations that parse and format date and time values should not rely on a default format (which most often is the format of the Web server's local culture) when interacting with the user.</span></span> <span data-ttu-id="5940f-104">相反地，處理來自使用者之日期和時間字串輸入的 Web 表單，應該使用該使用者慣用的文化特性對字串進行剖析。</span><span class="sxs-lookup"><span data-stu-id="5940f-104">Instead, Web forms that handle date and time strings input by the user should parse the strings using the user's preferred culture.</span></span> <span data-ttu-id="5940f-105">同樣地，日期和時間資料應該以符合使用者文化特性的格式向該使用者顯示。</span><span class="sxs-lookup"><span data-stu-id="5940f-105">Similarly, date and time data should be displayed to the user in a format that conforms to the user's culture.</span></span> <span data-ttu-id="5940f-106">本主題顯示如何執行此動作。</span><span class="sxs-lookup"><span data-stu-id="5940f-106">This topic shows how to do this.</span></span>  

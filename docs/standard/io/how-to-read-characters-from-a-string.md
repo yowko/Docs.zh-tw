@@ -20,6 +20,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: HT
 ms.contentlocale: zh-TW
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33572771"
 ---
 # <a name="how-to-read-characters-from-a-string"></a><span data-ttu-id="af6ee-102">如何：從字串中讀取字元</span><span class="sxs-lookup"><span data-stu-id="af6ee-102">How to: Read Characters from a String</span></span>
 <span data-ttu-id="af6ee-103">下列程式碼範例會示範如何以同步和非同步的方式，從字串讀取字元。</span><span class="sxs-lookup"><span data-stu-id="af6ee-103">The following code examples show how to read characters synchronously and asynchronously from a string.</span></span>  

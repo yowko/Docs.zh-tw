@@ -10,6 +10,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: HT
 ms.contentlocale: zh-TW
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33570629"
 ---
 # <a name="node-set-navigation-using-xpathnavigator"></a><span data-ttu-id="b537a-102">使用 XPathNavigator 巡覽節點集</span><span class="sxs-lookup"><span data-stu-id="b537a-102">Node Set Navigation Using XPathNavigator</span></span>
 <span data-ttu-id="b537a-103">您可以使用 <xref:System.Xml.XPath.XPathDocument> 類別的節點集巡覽方法，巡覽 <xref:System.Xml.XmlDocument> 或 <xref:System.Xml.XPath.XPathNavigator> 物件中的節點。</span><span class="sxs-lookup"><span data-stu-id="b537a-103">You can navigate over nodes in an <xref:System.Xml.XPath.XPathDocument> or <xref:System.Xml.XmlDocument> object using the node set navigation methods of the <xref:System.Xml.XPath.XPathNavigator> class.</span></span> <span data-ttu-id="b537a-104">您可以巡覽所有節點或由 <xref:System.Xml.XPath.XPathNavigator> 類別的其中一個選取方法傳回的選定節點集。</span><span class="sxs-lookup"><span data-stu-id="b537a-104">You can navigate over all the nodes or over a selected set of nodes returned by one of the selection methods of the <xref:System.Xml.XPath.XPathNavigator> class.</span></span>  

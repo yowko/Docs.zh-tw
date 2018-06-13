@@ -10,6 +10,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: HT
 ms.contentlocale: zh-TW
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33397581"
 ---
 # <a name="peer-names-and-pnrp-ids"></a><span data-ttu-id="531ae-102">對等名稱和 PNRP 識別碼</span><span class="sxs-lookup"><span data-stu-id="531ae-102">Peer Names and PNRP IDs</span></span>
 <span data-ttu-id="531ae-103">對等名稱代表通訊端點，可以是一部電腦、一位使用者、一個群組、一項服務，或是與可解析成 IPv6 位址之對等建立關聯的任何項目。</span><span class="sxs-lookup"><span data-stu-id="531ae-103">A Peer Name represents an endpoint for communication, which can be a computer, a user, a group, a service, or anything associated with a Peer that can be resolved to an IPv6 address.</span></span> <span data-ttu-id="531ae-104">對等名稱解析通訊協定 (PNRP) 採用靜態上唯一的對等名稱來建立 PNRP 識別碼，以用來識別雲端成員。</span><span class="sxs-lookup"><span data-stu-id="531ae-104">The Peer Name Resolution Protocol (PNRP) takes the statistically unique Peer Name for the creation of a PNRP ID, which is used to identify cloud members.</span></span>  

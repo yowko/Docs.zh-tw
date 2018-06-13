@@ -9,6 +9,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: HT
 ms.contentlocale: zh-TW
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33574682"
 ---
 # <a name="logical-architecture-versus-physical-architecture"></a><span data-ttu-id="a57ba-103">邏輯架構與實體架構</span><span class="sxs-lookup"><span data-stu-id="a57ba-103">Logical architecture versus physical architecture</span></span>
 

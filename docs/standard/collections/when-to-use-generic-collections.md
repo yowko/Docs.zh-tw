@@ -13,6 +13,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: HT
 ms.contentlocale: zh-TW
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33572641"
 ---
 # <a name="when-to-use-generic-collections"></a><span data-ttu-id="9269f-102">何時使用泛型集合</span><span class="sxs-lookup"><span data-stu-id="9269f-102">When to Use Generic Collections</span></span>
 <span data-ttu-id="9269f-103">通常建議使用泛型集合，因為這樣可以得到類型安全的立即好處，而無須衍生自基底集合類型同時實作類型專屬的成員。</span><span class="sxs-lookup"><span data-stu-id="9269f-103">Using generic collections is generally recommended, because you gain the immediate benefit of type safety without having to derive from a base collection type and implement type-specific members.</span></span> <span data-ttu-id="9269f-104">當集合元素為實值類型時，泛型集合類型也通常會優於對應的非泛型集合類型 (且優於衍生自非泛型基底集合類型的類型)，因為有了泛型，就不需要對這些元素進行 box。</span><span class="sxs-lookup"><span data-stu-id="9269f-104">Generic collection types also generally perform better than the corresponding nongeneric collection types (and better than types that are derived from nongeneric base collection types) when the collection elements are value types, because with generics there is no need to box the elements.</span></span>  

@@ -10,6 +10,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: HT
 ms.contentlocale: zh-TW
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33572206"
 ---
 # <a name="types-of-xml-nodes"></a><span data-ttu-id="17193-102">XML 節點的型別</span><span class="sxs-lookup"><span data-stu-id="17193-102">Types of XML Nodes</span></span>
 <span data-ttu-id="17193-103">當 XML 文件讀入記憶體作為節點的樹狀時，節點建立時即會決定節點型別。</span><span class="sxs-lookup"><span data-stu-id="17193-103">When an XML document is read into memory as a tree of nodes, the node types for the nodes are decided when the nodes are created.</span></span> <span data-ttu-id="17193-104">XML 文件物件模型 (DOM) 有許多種節點型別，由全球資訊網協會 (W3C) 決定並列示於＜1.1.1 DOM 架構模型＞(英文) 一節中。</span><span class="sxs-lookup"><span data-stu-id="17193-104">The XML Document Object Model (DOM) has several kinds of node types, determined by the World Wide Web Consortium (W3C) and listed in section 1.1.1 The DOM Structure Model.</span></span> <span data-ttu-id="17193-105">下列表格會列出節點型別、指派給該節點類型的物件，以及每個節點型別的簡要說明。</span><span class="sxs-lookup"><span data-stu-id="17193-105">The following table lists the node types, the object assigned to that node type, and a short description of each.</span></span>  

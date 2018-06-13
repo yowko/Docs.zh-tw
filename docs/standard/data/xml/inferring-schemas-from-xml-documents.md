@@ -14,6 +14,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: HT
 ms.contentlocale: zh-TW
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33574816"
 ---
 # <a name="inferring-schemas-from-xml-documents"></a><span data-ttu-id="4c0b9-102">從 XML 文件推斷結構描述</span><span class="sxs-lookup"><span data-stu-id="4c0b9-102">Inferring Schemas from XML Documents</span></span>
 <span data-ttu-id="4c0b9-103">本主題說明如何使用 <xref:System.Xml.Schema.XmlSchemaInference> 類別，從 XML 文件結構推斷 XML 結構描述定義語言 (XSD) 結構描述。</span><span class="sxs-lookup"><span data-stu-id="4c0b9-103">This topic describes how to use the <xref:System.Xml.Schema.XmlSchemaInference> class to infer an XML Schema definition language (XSD) schema from the structure of an XML document.</span></span>  

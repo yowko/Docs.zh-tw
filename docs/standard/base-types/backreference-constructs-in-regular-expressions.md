@@ -18,6 +18,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: HT
 ms.contentlocale: zh-TW
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33574604"
 ---
 # <a name="backreference-constructs-in-regular-expressions"></a><span data-ttu-id="3ca5a-102">規則運算式中的反向參考建構</span><span class="sxs-lookup"><span data-stu-id="3ca5a-102">Backreference Constructs in Regular Expressions</span></span>
 <span data-ttu-id="3ca5a-103">反向參考提供便利的方式來識別字串內的重複字元或子字串。</span><span class="sxs-lookup"><span data-stu-id="3ca5a-103">Backreferences provide a convenient way to identify a repeated character or substring within a string.</span></span> <span data-ttu-id="3ca5a-104">例如，如果輸入字串包含多次出現的任意子字串，您可以比對第一個出現的子字串與擷取的群組，接著使用反向參考來比對隨後出現的子字串。</span><span class="sxs-lookup"><span data-stu-id="3ca5a-104">For example, if the input string contains multiple occurrences of an arbitrary substring, you can match the first occurrence with a capturing group, and then use a backreference to match subsequent occurrences of the substring.</span></span>  

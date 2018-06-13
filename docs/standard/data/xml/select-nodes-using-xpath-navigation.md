@@ -13,6 +13,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: HT
 ms.contentlocale: zh-TW
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33572706"
 ---
 # <a name="select-nodes-using-xpath-navigation"></a><span data-ttu-id="2bb20-102">使用 XPath 巡覽選取節點</span><span class="sxs-lookup"><span data-stu-id="2bb20-102">Select Nodes Using XPath Navigation</span></span>
 <span data-ttu-id="2bb20-103">XML 文件物件模型 (DOM) 包含可讓您在 DOM 中使用 XML 路徑語言 (XPath) 巡覽查詢資訊的方法。</span><span class="sxs-lookup"><span data-stu-id="2bb20-103">The XML Document Object Model (DOM) contains methods that allow you to use XML Path Language (XPath) navigation to query information in the DOM.</span></span> <span data-ttu-id="2bb20-104">您可以使用 XPath 尋找單一特定節點，或是尋找符合某些準則的所有節點。</span><span class="sxs-lookup"><span data-stu-id="2bb20-104">You can use XPath to find a single, specific node or to find all nodes that match some criteria.</span></span>  
