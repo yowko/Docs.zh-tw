@@ -12,6 +12,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: zh-TW
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33603843"
 ---
 # <a name="gettype-operator-visual-basic"></a>GetType 運算子 (Visual Basic)
 傳回<xref:System.Type>指定類型的物件。 <xref:System.Type>物件提供類型，例如其屬性、 方法和事件的相關資訊。  

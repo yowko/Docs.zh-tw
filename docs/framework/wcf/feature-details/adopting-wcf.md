@@ -7,6 +7,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: zh-TW
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33489127"
 ---
 # <a name="adopting-windows-communication-foundation"></a>採用 Windows Communication Foundation
 您可以選擇進行新開發，使用 Windows Communication Foundation (WCF)，而繼續維護現有應用程式使用 ASP.NET 開發。 WCF 要用最適合的選擇，在任何案例中的.NET framework 建置之應用程式簡化通訊，因為它可以做為用來解決各種軟體通訊問題的方式的標準工具 ASP.NET不能。  

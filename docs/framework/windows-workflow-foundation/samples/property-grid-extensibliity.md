@@ -7,6 +7,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: zh-TW
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33519590"
 ---
 # <a name="property-grid-extensibliity"></a>屬性方格擴充性
 開發人員可以自訂在設計工具內選取指定活動時顯示的屬性方格。 這樣做可以製造豐富的編輯經驗。 這個範例將示範其做法。  

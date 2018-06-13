@@ -10,6 +10,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: zh-TW
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33489140"
 ---
 # <a name="how-to-control-service-instancing"></a>HOW TO：控制服務執行個體
 設定服務的執行個體模式，可讓您指定 <xref:System.ServiceModel.InstanceContext?displayProperty=nameWithType> (及其相關之使用者定義的服務物件) 建立的時機。 如需可能的模式，請參閱 <xref:System.ServiceModel.InstanceContextMode> 列舉。 如需行為的詳細資訊，請參閱[設定與擴充執行階段行為](../../../../docs/framework/wcf/extending/configuring-and-extending-the-runtime-with-behaviors.md)。 如需實用範例，請參閱[行為](../../../../docs/framework/wcf/samples/behaviors.md)。  

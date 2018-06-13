@@ -9,6 +9,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: zh-TW
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33604142"
 ---
 # <a name="string-functions-visual-basic"></a>字串函式 (Visual Basic)
 下表列出 Visual Basic 提供搜尋和操作字串的函式。  

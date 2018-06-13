@@ -7,6 +7,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: zh-TW
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33487707"
 ---
 # <a name="systemservicemodelchannelshttpsclientcertificatenotpresent"></a>System.ServiceModel.Channels.HttpsClientCertificateNotPresent
 用戶端憑證是必要的。 在要求中找不到憑證。  

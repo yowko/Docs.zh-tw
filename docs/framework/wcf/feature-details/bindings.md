@@ -11,6 +11,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: zh-TW
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33489660"
 ---
 # <a name="windows-communcation-foundation-bindings"></a>Windows Communcation Foundation 繫結
 Windows Communication Foundation (WCF) 會區分方式撰寫應用程式的軟體與其他軟體通訊的方式。 繫結可用來指定必要的傳輸、編碼與通訊協定詳細資料，以供用戶端與服務彼此通訊。 WCF 會使用來產生端點的基礎 wire 表示，因此大部分的繫結詳細資料必須同意通訊各方的繫結。 要達到這個目的之最簡單方式，就是讓服務用戶端使用服務端點所使用的相同繫結。 如需如何執行這項操作的詳細資訊，請參閱[使用繫結來設定 Windows Communication Foundation 服務和用戶端](http://msdn.microsoft.com/library/bd8b277b-932f-472f-a42a-b02bb5257dfb)。  

@@ -7,6 +7,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: zh-TW
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33486519"
 ---
 # <a name="getoperationcounterinstancename"></a>GetOperationCounterInstanceName
 擷取作業效能計數器執行個體名稱。  

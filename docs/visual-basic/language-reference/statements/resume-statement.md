@@ -20,6 +20,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: zh-TW
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33603778"
 ---
 # <a name="resume-statement"></a>Resume 陳述式
 在完成錯誤處理常式之後，請繼續執行。  

@@ -12,6 +12,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: zh-TW
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33603028"
 ---
 # <a name="mysettings-object"></a>My.Settings 物件
 提供屬性和方法來存取應用程式的設定。  

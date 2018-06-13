@@ -7,6 +7,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: HT
 ms.contentlocale: zh-TW
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33337752"
 ---
 # <a name="how-to-make-multiple-web-requests-in-parallel-by-using-async-and-await-c"></a>如何：使用 Async 和 Await，同時發出多個 Web 要求 (C#)
 在非同步方法中，工作會在建立後啟動。 由於在此方法中，必須等到工作完成後才能繼續處理，因此會將 [await](../../../../csharp/language-reference/keywords/await.md) 運算子套用至工作。 通常，工作會在建立後等候完成，如下列範例所示。  

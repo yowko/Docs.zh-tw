@@ -12,6 +12,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: zh-TW
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33520938"
 ---
 # <a name="walkthrough-copying-and-pasting-an-elementhost-control-into-separate-windows-forms"></a>逐步解說：將 ElementHost 控制項複製並貼至另外的 Windows Form
 本逐步解說示範如何將 Windows Presentation Foundation (WPF) 控制項從一個 Windows Form 複製到另一個 Windows Form。  

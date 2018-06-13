@@ -13,6 +13,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: zh-TW
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33604025"
 ---
 # <a name="take-clause-visual-basic"></a>Take 子句 (Visual Basic)
 從集合開頭傳回指定數目的連續項目。  

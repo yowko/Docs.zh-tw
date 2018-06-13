@@ -10,6 +10,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: zh-TW
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33354929"
 ---
 # <a name="how-to-filter-at-the-datacontext-level"></a>如何：在 DataContext 層級篩選
 您可以在 `EntitySets` 層級篩選 `DataContext`。 這類篩選會套用至所有使用該 <xref:System.Data.Linq.DataContext> 執行個體的查詢。  

@@ -19,9 +19,10 @@ author: rpetrusha
 ms.author: ronpet
 ms.openlocfilehash: 2cd0fc9f86515d63533275002301eb47f11feebb
 ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
-ms.translationtype: MT
+ms.translationtype: HT
 ms.contentlocale: zh-TW
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33411262"
 ---
 # <a name="icordebugcontrollerstop-method"></a>ICorDebugController::Stop 方法
 在 managed 程式碼執行處理序中的所有執行緒上執行合作式停止。  
@@ -47,7 +48,7 @@ HRESULT Stop (
  偵錯工具會維持停止計數器。 當計數器為零，控制器會繼續執行。 每次呼叫`Stop`或每個分派的回呼會遞增計數器。 每次呼叫`ICorDebugController::Continue`遞減的計數器。  
   
 ## <a name="requirements"></a>需求  
- **平台：**看到[系統需求](../../../../docs/framework/get-started/system-requirements.md)。  
+ **平台：** 看到[系統需求](../../../../docs/framework/get-started/system-requirements.md)。  
   
  **標頭：** CorDebug.idl、 CorDebug.h  
   

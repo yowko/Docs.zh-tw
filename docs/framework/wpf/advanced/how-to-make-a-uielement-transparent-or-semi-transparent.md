@@ -12,6 +12,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: zh-TW
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33545307"
 ---
 # <a name="how-to-make-a-uielement-transparent-or-semi-transparent"></a>如何：將 UIElement 設為透明或半透明
 這個範例示範如何讓<xref:System.Windows.UIElement>透明或半透明。 請讓元素透明或半透明效果，您將設定其<xref:System.Windows.UIElement.Opacity%2A>屬性。 值為`0.0`完全透明，而值為類型建立項目`1.0`完全不透明類型建立項目。 值為`0.5`類型建立項目 50%不透明，依此類推。 項目的<xref:System.Windows.UIElement.Opacity%2A>設`1.0`預設。  

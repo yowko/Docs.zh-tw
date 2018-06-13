@@ -16,6 +16,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: zh-TW
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33521714"
 ---
 # <a name="how-to-determine-the-active-mdi-child"></a>如何：決定作用中的 MDI 子系
 在某些情況下，您會想要提供目前使用中的子表單具有焦點在控制項上作業的命令。 例如，假設您想要選取的文字複製到剪貼簿的子表單的文字方塊。 您將建立的程序，將選取的文字複製到剪貼簿使用<xref:System.Windows.Forms.Control.Click>複製功能表項目，標準的 [編輯] 功能表上的事件。  

@@ -9,6 +9,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: zh-TW
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33639469"
 ---
 # <a name="the-stream-passed-to-textfieldparser-cannot-be-read"></a>無法讀取傳遞給 TextFieldParser 的資料流
 [TextFieldParser Object](../../visual-basic/language-reference/objects/textfieldparser-object.md) 無法讀取已傳遞給它的資料流。 這可能是因為嘗試讀取不是文字檔的檔案。  
