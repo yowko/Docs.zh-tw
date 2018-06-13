@@ -9,6 +9,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: zh-TW
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33596960"
 ---
 # <a name="mycomputernetwork-object"></a>My.Computer.Network 物件
 提供屬性、 事件及與電腦所連接的網路互動的方法。  

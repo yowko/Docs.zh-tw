@@ -12,6 +12,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: zh-TW
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33583860"
 ---
 # <a name="array-subscript-expression-missing"></a>遺漏陣列註標運算式
 陣列初始設定省去了一個或多個定義陣列註標。 例如，陳述式可能會包含運算式`myArray (5,5,,10)`，，讓第三個註標出。  

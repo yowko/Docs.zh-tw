@@ -12,6 +12,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: zh-TW
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33602050"
 ---
 # <a name="static-visual-basic"></a>Static (Visual Basic)
 指定一或多個宣告的區域變數會繼續存在，且在宣告的程序終止之後保持最新的值。  

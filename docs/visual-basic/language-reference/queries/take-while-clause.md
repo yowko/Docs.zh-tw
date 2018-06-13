@@ -13,6 +13,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: zh-TW
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33600896"
 ---
 # <a name="take-while-clause-visual-basic"></a>Take While 子句 (Visual Basic)
 只要指定的條件為 `true`，即包含集合中的項目，並略過其餘項目。  

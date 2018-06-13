@@ -13,6 +13,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: zh-TW
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33597356"
 ---
 # <a name="paramarray-visual-basic"></a>ParamArray (Visual Basic)
 指定程序參數可選擇性指定的型別元素的陣列。 `ParamArray` 可以是只用於參數清單的最後一個參數。  

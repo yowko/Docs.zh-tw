@@ -12,6 +12,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: zh-TW
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33588076"
 ---
 # <a name="end-of-statement-expected"></a>必須有陳述式結尾
 陳述式語法完成，但其他的程式設計項目項目完成陳述式後面。 需要在每個陳述式結尾行結束字元。

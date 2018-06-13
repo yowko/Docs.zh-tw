@@ -18,6 +18,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: HT
 ms.contentlocale: zh-TW
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33588693"
 ---
 # <a name="numerics-in-the-net-framework"></a>.NET Framework 中的數值
 .NET Framework 除了沒有理論上限或下限的整數型別 <xref:System.Numerics.BigInteger>、代表複數的型別 <xref:System.Numerics.Complex>，以及 <xref:System.Numerics> 命名空間中一組支援 SIMD 的向量型別之外，也支援標準數值整數和浮點數基本型別。  

@@ -12,6 +12,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: zh-TW
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33603895"
 ---
 # <a name="myforms-object"></a>My.Forms 物件
 提供存取目前的專案中所宣告的每個 Windows form 的執行個體的屬性。  

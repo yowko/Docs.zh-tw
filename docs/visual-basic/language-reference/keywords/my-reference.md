@@ -10,6 +10,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: zh-TW
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33597317"
 ---
 # <a name="my-reference-visual-basic"></a>My 參考 (Visual Basic)
 `My`功能可讓您直接存取常用的方法、 屬性和事件的程式設計更快且更容易。 下表列出中包含的物件`My`，以及與每個可執行的動作。  

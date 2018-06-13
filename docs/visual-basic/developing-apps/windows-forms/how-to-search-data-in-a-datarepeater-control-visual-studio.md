@@ -13,6 +13,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: zh-TW
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33588050"
 ---
 # <a name="how-to-search-data-in-a-datarepeater-control-visual-studio"></a>如何：搜尋 DataRepeater 控制項中的資料 (Visual Studio)
 當您使用<xref:Microsoft.VisualBasic.PowerPacks.DataRepeater>包含許多記錄，您可能想要讓的使用者搜尋的特定記錄的控制項。 而不是控制項本身中搜尋資料，您可以藉由查詢的基礎實作搜尋<xref:System.Windows.Forms.BindingSource>。 如果找到項目，然後您可以使用<xref:Microsoft.VisualBasic.PowerPacks.DataRepeater.CurrentItemIndex%2A>屬性設為選取的項目，並捲動至檢視。  

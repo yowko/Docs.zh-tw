@@ -12,6 +12,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: zh-TW
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33588826"
 ---
 # <a name="delegate-class-39ltclassnamegt39-has-no-invoke-method-so-an-expression-of-this-type-cannot-be-the-target-of-a-method-call"></a>委派類別&#39; &lt;classname&gt; &#39;有沒有 Invoke 方法，因此這個類型的運算式不可成為方法呼叫的目標
 呼叫`Invoke`透過委派失敗，因為`Invoke`委派類別未實作。  

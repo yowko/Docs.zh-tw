@@ -9,6 +9,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: zh-TW
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33599186"
 ---
 # <a name="argument-value-39ltpathnamegt39-contains-characters-that-are-not-valid-in-a-path-name"></a>引數值&#39; &lt;pathname&gt; &#39;包含路徑名稱中無效的字元
 路徑名稱包含一個或多個無效字元。  
