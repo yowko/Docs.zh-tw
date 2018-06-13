@@ -19,9 +19,10 @@ author: rpetrusha
 ms.author: ronpet
 ms.openlocfilehash: 098e140b7bffb7798a37b1881f2cb2ced36bcf1f
 ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
-ms.translationtype: MT
+ms.translationtype: HT
 ms.contentlocale: zh-TW
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33416481"
 ---
 # <a name="icordebugmanagedcallback3customnotification-method"></a>ICorDebugManagedCallback3::CustomNotification 方法
 表示已發出的自訂偵錯工具通知。  
@@ -55,7 +56,7 @@ HRESULT CustomNotification(ICorDebugThread *    pThread,
  [ICorDebug](../../../../docs/framework/unmanaged-api/debugging/icordebug-interface.md)介面會加諸的任何原則類型的通知或其內容，以及通知的語意都完全偵錯工具、 應用程式和.NET Framework 之間的合約。  
   
 ## <a name="requirements"></a>需求  
- **平台：**看到[系統需求](../../../../docs/framework/get-started/system-requirements.md)。  
+ **平台：** 看到[系統需求](../../../../docs/framework/get-started/system-requirements.md)。  
   
  **標頭：** CorDebug.idl、 CorDebug.h  
   
