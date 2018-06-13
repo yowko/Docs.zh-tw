@@ -7,6 +7,7 @@ ms.sourcegitcommit: 11f11ca6cefe555972b3a5c99729d1a7523d8f50
 ms.translationtype: MT
 ms.contentlocale: zh-TW
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32766318"
 ---
 # <a name="walkthrough-sql-generation"></a>逐步解說：SQL 產生
 本主題將說明 SQL 產生就會發生在[範例提供者](http://go.microsoft.com/fwlink/?LinkId=180616)。 下列 Entity SQL 查詢會使用範例提供者所隨附的模型：  

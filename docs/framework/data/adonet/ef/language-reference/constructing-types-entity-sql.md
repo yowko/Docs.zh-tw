@@ -7,6 +7,7 @@ ms.sourcegitcommit: 11f11ca6cefe555972b3a5c99729d1a7523d8f50
 ms.translationtype: MT
 ms.contentlocale: zh-TW
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32765252"
 ---
 # <a name="constructing-types-entity-sql"></a>建構類型 (Entity SQL)
 [!INCLUDE[esql](../../../../../../includes/esql-md.md)] 提供三種建構函式： 資料列建構函式、 具名型別建構函式和集合建構函式。  

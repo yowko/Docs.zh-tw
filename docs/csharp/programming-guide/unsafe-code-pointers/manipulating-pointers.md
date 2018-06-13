@@ -10,6 +10,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: HT
 ms.contentlocale: zh-TW
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33339668"
 ---
 # <a name="manipulating-pointers-c-programming-guide"></a>管理指標 (C# 程式設計手冊)
 本節包含下列指標作業：  
